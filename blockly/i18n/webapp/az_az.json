@@ -1,7 +1,7 @@
 {
   "catActions": "Əmrlər",
   "catControl": "Dövlər",
-  "catEvents": "Events",
+  "catEvents": "Hadisələr",
   "catLogic": "Məntiq",
   "catMath": "Riyaziyyat",
   "catProcedures": "Funksiyalar",
@@ -9,7 +9,7 @@
   "catVariables": "Dəyişənlər",
   "continue": "Davam et",
   "createHtmlBlock": "create html block",
-  "createHtmlBlockTooltip": "Creates a block of HTML in the app.",
+  "createHtmlBlockTooltip": "Proqramda HTML bloku yaradır.",
   "finalLevel": "Təbriklər! Axırıncı tapmacanı da tapdınız.",
   "makeYourOwn": "Make Your Own App",
   "nextLevel": "Təbriklər! Siz bu tapmacanı tamamladınız.",
@@ -20,9 +20,12 @@
   "repeatForever": "repeat forever",
   "repeatDo": "et",
   "repeatForeverTooltip": "Execute the actions in this block repeatedly while the app is running.",
-  "shareWebappTwitter": "Check out the app I made. I wrote it myself with @codeorg",
-  "shareGame": "Share your app:",
+  "shareWebappTwitter": "Düzəltdiyim proqrama nəzər yetirin. Onu @codeorg ilə özüm yazmışam",
+  "shareGame": "Proqramınızı bölüşün:",
+  "stepIn": "Step in",
+  "stepOver": "Step over",
+  "stepOut": "Step out",
   "turnBlack": "turn black",
-  "turnBlackTooltip": "Turns the screen black.",
+  "turnBlackTooltip": "Ekranı qaraldır.",
   "yes": "Bəli"
 }

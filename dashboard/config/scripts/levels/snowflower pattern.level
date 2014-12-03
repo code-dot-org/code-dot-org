@@ -1,0 +1,93 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2014-10-28T00:39:27.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "anna",
+    "instructions": "What beautiful snowflowers! Let's make smaller snowflowers to cover the entire ice rink.",
+    "x": "100",
+    "y": "300",
+    "start_direction": "45",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "free_play": "true"
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="draw_move_by_constant_dropdown">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE" config="50,100,150,200,300">100</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE" config="45,60,90,120,180">90</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE" config="45,60,90,120,180">90</title>
+        </block>
+        <block type="jump_by_constant_dropdown">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE" config="50,100,150,200,300">100</title>
+        </block>
+        <block type="controls_repeat">
+          <title name="TIMES">4</title>
+        </block>
+        <block type="create_a_snowflower"/>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="create_a_snowflower"/>
+        <block type="jump_by_constant_dropdown">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE" config="50,100,150,200,300">150</title>
+        </block>
+        <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">150</title>
+        </block>
+      </xml>
+    </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="create_a_snowflower">
+              <next>
+                <block type="jump_by_constant_dropdown">
+                  <title name="DIR">jumpForward</title>
+                  <title name="VALUE" config="50,100,150,200,300">150</title>
+                  <next>
+                    <block type="create_a_snowflower">
+                      <next>
+                        <block type="jump_by_constant_dropdown">
+                          <title name="DIR">jumpForward</title>
+                          <title name="VALUE" config="50,100,150,200,300">150</title>
+                          <next>
+                            <block type="create_a_snowflower"/>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Artist>

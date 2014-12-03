@@ -9,7 +9,7 @@ template "/etc/init.d/pegasus" do
   variables ({
     src_file:"/home/#{node[:current_user]}/#{node.chef_environment}/pegasus/config/unicorn.rb",
     app_root:"/home/#{node[:current_user]}/#{node.chef_environment}/pegasus",
-    pid_file:"/home/#{node[:current_user]}/#{node.chef_environment}/aws/pegasus_unicorn.rb.pid",
+    pid_file:"/home/#{node[:current_user]}/#{node.chef_environment}/pegasus/config/unicorn.rb.pid",
     user:node[:current_user],
     env:node.chef_environment,
   })
@@ -22,7 +22,19 @@ template "/etc/logrotate.d/pegasus" do
   group 'root'
   mode '0644'
   variables ({
+    app_name:'pegasus',
     log_dir:"/home/#{node[:current_user]}/#{node.chef_environment}/pegasus/log",
+  })
+end
+
+template "/home/#{node[:current_user]}/#{node.chef_environment}/pegasus/config/newrelic.yml" do
+  source 'newrelic.yml.erb'
+  user node[:current_user]
+  group node[:current_user]
+  variables ({
+    app_name:'Pegasus',
+    log_dir:"/home/#{node[:current_user]}/#{node.chef_environment}/pegasus/log",
+    auto_instrument:true,
   })
 end
 
@@ -49,3 +61,4 @@ end
 service 'pegasus' do
   action [:enable, :start]
 end
+

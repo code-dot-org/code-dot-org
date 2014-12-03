@@ -1,9 +1,13 @@
 module LevelsHelper
 
   def build_script_level_path(script_level)
+    if script_level.script.name == 'hourofcode'
+      return hoc_chapter_path(script_level.chapter)
+    end
+
     case script_level.script_id
     when Script::HOC_ID
-      hoc_chapter_path(script_level.chapter)
+      script_puzzle_path(script_level.script, script_level.chapter)
     when Script::TWENTY_HOUR_ID
       script_level_path(script_level.script, script_level)
     when Script::EDIT_CODE_ID
@@ -67,8 +71,20 @@ module LevelsHelper
 
   def select_and_remember_callouts
     session[:callouts_seen] ||= Set.new()
-    @callouts_to_show = Callout.where(script_level: @script_level)
-      .select(:id, :element_id, :qtip_config, :localization_key)
+    available_callouts = []
+    if @level.custom?
+      unless @level.try(:callout_json).blank?
+        available_callouts = JSON.parse(@level.callout_json).map do |callout_definition|
+          Callout.new(element_id: callout_definition['element_id'],
+              localization_key: callout_definition['localization_key'],
+              qtip_config: callout_definition['qtip_config'].to_json)
+        end
+      end
+    else
+      available_callouts = Callout.where(script_level: @script_level)
+        .select(:id, :element_id, :qtip_config, :localization_key)
+    end
+    @callouts_to_show = available_callouts
       .reject { |c| session[:callouts_seen].include?(c.localization_key) }
       .each { |c| session[:callouts_seen].add(c.localization_key) }
     @callouts = make_localized_hash_of_callouts(@callouts_to_show)
@@ -212,6 +228,8 @@ module LevelsHelper
       use_contract_editor
       impressive
       open_function_definition
+      callout_json
+      disable_sharing
     ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
     .each do |dashboard, blockly|
       # Select first valid value from 1. local_assigns, 2. property of @level object, 3. named instance variable, 4. properties json
@@ -260,13 +278,33 @@ module LevelsHelper
   end
 
   def string_or_image(prefix, text)
-    path, width = text.split(',') if text
-    if ['.jpg', '.png', '.gif'].include? File.extname(path)
-      if width
-        "<img src='" + path.strip + "' width='" + width.strip + "'></img>"
-      else
-        "<img src='" + path.strip + "'></img>"
-      end
+    return unless text
+    path, width = text.split(',')
+    if %w(.jpg .png .gif).include? File.extname(path)
+      "<img src='#{path.strip}' #{"width='#{width.strip}'" if width}></img>"
+    elsif File.extname(path).ends_with? '_blocks'
+      # '.start_blocks' takes the XML from the start_blocks of the specified level.
+      ext = File.extname(path)
+      base_level = File.basename(path, ext)
+      level = Level.find_by(name: base_level)
+      content_tag(:iframe, '', {
+          src: url_for(controller: :levels, action: :embed_blocks, level_id: level.id, block_type: ext.slice(1..-1)).strip,
+          width: width ? width.strip : '100%',
+          scrolling: 'no',
+          seamless: 'seamless',
+          style: 'border: none;',
+      })
+    elsif File.extname(path) == '.level'
+      base_level = File.basename(path, '.level')
+      level = Level.find_by(name: base_level)
+      content_tag(:div,
+        content_tag(:iframe, '', {
+          src: url_for(id: level.id, controller: :levels, action: :show, embed: true).strip,
+          width: (width ? width.strip : '100%'),
+          scrolling: 'no',
+          seamless: 'seamless',
+          style: 'border: none;'
+        }), {class: 'aspect-ratio'})
     else
       data_t(prefix + '.' + @level.name, text)
     end

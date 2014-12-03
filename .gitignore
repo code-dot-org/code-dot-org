@@ -4,9 +4,10 @@
 .dropbox
 .idea/
 /.gdrive_session
+/chef/.chef/
+/crontab
+/dashboard/public/blockly
 /.dropbox.cache
-/aws/secrets.key
-/aws/secrets.tgz
 /aws/secrets/
 /aws/solr/
 /build-started
@@ -17,3 +18,6 @@
 /i18n/code.org/crowdin.yaml
 /i18n/hourofcode.com/crowdin.yaml
 /i18n/curriculum/crowdin.yaml
+/dashboard/config/newrelic.yml
+/pegasus/config/newrelic.yml
+

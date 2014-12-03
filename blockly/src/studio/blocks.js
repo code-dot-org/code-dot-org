@@ -11,20 +11,21 @@ var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
 var commonMsg = require('../../locale/current/common');
 var codegen = require('../codegen');
 var functionalBlockUtils = require('../functionalBlockUtils');
-var installFunctionalApiCallBlock = require('../functionalBlockUtils').installFunctionalApiCallBlock;
-var tiles = require('./tiles');
+var installFunctionalApiCallBlock =
+  functionalBlockUtils.installFunctionalApiCallBlock;
+var initTitledFunctionalBlock = functionalBlockUtils.initTitledFunctionalBlock;
+var constants = require('./constants');
 var utils = require('../utils');
 var _ = utils.getLodash();
 
-var Direction = tiles.Direction;
-var Position = tiles.Position;
-var Emotions = tiles.Emotions;
+var Direction = constants.Direction;
+var Position = constants.Position;
+var Emotions = constants.Emotions;
 
-var RANDOM_VALUE = 'random';
-var HIDDEN_VALUE = '"hidden"';
-var CLICK_VALUE = '"click"';
-var VISIBLE_VALUE = '"visible"';
-var CAVE_VALUE = '"cave"';
+var RANDOM_VALUE = constants.RANDOM_VALUE;
+var HIDDEN_VALUE = constants.HIDDEN_VALUE;
+var CLICK_VALUE = constants.CLICK_VALUE;
+var VISIBLE_VALUE = constants.VISIBLE_VALUE;
 
 var generateSetterCode = function (opts) {
   var value = opts.ctx.getTitleValue('VALUE');
@@ -344,6 +345,7 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
+  // todo (brent) - per skin
   blockly.Blocks.studio_whenSpriteCollided.GROUPINGS =
       [[msg.whenSpriteCollidedWithAnything(), 'anything'],
        [msg.whenSpriteCollidedWithAnyActor(), 'any_actor'],
@@ -426,7 +428,7 @@ exports.install = function(blockly, blockInstallOptions) {
           .appendTitle(msg.throwSprite());
       }
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldDropdown(this.VALUES), 'VALUE');
+        .appendTitle(new blockly.FieldDropdown(skin.projectileChoices), 'VALUE');
       this.appendDummyInput()
         .appendTitle('\t');
       this.appendDummyInput()
@@ -445,15 +447,6 @@ exports.install = function(blockly, blockInstallOptions) {
          [msg.moveDirectionRight(), Direction.EAST.toString()],
          [msg.moveDirectionRandom(), 'random']];
 
-  blockly.Blocks.studio_throw.VALUES =
-        [[msg.projectileBlueFireball(), '"blue_fireball"'],
-         [msg.projectilePurpleFireball(), '"purple_fireball"'],
-         [msg.projectileRedFireball(), '"red_fireball"'],
-         [msg.projectileYellowHearts(), '"yellow_hearts"'],
-         [msg.projectilePurpleHearts(), '"purple_hearts"'],
-         [msg.projectileRedHearts(), '"red_hearts"'],
-         [msg.projectileRandom(), 'random']];
-
   generator.studio_throw = function() {
     // Generate JavaScript for throwing a projectile from a sprite.
     var allDirections = this.DIR.slice(0, -1).map(function (item) {
@@ -463,7 +456,7 @@ exports.install = function(blockly, blockInstallOptions) {
     if (dirParam === 'random') {
       dirParam = 'Studio.random([' + allDirections + '])';
     }
-    var allValues = this.VALUES.slice(0, -1).map(function (item) {
+    var allValues = skin.projectileChoices.slice(0, -1).map(function (item) {
       return item[1];
     });
     var valParam = this.getTitleValue('VALUE');
@@ -1179,56 +1172,23 @@ exports.install = function(blockly, blockInstallOptions) {
       var dropdown;
       if (isK1) {
         dropdown = new blockly.FieldImageDropdown(
-                                  this.IMAGE_CHOICES,
+                                  skin.backgroundChoicesK1,
                                   skin.dropdownThumbnailWidth,
                                   skin.dropdownThumbnailHeight);
         this.appendDummyInput()
           .appendTitle(msg.setBackground())
           .appendTitle(dropdown, 'VALUE');
       } else {
-        dropdown = new blockly.FieldDropdown(this.VALUES);
+        dropdown = new blockly.FieldDropdown(skin.backgroundChoices);
         this.appendDummyInput().appendTitle(dropdown, 'VALUE');
       }
-      dropdown.setValue(CAVE_VALUE);  // default to cave
+      dropdown.setValue('"' + skin.defaultBackground + '"');
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setBackgroundTooltip());
     }
   };
-
-  blockly.Blocks.studio_setBackground.VALUES =
-      [[msg.setBackgroundRandom(), RANDOM_VALUE],
-       [msg.setBackgroundCave(), CAVE_VALUE],
-       [msg.setBackgroundNight(), '"night"'],
-       [msg.setBackgroundCloudy(), '"cloudy"'],
-       [msg.setBackgroundUnderwater(), '"underwater"'],
-       [msg.setBackgroundHardcourt(), '"hardcourt"'],
-       [msg.setBackgroundBlack(), '"black"'],
-       [msg.setBackgroundCity(), '"city"'],
-       [msg.setBackgroundDesert(), '"desert"'],
-       [msg.setBackgroundRainbow(), '"rainbow"'],
-       [msg.setBackgroundSoccer(), '"soccer"'],
-       [msg.setBackgroundSpace(), '"space"'],
-       [msg.setBackgroundTennis(), '"tennis"'],
-       [msg.setBackgroundWinter(), '"winter"']
-       ];
-
-  blockly.Blocks.studio_setBackground.IMAGE_CHOICES =
-      [[skin.cave.background, CAVE_VALUE],
-       [skin.night.background, '"night"'],
-       [skin.cloudy.background, '"cloudy"'],
-       [skin.underwater.background, '"underwater"'],
-       [skin.hardcourt.background, '"hardcourt"'],
-       [skin.black.background, '"black"'],
-       [skin.city.background, '"city"'],
-       [skin.desert.background, '"desert"'],
-       [skin.rainbow.background, '"rainbow"'],
-       [skin.soccer.background, '"soccer"'],
-       [skin.space.background, '"space"'],
-       [skin.tennis.background, '"tennis"'],
-       [skin.winter.background, '"winter"'],
-       [skin.randomPurpleIcon, RANDOM_VALUE]];
 
   generator.studio_setBackground = function() {
     return generateSetterCode({ctx: this, name: 'setBackground'});
@@ -1334,8 +1294,9 @@ exports.install = function(blockly, blockInstallOptions) {
     blockly.Blocks.studio_setSprite = {
       helpUrl: '',
       init: function() {
-        var dropdown = new blockly.FieldDropdown(this.VALUES);
-        dropdown.setValue(this.VALUES[2][1]);  // default to witch
+        var dropdown = new blockly.FieldDropdown(skin.spriteChoices);
+        // default to first item after random/hidden
+        dropdown.setValue(skin.spriteChoices[2][1]);
 
         this.setHSV(312, 0.32, 0.62);
         if (spriteCount > 1) {
@@ -1357,8 +1318,9 @@ exports.install = function(blockly, blockInstallOptions) {
     blockly.Blocks.studio_setSpriteParams = {
       helpUrl: '',
       init: function() {
-        var dropdown = new blockly.FieldDropdown(this.VALUES);
-        dropdown.setValue(this.VALUES[2][1]);  // default to witch
+        var dropdown = new blockly.FieldDropdown(skin.spriteChoices);
+        // default to first item after random/hidden
+        dropdown.setValue(skin.spriteChoices[2][1]);
 
         this.setHSV(312, 0.32, 0.62);
         this.appendValueInput('SPRITE')
@@ -1372,39 +1334,6 @@ exports.install = function(blockly, blockInstallOptions) {
         this.setTooltip(msg.setSpriteTooltip());
       }
     };
-
-    blockly.Blocks.studio_setSpriteParams.VALUES =
-        blockly.Blocks.studio_setSprite.VALUES =
-        [[msg.setSpriteHidden(), HIDDEN_VALUE],
-         [msg.setSpriteRandom(), RANDOM_VALUE],
-         [msg.setSpriteWitch(), '"witch"'],
-         [msg.setSpriteCat(), '"cat"'],
-         [msg.setSpriteDinosaur(), '"dinosaur"'],
-         [msg.setSpriteDog(), '"dog"'],
-         [msg.setSpriteOctopus(), '"octopus"'],
-         [msg.setSpritePenguin(), '"penguin"'],
-         [msg.setSpriteBat(), '"bat"'],
-         [msg.setSpriteBird(), '"bird"'],
-         [msg.setSpriteDragon(), '"dragon"'],
-         [msg.setSpriteSquirrel(), '"squirrel"'],
-         [msg.setSpriteWizard(), '"wizard"'],
-         [msg.setSpriteAlien(), '"alien"'],
-         [msg.setSpriteGhost(), '"ghost"'],
-         [msg.setSpriteMonster(), '"monster"'],
-         [msg.setSpriteRobot(), '"robot"'],
-         [msg.setSpriteUnicorn(), '"unicorn"'],
-         [msg.setSpriteZombie(), '"zombie"'],
-         [msg.setSpriteKnight(), '"knight"'],
-         [msg.setSpriteNinja(), '"ninja"'],
-         [msg.setSpritePirate(), '"pirate"'],
-         [msg.setSpriteCaveBoy(), '"caveboy"'],
-         [msg.setSpriteCaveGirl(), '"cavegirl"'],
-         [msg.setSpritePrincess(), '"princess"'],
-         [msg.setSpriteSpacebot(), '"spacebot"'],
-         [msg.setSpriteSoccerGirl(), '"soccergirl"'],
-         [msg.setSpriteSoccerBoy(), '"soccerboy"'],
-         [msg.setSpriteTennisGirl(), '"tennisgirl"'],
-         [msg.setSpriteTennisBoy(), '"tennisboy"']];
   }
 
   generator.studio_setSprite = function() {
@@ -1647,39 +1576,90 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   //
-  // Install functional blocks
+  // Install functional start blocks
   //
 
+  blockly.Blocks.functional_start_setValue = {
+    init: function() {
+      var blockName = 'start (value)';
+      var blockType = 'none';
+      var blockArgs = [{name: 'VALUE', type: 'Number'}];
+      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+    }
+  };
+
+  generator.functional_start_setValue = function() {
+    // Adapted from Blockly.JavaScript.variables_set.
+    var argument0 = Blockly.JavaScript.statementToCode(this, 'VALUE',
+        Blockly.JavaScript.ORDER_ASSIGNMENT) || '0';
+    var varName = Blockly.JavaScript.translateVarName('startValue');
+    return varName + ' = ' + argument0 + ';\n';
+  };
+
   installFunctionalApiCallBlock(blockly, generator, {
-    blockName: 'functional_setBackground',
-    blockTitle: msg.setBackground(),
+    blockName: 'functional_start_dummyOnMove',
+    blockTitle: 'on-move (on-screen)',
+    args: [{name: 'VAL', type: 'boolean', default: 'false'}]
+  });
+
+  installFunctionalApiCallBlock(blockly, generator, {
+    blockName: 'functional_start_setBackground',
+    blockTitle: 'start (background)',
     apiName: 'Studio.setBackground',
     args: [{ name: 'BACKGROUND', type: 'string', default: 'space'}]
   });
 
-  installFunctionalApiCallBlock(blockly, generator, {
-    blockName: 'functional_setPlayerSpeed',
-    blockTitle: msg.setPlayerSpeed(),
-    apiName: 'Studio.setSpriteSpeed',
-    args: [{constantValue: '0'}, // spriteIndex
-           {name: 'SPEED', type: 'Number', default:'7'}]
-  });
+  blockly.Blocks.functional_start_setSpeeds = {
+    init: function() {
+      var blockName = 'start (player-speed, enemy-speed)';
+      var blockType = 'none';
+      var blockArgs = [
+        {name: 'PLAYER_SPEED', type: 'Number'},
+        {name: 'ENEMY_SPEED', type: 'Number'}
+      ];
+      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+    }
+  };
 
-  installFunctionalApiCallBlock(blockly, generator, {
-    blockName: 'functional_setEnemySpeed',
-    blockTitle: msg.setEnemySpeed(),
-    apiName: 'Studio.setSpriteSpeed',
-    args: [{constantValue: '1'}, // spriteIndex
-           {name: 'SPEED', type: 'Number', default:'7'}]
-  });
+  generator.functional_start_setSpeeds = function() {
+    var defaultSpeed = 7;
+    var playerSpeed = Blockly.JavaScript.statementToCode(this, 'PLAYER_SPEED', false) || defaultSpeed;
+    var enemySpeed = Blockly.JavaScript.statementToCode(this, 'ENEMY_SPEED', false) || defaultSpeed;
+    var playerSpriteIndex = '0';
+    var enemySpriteIndex = '1';
+    var code = 'Studio.setSpriteSpeed(\'block_id_' + this.id + '\',' +
+        playerSpriteIndex + ',' + playerSpeed + ');\n';
+    code += 'Studio.setSpriteSpeed(\'block_id_' + this.id + '\',' +
+        enemySpriteIndex + ',' + enemySpeed + ');\n';
+    return code;
+  };
 
-  installFunctionalApiCallBlock(blockly, generator, {
-    blockName: 'functional_showTitleScreen',
-    blockTitle: msg.showTitleScreen(),
-    apiName: 'Studio.showTitleScreen',
-    args: [{name: 'TITLE', type: 'string', default:'\'\''},
-           {name: 'TEXT', type: 'string', default:'\'\''}]
-  });
+  blockly.Blocks.functional_start_setBackgroundAndSpeeds = {
+    init: function() {
+      var blockName = 'start (background, player-speed, enemy-speed)';
+      var blockType = 'none';
+      var blockArgs = [
+        {name: 'BACKGROUND', type: 'string'},
+        {name: 'PLAYER_SPEED', type: 'Number'},
+        {name: 'ENEMY_SPEED', type: 'Number'}
+      ];
+      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+    }
+  };
+
+  generator.functional_start_setBackgroundAndSpeeds = function() {
+    var background = Blockly.JavaScript.statementToCode(this, 'BACKGROUND', false) || 'cave';
+    var defaultSpeed = 7;
+    var playerSpeed = Blockly.JavaScript.statementToCode(this, 'PLAYER_SPEED', false) || defaultSpeed;
+    var enemySpeed = Blockly.JavaScript.statementToCode(this, 'ENEMY_SPEED', false) || defaultSpeed;
+    var code =  'Studio.setBackground(\'block_id_' + this.id + '\'' +
+        ',' + background + ');\n';
+    code += 'Studio.setSpriteSpeed(\'block_id_' + this.id + '\',0' +
+        ',' + playerSpeed + ');\n';
+    code += 'Studio.setSpriteSpeed(\'block_id_' + this.id + '\',1' +
+        ',' + enemySpeed + ');\n';
+    return code;
+  };
 
   // install number and string
   sharedFunctionalBlocks.install(blockly, generator);
@@ -1690,21 +1670,7 @@ exports.install = function(blockly, blockInstallOptions) {
   // english if not connected to the functional_setBackground block.
   // TODO(i18n): translate these strings in the Studio.setBackground
   // API instead of here.
-  var functional_background_values = [
-    [msg.backgroundCave(), 'cave'],
-    [msg.backgroundNight(), 'night'],
-    [msg.backgroundCloudy(), 'cloudy'],
-    [msg.backgroundUnderwater(), 'underwater'],
-    [msg.backgroundHardcourt(), 'hardcourt'],
-    [msg.backgroundBlack(), 'black'],
-    [msg.backgroundCity(), 'city'],
-    [msg.backgroundDesert(), 'desert'],
-    [msg.backgroundRainbow(), 'rainbow'],
-    [msg.backgroundSoccer(), 'soccer'],
-    [msg.backgroundSpace(), 'space'],
-    [msg.backgroundTennis(), 'tennis'],
-    [msg.backgroundWinter(), 'winter']
-  ];
+  var functional_background_values = skin.backgroundChoices.slice(1);
 
   functionalBlockUtils.installStringPicker(blockly, generator, {
     blockName: 'functional_background_string_picker',

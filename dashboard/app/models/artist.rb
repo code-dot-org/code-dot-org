@@ -8,6 +8,7 @@ class Artist < Blockly
     free_play
     permitted_errors
     impressive
+    disable_sharing
   )
 
   before_save :update_ideal_level_source
@@ -22,7 +23,7 @@ class Artist < Blockly
 
   # List of possible skins, the first is used as a default.
   def self.skins
-    ['artist', 'artist_zombie']
+    ['artist', 'artist_zombie', 'elsa', 'anna']
   end
 
   def self.create_from_level_builder(params, level_params)
@@ -47,7 +48,7 @@ class Artist < Blockly
         <title name="VALUE">100</title>
       </block>
       <block type="draw_move_by_constant_dropdown">
-        <title name="VALUE" config="50,100,150,200,300">100</title>
+        <title name="VALUE" config="50,100,150,200,300">???</title>
       </block>
       <block type="draw_move">
         <value name="VALUE">
@@ -60,7 +61,7 @@ class Artist < Blockly
         <title name="VALUE">90</title>
       </block>
       <block type="draw_turn_by_constant_dropdown">
-        <title name="VALUE" config="45,60,90,120,180">90</title>
+        <title name="VALUE" config="45,60,90,120,180">???</title>
       </block>
       <block type="draw_turn">
         <value name="VALUE">
@@ -73,7 +74,7 @@ class Artist < Blockly
         <title name="VALUE">100</title>
       </block>
       <block type="jump_by_constant_dropdown">
-        <title name="VALUE" config="50,100,150,200,300">100</title>
+        <title name="VALUE" config="50,100,150,200,300">???</title>
       </block>
       <block type="jump">
         <value name="VALUE">
@@ -94,6 +95,7 @@ class Artist < Blockly
       </block>
       <block type="draw_pen"></block>
       <block type="draw_line_style_pattern"></block>
+      <block type="turtle_stamp"/>/block>
     </category>
     <category name="Color">
       <block id="draw-color" type="draw_colour">
@@ -114,6 +116,9 @@ class Artist < Blockly
     </category>
     <category name="Prebuilt">
       <block type="draw_a_triangle"></block>
+      <block type="create_a_circle"></block>
+      <block type="create_a_circle_size"></block>
+      <block type="create_a_snowflake_branch"></block>
       <block type="draw_a_square_custom"></block>
       <block type="draw_a_house"></block>
       <block type="draw_a_flower"></block>
@@ -127,6 +132,8 @@ class Artist < Blockly
       <block type="draw_a_rhombus"></block>
       <block type="draw_upper_wave"></block>
       <block type="draw_lower_wave"></block>
+      <block type="create_snowflake_dropdown"></block>
+
     </category>
     <category name="Loops">
       <block type="controls_for_counter">
@@ -150,7 +157,7 @@ class Artist < Blockly
         <title name="TIMES">4</title>
       </block>
       <block type="controls_repeat_dropdown">
-        <title name="TIMES" config="3-10">3</title>
+        <title name="TIMES" config="3-10">???</title>
       </block>
       <block type="controls_repeat_ext">
         <value name="TIMES"></value>

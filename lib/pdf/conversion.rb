@@ -5,6 +5,8 @@ module PDF
   def self.generate_from_url(url, outpath, options={})
     cmd = [
         Phantomjs.path,
+        '--ignore-ssl-errors=true',
+        '--ssl-protocol=tlsv1',
         "'" + File.expand_path('../pdf_rasterize.js',__FILE__) + "'",
         url,
         outpath,

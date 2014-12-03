@@ -5,6 +5,7 @@ class FollowersControllerTest < ActionController::TestCase
     @laurel = create(:teacher)
     @laurel_section_1 = create(:section, user: @laurel)
     @laurel_section_2 = create(:section, user: @laurel)
+    @laurel_section_script = create(:section, user: @laurel, script: Script.find_by_name('course1'))
 
     # add a few students to a section
     @laurel_student_1 = create(:follower, section: @laurel_section_1)
@@ -246,4 +247,49 @@ class FollowersControllerTest < ActionController::TestCase
     assert follower.reload # not deleted
   end
 
+  test "student_user_new when signed in in section with script" do
+    sign_in @student
+
+    assert_creates(Follower, UserScript) do
+      get :student_user_new, section_code: @laurel_section_script.code
+    end
+
+    user_script = UserScript.where(user: @student, script: @laurel_section_script.script).first
+    assert user_script
+    assert user_script.assigned_at
+    assert_equal @laurel_section_script.script, @student.primary_script
+  end
+
+  test "student_register in section with script" do
+    sign_out @laurel
+
+    student_params = {email: 'student1@school.edu',
+                      name: "A name",
+                      password: "apassword",
+                      gender: 'F',
+                      age: '13'}
+    
+    assert_creates(User, Follower, UserScript) do
+      post :student_register, section_code: @laurel_section_script.code, user: student_params
+    end
+
+    user_script = UserScript.where(user: assigns(:user), script: @laurel_section_script.script).first
+    assert user_script
+    assert user_script.assigned_at
+    assert_equal @laurel_section_script.script, assigns(:user).primary_script
+  end
+
+  test "create with section with script" do
+    sign_in @student
+
+    assert_creates(Follower, UserScript) do
+      post :create, section_code: @laurel_section_script.code, redirect: '/'
+    end
+
+    user_script = UserScript.where(user: @student, script: @laurel_section_script.script).first
+    assert user_script
+    assert user_script.assigned_at
+    assert_equal @laurel_section_script.script, @student.primary_script
+  end
 end
+

@@ -9,8 +9,9 @@
   )
   image.format = 'jpg'
 %>
-from: '"Hadi Partovi (Code.org)" <hadi_partovi@code.org>'
-subject: Your Code.org certificate and no-cost teaching supplies
+from: "Hadi Partovi (Code.org) <hadi_partovi@code.org>"
+subject: "Your Code.org certificate and no-cost teaching supplies"
+litmus_tracking_id: "4o1xaamz"
 attachments:
   certificate.jpg: '<%= Base64::encode64(image.to_blob) %>'
 ---
@@ -33,4 +34,3 @@ Founder, Code.org
 
 Code.org is a public 501c3. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](<%= unsubscribe_link %>).
 
-![](<%= tracking_pixel %>)

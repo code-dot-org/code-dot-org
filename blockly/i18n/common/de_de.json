@@ -1,5 +1,7 @@
 {
   "and": "und",
+  "booleanTrue": "wahr",
+  "booleanFalse": "falsch",
   "blocklyMessage": "Blockly",
   "catActions": "Aktionen",
   "catColour": "Farbe",
@@ -41,6 +43,7 @@
   "numBlocksNeeded": "Glückwunsch! Du hast Puzzle {puzzleNumber} fertig gestellt. (Du hättest jedoch nur {numBlocks, plural, one {1 Baustein} other {# Bausteine}} gebraucht.)",
   "numLinesOfCodeWritten": "Du hast soeben {numLines, plural, one {eine Zeile} other {# Zeilen}} Code geschrieben!",
   "play": "spielen",
+  "print": "Print",
   "puzzleTitle": "Puzzle {puzzle_number} von {stage_total}",
   "repeat": "wiederhole",
   "resetProgram": "Zurücksetzen",
@@ -48,7 +51,7 @@
   "runTooltip": "Starte das Programm, das durch die Bausteine in deinem Arbeitsbereich festgelegt ist.",
   "score": "Punktestand",
   "showCodeHeader": "Programm anzeigen",
-  "showBlocksHeader": "Show Blocks",
+  "showBlocksHeader": "Zeige Blöcke",
   "showGeneratedCode": "Programm anzeigen",
   "subtitle": "eine visuelle Programmierumgebung",
   "textVariable": "Text",
@@ -67,7 +70,7 @@
   "typeFuncs": "Verfügbare Funktionen:%1",
   "typeHint": "Beachte, dass die runden Klammern und Semikola erforderlich sind.",
   "workspaceHeader": "Setze die Bausteine hier zusammen: ",
-  "workspaceHeaderJavaScript": "Type your JavaScript code here",
+  "workspaceHeaderJavaScript": "Geben Sie hier Ihren JavaScript-code ein",
   "infinity": "Unendlichkeit",
   "rotateText": "Drehen Sie ihr Gerät.",
   "orientationLock": "Deaktivieren Sie die Dreh-Möglichkeit des Bildschirms in den Geräteeinstellungen.",
@@ -78,5 +81,6 @@
   "tryHOC": "Probiere \"The Hour of Code\" aus",
   "signup": "Für den Einführungskurs anmelden",
   "hintHeader": "Hier ist ein Tipp:",
-  "genericFeedback": "Schau dir an, was du gemacht hast und versuche Fehler im Programm zu beheben."
+  "genericFeedback": "Schau dir an, was du gemacht hast und versuche Fehler im Programm zu beheben.",
+  "defaultTwitterText": "Check out what I made"
 }

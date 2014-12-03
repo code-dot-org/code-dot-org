@@ -36,8 +36,8 @@ Blockly.JavaScript.functional_definition = function() {
   // NOTE: It is important to do this first so the first call to getName()
   // for each arg includes the specific type of NAME_TYPE_LOCAL (local var)
   var args = [];
-  for (var x = 0; x < this.arguments_.length; x++) {
-    args[x] = Blockly.JavaScript.variableDB_.getName(this.arguments_[x],
+  for (var x = 0; x < this.parameterNames_.length; x++) {
+    args[x] = Blockly.JavaScript.variableDB_.getName(this.parameterNames_[x],
         Blockly.Variables.NAME_TYPE,
         Blockly.Variables.NAME_TYPE_LOCAL);
   }
@@ -66,11 +66,27 @@ Blockly.JavaScript.functional_call = function() {
   var funcName = Blockly.JavaScript.variableDB_.getName(
       this.getTitleValue('NAME'), Blockly.Procedures.NAME_TYPE);
   var args = [];
-  for (var x = 0; x < this.arguments_.length; x++) {
+  for (var x = 0; x < this.currentParameterNames_.length; x++) {
     args[x] = Blockly.JavaScript.statementToCode(this, 'ARG' + x,
         Blockly.JavaScript.ORDER_COMMA) || 'null';
   }
   var code = (Blockly.varsInGlobals ? 'Globals.' : '') +
               funcName + '(' + args.join(', ') + ')';
   return code;
+};
+
+Blockly.JavaScript.procedural_to_functional_call = function() {
+  // Call a functional procedure with a return value.
+  var funcName = Blockly.JavaScript.variableDB_.getName(
+      this.getTitleValue('NAME'), Blockly.Procedures.NAME_TYPE);
+  var args = [];
+  for (var x = 0; x < this.currentParameterNames_.length; x++) {
+    var value = Blockly.JavaScript.valueToCode(this, 'ARG' + x,
+        Blockly.JavaScript.ORDER_COMMA);
+    args[x] = value || 'null';
+  }
+  var code = (Blockly.varsInGlobals ? 'Globals.' : '') +
+              funcName + '(' + args.join(', ') + ')';
+  // convert functional output to procedural output.
+  return [code, Blockly.JavaScript.ORDER_NONE];
 };

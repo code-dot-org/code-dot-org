@@ -118,18 +118,18 @@
           er fylt ut for deg - dette er "hendelsesbehandlinger" '
       7:
         image: notes/flappy07.jpg
-        text: If you want the bird to FLAP when you CLICK the mouse, you can do that
-          by attaching the "FLAP" block to the appropriate event handler, and now
-          in your game whenever you click the mouse, the bird will flap.
+        text: Hvis du vil at fuglen skal FLAKSE når du KLIKKER med musen, så fester
+          du "FLAKS" blokken til den riktige hendelsesbehandleren og fuglen vil flakse
+          hver gang du klikker med musen.
       8:
         image: notes/flappy08.jpg
-        text: In each puzzle of this activity we'll introduce new types of events
-          as green blocks on the workspace, and you can decide the appropriate blocks
-          to add in response to those events.
+        text: I hver oppgave i denne aktiviteten vil vi introdusere nye typer hendelser
+          som grønne blokker i arbeidsområdet, og du kan bestemme de relevante blokkene
+          å legge til i respons til de hendelsene.
       9:
         image: notes/flappy09.jpg
-        text: When you see a drop down arrow like this, that means you can change
-          the settings - like what sound to play when flappy hits the ground.
+        text: Når du ser en nedtrekksboks som denne, så betyr det at du kan endre
+          instillingene - for eksempe lyden som spilles av når flappy treffer bakken.
       10:
         image: notes/flappy10.jpg
         text: I siste puslespillet vil du kunne lage et spill og dele den med dine

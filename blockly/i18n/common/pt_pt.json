@@ -1,5 +1,7 @@
 {
   "and": "e",
+  "booleanTrue": "verdadeiro",
+  "booleanFalse": "falso",
   "blocklyMessage": "Blockly",
   "catActions": "Ações",
   "catColour": "Cor",
@@ -41,6 +43,7 @@
   "numBlocksNeeded": "Parabéns! Completaste o puzzle {puzzleNumber}. (Apesar disso, poderias ter usado somente {numBlocks, plural, one {1 bloco} other {# blocos}}.)",
   "numLinesOfCodeWritten": "Acabaste de escrever {numLines, plural, one {1 linha} other {# linhas}} de código!",
   "play": "play",
+  "print": "Print",
   "puzzleTitle": "Puzzle {puzzle_number} de {stage_total}",
   "repeat": "repita",
   "resetProgram": "Repor",
@@ -78,5 +81,6 @@
   "tryHOC": "Exprimenta a Hora do Código",
   "signup": "Inscreve-te para o curso de introdução",
   "hintHeader": "Aqui vai uma dica:",
-  "genericFeedback": "See how you ended up, and try to fix your program."
+  "genericFeedback": "See how you ended up, and try to fix your program.",
+  "defaultTwitterText": "Check out what I made"
 }

@@ -1,5 +1,7 @@
 {
   "and": "ir",
+  "booleanTrue": "Taip",
+  "booleanFalse": "klaida",
   "blocklyMessage": "Blockly",
   "catActions": "Komandos",
   "catColour": "Spalva",
@@ -7,7 +9,7 @@
   "catLists": "Sąrašai",
   "catLoops": "Kartojimas",
   "catMath": "Matematika",
-  "catProcedures": "Sudėtinės komandos",
+  "catProcedures": "Komandų kūrimas",
   "catText": "Tekstas",
   "catVariables": "Kintamieji",
   "codeTooltip": "Žiūrėti sukurtą JavaScript kodą.",
@@ -39,8 +41,9 @@
   "nextStage": "Sveikinu! Tu užbaigei {stageName}.",
   "nextStageTrophies": "Sveikinu! Tu užbaigei lygį {stageName} ir laimėjai {numTrophies, plural, one {trofėjų} other {# trofėjus}}.",
   "numBlocksNeeded": "Sveikinu! Tu išsprendei {puzzleNumber} užduotį. (Beje, galėjai panaudoti tik {numBlocks, plural, vieną {1 blokelį} other {# blokelių}}.)",
-  "numLinesOfCodeWritten": "Tu parašei  {numLines, plural, one {1 eilutę} other {# eilučių}} kodo!",
+  "numLinesOfCodeWritten": "Tu sukūrei {numLines, plural, one {1 eilutę} other {# eilučių}} programą!",
   "play": "žaisti",
+  "print": "Print",
   "puzzleTitle": "Užduotis {puzzle_number} iš {stage_total}",
   "repeat": "kartok",
   "resetProgram": "Iš naujo",
@@ -48,7 +51,7 @@
   "runTooltip": "Paleisk programą, naudodamasis blokeliais.",
   "score": "rezultatas",
   "showCodeHeader": "Rodyti kodą",
-  "showBlocksHeader": "Show Blocks",
+  "showBlocksHeader": "Rodyti blokus",
   "showGeneratedCode": "Rodyti kodą",
   "subtitle": "Vizuali programavimo aplinka",
   "textVariable": "tekstas",
@@ -67,7 +70,7 @@
   "typeFuncs": "Galimos komandos:%1",
   "typeHint": "Įsidėmėk, kad skliausteliai ir kabliataškiai yra būtini.",
   "workspaceHeader": "Iš viso panaudojai blokelių: ",
-  "workspaceHeaderJavaScript": "Type your JavaScript code here",
+  "workspaceHeaderJavaScript": "Čia rašykite savo JavaScript kodą.",
   "infinity": "Begalybė",
   "rotateText": "Pasuk savo įrenginį.",
   "orientationLock": "Išjunk savo įrenginio ekrano pasukimą.",
@@ -78,5 +81,6 @@
   "tryHOC": "Išmėgink „Programavimo valandą“",
   "signup": "Užsiregistruok į kursą pradedantiesiems",
   "hintHeader": "Štai patarimas:",
-  "genericFeedback": "Pažiūrėk, kaip pavyko ir pabandyk patobulinti programą."
+  "genericFeedback": "Pažiūrėk, kaip pavyko ir pabandyk patobulinti programą.",
+  "defaultTwitterText": "Check out what I made"
 }

@@ -7,9 +7,9 @@ social:
   "twitter:url": "http://code.org/sharecertificate"
   "twitter:image:src" : "http://code.org/images/fit-540/hour_of_code_certificate.jpg"
   "twitter:title": "I just finished the Hour of Code"
-  "twitter:description": "Join 25 million students to learn an hour of computer science. It's the largest learning event in world history."
+  "twitter:description": "Join tens of millions students to learn an hour of computer science. It's the largest learning event in world history."
   "og:title": "I just finished the Hour of Code"
-  "og:description": "Join 25 million students to learn an hour of computer science. It's the largest learning event in world history."
+  "og:description": "Join tens of millions students to learn an hour of computer science. It's the largest learning event in world history."
   "og:image" : "http://code.org/images/fit-540/hour_of_code_certificate.jpg"
   "og:image:width": "540"
   "og:image:height": "380"
@@ -30,7 +30,7 @@ social:
       #blurb.col-mobile-56.mobile-pad-right
         %br.desktop-feature
 
-        .count{:style=>'font-size: 42px; line-height: 42px; font-weight:500' }
+        .count{:style=>"font-size: 42px; line-height: 42px; font-family: 'Gotham 5r', sans-serif;" }
           -count_string = I18n.t(:n_have_learned_an_hoc).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
           -if request.locale == 'en-US'
             %a{:href=>'/leaderboards', :style=>'text-decoration:none'}
@@ -43,7 +43,7 @@ social:
       #getstarted.col-mobile-44
         #largegap.mobile-show-medium{:style=>"height:50px"}
         %a{:href=>'/learn'}
-          %button{:style=>"font-size: 19px; font-weight: 500; height: 50px;"}
+          %button{:style=>"font-size: 19px; font-family: 'Gotham 5r', sans-serif; height: 50px;"}
             =I18n.t(:get_started)
 
     #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}

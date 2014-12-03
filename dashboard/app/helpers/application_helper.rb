@@ -1,5 +1,6 @@
 require 'nokogiri'
 require 'cdo/user_agent_parser'
+require 'cdo/graphics/certificate_image'
 
 module ApplicationHelper
 
@@ -173,5 +174,16 @@ module ApplicationHelper
 
   def artist_freeplay_path
     script_stage_script_level_path(*is_k1? ? ['course1', 18, 10] : ['artist', 1, 10])
+  end
+  
+  def script_certificate_image_url(user, script)
+    if script.hoc?
+      script_name = 'hoc'
+    elsif script.twenty_hour?
+      script_name = '20hours'
+    else
+      script_name = data_t_suffix('script.name', script.name, "title")
+    end
+    certificate_image_url(name: user.name, course: script_name)
   end
 end

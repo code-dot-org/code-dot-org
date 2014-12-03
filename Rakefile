@@ -1,6 +1,19 @@
 require_relative './deployment'
+require 'os'
 require 'cdo/hip_chat'
 require 'cdo/rake_utils'
+
+def create_pegasus_db()
+  db = URI.parse CDO.pegasus_db_writer
+  command = [
+    'mysql',
+    "--user=#{db.user}",
+    "--host=#{db.host}",
+  ]
+  command << "--execute=\"CREATE DATABASE IF NOT EXISTS #{CDO.pegasus_db_name}\""
+  command << "--password=#{db.password}" unless db.password.nil?
+  system command.join(' ')
+end
 
 def with_retries(count=5)
   begin
@@ -23,19 +36,16 @@ end
 namespace :build do
 
   task :configure do
-    if CDO.chef_managed && !(rack_env?(:production) && CDO.name =='daemon')
+    if CDO.chef_managed && !(rack_env?(:production) && CDO.name =='daemon') && !rack_env?(:test) && !rack_env?(:staging)
       HipChat.log 'Applying <b>chef</b> profile...'
       RakeUtils.sudo 'chef-client'
     end
 
-    Dir.chdir(aws_dir) do
-      unless CDO.chef_managed
+    unless CDO.chef_managed
+      Dir.chdir(aws_dir) do
         HipChat.log 'Installing <b>aws</b> bundle...'
         RakeUtils.bundle_install 
       end
-
-      HipChat.log 'Configuring <b>aws</b>...'
-      RakeUtils.rake
     end
   end
 
@@ -81,8 +91,6 @@ namespace :build do
       RakeUtils.bundle_install
 
       if CDO.daemon || rack_env?(:levelbuilder)
-        RakeUtils.rake 'db:create' unless rack_env?(:production)
-
         HipChat.log 'Migrating <b>dashboard</b> database...'
         RakeUtils.rake 'db:migrate'
 
@@ -98,8 +106,9 @@ namespace :build do
       HipChat.log 'Starting <b>dashboard</b>.'
       RakeUtils.start_service CDO.dashboard_unicorn_name unless rack_env?(:development)
 
-      # report deployment to honeybadger
-      RakeUtils.system 'rake', "honeybadger:deploy TO=#{rack_env} REVISION=`git rev-parse HEAD`"
+      if rack_env?(:production)
+        RakeUtils.system 'rake', "honeybadger:deploy TO=#{rack_env} REVISION=`git rev-parse HEAD`"
+      end
     end
   end
 
@@ -163,44 +172,50 @@ task :build => ['build:all']
 ##################################################################################################
 
 namespace :install do
+  
+  task :blockly do
+    if rack_env?(:development) && !CDO.chef_managed
+      Dir.chdir(blockly_dir) do
+        blockly_build = CDO.use_my_blockly ? blockly_dir('build/package') : 'blockly-package'
+        RakeUtils.ln_s blockly_build, dashboard_dir('public','blockly')
+      end
+
+      if OS.linux?
+        RakeUtils.sudo_ln_s '/usr/bin/nodejs', '/usr/bin/node'
+        RakeUtils.sudo 'npm', 'update', '-g', 'npm'
+        RakeUtils.sudo 'npm', 'install', '-g', 'grunt-cli'
+      elsif OS.mac?
+        RakeUtils.system 'brew install node'
+        RakeUtils.system 'npm', 'update', '-g', 'npm'
+        RakeUtils.system 'npm', 'install', '-g', 'grunt-cli'
+      end
+    end
+  end
 
   task :dashboard do
-    unless CDO.chef_managed
-      Dir.chdir(aws_dir) { RakeUtils.rake }
+    if rack_env?(:development) && !CDO.chef_managed
       Dir.chdir(dashboard_dir) do
         RakeUtils.bundle_install
-        unless rack_env?(:production)
-          RakeUtils.rake 'db:create'
-          RakeUtils.rake 'db:schema:load'
-        end
-        RakeUtils.sudo_ln_s dashboard_dir('config/init.d'), File.join('/etc/init.d', CDO.dashboard_unicorn_name)
-        RakeUtils.sudo 'update-rc.d', CDO.dashboard_unicorn_name, 'defaults'
-        RakeUtils.sudo_ln_s dashboard_dir('config/logrotate'), File.join('/etc/logrotate.d', CDO.dashboard_unicorn_name)
-        RakeUtils.sudo 'service', CDO.dashboard_unicorn_name, 'start'
+        RakeUtils.rake 'db:create'
+        RakeUtils.rake 'db:schema:load'
       end
     end
   end
 
   task :pegasus do
-    unless CDO.chef_managed
-      Dir.chdir(aws_dir) { RakeUtils.rake }
+    if rack_env?(:development) && !CDO.chef_managed
       Dir.chdir(pegasus_dir) do
         RakeUtils.bundle_install
-        unless rack_env?(:production)
-          RakeUtils.system 'echo', "'CREATE DATABASE IF NOT EXISTS #{CDO.pegasus_db_name}'", '|', 'mysql', '-uroot'
-          RakeUtils.rake 'db:migrate'
-          RakeUtils.rake 'seed:migrate'
-        end
-        RakeUtils.sudo_ln_s dashboard_dir('config/init.d'), File.join('/etc/init.d', CDO.pegasus_unicorn_name)
-        RakeUtils.sudo 'update-rc.d', CDO.pegasus_unicorn_name, 'defaults'
-        RakeUtils.sudo 'service', CDO.pegasus_unicorn_name, 'start'
+        create_pegasus_db
+        RakeUtils.rake 'db:migrate'
+        RakeUtils.rake 'seed:migrate'
       end
     end
   end
 
   tasks = []
   #tasks << :blockly_core if CDO.build_blockly_core
-  #tasks << :blockly if CDO.build_blockly
+  tasks << :blockly if CDO.build_blockly
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
   task :all => tasks

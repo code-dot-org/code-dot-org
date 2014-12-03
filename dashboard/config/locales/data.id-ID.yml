@@ -51,6 +51,7 @@
           MazeEC: Tahap 1
           Webapp: Tahap 2
           ArtistEC: Tahap 3
+          StudioEC: Tahap 4
         events:
           desc: Memantul (beta)
           Bounce: Tahap 1
@@ -101,6 +102,8 @@
         Wordsearch: Carikata
         Webapp: Aplkasi Web
         ArtistEC: Artis
+        TextMatch: Cocok Teks
+        StudioEC: Play Lab
     trophy:
       name:
         Bronze: Perunggu
@@ -526,8 +529,8 @@
         studio_c3_game_6: Bisakah kamu menambahkan blok-blok untuk mengubah latar
           belakang dan kecepatan si penguin, lalu menggerakan ia dengan panah-panah
           sampai mendapatkan poin?
-        studio_c3_game_7: Buat game anda sendiri. Ketika selesai, klik Selesai untuk
-          memberitahu teman anda untuk mencobanya di ponsel mereka.
+        studio_c3_game_7: Buat permainan Anda sendiri. Setelah selesai, klik Selesai
+          untuk membiarkan teman-teman mencoba permainan Anda pada ponsel mereka.
         studio_playlab_1: Dapatkah anda membuat anjing ini mengatakan "Halo dunia"?
         studio_playlab_2: Bisakah Anda membuat anjing itu mengatakan sesuatu, kemudian
           membuat kucing itu mengatakan sesuatu?
@@ -548,10 +551,10 @@
         studio_playlab_9: Bisakah kamu menambahkan blok-blok untuk mengubah latar
           belakang dan kecepatan si penguin, lalu menggerakan ia dengan panah-panah
           sampai mendapatkan poin?
-        studio_playlab_10: Buat game anda sendiri. Ketika selesai, klik Selesai untuk
-          memberitahu teman anda untuk mencobanya di ponsel mereka.
-        studio_full_sandbox: Buat game anda sendiri. Ketika selesai, klik Selesai
-          untuk memberitahu teman anda untuk mencobanya di ponsel mereka.
+        studio_playlab_10: Buat permainan Anda sendiri. Setelah selesai, klik Selesai
+          untuk membiarkan teman-teman mencoba permainan Anda pada ponsel mereka.
+        studio_full_sandbox: Buat permainan Anda sendiri. Setelah selesai, klik Selesai
+          untuk membiarkan teman-teman mencoba permainan Anda pada ponsel mereka.
         studio_k1_1: Dapatkah anda membuat anjing ini mengatakan "Halo dunia"?
         studio_k1_2: Bisakah Anda membuat anjing itu mengatakan sesuatu, kemudian
           membuat kucing itu mengatakan sesuatu?
@@ -582,6 +585,11 @@
         webapp_ec_simple: Buatlah aplikasi web anda dengan memakai createHtmlBlock.
         turtle_ec_1_2: 'Sekarang, gambarkan persegi. CATATAN: gunakan warna kesukaan
           anda dengan cara memilih itu dalam new "penColour" blok.'
+        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
+          a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
+          Have fun!'
+        studio_ec_sandbox: Buat permainan Anda sendiri. Setelah selesai, klik Selesai
+          untuk membiarkan teman-teman mencoba permainan Anda pada ponsel mereka.
     video:
       name:
         maze_intro: Introduksi labirin
@@ -597,7 +605,6 @@
         loop_for: Blok konter (Counter)
         parameters: Fungsi dengan parameter
         hoc_wrapup: Penutupan Jam kode
-        20_wrapup: 'Penutupan 20 Jam '
         Unplug1: Apa itu CS?
         Unplug2: Berpikir secara komputasi
         Unplug3: Pemrograman grafis diatas kertas
@@ -612,7 +619,7 @@
         C1_happy_maps_unplugged: Pemetaan bahagia
         C1_moveitmoveit_unplugged: Gerakkan itu, Gerakkan itu
         C1_bigevent_unplugged: Acara besar
-        C1_getting_loop: Dapat berulang-ulang
+        C1_getting_loopy: Getting Loopy
         C1_pair_programming: Pemrograman berpasangan
         C1_maze_intro_sequencing: Introduksi Sekuensi Labirin
         C1_maze_debugging: Labirin Debugging
@@ -624,19 +631,22 @@
         C1_maze_loops: Pengulangan labirin
         C1_playlab_storytelling: Mainkan Lab - Buat sebuah Cerita
         C1_planting_seed: Penanaman benih
-        C1_building_foundating: Membangun dasar
+        C1_building_foundation: Membangun dasar
         C2_maze_intro: Apa itu Labirin?
         C2_artist_intro: Introduksi Artis
         C2_zuck_repeat_loop: Pengulangan labirin
         C2_artist_loops: Perulangan Artis
+        C2_artist_debugging: Artist Debugging
+        C2_bee_loops: Pengulangan lebah
+        C2_bee_debugging: Bee Debugging
         C2_bee_conditionals: kondisi lebah
         C2_playlab_createstory: Mainkan Lab - Buat sebuah Cerita
         C2_graph_paper: Pemrograman grafis diatas kertas
         C2_conditionals_with_cards: Kondisi
         C2_binary_bracelets: Gelang biner
-        C2_replay_programming: Pemrograman relay
+        C2_relay_programming: Pemrograman relay
         C2_paper_airplanes: Pesawat kertas
-        C3_maze_intro: Apa itu Labirin?
+        C3_maze_level_4: Pengulangan labirin
         C3_artist_intro: Introduksi Artis
         C3_artist_functions: Fungsi Artis
         C3_bee_functions: Fungsi lebah
@@ -654,6 +664,9 @@
         C3_crowdsourcing: Sumber kerumunan
         C3_functional_suncatchers: Fungsional pengkap matahari
         C3_songwriting_with_parameters: Parameter penulis lagu
+        Frozen_intro: Hour of Code Intro
+        Frozen_loops: Introduction to Loops
+        Frozen_functions: Introduction to Functions
     callout:
       text:
         drag_blocks: Tarik blok "gerak" dan letakkan di bawah blok lain
@@ -672,3 +685,34 @@
         studio_say_text: Tuliskan apa yang anda inginkan untuk aktor katakan dalam
           tanda kutip tersebut
         jigsaw_click: Klik blok ini!
+        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
+          Run" block to make Elsa move forward
+        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
+          determines how much Elsa turns
+        replace_questions: Use the drop-down to replace "???" with a number
+        replace_questions_degree: Use the drop-down to replace "???" with the correct
+          degree to turn
+        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
+          workspace
+        snowflake_dropdown: Use this drop-down to create different snowflakes!
+        degrees_per_side: Divide 360 by the number of sides to get the size of each
+          angle in degrees.
+        set_sides: Use this block to set "sides" to the number needed to complete
+          the puzzle.
+        set_length: Use this block to set "length" to the correct value.
+        which_equation: Which equation makes each side shorter for shapes with more
+          sides?  Try each equation!
+        get_nectar: Use the new "get nectar" block.
+        actions_category: The tool box got a new look! The "Actions" blocks are in
+          here now.
+        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
+        edit_function: Use this button to edit the function.
+        create_function: Click here to open the "Functions" flyout, then click the
+          "Create a Function" button.
+        house_hint: It's ok if the picture doesn't look like a house yet. We will
+          fix it in the next puzzle.
+        edit_draw_square: Use this button to edit the function and add the loop.
+        edit_get_nectar: Use this button to edit the function and change the direction
+          the Bee will turn to get the nectar.
+        logic_category: Open the "Logic" flyout to find the "if/else" block.
+        length_parameter: Can you update this function so it uses the "length" parameter?

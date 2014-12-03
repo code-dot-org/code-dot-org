@@ -8,7 +8,7 @@ layout: wide
 
 **2014 Hour of Code 행사를 위한 튜토리얼 제안 기한이 이미 지났습니다만, 제출해 주시면 시간이 되는대로 살펴볼 것입니다.**
 
-Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
+Code.org 는 매우 많고 다양한 Hour of Code 활동들을 Code.org, Hour of Code, CSEdWeek 웹 사이트들에서 진행합니다. 현재 진행중인 활동들 :[<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
 
 우리는 다양하면서도 매력적인 활동들을 제공하고 싶습니다만, 가장 중요한 목표는 컴퓨터과학(정보과학)을 처음 배우게 되는 학생들과 선생님들의 학습경험과 효과를 최대화 하는 것입니다. 이 문서를 활용하세요. 코딩, 컴퓨터프로그래밍, 컴퓨터과학(정보과학)에 대해 전혀 알지 못하는 사람들을 대상으로하는 여러가지 활동들을 만들어내는 가이드로서 활용하면 됩니다.
 

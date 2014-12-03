@@ -50,6 +50,7 @@
           MazeEC: "مرحله 1"
           Webapp: "مرحله 2"
           ArtistEC: "مرحله 3"
+          StudioEC: "مرحله 4"
         events:
           desc: Bounce (beta)
           Bounce: "مرحله 1"
@@ -100,6 +101,8 @@
         Wordsearch: Wordsearch
         Webapp: Webapp
         ArtistEC: "هنرمند"
+        TextMatch: Text Match
+        StudioEC: Play Lab
     trophy:
       name:
         Bronze: "برنز"
@@ -380,7 +383,7 @@
           changing the scene or the speed of the paddle and the ball and see how many
           points you can score before your opponent scores twice.
         bounce_12: Create your own Bounce game. You can change all the visuals and
-          the rules. When you're done, click Share to let friends try your game on
+          the rules. When you're done, click Finish to let friends try your game on
           their phones.
         Custom_builder: بلوک‌ها را از جعبه‌ابزار به فضای کاری بکش تا مرحله دلخواه
           خود را بسازی. وقتی آماده شد، "اجرا" را بزن.
@@ -405,9 +408,9 @@
           هنگام عبور از یک مانع."
         flappy_9: "برای پیچیده‌تر کردن قضیه، هنگام برخورد با یک مانع یا زمین، بجای
           پایان دادن به بازی، سعی کن امتیاز رو به 0 برگردونی."
-        flappy_11: بازی "پرنده شل و ول" خودت رو بساز. می‌تونی همه ظواهر و قوانین رو
-          عوض کنی، حتی جاذبه. وقتی تموم شد، اشتراک گذاری رو بزن تا دوستات بازی خودت
-          رو روی گوشی‌هاشون انجام بدن.
+        flappy_11: Create your own Flappy game. You can change all the visuals and
+          all the rules, even the gravity. When you're done, click Finish to let friends
+          try your game on their phones.
         flappy_k1_1: Play Flappy
         flappy_k1_2: یک بلوک به بلوک "هنگام کلیک" بچسبان و سپس "اجرا" را بزن. کلیک
           کن یا صفحه را لمس کن تا Flappy حرکت کرده و به هدف برسد.
@@ -488,7 +491,7 @@
         studio_c3_game_6: Can you add blocks to change the background and the speed
           of the penguin, and then move him with the arrows until you score?
         studio_c3_game_7: Create your own game. When you're done, click Finish to
-          let friends try your story on their phones.
+          let friends try your game on their phones.
         studio_playlab_1: می‌تونی کاری کنی که این سگ بگه "سلام بر جهان"؟
         studio_playlab_2: Can you make the dog say something and then have the cat
           say something afterwards?
@@ -506,18 +509,18 @@
         studio_playlab_9: Can you add blocks to change the background and the speed
           of the penguin, and then move him with the arrows until you score?
         studio_playlab_10: Create your own game. When you're done, click Finish to
-          let friends try your story on their phones.
+          let friends try your game on their phones.
         studio_full_sandbox: Create your own game. When you're done, click Finish
-          to let friends try your story on their phones.
+          to let friends try your game on their phones.
         studio_k1_1: می‌تونی کاری کنی که این سگ بگه "سلام بر جهان"؟
         studio_k1_2: Can you make the dog say something and then have the cat say
           something afterwards?
-        studio_k1_3: Can you write a program to make this dog move to the target?
+        studio_k1_3: Can you write a program to make this dog move to the cat?
         studio_k1_4: Make the dog move to the cat and the cat say "hello" when he
           gets there.
         studio_k1_5: Can you add a block to make the octopus happy?
-        studio_k1_6: Can you write a program to make this penguin move around using
-          the up / down / left /right keys to hit all of the targets?
+        studio_k1_6: Create your own story! Move around the cat and dog, and make
+          them say things.
         maze_wordsearch_k_1: Move me to spell the word EAST
         maze_wordsearch_k_2: Move me to spell the word SOUTH
         maze_wordsearch_k_3: Move me to spell the word WEST
@@ -531,7 +534,12 @@
           the word STORY
         webapp_ec_simple: Create your web app by using createHtmlBlock.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
-          it in the new "penColour" block.'
+          it in the new "penColor" block.'
+        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
+          a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
+          Have fun!'
+        studio_ec_sandbox: Create your own game. When you're done, click Finish to
+          let friends try your game on their phones.
     video:
       name:
         maze_intro: "معرفی پیچ و خم"
@@ -547,7 +555,6 @@
         loop_for: "بلوک شمارشگر"
         parameters: "معادله با پارامترها"
         hoc_wrapup: "جمع بندی ساعتی با کد"
-        20_wrapup: "۲۰ ساعت جمع بندی"
         Unplug1: What is CS?
         Unplug2: "تفکر محاسباتی"
         Unplug3: "برنامه نویسی روی کاغذ شطرنجی "
@@ -562,7 +569,7 @@
         C1_happy_maps_unplugged: Happy Maps
         C1_moveitmoveit_unplugged: Move It, Move It
         C1_bigevent_unplugged: The Big Event
-        C1_getting_loop: Getting Loopy
+        C1_getting_loopy: Getting Loopy
         C1_pair_programming: Pair Programming
         C1_maze_intro_sequencing: Maze Sequencing Intro
         C1_maze_debugging: Maze Debugging
@@ -574,19 +581,22 @@
         C1_maze_loops: Maze Loops
         C1_playlab_storytelling: Play Lab - Create a Story
         C1_planting_seed: Planting a Seed
-        C1_building_foundating: Building a Foundation
+        C1_building_foundation: Building a Foundation
         C2_maze_intro: "معرفی پیچ و خم"
         C2_artist_intro: "معرفی هنرمند"
         C2_zuck_repeat_loop: Maze Loops
         C2_artist_loops: Artist Loops
+        C2_artist_debugging: Artist Debugging
+        C2_bee_loops: Bee Loops
+        C2_bee_debugging: Bee Debugging
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: Play Lab - Create a Story
         C2_graph_paper: "برنامه نویسی روی کاغذ شطرنجی "
         C2_conditionals_with_cards: "مشروط"
         C2_binary_bracelets: Binary Bracelets
-        C2_replay_programming: "برنامه نویسی رله"
+        C2_relay_programming: "برنامه نویسی رله"
         C2_paper_airplanes: Paper Airplanes
-        C3_maze_intro: "معرفی پیچ و خم"
+        C3_maze_level_4: Maze Loops
         C3_artist_intro: "معرفی هنرمند"
         C3_artist_functions: Artist Functions
         C3_bee_functions: Bee Functions
@@ -604,6 +614,9 @@
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
+        Frozen_intro: Hour of Code Intro
+        Frozen_loops: Introduction to Loops
+        Frozen_functions: Introduction to Functions
     callout:
       text:
         drag_blocks: یک بلوک "حرکت" را بکش و آن را زیر بلوک دیگری بچسبان
@@ -620,3 +633,34 @@
         studio_say_text: "چیزی رو که می‌خواهی بازیگرت بگه، داخل این علامت‌های نقل
           قول تایپ کن"
         jigsaw_click: "این بلوک را کلیک کن!"
+        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
+          Run" block to make Elsa move forward
+        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
+          determines how much Elsa turns
+        replace_questions: Use the drop-down to replace "???" with a number
+        replace_questions_degree: Use the drop-down to replace "???" with the correct
+          degree to turn
+        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
+          workspace
+        snowflake_dropdown: Use this drop-down to create different snowflakes!
+        degrees_per_side: Divide 360 by the number of sides to get the size of each
+          angle in degrees.
+        set_sides: Use this block to set "sides" to the number needed to complete
+          the puzzle.
+        set_length: Use this block to set "length" to the correct value.
+        which_equation: Which equation makes each side shorter for shapes with more
+          sides?  Try each equation!
+        get_nectar: Use the new "get nectar" block.
+        actions_category: The tool box got a new look! The "Actions" blocks are in
+          here now.
+        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
+        edit_function: Use this button to edit the function.
+        create_function: Click here to open the "Functions" flyout, then click the
+          "Create a Function" button.
+        house_hint: It's ok if the picture doesn't look like a house yet. We will
+          fix it in the next puzzle.
+        edit_draw_square: Use this button to edit the function and add the loop.
+        edit_get_nectar: Use this button to edit the function and change the direction
+          the Bee will turn to get the nectar.
+        logic_category: Open the "Logic" flyout to find the "if/else" block.
+        length_parameter: Can you update this function so it uses the "length" parameter?

@@ -6,15 +6,15 @@
       send_paranoid_instructions: Jos sähköpostiosoitteesi löytyy tietokannastamme,
         saat kohta sähköpostiviestin, jossa on ohjeet tilisi vahvistamiseksi.
     failure:
-      already_authenticated: Jos olet jo kirjautunut sisään.
+      already_authenticated: Olet jo kirjautunut sisään.
       inactive: Tiliäsi ei ole vielä aktivoitu.
       invalid: Virheellinen sähköpostiosoite tai salasana.
       invalid_token: Väärä tunnistusavain.
       locked: Tilisi on lukittu.
       not_found_in_database: Virheellinen sähköpostiosoite tai salasana.
-      timeout: Istunto on vanhentunut, kirjaudu uudelleen jatkaaksesi.
+      timeout: Istunto on vanhentunut, kirjaudu uudelleen sisään jatkaaksesi.
       unauthenticated: Sinun täytyy kirjautua sisään tai rekisteröityä ennen jatkamista.
-      unconfirmed: Sinun tulee vahvistaa tilisi, ennen kuin voit jatkaa.
+      unconfirmed: Sinun tulee vahvistaa tilisi ennen kuin voit jatkaa.
     mailer:
       confirmation_instructions:
         subject: Code.org vahvistusohjeet
@@ -24,7 +24,7 @@
         subject: Avausohjeet
     omniauth_callbacks:
       failure: '%{kind} tunnistus epäonnistui, koska "%{reason}".'
-      success: '%{kind} tunnistus onnistui.'
+      success: "%{kind} tunnistus onnistui."
     passwords:
       no_token: Tähän sivuun on pääsy vain salasanan palautus -sähköpostin kautta.
         Jos kuitenkin tulit tälle sivulle salasanan palautus -sähköpostin kautta,
@@ -40,9 +40,9 @@
         pian takaisin.
       signed_up: Tervetuloa! Olet kirjautunut sisään onnistuneesti.
       signed_up_but_inactive: Tilisi on luotu onnistuneesti. Tilisi ei kuitenkaan
-        ole vielä aktivoitu ja tästä johtuen et ole vielä kirjautunut sisään.
+        ole vielä aktivoitu ja tästä johtuen et voi vielä kirjautua sisään.
       signed_up_but_locked: Tilisi on luotu onnistuneesti. Tilisi on kuitenkin lukittu
-        ja tästä johtuen et ole kirjautunut sisään.
+        ja tästä johtuen et voi kirjautua sisään.
       signed_up_but_unconfirmed: Vahvistussähköposti on lähetetty sähköpostiosoitteeseesi.
         Ole hyvä ja avaa sähköpostissa oleva linkki aktivoidaksesi tilisi.
       update_needs_confirmation: Päivitit tilisi onnistuneesti, mutta haluamme vielä
@@ -61,11 +61,11 @@
   errors:
     messages:
       already_confirmed: on jo vahvistettu; kokeile kirjautua sisään uudelleen
-      confirmation_period_expired: täytyy vahvistaa %{period} ajan sisällä; ole hyvä
-        ja pyydä uusi vahvistusviesti
+      confirmation_period_expired: täytyy vahvistaa %{period} sisällä; ole hyvä ja
+        pyydä uusi vahvistusviesti
       expired: on vanhentunut; ole hyvä ja pyydä uusi
       not_found: ei löytynyt
       not_locked: ei lukittu
       not_saved:
         one: 'Virhe esti tämän %{resource} tallentamisen:'
-        other: '%{count} virhettä esti tämän %{resource} tallentamisen:'
+        other: "%{count} virhettä esti tämän %{resource} tallentamisen:"

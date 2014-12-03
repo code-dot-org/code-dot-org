@@ -1,6 +1,6 @@
 * * *
 
-title: Resources layout: wide nav: resources_nav
+title: Press Kit layout: wide nav: resources_nav
 
 * * *
 
@@ -8,56 +8,56 @@ title: Resources layout: wide nav: resources_nav
 
 ## Hvordan kan du få medieopmærksomhed om dit Hour of Code arrangement
 
-*For all press and media inquiries, contact <press@code.org>*
+*For al presse og medier henvendelse, kontakt <press@code.org>*
 
-### Key Tips
+### Vigtige Tips
 
-  * Reach out to media two weeks before your event via email. Follow up by email and phone if you don't receive an initial response.
-  * Ask a school staff member or volunteer to take photos to share online or send to press.
-  * Write about the Hour of Code on your website’s homepage and in your school newspaper. Post your event details, and pictures of student activities.
-  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 8-14. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+  * Nå ud til medierne to uger før din begivenhed via e-mail. Følg op med e-mails og telefon, hvis du ikke modtager svar på den første henvendelse.
+  * Opfordre skolens ansatte til at tage billeder for at dele dem på Internettet, Facebook eller udsend trykt materiale.
+  * Skrive om Hour of Code på din hjemmeside og i din skoles avis. Skriv om dit arrangement og sæt billeder på af elevernes aktiviteter.
+  * På Facebook og Twitter kan du dele opdateringer om dine planer, annoncere dine begivenheder og sende billeder ud i løbet af 8. - 14. december. Brug hashtag **#HourOfCode**, så Code.org kan blive set og det kan fremme dine aktiviteter.
 
-### Step-by-step guide:
+### Step-by-step vejledning:
 
-**1. Plan your event**
+**1. Planlæg din begivenhed**
 
-  * Plan an assembly to kick off the Hour of Code.
-  * Send [a letter](<%= hoc_uri('/resources/#sample-emails') %>) to parents. Ask them to spread the word.
-  * Send [a letter](<%= hoc_uri('/resources/#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
-  * Organize group activities (like a demonstration of an ‘unplugged’ programming activity), or show off student-created and led activities.
-  * Show Code.org’s [Hour of Code video](<%= hoc_uri('/') %>) or one of [these](<%= hoc_uri('/resources#videos') %>) to inspire.
+  * Planlæg et fælles kick off arrangement for Hour of Code.
+  * Send [ et brev](<%= hoc_uri('/resources/#sample-emails') %>) til forældrene. Bed dem om også at fortælle om Hour of Code.
+  * Send [ et brev](<%= hoc_uri('/resources/#sample-emails') %>) til jeres lokale borgmester, folketingsmedlem, eller indflydelsesrige forretningsmand for at deltage i og holde en tale til dine elever.
+  * Organisere gruppeaktiviteter (som for eksempel en demonstration af en "unplugged" programmeringsaktivitet), eller vis elevaktiviteterne.
+  * Vis Code.org's [ Hour of Code video](<%= hoc_uri('/') %>) eller en af [ disse](<%= hoc_uri('/resources#videos') %>) for at inspirere.
 
-**2. Identify specific local reporters that cover education or local events.**
+**2. Find lokale journalister der dækker uddannelse eller lokale begivenheder.**
 
-Think a local newspaper, TV station, radio station or blog.
+Find en lokalavis, TV-station, radiostation eller blogs.
 
-Look online to find reporter contact information. If you can't find it, call the publication to ask, or email a general tips@PUBLICATIONNAME.com email address and ask for your message to be directed to the correct reporter.
+Kig på Internettet for at finde journalisternes kontaktoplysninger. Hvis du ikke kan finde dem, så kontakt avisen og spørg, eller send en email til den generelle e-mail adresse for avisen, og bed om at dine informationer skal rettes til den pågældende journalist.
 
-**3. Contact local media**
+**3. Kontakt lokale medier**
 
-The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](<%= hoc_uri('/resources#sample-emails') %>):**
+Den bedste måde at nå ud er via e-mail. Det skal være kort og fortælle: Hvorfor skal andre mennesker interessere sig for denne begivenhed? Husk også at sende dine kontaktoplysninger (herunder mobil nummer) for den person der vil være på stedet under arrangementet. **Se her [ en prøve på kontakt til et nyhedsmedie](<%= hoc_uri('/resources#sample-emails') %>):**
 
-**4. Prepare to field questions about your school event. Here are some examples:**
+**4. Forberedelse til forskellige spørgsmål om din skoles aktiviteter. Her er nogle eksempler:**
 
-*Why is your school doing an Hour of Code?*
+*Hvorfor arrangerer din skole Hour of Code?*
 
-While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
+Selv om vi alle ved, er det er vigtigt for elever, at lære at navigere i nutidens it-mættede verden. Men mange lærere har ikke erfaring i kodning og ved ikke hvor du skal begynde. Hour of Code er en chance for os alle til at se hvad kodning handler om.
 
-We hope it’ll spark interest in students to keep learning. Research also shows that kids pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages.
+Vi håber at det vil styrke interessen hos eleverne og at de vil fortsætte senere. Forskning viser også, at børn kan lære kodningsbegreber, før de ved hvordan skal læse og skrive. I virkeligheden så er børns hjerner mere modtagelig for edb-sprog i en ung alder, ligesom med fremmedsprog.
 
-*Why is this important?*
+*Hvorfor er dette vigtigt?*
 
-In China, every students takes computer science to graduate high school. In the U.S., 90 percent of schools don’t even teach it. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
+I Kina tager alle elever programmering på high school. I USA underviser 90 procent af skolerne slet ikke i dette. Det er tid for os, at tage fat på det 21. århundrede. Vi ved, at uanset hvad vores elever gør når de vokser op, uanset om de får uddannelses inden for medicin, business, politik, eller kunst. Så må de vide hvordan man opbygger teknologi og it-programmer. Det vil give dem tillid og knowhow til at få succes.
 
-**More details and a quote you can use in materials**
+**Flere detaljer og oplysninger du kan bruge i dit materialer**
 
-"The Hour of Code is designed to demystify code and show that computer science is not rocket-science, anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "In one week last year, 15 million students tried an Hour of Code. Now we're aiming for 100 million worldwide to prove that the demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
+"Hour of Code er skabt for at afmystificere programmering og viser, at kodning og programmering ikke er raketvidenskab, alle kan lære det grundlæggende," sagde Hadi Partovi, grundlægger og CEO for Code.org. "Sidste år prøvede 15 millioner elever Hour of Code. Nu sigter vi mod 100 millioner elever på verdensplan, for at vise, at kravet om relevante kodningsuddannelse af elever, krydser alle grænser i det 21. århundrede og for at vise, at der for dette krav ikke er nogle grænser."
 
-**About Code.org**
+**Om Code.org**
 
-Code.org® is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign — which has introduced millions of students to computer science — partnered with more than 30 public school districts nationwide, and launched Code Studio, an open-source, online learning platform for all ages. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
+Code.org® er en 501c 3 offentlige non-profit organisation, med det mål at øge deltagelse i programmering, samt øget deltagelse af kvinder og farvede elever. Visionen er, at alle elever i alle skoler bør have mulighed for at lære at skrive computer kode. Efter lanceringen i 2013, organiserede Code.org kampagnen the Hour of Code, som har introduceret millioner af elever til kodning — har indgået et samarbejde med mere end 30 offentlige skoledistrikter i USA, og har lanceret Code Studio, en open source, online læringsplatform for alle aldre. For flere informationer besøg venligst: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
-Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).
+Find flere ressourcer og prøve e-mails [ her](<%= hoc_uri('/resources') %>).
 
 <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

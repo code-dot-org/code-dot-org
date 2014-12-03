@@ -81,9 +81,9 @@ Eval.init = function(config) {
   });
 
   config.loadAudio = function() {
-    Blockly.loadAudio_(skin.winSound, 'win');
-    Blockly.loadAudio_(skin.startSound, 'start');
-    Blockly.loadAudio_(skin.failureSound, 'failure');
+    BlocklyApps.loadAudio(skin.winSound, 'win');
+    BlocklyApps.loadAudio(skin.startSound, 'start');
+    BlocklyApps.loadAudio(skin.failureSound, 'failure');
   };
 
   config.afterInject = function() {
@@ -209,10 +209,16 @@ Eval.execute = function() {
   Eval.message = undefined;
 
   var userObject = getDrawableFromBlocks(null);
-  userObject.draw(document.getElementById("user"));
+  if (userObject) {
+    userObject.draw(document.getElementById("user"));
+  }
 
   Eval.result = evaluateAnswer();
   Eval.testResults = BlocklyApps.getTestResults(Eval.result);
+
+  if (level.freePlay) {
+    Eval.testResults = BlocklyApps.TestResults.FREE_PLAY;
+  }
 
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
@@ -281,7 +287,10 @@ var displayFeedback = function(response) {
     skin: skin.id,
     feedbackType: Eval.testResults,
     response: response,
-    level: level
+    level: level,
+    appStrings: {
+      reinfFeedbackMsg: evalMsg.reinfFeedbackMsg()
+    },
   });
 };
 

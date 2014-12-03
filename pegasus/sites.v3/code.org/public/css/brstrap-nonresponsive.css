@@ -1,5 +1,8 @@
 /* responsive styling for pages that aren't responsive */
 
+.desktop-pad-right { padding-right: 50px }
+.desktop-pad-left { padding-left: 50px }
+
 .mobile-feature { display: none }
 .desktop-feature { }
 

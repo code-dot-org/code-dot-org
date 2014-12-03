@@ -1,4 +1,146 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+/**
+ * Copyright Marc J. Schmidt. See the LICENSE file at the top-level
+ * directory of this distribution and at
+ * https://github.com/marcj/css-element-queries/blob/master/LICENSE.
+ */
+
+    /**
+     * Class for dimension change detection.
+     *
+     * @param {Element|Element[]|Elements|jQuery} element
+     * @param {Function} callback
+     *
+     * @constructor
+     */
+    module.exports = function(element, callback) {
+        /**
+         *
+         * @constructor
+         */
+        function EventQueue() {
+            this.q = [];
+            this.add = function(ev) {
+                this.q.push(ev);
+            };
+
+            var i, j;
+            this.call = function() {
+                for (i = 0, j = this.q.length; i < j; i++) {
+                    this.q[i].call();
+                }
+            };
+        }
+
+        /**
+         * @param {HTMLElement} element
+         * @param {String}      prop
+         * @returns {String|Number}
+         */
+        function getComputedStyle(element, prop) {
+            if (element.currentStyle) {
+                return element.currentStyle[prop];
+            } else if (window.getComputedStyle) {
+                return window.getComputedStyle(element, null).getPropertyValue(prop);
+            } else {
+                return element.style[prop];
+            }
+        }
+
+        /**
+         *
+         * @param {HTMLElement} element
+         * @param {Function}    resized
+         */
+        function attachResizeEvent(element, resized) {
+            if (!element.resizedAttached) {
+                element.resizedAttached = new EventQueue();
+                element.resizedAttached.add(resized);
+            } else if (element.resizedAttached) {
+                element.resizedAttached.add(resized);
+                return;
+            }
+
+            element.resizeSensor = document.createElement('div');
+            element.resizeSensor.className = 'resize-sensor';
+            var style = 'position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: scroll; z-index: -1; visibility: hidden;';
+            var styleChild = 'position: absolute; left: 0; top: 0;';
+
+            element.resizeSensor.style.cssText = style;
+            element.resizeSensor.innerHTML =
+                '<div class="resize-sensor-expand" style="' + style + '">' +
+                    '<div style="' + styleChild + '"></div>' +
+                '</div>' +
+                '<div class="resize-sensor-shrink" style="' + style + '">' +
+                    '<div style="' + styleChild + ' width: 200%; height: 200%"></div>' +
+                '</div>';
+            element.appendChild(element.resizeSensor);
+
+            if ('absolute' !== getComputedStyle(element, 'position')) {
+                element.style.position = 'relative';
+            }
+
+            var expand = element.resizeSensor.childNodes[0];
+            var expandChild = expand.childNodes[0];
+            var shrink = element.resizeSensor.childNodes[1];
+            var shrinkChild = shrink.childNodes[0];
+
+            var lastWidth, lastHeight;
+
+            var reset = function() {
+                expandChild.style.width = expand.offsetWidth + 10 + 'px';
+                expandChild.style.height = expand.offsetHeight + 10 + 'px';
+                expand.scrollLeft = expand.scrollWidth;
+                expand.scrollTop = expand.scrollHeight;
+                shrink.scrollLeft = shrink.scrollWidth;
+                shrink.scrollTop = shrink.scrollHeight;
+                lastWidth = element.offsetWidth;
+                lastHeight = element.offsetHeight;
+            };
+
+            reset();
+
+            var changed = function() {
+                element.resizedAttached.call();
+            };
+
+            var addEvent = function(el, name, cb) {
+                if (el.attachEvent) {
+                    el.attachEvent('on' + name, cb);
+                } else {
+                    el.addEventListener(name, cb);
+                }
+            };
+
+            addEvent(expand, 'scroll', function() {
+                if (element.offsetWidth > lastWidth || element.offsetHeight > lastHeight) {
+                    changed();
+                }
+                reset();
+            });
+
+            addEvent(shrink, 'scroll',function() {
+                if (element.offsetWidth < lastWidth || element.offsetHeight < lastHeight) {
+                    changed();
+                }
+                reset();
+            });
+        }
+
+        if ('array' === typeof element ||
+          ('undefined' !== typeof jQuery && element instanceof jQuery) || //jquery
+          ('undefined' !== typeof Elements && element instanceof Elements) //mootools
+        ) {
+            var i = 0, j = element.length;
+            for (; i < j; i++) {
+                attachResizeEvent(element[i], callback);
+            }
+        } else {
+            attachResizeEvent(element, callback);
+        }
+    };
+
+},{}],2:[function(require,module,exports){
 (function (global){
 var utils = require('./utils');
 var requiredBlockUtils = require('./required_block_utils');
@@ -50,6 +192,11 @@ module.exports = function(app, levels, options) {
   BlocklyApps.BASE_URL = options.baseUrl;
   BlocklyApps.CACHE_BUST = options.cacheBust;
   BlocklyApps.LOCALE = options.locale || BlocklyApps.LOCALE;
+  // NOTE: editCode (which currently implies droplet) and usingBlockly are
+  // currently mutually exclusive.
+  BlocklyApps.editCode = options.level && options.level.editCode;
+  BlocklyApps.usingBlockly = !BlocklyApps.editCode;
+  BlocklyApps.cdoSounds = options.cdoSounds;
 
   BlocklyApps.assetUrl = function(path) {
     var url = options.baseUrl + path;
@@ -61,17 +208,20 @@ module.exports = function(app, levels, options) {
   };
 
   options.skin = options.skinsModule.load(BlocklyApps.assetUrl, options.skinId);
-  var blockInstallOptions = {
-    skin: options.skin,
-    isK1: options.level && options.level.isK1
-  };
 
-  if (options.level && options.level.edit_blocks) {
-    utils.wrapNumberValidatorsForLevelBuilder();
+  if (BlocklyApps.usingBlockly) {
+    var blockInstallOptions = {
+      skin: options.skin,
+      isK1: options.level && options.level.isK1
+    };
+
+    if (options.level && options.level.edit_blocks) {
+      utils.wrapNumberValidatorsForLevelBuilder();
+    }
+
+    blocksCommon.install(Blockly, blockInstallOptions);
+    options.blocksModule.install(Blockly, blockInstallOptions);
   }
-
-  blocksCommon.install(Blockly, blockInstallOptions);
-  options.blocksModule.install(Blockly, blockInstallOptions);
 
   addReadyListener(function() {
     if (options.readonly) {
@@ -90,7 +240,7 @@ module.exports = function(app, levels, options) {
 };
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./base":2,"./blocksCommon":4,"./dom":17,"./required_block_utils":21,"./utils":37}],2:[function(require,module,exports){
+},{"./base":3,"./blocksCommon":5,"./dom":18,"./required_block_utils":22,"./utils":38}],3:[function(require,module,exports){
 /**
  * Blockly Apps: Common code
  *
@@ -215,6 +365,7 @@ BlocklyApps.init = function(config) {
   }
 
   BlocklyApps.share = config.share;
+
   // if true, dont provide links to share on fb/twitter
   BlocklyApps.disableSocialShare = config.disableSocialShare;
   BlocklyApps.sendToPhone = config.sendToPhone;
@@ -260,12 +411,19 @@ BlocklyApps.init = function(config) {
   dom.addClickTouchEvent(resetButton, BlocklyApps.resetButtonClick);
 
   var belowViz = document.getElementById('belowVisualization');
-  if (config.referenceArea) {
-    belowViz.appendChild(config.referenceArea());
+  var referenceArea = document.getElementById('reference_area');
+  if (referenceArea) {
+    belowViz.appendChild(referenceArea);
   }
 
   var visualizationColumn = document.getElementById('visualizationColumn');
-  if (config.level.edit_blocks) {
+
+  // center game screen in embed mode
+  if(config.embed) {
+    visualizationColumn.style.margin = "0 auto";
+  }
+
+  if (BlocklyApps.usingBlockly && config.level.edit_blocks) {
     // Set a class on the main blockly div so CSS can style blocks differently
     Blockly.addClass_(container.querySelector('#blockly'), 'edit');
     // If in level builder editing blocks, make workspace extra tall
@@ -283,7 +441,7 @@ BlocklyApps.init = function(config) {
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
   }
 
-  if (!BlocklyApps.share) {
+  if (!config.embed && !BlocklyApps.share) {
     // Make the visualization responsive to screen size, except on share page.
     var visualization = document.getElementById('visualization');
     visualization.className += " responsive";
@@ -292,13 +450,15 @@ BlocklyApps.init = function(config) {
 
   if (config.hide_source) {
     BlocklyApps.hideSource = true;
-    var workspaceDiv = config.level.editCode ?
+    var workspaceDiv = BlocklyApps.editCode ?
                         document.getElementById('codeWorkspace') :
                         container.querySelector('#blockly');
-    container.className = 'hide-source';
+    if(!config.embed || config.level.skipInstructionsPopup) {
+      container.className = 'hide-source';
+    }
     workspaceDiv.style.display = 'none';
     // For share page on mobile, do not show this part.
-    if (!BlocklyApps.share || !dom.isMobile()) {
+    if ((!config.embed) && (!BlocklyApps.share || !dom.isMobile())) {
       var buttonRow = runButton.parentElement;
       var openWorkspace = document.createElement('button');
       openWorkspace.setAttribute('id', 'open-workspace');
@@ -410,43 +570,6 @@ BlocklyApps.init = function(config) {
     viewport.setAttribute('content', content.join(', '));
   }
 
-  if (config.level.editCode) {
-    BlocklyApps.editCode = true;
-    /*
-    BlocklyApps.editor = window.ace.edit('codeTextbox');
-    BlocklyApps.editor.getSession().setMode("ace/mode/javascript");
-    BlocklyApps.editor.setOptions({
-      enableBasicAutocompletion: true,
-      enableLiveAutocompletion: true
-    });
-    */
-    // using window.require forces us to use requirejs version of require
-    window.require(['droplet'], function(droplet) {
-      var displayMessage, examplePrograms, messageElement, onChange, startingText;
-      BlocklyApps.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
-        mode: 'javascript',
-        modeOptions: utils.generateDropletModeOptions(config.level.codeFunctions),
-        palette: utils.generateDropletPalette(config.level.codeFunctions)
-      });
-
-      if (config.level.startBlocks) {
-        BlocklyApps.editor.setValue(config.level.startBlocks);
-      } else {
-        var startText = '// ' + msg.typeHint() + '\n';
-        var codeFunctions = config.level.codeFunctions;
-        // Insert hint text from level codeFunctions into editCode area
-        if (codeFunctions) {
-          var hintText = '';
-          for (var i = 0; i < codeFunctions.length; i++) {
-            hintText += " " + codeFunctions[i].func + "();";
-          }
-          startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
-        }
-        BlocklyApps.editor.setValue(startText);
-      }
-    });
-  }
-
   BlocklyApps.Dialog = config.Dialog;
 
   var showCode = document.getElementById('show-code-header');
@@ -483,13 +606,41 @@ BlocklyApps.init = function(config) {
     });
   }
 
-  // The share page does not show the rotateContainer.
-  if (BlocklyApps.share) {
+  // The share and embed pages do not show the rotateContainer.
+  if (BlocklyApps.share || config.embed) {
     var rotateContainer = document.getElementById('rotateContainer');
     if (rotateContainer) {
       rotateContainer.style.display = 'none';
     }
   }
+
+  // In embed mode, the display scales down when the width of the visualizationColumn goes below the min width
+  if(config.embed) {
+    var resized = false;
+    var resize = function() {
+      var vizCol = document.getElementById('visualizationColumn');
+      var width = vizCol.offsetWidth;
+      var height = vizCol.offsetHeight;
+      var displayWidth = BlocklyApps.MIN_MOBILE_NO_PADDING_SHARE_WIDTH;
+      var scale = Math.min(width / displayWidth, height / displayWidth);
+      var viz = document.getElementById('visualization');
+      viz.style['transform-origin'] = 'left top';
+      viz.style['-webkit-transform'] = 'scale(' + scale + ')';
+      viz.style['max-height'] = (displayWidth * scale) + 'px';
+      viz.style.display = 'block';
+      vizCol.style.width = '';
+      document.getElementById('visualizationColumn').style['max-width'] = displayWidth + 'px';
+      // Needs to run twice on initialization
+      if(!resized) {
+        resized = true;
+        resize();
+      }
+    };
+    // Depends on ResizeSensor.js
+    var ResizeSensor = require('./ResizeSensor');
+    new ResizeSensor(document.getElementById('visualizationColumn'), resize);
+  }
+
   var orientationHandler = function() {
     window.scrollTo(0, 0);  // Browsers like to mess with scroll on rotate.
     var rotateContainer = document.getElementById('rotateContainer');
@@ -526,42 +677,85 @@ BlocklyApps.init = function(config) {
     wrapper.style.display = 'none';
   }
 
-  // Allow empty blocks if editing blocks.
-  if (config.level.edit_blocks) {
-    BlocklyApps.CHECK_FOR_EMPTY_BLOCKS = false;
-    if (config.level.edit_blocks === 'required_blocks' ||
-      config.level.edit_blocks === 'toolbox_blocks') {
-      // Don't show when run block for toolbox/required block editing
-      config.forceInsertTopBlock = null;
-    }
-  }
+  if (BlocklyApps.editCode) {
+    // using window.require forces us to use requirejs version of require
+    window.require(['droplet'], function(droplet) {
+      var displayMessage, examplePrograms, messageElement, onChange, startingText;
+      BlocklyApps.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
+        mode: 'javascript',
+        modeOptions: utils.generateDropletModeOptions(config.level.codeFunctions),
+        palette: utils.generateDropletPalette(config.level.codeFunctions,
+                                              config.level.categoryInfo)
+      });
 
-  var div = document.getElementById('blockly');
-  var options = {
-    toolbox: config.level.toolbox,
-    disableParamEditing: config.level.disableParamEditing === undefined ?
-        true : config.level.disableParamEditing,
-    disableVariableEditing: config.level.disableVariableEditing === undefined ?
-        false : config.level.disableVariableEditing,
-    useModalFunctionEditor: config.level.useModalFunctionEditor === undefined ?
-        false : config.level.useModalFunctionEditor,
-    useContractEditor: config.level.useContractEditor === undefined ?
-        false : config.level.useContractEditor,
-    scrollbars: config.level.scrollbars,
-    editBlocks: config.level.edit_blocks === undefined ?
-        false : config.level.edit_blocks
-  };
-  ['trashcan', 'concreteBlocks', 'varsInGlobals',
-    'grayOutUndeletableBlocks', 'disableParamEditing'].forEach(
-    function (prop) {
-      if (config[prop] !== undefined) {
-        options[prop] = config[prop];
+      if (config.afterInject) {
+        config.afterInject();
+      }
+
+      if (config.level.startBlocks) {
+        BlocklyApps.editor.setValue(config.level.startBlocks);
+      } else {
+        var startText = '// ' + msg.typeHint() + '\n';
+        var codeFunctions = config.level.codeFunctions;
+        // Insert hint text from level codeFunctions into editCode area
+        if (codeFunctions) {
+          var hintText = '';
+          for (var i = 0; i < codeFunctions.length; i++) {
+            hintText += " " + codeFunctions[i].func + "();";
+          }
+          startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
+        }
+        BlocklyApps.editor.setValue(startText);
       }
     });
-  BlocklyApps.inject(div, options);
+  }
 
-  if (config.afterInject) {
-    config.afterInject();
+  if (BlocklyApps.usingBlockly) {
+    // Allow empty blocks if editing blocks.
+    if (config.level.edit_blocks) {
+      BlocklyApps.CHECK_FOR_EMPTY_BLOCKS = false;
+      if (config.level.edit_blocks === 'required_blocks' ||
+        config.level.edit_blocks === 'toolbox_blocks') {
+        // Don't show when run block for toolbox/required block editing
+        config.forceInsertTopBlock = null;
+      }
+    }
+
+    var div = document.getElementById('blockly');
+    var options = {
+      toolbox: config.level.toolbox,
+      disableParamEditing: config.level.disableParamEditing === undefined ?
+          true : config.level.disableParamEditing,
+      disableVariableEditing: config.level.disableVariableEditing === undefined ?
+          false : config.level.disableVariableEditing,
+      useModalFunctionEditor: config.level.useModalFunctionEditor === undefined ?
+          false : config.level.useModalFunctionEditor,
+      useContractEditor: config.level.useContractEditor === undefined ?
+          false : config.level.useContractEditor,
+      scrollbars: config.level.scrollbars,
+      editBlocks: config.level.edit_blocks === undefined ?
+          false : config.level.edit_blocks
+    };
+    ['trashcan', 'concreteBlocks', 'varsInGlobals',
+      'grayOutUndeletableBlocks', 'disableParamEditing'].forEach(
+      function (prop) {
+        if (config[prop] !== undefined) {
+          options[prop] = config[prop];
+        }
+      });
+    BlocklyApps.inject(div, options);
+
+    if (config.afterInject) {
+      config.afterInject();
+    }
+
+    // Add the starting block(s).
+    var startBlocks = config.level.startBlocks || '';
+    if (config.forceInsertTopBlock) {
+      startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
+    }
+    startBlocks = BlocklyApps.arrangeBlockPosition(startBlocks, config.blockArrangement);
+    BlocklyApps.loadBlocks(startBlocks);
   }
 
   // Initialize the slider.
@@ -576,53 +770,75 @@ BlocklyApps.init = function(config) {
     }
   }
 
-  if (!BlocklyApps.editCode) {
-    // Add the starting block(s).
-    var startBlocks = config.level.startBlocks || '';
-    if (config.forceInsertTopBlock) {
-      startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
-    }
-    startBlocks = BlocklyApps.arrangeBlockPosition(startBlocks, config.blockArrangement);
-    BlocklyApps.loadBlocks(startBlocks);
-  }
-
   // listen for scroll and resize to ensure onResize() is called
   window.addEventListener('scroll', function() {
     BlocklyApps.onResize();
-    Blockly.fireUiEvent(window, 'resize');
+    var event = document.createEvent('UIEvents');
+    event.initEvent('resize', true, true);  // event type, bubbling, cancelable
+    window.dispatchEvent(event);
   });
   window.addEventListener('resize', BlocklyApps.onResize);
 
-  // call initial onResize() asynchronously - need 100ms delay to work
-  // around relayout which changes height on the left side to the proper
-  // value
+  // Call initial onResize() asynchronously - need 10ms delay to work around
+  // relayout which changes height on the left side to the proper value
   window.setTimeout(function() {
-      BlocklyApps.onResize();
-      Blockly.fireUiEvent(window, 'resize');
-    },
-    100);
+    BlocklyApps.onResize();
+    var event = document.createEvent('UIEvents');
+    event.initEvent('resize', true, true);  // event type, bubbling, cancelable
+    window.dispatchEvent(event);
+  }, 10);
 
   BlocklyApps.reset(true);
 
   // Add display of blocks used.
   setIdealBlockNumber();
-  Blockly.mainBlockSpaceEditor.addChangeListener(function() {
-    BlocklyApps.updateBlockCount();
-  });
 
-  if (config.level.openFunctionDefinition) {
-    Blockly.functionEditor.openAndEditFunction(config.level.openFunctionDefinition);
+  // TODO (cpirich): implement block count for droplet (for now, blockly only)
+  if (BlocklyApps.usingBlockly) {
+    Blockly.mainBlockSpaceEditor.addChangeListener(function() {
+      BlocklyApps.updateBlockCount();
+    });
+
+    if (config.level.openFunctionDefinition) {
+      Blockly.functionEditor.openAndEditFunction(config.level.openFunctionDefinition);
+    }
+  }
+};
+
+exports.loadAudio = function(filenames, name) {
+  if (BlocklyApps.usingBlockly) {
+    Blockly.loadAudio_(filenames, name);
+  } else if (BlocklyApps.cdoSounds) {
+    var regOpts = { id: name };
+    for (var i = 0; i < filenames.length; i++) {
+      var filename = filenames[i];
+      var ext = filename.match(/\.(\w+)(\?.*)?$/);
+      if (ext) {
+        // Extend regOpts so regOpts.mp3 = 'file.mp3'
+        regOpts[ext[1]] = filename;
+      }
+    }
+    BlocklyApps.cdoSounds.register(regOpts);
   }
 };
 
 exports.playAudio = function(name, options) {
   options = options || {};
   var defaultOptions = {volume: 0.5};
-  Blockly.playAudio(name, utils.extend(defaultOptions, options));
+  var newOptions = utils.extend(defaultOptions, options);
+  if (BlocklyApps.usingBlockly) {
+    Blockly.playAudio(name, newOptions);
+  } else if (BlocklyApps.cdoSounds) {
+    BlocklyApps.cdoSounds.play(name, newOptions);
+  }
 };
 
 exports.stopLoopingAudio = function(name) {
-  Blockly.stopLoopingAudio(name);
+  if (BlocklyApps.usingBlockly) {
+    Blockly.stopLoopingAudio(name);
+  } else if (BlocklyApps.cdoSounds) {
+    BlocklyApps.cdoSounds.stopLoopingAudio(name);
+  }
 };
 
 /**
@@ -808,7 +1024,15 @@ BlocklyApps.onResize = function() {
 
   div.style.top = divParent.offsetTop + 'px';
   var fullWorkspaceWidth = parentWidth - (gameWidth + WORKSPACE_PLAYSPACE_GAP);
+  var oldWidth = parseInt(div.style.width, 10) || div.getBoundingClientRect().width;
   div.style.width = fullWorkspaceWidth + 'px';
+
+  // Keep blocks static relative to the right edge in RTL mode
+  if (BlocklyApps.usingBlockly && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
+    Blockly.mainBlockSpace.getTopBlocks().forEach(function(topBlock) {
+      topBlock.moveBy(fullWorkspaceWidth - oldWidth, 0);
+    });
+  }
 
   if (BlocklyApps.isRtl()) {
     div.style.marginRight = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
@@ -834,55 +1058,40 @@ BlocklyApps.onResize = function() {
   BlocklyApps.resizeHeaders(fullWorkspaceWidth);
 };
 
-// |         toolbox-header           | workspace-header  | show-code-header |
+// |          toolbox-header          | workspace-header  | show-code-header |
 // |
-// | categoriesWidth |  toolboxWidth  |
+// |           toolboxWidth           |
 // |                 |         <--------- workspaceWidth ---------->         |
 // |         <---------------- fullWorkspaceWidth ----------------->         |
 BlocklyApps.resizeHeaders = function (fullWorkspaceWidth) {
-  var categoriesWidth = 0;
-  var categories = BlocklyApps.editCode ?
-      document.querySelector('.droplet-palette-wrapper') :
-      Blockly.mainBlockSpaceEditor.toolbox &&
-      Blockly.mainBlockSpaceEditor.toolbox.HtmlDiv;
-  if (categories) {
+  var minWorkspaceWidthForShowCode = BlocklyApps.editCode ? 250 : 450;
+  var toolboxWidth = 0;
+  if (BlocklyApps.editCode) {
     // If in the droplet editor, but not using blocks, keep categoryWidth at 0
     if (!BlocklyApps.editCode || BlocklyApps.editor.currentlyUsingBlocks) {
-      // set CategoryWidth based on the block toolbox/palette width:
-      categoriesWidth = parseInt(window.getComputedStyle(categories).width, 10);
+      // Set toolboxWidth based on the block palette width:
+      var categories = document.querySelector('.droplet-palette-wrapper');
+      toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
     }
+  } else if (BlocklyApps.usingBlockly) {
+    toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
   }
 
-  var workspaceWidth = Blockly.mainBlockSpaceEditor.getBlockSpaceWidth();
-  var toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
-
-  if (BlocklyApps.editCode) {
-    workspaceWidth = fullWorkspaceWidth - categoriesWidth;
-    toolboxWidth = 0;
-  }
-
-  var headers = document.getElementById('headers');
-  var workspaceHeader = document.getElementById('workspace-header');
-  var toolboxHeader = document.getElementById('toolbox-header');
   var showCodeHeader = document.getElementById('show-code-header');
-
-  var showCodeWidth;
-  var minWorkspaceWidthForShowCode = BlocklyApps.editCode ? 250 : 450;
+  var showCodeWidth = 0;
   if (BlocklyApps.enableShowCode &&
-      (workspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
+      (fullWorkspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
     showCodeWidth = parseInt(window.getComputedStyle(showCodeHeader).width, 10);
     showCodeHeader.style.display = "";
   }
   else {
-    showCodeWidth = 0;
     showCodeHeader.style.display = "none";
   }
 
-  headers.style.width = (categoriesWidth + workspaceWidth) + 'px';
-  toolboxHeader.style.width = (categoriesWidth + toolboxWidth) + 'px';
-  workspaceHeader.style.width = (workspaceWidth -
-                                 toolboxWidth -
-                                 showCodeWidth) + 'px';
+  document.getElementById('headers').style.width = fullWorkspaceWidth + 'px';
+  document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
+  document.getElementById('workspace-header').style.width =
+      (fullWorkspaceWidth - toolboxWidth - showCodeWidth) + 'px';
 };
 
 /**
@@ -891,14 +1100,16 @@ BlocklyApps.resizeHeaders = function (fullWorkspaceWidth) {
  * @param {boolean} spotlight Optional.  Highlight entire block if true
  */
 BlocklyApps.highlight = function(id, spotlight) {
-  if (id) {
-    var m = id.match(/^block_id_(\d+)$/);
-    if (m) {
-      id = m[1];
+  if (BlocklyApps.usingBlockly) {
+    if (id) {
+      var m = id.match(/^block_id_(\d+)$/);
+      if (m) {
+        id = m[1];
+      }
     }
-  }
 
-  Blockly.mainBlockSpace.highlightBlock(id, spotlight);
+    Blockly.mainBlockSpace.highlightBlock(id, spotlight);
+  }
 };
 
 /**
@@ -1030,7 +1241,7 @@ BlocklyApps.report = function(options) {
   // they cannot have modified. In that case, don't report it to the service
   // or call the onComplete() callback expected. The app will just sit
   // there with the Reset button as the only option.
-  if (!BlocklyApps.hideSource) {
+  if (!(BlocklyApps.hideSource && BlocklyApps.share)) {
     var onAttemptCallback = (function() {
       return function(builderDetails) {
         for (var option in builderDetails) {
@@ -1057,8 +1268,10 @@ BlocklyApps.resetButtonClick = function() {
   onResetPressed();
   BlocklyApps.toggleRunReset('run');
   BlocklyApps.clearHighlighting();
-  Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
-  Blockly.mainBlockSpace.traceOn(false);
+  if (BlocklyApps.usingBlockly) {
+    Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
+    Blockly.mainBlockSpace.traceOn(false);
+  }
   BlocklyApps.reset(false);
 };
 
@@ -1100,7 +1313,7 @@ var getIdealBlockNumberMsg = function() {
       msg.infinity() : BlocklyApps.IDEAL_BLOCK_NUM;
 };
 
-},{"../locale/sv_se/common":40,"./block_utils":3,"./builder":14,"./constants.js":16,"./dom":17,"./feedback.js":18,"./slider":23,"./templates/buttons.html":25,"./templates/instructions.html":27,"./templates/learn.html":28,"./templates/makeYourOwn.html":29,"./utils":37,"./xml":38}],3:[function(require,module,exports){
+},{"../locale/sv_se/common":41,"./ResizeSensor":1,"./block_utils":4,"./builder":15,"./constants.js":17,"./dom":18,"./feedback.js":19,"./slider":24,"./templates/buttons.html":26,"./templates/instructions.html":28,"./templates/learn.html":29,"./templates/makeYourOwn.html":30,"./utils":38,"./xml":39}],4:[function(require,module,exports){
 var xml = require('./xml');
 
 exports.createToolbox = function(blocks) {
@@ -1200,8 +1413,8 @@ exports.domStringToBlock = function(blockDOMString) {
  */
 exports.forceInsertTopBlock = function (input, blockType) {
   input = input || '';
-  
-  if (input.indexOf(blockType) !== -1) {
+
+  if (blockType === null || input.indexOf(blockType) !== -1) {
     return input;
   }
 
@@ -1289,7 +1502,7 @@ exports.mathBlockXml = function (type, inputs, titles) {
   return str;
 };
 
-},{"./xml":38}],4:[function(require,module,exports){
+},{"./xml":39}],5:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -1454,7 +1667,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/sv_se/common":40}],5:[function(require,module,exports){
+},{"../locale/sv_se/common":41}],6:[function(require,module,exports){
 var tiles = require('./tiles');
 var Direction = tiles.Direction;
 var SquareType = tiles.SquareType;
@@ -1636,7 +1849,7 @@ exports.bounceBall = function(id) {
 };
 
 
-},{"./tiles":12}],6:[function(require,module,exports){
+},{"./tiles":13}],7:[function(require,module,exports){
 /**
  * Blockly App: Bounce
  *
@@ -2131,7 +2344,7 @@ exports.install = function(blockly, blockInstallOptions) {
   delete blockly.Blocks.procedures_ifreturn;
 };
 
-},{"../../locale/sv_se/bounce":39,"../codegen":15}],7:[function(require,module,exports){
+},{"../../locale/sv_se/bounce":40,"../codegen":16}],8:[function(require,module,exports){
 /**
  * Blockly App: Bounce
  *
@@ -2799,23 +3012,23 @@ Bounce.init = function(config) {
   });
 
   config.loadAudio = function() {
-    Blockly.loadAudio_(skin.winSound, 'win');
-    Blockly.loadAudio_(skin.startSound, 'start');
-    Blockly.loadAudio_(skin.ballStartSound, 'ballstart');
-    Blockly.loadAudio_(skin.failureSound, 'failure');
-    Blockly.loadAudio_(skin.rubberSound, 'rubber');
-    Blockly.loadAudio_(skin.crunchSound, 'crunch');
-    Blockly.loadAudio_(skin.flagSound, 'flag');
-    Blockly.loadAudio_(skin.winPointSound, 'winpoint');
-    Blockly.loadAudio_(skin.winPoint2Sound, 'winpoint2');
-    Blockly.loadAudio_(skin.losePointSound, 'losepoint');
-    Blockly.loadAudio_(skin.losePoint2Sound, 'losepoint2');
-    Blockly.loadAudio_(skin.goal1Sound, 'goal1');
-    Blockly.loadAudio_(skin.goal2Sound, 'goal2');
-    Blockly.loadAudio_(skin.woodSound, 'wood');
-    Blockly.loadAudio_(skin.retroSound, 'retro');
-    Blockly.loadAudio_(skin.slapSound, 'slap');
-    Blockly.loadAudio_(skin.hitSound, 'hit');
+    BlocklyApps.loadAudio(skin.winSound, 'win');
+    BlocklyApps.loadAudio(skin.startSound, 'start');
+    BlocklyApps.loadAudio(skin.ballStartSound, 'ballstart');
+    BlocklyApps.loadAudio(skin.failureSound, 'failure');
+    BlocklyApps.loadAudio(skin.rubberSound, 'rubber');
+    BlocklyApps.loadAudio(skin.crunchSound, 'crunch');
+    BlocklyApps.loadAudio(skin.flagSound, 'flag');
+    BlocklyApps.loadAudio(skin.winPointSound, 'winpoint');
+    BlocklyApps.loadAudio(skin.winPoint2Sound, 'winpoint2');
+    BlocklyApps.loadAudio(skin.losePointSound, 'losepoint');
+    BlocklyApps.loadAudio(skin.losePoint2Sound, 'losepoint2');
+    BlocklyApps.loadAudio(skin.goal1Sound, 'goal1');
+    BlocklyApps.loadAudio(skin.goal2Sound, 'goal2');
+    BlocklyApps.loadAudio(skin.woodSound, 'wood');
+    BlocklyApps.loadAudio(skin.retroSound, 'retro');
+    BlocklyApps.loadAudio(skin.slapSound, 'slap');
+    BlocklyApps.loadAudio(skin.hitSound, 'hit');
   };
 
   config.afterInject = function() {
@@ -3536,7 +3749,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/sv_se/bounce":39,"../../locale/sv_se/common":40,"../base":2,"../codegen":15,"../dom":17,"../feedback.js":18,"../hammer":19,"../skins":22,"../templates/page.html":30,"../timeoutList":36,"../utils":37,"./api":5,"./controls.html":8,"./tiles":12,"./visualization.html":13}],8:[function(require,module,exports){
+},{"../../locale/sv_se/bounce":40,"../../locale/sv_se/common":41,"../base":3,"../codegen":16,"../dom":18,"../feedback.js":19,"../hammer":20,"../skins":23,"../templates/page.html":31,"../timeoutList":37,"../utils":38,"./api":6,"./controls.html":9,"./tiles":13,"./visualization.html":14}],9:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -3560,7 +3773,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/sv_se/bounce":39,"../../locale/sv_se/common":40,"ejs":41}],9:[function(require,module,exports){
+},{"../../locale/sv_se/bounce":40,"../../locale/sv_se/common":41,"ejs":42}],10:[function(require,module,exports){
 /*jshint multistr: true */
 
 var Direction = require('./tiles').Direction;
@@ -3991,7 +4204,7 @@ module.exports = {
   },
 };
 
-},{"../block_utils":3,"./tiles":12}],10:[function(require,module,exports){
+},{"../block_utils":4,"./tiles":13}],11:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Bounce = require('./bounce');
@@ -4009,7 +4222,7 @@ window.bounceMain = function(options) {
 };
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":1,"./blocks":6,"./bounce":7,"./levels":9,"./skins":11}],11:[function(require,module,exports){
+},{"../appMain":2,"./blocks":7,"./bounce":8,"./levels":10,"./skins":12}],12:[function(require,module,exports){
 /**
  * Load Skin for Bounce.
  */
@@ -4102,7 +4315,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":22}],12:[function(require,module,exports){
+},{"../skins":23}],13:[function(require,module,exports){
 'use strict';
 
 /**
@@ -4141,7 +4354,7 @@ exports.SquareType = {
   OBSTACLE: 64
 };
 
-},{}],13:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -4162,7 +4375,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":41}],14:[function(require,module,exports){
+},{"ejs":42}],15:[function(require,module,exports){
 var feedback = require('./feedback.js');
 var dom = require('./dom.js');
 var utils = require('./utils.js');
@@ -4192,7 +4405,7 @@ exports.builderForm = function(onAttemptCallback) {
   dialog.show({ backdrop: 'static' });
 };
 
-},{"./dom.js":17,"./feedback.js":18,"./templates/builder.html":24,"./utils.js":37,"url":51}],15:[function(require,module,exports){
+},{"./dom.js":18,"./feedback.js":19,"./templates/builder.html":25,"./utils.js":38,"url":52}],16:[function(require,module,exports){
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
@@ -4333,6 +4546,30 @@ exports.initJSInterpreter = function (interpreter, scope, options) {
   }
 };
 
+/**
+ * Check to see if it is safe to step the interpreter while we are unwinding.
+ * (Called repeatedly after completing a step where the node was marked 'done')
+ */
+exports.isNextStepSafeWhileUnwinding = function (interpreter) {
+  var state = interpreter.stateStack[0];
+  if (state.done) {
+    return true;
+  }
+  switch (state.node.type) {
+    case "VariableDeclaration":
+    case "BlockStatement":
+    case "ForStatement": // check for state.mode ?
+    case "UpdateExpression":
+    case "BinaryExpression":
+    case "CallExpression":
+    case "Identifier":
+    case "Literal":
+    case "Program":
+      return true;
+  }
+  return false;
+};
+
 // session is an instance of Ace editSession
 // Usage
 // var lengthArray = aceCalculateCumulativeLength(editor.getSession());
@@ -4373,9 +4610,11 @@ function aceFindRow(cumulativeLength, rows, rowe, pos) {
   return mid;
 }
 
-/**
- * Selects code in an ace editor.
- */
+exports.isAceBreakpointRow = function (session, userCodeRow) {
+  var bps = session.getBreakpoints();
+  return Boolean(bps[userCodeRow]);
+};
+
 function createSelection (selection, cumulativeLength, start, end) {
   var range = selection.getRange();
 
@@ -4387,9 +4626,15 @@ function createSelection (selection, cumulativeLength, start, end) {
   selection.setSelectionRange(range);
 }
 
+/**
+ * Selects code in droplet/ace editor.
+ *
+ * Returns the row (line) of code highlighted. If nothing is highlighted
+ * because it is outside of the userCode area, the return value is -1
+ */
 exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
                                       userCodeStartOffset, userCodeLength) {
-  var inUserCode = false;
+  var userCodeRow = -1;
   if (interpreter.stateStack[0]) {
     var node = interpreter.stateStack[0].node;
     // Adjust start/end by Webapp.userCodeStartOffset since the code running
@@ -4401,17 +4646,20 @@ exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
     // code (not inside code we inserted before or after their code that is
     // not visible in the editor):
     if (start > 0 && start < userCodeLength) {
+      userCodeRow = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
       // Highlight the code being executed in each step:
       if (editor.currentlyUsingBlocks) {
         var style = {color: '#FFFF22'};
-        var line = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
         editor.clearLineMarks();
-        editor.markLine(line, style);
+        // NOTE: replace markLine with this new mark() call once we have a new
+        // version of droplet
+        
+        // editor.mark(userCodeRow, start - cumulativeLength[userCodeRow], style);
+        editor.markLine(userCodeRow, style);
       } else {
         var selection = editor.aceEditor.getSelection();
         createSelection(selection, cumulativeLength, start, end);
       }
-      inUserCode = true;
     }
   } else {
     if (editor.currentlyUsingBlocks) {
@@ -4420,7 +4668,7 @@ exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
       editor.aceEditor.getSelection().clearSelection();
     }
   }
-  return inUserCode;
+  return userCodeRow;
 };
 
 /**
@@ -4476,7 +4724,7 @@ exports.functionFromCode = function(code, options) {
   }
 };
 
-},{}],16:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 /**
  * @fileoverview Constants used in production code and tests.
  */
@@ -4538,7 +4786,7 @@ exports.BeeTerminationValue = {
   INSUFFICIENT_HONEY: 8  // Didn't make all honey by finish
 };
 
-},{}],17:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 exports.addReadyListener = function(callback) {
   if (document.readyState === "complete") {
     setTimeout(callback, 1);
@@ -4645,7 +4893,7 @@ exports.isIOS = function() {
   return reg.test(window.navigator.userAgent);
 };
 
-},{}],18:[function(require,module,exports){
+},{}],19:[function(require,module,exports){
 var trophy = require('./templates/trophy.html');
 var utils = require('./utils');
 var readonly = require('./templates/readonly.html');
@@ -4676,7 +4924,7 @@ exports.displayFeedback = function(options) {
   var showingSharing = options.showingSharing && !hadShareFailure;
 
   var canContinue = exports.canContinueToNextLevel(options.feedbackType);
-  var displayShowCode = BlocklyApps.enableShowCode && canContinue;
+  var displayShowCode = BlocklyApps.enableShowCode && canContinue && !showingSharing;
   var feedback = document.createElement('div');
   var sharingDiv = (canContinue && showingSharing) ? exports.createSharingDiv(options) : null;
   var showCode = displayShowCode ? getShowCodeElement(options) : null;
@@ -4728,6 +4976,9 @@ exports.displayFeedback = function(options) {
   }
   if (options.level.isK1) {
     feedback.className += " k1";
+  }
+  if (options.appDiv) {
+    feedback.appendChild(options.appDiv);
   }
 
   feedback.appendChild(
@@ -4841,6 +5092,21 @@ exports.displayFeedback = function(options) {
     dom.addClickTouchEvent(saveToGalleryButton, function() {
       $.post(options.response.save_to_gallery_url,
              function() { $('#save-to-gallery-button').prop('disabled', true).text("Saved!"); });
+    });
+  }
+
+  function createHiddenPrintWindow(src) {
+    var iframe = $('<iframe id="print_frame" style="display: none"></iframe>'); // Created a hidden iframe with just the desired image as its contents
+    iframe.appendTo("body");
+    iframe[0].contentWindow.document.write("<img src='" + src + "'/>");
+    iframe[0].contentWindow.document.write("<script>if (document.execCommand('print', false, null)) {  } else { window.print();  } </script>");
+    $("#print_frame").remove(); // Remove the iframe when the print dialogue has been launched
+  }
+
+  var printButton = feedback.querySelector('#print-button');
+  if (printButton) {
+    dom.addClickTouchEvent(printButton, function() {
+      createHiddenPrintWindow(options.feedbackImage);
     });
   }
 
@@ -5025,6 +5291,11 @@ var getFeedbackMessage = function(options) {
       // Free plays
       case TestResults.FREE_PLAY:
         message = options.appStrings.reinfFeedbackMsg;
+        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
+        // a more generic message
+        if (options.level.disableSharing) {
+          message = msg.finalStage();
+        }
         break;
     }
   }
@@ -5067,7 +5338,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -5078,11 +5348,25 @@ exports.createSharingDiv = function(options) {
     if (options.twitter && options.twitter.text !== undefined) {
       twitterUrl += "&text=" + encodeURI(options.twitter.text);
     }
-    if (options.twitter  && options.twitter.hashtag !== undefined) {
-      twitterUrl += "&button_hashtag=" + options.twitter.hashtag;
+    else {
+      twitterUrl += "&text=" + encodeURI(msg.defaultTwitterText() + " @codeorg");
     }
-    options.twitterUrl = twitterUrl;
 
+    if (options.twitter  && options.twitter.hashtag !== undefined) {
+      twitterUrl += "&hashtags=" + options.twitter.hashtag;
+    }
+    else {
+      twitterUrl += "&hashtags=" + 'HourOfCode';
+    }
+
+    if (options.twitter && options.twitter.related !== undefined) {
+      twitterUrl += "&related=" + options.twitter.related;
+    }
+    else {
+      twitterUrl += "&related=codeorg";
+    }
+
+    options.twitterUrl = twitterUrl;
 
     // set up the facebook share url
     var facebookUrl = "https://www.facebook.com/sharer/sharer.php?u=" +
@@ -5453,11 +5737,18 @@ var getMissingRequiredBlocks = function () {
  * Do we have any floating blocks not attached to an event block or function block?
  */
 exports.hasExtraTopBlocks = function () {
+  if (BlocklyApps.editCode) {
+    return false;
+  }
   var topBlocks = Blockly.mainBlockSpace.getTopBlocks();
   for (var i = 0; i < topBlocks.length; i++) {
     // ignore disabled top blocks. we have a level turtle:2_7 that depends on
     // having disabled top level blocks
     if (topBlocks[i].disabled) {
+      continue;
+    }
+    // Ignore top blocks which are functional definitions.
+    if (topBlocks[i].type === 'functional_definition') {
       continue;
     }
     // None of our top level blocks should have a previous connection.
@@ -5475,6 +5766,12 @@ exports.hasExtraTopBlocks = function () {
  */
 exports.getTestResults = function(levelComplete, options) {
   options = options || {};
+  if (BlocklyApps.editCode) {
+    // TODO (cpirich): implement better test results for editCode
+    return levelComplete ?
+      BlocklyApps.TestResults.ALL_PASS :
+      BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
+  }
   if (BlocklyApps.CHECK_FOR_EMPTY_BLOCKS && hasEmptyContainerBlocks()) {
     var type = getEmptyContainerBlock().type;
     if (type === 'procedures_defnoreturn' || type === 'procedures_defreturn') {
@@ -5592,7 +5889,7 @@ var generateXMLForBlocks = function(blocks) {
 };
 
 
-},{"../locale/sv_se/common":40,"./codegen":15,"./constants":16,"./dom":17,"./templates/buttons.html":25,"./templates/code.html":26,"./templates/readonly.html":31,"./templates/shareFailure.html":32,"./templates/sharing.html":33,"./templates/showCode.html":34,"./templates/trophy.html":35,"./utils":37}],19:[function(require,module,exports){
+},{"../locale/sv_se/common":41,"./codegen":16,"./constants":17,"./dom":18,"./templates/buttons.html":26,"./templates/code.html":27,"./templates/readonly.html":32,"./templates/shareFailure.html":33,"./templates/sharing.html":34,"./templates/showCode.html":35,"./templates/trophy.html":36,"./utils":38}],20:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-22
  * http://eightmedia.github.io/hammer.js
  *
@@ -7756,7 +8053,7 @@ if(typeof define == 'function' && define.amd) {
 }
 
 })(window);
-},{}],20:[function(require,module,exports){
+},{}],21:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -10683,7 +10980,7 @@ if(typeof define == 'function' && define.amd) {
 }.call(this));
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],21:[function(require,module,exports){
+},{}],22:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -10832,10 +11129,16 @@ function elementsEquivalent(expected, given) {
 }
 
 /**
- * A list of attributes we want to ignore when comparing atributes, and a
+ * A list of attributes we want to ignore when comparing attributes, and a
  * function for easily determining whether an attribute is in the list.
  */
-var ignorableAttributes = ['deletable', 'movable', 'editable', 'inline'];
+var ignorableAttributes = [
+  'deletable',
+  'movable',
+  'editable',
+  'inline',
+  'uservisible'
+];
 ignorableAttributes.contains = function (attr) {
   return ignorableAttributes.indexOf(attr.name) !== -1;
 };
@@ -10921,7 +11224,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"./block_utils":3,"./utils":37,"./xml":38}],22:[function(require,module,exports){
+},{"./block_utils":4,"./utils":38,"./xml":39}],23:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -10937,6 +11240,7 @@ exports.load = function(assetUrl, id) {
     assetUrl: skinUrl,
     // Images
     avatar: skinUrl('avatar.png'),
+    avatar_2x: skinUrl('avatar_2x.png'),
     tiles: skinUrl('tiles.png'),
     goal: skinUrl('goal.png'),
     obstacle: skinUrl('obstacle.png'),
@@ -10944,6 +11248,8 @@ exports.load = function(assetUrl, id) {
     staticAvatar: skinUrl('static_avatar.png'),
     winAvatar: skinUrl('win_avatar.png'),
     failureAvatar: skinUrl('failure_avatar.png'),
+    decorationAnimation: skinUrl('decoration_animation.png'),
+    decorationAnimation_2x: skinUrl('decoration_animation_2x.png'),
     repeatImage: assetUrl('media/common_images/repeat-arrows.png'),
     leftArrow: assetUrl('media/common_images/moveleft.png'),
     downArrow: assetUrl('media/common_images/movedown.png'),
@@ -10982,15 +11288,17 @@ exports.load = function(assetUrl, id) {
     squigglyLine: assetUrl('media/common_images/squiggly.png'),
     swirlyLine: assetUrl('media/common_images/swirlyline.png'),
     randomPurpleIcon: assetUrl('media/common_images/random-purple.png'),
+
     // Sounds
     startSound: [skinUrl('start.mp3'), skinUrl('start.ogg')],
     winSound: [skinUrl('win.mp3'), skinUrl('win.ogg')],
     failureSound: [skinUrl('failure.mp3'), skinUrl('failure.ogg')]
   };
+
   return skin;
 };
 
-},{}],23:[function(require,module,exports){
+},{}],24:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -11216,7 +11524,7 @@ Slider.bindEvent_ = function(element, name, func) {
 
 module.exports = Slider;
 
-},{"./dom":17}],24:[function(require,module,exports){
+},{"./dom":18}],25:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -11237,7 +11545,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":41}],25:[function(require,module,exports){
+},{"ejs":42}],26:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -11250,7 +11558,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/sv_se/common'); ; buf.push('\n\n');3; if (data.ok) {; buf.push('  <div class="farSide" style="padding: 1ex 3ex 0">\n    <button id="ok-button" class="secondary">\n      ', escape((5,  msg.dialogOK() )), '\n    </button>\n  </div>\n');8; }; buf.push('\n');9; if (data.previousLevel) {; buf.push('  <button id="back-button" class="launch">\n    ', escape((10,  msg.backToPreviousLevel() )), '\n  </button>\n');12; }; buf.push('\n');13; if (data.tryAgain) {; buf.push('  ');13; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="again-button" class="launch arrow-container arrow-left">\n      <div class="arrow-head"><img src="', escape((14,  data.assetUrl('media/tryagain-arrow-head.png') )), '" alt="Arrowhead" width="67" height="130"/></div>\n      <div class="arrow-text">', escape((15,  msg.tryAgain() )), '</div>\n    </div>\n  ');17; } else {; buf.push('    ');17; if (data.hintRequestExperiment === "left") {; buf.push('      <button id="hint-request-button" class="launch">\n        ', escape((18,  msg.hintRequest() )), '\n      </button>\n      <button id="again-button" class="launch">\n        ', escape((21,  msg.tryAgain() )), '\n      </button>\n    ');23; } else if (data.hintRequestExperiment == "right") {; buf.push('      <button id="again-button" class="launch">\n        ', escape((24,  msg.tryAgain() )), '\n      </button>\n      <button id="hint-request-button" class="launch">\n        ', escape((27,  msg.hintRequest() )), '\n      </button>\n    ');29; } else {; buf.push('      <button id="again-button" class="launch">\n        ', escape((30,  msg.tryAgain() )), '\n      </button>\n    ');32; }; buf.push('  ');32; }; buf.push('');32; }; buf.push('\n');33; if (data.nextLevel) {; buf.push('  ');33; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="continue-button" class="launch arrow-container arrow-right">\n      <div class="arrow-head"><img src="', escape((34,  data.assetUrl('media/next-arrow-head.png') )), '" alt="Arrowhead" width="66" height="130"/></div>\n      <div class="arrow-text">', escape((35,  msg.continue() )), '</div>\n    </div>\n  ');37; } else {; buf.push('    <button id="continue-button" class="launch">\n      ', escape((38,  msg.continue() )), '\n    </button>\n  ');40; }; buf.push('');40; }; buf.push(''); })();
+ buf.push('');1; var msg = require('../../locale/sv_se/common'); ; buf.push('\n\n');3; if (data.ok) {; buf.push('  <div class="farSide" style="padding: 1ex 3ex 0">\n    <button id="ok-button" class="secondary">\n      ', escape((5,  msg.dialogOK() )), '\n    </button>\n  </div>\n');8; }; buf.push('\n');9; if (data.previousLevel) {; buf.push('  <button id="back-button" class="launch">\n    ', escape((10,  msg.backToPreviousLevel() )), '\n  </button>\n');12; }; buf.push('\n');13; if (data.tryAgain) {; buf.push('  ');13; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="again-button" class="launch arrow-container arrow-left">\n      <div class="arrow-head"><img src="', escape((14,  data.assetUrl('media/tryagain-arrow-head.png') )), '" alt="Arrowhead" width="67" height="130"/></div>\n      <div class="arrow-text">', escape((15,  msg.tryAgain() )), '</div>\n    </div>\n  ');17; } else {; buf.push('    ');17; if (data.hintRequestExperiment === "left") {; buf.push('      <button id="hint-request-button" class="launch">\n        ', escape((18,  msg.hintRequest() )), '\n      </button>\n      <button id="again-button" class="launch">\n        ', escape((21,  msg.tryAgain() )), '\n      </button>\n    ');23; } else if (data.hintRequestExperiment == "right") {; buf.push('      <button id="again-button" class="launch">\n        ', escape((24,  msg.tryAgain() )), '\n      </button>\n      <button id="hint-request-button" class="launch">\n        ', escape((27,  msg.hintRequest() )), '\n      </button>\n    ');29; } else {; buf.push('      <button id="again-button" class="launch">\n        ', escape((30,  msg.tryAgain() )), '\n      </button>\n    ');32; }; buf.push('  ');32; }; buf.push('');32; }; buf.push('\n');33; if (data.nextLevel) {; buf.push('  ');33; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="continue-button" class="launch arrow-container arrow-right">\n      <div class="arrow-head"><img src="', escape((34,  data.assetUrl('media/next-arrow-head.png') )), '" alt="Arrowhead" width="66" height="130"/></div>\n      <div class="arrow-text">', escape((35,  msg.continue() )), '</div>\n    </div>\n  ');37; } else {; buf.push('    <button id="continue-button" class="launch" style="float: right">\n      ', escape((38,  msg.continue() )), '\n    </button>\n  ');40; }; buf.push('');40; }; buf.push(''); })();
 } 
 return buf.join('');
 };
@@ -11258,7 +11566,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/sv_se/common":40,"ejs":41}],26:[function(require,module,exports){
+},{"../../locale/sv_se/common":41,"ejs":42}],27:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -11279,7 +11587,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":41}],27:[function(require,module,exports){
+},{"ejs":42}],28:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -11300,7 +11608,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/sv_se/common":40,"ejs":41}],28:[function(require,module,exports){
+},{"../../locale/sv_se/common":41,"ejs":42}],29:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -11323,7 +11631,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/sv_se/common":40,"ejs":41}],29:[function(require,module,exports){
+},{"../../locale/sv_se/common":41,"ejs":42}],30:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -11344,7 +11652,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/sv_se/common":40,"ejs":41}],30:[function(require,module,exports){
+},{"../../locale/sv_se/common":41,"ejs":42}],31:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -11361,7 +11669,7 @@ with (locals || {}) { (function(){
   var msg = require('../../locale/sv_se/common');
   var hideRunButton = locals.hideRunButton || false;
 ; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((26,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');30; };; buf.push('\n');31; // A spot for the server to inject some HTML for help content.
-var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (38,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((44,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((45,  msg.runProgram() )), '</div>\n        <img src="', escape((46,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((49,  msg.resetProgram() )), '</div>\n        <img src="', escape((50,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');52; if (data.controls) { ; buf.push('\n      ', (53,  data.controls ), '\n      ');54; } ; buf.push('\n      ');55; if (data.extraControlRows) { ; buf.push('\n      ', (56,  data.extraControlRows ), '\n      ');57; } ; buf.push('\n    </div>\n\n    ');60; instructions() ; buf.push('\n    ');61; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n');66; if (data.editCode) { ; buf.push('\n  <div id="blockly" style="display:none"></div>\n  <div id="codeWorkspace">\n');69; } else { ; buf.push('\n  <div id="blockly">\n');71; } ; buf.push('\n  <div id="headers" dir="', escape((72,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((73,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span id="workspace-header-span">', escape((75,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((77,  data.blockCounterClass )), '>\n          ', escape((78,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((81,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((84,  msg.showCodeHeader() )), '</span></div>\n  </div>\n  ');86; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox" contenteditable spellcheck=false></div>\n  ');88; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
+var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (38,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((44,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((45,  msg.runProgram() )), '</div>\n        <img src="', escape((46,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((49,  msg.resetProgram() )), '</div>\n        <img src="', escape((50,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');52; if (data.controls) { ; buf.push('\n      ', (53,  data.controls ), '\n      ');54; } ; buf.push('\n      ');55; if (data.extraControlRows) { ; buf.push('\n      ', (56,  data.extraControlRows ), '\n      ');57; } ; buf.push('\n    </div>\n\n    ');60; instructions() ; buf.push('\n    ');61; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n');66; if (data.editCode) { ; buf.push('\n  <div id="codeWorkspace">\n');68; } else { ; buf.push('\n  <div id="blockly">\n');70; } ; buf.push('\n  <div id="headers" dir="', escape((71,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((72,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span id="workspace-header-span">', escape((74,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((76,  data.blockCounterClass )), '>\n          ', escape((77,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((80,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((83,  msg.showCodeHeader() )), '</span></div>\n  </div>\n  ');85; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox" contenteditable spellcheck=false></div>\n  ');87; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -11369,7 +11677,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/sv_se/common":40,"ejs":41}],31:[function(require,module,exports){
+},{"../../locale/sv_se/common":41,"ejs":42}],32:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -11391,7 +11699,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":41}],32:[function(require,module,exports){
+},{"ejs":42}],33:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -11412,7 +11720,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":41}],33:[function(require,module,exports){
+},{"ejs":42}],34:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -11425,7 +11733,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/sv_se/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n');9; if (options.alreadySaved) { ; buf.push('\n  <div class="saved-to-gallery">\n    ', escape((11,  msg.savedToGallery() )), '\n  </div>\n');13; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <div class="social-buttons">\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((16,  msg.saveToGallery() )), '\n  </button>\n  </div>\n');19; } ; buf.push('\n\n');21; if (options.response && options.response.level_source) { ; buf.push('\n  ');22; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((23,  options.appStrings.sharingText )), '</div>\n  ');24; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((27,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');31; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((31,  options.facebookUrl )), '\' target="_blank">\n        <img src=\'', escape((32,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');34; }; buf.push('\n    ');35; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((35,  options.twitterUrl )), '\' target="_blank">\n        <img src=\'', escape((36,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');38; }; buf.push('    ');38; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((39,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');41; }; buf.push('  </div>\n');42; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
+ buf.push('');1; var msg = require('../../locale/sv_se/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n  <div class="social-buttons">\n  <button id="print-button">\n    ', escape((11,  msg.print() )), '\n  </button>\n');13; if (options.alreadySaved) { ; buf.push('\n  <button class="saved-to-gallery" disabled>\n    ', escape((15,  msg.savedToGallery() )), '\n  </button>\n');17; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((19,  msg.saveToGallery() )), '\n  </button>\n');21; } ; buf.push('\n  </div>\n\n');24; if (options.response && options.response.level_source) { ; buf.push('\n  ');25; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((26,  options.appStrings.sharingText )), '</div>\n  ');27; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((30,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');34; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((34,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((35,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');37; }; buf.push('\n    ');38; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((38,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((39,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');41; }; buf.push('    ');41; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((42,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');44; }; buf.push('  </div>\n');45; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -11433,7 +11741,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/sv_se/common":40,"ejs":41}],34:[function(require,module,exports){
+},{"../../locale/sv_se/common":41,"ejs":42}],35:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -11454,7 +11762,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/sv_se/common":40,"ejs":41}],35:[function(require,module,exports){
+},{"../../locale/sv_se/common":41,"ejs":42}],36:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -11475,7 +11783,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":41}],36:[function(require,module,exports){
+},{"ejs":42}],37:[function(require,module,exports){
 var list = [];
 
 /**
@@ -11493,7 +11801,7 @@ exports.clearTimeouts = function () {
   list = [];
 };
 
-},{}],37:[function(require,module,exports){
+},{}],38:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -11501,11 +11809,12 @@ var savedAmd;
 // via require js
 if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) {
   savedAmd = define.amd;
-  define.amd = 'dont_call_requirejs_define';
+  define.amd = false;
 }
 
 // get lodash
 var _ = require('./lodash');
+var Hammer = require('./hammer');
 
 // undo hackery
 if (typeof define == 'function' && savedAmd) {
@@ -11515,6 +11824,10 @@ if (typeof define == 'function' && savedAmd) {
 
 exports.getLodash = function () {
   return _;
+};
+
+exports.getHammer = function () {
+  return Hammer;
 };
 
 exports.shallowCopy = function(source) {
@@ -11654,7 +11967,7 @@ exports.generateCodeAliases = function (codeFunctions, parentObjName) {
 /**
  * Generate a palette for the droplet editor based on some level data.
  */
-exports.generateDropletPalette = function (codeFunctions) {
+exports.generateDropletPalette = function (codeFunctions, categoryInfo) {
   // TODO: figure out localization for droplet scenario
   var palette = [
     {
@@ -11707,8 +12020,8 @@ exports.generateDropletPalette = function (codeFunctions) {
           block: '__ < __',
           title: 'Compare two numbers'
         }, {
-          block: 'random(1, 100)',
-          title: 'Get a random number in a range'
+          block: 'random()',
+          title: 'Get a random number between 0 and 1'
         }, {
           block: 'round(__)',
           title: 'Round to the nearest integer'
@@ -11717,10 +12030,10 @@ exports.generateDropletPalette = function (codeFunctions) {
           title: 'Absolute value'
         }, {
           block: 'max(__, __)',
-          title: 'Absolute value'
+          title: 'Maximum value'
         }, {
           block: 'min(__, __)',
-          title: 'Absolute value'
+          title: 'Minimum value'
         }
       ]
     }, {
@@ -11744,14 +12057,16 @@ exports.generateDropletPalette = function (codeFunctions) {
     }
   ];
 
-  var appPaletteCategory = {
-    name: 'Actions',
-    color: 'blue',
-    blocks: []
+  var defCategoryInfo = {
+    'Actions': {
+      'color': 'blue',
+      'blocks': []
+    }
   };
+  categoryInfo = categoryInfo || defCategoryInfo;
 
   if (codeFunctions) {
-    for (var i = 0, blockIndex = 0; i < codeFunctions.length; i++) {
+    for (var i = 0; i < codeFunctions.length; i++) {
       var cf = codeFunctions[i];
       if (cf.category === 'hidden') {
         continue;
@@ -11770,12 +12085,14 @@ exports.generateDropletPalette = function (codeFunctions) {
         block: block,
         title: cf.func
       };
-      appPaletteCategory.blocks[blockIndex] = blockPair;
-      blockIndex++;
+      categoryInfo[cf.category || 'Actions'].blocks.push(blockPair);
     }
   }
 
-  palette.unshift(appPaletteCategory);
+  for (var category in categoryInfo) {
+    categoryInfo[category].name = category;
+    palette.unshift(categoryInfo[category]);
+  }
 
   return palette;
 };
@@ -11786,7 +12103,7 @@ exports.generateDropletPalette = function (codeFunctions) {
 exports.generateDropletModeOptions = function (codeFunctions) {
   var modeOptions = {
     blockFunctions: [],
-    valueFunctions: [],
+    valueFunctions: ['random', 'round', 'abs', 'max', 'min'],
     eitherFunctions: [],
   };
 
@@ -11801,11 +12118,14 @@ exports.generateDropletModeOptions = function (codeFunctions) {
 
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
-      if (codeFunctions[i].category === 'value') {
-        modeOptions.valueFunctions[i] = codeFunctions[i].func;
+      if (codeFunctions[i].type === 'value') {
+        modeOptions.valueFunctions.push(codeFunctions[i].func);
       }
-      else if (codeFunctions[i].category !== 'hidden') {
-        modeOptions.blockFunctions[i] = codeFunctions[i].func;
+      else if (codeFunctions[i].type === 'either') {
+        modeOptions.eitherFunctions.push(codeFunctions[i].func);
+      }
+      else if (codeFunctions[i].type !== 'hidden') {
+        modeOptions.blockFunctions.push(codeFunctions[i].func);
       }
     }
   }
@@ -11813,7 +12133,7 @@ exports.generateDropletModeOptions = function (codeFunctions) {
   return modeOptions;
 };
 
-},{"./lodash":20,"./xml":38}],38:[function(require,module,exports){
+},{"./hammer":20,"./lodash":21,"./xml":39}],39:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -11841,7 +12161,7 @@ exports.parseElement = function(text) {
   return element;
 };
 
-},{}],39:[function(require,module,exports){
+},{}],40:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.sv=function(n){return n===1?"one":"other"}
 exports.bounceBall = function(d){return "studsa bollen"};
 
@@ -11889,7 +12209,7 @@ exports.launchBall = function(d){return "ny boll"};
 
 exports.launchBallTooltip = function(d){return "Sätt en ny boll i spel."};
 
-exports.makeYourOwn = function(d){return "Gör ditt eget Studsa-spel"};
+exports.makeYourOwn = function(d){return "Gör ditt eget Studs-spel"};
 
 exports.moveDown = function(d){return "flytta neråt"};
 
@@ -12076,9 +12396,13 @@ exports.whileTooltip = function(d){return "Upprepa de omslutna åtgärderna till
 exports.yes = function(d){return "Ja"};
 
 
-},{"messageformat":52}],40:[function(require,module,exports){
+},{"messageformat":53}],41:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.sv=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "och"};
+
+exports.booleanTrue = function(d){return "sant"};
+
+exports.booleanFalse = function(d){return "falskt"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -12162,6 +12486,8 @@ exports.numLinesOfCodeWritten = function(d){return "Du skrev bara "+p(d,"numLine
 
 exports.play = function(d){return "play"};
 
+exports.print = function(d){return "Print"};
+
 exports.puzzleTitle = function(d){return "Pussel "+v(d,"puzzle_number")+" av "+v(d,"stage_total")};
 
 exports.repeat = function(d){return "upprepa"};
@@ -12238,8 +12564,10 @@ exports.hintHeader = function(d){return "Här är ett tips:"};
 
 exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
 
+exports.defaultTwitterText = function(d){return "Check out what I made"};
 
-},{"messageformat":52}],41:[function(require,module,exports){
+
+},{"messageformat":53}],42:[function(require,module,exports){
 
 /*!
  * EJS
@@ -12598,7 +12926,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":42,"./utils":43,"fs":44,"path":45}],42:[function(require,module,exports){
+},{"./filters":43,"./utils":44,"fs":45,"path":46}],43:[function(require,module,exports){
 /*!
  * EJS - Filters
  * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
@@ -12801,7 +13129,7 @@ exports.json = function(obj){
   return JSON.stringify(obj);
 };
 
-},{}],43:[function(require,module,exports){
+},{}],44:[function(require,module,exports){
 
 /*!
  * EJS
@@ -12827,9 +13155,9 @@ exports.escape = function(html){
 };
  
 
-},{}],44:[function(require,module,exports){
-
 },{}],45:[function(require,module,exports){
+
+},{}],46:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -13057,7 +13385,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require("JkpR2F"))
-},{"JkpR2F":46}],46:[function(require,module,exports){
+},{"JkpR2F":47}],47:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -13122,7 +13450,7 @@ process.chdir = function (dir) {
     throw new Error('process.chdir is not supported');
 };
 
-},{}],47:[function(require,module,exports){
+},{}],48:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -13633,7 +13961,7 @@ process.chdir = function (dir) {
 }(this));
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],48:[function(require,module,exports){
+},{}],49:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -13719,7 +14047,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],49:[function(require,module,exports){
+},{}],50:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -13806,13 +14134,13 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],50:[function(require,module,exports){
+},{}],51:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":48,"./encode":49}],51:[function(require,module,exports){
+},{"./decode":49,"./encode":50}],52:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -14521,7 +14849,7 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":47,"querystring":50}],52:[function(require,module,exports){
+},{"punycode":48,"querystring":51}],53:[function(require,module,exports){
 /**
  * messageformat.js
  *
@@ -16104,4 +16432,4 @@ function isNullOrUndefined(arg) {
 
 })( this );
 
-},{}]},{},[10])
+},{}]},{},[11])

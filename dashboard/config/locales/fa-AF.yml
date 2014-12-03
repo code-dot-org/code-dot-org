@@ -5,7 +5,7 @@
         blank: is required
     attributes:
       user:
-        name: "نام"
+        name: Display Name
         email: "ایمیل"
         username: "نام کاربری"
         password: "رمز عبور"
@@ -20,12 +20,9 @@
   hello: "سلام دنیا"
   welcome_back: "%{name}، خوش آمدید"
   add_teacher_form:
-    code_or_email:
-      label: "افزودن معلم از طریق کد شناسایی یا رایانامه:"
-      placeholder: "کد شناسایی (ABCDEF) یا رایانامه (teacher@school.edu)"
     code:
-      label: 'Add a teacher by section code:'
-      placeholder: Code (ABCDEF)
+      label: 'Add a teacher:'
+      placeholder: Section Code (ABCDEF)
     submit: "افزودن معلم"
   add_hint_form:
     placeholder: "لطفا پیشنهادتان را اینجا وارد کنید"
@@ -63,9 +60,11 @@
     need_confirmation: "دستورالعمل فعال‌سازی حساب کاربری را دریافت نکرده‌اید؟"
     need_unlock: "دستورالعمل فعال‌سازی را دریافت نکرده‌اید؟"
   signup_form:
-    overview_student: "یک حساب کاربری ثبت کنید تا پیشرفت خود را پیگیری کنید."
-    overview_teacher: "با ثبت کردن یک حساب، علوم کامپیوتر را در کلاس خود آموزش دهید.<p/>قادر
-      خواهید بود پیشرفت دانش‌آموزانتان را پیگیری کرده و پاداش بگیرید."
+    overview_student: Sign up for an account to track your progress. Your email is
+      primarily used to allow you to log in and for password recovery. For more information,
+      see our <a href="http://code.org/privacy">Privacy Policy</a>.
+    overview_teacher: Teach computer science in your classroom by signing up for an
+      account.<p/> You'll be able to add your students and track their progress.
     no_signup_message: شما می‌توانید <a target="_blank" href="http://learn.code.org">
       فهرست مراحل و پازل‌های مختلف را بررسی کنید</a>. باید ثبت نام کنید تا بتوانید
       پیشرفت‌های خود را ذخیره کنید.
@@ -79,7 +78,7 @@
     address_placeholder: "نشانی، شهر، استان، کدپستی"
     gender: "جنسیت (اختیاری)"
     birthday: "تاریخ تولد (اختیاری)"
-    age: Age (optional)
+    age: Age
     user_type: Are you a student or teacher?
     submit: "ثبت نام"
     teacher: "آیا شما یک معلم هستید؟"
@@ -92,7 +91,8 @@
     student_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
       of service</a>. If I am under 13 years of age, I confirm by submitting this
       form that I have my parent or legal guardian's permission to use the Code.org
-      services.
+      services.<br/>For users under 13, email addresses are not stored in a form that
+      allows us to contact them.
     teacher_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
       of service</a>.
     additional_information: We need some additional information to continue signing
@@ -249,7 +249,7 @@
         playlab: Make an App
         artist: Draw Something
     user:
-      classroom: "دانش آموزان من"
+      classroom: Teacher Home Page
       label: "سلام %{username}"
       stats: "پیشرفت من"
       settings: "حساب کاربری من"
@@ -393,10 +393,8 @@
     use_as_teacher: Use this site as a teacher
     heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
-    heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
-    gallery:
-      your_turtle: My Art
-      your_studio: My Apps
+    heading_legacy: "<h2>Our general course for</h2><h1>All Ages</h1>"
+    your_gallery: Gallery
   gender:
     male: "مرد"
     female: "زن"
@@ -407,8 +405,8 @@
   footer:
     help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped
       create this tutorial.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
-      All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
+      All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
       Arts Inc. All Rights Reserved.
     feedback: "ارائه پیشنهادات و انتقادات"
     translate: "کمک به ما در ترجمه به زبان شما"
@@ -423,7 +421,7 @@
     teacher: "مشاهده راه حل"
     auth_error: "شما مجاز به دیدن راه حل نیستید."
     submit: "بروزرسانی موقعیت هنرمند"
-    direction: "جهت شروع"
+    direction: Start Direction (in degrees)
   video:
     tab: "فیلم."
     notes: "فیلمی نیست؟ نمایش یادداشت ها."
@@ -451,13 +449,17 @@
   try_reloading: "درخواست مجدد نمایش صفحه"
   next_stage: "پایان! به مرحله بعد بروید"
   download_pdf: "طرح درس آزاد"
+  lesson_plan: Lesson Plan
   view_lesson_plan: View Lesson Plan
   pdf_download: Download PDF
+  download_coming_soon: Downloadable activity coming soon.
+  video_coming_soon: Video Coming Soon!
   share_code:
     title: "'اجرا' را بزن تا برنامه من را در عمل ببینی"
     bounce_og_title: "بازی Bounce من را ببین"
     flappy_og_title: "بازی Flappy من را ببین"
-    studio_og_title: Check out my story
+    studio_og_title: Check out my Play Lab App
+    check_out_what_i_made: Check out what I made
     og_description: "من خودم با Code.org کد را نوشتم"
     phone_number_not_allowed: It looks like there is a phone number in it. Try changing
       the text.
@@ -489,6 +491,12 @@
     20hour:
       title: "دوره مقدمه"
       body: "دوره 20 ساعته آشنایی با علوم کامپیوتر را امتحان کن."
+    hoc2014:
+      try_new_tutorial: Try our new Hour of Code tutorial in beta
+      try_frozen: Artist with Anna and Elsa, from Frozen
+    gallery:
+      title: Gallery
+      body: View a gallery of app and artist images created by our users
   gallery:
     students_drew_these_with_code: "دانش‌آموزان اینها را با کدنویسی رسم کرده‌اند!"
     students_made_these_with_code: Students made these with code!
@@ -502,10 +510,15 @@
     more: "بیشتر &rarr;"
     caption_by_name_age: by %{name}, age %{age}
     caption_time_ago: "%{time_ago} ago"
+    header: Gallery
+    header_playlab: Play Lab
+    header_artist: Artist
   landing:
     prerelease: This course is in <span class='betatext'>beta</span>.  This means
       it is not the final version of the course, and is subject to revision as feedback
       is received and improvements are made.
+    prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
+      is subject to revision as feedback is received and improvements are made.
     feedback: Give Feedback
     report_bug: Report Bug
     support: Get Help
@@ -520,6 +533,8 @@
     wrong_body: "راه‌حلی که شما وارد کرده‌اید صحیح نیست. لطفا دوباره امتحان کنید!"
     correct_title: Correct
     correct_body: That is the correct answer.
+  text_match:
+    placeholder: Enter your answer here
   dialog:
     ok: Ok
   time:
@@ -572,3 +587,8 @@
   zendesk_too_young_message: Sorry, younger users may not sign in to our support site.
     You may browse <a href="http://support.code.org">support.code.org</a> without
     signing in or ask your parent or teacher to contact us for you.
+  progress:
+    not_completed: not completed
+    completed_too_many_blocks: completed, too many blocks
+    completed_perfect: completed, perfect
+    furthest_level_attempted: furthest level attempted

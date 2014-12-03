@@ -9,7 +9,7 @@ template "/etc/init.d/dashboard" do
   variables ({
     src_file:"/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/config/unicorn.rb",
     app_root:"/home/#{node[:current_user]}/#{node.chef_environment}/dashboard",
-    pid_file:"/home/#{node[:current_user]}/#{node.chef_environment}/aws/dashboard_unicorn.rb.pid",
+    pid_file:"/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/config/unicorn.rb.pid",
     user:node[:current_user],
     env:node.chef_environment,
   })
@@ -22,8 +22,27 @@ template "/etc/logrotate.d/dashboard" do
   group 'root'
   mode '0644'
   variables ({
+    app_name:'dashboard',
     log_dir:"/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/log",
   })
+end
+
+template "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/config/newrelic.yml" do
+  source 'newrelic.yml.erb'
+  user node[:current_user]
+  group node[:current_user]
+  variables ({
+    app_name:'Dashboard',
+    log_dir:"/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/log",
+    auto_instrument:false,
+  })
+end
+
+link "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/public/blockly" do
+  to "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/public/blockly-package"
+  action :create
+  user node[:current_user]
+  group node[:current_user]
 end
 
 execute "bundle-install-dashboard" do

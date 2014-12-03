@@ -1,7 +1,7 @@
 # See logrotate man page for configuration file format.
 <%= File.join(@log_dir, '*.log') %> {
 # Log files are rotated when they grow bigger than size bytes, but not before the additionally specified time interval.
-minsize 10M
+#minsize 10M
 
 # Log files are rotated every day.
 daily

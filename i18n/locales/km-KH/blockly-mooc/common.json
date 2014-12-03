@@ -1,5 +1,7 @@
 {
   "and":"និង",
+  "booleanTrue":"ពិត",
+  "booleanFalse":"មិន​ពិត",
   "blocklyMessage":"Blockly",
   "catActions":"សកម្មភាព",
   "catColour":"ពណ៌",
@@ -41,6 +43,7 @@
   "numBlocksNeeded":"Congratulations! You completed Puzzle {puzzleNumber}. (However, you could have used only {numBlocks, plural, one {1 block} other {# blocks}}.)",
   "numLinesOfCodeWritten":"You just wrote {numLines, plural, one {1 line} other {# lines}} of code!",
   "play":"play",
+  "print":"Print",
   "puzzleTitle":"Puzzle {puzzle_number} of {stage_total}",
   "repeat":"ធ្វើ​ឡើង​វិញ",
   "resetProgram":"កំណត់​ឡើង​វិញ",
@@ -61,8 +64,8 @@
   "tryAgain":"ព្យាយាម​ម្ដង​ទៀត",
   "hintRequest":"See hint",
   "backToPreviousLevel":"ត្រឡប់​ទៅ​កម្រិត​មុន",
-  "saveToGallery":"រក្សាទុក​ទៅ​វិចិត្រសាល​របស់​អ្នក",
-  "savedToGallery":"បាន​រក្សាទុក​ទៅ​វិចិត្រសាល​របស់​អ្នក!",
+  "saveToGallery":"Save to gallery",
+  "savedToGallery":"Saved in gallery!",
   "shareFailure":"Sorry, we can't share this program.",
   "typeFuncs":"អនុគមន៍៍​ដែល​អាច​ប្រើ​បាន៖ %1",
   "typeHint":"សូម​ចំណាំ​ថា​ត្រូវ​ការ​ទាំង​រង្វង់​ក្រចក​និង​ចុច​ក្បៀស។",
@@ -78,5 +81,6 @@
   "tryHOC":"សាក​ល្បង \"ពេល​វេលា​នៃ​កូដ\"",
   "signup":"ចុះ​ឈ្មោះ​សម្រាប់​វគ្គ​សិក្សា​ណែនាំ​ដំបូង",
   "hintHeader":"នេះ​គឺ​ជា​គន្លឹះ៖",
-  "genericFeedback":"See how you ended up, and try to fix your program."
+  "genericFeedback":"See how you ended up, and try to fix your program.",
+  "defaultTwitterText":"Check out what I made"
 }

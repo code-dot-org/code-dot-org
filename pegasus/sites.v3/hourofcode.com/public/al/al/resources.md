@@ -2,11 +2,28 @@
 layout: wide
 nav: resources_nav
 ---
-# Rezurse
 
-## Je nikoqir i Një Ore Kodim? [Shihe udhëzuesin praktik](<%= hoc_uri('/resources/how-to') %>)
+<div class="row">
+  <h1 class="col-sm-6">
+    Resurse
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Sign up your event</button></a>
+  </div>
+</div>
 
-<p><a id="handouts"></p> 
+<% if @country == 'ie' %>
+
+## Hosting an Hour of Code in Ireland? [See the how-to guide](<%= hoc_uri('/resources/how-to-ireland') %>)
+
+<% else %>
+
+## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+
+<% end %>
+
+<a id="handouts"></p> 
 
 <h2>
   Përdore këtë prospekt (flajer) për ta përhapur fjalën
@@ -17,7 +34,7 @@ nav: resources_nav
 </p>
 
 <h2>
-  Jepua këtë prospekt (flajer) mësuesve dhe shkollave
+  Give this handout to teachers and schools
 </h2>
 
 <p>
@@ -28,7 +45,7 @@ nav: resources_nav
   <a id="videos"></p> 
   
   <h2>
-    Tregoji këto video për t'i inspiruar studentët
+    Ndani këto video për t'i inspiruar studentët
   </h2>
   
   <div style="float:left; padding:10px">
@@ -67,7 +84,7 @@ nav: resources_nav
   
   <div style='clear:both'>
   </div>
-  
+
 <p>
 <a id="posters"></p> 
 
@@ -76,15 +93,7 @@ nav: resources_nav
 </h2>
 
 <p>
-  <% if @country == 'us' %>
-</p>
-
-<h4>
-  <a href="http://hourofcode.com/#signup">Regjistroje</a> ngjarjen tënde të Orës së Kodimit dhe do t'ua dërgojmë me postë posterët falas.
-</h4>
-
-<p>
-  <% end %> <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="image" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="image" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="image" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="image" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="image" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="image" /></a>
+  <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="image" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="image" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="image" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="image" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="image" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="image" /></a>
 </p>
 
 <p>
@@ -104,15 +113,15 @@ nav: resources_nav
 </p>
 
 <h2>
-  Post these on social media
+  Postoni këto në mediat sociale
 </h2>
 
 <p>
-  <a href="/images/social-1.jpg"><img src="/images/fit-200/social-1.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-200/social-2.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-200/social-3.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="/images/social-1.jpg"><img src="/images/fit-250/social-1.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-250/social-2.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-250/social-3.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
 <p>
-  <a href="/images/mark.jpg"><img src="/images/fit-200/mark.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-200/susan.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-200/ashton.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-200/marissa.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-200/chris.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/image/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
 <p>
@@ -120,7 +129,7 @@ nav: resources_nav
 </p>
 
 <h2>
-  Send these emails to help promote the Hour of Code
+  Dërgoni këta emaila për të ndihmuar në promovimin e Orës së Kodimit
 </h2>
 
 <p>
@@ -128,19 +137,19 @@ nav: resources_nav
 </p>
 
 <h2>
-  Ask your school, employer or friends to sign up:
+  Kërko nga shkolla, punëdhënësi apo miqtë të regjistrohen:
 </h2>
 
 <p>
-  Kompjuterët janë kudo, por më pak shkolla e mësojnë shkencën kompjuterike tash se sa para 10 vitesh. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
+  Kompjuterët janë kudo, por më pak shkolla e mësojnë shkencën kompjuterike tash se sa para 10 vitesh. Lajmi i mirë është se jemi në rrugë për ta ndryshuar këtë. If you heard about the Hour of Code last year, you might know it made history. Për një javë, 15 milionë studentë e provuan shkencën kompjuterike!
 </p>
 
 <p>
-  Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+  Shkenca kompjuterike ishte në faqet kryesore të Google, MSN, Yahoo! dhe Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Mbi 100 partnerë u bashkuan për ta përkrahur këtë lëvizje.
 </p>
 
 <p>
-  This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014.
+  Këtë vit, ta bëjmë këtë edhe më të madhe. Po kërkoj nga ju të bashkoheni në Orën e Kodimit 2014. Ju lutem të përfshihemi me një ngjarje të Orës së Kodumit gjatë Javës së Edukimit të Shkencës Kompjuterike, 8-14 dhjetor 2014.
 </p>
 
 <p>
@@ -148,7 +157,7 @@ nav: resources_nav
 </p>
 
 <p>
-  Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
+  Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com/<%= @country %>
 </p>
 
 <p>
@@ -156,27 +165,27 @@ nav: resources_nav
 </p>
 
 <h2>
-  Invite media to attend your event:
+  Ftoji mediat të marrin pjesë në ngjarjen tuaj:
 </h2>
 
 <p>
-  <strong>Subject line:</strong> Local school joins mission to introduce 100m students to computer science
+  <strong>Rreshti i temës:</strong> Shkolla lokale i bashkohet misionit për t'i njoftuar 100 milionë studentë me shkencën kompjuterike
 </p>
 
 <p>
-  Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and minorities are severely underrepresented. Good news is, we’re on our way to change this.
+  Kompjuterët janë kudo, por më pak shkolla e mësojnë shkencën kompjuterike tani se para 10 vitesh. Vajzat dhe minoritetet nënpërfaqësohen ashpërsisht. Lajmi i mir është se jemi në rrugë të mirë për ta ndryshuar këtë.
 </p>
 
 <p>
-  In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+  Për një javë vitin e kaluar, 15 milionë studentë e provuan shkencën kompjuterike! Shkenca kompjuterike ishte në faqet kryesore të Google, MSN, Yahoo! dhe Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Mbi 100 partnerë u bashkuan për ta përkrahur këtë lëvizje.
 </p>
 
 <p>
-  Now the Hour of Code movement is aiming for 100 million students.
+  Tash lëvizja Ora e Kodimit po i synon 100 milionë studentë.
 </p>
 
 <p>
-  That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 8-14.
+  Pranraj secili në [X number] studentë në [SCHOOL NAME] po bashkohen në ngjarjen më të madhe të mësimit në histori: Ora e Kodimit, gjatë 8-14 dhjetor.
 </p>
 
 <p>
@@ -184,23 +193,23 @@ nav: resources_nav
 </p>
 
 <p>
-  The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a statement that today’s generation of students are ready to learn critical skills for 21st century success. Please join us.
+  Ora e Kodimit, e organizuar nga organizata jofitimprurëse Code.org dhe mbi 100 tjera, është deklaratë se gjenerata e sotme e studentëve janë gati t'i mësojnë shkathtësitë kritike për suksesin e shekullit 21. Ju lutem na u bashkangjitni.
 </p>
 
 <p>
-  <strong>Contact:</strong> [YOUR NAME], [TITLE], cell: (212) 555-5555
+  <strong>Kontakti:</strong> [EMRI JUAJ], [TITULLI], tel: (212) 555-5555
 </p>
 
 <p>
-  <strong>When:</strong> [DATE and TIME of your event]
+  <strong>Kur:</strong> [DATA dhe KOHA e ngjarjes suaj]
 </p>
 
 <p>
-  <strong>Where:</strong> [ADDRESS and DIRECTIONS]
+  <strong>Ku:</strong> [ADRESA dhe UDHËZIMET]
 </p>
 
 <p>
-  I look forward to being in touch.
+  Pres të jemi në kontakt.
 </p>
 
 <p>
@@ -208,23 +217,23 @@ nav: resources_nav
 </p>
 
 <h2>
-  Tell parents about your school's event:
+  Tregojuni prindërve për ngjarjen e shkollës suaj:
 </h2>
 
 <p>
-  Dear Parents,
+  Të dashur prindër,
 </p>
 
 <p>
-  We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly hinge on understanding how technology works. But only a tiny fraction of us are learning computer science, and less students are studying it than a decade ago.
+  Po jetojmë në një botë të rrethuar nga teknologjia. Dhe e dimë se çfarëdo fushe që ta zgjedhin studentët tanë kur të rriten, aftësia e tyre për të pasur sukses do të varet gjithnjë e më shumë në kuptimin se si funksionon teknologjia. But only a tiny fraction of us are learning computer science, and less students are studying it than a decade ago.
 </p>
 
 <p>
-  That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
+  That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Vitin e kaluar, 15 milionë studentë e provuan shkencën kompjuterike për një javë. Këtë vit, po i përfshijmë studentët anembanë botës për t'i arritur 100 milionë studentë!
 </p>
 
 <p>
-  Our Hour of Code is a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on your social media channels and consider hosting additional Hour of Code events in the community.
+  Ora jonë e Kodimit është deklaratë se [EMRI I SHKOLLËS] është gati për t'i shpjeguar këto shkathtësi themelore të shekullit 21. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. Ju inkurajoj të dilni vullnetar, t'i kontaktoni mediat lokale, ta shpërndani lajmin në kanalet e mediave tona shoqërore dhe të konsideroni të jeni nikoqir i ngjarjeve shtesë të Orës së Kodimit në komunitet.
 </p>
 
 <p>
@@ -232,15 +241,15 @@ nav: resources_nav
 </p>
 
 <p>
-  See http://hourofcode.com for details, and help spread the word.
+  See http://hourofcode.com/<%= @country %> for details, and help spread the word.
 </p>
 
 <p>
-  Sincerely,
+  Sinqerisht,
 </p>
 
 <p>
-  Your principal
+  Drejtori juaj
 </p>
 
 <p>
@@ -248,29 +257,33 @@ nav: resources_nav
 </p>
 
 <h2>
-  Invite a local politician to your school's event:
+  Ftoje një politikan lokal në ngjarjen e shkollës suaj:
 </h2>
 
 <p>
-  Dear [Mayor/Governor/Representative/Senator LAST NAME]:
+  I dashur [Kryetar komune/Guvernator/Përfaqësues/Senator MBIEMRI]:
 </p>
 
 <p>
-  Did you know that in today’s economy, computing jobs outnumber students graduating into the field by 3-to-1? And, computer science is foundational for <em>every</em> industry today. Yet 90% of schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
+  Did you know that in today’s economy, computing jobs outnumber students graduating into the field by 3-to-1? Dhe, shkenca kompjuterike është themelore për <em>secilën</em> industri sot. E prapë 90% të shkollave nuk e mësojnë atë. Te [EMRI I SHKOLLËS], po mundohemi ta ndryshojmë këtë.
 </p>
 
 <p>
-  That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
+  That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Vitin e kaluar, 15 milionë studentë e provuan shkencën kompjuterike për një javë. Këtë vit, po i përfshijmë studentët anembanë botës për t'i arritur 100 milionë studentë!
 </p>
 
 <p>
-  I'm writing to invite you to take part in our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st century skills. We want to ensure that our students are on the forefront of creating technology of the future--not just consuming it.
+  I'm writing to invite you to take part in our Hour of Code event and speak at our kickoff assembly. Kjo do të ndodhë më [DATA, KOHA, VENDI] dhe do të japë deklaratë të fuqishme se [emri i Shtetit apo Qytetit] është gati t'ua mësojë studentëve tanë shkathtësitë kritike të shekullit 21. We want to ensure that our students are on the forefront of creating technology of the future--not just consuming it.
 </p>
 
 <p>
-  Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
+  Ju lutem më kontaktoni në [NUMRI I TELEFONIT APO ADRESA E EMAILIT]. E pres përgjigjen tuaj.
 </p>
 
 <p>
-  Sincerely, [NAME], [TITLE]
+  Sinqerisht, [NAME], [TITLE]
+</p>
+
+<p>
+  <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up your event</button></a>
 </p>

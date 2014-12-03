@@ -22,14 +22,16 @@
     .span2
 
   .row
-    %h2{style: 'text-align:center;'} Apps
+    .span12
+      %h2{style: 'text-align:center;'}= t('gallery.header_playlab')
 
   = render partial: 'gallery_activities', locals: {gallery_activities: @playlab_gallery_activities, app: Game::PLAYLAB}
   .span{style: 'float:right;'}
     = link_to t('gallery.more').html_safe, app: Game::PLAYLAB
 
   .row
-    %h2{style: 'text-align:center;'} Art
+    .span12
+      %h2{style: 'text-align:center;'}= t('gallery.header_artist')
 
   = render partial: 'gallery_activities', locals: {gallery_activities: @artist_gallery_activities, app: Game::ARTIST}
   .span{style: 'float:right;'}

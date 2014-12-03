@@ -25,9 +25,8 @@ Milestone Complete!
 
 Phase 3 is designed to provide teachers with professional support, guidance, and feedback during the school year and experiences with an online community of practice.
 
-#### Save The Dates:
-11/8/2014
-<br/>
+#### Save The Dates
+
 2/7/2015
 <br/>
 4/18/2015
@@ -36,14 +35,14 @@ Phase 3 is designed to provide teachers with professional support, guidance, and
 <br />
 Breakfast and lunch will be served. 
 
-#### November 8th Location 
-Rainier Square Conference Center
+#### February 7th Location 
+Rainier Tower
 <br/>
-1333 Fifth Ave. 
+1301 Fifth Ave. 
+<br/>
+30th Floor, Conference Room
 <br/>
 Seattle, WA 98101
-
-Located on the 3rd Floor of the Rainier Square Atrium. 
 
 The Rainier Square parking garage address is 409 Union Street, located between 4th and 5th on Union Street. For rate information please go [here](/files/rainierparking.pdf). 
 
@@ -64,7 +63,8 @@ Coming Summer 2015
 ## Administrator and Counselor Professional Development
 
 ### Phase 1: Preparation and Reflection
-The Administrator / Counselor Phase 1 Professional Development online course [edx.code.org](http://edx.code.org) launched June 1st. Enrolled Administrators and Counselors received an email on June 1st with registration information. Pre-registration with your district is required to access professional development courses. 
+
+Milestone Complete!
 
 ### Phase 2: Teaching and Learning Studio
 

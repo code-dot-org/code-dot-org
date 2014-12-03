@@ -3,13 +3,29 @@
 
 <% if (debugButtons) { %>
 <div>
+  <div id="debug-buttons" style="display:inline;">
+    <button id="pauseButton" class="share">
+      <%= webappMsg.pause() %>
+    </button>
+    <button id="stepInButton" class="share">
+      <%= webappMsg.stepIn() %>
+    </button>
+    <button id="stepOverButton" class="share">
+      <%= webappMsg.stepOver() %>
+    </button>
+    <button id="stepOutButton" class="share">
+      <%= webappMsg.stepOut() %>
+    </button>
+  </div>
 <% } %>
 
-<% if (debugButtons) { %>
-<div id="debug-buttons" style="display:inline;">
-    <button id="pauseButton" class="share">
-      <img src="<%= assetUrl('media/1x1.gif') %>"><%= webappMsg.pause() %>
-    </button>
+<% if (debugConsole) { %>
+  <div id="debug-console" class="debug-console">
+    <textarea id="debug-output" readonly disabled tabindex=-1 class="debug-output"></textarea>
+    <span class="debug-input-prompt">
+      &gt;
+    </span>
+    <div contenteditable id="debug-input" class="debug-input"></div>
   </div>
 <% } %>
 

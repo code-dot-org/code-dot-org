@@ -28,6 +28,7 @@ goog.provide('Blockly.utils');
 
 goog.require('goog.array');
 goog.require('goog.memoize');
+goog.require('goog.events');
 
 /**
  * Add a CSS class to a element.
@@ -97,10 +98,14 @@ Blockly.bindEvent_ = function(element, name, thisObject, func) {
   wrapFunc = function(e) {
     func.apply(thisObject, arguments);
   };
-  element.addEventListener(name, wrapFunc, false);
-  bindData.push([element, name, wrapFunc]);
   // Add equivalent touch event.
-  if (name in Blockly.bindEvent_.TOUCH_MAP) {
+  var equivTouchEvent = Blockly.bindEvent_.TOUCH_MAP[name];
+  if (equivTouchEvent) {
+    // Also bind the mouse event, unless the browser supports pointer events.
+    if (!window.navigator.pointerEnabled && !window.navigator.msPointerEnabled) {
+      element.addEventListener(name, wrapFunc, false);
+      bindData.push([element, name, wrapFunc]);
+    }
     wrapFunc = function (e) {
       if (e.target && e.target.style) {
         var targetStyle = e.target.style;
@@ -121,10 +126,11 @@ Blockly.bindEvent_ = function(element, name, thisObject, func) {
         func.apply(thisObject, arguments);
       }
     };
-    element.addEventListener(Blockly.bindEvent_.TOUCH_MAP[name],
-                             wrapFunc,
-                             false);
-    bindData.push([element, Blockly.bindEvent_.TOUCH_MAP[name], wrapFunc]);
+    element.addEventListener(equivTouchEvent, wrapFunc, false);
+    bindData.push([element, equivTouchEvent, wrapFunc]);
+  } else {
+    element.addEventListener(name, wrapFunc, false);
+    bindData.push([element, name, wrapFunc]);
   }
   return bindData;
 };
@@ -536,4 +542,12 @@ Blockly.printerRangeToNumbers = function(rangeString) {
     }
   }
   return fullNumberList;
+};
+
+/**
+ * Generates a globally unique ID
+ * @returns {string|*}
+ */
+Blockly.getUID = function() {
+  return goog.events.getUniqueId('blocklyUID');
 };

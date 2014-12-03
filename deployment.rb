@@ -22,7 +22,6 @@ def load_configuration()
   root_dir = '/home/ubuntu/website-ci' if root_dir == '/home/ubuntu/Dropbox (Code.org)'
 
   hostname = `hostname`.strip
-  username = `whoami`.strip
 
   global_config = load_yaml_file File.join(root_dir, 'aws', 'secrets', 'config.yml')
   global_config = {'environments'=>{}, 'hosts'=>{}} unless global_config
@@ -46,34 +45,22 @@ def load_configuration()
     'build_pegasus'               => true,
     'dashboard_db_name'           => "dashboard_#{rack_env}",
     'dashboard_devise_pepper'     => 'not a pepper!',
-    'dashboard_facebook_key'      => 'not a real secret',
-    'dashboard_port'              => 8080,
-    'dashboard_twitter_key'       => '000000000000000000000',
-    'dashboard_twitter_secret'    => '0000000000000000000000000000000000000000000',
+    'dashboard_honeybadger_api_key' =>'00000000',
+    'dashboard_port'              => 3000,
     'dashboard_unicorn_name'      => 'dashboard',
-    'dashboard_unicorn_pid'       => File.join(root_dir, 'aws', 'dashboard_unicorn.rb.pid'),
-    'dashboard_user'              => username,
     'dashboard_workers'           => 8,
     'db_reader'                   => 'mysql://root@localhost/',
     'db_writer'                   => 'mysql://root@localhost/',
-    'dns'                         => hostname,
-    'freegeoip_host'              => nil,
     'hip_chat_log_room'           => rack_env.to_s,
     'hip_chat_logging'            => false,
     'home_dir'                    => File.expand_path('~'),
-    'honeybadger_api_key'         =>'00000000',
-    'hostname'                    => hostname,
     'languages'                   => load_languages(File.join(root_dir, 'pegasus', 'data', 'cdo-languages.csv')),
-    'level_builder_port'          => 8082,
-    'localize_blockly'            => true,
+    'localize_blockly'            => false,
     'name'                        => hostname,
-    'newrelic_secret'             => 'not a real secret',
-    'pegasus_db_name'             => "pegasus_#{rack_env}",
+    'pegasus_db_name'             => rack_env == :production ? 'pegasus' : "pegasus_#{rack_env}",
     'pegasus_honeybadger_api_key' =>'00000000',
-    'pegasus_port'                => 8081,
+    'pegasus_port'                => 9393,
     'pegasus_unicorn_name'        => 'pegasus',
-    'pegasus_unicorn_pid'         => File.join(root_dir, 'aws', 'pegasus_unicorn.rb.pid'),
-    'pegasus_user'                => username,
     'pegasus_workers'             => 4,
     'poste_host'                  => 'localhost.code.org:9393',
     'poste_secret'                => 'not a real secret',
@@ -83,13 +70,7 @@ def load_configuration()
     'root_dir'                    => root_dir,
     'sendy_db_reader'             => 'mysql://root@localhost/',
     'sendy_db_writer'             => 'mysql://root@localhost/',
-    'slog_token'                  => '00000000-0000-0000-0000-000000000000',
-    'use_postfix'                 => true,
-    'username'                    => username,
-    'varnish_backends'            => {'localhost'=>'127.0.0.1'},
     'varnish_instances'           => [],
-    'varnish_secret'              => '00000000-0000-0000-0000-000000000000',
-    'varnish_storage'             => 'malloc,.5G',
   }.tap do |config|
     raise "'#{rack_env}' is not known environment." unless config['rack_envs'].include?(rack_env)
     ENV['RACK_ENV'] = rack_env.to_s unless ENV['RACK_ENV']
@@ -151,6 +132,7 @@ class CDOImpl < OpenStruct
   end
 
   def slog(params)
+    return unless slog_token
     @slog ||= Slog::Writer.new(secret:slog_token)
     @slog.write params
   end
@@ -200,10 +182,6 @@ end
 
 def pegasus_dir(*paths)
   deploy_dir('pegasus', *paths)
-end
-
-def postfix_dir(*paths)
-  aws_dir('postfix', *paths)
 end
 
 def secrets_dir(*dirs)

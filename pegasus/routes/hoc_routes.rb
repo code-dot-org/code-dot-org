@@ -1,6 +1,6 @@
 get '/:short_code' do |short_code|
   only_for ['code.org', 'csedweek.org', 'hourofcode.com', 'uk.code.org']
-  pass if request.site == 'hourofcode.com' && ['ca', 'co', 'gr'].include?(short_code)
+  pass if request.site == 'hourofcode.com' && ['ap', 'ca', 'co', 'gr'].include?(short_code)
   pass unless tutorial = DB[:tutorials].where(short_code:short_code).first 
   launch_tutorial(tutorial)
 end
@@ -53,7 +53,7 @@ get '/api/hour/certificate/:filename' do |filename|
   content_type format.to_sym
   expires 0, :private, :must_revalidate
 
-  image = create_certificate_image(display_name)
+  image = create_course_certificate_image(display_name, 'hoc')
   image.resize_to_fit!(width) unless (width = width.to_i) == 0
   image.format = format
   image.to_blob
@@ -69,7 +69,7 @@ get '/v2/hoc/certificate/:filename' do |filename|
   pass unless extnames.include?(extname)
 
   format = extname[1..-1]
-  image = create_certificate_image(data['name'], data['course'], data['sponsor'])
+  image = create_course_certificate_image(data['name'], data['course'], data['sponsor'])
   image.format = format
 
   content_type format.to_sym
@@ -87,7 +87,7 @@ get '/api/hour/certificate64/:course/:filename' do |course, filename|
   pass unless extnames.include?(extname)
 
   format = extname[1..-1]
-  image = create_certificate_image(label, course)
+  image = create_course_certificate_image(label, course)
   image.format = format
 
   content_type format.to_sym

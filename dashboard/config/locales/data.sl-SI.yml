@@ -50,6 +50,7 @@
           MazeEC: Stopnja 1
           Webapp: Stopnja 2
           ArtistEC: Stopnja 3
+          StudioEC: Stopnja 4
         events:
           desc: Bounce (beta)
           Bounce: Stopnja 1
@@ -100,6 +101,8 @@
         Wordsearch: Wordsearch
         Webapp: Webapp
         ArtistEC: Umetnik
+        TextMatch: Text Match
+        StudioEC: Play Lab
     trophy:
       name:
         Bronze: Bronze
@@ -530,6 +533,11 @@
         webapp_ec_simple: Create your web app by using createHtmlBlock.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
           it in the new "penColour" block.'
+        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
+          a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
+          Have fun!'
+        studio_ec_sandbox: Create your own game. When you're done, click Finish to
+          let friends try your game on their phones.
     video:
       name:
         maze_intro: Maze Intro
@@ -545,7 +553,6 @@
         loop_for: Counter Block
         parameters: Functions with Parameters
         hoc_wrapup: Hour of Code Wrapup
-        20_wrapup: 20-Hour Wrapup
         Unplug1: What is CS?
         Unplug2: Computational Thinking
         Unplug3: Graph Paper Programming
@@ -560,7 +567,7 @@
         C1_happy_maps_unplugged: Happy Maps
         C1_moveitmoveit_unplugged: Move It, Move It
         C1_bigevent_unplugged: The Big Event
-        C1_getting_loop: Getting Loopy
+        C1_getting_loopy: Getting Loopy
         C1_pair_programming: Pair Programming
         C1_maze_intro_sequencing: Maze Sequencing Intro
         C1_maze_debugging: Maze Debugging
@@ -572,19 +579,22 @@
         C1_maze_loops: Maze Loops
         C1_playlab_storytelling: Play Lab - Create a Story
         C1_planting_seed: Planting a Seed
-        C1_building_foundating: Building a Foundation
+        C1_building_foundation: Building a Foundation
         C2_maze_intro: Maze Intro
         C2_artist_intro: Artist Intro
         C2_zuck_repeat_loop: Maze Loops
         C2_artist_loops: Artist Loops
+        C2_artist_debugging: Artist Debugging
+        C2_bee_loops: Bee Loops
+        C2_bee_debugging: Bee Debugging
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: Play Lab - Create a Story
         C2_graph_paper: Graph Paper Programming
         C2_conditionals_with_cards: Pogoji
         C2_binary_bracelets: Binary Bracelets
-        C2_replay_programming: Relejsko programiranje
+        C2_relay_programming: Relejsko programiranje
         C2_paper_airplanes: Paper Airplanes
-        C3_maze_intro: Maze Intro
+        C3_maze_level_4: Maze Loops
         C3_artist_intro: Artist Intro
         C3_artist_functions: Artist Functions
         C3_bee_functions: Bee Functions
@@ -602,6 +612,9 @@
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
+        Frozen_intro: Hour of Code Intro
+        Frozen_loops: Introduction to Loops
+        Frozen_functions: Introduction to Functions
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
@@ -618,3 +631,34 @@
           block to enable an actor for this story
         studio_say_text: Type what you want your actor to say within these quotes
         jigsaw_click: Click this block!
+        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
+          Run" block to make Elsa move forward
+        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
+          determines how much Elsa turns
+        replace_questions: Use the drop-down to replace "???" with a number
+        replace_questions_degree: Use the drop-down to replace "???" with the correct
+          degree to turn
+        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
+          workspace
+        snowflake_dropdown: Use this drop-down to create different snowflakes!
+        degrees_per_side: Divide 360 by the number of sides to get the size of each
+          angle in degrees.
+        set_sides: Use this block to set "sides" to the number needed to complete
+          the puzzle.
+        set_length: Use this block to set "length" to the correct value.
+        which_equation: Which equation makes each side shorter for shapes with more
+          sides?  Try each equation!
+        get_nectar: Use the new "get nectar" block.
+        actions_category: The tool box got a new look! The "Actions" blocks are in
+          here now.
+        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
+        edit_function: Use this button to edit the function.
+        create_function: Click here to open the "Functions" flyout, then click the
+          "Create a Function" button.
+        house_hint: It's ok if the picture doesn't look like a house yet. We will
+          fix it in the next puzzle.
+        edit_draw_square: Use this button to edit the function and add the loop.
+        edit_get_nectar: Use this button to edit the function and change the direction
+          the Bee will turn to get the nectar.
+        logic_category: Open the "Logic" flyout to find the "if/else" block.
+        length_parameter: Can you update this function so it uses the "length" parameter?

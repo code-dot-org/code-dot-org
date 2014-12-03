@@ -55,8 +55,31 @@ Blockly.BlockSpace = function(blockSpaceEditor, getMetrics, setMetrics) {
   /** @type {number} */
   this.maxBlocks = Infinity;
 
+  /** @type {goog.events.EventTarget} */
+  this.events = new goog.events.EventTarget();
+
   Blockly.ConnectionDB.init(this);
+  if (Blockly.BlockSpace.DEBUG_EVENTS) {
+    this.debugLogOnEvents();
+  }
 };
+
+Blockly.BlockSpace.DEBUG_EVENTS = false;
+
+Blockly.BlockSpace.EVENTS = {};
+
+/**
+ * Called after a blockspace has been populated with a set of blocks
+ * (e.g. when using domToBlockSpace)
+ * @type {string}
+ */
+Blockly.BlockSpace.EVENTS.EVENT_BLOCKS_IMPORTED = 'blocksImported';
+
+/**
+ * Fired whenever blocklyBlockSpaceChange normally gets fired
+ * @type {string}
+ */
+Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE = 'blockSpaceChange';
 
 /**
  * Angle away from the horizontal to sweep for blocks.  Order of execution is
@@ -103,6 +126,19 @@ Blockly.BlockSpace.prototype.fireChangeEventPid_ = null;
  * @type {Blockly.ScrollbarPair}
  */
 Blockly.BlockSpace.prototype.scrollbar = null;
+
+/**
+ * Sets up debug console logging for events
+ */
+Blockly.BlockSpace.prototype.debugLogOnEvents = function() {
+  goog.object.forEach(Blockly.BlockSpace.EVENTS, function(eventIdentifier, eventConstant) {
+    this.events.listen(eventIdentifier, function(eventObject) {
+      console.log(eventObject);
+      console.log(eventConstant);
+      console.log(eventIdentifier);
+    }, false, this);
+  }, this);
+};
 
 Blockly.BlockSpace.prototype.findFunction = function(functionName) {
   return goog.array.find(this.getTopBlocks(), function(block) {
@@ -367,9 +403,11 @@ Blockly.BlockSpace.prototype.fireChangeEvent = function() {
   }
   var canvas = this.svgBlockCanvas_;
   if (canvas) {
+    var self = this;
     this.fireChangeEventPid_ = window.setTimeout(function() {
+        self.events.dispatchEvent(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE);
         Blockly.fireUiEvent(canvas, 'blocklyBlockSpaceChange');
-      }, 0);
+    }, 0);
   }
 };
 
@@ -377,7 +415,19 @@ Blockly.BlockSpace.prototype.fireChangeEvent = function() {
  * Paste the provided block onto the blockSpace.
  * @param {!Element} xmlBlock XML block element.
  */
-Blockly.BlockSpace.prototype.paste = function(xmlBlock) {
+Blockly.BlockSpace.prototype.paste = function(clipboard) {
+  var xmlBlock = clipboard.dom;
+  // When pasting into a different block spaces, remove parameter blocks
+  if (this !== clipboard.sourceBlockSpace) {
+    if (xmlBlock.getAttribute('type') === 'parameters_get') {
+      return;
+    }
+    goog.array.forEach(xmlBlock.getElementsByTagName('block'), function(block) {
+      if (block.getAttribute('type') === 'parameters_get') {
+        goog.dom.removeNode(block);
+      }
+    });
+  }
   if (xmlBlock.getElementsByTagName('block').length >=
       this.remainingCapacity()) {
     return;

@@ -1,5 +1,9 @@
-Hour of Code Event How to Guide
-====
+---
+title: Hour of Code Event How-To 
+layout: wide
+nav: resources_nav
+---
+# Hour of Code event guide
 
 Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event. 
 
@@ -11,9 +15,7 @@ Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to 
 ## 2) During your event
 
 - Kick off your event with one of our <a href="<%= hoc_uri('/resources#videos') %>">inspirational videos</a>.
-- Give an intro overviewing the importance of computer science.
-	- Discuss these  <a href="<%= hoc_uri('/resources/stats') %>">statistics</a>. 
-	- Show these <a href="<%= hoc_uri('/resources/stats') %>">infographics</a>.
+- Give an intro overviewing the importance of computer science, using these <a href="<%= hoc_uri('/resources/stats') %>">stats and infographics</a>. 
 	<br/>
 	<br/>
 - Other event ideas:
@@ -24,18 +26,18 @@ Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to 
 	- Have a group of students teach the principal or a group of teachers how to code
 	- If your school already teaches computer science, have students demo projects
 
-## 3) Share what you did
-- After your event, share testimonies and post pictures of your event on Facebook and Twitter. 
-- Use the hashtag #HourofCode so Code.org can see and promote your celebration.  
+## 3) Share how it went
+- Share pictures of your event on Facebook and Twitter. 
+- Use the hashtag **#HourofCode**
 
 ## Example Event Plan 
 **Event:** School-wide Computer Science Education Week kick-off assembly
 
 **Date:** Dec 8th (start of Computer Science Education Week)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour in length.
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Location:** School’s assembly hall (e.g. theatre, gym, cafeteria).
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)
 <br/>
 <br/>
 
@@ -54,7 +56,7 @@ Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to 
       <td>Open with one of our <a href="http://hourofcode.com/us/resources#videos">inspirational videos</a></td>
     </tr>
       <td>10:05-11:15 am</td>
-      <td>Principal gives an intro overviewing the importance of computer science. Discuss these <a href="/resources/stats">statistics</a>. Show these <a href="/resources/stats">infographics</a>.</td> 
+      <td>Principal gives an intro overviewing the importance of computer science. Use these <a href="/resources/stats">stats and infographics</a>. </td> 
     </tr>
       <td>11:15-11:17 am</td>
       <td>Open with one of our <a href="http://hourofcode.com/us/resources#videos">inspirational videos</a></td>

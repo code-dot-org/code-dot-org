@@ -3,18 +3,16 @@
     -total_count = DB[:forms].where(kind:'HocSignup2014').count
     -if @company
       %h2= "<a href='#{hoc_uri('/events')}'>#{hoc_s(:map_header).gsub('#', format_integer_with_commas(total_count))}</a>" + ", " + "#{hoc_s(:map_header_company).gsub('#', format_integer_with_commas(company_count(@company))).gsub('company', hoc_s("company_" + @company))}"
-      %div{:class=>"col-sm-6 button-container centered"}
+      %a{:href=>hoc_uri("/events")}
+        %button{:class=>"signup-button", :style=>"margin-right: 116px; margin-bottom: 25px"}
+          See all events
+    -else
+      %div{:class=>"row"}
+        %a{href: hoc_uri("/events")}
+          %h2= hoc_s(:map_header).gsub('#', format_integer_with_commas(total_count))
         %a{:href=>hoc_uri("/events")}
           %button{:class=>"signup-button", :style=>"margin-right: 116px; margin-bottom: 25px"}
             See all events
-    -else
-      %div{:class=>"row"}
-        %a{href: hoc_uri("/events"), :class=>"col-sm-6"}
-          %h2= hoc_s(:map_header).gsub('#', format_integer_with_commas(total_count))
-        %div{:class=>"col-sm-6 button-container centered"}
-          %a{:href=>hoc_uri("/events")}
-            %button{:class=>"signup-button", :style=>"margin-right: 116px; margin-bottom: 25px"}
-              See all events
 .row
   .col-xs-10.col-sm-12
     #gmap{style: 'width: 100%; max-width: 1024px;'}
@@ -46,7 +44,7 @@
 
     var layer = new google.maps.FusionTablesLayer({
       query: {
-        from: '11ZkoDt2oifYs_OIi2HiZc6MjrMFMZmgD9YVFvay8'
+        from: '1_j3ovhuqhh_vRAiO91gOx25j7Q4I9__9hNdZLq_C'
       },
       styles: [{
         markerOptions: {
@@ -58,7 +56,11 @@
 
     google.maps.event.addListener(layer, 'click', function(event) {
       enableDrag();
-      event.infoWindowHtml = event.row['organization_name'].value + '<br>';
+      event.infoWindowHtml = event.row['organization_name'].value;
+      if (event.row['city'].value.length > 0) {
+        event.infoWindowHtml += ' (' + event.row['city'].value + ')';
+      }
+      event.infoWindowHtml += '<br>';
     });
     google.maps.event.addListener(gmap, 'zoom_changed', function(event) {
       enableDrag();

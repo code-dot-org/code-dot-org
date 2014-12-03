@@ -21,9 +21,6 @@
   hello: Hej världen
   welcome_back: Välkommen tillbaka, %{name}
   add_teacher_form:
-    code_or_email:
-      label: 'Lägga till en lärare med kod eller e-postadress:'
-      placeholder: Kod (ABCDEF) eller e-post (lärare@skola.se)
     code:
       label: 'Lägg till en lärare med att ange lärarens kod:'
       placeholder: Kod (ABCDEF)
@@ -81,10 +78,10 @@
     address_placeholder: adress, stad, län, postnummer
     gender: Kön (valfritt)
     birthday: Födelsedag (valfritt)
-    age: Ålder (frivilligt)
+    age: "Ålder (frivilligt)"
     user_type: Are you a student or teacher?
     submit: Registrera dig
-    teacher: Är du en lärare?
+    teacher: "Är du en lärare?"
     valid_username: Tillgänglig!
     invalid_username: Användarnamnet måste innehålla minst fem tecken
     taken_username: Användarnamnet är upptaget
@@ -121,10 +118,10 @@
       email: E-postadress
       submit: Skicka "byta lösenord"-instruktioner till mig
     change_form:
-      title: Ändra ditt lösenord
+      title: "Ändra ditt lösenord"
       new_password: Nytt lösenord
       confirm_password: Bekräfta nytt lösenord
-      submit: Ändra mitt lösenord
+      submit: "Ändra mitt lösenord"
   welcome_email:
     subject: Gå med i min klass (på Code.org)
     body: |
@@ -137,12 +134,12 @@
       %{name}
   follower:
     invite_sent: Inbjuda skickades
-    added_teacher: '%{name} är tillagd som din lärare'
+    added_teacher: "%{name} är tillagd som din lärare"
     registered: Du har registrerat dig för %{section_name}.
     error:
       signed_in: Vänligen logga ut innan du fortsätter
       username_not_found: Användarnamnet %{username} hittades inte
-      username_in_use: '%{username} används redan, vänligen välj ett annat'
+      username_in_use: "%{username} används redan, vänligen välj ett annat"
       no_teacher: Kunde inte hitta någon inloggad med '%{teacher_email_or_code}'.
         Vänligen be dem att registrera sig här och försök sedan lägga till dem igen
       section_not_found: Could not find a section with code '%{section_code}'.
@@ -181,13 +178,13 @@
       title: Vänligen bekräfta
       'no': Nej
       'yes': Ja
-      msg: Är du säker på att du vill begära %{prize_name} priset?
+      msg: "Är du säker på att du vill begära %{prize_name} priset?"
       msg_student: 'OBS: Du kan bara välja en sorts pris.'
       msg_publicschool: Var vänlig och bekräfta att du är en amerikansk ''Public School''
         lärare.
       msg_visit_website: Visit website
     providers:
-      apple_itunes: $10 iTunes Gift Card
+      apple_itunes: "$10 iTunes Gift Card"
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB Dropbox utrymme
@@ -196,7 +193,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: $10 Skype credit
+      skype: "$10 Skype credit"
     msg:
       choose: 'Välj ett pris:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -236,10 +233,10 @@
     update: Uppdatera
     destroy: Förstöra
     back: Tillbaka
-    confirm: Är du säker?
-    created: '%{model} har skapats.'
-    updated: '%{model} har uppdaterats.'
-    destroyed: '%{model} was successfully deleted.'
+    confirm: "Är du säker?"
+    created: "%{model} har skapats."
+    updated: "%{model} har uppdaterats."
+    destroyed: "%{model} was successfully deleted."
     access_denied: You do not have access to this %{model}.
   nav:
     header:
@@ -266,15 +263,15 @@
       puzzle_map: Nivåer
       prizes: Samla in alla %{total_trophies} troféer och vinn priser!
       prize_earned: Alla %{total_trophies} troféerna är insamlade. Pris vunnet!
-      prize_us_only: (Endast US-studenter)
+      prize_us_only: "(Endast US-studenter)"
       prizes_link: Mer information
   teacher:
     title:
       one: 'Din lärare:'
       other: 'Dina lärare:'
-    remove: (ta bort lärare)
+    remove: "(ta bort lärare)"
     confirm:
-      remove: Är du säker du vill ta bort denna lärare?
+      remove: "Är du säker du vill ta bort denna lärare?"
     tools: Lärar-verktyg
     followers:
       section: 'Grupp:'
@@ -329,17 +326,18 @@
     rollup: Framstegsmeny
     activity: Senaste klasshändelserna
     user_not_found: The teacher or student could not be found
-    cant_remove_student_no_email: '%{student_name} cannot be removed as your student
-      because %{student_name} has not registered an e-mail address'
-    cant_remove_teacher_no_email: '%{teacher_name} cannot be removed as your teacher
-      because you have not registered an e-mail address'
-    student_teacher_disassociated: '%{teacher_name} has been removed as a teacher
-      for %{student_name}'
+    cant_remove_student_no_email: "%{student_name} cannot be removed as your student
+      because %{student_name} has not registered an e-mail address"
+    cant_remove_teacher_no_email: "%{teacher_name} cannot be removed as your teacher
+      because you have not registered an e-mail address"
+    student_teacher_disassociated: "%{teacher_name} has been removed as a teacher
+      for %{student_name}"
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_resend_confirm: Resend confirmation instructions
-    new_password_hint: (lämna tomt om du inte vill ändra det)
-    current_password_hint: (vi behöver ditt nuvarande lösenord att bekräfta dina ändringar)
+    new_password_hint: "(lämna tomt om du inte vill ändra det)"
+    current_password_hint: "(vi behöver ditt nuvarande lösenord att bekräfta dina
+      ändringar)"
     cancel:
       title: Ta bort mitt konto
       hint: Missnöjd?
@@ -389,12 +387,10 @@
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
-    heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
-    heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
-    heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
-    gallery:
-      your_turtle: My Art
-      your_studio: My Apps
+    heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
+    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
+    heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    your_gallery: Gallery
   gender:
     male: Man
     female: Kvinna
@@ -407,7 +403,7 @@
       href="http://www.microsoft.com"> Microsoft</a>, <a href="http://www.facebook.com">
       Facebook</a> och <a href="http://www.twitter.com"> Twitter</a> har hjälpt till
       att skapa dessa kurser.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 <a href="http://www.rovio.com">Rovio
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 <a href="http://www.rovio.com">Rovio
       Entertainment Ltd</a>. All Rights Reserved.<br/> Plants vs. Zombies&trade; &
       &copy; 2013 <a href="http://www.ea.com">Electronic Arts Inc.</a>. All Rights
       Reserved.
@@ -451,14 +447,18 @@
   slow_loading: Det här tar längre tid  än vanligt...
   try_reloading: Försök ladda sidan igen
   next_stage: Klar! Fortsätt till nästa nivå
-  download_pdf: Öppen kursplan
+  download_pdf: "Öppen kursplan"
+  lesson_plan: Lesson Plan
   view_lesson_plan: View Lesson Plan
   pdf_download: Ladda ner PDF
+  download_coming_soon: Downloadable activity coming soon.
+  video_coming_soon: Video Coming Soon!
   share_code:
     title: Klicka "Kör program" för att se vad mitt program gör
     bounce_og_title: Check out my Bounce Game
     flappy_og_title: Check out my Flappy Game
     studio_og_title: Check out my story
+    check_out_what_i_made: Check out what I made
     og_description: I wrote the code myself with Code.org
     phone_number_not_allowed: It looks like there is a phone number in it. Try changing
       the text.
@@ -489,6 +489,12 @@
     20hour:
       title: Grundkurs
       body: Prova vår 20-timmars grundkurs i programmering.
+    hoc2014:
+      try_new_tutorial: Try our new Hour of Code tutorial in beta
+      try_frozen: Artist with Anna and Elsa, from Frozen
+    gallery:
+      title: Gallery
+      body: View a gallery of app and artist images created by our users
   gallery:
     students_drew_these_with_code: Elever ritade dessa med kod!
     students_made_these_with_code: Students made these with code!
@@ -501,13 +507,18 @@
     want_to_make_your_own: Vill du göra din egen?
     more: Mer &rarr;
     caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: '%{time_ago} ago'
+    caption_time_ago: "%{time_ago} ago"
+    header: Gallery
+    header_playlab: Play Lab
+    header_artist: Artist
   landing:
     prerelease: This page is still under development.
+    prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
+      is subject to revision as feedback is received and improvements are made.
     feedback: Give Feedback
     report_bug: Report Bug
     support: Få hjälp
-    support_url: //support.code.org
+    support_url: "//support.code.org"
   multi:
     wrong_title: Incorrect answer
     wrong_body: The answer you've entered is not correct.  Please try again!

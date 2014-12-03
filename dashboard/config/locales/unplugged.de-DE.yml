@@ -172,6 +172,7 @@
         title: Sicher unterwegs
         desc: Das Internet ist ein machtvolles Werkzeug, bietet aber einige gefährliche
           Orte. Die Lehrperson zeigt, wie man sicher ist während dem Surfen.
+        video: C1_sicher_wohin_gehen
       GraphPaperProgramming:
         title: Programmieren auf Millimeterpapier
         desc: Die Schüler/-innen notieren einen Algorithmus(ein Satz von Anweisungen),
@@ -196,6 +197,7 @@
         desc: Die Lehrer bringen den Schülern die Idee nahe, dass man einen digitalen
           Fußabdruck oder eine Fährte hinterläßt, wenn man Informationen über sich
           selbst ins Internet stellt, was Konsequenzen hat.
+        video: C2_digitaler_Fußabdruck
       ComputationalThinking:
         title: Computerorientiertes Denken
         desc: Die Schüler benutzen die Schritte computerorentierten Denkens (Zerlegung,
@@ -225,11 +227,68 @@
         video: C3_internet
       Crowdsourcing:
         title: Crowdsourcing
-        desc: Wir lernen Crowdsourcing kennen, eine Problemlösungstechnik oft gebraucht
-          in der Informatik, um eine Aufgabe als Klasse effizienter zu lösen als alleine.
+        desc: Schüler nutzen Crowdsourcing, eine Problemlösetechnik häufig in Informatik
+          und Technik angewendet wird, um eine Aufgabe als Klasse zusammen effizienter
+          als Alleine zu lösen.
         video: C3_crowdsourcing
       DigitalCitizenship:
         title: Digitalen Staatsbürgerschaft
         desc: Schüler entdecken den Unterschied zwischen privaten und persönlichen
           Informationen und lernen zu verstehen was sicher und was unsicher ist online
           zu teilen.
+      TangramAlgorithms:
+        title: Tangram-Algorithmen
+        desc: Diese LEktion zeigt uns etwas wichtiges über Algorithmen. Wenn du einen
+          ALgorithmus einfach hälst sind da viele wege ihn zu benutzen. Wenn du aber
+          willst das jeder am Ende das Gleiche hat muss dein Algorithmus viele Details
+          haben.
+      EnvelopeVariables:
+        title: Umschlag-Variablen
+        desc: Variablen lassen viel Freiheit in der Informatik.  Diese Lektion hilft
+          zu erklären, was Variablen sind und wie wir sie in vielfältiger Weise nutzen
+          können. Verwenden Sie diese Aufgabe vor (oder in Verbindung mit) der Lektion
+          über Abstraktion, um die Idee zu hause entwickeln zulassen.
+      MadGlibs:
+        title: Sauer Glibs
+        desc: Abstraktion ist eine der wichtigsten Fähigkeiten für einen Informatiker
+          zum verstehen.  Diese Aufgabe lässt ihre Schüler in geschichten nachUnterschieden
+          suchen, um diese abziehen können. Die reduzierte GEschichte wird Vorlage
+          für lustige und verrückte neue Geschichten.
+      ForLoopFun:
+        title: Für Schleifen Spaß
+        desc: Wir wissen das Schleifen es uns erlauben Dinge wieder und wieder zu
+          tun, aber jetzt werden wir lernen wie wir Schleifen benutzen mit extra struktur
+          integriert.
+      SongwritingWithParameters:
+        title: Komponieren mit Parametern
+        desc: 'Eines der prächtigsten Bauten in der Computerwelt Wissenschaft ist
+          die Funktion.  Funktionen (auch Verfahren genannt) sind Mini-Programme,
+          die Sie innerhalb Ihrer größeren Programms immer und immer wieder verwenden
+          können. Diese Lektion hilft Schülern intuitiv zu verstehen, warum eine solche
+          hilfreiche Praxis ist Stücke von Code in Funktionen zu kombinieren.  '
+      BinaryImages:
+        title: Binärbilder
+        desc: Obwohl viele Leute über Binary als streng Nullen und Einsen denken,
+          Lehrveranstaltungen unserer früheren Schülern, dass Informationen in einer
+          Vielzahl von binären Optionen dargestellt werden kann.  In dieser Lektion
+          findet dieses Konzept noch einen Schritt weiter, wie es veranschaulicht,
+          wie ein Computer noch komplexeren Informationen (z. B. Bilder und Farben)
+          gespeichert werden kann in Binär, sowie.
+      VideoGamesCoordinatePlanes:
+        title: Video Games and Coordinate Planes
+        desc: Video Games and Coordinate Planes lesson description
+      Contracts:
+        title: Contracts
+        desc: Contracts unplugged lesson description
+      DesignRecipe:
+        title: The Design Recipe
+        desc: Design Recipe lesson description
+      Booleans:
+        title: Booleans
+        desc: Booleans lesson description
+      ConditionalsPiecewiseFunctions:
+        title: Conditionals and Piecewise Functions
+        desc: Conditionals and Piecewise Functions lesson description
+      CollisionDetection:
+        title: Collision Detection
+        desc: Collision Detection lesson description

@@ -1,5 +1,7 @@
 {
   "and": "dan",
+  "booleanTrue": "Benar",
+  "booleanFalse": "Salah",
   "blocklyMessage": "Blockly",
   "catActions": "Aksi",
   "catColour": "Warna",
@@ -41,6 +43,7 @@
   "numBlocksNeeded": "Horee! Anda berhasil menyelesaikan teka-teki ke  {puzzleNumber}. (Namun, sebetulnya Anda cukup gunakan hanya {numBlocks, plural, one {1 blok} other {blok #}}.)",
   "numLinesOfCodeWritten": "Anda baru saja menulis {numLines, plural, one {1 baris} other {# baris}} kode!",
   "play": "mainkan",
+  "print": "Print",
   "puzzleTitle": "Teka-teki ke {puzzle_number} dari {stage_total}",
   "repeat": "Ulangi",
   "resetProgram": "Kembali ke awal",
@@ -78,5 +81,6 @@
   "tryHOC": "Cobalah \"Hour of Code\"",
   "signup": "Daftarlah untuk mengikuti kursus introduksi",
   "hintHeader": "Berikut adalah tip:",
-  "genericFeedback": "Lihatlah hasil anda dan cobalah untuk memperbaiki program Anda."
+  "genericFeedback": "Lihatlah hasil anda dan cobalah untuk memperbaiki program Anda.",
+  "defaultTwitterText": "Check out what I made"
 }

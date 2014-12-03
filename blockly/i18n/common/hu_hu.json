@@ -1,5 +1,7 @@
 {
   "and": "és",
+  "booleanTrue": "igaz",
+  "booleanFalse": "hamis",
   "blocklyMessage": "Blockly",
   "catActions": "Műveletek",
   "catColour": "Szín",
@@ -41,6 +43,7 @@
   "numBlocksNeeded": "Gratulálok! Megoldottad a {puzzleNumber}. feladványt. (Habár megoldható csupán {numBlocks, plural, one {1 blokk} other {# blokk}} használatával.)",
   "numLinesOfCodeWritten": "Éppen most írtál újabb {numLines, plural, one {1 sor} other {# sor}} kódot!",
   "play": "lejátszás",
+  "print": "Print",
   "puzzleTitle": "{puzzle_number}/{stage_total}. feladvány",
   "repeat": "ismételd",
   "resetProgram": "Visszaállítás",
@@ -48,7 +51,7 @@
   "runTooltip": "A munkalapon összeépített program futtatása.",
   "score": "pontszám",
   "showCodeHeader": "Kód megjelenítése",
-  "showBlocksHeader": "Show Blocks",
+  "showBlocksHeader": "Blokkok megjelenítése",
   "showGeneratedCode": "Kód megjelenítése",
   "subtitle": "vizuális programozási felület",
   "textVariable": "szöveg",
@@ -67,7 +70,7 @@
   "typeFuncs": "Elérhető függvények:%1",
   "typeHint": "Vedd figyelembe, hogy a zárójelek és a pontosvesszők is szükségesek.",
   "workspaceHeader": "Építsd össze a blokkokat itt: ",
-  "workspaceHeaderJavaScript": "Type your JavaScript code here",
+  "workspaceHeaderJavaScript": "Ide írd a JavaScript kódodat",
   "infinity": "Végtelen",
   "rotateText": "Fordítsd el a készüléket.",
   "orientationLock": "Kapcsold ki a tájolási zárat az eszközbeállításokban.",
@@ -78,5 +81,6 @@
   "tryHOC": "Próbáld ki a kódolás óráját",
   "signup": "Regisztrálj a bevezető képzésre",
   "hintHeader": "Egy tipp:",
-  "genericFeedback": "Nem sikerült célba érnem. Kérlek javítsd a hibát."
+  "genericFeedback": "Nem sikerült célba érnem. Kérlek javítsd a hibát.",
+  "defaultTwitterText": "Check out what I made"
 }

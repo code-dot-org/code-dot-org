@@ -1,8 +1,8 @@
 {
-  "compute":"compute",
-  "equivalentExpression":"Try reordering your arguments to get exactly the same expression.",
-  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"compute\" block?",
-  "goal":"Goal:",
-  "reinfFeedbackMsg":"You can press the \"Try again\" button to edit your expression.",
-  "yourExpression":"Your expression:"
+  "compute":"verwerk",
+  "equivalentExpression":"Probeer je argumenten in een andere volgorde te plaatsen om precies dezelfde expressie te krijgen.",
+  "extraTopBlocks":"Je hebt blokken die niet gekoppeld zijn. Was het je bedoeling om deze aan het \"verwerk\"-blok te koppelen?",
+  "goal":"Doel:",
+  "reinfFeedbackMsg":"Here is your story! Continue working on it, or move on to the next puzzle!",
+  "yourExpression":"Je expressie:"
 }

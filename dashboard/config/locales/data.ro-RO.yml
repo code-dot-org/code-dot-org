@@ -50,6 +50,7 @@
           MazeEC: Etapa 1
           Webapp: Etapa 2
           ArtistEC: Etapa 3
+          StudioEC: Etapa 4
         events:
           desc: Sări (beta)
           Bounce: Etapa 1
@@ -91,7 +92,7 @@
         Farmer3: Fermierul 3
         Unplug10: Internetul
         Artist5: Artistul 5
-        Unplug11: Încheiere
+        Unplug11: "Încheiere"
         MazeEC: Labirintul
         Bounce: Săritură
         Flappy: Pasărea Flappy
@@ -100,6 +101,8 @@
         Wordsearch: Cautare de cuvinte
         Webapp: Webapp
         ArtistEC: Artistul
+        TextMatch: Text Match
+        StudioEC: Laborator de Joacă
     trophy:
       name:
         Bronze: Bronz
@@ -129,7 +132,7 @@
           s-ar putea să mă enervez!
         maze_2_5: Există o modalitate prin care pot ajunge la porcușorul nătâng folosind
           doar 2 blocuri. Poți să-ți dai seama cum?
-        maze_2_6: Încearcă să mă duci la intrusul verde folosind doar trei blocuri.
+        maze_2_6: "Încearcă să mă duci la intrusul verde folosind doar trei blocuri."
         maze_2_7: Ajută-mă să alung acest purceluş rău folosind cel mai mic număr
           de blocuri. Încearcă să folosești mai mult de un bloc "repetă ori".
         maze_2_8: 'Când un bloc este gri, inseamnă că nu poți să-l ștergi. Rezolvă
@@ -172,12 +175,12 @@
           întorci făcând clic pe numărul în blocul de întoarcere.'
         turtle_1_5: Acum, pentru antrenament , desenează un triunghi, pe urmă un pătrat
           pentru a obține un plic.
-        turtle_1_6: 'Îți poți da seama cum să desenezi acest triunghi și acest pătrat?
+        turtle_1_6: "Îți poți da seama cum să desenezi acest triunghi și acest pătrat?
           Indiciu: Desenează mai întâi triunghiul, apoi dă-ți seama cât de mult să
-          întorci înainte de a desena pătratul.'
-        turtle_1_7: În regulă, hai să facem lucrurile un pic mai complicate - vezi
+          întorci înainte de a desena pătratul."
+        turtle_1_7: "În regulă, hai să facem lucrurile un pic mai complicate - vezi
           dacă poți desena acești ochelari verzi. Pătratele au 100 de pixeli pe fiecare
-          parte, și sunt la 50 de pixeli între ele. Nu uita să desenezi cu verde!
+          parte, și sunt la 50 de pixeli între ele. Nu uita să desenezi cu verde!"
         turtle_1_8: Ok, încearcă să îți dai seama ce se întamplă dacă rulezi acest
           cod (sau apasă "Rulează" pentru a-l încerca). Apoi repetă-l de câte ori
           e nevoie ca să completezi desenul. Culorile vor fi diferite de fiecare dată.
@@ -279,10 +282,10 @@
         turtle_2_10: Aici ai un cod ca să încerci să experimentezi cu diferite spirale.
           Ce se întamplă dacă schimbi cu cât se face întoarcerea? Sau dacă setezi
           o culoare la întâmplare în buclă? Desenează orice îți place.
-        maze_karel_2_1: 'Încearcă să folosești blocurile ca să mă ajuţi să elimin
+        maze_karel_2_1: "Încearcă să folosești blocurile ca să mă ajuţi să elimin
           toate grămezile şi să umplu toate gropile din pământ. Încearcă să folosești
           bucle în loc să utilizezi prea multe blocuri. Sugestie: poți amplasa o buclă
-          în interiorul altei bucle.'
+          în interiorul altei bucle."
         maze_karel_2_2: Ne-am definit propriul nostru bloc numit "umple 5", care este
           acum în categoria Funcţiilor. Foloseşte-l ca să mă ajuţi să umplu această
           groapă.
@@ -352,24 +355,24 @@
           să-mi fac câmpul plat?
         maze_karel_debug_function_3: 'Editează acest program, astfel incât să elimin
           toate grămezile de pe domeniul meu. '
-        turtle_5_1: Încearcă să rulezi acest program, şi fă modificări pentru a vedea
+        turtle_5_1: "Încearcă să rulezi acest program, şi fă modificări pentru a vedea
           ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi
-          înlocuiește-l cu ceva total diferit)
-        turtle_5_2: Încearcă să rulezi acest program, şi fă modificări pentru a vedea
+          înlocuiește-l cu ceva total diferit)"
+        turtle_5_2: "Încearcă să rulezi acest program, şi fă modificări pentru a vedea
           ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi
-          înlocuiește-l cu ceva total diferit)
-        turtle_5_3: Încearcă să execuți acest program, şi fă modificări pentru a vedea
+          înlocuiește-l cu ceva total diferit)"
+        turtle_5_3: "Încearcă să execuți acest program, şi fă modificări pentru a
+          vedea ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l
+          şi înlocuiește-l cu ceva total diferit)"
+        turtle_5_4: "Încearcă să rulezi acest program, şi fă modificări pentru a vedea
           ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi
-          înlocuiește-l cu ceva total diferit)
-        turtle_5_4: Încearcă să rulezi acest program, şi fă modificări pentru a vedea
+          înlocuiește-l cu ceva total diferit)"
+        turtle_5_5: "Încearcă să rulezi acest program, şi fă modificări pentru a vedea
           ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi
-          înlocuiește-l cu ceva total diferit)
-        turtle_5_5: Încearcă să rulezi acest program, şi fă modificări pentru a vedea
+          înlocuiește-l cu ceva total diferit)"
+        turtle_5_6: "Încearcă să rulezi acest program, şi fă modificări pentru a vedea
           ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi
-          înlocuiește-l cu ceva total diferit)
-        turtle_5_6: Încearcă să rulezi acest program, şi fă modificări pentru a vedea
-          ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi
-          înlocuiește-l cu ceva total diferit)
+          înlocuiește-l cu ceva total diferit)"
         maze_3_1: Am nevoie să ajung la acel porcușor! Tastează două chemări de mutare();
           să-mi recuperez ouălele.
         maze_3_2: Scrie-mi un program, ca să reușesc să ajung până la porcușor.
@@ -561,6 +564,11 @@
         webapp_ec_simple: Create your web app by using createHtmlBlock.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
           it in the new "penColour" block.'
+        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
+          a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
+          Have fun!'
+        studio_ec_sandbox: Create your own game. When you're done, click Finish to
+          let friends try your game on their phones.
     video:
       name:
         maze_intro: Intro Labirint
@@ -575,8 +583,7 @@
         loop_while: Bloc În timp ce
         loop_for: Bloc Contor
         parameters: Funcții cu Parametrii
-        hoc_wrapup: Încheierea Orei de Cod
-        20_wrapup: 'Încheirea celor 20 de ore '
+        hoc_wrapup: "Încheierea Orei de Cod"
         Unplug1: What is CS?
         Unplug2: Gândire de Calcul
         Unplug3: Programare pe Hârtie Milimetrică
@@ -587,11 +594,11 @@
         Unplug8: Abstractizare
         Unplug9: Programare de releu
         Unplug10: Internet
-        Unplug11: Încheiere
+        Unplug11: "Încheiere"
         C1_happy_maps_unplugged: Hărţi Fericite
         C1_moveitmoveit_unplugged: Move It, Move It
         C1_bigevent_unplugged: Marele eveniment
-        C1_getting_loop: Transformând în Buclă
+        C1_getting_loopy: Transformând în Buclă
         C1_pair_programming: Pair Programming
         C1_maze_intro_sequencing: Maze Sequencing Intro
         C1_maze_debugging: Maze Debugging
@@ -603,19 +610,22 @@
         C1_maze_loops: Bucle de Labirint
         C1_playlab_storytelling: Play Lab - Create a Story
         C1_planting_seed: Planting a Seed
-        C1_building_foundating: Construirea unei Fundaţii
+        C1_building_foundation: Construirea unei Fundaţii
         C2_maze_intro: Intro Labirint
         C2_artist_intro: 'Intro Artist '
         C2_zuck_repeat_loop: Bucle de Labirint
         C2_artist_loops: Bucle de Artist
+        C2_artist_debugging: Depanare Artist
+        C2_bee_loops: Bucle de Ortografie
+        C2_bee_debugging: Depanarea Ortografiei
         C2_bee_conditionals: Condiţii de Ortografie
         C2_playlab_createstory: Play Lab - Create a Story
         C2_graph_paper: Programare pe Hârtie Milimetrică
         C2_conditionals_with_cards: Condiţionale
         C2_binary_bracelets: Brăţări Binare
-        C2_replay_programming: Programare de releu
+        C2_relay_programming: Programare de releu
         C2_paper_airplanes: Paper Airplanes
-        C3_maze_intro: Intro Labirint
+        C3_maze_level_4: Bucle de Labirint
         C3_artist_intro: 'Intro Artist '
         C3_artist_functions: Funcţii de Artist
         C3_bee_functions: Funcţii de Ortografie
@@ -633,6 +643,9 @@
         C3_crowdsourcing: Obţinând Informaţii/Critici
         C3_functional_suncatchers: Prinzători ai Soarelui Funcţionali
         C3_songwriting_with_parameters: Songwriting With Parameters
+        Frozen_intro: Hour of Code Intro
+        Frozen_loops: Introduction to Loops
+        Frozen_functions: Introduction to Functions
     callout:
       text:
         drag_blocks: Trage un bloc "mutare" şi fixează-l sub alt bloc
@@ -650,3 +663,34 @@
           povestea începe" pentru a seta un actor pentru această poveste
         studio_say_text: Tastează ceea ce dorești să spună actorul în aceste citate
         jigsaw_click: Faceţi clic pe acest bloc!
+        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
+          Run" block to make Elsa move forward
+        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
+          determines how much Elsa turns
+        replace_questions: Use the drop-down to replace "???" with a number
+        replace_questions_degree: Use the drop-down to replace "???" with the correct
+          degree to turn
+        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
+          workspace
+        snowflake_dropdown: Use this drop-down to create different snowflakes!
+        degrees_per_side: Divide 360 by the number of sides to get the size of each
+          angle in degrees.
+        set_sides: Use this block to set "sides" to the number needed to complete
+          the puzzle.
+        set_length: Use this block to set "length" to the correct value.
+        which_equation: Which equation makes each side shorter for shapes with more
+          sides?  Try each equation!
+        get_nectar: Use the new "get nectar" block.
+        actions_category: The tool box got a new look! The "Actions" blocks are in
+          here now.
+        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
+        edit_function: Use this button to edit the function.
+        create_function: Click here to open the "Functions" flyout, then click the
+          "Create a Function" button.
+        house_hint: It's ok if the picture doesn't look like a house yet. We will
+          fix it in the next puzzle.
+        edit_draw_square: Use this button to edit the function and add the loop.
+        edit_get_nectar: Use this button to edit the function and change the direction
+          the Bee will turn to get the nectar.
+        logic_category: Open the "Logic" flyout to find the "if/else" block.
+        length_parameter: Can you update this function so it uses the "length" parameter?

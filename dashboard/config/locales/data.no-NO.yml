@@ -50,6 +50,7 @@
           MazeEC: Trinn 1
           Webapp: Trinn 2
           ArtistEC: Trinn 3
+          StudioEC: Trinn 4
         events:
           desc: Sprett (beta)
           Bounce: Trinn 1
@@ -100,6 +101,8 @@
         Wordsearch: Tekstsøk
         Webapp: Nettapp
         ArtistEC: Kunstneren
+        TextMatch: Teksttreff
+        StudioEC: Play Lab
     trophy:
       name:
         Bronze: Bronse
@@ -496,8 +499,8 @@
           kommer borti blekkspruten, og deretter flytte ham med pilene til du skårer?
         studio_c3_game_6: Kan du legge til blokker for å forandre bakgrunnen og hastigheten
           til pingvinen, og deretter bevege den med pil-tastene til du score?
-        studio_c3_game_7: Skap dit eget spill. Når du er ferdig, trykk Ferdig for
-          å la vennene dine prøve din histore på deres telefoner.
+        studio_c3_game_7: Lag ditt eget spill. Når du er ferdig, trykk Fullør for
+          å la vennene dine prøve spillet på sine mobiler.
         studio_playlab_1: Kan du få hunden til å si «hallo verden»?
         studio_playlab_2: Kan du få hunden til å si noe og så få katten til å si noe
           etterpå?
@@ -516,10 +519,10 @@
           kommer borti blekkspruten, og deretter flytte ham med pilene til du skårer?
         studio_playlab_9: Kan du legge til blokker for å forandre bakgrunnen og hastigheten
           til pingvinen, og deretter bevege den med pil-tastene til du score?
-        studio_playlab_10: Skap dit eget spill. Når du er ferdig, trykk Ferdig for
-          å la vennene dine prøve din histore på deres telefoner.
-        studio_full_sandbox: Skap dit eget spill. Når du er ferdig, trykk Ferdig for
-          å la vennene dine prøve din histore på deres telefoner.
+        studio_playlab_10: Lag ditt eget spill. Når du er ferdig, trykk Fullør for
+          å la vennene dine prøve spillet på sine mobiler.
+        studio_full_sandbox: Lag ditt eget spill. Når du er ferdig, trykk Fullør for
+          å la vennene dine prøve spillet på sine mobiler.
         studio_k1_1: Kan du få denne hunden til å si «hallo verden»?
         studio_k1_2: Kan du få hunden til å si noe og etterpå få katten til å si noe?
         studio_k1_3: Kan du skrive et program for å få denne hunden flytte seg til
@@ -540,9 +543,14 @@
         maze_wordsearch_k_16: Flytt meg en vei, så en annen for å stave ordet UNDER
         maze_wordsearch_k_20: Dette er en test! Flytt meg en vei, så en annen for
           å stave ordet HISTORIE
-        webapp_ec_simple: Create your web app by using createHtmlBlock.
-        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
-          it in the new "penColour" block.'
+        webapp_ec_simple: Opprett din nettapp ved å bruke createHtmlBlock.
+        turtle_ec_1_2: 'Nå, tegn et kvadrat. MERK: bruk din favorittfarge ved å velge
+          den i den nye «pennFarge» blokken.'
+        turtle_ec_1_10: 'Du klarte det! Nå, tegn akkurat det du vil. Noen morsome
+          ideer: En strekmann, et snøflak eller en spiral. Prøv også den nye «pennStørrelse»
+          blokken. Ha det gøy!'
+        studio_ec_sandbox: Lag ditt eget spill. Når du er ferdig, trykk Fullør for
+          å la vennene dine prøve spillet på sine mobiler.
     video:
       name:
         maze_intro: Labyrint intro
@@ -558,7 +566,6 @@
         loop_for: Gjenta med Teller-blokk
         parameters: Funksjoner med parametre
         hoc_wrapup: Slutt på Kodetimen
-        20_wrapup: Slutt etter 20 timer
         Unplug1: Hva er CS?
         Unplug2: Programmeringstenkning
         Unplug3: Millimeterpapirprogrammering
@@ -573,7 +580,7 @@
         C1_happy_maps_unplugged: Glad Kart
         C1_moveitmoveit_unplugged: Flytt den, flytt den
         C1_bigevent_unplugged: Den store begivenheten
-        C1_getting_loop: Bli Løkkete
+        C1_getting_loopy: Getting Loopy
         C1_pair_programming: Par Programmering
         C1_maze_intro_sequencing: Labyrint sekvensering Intro
         C1_maze_debugging: Labyrint feilsøking
@@ -585,19 +592,22 @@
         C1_maze_loops: Labyrint løkker
         C1_playlab_storytelling: Spill Lab - lage en historie
         C1_planting_seed: Plante et frø
-        C1_building_foundating: Bygg ett grunnlag
+        C1_building_foundation: Bygg ett grunnlag
         C2_maze_intro: Labyrint intro
         C2_artist_intro: Kunstner intro
         C2_zuck_repeat_loop: Labyrint løkker
         C2_artist_loops: Kunstner løkker
+        C2_artist_debugging: Artist Debugging
+        C2_bee_loops: Bie løkker
+        C2_bee_debugging: Bie feilsøking
         C2_bee_conditionals: Bie Betingelser
         C2_playlab_createstory: Spill Lab - lage en historie
         C2_graph_paper: Millimeterpapirprogrammering
         C2_conditionals_with_cards: Betingelser
         C2_binary_bracelets: Binær armbånd
-        C2_replay_programming: Relé-programmering
+        C2_relay_programming: Relé-programmering
         C2_paper_airplanes: Papir fly
-        C3_maze_intro: Labyrint intro
+        C3_maze_level_4: Labyrint løkker
         C3_artist_intro: Kunstner intro
         C3_artist_functions: Kunstner funksjoner
         C3_bee_functions: Bie funksjoner
@@ -615,6 +625,9 @@
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Fungerende solfangere
         C3_songwriting_with_parameters: Låtskriving med parametere
+        Frozen_intro: Kodetimen Intro
+        Frozen_loops: Introduksjon til løkker
+        Frozen_functions: Introduksjon til funksjoner
     callout:
       text:
         drag_blocks: Dra en "flytt" blokk og fest den under den andre blokken
@@ -630,3 +643,35 @@
           for å aktivere skuespilleren for denne historien
         studio_say_text: Skriv inn hva du vil at din skuespiller skal si mellom "-tegnene
         jigsaw_click: Klikk denne blokken!
+        move_elsa_forward: Dra en «Flytt Frammover» blokk og fest den under «Når Kjørt»
+          blokk for å få Elsa til å flytte framover
+        turn_elsa: Bruk «Snu» blokken for å få Elsa til å snu. Tallet i rullegardinlisten
+          bestemmer hvor mye Elsa snur seg
+        replace_questions: Bruk rullegardinlisten for å erstatte «???» med et tall
+        replace_questions_degree: Bruk rullegardinlisten for å erstatte «???» med
+          det korrekte antall grader å snu
+        repeat_blocks: Bruk «Gjenta» blokken og legg den rundt blokkene i arbeidsområdet
+        snowflake_dropdown: Bruk dene rullegardinlisten for å lage forskjellige snøflak!
+        degrees_per_side: Del 360 på antall sider for å få størrelsen på hver vinkel
+          i grader.
+        set_sides: Bruk denne blokken for å angi antall "sider" som er nødvendig for
+          å løse oppgaven .
+        set_length: Bruk denne blokken for å sette "lengde" til den riktige verdien.
+        which_equation: Hvilken likning gjør hver side kortere for figurer med flere
+          sider?  Prøv hver formel!
+        get_nectar: Bruk den nye "få nektar" blokken.
+        actions_category: Verktøykassa fikk et nytt utseende! "Handlinger" blokkene
+          er her nå.
+        draw_square_hint: 'Tips: Bruk firkant løkken som du lagde i den forrige oppgaven.'
+        edit_function: Bruk denne knappen til å redigere funksjonen.
+        create_function: Klikk her for å åpne"Funksjoner" menyen og klikk deretter
+          "Opprette en funksjon" knappen.
+        house_hint: Det er ok hvis bildet ikke ser ut som et hus ennå. Vi skal fikse
+          det i den neste oppgaven.
+        edit_draw_square: Bruk denne knappen for å redigere funksjonen og legge til
+          løkken.
+        edit_get_nectar: Bruk denne knappen til å redigere funksjonen og endre retningen
+          som bien skal snu for å få nektar.
+        logic_category: Åpne "Logikk" menyen for å finne "hvis/ellers" blokken.
+        length_parameter: Kan du oppdatere denne funksjonen slik at den bruker parameteret
+          "lengde"?

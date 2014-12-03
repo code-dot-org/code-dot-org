@@ -1,8 +1,8 @@
 {
-  "compute":"compute",
-  "equivalentExpression":"Try reordering your arguments to get exactly the same expression.",
-  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"compute\" block?",
-  "goal":"Goal:",
-  "reinfFeedbackMsg":"You can press the \"Try again\" button to edit your expression.",
-  "yourExpression":"Your expression:"
+  "compute":"reikna",
+  "equivalentExpression":"Prófaðu að umraða liðunum til að fá nákvæmlega sama dæmi.",
+  "extraTopBlocks":"Það eru ótengdir kubbar. Var meiningin að tengja þá við \"reikna\" kubbinn?",
+  "goal":"Markmið:",
+  "reinfFeedbackMsg":"Hér er sagan þín! Haltu áfram að vinna að henni eða farðu í næstu þraut!",
+  "yourExpression":"Dæmið þitt:"
 }

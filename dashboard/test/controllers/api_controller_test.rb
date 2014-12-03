@@ -67,4 +67,18 @@ class ApiControllerTest < ActionController::TestCase
     assert_select '#welcome'
     assert_select '#student_progress'
   end
+
+  test 'api routing' do
+    assert_routing({method: "get", path: "/api/user_menu"},
+                   {controller: "api", action: "user_menu"})
+
+    assert_routing({method: "get", path: "/api/section_progress/2"},
+                   {controller: "api", action: "section_progress", id: '2'})
+
+    assert_routing({method: "get", path: "/api/student_progress/2/15"},
+                   {controller: "api", action: "student_progress", section_id: '2', id: '15'})
+
+    assert_routing({method: "get", path: "/api/whatevvv"},
+                   {controller: "api", action: "whatevvv"})
+  end
 end

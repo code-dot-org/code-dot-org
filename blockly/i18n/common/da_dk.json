@@ -1,8 +1,10 @@
 {
   "and": "og",
+  "booleanTrue": "sandt",
+  "booleanFalse": "falsk",
   "blocklyMessage": "Blockly",
   "catActions": "Handlinger",
-  "catColour": "Farver",
+  "catColour": "Farve",
   "catLogic": "Logik",
   "catLists": "Lister",
   "catLoops": "Sløjfer",
@@ -41,6 +43,7 @@
   "numBlocksNeeded": "Tillykke! Du fuldførte puslespillet {puzzleNumber}. (Men du kunne have brugt kun {numBlocks, plural, one {1 blok} other {# blokke}}.)",
   "numLinesOfCodeWritten": "Du har lige skrevet {numLines, plural, one {1 linje} other {# linjer}} kode!",
   "play": "afspil",
+  "print": "Print",
   "puzzleTitle": "Puslespil {puzzle_number} af {stage_total}",
   "repeat": "gentag",
   "resetProgram": "Nulstil",
@@ -48,7 +51,7 @@
   "runTooltip": "Kør programmet defineret af blokkene i arbejdsområdet.",
   "score": "score",
   "showCodeHeader": "Vis kode",
-  "showBlocksHeader": "Show Blocks",
+  "showBlocksHeader": "Vis blokke",
   "showGeneratedCode": "Vis kode",
   "subtitle": "et visuelt programmerings miljø",
   "textVariable": "tekst",
@@ -67,7 +70,7 @@
   "typeFuncs": "Tilgængelige funktioner: %1",
   "typeHint": "Bemærk, at parenteser og semikoloner er nødvendige.",
   "workspaceHeader": "Saml dine blokke her: ",
-  "workspaceHeaderJavaScript": "Type your JavaScript code here",
+  "workspaceHeaderJavaScript": "Skriv din JavaScript-kode her",
   "infinity": "Uendelig",
   "rotateText": "Drej din enhed.",
   "orientationLock": "Slå orienterings-lås fra i Enhedsindstillinger.",
@@ -78,5 +81,6 @@
   "tryHOC": "Prøv en time af kodeing",
   "signup": "Tilmeld til Introduktion kursus",
   "hintHeader": "Her er et tip:",
-  "genericFeedback": "Se hvordan du endte, og prøve at rette dit program."
+  "genericFeedback": "Se hvordan du endte, og prøve at rette dit program.",
+  "defaultTwitterText": "Check out what I made"
 }

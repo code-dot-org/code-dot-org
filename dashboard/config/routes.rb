@@ -61,11 +61,13 @@ Dashboard::Application.routes.draw do
   get '/home_insert', to: 'home#home_insert'
   get '/health_check', to: 'home#health_check'
   get '/admin/debug', to: 'home#debug'
+  get '/home/gallery_activites', to: 'home#gallery_activities'
 
   post '/locale', to: 'home#set_locale', as: 'locale'
 
   resources :levels do
     get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
+    get 'embed_blocks/:block_type', to: 'levels#embed_blocks', as: 'embed_blocks'
     post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
     post 'clone', to: 'levels#clone'
   end
@@ -85,6 +87,9 @@ Dashboard::Application.routes.draw do
       get 'solution', to: 'script_levels#solution'
     end
 
+    # /s/xxx/reset
+    get 'reset', to: 'script_levels#show', reset: true
+
     # /s/xxx/puzzle/yyy
     get 'puzzle/:chapter', to: 'script_levels#show', as: 'puzzle', format: false
 
@@ -100,10 +105,8 @@ Dashboard::Application.routes.draw do
   get 'reset_session', to: 'application#reset_session_endpoint'
 
   # duplicate routes are for testing -- ActionController::TestCase calls to_s on all params
-  get '/hoc/reset', to: 'script_levels#show', script_id: Script::HOC_ID, reset:true, as: 'hoc_reset'
-  get '/hoc/reset', to: 'script_levels#show', script_id: Script::HOC_ID.to_s, reset:true
-  get '/hoc/:chapter', to: 'script_levels#show', script_id: Script::HOC_ID, as: 'hoc_chapter', format: false
-  get '/hoc/:chapter', to: 'script_levels#show', script_id: Script::HOC_ID.to_s, format: false
+  get '/hoc/reset', to: 'script_levels#show', script_id: Script::HOC_NAME, reset:true, as: 'hoc_reset'
+  get '/hoc/:chapter', to: 'script_levels#show', script_id: Script::HOC_NAME, as: 'hoc_chapter', format: false
 
   get '/k8intro/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_HOUR_ID, as: 'k8intro_chapter', format: false
   get '/k8intro/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_HOUR_ID.to_s, format: false
@@ -153,11 +156,9 @@ Dashboard::Application.routes.draw do
 
   get '/notes/:key', to: 'notes#index'
 
-  get '/api/user_menu', to: 'api#user_menu', as: 'user_menu'
-  get '/api/user_hero', to: 'api#user_hero', as: 'user_hero'
   get '/api/section_progress/:id', to: 'api#section_progress', as: 'section_progress'
   get '/api/student_progress/:section_id/:id', to: 'api#student_progress', as: 'student_progress'
-  get '/api/courses', to: 'api#courses', as: 'courses'
+  get '/api/:action', controller: 'api'
 
   resources :zendesk_session, only: [:index]
 

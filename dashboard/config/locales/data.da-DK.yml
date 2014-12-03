@@ -50,6 +50,7 @@
           MazeEC: Trin 1
           Webapp: Fase 2
           ArtistEC: Trin 3
+          StudioEC: Trin 4
         events:
           desc: Hoppe (beta)
           Bounce: Trin 1
@@ -67,7 +68,7 @@
           desc: Labyrint (beta)
           MazeStep: Fase trin
         wordsearch:
-          desc: Stave bien (beta)
+          desc: Stavebien (beta)
           WordSearch: Trin 1
     game:
       name:
@@ -98,8 +99,10 @@
         Jigsaw: Puslespil
         MazeStep: Labyrint trin Mode
         Wordsearch: Ordsøgning
-        Webapp: Webapp
+        Webapp: WebApp
         ArtistEC: Kunstneren
+        TextMatch: Tekst Match
+        StudioEC: Spille Lab
     trophy:
       name:
         Bronze: Bronze
@@ -132,9 +135,9 @@
           blokke.
         maze_2_7: Hjælp mig med at fjerne denne slemme gris, ved hjælp af færrest
           mulige blokke. Prøv at bruge mere end én "Gentag" blok.
-        maze_2_8: 'Når en blok er grå, det betyder du ikke kan slette den. Løse dette
-          puslespil, ved hjælp af den "gentag" blok, der gentages 3 gange. Prøv at
-          sætte disse 3 blokke indeni den grå "gentag" blok: flytte, flytte, drej.'
+        maze_2_8: 'Når en blok er grå, betyder det at du ikke kan slette den. Løs
+          denne opgave, ved hjælp af den "gentag"-blok, der gentages 3 gange. Prøv
+          at sætte disse 3 blokke indeni den grå "gentag" blok: flyt, flyt, drej.'
         maze_2_9: OK, prøv den nye "Gentag indtil" blok - den vil blive gentaget indtil
           jeg når den grønne gris.
         maze_2_10: Ok, en sidste gang for øvelsens skyld - kan du løse denne opgave
@@ -160,7 +163,7 @@
         maze_2_19: Kan du nøjes med at tilføje 3 blokke til at hjælpe mig med at løse
           en mere kompleks labyrint? Hvis du gør det rigtigt, kan jeg gå en vilkårlig
           kurvet vej, uanset længde.
-        turtle_1_1: Hej, er jeg en kunstner. Du kan skrive kode der får mig til at
+        turtle_1_1: Hej, jeg er en kunstner. Du kan skrive kode, der får mig til at
           tegne næsten hvad som helst. Brug et par blokke for at få mig til at tegne
           over de grå streger i billedet.
         turtle_1_2: 'Tegn nu en firkant. Bemærk: Brug din foretrukne farve ved at
@@ -188,8 +191,8 @@
           bredde" blok. Hav det sjovt!'
         turtle_4_1: 'Kan du tegne en trekant (med 100 pixels kanter) med kun 3 blokke?
           Tip: Brug en "gentag" blok.'
-        turtle_4_2: Tilføje en "Drej til højre ved 90 grader" blok et sted midt i
-          programmet allerede ud på arbejdsområdet for at trække disse trekanter.
+        turtle_4_2: Tilføj en "drej til højre med 90 grader" blok et sted midt i programmet,
+          som allerede er i arbejdsområdet for at tegne disse trekanter.
         turtle_4_3: OK, her er den kode du skrev for at tegne en enkelt trekant. Kan
           du tilføje en "gentag" og "drej" blok, for at lave en smuk blomst?
         turtle_4_4: 'Her er den samme kode fra den tidligere gåde, men kun drejende
@@ -247,9 +250,9 @@
         turtle_2_2: Velkommen til brug af funktioner, der lader dig definere nye blokke!
           Brug den nye "tegn et kvadrat" blok (som du kan finde i "Funktioner" kategorien)
           til at tegne et lille kvadrat på 50x50 pixels.
-        turtle_2_3: Brug "gentag" blokken (i kategorien "Sløjfer") til at tegne 3
-          kvadrater med størrelse 100 og 120 grader imellem. Og gør det i tre forskellige,
-          tilfældige farver.
+        turtle_2_3: Brug "gentag"-blokken (i kategorien "Sløjfer") til at tegne 3
+          kvadrater med en sidelængde på 100 og roteret 120 grader i forhold til hinanden.
+          Og gør det i tre forskellige, tilfældige farver.
         turtle_2_4: 'Nu skal vi lave noget smart. Ændre koden til at tegne 36 firkanter,
           100 pixel brede og hver 10 grader fra hinanden. Tip: Du kan bruge skyderen
           til at gøre mig hurtigere.'
@@ -324,7 +327,7 @@
         turtle_3_9: Kan du genoprette funktionen "tegne et hus" uden hjælp? Prøv det,
           og derefter tegn en række huse.
         turtle_3_10: Du har lært en masse! Brug det nu til at tegne noget du synes
-          er sjovt. Prøv at tegne en stjerne eller en spiral eller et smart snefnug.
+          er sjovt. Prøv at tegne en stjerne eller en spiral eller et flot snefnug.
         maze_karel_debug_seq_1: Velkommen til fejlfinding! Min kode virker ikke. Kan
           du få øje på problemet og løse det, så jeg kan få min jord flad og klar
           til beplantning?
@@ -334,8 +337,8 @@
           pæn og flad.
         maze_karel_debug_while: Hvordan skal du ændre dette program for at hjælpe
           mig med at udfylde hullet?
-        maze_karel_debug_if: Hjælp! Lav programmet, så mit felt vil være helt fladt.
-        maze_karel_debug_if_else: Fejlfind dette program så jeg kan udfylde hullerne
+        maze_karel_debug_if: Hjælp! Lav programmet, så min jord bliver helt flad.
+        maze_karel_debug_if_else: Fejlfind dette program så jeg kan fylde hullerne
           og fjerne alle bunker.
         maze_karel_debug_function_1: Hvad skal du ændre i dette program for at hjælpe
           mig til at fjerne alle bunkerne?
@@ -502,8 +505,8 @@
           løber ind i blæksprutten, og derefter flytte ham med pilene indtil du scorer?
         studio_c3_game_6: Kan du tilføje blokke til at ændre baggrunden og hastigheden
           af pingvinen, og derefter flytte ham med pilene indtil du scorer?
-        studio_c3_game_7: Opret din egen historie. Når du er færdig, skal du klikke
-          på "Udfør" for at lade dine venner prøve din historie på deres telefoner.
+        studio_c3_game_7: Oprette dit eget spil. Når du er færdig, skal du klikke
+          på Udfør for at lade venner prøve dit spil på deres mobiler.
         studio_playlab_1: Kan du få denne hund sige "Hej verden!"?
         studio_playlab_2: Kan du få hunden til at sige noget, og derefter få katten
           sige noget bagefter?
@@ -522,10 +525,10 @@
           løber ind i blæksprutten, og derefter flytte ham med pilene indtil du scorer?
         studio_playlab_9: Kan du tilføje blokke til at ændre baggrunden og hastigheden
           af pingvinen, og derefter flytte ham med pilene indtil du scorer?
-        studio_playlab_10: Opret din egen historie. Når du er færdig, skal du klikke
-          på "Udfør" for at lade dine venner prøve din historie på deres telefoner.
-        studio_full_sandbox: Opret din egen historie. Når du er færdig, skal du klikke
-          på "Udfør" for at lade dine venner prøve din historie på deres telefoner.
+        studio_playlab_10: Oprette dit eget spil. Når du er færdig, skal du klikke
+          på Udfør for at lade venner prøve dit spil på deres mobiler.
+        studio_full_sandbox: Oprette dit eget spil. Når du er færdig, skal du klikke
+          på Udfør for at lade venner prøve dit spil på deres mobiler.
         studio_k1_1: Kan du få denne hund sige "Hej verden!"?
         studio_k1_2: Kan du få hunden til at sige noget, og derefter få katten sige
           noget bagefter?
@@ -547,9 +550,14 @@
         maze_wordsearch_k_16: Flytte mig en vej, så en anden til at stave ordet BELOW
         maze_wordsearch_k_20: Dette er en test! Flytte mig en måde, så en anden til
           at stave ordet STORY
-        webapp_ec_simple: Create your web app by using createHtmlBlock.
-        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
-          it in the new "penColour" block.'
+        webapp_ec_simple: Opret din WebApp ved hjælp af createHtmlBlock.
+        turtle_ec_1_2: 'Nu skal du tegne en firkant. Bemærk: Brug din favorit farve,
+          vælg den i den nye "penColor" blok.'
+        turtle_ec_1_10: 'Du har du klaret det! Tegn nu noget som du ønsker. Her er
+          nogle ideer: en tændstikmand, et snefnug eller en spiral. Prøv også den
+          nye "penWidth" blok. Hav det sjovt!'
+        studio_ec_sandbox: Oprette dit eget spil. Når du er færdig, skal du klikke
+          på Udfør for at lade venner prøve dit spil på deres mobiler.
     video:
       name:
         maze_intro: Labyrint Intro
@@ -565,7 +573,6 @@
         loop_for: Tæller blok
         parameters: Funktioner med parametre
         hoc_wrapup: En Times Kodning afslutning
-        20_wrapup: 20 Timers afslutning
         Unplug1: Hvad er CS?
         Unplug2: Data-Tænkning
         Unplug3: Programmering på millimeterpapir
@@ -580,7 +587,7 @@
         C1_happy_maps_unplugged: Glade Kort
         C1_moveitmoveit_unplugged: Flyt det, flyt det
         C1_bigevent_unplugged: Den store begivenhed
-        C1_getting_loop: Blive Svimmel
+        C1_getting_loopy: Blive Svimmel
         C1_pair_programming: Par programmering
         C1_maze_intro_sequencing: Labyrint sekventering Intro
         C1_maze_debugging: Labyrint fejlfinding
@@ -592,19 +599,22 @@
         C1_maze_loops: Labyrint sløjfer
         C1_playlab_storytelling: Spil Lab - Opret en historie
         C1_planting_seed: Plante et frø
-        C1_building_foundating: Opbygge et fundament
+        C1_building_foundation: Opbygge et fundament
         C2_maze_intro: Labyrint Intro
         C2_artist_intro: Kunstner Intro
         C2_zuck_repeat_loop: Labyrint sløjfer
         C2_artist_loops: Kunstner sløjfer
+        C2_artist_debugging: Kunstner-fejlfinding
+        C2_bee_loops: Bi sløjfer
+        C2_bee_debugging: Bi fejlfinding
         C2_bee_conditionals: Bi betingelser
         C2_playlab_createstory: Spil Lab - Opret en historie
         C2_graph_paper: Programmering på millimeterpapir
         C2_conditionals_with_cards: Betingelser
         C2_binary_bracelets: Binære armbånd
-        C2_replay_programming: Stafet-programmering
+        C2_relay_programming: Stafet-programmering
         C2_paper_airplanes: Papir fly
-        C3_maze_intro: Labyrint Intro
+        C3_maze_level_4: Labyrint sløjfer
         C3_artist_intro: Kunstner Intro
         C3_artist_functions: Kunstner funktioner
         C3_bee_functions: 'Bi: Funktioner'
@@ -622,6 +632,9 @@
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Funktionelle solfangere
         C3_songwriting_with_parameters: Sangskrivning med parametre
+        Frozen_intro: Hour of Code Intro
+        Frozen_loops: Introduction to Loops
+        Frozen_functions: Introduction to Functions
     callout:
       text:
         drag_blocks: Træk i en "flyt fremad" blok og fastgør den under den anden blok
@@ -638,3 +651,33 @@
           starter"-blokken for at aktivere en spiller for denne historie
         studio_say_text: Skriv hvad du vil have din spiller til at sige i dette citat
         jigsaw_click: Klik på denne blok!
+        move_elsa_forward: Træk en "Flyt fremad" blok og fastgøre den under "Når køre"
+          blokken for at bevæge Elsa fremad
+        turn_elsa: Brug "Turn"-blokken for at Elsa tænder. Numret i drop-down bestemmer
+          hvor meget Elsa drejer
+        replace_questions: Brug drop-down til at erstatte "???" med et nummer
+        replace_questions_degree: Brug drop-down til at erstatte "???" med det korrekte
+          antal grad der skal drejes
+        repeat_blocks: Brug "Repeat" blokken og lad omslutte blokkene på arbejdsområdet
+        snowflake_dropdown: Brug denne drop-down menu til at oprette forskellige snefnug!
+        degrees_per_side: Divide 360 by the number of sides to get the size of each
+          angle in degrees.
+        set_sides: Use this block to set "sides" to the number needed to complete
+          the puzzle.
+        set_length: Use this block to set "length" to the correct value.
+        which_equation: Which equation makes each side shorter for shapes with more
+          sides?  Try each equation!
+        get_nectar: Use the new "get nectar" block.
+        actions_category: The tool box got a new look! The "Actions" blocks are in
+          here now.
+        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
+        edit_function: Use this button to edit the function.
+        create_function: Click here to open the "Functions" flyout, then click the
+          "Create a Function" button.
+        house_hint: It's ok if the picture doesn't look like a house yet. We will
+          fix it in the next puzzle.
+        edit_draw_square: Use this button to edit the function and add the loop.
+        edit_get_nectar: Use this button to edit the function and change the direction
+          the Bee will turn to get the nectar.
+        logic_category: Open the "Logic" flyout to find the "if/else" block.
+        length_parameter: Can you update this function so it uses the "length" parameter?

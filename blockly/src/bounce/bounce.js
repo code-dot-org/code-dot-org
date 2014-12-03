@@ -665,23 +665,23 @@ Bounce.init = function(config) {
   });
 
   config.loadAudio = function() {
-    Blockly.loadAudio_(skin.winSound, 'win');
-    Blockly.loadAudio_(skin.startSound, 'start');
-    Blockly.loadAudio_(skin.ballStartSound, 'ballstart');
-    Blockly.loadAudio_(skin.failureSound, 'failure');
-    Blockly.loadAudio_(skin.rubberSound, 'rubber');
-    Blockly.loadAudio_(skin.crunchSound, 'crunch');
-    Blockly.loadAudio_(skin.flagSound, 'flag');
-    Blockly.loadAudio_(skin.winPointSound, 'winpoint');
-    Blockly.loadAudio_(skin.winPoint2Sound, 'winpoint2');
-    Blockly.loadAudio_(skin.losePointSound, 'losepoint');
-    Blockly.loadAudio_(skin.losePoint2Sound, 'losepoint2');
-    Blockly.loadAudio_(skin.goal1Sound, 'goal1');
-    Blockly.loadAudio_(skin.goal2Sound, 'goal2');
-    Blockly.loadAudio_(skin.woodSound, 'wood');
-    Blockly.loadAudio_(skin.retroSound, 'retro');
-    Blockly.loadAudio_(skin.slapSound, 'slap');
-    Blockly.loadAudio_(skin.hitSound, 'hit');
+    BlocklyApps.loadAudio(skin.winSound, 'win');
+    BlocklyApps.loadAudio(skin.startSound, 'start');
+    BlocklyApps.loadAudio(skin.ballStartSound, 'ballstart');
+    BlocklyApps.loadAudio(skin.failureSound, 'failure');
+    BlocklyApps.loadAudio(skin.rubberSound, 'rubber');
+    BlocklyApps.loadAudio(skin.crunchSound, 'crunch');
+    BlocklyApps.loadAudio(skin.flagSound, 'flag');
+    BlocklyApps.loadAudio(skin.winPointSound, 'winpoint');
+    BlocklyApps.loadAudio(skin.winPoint2Sound, 'winpoint2');
+    BlocklyApps.loadAudio(skin.losePointSound, 'losepoint');
+    BlocklyApps.loadAudio(skin.losePoint2Sound, 'losepoint2');
+    BlocklyApps.loadAudio(skin.goal1Sound, 'goal1');
+    BlocklyApps.loadAudio(skin.goal2Sound, 'goal2');
+    BlocklyApps.loadAudio(skin.woodSound, 'wood');
+    BlocklyApps.loadAudio(skin.retroSound, 'retro');
+    BlocklyApps.loadAudio(skin.slapSound, 'slap');
+    BlocklyApps.loadAudio(skin.hitSound, 'hit');
   };
 
   config.afterInject = function() {

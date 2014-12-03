@@ -1,5 +1,7 @@
 {
   "and":"ja",
+  "booleanTrue":"tõene",
+  "booleanFalse":"väär",
   "blocklyMessage":"Blockly",
   "catActions":"Tegevused",
   "catColour":"Värv",
@@ -41,6 +43,7 @@
   "numBlocksNeeded":"Congratulations! You completed Puzzle {puzzleNumber}. (However, you could have used only {numBlocks, plural, one {1 block} other {# blocks}}.)",
   "numLinesOfCodeWritten":"You just wrote {numLines, plural, one {1 line} other {# lines}} of code!",
   "play":"play",
+  "print":"Print",
   "puzzleTitle":"Puzzle {puzzle_number} of {stage_total}",
   "repeat":"korda",
   "resetProgram":"Reset",
@@ -61,8 +64,8 @@
   "tryAgain":"Proovi uuesti",
   "hintRequest":"Anna vihje",
   "backToPreviousLevel":"Tagasi eelmisele tasemele",
-  "saveToGallery":"Save to your gallery",
-  "savedToGallery":"Saved to your gallery!",
+  "saveToGallery":"Save to gallery",
+  "savedToGallery":"Saved in gallery!",
   "shareFailure":"Vabandust, me ei saa seda programmi jagada.",
   "typeFuncs":"Available functions:%1",
   "typeHint":"Note that the parentheses and semicolons are required.",
@@ -78,5 +81,6 @@
   "tryHOC":"Try the Hour of Code",
   "signup":"Sign up for the intro course",
   "hintHeader":"Vihje:",
-  "genericFeedback":"See how you ended up, and try to fix your program."
+  "genericFeedback":"See how you ended up, and try to fix your program.",
+  "defaultTwitterText":"Check out what I made"
 }

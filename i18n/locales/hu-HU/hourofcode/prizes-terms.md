@@ -1,6 +1,6 @@
 * * *
 
-layout: wide
+title: How-to Guide for Organisations layout: wide nav: resources_nav
 
 * * *
 

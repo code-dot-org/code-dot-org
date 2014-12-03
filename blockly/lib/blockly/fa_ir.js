@@ -1,6 +1,9 @@
 goog.provide('Blockly.Msg.fa_ir');
 goog.require('Blockly.Msg');
+Blockly.Msg.ACTUAL = "actual";
+Blockly.Msg.ADD = "Add";
 Blockly.Msg.ADD_COMMENT = "افزودن نظر";
+Blockly.Msg.ADD_PARAMETER = "Add Parameter";
 Blockly.Msg.CHANGE_VALUE_TITLE = "تغییر مقدار:";
 Blockly.Msg.COLLAPSE_ALL = "جمع کردن بلوک ها";
 Blockly.Msg.COLLAPSE_BLOCK = "جمع کردن بلوک";
@@ -58,15 +61,37 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_UNTIL = "تکرار کن تا زمان�
 Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_WHILE = "تکرار در حالی که";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "تا زمانی که یک مقدار ناصحیح است، چند عبارت را انجام بده.";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "تا زمانی که یک مقدار صحیح است، چند عبارت را انجام بده.";
+Blockly.Msg.DEFINE_FUNCTION_DEFINE = "Define";
 Blockly.Msg.DELETE_BLOCK = "حذف بلوک";
+Blockly.Msg.DELETE_PARAMETER = "Delete parameter...";
+Blockly.Msg.DELETE_PARAMETER_TITLE = "This will delete all '%1' parameter occurrences. Are you sure?";
 Blockly.Msg.DELETE_X_BLOCKS = "حذف بلوک‌های %1";
 Blockly.Msg.DISABLE_BLOCK = "غیرفعال‌سازی بلوک";
 Blockly.Msg.DUPLICATE_BLOCK = "تکراری";
 Blockly.Msg.ENABLE_BLOCK = "فعال‌سازی بلوک";
+Blockly.Msg.EXAMPLE = "Example";
+Blockly.Msg.EXAMPLE_DESCRIPTION = "Defines an example with expected and actual behavior";
 Blockly.Msg.EXPAND_ALL = "گسترش بلوک‌ها";
 Blockly.Msg.EXPAND_BLOCK = "گسترش بلوک";
+Blockly.Msg.EXPECTED = "expected";
 Blockly.Msg.EXTERNAL_INPUTS = "ورودی‌های خارجی";
+Blockly.Msg.FUNCTION_CREATE = "Create a Function";
+Blockly.Msg.FUNCTION_EDIT = "edit";
+Blockly.Msg.FUNCTION_NAME_LABEL = "Name your function:";
+Blockly.Msg.FUNCTION_DESCRIPTION_LABEL = "What is your function supposed to do?";
+Blockly.Msg.FUNCTION_PARAMETERS_LABEL = "What parameters does your function take?";
 Blockly.Msg.FUNCTION_HEADER = "تابع";
+Blockly.Msg.FUNCTIONAL_CREATE = "New Block";
+Blockly.Msg.FUNCTIONAL_EDIT = "edit";
+Blockly.Msg.FUNCTIONAL_NAME_LABEL = "نام";
+Blockly.Msg.FUNCTIONAL_TYPE_LABEL = "Choose type...";
+Blockly.Msg.FUNCTIONAL_DESCRIPTION_LABEL = "Description";
+Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL = "Domain";
+Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP = "Define a functional method";
+Blockly.Msg.FUNCTIONAL_RANGE_LABEL = "Range";
+Blockly.Msg.FUNCTIONAL_VARIABLE_CREATE = "Create a Variable";
+Blockly.Msg.FUNCTIONAL_VARIABLE_HEADER = "Variable";
+Blockly.Msg.FUNCTIONAL_VARIABLE_TYPE = "Type";
 Blockly.Msg.HELP = "راهنما";
 Blockly.Msg.INLINE_INPUTS = "ورودی‌های درون خطی";
 Blockly.Msg.LISTS_CREATE_EMPTY_HELPURL = "http://fa.wikipedia.org/wiki/لیست_پیوندی";
@@ -278,8 +303,11 @@ Blockly.Msg.PROCEDURES_IFRETURN_WARNING = "اخطار: این بلوگ احتم�
 Blockly.Msg.PROCEDURES_MUTATORARG_TITLE = "نام ورودی:";
 Blockly.Msg.PROCEDURES_MUTATORCONTAINER_TITLE = "ورودی‌ها";
 Blockly.Msg.REMOVE_COMMENT = "حذف نظر";
+Blockly.Msg.RENAME_PARAMETER = "Rename parameter...";
+Blockly.Msg.RENAME_PARAMETER_TITLE = "Rename all '%1' parameters to:";
 Blockly.Msg.RENAME_VARIABLE = "تغییر نام متغیر...";
 Blockly.Msg.RENAME_VARIABLE_TITLE = "تغییر نام همهٔ متغیرهای «%1» به:";
+Blockly.Msg.SAVE_AND_CLOSE = "Save and Close";
 Blockly.Msg.TEXT_APPEND_APPENDTEXT = "الحاق متن";
 Blockly.Msg.TEXT_APPEND_HELPURL = "https://code.google.com/p/blockly/wiki/Text#Text_modification";
 Blockly.Msg.TEXT_APPEND_TO = "به";

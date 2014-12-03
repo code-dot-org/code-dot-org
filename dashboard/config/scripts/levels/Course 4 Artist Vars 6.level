@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Hmmm, I tried changing the variable \"sides\" to 4, but it's still drawing a square. Can you use the \"sides\" variable to make sure that I turn the right amount? Hint: 360 divided by the number of sides will give you the number of degrees to turn.",
+    "instructions": "Hmmm, I tried changing the variable \"sides\" to 4 from the code in the last puzzle, but it's still drawing a triangle. Can you use the \"sides\" variable (along with a math block) to make sure that I turn the right amount too? Hint: 360 divided by the number of sides will give you the number of degrees to turn.",
     "x": "125",
     "y": "275",
     "start_direction": "90",
@@ -19,7 +19,9 @@
     "disable_variable_editing": "true",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "impressive": "false"
+    "impressive": "false",
+    "embed": "false",
+    "callout_json": "[{\r\n  \"localization_key\": \"degrees_per_side\",\r\n  \"element_id\": \"[block-id='29']\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}\r\n  }\r\n}]"
   }
 }]]></config>
   <blocks>
@@ -66,14 +68,41 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="variables_get">
-          <title name="VAR">sides</title>
+        <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">150</title>
+        </block>
+        <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">120</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_turn" inline="true">
+          <title name="DIR">turnLeft</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">120</title>
+            </block>
+          </value>
+        </block>
+        <block type="controls_repeat_ext" inline="true"/>
+        <block type="math_number">
+          <title name="NUM">0</title>
+        </block>
+        <block type="math_number">
+          <title name="NUM">360</title>
         </block>
         <block type="math_arithmetic" inline="true">
           <title name="OP">DIVIDE</title>
         </block>
-        <block type="math_number">
-          <title name="NUM">360</title>
+        <block type="variables_set" inline="false">
+          <title name="VAR">sides</title>
+        </block>
+        <block type="variables_get">
+          <title name="VAR">sides</title>
         </block>
       </xml>
     </toolbox_blocks>
@@ -103,22 +132,50 @@
     </required_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
+        <block type="when_run" movable="false" deletable="false">
           <next>
-            <block type="controls_repeat">
-              <title name="TIMES">4</title>
-              <statement name="DO">
-                <block type="draw_move_by_constant">
-                  <title name="DIR">moveForward</title>
-                  <title name="VALUE">150</title>
-                  <next>
-                    <block type="draw_turn_by_constant">
-                      <title name="DIR">turnLeft</title>
-                      <title name="VALUE">90</title>
-                    </block>
-                  </next>
+            <block type="variables_set" inline="false">
+              <title name="VAR">sides</title>
+              <value name="VALUE">
+                <block type="math_number">
+                  <title name="NUM">4</title>
                 </block>
-              </statement>
+              </value>
+              <next>
+                <block type="controls_repeat_ext" inline="true">
+                  <value name="TIMES">
+                    <block type="variables_get">
+                      <title name="VAR">sides</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">150</title>
+                      <next>
+                        <block type="draw_turn" inline="true">
+                          <title name="DIR">turnLeft</title>
+                          <value name="VALUE">
+                            <block type="math_arithmetic" inline="true">
+                              <title name="OP">DIVIDE</title>
+                              <value name="A">
+                                <block type="math_number">
+                                  <title name="NUM">360</title>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <block type="variables_get">
+                                  <title name="VAR">sides</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
             </block>
           </next>
         </block>

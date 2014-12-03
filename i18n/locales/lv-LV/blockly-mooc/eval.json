@@ -1,0 +1,22 @@
+{
+  "circleBlockTitle":"aplis (rādiuss, stils, krāsa)",
+  "displayBlockTitle":"displejs",
+  "ellipseBlockTitle":"elipse (platums, augstums, stils, krāsa)",
+  "extraTopBlocks":"Jums ir nepievienoti  bloki. Vai jūs vēlējāties tos pievienot \"displeja\" blokam?",
+  "overlayBlockTitle":"pārklājums (augša, apakša)",
+  "placeImageBlockTitle":"novietot-attēls (x, y, attēls)",
+  "rectangleBlockTitle":"četrstūris (platums, augstums, stils, krāsa)",
+  "reinfFeedbackMsg":"Nospiediet pogu \"Mēģināt vēlreiz\", lai labotu savu zīmējumu.",
+  "rotateImageBlockTitle":"pagriezt (grādi, attēls)",
+  "scaleImageBlockTitle":"mērogs (koeficients)",
+  "squareBlockTitle":"kvadrāts (izmērs, stils, krāsa)",
+  "starBlockTitle":"zvaignze (rādius, stils, krāsa)",
+  "stringAppendBlockTitle":"apvienot-virkni(pirmā, otrā)",
+  "stringLengthBlockTitle":"virknes-garums(virkne)",
+  "textBlockTitle":"teksts(virkne, izmērs, krāsa)",
+  "triangleBlockTitle":"trīsstūris(izmērs, stils, krāsa)",
+  "underlayBlockTitle":"apakšslānis (apakšējais, augšējais)",
+  "outline":"kontūra",
+  "solid":"ciets",
+  "string":"virkne"
+}

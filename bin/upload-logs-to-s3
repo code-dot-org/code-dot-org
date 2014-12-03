@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+require_relative '../deployment'
+
+def upload_logs(application)
+  raise 'Unknown application.' unless ['dashboard', 'pegasus'].include? application
+  system "aws s3 sync #{deploy_dir(application, 'log')} s3://cdo-logs/hosts/#{CDO.name}/#{application} --exclude .gitignore 2>&1 > #{deploy_dir(application, 'log', 'uploads-logs-to-s3.log')}"
+end
+
+def main
+  ARGV.each do |application|
+    upload_logs application
+  end
+end
+
+main

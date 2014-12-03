@@ -1,8 +1,10 @@
 {
   "and": "và",
+  "booleanTrue": "đúng",
+  "booleanFalse": "sai",
   "blocklyMessage": "Mảnh ghép",
   "catActions": "Các hành động",
-  "catColour": "màu sắc",
+  "catColour": "Màu sắc",
   "catLogic": "Logic",
   "catLists": "Danh sách",
   "catLoops": "Vòng lặp",
@@ -23,7 +25,7 @@
   "emptyFunctionBlocksErrorMsg": "Khối \"hàm\"  cần có các khối lệnh bên trong để khiến nó hoạt động.",
   "extraTopBlocks": "Bạn có các khối tự do. Ý của bạn là để đính kèm chúng vào khối \"khi chạy\"?",
   "finalStage": "Chúc mừng. Bạn vừa hoàn thành xong bước cuối cùng.",
-  "finalStageTrophies": "Chúc mừng! Bạn vừa hoàn thành bước cuối cùng và dành danh hiệu {numTrophies, {a trophy} trong {# trophies}}.",
+  "finalStageTrophies": "Chúc mừng! Bạn vừa hoàn thành bước cuối cùng và dành danh hiệu {numTrophies, plural, one {a trophy} other {# trophies}}.",
   "finish": "Hoàn Thành",
   "generatedCodeInfo": "Các trường đại học hàng đầu cũng dạy lập trình dựa trên \"khối lệnh\" (block) (như: {berkeleyLink}, {harvardLink}). Tuy nhiên, để hổ trợ, các \"khối lệnh\" cũng được hiển thị trong ngôn ngữ JavaScript, ngôn ngữ lập trình thông dụng nhất:",
   "hashError": "Xin lỗi, '%1' không tương ứng với bất kì chương trình đã lưu.",
@@ -41,6 +43,7 @@
   "numBlocksNeeded": "Chúc mừng! Bạn đã hoàn thành câu đố {puzzleNumber}. Nhưng bạn thật sự chỉ cần {numBlocks, plural, one {1 block} other {# blocks}} khối thôi .",
   "numLinesOfCodeWritten": "Bạn vừa mới viết {numLines, plural, one {1 dòng} other {# dòng}} mã!",
   "play": "Bắt đầu chơi",
+  "print": "Print",
   "puzzleTitle": "Câu đố thứ {puzzle_number} trong số {stage_total} câu",
   "repeat": "lặp lại",
   "resetProgram": "Thiết lập lại",
@@ -78,5 +81,6 @@
   "tryHOC": "Học thử Hour of Code",
   "signup": "Đăng ký cho khóa học mở đầu",
   "hintHeader": "Đây là một số mẹo:",
-  "genericFeedback": "Nhìn xem bằng cách nào bạn kết thúc và hãy cố gắng sửa chương trình của bạn."
+  "genericFeedback": "Nhìn xem bằng cách nào bạn kết thúc và hãy cố gắng sửa chương trình của bạn.",
+  "defaultTwitterText": "Check out what I made"
 }

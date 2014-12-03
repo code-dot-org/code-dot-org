@@ -46,8 +46,8 @@
           'Maze: Loops': 'Doolhof: lussen'
           'Bee: Loops': 'Bij: lussen'
           'Studio: Create a Story': 'Speel Lab: Maak een Verhaal'
-          description_short: Course 1 is designed for early readers in the lower elementary
-            grades.
+          description_short: Cursus 1 is bedoeld voor jonge lezers. Aanbevolen voor
+            de rangen K-1.
           'Artist: Loops': 'Kustenaar: lussen'
         course2:
           The Maze: Het Doolhof
@@ -86,8 +86,8 @@
           'Bee: Debugging': 'Bij: Foutopsporing'
           'Artist: Debugging': 'Kunstenaar: foutopsporing'
           'Bee: Conditionals': 'Bij: voorwaardelijke instructies'
-          description_short: Course 2 is designed for students who can read in the
-            lower and middle elementary grades.
+          description_short: Cursus 2 is bedoeld voor studenten die kunnen lezen.  Aanbevolen
+            voor de rangen 2-5.
           'Artist: Sequence2': 'Kunstenaar: volgorde2'
           'Maze: Sequence2': 'Doolhof: Volgorde2'
           'Artist: Nested Loops': 'Kunstenaar: geneste lussen'
@@ -133,8 +133,8 @@
           'Farmer: While Loops': 'Boer: Terwijl Lussen'
           'Bee: Nested Loops': 'Bij: geneste lussen'
           'Bee: Debugging': 'Bij: Foutopsporing'
-          description_short: Students taking Course 3 should have already taken Course
-            2.
+          description_short: Cursus 3 is een vervolg op cursus 2.  Aanbevolen voor
+            de rangen 4-5.
           Maze2: Doolhof2
           Artist2: Kunstenaar2
           'Artist: Functions2': 'Kunstenaar: Functies2'
@@ -154,6 +154,55 @@
           Assessments: Toetsen
           Unit 1: Eenheid 1
           Unit 2: Eenheid 2
+          Ninja Cat and the Coordinate Plane: Ninja Kat en het coördinaat vliegtuig
+          'Calc: Circles of Evaluation': 'Calc: Evaluatiekringen'
+          'Artist: Strings and Images': 'Artiest: Tekst en afbeeldingen'
+          Contracts: Contracten
+          'Artist: Writing Contracts': 'Artiest: Contracten schrijven'
+          'Calc: Defining Variables': 'Calc: Variabelen definiëren'
+          'Play Lab: Defining Variables': 'Speel Lab: Variabelen definiëren'
+          The Design Recipe: Het ontwerp Recept
+          'Artist: Defining Functions': 'Artiest: Functies Definiëren'
+          'Play Lab: Defining Functions': 'Speel Lab: Functies Definiëren'
+          'Artist: Functions': 'Kunstenaar: Functies'
+          'Play Lab: Animation': 'Speel Lab: Animatie'
+          Booleans: Booleans
+          'Play Lab: Booleans': 'Speel Lab: Booleans'
+          'Calc: Boolean Operators': 'Calc: Booleaanse operatoren'
+          'Play Lab: Boolean Operators': 'Speel Lab: Boolean Operatoren'
+          Conditionals and Piecewise Functions: Conditionele en stuksgewijze functies
+          'Artist: Conditionals': 'Artiest: Conditionals'
+          Collision Detection and the Distance Formula: Botsingdetectie en de afstand
+            formule
+          'Play Lab: Collision Detection': 'Play Lab: Botsingdetectie'
+          'Unplugged: Ninja Cat and the Coordinate Plane': 'Unplugged: Ninja Cat and
+            the Coordinate Plane'
+          'Eval: Strings and Images': 'Eval: Strings and Images'
+          'Unplugged: Contracts': 'Unplugged: Contracts'
+          'Eval: Writing Contracts': 'Eval: Writing Contracts'
+          'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
+          'Eval: Defining Functions': 'Eval: Fast Functions'
+          'Eval: Functions': 'Eval: Design Recipe'
+          'Unplugged: Booleans': 'Unplugged: Booleans'
+          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
+            and Piecewise Functions'
+          'Eval: Conditionals': 'Eval: Conditionals'
+          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
+            Detection and the Distance Formula'
+          'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
+          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
+            and Coordinate Planes'
+          'Eval: Boolean Operators': 'Eval: Boolean Operators'
+          Blocks to Math: Blocks to Math
+          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Defining Variables
+            (Big Game)'
+          'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
+          'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
+          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
+            (Big Game)'
+          'Eval: Fast Functions': 'Eval: Fast Functions'
+          'Play Lab: Design Recipe': 'Play Lab: Design Recipe'
+          'Eval: Design Recipe': 'Eval: Design Recipe'
         playlab:
           title: Speel Lab
           description: Maak een verhaal of een spel met Speel Lab!
@@ -164,23 +213,108 @@
           description: Teken coole plaatjes en ontwerpen met de Kunstenaar!
           Artist: Kunstenaar
           description_short: Teken coole plaatjes en ontwerpen met de Kunstenaar!
+        scrat:
+          title: Scrat
+          description_short: Scrat korte beschrijving.
+          description: Scrat lange beschrijving
+          'Maze: Sequence': 'Doolhof: Nummering'
+        hourofcode:
+          Maze: Doolhof
+          title: Een Uur Code
+          description_short: Probeer de grondbeginselen van de informatica met figuren
+            uit angry Birds, Plant vs. Zombies en Scrat van Ice Age!
+          description: Probeer de grondbeginselen van de informatica met figuren uit
+            angry Birds, Plant vs. Zombies en Scrat van Ice Age!
+        frozen:
+          title: Frozen
+          description_short: Join the Royal Sisters of Arendelle, Anna and Elsa, as
+            they explore the magic and beauty of ice. You will write code to create
+            snowflakes and patterns as you ice-skate and make a winter wonderland
+            that you can then share with your friends!
+          description: Join the Royal Sisters of Arendelle, Anna and Elsa, as they
+            explore the magic and beauty of ice. You will write code to create snowflakes
+            and patterns as you ice-skate and make a winter wonderland that you can
+            then share with your friends!
+          Artist: Kunstenaar
         course4:
-          description_short: Students taking Course 4 should have already taken Courses
-            2 and 3.
-          description: Course 4 is designed for students who have taken Course 2 and
-            3. Students will delve deeper into programming topics introduced in previous
-            courses to flexible solutions to more complex problems. By the end of
-            this course, students create interactive stories and games they can share
-            with anyone. Recommended for grades 4-8.
-          'Artist: Variables': 'Artist: Variables'
-          'Bee: For Loops': 'Bee: For Loops'
-          title: Course 4
-          'Algorithms: Tangrams': 'Algorithms: Tangrams'
+          description_short: Leerlingen die les 4 starten moeten eerst lessen 2 en
+            3 doorlopen hebben.
+          description: Les 4 is ontwikkeld voor leerlingen die lessen 2 en 3 hebben
+            gevolgd. Leerlingen zullen dieper ingaan op de programmeeronderwerpen
+            die zijn geïntroduceerd in de vorige cursussen om flexibelere oplossingen
+            voor complexere problemen te vinden. Aan het eind van deze cursus maken
+            studenten interactieve verhalen en spellen, die ze met iedereen kunnen
+            delen.
+          'Artist: Variables': 'Artiest: variabelen'
+          'Bee: For Loops': 'Bij : For-lussen'
+          title: Les 4
+          'Algorithms: Tangrams': 'Algoritmen: Tangrams'
           Variables: Variabelen
-          'Play Lab: Variables': 'Play Lab: Variables'
-          'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
-          'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
+          'Play Lab: Variables': 'Speel Lab: variabelen'
+          'Play Lab: Functions with Parameters': 'Speel Lab: Functies met Parameters'
+          'Bee: Functions with Parameters': 'Bij: Functies met Parameters'
           'Artist: For Loops': 'Artist: For Loops'
           'Play Lab: For Loops': 'Play Lab: For Loops'
           'Artist: Functions': 'Kunstenaar: Functies'
           'Artist: Functions with Paraqmeters': 'Artist: Functions with Paraqmeters'
+          'Unplugged: Tangrams': 'Unplugged: Tangrams'
+          Artist: Kunstenaar
+          Bee: Bee
+          'Unplugged: Envelope Variables': 'Unplugged: Envelope Variables'
+          'Unplugged: Madlibs': 'Unplugged: Madlibs'
+          'Unplugged: For Loop Fun': 'Unplugged: For Loop Fun'
+          'Unplugged: Songwriting with Parameters': 'Unplugged: Songwriting with Parameters'
+          'Artist: Functions with Parameters': 'Artist: Functions with Parameters'
+          'Unplugged: Binary': 'Unplugged: Binary'
+          Bee Binary: Bee Binary
+          Farmer Binary: Farmer Binary
+          Maze and Bee: Maze and Bee
+          Artist Binary: Artist Binary
+        Course4pre:
+          description_short: A brief rampup of concepts for students who have not
+            taken Course 2 and 3.
+          Course 4 Prerequisite: Course 4 Prerequisite
+          'Maze: Sequence': 'Doolhof: Nummering'
+          'Artist: Sequence': 'Kunstenaar: volgorde'
+          'Artist: Loops': 'Kustenaar: lussen'
+          'Bee: Conditionals': 'Bij: voorwaardelijke instructies'
+          'Artist: Nested Loops': 'Kunstenaar: geneste lussen'
+          'Farmer: While Loops': 'Boer: Terwijl Lussen'
+          'Bee: Nested Loops': 'Bij: geneste lussen'
+          'Artist: Functions': 'Kunstenaar: Functies'
+          'Bee: Debugging': 'Bij: Foutopsporing'
+        course4pre:
+          description_short: A brief rampup of concepts for students who have not
+            taken Course 2 and 3.
+          Course 4 Prerequisite: Course 4 Prerequisite
+          'Maze: Sequence': 'Doolhof: Nummering'
+          'Artist: Sequence': 'Kunstenaar: volgorde'
+          'Artist: Loops': 'Kustenaar: lussen'
+          'Bee: Conditionals': 'Bij: voorwaardelijke instructies'
+          'Artist: Nested Loops': 'Kunstenaar: geneste lussen'
+          'Farmer: While Loops': 'Boer: Terwijl Lussen'
+          'Bee: Nested Loops': 'Bij: geneste lussen'
+          'Artist: Functions': 'Kunstenaar: Functies'
+          'Bee: Debugging': 'Bij: Foutopsporing'
+        Course4pre (Case Conflict):
+          description_short: A brief rampup of concepts for students who have not
+            taken Course 2 and 3.
+          Course 4 Prerequisite: Course 4 Prerequisite
+          'Maze: Sequence': 'Doolhof: Nummering'
+          'Artist: Sequence': 'Kunstenaar: volgorde'
+          'Artist: Loops': 'Kustenaar: lussen'
+          'Bee: Conditionals': 'Bij: voorwaardelijke instructies'
+          'Artist: Nested Loops': 'Kunstenaar: geneste lussen'
+          'Farmer: While Loops': 'Boer: Terwijl Lussen'
+          'Bee: Nested Loops': 'Bij: geneste lussen'
+          'Artist: Functions': 'Kunstenaar: Functies'
+          'Bee: Debugging': 'Bij: Foutopsporing'
+        usability:
+          Intro: Intro
+          Variables and For Loops: Variables and For Loops
+          Functions and Functions with Parameters: Functions and Functions with Parameters
+          title: Usability Testing
+          description_short: ''
+          description: A selection of Course 4 levels for usability testing.
+          Variables: Variabelen
+          For Loops: For Loops

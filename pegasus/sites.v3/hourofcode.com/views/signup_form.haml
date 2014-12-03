@@ -1,3 +1,6 @@
+-#Disabled so the Google Maps API doesn't get included twice, which can cause unexpected errors.
+-#%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=true&libraries=places,geometry&v=3.7"}
+
 %a#hocsignupform{name: 'signup'}
 #signupform
   %h2= hoc_s(:signup_header)
@@ -30,7 +33,7 @@
     .form-group
       %label.control-label{for: "hoc-event-location"}= hoc_s(:signup_event_location_label)
       %div
-        %textarea#hoc-event-location.form-control{name: "event_location_s", placeholder: hoc_s(:signup_event_location_placeholder), style: "height: 5em;"}
+        %textarea#hoc-event-location.form-control{name: "event_location_s", placeholder: hoc_s(:signup_event_location_placeholder), style: "height: 4em;"}
 
     .form-group{style: "display: none;"}
       .checkbox
@@ -58,6 +61,8 @@
 
 :javascript
   $(document).ready(function() {
+    new google.maps.places.SearchBox(document.getElementById('hoc-event-location'));
+
     $('#hoc-signup-form select').selectize({
       plugins: ['fast_click']
     });

@@ -51,30 +51,23 @@ class HomeControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "logged in user with gallery activities shows gallery" do
-    user = create(:user)
-    create :gallery_activity,
-      user: user,
-      autosaved: true,
-      activity: create(:activity, user: @user, level: create(:level, game: Game.find_by_app(Game::ARTIST)))
-    create :gallery_activity,
-      user: user,
-      activity: create(:activity, user: @user, level: create(:level, game: Game.find_by_app(Game::ARTIST)))
-    create :gallery_activity,
-      user: user,
-      activity: create(:activity, user: @user, level: create(:level, game: Game.find_by_app(Game::ARTIST)))
-    create :gallery_activity,
-      user: user,
-      activity: create(:activity, user: @user, level: create(:level, game: Game.find_by_app(Game::STUDIO)))
-    sign_in user
+  def setup_user_with_gallery
+    @user = create(:user)
+    5.times do
+      create :gallery_activity,
+        user: @user,
+        autosaved: true,
+        activity: create(:activity, user: @user, level: create(:level, game: Game.find_by_app(Game::ARTIST)))
+    end
+    sign_in @user
+  end
 
+  test "logged in user with gallery activities shows gallery" do
+    setup_user_with_gallery
     get :index
 
-    assert_select 'h4', "My Apps" # title of the gallery section
-    assert_select 'h4', "My Art" # title of the gallery section
-    assert_select '#turtle-gallery div.gallery_activity img', 3 # artist items
-    assert_select '#studio-gallery div.gallery_activity img', 1 # playlab item
-
+    assert_select 'h3', "Gallery" # title of the gallery section
+    assert_select '#gallery div.gallery_activity img', 5
   end
 
   test "logged in user without gallery activities does not show gallery" do
@@ -85,7 +78,21 @@ class HomeControllerTest < ActionController::TestCase
     get :index
 
     assert_response :success
-    assert_select 'h4', text: "Gallery", count: 0
+    assert_select 'h3', text: "Gallery", count: 0
+  end
+
+  test "do not show gallery activity pagination when not signed in" do
+    get :gallery_activities
+    assert_redirected_to_sign_in
+  end
+
+  test "show gallery activity pagination when signed in" do
+    setup_user_with_gallery
+
+    get :gallery_activities
+    assert_response :success
+
+    assert_select 'div.gallery_activity img', 5
   end
 
   test "do not show gallery when not logged in" do
@@ -124,17 +131,16 @@ class HomeControllerTest < ActionController::TestCase
       get :index
       assert_response :success
 
-      if script.hoc? 
+      if script.name == 'hourofcode'
         url = "http://test.host/hoc"
       elsif script.flappy?
         url = "http://test.host/flappy"
       else
         url = "http://test.host/s/#{script.to_param}"
       end
-      assert_select '#left_off'
-      assert_select "form[action^=#{url}]" # continue link
+      assert_select "#continue a[href^=#{url}]" # continue link
       assert_select 'h3',  I18n.t("data.script.name.#{script.name}.title") # script title
-      assert_select "a.level_link[href^=#{url}]" # link to level in progress
+      assert_select "div[data-script-id=#{script.id}]" # div for loading script progress
     end
   end
     
@@ -143,6 +149,9 @@ class HomeControllerTest < ActionController::TestCase
     sign_in(user)
     Script.find(Script::TWENTY_HOUR_ID).script_levels.each do |script_level|
       UserLevel.create(user: user, level: script_level.level, attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
+    end
+    Script.find_by(name: 'hourofcode').script_levels.each do |script_level|
+      UserLevel.find_or_create_by(user: user, level: script_level.level, attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
     end
     user.backfill_user_scripts
 
@@ -206,6 +215,5 @@ class HomeControllerTest < ActionController::TestCase
     get :index
     assert_select 'a[href=http://test.host/redeemprizes]'
   end
-
 
 end

@@ -4,93 +4,94 @@
       name:
         20-hour:
           desc: K-8 Intro to Computer Science Course
-          Unplug1: நிலை 1
-          Maze: நிலை 2
-          Unplug2: நிலை 3
-          Unplug3: நிலை 4
-          Artist: நிலை 5
-          Unplug4: நிலை 6
-          Artist2: நிலை 7
-          Unplug5: நிலை 8
-          Farmer: நிலை 9
-          Unplug6: நிலை 10
-          Artist3: நிலை 11
-          Unplug7: நிலை 12
-          Farmer2: நிலை 13
-          Unplug8: நிலை 14
-          Artist4: நிலை 15
-          Unplug9: நிலை 16
-          Farmer3: நிலை 17
-          Unplug10: நிலை 18
-          Artist5: நிலை 19
-          Unplug11: நிலை 20
+          Unplug1: "நிலை 1"
+          Maze: "நிலை 2"
+          Unplug2: "நிலை 3"
+          Unplug3: "நிலை 4"
+          Artist: "நிலை 5"
+          Unplug4: "நிலை 6"
+          Artist2: "நிலை 7"
+          Unplug5: "நிலை 8"
+          Farmer: "நிலை 9"
+          Unplug6: "நிலை 10"
+          Artist3: "நிலை 11"
+          Unplug7: "நிலை 12"
+          Farmer2: "நிலை 13"
+          Unplug8: "நிலை 14"
+          Artist4: "நிலை 15"
+          Unplug9: "நிலை 16"
+          Farmer3: "நிலை 17"
+          Unplug10: "நிலை 18"
+          Artist5: "நிலை 19"
+          Unplug11: "நிலை 20"
         Hour of Code:
           desc: Hour of Code
-          Maze: நிலை 1
+          Maze: "நிலை 1"
         Edit Code:
-          desc: குறியீட்டை திருத்து
-          MazeEC: நிலை 1
+          desc: "குறியீட்டை திருத்து"
+          MazeEC: "நிலை 1"
         2014 Levels:
           desc: 2014 Puzzles (beta)
-          Bounce: நிலை 1
+          Bounce: "நிலை 1"
         Builder Levels:
           desc: User-Created Puzzles (beta)
-          Custom: நிலை 1
+          Custom: "நிலை 1"
         Flappy Levels:
           desc: Flappy Bird
-          Flappy: நிலை 1
+          Flappy: "நிலை 1"
         Jigsaw Levels:
           desc: Jigsaw (beta)
-          Jigsaw: நிலை 1
+          Jigsaw: "நிலை 1"
         Step Levels:
           desc: Maze (beta)
           MazeStep: Stage Step
         edit-code:
           desc: Edit Code (beta)
-          MazeEC: நிலை 1
-          Webapp: நிலை 2
-          ArtistEC: நிலை 3
+          MazeEC: "நிலை 1"
+          Webapp: "நிலை 2"
+          ArtistEC: "நிலை 3"
+          StudioEC: "நிலை 4"
         events:
           desc: Bounce (beta)
-          Bounce: நிலை 1
-          Studio: நிலை 2
+          Bounce: "நிலை 1"
+          Studio: "நிலை 2"
         builder:
           desc: User-Created Puzzles (beta)
-          Custom: நிலை 1
+          Custom: "நிலை 1"
         flappy:
           desc: Flappy Bird
-          Flappy: நிலை 1
+          Flappy: "நிலை 1"
         jigsaw:
           desc: Jigsaw (beta)
-          Jigsaw: நிலை 1
+          Jigsaw: "நிலை 1"
         step:
           desc: Maze (beta)
           MazeStep: Stage Step
         wordsearch:
           desc: Spelling Bee (beta)
-          WordSearch: நிலை 1
+          WordSearch: "நிலை 1"
     game:
       name:
-        Unplug1: கணினி அறிவியலின் அறிமுகம்
+        Unplug1: "கணினி அறிவியலின் அறிமுகம்"
         Maze: The Maze
         Multi: Multiple Choice Stuffs
         Unplug2: Computational Thinking
-        Unplug3: வரைதாள் செய்நிரல்
-        Artist: கலைஞர்
-        Unplug4: வழிமுறைகள்
-        Artist2: கலைஞர் 2
-        Unplug5: செயல்பாடுகள்
-        Farmer: விவசாயி
+        Unplug3: "வரைதாள் செய்நிரல்"
+        Artist: "கலைஞர்"
+        Unplug4: "வழிமுறைகள்"
+        Artist2: "கலைஞர் 2"
+        Unplug5: "செயல்பாடுகள்"
+        Farmer: "விவசாயி"
         Unplug6: Conditionals
-        Artist3: கலைஞர் 3
-        Unplug7: பாடல் எழுதுதல்
-        Farmer2: விவசாயி 2
+        Artist3: "கலைஞர் 3"
+        Unplug7: "பாடல் எழுதுதல்"
+        Farmer2: "விவசாயி 2"
         Unplug8: Abstraction
-        Artist4: கலைஞர் 4
+        Artist4: "கலைஞர் 4"
         Unplug9: Relay Programming
-        Farmer3: விவசாயி 3
-        Unplug10: இணையம்
-        Artist5: கலைஞர் 5
+        Farmer3: "விவசாயி 3"
+        Unplug10: "இணையம்"
+        Artist5: "கலைஞர் 5"
         Unplug11: Wrap-up
         MazeEC: The Maze
         Bounce: Bounce
@@ -99,12 +100,14 @@
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
         Webapp: Webapp
-        ArtistEC: கலைஞர்
+        ArtistEC: "கலைஞர்"
+        TextMatch: Text Match
+        StudioEC: Play Lab
     trophy:
       name:
         Bronze: Bronze
-        Silver: வெள்ளி
-        Gold: தங்கம்
+        Silver: "வெள்ளி"
+        Gold: "தங்கம்"
     concept:
       description:
         sequence: Sequence
@@ -114,7 +117,7 @@
         loop_until: Repeat until block
         loop_while: While block
         loop_for: Counter block
-        function: செயல்பாடுகள்
+        function: "செயல்பாடுகள்"
         parameters: Functions with parameters
     level:
       instructions:
@@ -165,7 +168,8 @@
           the "random color" option that picks a different color each time. Hint:
           you''ll have to figure out how far to turn by clicking on the number in
           the turn block.'
-        turtle_1_5: இப்போது, பயிற்சிக்காக, மேலுறைக்கு முக்கோணம் மற்றும் சதுரத்தை வரையவும்.
+        turtle_1_5: "இப்போது, பயிற்சிக்காக, மேலுறைக்கு முக்கோணம் மற்றும் சதுரத்தை
+          வரையவும்."
         turtle_1_6: 'Can you figure out how draw this triangle and square? Hint: Do
           the triangle first, then figure out how much to turn before drawing the
           square.'
@@ -528,6 +532,11 @@
         webapp_ec_simple: Create your web app by using createHtmlBlock.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
           it in the new "penColour" block.'
+        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
+          a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
+          Have fun!'
+        studio_ec_sandbox: Create your own game. When you're done, click Finish to
+          let friends try your game on their phones.
     video:
       name:
         maze_intro: Maze Intro
@@ -538,17 +547,16 @@
         loop_until: Repeat Until Block
         if: If Block
         if_else: If/else Block
-        function: செயல்பாடுகள்
+        function: "செயல்பாடுகள்"
         loop_while: While Block
         loop_for: Counter Block
         parameters: Functions with Parameters
         hoc_wrapup: Hour of Code Wrapup
-        20_wrapup: 20-Hour Wrapup
         Unplug1: What is CS?
         Unplug2: Computational Thinking
-        Unplug3: வரைதாள் செய்நிரல்
-        Unplug4: வழிமுறைகள்
-        Unplug5: செயல்பாடுகள்
+        Unplug3: "வரைதாள் செய்நிரல்"
+        Unplug4: "வழிமுறைகள்"
+        Unplug5: "செயல்பாடுகள்"
         Unplug6: Conditionals
         Unplug7: Songwriting
         Unplug8: Abstraction
@@ -558,7 +566,7 @@
         C1_happy_maps_unplugged: Happy Maps
         C1_moveitmoveit_unplugged: Move It, Move It
         C1_bigevent_unplugged: The Big Event
-        C1_getting_loop: Getting Loopy
+        C1_getting_loopy: Getting Loopy
         C1_pair_programming: Pair Programming
         C1_maze_intro_sequencing: Maze Sequencing Intro
         C1_maze_debugging: Maze Debugging
@@ -570,19 +578,22 @@
         C1_maze_loops: Maze Loops
         C1_playlab_storytelling: Play Lab - Create a Story
         C1_planting_seed: Planting a Seed
-        C1_building_foundating: Building a Foundation
+        C1_building_foundation: Building a Foundation
         C2_maze_intro: Maze Intro
         C2_artist_intro: Artist Intro
         C2_zuck_repeat_loop: Maze Loops
         C2_artist_loops: Artist Loops
+        C2_artist_debugging: Artist Debugging
+        C2_bee_loops: Bee Loops
+        C2_bee_debugging: Bee Debugging
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: Play Lab - Create a Story
-        C2_graph_paper: வரைதாள் செய்நிரல்
+        C2_graph_paper: "வரைதாள் செய்நிரல்"
         C2_conditionals_with_cards: Conditionals
         C2_binary_bracelets: Binary Bracelets
-        C2_replay_programming: Relay Programming
+        C2_relay_programming: Relay Programming
         C2_paper_airplanes: Paper Airplanes
-        C3_maze_intro: Maze Intro
+        C3_maze_level_4: Maze Loops
         C3_artist_intro: Artist Intro
         C3_artist_functions: Artist Functions
         C3_bee_functions: Bee Functions
@@ -600,6 +611,9 @@
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
+        Frozen_intro: Hour of Code Intro
+        Frozen_loops: Introduction to Loops
+        Frozen_functions: Introduction to Functions
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
@@ -616,3 +630,34 @@
           block to enable an actor for this story
         studio_say_text: Type what you want your actor to say within these quotes
         jigsaw_click: Click this block!
+        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
+          Run" block to make Elsa move forward
+        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
+          determines how much Elsa turns
+        replace_questions: Use the drop-down to replace "???" with a number
+        replace_questions_degree: Use the drop-down to replace "???" with the correct
+          degree to turn
+        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
+          workspace
+        snowflake_dropdown: Use this drop-down to create different snowflakes!
+        degrees_per_side: Divide 360 by the number of sides to get the size of each
+          angle in degrees.
+        set_sides: Use this block to set "sides" to the number needed to complete
+          the puzzle.
+        set_length: Use this block to set "length" to the correct value.
+        which_equation: Which equation makes each side shorter for shapes with more
+          sides?  Try each equation!
+        get_nectar: Use the new "get nectar" block.
+        actions_category: The tool box got a new look! The "Actions" blocks are in
+          here now.
+        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
+        edit_function: Use this button to edit the function.
+        create_function: Click here to open the "Functions" flyout, then click the
+          "Create a Function" button.
+        house_hint: It's ok if the picture doesn't look like a house yet. We will
+          fix it in the next puzzle.
+        edit_draw_square: Use this button to edit the function and add the loop.
+        edit_get_nectar: Use this button to edit the function and change the direction
+          the Bee will turn to get the nectar.
+        logic_category: Open the "Logic" flyout to find the "if/else" block.
+        length_parameter: Can you update this function so it uses the "length" parameter?

@@ -100,7 +100,7 @@
   "whenBallMissesPaddleTooltip":"Execute the actions below when a ball misses the paddle.",
   "whenDown":"when down arrow",
   "whenDownTooltip":"Execute the actions below when the down arrow key is pressed.",
-  "whenGameStarts":"when game starts",
+  "whenGameStarts":"oyun başladıqda",
   "whenGameStartsTooltip":"Execute the actions below when the game starts.",
   "whenLeft":"when left arrow",
   "whenLeftTooltip":"Execute the actions below when the left arrow key is pressed.",

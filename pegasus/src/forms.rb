@@ -1,4 +1,5 @@
-require src_dir 'poste/api'
+require 'cdo/poste'
+require src_dir 'database'
 
 class FormError < ArgumentError
 
@@ -10,14 +11,11 @@ class FormError < ArgumentError
     errors
   end
 
-  def self.detect_and_raise(data)
-    errors = detect_errors(data)
-    raise new(errors) unless errors.empty?
-  end
-
-  def initialize(errors)
+  def initialize(kind, errors)
+    @kind = kind
     @errors = errors
-    $log.error "FormError: #{@errors.to_json}"
+
+    Pegasus.logger.warn "FormError[#{@kind}]: #{@errors.to_json}"
   end
 
   def errors

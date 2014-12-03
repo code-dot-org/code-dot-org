@@ -8,7 +8,7 @@
     "skin": "studio",
     "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
     "failure_condition": "function () {\r\n}",
-    "maze": "[[0,0,0,0,0,0,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[16,0,16,0,16,0,16,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,0,0,0,0,0,1,0],[0,0,0,0,1,0,0,0],[0,0,1,0,0,0,0,0],[1,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[16,0,16,0,16,0,16,0],[0,0,0,0,0,0,0,0]]",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",
@@ -20,10 +20,11 @@
     "sprites_hidden_to_start": "false",
     "use_modal_function_editor": "true",
     "instructions": "Let's add another parameter to the jump function so that we can use it with other actors. Each actor is represented by a number, starting from one. The \"actor\" parameter should take a number and pass that parameter to the \"move actor\" block.",
-    "protaganist_sprite_index": "3",
     "use_contract_editor": "false",
     "coordinate_grid_background": "false",
-    "maze_data": null
+    "maze_data": null,
+    "embed": "false",
+    "callout_json": "[{\r\n  \"localization_key\": \"edit_function\",\r\n  \"element_id\": \"[block-id='2']>.blocklyIconGroup\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}\r\n  }\r\n}]"
   }
 }]]></config>
   <blocks>

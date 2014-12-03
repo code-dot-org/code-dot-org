@@ -11,7 +11,7 @@ var BlocklyApps = require('../base');
 var commonMsg = require('../../locale/current/common');
 var studioMsg = require('../../locale/current/studio');
 var skins = require('../skins');
-var tiles = require('./tiles');
+var constants = require('./constants');
 var codegen = require('../codegen');
 var api = require('./api');
 var blocks = require('./blocks');
@@ -20,10 +20,10 @@ var feedback = require('../feedback.js');
 var dom = require('../dom');
 var Collidable = require('./collidable');
 var Projectile = require('./projectile');
-var Hammer = require('../hammer');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
 var _ = utils.getLodash();
+var Hammer = utils.getHammer();
 
 if (typeof SVGElement !== 'undefined') { // tests don't have svgelement??
   var rgbcolor = require('../canvg/rgbcolor.js');
@@ -32,10 +32,12 @@ if (typeof SVGElement !== 'undefined') { // tests don't have svgelement??
   var svgToDataUrl = require('../canvg/svg_todataurl');
 }
 
-var Direction = tiles.Direction;
-var NextTurn = tiles.NextTurn;
-var SquareType = tiles.SquareType;
-var Emotions = tiles.Emotions;
+var Direction = constants.Direction;
+var NextTurn = constants.NextTurn;
+var SquareType = constants.SquareType;
+var Emotions = constants.Emotions;
+
+var SVG_NS = "http://www.w3.org/2000/svg";
 
 /**
  * Create a namespace for the application.
@@ -49,22 +51,6 @@ Studio.btnState = {};
 var ButtonState = {
   UP: 0,
   DOWN: 1
-};
-
-var SpriteFlags = {
-  EMOTIONS: 4,
-  ANIMATION: 8,
-  TURNS: 16
-};
-
-var SF_SKINS_MASK =
-  SpriteFlags.EMOTIONS | SpriteFlags.ANIMATION | SpriteFlags.TURNS;
-
-var SpriteCounts = {
-  NORMAL: 1,
-  ANIMATION: 1,
-  TURNS: 7,
-  EMOTIONS: 3
 };
 
 var ArrowIds = {
@@ -119,6 +105,8 @@ BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 Studio.BLOCK_X_COORDINATE = 20;
 Studio.BLOCK_Y_COORDINATE = 20;
 
+var MAX_INTERPRETER_STEPS_PER_TICK = 200;
+
 // Default Scalings
 Studio.scale = {
   'snapRadius': 1,
@@ -167,7 +155,7 @@ function loadLevel() {
   Studio.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Studio.minWorkspaceHeight = level.minWorkspaceHeight;
   Studio.softButtons_ = level.softButtons || {};
-  Studio.protaganistSpriteIndex = level.protaganistSpriteIndex || 0;
+  Studio.protagonistSpriteIndex = level.protaganistSpriteIndex;  // SIC
 
   Studio.startAvatars = reorderedStartAvatars(skin.avatarList,
     level.firstSpriteIndex);
@@ -184,8 +172,6 @@ function loadLevel() {
   Studio.COLS = Studio.map[0].length;
   // Pixel height and width of each maze square (i.e. tile).
   Studio.SQUARE_SIZE = 50;
-  Studio.DEFAULT_SPRITE_HEIGHT = skin.spriteHeight;
-  Studio.DEFAULT_SPRITE_WIDTH = skin.spriteWidth;
   // Height and width of the goal and obstacles.
   Studio.MARKER_HEIGHT = 100;
   Studio.MARKER_WIDTH = 100;
@@ -224,7 +210,7 @@ var drawMap = function () {
   visualizationColumn.style.width = Studio.MAZE_WIDTH + 'px';
 
   if (skin.background) {
-    var tile = document.createElementNS(Blockly.SVG_NS, 'image');
+    var tile = document.createElementNS(SVG_NS, 'image');
     tile.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
                         skin.background);
     tile.setAttribute('id', 'background');
@@ -239,15 +225,15 @@ var drawMap = function () {
     for (i = 0; i < Studio.spriteCount; i++) {
       // Sprite clipPath element
       // (not setting x, y, height, or width until displaySprite)
-      var spriteClip = document.createElementNS(Blockly.SVG_NS, 'clipPath');
+      var spriteClip = document.createElementNS(SVG_NS, 'clipPath');
       spriteClip.setAttribute('id', 'spriteClipPath' + i);
-      var spriteClipRect = document.createElementNS(Blockly.SVG_NS, 'rect');
+      var spriteClipRect = document.createElementNS(SVG_NS, 'rect');
       spriteClipRect.setAttribute('id', 'spriteClipRect' + i);
       spriteClip.appendChild(spriteClipRect);
       svg.appendChild(spriteClip);
 
       // Add sprite (not setting href, height, or width until displaySprite).
-      var spriteIcon = document.createElementNS(Blockly.SVG_NS, 'image');
+      var spriteIcon = document.createElementNS(SVG_NS, 'image');
       spriteIcon.setAttribute('id', 'sprite' + i);
       spriteIcon.setAttribute('clip-path', 'url(#spriteClipPath' + i + ')');
       svg.appendChild(spriteIcon);
@@ -256,15 +242,15 @@ var drawMap = function () {
         delegate(this, Studio.onSpriteClicked, i));
     }
     for (i = 0; i < Studio.spriteCount; i++) {
-      var spriteSpeechBubble = document.createElementNS(Blockly.SVG_NS, 'g');
+      var spriteSpeechBubble = document.createElementNS(SVG_NS, 'g');
       spriteSpeechBubble.setAttribute('id', 'speechBubble' + i);
       spriteSpeechBubble.setAttribute('visibility', 'hidden');
 
-      var speechRect = document.createElementNS(Blockly.SVG_NS, 'path');
+      var speechRect = document.createElementNS(SVG_NS, 'path');
       speechRect.setAttribute('id', 'speechBubblePath' + i);
       speechRect.setAttribute('class', 'studio-speech-bubble-path');
 
-      var speechText = document.createElementNS(Blockly.SVG_NS, 'text');
+      var speechText = document.createElementNS(SVG_NS, 'text');
       speechText.setAttribute('id', 'speechBubbleText' + i);
       speechText.setAttribute('class', 'studio-speech-bubble');
 
@@ -277,9 +263,7 @@ var drawMap = function () {
   if (Studio.spriteGoals_) {
     for (i = 0; i < Studio.spriteGoals_.length; i++) {
       // Add finish markers.
-      var spriteFinishMarker = document.createElementNS(
-          Blockly.SVG_NS,
-          'image');
+      var spriteFinishMarker = document.createElementNS(SVG_NS, 'image');
       spriteFinishMarker.setAttribute('id', 'spriteFinish' + i);
       spriteFinishMarker.setAttributeNS('http://www.w3.org/1999/xlink',
                                         'xlink:href',
@@ -290,7 +274,7 @@ var drawMap = function () {
     }
   }
 
-  var score = document.createElementNS(Blockly.SVG_NS, 'text');
+  var score = document.createElementNS(SVG_NS, 'text');
   score.setAttribute('id', 'score');
   score.setAttribute('class', 'studio-score');
   score.setAttribute('x', Studio.MAZE_WIDTH / 2);
@@ -299,7 +283,7 @@ var drawMap = function () {
   score.setAttribute('visibility', 'hidden');
   svg.appendChild(score);
 
-  var titleScreenTitle = document.createElementNS(Blockly.SVG_NS, 'text');
+  var titleScreenTitle = document.createElementNS(SVG_NS, 'text');
   titleScreenTitle.setAttribute('id', 'titleScreenTitle');
   titleScreenTitle.setAttribute('class', 'studio-ts-title');
   titleScreenTitle.setAttribute('x', Studio.MAZE_WIDTH / 2);
@@ -308,7 +292,7 @@ var drawMap = function () {
   titleScreenTitle.setAttribute('visibility', 'hidden');
   svg.appendChild(titleScreenTitle);
 
-  var titleScreenTextGroup = document.createElementNS(Blockly.SVG_NS, 'g');
+  var titleScreenTextGroup = document.createElementNS(SVG_NS, 'g');
   var xPosTextGroup = (Studio.MAZE_WIDTH - TITLE_SCREEN_TEXT_WIDTH) / 2;
   titleScreenTextGroup.setAttribute('id', 'titleScreenTextGroup');
   titleScreenTextGroup.setAttribute('x', xPosTextGroup);
@@ -318,14 +302,14 @@ var drawMap = function () {
       'translate(' + xPosTextGroup + ',' + TITLE_SCREEN_TEXT_Y_POSITION + ')');
   titleScreenTextGroup.setAttribute('visibility', 'hidden');
 
-  var titleScreenTextRect = document.createElementNS(Blockly.SVG_NS, 'rect');
+  var titleScreenTextRect = document.createElementNS(SVG_NS, 'rect');
   titleScreenTextRect.setAttribute('id', 'titleScreenTextRect');
   titleScreenTextRect.setAttribute('x', 0);
   titleScreenTextRect.setAttribute('y', 0);
   titleScreenTextRect.setAttribute('width', TITLE_SCREEN_TEXT_WIDTH);
   titleScreenTextRect.setAttribute('class', 'studio-ts-text-rect');
 
-  var titleScreenText = document.createElementNS(Blockly.SVG_NS, 'text');
+  var titleScreenText = document.createElementNS(SVG_NS, 'text');
   titleScreenText.setAttribute('id', 'titleScreenText');
   titleScreenText.setAttribute('class', 'studio-ts-text');
   titleScreenText.setAttribute('x', TITLE_SCREEN_TEXT_WIDTH / 2);
@@ -527,13 +511,20 @@ var setSvgText = function(opts) {
  */
 function callHandler (name, allowQueueExtension) {
   Studio.eventHandlers.forEach(function (handler) {
-    // Note: we skip executing the code if we have not completed executing
-    // the cmdQueue on this handler (checking for non-zero length)
-    if (handler.name === name &&
-        (allowQueueExtension || (0 === handler.cmdQueue.length))) {
-      Studio.currentCmdQueue = handler.cmdQueue;
-      try { handler.func(BlocklyApps, api, Studio.Globals); } catch (e) { }
-      Studio.currentCmdQueue = null;
+    if (BlocklyApps.usingBlockly) {
+      // Note: we skip executing the code if we have not completed executing
+      // the cmdQueue on this handler (checking for non-zero length)
+      if (handler.name === name &&
+          (allowQueueExtension || (0 === handler.cmdQueue.length))) {
+        Studio.currentCmdQueue = handler.cmdQueue;
+        try { handler.func(BlocklyApps, api, Studio.Globals); } catch (e) { }
+        Studio.currentCmdQueue = null;
+      }
+    } else {
+      // TODO (cpirich): support events with parameters
+      if (handler.name === name) {
+        Studio.eventQueue.push({'fn': handler.func});
+      }
     }
   });
 }
@@ -541,10 +532,37 @@ function callHandler (name, allowQueueExtension) {
 Studio.onTick = function() {
   Studio.tickCount++;
 
-  if (Studio.tickCount === 1) {
-    callHandler('whenGameStarts');
+  if (Studio.interpreter) {
+    var doneUserCodeStep = false;
+    // In each tick, we will step the interpreter multiple times in a tight
+    // loop as long as we are interpreting code that the user can't see
+    // (function aliases at the beginning, getCallback event loop at the end)
+    for (var stepsThisTick = 0;
+         stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK && !doneUserCodeStep;
+         stepsThisTick++) {
+      var userCodeRow = codegen.selectCurrentCode(Studio.interpreter,
+                                                  BlocklyApps.editor,
+                                                  Studio.cumulativeLength,
+                                                  Studio.userCodeStartOffset,
+                                                  Studio.userCodeLength);
+      try {
+        Studio.interpreter.step();
+        doneUserCodeStep = (-1 !== userCodeRow) &&
+                            Studio.interpreter.stateStack[0] &&
+                            Studio.interpreter.stateStack[0].done;
+      }
+      catch(err) {
+        Studio.executionError = err;
+        Studio.onPuzzleComplete();
+        return;
+      }
+    }
+  } else {
+    if (Studio.tickCount === 1) {
+      callHandler('whenGameStarts');
+    }
+    Studio.executeQueue('whenGameStarts');
   }
-  Studio.executeQueue('whenGameStarts');
 
   callHandler('repeatForever');
   Studio.executeQueue('repeatForever');
@@ -659,14 +677,14 @@ function checkForCollisions() {
   var spriteCollisionDistance = function (i1, i2, yAxis) {
     var dim1 = yAxis ? Studio.sprite[i1].height : Studio.sprite[i1].width;
     var dim2 = yAxis ? Studio.sprite[i2].height : Studio.sprite[i2].width;
-    return tiles.SPRITE_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
+    return constants.SPRITE_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
   };
   var projectileCollisionDistance = function (iS, iP, yAxis) {
     var dim1 = yAxis ? Studio.sprite[iS].height : Studio.sprite[iS].width;
     var dim2 = yAxis ?
                   Studio.projectiles[iP].height :
                   Studio.projectiles[iP].width;
-    return tiles.SPRITE_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
+    return constants.SPRITE_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
   };
   var edgeCollisionDistance = function (iS, edgeName, yAxis) {
     var dim1 = yAxis ? Studio.sprite[iS].height : Studio.sprite[iS].width;
@@ -846,6 +864,7 @@ Studio.initSprites = function () {
   Studio.spriteCount = 0;
   Studio.sprite = [];
   Studio.projectiles = [];
+  Studio.startTime = null;
 
   Studio.spriteGoals_ = [];
 
@@ -867,20 +886,22 @@ Studio.initSprites = function () {
     }
   }
 
-  // Update the sprite count in the blocks:
-  blocks.setSpriteCount(Blockly, Studio.spriteCount);
-  blocks.setStartAvatars(Studio.startAvatars);
+  if (BlocklyApps.usingBlockly) {
+    // Update the sprite count in the blocks:
+    blocks.setSpriteCount(Blockly, Studio.spriteCount);
+    blocks.setStartAvatars(Studio.startAvatars);
 
-  if (level.projectileCollisions) {
-    blocks.enableProjectileCollisions(Blockly);
-  }
+    if (level.projectileCollisions) {
+      blocks.enableProjectileCollisions(Blockly);
+    }
 
-  if (level.edgeCollisions) {
-    blocks.enableEdgeCollisions(Blockly);
-  }
+    if (level.edgeCollisions) {
+      blocks.enableEdgeCollisions(Blockly);
+    }
 
-  if (level.allowSpritesOutsidePlayspace) {
-    blocks.enableSpritesOutsidePlayspace(Blockly);
+    if (level.allowSpritesOutsidePlayspace) {
+      blocks.enableSpritesOutsidePlayspace(Blockly);
+    }
   }
 };
 
@@ -976,22 +997,22 @@ Studio.init = function(config) {
   });
 
   config.loadAudio = function() {
-    Blockly.loadAudio_(skin.winSound, 'win');
-    Blockly.loadAudio_(skin.startSound, 'start');
-    Blockly.loadAudio_(skin.failureSound, 'failure');
-    Blockly.loadAudio_(skin.rubberSound, 'rubber');
-    Blockly.loadAudio_(skin.crunchSound, 'crunch');
-    Blockly.loadAudio_(skin.flagSound, 'flag');
-    Blockly.loadAudio_(skin.winPointSound, 'winpoint');
-    Blockly.loadAudio_(skin.winPoint2Sound, 'winpoint2');
-    Blockly.loadAudio_(skin.losePointSound, 'losepoint');
-    Blockly.loadAudio_(skin.losePoint2Sound, 'losepoint2');
-    Blockly.loadAudio_(skin.goal1Sound, 'goal1');
-    Blockly.loadAudio_(skin.goal2Sound, 'goal2');
-    Blockly.loadAudio_(skin.woodSound, 'wood');
-    Blockly.loadAudio_(skin.retroSound, 'retro');
-    Blockly.loadAudio_(skin.slapSound, 'slap');
-    Blockly.loadAudio_(skin.hitSound, 'hit');
+    BlocklyApps.loadAudio(skin.winSound, 'win');
+    BlocklyApps.loadAudio(skin.startSound, 'start');
+    BlocklyApps.loadAudio(skin.failureSound, 'failure');
+    BlocklyApps.loadAudio(skin.rubberSound, 'rubber');
+    BlocklyApps.loadAudio(skin.crunchSound, 'crunch');
+    BlocklyApps.loadAudio(skin.flagSound, 'flag');
+    BlocklyApps.loadAudio(skin.winPointSound, 'winpoint');
+    BlocklyApps.loadAudio(skin.winPoint2Sound, 'winpoint2');
+    BlocklyApps.loadAudio(skin.losePointSound, 'losepoint');
+    BlocklyApps.loadAudio(skin.losePoint2Sound, 'losepoint2');
+    BlocklyApps.loadAudio(skin.goal1Sound, 'goal1');
+    BlocklyApps.loadAudio(skin.goal2Sound, 'goal2');
+    BlocklyApps.loadAudio(skin.woodSound, 'wood');
+    BlocklyApps.loadAudio(skin.retroSound, 'retro');
+    BlocklyApps.loadAudio(skin.slapSound, 'slap');
+    BlocklyApps.loadAudio(skin.hitSound, 'hit');
   };
 
   config.afterInject = function() {
@@ -1008,20 +1029,22 @@ Studio.init = function(config) {
     }
     document.addEventListener('mouseup', Studio.onMouseUp, false);
 
-    /**
-     * The richness of block colours, regardless of the hue.
-     * MOOC blocks should be brighter (target audience is younger).
-     * Must be in the range of 0 (inclusive) to 1 (exclusive).
-     * Blockly's default is 0.45.
-     */
-    Blockly.HSV_SATURATION = 0.6;
+    if (BlocklyApps.usingBlockly) {
+      /**
+       * The richness of block colours, regardless of the hue.
+       * MOOC blocks should be brighter (target audience is younger).
+       * Must be in the range of 0 (inclusive) to 1 (exclusive).
+       * Blockly's default is 0.45.
+       */
+      Blockly.HSV_SATURATION = 0.6;
 
-    Blockly.SNAP_RADIUS *= Studio.scale.snapRadius;
+      Blockly.SNAP_RADIUS *= Studio.scale.snapRadius;
+    }
 
     drawMap();
   };
 
-  if (config.level.edit_blocks != 'toolbox_blocks') {
+  if (BlocklyApps.usingBlockly && config.level.edit_blocks != 'toolbox_blocks') {
     arrangeStartBlocks(config);
   }
 
@@ -1034,7 +1057,7 @@ Studio.init = function(config) {
   config.makeUrl = "http://code.org/studio";
   config.makeImage = BlocklyApps.assetUrl('media/promo.png');
 
-  config.enableShowCode = false;
+  config.enableShowCode = BlocklyApps.editCode;
   config.varsInGlobals = true;
 
   Studio.initSprites();
@@ -1058,9 +1081,12 @@ var preloadImage = function(url) {
 };
 
 var preloadBackgroundImages = function() {
-  var imageChoices = Blockly.Blocks.studio_setBackground.IMAGE_CHOICES;
-  for (var i = 0; i < imageChoices.length; i++) {
-    preloadImage(imageChoices[i][0]);
+  // TODO (cpirich): preload for non-blockly
+  if (BlocklyApps.usingBlockly) {
+    var imageChoices = skin.backgroundChoicesK1;
+    for (var i = 0; i < imageChoices.length; i++) {
+      preloadImage(imageChoices[i][0]);
+    }
   }
 };
 
@@ -1150,7 +1176,7 @@ BlocklyApps.reset = function(first) {
   if (level.coordinateGridBackground) {
     Studio.setBackground({value: 'grid'});
   } else {
-    Studio.setBackground({value: 'cave'});
+    Studio.setBackground({value: skin.defaultBackground});
   }
 
   // Reset currentCmdQueue and various counts:
@@ -1167,14 +1193,19 @@ BlocklyApps.reset = function(first) {
 
   // Reset the Globals object used to contain program variables:
   Studio.Globals = {};
+  if (BlocklyApps.editCode) {
+    Studio.eventQueue = [];
+    Studio.executionError = null;
+    Studio.interpreter = null;
+  }
 
   // Move sprites into position.
   for (i = 0; i < Studio.spriteCount; i++) {
     Studio.sprite[i] = new Collidable({
       x: Studio.spriteStart_[i].x,
       y: Studio.spriteStart_[i].y,
-      speed: tiles.DEFAULT_SPRITE_SPEED,
-      size: tiles.DEFAULT_SPRITE_SIZE,
+      speed: constants.DEFAULT_SPRITE_SPEED,
+      size: constants.DEFAULT_SPRITE_SIZE,
       dir: Direction.NONE,
       displayDir: Direction.SOUTH,
       emotion: Emotions.NORMAL,
@@ -1186,7 +1217,7 @@ BlocklyApps.reset = function(first) {
 
     var opts = {
       spriteIndex: i,
-      value: Studio.startAvatars[i],
+      value: Studio.startAvatars[i % Studio.startAvatars.length],
       forceHidden: level.spritesHiddenToStart
     };
     Studio.setSprite(opts);
@@ -1196,7 +1227,6 @@ BlocklyApps.reset = function(first) {
   }
 
   var svg = document.getElementById('svgStudio');
-
 
   for (i = 0; i < Studio.spriteGoals_.length; i++) {
     // Mark each finish as incomplete.
@@ -1225,12 +1255,15 @@ BlocklyApps.runButtonClick = function() {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
   BlocklyApps.toggleRunReset('reset');
-  Blockly.mainBlockSpace.traceOn(true);
+  if (BlocklyApps.usingBlockly) {
+    Blockly.mainBlockSpace.traceOn(true);
+  }
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
+  Studio.startTime = new Date();
   Studio.execute();
 
-  if (level.freePlay && !BlocklyApps.hideSource) {
+  if (level.freePlay && (!BlocklyApps.hideSource || level.showFinish)) {
     var shareCell = document.getElementById('share-cell');
     shareCell.className = 'share-cell-enabled';
   }
@@ -1384,6 +1417,17 @@ var defineProcedures = function (blockType) {
 };
 
 /**
+ * A miniature runtime in the interpreted world calls this function repeatedly
+ * to check to see if it should invoke any callbacks from within the
+ * interpreted world. If the eventQueue is not empty, we will return an object
+ * that contains an interpreted callback function (stored in "fn") and,
+ * optionally, callback arguments (stored in "arguments")
+ */
+var nativeGetCallback = function () {
+  return Studio.eventQueue.shift();
+};
+
+/**
  * Execute the story
  */
 Studio.execute = function() {
@@ -1400,42 +1444,80 @@ Studio.execute = function() {
   }
 
   var handlers = [];
-  registerHandlers(handlers, 'when_run', 'whenGameStarts');
-  registerHandlers(handlers, 'functional_setBackground', 'whenGameStarts');
-  registerHandlers(handlers, 'functional_setPlayerSpeed', 'whenGameStarts');
-  registerHandlers(handlers, 'functional_setEnemySpeed', 'whenGameStarts');
-  registerHandlers(handlers, 'functional_showTitleScreen', 'whenGameStarts');
-  registerHandlers(handlers, 'studio_whenLeft', 'when-left');
-  registerHandlers(handlers, 'studio_whenRight', 'when-right');
-  registerHandlers(handlers, 'studio_whenUp', 'when-up');
-  registerHandlers(handlers, 'studio_whenDown', 'when-down');
-  registerHandlersWithTitleParam(handlers,
-                                  'studio_whenArrow',
-                                  'when',
-                                  'VALUE',
-                                  ['left', 'right', 'up', 'down']);
-  registerHandlers(handlers, 'studio_repeatForever', 'repeatForever');
-  registerHandlersWithSingleSpriteParam(handlers,
-                                  'studio_whenSpriteClicked',
-                                  'whenSpriteClicked',
-                                  'SPRITE');
-  registerHandlersWithMultipleSpriteParams(handlers,
-                                   'studio_whenSpriteCollided',
-                                   'whenSpriteCollided',
-                                   'SPRITE1',
-                                   'SPRITE2');
+  if (BlocklyApps.usingBlockly) {
+    registerHandlers(handlers, 'when_run', 'whenGameStarts');
+    registerHandlers(handlers, 'functional_start_setValue', 'whenGameStarts');
+    registerHandlers(handlers, 'functional_start_setBackground', 'whenGameStarts');
+    registerHandlers(handlers, 'functional_start_setSpeeds', 'whenGameStarts');
+    registerHandlers(handlers, 'functional_start_setBackgroundAndSpeeds',
+        'whenGameStarts');
+    registerHandlers(handlers, 'functional_start_dummyOnMove',
+        'whenGameStarts');
+    registerHandlers(handlers, 'studio_whenLeft', 'when-left');
+    registerHandlers(handlers, 'studio_whenRight', 'when-right');
+    registerHandlers(handlers, 'studio_whenUp', 'when-up');
+    registerHandlers(handlers, 'studio_whenDown', 'when-down');
+    registerHandlersWithTitleParam(handlers,
+                                    'studio_whenArrow',
+                                    'when',
+                                    'VALUE',
+                                    ['left', 'right', 'up', 'down']);
+    registerHandlers(handlers, 'studio_repeatForever', 'repeatForever');
+    registerHandlersWithSingleSpriteParam(handlers,
+                                    'studio_whenSpriteClicked',
+                                    'whenSpriteClicked',
+                                    'SPRITE');
+    registerHandlersWithMultipleSpriteParams(handlers,
+                                     'studio_whenSpriteCollided',
+                                     'whenSpriteCollided',
+                                     'SPRITE1',
+                                     'SPRITE2');
+  }
 
   BlocklyApps.playAudio('start');
 
   BlocklyApps.reset(false);
 
-  // Define any top-level procedures the user may have created
-  // (must be after reset(), which resets the Studio.Globals namespace)
-  defineProcedures('procedures_defreturn');
-  defineProcedures('procedures_defnoreturn');
+  if (level.editCode) {
+    var codeWhenRun = utils.generateCodeAliases(level.codeFunctions, 'Studio');
+    Studio.userCodeStartOffset = codeWhenRun.length;
+    codeWhenRun += BlocklyApps.editor.getValue();
+    Studio.userCodeLength = codeWhenRun.length - Studio.userCodeStartOffset;
+    // Append our mini-runtime after the user's code. This will spin and process
+    // callback functions:
+    codeWhenRun += '\nwhile (true) { var obj = getCallback(); ' +
+      'if (obj) { obj.fn.apply(null, obj.arguments ? obj.arguments : null); }}';
+    var session = BlocklyApps.editor.aceEditor.getSession();
+    Studio.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
 
-  // Set event handlers and start the onTick timer
-  Studio.eventHandlers = handlers;
+    // Use JS interpreter on editCode levels
+    var initFunc = function(interpreter, scope) {
+      codegen.initJSInterpreter(interpreter, scope, {
+                                        BlocklyApps: BlocklyApps,
+                                        Studio: api,
+                                        Globals: Studio.Globals } );
+
+
+      var getCallbackObj = interpreter.createObject(interpreter.FUNCTION);
+      var wrapper = codegen.makeNativeMemberFunction(interpreter,
+                                                     nativeGetCallback,
+                                                     null);
+      interpreter.setProperty(scope,
+                              'getCallback',
+                              interpreter.createNativeFunction(wrapper));
+    };
+    Studio.interpreter = new window.Interpreter(codeWhenRun, initFunc);
+  } else {
+    // Define any top-level procedures the user may have created
+    // (must be after reset(), which resets the Studio.Globals namespace)
+    defineProcedures('procedures_defreturn');
+    defineProcedures('procedures_defnoreturn');
+    defineProcedures('functional_definition');
+
+    // Set event handlers and start the onTick timer
+    Studio.eventHandlers = handlers;
+  }
+
   Studio.intervalId = window.setInterval(Studio.onTick, Studio.scale.stepSpeed);
 };
 
@@ -1443,7 +1525,9 @@ Studio.feedbackImage = '';
 Studio.encodedFeedbackImage = '';
 
 Studio.onPuzzleComplete = function() {
-  if (level.freePlay) {
+  if (Studio.executionError) {
+    Studio.result = BlocklyApps.ResultType.ERROR;
+  } else if (level.freePlay) {
     Studio.result = BlocklyApps.ResultType.SUCCESS;
   }
 
@@ -1451,7 +1535,6 @@ Studio.onPuzzleComplete = function() {
   Studio.clearEventHandlersKillTickLoop();
 
   // If we know they succeeded, mark levelComplete true
-  // Note that we have not yet animated the succesful run
   var levelComplete = (Studio.result === BlocklyApps.ResultType.SUCCESS);
 
   // If the current level is a free play, always return the free play
@@ -1468,14 +1551,19 @@ Studio.onPuzzleComplete = function() {
     BlocklyApps.playAudio('failure');
   }
 
+  var program;
   if (level.editCode) {
-    Studio.testResults = levelComplete ?
-      BlocklyApps.TestResults.ALL_PASS :
-      BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
-  }
+    // If we want to "normalize" the JavaScript to avoid proliferation of nearly
+    // identical versions of the code on the service, we could do either of these:
 
-  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-  var textBlocks = Blockly.Xml.domToText(xml);
+    // do an acorn.parse and then use escodegen to generate back a "clean" version
+    // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
+
+    program = BlocklyApps.editor.getValue();
+  } else {
+    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+    program = Blockly.Xml.domToText(xml);
+  }
 
   Studio.waitingForReport = true;
 
@@ -1485,7 +1573,7 @@ Studio.onPuzzleComplete = function() {
       level: level.id,
       result: Studio.result === BlocklyApps.ResultType.SUCCESS,
       testResult: Studio.testResults,
-      program: encodeURIComponent(textBlocks),
+      program: encodeURIComponent(program),
       image: Studio.encodedFeedbackImage,
       onComplete: Studio.onReportComplete
     });
@@ -1521,44 +1609,50 @@ var ANIM_AFTER_NUM_NORMAL_FRAMES = 8;
 // to face south.
 var TICKS_BEFORE_FACE_SOUTH = 5;
 
-var spriteFrameNumber = function (index) {
+/**
+ * Given direction/emotion/tickCount, calculate which frame number we should
+ * display for sprite.
+ */
+function spriteFrameNumber (index) {
   var sprite = Studio.sprite[index];
-  var showThisAnimFrame = 0;
-  if ((sprite.flags & SpriteFlags.TURNS) &&
-      (sprite.displayDir !== Direction.SOUTH)) {
-    return sprite.firstTurnFrameNum + frameDirTable[sprite.displayDir];
+  var frameNum = 0;
+  if (sprite.frameCounts.turns === 7 && sprite.displayDir !== Direction.SOUTH) {
+    // turn frames start after normal and animation frames
+    return sprite.frameCounts.normal + sprite.frameCounts.animation +
+      frameDirTable[sprite.displayDir];
   }
-  if ((sprite.flags & SpriteFlags.ANIMATION) &&
-      Studio.tickCount &&
-      (1 ===
-       Math.round((Studio.tickCount + index * ANIM_OFFSET) / ANIM_RATE) %
-                  ANIM_AFTER_NUM_NORMAL_FRAMES)) {
-    // we only support two-frame animation for now, the 2nd frame is only up
-    // for 1/8th of the time (since it is a blink of the eyes)
-    showThisAnimFrame = sprite.firstAnimFrameNum;
+  if (sprite.frameCounts.animation === 1 && Studio.tickCount) {
+    // we only support two-frame animation for base playlab, the 2nd frame is
+    // only up for 1/8th of the time (since it is a blink of the eyes)
+    if (1 === Math.round((Studio.tickCount + index * ANIM_OFFSET) / ANIM_RATE) %
+        ANIM_AFTER_NUM_NORMAL_FRAMES) {
+      // animation frame is the first frame after all the normal frames
+      frameNum = sprite.frameCounts.normal;
+    }
   }
-  if (sprite.emotion !== Emotions.NORMAL &&
-      sprite.flags & SpriteFlags.EMOTIONS) {
-    return showThisAnimFrame ?
-            showThisAnimFrame :
-            sprite.firstEmotionFrameNum + (sprite.emotion - 1);
-  }
-  return showThisAnimFrame;
-};
 
-var spriteTotalFrames = function (index) {
-  var frames = SpriteCounts.NORMAL;
-  if (Studio.sprite[index].flags & SpriteFlags.ANIMATION) {
-    frames += SpriteCounts.ANIMATION;
+  if (sprite.frameCounts.normal > 1 && sprite.timePerFrame) {
+    var currentTime = new Date();
+    var ellapsed = currentTime - Studio.startTime;
+
+    // Use ellapsed time instead of tickCount
+    frameNum = Math.floor(ellapsed / sprite.timePerFrame) % sprite.frameCounts.normal;
   }
-  if (Studio.sprite[index].flags & SpriteFlags.TURNS) {
-    frames += SpriteCounts.TURNS;
+
+  if (!frameNum && sprite.emotion !== Emotions.NORMAL &&
+    sprite.frameCounts.emotions > 0) {
+    // emotion frames proceed normal, animation, turn frames
+    frameNum = sprite.frameCounts.normal + sprite.frameCounts.animation +
+      sprite.frameCounts.turns + (sprite.emotion - 1);
   }
-  if (Studio.sprite[index].flags & SpriteFlags.EMOTIONS) {
-    frames += SpriteCounts.EMOTIONS;
-  }
-  return frames;
-};
+  return frameNum;
+}
+
+function spriteTotalFrames (index) {
+  var sprite = Studio.sprite[index];
+  return sprite.frameCounts.normal + sprite.frameCounts.animation +
+    sprite.frameCounts.turns + sprite.frameCounts.emotions;
+}
 
 var updateSpeechBubblePath = function (element) {
   var height = +element.getAttribute('height');
@@ -1659,7 +1753,10 @@ Studio.displayScore = function() {
 };
 
 Studio.showCoordinates = function() {
-  var sprite = Studio.sprite[Studio.protaganistSpriteIndex];
+  var sprite = Studio.sprite[Studio.protagonistSpriteIndex || 0];
+  if (!sprite) {
+    return;
+  }
   // convert to math coordinates, with the origin at the bottom left
   // corner of the grid, and distances measured from the center of the
   // sprite.
@@ -1674,12 +1771,17 @@ Studio.queueCmd = function (id, name, opts) {
     'name': name,
     'opts': opts
   };
-  if (Studio.currentEventParams) {
-    for (var prop in Studio.currentEventParams) {
-      cmd.opts[prop] = Studio.currentEventParams[prop];
+  if (BlocklyApps.usingBlockly) {
+    if (Studio.currentEventParams) {
+      for (var prop in Studio.currentEventParams) {
+        cmd.opts[prop] = Studio.currentEventParams[prop];
+      }
     }
+    Studio.currentCmdQueue.push(cmd);
+  } else {
+    // in editCode/interpreter mode, all commands are executed immediately:
+    Studio.callCmd(cmd);
   }
-  Studio.currentCmdQueue.push(cmd);
 };
 
 Studio.executeQueue = function (name) {
@@ -1790,6 +1892,10 @@ Studio.callCmd = function (cmd) {
       BlocklyApps.highlight(cmd.id);
       Studio.vanishActor(cmd.opts);
       break;
+    case 'attachEventHandler':
+      BlocklyApps.highlight(cmd.id);
+      Studio.attachEventHandler(cmd.opts);
+      break;
   }
   return true;
 };
@@ -1803,7 +1909,7 @@ Studio.vanishActor = function (opts) {
 
   var explosion = document.getElementById('explosion' + opts.spriteIndex);
   if (!explosion) {
-    explosion = document.createElementNS(Blockly.SVG_NS, 'image');
+    explosion = document.createElementNS(SVG_NS, 'image');
     explosion.setAttribute('id', 'explosion' + opts.spriteIndex);
     explosion.setAttribute('visibility', 'hidden');
     svg.appendChild(explosion, sprite);
@@ -1867,16 +1973,6 @@ Studio.setBackground = function (opts) {
     skin[opts.value].background);
 };
 
-var computeSpriteFrameNums = function (index) {
-  var flags = Studio.sprite[index].flags;
-  Studio.sprite[index].firstAnimFrameNum = SpriteCounts.NORMAL;
-  Studio.sprite[index].firstTurnFrameNum = SpriteCounts.NORMAL +
-      ((flags & SpriteFlags.ANIMATION) ? SpriteCounts.ANIMATION : 0);
-  Studio.sprite[index].firstEmotionFrameNum =
-      Studio.sprite[index].firstTurnFrameNum +
-      ((flags & SpriteFlags.TURNS) ? SpriteCounts.TURNS : 0);
-};
-
 /**
  * Sets an actor to be a specific sprite, or alternatively to be hidden.
  * @param opts.value {string} Name of sprite, or 'hidden'
@@ -1897,14 +1993,11 @@ Studio.setSprite = function (opts) {
     return;
   }
 
-  // Inherit some flags from the skin:
-  sprite.flags &= ~SF_SKINS_MASK;
-  sprite.flags |= skin[spriteValue].spriteFlags;
+  sprite.frameCounts = skin[spriteValue].frameCounts;
+  sprite.timePerFrame = skin[spriteValue].timePerFrame;
   // Reset height and width:
-  sprite.height = sprite.size *
-    (skin[spriteValue].spriteHeight || Studio.DEFAULT_SPRITE_HEIGHT);
-  sprite.width = sprite.size *
-    (skin[spriteValue].spriteWidth || Studio.DEFAULT_SPRITE_WIDTH);
+  sprite.height = sprite.size * skin.spriteHeight;
+  sprite.width = sprite.size * skin.spriteWidth;
   sprite.value = opts.forceHidden ? 'hidden' : opts.value;
 
   var spriteClipRect = document.getElementById('spriteClipRect' + spriteIndex);
@@ -1915,7 +2008,6 @@ Studio.setSprite = function (opts) {
     skin[spriteValue].sprite);
   spriteIcon.setAttribute('width', sprite.width * spriteTotalFrames(spriteIndex));
   spriteIcon.setAttribute('height', sprite.height);
-  computeSpriteFrameNums(spriteIndex);
   // call display right away since the frame number may have changed:
   Studio.displaySprite(spriteIndex);
 };
@@ -2161,10 +2253,14 @@ Studio.throwProjectile = function (options) {
     return;
   }
 
+  var preventLoop = skin.preventProjectileLoop && skin.preventProjectileLoop(options.className);
+
   var projectileOptions = {
+    frames: /.gif$/.test(skin[options.className]) ? 1 : skin.projectileFrames,
     className: options.className,
     dir: options.dir,
     image: skin[options.className],
+    loop: !preventLoop,
     spriteX: sourceSprite.x,
     spriteY: sourceSprite.y,
     spriteHeight: sourceSprite.height,
@@ -2224,35 +2320,35 @@ Studio.makeProjectile = function (opts) {
 
 var xFromPosition = function (sprite, position) {
   switch (position) {
-    case tiles.Position.OUTTOPOUTLEFT:
-    case tiles.Position.TOPOUTLEFT:
-    case tiles.Position.MIDDLEOUTLEFT:
-    case tiles.Position.BOTTOMOUTLEFT:
-    case tiles.Position.OUTBOTTOMOUTLEFT:
+    case constants.Position.OUTTOPOUTLEFT:
+    case constants.Position.TOPOUTLEFT:
+    case constants.Position.MIDDLEOUTLEFT:
+    case constants.Position.BOTTOMOUTLEFT:
+    case constants.Position.OUTBOTTOMOUTLEFT:
       return -sprite.width;
-    case tiles.Position.OUTTOPLEFT:
-    case tiles.Position.TOPLEFT:
-    case tiles.Position.MIDDLELEFT:
-    case tiles.Position.BOTTOMLEFT:
-    case tiles.Position.OUTBOTTOMLEFT:
+    case constants.Position.OUTTOPLEFT:
+    case constants.Position.TOPLEFT:
+    case constants.Position.MIDDLELEFT:
+    case constants.Position.BOTTOMLEFT:
+    case constants.Position.OUTBOTTOMLEFT:
       return 0;
-    case tiles.Position.OUTTOPCENTER:
-    case tiles.Position.TOPCENTER:
-    case tiles.Position.MIDDLECENTER:
-    case tiles.Position.BOTTOMCENTER:
-    case tiles.Position.OUTBOTTOMCENTER:
+    case constants.Position.OUTTOPCENTER:
+    case constants.Position.TOPCENTER:
+    case constants.Position.MIDDLECENTER:
+    case constants.Position.BOTTOMCENTER:
+    case constants.Position.OUTBOTTOMCENTER:
       return (Studio.MAZE_WIDTH - sprite.width) / 2;
-    case tiles.Position.OUTTOPRIGHT:
-    case tiles.Position.TOPRIGHT:
-    case tiles.Position.MIDDLERIGHT:
-    case tiles.Position.BOTTOMRIGHT:
-    case tiles.Position.OUTBOTTOMRIGHT:
+    case constants.Position.OUTTOPRIGHT:
+    case constants.Position.TOPRIGHT:
+    case constants.Position.MIDDLERIGHT:
+    case constants.Position.BOTTOMRIGHT:
+    case constants.Position.OUTBOTTOMRIGHT:
       return Studio.MAZE_WIDTH - sprite.width;
-    case tiles.Position.OUTTOPOUTRIGHT:
-    case tiles.Position.TOPOUTRIGHT:
-    case tiles.Position.MIDDLEOUTRIGHT:
-    case tiles.Position.BOTTOMOUTRIGHT:
-    case tiles.Position.OUTBOTTOMOUTRIGHT:
+    case constants.Position.OUTTOPOUTRIGHT:
+    case constants.Position.TOPOUTRIGHT:
+    case constants.Position.MIDDLEOUTRIGHT:
+    case constants.Position.BOTTOMOUTRIGHT:
+    case constants.Position.OUTBOTTOMOUTRIGHT:
       return Studio.MAZE_WIDTH;
   }
 };
@@ -2263,35 +2359,35 @@ var xFromPosition = function (sprite, position) {
 
 var yFromPosition = function (sprite, position) {
   switch (position) {
-    case tiles.Position.OUTTOPOUTLEFT:
-    case tiles.Position.OUTTOPLEFT:
-    case tiles.Position.OUTTOPCENTER:
-    case tiles.Position.OUTTOPRIGHT:
-    case tiles.Position.OUTTOPOUTRIGHT:
+    case constants.Position.OUTTOPOUTLEFT:
+    case constants.Position.OUTTOPLEFT:
+    case constants.Position.OUTTOPCENTER:
+    case constants.Position.OUTTOPRIGHT:
+    case constants.Position.OUTTOPOUTRIGHT:
       return -sprite.height;
-    case tiles.Position.TOPOUTLEFT:
-    case tiles.Position.TOPLEFT:
-    case tiles.Position.TOPCENTER:
-    case tiles.Position.TOPRIGHT:
-    case tiles.Position.TOPOUTRIGHT:
+    case constants.Position.TOPOUTLEFT:
+    case constants.Position.TOPLEFT:
+    case constants.Position.TOPCENTER:
+    case constants.Position.TOPRIGHT:
+    case constants.Position.TOPOUTRIGHT:
       return 0;
-    case tiles.Position.MIDDLEOUTLEFT:
-    case tiles.Position.MIDDLELEFT:
-    case tiles.Position.MIDDLECENTER:
-    case tiles.Position.MIDDLERIGHT:
-    case tiles.Position.MIDDLEOUTRIGHT:
+    case constants.Position.MIDDLEOUTLEFT:
+    case constants.Position.MIDDLELEFT:
+    case constants.Position.MIDDLECENTER:
+    case constants.Position.MIDDLERIGHT:
+    case constants.Position.MIDDLEOUTRIGHT:
       return (Studio.MAZE_HEIGHT - sprite.height) / 2;
-    case tiles.Position.BOTTOMOUTLEFT:
-    case tiles.Position.BOTTOMLEFT:
-    case tiles.Position.BOTTOMCENTER:
-    case tiles.Position.BOTTOMRIGHT:
-    case tiles.Position.BOTTOMOUTRIGHT:
+    case constants.Position.BOTTOMOUTLEFT:
+    case constants.Position.BOTTOMLEFT:
+    case constants.Position.BOTTOMCENTER:
+    case constants.Position.BOTTOMRIGHT:
+    case constants.Position.BOTTOMOUTRIGHT:
       return Studio.MAZE_HEIGHT - sprite.height;
-    case tiles.Position.OUTBOTTOMOUTLEFT:
-    case tiles.Position.OUTBOTTOMLEFT:
-    case tiles.Position.OUTBOTTOMCENTER:
-    case tiles.Position.OUTBOTTOMRIGHT:
-    case tiles.Position.OUTBOTTOMOUTRIGHT:
+    case constants.Position.OUTBOTTOMOUTLEFT:
+    case constants.Position.OUTBOTTOMLEFT:
+    case constants.Position.OUTBOTTOMCENTER:
+    case constants.Position.OUTBOTTOMRIGHT:
+    case constants.Position.OUTBOTTOMOUTRIGHT:
       return Studio.MAZE_HEIGHT;
   }
 };
@@ -2367,7 +2463,7 @@ Studio.collideSpriteWith = function (spriteIndex, target, allowQueueExtension) {
 Studio.setSpritePosition = function (opts) {
   var sprite = Studio.sprite[opts.spriteIndex];
   if (opts.value) {
-    // fill in .x and .y from the tiles.Position value in opts.value
+    // fill in .x and .y from the constants.Position value in opts.value
     opts.x = xFromPosition(sprite, opts.value);
     opts.y = yFromPosition(sprite, opts.value);
   }
@@ -2424,6 +2520,10 @@ Studio.moveDistance = function (opts) {
   return (0 === opts.queuedDistance);
 };
 
+Studio.attachEventHandler = function (opts) {
+  registerEventHandler(Studio.eventHandlers, opts.eventName, opts.func);
+};
+
 Studio.timedOut = function() {
   return Studio.tickCount > Studio.timeoutFailureTick;
 };
@@ -2435,7 +2535,7 @@ function spriteAtGoal(sprite, goal) {
   var finishCollisionDistance = function (yAxis) {
     var dim1 = yAxis ? sprite.height : sprite.width;
     var dim2 = yAxis ? Studio.MARKER_HEIGHT : Studio.MARKER_WIDTH;
-    return tiles.FINISH_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
+    return constants.FINISH_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
   };
 
   var xSpriteCenter = sprite.x + sprite.width / 2;
@@ -2453,22 +2553,35 @@ function spriteAtGoal(sprite, goal) {
 
 Studio.allGoalsVisited = function() {
   var i, playSound;
-  // Currently the way things work is only one sprite can navigate to the goals.
-  // I'm calling this protaganistSprite, and it's defined by protaganistSpriteIndex on
-  // the level (or 0 otherwise).  Could alternatively allow all sprites to hit
-  // goals
-  var protaganistSprite = Studio.sprite[Studio.protaganistSpriteIndex];
+  // If protagonistSpriteIndex is set, the sprite with this index must navigate
+  // to the goals.  Otherwise any sprite can navigate to each goal.
+  var protagonistSprite = Studio.sprite[Studio.protagonistSpriteIndex];
   var finishedGoals = 0;
 
-  // can't visit all goals if we don't have any
+  // Can't visit all goals if we don't have any
   if (Studio.spriteGoals_.length === 0) {
+    return false;
+  }
+
+  // Can't visit all the goals if the specified sprite doesn't exist
+  if (Studio.protagonistSpriteIndex && !protagonistSprite) {
     return false;
   }
 
   for (i = 0; i < Studio.spriteGoals_.length; i++) {
     var goal = Studio.spriteGoals_[i];
     if (!goal.finished) {
-      goal.finished = spriteAtGoal(protaganistSprite, goal);
+      if (protagonistSprite) {
+        goal.finished = spriteAtGoal(protagonistSprite, goal);
+      } else {
+        goal.finished = false;
+        for (var j = 0; j < Studio.sprite.length; j++) {
+          if (spriteAtGoal(Studio.sprite[j], goal)) {
+            goal.finished = true;
+            break;
+          }
+        }
+      }
       playSound = goal.finished;
     }
 

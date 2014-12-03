@@ -1,8 +1,52 @@
+.droplet-palette-group-header.yellow {
+  border-left: 10px solid #e0e053; }
+
+.droplet-palette-group-header-selected.yellow {
+  background-color: #e0e053; }
+
 #divWebapp {
   overflow: hidden;
+  position: relative;
+  z-index: 1;
   width: 400px;
   height: 400px;
   background-color: white; }
+
+#divWebapp canvas {
+  position: absolute;
+  overflow: hidden;
+  top: 0px;
+  left: 0px;
+  z-index: -1; }
+
+.debug-console {
+  dispay: block; }
+
+.debug-console * {
+  font-family: monospace;
+  font-size: 12px; }
+
+.debug-input-prompt {
+  max-height: 0px;
+  display: block; }
+
+.debug-input, .debug-output {
+  width: 100%;
+  border-width: 0px;
+  padding: 0px;
+  outline: none; }
+
+.debug-output {
+  height: 100px;
+  resize: none;
+  margin-bottom: -4px;
+  overflow: scroll; }
+
+.debug-input {
+  max-height: 14px;
+  background-color: white;
+  text-indent: 14.5px;
+  overflow: hidden; }
 
 /* Slider. */
 .sliderContainer {

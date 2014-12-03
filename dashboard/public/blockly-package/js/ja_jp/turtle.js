@@ -1,4 +1,146 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+/**
+ * Copyright Marc J. Schmidt. See the LICENSE file at the top-level
+ * directory of this distribution and at
+ * https://github.com/marcj/css-element-queries/blob/master/LICENSE.
+ */
+
+    /**
+     * Class for dimension change detection.
+     *
+     * @param {Element|Element[]|Elements|jQuery} element
+     * @param {Function} callback
+     *
+     * @constructor
+     */
+    module.exports = function(element, callback) {
+        /**
+         *
+         * @constructor
+         */
+        function EventQueue() {
+            this.q = [];
+            this.add = function(ev) {
+                this.q.push(ev);
+            };
+
+            var i, j;
+            this.call = function() {
+                for (i = 0, j = this.q.length; i < j; i++) {
+                    this.q[i].call();
+                }
+            };
+        }
+
+        /**
+         * @param {HTMLElement} element
+         * @param {String}      prop
+         * @returns {String|Number}
+         */
+        function getComputedStyle(element, prop) {
+            if (element.currentStyle) {
+                return element.currentStyle[prop];
+            } else if (window.getComputedStyle) {
+                return window.getComputedStyle(element, null).getPropertyValue(prop);
+            } else {
+                return element.style[prop];
+            }
+        }
+
+        /**
+         *
+         * @param {HTMLElement} element
+         * @param {Function}    resized
+         */
+        function attachResizeEvent(element, resized) {
+            if (!element.resizedAttached) {
+                element.resizedAttached = new EventQueue();
+                element.resizedAttached.add(resized);
+            } else if (element.resizedAttached) {
+                element.resizedAttached.add(resized);
+                return;
+            }
+
+            element.resizeSensor = document.createElement('div');
+            element.resizeSensor.className = 'resize-sensor';
+            var style = 'position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: scroll; z-index: -1; visibility: hidden;';
+            var styleChild = 'position: absolute; left: 0; top: 0;';
+
+            element.resizeSensor.style.cssText = style;
+            element.resizeSensor.innerHTML =
+                '<div class="resize-sensor-expand" style="' + style + '">' +
+                    '<div style="' + styleChild + '"></div>' +
+                '</div>' +
+                '<div class="resize-sensor-shrink" style="' + style + '">' +
+                    '<div style="' + styleChild + ' width: 200%; height: 200%"></div>' +
+                '</div>';
+            element.appendChild(element.resizeSensor);
+
+            if ('absolute' !== getComputedStyle(element, 'position')) {
+                element.style.position = 'relative';
+            }
+
+            var expand = element.resizeSensor.childNodes[0];
+            var expandChild = expand.childNodes[0];
+            var shrink = element.resizeSensor.childNodes[1];
+            var shrinkChild = shrink.childNodes[0];
+
+            var lastWidth, lastHeight;
+
+            var reset = function() {
+                expandChild.style.width = expand.offsetWidth + 10 + 'px';
+                expandChild.style.height = expand.offsetHeight + 10 + 'px';
+                expand.scrollLeft = expand.scrollWidth;
+                expand.scrollTop = expand.scrollHeight;
+                shrink.scrollLeft = shrink.scrollWidth;
+                shrink.scrollTop = shrink.scrollHeight;
+                lastWidth = element.offsetWidth;
+                lastHeight = element.offsetHeight;
+            };
+
+            reset();
+
+            var changed = function() {
+                element.resizedAttached.call();
+            };
+
+            var addEvent = function(el, name, cb) {
+                if (el.attachEvent) {
+                    el.attachEvent('on' + name, cb);
+                } else {
+                    el.addEventListener(name, cb);
+                }
+            };
+
+            addEvent(expand, 'scroll', function() {
+                if (element.offsetWidth > lastWidth || element.offsetHeight > lastHeight) {
+                    changed();
+                }
+                reset();
+            });
+
+            addEvent(shrink, 'scroll',function() {
+                if (element.offsetWidth < lastWidth || element.offsetHeight < lastHeight) {
+                    changed();
+                }
+                reset();
+            });
+        }
+
+        if ('array' === typeof element ||
+          ('undefined' !== typeof jQuery && element instanceof jQuery) || //jquery
+          ('undefined' !== typeof Elements && element instanceof Elements) //mootools
+        ) {
+            var i = 0, j = element.length;
+            for (; i < j; i++) {
+                attachResizeEvent(element[i], callback);
+            }
+        } else {
+            attachResizeEvent(element, callback);
+        }
+    };
+
+},{}],2:[function(require,module,exports){
 (function (global){
 var utils = require('./utils');
 var requiredBlockUtils = require('./required_block_utils');
@@ -50,6 +192,11 @@ module.exports = function(app, levels, options) {
   BlocklyApps.BASE_URL = options.baseUrl;
   BlocklyApps.CACHE_BUST = options.cacheBust;
   BlocklyApps.LOCALE = options.locale || BlocklyApps.LOCALE;
+  // NOTE: editCode (which currently implies droplet) and usingBlockly are
+  // currently mutually exclusive.
+  BlocklyApps.editCode = options.level && options.level.editCode;
+  BlocklyApps.usingBlockly = !BlocklyApps.editCode;
+  BlocklyApps.cdoSounds = options.cdoSounds;
 
   BlocklyApps.assetUrl = function(path) {
     var url = options.baseUrl + path;
@@ -61,17 +208,20 @@ module.exports = function(app, levels, options) {
   };
 
   options.skin = options.skinsModule.load(BlocklyApps.assetUrl, options.skinId);
-  var blockInstallOptions = {
-    skin: options.skin,
-    isK1: options.level && options.level.isK1
-  };
 
-  if (options.level && options.level.edit_blocks) {
-    utils.wrapNumberValidatorsForLevelBuilder();
+  if (BlocklyApps.usingBlockly) {
+    var blockInstallOptions = {
+      skin: options.skin,
+      isK1: options.level && options.level.isK1
+    };
+
+    if (options.level && options.level.edit_blocks) {
+      utils.wrapNumberValidatorsForLevelBuilder();
+    }
+
+    blocksCommon.install(Blockly, blockInstallOptions);
+    options.blocksModule.install(Blockly, blockInstallOptions);
   }
-
-  blocksCommon.install(Blockly, blockInstallOptions);
-  options.blocksModule.install(Blockly, blockInstallOptions);
 
   addReadyListener(function() {
     if (options.readonly) {
@@ -90,7 +240,7 @@ module.exports = function(app, levels, options) {
 };
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./base":2,"./blocksCommon":4,"./dom":8,"./required_block_utils":12,"./utils":39}],2:[function(require,module,exports){
+},{"./base":3,"./blocksCommon":5,"./dom":9,"./required_block_utils":14,"./utils":42}],3:[function(require,module,exports){
 /**
  * Blockly Apps: Common code
  *
@@ -215,6 +365,7 @@ BlocklyApps.init = function(config) {
   }
 
   BlocklyApps.share = config.share;
+
   // if true, dont provide links to share on fb/twitter
   BlocklyApps.disableSocialShare = config.disableSocialShare;
   BlocklyApps.sendToPhone = config.sendToPhone;
@@ -260,12 +411,19 @@ BlocklyApps.init = function(config) {
   dom.addClickTouchEvent(resetButton, BlocklyApps.resetButtonClick);
 
   var belowViz = document.getElementById('belowVisualization');
-  if (config.referenceArea) {
-    belowViz.appendChild(config.referenceArea());
+  var referenceArea = document.getElementById('reference_area');
+  if (referenceArea) {
+    belowViz.appendChild(referenceArea);
   }
 
   var visualizationColumn = document.getElementById('visualizationColumn');
-  if (config.level.edit_blocks) {
+
+  // center game screen in embed mode
+  if(config.embed) {
+    visualizationColumn.style.margin = "0 auto";
+  }
+
+  if (BlocklyApps.usingBlockly && config.level.edit_blocks) {
     // Set a class on the main blockly div so CSS can style blocks differently
     Blockly.addClass_(container.querySelector('#blockly'), 'edit');
     // If in level builder editing blocks, make workspace extra tall
@@ -283,7 +441,7 @@ BlocklyApps.init = function(config) {
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
   }
 
-  if (!BlocklyApps.share) {
+  if (!config.embed && !BlocklyApps.share) {
     // Make the visualization responsive to screen size, except on share page.
     var visualization = document.getElementById('visualization');
     visualization.className += " responsive";
@@ -292,13 +450,15 @@ BlocklyApps.init = function(config) {
 
   if (config.hide_source) {
     BlocklyApps.hideSource = true;
-    var workspaceDiv = config.level.editCode ?
+    var workspaceDiv = BlocklyApps.editCode ?
                         document.getElementById('codeWorkspace') :
                         container.querySelector('#blockly');
-    container.className = 'hide-source';
+    if(!config.embed || config.level.skipInstructionsPopup) {
+      container.className = 'hide-source';
+    }
     workspaceDiv.style.display = 'none';
     // For share page on mobile, do not show this part.
-    if (!BlocklyApps.share || !dom.isMobile()) {
+    if ((!config.embed) && (!BlocklyApps.share || !dom.isMobile())) {
       var buttonRow = runButton.parentElement;
       var openWorkspace = document.createElement('button');
       openWorkspace.setAttribute('id', 'open-workspace');
@@ -410,43 +570,6 @@ BlocklyApps.init = function(config) {
     viewport.setAttribute('content', content.join(', '));
   }
 
-  if (config.level.editCode) {
-    BlocklyApps.editCode = true;
-    /*
-    BlocklyApps.editor = window.ace.edit('codeTextbox');
-    BlocklyApps.editor.getSession().setMode("ace/mode/javascript");
-    BlocklyApps.editor.setOptions({
-      enableBasicAutocompletion: true,
-      enableLiveAutocompletion: true
-    });
-    */
-    // using window.require forces us to use requirejs version of require
-    window.require(['droplet'], function(droplet) {
-      var displayMessage, examplePrograms, messageElement, onChange, startingText;
-      BlocklyApps.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
-        mode: 'javascript',
-        modeOptions: utils.generateDropletModeOptions(config.level.codeFunctions),
-        palette: utils.generateDropletPalette(config.level.codeFunctions)
-      });
-
-      if (config.level.startBlocks) {
-        BlocklyApps.editor.setValue(config.level.startBlocks);
-      } else {
-        var startText = '// ' + msg.typeHint() + '\n';
-        var codeFunctions = config.level.codeFunctions;
-        // Insert hint text from level codeFunctions into editCode area
-        if (codeFunctions) {
-          var hintText = '';
-          for (var i = 0; i < codeFunctions.length; i++) {
-            hintText += " " + codeFunctions[i].func + "();";
-          }
-          startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
-        }
-        BlocklyApps.editor.setValue(startText);
-      }
-    });
-  }
-
   BlocklyApps.Dialog = config.Dialog;
 
   var showCode = document.getElementById('show-code-header');
@@ -483,13 +606,41 @@ BlocklyApps.init = function(config) {
     });
   }
 
-  // The share page does not show the rotateContainer.
-  if (BlocklyApps.share) {
+  // The share and embed pages do not show the rotateContainer.
+  if (BlocklyApps.share || config.embed) {
     var rotateContainer = document.getElementById('rotateContainer');
     if (rotateContainer) {
       rotateContainer.style.display = 'none';
     }
   }
+
+  // In embed mode, the display scales down when the width of the visualizationColumn goes below the min width
+  if(config.embed) {
+    var resized = false;
+    var resize = function() {
+      var vizCol = document.getElementById('visualizationColumn');
+      var width = vizCol.offsetWidth;
+      var height = vizCol.offsetHeight;
+      var displayWidth = BlocklyApps.MIN_MOBILE_NO_PADDING_SHARE_WIDTH;
+      var scale = Math.min(width / displayWidth, height / displayWidth);
+      var viz = document.getElementById('visualization');
+      viz.style['transform-origin'] = 'left top';
+      viz.style['-webkit-transform'] = 'scale(' + scale + ')';
+      viz.style['max-height'] = (displayWidth * scale) + 'px';
+      viz.style.display = 'block';
+      vizCol.style.width = '';
+      document.getElementById('visualizationColumn').style['max-width'] = displayWidth + 'px';
+      // Needs to run twice on initialization
+      if(!resized) {
+        resized = true;
+        resize();
+      }
+    };
+    // Depends on ResizeSensor.js
+    var ResizeSensor = require('./ResizeSensor');
+    new ResizeSensor(document.getElementById('visualizationColumn'), resize);
+  }
+
   var orientationHandler = function() {
     window.scrollTo(0, 0);  // Browsers like to mess with scroll on rotate.
     var rotateContainer = document.getElementById('rotateContainer');
@@ -526,42 +677,85 @@ BlocklyApps.init = function(config) {
     wrapper.style.display = 'none';
   }
 
-  // Allow empty blocks if editing blocks.
-  if (config.level.edit_blocks) {
-    BlocklyApps.CHECK_FOR_EMPTY_BLOCKS = false;
-    if (config.level.edit_blocks === 'required_blocks' ||
-      config.level.edit_blocks === 'toolbox_blocks') {
-      // Don't show when run block for toolbox/required block editing
-      config.forceInsertTopBlock = null;
-    }
-  }
+  if (BlocklyApps.editCode) {
+    // using window.require forces us to use requirejs version of require
+    window.require(['droplet'], function(droplet) {
+      var displayMessage, examplePrograms, messageElement, onChange, startingText;
+      BlocklyApps.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
+        mode: 'javascript',
+        modeOptions: utils.generateDropletModeOptions(config.level.codeFunctions),
+        palette: utils.generateDropletPalette(config.level.codeFunctions,
+                                              config.level.categoryInfo)
+      });
 
-  var div = document.getElementById('blockly');
-  var options = {
-    toolbox: config.level.toolbox,
-    disableParamEditing: config.level.disableParamEditing === undefined ?
-        true : config.level.disableParamEditing,
-    disableVariableEditing: config.level.disableVariableEditing === undefined ?
-        false : config.level.disableVariableEditing,
-    useModalFunctionEditor: config.level.useModalFunctionEditor === undefined ?
-        false : config.level.useModalFunctionEditor,
-    useContractEditor: config.level.useContractEditor === undefined ?
-        false : config.level.useContractEditor,
-    scrollbars: config.level.scrollbars,
-    editBlocks: config.level.edit_blocks === undefined ?
-        false : config.level.edit_blocks
-  };
-  ['trashcan', 'concreteBlocks', 'varsInGlobals',
-    'grayOutUndeletableBlocks', 'disableParamEditing'].forEach(
-    function (prop) {
-      if (config[prop] !== undefined) {
-        options[prop] = config[prop];
+      if (config.afterInject) {
+        config.afterInject();
+      }
+
+      if (config.level.startBlocks) {
+        BlocklyApps.editor.setValue(config.level.startBlocks);
+      } else {
+        var startText = '// ' + msg.typeHint() + '\n';
+        var codeFunctions = config.level.codeFunctions;
+        // Insert hint text from level codeFunctions into editCode area
+        if (codeFunctions) {
+          var hintText = '';
+          for (var i = 0; i < codeFunctions.length; i++) {
+            hintText += " " + codeFunctions[i].func + "();";
+          }
+          startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
+        }
+        BlocklyApps.editor.setValue(startText);
       }
     });
-  BlocklyApps.inject(div, options);
+  }
 
-  if (config.afterInject) {
-    config.afterInject();
+  if (BlocklyApps.usingBlockly) {
+    // Allow empty blocks if editing blocks.
+    if (config.level.edit_blocks) {
+      BlocklyApps.CHECK_FOR_EMPTY_BLOCKS = false;
+      if (config.level.edit_blocks === 'required_blocks' ||
+        config.level.edit_blocks === 'toolbox_blocks') {
+        // Don't show when run block for toolbox/required block editing
+        config.forceInsertTopBlock = null;
+      }
+    }
+
+    var div = document.getElementById('blockly');
+    var options = {
+      toolbox: config.level.toolbox,
+      disableParamEditing: config.level.disableParamEditing === undefined ?
+          true : config.level.disableParamEditing,
+      disableVariableEditing: config.level.disableVariableEditing === undefined ?
+          false : config.level.disableVariableEditing,
+      useModalFunctionEditor: config.level.useModalFunctionEditor === undefined ?
+          false : config.level.useModalFunctionEditor,
+      useContractEditor: config.level.useContractEditor === undefined ?
+          false : config.level.useContractEditor,
+      scrollbars: config.level.scrollbars,
+      editBlocks: config.level.edit_blocks === undefined ?
+          false : config.level.edit_blocks
+    };
+    ['trashcan', 'concreteBlocks', 'varsInGlobals',
+      'grayOutUndeletableBlocks', 'disableParamEditing'].forEach(
+      function (prop) {
+        if (config[prop] !== undefined) {
+          options[prop] = config[prop];
+        }
+      });
+    BlocklyApps.inject(div, options);
+
+    if (config.afterInject) {
+      config.afterInject();
+    }
+
+    // Add the starting block(s).
+    var startBlocks = config.level.startBlocks || '';
+    if (config.forceInsertTopBlock) {
+      startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
+    }
+    startBlocks = BlocklyApps.arrangeBlockPosition(startBlocks, config.blockArrangement);
+    BlocklyApps.loadBlocks(startBlocks);
   }
 
   // Initialize the slider.
@@ -576,53 +770,75 @@ BlocklyApps.init = function(config) {
     }
   }
 
-  if (!BlocklyApps.editCode) {
-    // Add the starting block(s).
-    var startBlocks = config.level.startBlocks || '';
-    if (config.forceInsertTopBlock) {
-      startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
-    }
-    startBlocks = BlocklyApps.arrangeBlockPosition(startBlocks, config.blockArrangement);
-    BlocklyApps.loadBlocks(startBlocks);
-  }
-
   // listen for scroll and resize to ensure onResize() is called
   window.addEventListener('scroll', function() {
     BlocklyApps.onResize();
-    Blockly.fireUiEvent(window, 'resize');
+    var event = document.createEvent('UIEvents');
+    event.initEvent('resize', true, true);  // event type, bubbling, cancelable
+    window.dispatchEvent(event);
   });
   window.addEventListener('resize', BlocklyApps.onResize);
 
-  // call initial onResize() asynchronously - need 100ms delay to work
-  // around relayout which changes height on the left side to the proper
-  // value
+  // Call initial onResize() asynchronously - need 10ms delay to work around
+  // relayout which changes height on the left side to the proper value
   window.setTimeout(function() {
-      BlocklyApps.onResize();
-      Blockly.fireUiEvent(window, 'resize');
-    },
-    100);
+    BlocklyApps.onResize();
+    var event = document.createEvent('UIEvents');
+    event.initEvent('resize', true, true);  // event type, bubbling, cancelable
+    window.dispatchEvent(event);
+  }, 10);
 
   BlocklyApps.reset(true);
 
   // Add display of blocks used.
   setIdealBlockNumber();
-  Blockly.mainBlockSpaceEditor.addChangeListener(function() {
-    BlocklyApps.updateBlockCount();
-  });
 
-  if (config.level.openFunctionDefinition) {
-    Blockly.functionEditor.openAndEditFunction(config.level.openFunctionDefinition);
+  // TODO (cpirich): implement block count for droplet (for now, blockly only)
+  if (BlocklyApps.usingBlockly) {
+    Blockly.mainBlockSpaceEditor.addChangeListener(function() {
+      BlocklyApps.updateBlockCount();
+    });
+
+    if (config.level.openFunctionDefinition) {
+      Blockly.functionEditor.openAndEditFunction(config.level.openFunctionDefinition);
+    }
+  }
+};
+
+exports.loadAudio = function(filenames, name) {
+  if (BlocklyApps.usingBlockly) {
+    Blockly.loadAudio_(filenames, name);
+  } else if (BlocklyApps.cdoSounds) {
+    var regOpts = { id: name };
+    for (var i = 0; i < filenames.length; i++) {
+      var filename = filenames[i];
+      var ext = filename.match(/\.(\w+)(\?.*)?$/);
+      if (ext) {
+        // Extend regOpts so regOpts.mp3 = 'file.mp3'
+        regOpts[ext[1]] = filename;
+      }
+    }
+    BlocklyApps.cdoSounds.register(regOpts);
   }
 };
 
 exports.playAudio = function(name, options) {
   options = options || {};
   var defaultOptions = {volume: 0.5};
-  Blockly.playAudio(name, utils.extend(defaultOptions, options));
+  var newOptions = utils.extend(defaultOptions, options);
+  if (BlocklyApps.usingBlockly) {
+    Blockly.playAudio(name, newOptions);
+  } else if (BlocklyApps.cdoSounds) {
+    BlocklyApps.cdoSounds.play(name, newOptions);
+  }
 };
 
 exports.stopLoopingAudio = function(name) {
-  Blockly.stopLoopingAudio(name);
+  if (BlocklyApps.usingBlockly) {
+    Blockly.stopLoopingAudio(name);
+  } else if (BlocklyApps.cdoSounds) {
+    BlocklyApps.cdoSounds.stopLoopingAudio(name);
+  }
 };
 
 /**
@@ -808,7 +1024,15 @@ BlocklyApps.onResize = function() {
 
   div.style.top = divParent.offsetTop + 'px';
   var fullWorkspaceWidth = parentWidth - (gameWidth + WORKSPACE_PLAYSPACE_GAP);
+  var oldWidth = parseInt(div.style.width, 10) || div.getBoundingClientRect().width;
   div.style.width = fullWorkspaceWidth + 'px';
+
+  // Keep blocks static relative to the right edge in RTL mode
+  if (BlocklyApps.usingBlockly && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
+    Blockly.mainBlockSpace.getTopBlocks().forEach(function(topBlock) {
+      topBlock.moveBy(fullWorkspaceWidth - oldWidth, 0);
+    });
+  }
 
   if (BlocklyApps.isRtl()) {
     div.style.marginRight = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
@@ -834,55 +1058,40 @@ BlocklyApps.onResize = function() {
   BlocklyApps.resizeHeaders(fullWorkspaceWidth);
 };
 
-// |         toolbox-header           | workspace-header  | show-code-header |
+// |          toolbox-header          | workspace-header  | show-code-header |
 // |
-// | categoriesWidth |  toolboxWidth  |
+// |           toolboxWidth           |
 // |                 |         <--------- workspaceWidth ---------->         |
 // |         <---------------- fullWorkspaceWidth ----------------->         |
 BlocklyApps.resizeHeaders = function (fullWorkspaceWidth) {
-  var categoriesWidth = 0;
-  var categories = BlocklyApps.editCode ?
-      document.querySelector('.droplet-palette-wrapper') :
-      Blockly.mainBlockSpaceEditor.toolbox &&
-      Blockly.mainBlockSpaceEditor.toolbox.HtmlDiv;
-  if (categories) {
+  var minWorkspaceWidthForShowCode = BlocklyApps.editCode ? 250 : 450;
+  var toolboxWidth = 0;
+  if (BlocklyApps.editCode) {
     // If in the droplet editor, but not using blocks, keep categoryWidth at 0
     if (!BlocklyApps.editCode || BlocklyApps.editor.currentlyUsingBlocks) {
-      // set CategoryWidth based on the block toolbox/palette width:
-      categoriesWidth = parseInt(window.getComputedStyle(categories).width, 10);
+      // Set toolboxWidth based on the block palette width:
+      var categories = document.querySelector('.droplet-palette-wrapper');
+      toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
     }
+  } else if (BlocklyApps.usingBlockly) {
+    toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
   }
 
-  var workspaceWidth = Blockly.mainBlockSpaceEditor.getBlockSpaceWidth();
-  var toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
-
-  if (BlocklyApps.editCode) {
-    workspaceWidth = fullWorkspaceWidth - categoriesWidth;
-    toolboxWidth = 0;
-  }
-
-  var headers = document.getElementById('headers');
-  var workspaceHeader = document.getElementById('workspace-header');
-  var toolboxHeader = document.getElementById('toolbox-header');
   var showCodeHeader = document.getElementById('show-code-header');
-
-  var showCodeWidth;
-  var minWorkspaceWidthForShowCode = BlocklyApps.editCode ? 250 : 450;
+  var showCodeWidth = 0;
   if (BlocklyApps.enableShowCode &&
-      (workspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
+      (fullWorkspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
     showCodeWidth = parseInt(window.getComputedStyle(showCodeHeader).width, 10);
     showCodeHeader.style.display = "";
   }
   else {
-    showCodeWidth = 0;
     showCodeHeader.style.display = "none";
   }
 
-  headers.style.width = (categoriesWidth + workspaceWidth) + 'px';
-  toolboxHeader.style.width = (categoriesWidth + toolboxWidth) + 'px';
-  workspaceHeader.style.width = (workspaceWidth -
-                                 toolboxWidth -
-                                 showCodeWidth) + 'px';
+  document.getElementById('headers').style.width = fullWorkspaceWidth + 'px';
+  document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
+  document.getElementById('workspace-header').style.width =
+      (fullWorkspaceWidth - toolboxWidth - showCodeWidth) + 'px';
 };
 
 /**
@@ -891,14 +1100,16 @@ BlocklyApps.resizeHeaders = function (fullWorkspaceWidth) {
  * @param {boolean} spotlight Optional.  Highlight entire block if true
  */
 BlocklyApps.highlight = function(id, spotlight) {
-  if (id) {
-    var m = id.match(/^block_id_(\d+)$/);
-    if (m) {
-      id = m[1];
+  if (BlocklyApps.usingBlockly) {
+    if (id) {
+      var m = id.match(/^block_id_(\d+)$/);
+      if (m) {
+        id = m[1];
+      }
     }
-  }
 
-  Blockly.mainBlockSpace.highlightBlock(id, spotlight);
+    Blockly.mainBlockSpace.highlightBlock(id, spotlight);
+  }
 };
 
 /**
@@ -1030,7 +1241,7 @@ BlocklyApps.report = function(options) {
   // they cannot have modified. In that case, don't report it to the service
   // or call the onComplete() callback expected. The app will just sit
   // there with the Reset button as the only option.
-  if (!BlocklyApps.hideSource) {
+  if (!(BlocklyApps.hideSource && BlocklyApps.share)) {
     var onAttemptCallback = (function() {
       return function(builderDetails) {
         for (var option in builderDetails) {
@@ -1057,8 +1268,10 @@ BlocklyApps.resetButtonClick = function() {
   onResetPressed();
   BlocklyApps.toggleRunReset('run');
   BlocklyApps.clearHighlighting();
-  Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
-  Blockly.mainBlockSpace.traceOn(false);
+  if (BlocklyApps.usingBlockly) {
+    Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
+    Blockly.mainBlockSpace.traceOn(false);
+  }
   BlocklyApps.reset(false);
 };
 
@@ -1100,7 +1313,7 @@ var getIdealBlockNumberMsg = function() {
       msg.infinity() : BlocklyApps.IDEAL_BLOCK_NUM;
 };
 
-},{"../locale/ja_jp/common":41,"./block_utils":3,"./builder":5,"./constants.js":7,"./dom":8,"./feedback.js":9,"./slider":14,"./templates/buttons.html":16,"./templates/instructions.html":18,"./templates/learn.html":19,"./templates/makeYourOwn.html":20,"./utils":39,"./xml":40}],3:[function(require,module,exports){
+},{"../locale/ja_jp/common":44,"./ResizeSensor":1,"./block_utils":4,"./builder":6,"./constants.js":8,"./dom":9,"./feedback.js":10,"./slider":16,"./templates/buttons.html":18,"./templates/instructions.html":20,"./templates/learn.html":21,"./templates/makeYourOwn.html":22,"./utils":42,"./xml":43}],4:[function(require,module,exports){
 var xml = require('./xml');
 
 exports.createToolbox = function(blocks) {
@@ -1200,8 +1413,8 @@ exports.domStringToBlock = function(blockDOMString) {
  */
 exports.forceInsertTopBlock = function (input, blockType) {
   input = input || '';
-  
-  if (input.indexOf(blockType) !== -1) {
+
+  if (blockType === null || input.indexOf(blockType) !== -1) {
     return input;
   }
 
@@ -1289,7 +1502,7 @@ exports.mathBlockXml = function (type, inputs, titles) {
   return str;
 };
 
-},{"./xml":40}],4:[function(require,module,exports){
+},{"./xml":43}],5:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -1454,7 +1667,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/ja_jp/common":41}],5:[function(require,module,exports){
+},{"../locale/ja_jp/common":44}],6:[function(require,module,exports){
 var feedback = require('./feedback.js');
 var dom = require('./dom.js');
 var utils = require('./utils.js');
@@ -1484,7 +1697,7 @@ exports.builderForm = function(onAttemptCallback) {
   dialog.show({ backdrop: 'static' });
 };
 
-},{"./dom.js":8,"./feedback.js":9,"./templates/builder.html":15,"./utils.js":39,"url":53}],6:[function(require,module,exports){
+},{"./dom.js":9,"./feedback.js":10,"./templates/builder.html":17,"./utils.js":42,"url":56}],7:[function(require,module,exports){
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
@@ -1625,6 +1838,30 @@ exports.initJSInterpreter = function (interpreter, scope, options) {
   }
 };
 
+/**
+ * Check to see if it is safe to step the interpreter while we are unwinding.
+ * (Called repeatedly after completing a step where the node was marked 'done')
+ */
+exports.isNextStepSafeWhileUnwinding = function (interpreter) {
+  var state = interpreter.stateStack[0];
+  if (state.done) {
+    return true;
+  }
+  switch (state.node.type) {
+    case "VariableDeclaration":
+    case "BlockStatement":
+    case "ForStatement": // check for state.mode ?
+    case "UpdateExpression":
+    case "BinaryExpression":
+    case "CallExpression":
+    case "Identifier":
+    case "Literal":
+    case "Program":
+      return true;
+  }
+  return false;
+};
+
 // session is an instance of Ace editSession
 // Usage
 // var lengthArray = aceCalculateCumulativeLength(editor.getSession());
@@ -1665,9 +1902,11 @@ function aceFindRow(cumulativeLength, rows, rowe, pos) {
   return mid;
 }
 
-/**
- * Selects code in an ace editor.
- */
+exports.isAceBreakpointRow = function (session, userCodeRow) {
+  var bps = session.getBreakpoints();
+  return Boolean(bps[userCodeRow]);
+};
+
 function createSelection (selection, cumulativeLength, start, end) {
   var range = selection.getRange();
 
@@ -1679,9 +1918,15 @@ function createSelection (selection, cumulativeLength, start, end) {
   selection.setSelectionRange(range);
 }
 
+/**
+ * Selects code in droplet/ace editor.
+ *
+ * Returns the row (line) of code highlighted. If nothing is highlighted
+ * because it is outside of the userCode area, the return value is -1
+ */
 exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
                                       userCodeStartOffset, userCodeLength) {
-  var inUserCode = false;
+  var userCodeRow = -1;
   if (interpreter.stateStack[0]) {
     var node = interpreter.stateStack[0].node;
     // Adjust start/end by Webapp.userCodeStartOffset since the code running
@@ -1693,17 +1938,20 @@ exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
     // code (not inside code we inserted before or after their code that is
     // not visible in the editor):
     if (start > 0 && start < userCodeLength) {
+      userCodeRow = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
       // Highlight the code being executed in each step:
       if (editor.currentlyUsingBlocks) {
         var style = {color: '#FFFF22'};
-        var line = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
         editor.clearLineMarks();
-        editor.markLine(line, style);
+        // NOTE: replace markLine with this new mark() call once we have a new
+        // version of droplet
+        
+        // editor.mark(userCodeRow, start - cumulativeLength[userCodeRow], style);
+        editor.markLine(userCodeRow, style);
       } else {
         var selection = editor.aceEditor.getSelection();
         createSelection(selection, cumulativeLength, start, end);
       }
-      inUserCode = true;
     }
   } else {
     if (editor.currentlyUsingBlocks) {
@@ -1712,7 +1960,7 @@ exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
       editor.aceEditor.getSelection().clearSelection();
     }
   }
-  return inUserCode;
+  return userCodeRow;
 };
 
 /**
@@ -1768,7 +2016,7 @@ exports.functionFromCode = function(code, options) {
   }
 };
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 /**
  * @fileoverview Constants used in production code and tests.
  */
@@ -1830,7 +2078,7 @@ exports.BeeTerminationValue = {
   INSUFFICIENT_HONEY: 8  // Didn't make all honey by finish
 };
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 exports.addReadyListener = function(callback) {
   if (document.readyState === "complete") {
     setTimeout(callback, 1);
@@ -1937,7 +2185,7 @@ exports.isIOS = function() {
   return reg.test(window.navigator.userAgent);
 };
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 var trophy = require('./templates/trophy.html');
 var utils = require('./utils');
 var readonly = require('./templates/readonly.html');
@@ -1968,7 +2216,7 @@ exports.displayFeedback = function(options) {
   var showingSharing = options.showingSharing && !hadShareFailure;
 
   var canContinue = exports.canContinueToNextLevel(options.feedbackType);
-  var displayShowCode = BlocklyApps.enableShowCode && canContinue;
+  var displayShowCode = BlocklyApps.enableShowCode && canContinue && !showingSharing;
   var feedback = document.createElement('div');
   var sharingDiv = (canContinue && showingSharing) ? exports.createSharingDiv(options) : null;
   var showCode = displayShowCode ? getShowCodeElement(options) : null;
@@ -2020,6 +2268,9 @@ exports.displayFeedback = function(options) {
   }
   if (options.level.isK1) {
     feedback.className += " k1";
+  }
+  if (options.appDiv) {
+    feedback.appendChild(options.appDiv);
   }
 
   feedback.appendChild(
@@ -2133,6 +2384,21 @@ exports.displayFeedback = function(options) {
     dom.addClickTouchEvent(saveToGalleryButton, function() {
       $.post(options.response.save_to_gallery_url,
              function() { $('#save-to-gallery-button').prop('disabled', true).text("Saved!"); });
+    });
+  }
+
+  function createHiddenPrintWindow(src) {
+    var iframe = $('<iframe id="print_frame" style="display: none"></iframe>'); // Created a hidden iframe with just the desired image as its contents
+    iframe.appendTo("body");
+    iframe[0].contentWindow.document.write("<img src='" + src + "'/>");
+    iframe[0].contentWindow.document.write("<script>if (document.execCommand('print', false, null)) {  } else { window.print();  } </script>");
+    $("#print_frame").remove(); // Remove the iframe when the print dialogue has been launched
+  }
+
+  var printButton = feedback.querySelector('#print-button');
+  if (printButton) {
+    dom.addClickTouchEvent(printButton, function() {
+      createHiddenPrintWindow(options.feedbackImage);
     });
   }
 
@@ -2317,6 +2583,11 @@ var getFeedbackMessage = function(options) {
       // Free plays
       case TestResults.FREE_PLAY:
         message = options.appStrings.reinfFeedbackMsg;
+        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
+        // a more generic message
+        if (options.level.disableSharing) {
+          message = msg.finalStage();
+        }
         break;
     }
   }
@@ -2359,7 +2630,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -2370,11 +2640,25 @@ exports.createSharingDiv = function(options) {
     if (options.twitter && options.twitter.text !== undefined) {
       twitterUrl += "&text=" + encodeURI(options.twitter.text);
     }
-    if (options.twitter  && options.twitter.hashtag !== undefined) {
-      twitterUrl += "&button_hashtag=" + options.twitter.hashtag;
+    else {
+      twitterUrl += "&text=" + encodeURI(msg.defaultTwitterText() + " @codeorg");
     }
-    options.twitterUrl = twitterUrl;
 
+    if (options.twitter  && options.twitter.hashtag !== undefined) {
+      twitterUrl += "&hashtags=" + options.twitter.hashtag;
+    }
+    else {
+      twitterUrl += "&hashtags=" + 'HourOfCode';
+    }
+
+    if (options.twitter && options.twitter.related !== undefined) {
+      twitterUrl += "&related=" + options.twitter.related;
+    }
+    else {
+      twitterUrl += "&related=codeorg";
+    }
+
+    options.twitterUrl = twitterUrl;
 
     // set up the facebook share url
     var facebookUrl = "https://www.facebook.com/sharer/sharer.php?u=" +
@@ -2745,11 +3029,18 @@ var getMissingRequiredBlocks = function () {
  * Do we have any floating blocks not attached to an event block or function block?
  */
 exports.hasExtraTopBlocks = function () {
+  if (BlocklyApps.editCode) {
+    return false;
+  }
   var topBlocks = Blockly.mainBlockSpace.getTopBlocks();
   for (var i = 0; i < topBlocks.length; i++) {
     // ignore disabled top blocks. we have a level turtle:2_7 that depends on
     // having disabled top level blocks
     if (topBlocks[i].disabled) {
+      continue;
+    }
+    // Ignore top blocks which are functional definitions.
+    if (topBlocks[i].type === 'functional_definition') {
       continue;
     }
     // None of our top level blocks should have a previous connection.
@@ -2767,6 +3058,12 @@ exports.hasExtraTopBlocks = function () {
  */
 exports.getTestResults = function(levelComplete, options) {
   options = options || {};
+  if (BlocklyApps.editCode) {
+    // TODO (cpirich): implement better test results for editCode
+    return levelComplete ?
+      BlocklyApps.TestResults.ALL_PASS :
+      BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
+  }
   if (BlocklyApps.CHECK_FOR_EMPTY_BLOCKS && hasEmptyContainerBlocks()) {
     var type = getEmptyContainerBlock().type;
     if (type === 'procedures_defnoreturn' || type === 'procedures_defreturn') {
@@ -2884,7 +3181,2171 @@ var generateXMLForBlocks = function(blocks) {
 };
 
 
-},{"../locale/ja_jp/common":41,"./codegen":6,"./constants":7,"./dom":8,"./templates/buttons.html":16,"./templates/code.html":17,"./templates/readonly.html":22,"./templates/shareFailure.html":23,"./templates/sharing.html":24,"./templates/showCode.html":25,"./templates/trophy.html":26,"./utils":39}],10:[function(require,module,exports){
+},{"../locale/ja_jp/common":44,"./codegen":7,"./constants":8,"./dom":9,"./templates/buttons.html":18,"./templates/code.html":19,"./templates/readonly.html":24,"./templates/shareFailure.html":25,"./templates/sharing.html":26,"./templates/showCode.html":27,"./templates/trophy.html":28,"./utils":42}],11:[function(require,module,exports){
+/*! Hammer.JS - v1.1.3 - 2014-05-22
+ * http://eightmedia.github.io/hammer.js
+ *
+ * Copyright (c) 2014 Jorik Tangelder <j.tangelder@gmail.com>;
+ * Licensed under the MIT license */
+
+(function(window, undefined) {
+  'use strict';
+
+/**
+ * @main
+ * @module hammer
+ *
+ * @class Hammer
+ * @static
+ */
+
+/**
+ * Hammer, use this to create instances
+ * ````
+ * var hammertime = new Hammer(myElement);
+ * ````
+ *
+ * @method Hammer
+ * @param {HTMLElement} element
+ * @param {Object} [options={}]
+ * @return {Hammer.Instance}
+ */
+var Hammer = function Hammer(element, options) {
+    return new Hammer.Instance(element, options || {});
+};
+
+/**
+ * version, as defined in package.json
+ * the value will be set at each build
+ * @property VERSION
+ * @final
+ * @type {String}
+ */
+Hammer.VERSION = '1.1.3';
+
+/**
+ * default settings.
+ * more settings are defined per gesture at `/gestures`. Each gesture can be disabled/enabled
+ * by setting it's name (like `swipe`) to false.
+ * You can set the defaults for all instances by changing this object before creating an instance.
+ * @example
+ * ````
+ *  Hammer.defaults.drag = false;
+ *  Hammer.defaults.behavior.touchAction = 'pan-y';
+ *  delete Hammer.defaults.behavior.userSelect;
+ * ````
+ * @property defaults
+ * @type {Object}
+ */
+Hammer.defaults = {
+    /**
+     * this setting object adds styles and attributes to the element to prevent the browser from doing
+     * its native behavior. The css properties are auto prefixed for the browsers when needed.
+     * @property defaults.behavior
+     * @type {Object}
+     */
+    behavior: {
+        /**
+         * Disables text selection to improve the dragging gesture. When the value is `none` it also sets
+         * `onselectstart=false` for IE on the element. Mainly for desktop browsers.
+         * @property defaults.behavior.userSelect
+         * @type {String}
+         * @default 'none'
+         */
+        userSelect: 'none',
+
+        /**
+         * Specifies whether and how a given region can be manipulated by the user (for instance, by panning or zooming).
+         * Used by Chrome 35> and IE10>. By default this makes the element blocking any touch event.
+         * @property defaults.behavior.touchAction
+         * @type {String}
+         * @default: 'pan-y'
+         */
+        touchAction: 'pan-y',
+
+        /**
+         * Disables the default callout shown when you touch and hold a touch target.
+         * On iOS, when you touch and hold a touch target such as a link, Safari displays
+         * a callout containing information about the link. This property allows you to disable that callout.
+         * @property defaults.behavior.touchCallout
+         * @type {String}
+         * @default 'none'
+         */
+        touchCallout: 'none',
+
+        /**
+         * Specifies whether zooming is enabled. Used by IE10>
+         * @property defaults.behavior.contentZooming
+         * @type {String}
+         * @default 'none'
+         */
+        contentZooming: 'none',
+
+        /**
+         * Specifies that an entire element should be draggable instead of its contents.
+         * Mainly for desktop browsers.
+         * @property defaults.behavior.userDrag
+         * @type {String}
+         * @default 'none'
+         */
+        userDrag: 'none',
+
+        /**
+         * Overrides the highlight color shown when the user taps a link or a JavaScript
+         * clickable element in Safari on iPhone. This property obeys the alpha value, if specified.
+         *
+         * If you don't specify an alpha value, Safari on iPhone applies a default alpha value
+         * to the color. To disable tap highlighting, set the alpha value to 0 (invisible).
+         * If you set the alpha value to 1.0 (opaque), the element is not visible when tapped.
+         * @property defaults.behavior.tapHighlightColor
+         * @type {String}
+         * @default 'rgba(0,0,0,0)'
+         */
+        tapHighlightColor: 'rgba(0,0,0,0)'
+    }
+};
+
+/**
+ * hammer document where the base events are added at
+ * @property DOCUMENT
+ * @type {HTMLElement}
+ * @default window.document
+ */
+Hammer.DOCUMENT = document;
+
+/**
+ * detect support for pointer events
+ * @property HAS_POINTEREVENTS
+ * @type {Boolean}
+ */
+Hammer.HAS_POINTEREVENTS = navigator.pointerEnabled || navigator.msPointerEnabled;
+
+/**
+ * detect support for touch events
+ * @property HAS_TOUCHEVENTS
+ * @type {Boolean}
+ */
+Hammer.HAS_TOUCHEVENTS = ('ontouchstart' in window);
+
+/**
+ * detect mobile browsers
+ * @property IS_MOBILE
+ * @type {Boolean}
+ */
+Hammer.IS_MOBILE = /mobile|tablet|ip(ad|hone|od)|android|silk/i.test(navigator.userAgent);
+
+/**
+ * detect if we want to support mouseevents at all
+ * @property NO_MOUSEEVENTS
+ * @type {Boolean}
+ */
+Hammer.NO_MOUSEEVENTS = (Hammer.HAS_TOUCHEVENTS && Hammer.IS_MOBILE) || Hammer.HAS_POINTEREVENTS;
+
+/**
+ * interval in which Hammer recalculates current velocity/direction/angle in ms
+ * @property CALCULATE_INTERVAL
+ * @type {Number}
+ * @default 25
+ */
+Hammer.CALCULATE_INTERVAL = 25;
+
+/**
+ * eventtypes per touchevent (start, move, end) are filled by `Event.determineEventTypes` on `setup`
+ * the object contains the DOM event names per type (`EVENT_START`, `EVENT_MOVE`, `EVENT_END`)
+ * @property EVENT_TYPES
+ * @private
+ * @writeOnce
+ * @type {Object}
+ */
+var EVENT_TYPES = {};
+
+/**
+ * direction strings, for safe comparisons
+ * @property DIRECTION_DOWN|LEFT|UP|RIGHT
+ * @final
+ * @type {String}
+ * @default 'down' 'left' 'up' 'right'
+ */
+var DIRECTION_DOWN = Hammer.DIRECTION_DOWN = 'down';
+var DIRECTION_LEFT = Hammer.DIRECTION_LEFT = 'left';
+var DIRECTION_UP = Hammer.DIRECTION_UP = 'up';
+var DIRECTION_RIGHT = Hammer.DIRECTION_RIGHT = 'right';
+
+/**
+ * pointertype strings, for safe comparisons
+ * @property POINTER_MOUSE|TOUCH|PEN
+ * @final
+ * @type {String}
+ * @default 'mouse' 'touch' 'pen'
+ */
+var POINTER_MOUSE = Hammer.POINTER_MOUSE = 'mouse';
+var POINTER_TOUCH = Hammer.POINTER_TOUCH = 'touch';
+var POINTER_PEN = Hammer.POINTER_PEN = 'pen';
+
+/**
+ * eventtypes
+ * @property EVENT_START|MOVE|END|RELEASE|TOUCH
+ * @final
+ * @type {String}
+ * @default 'start' 'change' 'move' 'end' 'release' 'touch'
+ */
+var EVENT_START = Hammer.EVENT_START = 'start';
+var EVENT_MOVE = Hammer.EVENT_MOVE = 'move';
+var EVENT_END = Hammer.EVENT_END = 'end';
+var EVENT_RELEASE = Hammer.EVENT_RELEASE = 'release';
+var EVENT_TOUCH = Hammer.EVENT_TOUCH = 'touch';
+
+/**
+ * if the window events are set...
+ * @property READY
+ * @writeOnce
+ * @type {Boolean}
+ * @default false
+ */
+Hammer.READY = false;
+
+/**
+ * plugins namespace
+ * @property plugins
+ * @type {Object}
+ */
+Hammer.plugins = Hammer.plugins || {};
+
+/**
+ * gestures namespace
+ * see `/gestures` for the definitions
+ * @property gestures
+ * @type {Object}
+ */
+Hammer.gestures = Hammer.gestures || {};
+
+/**
+ * setup events to detect gestures on the document
+ * this function is called when creating an new instance
+ * @private
+ */
+function setup() {
+    if(Hammer.READY) {
+        return;
+    }
+
+    // find what eventtypes we add listeners to
+    Event.determineEventTypes();
+
+    // Register all gestures inside Hammer.gestures
+    Utils.each(Hammer.gestures, function(gesture) {
+        Detection.register(gesture);
+    });
+
+    // Add touch events on the document
+    Event.onTouch(Hammer.DOCUMENT, EVENT_MOVE, Detection.detect);
+    Event.onTouch(Hammer.DOCUMENT, EVENT_END, Detection.detect);
+
+    // Hammer is ready...!
+    Hammer.READY = true;
+}
+
+/**
+ * @module hammer
+ *
+ * @class Utils
+ * @static
+ */
+var Utils = Hammer.utils = {
+    /**
+     * extend method, could also be used for cloning when `dest` is an empty object.
+     * changes the dest object
+     * @method extend
+     * @param {Object} dest
+     * @param {Object} src
+     * @param {Boolean} [merge=false]  do a merge
+     * @return {Object} dest
+     */
+    extend: function extend(dest, src, merge) {
+        for(var key in src) {
+            if(!src.hasOwnProperty(key) || (dest[key] !== undefined && merge)) {
+                continue;
+            }
+            dest[key] = src[key];
+        }
+        return dest;
+    },
+
+    /**
+     * simple addEventListener wrapper
+     * @method on
+     * @param {HTMLElement} element
+     * @param {String} type
+     * @param {Function} handler
+     */
+    on: function on(element, type, handler) {
+        element.addEventListener(type, handler, false);
+    },
+
+    /**
+     * simple removeEventListener wrapper
+     * @method off
+     * @param {HTMLElement} element
+     * @param {String} type
+     * @param {Function} handler
+     */
+    off: function off(element, type, handler) {
+        element.removeEventListener(type, handler, false);
+    },
+
+    /**
+     * forEach over arrays and objects
+     * @method each
+     * @param {Object|Array} obj
+     * @param {Function} iterator
+     * @param {any} iterator.item
+     * @param {Number} iterator.index
+     * @param {Object|Array} iterator.obj the source object
+     * @param {Object} context value to use as `this` in the iterator
+     */
+    each: function each(obj, iterator, context) {
+        var i, len;
+
+        // native forEach on arrays
+        if('forEach' in obj) {
+            obj.forEach(iterator, context);
+        // arrays
+        } else if(obj.length !== undefined) {
+            for(i = 0, len = obj.length; i < len; i++) {
+                if(iterator.call(context, obj[i], i, obj) === false) {
+                    return;
+                }
+            }
+        // objects
+        } else {
+            for(i in obj) {
+                if(obj.hasOwnProperty(i) &&
+                    iterator.call(context, obj[i], i, obj) === false) {
+                    return;
+                }
+            }
+        }
+    },
+
+    /**
+     * find if a string contains the string using indexOf
+     * @method inStr
+     * @param {String} src
+     * @param {String} find
+     * @return {Boolean} found
+     */
+    inStr: function inStr(src, find) {
+        return src.indexOf(find) > -1;
+    },
+
+    /**
+     * find if a array contains the object using indexOf or a simple polyfill
+     * @method inArray
+     * @param {String} src
+     * @param {String} find
+     * @return {Boolean|Number} false when not found, or the index
+     */
+    inArray: function inArray(src, find) {
+        if(src.indexOf) {
+            var index = src.indexOf(find);
+            return (index === -1) ? false : index;
+        } else {
+            for(var i = 0, len = src.length; i < len; i++) {
+                if(src[i] === find) {
+                    return i;
+                }
+            }
+            return false;
+        }
+    },
+
+    /**
+     * convert an array-like object (`arguments`, `touchlist`) to an array
+     * @method toArray
+     * @param {Object} obj
+     * @return {Array}
+     */
+    toArray: function toArray(obj) {
+        return Array.prototype.slice.call(obj, 0);
+    },
+
+    /**
+     * find if a node is in the given parent
+     * @method hasParent
+     * @param {HTMLElement} node
+     * @param {HTMLElement} parent
+     * @return {Boolean} found
+     */
+    hasParent: function hasParent(node, parent) {
+        while(node) {
+            if(node == parent) {
+                return true;
+            }
+            node = node.parentNode;
+        }
+        return false;
+    },
+
+    /**
+     * get the center of all the touches
+     * @method getCenter
+     * @param {Array} touches
+     * @return {Object} center contains `pageX`, `pageY`, `clientX` and `clientY` properties
+     */
+    getCenter: function getCenter(touches) {
+        var pageX = [],
+            pageY = [],
+            clientX = [],
+            clientY = [],
+            min = Math.min,
+            max = Math.max;
+
+        // no need to loop when only one touch
+        if(touches.length === 1) {
+            return {
+                pageX: touches[0].pageX,
+                pageY: touches[0].pageY,
+                clientX: touches[0].clientX,
+                clientY: touches[0].clientY
+            };
+        }
+
+        Utils.each(touches, function(touch) {
+            pageX.push(touch.pageX);
+            pageY.push(touch.pageY);
+            clientX.push(touch.clientX);
+            clientY.push(touch.clientY);
+        });
+
+        return {
+            pageX: (min.apply(Math, pageX) + max.apply(Math, pageX)) / 2,
+            pageY: (min.apply(Math, pageY) + max.apply(Math, pageY)) / 2,
+            clientX: (min.apply(Math, clientX) + max.apply(Math, clientX)) / 2,
+            clientY: (min.apply(Math, clientY) + max.apply(Math, clientY)) / 2
+        };
+    },
+
+    /**
+     * calculate the velocity between two points. unit is in px per ms.
+     * @method getVelocity
+     * @param {Number} deltaTime
+     * @param {Number} deltaX
+     * @param {Number} deltaY
+     * @return {Object} velocity `x` and `y`
+     */
+    getVelocity: function getVelocity(deltaTime, deltaX, deltaY) {
+        return {
+            x: Math.abs(deltaX / deltaTime) || 0,
+            y: Math.abs(deltaY / deltaTime) || 0
+        };
+    },
+
+    /**
+     * calculate the angle between two coordinates
+     * @method getAngle
+     * @param {Touch} touch1
+     * @param {Touch} touch2
+     * @return {Number} angle
+     */
+    getAngle: function getAngle(touch1, touch2) {
+        var x = touch2.clientX - touch1.clientX,
+            y = touch2.clientY - touch1.clientY;
+
+        return Math.atan2(y, x) * 180 / Math.PI;
+    },
+
+    /**
+     * do a small comparision to get the direction between two touches.
+     * @method getDirection
+     * @param {Touch} touch1
+     * @param {Touch} touch2
+     * @return {String} direction matches `DIRECTION_LEFT|RIGHT|UP|DOWN`
+     */
+    getDirection: function getDirection(touch1, touch2) {
+        var x = Math.abs(touch1.clientX - touch2.clientX),
+            y = Math.abs(touch1.clientY - touch2.clientY);
+
+        if(x >= y) {
+            return touch1.clientX - touch2.clientX > 0 ? DIRECTION_LEFT : DIRECTION_RIGHT;
+        }
+        return touch1.clientY - touch2.clientY > 0 ? DIRECTION_UP : DIRECTION_DOWN;
+    },
+
+    /**
+     * calculate the distance between two touches
+     * @method getDistance
+     * @param {Touch}touch1
+     * @param {Touch} touch2
+     * @return {Number} distance
+     */
+    getDistance: function getDistance(touch1, touch2) {
+        var x = touch2.clientX - touch1.clientX,
+            y = touch2.clientY - touch1.clientY;
+
+        return Math.sqrt((x * x) + (y * y));
+    },
+
+    /**
+     * calculate the scale factor between two touchLists
+     * no scale is 1, and goes down to 0 when pinched together, and bigger when pinched out
+     * @method getScale
+     * @param {Array} start array of touches
+     * @param {Array} end array of touches
+     * @return {Number} scale
+     */
+    getScale: function getScale(start, end) {
+        // need two fingers...
+        if(start.length >= 2 && end.length >= 2) {
+            return this.getDistance(end[0], end[1]) / this.getDistance(start[0], start[1]);
+        }
+        return 1;
+    },
+
+    /**
+     * calculate the rotation degrees between two touchLists
+     * @method getRotation
+     * @param {Array} start array of touches
+     * @param {Array} end array of touches
+     * @return {Number} rotation
+     */
+    getRotation: function getRotation(start, end) {
+        // need two fingers
+        if(start.length >= 2 && end.length >= 2) {
+            return this.getAngle(end[1], end[0]) - this.getAngle(start[1], start[0]);
+        }
+        return 0;
+    },
+
+    /**
+     * find out if the direction is vertical   *
+     * @method isVertical
+     * @param {String} direction matches `DIRECTION_UP|DOWN`
+     * @return {Boolean} is_vertical
+     */
+    isVertical: function isVertical(direction) {
+        return direction == DIRECTION_UP || direction == DIRECTION_DOWN;
+    },
+
+    /**
+     * set css properties with their prefixes
+     * @param {HTMLElement} element
+     * @param {String} prop
+     * @param {String} value
+     * @param {Boolean} [toggle=true]
+     * @return {Boolean}
+     */
+    setPrefixedCss: function setPrefixedCss(element, prop, value, toggle) {
+        var prefixes = ['', 'Webkit', 'Moz', 'O', 'ms'];
+        prop = Utils.toCamelCase(prop);
+
+        for(var i = 0; i < prefixes.length; i++) {
+            var p = prop;
+            // prefixes
+            if(prefixes[i]) {
+                p = prefixes[i] + p.slice(0, 1).toUpperCase() + p.slice(1);
+            }
+
+            // test the style
+            if(p in element.style) {
+                element.style[p] = (toggle == null || toggle) && value || '';
+                break;
+            }
+        }
+    },
+
+    /**
+     * toggle browser default behavior by setting css properties.
+     * `userSelect='none'` also sets `element.onselectstart` to false
+     * `userDrag='none'` also sets `element.ondragstart` to false
+     *
+     * @method toggleBehavior
+     * @param {HtmlElement} element
+     * @param {Object} props
+     * @param {Boolean} [toggle=true]
+     */
+    toggleBehavior: function toggleBehavior(element, props, toggle) {
+        if(!props || !element || !element.style) {
+            return;
+        }
+
+        // set the css properties
+        Utils.each(props, function(value, prop) {
+            Utils.setPrefixedCss(element, prop, value, toggle);
+        });
+
+        var falseFn = toggle && function() {
+            return false;
+        };
+
+        // also the disable onselectstart
+        if(props.userSelect == 'none') {
+            element.onselectstart = falseFn;
+        }
+        // and disable ondragstart
+        if(props.userDrag == 'none') {
+            element.ondragstart = falseFn;
+        }
+    },
+
+    /**
+     * convert a string with underscores to camelCase
+     * so prevent_default becomes preventDefault
+     * @param {String} str
+     * @return {String} camelCaseStr
+     */
+    toCamelCase: function toCamelCase(str) {
+        return str.replace(/[_-]([a-z])/g, function(s) {
+            return s[1].toUpperCase();
+        });
+    }
+};
+
+
+/**
+ * @module hammer
+ */
+/**
+ * @class Event
+ * @static
+ */
+var Event = Hammer.event = {
+    /**
+     * when touch events have been fired, this is true
+     * this is used to stop mouse events
+     * @property prevent_mouseevents
+     * @private
+     * @type {Boolean}
+     */
+    preventMouseEvents: false,
+
+    /**
+     * if EVENT_START has been fired
+     * @property started
+     * @private
+     * @type {Boolean}
+     */
+    started: false,
+
+    /**
+     * when the mouse is hold down, this is true
+     * @property should_detect
+     * @private
+     * @type {Boolean}
+     */
+    shouldDetect: false,
+
+    /**
+     * simple event binder with a hook and support for multiple types
+     * @method on
+     * @param {HTMLElement} element
+     * @param {String} type
+     * @param {Function} handler
+     * @param {Function} [hook]
+     * @param {Object} hook.type
+     */
+    on: function on(element, type, handler, hook) {
+        var types = type.split(' ');
+        Utils.each(types, function(type) {
+            Utils.on(element, type, handler);
+            hook && hook(type);
+        });
+    },
+
+    /**
+     * simple event unbinder with a hook and support for multiple types
+     * @method off
+     * @param {HTMLElement} element
+     * @param {String} type
+     * @param {Function} handler
+     * @param {Function} [hook]
+     * @param {Object} hook.type
+     */
+    off: function off(element, type, handler, hook) {
+        var types = type.split(' ');
+        Utils.each(types, function(type) {
+            Utils.off(element, type, handler);
+            hook && hook(type);
+        });
+    },
+
+    /**
+     * the core touch event handler.
+     * this finds out if we should to detect gestures
+     * @method onTouch
+     * @param {HTMLElement} element
+     * @param {String} eventType matches `EVENT_START|MOVE|END`
+     * @param {Function} handler
+     * @return onTouchHandler {Function} the core event handler
+     */
+    onTouch: function onTouch(element, eventType, handler) {
+        var self = this;
+
+        var onTouchHandler = function onTouchHandler(ev) {
+            var srcType = ev.type.toLowerCase(),
+                isPointer = Hammer.HAS_POINTEREVENTS,
+                isMouse = Utils.inStr(srcType, 'mouse'),
+                triggerType;
+
+            // if we are in a mouseevent, but there has been a touchevent triggered in this session
+            // we want to do nothing. simply break out of the event.
+            if(isMouse && self.preventMouseEvents) {
+                return;
+
+            // mousebutton must be down
+            } else if(isMouse && eventType == EVENT_START && ev.button === 0) {
+                self.preventMouseEvents = false;
+                self.shouldDetect = true;
+            } else if(isPointer && eventType == EVENT_START) {
+                self.shouldDetect = (ev.buttons === 1 || PointerEvent.matchType(POINTER_TOUCH, ev));
+            // just a valid start event, but no mouse
+            } else if(!isMouse && eventType == EVENT_START) {
+                self.preventMouseEvents = true;
+                self.shouldDetect = true;
+            }
+
+            // update the pointer event before entering the detection
+            if(isPointer && eventType != EVENT_END) {
+                PointerEvent.updatePointer(eventType, ev);
+            }
+
+            // we are in a touch/down state, so allowed detection of gestures
+            if(self.shouldDetect) {
+                triggerType = self.doDetect.call(self, ev, eventType, element, handler);
+            }
+
+            // ...and we are done with the detection
+            // so reset everything to start each detection totally fresh
+            if(triggerType == EVENT_END) {
+                self.preventMouseEvents = false;
+                self.shouldDetect = false;
+                PointerEvent.reset();
+            // update the pointerevent object after the detection
+            }
+
+            if(isPointer && eventType == EVENT_END) {
+                PointerEvent.updatePointer(eventType, ev);
+            }
+        };
+
+        this.on(element, EVENT_TYPES[eventType], onTouchHandler);
+        return onTouchHandler;
+    },
+
+    /**
+     * the core detection method
+     * this finds out what hammer-touch-events to trigger
+     * @method doDetect
+     * @param {Object} ev
+     * @param {String} eventType matches `EVENT_START|MOVE|END`
+     * @param {HTMLElement} element
+     * @param {Function} handler
+     * @return {String} triggerType matches `EVENT_START|MOVE|END`
+     */
+    doDetect: function doDetect(ev, eventType, element, handler) {
+        var touchList = this.getTouchList(ev, eventType);
+        var touchListLength = touchList.length;
+        var triggerType = eventType;
+        var triggerChange = touchList.trigger; // used by fakeMultitouch plugin
+        var changedLength = touchListLength;
+
+        // at each touchstart-like event we want also want to trigger a TOUCH event...
+        if(eventType == EVENT_START) {
+            triggerChange = EVENT_TOUCH;
+        // ...the same for a touchend-like event
+        } else if(eventType == EVENT_END) {
+            triggerChange = EVENT_RELEASE;
+
+            // keep track of how many touches have been removed
+            changedLength = touchList.length - ((ev.changedTouches) ? ev.changedTouches.length : 1);
+        }
+
+        // after there are still touches on the screen,
+        // we just want to trigger a MOVE event. so change the START or END to a MOVE
+        // but only after detection has been started, the first time we actualy want a START
+        if(changedLength > 0 && this.started) {
+            triggerType = EVENT_MOVE;
+        }
+
+        // detection has been started, we keep track of this, see above
+        this.started = true;
+
+        // generate some event data, some basic information
+        var evData = this.collectEventData(element, triggerType, touchList, ev);
+
+        // trigger the triggerType event before the change (TOUCH, RELEASE) events
+        // but the END event should be at last
+        if(eventType != EVENT_END) {
+            handler.call(Detection, evData);
+        }
+
+        // trigger a change (TOUCH, RELEASE) event, this means the length of the touches changed
+        if(triggerChange) {
+            evData.changedLength = changedLength;
+            evData.eventType = triggerChange;
+
+            handler.call(Detection, evData);
+
+            evData.eventType = triggerType;
+            delete evData.changedLength;
+        }
+
+        // trigger the END event
+        if(triggerType == EVENT_END) {
+            handler.call(Detection, evData);
+
+            // ...and we are done with the detection
+            // so reset everything to start each detection totally fresh
+            this.started = false;
+        }
+
+        return triggerType;
+    },
+
+    /**
+     * we have different events for each device/browser
+     * determine what we need and set them in the EVENT_TYPES constant
+     * the `onTouch` method is bind to these properties.
+     * @method determineEventTypes
+     * @return {Object} events
+     */
+    determineEventTypes: function determineEventTypes() {
+        var types;
+        if(Hammer.HAS_POINTEREVENTS) {
+            if(window.PointerEvent) {
+                types = [
+                    'pointerdown',
+                    'pointermove',
+                    'pointerup pointercancel lostpointercapture'
+                ];
+            } else {
+                types = [
+                    'MSPointerDown',
+                    'MSPointerMove',
+                    'MSPointerUp MSPointerCancel MSLostPointerCapture'
+                ];
+            }
+        } else if(Hammer.NO_MOUSEEVENTS) {
+            types = [
+                'touchstart',
+                'touchmove',
+                'touchend touchcancel'
+            ];
+        } else {
+            types = [
+                'touchstart mousedown',
+                'touchmove mousemove',
+                'touchend touchcancel mouseup'
+            ];
+        }
+
+        EVENT_TYPES[EVENT_START] = types[0];
+        EVENT_TYPES[EVENT_MOVE] = types[1];
+        EVENT_TYPES[EVENT_END] = types[2];
+        return EVENT_TYPES;
+    },
+
+    /**
+     * create touchList depending on the event
+     * @method getTouchList
+     * @param {Object} ev
+     * @param {String} eventType
+     * @return {Array} touches
+     */
+    getTouchList: function getTouchList(ev, eventType) {
+        // get the fake pointerEvent touchlist
+        if(Hammer.HAS_POINTEREVENTS) {
+            return PointerEvent.getTouchList();
+        }
+
+        // get the touchlist
+        if(ev.touches) {
+            if(eventType == EVENT_MOVE) {
+                return ev.touches;
+            }
+
+            var identifiers = [];
+            var concat = [].concat(Utils.toArray(ev.touches), Utils.toArray(ev.changedTouches));
+            var touchList = [];
+
+            Utils.each(concat, function(touch) {
+                if(Utils.inArray(identifiers, touch.identifier) === false) {
+                    touchList.push(touch);
+                }
+                identifiers.push(touch.identifier);
+            });
+
+            return touchList;
+        }
+
+        // make fake touchList from mouse position
+        ev.identifier = 1;
+        return [ev];
+    },
+
+    /**
+     * collect basic event data
+     * @method collectEventData
+     * @param {HTMLElement} element
+     * @param {String} eventType matches `EVENT_START|MOVE|END`
+     * @param {Array} touches
+     * @param {Object} ev
+     * @return {Object} ev
+     */
+    collectEventData: function collectEventData(element, eventType, touches, ev) {
+        // find out pointerType
+        var pointerType = POINTER_TOUCH;
+        if(Utils.inStr(ev.type, 'mouse') || PointerEvent.matchType(POINTER_MOUSE, ev)) {
+            pointerType = POINTER_MOUSE;
+        } else if(PointerEvent.matchType(POINTER_PEN, ev)) {
+            pointerType = POINTER_PEN;
+        }
+
+        return {
+            center: Utils.getCenter(touches),
+            timeStamp: Date.now(),
+            target: ev.target,
+            touches: touches,
+            eventType: eventType,
+            pointerType: pointerType,
+            srcEvent: ev,
+
+            /**
+             * prevent the browser default actions
+             * mostly used to disable scrolling of the browser
+             */
+            preventDefault: function() {
+                var srcEvent = this.srcEvent;
+                srcEvent.preventManipulation && srcEvent.preventManipulation();
+                srcEvent.preventDefault && srcEvent.preventDefault();
+            },
+
+            /**
+             * stop bubbling the event up to its parents
+             */
+            stopPropagation: function() {
+                this.srcEvent.stopPropagation();
+            },
+
+            /**
+             * immediately stop gesture detection
+             * might be useful after a swipe was detected
+             * @return {*}
+             */
+            stopDetect: function() {
+                return Detection.stopDetect();
+            }
+        };
+    }
+};
+
+
+/**
+ * @module hammer
+ *
+ * @class PointerEvent
+ * @static
+ */
+var PointerEvent = Hammer.PointerEvent = {
+    /**
+     * holds all pointers, by `identifier`
+     * @property pointers
+     * @type {Object}
+     */
+    pointers: {},
+
+    /**
+     * get the pointers as an array
+     * @method getTouchList
+     * @return {Array} touchlist
+     */
+    getTouchList: function getTouchList() {
+        var touchlist = [];
+        // we can use forEach since pointerEvents only is in IE10
+        Utils.each(this.pointers, function(pointer) {
+            touchlist.push(pointer);
+        });
+
+        return touchlist;
+    },
+
+    /**
+     * update the position of a pointer
+     * @method updatePointer
+     * @param {String} eventType matches `EVENT_START|MOVE|END`
+     * @param {Object} pointerEvent
+     */
+    updatePointer: function updatePointer(eventType, pointerEvent) {
+        if(eventType == EVENT_END) {
+            delete this.pointers[pointerEvent.pointerId];
+        } else {
+            pointerEvent.identifier = pointerEvent.pointerId;
+            this.pointers[pointerEvent.pointerId] = pointerEvent;
+        }
+    },
+
+    /**
+     * check if ev matches pointertype
+     * @method matchType
+     * @param {String} pointerType matches `POINTER_MOUSE|TOUCH|PEN`
+     * @param {PointerEvent} ev
+     */
+    matchType: function matchType(pointerType, ev) {
+        if(!ev.pointerType) {
+            return false;
+        }
+
+        var pt = ev.pointerType,
+            types = {};
+
+        types[POINTER_MOUSE] = (pt === (ev.MSPOINTER_TYPE_MOUSE || POINTER_MOUSE));
+        types[POINTER_TOUCH] = (pt === (ev.MSPOINTER_TYPE_TOUCH || POINTER_TOUCH));
+        types[POINTER_PEN] = (pt === (ev.MSPOINTER_TYPE_PEN || POINTER_PEN));
+        return types[pointerType];
+    },
+
+    /**
+     * reset the stored pointers
+     * @method reset
+     */
+    reset: function resetList() {
+        this.pointers = {};
+    }
+};
+
+
+/**
+ * @module hammer
+ *
+ * @class Detection
+ * @static
+ */
+var Detection = Hammer.detection = {
+    // contains all registred Hammer.gestures in the correct order
+    gestures: [],
+
+    // data of the current Hammer.gesture detection session
+    current: null,
+
+    // the previous Hammer.gesture session data
+    // is a full clone of the previous gesture.current object
+    previous: null,
+
+    // when this becomes true, no gestures are fired
+    stopped: false,
+
+    /**
+     * start Hammer.gesture detection
+     * @method startDetect
+     * @param {Hammer.Instance} inst
+     * @param {Object} eventData
+     */
+    startDetect: function startDetect(inst, eventData) {
+        // already busy with a Hammer.gesture detection on an element
+        if(this.current) {
+            return;
+        }
+
+        this.stopped = false;
+
+        // holds current session
+        this.current = {
+            inst: inst, // reference to HammerInstance we're working for
+            startEvent: Utils.extend({}, eventData), // start eventData for distances, timing etc
+            lastEvent: false, // last eventData
+            lastCalcEvent: false, // last eventData for calculations.
+            futureCalcEvent: false, // last eventData for calculations.
+            lastCalcData: {}, // last lastCalcData
+            name: '' // current gesture we're in/detected, can be 'tap', 'hold' etc
+        };
+
+        this.detect(eventData);
+    },
+
+    /**
+     * Hammer.gesture detection
+     * @method detect
+     * @param {Object} eventData
+     * @return {any}
+     */
+    detect: function detect(eventData) {
+        if(!this.current || this.stopped) {
+            return;
+        }
+
+        // extend event data with calculations about scale, distance etc
+        eventData = this.extendEventData(eventData);
+
+        // hammer instance and instance options
+        var inst = this.current.inst,
+            instOptions = inst.options;
+
+        // call Hammer.gesture handlers
+        Utils.each(this.gestures, function triggerGesture(gesture) {
+            // only when the instance options have enabled this gesture
+            if(!this.stopped && inst.enabled && instOptions[gesture.name]) {
+                gesture.handler.call(gesture, eventData, inst);
+            }
+        }, this);
+
+        // store as previous event event
+        if(this.current) {
+            this.current.lastEvent = eventData;
+        }
+
+        if(eventData.eventType == EVENT_END) {
+            this.stopDetect();
+        }
+
+        return eventData;
+    },
+
+    /**
+     * clear the Hammer.gesture vars
+     * this is called on endDetect, but can also be used when a final Hammer.gesture has been detected
+     * to stop other Hammer.gestures from being fired
+     * @method stopDetect
+     */
+    stopDetect: function stopDetect() {
+        // clone current data to the store as the previous gesture
+        // used for the double tap gesture, since this is an other gesture detect session
+        this.previous = Utils.extend({}, this.current);
+
+        // reset the current
+        this.current = null;
+        this.stopped = true;
+    },
+
+    /**
+     * calculate velocity, angle and direction
+     * @method getVelocityData
+     * @param {Object} ev
+     * @param {Object} center
+     * @param {Number} deltaTime
+     * @param {Number} deltaX
+     * @param {Number} deltaY
+     */
+    getCalculatedData: function getCalculatedData(ev, center, deltaTime, deltaX, deltaY) {
+        var cur = this.current,
+            recalc = false,
+            calcEv = cur.lastCalcEvent,
+            calcData = cur.lastCalcData;
+
+        if(calcEv && ev.timeStamp - calcEv.timeStamp > Hammer.CALCULATE_INTERVAL) {
+            center = calcEv.center;
+            deltaTime = ev.timeStamp - calcEv.timeStamp;
+            deltaX = ev.center.clientX - calcEv.center.clientX;
+            deltaY = ev.center.clientY - calcEv.center.clientY;
+            recalc = true;
+        }
+
+        if(ev.eventType == EVENT_TOUCH || ev.eventType == EVENT_RELEASE) {
+            cur.futureCalcEvent = ev;
+        }
+
+        if(!cur.lastCalcEvent || recalc) {
+            calcData.velocity = Utils.getVelocity(deltaTime, deltaX, deltaY);
+            calcData.angle = Utils.getAngle(center, ev.center);
+            calcData.direction = Utils.getDirection(center, ev.center);
+
+            cur.lastCalcEvent = cur.futureCalcEvent || ev;
+            cur.futureCalcEvent = ev;
+        }
+
+        ev.velocityX = calcData.velocity.x;
+        ev.velocityY = calcData.velocity.y;
+        ev.interimAngle = calcData.angle;
+        ev.interimDirection = calcData.direction;
+    },
+
+    /**
+     * extend eventData for Hammer.gestures
+     * @method extendEventData
+     * @param {Object} ev
+     * @return {Object} ev
+     */
+    extendEventData: function extendEventData(ev) {
+        var cur = this.current,
+            startEv = cur.startEvent,
+            lastEv = cur.lastEvent || startEv;
+
+        // update the start touchlist to calculate the scale/rotation
+        if(ev.eventType == EVENT_TOUCH || ev.eventType == EVENT_RELEASE) {
+            startEv.touches = [];
+            Utils.each(ev.touches, function(touch) {
+                startEv.touches.push({
+                    clientX: touch.clientX,
+                    clientY: touch.clientY
+                });
+            });
+        }
+
+        var deltaTime = ev.timeStamp - startEv.timeStamp,
+            deltaX = ev.center.clientX - startEv.center.clientX,
+            deltaY = ev.center.clientY - startEv.center.clientY;
+
+        this.getCalculatedData(ev, lastEv.center, deltaTime, deltaX, deltaY);
+
+        Utils.extend(ev, {
+            startEvent: startEv,
+
+            deltaTime: deltaTime,
+            deltaX: deltaX,
+            deltaY: deltaY,
+
+            distance: Utils.getDistance(startEv.center, ev.center),
+            angle: Utils.getAngle(startEv.center, ev.center),
+            direction: Utils.getDirection(startEv.center, ev.center),
+            scale: Utils.getScale(startEv.touches, ev.touches),
+            rotation: Utils.getRotation(startEv.touches, ev.touches)
+        });
+
+        return ev;
+    },
+
+    /**
+     * register new gesture
+     * @method register
+     * @param {Object} gesture object, see `gestures/` for documentation
+     * @return {Array} gestures
+     */
+    register: function register(gesture) {
+        // add an enable gesture options if there is no given
+        var options = gesture.defaults || {};
+        if(options[gesture.name] === undefined) {
+            options[gesture.name] = true;
+        }
+
+        // extend Hammer default options with the Hammer.gesture options
+        Utils.extend(Hammer.defaults, options, true);
+
+        // set its index
+        gesture.index = gesture.index || 1000;
+
+        // add Hammer.gesture to the list
+        this.gestures.push(gesture);
+
+        // sort the list by index
+        this.gestures.sort(function(a, b) {
+            if(a.index < b.index) {
+                return -1;
+            }
+            if(a.index > b.index) {
+                return 1;
+            }
+            return 0;
+        });
+
+        return this.gestures;
+    }
+};
+
+
+/**
+ * @module hammer
+ */
+
+/**
+ * create new hammer instance
+ * all methods should return the instance itself, so it is chainable.
+ *
+ * @class Instance
+ * @constructor
+ * @param {HTMLElement} element
+ * @param {Object} [options={}] options are merged with `Hammer.defaults`
+ * @return {Hammer.Instance}
+ */
+Hammer.Instance = function(element, options) {
+    var self = this;
+
+    // setup HammerJS window events and register all gestures
+    // this also sets up the default options
+    setup();
+
+    /**
+     * @property element
+     * @type {HTMLElement}
+     */
+    this.element = element;
+
+    /**
+     * @property enabled
+     * @type {Boolean}
+     * @protected
+     */
+    this.enabled = true;
+
+    /**
+     * options, merged with the defaults
+     * options with an _ are converted to camelCase
+     * @property options
+     * @type {Object}
+     */
+    Utils.each(options, function(value, name) {
+        delete options[name];
+        options[Utils.toCamelCase(name)] = value;
+    });
+
+    this.options = Utils.extend(Utils.extend({}, Hammer.defaults), options || {});
+
+    // add some css to the element to prevent the browser from doing its native behavoir
+    if(this.options.behavior) {
+        Utils.toggleBehavior(this.element, this.options.behavior, true);
+    }
+
+    /**
+     * event start handler on the element to start the detection
+     * @property eventStartHandler
+     * @type {Object}
+     */
+    this.eventStartHandler = Event.onTouch(element, EVENT_START, function(ev) {
+        if(self.enabled && ev.eventType == EVENT_START) {
+            Detection.startDetect(self, ev);
+        } else if(ev.eventType == EVENT_TOUCH) {
+            Detection.detect(ev);
+        }
+    });
+
+    /**
+     * keep a list of user event handlers which needs to be removed when calling 'dispose'
+     * @property eventHandlers
+     * @type {Array}
+     */
+    this.eventHandlers = [];
+};
+
+Hammer.Instance.prototype = {
+    /**
+     * bind events to the instance
+     * @method on
+     * @chainable
+     * @param {String} gestures multiple gestures by splitting with a space
+     * @param {Function} handler
+     * @param {Object} handler.ev event object
+     */
+    on: function onEvent(gestures, handler) {
+        var self = this;
+        Event.on(self.element, gestures, handler, function(type) {
+            self.eventHandlers.push({ gesture: type, handler: handler });
+        });
+        return self;
+    },
+
+    /**
+     * unbind events to the instance
+     * @method off
+     * @chainable
+     * @param {String} gestures
+     * @param {Function} handler
+     */
+    off: function offEvent(gestures, handler) {
+        var self = this;
+
+        Event.off(self.element, gestures, handler, function(type) {
+            var index = Utils.inArray({ gesture: type, handler: handler });
+            if(index !== false) {
+                self.eventHandlers.splice(index, 1);
+            }
+        });
+        return self;
+    },
+
+    /**
+     * trigger gesture event
+     * @method trigger
+     * @chainable
+     * @param {String} gesture
+     * @param {Object} [eventData]
+     */
+    trigger: function triggerEvent(gesture, eventData) {
+        // optional
+        if(!eventData) {
+            eventData = {};
+        }
+
+        // create DOM event
+        var event = Hammer.DOCUMENT.createEvent('Event');
+        event.initEvent(gesture, true, true);
+        event.gesture = eventData;
+
+        // trigger on the target if it is in the instance element,
+        // this is for event delegation tricks
+        var element = this.element;
+        if(Utils.hasParent(eventData.target, element)) {
+            element = eventData.target;
+        }
+
+        element.dispatchEvent(event);
+        return this;
+    },
+
+    /**
+     * enable of disable hammer.js detection
+     * @method enable
+     * @chainable
+     * @param {Boolean} state
+     */
+    enable: function enable(state) {
+        this.enabled = state;
+        return this;
+    },
+
+    /**
+     * dispose this hammer instance
+     * @method dispose
+     * @return {Null}
+     */
+    dispose: function dispose() {
+        var i, eh;
+
+        // undo all changes made by stop_browser_behavior
+        Utils.toggleBehavior(this.element, this.options.behavior, false);
+
+        // unbind all custom event handlers
+        for(i = -1; (eh = this.eventHandlers[++i]);) {
+            Utils.off(this.element, eh.gesture, eh.handler);
+        }
+
+        this.eventHandlers = [];
+
+        // unbind the start event listener
+        Event.off(this.element, EVENT_TYPES[EVENT_START], this.eventStartHandler);
+
+        return null;
+    }
+};
+
+
+/**
+ * @module gestures
+ */
+/**
+ * Move with x fingers (default 1) around on the page.
+ * Preventing the default browser behavior is a good way to improve feel and working.
+ * ````
+ *  hammertime.on("drag", function(ev) {
+ *    console.log(ev);
+ *    ev.gesture.preventDefault();
+ *  });
+ * ````
+ *
+ * @class Drag
+ * @static
+ */
+/**
+ * @event drag
+ * @param {Object} ev
+ */
+/**
+ * @event dragstart
+ * @param {Object} ev
+ */
+/**
+ * @event dragend
+ * @param {Object} ev
+ */
+/**
+ * @event drapleft
+ * @param {Object} ev
+ */
+/**
+ * @event dragright
+ * @param {Object} ev
+ */
+/**
+ * @event dragup
+ * @param {Object} ev
+ */
+/**
+ * @event dragdown
+ * @param {Object} ev
+ */
+
+/**
+ * @param {String} name
+ */
+(function(name) {
+    var triggered = false;
+
+    function dragGesture(ev, inst) {
+        var cur = Detection.current;
+
+        // max touches
+        if(inst.options.dragMaxTouches > 0 &&
+            ev.touches.length > inst.options.dragMaxTouches) {
+            return;
+        }
+
+        switch(ev.eventType) {
+            case EVENT_START:
+                triggered = false;
+                break;
+
+            case EVENT_MOVE:
+                // when the distance we moved is too small we skip this gesture
+                // or we can be already in dragging
+                if(ev.distance < inst.options.dragMinDistance &&
+                    cur.name != name) {
+                    return;
+                }
+
+                var startCenter = cur.startEvent.center;
+
+                // we are dragging!
+                if(cur.name != name) {
+                    cur.name = name;
+                    if(inst.options.dragDistanceCorrection && ev.distance > 0) {
+                        // When a drag is triggered, set the event center to dragMinDistance pixels from the original event center.
+                        // Without this correction, the dragged distance would jumpstart at dragMinDistance pixels instead of at 0.
+                        // It might be useful to save the original start point somewhere
+                        var factor = Math.abs(inst.options.dragMinDistance / ev.distance);
+                        startCenter.pageX += ev.deltaX * factor;
+                        startCenter.pageY += ev.deltaY * factor;
+                        startCenter.clientX += ev.deltaX * factor;
+                        startCenter.clientY += ev.deltaY * factor;
+
+                        // recalculate event data using new start point
+                        ev = Detection.extendEventData(ev);
+                    }
+                }
+
+                // lock drag to axis?
+                if(cur.lastEvent.dragLockToAxis ||
+                    ( inst.options.dragLockToAxis &&
+                        inst.options.dragLockMinDistance <= ev.distance
+                        )) {
+                    ev.dragLockToAxis = true;
+                }
+
+                // keep direction on the axis that the drag gesture started on
+                var lastDirection = cur.lastEvent.direction;
+                if(ev.dragLockToAxis && lastDirection !== ev.direction) {
+                    if(Utils.isVertical(lastDirection)) {
+                        ev.direction = (ev.deltaY < 0) ? DIRECTION_UP : DIRECTION_DOWN;
+                    } else {
+                        ev.direction = (ev.deltaX < 0) ? DIRECTION_LEFT : DIRECTION_RIGHT;
+                    }
+                }
+
+                // first time, trigger dragstart event
+                if(!triggered) {
+                    inst.trigger(name + 'start', ev);
+                    triggered = true;
+                }
+
+                // trigger events
+                inst.trigger(name, ev);
+                inst.trigger(name + ev.direction, ev);
+
+                var isVertical = Utils.isVertical(ev.direction);
+
+                // block the browser events
+                if((inst.options.dragBlockVertical && isVertical) ||
+                    (inst.options.dragBlockHorizontal && !isVertical)) {
+                    ev.preventDefault();
+                }
+                break;
+
+            case EVENT_RELEASE:
+                if(triggered && ev.changedLength <= inst.options.dragMaxTouches) {
+                    inst.trigger(name + 'end', ev);
+                    triggered = false;
+                }
+                break;
+
+            case EVENT_END:
+                triggered = false;
+                break;
+        }
+    }
+
+    Hammer.gestures.Drag = {
+        name: name,
+        index: 50,
+        handler: dragGesture,
+        defaults: {
+            /**
+             * minimal movement that have to be made before the drag event gets triggered
+             * @property dragMinDistance
+             * @type {Number}
+             * @default 10
+             */
+            dragMinDistance: 10,
+
+            /**
+             * Set dragDistanceCorrection to true to make the starting point of the drag
+             * be calculated from where the drag was triggered, not from where the touch started.
+             * Useful to avoid a jerk-starting drag, which can make fine-adjustments
+             * through dragging difficult, and be visually unappealing.
+             * @property dragDistanceCorrection
+             * @type {Boolean}
+             * @default true
+             */
+            dragDistanceCorrection: true,
+
+            /**
+             * set 0 for unlimited, but this can conflict with transform
+             * @property dragMaxTouches
+             * @type {Number}
+             * @default 1
+             */
+            dragMaxTouches: 1,
+
+            /**
+             * prevent default browser behavior when dragging occurs
+             * be careful with it, it makes the element a blocking element
+             * when you are using the drag gesture, it is a good practice to set this true
+             * @property dragBlockHorizontal
+             * @type {Boolean}
+             * @default false
+             */
+            dragBlockHorizontal: false,
+
+            /**
+             * same as `dragBlockHorizontal`, but for vertical movement
+             * @property dragBlockVertical
+             * @type {Boolean}
+             * @default false
+             */
+            dragBlockVertical: false,
+
+            /**
+             * dragLockToAxis keeps the drag gesture on the axis that it started on,
+             * It disallows vertical directions if the initial direction was horizontal, and vice versa.
+             * @property dragLockToAxis
+             * @type {Boolean}
+             * @default false
+             */
+            dragLockToAxis: false,
+
+            /**
+             * drag lock only kicks in when distance > dragLockMinDistance
+             * This way, locking occurs only when the distance has become large enough to reliably determine the direction
+             * @property dragLockMinDistance
+             * @type {Number}
+             * @default 25
+             */
+            dragLockMinDistance: 25
+        }
+    };
+})('drag');
+
+/**
+ * @module gestures
+ */
+/**
+ * trigger a simple gesture event, so you can do anything in your handler.
+ * only usable if you know what your doing...
+ *
+ * @class Gesture
+ * @static
+ */
+/**
+ * @event gesture
+ * @param {Object} ev
+ */
+Hammer.gestures.Gesture = {
+    name: 'gesture',
+    index: 1337,
+    handler: function releaseGesture(ev, inst) {
+        inst.trigger(this.name, ev);
+    }
+};
+
+/**
+ * @module gestures
+ */
+/**
+ * Touch stays at the same place for x time
+ *
+ * @class Hold
+ * @static
+ */
+/**
+ * @event hold
+ * @param {Object} ev
+ */
+
+/**
+ * @param {String} name
+ */
+(function(name) {
+    var timer;
+
+    function holdGesture(ev, inst) {
+        var options = inst.options,
+            current = Detection.current;
+
+        switch(ev.eventType) {
+            case EVENT_START:
+                clearTimeout(timer);
+
+                // set the gesture so we can check in the timeout if it still is
+                current.name = name;
+
+                // set timer and if after the timeout it still is hold,
+                // we trigger the hold event
+                timer = setTimeout(function() {
+                    if(current && current.name == name) {
+                        inst.trigger(name, ev);
+                    }
+                }, options.holdTimeout);
+                break;
+
+            case EVENT_MOVE:
+                if(ev.distance > options.holdThreshold) {
+                    clearTimeout(timer);
+                }
+                break;
+
+            case EVENT_RELEASE:
+                clearTimeout(timer);
+                break;
+        }
+    }
+
+    Hammer.gestures.Hold = {
+        name: name,
+        index: 10,
+        defaults: {
+            /**
+             * @property holdTimeout
+             * @type {Number}
+             * @default 500
+             */
+            holdTimeout: 500,
+
+            /**
+             * movement allowed while holding
+             * @property holdThreshold
+             * @type {Number}
+             * @default 2
+             */
+            holdThreshold: 2
+        },
+        handler: holdGesture
+    };
+})('hold');
+
+/**
+ * @module gestures
+ */
+/**
+ * when a touch is being released from the page
+ *
+ * @class Release
+ * @static
+ */
+/**
+ * @event release
+ * @param {Object} ev
+ */
+Hammer.gestures.Release = {
+    name: 'release',
+    index: Infinity,
+    handler: function releaseGesture(ev, inst) {
+        if(ev.eventType == EVENT_RELEASE) {
+            inst.trigger(this.name, ev);
+        }
+    }
+};
+
+/**
+ * @module gestures
+ */
+/**
+ * triggers swipe events when the end velocity is above the threshold
+ * for best usage, set `preventDefault` (on the drag gesture) to `true`
+ * ````
+ *  hammertime.on("dragleft swipeleft", function(ev) {
+ *    console.log(ev);
+ *    ev.gesture.preventDefault();
+ *  });
+ * ````
+ *
+ * @class Swipe
+ * @static
+ */
+/**
+ * @event swipe
+ * @param {Object} ev
+ */
+/**
+ * @event swipeleft
+ * @param {Object} ev
+ */
+/**
+ * @event swiperight
+ * @param {Object} ev
+ */
+/**
+ * @event swipeup
+ * @param {Object} ev
+ */
+/**
+ * @event swipedown
+ * @param {Object} ev
+ */
+Hammer.gestures.Swipe = {
+    name: 'swipe',
+    index: 40,
+    defaults: {
+        /**
+         * @property swipeMinTouches
+         * @type {Number}
+         * @default 1
+         */
+        swipeMinTouches: 1,
+
+        /**
+         * @property swipeMaxTouches
+         * @type {Number}
+         * @default 1
+         */
+        swipeMaxTouches: 1,
+
+        /**
+         * horizontal swipe velocity
+         * @property swipeVelocityX
+         * @type {Number}
+         * @default 0.6
+         */
+        swipeVelocityX: 0.6,
+
+        /**
+         * vertical swipe velocity
+         * @property swipeVelocityY
+         * @type {Number}
+         * @default 0.6
+         */
+        swipeVelocityY: 0.6
+    },
+
+    handler: function swipeGesture(ev, inst) {
+        if(ev.eventType == EVENT_RELEASE) {
+            var touches = ev.touches.length,
+                options = inst.options;
+
+            // max touches
+            if(touches < options.swipeMinTouches ||
+                touches > options.swipeMaxTouches) {
+                return;
+            }
+
+            // when the distance we moved is too small we skip this gesture
+            // or we can be already in dragging
+            if(ev.velocityX > options.swipeVelocityX ||
+                ev.velocityY > options.swipeVelocityY) {
+                // trigger swipe events
+                inst.trigger(this.name, ev);
+                inst.trigger(this.name + ev.direction, ev);
+            }
+        }
+    }
+};
+
+/**
+ * @module gestures
+ */
+/**
+ * Single tap and a double tap on a place
+ *
+ * @class Tap
+ * @static
+ */
+/**
+ * @event tap
+ * @param {Object} ev
+ */
+/**
+ * @event doubletap
+ * @param {Object} ev
+ */
+
+/**
+ * @param {String} name
+ */
+(function(name) {
+    var hasMoved = false;
+
+    function tapGesture(ev, inst) {
+        var options = inst.options,
+            current = Detection.current,
+            prev = Detection.previous,
+            sincePrev,
+            didDoubleTap;
+
+        switch(ev.eventType) {
+            case EVENT_START:
+                hasMoved = false;
+                break;
+
+            case EVENT_MOVE:
+                hasMoved = hasMoved || (ev.distance > options.tapMaxDistance);
+                break;
+
+            case EVENT_END:
+                if(!Utils.inStr(ev.srcEvent.type, 'cancel') && ev.deltaTime < options.tapMaxTime && !hasMoved) {
+                    // previous gesture, for the double tap since these are two different gesture detections
+                    sincePrev = prev && prev.lastEvent && ev.timeStamp - prev.lastEvent.timeStamp;
+                    didDoubleTap = false;
+
+                    // check if double tap
+                    if(prev && prev.name == name &&
+                        (sincePrev && sincePrev < options.doubleTapInterval) &&
+                        ev.distance < options.doubleTapDistance) {
+                        inst.trigger('doubletap', ev);
+                        didDoubleTap = true;
+                    }
+
+                    // do a single tap
+                    if(!didDoubleTap || options.tapAlways) {
+                        current.name = name;
+                        inst.trigger(current.name, ev);
+                    }
+                }
+                break;
+        }
+    }
+
+    Hammer.gestures.Tap = {
+        name: name,
+        index: 100,
+        handler: tapGesture,
+        defaults: {
+            /**
+             * max time of a tap, this is for the slow tappers
+             * @property tapMaxTime
+             * @type {Number}
+             * @default 250
+             */
+            tapMaxTime: 250,
+
+            /**
+             * max distance of movement of a tap, this is for the slow tappers
+             * @property tapMaxDistance
+             * @type {Number}
+             * @default 10
+             */
+            tapMaxDistance: 10,
+
+            /**
+             * always trigger the `tap` event, even while double-tapping
+             * @property tapAlways
+             * @type {Boolean}
+             * @default true
+             */
+            tapAlways: true,
+
+            /**
+             * max distance between two taps
+             * @property doubleTapDistance
+             * @type {Number}
+             * @default 20
+             */
+            doubleTapDistance: 20,
+
+            /**
+             * max time between two taps
+             * @property doubleTapInterval
+             * @type {Number}
+             * @default 300
+             */
+            doubleTapInterval: 300
+        }
+    };
+})('tap');
+
+/**
+ * @module gestures
+ */
+/**
+ * when a touch is being touched at the page
+ *
+ * @class Touch
+ * @static
+ */
+/**
+ * @event touch
+ * @param {Object} ev
+ */
+Hammer.gestures.Touch = {
+    name: 'touch',
+    index: -Infinity,
+    defaults: {
+        /**
+         * call preventDefault at touchstart, and makes the element blocking by disabling the scrolling of the page,
+         * but it improves gestures like transforming and dragging.
+         * be careful with using this, it can be very annoying for users to be stuck on the page
+         * @property preventDefault
+         * @type {Boolean}
+         * @default false
+         */
+        preventDefault: false,
+
+        /**
+         * disable mouse events, so only touch (or pen!) input triggers events
+         * @property preventMouse
+         * @type {Boolean}
+         * @default false
+         */
+        preventMouse: false
+    },
+    handler: function touchGesture(ev, inst) {
+        if(inst.options.preventMouse && ev.pointerType == POINTER_MOUSE) {
+            ev.stopDetect();
+            return;
+        }
+
+        if(inst.options.preventDefault) {
+            ev.preventDefault();
+        }
+
+        if(ev.eventType == EVENT_TOUCH) {
+            inst.trigger('touch', ev);
+        }
+    }
+};
+
+/**
+ * @module gestures
+ */
+/**
+ * User want to scale or rotate with 2 fingers
+ * Preventing the default browser behavior is a good way to improve feel and working. This can be done with the
+ * `preventDefault` option.
+ *
+ * @class Transform
+ * @static
+ */
+/**
+ * @event transform
+ * @param {Object} ev
+ */
+/**
+ * @event transformstart
+ * @param {Object} ev
+ */
+/**
+ * @event transformend
+ * @param {Object} ev
+ */
+/**
+ * @event pinchin
+ * @param {Object} ev
+ */
+/**
+ * @event pinchout
+ * @param {Object} ev
+ */
+/**
+ * @event rotate
+ * @param {Object} ev
+ */
+
+/**
+ * @param {String} name
+ */
+(function(name) {
+    var triggered = false;
+
+    function transformGesture(ev, inst) {
+        switch(ev.eventType) {
+            case EVENT_START:
+                triggered = false;
+                break;
+
+            case EVENT_MOVE:
+                // at least multitouch
+                if(ev.touches.length < 2) {
+                    return;
+                }
+
+                var scaleThreshold = Math.abs(1 - ev.scale);
+                var rotationThreshold = Math.abs(ev.rotation);
+
+                // when the distance we moved is too small we skip this gesture
+                // or we can be already in dragging
+                if(scaleThreshold < inst.options.transformMinScale &&
+                    rotationThreshold < inst.options.transformMinRotation) {
+                    return;
+                }
+
+                // we are transforming!
+                Detection.current.name = name;
+
+                // first time, trigger dragstart event
+                if(!triggered) {
+                    inst.trigger(name + 'start', ev);
+                    triggered = true;
+                }
+
+                inst.trigger(name, ev); // basic transform event
+
+                // trigger rotate event
+                if(rotationThreshold > inst.options.transformMinRotation) {
+                    inst.trigger('rotate', ev);
+                }
+
+                // trigger pinch event
+                if(scaleThreshold > inst.options.transformMinScale) {
+                    inst.trigger('pinch', ev);
+                    inst.trigger('pinch' + (ev.scale < 1 ? 'in' : 'out'), ev);
+                }
+                break;
+
+            case EVENT_RELEASE:
+                if(triggered && ev.changedLength < 2) {
+                    inst.trigger(name + 'end', ev);
+                    triggered = false;
+                }
+                break;
+        }
+    }
+
+    Hammer.gestures.Transform = {
+        name: name,
+        index: 45,
+        defaults: {
+            /**
+             * minimal scale factor, no scale is 1, zoomin is to 0 and zoomout until higher then 1
+             * @property transformMinScale
+             * @type {Number}
+             * @default 0.01
+             */
+            transformMinScale: 0.01,
+
+            /**
+             * rotation in degrees
+             * @property transformMinRotation
+             * @type {Number}
+             * @default 1
+             */
+            transformMinRotation: 1
+        },
+
+        handler: transformGesture
+    };
+})('transform');
+
+/**
+ * @module hammer
+ */
+
+// AMD export
+if(typeof define == 'function' && define.amd) {
+    define(function() {
+        return Hammer;
+    });
+// commonjs export
+} else if(typeof module !== 'undefined' && module.exports) {
+    module.exports = Hammer;
+// browser export
+} else {
+    window.Hammer = Hammer;
+}
+
+})(window);
+},{}],12:[function(require,module,exports){
 // Functions for checking required blocks.
 
 /**
@@ -2943,7 +5404,7 @@ exports.define = function(name) {
   };
 };
 
-},{}],11:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -5870,7 +8331,7 @@ exports.define = function(name) {
 }.call(this));
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],12:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -6019,10 +8480,16 @@ function elementsEquivalent(expected, given) {
 }
 
 /**
- * A list of attributes we want to ignore when comparing atributes, and a
+ * A list of attributes we want to ignore when comparing attributes, and a
  * function for easily determining whether an attribute is in the list.
  */
-var ignorableAttributes = ['deletable', 'movable', 'editable', 'inline'];
+var ignorableAttributes = [
+  'deletable',
+  'movable',
+  'editable',
+  'inline',
+  'uservisible'
+];
 ignorableAttributes.contains = function (attr) {
   return ignorableAttributes.indexOf(attr.name) !== -1;
 };
@@ -6108,7 +8575,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"./block_utils":3,"./utils":39,"./xml":40}],13:[function(require,module,exports){
+},{"./block_utils":4,"./utils":42,"./xml":43}],15:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -6124,6 +8591,7 @@ exports.load = function(assetUrl, id) {
     assetUrl: skinUrl,
     // Images
     avatar: skinUrl('avatar.png'),
+    avatar_2x: skinUrl('avatar_2x.png'),
     tiles: skinUrl('tiles.png'),
     goal: skinUrl('goal.png'),
     obstacle: skinUrl('obstacle.png'),
@@ -6131,6 +8599,8 @@ exports.load = function(assetUrl, id) {
     staticAvatar: skinUrl('static_avatar.png'),
     winAvatar: skinUrl('win_avatar.png'),
     failureAvatar: skinUrl('failure_avatar.png'),
+    decorationAnimation: skinUrl('decoration_animation.png'),
+    decorationAnimation_2x: skinUrl('decoration_animation_2x.png'),
     repeatImage: assetUrl('media/common_images/repeat-arrows.png'),
     leftArrow: assetUrl('media/common_images/moveleft.png'),
     downArrow: assetUrl('media/common_images/movedown.png'),
@@ -6169,15 +8639,17 @@ exports.load = function(assetUrl, id) {
     squigglyLine: assetUrl('media/common_images/squiggly.png'),
     swirlyLine: assetUrl('media/common_images/swirlyline.png'),
     randomPurpleIcon: assetUrl('media/common_images/random-purple.png'),
+
     // Sounds
     startSound: [skinUrl('start.mp3'), skinUrl('start.ogg')],
     winSound: [skinUrl('win.mp3'), skinUrl('win.ogg')],
     failureSound: [skinUrl('failure.mp3'), skinUrl('failure.ogg')]
   };
+
   return skin;
 };
 
-},{}],14:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -6403,7 +8875,7 @@ Slider.bindEvent_ = function(element, name, func) {
 
 module.exports = Slider;
 
-},{"./dom":8}],15:[function(require,module,exports){
+},{"./dom":9}],17:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6424,7 +8896,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":43}],16:[function(require,module,exports){
+},{"ejs":46}],18:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6437,7 +8909,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/ja_jp/common'); ; buf.push('\n\n');3; if (data.ok) {; buf.push('  <div class="farSide" style="padding: 1ex 3ex 0">\n    <button id="ok-button" class="secondary">\n      ', escape((5,  msg.dialogOK() )), '\n    </button>\n  </div>\n');8; }; buf.push('\n');9; if (data.previousLevel) {; buf.push('  <button id="back-button" class="launch">\n    ', escape((10,  msg.backToPreviousLevel() )), '\n  </button>\n');12; }; buf.push('\n');13; if (data.tryAgain) {; buf.push('  ');13; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="again-button" class="launch arrow-container arrow-left">\n      <div class="arrow-head"><img src="', escape((14,  data.assetUrl('media/tryagain-arrow-head.png') )), '" alt="Arrowhead" width="67" height="130"/></div>\n      <div class="arrow-text">', escape((15,  msg.tryAgain() )), '</div>\n    </div>\n  ');17; } else {; buf.push('    ');17; if (data.hintRequestExperiment === "left") {; buf.push('      <button id="hint-request-button" class="launch">\n        ', escape((18,  msg.hintRequest() )), '\n      </button>\n      <button id="again-button" class="launch">\n        ', escape((21,  msg.tryAgain() )), '\n      </button>\n    ');23; } else if (data.hintRequestExperiment == "right") {; buf.push('      <button id="again-button" class="launch">\n        ', escape((24,  msg.tryAgain() )), '\n      </button>\n      <button id="hint-request-button" class="launch">\n        ', escape((27,  msg.hintRequest() )), '\n      </button>\n    ');29; } else {; buf.push('      <button id="again-button" class="launch">\n        ', escape((30,  msg.tryAgain() )), '\n      </button>\n    ');32; }; buf.push('  ');32; }; buf.push('');32; }; buf.push('\n');33; if (data.nextLevel) {; buf.push('  ');33; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="continue-button" class="launch arrow-container arrow-right">\n      <div class="arrow-head"><img src="', escape((34,  data.assetUrl('media/next-arrow-head.png') )), '" alt="Arrowhead" width="66" height="130"/></div>\n      <div class="arrow-text">', escape((35,  msg.continue() )), '</div>\n    </div>\n  ');37; } else {; buf.push('    <button id="continue-button" class="launch">\n      ', escape((38,  msg.continue() )), '\n    </button>\n  ');40; }; buf.push('');40; }; buf.push(''); })();
+ buf.push('');1; var msg = require('../../locale/ja_jp/common'); ; buf.push('\n\n');3; if (data.ok) {; buf.push('  <div class="farSide" style="padding: 1ex 3ex 0">\n    <button id="ok-button" class="secondary">\n      ', escape((5,  msg.dialogOK() )), '\n    </button>\n  </div>\n');8; }; buf.push('\n');9; if (data.previousLevel) {; buf.push('  <button id="back-button" class="launch">\n    ', escape((10,  msg.backToPreviousLevel() )), '\n  </button>\n');12; }; buf.push('\n');13; if (data.tryAgain) {; buf.push('  ');13; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="again-button" class="launch arrow-container arrow-left">\n      <div class="arrow-head"><img src="', escape((14,  data.assetUrl('media/tryagain-arrow-head.png') )), '" alt="Arrowhead" width="67" height="130"/></div>\n      <div class="arrow-text">', escape((15,  msg.tryAgain() )), '</div>\n    </div>\n  ');17; } else {; buf.push('    ');17; if (data.hintRequestExperiment === "left") {; buf.push('      <button id="hint-request-button" class="launch">\n        ', escape((18,  msg.hintRequest() )), '\n      </button>\n      <button id="again-button" class="launch">\n        ', escape((21,  msg.tryAgain() )), '\n      </button>\n    ');23; } else if (data.hintRequestExperiment == "right") {; buf.push('      <button id="again-button" class="launch">\n        ', escape((24,  msg.tryAgain() )), '\n      </button>\n      <button id="hint-request-button" class="launch">\n        ', escape((27,  msg.hintRequest() )), '\n      </button>\n    ');29; } else {; buf.push('      <button id="again-button" class="launch">\n        ', escape((30,  msg.tryAgain() )), '\n      </button>\n    ');32; }; buf.push('  ');32; }; buf.push('');32; }; buf.push('\n');33; if (data.nextLevel) {; buf.push('  ');33; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="continue-button" class="launch arrow-container arrow-right">\n      <div class="arrow-head"><img src="', escape((34,  data.assetUrl('media/next-arrow-head.png') )), '" alt="Arrowhead" width="66" height="130"/></div>\n      <div class="arrow-text">', escape((35,  msg.continue() )), '</div>\n    </div>\n  ');37; } else {; buf.push('    <button id="continue-button" class="launch" style="float: right">\n      ', escape((38,  msg.continue() )), '\n    </button>\n  ');40; }; buf.push('');40; }; buf.push(''); })();
 } 
 return buf.join('');
 };
@@ -6445,7 +8917,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/ja_jp/common":41,"ejs":43}],17:[function(require,module,exports){
+},{"../../locale/ja_jp/common":44,"ejs":46}],19:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6466,7 +8938,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":43}],18:[function(require,module,exports){
+},{"ejs":46}],20:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6487,7 +8959,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/ja_jp/common":41,"ejs":43}],19:[function(require,module,exports){
+},{"../../locale/ja_jp/common":44,"ejs":46}],21:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6510,7 +8982,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/ja_jp/common":41,"ejs":43}],20:[function(require,module,exports){
+},{"../../locale/ja_jp/common":44,"ejs":46}],22:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6531,7 +9003,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/ja_jp/common":41,"ejs":43}],21:[function(require,module,exports){
+},{"../../locale/ja_jp/common":44,"ejs":46}],23:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6548,7 +9020,7 @@ with (locals || {}) { (function(){
   var msg = require('../../locale/ja_jp/common');
   var hideRunButton = locals.hideRunButton || false;
 ; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((26,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');30; };; buf.push('\n');31; // A spot for the server to inject some HTML for help content.
-var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (38,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((44,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((45,  msg.runProgram() )), '</div>\n        <img src="', escape((46,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((49,  msg.resetProgram() )), '</div>\n        <img src="', escape((50,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');52; if (data.controls) { ; buf.push('\n      ', (53,  data.controls ), '\n      ');54; } ; buf.push('\n      ');55; if (data.extraControlRows) { ; buf.push('\n      ', (56,  data.extraControlRows ), '\n      ');57; } ; buf.push('\n    </div>\n\n    ');60; instructions() ; buf.push('\n    ');61; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n');66; if (data.editCode) { ; buf.push('\n  <div id="blockly" style="display:none"></div>\n  <div id="codeWorkspace">\n');69; } else { ; buf.push('\n  <div id="blockly">\n');71; } ; buf.push('\n  <div id="headers" dir="', escape((72,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((73,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span id="workspace-header-span">', escape((75,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((77,  data.blockCounterClass )), '>\n          ', escape((78,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((81,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((84,  msg.showCodeHeader() )), '</span></div>\n  </div>\n  ');86; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox" contenteditable spellcheck=false></div>\n  ');88; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
+var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (38,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((44,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((45,  msg.runProgram() )), '</div>\n        <img src="', escape((46,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((49,  msg.resetProgram() )), '</div>\n        <img src="', escape((50,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');52; if (data.controls) { ; buf.push('\n      ', (53,  data.controls ), '\n      ');54; } ; buf.push('\n      ');55; if (data.extraControlRows) { ; buf.push('\n      ', (56,  data.extraControlRows ), '\n      ');57; } ; buf.push('\n    </div>\n\n    ');60; instructions() ; buf.push('\n    ');61; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n');66; if (data.editCode) { ; buf.push('\n  <div id="codeWorkspace">\n');68; } else { ; buf.push('\n  <div id="blockly">\n');70; } ; buf.push('\n  <div id="headers" dir="', escape((71,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((72,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span id="workspace-header-span">', escape((74,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((76,  data.blockCounterClass )), '>\n          ', escape((77,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((80,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((83,  msg.showCodeHeader() )), '</span></div>\n  </div>\n  ');85; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox" contenteditable spellcheck=false></div>\n  ');87; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -6556,7 +9028,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/ja_jp/common":41,"ejs":43}],22:[function(require,module,exports){
+},{"../../locale/ja_jp/common":44,"ejs":46}],24:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6578,7 +9050,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":43}],23:[function(require,module,exports){
+},{"ejs":46}],25:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6599,7 +9071,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":43}],24:[function(require,module,exports){
+},{"ejs":46}],26:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6612,7 +9084,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/ja_jp/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n');9; if (options.alreadySaved) { ; buf.push('\n  <div class="saved-to-gallery">\n    ', escape((11,  msg.savedToGallery() )), '\n  </div>\n');13; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <div class="social-buttons">\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((16,  msg.saveToGallery() )), '\n  </button>\n  </div>\n');19; } ; buf.push('\n\n');21; if (options.response && options.response.level_source) { ; buf.push('\n  ');22; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((23,  options.appStrings.sharingText )), '</div>\n  ');24; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((27,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');31; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((31,  options.facebookUrl )), '\' target="_blank">\n        <img src=\'', escape((32,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');34; }; buf.push('\n    ');35; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((35,  options.twitterUrl )), '\' target="_blank">\n        <img src=\'', escape((36,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');38; }; buf.push('    ');38; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((39,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');41; }; buf.push('  </div>\n');42; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
+ buf.push('');1; var msg = require('../../locale/ja_jp/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n  <div class="social-buttons">\n  <button id="print-button">\n    ', escape((11,  msg.print() )), '\n  </button>\n');13; if (options.alreadySaved) { ; buf.push('\n  <button class="saved-to-gallery" disabled>\n    ', escape((15,  msg.savedToGallery() )), '\n  </button>\n');17; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((19,  msg.saveToGallery() )), '\n  </button>\n');21; } ; buf.push('\n  </div>\n\n');24; if (options.response && options.response.level_source) { ; buf.push('\n  ');25; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((26,  options.appStrings.sharingText )), '</div>\n  ');27; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((30,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');34; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((34,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((35,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');37; }; buf.push('\n    ');38; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((38,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((39,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');41; }; buf.push('    ');41; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((42,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');44; }; buf.push('  </div>\n');45; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -6620,7 +9092,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/ja_jp/common":41,"ejs":43}],25:[function(require,module,exports){
+},{"../../locale/ja_jp/common":44,"ejs":46}],27:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6641,7 +9113,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/ja_jp/common":41,"ejs":43}],26:[function(require,module,exports){
+},{"../../locale/ja_jp/common":44,"ejs":46}],28:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6662,7 +9134,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":43}],27:[function(require,module,exports){
+},{"ejs":46}],29:[function(require,module,exports){
 /**
  * Blockly Demo: Turtle Graphics
  *
@@ -7012,10 +9484,102 @@ exports.answer = function(page, level) {
   return api.log;
 };
 
-},{"../base":2,"./api":28}],28:[function(require,module,exports){
+},{"../base":3,"./api":30}],30:[function(require,module,exports){
 var BlocklyApps = require('../base');
+var utils = require('../utils');
+var _ = utils.getLodash();
 
 exports.log = [];
+
+exports.drawCircle = function (size, id) {
+  for (var i = 0; i < 36; i++) {
+    exports.moveForward(size, id);
+    exports.turnRight(10, id);
+  }
+};
+
+exports.drawSnowflake = function (type, id) {
+  var i, j, k;
+
+  // mirors Blockly.JavaScript.colour_random.
+  var random_colour = function () {
+    var colors = Blockly.FieldColour.COLOURS;
+    return colors[Math.floor(Math.random()*colors.length)];
+  };
+
+  if (type === 'random') {
+    type = _.sample(['fractal', 'flower', 'spiral', 'line', 'parallelogram', 'square']);
+  }
+
+  switch(type) {
+    case 'fractal':
+      for (i = 0; i < 8; i++) {
+        exports.jumpForward(45, id);
+        exports.turnLeft(45, id);
+        for (j = 0; j < 3; j++) {
+          for (k = 0; k < 3; k++) {
+            exports.moveForward(15, id);
+            exports.moveBackward(15, id);
+            exports.turnRight(45, id);
+          }
+          exports.turnLeft(90, id);
+          exports.moveBackward(15, id);
+          exports.turnLeft(45, id);
+        }
+        exports.turnRight(90, id);
+      }
+      break;
+
+    case 'flower':
+      for (i = 0; i < 5; i++) {
+        exports.drawCircle(2, id);
+        exports.drawCircle(4, id);
+        exports.turnRight(72, id);
+      }
+      break;
+
+    case 'spiral':
+      for (i = 0; i < 20; i++) {
+        exports.drawCircle(3, id);
+        exports.moveForward(20, id);
+        exports.turnRight(18, id);
+      }
+      break;
+
+    case 'line':
+      for (i = 0; i < 90; i++) {
+        exports.penColour(random_colour());
+        exports.moveForward(50, id);
+        exports.moveBackward(50, id);
+        exports.turnRight(4, id);
+      }
+      exports.penColour("#FFFFFF", id);
+      break;
+
+    case 'parallelogram':
+      for (i = 0; i < 10; i++) {
+        for (j = 0; j < 2; j++) {
+          exports.moveForward(50, id);
+          exports.turnRight(60, id);
+          exports.moveForward(50, id);
+          exports.turnRight(120, id);
+        }
+        exports.turnRight(36, id);
+      }
+      break;
+
+    case 'square':
+      for (i = 0; i < 10; i++) {
+        for (j = 0; j < 4; j++) {
+          exports.moveForward(50, id);
+          exports.turnRight(90, id);
+        }
+        exports.turnRight(36, id);
+      }
+      break;
+  }
+};
+
 
 exports.moveForward = function(distance, id) {
   this.log.push(['FD', distance, id]);
@@ -7101,7 +9665,11 @@ exports.showTurtle = function(id) {
   this.log.push(['ST', id]);
 };
 
-},{"../base":2}],29:[function(require,module,exports){
+exports.drawStamp = function(stamp, id) {
+  this.log.push(['stamp', stamp, id]);
+};
+
+},{"../base":3,"../utils":42}],31:[function(require,module,exports){
 /**
  * Blockly Demo: Turtle Graphics
  *
@@ -7132,6 +9700,7 @@ var msg = require('../../locale/ja_jp/turtle');
 var commonMsg = require('../../locale/ja_jp/common');
 
 var customLevelBlocks = require('./customLevelBlocks');
+var Turtle = require('./turtle');
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function(blockly, blockInstallOptions) {
@@ -7145,18 +9714,30 @@ exports.install = function(blockly, blockInstallOptions) {
     return generator.variableDB_.getDistinctName(name, NAME_TYPE);
   };
 
-  // Create a smaller palette.
-  blockly.FieldColour.COLOURS = [
-    // Row 1.
-    Colours.BLACK, Colours.GREY,
-    Colours.KHAKI, Colours.WHITE,
-    // Row 2.
-    Colours.RED, Colours.PINK,
-    Colours.ORANGE, Colours.YELLOW,
-    // Row 3.
-    Colours.GREEN, Colours.BLUE,
-    Colours.AQUAMARINE, Colours.PLUM];
-  blockly.FieldColour.COLUMNS = 4;
+  if (skin.id == "anna" || skin.id == "elsa")
+  {
+    // Create a smaller palette.
+    blockly.FieldColour.COLOURS = [
+      Colours.FROZEN1, Colours.FROZEN2, Colours.FROZEN3,
+      Colours.FROZEN4, Colours.FROZEN5, Colours.FROZEN6,
+      Colours.FROZEN7, Colours.FROZEN8, Colours.FROZEN9];
+    blockly.FieldColour.COLUMNS = 3;
+
+  } else {
+
+    // Create a smaller palette.
+    blockly.FieldColour.COLOURS = [
+      // Row 1.
+      Colours.BLACK, Colours.GREY,
+      Colours.KHAKI, Colours.WHITE,
+      // Row 2.
+      Colours.RED, Colours.PINK,
+      Colours.ORANGE, Colours.YELLOW,
+      // Row 3.
+      Colours.GREEN, Colours.BLUE,
+      Colours.AQUAMARINE, Colours.PLUM];
+    blockly.FieldColour.COLUMNS = 4;
+  }
 
   // Block definitions.
   blockly.Blocks.draw_move_by_constant = {
@@ -7199,7 +9780,7 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.draw_move_by_constant = function() {
     // Generate JavaScript for moving forward or backward the internal number of
     // pixels.
-    var value = window.parseFloat(this.getTitleValue('VALUE'));
+    var value = window.parseFloat(this.getTitleValue('VALUE')) || 0;
     return 'Turtle.' + this.getTitleValue('DIR') +
         '(' + value + ', \'block_id_' + this.id + '\');\n';
   };
@@ -7274,7 +9855,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
   generator.draw_turn_by_constant = function() {
     // Generate JavaScript for turning left or right.
-    var value = window.parseFloat(this.getTitleValue('VALUE'));
+    var value = window.parseFloat(this.getTitleValue('VALUE')) || 0;
     return 'Turtle.' + this.getTitleValue('DIR') +
         '(' + value + ', \'block_id_' + this.id + '\');\n';
   };
@@ -7939,7 +10520,6 @@ exports.install = function(blockly, blockInstallOptions) {
         this.id + '\');\n';
   };
 
-
   blockly.Blocks.draw_line_style_pattern = {
     // Block to handle event when an arrow button is pressed.
     helpUrl: '',
@@ -7950,18 +10530,10 @@ exports.install = function(blockly, blockInstallOptions) {
       this.appendDummyInput()
            .appendTitle(msg.setPattern())
            .appendTitle( new blockly.FieldImageDropdown(
-              blockly.Blocks.draw_line_style_pattern.Options, 150, 20 ), 'VALUE' );
+              Turtle.lineStylePatternOptions, 150, 20 ), 'VALUE' );
       this.setTooltip(msg.setPattern());
     }
   };
-
-  // image icons and image paths for the 'set pattern block'
-  blockly.Blocks.draw_line_style_pattern.Options =
-    [[skin.patternDefault, 'DEFAULT'], //  signals return to default path drawing
-     [skin.rainbowMenu, 'rainbowLine'],  // set to property name for image within skin
-     [skin.ropeMenu, 'ropeLine'],  // referenced as skin[pattern];
-     [skin.squigglyMenu, 'squigglyLine'],
-     [skin.swirlyMenu, 'swirlyLine']];
 
   generator.draw_line_style_pattern = function() {
     // Generate JavaScript for setting the image for a patterned line.
@@ -8013,10 +10585,55 @@ exports.install = function(blockly, blockInstallOptions) {
         '(\'block_id_' + this.id + '\');\n';
   };
 
+  blockly.Blocks.turtle_stamp = {
+    helpUrl: '',
+    init: function() {
+      this.setHSV(312, 0.32, 0.62);
+      var dropdown;
+      var input = this.appendDummyInput();
+      input.appendTitle(msg.drawStamp());
+      dropdown = new blockly.FieldImageDropdown(this.VALUES, 50, 30);
+
+      input.appendTitle(dropdown, 'VALUE');
+
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.drawStamp());
+    }
+  };
+
+  if (skin.id == "anna" || skin.id == "elsa") {
+    blockly.Blocks.turtle_stamp.VALUES = [
+      [skin.assetUrl('snowflake.png'), 'snowflake1'],
+      [skin.assetUrl('snowflake.png'), 'snowflake2'],
+      [skin.assetUrl('snowflake.png'), 'snowflake3'],
+    ];
+  } else {
+    blockly.Blocks.turtle_stamp.VALUES = [
+      [skin.patternDefault, 'DEFAULT']
+    ];
+  }
+
+  // Preload stamp images
+  Turtle.stamps = [];
+  for (var i = 0; i < blockly.Blocks.turtle_stamp.VALUES.length; i++) {
+    var url = blockly.Blocks.turtle_stamp.VALUES[i][0];
+    var key = blockly.Blocks.turtle_stamp.VALUES[i][1];
+    var img = new Image();
+    img.src = url;
+    Turtle.stamps[key] = img;
+  }
+
+  generator.turtle_stamp = function () {
+    return 'Turtle.drawStamp("' + this.getTitleValue('VALUE') +
+        '", \'block_id_' + this.id + '\');\n';
+  };
+
   customLevelBlocks.install(blockly, generator, gensym);
 };
 
-},{"../../locale/ja_jp/common":41,"../../locale/ja_jp/turtle":42,"./core":31,"./customLevelBlocks":32}],30:[function(require,module,exports){
+},{"../../locale/ja_jp/common":44,"../../locale/ja_jp/turtle":45,"./core":33,"./customLevelBlocks":34,"./turtle":41}],32:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -8037,7 +10654,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":43}],31:[function(require,module,exports){
+},{"ejs":46}],33:[function(require,module,exports){
 // Create a limited colour palette to avoid overwhelming new users
 // and to make colour checking easier.  These definitions cannot be
 // moved to blocks.js, which is loaded later, since they are used in
@@ -8055,18 +10672,33 @@ exports.Colours = {
   GREEN: '#228b22',
   BLUE: '#0000cd',
   AQUAMARINE: '#7fffd4',
-  PLUM: '#843179'
+  PLUM: '#843179',
+
+  FROZEN1: "#d0fdfd",
+  FROZEN2: "#d0fdd0",
+  FROZEN3: "#d0d0fd",
+  FROZEN4: "#e0e0e0",
+  FROZEN5: '#ffffff',
+  FROZEN6: "#e8e8e8",
+  FROZEN7: "#bbd1e4",
+  FROZEN8: "#fdd0fd",
+  FROZEN9: "#aea4ff"
 };
 
-},{}],32:[function(require,module,exports){
+},{}],34:[function(require,module,exports){
 /**
  * A set of blocks used by some of our custom levels (i.e. built by level builder)
  */
 
 var msg = require('../../locale/ja_jp/turtle');
+var utils = require('../utils');
+var _ = utils.getLodash();
+
 
 exports.install = function(blockly, generator, gensym) {
  installDrawASquare(blockly, generator, gensym);
+ installCreateACircle(blockly, generator, gensym);
+ installCreateASnowflakeBranch(blockly, generator, gensym);
  installDrawATriangle(blockly, generator, gensym);
  installDrawAHouse(blockly, generator, gensym);
  installDrawAFlower(blockly, generator, gensym);
@@ -8079,7 +10711,22 @@ exports.install = function(blockly, generator, gensym) {
  installDrawARhombus(blockly, generator, gensym);
  installDrawUpperWave(blockly, generator, gensym);
  installDrawLowerWave(blockly, generator, gensym);
+
+ installCreateASnowflakeDropdown(blockly, generator, gensym);
 };
+
+function createACircleCode (size, gensym, indent) {
+  var loopVar = gensym('count');
+  indent = indent || '';
+  return [
+    indent + '// create_a_circle',
+    indent + 'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 36; ' +
+    indent +       loopVar + '++) {',
+    indent + '  Turtle.moveForward(' + size + ');',
+    indent + '  Turtle.turnRight(10);',
+    indent + '}\n'].join('\n');
+}
+
 
 /**
  * Same as draw_a_square, except inputs are not inlined
@@ -8117,6 +10764,87 @@ function installDrawASquare(blockly, generator, gensym) {
         '}\n'].join('\n');
   };
 }
+
+/**
+ * create_a_circle and create_a_circle_size
+ * first defaults to size 10, second provides a size param
+ */
+function installCreateACircle(blockly, generator, gensym) {
+  blockly.Blocks.create_a_circle = {
+    // Draw a square.
+    init: function() {
+      this.setHSV(94, 0.84, 0.60);
+      this.appendDummyInput()
+          .appendTitle(msg.createACircle());
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip('');
+    }
+  };
+
+  blockly.Blocks.create_a_circle_size = {
+    // Draw a square.
+    init: function() {
+      this.setHSV(94, 0.84, 0.60);
+      this.appendDummyInput()
+          .appendTitle(msg.createACircle());
+      this.appendValueInput('VALUE')
+          .setAlign(blockly.ALIGN_RIGHT)
+          .setCheck('Number')
+              .appendTitle(msg.sizeParameter() + ':');
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip('');
+    }
+  };
+
+  generator.create_a_circle = function() {
+    return createACircleCode(10, gensym);
+  };
+
+  generator.create_a_circle_size = function() {
+    var size = generator.valueToCode(this, 'VALUE', generator.ORDER_ATOMIC);
+    return createACircleCode(size, gensym);
+  };
+}
+
+/**
+ * create_a_snowflower
+ */
+function installCreateASnowflakeBranch(blockly, generator, gensym) {
+  blockly.Blocks.create_a_snowflake_branch = {
+    // Draw a square.
+    init: function() {
+      this.setHSV(94, 0.84, 0.60);
+      this.appendDummyInput()
+          .appendTitle(msg.createASnowflakeBranch());
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip('');
+    }
+  };
+
+  generator.create_a_snowflake_branch = function() {
+    var loopVar = gensym('count');
+    var loopVar2 = gensym('count');
+    return [
+      '// create_a_snowflake_branch',
+      'Turtle.jumpForward(90);',
+      'Turtle.turnLeft(45);',
+      'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 3; ' + loopVar + '++) {',
+      '  for (var ' + loopVar2 + ' = 0; ' + loopVar2 + ' < 3; ' + loopVar2 + '++) {',
+      '    Turtle.moveForward(30);',
+      '    Turtle.moveBackward(30);',
+      '    Turtle.turnRight(45);',
+      '  }',
+      '  Turtle.turnLeft(90);',
+      '  Turtle.moveBackward(30);',
+      '  Turtle.turnLeft(45);',
+      '}',
+      'Turtle.turnRight(45);\n'].join('\n');
+  };
+}
+
 
 /**
  * Draw a rhombus function call block
@@ -8618,7 +11346,35 @@ function installDrawLowerWave(blockly, generator, gensym) {
   };
 }
 
-},{"../../locale/ja_jp/turtle":42}],33:[function(require,module,exports){
+function installCreateASnowflakeDropdown(blockly, generator, gensym) {
+  var snowflakes = [
+    [msg.createSnowflakeSquare(), 'square'],
+    [msg.createSnowflakeParallelogram(), 'parallelogram'],
+    [msg.createSnowflakeLine(), 'line'],
+    [msg.createSnowflakeSpiral(), 'spiral'],
+    [msg.createSnowflakeFlower(), 'flower'],
+    [msg.createSnowflakeFractal(), 'fractal'],
+    [msg.createSnowflakeRandom(), 'random']
+  ];
+
+  blockly.Blocks.create_snowflake_dropdown = {
+    init: function () {
+      this.setHSV(94, 0.84, 0.60);
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldDropdown(snowflakes), 'TYPE');
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip('');
+    }
+  };
+
+  generator.create_snowflake_dropdown = function () {
+    var type = this.getTitleValue('TYPE');
+    return "Turtle.drawSnowflake('" + type + "', 'block_id_" + this.id + "');";
+  };
+}
+
+},{"../../locale/ja_jp/turtle":45,"../utils":42}],35:[function(require,module,exports){
 var levelBase = require('../level_base');
 var Colours = require('./core').Colours;
 var answer = require('./answers').answer;
@@ -9517,11 +12273,11 @@ levels.ec_1_10 = utils.extend(levels['1_10'], {
   'startBlocks': "moveForward(100);\n",
 });
 
-},{"../../locale/ja_jp/turtle":42,"../block_utils":3,"../level_base":10,"../utils":39,"./answers":27,"./core":31,"./requiredBlocks":35,"./startBlocks.xml":36,"./toolbox.xml":37}],34:[function(require,module,exports){
+},{"../../locale/ja_jp/turtle":45,"../block_utils":4,"../level_base":12,"../utils":42,"./answers":29,"./core":33,"./requiredBlocks":37,"./startBlocks.xml":39,"./toolbox.xml":40}],36:[function(require,module,exports){
 var appMain = require('../appMain');
 window.Turtle = require('./turtle');
 var blocks = require('./blocks');
-var skins = require('../skins');
+var skins = require('./skins');
 var levels = require('./levels');
 
 window.turtleMain = function(options) {
@@ -9530,7 +12286,7 @@ window.turtleMain = function(options) {
   appMain(window.Turtle, levels, options);
 };
 
-},{"../appMain":1,"../skins":13,"./blocks":29,"./levels":33,"./turtle":38}],35:[function(require,module,exports){
+},{"../appMain":2,"./blocks":31,"./levels":35,"./skins":38,"./turtle":41}],37:[function(require,module,exports){
 /**
  * Sets BlocklyApp constants that depend on the page and level.
  * This encapsulates many functions used for BlocklyApps.REQUIRED_BLOCKS.
@@ -9702,8 +12458,8 @@ var defineWithArg = function(func_name, arg_name) {
     test: function(block) {
       return block.type == 'procedures_defnoreturn' &&
           block.getTitleValue('NAME') == func_name &&
-          block.arguments_ && block.arguments_.length &&
-          block.arguments_[0] == arg_name;
+          block.parameterNames_ && block.parameterNames_.length &&
+          block.parameterNames_[0] == arg_name;
     },
     type: 'procedures_defnoreturn',
     titles: {'NAME': func_name},
@@ -9734,7 +12490,44 @@ module.exports = {
   defineWithArg: defineWithArg,
 };
 
-},{"../required_block_utils":12}],36:[function(require,module,exports){
+},{"../required_block_utils":14}],38:[function(require,module,exports){
+var skinBase = require('../skins');
+
+exports.load = function (assetUrl, id) {
+  var skin = skinBase.load(assetUrl, id);
+
+  var CONFIGS = {
+    anna: {
+      turtleNumFrames: 10,
+      smoothAnimate: true,
+      consolidateTurnAndMove: true,
+      annaLine: skin.assetUrl('annaline.png'),
+      annaLine_2x: skin.assetUrl('annaline_2x.png')
+
+    },
+
+    elsa: {
+      turtleNumFrames: 20,
+      decorationAnimationNumFrames: 19,
+      smoothAnimate: true,
+      consolidateTurnAndMove: true,
+      elsaLine: skin.assetUrl('elsaline.png'),
+      elsaLine_2x: skin.assetUrl('elsaline_2x.png')
+    }
+  };
+
+  var config = CONFIGS[skin.id];
+
+  // Get properties from config
+  var isAsset = /\.\S{3}$/; // ends in dot followed by three non-whitespace chars
+  for (var prop in config) {
+    skin[prop] = config[prop];
+  }
+
+  return skin;
+};
+
+},{"../skins":15}],39:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9801,7 +12594,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/ja_jp/turtle":42,"ejs":43}],37:[function(require,module,exports){
+},{"../../locale/ja_jp/turtle":45,"ejs":46}],40:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -9930,7 +12723,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/ja_jp/turtle":42,"ejs":43}],38:[function(require,module,exports){
+},{"../../locale/ja_jp/turtle":45,"ejs":46}],41:[function(require,module,exports){
 /**
  * Blockly Demo: Turtle Graphics
  *
@@ -9965,7 +12758,6 @@ var BlocklyApps = require('../base');
 var Turtle = module.exports;
 var commonMsg = require('../../locale/ja_jp/common');
 var turtleMsg = require('../../locale/ja_jp/turtle');
-var skins = require('../skins');
 var levels = require('./levels');
 var Colours = require('./core').Colours;
 var codegen = require('../codegen');
@@ -9990,6 +12782,9 @@ var JOINT_RADIUS = 4;
  */
 var JOINT_SEGMENT_LENGTH = 50;
 
+// image icons and image paths for the 'set pattern block'
+exports.lineStylePatternOptions = [];
+
 /**
  * PID of animation task currently executing.
  */
@@ -10001,17 +12796,40 @@ Turtle.pid = 0;
 Turtle.visible = true;
 
 /**
+ * Set a turtle heading.
+ */
+Turtle.heading = 0;
+
+/**
  * The avatar image
  */
 Turtle.avatarImage = new Image();
 Turtle.numberAvatarHeadings = undefined;
 
 /**
+ * The avatar animation decoration image
+ */
+Turtle.decorationAnimationImage = new Image();
+
+/**
  * Drawing with a pattern
  */
 
-Turtle.patternForPaths = new Image();
+Turtle.currentPathPattern = new Image();
+Turtle.loadedPathPatterns = [];
 Turtle.isDrawingWithPattern = false;
+
+function backingScale(context) {
+  // disable retina for now
+  // if ('devicePixelRatio' in window) {
+  //   if (window.devicePixelRatio > 1) {
+  //     return window.devicePixelRatio;
+  //   }
+  // }
+  return 1;
+}
+
+var retina = 1;
 
 /**
  * Initialize Blockly and the turtle.  Called on page load.
@@ -10021,11 +12839,59 @@ Turtle.init = function(config) {
   skin = config.skin;
   level = config.level;
 
+  exports.lineStylePatternOptions = [
+    [skin.patternDefault, 'DEFAULT'], //  signals return to default path drawing
+    [skin.rainbowMenu, 'rainbowLine'],  // set to property name for image within skin
+    [skin.ropeMenu, 'ropeLine'],  // referenced as skin[pattern];
+    [skin.squigglyMenu, 'squigglyLine'],
+    [skin.swirlyMenu, 'swirlyLine'],
+    [skin.annaLine, 'annaLine'],
+    [skin.elsaLine, 'elsaLine'],
+    [skin.annaLine_2x, 'annaLine_2x'],
+    [skin.elsaLine_2x, 'elsaLine_2x'],
+  ];
+
+  if (skin.id == "anna" || skin.id == "elsa")
+  {
+    retina = backingScale();
+
+    // We don't support ratios other than 2 right now (sorry!) so fall back to 1.
+    if (retina != 2)
+      retina = 1;
+
+    // let's try adding a background image
+    level.images = [{}];
+    if (retina > 1) {
+      level.images[0].filename = 'background_2x.jpg';
+    }
+    else {
+      level.images[0].filename = 'background.jpg';
+    }
+
+    level.images[0].position = [ 0, 0 ];
+    level.images[0].scale = 1;
+  }
+
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'when_run';
 
-  Turtle.AVATAR_HEIGHT = 51;
-  Turtle.AVATAR_WIDTH = 70;
+  if (skin.id == "anna")
+  {
+    Turtle.AVATAR_WIDTH = 73;
+    Turtle.AVATAR_HEIGHT = 100;
+  }
+  else if (skin.id == "elsa")
+  {
+    Turtle.AVATAR_WIDTH = 73;
+    Turtle.AVATAR_HEIGHT = 100;
+    Turtle.DECORATIONANIMATION_WIDTH = 85;
+    Turtle.DECORATIONANIMATION_HEIGHT = 85;
+  }
+  else
+  {
+    Turtle.AVATAR_WIDTH = 70;
+    Turtle.AVATAR_HEIGHT = 51;
+  }
 
   config.html = page({
     assetUrl: BlocklyApps.assetUrl,
@@ -10040,16 +12906,18 @@ Turtle.init = function(config) {
   });
 
   config.loadAudio = function() {
-    Blockly.loadAudio_(skin.winSound, 'win');
-    Blockly.loadAudio_(skin.startSound, 'start');
-    Blockly.loadAudio_(skin.failureSound, 'failure');
+    BlocklyApps.loadAudio(skin.winSound, 'win');
+    BlocklyApps.loadAudio(skin.startSound, 'start');
+    BlocklyApps.loadAudio(skin.failureSound, 'failure');
   };
 
   config.afterInject = function() {
-    // Add to reserved word list: API, local variables in execution evironment
-    // (execute) and the infinite loop detection function.
-    //XXX Not sure if this is still right.
-    Blockly.JavaScript.addReservedWords('Turtle,code');
+    if (BlocklyApps.usingBlockly) {
+      // Add to reserved word list: API, local variables in execution evironment
+      // (execute) and the infinite loop detection function.
+      //XXX Not sure if this is still right.
+      Blockly.JavaScript.addReservedWords('Turtle,code');
+    }
 
     // Helper for creating canvas elements.
     var createCanvas = function(id, width, height) {
@@ -10061,22 +12929,54 @@ Turtle.init = function(config) {
     };
 
     // Create hidden canvases.
-    Turtle.ctxAnswer = createCanvas('answer', 400, 400).getContext('2d');
-    Turtle.ctxImages = createCanvas('images', 400, 400).getContext('2d');
-    Turtle.ctxPredraw = createCanvas('predraw', 400, 400).getContext('2d');
-    Turtle.ctxScratch = createCanvas('scratch', 400, 400).getContext('2d');
+    Turtle.ctxAnswer = createCanvas('answer', 400 * retina, 400 * retina).getContext('2d');
+    Turtle.ctxImages = createCanvas('images', 400 * retina, 400 * retina).getContext('2d');
+    Turtle.ctxPredraw = createCanvas('predraw', 400 * retina, 400 * retina).getContext('2d');
+    Turtle.ctxScratch = createCanvas('scratch', 400 * retina, 400 * retina).getContext('2d');
+    Turtle.ctxPattern = createCanvas('pattern', 400 * retina, 400 * retina).getContext('2d');
     Turtle.ctxFeedback = createCanvas('feedback', 154, 154).getContext('2d');
 
     // Create display canvas.
-    var display = createCanvas('display', 400, 400);
+    var display = createCanvas('display', 400 * retina, 400 * retina);
+
+    if (retina > 1)
+    {
+      display.style.width = '400px';
+      display.style.height = '400px';
+    }
+
     var visualization = document.getElementById('visualization');
     visualization.appendChild(display);
     Turtle.ctxDisplay = display.getContext('2d');
 
+
+    if (BlocklyApps.usingBlockly && (skin.id == "anna" || skin.id == "elsa")) {
+      Blockly.JavaScript.colour_random = function() {
+        // Generate a random colour.
+        if (!Blockly.JavaScript.definitions_.colour_random) {
+          var functionName = Blockly.JavaScript.variableDB_.getDistinctName(
+              'colour_random', Blockly.Generator.NAME_TYPE);
+          Blockly.JavaScript.colour_random.functionName = functionName;
+          var func = [];
+          func.push('function ' + functionName + '() {');
+          func.push('   var colors = ' + JSON.stringify(Blockly.FieldColour.COLOURS) + ';');
+          func.push('  return colors[Math.floor(Math.random()*colors.length)];');
+          func.push('}');
+          Blockly.JavaScript.definitions_.colour_random = func.join('\n');
+        }
+        var code = Blockly.JavaScript.colour_random.functionName + '()';
+        return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+      };
+    }
+
+    Turtle.loadDecorationAnimation();
+
     // Set their initial contents.
     Turtle.loadTurtle();
     Turtle.drawImages();
+    Turtle.isDrawingAnswer_ = true;
     Turtle.drawAnswer();
+    Turtle.isDrawingAnswer_ = false;
     if (level.predraw_blocks) {
       Turtle.isPredrawing_ = true;
       Turtle.drawBlocksOnCanvas(level.predraw_blocks, Turtle.ctxPredraw);
@@ -10086,18 +12986,19 @@ Turtle.init = function(config) {
     // pre-load image for line pattern block. Creating the image object and setting source doesn't seem to be
     // enough in this case, so we're actually creating and reusing the object within the document body.
 
-    if (config.level.edit_blocks)
+    if (skin.id == "anna" || skin.id == "elsa")
     {
       var imageContainer = document.createElement('div');
       imageContainer.style.display='none';
       document.body.appendChild(imageContainer);
 
-      for( var i = 0; i <  Blockly.Blocks.draw_line_style_pattern.Options.length; i++) {
-        var pattern = Blockly.Blocks.draw_line_style_pattern.Options[i][1];
-        var img = new Image();
-        img.src = skin[pattern];
-        img.id = pattern;
-        imageContainer.appendChild(img);
+      for( var i = 0; i < exports.lineStylePatternOptions.length; i++) {
+        var pattern = exports.lineStylePatternOptions[i][1];
+        if (skin[pattern]) {
+          var img = new Image();
+          img.src = skin[pattern];
+          Turtle.loadedPathPatterns[pattern] = img;
+        }
       }
     }
 
@@ -10124,7 +13025,8 @@ Turtle.drawLogOnCanvas = function(log, canvas) {
   BlocklyApps.reset();
   while (log.length) {
     var tuple = log.shift();
-    Turtle.step(tuple[0], tuple.splice(1));
+    Turtle.step(tuple[0], tuple.splice(1), {smoothAnimate: false});
+    clearTuple();
   }
   canvas.globalCompositeOperation = 'copy';
   canvas.drawImage(Turtle.ctxScratch.canvas, 0, 0);
@@ -10132,11 +13034,18 @@ Turtle.drawLogOnCanvas = function(log, canvas) {
 };
 
 Turtle.drawBlocksOnCanvas = function(blocks, canvas) {
-  var domBlocks = Blockly.Xml.textToDom(blocks);
-  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, domBlocks);
-  var code = Blockly.Generator.blockSpaceToCode('JavaScript');
+  var code;
+  if (BlocklyApps.usingBlockly) {
+    var domBlocks = Blockly.Xml.textToDom(blocks);
+    Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, domBlocks);
+    code = Blockly.Generator.blockSpaceToCode('JavaScript');
+  } else {
+    code = blocks;
+  }
   Turtle.evalCode(code);
-  Blockly.mainBlockSpace.clear();
+  if (BlocklyApps.usingBlockly) {
+    Blockly.mainBlockSpace.clear();
+  }
   Turtle.drawCurrentBlocksOnCanvas(canvas);
 };
 
@@ -10149,14 +13058,30 @@ Turtle.drawCurrentBlocksOnCanvas = function(canvas) {
  * Code from http://stackoverflow.com/questions/5495952. Thanks, Phrogz.
  * @param {string} filename Relative path to image.
  * @param {!Array} position An x-y pair.
+ * @param {number} optional scale at which image is drawn
  */
-Turtle.placeImage = function(filename, position) {
+Turtle.placeImage = function(filename, position, scale) {
   var img = new Image();
   img.onload = function() {
-    Turtle.ctxImages.drawImage(img, position[0], position[1]);
+    if (scale) {
+      if (img.width !== 0) {
+        Turtle.ctxImages.drawImage(img, position[0] * retina, position[1] * retina, img.width, img.height, 0, 0, img.width * scale, img.height * scale);
+      }
+    } else {
+      if (img.width !== 0) {
+        Turtle.ctxImages.drawImage(img, position[0] * retina, position[1] * retina);
+      }
+    }
     Turtle.display();
   };
-  img.src = BlocklyApps.assetUrl('media/turtle/' + filename);
+  if (skin.id == "anna" || skin.id == "elsa")
+  {
+    img.src = skin.assetUrl(filename);
+  }
+  else
+  {
+    img.src = BlocklyApps.assetUrl('media/turtle/' + filename);
+  }
 };
 
 /**
@@ -10168,7 +13093,7 @@ Turtle.drawImages = function() {
   }
   for (var i = 0; i < level.images.length; i++) {
     var image = level.images[i];
-    Turtle.placeImage(image.filename, image.position);
+    Turtle.placeImage(image.filename, image.position, image.scale);
   }
   Turtle.ctxImages.globalCompositeOperation = 'copy';
   Turtle.ctxImages.drawImage(Turtle.ctxScratch.canvas, 0, 0);
@@ -10182,31 +13107,157 @@ Turtle.loadTurtle = function() {
   Turtle.avatarImage.onload = function() {
     Turtle.display();
   };
-  Turtle.avatarImage.src = skin.avatar;
-  Turtle.numberAvatarHeadings = 180;
-  Turtle.avatarImage.height = Turtle.AVATAR_HEIGHT;
-  Turtle.avatarImage.width = Turtle.AVATAR_WIDTH;
+  if ((skin.id == "anna" || skin.id == "elsa") && retina > 1)
+    Turtle.avatarImage.src = skin.avatar_2x;
+  else
+    Turtle.avatarImage.src = skin.avatar;
+  if (skin.id == "anna")
+    Turtle.numberAvatarHeadings = 36;
+  else if (skin.id == "elsa")
+    Turtle.numberAvatarHeadings = 18;
+  else
+    Turtle.numberAvatarHeadings = 180;
+  Turtle.avatarImage.spriteHeight = Turtle.AVATAR_HEIGHT;
+  Turtle.avatarImage.spriteWidth = Turtle.AVATAR_WIDTH;
 };
+
+/**
+ * Initial the turtle animation deocration on load.
+ */
+Turtle.loadDecorationAnimation = function() {
+  if (skin.id == "elsa")
+  {
+    if (retina > 1)
+      Turtle.decorationAnimationImage.src = skin.decorationAnimation_2x;
+    else
+      Turtle.decorationAnimationImage.src = skin.decorationAnimation;
+    Turtle.decorationAnimationImage.height = Turtle.DECORATIONANIMATION_HEIGHT;
+    Turtle.decorationAnimationImage.width = Turtle.DECORATIONANIMATION_WIDTH;
+  }
+};
+
+var turtleFrame = 0;
+
 
 /**
  * Draw the turtle image based on Turtle.x, Turtle.y, and Turtle.heading.
  */
 Turtle.drawTurtle = function() {
+  var sourceY;
   // Computes the index of the image in the sprite.
   var index = Math.floor(Turtle.heading * Turtle.numberAvatarHeadings / 360);
-  var sourceX = Turtle.avatarImage.width * index;
-  var sourceY = 0;
-  var sourceWidth = Turtle.avatarImage.width;
-  var sourceHeight = Turtle.avatarImage.height;
-  var destWidth = Turtle.avatarImage.width;
-  var destHeight = Turtle.avatarImage.height;
+  if (skin.id == "anna" || skin.id == "elsa") {
+    // the rotations in the sprite sheet go in the opposite direction.
+    index = Turtle.numberAvatarHeadings - index;
+
+    // and they are 180 degrees out of phase.
+    index = (index + Turtle.numberAvatarHeadings/2) % Turtle.numberAvatarHeadings;
+  }
+  var sourceX = Turtle.avatarImage.spriteWidth * index;
+  if (skin.id == "anna" || skin.id == "elsa") {
+    sourceY = Turtle.avatarImage.spriteHeight * turtleFrame;
+    turtleFrame = (turtleFrame + 1) % skin.turtleNumFrames;
+  } else {
+    sourceY = 0;
+  }
+  var sourceWidth = Turtle.avatarImage.spriteWidth;
+  var sourceHeight = Turtle.avatarImage.spriteHeight;
+  var destWidth = Turtle.avatarImage.spriteWidth;
+  var destHeight = Turtle.avatarImage.spriteHeight;
   var destX = Turtle.x - destWidth / 2;
   var destY = Turtle.y - destHeight + 7;
 
-  Turtle.ctxDisplay.drawImage(Turtle.avatarImage, sourceX, sourceY,
-                              sourceWidth, sourceHeight, destX, destY,
-                              destWidth, destHeight);
+  if (Turtle.avatarImage.width === 0 || Turtle.avatarImage.height === 0)
+    return;
+
+  if (sourceX * retina < 0 ||
+      sourceY * retina < 0 ||
+      sourceX * retina + sourceWidth  * retina -0 > Turtle.avatarImage.width ||
+      sourceY * retina + sourceHeight * retina > Turtle.avatarImage.height)
+  {
+    if (console.log) {
+      console.log("drawImage is out of source bounds!");
+    }
+    return;
+  }
+
+  if (Turtle.avatarImage.width !== 0) {
+    Turtle.ctxDisplay.drawImage(
+      Turtle.avatarImage,
+      Math.round(sourceX * retina), Math.round(sourceY * retina),
+      sourceWidth * retina - 0, sourceHeight * retina,
+      Math.round(destX * retina), Math.round(destY * retina),
+      destWidth * retina - 0, destHeight * retina);
+  }
+
+  /* console.log(Math.round(sourceX * retina), Math.round(sourceY * retina),
+                              sourceWidth * retina, sourceHeight * retina, Math.round(destX * retina), Math.round(destY * retina),
+                              destWidth * retina, destHeight * retina); */
 };
+
+// An x offset against the sprite edge where the decoration should be drawn,
+// along with whether it should be drawn before or after the turtle sprite itself.
+
+var decorationImageDetails = [
+  { x: 15, when: "after" },
+  { x: 26, when: "after" },
+  { x: 37, when: "after" },
+  { x: 46, when: "after" },
+  { x: 60, when: "after" },
+  { x: 65, when: "after" },
+  { x: 66, when: "after" },
+  { x: 64, when: "after" },
+  { x: 62, when: "before" },
+  { x: 55, when: "before" },
+  { x: 48, when: "before" },
+  { x: 33, when: "before" },
+  { x: 31, when: "before" },
+  { x: 22, when: "before" },
+  { x: 17, when: "before" },
+  { x: 12, when: "before" },
+  { x:  8, when: "after" },
+  { x: 10, when: "after" }
+];
+
+/**
+  * This is called twice, once with "before" and once with "after", referring to before or after
+  * the sprite is drawn.  For some angles it should be drawn before, and for some after.
+  */
+
+Turtle.drawDecorationAnimation = function(when) {
+  if (skin.id == "elsa") {
+    var frameIndex = (turtleFrame + 10) % skin.decorationAnimationNumFrames;
+
+    var angleIndex = Math.floor(Turtle.heading * Turtle.numberAvatarHeadings / 360);
+
+    // the rotations in the Anna & Elsa sprite sheets go in the opposite direction.
+    angleIndex = Turtle.numberAvatarHeadings - angleIndex;
+
+    // and they are 180 degrees out of phase.
+    angleIndex = (angleIndex + Turtle.numberAvatarHeadings/2) % Turtle.numberAvatarHeadings;
+
+    if (decorationImageDetails[angleIndex].when == when) {
+      var sourceX = Turtle.decorationAnimationImage.width * frameIndex;
+      var sourceY = 0;
+      var sourceWidth = Turtle.decorationAnimationImage.width;
+      var sourceHeight = Turtle.decorationAnimationImage.height;
+      var destWidth = sourceWidth;
+      var destHeight = sourceHeight;
+      var destX = Turtle.x - destWidth / 2 - 15 - 15 + decorationImageDetails[angleIndex].x;
+      var destY = Turtle.y - destHeight / 2 - 100;
+
+      if (Turtle.decorationAnimationImage.width !== 0) {
+        Turtle.ctxDisplay.drawImage(
+          Turtle.decorationAnimationImage,
+          Math.round(sourceX * retina), Math.round(sourceY * retina),
+          sourceWidth * retina, sourceHeight * retina,
+          Math.round(destX * retina), Math.round(destY * retina),
+          destWidth * retina, destHeight * retina);
+      }
+    }
+  }
+};
+
 
 /**
  * Reset the turtle to the start position, clear the display, and kill any
@@ -10232,9 +13283,21 @@ BlocklyApps.reset = function(ignore) {
   }
   // Clear the display.
   Turtle.ctxScratch.canvas.width = Turtle.ctxScratch.canvas.width;
-  Turtle.ctxScratch.strokeStyle = '#000000';
-  Turtle.ctxScratch.fillStyle = '#000000';
-  Turtle.ctxScratch.lineWidth = 5;
+  Turtle.ctxPattern.canvas.width = Turtle.ctxPattern.canvas.width;
+  if (skin.id == "anna") {
+    Turtle.ctxScratch.strokeStyle = 'rgb(255,255,255)';
+    Turtle.ctxScratch.fillStyle = 'rgb(255,255,255)';
+    Turtle.ctxScratch.lineWidth = 2 * retina;
+  } else if (skin.id == "elsa") {
+    Turtle.ctxScratch.strokeStyle = 'rgb(255,255,255)';
+    Turtle.ctxScratch.fillStyle = 'rgb(255,255,255)';
+    Turtle.ctxScratch.lineWidth = 2 * retina;
+  } else {
+    Turtle.ctxScratch.strokeStyle = '#000000';
+    Turtle.ctxScratch.fillStyle = '#000000';
+    Turtle.ctxScratch.lineWidth = 5;
+  }
+
   Turtle.ctxScratch.lineCap = 'round';
   Turtle.ctxScratch.font = 'normal 18pt Arial';
   Turtle.display();
@@ -10243,8 +13306,20 @@ BlocklyApps.reset = function(ignore) {
   Turtle.ctxFeedback.clearRect(
       0, 0, Turtle.ctxFeedback.canvas.width, Turtle.ctxFeedback.canvas.height);
 
-  // Reset to empty pattern
-  Turtle.setPattern(null);
+  if (skin.id == "anna") {
+    if (retina > 1)
+      Turtle.setPattern("annaLine_2x");
+    else
+      Turtle.setPattern("annaLine");
+  } else if (skin.id == "elsa") {
+    if (retina > 1)
+      Turtle.setPattern("elsaLine_2x");
+    else
+      Turtle.setPattern("elsaLine");
+  } else {
+    // Reset to empty pattern
+    Turtle.setPattern(null);
+  }
 
   // Kill any task.
   if (Turtle.pid) {
@@ -10258,7 +13333,17 @@ BlocklyApps.reset = function(ignore) {
 
   // Stop the looping sound.
   BlocklyApps.stopLoopingAudio('start');
+
+  clearTuple();
 };
+
+function clearTuple()
+{
+  Turtle.stepStartX = Turtle.x;
+  Turtle.stepStartY = Turtle.y;
+  jumpDistanceCovered = 0;
+}
+
 
 /**
  * Copy the scratch canvas to the display canvas. Add a turtle marker.
@@ -10273,18 +13358,26 @@ Turtle.display = function() {
   Turtle.ctxDisplay.fillStyle = style;
 
   Turtle.ctxDisplay.globalCompositeOperation = 'copy';
-  // Draw the answer layer.
-  Turtle.ctxDisplay.globalAlpha = 0.15;
-  Turtle.ctxDisplay.drawImage(Turtle.ctxAnswer.canvas, 0, 0);
-  Turtle.ctxDisplay.globalAlpha = 1;
-
   // Draw the images layer.
   Turtle.ctxDisplay.globalCompositeOperation = 'source-over';
   Turtle.ctxDisplay.drawImage(Turtle.ctxImages.canvas, 0, 0);
 
+  // Draw the answer layer.
+  if (skin.id == "anna" || skin.id == "elsa") {
+    Turtle.ctxDisplay.globalAlpha = 0.4;
+  } else {
+    Turtle.ctxDisplay.globalAlpha = 0.15;
+  }
+  Turtle.ctxDisplay.drawImage(Turtle.ctxAnswer.canvas, 0, 0);
+  Turtle.ctxDisplay.globalAlpha = 1;
+
   // Draw the predraw layer.
   Turtle.ctxDisplay.globalCompositeOperation = 'source-over';
   Turtle.ctxDisplay.drawImage(Turtle.ctxPredraw.canvas, 0, 0);
+
+  // Draw the pattern layer.
+  Turtle.ctxDisplay.globalCompositeOperation = 'source-over';
+  Turtle.ctxDisplay.drawImage(Turtle.ctxPattern.canvas, 0, 0);
 
   // Draw the user layer.
   Turtle.ctxDisplay.globalCompositeOperation = 'source-over';
@@ -10292,7 +13385,9 @@ Turtle.display = function() {
 
   // Draw the turtle.
   if (Turtle.visible) {
+    Turtle.drawDecorationAnimation("before");
     Turtle.drawTurtle();
+    Turtle.drawDecorationAnimation("after");
   }
 };
 
@@ -10302,7 +13397,9 @@ Turtle.display = function() {
 BlocklyApps.runButtonClick = function() {
   BlocklyApps.toggleRunReset('reset');
   document.getElementById('spinner').style.visibility = 'visible';
-  Blockly.mainBlockSpace.traceOn(true);
+  if (BlocklyApps.usingBlockly) {
+    Blockly.mainBlockSpace.traceOn(true);
+  }
   BlocklyApps.attempts++;
   Turtle.execute();
 };
@@ -10376,22 +13473,84 @@ Turtle.execute = function() {
   // animate the transcript.
   Turtle.pid = window.setTimeout(Turtle.animate, 100);
 
-  // Disable toolbox while running
-  Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
+  if (BlocklyApps.usingBlockly) {
+    // Disable toolbox while running
+    Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
+  }
 };
+
+// Divide each jump into substeps so that we can animate every movement.
+var jumpDistance = 5;
+var jumpDistanceCovered;
+
+
+/**
+ * Special case: if we have a turn, followed by a move forward, then we can just
+ * do the turn instantly and then begin the move forward in the same frame.
+ */
+function checkforTurnAndMove() {
+  var nextIsForward = false;
+
+  var currentTuple = api.log[0];
+  var currentCommand = currentTuple[0];
+  var currentValues = currentTuple.slice(1);
+
+  // Check first for a small turn movement.
+  if (currentCommand === 'RT') {
+    var currentAngle = currentValues[0];
+    if (Math.abs(currentAngle) <= 10) {
+      // Check that next command is a move forward.
+      if (api.log.length > 1) {
+        var nextTuple = api.log[1];
+        var nextCommand = nextTuple[0];
+        if (nextCommand === 'FD') {
+          nextIsForward = true;
+        }
+      }
+    }
+  }
+
+  return nextIsForward;
+}
+
 
 /**
  * Attempt to execute one command from the log of API commands.
  */
 function executeTuple () {
-  var tuple = api.log.shift();
-  if (tuple) {
-    var command = tuple.shift();
-    BlocklyApps.highlight(String(tuple.pop()));
-    Turtle.step(command, tuple);
-    Turtle.display();
+
+  if (api.log.length === 0) {
+    return false;
   }
-  return Boolean(tuple);
+
+  var executeSecondTuple;
+
+  do {
+    // Unless something special happens, we will just execute a single tuple.
+    executeSecondTuple = false;
+
+    var tuple = api.log[0];
+    var command = tuple[0];
+    var id = tuple[tuple.length-1];
+
+    BlocklyApps.highlight(String(id));
+
+    // Should we execute another tuple in this frame of animation?
+    if (skin.consolidateTurnAndMove && checkforTurnAndMove()) {
+      executeSecondTuple = true;
+    }
+
+    // We only smooth animate for Anna & Elsa, and only if there is not another tuple to be done.
+    var tupleDone = Turtle.step(command, tuple.slice(1), {smoothAnimate: skin.smoothAnimate && !executeSecondTuple});
+    Turtle.display();
+
+    if (tupleDone) {
+      api.log.shift();
+      clearTuple();
+    }
+  } while (executeSecondTuple);
+
+  return true;
 }
 
 /**
@@ -10399,7 +13558,9 @@ function executeTuple () {
  */
 function finishExecution () {
   document.getElementById('spinner').style.visibility = 'hidden';
-  Blockly.mainBlockSpace.highlightBlock(null);
+  if (BlocklyApps.usingBlockly) {
+    Blockly.mainBlockSpace.highlightBlock(null);
+  }
   Turtle.checkAnswer();
 }
 
@@ -10433,7 +13594,7 @@ Turtle.animate = function() {
         break;
       }
     }
-    if (!stepped) {
+    if (!stepped && !executeTuple()) {
       // We dropped out of the step loop because we ran out of code, all done:
       finishExecution();
       return;
@@ -10447,36 +13608,98 @@ Turtle.animate = function() {
 
   // Scale the speed non-linearly, to give better precision at the fast end.
   var stepSpeed = 1000 * Math.pow(1 - Turtle.speedSlider.getValue(), 2);
+  if (skin.id == "anna" || skin.id == "elsa")
+  {
+    stepSpeed /= 10;
+  }
   Turtle.pid = window.setTimeout(Turtle.animate, stepSpeed);
+};
+
+
+Turtle.doSmoothAnimate = function(options, distance)
+{
+  var tupleDone = true;
+
+  if (options && options.smoothAnimate)
+  {
+    var fullDistance = distance;
+
+    if (fullDistance < 0) {
+      // Going backward.
+      if (jumpDistanceCovered - jumpDistance <= fullDistance) {
+        // clamp at maximum
+        distance = fullDistance - jumpDistanceCovered;
+        jumpDistanceCovered = fullDistance;
+      } else {
+        distance = -jumpDistance;
+        jumpDistanceCovered -= jumpDistance;
+        tupleDone = false;
+      }
+
+    } else {
+      // Going foward.
+      if (jumpDistanceCovered + jumpDistance >= fullDistance) {
+        // clamp at maximum
+        distance = fullDistance - jumpDistanceCovered;
+        jumpDistanceCovered = fullDistance;
+      } else {
+        distance = jumpDistance;
+        jumpDistanceCovered += jumpDistance;
+        tupleDone = false;
+      }
+    }
+  }
+
+  return { tupleDone: tupleDone, distance: distance };
 };
 
 /**
  * Execute one step.
  * @param {string} command Logo-style command (e.g. 'FD' or 'RT').
  * @param {!Array} values List of arguments for the command.
+ * @param {number} fraction How much of this step's distance do we draw?
+ * @param {object} single option for now: smoothAnimate (true/false)
  */
-Turtle.step = function(command, values) {
+Turtle.step = function(command, values, options) {
+  var tupleDone = true;
+  var result;
+  var distance;
+  var heading;
+
   switch (command) {
     case 'FD':  // Forward
-      Turtle.moveForward_(values[0]);
+      distance = values[0];
+      result = Turtle.doSmoothAnimate(options, distance);
+      tupleDone = result.tupleDone;
+      Turtle.moveForward_(result.distance);
       break;
     case 'JF':  // Jump forward
-      Turtle.jumpForward_(values[0]);
+      distance = values[0];
+      result = Turtle.doSmoothAnimate(options, distance);
+      tupleDone = result.tupleDone;
+      Turtle.jumpForward_(result.distance);
       break;
     case 'MV':  // Move (direction)
-      var distance = values[0];
-      var heading = values[1];
+      distance = values[0];
+      heading = values[1];
+      result = Turtle.doSmoothAnimate(options, distance);
+      tupleDone = result.tupleDone;
       Turtle.setHeading_(heading);
-      Turtle.moveForward_(distance);
+      Turtle.moveForward_(result.distance);
       break;
     case 'JD':  // Jump (direction)
       distance = values[0];
       heading = values[1];
+      result = Turtle.doSmoothAnimate(options, distance);
+      tupleDone = result.tupleDone;
       Turtle.setHeading_(heading);
-      Turtle.jumpForward_(distance);
+      Turtle.jumpForward_(result.distance);
       break;
     case 'RT':  // Right Turn
-      Turtle.turnByDegrees_(values[0]);
+      distance = values[0];
+      result = Turtle.doSmoothAnimate(options, distance);
+      tupleDone = result.tupleDone;
+      Turtle.turnByDegrees_(result.distance);
       break;
     case 'DP':  // Draw Print
       Turtle.ctxScratch.save();
@@ -10500,13 +13723,15 @@ Turtle.step = function(command, values) {
     case 'PC':  // Pen Colour
       Turtle.ctxScratch.strokeStyle = values[0];
       Turtle.ctxScratch.fillStyle = values[0];
-      Turtle.isDrawingWithPattern = false;
+      if (skin.id != "anna" && skin.id != "elsa") {
+        Turtle.isDrawingWithPattern = false;
+      }
       break;
     case 'PS':  // Pen style with image
       if (!values[0] || values[0] == 'DEFAULT') {
           Turtle.setPattern(null);
       } else {
-        Turtle.setPattern(document.getElementById(values[0]));
+        Turtle.setPattern(values[0]);
       }
       break;
     case 'HT':  // Hide Turtle
@@ -10515,16 +13740,28 @@ Turtle.step = function(command, values) {
     case 'ST':  // Show Turtle
       Turtle.visible = true;
       break;
+    case 'stamp':
+      var img = Turtle.stamps[values[0]];
+      var width = img.width / 2;
+      var height = img.height / 2;
+      var x = Turtle.x - width / 2;
+      var y = Turtle.y - height / 2;
+      if (img.width !== 0) {
+        Turtle.ctxScratch.drawImage(img, x, y, width, height);
+      }
+      break;
   }
+
+  return tupleDone;
 };
 
 Turtle.setPattern = function (pattern) {
-  if ( pattern === null ) {
-    Turtle.patternForPaths = new Image();
-    Turtle.isDrawingWithPattern = false;
-  } else {
-    Turtle.patternForPaths = pattern;
+  if (Turtle.loadedPathPatterns[pattern]) {
+    Turtle.currentPathPattern = Turtle.loadedPathPatterns[pattern];
     Turtle.isDrawingWithPattern = true;
+  } else if (pattern === null) {
+    Turtle.currentPathPattern = new Image();
+    Turtle.isDrawingWithPattern = false;
   }
 };
 
@@ -10553,7 +13790,7 @@ Turtle.drawToTurtle_ = function (distance) {
   if (isDot) {
     Turtle.dotAt_(Turtle.x, Turtle.y);
   } else {
-    Turtle.ctxScratch.lineTo(Turtle.x, Turtle.y);
+    Turtle.ctxScratch.lineTo(Turtle.x * retina, Turtle.y * retina);
   }
 };
 
@@ -10581,7 +13818,11 @@ Turtle.moveForward_ = function (distance) {
   }
   if (Turtle.isDrawingWithPattern) {
     Turtle.drawForwardWithPattern_(distance);
-    return;
+
+    // Frozen gets both a pattern and a line over the top of it.
+    if (skin.id != "elsa" && skin.id != "anna") {
+      return;
+    }
   }
 
   Turtle.drawForward_(distance);
@@ -10626,32 +13867,75 @@ Turtle.drawForwardWithJoints_ = function (distance) {
 };
 
 Turtle.drawForwardLine_ = function (distance) {
-  Turtle.ctxScratch.beginPath();
-  Turtle.ctxScratch.moveTo(Turtle.x, Turtle.y);
-  Turtle.jumpForward_(distance);
-  Turtle.drawToTurtle_(distance);
-  Turtle.ctxScratch.stroke();
+
+  if (skin.id == "anna" || skin.id == "elsa") {
+    Turtle.ctxScratch.beginPath();
+    Turtle.ctxScratch.moveTo(Turtle.stepStartX * retina, Turtle.stepStartY * retina);
+    Turtle.jumpForward_(distance);
+    Turtle.drawToTurtle_(distance);
+    Turtle.ctxScratch.stroke();
+  } else {
+    Turtle.ctxScratch.beginPath();
+    Turtle.ctxScratch.moveTo(Turtle.x, Turtle.y);
+    Turtle.jumpForward_(distance);
+    Turtle.drawToTurtle_(distance);
+    Turtle.ctxScratch.stroke();
+  }
+
 };
 
 Turtle.drawForwardLineWithPattern_ = function (distance) {
-  Turtle.ctxScratch.moveTo(Turtle.x, Turtle.y);
-  var img = Turtle.patternForPaths;
-  var startX = Turtle.x;
-  var startY = Turtle.y;
+  var img;
+  var startX;
+  var startY;
 
-  Turtle.jumpForward_(distance);
-  Turtle.ctxScratch.save();
-  Turtle.ctxScratch.translate(startX, startY);
-  Turtle.ctxScratch.rotate(Math.PI * (Turtle.heading - 90) / 180); // increment the angle and rotate the image.
-                                                                 // Need to subtract 90 to accomodate difference in canvas
-                                                                 // vs. Turtle direction
-  Turtle.ctxScratch.drawImage(img,
-    0, 0,                                 // Start point for clipping image
-    distance+img.height / 2, img.height,  // clip region size
-    -img.height / 4, -img.height / 2,      // draw location relative to the ctx.translate point pre-rotation
-    distance+img.height / 2, img.height);
+  if (skin.id == "anna" || skin.id == "elsa") {
+    Turtle.ctxPattern.moveTo(Turtle.stepStartX * retina, Turtle.stepStartY * retina);
+    img = Turtle.currentPathPattern;
+    startX = Turtle.stepStartX;
+    startY = Turtle.stepStartY;
 
-  Turtle.ctxScratch.restore();
+    var lineDistance = Math.abs(jumpDistanceCovered);
+
+    Turtle.ctxPattern.save();
+    Turtle.ctxPattern.translate(startX * retina, startY * retina);
+    Turtle.ctxPattern.rotate(Math.PI * (Turtle.heading - 90) / 180); // increment the angle and rotate the image.
+                                                                     // Need to subtract 90 to accomodate difference in canvas
+                                                                     // vs. Turtle direction
+
+    if (img.width !== 0) {
+      Turtle.ctxPattern.drawImage(img,
+        Math.round(lineDistance * retina), 0,        // Start point for clipping image
+        jumpDistance * retina, img.height,           // clip region size
+        Math.round((jumpDistanceCovered - 7) * retina), Math.round((- 18) * retina),      // draw location relative to the ctx.translate point pre-rotation
+        jumpDistance * retina, img.height);
+    }
+
+    Turtle.ctxPattern.restore();
+
+  } else {
+
+    Turtle.ctxScratch.moveTo(Turtle.x, Turtle.y);
+    img = Turtle.currentPathPattern;
+    startX = Turtle.x;
+    startY = Turtle.y;
+
+    Turtle.jumpForward_(distance);
+    Turtle.ctxScratch.save();
+    Turtle.ctxScratch.translate(startX, startY);
+    Turtle.ctxScratch.rotate(Math.PI * (Turtle.heading - 90) / 180); // increment the angle and rotate the image.
+                                                                     // Need to subtract 90 to accomodate difference in canvas
+                                                                     // vs. Turtle direction
+    if (img.width !== 0) {
+      Turtle.ctxScratch.drawImage(img,
+        0, 0,                                 // Start point for clipping image
+        distance+img.height / 2, img.height,  // clip region size
+        -img.height / 4, -img.height / 2,     // draw location relative to the ctx.translate point pre-rotation
+        distance+img.height / 2, img.height);
+    }
+
+    Turtle.ctxScratch.restore();
+  }
 };
 
 Turtle.shouldDrawJoints_ = function () {
@@ -10680,6 +13964,14 @@ var isCorrect = function(pixelErrors, permittedErrors) {
  * BlocklyApps.displayFeedback when appropriate
  */
 var displayFeedback = function() {
+  var feedbackImageCanvas;
+  if (skin.id == "anna" || skin.id == "elsa") {
+    // For frozen skins, show background and characters along with drawing
+    feedbackImageCanvas = Turtle.ctxDisplay;
+  } else {
+    feedbackImageCanvas = Turtle.ctxScratch;
+  }
+
   BlocklyApps.displayFeedback({
     app: 'turtle', //XXX
     skin: skin.id,
@@ -10687,13 +13979,13 @@ var displayFeedback = function() {
     message: Turtle.message,
     response: Turtle.response,
     level: level,
-    feedbackImage: Turtle.ctxScratch.canvas.toDataURL("image/png"),
+    feedbackImage: feedbackImageCanvas.canvas.toDataURL("image/png"),
     // add 'impressive':true to non-freeplay levels that we deem are relatively impressive (see #66990480)
-    showingSharing: level.freePlay || level.impressive,
+    showingSharing: !level.disableSharing && (level.freePlay || level.impressive),
     // impressive levels are already saved
     alreadySaved: level.impressive,
     // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-    saveToGalleryUrl: level.freePlay && Turtle.response.save_to_gallery_url,
+    saveToGalleryUrl: level.freePlay && Turtle.response && Turtle.response.save_to_gallery_url,
     appStrings: {
       reinfFeedbackMsg: turtleMsg.reinfFeedbackMsg(),
       sharingText: turtleMsg.shareDrawing()
@@ -10753,11 +14045,12 @@ Turtle.checkAnswer = function() {
 
   // Test whether the current level is a free play level, or the level has
   // been completed
-  var levelComplete = level.freePlay || isCorrect(delta, permittedErrors);
+  var levelComplete = (level.freePlay || isCorrect(delta, permittedErrors)) &&
+                        (!level.editCode || !Turtle.executionError);
   Turtle.testResults = BlocklyApps.getTestResults(levelComplete);
 
   var program;
-  if (!level.editCode) {
+  if (BlocklyApps.usingBlockly) {
     var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
     program = Blockly.Xml.domToText(xml);
   }
@@ -10786,7 +14079,7 @@ Turtle.checkAnswer = function() {
     // Check that they didn't use a crazy large repeat value when drawing a
     // circle.  This complains if the limit doesn't start with 3.
     // Note that this level does not use colour, so no need to check for that.
-    if (level.failForCircleRepeatValue) {
+    if (level.failForCircleRepeatValue && BlocklyApps.usingBlockly) {
       var code = Blockly.Generator.blockSpaceToCode('JavaScript');
       if (code.indexOf('count < 3') == -1) {
         Turtle.testResults =
@@ -10797,13 +14090,6 @@ Turtle.checkAnswer = function() {
   }
 
   if (level.editCode) {
-    if (Turtle.executionError) {
-      levelComplete = false;
-    }
-    Turtle.testResults = levelComplete ?
-      BlocklyApps.TestResults.ALL_PASS :
-      BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
-
     // If we want to "normalize" the JavaScript to avoid proliferation of nearly
     // identical versions of the code on the service, we could do either of these:
 
@@ -10846,22 +14132,31 @@ Turtle.checkAnswer = function() {
 
   BlocklyApps.report(reportData);
 
-  // reenable toolbox
-  Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
+  if (BlocklyApps.usingBlockly) {
+    // reenable toolbox
+    Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
+  }
 
   // The call to displayFeedback() will happen later in onReportComplete()
 };
 
 var getFeedbackImage = function() {
+  var feedbackImageCanvas;
+  if (skin.id == "anna" || skin.id == "elsa") {
+    feedbackImageCanvas = Turtle.ctxDisplay;
+  } else {
+    feedbackImageCanvas = Turtle.ctxScratch;
+  }
+
   // Copy the user layer
   Turtle.ctxFeedback.globalCompositeOperation = 'copy';
-  Turtle.ctxFeedback.drawImage(Turtle.ctxScratch.canvas, 0, 0, 154, 154);
+  Turtle.ctxFeedback.drawImage(feedbackImageCanvas.canvas, 0, 0, 154, 154);
   var feedbackCanvas = Turtle.ctxFeedback.canvas;
   return encodeURIComponent(
       feedbackCanvas.toDataURL("image/png").split(',')[1]);
 };
 
-},{"../../locale/ja_jp/common":41,"../../locale/ja_jp/turtle":42,"../base":2,"../codegen":6,"../feedback.js":9,"../skins":13,"../templates/page.html":21,"../utils":39,"./api":28,"./controls.html":30,"./core":31,"./levels":33}],39:[function(require,module,exports){
+},{"../../locale/ja_jp/common":44,"../../locale/ja_jp/turtle":45,"../base":3,"../codegen":7,"../feedback.js":10,"../templates/page.html":23,"../utils":42,"./api":30,"./controls.html":32,"./core":33,"./levels":35}],42:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -10869,11 +14164,12 @@ var savedAmd;
 // via require js
 if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) {
   savedAmd = define.amd;
-  define.amd = 'dont_call_requirejs_define';
+  define.amd = false;
 }
 
 // get lodash
 var _ = require('./lodash');
+var Hammer = require('./hammer');
 
 // undo hackery
 if (typeof define == 'function' && savedAmd) {
@@ -10883,6 +14179,10 @@ if (typeof define == 'function' && savedAmd) {
 
 exports.getLodash = function () {
   return _;
+};
+
+exports.getHammer = function () {
+  return Hammer;
 };
 
 exports.shallowCopy = function(source) {
@@ -11022,7 +14322,7 @@ exports.generateCodeAliases = function (codeFunctions, parentObjName) {
 /**
  * Generate a palette for the droplet editor based on some level data.
  */
-exports.generateDropletPalette = function (codeFunctions) {
+exports.generateDropletPalette = function (codeFunctions, categoryInfo) {
   // TODO: figure out localization for droplet scenario
   var palette = [
     {
@@ -11075,8 +14375,8 @@ exports.generateDropletPalette = function (codeFunctions) {
           block: '__ < __',
           title: 'Compare two numbers'
         }, {
-          block: 'random(1, 100)',
-          title: 'Get a random number in a range'
+          block: 'random()',
+          title: 'Get a random number between 0 and 1'
         }, {
           block: 'round(__)',
           title: 'Round to the nearest integer'
@@ -11085,10 +14385,10 @@ exports.generateDropletPalette = function (codeFunctions) {
           title: 'Absolute value'
         }, {
           block: 'max(__, __)',
-          title: 'Absolute value'
+          title: 'Maximum value'
         }, {
           block: 'min(__, __)',
-          title: 'Absolute value'
+          title: 'Minimum value'
         }
       ]
     }, {
@@ -11112,14 +14412,16 @@ exports.generateDropletPalette = function (codeFunctions) {
     }
   ];
 
-  var appPaletteCategory = {
-    name: 'Actions',
-    color: 'blue',
-    blocks: []
+  var defCategoryInfo = {
+    'Actions': {
+      'color': 'blue',
+      'blocks': []
+    }
   };
+  categoryInfo = categoryInfo || defCategoryInfo;
 
   if (codeFunctions) {
-    for (var i = 0, blockIndex = 0; i < codeFunctions.length; i++) {
+    for (var i = 0; i < codeFunctions.length; i++) {
       var cf = codeFunctions[i];
       if (cf.category === 'hidden') {
         continue;
@@ -11138,12 +14440,14 @@ exports.generateDropletPalette = function (codeFunctions) {
         block: block,
         title: cf.func
       };
-      appPaletteCategory.blocks[blockIndex] = blockPair;
-      blockIndex++;
+      categoryInfo[cf.category || 'Actions'].blocks.push(blockPair);
     }
   }
 
-  palette.unshift(appPaletteCategory);
+  for (var category in categoryInfo) {
+    categoryInfo[category].name = category;
+    palette.unshift(categoryInfo[category]);
+  }
 
   return palette;
 };
@@ -11154,7 +14458,7 @@ exports.generateDropletPalette = function (codeFunctions) {
 exports.generateDropletModeOptions = function (codeFunctions) {
   var modeOptions = {
     blockFunctions: [],
-    valueFunctions: [],
+    valueFunctions: ['random', 'round', 'abs', 'max', 'min'],
     eitherFunctions: [],
   };
 
@@ -11169,11 +14473,14 @@ exports.generateDropletModeOptions = function (codeFunctions) {
 
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
-      if (codeFunctions[i].category === 'value') {
-        modeOptions.valueFunctions[i] = codeFunctions[i].func;
+      if (codeFunctions[i].type === 'value') {
+        modeOptions.valueFunctions.push(codeFunctions[i].func);
       }
-      else if (codeFunctions[i].category !== 'hidden') {
-        modeOptions.blockFunctions[i] = codeFunctions[i].func;
+      else if (codeFunctions[i].type === 'either') {
+        modeOptions.eitherFunctions.push(codeFunctions[i].func);
+      }
+      else if (codeFunctions[i].type !== 'hidden') {
+        modeOptions.blockFunctions.push(codeFunctions[i].func);
       }
     }
   }
@@ -11181,7 +14488,7 @@ exports.generateDropletModeOptions = function (codeFunctions) {
   return modeOptions;
 };
 
-},{"./lodash":11,"./xml":40}],40:[function(require,module,exports){
+},{"./hammer":11,"./lodash":13,"./xml":43}],43:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -11209,9 +14516,13 @@ exports.parseElement = function(text) {
   return element;
 };
 
-},{}],41:[function(require,module,exports){
+},{}],44:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.ja=function(n){return "other"}
 exports.and = function(d){return "そして"};
+
+exports.booleanTrue = function(d){return "true"};
+
+exports.booleanFalse = function(d){return "false"};
 
 exports.blocklyMessage = function(d){return "ブロッキー"};
 
@@ -11295,6 +14606,8 @@ exports.numLinesOfCodeWritten = function(d){return "あなたはたった今 "+p
 
 exports.play = function(d){return "再生"};
 
+exports.print = function(d){return "Print"};
+
 exports.puzzleTitle = function(d){return "パズル "+v(d,"puzzle_number")+" の "+v(d,"stage_total")};
 
 exports.repeat = function(d){return "繰り返し"};
@@ -11309,7 +14622,7 @@ exports.score = function(d){return "スコア"};
 
 exports.showCodeHeader = function(d){return "コードの表示"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "ブロックを表示"};
 
 exports.showGeneratedCode = function(d){return "コードの表示"};
 
@@ -11347,7 +14660,7 @@ exports.typeHint = function(d){return "カッコとセミコロンが必要な�
 
 exports.workspaceHeader = function(d){return "ここでブロックを組み立てよう:"};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "ここにJavascriptのコードを入力してください。"};
 
 exports.infinity = function(d){return "無限\n"};
 
@@ -11371,8 +14684,10 @@ exports.hintHeader = function(d){return "ちょび技があるよ:"};
 
 exports.genericFeedback = function(d){return "どうなったかよく見て、プログラムを直してみよう。"};
 
+exports.defaultTwitterText = function(d){return "Check out what I made"};
 
-},{"messageformat":54}],42:[function(require,module,exports){
+
+},{"messageformat":57}],45:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.ja=function(n){return "other"}
 exports.blocksUsed = function(d){return "使われているブロック: %1"};
 
@@ -11393,6 +14708,24 @@ exports.catVariables = function(d){return "変数"};
 exports.catLogic = function(d){return "ロジック（論理）"};
 
 exports.colourTooltip = function(d){return "鉛筆の色を変更"};
+
+exports.createACircle = function(d){return "create a circle"};
+
+exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+
+exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+
+exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+
+exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+
+exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+
+exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+
+exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+
+exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
 
 exports.degrees = function(d){return "度"};
 
@@ -11431,6 +14764,8 @@ exports.drawATree = function(d){return "木を描画"};
 exports.drawUpperWave = function(d){return "draw upper wave"};
 
 exports.drawLowerWave = function(d){return "draw lower wave"};
+
+exports.drawStamp = function(d){return "draw stamp"};
 
 exports.heightParameter = function(d){return "高さ"};
 
@@ -11498,6 +14833,8 @@ exports.showMe = function(d){return "見せてください"};
 
 exports.showTurtle = function(d){return "アーティストを見せる。"};
 
+exports.sizeParameter = function(d){return "size"};
+
 exports.step = function(d){return "ステップ"};
 
 exports.tooFewColours = function(d){return "このパズルには少なくとも %1 別の色を使います。 %2しか使っていません。"};
@@ -11517,7 +14854,7 @@ exports.widthTooltip = function(d){return "鉛筆の幅を変更"};
 exports.wrongColour = function(d){return "あなたの絵は、間違った色です。このパズル では%1である必要があります。"};
 
 
-},{"messageformat":54}],43:[function(require,module,exports){
+},{"messageformat":57}],46:[function(require,module,exports){
 
 /*!
  * EJS
@@ -11876,7 +15213,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":44,"./utils":45,"fs":46,"path":47}],44:[function(require,module,exports){
+},{"./filters":47,"./utils":48,"fs":49,"path":50}],47:[function(require,module,exports){
 /*!
  * EJS - Filters
  * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
@@ -12079,7 +15416,7 @@ exports.json = function(obj){
   return JSON.stringify(obj);
 };
 
-},{}],45:[function(require,module,exports){
+},{}],48:[function(require,module,exports){
 
 /*!
  * EJS
@@ -12105,9 +15442,9 @@ exports.escape = function(html){
 };
  
 
-},{}],46:[function(require,module,exports){
+},{}],49:[function(require,module,exports){
 
-},{}],47:[function(require,module,exports){
+},{}],50:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -12335,7 +15672,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require("JkpR2F"))
-},{"JkpR2F":48}],48:[function(require,module,exports){
+},{"JkpR2F":51}],51:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -12400,7 +15737,7 @@ process.chdir = function (dir) {
     throw new Error('process.chdir is not supported');
 };
 
-},{}],49:[function(require,module,exports){
+},{}],52:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -12911,7 +16248,7 @@ process.chdir = function (dir) {
 }(this));
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],50:[function(require,module,exports){
+},{}],53:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -12997,7 +16334,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],51:[function(require,module,exports){
+},{}],54:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -13084,13 +16421,13 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],52:[function(require,module,exports){
+},{}],55:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":50,"./encode":51}],53:[function(require,module,exports){
+},{"./decode":53,"./encode":54}],56:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -13799,7 +17136,7 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":49,"querystring":52}],54:[function(require,module,exports){
+},{"punycode":52,"querystring":55}],57:[function(require,module,exports){
 /**
  * messageformat.js
  *
@@ -15382,4 +18719,4 @@ function isNullOrUndefined(arg) {
 
 })( this );
 
-},{}]},{},[34])
+},{}]},{},[36])

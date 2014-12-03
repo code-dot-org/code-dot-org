@@ -32,10 +32,10 @@ goog.require('Blockly.Comment');
 /**
  * Class for a flyout.
  * @param {!Blockly.BlockSpaceEditor} blockSpaceEditor Parent editor.
- * @param {boolean} opt_insideBubble Is the flyout rendered inside a bubble?
+ * @param {boolean} opt_static Is the flyout a static (always open) toolbox?
  * @constructor
  */
-Blockly.Flyout = function(blockSpaceEditor, opt_insideBubble) {
+Blockly.Flyout = function(blockSpaceEditor, opt_static) {
   var flyout = this;
 
   /**
@@ -57,7 +57,7 @@ Blockly.Flyout = function(blockSpaceEditor, opt_insideBubble) {
    * @type {boolean}
    * @private
    */
-  this.insideBubble_ = opt_insideBubble;
+  this.static_ = opt_static;
 
   /**
    * Opaque data that can be passed to removeChangeListener.
@@ -268,8 +268,9 @@ Blockly.Flyout.prototype.position_ = function() {
   if (!this.isVisible()) {
     return;
   }
-  var metrics = Blockly.modalBlockSpace ? Blockly.mainBlockSpace.getMetrics()
-      : this.targetBlockSpace_.getMetrics();
+  var metrics = this.targetBlockSpace_.customFlyoutMetrics_ ?
+      this.targetBlockSpace_.customFlyoutMetrics_() :
+      this.targetBlockSpace_.getMetrics();
   if (!metrics) {
     // Hidden components will return null.
     return;
@@ -296,8 +297,9 @@ Blockly.Flyout.prototype.position_ = function() {
   var x = metrics.absoluteLeft;
   var y = metrics.absoluteTop;
   if (Blockly.RTL) {
-    x = 0;
+    x = this.static_ ? 0 : -this.width_;
     x += metrics.viewWidth;
+  } else if (this.static_) {
     x -= this.width_;
   }
   this.svgGroup_.setAttribute('transform', 'translate(' + x + ',' + y + ')');
@@ -394,31 +396,22 @@ Blockly.Flyout.prototype.show = function(xmlList) {
   } else if (firstBlock === Blockly.Procedures.NAME_TYPE) {
     // Special category for procedures.
     if (Blockly.functionEditor && !Blockly.functionEditor.isOpen()) {
-      var button = Blockly.createSvgElement('g', {'class': 'createFunction'},
-          this.blockSpace_.svgGroup_);
-      var padding = 5;
-      var r = Blockly.createSvgElement('rect', {
-        rx: 5,
-        ry: 5,
-        fill: 'orange',
-        stroke: 'white'
-      }, button);
-      var text = Blockly.createSvgElement('text', {
-        x: padding,
-        y: padding,
-        'class': 'blocklyText'
-      }, button);
-      text.textContent = Blockly.Msg.FUNCTION_CREATE;
-      var bounds = text.getBoundingClientRect();
-      this.minFlyoutWidth_ = bounds.width + 2 * padding;
-      r.setAttribute('width', bounds.width + 2 * padding);
-      r.setAttribute('height', bounds.height + 2 * padding);
-      r.setAttribute('y', -bounds.height + padding - 1);
-      button.setAttribute('transform', 'translate(17, 25)');
-      Blockly.bindEvent_(button, 'mousedown', this, this.createFunction_);
-      cursor.y += 40;
+      this.addButtonToFlyout_(cursor, Blockly.Msg.FUNCTION_CREATE, this.createFunction_);
     }
-    Blockly.Procedures.flyoutCategory(blocks, gaps, margin, this.blockSpace_);
+    Blockly.Procedures.flyoutCategory(blocks, gaps, margin,
+      this.blockSpace_,
+      function(procedureInfo) { return !procedureInfo.isFunctionalVariable; }
+    );
+  } else if (firstBlock === Blockly.Procedures.NAME_TYPE_FUNCTIONAL_VARIABLE) {
+    // Special category for functional variables.
+    if (Blockly.functionEditor && !Blockly.functionEditor.isOpen()) {
+      this.addButtonToFlyout_(cursor, Blockly.Msg.FUNCTIONAL_VARIABLE_CREATE,
+        this.createFunctionalVariable_);
+    }
+    Blockly.Procedures.flyoutCategory(blocks, gaps, margin,
+      this.blockSpace_,
+      function(procedureInfo) { return procedureInfo.isFunctionalVariable; }
+    );
   } else {
     for (var i = 0, xml; xml = xmlList[i]; i++) {
       if (xml.tagName && xml.tagName.toUpperCase() == 'BLOCK') {
@@ -480,6 +473,39 @@ Blockly.Flyout.prototype.show = function(xmlList) {
   this.reflowWrapper_ = Blockly.bindEvent_(this.blockSpace_.getCanvas(),
       'blocklyBlockSpaceChange', this, this.reflow);
   this.blockSpace_.fireChangeEvent();
+};
+
+/**
+ * Adds a rectangular SVG button to this flyout's blockSpace
+ * @param {{x: Number, y: Number}} cursor current drawing position in flyout
+ * @param {String} buttonText text to display on button
+ * @param {Function} onMouseDown callback for button press
+ * @private
+ */
+Blockly.Flyout.prototype.addButtonToFlyout_ = function(cursor, buttonText, onMouseDown) {
+  var button = Blockly.createSvgElement('g', {'class': 'createFunction'},
+    this.blockSpace_.svgGroup_);
+  var padding = 5;
+  var r = Blockly.createSvgElement('rect', {
+    rx: 5,
+    ry: 5,
+    fill: 'orange',
+    stroke: 'white'
+  }, button);
+  var text = Blockly.createSvgElement('text', {
+    x: padding,
+    y: padding,
+    'class': 'blocklyText'
+  }, button);
+  text.textContent = buttonText;
+  var bounds = text.getBoundingClientRect();
+  this.minFlyoutWidth_ = bounds.width + 2 * padding;
+  r.setAttribute('width', bounds.width + 2 * padding);
+  r.setAttribute('height', bounds.height + 2 * padding);
+  r.setAttribute('y', -bounds.height + padding - 1);
+  button.setAttribute('transform', 'translate(17, 25)');
+  Blockly.bindEvent_(button, 'mousedown', this, onMouseDown);
+  cursor.y += 40;
 };
 
 /**
@@ -611,6 +637,16 @@ Blockly.Flyout.prototype.onMouseMove_ = function(e) {
  */
 Blockly.Flyout.prototype.createFunction_ = function() {
   Blockly.functionEditor.openWithNewFunction();
+};
+
+Blockly.Flyout.prototype.createFunctionalVariable_ = function() {
+  Blockly.functionEditor.openWithNewFunction(function(block) {
+    if (!block.type === 'functional_definition') {
+      throw "Non-functional definition block cannot be used as functional variable";
+    }
+
+    block.convertToVariable();
+  });
 };
 
 /**

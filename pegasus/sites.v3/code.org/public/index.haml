@@ -1,6 +1,6 @@
 ---
 theme: responsive
-banner: <%= request.site == 'csedweek.org' ? :index_hoc : nil %>
+banner: null
 <%
   if request.site == 'csedweek.org'
     twitter_meta = {
@@ -30,6 +30,10 @@ social:
   "twitter:player:height": 1080
 
 ---
+- if request.site == 'csedweek.org'
+  %div
+    = view :index_hoc
+
 -facebook = {:u=>"http://#{request.site}/"}
 
 -if request.site == 'csedweek.org'
@@ -54,7 +58,7 @@ social:
 
       #hoc2014
 
-        .count{:style=>'font-weight:500; margin-bottom:15px' }
+        .count{:style=>"font-family: 'Gotham 5r', sans-serif; margin-bottom:15px" }
           -if locale_chapter_partner?
             -count_string = I18n.t(:n_have_learned_an_hoc).gsub("#", format_integer_with_decimals(fetch_hoc_metrics['started']).to_s)
           -else
@@ -133,6 +137,19 @@ social:
       %a{:href=>'http://italia.code.org'}
         italia.code.org
 
+  -if request.site != 'csedweek.org'
+    #header-social-links.desktop-feature{style: "margin: 15px 0 0 0; float: right;"}
+      %a{:href=>"http://facebook.com/Code.org", :title=>'Facebook', :target=>"_blank", :style=>"text-decoration:none"}
+        %img{:src=>"/images/facebook_purple.png"}
+      %a{:href=>"http://twitter.com/codeorg", :title=>'Twitter', :target=>"_blank", :style=>"text-decoration:none"}
+        %img{:src=>"/images/twitter_purple.png"}
+      %a{:href=>"http://codeorg.tumblr.com/", :title=>'Tumblr', :target=>"_blank", :style=>"text-decoration:none"}
+        %img{:src=>"/images/tumblr_purple.png"}
+      %a{:href=>"http://zazzle.com/codeorg", :title=>'Zazzle', :target=>"_blank", :style=>"text-decoration:none"}
+        %img{:src=>"/images/zazzle_purple.png"}
+      %a{:href=>"/donate", :title=>'Donate', :style=>"text-decoration:none"}
+        %img{:src=>"/images/donate_normal.png"}
+
   #studiobar.feature-codeorg.tablet-feature
     %h1.mobile-center
       =I18n.t :studiobar_title
@@ -198,20 +215,9 @@ social:
         %a{:href=>'/about/news', :style=>'float:right'} See all
 
     #column3{:style=>'float:left; width: 33.33%;'}
-      -if request.site == 'csedweek.org'
-        %h2 From the Community
-        = view :index_twitter
-      -else
-        %h2 Thank You to Our Donors
-        %div{:style=>'background-color: lightgrey; padding: 10px;'}
-          %div{:style=>'background-color: white; padding: 10px;'}
-            = view :indiegogo_progress_bar
-          %div{:style=>'background-color: white; padding: 10px; margin-top: 10px; height: 490px; overflow: hidden'}
-            %h3{:style=>'margin-top: 10px'}
-              %strong{:style=>'font-size: 18px'} Thank you for contributing:
-            = view :indiegogo_contributors_ticker
-        %a{:href=>'https://www.indiegogo.com/projects/an-hour-of-code-for-every-student', :style=>'float: right'}
-          Donate now on Indiegogo
+      %h2 From the Community
+      = view :index_twitter
+
   #gap
 
   -if request.site != 'csedweek.org'

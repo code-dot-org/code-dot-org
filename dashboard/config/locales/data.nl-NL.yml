@@ -50,6 +50,7 @@
           MazeEC: Niveau 1
           Webapp: Niveau 2
           ArtistEC: Niveau 3
+          StudioEC: Niveau 4
         events:
           desc: Bounce (bèta)
           Bounce: Niveau 1
@@ -100,6 +101,8 @@
         Wordsearch: Woordzoeken
         Webapp: Webapp
         ArtistEC: De Artiest
+        TextMatch: Tekst overeenstemming
+        StudioEC: Speel Lab
     trophy:
       name:
         Bronze: Brons
@@ -513,8 +516,8 @@
         studio_c3_game_6: Kan je blokken toevoegen die de achtergrond en de snelheid
           van de pinguïn veranderen, en hem dan verplaatsen met de pijltjes totdat
           je scoort?
-        studio_c3_game_7: Maak je eigen spel. Klik als je klaar bent op voltooien
-          om je vrienden het spel  te laten proberen op hun telefoons.
+        studio_c3_game_7: Maak je eigen spel. Wanneer je klaar bent klik op Finish
+          om je vrienden toe te laten je spel te proberen op hun telefoons.
         studio_playlab_1: Kan je deze hond "hallo wereld" laten zeggen?
         studio_playlab_2: Kan je de hond iets laten zeggen en dan de kat iets laten
           zeggen?
@@ -534,10 +537,10 @@
         studio_playlab_9: Kan je blokken toevoegen die de achtergrond en de snelheid
           van de pinguïn veranderen, en hem dan verplaatsen met de pijltjes totdat
           je scoort?
-        studio_playlab_10: Maak je eigen spel. Klik als je klaar bent op voltooien
-          om je vrienden het spel  te laten proberen op hun telefoons.
-        studio_full_sandbox: Maak je eigen spel. Klik als je klaar bent op voltooien
-          om je vrienden het spel  te laten proberen op hun telefoons.
+        studio_playlab_10: Maak je eigen spel. Wanneer je klaar bent klik op Finish
+          om je vrienden toe te laten je spel te proberen op hun telefoons.
+        studio_full_sandbox: Maak je eigen spel. Wanneer je klaar bent klik op Finish
+          om je vrienden toe te laten je spel te proberen op hun telefoons.
         studio_k1_1: Kan je deze hond "hallo wereld" laten zeggen?
         studio_k1_2: Kan je de hond iets laten zeggen en dan de kat iets laten zeggen?
         studio_k1_3: Kun je een programma schrijven dat de hond naar de kat verplaatst?
@@ -562,8 +565,13 @@
         maze_wordsearch_k_20: Dit is een test! Verplaats me in een richting, dan in
           een andere richting zodat VERHAAL gespeld wordt
         webapp_ec_simple: Maak je eigen web app met het maakHtmlBlok.
-        turtle_ec_1_2: Teken nu een vierkant.  Gebruik je lievelingskleur door het
-          te kiezen in het nieuwe blok "penKleur".
+        turtle_ec_1_2: 'Teken een vierkant. OPMERKING: gebruik je favoriete kleur
+          door deze te kiezen in het nieuwe "Penkleur" blok.'
+        turtle_ec_1_10: 'Het is je gelukt! Teken nu alles wat je wilt. Wat leuke ideeën:
+          een stok poppetje, sneeuwvlok of spiraal. Probeer ook het nieuwe "penWidth"
+          block. Veel plezier!'
+        studio_ec_sandbox: Maak je eigen spel. Wanneer je klaar bent klik op Finish
+          om je vrienden toe te laten je spel te proberen op hun telefoons.
     video:
       name:
         maze_intro: Doolhof Intro
@@ -579,7 +587,6 @@
         loop_for: Teller Blok
         parameters: Functies met Parameters
         hoc_wrapup: CodeUur Samenvatting
-        20_wrapup: 20-Uur Samenvatting
         Unplug1: Wat is CS?
         Unplug2: Rekenend Denken
         Unplug3: Programmeren op Ruitjespapier
@@ -594,7 +601,7 @@
         C1_happy_maps_unplugged: Vrolijke Routes
         C1_moveitmoveit_unplugged: verplaats het, verplaats het
         C1_bigevent_unplugged: De grote gebeurtenis
-        C1_getting_loop: Mooie linten
+        C1_getting_loopy: Mooie linten
         C1_pair_programming: Programmeren in Tweetallen
         C1_maze_intro_sequencing: Doolhof volgorde introductie
         C1_maze_debugging: Doolhof Foutopsporing
@@ -606,19 +613,22 @@
         C1_maze_loops: Doolhof lussen
         C1_playlab_storytelling: Speel Lab - Maak een Verhaal
         C1_planting_seed: Poot een Zaadje
-        C1_building_foundating: Een Basis Bouwen
+        C1_building_foundation: Een Basis Bouwen
         C2_maze_intro: Doolhof Intro
         C2_artist_intro: Artiest Intro
         C2_zuck_repeat_loop: Doolhof lussen
         C2_artist_loops: Kustenaar lussen
+        C2_artist_debugging: Kunstenaar foutopsporing
+        C2_bee_loops: Bij lussen
+        C2_bee_debugging: Bij foutopsporing
         C2_bee_conditionals: Bij voorwaardelijke instructies
         C2_playlab_createstory: Speel Lab - Maak een Verhaal
         C2_graph_paper: Programmeren op Ruitjespapier
         C2_conditionals_with_cards: Voorwaardelijke instructies
         C2_binary_bracelets: Binaire armbanden
-        C2_replay_programming: Estafette Programmeren
+        C2_relay_programming: Estafette Programmeren
         C2_paper_airplanes: Papieren Vliegtuigjes
-        C3_maze_intro: Doolhof Intro
+        C3_maze_level_4: Doolhof lussen
         C3_artist_intro: Artiest Intro
         C3_artist_functions: Kunstenaar functies
         C3_bee_functions: Bij functies
@@ -636,6 +646,9 @@
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functionele Zonnevangers
         C3_songwriting_with_parameters: Songwriting met Parameters
+        Frozen_intro: Hour of Code Intro
+        Frozen_loops: Introduction to Loops
+        Frozen_functions: Introduction to Functions
     callout:
       text:
         drag_blocks: Sleep een "vooruit" blok en plak het onder het andere blok
@@ -652,3 +665,36 @@
           het verhaal begint" blok om het verhaal een speler te geven
         studio_say_text: Type wat je speler tussen deze aanhalingstekens moet zeggen
         jigsaw_click: Klik op dit blok!
+        move_elsa_forward: Sleep een "Move Forward" blok en hang het onder de "When
+          Run" blok om Elsa vooruit te laten bewegen
+        turn_elsa: Gebruik de "Draaien" blok om Elsa te doen draaien. Het getal in
+          het keuzemenu bepaalt hoeveel Elsa draait
+        replace_questions: Gebruik de vervolgkeuzelijst om "???" te vervangen door
+          een getal
+        replace_questions_degree: Gebruik de vervolgkeuzelijst om "???" te vervangen
+          door de correcte graden om te draaien
+        repeat_blocks: Gebruik van de blok "Repeat" en plaats deze rond de blokken
+          in de werkruimte
+        snowflake_dropdown: Gebruik deze vervolgkeuzelijst om verschillende sneeuwvlokken
+          te maken!
+        degrees_per_side: Divide 360 by the number of sides to get the size of each
+          angle in degrees.
+        set_sides: Use this block to set "sides" to the number needed to complete
+          the puzzle.
+        set_length: Use this block to set "length" to the correct value.
+        which_equation: Which equation makes each side shorter for shapes with more
+          sides?  Try each equation!
+        get_nectar: Use the new "get nectar" block.
+        actions_category: The tool box got a new look! The "Actions" blocks are in
+          here now.
+        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
+        edit_function: Use this button to edit the function.
+        create_function: Click here to open the "Functions" flyout, then click the
+          "Create a Function" button.
+        house_hint: It's ok if the picture doesn't look like a house yet. We will
+          fix it in the next puzzle.
+        edit_draw_square: Use this button to edit the function and add the loop.
+        edit_get_nectar: Use this button to edit the function and change the direction
+          the Bee will turn to get the nectar.
+        logic_category: Open the "Logic" flyout to find the "if/else" block.
+        length_parameter: Can you update this function so it uses the "length" parameter?

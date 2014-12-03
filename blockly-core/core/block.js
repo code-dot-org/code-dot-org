@@ -78,6 +78,12 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   this.userVisible_ = true;
   this.collapsed_ = false;
   this.dragging_ = false;
+  /** 
+   * The label which can be clicked to edit this block. This field is
+   * currently set only for functional_call blocks.
+   * @type {Blockly.FieldIcon}
+   */
+  this.editLabel_ = null;
 
   /**
    * @type {!Blockly.BlockSpace}
@@ -90,6 +96,12 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   this.fillPattern_ = null;
   this.blockSvgClass_ = Blockly.BlockSvg;
   this.customOptions_ = {};
+
+  /**
+   * Optional method to run just prior to disposing this block
+   * @type {?Function}
+   */
+  this.beforeDispose = null;
 
   this.setRenderBlockSpace(blockSpace);
 
@@ -312,6 +324,10 @@ Blockly.Block.prototype.unselect = function() {
  * @param {boolean} animate If true, show a disposal animation and sound.
  */
 Blockly.Block.prototype.dispose = function(healStack, animate) {
+  if (goog.isFunction(this.beforeDispose)) {
+    this.beforeDispose();
+  }
+
   // Switch off rerendering.
   this.rendered = false;
   this.unplug(healStack);
@@ -470,8 +486,10 @@ Blockly.Block.prototype.getHeightWidth = function() {
       bBox.height += 4;
     }
   }
-  // Subtract one from the height due to the shadow.
-  bBox.height -= 1;
+  if (bBox.height > 0) {
+    // Subtract one from the height due to the shadow.
+    bBox.height -= 1;
+  }
   return bBox;
 };
 
@@ -483,6 +501,9 @@ Blockly.Block.prototype.getHeightWidth = function() {
 Blockly.Block.prototype.onMouseDown_ = function(e) {
   // Stop the browser from scrolling/zooming the page
   e.preventDefault();
+  // ...but this prevents blurring of inputs, so do it manually
+  document.activeElement && document.activeElement.blur
+    && document.activeElement.blur();
 
   if (this.isInFlyout) {
     return;
@@ -1226,6 +1247,9 @@ Blockly.Block.prototype.setEditable = function(editable) {
   var icons = this.getIcons();
   for (var x = 0; x < icons.length; x++) {
     icons[x].updateEditable();
+  }
+  if (this.editLabel_) {
+    this.editLabel_.setVisible(editable);
   }
 };
 

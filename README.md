@@ -14,11 +14,11 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 
 ## Install OS-specific prerequisites
 
-### OS X Mavericks
+### OS X Mavericks / Yosemite
 
-1. Install Homebrew: `ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"`
-1. `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql imagemagick rbenv ruby-build`
-  1. If it complains about an old version of `X`, run `brew unlink X` and run `brew install X` again
+1. Install Homebrew: `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+1. `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql imagemagick rbenv ruby-build coreutils`
+  1. If it complains about an old version of `<package>`, run `brew unlink <package>` and run `brew install <package>` again
 1. Set up MySQL
   1. Have launchd start mysql at login: `ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents`
   1. Start mysql now: `launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist`
@@ -31,32 +31,23 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 
 ### Ubuntu 14.04
 
-1. `sudo apt-get install -y aptitude`
 1. `sudo aptitude update`
 1. `sudo aptitude upgrade`
-1. `sudo aptitude install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev nodejs openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl`
+1. `sudo aptitude install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev nodejs npm openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk`
   * **Hit enter and select default options for any configuration popups**
-1. `sudo aptitude install npm`
-1. `sudo ln -s /usr/bin/nodejs /usr/bin/node`
-1. `sudo npm update -g npm`
-1. `sudo npm install -g grunt-cli`
 
 ## Common setup
 
 1. `git clone https://github.com/code-dot-org/code-dot-org.git`
 1. `gem install bundler`
+1. `rbenv rehash` (if using rbenv)
 1. `cd code-dot-org/aws`
 1. `bundle install`
-1. `cd ../dashboard`
-1. `bundle install`
-1. `bundle exec rake db:create db:schema:load seed:all`
-1. `cd ../pegasus`
-1. `bundle install`
-1. `echo CREATE DATABASE pegasus_development | mysql -uroot`
-1. `rake db:migrate`
-1. `rake seed:migrate`
+1. `cd ..`
+1. `rake install`
 
 ## Organizational Structure
+
 Our code is segmented into four parts:
 
 * Blockly Core is the visual programming language platform used for the interactive tutorials.
@@ -70,26 +61,49 @@ Our code is segmented into four parts:
   * [Teacher Dashboard](http://code.org/teacher-dashboard)
 
 ## Running Dashboard
-1. `cd code-dot-org/dashboard`
-2. `bundle exec rails server`
-3.  Note: after major code updates (or if something seems broken), run `bundle exec rake db:migrate seed:all`
-4.  Visit [http://localhost.studio.code.org:3000/](http://localhost.studio.code.org:3000/)
+
+1. `cd code-dot-org`
+2. `rake build:dashboard` (Generally, do this after each pull)
+3. `bin/dashboard-server`
+4. Visit [http://localhost.studio.code.org:3000/](http://localhost.studio.code.org:3000/)
 
 ## Running Pegasus
 
-1. `cd code-dot-org/pegasus`
-2. `./up`
-3. Note: after major code updates (or if something seems broken), run `rake db:migrate seed:migrate`
+1. `cd code-dot-org`
+2. `rake build:pegasus` (Generally, do this after each pull)
+3. `bin/pegasus-server`
 4. Visit [http://localhost.code.org:9393/](http://localhost.code.org:9393/)
 
 ## Building Blockly and Blockly-core (optional)
 
-The learn.code.org default dashboard install includes a static build of blockly, but if you want to make modifications to blockly or blockly-core:
+The learn.code.org default dashboard install includes a static build of blockly, but if you want to make modifications to blockly or blockly-core you'll want to enable building them in the build:
 
-1. `cd code-dot-org/dashboard`
-1. `bundle exec rake 'blockly:dev[../blockly]'`
-  * This symlinks to dashboard reference the dev version of blockly
-1. Follow the blockly build instructions at `blockly/README` or blockly-core build instructions at `blockly-core/README`
+### Enabling Blockly Builds
+
+You'll need to do this once:
+
+1. OS X:
+  1. Install the [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+  1. Install [XQuartz](http://xquartz.macosforge.org/trac) (NOTE: This is required to build the Canvas dependency).
+1. `cd code-dot-org`
+1. Edit `locals.yml`
+  1. Add `build_blockly: true`
+  1. Add `build_blockly_core: true`
+  1. Add `use_my_blockly: true`
+1. `rake install`
+
+This configures your system to build blockly (and blockly-core) whenever you run `rake build` and to use the version of blockly that you build yourself.
+
+### Building Blockly and Blockly-Core
+
+1. `cd code-dot-org`
+1. `rake build`
+
+This will build everything you have set to build in `locals.yml`.
+
+You can use `rake build:blockly` and `rake build:blockly_core` to build a specific project.
+
+You can also set `build_dashboard: false` and/or `build_pegasus: false` in `locals.yml` if you don't need to build these frequently. They default to `true`.
 
 ## Contributing
 
@@ -97,9 +111,7 @@ We'd love to have you join our group of contributors!
 
 ### Before You Push
 
-Anyone who would like to contribute to **[code.org](https://github.com/code-dot-org/)** projects **must read and sign the Contribution License Agreement**. We aren't able to accept any pull requests from contributors who haven't signed the CLA first.
-
-For the time being—email [brian@code.org](mailto:brian@code.org) to get an electronic CLA to sign (takes less than a minute).
+Anyone who would like to contribute to **[code.org](https://github.com/code-dot-org/)** projects **must read and sign the [Contributor License Agreement](https://na2.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=8eb90665-c9f7-4b06-81a5-11d12020f251)**. We can't accept pull requests from contributors who haven't yet signed the CLA.
 
 ### Getting Started Contributing
 
@@ -145,7 +157,7 @@ Contributors should follow the GitHub [fork-and-pull model](https://help.github.
     - `git push origin branch_name`
 3. Go to the code-dot-org GitHub page
     - [https://github.com/code-dot-org/code-dot-org](https://github.com/code-dot-org/code-dot-org)
-4. For your submissinon to be reviewed
+4. For your submission to be reviewed
     - Click on the "Pull Request" link, look over and confirm your diff
     - Submit a pull request for your branch to be merged into staging
     - For bonus points, include screenshots in the description. Command + Ctrl + Shift + 4 in OS X lets you copy a screen selection to your clipboard, which GitHub will let you paste right into the description

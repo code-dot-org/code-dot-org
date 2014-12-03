@@ -1,6 +1,7 @@
 ---
-title: Resources
+title: Hour of Code How-to Guide
 layout: wide
+nav: resources_nav
 ---
 <div class="row">
     <h1 class="col-sm-6">How to teach one Hour of Code</h1>
@@ -9,9 +10,13 @@ layout: wide
     </div>
 </div>
 
-On December 8th, as part of the global Hour of Code movement Microsoft is seeking to enable as many people as possible in Ireland to have the opportunity to learn how to code. We will host a number of flagship events – one at its campus in Microsoft, one in the National Gallery of Ireland in Dublin, and one in Cork and Galway. Please join us at one of these events or register to run your own <a href='<%= hoc_uri('/#signup') %>'>here</a>.
+<font size="4">On December 8th, as part of the global Hour of Code movement Microsoft is seeking to enable as many people as possible in Ireland to have the opportunity to learn how to code.
 
-On November 19th, Microsoft will run a training session for people hosting events. This will run through the curriculum which can be delivered on December 8th and will take place in Microsoft. If you would like more information about attending this event please email cillian@q4pr.ie. Details of the curriculum can be found here: http://www.touchdevelop.com/ 
+On 19th November Microsoft will run a training session for people hosting events at its campus in Sandyford from 6pm - 8pm. 
+
+This will run through the curriculum which can be delivered for Hour of Code on 8th December. If you would like to register to attend this event please email cillian@q4pr.ie.  Places are on a first come first served basis.
+</font>
+## Details of the curriculum can be found [here](https://www.touchdevelop.com/hourofcode2)
 
 
 ## 1) Try the tutorials:

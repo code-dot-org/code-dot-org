@@ -28,6 +28,7 @@ var msg = require('../../locale/current/turtle');
 var commonMsg = require('../../locale/current/common');
 
 var customLevelBlocks = require('./customLevelBlocks');
+var Turtle = require('./turtle');
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function(blockly, blockInstallOptions) {
@@ -41,18 +42,30 @@ exports.install = function(blockly, blockInstallOptions) {
     return generator.variableDB_.getDistinctName(name, NAME_TYPE);
   };
 
-  // Create a smaller palette.
-  blockly.FieldColour.COLOURS = [
-    // Row 1.
-    Colours.BLACK, Colours.GREY,
-    Colours.KHAKI, Colours.WHITE,
-    // Row 2.
-    Colours.RED, Colours.PINK,
-    Colours.ORANGE, Colours.YELLOW,
-    // Row 3.
-    Colours.GREEN, Colours.BLUE,
-    Colours.AQUAMARINE, Colours.PLUM];
-  blockly.FieldColour.COLUMNS = 4;
+  if (skin.id == "anna" || skin.id == "elsa")
+  {
+    // Create a smaller palette.
+    blockly.FieldColour.COLOURS = [
+      Colours.FROZEN1, Colours.FROZEN2, Colours.FROZEN3,
+      Colours.FROZEN4, Colours.FROZEN5, Colours.FROZEN6,
+      Colours.FROZEN7, Colours.FROZEN8, Colours.FROZEN9];
+    blockly.FieldColour.COLUMNS = 3;
+
+  } else {
+
+    // Create a smaller palette.
+    blockly.FieldColour.COLOURS = [
+      // Row 1.
+      Colours.BLACK, Colours.GREY,
+      Colours.KHAKI, Colours.WHITE,
+      // Row 2.
+      Colours.RED, Colours.PINK,
+      Colours.ORANGE, Colours.YELLOW,
+      // Row 3.
+      Colours.GREEN, Colours.BLUE,
+      Colours.AQUAMARINE, Colours.PLUM];
+    blockly.FieldColour.COLUMNS = 4;
+  }
 
   // Block definitions.
   blockly.Blocks.draw_move_by_constant = {
@@ -95,7 +108,7 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.draw_move_by_constant = function() {
     // Generate JavaScript for moving forward or backward the internal number of
     // pixels.
-    var value = window.parseFloat(this.getTitleValue('VALUE'));
+    var value = window.parseFloat(this.getTitleValue('VALUE')) || 0;
     return 'Turtle.' + this.getTitleValue('DIR') +
         '(' + value + ', \'block_id_' + this.id + '\');\n';
   };
@@ -170,7 +183,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
   generator.draw_turn_by_constant = function() {
     // Generate JavaScript for turning left or right.
-    var value = window.parseFloat(this.getTitleValue('VALUE'));
+    var value = window.parseFloat(this.getTitleValue('VALUE')) || 0;
     return 'Turtle.' + this.getTitleValue('DIR') +
         '(' + value + ', \'block_id_' + this.id + '\');\n';
   };
@@ -683,7 +696,7 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.jump_by_constant = function() {
     // Generate JavaScript for moving forward or backward the internal number
     // of pixels without drawing.
-    var value = window.parseFloat(this.getTitleValue('VALUE'));
+    var value = window.parseFloat(this.getTitleValue('VALUE')) || 0;
     return 'Turtle.' + this.getTitleValue('DIR') +
         '(' + value + ', \'block_id_' + this.id + '\');\n';
   };
@@ -835,7 +848,6 @@ exports.install = function(blockly, blockInstallOptions) {
         this.id + '\');\n';
   };
 
-
   blockly.Blocks.draw_line_style_pattern = {
     // Block to handle event when an arrow button is pressed.
     helpUrl: '',
@@ -846,18 +858,10 @@ exports.install = function(blockly, blockInstallOptions) {
       this.appendDummyInput()
            .appendTitle(msg.setPattern())
            .appendTitle( new blockly.FieldImageDropdown(
-              blockly.Blocks.draw_line_style_pattern.Options, 150, 20 ), 'VALUE' );
+              Turtle.lineStylePatternOptions, 150, 20 ), 'VALUE' );
       this.setTooltip(msg.setPattern());
     }
   };
-
-  // image icons and image paths for the 'set pattern block'
-  blockly.Blocks.draw_line_style_pattern.Options =
-    [[skin.patternDefault, 'DEFAULT'], //  signals return to default path drawing
-     [skin.rainbowMenu, 'rainbowLine'],  // set to property name for image within skin
-     [skin.ropeMenu, 'ropeLine'],  // referenced as skin[pattern];
-     [skin.squigglyMenu, 'squigglyLine'],
-     [skin.swirlyMenu, 'swirlyLine']];
 
   generator.draw_line_style_pattern = function() {
     // Generate JavaScript for setting the image for a patterned line.
@@ -907,6 +911,51 @@ exports.install = function(blockly, blockInstallOptions) {
     // Generate JavaScript for changing turtle visibility.
     return 'Turtle.' + this.getTitleValue('VISIBILITY') +
         '(\'block_id_' + this.id + '\');\n';
+  };
+
+  blockly.Blocks.turtle_stamp = {
+    helpUrl: '',
+    init: function() {
+      this.setHSV(312, 0.32, 0.62);
+      var dropdown;
+      var input = this.appendDummyInput();
+      input.appendTitle(msg.drawStamp());
+      dropdown = new blockly.FieldImageDropdown(this.VALUES, 50, 30);
+
+      input.appendTitle(dropdown, 'VALUE');
+
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.drawStamp());
+    }
+  };
+
+  if (skin.id == "anna" || skin.id == "elsa") {
+    blockly.Blocks.turtle_stamp.VALUES = [
+      [skin.assetUrl('snowflake.png'), 'snowflake1'],
+      [skin.assetUrl('snowflake.png'), 'snowflake2'],
+      [skin.assetUrl('snowflake.png'), 'snowflake3'],
+    ];
+  } else {
+    blockly.Blocks.turtle_stamp.VALUES = [
+      [skin.patternDefault, 'DEFAULT']
+    ];
+  }
+
+  // Preload stamp images
+  Turtle.stamps = [];
+  for (var i = 0; i < blockly.Blocks.turtle_stamp.VALUES.length; i++) {
+    var url = blockly.Blocks.turtle_stamp.VALUES[i][0];
+    var key = blockly.Blocks.turtle_stamp.VALUES[i][1];
+    var img = new Image();
+    img.src = url;
+    Turtle.stamps[key] = img;
+  }
+
+  generator.turtle_stamp = function () {
+    return 'Turtle.drawStamp("' + this.getTitleValue('VALUE') +
+        '", \'block_id_' + this.id + '\');\n';
   };
 
   customLevelBlocks.install(blockly, generator, gensym);

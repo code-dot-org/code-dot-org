@@ -3,9 +3,9 @@
 var msg = require('../../locale/current/studio');
 var utils = require('../utils');
 var blockUtils = require('../block_utils');
-var tiles = require('./tiles');
-var Direction = tiles.Direction;
-var Emotions = tiles.Emotions;
+var constants = require('./constants');
+var Direction = constants.Direction;
+var Emotions = constants.Emotions;
 var tb = blockUtils.createToolbox;
 var blockOfType = blockUtils.blockOfType;
 var createCategory = blockUtils.createCategory;
@@ -103,7 +103,7 @@ var levels = module.exports = {};
 
 // Base config for levels created via levelbuilder
 levels.custom = {
-  'ideal': 2,
+  'ideal': Infinity,
   'requiredBlocks': [],
   'scale': {
     'snapRadius': 2
@@ -1046,13 +1046,45 @@ levels.full_sandbox =  {
        createCategory(msg.catVariables(), '', 'VARIABLE') +
        createCategory(msg.catProcedures(), '', 'PROCEDURE') +
        createCategory('Functional',
-                     blockOfType('functional_setBackground') +
-                     blockOfType('functional_setPlayerSpeed') +
-                     blockOfType('functional_setEnemySpeed') +
-                     blockOfType('functional_showTitleScreen') +
-                     blockOfType('functional_string') +
-                     blockOfType('functional_background_string_picker') +
-                     blockOfType('functional_math_number'))),
+           blockOfType('functional_string') +
+           blockOfType('functional_background_string_picker') +
+           blockOfType('functional_math_number') +
+           '<block type="functional_math_number_dropdown">' +
+             '<title name="NUM" config="2,3,4,5,6,7,8,9,10,11,12">???</title>' +
+           '</block>') +
+       createCategory('Functional Start',
+           blockOfType('functional_start_setBackground') +
+           blockOfType('functional_start_setSpeeds') +
+           blockOfType('functional_start_setBackgroundAndSpeeds') +
+           blockOfType('functional_start_dummyOnMove')) +
+       createCategory('Functional Logic',
+           blockOfType('functional_greater_than') +
+           blockOfType('functional_less_than') +
+           blockOfType('functional_number_equals') +
+           blockOfType('functional_logical_and') +
+           blockOfType('functional_logical_or') +
+           blockOfType('functional_logical_not') +
+           blockOfType('functional_boolean'))),
   'startBlocks':
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
+
+levels.full_sandbox_infinity = utils.extend(levels.full_sandbox, {});
+
+levels.ec_sandbox = utils.extend(levels.sandbox, {
+  'editCode': true,
+  'codeFunctions': [
+    {'func': 'setSprite', 'params': ["0", "'cat'"] },
+    {'func': 'setBackground', 'params': ["'night'"] },
+    {'func': 'move', 'params': ["0", "1"] },
+    {'func': 'playSound', 'params': ["'slap'"] },
+    {'func': 'changeScore', 'params': ["1"] },
+    {'func': 'setSpritePosition', 'params': ["0", "7"] },
+    {'func': 'setSpriteSpeed', 'params': ["0", "8"] },
+    {'func': 'setSpriteEmotion', 'params': ["0", "1"] },
+    {'func': 'throwProjectile', 'params': ["0", "1", "'blue_fireball'"] },
+    {'func': 'vanish', 'params': ["0"] },
+    {'func': 'attachEventHandler', 'params': ["'when-left'", "function() {\n  \n}"] },
+  ],
+  'startBlocks': "",
+});

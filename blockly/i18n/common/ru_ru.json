@@ -1,5 +1,7 @@
 {
   "and": "и",
+  "booleanTrue": "истина",
+  "booleanFalse": "ложь",
   "blocklyMessage": "Блокли",
   "catActions": "Действия",
   "catColour": "Цвет",
@@ -41,6 +43,7 @@
   "numBlocksNeeded": "Поздравляю! Ты завершил головоломку {puzzleNumber}. (Однако, можно было обойтись всего  {numBlocks, plural, one {1 блоком} other {# блоками}}.)",
   "numLinesOfCodeWritten": "Ты только что написал {numLines, plural, one  {1 строку} other {# строки}} кода!",
   "play": "играть",
+  "print": "Print",
   "puzzleTitle": "Головоломка {puzzle_number} из {stage_total}",
   "repeat": "повторить",
   "resetProgram": "Сбросить",
@@ -48,7 +51,7 @@
   "runTooltip": "Запускает программу, заданную блоками в рабочей области.",
   "score": "очки",
   "showCodeHeader": "Показать код",
-  "showBlocksHeader": "Show Blocks",
+  "showBlocksHeader": "Показать блоки",
   "showGeneratedCode": "Показать код",
   "subtitle": "среда визуального программирования",
   "textVariable": "текст",
@@ -67,7 +70,7 @@
   "typeFuncs": "Доступные процедуры:%1",
   "typeHint": "Обратите внимание на то, что требуются круглые скобки и точки с запятой.",
   "workspaceHeader": "Место сбора блоков: ",
-  "workspaceHeaderJavaScript": "Type your JavaScript code here",
+  "workspaceHeaderJavaScript": "Введите Ваш код JavaScript здесь",
   "infinity": "Бесконечность",
   "rotateText": "Поверните ваше устройство.",
   "orientationLock": "Выключите блокировку ориентации в настройках устройства.",
@@ -78,5 +81,6 @@
   "tryHOC": "Попробуйте Час кода",
   "signup": "Зарегистрируйтесь на вводный курс",
   "hintHeader": "Подсказка:",
-  "genericFeedback": "Посмотреть, как вы выполнили, и попытаться исправить вашу программу."
+  "genericFeedback": "Посмотреть, как вы выполнили, и попытаться исправить вашу программу.",
+  "defaultTwitterText": "Check out what I made"
 }

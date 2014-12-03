@@ -59,6 +59,7 @@ en:
           'MazeEC': 'Stage 1'
           'Webapp': 'Stage 2'
           'ArtistEC': 'Stage 3'
+          'StudioEC': 'Stage 4'
         'events':
           desc: 'Bounce (beta)'
           'Bounce': 'Stage 1'
@@ -110,6 +111,7 @@ en:
         'Webapp': 'Webapp'
         'ArtistEC': 'The Artist'
         'TextMatch': 'Text Match'
+        'StudioEC': 'Play Lab'
     trophy:
       name:
         'Bronze': 'Bronze'
@@ -303,7 +305,7 @@ en:
         'studio_c3_game_4': "Can you have the penguin say \"Ouch!\" and play a \"hit\" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?"
         'studio_c3_game_5': "Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?"
         'studio_c3_game_6': "Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?"
-        'studio_c3_game_7': "Create your own game. When you're done, click Finish to let friends try your story on their phones."
+        'studio_c3_game_7': "Create your own game. When you're done, click Finish to let friends try your game on their phones."
         'studio_playlab_1': "Can you make this dog say \"hello world\"?"
         'studio_playlab_2': "Can you make the dog say something and then have the cat say something afterwards?"
         'studio_playlab_3': "Can you write a program to make this dog move to the cat?"
@@ -313,8 +315,8 @@ en:
         'studio_playlab_7': "The \"repeat forever\" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?"
         'studio_playlab_8': "Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?"
         'studio_playlab_9': "Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?"
-        'studio_playlab_10': "Create your own game. When you're done, click Finish to let friends try your story on their phones."
-        'studio_full_sandbox': "Create your own game. When you're done, click Finish to let friends try your story on their phones."
+        'studio_playlab_10': "Create your own game. When you're done, click Finish to let friends try your game on their phones."
+        'studio_full_sandbox': "Create your own game. When you're done, click Finish to let friends try your game on their phones."
         'studio_k1_1': "Can you make this dog say \"hello world\"?"
         'studio_k1_2': "Can you make the dog say something and then have the cat say something afterwards?"
         'studio_k1_3': "Can you write a program to make this dog move to the cat?"
@@ -332,8 +334,9 @@ en:
         'maze_wordsearch_k_16': "Move me one way, then another to spell the word BELOW"
         'maze_wordsearch_k_20': "This is a test! Move me one way, then another to spell the word STORY"
         'webapp_ec_simple': "Create your web app by using createHtmlBlock."
-        'turtle_ec_1_2': "Now, draw a square. NOTE: use your favorite color by picking it in the new \"penColour\" block."
+        'turtle_ec_1_2': "Now, draw a square. NOTE: use your favorite color by picking it in the new \"penColor\" block."
         'turtle_ec_1_10': "You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new \"penWidth\" block. Have fun!"
+        'studio_ec_sandbox': "Create your own game. When you're done, click Finish to let friends try your game on their phones."
     video:
       name:
         # Keyed by video.key
@@ -350,6 +353,7 @@ en:
         'loop_until': "Repeat Until Block"
         'if': "If Block"
         'if_else': "If/else Block"
+        'if_else_scrat': "If/else Block"
         'function': "Functions"
         'loop_while': "While Block"
         'loop_for': "Counter Block"
@@ -414,6 +418,9 @@ en:
         'C3_crowdsourcing': 'Crowdsourcing'
         'C3_functional_suncatchers': 'Functional Suncatchers'
         'C3_songwriting_with_parameters': 'Songwriting With Parameters'
+        'frozen_intro': 'Hour of Code Intro'
+        'frozen_loops': 'Introduction to Loops'
+        'frozen_functions': 'Introduction to Functions'
     callout:
       text:
         # Keyed by #{callout.localization_key}
@@ -427,3 +434,23 @@ en:
         set_sprite_image: 'Attach a "set actor to image" block to the "when story starts" block to enable an actor for this story'
         studio_say_text: "Type what you want your actor to say within these quotes"
         jigsaw_click: 'Click this block!'
+        move_elsa_forward: 'Drag a "Move Forward" block and snap it below the "When Run" block to make Elsa move forward'
+        turn_elsa: 'Use the "Turn" block to make Elsa turn. The number in the drop-down determines how much Elsa turns'
+        replace_questions: 'Use the drop-down to replace "???" with a number'
+        replace_questions_degree: 'Use the drop-down to replace "???" with the correct degree to turn'
+        repeat_blocks: 'Use the "Repeat" block and wrap it around the blocks in the workspace'
+        snowflake_dropdown: 'Use this drop-down to create different snowflakes!'
+        degrees_per_side: 'Divide 360 by the number of sides to get the size of each angle in degrees.'
+        set_sides: 'Use this block to set "sides" to the number needed to complete the puzzle.'
+        set_length: 'Use this block to set "length" to the correct value.'
+        which_equation: 'Which equation makes each side shorter for shapes with more sides?  Try each equation!'
+        get_nectar: 'Use the new "get nectar" block.'
+        actions_category: 'The tool box got a new look! The "Actions" blocks are in here now.'
+        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
+        edit_function: 'Use this button to edit the function.'
+        create_function: 'Click here to open the "Functions" flyout, then click the "Create a Function" button.'
+        house_hint: "It's ok if the picture doesn't look like a house yet. We will fix it in the next puzzle."
+        edit_draw_square: 'Use this button to edit the function and add the loop.'
+        edit_get_nectar: 'Use this button to edit the function and change the direction the Bee will turn to get the nectar.'
+        logic_category: 'Open the "Logic" flyout to find the "if/else" block.'
+        length_parameter: 'Can you update this function so it uses the "length" parameter?'

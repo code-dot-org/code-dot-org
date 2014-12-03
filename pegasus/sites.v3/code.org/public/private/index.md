@@ -1,6 +1,6 @@
 ## Metrics
 
-- <%= Contact.count %> unique contacts
+- <%= DB[:contacts].count %> unique contacts
 - <%= DB[:forms].where(kind:'Petition').count %> petition forms
 - <%= DB[:forms].where(kind:'HocCertificate2013').count %> hour-of-code certificates
 - <%= DB[:forms].where(kind:'ContactForm').count %> contact forms
@@ -14,4 +14,4 @@
 
 ## Affiliate Workshops
 
-- [Report](/private/professional-development-workshop-report)
+- [Payment Report](/private/professional-development-workshop-report)

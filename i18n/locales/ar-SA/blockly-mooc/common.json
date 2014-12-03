@@ -1,5 +1,7 @@
 {
   "and":"و",
+  "booleanTrue":"صحيح",
+  "booleanFalse":"خطأ",
   "blocklyMessage":"بلوكلي",
   "catActions":"الاجراءات",
   "catColour":"لون",
@@ -41,6 +43,7 @@
   "numBlocksNeeded":"تهانينا! لقد أكملت اللغز {puzzleNumber}. (لكن كان بامكانك استخذام {numBlocks, plural, one {1 بلوك} other {# بلوكات}}.) فقط",
   "numLinesOfCodeWritten":"لقد كتبت {numLines, plural, one { سطر1} other {# سطور}} من الكود البرمجي!",
   "play":"إلعب",
+  "print":"Print",
   "puzzleTitle":"اللغز {puzzle_number} من {stage_total}",
   "repeat":"كرر",
   "resetProgram":"إعادة تعيين",
@@ -61,8 +64,8 @@
   "tryAgain":"حاول مرة أخرى",
   "hintRequest":"شاهد تلميحاً",
   "backToPreviousLevel":"الرجوع إلى المستوى السابق",
-  "saveToGallery":"حفظ في معرض الصور الخاص بك",
-  "savedToGallery":"حفظ في معرض الصور الخاص بك!",
+  "saveToGallery":"Save to gallery",
+  "savedToGallery":"Saved in gallery!",
   "shareFailure":"Sorry, we can't share this program.",
   "typeFuncs":"الدوال المتاحة: %1",
   "typeHint":"تذكر أن الأقواس والفواصل المنقوطة ضرورية.",
@@ -78,5 +81,6 @@
   "tryHOC":"جرب \"Hour of Code\"",
   "signup":"سجل لمشاهدة مقدمة الدورة",
   "hintHeader":"إليك نصيحة:",
-  "genericFeedback":"انظر كيف انتهى الأمر، و حاول إصلاح برنامجك."
+  "genericFeedback":"انظر كيف انتهى الأمر، و حاول إصلاح برنامجك.",
+  "defaultTwitterText":"Check out what I made"
 }

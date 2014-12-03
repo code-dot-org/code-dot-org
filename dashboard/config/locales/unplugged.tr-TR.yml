@@ -74,7 +74,7 @@
         - unplug6
         video: Unplug6
       Unplug7:
-        title: Şarkı yazma
+        title: "Şarkı yazma"
         desc: Reading lyrics is a pretty intuitive venture for most students.  We'll
           take an activity that's already common knowledge and shift it into a solid
           education on defining and calling functions. Once students are familiar
@@ -105,7 +105,7 @@
         - unplug9
         video: Unplug9
       Unplug10:
-        title: İnternet
+        title: "İnternet"
         desc: In this lesson, students will pretend to flow through the Internet,
           all the while learning about web addresses, IPs and the DNS.
         pdfs:
@@ -122,13 +122,13 @@
         video: Unplug11
       UnplugHappyMaps:
         title: Mutlu Haritalar
-        desc: Öğrenciler basit algoritmalar (yönergeler silsilesi) oluşturarak tek
-          bir komutla bir karakteri labirentte hareket ettirirler.
+        desc: "Öğrenciler basit algoritmalar (yönergeler silsilesi) oluşturarak tek
+          bir komutla bir karakteri labirentte hareket ettirirler."
         video: C1_happy_maps_unplugged
       MoveIt:
         title: Oynat, Oynat
-        desc: Öğrenciler basit algoritmalar (yönergeler silsilesi) oluşturarak tek
-          bir komutla bir karakteri labirentte hareket ettirirler.
+        desc: "Öğrenciler basit algoritmalar (yönergeler silsilesi) oluşturarak tek
+          bir komutla bir karakteri labirentte hareket ettirirler."
         video: C1_moveitmoveit_unplugged
       PlantASeed:
         title: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
@@ -170,8 +170,9 @@
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
         title: Biryerlere Güvenle Gitmek
-        desc: İnternet güçlü, fakat bazen tehlikeli bir yerdir. Öğretmenler internette
-          gezinirken nasıl güvende olunabileceğine dair bilgi verir.
+        desc: "İnternet güçlü, fakat bazen tehlikeli bir yerdir. Öğretmenler internette
+          gezinirken nasıl güvende olunabileceğine dair bilgi verir."
+        video: C1_going_places_safely
       GraphPaperProgramming:
         title: Grafik Kağıdı Programlama
         desc: Students write an algorithm (a set of instructions) using a set of predefined
@@ -184,7 +185,7 @@
           computer science and how algorithms play an essential part.
         video: C2_paper_airplanes
       BinaryBracelets:
-        title: İkilik Bileklikler
+        title: "İkilik Bileklikler"
         desc: Students create bracelets as a binary representations of the first letter
           of their name. Students learn that data can be represented and stored in
           more than one way.
@@ -193,6 +194,7 @@
         title: Dijital İziniz
         desc: Teachers introduce to students the idea that putting information about
           themselves online creates a digital footprint or "trail" that has consequences.
+        video: C2_digital_footprint
       ComputationalThinking:
         title: Sayısal Düşünme
         desc: Students use the steps of computational thinking (decompose, pattern
@@ -218,7 +220,7 @@
           dice race game.
         video: C3_dice_race
       Internet:
-        title: İnternet
+        title: "İnternet"
         desc: Students send messages representing various Internet transmission methods
           using pieces of paper.
         video: C3_internet
@@ -232,3 +234,57 @@
         title: Sayısal Vatandaşlık
         desc: Students explore the difference between private information and personal
           information, distinguishing what is safe and unsafe to share online.
+      TangramAlgorithms:
+        title: Tangram Algorithms
+        desc: This lesson shows us something important about algorithms. If you keep
+          an algorithm simple there are lots of ways to use it. If you want to make
+          sure everyone ends up with the same thing, then your algorithm needs more
+          detail.
+      EnvelopeVariables:
+        title: Envelope Variables
+        desc: Variables allow for a lot of freedom in computer science.  This lesson
+          helps to explain what variables are and how we can use them in many different
+          ways. Use this activity before (or in conjunction with) the lesson on abstraction
+          to really hit the idea home.
+      MadGlibs:
+        title: Mad Glibs
+        desc: Abstraction is one of the most important skills for a computer scientist
+          to understand.  This activity will have your students analyzing stories
+          for differences so that they can abstract them away. Those abstracted stories
+          become templates for fun and crazy new ones.
+      ForLoopFun:
+        title: For Loop Fun
+        desc: We know that loops allow us to do things over and over again, but now
+          we’re going to learn how to use loops with extra structure built right in.
+      SongwritingWithParameters:
+        title: Değiştirgenlerle Şarkı Yazma
+        desc: 'One of the most magnificent structures in the computer science world
+          is the function.  Functions (sometimes called procedures) are mini programs
+          that you can use over and over inside of your bigger program. This lesson
+          will help students intuitively understand why combining chunks of code into
+          functions is such a helpful practice.  '
+      BinaryImages:
+        title: Binary Images
+        desc: Though many people think of binary as strictly zeros and ones, our previous
+          courses taught students that information can be represented in a variety
+          of binary options.  This lesson takes that concept one step further as it
+          illustrates how a computer can store even more complex information (such
+          as images and colors) in binary, as well.
+      VideoGamesCoordinatePlanes:
+        title: Video Games and Coordinate Planes
+        desc: Video Games and Coordinate Planes lesson description
+      Contracts:
+        title: Contracts
+        desc: Contracts unplugged lesson description
+      DesignRecipe:
+        title: The Design Recipe
+        desc: Design Recipe lesson description
+      Booleans:
+        title: Booleans
+        desc: Booleans lesson description
+      ConditionalsPiecewiseFunctions:
+        title: Conditionals and Piecewise Functions
+        desc: Conditionals and Piecewise Functions lesson description
+      CollisionDetection:
+        title: Collision Detection
+        desc: Collision Detection lesson description

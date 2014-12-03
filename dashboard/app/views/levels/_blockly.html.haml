@@ -1,3 +1,13 @@
+-# Create level options object to pass to Blockly
+-# use local[:symbol] to access locals passed into this render partial (defaults to false if not present)
+- local = Hash.new(false).merge!(local_assigns.delete_if{|_,v|v.nil?})
+- level, app_options = blockly_options(local_assigns)
+- embed = local[:embed] || @embed
+- level['showFinish'] = local[:embed]
+
+-if local[:embed]
+  #title
+    %h3{style: 'margin: 0 auto; max-width: 800px;'}!= level['instructions']
 #blocklyApp
   .loading
   .slow_load
@@ -13,30 +23,28 @@
   %link{href: "#{blockly_path}css/common.css", rel: 'stylesheet', type: 'text/css'}
   %link{href: "#{blockly_path}css/#{app}.css", rel: 'stylesheet', type: 'text/css'}
 
-  %script{src: "#{blockly_path}js/#{js_locale}/vendor.js"}
-  - if @game.name == "MazeEC" || @game.name == "ArtistEC" || @game.name == "Webapp"
+  - if @game.uses_droplet?
     %script{src: "#{blockly_path}js/jsinterpreter/acorn_interpreter.js"}
     %script{src: "#{blockly_path}js/requirejs/require.js"}
     %script{src: "#{blockly_path}js/ace/ace.js"}
     %script{src: "#{blockly_path}js/ace/ext-language_tools.js"}
     %script{src: "#{blockly_path}js/droplet/droplet-full.min.js"}
     %link{href: "#{blockly_path}css/droplet/droplet.min.css", rel: 'stylesheet', type: 'text/css'}
+  - else
+    %script{src: "#{blockly_path}js/#{js_locale}/vendor.js"}
   %script{src: "#{blockly_path}js/#{js_locale}/#{app}#{pretty ? '' : '.min'}.js"}
-
-  -# Create level options object to pass to Blockly
-  - level, app_options = blockly_options(local_assigns)
 
   - if @autoplay_video_info
     :javascript
       showVideoDialog(#{@autoplay_video_info.to_json})
 
-  -# use local[:symbol] to access locals passed into this render partial (defaults to false if not present)
-  - local = Hash.new(false).merge!(local_assigns.delete_if{|_,v|v.nil?})
-
   - send_to_phone = request.location.try(:country_code) == 'US' ||              |
       (!Rails.env.production? && request.location.try(:country_code) == 'RD') |
 
+  %div{style: "display:none"}= render partial: 'levels/reference_area'
+
   :javascript
+    //<![CDATA[
     var script_path = "#{@script_level && build_script_level_path(@script_level)}";
     startTiming('Puzzle', script_path, '');
     var level = #{level.to_json};
@@ -60,7 +68,8 @@
       #{ "level_source_id: #{@level_source_id}," if @level_source_id }
       #{ "send_to_phone_url: '#{@phone_share_url}'," if @phone_share_url }
       #{ "sendToPhone: true," if send_to_phone}
-      #{ "disableSocialShare: true," if @current_user && @current_user.under_13? }
+      #{ "disableSocialShare: true," if (@current_user && @current_user.under_13?) || @embed}
+      #{ "embed: true," if embed}
       #{ "scriptId: '#{@script.id}'," if @script }
       #{ "levelGameName: '#{@level.game.name}'," if @level.game }
       level: level,
@@ -159,23 +168,6 @@
         }
       },
       Dialog: Dialog,
-      referenceArea: function() {
-        var referenceDiv = $('#{escape_javascript(render partial: "levels/reference_area")}');
-        referenceDiv.find('.video_link').each(function() {
-          addClickTouchEvent($(this), $.proxy(function() {
-            showVideoDialog({
-              src: $(this).attr('data-src'),
-              name: $(this).attr('data-name'),
-              key: $(this).attr('data-key'),
-              download: $(this).attr('data-download'),
-              thumbnail: $(this).attr('data-thumbnail'),
-              enable_fallback: true,
-              autoplay: true
-            });
-          }, this));
-        });
-        return referenceDiv[0];
-      },
       showInstructionsWrapper: function(showInstructions) {
         var hasInstructions = level.instructions || level.aniGifURL;
         if (!hasInstructions || this.share || level.skipInstructionsPopup) {
@@ -193,8 +185,10 @@
       hide_source: #{local[:hide_source]},
       share: #{local[:share]},
       no_padding: #{local[:no_padding]},
-      position: { blockYCoordinateInterval: 25 }
+      position: { blockYCoordinateInterval: 25 },
+      cdoSounds: CDOSounds
     };
     $.extend(appOptions, #{app_options.to_json});
     #{'console.log(appOptions)' unless Rails.env.production?};
     #{app}Main(appOptions);
+    //]]>

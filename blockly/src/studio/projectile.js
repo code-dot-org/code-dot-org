@@ -1,6 +1,8 @@
 var Collidable = require('./collidable');
-var Direction = require('./tiles').Direction;
-var tiles = require('./tiles');
+var Direction = require('./constants').Direction;
+var constants = require('./constants');
+
+var SVG_NS = "http://www.w3.org/2000/svg";
 
 // uniqueId that increments by 1 each time an element is created
 var uniqueId = 0;
@@ -65,15 +67,14 @@ var Projectile = function (options) {
 
   this.height = options.height || 50;
   this.width = options.width || 50;
-  this.speed = options.speed || tiles.DEFAULT_SPRITE_SPEED / 2;
-
-  this.isFireball_ = this.className.indexOf('fireball') !== -1;
-  this.frames = this.isFireball_ ? 8 : 1;
+  this.speed = options.speed || constants.DEFAULT_SPRITE_SPEED / 2;
 
   this.currentFrame_ = 0;
   var self = this;
   this.animator_ = window.setInterval(function () {
-    self.currentFrame_ = (self.currentFrame_ + 1) % self.frames;
+    if (self.loop || self.currentFrame_ + 1 < self.frames) {
+      self.currentFrame_ = (self.currentFrame_ + 1) % self.frames;
+    }
   }, 50);
 
   // origin is at an offset from sprite location
@@ -93,17 +94,17 @@ module.exports = Projectile;
  */
 Projectile.prototype.createElement = function (parentElement) {
   // create our clipping path/rect
-  this.clipPath = document.createElementNS(Blockly.SVG_NS, 'clipPath');
+  this.clipPath = document.createElementNS(SVG_NS, 'clipPath');
   var clipId = 'projectile_clippath_' + (uniqueId++);
   this.clipPath.setAttribute('id', clipId);
-  var rect = document.createElementNS(Blockly.SVG_NS, 'rect');
+  var rect = document.createElementNS(SVG_NS, 'rect');
   rect.setAttribute('width', this.width);
   rect.setAttribute('height', this.height);
   this.clipPath.appendChild(rect);
 
   parentElement.appendChild(this.clipPath);
 
-  this.element = document.createElementNS(Blockly.SVG_NS, 'image');
+  this.element = document.createElementNS(SVG_NS, 'image');
   this.element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
     this.image);
   this.element.setAttribute('height', this.height);
@@ -150,7 +151,7 @@ Projectile.prototype.display = function () {
   clipRect.setAttribute('x', topLeft.x);
   clipRect.setAttribute('y', topLeft.y);
 
-  if (this.isFireball_) {
+  if (this.frames > 1) {
     this.element.setAttribute('transform', 'rotate(' + DIR_TO_ROTATION[this.dir] +
      ', ' + this.x + ', ' + this.y + ')');
   }

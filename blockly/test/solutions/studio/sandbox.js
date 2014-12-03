@@ -1,6 +1,6 @@
 var TestResults = require('../../../src/constants.js').TestResults;
 var _ = require('../../../build/js/lodash');
-var Direction = require('../../../src/studio/tiles.js').Direction;
+var Direction = require('../../../src/studio/constants.js').Direction;
 
 /**
  * Runs the given function at the provided tick count
@@ -443,6 +443,7 @@ module.exports = {
     },
     {
       description: 'collision with any actor',
+      timeout: 12000,
       xml: '<xml>' +
         '  <block type="when_run" deletable="false">' +
         '    <next>' +
@@ -586,6 +587,7 @@ module.exports = {
     },
     {
       description: 'collision with any edge',
+      timeout: 12000,
       xml: '<xml>' +
         '  <block type="when_run" deletable="false">' +
         '    <next>' +

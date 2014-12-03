@@ -16,25 +16,28 @@ body {
   height: 80px;             /* This is the same as the height of the footer once its padding is included. */
 }
 
+#pageheader-wrapper {
+  padding-top: 30px;
+}
+
 #pageheader {
   width: 100%; 
   background-color: rgb(0, 178, 192);
+  height: 4em;
+  margin: 0 0 30px 0;
 }
 
 #pageheader .content {
   width: 970px;
   margin: 0 auto; 
-  overflow: hidden;
+  overflow: visible;
   box-sizing: border-box;
 }
 
 #pageheader #left {
-  width: 200px;
+  width: 87px;
   float: left;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin-left: 0;
-
+  margin: -1.0625em 0 0 0;
 }
 
 #pageheader img#logo {
@@ -50,34 +53,28 @@ body {
 }
 
 #pageheader #right {
-  width: 640px; 
+  width: 880px;
   float: right; 
   text-align: right;
-  padding-top: 10px
 }
 
-
-.headerlink:link{
-  color: white;
+.headerlink {
+  display: inline-block;
   font-size: 18px;
-  font-weight: 300;
-  margin-left: 40px;
+  margin: 0.9375em 0 0 30px;
+  font-family: 'Gotham 4r', sans-serif;
 }
 
+.headerlink:link,
 .headerlink:visited {
   color: white;
-  font-size: 18px;
-  font-weight: 300;
-  margin-left: 40px;
+  text-decoration: none;
 }
 
-.headerlink:hover {
+.headerlink:hover,
+.headerlink:active {
   color: white;
-  font-size: 18px;
-  font-weight: 300;
-  text-decoration: none;
   border-bottom: solid 4px rgb(255, 138, 0);
-  margin-left: 40px;
 }
 
 #pagefooter {
@@ -105,26 +102,26 @@ body {
 .whitefooterlink:link {
   color: white;
   font-size: 14px;
-  font-weight: normal;
+  font-family: 'Gotham 4r', sans-serif;
 }
 
 .whitefooterlink:hover {
   color: white;
   font-size: 14px;
-  font-weight: normal;
+  font-family: 'Gotham 4r', sans-serif;
 }
 
 .whitefooterlink:visited {
   color: white;
   font-size: 14px;
-  font-weight: normal;
+  font-family: 'Gotham 4r', sans-serif;
 }
 
 
 /* styling for the embedded dashboard components... */
 
 a.user-menu-link {
-  font-weight:400;
+  font-family: 'Gotham 4r', sans-serif;
   padding-left:10px;
 }
 
@@ -146,23 +143,23 @@ a.user-menu-link {
   margin-top:10px;
   margin-bottom:5px;
   font-size: 18px;
-  font-weight: 500;
+  font-family: 'Gotham 5r', sans-serif;
 }
 
 #user_hero #student_progress {
-  font-weight: 500;
+  font-family: 'Gotham 5r', sans-serif;
   width: 175px;
   display: inline-block;
 }
 
 #user_hero #left_off {
-  font-weight: 500;
+  font-family: 'Gotham 5r', sans-serif;
   width: 175px;
   display: inline-block;
 }
 
 #user_hero #classroom {
-  font-weight: 500;
+  font-family: 'Gotham 5r', sans-serif;
   font-size:16px;
   margin-top:10px;
 }
@@ -197,7 +194,7 @@ a.user-menu-link {
   color: rgb(255, 255, 255);
   cursor: pointer;
   display: inline-block;
-  font-family: 'Gotham A', 'Gotham B', sans-serif;
+  font-family: 'Gotham 4r', sans-serif;
   font-size: 14px;
   font-weight: normal;
   height: 35px;
@@ -224,15 +221,18 @@ a.user-menu-link {
 /* ...end styling */
 
 /* For mobile */
+.mobile-headers #pageheader {
+  height: 21px;
+  margin: 15px 0 0 0;
+}
+
 .mobile-headers #pageheader .content,
 .mobile-headers #pagefooter .content {
   width: 100%;
 }
 
 .mobile-headers #pageheader #left {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-left: 10px;
+  margin: -8px 0 0 10px;
 }
 .mobile-headers #pageheader img#logo {
   width: 37px;

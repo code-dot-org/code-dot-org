@@ -84,6 +84,14 @@ module RakeUtils
     `git remote show origin 2>&1 | grep \"local out of date\" | grep \"#{git_branch}\" | wc -l`.strip.to_i > 0
   end
 
+  def self.ln_s(source, target)
+    current = File.symlink?(target) ? File.readlink(target) : nil
+    unless source == current
+      system 'rm', '-f', target if(current || File.file?(target))
+      system 'ln', '-s', source, target
+    end
+  end
+
   def self.npm_install(*args)
     commands = []
     commands << 'PKG_CONFIG_PATH=/usr/X11/lib/pkgconfig' if OS.mac?
@@ -109,7 +117,7 @@ module RakeUtils
 
   def self.sudo_ln_s(source, target)
     current = File.symlink?(target) ? File.readlink(target) : nil
-    unless target == current
+    unless source == current
       sudo 'rm', '-f', target if(current || File.file?(target))
       sudo 'ln', '-s', source, target
     end

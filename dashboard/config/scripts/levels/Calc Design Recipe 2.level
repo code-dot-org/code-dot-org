@@ -1,0 +1,34 @@
+<Calc>
+  <config><![CDATA[{
+  "game_id": 34,
+  "created_at": "2014-11-26T01:26:59.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "calc",
+    "use_contract_editor": "true",
+    "embed": "false",
+    "instructions": "Your school is holding a bake sale, and you are in charge of writing computer programs to track the cost of making each treat, the money customers give you, and the total profit from selling them. Cookies cost $0.25 each to bake, and sell for $1.00/cookie.\r\n\r\nWrite the function `cookie-cost`, which takes in the number of cookies you intend to sell, and gives you back the amount of money it would cost to produce that number of cookies.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "free_play": "false"
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <category name="Number">
+          <block type="functional_plus"/>
+          <block type="functional_minus"/>
+          <block type="functional_times"/>
+          <block type="functional_dividedby"/>
+          <block type="functional_math_number"/>
+        </category>
+        <category name="Functions" custom="PROCEDURE"/>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Calc>

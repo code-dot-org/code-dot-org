@@ -28,19 +28,7 @@ Milestone Complete!
 
 Phase 3 is designed to provide teachers with professional support, guidance, and feedback during the school year and experiences with an online community of practice.
 
-#### Save The Dates
-
-11/22/2014
-<br />
-1/24/2015
-<br />
-3/28/2015
-
-8:30am - 3:30pm
-<br />
-Breakfast and lunch will be served. 
-
-#### Location
+#### November 22nd Location
 
 DePaul University 
 <br />
@@ -50,12 +38,22 @@ CDM Room 924
 <br />
 Chicago, IL 60604​​​​​ 
 
+8:30am - 3:30pm
+<br />
+Breakfast and lunch will be served. 
+
 #### What do I bring to Phase 3 PD? ####
 Exploring Computer Science binder with curriculum
 <br />
 Green Code.org journal
 <br />
 Laptop
+
+#### Save The Dates
+
+1/24/2015
+<br />
+3/28/2015
 
 ### Phase 4: Post Year Development
 Coming Summer 2015 
@@ -140,7 +138,8 @@ Laptop
 ## Elementary  School Professional Development
 
 ### Phase 1: Preparation and Reflection
-The Elementary School Phase 1 Professional Development online course launches June 1st. Enrolled teachers will receive an email on June 1st with registration information. Pre-registration with your district is required to access professional development courses. 
+
+Milestone Complete!
 
 ### Phase 2: Teaching and Learning Studio
 
@@ -153,7 +152,8 @@ Milestone Complete!
 ## Administrator and Counselor Professional Development
 
 ### Phase 1: Preparation and Reflection
-The Administrator / Counselor Phase 1 Professional Development online course [edx.code.org](http://edx.code.org) launched June 1st. Enrolled Administrators and Counselors received an email on June 1st with registration information. Pre-registration with your district is required to access professional development courses. 
+
+Milestone Complete!
 
 ### Phase 2: Teaching and Learning Studio
 

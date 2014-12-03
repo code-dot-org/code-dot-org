@@ -6,10 +6,10 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Use both of your new functions to draw this picture. Hint each side is 100 pixels in length. ",
+    "instructions": "Use both of your new functions to draw this picture. To make this easier you use a loop with a \"counter\" parameter. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "slider_speed": ".5",
+    "slider_speed": ".8",
     "disable_param_editing": "false",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "true",
@@ -18,7 +18,7 @@
     "x": "150",
     "y": "200",
     "impressive": "false",
-    "ideal": "19",
+    "ideal": "23",
     "use_contract_editor": "false"
   }
 }]]></config>
@@ -27,41 +27,25 @@
       <xml>
         <block type="when_run" movable="false" deletable="false">
           <next>
-            <block type="procedures_callnoreturn" inline="false">
-              <mutation name="draw a triangle">
-                <arg name="length"/>
-              </mutation>
-              <value name="ARG0">
+            <block type="controls_for_counter" inline="true">
+              <mutation counter="counter"/>
+              <value name="FROM">
                 <block type="math_number">
-                  <title name="NUM">0</title>
+                  <title name="NUM">50</title>
                 </block>
               </value>
-              <next>
-                <block type="procedures_callnoreturn" inline="false">
-                  <mutation name="draw a square">
-                    <arg name="length"/>
-                  </mutation>
-                  <value name="ARG0">
-                    <block type="math_number">
-                      <title name="NUM">0</title>
-                    </block>
-                  </value>
+              <value name="TO">
+                <block type="math_number">
+                  <title name="NUM">100</title>
                 </block>
-              </next>
+              </value>
+              <value name="BY">
+                <block type="math_number">
+                  <title name="NUM">25</title>
+                </block>
+              </value>
             </block>
           </next>
-        </block>
-        <block type="procedures_defnoreturn" uservisible="false">
-          <mutation>
-            <arg name="length"/>
-          </mutation>
-          <title name="NAME">draw a triangle</title>
-        </block>
-        <block type="procedures_defnoreturn" uservisible="false">
-          <mutation>
-            <arg name="length"/>
-          </mutation>
-          <title name="NAME">draw a square</title>
         </block>
       </xml>
     </start_blocks>
@@ -84,6 +68,39 @@
               </block>
             </value>
           </block>
+          <block type="procedures_defnoreturn" uservisible="false">
+            <mutation/>
+            <title name="NAME">draw a triangle</title>
+            <statement name="STACK">
+              <block type="controls_repeat_ext" inline="true" uservisible="false">
+                <value name="TIMES">
+                  <block type="math_number" uservisible="false">
+                    <title name="NUM">3</title>
+                  </block>
+                </value>
+                <statement name="DO">
+                  <block type="draw_move" inline="true" uservisible="false">
+                    <title name="DIR">moveForward</title>
+                    <value name="VALUE">
+                      <block type="math_number" uservisible="false">
+                        <title name="NUM">???</title>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="draw_turn" inline="true" uservisible="false">
+                        <title name="DIR">turnLeft</title>
+                        <value name="VALUE">
+                          <block type="math_number" uservisible="false">
+                            <title name="NUM">120</title>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </statement>
+          </block>
           <block type="draw_turn" inline="true">
             <title name="DIR">turnLeft</title>
             <value name="VALUE">
@@ -100,12 +117,46 @@
               </block>
             </value>
           </block>
+          <block type="procedures_defnoreturn" uservisible="false">
+            <mutation/>
+            <title name="NAME">draw a square</title>
+            <statement name="STACK">
+              <block type="controls_repeat_ext" inline="true" uservisible="false">
+                <value name="TIMES">
+                  <block type="math_number" uservisible="false">
+                    <title name="NUM">4</title>
+                  </block>
+                </value>
+                <statement name="DO">
+                  <block type="draw_move" inline="true" uservisible="false">
+                    <title name="DIR">moveForward</title>
+                    <value name="VALUE">
+                      <block type="math_number" uservisible="false">
+                        <title name="NUM">???</title>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="draw_turn" inline="true" uservisible="false">
+                        <title name="DIR">turnLeft</title>
+                        <value name="VALUE">
+                          <block type="math_number" uservisible="false">
+                            <title name="NUM">90</title>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </statement>
+          </block>
         </category>
         <category name="Functions" custom="PROCEDURE">
-          <block type="procedures_callnoreturn" inline="false">
-            <mutation name="do something">
-              <arg name="length"/>
-            </mutation>
+          <block type="procedures_callnoreturn">
+            <mutation name="draw a triangle"/>
+          </block>
+          <block type="procedures_callnoreturn">
+            <mutation name="draw a square"/>
           </block>
         </category>
         <category name="Loops">
@@ -142,65 +193,155 @@
         </category>
         <category name="Variables" custom="VARIABLE">
           <block type="variables_get">
-            <title name="VAR">length</title>
+            <title name="VAR">counter</title>
           </block>
         </category>
       </xml>
     </toolbox_blocks>
-    <solution_blocks>
+    <required_blocks>
       <xml>
-        <block type="when_run" movable="false" deletable="false">
-          <next>
-            <block type="procedures_callnoreturn" inline="false">
-              <mutation name="draw a triangle">
-                <arg name="length"/>
-              </mutation>
-              <value name="ARG0">
-                <block type="math_number">
-                  <title name="NUM">100</title>
+        <block type="controls_for_counter" inline="true">
+          <mutation counter="counter"/>
+          <value name="FROM">
+            <block type="math_number">
+              <title name="NUM">50</title>
+            </block>
+          </value>
+          <value name="TO">
+            <block type="math_number">
+              <title name="NUM">100</title>
+            </block>
+          </value>
+          <value name="BY">
+            <block type="math_number">
+              <title name="NUM">25</title>
+            </block>
+          </value>
+        </block>
+        <block type="pick_one">
+          <statement name="PICK">
+            <block type="draw_move" inline="true">
+              <title name="DIR">moveForward</title>
+              <value name="VALUE">
+                <block type="variables_get">
+                  <title name="VAR">counter</title>
                 </block>
               </value>
               <next>
-                <block type="procedures_callnoreturn" inline="false">
-                  <mutation name="draw a square">
-                    <arg name="length"/>
-                  </mutation>
-                  <value name="ARG0">
-                    <block type="math_number">
-                      <title name="NUM">100</title>
+                <block type="draw_move" inline="true">
+                  <title name="DIR">moveBackward</title>
+                  <value name="VALUE">
+                    <block type="variables_get">
+                      <title name="VAR">counter</title>
                     </block>
                   </value>
                 </block>
               </next>
             </block>
-          </next>
+          </statement>
         </block>
-        <block type="procedures_defnoreturn" uservisible="false">
-          <mutation>
-            <arg name="length"/>
-          </mutation>
-          <title name="NAME">draw a triangle</title>
-          <statement name="STACK">
-            <block type="controls_repeat_ext" inline="true" uservisible="false">
-              <value name="TIMES">
-                <block type="math_number" uservisible="false">
-                  <title name="NUM">3</title>
+        <block type="pick_one">
+          <statement name="PICK">
+            <block type="draw_turn" inline="true">
+              <title name="DIR">turnRight</title>
+              <value name="VALUE">
+                <block type="math_number">
+                  <title name="NUM">90</title>
+                </block>
+              </value>
+              <next>
+                <block type="draw_turn" inline="true">
+                  <title name="DIR">turnLeft</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">90</title>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="pick_one">
+          <statement name="PICK">
+            <block type="draw_turn" inline="true">
+              <title name="DIR">turnLeft</title>
+              <value name="VALUE">
+                <block type="math_number">
+                  <title name="NUM">120</title>
+                </block>
+              </value>
+              <next>
+                <block type="draw_turn" inline="true">
+                  <title name="DIR">turnRight</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">120</title>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+            <block type="math_number">
+              <title name="NUM">4</title>
+            </block>
+          </value>
+        </block>
+        <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+            <block type="math_number">
+              <title name="NUM">3</title>
+            </block>
+          </value>
+        </block>
+        <block type="variables_get">
+          <title name="VAR">counter</title>
+        </block>
+      </xml>
+    </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_for_counter" inline="true">
+              <mutation counter="counter"/>
+              <value name="FROM">
+                <block type="math_number">
+                  <title name="NUM">50</title>
+                </block>
+              </value>
+              <value name="TO">
+                <block type="math_number">
+                  <title name="NUM">100</title>
+                </block>
+              </value>
+              <value name="BY">
+                <block type="math_number">
+                  <title name="NUM">25</title>
                 </block>
               </value>
               <statement name="DO">
-                <block type="draw_move" inline="true" uservisible="false">
-                  <title name="DIR">moveForward</title>
-                  <value name="VALUE">
-                    <block type="variables_get" uservisible="false">
-                      <title name="VAR">length</title>
+                <block type="procedures_callnoreturn" inline="false">
+                  <mutation name="draw a square">
+                    <arg name="counter"/>
+                  </mutation>
+                  <value name="ARG0">
+                    <block type="variables_get">
+                      <title name="VAR">counter</title>
                     </block>
                   </value>
                   <next>
-                    <block type="draw_turn" inline="true" uservisible="false">
-                      <title name="DIR">turnLeft</title>
-                      <value name="VALUE">
-                        <block type="math_number" uservisible="false">
-                          <title name="NUM">120</title>
+                    <block type="procedures_callnoreturn" inline="false">
+                      <mutation name="draw a triangle">
+                        <arg name="counter"/>
+                      </mutation>
+                      <value name="ARG0">
+                        <block type="variables_get">
+                          <title name="VAR">counter</title>
                         </block>
                       </value>
                     </block>
@@ -208,11 +349,11 @@
                 </block>
               </statement>
             </block>
-          </statement>
+          </next>
         </block>
         <block type="procedures_defnoreturn" uservisible="false">
           <mutation>
-            <arg name="length"/>
+            <arg name="counter"/>
           </mutation>
           <title name="NAME">draw a square</title>
           <statement name="STACK">
@@ -227,7 +368,7 @@
                   <title name="DIR">moveForward</title>
                   <value name="VALUE">
                     <block type="variables_get" uservisible="false">
-                      <title name="VAR">length</title>
+                      <title name="VAR">counter</title>
                     </block>
                   </value>
                   <next>
@@ -236,6 +377,41 @@
                       <value name="VALUE">
                         <block type="math_number" uservisible="false">
                           <title name="NUM">90</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation>
+            <arg name="counter"/>
+          </mutation>
+          <title name="NAME">draw a triangle</title>
+          <statement name="STACK">
+            <block type="controls_repeat_ext" inline="true" uservisible="false">
+              <value name="TIMES">
+                <block type="math_number" uservisible="false">
+                  <title name="NUM">3</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="draw_move" inline="true" uservisible="false">
+                  <title name="DIR">moveForward</title>
+                  <value name="VALUE">
+                    <block type="variables_get" uservisible="false">
+                      <title name="VAR">counter</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="draw_turn" inline="true" uservisible="false">
+                      <title name="DIR">turnLeft</title>
+                      <value name="VALUE">
+                        <block type="math_number" uservisible="false">
+                          <title name="NUM">120</title>
                         </block>
                       </value>
                     </block>

@@ -1,5 +1,7 @@
 {
   "and":"dan",
+  "booleanTrue":"benar",
+  "booleanFalse":"palsu",
   "blocklyMessage":"Blockly",
   "catActions":"Tindakan",
   "catColour":"Warna",
@@ -38,9 +40,10 @@
   "nextLevelTrophies":"Tahniah! Anda telah menyelesaikan Puzzle {puzzleNumber} dan memenangi {numTrophies, plural, one {a trophy} other {# trophies}}.",
   "nextStage":"Tahniah! Anda tamatkan {stageName}.",
   "nextStageTrophies":"Tahniah! Anda telah menyelesaikan {stageName} dan memenangi {numTrophies, plural, one {a trophy} other {# trophies}}.",
-  "numBlocksNeeded":"Tahniah! Anda melengkapkan Puzzle {puzzleNumber}. (Walau bagaimanapun, anda hanya boleh menggunakan {numBlocks, plural, one {1 block} lain {# blocks}}.)",
+  "numBlocksNeeded":"Tahniah! Anda melengkapkan Puzzle {puzzleNumber}. (Walau bagaimanapun, anda hanya boleh menggunakan {numBlocks, plural, one {1 block} other {# blocks}}.)",
   "numLinesOfCodeWritten":"Anda baru sahaja menulis {numLines, plural, one {1 line} other {# lines}} kod!",
   "play":"Main",
+  "print":"Print",
   "puzzleTitle":"Puzzle {puzzle_number} dari {stage_total}",
   "repeat":"Ulang",
   "resetProgram":"Tetapkan semula",
@@ -61,8 +64,8 @@
   "tryAgain":"Cuba lagi",
   "hintRequest":"See hint",
   "backToPreviousLevel":"Kembali ke tahap yang sebelumnya",
-  "saveToGallery":"Simpan ke galeri anda",
-  "savedToGallery":"Disimpan ke galeri anda!",
+  "saveToGallery":"Save to gallery",
+  "savedToGallery":"Saved in gallery!",
   "shareFailure":"Sorry, we can't share this program.",
   "typeFuncs":"fungsi sedia ada:%1",
   "typeHint":"Ambil perhatian bahawa kurungan dan koma bertindih adalah perlu.",
@@ -78,5 +81,6 @@
   "tryHOC":"Try the Hour of Code",
   "signup":"Daftar untuk kursus pengenalan",
   "hintHeader":"Sedikit Tip:",
-  "genericFeedback":"See how you ended up, and try to fix your program."
+  "genericFeedback":"See how you ended up, and try to fix your program.",
+  "defaultTwitterText":"Check out what I made"
 }

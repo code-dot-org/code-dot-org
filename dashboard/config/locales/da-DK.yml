@@ -20,12 +20,9 @@
   hello: Hej verden
   welcome_back: Velkommen tilbage %{name}
   add_teacher_form:
-    code_or_email:
-      label: 'Tilføj en lærer med kode eller e-mailadresse:'
-      placeholder: Kode (ABCDEF) eller e-mail (teacher@school.edu)
     code:
-      label: 'Tilføje en lærer af afsnittet kode:'
-      placeholder: Kode (ABCDEF)
+      label: 'Tilføje en lærer:'
+      placeholder: Afsnitskode (SOVS)
     submit: Tilføj lærer
   add_hint_form:
     placeholder: Skriv dit huske-ord her
@@ -76,14 +73,14 @@
     teacher_pitch: Lærer tilmelding til Code.org
     teacher_title: Lærer tilmelding
     student_pitch: Elev tilmelding til Code.org
-    student_title: Tilmelding for studerende
+    student_title: Tilmelding for elever
     school_name: Skolens navn (valgfrit)
     school_address: Skolens adresse (valgfri)
     address_placeholder: adresse, by, stat, postnummer
     gender: Køn (valgfri)
     birthday: Fødselsdag (valgfri)
     age: Alder
-    user_type: Er du studerende eller lærer?
+    user_type: Er du elev eller lærer?
     submit: Tilmeld
     teacher: Er du en lærer?
     valid_username: Tilgængelig!
@@ -109,7 +106,7 @@
     submit: Log ind
   signin:
     try_heading: Vil du prøvekøre kodning uden tilmelding?
-    try_hoc: Prøv En Times Kodning først
+    try_hoc: Prøv Hour of Code først
     try_20hours: Prøv vores 20 timers Introduktion til datalogi
   signinsection:
     welcome: Velkommen til %{section_name}
@@ -139,12 +136,12 @@
       %{name}
   follower:
     invite_sent: Invitation sendt
-    added_teacher: '%{name} er tilføjet som din lærer'
+    added_teacher: "%{name} er tilføjet som din lærer"
     registered: Du er registreret til %{section_name}.
     error:
       signed_in: Log ud inden du fortsætter
       username_not_found: Brugernavn %{username} blev ikke fundet
-      username_in_use: '%{username} bruges allerede, vær venlig og vælg et andet'
+      username_in_use: "%{username} bruges allerede, vær venlig og vælg et andet"
       no_teacher: Vi kunne ikke finde nogen brugere der er logget ind med %{teacher_email_or_code}'.
         Vær venlig og spørg dem om at lave en bruger, og derefter prøv at tilføje
         dem.
@@ -155,8 +152,8 @@
       invite_student:
         subject: Tilmeld dig en klasse med %{teacher_name} på Code.org!
       student_disassociated:
-        subject: 'Code.org anmeldelse: %{student_name} er ikke længere tilknyttet
-          som dine studerende.'
+        subject: 'Code.org besked: %{student_name} er ikke længere tilknyttet som
+          din elev.'
       teacher_disassociated:
         subject: 'Code.org anmeldelse: %{teacher_name} er ikke længere tilknyttet
           som din lærer.'
@@ -188,7 +185,7 @@
       msg_publicschool: Bekræft venligst, at du er en Amerikansk offentlig skolelærer.
       msg_visit_website: Besøg Hjemmeside
     providers:
-      apple_itunes: $10 iTunes Gift Card
+      apple_itunes: "$10 iTunes Gift Card"
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB plads på Dropbox
@@ -197,40 +194,40 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: $10 Skype credit
+      skype: "$10 Skype credit"
     msg:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: Du har opnået en præmie! (Kun for amerikanske studerende)
+      earned: Du har opnået en præmie! (Kun for amerikanske elever)
       not_earned_title: Gennemfør øvelse, for at optjene belønninger (kun for amerikanske
-        studerende)
+        elever)
       not_earned: 'Lær alle datalogi begreberne, indsaml alle %{num_trophies} trofæer,
         og vind præmier. Du kan vælge mellem 10GB gratis Dropbox plads, $10 i Skype
-        credits, og gratis spil downloads. Bemærk: gælder kun amerikanske studerende,
+        credits, og gratis spil downloads. Bemærk: gælder kun amerikanske elever,
         og kun så længe lager haves.'
       teacher:
-        earned: 15 eller flere studerende har indsamlet alle %{num_trophies} trofæer.
+        earned: 15 eller flere elever har indsamlet alle %{num_trophies} trofæer.
           Du har vundet en lærerpræmie! (dog kun for amerikanske lærere)
         not_earned_title: Underviser klassen, tjene op til $1.000 i <a target="_blank"
           href="http://DonorsChoose.org"> DonorsChoose.org</a> kreditter (kun amerikanske
           lærere)
-        not_earned: For at belønne første gangs computer videnskabs lærere, kan du
-          tjene op til $1.000 i <a href="http://DonorsChoose.org"> DonorsChoose.org</a>
-          kreditter til at lede et klasseværelse gennem Folkeskole Intro Kurset. For
-          at kvalificere sig, skal du succesfuldt være vært ved et klasseværelse med
-          mindst 15 studerende gennem hele Folkeskole Intro Kurset, hvor alle 15 studerende
-          (eller mere) fuldfører alle vejledninger og optjene alle %{num_trophies}
-          trofæer. Hvis 7 eller flere af de studerende, der optjener alle trofæer
-          er piger, er din belønning $1.000 i <a target="_blank" href="http://DonorsChoose.org">
-          DonorsChoose.org</a> kreditter. Ellers er din belønning $750 i <a target="_blank"
-          href="http://DonorsChoose.org"> DonorsChoose.org</a> kreditter.  <a target="_blank"
-          href="http://DonorsChoose.org"> DonorsChoose.org</a> kreditter kan kun bruges
-          af lærere i amerikanske offentlige skoler.
+        not_earned: For at belønne de lærere, som for første gang underviser i programmering,
+          kan du tjene op til $1.000 i <a href="http://DonorsChoose.org"> DonorsChoose.org</a>
+          kreditter ved at føre en klasse gennem Grundskole Introkurset. For at kvalificere
+          dig, skal du have ført en klasse med mindst 15 elever gennem hele Grundskole
+          Introkurset, og alle 15 elever (eller flere) skal fuldføre alle øvelser
+          og opnå alle %{num_trophies} trofæer. Hvis 7 eller flere af de studerende,
+          der opnår alle trofæer er piger, er din belønning $1.000 i <a target="_blank"
+          href="http://DonorsChoose.org"> DonorsChoose.org</a> kreditter. Ellers er
+          din belønning $750 i <a target="_blank" href="http://DonorsChoose.org">
+          DonorsChoose.org</a> kreditter.  <a target="_blank" href="http://DonorsChoose.org">
+          DonorsChoose.org</a> kreditter kan kun bruges af lærere i amerikanske offentlige
+          skoler.
         bonus:
           not_earned_title: Du kan stadig tjene en ekstra $250 i <a target="_blank"
             href="http://DonorsChoose.org"> DonorsChoose.org</a> kreditter (kun amerikanske
             lærere)
-          earned: 7 eller flere af de studerende, der indsamlede alle %{num_trophies}
+          earned: 7 eller flere af de elever, der har opnået alle %{num_trophies}
             trofæer er piger. Du har vundet en $250 bonuspræmie! (kun gældende for
             amerikanske lærere)
           not_earned: Hvis mindst 7 af dine elever, der optjener alle %{num_trophies}
@@ -244,22 +241,22 @@
     edit: Rediger
     edit_model: Rediger %{model}
     update: Opdater
-    destroy: Ødelæg
+    destroy: "Ødelæg"
     back: Tilbage
     confirm: Er du sikker?
-    created: '%{model} blev oprettet.'
-    updated: '%{model} blev opdateret.'
-    destroyed: '%{model} blev slettet.'
+    created: "%{model} blev oprettet."
+    updated: "%{model} blev opdateret."
+    destroyed: "%{model} blev slettet."
     access_denied: Du har ikke adgang til denne %{model}.
   nav:
     header:
-      finished_hoc: Jeg har afsluttet min En Times Kodning
+      finished_hoc: Jeg har afsluttet min Hour of Code
       sign_in_to_save: Log ind for at gemme fremskridt
       free_play:
         playlab: Lav en App
         artist: Tegn noget
     user:
-      classroom: Mine elever
+      classroom: Lærer Startside
       label: Hej %{username}
       stats: Mine fremskridt
       settings: Min konto
@@ -276,44 +273,44 @@
       puzzle_map: Etaper
       prizes: Indsaml alle %{total_trophies} trofæer og vind præmier!
       prize_earned: Alle %{total_trophies} trofæer indsamlet. Prisen vundet!
-      prize_us_only: (Kun for amerikanske studerende)
+      prize_us_only: "(Kun for amerikanske elever)"
       prizes_link: Mere info
   teacher:
     title:
       one: 'Din lærer:'
       other: 'Dine lærere:'
-    remove: (Fjern lærer)
+    remove: "(Fjern lærer)"
     confirm:
       remove: Er du sikker på, at du vil fjerne denne lærer?
     tools: Lærer redskaber
     followers:
       section: 'Afsnit:'
       stages: 'Etaper som vises:'
-      show_past: 'Vis studerende aktivitet (%{bullet_html}) i fortiden:'
+      show_past: 'Vis tidligere elevaktivitet (%{bullet_html}):'
       levels_key: Niveau nøgle
       perfect: Afsluttet, perfekt
       completed: Afsluttet, men du brugte for mange blokke
       tried: Forsøgt, men ikke afsluttet
       not_tried: Ikke prøvet endnu
-      activity: Angiver studerende aktivitet i de sidste %{hours} %{plural}
+      activity: Angiver elevaktivitet i de sidste %{hours} %{plural}
       no_section: Ikke tildelt sektion
       trophies: trofæer
     students:
       name: Navn
       username: brugernavn
       password: adgangskode
-      manage: Administrer studerende
+      manage: Administrer elever
       dashboard: Gå til lærer Dashboard
-      add: Tilføje studerende
-      remove: fjern studerende
-      confirm_remove: Sikker på, at du ønsker at fjerne denne studerende?
-      help_reassign: For at opdele din klasse i flere afsnit, vælg de studerende for
-        at tildele dem til et nyt afsnit.
-      help_register: I stedet for at du bruger en masse tid individuelt at indlæse
-        de studerendes data, kan du oprette din klasse hurtigt ved at spørge dem til
-        tilmelding. Eleverne skal vælge brugernavne og adgangskoder, men de vil ikke
-        være forpligtet til at angive en e-mail-adresse. Hvis en elev glemmer sin
-        adgangskode, vil du kunne nulstille det til dem.
+      add: Tilføj elever
+      remove: fjern elev
+      confirm_remove: Sikker på, at du ønsker at fjerne denne elev?
+      help_reassign: For at opdele din klasse i flere grupper, skal du vælge de elever
+        du ønsker at flytte til en ny gruppe.
+      help_register: I stedet for at du bruger en masse tid individuelt på at indlæse
+        elevernes data, kan du oprette din klasse hurtigt ved at spørge dem om selv
+        at tilmelde sig. Eleverne skal vælge brugernavne og adgangskoder, men de vil
+        ikke være forpligtet til at angive en e-mail-adresse. Hvis en elev glemmer
+        sin adgangskode, vil du kunne nulstille det til dem.
       register: Spørg dine elever til at registrere sig selv
       vist: Spørg dine elever til at besøge
       section_code: 'og indtaste deres afsnit-kode:'
@@ -326,7 +323,7 @@
       section: Afsnit
       students: Studerende
       section_code: Afsnitskode
-      add_section_code: Tilføje studerende afsnit-kode
+      add_section_code: Tilføje elev afsnit-kode
       secret: Hemmelig type
       grade: Graduering
       course: Kursus
@@ -338,18 +335,18 @@
     rollup: Fremskridts oversigt
     activity: Seneste klasse aktivitet
     user_not_found: Lærer eller elev kunne ikke findes
-    cant_remove_student_no_email: '%{student_name} kan ikke fjernes som din studerende,
-      fordi %{student_name} ikke har registreret en e-mailadresse'
-    cant_remove_teacher_no_email: '%{teacher_name} kan ikke fjernes som din lærer,
-      fordi du ikke har registreret en e-mailadresse'
-    student_teacher_disassociated: '%{teacher_name} er blevet fjernet som lærer for
-      %{student_name}'
+    cant_remove_student_no_email: "%{student_name} kan ikke fjernes som din elev,
+      fordi %{student_name} ikke har registreret en e-mailadresse"
+    cant_remove_teacher_no_email: "%{teacher_name} kan ikke fjernes som din lærer,
+      fordi du ikke har registreret en e-mailadresse"
+    student_teacher_disassociated: "%{teacher_name} er blevet fjernet som lærer for
+      %{student_name}"
   user:
     email_confirm_needed: 'E-mailadresse er ikke blevet bekræftet:'
     email_resend_confirm: Gensend bekræftelses instruktioner
-    new_password_hint: (Efterlad blank hvis du ikke ønsker at ændre det)
-    current_password_hint: (vi har brug for din nuværende adgangskode til at bekræfte
-      dine ændringer)
+    new_password_hint: "(Efterlad blank hvis du ikke ønsker at ændre det)"
+    current_password_hint: "(vi har brug for din nuværende adgangskode til at bekræfte
+      dine ændringer)"
     cancel:
       title: Annuller min konto
       hint: Ulykkelig?
@@ -366,13 +363,13 @@
     all_courses: Oversigt over kursus 1, 2 og 3
     lesson_plans: Lektionsplaner
     signin_message: Allerede registreret? %{link}
-    student_reg_link: Tilmelding for studerende
-    teacher_reg_link: Tilmelding for studerende
+    student_reg_link: Tilmelding for elever
+    teacher_reg_link: Tilmelding for lærere
     signin_directions: Brug en konto til at følge op på fremdriften. <br/> Lærere,
       spor hele din klasse.
     teacher_dashboard: Se fremskridts oversigt
-    teacher_student_count_one: Du har %{count} studerende.
-    teacher_student_count: Du har %{count} studerende.
+    teacher_student_count_one: Du har %{count} elever.
+    teacher_student_count: Du har %{count} elever.
     teacher_averages: Dine elever har i gennemsnit optjent %{trophy_average} ud af
       %{trophy_max} "Koncept beherskelse" trofæer.
     teacher_print_certificates: Udskriv certifikater for studerende, der er færdig
@@ -400,12 +397,10 @@
     test_videos_help: Teste vores nye video-afspiller på din skole
     try_beta_courses: Nyt! Prøv vores beta kurser for K-5 elever
     use_as_teacher: Bruge dette websted som en lærer
-    heading_elementary: <h2>20 timers kurser for</h2><h1>Basis studerende</h1>
-    heading_apps: <h2>Sjov for</h2><h1>Alle</h1>
-    heading_legacy: <h2>Vores generelle kursus for</h2><h1>Alle aldre</h1>
-    gallery:
-      your_turtle: Mit kunstværk
-      your_studio: Mine Apps
+    heading_elementary: "<h2>20 timers kurser for</h2><h1>grundskoleelever</h1>"
+    heading_apps: "<h2>Sjov for</h2><h1>Alle</h1>"
+    heading_legacy: "<h2>Vores generelle kursus for</h2><h1>Alle aldre</h1>"
+    your_gallery: Galleri
   gender:
     male: Mand
     female: Kvinde
@@ -416,8 +411,8 @@
   footer:
     help_from_html: Ingeniører fra Google, Microsoft, Facebook og Twitter bidraget
       til at skabe denne øvelse. Oversat af Jan Borup Coyle.
-    art_from_html: Angry birds&trade; & &copy; & © 2009-2013 Rovio Entertainment Ltd.
-      Alle rettigheder forbeholdt. <br/>Plants vs zombies&trade; & &copy; & © 2013
+    art_from_html: Angry birds&trade; & &copy; & © 2009-2014 Rovio Entertainment Ltd.
+      Alle rettigheder forbeholdt. <br/>Plants vs zombies&trade; & &copy; & © 2014
       Electronic Arts Inc. Alle rettigheder forbeholdes.
     feedback: Giv feedback
     translate: Hjælp os med at oversætte til dit sprog
@@ -460,14 +455,18 @@
   slow_loading: Dette tager længere tid end normalt...
   try_reloading: Prøv at genindlæse siden
   next_stage: Færdig! Fortsæt til næste fase
-  download_pdf: Åben lektionsplan
+  download_pdf: "Åben lektionsplan"
+  lesson_plan: Lektionsplan
   view_lesson_plan: Se lektionsplan
   pdf_download: Download PDF
+  download_coming_soon: Aktiviter til download kommer snart.
+  video_coming_soon: Video kommer snart!
   share_code:
     title: Klik på 'Kør' for at se min program i aktion
     bounce_og_title: Tjek mit hoppe spil
     flappy_og_title: Tjek mit Flappy spil
     studio_og_title: Tjek min Spille-Lab-App
+    check_out_what_i_made: Check out what I made
     og_description: Jeg skrev selv koden med Code.org
     phone_number_not_allowed: Det ser ud som om der er et telefonnummer i det. Prøv
       at ændre teksten.
@@ -496,24 +495,35 @@
         kode undervisning!
     20hour:
       title: Intro kursus
-      body: Prøv vores 20-timers Introduktion til datalogi kursus.
+      body: Prøv vores 20-timers Introduktionskursus til programmering og datalogi.
+    hoc2014:
+      try_new_tutorial: Try our new Hour of Code tutorial in beta
+      try_frozen: Artist with Anna and Elsa, from Frozen
+    gallery:
+      title: Galleri
+      body: View a gallery of app and artist images created by our users
   gallery:
-    students_drew_these_with_code: Studerende tegnede disse med kode!
-    students_made_these_with_code: Studerende lavet disse med kode!
-    picture_count: Tidligere <b>%{days}</b> dage, studerende har tegnet <b>%{count}</b>
+    students_drew_these_with_code: Elever har tegnet disse med kode!
+    students_made_these_with_code: Elever har lavet disse med kode!
+    picture_count: I de seneste <b>%{days}</b> dage, har elever tegnet <b>%{count}</b>
       billeder ved at skrive deres egne computerprogrammer. Klik på billederne for
       at se hvert program i aktion.
-    activity_count: I de sidste <b>%{days}</b> dage, har studerende lavet <b>%{count}</b>
+    activity_count: I de seneste <b>%{days}</b> dage, har elever lavet <b>%{count}</b>
       apps og billeder ved at skrive deres egne computerprogrammer. Klik på billeder
       og skærmklip at se hvert program i aktion.
     want_to_make_your_own: Vil du lave dit eget?
     more: Mere &rarr;
     caption_by_name_age: af %{name}, alder %{age}
-    caption_time_ago: '%{time_ago} siden'
+    caption_time_ago: "%{time_ago} siden"
+    header: Galleri
+    header_playlab: Spille Lab
+    header_artist: Kunstner
   landing:
     prerelease: Dette kursus er i <span class='betatext'> beta</span>.  Dette betyder,
       at det ikke er den endelige version af kurset, og er undergivet revision som
       feedback modtages og forbedringer.
+    prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
+      is subject to revision as feedback is received and improvements are made.
     feedback: Giv feedback
     report_bug: Rapporter fejl
     support: Få hjælp
@@ -528,6 +538,8 @@
     wrong_body: Den løsning, du har angivet er ikke korrekte.  Prøv venligst igen!
     correct_title: Rigtigt
     correct_body: Det er det korrekte svar.
+  text_match:
+    placeholder: Skriv dit svar her
   dialog:
     ok: Ok
   time:
@@ -578,3 +590,8 @@
   zendesk_too_young_message: Beklager, yngre brugere kan ikke logge på til vores websted.
     Du kan gennemse <a href="http://support.code.org"> support.code.org</a> uden at
     logge på eller spørg dine forældre eller lærer til at kontakte os for dig.
+  progress:
+    not_completed: ikke afsluttet
+    completed_too_many_blocks: afsluttet, for mange blokke
+    completed_perfect: Afsluttet, perfekt
+    furthest_level_attempted: længst opnåede niveau
