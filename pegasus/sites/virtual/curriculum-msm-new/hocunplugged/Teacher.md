@@ -50,7 +50,7 @@ This brief lesson will help prepare students to program Anna and Elsa in the Hou
 ### For the Teacher
 - Teacher Lesson Guide
 - Print one or more sets of [Move It Commands](move_it_commands.pdf) for students
-- Print or display on overhead [Angles reference
+- Print or display on overhead [Angles reference](angles_reference.pdf)
 
 [/together]
 
@@ -72,19 +72,8 @@ This lesson has one new and important word:<br/>
 An algorithm that has been coded into something that can be run by a machine. 
 
 ### <a name="GetStarted"></a> 2) Let's Control Ourselves
-- Ask your students if they remember helping you draw a smiley face last time.
- - Review the instructions by drawing as they guide you one step at a time.
-<br/><br/>
-- Let them know that you're going to make a small change.
- - Now, I want you to give me two instructions at a time before I move my pen.
-<br/><br/>
-- Can you do it again, but give me three instructions at a time?
-<br/><br/>
-- When you give me multiple instructions at a time, you're providing me with an "algorithm" to draw each piece of the smiley face.
-<br/><br/>
-- Now, suppose we were to have a secret "code" for each of those instructions.  For example, "Draw an Eye" could look like this: (make a large circle with your hands). If we had special codes for each of those steps, then our algorithm would become a program.
-<br/><br/>
-- We're going to play a game that allows us to program each other...and you'll do it all with your arms!
+- Ask students if they've ever explained to someone else how to do something
+- Do you 
 
 [/together]
 
