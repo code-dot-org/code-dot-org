@@ -16,7 +16,7 @@ module ImageLib
     end
 
     background.gravity = Magick::CenterGravity
-    background.geometry = '154x154+0+20'
+    background.geometry = '154x154+0+0'
     drawing_on_background = background.composite_layers(foreground, Magick::OverCompositeOp)
     drawing_on_background.format = 'png'
     drawing_on_background

@@ -20,8 +20,15 @@ class LevelSourcesControllerTest < ActionController::TestCase
     assert_equal([], assigns(:callouts))
   end
 
-  test "generate image routing" do
-    assert_routing({method: "get", path: "/sh/1/generate_image"}, {controller: "level_sources", action: "generate_image", id: "1"})
+  test 'routing' do
+    assert_routing({ path: '/u/1', method: :get },
+                   { controller: 'level_sources', action: 'show', id: '1' })
+    assert_routing({ path: '/u/1/edit', method: :get },
+                   { controller: 'level_sources', action: 'edit', id: '1' })
+    assert_routing({ path: '/u/1/original_image', method: :get }, 
+                   {controller: 'level_sources', action: 'original_image', id: '1' })
+    assert_routing({ path: '/u/1/generate_image', method: :get },
+                   { controller: 'level_sources', action: 'generate_image', id: '1' })
   end
 
   test "generate image for artist" do
