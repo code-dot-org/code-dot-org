@@ -938,10 +938,9 @@ levels.playlab_8 = {
     '</next></block>' +
     '<block type="studio_repeatForever" deletable="false" x="20" y="550">' +
       '<statement name="DO">' +
-        blockOfType('studio_moveDistance', { SPRITE: 1, DIR: 2, DISTANCE: 400}) +
-        '<next>' +
-          blockOfType('studio_moveDistance', { SPRITE: 1, DIR: 8, DISTANCE: 400}) +
-        '</next>' +
+        blockUtils.blockWithNext('studio_moveDistance', { SPRITE: 1, DIR: 2, DISTANCE: 400},
+          blockOfType('studio_moveDistance', { SPRITE: 1, DIR: 8, DISTANCE: 400})
+        ) +
       '</statement>' +
     '</block>'
 };
