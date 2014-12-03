@@ -6,10 +6,10 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Awesome, can you draw each of these triangles with that new function? The first is 25 pixels long, the second is 50, and the third is 75. (If you're really clever, you could use a for loop for this!)",
+    "instructions": "Awesome, can you draw each of these triangles with that new function? The first is 25 pixels long, the second is 50, and the third is 75. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "ideal": "18",
+    "ideal": "16",
     "slider_speed": ".5",
     "disable_param_editing": "false",
     "disable_variable_editing": "false",
@@ -20,7 +20,8 @@
     "y": "250",
     "impressive": "false",
     "use_contract_editor": "false",
-    "embed": "false"
+    "embed": "false",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
@@ -153,8 +154,8 @@
           </block>
         </category>
         <category name="Math">
-          <block type="math_number_dropdown">
-            <title name="NUM" config="25,50,75,100">25</title>
+          <block type="math_number">
+            <title name="NUM">0</title>
           </block>
         </category>
         <category name="Variables" custom="VARIABLE">

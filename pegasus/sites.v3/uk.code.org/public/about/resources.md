@@ -122,7 +122,16 @@ Learn how to get started with Touch Develop. Includes tutorials and also links t
 
 [resources-item]
 
-<div class="resources-logo"><a href="http://www.codeacademy.com"><IMG src="/images/codeacademy.jpeg" /></a></div>
+<div class="resources-logo"><a href="http://www.greenfoot.org/door"><IMG src="/images/fit-120/greenfoot.jpg" /></a></div>
+
+<strong>Greenfoot</strong><br />
+Greenfoot is a free programming environment designed specifically for beginners.  It offers a simple way to get into Java programming, letting you make games and simulations quickly and easily.
+
+[/resources-item]
+
+[resources-item]
+
+<div class="resources-logo"><a href="http://www.codeacademy.com"><IMG src="/images/codeacademy.png" /></a></div>
 
 Give your students a way to learn real coding (ie. not blocks) using an interactive and fun resource. Codecademy has resources aimed at meeting the requirements of the new computing curriculum. Teachers can use the resources to upskill themselves. The resources have slides, Codecademy courses, and quizzes to provide an overall learning experience for the students. 
 
@@ -174,8 +183,7 @@ Access teaching material, training, local hubs, newsletters and get the opportun
 
 <div class="resources-logo"><a href="http://decoded.co/uk/codeED-in-a-day/"><IMG src="/images/decoded.jpeg" /></a></div>
 
-Attend CodeED: a one day immersive experience that will inspire educators of all subjects and ages, demonstrate the power of code and provide the essential tools to bring this into the classroom. 
-Usually £275+VAT but free for state funded schools (a limit of two teachers per school).
+Attend CodeED: a one day immersive experience that will inspire educators of all subjects and ages, demonstrate the power of code and provide the essential tools to bring this into the classroom. £275+VAT.
 
 [/resources-item]
 

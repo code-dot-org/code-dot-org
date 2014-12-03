@@ -1,7 +1,8 @@
 <%
   def canonical_hostname(domain)
     return "localhost.#{domain}" if rack_env?(:development)
-    return "#{node.name}.#{domain}" if ['console', 'hoc-levels'].include?(node.name)
+    return "console.#{domain}" if node.name == 'production-console'
+    return "#{node.name}.#{domain}" if ['hoc-levels'].include?(node.name)
     return domain if rack_env?(:production)
     "#{node.chef_environment}.#{domain}"
   end

@@ -218,7 +218,9 @@ Jigsaw.onPuzzleComplete = function() {
   // Note that we have not yet animated the succesful run
   var levelComplete = (Jigsaw.result == BlocklyApps.ResultType.SUCCESS);
 
-  Jigsaw.testResults = BlocklyApps.getTestResults(levelComplete, {allowTopBlocks: true});
+  Jigsaw.testResults = BlocklyApps.getTestResults(levelComplete, {
+    allowTopBlocks: true
+  });
 
   if (Jigsaw.testResults >= BlocklyApps.TestResults.FREE_PLAY) {
     BlocklyApps.playAudio('win');

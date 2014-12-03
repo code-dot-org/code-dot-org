@@ -1,15 +1,17 @@
 
 
-# How to attract media to your Hour of Code event
+[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
 
-## Some shocking statistics (USA):
+# 导语和可用数据
 
-  * There will be one million more computing jobs than students over the next 10 years (adding up to $500 billion in salaries).
-  * More than 50 percent of all projected math and science occupations are in computing occupations. 
-  * Computing occupations are among the highest-paying jobs for new graduates. Yet fewer than 3% of college students graduate with a degree in computer science.
-  * In 26 states, computer science classes don’t count toward math or science high school graduation requirements. 
-  * Less than 20% of AP Computer Science students are women. Less than 10% are black or Latino.
+## Use this short blurb in newsletters
+
+### 以编程一小时开启你学校的计算机科学
+
+计算机无处不在，但是和10前相比，教计算机科学的学校却更少了。 好消息是，我们正在着手改变现状。 如果你听说过去年的 [编程一小时](<%= hoc_uri('/') %>) ，就可能知道它创造了历史。 在一星期内，1500万的学生尝试过计算机科学！ [编程一小时](<%= hoc_uri('/') %>)就是介绍计算机科学一小时，旨在揭秘程序并表明它是任何人都可以学习的基础知识。 在十二月8-14日计算机科学教育周间[注册](<%= hoc_uri('/') %>)来组织编程一小时，争取在年末参与的学生达到1亿。 Add your school to the map, go to <http://hourofcode.com>
 
 ## Infographic version:
 
-![image](http://code.org/images/fit-8000/Code.org_infographic.png)
+![图片](http://code.org/images/fit-8000/Code.org_infographic.png)
+
+<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

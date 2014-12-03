@@ -140,6 +140,9 @@ Blockly.Xml.blockToDom_ = function(block, ignoreChildBlocks) {
   if (!block.isUserVisible()) {
     element.setAttribute('uservisible', false);
   }
+  if (/^procedures_def/.test(block.type) && block.userCreated) {
+    element.setAttribute('usercreated', true);
+  }
 
   // Don't follow connections if we're ignoring child blocks
   if (block.nextConnection && !ignoreChildBlocks) {
@@ -222,7 +225,8 @@ Blockly.Xml.textToDom = function(text) {
  * @param {!Element} xml XML DOM.
  */
 Blockly.Xml.domToBlockSpace = function(blockSpace, xml) {
-  var width = blockSpace.blockSpaceEditor.svgSize().width;
+  var metrics = blockSpace.getMetrics();
+  var width = metrics ? metrics.viewWidth : 0;
   for (var x = 0, xmlChild; xmlChild = xml.childNodes[x]; x++) {
     if (xmlChild.nodeName.toLowerCase() == 'block') {
       var block = Blockly.Xml.domToBlock_(blockSpace, xmlChild);
@@ -252,31 +256,35 @@ Blockly.Xml.domToBlock_ = function(blockSpace, xmlBlock) {
 
   var inline = xmlBlock.getAttribute('inline');
   if (inline) {
-    block.setInputsInline(inline == 'true');
+    block.setInputsInline(inline === 'true');
   }
   var collapsed = xmlBlock.getAttribute('collapsed');
   if (collapsed) {
-    block.setCollapsed(collapsed == 'true');
+    block.setCollapsed(collapsed === 'true');
   }
   var disabled = xmlBlock.getAttribute('disabled');
   if (disabled) {
-    block.setDisabled(disabled == 'true');
+    block.setDisabled(disabled === 'true');
   }
   var deletable = xmlBlock.getAttribute('deletable');
   if (deletable) {
-    block.setDeletable(deletable == 'true');
+    block.setDeletable(deletable === 'true');
   }
   var movable = xmlBlock.getAttribute('movable');
   if (movable) {
-    block.setMovable(movable == 'true');
+    block.setMovable(movable === 'true');
   }
   var editable = xmlBlock.getAttribute('editable');
   if (editable) {
-    block.setEditable(editable == 'true');
+    block.setEditable(editable === 'true');
   }
   var userVisible = xmlBlock.getAttribute('uservisible');
   if (userVisible) {
-    block.setUserVisible(userVisible == 'true');
+    block.setUserVisible(userVisible === 'true');
+  }
+  var userCreated = xmlBlock.getAttribute('usercreated');
+  if (userCreated) {
+    block.userCreated = (userCreated === 'true');
   }
 
   var blockChild = null;

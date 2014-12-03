@@ -6,7 +6,6 @@ class LevelSourcesController < ApplicationController
   check_authorization
   skip_authorize_resource only: [:edit, :generate_image, :original_image] # edit is more like show
 
-
   before_action :set_level_source
 
   def show
@@ -47,6 +46,7 @@ class LevelSourcesController < ApplicationController
   def generate_image
     authorize! :read, @level_source
 
+    expires_in 10.hours, :public => true # cache
     if @game.app == Game::ARTIST then
       framed_image(@level.skin)
     else
@@ -70,6 +70,7 @@ class LevelSourcesController < ApplicationController
   def original_image
     authorize! :read, @level_source
 
+    expires_in 10.hours, :public => true # cache
     send_data @level_source.level_source_image.image, :stream => 'false', :type => 'image/png', :disposition => 'inline'
   end
 

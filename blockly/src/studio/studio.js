@@ -155,10 +155,15 @@ function loadLevel() {
   Studio.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Studio.minWorkspaceHeight = level.minWorkspaceHeight;
   Studio.softButtons_ = level.softButtons || {};
-  Studio.protagonistSpriteIndex = level.protaganistSpriteIndex;  // SIC
+  // protagonistSpriteIndex was originally mispelled. accept either spelling.
+  Studio.protagonistSpriteIndex = level.protagonistSpriteIndex || level.protaganistSpriteIndex;
 
-  Studio.startAvatars = reorderedStartAvatars(skin.avatarList,
-    level.firstSpriteIndex);
+  if (level.avatarList) {
+    Studio.startAvatars = level.avatarList.slice();
+  } else {
+    Studio.startAvatars = reorderedStartAvatars(skin.avatarList,
+      level.firstSpriteIndex);
+  }
 
   // Override scalars.
   for (var key in level.scale) {
@@ -263,13 +268,21 @@ var drawMap = function () {
   if (Studio.spriteGoals_) {
     for (i = 0; i < Studio.spriteGoals_.length; i++) {
       // Add finish markers.
+      var finishClipPath = document.createElementNS(SVG_NS, 'clipPath');
+      finishClipPath.setAttribute('id', 'finishClipPath' + i);
+      var finishClipRect = document.createElementNS(SVG_NS, 'rect');
+      finishClipRect.setAttribute('id', 'finishClipRect' + i);
+      finishClipRect.setAttribute('width', Studio.MARKER_WIDTH);
+      finishClipRect.setAttribute('height', Studio.MARKER_HEIGHT);
+      finishClipPath.appendChild(finishClipRect);
+      svg.appendChild(finishClipPath);
+
       var spriteFinishMarker = document.createElementNS(SVG_NS, 'image');
       spriteFinishMarker.setAttribute('id', 'spriteFinish' + i);
-      spriteFinishMarker.setAttributeNS('http://www.w3.org/1999/xlink',
-                                        'xlink:href',
-                                        skin.goal);
       spriteFinishMarker.setAttribute('height', Studio.MARKER_HEIGHT);
-      spriteFinishMarker.setAttribute('width', Studio.MARKER_WIDTH);
+      spriteFinishMarker.setAttribute('width', (level.goalOverride &&
+        level.goalOverride.imageWidth) || Studio.MARKER_WIDTH);
+      spriteFinishMarker.setAttribute('clip-path', 'url(#finishClipPath' + i + ')');
       svg.appendChild(spriteFinishMarker);
     }
   }
@@ -1176,7 +1189,7 @@ BlocklyApps.reset = function(first) {
   if (level.coordinateGridBackground) {
     Studio.setBackground({value: 'grid'});
   } else {
-    Studio.setBackground({value: skin.defaultBackground});
+    Studio.setBackground({value: level.background || skin.defaultBackground});
   }
 
   // Reset currentCmdQueue and various counts:
@@ -1228,6 +1241,10 @@ BlocklyApps.reset = function(first) {
 
   var svg = document.getElementById('svgStudio');
 
+  var goalAsset = skin.goal;
+  if (level.goalOverride && level.goalOverride.goal) {
+    goalAsset = skin[level.goalOverride.goal];
+  }
   for (i = 0; i < Studio.spriteGoals_.length; i++) {
     // Mark each finish as incomplete.
     Studio.spriteGoals_[i].finished = false;
@@ -1236,10 +1253,11 @@ BlocklyApps.reset = function(first) {
     var spriteFinishIcon = document.getElementById('spriteFinish' + i);
     spriteFinishIcon.setAttribute('x', Studio.spriteGoals_[i].x);
     spriteFinishIcon.setAttribute('y', Studio.spriteGoals_[i].y);
-    spriteFinishIcon.setAttributeNS(
-        'http://www.w3.org/1999/xlink',
-        'xlink:href',
-        skin.goal);
+    spriteFinishIcon.setAttributeNS('http://www.w3.org/1999/xlink',
+      'xlink:href', goalAsset);
+    var finishClipRect = document.getElementById('finishClipRect' + i);
+    finishClipRect.setAttribute('x', Studio.spriteGoals_[i].x);
+    finishClipRect.setAttribute('y', Studio.spriteGoals_[i].y);
   }
 };
 
@@ -1446,6 +1464,7 @@ Studio.execute = function() {
   var handlers = [];
   if (BlocklyApps.usingBlockly) {
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
+    registerHandlers(handlers, 'functional_start_setValue', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackground', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setSpeeds', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackgroundAndSpeeds',
@@ -1654,7 +1673,7 @@ function spriteTotalFrames (index) {
 }
 
 var updateSpeechBubblePath = function (element) {
-  var height = element.getAttribute('height');
+  var height = +element.getAttribute('height');
   var onTop = 'true' === element.getAttribute('onTop');
   var onRight = 'true' === element.getAttribute('onRight');
   element.setAttribute('d',
@@ -2523,7 +2542,33 @@ Studio.attachEventHandler = function (opts) {
   registerEventHandler(Studio.eventHandlers, opts.eventName, opts.func);
 };
 
+/**
+ * Return true if all of the blocks underneath when_run blocks have had their
+ * commands executed
+ */
+Studio.allWhenRunBlocksComplete = function () {
+  for (var i = 0; i < Studio.eventHandlers.length; i++) {
+    if (Studio.eventHandlers[i].name === 'whenGameStarts' &&
+        Studio.eventHandlers[i].cmdQueue.length !== 0) {
+      return false;
+    }
+  }
+  return true;
+};
+
 Studio.timedOut = function() {
+  // If the only event block that had children is when_run, and those commands
+  // are finished executing, don't wait for the timeout.
+  // If we have additional event blocks that DO have children, we don't timeout
+  // until timeoutFailureTick
+  if (level.timeoutAfterWhenRun) {
+    if (Studio.eventHandlers.length === 0 || (Studio.eventHandlers.length === 1 &&
+        Studio.eventHandlers[0].name === 'whenGameStarts' &&
+        Studio.allWhenRunBlocksComplete())) {
+    return true;
+    }
+  }
+
   return Studio.tickCount > Studio.timeoutFailureTick;
 };
 
@@ -2557,8 +2602,13 @@ Studio.allGoalsVisited = function() {
   var protagonistSprite = Studio.sprite[Studio.protagonistSpriteIndex];
   var finishedGoals = 0;
 
-  // can't visit all goals if we don't have any
+  // Can't visit all goals if we don't have any
   if (Studio.spriteGoals_.length === 0) {
+    return false;
+  }
+
+  // Can't visit all the goals if the specified sprite doesn't exist
+  if (Studio.protagonistSpriteIndex && !protagonistSprite) {
     return false;
   }
 
@@ -2588,9 +2638,13 @@ Studio.allGoalsVisited = function() {
       }
 
       // Change the finish icon to goalSuccess.
+      var successAsset = skin.goalSuccess;
+      if (level.goalOverride && level.goalOverride.success) {
+        successAsset = skin[level.goalOverride.success];
+      }
       var spriteFinishIcon = document.getElementById('spriteFinish' + i);
       spriteFinishIcon.setAttributeNS('http://www.w3.org/1999/xlink',
-        'xlink:href', skin.goalSuccess);
+        'xlink:href', successAsset);
     }
   }
 

@@ -547,6 +547,21 @@ $aniGifPreviewHeight: 60px;
   }
 }
 
+#headers[dir=rtl] {
+  div {
+    margin-right: 0;
+    margin-left: -4px;
+  }
+  #toolbox-header {
+    border-right: 0;
+    border-left: 1px solid gray;
+  }
+  #show-code-header {
+    border-left: 0;
+    border-right: 1px solid gray;
+  }
+}
+
 #rotateContainer {
   position: fixed;
   z-index: 10001;
@@ -815,9 +830,10 @@ $modal-image-margin-gap: 10px;
 #save-to-gallery-button {
   background-color: $purple;
   border: 1px solid $purple;
+  margin: 0px;
   color: white;
-  width: 46%;
-  font-size: 14px;
+  width: 48.5%;
+  font-size: 13px;
   text-align: center;
   &:disabled {
     color: $purple;
@@ -829,9 +845,9 @@ $modal-image-margin-gap: 10px;
   background-color: $purple;
   border: 1px solid $purple;
   color: white;
-  margin-right: 0px;
-  width: 46%;
-  font-size: 15px;
+  margin: 0px;
+  width: 48.5%;
+  font-size: 13px;
   text-align: center;
 }
 
@@ -898,7 +914,10 @@ $modal-image-margin-gap: 10px;
   }
 
   .saved-to-gallery {
-    color: $purple;
+    width: 48.5%;
+    font-size: 13px;
+    margin: 0px;
+    border: 1px solid $purple;
   }
   .social-buttons {
     a:hover {

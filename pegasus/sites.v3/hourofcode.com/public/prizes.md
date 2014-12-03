@@ -5,9 +5,6 @@ layout: wide
 ---
 <div class="row">
     <h1 class="col-sm-9">Prizes for every organizer</h1>
-    <div class="col-sm-3 button-container centered">
-        <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Sign up for a chance to win</button></a>
-    </div>
 </div>
 
 <% if @country ==  'us' %>
@@ -20,15 +17,10 @@ Code.org will select one lucky classroom to attend a very special Hour of Code e
 <% if @country == 'us' %>
 
 <h2 id="hardware_prize" style="font-size: 18px">51 schools win a class-set of laptops (or $10,000 for other technology)</h2>
-One lucky school in ***every*** U.S. state (+ Washington D.C.) will win $10,000 worth of technology. Organize the Hour of Code for every student in your school to qualify. **The submission period has ended. Winners will be announced soon.**
+One lucky school in ***every*** U.S. state (+ Washington D.C.) won $10,000 worth of technology. [**See all 51 winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners)
 
 <% end %>
 
-<% if @country == 'us' %>
-
-### What are your odds of winning?
-<a href="/events">See a list of all schools</a> signed up for the Hour of Code in your state. One public K-12 school in every U.S. state will win a class-set of laptops.
-<% end %>
 
 <% if @country == 'uk' %>
 
@@ -41,9 +33,31 @@ One lucky school in ***every*** U.S. state (+ Washington D.C.) will win $10,000 
 
 <h2 id="video_chat">100 classrooms win a video chat with a guest speaker!</h2>
 
-100 lucky classrooms will be invited to participate in live video Q&As with tech titans and tech-loving celebrities. Students will be able to ask questions and chat with these exciting role models to kick off your Hour of Code.
+100 lucky classrooms are invited to participate in live video Q&As with tech titans and tech-loving celebrities. Students will be able to ask questions and chat with these exciting role models to kick off your Hour of Code.
 
-Any classroom (public or private) within the U.S. or Canada is eligible to win this prize. Your whole school does not need to apply. **The submission period has ended. Winners will be announced soon.**
+### Tune into the live chats, or watch the video archives:
+
+**TUESDAY**, December 9 <br />
+10:00 AM PST - [Lyndsey Scott](http://www.youtube.com/watch?v=oyNQciBMXzQ) <br />
+12:00 PM PST - [Jack Dorsey](http://www.youtube.com/watch?v=o4mPg5pmyj4) <br />
+3:00 PM PST - [Ashton Kutcher](http://www.youtube.com/watch?v=0cVjD0wiOmo) <br />
+
+**WEDNESDAY**, December 10 <br />
+7:30 AM PST - [Cory Booker](http://www.youtube.com/watch?v=jrC_lzucwBI) <br />
+10:00 AM PST - [JR Hildebrand](http://www.youtube.com/watch?v=CKaaIFx90qA) <br />
+11:00 AM PST - [Clara Shih](http://www.youtube.com/watch?v=Sww3-rJ27BU) <br />
+12:00 PM PST - [Jessica Alba](http://www.youtube.com/watch?v=IFL3WN0F_Gg) <br />
+
+**THURSDAY**, December 11 <br />
+5:30 AM PST - Karlie Kloss <br />
+9 AM PST - [David Karp](http://www.youtube.com/watch?v=dOWWtqiZzJo) <br />
+10 AM PST - [Jess Lee](http://www.youtube.com/watch?v=W04XKIk73QQ) <br />
+11 AM PST - Usher <br />
+
+**FRIDAY**, December 12 <br />
+10:00 AM PST - [Hadi Partovi](http://www.youtube.com/watch?v=eJ40qOodafo)
+
+\*Recordings of Bill Gates and Sheryl Sandberg chats will be available on [our YouTube channel](https://www.youtube.com/user/CodeOrg/)
 
 ### This year's celebrity video chat  participants:
 <%= view :video_chat_speakers %>
@@ -77,7 +91,7 @@ Are you a teacher who wants to introduce computer programming to your students a
 
 <% end %>
 
-<h2 id="more_questions">More questions about prizes?</h1>
+<h2 id="more_questions">More questions about prizes?</h2>
 
 Check out <a href="<%= hoc_uri('/prizes-terms') %>">Terms and Conditions</a> or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
 
@@ -126,7 +140,6 @@ To qualify, your entire school must register for the Hour of Code as well as com
 
 ## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 8-14), can I still qualify for prizes?
 Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 14th.
-<a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up for a chance to win</button></a>
 <% end %>
 
 

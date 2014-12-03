@@ -21,7 +21,6 @@ end
 
 require src_dir 'database'
 require src_dir 'forms'
-require src_dir 'poste/api'
 require src_dir 'router'
 
 def http_vary_add_type(vary,type)
@@ -85,8 +84,6 @@ class Documents < Sinatra::Base
         config.ignore << 'Sinatra::NotFound'
       end
     end
-
-    Poste::Message.import_templates
 
     vary_uris = ['/', '/learn', '/learn/beyond', '/congrats', '/language_test', 
                  '/teacher-dashboard', 
@@ -153,30 +150,90 @@ class Documents < Sinatra::Base
   end
 
   # Manipulated images
-  get %r{^\/images\/(fit-|fill-)?(\d+)x?(\d*)(\/.*)$} do |mode, width, height, uri|
-    mode    = mode.nil?     ? :resize : mode[0..-2].to_sym
-    width   = width.to_i
-    height  = height.empty? ? nil     : height.to_i
+  get "/images/*" do |path|
+    path = File.join('/images', path)
 
-    extname = File.extname(uri).downcase
-    format = extname[1..-1]
+    extname = File.extname(path).downcase
     pass unless settings.image_extnames.include?(extname)
-    basename = File.basename(uri, extname)
-    dirname = File.dirname(uri)
-    if basename[-3..-1] == '_x2'
-      basename = basename[0..-4]
-      width *= 2
-      height *= 2 unless height.nil?
+
+    basename = File.basename(path, extname)
+    dirname = File.dirname(path)
+
+    # A
+    if dirname =~ /\/(fit-|fill-)?(\d+)x?(\d*)$/ || dirname =~ /\/(fit-|fill-)?(\d*)x(\d+)$/
+      manipulation = File.basename(dirname)
+      dirname = File.dirname(dirname)
+    end
+    
+    # Assume we are returning the same resolution as we're reading.
+    retina_in = retina_out = basename[-3..-1] == '@2x'
+
+    path = resolve_image File.join(dirname, basename)
+    unless path
+      # Didn't find a match at this resolution, look for a match at the other resolution.
+      if retina_out
+        basename = basename[0...-3]
+        retina_in = false
+      else
+        basename += '@2x'
+        retina_in = true
+      end
+      path = resolve_image File.join(dirname, basename)
+    end
+    pass unless path # No match at any resolution.
+    
+    if ((retina_in == retina_out) || retina_out) && !manipulation && File.extname(path) == extname
+      # No [useful] modifications to make, return the original.
+      send_file(path)
+    else
+      image = Magick::Image.read(path).first
+      
+      mode = :resize
+
+      if manipulation
+        matches = manipulation.match /(?<mode>fit-|fill-)?(?<width>\d*)x?(?<height>\d*)$/m
+        mode = matches[:mode][0...-1].to_sym unless matches[:mode].blank?
+        width = matches[:width].to_i unless matches[:width].blank?
+        height = matches[:height].to_i unless matches[:height].blank?
+
+        if retina_out
+          # Manipulated images always specify non-retina sizes in the manipulation string.
+          width *= 2 if width
+          height *= 2 if height
+        end
+      else
+        width = image.columns
+        height = image.rows
+        
+        # Retina sources need to be downsampled for non-retina output
+        if retina_in && !retina_out
+          width /= 2
+          height /= 2
+        end
+      end
     end
 
-    pass unless path = resolve_image("/images/#{dirname}/#{basename}")
+    case mode
+    when :fill
+      # If only one dimension provided, assume a square
+      width ||= height
+      image = image.resize_to_fill(width, height)
+    when :fit
+      image = image.resize_to_fit(width, height)
+    when :resize
+      # If only one dimension provided, assume a square
+      height ||= width
+      width ||= height
+      image = image.resize(width, height)
+    else
+      raise StandardError, 'Unreachable code reached!'
+    end
 
-    content_type format.to_sym
+    image.format = extname[1..-1]
+
+    content_type image.format.to_sym
     cache_control :public, :must_revalidate, max_age:settings.image_max_age
-
-    img = load_manipulated_image(path, mode, width, height)
-    img.format = format
-    img.to_blob
+    image.to_blob
   end
 
   # Map /dashboardapi/ to the local dashboard instance.

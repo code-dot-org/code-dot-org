@@ -246,6 +246,7 @@ Blockly.Blocks.procedures_defnoreturn = {
       options.push(option);
     }
   },
+  userCreated: false,
   callType_: 'procedures_callnoreturn'
 };
 
@@ -293,6 +294,7 @@ Blockly.Blocks.procedures_defreturn = {
   getVars: Blockly.Blocks.procedures_defnoreturn.getVars,
   renameVar: Blockly.Blocks.procedures_defnoreturn.renameVar,
   customContextMenu: Blockly.Blocks.procedures_defnoreturn.customContextMenu,
+  userCreated: Blockly.Blocks.procedures_defnoreturn.userCreated,
   callType_: 'procedures_callreturn'
 };
 
