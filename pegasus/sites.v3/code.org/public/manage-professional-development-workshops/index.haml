@@ -76,6 +76,12 @@ angular: professionalDevelopmentWorkshop
         }
       };
 
+      Workshop.prototype.firstDate = function() {
+        if (this.dates && this.dates[0] && this.dates[0].date_s) {
+          return new Date(this.dates[0].date_s);
+        }
+      };
+
       Workshop.prototype.state = function() {
         if (this.$resolved === false || !this.secret) {
           // not yet loaded or is a brand new workshop

@@ -38,9 +38,40 @@ template "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/config
   })
 end
 
+link "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/public/blockly" do
+  to "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/public/blockly-package"
+  action :create
+  user node[:current_user]
+  group node[:current_user]
+end
+
 execute "bundle-install-dashboard" do
   command "sudo bundle install"
   cwd "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard"
+  user node[:current_user]
+  group node[:current_user]
+  action :nothing
+  notifies :run, "execute[#{node['cdo-apps']['local_mysql'] ? 'create-dashboard-db' : 'build-dashboard'}]", :immediately
+end
+
+execute "create-dashboard-db" do
+  command "rake db:create"
+  cwd "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard"
+  environment ({
+    'LC_ALL'=>nil,
+  })
+  user node[:current_user]
+  group node[:current_user]
+  action :nothing
+  notifies :run, 'execute[load-dashboard-schema]', :immediately
+end
+
+execute "load-dashboard-schema" do
+  command "rake db:schema:load"
+  cwd "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard"
+  environment ({
+    'LC_ALL'=>nil,
+  })
   user node[:current_user]
   group node[:current_user]
   action :nothing
@@ -60,13 +91,4 @@ end
 
 service 'dashboard' do
   action [:enable, :start]
-end
-
-cron 'upload-dashboard-logs-to-s3' do
-  action :create
-  minute '0'
-  hour '1'
-  user node[:current_user]
-  home "/home/#{node[:current_user]}"
-  command "/home/#{node[:current_user]}/#{node.chef_environment}/aws/cronjob \"/home/#{node[:current_user]}/#{node.chef_environment}/bin/upload-logs-to-s3 dashboard\""
 end

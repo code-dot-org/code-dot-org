@@ -43,6 +43,7 @@
   "numBlocksNeeded": "Tillykke! Du fuldførte puslespillet {puzzleNumber}. (Men du kunne have brugt kun {numBlocks, plural, one {1 blok} other {# blokke}}.)",
   "numLinesOfCodeWritten": "Du har lige skrevet {numLines, plural, one {1 linje} other {# linjer}} kode!",
   "play": "afspil",
+  "print": "Print",
   "puzzleTitle": "Puslespil {puzzle_number} af {stage_total}",
   "repeat": "gentag",
   "resetProgram": "Nulstil",
@@ -80,5 +81,6 @@
   "tryHOC": "Prøv en time af kodeing",
   "signup": "Tilmeld til Introduktion kursus",
   "hintHeader": "Her er et tip:",
-  "genericFeedback": "Se hvordan du endte, og prøve at rette dit program."
+  "genericFeedback": "Se hvordan du endte, og prøve at rette dit program.",
+  "defaultTwitterText": "Check out what I made"
 }

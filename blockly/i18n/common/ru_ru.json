@@ -43,6 +43,7 @@
   "numBlocksNeeded": "Поздравляю! Ты завершил головоломку {puzzleNumber}. (Однако, можно было обойтись всего  {numBlocks, plural, one {1 блоком} other {# блоками}}.)",
   "numLinesOfCodeWritten": "Ты только что написал {numLines, plural, one  {1 строку} other {# строки}} кода!",
   "play": "играть",
+  "print": "Print",
   "puzzleTitle": "Головоломка {puzzle_number} из {stage_total}",
   "repeat": "повторить",
   "resetProgram": "Сбросить",
@@ -80,5 +81,6 @@
   "tryHOC": "Попробуйте Час кода",
   "signup": "Зарегистрируйтесь на вводный курс",
   "hintHeader": "Подсказка:",
-  "genericFeedback": "Посмотреть, как вы выполнили, и попытаться исправить вашу программу."
+  "genericFeedback": "Посмотреть, как вы выполнили, и попытаться исправить вашу программу.",
+  "defaultTwitterText": "Check out what I made"
 }

@@ -1,20 +1,9 @@
 #!/usr/bin/env ruby
 require_relative '../deployment'
-require 'cdo/aws/s3'
-
-def upload_log(application, logfile, options={})
-  AWS::S3::connect!
-  path = "hosts/#{CDO.name}/#{application}/#{File.basename(logfile)}"
-  return if AWS::S3::S3Object.exists? path, 'cdo-logs'
-  AWS::S3::S3Object.store(path, open(logfile), 'cdo-logs', options)
-end
 
 def upload_logs(application)
   raise 'Unknown application.' unless ['dashboard', 'pegasus'].include? application
-
-  Dir.glob(deploy_dir(application, 'log', '*.gz')).each do |log|
-    upload_log application, log
-  end
+  system "aws s3 sync #{deploy_dir(application, 'log')} s3://cdo-logs/hosts/#{CDO.name}/#{application} --exclude .gitignore 2>&1 > #{deploy_dir(application, 'log', 'uploads-logs-to-s3.log')}"
 end
 
 def main

@@ -38,23 +38,28 @@ theme: none
           %p
             %a.btn.btn-default{"ng-click" => "start_workshop()", 'ng-confirm-click' => 'Are you sure you want to start your workshop?'} Start Event
         .start-stop{'ng-show' => 'workshop.state() == "started"'}
-          %p
-            Please ask teachers at the workshop to:
+          %p Please ask teachers at the workshop to join your workshop section by doing the following:
+          %p If they already have a teacher account:
+          %ol
+            %li
+              Make sure they're logged into their account first and then have them type this URL (
+              %a{"ng-href" => "http://#{canonical_hostname('studio.code.org')}/join/{{section.code}}", target: "_blank"}> http://#{canonical_hostname('studio.code.org')}/join/{{section.code}}
+              ) into their browser. Once they hit enter, they'll have joined the workshop section.
+          %p If they don't have a teacher account yet:
           %ol
             %li
               Create a teacher account at
-              %a{href: "http://#{canonical_hostname('studio.code.org')}"}
-                http://#{canonical_hostname('studio.code.org')}
+              %a{:href => "http://#{canonical_hostname('studio.code.org')}", :target => "_blank"} http://studio.code.org
             %li
-              Join your section using this URL:
-              %a{"ng-href" => "http://#{canonical_hostname('studio.code.org')}/join/{{section.code}}", target: "_blank"}
-                http://#{canonical_hostname('studio.code.org')}/join/{{section.code}}
+              Make sure they're logged into their account first and then have them type this URL (
+              %a{"ng-href" => "http://#{canonical_hostname('studio.code.org')}/join/{{section.code}}", target: "_blank"}> http://#{canonical_hostname('studio.code.org')}/join/{{section.code}}
+              ) into their browser. Once they hit enter, they'll have joined the workshop section.
           %p
             You can
             %a{"ng-href" => "/teacher-dashboard#/sections/{{section.id}}/manage", target: '_blank'}
               view this section in your Teacher Dashboard
             to make sure everyone has joined.
-          %p 
+          %p
             After your workshop is done, click the End Event button below to close the workshop.
           %p
             %a.btn.btn-default{"ng-click" => "stop_workshop()", 'ng-confirm-click' => 'Are you sure you want to end your workshop?'} End Event
@@ -81,9 +86,15 @@ theme: none
       .panel-heading Workshop type
       .panel-body {{ workshop.type_s }}
   .col-sm-7
-    .panel.panel-default
-      .panel-heading Notes
-      .panel-body {{ workshop.notes_s }}
+    .row
+      .panel.panel-default
+        .panel-heading Notes
+        .panel-body {{ workshop.notes_s }}
+      .panel.panel-default
+        .panel-heading Signup URL
+        .panel-body
+          %a{href: "http://#{CDO.canonical_hostname('code.org')}/professional-development-workshops/{{ workshop.id }}"}
+            http://#{CDO.canonical_hostname('code.org')}/professional-development-workshops/{{ workshop.id }}
 %div
   %a.btn.btn-default{"ng-href" => "#/{{workshop.secret}}/edit"} Edit
   %a#btn-cancel.btn.btn-link{"ng-click" => "cancel_workshop()"} Cancel
@@ -93,11 +104,11 @@ theme: none
   %h2 Signups
   %table{style: "width:970px; table-layout:fixed;"}
     %colgroup
-      %col{style: 'width: 250px;'}/
+      %col{style: 'width: 170px;'}/
+      %col{style: 'width: 310px;'}/
       %col{style: 'width: 200px;'}/
-      %col{style: 'width: 150px;'}/
-      %col{style: 'width: 150px;'}/
-      %col{style: 'width: 220px;'}/
+      %col{style: 'width: 200px;'}/
+      %col{style: 'width: 90px;'}/
     %tr
       %th.manage-th
         Name

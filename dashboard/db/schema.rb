@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141119223233) do
+ActiveRecord::Schema.define(version: 20141124180534) do
 
   create_table "activities", force: true do |t|
     t.integer  "user_id"
@@ -143,10 +143,11 @@ ActiveRecord::Schema.define(version: 20141119223233) do
 
   create_table "level_sources", force: true do |t|
     t.integer  "level_id"
-    t.string   "md5",        limit: 32,    null: false
-    t.string   "data",       limit: 20000, null: false
+    t.string   "md5",        limit: 32,                    null: false
+    t.string   "data",       limit: 20000,                 null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "hidden",                   default: false
   end
 
   add_index "level_sources", ["level_id", "md5"], name: "index_level_sources_on_level_id_and_md5", using: :btree
@@ -288,13 +289,14 @@ ActiveRecord::Schema.define(version: 20141119223233) do
   add_index "trophies", ["name"], name: "index_trophies_on_name", unique: true, using: :btree
 
   create_table "user_levels", force: true do |t|
-    t.integer  "user_id",                 null: false
-    t.integer  "level_id",                null: false
-    t.integer  "attempts",    default: 0, null: false
+    t.integer  "user_id",                     null: false
+    t.integer  "level_id",                    null: false
+    t.integer  "attempts",        default: 0, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "best_result"
     t.integer  "script_id"
+    t.integer  "level_source_id"
   end
 
   add_index "user_levels", ["user_id", "level_id", "script_id"], name: "index_user_levels_on_user_id_and_level_id_and_script_id", unique: true, using: :btree

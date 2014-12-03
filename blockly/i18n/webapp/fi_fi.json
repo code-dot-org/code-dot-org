@@ -22,6 +22,9 @@
   "repeatForeverTooltip": "Suorita toimet tässä lohkossa toistuvasti sovelluksen ollessa käynnissä.",
   "shareWebappTwitter": "Katso tekemäni sovellus. Tein sen itse @codeorg:ssa",
   "shareGame": "Jaa sovellus:",
+  "stepIn": "Step in",
+  "stepOver": "Step over",
+  "stepOut": "Step out",
   "turnBlack": "muuttuu mustaksi",
   "turnBlackTooltip": "Muuttaa näytön mustaksi.",
   "yes": "Kyllä"

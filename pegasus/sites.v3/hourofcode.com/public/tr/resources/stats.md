@@ -1,15 +1,17 @@
 
 
-# Kod Saati etkinliğinize basının ilgisini nasıl çekersiniz
+[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
 
-## Bazı şok edici istatistikler (A.b.d.):
+# Blurbs and Useful Stats
 
-  * Gelecek 10 yıl içinde öğrenci sayısından 1 milyon daha fazla bilgisayar işi olacak (ilave 500 milyar $ maaş).
-  * Metamatik ve bilim mesleklerinin %50 sinden fazlası bilgi işlem personeli olarak öngörülmekte. 
-  * Yeni mezunlar için bilgi işlem meslekleri en yüksek ödemeler arasındadır. Ancak üniversite öğrencilerinin % 3'den azı bilgisayar bilimi dalından mezun olmak.
-  * 26 eyalette (A.B.D.) bilgisayar bilimi dersleri, Matematik veya Fen Lisesi mezuniyet şartları arasında **sayılmamakta**. 
-  * Bilgisayar bilimi öğrencilerinin %20 sinden daha azı bayandır. %10 dan azı da siyah veya Latindir.
+## Use this short blurb in newsletters
 
-## Grafiksel gösterim:
+### Bring computer science to your school. Start with an Hour of Code
+
+Bilgisayarlar her yerde, ancak artık 10 yıl öncesine kıyasla daha az okul bilgisayar bilimini öğretiyor. Good news is, we’re on our way to change this. If you heard about the [Hour of Code](<%= hoc_uri('/') %>) last year, you might know it made history. In one week, 15 million students tried computer science! The [Hour of Code](<%= hoc_uri('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= hoc_uri('/') %>) to host an Hour of Code this December 8-14 during Computer Science Education Week and help reach 100 million students by the end of the year. Add your school to the map, go to <http://hourofcode.com>
+
+## Infographic version:
 
 ![görüntü](http://code.org/images/fit-8000/Code.org_infographic.png)
+
+<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

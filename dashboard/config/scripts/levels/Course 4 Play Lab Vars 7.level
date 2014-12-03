@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "Nice, now let's make sure this game isn't too easy - any time you (the Dog) get hit by a fireball, you should lose a point. Let's also start with 10 points so it's not too hard. Let your score drop down from 10 to 0 to pass the level.",
+    "instructions": "Nice, now let's make sure this game isn't too easy - any time the Dog (actor 1) gets hit by a fireball, you should lose a point. Start with 10 points so it's not too hard. Let your score drop down from 10 to 0 to pass the level.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -28,6 +28,7 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
+    "embed": "false",
     "maze_data": null
   }
 }]]></config>

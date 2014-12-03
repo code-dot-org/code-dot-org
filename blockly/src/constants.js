@@ -25,13 +25,18 @@ exports.TestResults = {
 
   // The level was not solved.
   EMPTY_BLOCK_FAIL: 1,           // An "if" or "repeat" block was empty.
-  EMPTY_FUNCTION_BLOCK_FAIL: 12, // A "function" block was empty
   TOO_FEW_BLOCKS_FAIL: 2,        // Fewer than the ideal number of blocks used.
   LEVEL_INCOMPLETE_FAIL: 3,      // Default failure to complete a level.
   MISSING_BLOCK_UNFINISHED: 4,   // A required block was not used.
   EXTRA_TOP_BLOCKS_FAIL: 5,      // There was more than one top-level block.
   MISSING_BLOCK_FINISHED: 10,    // The level was solved without required block.
   APP_SPECIFIC_FAIL: 11,         // Application-specific failure.
+  EMPTY_FUNCTION_BLOCK_FAIL: 12, // A "function" block was empty
+  UNUSED_PARAM: 13,              // Param declared but not used in function.
+  UNUSED_FUNCTION: 14,           // Function declared but not used in workspace.
+  PARAM_INPUT_UNATTACHED: 15,    // Function not called with enough params.
+  INCOMPLETE_BLOCK_IN_FUNCTION: 16, // Incomplete block inside a function.
+  QUESTION_MARKS_IN_NUMBER_FIELD: 17, // Block has ??? instead of a value.
 
   // The level was solved in a non-optimal way.  User may advance or retry.
   TOO_MANY_BLOCKS_FAIL: 20,   // More than the ideal number of blocks were used.

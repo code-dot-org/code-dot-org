@@ -78,6 +78,12 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   this.userVisible_ = true;
   this.collapsed_ = false;
   this.dragging_ = false;
+  /** 
+   * The label which can be clicked to edit this block. This field is
+   * currently set only for functional_call blocks.
+   * @type {Blockly.FieldIcon}
+   */
+  this.editLabel_ = null;
 
   /**
    * @type {!Blockly.BlockSpace}
@@ -480,8 +486,10 @@ Blockly.Block.prototype.getHeightWidth = function() {
       bBox.height += 4;
     }
   }
-  // Subtract one from the height due to the shadow.
-  bBox.height -= 1;
+  if (bBox.height > 0) {
+    // Subtract one from the height due to the shadow.
+    bBox.height -= 1;
+  }
   return bBox;
 };
 
@@ -1239,6 +1247,9 @@ Blockly.Block.prototype.setEditable = function(editable) {
   var icons = this.getIcons();
   for (var x = 0; x < icons.length; x++) {
     icons[x].updateEditable();
+  }
+  if (this.editLabel_) {
+    this.editLabel_.setVisible(editable);
   }
 };
 

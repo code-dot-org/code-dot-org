@@ -6,17 +6,22 @@
 <% } %>
 
 <div class="sharing">
-<% if (options.alreadySaved) { %>
-  <div class="saved-to-gallery">
-    <%= msg.savedToGallery() %>
-  </div>
-<% } else if (options.saveToGalleryUrl) { %>
   <div class="social-buttons">
+  <% if (!options.onMainPage) { %>
+    <button id="print-button">
+      <%= msg.print() %>
+    </button>
+  <% } %>
+<% if (options.alreadySaved) { %>
+  <button class="saved-to-gallery" disabled>
+    <%= msg.savedToGallery() %>
+  </button>
+<% } else if (options.saveToGalleryUrl) { %>
   <button id="save-to-gallery-button" class="launch">
     <%= msg.saveToGallery() %>
   </button>
-  </div>
 <% } %>
+  </div>
 
 <% if (options.response && options.response.level_source) { %>
   <% if (options.appStrings && options.appStrings.sharingText) { %>

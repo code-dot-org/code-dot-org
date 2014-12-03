@@ -1,8 +1,10 @@
 
 
-## Statistika të dobishme për shkencën kompjuterike
+[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
 
-*Për të gjitha kërkesat për shtyp dhe media, kontaktoni te <press@code.org>*
+## Si t'i tërhiqni mediat në eventin tuaj të Orës së Kodimit
+
+*For all press and media inquiries, contact <press@code.org>*
 
 ### Udhëzimet kryesore
 
@@ -49,7 +51,9 @@ Në Kinë, secili nxënës mëson shkencë kompjuterike deri në shkollë të me
 
 **Për Code.org**
 
-Code.org® është organizatë publike jo-fitimprurëse 501c3 e dedikuar në zgjerimin e pjesëmarrjes në shkencë kompjuterike dhe rritjen e pjesëmarrjes nga femrat dhe studentët e nënpërfaqësuar me ngjyrë. Vizioni i saj është që secili student në secilën shkollë duhet të ketë mundësi ta mësojë programimin e kompjuterëve. Pas nisjes në 2013, Code.org e organizoji kampanjën Ora e Kodimit — që i ka njoftuar miliona studentë me shkencën kompjuterike — është bërë partner me mbi 30 distrikte të shkollave publike në nivel kombëtar, dhe e ka nisur Code Studio-n, një platformë me kod të hapur, online për mësim për të gjitha moshat. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
+Code.org® është organizatë publike jo-fitimprurëse 501c3 e dedikuar në zgjerimin e pjesëmarrjes në shkencë kompjuterike dhe rritjen e pjesëmarrjes nga femrat dhe studentët e nënpërfaqësuar me ngjyrë. Vizioni i saj është që secili student në secilën shkollë duhet të ketë mundësi ta mësojë programimin e kompjuterëve. Pas lansimit në 2013, Code.org e organizoji kampanjën Ora e Kodimit — që i ka njoftuar miliona studentë me shkencën kompjuterike — është bërë partner me mbi 30 distrikte të shkollave publike në nivel kombëtar, dhe e ka nisur Code Studio-n, një platformë me kod të hapur, online për mësim për të gjitha moshat. Për më shumë informata, ju lutem vizitoni: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
 Gjeni më shumë resurse dhe mostra të emailave [këtu](<%= hoc_uri('/resources') %>).
+
+<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

@@ -1,15 +1,17 @@
 
 
-# तपाइँको Hour of Code को घटनामा मिडियालाई कसरी आकर्षित गर्ने
+[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
 
-## केहि आश्चर्यजनक तथ्याङ्कहरू (संयुक्त राज्य आमेरिका):
+# Blurbs and Useful Stats
 
-  * अर्को 10 वर्षमा (तलबमा $500 अरब जोड्न) विद्यार्थी भन्दा एक लाख भन्दा बढी कम्प्युटिङ्को कामहरू हुनेछन्।
-  * सबै अनुमानित गणित र विज्ञान व्यवसायहरूमा 50 प्रतिशत भन्दा अधिक व्यवसायहरू कम्प्युटिङ्मा छ। 
-  * कम्प्युटिङ् व्यवसायहरू उच्च-भुक्तान नयाँ स्थानहरूको लागि रोजगार को माध्यम छ। अहिले सम्म कम से कम 3% कलेजका विदार्थीहरूको के एक कम्प्युटर विज्ञानमा डिग्रीको साथ स्नातक गर्छन्।
-  * 26 राज्यहरूमा, कम्प्युटर विज्ञानको कक्षाहरूको गणित वा विज्ञान हाई स्कूल स्नातकको आवश्यकताहरूमा गणना गर्दैन। 
-  * एपी कम्प्युटर विज्ञानको विद्यार्थीहरूलाई कम से कम 20% महिला छन्। कम से कम 10% काला वा ल्याटिनो छन्।
+## Use this short blurb in newsletters
 
-## इन्फ्रोग्राफिक संस्करण:
+### Bring computer science to your school. Start with an Hour of Code
+
+कम्प्युटरहरू जहाँ तहिँ हुन्छन्, तर केहि विद्यालयहरूले मात्र 10 वर्ष अघि देखि कम्प्युटर विज्ञान पढाई राखेका छन्। Good news is, we’re on our way to change this. If you heard about the [Hour of Code](<%= hoc_uri('/') %>) last year, you might know it made history. In one week, 15 million students tried computer science! The [Hour of Code](<%= hoc_uri('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= hoc_uri('/') %>) to host an Hour of Code this December 8-14 during Computer Science Education Week and help reach 100 million students by the end of the year. Add your school to the map, go to <http://hourofcode.com>
+
+## Infographic version:
 
 ![छवि](http://code.org/images/fit-8000/Code.org_infographic.png)
+
+<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

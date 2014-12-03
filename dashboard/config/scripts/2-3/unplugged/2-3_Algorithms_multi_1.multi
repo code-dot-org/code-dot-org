@@ -6,7 +6,7 @@ height '100'
 
 question 'Choose an algorithm for the image provided'
 wrong 'Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square'
-right 'Start with a square<br/>Put a triangle right of square<br/>Put a rhombus below square<br/>Put triangle right of rhombus'
-wrong 'Start with a square<br/>Put a rhombus above the square<br/>Put a triangle right of the rhombus'
-wrong 'Start with a square<br/>Put a triangle below the square<br/>Put a rhombus right of the triangle'
+right 'Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
+wrong 'Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram'
+wrong 'Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle'
 

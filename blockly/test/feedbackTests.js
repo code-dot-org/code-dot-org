@@ -86,7 +86,7 @@ describe("getMissingRequiredBlocks tests", function () {
       "or we did, and we loaded something");
 
     var missing = feedback.__testonly__.getMissingRequiredBlocks();
-    validateMissingRequiredBlocks(missing, options.expectedResult);
+    validateMissingRequiredBlocks(missing.blocksToDisplay, options.expectedResult);
   }
 
 

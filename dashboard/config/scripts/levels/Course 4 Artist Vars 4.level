@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Now I want to make a rectangle that is twice as tall as it is width. We've got a variable called \"height\" that is set to 100, can you use the math blocks to complete the code?",
+    "instructions": "Now I want to make a rectangle that is twice as tall as it is wide. We've got a variable called \"width\" that is set to 100. Can you use the math blocks to complete the code?",
     "x": "150",
     "y": "300",
     "start_direction": "90",
@@ -19,36 +19,37 @@
     "disable_variable_editing": "true",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "impressive": "false"
+    "impressive": "false",
+    "embed": "false"
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
+        <block type="when_run" movable="false" deletable="false">
           <next>
             <block type="variables_set" inline="false" movable="false">
-              <title name="VAR">height</title>
+              <title name="VAR">width</title>
               <value name="VALUE">
                 <block type="math_number" movable="false" editable="false">
                   <title name="NUM">100</title>
                 </block>
               </value>
               <next>
-                <block type="controls_repeat" deletable="false" movable="false" editable="false">
+                <block type="controls_repeat" movable="false" editable="false" deletable="false">
                   <title name="TIMES">2</title>
                   <statement name="DO">
-                    <block type="draw_move" inline="true" deletable="false" movable="false" editable="false">
+                    <block type="draw_move" inline="true" movable="false" editable="false" deletable="false">
                       <title name="DIR">moveForward</title>
                       <next>
-                        <block type="draw_turn_by_constant" deletable="false" movable="false" editable="false">
+                        <block type="draw_turn_by_constant" movable="false" editable="false" deletable="false">
                           <title name="DIR">turnLeft</title>
                           <title name="VALUE">90</title>
                           <next>
-                            <block type="draw_move" inline="true" deletable="false" movable="false" editable="false">
+                            <block type="draw_move" inline="true" movable="false" editable="false" deletable="false">
                               <title name="DIR">moveForward</title>
                               <next>
-                                <block type="draw_turn_by_constant" deletable="false" movable="false" editable="false">
+                                <block type="draw_turn_by_constant" movable="false" editable="false" deletable="false">
                                   <title name="DIR">turnLeft</title>
                                   <title name="VALUE">90</title>
                                 </block>
@@ -69,13 +70,13 @@
     <toolbox_blocks>
       <xml>
         <block type="variables_get">
-          <title name="VAR">height</title>
+          <title name="VAR">width</title>
         </block>
         <block type="math_arithmetic" inline="true">
           <title name="OP">MULTIPLY</title>
           <value name="A">
             <block type="variables_get" movable="false">
-              <title name="VAR">height</title>
+              <title name="VAR">width</title>
             </block>
           </value>
           <value name="B">
@@ -92,7 +93,7 @@
           <title name="OP">MULTIPLY</title>
           <value name="A">
             <block type="variables_get">
-              <title name="VAR">height</title>
+              <title name="VAR">width</title>
             </block>
           </value>
           <value name="B">

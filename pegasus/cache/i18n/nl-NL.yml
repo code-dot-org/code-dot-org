@@ -4,19 +4,19 @@
   computer_science: Informatica
   computer_science_edweek: Week van het Informaticaonderwijs
   csedweek_dates: 9-15 december 2013
-  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
+  csedweek_banner_hoc: 'Het <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold"> Uur Code</a> komt. Oproep aan alle leerkrachten en organisatoren,
     <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">plan your Hour of Code</a>'
+    font-weight:bold"> plan uw Uur Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
-    none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h3>heeft een</h3><h2>Hour of Code</h2><h3>geprobeerd</h3>
+    none; font-weight: 400"> bent u een CS-leraar? Zie andere bronnen voor CSEdWeek</a>'
+  n_have_learned_an_hoc: "<h1>#</h1><h3>heeft een</h3><h2>Hour of Code</h2><h3>geprobeerd</h3>"
   anybody_can_learn: Iedereen kan het leren.
   learn_now: Nu leren
-  petition_message: Elke student in elke school moet de kans krijgen om computerkunde
+  petition_message: Elke leerling in elke school moet de kans krijgen om informatica
     te leren
-  petition_sign_message: 'Ben je het eens met de petitie, onderteken hem dan met je
-    naam. Sluit je aan bij # anderen.'
+  petition_sign_message: 'Ga je akkoord, onderteken dan met je naam. Sluit je aan
+    bij # anderen.'
   name: naam
   email: E-mail
   zipcode: Postcode of land
@@ -53,7 +53,7 @@
     en eenvoudige algoritmen.
   all_ages: Alle leeftijden
   beginner: Beginner
-  n_participants: '# deelnemers'
+  n_participants: "# deelnemers"
   go: Verder
   thank_you_: Bedankt!
   congratulations: Gefeliciteerd!
@@ -91,7 +91,7 @@
   beyond_an_hour: verder dan een UUr Code >
   get_started: Beginnen
   i_agree: Ik ga akkoord
-  participant_select: '- Kiezen -'
+  participant_select: "- Kiezen -"
   participant_student: Leerling
   participant_parent: Ouder
   participant_educator: Leraar
@@ -119,11 +119,11 @@
   help_recruit_coders: Help ons meer programmeurs te vinden voor jouw team!
   help_recruit: Help ons meer programmeurs te vinden!
   lines_of_code: MEER DAN <b># REGELS CODE</b> GESCHREVEN TOT NU TOE.
-  lines_of_code_alt: <b>#</b> REGELS CODE GESCHREVEN DOOR LEERLINGEN
+  lines_of_code_alt: "<b>#</b> REGELS CODE GESCHREVEN DOOR LEERLINGEN"
   who_has_done_hoc: 'Wie heeft het #UurCode gedaan? @codeorg'
   hoc_leaderboards: De Uur Code Highscores
-  students_and_lines: '%{students} leerlingen hebben het Uur Code gedaan en %{lines}
-    regels code geschreven.'
+  students_and_lines: "%{students} leerlingen hebben het Uur Code gedaan en %{lines}
+    regels code geschreven."
   start_hoc: Start het Uur Code nu
   contact_form_topic_press: Pers/media (interview of met betrokkenen spreken)
   studiobar_title: ontdek <a href='http://studio.code.org'>Code Studio</a>
@@ -346,37 +346,38 @@
   dashboard_sections_password_account_creation: Student-gemaakte wachtwoord
   dashboard_sections_login_type_explanation: Deze tabel helpt  met het verklaren welke
     log-in typen, <b>foto, woord, of e-mail</b> u zou willen kiezen voor uw groep.
-  dashboard_faq: Frequently Asked Questions
-  code_hoc_coming: The Hour of Code is coming - December 8-14!
-  code_sign_up: Sign up to participate during CS Education Week
+  dashboard_faq: Veelgestelde Vragen
+  code_hoc_coming: Het Uur Code komt - December 8-14!
+  code_sign_up: Meld u aan om deel te nemen tijdens de CS Onderwijs Week
   learn_more: Leer meer
-  hoc2014_try_new_tutorials: "Try our new Hour of Code tutorials"
-  hoc2014_try_new_tutorial: "Try our new Hour of Code tutorial in beta"
-  hoc2014_try_scrat: "Angry Birds, PvZ, and Scrat"
-  hoc2014_try_frozen: "Artist with Anna and Elsa, from Frozen"
+  hoc2014_try_new_tutorials: Probeer onze nieuwe Uur Code-tutorials
+  hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
+  hoc2014_try_scrat: Angry Birds, PvZ en Scrat
+  hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
   carousel_heading_international: Opdrachten in jouw taal
-  carousel_heading_domestic: Tutorials available in English
-  carousel_heading_beginners: Tutorials for Beginners
-  carousel_heading_javascript: Tutorials that teach Javascript
-  carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science
-  carousel_heading_devices: Tutorial apps for phones and tablets
-  carousel_heading_languages: Tutorials in other programming languages
-  carousel_heading_apps_games: Make your own apps or games
+  carousel_heading_domestic: Handleidingen beschikbaar in het Engels
+  carousel_heading_beginners: Handleidingen voor Beginners
+  carousel_heading_javascript: Handleidingen die je Javascript aanleren
+  carousel_heading_unplugged: Geen apparaat of internet? Probeer 'unplugged' informatica
+  carousel_heading_devices: Handleiding-apps voor telefoons en tabletten
+  carousel_heading_languages: Handleidingen in andere programmeertalen
+  carousel_heading_apps_games: Maak uw eigen apps of spelletjes
   carousel_heading_university: Online Universiteitscursussen
-  carousel_heading_webpages: Learn to make web pages
-  carousel_heading_robots: Learn to program with robots
-  carousel_heading_ide: Platforms popular among teachers
-  educator_notes: Educator Notes
-  more_resources_educators: More resources for teachers and educators
-  participants: participants
-  teachers_notes: Teacher's Notes
-  previous: Previous
-  next: Next
-  older_systems: Tutorials that work on older systems
-  older_systems_subheading: These should work on older Web browsers. To access all
-    tutorials, upgrade to a <a href="http://browsehappy.com/" target="_blank">modern
-    Web browser.</a>
-  mobile_devices: Tutorials for mobile devices
+  carousel_heading_webpages: Leer webpagina's te maken
+  carousel_heading_robots: Leer robots te programmeren
+  carousel_heading_ide: Platformen populair onder docenten
+  educator_notes: Opvoeder notities
+  more_resources_educators: Meer middelen voor leraren en opvoeders
+  participants: Deelnemers
+  teachers_notes: Leraar-nota's
+  previous: Vorige
+  next: Volgende
+  older_systems: Handleidingen die werken op oudere systemen
+  older_systems_subheading: Deze zouden moeten werken op oudere webbrowsers. Om toegang
+    te hebben tot alle handleidingen gelieve een recentere browser te installeren.<a
+    href="http://browsehappy.com/" target="_blank"></a>
+  mobile_devices: Handleidingen voor mobiele apparaten
+  frozen_name: Code with Anna and Elsa
   codeorg_name: Schrijf je eerste computerprogramma
   thinkersmithspanish_name: Mijn Robotvriend
   khan_name: Een inleiding tot JavaScript
@@ -385,29 +386,32 @@
   scratch_name: Maak een vakantiekaart
   lightbot_name: Lightbot
   thinkersmith_name: My Robotic Friends
-  condcards_name: Conditionals with Cards
+  condcards_name: Statements met Kaarten
   lightbotintl_name: Lightbot
   codehs_name: Leren om te programmeren met Karel de hond
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
+  codemonkey_name: CodeMonkey
   codeavengers_name: Bouw een spel met JavaScript
   processing_name: Tekenen met Code
   robomind_name: Programmeer een virtuele robot
-  groklearning_name: Een smaak van Python programmeren
-  quorum_name: Accessible programming (with screenreader support)
-  codespark_name: The Foos (pre-readers welcome)
-  kodable_name: Kodable
-  tynkerapp_name: Tynker - on tablets
+  groklearning_name: Eliza de Chatterbot arts
+  quorum_name: Toegankelijk programmeren (met schermlezer ondersteuning)
+  codespark_name: De Foos (pre lezers welkom)
+  kodable_name: Kodable (pre lezers welkom)
+  tynkerapp_name: Tynker - op tabletten
   hopscotch_name: 'Hopscotch: programmeren op je iPad'
   robomindnl_name: Programmeer een virtuele robot
-  bitsbox_name: Bitsbox - make a game
+  flappy_name: Make a Flappy game
+  bitsbox_name: Bitsbox - Maak een spel
   makegameswithus_name: Bouw een iPhonespel in je browser!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor Hour of Code
   blockly_name: Blockly
   thinkersmith2_name: Binaire kerstballen
   kodableunplugged_name: fuzzFamily Frenzy
-  projguts_name: Rock, Paper, Scissors
+  projguts_name: Blad, Steen, Schaar
+  frozen_gradelevel: Leeftijden 8 +
   codeorg_gradelevel: Leeftijden 4-104
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Middelbare school +
@@ -416,11 +420,12 @@
   scratch_gradelevel: Leeftijden 8 +
   lightbot_gradelevel: Alle leeftijden
   thinkersmith_gradelevel: Alle leeftijden
-  condcards_gradelevel: Ages 8-12
+  condcards_gradelevel: Leeftijden 8-12
   lightbotintl_gradelevel: Alle leeftijden
   codehs_gradelevel: Middelbare school
   codecademy_gradelevel: Middelbare school
   codecombat_gradelevel: Middelbare school +
+  codemonkey_gradelevel: Middelbare school +
   codeavengers_gradelevel: Middelbare school +
   processing_gradelevel: Middelbare school
   robomind_gradelevel: Leeftijden 8-13
@@ -431,6 +436,7 @@
   tynkerapp_gradelevel: Leeftijden 5-13
   hopscotch_gradelevel: Middelbare school +
   robomindnl_gradelevel: Leeftijden 8-13
+  flappy_gradelevel: Leeftijden 4-104
   bitsbox_gradelevel: Basis
   makegameswithus_gradelevel: Middelbare school
   touchdevelop_gradelevel: Middelbare school
@@ -438,83 +444,86 @@
   blockly_gradelevel: Alle leeftijden
   thinkersmith2_gradelevel: Leeftijden 8 +
   kodableunplugged_gradelevel: Leeftijden 8-13
-  projguts_gradelevel: Ages 10-13
+  projguts_gradelevel: Leeftijden van 10-13
+  frozen_platformtext: Modern browsers + tablets
   codeorg_platformtext: Moderne browsers, smartphones, tablets
-  thinkersmithspanish_platformtext: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
+  thinkersmithspanish_platformtext: Unplugged
   khan_platformtext: Moderne webbrowsers
   khanes_platformtext: Moderne webbrowsers
   tynker_platformtext: Moderne webbrowsers
-  scratch_platformtext: Elke browser
-  lightbot_platformtext: iOS, Android (of een webbrowser)
-  thinkersmith_platformtext: Using a pre-defined "Robot Vocabulary" students will
-    figure out how to guide each other to accomplish specific tasks without discussing
-    them first. This lesson teaches children the connection between symbols and actions,
-    as well as the invaluable skill of debugging. "My Robotic Friends" works best
-    as a group activity and includes a teacher workbook for classroom use.
+  scratch_platformtext: ALLE browsers
+  lightbot_platformtext: ALLE browsers en iOS, Android, of Game Console
+  thinkersmith_platformtext: Unplugged
   condcards_platformtext: Unuplugged
   lightbotintl_platformtext: iOS, Android (of een webbrowser)
   codehs_platformtext: Moderne browsers
   codecademy_platformtext: Moderne webbrowsers. iOS, Android apps
   codecombat_platformtext: Moderne webbrowsers
+  codemonkey_platformtext: Moderne webbrowsers
   codeavengers_platformtext: Moderne webbrowsers
   processing_platformtext: Moderne webbrowsers
   robomind_platformtext: Moderne webbrowsers, mobiele web
   groklearning_platformtext: Moderne webbrowsers
-  quorum_platformtext: Modern web browsers. Screen-readers supported
+  quorum_platformtext: Moderne webbrowsers. Schermlezers ondersteund
   codespark_platformtext: iOS, Android (of een webbrowser)
   kodable_platformtext: Kodable is a self-guided iPad game that introduces kids 5+
     to programming basics. Having a teacher or parent nearby is optimal, but not necessary.
-  tynkerapp_platformtext: iPad, Android tablets
+  tynkerapp_platformtext: iPad, Android tabletten
   hopscotch_platformtext: Student-guided tutorial on the iPad using the Hopscotch
     programming language. Students will build games and apps for their iPad on their
     iPad. Students can work individually or with friends (up to 3 per iPad).
   robomindnl_platformtext: Moderne webbrowsers, mobiele web
+  flappy_platformtext: Moderne browsers, smartphones, tablets
   bitsbox_platformtext: Moderne webbrowsers
   makegameswithus_platformtext: Moderne webbrowsers
   touchdevelop_platformtext: Moderne browsers, smartphones, alle apparaten
   appinventor_platformtext: Moderne browser + Android
   blockly_platformtext: Alleen moderne browsers
-  thinkersmith2_platformtext: Students learn about representing and storing letters
-    in binary, as functions of on and off. At the end, the class gets to encode their
-    own initials to take home with them.
-  kodableunplugged_platformtext: 'Designed for use with plain paper, the fuzzFamily
-    Frenzy is an introduction to programming logic for kids 5 and up. A teacher should
-    explain the game, then students program a partner to complete a simple obstacle
-    course. '
+  thinkersmith2_platformtext: Unplugged
+  kodableunplugged_platformtext: Unplugged
   projguts_platformtext: Unplugged
+  frozen_shortdescription: Let's use code to join Anna and Elsa as they explore the
+    magic and beauty of ice.
   codeorg_shortdescription: Leer hoe je moet programmeren met Mark Zuckerberg en Angry
     Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Leer tekenen in JavaScript
   khanes_shortdescription: Leer tekenen in JavaScript
-  tynker_shortdescription: Leer de basis van programmeren in een leuke, visuele omgeving
+  tynker_shortdescription: Leer programmeren door het oplossen van leuke puzzels en
+    bouw je eigen mobiele spelletjes.
   scratch_shortdescription: Maak een interactieve kaart
-  lightbot_shortdescription: Een spel om de programmeer-begrippen te leren
+  lightbot_shortdescription: Programmeer Lightbot om puzzels op te lossen met behulp
+    van procedures en loops!
   thinkersmith_shortdescription: Oefening voor een groep zonder computers
-  condcards_shortdescription: Learn algorithms with a deck of cards
+  condcards_shortdescription: Leer algoritmes met behulp van een spel kaarten
   lightbotintl_shortdescription: Een spel om de programmeer-begrippen te leren
-  codehs_shortdescription: Leren JavaScript programmeren met een leuke visuele omgeving
+  codehs_shortdescription: Begin met programmeren met Karel de Hond, een leuke en
+    visuele intro tot programmeren!
   codecademy_shortdescription: Leer JavaScript programmeren , in een web-browser
-  codecombat_shortdescription: Speel een spel en leer JavaScript om te winnen
+  codecombat_shortdescription: Versla ogres om Python of Javascript te leren in dit
+    episch programmeer-spel!
+  codemonkey_shortdescription: Students program a monkey to catch bananas while it
+    gets slightly more complicated on each level.
   codeavengers_shortdescription: Leer JavaScript programmeren , in een web-browser
   processing_shortdescription: een een uur durende cursus in de verwerkingstalen
   robomind_shortdescription: Schrijf code voor een virtuele robot
-  groklearning_shortdescription: basis introductie in het python programmeren
-  quorum_shortdescription: Join Mary on a guided tour as she learns the Quorum programming
-    language.
-  codespark_shortdescription: The Foos is a fun, kid-friendly game to learn about
-    programming.
+  groklearning_shortdescription: Leer "Eliza" de chatbot om je vrienden voor de gek
+    te houden door hen te laten denken dat ze menselijk is!
+  quorum_shortdescription: voeg je bij Mary tijdens een rondleiding tijdens dewelke
+    ze de Quorum programmeertaal leert.
+  codespark_shortdescription: De Foos is een leuk, kindvriendelijk spel om te leren
+    over programmeren.
   kodable_shortdescription: Een leuke iPad spel om informatica-concepten te leren
-  tynkerapp_shortdescription: Learn to code by solving fun puzzles and build your
-    own mobile games.
-  hopscotch_shortdescription: Leer visueel programmeren op een iPad
+  tynkerapp_shortdescription: Leer programmeren door het oplossen van leuke puzzels
+    en bouw je eigen mobiele spelletjes.
+  hopscotch_shortdescription: Leer voedselgevecht dodgeball en paddleball spelletjes
+    te maken met Hopscotch!
   robomindnl_shortdescription: Schrijf code voor een virtuele robot
-  bitsbox_shortdescription: Code a series of apps to play and share, using real Javascript.
-  makegameswithus_shortdescription: Leren een iPhone spel te maken in een uur
+  flappy_shortdescription: Make your own game - Flappy Bird, Shark, or Submarine
+  bitsbox_shortdescription: Programmeer een reeks apps om te spelen en te delen met
+    behulp van echte Javascript-code.
+  makegameswithus_shortdescription: Maak een iPhonespel! Leer je monster nieuwe bewegingen
+    aan door het schrijven van code!
   touchdevelop_shortdescription: programmeer mobiele apps rechtstreeks op uw telefoon,
     Tablet of laptop
   appinventor_shortdescription: Maak uw eigen app! (Alleen voor android)
@@ -522,7 +531,10 @@
   thinkersmith2_shortdescription: Leer hoe computers 1-en en 0-en gebruiken om gegevens
     te onthouden
   kodableunplugged_shortdescription: Een leuke oefening zonder apparaten
-  projguts_shortdescription: Try modeling and simulation using rock/paper/scissors
+  projguts_shortdescription: Probeer modellering en simulatie via Blad/Steen/Schaar
+  frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
+    magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
+    and make a winter wonderland that you can then share with your friends!
   codeorg_longdescription: Leer de basis concepten van de informatica met drag en
     drop programmeren. Dit is een spelvormig zelfgestuurde cursus met , Angry Birds,
     Plants vs Zombies en video lezingen door onder andere Bill Gates, Mark Zuckerberg.
@@ -571,10 +583,12 @@
     leerlingen over de hele wereld. Wij hebben een geen-gedoe Uur van Code ervaring
     met begeleidende quizzen, dia's, en een voltooid project voor leerlingen aan het
     eind.
-  codecombat_longdescription: Speel als een tovenaar die codes(toverspreuken) gebruikt
-    om helden te besturen, doolhoven doorkruist, menseneter verslaat, vijanden fopt
-    en bondgenoten red! Leer JavaScript in deze HTML5 webgebaseerde spel voor totale
-    beginners.
+  codecombat_longdescription: Versla ogres om Python of Javascript te leren in dit
+    episch programmeer-spel!
+  codemonkey_longdescription: 'CodeMonkey is an online game that teaches coding in
+    a real programming language! Students program a monkey to catch bananas while
+    it gets slightly more complicated on each level. They get star scores on each
+    solution and can share it in a single click. '
   codeavengers_longdescription: Maak een 2D top-down game voor 2 spelers met JavaScript
     door 10 korte opdrachten uit te voeren. Ga daarna verder met het leren van de
     basis van het programmeren (variabelen en als-voorwaarden) wanneer je een Quiz
@@ -615,6 +629,9 @@
     door het beheersen van hun eigen virtuele robot. De online cursus is volledig
     alleenstaand met korte presentaties, films, quizzen en automatische begeleiding/tips
     om te helpen met de programmeeroefeningen. '
+  flappy_longdescription: Use drag-and-drop programming to make your own Flappy Bird
+    game, and customize it to look different (Flappy Shark, Flappy Santa, whatever).
+    Add the game to your phone in one click.
   bitsbox_longdescription: Customize your very own virtual tablet, then code a series
     of apps to play and share. Simple walkthroughs make it possible for even young
     kids to program real Javascript, and the more advanced you are the further you'll
@@ -655,7 +672,9 @@
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
+  scratchjr_beyond_name: ScratchJR for pre-readers
   hopscotch_beyond_name: 'Hopscotch: Programmeren op uw iPad'
+  pocketcode_beyond_name: Pocket Code
   groklearning_beyond_name: Leer Python programmeren
   hacketyhack_beyond_name: Leer Ruby
   robomind_beyond_name: Programmeer een virtuele robot
@@ -690,7 +709,9 @@
   lightbot_beyond_gradelevel: Alle leeftijden
   codecademy_beyond_gradelevel: Middelbare school
   kodable_beyond_gradelevel: Basis
+  scratchjr_beyond_gradelevel: Basis
   hopscotch_beyond_gradelevel: Middelbare school +
+  pocketcode_beyond_gradelevel: Middelbare school +
   groklearning_beyond_gradelevel: Middelbare school +
   hacketyhack_beyond_gradelevel: Middelbare school
   robomind_beyond_gradelevel: Leeftijden 8-13
@@ -725,7 +746,9 @@
   lightbot_beyond_platformtext: iOS, Android (of een webbrowser)
   codecademy_beyond_platformtext: Moderne webbrowsers. iOS, Android apps
   kodable_beyond_platformtext: iPad
+  scratchjr_beyond_platformtext: iPad
   hopscotch_beyond_platformtext: iPad
+  pocketcode_beyond_platformtext: Mobile App
   groklearning_beyond_platformtext: Moderne webbrowsers
   hacketyhack_beyond_platformtext: laptopinstallatie
   robomind_beyond_platformtext: Moderne webbrowsers, mobiele web
@@ -763,7 +786,10 @@
   codecademy_beyond_shortdescription: Leer JavaScript programmeren , in een web-browser
   kodable_beyond_shortdescription: Een leuke iPad spel om informatica-concepten te
     leren
+  scratchjr_beyond_shortdescription: 'Create interactive stories and games using ScratchJr. '
   hopscotch_beyond_shortdescription: Leer visueel programmeren op een iPad
+  pocketcode_beyond_shortdescription: Create a game on your smartphone and share with
+    friends to try!
   groklearning_beyond_shortdescription: basis introductie in het python programmeren
   hacketyhack_beyond_shortdescription: Leer Ruby vanaf de basis
   robomind_beyond_shortdescription: Schrijf code voor een virtuele robot
@@ -829,10 +855,17 @@
   kodable_beyond_longdescription: Kodable is een zelfsturende iPad spel dat kinderen
     vanaf 5 jaar introduceert aan de grondbeginselen van programmeren. De ondersteuning
     van ouders of leerkrachten is optimaal, maar niet noodzakelijk.
+  scratchjr_beyond_longdescription: ScratchJr is an introductory programming language
+    that enables young children to create their own interactive stories and games.
+    Children snap together graphical programming blocks to make characters move, jump,
+    dance, and sing
   hopscotch_beyond_longdescription: leerling-geleide cursus over de iPad met behulp
     van de  Hopscotch programmeertaal. Leerlingen zullen games en apps voor en op
     hun iPad bouwen. Leerlingen kunnen afzonderlijk  werken of met vrienden (maximaal
     3 per iPad).
+  pocketcode_beyond_longdescription: Create your own game on your smart phone with
+    Pocket Code! Help skydiver Steve to deliver his parcels. You can share it with
+    friends and other users to try!
   groklearning_beyond_longdescription: Een introductiecursus voor mensen zonder programmeerervaring,
     waarbij de programmeertaal Python wordt gebruikt. Onze unieke combinatie van inleiding
     en uitdagingen zullen je een diepgaand begrip van Python, en van programmeren
@@ -963,3 +996,8 @@
     program because we believe play is a powerful teacher. Whether you're an educator
     or a parent, SPRK lessons give kids a fun crash course in programming robots while
     sharpening their skills in math and science.
+  codeintl_name: "Write your first computer program"
+  codeintl_gradelevel: "Ages 4-104"
+  codeintl_platformtext: "Modern browsers, smartphones, tablets"
+  codeintl_shortdescription: "Learn to code with Mark Zuckerberg and Angry Birds!"
+  codeintl_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages."

@@ -5,25 +5,20 @@ litmus_tracking_id: "5g5lyi1a"
 ---
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
 
+<% if @country == 'ro' %>
+
+Va multumim pentru inregistrare. Daca aveti nevoie de ajutor sau aveti orice intrebare contactati Echipa Hour of Code Romania la adresa: hoc@adfaber.org.
+
+<% end %>
+
 # Thanks for signing up to host an Hour of Code!
 
 **EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](http://<%= hostname %>/prizes)
-
-<% if @country == 'us' %>
-
-Get your [whole school to participate](http://<%= hostname %>/whole-school) for a chance for big prizes for your entire school.
-
-<% end %>
 
 ## 1. Spread the word
 Tell your friends about the #HourOfCode.
 
 <% if @country == 'us' %>
-
-## 2. Ask your whole school to offer an Hour of Code
-[Send this email](http://<%= hostname %>/resources#email) or [give this handout to your principal](http://<%= hostname %>/files/schools-handout.pdf). Once your school is on board, [enter to win $10,000 worth of technology for your school](http://<%= hostname %>/prizes) and challenge other schools in your area to get on board.
-
-<% else %>
 
 ## 2. Ask your whole school to offer an Hour of Code
 [Send this email](http://<%= hostname %>/resources#email) or give [this handout](http://<%= hostname %>/files/schools-handout.pdf) to your principal.
@@ -38,15 +33,6 @@ Recruit a local group — boy/girl scouts club, church, university, veterans gro
 
 ## 5. Ask a local elected official to support the Hour of Code
 [Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
-
-<% if @country == 'ro' %>
-
-Multumim ca ne-ai anuntat despre evenimentul tau! Anunta-ne daca doresti informatii suplimentare sau daca ai intrebari. Hai sa facem istorie impreuna!
-
-Echipa Hour of Code Romania
-hoc@adfaber.org
-
-<% end %>
 
 <hr/>
 

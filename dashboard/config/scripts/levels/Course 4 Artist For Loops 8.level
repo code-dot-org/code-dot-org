@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "The smallest line of this square spiral is 10 the largest is 200 and each line is 10 longer than the last.",
+    "instructions": "The smallest line of this square spiral is 10, the largest is 200, and each line is 10 pixels longer than the last.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -19,7 +19,8 @@
     "slider_speed": ".7",
     "ideal": "9",
     "use_modal_function_editor": "false",
-    "use_contract_editor": "false"
+    "use_contract_editor": "false",
+    "embed": "false"
   }
 }]]></config>
   <blocks>

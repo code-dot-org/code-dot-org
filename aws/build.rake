@@ -112,19 +112,46 @@ file deploy_dir('rebuild') do
   touch deploy_dir('rebuild')
 end
 
+def stop_frontend(name, host, log_path)
+  command = [
+    'sudo service varnish stop',
+    'sudo service dashboard stop',
+    'sudo service pegasus stop',
+  ].join(' ; ')
+
+  RakeUtils.system 'ssh', '-i', '~/.ssh/deploy-id_rsa', host, "'#{command} 2>&1'", '>>', log_path
+end
+
+def upgrade_frontend(name, host)
+  command = [
+    'cd production',
+    'git pull',
+    'rake build',
+  ].join(' && ')
+
+  HipChat.log "Upgrading <b>#{name}</b> (#{host})..."
+
+  log_path = aws_dir "deploy-#{name}.log"
+
+  begin
+    RakeUtils.system 'ssh', '-i', '~/.ssh/deploy-id_rsa', host, "'#{command} 2>&1'", '>', log_path
+    HipChat.log "Upgraded <b>#{name}</b> (#{host})."
+  rescue
+    HipChat.log "<b>#{name}</b> (#{host}) failed to upgrade, removing from rotation.", color:'red'
+    stop_frontend name, host, log_path
+  end
+
+  puts IO.read log_path
+end
+
 $websites = build_task('websites', [deploy_dir('rebuild'), BLOCKLY_COMMIT_TASK]) do
   Dir.chdir(deploy_dir) do
     RakeUtils.system 'rake', 'build'
 
     if rack_env?(:production) && CDO.daemon
-      remote_command = [
-        'cd production',
-        'git pull',
-        'rake build',
-      ].join('; ')
-      threaded_each CDO.app_instances, 5 do |host|
-        HipChat.log "Upgrading <b>#{host}</b> front-end..."
-        RakeUtils.system 'ssh', '-i', '~/.ssh/deploy-id_rsa', host, "'#{remote_command} 2>&1'"
+      thread_count = (CDO.app_servers.keys.count / 5)
+      threaded_each CDO.app_servers.keys, thread_count do |name|
+        upgrade_frontend name, CDO.app_servers[name]
       end
 
       remote_command = [

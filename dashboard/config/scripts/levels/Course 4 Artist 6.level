@@ -6,7 +6,7 @@
   "user_id": 8,
   "properties": {
     "skin": "artist",
-    "instructions": "Complete the code to draw these triangles.  The first one is done for you.  Hint:  3 triangles in a 360 degree rotation.",
+    "instructions": "Complete the code to draw these triangles. Hint: 3 triangles in a 360 degree rotation.",
     "level_num": "custom",
     "x": "200",
     "y": "200",
@@ -19,26 +19,44 @@
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
-    "impressive": "false"
+    "impressive": "false",
+    "embed": "false",
+    "use_contract_editor": "false",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="controls_repeat">
-          <title name="TIMES">3</title>
-          <statement name="DO">
-            <block type="draw_move_by_constant">
-              <title name="DIR">moveForward</title>
-              <title name="VALUE">100</title>
-              <next>
-                <block type="draw_turn_by_constant">
-                  <title name="DIR">turnLeft</title>
-                  <title name="VALUE">120</title>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">???</title>
+              <statement name="DO">
+                <block type="controls_repeat">
+                  <title name="TIMES">3</title>
+                  <statement name="DO">
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">100</title>
+                      <next>
+                        <block type="draw_turn_by_constant">
+                          <title name="DIR">turnLeft</title>
+                          <title name="VALUE">120</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="draw_turn_by_constant_dropdown">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE" config="45,60,90,120,180">???</title>
+                    </block>
+                  </next>
                 </block>
-              </next>
+              </statement>
             </block>
-          </statement>
+          </next>
         </block>
       </xml>
     </start_blocks>

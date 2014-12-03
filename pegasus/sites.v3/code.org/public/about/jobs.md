@@ -4,18 +4,17 @@ nav: about_nav
 ---
 # Job Openings at Code.org
 
-## Foundation & Corporate Partnerships Manager ##
+## Grant Writer and Relationships Manager##
 
 **Job Summary:**
-The Foundation & Corporate Partnerships Manager plays an important role in increasing revenue for Code.org, with a focus on building new Foundation partnerships, grant writing, and growing existing Corporate partnerships. The Manager will establish long-term partnerships and strengthen existing relationships with the corporate and foundation sector and develop compelling proposals that will result in funding for the immediate and long-term goals of Code.org. Full-time, salaried. Responsibilities of the position include:
 
-- Raising substantial funds through new and existing Foundations and Corporations to support Code.org’s mission 
-- Managing and leading strategy for Foundation partnerships working with the Head of Fundraising & Partnerships; identifying, developing, and securing new Foundation partnerships 
-- Cultivating and growing support from existing corporate donors, including managing the Code.org Employee Engagement program to build corporate pipeline 
+The Grant Writer and Relationship Manager plays an important role in increasing revenue for Code.org, with a focus on grant writing, and stewardship of existing Foundation and Corporate partnerships. The candidate selected for this role will develop compelling proposals that will result in funding for the immediate and long-term goals of Code.org, and also help establish long-term partnerships and strengthen existing relationships with the corporate and foundation sector. Full-time, salaried. Responsibilities of the position include:
+
 - Developing and writing letters of inquiry, grant proposals and reports to foundations, corporations, and other grant-making organizations, persuasively communicating the organization’s mission and programs to potential funders
-- Managing ongoing donor communications, working with marketing team, and overseeing donor stewardship and recognition efforts 
-- Working with Director of Finance & Administration, ensure timely reporting on grant deliverables by managing grants calendar 
-- Working with the Fundraising & Marketing Associate on prospect research, maintaining grant files, database, fundraising materials, donor acknowledgement 
+- Cultivating and growing support from existing Foundation and corporate donors, including managing the Code.org Employee Engagement program to build corporate pipeline
+- Managing ongoing donor communications, working with marketing team, and overseeing donor stewardship and recognition efforts
+- Working with Director of Finance & Administration, ensure timely reporting on grant deliverables by managing grants calendar
+- Working with the Fundraising & Marketing Associate on prospect research, maintaining grant files, database, fundraising materials, donor acknowledgement
 - Coordinating Code.org fundraising events
 - Other duties, as assigned
 

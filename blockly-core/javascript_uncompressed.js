@@ -447,7 +447,7 @@ Blockly.JavaScript.controls_flow_statements = function() {
 };
 Blockly.JavaScript.math = {};
 Blockly.JavaScript.math_number = function() {
-  return[window.parseFloat(this.getTitleValue("NUM")), Blockly.JavaScript.ORDER_ATOMIC]
+  return[window.parseFloat(this.getTitleValue("NUM")) || 0, Blockly.JavaScript.ORDER_ATOMIC]
 };
 Blockly.JavaScript.math_arithmetic = function() {
   var a = this.getTitleValue("OP"), b = Blockly.JavaScript.math_arithmetic.OPERATORS[a], a = b[0], b = b[1], c = Blockly.JavaScript.valueToCode(this, "A", b) || "0", d = Blockly.JavaScript.valueToCode(this, "B", b) || "0";
@@ -702,6 +702,11 @@ Blockly.JavaScript.procedural_to_functional_call = function() {
     b[c] = d || "null"
   }
   return[(Blockly.varsInGlobals ? "Globals." : "") + a + "(" + b.join(", ") + ")", Blockly.JavaScript.ORDER_NONE]
+};
+Blockly.JavaScript.functionalExamples = {};
+Blockly.JavaScript.functional_example = function() {
+  var a = Blockly.JavaScript.valueToCode(this, "EXPECTED", Blockly.JavaScript.ORDER_NONE) || "null", b = Blockly.JavaScript.valueToCode(this, "ACTUAL", Blockly.JavaScript.ORDER_NONE) || "null";
+  return"(" + a + " == " + b + ")"
 };
 Blockly.JavaScript.functionalParameters = {};
 Blockly.JavaScript.functional_parameters_get = function() {

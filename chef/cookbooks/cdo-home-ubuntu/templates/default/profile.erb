@@ -24,3 +24,8 @@ fi
 if [ -d "$HOME/<%= node.chef_environment %>" ] ; then
     PATH="$HOME/<%= node.chef_environment %>/bin:$PATH"
 fi
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+

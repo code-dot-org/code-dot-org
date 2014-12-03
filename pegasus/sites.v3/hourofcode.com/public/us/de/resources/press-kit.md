@@ -1,25 +1,27 @@
 
 
-## Useful stats on computer science
+[<button style="float: right; margin-top: 50px">Melde Deine Veranstaltung an</button>](/#join)
 
-*For all press and media inquiries, contact <press@code.org>*
+## Wie Du Medien auf Deine Hour of Code Veranstaltung aufmerksam machst
+
+*Zu allen Presse- und Medienanfragen, kontaktieren Sie bitte <press@code.org>*
 
 ### Key Tips
 
   * Reach out to media two weeks before your event via email. Follow up by email and phone if you don't receive an initial response.
   * Ask a school staff member or volunteer to take photos to share online or send to press.
-  * Write about the Hour of Code on your website’s homepage and in your school newspaper. Post your event details, and pictures of student activities.
-  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 8-14. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+  * Schreibe über die Hour of Code auf Deiner Website oder Schulzeitung. Veröffentliche die Details der Veranstaltung , lade Fotos hoch und berichte von den Aktivitäten der Schüler.
+  * Nutze Facebook und Twitter, um Neuigkeiten zu Deinen Plänen zu teilen und Veranstaltungen anzukündigen. Lade Fotos zwischen dem 8. und 14. Dezember hoch. Und, nutze den Hashtag **#HourOfCode**, so dass Code.org Deine Veranstaltungen sehen und promoten kann.
 
-### Step-by-step guide:
+### Schritt-für-Schritt-Anleitung:
 
-**1. Plan your event**
+**1. Plane Deine Veranstaltung**
 
   * Plan an assembly to kick off the Hour of Code.
   * Send [a letter](<%= hoc_uri('/resources/#sample-emails') %>) to parents. Ask them to spread the word.
   * Send [a letter](<%= hoc_uri('/resources/#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * Organize group activities (like a demonstration of an ‘unplugged’ programming activity), or show off student-created and led activities.
-  * Show Code.org’s [Hour of Code video](<%= hoc_uri('/') %>) or one of [these](<%= hoc_uri('/resources#videos') %>) to inspire.
+  * Zeige das [Hour of Code Video](<%= hoc_uri('/') %>) oder eines [dieser Videos](<%= hoc_uri('/resources#videos') %>), um Begeisterung hervorzurufen.
 
 **2. Identify specific local reporters that cover education or local events.**
 
@@ -35,7 +37,7 @@ The best way to reach out is by email. It should be short and communicate: why s
 
 *Why is your school doing an Hour of Code?*
 
-While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
+While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. Dieses Ereignis ist eine Chance für uns alle zu sehen, worum es in der Informatik geht.
 
 We hope it’ll spark interest in students to keep learning. Research also shows that kids pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages.
 
@@ -53,3 +55,5 @@ Code.org® is a 501c3 public non-profit dedicated to expanding participation in 
 
   
 Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).
+
+<a style="display: block" href="/#join"><button style="float: right;">Melde Deine Veranstaltung an</button></a>
