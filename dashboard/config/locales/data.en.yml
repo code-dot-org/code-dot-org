@@ -460,3 +460,4 @@ en:
         frozen_circle_function_in_circle_turn: "Don't forget to turn after creating each circle."
         frozen_circle_function_with_parameter_circle: "Use the \"create a circle\" block and change the size."
         frozen_snowflake_branch: "Use the \"create a snowflake branch\" block"
+        frozen_create_square: "Attach more blocks here to create a square"
