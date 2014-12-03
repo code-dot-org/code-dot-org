@@ -219,8 +219,7 @@ Jigsaw.onPuzzleComplete = function() {
   var levelComplete = (Jigsaw.result == BlocklyApps.ResultType.SUCCESS);
 
   Jigsaw.testResults = BlocklyApps.getTestResults(levelComplete, {
-    allowTopBlocks: true,
-    level: level
+    allowTopBlocks: true
   });
 
   if (Jigsaw.testResults >= BlocklyApps.TestResults.FREE_PLAY) {
