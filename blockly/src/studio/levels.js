@@ -493,7 +493,9 @@ levels.playlab_5 = utils.extend(levels.click_hello, {
   background: 'space',
   firstSpriteIndex: 23, // spacebot
   timeoutAfterWhenRun: true,
-  toolbox: tb(blockOfType('studio_saySprite'))
+  toolbox: tb(blockOfType('studio_saySprite')),
+  startBlocks:
+   '<block type="studio_whenSpriteClicked" deletable="false" x="20" y="20"></block>'
 });
 
 levels.octopus_happy =  {
@@ -627,10 +629,10 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
   },
   toolbox:
     tb(
-      blockOfType('studio_move', {DIR: 1}) +
+      blockOfType('studio_move', {DIR: 8}) +
       blockOfType('studio_move', {DIR: 2}) +
-      blockOfType('studio_move', {DIR: 4}) +
-      blockOfType('studio_move', {DIR: 8})
+      blockOfType('studio_move', {DIR: 1}) +
+      blockOfType('studio_move', {DIR: 4})
     ),
   map: [
     [1, 0, 0, 0, 0, 0, 1, 0],
@@ -960,25 +962,26 @@ levels.playlab_8 = {
   ),
   startBlocks:
     '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="20"></block>' +
-    '<block type="studio_whenLeft" deletable="false" x="20" y="150"><next>' +
-      blockOfType('studio_move', { SPRITE: 0, DIR: 8}) +
-    '</next></block>' +
-    '<block type="studio_whenRight" deletable="false" x="20" y="250"><next>' +
-      blockOfType('studio_move', { SPRITE: 0, DIR: 2}) +
-    '</next></block>' +
-    '<block type="studio_whenUp" deletable="false" x="20" y="350"><next>' +
-      blockOfType('studio_move', { SPRITE: 0, DIR: 1}) +
-    '</next></block>' +
-    '<block type="studio_whenDown" deletable="false" x="20" y="450"><next>' +
-      blockOfType('studio_move', { SPRITE: 0, DIR: 4}) +
-    '</next></block>' +
-    '<block type="studio_repeatForever" deletable="false" x="20" y="550">' +
+    '<block type="studio_repeatForever" deletable="false" x="20" y="150">' +
       '<statement name="DO">' +
         blockUtils.blockWithNext('studio_moveDistance', { SPRITE: 1, DIR: 2, DISTANCE: 400},
           blockOfType('studio_moveDistance', { SPRITE: 1, DIR: 8, DISTANCE: 400})
         ) +
       '</statement>' +
-    '</block>'
+    '</block>' +
+    '<block type="studio_whenLeft" deletable="false" x="20" y="300"><next>' +
+      blockOfType('studio_move', { SPRITE: 0, DIR: 8}) +
+    '</next></block>' +
+    '<block type="studio_whenRight" deletable="false" x="20" y="400"><next>' +
+      blockOfType('studio_move', { SPRITE: 0, DIR: 2}) +
+    '</next></block>' +
+    '<block type="studio_whenUp" deletable="false" x="20" y="500"><next>' +
+      blockOfType('studio_move', { SPRITE: 0, DIR: 1}) +
+    '</next></block>' +
+    '<block type="studio_whenDown" deletable="false" x="20" y="600"><next>' +
+      blockOfType('studio_move', { SPRITE: 0, DIR: 4}) +
+    '</next></block>'
+
 };
 
 // Can you add blocks to change the background and the speed of the penguin, and
@@ -1124,40 +1127,40 @@ levels.playlab_9 = {
   minWorkspaceHeight: 1250,
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"></block>' +
-    '<block type="studio_whenLeft" deletable="false" x="20" y="200">' +
-      '<next>' +
-        blockOfType('studio_move', {DIR: 8}) +
-      '</next>' +
-    '</block>' +
-    '<block type="studio_whenRight" deletable="false" x="20" y="330">' +
-      '<next>' +
-        blockOfType('studio_move', {DIR: 2}) +
-      '</next>' +
-    '</block>' +
-    '<block type="studio_whenUp" deletable="false" x="20" y="460">' +
-      '<next>' +
-        blockOfType('studio_move', {DIR: 1}) +
-      '</next>' +
-    '</block>' +
-    '<block type="studio_whenDown" deletable="false" x="20" y="590">' +
-      '<next>' +
-        blockOfType('studio_move', {DIR: 4}) +
-      '</next>' +
-    '</block>' +
-    '<block type="studio_repeatForever" deletable="false" x="20" y="720">' +
+    '<block type="studio_repeatForever" deletable="false" x="20" y="150">' +
       '<statement name="DO">' +
         blockUtils.blockWithNext('studio_moveDistance', {SPRITE: 1, DIR: 1, DISTANCE: 400},
           blockOfType('studio_moveDistance', {SPRITE: 1, DIR: 4, DISTANCE: 400})
         ) +
       '</statement>' +
     '</block>' +
-    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="880">' +
+    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="290">' +
       '<title name="SPRITE2">0</title>' +
       '<title name="SPRITE2">1</title>' +
       '<next>' +
         blockUtils.blockWithNext('studio_playSound', {SOUND: 'winpoint2'},
           blockOfType('studio_saySprite', {TEXT: msg.alienInvasion()})
         ) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenLeft" deletable="false" x="20" y="410">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 8}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenRight" deletable="false" x="20" y="510">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 2}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenUp" deletable="false" x="20" y="610">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 1}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenDown" deletable="false" x="20" y="710">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 4}) +
       '</next>' +
     '</block>'
 };
