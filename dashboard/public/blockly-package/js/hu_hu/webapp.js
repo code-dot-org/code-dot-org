@@ -3129,7 +3129,7 @@ exports.getTestResults = function(levelComplete, options) {
     if (hasUnusedParam()) {
       return TestResults.UNUSED_PARAM;
     }
-    if (options.level && hasUnusedFunction(options.level.startBlocks)) {
+    if (hasUnusedFunction()) {
       return TestResults.UNUSED_FUNCTION;
     }
     if (hasParamInputUnattached()) {
@@ -3289,36 +3289,19 @@ function hasParamInputUnattached() {
 /**
  * Ensure that all user-declared procedures have associated call blocks.
  */
-function hasUnusedFunction(startBlocks) {
-  if (!startBlocks) {
-    return;
-  }
-  var element = xml.parseElement(startBlocks);
-  // Fix `grunt test` for now
-  if (!element.querySelectorAll) {
-    return;
-  }
-  var defBlocks = element.querySelectorAll(
-      '[type=procedures_defreturn],[type=procedures_defnoreturn]');
-  var startDefs = {};
-  Array.prototype.forEach.call(defBlocks, function(procedure) {
-    startDefs[procedure.querySelector('title[name=NAME]').textContent] = true;
-  });
-
+function hasUnusedFunction() {
   var userDefs = [];
-  var userCalls = [];
+  var callBlocks = {};
   Blockly.mainBlockSpace.getAllBlocks().forEach(function (block) {
     var name = block.getTitleValue('NAME');
-    if (!startDefs[name]) {
-      if (/^procedures_def/.test(block.type)) {
-        userDefs.add(name);
-      } else if (/^procedures_call/.test(block.type)) {
-        userCalls.add(name);
-      }
+    if (/^procedures_def/.test(block.type) && block.userCreated) {
+      userDefs.push(name);
+    } else if (/^procedures_call/.test(block.type)) {
+      callBlocks[name] = true;
     }
   });
-
-  return _.difference(userDefs, userCalls).length !== 0;
+  // Unused function if some user def doesn't have a matching call
+  return userDefs.some(function(name) { return !callBlocks[name]; });
 }
 
 /**
@@ -11027,9 +11010,7 @@ Webapp.onPuzzleComplete = function() {
     Webapp.testResults = BlocklyApps.TestResults.FREE_PLAY;
   } else {
     var levelComplete = (Webapp.result === BlocklyApps.ResultType.SUCCESS);
-    Webapp.testResults = BlocklyApps.getTestResults(levelComplete, {
-      level: level
-    });
+    Webapp.testResults = BlocklyApps.getTestResults(levelComplete);
   }
 
   if (Webapp.testResults >= BlocklyApps.TestResults.FREE_PLAY) {
