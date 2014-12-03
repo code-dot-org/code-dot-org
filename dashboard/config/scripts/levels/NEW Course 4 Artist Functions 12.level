@@ -6,14 +6,14 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you create a new function called \"draw a line of squares\" function?",
+    "instructions": "Use the \"draw a line of squares\" function from the last puzzle to draw this pattern.\"",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "start_direction": "90",
     "x": "75",
-    "y": "250",
+    "y": "300",
     "free_play": "false",
     "impressive": "false",
     "slider_speed": ".5",
@@ -27,10 +27,120 @@
     <start_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false"/>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation>
+            <description>draw a line of squares </description>
+          </mutation>
+          <title name="NAME">draw a line of squares</title>
+          <statement name="STACK">
+            <block type="controls_repeat_ext" inline="true" uservisible="false">
+              <value name="TIMES">
+                <block type="math_number" uservisible="false">
+                  <title name="NUM">6</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="controls_repeat_ext" inline="true" uservisible="false">
+                  <value name="TIMES">
+                    <block type="math_number" uservisible="false">
+                      <title name="NUM">4</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="draw_move" inline="true" uservisible="false">
+                      <title name="DIR">moveForward</title>
+                      <value name="VALUE">
+                        <block type="math_number" uservisible="false">
+                          <title name="NUM">40</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="draw_turn" inline="true" uservisible="false">
+                          <title name="DIR">turnLeft</title>
+                          <value name="VALUE">
+                            <block type="math_number" uservisible="false">
+                              <title name="NUM">90</title>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="draw_move" inline="true" uservisible="false">
+                      <title name="DIR">moveForward</title>
+                      <value name="VALUE">
+                        <block type="math_number" uservisible="false">
+                          <title name="NUM">40</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>
       <xml>
+        <category name="Default">
+          <block type="procedures_defnoreturn" movable="false">
+            <mutation>
+              <description>draw a line of squares</description>
+            </mutation>
+            <title name="NAME">draw a line of squares</title>
+            <statement name="STACK">
+              <block type="controls_repeat_ext" inline="true">
+                <value name="TIMES">
+                  <block type="math_number">
+                    <title name="NUM">6</title>
+                  </block>
+                </value>
+                <statement name="DO">
+                  <block type="controls_repeat_ext" inline="true">
+                    <value name="TIMES">
+                      <block type="math_number">
+                        <title name="NUM">4</title>
+                      </block>
+                    </value>
+                    <statement name="DO">
+                      <block type="draw_move" inline="true">
+                        <title name="DIR">moveForward</title>
+                        <value name="VALUE">
+                          <block type="math_number">
+                            <title name="NUM">40</title>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="draw_turn" inline="true">
+                            <title name="DIR">turnLeft</title>
+                            <value name="VALUE">
+                              <block type="math_number">
+                                <title name="NUM">90</title>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="draw_move" inline="true">
+                        <title name="DIR">moveForward</title>
+                        <value name="VALUE">
+                          <block type="math_number">
+                            <title name="NUM">40</title>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </statement>
+          </block>
+        </category>
         <category name="Actions">
           <block type="draw_move" inline="true">
             <title name="DIR">moveForward</title>
@@ -79,7 +189,11 @@
             <title name="NUM">0</title>
           </block>
         </category>
-        <category name="Functions" custom="PROCEDURE"/>
+        <category name="Functions" custom="PROCEDURE">
+          <block type="procedures_callnoreturn">
+            <mutation name="draw a line of squares"/>
+          </block>
+        </category>
       </xml>
     </toolbox_blocks>
     <required_blocks>
@@ -134,8 +248,27 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="procedures_callnoreturn">
-              <mutation name="Draw Square Line"/>
+            <block type="controls_repeat_ext" inline="true">
+              <value name="TIMES">
+                <block type="math_number">
+                  <title name="NUM">4</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="procedures_callnoreturn">
+                  <mutation name="Draw Square Line"/>
+                  <next>
+                    <block type="draw_turn" inline="true">
+                      <title name="DIR">turnLeft</title>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">90</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </statement>
             </block>
           </next>
         </block>

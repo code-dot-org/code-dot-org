@@ -21,6 +21,7 @@ class LevelSourcesController < ApplicationController
 
 
   def generate_image
+    expires_in 10.hours, :public => true # cache
     if @game.app == Game::ARTIST then
       framed_image(@level.skin)
     else
@@ -41,6 +42,7 @@ class LevelSourcesController < ApplicationController
   end
 
   def original_image
+    expires_in 10.hours, :public => true # cache
     send_data @level_source.level_source_image.image, :stream => 'false', :type => 'image/png', :disposition => 'inline'
   end
 

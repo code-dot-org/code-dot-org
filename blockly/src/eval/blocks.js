@@ -169,6 +169,17 @@ exports.install = function(blockly, blockInstallOptions) {
   });
 
   installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'offset',
+    blockTitle: msg.offsetBlockTitle(),
+    apiName: 'offset',
+    args: [
+      { name: 'X', type: 'Number' },
+      { name: 'Y', type: 'Number' },
+      { name: 'IMAGE', type: 'image' }
+    ]
+  });
+
+  installFunctionalBlock(blockly, generator, gensym, {
     blockName: 'rotate',
     blockTitle: msg.rotateImageBlockTitle(),
     apiName: 'rotateImage',

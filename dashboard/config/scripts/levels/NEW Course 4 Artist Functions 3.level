@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Here is a new type of Block. It is called a \"Function block.\" Click on \"RUN\" to see what it can do. ",
+    "instructions": "Here is a new type of Block. It is called a \"Function block.\" Click \"Run\" to see what it can do. ",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

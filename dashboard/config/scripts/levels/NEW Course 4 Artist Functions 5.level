@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "How did the \"draw a square\" block know what commands to run? Click on \"edit\" in the \"draw a square\" function block. The blocks in the function editor are the commands that make up \"draw a square.\" When you're done looking around, click \"Save and Close\" in the upper right hand corner. Click on \"Run\" when you're ready to move to the next level. ",
+    "instructions": "How did the \"draw a square\" block know what commands to run? Click on \"edit\" in the \"draw a square\" function block. The blocks in the function editor are the definition that make up \"draw a square.\" When you're done looking around, click \"Save and Close.\" Click on \"Run\" when you're ready to move to the next level. ",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
