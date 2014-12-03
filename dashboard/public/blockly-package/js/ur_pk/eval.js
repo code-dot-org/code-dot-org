@@ -5036,6 +5036,7 @@ exports.TestResults = {
   UNUSED_FUNCTION: 14,           // Function declared but not used in workspace.
   PARAM_INPUT_UNATTACHED: 15,    // Function not called with enough params.
   INCOMPLETE_BLOCK_IN_FUNCTION: 16, // Incomplete block inside a function.
+  QUESTION_MARKS_IN_NUMBER_FIELD: 17, // Block has ??? instead of a value.
 
   // The level was solved in a non-optimal way.  User may advance or retry.
   TOO_MANY_BLOCKS_FAIL: 20,   // More than the ideal number of blocks were used.
@@ -5226,8 +5227,13 @@ exports.text = function (text, fontSize, color) {
   return new EvalText(text, fontSize, color);
 };
 
-exports.star = function (radius, fontSize, color) {
-  return new EvalStar(radius, fontSize, color);
+exports.star = function (radius, style, color) {
+  var innerRadius = (3 - Math.sqrt(5)) / 2 * radius;
+  return new EvalStar(5, innerRadius, radius, style, color);
+};
+
+exports.radialStar = function (points, inner, outer, style, color) {
+  return new EvalStar(points, inner, outer, style, color);
 };
 
 exports.placeImage = function (x, y, image) {
@@ -5404,6 +5410,19 @@ exports.install = function(blockly, blockInstallOptions) {
     apiName: 'star',
     args: [
       { name: 'SIZE', type: 'Number' },
+      { name: 'STYLE', type: 'string' },
+      { name: 'COLOR', type: 'string' }
+    ]
+  });
+
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'functional_radial_star',
+    blockTitle: msg.radialStarBlockTitle(),
+    apiName: 'radialStar',
+    args: [
+      { name: 'POINTS', type: 'Number' },
+      { name: 'INNER', type: 'Number' },
+      { name: 'OUTER', type: 'Number' },
       { name: 'STYLE', type: 'string' },
       { name: 'COLOR', type: 'string' }
     ]
@@ -6009,7 +6028,7 @@ EvalImage.prototype.place = function (x, y) {
 };
 
 EvalImage.prototype.rotate = function (degrees) {
-  this.rotation_ = degrees;
+  this.rotation_ += degrees;
 };
 
 EvalImage.prototype.scale = function (scaleX, scaleY) {
@@ -6099,14 +6118,18 @@ EvalRect.prototype.draw = function (parent) {
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
-var EvalStar = function (radius, style, color) {
-  evalUtils.ensureNumber(radius);
+var EvalStar = function (pointCount, inner, outer, style, color) {
+  evalUtils.ensureNumber(pointCount);
+  evalUtils.ensureNumber(inner);
+  evalUtils.ensureNumber(outer);
   evalUtils.ensureString(style);
   evalUtils.ensureString(color);
 
   EvalImage.apply(this, [style, color]);
 
-  this.radius_ = radius;
+  this.outer_ = outer;
+  this.inner_ = inner;
+  this.pointCount_ = pointCount;
 
   this.element_ = null;
 };
@@ -6120,10 +6143,10 @@ EvalStar.prototype.draw = function (parent) {
   }
 
   var points = [];
-  var outerRadius = this.radius_;
-  var innerRadius = (3 - Math.sqrt(5)) / 2 * outerRadius;
+  var outerRadius = this.outer_;
+  var innerRadius = this.inner_;
 
-  var angleDelta = 2 * Math.PI / 5;
+  var angleDelta = 2 * Math.PI / this.pointCount_;
   for (var angle = 0; angle < 2 * Math.PI; angle += angleDelta) {
     points.push(outerRadius * Math.cos(angle) + "," + outerRadius * Math.sin(angle));
     points.push(innerRadius * Math.cos(angle + angleDelta / 2) + "," +
@@ -6131,6 +6154,9 @@ EvalStar.prototype.draw = function (parent) {
   }
 
   this.element_.setAttribute('points', points.join(' '));
+  if (this.pointCount_ % 2 == 1) {
+    this.rotate(-90 / this.pointCount_);
+  }
 
   EvalImage.prototype.draw.apply(this, arguments);
 };
@@ -6311,6 +6337,7 @@ module.exports = {
       blockUtils.blockOfType('functional_rectangle') +
       blockUtils.blockOfType('functional_ellipse') +
       blockUtils.blockOfType('functional_star') +
+      blockUtils.blockOfType('functional_radial_star') +
       blockUtils.blockOfType('place_image') +
       blockUtils.blockOfType('offset') +
       blockUtils.blockOfType('overlay') +
@@ -6749,6 +6776,9 @@ var getFeedbackMessage = function(options) {
         break;
       case TestResults.INCOMPLETE_BLOCK_IN_FUNCTION:
         message = msg.errorIncompleteBlockInFunction();
+        break;
+      case TestResults.QUESTION_MARKS_IN_NUMBER_FIELD:
+        message = msg.errorQuestionMarksInNumberField();
         break;
       case TestResults.TOO_MANY_BLOCKS_FAIL:
         message = msg.numBlocksNeeded({
@@ -7319,6 +7349,9 @@ exports.getTestResults = function(levelComplete, options) {
       return TestResults.INCOMPLETE_BLOCK_IN_FUNCTION;
     }
   }
+  if (hasQuestionMarksInNumberField()) {
+    return TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
+  }
   if (!hasAllRequiredBlocks()) {
     return levelComplete ? TestResults.MISSING_BLOCK_FINISHED :
       TestResults.MISSING_BLOCK_UNFINISHED;
@@ -7428,6 +7461,17 @@ var generateXMLForBlocks = function(blocks) {
   }
   return blockXMLStrings.join('');
 };
+
+/**
+ * Check for '???' instead of a value in block fields.
+ */
+function hasQuestionMarksInNumberField() {
+  return Blockly.mainBlockSpace.getAllBlocks().some(function(block) {
+    return block.getTitles().some(function(title) {
+      return title.value_ === '???';
+    });
+  });
+}
 
 /**
  * Ensure that all procedure definitions actually use the parameters they define
@@ -14377,6 +14421,8 @@ exports.errorRequiredParamsMissing = function(d){return "Create a parameter for 
 
 exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
 
+exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+
 exports.extraTopBlocks = function(d){return "You have extra blocks that aren't attached to an event block."};
 
 exports.finalStage = function(d){return "Congratulations! You have completed the final stage."};
@@ -14527,6 +14573,8 @@ exports.scaleImageBlockTitle = function(d){return "scale (factor)"};
 exports.squareBlockTitle = function(d){return "square (size, style, color)"};
 
 exports.starBlockTitle = function(d){return "star (radius, style, color)"};
+
+exports.radialStarBlockTitle = function(d){return "radial-star (points, inner, outer, style, color)"};
 
 exports.stringAppendBlockTitle = function(d){return "string-append (first, second)"};
 
