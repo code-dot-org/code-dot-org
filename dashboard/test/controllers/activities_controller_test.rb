@@ -90,10 +90,11 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     @controller.expects(:trophy_check).with(@user)
 
+    UserScript.create(user: @user, script: @script_level.script)
     UserLevel.create(level: @script_level.level, user: @user)
 
-    assert_creates(LevelSource, Activity, UserScript) do
-      assert_does_not_create(GalleryActivity, UserLevel) do
+    assert_creates(LevelSource, Activity) do
+      assert_does_not_create(GalleryActivity, UserLevel, UserScript) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
           post :milestone, @milestone_params
         end
@@ -111,10 +112,11 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     @controller.expects(:trophy_check).with(@user)
 
+    UserScript.create(user: @user, script: @script_level.script)
     UserLevel.create(level: @script_level.level, user: @user, script: @script_level.script)
 
-    assert_creates(LevelSource, Activity, UserScript) do
-      assert_does_not_create(GalleryActivity, UserLevel) do
+    assert_creates(LevelSource, Activity) do
+      assert_does_not_create(GalleryActivity, UserLevel, UserScript) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
           post :milestone, @milestone_params
         end
@@ -177,7 +179,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_creates(LevelSource, Activity, UserLevel, UserScript) do
       assert_does_not_create(GalleryActivity) do
         assert_no_difference('@user.reload.total_lines') do # update total lines
-          post :milestone, user_id: @user, script_level_id: @script_level, :lines => -20, :attempt => "1", :result => "true", :testResult => "100", :time => "1000", :app => "test", :program => "<hey>"
+          post :milestone, @milestone_params.merge(lines: -20)
         end
       end
     end
@@ -211,7 +213,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_creates(LevelSource, Activity, UserLevel, UserScript) do
       assert_does_not_create(GalleryActivity) do
         assert_difference('@user.reload.total_lines', 1000) do # update total lines
-          post :milestone, user_id: @user, script_level_id: @script_level, :lines => 9999999, :attempt => "1", :result => "true", :testResult => "100", :time => "1000", :app => "test", :program => "<hey>"
+          post :milestone, @milestone_params.merge(lines: 9999999)
         end
       end
     end
@@ -243,7 +245,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_creates(LevelSource) do
       assert_does_not_create(Activity, UserLevel, LevelSourceImage, GalleryActivity) do
-        post :milestone, user_id: 0, script_level_id: @script_level, :lines => "9999999", :attempt => "1", :result => "true", :testResult => "100", :time => "1000", :app => "test", :program => "<hey>", :save_to_gallery => 'true'
+          post :milestone, @milestone_params.merge(user_id: 0, lines: 9999999)
       end
     end
 
