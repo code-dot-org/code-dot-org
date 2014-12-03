@@ -1,14 +1,16 @@
 
 
-## Useful stats on computer science
+[<button style="float: right; margin-top: 50px">Přihlaste svoji událost</button>](/#join)
 
-*For all press and media inquiries, contact <press@code.org>*
+## Jak přilákat média na Vaší Hodinu Kódu
 
-### Key Tips
+*Pro všechny tiskové a mediální dotazy se obraťte na <press@code.org>*
 
-  * Reach out to media two weeks before your event via email. Follow up by email and phone if you don't receive an initial response.
-  * Ask a school staff member or volunteer to take photos to share online or send to press.
-  * Write about the Hour of Code on your website’s homepage and in your school newspaper. Post your event details, and pictures of student activities.
+### Důležité tipy
+
+  * Oslovte média dva týdny před událostí prostřednictvím e-mailu. Zkuste to znovu e-mailem a telefonicky, pokud nedostanete prvotní odpověď.
+  * Požádejte zaměstnance školy nebo dobrovolníky, aby fotili a sdíleli fotky online nebo je poslali do tisku.
+  * Napište o Hodině kódu na domovské stránce vašich webových stránek a ve školních novinách. Pošlete podrobnosti o vaší akci a fotky ze žákovských aktivit.
   * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 8-14. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### Step-by-step guide:
@@ -53,3 +55,5 @@ Code.org® is a 501c3 public non-profit dedicated to expanding participation in 
 
   
 Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).
+
+<a style="display: block" href="/#join"><button style="float: right;">Přihlaste svoji událost</button></a>

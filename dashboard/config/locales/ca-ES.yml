@@ -2,37 +2,34 @@
   activerecord:
     errors:
       messages:
-        blank: is required
+        blank: "és obligatori"
     attributes:
       user:
-        name: Nom
+        name: Mostra el nom
         email: Correu electrònic
         username: nom d'usuari
         password: contrasenya
         password_confirmation: Confirma la contrasenya
         current_password: Contrasenya actual
         locale: Llengua
-        age: Age
+        age: Edat
         gender: Sexe
         edit_header: Edita les dades del compte
         error:
-          future: can't be in the future
+          future: no pot ser en el futur
   hello: Hola Món
   welcome_back: Benvingut de nou, %{name}
   add_teacher_form:
-    code_or_email:
-      label: 'Afegeix un mestre per codi o per correu electrònic:'
-      placeholder: Codi (ABCDEF) o correu electrònic (teacher@school.edu)
     code:
-      label: 'Add a teacher by section code:'
-      placeholder: Code (ABCDEF)
+      label: 'Afegir un professor:'
+      placeholder: Secció codi (ABCDEF)
     submit: Afegeix un professor
   add_hint_form:
-    placeholder: Please enter your hint here
+    placeholder: Si us plau introdueix la teva pista aquí
     submit: Afegeix pista
   appname: Code.org
   stage: etapa
-  stage_number: Stage %{number}
+  stage_number: Etapa %{number}
   puzzle: Puzzle
   trophies: trofeus
   courses: cursos
@@ -40,9 +37,9 @@
   more: MÉS
   less: MENYS
   try_hoc: 'Prova l''Hora de Codi, fes clic aquí >> '
-  try_k8intro: O prova el nostre curs d'introducció a la Informàtica per a K-8 (15-25
-    hores)
-  k8intro: K-8 Intro to Computer Science Course (15-25 hours)
+  try_k8intro: O prova el nostre curs d'introducció a la Informàtica per a secundària
+    (15-25 hores)
+  k8intro: Introducció al curs d'informàtica de secundària (15-25 hores)
   already_started: 'Ja has començat? Continua aquí >> '
   demos: 'Admin: Totes les demos'
   continue: Continuar
@@ -51,22 +48,26 @@
   auth:
     sign_in_with: Registra't amb %{provider}
     signed_in: Registrat!
-    signed_out: You have signed out of <a href="%{url}">Code.org</a>.
+    signed_out: Has tancat sessió de <a href="%{url}"> Code.org</a>.
     sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
       to sign out of %{provider}.
     already_signedup: Ja t'has registrat?
     notyet_signedup: No t'has unit encara?
-    google_oauth2: Google Account
+    google_oauth2: Compte de Google
     twitter: Twitter
     facebook: Facebook
-    windowslive: Microsoft Account
+    windowslive: Compte de Microsoft
     forgot_password: Has oblidat la constrasenya?
     need_confirmation: No has rebut les instruccions de confirmació?
     need_unlock: No has rebut les instruccions de desbloqueig?
   signup_form:
-    overview_student: Sign up for an account to track your progress.
-    overview_teacher: Teach computer science in your classroom by signing up for an
-      account.<p/> You'll be able to track your students' progress and get rewards.
+    overview_student: Inscrigui's per a obtenir un compte per al seguiment del seu
+      progrés. El seu e-mail s'utilitza principalment per permetre que iniciï la sessió
+      i per a la recuperació de la contrasenya. Per obtenir més informació, vegeu
+      la nostra <a href="http://code.org/privacy"> Política de privacitat</a>.
+    overview_teacher: Ensenya informàtica a la teva classe inscrivint-vos per a un
+      compte.<p/>Sereu capaços d'afegir els vostres estudiants i fer un seguiment
+      del seu progrés.
     no_signup_message: Pots <a target="_blank" href="http://learn.code.org">navegar
       pels diversos puzzles i nivells</a>, però necessitaràs registrar-te per a desar
       el teu progrés.
@@ -80,10 +81,10 @@
     address_placeholder: adreça, ciutat, estat, zip
     gender: Sexe (opcional)
     birthday: Aniversari (opcional)
-    age: Age (optional)
-    user_type: Are you a student or teacher?
+    age: Edat
+    user_type: Ets un estudiant o un mestre?
     submit: Inscriure's
-    teacher: És vostè un professor?
+    teacher: "És vostè un professor?"
     valid_username: Disponible!
     invalid_username: El nom d'usuari ha de tenir almenys 5 caràcters
     taken_username: El nom d'usuari ja existeix
@@ -94,8 +95,8 @@
       13 anys, confirm mitjançant aquesta presentació que tenc el permís dels meus
       pares o tutors legals per utilitzar els serveis de Code.org.
     teacher_terms: Estic d'acord en estar obligat pels termes de servei de Code.org.
-    additional_information: We need some additional information to continue signing
-      you up.
+    additional_information: Necessitem alguna informació addicional per continuar
+      la vostra inscripció.
   signin_form:
     title: Ja tens un compte? Entra
     login: E-mail o nom d'usuari
@@ -105,12 +106,12 @@
   signin:
     try_heading: Vols provar a programar sense donar-te d'alta?
     try_hoc: Prova una Hora de Codi primer
-    try_20hours: Try our 20 hour Intro to Computer Science
+    try_20hours: Proveu la nostra introducció a la informàtica de 20 hores
   signinsection:
-    welcome: Welcome to %{section_name}
-    name: Choose your name
-    picture: Now find your secret picture
-    words: Now enter your secret words
+    welcome: Benvinguts a %{section_name}
+    name: Escull el teu nom
+    picture: Ara busca la teva foto secreta
+    words: Ara Introdueixi les paraules secretes
     login: Inicia la sessió
   password:
     reset_form:
@@ -139,22 +140,21 @@
     error:
       signed_in: Tanca la sessió abans de continuar
       username_not_found: Usuari %{username} no trobat
-      username_in_use: '%{username} ja existeix, tria''n un altre'
+      username_in_use: "%{username} ja existeix, tria'n un altre"
       no_teacher: No s'ha trobat ningú registrat amb '%{teacher_email_or_code}'. Si
         us plau, demana'ls que es registrin aquí i després, prova a afegir-los una
         altra vegada
-      section_not_found: Could not find a section with code '%{section_code}'.
-      blank_code: Please enter a code or your teacher's email address
-      cant_join_own_section: Sorry, you can't join your own section.
+      section_not_found: No podria trobar un apartat amb el codi "%{section_code}".
+      blank_code: Si us plau, introduïu un codi de secció
+      cant_join_own_section: Ho sento, no pots unir-te a la teva pròpia secció.
     mail:
       invite_student:
         subject: Uneix-te a una classe amb %{teacher_name} en Code.org!
       student_disassociated:
-        subject: 'Code.org notification: %{student_name} is no longer associated as
-          your student.'
+        subject: 'Notificació Code.org: ja no s''associa com el seu estudiant %{student_name}.'
       teacher_disassociated:
-        subject: 'Code.org notification: %{teacher_name} is no longer associated as
-          your teacher.'
+        subject: 'Notificació Code.org: %{teacher_name} ja no s''associa com el seu
+          mestre.'
   reports:
     error:
       access_denied: No pots accedir a les estadístiques d'aquesta persona
@@ -163,16 +163,17 @@
     provider: 'Proveïdor:'
     code: 'Codi:'
     redeem_header: 'Per a reclamar-lo:'
-    donorschoose_register: Register as a teacher on DonorsChoose.org
-    donorschoose_project: Post a project
-    donorschoose_how_to: How to use your code
+    donorschoose_register: Registrar-se com a professor a DonorsChoose.org
+    donorschoose_project: Publica un projecte
+    donorschoose_how_to: Com utilitzar el teu codi
     success: El seu premi ha estat correctament canviat, vegeu codi sota.
     error: El seu premi no podia ser canviat, intenteu-ho novament.
     error_us_only: L'oferta de premis només és vàlida per als usuaris dels EUA.
-    error_not_earned: You have not yet earned this prize.
+    error_not_earned: Encara no has guanyat aquest premi.
     error_already_redeemed: Your prize has already been redeemed.
-    no_prizes_available: We're sorry, but we currently have no prizes available.
-    teacher_info_required: 'Teacher prizes require school name and address information:'
+    no_prizes_available: Ens sap greu, però actualment tenim cap premi disponible.
+    teacher_info_required: 'Els premis pels mestres requereixen el nom i l''adreça
+      de l''escola:'
     teacher_email_required: 'Teacher prizes require a confirmed email address:'
     confirm:
       title: Si us plau, confirmar
@@ -240,19 +241,19 @@
     destroy: Destrueix
     back: Torna
     confirm: Estàs segur?
-    created: '%{model} s''ha creat correctament.'
-    updated: '%{model} s''ha actualitzat correctament.'
-    destroyed: '%{model} s''ha esborrat correctament.'
+    created: "%{model} s'ha creat correctament."
+    updated: "%{model} s'ha actualitzat correctament."
+    destroyed: "%{model} s'ha esborrat correctament."
     access_denied: No tens accés a aquest %{model}.
   nav:
     header:
       finished_hoc: He acabat la meva Hora de Codi
       sign_in_to_save: Inicia la sessió per a desar el progrés
       free_play:
-        playlab: Make an App
-        artist: Draw Something
+        playlab: Fes un App
+        artist: Dibuixa alguna cosa
     user:
-      classroom: Els meus alumnes
+      classroom: Pàgina d'inici de mestre
       label: Hola %{username}
       stats: El meu progrés
       settings: El meu compte
@@ -260,7 +261,7 @@
       logout: Tanca la sessió
       signin: Inicia la sessió
       signup: Inscriure's
-      already_registered: Already registered?
+      already_registered: Ja està registrat?
     popup:
       progress: El teu progrés
       lines: 'Línies totals de codi: %{lines}'
@@ -269,13 +270,13 @@
       puzzle_map: Etapes
       prizes: Recull els %{total_trophies} trofeus i guanya premis!
       prize_earned: Has agafat els %{total_trophies} trofeus. El premi és teu!
-      prize_us_only: (només estudiants EUA)
+      prize_us_only: "(només estudiants EUA)"
       prizes_link: Més informació
   teacher:
     title:
       one: 'El teu professor:'
       other: 'Els teus mestres:'
-    remove: (eliminar professor)
+    remove: "(eliminar professor)"
     confirm:
       remove: Are you sure you want to remove this teacher?
     tools: Eines del mestre
@@ -283,66 +284,66 @@
       section: 'Section:'
       stages: 'Stage(s) to display:'
       show_past: 'Show student activity (%{bullet_html}) in the past:'
-      levels_key: Levels key
-      perfect: Completed, perfect
-      completed: Completed, but using too many blocks
-      tried: Tried, but not completed
-      not_tried: Not tried yet
+      levels_key: Nivells clau
+      perfect: completat, perfecte
+      completed: Completat, però amb massa blocs
+      tried: Provat, però no acabat
+      not_tried: No provat encara
       activity: Indicates student activity in the last %{hours} %{plural}
-      no_section: No assigned section
+      no_section: Cap secció assignada
       trophies: trofeus
     students:
       name: Nom
       username: nom d'usuari
       password: contrasenya
       manage: Gestiona els estudiants
-      dashboard: Go to Teacher Dashboard
+      dashboard: Anar a l'escriptori del Mestre
       add: Afegeix estudiants
-      remove: remove student
-      confirm_remove: Are you sure you want to remove this student?
-      help_reassign: To divide your class into multiple sections, select students
-        to assign to a new section.
+      remove: borrar alumne
+      confirm_remove: Segur que voleu esborrar aquest alumne?
+      help_reassign: Per dividir la classe en seccions múltiples, selecciona estudiants
+        per assignar a una nova secció.
       help_register: Instead of making you spend a lot of time individually importing
         student data, you can set up your class quickly by asking them to signup.
         Your students will need to choose usernames and passwords, but they WILL NOT
         be required to provide an email address. If a student forgets their password,
         you will be able to reset it for them.
-      register: Ask your students to register themselves
-      vist: Ask your students to visit
+      register: Demana als alumnes que es registrin ells mateixos
+      vist: Demana als estudiants que visitin
       section_code: 'and enter their section-code:'
-      first_please: First, please %{add_section}
-      for: For
-      enter: 'enter:'
+      first_please: En primer lloc, si us plau %{add_section}
+      for: per a
+      enter: 'Introduïu:'
     sections:
-      add: Add section
-      manage: Manage sections
-      section: Section
-      students: Students
+      add: Afegeix una secció
+      manage: Gestiona les seccions
+      section: Secció
+      students: Estudiants
       section_code: Section Code
       add_section_code: Add Students Section-Code
       secret: Secret type
-      grade: Grade
-      course: Course
-      rename: rename
-      edit: edit
-      delete: delete
-      confirm_delete: Are you sure you want to delete this section?
-      email: Send in email
+      grade: Qualificació
+      course: Curs
+      rename: Canvia el nom
+      edit: editar
+      delete: suprimir
+      confirm_delete: Esteu segur que voleu suprimir aquesta secció?
+      email: Enviar al correu electrònic
     rollup: Quadre de progrés
     activity: Activitat recent de la classe
     user_not_found: The teacher or student could not be found
-    cant_remove_student_no_email: '%{student_name} cannot be removed as your student
-      because %{student_name} has not registered an e-mail address'
-    cant_remove_teacher_no_email: '%{teacher_name} cannot be removed as your teacher
-      because you have not registered an e-mail address'
-    student_teacher_disassociated: '%{teacher_name} has been removed as a teacher
-      for %{student_name}'
+    cant_remove_student_no_email: "%{student_name} cannot be removed as your student
+      because %{student_name} has not registered an e-mail address"
+    cant_remove_teacher_no_email: "%{teacher_name} cannot be removed as your teacher
+      because you have not registered an e-mail address"
+    student_teacher_disassociated: "%{teacher_name} has been removed as a teacher
+      for %{student_name}"
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_resend_confirm: Torna a enviar les instruccions de confirmació
-    new_password_hint: (deixa-ho en blanc si no vols canviar-lo)
-    current_password_hint: (necessitem la teva contrasenya actual per a confirmar
-      els canvis)
+    new_password_hint: "(deixa-ho en blanc si no vols canviar-lo)"
+    current_password_hint: "(necessitem la teva contrasenya actual per a confirmar
+      els canvis)"
     cancel:
       title: Cancel·la el meu compte
       hint: Insatisfet?
@@ -353,14 +354,14 @@
   user_stats:
     recent_activity: Activitat recent
     show_more: Mostra més
-    classroom_activity: Unplugged Activity
+    classroom_activity: Activitat sense connexió
   home:
     title: Code Studio
-    all_courses: Overview of Courses 1, 2, and 3
-    lesson_plans: Lesson plans
-    signin_message: O si ja estàs registrat, %{link}
-    student_reg_link: Estudiant
-    teacher_reg_link: Mestre
+    all_courses: Informació general dels cursos 1, 2 i 3
+    lesson_plans: Plans de lliçons
+    signin_message: Ja està registrat? %{link}
+    student_reg_link: Estudiant registra't
+    teacher_reg_link: Mestre registra't
     signin_directions: Use an account to track progress and get rewards.<br/> Teachers,
       track your entire class.
     teacher_dashboard: Ves al quadre de progrés
@@ -385,42 +386,40 @@
     prize_info: 'Prizes for participation (U.S. only): $10 gift cards for student
       completion and up to $1,000 in classroom rewards for public school teachers'
     tryfirst: 'Or, you can try it first, and sign up later:'
-    trynow: Try now
+    trynow: Intenta-ho ara
     add_hint_help: Please help us to add smart hints to Code.org tutorials
     20hour_overview: Aquest curs de 20 hores és una introducció als conceptes bàsics
       d'informàtica i programació. El curs ha estat dissenyat per impartir a alumnes
       de 1er d'ESO, però és divertit d'aprendre a qualsevol edat.
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
-    use_as_teacher: Use this site as a teacher
-    heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
-    heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
-    heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
-    gallery:
-      your_turtle: My Art
-      your_studio: My Apps
+    use_as_teacher: Utilitzeu aquest lloc com a professor
+    heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
+    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
+    heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    your_gallery: Galeria
   gender:
     male: Home
     female: Dona
     none: Prefereixo no respondre
   user_type:
     student: estudiant
-    teacher: Teacher
+    teacher: Mestre
   footer:
     help_from_html: Enginyers de <a href="http://www.google.com">Google</a>, <a href="http://www.microsoft.com">Microsoft</a>,
       <a href="http://www.facebook.com">Facebook</a>, and <a href="http://www.twitter.com">Twitter</a>
       van ajudar a crear aquest tutorial.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 <a href="http://www.rovio.com">Rovio
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 <a href="http://www.rovio.com">Rovio
       Entertainment Ltd</a>. Tots els drets reservats.<br/> Plants vs. Zombies&trade;
       & &copy; 2013 <a href="http://www.ea.com">Electronic Arts Inc.</a>. Tots els
       drets reservats.
     feedback: Proporcionar comentari
     translate: Ajuda'ns a traduir al teu idioma
-    support: Support
+    support: Suport
     support_url: http://support.code.org
-    tos: Condicions del servei
+    tos: Condicions
     privacy: Política de Privacitat
-    secure: Secure Version
+    secure: Versió segura
   reference_area:
     title: Necessites ajuda?
     subtitle: Mira aquests vídeos i consells
@@ -442,7 +441,7 @@
         issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
         any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade
         your browser to a supported version</a>.
-      hide_this_warning: Hide this warning
+      hide_this_warning: Amaga aquest avís
     upgrade:
       header: Si us plau, actualitza el teu navegador.
       message: Code.org uses modern web technology. This makes the site faster to
@@ -450,28 +449,29 @@
         to run this part of the site.<br/><br/>Install a browser on our supported
         browsers list to continue. You can <a href='#'>try viewing the page</a>, but
         expect functionality to be broken.
-      button: Take me to the list of supported browsers
+      button: Porta'm a la llista de navegadors compatibles
   slow_loading: Això està trigant més de l'habitual...
   try_reloading: Prova de tornar a carregar la pàgina
   next_stage: Has acabat! Continua amb la següent etapa
   download_pdf: Obre el planning de la lliçó
-  lesson_plan: Lesson Plan
-  view_lesson_plan: View Lesson Plan
-  pdf_download: Download PDF
-  download_coming_soon: Downloadable activity coming soon.
-  video_coming_soon: Video Coming Soon!
+  lesson_plan: Unitat didàctica
+  view_lesson_plan: Veure unitat didàctica
+  pdf_download: Descarrega el PDF
+  download_coming_soon: Activitat descarregable properament.
+  video_coming_soon: Vídeo molt aviat!
   share_code:
-    title: Click 'Run program' to see my program in action
-    bounce_og_title: Check out my Bounce Game
-    flappy_og_title: Check out my Flappy Game
+    title: Feu clic a "Executa" per veure el meu programa en acció
+    bounce_og_title: Comprovi el meu joc de rebot
+    flappy_og_title: Comprova el meu joc Flappy
     studio_og_title: Check out my story
-    og_description: I wrote the code myself with Code.org
-    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
-      the text.
-    address_not_allowed: It looks like there is an address in it. Try changing the
+    check_out_what_i_made: Comprova el que he fet
+    og_description: Vaig escriure el codi jo sol amb Code.org
+    phone_number_not_allowed: Sembla que hi ha un número de telèfon en això. Proveu
+      de canviar el text.
+    address_not_allowed: Sembla que hi ha una adreça en això. Proveu de canviar el
       text.
-    email_not_allowed: It looks like there is an email in it. Try changing the text.
-    profanity_not_allowed: It looks like there is profanity in it. Try changing the
+    email_not_allowed: Sembla que hi ha un correu en això. Proveu de canviar el text.
+    profanity_not_allowed: Sembla que hi ha blasfèmia en això. Proveu de canviar el
       text.
   builder:
     created: Has creat un script nou.
@@ -479,7 +479,7 @@
     manage: Manage Scripts
     view: Visualitza
     back: Torna als scripts
-    success: You successfully edited the blocks.
+    success: Has editat els blocs correctament.
     level:
       create: Crea un nivell nou
       current: Nivells actuals
@@ -487,7 +487,7 @@
   upsell:
     hoc:
       title: Hora del codi
-      body: Try the basics of computer science. Millions have given it a shot.
+      body: Proveu els bàsics de la informàtica. Milions li han donat una oportunitat.
     flappy:
       title: Flappy Code
       body: Wanna write your own game in less than 10 minutes? Try our Flappy Code
@@ -495,6 +495,12 @@
     20hour:
       title: Curs d'Introducció
       body: Try our 20-hour Intro to Computer Science course.
+    hoc2014:
+      try_new_tutorial: Try our new Hour of Code tutorial in beta
+      try_frozen: Artist with Anna and Elsa, from Frozen
+    gallery:
+      title: Galeria
+      body: View a gallery of app and artist images created by our users
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: Students made these with code!
@@ -504,39 +510,44 @@
     activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
       apps and pictures by writing their own computer programs. Click on the pictures
       and screenshots to see each program in action.
-    want_to_make_your_own: Want to make your own?
+    want_to_make_your_own: Vols fer el teu propi?
     more: More &rarr;
     caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: '%{time_ago} ago'
+    caption_time_ago: "%{time_ago} ago"
+    header: Galeria
+    header_playlab: Play Lab
+    header_artist: Artist
   landing:
     prerelease: This page is still under development.
-    feedback: Give Feedback
-    report_bug: Report Bug
-    support: Get Help
-    support_url: //support.code.org
+    prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
+      is subject to revision as feedback is received and improvements are made.
+    feedback: Comentar
+    report_bug: Informar d'errors
+    support: Obtenir ajuda
+    support_url: support.Code.org
   multi:
-    wrong_title: Incorrect answer
-    wrong_body: The answer you've entered is not correct.  Please try again!
-    correct_title: Correct
-    correct_body: That is the correct answer.
+    wrong_title: Resposta incorrecta
+    wrong_body: La resposta que he introduït no és correcta.  Si us plau, torneu-hi!
+    correct_title: Correcte
+    correct_body: Aquesta és la resposta correcta.
   match:
-    wrong_title: Incorrect solution
-    wrong_body: The solution you've entered is not correct.  Please try again!
-    correct_title: Correct
-    correct_body: That is the correct answer.
+    wrong_title: Solució incorrecta
+    wrong_body: La solució que heu introduït no és correcta.  Si us plau, torneu-hi!
+    correct_title: Correcte
+    correct_body: Aquesta és la resposta correcta.
   text_match:
-    placeholder: Enter your answer here
+    placeholder: Introduïu la resposta aquí
   dialog:
     ok: OK
   time:
-    hour: 1 hour
-    day: day
-    week: week
+    hour: 1 hora
+    day: dia
+    week: setmana
   data:
     script:
       name:
         20-hour:
-          title: K-8 Intro to Computer Science Course (15-25 hours)
+          title: Introducció al curs d'informàtica de secundària (15-25 hores)
           description: Aquest curs de 20 hores és una introducció als conceptes bàsics
             d'informàtica i programació. El curs ha estat dissenyat per impartir a
             alumnes de 1er d'ESO, però és divertit d'aprendre a qualsevol edat.
@@ -547,7 +558,7 @@
           title: Edita el codi
           description: ''
         events:
-          title: Events
+          title: Esdeveniments
           description: ''
         builder:
           title: Builder
@@ -557,28 +568,29 @@
           description: Wanna write your own game in less than 10 minutes? Try our
             Flappy Code tutorial!
         jigsaw:
-          title: Jigsaw
+          title: Trencaclosques
           description: ''
         step:
-          title: Step
+          title: pas
           description: ''
         sample_level_builder:
           title: Sample Level Builder
           description: ''
   age_interstitial:
-    age: Your age
-    header: Account Information Update
-    message: We're in the process of updating our experience to provide you with even
-      stronger privacy protections. To do this, we need existing users to enter their
-      age here.<br/>As always, code.org will never rent, sell or share this information
-      with any third parties.
-    sign_out: If you do not wish to provide your age you may <a href="%{url}">sign
-      out</a>.
-  zendesk_too_young_message: Sorry, younger users may not sign in to our support site.
-    You may browse <a href="http://support.code.org">support.code.org</a> without
-    signing in or ask your parent or teacher to contact us for you.
+    age: La teva edat
+    header: Actualització d'informació de compte
+    message: Estem en procés d'actualització de la nostra experiència per oferir-vos
+      proteccions de privacitat encara millors. Per això, necessitem que els usuaris
+      existents entrin la seva edat aquí. <br/>Com sempre, code.org mai vendrà o compartirà
+      aquesta informació amb tercers.
+    sign_out: Si vostè no desitja proporcionar la seva edat es pot <a href="%{url}">
+      tancar la sessió</a>.
+  zendesk_too_young_message: Lamentablement, els usuaris més joves no poden registrar-se
+    en el nostre lloc de suport. Podeu navegar<a href="http://support.code.org">upport.code.org</a>
+    sense registrar-vos o demanar als vostres pares o mestres que contactin amb nosaltres
+    en representació vostra.
   progress:
-    not_completed: not completed
-    completed_too_many_blocks: completed, too many blocks
-    completed_perfect: completed, perfect
+    not_completed: No finalitzat
+    completed_too_many_blocks: completat, massa blocs
+    completed_perfect: completat, perfecte
     furthest_level_attempted: furthest level attempted

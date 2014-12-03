@@ -1,7 +1,12 @@
-How-to guide for public officials
-====
+---
+title: How-to guide for public officials
+layout: wide
+nav: resources_nav
+---
 
-## Bring the Hour of Code to your entire community. Get every school participating, every student learning!
+## Bring the Hour of Code to your entire community.
+
+### Get every school participating, every student learning!
 
 1. **Recruit local schools and districts.** Use <a href="<%= hoc_uri('/resources#sample-emails') %>">this email</a> or <a href="<%= hoc_uri('/resources/stats') %>">this blurb</a> as a starting point, and take a look at this <a href="<%= hoc_uri('/resources/how-to') %>">how-to</a> for schools and districts. Let them know **every** participating educator will receive a <a href="<%= hoc_uri('/resources/how-to') %>">thank you gift</a>; that **100 classrooms** will win tech chats with **special guest speakers** (participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more); and, in **each state**, one participating school will win **$10,000 in technology**!
 
@@ -17,7 +22,8 @@ How-to guide for public officials
 	- Last year 15 million students tried one #HourOfCode. Half were girls. This year, let’s get to 100 million. #HourOfCode [http://hourofcode.com](http://hourofcode.com)
 	- Every student, boy or girl, should have the chance to learn computer science. Join us in starting with one #HourOfCode [http://hourofcode.com](http://hourofcode.com)
 	- Today, we're proud to join the Hour of Code movement. Are you in? #HourOfCode [http://hourofcode.com](http://hourofcode.com).
-<br/>
-<br/>
+<br />
+<br />
+7. **Issue a press release.** <a href="<%= hoc_uri('/resources/official-press-release') %>">Use this sample</a> as a guide.
 
-7. **Connect locally.** Visit [http://code.org/promote](http://code.org/promote) to learn more about computer science education in your state. Sign the petition there and you’ll get updates from Code.org on their local, state and federal advocacy efforts.
+8. **Connect locally.** Visit [http://code.org/promote](http://code.org/promote) to learn more about computer science education in your state. Sign the petition there and you’ll get updates from Code.org on their local, state and federal advocacy efforts.

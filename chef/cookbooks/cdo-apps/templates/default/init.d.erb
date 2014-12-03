@@ -7,7 +7,7 @@ set -e
 TIMEOUT=${TIMEOUT-60}
 APP_ROOT=<%= @app_root %>
 PID=<%= @pid_file %>
-CMD="cd $APP_ROOT; bundle exec unicorn -D -c <%= @src_file %> -E <%= @env %>"
+CMD="cd $APP_ROOT; LANG=en_US.UTF-8 bundle exec unicorn -D -c <%= @src_file %> -E <%= @env %>"
 AS_USER=<%= @user %>
 action="$1"
 set -u

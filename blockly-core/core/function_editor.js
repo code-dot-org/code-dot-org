@@ -131,6 +131,7 @@ Blockly.FunctionEditor.prototype.openWithNewFunction = function(opt_blockCreatio
 
   this.functionDefinitionBlock = Blockly.Xml.domToBlock_(Blockly.mainBlockSpace,
     Blockly.createSvgElement('block', {type: this.definitionBlockType}));
+  this.functionDefinitionBlock.userCreated = true;
   if (opt_blockCreationCallback) {
     opt_blockCreationCallback(this.functionDefinitionBlock);
   }
@@ -317,6 +318,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
         return metrics;
       });
   Blockly.modalBlockSpace = Blockly.modalBlockSpaceEditor.blockSpace;
+  Blockly.modalBlockSpace.customFlyoutMetrics_ = Blockly.mainBlockSpace.getMetrics;
 
   Blockly.modalBlockSpaceEditor.addChangeListener(
       Blockly.mainBlockSpace.fireChangeEvent);
@@ -325,29 +327,8 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   this.modalBackground_ =
       Blockly.createSvgElement('g', {'class': 'modalBackground'});
   Blockly.mainBlockSpaceEditor.appendSVGChild(this.modalBackground_);
-  this.closeButton_ = Blockly.createSvgElement('g', {
-    'id': 'modalEditorClose',
-    'filter': 'url(#blocklyTrashcanShadowFilter)'
-  });
-  var padding = 7;
-  var r = Blockly.createSvgElement('rect', {
-    'rx': 12,
-    'ry': 12,
-    'fill': '#7665a0',
-    'stroke': 'white',
-    'stroke-width': '2.5'
-  }, this.closeButton_);
-  var text = Blockly.createSvgElement('text', {
-    'x': padding,
-    'y': padding,
-    'class': 'blocklyText'
-  }, this.closeButton_);
-  text.textContent = Blockly.Msg.SAVE_AND_CLOSE;
-  Blockly.modalBlockSpaceEditor.appendSVGChild(this.closeButton_);
-  var bounds = text.getBoundingClientRect();
-  r.setAttribute('width', bounds.width + 2 * padding);
-  r.setAttribute('height', bounds.height + padding);
-  r.setAttribute('y', -bounds.height + padding - 1);
+
+  this.addCloseButton_();
 
   // Set up contract definition HTML section
   this.createContractDom_();
@@ -391,17 +372,59 @@ Blockly.FunctionEditor.prototype.create_ = function() {
     this.functionDefinitionBlock.description_ = e.target.value;
   }
 
-  // Set up parameters toolbox
+  this.setupParametersToolbox_();
+  this.addEditorFrame_();
+  this.position_();
+
+  this.onResizeWrapper_ = Blockly.bindEvent_(window,
+      goog.events.EventType.RESIZE, this, this.position_);
+
+  Blockly.modalBlockSpaceEditor.svgResize();
+};
+
+/**
+ * Add close button to the top right of the modal dialog
+ * @private
+ */
+Blockly.FunctionEditor.prototype.addCloseButton_ = function () {
+  this.closeButton_ = Blockly.createSvgElement('g', {
+    'id': 'modalEditorClose',
+    'filter': 'url(#blocklyTrashcanShadowFilter)'
+  });
+  var padding = 7;
+  var r = Blockly.createSvgElement('rect', {
+    'rx': 12,
+    'ry': 12,
+    'fill': '#7665a0',
+    'stroke': 'white',
+    'stroke-width': '2.5'
+  }, this.closeButton_);
+  var text = Blockly.createSvgElement('text', {
+    'x': padding,
+    'y': padding,
+    'class': 'blocklyText'
+  }, this.closeButton_);
+  text.textContent = Blockly.Msg.SAVE_AND_CLOSE;
+  Blockly.modalBlockSpaceEditor.appendSVGChild(this.closeButton_);
+  var bounds = text.getBoundingClientRect();
+  r.setAttribute('width', bounds.width + 2 * padding);
+  r.setAttribute('height', bounds.height + padding);
+  r.setAttribute('y', -bounds.height + padding - 1);
+};
+
+Blockly.FunctionEditor.prototype.setupParametersToolbox_ = function () {
   this.flyout_ = new Blockly.HorizontalFlyout(Blockly.modalBlockSpaceEditor);
   var flyoutDom = this.flyout_.createDom();
   Blockly.modalBlockSpace.svgGroup_.insertBefore(flyoutDom,
-      Blockly.modalBlockSpace.svgBlockCanvas_);
+    Blockly.modalBlockSpace.svgBlockCanvas_);
   this.flyout_.init(Blockly.modalBlockSpace, false);
   this.bindToolboxHandlers_();
+};
 
-  var left = goog.dom.getElementByClass(Blockly.hasCategories
-      ? 'blocklyToolboxDiv'
-      : 'blocklyFlyoutBackground').getBoundingClientRect().width;
+Blockly.FunctionEditor.prototype.addEditorFrame_ = function () {
+  var left = Blockly.hasCategories ?
+      goog.dom.getElementByClass('blocklyToolboxDiv').getBoundingClientRect().width :
+      goog.dom.getElementByClass('blocklyFlyoutBackground').getBoundingClientRect().width;
   var top = 0;
   this.frameBase_ = Blockly.createSvgElement('rect', {
     x: left + FRAME_MARGIN_SIDE,
@@ -413,7 +436,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   this.frameInner_ = Blockly.createSvgElement('rect', {
     x: left + FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH,
     y: top + FRAME_MARGIN_TOP + Blockly.Bubble.BORDER_WIDTH +
-        FRAME_HEADER_HEIGHT,
+      FRAME_HEADER_HEIGHT,
     fill: '#ffffff'
   }, this.modalBackground_);
   this.frameText_ = Blockly.createSvgElement('text', {
@@ -423,22 +446,12 @@ Blockly.FunctionEditor.prototype.create_ = function() {
     style: 'font-size: 12pt'
   }, this.modalBackground_);
   this.frameText_.textContent = Blockly.Msg.FUNCTION_HEADER;
-  this.position_();
-
-  this.onResizeWrapper_ = Blockly.bindEvent_(window,
-      goog.events.EventType.RESIZE, this, this.position_);
-
-  Blockly.modalBlockSpaceEditor.svgResize();
 };
 
 Blockly.FunctionEditor.prototype.position_ = function() {
   var metrics = Blockly.modalBlockSpace.getMetrics();
   var width = metrics.viewWidth;
   var height = metrics.viewHeight;
-  if (!Blockly.hasCategories) {
-    width -= goog.dom.getElementByClass('blocklyFlyoutBackground')
-        .getBoundingClientRect().width;
-  }
   this.frameBase_.setAttribute('width',
       width + 2 * Blockly.Bubble.BORDER_WIDTH);
   this.frameBase_.setAttribute('height',
@@ -453,7 +466,7 @@ Blockly.FunctionEditor.prototype.position_ = function() {
   }
 
   // Resize contract div width
-  this.contractDiv_.style.width = metrics.viewWidth + 'px';
+  this.contractDiv_.style.width = width + 'px';
 
   // Move the close button
   this.closeButton_.setAttribute('transform', 'translate(' +
@@ -484,7 +497,8 @@ Blockly.FunctionEditor.prototype.createContractDom_ = function() {
       + '</button>';
   }
   var metrics = Blockly.modalBlockSpace.getMetrics();
-  this.contractDiv_.style.left = metrics.absoluteLeft + 'px';
+  var left = metrics.absoluteLeft;
+  this.contractDiv_.style.left = left + 'px';
   this.contractDiv_.style.top = metrics.absoluteTop + 'px';
   this.contractDiv_.style.width = metrics.viewWidth + 'px';
   this.contractDiv_.style.display = 'block';

@@ -1,5 +1,5 @@
 ---
-title: Resources
+title: Press Kit
 layout: wide
 nav: resources_nav
 ---

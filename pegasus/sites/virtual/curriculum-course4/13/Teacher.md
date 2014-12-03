@@ -83,7 +83,7 @@ Here are some questions that you can ask in review:
 
 - Did you think of any questions after the lesson that you want to ask?
 
-- What was your favorite part of the last lesson??  
+- What was your favorite part of the last lesson?  
 
 [tip]
 

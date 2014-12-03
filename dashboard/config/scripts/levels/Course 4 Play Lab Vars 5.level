@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "Hey, this game looks pretty familiar, but how do we know when we've won (or lost)? Use the new variable \"points\" and set it to 10. Don't worry that it doesn't do anything (yet).",
+    "instructions": "Let's build a game! First we'll need a score. Use the \"set points to\" block to set the score to 10. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -28,6 +28,7 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
+    "embed": "false",
     "maze_data": null
   }
 }]]></config>
@@ -62,66 +63,6 @@
               <title name="DIR">2</title>
             </block>
           </next>
-        </block>
-        <block type="studio_repeatForever" uservisible="false">
-          <statement name="DO">
-            <block type="studio_moveDistanceParams" inline="true" uservisible="false">
-              <title name="SPRITE">1</title>
-              <title name="DIR">1</title>
-              <value name="DISTANCE">
-                <block type="math_random_int" inline="true" uservisible="false">
-                  <value name="FROM">
-                    <block type="math_number" uservisible="false">
-                      <title name="NUM">50</title>
-                    </block>
-                  </value>
-                  <value name="TO">
-                    <block type="math_number" uservisible="false">
-                      <title name="NUM">400</title>
-                    </block>
-                  </value>
-                </block>
-              </value>
-              <next>
-                <block type="studio_moveDistanceParams" inline="true" uservisible="false">
-                  <title name="SPRITE">1</title>
-                  <title name="DIR">4</title>
-                  <value name="DISTANCE">
-                    <block type="math_random_int" inline="true" uservisible="false">
-                      <value name="FROM">
-                        <block type="math_number" uservisible="false">
-                          <title name="NUM">50</title>
-                        </block>
-                      </value>
-                      <value name="TO">
-                        <block type="math_number" uservisible="false">
-                          <title name="NUM">400</title>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-        <block type="studio_repeatForever" uservisible="false">
-          <statement name="DO">
-            <block type="studio_throw" uservisible="false">
-              <title name="SPRITE">1</title>
-              <title name="VALUE">"blue_fireball"</title>
-              <title name="DIR">8</title>
-              <next>
-                <block type="studio_waitParams" inline="true" uservisible="false">
-                  <value name="VALUE">
-                    <block type="math_number" uservisible="false">
-                      <title name="NUM">1</title>
-                    </block>
-                  </value>
-                </block>
-              </next>
-            </block>
-          </statement>
         </block>
         <block type="studio_repeatForever" uservisible="false">
           <statement name="DO">

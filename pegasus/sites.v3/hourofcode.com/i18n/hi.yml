@@ -5,50 +5,37 @@ hi:
   coming_soon: जल्द आ रहा है
   front_header_banner: 08-14 दिसम्बर, 2014 को,इतिहास के सबसे बड़े शिक्षण कार्यक्रम हा हिस्सा बने
   front_intro_default: 'एक घंटा कोड का ये एक जागतिक आंदोलन है जो १८० से भी ज्यादा देशोंके के करोडो लोगोसे बानी हुई है|कोईभी किसीभी जगहासे एक घंटा कोड का की मेजबानी कर सकता है|इस कार्यक्रम के लिए एक घंटेका अभ्यासक्रम ३० भाषाओमे उपलब्ध है| पूर्व अनुभव की आवश्यकता नहीं है| <strong>आयु ४ से १०४ के लिए</strong>'
-  front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone can organize an Hour of Code event. Over 3M students did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
+  front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of people in 180+ countries. Anyone can organize an Hour of Code event. Over 3M people did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
   front_watch_video: नया वीडियो देखें
   header_menu_resources: संसाधन
   header_menu_faq: आम सवाल
   header_menu_prizes: इनाम
   header_menu_uk_code_org: uk.code.org
-  choose_country_header: दुनिया भर में भाग ले!
-  country_al: Albania
-  country_ar: अर्जेंटीना
-  country_au: ऑस्ट्रेलिया
-  country_br: ब्राज़ील
-  country_bg: बल्गारिया
-  country_de: जर्मनी
-  country_es: लातिन अमरिका
-  country_eu: यूरोपीय यूनियन
-  country_gr: यूनान
-  country_hr: क्रोएशिया
-  country_id: इंडोनेशिया
-  country_it: इटली
-  country_jp: जापान
-  country_me: मध्य पूर्व और उत्तरी अफ्रीका
-  country_my: Malaysia
-  country_nz: न्यूज़ीलैंड
-  country_ro: रोमानिया
-  country_ru: रूस
-  country_ua: यूक्रेन
-  country_uk: युनाइटेड किंगडम
-  country_us: अमरीका
-  country_vn: वियतनाम
   company_4-H: 4-H Youth Development
+  company_asa: Afterschool Alliance
   company_bgca: Boys and Girls Club of America
+  company_bsusa: Boy Scouts of America
   company_cgcs: Council of the Great City Schools
   company_gsusa: Girl Scouts of America
-  company_bsusa: Boy Scouts of America
+  company_khanacademy: Khan Academy
+  company_mesa: Mathematics Engineering Science Achievement
   company_napcs: National Alliance of Public Charter Schools
-  company_tfa: Teachers for America
-  company_tntp: TNTP
-  company_asa: Afterschool Alliance
   company_ngcp: National Girls Collaborative Project
+  company_teachforall: Teach for All
+  company_teachforamerica: Teach for America
+  company_tntp: TNTP
   prizes_all: हर आयोजक के लिए पुरस्कार
   prizes_every_organizer: "'एक घंटा कोड का' के हर आयोजक को आभार की तौर पे उन्हें ड्रॉपबॉक्स स्पेस या स्काइप क्रेडिट दिया जायेगा"
   prizes_technology: अमरीका के हर राज्य (एवं वाशिंगटन डीसी) के एक सरकारी प्रशाला को $१०,००० कीमतकी तकनिकी सामग्री जितनेका मौका मिलेगा
-  prizes_tech_chats: 96 classrooms will win video chats with very special guests
+  prizes_tech_chats: '# classrooms will win video chats with very special guests'
+  prizes_robots: 100 classrooms will win a set of programmable robots
+  prizes_brilliant: One school in each province and territory will receive $2000 for a Brilliant Project
+  prizes_actua: "15 schools across Canada will receive 2 hands-on STEM workshops by one of Actua's members"
   prizes_details: विवरण
+  whats_next_header: "What's Next?"
+  whats_next_description: "We'll send you materials and helpful tips for your event. New 2014 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
+  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>How to run an Hour of Code</a>"
+  whats_next_promote: "<a href='http://hourofcode.com/resources'>Promote the Hour of Code</a>"
   n_have_learned_an_hoc: '<h1>#</h1>मैं <h2>एक घंटा कोड का</h2><h3>का हिस्सा हु</h3>'
   anybody_can_learn: हर कोई सीख सकता है
   register_now: एक खाता अभी बनाएँ
@@ -56,16 +43,16 @@ hi:
   front_join_us_description: संघनक विज्ञान ये हर छात्र के लिए आधार है। हमें इसे १० कोटी छात्रों तक पोहोचने में मदद करे ।
   front_join_us_button: हमसे जुड़ें
   front_what_is_hoc: क्या है ये एक घंटा कोड का?
-  front_join_us_header: 'दिसंबर ८ - १४ के, संगणक विज्ञान प्रशिक्षण सप्ताह के दौरान, एक घंटा कोड का की मेजबानीकरके दिखाईये के कोईभी आनंद लेते हुए मूलबहुत संकल्पना सिख सकता है!'
+  front_join_us_header: Anyone can learn the basics, and have fun doing it!
   front_join_us_header_uk: 'दिसंबर ८ - १४ के, संगणक विज्ञान प्रशिक्षण सप्ताह के दौरान, एक घंटा कोड का की मेजबानीकरके दिखाईये के कोईभी आनंद लेते हुए मूलबहुत संकल्पना सिख सकता है'
   front_join_us_teacher: क्या आप शिक्षक है?
-  front_join_us_inspire: आपके छात्रोंको प्रेरित करनेके लिए
-  front_join_us_inspire_link: आपके कक्षा में एक घंटा कोड का |
+  front_join_us_inspire: Inspire students with
+  front_join_us_inspire_link: an Hour of Code in the classroom.
   front_join_us_parent: क्या आप पालक है?
   front_join_us_ask_link: आपके स्थानिक प्रशाला से पूछिये
   front_join_us_ask: एक घंटा कोड का की मेजबानी करने|
   front_join_us_computer_science: आपको संघनक विज्ञान पसंद है?
-  front_join_us_spread: आपके समुदायमें प्रचार करे|
+  front_join_us_spread: Spread the word.
   front_join_us_organize: या आप स्वयम एक घंटा कोड का की मेजबानी करे|
   front_join_us_how_to_run: "'एक घंटा कोड का' सीखने का तरीका"
   front_join_us_help_promote: "'एक घंटा कोड का' का प्रचार करे"
@@ -75,7 +62,7 @@ hi:
   front_join_us_try: कर के देखे
   front_join_us_host: मेजबानी करे
   front_join_us_support: समर्थन करे
-  signup_header: "हमें बताइये अगर आप 'एक घंटा कोड का' की मेजबानी कर रहे है"
+  signup_header: 'Organize an Hour of Code event during Dec 8 - 14, and register it here.'
   signup_name_label: आपका नाम
   signup_email_label: आपका ईमेल
   signup_organization_name_label: प्रशाला या संस्था का नाम
@@ -87,6 +74,7 @@ hi:
   signup_send_posters_flag_label: 'कृपया मेरी पाठशाला को एक घंटा कोड का की <a href= "/resources#posters">पत्रिका</a> भेजिए'
   signup_send_posters_address_label: प्रशाला या संस्था का पता
   signup_whole_school_flag_label: ये कार्यक्रम संपूर्ण प्रशाला के लिए है
+  signup_your_event: Sign up your event
   signup_name_placeholder: आपका नाम
   signup_email_placeholder: आप@नमूना.com
   signup_organization_name_placeholder: उदाहरण के लिए, लिंकन हाई स्कूल
@@ -100,7 +88,7 @@ hi:
   signup_thank_you_header: एक घंटा कोड का का हिस्सा बनने के लिए धन्यवाद|
   signup_thank_you_message: हमने आपको पुष्टिकरण के लिए और आरम्भमें मदत करनेकेलिए ईमेल भेजा है|
   map_header: '# एक घंटा कोड का के दुनियाभर में होने वाले कार्यक्रम'
-  map_header_company: '# Hour of Code events organized by company'
+  map_header_company: '# by company organizers'
   meta_tag_og_title: एक घंटा कोड का आ रहा है
   meta_tag_og_description: एक घंटा कोड का ये एक जागतिक आंदोलन है जो १८० से भी ज्यादा देशोंके आयु ४ से १०४ के करोडो लोगोसे बानी हुई है
   meta_tag_twitter_title: एक घंटा कोड का आ रहा है
@@ -140,8 +128,8 @@ hi:
   hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='http://code.org/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='target-resources-how-to'>how to guide</a>."
   hoc_faq_need_computers_q: क्या हर छात्र को अलग संगानक की आवश्यकता है?
   hoc_faq_need_computers_a: "No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have. <p><i>Here are a few options:</i> <br> <ul> <li><b>Work in pairs.</b> Research shows students learn best with <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>pair programming</a>, sharing a computer and working together. Encourage your students to double up. <li><b>Use a projected screen.</b> If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions. <li><b>Go unplugged.</b> We offer tutorials that require no computer at all. </ul>"
-  hoc_faq_international_q: मै अमरीका में नहीं रहता। मै अंतर्राष्ट्रीय दौरपे इसका हिस्सा कैसे बन सकता हु?
-  hoc_faq_international_a: "दुनिया में कोईभी एक घंटा कोड का की मेजबानी कर सकता है। पिछले साल अनेक छात्र साथ मिलके 'एक घंटा कोड का' का हिस्सा बने।"
+  hoc_faq_international_q: 'I am in <country>. How do I participate internationally?'
+  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='target-resources'>here</a>."
   hoc_faq_tutorial_q: मई एक घंटा कोड का के लिए अभ्यास पत्रिका कैसे बनाऊ?
   hoc_faq_tutorial_a: "If you're interested in becoming a tutorial partner, <a href='target-tutorial-guidelines'>see our guidelines and instructions</a>. We'd like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science."
   hoc_faq_more_questions_q: आपको और सवाल है?
@@ -168,16 +156,30 @@ hi:
   stats_girls_million: १० कोटी सेभी ज्यादा छात्राऍ
   stats_nina: '"हर दिन मुझे छात्रोंका १००% ध्यान दिखा" - नीना निकोलस पेरी, शिक्षक'
   stats_student: '"मुझे ये पताथा की ये <b>जिन्दगीमे एक बार मिलने वाला</b> मौका है" - मरिआना अलज़ते, कक्षा ५'
-  stats_michael: 'मैंने मेरे छात्रोंको <b>कभीभी</b> पढ़ाई के लिए उत्साहित नहीं देखा है" - माइकल क्लार्क, शिक्षक'
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
   resources_how_to: अध्यापको के लिए प्रशिक्षण पत्र
+  resources_how_to_events: Event how-to guide
+  resources_how_to_districts: How-to guide for districts
+  resources_how_to_officials: How-to guide for public officials
   resources_handouts: प्रचार पत्रक
   resources_videos: वीडियो
   resources_posters: प्रचार पत्रिका
   resources_social: Social
   resources_banners: बैनर
   resources_emails: ईमेल का नमूना
-  resources_stats: संघनक विज्ञान पे उपयुक्त अकड़े
+  resources_stats: Useful stats and blurbs
   resources_press_kit: पत्रकारों के किये सामान
+  events_title: All Hour of Code Events
+  events_nav_all: All Events
+  events_nav_whole_schools: Whole Schools
+  events_nav_special: Special Events
+  events_nav_orgs: Organizations
+  events_all_title: All Hour of Code events
+  events_whole_school_title: Whole-school Hour of Code events
+  events_special_title: Special Hour of Code events
+  events_orgs_title: All Hour of Code events organized by Partner Organizations
+  event: event
+  events: events
   footer_copyright_message: मुद्रधिकार २०१४ code.org. सर्व अधिकार आरक्षित
   footer_trademark_message: Hour of Code™ ये code.org का ट्रेडमार्क है।
   footer_menu_partners: भागीदार

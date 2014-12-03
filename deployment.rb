@@ -38,7 +38,7 @@ def load_configuration()
   rack_env = env.to_sym
 
   {
-    'app_instances'               => [],
+    'app_servers'                 => {},
     'build_blockly'               => false,
     'build_blockly_core'          => false,
     'build_dashboard'             => true,
@@ -81,7 +81,7 @@ def load_configuration()
     config.merge! host_config
     config.merge! local_config
 
-    config['daemon']              ||= [:development, :staging, :test].include?(rack_env) || config['name'] == 'daemon'
+    config['daemon']              ||= [:development, :levelbuilder, :staging, :test].include?(rack_env) || config['name'] == 'daemon'
     config['dashboard_db_reader'] ||= config['db_reader'] + config['dashboard_db_name']
     config['dashboard_db_writer'] ||= config['db_writer'] + config['dashboard_db_name']
     config['pegasus_db_reader']   ||= config['db_reader'] + config['pegasus_db_name']
@@ -182,10 +182,6 @@ end
 
 def pegasus_dir(*paths)
   deploy_dir('pegasus', *paths)
-end
-
-def postfix_dir(*paths)
-  aws_dir('postfix', *paths)
 end
 
 def secrets_dir(*dirs)

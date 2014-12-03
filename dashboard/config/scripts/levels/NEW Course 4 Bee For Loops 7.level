@@ -1,0 +1,138 @@
+<Karel>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2014-11-26T22:52:23.000Z",
+  "level_num": "custom",
+  "user_id": 16,
+  "properties": {
+    "skin": "bee",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,2,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,2,0,0,0,0],[0,0,0,4,0,0,0,0],[0,0,0,6,0,0,0,0],[0,0,0,8,0,0,0,0],[0,0,0,10,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "start_direction": "2",
+    "step_mode": "0",
+    "nectar_goal": "30",
+    "flower_type": "redWithNectar",
+    "instructions": "Are you getting the hang of using the Counter Loop? This is similar to last puzzle, but you have to get 2,4,6,8,10 nectar. You’re given the starter code except for the numbers in the counter loops. Let's collect some nectar!",
+    "maze_data": null
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_for" inline="true">
+              <title name="VAR">Counter</title>
+              <value name="FROM">
+                <block type="math_number">
+                  <title name="NUM">???</title>
+                </block>
+              </value>
+              <value name="TO">
+                <block type="math_number">
+                  <title name="NUM">???</title>
+                </block>
+              </value>
+              <value name="BY">
+                <block type="math_number">
+                  <title name="NUM">???</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="maze_moveForward">
+                  <next>
+                    <block type="controls_repeat_ext" inline="true">
+                      <value name="TIMES">
+                        <block type="variables_get">
+                          <title name="VAR">Counter</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="maze_nectar"/>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_nectar"/>
+        <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+            <block type="math_number">
+              <title name="NUM">???</title>
+            </block>
+          </value>
+        </block>
+        <block type="controls_for" inline="true">
+          <title name="VAR">Counter</title>
+          <value name="FROM">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+          <value name="TO">
+            <block type="math_number">
+              <title name="NUM">10</title>
+            </block>
+          </value>
+          <value name="BY">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="controls_for" inline="true">
+          <title name="VAR">Counter</title>
+          <value name="FROM">
+            <block type="math_number">
+              <title name="NUM">2</title>
+            </block>
+          </value>
+          <value name="TO">
+            <block type="math_number">
+              <title name="NUM">10</title>
+            </block>
+          </value>
+          <value name="BY">
+            <block type="math_number">
+              <title name="NUM">2</title>
+            </block>
+          </value>
+        </block>
+        <block type="maze_moveForward"/>
+        <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+            <block type="variables_get">
+              <title name="VAR">Counter</title>
+            </block>
+          </value>
+        </block>
+        <block type="maze_nectar"/>
+      </xml>
+    </required_blocks>
+  </blocks>
+</Karel>

@@ -8,8 +8,8 @@ def main()
   total = unsubscribed = 0
 
   CSV.foreach(pegasus_dir('cache','sendy_unsubscribed.csv')) do |i|
-    unless Contact.unsubscribed?(i[0])
-      Contact.unsubscribe(i[0], ip_address:'127.0.0.1')
+    unless Poste.unsubscribed?(i[0])
+      Poste.unsubscribe(i[0], ip_address:'127.0.0.1')
       unsubscribed += 1
     end
     total += 1

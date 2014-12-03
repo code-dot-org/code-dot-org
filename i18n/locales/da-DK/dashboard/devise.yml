@@ -1,57 +1,57 @@
-"da":
+da:
   devise:
     confirmations:
-      confirmed: "Din e-mailadresse blev bekræftet."
-      send_instructions: "Du vil modtage en e-mail med instruktioner om, hvordan du bekræfter din konto om et par minutter."
-      send_paranoid_instructions: "Hvis din e-mail-adresse findes i vores database, vil du modtage en e-mail med instruktioner om, hvordan du bekræfter din konto om et par minutter."
+      confirmed: Din e-mailadresse blev bekræftet.
+      send_instructions: Du vil modtage en e-mail med instruktioner om, hvordan du bekræfter din konto om et par minutter.
+      send_paranoid_instructions: Hvis din e-mail-adresse findes i vores database, vil du modtage en e-mail med instruktioner om, hvordan du bekræfter din konto om et par minutter.
     failure:
-      already_authenticated: "Du er allerede logget på."
-      inactive: "Din konto er ikke aktiveret endnu."
-      invalid: "Ugyldig email eller adgangskode."
-      invalid_token: "Ugyldig godkendelses token."
-      locked: "Din konto er låst."
-      not_found_in_database: "Ugyldig email eller adgangskode."
-      timeout: "Din session er udløbet, log på igen for at fortsætte."
-      unauthenticated: "Du skal logge på eller tilmelde dig før du fortsætter."
-      unconfirmed: "Du skal bekræfte din konto, før du fortsætter."
+      already_authenticated: Du er allerede logget på.
+      inactive: Din konto er ikke aktiveret endnu.
+      invalid: Ugyldig email eller adgangskode.
+      invalid_token: Ugyldig godkendelses token.
+      locked: Din konto er låst.
+      not_found_in_database: Ugyldig email eller adgangskode.
+      timeout: Din session er udløbet, log på igen for at fortsætte.
+      unauthenticated: Du skal logge på eller tilmelde dig før du fortsætter.
+      unconfirmed: Du skal bekræfte din konto, før du fortsætter.
     mailer:
       confirmation_instructions:
-        subject: "Code.org bekræftelsesinstruktioner"
+        subject: Code.org bekræftelsesinstruktioner
       reset_password_instructions:
-        subject: "Instruktioner til at nulstille adgangskoden til Code.org"
+        subject: Instruktioner til at nulstille adgangskoden til Code.org
       unlock_instructions:
-        subject: "Lås op instruktioner"
+        subject: Lås op instruktioner
     omniauth_callbacks:
       failure: 'Kunne ikke godkende dig fra %{kind}, fordi "%{reason}".'
       success: 'Succesfuldt godkendt fra %{kind} konto.'
     passwords:
-      no_token: "Du kan ikke få adgang til denne side uden at komme fra en password reset e-mail. Hvis du kommer fra en password reset e-mail, skal du sørge for at du brugte den fulde webadresse du fik."
-      send_instructions: "Du vil modtage en e-mail med instruktioner om hvordan du nulstiller din adgangskode om et par minutter."
-      send_paranoid_instructions: "Hvis din e-mail-adresse findes i vores database, vil du om et par minutter modtage et link til at lave en ny adgangskode i din e-mail."
-      updated: "Adgangskoden blev ændret succesfuldt. Du er nu logget på."
-      updated_not_active: "Adgangskoden blev ændret succesfuldt."
+      no_token: Du kan ikke få adgang til denne side uden at komme fra en password reset e-mail. Hvis du kommer fra en password reset e-mail, skal du sørge for at du brugte den fulde webadresse du fik.
+      send_instructions: Du vil modtage en e-mail med instruktioner om hvordan du nulstiller din adgangskode om et par minutter.
+      send_paranoid_instructions: Hvis din e-mail-adresse findes i vores database, vil du om et par minutter modtage et link til at lave en ny adgangskode i din e-mail.
+      updated: Adgangskoden blev ændret succesfuldt. Du er nu logget på.
+      updated_not_active: Adgangskoden blev ændret succesfuldt.
     registrations:
-      destroyed: "Farvel! Din konto blev annulleret. Vi håber at se dig igen snart."
-      signed_up: "Velkommen! Du har tilmeldt dig succesfuldt."
-      signed_up_but_inactive: "Du har tilmeldt dig succesfuldt. Men vi kunne ikke logge dig på fordi din konto ikke er aktiveret endnu."
-      signed_up_but_locked: "Du har tilmeldt dig succesfuldt. Men vi kunne ikke logge dig fordi din konto er låst."
-      signed_up_but_unconfirmed: "En besked med et bekræftelses link er sendt til din e-mailadresse. Åbn linket for at aktivere din konto."
-      update_needs_confirmation: "Du opdaterede din konto, men vi har brug for at bekræfte din nye e-mail adresse. Kontroller din e-mail, og klik på bekræft linket for endeligt at bekræfte din nye e-mailadresse."
-      updated: "Du opdaterede din konto succesfuldt."
+      destroyed: Farvel! Din konto blev annulleret. Vi håber at se dig igen snart.
+      signed_up: Velkommen! Du har tilmeldt dig succesfuldt.
+      signed_up_but_inactive: Du har tilmeldt dig succesfuldt. Men vi kunne ikke logge dig på fordi din konto ikke er aktiveret endnu.
+      signed_up_but_locked: Du har tilmeldt dig succesfuldt. Men vi kunne ikke logge dig fordi din konto er låst.
+      signed_up_but_unconfirmed: En besked med et bekræftelses link er sendt til din e-mailadresse. Åbn linket for at aktivere din konto.
+      update_needs_confirmation: Du opdaterede din konto, men vi har brug for at bekræfte din nye e-mail adresse. Kontroller din e-mail, og klik på bekræft linket for endeligt at bekræfte din nye e-mailadresse.
+      updated: Du opdaterede din konto succesfuldt.
     sessions:
-      signed_in: "Logged på succesfuldt."
-      signed_out: "Logged ud succesfuldt."
+      signed_in: Logged på succesfuldt.
+      signed_out: Logged ud succesfuldt.
     unlocks:
-      send_instructions: "Du vil modtage en e-mail med instruktioner om, hvordan du bekræfter din konto om et par minutter."
-      send_paranoid_instructions: "Hvis din konto findes, vil du modtage en e-mail med instruktioner om, hvordan du låser den op om et par minutter."
-      unlocked: "Din konto er blevet låst op succesfuldt. Venligst log på for at fortsætte."
+      send_instructions: Du vil modtage en e-mail med instruktioner om, hvordan du bekræfter din konto om et par minutter.
+      send_paranoid_instructions: Hvis din konto findes, vil du modtage en e-mail med instruktioner om, hvordan du låser den op om et par minutter.
+      unlocked: Din konto er blevet låst op succesfuldt. Venligst log på for at fortsætte.
   errors:
     messages:
-      already_confirmed: "blev allerede bekræftet, prøv at logge ind"
+      already_confirmed: blev allerede bekræftet, prøv at logge ind
       confirmation_period_expired: 'skal bekræftes inden for %{period}, venligst anmod om en ny'
-      expired: "er udløbet, venligst anmod om en ny"
-      not_found: "ikke fundet"
-      not_locked: "var ikke låst"
+      expired: er udløbet, venligst anmod om en ny
+      not_found: ikke fundet
+      not_locked: var ikke låst
       not_saved:
         one: '1 fejl forhindrede denne %{resource} i at blive gemt:'
         other: '%{count} fejl forhindrede denne %{resource} i at blive gemt:'

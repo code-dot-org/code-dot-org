@@ -6,6 +6,7 @@
   "overlayBlockTitle":"overlay (top, bottom)",
   "placeImageBlockTitle":"وضع الصورة (س، ص، صورة)",
   "rectangleBlockTitle":"المستطيل (العرض والارتفاع، ونمط ولون)",
+  "reinfFeedbackMsg":"You can press the \"Try again\" button to edit your drawing.",
   "rotateImageBlockTitle":"تدوير (درجات، الصورة)",
   "scaleImageBlockTitle":"مقياس (عامل)",
   "squareBlockTitle":"مربع (حجم، نمط، لون)",

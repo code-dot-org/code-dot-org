@@ -1,11 +1,11 @@
-"bg":
+bg:
   data:
     text_match:
       text match test:
-        Mathematical Expression Assessment: "Оценка на Математически израз"
-        Type out the arithmetic expression that this circle of evaluation evaluates to: "Напишете аритметичен израз, който този кръг от оценка се оценява на"
+        Mathematical Expression Assessment: Оценка на Математически израз
+        Type out the arithmetic expression that this circle of evaluation evaluates to: Напишете аритметичен израз, който този кръг от оценка се оценява на
         /script_assets/msm/Unit 1/Exercise_5_question_2.png: /script_assets/MSM/Unit 1/Exercise_5_question_2.png
         (9-3)+(4*7): '(9-3)+(4*7)'
         (9-3)+4: null
         9-3+4: null
-        Type the arithmetic expression here: "Въведете аритметичния израз тук"
+        Type the arithmetic expression here: Въведете аритметичния израз тук

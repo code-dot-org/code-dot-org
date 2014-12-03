@@ -39,10 +39,11 @@
   "nextLevel":"Συγχαρητήρια! Τελείωσες το παζλ {puzzleNumber}.",
   "nextLevelTrophies":"Συγχαρητήρια! Τελείωσες το παζλ {puzzleNumber} και κέρδισες {numTrophies, plural, one {τρόπαιο} other {# τρόπαια}}.",
   "nextStage":"Συγχαρητήρια! Ολοκληρώσατε το {stageName}.",
-  "nextStageTrophies":"Συγχαρητήρια! Ολοκλήρωσες  το στάδιο {stageName} και κέρδισες {numTrophies, πληθυντικός, ένα {a trophy} άλλα {# trophies}}.",
+  "nextStageTrophies":"Συγχαρητήρια! Ολοκλήρωσες  το στάδιο {stageName} και κέρδισες {numTrophies, plural, one {a trophy} other {# τράπαια}}.",
   "numBlocksNeeded":"Συγχαρητήρια! Τελείωσες το πάζλ {puzzleNumber}. (Όμως, θα μπορούσες να βάλεις μόνο   {numBlocks, plural, one {1 μπλοκ} other {# μπλοκ}}.)",
   "numLinesOfCodeWritten":"Μόλις έγραψες {numLines, plural, one {1 γραμμή} other {# γραμμές}} κώδικα!",
   "play":"παίξε",
+  "print":"Print",
   "puzzleTitle":"Παζλ {puzzle_number} από {stage_total}",
   "repeat":"επανάλαβε",
   "resetProgram":"Επαναφορά",
@@ -63,8 +64,8 @@
   "tryAgain":"Δοκίμασε ξανά",
   "hintRequest":"Δείτε την υπόδειξη",
   "backToPreviousLevel":"Πίσω στο προηγούμενο επίπεδο",
-  "saveToGallery":"Αποθήκευσε το στη συλλογή σου",
-  "savedToGallery":"Αποθηκεύτηκε στη συλλογή σου!",
+  "saveToGallery":"Save to gallery",
+  "savedToGallery":"Saved in gallery!",
   "shareFailure":"Συγγνώμη, δεν μπορούμε να μοιράσουμε αυτό το πρόγραμμα.",
   "typeFuncs":"Διαθέσιμες συναρτήσεις: %1",
   "typeHint":"Σημείωσε ότι απαιτούνται οι παρενθέσεις και τα ερωτηματικά .",
@@ -80,5 +81,6 @@
   "tryHOC":"Δοκίμαστε την Ώρα του Κώδικα",
   "signup":"Κάντε εγγραφή για το εισαγωγικό μάθημα",
   "hintHeader":"Να μια συμβουλή:",
-  "genericFeedback":"Δες πως κατέληξες και δοκίμασε να διορθώσεις το πρόγραμμά σου."
+  "genericFeedback":"Δες πως κατέληξες και δοκίμασε να διορθώσεις το πρόγραμμά σου.",
+  "defaultTwitterText":"Check out what I made"
 }

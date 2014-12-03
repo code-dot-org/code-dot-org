@@ -50,6 +50,7 @@
           MazeEC: Lezione 1
           Webapp: Lezione 2
           ArtistEC: Lezione 3
+          StudioEC: Lezione 4
         events:
           desc: Rimbalzo (versione provvisoria)
           Bounce: Lezione 1
@@ -101,6 +102,7 @@
         Webapp: Applicazione Web
         ArtistEC: L'artista
         TextMatch: Corrispondenza di testo
+        StudioEC: Laboratorio
     trophy:
       name:
         Bronze: Bronzo
@@ -133,10 +135,10 @@
         maze_2_6: Prova a farmi arrivare all'intruso verde utilizzando solo tre blocchi.
         maze_2_7: Aiutami a catturare questo maialaccio utilizzando il minor numero
           possibile di blocchi. Prova a utilizzare più di un blocco "ripeti ... volte".
-        maze_2_8: 'Quando un blocco è grigio, significa che non puoi eliminarlo. Risolvi
-          questo esercizio usando il blocco "ripeti" che viene usato 3 volte. Prova
-          a mettere questi 3 blocchi dentro il blocco grigio "ripeti": vai avanti,
-          vai avanti, gira.'
+        maze_2_8: Quando un blocco è grigio, significa che non puoi eliminarlo. Risolvi
+          questo esercizio in cui il blocco grigio "ripeti ... volte" fa ripetere
+          per 3 volte le azioni che contiene. Prova ad inserire in esso blocchi dei
+          tipi "vai avanti" e "gira".
         maze_2_9: Ok, prova ad usare il nuovo blocco "ripeti fino a che". Esso mi
           farà "ripetere" le azioni "fino a che" ho raggiunto quel fastidioso maiale.
         maze_2_10: 'Ok, un''ultima volta per fare pratica: riesci a risolvere questo
@@ -145,16 +147,17 @@
           Riesci a farmi arrivare là con solo 5 blocchi?
         maze_2_12: Ok, questo esercizio è simile, ma leggermente diverso. Riesci a
           farlo con solo 5 blocchi?
-        maze_2_13: 'Usa il nuovo blocco "se" per farmi decidere quando girare. Suggerimento:
-          hai bisogno solo di 1 blocco in più, ma capisci bene come si fa in modo
-          che puoi farlo da solo la prossima volta.'
-        maze_2_14: Ok, questo è proprio come l'esercizio precedente, ma devi ricordarti
+        maze_2_13: 'Qui il nuovo blocco "se" viene usato per farmi decidere quando
+          girare. Fai attenzione: adesso hai bisogno di inserire un solo blocco, ma
+          capisci bene il procedimento in modo che puoi farlo tutto da solo la prossima
+          volta.'
+        maze_2_14: Ok, questo è quasi come l'esercizio precedente, ma devi ricordarti
           come hai usato insieme i blocchi "se" e "ripeti".
         maze_2_15: Io volere girasole! Usa un blocco "se" per farmi arrivare là con
           il minor numero possibile di blocchi.
         maze_2_16: 'Ok, esercitiamoci di nuovo per far pratica: questo esercizio non
           è molto diverso, ma stai attento alle piante carnivore!'
-        maze_2_17: 'Il blocco "se-altrimenti" controlla una condizione: se è vera
+        maze_2_17: 'Il blocco "se-altrimenti" controlla una condizione: SE è vera
           fa una cosa ALTRIMENTI ne fa un''altra. Prova ad usare questo nuovo blocco
           per farmi arrivare al girasole.'
         maze_2_18: 'Ancora un esercizio con il blocco "se-altrimenti": riesci a risolverlo
@@ -542,8 +545,8 @@
         studio_c3_game_6: Riesci ad aggiungere dei blocchi per cambiare lo sfondo
           e la velocità del pinguino e poi a spostarlo con i tasti freccia fino a
           che segni un punto?
-        studio_c3_game_7: Crea un gioco come vuoi tu. Quando hai fatto, clicca su
-          "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone.
+        studio_c3_game_7: Crea un gioco per conto tuo. Quando hai fatto, clicca su
+          Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
         studio_playlab_1: Riesci a far dire a questo cane "Ciao a tutti"?
         studio_playlab_2: Riesci a far dire qualcosa al cane e dopo a far dire qualcosa
           al gatto?
@@ -565,10 +568,10 @@
         studio_playlab_9: Riesci ad aggiungere dei blocchi per cambiare lo sfondo
           e la velocità del pinguino e poi a spostarlo con i tasti freccia fino a
           che segni un punto?
-        studio_playlab_10: Crea un gioco come vuoi tu. Quando hai fatto, clicca su
-          "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone.
-        studio_full_sandbox: Crea un gioco come vuoi tu. Quando hai fatto, clicca
-          su "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone.
+        studio_playlab_10: Crea un gioco per conto tuo. Quando hai fatto, clicca su
+          Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
+        studio_full_sandbox: Crea un gioco per conto tuo. Quando hai fatto, clicca
+          su Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
         studio_k1_1: Riesci a far dire a questo cane "Ciao a tutti"?
         studio_k1_2: Riesci a far dire qualcosa al cane e dopo a far dire qualcosa
           al gatto?
@@ -596,11 +599,13 @@
         maze_wordsearch_k_20: Questa è una verifica! Spostami in una direzione e poi
           in un'altra per scrivere le lettere della parola STORY
         webapp_ec_simple: Crea la tua Applicazione Web con "CreateHtmlBlock".
-        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
-          it in the new "penColour" block.'
+        turtle_ec_1_2: 'Ora, disegna un quadrato. Suggerimento: usa il tuo colore
+          preferito scegliendolo col nuovo blocco "imposta colore".'
         turtle_ec_1_10: 'Ce l''hai fatta! Ora, disegna qualcosa a piacere. Ecco alcune
           idee divertenti: una figura stilizzata, un fiocco di neve o una spirale.
           Prova anche il nuovo blocco "larghezza della penna". Buon divertimento!'
+        studio_ec_sandbox: Crea un gioco per conto tuo. Quando hai fatto, clicca su
+          Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
     video:
       name:
         maze_intro: Introduzione a "Il Labirinto"
@@ -675,6 +680,9 @@
         C3_crowdsourcing: Intelligenza Collettiva
         C3_functional_suncatchers: Acchiappa-sole Funzionale
         C3_songwriting_with_parameters: Composizione di Canzoni - Parametri
+        Frozen_intro: Hour of Code Intro
+        Frozen_loops: Introduction to Loops
+        Frozen_functions: Introduction to Functions
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto
@@ -695,13 +703,37 @@
         studio_say_text: Scrivi all'interno di queste virgolette quello che vuoi il
           tuo personaggio dica
         jigsaw_click: Clicca su questo blocco!
-        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
-          Run" block to make Elsa move forward
-        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
-          determines how much Elsa turns
-        replace_questions: Use the drop-down to replace "???" with a number
-        replace_questions_degree: Use the drop-down to replace "???" with the correct
-          degree to turn
-        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
-          workspace
-        snowflake_dropdown: Use this drop-down to create different snowflakes!
+        move_elsa_forward: Per far muovere Elsa in avanti prendi qui a sinistra il
+          blocco "vai avanti" ed attaccalo sotto il blocco "quando si clicca su 'Esegui'
+          "
+        turn_elsa: Usa il blocco "gira" per far girare Elsa. Il numero nell'elenco
+          a discesa determina di quanto Elsa deve girare
+        replace_questions: Clicca sull'elenco a discesa per sostituire "???" con un
+          numero
+        replace_questions_degree: Clicca sull'elenco a discesa per sostituire "???"
+          con il valore corretto di gradi di cui girare
+        repeat_blocks: Usa il blocco "ripeti" ed includi in esso gli altri blocchi
+          nell'area di lavoro
+        snowflake_dropdown: Usa questo elenco a discesa per creare fiocchi di neve
+          di varie forme!
+        degrees_per_side: Divide 360 by the number of sides to get the size of each
+          angle in degrees.
+        set_sides: Use this block to set "sides" to the number needed to complete
+          the puzzle.
+        set_length: Use this block to set "length" to the correct value.
+        which_equation: Which equation makes each side shorter for shapes with more
+          sides?  Try each equation!
+        get_nectar: Use the new "get nectar" block.
+        actions_category: The tool box got a new look! The "Actions" blocks are in
+          here now.
+        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
+        edit_function: Use this button to edit the function.
+        create_function: Click here to open the "Functions" flyout, then click the
+          "Create a Function" button.
+        house_hint: It's ok if the picture doesn't look like a house yet. We will
+          fix it in the next puzzle.
+        edit_draw_square: Use this button to edit the function and add the loop.
+        edit_get_nectar: Use this button to edit the function and change the direction
+          the Bee will turn to get the nectar.
+        logic_category: Open the "Logic" flyout to find the "if/else" block.
+        length_parameter: Can you update this function so it uses the "length" parameter?

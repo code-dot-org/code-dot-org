@@ -1,6 +1,6 @@
 * * *
 
-title: Resources layout: wide nav: resources_nav
+title: Press Kit layout: wide nav: resources_nav
 
 * * *
 

@@ -1,15 +1,17 @@
 
 
-# Как привлечь СМИ на событие "Час программирования"
+[<button style="float: right; margin-top: 50px">Зарегистрируйте ваше мероприятие</button>](/#join)
 
-## Некоторые шокирующие статистические данные (США):
+# Blurbs and Useful Stats
 
-  * В США планируется на один миллион больше рабочих мест в сфере компьютерных технологий, чем учеников, знающих информатику за ближайшие 10 лет (инвестиция до $500 млрд в зарплату).
-  * Более 50 процентов всех предполагаемых профессий связанных с математикой и наукой находятся в профессиях, связанных с информатикой. 
-  * Профессии в сфере информатики являются наиболее высокооплачиваемыми для выпускников. Тем не менее, меньше, чем 3% студентов колледжей выпускаются со степенью в области информатики.
-  * В 26 штатах занятия по информатики не считаются с математикой или наукой и не являются требованием для окончания средней школы. 
-  * Женщины составляют менее 20% студентов в информатике. Менее 10% — черные или латиноамериканцы.
+## Use this short blurb in newsletters
 
-## Версия в графике:
+### Bring computer science to your school. Start with an Hour of Code
+
+Компьютеры везде, но сейчас меньше школ учат информатике, чем 10 лет назад. Но есть и хорошие новости: мы можем это изменить. If you heard about the [Hour of Code](<%= hoc_uri('/') %>) last year, you might know it made history. В течение одной недели, 15 миллионов учащихся попробовали себя в информатике! The [Hour of Code](<%= hoc_uri('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= hoc_uri('/') %>) to host an Hour of Code this December 8-14 during Computer Science Education Week and help reach 100 million students by the end of the year. Add your school to the map, go to <http://hourofcode.com>
+
+## Infographic version:
 
 ![image](http://code.org/images/fit-8000/Code.org_infographic.png)
+
+<a style="display: block" href="/#join"><button style="float: right;">Зарегистрируйте ваше мероприятие</button></a>

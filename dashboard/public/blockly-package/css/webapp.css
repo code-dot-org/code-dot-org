@@ -1,3 +1,9 @@
+.droplet-palette-group-header.yellow {
+  border-left: 10px solid #e0e053; }
+
+.droplet-palette-group-header-selected.yellow {
+  background-color: #e0e053; }
+
 #divWebapp {
   overflow: hidden;
   position: relative;
@@ -11,9 +17,45 @@
   overflow: hidden;
   top: 0px;
   left: 0px;
-  width: 400px;
-  height: 400px;
   z-index: -1; }
+
+#divWebapp div {
+  overflow: hidden; }
+
+.debug-console {
+  dispay: block; }
+
+.debug-console * {
+  font-family: monospace;
+  font-size: 12px; }
+
+.debug-input-prompt {
+  max-height: 0px;
+  display: block; }
+
+.debug-input, .debug-output {
+  width: 100%;
+  border-width: 0px;
+  padding: 0px;
+  outline: none; }
+
+.debug-output textarea[disabled], textarea[readonly] {
+  height: 100px;
+  resize: none;
+  margin-bottom: -1px;
+  overflow: auto;
+  background-color: white;
+  line-height: normal;
+  cursor: text; }
+
+.debug-input {
+  max-height: 14px;
+  height: 14px;
+  background-color: white;
+  text-indent: 14.5px;
+  overflow: hidden;
+  margin-top: -3px;
+  padding-top: 6px; }
 
 /* Slider. */
 .sliderContainer {
