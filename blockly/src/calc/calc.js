@@ -231,9 +231,7 @@ Calc.execute = function() {
 
   // todo - should this be using ResultType.* instead?
   appState.result = !Calc.expressions.user.failedExpectation(true);
-  appState.testResults = BlocklyApps.getTestResults(appState.result, {
-    level: level
-  });
+  appState.testResults = BlocklyApps.getTestResults(appState.result);
 
   // equivalence means the expressions are the same if we ignore the ordering
   // of inputs

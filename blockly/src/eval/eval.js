@@ -214,9 +214,7 @@ Eval.execute = function() {
   }
 
   Eval.result = evaluateAnswer();
-  Eval.testResults = BlocklyApps.getTestResults(Eval.result, {
-    level: level
-  });
+  Eval.testResults = BlocklyApps.getTestResults(Eval.result);
 
   if (level.freePlay) {
     Eval.testResults = BlocklyApps.TestResults.FREE_PLAY;
