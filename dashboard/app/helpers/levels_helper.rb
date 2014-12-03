@@ -46,6 +46,7 @@ module LevelsHelper
     end
 
     select_and_remember_callouts if @script_level
+    localize_levelbuilder_instructions
   end
 
   def select_and_track_autoplay_video
@@ -163,6 +164,11 @@ module LevelsHelper
 
   def boolean_string_false
     "false"
+  end
+
+  def localize_levelbuilder_instructions
+    loc_val = data_t("levelbuilder.#{@level.name}", "instructions")
+    @level.properties['instructions'] = loc_val unless loc_val.nil?
   end
 
   # Code for generating the blockly options hash
