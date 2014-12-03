@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Click on \"Edit\" and look around do you notice anything different about these function blocks. When your done looking around click “Run” to see what happens.",
+    "instructions": "Do you notice anything different about these function blocks? Click “Run” to see what happens.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",

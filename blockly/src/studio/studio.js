@@ -155,10 +155,14 @@ function loadLevel() {
   Studio.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Studio.minWorkspaceHeight = level.minWorkspaceHeight;
   Studio.softButtons_ = level.softButtons || {};
-  Studio.protagonistSpriteIndex = level.protaganistSpriteIndex;  // SIC
+  Studio.protagonistSpriteIndex = level.protagonistSpriteIndex;
 
-  Studio.startAvatars = reorderedStartAvatars(skin.avatarList,
-    level.firstSpriteIndex);
+  if (level.avatarList) {
+    Studio.startAvatars = level.avatarList.slice();
+  } else {
+    Studio.startAvatars = reorderedStartAvatars(skin.avatarList,
+      level.firstSpriteIndex);
+  }
 
   // Override scalars.
   for (var key in level.scale) {
@@ -263,13 +267,21 @@ var drawMap = function () {
   if (Studio.spriteGoals_) {
     for (i = 0; i < Studio.spriteGoals_.length; i++) {
       // Add finish markers.
+      var finishClipPath = document.createElementNS(SVG_NS, 'clipPath');
+      finishClipPath.setAttribute('id', 'finishClipPath' + i);
+      var finishClipRect = document.createElementNS(SVG_NS, 'rect');
+      finishClipRect.setAttribute('id', 'finishClipRect' + i);
+      finishClipRect.setAttribute('width', Studio.MARKER_WIDTH);
+      finishClipRect.setAttribute('height', Studio.MARKER_HEIGHT);
+      finishClipPath.appendChild(finishClipRect);
+      svg.appendChild(finishClipPath);
+
       var spriteFinishMarker = document.createElementNS(SVG_NS, 'image');
       spriteFinishMarker.setAttribute('id', 'spriteFinish' + i);
-      spriteFinishMarker.setAttributeNS('http://www.w3.org/1999/xlink',
-                                        'xlink:href',
-                                        skin.goal);
       spriteFinishMarker.setAttribute('height', Studio.MARKER_HEIGHT);
-      spriteFinishMarker.setAttribute('width', Studio.MARKER_WIDTH);
+      spriteFinishMarker.setAttribute('width', (level.goalOverride &&
+        level.goalOverride.imageWidth) || Studio.MARKER_WIDTH);
+      spriteFinishMarker.setAttribute('clip-path', 'url(#finishClipPath' + i + ')');
       svg.appendChild(spriteFinishMarker);
     }
   }
@@ -1176,7 +1188,7 @@ BlocklyApps.reset = function(first) {
   if (level.coordinateGridBackground) {
     Studio.setBackground({value: 'grid'});
   } else {
-    Studio.setBackground({value: skin.defaultBackground});
+    Studio.setBackground({value: level.background || skin.defaultBackground});
   }
 
   // Reset currentCmdQueue and various counts:
@@ -1228,6 +1240,10 @@ BlocklyApps.reset = function(first) {
 
   var svg = document.getElementById('svgStudio');
 
+  var goalAsset = skin.goal;
+  if (level.goalOverride && level.goalOverride.goal) {
+    goalAsset = skin[level.goalOverride.goal];
+  }
   for (i = 0; i < Studio.spriteGoals_.length; i++) {
     // Mark each finish as incomplete.
     Studio.spriteGoals_[i].finished = false;
@@ -1236,10 +1252,11 @@ BlocklyApps.reset = function(first) {
     var spriteFinishIcon = document.getElementById('spriteFinish' + i);
     spriteFinishIcon.setAttribute('x', Studio.spriteGoals_[i].x);
     spriteFinishIcon.setAttribute('y', Studio.spriteGoals_[i].y);
-    spriteFinishIcon.setAttributeNS(
-        'http://www.w3.org/1999/xlink',
-        'xlink:href',
-        skin.goal);
+    spriteFinishIcon.setAttributeNS('http://www.w3.org/1999/xlink',
+      'xlink:href', goalAsset);
+    var finishClipRect = document.getElementById('finishClipRect' + i);
+    finishClipRect.setAttribute('x', Studio.spriteGoals_[i].x);
+    finishClipRect.setAttribute('y', Studio.spriteGoals_[i].y);
   }
 };
 
@@ -2594,9 +2611,13 @@ Studio.allGoalsVisited = function() {
       }
 
       // Change the finish icon to goalSuccess.
+      var successAsset = skin.goalSuccess;
+      if (level.goalOverride && level.goalOverride.success) {
+        successAsset = skin[level.goalOverride.success];
+      }
       var spriteFinishIcon = document.getElementById('spriteFinish' + i);
       spriteFinishIcon.setAttributeNS('http://www.w3.org/1999/xlink',
-        'xlink:href', skin.goalSuccess);
+        'xlink:href', successAsset);
     }
   }
 
