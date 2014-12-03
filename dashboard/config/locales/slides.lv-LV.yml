@@ -62,8 +62,8 @@
           lai palīdzētu tai uzvarēt.
       2:
         image: notes/stage5_2.jpg
-        text: Šajā puzlē tu būsi mākslinieks, kas novelk līniju aiz viņiem, visur,
-          kur tie iet.
+        text: "Šajā puzlē tu būsi mākslinieks, kas novelk līniju aiz viņiem, visur,
+          kur tie iet."
       3:
         image: notes/stage5_3.jpg
         text: Šis klucītis saka " pavirzies uz priekšu par 100 pikseļiem". Pikseļi
@@ -146,8 +146,8 @@
           pat tūkstošiem vai miljoniem daudz reižu.
       2:
         image: notes/hoc2_2.jpg
-        text: Šajā puzlē mēs vēlamies likt putnam pakustēties 5 lauciņus tālāk, lai
-          sasniegtu cūku.
+        text: "Šajā puzlē mēs vēlamies likt putnam pakustēties 5 lauciņus tālāk, lai
+          sasniegtu cūku."
       3:
         image: notes/hoc2_3.jpg
         text: Lai palīdzētu to izdarīt, mēs varam izmantot jauno "atkārtot" pogu.
@@ -219,9 +219,9 @@
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: Hi, my name is Saloni. I use computer science to help solve problems
-          in health and medicine. Let's learn about the "if else" block. It looks
-          like the "if" block, but it has an extra part at the end that says "else".
+        text: Sveiki, mans vārds ir Saloni. Es izmantoju datorzinātni, lai risinātu
+          problēmas veselības nozarē un medicīnā. Mācīsimies par  bloku "ja citādāk".
+          Tas ir īdzīgs blokam "ja", taču tam ir beigās ir daļa "citādāk".
       2:
         image: notes/hoc5_2.jpg
         text: If I put a "move forward" block in the spot where it says "do" and a
@@ -235,13 +235,14 @@
           checking if there's somewhere to turn.
       4:
         image: notes/hoc5_4.jpg
-        text: Now, get those zombies where they belong!
+        text: Parādi zombijiem, kur ir viņu īstā vieta!
     function:
       1:
         image: notes/stage13_1.jpg
-        text: Hi, I'm Brina, an engineer at Instagram. A function is certain lines
-          of code that you want to use over and over again, so instead of writing
-          that code out everytime, you can just use one block.
+        text: Sveiki, es esmu Brian, inženieris pie  Instagram. Funkcija ir konkrēta
+          programmas rinda ko vēlies izmantos atkal un atkal,  tāpēc tā vietā lai
+          rakstītu katru reizi jaunu programmas rindu, tu vari vienkārši  izmantot
+          vienu programmas bloku.
       2:
         image: notes/stage13_2.jpg
         text: We're going to learn how to define functions. Function definitions have
@@ -257,15 +258,15 @@
           until we drag out our "fill 5" function block from functions category.
       5:
         image: notes/stage13_5.jpg
-        text: 'Let''s put the "fun" back in "FUNction!" '
+        text: Laiks izklaidēties
     loop_while:
       1:
         image: notes/stage9_5.jpg
-        text: 'Hi, I''m Makinde! Let''s learn about the "while block." '
+        text: Sveiki, mani sauc Makinde! Mācīsimies par bloku "kamēr".
       2:
         image: notes/stage9_6.jpg
-        text: The "while block" will do whatever you put inside it AS LONG AS the
-          statement on the top is TRUE.
+        text: '"While (kamēr)" bloks darīs visu, ko tajā ieliksi, KAMĒR apgalvojums
+          virs tā būs PATIESS.'
       3:
         image: notes/stage9_7.jpg
         text: For example, if the farmer is standing on a pile, she will continue
@@ -273,8 +274,8 @@
     loop_for:
       1:
         image: notes/stage11_1.jpg
-        text: Hi, I'm Trina, and I work for Pixar. I've worked on a bunch of movies,
-          including Shrek.
+        text: Sveiki, esmu Trina, un es strādāju Pixar. esmu strādājusi ar daudzām
+          filmām, Šreku ieskaitot.
       2:
         image: notes/stage11_2.jpg
         text: This is our new "counter" loop. It will perform actions over and over
@@ -286,18 +287,17 @@
           "counter" block from the "Variables" section into the "length" spot.
       4:
         image: notes/stage11_4.jpg
-        text: This means our artist is going to draw a square that has 50 pixel length
-          sides, then it will add 10 to that and draw a square with 60 pixel length
-          sides. Then it will keep adding 10 and drawing squares until it reaches
-          90. So we'll have squares of 50, 60, 70, 80, and 90.
+        text: Tas nozīmē, ka mūsu mākslinieks uzzīmēs kvadrātu, kam būs 50 pikseļu
+          garas malas, tad tas pieskaitīs klāt 10 un uzzīmēs kvadrātu ar 60 pikseļu
+          garām malām.  Tad tas turpinās pieskaitīt 10 un zīmēt kvadrātu, līdz sasniegs
+          90. Mēs iegūsim kvadrātus ar 50, 60, 70, 80 un 90 pikseļu garām malām.
     parameters:
       1:
         image: notes/stage15_1.jpg
-        text: Hi, I'm Janete, and I'm an engineer at Zynga.
+        text: Sveiki, esmu Janete un es esmu inženieris kompānijā Zynga.
       2:
         image: notes/stage15_2.jpg
-        text: What if we want to draw a bunch of triangles and have their lengths
-          be different sizes?
+        text: Kas notiks, ja mēs gribam uzzīmēt vairākus trīsstūrus ar dažādiem garumiem?
       3:
         image: notes/stage15_3.jpg
         text: Mēs varam rakstīt šo visu kodu ar roku vai izmantot funkcijas ar parametriem.
@@ -316,8 +316,8 @@
           definition. And drag away the old number block.
       7:
         image: notes/stage15_7.jpg
-        text: To use your function with parameters, click on the functions category
-          and drag out your "draw a triangle with length" function.
+        text: Lai izmantotu savu funkciju ar parametriem, klikšķini uz funkciju kategorijas
+          un izvelc savu funkciju "zīmēt trijstūri ar garumu".
       8:
         image: notes/stage15_8.jpg
         text: Tagad tu vari izmantot matemātikas bloku, lai spētu ievadīt dažādus
@@ -325,10 +325,10 @@
     hoc_wrapup:
       1:
         image: notes/hoc6_1.jpg
-        text: Congratulations! With the last puzzle you solved, you just wrote code
-          that can tell ANY robot how to find it's way through a non-branching maze
-          or tunnel of any length, whether it's a zombie, a bird, a mars rover, or
-          even a self-driving car.
+        text: Apsveicu! Atrisinot pēdējo uzdevumu, tu uzrakstīji kodu, kas JEBKURAM
+          robotam var pateikt, kā izkļūt no nesazarota labirinta vai jebkura garuma
+          tuneļa, neatkarīgi no tā, vai tas ir zombijs, putns, marsa visurgājējs vai
+          pat bez-šofera automobilis.
       2:
         image: notes/hoc6_2.jpg
         text: Pamatkoncepcijas, ko tu izmantoji, ir pamats katrai programmai vai aplikācijai,

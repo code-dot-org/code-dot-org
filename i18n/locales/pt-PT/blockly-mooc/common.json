@@ -43,6 +43,7 @@
   "numBlocksNeeded":"Parabéns! Completaste o puzzle {puzzleNumber}. (Apesar disso, poderias ter usado somente {numBlocks, plural, one {1 bloco} other {# blocos}}.)",
   "numLinesOfCodeWritten":"Acabaste de escrever {numLines, plural, one {1 linha} other {# linhas}} de código!",
   "play":"play",
+  "print":"Print",
   "puzzleTitle":"Puzzle {puzzle_number} de {stage_total}",
   "repeat":"repita",
   "resetProgram":"Repor",
@@ -63,8 +64,8 @@
   "tryAgain":"Tentar novamente",
   "hintRequest":"See hint",
   "backToPreviousLevel":"Voltar ao nível anterior",
-  "saveToGallery":"Guarda na tua galeria de imagens",
-  "savedToGallery":"Saved to your gallery!",
+  "saveToGallery":"Save to gallery",
+  "savedToGallery":"Saved in gallery!",
   "shareFailure":"Sorry, we can't share this program.",
   "typeFuncs":"Funções disponíveis:%1",
   "typeHint":"Repara que os parêntesis e ponto e vírgula são necessários.",
@@ -80,5 +81,6 @@
   "tryHOC":"Exprimenta a Hora do Código",
   "signup":"Inscreve-te para o curso de introdução",
   "hintHeader":"Aqui vai uma dica:",
-  "genericFeedback":"See how you ended up, and try to fix your program."
+  "genericFeedback":"See how you ended up, and try to fix your program.",
+  "defaultTwitterText":"Check out what I made"
 }

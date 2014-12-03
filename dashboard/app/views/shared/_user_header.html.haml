@@ -15,6 +15,5 @@
           = link_to t('nav.user.prizes'), my_prizes_url
           %br/
         = link_to t('nav.user.logout'), destroy_user_session_url
-- elsif params[:controller] !~ /^devise/ and not Rails.configuration.minimal_mode
-
+- else
   = link_to(t('nav.user.signin'), new_user_session_url, class: 'button-signin', id: 'signin_button')

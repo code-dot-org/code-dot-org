@@ -1,73 +1,73 @@
-"tr":
+tr:
   data:
     script:
       name:
         test:
           "Jigsaw: Learn to drag and drop": 'Yapboz: Nasıl sürükleyip bırakacağınızı öğrenin'
-          The Maze: "Labirent"
-          Multi: "Çoklu"
-          Match: "Eşleştir"
-          Math Image: "Matematik Görseli"
-          title: "Deneme Kursu"
-          description: "Sadece dahili bir deneme kursu."
+          The Maze: Labirent
+          Multi: Çoklu
+          Match: Eşleştir
+          Math Image: Matematik Görseli
+          title: Deneme Kursu
+          description: Sadece dahili bir deneme kursu.
         course1:
           "Jigsaw: Learn to drag and drop": 'Yapboz: Nasıl sürükleyip bırakacağınızı öğrenin'
           "Maze: Sequence": 'Labirent: Sıra'
           "Maze: Debugging": 'Labirent: Ayıklama'
           "Artist 1: Intro": 'Aktör 1: Giriş'
-          Artists 2: "Aktör 2"
-          Spelling Bee: "Bilge Arı"
-          Spelling Bee not blockly: "Bilge Arı bloklu değil"
+          Artists 2: Aktör 2
+          Spelling Bee: Bilge Arı
+          Spelling Bee not blockly: Bilge Arı bloklu değil
           "Bee 1: Intro": 'Arı 1: Giriş'
           "Maze 2: Loops": 'Labirent 2: Döngüler'
           "Bee 2: Loops": 'Arı 2: Döngüler'
           Multi & Match: 'Çoklu & Eşleştirme'
           K-1 Flappy: K-1 Salınım
-          Flappy non blockly: "Bloksuz salınma"
-          title: "Course 1"
-          Artist 2: "Aktör 2"
-          Happy Maps: "Mutlu Haritalar"
+          Flappy non blockly: Bloksuz salınma
+          title: Course 1
+          Artist 2: Aktör 2
+          Happy Maps: Mutlu Haritalar
           Move it, Move it: Oynat, Oynat
           "Real-life Algorithms: Plant a Seed": 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
-          Building a Foundation: "Bir Temel Oluşturma"
-          Getting Loopy: "Döngüselleşme"
-          The Big Event: "Büyük Olay"
-          Going Places Safely: "Biryerlere Güvenle Gitmek"
-          description: "Course 1 is designed to allow early readers to create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1."
+          Building a Foundation: Bir Temel Oluşturma
+          Getting Loopy: Döngüselleşme
+          The Big Event: Büyük Olay
+          Going Places Safely: Biryerlere Güvenle Gitmek
+          description: Course 1 is designed to allow early readers to create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.
           "Bee: Sequence": 'Arı: Sıra'
           "Artist: Sequence": 'Aktör: Sıra'
           "Artist: Shapes": 'Aktör: Şekiller'
           "Maze: Loops": 'Labirent: Döngüler'
           "Bee: Loops": 'Arı: Döngüler'
           "Studio: Create a Story": 'Oyun Laboratuvarı: Bir Hikaye Oluşturun'
-          description_short: "Course 1 is designed for early readers. Recommended for grades K-1."
+          description_short: Course 1 is designed for early readers. Recommended for grades K-1.
           "Artist: Loops": 'Aktör: Döngüler'
         course2:
-          The Maze: "Labirent"
-          Suzi: "Suzi"
-          The Artist: "Sanatçı"
-          Artist Debugging: "Aktör Ayıklama"
-          Bounce: "Sıçrama"
+          The Maze: Labirent
+          Suzi: Suzi
+          The Artist: Sanatçı
+          Artist Debugging: Aktör Ayıklama
+          Bounce: Sıçrama
           "Studio: Create a Story": 'Oyun Laboratuvarı: Bir Hikaye Oluşturun'
-          Artist Loops: "Aktör Döngüleri"
-          Bee Conditionals: "Arı Koşullandırmaları"
-          Flappy: "Flappy"
-          title: "Ders 2"
-          Bee Loops: "Arı Döngüleri"
-          Artist Functions: "Aktör Fonksiyonları"
-          The Artist Debugging: "Aktör Ayıklama"
-          Bee Debugging: "Arı Ayıklama"
-          Bee Functions: "Arı Fonksiyonları"
-          Maze Loops: "Labirent Döngüleri"
-          Graph Paper Programming: "Grafik Kağıdıyla Programlama"
+          Artist Loops: Aktör Döngüleri
+          Bee Conditionals: Arı Koşullandırmaları
+          Flappy: Flappy
+          title: Ders 2
+          Bee Loops: Arı Döngüleri
+          Artist Functions: Aktör Fonksiyonları
+          The Artist Debugging: Aktör Ayıklama
+          Bee Debugging: Arı Ayıklama
+          Bee Functions: Arı Fonksiyonları
+          Maze Loops: Labirent Döngüleri
+          Graph Paper Programming: Grafik Kağıdıyla Programlama
           "Real-life Algorithms: Paper Planes": 'Gerçek-yaşam Algoritmaları: Kağıt Uçaklar'
-          Getting Loopy: "Döngüselleşme"
-          Relay programming: "Röle Programlama"
-          Conditionals: "Koşullar"
-          Binary Bracelets: "İkilik Bileklikler"
-          The Big Event: "Büyük Olay"
-          Your Digital Footprint: "Dijital İziniz"
-          description: "Course 2 is designed for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5."
+          Getting Loopy: Döngüselleşme
+          Relay programming: Röle Programlama
+          Conditionals: Koşullar
+          Binary Bracelets: İkilik Bileklikler
+          The Big Event: Büyük Olay
+          Your Digital Footprint: Dijital İziniz
+          description: Course 2 is designed for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
           "Maze: Sequence": 'Labirent: Sıra'
           "Artist: Sequence": 'Aktör: Sıra'
           "Maze: Loops": 'Labirent: Döngüler'
@@ -81,34 +81,34 @@
           "Maze: Sequence2": 'Labirent: Sıra2'
           "Artist: Nested Loops": 'Aktör: Yerleştirilmiş Döngüler'
         course3:
-          The Maze: "Labirent"
+          The Maze: Labirent
           "Studio: Create a Story": 'Oyun Laboratuvarı: Bir Hikaye Oluşturun'
-          The Artist: "Sanatçı"
-          title: "Kurs 3"
-          Artist Functions: "Aktör Fonksiyonları"
-          Artist For Loops: "Döngüler İçin Aktör"
-          Artist Nested Loops: "Aktörle Yerleştirilmiş Döngüler"
-          Bee Conditionals: "Arı Koşullandırmaları"
-          Bee Nested Loops: "Arıya Yerleştirilmiş Döngüler"
-          Bee Debuggin: "Arı Ayıklama"
-          Bee Debugging: "Arı Ayıklama"
-          Bee Functions: "Arı Fonksiyonları"
-          Artist Functions with Params: "Parametreli Aktör Fonksiyonları"
-          Bounce: "Sıçrama"
-          Maze Conditionals: "Labirent Koşullandırıcıları"
-          Artist Functions with Parameters: "Parametreli Aktör Fonksiyonları"
-          Computational Thinking: "Sayısal Düşünme"
-          Functional Suncatchers: "Fonksiyonel Güneş Avcıları"
-          Songwriting Parameters: "Songwriting Parameters"
-          Dice Race: "Zar Yarışı"
-          Internet: "İnternet"
+          The Artist: Sanatçı
+          title: Kurs 3
+          Artist Functions: Aktör Fonksiyonları
+          Artist For Loops: Döngüler İçin Aktör
+          Artist Nested Loops: Aktörle Yerleştirilmiş Döngüler
+          Bee Conditionals: Arı Koşullandırmaları
+          Bee Nested Loops: Arıya Yerleştirilmiş Döngüler
+          Bee Debuggin: Arı Ayıklama
+          Bee Debugging: Arı Ayıklama
+          Bee Functions: Arı Fonksiyonları
+          Artist Functions with Params: Parametreli Aktör Fonksiyonları
+          Bounce: Sıçrama
+          Maze Conditionals: Labirent Koşullandırıcıları
+          Artist Functions with Parameters: Parametreli Aktör Fonksiyonları
+          Computational Thinking: Sayısal Düşünme
+          Functional Suncatchers: Fonksiyonel Güneş Avcıları
+          Songwriting Parameters: Songwriting Parameters
+          Dice Race: Zar Yarışı
+          Internet: İnternet
           Crowdsourcing: "Kalabalık Kaynaklandırma 'Crowdsourcing'"
-          Digital Citizenship: "Sayısal Vatandaşlık"
+          Digital Citizenship: Sayısal Vatandaşlık
           Farmer - While Loops: 'Çiftçi - While Döngüleri'
-          description: "Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5."
+          description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
           "Studio: Create a Game": 'Oyun Laboratuvarı: Bir Oyun Oluşturmak'
-          Maze: "Labirent"
-          Artist: "Aktör"
+          Maze: Labirent
+          Artist: Aktör
           "Artist: Functions": 'Aktör: Fonksiyonlar'
           "Bee: Functions": 'Arı: Fonksiyonlar'
           "Bee: Conditionals": 'Arı: Koşullandırıcılar'
@@ -118,8 +118,8 @@
           "Bee: Nested Loops": 'Arı: Yerleştirilmiş Döngüler'
           "Bee: Debugging": 'Arı: Ayıklama'
           description_short: 'Course 3 is a follow-up to Course 2.  Recommended for grades 4-5.'
-          Maze2: "Labirent2"
-          Artist2: "Aktör2"
+          Maze2: Labirent2
+          Artist2: Aktör2
           "Artist: Functions2": 'Aktör: Fonksiyonlar2'
           "Bee: Functions2": 'Arı: Fonksiyonlar2'
           "Bee: Conditionals2": 'Arı: Koşullandırıcılar2'
@@ -129,67 +129,89 @@
           "Bee: Nested Loops2": 'Arı: Yerleştirilmiş Döngüler2'
           "Bee: Debugging2": 'Arı: Ayıklama2'
           "Artist: Patterns": 'Artist: Patterns'
-          Songwriting: "Şarkı yazma"
+          Songwriting: Şarkı yazma
         msm:
-          title: "Ortaokul Matematiği"
-          description: "Ortaokul Matematiği için özel çalışma sürüyor."
-          Graph Paper Programming: "Grafik kağıdı programlama"
-          Assessments: "Değerlendirmeler"
-          Unit 1: "Ünite 1"
-          Unit 2: "İkinci Ünite"
-          Ninja Cat and the Coordinate Plane: "Ninja Cat and the Coordinate Plane"
+          title: Ortaokul Matematiği
+          description: Ortaokul Matematiği için özel çalışma sürüyor.
+          Graph Paper Programming: Grafik kağıdı programlama
+          Assessments: Değerlendirmeler
+          Unit 1: Ünite 1
+          Unit 2: İkinci Ünite
+          Ninja Cat and the Coordinate Plane: Ninja Cat and the Coordinate Plane
           "Calc: Circles of Evaluation": 'Calc: Circles of Evaluation'
           "Artist: Strings and Images": 'Artist: Strings and Images'
-          Contracts: "Contracts"
+          Contracts: Contracts
           "Artist: Writing Contracts": 'Artist: Writing Contracts'
           "Calc: Defining Variables": 'Calc: Defining Variables'
           "Play Lab: Defining Variables": 'Play Lab: Defining Variables'
-          The Design Recipe: "The Design Recipe"
+          The Design Recipe: The Design Recipe
           "Artist: Defining Functions": 'Artist: Defining Functions'
-          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Play Lab: Defining Functions": 'Play Lab: Design Recipe'
           "Artist: Functions": 'Aktör: Fonksiyonlar'
           "Play Lab: Animation": 'Play Lab: Animation'
-          Booleans: "Booleans"
+          Booleans: Booleans
           "Play Lab: Booleans": 'Play Lab: Booleans'
           "Calc: Boolean Operators": 'Calc: Boolean Operators'
           "Play Lab: Boolean Operators": 'Play Lab: Boolean Operators'
-          Conditionals and Piecewise Functions: "Conditionals and Piecewise Functions"
+          Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
           "Artist: Conditionals": 'Artist: Conditionals'
-          Collision Detection and the Distance Formula: "Collision Detection and the Distance Formula"
+          Collision Detection and the Distance Formula: Collision Detection and the Distance Formula
           "Play Lab: Collision Detection": 'Play Lab: Collision Detection'
+          "Unplugged: Ninja Cat and the Coordinate Plane": 'Unplugged: Ninja Cat and the Coordinate Plane'
+          "Eval: Strings and Images": 'Eval: Strings and Images'
+          "Unplugged: Contracts": 'Unplugged: Contracts'
+          "Eval: Writing Contracts": 'Eval: Writing Contracts'
+          "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
+          "Eval: Defining Functions": 'Eval: Fast Functions'
+          "Eval: Functions": 'Eval: Design Recipe'
+          "Unplugged: Booleans": 'Unplugged: Booleans'
+          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
+          "Eval: Conditionals": 'Eval: Conditionals'
+          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
+          "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
+          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
+          "Eval: Boolean Operators": 'Eval: Boolean Operators'
+          Blocks to Math: Blocks to Math
+          "Play Lab: Defining Variables (Big Game)": 'Play Lab: Defining Variables (Big Game)'
+          "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
+          "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Big Game)'
+          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
+          "Eval: Fast Functions": 'Eval: Fast Functions'
+          "Play Lab: Design Recipe": 'Play Lab: Design Recipe'
+          "Eval: Design Recipe": 'Eval: Design Recipe'
         playlab:
-          title: "Play Lab"
-          description: "Create a story or make a game with Play Lab!"
-          Play Lab: "Play Lab"
-          description_short: "Create a story or make a game with Play Lab!"
+          title: Play Lab
+          description: Create a story or make a game with Play Lab!
+          Play Lab: Play Lab
+          description_short: Create a story or make a game with Play Lab!
         artist:
-          title: "Aktör"
-          description: "Draw cool pictures and designs with the Artist!"
-          Artist: "Aktör"
-          description_short: "Draw cool pictures and designs with the Artist!"
+          title: Aktör
+          description: Draw cool pictures and designs with the Artist!
+          Artist: Aktör
+          description_short: Draw cool pictures and designs with the Artist!
         scrat:
-          title: "Scrat"
-          description_short: "Scrat short description."
-          description: "Scrat long description"
+          title: Scrat
+          description_short: Scrat short description.
+          description: Scrat long description
           "Maze: Sequence": 'Labirent: Sıra'
         hourofcode:
-          Maze: "Labirent"
-          title: "Saat Kodu"
-          description_short: "Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!"
-          description: "Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!"
+          Maze: Labirent
+          title: Saat Kodu
+          description_short: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
         frozen:
-          title: "Frozen"
-          description_short: "Join the Royal Sisters of Arendelle, Anna and Elsa, as they explore the magic and beauty of ice. You will write code to create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
-          description: "Join the Royal Sisters of Arendelle, Anna and Elsa, as they explore the magic and beauty of ice. You will write code to create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
-          Artist: "Aktör"
+          title: Code with Anna and Elsa
+          description_short: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
+          description: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
+          Artist: Aktör
         course4:
-          description_short: "Students taking Course 4 should have already taken Courses 2 and 3."
-          description: "Course 4 is designed for students who have taken Course 2 and 3. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8."
+          description_short: Students taking Course 4 should have already taken Courses 2 and 3.
+          description: Course 4 is designed for students who have taken Course 2 and 3. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.
           "Artist: Variables": 'Artist: Variables'
           "Bee: For Loops": 'Bee: For Loops'
-          title: "Course 4"
+          title: Course 4
           "Algorithms: Tangrams": 'Algorithms: Tangrams'
-          Variables: "Değişkenler"
+          Variables: Değişkenler
           "Play Lab: Variables": 'Play Lab: Variables'
           "Play Lab: Functions with Parameters": 'Play Lab: Functions with Parameters'
           "Bee: Functions with Parameters": 'Bee: Functions with Parameters'
@@ -198,21 +220,21 @@
           "Artist: Functions": 'Aktör: Fonksiyonlar'
           "Artist: Functions with Paraqmeters": 'Artist: Functions with Paraqmeters'
           "Unplugged: Tangrams": 'Unplugged: Tangrams'
-          Artist: "Aktör"
-          Bee: "Bee"
+          Artist: Aktör
+          Bee: Bee
           "Unplugged: Envelope Variables": 'Unplugged: Envelope Variables'
           "Unplugged: Madlibs": 'Unplugged: Madlibs'
           "Unplugged: For Loop Fun": 'Unplugged: For Loop Fun'
           "Unplugged: Songwriting with Parameters": 'Unplugged: Songwriting with Parameters'
           "Artist: Functions with Parameters": 'Artist: Functions with Parameters'
           "Unplugged: Binary": 'Unplugged: Binary'
-          Bee Binary: "Bee Binary"
-          Farmer Binary: "Farmer Binary"
-          Maze and Bee: "Maze and Bee"
-          Artist Binary: "Artist Binary"
+          Bee Binary: Bee Binary
+          Farmer Binary: Farmer Binary
+          Maze and Bee: Maze and Bee
+          Artist Binary: Artist Binary
         Course4pre:
-          description_short: "A brief rampup of concepts for students who have not taken Course 2 and 3."
-          Course 4 Prerequisite: "Course 4 Prerequisite"
+          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
+          Course 4 Prerequisite: Course 4 Prerequisite
           "Maze: Sequence": 'Labirent: Sıra'
           "Artist: Sequence": 'Aktör: Sıra'
           "Artist: Loops": 'Aktör: Döngüler'
@@ -222,3 +244,36 @@
           "Bee: Nested Loops": 'Arı: Yerleştirilmiş Döngüler'
           "Artist: Functions": 'Aktör: Fonksiyonlar'
           "Bee: Debugging": 'Arı: Ayıklama'
+        course4pre:
+          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
+          Course 4 Prerequisite: Course 4 Prerequisite
+          "Maze: Sequence": 'Labirent: Sıra'
+          "Artist: Sequence": 'Aktör: Sıra'
+          "Artist: Loops": 'Aktör: Döngüler'
+          "Bee: Conditionals": 'Arı: Koşullandırıcılar'
+          "Artist: Nested Loops": 'Aktör: Yerleştirilmiş Döngüler'
+          "Farmer: While Loops": 'Çiftçi: While Döngüleri'
+          "Bee: Nested Loops": 'Arı: Yerleştirilmiş Döngüler'
+          "Artist: Functions": 'Aktör: Fonksiyonlar'
+          "Bee: Debugging": 'Arı: Ayıklama'
+        Course4pre (Case Conflict):
+          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
+          Course 4 Prerequisite: Course 4 Prerequisite
+          "Maze: Sequence": 'Labirent: Sıra'
+          "Artist: Sequence": 'Aktör: Sıra'
+          "Artist: Loops": 'Aktör: Döngüler'
+          "Bee: Conditionals": 'Arı: Koşullandırıcılar'
+          "Artist: Nested Loops": 'Aktör: Yerleştirilmiş Döngüler'
+          "Farmer: While Loops": 'Çiftçi: While Döngüleri'
+          "Bee: Nested Loops": 'Arı: Yerleştirilmiş Döngüler'
+          "Artist: Functions": 'Aktör: Fonksiyonlar'
+          "Bee: Debugging": 'Arı: Ayıklama'
+        usability:
+          Intro: Intro
+          Variables and For Loops: Variables and For Loops
+          Functions and Functions with Parameters: Functions and Functions with Parameters
+          title: Usability Testing
+          description_short: ""
+          description: A selection of Course 4 levels for usability testing.
+          Variables: Değişkenler
+          For Loops: For Loops

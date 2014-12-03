@@ -1,6 +1,6 @@
 * * *
 
-शीर्षक: साधनहरू सजावट: फराकिलो nav: resources_nav
+title: Press Kit layout: wide nav: resources_nav
 
 * * *
 

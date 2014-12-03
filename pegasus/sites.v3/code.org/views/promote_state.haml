@@ -54,13 +54,8 @@
 -if ! state.nil_or_empty? && File.exists?(pegasus_dir("sites.v3/code.org/public/files/states/#{state}.pdf"))
   %span.download-fact-sheet<
     %a{:href=>"/files/states/#{state}.pdf", :target=>'_blank'}<
-      #{statename} fact-sheet
+      Download #{statename} fact-sheet
       %img{:src=>"/images/download.png", :width=>"35px", :style=>'margin-top:-5px'}
-
-|
-
-%a{:onclick=>"return adjustScroll('tools-section')", :style=>"color: #BCC2C6; cursor: pointer; line-height: 56px"}
-  More advocacy tools
 
 - if statename == "Washington DC"
   %p
@@ -86,12 +81,17 @@
   %p
     =data[:text_t]
 
+%button{:onclick=>"return adjustScroll('tools-section')"}
+  Take Action
+
 -if data[:action_text_s] && data[:action_url_s]
   %a{:href=>data[:action_url_s], :target=>'_blank'}
-    %button{:class=>'state-petition-btn'}= data[:action_text_s]
+    %button{:class=>'state-petition-btn'}
+      Sign Petition
 - else
   %a{:href=>data[:action_url_s], :target=>'_blank'}
-    %button{:class=>'state-petition-btn', :style=>'visibility: hidden'}= data[:action_text_s]
+    %button{:class=>'state-petition-btn', :style=>'visibility: hidden'}
+      Sign Petition
 
 #changeorg{:style=>'display: none;'}
   %b#title

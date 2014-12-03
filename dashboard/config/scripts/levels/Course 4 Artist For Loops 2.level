@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "I've wrapped that triangle loop in for loop that counts from 50 to 100 by 10. What happens if you use the \"counter\" variable to control the length of the sides?",
+    "instructions": "I've put the code for drawing a triangle inside a for loop that counts from 50 to 100 by 10. What happens if you use the \"counter\" variable to control the length of the sides?",
     "x": "150",
     "y": "250",
     "start_direction": "90",
@@ -16,7 +16,11 @@
     "disable_variable_editing": "true",
     "free_play": "false",
     "ideal": "11",
-    "slider_speed": ".6"
+    "slider_speed": ".6",
+    "embed": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "impressive": "false"
   }
 }]]></config>
   <blocks>

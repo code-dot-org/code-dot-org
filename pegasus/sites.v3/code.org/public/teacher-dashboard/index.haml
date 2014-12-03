@@ -120,7 +120,6 @@ angular: teacherDashboard
     };
 
     $scope.genericError = function(result) {
-      console.log(result);
       $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
     };
 
@@ -201,9 +200,6 @@ angular: teacherDashboard
         if (section !== null) {
           $scope.biggestSection = section;
           $scope.sectionProgressUrl = '/dashboardapi/section_progress/' + section.id + "?nocache=" + $.now();
-          console.log(section.id);
-        } else {
-          console.log("none");
         }
       }
     );
@@ -232,7 +228,6 @@ angular: teacherDashboard
     $scope.sections = sectionsService.query();
 
     $scope.genericError = function(result) {
-      console.log(result);
       $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
     };
 
@@ -294,7 +289,6 @@ angular: teacherDashboard
       var modifiedStudents = [];
 
       $.each(students, function(index, student) {
-        console.log(index);
         if (student.editing || student.editing_password) {
           if (student.id) {
             modifiedStudents.push(student);

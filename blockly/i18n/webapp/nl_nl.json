@@ -22,6 +22,9 @@
   "repeatForeverTooltip": "Herhaal de acties in dit blok wanneer de app wordt uitgevoerd.",
   "shareWebappTwitter": "Bekijk de app die ik heb gemaakt. Ik heb het zelf geschreven met @codeorg",
   "shareGame": "Deel je app:",
+  "stepIn": "Step in",
+  "stepOver": "Step over",
+  "stepOut": "Step out",
   "turnBlack": "verdonker blok",
   "turnBlackTooltip": "Maakt het scherm zwart.",
   "yes": "Ja"

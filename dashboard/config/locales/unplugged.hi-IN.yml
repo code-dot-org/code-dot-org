@@ -50,7 +50,7 @@
         - unplug4
         video: Unplug4
       Unplug5:
-        title: कार्य
+        title: "कार्य"
         desc: In this lesson, students will make a suncatcher out of string, beads,
           and a special charm. The students will follow a series of repetitive steps,
           then be asked to identify certain sets of "skills" that are duplicated several
@@ -155,7 +155,7 @@
           erase everything back to that point.
         video: C2_relay_programming
       Conditionals:
-        title: शर्तें
+        title: "शर्तें"
         desc: To learn about conditional statements, students play a card game and
           create rules like "If I draw a red card, I get a point" and "If I draw a
           black card, you get a point."
@@ -269,3 +269,21 @@
           of binary options.  This lesson takes that concept one step further as it
           illustrates how a computer can store even more complex information (such
           as images and colors) in binary, as well.
+      VideoGamesCoordinatePlanes:
+        title: Video Games and Coordinate Planes
+        desc: Video Games and Coordinate Planes lesson description
+      Contracts:
+        title: Contracts
+        desc: Contracts unplugged lesson description
+      DesignRecipe:
+        title: The Design Recipe
+        desc: Design Recipe lesson description
+      Booleans:
+        title: Booleans
+        desc: Booleans lesson description
+      ConditionalsPiecewiseFunctions:
+        title: Conditionals and Piecewise Functions
+        desc: Conditionals and Piecewise Functions lesson description
+      CollisionDetection:
+        title: Collision Detection
+        desc: Collision Detection lesson description

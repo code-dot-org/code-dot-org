@@ -51,6 +51,7 @@
           MazeEC: Fase 1
           Webapp: Fase 2
           ArtistEC: Fase 3
+          StudioEC: Fase 4
         events:
           desc: Pingue-pongue (beta)
           Bounce: Fase 1
@@ -102,6 +103,7 @@
         Webapp: Webapp
         ArtistEC: O Artista
         TextMatch: Correspondência de texto
+        StudioEC: Laboratório
     trophy:
       name:
         Bronze: Bronze
@@ -519,8 +521,8 @@
           ponto?
         studio_c3_game_6: Você pode adicionar blocos para mudar o plano de fundo e
           a velocidade do pinguim, e então movê-lo com as setas até que você pontue?
-        studio_c3_game_7: Crie seu próprio jogo. Quando tiver terminado, clique em
-          Concluir para que seus amigos possam jogá-lo em seus celulares.
+        studio_c3_game_7: Crie seu próprio jogo. Quando terminar, clique em Concluir
+          para deixar que seus amigos experimentem seu jogo em seus celulares.
         studio_playlab_1: Você consegue fazer esse cachorro dizer "Olá, mundo"?
         studio_playlab_2: Você pode fazer o cachorro dizer alguma coisa e, depois,
           fazer o gato dizer alguma coisa?
@@ -542,10 +544,10 @@
           ponto?
         studio_playlab_9: Você pode adicionar blocos para mudar o plano de fundo e
           a velocidade do pinguim, e então movê-lo com as setas até que você pontue?
-        studio_playlab_10: Crie seu próprio jogo. Quando tiver terminado, clique em
-          Concluir para que seus amigos possam jogá-lo em seus celulares.
-        studio_full_sandbox: Crie seu próprio jogo. Quando tiver terminado, clique
-          em Concluir para que seus amigos possam jogá-lo em seus celulares.
+        studio_playlab_10: Crie seu próprio jogo. Quando terminar, clique em Concluir
+          para deixar que seus amigos experimentem seu jogo em seus celulares.
+        studio_full_sandbox: Crie seu próprio jogo. Quando terminar, clique em Concluir
+          para deixar que seus amigos experimentem seu jogo em seus celulares.
         studio_k1_1: Você consegue fazer esse cachorro dizer "Olá, mundo"?
         studio_k1_2: Você pode fazer o cachorro dizer alguma coisa e, depois, fazer
           o gato dizer alguma coisa?
@@ -572,11 +574,13 @@
         maze_wordsearch_k_20: Isso é um teste! Movimente-me para um lado, e então
           para o outro, para formar a palavra STORY
         webapp_ec_simple: Crie seu aplicativo da Web com createHtmlBlock.
-        turtle_ec_1_2: 'Agora, desenhe um quadrado. OBSERVAÇÃO: para usar sua cor
-          preferida, selecione-a no novo bloco "penColour".'
-        turtle_ec_1_10: 'Você conseguiu" Agora, desenhe o que quiser. Algumas ideias
-          divertidas: um boneco, um floco de neve ou uma espiral. Use também o novo
-          bloco "penWidth". Divirta-se!'
+        turtle_ec_1_2: 'Agora, desenhe um quadrado. NOTA: use sua cor preferida selecionando-a
+          no novo bloco "Cor da caneta".'
+        turtle_ec_1_10: 'Muito bem! Agora, desenhe o que quiser. Veja algumas ideias
+          divertidas para desenhar: um boneco, um floco de neve ou uma espiral. Use
+          também o novo bloco "Largura da caneta". Divirta-se!'
+        studio_ec_sandbox: Crie seu próprio jogo. Quando terminar, clique em Concluir
+          para deixar que seus amigos experimentem seu jogo em seus celulares.
     video:
       name:
         maze_intro: Introdução ao Labirinto
@@ -651,6 +655,9 @@
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Caça-sóis funcionais
         C3_songwriting_with_parameters: Escrevendo uma canção com parâmetros
+        Frozen_intro: Introdução à Hora de Código
+        Frozen_loops: Introdução aos Laços
+        Frozen_functions: Introdução às Funções
     callout:
       text:
         drag_blocks: Arraste um bloco "avance" e o encaixe embaixo do outro bloco
@@ -669,13 +676,35 @@
         studio_say_text: Digite, dentro das aspas, o que você quer que seu personagem
           diga
         jigsaw_click: Clique nesse bloco!
-        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
-          Run" block to make Elsa move forward
-        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
-          determines how much Elsa turns
-        replace_questions: Use the drop-down to replace "???" with a number
-        replace_questions_degree: Use the drop-down to replace "???" with the correct
-          degree to turn
-        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
-          workspace
-        snowflake_dropdown: Use this drop-down to create different snowflakes!
+        move_elsa_forward: Arraste um bloco "Avance" e encaixe-o sob o bloco "Quando
+          o jogo começa" para que Elsa avance
+        turn_elsa: Use o bloco "Vire" para que Elsa vire. O número no menu suspenso
+          determina o quanto Elsa vai virar
+        replace_questions: Use o menu suspenso para substituir "???" por um número
+        replace_questions_degree: Use o menu suspenso para substituir "???" pelo grau
+          correto para virar
+        repeat_blocks: Use o bloco "Repita" e conecte-o aos blocos na área de trabalho
+        snowflake_dropdown: Use este menu suspenso para criar diferentes flocos de
+          neve!
+        degrees_per_side: Divida 360 pelo número de lados para obter o tamanho de
+          cada ângulo em graus.
+        set_sides: Use este bloco para definir "lados" como o número necessário para
+          completar o desafio.
+        set_length: Use este bloco para definir "comprimento" com o valor correto.
+        which_equation: Qual equação faz com que cada lado seja mais curto para formas
+          com mais lados? Experimente cada equação!
+        get_nectar: Use o novo bloco "obtenha néctar".
+        actions_category: A caixa de ferramentas tem um novo visual! Os blocos de
+          "Ação" estão aqui agora.
+        draw_square_hint: 'Dica: Use o laço do quadrado que você fez no último desafio.'
+        edit_function: Use este botão para editar a função.
+        create_function: Clique aqui para abrir o submenu "Funções", e então clique
+          no botão "Criar uma função".
+        house_hint: Tudo bem se a imagem ainda não se parece com uma casa. Vamos arrumar
+          isso no próximo desafio.
+        edit_draw_square: Use este botão para editar a função e adicionar o laço.
+        edit_get_nectar: Use este botão para editar a função e alterar a direção para
+          a qual a abelha vai virar para obter o néctar.
+        logic_category: Abra o submenu "Lógica" para encontrar o bloco "se/senão".
+        length_parameter: Você pode atualizar esta função para que ela use o parâmetro
+          "comprimento"?

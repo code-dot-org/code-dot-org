@@ -64,7 +64,7 @@
   "penDown":"pensil kebawah",
   "penTooltip":"Mengangkat atau menurunkan pensil, mulai atau berhenti menggambar.",
   "penUp":"pensil keatas",
-  "reinfFeedbackMsg":"Apa hasilnya sudah seperti apa yang Anda inginkan? Tekan tombol \"Ayo coba lagi\" untuk melihat gambar Anda.",
+  "reinfFeedbackMsg":"Here is your drawing! Keep working on it or continue to the next puzzle.",
   "setColour":"Atur warna",
   "setPattern":"tetapkan pola",
   "setWidth":"atur lebar",

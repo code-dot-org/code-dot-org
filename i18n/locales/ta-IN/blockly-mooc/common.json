@@ -43,6 +43,7 @@
   "numBlocksNeeded":"Congratulations! You completed Puzzle {puzzleNumber}. (However, you could have used only {numBlocks, plural, one {1 block} other {# blocks}}.)",
   "numLinesOfCodeWritten":"You just wrote {numLines, plural, one {1 line} other {# lines}} of code!",
   "play":"play",
+  "print":"Print",
   "puzzleTitle":"{stage_total} ஆம் நிலையில் புதிர் {puzzle_number}",
   "repeat":"மறுபடி",
   "resetProgram":"மீட்டமை",
@@ -63,8 +64,8 @@
   "tryAgain":"மீண்டும் முயற்சி செய்",
   "hintRequest":"See hint",
   "backToPreviousLevel":"முந்தைய நிலைக்கு திரும்பவும்",
-  "saveToGallery":"Save to your gallery",
-  "savedToGallery":"Saved to your gallery!",
+  "saveToGallery":"Save to gallery",
+  "savedToGallery":"Saved in gallery!",
   "shareFailure":"Sorry, we can't share this program.",
   "typeFuncs":"கிடைக்கப்பெறும் செயல்பாடுகள்: %1",
   "typeHint":"குறிப்பு, அந்த அடைப்புக்குறிகள் மற்றும் அரைப்புள்ளிகள் தேவையானது.",
@@ -80,5 +81,6 @@
   "tryHOC":"Try the Hour of Code",
   "signup":"ஆரம்ப பாடத்திற்கு பதிவுபெறவும்",
   "hintHeader":"Here's a tip:",
-  "genericFeedback":"See how you ended up, and try to fix your program."
+  "genericFeedback":"See how you ended up, and try to fix your program.",
+  "defaultTwitterText":"Check out what I made"
 }

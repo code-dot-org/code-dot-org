@@ -2,31 +2,42 @@
 
 -if variation == 'learn'
   #rightbox.desktop-feature{:style=>'float:right'}
-    %a{:href=>'#notes'}= I18n.t(:educator_notes)
+    %a{:href=>"http://hourofcode.com/resources/how-to"}= I18n.t(:educator_notes)
+    %br/
+    %br/
+
+%div{style: "clear:both"}
 
 -tutorials = Tutorials.new(variation=='learn' ? :tutorials : :beyond_tutorials)
 
+#carousel-frozen{:style=>'display:none'}
+  = view :learn_carousel_frozen, :tag=>'frozen', :tutorials=>tutorials, :id=>'collection-frozen'
+
 #carousel-ie8{:style=>'display:none'}
-  = view :learn_carousel, :heading=>I18n.t(:older_systems), :subheading=>I18n.t(:older_systems_subheading), :tag=>'IE8', :tutorials=>tutorials, :id=>'collection-ie8'
+  = view :learn_carousel, :heading=>I18n.t(:older_systems), :subheading=>I18n.t(:older_systems_subheading), :tag=>'IE8', :tutorials=>tutorials, :id=>'collection-ie8', :check_language=>true
 
 #carousel-mobile{:style=>'display:none'}
-  = view :learn_carousel, :heading=>I18n.t(:mobile_devices), :tag=>'Mobile', :tutorials=>tutorials, :id=>'collection-mobile'
+  = view :learn_carousel, :heading=>I18n.t(:mobile_devices), :tag=>'Mobile', :tutorials=>tutorials, :id=>'collection-mobile', :check_language=>true
 
 #carousel-international{:style=>'display:none'}
   = view :learn_carousel, :heading=>I18n.t(:carousel_heading_international), :tag=>'International', :tutorials=>tutorials, :id=>'collection-international', :international_layout=>true, :check_language=>true
+  %br
+  %br
+  %a{:id=>"englishtutorials", :href=>"#", :onclick=>"toggle_visibility();return false;"}
+    %button{:style=>"font-size:20px;"}
+      = I18n.t(:carousel_heading_domestic) 
 
-- categories.each do |category|
-  - id = "collection-" + category[:tag]
-  = view :learn_carousel, :heading=>category[:name], :tag=>category[:tag], :tutorials=>tutorials, :id=>id
+#all-tutorials{:style=>'visibility:hidden; overflow:hidden'}
+  - categories.each do |category|
+    - id = "collection-" + category[:tag]
+    = view :learn_carousel, :heading=>category[:name], :tag=>category[:tag], :tutorials=>tutorials, :id=>id
 
 %br
 %br
 
 -if variation == 'learn'
-  %a{:id=>'notes'}
-  #guidelines{:style=>'padding:5px'}
-    = view :learn_notes
-    %br
+  %a{:href=>"http://hourofcode.com/resources/how-to"}
+    = I18n.t(:educator_notes)
 
 -if variation == 'beyond'
   %a{:href=>"/educate"}
@@ -58,12 +69,47 @@
   var is_ie5 = ua.indexOf("MSIE 5.") != -1;
 
   if (!window.mobilecheck() && (is_ie8 || is_safari4 || is_netscape7 || is_ie5))
+  {
     $('#carousel-ie8').show();
+  }
 
   // International
   var pegasusLocale = "#{request.locale}";
-  if (pegasusLocale.substring(0,2) != "en")
+
+  // Special Frozen entry, English only right now, and not shown for mobile or IE8
+  if (pegasusLocale.substring(0,2) == "en")
+  {
+    if (!window.mobilecheck() && !is_ie8)
+    {
+      $('#carousel-frozen').show();
+    }
+  }
+
+  if (pegasusLocale.substring(0,2) == "en") 
+  {
+    $('#all-tutorials').show();
+    $('#all-tutorials').css('visibility', 'visible');
+  }
+  else 
+  {
     $('#carousel-international').show();
+    $('#all-tutorials').css('height', '0');
+  }
+
+  function toggle_visibility() 
+  {
+    var e = document.getElementById('all-tutorials');
+    if ( e.style.visibility == 'visible' ) 
+    {
+      $('#all-tutorials').css('height', '0');
+      $('#all-tutorials').css('visibility', 'hidden');
+    }
+    else 
+    {
+      $('#all-tutorials').css('height', '100%');
+      $('#all-tutorials').css('visibility', 'visible');
+    }
+  }
 
 %script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
 %script{:src=>'/js/jquery.touchSwipe.min.js'}
@@ -74,6 +120,7 @@
 
   $(document).ready(function() {
     createCarousels();
+    setupScratBlinking();
   });
 
   function createCarousels()
@@ -90,7 +137,7 @@
         prev  : id + ' .slide-prev',
         next  : id + ' .slide-next',
         pagination : '#pagination-' + $(this).attr('id'),
-        swipe	: {
+        swipe : {
           onTouch : true,
           onMouse : false
         },
@@ -105,12 +152,26 @@
         }
       });
     });
-
   }
 
   $(window).load(function(){
     $(window).trigger('resize');
   })
+
+  function showScratBlink(blink) {
+    $(".scrat-standing").css('opacity', blink ? 0 : 1);
+    $(".scrat-standing-blink").css('opacity', blink ? 1 : 0);
+  }
+
+  function setupScratBlinking() {
+    setTimeout(function() {
+      showScratBlink(true);
+      setTimeout(function() {
+        showScratBlink(false);
+        setupScratBlinking();
+      }, 200);
+    }, 4000);
+  }
 
 = view 'add_commas.js'
 %script{:src=>'/js/learn-metrics.js'}

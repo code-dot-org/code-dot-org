@@ -6,13 +6,7 @@
 
 # Hour of Codeのイベント主催への登録にご協力頂き大変ありがとうございます！
 
-**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](<%= hoc_uri('/prizes') %>)
-
-<% if @country == 'us' %>
-
-Get your [whole school to participate](<%= hoc_uri('/prizes') %>) for a chance for big prizes for your entire school.
-
-<% end %>
+**全ての** Hour of Code の主催者は、Dropboxの10 GB容量 か $10 のSkype creditを感謝のしるしとして受領頂けます。 [詳細](<%= hoc_uri('/prizes') %>)
 
 ## 1. みんなに広めましょう
 
@@ -24,29 +18,29 @@ Get your [whole school to participate](<%= hoc_uri('/prizes') %>) for a chance f
 
 ## 2. Hour of Codeを主催するよう学校と交渉しましょう。
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](http://hourofcode.com/files/schools-handout.pdf). あなたの学校が参加したならば, [10,000ドル分の価値があるテクノロジーがあなたの学校に当選するチャンスがあります ](/prizes)そして、あなたの住まいの地域にある学校にも参加するよう誘ってください。
+[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](/resources/hoc-one-pager.pdf) to your principal.
 
 <% else %>
 
 ## 2. Hour of Codeを主催するよう学校と交渉しましょう。
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](http://hourofcode.com/files/schools-handout.pdf) to your principal.
+[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](/resources/hoc-one-pager.pdf) this handout</a> to your principal.
 
 <% end %>
 
-## 3. Make a generous donation
+## 3. 寄付のお願い
 
-[Donate to our crowdfunding campaign.](http://<%= codeorg_url() %>/donate) To teach 100 million children, we need your support. We just launched what could be the [largest education crowdfunding campaign](http://<%= codeorg_url() %>/donate) in history. Every dollar will be matched by major Code.org [donors](http://<%= codeorg_url() %>/about/donors), doubling your impact.
+[Donate to our crowdfunding campaign.](http://<%= codeorg_url() %>/donate) To teach 100 million children, we need your support. We just launched the [largest education crowdfunding campaign](http://<%= codeorg_url() %>/donate) in history. *Every* dollar will be matched [donors](http://<%= codeorg_url() %>/about/donors), doubling your impact.
 
-## 4. Ask your employer to get involved
+## 4. 雇用主にも参加するよう聞いてみてください。
 
 [Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf).
 
-## 5. Promote Hour of Code within your community
+## 4. あなたのコミュニティーにもHour of Codeを宣伝しましょう。
 
-地域のグループ — ボーイスカウト、教会、大学、退役軍人のグループや労働組合、もしくは Hour of Code "ブロックパーティー"を地元で開いたりして募集してください。
+Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
 
-## 6. Ask a local elected official to support the Hour of Code
+## 6. Hour of Codeを支援してもらえるよう地元の議員に聞いてみましょう。
 
 [Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf) and invite them to visit your school.
 

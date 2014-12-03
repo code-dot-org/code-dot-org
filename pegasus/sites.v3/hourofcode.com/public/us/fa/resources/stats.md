@@ -1,15 +1,17 @@
 
 
-# چگونه توجه رسانه‌ها را به رويداد ساعت كدنويسي خود جلب كنيد
+[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
 
-## چند آمار تکان‌دهنده آمار (آمریکا):
+# Blurbs and Useful Stats
 
-  * تعداد شغل‌هاي مرتبط با كامپيوتر در 10 سال آينده، يك ميليون بيش‌ از تعداد دانش‌اموزان خواهد بود (با مجموع درآمد‌هاي سالانه 500 ميليارد دلار).
-  * بيش از 50 درصد از تمامي شغل‌هاي مربوط به رياضي و علوم، مربوط به محاسبات كامپيوتري است. 
-  * شغل‌هاي مربوط به محاسبات و كامپيوتر در بين پر درآمد‌ترين شغل‌ها براي تازه فارغ‌التحصيلان است. با اين حال كم‌تر از 3 درصد دانشجويان كالج‌ها در علوم كامپيوتر فارغ‌التحصيل مي‌شوند.
-  * در 26 ايالت، علوم كامپيوتر جزو واحدهاي فارغ‌التحصيلي دبيرستان محسوب نمي‌شوند. 
-  * كم‌تر از 20 درصد از دانش‌جويان علوم كامپيوتر AP دختر هستند. كم‌تر از 10 درصد آن‌ها سياه‌پوست و يا از آمريكاي لاتين هستند.
+## Use this short blurb in newsletters
 
-## نسخه اينفوگرافيك:
+### Bring computer science to your school. Start with an Hour of Code
+
+Computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. If you heard about the [Hour of Code](<%= hoc_uri('/') %>) last year, you might know it made history. In one week, 15 million students tried computer science! The [Hour of Code](<%= hoc_uri('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= hoc_uri('/') %>) to host an Hour of Code this December 8-14 during Computer Science Education Week and help reach 100 million students by the end of the year. Add your school to the map, go to <http://hourofcode.com>
+
+## Infographic version:
 
 ![image](http://code.org/images/fit-8000/Code.org_infographic.png)
+
+<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

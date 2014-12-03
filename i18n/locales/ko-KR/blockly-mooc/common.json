@@ -39,10 +39,11 @@
   "nextLevel":"축하합니다! {puzzleNumber} 번 퍼즐을 해결했습니다.",
   "nextLevelTrophies":"축하합니다! {puzzleNumber} 번 퍼즐을 해결하고, {numTrophies, plural, one {a trophy} other {# trophies}} 를 얻었습니다.",
   "nextStage":"축하드립니다! {stageName}을(를) 완료하셨습니다.",
-  "nextStageTrophies":"축하합니다. {stageName} 를 완료하였습니다. {numTrophies, plural, one {a trophy} 남은 트로피 {# trophies}}.",
+  "nextStageTrophies":"축하합니다. {stageName} 를 완료하였습니다. {numTrophies, plural, one {a trophy} other {# trophies}}.",
   "numBlocksNeeded":"축하합니다! {puzzleNumber} 번 퍼즐을 해결했습니다. (하지만, {numBlocks, plural, one {1 block} other {# blocks}} 만 사용해야 합니다.)",
   "numLinesOfCodeWritten":"오! 코드 {numLines, plural, one {1 line} other {# 줄}}로 해결했네요!",
   "play":"실행",
+  "print":"인쇄",
   "puzzleTitle":"퍼즐 {puzzle_number}\/{stage_total}",
   "repeat":"반복",
   "resetProgram":"처음 상태로",
@@ -63,8 +64,8 @@
   "tryAgain":"다시 시도",
   "hintRequest":"도움 보기",
   "backToPreviousLevel":"이전 퍼즐",
-  "saveToGallery":"나의 갤러리에 저장",
-  "savedToGallery":"나의 갤러리에 저장되었습니다!",
+  "saveToGallery":"갤러리에 저장",
+  "savedToGallery":"갤러리에 저장되었습니다!",
   "shareFailure":"프로그램을 공유할 수 없습니다.",
   "typeFuncs":"사용 가능 함수:%1",
   "typeHint":"괄호 \"( )\" 와 세미콜론 \";\" 이 필요합니다.",
@@ -80,5 +81,6 @@
   "tryHOC":"Hour of Code 해보기",
   "signup":"샘플 코스를 위해 가입하기",
   "hintHeader":"도움말:",
-  "genericFeedback":"어떻게 종료되는지 살펴보고 프로그램을 수정해 보세요."
+  "genericFeedback":"어떻게 종료되는지 살펴보고 프로그램을 수정해 보세요.",
+  "defaultTwitterText":"만든 작품 확인하기"
 }

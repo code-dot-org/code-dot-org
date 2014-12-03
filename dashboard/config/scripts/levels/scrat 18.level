@@ -15,10 +15,11 @@
     "disable_variable_editing": "false",
     "start_direction": "1",
     "step_mode": "0",
-    "video_key": "if_else",
     "step_speed": "2",
     "use_modal_function_editor": "false",
-    "maze_data": null
+    "use_contract_editor": "false",
+    "maze_data": null,
+    "video_key": "if_else_scrat"
   }
 }]]></config>
   <blocks>

@@ -50,6 +50,7 @@
           MazeEC: Vaihe 1
           Webapp: Vaihe 2
           ArtistEC: Vaihe 3
+          StudioEC: Vaihe 4
         events:
           desc: Pompi (beta)
           Bounce: Vaihe 1
@@ -101,6 +102,7 @@
         Webapp: Verkkosovellus
         ArtistEC: Taiteilija
         TextMatch: Text Match
+        StudioEC: Pelilabra
     trophy:
       name:
         Bronze: Pronssi
@@ -167,7 +169,7 @@
         turtle_1_3: Tee neliö käyttäen vain kolme lohkoa.
         turtle_1_4: |
           Piirrä kolmio, jonka sivut ovat kaikki eri värisiä. Käytä "satunnainen väri" -toimintoa valitsemaan kunkin sivun väri.
-          Vihje: "sinun täytyy keksiä, kuinka paljon kääntyä ja valita oikea luku \"käänny\"-lohkoon."
+          Vihje: sinun täytyy keksiä, kuinka paljon kääntyä ja valita oikea luku "käänny"-lohkoon.
         turtle_1_5: Harjoituksen vuoksi voisit nyt piirtää kirjekuoren käyttäen kolmiota
           ja neliötä.
         turtle_1_6: 'Keksitkö miten piirtää tämä kolmio ja neliö? Vihje: piirrä kolmio
@@ -367,7 +369,8 @@
         bounce_2: Attach a block to the "when right arrow" and "when left arrow" blocks,
           then run and move the paddle with the both arrow key to both finish targets.
         bounce_3: TBD
-        bounce_4: TBD
+        bounce_4: Tällä kertaa sinun täytyy lisätä neljä lohkoa. Siirrä mela kaikkiin
+          neljään maaliin ratkaistaksesi pulman.
         bounce_5: Attach a blocks to the "when right arrow", "when left arrow", "when
           ball hits wall", and "when ball hits paddle" blocks.
         bounce_6: Try again with more balls.
@@ -540,6 +543,8 @@
         turtle_ec_1_10: 'Teit sen! Nyt voit piirtää mitä haluat. Joitakin hauskoja
           ideoita: tikku-ukko, lumihiutale tai kierre. Kokeile myös uutta "penWidth"
           lohkoa. Pidä hauskaa!'
+        studio_ec_sandbox: Create your own game. When you're done, click Finish to
+          let friends try your game on their phones.
     video:
       name:
         maze_intro: Sokkelon johdanto
@@ -563,7 +568,7 @@
         Unplug6: Ehtolausekkeet
         Unplug7: Säveltäminen
         Unplug8: Abstraktio
-        Unplug9: Relay programming
+        Unplug9: Releohjelmointi
         Unplug10: Internet
         Unplug11: Yhteenveto
         C1_happy_maps_unplugged: Iloiset kartat
@@ -571,15 +576,15 @@
         C1_bigevent_unplugged: Suuri tapahtuma
         C1_getting_loopy: Mennään silmukoille
         C1_pair_programming: Pariohjelmointi
-        C1_maze_intro_sequencing: Maze Sequencing Intro
+        C1_maze_intro_sequencing: Sokkelo sekvenssien esittely
         C1_maze_debugging: Sokkelo virheenkorjaus
-        C1_bee_level_intro: Bee Level - Intro
+        C1_bee_level_intro: Mehiläinen taso - Esittely
         C1_artist_intro: Taiteilijan johdanto
         C1_spelling_bee_intro: Kirjurimehiläinen johdanto
         C1_zuck_repeat_loop: Sokkelo silmukoita
         C1_bee_loops: Mehiläinen silmukoita
         C1_maze_loops: Sokkelo silmukoita
-        C1_playlab_storytelling: Play Lab - Create a Story
+        C1_playlab_storytelling: Pelilabra - Luo tarina
         C1_planting_seed: Siemen istutus
         C1_building_foundation: Rakennetaan perustus
         C2_maze_intro: Sokkelon johdanto
@@ -590,10 +595,10 @@
         C2_bee_loops: Mehiläinen silmukoita
         C2_bee_debugging: Mehiläinen virheenkorjaus
         C2_bee_conditionals: Mehiläinen ehtolohkot
-        C2_playlab_createstory: Play Lab - Create a Story
+        C2_playlab_createstory: Pelilabra - Luo tarina
         C2_graph_paper: Ruutupaperiohjelmointi
         C2_conditionals_with_cards: Ehtolausekkeet
-        C2_binary_bracelets: Binary Bracelets
+        C2_binary_bracelets: Binäärilistat
         C2_relay_programming: Releohjelmointi
         C2_paper_airplanes: Paperilentokoneet
         C3_maze_level_4: Sokkelo silmukoita
@@ -603,17 +608,20 @@
         C3_bee_conditionals: Mehiläinen ehtolohkot
         C3_maze_conditionals: Sokkelo ehtolauseet
         C3_artist_nested_loops: Sisäkkäiset silmukat
-        C3_farmer_while: While Loops
+        C3_farmer_while: Kunnes-silmukat
         C3_bee_nested_loops: Sisäkkäiset silmukat
         C3_bee_debugging: Mehiläinen virheenkorjaus
         C3_bounce: Bounce
-        C3_playlab_create_game: Play Lab - Create a Game
+        C3_playlab_create_game: Pelilabra - Luo peli
         C3_computational_thinking: Laskennallinen ajattelu
-        C3_dice_race: Dice Race
+        C3_dice_race: Noppakisa
         C3_internet: Internet
-        C3_crowdsourcing: Crowdsourcing
+        C3_crowdsourcing: Joukkoistaminen
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
+        Frozen_intro: Hour of Code Intro
+        Frozen_loops: Introduction to Loops
+        Frozen_functions: Introduction to Functions
     callout:
       text:
         drag_blocks: Raahaa "siirrä" lohko ja napsauta se kiinni toisen lohkon alalaitaan
@@ -637,6 +645,27 @@
         replace_questions: Use the drop-down to replace "???" with a number
         replace_questions_degree: Use the drop-down to replace "???" with the correct
           degree to turn
-        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
-          workspace
-        snowflake_dropdown: Use this drop-down to create different snowflakes!
+        repeat_blocks: Käytä "Toista" lohkoa ja laita se työtilassa olevien toisten
+          lohkojen ympärille
+        snowflake_dropdown: Käytä tätä alasvetovalikkoa luodaksesi erilaisia lumihiutaleita!
+        degrees_per_side: Divide 360 by the number of sides to get the size of each
+          angle in degrees.
+        set_sides: Use this block to set "sides" to the number needed to complete
+          the puzzle.
+        set_length: Use this block to set "length" to the correct value.
+        which_equation: Which equation makes each side shorter for shapes with more
+          sides?  Try each equation!
+        get_nectar: Use the new "get nectar" block.
+        actions_category: The tool box got a new look! The "Actions" blocks are in
+          here now.
+        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
+        edit_function: Use this button to edit the function.
+        create_function: Click here to open the "Functions" flyout, then click the
+          "Create a Function" button.
+        house_hint: It's ok if the picture doesn't look like a house yet. We will
+          fix it in the next puzzle.
+        edit_draw_square: Use this button to edit the function and add the loop.
+        edit_get_nectar: Use this button to edit the function and change the direction
+          the Bee will turn to get the nectar.
+        logic_category: Open the "Logic" flyout to find the "if/else" block.
+        length_parameter: Can you update this function so it uses the "length" parameter?

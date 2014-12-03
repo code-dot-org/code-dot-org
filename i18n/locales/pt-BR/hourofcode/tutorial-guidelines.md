@@ -6,11 +6,11 @@ layout: wide
 
 # Diretrizes para os tutoriais da Hora do Código e Semana da Educação em Ciência da Computação
 
-**O prazo para submissão de um tutorial para a Hora do Código 2014 já passou. Contudo, você ainda pode submeter uma apresentação e vamos tentar analisá-la, se houver tempo.**
+**O prazo para enviar um tutorial para a Hora do Código 2014 já se esgotou. Contudo, você ainda pode enviar seu material e tentaremos analisá-lo de acordo com o tempo disponível.**
 
-A Code.org disponibilizará várias atividades da Hora do Código no(s) site(s) da Code.org, Hora do Código e Semana da Educação em Ciência da Computação. A lista atual pode ser encontrada em [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
+A Code.org disponibilizará uma variedade de atividades da Hora do Código nos sites da Code.org, Hora do Código e Semana da Educação em Ciência da Computação. A lista atual pode ser encontrada em [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
 
-Nós gostaríamos de oferecer várias opções atraentes, mas o principal objetivo é otimizar a experiência para os alunos e professores que são novos na ciência da computação. Use este documento para orientar a criação de sua atividade, direcionada para o usuário que não tem conhecimentos prévios de codificação, programação de computadores e ciência da computação.
+Gostaríamos de disponibilizar uma variedade de opções atrativas, mas nosso objetivo principal é melhorar a experiência de alunos e professores que são novos no campo da ciência da computação. Use este documento para orientá-lo na criação de sua atividade, a qual deve ser direcionada para o usuário que não tem nenhuma experiência em codificação, programação de computadores e ciência da computação.
 
 <a id="top"></a>
 
@@ -29,7 +29,7 @@ Nós gostaríamos de oferecer várias opções atraentes, mas o principal objeti
 
 ## Como os tutoriais serão avaliados para inclusão
 
-Uma comissão de educadores de ciência da computação irá classificar submissões com base em métricas qualitativas e quantitativas, incluindo resultados de pesquisa de um conjunto mais amplo de educadores.
+Uma comissão de professores de ciência da computação classificará os tutoriais enviados de acordo com métricas qualitativas e quantitativas, incluindo resultados de pesquisas de um conjunto mais amplo de professores.
 
 **Os tutoriais terão melhores classificações se apresentarem as seguintes características:**
 
@@ -49,7 +49,7 @@ Uma comissão de educadores de ciência da computação irá classificar submiss
   * Compatibilidade com um número limitado de plataformas de SO/dispositivos - para plataformas baseadas na Web, deve funcionar em todos os seguintes navegadores: IE9+, última versão do Chrome, Firefox e Safari
   * Operam somente em inglês
   * Direcionados a um gênero específico (por exemplo, tema voltado principalmente a meninos)
-  * funcionar como venda casada para uma plataforma de aprendizado que cobra mensalidades
+  * Funcionam como venda casada para uma plataforma de aprendizado que cobra mensalidades
 
 **Os tutoriais NÃO constarão na lista se:**
 
@@ -63,9 +63,9 @@ Uma comissão de educadores de ciência da computação irá classificar submiss
 
 Fundamentalmente, o objetivo da campanha Hora do Código é ampliar a participação de alunos e professores em ciência da computação, e ajudar a mostrar que essa ciência é acessível a todos, e "mais fácil do que se imagina". De diferentes formas, alunos e professores atingem melhor esta meta quando há menos opções e elas são mais simples, com foco em opções da mais alta qualidade para um usuário de primeira viagem.
 
-Observe também que a Semana da Educação em Ciência da Computação de 2013 foi um sucesso fantástico, de acordo com as respostas de professores e alunos - 20 milhões de participantes de 9 a 23 de dezembro, sendo que 97% disseram que gostaram e querem repetir a campanha!
+De acordo com as respostas de professores e alunos, a Semana da Educação em Ciência da Computação de 2013 foi um sucesso. Foram 20 milhões de participantes, de 9 a 23 de dezembro, dos quais 97% disseram que gostaram da experiência e querem repetir a campanha!
 
-Em razão disso, as listas existentes certamente são "muito boas", e o que nos faz aumentar o número de tutoriais na lista da Hora do Código não é ampliar as opções, mas aumentar a qualidade (ou as novidades) para os alunos, ou expandir as opções para não falantes da língua inglesa, devido à natureza global da campanha de 2014.
+Por esse motivo, acreditamos que as listas existentes são "muito boas". O que nos fez buscar aumentar o número de tutoriais na lista da Hora do Código não é ampliar as opções, mas aumentar a qualidade (ou as novidades) para os alunos, ou expandir as opções para não falantes da língua inglesa, devido à natureza global da campanha de 2014.
 
 [**Voltar ao topo**](#top)
 
@@ -90,7 +90,7 @@ Em razão disso, as listas existentes certamente são "muito boas", e o que nos 
 
 ## Como enviar (até 01/10/2014)
 
-Visite a [página de atividade de submissão da Hora do Código](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) e siga os passos para enviar o seu tutorial.
+Acesse a [página de de envio de atividade da Hora do Código](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) e siga os passos para enviar seu tutorial.
 
 **O que você precisará:**
 
@@ -110,7 +110,7 @@ Visite a [página de atividade de submissão da Hora do Código](https://docs.go
           * Navegadores - IE8, IE9, IE10, Firefox, Chrome, Safari
           * Safari versão mobile do iOS (otimizado para dispositivos móveis)
           * Chrome para Android (otimizado para dispositivos móveis)
-      * **Não baseados na Web:** especificar a plataforma para código nativo (Mac, Win, iOS, Android, xBox, outros)
+      * **Não baseadas na Web:** especificar a plataforma para código nativo (Mac, Win, iOS, Android, xBox, outros)
       * Atividades offline
   * Uma lista de idiomas disponíveis e formatos apropriados: 
       * Os tutoriais devem especificar quais idiomas estão disponíveis usando códigos de 2 caracteres, por exemplo: EN - inglês; JA - japonês
@@ -146,30 +146,30 @@ Visite a [página de atividade de submissão da Hora do Código](https://docs.go
 
 ## Sugestões para criação de sua atividade
 
-**Inclua o logo da Semana de Educação em Ciência da Computação em seu tutorial.** Você pode usar o logo da Semana de Educação em Ciência da Computação ([pequeno](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) ou [grande](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) em seu tutorial, mas não é obrigatório. Você também pode entrar em contato conosco para solicitar uma permissão específica para usar o logo "Em parceria com Code.org". ***Esse logo só pode ser usado com uma permissão específica concedida por escrito pelo Code.org.*** Nós podemos acabar criando um logo da Hora do Código, mas neste momento ainda não temos um. Sob nenhuma circunstância o nome e o logo do Code.org podem ser usados. Ambos são marcas registradas e não podem ser combinados com a marca de um terceiro.
+**Use o logo da Semana de Educação em Ciência da Computação em seu tutorial.** Você pode usar o logo da Semana de Educação em Ciência da Computação ([pequeno](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) ou [grande](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) em seu tutorial, mas não é obrigatório. Você também pode entrar em contato conosco para solicitar uma permissão específica para usar o logo "Em parceria com Code.org". ***Este logo só pode ser usado com uma permissão específica concedida por escrito pela Code.org.*** Eventualmente, podemos criar um logo da Hora do Código, mas neste momento ainda não temos um. Sob nenhuma circunstância o nome e o logo da Code.org podem ser usados. Ambos são marcas registradas e não podem ser associados a marcas de terceiros.
 
-**Certifique-se que um aluno regular pode terminar tranquilamente em uma hora.** Considere a adição de uma atividade aberta no final para os alunos que avançam mais rapidamente pela aula. Lembre-se que a maioria das crianças será de iniciantes absolutos na ciência da computação e codificação.
+**Certifique-se de que um aluno regular consiga terminar a atividade tranquilamente em uma hora.** Considere acrescentar uma atividade aberta no final para os alunos que avançarem mais rapidamente pela lição. Lembre-se de que a maioria das crianças não tem nenhuma experiência em ciência da computação e programação.
 
-**Inclua notas para o professor.** A maioria das atividades deve ser autoexplicativa, mas se uma atividade tiver de ser facilitada ou liderada por um professor, inclua instruções claras e simples para ele na forma de notas em uma URL separada, enviada com sua atividade. Não apenas os alunos são principiantes, mas alguns dos professores também. Inclua informações como:
+**Inclua notas para o professor.** A maioria das atividades deve ser autoexplicativa, mas se uma atividade tiver de ser facilitada ou conduzida por um professor, inclua instruções claras e simples na forma de notas, em uma URL separada enviada com sua atividade. Não só os estudantes, mas alguns professores também são principiantes. Inclua informações como:
 
   * Nosso tutorial funciona melhor nas seguintes plataformas e navegadores
   * Ele funciona em smartphones ou tablets?
   * É recomendável programação em duplas? 
   * Existe alguma consideração para uso em sala de aula? Por exemplo, se houver vídeos, oriente os professores a mostrar os vídeos em uma tela projetada para todos verem juntos
 
-**Incorporar feedback ao final da atividade.** (Por exemplo: "você terminou 10 níveis e aprendeu sobre loops! Ótimo trabalho!")
+**Incorpore feedback ao final da atividade.** (Por exemplo: "você terminou 10 níveis e aprendeu sobre loops! Ótimo trabalho!")
 
-**Incorporar mídias sociais.** Incentivar os alunos a postar em mídia social (quando apropriado), quando eles terminarem, por exemplo "Eu fiz uma Hora do Código com ________ E você? #HoraDoCodigo" ou "Eu fiz uma #HoraDoCodigo como parte da #Semana da Educação em Ciência da Computação. E você? @Scratch". Use a hashtag **#HoraDoCodigo** (com letras maiúsculas H, D, C)
+**Incorpore mídias sociais.** Incentive os estudantes a publicar nas mídias sociais (quando apropriado), assim que terminarem sua participação, por exemplo: "Fiz uma Hora do Código com ________. E você? #HoraDoCodigo" ou "Eu fiz uma #HoraDoCodigo como parte da #SemEduCC. E você? @Scratch". Use a hashtag **#HoraDoCodigo** (com letras maiúsculas H, D, C)
 
-**Crie sua atividade em outros idiomas além do inglês.** Estamos ampliando esta campanha internacionalmente este ano e gostaríamos de ter uma série de atividades para oferecer a participantes de língua não-inglesa.
+**Crie sua atividade em outros idiomas além do inglês.** Este ano estamos apostando em uma campanha internacional e gostaríamos de ter atividades para oferecer a falantes de outros idiomas.
 
-**Explique ou conecte a atividade a um contexto socialmente significativo.** Programação de computadores torna-se um superpoder quando os alunos veem como podem mudar o mundo para melhor!
+**Explique ou associe a atividade a um contexto socialmente significativo.** A programação de computadores passa a ter superpoderes quando os alunos a veem como algo que serve para tornar o mundo melhor!
 
-**Não requeira inscrição ou pagamento antes de os alunos terem testado seu tutorial.** Tutoriais que exigem inscrição ou pagamento não serão listados
+**Não exija inscrição ou pagamento antes de os alunos experimentarem seu tutorial.** Os tutoriais que exigirem inscrição ou pagamento não serão classificados
 
-**Certifique-se de que seu tutorial pode ser usado em um [paradigma de programação em duplas](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).**
+**Certifique-se de que seu tutorial pode ser usado em um [modelo de Programação em duplas](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).**
 
-As três regras de programação em duplas no âmbito escolar:
+Estas são as três regras de programação em duplas no âmbito escolar:
 
   * O condutor controla o mouse e o teclado.
   * O navegador faz sugestões, aponta os erros e faz perguntas. 
@@ -189,7 +189,7 @@ Benefícios da programação em duplas:
 
 Com a participação de aproximadamente 40 milhões de alunos na Hora do Código, e mais de 97% dos professores participantes nos pedindo para repetir o evento anualmente, estamos tomando as medidas necessárias para garantir que a Hora do Código se torne um movimento que pode se repetir anualmente com maior fidelidade e sem confusão.
 
-Uma parte disto é proteger a marca "Hour of Code" para evitar confusão. Muitos dos nossos parceiros de tutorial usaram a "Hora do Código" em seus sites. Não queremos impedir esse uso, mas nós queremos ter certeza de que ele está dentro de alguns limites:
+Como parte desse trabalho, queremos proteger a marca "Hour of Code" (adaptada para o português como "Hora do Código") para evitar confusões. Muitos de nossos parceiros de tutoriais têm usado os nomes "Hour of Code" e "Hora do Código" em seus sites. Não queremos impedir esse uso, mas garantir que esteja dentro de alguns limites:
 
   1. Qualquer referência à marca "Hour of Code" deve ser feita de forma que não sugira que ela é uma marca de sua propriedade, mas uma referência à Hora do Código como um movimento popular. Um bom exemplo: "Participe da Hora do Código no ACMECorp.com". Exemplo de uso errado: "Experimente a Hora do Código promovida pela ACME Corp"
   2. Use "TM" sobrescrito nos textos de maior destaque quando mencionar "Hour of Code", tanto em seu website como em descrições de aplicativos
@@ -207,13 +207,13 @@ Uma parte disto é proteger a marca "Hour of Code" para evitar confusão. Muitos
 
 Para fazer um acompanhamento mais rigoroso da participação, pedimos que todos os parceiros que atuam na elaboração de tutoriais incluam imagens de rastreamento de 1 pixel na primeira e última página de seus tutoriais da Hora do Código. (Coloque uma imagem de 1 pixel na página inicial e uma na última página. Não coloque pixels em páginas intermediárias).
 
-Isso nos permitirá contar os usuários que você recrutou diretamente para visitar seu site para fazer a Hora do Código, ou usuários que visitam quando um professor escreve sua URL diretamente em seu quadro. Isso levará a contagens de participação mais precisas para o seu tutorial, o que irá ajudá-lo a atrair usuários. Se você integrar o pixel no final, ele também nos permitirá medir as taxas de conclusão do tutorial.
+Isso nos permite calcular o número de usuários recrutados diretamente para visitar seu site e participar da Hora do Código, ou os usuários que o visitam quando um professor digita sua URL diretamente em seu quadro. Isso nos permitirá contabilizar os participantes de seu tutorial com maior precisão, o que o ajudará a atrair mais usuários. Se você integrar o pixel no final, também nos permitirá calcular as taxas de conclusão do tutorial.
 
-Se seu tutorial é aprovado e incluído na página tutorial final, a Code.org irá fornecer um pixel de controle exclusivo para você integrar no seu tutorial. Veja o exemplo abaixo.
+Caso seu tutorial seja aprovado e incluído na página final de tutoriais, a Code.org lhe dará um pixel de rastreamento exclusivo para que você possa integrar em seu tutorial. Veja o exemplo abaixo.
 
-***Observação: não é importante fazer isso para aplicativos instaláveis (aplicativos para iOS/Android, ou aplicativos de instalação na área de trabalho)***
+***OBSERVAÇÃO: não é preciso fazer isso com aplicativos que podem ser instalados (aplicativos iOS/Android ou aplicativos de instalação em desktop)***
 
-**Exemplos de pixels de rastreamento para AppInventor:**
+**Exemplos de pixels de rastreamento para o AppInventor:**
 
 IMG SRC="http://code.org/api/hour/begin_appinventor.png/"
 
@@ -225,7 +225,7 @@ IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
 
 ## Promova seus tutoriais, a Semana da Educação em Ciência da Computação e a Hora do Código
 
-Nós estamos pedindo a todos para promover o seu próprio tutorial de 1 hora entre seus usuários. Direcione-os para sua página da Hora do Código. Os usuários estão muito mais propensos a responder a uma mala direta sobre o seu tutorial. Use a campanha internacional da Hora do Código para a Semana da Educação em Ciência da Computação como uma boa razão para incentivar os usuários a convidar outras pessoas para participar, ajude-nos chegar a 100 milhões de participantes totais.
+Estamos pedindo para que cada um divulgue seu próprio tutorial de 1 hora aos usuários. Direcione-os para sua página da Hora do Código. A probabilidade de seus usuários responderem a um e-mail enviado por você sobre seu tutorial é muito maior. Use a campanha internacional da Hora do Código para a Semana da Educação em Ciência da Computação como uma boa razão para incentivar os usuários a convidarem outras pessoas a participar. Assim você nos ajuda a atingir nossa meta de 100 milhões de participantes.
 
   * Promova a Hora do Código e a Semana da Educação em Ciência da Computação em seu website.  
     Ex: <http://www.tynker.com/hour-of-code>
@@ -239,6 +239,6 @@ Nós estamos pedindo a todos para promover o seu próprio tutorial de 1 hora ent
 
 ## Aviso para estudantes com necessidades especiais
 
-Se você criar um tutorial que é projetado para deficientes visuais, nós adoraríamos destacá-lo para o público com leitores de tela. Nós ainda não recebemos esse tipo de tutorial e estamos ansiosos para inclui-lo como uma opção para alunos com necessidades especiais.
+Se você criar um tutorial voltado para pessoas com deficiência visual, adoraríamos divulgá-lo para os usuários com leitores de tela. Ainda não recebemos nenhum tutorial com esse perfil, e estamos ansiosos para disponibilizar essa opção para esses estudantes.
 
 [**Voltar ao topo**](#top)

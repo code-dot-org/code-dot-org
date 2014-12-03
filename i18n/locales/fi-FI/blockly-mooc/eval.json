@@ -6,6 +6,7 @@
   "overlayBlockTitle":"peitto (ylhäältä, alhaalta)",
   "placeImageBlockTitle":"paikka-kuva (x, y, kuva)",
   "rectangleBlockTitle":"suorakulmio (leveys, korkeus, tyyli, väri)",
+  "reinfFeedbackMsg":"You can press the \"Try again\" button to edit your drawing.",
   "rotateImageBlockTitle":"kierrä (astetta, kuva)",
   "scaleImageBlockTitle":"suhde (tekijä)",
   "squareBlockTitle":"neliö (koko, tyyli, väri)",

@@ -6,6 +6,7 @@ loop_times	Repeat times block	loop_times	mgooqyWMTxk	http://videos.code.org/new/
 loop_until	Repeat until block	loop_until	G2hdlhDYICw	http://videos.code.org/new/2c-HoC-Bosh-Repeat-Until.mp4
 if	If block	if	m2Ux2PnJe6E	http://videos.code.org/new/2d-HoC-Bill+Gates-IF-STATEMENTS.mp4
 if_else	If/else block	if_else	JtL7w6ja5iI	http://videos.code.org/new/2e-HoC-saloni-ifelse.mp4
+if_else_scrat	If/else block	if_else_scrat	QM8fAy47kHc	http://videos.code.org/new/saloni-ifelse-scrat.mp4
 function	Functions	function	Esp1kkKFpg0	http://videos.code.org/new/8-functions-activity.mp4
 loop_while	While block	loop_while	F8H-41bpJ6E	http://videos.code.org/new/13_farmer2-while-block.mp4
 loop_for	Counter block	loop_for	gxc9RCMvky0	http://videos.code.org/new/11-artist3-counter-loops.mp4
@@ -73,6 +74,6 @@ C3_internet			mFOUbqYv1Sc	http://videos.code.org/2014/C3-internet.mp4
 C3_crowdsourcing			IqZMnfxqEfY	http://videos.code.org/2014/C3-crowdsourcing.mp4
 C3_functional_suncatchers			d1MdyeXy0v0	http://videos.code.org/2014/C3-functional-suncatchers.mp4
 C3_songwriting_with_parameters			5iDCKkI6y2Y	http://videos.code.org/2014/C3-songwriting-with-parameters.mp4
-Frozen_intro			H1-paxNG4kw	http://videos.code.org/2014/Frozen-intro.mp4
-Frozen_loops			d7e48cYq7uc	http://videos.code.org/2014/Frozen-loops.mp4
-Frozen_functions 			0eo0ESEX9DE	http://videos.code.org/2014/Frozen-functions.mp4
+frozen_intro	Artist Intro frozen_intro		H1-paxNG4kw	http://videos.code.org/2014/Frozen-intro.mp4
+frozen_loops	Repeat times block	frozen_loops	d7e48cYq7uc	http://videos.code.org/2014/Frozen-loops.mp4
+frozen_functions	Functions	frozen_functions	0eo0ESEX9DE	http://videos.code.org/2014/Frozen-functions.mp4

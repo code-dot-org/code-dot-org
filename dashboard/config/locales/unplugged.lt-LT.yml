@@ -3,11 +3,11 @@
     unplugged:
       Unplug1:
         title: Informatikos įvadas
-        desc: Šioje pamokėlėje bus supažindinama su programavimo samprata ir paaiškinama,
+        desc: "Šioje pamokėlėje bus supažindinama su programavimo samprata ir paaiškinama,
           ką dirba IT specialistas. Mokiniams bus suteikta galimybė pasijusti IT specialisto
           kailyje. Pamokėlės pabaigoje kiekvienas mokinys nešis namo priminimą, ką
           jis ar ji išmoko. Jūs galite būti linkę praleisti  įvairių sąvokų paaiškinimus,
-          tačiau jas mokyti galima labai žaismingai.
+          tačiau jas mokyti galima labai žaismingai."
         pdfs:
         - unplug1
         video: Unplug1
@@ -107,10 +107,10 @@
         video: Unplug10
       Unplug11:
         title: Apibendrinimas
-        desc: Šis pirmųjų 20-ties valandų apibendrinimas padės klasei prisiminti visus
-          savo mėgstamiausius momentus iš pamokėlių. Mokiniams bus duodami patarimai,
+        desc: "Šis pirmųjų 20-ties valandų apibendrinimas padės klasei prisiminti
+          visus savo mėgstamiausius momentus iš pamokėlių. Mokiniams bus duodami patarimai,
           kuriais jie gali vadovautis mokydamiesi informatikos toliau, jeigu jie tuo
-          susidomės.
+          susidomės."
         pdfs:
         - unplug11
         video: Unplug11
@@ -126,9 +126,9 @@
         video: C1_judėkjudėk_specialus
       PlantASeed:
         title: 'Algoritmai realiame gyvenime: sėklos sodinimas'
-        desc: Ši pamoka parodo, kur realiame gyvenime yra naudojami algoritmai. Kaip
+        desc: "Ši pamoka parodo, kur realiame gyvenime yra naudojami algoritmai. Kaip
           pavyzdys yra naudojamas sėklų sodinimas. Pamokoje taip pat yra kalbama apie
-          platesnę informatikos reikšmę ir kiek svarbūs joje yra algoritmai.
+          platesnę informatikos reikšmę ir kiek svarbūs joje yra algoritmai."
         video: C1_sėklos_sodinimas
       BuildingAFoundation:
         title: Laiptuota piramidė
@@ -138,8 +138,8 @@
         video: C1_pamatų_kūrimas
       GettingLoopy:
         title: Kartojimo supratimas
-        desc: Šioje pamokoje yra mokoma apie kartojimą (žingsnelius, kurie yra kartojami)
-          šokant. Mokiniai išmoks paprastą šokį ir išmoks jį pakartoti tam tikru metu.
+        desc: "Šioje pamokoje yra mokoma apie kartojimą (žingsnelius, kurie yra kartojami)
+          šokant. Mokiniai išmoks paprastą šokį ir išmoks jį pakartoti tam tikru metu."
         video: C1_kartojimo_supratimas
       RelayProgramming:
         title: Programavimas komandoje
@@ -172,9 +172,9 @@
         video: C2_languotas_popierius
       PaperPlanes:
         title: 'Algoritmai realiame gyvenime: popieriniai lėktuvėliai'
-        desc: Šioje pamokoje bus kalbama apie algoritmus realiame gyvenime. Kaip pavyzdys
-          bus imamas popierinių lėktuvėlių lankstymas. Šioje pamokoje taip pat bus
-          kalbama apie informatiką ir algoritmų svarbą joje.
+        desc: "Šioje pamokoje bus kalbama apie algoritmus realiame gyvenime. Kaip
+          pavyzdys bus imamas popierinių lėktuvėlių lankstymas. Šioje pamokoje taip
+          pat bus kalbama apie informatiką ir algoritmų svarbą joje."
         video: C2_popieriniai_lėktuvėliai
       BinaryBracelets:
         title: Dvejetainės apyrankės
@@ -256,9 +256,27 @@
           will help students intuitively understand why combining chunks of code into
           functions is such a helpful practice.  '
       BinaryImages:
-        title: Binary Images
+        title: Dvejetainiai vaizdai
         desc: Though many people think of binary as strictly zeros and ones, our previous
           courses taught students that information can be represented in a variety
           of binary options.  This lesson takes that concept one step further as it
           illustrates how a computer can store even more complex information (such
           as images and colors) in binary, as well.
+      VideoGamesCoordinatePlanes:
+        title: Video Games and Coordinate Planes
+        desc: Video Games and Coordinate Planes lesson description
+      Contracts:
+        title: Contracts
+        desc: Contracts unplugged lesson description
+      DesignRecipe:
+        title: The Design Recipe
+        desc: Design Recipe lesson description
+      Booleans:
+        title: Loginės reikšmės
+        desc: Booleans lesson description
+      ConditionalsPiecewiseFunctions:
+        title: Sąlygos ir funkcijos iš dalių
+        desc: Conditionals and Piecewise Functions lesson description
+      CollisionDetection:
+        title: Collision Detection
+        desc: Collision Detection lesson description

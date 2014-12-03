@@ -4,7 +4,7 @@ layout: wide
 
 * * *
 
-# Guías para los tutoriales de la Hora del Código
+# Guía para los tutoriales de la Hora de Programación y la semana educativa de Ciencias Computacionales
 
 **El plazo para presentar tutoriales para la Hora del código 2014 ya ha terminado. Aún así podés enviar una propuesta y la revisaremos lo antes posible.**
 
@@ -16,50 +16,50 @@ Nos gustaría presentar una amplia cantidad de opciones atractivas, pero la meta
 
 ## Índice:
 
-  * [Cómo serán evaluados los tutoriales para incluirlos en el listado](#inclusion)
-  * [Lineamientos generales para crear una actividad de la Hora del Código](#guidelines)
-  * [Cómo enviarlo (hasta 1/10/2014)](#submit)
+  * [Cómo serán evaluadas las tutorías en cuánto a inclusión](#inclusion)
+  * [Guía general para crear una actividad de la Hora de Programación](#guidelines)
+  * [¿Cómo enviar? (Fecha límite 10/1/2014)](#submit)
   * [Sugerencias para diseñar tu actividad](#design)
-  * [Lineamientos de marca](#tm)
-  * [Píxel de conversión](#pixel)
-  * [Promocioná tus tutoriales y la Hora del Código](#promote)
-  * [Nota para estudiantes con discapacidades](#disabilities)
+  * [Guía de Marca Registrada](#tm)
+  * [Rastrear un Pixel](#pixel)
+  * [Promocionar tus tutoriales, CSEdWeek, y Hora de Programación](#promote)
+  * [Una nota para estudiantes con discapacidades](#disabilities)
 
 <a id="inclusion"></a>
 
-## Cómo serán evaluados los tutoriales para incluirlos en el listado
+## Cómo serán evaluadas las tutorías en cuánto a inclusión
 
 Un comité de educadores en Ciencias de la Computación evaluará las propuestas en base a métricas cualitativas y cuantitativas, incluyendo los resultados de encuestas hechas a un grupo más amplio de educadores.
 
 **Los tutoriales tendrán buena calificación si son:**
 
-  * de alta calidad
-  * auto-dirigidos y no requieren de la presencia de un docente o tutor
-  * diseñados para principiantes
-  * diseñados como actividades de 1 hora de duración
-  * funcionan en diversos sistemas operativos/ plataformas, incluyendo móviles y tabletas
+  * Alta calidad
+  * son auto-dirigidas, no requieren ninguna instrucción
+  * están diseñadas para principiantes
+  * están diseñadas para actividad de 1 hora aproximádamente
+  * funcionan en diversas plataformas de sistemas operativos, incluso en tabletas y móviles
   * funcionan en múltiples idiomas
-  * promueven el aprendizaje en todos los grupos demográficos (especialmente los grupos minoritarios)
-  * no se centran solamente en diseño web HTML+CSS - (nuestra meta es la Ciencia de la Computación, no sólo la programación en HTML)
+  * promueven aprendizaje en todos los grupos demográficos (especialmente los grupos marginados)
+  * no se centran solamente en diseño web HTML+CSS - (nuestra meta es la ciencia computacional, no sólo codificación en HTML)
 
 **Los tutoriales tendrán baja calificación si son:**
 
-  * de baja calidad
-  * tienen un nivel más avanzado de enseñanza (no son para principiantes)
-  * funcionan en un número limitado de sistemas operativos/plataformas - para plataformas basadas en la Web deberían soportar: IE9+, la última versión de Chrome, Firefox y Safari
+  * tienen baja calidad
+  * tienen un nivel más avanzado de enseñanza (no para principiantes)
+  * tienen un soporte limitado de plataformas de sistemas operativos - para plataformas basadas en Web se debe tratar de soportar todo lo siguiente: IE9+, y la ultima versión de Chrome, Firefox y Safari
   * funcionan sólo en inglés
-  * tienen un sesgo de género (ej. temáticamente orientado principalmente para varones)
-  * sirven como una manera de vender plataformas de aprendizaje que cobran la inscripción
+  * tienen una tendencia específica hacia un género (ej.: temática dirigida principalmente a niños)
+  * sirven para promover una plataforma de aprendizaje que cobra
 
 **Los tutoriales NO serán tenidos en cuenta si:**
 
-  * requieren un alto grado de participación de un profesor con mucha formación en la temática (no son autodirigidos)
+  * requieren un alto grado de participación del profesor con bastante preparación con antelación (no son autodirigidos)
   * no estan diseñados para ser actividades de aproximadamente una hora
   * requieren de registro 
   * requieren de pago
   * requieren instalación
   * se centran solamente en diseño web HTML+CSS
-  * se envían después de la fecha límite, o con información incompleta (ver más abajo)
+  * se envían después de la fecha límite, o con información incompleta (vea más abajo)
 
 La meta principal de la campaña de la Hora del Código es la de ampliar la participación de estudiantes y maestros en las ciencias computacionales, además de demostrar que la computación es accesible a todos y es "más fácil de lo pensabas." Esta meta se vuelve más accesible al dar a los estudiantes y maestros un número menor y más simple de opciones. Estas opciones deben ser de alta calidad y deben estar orientadas a un usuario que ingresa por primera vez.
 
@@ -71,60 +71,60 @@ Como resultado, los listados actuales de tutoriales están "suficientemente bien
 
 <a id="guidelines"></a>
 
-## Lineamientos generales para crear una actividad de la Hora del Código
+## Guía general para crear una actividad de la Hora de Programación
 
-  * **Tema:** Introducción a la Ciencia de la Computación o programación (no HTML).
-  * **Meta:** Darle a los principiantes una primera idea de lo accesible que es la programación.
-  * **Ideas rectoras:** 
-      * La Ciencia de la Computación no es sólo para genios. No importa tu edad, género, ni etnia. ¡Cualquiera puede aprender!
-      * Las Ciencias de la Computación están conectadas a una amplia variedad de campos e intereses. ¡Todo el mundo debería aprender!
-      * Animar a los estudiantes a crear algo que se pueda compartir con amigos en línea.
+  * **Tema:** Introducción a la ciencia computacional o programación (no HTML).
+  * **Meta:**Que los principiantes tengan una primera experiencia agradable.
+  * **Tema:** 
+      * La ciencia computacional no es sólo para genios. No importa tu edad, género, ni raza. ¡Cualquiera puede aprender!
+      * La ciencia computacional está conectada a una gran variedad de campos e intereses. ¡Todos deberían aprender!
+      * Anima a los estudiantes a crear algo que puede ser compartido con amigos en línea.
   * **Tipos de actividades:** 
-      * **óptimo:**: actividades basadas en Web, compatibles con smartphones (teléfonos inteligentes), o actividades que no requieran conectividad y que enseñen conceptos computacionales sin el uso de una computadora (ver <http://csunplugged.com/>). 
-      * **OK, pero no óptimo:** instalación de app, aplicación de escritorio, o experiencias con juegos de consola.
-  * **Formato:** Tutoriales o clases autodirigidas, opcionalmente pueden ser guiadas por el maestro. Debe haber instrucciones para los estudiantes en lugar de un desafío abierto de una hora. Idealmente, las instrucciones y los tutoriales deben estar integrados directamente en la plataforma de programación para evitar cambio de pestañas o ventanas entre el tutorial y la plataforma de programación.
+      * **Mejor:**: actividades basadas en Web, compatibles con smartphones, o actividades que no requieran conectividad y que enseñen conceptos computacionales sin el uso de una computadora (ver <http://csunplugged.com/>). 
+      * **Bien, pero no preferidos:** instalación de app, aplicación de escritorio, o experiencias con juegos de consola.
+  * **Formato:** Tutorías o lecciones autodirigidas, opcionalmente facilitadas por el profesor. Deben haber instrucciones para los estudiantes en lugar de un reto abierto de una hora. Idealmente, las instrucciones y las tutorías están integradas directamente en la plataforma de programación, para evitar intercambio de pestañas o ventanas entre la tutoría y la plataforma de programación.
 
 [**Volver al inicio**](#top)
 
 <a id="submit"></a>
 
-## Cómo enviarlo (hasta 1/10/2014)
+## ¿Cómo enviar? (Fecha límite 10/1/2014)
 
 Visita la [página de envío de actividades de la Hora del Código](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) y sigue los pasos para enviar tu tutoría.
 
 **Vas a necesitar:**
 
   * Tu nombre, logo (jpg, png, etc.)
-  * URL para una captura de pantalla o una imagen que publicite la actividad de la Hora del Código. Las imágenes deben tener una resolución de 446 x 335 exactamente. Si la imagen apropiada no es enviada, podemos tomar nuestra propia captura de pantalla de tu tutorial o decidir no incluirlo en la lista.
+  * URL para una imagen de pantalla o de marketing de la actividad de la Hora de Programación. Las imágenes deben tener una resolución de 446 x 335 exactamente. Si no se proporciona una imagen adecuada, podremos tomar una de tu tutoría O podremos NO incluirla.
   * Enlace URL para el logo
   * Nombre de la actividad
-  * Enlace URL a la actividad
-  * Enlace URL para las aclaraciones para el profesor (opcional, ver detalles abajo)
-  * Descripción de la actividad (vista de escritorio y vista de móviles) 
-      * **Caracteres máximos permitidos para la vista de escritorio:** 384
-      * **Caracteres máximos permitidos para la versión móvil:** 74
-      * Por favor, incluí en la descripción si es principalmente orientado al estudiante o al maestro. Adicionalmente, algunas escuelas están interesadas en conocer si las actividades de la de Hora del Código cumplen con objetivos curriculares. Si la actividad cumple objetivos curriculares, incluí esa información.
+  * URL para la actividad
+  * URL para las notas del profesor (opcional, ve los detalles más abajo)
+  * Descripción de la actividad (móvil y escritorio) 
+      * **Caracteres máximos permitidos para versión de escritorio:** 384
+      * **Caracteres máximos permitidos para versión móvil:** 74
+      * Por favor incluye en la descripción si es guiado por el estudiante o guiado por el profesor. Adicionalmente, algunas escuelas están interesadas en conocer si las actividades de la de Hora de Programación reflejan estándares comunes o de próxima generación. Si la actividad se centra en estándares específicos, incluye esta información.
   * Una lista de plataformas compatibles y/o probadas: 
-      * **Basada en la web:** 
+      * **Basadas en navegador (Web):** 
           * Versiones para OS - Mac, Win
           * Navegadores - IE8, IE9, IE10, Firefox, Chrome, Safari
           * iOS Safari móvil (optimizado para móvil)
           * Android Chrome (optimizado para móvil)
-      * **No basado en la web:** especificar plataforma para código nativo (Mac, Win, iOS, Android, xBox, otros)
-      * Desenchufado
-  * Una lista de idiomas soportados y formato apropiado: 
-      * Los tutoriales deben especificar qué lenguajes soportan usando códigos de idioma de 2 caracteres, ej.: inglés - en, japonés - ja
-      * Si es necesario especificar aún más, podés usar guiones, ej.: fr-be para francés (Bélgica) o fr-ca para francés (Canadá)
-      * ***Nota: la detección del lenguaje es tarea del proveedor del tutorial, todos los usuarios serán redirigidos a la única URL proporcionada.*** 
-  * Si envías un tutorial en línea, necesitamos saber si es [compatible con COPPA](http://en.wikipedia.org/wiki/Children's_Online_Privacy_Protection_Act) o no.
-  * Nivel(es) educativo(s) recomendados para los posibles usuarios. Te podés referir a [Estándares de la Computer Science Teachers' Association para K-12](http://csta.acm.org/Curriculum/sub/K12Standards.html) para conceptos de computación apropiados al grado. Ejemplo de niveles de grado incluyen: 
+      * **No basado en navegador:** Plataforma específica para código nativo(Mac, Win, iOS, Android, xBox, otros)
+      * Desconectado
+  * Una lista de lenguajes soportados y formato apropiado: 
+      * Los tutorías deben especificar qué lenguajes soportan usando códigos de lenguaje de de 2 caracteres, ej.: inglés - en, japonés - ja
+      * Si es necesaria mayor especificación, usa guiones, ej.: fr-be para francés (Bélgica) o fr-ca para francés (Canadá)
+      * ***Nota: la detección del lenguaje es trabajo de quien provee la tutoría, nosotros redireccionaremos a todos los usuarios al único URL ofrecido.*** 
+  * Si envías una tutoría en línea, necesitamos saber si es [compatible con COPPA](http://en.wikipedia.org/wiki/Children's_Online_Privacy_Protection_Act) o no.
+  * Nivel(es) de grado recomendados para los posibles usuarios. Te puedes referir a [Estándares de la Computer Science Teachers' Association para K-12](http://csta.acm.org/Curriculum/sub/K12Standards.html) para conceptos de computación apropiados al grado. Ejemplo de niveles de grado incluyen: 
       * Primaria: grados K-2 ó 3-5
       * Secundaria: grados 6-8
       * Preparatoria: grados 9-12
       * Todas las edades
-  * Por favor, incluí también el nivel de conocimiento en computación requerido dentro del nivel educativo: Principiante, Intermedio o Avanzado. La hora del Código pondrá de relieve las actividades para los principiantes. Si deseás preparar actividades para la Hora del Código para un púbico intermedio o avanzado, por favor incluí el conocimiento previo necesario en la descripción de tu actividad.
+  * Por favor incluye también nivel de conocimiento en computación requerido dentro del grado: Principiante, Intermedio o Avanzado. El sitio web de la Hora de Programación destacará principalmente actividades para Principiantes. Si deseas preparar actividades Intermedias y Avanzadas para la Hora de la Programación, por favor incluye el conocimiento previo necesario en la descripción de tu actividad.
   * Requisitos técnicos: 
-      * Con el fin de realizar un seguimiento más preciso de la participación, solicitamos que todas las terceras partes asociadas con los tutoriales incluyan 1 píxel de seguimiento en la primera y última página de sus tutoriales para la Hora del Código. Coloca una imagen-pixel inicial en la página de inicio y una final en la última página. No coloques los pixeles en las páginas intermedias). Consulte la sección de Seguimiento de Pixel abajo para más detalles. 
+      * Con el fin de realizar un seguimiento más preciso de la participación, queremos que todos las terceras partes asociadas con las tutorías incluyan imágenes de seguimiento de 1 píxel en la primera y la última páginas de sus tutorías para la Hora de Programación. Coloca una imagen-pixel inicial en la página de inicio y una final en la última página. No coloques los pixeles en las páginas intermedias). Consulte la sección de Seguimiento de Pixel abajo para más detalles. 
       * Al finalizar tu actividad, los usuarios deben ser dirigidos a [http://code.org/api/hour/finish ](http://code.org/api/hour/finish) donde podrán: 
           * Compartir en las redes sociales que completaron la Hora del Programación
           * Recibir un certificado que dice que completaron la Hora de Programación
@@ -146,26 +146,26 @@ Visita la [página de envío de actividades de la Hora del Código](https://docs
 
 ## Sugerencias para diseñar tu actividad
 
-**Include the CSEdWeek logo in your tutorial.** You can include the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) in your tutorial, but this is not required. You may also contact us to request specific permission to use the “In Partnership with Code.org” logo. ***This logo can only be used if specific permission is granted in writing by Code.org.*** We may end up creating an Hour of Code logo, but at this time we do not have one. Under no circumstances can the Code.org logo and name be used. Both are trademarked, and can’t be co-mingled with a 3rd party brand name.
+**Incluya el logotipo de CSEdWeek logo en su tutorial.** Puede incluir el logotipo de CSEdWeek ([pequeño](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) o [grande](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) en su tutorial, pero no es obligatorio. También puede contactarnos para obtener el permiso para usar el logotipo "en colaboración con Code.org". ***Este logotipo solo puede ser utilizado cuando se otorga permiso explícito por Code.org.*** Puede ser que tengamos un logotipo de la Hora de Programación, pero en este momento no tenemos alguno. Bajo ninguna circunstancia se puede utilizar el nombre o logotipo de Code.org. Ambos son marca registrada, y no pueden ser combinado con una marca de terceros.
 
-**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
+**Asegúrese de que el estudiante promedio pueda finalizar confortablemente en una hora.** Considere agregar una actividad abierta al final, para los alumnos que se muevan mas rápidamente durante la lección. Recuerde que la mayoría de los niños son principiantes iniciales para las ciencias de la computación y la programación.
 
-**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
+**Incluya las notas del profesor.** La mayoría de las actividades deben ser dirigidas por alumnos. Pero si una actividad debe ser facilitada o administrada por el profesor, por favor incluya instrucciones claras y simples en forma de "notas de profesor" en la URL enviada con su actividad. No solo los alumnos son principiantes, algunos profesores también lo son. Incluya información como:
 
   * Nuestro tutorial funciona mejor en las siguientes plataformas y navegadores
   * ¿Funciona en teléfonos inteligentes? ¿en tabletas?
   * ¿Recomiendas programar en pares? 
   * ¿Consideraciones para el uso en el aula? por ejemplo, si hay videos, aconseja a los profesores que los muestren en una pantalla proyectada para toda la clase para verlos juntos
 
-**Incorporate feedback at the end of the activity.** (E.g.: “You finished 10 levels and learned about loops! Great job!”)
+**Incorpore retroalimentación al final de la actividad.** (Por Ejemplo: “¡Ha finalizado 10 niveles y aprendido sobre ciclos! ¡Felicidades!”)
 
-**Incorporate social media.** Encourage students to post to social media (where appropriate) when they’ve finished, for example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourofCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+**Incorpore Medios Sociales.** Aliente a los alumnos a que publiquen en medios sociales (cuando sea apropiado) cuando hayan finalizado una actividad, por ejemplo "He terminado una Hora de Programación con ________, ¿y tu?" #HoraDeProgramacion” o “He hecho una #HoraDeProgramacion como parte de la #CSEdWeek. ¿y tu? @Scratch.” Use el HashTag **#HoraDeProgramacion** (Con letras H, D, P mayúsculas)
 
-**Create your activity in languages besides English.** We're focusing this campaign internationally this year and would like to have a number of activities to offer non-English speaking participants.
+**Crea tu actividad en otros idiomas además de en inglés**. Este año el foco de esta campaña es internacional y nos gustaría tener actividades para ofrecer a los participantes que no hablan inglés.
 
-**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
+**Explica o conecta la actividad a un contexto social significativo.** ¡La programación se convierte en un superpoder cuando los estudiantes ven como puede mejorar el mundo!
 
-**Do not require signup or payment before students can try your tutorial.** Tutorials that require signup or payment will not be listed
+** No hagas necesario el login o pago para que los estudiantes puedan probar el tutorial. ** Los tutoriales que requieren login o pago no serán listados.
 
 **Make sure your tutorial can be used in a [Pair Programming paradigm](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).**
 
@@ -185,7 +185,7 @@ Benefits of Pair Programming:
 
 <a id="tm"></a>
 
-## Lineamientos de marca
+## Guía de Marca Registrada
 
 With ~40 million students having tried the Hour of Code, and over 97% of participating teachers asking us to repeat the event annually, we are taking steps to make sure we set up the Hour of Code as a movement that can repeat annually with greater fidelity and without confusion.
 
@@ -203,7 +203,7 @@ One piece of this is to protect the trademark "Hour of Code" to prevent confusio
 
 <a id="pixel"></a>
 
-## Píxel de conversión
+## Rastrear un Pixel
 
 Para rastrear con más precisión la participación le pedimos a cada socio que hace tutoriales incluir una imagen de 1 pixel en la primera y ultima hoja de sus tutoriales de Hora de Programación (Una imagen de un pixel al inicio y una imagen de un pixel en la página final. No en páginas intermedias).
 
@@ -223,7 +223,7 @@ IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
 
 <a id="promote"></a>
 
-## Promocioná tus tutoriales y la Hora del Código
+## Promocionar tus tutoriales, CSEdWeek, y Hora de Programación
 
 Pedimos a todos que promocionen sus tutorías de 1 hora con todos sus usuarios. Por favor dirigelos a tu página de la Hora de Programación. Es mucho más probable que tus usuarios reaccionen a un mensaje tuyo acerca de tu tutoría. Usa la campaña internacional de la Hora de Programación para la Semana de Educación en Ciencias de Computación como una excusa para animar a usuarios a invitar a otros a unirse, para alcanzar un total de 100 millones de participantes.
 

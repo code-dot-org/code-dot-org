@@ -64,7 +64,7 @@
   "penDown":"鉛筆を置く。\n\n",
   "penTooltip":"鉛筆を持ち上げたり、下げたりして、描くのを始めたり、止めたりします。",
   "penUp":"鉛筆を上げる。\n",
-  "reinfFeedbackMsg":"これは自分が描こうとしていた画でしょうか？「もう一度」ボタンで自分で描いた画を確認する事ができます。",
+  "reinfFeedbackMsg":"Here is your drawing! Keep working on it or continue to the next puzzle.",
   "setColour":"色の設定",
   "setPattern":"パターンをセット",
   "setWidth":"幅を設定",

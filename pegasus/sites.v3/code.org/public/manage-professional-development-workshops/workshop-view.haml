@@ -86,9 +86,15 @@ theme: none
       .panel-heading Workshop type
       .panel-body {{ workshop.type_s }}
   .col-sm-7
-    .panel.panel-default
-      .panel-heading Notes
-      .panel-body {{ workshop.notes_s }}
+    .row
+      .panel.panel-default
+        .panel-heading Notes
+        .panel-body {{ workshop.notes_s }}
+      .panel.panel-default
+        .panel-heading Signup URL
+        .panel-body
+          %a{href: "http://#{CDO.canonical_hostname('code.org')}/professional-development-workshops/{{ workshop.id }}"}
+            http://#{CDO.canonical_hostname('code.org')}/professional-development-workshops/{{ workshop.id }}
 %div
   %a.btn.btn-default{"ng-href" => "#/{{workshop.secret}}/edit"} Edit
   %a#btn-cancel.btn.btn-link{"ng-click" => "cancel_workshop()"} Cancel
@@ -98,11 +104,11 @@ theme: none
   %h2 Signups
   %table{style: "width:970px; table-layout:fixed;"}
     %colgroup
-      %col{style: 'width: 250px;'}/
+      %col{style: 'width: 170px;'}/
+      %col{style: 'width: 310px;'}/
       %col{style: 'width: 200px;'}/
-      %col{style: 'width: 150px;'}/
-      %col{style: 'width: 150px;'}/
-      %col{style: 'width: 220px;'}/
+      %col{style: 'width: 200px;'}/
+      %col{style: 'width: 90px;'}/
     %tr
       %th.manage-th
         Name

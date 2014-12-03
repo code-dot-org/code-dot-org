@@ -1,18 +1,18 @@
 * * *
 
-oppsett: bredt
+title: How-to Guide for Organisations layout: wide nav: resources_nav
 
 * * *
 
-# Premier - vilkår og betingelser
+# Premiar og vilkår
 
-## Dropbox lagringsplass eller Skype-kreditt:
+## Lagringsplass i Dropbox eller Skype-kreditt:
 
-10 GB lagringsplass i Dropbox eller $10 Skype-kredit er begrenset til K-12 lærere, intruktører i fritidsskoler eller andre utdanningsinstitusjoner. De 10 GB med ledig lagringsplass må legges til en eksisterende Dropbox-konto. Premiene begrenses en per arrangør.
+10 GB lagringsplass i Dropbox eller $10 Skype-kreditt kan berre gå til K-12 lærere, intruktører i fritidsskoler eller andre utdanningsinstitusjoner. De 10 GB med gratis lagringsplass må leggjast til ein Dropbox-konto som alt er oppretta. Det er berre ein premie til kvar.
 
-For å motta lagringsplass i Dropbox eller Skype-kreditt, må mottaker være registrert som arrangør av Kodetimen. Hvis hele skolen er med på Kodetimen, må hver instruktør registrere seg som arrangør for å kvalifisere.
+For å motta lagringsplass i Dropbox eller Skype-kreditt, må mottakar vere registrert som arrangør av Kodetimen. Hvis heile skulen er med på Kodetimen, må kvar instruktør registrere seg som arrangør for å kvalifisere.
 
-Code.org vil kontakte arrangørene etter Kodetimen 8. til 14. desember og gi instruksjoner for hvordan de kan gjøre krav på lagringsplassen i Dropbox eller Skype-kreditten.
+Code.org vil kontakte arrangørane etter Kodetimen 8. til 14. desember og gi instruksjonar for korleis dei kan gjere krav på lagringsplassen i Dropbox eller Skype-kreditten.
 
 <% if @country == 'us' %>
 

@@ -1,0 +1,56 @@
+-check_language ||= nil
+-international_layout ||= nil
+-subheading ||= nil
+-if check_language
+  -items = tutorials.find_with_tag_and_language(tag, request.locale)
+-else
+  -items = tutorials.find_with_tag(tag)
+-if items.count > 0
+  
+  .learnpage{:style=>'position:relative'}
+
+    .carousel-wrapper
+      .carousel.course-carousel.fullwidth-carousel{id: id}
+        .slides
+
+          -count = 0
+          -items.each_pair do |key, tutorial|
+            -tags = I18n.t("#{tutorial[:code]}_gradelevel") + ' | ' + I18n.t("#{tutorial[:code]}_platformtext")
+            -url = tutorials.launch_url_for(key,request.host_with_port)
+            -short_url = ('http://hourofcode.com/' + tutorial[:short_code]) unless tutorial[:short_code].nil_or_empty?
+            .slide.clear{:style=>"background-color:white;"}
+              .slide-img<
+                %a{:href=>url, :target=>'_blank'}<
+                  %img{:src=>tutorial[:image].sub("/images/", "/images/fit-520/").sub(".png", ".jpg")}
+              .slide-text{style: "background-image: url(/images/fit-520/frozen_carousel_background.jpg); background-color:rgb(0,139,163)"}
+                %a{:href=>url, :target=>'_blank'}<
+                  %h2=I18n.t "#{tutorial[:code]}_name"
+                %h3= tutorial[:orgname]
+                %p.slide-longdescription=I18n.t "#{tutorial[:code]}_longdescription"
+                %p.slide-shortdescription=I18n.t "#{tutorial[:code]}_shortdescription"
+                .slide-tags= tags
+                .slide-participants-count<
+                  %b{:class=>"participants_string_#{key}", :style=>'display: none'}
+                    %span{:class=>"participants_value_#{key}"}
+                      3
+                    = I18n.t(:participants)
+                -unless short_url.nil_or_empty?
+                  .slide-shorturl-link
+                    %a{:href=>url, :target=>'_blank'}
+                      =short_url
+                -unless tutorial[:teachers_notes].nil_or_empty?
+                  .slide-teachers-notes-link<
+                    %a{:href=>tutorial[:teachers_notes], :target=>'blank'}<
+                      = I18n.t(:teachers_notes)
+                %a{:href=>url, :target=>'_blank'}<
+                  .btn-carousel-slide=I18n.t(:go)
+            -count += 1
+
+        %a.slide-prev{:href=>'#'}<
+          %span<
+            %span.label= I18n.t(:previous)
+        %a.slide-next{:href=>'#'}<
+          %span<
+            %span.label= I18n.t(:next)
+      .pagination
+        %div{:id => "pagination-#{id}"}

@@ -38,7 +38,7 @@ def load_configuration()
   rack_env = env.to_sym
 
   {
-    'app_instances'               => [],
+    'app_servers'                 => {},
     'build_blockly'               => false,
     'build_blockly_core'          => false,
     'build_dashboard'             => true,

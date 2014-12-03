@@ -32,10 +32,9 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test "should get show" do
-    sign_in @admin
+  test "show should redirect to flappy" do
     get :show, id: Script::FLAPPY_ID
-    assert_response :success
+    assert_redirected_to "/s/flappy"
   end
 
   test "should get show of hoc" do
@@ -49,20 +48,36 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "should get show of custom script" do
-    get :show, id: Script.find_by_name("course1")
+    get :show, id: 'course1'
     assert_response :success
   end
+
+  test "should redirect to /s/course1" do
+    get :show, id: Script.find_by_name("course1").id
+    assert_redirected_to "/s/course1"
+  end
+
+  test "show of hourofcode redirects to hoc" do
+    get :show, id: 'hourofcode'
+    assert_response :success
+  end
+
+  test "show of hourofcode by id should redirect to hoc" do
+    get :show, id: Script.find_by_name('hourofcode').id
+    assert_redirected_to '/s/hourofcode'
+  end
+
 
   test "should get show if not signed in" do
     sign_out @admin
     get :show, id: Script::FLAPPY_ID
-    assert_response :success
+    assert_redirected_to "/s/flappy"
   end
 
   test "should get show if not admin" do
     sign_in @not_admin
     get :show, id: Script::FLAPPY_ID
-    assert_response :success
+    assert_redirected_to "/s/flappy"
   end
 
   test "should use script name as param where script name is words but looks like a number" do
