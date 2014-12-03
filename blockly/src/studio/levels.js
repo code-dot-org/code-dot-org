@@ -151,7 +151,14 @@ levels.c2_1 = utils.extend(levels.dog_hello);
 levels.c3_story_1 = utils.extend(levels.dog_hello);
 levels.playlab_1 = utils.extend(levels.dog_hello, {
   background: 'winter',
+  timeoutFailureTick: null,
+  timeoutAfterWhenRun: true,
   firstSpriteIndex: 2, // penguin
+  goal: {
+    successCondition: function () {
+      return Studio.allWhenRunBlocksComplete() && Studio.sayComplete > 0;
+    }
+  },
   // difference is we say hello instead of hello world
   requiredBlocks: [
     saySpriteRequiredBlock({
@@ -207,6 +214,13 @@ levels.c3_story_2 = utils.extend(levels.dog_and_cat_hello, {});
 levels.playlab_2 = utils.extend(levels.dog_and_cat_hello, {
   background: 'desert',
   firstSpriteIndex: 20, // cave boy
+  timeoutFailureTick: null,
+  timeoutAfterWhenRun: true,
+  goal: {
+    successCondition: function () {
+      return Studio.allWhenRunBlocksComplete() && Studio.sayComplete > 1;
+    }
+  },
   requiredBlocks: [
     // make sure each sprite says something
     saySpriteRequiredBlock({
@@ -286,7 +300,8 @@ levels.playlab_3 = {
       titles: { DIR: '2', DISTANCE: '200'}
     }]
   ],
-  timeoutFailureTick: 100,
+  timeoutFailureTick: null,
+  timeoutAfterWhenRun: true,
   scale: {
     snapRadius: 2
   },
@@ -403,7 +418,9 @@ levels.playlab_4 = {
       titles: { SOUND: 'goal1'}
     }]
   ],
+  // timeout when we've hit 100 OR we had only when run commands and finished them
   timeoutFailureTick: 100,
+  timeoutAfterWhenRun: true,
   goal: {
     successCondition: function () {
       return Studio.playSoundCount > 0 && Studio.sprite[0].isCollidingWith(1);
@@ -475,6 +492,7 @@ levels.c3_game_1 = utils.extend(levels.click_hello, {});
 levels.playlab_5 = utils.extend(levels.click_hello, {
   background: 'space',
   firstSpriteIndex: 23, // spacebot
+  timeoutAfterWhenRun: true,
   toolbox: tb(blockOfType('studio_saySprite'))
 });
 
