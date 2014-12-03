@@ -15,6 +15,8 @@ social:
   var promoteIncluded = false;
 
 -state = File.basename(request.path_info)
+-facebook = {:u=>'http://code.org/promote' + (state != "thanks" ? "/" + state : "")}
+-twitter = {:url=>"http://#{request.site}/promote" + (state != "thanks" ? "/" + state : ""), :related=>'codeorg', :hashtags=>'CODE', :text=>'What’s wrong with this picture? To fix this, sign the petition.'}
 
 %script{:src=>"/js/jquery.placeholder.js"}
 
@@ -22,8 +24,9 @@ social:
   %h1 Promote Computer Science
 
   %div{:id=>'thank-you-box'}
-    %p{:id=>'thank-you-message'}
-      Thank you for filling out our petition. Your participation makes a difference.
+    %p{:id=>'thank-you-message', :style=>'display: inline-block'}
+      Thank you for filling out our petition. Please help us spread the word.
+      = view :share_buttons, facebook:facebook, twitter:twitter
   %div{:id=>'us_content'}
     - if state != "thanks"
       #interactive-map.section.clear
@@ -65,20 +68,28 @@ social:
 :css
   #thank-you-box {
     display: none;
-    padding: 5px;
+    padding: 8px;
     width: 100%;
     height: 50px;
     background-color: rgba(102, 209, 217, 0.5);
     float: left;
     margin-bottom: 15px
   }
+  #thank-you-box .share-buttons {
+    float: none;
+    display: inline-block;
+    margin-top: 0px;
+  }
+  #thank-you-box .share-buttons button {
+    margin-top: 0px;
+  }
   #thank-you-message {
     display: inline-block;
-    font-size: 18px;
+    font-size: 16px;
     vertical-align: middle;
     height: 100%;
     margin-left: 10px;
-    line-height: 38px;
+    margin-right: 10px;
   }
 
 :javascript
@@ -93,7 +104,7 @@ social:
       promote = new Promote();
     }
     if (document.referrer.indexOf(location.host) !== -1) {
-      $("#thank-you-box").slideDown();
+      $("#thank-you-box").show();
       $("#petition-section").hide();
     }
   }
