@@ -125,7 +125,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_creates(LevelSource, Activity, UserLevel, UserScript) do
       assert_does_not_create(GalleryActivity) do
-        assert_no_difference('@user.reload.total_lines') do # update total lines
+        assert_difference('@user.reload.total_lines', 1000) do # update total lines
           post :milestone, user_id: @user, script_level_id: @script_level, :lines => 9999999, :attempt => "1", :result => "true", :testResult => "100", :time => "1000", :app => "test", :program => "<hey>"
         end
       end
@@ -135,7 +135,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
-                         "total_lines" => 15, # no change
+                         "total_lines" => 1015, # pretended it was 1000
                          "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
                          "level_source"=>"http://test.host/u/#{assigns(:level_source).id}",
                          "save_to_gallery_url"=>"/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}",
@@ -144,7 +144,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
 
     # activity does not have unreasonable lines of code either
-    assert_equal 0, Activity.last.lines
+    assert_equal 1000, Activity.last.lines
   end
 
   test "anonymous milestone does not allow unreasonably high lines of code" do
@@ -167,13 +167,13 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal expected_progress, session["progress"]
 
     # don't count it in session either
-    assert_equal 0, session['lines']
+    assert_equal 1000, session['lines']
 
     # pretend it succeeded
     assert_response :success
 
     expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
-                         "total_lines" => 0, # no change
+                         "total_lines" => 1000, # no change
                          "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
                          "level_source"=>"http://test.host/u/#{assigns(:level_source).id}",
                          "design"=>"white_background"}
