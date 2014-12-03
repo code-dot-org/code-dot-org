@@ -365,6 +365,9 @@ var getFeedbackMessage = function(options) {
       case TestResults.INCOMPLETE_BLOCK_IN_FUNCTION:
         message = msg.errorIncompleteBlockInFunction();
         break;
+      case TestResults.QUESTION_MARKS_IN_NUMBER_FIELD:
+        message = msg.errorQuestionMarksInNumberField();
+        break;
       case TestResults.TOO_MANY_BLOCKS_FAIL:
         message = msg.numBlocksNeeded({
           numBlocks: BlocklyApps.IDEAL_BLOCK_NUM,
@@ -934,6 +937,9 @@ exports.getTestResults = function(levelComplete, options) {
       return TestResults.INCOMPLETE_BLOCK_IN_FUNCTION;
     }
   }
+  if (hasQuestionMarksInNumberField()) {
+    return TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
+  }
   if (!hasAllRequiredBlocks()) {
     return levelComplete ? TestResults.MISSING_BLOCK_FINISHED :
       TestResults.MISSING_BLOCK_UNFINISHED;
@@ -1043,6 +1049,17 @@ var generateXMLForBlocks = function(blocks) {
   }
   return blockXMLStrings.join('');
 };
+
+/**
+ * Check for '???' instead of a value in block fields.
+ */
+function hasQuestionMarksInNumberField() {
+  return Blockly.mainBlockSpace.getAllBlocks().some(function(block) {
+    return block.getTitles().some(function(title) {
+      return title.value_ === '???';
+    });
+  });
+}
 
 /**
  * Ensure that all procedure definitions actually use the parameters they define
