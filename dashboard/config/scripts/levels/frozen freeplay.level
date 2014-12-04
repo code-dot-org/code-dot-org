@@ -18,7 +18,7 @@
     "impressive": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "callout_json": "[\r\n  {\"localization_key\": \"snowflake_dropdown\", \"element_id\": \"[block-id='1']\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"center right\", \"at\": \"bottom right\", \"adjust\": {\"x\": 70, \"y\":360}},\r\n    \"style\": { \"classes\": \"no-tip\" }}\r\n  }\r\n]",
+    "callout_json": "[\r\n  {\"localization_key\": \"snowflake_dropdown\", \"element_id\": \"#create_snowflake_qtip > .blocklyEditableText\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}}\r\n  }\r\n]",
     "embed": "false",
     "min_workspace_height": "1200",
     "disable_sharing": "true"
@@ -55,7 +55,7 @@
             </block>
           </value>
         </block>
-        <block type="create_snowflake_dropdown">
+        <block type="create_snowflake_dropdown" id="create_snowflake_qtip">
           <title name="TYPE">square</title>
         </block>
         <block type="controls_repeat">

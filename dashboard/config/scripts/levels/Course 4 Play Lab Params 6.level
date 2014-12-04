@@ -23,8 +23,7 @@
     "coordinate_grid_background": "false",
     "instructions": "Add another parameter called \"speed\" to the \"patrol\" function. Use a \"set speed\" block with the new \"speed\" parameter.",
     "first_sprite_index": "1",
-    "embed": "false",
-    "maze_data": null
+    "embed": "false"
   }
 }]]></config>
   <blocks>
@@ -145,7 +144,13 @@
         </category>
         <category name="Math">
           <block type="math_number">
-            <title name="NUM">0</title>
+            <title name="NUM">1</title>
+          </block>
+          <block type="math_number">
+            <title name="NUM">2</title>
+          </block>
+          <block type="math_number">
+            <title name="NUM">3</title>
           </block>
           <block type="math_arithmetic" inline="true">
             <title name="OP">ADD</title>

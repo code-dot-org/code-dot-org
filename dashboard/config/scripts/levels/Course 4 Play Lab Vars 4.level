@@ -24,8 +24,11 @@
     "sprites_hidden_to_start": "false",
     "disable_variable_editing": "true",
     "use_modal_function_editor": "false",
-    "instructions": "Now we're using a variable called \"height\" to control how high the dog can jump. Update the \"height\" variable so that the dog can jump high enough to reach all of the flags.",
-    "maze_data": null
+    "instructions": "Now we're using a variable called \"height\" to control how high the dog can jump. Update the \"height\" variable so that the dog can jump high enough to reach all the flags. Hint: the new flags are 200 pixels high.",
+    "embed": "false",
+    "use_contract_editor": "false",
+    "maze_data": null,
+    "coordinate_grid_background": "false"
   }
 }]]></config>
   <blocks>
