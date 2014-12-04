@@ -15070,7 +15070,7 @@ exports.penTooltip = function(d){return "Levanta ou abaixa o lápis, para começ
 
 exports.penUp = function(d){return "levante o lápis"};
 
-exports.reinfFeedbackMsg = function(d){return "Aqui está o seu desenho! Continue trabalhando nele, ou vá para o próximo desafio."};
+exports.reinfFeedbackMsg = function(d){return "Aqui está o seu desenho! Continue trabalhando nele, ou siga para o próximo desafio."};
 
 exports.setColour = function(d){return "definir cor"};
 

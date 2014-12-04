@@ -11060,15 +11060,15 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.ja=function(n){return "other"}
 exports.compute = function(d){return "計算"};
 
-exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
+exports.equivalentExpression = function(d){return "同じ式になるよう引数を並べ替えてください。"};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"compute\" block?"};
+exports.extraTopBlocks = function(d){return "使っていないブロックがあります。それらを\"計算\"ブロックにつなげるつもりでしたか？"};
 
 exports.goal = function(d){return "目標"};
 
-exports.reinfFeedbackMsg = function(d){return "これは自分が描こうとしていた画でしょうか？「もう一度」ボタンで自分で描いた画を確認する事ができます。"};
+exports.reinfFeedbackMsg = function(d){return "あなたのストーリーができあがりました！作業をつづけるか、次のパズルに進みましょう。"};
 
-exports.yourExpression = function(d){return "Your expression:"};
+exports.yourExpression = function(d){return "あなたの式:"};
 
 
 },{"messageformat":53}],41:[function(require,module,exports){
@@ -11175,7 +11175,7 @@ exports.numLinesOfCodeWritten = function(d){return "あなたはたった今 "+p
 
 exports.play = function(d){return "再生"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "印刷"};
 
 exports.puzzleTitle = function(d){return "パズル "+v(d,"puzzle_number")+" の "+v(d,"stage_total")};
 
@@ -11221,7 +11221,7 @@ exports.backToPreviousLevel = function(d){return "前のレベルに戻る"};
 
 exports.saveToGallery = function(d){return "ギャラリーに保存"};
 
-exports.savedToGallery = function(d){return "ギャラリーに保存しました！"};
+exports.savedToGallery = function(d){return "ギャラリーに保存されました！"};
 
 exports.shareFailure = function(d){return "プログラムをシェアできませんでした。"};
 

@@ -12383,7 +12383,7 @@ exports.parseElement = function(text) {
 
 },{}],40:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.fi=function(n){return n===1?"one":"other"}
-exports.bounceBall = function(d){return "pomputa palloa"};
+exports.bounceBall = function(d){return "pompauta pallo"};
 
 exports.bounceBallTooltip = function(d){return "Pompauta pallo toisesta esineestä."};
 
@@ -12415,7 +12415,7 @@ exports.ifelseTooltip = function(d){return "Jos määrätyssä suunnassa on polk
 
 exports.incrementOpponentScore = function(d){return "lisää piste vastustajalle"};
 
-exports.incrementOpponentScoreTooltip = function(d){return "Lisää vastustajan pisteisiin yksi."};
+exports.incrementOpponentScoreTooltip = function(d){return "Lisää vastustajan pisteisiin yksi piste."};
 
 exports.incrementPlayerScore = function(d){return "lisää piste"};
 
@@ -12423,13 +12423,13 @@ exports.incrementPlayerScoreTooltip = function(d){return "Lisää yksi tämänhe
 
 exports.isWall = function(d){return "onko tämä seinä"};
 
-exports.isWallTooltip = function(d){return "Palauttaa kyllä jos tässä on seinä."};
+exports.isWallTooltip = function(d){return "Palauttaa tosi jos tässä on seinä."};
 
-exports.launchBall = function(d){return "aloita uusi pallo"};
+exports.launchBall = function(d){return "laukaise uusi pallo"};
 
 exports.launchBallTooltip = function(d){return "Laukaise pallo peliin."};
 
-exports.makeYourOwn = function(d){return "Tee oma Pomppimispelisi"};
+exports.makeYourOwn = function(d){return "Luo oma Bounce-pelisi"};
 
 exports.moveDown = function(d){return "siirrä alas"};
 
@@ -12479,11 +12479,11 @@ exports.playSoundGoal2 = function(d){return "soita maalin toinen ääni"};
 
 exports.playSoundHit = function(d){return "soita osuman ääni"};
 
-exports.playSoundLosePoint = function(d){return "soita pisteen menetyksen ääni"};
+exports.playSoundLosePoint = function(d){return "soita pisteen häviön ääni"};
 
-exports.playSoundLosePoint2 = function(d){return "soita pisteen menetyksen toinen ääni"};
+exports.playSoundLosePoint2 = function(d){return "soita pisteen häviön toinen ääni"};
 
-exports.playSoundRetro = function(d){return "soita retro ääni"};
+exports.playSoundRetro = function(d){return "soita retroääni"};
 
 exports.playSoundRubber = function(d){return "soita kumin ääni"};
 
@@ -12509,17 +12509,17 @@ exports.repeatUntilBlocked = function(d){return "niin kauan kuin polku edessä"}
 
 exports.repeatUntilFinish = function(d){return "toista kunnes lopussa"};
 
-exports.scoreText = function(d){return "Pisteet: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
+exports.scoreText = function(d){return "Pistetilanne: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
 
-exports.setBackgroundRandom = function(d){return "aseta satunnainen näyttämö"};
+exports.setBackgroundRandom = function(d){return "aseta satunnainen tausta"};
 
-exports.setBackgroundHardcourt = function(d){return "aseta massakenttänäyttämö"};
+exports.setBackgroundHardcourt = function(d){return "aseta massakenttätausta"};
 
-exports.setBackgroundRetro = function(d){return "aseta retronäyttämö"};
+exports.setBackgroundRetro = function(d){return "aseta retrotausta"};
 
 exports.setBackgroundTooltip = function(d){return "Aseta taustakuva"};
 
-exports.setBallRandom = function(d){return "aseta sattumanvarainen pallo"};
+exports.setBallRandom = function(d){return "aseta satunnainen pallo"};
 
 exports.setBallHardcourt = function(d){return "aseta massakenttäpallo"};
 
@@ -12541,7 +12541,7 @@ exports.setBallSpeedVeryFast = function(d){return "aseta erittäin nopea pallon 
 
 exports.setBallSpeedTooltip = function(d){return "aseta pallon nopeus"};
 
-exports.setPaddleRandom = function(d){return "aseta sattumanvarainen maila"};
+exports.setPaddleRandom = function(d){return "aseta satunnainen maila"};
 
 exports.setPaddleHardcourt = function(d){return "aseta massakenttämaila"};
 
@@ -12563,7 +12563,7 @@ exports.setPaddleSpeedVeryFast = function(d){return "aseta erittäin nopea maila
 
 exports.setPaddleSpeedTooltip = function(d){return "Asettaa mailan nopeuden"};
 
-exports.shareBounceTwitter = function(d){return "Tutustu pomppimispeliin, jonka tein. Kirjoitin sen itse @codeorg:lla"};
+exports.shareBounceTwitter = function(d){return "Käy katsomassa Bounce-peliäni. Kirjoitin sen itse @codeorg:lla"};
 
 exports.shareGame = function(d){return "Jaa pelisi:"};
 
@@ -12702,7 +12702,7 @@ exports.levelIncompleteError = function(d){return "Käytät kaikkia oikeanlaisia
 
 exports.listVariable = function(d){return "lista"};
 
-exports.makeYourOwnFlappy = function(d){return "Tee oma Läpytin -pelisi"};
+exports.makeYourOwnFlappy = function(d){return "Tee oma Flappy-pelisi"};
 
 exports.missingBlocksErrorMsg = function(d){return "Yritä ratkaista pulma yhdellä tai useammalla alla olevalla lohkolla."};
 
@@ -12720,7 +12720,7 @@ exports.numLinesOfCodeWritten = function(d){return "Kirjoitit juuri "+p(d,"numLi
 
 exports.play = function(d){return "pelaa"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Tulosta"};
 
 exports.puzzleTitle = function(d){return "Pulma "+v(d,"puzzle_number")+" / "+v(d,"stage_total")};
 
@@ -12764,11 +12764,11 @@ exports.hintRequest = function(d){return "Katso vihje"};
 
 exports.backToPreviousLevel = function(d){return "Takaisin edelliseen tasoon"};
 
-exports.saveToGallery = function(d){return "Tallenna galleriaasi"};
+exports.saveToGallery = function(d){return "Tallenna galleriaan"};
 
-exports.savedToGallery = function(d){return "Tallennettu galleriaasi!"};
+exports.savedToGallery = function(d){return "Tallennettu galleriaan!"};
 
-exports.shareFailure = function(d){return "Emme valitettavasti toi jakaa tätä ohjelmaa."};
+exports.shareFailure = function(d){return "Emme valitettavasti voi jakaa tätä ohjelmaa."};
 
 exports.typeFuncs = function(d){return "Käytettävissä olevat funktiot: %1"};
 
@@ -12776,7 +12776,7 @@ exports.typeHint = function(d){return "Sulkeet ja puolipisteet ovat pakollisia."
 
 exports.workspaceHeader = function(d){return "Kokoa lohkosi täällä: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Kirjoita JavaScript koodi tähän"};
+exports.workspaceHeaderJavaScript = function(d){return "Kirjoita JavaScript-koodi tähän"};
 
 exports.infinity = function(d){return "Ääretön"};
 
@@ -12800,7 +12800,7 @@ exports.hintHeader = function(d){return "Tässä on Vihje:"};
 
 exports.genericFeedback = function(d){return "Katso miten päädyit tähän, ja koita korjata ohjelmasi."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Katso mitä tein"};
 
 
 },{"messageformat":53}],42:[function(require,module,exports){

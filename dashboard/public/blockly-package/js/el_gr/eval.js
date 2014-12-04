@@ -14478,7 +14478,7 @@ exports.numLinesOfCodeWritten = function(d){return "Μόλις έγραψες "+
 
 exports.play = function(d){return "παίξε"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Εκτύπωσε"};
 
 exports.puzzleTitle = function(d){return "Παζλ "+v(d,"puzzle_number")+" από "+v(d,"stage_total")};
 
@@ -14494,7 +14494,7 @@ exports.score = function(d){return "σκορ"};
 
 exports.showCodeHeader = function(d){return "Προβολή κώδικα"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Εμφάνισε τα μπλοκ"};
 
 exports.showGeneratedCode = function(d){return "Προβολή κώδικα"};
 
@@ -14522,9 +14522,9 @@ exports.hintRequest = function(d){return "Δείτε την υπόδειξη"};
 
 exports.backToPreviousLevel = function(d){return "Πίσω στο προηγούμενο επίπεδο"};
 
-exports.saveToGallery = function(d){return "Αποθήκευσε το στη συλλογή σου"};
+exports.saveToGallery = function(d){return "Αποθήκευση στη συλλογή"};
 
-exports.savedToGallery = function(d){return "Αποθηκεύτηκε στη συλλογή σου!"};
+exports.savedToGallery = function(d){return "Αποθηκεύτηκε στη συλλογή!"};
 
 exports.shareFailure = function(d){return "Συγγνώμη, δεν μπορούμε να μοιράσουμε αυτό το πρόγραμμα."};
 
@@ -14534,7 +14534,7 @@ exports.typeHint = function(d){return "Σημείωσε ότι απαιτούν�
 
 exports.workspaceHeader = function(d){return "Συναρμολόγησε τα μπλοκ σου εδώ: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Πληκτρολογήστε τον Javascript κώδικά σας εδώ"};
 
 exports.infinity = function(d){return "Άπειρο"};
 
@@ -14558,28 +14558,28 @@ exports.hintHeader = function(d){return "Να μια συμβουλή:"};
 
 exports.genericFeedback = function(d){return "Δες πως κατέληξες και δοκίμασε να διορθώσεις το πρόγραμμά σου."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Δείτε τι έκανα"};
 
 
 },{"messageformat":62}],50:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.el=function(n){return n===1?"one":"other"}
 exports.circleBlockTitle = function(d){return "κύκλος (ακτίνα, στυλ, χρώμα)"};
 
-exports.displayBlockTitle = function(d){return "display"};
+exports.displayBlockTitle = function(d){return "εμφάνιση"};
 
 exports.ellipseBlockTitle = function(d){return "έλλειψη (πλάτος, ύψος, στυλ, χρώμα)"};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"};
+exports.extraTopBlocks = function(d){return "Έχετε ασύνδετα πλακίδια. Μήπως θέλατε να τα συνδέσετε \"εμφανιζόμενα\" πλακίδια;"};
 
-exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
+exports.overlayBlockTitle = function(d){return "επικάλυμμα (επάνω, κάτω)"};
 
-exports.placeImageBlockTitle = function(d){return "place-image (x, y, image)"};
+exports.placeImageBlockTitle = function(d){return "τοποθέτησε-εικόνα (χ, ψ, εικόνα)"};
 
 exports.offsetBlockTitle = function(d){return "offset (x, y, image)"};
 
 exports.rectangleBlockTitle = function(d){return "ορθογώνιο (πλάτος, ύψος, στυλ, χρώμα)"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to edit your drawing."};
+exports.reinfFeedbackMsg = function(d){return "Μπορείτε να πατήσετε το κουμπί \"Προσπαθείστε ξανά\" για να επεξεργαστείτε τη ζωγραφιά σας."};
 
 exports.rotateImageBlockTitle = function(d){return "περιστροφή (μοίρες, εικόνα)"};
 
@@ -14591,7 +14591,7 @@ exports.starBlockTitle = function(d){return "αστέρι (ακτίνα, στυ�
 
 exports.radialStarBlockTitle = function(d){return "radial-star (points, inner, outer, style, color)"};
 
-exports.stringAppendBlockTitle = function(d){return "string-append (first, second)"};
+exports.stringAppendBlockTitle = function(d){return "συμβολοσειρά-πρoσάρτησε (πρώτη, δεύτερη)"};
 
 exports.stringLengthBlockTitle = function(d){return "μήκος συμβολοσειράς (συμβολοσειρά)"};
 
@@ -14599,13 +14599,13 @@ exports.textBlockTitle = function(d){return "κείμενο (συμβολοσε�
 
 exports.triangleBlockTitle = function(d){return "τρίγωνο (μέγεθος, στυλ, χρώμα)"};
 
-exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
+exports.underlayBlockTitle = function(d){return "υπόστρωμα (κάτω, κορυφή)"};
 
 exports.outline = function(d){return "περίγραμμα"};
 
-exports.solid = function(d){return "solid"};
+exports.solid = function(d){return "συμπαγής"};
 
-exports.string = function(d){return "string"};
+exports.string = function(d){return "συμβολοσειρά"};
 
 
 },{"messageformat":62}],51:[function(require,module,exports){

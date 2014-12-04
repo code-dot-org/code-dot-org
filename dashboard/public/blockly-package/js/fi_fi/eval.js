@@ -14460,7 +14460,7 @@ exports.levelIncompleteError = function(d){return "Käytät kaikkia oikeanlaisia
 
 exports.listVariable = function(d){return "lista"};
 
-exports.makeYourOwnFlappy = function(d){return "Tee oma Läpytin -pelisi"};
+exports.makeYourOwnFlappy = function(d){return "Tee oma Flappy-pelisi"};
 
 exports.missingBlocksErrorMsg = function(d){return "Yritä ratkaista pulma yhdellä tai useammalla alla olevalla lohkolla."};
 
@@ -14478,7 +14478,7 @@ exports.numLinesOfCodeWritten = function(d){return "Kirjoitit juuri "+p(d,"numLi
 
 exports.play = function(d){return "pelaa"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Tulosta"};
 
 exports.puzzleTitle = function(d){return "Pulma "+v(d,"puzzle_number")+" / "+v(d,"stage_total")};
 
@@ -14522,11 +14522,11 @@ exports.hintRequest = function(d){return "Katso vihje"};
 
 exports.backToPreviousLevel = function(d){return "Takaisin edelliseen tasoon"};
 
-exports.saveToGallery = function(d){return "Tallenna galleriaasi"};
+exports.saveToGallery = function(d){return "Tallenna galleriaan"};
 
-exports.savedToGallery = function(d){return "Tallennettu galleriaasi!"};
+exports.savedToGallery = function(d){return "Tallennettu galleriaan!"};
 
-exports.shareFailure = function(d){return "Emme valitettavasti toi jakaa tätä ohjelmaa."};
+exports.shareFailure = function(d){return "Emme valitettavasti voi jakaa tätä ohjelmaa."};
 
 exports.typeFuncs = function(d){return "Käytettävissä olevat funktiot: %1"};
 
@@ -14534,7 +14534,7 @@ exports.typeHint = function(d){return "Sulkeet ja puolipisteet ovat pakollisia."
 
 exports.workspaceHeader = function(d){return "Kokoa lohkosi täällä: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Kirjoita JavaScript koodi tähän"};
+exports.workspaceHeaderJavaScript = function(d){return "Kirjoita JavaScript-koodi tähän"};
 
 exports.infinity = function(d){return "Ääretön"};
 
@@ -14558,32 +14558,32 @@ exports.hintHeader = function(d){return "Tässä on Vihje:"};
 
 exports.genericFeedback = function(d){return "Katso miten päädyit tähän, ja koita korjata ohjelmasi."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Katso mitä tein"};
 
 
 },{"messageformat":62}],50:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.fi=function(n){return n===1?"one":"other"}
-exports.circleBlockTitle = function(d){return "ympyrä(säde, tyyli, väri)"};
+exports.circleBlockTitle = function(d){return "ympyrä (säde, tyyli, väri)"};
 
-exports.displayBlockTitle = function(d){return "näyttö"};
+exports.displayBlockTitle = function(d){return "näytä"};
 
 exports.ellipseBlockTitle = function(d){return "ellipsi (leveys, korkeus, tyyli, väri)"};
 
-exports.extraTopBlocks = function(d){return "Sinulla on vapaita lohkoja. Oliko tarkoituksesi liittää nämä \"näyttö\" lohkoon?"};
+exports.extraTopBlocks = function(d){return "Sinulla on vapaita lohkoja. Oliko tarkoituksesi liittää nämä \"näytä\" lohkoon?"};
 
 exports.overlayBlockTitle = function(d){return "peitto (ylhäältä, alhaalta)"};
 
-exports.placeImageBlockTitle = function(d){return "paikka-kuva (x, y, kuva)"};
+exports.placeImageBlockTitle = function(d){return "aseta kuva (x, y, kuva)"};
 
 exports.offsetBlockTitle = function(d){return "offset (x, y, image)"};
 
 exports.rectangleBlockTitle = function(d){return "suorakulmio (leveys, korkeus, tyyli, väri)"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to edit your drawing."};
+exports.reinfFeedbackMsg = function(d){return "Voit painaa \"Kokeile uudelleen\" -painiketta muokataksesi piirustustasi."};
 
 exports.rotateImageBlockTitle = function(d){return "kierrä (astetta, kuva)"};
 
-exports.scaleImageBlockTitle = function(d){return "suhde (tekijä)"};
+exports.scaleImageBlockTitle = function(d){return "skaalaa (kerroin)"};
 
 exports.squareBlockTitle = function(d){return "neliö (koko, tyyli, väri)"};
 
@@ -14601,7 +14601,7 @@ exports.triangleBlockTitle = function(d){return "kolmio (koko, tyyli, väri)"};
 
 exports.underlayBlockTitle = function(d){return "aluste (alaosa, yläosa)"};
 
-exports.outline = function(d){return "jäsennys"};
+exports.outline = function(d){return "ääriviiva"};
 
 exports.solid = function(d){return "kiinteä"};
 

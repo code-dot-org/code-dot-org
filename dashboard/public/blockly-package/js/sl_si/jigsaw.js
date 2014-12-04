@@ -10741,7 +10741,7 @@ exports.catText = function(d){return "Besedilo"};
 
 exports.catVariables = function(d){return "Spremenljivke"};
 
-exports.codeTooltip = function(d){return "Poglej generirane kode JavaScript."};
+exports.codeTooltip = function(d){return "Poglej generirano kodo v JavaScriptu."};
 
 exports.continue = function(d){return "Nadaljuj"};
 
@@ -10761,7 +10761,7 @@ exports.end = function(d){return "konec"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Znotraj 'Ponovi' ali 'če' bloka morajo biti drugi bloki, da bo delovalo. Prepričaj se, da se notranji bloki ustrezno prilegajo zunanjemu bloku."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "Da bi blok funkcije delal potrebuje znotraj sebe druge bloke."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Da bi blok s funkcijo deloval, mora vsebovati druge bloke oz ukaze."};
 
 exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
 
@@ -10785,9 +10785,9 @@ exports.finalStageTrophies = function(d){return "Čestitke! Zaključil/a si stop
 
 exports.finish = function(d){return "Končaj"};
 
-exports.generatedCodeInfo = function(d){return "Celo najboljše univerze učijo kodiranje z bloki (npr. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ampak bloke, ki si jih sestavil, lahko prikažemo v JavaScriptu, najbolj rabljenem programskem jeziku:"};
+exports.generatedCodeInfo = function(d){return "Celo najboljše univerze učijo programirati s pomočjo blokov (npr. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Pod pokrovom pa se skrivajo pravi programi, napisani v JavaScriptu, enem najbolj uporabljanih programskih jezikov:"};
 
-exports.hashError = function(d){return "Oprosti, '%1' ne ustreza nobenemu shranjenemu programu."};
+exports.hashError = function(d){return "Žal, '%1' ne ustreza nobenemu shranjenemu programu."};
 
 exports.help = function(d){return "Pomoč"};
 
@@ -10799,25 +10799,25 @@ exports.levelIncompleteError = function(d){return "Uporabljaš vse potrebne tipe
 
 exports.listVariable = function(d){return "seznam"};
 
-exports.makeYourOwnFlappy = function(d){return "Izdelaj svojo lastno Flappy igro"};
+exports.makeYourOwnFlappy = function(d){return "Izdelaj svojo lastno igrico o Plahutaču (Flappyju)"};
 
-exports.missingBlocksErrorMsg = function(d){return "Poskusi enega ali več blokov spodaj, da rešiš uganko."};
+exports.missingBlocksErrorMsg = function(d){return "Če boš uporabil/a vsaj en blok, ki ga najdeš spodaj, ali več, boš rešil/a uganko."};
 
-exports.nextLevel = function(d){return "Čestitke! Rešil si uganko "+v(d,"puzzleNumber")+"."};
+exports.nextLevel = function(d){return "Čestitke! Rešil/a si uganko "+v(d,"puzzleNumber")+"."};
 
-exports.nextLevelTrophies = function(d){return "Čestitke! Zaključil/a si stopnjo "+v(d,"stageNumber")+" in osvojil/a "+p(d,"numTrophies",0,"sl",{"one":"trofejo","other":n(d,"numTrophies")+" trofej"})+"."};
+exports.nextLevelTrophies = function(d){return "Čestitke! Rešil/a si uganko "+v(d,"puzzleNumber")+" in osvojil/a "+p(d,"numTrophies",0,"sl",{"one":"lovoriko","other":n(d,"numTrophies")+" lovorik"})+"."};
 
-exports.nextStage = function(d){return "Čestitke! Opravili ste "+v(d,"stageName")+"."};
+exports.nextStage = function(d){return "Čestitke! Dokončal/a si "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Čestitke! Zaključil/a si stopnjo "+v(d,"stageNumber")+" in osvojil/a "+p(d,"numTrophies",0,"sl",{"one":"trofejo","other":n(d,"numTrophies")+" trofej"})+"."};
+exports.nextStageTrophies = function(d){return "Čestitke! Zaključil/a si stopnjo "+v(d,"stageName")+" in osvojil/a "+p(d,"numTrophies",0,"sl",{"one":"lovoriko","other":n(d,"numTrophies")+" lovorik"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Čestitke! Zaključil/a si uganko "+v(d,"puzzleNumber")+". (Vendar bi lahko uporabil samo  "+p(d,"numBlocks",0,"sl",{"one":"1 blok","other":n(d,"numBlocks")+" blokov"})+".)"};
 
-exports.numLinesOfCodeWritten = function(d){return "Ravnokar si napisal "+p(d,"numLines",0,"sl",{"one":"1 vrstica","other":n(d,"numLines")+" vrstic"})+" kode!"};
+exports.numLinesOfCodeWritten = function(d){return "Ravnokar si napisal/a "+p(d,"numLines",0,"sl",{"one":"1 vrstico","other":n(d,"numLines")+" vrstic"})+" kode!"};
 
 exports.play = function(d){return "igraj"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Natisni"};
 
 exports.puzzleTitle = function(d){return "Uganka "+v(d,"puzzle_number")+" od "+v(d,"stage_total")};
 
@@ -10825,7 +10825,7 @@ exports.repeat = function(d){return "ponovi"};
 
 exports.resetProgram = function(d){return "resetiraj"};
 
-exports.runProgram = function(d){return "Teči"};
+exports.runProgram = function(d){return "Zaženi program"};
 
 exports.runTooltip = function(d){return "Zaženi program, definiran z bloki na delovni površini."};
 
@@ -10833,7 +10833,7 @@ exports.score = function(d){return "rezultat"};
 
 exports.showCodeHeader = function(d){return "Pokaži kodo"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Prikaži bloke"};
 
 exports.showGeneratedCode = function(d){return "Pokaži kodo"};
 
@@ -10843,11 +10843,11 @@ exports.subtitle = function(d){return "vizualno programersko okolje"};
 
 exports.textVariable = function(d){return "besedilo"};
 
-exports.tooFewBlocksMsg = function(d){return "Uporabljaš vse potrebne tipe blokov, a poskusi uporabiti več teh tipov blokov, da zaključiš to uganko."};
+exports.tooFewBlocksMsg = function(d){return "Uporabil/a si prave tipe blokov, a potrebuješ jih še več za rešitev te uganke."};
 
 exports.tooManyBlocksMsg = function(d){return "Ta uganka je lahko rešena z <x id='START_SPAN'/><x id='END_SPAN'/> bloki."};
 
-exports.tooMuchWork = function(d){return "Zaradi tebe sem moral narediti veliko dela! Bi se lahko poskusil manjkrat ponavljati?"};
+exports.tooMuchWork = function(d){return "Si me pa utrudil/a! Bi se lahko poskusil/a manjkrat ponavljati?"};
 
 exports.toolboxHeader = function(d){return "Bloki"};
 
@@ -10861,11 +10861,11 @@ exports.hintRequest = function(d){return "Poglej namig"};
 
 exports.backToPreviousLevel = function(d){return "Nazaj na prejšnjo raven"};
 
-exports.saveToGallery = function(d){return "Shrani v svojo galerijo"};
+exports.saveToGallery = function(d){return "Shrani v galerijo"};
 
-exports.savedToGallery = function(d){return "Shranjeno v tvoji galeriji!"};
+exports.savedToGallery = function(d){return "Shranjeno v galerijo!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Žal, ne moremo objaviti tega programa."};
 
 exports.typeFuncs = function(d){return "Razpoložljive funkcije: %1"};
 
@@ -10873,11 +10873,11 @@ exports.typeHint = function(d){return "Zapomni si, oklepaji in podpičja so zaht
 
 exports.workspaceHeader = function(d){return "Tukaj sestavi tvoje bloke: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Vnesite kodo JavaScript"};
 
 exports.infinity = function(d){return "Neskončnost"};
 
-exports.rotateText = function(d){return "Zavrti tvojo napravo."};
+exports.rotateText = function(d){return "Zasukaj tvojo napravo."};
 
 exports.orientationLock = function(d){return "Izključi zaklepanje orientacije v nastavitvah naprave."};
 
@@ -10897,7 +10897,7 @@ exports.hintHeader = function(d){return "Tukaj je namig:"};
 
 exports.genericFeedback = function(d){return "Poglej kako si končal in poizkusi popraviti svoj program."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Poglej, kaj sem naredil"};
 
 
 },{"messageformat":49}],37:[function(require,module,exports){

@@ -14960,7 +14960,7 @@ exports.catLogic = function(d){return "Logic"};
 
 exports.colourTooltip = function(d){return "Thay đổi màu của cây bút chì."};
 
-exports.createACircle = function(d){return "create a circle"};
+exports.createACircle = function(d){return "tạo ra một vòng tròn"};
 
 exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
 

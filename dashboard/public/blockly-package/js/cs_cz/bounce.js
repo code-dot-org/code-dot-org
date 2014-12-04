@@ -12421,27 +12421,27 @@ exports.ifTooltip = function(d){return "Pokud je v daném směru cesta, provede 
 
 exports.ifelseTooltip = function(d){return "Pokud je v daném směru cesta, proveď první blok akcí. V opačném případě proveď druhý blok akcí."};
 
-exports.incrementOpponentScore = function(d){return "increment opponent score"};
+exports.incrementOpponentScore = function(d){return "přidej bod soupeři"};
 
-exports.incrementOpponentScoreTooltip = function(d){return "Add one to the current opponent score."};
+exports.incrementOpponentScoreTooltip = function(d){return "Přičti jedna do aktuálního skóre soupeře."};
 
 exports.incrementPlayerScore = function(d){return "Bod"};
 
 exports.incrementPlayerScoreTooltip = function(d){return "Přidá aktuálnímu hráči jeden bod."};
 
-exports.isWall = function(d){return "is this a wall"};
+exports.isWall = function(d){return "je to zeď"};
 
-exports.isWallTooltip = function(d){return "Returns true if there is a wall here"};
+exports.isWallTooltip = function(d){return "Vrátí hodnotu pravda, pokud je zde zeď"};
 
-exports.launchBall = function(d){return "launch new ball"};
+exports.launchBall = function(d){return "vypustit nový míč"};
 
-exports.launchBallTooltip = function(d){return "Launch a ball into play."};
+exports.launchBallTooltip = function(d){return "Vypustit míč do hry."};
 
-exports.makeYourOwn = function(d){return "Make Your Own Bounce Game"};
+exports.makeYourOwn = function(d){return "Vyrob si vlastní hru Odraz"};
 
 exports.moveDown = function(d){return "pohyb dolů"};
 
-exports.moveDownTooltip = function(d){return "Move the paddle down."};
+exports.moveDownTooltip = function(d){return "Pohne pálkou dolů."};
 
 exports.moveForward = function(d){return "posunout vpřed"};
 
@@ -12449,15 +12449,15 @@ exports.moveForwardTooltip = function(d){return "Posuň mě jedno pole vpřed."}
 
 exports.moveLeft = function(d){return "pohnout vlevo"};
 
-exports.moveLeftTooltip = function(d){return "Move the paddle to the left."};
+exports.moveLeftTooltip = function(d){return "Pohne pálkou vlevo."};
 
 exports.moveRight = function(d){return "pohnout vpravo"};
 
-exports.moveRightTooltip = function(d){return "Move the paddle to the right."};
+exports.moveRightTooltip = function(d){return "Pohne pálkou vpravo."};
 
 exports.moveUp = function(d){return "pohnout nahoru"};
 
-exports.moveUpTooltip = function(d){return "Move the paddle up."};
+exports.moveUpTooltip = function(d){return "Pohne pálkou nahoru."};
 
 exports.nextLevel = function(d){return "Dobrá práce! Dokončil jsi tuto hádanku."};
 
@@ -12481,29 +12481,29 @@ exports.pilePresent = function(d){return "tady je hromádka"};
 
 exports.playSoundCrunch = function(d){return "přehrát zvuk křupání"};
 
-exports.playSoundGoal1 = function(d){return "play goal 1 sound"};
+exports.playSoundGoal1 = function(d){return "přehrát zvuk cíl 1"};
 
-exports.playSoundGoal2 = function(d){return "play goal 2 sound"};
+exports.playSoundGoal2 = function(d){return "přehrát zvuk cíl 2"};
 
-exports.playSoundHit = function(d){return "play hit sound"};
+exports.playSoundHit = function(d){return "přehrát zvuk zásah"};
 
-exports.playSoundLosePoint = function(d){return "play lose point sound"};
+exports.playSoundLosePoint = function(d){return "přehrát zvuk ztráta bodu"};
 
-exports.playSoundLosePoint2 = function(d){return "play lose point 2 sound"};
+exports.playSoundLosePoint2 = function(d){return "přehrát zvuk ztráta bodu 2"};
 
-exports.playSoundRetro = function(d){return "play retro sound"};
+exports.playSoundRetro = function(d){return "přehrát zvuk \"retro\""};
 
-exports.playSoundRubber = function(d){return "play rubber sound"};
+exports.playSoundRubber = function(d){return "přehrát zvuk guma"};
 
-exports.playSoundSlap = function(d){return "play slap sound"};
+exports.playSoundSlap = function(d){return "přehrát zvuk plácnutí"};
 
 exports.playSoundTooltip = function(d){return "Přehraj vybraný zvuk."};
 
-exports.playSoundWinPoint = function(d){return "play win point sound"};
+exports.playSoundWinPoint = function(d){return "přehrát zvuk získaný bod"};
 
-exports.playSoundWinPoint2 = function(d){return "play win point 2 sound"};
+exports.playSoundWinPoint2 = function(d){return "přehrát zvuk získaný bod 2"};
 
-exports.playSoundWood = function(d){return "play wood sound"};
+exports.playSoundWood = function(d){return "přehrát zvuk dřevo"};
 
 exports.putdownTower = function(d){return "položit mohylu"};
 
@@ -12517,7 +12517,7 @@ exports.repeatUntilBlocked = function(d){return "dokud je cesta vpřed"};
 
 exports.repeatUntilFinish = function(d){return "opakuj do konce"};
 
-exports.scoreText = function(d){return "Score: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
+exports.scoreText = function(d){return "Výsledek: "+v(d,"playerScore")+": "+v(d,"opponentScore")};
 
 exports.setBackgroundRandom = function(d){return "nastavit náhodnou scénu"};
 
@@ -12533,7 +12533,7 @@ exports.setBallHardcourt = function(d){return "nastavit tenisový míč"};
 
 exports.setBallRetro = function(d){return "nastavit retro míč"};
 
-exports.setBallTooltip = function(d){return "Nastaví podobu míče"};
+exports.setBallTooltip = function(d){return "Nastavit podobu míče"};
 
 exports.setBallSpeedRandom = function(d){return "nastavit náhodnou rychlost míče"};
 
@@ -12555,7 +12555,7 @@ exports.setPaddleHardcourt = function(d){return "nastavit tenisovou pálku"};
 
 exports.setPaddleRetro = function(d){return "nastavit retro pálku"};
 
-exports.setPaddleTooltip = function(d){return "Sets the ball paddle"};
+exports.setPaddleTooltip = function(d){return "Nastaví vzhled pálky"};
 
 exports.setPaddleSpeedRandom = function(d){return "nastavit náhodnou rychlost odpalu"};
 
@@ -12571,7 +12571,7 @@ exports.setPaddleSpeedVeryFast = function(d){return "nastavit velmi vysokou rych
 
 exports.setPaddleSpeedTooltip = function(d){return "Nastaví rychlost odpalu"};
 
-exports.shareBounceTwitter = function(d){return "Check out the Bounce game I made. I wrote it myself with @codeorg"};
+exports.shareBounceTwitter = function(d){return "Podívejte se na hru Odraz, kterou jsem vyrobil. Napsal jsem ji sám s @codeorg"};
 
 exports.shareGame = function(d){return "Sdílej svou hru:"};
 
@@ -12581,41 +12581,41 @@ exports.turnRight = function(d){return "otočit vpravo"};
 
 exports.turnTooltip = function(d){return "Otočí mě doleva nebo doprava o 90 stupňů."};
 
-exports.whenBallInGoal = function(d){return "when ball in goal"};
+exports.whenBallInGoal = function(d){return "když je míč v brance"};
 
-exports.whenBallInGoalTooltip = function(d){return "Execute the actions below when a ball enters the goal."};
+exports.whenBallInGoalTooltip = function(d){return "Spusť uvedené akce když míč spadne do brány."};
 
-exports.whenBallMissesPaddle = function(d){return "when ball misses paddle"};
+exports.whenBallMissesPaddle = function(d){return "když míč mine pálku"};
 
-exports.whenBallMissesPaddleTooltip = function(d){return "Execute the actions below when a ball misses the paddle."};
+exports.whenBallMissesPaddleTooltip = function(d){return "Spusť uvedené akce když míč mine do pálku."};
 
-exports.whenDown = function(d){return "when Down arrow"};
+exports.whenDown = function(d){return "když šipka dolů"};
 
-exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
+exports.whenDownTooltip = function(d){return "Spusť uvedené akce když je stisknutá klávesa \"dolů\"."};
 
 exports.whenGameStarts = function(d){return "když hra začne"};
 
 exports.whenGameStartsTooltip = function(d){return "Provést akce uvedené níže, když hra začne."};
 
-exports.whenLeft = function(d){return "when Left arrow"};
+exports.whenLeft = function(d){return "když šipka vlevo"};
 
-exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
+exports.whenLeftTooltip = function(d){return "Spusť uvedené akce když je stisknutá klávesa \"vlevo\"."};
 
-exports.whenPaddleCollided = function(d){return "when ball hits paddle"};
+exports.whenPaddleCollided = function(d){return "když míč zasáhne pálku"};
 
-exports.whenPaddleCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a paddle."};
+exports.whenPaddleCollidedTooltip = function(d){return "Spusť uvedené akce když se míč dotkne pálky."};
 
-exports.whenRight = function(d){return "when Right arrow"};
+exports.whenRight = function(d){return "když šipka vpravo"};
 
-exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
+exports.whenRightTooltip = function(d){return "Spusť uvedené akce když je stisknutá klávesa \"vpravo\"."};
 
-exports.whenUp = function(d){return "when Up arrow"};
+exports.whenUp = function(d){return "když šipka nahoru"};
 
-exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
+exports.whenUpTooltip = function(d){return "Spusť uvedené akce když je stisknutá klávesa \"nahoru\"."};
 
-exports.whenWallCollided = function(d){return "when ball hits wall"};
+exports.whenWallCollided = function(d){return "když míč zasáhne zeď"};
 
-exports.whenWallCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a wall."};
+exports.whenWallCollidedTooltip = function(d){return "Spusť uvedené akce když se míč dotkne zdi."};
 
 exports.whileMsg = function(d){return "dokud"};
 
@@ -12680,7 +12680,7 @@ exports.end = function(d){return "konec"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Bloky \"Opakovat\" nebo \"Pokud\" v sobě musí mít další bloky, aby fungovaly. Ujisti se, že vnitřní bloky jsou v pořádku vložené dovnitř vnějších bloků."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Blok funkce v sobě musí obsahovat další bloky."};
 
 exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
 
@@ -12696,7 +12696,7 @@ exports.errorUnusedFunction = function(d){return "You created a function, but ne
 
 exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
-exports.extraTopBlocks = function(d){return "Máš další extra bloky, které nejsou připojené k bloku událostí."};
+exports.extraTopBlocks = function(d){return "Máš nepřipojené bloky. Nechceš je připojit k bloku \"po spuštění\"?"};
 
 exports.finalStage = function(d){return "Dobrá práce! Dokončil si poslední fázi."};
 
@@ -12734,9 +12734,9 @@ exports.numBlocksNeeded = function(d){return "Dobrá práce! Dokončil jsi Háda
 
 exports.numLinesOfCodeWritten = function(d){return "Už jsi napsal "+p(d,"numLines",0,"cs",{"one":"1 řádek","other":n(d,"numLines")+" řádků"})+" kódu!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "hrát"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Tisk"};
 
 exports.puzzleTitle = function(d){return "Hádanka "+v(d,"puzzle_number")+" z "+v(d,"stage_total")};
 
@@ -12748,11 +12748,11 @@ exports.runProgram = function(d){return "Spustit"};
 
 exports.runTooltip = function(d){return "Spustí program definovaný bloky na pracovní ploše."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "výsledek"};
 
 exports.showCodeHeader = function(d){return "Zobrazit kód"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Zobrazit bloky"};
 
 exports.showGeneratedCode = function(d){return "Zobrazit kód"};
 
@@ -12776,15 +12776,15 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Celkově: "+p(d,"numLin
 
 exports.tryAgain = function(d){return "Zkusit znovu"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Viz tip"};
 
 exports.backToPreviousLevel = function(d){return "Zpět na předchozí úroveň"};
 
-exports.saveToGallery = function(d){return "Uložit do tvé galerie"};
+exports.saveToGallery = function(d){return "Uložit do galerie"};
 
-exports.savedToGallery = function(d){return "Uložit do tvé galerie!"};
+exports.savedToGallery = function(d){return "Uloženo v galerii!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Omlouváme se, ale tento program nemůžeme sdílet."};
 
 exports.typeFuncs = function(d){return "Dostupné funkce:%1"};
 
@@ -12792,7 +12792,7 @@ exports.typeHint = function(d){return "Všimni si, že závorky a středníky js
 
 exports.workspaceHeader = function(d){return "Sestav si zde své bloky: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Zde napiš tvůj kód v JavaScriptu"};
 
 exports.infinity = function(d){return "Nekonečno"};
 
@@ -12814,7 +12814,7 @@ exports.signup = function(d){return "Zaregistruj se do úvodního kurzu"};
 
 exports.hintHeader = function(d){return "Zde je rada:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Podívej se jak jsi skončil a zkus svůj program opravit."};
 
 exports.defaultTwitterText = function(d){return "Check out what I made"};
 

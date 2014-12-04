@@ -11804,7 +11804,7 @@ exports.numLinesOfCodeWritten = function(d){return "Ai scris doar "+p(d,"numLine
 
 exports.play = function(d){return "joacă"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Tipărire"};
 
 exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" din "+v(d,"stage_total")};
 
@@ -11848,9 +11848,9 @@ exports.hintRequest = function(d){return "Dă un indiciu"};
 
 exports.backToPreviousLevel = function(d){return "Înapoi la nivelul anterior"};
 
-exports.saveToGallery = function(d){return "Salvează în galeria proprie"};
+exports.saveToGallery = function(d){return "Salvare în galerie"};
 
-exports.savedToGallery = function(d){return "Salvat în galeria proprie!"};
+exports.savedToGallery = function(d){return "Salvat în galerie!"};
 
 exports.shareFailure = function(d){return "Ne pare rau, nu putem să distribuim acest program."};
 
@@ -11884,7 +11884,7 @@ exports.hintHeader = function(d){return "Iată un sfat:"};
 
 exports.genericFeedback = function(d){return "Vezi cum se termină şi încearcă să-ți corectezi programul."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Verifică ceea ce am creat"};
 
 
 },{"messageformat":52}],40:[function(require,module,exports){
@@ -11916,13 +11916,13 @@ exports.catVariables = function(d){return "Variabile"};
 
 exports.continue = function(d){return "Continuă"};
 
-exports.createHtmlBlock = function(d){return "create html block"};
+exports.createHtmlBlock = function(d){return "creare bloc html"};
 
-exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
+exports.createHtmlBlockTooltip = function(d){return "Creează un bloc HTML în aplicație."};
 
 exports.finalLevel = function(d){return "Felicitări! Ai rezolvat puzzle-ul final."};
 
-exports.makeYourOwn = function(d){return "Make Your Own App"};
+exports.makeYourOwn = function(d){return "Creează-ți propria aplicație"};
 
 exports.nextLevel = function(d){return "Felicitări! Ai finalizat acest puzzle."};
 
@@ -11930,29 +11930,29 @@ exports.no = function(d){return "Nu"};
 
 exports.numBlocksNeeded = function(d){return "Acest puzzle poate fi rezolvat cu %1 blocuri."};
 
-exports.pause = function(d){return "Pause"};
+exports.pause = function(d){return "Pauză"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
+exports.reinfFeedbackMsg = function(d){return "Aveţi posibilitatea să apăsaţi butonul \"Încercaţi din nou\" pentru a relua rularea aplicaţiei dvs."};
 
 exports.repeatForever = function(d){return "repetă pentru totdeauna"};
 
 exports.repeatDo = function(d){return "fă"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
+exports.repeatForeverTooltip = function(d){return "Execută acțiunile din acest bloc în mod repetat în timpul rulării aplicaţiei."};
 
-exports.shareWebappTwitter = function(d){return "Check out the app I made. I wrote it myself with @codeorg"};
+exports.shareWebappTwitter = function(d){return "Testează aplicația pe care am făcut-o. Chiar eu am scris-o cu @codeorg"};
 
-exports.shareGame = function(d){return "Share your app:"};
+exports.shareGame = function(d){return "Partajați-vă aplicația:"};
 
-exports.stepIn = function(d){return "Step in"};
+exports.stepIn = function(d){return "Pas înăuntru"};
 
-exports.stepOver = function(d){return "Step over"};
+exports.stepOver = function(d){return "Pas peste"};
 
-exports.stepOut = function(d){return "Step out"};
+exports.stepOut = function(d){return "Pas afară"};
 
-exports.turnBlack = function(d){return "turn black"};
+exports.turnBlack = function(d){return "comută negru"};
 
-exports.turnBlackTooltip = function(d){return "Turns the screen black."};
+exports.turnBlackTooltip = function(d){return "Comută ecranul negru."};
 
 exports.yes = function(d){return "Da"};
 

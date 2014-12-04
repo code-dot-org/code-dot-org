@@ -12270,7 +12270,7 @@ exports.end = function(d){return "نهاية"};
 
 exports.emptyBlocksErrorMsg = function(d){return "قطعة \" أكرر\" أو \" اذا \" تحتاج ان تحتوي على قطع اخرى داخلها من اجل العمل . تأكد من القطع الداخلية بحيث يجب ان تكون تناسب القطع المحتوية في الداخل ."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "قطعة الدالة تحتاج إلى القطع الأخرى بداخله لكي يعمل."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "قطعة الدالة تحتاج إلى القطع الأخرى بداخلها لكي تعمل."};
 
 exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
 
@@ -12326,7 +12326,7 @@ exports.numLinesOfCodeWritten = function(d){return "لقد كتبت "+p(d,"numLi
 
 exports.play = function(d){return "إلعب"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "طباعة"};
 
 exports.puzzleTitle = function(d){return "اللغز "+v(d,"puzzle_number")+" من "+v(d,"stage_total")};
 
@@ -12342,7 +12342,7 @@ exports.score = function(d){return "النتيجة"};
 
 exports.showCodeHeader = function(d){return "اظهار الكود البرمجي"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "إظهار القطع"};
 
 exports.showGeneratedCode = function(d){return "اظهار الكود البرمجي"};
 
@@ -12370,11 +12370,11 @@ exports.hintRequest = function(d){return "شاهد تلميحاً"};
 
 exports.backToPreviousLevel = function(d){return "الرجوع إلى المستوى السابق"};
 
-exports.saveToGallery = function(d){return "حفظ في معرض الصور الخاص بك"};
+exports.saveToGallery = function(d){return "حفظ إلى المعرض"};
 
-exports.savedToGallery = function(d){return "حفظ في معرض الصور الخاص بك!"};
+exports.savedToGallery = function(d){return "تم الحفط في المعرض!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "عذراً، لا يمكن أن نشارك هذا البرنامج."};
 
 exports.typeFuncs = function(d){return "الدوال المتاحة: %1"};
 
@@ -12382,7 +12382,7 @@ exports.typeHint = function(d){return "تذكر أن الأقواس والفوا
 
 exports.workspaceHeader = function(d){return "أجمع القطع هنا: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "أكتب الكود البرمجي جافاسكريبت هنا"};
 
 exports.infinity = function(d){return "ما لانهاية"};
 
@@ -12406,7 +12406,7 @@ exports.hintHeader = function(d){return "إليك نصيحة:"};
 
 exports.genericFeedback = function(d){return "انظر كيف انتهى الأمر، و حاول إصلاح برنامجك."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "انظر ما الذي صنعته"};
 
 
 },{"messageformat":52}],40:[function(require,module,exports){

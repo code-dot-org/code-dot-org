@@ -14855,7 +14855,7 @@ exports.numLinesOfCodeWritten = function(d){return "Μόλις έγραψες "+
 
 exports.play = function(d){return "παίξε"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Εκτύπωσε"};
 
 exports.puzzleTitle = function(d){return "Παζλ "+v(d,"puzzle_number")+" από "+v(d,"stage_total")};
 
@@ -14871,7 +14871,7 @@ exports.score = function(d){return "σκορ"};
 
 exports.showCodeHeader = function(d){return "Προβολή κώδικα"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Εμφάνισε τα μπλοκ"};
 
 exports.showGeneratedCode = function(d){return "Προβολή κώδικα"};
 
@@ -14899,9 +14899,9 @@ exports.hintRequest = function(d){return "Δείτε την υπόδειξη"};
 
 exports.backToPreviousLevel = function(d){return "Πίσω στο προηγούμενο επίπεδο"};
 
-exports.saveToGallery = function(d){return "Αποθήκευσε το στη συλλογή σου"};
+exports.saveToGallery = function(d){return "Αποθήκευση στη συλλογή"};
 
-exports.savedToGallery = function(d){return "Αποθηκεύτηκε στη συλλογή σου!"};
+exports.savedToGallery = function(d){return "Αποθηκεύτηκε στη συλλογή!"};
 
 exports.shareFailure = function(d){return "Συγγνώμη, δεν μπορούμε να μοιράσουμε αυτό το πρόγραμμα."};
 
@@ -14911,7 +14911,7 @@ exports.typeHint = function(d){return "Σημείωσε ότι απαιτούν�
 
 exports.workspaceHeader = function(d){return "Συναρμολόγησε τα μπλοκ σου εδώ: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Πληκτρολογήστε τον Javascript κώδικά σας εδώ"};
 
 exports.infinity = function(d){return "Άπειρο"};
 
@@ -14935,7 +14935,7 @@ exports.hintHeader = function(d){return "Να μια συμβουλή:"};
 
 exports.genericFeedback = function(d){return "Δες πως κατέληξες και δοκίμασε να διορθώσεις το πρόγραμμά σου."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Δείτε τι έκανα"};
 
 
 },{"messageformat":57}],45:[function(require,module,exports){
@@ -14960,23 +14960,23 @@ exports.catLogic = function(d){return "Λογική"};
 
 exports.colourTooltip = function(d){return "Αλλάζει το χρώμα του μολυβιού."};
 
-exports.createACircle = function(d){return "create a circle"};
+exports.createACircle = function(d){return "Φτιάξε κύκλο"};
 
-exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+exports.createSnowflakeSquare = function(d){return "δημιούργησε μια νιφάδα χιονιού τύπου τετραγώνου"};
 
-exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+exports.createSnowflakeParallelogram = function(d){return "δημιούργησε μια νιφάδα χιονιού τύπου παραλληλόγραμμου"};
 
-exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+exports.createSnowflakeLine = function(d){return "δημιούργησε μια νιφάδα χιονιού γραμμικού τύπου"};
 
-exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+exports.createSnowflakeSpiral = function(d){return "δημιούργησε μια νιφάδα χιονιού τύπου έλικας"};
 
-exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+exports.createSnowflakeFlower = function(d){return "δημιούργησε μια νιφάδα χιονιού τύπου λουλουδιού"};
 
-exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+exports.createSnowflakeFractal = function(d){return "δημιούργησε μια νιφάδα χιονιού τύπου φράκταλ"};
 
-exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+exports.createSnowflakeRandom = function(d){return "δημιούργησε μια νιφάδα χιονιού τυχαίου τύπου"};
 
-exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
+exports.createASnowflakeBranch = function(d){return "δημιουργήσετε ένα κλάδο της νιφάδας χιονιού"};
 
 exports.degrees = function(d){return "μοίρες"};
 
@@ -15016,7 +15016,7 @@ exports.drawUpperWave = function(d){return "σχεδίασε επάνω κύμα
 
 exports.drawLowerWave = function(d){return "σχεδίασε κάτω κύμα"};
 
-exports.drawStamp = function(d){return "draw stamp"};
+exports.drawStamp = function(d){return "σφραγίδα"};
 
 exports.heightParameter = function(d){return "ύψος"};
 
@@ -15070,11 +15070,11 @@ exports.penTooltip = function(d){return "Ανεβάζει ή κατεβάζει 
 
 exports.penUp = function(d){return "μολύβι επάνω"};
 
-exports.reinfFeedbackMsg = function(d){return "Αυτό θέλεις;  Πάτα το κουμπί \"Ξανά\" για να δεις τη ζωγραφιά σου."};
+exports.reinfFeedbackMsg = function(d){return "Εδώ είναι το σχέδιό σου! Συνέχισε με αυτό ή πήγαινε στον επόμενο γρίφο."};
 
 exports.setColour = function(d){return "όρισε χρώμα"};
 
-exports.setPattern = function(d){return "set pattern"};
+exports.setPattern = function(d){return "όρισε μοτίβο"};
 
 exports.setWidth = function(d){return "όρισε πάχος"};
 
@@ -15084,7 +15084,7 @@ exports.showMe = function(d){return "Δείξε μου"};
 
 exports.showTurtle = function(d){return "δείξε καλλιτέχνη"};
 
-exports.sizeParameter = function(d){return "size"};
+exports.sizeParameter = function(d){return "μέγεθος"};
 
 exports.step = function(d){return "βήμα"};
 

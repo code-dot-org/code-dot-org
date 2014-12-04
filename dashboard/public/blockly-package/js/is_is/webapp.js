@@ -11839,9 +11839,9 @@ exports.hintRequest = function(d){return "Sjá vísbendingu"};
 
 exports.backToPreviousLevel = function(d){return "Til baka í fyrri áfanga"};
 
-exports.saveToGallery = function(d){return "Vista í gallerí"};
+exports.saveToGallery = function(d){return "Vista í safni"};
 
-exports.savedToGallery = function(d){return "Vistað í galleríi!"};
+exports.savedToGallery = function(d){return "Vistað í safni!"};
 
 exports.shareFailure = function(d){return "Því miður getum við ekki deilt þessu forriti."};
 

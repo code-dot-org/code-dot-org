@@ -12433,7 +12433,7 @@ exports.makeYourOwn = function(d){return "بازی خودتان را درست ک
 
 exports.moveDown = function(d){return "برو پایین"};
 
-exports.moveDownTooltip = function(d){return "Move the paddle down."};
+exports.moveDownTooltip = function(d){return "راکت را به سمت پایین حرکت بده."};
 
 exports.moveForward = function(d){return "به جلو حرکت کردن"};
 
@@ -12441,15 +12441,15 @@ exports.moveForwardTooltip = function(d){return "به اندازه یک فاصل
 
 exports.moveLeft = function(d){return "برو به چپ"};
 
-exports.moveLeftTooltip = function(d){return "Move the paddle to the left."};
+exports.moveLeftTooltip = function(d){return "راکت را به سمت چپ حرکت بده."};
 
 exports.moveRight = function(d){return "برو به راست"};
 
-exports.moveRightTooltip = function(d){return "Move the paddle to the right."};
+exports.moveRightTooltip = function(d){return "راکت را به سمت راست حرکت بده."};
 
 exports.moveUp = function(d){return "برو بالا"};
 
-exports.moveUpTooltip = function(d){return "Move the paddle up."};
+exports.moveUpTooltip = function(d){return "راکت را به سمت بالا حرکت بده."};
 
 exports.nextLevel = function(d){return "تبریک! شما این پازل را به اتمام رساندید."};
 
@@ -12575,31 +12575,31 @@ exports.turnTooltip = function(d){return "من را به راست یا چپ 90 �
 
 exports.whenBallInGoal = function(d){return "زمانی که توپ در هدف قرار دارد"};
 
-exports.whenBallInGoalTooltip = function(d){return "Execute the actions below when a ball enters the goal."};
+exports.whenBallInGoalTooltip = function(d){return "کارهای زیر را انجام بده وقتی که یک توپ به هدف وارد می شود."};
 
-exports.whenBallMissesPaddle = function(d){return "when ball misses paddle"};
+exports.whenBallMissesPaddle = function(d){return "وقتی که توپ به راکت نخورد"};
 
-exports.whenBallMissesPaddleTooltip = function(d){return "Execute the actions below when a ball misses the paddle."};
+exports.whenBallMissesPaddleTooltip = function(d){return "کارهای زیر را انجام بده وقتی که یک توپ به راکت نمی خورد."};
 
-exports.whenDown = function(d){return "when Down arrow"};
+exports.whenDown = function(d){return "وقتی که کلید فلش پایین فشار داده می شود"};
 
-exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
+exports.whenDownTooltip = function(d){return "کارهای زیر را انجام بده وقتی که فلش پایین فشار داده می شود."};
 
 exports.whenGameStarts = function(d){return "وقتی که بازی شروع می شود"};
 
 exports.whenGameStartsTooltip = function(d){return "هنگامیکه بازی شروع می‌شود، اقدامات زیر را اجرا کن."};
 
-exports.whenLeft = function(d){return "when Left arrow"};
+exports.whenLeft = function(d){return "وقتی که کلید فلش چپ فشار داده می شود"};
 
-exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
+exports.whenLeftTooltip = function(d){return "کارهای زیر را انجام بده وقتی که کلید فلش چپ فشار داده می شود."};
 
-exports.whenPaddleCollided = function(d){return "when ball hits paddle"};
+exports.whenPaddleCollided = function(d){return "وقتی توپ به راکت برخورد می کند"};
 
-exports.whenPaddleCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a paddle."};
+exports.whenPaddleCollidedTooltip = function(d){return "کارهای زیر را انجام بده وقتی که یک توپ به راکت می خورد."};
 
-exports.whenRight = function(d){return "when Right arrow"};
+exports.whenRight = function(d){return "وقتی که کلید فلش راست فشار داده می شود"};
 
-exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
+exports.whenRightTooltip = function(d){return "کارهای زیر را انجام بده وقتی که کلید فلش راست فشار داده می شود."};
 
 exports.whenUp = function(d){return "هنگام زدن جهت بالا"};
 
@@ -12607,7 +12607,7 @@ exports.whenUpTooltip = function(d){return "اجرای عملیات زیر هن�
 
 exports.whenWallCollided = function(d){return "زمانی که توپ به دیوار برخورد میکند"};
 
-exports.whenWallCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a wall."};
+exports.whenWallCollidedTooltip = function(d){return "کارهای زیر را انجام بده وقتی که یک توپ به راکت می خورد."};
 
 exports.whileMsg = function(d){return "\"while\""};
 
@@ -12680,7 +12680,7 @@ exports.errorUnusedFunction = function(d){return "You created a function, but ne
 
 exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
-exports.extraTopBlocks = function(d){return "شما بلوک های اضافه ای دارید که به یک بلوک رویداد متصل نیست."};
+exports.extraTopBlocks = function(d){return "بلوک‌های نچسبیده‌ای هنوز باقی مونده. آیا قصد داری اینها را به بلوک \"هنگام اجرا\" وصل کنی؟"};
 
 exports.finalStage = function(d){return "تبریک می‌گوییم! شما مرحله‌ی نهایی را به پایان رساندید."};
 
@@ -12720,7 +12720,7 @@ exports.numLinesOfCodeWritten = function(d){return "شما "+p(d,"numLines",0,"f
 
 exports.play = function(d){return "بازی"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "چاپ"};
 
 exports.puzzleTitle = function(d){return "معمای "+v(d,"puzzle_number")+" از "+v(d,"stage_total")};
 
@@ -12736,7 +12736,7 @@ exports.score = function(d){return "نمره"};
 
 exports.showCodeHeader = function(d){return "کد نمایش"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "نمایش بلوک‌ها"};
 
 exports.showGeneratedCode = function(d){return "نمایشِ کد"};
 
@@ -12764,11 +12764,11 @@ exports.hintRequest = function(d){return "تذکر را ببینید"};
 
 exports.backToPreviousLevel = function(d){return "برگرد به سطح قبلی"};
 
-exports.saveToGallery = function(d){return "ذخیره در گالری شما"};
+exports.saveToGallery = function(d){return "ذخیره در گالری"};
 
-exports.savedToGallery = function(d){return "در گالری شما ذخیره شد!"};
+exports.savedToGallery = function(d){return "در گالری ذخیره شد!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "شرمنده، ما نمیتوانیم این برنامه را به اشتراک بگذاریم."};
 
 exports.typeFuncs = function(d){return "توابع قابل استفاده: %1"};
 
@@ -12776,7 +12776,7 @@ exports.typeHint = function(d){return "توجه کن که علامت‌های پ
 
 exports.workspaceHeader = function(d){return "بلوک‌های خودت رو اینجا سرهم کن: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "کد جاوا اسکریپت خودت را اینجا وارد کن"};
 
 exports.infinity = function(d){return "بی نهایت"};
 

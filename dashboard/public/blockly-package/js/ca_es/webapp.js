@@ -11777,7 +11777,7 @@ exports.levelIncompleteError = function(d){return "Estàs utilitzant tots els ti
 
 exports.listVariable = function(d){return "llista"};
 
-exports.makeYourOwnFlappy = function(d){return "Fes el teu propi \"Flappy Game\""};
+exports.makeYourOwnFlappy = function(d){return "Fes el teu propi joc Flappy"};
 
 exports.missingBlocksErrorMsg = function(d){return "Prova un o més dels blocs de sota per a resoldre aquest puzzle."};
 
@@ -11910,9 +11910,9 @@ exports.nextLevel = function(d){return "Felicitats! Has complert aquest puzzle."
 
 exports.no = function(d){return "No"};
 
-exports.numBlocksNeeded = function(d){return "Aquest puzzle pot res resolt amb blocs de %1."};
+exports.numBlocksNeeded = function(d){return "Aquest puzzle pot res resolt amb %1 blocs."};
 
-exports.pause = function(d){return "Pause"};
+exports.pause = function(d){return "Trencar"};
 
 exports.reinfFeedbackMsg = function(d){return "Podeu prémer el botó \"Torna-ho a provar\" per tornar a executar la teva app."};
 
@@ -11926,11 +11926,11 @@ exports.shareWebappTwitter = function(d){return "Comprovi l'app que he fet. Vaig
 
 exports.shareGame = function(d){return "Comparteix la teva app:"};
 
-exports.stepIn = function(d){return "Step in"};
+exports.stepIn = function(d){return "ficar-se"};
 
-exports.stepOver = function(d){return "Step over"};
+exports.stepOver = function(d){return "esquivar"};
 
-exports.stepOut = function(d){return "Step out"};
+exports.stepOut = function(d){return "Abandonar"};
 
 exports.turnBlack = function(d){return "Canvia a negre"};
 

@@ -14968,7 +14968,7 @@ var MessageFormat = require("messageformat");MessageFormat.locale.hr = function 
 };
 exports.blocksUsed = function(d){return "Iskorišteno blokova: %1"};
 
-exports.branches = function(d){return "branches"};
+exports.branches = function(d){return "grane"};
 
 exports.catColour = function(d){return "Boja"};
 
@@ -14986,27 +14986,27 @@ exports.catLogic = function(d){return "Logika"};
 
 exports.colourTooltip = function(d){return "Mijenja boju olovke."};
 
-exports.createACircle = function(d){return "create a circle"};
+exports.createACircle = function(d){return "napravi krug"};
 
-exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+exports.createSnowflakeSquare = function(d){return "napravi snježnu pahuljicu kvadratnog oblika"};
 
-exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+exports.createSnowflakeParallelogram = function(d){return "napravi snježnu pahuljicu oblika paralelograma"};
 
-exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+exports.createSnowflakeLine = function(d){return "napravi snješnu pahuljicu tipa crte"};
 
-exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+exports.createSnowflakeSpiral = function(d){return "napravi snježnu pahuljicu oblika spirale"};
 
-exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+exports.createSnowflakeFlower = function(d){return "napravi snježnu pahuljicu oblika cvijeta"};
 
-exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+exports.createSnowflakeFractal = function(d){return "napravi snježnu pahuljicu fraktalnog tipa"};
 
-exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+exports.createSnowflakeRandom = function(d){return "napravi snježnu pahuljicu nasumičnog oblika"};
 
-exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
+exports.createASnowflakeBranch = function(d){return "napravi granu snježne pahuljice"};
 
 exports.degrees = function(d){return "stupnjevi"};
 
-exports.depth = function(d){return "depth"};
+exports.depth = function(d){return "dubina"};
 
 exports.dots = function(d){return "pikseli"};
 
@@ -15016,33 +15016,33 @@ exports.drawATriangle = function(d){return "nacrtaj trokut"};
 
 exports.drawACircle = function(d){return "nacrtaj krug"};
 
-exports.drawAFlower = function(d){return "draw a flower"};
+exports.drawAFlower = function(d){return "nacrtaj cvijet"};
 
-exports.drawAHexagon = function(d){return "draw a hexagon"};
+exports.drawAHexagon = function(d){return "nacrtaj šesterokut"};
 
 exports.drawAHouse = function(d){return "nacrtaj kuću"};
 
-exports.drawAPlanet = function(d){return "draw a planet"};
+exports.drawAPlanet = function(d){return "nacrtaj planetu"};
 
-exports.drawARhombus = function(d){return "draw a rhombus"};
+exports.drawARhombus = function(d){return "nacrtaj romb"};
 
-exports.drawARobot = function(d){return "draw a robot"};
+exports.drawARobot = function(d){return "nacrtaj robota"};
 
-exports.drawARocket = function(d){return "draw a rocket"};
+exports.drawARocket = function(d){return "nacrtaj raketu"};
 
-exports.drawASnowflake = function(d){return "draw a snowflake"};
+exports.drawASnowflake = function(d){return "nacrtaj pahuljicu"};
 
 exports.drawASnowman = function(d){return "nacrtaj snjegovića"};
 
-exports.drawAStar = function(d){return "draw a star"};
+exports.drawAStar = function(d){return "nacrtaj zvijezdu"};
 
 exports.drawATree = function(d){return "nacrtaj drvo"};
 
-exports.drawUpperWave = function(d){return "draw upper wave"};
+exports.drawUpperWave = function(d){return "nacrtaj uzlazni val"};
 
-exports.drawLowerWave = function(d){return "draw lower wave"};
+exports.drawLowerWave = function(d){return "nacrtaj silazni val"};
 
-exports.drawStamp = function(d){return "draw stamp"};
+exports.drawStamp = function(d){return "nacrtaj pečat"};
 
 exports.heightParameter = function(d){return "visina"};
 
@@ -15064,7 +15064,7 @@ exports.jumpSouthTooltip = function(d){return "Pomiče umjetnika na Jug bez osta
 
 exports.jumpWestTooltip = function(d){return "Pomiče umjetnika na Zapad bez ostavljanja traga."};
 
-exports.lengthFeedback = function(d){return "You got it right except for the lengths to move."};
+exports.lengthFeedback = function(d){return "Izvršeno uspješno osim dužine pomicanja."};
 
 exports.lengthParameter = function(d){return "duljina"};
 
@@ -15096,11 +15096,11 @@ exports.penTooltip = function(d){return "Podiže ili spušta olovku da bi počeo
 
 exports.penUp = function(d){return "podigni olovku"};
 
-exports.reinfFeedbackMsg = function(d){return "Izgleda li ovo onako kako želiš? Za prikaz svoje slike klikni na gumb \"Pokušaj ponovno\"."};
+exports.reinfFeedbackMsg = function(d){return "Evo vašeg crteža! Nastavite raditi na njemu ili prijeđite na idući zadatak."};
 
 exports.setColour = function(d){return "postavi boju"};
 
-exports.setPattern = function(d){return "set pattern"};
+exports.setPattern = function(d){return "postavi uzorak"};
 
 exports.setWidth = function(d){return "postavi širinu"};
 
@@ -15112,7 +15112,7 @@ exports.showTurtle = function(d){return "pokaži crtača"};
 
 exports.sizeParameter = function(d){return "veličina"};
 
-exports.step = function(d){return "step"};
+exports.step = function(d){return "korak"};
 
 exports.tooFewColours = function(d){return "U ovom zadatku treba koristiti bar %1 različitih boja. Ti si koristio/la samo %2."};
 

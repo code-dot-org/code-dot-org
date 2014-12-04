@@ -16535,7 +16535,7 @@ exports.errorUnusedFunction = function(d){return "You created a function, but ne
 
 exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
-exports.extraTopBlocks = function(d){return "شما بلوک های اضافه ای دارید که به یک بلوک رویداد متصل نیست."};
+exports.extraTopBlocks = function(d){return "بلوک‌های نچسبیده‌ای هنوز باقی مونده. آیا قصد داری اینها را به بلوک \"هنگام اجرا\" وصل کنی؟"};
 
 exports.finalStage = function(d){return "تبریک می‌گوییم! شما مرحله‌ی نهایی را به پایان رساندید."};
 
@@ -16575,7 +16575,7 @@ exports.numLinesOfCodeWritten = function(d){return "شما "+p(d,"numLines",0,"f
 
 exports.play = function(d){return "بازی"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "چاپ"};
 
 exports.puzzleTitle = function(d){return "معمای "+v(d,"puzzle_number")+" از "+v(d,"stage_total")};
 
@@ -16591,7 +16591,7 @@ exports.score = function(d){return "نمره"};
 
 exports.showCodeHeader = function(d){return "کد نمایش"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "نمایش بلوک‌ها"};
 
 exports.showGeneratedCode = function(d){return "نمایشِ کد"};
 
@@ -16619,11 +16619,11 @@ exports.hintRequest = function(d){return "تذکر را ببینید"};
 
 exports.backToPreviousLevel = function(d){return "برگرد به سطح قبلی"};
 
-exports.saveToGallery = function(d){return "ذخیره در گالری شما"};
+exports.saveToGallery = function(d){return "ذخیره در گالری"};
 
-exports.savedToGallery = function(d){return "در گالری شما ذخیره شد!"};
+exports.savedToGallery = function(d){return "در گالری ذخیره شد!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "شرمنده، ما نمیتوانیم این برنامه را به اشتراک بگذاریم."};
 
 exports.typeFuncs = function(d){return "توابع قابل استفاده: %1"};
 
@@ -16631,7 +16631,7 @@ exports.typeHint = function(d){return "توجه کن که علامت‌های پ
 
 exports.workspaceHeader = function(d){return "بلوک‌های خودت رو اینجا سرهم کن: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "کد جاوا اسکریپت خودت را اینجا وارد کن"};
 
 exports.infinity = function(d){return "بی نهایت"};
 
@@ -16660,11 +16660,11 @@ exports.defaultTwitterText = function(d){return "Check out what I made"};
 
 },{"messageformat":72}],60:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.fa=function(n){return "other"}
-exports.atHoneycomb = function(d){return "at honeycomb"};
+exports.atHoneycomb = function(d){return "در کندوی عسل"};
 
-exports.atFlower = function(d){return "at flower"};
+exports.atFlower = function(d){return "در گل"};
 
-exports.avoidCowAndRemove = function(d){return "از گاو اجتناب کنید و ۱ را حذف کنید"};
+exports.avoidCowAndRemove = function(d){return "از گاو دوری کنید و ۱ را حذف کنید"};
 
 exports.continue = function(d){return "ادامه"};
 
@@ -16684,11 +16684,11 @@ exports.doCode = function(d){return "انجام بده"};
 
 exports.elseCode = function(d){return "وگرنه"};
 
-exports.fill = function(d){return "یکی را پر کن"};
+exports.fill = function(d){return "1 را پر کن"};
 
 exports.fillN = function(d){return "پر کنید "+v(d,"shovelfuls")};
 
-exports.fillStack = function(d){return "توده‌ای از "+v(d,"shovelfuls")+" حفره را پر کن"};
+exports.fillStack = function(d){return "چاله ها را پر کن بیل"+v(d,"shovelfuls")};
 
 exports.fillSquare = function(d){return "مربع را پر کنید"};
 
@@ -16696,7 +16696,7 @@ exports.fillTooltip = function(d){return "1 واحد خاک را قرار بده
 
 exports.finalLevel = function(d){return "تبریک! شما پازل نهایی را حل کردید."};
 
-exports.flowerEmptyError = function(d){return "The flower you're on has no more nectar."};
+exports.flowerEmptyError = function(d){return "گلی که رویش هستی دیگر شهد ندارد."};
 
 exports.get = function(d){return "گرفتن"};
 
@@ -16704,13 +16704,13 @@ exports.heightParameter = function(d){return "ارتفاع"};
 
 exports.holePresent = function(d){return "یک سوراخ وجود دارد"};
 
-exports.honey = function(d){return "make honey"};
+exports.honey = function(d){return "عسل بساز"};
 
-exports.honeyAvailable = function(d){return "honey"};
+exports.honeyAvailable = function(d){return "عسل"};
 
-exports.honeyTooltip = function(d){return "Make honey from nectar"};
+exports.honeyTooltip = function(d){return "از شهد گل عسل درست کن"};
 
-exports.honeycombFullError = function(d){return "This honeycomb does not have room for more honey."};
+exports.honeycombFullError = function(d){return "این کندوی عسل برای عسل بیشتر جا ندارد."};
 
 exports.ifCode = function(d){return "\"if\""};
 
@@ -16722,17 +16722,17 @@ exports.ifTooltip = function(d){return "اگر راهی در مسیر مسخصی
 
 exports.ifelseTooltip = function(d){return "اگر راهی در مسیر مشخصی وجود دارد,اولین از سری اقدامات را انجام ده,در غیر این صورت به سراغ دومین اقدام برو."};
 
-exports.ifFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do some actions."};
+exports.ifFlowerTooltip = function(d){return "اگر یک گل /کندوی عسل در جهت مشخص شده وجود دارد، آنگاه اقداماتی را انجام بده."};
 
-exports.ifelseFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do the first block of actions. Otherwise, do the second block of actions."};
+exports.ifelseFlowerTooltip = function(d){return "اگر یک گل یا کندوی عسل در جهت مشخص شده وجود دارد، آنگاه اولین بلوک اقدامات را انجام بده. در غیر این صورت ، دومین بلوک را انجام بده."};
 
-exports.insufficientHoney = function(d){return "You're using all the right blocks, but you need to make the right amount of honey."};
+exports.insufficientHoney = function(d){return "تو از بلوک‌های درست استفاده میکنی، اما باید به مقدار صحیح عسل درست کنی."};
 
-exports.insufficientNectar = function(d){return "You're using all the right blocks, but you need to collect the right amount of nectar."};
+exports.insufficientNectar = function(d){return "تو از بلوک‌های درست استفاده میکنی، اما باید میزان شهد صحیح را جمع کنی."};
 
-exports.make = function(d){return "make"};
+exports.make = function(d){return "بساز"};
 
-exports.moveBackward = function(d){return "move backward"};
+exports.moveBackward = function(d){return "حرکت به عقب"};
 
 exports.moveEastTooltip = function(d){return "من را یک قدم به سمت شرق ببر."};
 
@@ -16744,15 +16744,15 @@ exports.moveNorthTooltip = function(d){return "من را یک قدم به سمت
 
 exports.moveSouthTooltip = function(d){return "من را یک قدم به سمت جنوب ببر."};
 
-exports.moveTooltip = function(d){return "Move me forward/backward one space"};
+exports.moveTooltip = function(d){return "من را یک خانه به عقب/جلو حرکت بده"};
 
 exports.moveWestTooltip = function(d){return "من را یک قدم به سمت غرب ببر."};
 
-exports.nectar = function(d){return "get nectar"};
+exports.nectar = function(d){return "گرفتن شهد"};
 
-exports.nectarRemaining = function(d){return "nectar"};
+exports.nectarRemaining = function(d){return "شهد"};
 
-exports.nectarTooltip = function(d){return "Get nectar from a flower"};
+exports.nectarTooltip = function(d){return "گرفتن شهد از یک گل"};
 
 exports.nextLevel = function(d){return "تبریک! شما این پازل را به اتمام رساندید."};
 
@@ -16764,9 +16764,9 @@ exports.noPathLeft = function(d){return "سمت چپ راهی نیست"};
 
 exports.noPathRight = function(d){return "سمت راست راهی نیست"};
 
-exports.notAtFlowerError = function(d){return "You can only get nectar from a flower."};
+exports.notAtFlowerError = function(d){return "شهد را می‌توانی فقط از یک گل بگیری."};
 
-exports.notAtHoneycombError = function(d){return "You can only make honey at a honeycomb."};
+exports.notAtHoneycombError = function(d){return "عسل را فقط می‌توانی در یک شانه عسل تولید کنی."};
 
 exports.numBlocksNeeded = function(d){return "این پازل می تواند با %1 از بلوکها حل شود."};
 
@@ -16790,7 +16790,7 @@ exports.removeStack = function(d){return "بک دسته از"+v(d,"shovelfuls")+
 
 exports.removeSquare = function(d){return "مربع را حزف کن"};
 
-exports.repeatCarefullyError = function(d){return "برای حل این پازل, الگویی را پیدا کنید که تکرار می شود. از بلوک 'repeat' با این 3 بلوک در داخلش: حرکت، حرکت، حرکت به راست استفاده کنید."};
+exports.repeatCarefullyError = function(d){return "برای حل کردن ، با دقت به الگوی دو حرکت و یک چرخش برای قرار دادن در بلوک \" تکرار \" فکر کنید . خوب است که یک چرخش اضافه در انتها داشته باشیم . "};
 
 exports.repeatUntil = function(d){return "تکرار کن تا زمانی که"};
 
@@ -16800,9 +16800,9 @@ exports.repeatUntilFinish = function(d){return "آنقدر تکرار کن تا 
 
 exports.step = function(d){return "مرحله"};
 
-exports.totalHoney = function(d){return "total honey"};
+exports.totalHoney = function(d){return "همه ی عسل ها "};
 
-exports.totalNectar = function(d){return "total nectar"};
+exports.totalNectar = function(d){return "همه ی شهد ها"};
 
 exports.turnLeft = function(d){return "بپیچ به چپ"};
 
@@ -16810,19 +16810,19 @@ exports.turnRight = function(d){return "بپیچ به راست"};
 
 exports.turnTooltip = function(d){return "من را به راست یا چپ 90 درجه بچرخان."};
 
-exports.uncheckedCloudError = function(d){return "Make sure to check all clouds to see if they're flowers or honeycombs."};
+exports.uncheckedCloudError = function(d){return "مطمئن شوید که تمام ابرها را برای وجود گل ها یا کندو های عسل بررسی کرده اید ."};
 
-exports.uncheckedPurpleError = function(d){return "Make sure to check all purple flowers to see if they have nectar"};
+exports.uncheckedPurpleError = function(d){return "مطمئن شوید که تمام  گل های بنفش را برای وجود شهد بررسی کرده اید . "};
 
 exports.whileMsg = function(d){return "\"while\""};
 
 exports.whileTooltip = function(d){return "اقدامات محصور را تا زمانیکه به نقطه آخر برسی تکرار کن."};
 
-exports.word = function(d){return "Find the word"};
+exports.word = function(d){return "کلمه را پیدا کنید"};
 
 exports.yes = function(d){return "بله"};
 
-exports.youSpelled = function(d){return "You spelled"};
+exports.youSpelled = function(d){return "اسپل کنید"};
 
 
 },{"messageformat":72}],61:[function(require,module,exports){

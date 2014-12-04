@@ -12664,7 +12664,7 @@ exports.end = function(d){return "Ende"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Die \"Wiederholen\"- und die \"Wenn\"-Bausteine benötigten im Inneren andere Bausteine um zu funktionieren. Stelle sicher, dass der innere Baustein in den umschließenden Baustein passt."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "Der Funktionsblock muss andere Blöcke beinhalten um zu funktionieren."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Der Funktionsblock muss andere Blöcke beinhalten, um zu funktionieren."};
 
 exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
 
@@ -12680,7 +12680,7 @@ exports.errorUnusedFunction = function(d){return "You created a function, but ne
 
 exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
-exports.extraTopBlocks = function(d){return "Du hast die Bausteine entfernt. Wolltest du sie an den \"Wenn ausführen\" Baustein anhängen?"};
+exports.extraTopBlocks = function(d){return "Einige Blöcke sind nicht verbunden. Wolltest Du diese mit dem \"Wenn ausführen\" Block verbinden?"};
 
 exports.finalStage = function(d){return "Glückwunsch! Du hast das letzte Level erfolgreich abgeschlossen."};
 
@@ -12688,7 +12688,7 @@ exports.finalStageTrophies = function(d){return "Glückwunsch! Du hast das letzt
 
 exports.finish = function(d){return "Abschließen"};
 
-exports.generatedCodeInfo = function(d){return "Sogar Top-Universitäten unterrichten Baustein-basiertes programmieren (z.B."+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Die Bausteine, welche sie zusammengestellt haben, können auch in JavaScript dargestellt werden, die meistgenutzte Programmiersprache der Welt:"};
+exports.generatedCodeInfo = function(d){return "Selbst Eliteuniversitäten unterrichten blockbasiertes Programmieren (z.B. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Allerdings können die von Dir zusammengefügten Blöcke auch in JavaScript, der weltweit meistverbreiteten Programmierspache, dargestellt werden:"};
 
 exports.hashError = function(d){return "Ups, '%1' stimmt mit keinem gespeicherten Programm überein."};
 
@@ -12702,7 +12702,7 @@ exports.levelIncompleteError = function(d){return "Du benutzt alle nötigen Baus
 
 exports.listVariable = function(d){return "Liste"};
 
-exports.makeYourOwnFlappy = function(d){return "Erstelle Dein Eigenes \"Flappy Bird\" Spiel"};
+exports.makeYourOwnFlappy = function(d){return "Programmiere Dein eigenes \"Flappy\"-Spiel"};
 
 exports.missingBlocksErrorMsg = function(d){return "Versuche einen, oder mehrere Bausteine von unten zu verwenden, um dieses Puzzle zu lösen."};
 
@@ -12710,9 +12710,9 @@ exports.nextLevel = function(d){return "Glückwunsch! Du hast Puzzle "+v(d,"puzz
 
 exports.nextLevelTrophies = function(d){return "Glückwunsch! Du hast Puzzle "+v(d,"puzzleNumber")+" erfolgreich abgeschlossen und "+p(d,"numTrophies",0,"de",{"one":"eine Trophäe","other":n(d,"numTrophies")+" Trophäen"})+" gewonnen."};
 
-exports.nextStage = function(d){return "Herzlichen Glückwunsch! Du hast "+v(d,"stageName")+" erfolgreich abgeschlossen."};
+exports.nextStage = function(d){return "Glückwunsch! "+v(d,"stageName")+" abgeschlossen."};
 
-exports.nextStageTrophies = function(d){return "Herzlichen Glückwunsch! Du hast Teil "+v(d,"stageName")+" erfolgreich abgeschlossen und "+p(d,"numTrophies",0,"de",{"one":"eine Trophäe","other":n(d,"numTrophies")+" Trophäen"})+" gewonnen."};
+exports.nextStageTrophies = function(d){return "Glückwunsch! "+v(d,"stageName")+" abgeschlossen und "+p(d,"numTrophies",0,"de",{"eine":"a trophy","other":n(d,"numTrophies")+" trophies"})+" gewonnen."};
 
 exports.numBlocksNeeded = function(d){return "Glückwunsch! Du hast Puzzle "+v(d,"puzzleNumber")+" fertig gestellt. (Du hättest jedoch nur "+p(d,"numBlocks",0,"de",{"one":"1 Baustein","other":n(d,"numBlocks")+" Bausteine"})+" gebraucht.)"};
 
@@ -12720,7 +12720,7 @@ exports.numLinesOfCodeWritten = function(d){return "Du hast soeben "+p(d,"numLin
 
 exports.play = function(d){return "spielen"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Drucken"};
 
 exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" von "+v(d,"stage_total")};
 
@@ -12764,11 +12764,11 @@ exports.hintRequest = function(d){return "Hinweis anzeigen"};
 
 exports.backToPreviousLevel = function(d){return "Zurück zum vorherigen Level"};
 
-exports.saveToGallery = function(d){return "In deiner Galerie abspeichern"};
+exports.saveToGallery = function(d){return "In die Galerie abspeichern"};
 
-exports.savedToGallery = function(d){return "In deiner Gallerie gespeichert!"};
+exports.savedToGallery = function(d){return "In der Galerie gespeichert!"};
 
-exports.shareFailure = function(d){return "Leider können wir dieses Programm nicht teilen."};
+exports.shareFailure = function(d){return "Leider können wir dieses Programm nicht freigeben."};
 
 exports.typeFuncs = function(d){return "Verfügbare Funktionen:%1"};
 
@@ -12776,7 +12776,7 @@ exports.typeHint = function(d){return "Beachte, dass die runden Klammern und Sem
 
 exports.workspaceHeader = function(d){return "Setze die Bausteine hier zusammen: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Geben Sie hier Ihren JavaScript-code ein"};
+exports.workspaceHeaderJavaScript = function(d){return "Gib hier Deinen JavaScript-Code ein"};
 
 exports.infinity = function(d){return "Unendlichkeit"};
 
@@ -12790,17 +12790,17 @@ exports.watchVideo = function(d){return "Video anschauen"};
 
 exports.when = function(d){return "wenn"};
 
-exports.whenRun = function(d){return "Programmstart"};
+exports.whenRun = function(d){return "wenn ausführen"};
 
 exports.tryHOC = function(d){return "Probiere \"The Hour of Code\" aus"};
 
 exports.signup = function(d){return "Für den Einführungskurs anmelden"};
 
-exports.hintHeader = function(d){return "Hier ist ein Tipp:"};
+exports.hintHeader = function(d){return "Hier ein Tipp:"};
 
-exports.genericFeedback = function(d){return "Schau dir an, was du gemacht hast und versuche Fehler im Programm zu beheben."};
+exports.genericFeedback = function(d){return "Sieh Dir Dein Ergebnis an und versuche, Programmierfehler zu beheben."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Sieh was ich gemacht habe"};
 
 
 },{"messageformat":53}],42:[function(require,module,exports){

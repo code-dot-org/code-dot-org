@@ -10927,7 +10927,7 @@ exports.no = function(d){return "Nie"};
 
 exports.numBlocksNeeded = function(d){return "Ta łamigłówka może być rozwiązana z użyciem %1 bloków."};
 
-exports.reinfFeedbackMsg = function(d){return "Możesz nacisnąć przycisk \"Spróbuj ponownie\", aby powrócić do swojej gry."};
+exports.reinfFeedbackMsg = function(d){return "Możesz nacisnąć przycisk Spróbuj ponownie, aby powrócić do swojej gry."};
 
 exports.share = function(d){return "Udostępnij"};
 

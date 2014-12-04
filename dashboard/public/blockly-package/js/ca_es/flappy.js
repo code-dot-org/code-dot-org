@@ -12291,7 +12291,7 @@ exports.levelIncompleteError = function(d){return "Estàs utilitzant tots els ti
 
 exports.listVariable = function(d){return "llista"};
 
-exports.makeYourOwnFlappy = function(d){return "Fes el teu propi \"Flappy Game\""};
+exports.makeYourOwnFlappy = function(d){return "Fes el teu propi joc Flappy"};
 
 exports.missingBlocksErrorMsg = function(d){return "Prova un o més dels blocs de sota per a resoldre aquest puzzle."};
 
@@ -12426,7 +12426,7 @@ exports.flappySpecificFail = function(d){return "El teu codi sembla correcte - a
 
 exports.incrementPlayerScore = function(d){return "aconsegueix un punt"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Incrementar en u la puntuació del jugador actual."};
+exports.incrementPlayerScoreTooltip = function(d){return "Afegeix u a la puntuació del jugador."};
 
 exports.nextLevel = function(d){return "Felicitats! Has complert aquest puzzle."};
 

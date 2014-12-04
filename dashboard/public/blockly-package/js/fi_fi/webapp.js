@@ -11777,7 +11777,7 @@ exports.levelIncompleteError = function(d){return "Käytät kaikkia oikeanlaisia
 
 exports.listVariable = function(d){return "lista"};
 
-exports.makeYourOwnFlappy = function(d){return "Tee oma Läpytin -pelisi"};
+exports.makeYourOwnFlappy = function(d){return "Tee oma Flappy-pelisi"};
 
 exports.missingBlocksErrorMsg = function(d){return "Yritä ratkaista pulma yhdellä tai useammalla alla olevalla lohkolla."};
 
@@ -11795,7 +11795,7 @@ exports.numLinesOfCodeWritten = function(d){return "Kirjoitit juuri "+p(d,"numLi
 
 exports.play = function(d){return "pelaa"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Tulosta"};
 
 exports.puzzleTitle = function(d){return "Pulma "+v(d,"puzzle_number")+" / "+v(d,"stage_total")};
 
@@ -11839,11 +11839,11 @@ exports.hintRequest = function(d){return "Katso vihje"};
 
 exports.backToPreviousLevel = function(d){return "Takaisin edelliseen tasoon"};
 
-exports.saveToGallery = function(d){return "Tallenna galleriaasi"};
+exports.saveToGallery = function(d){return "Tallenna galleriaan"};
 
-exports.savedToGallery = function(d){return "Tallennettu galleriaasi!"};
+exports.savedToGallery = function(d){return "Tallennettu galleriaan!"};
 
-exports.shareFailure = function(d){return "Emme valitettavasti toi jakaa tätä ohjelmaa."};
+exports.shareFailure = function(d){return "Emme valitettavasti voi jakaa tätä ohjelmaa."};
 
 exports.typeFuncs = function(d){return "Käytettävissä olevat funktiot: %1"};
 
@@ -11851,7 +11851,7 @@ exports.typeHint = function(d){return "Sulkeet ja puolipisteet ovat pakollisia."
 
 exports.workspaceHeader = function(d){return "Kokoa lohkosi täällä: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Kirjoita JavaScript koodi tähän"};
+exports.workspaceHeaderJavaScript = function(d){return "Kirjoita JavaScript-koodi tähän"};
 
 exports.infinity = function(d){return "Ääretön"};
 
@@ -11875,7 +11875,7 @@ exports.hintHeader = function(d){return "Tässä on Vihje:"};
 
 exports.genericFeedback = function(d){return "Katso miten päädyit tähän, ja koita korjata ohjelmasi."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Katso mitä tein"};
 
 
 },{"messageformat":52}],40:[function(require,module,exports){
@@ -11926,11 +11926,11 @@ exports.shareWebappTwitter = function(d){return "Katso tekemäni sovellus. Tein 
 
 exports.shareGame = function(d){return "Jaa sovellus:"};
 
-exports.stepIn = function(d){return "Step in"};
+exports.stepIn = function(d){return "Astu sisään"};
 
-exports.stepOver = function(d){return "Step over"};
+exports.stepOver = function(d){return "Astu yli"};
 
-exports.stepOut = function(d){return "Step out"};
+exports.stepOut = function(d){return "Astu ulos"};
 
 exports.turnBlack = function(d){return "muuttuu mustaksi"};
 

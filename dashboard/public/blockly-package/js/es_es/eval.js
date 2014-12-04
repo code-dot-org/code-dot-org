@@ -14522,7 +14522,7 @@ exports.hintRequest = function(d){return "Ver pista"};
 
 exports.backToPreviousLevel = function(d){return "Volver al nivel anterior"};
 
-exports.saveToGallery = function(d){return "Guardar en Galería"};
+exports.saveToGallery = function(d){return "Guardar en la Galería"};
 
 exports.savedToGallery = function(d){return "¡Guardado en la Galería!"};
 
@@ -14569,7 +14569,7 @@ exports.displayBlockTitle = function(d){return "mostrar"};
 
 exports.ellipseBlockTitle = function(d){return "elipse (anchura, altura, estilo, color)"};
 
-exports.extraTopBlocks = function(d){return "Tienes bloques sin ataduras. ¿Quisiste decir fijar éstos al bloque de \"pantalla\"?"};
+exports.extraTopBlocks = function(d){return "Dejaste bloques sin unir. ¿Tenías la intención de  adjuntarlos al bloque de \"pantalla\"?"};
 
 exports.overlayBlockTitle = function(d){return "superposición (arriba, abajo)"};
 
@@ -14579,11 +14579,11 @@ exports.offsetBlockTitle = function(d){return "offset (x, y, image)"};
 
 exports.rectangleBlockTitle = function(d){return "rectángulo (anchura, altura, estilo, color)"};
 
-exports.reinfFeedbackMsg = function(d){return "Puedes presionar el botón \"Intentarlo de nuevo\" para editar tu dibujo."};
+exports.reinfFeedbackMsg = function(d){return "Presiona el botón \"reintentar \" para editar tu dibujo."};
 
 exports.rotateImageBlockTitle = function(d){return "Girar (grados, imagen)"};
 
-exports.scaleImageBlockTitle = function(d){return "escala (factor)"};
+exports.scaleImageBlockTitle = function(d){return "escalar (factor)"};
 
 exports.squareBlockTitle = function(d){return "cuadrado (tamaño, estilo, color)"};
 
@@ -14593,7 +14593,7 @@ exports.radialStarBlockTitle = function(d){return "radial-star (points, inner, o
 
 exports.stringAppendBlockTitle = function(d){return "anexar-cadena (primera, segunda)"};
 
-exports.stringLengthBlockTitle = function(d){return "longitud de cadena (string)"};
+exports.stringLengthBlockTitle = function(d){return "longitud de cadena (cadena)"};
 
 exports.textBlockTitle = function(d){return "texto (cadena, tamaño, color)"};
 
@@ -14601,7 +14601,7 @@ exports.triangleBlockTitle = function(d){return "triángulo (tamaño, estilo, co
 
 exports.underlayBlockTitle = function(d){return "poner debajo (inferior, superior)"};
 
-exports.outline = function(d){return "trazar"};
+exports.outline = function(d){return "contorno"};
 
 exports.solid = function(d){return "sólido"};
 

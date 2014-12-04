@@ -12318,7 +12318,7 @@ exports.numLinesOfCodeWritten = function(d){return "Tu sukūrei "+p(d,"numLines"
 
 exports.play = function(d){return "žaisti"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Spausdinti"};
 
 exports.puzzleTitle = function(d){return "Užduotis "+v(d,"puzzle_number")+" iš "+v(d,"stage_total")};
 
@@ -12362,9 +12362,9 @@ exports.hintRequest = function(d){return "Užuomina"};
 
 exports.backToPreviousLevel = function(d){return "Grįžti į ankstesnį lygį"};
 
-exports.saveToGallery = function(d){return "Įrašyti į savo galeriją"};
+exports.saveToGallery = function(d){return "Įrašyti į galeriją"};
 
-exports.savedToGallery = function(d){return "Įrašyti į savo galeriją!"};
+exports.savedToGallery = function(d){return "Įrašyta į galeriją!"};
 
 exports.shareFailure = function(d){return "Deja, šios programos dalintis negalima."};
 
@@ -12398,7 +12398,7 @@ exports.hintHeader = function(d){return "Štai patarimas:"};
 
 exports.genericFeedback = function(d){return "Pažiūrėk, kaip pavyko ir pabandyk patobulinti programą."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Pažiūrėkite, ką aš sukūriau"};
 
 
 },{"messageformat":52}],40:[function(require,module,exports){
@@ -12486,19 +12486,19 @@ exports.scoreText = function(d){return "Taškai: "+v(d,"playerScore")};
 
 exports.setBackground = function(d){return "scena ="};
 
-exports.setBackgroundRandom = function(d){return "nustatyk atsitiktinę sceną"};
+exports.setBackgroundRandom = function(d){return " scena = Atsitiktinė"};
 
-exports.setBackgroundFlappy = function(d){return "nustatyk miesto sceną (diena)"};
+exports.setBackgroundFlappy = function(d){return "scena = Miestas dieną"};
 
-exports.setBackgroundNight = function(d){return "nustatyk miesto sceną (naktis)"};
+exports.setBackgroundNight = function(d){return "scena = Miestas naktį"};
 
-exports.setBackgroundSciFi = function(d){return "nustatyk sceną Fantastika"};
+exports.setBackgroundSciFi = function(d){return "scena = Fantastika"};
 
-exports.setBackgroundUnderwater = function(d){return "nustatyk sceną Povandeninė"};
+exports.setBackgroundUnderwater = function(d){return "scena = Po vandeniu"};
 
-exports.setBackgroundCave = function(d){return "nustatyk sceną Urvas"};
+exports.setBackgroundCave = function(d){return "scena = Urvas"};
 
-exports.setBackgroundSanta = function(d){return "nustatyk sceną Santa"};
+exports.setBackgroundSanta = function(d){return "scena = Kalėdos"};
 
 exports.setBackgroundTooltip = function(d){return "Nustato fono paveikslėlį"};
 

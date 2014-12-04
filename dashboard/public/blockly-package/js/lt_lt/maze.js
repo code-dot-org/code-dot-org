@@ -16584,7 +16584,7 @@ exports.numLinesOfCodeWritten = function(d){return "Tu sukūrei "+p(d,"numLines"
 
 exports.play = function(d){return "žaisti"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Spausdinti"};
 
 exports.puzzleTitle = function(d){return "Užduotis "+v(d,"puzzle_number")+" iš "+v(d,"stage_total")};
 
@@ -16628,9 +16628,9 @@ exports.hintRequest = function(d){return "Užuomina"};
 
 exports.backToPreviousLevel = function(d){return "Grįžti į ankstesnį lygį"};
 
-exports.saveToGallery = function(d){return "Įrašyti į savo galeriją"};
+exports.saveToGallery = function(d){return "Įrašyti į galeriją"};
 
-exports.savedToGallery = function(d){return "Įrašyti į savo galeriją!"};
+exports.savedToGallery = function(d){return "Įrašyta į galeriją!"};
 
 exports.shareFailure = function(d){return "Deja, šios programos dalintis negalima."};
 
@@ -16664,7 +16664,7 @@ exports.hintHeader = function(d){return "Štai patarimas:"};
 
 exports.genericFeedback = function(d){return "Pažiūrėk, kaip pavyko ir pabandyk patobulinti programą."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Pažiūrėkite, ką aš sukūriau"};
 
 
 },{"messageformat":72}],60:[function(require,module,exports){

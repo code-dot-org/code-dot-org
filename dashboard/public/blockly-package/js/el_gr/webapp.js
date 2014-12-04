@@ -11795,7 +11795,7 @@ exports.numLinesOfCodeWritten = function(d){return "Μόλις έγραψες "+
 
 exports.play = function(d){return "παίξε"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Εκτύπωσε"};
 
 exports.puzzleTitle = function(d){return "Παζλ "+v(d,"puzzle_number")+" από "+v(d,"stage_total")};
 
@@ -11811,7 +11811,7 @@ exports.score = function(d){return "σκορ"};
 
 exports.showCodeHeader = function(d){return "Προβολή κώδικα"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Εμφάνισε τα μπλοκ"};
 
 exports.showGeneratedCode = function(d){return "Προβολή κώδικα"};
 
@@ -11839,9 +11839,9 @@ exports.hintRequest = function(d){return "Δείτε την υπόδειξη"};
 
 exports.backToPreviousLevel = function(d){return "Πίσω στο προηγούμενο επίπεδο"};
 
-exports.saveToGallery = function(d){return "Αποθήκευσε το στη συλλογή σου"};
+exports.saveToGallery = function(d){return "Αποθήκευση στη συλλογή"};
 
-exports.savedToGallery = function(d){return "Αποθηκεύτηκε στη συλλογή σου!"};
+exports.savedToGallery = function(d){return "Αποθηκεύτηκε στη συλλογή!"};
 
 exports.shareFailure = function(d){return "Συγγνώμη, δεν μπορούμε να μοιράσουμε αυτό το πρόγραμμα."};
 
@@ -11851,7 +11851,7 @@ exports.typeHint = function(d){return "Σημείωσε ότι απαιτούν�
 
 exports.workspaceHeader = function(d){return "Συναρμολόγησε τα μπλοκ σου εδώ: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Πληκτρολογήστε τον Javascript κώδικά σας εδώ"};
 
 exports.infinity = function(d){return "Άπειρο"};
 
@@ -11875,7 +11875,7 @@ exports.hintHeader = function(d){return "Να μια συμβουλή:"};
 
 exports.genericFeedback = function(d){return "Δες πως κατέληξες και δοκίμασε να διορθώσεις το πρόγραμμά σου."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Δείτε τι έκανα"};
 
 
 },{"messageformat":52}],40:[function(require,module,exports){
@@ -11898,13 +11898,13 @@ exports.catVariables = function(d){return "Μεταβλητές"};
 
 exports.continue = function(d){return "Συνέχεια"};
 
-exports.createHtmlBlock = function(d){return "create html block"};
+exports.createHtmlBlock = function(d){return "Δημιουργία μπλοκ html"};
 
-exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
+exports.createHtmlBlockTooltip = function(d){return "Δημιουργεί ένα μπλοκ HTML στην εφαρμογή."};
 
 exports.finalLevel = function(d){return "Συγχαρητήρια! Έλυσες το τελευταίο Παζλ."};
 
-exports.makeYourOwn = function(d){return "Make Your Own App"};
+exports.makeYourOwn = function(d){return "Φτιάξε τη δική σου εφαρμογή"};
 
 exports.nextLevel = function(d){return "Συγχαρητήρια! Έχετε ολοκληρώσει αυτό το παζλ."};
 
@@ -11912,29 +11912,29 @@ exports.no = function(d){return "Όχι"};
 
 exports.numBlocksNeeded = function(d){return "Αυτό το παζλ μπορεί να λυθεί με %1 μπλοκ."};
 
-exports.pause = function(d){return "Pause"};
+exports.pause = function(d){return "Διάλειμμα"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
+exports.reinfFeedbackMsg = function(d){return "Μπορείς να πατήσεις το κουμπί \"Προσπάθησε ξανά\" για να επιστρέψεις στην εκτέλεση της εφαρμογής σου."};
 
 exports.repeatForever = function(d){return "επανάλαβε για πάντα"};
 
 exports.repeatDo = function(d){return "κάνε"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
+exports.repeatForeverTooltip = function(d){return "Εκτέλεσε τις ενέργειες αυτού του μπλοκ επανειλημμένα όσο τρέσει η εφαρμογή."};
 
-exports.shareWebappTwitter = function(d){return "Check out the app I made. I wrote it myself with @codeorg"};
+exports.shareWebappTwitter = function(d){return "Δες την εφαρμογή που έφτιαξα. Την έγραψα μόνος μου με το @codeorg"};
 
-exports.shareGame = function(d){return "Share your app:"};
+exports.shareGame = function(d){return "Μοιράσου την εφαρμογή σου:"};
 
-exports.stepIn = function(d){return "Step in"};
+exports.stepIn = function(d){return "Βήμα εντός"};
 
-exports.stepOver = function(d){return "Step over"};
+exports.stepOver = function(d){return "Βήμα"};
 
-exports.stepOut = function(d){return "Step out"};
+exports.stepOut = function(d){return "Βήμα εκτός"};
 
-exports.turnBlack = function(d){return "turn black"};
+exports.turnBlack = function(d){return "μαυρίζει"};
 
-exports.turnBlackTooltip = function(d){return "Turns the screen black."};
+exports.turnBlackTooltip = function(d){return "Μαυρίζει την οθόνη."};
 
 exports.yes = function(d){return "Ναι"};
 

@@ -14855,7 +14855,7 @@ exports.numLinesOfCodeWritten = function(d){return "Éppen most írtál újabb "
 
 exports.play = function(d){return "lejátszás"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Nyomtatás"};
 
 exports.puzzleTitle = function(d){return v(d,"puzzle_number")+"/"+v(d,"stage_total")+". feladvány"};
 
@@ -14899,9 +14899,9 @@ exports.hintRequest = function(d){return "Segítség"};
 
 exports.backToPreviousLevel = function(d){return "Vissza az előző szintre"};
 
-exports.saveToGallery = function(d){return "Mentés a galériába"};
+exports.saveToGallery = function(d){return "Mentése a galériába"};
 
-exports.savedToGallery = function(d){return "Elmentve a galáriádba"};
+exports.savedToGallery = function(d){return "Elmentve a galériában!"};
 
 exports.shareFailure = function(d){return "Sajnálom, de nem tudtam megosztani ezt a programot."};
 
@@ -14935,14 +14935,14 @@ exports.hintHeader = function(d){return "Egy tipp:"};
 
 exports.genericFeedback = function(d){return "Nem sikerült célba érnem. Kérlek javítsd a hibát."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Nézd meg, mit csináltam"};
 
 
 },{"messageformat":57}],45:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.hu=function(n){return "other"}
 exports.blocksUsed = function(d){return "Felhasznált blokkok: %1"};
 
-exports.branches = function(d){return "branches"};
+exports.branches = function(d){return "ágak"};
 
 exports.catColour = function(d){return "Szín"};
 
@@ -14960,27 +14960,27 @@ exports.catLogic = function(d){return "Logika"};
 
 exports.colourTooltip = function(d){return "Megváltoztatja a ceruza színét."};
 
-exports.createACircle = function(d){return "create a circle"};
+exports.createACircle = function(d){return "kör létrehozása"};
 
-exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+exports.createSnowflakeSquare = function(d){return "hozz létre egy négyzet típusú hópelyhet"};
 
-exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+exports.createSnowflakeParallelogram = function(d){return "hozz létre egy parallelogramma típusú hópelyhet"};
 
-exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+exports.createSnowflakeLine = function(d){return "hozz létre egy vonal típusú hópelyhet"};
 
-exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+exports.createSnowflakeSpiral = function(d){return "hozz létre egy spirális típusú hópelyhet"};
 
-exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+exports.createSnowflakeFlower = function(d){return "hozz létre egy virág típusú hópelyhet"};
 
-exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+exports.createSnowflakeFractal = function(d){return "hozz létre egy fraktál típusú hópelyhet"};
 
-exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+exports.createSnowflakeRandom = function(d){return "hozz létre egy véletlen típusú hópelyhet"};
 
-exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
+exports.createASnowflakeBranch = function(d){return "hozz létre egy ág típusú hópelyhet"};
 
 exports.degrees = function(d){return "fok"};
 
-exports.depth = function(d){return "depth"};
+exports.depth = function(d){return "mélység"};
 
 exports.dots = function(d){return "képpontok"};
 
@@ -14998,25 +14998,25 @@ exports.drawAHouse = function(d){return "rajzoljon egy házat"};
 
 exports.drawAPlanet = function(d){return "Rajzolj egy bolygót"};
 
-exports.drawARhombus = function(d){return "Rajzolj egy rombuszt"};
+exports.drawARhombus = function(d){return "rajzolj egy rombuszt"};
 
-exports.drawARobot = function(d){return "Rajzolj egy robotot"};
+exports.drawARobot = function(d){return "rajzolj egy robotot"};
 
-exports.drawARocket = function(d){return "Rajzolj egy rakétát"};
+exports.drawARocket = function(d){return "rajzolj egy rakétát"};
 
-exports.drawASnowflake = function(d){return "Rajzolj egy hópelyhet"};
+exports.drawASnowflake = function(d){return "rajzolj egy hópelyhet"};
 
 exports.drawASnowman = function(d){return "rajzolj egy hóembert"};
 
-exports.drawAStar = function(d){return "Rajzolj egy csillagot"};
+exports.drawAStar = function(d){return "rajzolj egy csillagot"};
 
-exports.drawATree = function(d){return "rajzoljon egy fát"};
+exports.drawATree = function(d){return "rajzolj egy fát"};
 
-exports.drawUpperWave = function(d){return "draw upper wave"};
+exports.drawUpperWave = function(d){return "rajzolj felső hullámot"};
 
-exports.drawLowerWave = function(d){return "draw lower wave"};
+exports.drawLowerWave = function(d){return "rajzolj alsó hullámot"};
 
-exports.drawStamp = function(d){return "draw stamp"};
+exports.drawStamp = function(d){return "rajzolj bélyeget"};
 
 exports.heightParameter = function(d){return "magasság"};
 
@@ -15030,15 +15030,15 @@ exports.jumpForward = function(d){return "ugrás előre"};
 
 exports.jumpTooltip = function(d){return "A művészt mozgatja rajzolás nélkül."};
 
-exports.jumpEastTooltip = function(d){return "Moves the artist east without leaving any marks."};
+exports.jumpEastTooltip = function(d){return "A művészt kelet felé mozgatja rajzolás nélkül."};
 
-exports.jumpNorthTooltip = function(d){return "Moves the artist north without leaving any marks."};
+exports.jumpNorthTooltip = function(d){return "A művészt észak felé mozgatja rajzolás nélkül."};
 
-exports.jumpSouthTooltip = function(d){return "Moves the artist south without leaving any marks."};
+exports.jumpSouthTooltip = function(d){return "A művészt dél felé mozgatja rajzolás nélkül."};
 
-exports.jumpWestTooltip = function(d){return "Moves the artist west without leaving any marks."};
+exports.jumpWestTooltip = function(d){return "A művészt nyugat felé mozgatja rajzolás nélkül."};
 
-exports.lengthFeedback = function(d){return "You got it right except for the lengths to move."};
+exports.lengthFeedback = function(d){return "Majdnem tökéletes, csak a mozgás hosszát gondold át újra."};
 
 exports.lengthParameter = function(d){return "hossza"};
 
@@ -15046,19 +15046,19 @@ exports.loopVariable = function(d){return "számláló"};
 
 exports.moveBackward = function(d){return "hátra lépés"};
 
-exports.moveEastTooltip = function(d){return "Moves the artist east."};
+exports.moveEastTooltip = function(d){return "A művészt kelet felé mozgatja."};
 
 exports.moveForward = function(d){return "mozgassa előre"};
 
 exports.moveForwardTooltip = function(d){return "A művészt előre mozgatja."};
 
-exports.moveNorthTooltip = function(d){return "Moves the artist north."};
+exports.moveNorthTooltip = function(d){return "A művészt észak felé mozgatja."};
 
-exports.moveSouthTooltip = function(d){return "Moves the artist south."};
+exports.moveSouthTooltip = function(d){return "A művészt dél felé mozgatja."};
 
-exports.moveWestTooltip = function(d){return "Mozgas a művészt nyugatra."};
+exports.moveWestTooltip = function(d){return "A művészt nyugat felé mozgatja."};
 
-exports.moveTooltip = function(d){return "A művészt egy meghatározott lépést előre, vagy hátra mozgatja."};
+exports.moveTooltip = function(d){return "A művészt egy meghatározott mértékben előre, vagy hátra mozgatja."};
 
 exports.notBlackColour = function(d){return "Feketétől különbözőre kell állítania a színt a rejtvény megoldásához."};
 
@@ -15066,27 +15066,27 @@ exports.numBlocksNeeded = function(d){return "Ezt a feladatot meg lehet oldani %
 
 exports.penDown = function(d){return "ceruza le"};
 
-exports.penTooltip = function(d){return "Felemeli vagy lenyonja a ceruzát, hogy megállítsa vagy elindítsa a rajzolást."};
+exports.penTooltip = function(d){return "Felemeli vagy lejjebb viszi a ceruzát, hogy megállítsa vagy elindítsa a rajzolást."};
 
 exports.penUp = function(d){return "ceruza fel"};
 
-exports.reinfFeedbackMsg = function(d){return "Ez úgy néz ki amit akartál? Nyomd meg a \"Próbáld újra\" gombot ,hogy lásd a rajzod."};
+exports.reinfFeedbackMsg = function(d){return "Itt van a rajzod! Még dolgozhatsz rajta, de áttérhetsz a következő feladványra is."};
 
 exports.setColour = function(d){return "színbeállítások megadása"};
 
-exports.setPattern = function(d){return "set pattern"};
+exports.setPattern = function(d){return "minta beállítása"};
 
 exports.setWidth = function(d){return "szélesség beállítása"};
 
 exports.shareDrawing = function(d){return "Oszd meg a rajzodat:"};
 
-exports.showMe = function(d){return "mutasd"};
+exports.showMe = function(d){return "Mutasd"};
 
 exports.showTurtle = function(d){return "megmutatja a művészt"};
 
 exports.sizeParameter = function(d){return "méret"};
 
-exports.step = function(d){return "Lépés"};
+exports.step = function(d){return "lépés"};
 
 exports.tooFewColours = function(d){return "Legalább %1 különböző szint kell használnod a megoldáshoz. Te csak %2-t használtál ."};
 

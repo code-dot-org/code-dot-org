@@ -10788,7 +10788,7 @@ exports.levelIncompleteError = function(d){return "Estàs utilitzant tots els ti
 
 exports.listVariable = function(d){return "llista"};
 
-exports.makeYourOwnFlappy = function(d){return "Fes el teu propi \"Flappy Game\""};
+exports.makeYourOwnFlappy = function(d){return "Fes el teu propi joc Flappy"};
 
 exports.missingBlocksErrorMsg = function(d){return "Prova un o més dels blocs de sota per a resoldre aquest puzzle."};
 

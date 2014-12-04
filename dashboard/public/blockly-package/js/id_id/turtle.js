@@ -14935,7 +14935,7 @@ exports.hintHeader = function(d){return "Berikut adalah tip:"};
 
 exports.genericFeedback = function(d){return "Lihatlah hasil anda dan cobalah untuk memperbaiki program Anda."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Lihat apa yang saya buat"};
 
 
 },{"messageformat":57}],45:[function(require,module,exports){
@@ -14960,23 +14960,23 @@ exports.catLogic = function(d){return "Logika"};
 
 exports.colourTooltip = function(d){return "Perubahan warna pensil."};
 
-exports.createACircle = function(d){return "create a circle"};
+exports.createACircle = function(d){return "buatlah lingkaran"};
 
-exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+exports.createSnowflakeSquare = function(d){return "buatlah sebuah kepingan salju berbentuk persegi"};
 
-exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+exports.createSnowflakeParallelogram = function(d){return "buatlah kepingan salju berbentuk jajar genjang"};
 
-exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+exports.createSnowflakeLine = function(d){return "buatlah kepingan salju berbentuk garis"};
 
-exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+exports.createSnowflakeSpiral = function(d){return "buatlah sebuah kepingan salju berbentuk pilin (spiral)"};
 
-exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+exports.createSnowflakeFlower = function(d){return "buatlah sebuah kepingan salju berbentuk bunga"};
 
-exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+exports.createSnowflakeFractal = function(d){return "buatlah sebuah kepingan salju berbentuk fraktal"};
 
-exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+exports.createSnowflakeRandom = function(d){return "buatlah kepingan salju berbentuk acak"};
 
-exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
+exports.createASnowflakeBranch = function(d){return "buatlah cabang kepingan salju"};
 
 exports.degrees = function(d){return "derajat"};
 
@@ -15016,7 +15016,7 @@ exports.drawUpperWave = function(d){return "menggambar atas gelombang"};
 
 exports.drawLowerWave = function(d){return "menggambar bawah gelombang"};
 
-exports.drawStamp = function(d){return "draw stamp"};
+exports.drawStamp = function(d){return "gambar cap"};
 
 exports.heightParameter = function(d){return "tinggi"};
 
@@ -15070,7 +15070,7 @@ exports.penTooltip = function(d){return "Mengangkat atau menurunkan pensil, mula
 
 exports.penUp = function(d){return "pensil keatas"};
 
-exports.reinfFeedbackMsg = function(d){return "Apa hasilnya sudah seperti apa yang Anda inginkan? Tekan tombol \"Ayo coba lagi\" untuk melihat gambar Anda."};
+exports.reinfFeedbackMsg = function(d){return "Inilah gambar Anda! Teruslah mengerjakan atau lanjutan ke teka-teki berikutnya."};
 
 exports.setColour = function(d){return "Atur warna"};
 

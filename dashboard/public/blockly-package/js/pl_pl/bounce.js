@@ -12403,19 +12403,19 @@ exports.bounceBallTooltip = function(d){return "Odbij piłkę od obiektu."};
 
 exports.continue = function(d){return "Kontynuuj"};
 
-exports.dirE = function(d){return "Wschód"};
+exports.dirE = function(d){return "E (Wschód)"};
 
-exports.dirN = function(d){return "Północ"};
+exports.dirN = function(d){return "N (Północ)"};
 
-exports.dirS = function(d){return "Południe"};
+exports.dirS = function(d){return "S (Południe)"};
 
-exports.dirW = function(d){return "Zachód"};
+exports.dirW = function(d){return "W (Zachód)"};
 
 exports.doCode = function(d){return "wykonaj"};
 
 exports.elseCode = function(d){return "w przeciwnym razie"};
 
-exports.finalLevel = function(d){return "Gratulacje! Udało ci się rozwiązać ostatnie zadanie."};
+exports.finalLevel = function(d){return "Gratulacje! Rozwiązałeś końcową łamigłówkę."};
 
 exports.heightParameter = function(d){return "wysokość"};
 
@@ -12431,11 +12431,11 @@ exports.incrementOpponentScore = function(d){return "punkt dla przeciwnika"};
 
 exports.incrementOpponentScoreTooltip = function(d){return "Dodaj jeden do bieżącego wyniku przeciwnika."};
 
-exports.incrementPlayerScore = function(d){return "wynik punktowy"};
+exports.incrementPlayerScore = function(d){return "punkt wyniku"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Dodać jeden do wyniku bieżącego gracza."};
+exports.incrementPlayerScoreTooltip = function(d){return "Dodać jeden do bieżącego wyniku gracza."};
 
-exports.isWall = function(d){return "czy jest to ściana"};
+exports.isWall = function(d){return "czy to jest ściana"};
 
 exports.isWallTooltip = function(d){return "Zwraca prawdę, jeżeli tutaj jest ściana"};
 
@@ -12443,7 +12443,7 @@ exports.launchBall = function(d){return "weź nową piłkę"};
 
 exports.launchBallTooltip = function(d){return "Weź piłkę do gry."};
 
-exports.makeYourOwn = function(d){return "Stwórz własną grę w Odbijanie"};
+exports.makeYourOwn = function(d){return "Utwórz własną grę w Odbijanie"};
 
 exports.moveDown = function(d){return "przesuń w dół"};
 
@@ -12485,35 +12485,35 @@ exports.pathRight = function(d){return "jeśli jest ścieżka w prawo"};
 
 exports.pilePresent = function(d){return "jest tam sterta"};
 
-exports.playSoundCrunch = function(d){return "zagraj dzwięk chrupania"};
+exports.playSoundCrunch = function(d){return "zagraj dźwięk chrupania"};
 
-exports.playSoundGoal1 = function(d){return "odtwórz dźwięk gola nr 1"};
+exports.playSoundGoal1 = function(d){return "zagraj dźwięk gola nr 1"};
 
-exports.playSoundGoal2 = function(d){return "odtwórz dźwięk gola nr 2"};
+exports.playSoundGoal2 = function(d){return "zagraj dźwięk gola nr 2"};
 
-exports.playSoundHit = function(d){return "odtwórz dźwięk trafienia"};
+exports.playSoundHit = function(d){return "zagraj dźwięk trafienia"};
 
-exports.playSoundLosePoint = function(d){return "zagraj dzwięk utraty punktu"};
+exports.playSoundLosePoint = function(d){return "zagraj dźwięk utraty punktu"};
 
-exports.playSoundLosePoint2 = function(d){return "zagraj dzwięk utraty punktu nr 2"};
+exports.playSoundLosePoint2 = function(d){return "zagraj dźwięk utraty punktu nr 2"};
 
 exports.playSoundRetro = function(d){return "zagraj dźwięk retro"};
 
 exports.playSoundRubber = function(d){return "zagraj dźwięk gumy"};
 
-exports.playSoundSlap = function(d){return "zagraj dźwięk klaśnięcia"};
+exports.playSoundSlap = function(d){return "zagraj klaśnięcie"};
 
-exports.playSoundTooltip = function(d){return "Odtwarzać wybrany dźwięk."};
+exports.playSoundTooltip = function(d){return "Zagraj wybrany dźwięk."};
 
-exports.playSoundWinPoint = function(d){return "zagraj dźwięk zdybycia punktu nr 1"};
+exports.playSoundWinPoint = function(d){return "zagraj dźwięk zdobycia punktu"};
 
-exports.playSoundWinPoint2 = function(d){return "zagraj dźwięk zdybycia punktu nr 2"};
+exports.playSoundWinPoint2 = function(d){return "zagraj dźwięk zdobycia punktu 2"};
 
-exports.playSoundWood = function(d){return "zagraj dźwięk drewna"};
+exports.playSoundWood = function(d){return "zagraj dźwięk drewniany"};
 
-exports.putdownTower = function(d){return "postaw wieżę na ziemi"};
+exports.putdownTower = function(d){return "postaw wieżę"};
 
-exports.reinfFeedbackMsg = function(d){return "Możesz nacisnąć przycisk \"Spróbuj ponownie\", aby powrócić do swojej gry."};
+exports.reinfFeedbackMsg = function(d){return "Możesz nacisnąć przycisk Spróbuj ponownie, aby powrócić do swojej gry."};
 
 exports.removeSquare = function(d){return "usuń kwadrat"};
 
@@ -12525,19 +12525,19 @@ exports.repeatUntilFinish = function(d){return "powtarzaj, aż będzie koniec"};
 
 exports.scoreText = function(d){return "Wynik: "+v(d,"playerScore")+": "+v(d,"opponentScore")};
 
-exports.setBackgroundRandom = function(d){return "wybierz losową scenę"};
+exports.setBackgroundRandom = function(d){return "ustaw losową scenę"};
 
-exports.setBackgroundHardcourt = function(d){return "Użyj boisko do tenisa"};
+exports.setBackgroundHardcourt = function(d){return "ustaw boisko do tenisa"};
 
 exports.setBackgroundRetro = function(d){return "ustaw scenę retro"};
 
 exports.setBackgroundTooltip = function(d){return "Ustawia obraz w tle"};
 
-exports.setBallRandom = function(d){return "wybierz losową piłkę"};
+exports.setBallRandom = function(d){return "ustaw losową piłkę"};
 
-exports.setBallHardcourt = function(d){return "Ustaw piłkę do tenisa"};
+exports.setBallHardcourt = function(d){return "ustaw piłkę do tenisa"};
 
-exports.setBallRetro = function(d){return "wybierz piłkę retro"};
+exports.setBallRetro = function(d){return "ustaw piłkę retro"};
 
 exports.setBallTooltip = function(d){return "Ustawia obraz piłki"};
 
@@ -12553,15 +12553,15 @@ exports.setBallSpeedFast = function(d){return "ustaw szybką prędkość piłki"
 
 exports.setBallSpeedVeryFast = function(d){return "ustaw bardzo szybką prędkość piłki"};
 
-exports.setBallSpeedTooltip = function(d){return "Ustawianie szybkości piłki"};
+exports.setBallSpeedTooltip = function(d){return "Ustawia prędkość piłki"};
 
 exports.setPaddleRandom = function(d){return "ustaw losową paletkę"};
 
-exports.setPaddleHardcourt = function(d){return "Ustaw paletkę do tenisa"};
+exports.setPaddleHardcourt = function(d){return "ustaw paletkę do tenisa"};
 
 exports.setPaddleRetro = function(d){return "ustaw paletkę retro"};
 
-exports.setPaddleTooltip = function(d){return "Użyj paletki do tenisa"};
+exports.setPaddleTooltip = function(d){return "Ustawia obraz paletki"};
 
 exports.setPaddleSpeedRandom = function(d){return "ustaw losową prędkość paletki"};
 
@@ -12575,9 +12575,9 @@ exports.setPaddleSpeedFast = function(d){return "ustaw szybką prędkość palet
 
 exports.setPaddleSpeedVeryFast = function(d){return "ustaw bardzo szybką prędkość paletki"};
 
-exports.setPaddleSpeedTooltip = function(d){return "Ustawia szybkość paletki"};
+exports.setPaddleSpeedTooltip = function(d){return "Ustawia prędkość paletki"};
 
-exports.shareBounceTwitter = function(d){return "Sprawdź grę w Odbijanie którą zrobiłem. Napisałem ja sam na @codeorg"};
+exports.shareBounceTwitter = function(d){return "Sprawdź grę w Odbijanie, którą utworzyłem. Napisałem ją samodzielnie z użyciem @codeorg"};
 
 exports.shareGame = function(d){return "Podziel się swoją grą:"};
 
@@ -12597,15 +12597,15 @@ exports.whenBallMissesPaddleTooltip = function(d){return "Wykonaj akcje poniżej
 
 exports.whenDown = function(d){return "gdy strzałka w dół"};
 
-exports.whenDownTooltip = function(d){return "Wykonaj poniższe czynności, gdy wciśnięty jest klawisz strzałki w dół."};
+exports.whenDownTooltip = function(d){return "Wykonaj poniższe czynności, gdy naciśnięty jest klawisz strzałki w dół."};
 
 exports.whenGameStarts = function(d){return "kiedy gra się zacznie"};
 
-exports.whenGameStartsTooltip = function(d){return "Wykonaj czynności poniżej kiedy gra się zacznie."};
+exports.whenGameStartsTooltip = function(d){return "Wykonaj czynności poniżej, kiedy rozpocznie się gra."};
 
 exports.whenLeft = function(d){return "gdy strzałka w lewo"};
 
-exports.whenLeftTooltip = function(d){return "Wykonaj poniższe czynności, gdy wciśnięty jest klawisz strzałki w lewo."};
+exports.whenLeftTooltip = function(d){return "Wykonaj poniższe czynności, gdy naciśnięty jest klawisz strzałki w lewo."};
 
 exports.whenPaddleCollided = function(d){return "kiedy piłka uderza w paletkę"};
 
@@ -12613,19 +12613,19 @@ exports.whenPaddleCollidedTooltip = function(d){return "Wykonaj poniższe czynno
 
 exports.whenRight = function(d){return "gdy strzałka w prawo"};
 
-exports.whenRightTooltip = function(d){return "Wykonaj poniższe czynności, gdy wciśnięty jest klawisz strzałki w prawo."};
+exports.whenRightTooltip = function(d){return "Wykonaj poniższe czynności, gdy naciśnięty jest klawisz strzałki w prawo."};
 
 exports.whenUp = function(d){return "gdy strzałka w górę"};
 
-exports.whenUpTooltip = function(d){return "Wykonaj poniższe czynności, gdy wciśnięty jest klawisz strzałki w górę."};
+exports.whenUpTooltip = function(d){return "Wykonaj poniższe czynności, gdy naciśnięty jest klawisz strzałki w górę."};
 
 exports.whenWallCollided = function(d){return "kiedy piłka uderza w ścianę"};
 
-exports.whenWallCollidedTooltip = function(d){return "Wykonaj poniższe czynności, gdy piłka zderza się ze ścianą."};
+exports.whenWallCollidedTooltip = function(d){return "Wykonaj poniższe czynności, gdy piłka uderza w ścianę."};
 
 exports.whileMsg = function(d){return "dopóki"};
 
-exports.whileTooltip = function(d){return "Powtarzaj załączone czynności, aż do osiągnięcia punktu zakończenia."};
+exports.whileTooltip = function(d){return "Powtarzaj załączone czynności, aż do osiągnięcia końca."};
 
 exports.yes = function(d){return "Tak"};
 

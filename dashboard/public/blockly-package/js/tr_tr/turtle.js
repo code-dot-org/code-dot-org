@@ -14855,7 +14855,7 @@ exports.numLinesOfCodeWritten = function(d){return "Tam olarak "+p(d,"numLines",
 
 exports.play = function(d){return "oynat"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Yazdır"};
 
 exports.puzzleTitle = function(d){return "Bulmaca "+v(d,"puzzle_number")+" / "+v(d,"stage_total")};
 
@@ -14871,7 +14871,7 @@ exports.score = function(d){return "puan"};
 
 exports.showCodeHeader = function(d){return "Kodu Görüntüle"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Bloklarını göster"};
 
 exports.showGeneratedCode = function(d){return "Kodu Görüntüle"};
 
@@ -14899,9 +14899,9 @@ exports.hintRequest = function(d){return "İpucunu gör"};
 
 exports.backToPreviousLevel = function(d){return "Önceki seviyeye dön"};
 
-exports.saveToGallery = function(d){return "Galerine kaydet"};
+exports.saveToGallery = function(d){return "Galerisine Kaydet"};
 
-exports.savedToGallery = function(d){return "Galerine kaydedildi!"};
+exports.savedToGallery = function(d){return "Galeri klasörüne kaydedilmiş!"};
 
 exports.shareFailure = function(d){return "Üzgünüz, bu programı paylaşamıyoruz."};
 
@@ -14911,7 +14911,7 @@ exports.typeHint = function(d){return "Parantezlerin ve noktalı virgüllerin ge
 
 exports.workspaceHeader = function(d){return "Bloklarını burda topla: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "JavaScript kodunuzu buraya yazın"};
 
 exports.infinity = function(d){return "Sonsuz"};
 
@@ -14935,7 +14935,7 @@ exports.hintHeader = function(d){return "İşte bir ipucu:"};
 
 exports.genericFeedback = function(d){return "Sonucunu gör ve programını düzeltmeyi dene."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Ne yaptığıma bakın"};
 
 
 },{"messageformat":57}],45:[function(require,module,exports){
@@ -14960,23 +14960,23 @@ exports.catLogic = function(d){return "Mantık"};
 
 exports.colourTooltip = function(d){return "Kalem rengini değiştirir."};
 
-exports.createACircle = function(d){return "create a circle"};
+exports.createACircle = function(d){return "bir çember oluşturun"};
 
-exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+exports.createSnowflakeSquare = function(d){return "bir kar tanesi türü kare oluşturun"};
 
-exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+exports.createSnowflakeParallelogram = function(d){return "kar tanesi türü paralelkenar oluşturmak"};
 
-exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+exports.createSnowflakeLine = function(d){return "bir kar tanesi türü çizgi oluşturma"};
 
-exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+exports.createSnowflakeSpiral = function(d){return "bir kar tanesi helezon türü oluşturma"};
 
-exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+exports.createSnowflakeFlower = function(d){return "bir kar tanesi türü çiçek oluşturmak"};
 
-exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+exports.createSnowflakeFractal = function(d){return "bir kar tanesi türü fraktal oluşturun"};
 
-exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+exports.createSnowflakeRandom = function(d){return "bir tür rastgele kar tanesi oluşturmak"};
 
-exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
+exports.createASnowflakeBranch = function(d){return "bir kar tanesi dal oluşturun"};
 
 exports.degrees = function(d){return "derece"};
 
@@ -15016,7 +15016,7 @@ exports.drawUpperWave = function(d){return "üst dalga çiz"};
 
 exports.drawLowerWave = function(d){return "alt dalga çiz"};
 
-exports.drawStamp = function(d){return "draw stamp"};
+exports.drawStamp = function(d){return "Pul çizmek"};
 
 exports.heightParameter = function(d){return "Yükseklik"};
 
@@ -15070,11 +15070,11 @@ exports.penTooltip = function(d){return "Çizmeyi başlatmak için veya durdurma
 
 exports.penUp = function(d){return "Kalemi kaldır"};
 
-exports.reinfFeedbackMsg = function(d){return "Bu istediğin şeye benziyor mu ?\"Yeniden Dene\" butonuna basarak çizimini görebilirsin."};
+exports.reinfFeedbackMsg = function(d){return "Çiziminiz burada!Çiziminizin üzerinde çalışmaya devam et veya devam etmek için sonraki bulmaca geç"};
 
 exports.setColour = function(d){return "renk ayarla"};
 
-exports.setPattern = function(d){return "set pattern"};
+exports.setPattern = function(d){return "küme modeli"};
 
 exports.setWidth = function(d){return "genişliği ayarla"};
 

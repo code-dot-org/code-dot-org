@@ -16059,6 +16059,7 @@ levels.playlab_2 = utils.extend(levels.dog_and_cat_hello, {
   firstSpriteIndex: 20, // cave boy
   timeoutFailureTick: null,
   timeoutAfterWhenRun: true,
+  defaultEmotion: Emotions.HAPPY,
   goal: {
     successCondition: function () {
       return Studio.allWhenRunBlocksComplete() && Studio.sayComplete > 1;
@@ -16249,6 +16250,7 @@ levels.playlab_4 = {
   },
   background: 'tennis',
   avatarList: ['tennisboy', 'tennisgirl'],
+  defaultEmotion: Emotions.SAD,
   requiredBlocks: [
     [{
       test: 'moveDistance',
@@ -16336,6 +16338,7 @@ levels.playlab_5 = utils.extend(levels.click_hello, {
   background: 'space',
   firstSpriteIndex: 23, // spacebot
   timeoutAfterWhenRun: true,
+  defaultEmotion: Emotions.HAPPY,
   toolbox: tb(blockOfType('studio_saySprite')),
   startBlocks:
    '<block type="studio_whenSpriteClicked" deletable="false" x="20" y="20"></block>'
@@ -16470,6 +16473,7 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
     success: 'blue_fireball',
     imageWidth: 800
   },
+  defaultEmotion: Emotions.ANGRY,
   toolbox:
     tb(
       blockOfType('studio_move', {DIR: 8}) +
@@ -16562,6 +16566,7 @@ levels.playlab_7 = {
     'downButton',
     'upButton'
   ],
+  defaultEmotion: Emotions.HAPPY,
   map: [
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -16790,6 +16795,7 @@ levels.playlab_8 = {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
   avatarList: ['unicorn', 'wizard'],
+  defaultEmotion: Emotions.HAPPY,
   goal: {
     successCondition: function () {
       return Studio.sprite[0].isCollidingWith(1) && Studio.playerScore === 1;
@@ -16936,6 +16942,7 @@ levels.playlab_9 = {
   scale: {
     snapRadius: 2
   },
+  defaultEmotion: Emotions.ANGRY,
   softButtons: [
     'leftButton',
     'rightButton',
@@ -19018,7 +19025,7 @@ BlocklyApps.reset = function(first) {
       size: constants.DEFAULT_SPRITE_SIZE,
       dir: Direction.NONE,
       displayDir: Direction.SOUTH,
-      emotion: Emotions.NORMAL,
+      emotion: level.defaultEmotion || Emotions.NORMAL,
       // tickCount of last time sprite moved,
       lastMove: Infinity,
       // overridden as soon as we call setSprite
@@ -21150,7 +21157,7 @@ exports.catText = function(d){return "Text"};
 
 exports.catVariables = function(d){return "Premenné"};
 
-exports.codeTooltip = function(d){return "Pozrieť generovaný kód JavaScript."};
+exports.codeTooltip = function(d){return "Pozrieť vygenerovaný kód JavaScript."};
 
 exports.continue = function(d){return "Pokračovať"};
 
@@ -21168,9 +21175,9 @@ exports.directionWestLetter = function(d){return "Z"};
 
 exports.end = function(d){return "koniec"};
 
-exports.emptyBlocksErrorMsg = function(d){return "\"Repeat\", alebo \"If\" bloky musia obsahovať ďalšie bloky vo vnútri aby pracovali. Uistite sa, že vnútorný blok sedí správne vo vnútri týchto blokov."};
+exports.emptyBlocksErrorMsg = function(d){return "Bloky \"Opakuj\" alebo \"Ak\" musia obsahovať ďalšie bloky vo vnútri, aby pracovali. Uistite sa, že vnútorný blok je správne umiestnený vo vnútri týchto blokov."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "Funkčný blok musí obsahovať ďalšie bloky vovnútri aby pracoval správne."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Funkčný blok musí obsahovať ďalšie bloky vo vnútri, aby pracoval správne."};
 
 exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
 
@@ -21186,15 +21193,15 @@ exports.errorUnusedFunction = function(d){return "You created a function, but ne
 
 exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
-exports.extraTopBlocks = function(d){return "Máte nepriradené bloky. Chceli ste ich pripojiť k bloku \"pri spustení\"?"};
+exports.extraTopBlocks = function(d){return "Máš nepripojené bloky. Chcel si ich pripojiť k bloku \"pri spustení\"?"};
 
-exports.finalStage = function(d){return "Gratulujem! Dokončili ste poslednú úroveň."};
+exports.finalStage = function(d){return "Gratulujem! Dokončil si poslednú úroveň."};
 
-exports.finalStageTrophies = function(d){return "Gratulujem! Dokončili ste poslednú úroveň a vyhrali "+p(d,"numTrophies",0,"sk",{"one":"trofej","other":n(d,"numTrophies")+" trofejí"})+"."};
+exports.finalStageTrophies = function(d){return "Gratulujem! Dokončil si poslednú úroveň a vyhral "+p(d,"numTrophies",0,"sk",{"one":"trofej","other":n(d,"numTrophies")+" trofejí"})+"."};
 
 exports.finish = function(d){return "Dokončiť"};
 
-exports.generatedCodeInfo = function(d){return "Dokonca aj popredné univerzity učia programovanie založené na blokoch  (napríklad "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ale v skutočnosti  bloky ktoré ste vytvorili môžu byť tiež zobrazené v jazyku JavaScript, svetovo najpoužívanejšom programovacom jazyku:"};
+exports.generatedCodeInfo = function(d){return "Dokonca aj popredné univerzity učia programovanie založené na blokoch  (napríklad "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ale v skutočnosti  bloky, ktoré ste vytvorili, môžu byť tiež zobrazené v jazyku JavaScript, svetovo najpoužívanejšom programovacom jazyku:"};
 
 exports.hashError = function(d){return "Prepáčte, '%1' nezodpovedá žiadnemu uloženému programu."};
 
@@ -21210,23 +21217,23 @@ exports.listVariable = function(d){return "zoznam"};
 
 exports.makeYourOwnFlappy = function(d){return "Vytvor si svoju vlastnú \"Flappy\" hru"};
 
-exports.missingBlocksErrorMsg = function(d){return "Skúste použiť jeden alebo viac blokov nižšie pre vyriešenie tejto úlohy."};
+exports.missingBlocksErrorMsg = function(d){return "Skús použiť jeden alebo viac blokov uvedených nižšie pre vyriešenie tejto úlohy."};
 
-exports.nextLevel = function(d){return "Gratulujem! Dokončili ste úlohu "+v(d,"puzzleNumber")+"."};
+exports.nextLevel = function(d){return "Gratulujem! Dokončil si úlohu "+v(d,"puzzleNumber")+"."};
 
-exports.nextLevelTrophies = function(d){return "Gratulujem! Dokončili ste úlohu "+v(d,"puzzleNumber")+" a vyhrali "+p(d,"numTrophies",0,"sk",{"one":"trofej","other":n(d,"numTrophies")+" trofejí"})+"."};
+exports.nextLevelTrophies = function(d){return "Gratulujem! Dokončil si úlohu "+v(d,"puzzleNumber")+" a vyhral "+p(d,"numTrophies",0,"sk",{"one":"trofej","other":n(d,"numTrophies")+" trofejí"})+"."};
 
-exports.nextStage = function(d){return "Blahoželám! Dokončili ste "+v(d,"stageName")+"."};
+exports.nextStage = function(d){return "Gratulujem! Dokončil si "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Blahoželám! Dokončili ste "+v(d,"stageName")+" a vyhrali "+p(d,"numTrophies",0,"sk",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
+exports.nextStageTrophies = function(d){return "Gratulujem! Dokončil si "+v(d,"stageName")+" a vyhral "+p(d,"numTrophies",0,"sk",{"one":"trofej","other":n(d,"numTrophies")+" trofejí"})+"."};
 
-exports.numBlocksNeeded = function(d){return "Gratulujem! Dokončili ste úlohu "+v(d,"puzzleNumber")+". (Avšak, mohli ste použiť iba "+p(d,"numBlocks",0,"sk",{"one":"1 blok","other":n(d,"numBlocks")+" blokov"})+".)"};
+exports.numBlocksNeeded = function(d){return "Gratulujem! Dokončil si úlohu "+v(d,"puzzleNumber")+". (Avšak, mohol si použiť iba "+p(d,"numBlocks",0,"sk",{"one":"1 blok","other":n(d,"numBlocks")+" blokov"})+".)"};
 
-exports.numLinesOfCodeWritten = function(d){return "Práve ste napísali "+p(d,"numLines",0,"sk",{"one":"1 riadok","other":n(d,"numLines")+" riadkov"})+" kódu!"};
+exports.numLinesOfCodeWritten = function(d){return "Už si napísal "+p(d,"numLines",0,"sk",{"one":"1 riadok","other":n(d,"numLines")+" riadkov"})+" kódu!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "hrať"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Tlačiť"};
 
 exports.puzzleTitle = function(d){return "Úloha "+v(d,"puzzle_number")+" z "+v(d,"stage_total")};
 
@@ -21238,11 +21245,11 @@ exports.runProgram = function(d){return "Spustiť"};
 
 exports.runTooltip = function(d){return "Spustiť program definovaný blokmi v pracovnom priestore."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "skóre"};
 
 exports.showCodeHeader = function(d){return "Zobraziť kód"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Ukáž Bloky"};
 
 exports.showGeneratedCode = function(d){return "Zobraziť kód"};
 
@@ -21252,7 +21259,7 @@ exports.subtitle = function(d){return "vizuálne programovacie prostredie"};
 
 exports.textVariable = function(d){return "text"};
 
-exports.tooFewBlocksMsg = function(d){return "Používate všetky potrebné typy blokov, ale pokúste sa použiť viac typov týchto blokov na dokončenie tejto úlohy."};
+exports.tooFewBlocksMsg = function(d){return "Používaš všetky potrebné typy blokov, ale skús použiť viac týchto blokov na dokončenie tejto úlohy."};
 
 exports.tooManyBlocksMsg = function(d){return "Táto úloha môže byť vyriešená s <x id='START_SPAN'/><x id='END_SPAN'/> blokmi."};
 
@@ -21268,43 +21275,43 @@ exports.tryAgain = function(d){return "Skúsiť znova"};
 
 exports.hintRequest = function(d){return "Pozri nápovedu"};
 
-exports.backToPreviousLevel = function(d){return "Späť na predchádzajúcu úroveň"};
+exports.backToPreviousLevel = function(d){return "Späť na predchádzajúcu úlohu"};
 
-exports.saveToGallery = function(d){return "Uložiť do svojej galérie"};
+exports.saveToGallery = function(d){return "Ulož do galérie"};
 
-exports.savedToGallery = function(d){return "Uložené do tvojej galérie!"};
+exports.savedToGallery = function(d){return "Uložené do galérie!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Bohužiaľ tento program nie je možné zdieľať."};
 
 exports.typeFuncs = function(d){return "Dostupné funkcie:%1"};
 
 exports.typeHint = function(d){return "Všimnite si, že sú potrebné zátvorky a bodkočiarky."};
 
-exports.workspaceHeader = function(d){return "Zostavte Vaše bloky sem: "};
+exports.workspaceHeader = function(d){return "Zostav si svoje bloky sem: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Zadajte sem svoj JavaScript kód"};
 
 exports.infinity = function(d){return "Nekonečno"};
 
-exports.rotateText = function(d){return "Otočte Váš prístroj."};
+exports.rotateText = function(d){return "Otoč svoj prístroj."};
 
-exports.orientationLock = function(d){return "Vypnite zámok orientácie v nastaveniach vášho prístroja."};
+exports.orientationLock = function(d){return "Vypni uzamknutie orientácie v nastaveniach prístroja."};
 
-exports.wantToLearn = function(d){return "Chcete sa naučiť programovať?"};
+exports.wantToLearn = function(d){return "Chceš sa naučiť programovať?"};
 
-exports.watchVideo = function(d){return "Pozrite si video"};
+exports.watchVideo = function(d){return "Pozri si Video"};
 
 exports.when = function(d){return "keď"};
 
 exports.whenRun = function(d){return "pri spustení"};
 
-exports.tryHOC = function(d){return "Vyskúšajte hodinu kódovania"};
+exports.tryHOC = function(d){return "Vyskúšaj Hodinu Kódu"};
 
-exports.signup = function(d){return "Prihlásiť sa na úvodný kurz"};
+exports.signup = function(d){return "Prihlás sa do úvodného kurzu"};
 
 exports.hintHeader = function(d){return "Tu je rada:"};
 
-exports.genericFeedback = function(d){return "Pozrite ako to dopadlo a pokúste sa opraviť váš program."};
+exports.genericFeedback = function(d){return "Pozri si ako to dopadlo a pokús sa opraviť svoj program."};
 
 exports.defaultTwitterText = function(d){return "Check out what I made"};
 
@@ -21319,35 +21326,35 @@ var MessageFormat = require("messageformat");MessageFormat.locale.sk = function 
   }
   return 'other';
 };
-exports.actor = function(d){return "herec"};
+exports.actor = function(d){return "postava"};
 
 exports.alienInvasion = function(d){return "Alien Invasion!"};
 
-exports.backgroundBlack = function(d){return "black"};
+exports.backgroundBlack = function(d){return "čierny"};
 
-exports.backgroundCave = function(d){return "cave"};
+exports.backgroundCave = function(d){return "jaskyňa"};
 
-exports.backgroundCloudy = function(d){return "cloudy"};
+exports.backgroundCloudy = function(d){return "oblačno"};
 
-exports.backgroundHardcourt = function(d){return "hardcourt"};
+exports.backgroundHardcourt = function(d){return "kurt"};
 
-exports.backgroundNight = function(d){return "night"};
+exports.backgroundNight = function(d){return "noc"};
 
-exports.backgroundUnderwater = function(d){return "underwater"};
+exports.backgroundUnderwater = function(d){return "pod vodou"};
 
-exports.backgroundCity = function(d){return "city"};
+exports.backgroundCity = function(d){return "mesto"};
 
-exports.backgroundDesert = function(d){return "desert"};
+exports.backgroundDesert = function(d){return "púšť"};
 
-exports.backgroundRainbow = function(d){return "rainbow"};
+exports.backgroundRainbow = function(d){return "dúha"};
 
-exports.backgroundSoccer = function(d){return "soccer"};
+exports.backgroundSoccer = function(d){return "futbal"};
 
-exports.backgroundSpace = function(d){return "space"};
+exports.backgroundSpace = function(d){return "vesmír"};
 
-exports.backgroundTennis = function(d){return "tennis"};
+exports.backgroundTennis = function(d){return "tenis"};
 
-exports.backgroundWinter = function(d){return "winter"};
+exports.backgroundWinter = function(d){return "zima"};
 
 exports.catActions = function(d){return "Akcie"};
 
@@ -21379,7 +21386,7 @@ exports.emotion = function(d){return "nálada"};
 
 exports.finalLevel = function(d){return "Gratulujem! Vyriešili ste posledné puzzle."};
 
-exports.for = function(d){return "for"};
+exports.for = function(d){return "pre"};
 
 exports.hello = function(d){return "ahoj"};
 
@@ -21431,29 +21438,29 @@ exports.moveDistancePixels = function(d){return "pixely"};
 
 exports.moveDistanceRandom = function(d){return "náhodne pixely"};
 
-exports.moveDistanceTooltip = function(d){return "Presunúť herca na špecifickú vzdialenosť v určenom smere."};
+exports.moveDistanceTooltip = function(d){return "Presunie postavu o zadanú vzdialenosť v určenom smere."};
 
 exports.moveSprite = function(d){return "presunúť"};
 
-exports.moveSpriteN = function(d){return "presunúť herca "+v(d,"spriteIndex")};
+exports.moveSpriteN = function(d){return "posuň postavu "+v(d,"spriteIndex")};
 
 exports.moveDown = function(d){return "posunúť nadol"};
 
-exports.moveDownTooltip = function(d){return "Posunúť herca nadol."};
+exports.moveDownTooltip = function(d){return "Posunúť postavu nadol."};
 
 exports.moveLeft = function(d){return "posunúť doľava"};
 
-exports.moveLeftTooltip = function(d){return "Posunúť herca vľavo."};
+exports.moveLeftTooltip = function(d){return "Posunúť postavu vľavo."};
 
 exports.moveRight = function(d){return "posunúť doprava"};
 
-exports.moveRightTooltip = function(d){return "Posunúť herca vpravo."};
+exports.moveRightTooltip = function(d){return "Posunúť postavu vpravo."};
 
 exports.moveUp = function(d){return "posunúť nahor"};
 
-exports.moveUpTooltip = function(d){return "Move the paddle up."};
+exports.moveUpTooltip = function(d){return "Posunúť postavu smerom hore."};
 
-exports.moveTooltip = function(d){return "Move a character."};
+exports.moveTooltip = function(d){return "Posunúť postavu."};
 
 exports.nextLevel = function(d){return "Gratulujem! Vyriešil si hádanku."};
 
@@ -21461,7 +21468,7 @@ exports.no = function(d){return "Nie"};
 
 exports.numBlocksNeeded = function(d){return "Táto hádanka môže byť vyriešená s %1 blokmi."};
 
-exports.ouchExclamation = function(d){return "Ouch!"};
+exports.ouchExclamation = function(d){return "Au!"};
 
 exports.playSoundCrunch = function(d){return "prehrať zvuk chrumnutia"};
 
@@ -21489,51 +21496,51 @@ exports.playSoundWinPoint2 = function(d){return "prehraj so zvukom bodu 2"};
 
 exports.playSoundWood = function(d){return "prehraj drevený zvuk"};
 
-exports.positionOutTopLeft = function(d){return "to the above top left position"};
+exports.positionOutTopLeft = function(d){return "na pozíciu hore vľavo"};
 
-exports.positionOutTopRight = function(d){return "to the above top right position"};
+exports.positionOutTopRight = function(d){return "na pozíciu hore vpravo"};
 
-exports.positionTopOutLeft = function(d){return "to the top outside left position"};
+exports.positionTopOutLeft = function(d){return "na pozíciu hore vľavo zvonku"};
 
-exports.positionTopLeft = function(d){return "to the top left position"};
+exports.positionTopLeft = function(d){return "na pozíciu hore vľavo"};
 
-exports.positionTopCenter = function(d){return "to the top center position"};
+exports.positionTopCenter = function(d){return "na pozíciu hore do stredu"};
 
-exports.positionTopRight = function(d){return "to the top right position"};
+exports.positionTopRight = function(d){return "na pozíciu hore vpravo"};
 
-exports.positionTopOutRight = function(d){return "to the top outside right position"};
+exports.positionTopOutRight = function(d){return "na pozíciu hore vpravo zvonku"};
 
-exports.positionMiddleLeft = function(d){return "to the middle left position"};
+exports.positionMiddleLeft = function(d){return "na pozíciu v strede vľavo"};
 
-exports.positionMiddleCenter = function(d){return "to the middle center position"};
+exports.positionMiddleCenter = function(d){return "na pozíciu v strede do stredu"};
 
-exports.positionMiddleRight = function(d){return "to the middle right position"};
+exports.positionMiddleRight = function(d){return "na pozíciu v strede vpravo"};
 
-exports.positionBottomOutLeft = function(d){return "to the bottom outside left position"};
+exports.positionBottomOutLeft = function(d){return "na pozíciu dole vľavo zvonku"};
 
-exports.positionBottomLeft = function(d){return "to the bottom left position"};
+exports.positionBottomLeft = function(d){return "na pozíciu dole vľavo"};
 
-exports.positionBottomCenter = function(d){return "to the bottom center position"};
+exports.positionBottomCenter = function(d){return "na pozíciu dole do stredu"};
 
-exports.positionBottomRight = function(d){return "to the bottom right position"};
+exports.positionBottomRight = function(d){return "na pozíciu dole vpravo"};
 
-exports.positionBottomOutRight = function(d){return "to the bottom outside right position"};
+exports.positionBottomOutRight = function(d){return "na pozíciu dole vpravo zvonku"};
 
-exports.positionOutBottomLeft = function(d){return "to the below bottom left position"};
+exports.positionOutBottomLeft = function(d){return "na pozíciu dole vľavo pod"};
 
-exports.positionOutBottomRight = function(d){return "to the below bottom right position"};
+exports.positionOutBottomRight = function(d){return "na pozíciu dole vpravo pod"};
 
-exports.positionRandom = function(d){return "to the random position"};
+exports.positionRandom = function(d){return "na náhodnú pozíciu"};
 
-exports.projectileBlueFireball = function(d){return "blue fireball"};
+exports.projectileBlueFireball = function(d){return "modrá ohnivá guľa"};
 
-exports.projectilePurpleFireball = function(d){return "purple fireball"};
+exports.projectilePurpleFireball = function(d){return "fialová ohnivá guľa"};
 
-exports.projectileRedFireball = function(d){return "red fireball"};
+exports.projectileRedFireball = function(d){return "červená ohnivá guľa"};
 
-exports.projectileYellowHearts = function(d){return "yellow hearts"};
+exports.projectileYellowHearts = function(d){return "žlté srdcia"};
 
-exports.projectilePurpleHearts = function(d){return "purple hearts"};
+exports.projectilePurpleHearts = function(d){return "fialové srdcia"};
 
 exports.projectileRedHearts = function(d){return "červené srdcia"};
 
@@ -21541,7 +21548,7 @@ exports.projectileRandom = function(d){return "náhodný"};
 
 exports.projectileAnna = function(d){return "Anna"};
 
-exports.projectileElsa = function(d){return "Elsa"};
+exports.projectileElsa = function(d){return "Elza"};
 
 exports.projectileHiro = function(d){return "Hiro"};
 
@@ -21559,9 +21566,9 @@ exports.repeatForeverTooltip = function(d){return "Vykonajte akcie v tomto bloku
 
 exports.saySprite = function(d){return "povedať"};
 
-exports.saySpriteN = function(d){return "herec "+v(d,"spriteIndex")+" povie"};
+exports.saySpriteN = function(d){return "postava "+v(d,"spriteIndex")+" povedz"};
 
-exports.saySpriteTooltip = function(d){return "Pop up a speech bubble with the associated text from the specified character."};
+exports.saySpriteTooltip = function(d){return "Zobrazí dialógovú bublinu s textom od konkrétnej postavy."};
 
 exports.scoreText = function(d){return "Počet bodov: "+v(d,"playerScore")};
 
@@ -21597,9 +21604,9 @@ exports.setBackgroundWinter = function(d){return "nastaviť zimu ako pozadie"};
 
 exports.setBackgroundTooltip = function(d){return "Nastaví obrázok pozadia"};
 
-exports.setEnemySpeed = function(d){return "set enemy speed"};
+exports.setEnemySpeed = function(d){return "nastav rýchlosť nepriateľa"};
 
-exports.setPlayerSpeed = function(d){return "set player speed"};
+exports.setPlayerSpeed = function(d){return "nastav rýchlosť hráča"};
 
 exports.setScoreText = function(d){return "nastaviť skóre"};
 
@@ -21615,145 +21622,145 @@ exports.setSpriteEmotionRandom = function(d){return "prejdi k náhodnej nálade"
 
 exports.setSpriteEmotionSad = function(d){return "prejdi k smutnej nálade"};
 
-exports.setSpriteEmotionTooltip = function(d){return "Nastaví náladu herca"};
+exports.setSpriteEmotionTooltip = function(d){return "Nastaví náladu postavy"};
 
-exports.setSpriteAlien = function(d){return "k obrazu cudzinca"};
+exports.setSpriteAlien = function(d){return "na obrázok mimozemšťana"};
 
-exports.setSpriteBat = function(d){return "k obrazu netopiera"};
+exports.setSpriteBat = function(d){return "na obrázok netopiera"};
 
-exports.setSpriteBird = function(d){return "k obrazu vtáka"};
+exports.setSpriteBird = function(d){return "na obrázok vtáka"};
 
-exports.setSpriteCat = function(d){return "k obrazu mačky"};
+exports.setSpriteCat = function(d){return "na obrázok mačky"};
 
-exports.setSpriteCaveBoy = function(d){return "k obrazu jaskynného chlapca"};
+exports.setSpriteCaveBoy = function(d){return "na obrázok jaskynného chlapca"};
 
-exports.setSpriteCaveGirl = function(d){return "k obrazu jaskynného dievčaťa"};
+exports.setSpriteCaveGirl = function(d){return "na obrázok jaskynného dievčaťa"};
 
-exports.setSpriteDinosaur = function(d){return "k obrazu dinosaura"};
+exports.setSpriteDinosaur = function(d){return "na obrázok dinosaura"};
 
-exports.setSpriteDog = function(d){return "k obrazu psa"};
+exports.setSpriteDog = function(d){return "na obrázok psa"};
 
-exports.setSpriteDragon = function(d){return "k obrazu draka"};
+exports.setSpriteDragon = function(d){return "na obrázok draka"};
 
-exports.setSpriteGhost = function(d){return "k obrazu ducha"};
+exports.setSpriteGhost = function(d){return "na obrázok ducha"};
 
-exports.setSpriteHidden = function(d){return "k skrytému obrazu"};
+exports.setSpriteHidden = function(d){return "na skrytý obrázok"};
 
 exports.setSpriteHideK1 = function(d){return "skryť"};
 
-exports.setSpriteAnna = function(d){return "to a Anna image"};
+exports.setSpriteAnna = function(d){return "na obrázok Anny"};
 
-exports.setSpriteElsa = function(d){return "to a Elsa image"};
+exports.setSpriteElsa = function(d){return "na obrázok Elzy"};
 
-exports.setSpriteHiro = function(d){return "to a Hiro image"};
+exports.setSpriteHiro = function(d){return "na obrázok Hira"};
 
-exports.setSpriteBaymax = function(d){return "to a Baymax image"};
+exports.setSpriteBaymax = function(d){return "na obrázok Baymaxa"};
 
-exports.setSpriteRapunzel = function(d){return "to a Rapunzel image"};
+exports.setSpriteRapunzel = function(d){return "na obrázok Rapunzel"};
 
-exports.setSpriteKnight = function(d){return "k obrazu rytiera"};
+exports.setSpriteKnight = function(d){return "na obrázok rytiera"};
 
-exports.setSpriteMonster = function(d){return "k obrazu príšery"};
+exports.setSpriteMonster = function(d){return "na obrázok príšery"};
 
-exports.setSpriteNinja = function(d){return "k obrazu maskovaného ninju"};
+exports.setSpriteNinja = function(d){return "na obrázok maskovaného ninju"};
 
-exports.setSpriteOctopus = function(d){return "k obrazu chobotnice"};
+exports.setSpriteOctopus = function(d){return "na obrázok chobotnice"};
 
-exports.setSpritePenguin = function(d){return "to a penguin image"};
+exports.setSpritePenguin = function(d){return "na obrázok tučniaka"};
 
-exports.setSpritePirate = function(d){return "to a pirate image"};
+exports.setSpritePirate = function(d){return "na obrázok piráta"};
 
-exports.setSpritePrincess = function(d){return "to a princess image"};
+exports.setSpritePrincess = function(d){return "na obrázok princezny"};
 
-exports.setSpriteRandom = function(d){return "to a random image"};
+exports.setSpriteRandom = function(d){return "na náhodný obrázok"};
 
-exports.setSpriteRobot = function(d){return "to a robot image"};
+exports.setSpriteRobot = function(d){return "na obrázok robota"};
 
-exports.setSpriteShowK1 = function(d){return "show"};
+exports.setSpriteShowK1 = function(d){return "ukázať"};
 
-exports.setSpriteSpacebot = function(d){return "to a spacebot image"};
+exports.setSpriteSpacebot = function(d){return "na obrázok spacebota"};
 
-exports.setSpriteSoccerGirl = function(d){return "to a soccer girl image"};
+exports.setSpriteSoccerGirl = function(d){return "na obrázok futbalistky"};
 
-exports.setSpriteSoccerBoy = function(d){return "to a soccer boy image"};
+exports.setSpriteSoccerBoy = function(d){return "na obrázok futbalistu"};
 
-exports.setSpriteSquirrel = function(d){return "to a squirrel image"};
+exports.setSpriteSquirrel = function(d){return "na obrázok veveričky"};
 
-exports.setSpriteTennisGirl = function(d){return "to a tennis girl image"};
+exports.setSpriteTennisGirl = function(d){return "na obrázok tenistky"};
 
-exports.setSpriteTennisBoy = function(d){return "to a tennis boy image"};
+exports.setSpriteTennisBoy = function(d){return "na obrázok tenistu"};
 
-exports.setSpriteUnicorn = function(d){return "to a unicorn image"};
+exports.setSpriteUnicorn = function(d){return "na obrázok jednorožca"};
 
-exports.setSpriteWitch = function(d){return "to a witch image"};
+exports.setSpriteWitch = function(d){return "na obrázok čarodejnice"};
 
-exports.setSpriteWizard = function(d){return "to a wizard image"};
+exports.setSpriteWizard = function(d){return "na obrázok čarodeja"};
 
-exports.setSpritePositionTooltip = function(d){return "Instantly moves an actor to the specified location."};
+exports.setSpritePositionTooltip = function(d){return "Okamžite presunie postavu na zadanú pozíciu."};
 
-exports.setSpriteK1Tooltip = function(d){return "Shows or hides the specified actor."};
+exports.setSpriteK1Tooltip = function(d){return "Ukáže alebo skryje vybranú postavu."};
 
-exports.setSpriteTooltip = function(d){return "Sets the character image"};
+exports.setSpriteTooltip = function(d){return "Nastaví obrázok postavy"};
 
-exports.setSpriteSizeRandom = function(d){return "to a random size"};
+exports.setSpriteSizeRandom = function(d){return "na náhodnú veľkosť"};
 
-exports.setSpriteSizeVerySmall = function(d){return "to a very small size"};
+exports.setSpriteSizeVerySmall = function(d){return "na veľmi malú veľkosť"};
 
-exports.setSpriteSizeSmall = function(d){return "to a small size"};
+exports.setSpriteSizeSmall = function(d){return "na malú veľkosť"};
 
-exports.setSpriteSizeNormal = function(d){return "to a normal size"};
+exports.setSpriteSizeNormal = function(d){return "na normálnu veľkosť"};
 
-exports.setSpriteSizeLarge = function(d){return "to a large size"};
+exports.setSpriteSizeLarge = function(d){return "na veľkú veľkosť"};
 
-exports.setSpriteSizeVeryLarge = function(d){return "to a very large size"};
+exports.setSpriteSizeVeryLarge = function(d){return "na veľmi veľkú veľkosť"};
 
-exports.setSpriteSizeTooltip = function(d){return "Sets the size of an actor"};
+exports.setSpriteSizeTooltip = function(d){return "Nastaví veľkosť postavy"};
 
-exports.setSpriteSpeedRandom = function(d){return "to a random speed"};
+exports.setSpriteSpeedRandom = function(d){return "na náhodnú rýchlosť"};
 
-exports.setSpriteSpeedVerySlow = function(d){return "to a very slow speed"};
+exports.setSpriteSpeedVerySlow = function(d){return "na veľmi pomalú rýchlosť"};
 
-exports.setSpriteSpeedSlow = function(d){return "to a slow speed"};
+exports.setSpriteSpeedSlow = function(d){return "na pomalú rýchlosť"};
 
-exports.setSpriteSpeedNormal = function(d){return "to a normal speed"};
+exports.setSpriteSpeedNormal = function(d){return "na normálnu rýchlosť"};
 
-exports.setSpriteSpeedFast = function(d){return "to a fast speed"};
+exports.setSpriteSpeedFast = function(d){return "na rýchlu rýchlosť"};
 
-exports.setSpriteSpeedVeryFast = function(d){return "to a very fast speed"};
+exports.setSpriteSpeedVeryFast = function(d){return "na veľmi rýchlu rýchlosť"};
 
-exports.setSpriteSpeedTooltip = function(d){return "Sets the speed of a character"};
+exports.setSpriteSpeedTooltip = function(d){return "Nastaví rýchlosť postavy"};
 
-exports.setSpriteZombie = function(d){return "to a zombie image"};
+exports.setSpriteZombie = function(d){return "na obrázok zombíka"};
 
-exports.shareStudioTwitter = function(d){return "Check out the story I made. I wrote it myself with @codeorg"};
+exports.shareStudioTwitter = function(d){return "Pozri si príbeh, ktorý som urobil. Vytvoril som ho sám s @codeorg"};
 
-exports.shareGame = function(d){return "Share your story:"};
+exports.shareGame = function(d){return "Zdieľaj svoj príbeh:"};
 
-exports.showCoordinates = function(d){return "show coordinates"};
+exports.showCoordinates = function(d){return "zobraziť súradnice"};
 
-exports.showCoordinatesTooltip = function(d){return "show the protagonist's coordinates on the screen"};
+exports.showCoordinatesTooltip = function(d){return "zobrazí súradnice protagonistov na obrazovke"};
 
-exports.showTitleScreen = function(d){return "show title screen"};
+exports.showTitleScreen = function(d){return "zobraziť úvodnú obrazovku"};
 
-exports.showTitleScreenTitle = function(d){return "title"};
+exports.showTitleScreenTitle = function(d){return "nadpis"};
 
 exports.showTitleScreenText = function(d){return "text"};
 
-exports.showTSDefTitle = function(d){return "type title here"};
+exports.showTSDefTitle = function(d){return "sem napíš nadpis"};
 
-exports.showTSDefText = function(d){return "type text here"};
+exports.showTSDefText = function(d){return "sem napíš text"};
 
-exports.showTitleScreenTooltip = function(d){return "Show a title screen with the associated title and text."};
+exports.showTitleScreenTooltip = function(d){return "Zobrazí úvodnú obrazovku s priradeným nadpisom a textom."};
 
-exports.size = function(d){return "size"};
+exports.size = function(d){return "veľkosť"};
 
 exports.setSprite = function(d){return "nastaviť"};
 
-exports.setSpriteN = function(d){return "set actor "+v(d,"spriteIndex")};
+exports.setSpriteN = function(d){return "nastav postavu "+v(d,"spriteIndex")};
 
 exports.soundCrunch = function(d){return "chrúmať"};
 
-exports.soundGoal1 = function(d){return "goal 1"};
+exports.soundGoal1 = function(d){return "cieľ 1"};
 
 exports.soundGoal2 = function(d){return "cieľ 2"};
 
@@ -21779,21 +21786,21 @@ exports.speed = function(d){return "rýchlosť"};
 
 exports.stopSprite = function(d){return "zastaviť"};
 
-exports.stopSpriteN = function(d){return "zastaviť herca "+v(d,"spriteIndex")};
+exports.stopSpriteN = function(d){return "zastaviť postavu "+v(d,"spriteIndex")};
 
-exports.stopTooltip = function(d){return "Zastaví pohyb herca."};
+exports.stopTooltip = function(d){return "Zastaví pohyb postavy."};
 
 exports.throwSprite = function(d){return "hodiť"};
 
-exports.throwSpriteN = function(d){return "hod herca "+v(d,"spriteIndex")};
+exports.throwSpriteN = function(d){return "postava "+v(d,"spriteIndex")+" hoď"};
 
-exports.throwTooltip = function(d){return "Hodí projektil od zadaného herca."};
+exports.throwTooltip = function(d){return "Hodí projektil od zadanej postavy."};
 
 exports.vanish = function(d){return "zmiznúť"};
 
-exports.vanishActorN = function(d){return "herec "+v(d,"spriteIndex")+" zmizne"};
+exports.vanishActorN = function(d){return "odstráň postavu "+v(d,"spriteIndex")};
 
-exports.vanishTooltip = function(d){return "Vanishes the actor."};
+exports.vanishTooltip = function(d){return "Odstráni postavu."};
 
 exports.waitFor = function(d){return "čakať na"};
 
@@ -21843,47 +21850,47 @@ exports.whenRight = function(d){return "keď šípka vpravo"};
 
 exports.whenRightTooltip = function(d){return "Vykonať akcie nižšie pri stlačení šípky vpravo."};
 
-exports.whenSpriteClicked = function(d){return "po kliknutí na herca"};
+exports.whenSpriteClicked = function(d){return "po kliknutí na postavu"};
 
-exports.whenSpriteClickedN = function(d){return "po kliknutí na herca "+v(d,"spriteIndex")};
+exports.whenSpriteClickedN = function(d){return "po kliknutí na postavu "+v(d,"spriteIndex")};
 
-exports.whenSpriteClickedTooltip = function(d){return "Vykonajte akcie po kliknutí na herca."};
+exports.whenSpriteClickedTooltip = function(d){return "Vykoná nižšie uvedené akcie po kliknutí na postavu."};
 
-exports.whenSpriteCollidedN = function(d){return "keď herec "+v(d,"spriteIndex")};
+exports.whenSpriteCollidedN = function(d){return "keď postava "+v(d,"spriteIndex")};
 
-exports.whenSpriteCollidedTooltip = function(d){return "Vykonajte akcie uvedené nižšie, keď herec sa dotýka iného herca."};
+exports.whenSpriteCollidedTooltip = function(d){return "Vykoná nižšie uvedené akcie, keď sa postava dotýka inej postavy."};
 
 exports.whenSpriteCollidedWith = function(d){return "dotýka sa"};
 
-exports.whenSpriteCollidedWithAnyActor = function(d){return "touches any actor"};
+exports.whenSpriteCollidedWithAnyActor = function(d){return "dotýka sa nejakej postavy"};
 
-exports.whenSpriteCollidedWithAnyEdge = function(d){return "touches any edge"};
+exports.whenSpriteCollidedWithAnyEdge = function(d){return "dotýka sa okraja"};
 
-exports.whenSpriteCollidedWithAnyProjectile = function(d){return "touches any projectile"};
+exports.whenSpriteCollidedWithAnyProjectile = function(d){return "dotýka sa projektilu"};
 
-exports.whenSpriteCollidedWithAnything = function(d){return "touches anything"};
+exports.whenSpriteCollidedWithAnything = function(d){return "dotýka sa čohokoľvek"};
 
-exports.whenSpriteCollidedWithN = function(d){return "touches actor "+v(d,"spriteIndex")};
+exports.whenSpriteCollidedWithN = function(d){return "dotýka sa postavy "+v(d,"spriteIndex")};
 
-exports.whenSpriteCollidedWithBlueFireball = function(d){return "touches blue fireball"};
+exports.whenSpriteCollidedWithBlueFireball = function(d){return "dotýka sa modrej ohnivej guli"};
 
-exports.whenSpriteCollidedWithPurpleFireball = function(d){return "touches purple fireball"};
+exports.whenSpriteCollidedWithPurpleFireball = function(d){return "dotýka sa fialovej ohnivej guli"};
 
-exports.whenSpriteCollidedWithRedFireball = function(d){return "touches red fireball"};
+exports.whenSpriteCollidedWithRedFireball = function(d){return "dotýka sa červenej ohnivej guli"};
 
-exports.whenSpriteCollidedWithYellowHearts = function(d){return "touches yellow hearts"};
+exports.whenSpriteCollidedWithYellowHearts = function(d){return "dotýka sa žltých sŕdc"};
 
-exports.whenSpriteCollidedWithPurpleHearts = function(d){return "touches purple hearts"};
+exports.whenSpriteCollidedWithPurpleHearts = function(d){return "dotýka sa fialových sŕdc"};
 
-exports.whenSpriteCollidedWithRedHearts = function(d){return "touches red hearts"};
+exports.whenSpriteCollidedWithRedHearts = function(d){return "dotýka sa červených sŕdc"};
 
-exports.whenSpriteCollidedWithBottomEdge = function(d){return "touches bottom edge"};
+exports.whenSpriteCollidedWithBottomEdge = function(d){return "dotýka sa spodného okraja"};
 
-exports.whenSpriteCollidedWithLeftEdge = function(d){return "touches left edge"};
+exports.whenSpriteCollidedWithLeftEdge = function(d){return "dotýka sa ľavého okraja"};
 
-exports.whenSpriteCollidedWithRightEdge = function(d){return "touches right edge"};
+exports.whenSpriteCollidedWithRightEdge = function(d){return "dotýka sa pravého okraja"};
 
-exports.whenSpriteCollidedWithTopEdge = function(d){return "touches top edge"};
+exports.whenSpriteCollidedWithTopEdge = function(d){return "dotýka sa horného okraja"};
 
 exports.whenUp = function(d){return "keď šípka nahor"};
 

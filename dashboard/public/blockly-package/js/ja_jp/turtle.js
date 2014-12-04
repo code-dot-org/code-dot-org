@@ -14855,7 +14855,7 @@ exports.numLinesOfCodeWritten = function(d){return "あなたはたった今 "+p
 
 exports.play = function(d){return "再生"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "印刷"};
 
 exports.puzzleTitle = function(d){return "パズル "+v(d,"puzzle_number")+" の "+v(d,"stage_total")};
 
@@ -14901,7 +14901,7 @@ exports.backToPreviousLevel = function(d){return "前のレベルに戻る"};
 
 exports.saveToGallery = function(d){return "ギャラリーに保存"};
 
-exports.savedToGallery = function(d){return "ギャラリーに保存しました！"};
+exports.savedToGallery = function(d){return "ギャラリーに保存されました！"};
 
 exports.shareFailure = function(d){return "プログラムをシェアできませんでした。"};
 
@@ -14942,7 +14942,7 @@ exports.defaultTwitterText = function(d){return "Check out what I made"};
 var MessageFormat = require("messageformat");MessageFormat.locale.ja=function(n){return "other"}
 exports.blocksUsed = function(d){return "使われているブロック: %1"};
 
-exports.branches = function(d){return "branches"};
+exports.branches = function(d){return "枝"};
 
 exports.catColour = function(d){return "色"};
 
@@ -14960,23 +14960,23 @@ exports.catLogic = function(d){return "ロジック（論理）"};
 
 exports.colourTooltip = function(d){return "鉛筆の色を変更"};
 
-exports.createACircle = function(d){return "create a circle"};
+exports.createACircle = function(d){return "円を描く"};
 
-exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+exports.createSnowflakeSquare = function(d){return "正方形で雪の結晶を描く"};
 
-exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+exports.createSnowflakeParallelogram = function(d){return "平行四辺形で雪の結晶を描く"};
 
-exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+exports.createSnowflakeLine = function(d){return "線で雪の結晶を描く"};
 
-exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+exports.createSnowflakeSpiral = function(d){return "らせんで雪の結晶を描く"};
 
-exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+exports.createSnowflakeFlower = function(d){return "花で雪の結晶を描く"};
 
-exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+exports.createSnowflakeFractal = function(d){return "フラクタルで雪の結晶を描く"};
 
-exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+exports.createSnowflakeRandom = function(d){return "ランダムに雪の結晶を描く"};
 
-exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
+exports.createASnowflakeBranch = function(d){return "枝を使って雪の結晶を描く"};
 
 exports.degrees = function(d){return "度"};
 
@@ -15012,11 +15012,11 @@ exports.drawAStar = function(d){return "星形を描画"};
 
 exports.drawATree = function(d){return "木を描画"};
 
-exports.drawUpperWave = function(d){return "draw upper wave"};
+exports.drawUpperWave = function(d){return "上向きの波を描く"};
 
-exports.drawLowerWave = function(d){return "draw lower wave"};
+exports.drawLowerWave = function(d){return "下向きの波を描く"};
 
-exports.drawStamp = function(d){return "draw stamp"};
+exports.drawStamp = function(d){return "スタンプを描く"};
 
 exports.heightParameter = function(d){return "高さ"};
 
@@ -15070,7 +15070,7 @@ exports.penTooltip = function(d){return "鉛筆を持ち上げたり、下げた
 
 exports.penUp = function(d){return "鉛筆を上げる。\n"};
 
-exports.reinfFeedbackMsg = function(d){return "これは自分が描こうとしていた画でしょうか？「もう一度」ボタンで自分で描いた画を確認する事ができます。"};
+exports.reinfFeedbackMsg = function(d){return "絵が描けましたね！別の絵を描いてもいいですし、次のパズルに進んでもいいですよ。"};
 
 exports.setColour = function(d){return "色の設定"};
 
@@ -15084,7 +15084,7 @@ exports.showMe = function(d){return "見せてください"};
 
 exports.showTurtle = function(d){return "アーティストを見せる。"};
 
-exports.sizeParameter = function(d){return "size"};
+exports.sizeParameter = function(d){return "おおきさ"};
 
 exports.step = function(d){return "ステップ"};
 

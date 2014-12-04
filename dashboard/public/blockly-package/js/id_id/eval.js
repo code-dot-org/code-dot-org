@@ -14558,7 +14558,7 @@ exports.hintHeader = function(d){return "Berikut adalah tip:"};
 
 exports.genericFeedback = function(d){return "Lihatlah hasil anda dan cobalah untuk memperbaiki program Anda."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Lihat apa yang saya buat"};
 
 
 },{"messageformat":62}],50:[function(require,module,exports){

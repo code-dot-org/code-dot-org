@@ -12385,7 +12385,7 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.pt=function(n){return n===1?"one":"other"}
 exports.bounceBall = function(d){return "ressalta a bola"};
 
-exports.bounceBallTooltip = function(d){return "Bounce a ball off of an object."};
+exports.bounceBallTooltip = function(d){return "Ressaltar a bola num objecto."};
 
 exports.continue = function(d){return "Continua"};
 
@@ -12433,7 +12433,7 @@ exports.makeYourOwn = function(d){return "Cria o teu Jogo de Lançamento"};
 
 exports.moveDown = function(d){return "move para baixo"};
 
-exports.moveDownTooltip = function(d){return "Move the paddle down."};
+exports.moveDownTooltip = function(d){return "Mover a raquete para baixo."};
 
 exports.moveForward = function(d){return "segue em frente"};
 
@@ -12441,15 +12441,15 @@ exports.moveForwardTooltip = function(d){return "Segue em frente uma unidade."};
 
 exports.moveLeft = function(d){return "move para a esquerda"};
 
-exports.moveLeftTooltip = function(d){return "Move the paddle to the left."};
+exports.moveLeftTooltip = function(d){return "Mover a raquete para a esquerda."};
 
 exports.moveRight = function(d){return "move para a direita"};
 
-exports.moveRightTooltip = function(d){return "Move the paddle to the right."};
+exports.moveRightTooltip = function(d){return "Mover a raquete para a direita."};
 
 exports.moveUp = function(d){return "move para cima"};
 
-exports.moveUpTooltip = function(d){return "Move the paddle up."};
+exports.moveUpTooltip = function(d){return "Mover a raquete para cima."};
 
 exports.nextLevel = function(d){return "Parabéns! Completaste este puzzle."};
 
@@ -12477,7 +12477,7 @@ exports.playSoundGoal1 = function(d){return "tocar som do objetivo 1"};
 
 exports.playSoundGoal2 = function(d){return "tocar som do objetivo 2"};
 
-exports.playSoundHit = function(d){return "play hit sound"};
+exports.playSoundHit = function(d){return "tocar som de embate"};
 
 exports.playSoundLosePoint = function(d){return "tocar som de ponto perdido"};
 
@@ -12509,7 +12509,7 @@ exports.repeatUntilBlocked = function(d){return "enquanto houver caminho em fren
 
 exports.repeatUntilFinish = function(d){return "repete até terminar"};
 
-exports.scoreText = function(d){return "Score: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
+exports.scoreText = function(d){return "Pontuação: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
 
 exports.setBackgroundRandom = function(d){return "define uma cena aleatória"};
 

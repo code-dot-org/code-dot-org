@@ -10806,7 +10806,7 @@ exports.numLinesOfCodeWritten = function(d){return "Éppen most írtál újabb "
 
 exports.play = function(d){return "lejátszás"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Nyomtatás"};
 
 exports.puzzleTitle = function(d){return v(d,"puzzle_number")+"/"+v(d,"stage_total")+". feladvány"};
 
@@ -10850,9 +10850,9 @@ exports.hintRequest = function(d){return "Segítség"};
 
 exports.backToPreviousLevel = function(d){return "Vissza az előző szintre"};
 
-exports.saveToGallery = function(d){return "Mentés a galériába"};
+exports.saveToGallery = function(d){return "Mentése a galériába"};
 
-exports.savedToGallery = function(d){return "Elmentve a galáriádba"};
+exports.savedToGallery = function(d){return "Elmentve a galériában!"};
 
 exports.shareFailure = function(d){return "Sajnálom, de nem tudtam megosztani ezt a programot."};
 
@@ -10886,7 +10886,7 @@ exports.hintHeader = function(d){return "Egy tipp:"};
 
 exports.genericFeedback = function(d){return "Nem sikerült célba érnem. Kérlek javítsd a hibát."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Nézd meg, mit csináltam"};
 
 
 },{"messageformat":49}],37:[function(require,module,exports){

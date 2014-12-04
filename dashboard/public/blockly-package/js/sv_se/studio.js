@@ -16059,6 +16059,7 @@ levels.playlab_2 = utils.extend(levels.dog_and_cat_hello, {
   firstSpriteIndex: 20, // cave boy
   timeoutFailureTick: null,
   timeoutAfterWhenRun: true,
+  defaultEmotion: Emotions.HAPPY,
   goal: {
     successCondition: function () {
       return Studio.allWhenRunBlocksComplete() && Studio.sayComplete > 1;
@@ -16249,6 +16250,7 @@ levels.playlab_4 = {
   },
   background: 'tennis',
   avatarList: ['tennisboy', 'tennisgirl'],
+  defaultEmotion: Emotions.SAD,
   requiredBlocks: [
     [{
       test: 'moveDistance',
@@ -16336,6 +16338,7 @@ levels.playlab_5 = utils.extend(levels.click_hello, {
   background: 'space',
   firstSpriteIndex: 23, // spacebot
   timeoutAfterWhenRun: true,
+  defaultEmotion: Emotions.HAPPY,
   toolbox: tb(blockOfType('studio_saySprite')),
   startBlocks:
    '<block type="studio_whenSpriteClicked" deletable="false" x="20" y="20"></block>'
@@ -16470,6 +16473,7 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
     success: 'blue_fireball',
     imageWidth: 800
   },
+  defaultEmotion: Emotions.ANGRY,
   toolbox:
     tb(
       blockOfType('studio_move', {DIR: 8}) +
@@ -16562,6 +16566,7 @@ levels.playlab_7 = {
     'downButton',
     'upButton'
   ],
+  defaultEmotion: Emotions.HAPPY,
   map: [
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -16790,6 +16795,7 @@ levels.playlab_8 = {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
   avatarList: ['unicorn', 'wizard'],
+  defaultEmotion: Emotions.HAPPY,
   goal: {
     successCondition: function () {
       return Studio.sprite[0].isCollidingWith(1) && Studio.playerScore === 1;
@@ -16936,6 +16942,7 @@ levels.playlab_9 = {
   scale: {
     snapRadius: 2
   },
+  defaultEmotion: Emotions.ANGRY,
   softButtons: [
     'leftButton',
     'rightButton',
@@ -19018,7 +19025,7 @@ BlocklyApps.reset = function(first) {
       size: constants.DEFAULT_SPRITE_SIZE,
       dir: Direction.NONE,
       displayDir: Direction.SOUTH,
-      emotion: Emotions.NORMAL,
+      emotion: level.defaultEmotion || Emotions.NORMAL,
       // tickCount of last time sprite moved,
       lastMove: Infinity,
       // overridden as soon as we call setSprite
@@ -21178,7 +21185,7 @@ exports.errorUnusedFunction = function(d){return "You created a function, but ne
 
 exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
-exports.extraTopBlocks = function(d){return "Du har extra block som inte är kopplade till händelseblock."};
+exports.extraTopBlocks = function(d){return "Du har okopplade block. Menade du att fästa dessa till \"när startat\" blocket?"};
 
 exports.finalStage = function(d){return "Grattis! Du har slutfört den sista nivån."};
 
@@ -21202,7 +21209,7 @@ exports.listVariable = function(d){return "lista"};
 
 exports.makeYourOwnFlappy = function(d){return "Gör ditt eget Flappy-spel"};
 
-exports.missingBlocksErrorMsg = function(d){return "Prova med en eller flera av blocken nedan att lösa pusslet."};
+exports.missingBlocksErrorMsg = function(d){return "Prova att använda ett eller flera av blocken nedan för att lösa pusslet."};
 
 exports.nextLevel = function(d){return "Grattis! Du slutförde pussel "+v(d,"puzzleNumber")+"."};
 
@@ -21214,11 +21221,11 @@ exports.nextStageTrophies = function(d){return "Grattis! Du klarade "+v(d,"stage
 
 exports.numBlocksNeeded = function(d){return "Grattis! Du slutförde pussel "+v(d,"puzzleNumber")+". (Men du skulle bara behövt använda"+p(d,"numBlocks",0,"sv",{"one":"1 block","other":n(d,"numBlocks")+" block"})+".)"};
 
-exports.numLinesOfCodeWritten = function(d){return "Du skrev bara "+p(d,"numLines",0,"sv",{"one":"1 rad","other":n(d,"numLines")+" rader"})+" kod!"};
+exports.numLinesOfCodeWritten = function(d){return "Du skrev "+p(d,"numLines",0,"sv",{"one":"1 rad","other":n(d,"numLines")+" rader"})+" kod!"};
 
 exports.play = function(d){return "play"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Skriv ut"};
 
 exports.puzzleTitle = function(d){return "Pussel "+v(d,"puzzle_number")+" av "+v(d,"stage_total")};
 
@@ -21226,7 +21233,7 @@ exports.repeat = function(d){return "upprepa"};
 
 exports.resetProgram = function(d){return "Återställ"};
 
-exports.runProgram = function(d){return "starta programmet"};
+exports.runProgram = function(d){return "Kör"};
 
 exports.runTooltip = function(d){return "Starta programmet som gjorts av blocken på arbetsytan."};
 
@@ -21244,7 +21251,7 @@ exports.subtitle = function(d){return "en visuell programmeringsmiljö"};
 
 exports.textVariable = function(d){return "text"};
 
-exports.tooFewBlocksMsg = function(d){return "Du använder alla nödvändiga typer av block, men prova att använda flera av denna typen av block för att slutföra pusslet."};
+exports.tooFewBlocksMsg = function(d){return "Du använder alla sorters block du behöver, prova att använda fler av samma sorter för att göra klart pusslet."};
 
 exports.tooManyBlocksMsg = function(d){return "Detta pusslet kan lösas med <x id='START_SPAN'/><x id='END_SPAN'/> block."};
 
@@ -21262,9 +21269,9 @@ exports.hintRequest = function(d){return "See hint"};
 
 exports.backToPreviousLevel = function(d){return "Gå tillbaka till föregående nivå"};
 
-exports.saveToGallery = function(d){return "Spara till ditt galleri"};
+exports.saveToGallery = function(d){return "Spara till galleriet"};
 
-exports.savedToGallery = function(d){return "Sparat till ditt galleri!"};
+exports.savedToGallery = function(d){return "Sparad i galleriet!"};
 
 exports.shareFailure = function(d){return "Sorry, we can't share this program."};
 
@@ -21290,7 +21297,7 @@ exports.when = function(d){return "when"};
 
 exports.whenRun = function(d){return "när startat"};
 
-exports.tryHOC = function(d){return "Prove en Timme med Kod"};
+exports.tryHOC = function(d){return "Prova Kodtimmen"};
 
 exports.signup = function(d){return "Registrera dig för introduktionskursen"};
 
@@ -21307,31 +21314,31 @@ exports.actor = function(d){return "skådespelare"};
 
 exports.alienInvasion = function(d){return "Alien Invasion!"};
 
-exports.backgroundBlack = function(d){return "black"};
+exports.backgroundBlack = function(d){return "svart"};
 
-exports.backgroundCave = function(d){return "cave"};
+exports.backgroundCave = function(d){return "grotta"};
 
-exports.backgroundCloudy = function(d){return "cloudy"};
+exports.backgroundCloudy = function(d){return "molnigt"};
 
 exports.backgroundHardcourt = function(d){return "hardcourt"};
 
-exports.backgroundNight = function(d){return "night"};
+exports.backgroundNight = function(d){return "natt"};
 
-exports.backgroundUnderwater = function(d){return "underwater"};
+exports.backgroundUnderwater = function(d){return "undervattens"};
 
-exports.backgroundCity = function(d){return "city"};
+exports.backgroundCity = function(d){return "stad"};
 
-exports.backgroundDesert = function(d){return "desert"};
+exports.backgroundDesert = function(d){return "öken"};
 
-exports.backgroundRainbow = function(d){return "rainbow"};
+exports.backgroundRainbow = function(d){return "regnbåge"};
 
-exports.backgroundSoccer = function(d){return "soccer"};
+exports.backgroundSoccer = function(d){return "fotboll"};
 
 exports.backgroundSpace = function(d){return "space"};
 
 exports.backgroundTennis = function(d){return "tennis"};
 
-exports.backgroundWinter = function(d){return "winter"};
+exports.backgroundWinter = function(d){return "vinter"};
 
 exports.catActions = function(d){return "Åtgärder"};
 
@@ -21359,15 +21366,15 @@ exports.decrementPlayerScore = function(d){return "ta bort ett poäng"};
 
 exports.defaultSayText = function(d){return "skriv här"};
 
-exports.emotion = function(d){return "mood"};
+exports.emotion = function(d){return "humör"};
 
 exports.finalLevel = function(d){return "Grattis! Du har löst det sista pusslet."};
 
-exports.for = function(d){return "for"};
+exports.for = function(d){return "för"};
 
 exports.hello = function(d){return "hej"};
 
-exports.helloWorld = function(d){return "Hello World!"};
+exports.helloWorld = function(d){return "Hej Världen!"};
 
 exports.incrementPlayerScore = function(d){return "spelarens poäng"};
 
@@ -21507,7 +21514,7 @@ exports.positionOutBottomLeft = function(d){return "to the below bottom left pos
 
 exports.positionOutBottomRight = function(d){return "to the below bottom right position"};
 
-exports.positionRandom = function(d){return "to the random position"};
+exports.positionRandom = function(d){return "till den slumpmässga positionen"};
 
 exports.projectileBlueFireball = function(d){return "blått eldklot"};
 
@@ -21535,13 +21542,13 @@ exports.projectileRapunzel = function(d){return "Rapunzel"};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to playing your story."};
 
-exports.repeatForever = function(d){return "repeat forever"};
+exports.repeatForever = function(d){return "upprepa för evigt"};
 
 exports.repeatDo = function(d){return "gör"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the story is running."};
 
-exports.saySprite = function(d){return "say"};
+exports.saySprite = function(d){return "säg"};
 
 exports.saySpriteN = function(d){return "actor "+v(d,"spriteIndex")+" say"};
 
@@ -21549,7 +21556,7 @@ exports.saySpriteTooltip = function(d){return "Pop up a speech bubble with the a
 
 exports.scoreText = function(d){return "Poäng: "+v(d,"playerScore")};
 
-exports.setBackground = function(d){return "set background"};
+exports.setBackground = function(d){return "sätt bakgrund"};
 
 exports.setBackgroundRandom = function(d){return "set random scene"};
 
@@ -21623,7 +21630,7 @@ exports.setSpriteGhost = function(d){return "to a ghost image"};
 
 exports.setSpriteHidden = function(d){return "to a hidden image"};
 
-exports.setSpriteHideK1 = function(d){return "hide"};
+exports.setSpriteHideK1 = function(d){return "göm"};
 
 exports.setSpriteAnna = function(d){return "to a Anna image"};
 
@@ -21649,9 +21656,9 @@ exports.setSpritePirate = function(d){return "to a pirate image"};
 
 exports.setSpritePrincess = function(d){return "to a princess image"};
 
-exports.setSpriteRandom = function(d){return "to a random image"};
+exports.setSpriteRandom = function(d){return "till en slumpmässig bild"};
 
-exports.setSpriteRobot = function(d){return "to a robot image"};
+exports.setSpriteRobot = function(d){return "till en robotbild"};
 
 exports.setSpriteShowK1 = function(d){return "visa"};
 
@@ -21679,27 +21686,27 @@ exports.setSpriteK1Tooltip = function(d){return "Shows or hides the specified ac
 
 exports.setSpriteTooltip = function(d){return "Sets the character image"};
 
-exports.setSpriteSizeRandom = function(d){return "to a random size"};
+exports.setSpriteSizeRandom = function(d){return "till en slumpmässig storlek"};
 
-exports.setSpriteSizeVerySmall = function(d){return "to a very small size"};
+exports.setSpriteSizeVerySmall = function(d){return "till en mycket liten storlek"};
 
-exports.setSpriteSizeSmall = function(d){return "to a small size"};
+exports.setSpriteSizeSmall = function(d){return "till en liten storlek"};
 
-exports.setSpriteSizeNormal = function(d){return "to a normal size"};
+exports.setSpriteSizeNormal = function(d){return "till en normal storlek"};
 
-exports.setSpriteSizeLarge = function(d){return "to a large size"};
+exports.setSpriteSizeLarge = function(d){return "till en stor storlek"};
 
-exports.setSpriteSizeVeryLarge = function(d){return "to a very large size"};
+exports.setSpriteSizeVeryLarge = function(d){return "till en mycket stor storlek"};
 
 exports.setSpriteSizeTooltip = function(d){return "Sets the size of an actor"};
 
 exports.setSpriteSpeedRandom = function(d){return "till en slumpad hastighet"};
 
-exports.setSpriteSpeedVerySlow = function(d){return "to a very slow speed"};
+exports.setSpriteSpeedVerySlow = function(d){return "till en mycket långsam hastighet"};
 
-exports.setSpriteSpeedSlow = function(d){return "to a slow speed"};
+exports.setSpriteSpeedSlow = function(d){return "till en långsam hastighet"};
 
-exports.setSpriteSpeedNormal = function(d){return "to a normal speed"};
+exports.setSpriteSpeedNormal = function(d){return "till en normal hastighet"};
 
 exports.setSpriteSpeedFast = function(d){return "to a fast speed"};
 

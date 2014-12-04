@@ -12269,7 +12269,7 @@ exports.errorUnusedFunction = function(d){return "You created a function, but ne
 
 exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
-exports.extraTopBlocks = function(d){return "شما بلوک های اضافه ای دارید که به یک بلوک رویداد متصل نیست."};
+exports.extraTopBlocks = function(d){return "بلوک‌های نچسبیده‌ای هنوز باقی مونده. آیا قصد داری اینها را به بلوک \"هنگام اجرا\" وصل کنی؟"};
 
 exports.finalStage = function(d){return "تبریک می‌گوییم! شما مرحله‌ی نهایی را به پایان رساندید."};
 
@@ -12309,7 +12309,7 @@ exports.numLinesOfCodeWritten = function(d){return "شما "+p(d,"numLines",0,"f
 
 exports.play = function(d){return "بازی"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "چاپ"};
 
 exports.puzzleTitle = function(d){return "معمای "+v(d,"puzzle_number")+" از "+v(d,"stage_total")};
 
@@ -12325,7 +12325,7 @@ exports.score = function(d){return "نمره"};
 
 exports.showCodeHeader = function(d){return "کد نمایش"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "نمایش بلوک‌ها"};
 
 exports.showGeneratedCode = function(d){return "نمایشِ کد"};
 
@@ -12353,11 +12353,11 @@ exports.hintRequest = function(d){return "تذکر را ببینید"};
 
 exports.backToPreviousLevel = function(d){return "برگرد به سطح قبلی"};
 
-exports.saveToGallery = function(d){return "ذخیره در گالری شما"};
+exports.saveToGallery = function(d){return "ذخیره در گالری"};
 
-exports.savedToGallery = function(d){return "در گالری شما ذخیره شد!"};
+exports.savedToGallery = function(d){return "در گالری ذخیره شد!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "شرمنده، ما نمیتوانیم این برنامه را به اشتراک بگذاریم."};
 
 exports.typeFuncs = function(d){return "توابع قابل استفاده: %1"};
 
@@ -12365,7 +12365,7 @@ exports.typeHint = function(d){return "توجه کن که علامت‌های پ
 
 exports.workspaceHeader = function(d){return "بلوک‌های خودت رو اینجا سرهم کن: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "کد جاوا اسکریپت خودت را اینجا وارد کن"};
 
 exports.infinity = function(d){return "بی نهایت"};
 
@@ -12466,7 +12466,7 @@ exports.reinfFeedbackMsg = function(d){return "می‌توانید دکمه \"ت
 
 exports.scoreText = function(d){return "امتیاز: "+v(d,"playerScore")};
 
-exports.setBackground = function(d){return "set scene"};
+exports.setBackground = function(d){return "تنظیم صحنه"};
 
 exports.setBackgroundRandom = function(d){return "تعیین صحنه تصادفی"};
 
@@ -12512,7 +12512,7 @@ exports.setGravityVeryHigh = function(d){return " تنظیم جاذبه به خ�
 
 exports.setGravityTooltip = function(d){return "جاذبه سطح را تعیین می‌کند"};
 
-exports.setGround = function(d){return "set ground"};
+exports.setGround = function(d){return "تنظیم زمینه"};
 
 exports.setGroundRandom = function(d){return "قراردادن زمینه بطور تصادفی"};
 
@@ -12530,7 +12530,7 @@ exports.setGroundLava = function(d){return "قراردادن زمینه آتشف
 
 exports.setGroundTooltip = function(d){return "تصویر زمینه را تعیین می‌کند"};
 
-exports.setObstacle = function(d){return "set obstacle"};
+exports.setObstacle = function(d){return "تنظیم مانع"};
 
 exports.setObstacleRandom = function(d){return "قراردادن مانع بطور تصادفی"};
 
@@ -12548,7 +12548,7 @@ exports.setObstacleLaser = function(d){return "قراردادن مانع لیز�
 
 exports.setObstacleTooltip = function(d){return "تصویر مانع را تعیین می‌کند"};
 
-exports.setPlayer = function(d){return "set player"};
+exports.setPlayer = function(d){return "تنظیم بازیکن"};
 
 exports.setPlayerRandom = function(d){return "قراردادن بازیکن بطور تصادفی"};
 
@@ -12596,29 +12596,29 @@ exports.shareGame = function(d){return "بازی خود را به اشتراک �
 
 exports.soundRandom = function(d){return "در هم"};
 
-exports.soundBounce = function(d){return "bounce"};
+exports.soundBounce = function(d){return "پریدن"};
 
-exports.soundCrunch = function(d){return "crunch"};
+exports.soundCrunch = function(d){return "خرد شدن"};
 
-exports.soundDie = function(d){return "sad"};
+exports.soundDie = function(d){return "غمگین"};
 
-exports.soundHit = function(d){return "smash"};
+exports.soundHit = function(d){return "برخورد"};
 
-exports.soundPoint = function(d){return "point"};
+exports.soundPoint = function(d){return "امتیاز"};
 
-exports.soundSwoosh = function(d){return "swoosh"};
+exports.soundSwoosh = function(d){return "خش خش"};
 
-exports.soundWing = function(d){return "wing"};
+exports.soundWing = function(d){return "بال زدن"};
 
-exports.soundJet = function(d){return "jet"};
+exports.soundJet = function(d){return "جت"};
 
-exports.soundCrash = function(d){return "crash"};
+exports.soundCrash = function(d){return "تصادف"};
 
-exports.soundJingle = function(d){return "jingle"};
+exports.soundJingle = function(d){return "صدای زنگ"};
 
-exports.soundSplash = function(d){return "splash"};
+exports.soundSplash = function(d){return "چلپ چلوپ"};
 
-exports.soundLaser = function(d){return "laser"};
+exports.soundLaser = function(d){return "لیزر"};
 
 exports.speedRandom = function(d){return "تعیین سرعت بطور تصادفی"};
 

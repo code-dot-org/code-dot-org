@@ -16059,6 +16059,7 @@ levels.playlab_2 = utils.extend(levels.dog_and_cat_hello, {
   firstSpriteIndex: 20, // cave boy
   timeoutFailureTick: null,
   timeoutAfterWhenRun: true,
+  defaultEmotion: Emotions.HAPPY,
   goal: {
     successCondition: function () {
       return Studio.allWhenRunBlocksComplete() && Studio.sayComplete > 1;
@@ -16249,6 +16250,7 @@ levels.playlab_4 = {
   },
   background: 'tennis',
   avatarList: ['tennisboy', 'tennisgirl'],
+  defaultEmotion: Emotions.SAD,
   requiredBlocks: [
     [{
       test: 'moveDistance',
@@ -16336,6 +16338,7 @@ levels.playlab_5 = utils.extend(levels.click_hello, {
   background: 'space',
   firstSpriteIndex: 23, // spacebot
   timeoutAfterWhenRun: true,
+  defaultEmotion: Emotions.HAPPY,
   toolbox: tb(blockOfType('studio_saySprite')),
   startBlocks:
    '<block type="studio_whenSpriteClicked" deletable="false" x="20" y="20"></block>'
@@ -16470,6 +16473,7 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
     success: 'blue_fireball',
     imageWidth: 800
   },
+  defaultEmotion: Emotions.ANGRY,
   toolbox:
     tb(
       blockOfType('studio_move', {DIR: 8}) +
@@ -16562,6 +16566,7 @@ levels.playlab_7 = {
     'downButton',
     'upButton'
   ],
+  defaultEmotion: Emotions.HAPPY,
   map: [
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -16790,6 +16795,7 @@ levels.playlab_8 = {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
   avatarList: ['unicorn', 'wizard'],
+  defaultEmotion: Emotions.HAPPY,
   goal: {
     successCondition: function () {
       return Studio.sprite[0].isCollidingWith(1) && Studio.playerScore === 1;
@@ -16936,6 +16942,7 @@ levels.playlab_9 = {
   scale: {
     snapRadius: 2
   },
+  defaultEmotion: Emotions.ANGRY,
   softButtons: [
     'leftButton',
     'rightButton',
@@ -19018,7 +19025,7 @@ BlocklyApps.reset = function(first) {
       size: constants.DEFAULT_SPRITE_SIZE,
       dir: Direction.NONE,
       displayDir: Direction.SOUTH,
-      emotion: Emotions.NORMAL,
+      emotion: level.defaultEmotion || Emotions.NORMAL,
       // tickCount of last time sprite moved,
       lastMove: Infinity,
       // overridden as soon as we call setSprite
@@ -21218,7 +21225,7 @@ exports.numLinesOfCodeWritten = function(d){return "あなたはたった今 "+p
 
 exports.play = function(d){return "再生"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "印刷"};
 
 exports.puzzleTitle = function(d){return "パズル "+v(d,"puzzle_number")+" の "+v(d,"stage_total")};
 
@@ -21264,7 +21271,7 @@ exports.backToPreviousLevel = function(d){return "前のレベルに戻る"};
 
 exports.saveToGallery = function(d){return "ギャラリーに保存"};
 
-exports.savedToGallery = function(d){return "ギャラリーに保存しました！"};
+exports.savedToGallery = function(d){return "ギャラリーに保存されました！"};
 
 exports.shareFailure = function(d){return "プログラムをシェアできませんでした。"};
 
@@ -21387,7 +21394,7 @@ exports.makeProjectilePurpleHearts = function(d){return "むらさきのハー�
 
 exports.makeProjectileRedHearts = function(d){return "赤いハートを作る"};
 
-exports.makeProjectileTooltip = function(d){return "Make the projectile that just collided disappear or bounce."};
+exports.makeProjectileTooltip = function(d){return "ちょうどとつげきしたほうしゃ物を作る消えるか、またはバウンドします。"};
 
 exports.makeYourOwn = function(d){return "じぶんだけのプレイラボアプリを作ろう！"};
 
@@ -21473,11 +21480,11 @@ exports.playSoundWinPoint2 = function(d){return "勝利ポイント2の音を再
 
 exports.playSoundWood = function(d){return "木製の音を再生します。"};
 
-exports.positionOutTopLeft = function(d){return "to the above top left position"};
+exports.positionOutTopLeft = function(d){return "ばしょを左上のトップへ"};
 
-exports.positionOutTopRight = function(d){return "to the above top right position"};
+exports.positionOutTopRight = function(d){return "上右上のばしょに"};
 
-exports.positionTopOutLeft = function(d){return "to the top outside left position"};
+exports.positionTopOutLeft = function(d){return "左のばしょ外トップへ"};
 
 exports.positionTopLeft = function(d){return "左上に"};
 
@@ -21485,7 +21492,7 @@ exports.positionTopCenter = function(d){return "上のまんなかに"};
 
 exports.positionTopRight = function(d){return "右上に"};
 
-exports.positionTopOutRight = function(d){return "to the top outside right position"};
+exports.positionTopOutRight = function(d){return "右のばしょ外トップへ"};
 
 exports.positionMiddleLeft = function(d){return "左はしの真ん中に"};
 
@@ -21493,7 +21500,7 @@ exports.positionMiddleCenter = function(d){return "まんなかに"};
 
 exports.positionMiddleRight = function(d){return "右はしのまんなかに"};
 
-exports.positionBottomOutLeft = function(d){return "to the bottom outside left position"};
+exports.positionBottomOutLeft = function(d){return "左のばしょの外側の下に"};
 
 exports.positionBottomLeft = function(d){return "左下に"};
 
@@ -21501,11 +21508,11 @@ exports.positionBottomCenter = function(d){return "下のまんなかに"};
 
 exports.positionBottomRight = function(d){return "右下に"};
 
-exports.positionBottomOutRight = function(d){return "to the bottom outside right position"};
+exports.positionBottomOutRight = function(d){return "右のばしょの外側の下に"};
 
-exports.positionOutBottomLeft = function(d){return "to the below bottom left position"};
+exports.positionOutBottomLeft = function(d){return "ばしょを左下の下"};
 
-exports.positionOutBottomRight = function(d){return "to the below bottom right position"};
+exports.positionOutBottomRight = function(d){return "下右ばしょの下"};
 
 exports.positionRandom = function(d){return "ランダムな位置に"};
 
@@ -21523,15 +21530,15 @@ exports.projectileRedHearts = function(d){return "赤いハート"};
 
 exports.projectileRandom = function(d){return "ランダム"};
 
-exports.projectileAnna = function(d){return "Anna"};
+exports.projectileAnna = function(d){return "アナ"};
 
-exports.projectileElsa = function(d){return "Elsa"};
+exports.projectileElsa = function(d){return "エルザ"};
 
-exports.projectileHiro = function(d){return "Hiro"};
+exports.projectileHiro = function(d){return "ヒロ"};
 
-exports.projectileBaymax = function(d){return "Baymax"};
+exports.projectileBaymax = function(d){return "ベイマックス"};
 
-exports.projectileRapunzel = function(d){return "Rapunzel"};
+exports.projectileRapunzel = function(d){return "ラプンツェル"};
 
 exports.reinfFeedbackMsg = function(d){return "「やり直す」ボタンをおすとお話をもう一度見ることができます。"};
 
@@ -21595,7 +21602,7 @@ exports.setSpriteEmotionHappy = function(d){return "うれしいかおに"};
 
 exports.setSpriteEmotionNormal = function(d){return "ふつうのかおに"};
 
-exports.setSpriteEmotionRandom = function(d){return "to a random emotion"};
+exports.setSpriteEmotionRandom = function(d){return "ランダムな気分に"};
 
 exports.setSpriteEmotionSad = function(d){return "かなしいかおに"};
 
@@ -21627,13 +21634,13 @@ exports.setSpriteHideK1 = function(d){return "かくす"};
 
 exports.setSpriteAnna = function(d){return "to a Anna image"};
 
-exports.setSpriteElsa = function(d){return "to a Elsa image"};
+exports.setSpriteElsa = function(d){return "エルザのイメージへ"};
 
-exports.setSpriteHiro = function(d){return "to a Hiro image"};
+exports.setSpriteHiro = function(d){return "ヒロのイメージへ"};
 
 exports.setSpriteBaymax = function(d){return "to a Baymax image"};
 
-exports.setSpriteRapunzel = function(d){return "to a Rapunzel image"};
+exports.setSpriteRapunzel = function(d){return "ラプンツェルのイメージへ"};
 
 exports.setSpriteKnight = function(d){return "騎士に"};
 
@@ -21649,7 +21656,7 @@ exports.setSpritePirate = function(d){return "海賊に"};
 
 exports.setSpritePrincess = function(d){return "おひめさまに"};
 
-exports.setSpriteRandom = function(d){return "to a random image"};
+exports.setSpriteRandom = function(d){return "はいけいをランダムに"};
 
 exports.setSpriteRobot = function(d){return "ロボットに"};
 
@@ -21715,7 +21722,7 @@ exports.shareGame = function(d){return "お話をみんなに見てもらう"};
 
 exports.showCoordinates = function(d){return "show coordinates"};
 
-exports.showCoordinatesTooltip = function(d){return "show the protagonist's coordinates on the screen"};
+exports.showCoordinatesTooltip = function(d){return "主人公の座標を画面に表示します。"};
 
 exports.showTitleScreen = function(d){return "表紙を見せる"};
 
@@ -21729,7 +21736,7 @@ exports.showTSDefText = function(d){return "ここにテキストを入力"};
 
 exports.showTitleScreenTooltip = function(d){return "だいめいとせつめいのあるひょうしをひょうじします。"};
 
-exports.size = function(d){return "size"};
+exports.size = function(d){return "おおきさ"};
 
 exports.setSprite = function(d){return "セット"};
 

@@ -11058,17 +11058,17 @@ exports.parseElement = function(text) {
 
 },{}],40:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.ta=function(n){return n===1?"one":"other"}
-exports.compute = function(d){return "compute"};
+exports.compute = function(d){return "கணி"};
 
-exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
+exports.equivalentExpression = function(d){return "அதே தொடர் சரியாக பெற உங்கள் வாதங்களை மீள்ஒழுங்குபடுத்தி முயற்சிக்கவும்."};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"compute\" block?"};
+exports.extraTopBlocks = function(d){return "உங்களிடம் இணைக்கப்படாத தொகுதிகள் உள்ளன. \"கணிப்புக்கு \" இந்த தொகுதிகளை  இணைக்க வேண்டும் என்று கருதுகிறிர்களா?"};
 
-exports.goal = function(d){return "Goal:"};
+exports.goal = function(d){return "குறிக்கோள்:"};
 
-exports.reinfFeedbackMsg = function(d){return "நீங்கள் எதிர்பார்த்தது இவ்வாறானதா? நீங்கள் உங்கள் வரைதலை பார்க்க \"மீள முயல்க\" பொத்தானை அழுத்தவும்."};
+exports.reinfFeedbackMsg = function(d){return "இதோ உங்கள் கதை! அதில் தொடர், அல்லது அடுத்த புதிருக்கு நகர்!"};
 
-exports.yourExpression = function(d){return "Your expression:"};
+exports.yourExpression = function(d){return "உங்கள் வெளிப்பாடு:"};
 
 
 },{"messageformat":53}],41:[function(require,module,exports){

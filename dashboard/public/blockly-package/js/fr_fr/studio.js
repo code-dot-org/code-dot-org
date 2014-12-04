@@ -16059,6 +16059,7 @@ levels.playlab_2 = utils.extend(levels.dog_and_cat_hello, {
   firstSpriteIndex: 20, // cave boy
   timeoutFailureTick: null,
   timeoutAfterWhenRun: true,
+  defaultEmotion: Emotions.HAPPY,
   goal: {
     successCondition: function () {
       return Studio.allWhenRunBlocksComplete() && Studio.sayComplete > 1;
@@ -16249,6 +16250,7 @@ levels.playlab_4 = {
   },
   background: 'tennis',
   avatarList: ['tennisboy', 'tennisgirl'],
+  defaultEmotion: Emotions.SAD,
   requiredBlocks: [
     [{
       test: 'moveDistance',
@@ -16336,6 +16338,7 @@ levels.playlab_5 = utils.extend(levels.click_hello, {
   background: 'space',
   firstSpriteIndex: 23, // spacebot
   timeoutAfterWhenRun: true,
+  defaultEmotion: Emotions.HAPPY,
   toolbox: tb(blockOfType('studio_saySprite')),
   startBlocks:
    '<block type="studio_whenSpriteClicked" deletable="false" x="20" y="20"></block>'
@@ -16470,6 +16473,7 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
     success: 'blue_fireball',
     imageWidth: 800
   },
+  defaultEmotion: Emotions.ANGRY,
   toolbox:
     tb(
       blockOfType('studio_move', {DIR: 8}) +
@@ -16562,6 +16566,7 @@ levels.playlab_7 = {
     'downButton',
     'upButton'
   ],
+  defaultEmotion: Emotions.HAPPY,
   map: [
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -16790,6 +16795,7 @@ levels.playlab_8 = {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
   avatarList: ['unicorn', 'wizard'],
+  defaultEmotion: Emotions.HAPPY,
   goal: {
     successCondition: function () {
       return Studio.sprite[0].isCollidingWith(1) && Studio.playerScore === 1;
@@ -16936,6 +16942,7 @@ levels.playlab_9 = {
   scale: {
     snapRadius: 2
   },
+  defaultEmotion: Emotions.ANGRY,
   softButtons: [
     'leftButton',
     'rightButton',
@@ -19018,7 +19025,7 @@ BlocklyApps.reset = function(first) {
       size: constants.DEFAULT_SPRITE_SIZE,
       dir: Direction.NONE,
       displayDir: Direction.SOUTH,
-      emotion: Emotions.NORMAL,
+      emotion: level.defaultEmotion || Emotions.NORMAL,
       // tickCount of last time sprite moved,
       lastMove: Infinity,
       // overridden as soon as we call setSprite
@@ -21218,7 +21225,7 @@ exports.numLinesOfCodeWritten = function(d){return "Vous venez d'écrire "+p(d,"
 
 exports.play = function(d){return "jouer"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Imprimer"};
 
 exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" sur "+v(d,"stage_total")};
 
@@ -21234,7 +21241,7 @@ exports.score = function(d){return "score"};
 
 exports.showCodeHeader = function(d){return "Afficher le code"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Afficher les blocs"};
 
 exports.showGeneratedCode = function(d){return "Afficher le code"};
 
@@ -21262,9 +21269,9 @@ exports.hintRequest = function(d){return "Voir astuce"};
 
 exports.backToPreviousLevel = function(d){return "Retour au niveau précédent"};
 
-exports.saveToGallery = function(d){return "Enregistrer dans votre galerie"};
+exports.saveToGallery = function(d){return "Sauvegarder dans la galerie"};
 
-exports.savedToGallery = function(d){return "Enregistré dans votre galerie !"};
+exports.savedToGallery = function(d){return "Enregistrées dans la Galerie !"};
 
 exports.shareFailure = function(d){return "Désolé, nous ne pouvons pas partager ce programme."};
 
@@ -21274,7 +21281,7 @@ exports.typeHint = function(d){return "Notez que les parenthèses et les point-v
 
 exports.workspaceHeader = function(d){return "Assemblez vos blocs ici : "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Tapez ici votre code JavaScript"};
 
 exports.infinity = function(d){return "Infini"};
 
@@ -21298,7 +21305,7 @@ exports.hintHeader = function(d){return "Voici une astuce :"};
 
 exports.genericFeedback = function(d){return "Observez le résultat et essayez de corriger les erreurs."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Découvrez ce que j'ai fait"};
 
 
 },{"messageformat":61}],49:[function(require,module,exports){

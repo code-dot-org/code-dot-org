@@ -16059,6 +16059,7 @@ levels.playlab_2 = utils.extend(levels.dog_and_cat_hello, {
   firstSpriteIndex: 20, // cave boy
   timeoutFailureTick: null,
   timeoutAfterWhenRun: true,
+  defaultEmotion: Emotions.HAPPY,
   goal: {
     successCondition: function () {
       return Studio.allWhenRunBlocksComplete() && Studio.sayComplete > 1;
@@ -16249,6 +16250,7 @@ levels.playlab_4 = {
   },
   background: 'tennis',
   avatarList: ['tennisboy', 'tennisgirl'],
+  defaultEmotion: Emotions.SAD,
   requiredBlocks: [
     [{
       test: 'moveDistance',
@@ -16336,6 +16338,7 @@ levels.playlab_5 = utils.extend(levels.click_hello, {
   background: 'space',
   firstSpriteIndex: 23, // spacebot
   timeoutAfterWhenRun: true,
+  defaultEmotion: Emotions.HAPPY,
   toolbox: tb(blockOfType('studio_saySprite')),
   startBlocks:
    '<block type="studio_whenSpriteClicked" deletable="false" x="20" y="20"></block>'
@@ -16470,6 +16473,7 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
     success: 'blue_fireball',
     imageWidth: 800
   },
+  defaultEmotion: Emotions.ANGRY,
   toolbox:
     tb(
       blockOfType('studio_move', {DIR: 8}) +
@@ -16562,6 +16566,7 @@ levels.playlab_7 = {
     'downButton',
     'upButton'
   ],
+  defaultEmotion: Emotions.HAPPY,
   map: [
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -16790,6 +16795,7 @@ levels.playlab_8 = {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
   avatarList: ['unicorn', 'wizard'],
+  defaultEmotion: Emotions.HAPPY,
   goal: {
     successCondition: function () {
       return Studio.sprite[0].isCollidingWith(1) && Studio.playerScore === 1;
@@ -16936,6 +16942,7 @@ levels.playlab_9 = {
   scale: {
     snapRadius: 2
   },
+  defaultEmotion: Emotions.ANGRY,
   softButtons: [
     'leftButton',
     'rightButton',
@@ -19018,7 +19025,7 @@ BlocklyApps.reset = function(first) {
       size: constants.DEFAULT_SPRITE_SIZE,
       dir: Direction.NONE,
       displayDir: Direction.SOUTH,
-      emotion: Emotions.NORMAL,
+      emotion: level.defaultEmotion || Emotions.NORMAL,
       // tickCount of last time sprite moved,
       lastMove: Infinity,
       // overridden as soon as we call setSprite
@@ -21335,35 +21342,35 @@ exports.actor = function(d){return "actor"};
 
 exports.alienInvasion = function(d){return "Alien Invasion!"};
 
-exports.backgroundBlack = function(d){return "black"};
+exports.backgroundBlack = function(d){return "czarny"};
 
-exports.backgroundCave = function(d){return "cave"};
+exports.backgroundCave = function(d){return "jaskinia"};
 
-exports.backgroundCloudy = function(d){return "cloudy"};
+exports.backgroundCloudy = function(d){return "pochmurno"};
 
-exports.backgroundHardcourt = function(d){return "hardcourt"};
+exports.backgroundHardcourt = function(d){return "utwardzony kort"};
 
-exports.backgroundNight = function(d){return "night"};
+exports.backgroundNight = function(d){return "noc"};
 
-exports.backgroundUnderwater = function(d){return "underwater"};
+exports.backgroundUnderwater = function(d){return "podwodny"};
 
-exports.backgroundCity = function(d){return "city"};
+exports.backgroundCity = function(d){return "miasto"};
 
-exports.backgroundDesert = function(d){return "desert"};
+exports.backgroundDesert = function(d){return "pustynia"};
 
-exports.backgroundRainbow = function(d){return "rainbow"};
+exports.backgroundRainbow = function(d){return "tęcza"};
 
-exports.backgroundSoccer = function(d){return "soccer"};
+exports.backgroundSoccer = function(d){return "piłka nożna"};
 
-exports.backgroundSpace = function(d){return "space"};
+exports.backgroundSpace = function(d){return "przestrzeń"};
 
-exports.backgroundTennis = function(d){return "tennis"};
+exports.backgroundTennis = function(d){return "tenis"};
 
-exports.backgroundWinter = function(d){return "winter"};
+exports.backgroundWinter = function(d){return "zima"};
 
 exports.catActions = function(d){return "Działania"};
 
-exports.catControl = function(d){return "pętle"};
+exports.catControl = function(d){return "Pętle"};
 
 exports.catEvents = function(d){return "Zdarzenia"};
 
@@ -21371,13 +21378,13 @@ exports.catLogic = function(d){return "Logika"};
 
 exports.catMath = function(d){return "Matematyka"};
 
-exports.catProcedures = function(d){return "funkcje"};
+exports.catProcedures = function(d){return "Funkcje"};
 
 exports.catText = function(d){return "Tekstowe"};
 
 exports.catVariables = function(d){return "zmienne"};
 
-exports.changeScoreTooltip = function(d){return "Dodaj lub usuń punkt do wyniku."};
+exports.changeScoreTooltip = function(d){return "Dodaj lub usuń punkt do/z wyniku."};
 
 exports.changeScoreTooltipK1 = function(d){return "Dodaj punkt do wyniku."};
 
@@ -21391,7 +21398,7 @@ exports.emotion = function(d){return "nastrój"};
 
 exports.finalLevel = function(d){return "Gratulacje! Rozwiązałeś końcową łamigłówkę."};
 
-exports.for = function(d){return "for"};
+exports.for = function(d){return "dla"};
 
 exports.hello = function(d){return "cześć"};
 
@@ -21399,25 +21406,25 @@ exports.helloWorld = function(d){return "Witaj świecie!"};
 
 exports.incrementPlayerScore = function(d){return "wynik punktowy"};
 
-exports.makeProjectileDisappear = function(d){return "disappear"};
+exports.makeProjectileDisappear = function(d){return "zniknij"};
 
 exports.makeProjectileBounce = function(d){return "odbij się"};
 
-exports.makeProjectileBlueFireball = function(d){return "make blue fireball"};
+exports.makeProjectileBlueFireball = function(d){return "utwórz niebieską kulę ognia"};
 
-exports.makeProjectilePurpleFireball = function(d){return "make purple fireball"};
+exports.makeProjectilePurpleFireball = function(d){return "utwórz fioletową kulę ognia"};
 
-exports.makeProjectileRedFireball = function(d){return "make red fireball"};
+exports.makeProjectileRedFireball = function(d){return "utwórz czerwoną kulę ognia"};
 
-exports.makeProjectileYellowHearts = function(d){return "make yellow hearts"};
+exports.makeProjectileYellowHearts = function(d){return "utwórz żółte serca"};
 
-exports.makeProjectilePurpleHearts = function(d){return "make purple hearts"};
+exports.makeProjectilePurpleHearts = function(d){return "utwórz fioletowe serca"};
 
-exports.makeProjectileRedHearts = function(d){return "make red hearts"};
+exports.makeProjectileRedHearts = function(d){return "utwórz czerwone serca"};
 
-exports.makeProjectileTooltip = function(d){return "Make the projectile that just collided disappear or bounce."};
+exports.makeProjectileTooltip = function(d){return "Spraw by pocisk, który właśnie się zderzył, zniknął lub odbił się."};
 
-exports.makeYourOwn = function(d){return "Stwórz własną historię"};
+exports.makeYourOwn = function(d){return "Stwórz swoją własną Play Lab App"};
 
 exports.moveDirectionDown = function(d){return "dół"};
 
@@ -21447,7 +21454,7 @@ exports.moveDistanceTooltip = function(d){return "Przesuń aktora o określoną 
 
 exports.moveSprite = function(d){return "przesuń"};
 
-exports.moveSpriteN = function(d){return "move actor "+v(d,"spriteIndex")};
+exports.moveSpriteN = function(d){return "przenieś postać "+v(d,"spriteIndex")};
 
 exports.moveDown = function(d){return "przesuń w dół"};
 
@@ -21501,11 +21508,11 @@ exports.playSoundWinPoint2 = function(d){return "zagraj dźwięk zdybycia punktu
 
 exports.playSoundWood = function(d){return "zagraj dźwięk drewna"};
 
-exports.positionOutTopLeft = function(d){return "to the above top left position"};
+exports.positionOutTopLeft = function(d){return "do górnego lewego położenia"};
 
-exports.positionOutTopRight = function(d){return "to the above top right position"};
+exports.positionOutTopRight = function(d){return "do górnego prawego położenia"};
 
-exports.positionTopOutLeft = function(d){return "to the top outside left position"};
+exports.positionTopOutLeft = function(d){return "do góry poza lewą pozycję"};
 
 exports.positionTopLeft = function(d){return "do górnej lewej pozycji"};
 
@@ -21513,7 +21520,7 @@ exports.positionTopCenter = function(d){return "do górnej środkowej pozycji"};
 
 exports.positionTopRight = function(d){return "do górnej prawej pozycji"};
 
-exports.positionTopOutRight = function(d){return "to the top outside right position"};
+exports.positionTopOutRight = function(d){return "do góry poza właściwą pozycję"};
 
 exports.positionMiddleLeft = function(d){return "do środkowej pozycji z lewej"};
 
@@ -21521,7 +21528,7 @@ exports.positionMiddleCenter = function(d){return "na środkową pozycję"};
 
 exports.positionMiddleRight = function(d){return "na środkową pozycję z prawej"};
 
-exports.positionBottomOutLeft = function(d){return "to the bottom outside left position"};
+exports.positionBottomOutLeft = function(d){return "na dół poza lewą pozycję"};
 
 exports.positionBottomLeft = function(d){return "na środkową dolną pozycję z lewej"};
 
@@ -21529,7 +21536,7 @@ exports.positionBottomCenter = function(d){return "na środkową pozycję na dol
 
 exports.positionBottomRight = function(d){return "na dolną pozycję z prawej"};
 
-exports.positionBottomOutRight = function(d){return "to the bottom outside right position"};
+exports.positionBottomOutRight = function(d){return "na dół poza właściwą pozycję"};
 
 exports.positionOutBottomLeft = function(d){return "to the below bottom left position"};
 
@@ -21537,17 +21544,17 @@ exports.positionOutBottomRight = function(d){return "to the below bottom right p
 
 exports.positionRandom = function(d){return "na losową pozycję"};
 
-exports.projectileBlueFireball = function(d){return "blue fireball"};
+exports.projectileBlueFireball = function(d){return "niebieska kula ognia"};
 
-exports.projectilePurpleFireball = function(d){return "purple fireball"};
+exports.projectilePurpleFireball = function(d){return "purpurowa kula ognia"};
 
-exports.projectileRedFireball = function(d){return "red fireball"};
+exports.projectileRedFireball = function(d){return "czerwona ognista kula"};
 
-exports.projectileYellowHearts = function(d){return "yellow hearts"};
+exports.projectileYellowHearts = function(d){return "zółte serca"};
 
-exports.projectilePurpleHearts = function(d){return "purple hearts"};
+exports.projectilePurpleHearts = function(d){return "fioletowe serca"};
 
-exports.projectileRedHearts = function(d){return "red hearts"};
+exports.projectileRedHearts = function(d){return "czerwone serca"};
 
 exports.projectileRandom = function(d){return "losowy"};
 
@@ -21559,7 +21566,7 @@ exports.projectileHiro = function(d){return "Hiro"};
 
 exports.projectileBaymax = function(d){return "Baymax"};
 
-exports.projectileRapunzel = function(d){return "Rapunzel"};
+exports.projectileRapunzel = function(d){return "Roszpunka"};
 
 exports.reinfFeedbackMsg = function(d){return "Możesz nacisnąć przycisk \"Spróbuj ponownie\", aby powrócić do swojej opowieści."};
 
@@ -21593,41 +21600,41 @@ exports.setBackgroundNight = function(d){return "utaw nocne tło"};
 
 exports.setBackgroundUnderwater = function(d){return "ustaw tło podwodne"};
 
-exports.setBackgroundCity = function(d){return "set city background"};
+exports.setBackgroundCity = function(d){return "ustaw tło miasta"};
 
-exports.setBackgroundDesert = function(d){return "set desert background"};
+exports.setBackgroundDesert = function(d){return "ustaw tło pustyni"};
 
-exports.setBackgroundRainbow = function(d){return "set rainbow background"};
+exports.setBackgroundRainbow = function(d){return "ustaw tło tęczy"};
 
-exports.setBackgroundSoccer = function(d){return "set soccer background"};
+exports.setBackgroundSoccer = function(d){return "ustaw tło boiska do piłki nożnej"};
 
-exports.setBackgroundSpace = function(d){return "set space background"};
+exports.setBackgroundSpace = function(d){return "ustaw tło kosmosu"};
 
-exports.setBackgroundTennis = function(d){return "set tennis background"};
+exports.setBackgroundTennis = function(d){return "ustaw tło kortu tenisowego"};
 
-exports.setBackgroundWinter = function(d){return "set winter background"};
+exports.setBackgroundWinter = function(d){return "ustaw tło zimowe"};
 
 exports.setBackgroundTooltip = function(d){return "Ustawia obraz w tle"};
 
-exports.setEnemySpeed = function(d){return "set enemy speed"};
+exports.setEnemySpeed = function(d){return "ustaw prędkość wroga"};
 
-exports.setPlayerSpeed = function(d){return "set player speed"};
+exports.setPlayerSpeed = function(d){return "ustaw prędkość gracza"};
 
 exports.setScoreText = function(d){return "ustaw wynik"};
 
-exports.setScoreTextTooltip = function(d){return "Ustawia tekst, który będzie pokazany w obszarze wyniku."};
+exports.setScoreTextTooltip = function(d){return "Ustawia tekst, który będzie wyświetlany w obszarze wyniku."};
 
-exports.setSpriteEmotionAngry = function(d){return "to a angry emotion"};
+exports.setSpriteEmotionAngry = function(d){return "na zły nastrój"};
 
-exports.setSpriteEmotionHappy = function(d){return "to a happy emotion"};
+exports.setSpriteEmotionHappy = function(d){return "na szczęśliwy nastrój"};
 
-exports.setSpriteEmotionNormal = function(d){return "to a normal emotion"};
+exports.setSpriteEmotionNormal = function(d){return "na normalny nastrój"};
 
-exports.setSpriteEmotionRandom = function(d){return "to a random emotion"};
+exports.setSpriteEmotionRandom = function(d){return "na losowy nastrój"};
 
-exports.setSpriteEmotionSad = function(d){return "to a sad emotion"};
+exports.setSpriteEmotionSad = function(d){return "na smutny nastrój"};
 
-exports.setSpriteEmotionTooltip = function(d){return "Sets the actor emotion"};
+exports.setSpriteEmotionTooltip = function(d){return "Ustawia nastój postaci"};
 
 exports.setSpriteAlien = function(d){return "do obrazu obcego"};
 
@@ -21637,9 +21644,9 @@ exports.setSpriteBird = function(d){return "do obrazu ptaka"};
 
 exports.setSpriteCat = function(d){return "do obrazu kota"};
 
-exports.setSpriteCaveBoy = function(d){return "to a cave boy image"};
+exports.setSpriteCaveBoy = function(d){return "na obrazek chłopca z jaskini"};
 
-exports.setSpriteCaveGirl = function(d){return "to a cave girl image"};
+exports.setSpriteCaveGirl = function(d){return "na obrazek dziewczynki z jaskini"};
 
 exports.setSpriteDinosaur = function(d){return "do obrazu dinozaura"};
 
@@ -21653,15 +21660,15 @@ exports.setSpriteHidden = function(d){return "na ukryty obrazek"};
 
 exports.setSpriteHideK1 = function(d){return "ukryj"};
 
-exports.setSpriteAnna = function(d){return "to a Anna image"};
+exports.setSpriteAnna = function(d){return "na obrazek Anny"};
 
-exports.setSpriteElsa = function(d){return "to a Elsa image"};
+exports.setSpriteElsa = function(d){return "na obrazek Elsy"};
 
-exports.setSpriteHiro = function(d){return "to a Hiro image"};
+exports.setSpriteHiro = function(d){return "na obrazek Hira"};
 
-exports.setSpriteBaymax = function(d){return "to a Baymax image"};
+exports.setSpriteBaymax = function(d){return "na obrazek Baymaxa"};
 
-exports.setSpriteRapunzel = function(d){return "to a Rapunzel image"};
+exports.setSpriteRapunzel = function(d){return "do obrazka z Roszpunką"};
 
 exports.setSpriteKnight = function(d){return "do obrazu rycerza"};
 
@@ -21669,19 +21676,19 @@ exports.setSpriteMonster = function(d){return "do obrazu potwora"};
 
 exports.setSpriteNinja = function(d){return "do obrazu zamaskowanego ninja"};
 
-exports.setSpriteOctopus = function(d){return "to an octopus image"};
+exports.setSpriteOctopus = function(d){return "do obrazka z ośmiornicą"};
 
-exports.setSpritePenguin = function(d){return "to a penguin image"};
+exports.setSpritePenguin = function(d){return "do obrazka z pingwinem"};
 
-exports.setSpritePirate = function(d){return "to a pirate image"};
+exports.setSpritePirate = function(d){return "do obrazka z piratem"};
 
-exports.setSpritePrincess = function(d){return "to a princess image"};
+exports.setSpritePrincess = function(d){return "do obrazka z księżniczką"};
 
 exports.setSpriteRandom = function(d){return "na losowy obrazek"};
 
 exports.setSpriteRobot = function(d){return "to a robot image"};
 
-exports.setSpriteShowK1 = function(d){return "Pokaż"};
+exports.setSpriteShowK1 = function(d){return "pokaż"};
 
 exports.setSpriteSpacebot = function(d){return "to a spacebot image"};
 
@@ -21703,23 +21710,23 @@ exports.setSpriteWizard = function(d){return "to a wizard image"};
 
 exports.setSpritePositionTooltip = function(d){return "Natychmiast przenosi aktora do określonej lokalizacji."};
 
-exports.setSpriteK1Tooltip = function(d){return "Shows or hides the specified actor."};
+exports.setSpriteK1Tooltip = function(d){return "Pokazuje lub ukrywa określonego aktora."};
 
 exports.setSpriteTooltip = function(d){return "Ustawia obraz aktora"};
 
-exports.setSpriteSizeRandom = function(d){return "to a random size"};
+exports.setSpriteSizeRandom = function(d){return "do losowego rozmiaru"};
 
 exports.setSpriteSizeVerySmall = function(d){return "to a very small size"};
 
 exports.setSpriteSizeSmall = function(d){return "to a small size"};
 
-exports.setSpriteSizeNormal = function(d){return "to a normal size"};
+exports.setSpriteSizeNormal = function(d){return "do normalnego rozmiaru"};
 
-exports.setSpriteSizeLarge = function(d){return "to a large size"};
+exports.setSpriteSizeLarge = function(d){return "do dużego rozmiaru"};
 
-exports.setSpriteSizeVeryLarge = function(d){return "to a very large size"};
+exports.setSpriteSizeVeryLarge = function(d){return "do bardzo dużego rozmiaru"};
 
-exports.setSpriteSizeTooltip = function(d){return "Sets the size of an actor"};
+exports.setSpriteSizeTooltip = function(d){return "Ustawia rozmiar aktora"};
 
 exports.setSpriteSpeedRandom = function(d){return "na losową prędkość"};
 
@@ -21735,55 +21742,55 @@ exports.setSpriteSpeedVeryFast = function(d){return "na bardzo szybką prędkoś
 
 exports.setSpriteSpeedTooltip = function(d){return "ustawia prędkość aktora"};
 
-exports.setSpriteZombie = function(d){return "to a zombie image"};
+exports.setSpriteZombie = function(d){return "do obrazka z zombie"};
 
 exports.shareStudioTwitter = function(d){return "Zapoznaj się z opowieścią którą zrobiłem. Stworzyłem ją sam z @codeorg"};
 
 exports.shareGame = function(d){return "Udopstępnij swoją opowieść:"};
 
-exports.showCoordinates = function(d){return "show coordinates"};
+exports.showCoordinates = function(d){return "pokaż współrzędne"};
 
-exports.showCoordinatesTooltip = function(d){return "show the protagonist's coordinates on the screen"};
+exports.showCoordinatesTooltip = function(d){return "pokaż współrzędne bohatera na ekranie"};
 
-exports.showTitleScreen = function(d){return "show title screen"};
+exports.showTitleScreen = function(d){return "wyświetl ekran tytułowy"};
 
 exports.showTitleScreenTitle = function(d){return "Tytuł"};
 
 exports.showTitleScreenText = function(d){return "Tekst"};
 
-exports.showTSDefTitle = function(d){return "type title here"};
+exports.showTSDefTitle = function(d){return "wpisz tutaj tytuł"};
 
-exports.showTSDefText = function(d){return "type text here"};
+exports.showTSDefText = function(d){return "wpisz tutaj tutaj"};
 
-exports.showTitleScreenTooltip = function(d){return "Show a title screen with the associated title and text."};
+exports.showTitleScreenTooltip = function(d){return "Wyświetl tytułowy ekran i związane z nim tytuł i tekst."};
 
-exports.size = function(d){return "size"};
+exports.size = function(d){return "rozmiar"};
 
 exports.setSprite = function(d){return "przypisz"};
 
-exports.setSpriteN = function(d){return "set actor "+v(d,"spriteIndex")};
+exports.setSpriteN = function(d){return "ustaw aktora "+v(d,"spriteIndex")};
 
 exports.soundCrunch = function(d){return "chrzęst"};
 
-exports.soundGoal1 = function(d){return "goal 1"};
+exports.soundGoal1 = function(d){return "cel 1"};
 
-exports.soundGoal2 = function(d){return "goal 2"};
+exports.soundGoal2 = function(d){return "Cel 2"};
 
 exports.soundHit = function(d){return "hit"};
 
-exports.soundLosePoint = function(d){return "lose point"};
+exports.soundLosePoint = function(d){return "stracić punkt"};
 
-exports.soundLosePoint2 = function(d){return "lose point 2"};
+exports.soundLosePoint2 = function(d){return "stracić punkt 2"};
 
 exports.soundRetro = function(d){return "retro"};
 
-exports.soundRubber = function(d){return "rubber"};
+exports.soundRubber = function(d){return "gumowe"};
 
 exports.soundSlap = function(d){return "policzek"};
 
-exports.soundWinPoint = function(d){return "win point"};
+exports.soundWinPoint = function(d){return "wygrać punkt"};
 
-exports.soundWinPoint2 = function(d){return "win point 2"};
+exports.soundWinPoint2 = function(d){return "wygrać punkt 2"};
 
 exports.soundWood = function(d){return "drewno"};
 
@@ -21791,13 +21798,13 @@ exports.speed = function(d){return "prędkość"};
 
 exports.stopSprite = function(d){return "zatrzymaj"};
 
-exports.stopSpriteN = function(d){return "stop actor "+v(d,"spriteIndex")};
+exports.stopSpriteN = function(d){return "Zatrzymaj krasnoludka "+v(d,"spriteIndex")};
 
 exports.stopTooltip = function(d){return "zatrzymaj ruch aktora."};
 
-exports.throwSprite = function(d){return "throw"};
+exports.throwSprite = function(d){return "rzuć"};
 
-exports.throwSpriteN = function(d){return "actor "+v(d,"spriteIndex")+" throw"};
+exports.throwSpriteN = function(d){return "rzut "+v(d,"spriteIndex")+" aktora"};
 
 exports.throwTooltip = function(d){return "Throws a projectile from the specified actor."};
 
@@ -21805,9 +21812,9 @@ exports.vanish = function(d){return "vanish"};
 
 exports.vanishActorN = function(d){return "vanish actor "+v(d,"spriteIndex")};
 
-exports.vanishTooltip = function(d){return "Vanishes the actor."};
+exports.vanishTooltip = function(d){return "Wymazuje postać."};
 
-exports.waitFor = function(d){return "wait for"};
+exports.waitFor = function(d){return "czekaj przez"};
 
 exports.waitSeconds = function(d){return "sekundy"};
 
@@ -21825,7 +21832,7 @@ exports.waitFor5Seconds = function(d){return "czekaj 5 sekund"};
 
 exports.waitFor10Seconds = function(d){return "czekaj 10 sekund"};
 
-exports.waitParamsTooltip = function(d){return "Waits for a specified number of seconds or use zero to wait until a click occurs."};
+exports.waitParamsTooltip = function(d){return "Czeka określoną liczbę sekund lub stosuje zero, czekając aż nastąpi kliknięcie."};
 
 exports.waitTooltip = function(d){return "Czeka przez określony czas lub do momentu kliknięcia."};
 
@@ -21837,7 +21844,7 @@ exports.whenArrowRight = function(d){return "Strzałka w prawo"};
 
 exports.whenArrowUp = function(d){return "Strzałka w górę"};
 
-exports.whenArrowTooltip = function(d){return "Execute the actions below when the specified arrow key is pressed."};
+exports.whenArrowTooltip = function(d){return "Wykonaj akcje poniżej, gdy naciśnięty zostaje określony klawisz ze strzałką."};
 
 exports.whenDown = function(d){return "kiedy strzałka w dół"};
 
@@ -21867,35 +21874,35 @@ exports.whenSpriteCollidedTooltip = function(d){return "Gdy aktor dotknie innego
 
 exports.whenSpriteCollidedWith = function(d){return "touches"};
 
-exports.whenSpriteCollidedWithAnyActor = function(d){return "touches any actor"};
+exports.whenSpriteCollidedWithAnyActor = function(d){return "dotyka kogoś innego"};
 
-exports.whenSpriteCollidedWithAnyEdge = function(d){return "touches any edge"};
+exports.whenSpriteCollidedWithAnyEdge = function(d){return "dotyka jakiejś krawędzi"};
 
-exports.whenSpriteCollidedWithAnyProjectile = function(d){return "touches any projectile"};
+exports.whenSpriteCollidedWithAnyProjectile = function(d){return "dotyka jakiegoś pocisku"};
 
-exports.whenSpriteCollidedWithAnything = function(d){return "touches anything"};
+exports.whenSpriteCollidedWithAnything = function(d){return "dotyka czegoś"};
 
-exports.whenSpriteCollidedWithN = function(d){return "touches actor "+v(d,"spriteIndex")};
+exports.whenSpriteCollidedWithN = function(d){return "dotyka krasnoludka "+v(d,"spriteIndex")};
 
-exports.whenSpriteCollidedWithBlueFireball = function(d){return "touches blue fireball"};
+exports.whenSpriteCollidedWithBlueFireball = function(d){return "dotyka niebieskiej kuli ognia"};
 
-exports.whenSpriteCollidedWithPurpleFireball = function(d){return "touches purple fireball"};
+exports.whenSpriteCollidedWithPurpleFireball = function(d){return "dotyka fioletowej kuli ognia"};
 
-exports.whenSpriteCollidedWithRedFireball = function(d){return "touches red fireball"};
+exports.whenSpriteCollidedWithRedFireball = function(d){return "dotyka czerwonej kuli ognia"};
 
-exports.whenSpriteCollidedWithYellowHearts = function(d){return "touches yellow hearts"};
+exports.whenSpriteCollidedWithYellowHearts = function(d){return "dotyka żółtych serc"};
 
-exports.whenSpriteCollidedWithPurpleHearts = function(d){return "touches purple hearts"};
+exports.whenSpriteCollidedWithPurpleHearts = function(d){return "dotyka fioletowych serc"};
 
-exports.whenSpriteCollidedWithRedHearts = function(d){return "touches red hearts"};
+exports.whenSpriteCollidedWithRedHearts = function(d){return "dotyka czerwonych serc"};
 
-exports.whenSpriteCollidedWithBottomEdge = function(d){return "touches bottom edge"};
+exports.whenSpriteCollidedWithBottomEdge = function(d){return "dotyka dolnej krawędzi"};
 
-exports.whenSpriteCollidedWithLeftEdge = function(d){return "touches left edge"};
+exports.whenSpriteCollidedWithLeftEdge = function(d){return "dotyka lewej krawędzi"};
 
-exports.whenSpriteCollidedWithRightEdge = function(d){return "touches right edge"};
+exports.whenSpriteCollidedWithRightEdge = function(d){return "dotyka prawej krawędzi"};
 
-exports.whenSpriteCollidedWithTopEdge = function(d){return "touches top edge"};
+exports.whenSpriteCollidedWithTopEdge = function(d){return "dotyka górnej krawędzi"};
 
 exports.whenUp = function(d){return "kiedy strzałka w górę"};
 

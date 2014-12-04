@@ -11060,13 +11060,13 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.he=function(n){return n===1?"one":"other"}
 exports.compute = function(d){return "חשב"};
 
-exports.equivalentExpression = function(d){return "נסה לסדר מחדש את הפרמטרים שלך על מנת לקבל בדיוק אותו ביטוי."};
+exports.equivalentExpression = function(d){return "נסה לסדר מחדש את הפרמטרים שלך על מנת לקבל בדיוק את אותה התוצאה."};
 
-exports.extraTopBlocks = function(d){return "יש לך בלוקים לא מחוברים.  האם התכוונת לצרף אותם לבלוק \"חשב\" ?"};
+exports.extraTopBlocks = function(d){return "קיימים בלוקים לא מחוברים.  האם התכוונת לצרף אותם לבלוק \"חשב\" ?"};
 
 exports.goal = function(d){return "מטרה:"};
 
-exports.reinfFeedbackMsg = function(d){return "האם זה נראה כמו מה שרצית? באפשרותך להקיש על לחצן 'נסה שוב' כדי לראות את הציור שלך."};
+exports.reinfFeedbackMsg = function(d){return "הינה הסיפור שלך! תמשיך לעבוד עליו, או עבור לאתגר הבא!"};
 
 exports.yourExpression = function(d){return "הביטוי שלך:"};
 

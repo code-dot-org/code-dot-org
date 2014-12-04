@@ -16692,7 +16692,7 @@ exports.atHoneycomb = function(d){return "w plastrze miodu"};
 
 exports.atFlower = function(d){return "w kwiat"};
 
-exports.avoidCowAndRemove = function(d){return "uniknij krowy i usuń 1"};
+exports.avoidCowAndRemove = function(d){return "unikaj krowy i usuń 1"};
 
 exports.continue = function(d){return "Kontynuuj"};
 
@@ -16700,13 +16700,13 @@ exports.dig = function(d){return "usuń 1"};
 
 exports.digTooltip = function(d){return "usuń 1 jednostkę śmieci"};
 
-exports.dirE = function(d){return "Wschód"};
+exports.dirE = function(d){return "E (Wschód)"};
 
-exports.dirN = function(d){return "Północ"};
+exports.dirN = function(d){return "N (Północ)"};
 
-exports.dirS = function(d){return "Południe"};
+exports.dirS = function(d){return "S (Południe)"};
 
-exports.dirW = function(d){return "Zachód"};
+exports.dirW = function(d){return "W (Zachód)"};
 
 exports.doCode = function(d){return "wykonaj"};
 
@@ -16726,23 +16726,23 @@ exports.finalLevel = function(d){return "Gratulacje! Rozwiązałeś końcową ł
 
 exports.flowerEmptyError = function(d){return "Kwiat, na którym jesteś nie ma już nektaru."};
 
-exports.get = function(d){return "pobierz"};
+exports.get = function(d){return "weź"};
 
 exports.heightParameter = function(d){return "wysokość"};
 
 exports.holePresent = function(d){return "tam jest otwór"};
 
-exports.honey = function(d){return "Rób miód"};
+exports.honey = function(d){return "produkuj miód"};
 
 exports.honeyAvailable = function(d){return "miód"};
 
-exports.honeyTooltip = function(d){return "Rób miód z nektaru"};
+exports.honeyTooltip = function(d){return "Produkuj miód z nektaru"};
 
-exports.honeycombFullError = function(d){return "Ten plaster miodu nie ma miejsca na więcej miodu."};
+exports.honeycombFullError = function(d){return "W tym plastrze miodu nie ma miejsca na więcej miodu."};
 
-exports.ifCode = function(d){return "jeśli"};
+exports.ifCode = function(d){return "jeśli (if)"};
 
-exports.ifInRepeatError = function(d){return "Potrzebujesz bloku jeśli umieszczonego w bloku powtórz. Jeśli masz jakiś problem, cofnij się na poprzedni poziom, by zobaczyć, jak to działa."};
+exports.ifInRepeatError = function(d){return "Potrzebujesz bloku jeśli (if) umieszczonego w bloku powtórz (repeat). Jeśli masz jakiś problem, to wróć na poprzedni poziom, by zobaczyć, jak to działa."};
 
 exports.ifPathAhead = function(d){return "jeśli jest ścieżka do przodu"};
 
@@ -16750,31 +16750,31 @@ exports.ifTooltip = function(d){return "Jeśli jest ścieżka w określonym kier
 
 exports.ifelseTooltip = function(d){return "Jeśli jest ścieżka w określonym kierunku, to wykonaj pierwszy blok działań. W przeciwnym razie, wykonaj drugi blok działań."};
 
-exports.ifFlowerTooltip = function(d){return "Jeśli kwiat/plaster miodu jest w zwrócony w określony kierunek, wykonaj akcję."};
+exports.ifFlowerTooltip = function(d){return "Jeśli jest kwiat/plaster miodu w określonym kierunku, to wykonaj pewne akcje."};
 
-exports.ifelseFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do the first block of actions. Otherwise, do the second block of actions."};
+exports.ifelseFlowerTooltip = function(d){return "Jeśli jest kwiat/plaster miodu w określonym kierunku, to wykonaj pierwszy blok akcji. W przeciwnym razie wykonaj drugi blok akcji."};
 
-exports.insufficientHoney = function(d){return "You're using all the right blocks, but you need to make the right amount of honey."};
+exports.insufficientHoney = function(d){return "Używasz wszystkich prawidłowych bloków, ale musisz wyprodukować odpowiednią ilość miodu."};
 
-exports.insufficientNectar = function(d){return "You're using all the right blocks, but you need to collect the right amount of nectar."};
+exports.insufficientNectar = function(d){return "Używasz wszystkich prawidłowych bloków, ale musisz zgromadzić odpowiednią ilość nektaru."};
 
-exports.make = function(d){return "rób"};
+exports.make = function(d){return "zrób"};
 
 exports.moveBackward = function(d){return "przesuń do tyłu"};
 
-exports.moveEastTooltip = function(d){return "Przenieś mnie o jedno miejsce na wschód."};
+exports.moveEastTooltip = function(d){return "Przesuń mnie o jedno miejsce na wschód."};
 
-exports.moveForward = function(d){return "idź do przodu"};
+exports.moveForward = function(d){return "przesuń do przodu"};
 
-exports.moveForwardTooltip = function(d){return "Przenieś mnie do przodu o jedno miejsce."};
+exports.moveForwardTooltip = function(d){return "Przesuń mnie do przodu o jedno miejsce."};
 
 exports.moveNorthTooltip = function(d){return "Przenieś mnie o jedno miejsce na północ."};
 
-exports.moveSouthTooltip = function(d){return "Przenieś mnie o jedno miejsce na południe."};
+exports.moveSouthTooltip = function(d){return "Przesuń mnie o jedno miejsce na południe."};
 
-exports.moveTooltip = function(d){return "Przenieś mnie do przodu/do tyłu o jedno miejsce"};
+exports.moveTooltip = function(d){return "Przesuń mnie o jedno miejsce do przodu/do tyłu "};
 
-exports.moveWestTooltip = function(d){return "Przenieś mnie o jedno miejsce na zachód."};
+exports.moveWestTooltip = function(d){return "Przesuń mnie o jedno miejsce na zachód."};
 
 exports.nectar = function(d){return "pobierz nektar"};
 
@@ -16794,7 +16794,7 @@ exports.noPathRight = function(d){return "nie ma ścieżki w prawo"};
 
 exports.notAtFlowerError = function(d){return "Możesz pobrać nektar tylko z kwiatu."};
 
-exports.notAtHoneycombError = function(d){return "Możesz zrobić miód tylko w plastrze miodu."};
+exports.notAtHoneycombError = function(d){return "Możesz produkować miód tylko w plastrze miodu."};
 
 exports.numBlocksNeeded = function(d){return "Ta łamigłówka może być rozwiązana z użyciem %1 bloków."};
 
@@ -16808,7 +16808,7 @@ exports.pilePresent = function(d){return "jest tam sterta"};
 
 exports.putdownTower = function(d){return "postaw wieżę na ziemi"};
 
-exports.removeAndAvoidTheCow = function(d){return "usuń 1 i uniknij krowy"};
+exports.removeAndAvoidTheCow = function(d){return "usuń 1 i unikaj krowy"};
 
 exports.removeN = function(d){return "usuń "+v(d,"shovelfuls")};
 
@@ -16818,7 +16818,7 @@ exports.removeStack = function(d){return "usuń stos "+v(d,"shovelfuls")+" stos�
 
 exports.removeSquare = function(d){return "usuń kwadrat"};
 
-exports.repeatCarefullyError = function(d){return "Aby to rozwiązać, pomyśl dokładnie o wzorze na dwa ruchy i jedną kolejkę umieszczając ją w bloku \"powtórz\". Spokojnie, możesz dostać dodatkową kolejkę pod koniec :)"};
+exports.repeatCarefullyError = function(d){return "Aby to rozwiązać, pomyśl uważnie o układzie dwóch ruchów i jednego obrotu umieszczając ten układ w bloku Powtórz (repeat). W porządku, jeśli na końcu będzie dodatkowy obrót."};
 
 exports.repeatUntil = function(d){return "powtarzaj aż"};
 
@@ -16828,9 +16828,9 @@ exports.repeatUntilFinish = function(d){return "powtarzaj aż będzie koniec"};
 
 exports.step = function(d){return "Krok"};
 
-exports.totalHoney = function(d){return "Cały miód"};
+exports.totalHoney = function(d){return "cały miód"};
 
-exports.totalNectar = function(d){return "Cały nektar"};
+exports.totalNectar = function(d){return "cały nektar"};
 
 exports.turnLeft = function(d){return "skręć w lewo"};
 
@@ -16838,9 +16838,9 @@ exports.turnRight = function(d){return "skręć w prawo"};
 
 exports.turnTooltip = function(d){return "Obraca mnie w lewo lub w prawo o 90 stopni."};
 
-exports.uncheckedCloudError = function(d){return "Upewnij się, że sprawdziłeś wszystkie chmury aby sprawdzić, czy kwiaty są na plastrach miodu."};
+exports.uncheckedCloudError = function(d){return "Upewnij się, że sprawdziłeś wszystkie chmury aby się przekonać, czy nie ma kwiatów lub plastrów miodu."};
 
-exports.uncheckedPurpleError = function(d){return "Nie zapomnij sprawdzić wszystkich fioletowych kwiatów, czy mają nektar"};
+exports.uncheckedPurpleError = function(d){return "Upewnij się, że sprawdziłeś wszystkie fioletowe kwiaty, czy mają nektar"};
 
 exports.whileMsg = function(d){return "dopóki"};
 
@@ -16850,7 +16850,7 @@ exports.word = function(d){return "Znajdź słowa"};
 
 exports.yes = function(d){return "Tak"};
 
-exports.youSpelled = function(d){return "Wpisałeś"};
+exports.youSpelled = function(d){return "Przeliterowałeś"};
 
 
 },{"messageformat":72}],61:[function(require,module,exports){

@@ -14864,7 +14864,7 @@ exports.numLinesOfCodeWritten = function(d){return "Ai scris doar "+p(d,"numLine
 
 exports.play = function(d){return "joacă"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Tipărire"};
 
 exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" din "+v(d,"stage_total")};
 
@@ -14908,9 +14908,9 @@ exports.hintRequest = function(d){return "Dă un indiciu"};
 
 exports.backToPreviousLevel = function(d){return "Înapoi la nivelul anterior"};
 
-exports.saveToGallery = function(d){return "Salvează în galeria proprie"};
+exports.saveToGallery = function(d){return "Salvare în galerie"};
 
-exports.savedToGallery = function(d){return "Salvat în galeria proprie!"};
+exports.savedToGallery = function(d){return "Salvat în galerie!"};
 
 exports.shareFailure = function(d){return "Ne pare rau, nu putem să distribuim acest program."};
 
@@ -14944,7 +14944,7 @@ exports.hintHeader = function(d){return "Iată un sfat:"};
 
 exports.genericFeedback = function(d){return "Vezi cum se termină şi încearcă să-ți corectezi programul."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Verifică ceea ce am creat"};
 
 
 },{"messageformat":57}],45:[function(require,module,exports){
@@ -15088,7 +15088,7 @@ exports.penTooltip = function(d){return "Ridică sau coboară creionul, pentru a
 
 exports.penUp = function(d){return "creionul sus"};
 
-exports.reinfFeedbackMsg = function(d){return "Arată acesta așa cum ți-ai dorit? Poți apăsa butonul \"Încearcă din nou\" pentru a-ți vedea desenul."};
+exports.reinfFeedbackMsg = function(d){return "Aici este desenul dvs.! Continuaţi să lucrați la el sau continuați cu următorul puzzle."};
 
 exports.setColour = function(d){return "setează culoarea"};
 

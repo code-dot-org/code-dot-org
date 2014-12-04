@@ -11066,7 +11066,7 @@ exports.extraTopBlocks = function(d){return "Você tem blocos não conectados. V
 
 exports.goal = function(d){return "Objetivo:"};
 
-exports.reinfFeedbackMsg = function(d){return "Aqui está a sua história! Continue trabalhando nela, ou vá para o próximo desafio!"};
+exports.reinfFeedbackMsg = function(d){return "Aqui está a sua história! Continue trabalhando nela, ou siga para o próximo desafio!"};
 
 exports.yourExpression = function(d){return "Sua expressão:"};
 

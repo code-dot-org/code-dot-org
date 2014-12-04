@@ -14790,7 +14790,7 @@ exports.catText = function(d){return "Besedilo"};
 
 exports.catVariables = function(d){return "Spremenljivke"};
 
-exports.codeTooltip = function(d){return "Poglej generirane kode JavaScript."};
+exports.codeTooltip = function(d){return "Poglej generirano kodo v JavaScriptu."};
 
 exports.continue = function(d){return "Nadaljuj"};
 
@@ -14810,7 +14810,7 @@ exports.end = function(d){return "konec"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Znotraj 'Ponovi' ali 'če' bloka morajo biti drugi bloki, da bo delovalo. Prepričaj se, da se notranji bloki ustrezno prilegajo zunanjemu bloku."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "Da bi blok funkcije delal potrebuje znotraj sebe druge bloke."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Da bi blok s funkcijo deloval, mora vsebovati druge bloke oz ukaze."};
 
 exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
 
@@ -14834,9 +14834,9 @@ exports.finalStageTrophies = function(d){return "Čestitke! Zaključil/a si stop
 
 exports.finish = function(d){return "Končaj"};
 
-exports.generatedCodeInfo = function(d){return "Celo najboljše univerze učijo kodiranje z bloki (npr. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ampak bloke, ki si jih sestavil, lahko prikažemo v JavaScriptu, najbolj rabljenem programskem jeziku:"};
+exports.generatedCodeInfo = function(d){return "Celo najboljše univerze učijo programirati s pomočjo blokov (npr. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Pod pokrovom pa se skrivajo pravi programi, napisani v JavaScriptu, enem najbolj uporabljanih programskih jezikov:"};
 
-exports.hashError = function(d){return "Oprosti, '%1' ne ustreza nobenemu shranjenemu programu."};
+exports.hashError = function(d){return "Žal, '%1' ne ustreza nobenemu shranjenemu programu."};
 
 exports.help = function(d){return "Pomoč"};
 
@@ -14848,25 +14848,25 @@ exports.levelIncompleteError = function(d){return "Uporabljaš vse potrebne tipe
 
 exports.listVariable = function(d){return "seznam"};
 
-exports.makeYourOwnFlappy = function(d){return "Izdelaj svojo lastno Flappy igro"};
+exports.makeYourOwnFlappy = function(d){return "Izdelaj svojo lastno igrico o Plahutaču (Flappyju)"};
 
-exports.missingBlocksErrorMsg = function(d){return "Poskusi enega ali več blokov spodaj, da rešiš uganko."};
+exports.missingBlocksErrorMsg = function(d){return "Če boš uporabil/a vsaj en blok, ki ga najdeš spodaj, ali več, boš rešil/a uganko."};
 
-exports.nextLevel = function(d){return "Čestitke! Rešil si uganko "+v(d,"puzzleNumber")+"."};
+exports.nextLevel = function(d){return "Čestitke! Rešil/a si uganko "+v(d,"puzzleNumber")+"."};
 
-exports.nextLevelTrophies = function(d){return "Čestitke! Zaključil/a si stopnjo "+v(d,"stageNumber")+" in osvojil/a "+p(d,"numTrophies",0,"sl",{"one":"trofejo","other":n(d,"numTrophies")+" trofej"})+"."};
+exports.nextLevelTrophies = function(d){return "Čestitke! Rešil/a si uganko "+v(d,"puzzleNumber")+" in osvojil/a "+p(d,"numTrophies",0,"sl",{"one":"lovoriko","other":n(d,"numTrophies")+" lovorik"})+"."};
 
-exports.nextStage = function(d){return "Čestitke! Opravili ste "+v(d,"stageName")+"."};
+exports.nextStage = function(d){return "Čestitke! Dokončal/a si "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Čestitke! Zaključil/a si stopnjo "+v(d,"stageNumber")+" in osvojil/a "+p(d,"numTrophies",0,"sl",{"one":"trofejo","other":n(d,"numTrophies")+" trofej"})+"."};
+exports.nextStageTrophies = function(d){return "Čestitke! Zaključil/a si stopnjo "+v(d,"stageName")+" in osvojil/a "+p(d,"numTrophies",0,"sl",{"one":"lovoriko","other":n(d,"numTrophies")+" lovorik"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Čestitke! Zaključil/a si uganko "+v(d,"puzzleNumber")+". (Vendar bi lahko uporabil samo  "+p(d,"numBlocks",0,"sl",{"one":"1 blok","other":n(d,"numBlocks")+" blokov"})+".)"};
 
-exports.numLinesOfCodeWritten = function(d){return "Ravnokar si napisal "+p(d,"numLines",0,"sl",{"one":"1 vrstica","other":n(d,"numLines")+" vrstic"})+" kode!"};
+exports.numLinesOfCodeWritten = function(d){return "Ravnokar si napisal/a "+p(d,"numLines",0,"sl",{"one":"1 vrstico","other":n(d,"numLines")+" vrstic"})+" kode!"};
 
 exports.play = function(d){return "igraj"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Natisni"};
 
 exports.puzzleTitle = function(d){return "Uganka "+v(d,"puzzle_number")+" od "+v(d,"stage_total")};
 
@@ -14874,7 +14874,7 @@ exports.repeat = function(d){return "ponovi"};
 
 exports.resetProgram = function(d){return "resetiraj"};
 
-exports.runProgram = function(d){return "Teči"};
+exports.runProgram = function(d){return "Zaženi program"};
 
 exports.runTooltip = function(d){return "Zaženi program, definiran z bloki na delovni površini."};
 
@@ -14882,7 +14882,7 @@ exports.score = function(d){return "rezultat"};
 
 exports.showCodeHeader = function(d){return "Pokaži kodo"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Prikaži bloke"};
 
 exports.showGeneratedCode = function(d){return "Pokaži kodo"};
 
@@ -14892,11 +14892,11 @@ exports.subtitle = function(d){return "vizualno programersko okolje"};
 
 exports.textVariable = function(d){return "besedilo"};
 
-exports.tooFewBlocksMsg = function(d){return "Uporabljaš vse potrebne tipe blokov, a poskusi uporabiti več teh tipov blokov, da zaključiš to uganko."};
+exports.tooFewBlocksMsg = function(d){return "Uporabil/a si prave tipe blokov, a potrebuješ jih še več za rešitev te uganke."};
 
 exports.tooManyBlocksMsg = function(d){return "Ta uganka je lahko rešena z <x id='START_SPAN'/><x id='END_SPAN'/> bloki."};
 
-exports.tooMuchWork = function(d){return "Zaradi tebe sem moral narediti veliko dela! Bi se lahko poskusil manjkrat ponavljati?"};
+exports.tooMuchWork = function(d){return "Si me pa utrudil/a! Bi se lahko poskusil/a manjkrat ponavljati?"};
 
 exports.toolboxHeader = function(d){return "Bloki"};
 
@@ -14910,11 +14910,11 @@ exports.hintRequest = function(d){return "Poglej namig"};
 
 exports.backToPreviousLevel = function(d){return "Nazaj na prejšnjo raven"};
 
-exports.saveToGallery = function(d){return "Shrani v svojo galerijo"};
+exports.saveToGallery = function(d){return "Shrani v galerijo"};
 
-exports.savedToGallery = function(d){return "Shranjeno v tvoji galeriji!"};
+exports.savedToGallery = function(d){return "Shranjeno v galerijo!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Žal, ne moremo objaviti tega programa."};
 
 exports.typeFuncs = function(d){return "Razpoložljive funkcije: %1"};
 
@@ -14922,11 +14922,11 @@ exports.typeHint = function(d){return "Zapomni si, oklepaji in podpičja so zaht
 
 exports.workspaceHeader = function(d){return "Tukaj sestavi tvoje bloke: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Vnesite kodo JavaScript"};
 
 exports.infinity = function(d){return "Neskončnost"};
 
-exports.rotateText = function(d){return "Zavrti tvojo napravo."};
+exports.rotateText = function(d){return "Zasukaj tvojo napravo."};
 
 exports.orientationLock = function(d){return "Izključi zaklepanje orientacije v nastavitvah naprave."};
 
@@ -14946,7 +14946,7 @@ exports.hintHeader = function(d){return "Tukaj je namig:"};
 
 exports.genericFeedback = function(d){return "Poglej kako si končal in poizkusi popraviti svoj program."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Poglej, kaj sem naredil"};
 
 
 },{"messageformat":57}],45:[function(require,module,exports){
@@ -14964,7 +14964,7 @@ var MessageFormat = require("messageformat");MessageFormat.locale.sl = function 
 };
 exports.blocksUsed = function(d){return "Število uporabljenih blokov: %1"};
 
-exports.branches = function(d){return "branches"};
+exports.branches = function(d){return "veje"};
 
 exports.catColour = function(d){return "Barva"};
 
@@ -14980,29 +14980,29 @@ exports.catVariables = function(d){return "Spremenljivke"};
 
 exports.catLogic = function(d){return "Logika"};
 
-exports.colourTooltip = function(d){return "Spremeni barvo svinčnika."};
+exports.colourTooltip = function(d){return "Spremeni barvo pisala."};
 
-exports.createACircle = function(d){return "create a circle"};
+exports.createACircle = function(d){return "ustvari krog"};
 
-exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+exports.createSnowflakeSquare = function(d){return "ustvari snežinko tipa kvadrat"};
 
-exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+exports.createSnowflakeParallelogram = function(d){return "ustvari snežinko tipa paralelogram"};
 
-exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+exports.createSnowflakeLine = function(d){return "ustvari snežinko tipa črta"};
 
-exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+exports.createSnowflakeSpiral = function(d){return "ustvari snežinko tipa spirala"};
 
-exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+exports.createSnowflakeFlower = function(d){return "ustvari snežinko tipa roža"};
 
-exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+exports.createSnowflakeFractal = function(d){return "ustvari snežinko tipa fraktal"};
 
-exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+exports.createSnowflakeRandom = function(d){return "ustvari snežinko naključnega tipa"};
 
-exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
+exports.createASnowflakeBranch = function(d){return "nariši vejo snežinke"};
 
 exports.degrees = function(d){return "stopinje"};
 
-exports.depth = function(d){return "depth"};
+exports.depth = function(d){return "globina"};
 
 exports.dots = function(d){return "piksli"};
 
@@ -15012,33 +15012,33 @@ exports.drawATriangle = function(d){return "nariši trikotnik"};
 
 exports.drawACircle = function(d){return "nariši krog"};
 
-exports.drawAFlower = function(d){return "draw a flower"};
+exports.drawAFlower = function(d){return "nariši rožo"};
 
-exports.drawAHexagon = function(d){return "draw a hexagon"};
+exports.drawAHexagon = function(d){return "nariši šesterokotnik"};
 
 exports.drawAHouse = function(d){return "nariši hišo"};
 
-exports.drawAPlanet = function(d){return "draw a planet"};
+exports.drawAPlanet = function(d){return "nariši planet"};
 
-exports.drawARhombus = function(d){return "draw a rhombus"};
+exports.drawARhombus = function(d){return "nariši romb"};
 
-exports.drawARobot = function(d){return "draw a robot"};
+exports.drawARobot = function(d){return "nariši robota"};
 
-exports.drawARocket = function(d){return "draw a rocket"};
+exports.drawARocket = function(d){return "nariši raketo"};
 
-exports.drawASnowflake = function(d){return "draw a snowflake"};
+exports.drawASnowflake = function(d){return "nariši snežinko"};
 
 exports.drawASnowman = function(d){return "nariši snežaka"};
 
-exports.drawAStar = function(d){return "draw a star"};
+exports.drawAStar = function(d){return "nariši zvezdo"};
 
 exports.drawATree = function(d){return "nariši drevo"};
 
-exports.drawUpperWave = function(d){return "draw upper wave"};
+exports.drawUpperWave = function(d){return "nariši zgornji val"};
 
-exports.drawLowerWave = function(d){return "draw lower wave"};
+exports.drawLowerWave = function(d){return "nariši nižji val"};
 
-exports.drawStamp = function(d){return "draw stamp"};
+exports.drawStamp = function(d){return "pusti odtis"};
 
 exports.heightParameter = function(d){return "višina"};
 
@@ -15060,7 +15060,7 @@ exports.jumpSouthTooltip = function(d){return "Premakni umetnika južno brez, da
 
 exports.jumpWestTooltip = function(d){return "Premakni umetnika zahodno brez, da bi pustil sledi."};
 
-exports.lengthFeedback = function(d){return "You got it right except for the lengths to move."};
+exports.lengthFeedback = function(d){return "Dobro ti je šlo - le še dolžino popravi."};
 
 exports.lengthParameter = function(d){return "dolžina"};
 
@@ -15086,19 +15086,19 @@ exports.notBlackColour = function(d){return "Za to uganko moraš izbrati kako dr
 
 exports.numBlocksNeeded = function(d){return "To uganko je možno rešiti z %1 blokov. Ti si uporabil/a %2."};
 
-exports.penDown = function(d){return "spusti svinčnik"};
+exports.penDown = function(d){return "začni risati"};
 
 exports.penTooltip = function(d){return "Dvigne ali spusti svinčnik, da začne ali neha risati."};
 
-exports.penUp = function(d){return "dvigni svinčnik"};
+exports.penUp = function(d){return "nehaj risati"};
 
-exports.reinfFeedbackMsg = function(d){return "Ali to zgleda tako, kot želiš? Lahko pritisneš gumb 'Poskusi ponovno', da vidiš tvojo sliko."};
+exports.reinfFeedbackMsg = function(d){return "Tukaj je tvoja risba! Lahko jo dopolniš ali pa rešiš naslednjo uganko."};
 
-exports.setColour = function(d){return "določi barvo"};
+exports.setColour = function(d){return "izberi barvo pisala"};
 
-exports.setPattern = function(d){return "set pattern"};
+exports.setPattern = function(d){return "določi vzorec"};
 
-exports.setWidth = function(d){return "določi širino"};
+exports.setWidth = function(d){return "določi debelino pisala"};
 
 exports.shareDrawing = function(d){return "Deli svojo sliko:"};
 
@@ -15106,9 +15106,9 @@ exports.showMe = function(d){return "Pokaži mi"};
 
 exports.showTurtle = function(d){return "pokaži umetnika"};
 
-exports.sizeParameter = function(d){return "size"};
+exports.sizeParameter = function(d){return "velikost"};
 
-exports.step = function(d){return "step"};
+exports.step = function(d){return "korak"};
 
 exports.tooFewColours = function(d){return "Moraš uporabiti vsaj %1 različnih barv za to uganko. Uporabil/a si jih samo %2."};
 
@@ -15122,7 +15122,7 @@ exports.turnTooltip = function(d){return "Obrne umetnika levo ali desno za dolo�
 
 exports.turtleVisibilityTooltip = function(d){return "Naredi umetnika vidnega ali nevidnega."};
 
-exports.widthTooltip = function(d){return "Spremeni širino svinčnika."};
+exports.widthTooltip = function(d){return "Spremeni debelino pisala."};
 
 exports.wrongColour = function(d){return "Tvoja slika je napačne barve. Za to uganko mora biti %1."};
 

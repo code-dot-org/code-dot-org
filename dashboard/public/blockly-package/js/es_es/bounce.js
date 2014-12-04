@@ -12764,7 +12764,7 @@ exports.hintRequest = function(d){return "Ver pista"};
 
 exports.backToPreviousLevel = function(d){return "Volver al nivel anterior"};
 
-exports.saveToGallery = function(d){return "Guardar en Galería"};
+exports.saveToGallery = function(d){return "Guardar en la Galería"};
 
 exports.savedToGallery = function(d){return "¡Guardado en la Galería!"};
 

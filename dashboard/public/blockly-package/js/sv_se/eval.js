@@ -14438,7 +14438,7 @@ exports.errorUnusedFunction = function(d){return "You created a function, but ne
 
 exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
-exports.extraTopBlocks = function(d){return "Du har extra block som inte är kopplade till händelseblock."};
+exports.extraTopBlocks = function(d){return "Du har okopplade block. Menade du att fästa dessa till \"när startat\" blocket?"};
 
 exports.finalStage = function(d){return "Grattis! Du har slutfört den sista nivån."};
 
@@ -14462,7 +14462,7 @@ exports.listVariable = function(d){return "lista"};
 
 exports.makeYourOwnFlappy = function(d){return "Gör ditt eget Flappy-spel"};
 
-exports.missingBlocksErrorMsg = function(d){return "Prova med en eller flera av blocken nedan att lösa pusslet."};
+exports.missingBlocksErrorMsg = function(d){return "Prova att använda ett eller flera av blocken nedan för att lösa pusslet."};
 
 exports.nextLevel = function(d){return "Grattis! Du slutförde pussel "+v(d,"puzzleNumber")+"."};
 
@@ -14474,11 +14474,11 @@ exports.nextStageTrophies = function(d){return "Grattis! Du klarade "+v(d,"stage
 
 exports.numBlocksNeeded = function(d){return "Grattis! Du slutförde pussel "+v(d,"puzzleNumber")+". (Men du skulle bara behövt använda"+p(d,"numBlocks",0,"sv",{"one":"1 block","other":n(d,"numBlocks")+" block"})+".)"};
 
-exports.numLinesOfCodeWritten = function(d){return "Du skrev bara "+p(d,"numLines",0,"sv",{"one":"1 rad","other":n(d,"numLines")+" rader"})+" kod!"};
+exports.numLinesOfCodeWritten = function(d){return "Du skrev "+p(d,"numLines",0,"sv",{"one":"1 rad","other":n(d,"numLines")+" rader"})+" kod!"};
 
 exports.play = function(d){return "play"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Skriv ut"};
 
 exports.puzzleTitle = function(d){return "Pussel "+v(d,"puzzle_number")+" av "+v(d,"stage_total")};
 
@@ -14486,7 +14486,7 @@ exports.repeat = function(d){return "upprepa"};
 
 exports.resetProgram = function(d){return "Återställ"};
 
-exports.runProgram = function(d){return "starta programmet"};
+exports.runProgram = function(d){return "Kör"};
 
 exports.runTooltip = function(d){return "Starta programmet som gjorts av blocken på arbetsytan."};
 
@@ -14504,7 +14504,7 @@ exports.subtitle = function(d){return "en visuell programmeringsmiljö"};
 
 exports.textVariable = function(d){return "text"};
 
-exports.tooFewBlocksMsg = function(d){return "Du använder alla nödvändiga typer av block, men prova att använda flera av denna typen av block för att slutföra pusslet."};
+exports.tooFewBlocksMsg = function(d){return "Du använder alla sorters block du behöver, prova att använda fler av samma sorter för att göra klart pusslet."};
 
 exports.tooManyBlocksMsg = function(d){return "Detta pusslet kan lösas med <x id='START_SPAN'/><x id='END_SPAN'/> block."};
 
@@ -14522,9 +14522,9 @@ exports.hintRequest = function(d){return "See hint"};
 
 exports.backToPreviousLevel = function(d){return "Gå tillbaka till föregående nivå"};
 
-exports.saveToGallery = function(d){return "Spara till ditt galleri"};
+exports.saveToGallery = function(d){return "Spara till galleriet"};
 
-exports.savedToGallery = function(d){return "Sparat till ditt galleri!"};
+exports.savedToGallery = function(d){return "Sparad i galleriet!"};
 
 exports.shareFailure = function(d){return "Sorry, we can't share this program."};
 
@@ -14550,7 +14550,7 @@ exports.when = function(d){return "when"};
 
 exports.whenRun = function(d){return "när startat"};
 
-exports.tryHOC = function(d){return "Prove en Timme med Kod"};
+exports.tryHOC = function(d){return "Prova Kodtimmen"};
 
 exports.signup = function(d){return "Registrera dig för introduktionskursen"};
 
@@ -14563,31 +14563,31 @@ exports.defaultTwitterText = function(d){return "Check out what I made"};
 
 },{"messageformat":62}],50:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.sv=function(n){return n===1?"one":"other"}
-exports.circleBlockTitle = function(d){return "circle (radius, style, color)"};
+exports.circleBlockTitle = function(d){return "cirkel (radie, stil, färg)"};
 
-exports.displayBlockTitle = function(d){return "display"};
+exports.displayBlockTitle = function(d){return "visa"};
 
-exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, color)"};
+exports.ellipseBlockTitle = function(d){return "ellips (bredd, höjd, stil, färg)"};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"};
+exports.extraTopBlocks = function(d){return "Du har okopplade block. Menade du att fästa dessa till \"visa\" blocket?"};
 
-exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
+exports.overlayBlockTitle = function(d){return "övertäckning(topp, botten)"};
 
-exports.placeImageBlockTitle = function(d){return "place-image (x, y, image)"};
+exports.placeImageBlockTitle = function(d){return "placera-bild (x, y, bild)"};
 
 exports.offsetBlockTitle = function(d){return "offset (x, y, image)"};
 
-exports.rectangleBlockTitle = function(d){return "rectangle (width, height, style, color)"};
+exports.rectangleBlockTitle = function(d){return "rektangel (bredd, höjd, stil, färg)"};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to edit your drawing."};
 
-exports.rotateImageBlockTitle = function(d){return "rotate (degrees, image)"};
+exports.rotateImageBlockTitle = function(d){return "rotera (grader, bild)"};
 
-exports.scaleImageBlockTitle = function(d){return "scale (factor)"};
+exports.scaleImageBlockTitle = function(d){return "skala (faktor)"};
 
-exports.squareBlockTitle = function(d){return "square (size, style, color)"};
+exports.squareBlockTitle = function(d){return "kvadrat (storlek, stil, färg)"};
 
-exports.starBlockTitle = function(d){return "star (radius, style, color)"};
+exports.starBlockTitle = function(d){return "stjärna(radius, stil, färg)"};
 
 exports.radialStarBlockTitle = function(d){return "radial-star (points, inner, outer, style, color)"};
 
@@ -14595,17 +14595,17 @@ exports.stringAppendBlockTitle = function(d){return "string-append (first, secon
 
 exports.stringLengthBlockTitle = function(d){return "string-length (string)"};
 
-exports.textBlockTitle = function(d){return "text (string, size, color)"};
+exports.textBlockTitle = function(d){return "text (sträng, storlek, färg)"};
 
-exports.triangleBlockTitle = function(d){return "triangle (size, style, color)"};
+exports.triangleBlockTitle = function(d){return "triangel (storlek, stil, färg)"};
 
-exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
+exports.underlayBlockTitle = function(d){return "underlag (botten, topp)"};
 
-exports.outline = function(d){return "outline"};
+exports.outline = function(d){return "kontur"};
 
 exports.solid = function(d){return "solid"};
 
-exports.string = function(d){return "string"};
+exports.string = function(d){return "sträng"};
 
 
 },{"messageformat":62}],51:[function(require,module,exports){

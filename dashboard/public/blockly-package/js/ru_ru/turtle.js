@@ -14868,7 +14868,7 @@ exports.numLinesOfCodeWritten = function(d){return "Ты только что н�
 
 exports.play = function(d){return "играть"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Печать"};
 
 exports.puzzleTitle = function(d){return "Головоломка "+v(d,"puzzle_number")+" из "+v(d,"stage_total")};
 
@@ -14912,9 +14912,9 @@ exports.hintRequest = function(d){return "Посмотреть подсказк�
 
 exports.backToPreviousLevel = function(d){return "Вернуться на предыдущий уровень"};
 
-exports.saveToGallery = function(d){return "Сохранить в твоей галереи"};
+exports.saveToGallery = function(d){return "Сохранить в галерею"};
 
-exports.savedToGallery = function(d){return "Сохранено в твоей галереи!"};
+exports.savedToGallery = function(d){return "Сохранено в галерее!"};
 
 exports.shareFailure = function(d){return "К сожалению, мы не можем поделиться этой программой."};
 
@@ -14986,23 +14986,23 @@ exports.catLogic = function(d){return "Логика"};
 
 exports.colourTooltip = function(d){return "Меняет цвет карандаша."};
 
-exports.createACircle = function(d){return "create a circle"};
+exports.createACircle = function(d){return "Создать круг"};
 
-exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+exports.createSnowflakeSquare = function(d){return "Создать квадратную снежинку"};
 
-exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+exports.createSnowflakeParallelogram = function(d){return "Создание снежинки-параллелограмма"};
 
-exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+exports.createSnowflakeLine = function(d){return "Создание снежинки-линии"};
 
-exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+exports.createSnowflakeSpiral = function(d){return "Создание снежинки-спирали"};
 
-exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+exports.createSnowflakeFlower = function(d){return "Создать снежинку-цветок"};
 
-exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+exports.createSnowflakeFractal = function(d){return "Создать снежинку-фрактал"};
 
-exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+exports.createSnowflakeRandom = function(d){return "Создать случайную снежинку"};
 
-exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
+exports.createASnowflakeBranch = function(d){return "Создать снежинку-ветвь"};
 
 exports.degrees = function(d){return "градусов"};
 
@@ -15042,7 +15042,7 @@ exports.drawUpperWave = function(d){return "нарисовать верхнюю 
 
 exports.drawLowerWave = function(d){return "нарисовать нижнюю волну"};
 
-exports.drawStamp = function(d){return "draw stamp"};
+exports.drawStamp = function(d){return "Создать штамп"};
 
 exports.heightParameter = function(d){return "высота"};
 
@@ -15096,11 +15096,11 @@ exports.penTooltip = function(d){return "Поднимает или опуска�
 
 exports.penUp = function(d){return "поднять карандаш"};
 
-exports.reinfFeedbackMsg = function(d){return "Получилось ли так, как ты и хотел? Ты можете нажать кнопку «Попытаться ещё раз», чтобы увидеть свой рисунок."};
+exports.reinfFeedbackMsg = function(d){return "Вот ваш рисунок! Продолжайте работать или перейдите к следующей загадке."};
 
 exports.setColour = function(d){return "выбрать цвет"};
 
-exports.setPattern = function(d){return "set pattern"};
+exports.setPattern = function(d){return "установить шаблон"};
 
 exports.setWidth = function(d){return "задать ширину"};
 

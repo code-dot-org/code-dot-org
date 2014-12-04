@@ -14864,7 +14864,7 @@ exports.numLinesOfCodeWritten = function(d){return "Tu sukūrei "+p(d,"numLines"
 
 exports.play = function(d){return "žaisti"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Spausdinti"};
 
 exports.puzzleTitle = function(d){return "Užduotis "+v(d,"puzzle_number")+" iš "+v(d,"stage_total")};
 
@@ -14908,9 +14908,9 @@ exports.hintRequest = function(d){return "Užuomina"};
 
 exports.backToPreviousLevel = function(d){return "Grįžti į ankstesnį lygį"};
 
-exports.saveToGallery = function(d){return "Įrašyti į savo galeriją"};
+exports.saveToGallery = function(d){return "Įrašyti į galeriją"};
 
-exports.savedToGallery = function(d){return "Įrašyti į savo galeriją!"};
+exports.savedToGallery = function(d){return "Įrašyta į galeriją!"};
 
 exports.shareFailure = function(d){return "Deja, šios programos dalintis negalima."};
 
@@ -14944,7 +14944,7 @@ exports.hintHeader = function(d){return "Štai patarimas:"};
 
 exports.genericFeedback = function(d){return "Pažiūrėk, kaip pavyko ir pabandyk patobulinti programą."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Pažiūrėkite, ką aš sukūriau"};
 
 
 },{"messageformat":57}],45:[function(require,module,exports){
@@ -14982,17 +14982,17 @@ exports.createACircle = function(d){return "sukurk apskritimą"};
 
 exports.createSnowflakeSquare = function(d){return "sukurk snaigę iš kvadratų"};
 
-exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+exports.createSnowflakeParallelogram = function(d){return "sukurk snaigę iš rombų"};
 
-exports.createSnowflakeLine = function(d){return "sukurk snaigę iš linijų"};
+exports.createSnowflakeLine = function(d){return "sukurk snaigę iš spindulių"};
 
-exports.createSnowflakeSpiral = function(d){return "sukurk spiralės tipo snaigę"};
+exports.createSnowflakeSpiral = function(d){return "sukurk snaigę kaip spiralę"};
 
-exports.createSnowflakeFlower = function(d){return "sukurk gėlės tipo snaigę"};
+exports.createSnowflakeFlower = function(d){return "sukurk snaigę kaip gėlę"};
 
-exports.createSnowflakeFractal = function(d){return "sukurk fraktalinę snaigę"};
+exports.createSnowflakeFractal = function(d){return "sukurk snaigę iš fraktališkų šakų"};
 
-exports.createSnowflakeRandom = function(d){return "sukurk atsitiktinę snaigę"};
+exports.createSnowflakeRandom = function(d){return "sukurk snaigę bet kokią"};
 
 exports.createASnowflakeBranch = function(d){return "sukurk snaigės šaką"};
 
@@ -15000,7 +15000,7 @@ exports.degrees = function(d){return "laipsnių"};
 
 exports.depth = function(d){return "gylis"};
 
-exports.dots = function(d){return "pikseliai"};
+exports.dots = function(d){return "pikselių"};
 
 exports.drawASquare = function(d){return "nubrėžk kvadratą"};
 
@@ -15034,7 +15034,7 @@ exports.drawUpperWave = function(d){return "nupiešk viršutinę bangą"};
 
 exports.drawLowerWave = function(d){return "nupiešk apatinę bangą"};
 
-exports.drawStamp = function(d){return "draw stamp"};
+exports.drawStamp = function(d){return "padėk antspaudą"};
 
 exports.heightParameter = function(d){return "aukštis"};
 
@@ -15088,11 +15088,11 @@ exports.penTooltip = function(d){return "Pakelia arba nuleidžia pieštuką, kad
 
 exports.penUp = function(d){return "pakelk pieštuką"};
 
-exports.reinfFeedbackMsg = function(d){return "Ar tai atrodo taip, kaip norėjai? Gali nuspausti mygtuką „Pabandyk dar kartą“, kad pamatytum savo piešinį."};
+exports.reinfFeedbackMsg = function(d){return "Štai tavo piešinys! Gali ir toliau piešti arba eik toliau prie kito galvosūkio."};
 
 exports.setColour = function(d){return "nustatyk spalvą"};
 
-exports.setPattern = function(d){return "set pattern"};
+exports.setPattern = function(d){return "nustatyk šabloną"};
 
 exports.setWidth = function(d){return "nustatyk plotį"};
 

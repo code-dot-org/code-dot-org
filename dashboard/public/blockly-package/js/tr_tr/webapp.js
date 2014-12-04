@@ -11795,7 +11795,7 @@ exports.numLinesOfCodeWritten = function(d){return "Tam olarak "+p(d,"numLines",
 
 exports.play = function(d){return "oynat"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Yazdır"};
 
 exports.puzzleTitle = function(d){return "Bulmaca "+v(d,"puzzle_number")+" / "+v(d,"stage_total")};
 
@@ -11811,7 +11811,7 @@ exports.score = function(d){return "puan"};
 
 exports.showCodeHeader = function(d){return "Kodu Görüntüle"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Bloklarını göster"};
 
 exports.showGeneratedCode = function(d){return "Kodu Görüntüle"};
 
@@ -11839,9 +11839,9 @@ exports.hintRequest = function(d){return "İpucunu gör"};
 
 exports.backToPreviousLevel = function(d){return "Önceki seviyeye dön"};
 
-exports.saveToGallery = function(d){return "Galerine kaydet"};
+exports.saveToGallery = function(d){return "Galerisine Kaydet"};
 
-exports.savedToGallery = function(d){return "Galerine kaydedildi!"};
+exports.savedToGallery = function(d){return "Galeri klasörüne kaydedilmiş!"};
 
 exports.shareFailure = function(d){return "Üzgünüz, bu programı paylaşamıyoruz."};
 
@@ -11851,7 +11851,7 @@ exports.typeHint = function(d){return "Parantezlerin ve noktalı virgüllerin ge
 
 exports.workspaceHeader = function(d){return "Bloklarını burda topla: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "JavaScript kodunuzu buraya yazın"};
 
 exports.infinity = function(d){return "Sonsuz"};
 
@@ -11875,7 +11875,7 @@ exports.hintHeader = function(d){return "İşte bir ipucu:"};
 
 exports.genericFeedback = function(d){return "Sonucunu gör ve programını düzeltmeyi dene."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Ne yaptığıma bakın"};
 
 
 },{"messageformat":52}],40:[function(require,module,exports){
@@ -11898,9 +11898,9 @@ exports.catVariables = function(d){return "Değişkenler"};
 
 exports.continue = function(d){return "Devam Et"};
 
-exports.createHtmlBlock = function(d){return "create html block"};
+exports.createHtmlBlock = function(d){return "HTML bloğu oluştur"};
 
-exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
+exports.createHtmlBlockTooltip = function(d){return "HTML bloğu içinde uygulama oluşturur."};
 
 exports.finalLevel = function(d){return "Tebrikler! Son bulmacayı da çözdünüz."};
 
@@ -11912,7 +11912,7 @@ exports.no = function(d){return "Hayır"};
 
 exports.numBlocksNeeded = function(d){return "Bu bulmaca %1 blok kullanılarak çözülebilir."};
 
-exports.pause = function(d){return "Durdur"};
+exports.pause = function(d){return "Ara"};
 
 exports.reinfFeedbackMsg = function(d){return "Çalışan uygulamaya dönmek için \"Yeniden dene\" tuşuna basabilirsiniz."};
 
@@ -11920,17 +11920,17 @@ exports.repeatForever = function(d){return "Sonsuza kadar tekrarla"};
 
 exports.repeatDo = function(d){return "yap"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
+exports.repeatForeverTooltip = function(d){return "Uygulama çalışırken eylemleri bu blok içinde sürekli yürütür."};
 
 exports.shareWebappTwitter = function(d){return "Yaptığım hikayeye göz atın. @codeorg ile kendim yazdım"};
 
 exports.shareGame = function(d){return "Uygulamanı paylaş:"};
 
-exports.stepIn = function(d){return "Step in"};
+exports.stepIn = function(d){return "İçeri gel"};
 
-exports.stepOver = function(d){return "Step over"};
+exports.stepOver = function(d){return "Adım"};
 
-exports.stepOut = function(d){return "Step out"};
+exports.stepOut = function(d){return "Dışarı adım"};
 
 exports.turnBlack = function(d){return "geri karart"};
 

@@ -11938,7 +11938,7 @@ exports.no = function(d){return "Ne"};
 
 exports.numBlocksNeeded = function(d){return "Ovaj zadatak se može riješiti s %1 blokova."};
 
-exports.pause = function(d){return "Pause"};
+exports.pause = function(d){return "Pauza"};
 
 exports.reinfFeedbackMsg = function(d){return "Možeš kliknuti na gumb \"Ponovno\" da bi ponovno pokrenuo svoj program."};
 
@@ -11952,11 +11952,11 @@ exports.shareWebappTwitter = function(d){return "Vidi program koji sam napravio.
 
 exports.shareGame = function(d){return "Dijeli program:"};
 
-exports.stepIn = function(d){return "Step in"};
+exports.stepIn = function(d){return "Korak u"};
 
-exports.stepOver = function(d){return "Step over"};
+exports.stepOver = function(d){return "Korak preko"};
 
-exports.stepOut = function(d){return "Step out"};
+exports.stepOut = function(d){return "Korak van"};
 
 exports.turnBlack = function(d){return "postavi crno"};
 

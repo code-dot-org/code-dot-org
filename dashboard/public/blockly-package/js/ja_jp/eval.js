@@ -14478,7 +14478,7 @@ exports.numLinesOfCodeWritten = function(d){return "あなたはたった今 "+p
 
 exports.play = function(d){return "再生"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "印刷"};
 
 exports.puzzleTitle = function(d){return "パズル "+v(d,"puzzle_number")+" の "+v(d,"stage_total")};
 
@@ -14524,7 +14524,7 @@ exports.backToPreviousLevel = function(d){return "前のレベルに戻る"};
 
 exports.saveToGallery = function(d){return "ギャラリーに保存"};
 
-exports.savedToGallery = function(d){return "ギャラリーに保存しました！"};
+exports.savedToGallery = function(d){return "ギャラリーに保存されました！"};
 
 exports.shareFailure = function(d){return "プログラムをシェアできませんでした。"};
 
@@ -14569,7 +14569,7 @@ exports.displayBlockTitle = function(d){return "ひょうじ"};
 
 exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, color)"};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"};
+exports.extraTopBlocks = function(d){return "使っていないブロックがあります。\"表示\"ブロックにつなごうと思っていましたか？"};
 
 exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
 

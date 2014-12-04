@@ -11071,7 +11071,7 @@ var MessageFormat = require("messageformat");MessageFormat.locale.hr = function 
   }
   return 'other';
 };
-exports.compute = function(d){return "izračunati"};
+exports.compute = function(d){return "izračunaj"};
 
 exports.equivalentExpression = function(d){return "Pokušaj presložiti svoje argumente da dobiješ posve jednak izraz."};
 
@@ -11079,7 +11079,7 @@ exports.extraTopBlocks = function(d){return "Postoje nespojeni blokovi. Želiš 
 
 exports.goal = function(d){return "Cilj:"};
 
-exports.reinfFeedbackMsg = function(d){return "Možeš pritisnuti gumb \"Ponovno\" da bi uredio svoj izraz."};
+exports.reinfFeedbackMsg = function(d){return "Evo i tvoje priče! Nastavi raditi na njoj ili započni slijedeći zadatak!"};
 
 exports.yourExpression = function(d){return "Tvoj izraz:"};
 

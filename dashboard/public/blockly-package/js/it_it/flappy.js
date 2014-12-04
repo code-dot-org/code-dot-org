@@ -12309,7 +12309,7 @@ exports.numLinesOfCodeWritten = function(d){return "Hai appena scritto "+p(d,"nu
 
 exports.play = function(d){return "inizia"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Stampa"};
 
 exports.puzzleTitle = function(d){return "Esercizio "+v(d,"puzzle_number")+" di "+v(d,"stage_total")};
 
@@ -12353,9 +12353,9 @@ exports.hintRequest = function(d){return "Vedi il suggerimento"};
 
 exports.backToPreviousLevel = function(d){return "Torna al livello precedente"};
 
-exports.saveToGallery = function(d){return "Salva nella tua galleria"};
+exports.saveToGallery = function(d){return "Salva nella galleria"};
 
-exports.savedToGallery = function(d){return "Salvato nella tua galleria!"};
+exports.savedToGallery = function(d){return "Salvato nella galleria!"};
 
 exports.shareFailure = function(d){return "Ci dispiace, non possiamo condividere questo programma."};
 
@@ -12389,7 +12389,7 @@ exports.hintHeader = function(d){return "Ecco un suggerimento:"};
 
 exports.genericFeedback = function(d){return "Verifica il risultato e prova a correggere il tuo programma."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Verifica che cosa ho fatto"};
 
 
 },{"messageformat":52}],40:[function(require,module,exports){

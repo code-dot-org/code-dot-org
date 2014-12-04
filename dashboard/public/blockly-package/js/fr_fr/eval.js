@@ -14478,7 +14478,7 @@ exports.numLinesOfCodeWritten = function(d){return "Vous venez d'écrire "+p(d,"
 
 exports.play = function(d){return "jouer"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Imprimer"};
 
 exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" sur "+v(d,"stage_total")};
 
@@ -14494,7 +14494,7 @@ exports.score = function(d){return "score"};
 
 exports.showCodeHeader = function(d){return "Afficher le code"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Afficher les blocs"};
 
 exports.showGeneratedCode = function(d){return "Afficher le code"};
 
@@ -14522,9 +14522,9 @@ exports.hintRequest = function(d){return "Voir astuce"};
 
 exports.backToPreviousLevel = function(d){return "Retour au niveau précédent"};
 
-exports.saveToGallery = function(d){return "Enregistrer dans votre galerie"};
+exports.saveToGallery = function(d){return "Sauvegarder dans la galerie"};
 
-exports.savedToGallery = function(d){return "Enregistré dans votre galerie !"};
+exports.savedToGallery = function(d){return "Enregistrées dans la Galerie !"};
 
 exports.shareFailure = function(d){return "Désolé, nous ne pouvons pas partager ce programme."};
 
@@ -14534,7 +14534,7 @@ exports.typeHint = function(d){return "Notez que les parenthèses et les point-v
 
 exports.workspaceHeader = function(d){return "Assemblez vos blocs ici : "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Tapez ici votre code JavaScript"};
 
 exports.infinity = function(d){return "Infini"};
 
@@ -14558,54 +14558,54 @@ exports.hintHeader = function(d){return "Voici une astuce :"};
 
 exports.genericFeedback = function(d){return "Observez le résultat et essayez de corriger les erreurs."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Découvrez ce que j'ai fait"};
 
 
 },{"messageformat":62}],50:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.fr=function(n){return n===0||n==1?"one":"other"}
-exports.circleBlockTitle = function(d){return "circle (radius, style, color)"};
+exports.circleBlockTitle = function(d){return "cercle (rayon, style, couleur)"};
 
-exports.displayBlockTitle = function(d){return "display"};
+exports.displayBlockTitle = function(d){return "affichage"};
 
-exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, color)"};
+exports.ellipseBlockTitle = function(d){return "ellipse (largeur, hauteur, style, couleur)"};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"};
+exports.extraTopBlocks = function(d){return "Vous avez des blocs libres. Vouliez vous les rattacher au bloc \" affichage\" ?"};
 
-exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
+exports.overlayBlockTitle = function(d){return "superposition (haut, bas)"};
 
 exports.placeImageBlockTitle = function(d){return "place-image (x, y, image)"};
 
 exports.offsetBlockTitle = function(d){return "offset (x, y, image)"};
 
-exports.rectangleBlockTitle = function(d){return "rectangle (width, height, style, color)"};
+exports.rectangleBlockTitle = function(d){return "rectangle (largeur, hauteur, style, couleur)"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to edit your drawing."};
+exports.reinfFeedbackMsg = function(d){return "Vous pouvez appuyer sur le bouton \"Essayer encore\" pour éditer votre dessin."};
 
-exports.rotateImageBlockTitle = function(d){return "rotate (degrees, image)"};
+exports.rotateImageBlockTitle = function(d){return "rotation (degrés, image)"};
 
-exports.scaleImageBlockTitle = function(d){return "scale (factor)"};
+exports.scaleImageBlockTitle = function(d){return "échelle (facteur)"};
 
-exports.squareBlockTitle = function(d){return "square (size, style, color)"};
+exports.squareBlockTitle = function(d){return "carré (taille, style, couleur)"};
 
-exports.starBlockTitle = function(d){return "star (radius, style, color)"};
+exports.starBlockTitle = function(d){return "Etoile (rayon, style, couleur)"};
 
 exports.radialStarBlockTitle = function(d){return "radial-star (points, inner, outer, style, color)"};
 
-exports.stringAppendBlockTitle = function(d){return "string-append (first, second)"};
+exports.stringAppendBlockTitle = function(d){return "string-append (premier, second)"};
 
-exports.stringLengthBlockTitle = function(d){return "string-length (string)"};
+exports.stringLengthBlockTitle = function(d){return "string-length (chaîne)"};
 
-exports.textBlockTitle = function(d){return "text (string, size, color)"};
+exports.textBlockTitle = function(d){return "texte (string, taille, couleur)"};
 
-exports.triangleBlockTitle = function(d){return "triangle (size, style, color)"};
+exports.triangleBlockTitle = function(d){return "triangle (taille, style, couleur)"};
 
-exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
+exports.underlayBlockTitle = function(d){return "underlay (bas, haut)"};
 
-exports.outline = function(d){return "outline"};
+exports.outline = function(d){return "contour"};
 
-exports.solid = function(d){return "solid"};
+exports.solid = function(d){return "solide"};
 
-exports.string = function(d){return "string"};
+exports.string = function(d){return "chaîne"};
 
 
 },{"messageformat":62}],51:[function(require,module,exports){

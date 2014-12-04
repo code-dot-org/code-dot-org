@@ -12385,7 +12385,7 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.ca=function(n){return n===1?"one":"other"}
 exports.bounceBall = function(d){return "rebot de la pilota"};
 
-exports.bounceBallTooltip = function(d){return "Botar una pilota fora d'un objecte."};
+exports.bounceBallTooltip = function(d){return "Botar una pilota contra un objecte."};
 
 exports.continue = function(d){return "Continuar"};
 
@@ -12415,15 +12415,15 @@ exports.ifelseTooltip = function(d){return "Si hi ha un camí en la direcció es
 
 exports.incrementOpponentScore = function(d){return "punt de puntuació per l'oponent"};
 
-exports.incrementOpponentScoreTooltip = function(d){return "Incrementar en u la puntuació de l'oponent actual."};
+exports.incrementOpponentScoreTooltip = function(d){return "Afegeix u a la puntuació de l'oponent."};
 
-exports.incrementPlayerScore = function(d){return "punt de puntuació"};
+exports.incrementPlayerScore = function(d){return "punt"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Incrementar en u la puntuació del jugador actual."};
+exports.incrementPlayerScoreTooltip = function(d){return "Afegeix u a la puntuació del jugador."};
 
 exports.isWall = function(d){return "és una paret"};
 
-exports.isWallTooltip = function(d){return "Retorna veritat si hi ha una paret"};
+exports.isWallTooltip = function(d){return "Retorna cert si hi ha una paret"};
 
 exports.launchBall = function(d){return "llença una nova pilota"};
 
@@ -12702,7 +12702,7 @@ exports.levelIncompleteError = function(d){return "Estàs utilitzant tots els ti
 
 exports.listVariable = function(d){return "llista"};
 
-exports.makeYourOwnFlappy = function(d){return "Fes el teu propi \"Flappy Game\""};
+exports.makeYourOwnFlappy = function(d){return "Fes el teu propi joc Flappy"};
 
 exports.missingBlocksErrorMsg = function(d){return "Prova un o més dels blocs de sota per a resoldre aquest puzzle."};
 

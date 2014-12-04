@@ -11839,7 +11839,7 @@ exports.hintRequest = function(d){return "Ver pista"};
 
 exports.backToPreviousLevel = function(d){return "Volver al nivel anterior"};
 
-exports.saveToGallery = function(d){return "Guardar en Galería"};
+exports.saveToGallery = function(d){return "Guardar en la Galería"};
 
 exports.savedToGallery = function(d){return "¡Guardado en la Galería!"};
 
@@ -11912,7 +11912,7 @@ exports.no = function(d){return "No"};
 
 exports.numBlocksNeeded = function(d){return "Este puzzle puede resolverse con %1 bloques."};
 
-exports.pause = function(d){return "Pausa"};
+exports.pause = function(d){return "Interrumpir"};
 
 exports.reinfFeedbackMsg = function(d){return "Puedes presionar el botón \"Intentar de nuevo\" para volver a ejecutar tu aplicación."};
 

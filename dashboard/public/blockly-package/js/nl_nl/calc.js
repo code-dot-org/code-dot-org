@@ -11066,7 +11066,7 @@ exports.extraTopBlocks = function(d){return "Je hebt blokken die niet gekoppeld 
 
 exports.goal = function(d){return "Doel:"};
 
-exports.reinfFeedbackMsg = function(d){return "Ziet dit eruit als het gene wat je wilt? Je kunt op de 'Probeer opnieuw' knop drukken om jouw tekening te zien."};
+exports.reinfFeedbackMsg = function(d){return "Hier is jouw verhaal! Werk er verder aan of ga verder met de volgende puzzel!"};
 
 exports.yourExpression = function(d){return "Je expressie:"};
 
@@ -11175,7 +11175,7 @@ exports.numLinesOfCodeWritten = function(d){return "Je schreef zojuist "+p(d,"nu
 
 exports.play = function(d){return "spelen"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Afdrukken"};
 
 exports.puzzleTitle = function(d){return "Puzzel "+v(d,"puzzle_number")+" van "+v(d,"stage_total")};
 
@@ -11219,9 +11219,9 @@ exports.hintRequest = function(d){return "Bekijk tip"};
 
 exports.backToPreviousLevel = function(d){return "Terug naar het vorige niveau"};
 
-exports.saveToGallery = function(d){return "Sla op in je galerij"};
+exports.saveToGallery = function(d){return "Opslaan in galerij"};
 
-exports.savedToGallery = function(d){return "Opgeslagen in je galerij!"};
+exports.savedToGallery = function(d){return "Opgeslagen in galerij!"};
 
 exports.shareFailure = function(d){return "Sorry, we kunnen dit programma niet delen."};
 
@@ -11255,7 +11255,7 @@ exports.hintHeader = function(d){return "Een tip:"};
 
 exports.genericFeedback = function(d){return "Kijk waar je uitkwam, en probeer je programma te verbeteren."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Kijk wat ik gemaakt heb"};
 
 
 },{"messageformat":53}],42:[function(require,module,exports){

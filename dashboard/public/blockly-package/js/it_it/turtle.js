@@ -14855,7 +14855,7 @@ exports.numLinesOfCodeWritten = function(d){return "Hai appena scritto "+p(d,"nu
 
 exports.play = function(d){return "inizia"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Stampa"};
 
 exports.puzzleTitle = function(d){return "Esercizio "+v(d,"puzzle_number")+" di "+v(d,"stage_total")};
 
@@ -14899,9 +14899,9 @@ exports.hintRequest = function(d){return "Vedi il suggerimento"};
 
 exports.backToPreviousLevel = function(d){return "Torna al livello precedente"};
 
-exports.saveToGallery = function(d){return "Salva nella tua galleria"};
+exports.saveToGallery = function(d){return "Salva nella galleria"};
 
-exports.savedToGallery = function(d){return "Salvato nella tua galleria!"};
+exports.savedToGallery = function(d){return "Salvato nella galleria!"};
 
 exports.shareFailure = function(d){return "Ci dispiace, non possiamo condividere questo programma."};
 
@@ -14935,7 +14935,7 @@ exports.hintHeader = function(d){return "Ecco un suggerimento:"};
 
 exports.genericFeedback = function(d){return "Verifica il risultato e prova a correggere il tuo programma."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Verifica che cosa ho fatto"};
 
 
 },{"messageformat":57}],45:[function(require,module,exports){
@@ -15070,7 +15070,7 @@ exports.penTooltip = function(d){return "Alza o abbassa la matita, per avviare o
 
 exports.penUp = function(d){return "Alza la matita"};
 
-exports.reinfFeedbackMsg = function(d){return "Somiglia a quello che volevi? Se premi il pulsante \"Riprova\" puoi tornare indietro per modificare il tuo disegno."};
+exports.reinfFeedbackMsg = function(d){return "Ecco il tuo disegno! Continua a lavorarci sopra oppure passa al prossimo puzzle."};
 
 exports.setColour = function(d){return "Imposta il colore"};
 

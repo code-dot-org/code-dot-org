@@ -14579,7 +14579,7 @@ exports.offsetBlockTitle = function(d){return "offset (x, y, image)"};
 
 exports.rectangleBlockTitle = function(d){return "矩形 （寬度、 高度、 風格、 顏色)"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to edit your drawing."};
+exports.reinfFeedbackMsg = function(d){return "你可以按\"重試\"按鈕，就可以編輯你的圖畫。"};
 
 exports.rotateImageBlockTitle = function(d){return "rotate (degrees, image)"};
 
@@ -14601,7 +14601,7 @@ exports.triangleBlockTitle = function(d){return "三角形 （大小、 樣式�
 
 exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
 
-exports.outline = function(d){return "outline"};
+exports.outline = function(d){return "大綱"};
 
 exports.solid = function(d){return "實心"};
 

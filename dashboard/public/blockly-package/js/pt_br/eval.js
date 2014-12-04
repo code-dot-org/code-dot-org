@@ -14579,7 +14579,7 @@ exports.offsetBlockTitle = function(d){return "offset (x, y, image)"};
 
 exports.rectangleBlockTitle = function(d){return "retângulo (largura, altura, estilo, cor)"};
 
-exports.reinfFeedbackMsg = function(d){return "Você pode clicar no botão \"Tentar novamente\" para editar seu desenho."};
+exports.reinfFeedbackMsg = function(d){return "Você pode clicar no botão \"Tente novamente\" para editar seu desenho."};
 
 exports.rotateImageBlockTitle = function(d){return "rotacionar (graus, imagem)"};
 

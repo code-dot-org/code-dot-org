@@ -12509,7 +12509,7 @@ exports.repeatUntilBlocked = function(d){return "當前面有路時"};
 
 exports.repeatUntilFinish = function(d){return "重覆直到完成"};
 
-exports.scoreText = function(d){return "Score: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
+exports.scoreText = function(d){return "分數: "+v(d,"playerScore")+": "+v(d,"opponentScore")};
 
 exports.setBackgroundRandom = function(d){return "設定隨機場景"};
 
@@ -12573,9 +12573,9 @@ exports.turnRight = function(d){return "向右轉"};
 
 exports.turnTooltip = function(d){return "將我向左或右轉90度。"};
 
-exports.whenBallInGoal = function(d){return "when ball in goal"};
+exports.whenBallInGoal = function(d){return "當球在目標區"};
 
-exports.whenBallInGoalTooltip = function(d){return "Execute the actions below when a ball enters the goal."};
+exports.whenBallInGoalTooltip = function(d){return "當球進入目標區時執行以下動作。"};
 
 exports.whenBallMissesPaddle = function(d){return "當球拍未擊中球"};
 

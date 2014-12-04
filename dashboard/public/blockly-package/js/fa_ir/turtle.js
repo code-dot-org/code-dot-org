@@ -14815,7 +14815,7 @@ exports.errorUnusedFunction = function(d){return "You created a function, but ne
 
 exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
-exports.extraTopBlocks = function(d){return "شما بلوک های اضافه ای دارید که به یک بلوک رویداد متصل نیست."};
+exports.extraTopBlocks = function(d){return "بلوک‌های نچسبیده‌ای هنوز باقی مونده. آیا قصد داری اینها را به بلوک \"هنگام اجرا\" وصل کنی؟"};
 
 exports.finalStage = function(d){return "تبریک می‌گوییم! شما مرحله‌ی نهایی را به پایان رساندید."};
 
@@ -14855,7 +14855,7 @@ exports.numLinesOfCodeWritten = function(d){return "شما "+p(d,"numLines",0,"f
 
 exports.play = function(d){return "بازی"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "چاپ"};
 
 exports.puzzleTitle = function(d){return "معمای "+v(d,"puzzle_number")+" از "+v(d,"stage_total")};
 
@@ -14871,7 +14871,7 @@ exports.score = function(d){return "نمره"};
 
 exports.showCodeHeader = function(d){return "کد نمایش"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "نمایش بلوک‌ها"};
 
 exports.showGeneratedCode = function(d){return "نمایشِ کد"};
 
@@ -14899,11 +14899,11 @@ exports.hintRequest = function(d){return "تذکر را ببینید"};
 
 exports.backToPreviousLevel = function(d){return "برگرد به سطح قبلی"};
 
-exports.saveToGallery = function(d){return "ذخیره در گالری شما"};
+exports.saveToGallery = function(d){return "ذخیره در گالری"};
 
-exports.savedToGallery = function(d){return "در گالری شما ذخیره شد!"};
+exports.savedToGallery = function(d){return "در گالری ذخیره شد!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "شرمنده، ما نمیتوانیم این برنامه را به اشتراک بگذاریم."};
 
 exports.typeFuncs = function(d){return "توابع قابل استفاده: %1"};
 
@@ -14911,7 +14911,7 @@ exports.typeHint = function(d){return "توجه کن که علامت‌های پ
 
 exports.workspaceHeader = function(d){return "بلوک‌های خودت رو اینجا سرهم کن: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "کد جاوا اسکریپت خودت را اینجا وارد کن"};
 
 exports.infinity = function(d){return "بی نهایت"};
 
@@ -14942,7 +14942,7 @@ exports.defaultTwitterText = function(d){return "Check out what I made"};
 var MessageFormat = require("messageformat");MessageFormat.locale.fa=function(n){return "other"}
 exports.blocksUsed = function(d){return "بلوک های استفاده شده: %1"};
 
-exports.branches = function(d){return "branches"};
+exports.branches = function(d){return "شاخه"};
 
 exports.catColour = function(d){return "رنگ"};
 
@@ -14960,7 +14960,7 @@ exports.catLogic = function(d){return "منطق"};
 
 exports.colourTooltip = function(d){return "رنگ قلم را تغییر می دهد."};
 
-exports.createACircle = function(d){return "create a circle"};
+exports.createACircle = function(d){return "ایجاد یک دایره"};
 
 exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
 
@@ -14980,7 +14980,7 @@ exports.createASnowflakeBranch = function(d){return "create a snowflake branch"}
 
 exports.degrees = function(d){return "درجه"};
 
-exports.depth = function(d){return "depth"};
+exports.depth = function(d){return "عمق"};
 
 exports.dots = function(d){return "پیکسل"};
 
@@ -14990,7 +14990,7 @@ exports.drawATriangle = function(d){return "یک مثلث بکشید"};
 
 exports.drawACircle = function(d){return "یک دایره بکشید"};
 
-exports.drawAFlower = function(d){return "draw a flower"};
+exports.drawAFlower = function(d){return "یک گل نقاشی بکن"};
 
 exports.drawAHexagon = function(d){return "draw a hexagon"};
 
@@ -15008,7 +15008,7 @@ exports.drawASnowflake = function(d){return "draw a snowflake"};
 
 exports.drawASnowman = function(d){return "یک آدم برفی بکشید"};
 
-exports.drawAStar = function(d){return "draw a star"};
+exports.drawAStar = function(d){return "رسم یک ستاره"};
 
 exports.drawATree = function(d){return "یک درخت بکشید"};
 
@@ -15084,9 +15084,9 @@ exports.showMe = function(d){return "نمایش بده"};
 
 exports.showTurtle = function(d){return "نشان دادن هنرمند"};
 
-exports.sizeParameter = function(d){return "size"};
+exports.sizeParameter = function(d){return "اندازه"};
 
-exports.step = function(d){return "step"};
+exports.step = function(d){return "گام"};
 
 exports.tooFewColours = function(d){return "شما برای این پازل احتیاج حداقل نیاز به استفاده از  %1 رنگ دارید. شما فقط از %2 رنگ استفاده کرده اید."};
 
