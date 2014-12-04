@@ -1,47 +1,46 @@
 "cs-CZ":
   hello: Ahoj světe
-  select_language: Please select your language
+  select_language: Prosím, zvolte jazyk
   computer_science: Informatika
   computer_science_edweek: Týden vzdělávání Informatiky
   csedweek_dates: 9-15. prosince 2013
-  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
+  csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold">Hodina kódu</a> se blíží. Vyzýváme všechny učitele a organizátory,
     <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">plan your Hour of Code</a>'
+    font-weight:bold"> naplánujte si svou Hodinu kódu</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
-    none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
-  n_have_learned_an_hoc: "<h1>#</h1><h3>vyzkoušel si</h3><h2>HODINU KÓDU&trade;</h2>"
+    none; font-weight: 400">Učíte informatiku? Podívejte se také na další zdroje CSEdWeek</a>'
+  n_have_learned_an_hoc: <h1>#</h1><h3>si vyzkoušel</h3><h2>Hodinu kódu</h2>
   anybody_can_learn: Zvládne to každý.
   learn_now: Učit se teď
-  petition_message: Podepiš se svým jménem, pokud si myslíš, že každý student v každé
-    škole by měl mít možnost učit se programovat
+  petition_message: Každý student v každé škole by měl mít možnost se naučit informatiku
   petition_sign_message: 'Pokud souhlasíš, napiš své jméno. Přidej se mezi # dalších.'
   name: Jméno
   email: E-mail
   zipcode: PSČ nebo země
   submit: Odeslat
-  twentyhours_heading: Vyzkoušej nsi náš kurz Úvod do počítačové vědy
-  twentyhours_text: Dokončil jsi svou první Hodinu kódu? Nauč se více do hloubky počítačové
-    vědy a progarmovacích pojmů v tomto následujícím kurzu.
-  hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
-    8 - 14, 2014<br/>
+  twentyhours_heading: Vyzkoušej si náš kurz Úvod do Informatiky
+  twentyhours_text: Dokončil jsi svou první Hodinu kódu? Nauč se více o informatice
+    a programovacích pojmech v  následujícím kurzu.
+  hoc2014_heading: Připojte se k <a href="http://hourofcode.com">Hodině kódu</a> <br/>
+    8. až 14. prosince 2014 <br/>
   hoc2014_students: Students
-  hoc2014_try: Try it
-  hoc2014_teachers: Teachers
-  hoc2014_host: Host it
-  hoc2014_everyone: Everyone
-  hoc2014_support: Support it
-  hoc2014_whatishoc: What is the Hour of Code?
+  hoc2014_try: Zkuste to
+  hoc2014_teachers: Učitelé
+  hoc2014_host: Zorganizujte ji
+  hoc2014_everyone: Kdokoli
+  hoc2014_support: Podpořte ji
+  hoc2014_whatishoc: Co to je Hodina kódu?
   twentyhours_trynow: Vyzkoušej hned
-  california_heading: Ask your school to teach computer science
-  california_text: Any teacher can offer our <a href='http://learn.code.org/'>free
-    intro course</a>.  Any elementary school can <a href='http://code.org/educate/k5'>teach
-    computer science</a>. Ask high schools to <a href='http://code.org/educate/districts'>partner
-    with us.
-  california_button: Learn More
+  california_heading: Požádejte svou školu, aby vyučovala informatiku
+  california_text: Každý učitel může nabídnout naše <a href='http://studio.code.org/'>
+    bezplatné kurzy</a>.  Každá základní škola může <a href='http://code.org/educate/k5'>
+    vyučovat informatiku</a>. Požádejte střední školy, aby <a href = 'http://code.org/educate/districts'
+    > se k nám připojily.
+  california_button: Další informace
   flappy_heading: Přejem Flappy narozeniny Code.org
-  flappy_text: Code.org má právě 1 rok.<br/><br/> salvuj s námi vytvořením vlastní
-    <b>Flappy</b> game. Vytvoř vlastní pravidla a sdílej se svými přáteli!
+  flappy_text: Code.org má právě 1 rok.<br/><br/> Oslavuj to s námi vytvořením vlastní
+    hry <b>Flappy</b>. Vytvoř vlastní pravidla a sdílej se svými přáteli!
   view_english_site: Zobraz web v angličtině
   non_english_tutorials: 'Cvičení jsou přeložena do mnoha jazyků:'
   write_your_first_program: Napiš svůj první počítačový program
@@ -51,53 +50,55 @@
     základní algoritmy.
   all_ages: Všechny věkové kategorie
   beginner: Začátečník
-  n_participants: "# účastníků"
-  go: Jít
+  n_participants: '# účastníků'
+  go: Spustit
   thank_you_: Díky!
   congratulations: Blahopřejeme!
-  congratulations_on_completing_hoc: Gratulujeme k dokončení Jedné Hodiny Kódu.
+  congratulations_on_completing_hoc: Gratulujeme k dokončení jedné Hodiny kódu.
   get_a_certificate_of_achievement: Získej osvědčení o účasti
   enter_valid_email: Prosím zadej platnou emailovou adresu
   get_a_certificate_message: Zašleme ti certifikát a informace o tom, jak se <a href='/learn/beyond'>Učit
     po První Hodině</a>
-  get_a_certificate_message_after: Certifikát je na cestě. Nyní pokračuj s naším <a
-    href='http://learn.code.org'>20hodinovým kurzem</a>, nebo <a href='/learn/beyond'>
-    Nauč se za jednu hodinu</a>.
+  get_a_certificate_message_after: Klikněte na certifikát, který chcete stáhnout nebo
+    vytisknout. Teď pokračujte s našimi <a href='http://studio.code.org'> dalšími
+    kurzy</a> nebo si prohlédněte možnosti, jak pokračovat <a href='/learn/beyond'>
+    dál než jednu hodinu</a>.
   thanks_for_submitting: Děkujeme za zaslání!
   if_you_enjoyed: Jestli tě výuka bavila, zeptej se svých kamarádů, zda to nezkusí
     také! Chceme, aby se učil celý svět.
   personalize_certificate: Uprav si svůj certifikát
   share_achievement: Sdílej svůj úspěch
-  beyond_hour_message: Pokračuj s naším <a href='http://learn.code.org'>20hodinovým
-    kurzem</a>, nebo další možností <a href='/learn/beyond'>Nauč se za jednu hodinu</a>.
-  leaderboards_for_hoc: "Žebříčky pro Hodinu Kódu."
+  beyond_hour_message: Pokračujte s našimi <a href='http://studio.code.org'> dalšími
+    kurzy</a> nebo si prohlédněte možnosti, jak pokračovat <a href='/learn/beyond'>
+    dál než jednu hodinu</a>.
+  leaderboards_for_hoc: Žebříčky pro Hodinu Kódu.
   support_url: http://support.code.org/
   country: Země
   city: Město
   gender: Pohlaví
   boys: Kluci
-  girls: Holky
+  girls: Dívky
   give_my_hour: 'Dej moji Hodinu:'
-  girls_team: Holčičí Tým
-  boys_team: Tým kluků
-  tell_the_world: "Řekni to světu!"
+  girls_team: Dívčí tým
+  boys_team: Chlapecký tým
+  tell_the_world: Řekni to světu!
   thanks_for_voting: Díky za hlasování!
   share_on_facebook: Sdílet na Facebooku
   share_on_twitter: Sdílet na Twitteru
-  beyond_an_hour: Za JEDNU HODINU KÓDU >
-  get_started: Začít
+  beyond_an_hour: Co dál po Hodině kódu >
+  get_started: Spustit
   i_agree: Souhlasím
-  participant_select: "- Vybrat -"
+  participant_select: '- Vybrat -'
   participant_student: student
   participant_parent: Rodič
   participant_educator: Vyučující
   participant_engineer: Softwarový inženýr
-  participant_other: "Žádný z výše uvedených"
+  participant_other: Žádný z výše uvedených
   i_am_a: Jsem
   never_spam: Nikdy ti nebudeme posílat nevyžádanou poštu
   enter_country: Zadej zemi, pokud nejsi z USA
-  used_infrequent_updates: Only used for infrequent updates
-  privacy_practices_children: See our privacy practices for children
+  used_infrequent_updates: Používá se jen pro pro občasné aktualizace
+  privacy_practices_children: Viz naše zásady ochrany osobních údajů pro děti
   petition_thankyou: Děkujeme za podepsání petice
   continue_learning_header: Pokračuj ve výuce i po Hodině Kódu
   continue_learning_body: Je mnoho možností. Můžete se učit online, v místní škole
@@ -105,32 +106,32 @@
   learn_next_level: Pokračuj na další úroveň
   learn_online: Vyzkoušet další kurzy online
   learn_classes: Najdi místní učebny
-  hoc_is_here: "#HodinaKódu je tady - vyzkoušejte ji! @codeorg"
+  hoc_is_here: '#HodinaKódu je tady - podívejte! @codeorg'
   just_did_hoc: 'Právě jsem dokončil #HodinuKódu - vyzkoušej to! @codeorg'
   learn_hoc: Učte se s Hodinou Kódu
   beyond_hoc: Po Jedné Hodině
   what_gender: Jakého jsi pohlaví?
   girl: Holka
   boy: Kluk
-  help_recruit_coders: Pomoz nám přidat více programátorů do tvého týmu!
+  help_recruit_coders: Pomoz nám sehnat do tvého týmu více programátorů!
   help_recruit: Pomoz nám najít další programátory!
   lines_of_code: DOSUD NAPSÁNO PŘES <b># ŘÁDKŮ KÓDU</b>.
-  lines_of_code_alt: "<b>#</b> ŘÁDKŮ KÓDU NAPSANÝCH STUDENTY"
+  lines_of_code_alt: <b>#</b> ŘÁDKŮ KÓDU NAPSANÝCH STUDENTY
   who_has_done_hoc: 'Kdo udělal #HourOfCode? @codeorg'
-  hoc_leaderboards: "Žebříčky Hodiny Kódu"
-  students_and_lines: "%{students} studentů absolvovalo Hodinu Kódu a napsalo %{lines}
-    řádků kódu."
+  hoc_leaderboards: Žebříčky Hodiny Kódu
+  students_and_lines: '%{students} studentů absolvovalo Hodinu Kódu a napsalo %{lines}
+    řádků kódu.'
   start_hoc: Začni Hodinu Kódu teď
   contact_form_topic_press: Tisk/média (rozhovor nebo mluvené setkání)
-  studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
-  studiobar_elementary_title: Elementary courses
-  studiobar_elementary_body: Our three new courses for K&#8209;5
-  studiobar_hoc_title: The Hour of Code
-  studiobar_hoc_body: Learn to code with Angry Birds
+  studiobar_title: Prozkoumejte <a href='http://studio.code.org'> Code Studio</a>
+  studiobar_elementary_title: Základní kurzy
+  studiobar_elementary_body: Naše tři nové kurzy pro K&#8209; 5
+  studiobar_hoc_title: Hodina kódu
+  studiobar_hoc_body: Naučte se programovat s Angry Birds
   studiobar_flappy_title: Flappy Code
-  studiobar_flappy_body: Make and share your own Flappy game
-  studiobar_teacher_title: Teacher dashboard
-  studiobar_teacher_body: 'For teachers: view your students'' progress'
+  studiobar_flappy_body: Vytvořit a sdílej svojí vlastní hru Flappy
+  studiobar_teacher_title: Připraveno pro učitele
+  studiobar_teacher_body: Zaveďte studio programování (Code Studio) do vaší třídy
   contact_form_topic_student: Jsem student
   contact_form_topic_parent: Jsem rodič
   contact_form_topic_teacher: Jsem učitel
@@ -143,465 +144,481 @@
   contact_form_label_message: Zpráva
   contact_form_label_submit: Poslat zprávu
   class_submission_in_school: Ve škole
-  class_submission_in_school_daily_programming_course: Daily programming course
-  class_submission_in_school_ap_computer_science: AP computer science
-  class_submission_in_school_full_university_cs_curriculum: Full university CS curriculum
-  class_submission_in_school_robotics_club: Robotics club
-  class_submission_in_school_programming_integrated_in_other_classes: Programming
-    integrated in other classes
-  class_submission_in_school_summer_school_cs_program: Summer school CS program
-  class_submission_in_school_exploring_computer_science: Exploring Computer Science
-  class_submission_in_school_other: Other in school
-  class_submission_out_of_school: Out of school
-  class_submission_out_of_school_summer_camp: Summer camp
-  class_submission_out_of_school_afterschool_program: Afterschool program
-  class_submission_out_of_school_all-day_workshop: All-day workshop (up to 1 week)
-  class_submission_out_of_school_multi-week_workshop: Multi-week workshop
-  class_submission_out_of_school_other: Other out of school
+  class_submission_in_school_daily_programming_course: Denní kurz programování
+  class_submission_in_school_ap_computer_science: AP informatika
+  class_submission_in_school_full_university_cs_curriculum: Úplné univerzitní informatické
+    kurikulum
+  class_submission_in_school_robotics_club: Klub robotiky
+  class_submission_in_school_programming_integrated_in_other_classes: Programování
+    v jiných předmětech (matematika, přírodní vědy atd.)
+  class_submission_in_school_summer_school_cs_program: Program letní školy informatiky
+  class_submission_in_school_exploring_computer_science: Zkoumání informatiky
+  class_submission_in_school_other: Další - ve škole
+  class_submission_out_of_school: Mimo školu
+  class_submission_out_of_school_summer_camp: Letní tábor
+  class_submission_out_of_school_afterschool_program: Program po vyučování
+  class_submission_out_of_school_all-day_workshop: Celodenní seminář (až jeden týden)
+  class_submission_out_of_school_multi-week_workshop: Vícetýdenní seminář
+  class_submission_out_of_school_other: Další - mimo školu
   class_submission_online: Online
-  class_submission_online_programming_class: Online programming class
-  class_submission_online_teacher_resource: Online teacher resource
-  class_submission_online_other: Other online
-  class_submission_level_preschool: Preschool
-  class_submission_level_elementary: Elementary
-  class_submission_level_middle_school: Middle school
-  class_submission_level_high_school: High school
-  class_submission_level_college: College
-  class_submission_level_vocational: Vocational
-  class_submission_languages_other: Other language(s)
-  volunteer_engineer_submission_commitment_uncertain: Uncertain
-  volunteer_engineer_submission_commitment_now_and_then: Every now and then
+  class_submission_online_programming_class: Online kurz programování
+  class_submission_online_teacher_resource: Online zdroje pro učitele
+  class_submission_online_other: Další - online
+  class_submission_level_preschool: Školka
+  class_submission_level_elementary: Základní
+  class_submission_level_middle_school: 2. stupeň ZŠ
+  class_submission_level_high_school: Střední škola
+  class_submission_level_college: Vysoká škola
+  class_submission_level_vocational: Odborné
+  class_submission_languages_other: Ostatní jazyky
+  volunteer_engineer_submission_commitment_uncertain: Nejasné
+  volunteer_engineer_submission_commitment_now_and_then: Tu a tam
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 hodina týdně
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 hodiny týdně
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 hodin týdně
   volunteer_engineer_submission_commitment_more: Více
-  volunteer_engineer_submission_location_flexibility_onsite: On-site at a school
-  volunteer_engineer_submission_location_flexibility_remote: Mentoring remotely (teachers
-    or students)
-  volunteer_engineer_submission_location_flexibility_curriculum: Willing to help contribute
-    to open-source curriculum projects
-  volunteer_engineer_submission_experience_unspecified: Unspecified
-  volunteer_engineer_submission_experience_university_student_or_researcher: Current
-    university student (or researcher)
-  volunteer_engineer_submission_experience_software_professional: Software professional
+  volunteer_engineer_submission_location_flexibility_onsite: Na místě ve škole
+  volunteer_engineer_submission_location_flexibility_remote: Vzdálený mentoring (učitelé
+    nebo studenti)
+  volunteer_engineer_submission_location_flexibility_curriculum: Ochotni pomoci přispět
+    do projektů open source osnov
+  volunteer_engineer_submission_experience_unspecified: Nespecifikováno
+  volunteer_engineer_submission_experience_university_student_or_researcher: Současný
+    vysokoškolský student (nebo výzkumný pracovník)
+  volunteer_engineer_submission_experience_software_professional: Softwarový profesionál
   petition_age: Věk
-  dashboard_landing_title: Teacher Home Page
-  dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
-  dashboard_landing_video: Watch this video
-  dashboard_landing_watch_video: for a tour of the new features!
-  dashboard_landing_view_as_student: View this site as a student
-  dashboard_landing_students_title: Your students
-  dashboard_landing_students_manage: View and manage your students
-  dashboard_landing_news_title: Latest news
-  dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
-  dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
-  dashboard_landing_useful_links: Other useful links
-  dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
-    office hours.
+  dashboard_landing_title: Domovská stránka pro učitele
+  dashboard_landing_welcome: Vítáme vás na novém a vylepšeném řídicím panelu pro učitele.
+  dashboard_landing_video: Podívejte se na toto video
+  dashboard_landing_watch_video: pro prohlídku nových funkcí!
+  dashboard_landing_view_as_student: Zobrazit tyto stránky jako student
+  dashboard_landing_students_title: Vaši studenti
+  dashboard_landing_students_manage: Zobrazte a spravujte vaše studenty
+  dashboard_landing_news_title: Zdroje pro vyučující 1. stupně ZŠ (pouze v angličtině)
+  dashboard_landing_new_beta: Novinka! Vyzkoušejte naše beta kurzy pro žáky 1. stupně
+    ZŠ.
+  dashboard_landing_new_k5courses: Novinka! Vyzkoušejte naše kurzy pro žáky 1. stupně
+    ZŠy.
+  dashboard_landing_useful_links: Další užitečné odkazy (pouze v angličtině)
+  dashboard_landing_office_hours: Zeptej se osobně! Navštivte naše měsíční video úřední
+    hodiny.
   dashboard_landing_print_certificates: Vytisknout certifikáty pro studenty, kteří
     dokončili tento kurz
   dashboard_landing_educator_blog: Přečti si o novinkách a aktualizacích našich materiálů
     na našem blogu Educator
   dashboard_landing_smart_hints: Please help us to add smart hints to Code.org tutorials
   dashboard_landing_video_player: Test our new video player at your school
-  dashboard_landing_progress_title: Main class progress
-  dashboard_landing_progress_biggest: This is the progress for your biggest section.
-  dashboard_landing_view_progress: View Progress for %{biggest_section}
-  dashboard_landing_available_title: Available courses
-  dashboard_landing_available_courses: Here are the courses currently available for
-    you and your students.
-  dashboard_landing_loading: Loading...
+  dashboard_landing_progress_title: Hlavní postup ve třídě
+  dashboard_landing_progress_biggest: To je postup pro váš největší oddíl.
+  dashboard_landing_view_progress: Zobrazit průběh pro %{biggest_section}
+  dashboard_landing_available_title: Dostupné kurzy
+  dashboard_landing_available_courses: Zde jsou kurzy v současnosti dostupné pro vás
+    a vaše studenty.
+  dashboard_landing_loading: Načítání...
   dashboard_action_edit: Upravit
-  dashboard_action_save: Save
-  dashboard_action_save_all: Save all
+  dashboard_action_save: Uložit
+  dashboard_action_save_all: Uložit vše
   dashboard_action_cancel: Storno
-  dashboard_action_delete: Delete
-  dashboard_action_confirm: Delete?
+  dashboard_action_delete: Odstranit
+  dashboard_action_confirm: Odstranit?
   dashboard_action_delete_yes: Ano
   dashboard_action_delete_no: Ne
-  dashboard_action_done: Done
-  dashboard_action_required: required
-  dashboard_navigation_home_page: Teacher home page
-  dashboard_navigation_all_sections: All sections
-  dashboard_navigation_view_progress: View Progress
-  dashboard_navigation_add_students: Add Students
-  dashboard_navigation_manage_students: Manage Students
-  dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
-  dashboard_navigation_view_stats: View Stats
-  dashboard_navigation_section: 'Section: %{section_name}'
+  dashboard_action_done: Hotovo
+  dashboard_action_required: požadováno
+  dashboard_navigation_home_page: Učitelská domovská stránka
+  dashboard_navigation_all_sections: Studentské účty a pokrok
+  dashboard_navigation_view_progress: Zobrazit průběh
+  dashboard_navigation_add_students: Přidat studenty
+  dashboard_navigation_manage_students: Správa studentů
+  dashboard_navigation_lesson_plans_resources: Plány hodin a zdroje
+  dashboard_navigation_view_stats: Zobrazit statistiky
+  dashboard_navigation_section: 'Sekce: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
-  dashboard_sections_new_section: New section
-  dashboard_sections_jumbotron_instruction: Create new sections and add students to
-    them. Sections help you organize students into smaller groups so you can track
-    their progress and manage their accounts.
+  dashboard_sections_new_section: Nová sekce
+  dashboard_sections_jumbotron_instruction: Vytvoř nové oddíly a přidejte do nich
+    studenty. Sekce pomáhají organizovat studenty do menších skupin, můžete sledovat
+    jejich postup a spravovat jejich účty.
   dashboard_sections_table_section: Section
-  dashboard_sections_table_secret: Secret type
+  dashboard_sections_table_secret: Způsob přihlášení
   dashboard_sections_table_grade: Grade
   dashboard_sections_table_course: Course
   dashboard_sections_table_students: Students
   dashboard_sections_table_code: Section Code
-  dashboard_sections_name: Section Name
-  dashboard_sections_choose_secret: If you would like to provide accounts to your
-    students, choose a secret type of <b>word</b> or <b>picture</b> for that section.
-  dashboard_sections_secret_word: A <b>word</b> allows you to set a secret word for
-    each student.
-  dashboard_sections_secret_picture: A <b>picture</b> allows you to set a secret picture
-    for each student, ideal for younger students who can't yet type.
-  dashboard_sections_secret_none: If you would like your students to manage their
-    own accounts, including choosing their own passwords, choose a secret type of
-    <b>none</b>.
-  dashboard_sections_print_secrets: You may then print a sheet of cards containing
-    account information to be distributed to your students individually.
-  dashboard_sections_switch_section: 'Switch section:'
-  dashboard_students_add_student: Add student
-  dashboard_students_add_students: Add multiple students
-  dashboard_students_add_multiple: 'Type or paste the names of your students, one
-    per line:'
-  dashboard_students_new_section: You've created a new section! Now add your students
-    using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
-  dashboard_students_placeholder_name: Student Name
+  dashboard_sections_name: Jméno sekce
+  dashboard_sections_choose_secret: Pokud byste chtěli poskytnout svým studentům účty,
+    vyberte tajné <b>slovo</b> nebo <b>obrázek</b> pro tuto sekci.
+  dashboard_sections_secret_word: <b>Slovo</b> vám umožňuje nastavit pro každého studenta
+    tajné slovo.
+  dashboard_sections_secret_picture: <b>Obrázek</b> vám umožňuje pro každého studenta
+    nastavit tajný obrázek, což je ideální pro mladší studenty, kteří dosud neumějí
+    psát.
+  dashboard_sections_secret_none: Pokud chcete, aby si vaši studenti spravovali své
+    účty, včetně vlastního hesla, zvolte tajný typ <b>žádný</b>.
+  dashboard_sections_print_secrets: Můžete si poté vytisknout stránku s kartičkami,
+    obsahujícími informace o individuálních účtech, které si vaši studenti rozdělí.
+  dashboard_sections_switch_section: 'Přepnout sekci:'
+  dashboard_students_add_student: Přidat studenta
+  dashboard_students_add_students: Přidat více studentů
+  dashboard_students_add_multiple: 'Zadejte nebo vložte jména vašich studentů, jeden
+    na řádek:'
+  dashboard_students_new_section: Vytvořili jste novou sekci! Nyní přidejte své studenty
+    pomocí tlačítka <b>Přidat studenta</b> a <b>Přidat více studentů</b> výše.
+  dashboard_students_placeholder_name: Jméno studenta
   dashboard_students_name: Jméno
   dashboard_students_age: Věk
   dashboard_students_gender: Pohlaví
   dashboard_students_male: Muž
-  dashboard_students_female: "Žena"
-  dashboard_students_secret: Secret
+  dashboard_students_female: Žena
+  dashboard_students_secret: Tajný klíč
   dashboard_students_password: heslo
-  dashboard_students_username: 'Username: %{student_username}'
-  dashboard_students_email: 'Email: %{student_email}'
-  dashboard_students_completed_levels: Completed Levels
-  dashboard_students_total_lines: Lines of Code
-  dashboard_students_show_secret: Show secret
-  dashboard_students_auto_generated: Auto-generated
-  dashboard_students_reset_secret: Reset secret
-  dashboard_students_reset_password: Reset password
-  dashboard_students_share_section: 'Share this section''s sign in page with your
-    students:'
-  dashboard_students_print_info: Print out cards with your students' login information.
-  dashboard_students_secret_picture: Secret Picture
-  dashboard_students_reset_picture: You may reset a student's secret picture at any
-    time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new secret
-    picture will be generated for that student to use when they sign in.
-  dashboard_students_secret_word: Secret Word
-  dashboard_students_reset_word: 'You may reset a student''s secret words at any time
-    by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new pair of secret
-    words will be generated for that student to use when they sign in. '
-  dashboard_students_join_link: Tell your students to create their own accounts and
-    join your section at
-  dashboard_students_no_email: If your students do not have email addresses, or you
-    would like to create accounts for them, change this section's secret type to <b>word</b>
-    or <b>picture</b>.
-  dashboard_students_print_page: Print this page
+  dashboard_students_username: 'Uživatelské jméno: %{student_username}'
+  dashboard_students_email: 'E-mail: %{student_email}'
+  dashboard_students_completed_levels: Dokončené úrovně
+  dashboard_students_total_lines: Řádky kódu
+  dashboard_students_show_secret: Zobrazit tajný klíč
+  dashboard_students_auto_generated: Automaticky vytvořeno
+  dashboard_students_reset_secret: Obnovit tajný klíč
+  dashboard_students_reset_password: Obnovit heslo
+  dashboard_students_share_section: 'Sdílejte tuto část přihlašovací stránky se svými
+    žáky:'
+  dashboard_students_print_info: Vytisknout kartičky s přihlašovacími údaji studentů.
+  dashboard_students_secret_picture: Tajný obrázek
+  dashboard_students_reset_picture: Tajný obrázek studenta může kdykoliv obnovit výběrem
+    <b>Zobrazit tajné</b> a pak <b>Obnovit tajný klíč</b>. Nový tajný obrázek bude
+    pro tohoto studenta vygenerován při dalším přihlášení.
+  dashboard_students_secret_word: Tajné slovo
+  dashboard_students_reset_word: 'Tajná slova studenta může kdykoliv obnovit výběrem
+    <b>Zobrazit tajné</b> a pak <b>Obnovit tajný klíč</b>. Nový pár tajných slov bude
+    pro tohoto studenta vygenerován při dalším přihlášení. '
+  dashboard_students_join_link: Řekněte svým studentům ať si vytvoří své vlastní účty
+    a připojí se k vaší skupině na
+  dashboard_students_no_email: Pokud vaši studenti nemají e-mailové adresy nebo pro
+    ně chcete vytvořit účty sami, změňte typ tajemství v této sekci na <b>slovo</b>
+    nebo <b>obrázek</b>.
+  dashboard_students_print_page: Vytisknout stránku
   dashboard_students_url: URL
-  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Click
-    here</a> for our privacy document that can be shared or printed for your students.
-  dashboard_curriculum_overview: K-5 Curriculum Overview
-  dashboard_view_all_lesson_plans: View all lesson plans
-  dashboard_course1: 'Course 1:'
-  dashboard_course2: 'Course 2:'
-  dashboard_course3: 'Course 3:'
+  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Klikněte
+    zde</a> pro dokument o ochraně soukromých údajů, který můžete sdílet nebo vytisknout
+    pro své studenty.
+  dashboard_curriculum_overview: Přehled učiva 1. stupně ZŠ
+  dashboard_view_all_lesson_plans: Zobrazit všechny plány lekcí
+  dashboard_course1: 'Kurz 1:'
+  dashboard_course2: 'Kurz 2:'
+  dashboard_course3: 'Kurz 3:'
   dashboard_sequence: Sekvence
-  dashboard_framework: Framework
-  dashboard_standards: Standards
-  dashboard_implementation_guide: Implementation Guide
-  dashboard_glossary: Glossary
-  dashboard_classroom_strategies: Classroom strategies for teachers
-  dashboard_debugging: 'Debugging:'
-  dashboard_puzzle_solving: 'Puzzle-solving:'
-  dashboard_student_worksheet: student worksheet
-  dashboard_teacher_worksheet: teacher worksheet
+  dashboard_framework: Rámec
+  dashboard_standards: Standardy
+  dashboard_implementation_guide: Příručka pro provedení
+  dashboard_glossary: Slovníček pojmů
+  dashboard_classroom_strategies: Strategie do třídy pro učitele
+  dashboard_debugging: 'Ladění:'
+  dashboard_puzzle_solving: 'Řešení hádanek:'
+  dashboard_student_worksheet: zadání pro studenty
+  dashboard_teacher_worksheet: zadání pro učitele
   dashboard_grade_k: K
   dashboard_grade_other: Ostatní
-  dashboard_login_word: word
-  dashboard_login_picture: picture
+  dashboard_login_word: Slovo
+  dashboard_login_picture: Obrázek
   dashboard_login_none: E-mail
-  dashboard_new_password: new password
-  stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
-    week alone:'
-  stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
-  dashboard_teacher: Teacher
+  dashboard_new_password: nové heslo
+  stats_hoc_2013_heading: 'Neuvěřitelná statistika z loňské Hodiny kódu. Během jediného
+    týdne:'
+  stats_hoc_2013_image_alt: Statistika z Hodiny kódu 2013
+  dashboard_teacher: Učitel
   dashboard_student: student
-  dashboard_sections_email_question: Do all students have a valid email address?
-  dashboard_sections_account_creation_question: Who creates the student's account?
-  dashboard_sections_password_question: What do students use as a "password"?
-  dashboard_sections_picture_account_creation: A picture assigned by Code.org
-  dashboard_sections_word_account_creation: A simple word assigned by Code.org
-  dashboard_sections_sign_in_question: Where do students sign-in?
-  dashboard_sections_sign_in_unique: Unique web-page listed on "Manage Students" tab
-  dashboard_sections_sign_in_main: http://code.org and click "Sign in"
-  dashboard_sections_password_account_creation: Student-created text password
-  dashboard_sections_login_type_explanation: This table helps explain which of these
-    login types, <b>picture, word, or email</b>, you'll want to choose for a section.
-  dashboard_faq: Frequently Asked Questions
-  code_hoc_coming: The Hour of Code is coming - December 8-14!
-  code_sign_up: Sign up to participate during CS Education Week
-  learn_more: Learn More
-  hoc2014_try_new_tutorials: Try our new Hour of Code tutorials
+  dashboard_sections_email_question: Mají všichni studenti platnou e-mailovou adresu?
+  dashboard_sections_account_creation_question: Kdo vytváří studentský účet?
+  dashboard_sections_password_question: Co studenti využívají jako "heslo"?
+  dashboard_sections_picture_account_creation: Obrázek přidělený Code.org
+  dashboard_sections_word_account_creation: Jednoduché slovo přidělené Code.org
+  dashboard_sections_sign_in_question: Kde mohou studenti přihlásit?
+  dashboard_sections_sign_in_unique: Unikátní webová stránka, uvedená na kartě "Spravovat
+    studenty"
+  dashboard_sections_sign_in_main: http://code.org a klikněte na "Přihlásit"
+  dashboard_sections_password_account_creation: Textové heslo vytvořené studentem
+  dashboard_sections_login_type_explanation: Tato tabulka pomáhá vysvětlit, které
+    z těchto typů přihlášení <b>obrázek, slovo nebo e-mail</b> budete chtít vybrat
+    pro vaši skupinu.
+  dashboard_faq: Často kladené dotazy
+  code_hoc_coming: Blíží se Hodina Kódu - 8.-14. prosince!
+  code_sign_up: Přihlaste se k účasti během týdne vzdělávání CS
+  learn_more: Další informace
+  hoc2014_try_new_tutorials: Vyzkoušejte naše nové návody pro Hodinu Kódu
   hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
-  hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
+  hoc2014_try_scrat: Angry Birds, PvZ a Scratch
   hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
   carousel_heading_international: Výuka ve tvém jazyce
-  carousel_heading_domestic: Tutorials available in English
-  carousel_heading_beginners: Tutorials for Beginners
-  carousel_heading_javascript: Tutorials that teach Javascript
-  carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science
-  carousel_heading_devices: Tutorial apps for phones and tablets
-  carousel_heading_languages: Tutorials in other programming languages
-  carousel_heading_apps_games: Make your own apps or games
-  carousel_heading_university: University courses online
-  carousel_heading_webpages: Learn to make web pages
-  carousel_heading_robots: Learn to program with robots
-  carousel_heading_ide: Platforms popular among teachers
-  educator_notes: Educator Notes
-  more_resources_educators: More resources for teachers and educators
-  participants: participants
-  teachers_notes: Teacher's Notes
-  previous: Previous
-  next: Next
-  older_systems: Tutorials that work on older systems
-  older_systems_subheading: These should work on older Web browsers. To access all
-    tutorials, upgrade to a <a href="http://browsehappy.com/" target="_blank">modern
-    Web browser.</a>
-  mobile_devices: Tutorials for mobile devices
+  carousel_heading_domestic: Kurzy dostupné v angličtině
+  carousel_heading_beginners: Kurzy pro začátečníky
+  carousel_heading_javascript: Kurzy, které učí Javascript
+  carousel_heading_unplugged: Žádné zařízení nebo internet? Zkuste informatiku "unplugged"
+  carousel_heading_devices: Aplikace s kurzy pro telefony a tablety
+  carousel_heading_languages: Výukové programy v jiných programovacích jazycích
+  carousel_heading_apps_games: Vytvořte si vlastní aplikace nebo hry
+  carousel_heading_university: Univerzitní kurzy online
+  carousel_heading_webpages: Naučte se dělat webové stránky
+  carousel_heading_robots: Naučte se programovat s roboty
+  carousel_heading_ide: Platformy, které jsou populární mezi učiteli
+  educator_notes: Poznámky pro pedagogy
+  more_resources_educators: Další zdroje pro učitele
+  participants: účastníci
+  teachers_notes: Poznámky pro učitele
+  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  previous: Předchozí
+  next: Další
+  older_systems: Výukové programy, které pracují na starších systémech
+  older_systems_subheading: Tyto by měly fungovat ve starších webových prohlížečích.
+    Chcete-li získat přístup ke všem kurzům, aktualizujte na <a href="http://browsehappy.com/"
+    target="_blank">moderní webový prohlížeč.</a>
+  mobile_devices: Návody pro mobilní zařízení
   frozen_name: Code with Anna and Elsa
   codeorg_name: Napiš svůj první počítačový program
+  codeintl_name: Napiš svůj první počítačový program
   thinkersmithspanish_name: Mis Amigos Roboticos
-  khan_name: An introduction to JavaScript
-  khanes_name: An introduction to JavaScript
-  tynker_name: Build your own game
-  scratch_name: Create a holiday card
+  khan_name: Úvod do JavaScriptu
+  khanes_name: Úvod do JavaScriptu
+  tynker_name: Vytvořte si vlastní hru
+  scratch_name: Buďte kreativní s programováním
   lightbot_name: Lightbot
-  thinkersmith_name: My Robotic Friends
-  condcards_name: Conditionals with Cards
+  thinkersmith_name: Mí robotičtí přátelé
+  condcards_name: Podmínky s kartami
   lightbotintl_name: Lightbot
-  codehs_name: Learn to Code With Karel the Dog
+  codehs_name: Naučte se programovat s psem Karlem
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
   codemonkey_name: CodeMonkey
-  codeavengers_name: Build a Game with JavaScript
-  processing_name: Drawing with Code
-  robomind_name: Program a virtual robot
-  groklearning_name: A taste of Python programming
-  quorum_name: Accessible programming (with screenreader support)
-  codespark_name: The Foos (pre-readers welcome)
-  kodable_name: Kodable
-  tynkerapp_name: Tynker - on tablets
-  hopscotch_name: 'Hopscotch: Code on your iPad'
-  robomindnl_name: Program a virtual robot
-  flappy_name: Make a Flappy game
-  bitsbox_name: Bitsbox - make a game
-  makegameswithus_name: Build an iPhone game in your browser!
+  codeavengers_name: Vytvořte hru v JavaScriptu
+  processing_name: Kreslení kódem
+  robomind_name: Naprogramujte virtuálního robota
+  groklearning_name: Eliza - chatovací robot a lékař
+  quorum_name: Zpřístupněné programování (s podporou čtečky obrazovky)
+  codespark_name: Foos (nečtenáři vítáni)
+  kodable_name: Kodable (nečtenáři vítáni)
+  tynkerapp_name: Tynker - na tablety
+  robomindnl_name: Naprogramujte virtuálního robota
+  flappy_name: Vytvořte hru Flappy
+  bitsbox_name: Bitsbox - vytvořte hru
+  makegameswithus_name: Vytvoř hru pro iPhone ve svém prohlížeči!
   touchdevelop_name: TouchDevelop
-  appinventor_name: AppInventor Hour of Code
+  appinventor_name: AppInventor Hodina Kódu
   blockly_name: Blockly
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
-  projguts_name: Rock, Paper, Scissors
-  frozen_gradelevel: Ages 8+
-  codeorg_gradelevel: Ages 4-104
+  projguts_name: Kámen, nůžky, papír
+  frozen_gradelevel: Věk 8 +
+  codeorg_gradelevel: Stáří 4-104
+  codeintl_gradelevel: Stáří 4-104
   thinkersmithspanish_gradelevel: Por todos
-  khan_gradelevel: Middle school +
-  khanes_gradelevel: Middle school +
-  tynker_gradelevel: Ages 5-13
-  scratch_gradelevel: Ages 8+
+  khan_gradelevel: Druhý stupeň a starší
+  khanes_gradelevel: Druhý stupeň a starší
+  tynker_gradelevel: Stáří 5-13
+  scratch_gradelevel: Věk 8 +
   lightbot_gradelevel: Všechny věkové kategorie
   thinkersmith_gradelevel: Všechny věkové kategorie
-  condcards_gradelevel: Ages 8-12
+  condcards_gradelevel: Stáří 8-12
   lightbotintl_gradelevel: Všechny věkové kategorie
-  codehs_gradelevel: High school
-  codecademy_gradelevel: High school
-  codecombat_gradelevel: Middle school +
-  codemonkey_gradelevel: Middle school +
-  codeavengers_gradelevel: Middle school +
-  processing_gradelevel: High school
-  robomind_gradelevel: Ages 8-13
-  groklearning_gradelevel: Middle school +
-  quorum_gradelevel: Middle school +
-  codespark_gradelevel: Elementary
-  kodable_gradelevel: Elementary
-  tynkerapp_gradelevel: Ages 5-13
-  hopscotch_gradelevel: Middle school +
-  robomindnl_gradelevel: Ages 8-13
-  flappy_gradelevel: Ages 4-104
-  bitsbox_gradelevel: Elementary
-  makegameswithus_gradelevel: High school
-  touchdevelop_gradelevel: High school
-  appinventor_gradelevel: Middle school +
+  codehs_gradelevel: Střední škola
+  codecademy_gradelevel: Střední škola
+  codecombat_gradelevel: Druhý stupeň a starší
+  codemonkey_gradelevel: Druhý stupeň a starší
+  codeavengers_gradelevel: Druhý stupeň a starší
+  processing_gradelevel: Střední škola
+  robomind_gradelevel: Stáří 8-13
+  groklearning_gradelevel: Druhý stupeň a starší
+  quorum_gradelevel: Druhý stupeň a starší
+  codespark_gradelevel: Základní
+  kodable_gradelevel: Základní
+  tynkerapp_gradelevel: Stáří 5-13
+  robomindnl_gradelevel: Stáří 8-13
+  flappy_gradelevel: Stáří 4-104
+  bitsbox_gradelevel: Základní
+  makegameswithus_gradelevel: Střední škola
+  touchdevelop_gradelevel: Střední škola
+  appinventor_gradelevel: Druhý stupeň a starší
   blockly_gradelevel: Všechny věkové kategorie
-  thinkersmith2_gradelevel: Ages 8+
-  kodableunplugged_gradelevel: Ages 8-13
-  projguts_gradelevel: Ages 10-13
-  frozen_platformtext: Modern browsers + tablets
-  codeorg_platformtext: Modern browsers, smartphones, tablets
+  thinkersmith2_gradelevel: Věk 8 +
+  kodableunplugged_gradelevel: Stáří 8-13
+  projguts_gradelevel: Stáří 10-13
+  frozen_platformtext: Moderní prohlížeče + tablety
+  codeorg_platformtext: Moderní prohlížeče, smartphony, tablety
+  codeintl_platformtext: Moderní prohlížeče, smartphony, tablety
   thinkersmithspanish_platformtext: Unplugged
-  khan_platformtext: Modern Web browsers
-  khanes_platformtext: Modern Web browsers
+  khan_platformtext: Moderní webové prohlížeče
+  khanes_platformtext: Moderní webové prohlížeče
   tynker_platformtext: Modern web browsers
-  scratch_platformtext: ALL browsers
-  lightbot_platformtext: ALL browsers and iOS, Android, or Game Console
+  scratch_platformtext: VŠECHNY prohlížeče
+  lightbot_platformtext: VŠECHNY prohlížeče, iOS, Android nebo herní konzole
   thinkersmith_platformtext: Unplugged
-  condcards_platformtext: Unuplugged
-  lightbotintl_platformtext: iOS, Android (or web browser)
+  condcards_platformtext: Unplugged
+  lightbotintl_platformtext: iOS, Android (nebo webový prohlížeč)
   codehs_platformtext: Modern browsers
-  codecademy_platformtext: Modern web browsers. iOS, Android apps
-  codecombat_platformtext: Modern web browsers
-  codemonkey_platformtext: Modern web browsers
-  codeavengers_platformtext: Modern web browsers
-  processing_platformtext: Modern web browsers
-  robomind_platformtext: Modern web browsers, Mobile web
-  groklearning_platformtext: Modern web browsers
-  quorum_platformtext: Modern web browsers. Screen-readers supported
-  codespark_platformtext: iOS, Android (or web browser)
+  codecademy_platformtext: Moderní webové prohlížeče. iOS, aplikace pro Android
+  codecombat_platformtext: Moderní webové prohlížeče
+  codemonkey_platformtext: Moderní webové prohlížeče
+  codeavengers_platformtext: Moderní webové prohlížeče
+  processing_platformtext: Moderní webové prohlížeče
+  robomind_platformtext: Moderní webové prohlížeče, mobilní web
+  groklearning_platformtext: Moderní webové prohlížeče
+  quorum_platformtext: Moderní webové prohlížeče. Čtečky obrazovky podporovány
+  codespark_platformtext: iOS, Android (nebo webový prohlížeč)
   kodable_platformtext: iPad
-  tynkerapp_platformtext: iPad, Android tablets
-  hopscotch_platformtext: iPad
-  robomindnl_platformtext: Modern web browsers, Mobile web
-  flappy_platformtext: Modern browsers, smartphones, tablets
-  bitsbox_platformtext: Modern web browsers
-  makegameswithus_platformtext: Modern Web browsers
-  touchdevelop_platformtext: Modern browsers, smartphones, all devices
-  appinventor_platformtext: Modern browsers + Android
-  blockly_platformtext: Modern browsers only
+  tynkerapp_platformtext: iPad, Android tablety
+  robomindnl_platformtext: Moderní webové prohlížeče, mobilní web
+  flappy_platformtext: Moderní prohlížeče, smartphony, tablety
+  bitsbox_platformtext: Moderní webové prohlížeče
+  makegameswithus_platformtext: Moderní webové prohlížeče
+  touchdevelop_platformtext: Moderní prohlížeče, chytré telefony, všechna zařízení
+  appinventor_platformtext: Moderní prohlížeče + Android
+  blockly_platformtext: Pouze moderní prohlížeče
   thinkersmith2_platformtext: Unplugged
   kodableunplugged_platformtext: Unplugged
   projguts_platformtext: Unplugged
-  frozen_shortdescription: Let's use code to join Anna and Elsa as they explore the
-    magic and beauty of ice.
-  codeorg_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
+  frozen_shortdescription: Připojme se pomocí kódu k Anně a Else, které zkoumají kouzlo
+    a krásu ledu.
+  codeorg_shortdescription: Naučte se programovat s Markem Zuckerbergem a Angry Birds!
+  codeintl_shortdescription: Naučte se programovat s Markem Zuckerbergem a Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
-  khan_shortdescription: Learn to draw in JavaScript
-  khanes_shortdescription: Learn to draw in JavaScript
-  tynker_shortdescription: Learn the basics of programming in a fun, visual environment
-  scratch_shortdescription: Create an interactive card
-  lightbot_shortdescription: A game to teach coding concepts
-  thinkersmith_shortdescription: Unplugged tutorial for a group with no devices
-  condcards_shortdescription: Learn algorithms with a deck of cards
-  lightbotintl_shortdescription: A game to teach coding concepts
-  codehs_shortdescription: Learn JavaScript programming with a fun visual environment
-  codecademy_shortdescription: Learn JavaScript programming, in a web-browser
-  codecombat_shortdescription: Play a game and learn JavaScript to win
+  khan_shortdescription: Naučte se kreslit v JavaScriptu
+  khanes_shortdescription: Naučte se kreslit v JavaScriptu
+  tynker_shortdescription: Naučte se programovat řešením zábavných hádanek a vyrobte
+    si vlastní mobilní hry.
+  scratch_shortdescription: Vytvořte interaktivní hry, příběhy a animace.
+  lightbot_shortdescription: Naprogramujte Pokyho, aby řešil hádanky pomocí procedur
+    a smyček!
+  thinkersmith_shortdescription: Unplugged kurz pro skupinu bez zařízení
+  condcards_shortdescription: Učte se algoritmy s balíčkem karet
+  lightbotintl_shortdescription: Hra pro výuku základních pojmů programování
+  codehs_shortdescription: Začněte kódovat s psem Karlem, zábavný a vizuální úvod
+    do programování!
+  codecademy_shortdescription: Naučte JavaScript programování v prohlížeči
+  codecombat_shortdescription: Porazte zlobry a naučte Python nebo JavaScript v této
+    epické programovací hře!
   codemonkey_shortdescription: Students program a monkey to catch bananas while it
     gets slightly more complicated on each level.
-  codeavengers_shortdescription: Learn JavaScript programming, in a web-browser
-  processing_shortdescription: A one hour tutorial in the Processing languages
-  robomind_shortdescription: Write code for a virtual robot
-  groklearning_shortdescription: Basic intro to python programming
-  quorum_shortdescription: Join Mary on a guided tour as she learns the Quorum programming
-    language.
-  codespark_shortdescription: The Foos is a fun, kid-friendly game to learn about
-    programming.
-  kodable_shortdescription: A fun iPad game to teach computer programming concepts
+  codeavengers_shortdescription: Naučte JavaScript programování v prohlížeči
+  processing_shortdescription: Jednohodinový úvod do programovacího jazyka Processing
+  robomind_shortdescription: Napište kód pro virtuálního robota
+  groklearning_shortdescription: Naučte chatovacího robota Elizu oklamat vaše přátele,
+    aby si mysleli, že je člověk!
+  quorum_shortdescription: Přidejte se k Marii na prohlídku, na které se bude učit
+    programovací jazyk Quorum.
+  codespark_shortdescription: Foos je zábavná, k dětem přátelská hra, učící programování.
+  kodable_shortdescription: Zábavná hra na iPad, která učí koncepty programování
   tynkerapp_shortdescription: Learn to code by solving fun puzzles and build your
     own mobile games.
-  hopscotch_shortdescription: Learn visual programming on an iPad
-  robomindnl_shortdescription: Write code for a virtual robot
-  flappy_shortdescription: Make your own game - Flappy Bird, Shark, or Submarine
-  bitsbox_shortdescription: Code a series of apps to play and share, using real Javascript.
-  makegameswithus_shortdescription: Learn to make an iPhone game in an hour
+  robomindnl_shortdescription: Napište kód pro virtuálního robota
+  flappy_shortdescription: Vytvořte si vlastní hru - Flappy Bird, Žralok nebo Ponorka
+  bitsbox_shortdescription: Naprogramujte řadu aplikací, které můžete hrát a sdílet,
+    pomocí skutečného Javascriptu.
+  makegameswithus_shortdescription: Vytvořte hru pro iPhone! Zkuste se psaním kódu
+    naučit vaše monstrum novým pohybům!
   touchdevelop_shortdescription: Code mobile apps directly on your phone, tablet or
     laptop
-  appinventor_shortdescription: Make your own app! (Android-only)
-  blockly_shortdescription: Download a ZIP file to learn offline
-  thinkersmith2_shortdescription: Learn how computers use 1s and 0s to represent information
-  kodableunplugged_shortdescription: A fun unplugged exercise
-  projguts_shortdescription: Try modeling and simulation using rock/paper/scissors
+  appinventor_shortdescription: Vytvořte si vlastní aplikaci! (Pouze pro Android)
+  blockly_shortdescription: Stáhněte si ZIP soubor offline výuku
+  thinkersmith2_shortdescription: Naučte se, jak počítače reprezentují informace pomocí
+    jedniček a nul
+  kodableunplugged_shortdescription: Zábavné unplugged cvičení
+  projguts_shortdescription: Vyzkoušejte modelování a simulaci pomocí kámen, nůžky,
+    papír
   frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
     magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
     and make a winter wonderland that you can then share with your friends!
-  codeorg_longdescription: Learn the basic concepts of Computer Science with drag
-    and drop programming. This is a game-like, self-directed tutorial starring video
-    lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
-    repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
+  codeorg_longdescription: Nauč se základní pojmy informatiky pomocí tahání myší.
+    Je to hravá, samostatně vedená výuka, v jejíchž videolekcích v hlavních rolích
+    vystupují hvězdy jako Bill Gates, Mark Zuckerberg, Angry Birds a Plants vs. Zmbies.
+    Nauč se příkazy opakování, rozhodování a základní algoritmy. Dostupné v 34 jazycích.
+  codeintl_longdescription: Nauč se základní pojmy informatiky pomocí tahání myší.
+    Je to hravá, samostatně vedená výuka, v jejíchž videolekcích v hlavních rolích
+    vystupují hvězdy jako Bill Gates, Mark Zuckerberg, Angry Birds a Plants vs. Zmbies.
+    Nauč se příkazy opakování, rozhodování a základní algoritmy. Dostupné v 34 jazycích.
   thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
     los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
     espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
     a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
     como la valiosa habilidad de depuraci&oacute;n.
-  khan_longdescription: Learn the basics of JavaScript programming while creating
-    fun drawings with your code. Do it on your own or with your class!
-  khanes_longdescription: Learn the basics of JavaScript programming while creating
-    fun drawings with your code. Do it on your own or with your class!
-  tynker_longdescription: A collection of 8 fun activities for children of all ages
-    to try programming. Solve a series of simple puzzles to help Pixel the puppy reach
-    home, and Biff the spaceman reach his moon base. Build the Space Zombies game
-    or create Math Art using our fun and easy visual approach to programming.  The
-    session can be teacher facilitated or self-paced.
-  scratch_longdescription: With Scratch, you can code your own interactive games,
-    stories, animations, and more. In this activity, you'll create an interactive
-    holiday card that you can share with friends and family.
-  lightbot_longdescription: Learn core programming logic, starting from super-basic
-    programming, for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence
-    commands, identify patterns, use procedures, and utilize loops!
-  thinkersmith_longdescription: Using a pre-defined "Robot Vocabulary" students will
-    figure out how to guide each other to accomplish specific tasks without discussing
-    them first. This lesson teaches children the connection between symbols and actions,
-    as well as the invaluable skill of debugging. "My Robotic Friends" works best
-    as a group activity and includes a teacher workbook for classroom use.
-  condcards_longdescription: Learn about algorithms and conditional statements in
-    this "unplugged" activity using a deck of cards. Students do this activity in
-    teams, and need one deck of cards per team.
-  lightbotintl_longdescription: Learn core programming logic, starting from super-basic
-    programming, for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence
-    commands, identify patterns, use procedures, and utilize loops!
-  codehs_longdescription: Learn the basics of programming with Karel the Dog, a fun,
-    accessible and visual introduction to coding, where giving commands to a computer
-    is just like giving commands to a dog. This tutorial is great if led by a teacher,
-    but can also be done independently.
-  codecademy_longdescription: Codecademy is an interactive, student-guided introduction
-    to the basics of CS through JavaScript that's used by tens of millions of students
-    around the world. We've prepared a no-hassle Hour of Code experience with accompanying
-    quizzes, slides, and a completed project for students at the end.
-  codecombat_longdescription: Play as a Wizard using code (spells) to control your
-    heroes, navigate mazes, defeat ogres, trick enemies, and rescue allies! Learn
-    JavaScript in this HTML 5 web game for complete beginners.
-  codemonkey_longdescription: 'CodeMonkey is an online game that teaches coding in
-    a real programming language! Students program a monkey to catch bananas while
-    it gets slightly more complicated on each level. They get star scores on each
-    solution and can share it in a single click. '
-  codeavengers_longdescription: Build a 2 player 2D top-down game with JavaScript
-    in 10 short tasks. Then continue learning some basics of programming (variables
-    and if statements) as you create a Quiz to share with friends. Along the way  earn
-    points and badges as you compete to reach the top of the class leaderboard.
-  processing_longdescription: An introduction to programming in the context of the
-    visual arts using the Processing programming language. Short video lessons introduce
-    coding exercises that lead to designing an interactive drawing program
-  robomind_longdescription: 'Students learn the basics of programming by controlling
-    their own virtual robot. The online course is fully self-contained with short
-    presentations, movies, quizzes and automatic guidance/hints to help with the programming
-    exercises. '
-  groklearning_longdescription: Choose from 3 activities designed to give you your
-    first experience programming. For example, use the programming language Python
-    to build a chatbot called "Eliza". Can she fool your friends into think she's
-    a human not a computer? This can be done in either a student-guided or teacher-facilitated
-    form and comes with all notes and solutions.
-  quorum_longdescription: This tutorial is accessible for the visually-impaired, and
-    works with screenreaders. Join Mary on a tour as she joins a biology lab as a
-    programmer and learns the Quorum programming language. This tutorial is student-guided
-    with online example activities.
-  codespark_longdescription: The Foos is a fun and kid-friendly way to learn about
-    computer programming.  Program cute characters to solve puzzles and bring a virtual
-    world to life.  The game is "word free" so all can play!
-  kodable_longdescription: Kodable is a self-guided iPad game that introduces kids
-    5+ to programming basics. Having a teacher or parent nearby is optimal, but not
-    necessary.
+  khan_longdescription: Naučte se základy programování v jazyce JavaScript při vytváření
+    zábavných kreseb s tvým vlastním programem. Spolupracuj ve třídě nebo udělej sám!
+  khanes_longdescription: Naučte se základy programování v jazyce JavaScript při vytváření
+    zábavných kreseb s tvým vlastním programem. Spolupracuj ve třídě nebo udělej sám!
+  tynker_longdescription: Vytvoř své vlastní hry a sdílej je s přáteli! Řeš zábavné
+    programovací hádanky a na každém levelu se nauč programovací pojmy. Přizpůsob
+    si hry s animovanými postavičkami, s více úrovněmi a bohatými rekvizitami. Aby
+    tvoje hry byly jako skutečné, použij fyziku. Podívej se na program jako grafické
+    bloky nebo JavaScript. Přeneste své mobilní hry na iPad a tablet s Androidem.
+    Vybírej z více než tuctu zábavných aktivit!
+  scratch_longdescription: Ve Scratchi můžeš vytvářet vlastní interaktivní hry, příběhy,
+    animace &mdash; a sdílet je s přáteli. Začni s animacemi svého jména, vytvořením
+    pohlednice a hry ping-pong.
+  lightbot_longdescription: Veď robota Poky, aby rozsvítil všechny modré dlaždice!
+    Poky je hádanková hra, která využívá programování hry, aby hráči získali praktické
+    porozumění základů programování. Naučte se řadit příkazy, psát procedury a využívat
+    opakování k řešení jednotlivých úrovní. Ideální pro všechny věkové kategorie.
+  thinkersmith_longdescription: Pomocí předem definovaného "Robotického slovníku"
+    žáci zjistí, jak se navzájem vést k splnění konkrétních úkolů před tím, aby o
+    tom nejprve diskutovali. Tato lekce učí děti spojení mezi symboly a akcemi, stejně
+    jako neocenitelné dovednosti ladění programu. "Mí robotičtí přátelé" fungují nejlépe
+    jako skupinová aktivita  a zahrnuje příručku pro učitele pro použití ve třídě.
+  condcards_longdescription: Nauč se něco o algoritmech a podmíněných příkazech v
+    této aktivitě bez počítače ("unplugged") a balíčkem karet. Žáci pracují v týmu
+    a potřebují jeden balíček karet.
+  lightbotintl_longdescription: Nauč se základy programovací logiky, začti od naprostých
+    základů programování pro věk od 4 let na iOS nebo Androidu (nebo ve webovém prohlížeči).
+    Zjisti, jak řadit příkazy, odhalovat vzorky, používat procedury a využívat opakování!
+  codehs_longdescription: Zadávání příkazů počítači, což je základ všeho programování,
+    je podobné udílení příkazů psovi. Nauč se programovat se psem Karlem &mdash; zábavný,
+    přístupný a vizuální vstup do programování, který úplné začátečníky učí základní
+    pojmy jako jsou příkazy a funkce. Výuku si řídí žák sám, ale učitelé mohou registrovat
+    učitelský přístup, v němž mohou sledovat žákův pokrok.
+  codecademy_longdescription: Codecademy je interaktivní, žákem řízený úvod do základů
+    informatiky pomocí JavaScriptu, který používají desítky milionů žáků a studentů
+    po celém světě. Připravili jsme Hodinu kódu, která neotravuje, je plná zážitků
+    v doprovodných kvízech, snímcích a zakončena kompletními projekty pro žáky.
+  codecombat_longdescription: Porazte zlobry a naučte Python nebo JavaScript v této
+    epické programovací hře!
+  codemonkey_longdescription: 'CodeMonkey je online hra, která učí programovat ve
+    skutečném programovacím jazyce! Žáci programují opici, aby chytala banány, přitom
+    v každém levelu je to trochu obtížnější. Za každé řešení dostanou hvězdné skóre
+    a jedním klepnutím je mohou sdílet. '
+  codeavengers_longdescription: Vytvoř sřílečku pro 2 hráče s JavaScript v 10 krátkých
+    krocích. Tím pokračuješ v učení se základům programování (proměnné a příkaz KDYŽ)
+    při vytváření kvízu, který můžeš  sdílet přátelům. Cestou získej body a odznaky,
+    abys v tomto soutěžení dosáhl vrcholu třídního žebříčku.
+  processing_longdescription: Úvod do programování v rámci grafického umění pomocí
+    procedurálního programovacího jazyka. Krátké videolekce uvedou programovací cvičení,
+    které vedou k vytváření interaktivního programu pro kreslení
+  robomind_longdescription: 'Žáci se naučí základy programování prostřednictvím kontroly
+    jejich vlastního virtuálního robota. Online kurz je plně soběstačný s krátkými
+    prezentacemi, filmy, kvízy a automatickým vedením a tipy na pomoc s programovacími
+    cvičeními. '
+  groklearning_longdescription: Použij programovací jazyk Python k vytvoření chatbota
+    jménem "Eliza", který bude jednat jako robot psychoterapeut. Naučíš Elizu mluvit
+    i říkat ty správné věci. Dokáže oklamat tvoje přátele, aby si mysleli, že je člověk
+    a ne počítač?
+  quorum_longdescription: Tento kurz je přístupný i pro zrakově postižené a pracuje
+    s čtečkou obrazovky. Připoj se k Marii, která nastupuje do biologické laboratoře
+    jako programátorka a učí se programovací jazyk Quorum. Tento kurz je řízen studentem
+    a obsahuje online příklady úkolů.
+  codespark_longdescription: Foos je zábavná forma výuky programování. Programujte
+    hezké postavičky, které řeší hlavolamy a přeneste virtuální svět k životu. Tato
+    hra je beze slov, aby mohl hrát každý!
+  kodable_longdescription: Kodable je hra pro Ipad, která představí dětem 5+ základy
+    programování. Přítomnost učitele nebo rodiče je vhodná, ale není pro tuto hru
+    nutná.
   tynkerapp_longdescription: Build your own games and share with friends! Solve fun
     coding puzzles and learn programming concepts in each level. Personalize games
     with animated characters, multiple levels and rich props. Lots of fun activities
     to choose from!
-  hopscotch_longdescription: Student-guided tutorial on the iPad using the Hopscotch
-    programming language. Students will build games and apps for their iPad on their
-    iPad. Students can work individually or with friends (up to 3 per iPad).
-  robomindnl_longdescription: 'Students learn the basics of programming by controlling
-    their own virtual robot. The online course is fully self-contained with short
-    presentations, movies, quizzes and automatic guidance/hints to help with the programming
-    exercises. '
-  flappy_longdescription: Use drag-and-drop programming to make your own Flappy Bird
-    game, and customize it to look different (Flappy Shark, Flappy Santa, whatever).
-    Add the game to your phone in one click.
-  bitsbox_longdescription: Customize your very own virtual tablet, then code a series
-    of apps to play and share. Simple walkthroughs make it possible for even young
-    kids to program real Javascript, and the more advanced you are the further you'll
-    go.
+  robomindnl_longdescription: 'Žáci se naučí základy programování prostřednictvím
+    kontroly jejich vlastního virtuálního robota. Online kurz je plně soběstačný s
+    krátkými prezentacemi, filmy, kvízy a automatickým vedením a tipy na pomoc s programovacími
+    cvičeními. '
+  flappy_longdescription: Pomocí drag-and-drop programování si vytvořte vlastní Flappy
+    Bird hru, kterou si můžete přizpůsobit aby vypadala jinak (Flappy žralok, Flappy
+    Santa, cokoliv). Přidejte si ji do telefonu jediným kliknutím.
+  bitsbox_longdescription: Nastav si svůj vlastní virtuální tablet a naprogramuj,
+    hrej a sdílej sérii aplikací. Jednoduché průchody umožňují i pro malé děti programovat
+    v Javascriptu, a čím více jste pokročilý tím dále půjdete.
   makegameswithus_longdescription: Know some programming already? Learn to make an
     iPhone game in an hour! We'll guide you through the process, to code, test, and
     play your game entirely in the browser and then share it on Facebook for friends
@@ -619,201 +636,201 @@
   blockly_longdescription: Got PCs with slow (or non-existent) internet access? Download
     the Blockly tutorials that were the precursor of the Code.org tutorials - a single
     3MB ZIP file can be loaded onto any computer or used off a memory stick
-  thinkersmith2_longdescription: Students learn about representing and storing letters
-    in binary, as functions of on and off. At the end, the class gets to encode their
-    own initials to take home with them.
+  thinkersmith2_longdescription: Žáci se učí o reprezentaci a ukládání znaků v dvojkové
+    soustavě, stejně jako funkce zapnutí a vypnutí. Na konci třída dostane zakódovat
+    vlastní iniciály, aby si je vzala s sebou domů.
   kodableunplugged_longdescription: 'Designed for use with plain paper, the fuzzFamily
     Frenzy is an introduction to programming logic for kids 5 and up. A teacher should
     explain the game, then students program a partner to complete a simple obstacle
     course. '
-  projguts_longdescription: This "unplugged" activity helps students learn how modeling
-    and simulation works by having a group of students play different versions of
-    the Rock / Paper / Scissors game, and see the results as different modeling experiments.
-  codeorg_beyond_name: Intro Computer Science (grades K-8)
-  khan_beyond_name: Learn computer programming
-  tynker_beyond_name: Learn programming at home
-  scratch_beyond_name: Create stories, games, and animations
+  projguts_longdescription: Tato "unplugged" aktivita bez počítače pomáhá žákům naučit
+    se, jak modelovat a simulovat při skupinovém hraní různých verzí hry kámen / nůžky
+    / papír a umožní vidět výsledky jako různé modelování experimentů.
+  codeorg_beyond_name: Úvod do informatiky (2. stupeň ZŠ)
+  khan_beyond_name: Nauč se programovat počítač
+  tynker_beyond_name: Nauč se programovat doma
+  scratch_beyond_name: Buďte kreativní s programováním
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
-  scratchjr_beyond_name: ScratchJR for pre-readers
-  hopscotch_beyond_name: 'Hopscotch: Programming On Your iPad'
+  scratchjr_beyond_name: ScratchJR pro nečtenáře
+  hopscotch_beyond_name: 'Hopscotch: Programování na iPad'
   pocketcode_beyond_name: Pocket Code
-  groklearning_beyond_name: Learn Python programming
-  hacketyhack_beyond_name: Learn Ruby
-  robomind_beyond_name: Program a virtual robot
-  makegameswithus_beyond_name: Build an iPhone game in your browser!
-  appinventor_beyond_name: AppInventor Hour of Code
+  groklearning_beyond_name: Nauč se programovat v Pythonu
+  hacketyhack_beyond_name: Naučte se Ruby
+  robomind_beyond_name: Naprogramujte virtuálního robota
+  makegameswithus_beyond_name: Vytvoř hru pro iPhone ve svém prohlížeči!
+  appinventor_beyond_name: AppInventor Hodina Kódu
   touchdevelop_beyond_name: TouchDevelop
-  codehs_beyond_name: Learn to Code With Karel the Dog
-  udemy_beyond_name: Online Programming Courses
-  lynda_beyond_name: Online Programming Courses
-  edx_beyond_name: Harvard CS50 class
-  coursera_beyond_name: Stanford CS 101 class
+  codehs_beyond_name: Naučte se programovat s psem Karlem
+  udemy_beyond_name: Online kurzy programování
+  lynda_beyond_name: Online kurzy programování
+  edx_beyond_name: Třída Harvard CS50
+  coursera_beyond_name: Třída Stanford CS 101
   udacity_beyond_name: CS 101
-  teachingtree_beyond_name: University courses online
+  teachingtree_beyond_name: Univerzitní kurzy online
   kodu_beyond_name: Kodu
   cargobot_beyond_name: Cargobot
   kidsruby_beyond_name: KidsRuby
-  w3schools_beyond_name: Learn HTML
-  codeavengers_beyond_name: Learn to Code Websites
+  w3schools_beyond_name: Naučte se HTML
+  codeavengers_beyond_name: Naučte se kódovat webové stránky
   mozilla_beyond_name: Webmaker
   codecombat_beyond_name: CodeCombat
   codea_beyond_name: Codea
   lego_beyond_name: Mindstorms
   finch_beyond_name: Finch
-  arduino_beyond_name: Arduino
-  processing_beyond_name: Program with Processing
+  arduino_beyond_name: Arduino se Sparkfun
+  processing_beyond_name: Programování v Processing
   alice_beyond_name: Alice
   sphero_beyond_name: SPRK
-  codeorg_beyond_gradelevel: Ages 4-104
-  khan_beyond_gradelevel: Middle school +
-  tynker_beyond_gradelevel: Ages 5-13
-  scratch_beyond_gradelevel: Ages 8+
+  codeorg_beyond_gradelevel: Stáří 4-104
+  khan_beyond_gradelevel: Druhý stupeň a starší
+  tynker_beyond_gradelevel: Stáří 5-13
+  scratch_beyond_gradelevel: Věk 8 +
   lightbot_beyond_gradelevel: Všechny věkové kategorie
-  codecademy_beyond_gradelevel: High school
-  kodable_beyond_gradelevel: Elementary
-  scratchjr_beyond_gradelevel: Elementary
-  hopscotch_beyond_gradelevel: Middle school +
-  pocketcode_beyond_gradelevel: Middle school +
-  groklearning_beyond_gradelevel: Middle school +
-  hacketyhack_beyond_gradelevel: High school
-  robomind_beyond_gradelevel: Ages 8-13
-  makegameswithus_beyond_gradelevel: High school
-  appinventor_beyond_gradelevel: Middle school +
-  touchdevelop_beyond_gradelevel: High school
-  codehs_beyond_gradelevel: High school
-  udemy_beyond_gradelevel: High school +
-  lynda_beyond_gradelevel: High school +
-  edx_beyond_gradelevel: University
-  coursera_beyond_gradelevel: University
-  udacity_beyond_gradelevel: University
-  teachingtree_beyond_gradelevel: University
-  kodu_beyond_gradelevel: Ages 8+
-  cargobot_beyond_gradelevel: Ages 8+
-  kidsruby_beyond_gradelevel: Ages 12+
-  w3schools_beyond_gradelevel: Ages 12+
-  codeavengers_beyond_gradelevel: Middle school +
-  mozilla_beyond_gradelevel: Ages 12+
-  codecombat_beyond_gradelevel: Middle school +
-  codea_beyond_gradelevel: High school +
-  lego_beyond_gradelevel: Middle school +
-  finch_beyond_gradelevel: Ages 8+
-  arduino_beyond_gradelevel: High school +
-  processing_beyond_gradelevel: High school
-  alice_beyond_gradelevel: Middle school +
-  sphero_beyond_gradelevel: Ages 8+
-  codeorg_beyond_platformtext: Modern browsers, tablets
-  khan_beyond_platformtext: Modern Web browsers
-  tynker_beyond_platformtext: Modern web browsers
-  scratch_beyond_platformtext: Any browser
-  lightbot_beyond_platformtext: iOS, Android (or web browser)
-  codecademy_beyond_platformtext: Modern web browsers. iOS, Android apps
+  codecademy_beyond_gradelevel: Střední škola
+  kodable_beyond_gradelevel: Základní
+  scratchjr_beyond_gradelevel: Základní
+  hopscotch_beyond_gradelevel: Druhý stupeň a starší
+  pocketcode_beyond_gradelevel: Druhý stupeň a starší
+  groklearning_beyond_gradelevel: Druhý stupeň a starší
+  hacketyhack_beyond_gradelevel: Střední škola
+  robomind_beyond_gradelevel: Stáří 8-13
+  makegameswithus_beyond_gradelevel: Střední škola
+  appinventor_beyond_gradelevel: Druhý stupeň a starší
+  touchdevelop_beyond_gradelevel: Střední škola
+  codehs_beyond_gradelevel: Střední škola
+  udemy_beyond_gradelevel: Střední škola a vyšší
+  lynda_beyond_gradelevel: Střední škola a vyšší
+  edx_beyond_gradelevel: Univerzita
+  coursera_beyond_gradelevel: Univerzita
+  udacity_beyond_gradelevel: Univerzita
+  teachingtree_beyond_gradelevel: Univerzita
+  kodu_beyond_gradelevel: Věk 8 +
+  cargobot_beyond_gradelevel: Věk 8 +
+  kidsruby_beyond_gradelevel: Věk 12 a vyšší
+  w3schools_beyond_gradelevel: Věk 12 a vyšší
+  codeavengers_beyond_gradelevel: Druhý stupeň a starší
+  mozilla_beyond_gradelevel: Věk 12 a vyšší
+  codecombat_beyond_gradelevel: Druhý stupeň a starší
+  codea_beyond_gradelevel: Střední škola a vyšší
+  lego_beyond_gradelevel: Druhý stupeň a starší
+  finch_beyond_gradelevel: Věk 8 +
+  arduino_beyond_gradelevel: Střední škola a vyšší
+  processing_beyond_gradelevel: Střední škola
+  alice_beyond_gradelevel: Druhý stupeň a starší
+  sphero_beyond_gradelevel: Věk 8 +
+  codeorg_beyond_platformtext: Moderní prohlížeče, tablety
+  khan_beyond_platformtext: Moderní webové prohlížeče
+  tynker_beyond_platformtext: Moderní webové prohlížeče (vyžaduje $$)
+  scratch_beyond_platformtext: Jakýkoli prohlížeč
+  lightbot_beyond_platformtext: iOS, Android (nebo webový prohlížeč)
+  codecademy_beyond_platformtext: Moderní webové prohlížeče. iOS, aplikace pro Android
   kodable_beyond_platformtext: iPad
   scratchjr_beyond_platformtext: iPad
   hopscotch_beyond_platformtext: iPad
-  pocketcode_beyond_platformtext: Mobile App
-  groklearning_beyond_platformtext: Modern web browsers
-  hacketyhack_beyond_platformtext: Desktop install
-  robomind_beyond_platformtext: Modern web browsers, Mobile web
-  makegameswithus_beyond_platformtext: Modern Web browsers
-  appinventor_beyond_platformtext: Modern browser + Android
-  touchdevelop_beyond_platformtext: Modern browsers, smartphones, all devices
-  codehs_beyond_platformtext: Modern browsers
-  udemy_beyond_platformtext: Web based
-  lynda_beyond_platformtext: Web based
-  edx_beyond_platformtext: Modern browsers
-  coursera_beyond_platformtext: Modern browsers
-  udacity_beyond_platformtext: Modern browsers
-  teachingtree_beyond_platformtext: Web based
+  pocketcode_beyond_platformtext: Mobilní aplikace
+  groklearning_beyond_platformtext: Moderní webové prohlížeče
+  hacketyhack_beyond_platformtext: Klientská instalace
+  robomind_beyond_platformtext: Moderní webové prohlížeče, mobilní web
+  makegameswithus_beyond_platformtext: Moderní webové prohlížeče
+  appinventor_beyond_platformtext: Moderní prohlížeč + Android
+  touchdevelop_beyond_platformtext: Moderní prohlížeče, chytré telefony, všechna zařízení
+  codehs_beyond_platformtext: Moderní prohlížeče (vyžaduje $$)
+  udemy_beyond_platformtext: WEBově orientované
+  lynda_beyond_platformtext: WEBově orientované (vyžaduje $$)
+  edx_beyond_platformtext: Moderní prohlížeče
+  coursera_beyond_platformtext: Moderní prohlížeče
+  udacity_beyond_platformtext: Moderní prohlížeče
+  teachingtree_beyond_platformtext: WEBově orientované
   kodu_beyond_platformtext: Windows, xBox
   cargobot_beyond_platformtext: iPad
-  kidsruby_beyond_platformtext: Desktop install
-  w3schools_beyond_platformtext: Modern Web browsers
-  codeavengers_beyond_platformtext: Modern Web browsers
-  mozilla_beyond_platformtext: Modern Web browsers
-  codecombat_beyond_platformtext: Web based (Firefox, Chrome, Safari, IE9+)
+  kidsruby_beyond_platformtext: Klientská instalace
+  w3schools_beyond_platformtext: Moderní webové prohlížeče
+  codeavengers_beyond_platformtext: Moderní webové prohlížeče
+  mozilla_beyond_platformtext: Moderní webové prohlížeče
+  codecombat_beyond_platformtext: WEBově orientované (Firefox, Chrome, Safari, IE9+)
   codea_beyond_platformtext: iPad
-  lego_beyond_platformtext: Robot purchase
-  finch_beyond_platformtext: Robot purchase
+  lego_beyond_platformtext: Nákup robota
+  finch_beyond_platformtext: Nákup robota
   arduino_beyond_platformtext: Kit purchase
-  processing_beyond_platformtext: Modern web browsers
-  alice_beyond_platformtext: Windows or Mac (install required)
-  sphero_beyond_platformtext: Robot purchase
-  codeorg_beyond_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
-  khan_beyond_shortdescription: Learn to draw in JavaScript
-  tynker_beyond_shortdescription: A fun and engaging course for children in grades
-    4-8
-  scratch_beyond_shortdescription: Create an interactive animation or game
-  lightbot_beyond_shortdescription: A game to teach coding concepts
-  codecademy_beyond_shortdescription: Learn JavaScript programming, in a web-browser
-  kodable_beyond_shortdescription: A fun iPad game to teach computer programming concepts
-  scratchjr_beyond_shortdescription: 'Create interactive stories and games using ScratchJr. '
-  hopscotch_beyond_shortdescription: Learn visual programming on an iPad
-  pocketcode_beyond_shortdescription: Create a game on your smartphone and share with
-    friends to try!
-  groklearning_beyond_shortdescription: Basic intro to python programming
-  hacketyhack_beyond_shortdescription: Learn Ruby from the ground up
-  robomind_beyond_shortdescription: Write code for a virtual robot
-  makegameswithus_beyond_shortdescription: Learn to make an iPhone game in an hour
-  appinventor_beyond_shortdescription: Make your own app! (Android-only)
-  touchdevelop_beyond_shortdescription: Code mobile apps directly on your phone, tablet
-    or laptop
-  codehs_beyond_shortdescription: Learn JavaScript programming with a fun visual environment
-  udemy_beyond_shortdescription: Dozens of online programming courses
-  lynda_beyond_shortdescription: Dozens of online programming courses
-  edx_beyond_shortdescription: The most popular class at Harvard
-  coursera_beyond_shortdescription: Start with CS101
-  udacity_beyond_shortdescription: Start with CS101
-  teachingtree_beyond_shortdescription: 'Online Knowledge: Rapid and Unconstrained'
-  kodu_beyond_shortdescription: Design a 3D game world
-  cargobot_beyond_shortdescription: Program a robot arm on your iPad
-  kidsruby_beyond_shortdescription: Learn to program using Ruby
-  w3schools_beyond_shortdescription: Learn to make web sites
-  codeavengers_beyond_shortdescription: Learn to code games and websites
-  mozilla_beyond_shortdescription: Create and share web pages
-  codecombat_beyond_shortdescription: Play a game and learn JavaScript to win
-  codea_beyond_shortdescription: Make apps on your iPad
-  lego_beyond_shortdescription: Build and program a robot
-  finch_beyond_shortdescription: A robot for computer science education
-  arduino_beyond_shortdescription: Prototype your own hardware
-  processing_beyond_shortdescription: Learn the Processing languages
-  alice_beyond_shortdescription: Teach programming in a 3D environment
+  processing_beyond_platformtext: Moderní webové prohlížeče
+  alice_beyond_platformtext: Windows nebo Mac (vyžadována instalace)
+  sphero_beyond_platformtext: Nákup robota
+  codeorg_beyond_shortdescription: Naučte se programovat s Markem Zuckerbergem a Angry
+    Birds!
+  khan_beyond_shortdescription: Naučte se kreslit v JavaScriptu
+  tynker_beyond_shortdescription: Zábavný a poutavý kurz pro děti od čtvrté do osmé
+    třídy
+  scratch_beyond_shortdescription: Vytvořte interaktivní hry, příběhy a animace.
+  lightbot_beyond_shortdescription: Hra pro výuku základních pojmů programování
+  codecademy_beyond_shortdescription: Naučte JavaScript programování v prohlížeči
+  kodable_beyond_shortdescription: Zábavná hra na iPad, která učí koncepty programování
+  scratchjr_beyond_shortdescription: 'Vytvořte interaktivní příběhy a hry pomocí ScratchJr. '
+  hopscotch_beyond_shortdescription: Nauč se programovat grafiku na iPadu
+  pocketcode_beyond_shortdescription: Vytvořte hru na vašem smartphone a sdílejte
+    s přáteli!
+  groklearning_beyond_shortdescription: Základní úvod do programování v Pythonu
+  hacketyhack_beyond_shortdescription: Naučte se Ruby od základů
+  robomind_beyond_shortdescription: Napište kód pro virtuálního robota
+  makegameswithus_beyond_shortdescription: Naučte se vytvořit hru pro iPhone za hodinu
+  appinventor_beyond_shortdescription: Vytvořte si vlastní aplikaci! (Pouze pro Android)
+  touchdevelop_beyond_shortdescription: Programujte mobilní aplikace přímo ve vašem
+    telefonu, tabletu nebo notebooku
+  codehs_beyond_shortdescription: Naučte se programovat v JavaScriptu za pomocí zábavného
+    vizuálního prostředí
+  udemy_beyond_shortdescription: Desítky online kurzů programování
+  lynda_beyond_shortdescription: Desítky online kurzů programování
+  edx_beyond_shortdescription: Nejoblíbenější hodina na Harvardu
+  coursera_beyond_shortdescription: Začít s CS101
+  udacity_beyond_shortdescription: Začít s CS101
+  teachingtree_beyond_shortdescription: 'On-line znalosti: Rychle a bez omezení'
+  kodu_beyond_shortdescription: Navrhněte 3D herní svět
+  cargobot_beyond_shortdescription: Naprogramujte robotickou ruku na iPadu
+  kidsruby_beyond_shortdescription: Naučte se programovat pomocí Ruby
+  w3schools_beyond_shortdescription: Naučte se dělat webové stránky
+  codeavengers_beyond_shortdescription: Naučte se programovat hry a webové stránky
+  mozilla_beyond_shortdescription: Vytvářejte a sdílejte webové stránky
+  codecombat_beyond_shortdescription: Hrajte hru a pro vítězství se naučte JavaScript
+  codea_beyond_shortdescription: Vytvářejte aplikace na iPadu
+  lego_beyond_shortdescription: Vybudujte a naprogramujte robota
+  finch_beyond_shortdescription: Robot pro výuku informatiky
+  arduino_beyond_shortdescription: Naučte se Arduino se Sparkfun Digital Sandbox.
+  processing_beyond_shortdescription: Naučte se jazyk Processing
+  alice_beyond_shortdescription: Učte programování v 3D prostředí
   sphero_beyond_shortdescription: Schools, Parents, Robots & Kids. We created the
     SPRK program because we believe play is a powerful teacher. Whether you're an
     educator or a parent, SPRK lessons give kids a fun crash course in programming
     robots while sharpening their skills in math and science.
-  codeorg_beyond_longdescription: Learn the basic concepts of Computer Science with
-    drag and drop programming. 3 full courses, each consists of 15-20 lessons that
-    blend "unplugged" classroom activities interspersed with game-like, self-directed
-    tutorials starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds
-    and Plants vs. Zombies. Learn repeat-loops, conditionals, basic algorithms, functions,
-    and variables.
-  khan_beyond_longdescription: Learn the basics of JavaScript programming while creating
-    fun drawings with your code. Do it on your own or with your class!
+  codeorg_beyond_longdescription: Naučte se základní pojmy informatiky programováním
+    založeném na tahání myší. Tři plné kurzy, každý skládající se z 15-20 lekcí, které
+    se dobře kombinují s "unplugged" aktivitami do třídy. Vše proložené hravými, samostatně
+    vedenými cvičeními a video přednáškami od Billa Gatese, Marka Zuckerberga, Angry
+    Birds a Plants vs. Zombies. Naučte se smyčky, podmínky, základní algoritmy, funkce
+    i proměnné.
+  khan_beyond_longdescription: Naučte se základy programování v jazyce JavaScript
+    při vytváření zábavných kreseb s tvým vlastním programem. Spolupracuj ve třídě
+    nebo udělej sám!
   tynker_beyond_longdescription: Tynker makes it fun & easy to learn programming.
     It makes it visual. Kids build games and mobile apps by arranging blocks of code.
     It removes the need to know programming syntax. Kids transform ideas into animated
     stories and math art right away. It promotes progressive learning. As kids learn
     fundamentals, Tynker introduces more advanced concepts including syntax driven
     programming.
-  scratch_beyond_longdescription: With Scratch, you can program your own interactive
-    stories, games, and animations&mdash; and share your creations with others in
-    the online community. Scratch helps young people learn to think creatively, reason
-    systematically, and work collaboratively&mdash; essential skills for life in the
-    21st century. Scratch is a project of the Lifelong Kindergarten Group at the MIT
-    Media Lab. It is provided free of charge.
-  lightbot_beyond_longdescription: Learn core programming logic, starting from super-basic
-    programming, for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence
-    commands, identify patterns, use procedures, and utilize loops!
-  codecademy_beyond_longdescription: Codecademy is an interactive, student-guided
-    introduction to the basics of CS through JavaScript that's used by tens of millions
-    of students around the world. We've prepared a no-hassle Hour of Code experience
-    with accompanying quizzes, slides, and a completed project for students at the
-    end.
-  kodable_beyond_longdescription: Kodable is a self-guided iPad game that introduces
-    kids 5+ to programming basics. Having a teacher or parent nearby is optimal, but
-    not necessary.
+  scratch_beyond_longdescription: Ve Scratchi můžeš vytvářet vlastní interaktivní
+    hry, příběhy, animace &mdash; a sdílet je s přáteli. Začni s animacemi svého jména,
+    vytvořením pohlednice a hry ping-pong.
+  lightbot_beyond_longdescription: Nauč se základy programovací logiky, začti od naprostých
+    základů programování pro věk od 4 let na iOS nebo Androidu (nebo ve webovém prohlížeči).
+    Zjisti, jak řadit příkazy, odhalovat vzorky, používat procedury a využívat opakování!
+  codecademy_beyond_longdescription: Codecademy je interaktivní, žákem řízený úvod
+    do základů informatiky pomocí JavaScriptu, který používají desítky milionů žáků
+    a studentů po celém světě. Připravili jsme Hodinu kódu, která neotravuje, je plná
+    zážitků v doprovodných kvízech, snímcích a zakončena kompletními projekty pro
+    žáky.
+  kodable_beyond_longdescription: Kodable je hra pro Ipad, která představí dětem 5+
+    základy programování. Přítomnost učitele nebo rodiče je vhodná, ale není pro tuto
+    hru nutná.
   scratchjr_beyond_longdescription: ScratchJr is an introductory programming language
     that enables young children to create their own interactive stories and games.
     Children snap together graphical programming blocks to make characters move, jump,
@@ -946,12 +963,6 @@
     the creation of 3D animations, the Alice Project provides tools and materials
     for teaching and learning computational thinking, problem solving, and computer
     programming across a spectrum of ages and grade levels.
-  sphero_beyond_longdescription: Schools, Parents, Robots & Kids. We created the SPRK
-    program because we believe play is a powerful teacher. Whether you're an educator
-    or a parent, SPRK lessons give kids a fun crash course in programming robots while
-    sharpening their skills in math and science.
-  codeintl_name: "Write your first computer program"
-  codeintl_gradelevel: "Ages 4-104"
-  codeintl_platformtext: "Modern browsers, smartphones, tablets"
-  codeintl_shortdescription: "Learn to code with Mark Zuckerberg and Angry Birds!"
-  codeintl_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages."
+  sphero_beyond_longdescription: Ať už jste pedagog nebo rodič, SPRK lekce přináší
+    dětem zábavný rychlý kurz programování robotů zatímco také zdokonaluje jejich
+    znalosti v matematice a vědě.

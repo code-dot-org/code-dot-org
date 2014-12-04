@@ -7,14 +7,15 @@
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Programmēšanas stunda</a> tuvojas. Aicinam visus skolotājus
     un organizatorus, <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">ieplāno savu Programmēšanas stundu</a>'
+    font-weight:bold">ieplānot savu Programmēšanas stundu</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
-    none; font-weight: 400">Ja esi CS pasniedzējs apskati citus CSEdWeek resursus</a>'
+    none; font-weight: 400">Ja esi informātikas skolotājs, apskati citus CSEdWeek
+    resursus</a>'
   n_have_learned_an_hoc: <h1>#</h1><h3>esmu mēģinājis </h3><h2> "Programmēšanas stundu"</h2>
   anybody_can_learn: Jebkurš var iemācīties.
   learn_now: Mācīties tagad
-  petition_message: Katram skolēnam katrā skolā būtu jābūt iespējai apgūt datorzinības
-  petition_sign_message: 'Ja jūs piekrītat, rakstiet savu vārdu šeit. Pievienojies
+  petition_message: Katram skolēnam katrā skolā būtu jābūt iespējai apgūt programmēšanu
+  petition_sign_message: 'Ja tu piekrītat, rakstiet savu vārdu šeit. Pievienojies
     # citiem.'
   name: Vārds
   email: E-pasts
@@ -22,18 +23,18 @@
   submit: Iesniegt
   twentyhours_heading: Izmēģiniet mūsu datorzinību kursa ievadu
   twentyhours_text: Pabeidzi savu pirmo "Programmēšanas stundu"? Apgūsti pamatzināšanas
-    datorzinībās un programmēšanas pamatlietas sekojošajos kursos.
+    datorzinībās un programmēšanas pamatlietas nākamajos kursos.
   hoc2014_heading: Pievienojies  <a href="http://hourofcode.com">"Programmēšanas stundai"
     </a><br/>2014. gada 8. - 14. decembrī<br/>
   hoc2014_students: Skolēni
   hoc2014_try: Izmēģini
   hoc2014_teachers: Skolotāji
-  hoc2014_host: Organizēt
+  hoc2014_host: Sarīko
   hoc2014_everyone: Visi
-  hoc2014_support: Atbalsti to
-  hoc2014_whatishoc: Kas ir "Programmēšanas Stunda"?
-  twentyhours_trynow: Izmēģiniet tūlīt
-  california_heading: Ierosini savā skolā mācīt datorzinības
+  hoc2014_support: Atbalsti
+  hoc2014_whatishoc: Kas ir "Programmēšanas stunda"?
+  twentyhours_trynow: Izmēģini tūlīt
+  california_heading: Ierosini savā skolā mācīt programmēšanu
   california_text: Jebkurš skolotājs var piedāvāt mūsu <a href='http://studio.code.org/'>
     bezmaksas kursus</a>.  Visas pamatskolas var <a href='http://code.org/educate/k5'>
     mācīt datorzinības</a>. Iesaki vidusskolām < href = 'http://code.org/educate/districts'
@@ -41,37 +42,37 @@
   california_button: Uzzini vairāk
   flappy_heading: Flapīgu dzimšanasdienu Code.org
   flappy_text: Code.org nupat nosvinēja 1 gada jubileju. <br/> <br/> Svini kopā ar
-    mums, radot savu pielāgoto <b>Flappy</b> spēli. Programmē savas kārtulas un dalies
-    tajās ar draugiem!
+    mums, radot savu pielāgoto <b>Flappy</b> spēli. Programmē savus noteikumus un
+    dalies ar draugiem!
   view_english_site: Skatīt vietni angļu valodā
   non_english_tutorials: 'Dažādās valodās iztulkotas pamācības:'
   write_your_first_program: Uzraksti savu pirmo programmu
   learn_cs_concepts: Apgūsti datorzinību pamatjēdzienus ar vizuālo rīku programmēšanu.
     Šī ir pamācība, kas būvēta kā spēle, kurā video lekcijas pasniedz Bill Gates,
-    Mark Zuckenberg, Angry Birds un Plants vs. Zombies veidotāji. Apgūsti atkārtotos
+    Mark Zuckerberg, Angry Birds un Plants vs. Zombies veidotāji. Apgūsti atkārtotos
     ciklus, ja-tad nosacījumus un pamatalgoritmus.
   all_ages: Visu vecumu
   beginner: Iesācējs
-  n_participants: "# dalībnieki"
+  n_participants: '# dalībnieki'
   go: Sākt
   thank_you_: Paldies!
   congratulations: Apsveicu!
-  congratulations_on_completing_hoc: Apsveicam jūs ar "Programmēšanas stunda" pabeigšanu.
+  congratulations_on_completing_hoc: Apsveicam tevi ar "Programmēšanas stundas" pabeigšanu.
   get_a_certificate_of_achievement: Iegūsti sasniegumus apliecinošu sertefikātu
-  enter_valid_email: Lūdzu, ievadiet derīgu e-pasta adresi
-  get_a_certificate_message: Mēs jums nosūtīsim sertifikātu un informāciju kā <a href='/learn/beyond'>
+  enter_valid_email: Lūdzu, ievadi derīgu e-pasta adresi
+  get_a_certificate_message: Mēs tev nosūtīsim sertifikātu un informāciju kā <a href='/learn/beyond'>
     apgūt vairāk</a>
   get_a_certificate_message_after: Klikšķini uz sertifikāta, lai to lejupielādētu
     vai izprintētu. Lai turpinātu apgūt mūsu <a href='http://studio.code.org'> citus
     kursus </a>, vai apskati citas iespējas, lai  <a href='/learn/beyond'> "Uzzinātu
     vairāk"</a>.
   thanks_for_submitting: Paldies par iesniegumu!
-  if_you_enjoyed: Ja jūs izbaudījāt mācību procesu, iesakiet to izmēģināt arī saviem
-    draugiem! Mēs vēlamies, lai mācās visa pasaule!
-  personalize_certificate: Personalizējiet savu sertifikātu
+  if_you_enjoyed: Ja tev patika mācīties, iesaki to izmēģināt arī saviem draugiem!
+    Mēs vēlamies, lai mācās visa pasaule!
+  personalize_certificate: Personalizē savu sertifikātu
   share_achievement: Dalies ar saviem sasniegumiem
-  beyond_hour_message: turpiniet apgūt mūsu <a href='http://studio.code.org'> citus
-    kursus </a>, vai apskatiet citas iespējas, lai  <a href='/learn/beyond'> "Uzzinātu
+  beyond_hour_message: turpini apgūt mūsu <a href='http://studio.code.org'> citus
+    kursus </a>, vai apskati citas iespējas, lai <a href='/learn/beyond'> "Uzzinātu
     vairāk"</a>.
   leaderboards_for_hoc: Līderu saraksts "Programmēšanas stundai".
   support_url: http://support.Code.org/
@@ -90,7 +91,7 @@
   beyond_an_hour: Ārpus "Programmēšanas stundas"
   get_started: Sākt
   i_agree: es piekrītu
-  participant_select: "-Izvēlēties-"
+  participant_select: -Izvēlēties-
   participant_student: Students
   participant_parent: Vecāki
   participant_educator: Skolotājs
@@ -108,7 +109,7 @@
   learn_next_level: Turpināt nākamo līmeni
   learn_online: Izmēģiniet citus kursus tiešsaistē
   learn_classes: Atrast vietējās klases
-  hoc_is_here: "#Programmēšanas_stunda ir šeit - pārbaudi @codeorg"
+  hoc_is_here: '#Programmēšanas_stunda ir šeit - pārbaudi @codeorg'
   just_did_hoc: 'Es tikko izpildīju #Programmēšanas_stundu - pārbaudi! @codeorg'
   learn_hoc: Mācies "Programmēšanas skolu"
   beyond_hoc: Pārsniedz vienu stundu
@@ -118,31 +119,31 @@
   help_recruit_coders: Palīdzi mums papildnāt tavu sastāvu ar programmētājiem!
   help_recruit: Palīdzi mums papildināt sastāvu ar programmētājiem!
   lines_of_code: VAIRĀK NEKĀ <b># KODA RINDIŅAS</b> JAU UZRAKSTĪTAS.
-  lines_of_code_alt: "<b>#</b> KODA RINDIŅAS UZRAKSTĪJUŠI SKOLĒNI"
-  who_has_done_hoc: 'Kas ir izpildījis #ProgrammesanasStundu? @codeorg'
+  lines_of_code_alt: <b>#</b> KODA RINDIŅAS UZRAKSTĪJUŠI SKOLĒNI
+  who_has_done_hoc: 'Kas ir veidojis #ProgrammesanasStundu? @codeorg'
   hoc_leaderboards: Programmēšanas stundas rezultātu saraksts
-  students_and_lines: "%{students} skolēni ir piedalījušies Programmēšanas stundā
-    un uzrakstījuši %{lines} rindas koda."
+  students_and_lines: '%{students} skolēni ir piedalījušies Programmēšanas stundā
+    un uzrakstījuši %{lines} rindas koda.'
   start_hoc: Sāc Programmēšanas stundu tagad
   contact_form_topic_press: Prese/mediji (intervija vai uzaicinājums sniegt runu)
   studiobar_title: Izpēti <a href='http://studio.code.org'>Kodu studiju</a>
-  studiobar_elementary_title: Vienkāršākās kursi
+  studiobar_elementary_title: Vienkāršākie kursi
   studiobar_elementary_body: Mūsu trīs  jaunie kursi priekš K&#8209;5
   studiobar_hoc_title: '"Programmēšanas stunda"'
   studiobar_hoc_body: Apgūsti programmēšanu ar Angry Birds
   studiobar_flappy_title: Flappy kods
-  studiobar_flappy_body: Izveido un dalies ar savu Flapija spēli
+  studiobar_flappy_body: Izveido un dalies ar savu Flappy spēli
   studiobar_teacher_title: Radīts skolotājiem
   studiobar_teacher_body: Iepazīstini savus skolēnus ar Code Studio
   contact_form_topic_student: Skolēniem
   contact_form_topic_parent: Vecākiem
   contact_form_topic_teacher: Pasniedzējiem/skolotājiem
-  contact_form_topic_outside_us: "Ārpus ASV"
+  contact_form_topic_outside_us: Ārpus ASV
   contact_form_topic_contribution: Ziedojumi
   contact_form_topic_partner: Sadarbības partneriem
   contact_form_topic_other: Citi
   contact_form_label_topic: Tēma
-  contact_form_label_email: Jūsu e-pasts
+  contact_form_label_email: Tavs e-pasts
   contact_form_label_message: Ziņojums
   contact_form_label_submit: Sūtīt ziņu
   class_submission_in_school: Skolā
@@ -157,9 +158,9 @@
     programma
   class_submission_in_school_exploring_computer_science: Izpētot datordatorzinātni
   class_submission_in_school_other: Citi skolā
-  class_submission_out_of_school: "Ārā no skolas"
+  class_submission_out_of_school: Ārā no skolas
   class_submission_out_of_school_summer_camp: Vasaras nometne
-  class_submission_out_of_school_afterschool_program: "Ārpusskolas programma"
+  class_submission_out_of_school_afterschool_program: Ārpusskolas programma
   class_submission_out_of_school_all-day_workshop: Visas dienas darbnīca (līdz vienai
     nedēļai)
   class_submission_out_of_school_multi-week_workshop: Vairāku nedēļu darbnīca
@@ -176,7 +177,7 @@
   class_submission_level_vocational: Arods
   class_submission_languages_other: Cita valoda(s)
   volunteer_engineer_submission_commitment_uncertain: Neskaidrs
-  volunteer_engineer_submission_commitment_now_and_then: "Šad un tad"
+  volunteer_engineer_submission_commitment_now_and_then: Šad un tad
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 stundu katru nedēļu
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 stundas katru nedēļu
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 stundas katru nedēļu
@@ -205,7 +206,7 @@
   dashboard_landing_useful_links: Citas noderīgas saites (Angļu valodā)
   dashboard_landing_office_hours: Uzdod jautājumu pērsonīgi! Sazinies ar mums tiešsaistē,
     izmantojot video zvanus.
-  dashboard_landing_print_certificates: Drukāt sertifikātus skolniekiem, kas pabeiguši
+  dashboard_landing_print_certificates: Drukāt sertifikātus skolēniem, kas pabeiguši
     kursu
   dashboard_landing_educator_blog: Lasīt par jaunumiem un atjauninājumiem mūsu materiāliem
     pedagogu blogā
@@ -213,11 +214,11 @@
     pamācībās
   dashboard_landing_video_player: Izmēģinat mūsu jauno video atskaņotāju savā skolā
   dashboard_landing_progress_title: Galveno klašu progress
-  dashboard_landing_progress_biggest: "Šis ir tava lielākā koda progress."
+  dashboard_landing_progress_biggest: Šis ir tava lielākā koda progress.
   dashboard_landing_view_progress: Aplūko %{biggest_section} progresu
   dashboard_landing_available_title: Pieejamie kursi
-  dashboard_landing_available_courses: "Šeit atrodas kursi, kas ir pieejami tev un
-    taviem studentiem."
+  dashboard_landing_available_courses: Šeit atrodas kursi, kas ir pieejami tev un
+    taviem studentiem.
   dashboard_landing_loading: Ielādē...
   dashboard_action_edit: Rediģēt
   dashboard_action_save: Saglabāt
@@ -233,9 +234,9 @@
   dashboard_navigation_all_sections: Skolēnu konti un progress
   dashboard_navigation_view_progress: Apskatīt sekmes
   dashboard_navigation_add_students: Pievienot skolēnus
-  dashboard_navigation_manage_students: Pārzināt skolēnus
+  dashboard_navigation_manage_students: Pārvaldīt skolēnus
   dashboard_navigation_lesson_plans_resources: Stundu plāni un resursi
-  dashboard_navigation_view_stats: Rezultāti
+  dashboard_navigation_view_stats: Statistika
   dashboard_navigation_section: 'Sadaļa: %{section_name}'
   dashboard_navigation_student: 'Skolēns: %{student_name}'
   dashboard_sections_new_section: Jauna sadaļa
@@ -251,22 +252,21 @@
   dashboard_sections_name: Sadaļas nosaukums
   dashboard_sections_choose_secret: Ja vēlies piedāvāt kontus skolēniem, izvēlies
     slepenu <b>vārdu</b> vai <b>attēlu</b> šim nodalījumam.
-  dashboard_sections_secret_word: "<b>Vārds</b> ļauj uzstādīt slepeno vārdu katram
-    skolēnam."
-  dashboard_sections_secret_picture: "<b>Bilde</b> aļauj Tev uzstādīt slepeno bildi
-    katram skolēnam, piemērots jaunākiem skolēniem, kuri vēl nemāk rakstīt."
+  dashboard_sections_secret_word: <b>Vārds</b> ļauj uzstādīt slepeno vārdu katram
+    skolēnam.
+  dashboard_sections_secret_picture: <b>Bilde</b> ļauj Tev uzstādīt slepeno bildi
+    katram skolēnam, piemērots jaunākiem skolēniem, kuri vēl nemāk rakstīt.
   dashboard_sections_secret_none: Ja vēlies, lai skolēni var pārvaldīt paši savus
     kontus, tai skaitā izvēlēties savas paroles, izvēlies slepeno tipu <b>neviens</b>.
-  dashboard_sections_print_secrets: Tad jūs varat izdrukāt karšu lapu, kas satur informāciju
-    par kontiem, kas individuāli tiek izdalīti jūsu skolēniem.
-  dashboard_sections_switch_section: 'Pārslēgt nodalījumu:'
+  dashboard_sections_print_secrets: Tad jūs varat izdrukāt lapiņas, kas satur informāciju
+    par kontiem, kas individuāli tiek izdalīti taviem skolēniem.
+  dashboard_sections_switch_section: 'Pārslēgt sadaļu:'
   dashboard_students_add_student: Pievienot skolēnu
   dashboard_students_add_students: Pievienot vairākus skolēnus
   dashboard_students_add_multiple: 'Ieraksti vai iekopē savu skolēnu vārdus, vienu
     katrā rindā:'
-  dashboard_students_new_section: Tu esi izveidojis/-usi jaunu nodalījumu! Tagad pievieno
-    skolēnus, izmantojot pogas <b>Pievienot skolēnu</b> un <b> Pievienot vairākus
-    skolēnus</b>.
+  dashboard_students_new_section: Tu izveidoji jaunu sadaļu! Tagad pievieno skolēnus,
+    izmantojot pogas <b>Pievienot skolēnu</b> un <b>Pievienot vairākus skolēnus</b>.
   dashboard_students_placeholder_name: Skolēna vārds
   dashboard_students_name: Vārds
   dashboard_students_age: Vecums
@@ -340,22 +340,22 @@
   dashboard_sections_sign_in_unique: Unikāla mājaslapa ir norādīta uz cilnes "Pārvaldīt
     skolēnus"
   dashboard_sections_sign_in_main: http://code.org un spied "Pieslēgties"
-  dashboard_sections_password_account_creation: Skoiēnu izveidotā parole
-  dashboard_sections_login_type_explanation: "Šī tabula palīdz paskaidrot, kuriu no
-    šiem pieteikšanās veidiem <b>attēls, vārds vai e-pasts</b>, tu gribēsi izvēlēties
-    segmentam."
+  dashboard_sections_password_account_creation: Skolēnu izveidotā parole
+  dashboard_sections_login_type_explanation: Šī tabula palīdz paskaidrot, kuru no
+    visiem pieteikšanās veidiem <b>attēls, vārds vai e-pasts</b>, tu gribēsi izvēlēties
+    sadaļai.
   dashboard_faq: Biežāk uzdotie jautājumi
-  code_hoc_coming: '"Programmēšanas Stunda" tuvojas - 8.- 14. decembris!'
-  code_sign_up: Reģistrējies, lai piedalītos CS "Izglītošanas nedēļas" ietvaros
+  code_hoc_coming: '"Programmēšanas Stunda" tuvojas - no 8. līdz 14. decembrim!'
+  code_sign_up: Reģistrējies, lai piedalītos Datorzinību izglītības nedēļā
   learn_more: Uzzini vairāk
-  hoc2014_try_new_tutorials: Izmēģini mūsu jauno "Programmēšanas Stundas" pamācību
+  hoc2014_try_new_tutorials: Izmēģini mūsu jauno "Programmēšanas stundas" pamācību
   hoc2014_try_new_tutorial: Pamēģini mūsu jauno Programmēšanas Stundas apmācību beta
     versijā
   hoc2014_try_scrat: Dusmīgie putni, Augi pret Zombijiem un Skrets
-  hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
+  hoc2014_try_frozen: Zīmē kopā ar Annu un Elzu no "Ledus sirds"
   carousel_heading_international: Pamācības tavā valodā
-  carousel_heading_domestic: Pamācības ir pieejams Angļu valodā
-  carousel_heading_beginners: Pamācības priekš iesācējiem
+  carousel_heading_domestic: Pamācības, kas pieejamas Angļu valodā
+  carousel_heading_beginners: Pamācības iesācējiem
   carousel_heading_javascript: Pamācības tiem, kas māca javaskriptu
   carousel_heading_unplugged: Nav ierīces vai interneta? Mēģiniet 'atvienotās' datorzinātnes
   carousel_heading_devices: Pamācību aplikācija priekš telefoniem un planšetdatoriem
@@ -364,11 +364,12 @@
   carousel_heading_university: Universitāšu kursi tiešsaistē
   carousel_heading_webpages: Iemācies veidot mājas lapas
   carousel_heading_robots: Iemāčies programēt ar robotiem
-  carousel_heading_ide: Platformas populāras skolotāju vidū
+  carousel_heading_ide: Skolotāju starpā populāras platformas
   educator_notes: Pasniedzēju pieraksti
-  more_resources_educators: Vairāk resursi priekš skolotājiem un pasniedzējim
+  more_resources_educators: Vairāk resursi priekš skolotājiem un pasniedzējiem
   participants: Paslēpt kontekstu - Pieprasīt kontekstu
   teachers_notes: Skolotāju pieraksti
+  teachers_notes_hoc: 'Teachers: Read important educator notes here'
   previous: Iepriekšējā
   next: Nākamā
   older_systems: Pamācības, kas darbojas uz vecākām sistēmām
@@ -378,11 +379,12 @@
   mobile_devices: Apmācības mobilajām ierīcēm
   frozen_name: Programmē ar Annu un Elzu
   codeorg_name: Uzraksti savu pirmo programmu
+  codeintl_name: Uzraksti savu pirmo programmu
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Ievads JavaScript
   khanes_name: Ievads JavaScript
   tynker_name: Veidot savu spēli
-  scratch_name: Create a holiday card
+  scratch_name: Esi radošs kodējot
   lightbot_name: Lightbot
   thinkersmith_name: Mani Robotikas draugi
   condcards_name: nosacījumi ar kārtēm
@@ -396,22 +398,22 @@
   robomind_name: Programmē virtuālo robotu
   groklearning_name: Elīza, čata robotu ārsts
   quorum_name: Pieejama programmēšana (ar ekrānlasītāja atbalstu)
-  codespark_name: The Foos (pre-readers welcome)
-  kodable_name: Kodable
+  codespark_name: The Foos (piemērots arī lasītnepratējiem)
+  kodable_name: Kodable (piemērots arī lasītnepratējiem)
   tynkerapp_name: Tynker - uz planšetdatoriem
-  hopscotch_name: 'Hopscotch: Code on your iPad'
   robomindnl_name: Programmē virtuālo robotu
-  flappy_name: Make a Flappy game
+  flappy_name: Izveido Flappy spēli
   bitsbox_name: Bitsbox - izveidot spēli
   makegameswithus_name: Izveidot iPhone spēli savā pārlūkā!
   touchdevelop_name: TouchDevelop
-  appinventor_name: AppInventor Hour of Code
+  appinventor_name: AppInventor Programmēšanas stunda
   blockly_name: Blockly
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Akmens, Šķēres, Papīrīts
   frozen_gradelevel: Vecumā no 8+
   codeorg_gradelevel: Vecums no 4-104
+  codeintl_gradelevel: Vecums no 4-104
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Pamatskola +
   khanes_gradelevel: Pamatskola +
@@ -433,7 +435,6 @@
   codespark_gradelevel: Sākumskola
   kodable_gradelevel: Sākumskola
   tynkerapp_gradelevel: Vecumā 5-13
-  hopscotch_gradelevel: Pamatskola +
   robomindnl_gradelevel: Vecumā no 8-13
   flappy_gradelevel: Vecums no 4-104
   bitsbox_gradelevel: Sākumskola
@@ -444,15 +445,16 @@
   thinkersmith2_gradelevel: Vecumā no 8+
   kodableunplugged_gradelevel: Vecumā no 8-13
   projguts_gradelevel: Vecumā no 10-13
-  frozen_platformtext: Modern browsers + tablets
+  frozen_platformtext: Moderni pārlūki + planšetdatori
   codeorg_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
-  thinkersmithspanish_platformtext: Atvienots
+  codeintl_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
+  thinkersmithspanish_platformtext: Bezsaistē
   khan_platformtext: Modernas pārlūkprogrammas
   khanes_platformtext: Modernas pārlūkprogrammas
   tynker_platformtext: Modernas pārlūkprogrammas
   scratch_platformtext: Visi pārlūki
   lightbot_platformtext: Visas pārlūkprogrammas un iOS, Android vai spēļu konsoles
-  thinkersmith_platformtext: Atvienots
+  thinkersmith_platformtext: Bezsaistē
   condcards_platformtext: Bezsaistes
   lightbotintl_platformtext: iOS,Android (vai pārlūkprogramma)
   codehs_platformtext: Moderni pārlūki
@@ -467,32 +469,33 @@
   codespark_platformtext: iOS,Android (vai pārlūkprogramma)
   kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, Android planšetdatori
-  hopscotch_platformtext: iPad
   robomindnl_platformtext: Modernas pārlūkprogrammas, mobilais tīmeklis
   flappy_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
   bitsbox_platformtext: Modernas pārlūkprogrammas
   makegameswithus_platformtext: Modernas pārlūkprogrammas
   touchdevelop_platformtext: Modernas pārlūkprogrammas, viedtālruņi, visas ierīces
-  appinventor_platformtext: Modern browsers + Android
+  appinventor_platformtext: Moderni pārlūki + Android
   blockly_platformtext: Tikai moderni pārlūki
-  thinkersmith2_platformtext: Atvienots
-  kodableunplugged_platformtext: Atvienots
-  projguts_platformtext: Atvienots
-  frozen_shortdescription: Let's use code to join Anna and Elsa as they explore the
-    magic and beauty of ice.
+  thinkersmith2_platformtext: Bezsaistē
+  kodableunplugged_platformtext: Bezsaistē
+  projguts_platformtext: Bezsaistē
+  frozen_shortdescription: Kodē, lai kopā ar Annu un Elzu iepazītu ledus skaistumu
+    un burvību.
   codeorg_shortdescription: Iemācies programmēt ar Mark Zuckerberg un Dusmīgajiem
+    putniem!
+  codeintl_shortdescription: Iemācies programmēt ar Mark Zuckerberg un Dusmīgajiem
     putniem!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Mācies zīmēt ar JavaScript
   khanes_shortdescription: Mācies zīmēt ar JavaScript
   tynker_shortdescription: Mācies kodu risinot interesantas puzles un veidojot savas
     mobilās spēles.
-  scratch_shortdescription: Create an interactive card
-  lightbot_shortdescription: Programmē Lightbot, lai tas atrisinātu mīklas, izmantojot
-    proceūras un ciklus!
+  scratch_shortdescription: Izveido interaktīvas spēles, stāstus un animācijas.
+  lightbot_shortdescription: Programmē Lightbot, lai tas atrisinātu puzles, izmantojot
+    procedūras un ciklus!
   thinkersmith_shortdescription: Bezsaistes pamācība grupai bez ierīcēm
   condcards_shortdescription: Mācies algoritmus ar kāršu kavu
-  lightbotintl_shortdescription: Spēle, lai mācītu programmēšanas konceptu
+  lightbotintl_shortdescription: Spēle, lai mācītu programmēšanas pamatus
   codehs_shortdescription: Mācies tulkot ar suni Karelu, izklaidējošu un vizuālu ievadu
     programmēšanā!
   codecademy_shortdescription: Mācies JavaSkript programmēšanu pārlūkprogrammā
@@ -511,9 +514,8 @@
   kodable_shortdescription: Jautra iPad spēle, lai mācītu programmēšanas konceptus
   tynkerapp_shortdescription: Mācies kodu risinot interesantas puzles un veidojot
     savas mobilās spēles.
-  hopscotch_shortdescription: Learn visual programming on an iPad
   robomindnl_shortdescription: Rakstīt kodu virtuālam robotam
-  flappy_shortdescription: Make your own game - Flappy Bird, Shark, or Submarine
+  flappy_shortdescription: Izveido pats savu spēli - Putns Flapijs, Haizivs vai Zemūdene
   bitsbox_shortdescription: Uzkodē vairākas lietotnes, izmantojot Javascript, lai
     tās spēlētu vai dalītos ar tām.
   makegameswithus_shortdescription: Izveido Iphone spēli! Mācies rakstot kodu, lai
@@ -529,98 +531,99 @@
     šķēres, papīrītis"
   frozen_longdescription: Izmantosim kodu, lai piebiedrotos Annai un Elzai pētīt ledus
     burvību un skaistumu. Tu izdveidosi sniegprāslas un paraugus slidojot un taisot
-    Ziemes brīnumpasauli, ar kuru pēc tam vari dalīties starp draugiem!
-  codeorg_longdescription: Learn the basic concepts of Computer Science with drag
-    and drop programming. This is a game-like, self-directed tutorial starring video
-    lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
-    repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
+    ziemas brīnumpasauli, ar kuru pēc tam vari dalīties ar draugiem!
+  codeorg_longdescription: Apgūsti datorzinību pamatus ar vizuālo "velc un nomet"
+    programmēšanu. Tas atgādinās spēlēšanos, skatoties video lekcijas ar Bilu Geitsu,
+    Marku Zuckerberg, pikatajiem putniem un augiem pret zombijiem. Mācies cikliskas
+    konstrukcijas, nosacījumus un vienkāršus algoritmus. Pieejams 34 valodās.
+  codeintl_longdescription: Apgūsti datorzinību pamatus ar vizuālo "velc un nomet"
+    programmēšanu. Tas atgādinās spēlēšanos, skatoties video lekcijas ar Bilu Geitsu,
+    Marku Zuckerberg, pikatajiem putniem un augiem pret zombijiem. Mācies cikliskas
+    konstrukcijas, nosacījumus un vienkāršus algoritmus. Pieejams 34 valodās.
   thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
     los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
     espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
     a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
     como la valiosa habilidad de depuraci&oacute;n.
-  khan_longdescription: Iemācies Javascrip programmēšanas valodas pamatus, radot jautrus
-    zīmējumus ar savu kodu. Dari to patstāvīgi vai kopā ar klasi!
-  khanes_longdescription: Iemācies Javascrip programmēšanas valodas pamatus, radot
+  khan_longdescription: Iemācies JavaScript programmēšanas valodas pamatus, radot
+    jautrus zīmējumus ar savu kodu. Dari to patstāvīgi vai kopā ar klasi!
+  khanes_longdescription: Iemācies JavaScript programmēšanas valodas pamatus, radot
     jautrus zīmējumus ar savu kodu. Dari to patstāvīgi vai kopā ar klasi!
   tynker_longdescription: Izveido pats savas spēles un dalies ar draugiem! Atrisini
     jautras puzzles un iemācies programmēšanas pamatus katrā līmenī. Personalizē spēles
     ar kustīgiem tēliem un vairākiem līmeņiem. Izveido savas spēles realistiskas izmantojot
-    fiziku. Apskati kodu kā vizuālu klucīti vai javaskripptu. Ieliec savas mobilās
-    spēles uz Ipadiem vai Android tabletēm. Ar vairākām jautrām darbībām no kurām
-    var izvēlēties!
-  scratch_longdescription: With Scratch, you can code your own interactive games,
-    stories, animations, and more. In this activity, you'll create an interactive
-    holiday card that you can share with friends and family.
-  lightbot_longdescription: Learn core programming logic, starting from super-basic
-    programming, for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence
-    commands, identify patterns, use procedures, and utilize loops!
+    fiziku. Apskati kodu kā vizuālu klucīti vai JavaScript. Ieliec savas mobilās spēles
+    iPad vai Android planšetdatorā. Pieejamas vairākas jautrās nodarbībām no kā izvēlēties!
+  scratch_longdescription: Ar Scratch tu vari izveidot interaktīvas spēles, stāstus
+    un animācijas &mdash; un tad paveiktajā dalīties ar saviem draugiem. Sāc ar sava
+    vārda animāciju, svētku kartiņu vai klasisko spēli Pong.
+  lightbot_longdescription: Vadi Lightbot robotiņu, lai iedegtu visus zilos lauciņus.
+    Lightbot ir puzle, kas izmanto programmējamas spēles sastāvdaļas, lai spēlētajam
+    radītu praktisku priekšstatu par programmēšanas pamatiem. Mācies salikt secībā
+    instrukcijas, veidot procedūras un izpildīt ciklus, lai izietu visus līmeņus.
+    Piemērots visiem vecumiem.
   thinkersmith_longdescription: Izmantojot iepriekš definētu "Robotu vārdnīcu" skolnieki
     izdomā kā vadīt viens otru, lai pieveikti konkrētus uzdevumus bez sarunāšanās
     savā starpā. Šī mācība iemāca bērniem savienot simbolus un darbības, kā arī iemāca
     atrast klūdu. "Mani robotikas draugi" strādā vislabāk ar grupas aktivitātēm un
     iesaista skolotāju grāmatu priekš klases lietošanas.
-  condcards_longdescription: Learn about algorithms and conditional statements in
-    this "unplugged" activity using a deck of cards. Students do this activity in
-    teams, and need one deck of cards per team.
+  condcards_longdescription: Mācies par algoritmiem un nosacījuma operatoriem šajā
+    bezsaistes nodarbībā, izmantojot kāršu kvau. Skolēniem tas paveicams grupās, nepieciešama
+    viena kāršu kavai katrai komandai.
   lightbotintl_longdescription: Iemācies programmēšanas loģikas pamatus, sākot ar
     ļoti vienkāršu programmēšanu vecumiem 4+ uz iOS vai Android (vai pārlūkprogrammā).
     Iemācies kā secīgi savietot komandas, identificēt paraugus,  izmantot procedūras
     un ciklus!
-  codehs_longdescription: Learn the basics of programming with Karel the Dog, a fun,
-    accessible and visual introduction to coding, where giving commands to a computer
-    is just like giving commands to a dog. This tutorial is great if led by a teacher,
-    but can also be done independently.
-  codecademy_longdescription: Codecademy is an interactive, student-guided introduction
-    to the basics of CS through JavaScript that's used by tens of millions of students
-    around the world. We've prepared a no-hassle Hour of Code experience with accompanying
-    quizzes, slides, and a completed project for students at the end.
+  codehs_longdescription: Dot komandas datoram, ar ko mēs saprotam programmēsanu,
+    ir kas līdzīgs, kā dot komandas sunim. Mācies programmēt ar suni Karelu &mdash;
+    tas ir jautrs, pieejams un vizuāls ievads programmēšanā, kas iesācējiem iemāca
+    pamatus kā dot komandas un izmantot funkcijas. Pamācības var iziet paši skolēni,
+    bet skolotāji var pieteikties, lai iegūtu pieeju skolotāja rīkiem un redzētu skolēnu
+    panākumus!
+  codecademy_longdescription: Codeacademy ir interaktīvs, pasu skolēnu vadāms ievads
+    datorzinībās, izmantojot JavaScript, ko izmanto desmitiem miljonu skolēnu visā
+    pasaulē. Mēs esam sagatavojoši vienkāršu Programmēšanas Stundas nodarbību ar papildinošiem
+    testiemm slaidiem un noslēguma projektu kursa beigās.
   codecombat_longdescription: Sakauj cilvēkēdājus, lai iemācītos Python vai JavaScript
     šajā episkajā programmēšanas spēlē!
-  codemonkey_longdescription: 'CodeMonkey is an online game that teaches coding in
-    a real programming language! Students program a monkey to catch bananas while
-    it gets slightly more complicated on each level. They get star scores on each
-    solution and can share it in a single click. '
-  codeavengers_longdescription: Build a 2 player 2D top-down game with JavaScript
-    in 10 short tasks. Then continue learning some basics of programming (variables
-    and if statements) as you create a Quiz to share with friends. Along the way  earn
-    points and badges as you compete to reach the top of the class leaderboard.
-  processing_longdescription: An introduction to programming in the context of the
-    visual arts using the Processing programming language. Short video lessons introduce
-    coding exercises that lead to designing an interactive drawing program
-  robomind_longdescription: 'Students learn the basics of programming by controlling
-    their own virtual robot. The online course is fully self-contained with short
-    presentations, movies, quizzes and automatic guidance/hints to help with the programming
-    exercises. '
-  groklearning_longdescription: Choose from 3 activities designed to give you your
-    first experience programming. For example, use the programming language Python
-    to build a chatbot called "Eliza". Can she fool your friends into think she's
-    a human not a computer? This can be done in either a student-guided or teacher-facilitated
-    form and comes with all notes and solutions.
-  quorum_longdescription: This tutorial is accessible for the visually-impaired, and
-    works with screenreaders. Join Mary on a tour as she joins a biology lab as a
-    programmer and learns the Quorum programming language. This tutorial is student-guided
-    with online example activities.
-  codespark_longdescription: The Foos is a fun and kid-friendly way to learn about
-    computer programming.  Program cute characters to solve puzzles and bring a virtual
-    world to life.  The game is "word free" so all can play!
-  kodable_longdescription: Kodable is a self-guided iPad game that introduces kids
-    5+ to programming basics. Having a teacher or parent nearby is optimal, but not
-    necessary.
+  codemonkey_longdescription: 'CodeMoneky ir tiešsaistes spēle, kas māca kodēt īstā
+    programmēšanas valodā. Skolēniem jāprogrammē mērkaķi, lai tas ķertu banānus, tam
+    ar katru līmeni paliekto sarežģītak. Skolēni par katru risinājumu saņem zvaigznītes,
+    kuras ar kurām var dalīties ar vienu klikšķi. '
+  codeavengers_longdescription: Atrisinot 10 īsus uzdevumus, izveido 2D spēli diviem
+    spēlētājiem, izmantojot JavaScript. Tad turpini tālāk mācīties programmēšanas
+    pamatus (mainīgos un if nosacījumus), veidojot testu ar ko dalīties ar draugiem.
+    Kamēr viņi pelna punktus un nozīmītes, tu sacenties par vietu klases topā.
+  processing_longdescription: Ievads programmēšanā ar vizuālās mākslas kontekstu,
+    lietojot programmēšanas valodu Processing. Īsas video lekcijas ievada programmēšanas
+    uzdevumus, lai izveidotu interaktīvu zīmēšanas programmu
+  robomind_longdescription: Skolēni apgūst programmmēšanas pamatus, kontrolējot virtuālu
+    robotu. Tiešsaistes kursā ir pieejamas īsas prezentācijas, video, testi un palīdzības
+    sistēma, kas uzdevumu risināšanu padarīs vieglāku.
+  groklearning_longdescription: Ar programmēšanas valodu Python veido čata robotu
+    "Eliza", kas attēlos robote0psihoterapeitu. Tu apmācīsi, ko un kad Elīzai teikt.
+    Vai viņa apmuļķos tavus draugus, sakot, ka nav dators, bet gan cilvēks?
+  quorum_longdescription: Šī pamācība ir pieejama arī ar redzes traucējumiem un strādā
+    ar ekrāna lasītājiem. Pievienojies Mērijai ekskursijā pa bioloģijas laboratoriju
+    un mācies programmēšanas valodu Quorum. Šajā pamācībā pieejami tiešsaistes aktivitātes
+    ar piemēriem.
+  codespark_longdescription: The Foos ir jautrs un bērniem draudzīgs vieds, kā apgūt
+    programmēšanu. Programmē mīlīgus tēlus un saliec puzles, ko no virtuālās pasaules
+    ienest reālajā. Spēle ir bez vārdiem, visi var spēlēt!
+  kodable_longdescription: Kodable ir interaktīva spēle iPad vidē, kas bērniem vecumā
+    no 5 gadiem palīdz apgūt programmēšanu. Vecāku vai skolotāju klātbūtne ir vēlama,
+    bet ne obligāta.
   tynkerapp_longdescription: Build your own games and share with friends! Solve fun
     coding puzzles and learn programming concepts in each level. Personalize games
     with animated characters, multiple levels and rich props. Lots of fun activities
     to choose from!
-  hopscotch_longdescription: Student-guided tutorial on the iPad using the Hopscotch
-    programming language. Students will build games and apps for their iPad on their
-    iPad. Students can work individually or with friends (up to 3 per iPad).
-  robomindnl_longdescription: 'Students learn the basics of programming by controlling
-    their own virtual robot. The online course is fully self-contained with short
-    presentations, movies, quizzes and automatic guidance/hints to help with the programming
-    exercises. '
-  flappy_longdescription: Use drag-and-drop programming to make your own Flappy Bird
-    game, and customize it to look different (Flappy Shark, Flappy Santa, whatever).
-    Add the game to your phone in one click.
+  robomindnl_longdescription: Skolēni apgūst programmmēšanas pamatus, kontrolējot
+    virtuālu robotu. Tiešsaistes kursā ir pieejamas īsas prezentācijas, video, testi
+    un palīdzības sistēma, kas uzdevumu risināšanu padarīs vieglāku.
+  flappy_longdescription: Lietojiet vilkšanas un nomešanas programmēšanu, lai izveidotu
+    pats savu putna Flapija spēli un pielāgo, lai tā izskatītos citādāk (Haizivs Flapijs
+    , Salavecis Flapijs, vai kas cits). Pievieno spēli savā telefonā ar vienu peles
+    klikšķi.
   bitsbox_longdescription: Pielāgo savu personīgo virtuālo planšetdatoru, tad programmē
     vairākas lietotnes, kuras spēlēt un ar kurām dalīties. Vienkāršās pamācības ļauj
     pat maziem bērniem programmēt JavaScript un, paaugstinoties Tavam zināšanu līmenim,
@@ -633,46 +636,44 @@
   touchdevelop_longdescription: Crazy drawings, flying monsters, swirling flowers...
     create your apps on your device with TouchDevelop, a friendly mobile app creation
     environment. Runs on iPhone, iPad, Android, Windows, Windows Phone, Linux, Mac.
-  appinventor_longdescription: Entertaining, quick video tutorials walk you through
-    building three simple apps for your Android phone or tablet. Designed for novices
-    and experts alike, this hour of code will get you ready to start building your
-    own apps before you know it. Imagine sharing your own app creations with your
-    friends! These activities are suitable for individuals and for teachers leading
-    classes.
-  blockly_longdescription: Got PCs with slow (or non-existent) internet access? Download
-    the Blockly tutorials that were the precursor of the Code.org tutorials - a single
-    3MB ZIP file can be loaded onto any computer or used off a memory stick
-  thinkersmith2_longdescription: Students learn about representing and storing letters
-    in binary, as functions of on and off. At the end, the class gets to encode their
-    own initials to take home with them.
-  kodableunplugged_longdescription: 'Designed for use with plain paper, the fuzzFamily
-    Frenzy is an introduction to programming logic for kids 5 and up. A teacher should
-    explain the game, then students program a partner to complete a simple obstacle
-    course. '
-  projguts_longdescription: This "unplugged" activity helps students learn how modeling
-    and simulation works by having a group of students play different versions of
-    the Rock / Paper / Scissors game, and see the results as different modeling experiments.
+  appinventor_longdescription: Interesantās un īsās video pamācībās parādīts, kā izveidot
+    trīs vienkāršas lietotnes tavai Android ierīcei. Izstrādāts iesācējiem, izskatās
+    kā lietpratējiem - šī programmēšanas stunda tevi sagatavos izstrādāt savas lietotnes
+    pirms vēl to būsi sapratis. Dalies savus izstrādātāja panākumos ar draugiem. Pamācības
+    piemērotas gan izmantot individuāli, gan lai mācītos klasē.
+  blockly_longdescription: Datoram ir lēns interneta pieslēgums vai tā nav vispār?
+    Lejuplādē Blockly pamācības, kuras bija pieejamas vel pirms Code.org pamācībām
+    - vienu 3 MB lielu ZIP datni, kuru jāielādē jebkurā datorā vai jāatver no USB
+    zibatmiņas
+  thinkersmith2_longdescription: Skolēni mācīsies kā attēlo un saglabāt burtus bināri.
+    Kursa beigās klase šifrē savus iniciāļus.
+  kodableunplugged_longdescription: Izstrādāts, lai izmantotu uz papīra. fuzzFamily
+    Frenzy ir ievads programmēšanas loģikā bērniem no 5 gadu vecuma. Skolotājam ir
+    jāizskaidro noteikumi, tad skolēni kopā pārvar šķēršļu joslu.
+  projguts_longdescription: Šī "bezsaistes" aktivitāte skolēniem palīdz iemācīties
+    kā strādā simulācija un modelēšana, dažādās grupās izspēlējot akmens - šķēres
+    - papīrītis un novērtējot rezultātus, kā modelēšanas eksperimentu.
   codeorg_beyond_name: Ievads Datorzinātnēs (8. klases pākāpē)
   khan_beyond_name: Mācies datorprogrammēšanu
   tynker_beyond_name: Mācies programmēt mājās
-  scratch_beyond_name: Create stories, games, and animations
+  scratch_beyond_name: Esi radošs kodējot
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
-  scratchjr_beyond_name: ScratchJR for pre-readers
-  hopscotch_beyond_name: 'Hopscotch: Programming On Your iPad'
+  scratchjr_beyond_name: ScratchJR tiem, kas vēl neprot lasīt
+  hopscotch_beyond_name: 'Hopscotch: Programmē savu iPad'
   pocketcode_beyond_name: Kabatas kods
   groklearning_beyond_name: Mācies Python programmēšanu
   hacketyhack_beyond_name: Mācies Ruby
   robomind_beyond_name: Programmē virtuālo robotu
   makegameswithus_beyond_name: Izveidot iPhone spēli savā pārlūkā!
-  appinventor_beyond_name: AppInventor Hour of Code
+  appinventor_beyond_name: AppInventor Programmēšanas stunda
   touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: Iemācies programmēt ar suni Karelu
   udemy_beyond_name: Programmēšanas kursi tiešsaistē
   lynda_beyond_name: Programmēšanas kursi tiešsaistē
-  edx_beyond_name: Harvard CS50 class
-  coursera_beyond_name: Stanford CS 101 class
+  edx_beyond_name: Hārvardas CS50 kurss
+  coursera_beyond_name: Stenfordas CS 101 kurss
   udacity_beyond_name: CS 101
   teachingtree_beyond_name: Universitāšu kursi tiešsaistē
   kodu_beyond_name: Kodu
@@ -685,7 +686,7 @@
   codea_beyond_name: Codea
   lego_beyond_name: Mindstorms
   finch_beyond_name: Finch
-  arduino_beyond_name: Arduino
+  arduino_beyond_name: Arduino un Sparkfun
   processing_beyond_name: Programme ar apstrādi
   alice_beyond_name: Alice
   sphero_beyond_name: SPRK
@@ -737,7 +738,7 @@
   hopscotch_beyond_platformtext: iPad
   pocketcode_beyond_platformtext: Mobilās lietotnes
   groklearning_beyond_platformtext: Modernas pārlūkprogrammas
-  hacketyhack_beyond_platformtext: instalēt uz darbvirsmas
+  hacketyhack_beyond_platformtext: Ir jāinstalē datorā
   robomind_beyond_platformtext: Modernas pārlūkprogrammas, mobilais tīmeklis
   makegameswithus_beyond_platformtext: Modernas pārlūkprogrammas
   appinventor_beyond_platformtext: Moderna pārlūkprogramma + Android
@@ -752,7 +753,7 @@
   teachingtree_beyond_platformtext: Uz tīmekļa balstīts
   kodu_beyond_platformtext: Windows, xBox
   cargobot_beyond_platformtext: iPad
-  kidsruby_beyond_platformtext: instalēt uz darbvirsmas
+  kidsruby_beyond_platformtext: Ir jāinstalē datorā
   w3schools_beyond_platformtext: Modernas pārlūkprogrammas
   codeavengers_beyond_platformtext: Modernas pārlūkprogrammas
   mozilla_beyond_platformtext: Modernas pārlūkprogrammas
@@ -769,8 +770,8 @@
   khan_beyond_shortdescription: Mācies zīmēt ar JavaScript
   tynker_beyond_shortdescription: Izklaidējošs un patīkams kurss bērniem no 4.-8.
     klases
-  scratch_beyond_shortdescription: Create an interactive animation or game
-  lightbot_beyond_shortdescription: Spēle, lai mācītu programmēšanas konceptu
+  scratch_beyond_shortdescription: Izveido interaktīvas spēles, stāstus un animācijas.
+  lightbot_beyond_shortdescription: Spēle, lai mācītu programmēšanas pamatus
   codecademy_beyond_shortdescription: Mācies JavaSkript programmēšanu pārlūkprogrammā
   kodable_beyond_shortdescription: Jautra iPad spēle, lai mācītu programmēšanas konceptus
   scratchjr_beyond_shortdescription: 'Izveidot interaktīvus stāstus un spēles izmantot
@@ -796,191 +797,164 @@
   teachingtree_beyond_shortdescription: 'Tiešsaistes zināšanas: Ātras un nepiespiestas'
   kodu_beyond_shortdescription: Iztrādā 3D spēles pasauli
   cargobot_beyond_shortdescription: Programmē robota roku uz jūsu iPad
-  kidsruby_beyond_shortdescription: Learn to program using Ruby
-  w3schools_beyond_shortdescription: Learn to make web sites
-  codeavengers_beyond_shortdescription: Learn to code games and websites
-  mozilla_beyond_shortdescription: Create and share web pages
-  codecombat_beyond_shortdescription: Play a game and learn JavaScript to win
-  codea_beyond_shortdescription: Make apps on your iPad
-  lego_beyond_shortdescription: Build and program a robot
-  finch_beyond_shortdescription: A robot for computer science education
-  arduino_beyond_shortdescription: Prototype your own hardware
-  processing_beyond_shortdescription: Learn the Processing languages
-  alice_beyond_shortdescription: Teach programming in a 3D environment
-  sphero_beyond_shortdescription: Schools, Parents, Robots & Kids. We created the
-    SPRK program because we believe play is a powerful teacher. Whether you're an
-    educator or a parent, SPRK lessons give kids a fun crash course in programming
-    robots while sharpening their skills in math and science.
-  codeorg_beyond_longdescription: Learn the basic concepts of Computer Science with
-    drag and drop programming. 3 full courses, each consists of 15-20 lessons that
-    blend "unplugged" classroom activities interspersed with game-like, self-directed
-    tutorials starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds
-    and Plants vs. Zombies. Learn repeat-loops, conditionals, basic algorithms, functions,
-    and variables.
-  khan_beyond_longdescription: Iemācies Javascrip programmēšanas valodas pamatus,
+  kidsruby_beyond_shortdescription: Mācies programmēt Ruby
+  w3schools_beyond_shortdescription: Mācīties veidot tīmekļa vietnes
+  codeavengers_beyond_shortdescription: Mācies programmēt spēles un mājaslapas
+  mozilla_beyond_shortdescription: Izveidot un koplietot tīmekļa vietnes
+  codecombat_beyond_shortdescription: Spēlē spēli un mācies JavaScript, lai uzvarētu
+  codea_beyond_shortdescription: Izveidot lietotnes tavā iPad
+  lego_beyond_shortdescription: Uzbūvē un ieprogrammē robotu
+  finch_beyond_shortdescription: Robots datorzinību apmācībai
+  arduino_beyond_shortdescription: Mācies Arduino ar Sparkfun Digital Sandbox.
+  processing_beyond_shortdescription: Mācies Processing valodu
+  alice_beyond_shortdescription: Mācies programmēt 3D vidē
+  sphero_beyond_shortdescription: SPRK kurss sniedz bērniem prieka pilnas robotu programmēšanas
+    nodarbības, vienlaicīgi uzlabojot matemātikas un dabaszinību zināšanas.
+  codeorg_beyond_longdescription: Apgūsti datorzinību pamatus ar vizuālo programmēšanu.
+    3 pilni kursi ar 15-20 nodarbībām katrā. Te pieejamas spēlēm līdzīgas "bezsaistes"
+    aktivitātes, pašmācības video ar Bilu Geitsu, Marku Zukerbergu, piktajiem putniem
+    un augiem pret zombijiem. Mācies ciklus, nosacījumus, vienkāršus algoritmus, funkcijas
+    un mainīgos.
+  khan_beyond_longdescription: Iemācies JavaScript programmēšanas valodas pamatus,
     radot jautrus zīmējumus ar savu kodu. Dari to patstāvīgi vai kopā ar klasi!
-  tynker_beyond_longdescription: Tynker makes it fun & easy to learn programming.
-    It makes it visual. Kids build games and mobile apps by arranging blocks of code.
-    It removes the need to know programming syntax. Kids transform ideas into animated
-    stories and math art right away. It promotes progressive learning. As kids learn
-    fundamentals, Tynker introduces more advanced concepts including syntax driven
-    programming.
-  scratch_beyond_longdescription: With Scratch, you can program your own interactive
-    stories, games, and animations&mdash; and share your creations with others in
-    the online community. Scratch helps young people learn to think creatively, reason
-    systematically, and work collaboratively&mdash; essential skills for life in the
-    21st century. Scratch is a project of the Lifelong Kindergarten Group at the MIT
-    Media Lab. It is provided free of charge.
+  tynker_beyond_longdescription: Ar Tynker mācīties programmēt būs jautri un vienkārši.
+    Te tas notiek vizuāli. Bērni veido spēles un mobilās lietotnes savienojot blokus
+    ar kodu. Tas nozīmē, ka nav jāprot programmēšanas valodas pieraksts. Bērni parveido
+    idejas animētos stāstos un mākslā. Tas veicina mācīšanos. Kad bērni apguvuši pamatus,
+    Tynker piedāvā sarežģītākus materiālus, ieskaitot programmēšanu rakstot kodu.
+  scratch_beyond_longdescription: Ar Scratch tu vari izveidot interaktīvas spēles,
+    stāstus un animācijas &mdash; un tad paveiktajā dalīties ar saviem draugiem. Sāc
+    ar sava vārda animāciju, svētku kartiņu vai klasisko spēli Pong.
   lightbot_beyond_longdescription: Iemācies programmēšanas loģikas pamatus, sākot
     ar ļoti vienkāršu programmēšanu vecumiem 4+ uz iOS vai Android (vai pārlūkprogrammā).
     Iemācies kā secīgi savietot komandas, identificēt paraugus,  izmantot procedūras
     un ciklus!
-  codecademy_beyond_longdescription: Codecademy is an interactive, student-guided
-    introduction to the basics of CS through JavaScript that's used by tens of millions
-    of students around the world. We've prepared a no-hassle Hour of Code experience
-    with accompanying quizzes, slides, and a completed project for students at the
-    end.
-  kodable_beyond_longdescription: Kodable is a self-guided iPad game that introduces
-    kids 5+ to programming basics. Having a teacher or parent nearby is optimal, but
-    not necessary.
-  scratchjr_beyond_longdescription: ScratchJr is an introductory programming language
-    that enables young children to create their own interactive stories and games.
-    Children snap together graphical programming blocks to make characters move, jump,
-    dance, and sing
-  hopscotch_beyond_longdescription: Student-guided tutorial on the iPad using the
-    Hopscotch programming language. Students will build games and apps for their iPad
-    on their iPad. Students can work individually or with friends (up to 3 per iPad).
-  pocketcode_beyond_longdescription: Create your own game on your smart phone with
-    Pocket Code! Help skydiver Steve to deliver his parcels. You can share it with
-    friends and other users to try!
-  groklearning_beyond_longdescription: An introductory course using the programming
-    language Python for people with no programming experience. Our unique mix of introductory
-    content and challenges will bring you to a thorough understanding of Python and
-    programming itself. We've taught this content to students of varying ages from
-    diverse backgrounds and we're sure it'll suit you too.
-  hacketyhack_beyond_longdescription: 'Hackety Hack will teach you the absolute basics
-    of programming from the ground up. No previous programming experience is needed!
-    With Hackety Hack, you''ll learn the Ruby programming language. Ruby is used for
-    all kinds of programs, including desktop applications and websites. [Note: Desktop
-    install required]'
-  robomind_beyond_longdescription: 'Students learn the basics of programming by controling
-    their own virtual robot. The online course is fully self-contained with short
-    presentations, movies, quizzes and automatic guidance/hints to help with the programming
-    exercises. '
-  makegameswithus_beyond_longdescription: Know some ObjectiveC? Learn to make an iPhone
-    game in an hour! We'll guide you through the process, to code, test, and play
-    your game entirely in the browser and then share it on Facebook for friends to
-    try! No prior iPhone development experience is required. You must understand what
-    variables, methods, and objects are.
-  appinventor_beyond_longdescription: Entertaining, quick video tutorials walk you
-    through building three simple apps for your Android phone or tablet. Designed
-    for novices and experts alike, this hour of code will get you ready to start building
-    your own apps before you know it. Imagine sharing your own app creations with
-    your friends! These activities are suitable for individuals and for teachers leading
-    classes.
-  touchdevelop_beyond_longdescription: TouchDevelop lets you create apps on iPad,
-    iPhone, Android, PC, Mac, Windows Phone. Our touch-friendly editor makes coding
-    fun, even on your phone or tablet!
-  codehs_beyond_longdescription: 'Learn the basics of programming with Karel the Dog,
-    a fun, accessible and visual introduction to coding, where giving commands to
-    a computer is just like giving commands to a dog. This tutorial is great if led
-    by a teacher, but can also be done independently. [Note: payment is required]'
-  udemy_beyond_longdescription: 'Whether you''ve never seen a line of code or you
-    code for a living, Udemy has a course for you, taught by professional instructors.
-    [Note: payment is required]'
-  lynda_beyond_longdescription: 'Learn how to code, create, and build web applications,
-    from the foundations of object-oriented programming in C and C++, to how to write
-    Java. Our developer tutorials can help you learn to develop and create mobile
-    apps, work with PHP and MySQL databases, get started with the statistical processing
-    language R, and much more. [Note: payment is required]'
-  edx_beyond_longdescription: CS50x is Harvard College's introduction to the intellectual
-    enterprises of computer science and the art of programming for majors and non-majors
-    alike, with or without prior programming experience. Topics include abstraction,
-    algorithms, data structures, encapsulation, resource management, security, software
-    engineering, and web development. Languages include C, PHP, and JavaScript plus
-    SQL, CSS, and HTML. The on-campus version of CS50x is Harvard's second-largest
-    course.
-  coursera_beyond_longdescription: 'Stanford''s CS 101 class taught by Nick Parlante
-    (FREE!). CS101 teaches the essential ideas of Computer Science for a zero-prior-experience
-    audience. Play and experiment with short bits of code to bring to life to the
-    power and limitations of computers. CS101 also provides a general background on
-    computers today: what is a computer, what is hardware, what is software, what
-    is the internet. No previous experience is required other than the ability to
-    use a web browser.'
-  udacity_beyond_longdescription: In this course you will learn key concepts in computer
-    science and learn how to write your own computer programs in the context of building
-    a web crawler. There is no prior programming knowledge needed for this course.
-    Beginners are welcome! At the end of this course, you will have learned key concepts
-    in computer science and enough programming to be able to write Python programs
-    to solve problems on your own. This course will prepare you to move on to intermediate-level
-    computing courses.
-  teachingtree_beyond_longdescription: TeachingTree is an open platform that lets
-    anybody organize educational content. Our goal is for students to quickly access
-    the exact clips they need in order to learn individual concepts. Everyone is encouraged
-    to help by adding videos or tagging concepts.
-  kodu_beyond_longdescription: Kodu lets kids create games on the PC and XBox via
-    a simple visual programming language. Kodu can be used to teach creativity, problem
-    solving, storytelling, as well as programming. Anyone can use Kodu to make a game,
-    young children as well as adults with no design or programming skills. Kodu for
-    the PC is available to download for free. Kodu for the XBox is also available
-    in the USA on the XBox Marketplace, in the Indie Games channel for about $5.
-  cargobot_beyond_longdescription: Cargo-Bot is a puzzle game where you teach a robot
-    how to move crates. Sounds simple, right? It features 36 fiendishly clever puzzles,
-    haunting music and stunning retina graphics. You can even record your solutions
-    and share them on YouTube to show your friends.
-  kidsruby_beyond_longdescription: 'Have fun and make games, or hack your homework
-    using Ruby! Just tell your parents or teachers you''re learning Ruby programming...
-    ;). Free and works on any computer. [Note: Desktop install required]'
-  w3schools_beyond_longdescription: Learn to create websites on your own computer.
-    Learn the server basics in less than a day. Learn to add databases to your website
-  codeavengers_beyond_longdescription: Learn how to program games, apps and websites.
-    Designed by experts with perfect level of difficulty for beginners, easy to understand
-    instructions and great help when you need it. Our HTML, CSS and JavaScript courses
-    include code challenges and revision games that make learning fun and effective
-    for all ages.
-  mozilla_beyond_longdescription: Thimble makes it ridiculously simple to create and
-    share your own web pages. Write and edit HTML and CSS right in your browser, then
-    instantly preview your work. Host and share your finished projects with a single
-    click. Perfect for beginners and experts alike.
-  codecombat_beyond_longdescription: Play as a Wizard using code (spells) to control
-    your heroes, navigate mazes, defeat ogres, trick enemies, and rescue allies! Learn
-    JavaScript in this HTML 5 web game for complete beginners.
-  codea_beyond_longdescription: Codea for iPad lets you create games and simulations&mdash;or
-    just about any visual idea you have. Turn your thoughts into interactive creations
-    that make use of iPad features like Multi-Touch and the accelerometer. We think
-    Codea is the most beautiful code editor you'll use, and it's easy. Codea is designed
-    to let you touch your code. Want to change a number? Just tap and drag it. How
-    about a color, or an image? Tapping will bring up visual editors that let you
-    choose exactly what you want.
-  lego_beyond_longdescription: Create small, customizable and programmable robots
-    using LEGO pieces.
-  finch_beyond_longdescription: The Finch is a new robot for computer science education.
-    Its design is the result of a four year study at Carnegie Mellon's CREATE lab.
-    The Finch is designed to support an engaging introduction to the art of programming.
-    It has support for over a dozen programming languages and environments, including
-    several environments appropriate for students as young as eight years old. The
-    Finch was designed to allow students to write richly interactive programs.
-  arduino_beyond_longdescription: Arduino is an open-source electronics prototyping
-    platform based on flexible, easy-to-use hardware and software. It's intended for
-    artists, designers, hobbyists, and anyone interested in creating interactive objects
-    or environments.
-  processing_beyond_longdescription: Processing is a programming language, development
-    environment, and online community. Since 2001, Processing has promoted software
-    literacy within the visual arts and visual literacy within technology. Initially
-    created to serve as a software sketchbook and to teach computer programming fundamentals
-    within a visual context, Processing evolved into a development tool for professionals.
-    Today, there are tens of thousands of students, artists, designers, researchers,
-    and hobbyists who use Processing for learning, prototyping, and production.
-  alice_beyond_longdescription: Using an innovative programming environment to support
-    the creation of 3D animations, the Alice Project provides tools and materials
-    for teaching and learning computational thinking, problem solving, and computer
-    programming across a spectrum of ages and grade levels.
-  sphero_beyond_longdescription: Schools, Parents, Robots & Kids. We created the SPRK
-    program because we believe play is a powerful teacher. Whether you're an educator
-    or a parent, SPRK lessons give kids a fun crash course in programming robots while
-    sharpening their skills in math and science.
-  codeintl_name: "Write your first computer program"
-  codeintl_gradelevel: "Ages 4-104"
-  codeintl_platformtext: "Modern browsers, smartphones, tablets"
-  codeintl_shortdescription: "Learn to code with Mark Zuckerberg and Angry Birds!"
-  codeintl_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages."
+  codecademy_beyond_longdescription: Codeacademy ir interaktīvs, pasu skolēnu vadāms
+    ievads datorzinībās, izmantojot JavaScript, ko izmanto desmitiem miljonu skolēnu
+    visā pasaulē. Mēs esam sagatavojoši vienkāršu Programmēšanas Stundas nodarbību
+    ar papildinošiem testiemm slaidiem un noslēguma projektu kursa beigās.
+  kodable_beyond_longdescription: Kodable ir interaktīva spēle iPad vidē, kas bērniem
+    vecumā no 5 gadiem palīdz apgūt programmēšanu. Vecāku vai skolotāju klātbūtne
+    ir vēlama, bet ne obligāta.
+  scratchjr_beyond_longdescription: ScratchJr ir ļoti vienkārša programmēšanas valoda,
+    kurā mazi bērni var veidot savus interaktīvus stāstus vai spēles. Bērniem jāsavieno
+    grafiski programmas bloku, lai tēliem liktu staigāt, lekt, dziedāt un dejot
+  hopscotch_beyond_longdescription: Pašmācības kurss iPad video, izmantojot Hopscotch
+    valodu. Skolēni ar iPad veido spēles un lietotnes savam iPad. Var strādāt pa vienam
+    un var kopā ar draugiem (līdz 3 uz vienu iekārtu).
+  pocketcode_beyond_longdescription: Izveido savu spēli telefonā ar Pocket Code! Palīdzi
+    izpletņlēcējam Stīvam piegādāt paciņas. Paveiktajā vari dalīties ar draugiem un
+    citiem lietotājiem!
+  groklearning_beyond_longdescription: Ievadkurss programmēšanas valodā Python lietotājiem
+    bez iepriekšējas pieredzs. Unikālais salikums no vienkārša ievadmateriāla un tālākiem
+    izaicinājumiem dos iespēju izprast gan Python, gan programmēšanu vispār. Šis kurss
+    jau ir mācīts dažādu vecumu skolēniem, un esam droši, ka tas derēs arī tev.
+  hacketyhack_beyond_longdescription: 'Hackety Hack tev mācīs pašus programmēšanas
+    pamatus. Iepriekšēja pieredze nav vajadzīga! Ar Hackety Hack tu mācīsies programmēšanas
+    valdou Ruby. Tā ir izmantota dažādās programmās, ieskaitot parastas datora programmas
+    un mājaslapas. (Uzmanību: nepieciešams instalēt)'
+  robomind_beyond_longdescription: Skolēni apgūst programmēšanas pamatus vadot virtuālu
+    robotu. Tiešsaistes kurs ir izmantojams pašmācībā ar īsām prezentācijām, video,
+    testiem un pamācībām, kas palīdzēs atrisināt uzdevumus.
+  makegameswithus_beyond_longdescription: Mazliet proti ObjectiveC? Iemācies izveidot
+    iPhone spēli stundas laikā. Mēs tevi izvedīsim cauri kodēšanas procesu, testēšanu
+    un spēlēšanu tieši pārlūkprogrammā, un tad rezultātu varēsi publicēt Facebook!
+    Nav nepieciešama iepriekšēja pieredze iPhone lietotņu izstrādē. Tev ir jāsaprot,
+    kas ir mainīgiem, metodes un objekti.
+  appinventor_beyond_longdescription: Interesantās un īsās video pamācībās parādīts,
+    kā izveidot trīs vienkāršas lietotnes tavai Android ierīcei. Izstrādāts iesācējiem,
+    izskatās kā lietpratējiem - šī programmēšanas stunda tevi sagatavos izstrādāt
+    savas lietotnes pirms vēl to būsi sapratis. Dalies savus izstrādātāja panākumos
+    ar draugiem. Pamācības piemērotas gan izmantot individuāli, gan lai mācītos klasē.
+  touchdevelop_beyond_longdescription: TouchDevelop ļaus veidot lietotnes iPad, iPhone,
+    PC, Mac un Windows Phone. Pieskāriendraudzīgā izstrādes vide kodēšanu padarīs
+    jautru arī tavā telefonā vai planšetē!
+  codehs_beyond_longdescription: 'Apgūstu programmēšanas pamatus ar suni Karelu -
+    jautru, vienkārši pieejamu vizuālu ievadu programmēšana, kur komandu došana datoram
+    ir līdzīga komandu došanai sunim. Šī pamācība ir lieliska, ja to vada skolotājs,
+    bet var strādāt arī vienatnē. (Svarīgi: nepieciešams maksājums)'
+  udemy_beyond_longdescription: 'Nav svarīgi vai esi redzējis kaut vienu koda rindu
+    vai ar kodēšanu pelni iztiku, Udemy ir izveidots profesionālu pasniedzēju vadīts
+    kurss tieši tev, (Uzmanību: nepieciešams maksājums)'
+  lynda_beyond_longdescription: 'Mācies programmēt, radīt un publicēt tīmekļa aplikācijas,
+    no objektorientēto valodu C un C++ pamatiem, līdz Java valodai. Mūsu izstrādātāju
+    pamācības var palīdzēt radīt mobilās lietotnes, strādāt ar PHP un MySQL datubāzēm,
+    sākt darbu ar statistikas valodu R un vēl vairāk. (Piezīme: nepieciešams maksājums)'
+  edx_beyond_longdescription: 'CS50x ir Hārvardas koledžas ievads datorzinībās un
+    programmēšanas mākslā gan ar, gan bez priekšzināšanām. Tēmās ietverts: abstrakcija,
+    algoritmi, datu struktūras, datu iekapsulēšana, resursu pārvaldība, drošība, programmatūŗas
+    inženierija un tīmekļa izstrāde. Iekļautās valodas: C, PHP un JavaScript, kā arī
+    SQL, CSS un HTML. Klātienes studijās CS50x ir Hārvardas otrais lielākais studiju
+    kurss.'
+  coursera_beyond_longdescription: Stenfordas CS 101 bezmaksas studiju kurss Nika
+    Parlante vadībā. CS 101 māca nozīmīgākās datorzinību idejas nepieredzējušai auditorijai.
+    Spēlējies un eksperimentē arī īsiem koda fragmentiem, lai dzīvē redzētu gan datora
+    spējas, gan ierobežojumus. CS 101 arī'sniedz vispārīgu ievadu par to, kas ir mūsdienu
+    dators, kas ir aparatūra, programmatūra un internets. Nav nepieciešama iepriekšēja
+    pieredze, izņemot prasme lietot tīmekļa pārlūku.
+  udacity_beyond_longdescription: Šajā kursā apgūsi datorzinību pamatjēdzienus un
+    mācīsies, kā rakstīt savas datorprogrammas, sevišķi tīmekļa lietotnes. Uzsākot
+    kursu nav nepieciešamas priekšzināšanas - aicināts ir katrs iesācējs! Kursa beigās
+    būsi apguvis datorzinību pamatjēdzienus un pietiekami daudz programmēšanas prasmes
+    , lai patstāvīgi izveidotu Python programmas, kas risina tevis izvirzītas problēmas.
+    Kurss sagatavos tālāk mācībām jau ar priekšzināšanām.
+  teachingtree_beyond_longdescription: TeachingTree ir atvērta platforma, kas ļauj
+    organizēt mācību saturu. Mūsu mērķis ir ļaut skolēniem ātri piekļūst pie vajadzīgajiem
+    klipiem, lai organizētu individuālo mācīšanos. Katrs ir aicināts pievienot video
+    vai iezīmēt jēdzienus.
+  kodu_beyond_longdescription: Ar Kodu bērni var veidot spēles PC vai XBox vienkāršā
+    vizuālā valodā. Kodu var izmantot, lai mācītu radošumu, problēmu risināšanu, stāstu
+    veidošanu un, protams, programmēšanu. Kodu spēļu veidošanai var izmantot katrs
+    - bērni vai pieaugušie bez projektēšanas un programmēšanas prasmēm. Kodu perosnālajam
+    datoram ir pieejams bez maksas. Kodu XBox pieejams ASV XBox veikalā par aptuveni
+    5 dolāriem.
+  cargobot_beyond_longdescription: Cargo-Bot ir puzles spēle, kurā tu robotam māci
+    pārvietot kastes. Vienkārši, ne? Te atradīsi 36 puzles, foršu mūziku un satriecošu
+    grafiku. Tu vari savus atrisinājumus ierakstīt un ar tiem dalīties YouTube.
+  kidsruby_beyond_longdescription: 'Priecājies un veido spēles, vai urķējies savā
+    mājas tīklā, izmantojot Ruby! Pasaki saviem vecākiem vai skolotajiem, ka tu mācies
+    Ruby programmēšanu. :) Bez maksas un strādā uz katra datora. [Piezīme: Nepieciešams
+    instalēt datorā]'
+  w3schools_beyond_longdescription: Mācies veidot mājaslapas savā datorā. Apgūsti
+    serveru pamatus mazāk kā vienā dienā. Iemācies pievienot datubāzi savai mājaslapai
+  codeavengers_beyond_longdescription: Mācies, kā programmēt spēles, lietotnes un
+    tīmekļa lapas. Izstrādājuši eksperti, izcili piemērots iesācējiem. Kursā ir vienkāršas
+    pamācības un palīdzības sistēma, kad tev tā ir vajadzīga. Mūsu HTML, CSS un JavaScript
+    kursi iekļauj koda salīdzināšanu un spēles, kas mācīšanos padara jautru un efektīgu
+    ikvienā vecumā.
+  mozilla_beyond_longdescription: Thimle dod iespēju ļoti vienkārši izstradāt un dalīties
+    ar savām tīmekļa lapām. Raksti un rediģē HTML un CSS tieši pārlūkā un nekavējoties
+    redzi koda izpildi. Publicē un dalies ar savu paveikto ar vienu klikšķi. Lielisks
+    kurss gan iesācējiem, gan lietpratējiem.
+  codecombat_beyond_longdescription: Kļūsti par kodu rakstošu burvi, lai vadītu savus
+    varoņus, izietu labirintus, sakautu briesmoņus, apmānītu ienaidniekus un izglābtu
+    sabiedrotos. Mācis JavaScript šajā HTML5 spēlē iesācējiem.
+  codea_beyond_longdescription: Codea izmantošanai iPad ļauj veidot spēles un simulācijas
+    &mdash; vai vienkārši realizēt jebkuru vizuālu ideju. Virzi savu radošo domu interaktivitātes
+    virzienā, lai izmantotu iPad iespējas, piemēram, daudz pieskārienus un akselerometru.
+    Mēs uzskatām, ka Codea ir brīnišķīgākais un vienkāršākais koda redaktors kādu
+    būsi izmantojs. Codea ir veidots, lai tu varētu pieskarties kodam. Gribi mainīt
+    skaitli? Pieskaries un pavelc! Kā ar krāsu vai attēlu? Pieskārieni atvērs vizuālās
+    apstrādes iespējas, un tu varēsi darīt tieši to, ko vēlies.
+  lego_beyond_longdescription: Veido nelielus, pielāgojamus un programmējamus robotus,
+    izmatojot LEGO klucīšus.
+  finch_beyond_longdescription: Finch ir jauns robots datorzinību apguvei. Tas radies
+    pēc četru gadu izstrādes Carnegie Mellon's radošajā laboratorijā. Finch ir izstrādāts,
+    lai veicinātu aizraujošu iesaistīšanu programmēšanas mākslā. Tas atbalsta vairākas
+    programmēšanas valodas un vides, dažas no tām piemērotas arī 8 gadus veciem skolēniem.
+    Finch ir radīts, lai ļautu skolēniem veidot patiesi interaktīvas programmas.
+  arduino_beyond_longdescription: Arduino ir populāra platformā, kas izstrādāta, lai
+    mākslinieki un dizaineri varētu strādāt ar īstiem sensoriem, LED diodēm, pīkstuļiem
+    un vēl un vēl. Sparkfun virutālā vide ļaus apgūt Arduino kodu tavā pārlūkprogrammā.
+  processing_beyond_longdescription: Processing ir programmēšanas valoda, izstrādes
+    vide un tiešsaistes kopiena. Sākotnēji radīta kā vide programmēšanas piezīmēm
+    un lai apgūtu datorzinību pamatus vizuālā veidā, Processing ir attīstījusies par
+    izstrādes rīku profesionāļiem. Šobrīd ir desmitiem tūkstošu studentu, mākslinieku,
+    dizaineru, pētnieku un amatieru, kas izmato Processing valodu, lai mācītos, projektētu
+    un izstrādātu.
+  alice_beyond_longdescription: Izmantojot inovatīvu izstrādes vidi, kas atbalsta
+    3D animāciju izveidi, Alice Project nodrošina rīkus un materiālus, lai mācītu
+    un mācītos problēmu risināšanu un programmēšanu visos vecumos un zināšanu līmeņos.
+  sphero_beyond_longdescription: Nav svarīgi vai esiet skolotājs vai vecāks, SPRK
+    nodarbības piedāvā bērniem atraktīvu robotu programmēšanas kursu vienlaikus uzlabojot
+    zināšanas matemātikā un dabaszinībās.
