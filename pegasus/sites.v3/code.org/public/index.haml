@@ -72,25 +72,19 @@ social:
           -else
             =count_string
 
-        %div
+        %div{:style=>'margin-bottom: 8px'}
           %a#trybutton{:href=>'/learn'}
             %button.optionbutton
               =I18n.t :hoc2014_try
-
-        .whatishoc{style: "clear:both"}
-          %a{:href=>"http://#{canonical_hostname('hourofcode.com')}", :target=>'_blank'}
-            =I18n.t :hoc2014_whatishoc
         - if request.site == 'code.org'
-          %p{:style=>'font-size: 12px'}
-            %a{:href=>'/learn/beyond'}
-              Beyond an Hour of Code
-            |
-            %a{:href=>'/donate'}
-              Support us with a donation
+          %a{:href=>'/learn/beyond', :style=>'font-size: 16px; color: white'}
+            Beyond an Hour of Code
+          %br/
+          %a{:href=>'/donate', :style=>'font-size: 16px; color: white'}
+            Support us with a donation
         - else
-          %p{:style=>'font-size: 12px'}
-            %a{:href=>'/learn/beyond'}
-              Beyond an Hour of Code
+          %a{:href=>'/learn/beyond', :style=>'font-size: 16px; color: white'}
+            Beyond an Hour of Code
 
     -download_filename = (request.site == 'code.org') ? 'Code-5-minute.mov' : 'HoC-video-15mb.mp4'
     #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}
