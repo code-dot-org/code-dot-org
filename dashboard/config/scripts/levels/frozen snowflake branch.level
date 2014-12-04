@@ -21,7 +21,7 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "embed": "false",
-    "callout_json": "[\r\n  {\"localization_key\": \"frozen_snowflake_branch\", \"element_id\": \"[block-id='1']\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"center left\", \"at\": \"bottom left\", \"adjust\": {\"x\": 0, \"y\":300}},\r\n    \"style\": { \"classes\": \"no-tip\" }}\r\n  }\r\n]",
+    "callout_json": "[\r\n  {\"localization_key\": \"frozen_snowflake_branch\", \"element_id\": \"#create_branch_qtip\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}}\r\n  }\r\n]",
     "disable_sharing": "false"
   }
 }]]></config>
@@ -48,7 +48,7 @@
         <block type="controls_repeat_dropdown">
           <title name="TIMES" config="3-10">3</title>
         </block>
-        <block type="create_a_snowflake_branch"/>
+        <block type="create_a_snowflake_branch" id="create_branch_qtip"/>
         <block type="draw_colour" inline="true">
           <value name="COLOUR">
             <block type="colour_picker">

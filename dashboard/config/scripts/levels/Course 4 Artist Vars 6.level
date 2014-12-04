@@ -69,9 +69,13 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="draw_move_by_constant">
+        <block type="draw_move" inline="true">
           <title name="DIR">moveForward</title>
-          <title name="VALUE">150</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">100</title>
+            </block>
+          </value>
         </block>
         <block type="draw_turn" inline="true">
           <title name="DIR">turnRight</title>
@@ -93,16 +97,20 @@
         <block type="math_number">
           <title name="NUM">0</title>
         </block>
-        <block type="math_number">
-          <title name="NUM">360</title>
-        </block>
         <block type="math_arithmetic" inline="true">
           <title name="OP">DIVIDE</title>
+          <value name="A">
+            <block type="math_number">
+              <title name="NUM">360</title>
+            </block>
+          </value>
+          <value name="B">
+            <block type="variables_get">
+              <title name="VAR">sides</title>
+            </block>
+          </value>
         </block>
         <block type="variables_set" inline="false">
-          <title name="VAR">sides</title>
-        </block>
-        <block type="variables_get">
           <title name="VAR">sides</title>
         </block>
       </xml>
