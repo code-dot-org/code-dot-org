@@ -1,649 +1,624 @@
 "sl-SI":
   hello: Pozdravljen svet
-  select_language: Please select your language
+  select_language: Prosimo izberite vaš jezik
   computer_science: Računalništvo
   computer_science_edweek: Computer Science Education Week
   csedweek_dates: 9-15 December 2013
-  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
+  csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold">Ura za kodo</a> prihaja. Pozivamo vse učitelje in organizatorje,
     <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">plan your Hour of Code</a>'
+    font-weight:bold">organizirajte Uro za kodo</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
-    none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h3>have tried an</h3><h2>HOUR of CODE</h2>
+    none; font-weight: 400">Ste učitelj računalništva in informatike? Oglejte si tudi
+    druge CSEdWeek vire</a>'
+  n_have_learned_an_hoc: <h1>#</h1><h3>je poskusilo</h3><h2>Uro za kodo</h2>
   anybody_can_learn: Vsakdo se lahko nauči.
   learn_now: Nauči se zdaj
-  petition_message: Sign your name if you think every student in every school should
-    have the opportunity to learn computer science
-  petition_sign_message: 'If you agree, sign your name.  Join # others.'
+  petition_message: Vsak učenec v vsaki šoli bi moral imeti možnost učenja računalništva
+  petition_sign_message: 'Če se strinjate, podpišite se.  Pridružite se # ostalim.'
   name: Ime
   email: Elektronska pošta
-  zipcode: ZIP code or country
+  zipcode: Poštna številka ali ime države
   submit: Pošlji
-  twentyhours_heading: Try our Intro to Computer Science Course
-  twentyhours_text: Finished your first Hour of Code? Learn more core computer science
-    and programming concepts in this follow-up course.
-  hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
-    8 - 14, 2014<br/>
-  hoc2014_students: Students
-  hoc2014_try: Try it
-  hoc2014_teachers: Teachers
-  hoc2014_host: Host it
-  hoc2014_everyone: Everyone
-  hoc2014_support: Support it
-  hoc2014_whatishoc: What is the Hour of Code?
+  twentyhours_heading: Poskusite naš tečaj Uvod v Računalništvo
+  twentyhours_text: Ste končali prvo Uro za kodo? Preberite več računalništvu in konceptih
+    programiranja v tem spremljanjem tečaju.
+  hoc2014_heading: Pridružite se <a href="http://hourofcode.com"> Uri za kodo</a>
+    <br/> 8. do 14. decembra, 2014 <br/>
+  hoc2014_students: Učenci
+  hoc2014_try: Preizkusite
+  hoc2014_teachers: Učitelji
+  hoc2014_host: Organizirajte
+  hoc2014_everyone: Kdorkoli
+  hoc2014_support: Podprite
+  hoc2014_whatishoc: Kaj je Ura za kodo?
   twentyhours_trynow: Poskusite zdaj
-  california_heading: Ask your school to teach computer science
-  california_text: Any teacher can offer our <a href='http://learn.code.org/'>free
-    intro course</a>.  Any elementary school can <a href='http://code.org/educate/k5'>teach
-    computer science</a>. Ask high schools to <a href='http://code.org/educate/districts'>partner
-    with us.
-  california_button: Learn More
-  flappy_heading: Flappy Birthday to Code.org
-  flappy_text: Code.org just turned 1 year old.<br/><br/> Celebrate with us by making
-    your own custom <b>Flappy</b> game. Code your own rules, and share it with friends!
-  view_english_site: View English site
-  non_english_tutorials: 'Tutorials translated into multiple languages:'
-  write_your_first_program: Write your first computer program
-  learn_cs_concepts: Learn the basic concepts of Computer Science with drag and drop
-    programming. This is a game-like tutorial starring video lectures by Bill Gates,
-    Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, if-then
-    statements, and basic algorithms.
+  california_heading: Vprašajte vašo šolo naj poučuje računalništvo
+  california_text: Vsak učitelj lahko ponudi naše <a href='http://studio.code.org/'>brezplačne
+    tečaje</a>. Vsaka osnovna šola lahko <a href='http://code.org/educate/k5'>poučuje
+    računalništvo</a>. Prosi srednjo šolo, da se <a href='http://code.org/educate/districts'>poveže
+    z nami.
+  california_button: Več o tem
+  flappy_heading: Flappy rojstni dan za Code.org
+  flappy_text: Code.org pravkar dopolnil 1 leto. <br/> <br/> Praznuj z nami tako,
+    da ustvariš svojo <b>Flappy</b> igro. Napiši svoja pravila in jih deli s prijatelji!
+  view_english_site: Poglej angleško stran
+  non_english_tutorials: 'Vaje, ki so prevedene v več jezikov:'
+  write_your_first_program: Napiši svoj prvi računalniški program
+  learn_cs_concepts: Nauči se osnov računalništva s povleci in spusti programiranjem.
+    To je igri-podobna vaja z video predavanji, v katerih nastopajo Bill Gates, Mark
+    Zuckerberg, Angry Birds in Rastline vs. zombiji. Nauči se zank repeat, if-then
+    ukazov in osnovnih algoritmov.
   all_ages: Vse starosti
   beginner: Začetnik
   n_participants: '#udeležencev'
   go: Pojdi
   thank_you_: Hvala!
-  congratulations: Congratulations!
-  congratulations_on_completing_hoc: Congratulations on completing One Hour of Code.
-  get_a_certificate_of_achievement: Get a certificate of achievement
-  enter_valid_email: Please enter a valid email address
-  get_a_certificate_message: We'll send you a certificate and information about how
-    to <a href='/learn/beyond'>Learn beyond One Hour</a>
-  get_a_certificate_message_after: We'll send you a certificate. Now, keep going with
-    our <a href='http://learn.code.org'>20-hour course</a>, or see more options to
-    <a href='/learn/beyond'>Learn beyond One Hour</a>.
-  thanks_for_submitting: Thanks for submitting!
-  if_you_enjoyed: If you enjoyed learning, ask friends to try it too!  We want the
-    whole world to learn.
-  personalize_certificate: Personalize your certificate
+  congratulations: Čestitamo!
+  congratulations_on_completing_hoc: Čestitamo za dokončanje Ure za kodo.
+  get_a_certificate_of_achievement: Dobite potrdilo o dosežku
+  enter_valid_email: Vnesite veljaven email naslov
+  get_a_certificate_message: Poslali vam bomo potrdilo in informacije o tem, kako
+    se lahko učite<a href='/learn/beyond'> tudi po Uri za kodo</a>
+  get_a_certificate_message_after: Kliknite na certifikat za prenos. Nato pa nadaljujte
+    z  <a href='http://studio.code.org'> drugimi tečaje</a>, ali pa si oglejte druge
+    možnost <a href='/learn/beyond'> učenje po Uro za kodo</a>.
+  thanks_for_submitting: Hvala!
+  if_you_enjoyed: Če ste uživali v učenju, vprašajte prijatelje, naj tudi oni preizkusijo!  Želimo,
+    da ves svet izve.
+  personalize_certificate: Prilagodite vaš certifikat
   share_achievement: Deli svoj dosežek
-  beyond_hour_message: Here is more information about how to <a href='/learn/beyond'>Learn
-    beyond One Hour</a>
-  leaderboards_for_hoc: Leaderboards for the Hour of Code.
+  beyond_hour_message: Nadaljuj z našimi <a href='http://studio.code.org'> drugimi
+    tečaji</a> ali si oglejte več možnosti za <a href='/learn/beyond'>več kot eno
+    uro učenja</a>.
+  leaderboards_for_hoc: Lestvica vodilnih za Uro za kodo.
   support_url: http://support.code.org/
   country: Država
   city: Mesto
   gender: Spol
   boys: Fantje
   girls: Dekleta
-  give_my_hour: 'Give my Hour to:'
-  girls_team: Girls' Team
-  boys_team: Boys’ Team
+  give_my_hour: 'Daj mojo Uro:'
+  girls_team: Dekliške ekipe
+  boys_team: Fantovske ekipe
   tell_the_world: Povej svetu!
   thanks_for_voting: Hvala za vaš glas!
   share_on_facebook: Deli na Facebook
-  share_on_twitter: Share on Twitter
-  beyond_an_hour: Beyond an HOUR OF CODE >
-  get_started: Get Started
-  i_agree: I agree
-  participant_select: '- Select -'
+  share_on_twitter: Deli na Twitterju
+  beyond_an_hour: Po Uri za kodo >
+  get_started: Začni
+  i_agree: Strinjam se
+  participant_select: -Izberite-
   participant_student: Učenec
-  participant_parent: Parent
-  participant_educator: Educator
-  participant_engineer: Software Engineer
-  participant_other: None of the Above
-  i_am_a: I am a
-  never_spam: We'll never spam you
-  enter_country: Enter country if outside the United States
-  used_infrequent_updates: Only used for infrequent updates
-  privacy_practices_children: See our privacy practices for children
-  petition_thankyou: Thank you for signing the petition
-  continue_learning_header: Continue learning beyond One Hour
-  continue_learning_body: There are lots of options.  You can learn online, or at
-    a local school, or summer camp.
-  learn_next_level: Continue to the next level
-  learn_online: Learn online
-  learn_classes: Find local classes
-  hoc_is_here: 'The #HourOfCode is here - check it out! @codeorg'
-  just_did_hoc: 'I just did the #HourOfCode - check it out! @codeorg'
-  learn_hoc: Learn an Hour of Code
-  beyond_hoc: Beyond One Hour
+  participant_parent: Starš
+  participant_educator: Vzgojitelj
+  participant_engineer: Inženir računalništva
+  participant_other: Nič od navedenega
+  i_am_a: Jaz sem
+  never_spam: Nikoli vam ne bomo pošiljali nezaželene pošte
+  enter_country: Vnesite državo, če se nahajate izven ZDA
+  used_infrequent_updates: Uporabljamo samo za redke informacije o posodobitvah
+  privacy_practices_children: Poglejte našo prakso glede zasebnosti pri otrocih
+  petition_thankyou: Hvala za podpis peticije
+  continue_learning_header: Nadaljujte z Učenjem tudi po Uri za kodo
+  continue_learning_body: Obstaja veliko možnosti.  Lahko se učite na spletu, v lokalni
+    šoli ali na poletnem taboru.
+  learn_next_level: Nadaljujte na naslednjo stopnjo
+  learn_online: Poskusite druge spletne tečaje
+  learn_classes: Poišči lokalne tečaje
+  hoc_is_here: '#UraZaKodo je tu! @codeorg'
+  just_did_hoc: 'Pravkar sem končal #UraZaKodo! @codeorg'
+  learn_hoc: Več o Uri za kodo
+  beyond_hoc: Po Uri za kodo
   what_gender: Izberite vaš spol
   girl: Dekle
   boy: Fant
-  help_recruit_coders: Help us recruit more coders to your team!
-  help_recruit: Help us recruit more coders!
-  lines_of_code: OVER <b># LINES OF CODE</b> WRITTEN TO DATE.
-  lines_of_code_alt: <b>#</b> LINES OF CODE WRITTEN BY STUDENTS
-  who_has_done_hoc: 'Who has done the #HourOfCode? @codeorg'
-  hoc_leaderboards: The Hour of Code Leaderboards
-  students_and_lines: '%{students} students have done the Hour of Code and written
-    %{lines} lines of code.'
-  start_hoc: Start the Hour of Code now
-  contact_form_topic_press: Press/media (interview or speaking engagement)
-  studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
-  studiobar_elementary_title: Elementary courses
-  studiobar_elementary_body: Our three new courses for K&#8209;5
-  studiobar_hoc_title: The Hour of Code
-  studiobar_hoc_body: Learn to code with Angry Birds
-  studiobar_flappy_title: Flappy Code
-  studiobar_flappy_body: Make and share your own Flappy game
-  studiobar_teacher_title: Teacher dashboard
-  studiobar_teacher_body: 'For teachers: view your students'' progress'
+  help_recruit_coders: Pomagajte nam dobiti več programerjev v vašo ekipo!
+  help_recruit: Pomagajte nam dobiti več programerjev!
+  lines_of_code: DO SEDAJ SEM NAPISAL VEČ KOT <b># VRSTIC KODE</b>.
+  lines_of_code_alt: VEČ KOT <b>#</b>  VRSTIC KODE SO NAPISALI UČENCI
+  who_has_done_hoc: 'Kdo je opravil #UraZaKodo? @codeorg'
+  hoc_leaderboards: Seznam vodilnih pri Uri Za Kdo
+  students_and_lines: '%{students} učencev je opravilo uro za kodo in pri tem napisalo
+    %{lines} vrstic kode.'
+  start_hoc: Začni Uro za kodo zdaj
+  contact_form_topic_press: Tisk/mediji (intervju ali ustno udejstvovanje)
+  studiobar_title: Raziščite <a href='http://studio.code.org'> Studio za kodo</a>
+  studiobar_elementary_title: Osnovni tečaji
+  studiobar_elementary_body: Naši trije novi tečaji za K&#8209;5
+  studiobar_hoc_title: Ura za kodo
+  studiobar_hoc_body: Nauči se kodirati z Jeznimi ptiči
+  studiobar_flappy_title: Program za Plahutača (Flappyja)
+  studiobar_flappy_body: Izdelaj in deli svojo Flappy igro
+  studiobar_teacher_title: Za učitelje
+  studiobar_teacher_body: Vpeljite Code Studio v svoj razred
   contact_form_topic_student: Sem študent
   contact_form_topic_parent: Sem starš
   contact_form_topic_teacher: Sem učitelj/vzgojitelj
   contact_form_topic_outside_us: Sem zunaj ZDA
-  contact_form_topic_contribution: Charitable contribution
-  contact_form_topic_partner: I’d like to partner
+  contact_form_topic_contribution: Dobrodelni prispevek
+  contact_form_topic_partner: Rad bi postal partner
   contact_form_topic_other: Drugi
   contact_form_label_topic: Tema
   contact_form_label_email: Vaša elektronska pošta
   contact_form_label_message: Sporočilo
   contact_form_label_submit: Pošlji sporočilo
-  class_submission_in_school: In school
-  class_submission_in_school_daily_programming_course: Daily programming course
-  class_submission_in_school_ap_computer_science: AP computer science
-  class_submission_in_school_full_university_cs_curriculum: Full university CS curriculum
-  class_submission_in_school_robotics_club: Robotics club
-  class_submission_in_school_programming_integrated_in_other_classes: Programming
-    integrated in other classes
-  class_submission_in_school_summer_school_cs_program: Summer school CS program
-  class_submission_in_school_exploring_computer_science: Exploring Computer Science
-  class_submission_in_school_other: Other in school
-  class_submission_out_of_school: Out of school
-  class_submission_out_of_school_summer_camp: Summer camp
-  class_submission_out_of_school_afterschool_program: Afterschool program
-  class_submission_out_of_school_all-day_workshop: All-day workshop (up to 1 week)
-  class_submission_out_of_school_multi-week_workshop: Multi-week workshop
-  class_submission_out_of_school_other: Other out of school
+  class_submission_in_school: V šoli
+  class_submission_in_school_daily_programming_course: Dnevni tečaj programiranja
+  class_submission_in_school_ap_computer_science: AP izpit iz računalništva
+  class_submission_in_school_full_university_cs_curriculum: Popoln univerzitetni kurikulum
+    računalništva
+  class_submission_in_school_robotics_club: Klub robotike
+  class_submission_in_school_programming_integrated_in_other_classes: Programiranje,
+    vključeno v druge predmete (matematika, znanost ipd.)
+  class_submission_in_school_summer_school_cs_program: Program poletne šole računalništva
+  class_submission_in_school_exploring_computer_science: Raziskovanje računalništva
+  class_submission_in_school_other: Drugo v šoli
+  class_submission_out_of_school: Izven šole
+  class_submission_out_of_school_summer_camp: Poletni tabor
+  class_submission_out_of_school_afterschool_program: Izvenšolska dejavnost
+  class_submission_out_of_school_all-day_workshop: Celodnevne delavnice (do 1 teden)
+  class_submission_out_of_school_multi-week_workshop: Večtedenska delavnica
+  class_submission_out_of_school_other: Drugo izven šole
   class_submission_online: Online
-  class_submission_online_programming_class: Online programming class
-  class_submission_online_teacher_resource: Online teacher resource
-  class_submission_online_other: Other online
-  class_submission_level_preschool: Preschool
-  class_submission_level_elementary: Elementary
-  class_submission_level_middle_school: Middle school
-  class_submission_level_high_school: High school
-  class_submission_level_college: College
-  class_submission_level_vocational: Vocational
-  class_submission_languages_other: Other language(s)
-  volunteer_engineer_submission_commitment_uncertain: Uncertain
-  volunteer_engineer_submission_commitment_now_and_then: Every now and then
-  volunteer_engineer_submission_commitment_one_hr_per_week: 1 hour per week
-  volunteer_engineer_submission_commitment_three_hrs_per_week: 3 hours per week
-  volunteer_engineer_submission_commitment_five_hrs_per_week: 5 hours per week
-  volunteer_engineer_submission_commitment_more: More
-  volunteer_engineer_submission_location_flexibility_onsite: On-site at a school
-  volunteer_engineer_submission_location_flexibility_remote: Mentoring remotely (teachers
-    or students)
-  volunteer_engineer_submission_location_flexibility_curriculum: Willing to help contribute
-    to open-source curriculum projects
-  volunteer_engineer_submission_experience_unspecified: Unspecified
-  volunteer_engineer_submission_experience_university_student_or_researcher: Current
-    university student (or researcher)
-  volunteer_engineer_submission_experience_software_professional: Software professional
-  petition_age: Age
-  dashboard_landing_title: Teacher Home Page
-  dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
-  dashboard_landing_video: Watch this video
-  dashboard_landing_watch_video: for a tour of the new features!
-  dashboard_landing_view_as_student: View this site as a student
-  dashboard_landing_students_title: Your students
-  dashboard_landing_students_manage: View and manage your students
-  dashboard_landing_news_title: Latest news
-  dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
-  dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
-  dashboard_landing_useful_links: Other useful links
-  dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
-    office hours.
+  class_submission_online_programming_class: Spletni tečaj programiranja
+  class_submission_online_teacher_resource: Spletni vir za učitelje
+  class_submission_online_other: Drugo na spletu
+  class_submission_level_preschool: Predšolski
+  class_submission_level_elementary: Osnovna šola
+  class_submission_level_middle_school: Osnovna šola zadnja triada
+  class_submission_level_high_school: Srednja šola
+  class_submission_level_college: Fakulteta
+  class_submission_level_vocational: Poklicno izobraževanje
+  class_submission_languages_other: Drugi jezik(-i)
+  volunteer_engineer_submission_commitment_uncertain: Negotov
+  volunteer_engineer_submission_commitment_now_and_then: Vsake toliko
+  volunteer_engineer_submission_commitment_one_hr_per_week: 1 ura tedensko
+  volunteer_engineer_submission_commitment_three_hrs_per_week: 3 ure na teden
+  volunteer_engineer_submission_commitment_five_hrs_per_week: 5 ur na teden
+  volunteer_engineer_submission_commitment_more: Več
+  volunteer_engineer_submission_location_flexibility_onsite: Na šoli
+  volunteer_engineer_submission_location_flexibility_remote: Mentorstvo na daljavo
+    (učiteljev ali učencev)
+  volunteer_engineer_submission_location_flexibility_curriculum: Pripravljeni pomagati,
+    prispevati k odprtokodnim kurikularnim projektom
+  volunteer_engineer_submission_experience_unspecified: Neopredeljeno
+  volunteer_engineer_submission_experience_university_student_or_researcher: Trenutni
+    študent (ali raziskovalec)
+  volunteer_engineer_submission_experience_software_professional: Računalniški strokovnjak
+  petition_age: Starost
+  dashboard_landing_title: Učiteljeva domača stran
+  dashboard_landing_welcome: Dobrodošli na novo in izboljšano učiteljevo kontrolno
+    ploščo.
+  dashboard_landing_video: Glej ta video
+  dashboard_landing_watch_video: za ogled novih funkcijonalnosti!
+  dashboard_landing_view_as_student: Poglej si to stran kot učenec
+  dashboard_landing_students_title: Vaši učenci
+  dashboard_landing_students_manage: Ogled in upravljanje vaših učencev
+  dashboard_landing_news_title: K-5 viri (samo v angleščini)
+  dashboard_landing_new_beta: Novo! Poskusite naše beta tečaje za učence K-5.
+  dashboard_landing_new_k5courses: Novo! Poskusite naše tečaje za učence K-5.
+  dashboard_landing_useful_links: Druge uporabne povezave (samo v angleščini)
+  dashboard_landing_office_hours: Zastavite vprašanje v živo! Obiščite naše mesečne
+    video uradne ure.
   dashboard_landing_print_certificates: Tiskanje potrdila za študente ki so opravili
     tečaj
   dashboard_landing_educator_blog: Preberi o novicah in posodobitvah našega gradiva
     na našem blogu Izobraževalcev
-  dashboard_landing_smart_hints: Please help us to add smart hints to Code.org tutorials
-  dashboard_landing_video_player: Test our new video player at your school
-  dashboard_landing_progress_title: Main class progress
-  dashboard_landing_progress_biggest: This is the progress for your biggest section.
-  dashboard_landing_view_progress: View Progress for %{biggest_section}
-  dashboard_landing_available_title: Available courses
-  dashboard_landing_available_courses: Here are the courses currently available for
-    you and your students.
-  dashboard_landing_loading: Loading...
+  dashboard_landing_smart_hints: Prosimo, pomagajte nam dodati bistre namige v vaje
+    na Code.org
+  dashboard_landing_video_player: Preizkusite naš novi video predvajalnik na vaši
+    šoli
+  dashboard_landing_progress_title: Napredek glavnega razreda
+  dashboard_landing_progress_biggest: To je napredek za največji razdelek.
+  dashboard_landing_view_progress: Prikaz napredka za %{biggest_section}
+  dashboard_landing_available_title: Tečaji na voljo
+  dashboard_landing_available_courses: Tukaj so tečaji trenutno na voljo za vas in
+    vaše učence.
+  dashboard_landing_loading: Nalaganje...
   dashboard_action_edit: Uredi
-  dashboard_action_save: Save
-  dashboard_action_save_all: Save all
+  dashboard_action_save: Shrani
+  dashboard_action_save_all: Shrani vse
   dashboard_action_cancel: Prekliči
-  dashboard_action_delete: Delete
-  dashboard_action_confirm: Delete?
+  dashboard_action_delete: Izbriši
+  dashboard_action_confirm: Izbriši?
   dashboard_action_delete_yes: Da
   dashboard_action_delete_no: Ne
-  dashboard_action_done: Done
-  dashboard_action_required: required
-  dashboard_navigation_home_page: Teacher home page
-  dashboard_navigation_all_sections: All sections
-  dashboard_navigation_view_progress: View Progress
-  dashboard_navigation_add_students: Add Students
-  dashboard_navigation_manage_students: Manage Students
-  dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
-  dashboard_navigation_view_stats: View Stats
-  dashboard_navigation_section: 'Section: %{section_name}'
-  dashboard_navigation_student: 'Student: %{student_name}'
-  dashboard_sections_new_section: New section
-  dashboard_sections_jumbotron_instruction: Create new sections and add students to
-    them. Sections help you organize students into smaller groups so you can track
-    their progress and manage their accounts.
-  dashboard_sections_table_section: Section
-  dashboard_sections_table_secret: Secret type
-  dashboard_sections_table_grade: Grade
-  dashboard_sections_table_course: Course
-  dashboard_sections_table_students: Students
-  dashboard_sections_table_code: Section Code
-  dashboard_sections_name: Section Name
-  dashboard_sections_choose_secret: If you would like to provide accounts to your
-    students, choose a secret type of <b>word</b> or <b>picture</b> for that section.
-  dashboard_sections_secret_word: A <b>word</b> allows you to set a secret word for
-    each student.
-  dashboard_sections_secret_picture: A <b>picture</b> allows you to set a secret picture
-    for each student, ideal for younger students who can't yet type.
-  dashboard_sections_secret_none: If you would like your students to manage their
-    own accounts, including choosing their own passwords, choose a secret type of
-    <b>none</b>.
-  dashboard_sections_print_secrets: You may then print a sheet of cards containing
-    account information to be distributed to your students individually.
-  dashboard_sections_switch_section: 'Switch section:'
-  dashboard_students_add_student: Add student
-  dashboard_students_add_students: Add multiple students
-  dashboard_students_add_multiple: 'Type or paste the names of your students, one
-    per line:'
-  dashboard_students_new_section: You've created a new section! Now add your students
-    using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
-  dashboard_students_placeholder_name: Student Name
+  dashboard_action_done: Končano
+  dashboard_action_required: zahtevano
+  dashboard_navigation_home_page: Učiteljeva domača stran
+  dashboard_navigation_all_sections: Študentski računi in napredek
+  dashboard_navigation_view_progress: Prikaz napredka
+  dashboard_navigation_add_students: Dodaj učence
+  dashboard_navigation_manage_students: Upravljaj z učenci
+  dashboard_navigation_lesson_plans_resources: Učni načrti in viri
+  dashboard_navigation_view_stats: Pokaži statistiko
+  dashboard_navigation_section: 'Poglavje: %{section_name}'
+  dashboard_navigation_student: 'Učenec: %{student_name}'
+  dashboard_sections_new_section: Novo poglavje
+  dashboard_sections_jumbotron_instruction: Ustvarite nove razdelke in jim dodajte
+    učence. Razdelki razdelijo učence v manjše skupine, tako da lahko sledite njihovemu
+    napredku in upravljate z njihovimi računi.
+  dashboard_sections_table_section: Razdelek
+  dashboard_sections_table_secret: Vrsta prijave
+  dashboard_sections_table_grade: Razred
+  dashboard_sections_table_course: Tečaj
+  dashboard_sections_table_students: Učenci
+  dashboard_sections_table_code: Koda razdelka
+  dashboard_sections_name: Ime razdelka
+  dashboard_sections_choose_secret: Če bi želeli priskrbeti račune za svoje učence,
+    izberite skrivno vrsto  <b>besedo</b> ali <b>sliko</b> za ta razdelek.
+  dashboard_sections_secret_word: <b>Beseda</b> vam omogoča, da nastavite skrivno
+    besedo za vsakega učenca.
+  dashboard_sections_secret_picture: <b>Slika</b> vam omogoča, da nastavite skrivno
+    sliko za vsakega učenca, idealen za mlajše učence, ki še ne znajo tipkati.
+  dashboard_sections_secret_none: Če bi želeli, da vaši učenci upravljajo svoje račune,
+    vključno z izbiro svoja gesla, izberite vrsto skrivnost <b>brez</b>.
+  dashboard_sections_print_secrets: Natisnete lahko kartice, ki vsebujejo informacije
+    o računu in jih razdelite vsakemu učencu posebej.
+  dashboard_sections_switch_section: 'Zamenjaj razdelek:'
+  dashboard_students_add_student: Dodaj učenca
+  dashboard_students_add_students: Dodaj več učencev
+  dashboard_students_add_multiple: 'Vnesite ali prilepite imena svojih učencev, enega
+    na vrstico:'
+  dashboard_students_new_section: Ustvarili ste nov razdelek! Zdaj dodajte svoje učence
+    z gumbi <b>Dodaj učenca</b> in <b>Dodaj več učencev</b> zgoraj.
+  dashboard_students_placeholder_name: Ime učenca
   dashboard_students_name: Ime
-  dashboard_students_age: Age
+  dashboard_students_age: Starost
   dashboard_students_gender: Spol
   dashboard_students_male: Moški
   dashboard_students_female: Ženska
-  dashboard_students_secret: Secret
+  dashboard_students_secret: Skrivni ključ
   dashboard_students_password: Geslo
-  dashboard_students_username: 'Username: %{student_username}'
+  dashboard_students_username: 'Uporabniško ime: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
-  dashboard_students_completed_levels: Completed Levels
-  dashboard_students_total_lines: Lines of Code
-  dashboard_students_show_secret: Show secret
-  dashboard_students_auto_generated: Auto-generated
-  dashboard_students_reset_secret: Reset secret
-  dashboard_students_reset_password: Reset password
-  dashboard_students_share_section: 'Share this section''s sign in page with your
-    students:'
-  dashboard_students_print_info: Print out cards with your students' login information.
-  dashboard_students_secret_picture: Secret Picture
-  dashboard_students_reset_picture: You may reset a student's secret picture at any
-    time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new secret
-    picture will be generated for that student to use when they sign in.
-  dashboard_students_secret_word: Secret Word
-  dashboard_students_reset_word: 'You may reset a student''s secret words at any time
-    by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new pair of secret
-    words will be generated for that student to use when they sign in. '
-  dashboard_students_join_link: Tell your students to create their own accounts and
-    join your section at
-  dashboard_students_no_email: If your students do not have email addresses, or you
-    would like to create accounts for them, change this section's secret type to <b>word</b>
-    or <b>picture</b>.
-  dashboard_students_print_page: Print this page
+  dashboard_students_completed_levels: Dokončani nivoji
+  dashboard_students_total_lines: Vrstic kode
+  dashboard_students_show_secret: Prikaži skrivnost
+  dashboard_students_auto_generated: Samodejno ustvarjeno
+  dashboard_students_reset_secret: Ponastavi skrivnost
+  dashboard_students_reset_password: Ponastavi geslo
+  dashboard_students_share_section: 'Delite vstopno stran za ta razdelek s svojimi
+    učenci:'
+  dashboard_students_print_info: Natisnite kartice s podatki za prijavo učencev.
+  dashboard_students_secret_picture: Skrivna slika
+  dashboard_students_reset_picture: Skrivno sliko učenca kadarkoli lahko ponastavite
+    tako, da izberete <b>Pokaži skrivnost</b> in nato <b>Ponastavi skrivnost</b>.
+    Novo skrivna slika, bo ustvarjena za učenca, ko se bo prijavil.
+  dashboard_students_secret_word: Skrivna beseda
+  dashboard_students_reset_word: 'Skrivno besedo učenca kadarkoli lahko ponastavite
+    tako, da izberete <b>Pokaži skrivnost</b> in nato <b>Ponastavi skrivnost</b>.
+    Nov par skrivnih besed bo ustvarjen, ko se učenec prijavi. '
+  dashboard_students_join_link: Povejte svojim učencem, naj si ustvarite svoje račune
+    in se pridružijo vašemu razdelku na
+  dashboard_students_no_email: Če vaši učenci nimajo e-poštnega naslova, ali bi želeli
+    ustvariti račune za njih, spremenite vrsto skrivnosti za ta razdelek  v <b>besedo</b>
+    ali <b>sliko</b>.
+  dashboard_students_print_page: Natisnite to stran
   dashboard_students_url: URL
-  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Click
-    here</a> for our privacy document that can be shared or printed for your students.
-  dashboard_curriculum_overview: K-5 Curriculum Overview
-  dashboard_view_all_lesson_plans: View all lesson plans
-  dashboard_course1: 'Course 1:'
-  dashboard_course2: 'Course 2:'
-  dashboard_course3: 'Course 3:'
+  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">
+    Kliknite tukaj</a> za dokument o zasebnosti, ki se lahko delite ali natisnite
+    za svoje učence.
+  dashboard_curriculum_overview: Pregled učnega načrta za K-5
+  dashboard_view_all_lesson_plans: Poglej si vse učne načrte
+  dashboard_course1: 'Tečaj 1:'
+  dashboard_course2: 'Tečaj 2:'
+  dashboard_course3: 'Tečaj 3:'
   dashboard_sequence: Zaporedje
-  dashboard_framework: Framework
-  dashboard_standards: Standards
-  dashboard_implementation_guide: Implementation Guide
-  dashboard_glossary: Glossary
-  dashboard_classroom_strategies: Classroom strategies for teachers
-  dashboard_debugging: 'Debugging:'
-  dashboard_puzzle_solving: 'Puzzle-solving:'
-  dashboard_student_worksheet: student worksheet
-  dashboard_teacher_worksheet: teacher worksheet
+  dashboard_framework: Ogrodje
+  dashboard_standards: Standardi
+  dashboard_implementation_guide: Vodnik za implementacijo
+  dashboard_glossary: Slovarček
+  dashboard_classroom_strategies: Strategije v razredu za učitelje
+  dashboard_debugging: 'Odpravljanje napak:'
+  dashboard_puzzle_solving: 'Reševanje uganke:'
+  dashboard_student_worksheet: delovni list učenca
+  dashboard_teacher_worksheet: delovni list učitelja
   dashboard_grade_k: K
   dashboard_grade_other: Drugi
-  dashboard_login_word: word
-  dashboard_login_picture: picture
+  dashboard_login_word: Beseda
+  dashboard_login_picture: Slika
   dashboard_login_none: Elektronska pošta
-  dashboard_new_password: new password
-  stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
-    week alone:'
-  stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
-  dashboard_teacher: Teacher
+  dashboard_new_password: Novo geslo
+  stats_hoc_2013_heading: 'Neverjetne statistike iz lanskoletne Ure za kodo. Samo
+    v enem tednu:'
+  stats_hoc_2013_image_alt: Statistika Ure za kodo 2013
+  dashboard_teacher: Učitelj/ica
   dashboard_student: Učenec
-  dashboard_sections_email_question: Do all students have a valid email address?
-  dashboard_sections_account_creation_question: Who creates the student's account?
-  dashboard_sections_password_question: What do students use as a "password"?
-  dashboard_sections_picture_account_creation: A picture assigned by Code.org
-  dashboard_sections_word_account_creation: A simple word assigned by Code.org
-  dashboard_sections_sign_in_question: Where do students sign-in?
-  dashboard_sections_sign_in_unique: Unique web-page listed on "Manage Students" tab
-  dashboard_sections_sign_in_main: http://code.org and click "Sign in"
-  dashboard_sections_password_account_creation: Student-created text password
-  dashboard_sections_login_type_explanation: This table helps explain which of these
-    login types, <b>picture, word, or email</b>, you'll want to choose for a section.
-  dashboard_faq: Frequently Asked Questions
-  code_hoc_coming: The Hour of Code is coming - December 8-14!
-  code_sign_up: Sign up to participate during CS Education Week
-  learn_more: Learn More
-  hoc2014_try_new_tutorials: "Try our new Hour of Code tutorials"
-  hoc2014_try_new_tutorial: "Try our new Hour of Code tutorial in beta"
-  hoc2014_try_scrat: "Angry Birds, PvZ, and Scrat"
-  hoc2014_try_frozen: "Artist with Anna and Elsa, from Frozen"
-  carousel_heading_international: Tutorials in your language
-  carousel_heading_domestic: Tutorials available in English
-  carousel_heading_beginners: Tutorials for Beginners
-  carousel_heading_javascript: Tutorials that teach Javascript
-  carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science
-  carousel_heading_devices: Tutorial apps for phones and tablets
-  carousel_heading_languages: Tutorials in other programming languages
-  carousel_heading_apps_games: Make your own apps or games
-  carousel_heading_university: University courses online
-  carousel_heading_webpages: Learn to make web pages
-  carousel_heading_robots: Learn to program with robots
-  carousel_heading_ide: Platforms popular among teachers
-  educator_notes: Educator Notes
-  more_resources_educators: More resources for teachers and educators
-  participants: participants
-  teachers_notes: Teacher's Notes
-  previous: Previous
-  next: Next
-  older_systems: Tutorials that work on older systems
-  older_systems_subheading: These should work on older Web browsers. To access all
-    tutorials, upgrade to a <a href="http://browsehappy.com/" target="_blank">modern
-    Web browser.</a>
-  mobile_devices: Tutorials for mobile devices
-  codeorg_name: Write your first computer program
+  dashboard_sections_email_question: Imajo vsi učenci veljaven email naslov?
+  dashboard_sections_account_creation_question: Kdo ustvarja račune učencev?
+  dashboard_sections_password_question: Kaj učenci uporabljajo kot "password"?
+  dashboard_sections_picture_account_creation: Slika, ki jo dodeli Code.org
+  dashboard_sections_word_account_creation: Preprosta beseda, ki jo dodeli Code.org
+  dashboard_sections_sign_in_question: Kje se učenci prijavijo?
+  dashboard_sections_sign_in_unique: Enolična spletna stran, ki je na zavihku "Upravljanje
+    učencev"
+  dashboard_sections_sign_in_main: http://code.org in kliknite "Prijavi se"
+  dashboard_sections_password_account_creation: Besedilo geslo, ki ga ustvari učenec
+  dashboard_sections_login_type_explanation: Ta tabela pomaga razložiti, katero vrsto
+    prijave <b>sliko, besedo, ali e-pošte</b>, boste želeli izbrati za razdelek.
+  dashboard_faq: Pogosto zastavljena vprašanja
+  code_hoc_coming: Uro za Kodo prihaja - 8.-14. decembra!
+  code_sign_up: Prijavite se za sodelovanje med Tednom poučevanja računalništva
+  learn_more: Več o tem
+  hoc2014_try_new_tutorials: Poskusite naše nove vaje Ure Za Kodo
+  hoc2014_try_new_tutorial: Uporabite naš nov priročnik za Uro kodiranja
+  hoc2014_try_scrat: Angry Birds, PvZ in Scrat
+  hoc2014_try_frozen: Umetnik z Anno in Elsa (iz Disney-eve risanke Frozen)
+  carousel_heading_international: Vaje v vašem jeziku
+  carousel_heading_domestic: Vaje na voljo v angleškem jeziku
+  carousel_heading_beginners: Vaje za začetnike
+  carousel_heading_javascript: Vaje, ki poučujejo Javascript
+  carousel_heading_unplugged: Nimate naprave ali interneta? Poskusite "izštekano"
+    računalništvo
+  carousel_heading_devices: Aplikacije z vajami za telefone in tablice
+  carousel_heading_languages: Vaje v drugih programskih jezikih
+  carousel_heading_apps_games: Izdelajte lastno aplikacijo ali igro
+  carousel_heading_university: Univerzitetni tečaji na spletu
+  carousel_heading_webpages: Naučite se izdelati spletne strani
+  carousel_heading_robots: Nauči se programirati z roboti
+  carousel_heading_ide: Platforme, ki so priljubljena med učitelji
+  educator_notes: Zapiski učitelja
+  more_resources_educators: Več virov za učitelje in vzgojitelje
+  participants: udeleženci
+  teachers_notes: Zapiski učitelja
+  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  previous: Prejšnje
+  next: Naslednja
+  older_systems: Vaje, ki delujejo na starejših sistemih
+  older_systems_subheading: Ti naj bi delovali na starejših brskalnikih. Za dostop
+    do vseh vaj, nadgradite brskalnik v <a href="http://browsehappy.com/" target="_blank">
+    sodoben spletni brskalnik.</a>
+  mobile_devices: Vaje za mobilne naprave
+  frozen_name: Code with Anna and Elsa
+  codeorg_name: Napiši svoj prvi računalniški program
+  codeintl_name: Napiši svoj prvi računalniški program
   thinkersmithspanish_name: Mis Amigos Roboticos
-  khan_name: An introduction to JavaScript
-  khanes_name: An introduction to JavaScript
-  tynker_name: Build your own game
-  scratch_name: Create a holiday card
+  khan_name: Uvod v JavaScript
+  khanes_name: Uvod v JavaScript
+  tynker_name: Ustvari svojo igro
+  scratch_name: Bodi ustvarjalen s kodiranjem
   lightbot_name: Lightbot
-  thinkersmith_name: My Robotic Friends
-  condcards_name: Conditionals with Cards
+  thinkersmith_name: Moji robotski prijatelji
+  condcards_name: Pogojniki s kartami
   lightbotintl_name: Lightbot
-  codehs_name: Learn to Code With Karel the Dog
+  codehs_name: Naučite se kodirati s psom Karlom
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
-  codeavengers_name: Build a Game with JavaScript
-  processing_name: Drawing with Code
-  robomind_name: Program a virtual robot
-  groklearning_name: A taste of Python programming
-  quorum_name: Accessible programming (with screenreader support)
-  codespark_name: The Foos (pre-readers welcome)
-  kodable_name: Kodable
-  tynkerapp_name: Tynker - on tablets
-  hopscotch_name: 'Hopscotch: Code on your iPad'
-  robomindnl_name: Program a virtual robot
-  bitsbox_name: Bitsbox - make a game
-  makegameswithus_name: Build an iPhone game in your browser!
+  codemonkey_name: CodeMonkey
+  codeavengers_name: Ustvari igro z JavaScript
+  processing_name: Risanje s kodo
+  robomind_name: Programiraj virtualega robota
+  groklearning_name: Eliza klepetalni robot
+  quorum_name: Dostopno programiranje (s podporo za bralnik zaslona)
+  codespark_name: Foos (pred-bralci so dobrodošli)
+  kodable_name: Kodable (pred-bralci dobrodošli)
+  tynkerapp_name: Tynker - na tablicah
+  robomindnl_name: Programiraj virtualega robota
+  flappy_name: Ustvari Flappy igro
+  bitsbox_name: Bitsbox - izdelaj igro
+  makegameswithus_name: Ustvari iPhone igro v brskalniku!
   touchdevelop_name: TouchDevelop
-  appinventor_name: AppInventor Hour of Code
+  appinventor_name: AppInventor Ura Za Kodo
   blockly_name: Blockly
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
-  projguts_name: Rock, Paper, Scissors
-  codeorg_gradelevel: Ages 4-104
+  projguts_name: Kamen, papir, škarje
+  frozen_gradelevel: Starost 8 +
+  codeorg_gradelevel: Starost 4-104
+  codeintl_gradelevel: Starost 4-104
   thinkersmithspanish_gradelevel: Por todos
-  khan_gradelevel: Middle school +
-  khanes_gradelevel: Middle school +
-  tynker_gradelevel: Ages 5-13
-  scratch_gradelevel: Ages 8+
+  khan_gradelevel: Srednja šola +
+  khanes_gradelevel: Srednja šola +
+  tynker_gradelevel: Starost 5-13
+  scratch_gradelevel: Starost 8 +
   lightbot_gradelevel: Vse starosti
   thinkersmith_gradelevel: Vse starosti
-  condcards_gradelevel: Ages 8-12
+  condcards_gradelevel: Starost 8-12
   lightbotintl_gradelevel: Vse starosti
-  codehs_gradelevel: High school
-  codecademy_gradelevel: High school
-  codecombat_gradelevel: Middle school +
-  codeavengers_gradelevel: Middle school +
-  processing_gradelevel: High school
-  robomind_gradelevel: Ages 8-13
-  groklearning_gradelevel: Middle school +
-  quorum_gradelevel: Middle school +
-  codespark_gradelevel: Elementary
-  kodable_gradelevel: Elementary
-  tynkerapp_gradelevel: Ages 5-13
-  hopscotch_gradelevel: Middle school +
-  robomindnl_gradelevel: Ages 8-13
-  bitsbox_gradelevel: Elementary
-  makegameswithus_gradelevel: High school
-  touchdevelop_gradelevel: High school
-  appinventor_gradelevel: Middle school +
+  codehs_gradelevel: Srednja šola
+  codecademy_gradelevel: Srednja šola
+  codecombat_gradelevel: Srednja šola +
+  codemonkey_gradelevel: Srednja šola +
+  codeavengers_gradelevel: Srednja šola +
+  processing_gradelevel: Srednja šola
+  robomind_gradelevel: Starost 8-13
+  groklearning_gradelevel: Srednja šola +
+  quorum_gradelevel: Srednja šola +
+  codespark_gradelevel: Osnovna šola
+  kodable_gradelevel: Osnovna šola
+  tynkerapp_gradelevel: Starost 5-13
+  robomindnl_gradelevel: Starost 8-13
+  flappy_gradelevel: Starost 4-104
+  bitsbox_gradelevel: Osnovna šola
+  makegameswithus_gradelevel: Srednja šola
+  touchdevelop_gradelevel: Srednja šola
+  appinventor_gradelevel: Srednja šola +
   blockly_gradelevel: Vse starosti
-  thinkersmith2_gradelevel: Ages 8+
-  kodableunplugged_gradelevel: Ages 8-13
-  projguts_gradelevel: Ages 10-13
-  codeorg_platformtext: Learn the basic concepts of Computer Science with drag and
-    drop programming. This is a game-like, self-directed tutorial starring video lectures
-    by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops,
-    conditionals, and basic algorithms. Available in 34 languages.
-  thinkersmithspanish_platformtext: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
-  khan_platformtext: Learn the basics of JavaScript programming while creating fun
-    drawings with your code. Do it on your own or with your class!
-  khanes_platformtext: Learn the basics of JavaScript programming while creating fun
-    drawings with your code. Do it on your own or with your class!
-  tynker_platformtext: A collection of 8 fun activities for children of all ages to
-    try programming. Solve a series of simple puzzles to help Pixel the puppy reach
-    home, and Biff the spaceman reach his moon base. Build the Space Zombies game
-    or create Math Art using our fun and easy visual approach to programming.  The
-    session can be teacher facilitated or self-paced.
-  scratch_platformtext: With Scratch, you can code your own interactive games, stories,
-    animations, and more. In this activity, you'll create an interactive holiday card
-    that you can share with friends and family.
-  lightbot_platformtext: Learn core programming logic, starting from super-basic programming,
-    for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence commands,
-    identify patterns, use procedures, and utilize loops!
-  thinkersmith_platformtext: Using a pre-defined "Robot Vocabulary" students will
-    figure out how to guide each other to accomplish specific tasks without discussing
-    them first. This lesson teaches children the connection between symbols and actions,
-    as well as the invaluable skill of debugging. "My Robotic Friends" works best
-    as a group activity and includes a teacher workbook for classroom use.
-  condcards_platformtext: Unuplugged
-  lightbotintl_platformtext: Learn core programming logic, starting from super-basic
-    programming, for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence
-    commands, identify patterns, use procedures, and utilize loops!
-  codehs_platformtext: Learn the basics of programming with Karel the Dog, a fun,
-    accessible and visual introduction to coding, where giving commands to a computer
-    is just like giving commands to a dog. This tutorial is great if led by a teacher,
-    but can also be done independently.
-  codecademy_platformtext: Codecademy is an interactive, student-guided introduction
-    to the basics of CS through JavaScript that's used by tens of millions of students
-    around the world. We've prepared a no-hassle Hour of Code experience with accompanying
-    quizzes, slides, and a completed project for students at the end.
-  codecombat_platformtext: Play as a Wizard using code (spells) to control your heroes,
-    navigate mazes, defeat ogres, trick enemies, and rescue allies! Learn JavaScript
-    in this HTML 5 web game for complete beginners.
-  codeavengers_platformtext: Build a 2 player 2D top-down game with JavaScript in
-    10 short tasks. Then continue learning some basics of programming (variables and
-    if statements) as you create a Quiz to share with friends. Along the way  earn
-    points and badges as you compete to reach the top of the class leaderboard.
-  processing_platformtext: An introduction to programming in the context of the visual
-    arts using the Processing programming language. Short video lessons introduce
-    coding exercises that lead to designing an interactive drawing program
-  robomind_platformtext: 'Students learn the basics of programming by controlling
-    their own virtual robot. The online course is fully self-contained with short
-    presentations, movies, quizzes and automatic guidance/hints to help with the programming
-    exercises. '
-  groklearning_platformtext: Choose from 3 activities designed to give you your first
-    experience programming. For example, use the programming language Python to build
-    a chatbot called "Eliza". Can she fool your friends into think she's a human not
-    a computer? This can be done in either a student-guided or teacher-facilitated
-    form and comes with all notes and solutions.
-  quorum_platformtext: Modern web browsers. Screen-readers supported
-  codespark_platformtext: iOS, Android (or web browser)
-  kodable_platformtext: Kodable is a self-guided iPad game that introduces kids 5+
-    to programming basics. Having a teacher or parent nearby is optimal, but not necessary.
-  tynkerapp_platformtext: iPad, Android tablets
-  hopscotch_platformtext: Student-guided tutorial on the iPad using the Hopscotch
-    programming language. Students will build games and apps for their iPad on their
-    iPad. Students can work individually or with friends (up to 3 per iPad).
-  robomindnl_platformtext: 'Students learn the basics of programming by controlling
-    their own virtual robot. The online course is fully self-contained with short
-    presentations, movies, quizzes and automatic guidance/hints to help with the programming
-    exercises. '
-  bitsbox_platformtext: Modern web browsers
-  makegameswithus_platformtext: Know some programming already? Learn to make an iPhone
-    game in an hour! We'll guide you through the process, to code, test, and play
-    your game entirely in the browser and then share it on Facebook for friends to
-    try! No prior iPhone development experience is required. You must understand what
-    variables, methods, and objects are.
-  touchdevelop_platformtext: Crazy drawings, flying monsters, swirling flowers...
-    create your apps on your device with TouchDevelop, a friendly mobile app creation
-    environment. Runs on iPhone, iPad, Android, Windows, Windows Phone, Linux, Mac.
-  appinventor_platformtext: Entertaining, quick video tutorials walk you through building
-    three simple apps for your Android phone or tablet. Designed for novices and experts
-    alike, this hour of code will get you ready to start building your own apps before
-    you know it. Imagine sharing your own app creations with your friends! These activities
-    are suitable for individuals and for teachers leading classes.
-  blockly_platformtext: Got PCs with slow (or non-existent) internet access? Download
-    the Blockly tutorials that were the precursor of the Code.org tutorials - a single
-    3MB ZIP file can be loaded onto any computer or used off a memory stick
-  thinkersmith2_platformtext: Students learn about representing and storing letters
-    in binary, as functions of on and off. At the end, the class gets to encode their
-    own initials to take home with them.
-  kodableunplugged_platformtext: 'Designed for use with plain paper, the fuzzFamily
-    Frenzy is an introduction to programming logic for kids 5 and up. A teacher should
-    explain the game, then students program a partner to complete a simple obstacle
-    course. '
-  projguts_platformtext: Unplugged
-  codeorg_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
+  thinkersmith2_gradelevel: Starost 8 +
+  kodableunplugged_gradelevel: Starost 8-13
+  projguts_gradelevel: Starost 10-13
+  frozen_platformtext: Sodobni brskalniki + tablica
+  codeorg_platformtext: Sodobni brskalniki, pametni telefoni, tablice
+  codeintl_platformtext: Sodobni brskalniki, pametni telefoni, tablice
+  thinkersmithspanish_platformtext: Izštekano
+  khan_platformtext: Sodobni brskalniki
+  khanes_platformtext: Sodobni brskalniki
+  tynker_platformtext: Modern web browsers
+  scratch_platformtext: VSI brskalniki
+  lightbot_platformtext: VSI brskalniki in iOS, Android ali igralne konzole
+  thinkersmith_platformtext: Izštekano
+  condcards_platformtext: Izštekano
+  lightbotintl_platformtext: iOS, Android (ali spletni brskalnik)
+  codehs_platformtext: Modern browsers
+  codecademy_platformtext: Sodobni spletni brskalniki. iOS, Android applikacije
+  codecombat_platformtext: Sodobni brskalniki
+  codemonkey_platformtext: Sodobni brskalniki
+  codeavengers_platformtext: Sodobni brskalniki
+  processing_platformtext: Sodobni brskalniki
+  robomind_platformtext: Sodobni brskalniki, mobilni splet
+  groklearning_platformtext: Sodobni brskalniki
+  quorum_platformtext: Sodobni spletni brskalniki. Podprti bralniki zaslona
+  codespark_platformtext: iOS, Android (ali spletni brskalnik)
+  kodable_platformtext: iPad
+  tynkerapp_platformtext: iPad, Android tablica
+  robomindnl_platformtext: Sodobni brskalniki, mobilni splet
+  flappy_platformtext: Sodobni brskalniki, pametni telefoni, tablice
+  bitsbox_platformtext: Sodobni brskalniki
+  makegameswithus_platformtext: Sodobni brskalniki
+  touchdevelop_platformtext: Sodobni brskalniki, pametni telefoni, vse naprave
+  appinventor_platformtext: Sodobni brskalniki + Android
+  blockly_platformtext: Le sodobni brskalniki
+  thinkersmith2_platformtext: Izštekano
+  kodableunplugged_platformtext: Izštekano
+  projguts_platformtext: Izštekano
+  frozen_shortdescription: Uporabimo kodo in se pridružimo Anni in Elsi, pri raziskovanju
+    čarabnosti in lepote ledu.
+  codeorg_shortdescription: Naučite se kodirati z Markom Zuckerbergom in Jeznimi ptiči!
+  codeintl_shortdescription: Naučite se kodirati z Markom Zuckerbergom in Jeznimi
+    ptiči!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
-  khan_shortdescription: Learn to draw in JavaScript
-  khanes_shortdescription: Learn to draw in JavaScript
-  tynker_shortdescription: Learn the basics of programming in a fun, visual environment
-  scratch_shortdescription: Create an interactive card
-  lightbot_shortdescription: A game to teach coding concepts
-  thinkersmith_shortdescription: Unplugged tutorial for a group with no devices
-  condcards_shortdescription: Learn algorithms with a deck of cards
-  lightbotintl_shortdescription: A game to teach coding concepts
-  codehs_shortdescription: Learn JavaScript programming with a fun visual environment
-  codecademy_shortdescription: Learn JavaScript programming, in a web-browser
-  codecombat_shortdescription: Play a game and learn JavaScript to win
-  codeavengers_shortdescription: Learn JavaScript programming, in a web-browser
-  processing_shortdescription: A one hour tutorial in the Processing languages
-  robomind_shortdescription: Write code for a virtual robot
-  groklearning_shortdescription: Basic intro to python programming
-  quorum_shortdescription: Join Mary on a guided tour as she learns the Quorum programming
-    language.
-  codespark_shortdescription: The Foos is a fun, kid-friendly game to learn about
-    programming.
-  kodable_shortdescription: A fun iPad game to teach computer programming concepts
+  khan_shortdescription: Naučite se risati v JavaScript
+  khanes_shortdescription: Naučite se risati v JavaScript
+  tynker_shortdescription: Nauči se kodirati z reševanjem zabavnih ugank in ustvari
+    svoje mobilne igre.
+  scratch_shortdescription: Ustvari interaktivne igre, zgodbe in animacije.
+  lightbot_shortdescription: Lightbot program za reševanje ugank z uporabo procedur
+    in zank!
+  thinkersmith_shortdescription: Izštekane vaje za skupine brez naprav
+  condcards_shortdescription: Učenje algoritmov s kupčkom kart
+  lightbotintl_shortdescription: Igra za poučevanje konceptov kodiranja
+  codehs_shortdescription: Začnite kodiranje s psom Karlom, zabaven in vizualen uvod
+    v programiranje!
+  codecademy_shortdescription: Nauči se JavaScript programiranja v spletnem brskalniku
+  codecombat_shortdescription: Porazi ogre in se nauči Python ali JavaScript v tej
+    epski programerski igri!
+  codemonkey_shortdescription: Students program a monkey to catch bananas while it
+    gets slightly more complicated on each level.
+  codeavengers_shortdescription: Nauči se JavaScript programiranja v spletnem brskalniku
+  processing_shortdescription: Eno urna vaja za jezike Processing
+  robomind_shortdescription: Napiši kodo za virtualnega robota
+  groklearning_shortdescription: Nauči robota za klepet "Elizo" pretentati tvoje prijatelje,
+    da mislijo, da je človek!
+  quorum_shortdescription: Pridružite se Mary na turi, ko se uči programski jezik
+    Quorum.
+  codespark_shortdescription: Foos je zabavna, otrokom prijazna igra, ki uči o programiranju.
+  kodable_shortdescription: Zabavna igra za iPad, ki uči konceptov programiranja
   tynkerapp_shortdescription: Learn to code by solving fun puzzles and build your
     own mobile games.
-  hopscotch_shortdescription: Learn visual programming on an iPad
-  robomindnl_shortdescription: Write code for a virtual robot
-  bitsbox_shortdescription: Code a series of apps to play and share, using real Javascript.
-  makegameswithus_shortdescription: Learn to make an iPhone game in an hour
+  robomindnl_shortdescription: Napiši kodo za virtualnega robota
+  flappy_shortdescription: Naredi svojo igro - Flappy Bird, Shark ali Submarine
+  bitsbox_shortdescription: S čisto pravim Javascriptom napiši niz aplikacij za igro
+    in jih deli s prijatelji.
+  makegameswithus_shortdescription: Naredi igro za iPhone! Nauči se s pisanjem kode,
+    kako naučiš svojo pošast novih potez!
   touchdevelop_shortdescription: Code mobile apps directly on your phone, tablet or
     laptop
-  appinventor_shortdescription: Make your own app! (Android-only)
-  blockly_shortdescription: Download a ZIP file to learn offline
-  thinkersmith2_shortdescription: Learn how computers use 1s and 0s to represent information
-  kodableunplugged_shortdescription: A fun unplugged exercise
-  projguts_shortdescription: Try modeling and simulation using rock/paper/scissors
-  codeorg_longdescription: Learn the basic concepts of Computer Science with drag
-    and drop programming. This is a game-like, self-directed tutorial starring video
-    lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
-    repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
+  appinventor_shortdescription: Izdelaj svoj lasten app! (Samo za android)
+  blockly_shortdescription: Naloži ZIP datoteko in se uči brez internetne povezave
+  thinkersmith2_shortdescription: Nauči se, kako računalniki uporabljajo 1ke in 0le,
+    da predstavijo informacije
+  kodableunplugged_shortdescription: Zabavna izštekana vaja
+  projguts_shortdescription: Poskusite modeliranje in simulacijo z igro kamen/papir/škarje
+  frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
+    magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
+    and make a winter wonderland that you can then share with your friends!
+  codeorg_longdescription: Nauči se osnov računalništva s povleci in spusti programiranjem.
+    To je igri podobna vaja z video predavanji, v katerih nastopajo Bill Gates, Mark
+    Zuckerberg, Angry Birds in Rastline vs zombiji. Naučite se zanke repeat, pogojne
+    stavke in osnovne algoritme. Na voljo v 34 jezikih.
+  codeintl_longdescription: Nauči se osnov računalništva s povleci in spusti programiranjem.
+    To je igri podobna vaja z video predavanji, v katerih nastopajo Bill Gates, Mark
+    Zuckerberg, Angry Birds in Rastline vs zombiji. Naučite se zanke repeat, pogojne
+    stavke in osnovne algoritme. Na voljo v 34 jezikih.
   thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
     los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
     espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
     a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
     como la valiosa habilidad de depuraci&oacute;n.
-  khan_longdescription: Learn the basics of JavaScript programming while creating
-    fun drawings with your code. Do it on your own or with your class!
-  khanes_longdescription: Learn the basics of JavaScript programming while creating
-    fun drawings with your code. Do it on your own or with your class!
-  tynker_longdescription: A collection of 8 fun activities for children of all ages
-    to try programming. Solve a series of simple puzzles to help Pixel the puppy reach
-    home, and Biff the spaceman reach his moon base. Build the Space Zombies game
-    or create Math Art using our fun and easy visual approach to programming.  The
-    session can be teacher facilitated or self-paced.
-  scratch_longdescription: With Scratch, you can code your own interactive games,
-    stories, animations, and more. In this activity, you'll create an interactive
-    holiday card that you can share with friends and family.
-  lightbot_longdescription: Learn core programming logic, starting from super-basic
-    programming, for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence
-    commands, identify patterns, use procedures, and utilize loops!
-  thinkersmith_longdescription: Using a pre-defined "Robot Vocabulary" students will
-    figure out how to guide each other to accomplish specific tasks without discussing
-    them first. This lesson teaches children the connection between symbols and actions,
-    as well as the invaluable skill of debugging. "My Robotic Friends" works best
-    as a group activity and includes a teacher workbook for classroom use.
-  condcards_longdescription: Learn about algorithms and conditional statements in
-    this "unplugged" activity using a deck of cards. Students do this activity in
-    teams, and need one deck of cards per team.
-  lightbotintl_longdescription: Learn core programming logic, starting from super-basic
-    programming, for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence
-    commands, identify patterns, use procedures, and utilize loops!
-  codehs_longdescription: Learn the basics of programming with Karel the Dog, a fun,
-    accessible and visual introduction to coding, where giving commands to a computer
-    is just like giving commands to a dog. This tutorial is great if led by a teacher,
-    but can also be done independently.
-  codecademy_longdescription: Codecademy is an interactive, student-guided introduction
-    to the basics of CS through JavaScript that's used by tens of millions of students
-    around the world. We've prepared a no-hassle Hour of Code experience with accompanying
-    quizzes, slides, and a completed project for students at the end.
-  codecombat_longdescription: Play as a Wizard using code (spells) to control your
-    heroes, navigate mazes, defeat ogres, trick enemies, and rescue allies! Learn
-    JavaScript in this HTML 5 web game for complete beginners.
-  codeavengers_longdescription: Build a 2 player 2D top-down game with JavaScript
-    in 10 short tasks. Then continue learning some basics of programming (variables
-    and if statements) as you create a Quiz to share with friends. Along the way  earn
-    points and badges as you compete to reach the top of the class leaderboard.
-  processing_longdescription: An introduction to programming in the context of the
-    visual arts using the Processing programming language. Short video lessons introduce
-    coding exercises that lead to designing an interactive drawing program
-  robomind_longdescription: 'Students learn the basics of programming by controlling
-    their own virtual robot. The online course is fully self-contained with short
-    presentations, movies, quizzes and automatic guidance/hints to help with the programming
-    exercises. '
-  groklearning_longdescription: Choose from 3 activities designed to give you your
-    first experience programming. For example, use the programming language Python
-    to build a chatbot called "Eliza". Can she fool your friends into think she's
-    a human not a computer? This can be done in either a student-guided or teacher-facilitated
-    form and comes with all notes and solutions.
-  quorum_longdescription: This tutorial is accessible for the visually-impaired, and
-    works with screenreaders. Join Mary on a tour as she joins a biology lab as a
-    programmer and learns the Quorum programming language. This tutorial is student-guided
-    with online example activities.
-  codespark_longdescription: The Foos is a fun and kid-friendly way to learn about
-    computer programming.  Program cute characters to solve puzzles and bring a virtual
-    world to life.  The game is "word free" so all can play!
-  kodable_longdescription: Kodable is a self-guided iPad game that introduces kids
-    5+ to programming basics. Having a teacher or parent nearby is optimal, but not
-    necessary.
+  khan_longdescription: Nauči se osnov JavaScript programiranja med ustvarjanjem zabavnih
+    risb s svojo kodo. To naredite sami ali v svojem razredu!
+  khanes_longdescription: Nauči se osnov JavaScript programiranja med ustvarjanjem
+    zabavnih risb s svojo kodo. To naredite sami ali v svojem razredu!
+  tynker_longdescription: Izdeljate svoje igre in jih delite s prijatelji! Rešite
+    zabavne programerske uganke in se nauči konceptov programiranja v vsakem nivoju.
+    Prilagodite igre z animiranimi liki, več nivoji in bogatimi rekviziti. Naredite
+    svoje igre realistične, z uporabo fizike. Poglej si kodo kot vizualne bloke ali
+    JavaScript. Vzemite vaše igre na mobilne iPads in Android tablice. Izbirate lahko
+    med več kot ducat zabavnimi dejavnostmi!
+  scratch_longdescription: S Scratch lahko ustvarite svojo lastne interaktivne igre,
+    zgodbe, animacije &mdash; in jih delite s prijatelji. Začnite z animacijo vašega
+    imena, ustvarjanjem praznične voščilnice ali izdelavo a igre pong.
+  lightbot_longdescription: Vodi robota Lightbot, da prižge vse modre ploščice! Lightbot
+    je uganka, ki uporablja programiranje mehanike igre, da igralci pridobijo praktično
+    razumevanje osnov programiranja. Naučite se zaporedje navodil, pisati procedure
+    in uporabljati zanke, če želite rešiti posamezne nivoje. Idealno za vse starosti.
+  thinkersmith_longdescription: Z uporabo vnaprej določenega "Robotskega besednjaka"
+    bodo učenci ugotoviti, kako drug drugemu izpolniti določene naloge, ne da bi se
+    pred tem o njih pogovarjali. Ta lekcija uči otroke povezavo med simboli in dejanji,
+    kot tudi neprecenljivo veščino razhroščevanja. "Moj robotski prijatelj" se najbolje
+    obnese kot skupinska dejavnost in vključuje pripravo za učitelja  za uporabo v
+    razredu.
+  condcards_longdescription: Spoznaj algoritme in pogojne stavke v tej "izštekani"
+    dejavnosti s kupčkom kart. Učenci se razdelijo v ekipe in potrebujejo en komplet
+    kart na ekipo.
+  lightbotintl_longdescription: Nauči se osnovno programsko logiko, začenši s super-enostavnim
+    programiranjem za starost 4 +, na iOS ali Android (ali spletnemu brskalniku).
+    Nauči se zaporedje ukazov, prepoznavanje vzorcev, postopkov in uporabe zank!
+  codehs_longdescription: Podajati ukaze računalniku, za kar pri programiranju gre,
+    je kot bi poveljevali psu. Naučite se kodiranja s Kužkom Karlom&mdash;zabavnim,
+    dostopnim in vizualnim uvodom v programiranje, ki bo tudi popolne začetnike naučil
+    temeljnih pojmov, kot so ukazi in funkcije. Praktične vaje lahko izvajajo učenci
+    sami, učitelji pa se lahko prijavite za dostop do učiteljskih orodij in spremljate
+    uspeh učenca!
+  codecademy_longdescription: Codecademy je interaktiven uvod v osnove računalništva
+    z JavaScript-om, ki ga uporablja desetine milijonov študentov po vsem svetu. Zasnovali
+    smo izkušnjo Ure kodiranja brez težav, s spremljajočimi kvizi, prosojnicami in
+    primerom končnega izdelka na koncu.
+  codecombat_longdescription: Porazi ogre in se nauči Python ali JavaScript v tej
+    epski programerski igri!
+  codemonkey_longdescription: 'CodeMonkey je spletna igra, ki uči kodirati v resničnem
+    programskem jeziku! Učenci opico programirajo tako, da lovi banane, pri čemer
+    igra postaja na vsakem nivoju malce težavnejša. Rešitve so točkovane in jih lahko
+    delite s klikom. '
+  codeavengers_longdescription: Zgradi dvodimenzionalno igro za dva igralca v Javascriptu
+    v 10 kratkih korakih. Nato nadaljuj z učenjem osnov programiranja (spremenljivke
+    in if stavki) z ustvarjanjem kviza za tvoje prijatelje. Vmes naberi točke in značke,
+    medtem ko tekmuješ za vrh lestvice tvojega razreda.
+  processing_longdescription: Uvod v programiranje v kontekstu vizualne umetnosti
+    z uporabo procesnega programskega jezika. Kratke video lekcije ti bodo predstavile
+    vaje za kodiranje, s katerimi boš ustvaril interaktivni program za risanje
+  robomind_longdescription: 'Učenci se učijo osnov programiranja s kontroliranjem
+    virtualnega robota. Spletni tečaj je celota prezentacij, filmčkov, kvizov in namigov,
+    ki pomagajo pri vajah programiranja. '
+  groklearning_longdescription: Uporabi programski jezik Python in ustvari virtualno
+    kramljačico Elizo, ki bo robot psiholog. Naučil jo boš kako govoriti in katere
+    stvari mora odgovoriti. Lahko preslepiš tvoje prijatelje, da ne bodo prepoznali,
+    da ni človek, temveč računalnik?
+  quorum_longdescription: Ta tečaj je na voljo za vse, ki imajo težave z videom in
+    deluje z samodejnimi bralci teksta. Pridruži se Mary na turneji, kjer se pridruži
+    laboratoriju za biologijo in ne nauči programskega jezika Quorum. Tečaj vodi vsak
+    učenec sam in vsebuje vzorčne aktivnosti.
+  codespark_longdescription: Foos je zabaven in otrokom prijazen način za spoznavanje
+    računalniškega programiranja.  Programiraj srčkane like za reševanje ugank in
+    zgradi virtualni svet.  Igra ne vsebuje besed, tako da se lahko pridruži kdorkoli!
+  kodable_longdescription: Kodable je iPad igra, ki uvaja otroke nad 5 let v osnove
+    programiranja. Spremljanje učitelja ali staršev v bližini je optimalno, ni pa
+    potrebno.
   tynkerapp_longdescription: Build your own games and share with friends! Solve fun
     coding puzzles and learn programming concepts in each level. Personalize games
     with animated characters, multiple levels and rich props. Lots of fun activities
     to choose from!
-  hopscotch_longdescription: Student-guided tutorial on the iPad using the Hopscotch
-    programming language. Students will build games and apps for their iPad on their
-    iPad. Students can work individually or with friends (up to 3 per iPad).
-  robomindnl_longdescription: 'Students learn the basics of programming by controlling
-    their own virtual robot. The online course is fully self-contained with short
-    presentations, movies, quizzes and automatic guidance/hints to help with the programming
-    exercises. '
-  bitsbox_longdescription: Customize your very own virtual tablet, then code a series
-    of apps to play and share. Simple walkthroughs make it possible for even young
-    kids to program real Javascript, and the more advanced you are the further you'll
-    go.
+  robomindnl_longdescription: 'Učenci se učijo osnov programiranja s kontroliranjem
+    virtualnega robota. Spletni tečaj je celota prezentacij, filmčkov, kvizov in namigov,
+    ki pomagajo pri vajah programiranja. '
+  flappy_longdescription: Uporabi programiranje povleci in spusti in ustvari svojo
+    lastno Flappy Ptič igro, in prilagodi njen izgled (Flappy morski pes, Flappy božiček,
+    karkoli). Naloži igro na svoj telefon z enim klikom.
+  bitsbox_longdescription: |
+    Prilagodi čisto svojo virtualno tablico in skodiraj nekaj aplikacij za igranje in deljenje prijateljem.
+    Preprosta navodila omogočijo tudi najmanjšim otrokom, da se učijo programiranja v JavaScriptu. Bolj kot napreduješ, dlje prideš.
   makegameswithus_longdescription: Know some programming already? Learn to make an
     iPhone game in an hour! We'll guide you through the process, to code, test, and
     play your game entirely in the browser and then share it on Facebook for friends
@@ -668,149 +643,160 @@
     Frenzy is an introduction to programming logic for kids 5 and up. A teacher should
     explain the game, then students program a partner to complete a simple obstacle
     course. '
-  projguts_longdescription: This "unplugged" activity helps students learn how modeling
-    and simulation works by having a group of students play different versions of
-    the Rock / Paper / Scissors game, and see the results as different modeling experiments.
-  codeorg_beyond_name: Intro Computer Science (grades K-8)
-  khan_beyond_name: Learn computer programming
-  tynker_beyond_name: Learn programming at home
-  scratch_beyond_name: Create stories, games, and animations
+  projguts_longdescription: Ta "izštekana" dejavnost pomaga učencem, da spoznajo,
+    kako deluje modeliranje in simulacija, tako da skupina učencev igra različne različice
+    igre kamen / papir / škarje, in opazuje izide kot poskuse za različne modele.
+  codeorg_beyond_name: Uvod v računalništvo (razredi K-8)
+  khan_beyond_name: Nauči se računalniškega programiranja
+  tynker_beyond_name: Nauči se programiranja doma
+  scratch_beyond_name: Bodi ustvarjalen s kodiranjem
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
-  hopscotch_beyond_name: 'Hopscotch: Programming On Your iPad'
-  groklearning_beyond_name: Learn Python programming
-  hacketyhack_beyond_name: Learn Ruby
-  robomind_beyond_name: Program a virtual robot
-  makegameswithus_beyond_name: Build an iPhone game in your browser!
-  appinventor_beyond_name: AppInventor Hour of Code
+  scratchjr_beyond_name: ScratchJR za nebralce
+  hopscotch_beyond_name: 'Hopscotch: Programiranje na vašem iPadu'
+  pocketcode_beyond_name: Žepno kodiranje
+  groklearning_beyond_name: Nauči se programirati v Python
+  hacketyhack_beyond_name: Nauči se Ruby
+  robomind_beyond_name: Programiraj virtualega robota
+  makegameswithus_beyond_name: Ustvari iPhone igro v brskalniku!
+  appinventor_beyond_name: AppInventor Ura Za Kodo
   touchdevelop_beyond_name: TouchDevelop
-  codehs_beyond_name: Learn to Code With Karel the Dog
-  udemy_beyond_name: Online Programming Courses
-  lynda_beyond_name: Online Programming Courses
-  edx_beyond_name: Harvard CS50 class
-  coursera_beyond_name: Stanford CS 101 class
+  codehs_beyond_name: Naučite se kodirati s psom Karlom
+  udemy_beyond_name: Spletni tečaji programiranja
+  lynda_beyond_name: Spletni tečaji programiranja
+  edx_beyond_name: Harvard CS50 razred
+  coursera_beyond_name: Stanford CS 101 razred
   udacity_beyond_name: CS 101
-  teachingtree_beyond_name: University courses online
+  teachingtree_beyond_name: Univerzitetni tečaje na spletu
   kodu_beyond_name: Kodu
   cargobot_beyond_name: Cargobot
   kidsruby_beyond_name: KidsRuby
-  w3schools_beyond_name: Learn HTML
-  codeavengers_beyond_name: Learn to Code Websites
+  w3schools_beyond_name: Nauči se HTML
+  codeavengers_beyond_name: Nauči se kodirati spletne strani
   mozilla_beyond_name: Webmaker
   codecombat_beyond_name: CodeCombat
   codea_beyond_name: Codea
   lego_beyond_name: Mindstorms
   finch_beyond_name: Finch
-  arduino_beyond_name: Arduino
-  processing_beyond_name: Program with Processing
+  arduino_beyond_name: Arduino s Sparkfun
+  processing_beyond_name: Programiraj s Processing
   alice_beyond_name: Alice
   sphero_beyond_name: SPRK
-  codeorg_beyond_gradelevel: Ages 4-104
-  khan_beyond_gradelevel: Middle school +
-  tynker_beyond_gradelevel: Ages 5-13
-  scratch_beyond_gradelevel: Ages 8+
+  codeorg_beyond_gradelevel: Starost 4-104
+  khan_beyond_gradelevel: Srednja šola +
+  tynker_beyond_gradelevel: Starost 5-13
+  scratch_beyond_gradelevel: Starost 8 +
   lightbot_beyond_gradelevel: Vse starosti
-  codecademy_beyond_gradelevel: High school
-  kodable_beyond_gradelevel: Elementary
-  hopscotch_beyond_gradelevel: Middle school +
-  groklearning_beyond_gradelevel: Middle school +
-  hacketyhack_beyond_gradelevel: High school
-  robomind_beyond_gradelevel: Ages 8-13
-  makegameswithus_beyond_gradelevel: High school
-  appinventor_beyond_gradelevel: Middle school +
-  touchdevelop_beyond_gradelevel: High school
-  codehs_beyond_gradelevel: High school
-  udemy_beyond_gradelevel: High school +
-  lynda_beyond_gradelevel: High school +
-  edx_beyond_gradelevel: University
-  coursera_beyond_gradelevel: University
-  udacity_beyond_gradelevel: University
-  teachingtree_beyond_gradelevel: University
-  kodu_beyond_gradelevel: Ages 8+
-  cargobot_beyond_gradelevel: Ages 8+
-  kidsruby_beyond_gradelevel: Ages 12+
-  w3schools_beyond_gradelevel: Ages 12+
-  codeavengers_beyond_gradelevel: Middle school +
-  mozilla_beyond_gradelevel: Ages 12+
-  codecombat_beyond_gradelevel: Middle school +
-  codea_beyond_gradelevel: High school +
-  lego_beyond_gradelevel: Middle school +
-  finch_beyond_gradelevel: Ages 8+
-  arduino_beyond_gradelevel: High school +
-  processing_beyond_gradelevel: High school
-  alice_beyond_gradelevel: Middle school +
-  sphero_beyond_gradelevel: Ages 8+
-  codeorg_beyond_platformtext: Modern browsers, tablets
-  khan_beyond_platformtext: Modern Web browsers
-  tynker_beyond_platformtext: Modern web browsers
-  scratch_beyond_platformtext: Any browser
-  lightbot_beyond_platformtext: iOS, Android (or web browser)
-  codecademy_beyond_platformtext: Modern web browsers. iOS, Android apps
+  codecademy_beyond_gradelevel: Srednja šola
+  kodable_beyond_gradelevel: Osnovna šola
+  scratchjr_beyond_gradelevel: Osnovna šola
+  hopscotch_beyond_gradelevel: Srednja šola +
+  pocketcode_beyond_gradelevel: Srednja šola +
+  groklearning_beyond_gradelevel: Srednja šola +
+  hacketyhack_beyond_gradelevel: Srednja šola
+  robomind_beyond_gradelevel: Starost 8-13
+  makegameswithus_beyond_gradelevel: Srednja šola
+  appinventor_beyond_gradelevel: Srednja šola +
+  touchdevelop_beyond_gradelevel: Srednja šola
+  codehs_beyond_gradelevel: Srednja šola
+  udemy_beyond_gradelevel: Srednja šola +
+  lynda_beyond_gradelevel: Srednja šola +
+  edx_beyond_gradelevel: Univerza
+  coursera_beyond_gradelevel: Univerza
+  udacity_beyond_gradelevel: Univerza
+  teachingtree_beyond_gradelevel: Univerza
+  kodu_beyond_gradelevel: Starost 8 +
+  cargobot_beyond_gradelevel: Starost 8 +
+  kidsruby_beyond_gradelevel: Starost 12 +
+  w3schools_beyond_gradelevel: Starost 12 +
+  codeavengers_beyond_gradelevel: Srednja šola +
+  mozilla_beyond_gradelevel: Starost 12 +
+  codecombat_beyond_gradelevel: Srednja šola +
+  codea_beyond_gradelevel: Srednja šola +
+  lego_beyond_gradelevel: Srednja šola +
+  finch_beyond_gradelevel: Starost 8 +
+  arduino_beyond_gradelevel: Srednja šola +
+  processing_beyond_gradelevel: Srednja šola
+  alice_beyond_gradelevel: Srednja šola +
+  sphero_beyond_gradelevel: Starost 8 +
+  codeorg_beyond_platformtext: Sodobni brskalniki, tablice
+  khan_beyond_platformtext: Sodobni brskalniki
+  tynker_beyond_platformtext: Sodobni brskalniki ($$ zahtevano)
+  scratch_beyond_platformtext: Katerikoli brskalnik
+  lightbot_beyond_platformtext: iOS, Android (ali spletni brskalnik)
+  codecademy_beyond_platformtext: Sodobni spletni brskalniki. iOS, Android applikacije
   kodable_beyond_platformtext: iPad
+  scratchjr_beyond_platformtext: iPad
   hopscotch_beyond_platformtext: iPad
-  groklearning_beyond_platformtext: Modern web browsers
-  hacketyhack_beyond_platformtext: Desktop install
-  robomind_beyond_platformtext: Modern web browsers, Mobile web
-  makegameswithus_beyond_platformtext: Modern Web browsers
-  appinventor_beyond_platformtext: Modern browser + Android
-  touchdevelop_beyond_platformtext: Modern browsers, smartphones, all devices
-  codehs_beyond_platformtext: Modern browsers
-  udemy_beyond_platformtext: Web based
-  lynda_beyond_platformtext: Web based
-  edx_beyond_platformtext: Modern browsers
-  coursera_beyond_platformtext: Modern browsers
-  udacity_beyond_platformtext: Modern browsers
-  teachingtree_beyond_platformtext: Web based
+  pocketcode_beyond_platformtext: Mobilna aplikacija
+  groklearning_beyond_platformtext: Sodobni brskalniki
+  hacketyhack_beyond_platformtext: Namestitev na namizni računalnik
+  robomind_beyond_platformtext: Sodobni brskalniki, mobilni splet
+  makegameswithus_beyond_platformtext: Sodobni brskalniki
+  appinventor_beyond_platformtext: Sodobni brskalniki + Android
+  touchdevelop_beyond_platformtext: Sodobni brskalniki, pametni telefoni, vse naprave
+  codehs_beyond_platformtext: Sodobni brskalniki ($$ zahtevano)
+  udemy_beyond_platformtext: Spletni
+  lynda_beyond_platformtext: Spletni ($$ zahtevano)
+  edx_beyond_platformtext: Sodobni brskalniki
+  coursera_beyond_platformtext: Sodobni brskalniki
+  udacity_beyond_platformtext: Sodobni brskalniki
+  teachingtree_beyond_platformtext: Spletni
   kodu_beyond_platformtext: Windows, xBox
   cargobot_beyond_platformtext: iPad
-  kidsruby_beyond_platformtext: Desktop install
-  w3schools_beyond_platformtext: Modern Web browsers
-  codeavengers_beyond_platformtext: Modern Web browsers
-  mozilla_beyond_platformtext: Modern Web browsers
-  codecombat_beyond_platformtext: Web based (Firefox, Chrome, Safari, IE9+)
+  kidsruby_beyond_platformtext: Namestitev na namizni računalnik
+  w3schools_beyond_platformtext: Sodobni brskalniki
+  codeavengers_beyond_platformtext: Sodobni brskalniki
+  mozilla_beyond_platformtext: Sodobni brskalniki
+  codecombat_beyond_platformtext: Spletni (Firefox, Chrome, Safari, IE9 +)
   codea_beyond_platformtext: iPad
-  lego_beyond_platformtext: Robot purchase
-  finch_beyond_platformtext: Robot purchase
-  arduino_beyond_platformtext: Kit purchase
-  processing_beyond_platformtext: Modern web browsers
-  alice_beyond_platformtext: Windows or Mac (install required)
-  sphero_beyond_platformtext: Robot purchase
-  codeorg_beyond_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
-  khan_beyond_shortdescription: Learn to draw in JavaScript
-  tynker_beyond_shortdescription: A fun and engaging course for children in grades
-    4-8
-  scratch_beyond_shortdescription: Create an interactive animation or game
-  lightbot_beyond_shortdescription: A game to teach coding concepts
-  codecademy_beyond_shortdescription: Learn JavaScript programming, in a web-browser
-  kodable_beyond_shortdescription: A fun iPad game to teach computer programming concepts
-  hopscotch_beyond_shortdescription: Learn visual programming on an iPad
-  groklearning_beyond_shortdescription: Basic intro to python programming
-  hacketyhack_beyond_shortdescription: Learn Ruby from the ground up
-  robomind_beyond_shortdescription: Write code for a virtual robot
-  makegameswithus_beyond_shortdescription: Learn to make an iPhone game in an hour
-  appinventor_beyond_shortdescription: Make your own app! (Android-only)
-  touchdevelop_beyond_shortdescription: Code mobile apps directly on your phone, tablet
-    or laptop
-  codehs_beyond_shortdescription: Learn JavaScript programming with a fun visual environment
-  udemy_beyond_shortdescription: Dozens of online programming courses
-  lynda_beyond_shortdescription: Dozens of online programming courses
-  edx_beyond_shortdescription: The most popular class at Harvard
-  coursera_beyond_shortdescription: Start with CS101
-  udacity_beyond_shortdescription: Start with CS101
-  teachingtree_beyond_shortdescription: 'Online Knowledge: Rapid and Unconstrained'
-  kodu_beyond_shortdescription: Design a 3D game world
-  cargobot_beyond_shortdescription: Program a robot arm on your iPad
-  kidsruby_beyond_shortdescription: Learn to program using Ruby
-  w3schools_beyond_shortdescription: Learn to make web sites
-  codeavengers_beyond_shortdescription: Learn to code games and websites
-  mozilla_beyond_shortdescription: Create and share web pages
+  lego_beyond_platformtext: Nakup robota
+  finch_beyond_platformtext: Nakup robota
+  arduino_beyond_platformtext: Spletni brskalnik, nato nakup Kit paketa
+  processing_beyond_platformtext: Sodobni brskalniki
+  alice_beyond_platformtext: Windows ali Mac (zahteva namestitev)
+  sphero_beyond_platformtext: Nakup robota
+  codeorg_beyond_shortdescription: Naučite se kodirati z Markom Zuckerbergom in Jeznimi
+    ptiči!
+  khan_beyond_shortdescription: Naučite se risati v JavaScript
+  tynker_beyond_shortdescription: Zabaven in simpatičen tečaj za otroke 4-8 razreda
+  scratch_beyond_shortdescription: Ustvari interaktivne igre, zgodbe in animacije.
+  lightbot_beyond_shortdescription: Igra za poučevanje konceptov kodiranja
+  codecademy_beyond_shortdescription: Nauči se JavaScript programiranja v spletnem
+    brskalniku
+  kodable_beyond_shortdescription: Zabavna igra za iPad, ki uči konceptov programiranja
+  scratchjr_beyond_shortdescription: 'Ustvari interaktivne zgodbe in igre s ScratchJr. '
+  hopscotch_beyond_shortdescription: Nauči se vizualnega programiranja na iPadu
+  pocketcode_beyond_shortdescription: Ustvarite igro na svojem pametnem telefonu in
+    jo delite s prijatelji, da jo poskusijo!
+  groklearning_beyond_shortdescription: Osnovni uvod v python programiranje
+  hacketyhack_beyond_shortdescription: Nauči se Ruby od spodaj navzgor
+  robomind_beyond_shortdescription: Napiši kodo za virtualnega robota
+  makegameswithus_beyond_shortdescription: Naučite se narediti iPhone igro v eni uri
+  appinventor_beyond_shortdescription: Izdelaj svoj lasten app! (Samo za android)
+  touchdevelop_beyond_shortdescription: Napiši mobilne aplikacije neposredno na tvojem
+    telefonu, tablici ali prenosniku
+  codehs_beyond_shortdescription: Naučite se programirati JavaScript v zabavnem vizualnem
+    okolju
+  udemy_beyond_shortdescription: Desetine spletnih tečajev programiranja
+  lynda_beyond_shortdescription: Desetine spletnih tečajev programiranja
+  edx_beyond_shortdescription: Najpopularnejši tečaj na harvardu
+  coursera_beyond_shortdescription: Začni s CS101
+  udacity_beyond_shortdescription: Začni s CS101
+  teachingtree_beyond_shortdescription: 'Znanje na spletu: Hitro in neomejeno'
+  kodu_beyond_shortdescription: Oblikuj 3D svet igre
+  cargobot_beyond_shortdescription: Programiraj robotsko roko na vašem iPad
+  kidsruby_beyond_shortdescription: Nauči se programirati z Ruby
+  w3schools_beyond_shortdescription: Nauči se narediti spletna mesta
+  codeavengers_beyond_shortdescription: Nauči se programirati igre in spletne strani
+  mozilla_beyond_shortdescription: Ustvari in deli spletne strani
   codecombat_beyond_shortdescription: Play a game and learn JavaScript to win
   codea_beyond_shortdescription: Make apps on your iPad
-  lego_beyond_shortdescription: Build and program a robot
+  lego_beyond_shortdescription: Zgradi in sprogramiraj robota
   finch_beyond_shortdescription: A robot for computer science education
   arduino_beyond_shortdescription: Prototype your own hardware
-  processing_beyond_shortdescription: Learn the Processing languages
+  processing_beyond_shortdescription: Nauči se procesnih programskih jezikov
   alice_beyond_shortdescription: Teach programming in a 3D environment
   sphero_beyond_shortdescription: Schools, Parents, Robots & Kids. We created the
     SPRK program because we believe play is a powerful teacher. Whether you're an
@@ -822,34 +808,37 @@
     tutorials starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds
     and Plants vs. Zombies. Learn repeat-loops, conditionals, basic algorithms, functions,
     and variables.
-  khan_beyond_longdescription: Learn the basics of JavaScript programming while creating
-    fun drawings with your code. Do it on your own or with your class!
+  khan_beyond_longdescription: Nauči se osnov JavaScript programiranja med ustvarjanjem
+    zabavnih risb s svojo kodo. To naredite sami ali v svojem razredu!
   tynker_beyond_longdescription: Tynker makes it fun & easy to learn programming.
     It makes it visual. Kids build games and mobile apps by arranging blocks of code.
     It removes the need to know programming syntax. Kids transform ideas into animated
     stories and math art right away. It promotes progressive learning. As kids learn
     fundamentals, Tynker introduces more advanced concepts including syntax driven
     programming.
-  scratch_beyond_longdescription: With Scratch, you can program your own interactive
-    stories, games, and animations&mdash; and share your creations with others in
-    the online community. Scratch helps young people learn to think creatively, reason
-    systematically, and work collaboratively&mdash; essential skills for life in the
-    21st century. Scratch is a project of the Lifelong Kindergarten Group at the MIT
-    Media Lab. It is provided free of charge.
-  lightbot_beyond_longdescription: Learn core programming logic, starting from super-basic
-    programming, for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence
-    commands, identify patterns, use procedures, and utilize loops!
-  codecademy_beyond_longdescription: Codecademy is an interactive, student-guided
-    introduction to the basics of CS through JavaScript that's used by tens of millions
-    of students around the world. We've prepared a no-hassle Hour of Code experience
-    with accompanying quizzes, slides, and a completed project for students at the
-    end.
-  kodable_beyond_longdescription: Kodable is a self-guided iPad game that introduces
-    kids 5+ to programming basics. Having a teacher or parent nearby is optimal, but
-    not necessary.
+  scratch_beyond_longdescription: S Scratch lahko ustvarite svojo lastne interaktivne
+    igre, zgodbe, animacije &mdash; in jih delite s prijatelji. Začnite z animacijo
+    vašega imena, ustvarjanjem praznične voščilnice ali izdelavo a igre pong.
+  lightbot_beyond_longdescription: Nauči se osnovno programsko logiko, začenši s super-enostavnim
+    programiranjem za starost 4 +, na iOS ali Android (ali spletnemu brskalniku).
+    Nauči se zaporedje ukazov, prepoznavanje vzorcev, postopkov in uporabe zank!
+  codecademy_beyond_longdescription: Codecademy je interaktiven uvod v osnove računalništva
+    z JavaScript-om, ki ga uporablja desetine milijonov študentov po vsem svetu. Zasnovali
+    smo izkušnjo Ure kodiranja brez težav, s spremljajočimi kvizi, prosojnicami in
+    primerom končnega izdelka na koncu.
+  kodable_beyond_longdescription: Kodable je iPad igra, ki uvaja otroke nad 5 let
+    v osnove programiranja. Spremljanje učitelja ali staršev v bližini je optimalno,
+    ni pa potrebno.
+  scratchjr_beyond_longdescription: ScratchJr is an introductory programming language
+    that enables young children to create their own interactive stories and games.
+    Children snap together graphical programming blocks to make characters move, jump,
+    dance, and sing
   hopscotch_beyond_longdescription: Student-guided tutorial on the iPad using the
     Hopscotch programming language. Students will build games and apps for their iPad
     on their iPad. Students can work individually or with friends (up to 3 per iPad).
+  pocketcode_beyond_longdescription: Create your own game on your smart phone with
+    Pocket Code! Help skydiver Steve to deliver his parcels. You can share it with
+    friends and other users to try!
   groklearning_beyond_longdescription: An introductory course using the programming
     language Python for people with no programming experience. Our unique mix of introductory
     content and challenges will bring you to a thorough understanding of Python and

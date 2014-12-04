@@ -1,0 +1,30 @@
+#!/usr/bin/env ruby
+# Add script ids to existing UserLevels. Because in the 'past',
+# UserLevels were independent of script, we don't know what script
+# they belong to, so we'll just create a new one for every possible
+# script that the level is in.
+
+require_relative '../../config/environment'
+
+level_id_to_script_ids = Hash[Level.all.map do |level|
+  # for each level, find all scripts that it is in, except for hidden scripts (but including old hoc which is now hidden)
+  [level.id, level.script_levels.collect(&:script).reject {|s| s.id != 2 && s.hidden?}.collect(&:id)] 
+end]
+
+UserLevel.where(script_id: nil).find_in_batches do |batch|
+  created = 0
+  destroyed = 0
+  start_time = Time.now
+  batch.each do |user_level|
+    UserLevel.transaction do
+      script_ids = level_id_to_script_ids[user_level.level_id]
+      script_ids.each do |script_id|
+        user_level.dup.tap{ |new_user_level| new_user_level.script_id = script_id}.save!
+        created += 1
+      end
+      user_level.destroy
+      destroyed += 1
+    end
+  end
+  puts "+#{created}\t-#{destroyed}\t#{Time.now - start_time}s"
+end

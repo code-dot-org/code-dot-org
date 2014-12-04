@@ -102,4 +102,4 @@ def unsupported_media_type!()
   halt(415, "Unsupported Media Type\n")
 end
 
-Dir.glob(pegasus_dir('helpers/*.rb')).sort.each{|path| $log.debug path; load path}
+Dir.glob(pegasus_dir('helpers/*.rb')).sort.each{|path| load path}

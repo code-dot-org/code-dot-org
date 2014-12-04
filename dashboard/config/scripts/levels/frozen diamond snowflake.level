@@ -19,7 +19,10 @@
     "impressive": "true",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "ideal": "10"
+    "ideal": "10",
+    "embed": "false",
+    "callout_json": "[\r\n  {\"localization_key\": \"frozen_diamond_repeat\", \"element_id\": \"#toolbox_repeat_qtip\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}}\r\n  }\r\n]",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
@@ -54,7 +57,7 @@
                 </block>
               </statement>
               <next>
-                <block type="draw_turn_by_constant_dropdown" deletable="false">
+                <block type="draw_turn_by_constant_dropdown">
                   <title name="DIR">turnRight</title>
                   <title name="VALUE" config="36,45,60,90,120,180">???</title>
                 </block>
@@ -78,7 +81,7 @@
           <title name="DIR">turnLeft</title>
           <title name="VALUE" config="36,45,60,90,120,180">36</title>
         </block>
-        <block type="controls_repeat_dropdown">
+        <block type="controls_repeat_dropdown" id="toolbox_repeat_qtip">
           <title name="TIMES" config="3-10">10</title>
         </block>
         <block type="draw_colour" inline="true">

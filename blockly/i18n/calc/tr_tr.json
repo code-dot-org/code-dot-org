@@ -1,8 +1,8 @@
 {
-  "compute": "compute",
-  "equivalentExpression": "Try reordering your arguments to get exactly the same expression.",
-  "extraTopBlocks": "You have unattached blocks. Did you mean to attach these to the \"compute\" block?",
-  "goal": "Goal:",
-  "reinfFeedbackMsg": "Bu istediğin şeye benziyor mu ?\"Yeniden Dene\" butonuna basarak çizimini görebilirsin.",
-  "yourExpression": "Your expression:"
+  "compute": "hesapla",
+  "equivalentExpression": "Aynı ifadeyi elde etmek için argümanlarınızı yeniden sıralayınız.",
+  "extraTopBlocks": "Bağlantı yapılmamış blokların var. Bunları \"hesapla\" bloğuna mı ekleyecektiniz?",
+  "goal": "Amaç:",
+  "reinfFeedbackMsg": "İşte hikayesi!Bunun üzerinde çalışmaya devam, ya da bir sonraki bulmaca üzerine hareket!",
+  "yourExpression": "İfadeniz:"
 }

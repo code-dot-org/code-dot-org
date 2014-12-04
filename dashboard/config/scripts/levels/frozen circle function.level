@@ -20,7 +20,8 @@
     "ideal": "6",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "video_key": "Frozen_functions "
+    "embed": "false",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
@@ -30,7 +31,7 @@
           <next>
             <block type="create_a_circle" deletable="false" editable="false">
               <next>
-                <block type="jump_by_constant_dropdown" deletable="false">
+                <block type="jump_by_constant_dropdown">
                   <title name="DIR">jumpForward</title>
                   <title name="VALUE" config="25,50,100,150,200,300">???</title>
                 </block>
@@ -78,12 +79,12 @@
     </toolbox_blocks>
     <required_blocks>
       <xml>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">10</title>
+        </block>
         <block type="jump_by_constant_dropdown">
           <title name="DIR">jumpForward</title>
           <title name="VALUE" config="25,50,100,150,200,300">25</title>
-        </block>
-        <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="3-10">10</title>
         </block>
       </xml>
     </required_blocks>

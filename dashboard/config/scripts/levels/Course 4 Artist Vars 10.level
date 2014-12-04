@@ -13,14 +13,15 @@
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "free_play": "false",
-    "instructions": "Here's an algorithm that draws a triangle out of smaller triangles. Can you modify it so that it uses the \"sides\" variable to draw each triangle? Look through the code, and every time you see the number 3, replace it with your \"sides\" variable. Hint: In order to use the \"sides\" blocks you will need to use the \"set sides to\" block to tell it how many sides you want. ",
+    "instructions": "Here's an algorithm that draws a triangle out of smaller triangles. Can you modify it so that it uses the \"sides\" variable to draw each triangle? Look through the code, and every time you see the number 3, replace it with your \"sides\" variable. Remember to use the \"set sides\" block.",
     "disable_variable_editing": "true",
     "slider_speed": ".5",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "impressive": "false",
     "embed": "false",
-    "callout_json": "[{\r\n  \"localization_key\": \"set_sides\",\r\n  \"element_id\": \"[block-id='11']\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}\r\n  }\r\n}]"
+    "callout_json": "[{\r\n  \"localization_key\": \"set_sides\",\r\n  \"element_id\": \"[block-id='11']\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}\r\n  }\r\n}]",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>

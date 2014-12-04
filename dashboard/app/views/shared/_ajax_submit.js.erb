@@ -1,8 +1,7 @@
 $(document).ready(function () {
   var form_selector = '<%=form_selector%>';
-  console.log('form selector=' + form_selector);
   $(form_selector).on('ajax:beforeSend', function (e, xhr) {
-    $('#validation-error').empty();
+    $('.validation-error').empty();
     var token = $('meta[name="csrf-token"]').attr('content');
     xhr.setRequestHeader('X-CSRF-TOKEN', token);
   });
@@ -18,7 +17,7 @@ $(document).ready(function () {
     } catch (err) {
       errors = {message: "Error (" + error + "): " + xhr.responseText};
     }
-    $('#validation-error')
+    $('.validation-error')
       .html("<p>Couldn't create level:</p>")
       .append($("<ul/>")
         .append(Object.keys(errors).map(function (v) {

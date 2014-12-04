@@ -240,7 +240,7 @@ Blockly.Blocks.functional_call = {
         .appendTitle(new Blockly.FieldLabel('Function Call', options), 'NAME')
         .appendTitle('', 'PARAM_TEXT');
 
-    if (Blockly.functionEditor && this.blockSpace !== Blockly.modalBlockSpace) {
+    if (Blockly.useContractEditor && this.blockSpace !== Blockly.modalBlockSpace) {
       var editLabel = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
       Blockly.bindEvent_(editLabel.fieldGroup_, 'mousedown', this, this.openEditor);
       mainTitle.appendTitle(editLabel);

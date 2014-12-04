@@ -1,15 +1,17 @@
 
 
-# Hoe je de aandacht van de media trekt voor je Uur Code-evenement
+[<button style="float: right; margin-top: 50px">Meld uw evenement aan</button>](/#join)
 
-## Schokkende statistieken (USA):
+# Flapteksten en nuttige Stats
 
-  * In de komende 10 jaar zijn er een miljoen meer informatica-banen dan studenten (een totaal van $500 miljard aan salarissen).
-  * Meer dan 50% van alle wiskunde- en wetenschapsbanen zijn informatica-banen. 
-  * Als net afgestudeerde informaticus verdien je met informatica meer dan met de meeste andere studies. Toch studeren minder dan 3% van de studenten af in de informatica.
-  * In 26 staten tellen informatica lessen niet mee als wiskunde of natuurkunde vakken op middelbare scholen. 
-  * Minder dan 20% van de studenten die aan een informatica-opleiding beginnen zijn vrouw. Minder dan 10% zijn gekleurd of latijns-amerikaans.
+## Use this short blurb in newsletters
 
-## Als Infographic:
+### Breng informatica naar je school. Start met een Uur Code
+
+Computers zijn overal, maar minder scholen doceren informatica dan 10 jaar geleden. Het goede nieuws is, we zijn op weg om dit te veranderen. Als je gehoord hebt over  vorige jaar, dan weet je dat het geschiedenis heeft geschreven. In een week hebben 15 miljoen leerlingen informatica geprobeerd! [Meld je aan](<%= hoc_uri('/') %>Een Uur Code</a> is een één uur durende introductie tot informatica, om aan te tonen dat programmeren niet zo moeilijk is en iedereen de basis kan aanleren. <a href=)om Een Uur Code te organiseren in de week van 8-14 December, de week van de informatica en help ons meer dan 100 miljoen leerlingen te bereiken tegen het einde van dit jaar. Add your school to the map, go to <http://hourofcode.com></p> 
+
+## Infographic version:
 
 ![afbeelding](http://code.org/images/fit-8000/Code.org_infographic.png)
+
+<a style="display: block" href="/#join"><button style="float: right;">Meld uw evenement aan</button></a>

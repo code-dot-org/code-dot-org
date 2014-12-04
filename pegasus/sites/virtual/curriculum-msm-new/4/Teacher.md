@@ -5,7 +5,7 @@ theme: none
 ---
 
 
-<%= partial('curriculum_header', :unplugged=>true, :title=> 'Contracts',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>25) %>
+<%= partial('curriculum_header', :unplugged=>true, :title=> 'Contracts',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>(30-60)) %>
 
 [content]
 
@@ -19,19 +19,19 @@ Contracts provide a way for students to better understand and discuss functions.
 ## Teaching Summary
 ### **What's in a Contract**
  
-1) [Vocabulary](#Vocab)
+1) [Vocabulary](#Vocab)<br/>
 2) [Figuring it Out](#GetStarted)  
 
-### **Activity: Contract Writing**  
+### **Activity: Contracts**  
 
-3) [Dissecting a Demo](#Activity1)  
-4) [Coordinate Planes](#Activity2)  
+3) [Writing Contracts](#Activity1)<br/>
+4) [Reading Contracts](#Activity2)  
 
 ### **Wrap-up**
 5) [Flash Chat](#WrapUp) - What did we learn?  
 
 ### **Assessment**
-6) [Contract Writing](#Assessment)
+6) [Contracts Assessment](#Assessment)
 
 [/summary]
 
@@ -48,7 +48,7 @@ Contracts provide a way for students to better understand and discuss functions.
 
 ## Materials, Resources and Prep
 ### For the Student
-- Contract Log
+- [Contract Log](needacontractlog.pdf)
 
 [/together]
 
@@ -66,7 +66,7 @@ This lesson has three new and important words:<br/>
 
 ### <a name="GetStarted"></a> 2) Figuring it Out
 
-You’ve already seen several functions that take in two Numbers, such as +, and -. On the other hand, the function "star" takes in a Number and two Strings. Different functions take in different inputs, and we need a way to keep track of the requirements for each function. The Domain of a function is the data that the function expects. 
+You’ve already seen several functions that take in two Numbers, such as +, and -. On the other hand, the function "star" takes in a Number and two Strings. Different functions take in different inputs, and we need a way to keep track of the requirements for each function.
 
 **The Domain of a function is the data that the function expects.**
 
@@ -74,46 +74,56 @@ By keeping a list of all the functions in a language, and their Domains, program
 
 **The Range of a function is the data that the function produces.**
 
-Domains and Ranges help programmers write better code, by preventing silly mistakes and giving themselves hints about what to do next. A programmer who wants to use "star" can look up the Domain and immediately know that the first input has to be a Number (like 100), without having to remember it each time. Instead of writing a single value there, a programmer could write a whole expression, like (* 25 4). We know this code will return an appropriate value (Number) by looking at the Range for *; therefore, the result of * can be used in place of any Number value.
+Domains and Ranges help programmers write better code, by preventing silly mistakes and giving themselves hints about what to do next. A programmer who wants to use "star" can look up the Domain and immediately know that the first input has to be a Number (like 100), without having to remember it each time. Instead of writing a single value there, a programmer could write a whole expression, like (25 * 4). We know this code will return an appropriate value (Number) by looking at the Range for *; therefore, the result of * can be used in place of any Number value.
 
 When programmers write down the Domains and Ranges of each function, they write what are called **contracts**, to keep track of what each function needs. 
 
-**A Contract has three parts: the Name, Domain and Range of a function.**
+**A Contract has three parts: the _Name_, _Domain_ and _Range_ of a function.**
 
 [/together]
 
 [together]
 
-## Activities: (25 min)
+## Activities:
 ### <a name="Activity1"></a> 3) Dissecting a Demo
 
-Let's see if we can come up with contracts for some of the functions you've already seen. You'll want to make sure that you've got your [contracts log](needacontractlog.pdf), as this is where you'll keep a running document of all contracts you write - both for existing functions and ones of your own creation.
+Let's see if we can come up with contracts for some of the functions you've already seen. You'll want to make sure that you've got your [contracts log](needacontractlog.pdf), as this is where you'll keep a running document of all contracts you write - both for existing functions and ones of your own creation. When writing a contact on paper, we'll use this form:
 
-The contract for star is:  
+**_Name_: _Domain_ -> _Range_**
 
-; star: Number String String -> Image
+Using that format, the contract for star is:  
+
+**star: Number String String -> Image**
  
 This means that the Name of the function is star, that it takes in a Number and two Strings as its Domain, and produces an Image as the Range. We use types instead of values when we write a Contract, because we want to be more general: a star could be of any size, so the Domain for star specifies that the first argument could be any Number. If we think of a language as a collection of lego pieces, the Contracts are like the tabs and slots that tell us how each piece can connect.
-Contracts are sufficiently important and useful that we should keep a list of them somewhere. The back pages of your workbook contain a sheet labeled "Contracts". Write the contract for star in the first row of your contracts table.
+Contracts are sufficiently important and useful that we should keep a list of them somewhere. Using the Contract Log. Write the contract for star in the first row of your contracts table.
+
+[tip]
+
+# Lesson Tip
+
 Common mistakes when students first write down contracts include: writing values (such as "red") instead of types (such as "String") and forgetting arguments. Read your students’ contracts carefully, as they often indicate misconceptions that will persist and affect them later on.
+
+[/tip]
+
 Here is the contract for a new function:  
 
-; rectangle: Number Number String String -> Image
+**rectangle: Number Number String String -> Image**
  
-What is the Name of this function?
-How many things are the Domain of this function?
-What is the type of each thing in the Domain?
-What is the Range of this function?
-A Contract tells you exactly how to use the function, by writing its Name and then using values for each of the arguments in the Domain. Here is an example of an expression, written to use rectangle:  
+- What is the Name of this function?
+- How many things are the Domain of this function?
+- What is the type of each thing in the Domain?
+- What is the Range of this function?
+
+A Contract tells you exactly how to use the function, by writing its Name and then using values for each of the arguments in the Domain. Here is an example of an Evaluation Block, written to use rectangle:  
 
 (rectangle 100 50 "solid" "blue")
  
 What do you think this code will produce?
-Have students experiment with changing the argument values, always drawing attention back to the Domain.
-By writing down the Contracts for our functions, we can easily look back to see how they are used.
+
 The Contract for + is shown below.  
 
-; +: Number Number -> Number
+**+: Number Number -> Number**
  
 Can you write the Contract for *, -, / and sqrt?
 
@@ -122,9 +132,9 @@ Can you write the Contract for *, -, / and sqrt?
 
 Now that you know how to use a Contract to write an expression, here are the Contracts for several new functions that produce Images:  
 
-; ellipse:  Number Number String String -> Image
-; triangle: Number String String        -> Image
-; circle:   Number String String        -> Image
+ellipse:  Number Number String String -> Image
+triangle: Number String String        -> Image
+circle:   Number String String        -> Image
  
 See if you can figure out how to use these new functions to draw other shapes! Here's an example to get you started
 
@@ -145,7 +155,7 @@ In the next unit, you’ll learn how to create your own functions to save work i
 ## Assessment
 ### <a name="Assessment"></a>6) Contract Writing Assessment
 
-Visit [MSM Stage 1](http://studio.code.org/s/msm/stage/1/puzzle/1) in Code Studio to complete the assessments.
+Visit [MSM Stage 4](http://studio.code.org/s/msm/stage/4/puzzle/1) in Code Studio to complete the assessments.
 
 [/together]
 

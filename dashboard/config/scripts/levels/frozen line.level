@@ -19,15 +19,16 @@
     "impressive": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "callout_json": "[\r\n  {\"localization_key\": \"move_elsa_forward\", \"element_id\": \"[block-id='1']\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top left\", \"at\": \"bottom right\", \"adjust\": {\"x\": 22, \"y\":60}},\r\n    \"style\": { \"classes\": \"no-tip\" }}\r\n  }\r\n]",
+    "callout_json": "[\r\n  {\"localization_key\": \"run\", \"element_id\": \"#runButton\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"bottom left\", \"at\": \"top center\"}}},\r\n  {\"localization_key\": \"move_elsa_forward\", \"element_id\": \"#move_forward_qtip\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}}\r\n  }\r\n]",
     "ideal": "2",
-    "video_key": "Frozen_intro"
+    "embed": "false",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
     <toolbox_blocks>
       <xml>
-        <block type="draw_move_by_constant_dropdown">
+        <block type="draw_move_by_constant_dropdown" id="move_forward_qtip">
           <title name="DIR">moveForward</title>
           <title name="VALUE" config="50,100,150,200,300">100</title>
         </block>

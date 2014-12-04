@@ -3,6 +3,6 @@
   "equivalentExpression": "Prøv å endre rekkefølgen på argumentene dine for å få nøyaktig samme uttrykk.",
   "extraTopBlocks": "Du har ledige blokker. Mente du å knytte disse til \"beregn\" blokken?",
   "goal": "Mål:",
-  "reinfFeedbackMsg": "Du kan trykke \"Prøv Igjen\"-knappen for å redigere uttrykket.",
+  "reinfFeedbackMsg": "Her er din historie! Fortsett å jobbe på den, eller gå videre til neste oppgave!",
   "yourExpression": "Ditt uttrykk:"
 }

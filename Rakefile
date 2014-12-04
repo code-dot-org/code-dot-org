@@ -1,4 +1,5 @@
 require_relative './deployment'
+require 'os'
 require 'cdo/hip_chat'
 require 'cdo/rake_utils'
 
@@ -35,7 +36,7 @@ end
 namespace :build do
 
   task :configure do
-    if CDO.chef_managed && !(rack_env?(:production) && CDO.name =='daemon') && !rack_env?(:test) && !rack_env?(:staging)
+    if CDO.chef_managed && !CDO.daemon
       HipChat.log 'Applying <b>chef</b> profile...'
       RakeUtils.sudo 'chef-client'
     end
@@ -89,12 +90,12 @@ namespace :build do
       HipChat.log 'Installing <b>dashboard</b> bundle...'
       RakeUtils.bundle_install
 
-      if CDO.daemon || rack_env?(:levelbuilder)
+      if CDO.daemon
         HipChat.log 'Migrating <b>dashboard</b> database...'
         RakeUtils.rake 'db:migrate'
 
         HipChat.log 'Seeding <b>dashboard</b>...'
-        RakeUtils.rake 'seed:all'
+        RakeUtils.rake 'seed:incremental'
       end
 
       unless rack_env?(:development)
@@ -178,6 +179,16 @@ namespace :install do
         blockly_build = CDO.use_my_blockly ? blockly_dir('build/package') : 'blockly-package'
         RakeUtils.ln_s blockly_build, dashboard_dir('public','blockly')
       end
+
+      if OS.linux?
+        RakeUtils.sudo_ln_s '/usr/bin/nodejs', '/usr/bin/node'
+        RakeUtils.sudo 'npm', 'update', '-g', 'npm'
+        RakeUtils.sudo 'npm', 'install', '-g', 'grunt-cli'
+      elsif OS.mac?
+        RakeUtils.system 'brew install node'
+        RakeUtils.system 'npm', 'update', '-g', 'npm'
+        RakeUtils.system 'npm', 'install', '-g', 'grunt-cli'
+      end
     end
   end
 
@@ -186,7 +197,8 @@ namespace :install do
       Dir.chdir(dashboard_dir) do
         RakeUtils.bundle_install
         RakeUtils.rake 'db:create'
-        RakeUtils.rake 'db:schema:load'
+        RakeUtils.rake 'db:migrate'
+        RakeUtils.rake 'seed:all'
       end
     end
   end

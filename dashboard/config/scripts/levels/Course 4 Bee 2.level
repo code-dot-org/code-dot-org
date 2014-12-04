@@ -6,7 +6,7 @@
   "user_id": 9,
   "properties": {
     "skin": "bee",
-    "instructions": "The bee only wants nectar right now. Remember, not all objects are flowers, so check to gather nectar only at flowers.",
+    "instructions": "Check each of the objects to see if it's a flower - if it is, collect nectar.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -20,6 +20,7 @@
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
     "maze_data": null
   }
 }]]></config>
@@ -34,7 +35,6 @@
           <title name="DIR">turnLeft</title>
         </block>
         <block type="maze_nectar"/>
-        <block type="maze_honey"/>
         <block type="controls_repeat">
           <title name="TIMES">???</title>
         </block>

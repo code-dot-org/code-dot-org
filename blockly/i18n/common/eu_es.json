@@ -23,6 +23,13 @@
   "end": "end",
   "emptyBlocksErrorMsg": "\"Errepikatu\" edo \"baldintza\" blokeak barruan beste bloke batzuk behar ditu funtzionatzeko. Egiaztatu barruko blokeak egoki kokatuak daudela.",
   "emptyFunctionBlocksErrorMsg": "The function block needs to have other blocks inside it to work.",
+  "errorEmptyFunctionBlockModal": "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block.",
+  "errorIncompleteBlockInFunction": "Click \"edit\" to make sure you don't have any blocks missing inside your function definition.",
+  "errorParamInputUnattached": "Remember to attach a block to each parameter input on the function block in your workspace.",
+  "errorUnusedParam": "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block.",
+  "errorRequiredParamsMissing": "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition.",
+  "errorUnusedFunction": "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program.",
+  "errorQuestionMarksInNumberField": "Try replacing \"???\" with a value.",
   "extraTopBlocks": "Ekintza blokeei lotu gabeko blokeak soberan daude.",
   "finalStage": "Zorionak! Azkeneko eszenatokia osatu duzu.",
   "finalStageTrophies": "Zorionak! Azkeneko eszenatokia osatu duzu eta {numTrophies, plural, one {a trophy} other {# trophies}}.",
@@ -43,6 +50,7 @@
   "numBlocksNeeded": "Zorionak! {puzzleNumber}. puzlea osatu dizu. (Hala ere {numBlocks, plural, one {bloke 1} other {# bloke}} erabili ahal zenituen.",
   "numLinesOfCodeWritten": " {numLines, plural, one {lerro 1} other {# lerro}} kode idatzi berri dituzu!\n",
   "play": "play",
+  "print": "Print",
   "puzzleTitle": "{stage_total}etik, {puzzle_number} puzlea",
   "repeat": "errepikatu",
   "resetProgram": "Leheneratu",
@@ -52,6 +60,7 @@
   "showCodeHeader": "Ikusi Iturburua",
   "showBlocksHeader": "Show Blocks",
   "showGeneratedCode": "Ikusi iturburua",
+  "stringEquals": "string=?",
   "subtitle": "programazio ingurune bisuala",
   "textVariable": "testua",
   "tooFewBlocksMsg": "Beharrezko bloke mota guztiak erabiltzen ari zara, baina saiatu mota hontako bloke gehiago erabiltzen puzlea osatzeko.",
@@ -80,5 +89,6 @@
   "tryHOC": "Probatu Kode Ordua",
   "signup": "Izena eman sarrera kurtsorako",
   "hintHeader": "Hemen aholkua:",
-  "genericFeedback": "See how you ended up, and try to fix your program."
+  "genericFeedback": "See how you ended up, and try to fix your program.",
+  "defaultTwitterText": "Check out what I made"
 }
