@@ -15,6 +15,13 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
     @autosaved_gallery_activity = create(:gallery_activity, user: @user, autosaved: true)
   end
 
+  test "index works with empty gallery" do
+    GalleryActivity.destroy_all
+    
+    get :index
+    assert_response :success
+  end
+
   test "should show index" do
     get :index
 
