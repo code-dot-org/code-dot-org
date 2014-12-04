@@ -1,3 +1,4 @@
+
 require 'test_helper'
 
 class GalleryActivitiesControllerTest < ActionController::TestCase 
@@ -44,7 +45,7 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
   end
 
   test "should show index with thousands of pictures with a delimiter in the count" do
-    GalleryActivity.stubs(:count).returns(14320) # mock because actually creating takes forever
+    GalleryActivity.stubs(:pseudocount).returns(14320) # mock because actually creating takes forever
 
     # index is public
     get :index
