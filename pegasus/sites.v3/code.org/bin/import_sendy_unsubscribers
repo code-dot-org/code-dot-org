@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 require_relative '../../../src/env'
 require src_dir 'database'
+require 'cdo/poste'
 require 'cdo/hip_chat'
 
 SENDY_DB = Sequel.connect(CDO.sendy_db_reader.sub('mysql:', 'mysql2:'))

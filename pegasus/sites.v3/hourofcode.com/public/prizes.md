@@ -49,10 +49,10 @@ One lucky school in ***every*** U.S. state (+ Washington D.C.) won $10,000 worth
 12:00 PM PST - [Jessica Alba](http://www.youtube.com/watch?v=IFL3WN0F_Gg) <br />
 
 **THURSDAY**, December 11 <br />
-5:30 AM PST - Karlie Kloss <br />
+5:30 AM PST - [Karlie Kloss](http://www.youtube.com/watch?v=fvydHOG-ILY) <br />
 9 AM PST - [David Karp](http://www.youtube.com/watch?v=dOWWtqiZzJo) <br />
 10 AM PST - [Jess Lee](http://www.youtube.com/watch?v=W04XKIk73QQ) <br />
-11 AM PST - Usher <br />
+11 AM PST - [Usher](http://www.youtube.com/watch?v=YMxYLPxz7Hg) <br />
 
 **FRIDAY**, December 12 <br />
 10:00 AM PST - [Hadi Partovi](http://www.youtube.com/watch?v=eJ40qOodafo)
