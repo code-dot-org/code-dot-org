@@ -1,29 +1,29 @@
 goog.provide('Blockly.Msg.fa_af');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "actual";
-Blockly.Msg.ADD = "Add";
+Blockly.Msg.ACTUAL = "واقعی";
+Blockly.Msg.ADD = "اضافه کردن";
 Blockly.Msg.ADD_COMMENT = "افزودن نظر";
-Blockly.Msg.ADD_PARAMETER = "Add Parameter";
+Blockly.Msg.ADD_PARAMETER = "اضافه کردن پارامتر";
 Blockly.Msg.CHANGE_VALUE_TITLE = "تغییر مقدار:";
 Blockly.Msg.COLLAPSE_ALL = "جمع کردن بلوک ها";
 Blockly.Msg.COLLAPSE_BLOCK = "جمع کردن بلوک";
-Blockly.Msg.COLOUR_BLEND_COLOUR1 = "color 1";
-Blockly.Msg.COLOUR_BLEND_COLOUR2 = "color 2";
+Blockly.Msg.COLOUR_BLEND_COLOUR1 = "رنگ 1";
+Blockly.Msg.COLOUR_BLEND_COLOUR2 = "رنگ 2";
 Blockly.Msg.COLOUR_BLEND_HELPURL = "http://meyerweb.com/eric/tools/color-blend/";
 Blockly.Msg.COLOUR_BLEND_RATIO = "نسبت";
 Blockly.Msg.COLOUR_BLEND_TITLE = "ترکیب";
-Blockly.Msg.COLOUR_BLEND_TOOLTIP = "Blends two colors together with a given ratio (0.0 - 1.0).";
+Blockly.Msg.COLOUR_BLEND_TOOLTIP = "دو رنگ را به نسبت مشخص‌ شده ترکیب می‌کند (۰٫۰ - ۱٫۰).";
 Blockly.Msg.COLOUR_PICKER_HELPURL = "http://fa.wikipedia.org/wiki/%D8%B1%D9%86%DA%AF";
-Blockly.Msg.COLOUR_PICKER_TOOLTIP = "Choose a color from the palette.";
+Blockly.Msg.COLOUR_PICKER_TOOLTIP = "رنگی را از تخته رنگ انتخاب کنید.";
 Blockly.Msg.COLOUR_RANDOM_HELPURL = "http://randomcolour.com";
-Blockly.Msg.COLOUR_RANDOM_TITLE = "random color";
-Blockly.Msg.COLOUR_RANDOM_TOOLTIP = "Choose a color at random.";
+Blockly.Msg.COLOUR_RANDOM_TITLE = "رنگ تصادفی";
+Blockly.Msg.COLOUR_RANDOM_TOOLTIP = "انتخاب یک رنگ به شکل تصادفی.";
 Blockly.Msg.COLOUR_RGB_BLUE = "آبی";
 Blockly.Msg.COLOUR_RGB_GREEN = "سبز";
 Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.html";
 Blockly.Msg.COLOUR_RGB_RED = "قرمز";
-Blockly.Msg.COLOUR_RGB_TITLE = "color with";
-Blockly.Msg.COLOUR_RGB_TOOLTIP = "Create a color with the specified amount of red, green, and blue.  All values must be between 0 and 100.";
+Blockly.Msg.COLOUR_RGB_TITLE = "رنگ آمیزی با رنگ";
+Blockly.Msg.COLOUR_RGB_TOOLTIP = "یک رنگ با ترکیب مقدار مشخصی از قرمز و سبز و آبی ایجاد کنید.  همه مقادیر باید بین 0 و 100 باشند.";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "خارج شدن از حلقه";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "ادامه به حلقه  تکرار بعدی";
@@ -61,37 +61,37 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_UNTIL = "تکرار کن تا زمان�
 Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_WHILE = "تکرار در حالی که";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "تا زمانی که یک مقدار ناصحیح است، چند عبارت را انجام بده.";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "تا زمانی که یک مقدار صحیح است، چند عبارت را انجام بده.";
-Blockly.Msg.DEFINE_FUNCTION_DEFINE = "Define";
+Blockly.Msg.DEFINE_FUNCTION_DEFINE = "تعریف";
 Blockly.Msg.DELETE_BLOCK = "حذف بلوک";
-Blockly.Msg.DELETE_PARAMETER = "Delete parameter...";
-Blockly.Msg.DELETE_PARAMETER_TITLE = "This will delete all '%1' parameter occurrences. Are you sure?";
+Blockly.Msg.DELETE_PARAMETER = "حذف پارامتر...";
+Blockly.Msg.DELETE_PARAMETER_TITLE = "با این کار همه رخدادهای پارامتر  '%1' حذف خواهد شد. مطمئنی?";
 Blockly.Msg.DELETE_X_BLOCKS = "حذف بلوک‌های %1";
 Blockly.Msg.DISABLE_BLOCK = "غیرفعال‌سازی بلوک";
 Blockly.Msg.DUPLICATE_BLOCK = "تکراری";
 Blockly.Msg.ENABLE_BLOCK = "فعال‌سازی بلوک";
-Blockly.Msg.EXAMPLE = "Example";
-Blockly.Msg.EXAMPLE_DESCRIPTION = "Defines an example with expected and actual behavior";
+Blockly.Msg.EXAMPLE = "مثال";
+Blockly.Msg.EXAMPLE_DESCRIPTION = "یک مثال با رفتار مورد انتظار و واقعی را تعریف می کند";
 Blockly.Msg.EXPAND_ALL = "گسترش بلوک‌ها";
 Blockly.Msg.EXPAND_BLOCK = "گسترش بلوک";
-Blockly.Msg.EXPECTED = "expected";
+Blockly.Msg.EXPECTED = "انتظار می رود";
 Blockly.Msg.EXTERNAL_INPUTS = "ورودی‌های خارجی";
-Blockly.Msg.FUNCTION_CREATE = "Create a Function";
+Blockly.Msg.FUNCTION_CREATE = "یک تابع ایجاد کن";
 Blockly.Msg.FUNCTION_EDIT = "edit";
-Blockly.Msg.FUNCTION_NAME_LABEL = "Name your function:";
-Blockly.Msg.FUNCTION_DESCRIPTION_LABEL = "What is your function supposed to do?";
-Blockly.Msg.FUNCTION_PARAMETERS_LABEL = "What parameters does your function take?";
+Blockly.Msg.FUNCTION_NAME_LABEL = "نام تابعت را انتخاب کن:";
+Blockly.Msg.FUNCTION_DESCRIPTION_LABEL = "چه کاری قرار است تابع تو انجام دهد؟";
+Blockly.Msg.FUNCTION_PARAMETERS_LABEL = "چه پارامترهایی تابع تو می پذیرد؟";
 Blockly.Msg.FUNCTION_HEADER = "تابع";
-Blockly.Msg.FUNCTIONAL_CREATE = "New Block";
+Blockly.Msg.FUNCTIONAL_CREATE = "بلوک جدید";
 Blockly.Msg.FUNCTIONAL_EDIT = "edit";
 Blockly.Msg.FUNCTIONAL_NAME_LABEL = "نام";
-Blockly.Msg.FUNCTIONAL_TYPE_LABEL = "Choose type...";
-Blockly.Msg.FUNCTIONAL_DESCRIPTION_LABEL = "Description";
-Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL = "Domain";
-Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP = "Define a functional method";
-Blockly.Msg.FUNCTIONAL_RANGE_LABEL = "Range";
-Blockly.Msg.FUNCTIONAL_VARIABLE_CREATE = "Create a Variable";
-Blockly.Msg.FUNCTIONAL_VARIABLE_HEADER = "Variable";
-Blockly.Msg.FUNCTIONAL_VARIABLE_TYPE = "Type";
+Blockly.Msg.FUNCTIONAL_TYPE_LABEL = "نوع را انتخاب کن...";
+Blockly.Msg.FUNCTIONAL_DESCRIPTION_LABEL = "توضیحات";
+Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL = "دامنه";
+Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP = "یک متد تابعی را تعریف کن";
+Blockly.Msg.FUNCTIONAL_RANGE_LABEL = "محدوده";
+Blockly.Msg.FUNCTIONAL_VARIABLE_CREATE = "یک متغیر ایجاد کن";
+Blockly.Msg.FUNCTIONAL_VARIABLE_HEADER = "متغیر";
+Blockly.Msg.FUNCTIONAL_VARIABLE_TYPE = "نوع";
 Blockly.Msg.HELP = "راهنما";
 Blockly.Msg.INLINE_INPUTS = "ورودی‌های درون خطی";
 Blockly.Msg.LISTS_CREATE_EMPTY_HELPURL = "http://fa.wikipedia.org/wiki/لیست_پیوندی";
@@ -143,7 +143,7 @@ Blockly.Msg.LISTS_INLIST = "در فهرست";
 Blockly.Msg.LISTS_IS_EMPTY_HELPURL = "https://code.google.com/p/blockly/wiki/Lists#is_empty";
 Blockly.Msg.LISTS_IS_EMPTY_TITLE = "%1 خالی است";
 Blockly.Msg.LISTS_LENGTH_HELPURL = "https://code.google.com/p/blockly/wiki/Lists#length_of";
-Blockly.Msg.LISTS_LENGTH_INPUT_LENGTH = "length of";
+Blockly.Msg.LISTS_LENGTH_INPUT_LENGTH = "طول";
 Blockly.Msg.LISTS_LENGTH_TITLE = "طول %1";
 Blockly.Msg.LISTS_LENGTH_TOOLTIP = "طول یک فهرست را برمی‌گرداند.";
 Blockly.Msg.LISTS_REPEAT_HELPURL = "https://code.google.com/p/blockly/wiki/Lists#create_list_with";
@@ -303,11 +303,11 @@ Blockly.Msg.PROCEDURES_IFRETURN_WARNING = "اخطار: این بلوگ احتم�
 Blockly.Msg.PROCEDURES_MUTATORARG_TITLE = "نام ورودی:";
 Blockly.Msg.PROCEDURES_MUTATORCONTAINER_TITLE = "ورودی‌ها";
 Blockly.Msg.REMOVE_COMMENT = "حذف نظر";
-Blockly.Msg.RENAME_PARAMETER = "Rename parameter...";
-Blockly.Msg.RENAME_PARAMETER_TITLE = "Rename all '%1' parameters to:";
+Blockly.Msg.RENAME_PARAMETER = "پارامتر را تغییر نام دهید...";
+Blockly.Msg.RENAME_PARAMETER_TITLE = "نام تمام پارامترهای '%1' تغییر بده به نام:";
 Blockly.Msg.RENAME_VARIABLE = "تغییر نام متغیر...";
 Blockly.Msg.RENAME_VARIABLE_TITLE = "تغییر نام همهٔ متغیرهای «%1» به:";
-Blockly.Msg.SAVE_AND_CLOSE = "Save and Close";
+Blockly.Msg.SAVE_AND_CLOSE = "ذخیره و بستن";
 Blockly.Msg.TEXT_APPEND_APPENDTEXT = "الحاق متن";
 Blockly.Msg.TEXT_APPEND_HELPURL = "https://code.google.com/p/blockly/wiki/Text#Text_modification";
 Blockly.Msg.TEXT_APPEND_TO = "به";

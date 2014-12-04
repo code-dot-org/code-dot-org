@@ -181,7 +181,7 @@
           <title name="DIR">moveForward</title>
           <value name="VALUE">
             <block type="math_number">
-              <title name="NUM">100</title>
+              <title name="NUM">???</title>
             </block>
           </value>
         </block>
@@ -189,7 +189,7 @@
           <title name="DIR">turnRight</title>
           <value name="VALUE">
             <block type="math_number">
-              <title name="NUM">90</title>
+              <title name="NUM">???</title>
             </block>
           </value>
         </block>
@@ -197,7 +197,7 @@
           <title name="DIR">turnLeft</title>
           <value name="VALUE">
             <block type="math_number">
-              <title name="NUM">90</title>
+              <title name="NUM">???</title>
             </block>
           </value>
         </block>
@@ -205,14 +205,14 @@
           <title name="DIR">jumpForward</title>
           <value name="VALUE">
             <block type="math_number">
-              <title name="NUM">100</title>
+              <title name="NUM">???</title>
             </block>
           </value>
         </block>
         <block type="draw_width" inline="false">
           <value name="WIDTH">
             <block type="math_number">
-              <title name="NUM">1</title>
+              <title name="NUM">???</title>
             </block>
           </value>
         </block>

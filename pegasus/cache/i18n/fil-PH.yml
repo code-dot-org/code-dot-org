@@ -1,16 +1,17 @@
 "fil-PH":
   hello: Mabuhay!
-  select_language: Please select your language
+  select_language: Piliin ang iyong wika
   computer_science: Computer Science
   computer_science_edweek: Computer Science Education Week
   csedweek_dates: Disyembre 9-15, 2013
-  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
-    <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">plan your Hour of Code</a>'
+  csedweek_banner_hoc: 'Ang <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold">Hour of Code</a> ay parating na. Tinatawagan ang lahat ng guro
+    at mga organizer, <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold">pagplanuhan ang iyong Hour of Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
-    none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
-  n_have_learned_an_hoc: "<h1>#</h1><h3>ay sumubok ng</h3><h2>HOUR of CODE&trade;</h2>"
+    none; font-weight: 400">Ikaw ba ay isang CS teacher? Tingnan ang ibang mga resource
+    para sa CSEdWeek</a>'
+  n_have_learned_an_hoc: <h1>#</h1><h3>ay nakasubok na ng</h3><h2>Hour of Code</h2>
   anybody_can_learn: Lahat ay puwedeng matuto.
   learn_now: Matuto Ngayon
   petition_message: Ang bawat estudyante sa bawat paaralan ay dapat may pagkakataon
@@ -24,21 +25,21 @@
   twentyhours_heading: Subukan ang aming Intro sa kurso ng Computer Science
   twentyhours_text: Tapos ka na sa iyong unang Hour of Code? Matuto pa ng ibang computer
     science at mga programming concept sa follow-up na kurso na ito.
-  hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
+  hoc2014_heading: Sumali sa <a href="http://hourofcode.com">Hour of Code</a><br/>December
     8 - 14, 2014<br/>
   hoc2014_students: Students
-  hoc2014_try: Try it
-  hoc2014_teachers: Teachers
-  hoc2014_host: Host it
-  hoc2014_everyone: Everyone
-  hoc2014_support: Support it
-  hoc2014_whatishoc: What is the Hour of Code?
+  hoc2014_try: Subukan mo
+  hoc2014_teachers: Mga guro
+  hoc2014_host: I-host ito
+  hoc2014_everyone: Lahat
+  hoc2014_support: Suportahan ito
+  hoc2014_whatishoc: Ano ba ang Hour of Code?
   twentyhours_trynow: Subukan ngayon
   california_heading: Tanungin ang iyong guro sa eskwelahan na magturo ng computer
     science
-  california_text: Kahit sinong guro ay maaaring ihandog ang aming <a href='http://learn.code.org/'>libreng
-    intro na kurso</a>.  Kahit anong elementary school ay puwedeng <a href='http://code.org/educate/k5'>magturo
-    ng computer science</a>. Sabihan ang mga high school na <a href='http://code.org/educate/districts'>makipag-partner
+  california_text: Kahit sinong guro ay kayang ibigay ang aming <a href='http://studio.code.org/'>libreng
+    mga kurso</a>.  Kahit anong elementary school ay kayang <a href='http://code.org/educate/k5'>magturo
+    ng computer science</a>. Tanungin ang mga high school na <a href='http://code.org/educate/districts'>makipagtulugan
     sa amin.
   california_button: Dagdagan ang Kaalaman
   flappy_heading: Flappy Birthday sa Code.org
@@ -54,7 +55,7 @@
     Matuto ng repeat-loops, if-then statements, at basic na mga algorithm.
   all_ages: Lahat ng edad
   beginner: Baguhan
-  n_participants: "# na mga kalahok"
+  n_participants: '# na mga kalahok'
   go: Pumunta
   thank_you_: Maraming salamat!
   congratulations: Maligayang pagbati!
@@ -73,9 +74,9 @@
     subukan rin ito! Gusto namin na buong mundo ay matuto.
   personalize_certificate: Gawing pansarili ang iyong certificate
   share_achievement: Ibahagi ang iyong achievement
-  beyond_hour_message: Ipagpatuloy ang aming <a href='http://learn.code.org'>20-oras
-    na kurso</a>, o kaya tingnan ang iba pang mga pagpipilian para <a href='/learn/beyond'>Matuto
-    lampas ng Isang Oras</a>.
+  beyond_hour_message: Magpatuloy sa <a href='http://studio.code.org'>ibang kurso</a>,
+    o kaya tingnan ang ibang option upang <a href='/learn/beyond'>Matuto ng higit
+    sa Isang Oras</a>.
   leaderboards_for_hoc: Mga leaderboard para sa Hour of Code.
   support_url: http://support.code.org/
   country: Bansa
@@ -90,10 +91,10 @@
   thanks_for_voting: Salamat sa pagboto!
   share_on_facebook: Ibahagi sa Facebook
   share_on_twitter: Ibahagi sa Twitter
-  beyond_an_hour: Lampas sa HOUR OF CODE >
+  beyond_an_hour: Higit pa sa Hour of Code >
   get_started: Panimula
   i_agree: Ako ay sumasang-ayon
-  participant_select: "- Pumili -"
+  participant_select: '- Pumili -'
   participant_student: Estudyante
   participant_parent: Magulang
   participant_educator: Tagapagturo
@@ -102,8 +103,8 @@
   i_am_a: Ako ay
   never_spam: Hindi kami magpapadala ng mga mensahe na hindi importante
   enter_country: Ilagay ang bansa kung asa labas ng United States
-  used_infrequent_updates: Only used for infrequent updates
-  privacy_practices_children: See our privacy practices for children
+  used_infrequent_updates: Ginagamit sa bihirang mga update
+  privacy_practices_children: Tingnan ang privacy practice para sa mga bata
   petition_thankyou: Maraming salamat sa pagpirma ng petisyon
   continue_learning_header: Magpatuloy matuto ng lampas sa Isang Oras
   continue_learning_body: Maraming mga pagpipilian. Maaari kang matuto online, o sa
@@ -122,17 +123,17 @@
     koponan!
   help_recruit: Tumulong sa pag regruit ng marami pang mga coder!
   lines_of_code: HIGIT SA <b># LINES OF CODE</b> NAKASULAT AYON SA PETSA.
-  lines_of_code_alt: "<b>#</b> MGA LINYA NG CODE NA ISINULAT NG MGA ESTUDYANTE"
+  lines_of_code_alt: <b>#</b> MGA LINYA NG CODE NA ISINULAT NG MGA ESTUDYANTE
   who_has_done_hoc: 'Sino na ang nakasubok ng #HourOfCode? @codeorg'
   hoc_leaderboards: Ang mga Leaderboard ng Hour of Code
-  students_and_lines: "%{students} na mga estudyante ang natapos ang Hour of Code
-    at nakapagsulat ng %{lines} linya ng code."
+  students_and_lines: '%{students} na mga estudyante ang natapos ang Hour of Code
+    at nakapagsulat ng %{lines} linya ng code.'
   start_hoc: Umpisahan ang Hour of Code ngayon
   contact_form_topic_press: Press/media (interview o speaking engagement)
-  studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
-  studiobar_elementary_title: Elementary courses
+  studiobar_title: Tingnan ang <a href='http://studio.code.org'>Code Studio</a>
+  studiobar_elementary_title: Mga kurso pang elementary
   studiobar_elementary_body: Our three new courses for K&#8209;5
-  studiobar_hoc_title: The Hour of Code
+  studiobar_hoc_title: Ang Hour of Code
   studiobar_hoc_body: Learn to code with Angry Birds
   studiobar_flappy_title: Flappy Code
   studiobar_flappy_body: Make and share your own Flappy game
@@ -168,7 +169,7 @@
   class_submission_out_of_school_other: Ibang asa labas ng paaralan
   class_submission_online: Online
   class_submission_online_programming_class: Online na programming class
-  class_submission_online_teacher_resource: Online na teacher resource
+  class_submission_online_teacher_resource: Online resource ng guro
   class_submission_online_other: Ibang online
   class_submission_level_preschool: Preschool
   class_submission_level_elementary: Elementarya
@@ -195,7 +196,7 @@
   petition_age: Age
   dashboard_landing_title: Teacher Home Page
   dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
-  dashboard_landing_video: Watch this video
+  dashboard_landing_video: Panoorin ang video na ito
   dashboard_landing_watch_video: for a tour of the new features!
   dashboard_landing_view_as_student: View this site as a student
   dashboard_landing_students_title: Your students
@@ -364,6 +365,7 @@
   more_resources_educators: More resources for teachers and educators
   participants: participants
   teachers_notes: Teacher's Notes
+  teachers_notes_hoc: 'Teachers: Read important educator notes here'
   previous: Previous
   next: Next
   older_systems: Tutorials that work on older systems
@@ -373,6 +375,7 @@
   mobile_devices: Tutorials for mobile devices
   frozen_name: Code with Anna and Elsa
   codeorg_name: Isulat ang iyong unang computer program
+  codeintl_name: Isulat ang iyong unang computer program
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: An introduction to JavaScript
   khanes_name: An introduction to JavaScript
@@ -394,7 +397,6 @@
   codespark_name: The Foos (pre-readers welcome)
   kodable_name: Kodable
   tynkerapp_name: Tynker - on tablets
-  hopscotch_name: 'Hopscotch: Code on your iPad'
   robomindnl_name: Program a virtual robot
   flappy_name: Make a Flappy game
   bitsbox_name: Bitsbox - make a game
@@ -407,6 +409,7 @@
   projguts_name: Rock, Paper, Scissors
   frozen_gradelevel: Ages 8+
   codeorg_gradelevel: Ages 4-104
+  codeintl_gradelevel: Ages 4-104
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Middle school +
   khanes_gradelevel: Middle school +
@@ -428,7 +431,6 @@
   codespark_gradelevel: Elementarya
   kodable_gradelevel: Elementarya
   tynkerapp_gradelevel: Ages 5-13
-  hopscotch_gradelevel: Middle school +
   robomindnl_gradelevel: Ages 8-13
   flappy_gradelevel: Ages 4-104
   bitsbox_gradelevel: Elementarya
@@ -441,6 +443,7 @@
   projguts_gradelevel: Ages 10-13
   frozen_platformtext: Modern browsers + tablets
   codeorg_platformtext: Modern browsers, smartphones, tablets
+  codeintl_platformtext: Modern browsers, smartphones, tablets
   thinkersmithspanish_platformtext: Unplugged
   khan_platformtext: Modern Web browsers
   khanes_platformtext: Modern Web browsers
@@ -462,7 +465,6 @@
   codespark_platformtext: iOS, Android (or web browser)
   kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, Android tablets
-  hopscotch_platformtext: iPad
   robomindnl_platformtext: Modern web browsers, Mobile web
   flappy_platformtext: Modern browsers, smartphones, tablets
   bitsbox_platformtext: Modern web browsers
@@ -476,6 +478,7 @@
   frozen_shortdescription: Let's use code to join Anna and Elsa as they explore the
     magic and beauty of ice.
   codeorg_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
+  codeintl_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Learn to draw in JavaScript
   khanes_shortdescription: Learn to draw in JavaScript
@@ -501,7 +504,6 @@
   kodable_shortdescription: A fun iPad game to teach computer programming concepts
   tynkerapp_shortdescription: Learn to code by solving fun puzzles and build your
     own mobile games.
-  hopscotch_shortdescription: Learn visual programming on an iPad
   robomindnl_shortdescription: Write code for a virtual robot
   flappy_shortdescription: Make your own game - Flappy Bird, Shark, or Submarine
   bitsbox_shortdescription: Code a series of apps to play and share, using real Javascript.
@@ -517,6 +519,10 @@
     magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
     and make a winter wonderland that you can then share with your friends!
   codeorg_longdescription: Learn the basic concepts of Computer Science with drag
+    and drop programming. This is a game-like, self-directed tutorial starring video
+    lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
+    repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
+  codeintl_longdescription: Learn the basic concepts of Computer Science with drag
     and drop programming. This is a game-like, self-directed tutorial starring video
     lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
     repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
@@ -596,9 +602,6 @@
     coding puzzles and learn programming concepts in each level. Personalize games
     with animated characters, multiple levels and rich props. Lots of fun activities
     to choose from!
-  hopscotch_longdescription: Student-guided tutorial on the iPad using the Hopscotch
-    programming language. Students will build games and apps for their iPad on their
-    iPad. Students can work individually or with friends (up to 3 per iPad).
   robomindnl_longdescription: 'Students learn the basics of programming by controlling
     their own virtual robot. The online course is fully self-contained with short
     presentations, movies, quizzes and automatic guidance/hints to help with the programming
@@ -958,8 +961,3 @@
     program because we believe play is a powerful teacher. Whether you're an educator
     or a parent, SPRK lessons give kids a fun crash course in programming robots while
     sharpening their skills in math and science.
-  codeintl_name: "Write your first computer program"
-  codeintl_gradelevel: "Ages 4-104"
-  codeintl_platformtext: "Modern browsers, smartphones, tablets"
-  codeintl_shortdescription: "Learn to code with Mark Zuckerberg and Angry Birds!"
-  codeintl_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages."
