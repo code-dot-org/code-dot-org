@@ -15,8 +15,6 @@ max_age: 60
 ---
 -cert_id = params[:i]
 
-%script{:src=>'/js/print-functions.js'}
-
 -if cert_id
   -share_url = "http://#{request.host_with_port}/certificates/#{cert_id}"
 -else
