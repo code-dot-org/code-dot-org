@@ -4485,6 +4485,9 @@ Blockly.Xml.blockToDom_ = function(block, ignoreChildBlocks) {
   if(/^procedures_def/.test(block.type) && block.userCreated) {
     element.setAttribute("usercreated", true)
   }
+  if(block.htmlId) {
+    element.setAttribute("id", block.htmlId)
+  }
   if(block.nextConnection && !ignoreChildBlocks) {
     var nextBlock = block.nextConnection.targetBlock();
     if(nextBlock) {
