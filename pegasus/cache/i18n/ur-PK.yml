@@ -10,13 +10,13 @@
     font-weight:bold">plan your Hour of Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
-  n_have_learned_an_hoc: "<h1>#</h1><h3>have tried an</h3><h2>HOUR of CODE</h2>"
+  n_have_learned_an_hoc: <h1>#</h1><h3>have tried an</h3><h2>HOUR of CODE</h2>
   anybody_can_learn: 'Her koi seekh sakta hai. '
   learn_now: Abi sikhiye
   petition_message: Sign your name if you think every student in every school should
     have the opportunity to learn computer science
   petition_sign_message: 'If you agree, sign your name.  Join # others.'
-  name: "نام"
+  name: نام
   email: Email
   zipcode: ZIP code ya Mulk
   submit: Jama Kerwaein
@@ -51,7 +51,7 @@
     statements, and basic algorithms.
   all_ages: Her umer k log
   beginner: ibtydai
-  n_participants: "# participants"
+  n_participants: '# participants'
   go: jana
   thank_you_: Shukarya!
   congratulations: Mubarik ho!
@@ -118,8 +118,8 @@
   lines_of_code_alt: Talaba se likhi gae code ki lines#
   who_has_done_hoc: 'Who has done the #HourOfCode? @codeorg'
   hoc_leaderboards: The Hour of Code Leaderboards
-  students_and_lines: "%{students} students have done the Hour of Code and written
-    %{lines} lines of code."
+  students_and_lines: '%{students} students have done the Hour of Code and written
+    %{lines} lines of code.'
   start_hoc: Start the Hour of Code now
   contact_form_topic_press: Press/media (interview or speaking engagement)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
@@ -184,7 +184,7 @@
   volunteer_engineer_submission_experience_university_student_or_researcher: Current
     university student (or researcher)
   volunteer_engineer_submission_experience_software_professional: Software professional
-  petition_age: "عمر"
+  petition_age: عمر
   dashboard_landing_title: Teacher Home Page
   dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
   dashboard_landing_video: Watch this video
@@ -260,13 +260,13 @@
   dashboard_students_new_section: You've created a new section! Now add your students
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
   dashboard_students_placeholder_name: Student Name
-  dashboard_students_name: "نام"
-  dashboard_students_age: "عمر"
+  dashboard_students_name: نام
+  dashboard_students_age: عمر
   dashboard_students_gender: Jinss
   dashboard_students_male: Male
   dashboard_students_female: Female
   dashboard_students_secret: Secret
-  dashboard_students_password: "پاس ورڈ"
+  dashboard_students_password: پاس ورڈ
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: Completed Levels
@@ -356,6 +356,7 @@
   more_resources_educators: More resources for teachers and educators
   participants: participants
   teachers_notes: Teacher's Notes
+  teachers_notes_hoc: 'Teachers: Read important educator notes here'
   previous: Previous
   next: Next
   older_systems: Tutorials that work on older systems
@@ -387,7 +388,6 @@
   codespark_name: The Foos (pre-readers welcome)
   kodable_name: Kodable
   tynkerapp_name: Tynker - on tablets
-  hopscotch_name: 'Hopscotch: Code on your iPad'
   robomindnl_name: Program a virtual robot
   flappy_name: Make a Flappy game
   bitsbox_name: Bitsbox - make a game
@@ -422,7 +422,6 @@
   codespark_gradelevel: Elementary
   kodable_gradelevel: Elementary
   tynkerapp_gradelevel: Ages 5-13
-  hopscotch_gradelevel: Middle school +
   robomindnl_gradelevel: Ages 8-13
   flappy_gradelevel: Ages 4-104
   bitsbox_gradelevel: Elementary
@@ -457,7 +456,6 @@
   codespark_platformtext: iOS, Android (or web browser)
   kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, Android tablets
-  hopscotch_platformtext: iPad
   robomindnl_platformtext: Modern web browsers, Mobile web
   flappy_platformtext: Modern browsers, smartphones, tablets
   bitsbox_platformtext: Modern web browsers
@@ -497,7 +495,6 @@
   kodable_shortdescription: A fun iPad game to teach computer programming concepts
   tynkerapp_shortdescription: Learn to code by solving fun puzzles and build your
     own mobile games.
-  hopscotch_shortdescription: Learn visual programming on an iPad
   robomindnl_shortdescription: Write code for a virtual robot
   flappy_shortdescription: Make your own game - Flappy Bird, Shark, or Submarine
   bitsbox_shortdescription: Code a series of apps to play and share, using real Javascript.
@@ -596,9 +593,6 @@
     coding puzzles and learn programming concepts in each level. Personalize games
     with animated characters, multiple levels and rich props. Lots of fun activities
     to choose from!
-  hopscotch_longdescription: Student-guided tutorial on the iPad using the Hopscotch
-    programming language. Students will build games and apps for their iPad on their
-    iPad. Students can work individually or with friends (up to 3 per iPad).
   robomindnl_longdescription: 'Students learn the basics of programming by controlling
     their own virtual robot. The online course is fully self-contained with short
     presentations, movies, quizzes and automatic guidance/hints to help with the programming
@@ -958,8 +952,3 @@
     program because we believe play is a powerful teacher. Whether you're an educator
     or a parent, SPRK lessons give kids a fun crash course in programming robots while
     sharpening their skills in math and science.
-  codeintl_name: "Write your first computer program"
-  codeintl_gradelevel: "Ages 4-104"
-  codeintl_platformtext: "Modern browsers, smartphones, tablets"
-  codeintl_shortdescription: "Learn to code with Mark Zuckerberg and Angry Birds!"
-  codeintl_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages."

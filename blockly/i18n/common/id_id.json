@@ -23,6 +23,13 @@
   "end": "akhir",
   "emptyBlocksErrorMsg": "Blok \"Ulangi\" atau blok \"Jika\" membutuhkan blok lain di dalamnya supaya bisa bekerja. Pastikan blok yang berada didalam diletakkan secara pas.",
   "emptyFunctionBlocksErrorMsg": "Blok fungsi membutuhkan blok lain di dalamnya agar dapat bekerja.",
+  "errorEmptyFunctionBlockModal": "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block.",
+  "errorIncompleteBlockInFunction": "Click \"edit\" to make sure you don't have any blocks missing inside your function definition.",
+  "errorParamInputUnattached": "Remember to attach a block to each parameter input on the function block in your workspace.",
+  "errorUnusedParam": "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block.",
+  "errorRequiredParamsMissing": "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition.",
+  "errorUnusedFunction": "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program.",
+  "errorQuestionMarksInNumberField": "Try replacing \"???\" with a value.",
   "extraTopBlocks": "Anda memiliki blok tidak terpasang. Apakah maksud anda untuk menempelkannya ke blok \"when run\"?",
   "finalStage": "Horee! Anda berhasil menyelesaikan tahap akhir.",
   "finalStageTrophies": "Horee! Anda berhasil menyelesaikan tahap akhir dan memenangkan {numTrophies, plural, one {piala} other {piala #}}.",
@@ -53,6 +60,7 @@
   "showCodeHeader": "Tampilkan kode",
   "showBlocksHeader": "Show Blocks",
   "showGeneratedCode": "Tampilkan kode",
+  "stringEquals": "string=?",
   "subtitle": "Perangkat pemrograman visual",
   "textVariable": "teks",
   "tooFewBlocksMsg": "Anda telah gunakan semua jenis blok diperlukan, tetapi cobalah menggunakan lebih banyak blok-blok ini supaya anda dapat menyelesaikan teka-teki ini.",
@@ -82,5 +90,5 @@
   "signup": "Daftarlah untuk mengikuti kursus introduksi",
   "hintHeader": "Berikut adalah tip:",
   "genericFeedback": "Lihatlah hasil anda dan cobalah untuk memperbaiki program Anda.",
-  "defaultTwitterText": "Check out what I made"
+  "defaultTwitterText": "Lihat apa yang saya buat"
 }
