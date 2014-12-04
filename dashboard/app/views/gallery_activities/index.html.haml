@@ -2,7 +2,7 @@
 - content_for :head do
   = tag 'meta', property: 'og:title', content: @page_title
   = tag 'meta', property: 'og:image', content: image_url('gallery_thumbnail.png')
-  = tag 'meta', property: 'og:description', content: strip_tags(t('gallery.picture_count', days: @days, count: number_with_delimiter(GalleryActivity.count)))
+  = tag 'meta', property: 'og:description', content: strip_tags(t('gallery.picture_count', days: @days, count: number_with_delimiter(GalleryActivity.pseudocount)))
  
 .row
   %h1{style: 'text-align:center;'}
@@ -18,7 +18,7 @@
   .row
     .span2
     .span8.infobox
-      = t('gallery.activity_count', days: @days, count: number_with_delimiter(GalleryActivity.count)).html_safe
+      = t('gallery.activity_count', days: @days, count: number_with_delimiter(GalleryActivity.pseudocount)).html_safe
     .span2
 
   .row
