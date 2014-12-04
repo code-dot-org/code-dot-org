@@ -58,6 +58,7 @@ max_age: 60
       = view :congrats_certificate
       = view :congrats_share, cert_id:cert_id, facebook:facebook, twitter:twitter
 
+  - ## Printing options inserted with AJAX
   #print-option
 
   %div{:style=>'clear: both; height:30px'}
@@ -123,11 +124,9 @@ max_age: 60
           }
         });
       }
-      if (document.referrer.indexOf("3000") != -1 && document.referrer.indexOf("frozen") == -1) {
+      if (document.referrer.indexOf("studio") != -1 && document.referrer.indexOf("frozen") == -1) {
         $('#print-option').hide();
       }
-    }).fail(function () {
-      alert('fail');
     });
 
     // placeholder text for non-HTML5 browsers
