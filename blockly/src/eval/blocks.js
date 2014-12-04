@@ -139,6 +139,18 @@ exports.install = function(blockly, blockInstallOptions) {
   });
 
   installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'functional_polygon',
+    blockTitle: msg.polygonBlockTitle(),
+    apiName: 'polygon',
+    args: [
+      { name: 'SIDES', type: 'Number' },
+      { name: 'LENGTH', type: 'Number' },
+      { name: 'STYLE', type: 'string' },
+      { name: 'COLOR', type: 'string' }
+    ]
+  });
+
+  installFunctionalBlock(blockly, generator, gensym, {
     blockName: 'functional_text',
     blockTitle: msg.textBlockTitle(),
     apiName: 'text',
