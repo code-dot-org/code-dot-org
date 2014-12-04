@@ -16465,7 +16465,7 @@ exports.parseElement = function(text) {
 };
 
 },{}],59:[function(require,module,exports){
-var MessageFormat = require("messageformat");MessageFormat.locale.az=function(n){return n===1?"one":"other"}
+var MessageFormat = require("messageformat");MessageFormat.locale.en=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "və"};
 
 exports.booleanTrue = function(d){return "doğru"};
@@ -16532,7 +16532,7 @@ exports.extraTopBlocks = function(d){return "Qoşulmamış bloklarınız var. On
 
 exports.finalStage = function(d){return "Təbriklər! Siz son mərhələni başa vurdunuz."};
 
-exports.finalStageTrophies = function(d){return "Təbriklər! Siz sonuncu mərhələni tamamladınız və "+p(d,"numTrophies",0,"az",{"one":"bir kubok","other":n(d,"numTrophies")+" kubok"})+" qazandınız."};
+exports.finalStageTrophies = function(d){return "Təbriklər! Siz sonuncu mərhələni tamamladınız və "+p(d,"numTrophies",0,"en",{"one":"bir kubok","other":n(d,"numTrophies")+" kubok"})+" qazandınız."};
 
 exports.finish = function(d){return "Finish"};
 
@@ -16556,15 +16556,15 @@ exports.missingBlocksErrorMsg = function(d){return "Bu tapmacanı həll etmək �
 
 exports.nextLevel = function(d){return "Təbriklər! Siz "+v(d,"puzzleNumber")+" nömrəli tapmacanı tamamladınız."};
 
-exports.nextLevelTrophies = function(d){return "Təbriklər! Siz "+v(d,"puzzleNumber")+" nömrəli tapmacanı tamamladınız və "+p(d,"numTrophies",0,"az",{"one":"bir kubok","other":n(d,"numTrophies")+" kubok"})+" qazandınız."};
+exports.nextLevelTrophies = function(d){return "Təbriklər! Siz "+v(d,"puzzleNumber")+" nömrəli tapmacanı tamamladınız və "+p(d,"numTrophies",0,"en",{"one":"bir kubok","other":n(d,"numTrophies")+" kubok"})+" qazandınız."};
 
 exports.nextStage = function(d){return "Təbriklər! Siz "+v(d,"stageName")+" mərhələsini tamamladınız."};
 
-exports.nextStageTrophies = function(d){return "Təbriklər! Siz "+v(d,"stageName")+" mərhələsini tamamladınız və "+p(d,"numTrophies",0,"az",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+" qazandınız."};
+exports.nextStageTrophies = function(d){return "Təbriklər! Siz "+v(d,"stageName")+" mərhələsini tamamladınız və "+p(d,"numTrophies",0,"en",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+" qazandınız."};
 
-exports.numBlocksNeeded = function(d){return "Təbriklər! Siz "+v(d,"puzzleNumber")+" nömrəli tapmacanı tamamladınız. (Amma siz cəmi "+p(d,"numBlocks",0,"az",{"one":"1 blokdan","other":n(d,"numBlocks")+" blokdan"})+" istifadə edə bilərdiniz)"};
+exports.numBlocksNeeded = function(d){return "Təbriklər! Siz "+v(d,"puzzleNumber")+" nömrəli tapmacanı tamamladınız. (Amma siz cəmi "+p(d,"numBlocks",0,"en",{"one":"1 blokdan","other":n(d,"numBlocks")+" blokdan"})+" istifadə edə bilərdiniz)"};
 
-exports.numLinesOfCodeWritten = function(d){return "Siz indicə "+p(d,"numLines",0,"az",{"one":"bir sətir","other":n(d,"numLines")+" sətir"})+" kod yazdınız!"};
+exports.numLinesOfCodeWritten = function(d){return "Siz indicə "+p(d,"numLines",0,"en",{"one":"bir sətir","other":n(d,"numLines")+" sətir"})+" kod yazdınız!"};
 
 exports.play = function(d){return "play"};
 
@@ -16604,7 +16604,7 @@ exports.toolboxHeader = function(d){return "bloklar"};
 
 exports.openWorkspace = function(d){return "Bu necə işləyir?"};
 
-exports.totalNumLinesOfCodeWritten = function(d){return "Ümumi cəm: "+p(d,"numLines",0,"az",{"one":"1 sətir","other":n(d,"numLines")+" sətir"})+" kod."};
+exports.totalNumLinesOfCodeWritten = function(d){return "Ümumi cəm: "+p(d,"numLines",0,"en",{"one":"1 sətir","other":n(d,"numLines")+" sətir"})+" kod."};
 
 exports.tryAgain = function(d){return "Bir daha cəhd edin"};
 
@@ -16652,7 +16652,7 @@ exports.defaultTwitterText = function(d){return "Check out what I made"};
 
 
 },{"messageformat":72}],60:[function(require,module,exports){
-var MessageFormat = require("messageformat");MessageFormat.locale.az=function(n){return n===1?"one":"other"}
+var MessageFormat = require("messageformat");MessageFormat.locale.en=function(n){return n===1?"one":"other"}
 exports.atHoneycomb = function(d){return "at honeycomb"};
 
 exports.atFlower = function(d){return "at flower"};
