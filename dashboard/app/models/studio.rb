@@ -12,6 +12,7 @@ class Studio < Grid
     sprites_hidden_to_start
     coordinate_grid_background
     free_play
+    disable_sharing
   )
 
   def self.create_from_level_builder(params, level_params)

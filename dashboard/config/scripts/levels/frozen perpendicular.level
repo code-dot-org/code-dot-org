@@ -19,8 +19,10 @@
     "impressive": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "callout_json": "[\r\n  {\"localization_key\": \"turn_elsa\", \"element_id\": \"[block-id='1']\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top left\", \"at\": \"bottom right\", \"adjust\": {\"x\": 22, \"y\":60}},\r\n    \"style\": { \"classes\": \"no-tip\" }}\r\n  }\r\n]",
-    "ideal": "4"
+    "callout_json": "[\r\n  {\"localization_key\": \"turn_elsa\", \"element_id\": \"#turn_elsa\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}}\r\n  }\r\n]",
+    "ideal": "4",
+    "embed": "false",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
@@ -30,7 +32,7 @@
           <title name="DIR">moveForward</title>
           <title name="VALUE" config="50,100,150,200,300">100</title>
         </block>
-        <block type="draw_turn_by_constant_dropdown">
+        <block type="draw_turn_by_constant_dropdown" id="turn_elsa">
           <title name="DIR">turnRight</title>
           <title name="VALUE" config="45,60,90,120,180">90</title>
         </block>
