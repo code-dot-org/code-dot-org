@@ -61,19 +61,6 @@ post '/v2/sections/:id/students' do |id|
   JSON.pretty_generate(DashboardStudent.fetch_if_allowed(added_students, dashboard_user_id))
 end
 
-patch '/v2/sections/:id/students' do |id|
-  only_for 'code.org'
-  dont_cache
-  unsupported_media_type! unless payload = request.json_body
-  forbidden! unless section = DashboardSection.fetch_if_teacher(id, dashboard_user_id)
-  section.set_students(payload)
-  content_type :json
-  JSON.pretty_generate(section.to_hash[:students])
-end
-post '/v2/sections/:id/students/update' do |id|
-  call(env.merge('REQUEST_METHOD'=>'PATCH', 'PATH_INFO'=>"/v2/sections/#{id}/students"))
-end
-
 delete '/v2/sections/:id/students/:student_id' do |id, student_id|
   only_for 'code.org'
   dont_cache

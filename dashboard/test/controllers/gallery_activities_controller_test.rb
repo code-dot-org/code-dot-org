@@ -1,3 +1,4 @@
+
 require 'test_helper'
 
 class GalleryActivitiesControllerTest < ActionController::TestCase 
@@ -12,6 +13,13 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
     @new_activity = create(:activity, user: @user, level: create(:level, game: Game.find_by_app(Game::PLAYLAB)))
 
     @autosaved_gallery_activity = create(:gallery_activity, user: @user, autosaved: true)
+  end
+
+  test "index works with empty gallery" do
+    GalleryActivity.destroy_all
+    
+    get :index
+    assert_response :success
   end
 
   test "should show index" do
@@ -44,7 +52,7 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
   end
 
   test "should show index with thousands of pictures with a delimiter in the count" do
-    GalleryActivity.stubs(:count).returns(14320) # mock because actually creating takes forever
+    GalleryActivity.stubs(:pseudocount).returns(14320) # mock because actually creating takes forever
 
     # index is public
     get :index
