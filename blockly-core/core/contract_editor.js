@@ -183,7 +183,7 @@ Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreatio
   }
 
   this.functionDefinitionHeader_ = new Blockly.SVGHeader(Blockly.modalBlockSpace.svgBlockCanvas_,
-    { headerText: "Definition" /** TODO(bjordan): localize */ }
+    { headerText: Blockly.Msg.DEFINE_HEADER_DEFINITION }
   );
 
   this.position_();
