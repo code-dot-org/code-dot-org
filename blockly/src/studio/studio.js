@@ -155,7 +155,8 @@ function loadLevel() {
   Studio.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Studio.minWorkspaceHeight = level.minWorkspaceHeight;
   Studio.softButtons_ = level.softButtons || {};
-  Studio.protagonistSpriteIndex = level.protagonistSpriteIndex;
+  // protagonistSpriteIndex was originally mispelled. accept either spelling.
+  Studio.protagonistSpriteIndex = level.protagonistSpriteIndex || level.protaganistSpriteIndex;
 
   if (level.avatarList) {
     Studio.startAvatars = level.avatarList.slice();
@@ -1562,7 +1563,7 @@ Studio.onPuzzleComplete = function() {
     Studio.testResults = BlocklyApps.getTestResults(levelComplete);
   }
 
-  if (Studio.testResults >= BlocklyApps.TestResults.FREE_PLAY) {
+  if (Studio.testResults >= BlocklyApps.TestResults.TOO_MANY_BLOCKS_FAIL) {
     BlocklyApps.playAudio('win');
   } else {
     BlocklyApps.playAudio('failure');
@@ -2541,7 +2542,33 @@ Studio.attachEventHandler = function (opts) {
   registerEventHandler(Studio.eventHandlers, opts.eventName, opts.func);
 };
 
+/**
+ * Return true if all of the blocks underneath when_run blocks have had their
+ * commands executed
+ */
+Studio.allWhenRunBlocksComplete = function () {
+  for (var i = 0; i < Studio.eventHandlers.length; i++) {
+    if (Studio.eventHandlers[i].name === 'whenGameStarts' &&
+        Studio.eventHandlers[i].cmdQueue.length !== 0) {
+      return false;
+    }
+  }
+  return true;
+};
+
 Studio.timedOut = function() {
+  // If the only event block that had children is when_run, and those commands
+  // are finished executing, don't wait for the timeout.
+  // If we have additional event blocks that DO have children, we don't timeout
+  // until timeoutFailureTick
+  if (level.timeoutAfterWhenRun) {
+    if (Studio.eventHandlers.length === 0 || (Studio.eventHandlers.length === 1 &&
+        Studio.eventHandlers[0].name === 'whenGameStarts' &&
+        Studio.allWhenRunBlocksComplete())) {
+    return true;
+    }
+  }
+
   return Studio.tickCount > Studio.timeoutFailureTick;
 };
 

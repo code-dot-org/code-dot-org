@@ -37,7 +37,7 @@ module LevelsHelper
     "#{root_url.chomp('/')}#{path}"
   end
 
-  def set_videos_and_blocks_and_callouts
+  def set_videos_and_blocks_and_callouts_and_instructions
     select_and_track_autoplay_video
 
     if @level.is_a? Blockly
@@ -46,6 +46,7 @@ module LevelsHelper
     end
 
     select_and_remember_callouts if @script_level
+    localize_levelbuilder_instructions
   end
 
   def select_and_track_autoplay_video
@@ -165,6 +166,11 @@ module LevelsHelper
     "false"
   end
 
+  def localize_levelbuilder_instructions
+    loc_val = data_t("levelbuilder.#{@level.name}", "instructions")
+    @level.properties['instructions'] = loc_val unless loc_val.nil?
+  end
+
   # Code for generating the blockly options hash
   def blockly_options(local_assigns={})
     # Use values from properties json when available (use String keys instead of Symbols for consistency)
@@ -206,6 +212,7 @@ module LevelsHelper
       maze:map
       artist_builder:builder
       ani_gif_url:aniGifURL
+      shapeways_url
       images
       free_play
       min_workspace_height

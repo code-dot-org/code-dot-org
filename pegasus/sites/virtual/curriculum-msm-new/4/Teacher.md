@@ -19,12 +19,12 @@ Contracts provide a way for students to better understand and discuss functions.
 ## Teaching Summary
 ### **What's in a Contract**
  
-1) [Vocabulary](#Vocab) 
+1) [Vocabulary](#Vocab)<br/>
 2) [Figuring it Out](#GetStarted)  
 
 ### **Activity: Contracts**  
 
-3) [Writing Contracts](#Activity1)  
+3) [Writing Contracts](#Activity1)<br/>
 4) [Reading Contracts](#Activity2)  
 
 ### **Wrap-up**

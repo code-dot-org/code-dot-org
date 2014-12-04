@@ -8,6 +8,7 @@ class Artist < Blockly
     free_play
     permitted_errors
     impressive
+    shapeways_url
     disable_sharing
   )
 
