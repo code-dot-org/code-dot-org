@@ -29,34 +29,34 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_for" inline="true" deletable="false" movable="false" editable="false">
+            <block type="controls_for" inline="true" deletable="true" movable="true" editable="true">
               <title name="VAR">counter</title>
               <value name="FROM">
-                <block type="math_number" deletable="false" movable="false" editable="false">
+                <block type="math_number" deletable="true" movable="true" editable="true">
                   <title name="NUM">1</title>
                 </block>
               </value>
               <value name="TO">
-                <block type="math_number" deletable="false" movable="false" editable="false">
+                <block type="math_number" deletable="true" movable="true" editable="true">
                   <title name="NUM">5</title>
                 </block>
               </value>
               <value name="BY">
-                <block type="math_number" deletable="false" movable="false" editable="false">
+                <block type="math_number" deletable="true" movable="true" editable="true">
                   <title name="NUM">1</title>
                 </block>
               </value>
               <statement name="DO">
-                <block type="maze_moveForward">
+                <block type="maze_moveForward" deletable="false">
                   <next>
-                    <block type="controls_repeat_ext" inline="true">
+                    <block type="controls_repeat_ext" inline="true" deletable="false">
                       <value name="TIMES">
-                        <block type="variables_get">
+                        <block type="variables_get" deletable="false">
                           <title name="VAR">counter</title>
                         </block>
                       </value>
                       <statement name="DO">
-                        <block type="maze_nectar"/>
+                        <block type="maze_nectar" deletable="false"/>
                       </statement>
                     </block>
                   </next>

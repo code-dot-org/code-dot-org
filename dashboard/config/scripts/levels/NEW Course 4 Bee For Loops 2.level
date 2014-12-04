@@ -26,7 +26,53 @@
   <blocks>
     <start_blocks>
       <xml>
-</xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_moveForward">
+              <next>
+                <block type="maze_nectar">
+                  <next>
+                    <block type="maze_moveForward">
+                      <next>
+                        <block type="maze_nectar">
+                          <next>
+                            <block type="maze_nectar">
+                              <next>
+                                <block type="maze_moveForward">
+                                  <next>
+                                    <block type="controls_repeat_dropdown">
+                                      <title name="TIMES" config="3-10">3</title>
+                                      <statement name="DO">
+                                        <block type="maze_nectar"/>
+                                      </statement>
+                                      <next>
+                                        <block type="maze_moveForward">
+                                          <next>
+                                            <block type="controls_repeat_dropdown">
+                                              <title name="TIMES" config="3-10">4</title>
+                                              <statement name="DO">
+                                                <block type="maze_nectar"/>
+                                              </statement>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
     </start_blocks>
     <toolbox_blocks>
       <xml>
@@ -40,14 +86,19 @@
           <title name="DIR">turnLeft</title>
         </block>
         <block type="maze_nectar"/>
-        <block type="controls_repeat">
-          <title name="TIMES">???</title>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">???</title>
         </block>
       </xml>
     </toolbox_blocks>
     <required_blocks>
       <xml>
-</xml>
+        <block type="maze_moveForward"/>
+        <block type="maze_nectar"/>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">5</title>
+        </block>
+      </xml>
     </required_blocks>
   </blocks>
 </Karel>
