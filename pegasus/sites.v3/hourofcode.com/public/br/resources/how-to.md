@@ -1,5 +1,3 @@
-
-
 <div class="row">
   <h1 class="col-sm-6">
     Como ensinar a Hora do Código
@@ -10,7 +8,7 @@
   </div>
 </div>
 
-## 1) Watch this how-to video 
+## 1) Veja o guia prático em vídeo 
 <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
 ## 2) Veja os tutoriais:
 
@@ -23,9 +21,9 @@ Nós vamos disponibilizar diversos tutoriais divertidos com duração de uma hor
 
 [![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
 
-## 3) Register your Hour on the map
+## 3) Registre sua Hora no mapa
 
-[Make sure to sign up](<%= hoc_uri('/') %>). We'll send you helpful info as the Hour of Code nears, and you'll see your Hour of Code on our map of worldwide events.
+[Não deixe de se inscrever](<%= hoc_uri('/') %>). Vamos lhe enviar informações úteis enquanto a Hora de Código se aproxima, e você verá a sua Hora de Código no nosso mapa mundial de eventos.
 
 ## 4) Planeje suas necessidades de hardware (computadores são opcionais)
 
@@ -42,7 +40,7 @@ Para a melhor experiência com a Hora do Código, o ideal são computadores cone
 
 ## 6) Inspire seus alunos - mostre-lhes um vídeo
 
-Show students an inspirational video to kick off the Hour of Code. Examples:
+Mostre aos alunos um vídeo motivacional para iniciar a Hora do Código. Exemplos:
 
   * O vídeo original de lançamento da Code.org, com a participação de Bill Gates, Mark Zuckerberg e o astro da NBA, Chris Bosh (há versões de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) e [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * O [vídeo de lançamento da Hora do Código de 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), ou o [vídeo da Hora do Código de 2014](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q)
@@ -77,8 +75,8 @@ A maioria das crianças não sabe o que é a ciência da computação. Estas sã
 
 **Como posso imprimir certificados para meus alunos?**
 
-Each student gets a chance to get a certificate via email when they finish the [Code.org tutorials](http://studio.code.org). You can click on the certificate to print it. However, if you want to make new certificates for your students, visit our [Certificates](http://<%= codeorg_url() %>/certificates) page to print as many certificates as you like, in one fell swoop!
+Os alunos podem obter um certificado via e-mail quando terminarem os [tutoriais do Code.org](http://studio.code.org). Você pode clicar no certificado para imprimi-lo. Se você quizer fazer novos certificados para seus alunos, basta acessar nossa página de [Certificados](http://<%= codeorg_url() %>/certificates) para imprimir todos certificados que quiser, de uma só vez!
 
 **O que vem depois da Hora do Código?**
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up your event</button></a>
+A Hora do Código é apenas o primeiro passo de uma jornada para aprender mais sobre como a tecnologia funciona e como criar aplicativos de software. <% if @country == 'uk' %> A Hora do Código é apenas o primeiro passo de uma jornada para aprender mais sobre como a tecnologia funciona e como criar aplicativos de software. Para continuar nessa jornada, [incentive as crianças a aprender on-line](http://uk.code.org/learn/beyond). <% else %> Para continuar nessa jornada, encontre outros recursos para educadores [aqui](http://<%= codeorg_url() %>/educate). Ou incentive as crianças a aprender [on-line](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Registre seu evento</button></a>

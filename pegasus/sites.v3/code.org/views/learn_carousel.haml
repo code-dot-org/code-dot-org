@@ -18,7 +18,7 @@
 
           -count = 0
           -items.each_pair do |key, tutorial|
-            -tags = I18n.t("#{tutorial[:code]}_gradelevel") + ' | ' + I18n.t("#{tutorial[:code]}_platformtext")
+            -tags = tutorial[:gradelevel] + ' | ' + tutorial[:platformtext]
             -url = tutorials.launch_url_for(key,request.host_with_port)
             -short_url = ('http://hourofcode.com/' + tutorial[:short_code]) unless tutorial[:short_code].nil_or_empty?
             -styling = "display:none" unless count == 0
@@ -29,11 +29,11 @@
               .slide-text
                 %a{:href=>url, :target=>'_blank'}<
                   -unless international_layout
-                    %h2=I18n.t "#{tutorial[:code]}_name"
+                    %h2= tutorial[:name]
                 %h3= tutorial[:orgname]
                 -unless international_layout
-                  %p.slide-longdescription=I18n.t "#{tutorial[:code]}_longdescription"
-                  %p.slide-shortdescription=I18n.t "#{tutorial[:code]}_shortdescription"
+                  %p.slide-longdescription= tutorial[:longdescription]
+                  %p.slide-shortdescription= tutorial[:shortdescription]
                   .slide-tags= tags
                   .slide-participants-count<
                     %b{:class=>"participants_string_#{key}", :style=>'display: none'}
