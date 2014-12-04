@@ -21,7 +21,6 @@
     "use_contract_editor": "false",
     "ideal": "8",
     "embed": "false",
-    "callout_json": "[\r\n  {\"localization_key\": \"frozen_circle_function_in_circle_turn\", \"element_id\": \"[block-id='1']\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"center left\", \"at\": \"bottom right\", \"adjust\": {\"x\": 50, \"y\":150}},\r\n    \"style\": { \"classes\": \"no-tip\" }}\r\n  }\r\n]",
     "disable_sharing": "false"
   }
 }]]></config>
@@ -30,14 +29,20 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat_dropdown" deletable="false">
+            <block type="controls_repeat_dropdown" id="repeat_qtip">
               <title name="TIMES" config="3, 5, 10, 20">???</title>
               <statement name="DO">
                 <block type="create_a_circle" deletable="false" editable="false">
                   <next>
-                    <block type="jump_by_constant_dropdown" deletable="false">
+                    <block type="jump_by_constant_dropdown">
                       <title name="DIR">jumpForward</title>
                       <title name="VALUE" config="50,100,150,200,300">???</title>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE" config="18,45,60,90,120,180">???</title>
+                        </block>
+                      </next>
                     </block>
                   </next>
                 </block>
