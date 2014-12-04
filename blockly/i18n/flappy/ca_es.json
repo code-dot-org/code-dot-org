@@ -15,7 +15,7 @@
   "flapTooltip": "Fes volar al Flappy cap amunt.",
   "flappySpecificFail": "El teu codi sembla correcte - aletejarà amb cada clic. Però necessites fer molts clics per aletejar a la meta.",
   "incrementPlayerScore": "aconsegueix un punt",
-  "incrementPlayerScoreTooltip": "Incrementar en u la puntuació del jugador actual.",
+  "incrementPlayerScoreTooltip": "Afegeix u a la puntuació del jugador.",
   "nextLevel": "Felicitats! Has complert aquest puzzle.",
   "no": "No",
   "numBlocksNeeded": "Aquest puzzle pot res resolt amb blocs de %1.",
