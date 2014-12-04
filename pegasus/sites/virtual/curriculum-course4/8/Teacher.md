@@ -42,9 +42,8 @@ We know that loops allow us to do things over and over again, but now we’re go
 
 ## Lesson Objectives 
 ### Students will:
-- Outline steps to take inside for loop 
-- Determine starting points, stopping points, and iteration of for loop 
-- Demonstrate the index points hit within a for loop during runtime
+- Determine starting value, stopping value, and interval of for loop 
+- Illustrate the counter values hit each time through a for loop during runtime
 
 [/together]
 
