@@ -240,8 +240,6 @@ class DashboardSection
     row = DASHBOARD_DB[:sections].where(id:id).and(user_id:user_id).first
     return nil unless row
 
-    # BUGBUG: Need to detect "sponsored" accounts and disallow delete.
-
     DASHBOARD_DB.transaction do
       DASHBOARD_DB[:followers].where(section_id:id).delete
       DASHBOARD_DB[:sections].where(id:id).delete
@@ -301,9 +299,7 @@ class DashboardSection
   end
 
   def add_students(students)
-    student_ids = DASHBOARD_DB.transaction do
-      students.map{|i| add_student(i)}
-    end
+    student_ids = students.map{|i| add_student(i)}.compact
     DashboardUserScript.assign_script_to_users(@row[:script_id], student_ids) if @row[:script_id] && !student_ids.blank?
     return student_ids
   end
@@ -313,13 +309,6 @@ class DashboardSection
 
     rows_deleted = DASHBOARD_DB[:followers].where(section_id:@row[:id], student_user_id:student_id).delete
     rows_deleted > 0
-  end
-
-  def set_students(students)
-    DASHBOARD_DB.transaction do
-      DASHBOARD_DB[:followers].where(section_id:@row[:id]).delete
-      students.each{|i| add_student(i)}
-    end
   end
 
   def member?(user_id)
@@ -434,11 +423,16 @@ class DashboardUserScript
                where(section_id: section_id))
 
     DASHBOARD_DB[:user_scripts].
+      select(:id).
       where(user_id: DASHBOARD_DB[:followers].
                select(:student_user_id).
                where(section_id: section_id)).
-      and(script_id: script_id).
-      update(assigned_at: DateTime.now)
+      and(script_id: script_id).each do |row|
+      # for some reason, if we do the nicer looking thing, (update.. where...) mysql won't use the indexes
+      DASHBOARD_DB[:user_scripts].
+        where(id: row[:id]).
+        update(assigned_at: DateTime.now)
+    end
   end
 
   def self.assign_script_to_users(script_id, user_ids)
@@ -449,8 +443,13 @@ class DashboardUserScript
       import([:user_id, :script_id], user_ids.zip([script_id] * user_ids.count))
 
     DASHBOARD_DB[:user_scripts].
+      select(:id).
       where(user_id: user_ids).
-      and(script_id: script_id).
-      update(assigned_at: DateTime.now)
+      and(script_id: script_id).each do |row|
+      # for some reason, if we do the nicer looking thing, (update.. where...) mysql won't use the indexes
+      DASHBOARD_DB[:user_scripts].
+        where(id: row[:id]).
+        update(assigned_at: DateTime.now)
+    end
   end
 end
