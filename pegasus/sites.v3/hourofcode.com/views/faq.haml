@@ -67,6 +67,18 @@
   %h2= hoc_s(:hoc_faq_tutorial_q)
   %div= hoc_s(:hoc_faq_tutorial_a).gsub(/target-tutorial-guidelines/, hoc_uri('/tutorial-guidelines'))
 
+  %h2= hoc_s(:hoc_faq_account_q)
+  %div= hoc_s(:hoc_faq_account_a).gsub(/http:\/\/code.org/, "http://#{codeorg_url()}")
+
+  %h2= hoc_s(:hoc_faq_frozen_q)
+  %div= hoc_s(:hoc_faq_frozen_a).gsub(/http:\/\/code.org/, "http://#{codeorg_url()}")
+
+  %h2= hoc_s(:hoc_faq_high_school_q)
+  %div= hoc_s(:hoc_faq_high_school_a).gsub(/http:\/\/code.org/, "http://#{codeorg_url()}")
+
+  %h2= hoc_s(:hoc_faq_scratch_q)
+  %div= hoc_s(:hoc_faq_scratch_a).gsub(/http:\/\/code.org/, "http://#{codeorg_url()}")
+
 -if @country == 'br'
   %h2= hoc_s(:hoc_faq_more_questions_br_q)
   %div= hoc_s(:hoc_faq_more_questions_br_a)
