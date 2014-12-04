@@ -90,12 +90,12 @@ namespace :build do
       HipChat.log 'Installing <b>dashboard</b> bundle...'
       RakeUtils.bundle_install
 
-      if CDO.daemon || rack_env?(:levelbuilder)
+      if CDO.daemon
         HipChat.log 'Migrating <b>dashboard</b> database...'
         RakeUtils.rake 'db:migrate'
 
         HipChat.log 'Seeding <b>dashboard</b>...'
-        RakeUtils.rake 'seed:all'
+        RakeUtils.rake 'seed:incremental'
       end
 
       unless rack_env?(:development)
@@ -197,7 +197,8 @@ namespace :install do
       Dir.chdir(dashboard_dir) do
         RakeUtils.bundle_install
         RakeUtils.rake 'db:create'
-        RakeUtils.rake 'db:schema:load'
+        RakeUtils.rake 'db:migrate'
+        RakeUtils.rake 'seed:all'
       end
     end
   end
