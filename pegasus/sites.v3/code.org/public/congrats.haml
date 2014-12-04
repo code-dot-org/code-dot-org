@@ -122,7 +122,8 @@ max_age: 60
           }
         });
       }
-      if (document.referrer.indexOf("studio") != -1 && document.referrer.indexOf("frozen") == -1) { // checking for "studio" won't work on local instances as domain is 0.0.0.0:3000
+      // checking for "studio" won't work on local instances as domain is 0.0.0.0:3000
+      if (document.referrer.indexOf("studio") != -1 && document.referrer.indexOf("frozen") == -1) {
         $('#print_option').hide();
       }
     });
