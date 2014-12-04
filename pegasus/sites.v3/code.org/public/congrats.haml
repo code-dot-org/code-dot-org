@@ -59,11 +59,6 @@ max_age: 60
       = view :congrats_share, cert_id:cert_id, facebook:facebook, twitter:twitter
 
   #print-option
-    %h2
-      Print Frozen drawings
-    %button#print-button
-      Print All
-
 
   %div{:style=>'clear: both; height:30px'}
 
@@ -110,6 +105,26 @@ max_age: 60
       $("#share-twitter").hide(); $("#follow-twitter").css('display', 'inline-block');
     });
 
+    $.ajax({
+      url: "/dashboardapi/print_option",
+      type: "get",
+    }).done(function(data) {
+      $("#print-option").html(data);
+      var printButton = $('#print-button');
+      if (printButton) {
+        printButton.click(function() {
+          createHiddenPrintWindow('/images/frozen-impressive-drawings.jpg');
+          //createHiddenPrintWindow('http://code.org/images/fit-200/avatars/ali_partovi_and_hadi_partovi.jpg');
+        });
+      }
+
+      if (document.referrer.indexOf("3000") != -1 && document.referrer.indexOf("frozen") == -1) {
+        $('#print-option').hide();
+      }
+    }).fail(function () {
+      alert('fail');
+    });
+
     // placeholder text for non-HTML5 browsers
     $('input[type=text], textarea').placeholder();
     $('input[type=email], textarea').placeholder();
@@ -135,16 +150,4 @@ max_age: 60
   {
     petition = new Petition();
   });
-
-  var printButton = $('#print-button');
-  if (printButton) {
-    printButton.click(function() {
-      //createHiddenPrintWindow('/images/frozen-impressive-drawings.jpg');
-      createHiddenPrintWindow('http://code.org/images/fit-200/avatars/ali_partovi_and_hadi_partovi.jpg');
-    });
-  }
-
-  if (document.referrer.indexOf("3000") != -1 && document.referrer.indexOf("frozen") == -1) {
-    $('#print-option').hide();
-  }
 
