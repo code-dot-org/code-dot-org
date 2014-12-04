@@ -74,13 +74,13 @@ module ApplicationHelper
 
   def show_flashes
     ret = ""
-    if notice
-      ret += content_tag(:p, flash.notice, {id: "notice"})
+    if notice.present?
+      ret += content_tag(:div, flash.notice, {class: "alert alert-success"})
       flash.notice = nil
     end
 
-    if alert
-      ret += content_tag(:p, flash.alert, {id: "alert"})
+    if alert.present?
+      ret += content_tag(:div, flash.alert, {class: "alert alert-danger"})
       flash.alert = nil
     end
 

@@ -274,3 +274,21 @@
           findet dieses Konzept noch einen Schritt weiter, wie es veranschaulicht,
           wie ein Computer noch komplexeren Informationen (z. B. Bilder und Farben)
           gespeichert werden kann in Binär, sowie.
+      VideoGamesCoordinatePlanes:
+        title: Videospiele und Koordination von Flugzeugen
+        desc: Beschreibung der Lektion zu Videospielen und der Koordination von Flugzeugen
+      Contracts:
+        title: Contracts
+        desc: Beschreibung der Lektion zu "Contracts unplugged"
+      DesignRecipe:
+        title: The Design Recipe
+        desc: Beschreibung der Lektion für Design-Rezepte
+      Booleans:
+        title: Booleans
+        desc: Beschreibung der Lektion zu Boolean Variablen
+      ConditionalsPiecewiseFunctions:
+        title: Conditionals and Piecewise Functions
+        desc: Lektion zu Conditionals und Piecewise
+      CollisionDetection:
+        title: Erkennen eines Zusammenstosses
+        desc: Beschreibung der Lektion zur Erzeugung eines Zusammenstosses

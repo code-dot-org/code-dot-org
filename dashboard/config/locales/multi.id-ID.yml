@@ -5,8 +5,8 @@
         Artist Debugging Multiple Choice One: Artist Debugging Multiple Choice One
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
           700
-        Why won't this circle go all the way around?: Why won't this circle go all
-          the way around?
+        Why won't this circle go all the way around?: Mengapa lingkaran ini tidak
+          berputar sampai tuntas?
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png
@@ -15,7 +15,7 @@
         Artist Loops Multiple Choice: Artist Loops Multiple Choice
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
           500
-        Which shape is made by this loop?: Which shape is made by this loop?
+        Which shape is made by this loop?: Bentuk apa yang dibuat oleh putaran ini?
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png
@@ -24,7 +24,8 @@
         Artist Loops Multiple Choice: Artist Loops Multiple Choice
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
           500
-        Which shape is made by this program?: Which shape is made by this program?
+        Which shape is made by this program?: Bentuk apa yang dibuat oleh program
+          ini?
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png
@@ -33,14 +34,14 @@
         Artist Functions Multiple Choice One: Artist Functions Multiple Choice One
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png,
           500
-        Pick the correct blocks to draw this image using the given functions: Pick
-          the correct blocks to draw this image using the given functions
+        Pick the correct blocks to draw this image using the given functions: Pilihlah
+          blok-blok yang benar untuk menggambar gambar ini dengan fungsi yang diberikan
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png
       2-3 bee conditionals multi 1:
         Bee Conditionals Multiple Choice One: Bee Conditionals Multiple Choice One
-        Which comparison below is true?: Which comparison below is true?
+        Which comparison below is true?: Manakah perbandingan di bawah ini yang benar?
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png
@@ -73,20 +74,20 @@
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png
       2-3 maze multi 1:
-        Maze Multiple Choice One: Maze Multiple Choice One
+        Maze Multiple Choice One: Pilihan Ganda Labirin Satu
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
           500
         Choose the best answer.: Pilih jawaban yang terbaik
-        Which blocks work?: Which blocks work?
+        Which blocks work?: Blok manakah yang dapat berjalan?
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
       2-3 Maze Multi 2:
-        Maze Multiple Choice: Maze Multiple Choice
+        Maze Multiple Choice: Pilihan Ganda Labirin
         /script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_2_q.png,
           500
-        Which blocks work?: Which blocks work?
+        Which blocks work?: Blok manakah yang dapat berjalan?
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png
@@ -94,27 +95,28 @@
       2-3 Algorithms Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
-        Choose an algorithm for the image provided: Choose an algorithm for the image
-          provided
-        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Start
-          with a square<br/>Put a triangle above the square<br/>Put a triangle below
-          the square
-        Start with a square<br/>Put a triangle right of square<br/>Put a rhombus below square<br/>Put triangle right of rhombus: Start
-          with a square<br/>Put a triangle right of square<br/>Put a rhombus below
-          square<br/>Put triangle right of rhombus
-        Start with a square<br/>Put a rhombus above the square<br/>Put a triangle right of the rhombus: Start
-          with a square<br/>Put a rhombus above the square<br/>Put a triangle right
-          of the rhombus
-        Start with a square<br/>Put a triangle below the square<br/>Put a rhombus right of the triangle: Start
-          with a square<br/>Put a triangle below the square<br/>Put a rhombus right
-          of the triangle
+        Choose an algorithm for the image provided: Pilihlah seuah algoritma untuk
+          gambar berikut
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Mulailah
+          dengan sebuah persegi<br/>Letakkan sebuah segitiga di atas persegi<br/>Letakkan
+          sebuah segitiga di bawah persegi
+        0: '? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
+          below square<br/>Put triangle right of parallelogram'
+        1: ': Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
+          below square<br/>Put triangle right of parallelogram'
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Start
+          with a square<br/>Put a parallelogram above the square<br/>Put a triangle
+          right of the parallelogram
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Start
+          with a square<br/>Put a triangle below the square<br/>Put a parallelogram
+          right of the triangle
       2-3 Algorithms Multi 2:
         Multiple Choice: Multiple Choice
-        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Start
-          with a triangle<br/>Put a square below the triangle<br/>Put another triangle
-          below the square
-        Which image does <em>not</em> follow this algorithm?: Which image does <em>not</em>
-          follow this algorithm?
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Mulailah
+          dengan sebuah segitiga<br/>Letakkan persegi di bawah segitiga<br/>Letakkan
+          sebuah segitiga lain di bawah persegi
+        Which image does <em>not</em> follow this algorithm?: Gambar manakah yang
+          <em>tidak</em> sesuai dengan algoritma ini?
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
         /script_assets/2-3_images/unplugged/algorithms_2_a3.png: /script_assets/2-3_images/unplugged/algorithms_2_a3.png
@@ -122,15 +124,15 @@
       2-3 Binary Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/2-3_images/unplugged/graph_paper_1_q.png: /script_assets/2-3_images/unplugged/graph_paper_1_q.png
-        Which program makes this image?: Which program makes this image?
+        Which program makes this image?: Program apakah yang membuat gambar ini?
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a2.png: /script_assets/2-3_images/unplugged/graph_paper_1_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a3.png: /script_assets/2-3_images/unplugged/graph_paper_1_a3.png
       2-3 Conditionals Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/2-3_images/unplugged/conditionals_1_q.png: /script_assets/2-3_images/unplugged/conditionals_1_q.png
-        According to the rules of the game, which set of cards is scored correctly?: According
-          to the rules of the game, which set of cards is scored correctly?
+        According to the rules of the game, which set of cards is scored correctly?: Sesuai
+          peraturan permainan, kumpulan kartu manakah yang dicetak dengan benar?
         /script_assets/2-3_images/unplugged/conditionals_1_a1.png: /script_assets/2-3_images/unplugged/conditionals_1_a1.png
         /script_assets/2-3_images/unplugged/conditionals_1_a2.png: /script_assets/2-3_images/unplugged/conditionals_1_a2.png
         /script_assets/2-3_images/unplugged/conditionals_1_a3.png: /script_assets/2-3_images/unplugged/conditionals_1_a3.png
@@ -147,15 +149,15 @@
       2-3 Graph Paper Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/2-3_images/unplugged/graph_paper_1_q.png: /script_assets/2-3_images/unplugged/graph_paper_1_q.png
-        Which program makes this image?: Which program makes this image?
+        Which program makes this image?: Program apakah yang membuat gambar ini?
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a2.png: /script_assets/2-3_images/unplugged/graph_paper_1_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a3.png: /script_assets/2-3_images/unplugged/graph_paper_1_a3.png
       2-3 Relay Programming Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/2-3_images/unplugged/relay_programming_1_q.png: /script_assets/2-3_images/unplugged/relay_programming_1_q.png
-        Which program does not create this image?: Which program does not create this
-          image?
+        Which program does not create this image?: Program apa yang tidak dapat membuat
+          gambar ini?
         /script_assets/2-3_images/unplugged/relay_programming_1_a1.png: /script_assets/2-3_images/unplugged/relay_programming_1_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_1_a2.png: /script_assets/2-3_images/unplugged/relay_programming_1_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_1_a3.png: /script_assets/2-3_images/unplugged/relay_programming_1_a3.png
@@ -168,15 +170,15 @@
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
       4-5 artist multi 1:
         Artist Multiple Choice: Artist Multiple Choice
-        Which blocks draw a rectangle with a perimeter of 100?: Which blocks draw
-          a rectangle with a perimeter of 100?
+        Which blocks draw a rectangle with a perimeter of 100?: Blok manakah yang
+          menggambar persegi panjang dengan keliling 100?
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png
       4-5 artist multi 2:
         Artist Multiple Choice: Artist Multiple Choice
-        Which drawing is symmetric?: Which drawing is symmetric?
+        Which drawing is symmetric?: Gambar manakah yang simetris?
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png
@@ -185,8 +187,8 @@
         Artist Functions Multiple Choice: Artist Functions Multiple Choice
         /script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png,
           500
-        Which function creates a rectangle that can change its size?: Which function
-          creates a rectangle that can change its size?
+        Which function creates a rectangle that can change its size?: Fungsi manakah
+          yang membuat persegi panjang yang ukurannya dapat diubah?
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png
@@ -195,16 +197,17 @@
         Artist Loops Multiple Choice: Artist Loops Multiple Choice
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png,
           500
-        Which blocks will create the design?: Which blocks will create the design?
+        Which blocks will create the design?: Blok-blok manakah yang akan membuat
+          bentuk itu?
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png
       4-5 artist loops multi 2:
         Artist Functions Multiple Choice: Artist Functions Multiple Choice
-        'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50': 'Pick
-          the for loop that represents the following pattern:  5, 10, 15, 20, 25,
-          30, 35, 40, 45, 50'
+        'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50': 'Pilihlah
+          putaran "for" yang mewakili pola berikut ini: 5, 10, 15, 20, 25, 30, 35,
+          40, 45, 50'
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png
@@ -212,12 +215,12 @@
       4-5 bee conditionals multi 1:
         Bee Conditionals Multiple Choice: Bee Conditionals Multiple Choice
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png
-        0: '? A purple flower may have either 3, 2 or 1 nectars, but you don''t know
-          how many. Which blocks correctly check and collect all of the nectar from
-          a purple flower?'
-        1: ': A purple flower may have either 3, 2 or 1 nectars, but you don''t know
-          how many. Which blocks correctly check and collect all of the nectar from
-          a purple flower?'
+        0: '? Sebuah bunga ungu dapat memiliki 3, 2 atau 1 sari bunga, tetapi Anda
+          tidak mengetahui seberapa banyak. Blok manakah yang dapat memeriksa dan
+          mengumpulkan semua sari bunga dari sebuah bunga ungu dengan benar?'
+        1: ': Sebuah bunga ungu dapat memiliki 3, 2 atau 1 sari bunga, tetapi Anda
+          tidak mengetahui seberapa banyak. Blok manakah yang dapat memeriksa dan
+          mengumpulkan semua sari bunga dari sebuah bunga ungu dengan benar?'
         Choose the best blocks.: Choose the best blocks.
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png
@@ -227,8 +230,8 @@
         Bee Debug Multiple Choice: Bee Debug Multiple Choice
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png
-        Which version of the function will work?: Which version of the function will
-          work?
+        Which version of the function will work?: Versi dari fungsi manakah yang dapat
+          berjalan?
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png
@@ -236,7 +239,8 @@
       4-5 bee loops multi 1:
         Bee Loops Multiple Choice: Bee Loops Multiple Choice
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png
-        Which blocks will solve the puzzle?: Which blocks will solve the puzzle?
+        Which blocks will solve the puzzle?: Blok manakah yang dapat menyelesaikan
+          teka-teki tersebut?
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png
@@ -245,16 +249,18 @@
         Famer Loops Multiple Choice: Famer Loops Multiple Choice
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png,
           500
-        Which blocks solve the puzzle?: Which blocks solve the puzzle?
+        Which blocks solve the puzzle?: Blok manakah yang dapat menyelesaikan teka-teki
+          tersebut?
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png
       4-5 maze multi 1:
-        Maze Multiple Choice: Maze Multiple Choice
+        Maze Multiple Choice: Pilihan Ganda Labirin
         /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png,
           500
-        Which blocks solve the puzzle?: Which blocks solve the puzzle?
+        Which blocks solve the puzzle?: Blok manakah yang dapat menyelesaikan teka-teki
+          tersebut?
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png
@@ -263,7 +269,8 @@
         Maze Conditionals Multiple Choice: Maze Conditionals Multiple Choice
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png,
           500
-        Which blocks solve the puzzle?: Which blocks solve the puzzle?
+        Which blocks solve the puzzle?: Blok manakah yang dapat menyelesaikan teka-teki
+          tersebut?
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png
@@ -272,9 +279,9 @@
         Multiple Choice: Multiple Choice
         Which one of these items is hardest to describe an algorithm for?: Which one
           of these items is hardest to describe an algorithm for?
-        <h4>Brushing your teeth</h4>: <h4>Brushing your teeth</h4>
-        <h4>Baking cookies</h4>: <h4>Baking cookies</h4>
-        <h4>Shopping from a grocery list</h4>: <h4>Shopping from a grocery list</h4>
+        <h4>Brushing your teeth</h4>: <h4>Menyikat gigi Anda</h4>
+        <h4>Baking cookies</h4>: <h4>Memanggang kue</h4>
+        <h4>Shopping from a grocery list</h4>: <h4>Belanja dari daftar belanja</h4>
         <h4>Banana</h4>: <h4>Banana</h4>
       4-5 Computational Thinking Multi 1:
         Multiple Choice: Multiple Choice
@@ -362,6 +369,15 @@
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
+      Coordinates Multi 1:
+        Video game Coordinates: Video game Coordinates
+        Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
+        Which answer best describes the unicorn's movement?: Which answer best describes
+          the unicorn's movement?
+        The unicorn moves across the screen: The unicorn moves across the screen
+        The unicorn's y value changes: The unicorn's y value changes
+        The unicorn moves to the left: The unicorn moves to the left
+        The unicorn's x value changes: The unicorn's x value changes
       K-1 Artist 1 Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png,

@@ -20,12 +20,9 @@
   hello: Γεια σου κόσμε
   welcome_back: Καλώς ήρθες, %{name}
   add_teacher_form:
-    code_or_email:
-      label: 'Πρόσθεσε έναν δάσκαλο με κωδικό ή με email:'
-      placeholder: Κωδικός (ABCDEF) ή email (teacher@school.edu)
     code:
-      label: 'Προσθέστε ένα δάσκαλο από το τμήμα κώδικα:'
-      placeholder: Κώδικας (ABCDEF)
+      label: 'Προσθέστε ένα δάσκαλο:'
+      placeholder: Τμήμα κώδικα (ABCDEF)
     submit: Προσθήκη δασκαλου
   add_hint_form:
     placeholder: Παρακαλούμε εισάγετε την υπόδειξή σας εδώ
@@ -85,7 +82,7 @@
     gender: Φύλο (προαιρετικά)
     birthday: Γενέθλια (προαιρετικά)
     age: Ηλικία
-    user_type: Are you a student or teacher?
+    user_type: Είστε ένα μαθητής ή δάσκαλος;
     submit: Εγγραφή
     teacher: Είσαι δάσκαλος;
     valid_username: Διαθέσιμο!
@@ -237,9 +234,9 @@
           πιστώσεις μπορεί να χρησιμοποιηθούν μόνο από καθηγητές σε δημόσια σχολεία
           των ΗΠΑ.
         bonus:
-          not_earned_title: You can still earn an additional $250 in <a target="_blank"
-            href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
-            only)
+          not_earned_title: Μπορείτε ακόμα να κερδίσετε μια επιπλέον 250 $ σε πιστώσεις
+            <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a>
+            (ΗΠΑ δάσκαλοι μόνο)
           earned: 7 ή περισσότεροι από τους μαθητές που συνέλεξαν όλα τα τρόπαια %{num_trophies}
             είναι κορίτσια. Έχετε κερδίσει ένα βραβείο! (Αφορά μόνο τους εκπαιδευτικούς
             στις ΗΠΑ)
@@ -260,7 +257,7 @@
     confirm: Είσαι σίγουρος;
     created: Το %{model} δημιουργήθηκε με επιτυχία.
     updated: Το %{model} ενημερώθηκε με επιτυχία.
-    destroyed: '%{model} was successfully deleted.'
+    destroyed: '%{model} διαγράφηκε με επιτυχία.'
     access_denied: Δεν έχετε πρόσβαση σε αυτό το %{model}.
   nav:
     header:
@@ -270,7 +267,7 @@
         playlab: Δημιουργήστε μια εφαρμογή
         artist: Ζωγραφίστε κάτι
     user:
-      classroom: Οι μαθητές μου
+      classroom: H Αρχική Σελίδα του Εκπαιδευτικού
       label: Γεια σου %{username}
       stats: Η πρόοδός μου
       settings: Ο λογαριασμός μου
@@ -293,42 +290,43 @@
     title:
       one: 'Ο δάσκαλος σας:'
       other: 'Οι δασκάλοι σου:'
-    remove: (remove teacher)
+    remove: (αφαιρέστε δάσκαλος)
     confirm:
       remove: Είστε βέβαιοι ότι θέλετε να καταργήσετε αυτόν τον δάσκαλο;
     tools: Εργαλεία Δασκάλου
     followers:
       section: 'Ενότητα:'
-      stages: 'Stage(s) to display:'
-      show_past: 'Show student activity (%{bullet_html}) in the past:'
-      levels_key: Levels key
+      stages: 'Στάδιο(α) να εμφανίσει:'
+      show_past: 'Εμφάνιση φοιτητικών δραστηριοτήτων (%{bullet_html}) στο παρελθόν:'
+      levels_key: Επίπεδα κλειδί
       perfect: Ολοκληρώθηκε, τέλειο
       completed: Ολοκληρώθηκε, αλλά χρησιμοποιώντας πάρα πολλά μπλοκ
       tried: Έγινε προσπάθεια, αλλά δεν ολοκληρώθηκε
       not_tried: Δεν έχει γίνει προσπάθεια ακόμα
       activity: Δείχνει την δραστηριότητα  του μαθητή τις τελευταίες%{hours}%{plural}
-      no_section: No assigned section
+      no_section: Δεν έχει αποδωθεί  τμήμα
       trophies: τρόπαια
     students:
       name: Όνομα
       username: 'όνομα χρήστη '
       password: κωδικός
       manage: Διαχείριση μαθητών
-      dashboard: Go to Teacher Dashboard
+      dashboard: Πηγαίνετε στον πίνακα δραστηριοτήτων  δάσκαλος
       add: Προσθήκη μαθητών
       remove: κατάργησε μαθητή
       confirm_remove: Είστε βέβαιοι ότι θέλετε να καταργήσετε αυτό τον μαθητή;
-      help_reassign: To divide your class into multiple sections, select students
-        to assign to a new section.
-      help_register: Instead of making you spend a lot of time individually importing
-        student data, you can set up your class quickly by asking them to signup.
-        Your students will need to choose usernames and passwords, but they WILL NOT
-        be required to provide an email address. If a student forgets their password,
-        you will be able to reset it for them.
-      register: Ask your students to register themselves
+      help_reassign: Για να  διαχωρίσετε την  τάξη σας σε πολλαπλές ενότητες, επιλέξτε
+        μαθητές για να την αντιστοιχίσετε σε μια νέα ενότητα.
+      help_register: Αντί να σπαταλήσετε πολύ προσωπικό χρόνο εισάγοντας τα δεδομένα
+        των μαθητών, μπορείτε να στήσετε την τάξη σας γρήγορα ζητώντας τους να κάνουν
+        εγγραφή. Οι μαθητές σας θα χρειαστεί να διαλέξουν ονόματα χρηστών και κωδικούς
+        πρόσβασης, αλλά ΔΕΝ ΘΑ τους ζητηθεί να παρέχουν κάποιον λογαριασμό ηλεκτρονικής
+        αλληλογραφίας. Αν κάποιος μαθητής ξεχάσει τον κωδικό πρόσβασης του, θα μπορείτε
+        να τον επαναφέρετε.
+      register: Ζητήστε από  τους μαθητές σας να εγγραφούν μόνοι τους
       vist: Ζητήστε από τους μαθητές σας να επισκεφθούν
-      section_code: 'and enter their section-code:'
-      first_please: First, please %{add_section}
+      section_code: 'και εισάγετε τους κωδικούς τμήματος:'
+      first_please: Κατ ' αρχάς, παρακαλώ %{add_section}
       for: Για
       enter: 'εισάγετε:'
     sections:
@@ -337,7 +335,7 @@
       section: Ενότητα
       students: Μαθητές
       section_code: Κωδικός ενότητας
-      add_section_code: Add Students Section-Code
+      add_section_code: Προσθέστε φοιτητές τμήμα-κώδικα
       secret: Μυστικός τύπος
       grade: Βαθμος
       course: Μάθημα
@@ -408,35 +406,34 @@
     20hour_overview: Αυτό το 20ωρο μάθημα εισάγει σε θεμελιώδης έννοιες Πληροφορικής
       και προγραμματισμού . Το μάθημα έχει σχεδιαστεί για χρήση από τις τελευταίες
       τάξεις του δημοτικού, αλλά η μάθηση είναι διασκεδαστική σε κάθε ηλικία.
-    test_videos_help: Test our new video player at your school
-    try_beta_courses: New! Try our beta courses for K-5 students
-    use_as_teacher: Use this site as a teacher
+    test_videos_help: Δοκιμάστε το νέο πρόγραμμα αναπαραγωγής βίντεο  στο σχολείο
+      σας
+    try_beta_courses: Νέο! Δοκιμάστε τα δοκιμαστικά  μαθήματα για φοιτητές K-5
+    use_as_teacher: Χρησιμοποιήστε αυτό τον ιστότοπο  ως δάσκαλος
+    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
     heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
-    heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
-    heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
-    gallery:
-      your_turtle: My Art
-      your_studio: My Apps
+    heading_apps: <h2>Διασκέδαση για</h2><h1>όλους</h1>
+    heading_legacy: <h2>Το γενικό μάθημα για </h2><h1>όλες τις ηλικίες</h1>
+    your_gallery: Συλλογή φωτογραφιών
   gender:
     male: Αγόρι
     female: Κορίτσι
     none: Προτιμώ να μην απαντήσω
   user_type:
     student: φοιτητής/μαθητής
-    teacher: Teacher
+    teacher: Καθηγητής
   footer:
-    help_from_html: Μηχανικοί από την <a href="http://www.google.com">Google</a>,
-      την <a href="http://www.microsoft.com">Microsoft</a>, το <a href="http://www.facebook.com">Facebook</a>,
-      και το <a href="http://www.twitter.com">Twitter</a> βοήθησαν σε αυτό το εισαγωγικό
-      μάθημα.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 <a href="http://www.rovio.com">Rovio
+    help_from_html: Μηχανικοί από τη Google, Microsoft, Facebook και Twitter βοήθησαν
+      να δημιουργήσουμε αυτό το σεμινάριο.
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 <a href="http://www.rovio.com">Rovio
       Entertainment Ltd</a>. All Rights Reserved.<br/> Plants vs. Zombies&trade; &
       &copy; 2013 <a href="http://www.ea.com">Electronic Arts Inc.</a>. All Rights
       Reserved.
+    powered_by_aws: Powered by Amazon Web Services
     feedback: Πες τη γνώμη σου
     translate: Βοηθήστε μας να μεταφράσουμε στη γλώσσα σας
-    support: Support
-    support_url: http://support.code.org
+    support: Υποστήριξη
+    support_url: http://support.code.org/
     tos: Όροι
     privacy: Πολιτική Aπορρήτου
     secure: Ασφαλής έκδοση
@@ -445,61 +442,64 @@
     subtitle: Δες αυτά τα βίντεο και τις υποδείξεις
     teacher: Δείτε τη λύση
     auth_error: Δεν έχετε εξουσιοδήτηση να δείτε τη λύση.
-    submit: Update Artist Location
-    direction: Start Direction
+    submit: Ενημερώσετε την τοποθεσία του καλλιτέχνη
+    direction: Έναρξη κατεύθυνσης (σε μοίρες)
   video:
     tab: Βίντεο.
     notes: Δεν υπάρχει βίντεο; Δείξε σημειώσεις.
-    notes_coming_soon: Notes for this video coming soon.
+    notes_coming_soon: Σημειώσεις για αυτό το βίντεο έρχονται σύντομα.
     autoplay_option: Αυτόματη αναπαραγωγή βίντεο
     download: Κατεβάστε το βίντεο
   compatability:
     working:
       header: Εργαζόμαστε για την υποστήριξη του προγράμματος περιήγησης που χρησιμοποιείτε.
-      message: Code.org uses modern web technology. This makes the site faster to
-        use. Your browser doesn't support all the features required, and you may experience
-        issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
-        any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade
-        your browser to a supported version</a>.
-      hide_this_warning: Hide this warning
+      message: Code.org χρησιμοποιεί σύγχρονες web τεχνολογίες. Αυτό κάνει τον ιστότοπο
+        πιο γρήγορο για  να χρησιμοποιήσετε. Ο Φυλλομετρητή  σας δεν υποστηρίζει όλα
+        τα χαρακτηριστικά που απαιτούνται, και ενδέχεται να αντιμετωπίσετε ζητήματα
+        κατά τη χρήση αυτού του μέρους της ιστοσελίδας. Παρακαλώ βοηθήστε μας εκθέτοντας
+        <a href='%{report_issue_url}'> οποιαδήποτε ζητήματα που βρίσκετε</a>. Μπορείτε
+        επίσης να <a href='%{supported_browsers_url}'> αναβαθμίσετε τον φυλλομετρητή
+        σας σε μια υποστηριζόμενη έκδοση</a>.
+      hide_this_warning: Απόκρυψη αυτής της προειδοποίησης
     upgrade:
       header: Παρακαλούμε, αναβαθμίστε το πρόγραμμα περιήγησής σας.
-      message: Code.org uses modern web technology. This makes the site faster to
-        use. Unfortunately your browser doesn't support all the features required
-        to run this part of the site.<br/><br/>Install a browser on our supported
-        browsers list to continue. You can <a href='#'>try viewing the page</a>, but
-        expect functionality to be broken.
+      message: Code.org χρησιμοποιεί σύγχρονες web τεχνολογίες. Αυτό κάνει το site
+        πιο γρήγορα να χρησιμοποιήσετε. Δυστυχώς ο φυλλομετρητής σας δεν υποστηρίζει
+        όλα τα χαρακτηριστικά που απαιτούνται για να τρέξει αυτό το μέρος της ιστοσελίδας.
+        <br/> <br/>Εγκαταστήσετε ένα απο τα Υποστηριζόμενα προγράμματα περιήγησης
+        για να συνεχίσετε. Μπορείτε να <a href='#'> δοκιμάσετε την προβολή της σελίδας</a>,
+        αλλά να περιμένετε ότι η λειτουργικότητα θα είναι κακή .
       button: Πήγαινε με  στη λίστα των προγραμμάτων περιήγησης που υποστηρίζονται
   slow_loading: Αυτό διαρκεί περισσότερο από ότι συνήθως...
   try_reloading: Δοκίμασε να φορτώσεις ξανά τη σελίδα
   next_stage: Τελείωσε! Συνέχισε στο επόμενο στάδιο
   download_pdf: Σχέδιο ανοικτού μαθήματος
-  lesson_plan: Lesson Plan
-  view_lesson_plan: View Lesson Plan
+  lesson_plan: Σχέδιο μαθήματος
+  view_lesson_plan: Δες το Σχέδιο μαθήματος
   pdf_download: Κατεβάστε το PDF
-  download_coming_soon: Downloadable activity coming soon.
-  video_coming_soon: Video Coming Soon!
+  download_coming_soon: Λήψη δραστηριότητας προσεχώς.
+  video_coming_soon: Βίντεο Σύντομα κοντά σας!
   share_code:
-    title: Κάντε κλικ στο κουμπί «Εκτέλεση προγράμματος» για να δείτε το πρόγραμμα
-      μου να εκτελείται
-    bounce_og_title: Check out my Bounce Game
-    flappy_og_title: Check out my Flappy Game
-    studio_og_title: Check out my story
-    og_description: I wrote the code myself with Code.org
-    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
-      the text.
-    address_not_allowed: It looks like there is an address in it. Try changing the
-      text.
-    email_not_allowed: It looks like there is an email in it. Try changing the text.
-    profanity_not_allowed: It looks like there is profanity in it. Try changing the
-      text.
+    title: Κάντε κλικ στο κουμπί 'Run' για να δείτε το πρόγραμμα μου σε δράση
+    bounce_og_title: Έλεγξε το  αναπήδηση μου παιχνίδι
+    flappy_og_title: Ελέγξτε το  Flappy μου παιχνίδι
+    studio_og_title: Έλεγξε το  Παιχνίδι μου Εργαστήριο App
+    check_out_what_i_made: Δείτε τι έκανα
+    og_description: Έγραψα τον κώδικα μόνος μου , με το Code.org
+    phone_number_not_allowed: Μοιάζει με έναν αριθμό τηλεφώνου . Προσπαθήστε να αλλάξετε
+      το κείμενο.
+    address_not_allowed: Μοιάζει με μια διεύθυνση. Προσπαθήστε να αλλάξετε το κείμενο.
+    email_not_allowed: Φαίνεται σαν να υπάρχει μια διεύθυνση ηλεκτρονικού ταχυδρομείου
+      . Προσπαθήστε να αλλάξετε το κείμενο.
+    profanity_not_allowed: Αυτό μοιάζει σαν  βωμολοχία . Προσπαθήστε να αλλάξετε το
+      κείμενο.
   builder:
-    created: You created a new script.
-    destroyed: You destroyed a script.
-    manage: Manage Scripts
-    view: View
-    back: Back to scripts
-    success: You successfully edited the blocks.
+    created: Δημιουργήσατε ένα νέο σενάριο.
+    destroyed: Καταστρέψατε  ένα σενάριο.
+    manage: Οικοδόμηση Επιπέδων
+    view: Προβολή
+    back: Πίσω σε σενάρια
+    success: Επεξεργαστήκατε επιτυχώς τα μπλοκς.
     level:
       create: Δημιούργησε νέο επίπεδο
       current: Τρέχοντα επίπεδα
@@ -507,51 +507,73 @@
   upsell:
     hoc:
       title: Η Ώρα του Κώδικα
-      body: Try the basics of computer science. Millions have given it a shot.
+      body: Δοκιμάστε τα βασικά της επιστήμης των υπολογιστών. Εκατομμύρια τα  έχουν
+        ήδη δοκιμάσει.
     flappy:
-      title: Flappy Code
-      body: Wanna write your own game in less than 10 minutes? Try our Flappy Code
-        tutorial!
+      title: Flappy κώδικα
+      body: θέλετε να γράψετε το δικό σας παιχνίδι σε λιγότερο από 10 λεπτά; Δοκιμάστε
+        το σεμινάριο μας για τον Flappy κώδικα!
     20hour:
-      title: Intro Course
-      body: Try our 20-hour Intro to Computer Science course.
+      title: Εισαγωγικό Μάθημα
+      body: Δοκιμάστε το εισαγωγικό 20 ωρών μάθημα στην  επιστήμη των  υπολογιστών.
+    hoc2014:
+      try_new_tutorial: Δοκιμάστε μας νέο σεμινάριο για την ώρα του κώδικα σε δοκιμαστική
+        μορφή
+      try_frozen: Καλλιτέχνης με την Άννα και την Έλσα, από το Frozen
+    gallery:
+      title: Συλλογή φωτογραφιών
+      body: Δείτε μια συλλογή απο εφαρμογές  και εικόνες καλλιτεχνών που δημιουργούνται
+        από τους χρήστες μας
+    frozen:
+      title: Frozen
   gallery:
-    students_drew_these_with_code: Students drew these with code!
-    students_made_these_with_code: Students made these with code!
-    picture_count: In the past <b>%{days}</b> days, students have drawn <b>%{count}</b>
-      pictures by writing their own computer programs. Click on the pictures to see
-      each program in action.
-    activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
-      apps and pictures by writing their own computer programs. Click on the pictures
-      and screenshots to see each program in action.
-    want_to_make_your_own: Want to make your own?
-    more: More &rarr;
-    caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: '%{time_ago} ago'
+    students_drew_these_with_code: Οι μαθητές τα σχεδίασαν αυτά με κώδικα!
+    students_made_these_with_code: Οι μαθητές τα δημιούργησαν αυτά με κώδικα!
+    picture_count: Τις τελευταίες <b>%{days}</b> ημέρες, οι μαθητές σχεδίασαν <b>%{count}</b>
+      εικόνες γράφοντας τα δικά τους προγράμματα. Κάντε κλικ επάνω στις εικόνες για
+      να δείτε το κάθε πρόγραμμα σε δράση.
+    activity_count: Τις τελευταίες <b>%{days}</b> ημέρες, οι μαθητές δημιούργησαν
+      <b>%{count}</b> εφαρμογές και εικόνες γράφοντας τα δικά τους προγράμματα. Κάντε
+      κλικ επάνω στις εικόνες και τα στιγμιότυπα για να δείτε το κάθε πρόγραμμα σε
+      δράση.
+    want_to_make_your_own: Θέλετε να φτιάξετε το δικό σας;
+    more: Επιπλέον &rarr;
+    caption_by_name_age: από %{name}, ηλικία %{age}
+    caption_time_ago: '%{time_ago} πριν'
+    header: Συλλογή φωτογραφιών
+    header_playlab: Play Lab
+    header_artist: Artist
   landing:
-    prerelease: This page is still under development.
-    feedback: Give Feedback
-    report_bug: Report Bug
-    support: Get Help
+    prerelease: Αυτό το μάθημα είναι σε έκδοση <span class='betatext'>βήτα (beta)</span>.
+      Αυτό σημαίνει πως δεν είναι η τελική έκδοση του μαθήματος και υπόκειται σε αναθεώρηση
+      καθώς λαμβάνεται ανατροφοδότηση και γίνονται βελτιώσεις.
+    prerelease_hoc2014: Αυτές οι οδηγίες είναι σε έκδοση <span class='betatext'>βήτα
+      (beta)</span>. Αυτό σημαίνει ότι υπόκεινται σε αναθεώρηση καθώς λαμβάνεται ανατροφοδότηση
+      και γίνονται βελτιώσεις.
+    feedback: Αφήστε αξιολόγηση
+    report_bug: Αναφορά σφάλματος
+    support: Λάβετε βοήθεια
     support_url: //support.code.org
   multi:
-    wrong_title: Incorrect answer
-    wrong_body: The answer you've entered is not correct.  Please try again!
-    correct_title: Correct
-    correct_body: That is the correct answer.
+    wrong_title: Λανθασμένη απάντηση
+    wrong_body: Η απάντηση που πληκτρολογήσατε δεν είναι σωστή.  Παρακαλώ προσπαθήστε
+      ξανά!
+    correct_title: Σωστό
+    correct_body: Αυτή είναι η σωστή απάντηση.
   match:
-    wrong_title: Incorrect solution
-    wrong_body: The solution you've entered is not correct.  Please try again!
-    correct_title: Correct
-    correct_body: That is the correct answer.
+    wrong_title: Λανθασμένη λύση
+    wrong_body: Η λύση που πληκτρολογήσατε δεν είναι σωστή.  Παρακαλώ προσπαθήστε
+      ξανά!
+    correct_title: Σωστό
+    correct_body: Αυτή είναι η σωστή απάντηση.
   text_match:
-    placeholder: Enter your answer here
+    placeholder: Εισάγετε την απάντησή σας εδώ
   dialog:
     ok: OΚ
   time:
-    hour: 1 hour
-    day: day
-    week: week
+    hour: 1 ώρα
+    day: ημέρα
+    week: εβδομάδα
   data:
     script:
       name:
@@ -561,7 +583,7 @@
             και προγραμματισμού . Το μάθημα έχει σχεδιαστεί για χρήση από τις τελευταίες
             τάξεις του δημοτικού, αλλά η μάθηση είναι διασκεδαστική σε κάθε ηλικία.
         Hour of Code:
-          title: Η Ώρα του Κώδικα
+          title: Ώρα του Κώδικα
           description: ''
         edit-code:
           title: Επεξεργασία κώδικα
@@ -570,35 +592,37 @@
           title: Συμβάντα
           description: ''
         builder:
-          title: Builder
+          title: Δημιουργός
           description: ''
         flappy:
-          title: Flappy Code
-          description: Wanna write your own game in less than 10 minutes? Try our
-            Flappy Code tutorial!
+          title: Flappy κώδικα
+          description: θέλετε να γράψετε το δικό σας παιχνίδι σε λιγότερο από 10 λεπτά;
+            Δοκιμάστε το σεμινάριο μας για τον Flappy κώδικα!
         jigsaw:
-          title: Jigsaw
+          title: Παζλ
           description: ''
         step:
           title: Βήμα
           description: ''
         sample_level_builder:
-          title: Sample Level Builder
+          title: Δημιουργός Δείγματος Επιπέδου
           description: ''
   age_interstitial:
-    age: Your age
-    header: Account Information Update
-    message: We're in the process of updating our experience to provide you with even
-      stronger privacy protections. To do this, we need existing users to enter their
-      age here.<br/>As always, code.org will never rent, sell or share this information
-      with any third parties.
-    sign_out: If you do not wish to provide your age you may <a href="%{url}">sign
-      out</a>.
-  zendesk_too_young_message: Sorry, younger users may not sign in to our support site.
-    You may browse <a href="http://support.code.org">support.code.org</a> without
-    signing in or ask your parent or teacher to contact us for you.
+    age: Η ηλικία σου
+    header: Ενημέρωση Πληροφοριών Λογαριασμού
+    message: Είμαστε στη διαδικασία της ενημέρωσης της εμπειρίας μας για να σας παρέχουμε
+      ακόμη ισχυρότερη προστασία προσωπικών δεδομένων. Για να κάνουμε αυτό, χρειαζόμαστε
+      τους υπάρχοντες χρήστες να εισαγάγουν την ηλικία τους εδώ. <br/>Όπως πάντα,
+      η code.org ποτέ δεν θα νοικιάσει, πωλήσει η μοιράσει αυτή την πληροφορία με
+      τρίτους.
+    sign_out: Εάν δεν επιθυμείτε να παρέχετε την ηλικία σας, μπορείτε <a href="%{url}">αποσυνδεθείτε
+      (sign out)</a>.
+  zendesk_too_young_message: Συγγνώμη, νεαρότεροι χρήστες δεν μπορείτε να συνδεθείτε
+    στον ιστότοπο υποστήριξης. Μπορείτε να περιηγηθείτε στο <a href="http://support.code.org">support.code.org</a>
+    χωρίς σύνδεση ή να ζητήσετε από τους γονείς σας ή το δάσκαλό σας να επικοινωνήσει
+    μαζί μας.
   progress:
-    not_completed: not completed
-    completed_too_many_blocks: completed, too many blocks
-    completed_perfect: completed, perfect
-    furthest_level_attempted: furthest level attempted
+    not_completed: δεν έχει ολοκληρωθεί
+    completed_too_many_blocks: ολοκληρώθηκε, πάρα πολλά μπλοκ
+    completed_perfect: ολοκληρώθηκε, τέλειο
+    furthest_level_attempted: τελευταίο επίπεδο επιχειρήθηκε

@@ -46,9 +46,10 @@
           'Maze: Loops': 'Labirent: Döngüler'
           'Bee: Loops': 'Arı: Döngüler'
           'Studio: Create a Story': 'Oyun Laboratuvarı: Bir Hikaye Oluşturun'
+          'Artist: Loops': 'Aktör: Döngüler'
+          description_audience: Ages 4+ (pre-readers)
           description_short: Course 1 is designed for early readers in the lower elementary
             grades.
-          'Artist: Loops': 'Aktör: Döngüler'
         course2:
           The Maze: Labirent
           Suzi: Suzi
@@ -87,11 +88,12 @@
           'Bee: Debugging': 'Arı: Ayıklama'
           'Artist: Debugging': 'Aktör: Ayıklama'
           'Bee: Conditionals': 'Arı: Koşullandırıcılar'
-          description_short: Course 2 is designed for students who can read in the
-            lower and middle elementary grades.
           'Artist: Sequence2': 'Aktör: Sıra2'
           'Maze: Sequence2': 'Labirent: Sıra2'
           'Artist: Nested Loops': 'Aktör: Yerleştirilmiş Döngüler'
+          description_audience: Ages  6+ (reading required)
+          description_short: Course 2 is designed for students who can read in the
+            lower and middle elementary grades.
         course3:
           The Maze: Labirent
           'Studio: Create a Story': 'Oyun Laboratuvarı: Bir Hikaye Oluşturun'
@@ -132,8 +134,6 @@
           'Farmer: While Loops': 'Çiftçi: While Döngüleri'
           'Bee: Nested Loops': 'Arı: Yerleştirilmiş Döngüler'
           'Bee: Debugging': 'Arı: Ayıklama'
-          description_short: Students taking Course 3 should have already taken Course
-            2.
           Maze2: Labirent2
           Artist2: Aktör2
           'Artist: Functions2': 'Aktör: Fonksiyonlar2'
@@ -146,6 +146,9 @@
           'Bee: Debugging2': 'Arı: Ayıklama2'
           'Artist: Patterns': 'Artist: Patterns'
           Songwriting: Şarkı yazma
+          description_audience: Ages 8+ (after Course 2)
+          description_short: Students taking Course 3 should have already taken Course
+            2.
         msm:
           title: Ortaokul Matematiği
           description: Ortaokul Matematiği için özel çalışma sürüyor.
@@ -174,6 +177,34 @@
           Collision Detection and the Distance Formula: Collision Detection and the
             Distance Formula
           'Play Lab: Collision Detection': 'Play Lab: Collision Detection'
+          'Unplugged: Ninja Cat and the Coordinate Plane': 'Unplugged: Ninja Cat and
+            the Coordinate Plane'
+          'Eval: Strings and Images': 'Eval: Strings and Images'
+          'Unplugged: Contracts': 'Unplugged: Contracts'
+          'Eval: Writing Contracts': 'Eval: Writing Contracts'
+          'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
+          'Eval: Defining Functions': 'Eval: Fast Functions'
+          'Eval: Functions': 'Eval: Design Recipe'
+          'Unplugged: Booleans': 'Unplugged: Booleans'
+          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
+            and Piecewise Functions'
+          'Eval: Conditionals': 'Eval: Conditionals'
+          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
+            Detection and the Distance Formula'
+          'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
+          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
+            and Coordinate Planes'
+          'Eval: Boolean Operators': 'Eval: Boolean Operators'
+          Blocks to Math: Blocks to Math
+          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Defining Variables
+            (Big Game)'
+          'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
+          'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
+          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
+            (Big Game)'
+          'Eval: Fast Functions': 'Eval: Fast Functions'
+          'Play Lab: Design Recipe': 'Play Lab: Design Recipe'
+          'Eval: Design Recipe': 'Eval: Design Recipe'
         playlab:
           title: Play Lab
           description: Create a story or make a game with Play Lab!
@@ -192,21 +223,19 @@
         hourofcode:
           Maze: Labirent
           title: Saat Kodu
-          description_short: Try the basics of computer science with characters from
-            Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
           description: Try the basics of computer science with characters from Angry
             Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          description_short: Try the basics of computer science with characters from
+            Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
         frozen:
           title: Frozen
-          description_short: Join the Royal Sisters of Arendelle, Anna and Elsa, as
-            they explore the magic and beauty of ice. You will write code to create
-            snowflakes and patterns as you ice-skate and make a winter wonderland
-            that you can then share with your friends!
           description: Join the Royal Sisters of Arendelle, Anna and Elsa, as they
             explore the magic and beauty of ice. You will write code to create snowflakes
             and patterns as you ice-skate and make a winter wonderland that you can
             then share with your friends!
           Artist: Aktör
+          description_short: Buzun büyüsü ve güzelliğini keşfetmek için Anna ve Elsa'ya
+            katılıp kodlama yapalım.
         course4:
           description_short: Students taking Course 4 should have already taken Courses
             2 and 3.
@@ -240,6 +269,7 @@
           Farmer Binary: Farmer Binary
           Maze and Bee: Maze and Bee
           Artist Binary: Artist Binary
+          description_audience: Ages 10+ (after Course 3)
         Course4pre:
           description_short: A brief rampup of concepts for students who have not
             taken Course 2 and 3.
@@ -253,3 +283,38 @@
           'Bee: Nested Loops': 'Arı: Yerleştirilmiş Döngüler'
           'Artist: Functions': 'Aktör: Fonksiyonlar'
           'Bee: Debugging': 'Arı: Ayıklama'
+        course4pre:
+          description_short: A brief rampup of concepts for students who have not
+            taken Course 2 and 3.
+          Course 4 Prerequisite: Course 4 Prerequisite
+          'Maze: Sequence': 'Labirent: Sıra'
+          'Artist: Sequence': 'Aktör: Sıra'
+          'Artist: Loops': 'Aktör: Döngüler'
+          'Bee: Conditionals': 'Arı: Koşullandırıcılar'
+          'Artist: Nested Loops': 'Aktör: Yerleştirilmiş Döngüler'
+          'Farmer: While Loops': 'Çiftçi: While Döngüleri'
+          'Bee: Nested Loops': 'Arı: Yerleştirilmiş Döngüler'
+          'Artist: Functions': 'Aktör: Fonksiyonlar'
+          'Bee: Debugging': 'Arı: Ayıklama'
+        Course4pre (Case Conflict):
+          description_short: A brief rampup of concepts for students who have not
+            taken Course 2 and 3.
+          Course 4 Prerequisite: Course 4 Prerequisite
+          'Maze: Sequence': 'Labirent: Sıra'
+          'Artist: Sequence': 'Aktör: Sıra'
+          'Artist: Loops': 'Aktör: Döngüler'
+          'Bee: Conditionals': 'Arı: Koşullandırıcılar'
+          'Artist: Nested Loops': 'Aktör: Yerleştirilmiş Döngüler'
+          'Farmer: While Loops': 'Çiftçi: While Döngüleri'
+          'Bee: Nested Loops': 'Arı: Yerleştirilmiş Döngüler'
+          'Artist: Functions': 'Aktör: Fonksiyonlar'
+          'Bee: Debugging': 'Arı: Ayıklama'
+        usability:
+          Intro: Intro
+          Variables and For Loops: Variables and For Loops
+          Functions and Functions with Parameters: Functions and Functions with Parameters
+          title: Usability Testing
+          description_short: ''
+          description: A selection of Course 4 levels for usability testing.
+          Variables: Değişkenler
+          For Loops: For Loops

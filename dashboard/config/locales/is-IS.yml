@@ -20,12 +20,9 @@
   hello: Halló heimur
   welcome_back: Velkomin/n aftur, %{name}
   add_teacher_form:
-    code_or_email:
-      label: 'Bæta við kennara eftir kóða eða netfangi:'
-      placeholder: Kóði (ABCDEF) eða netfang (kennari@skoli.is)
     code:
-      label: 'Bæta við kennara með því að nota hópkóða:'
-      placeholder: Kóði (ABCDEF)
+      label: 'Bæta við kennara:'
+      placeholder: Hópkóði (ABCDEF)
     submit: Bæta við kennara
   add_hint_form:
     placeholder: Færðu vísbendingu þína inn hér
@@ -39,7 +36,7 @@
   of: af
   more: MEIRA
   less: MINNA
-  try_hoc: 'Prófaðu Kóðun í klukkustund, smelltu hér >> '
+  try_hoc: 'Prófaðu Klukkustund kóðunar, smelltu hér >> '
   try_k8intro: Prófaðu Inngang að tölvunarfræði fyrir 13 - 14 ára (11-25 klst.)
   k8intro: Inngangur að tölvunarfræði fyrir 13 - 14 ára (15-25 klst.)
   already_started: 'Ekki að byrja núna? Taktu upp þráðinn hér >> '
@@ -109,7 +106,7 @@
     submit: Innskráning
   signin:
     try_heading: Viltu prófa að forrita án þess að skrá þig?
-    try_hoc: Prófaðu Kóðun í klukkustund fyrst
+    try_hoc: Prófaðu Klukkustund kóðunar fyrst
     try_20hours: Prófaðu 20 klst. Inngang að tölvunarfræði
   signinsection:
     welcome: Velkomin/n í hópinn %{section_name}
@@ -253,7 +250,7 @@
     access_denied: Þú hefur ekki aðgang að %{model}.
   nav:
     header:
-      finished_hoc: Ég hef lokið við mína Kóðun í klukkustund
+      finished_hoc: Ég hef lokið við mína Klukkustund kóðunar
       sign_in_to_save: Skráðu þig inn til að vista framvinduna
       free_play:
         playlab: Búa til forrit
@@ -400,12 +397,11 @@
     test_videos_help: Prófaðu nýja myndbandaspilarann okkar í skólanum þínum
     try_beta_courses: Nýtt! Prófaðu beta námskeiðin okkar fyrir 10 - 11 ára nemendur
     use_as_teacher: Nota þennan vef sem kennari
+    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
     heading_elementary: <h2>20 klst. námskeið fyrir</h2><h1>grunnskólanemendur</h1>
     heading_apps: <h2>Skemmtun fyrir</h2><h1>alla</h1>
     heading_legacy: <h2>Almenna námskeiðið okkar fyrir</h2><h1>alla aldurshópa</h1>
-    gallery:
-      your_turtle: Listaverkin mín
-      your_studio: Forritin mín
+    your_gallery: Safn
   gender:
     male: Karlkyns
     female: Kvenkyns
@@ -416,9 +412,10 @@
   footer:
     help_from_html: Tæknifólk hjá Google, Microsoft, Facebook og Twitter aðstoðuðu
       við gerð þessa kennsluefnis.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
-      Öll réttindi áskilin.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
+      Öll réttindi áskilin.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
       Arts Inc. Öll réttindi áskilin.
+    powered_by_aws: Powered by Amazon Web Services
     feedback: Gefðu endurgjöf
     translate: Hjálpaðu okkur að þýða yfir á þitt tungumál
     support: Aðstoð
@@ -470,6 +467,7 @@
     bounce_og_title: Kíktu á skoppleikinn minn
     flappy_og_title: Prófaðu leikinn minn Flappy
     studio_og_title: Kíktu á Leikjasmiðjuforritið mitt
+    check_out_what_i_made: Skoðaðu það sem ég bjó til
     og_description: Ég skrifaði kóðann sjálf(ur) með Code.org
     phone_number_not_allowed: Það virðist vera símanúmer í þessu. Prófaðu að breyta
       textanum.
@@ -499,6 +497,14 @@
     20hour:
       title: Kynningarnámskeið
       body: Prófaðu 20 klst. námskeiðið Kynning á tölvunarfræði.
+    hoc2014:
+      try_new_tutorial: Prófaðu nýjustu Klukkustund kóðunar (beta)
+      try_frozen: Listamaður með Önnu og Elsu úr Frozen
+    gallery:
+      title: Safn
+      body: Skoða safn forrita og mynda sem notendur okkar hafa búið til
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: Nemendur teiknuðu þetta með kóða!
     students_made_these_with_code: Nemendur gerðu þetta með forritun!
@@ -512,10 +518,15 @@
     more: Meira &rarr;
     caption_by_name_age: höfundur %{name}, %{age} ára
     caption_time_ago: fyrir %{time_ago}
+    header: Safn
+    header_playlab: Leikjasmiðja
+    header_artist: Listamaður
   landing:
     prerelease: Þetta námskeið er á <span class='betatext'>beta stigi</span>.  Það
       þýðir að þetta er ekki endanleg útgáfa af námskeiðinu og það getur breyst þegar
       athugasemdir koma frá notendum og endurbætur eru gerðar.
+    prerelease_hoc2014: Þetta kennsluefni er <span class='betatext'>beta útgáfa</span>.  Það
+      getur breyst eftir því sem ábendingar berast og endurbætur eru gerðar.
     feedback: Senda inn athugasemd
     report_bug: Tilkynna galla
     support: Fá hjálp
@@ -531,7 +542,7 @@
     correct_title: Rétt
     correct_body: Þetta svar er rétt.
   text_match:
-    placeholder: Skráðu nafn þitt hér
+    placeholder: Skráðu svar þitt hér
   dialog:
     ok: Í lagi
   time:

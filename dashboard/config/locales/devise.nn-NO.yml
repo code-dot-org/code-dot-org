@@ -1,7 +1,7 @@
 "nn":
   devise:
     confirmations:
-      confirmed: E-postadressen din har blitt bekreftet.
+      confirmed: E-postadressa di har blitt stadfesta.
       send_instructions: Om noen få minutter vil du motta en e-post med instruksjoner
         om hvordan du bekrefter kontoen.
       send_paranoid_instructions: Hvis din e-postadresse finnes i vår database, vil
@@ -19,9 +19,9 @@
       unconfirmed: Du må bekrefte kontoen før du fortsetter.
     mailer:
       confirmation_instructions:
-        subject: Code.org instruksjoner for bekreftelse
+        subject: Code.org sine instruksjonar for stadfesting
       reset_password_instructions:
-        subject: Code.org instruksjoner for å tilbakestille passord
+        subject: Code.org sine instruksjonar for å tilbakestille passord
       unlock_instructions:
         subject: Instruksjoner for å låse opp
     omniauth_callbacks:
@@ -51,7 +51,7 @@
         å bekrefte din nye e-postadresse.
       updated: Kontoen din er blitt oppdatert.
     sessions:
-      signed_in: Logget inn.
+      signed_in: Innlogga utan problem.
       signed_out: Logget ut.
     unlocks:
       send_instructions: Du vil motta en e-post om noen få minutter som beskriver

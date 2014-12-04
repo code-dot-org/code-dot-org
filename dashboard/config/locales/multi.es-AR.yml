@@ -105,15 +105,18 @@
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Comienza
           con un cuadrado<br/>Coloca un triángulo sobre cuadrado<br/>Coloca un triángulo
           debajo del cuadrado
-        Start with a square<br/>Put a triangle right of square<br/>Put a rhombus below square<br/>Put triangle right of rhombus: Comienza
-          con un cuadrado<br/>Coloca un triángulo a la derecha del cuadrado<br/>Coloca
-          un rombo debajo del cuadrado<br/>Coloca el triángulo a la derecha del rombo
-        Start with a square<br/>Put a rhombus above the square<br/>Put a triangle right of the rhombus: Comienza
-          con un cuadrado <br/> pon un rombo arriba del cuadrado <br/> Pon un triángulo
-          a la derecha del rombo
-        Start with a square<br/>Put a triangle below the square<br/>Put a rhombus right of the triangle: Comienza
-          con un cuadrado <br/> pon un triángulo debajo del cuadrado <br/> pon un
-          rombo a la derecha del triángulo
+        0: '? Comienza con un cuadrado <br/> Pon un triángulo a la derecha del cuadrado
+          <br/> Pon un paralelogramo debajo del cuadrado <br/> Pon un triángulo a
+          la derecha del paralelogramo'
+        1: ': Comienza con un cuadrado <br/> Pon un triángulo a la derecha del cuadrado
+          <br/> Pon un paralelogramo debajo del cuadrado <br/> Pon un triángulo a
+          la derecha del paralelogramo'
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Comienza
+          con un cuadrado <br/> Pon un paralelogramo sobre el cuadrado <br/> Pon un
+          triángulo a la derecha del paralelogramo
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Comienza
+          con un cuadrado <br/> Pon un triángulo debajo del cuadrado <br/> Pon un
+          paralelogramo a la derecha del triángulo
       2-3 Algorithms Multi 2:
         Multiple Choice: Opción Múltiple
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Comienza
@@ -135,8 +138,8 @@
       2-3 Conditionals Multi 1:
         Multiple Choice: Opción Múltiple
         /script_assets/2-3_images/unplugged/conditionals_1_q.png: /script_assets/2-3_images/unplugged/conditionals_1_q.png
-        According to the rules of the game, which set of cards is scored correctly?: According
-          to the rules of the game, which set of cards is scored correctly?
+        According to the rules of the game, which set of cards is scored correctly?: Según
+          las reglas del juego ¿Qué conjunto de cartas tienen la puntuación correcta?
         /script_assets/2-3_images/unplugged/conditionals_1_a1.png: /script_assets/2-3_images/unplugged/conditionals_1_a1.png
         /script_assets/2-3_images/unplugged/conditionals_1_a2.png: /script_assets/2-3_images/unplugged/conditionals_1_a2.png
         /script_assets/2-3_images/unplugged/conditionals_1_a3.png: /script_assets/2-3_images/unplugged/conditionals_1_a3.png
@@ -372,6 +375,15 @@
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
+      Coordinates Multi 1:
+        Video game Coordinates: Video game Coordinates
+        Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
+        Which answer best describes the unicorn's movement?: Which answer best describes
+          the unicorn's movement?
+        The unicorn moves across the screen: The unicorn moves across the screen
+        The unicorn's y value changes: The unicorn's y value changes
+        The unicorn moves to the left: The unicorn moves to the left
+        The unicorn's x value changes: The unicorn's x value changes
       K-1 Artist 1 Multi 1:
         Multiple Choice: Opción Múltiple
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png,
@@ -562,9 +574,9 @@
         0: "? Escoja el código Racket que corresponde a la expresión matemática dada.
           \nDibuje un círculo de evaluación para ayudarle a encontrar la respuesta
           correcta!\n"
-        1: |
-          : "Escoja el código Racket que corresponde a la expresión matemática dada. "
-          Dibuje un círculo de evaluación para ayudarle a encontrar la respuesta correcta!
+        1: ": Escoja el código Racket que corresponde a la expresión matemática dada.
+          \nDibuje un círculo de evaluación para ayudarle a encontrar la respuesta
+          correcta!\n"
         (5 + 6) * 8 / 2: (5 + 6) * 8 / 2
         (/ (* 8 2) (+ 5 6)): (/ (* 8 2) (+ 5 6))
         (* (+ 5 6) (/ 8 2)): (* (+ 5 6) (/ 8 2))
@@ -575,9 +587,9 @@
         0: "? Escoja el código Racket que corresponde a la expresión matemática dada.
           \nDibuje un círculo de evaluación para ayudarle a encontrar la respuesta
           correcta!\n"
-        1: |
-          : "Escoja el código Racket que corresponde a la expresión matemática dada. "
-          Dibuje un círculo de evaluación para ayudarle a encontrar la respuesta correcta!
+        1: ": Escoja el código Racket que corresponde a la expresión matemática dada.
+          \nDibuje un círculo de evaluación para ayudarle a encontrar la respuesta
+          correcta!\n"
         4 + 6 + 20 / 2 x 3 x 7 + 2: 4 + 6 + 20 / 2 x 3 x 7 + 2
         (+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7)) 2): (+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7))
           2)
@@ -654,7 +666,7 @@
         George Jetson: Super Sónico
       unique level name here:
         title: Título
-        description here: description here
-        Question: Question
-        wrong answer: wrong answer
-        right answer: right answer
+        description here: descripción aquí
+        Question: Pregunta
+        wrong answer: Respuesta incorrecta
+        right answer: Respuesta correcta

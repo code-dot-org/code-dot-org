@@ -20,12 +20,9 @@
   hello: Hei maailma
   welcome_back: Tervetuloa takaisin, %{name}
   add_teacher_form:
-    code_or_email:
-      label: 'Lisää opettaja käyttäen pääsykoodia tai sähköpostiosoitetta:'
-      placeholder: Koodi (ABCDEF) tai sähköpostiosoite (ope@koulu.fi)
     code:
-      label: 'Lisää opettaja ryhmän tunnuksella:'
-      placeholder: Koodi (ABCDEF)
+      label: 'Lisää opettaja:'
+      placeholder: Osion koodi (ABCDEF)
     submit: Lisää opettaja
   add_hint_form:
     placeholder: Syötä vihjeesi tähän
@@ -217,8 +214,8 @@
           not_earned_title: Voit edelleen ansaita 250 dollaria <a target="_blank"
             href="http://DonorsChoose.org"> DonorsChoose.org</a> palveluun (vain USA)
           earned: "Hieno suoritus! 7 tai useampi oppilaistasi, jotka keräsivät kaikki
-            %{num_trophies} ovat tyttöjä. \n\nHuom: \"sivustolla mainitut raha- ja
-            tavarapalkinnot ovat voimassa vain USA:ssa\"\n"
+            %{num_trophies} ovat tyttöjä. \n\nHuom: sivustolla mainitut raha- ja tavarapalkinnot
+            ovat voimassa vain USA:ssa\n"
           not_earned: (sivustolla mainitut raha- ja tavarapalkinnot ovat voimassa
             vain USA:ssa)
   crud:
@@ -384,12 +381,11 @@
     test_videos_help: Testaa uutta videosoitintamme koulussasi
     try_beta_courses: Uutta! Kokeile beta-kurssejamme K-5 oppilaille
     use_as_teacher: Käytä sivustoa opettajana
+    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
     heading_elementary: <h2>20 tunnin kurssit</h2><h1>alkeisopiskeluun</h1>
     heading_apps: <h2>Hauskaa</h2><h1>kaikille</h1>
     heading_legacy: <h2>Yleinen kurssimme</h2><h1>kaiken ikäisille</h1>
-    gallery:
-      your_turtle: Minun taiteeni
-      your_studio: Sovellukseni
+    your_gallery: Galleria
   gender:
     male: Mies
     female: Nainen
@@ -400,9 +396,10 @@
   footer:
     help_from_html: Insinöörit Googlelta, Microsoftilta, Facebookilta ja Twitterilta
       auttoivat luomaan tämän opetusohjelman.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
-      Kaikki oikeudet pidätetään.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
+      Kaikki oikeudet pidätetään.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
       Arts Inc. Kaikki oikeudet pidätetään.
+    powered_by_aws: Powered by Amazon Web Services
     feedback: Anna palautetta
     translate: Auta meitä kääntämään palvelu omalle kielellesi
     support: Tuki
@@ -446,13 +443,14 @@
   lesson_plan: Tuntisuunnitelma
   view_lesson_plan: Katso tuntisuunnitelmia
   pdf_download: Lataa PDF
-  download_coming_soon: Downloadable activity coming soon.
-  video_coming_soon: Video Coming Soon!
+  download_coming_soon: Ladattavia aktiviteetteja tulossa pian.
+  video_coming_soon: Video tulossa pian!
   share_code:
     title: Napsauta 'Aja' nähdäksesi ohjelmani toiminnassa
     bounce_og_title: Tutustu Bounce-peliini
     flappy_og_title: Tutustu Flappy-peliini
     studio_og_title: Tutustu Play Lab -sovellukseeni
+    check_out_what_i_made: Katso mitä tein
     og_description: Kirjoitin koodin itse Code.org:illa
     phone_number_not_allowed: Näyttää että olet syöttänyt puhelinnumeron. Koita muuttaa
       tekstiä.
@@ -482,6 +480,14 @@
     20hour:
       title: Johdantokurssi
       body: Kokeile 20 tunnin kurssia Johdanto tietojenkäsittelytieteeseen.
+    hoc2014:
+      try_new_tutorial: Try our new Hour of Code tutorial in beta
+      try_frozen: Artist with Anna and Elsa, from Frozen
+    gallery:
+      title: Galleria
+      body: View a gallery of app and artist images created by our users
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: Oppilaat piirsivät nämä koodilla!
     students_made_these_with_code: Oppilaat tekivät nämä koodilla!
@@ -495,10 +501,15 @@
     more: Lisää &rarr;
     caption_by_name_age: '%{name} tekemä, ikä %{age}'
     caption_time_ago: '%{time_ago} sitten'
+    header: Galleria
+    header_playlab: Pelilabra
+    header_artist: Taiteilija
   landing:
     prerelease: Tämä kurssi on <span class='betatext'>beta</span>.  Tämä tarkoittaa,
       että kurssin verso ei ole lopullinen ja siitä saattaa tulla uusia paranneltuja
       versioita reaktiona saatuun palautteeseen.
+    prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
+      is subject to revision as feedback is received and improvements are made.
     feedback: Anna palautetta
     report_bug: Raportoi ongelma
     support: Katso ohjeet

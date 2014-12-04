@@ -1,8 +1,8 @@
 {
-  "compute": "compute",
-  "equivalentExpression": "Try reordering your arguments to get exactly the same expression.",
-  "extraTopBlocks": "You have unattached blocks. Did you mean to attach these to the \"compute\" block?",
-  "goal": "Goal:",
-  "reinfFeedbackMsg": "Vyzerá to tak ako ste chceli? Môžete stlačiť tlačidlo \"skús znova\" aby ste videli Vašu kresbu.",
-  "yourExpression": "Your expression:"
+  "compute": "vypočítať",
+  "equivalentExpression": "Skús zmeniť poradie argumentov a tak získať úplne rovnaký výraz.",
+  "extraTopBlocks": "Máš nepripojené bloky. Nechcel si ich pripojiť na blok \"vypočítať\"?",
+  "goal": "Cieľ:",
+  "reinfFeedbackMsg": "Tu je tvoj príbeh! Pokračuj v práci, alebo choď na ďalšiu úlohu!",
+  "yourExpression": "Tvoj výraz:"
 }

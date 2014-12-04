@@ -1,8 +1,17 @@
 
 
-# Com ensenyar una Hora de Codi
+<div class="row">
+  <h1 class="col-sm-6">
+    Com ensenyar una Hora del Codi
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Sign up your event</button></a>
+  </div>
+</div>
 
-## 1) Prova els tutorials:
+## 1) Watch this how-to video <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
+## 2) Try the tutorials:
 
 Posarem una varietat de tutorials divertits, d'una hora de durada per a estudiants de totes les edats, creats per una varietat de col·laboradors. Noves classes arribaran abans de desembre 8-14 per donar inici a l'Hora de Codi .
 
@@ -13,58 +22,62 @@ Posarem una varietat de tutorials divertits, d'una hora de durada per a estudian
 
 [![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
 
-## 2) Planifica les teves necessitats de maquinari - els ordinadors són opcionals
+## 3) Register your Hour on the map
 
-La millor experiència d'Hora de Codi seria amb ordinadors connectats a Internet. Però no necessites un ordinador per cada nen, i fins i tot, pots fer l'Hora de Codi sense cap ordinador.
+[Make sure to sign up](<%= hoc_uri('/') %>). We'll send you helpful info as the Hour of Code nears, and you'll see your Hour of Code on our map of worldwide events.
 
-  * **Prova els tutorials als ordinadors o dispositius dels estudiants.** Assegurats que funcionin correctament (amb so i vídeo).
+## 4) Plan your hardware needs - computers are optional
+
+The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every child, and can even do the Hour of Code without a computer at all.
+
+  * **Prova els tutorials als ordinadors o dispositius dels estudiants.** Assegura't que funcionin correctament (amb so i vídeo).
   * **Revisa la pàgina de felicitació** per comprovar que veuran els alumnes quan finalitzin. 
   * **Proporciona auriculars per a la classe**, o demana als estudiants que portin els seus, si el tutorial que has escollit funciona millor amb so.
 
-## 3) Planifica per avançat en base a la tecnologia disponible
+## 5) Plan ahead based on your technology available
 
   * **No tens dispositius suficients?** Utilitza [parelles de programació](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Quan els estudiants s'associen, s'ajuden mútuament i consulten menys al professor. Ells veuen també que la informàtica és social i col·laborativa.
   * **Tens poc ampla de banda?** Plantejat mostrar els vídeos a la pantalla de classe, evitaràs que cada estudiant se'ls descarregui. O prova els tutorials sense connexió / offline.
 
-## 4) Anima els estudiants - mostra'ls un vídeo
+## 6) Inspire students - show them a video
 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
-  * The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
-  * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+  * El vídeo original de promoció de Code.org, protagonitzat per Bill Gates, Mark Zuckerberg, i l'estrella de la NBA Chris Bosh (Hi ha versions de [1 minut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuts](https://www.youtube.com/watch?v=nKIu9yen5nc) i[ 9 minuts)](https://www.youtube.com/watch?v=dU1xS07N-FA)
+  * El [vídeo promocional del 2013 de l'Hora del Codi](https://www.youtube.com/watch?v=FC5FbmsH4fw), o el <% if @country == 'uk' %> [ vídeo de l'Hora del Codi 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ)<% else %> [ vídeo de l'Hora del Codi de 2014](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
+  * [El president Obama fent una crida a tots els alumnes a aprendre informàtica](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Entusiasma els teus estudiants - dóna'ls una breu introducció**
+**Get your students excited - give them a short intro**
 
-La majoria dels nens no sap què és la informàtica. Aquí hi ha algunes idees:
+Most kids don’t know what computer science is. Here are some ideas:
 
-  * Explain it in a simple way that includes examples of applications that both boys and girls will care about (saving lives, helping people, connecting people, etc.).
-  * Try: "Think about things in your everyday life that use computer science: a cell phone, a microwave, a computer, a traffic light… all of these things needed a computer scientist to help build them.”
-  * Or: “Computer science is the art of blending human ideas and digital tools to increase our power. Computer scientists work in so many different areas: writing apps for phones, curing diseases, creating animated movies, working on social media, building robots that explore other planets and so much more."
-  * See tips for getting girls interested in computer science [here](http://<%= codeorg_url() %>/girls). 
+  * Explica'ls de forma senzilla exemples d'aplicacions que cridin l'atenció tant dels nens com de les nenes sobre (salvar vides, ajudar a la gent, connectar persones, etc.).
+  * Prova: "Pensa en les coses de la teva vida quotidiana que utilitzin la informàtica: un telèfon mòbil, un microones, un ordinador, un semàfor... totes aquestes coses necessiten un científic de la computació per ajudar a construir-los."
+  * O: " La informàtica és l'art de barrejar les idees humanes i les eines digitals per tal d'augmentar el nostre poder. Els especialistes informàtics treballen en moltes àrees diferents: escrivint aplicacions per telèfons, curant malalties, creant pel·lícules animades, treballant en mitjans de comunicació, construint robots que explorin altres planetes i moltes més coses."
+  * Veure consells per aconseguir que les noies s'interessin per la informàtica [aquí](http://<%= codeorg_url() %>/girls). 
 
-## 5) Comença la teva Hora de Codi
+## 6) Start your Hour of Code
 
-**Dirigeix els estudiants cap a l'activitat**
+**Direct students to the activity**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. [hourofcode.com/co](http://hourofcode.com/co)
-  * Tell students to visit the URL and start the tutorial.
+  * Escriu l'enllaç del tutorial en una pissarra blanca. Trobar l'enllaç que apareix a la[informació per el teu tutorial escollit](http://<%= codeorg_url() %>/learn)sota el nombre de participants. [hourofcode.com/co](http://hourofcode.com/co)
+  * Digues als alumnes que visitin la pàgina web i comencin el tutorial.
 
-**Quan els estudiants trobin dificultats**
+**When your students come across difficulties**
 
-  * Tell students, “Ask 3 then me.” Ask 3 classmates, and if they don’t have the answer, then ask the teacher.
-  * Encourage students and offer positive reinforcement: “You’re doing great, so keep trying.”
-  * It’s okay to respond: “I don’t know. Let’s figure this out together.” If you can’t figure out a problem, use it as a good learning lesson for the class: “Technology doesn’t always work out the way we want. Together, we’re a community of learners.” And: “Learning to program is like learning a new language; you won’t be fluent right away.“
+  * Digues als estudiants, "Pregunta a 3, després a mi." Pregunta a 3 companys de classe, i si no tenen la resposta, llavors pregunta al mestre.
+  * Animar els alumnes i oferir reforç positiu: "Ho estàs fent molt bé, així que segueix intentant-ho."
+  * És correcte respondre: "No ho sé. Anem a resoldre això junts." Si no pot esbrinar un problema, utilitza-ho com una lliçó de bon aprenentatge per a la classe: "La tecnologia no sempre funciona de la manera que volem. Junts, som una comunitat d'aprenents." I: "Aprendre a programar és com aprendre una nova llengua; no serà fluid de seguida."
 
-**Què fer si un estudiant acaba d'hora?**
+**What to do if a student finishes early?**
 
-  * Students can see all tutorials and try another Hour of Code activity at [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
-  * Or, ask students who finish early to help classmates who are having trouble with the activity.
+  * Els estudiants poden veure totes les classes i provar una altra activitat de l'Hora del Codi a [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
+  * O bé, demaneu als estudiants que acaben aviat que ajudin els companys que estan tenint problemes amb l'activitat.
 
-**Com imprimeixo els certificats per als meus alumnes?**
+**How do I print certificates for my students?**
 
-Cada estudiant té l'oportunitat d'obtenir un certificat a través de correu electrònic quan acaba els [Code.org tutorials](http://studio.code.org). Pots fer clic sobre el certificat per imprimir-lo. However, if you want to make new certificates for your students, visit our [Certificates](http://<%= codeorg_url() %>/certificates) page to print as many certificates as you like, in one fell swoop!
+Each student gets a chance to get a certificate via email when they finish the [Code.org tutorials](http://studio.code.org). You can click on the certificate to print it. However, if you want to make new certificates for your students, visit our [Certificates](http://<%= codeorg_url() %>/certificates) page to print as many certificates as you like, in one fell swoop!
 
-**Què ve després de l'Hora de Codi?**
+**What comes after the Hour of Code?**
 
-L'Hora de Codi és només el primer pas en un viatge per aprendre més sobre com funciona la tecnologia i com crear aplicacions i programari. <% if @country == 'uk' %> L'Hora de Codi és només el primer pas en un viatge per aprendre més sobre com funciona la tecnologia i com crear aplicacions i programari. Per continuar aquest viatge, [anima els teus fills a aprendre en línia](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up your event</button></a>

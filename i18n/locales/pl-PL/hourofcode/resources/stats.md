@@ -1,29 +1,21 @@
 * * *
 
-title: Materiały layout: wide nav: resources_nav
+title: Blurbs and Stats layout: wide nav: resources_nav
 
 * * *
 
-[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
+[<button style="float: right; margin-top: 50px">Zarejestruj swoje wydarzenie</button>](/#join)
 
-# Blurbs and Useful Stats
-
-## Some shocking statistics (USA)
-
-  * Będzie o milion więcej miejsc pracy w sektorze informatycznym niż studentów w ciągu najbliższych 10 lat (łącznie do 500 miliardów dolarów wynagrodzenia).
-  * Więcej niż 50 procent wszystkich przewidywanych zawodów z dziedzin matematycznych i naukowych to zawody informatyczne. 
-  * Zawody informatyczne są wśród najlepiej płatnych miejsc pracy dla absolwentów. Jednakże mniej niż 3% studentów uzyskuje dyplom z dziedziny informatyki.
-  * In 25 states, computer science classes don’t count toward math or science high school graduation requirements. 
-  * Less than 20% of AP Computer Science students are women. Less than 10% are black or Latino.
+# Notki reklamowe i przydatne statystyki
 
 ## Use this short blurb in newsletters
 
-### Bring computer science to your school. Start with an Hour of Code
+### Wprowadź informatykę do swojej szkoły. Zacznij z Hour of Code
 
-Computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. If you heard about the [Hour of Code](<%= hoc_uri('/') %>) last year, you might know it made history. In one week, 15 million students tried computer science! The [Hour of Code](<%= hoc_uri('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= hoc_uri('/') %>) to host an Hour of Code this December 8-14 during Computer Science Education Week and help reach 100 million students by the end of the year. If you did this last year, you know that students loved it. Try to go even bigger, get every student at your school participating. We’ll have new tutorials for all ages and ones that require no computer at all. Watch the [video](<%= hoc_uri('/') %>), and ask all educators to give it a shot. Every participating educator will receive [thank you gifts](<%= hoc_uri('/us/prizes') %>). 100 classrooms will win tech chats with special guest speakers (participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more). And in each state, one participating school will win $10,000 in technology for their school! Add your school to the map, go to <http://hourofcode.com>
+Komputery są wszędzie, ale obecnie mniej szkół uczy informatyki niż nawet 10 lat temu. Dobrą wiadomością jest to, że jesteśmy na drodze, aby to zmienić. Jeśli słyszałeś o [ Hour of Code](<%= hoc_uri('/') %>) w zeszłym roku, możesz wiedzieć, że przeszedł do historii. W jednym tygodniu, 15 milionów uczniów wypróbowało informatykę! [ Hour of Code](<%= hoc_uri('/') %>) jest godzinnym wstępem do informatyki, mający na celu wyjaśnienie kodu, i pokazanie że każdy może nauczyć się podstaw. [ Zarejestruj się](<%= hoc_uri('/') %>) by zorganizować własny Hour of Code między 8 - 14 grudnia w trakcie trwania Tygodnia edukacji informatycznej i pomóż osiągnąć pułap 100 miliona uczniów pod koniec tego roku. Add your school to the map, go to <http://hourofcode.com>
 
 ## Infographic version:
 
 ![image](http://code.org/images/fit-8000/Code.org_infographic.png)
 
-<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>
+<a style="display: block" href="/#join"><button style="float: right;">Zarejestruj swoje wydarzenie</button></a>

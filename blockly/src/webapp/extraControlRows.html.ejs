@@ -3,10 +3,7 @@
 
 <% if (debugButtons) { %>
 <div>
-<% } %>
-
-<% if (debugButtons) { %>
-<div id="debug-buttons" style="display:inline;">
+  <div id="debug-buttons" style="display:inline;">
     <button id="pauseButton" class="share">
       <%= webappMsg.pause() %>
     </button>
@@ -19,6 +16,16 @@
     <button id="stepOutButton" class="share">
       <%= webappMsg.stepOut() %>
     </button>
+  </div>
+<% } %>
+
+<% if (debugConsole) { %>
+  <div id="debug-console" class="debug-console">
+    <textarea id="debug-output" readonly disabled tabindex=-1 class="debug-output"></textarea>
+    <span class="debug-input-prompt">
+      &gt;
+    </span>
+    <div contenteditable id="debug-input" class="debug-input"></div>
   </div>
 <% } %>
 

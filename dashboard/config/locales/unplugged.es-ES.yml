@@ -226,48 +226,68 @@
         video: C3_internet
       Crowdsourcing:
         title: Colaboración Abierta
-        desc: Los estudiantes usan colaboración abierta (crowdsourcing), una técnica
-          de resolución de problemas común en las Ciencias de la Computación, para
-          completar una tarea juntos como clase más eficientemente que si un estudiante
-          lo intentara solo.
+        desc: Los estudiantes usan crowdsourcing, una técnica habitual para resolver
+          problemas en informática, para completar una tarea juntos como un aula,
+          más eficientemente que si un alumno lo intentara solo.
         video: C3_crowdsourcing
       DigitalCitizenship:
         title: Ciudadanía Digital
         desc: Los estudiantes exploran la diferencia entre información privada e información
           personal, distinguiendo qué es seguro y qué es inseguro compartir en línea.
       TangramAlgorithms:
-        title: Tangram Algorithms
-        desc: This lesson shows us something important about algorithms. If you keep
-          an algorithm simple there are lots of ways to use it. If you want to make
-          sure everyone ends up with the same thing, then your algorithm needs more
-          detail.
+        title: Algoritmos de tangram
+        desc: Esta clase nos enseña algo importante acerca de los algoritmos. Si mantienes
+          un algoritmo simple hay muchas maneras de usarlo. Si quieres asegurarte
+          de que todos terminen con el mismo resultado, entonces el algoritmo necesita
+          más detalle.
       EnvelopeVariables:
-        title: Envelope Variables
-        desc: Variables allow for a lot of freedom in computer science.  This lesson
-          helps to explain what variables are and how we can use them in many different
-          ways. Use this activity before (or in conjunction with) the lesson on abstraction
-          to really hit the idea home.
+        title: Variables de sobre
+        desc: Las variables permiten mucha libertad en Ciencias de la computación.  Esta
+          clase ayuda a explicar qué son las variables y cómo podemos usarlas de muchas
+          maneras diferentes. Usa esta actividad antes de (o junto con) la clase de
+          abstracción para llevar realmente a la idea a casa.
       MadGlibs:
-        title: Mad Glibs
-        desc: Abstraction is one of the most important skills for a computer scientist
-          to understand.  This activity will have your students analyzing stories
-          for differences so that they can abstract them away. Those abstracted stories
-          become templates for fun and crazy new ones.
+        title: Loco Gilbs
+        desc: La abstracción es una de las habilidades más importantes que deben entender
+          un informático. Esta actividad hará que los alumnos analicen historias buscando
+          diferencias para que puedan abstraerlas. Esas historias abstractas se convierten
+          en plantillas para diversión y crear otras locas historias.
       ForLoopFun:
-        title: For Loop Fun
-        desc: We know that loops allow us to do things over and over again, but now
-          we’re going to learn how to use loops with extra structure built right in.
+        title: Diversión con bucles Para
+        desc: Sabemos que los bucles nos permiten hacer las cosas una y otra vez,
+          pero ahora vamos a aprender cómo utilizar bucles con más estructura construida
+          en ellos.
       SongwritingWithParameters:
         title: Composición Musical con Parámetros
-        desc: 'One of the most magnificent structures in the computer science world
-          is the function.  Functions (sometimes called procedures) are mini programs
-          that you can use over and over inside of your bigger program. This lesson
-          will help students intuitively understand why combining chunks of code into
-          functions is such a helpful practice.  '
+        desc: 'Una de las estructuras más magníficas en el mundo de las ciencias de
+          la computación es la función.  Las Funciones (a veces llamadas procedimientos)
+          son mini programas que puedes utilizar una y otra vez dentro de tu programa
+          más grande. Esta clase  ayudará a los alumnos a entender intuitivamente
+          por qué la combinación de partes de código en funciones es una práctica
+          tan útil.  '
       BinaryImages:
-        title: Binary Images
-        desc: Though many people think of binary as strictly zeros and ones, our previous
-          courses taught students that information can be represented in a variety
-          of binary options.  This lesson takes that concept one step further as it
-          illustrates how a computer can store even more complex information (such
-          as images and colors) in binary, as well.
+        title: Imágenes binarias
+        desc: Aunque muchas personas piensan de los binarios como estrictamente ceros
+          y unos, nuestros cursos anteriores enseñaron a los alumnos que la información
+          puede ser representada en una variedad de opciones binarias.  Esta clase
+          lleva ese concepto un paso más allá que ilustra cómo una computadora también
+          puede almacenar información aún más compleja (por ejemplo, imágenes y colores)
+          en binario.
+      VideoGamesCoordinatePlanes:
+        title: Videojuegos y planos de coordenadas
+        desc: Descripción de la clase sobre videojuegos y planos de coordenadas
+      Contracts:
+        title: Contratos
+        desc: Descripción de la clase desenchufada sobre contratos
+      DesignRecipe:
+        title: La receta de diseño
+        desc: Descripción de la clase sobre recetas de diseño
+      Booleans:
+        title: Valores booleanos
+        desc: Descripción de la clase sobre booleanos
+      ConditionalsPiecewiseFunctions:
+        title: Funciones por partes y condicionales
+        desc: Descripción de la clase sobre funciones por trozos y condicionales
+      CollisionDetection:
+        title: Detección de colisiones
+        desc: Descripción de la clase sobre detección de colisiones

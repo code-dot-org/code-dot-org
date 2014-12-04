@@ -6,20 +6,22 @@
 <% } %>
 
 <div class="sharing">
-<% if (options.alreadySaved) { %>
-  <div class="saved-to-gallery">
-    <%= msg.savedToGallery() %>
-  </div>
-<% } else if (options.saveToGalleryUrl) { %>
   <div class="social-buttons">
+  <% if (!options.onMainPage) { %>
+    <button id="print-button">
+      <%= msg.print() %>
+    </button>
+  <% } %>
+<% if (options.alreadySaved) { %>
+  <button class="saved-to-gallery" disabled>
+    <%= msg.savedToGallery() %>
+  </button>
+<% } else if (options.saveToGalleryUrl) { %>
   <button id="save-to-gallery-button" class="launch">
     <%= msg.saveToGallery() %>
   </button>
-  <button id="print-button">
-    <%= msg.print() %>
-  </button>
-  </div>
 <% } %>
+  </div>
 
 <% if (options.response && options.response.level_source) { %>
   <% if (options.appStrings && options.appStrings.sharingText) { %>
@@ -45,6 +47,11 @@
     <% if (options.sendToPhone) { -%>
       <a id="sharing-phone" href="" onClick="return false;">
         <img src='<%= BlocklyApps.assetUrl("media/phone_purple.png") %>' />
+      </a>
+    <% } -%>
+    <% if (options.level.shapewaysUrl) { -%>
+      <a href='<%= options.level.shapewaysUrl %>' target="_blank">
+        <img src='<%= BlocklyApps.assetUrl("media/shapeways_purple.png") %>' />
       </a>
     <% } -%>
   </div>

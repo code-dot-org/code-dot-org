@@ -17,17 +17,17 @@ The Design Recipe is a structured approach to writing functions that solve world
 [summary]
 
 ## Teaching Summary
-### **What's in a Contract**
+### **Getting Started**
  
-1) [Vocabulary](#Vocab)
-2) [Figuring it Out](#GetStarted)  
+1) [Vocabulary](#Vocab)<br/>
+2) [What is the Design Recipe](#GetStarted)  
 
 ### **Activity: The Design Recipe**  
 
-3) [The Design Recipe](#Activity1)   
+3) [Collaborative Design](#Activity1)   
 
 ### **Assessment**
-6) [Design Recipe Assessment](#Assessment)
+4) [Design Recipe Assessment](#Assessment)
 
 [/summary]
 

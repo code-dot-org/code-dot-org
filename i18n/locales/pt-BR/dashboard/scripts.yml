@@ -1,73 +1,74 @@
-"pt":
+pt-BR:
   data:
     script:
       name:
         test:
           "Jigsaw: Learn to drag and drop": 'Quebra-cabeça: aprenda a arrastar e soltar'
-          The Maze: "O Labirinto"
-          Multi: "Multi"
-          Match: "Correspondência"
-          Math Image: "Imagem matemática"
-          title: "Curso Teste"
-          description: "Apenas um curso-teste interno."
+          The Maze: O Labirinto
+          Multi: Multi
+          Match: Correspondência
+          Math Image: Imagem matemática
+          title: Curso Teste
+          description: Apenas um curso-teste interno.
         course1:
           "Jigsaw: Learn to drag and drop": 'Quebra-cabeça: aprenda a arrastar e soltar'
           "Maze: Sequence": 'Labirinto: Sequência'
           "Maze: Debugging": 'Labirinto: Depuração'
           "Artist 1: Intro": 'Pintor 1: Introdução'
-          Artists 2: "O Artista 2"
-          Spelling Bee: "Soletrando"
-          Spelling Bee not blockly: "Soletrando sem blocos"
+          Artists 2: O Artista 2
+          Spelling Bee: Soletrando
+          Spelling Bee not blockly: Soletrando sem blocos
           "Bee 1: Intro": 'Abelha 1: Introdução'
           "Maze 2: Loops": 'Labirinto 2: Laços'
           "Bee 2: Loops": 'Abelha 2: Laços'
           Multi & Match: 'Multi & Match'
           K-1 Flappy: Flappy bird para pré-escolar
-          Flappy non blockly: "Flappy bird sem blocos"
-          title: "Curso 1"
-          Artist 2: "O Artista 2"
-          Happy Maps: "Mapas divertidos"
+          Flappy non blockly: Flappy bird sem blocos
+          title: Curso 1
+          Artist 2: O Artista 2
+          Happy Maps: Mapas divertidos
           Move it, Move it: Criando caminhos
           "Real-life Algorithms: Plant a Seed": 'Algoritmos da vida real: plante uma semente'
-          Building a Foundation: "Criando uma base"
-          Getting Loopy: "Repetindo"
-          The Big Event: "O grande evento"
-          Going Places Safely: "Navegando com segurança"
-          description: "O Curso 1 tem como propósito ensinar estudantes que estão começando a ler a criar programas de computador, o que os ajudará a aprender a colaborar com outras pessoas, desenvolver habilidades de resolução de problemas e persistir na execução de tarefas difíceis. No final do curso, os estudantes criam seu próprio jogo ou história personalizados que eles podem compartilhar com outras pessoas. Este curso é recomendado para crianças da pré-escola até 1º ano."
+          Building a Foundation: Criando uma base
+          Getting Loopy: Repetindo
+          The Big Event: O grande evento
+          Going Places Safely: Navegando com segurança
+          description: O Curso 1 tem como propósito ensinar estudantes que estão começando a ler a criar programas de computador, o que os ajudará a aprender a colaborar com outras pessoas, desenvolver habilidades de resolução de problemas e persistir na execução de tarefas difíceis. No final do curso, os estudantes criam seu próprio jogo ou história personalizados que eles podem compartilhar com outras pessoas. Este curso é recomendado para crianças da pré-escola até 1º ano.
           "Bee: Sequence": 'Abelha: Sequência'
           "Artist: Sequence": 'Artista: Sequência'
           "Artist: Shapes": 'Artista: Formas'
           "Maze: Loops": 'Labirinto: Laços'
           "Bee: Loops": 'Abelha: Laços'
           "Studio: Create a Story": 'Laboratório: Crie uma história'
-          description_short: "O curso 1 foi elaborado para os leitores iniciantes. Recomendado para os anos de pré a 1."
           "Artist: Loops": 'Artista: Laços'
+          description_audience: Ages 4+ (pre-readers)
+          description_short: Course 1 is designed for early readers.
         course2:
-          The Maze: "O Labirinto"
-          Suzi: "Suzi"
-          The Artist: "O Artista"
-          Artist Debugging: "Depuração do Artista"
-          Bounce: "Pingue-pongue"
+          The Maze: O Labirinto
+          Suzi: Suzi
+          The Artist: O Artista
+          Artist Debugging: Depuração do Artista
+          Bounce: Pingue-pongue
           "Studio: Create a Story": 'Laboratório: Crie uma história'
-          Artist Loops: "Laços do Artista"
-          Bee Conditionals: "Condicionais da abelha"
-          Flappy: "Flappy bird"
-          title: "Curso 2"
-          Bee Loops: "Laços da abelha"
-          Artist Functions: "Funções do artista"
-          The Artist Debugging: "A depuração do artista"
-          Bee Debugging: "Depuração da abelha"
-          Bee Functions: "Funções da abelha"
-          Maze Loops: "Laços do labirinto"
-          Graph Paper Programming: "Programação em papel quadriculado"
+          Artist Loops: Laços do Artista
+          Bee Conditionals: Condicionais da abelha
+          Flappy: Flappy bird
+          title: Curso 2
+          Bee Loops: Laços da abelha
+          Artist Functions: Funções do artista
+          The Artist Debugging: A depuração do artista
+          Bee Debugging: Depuração da abelha
+          Bee Functions: Funções da abelha
+          Maze Loops: Laços do labirinto
+          Graph Paper Programming: Programação em papel quadriculado
           "Real-life Algorithms: Paper Planes": 'Algoritmos da vida real: aviões de papel'
-          Getting Loopy: "Repetindo"
-          Relay programming: "Programação por revezamento"
-          Conditionals: "Condições"
-          Binary Bracelets: "Pulseiras binárias"
-          The Big Event: "O grande evento"
-          Your Digital Footprint: "Seu rastro digital"
-          description: "O Curso 2 é voltado para estudantes que já sabem ler e não têm experiência em programação. Aqui, os alunos criarão programas para resolver problemas e desenvolver histórias ou jogos interativos que podem compartilhar com outras pessoas. Este curso é recomendado para alunos de 2º-5º ano."
+          Getting Loopy: Repetindo
+          Relay programming: Programação por revezamento
+          Conditionals: Condições
+          Binary Bracelets: Pulseiras binárias
+          The Big Event: O grande evento
+          Your Digital Footprint: Seu rastro digital
+          description: O Curso 2 é voltado para estudantes que já sabem ler e não têm experiência em programação. Aqui, os alunos criarão programas para resolver problemas e desenvolver histórias ou jogos interativos que podem compartilhar com outras pessoas. Este curso é recomendado para alunos de 2º-5º ano.
           "Maze: Sequence": 'Labirinto: Sequência'
           "Artist: Sequence": 'Artista: Sequência'
           "Maze: Loops": 'Labirinto: Laços'
@@ -76,39 +77,40 @@
           "Bee: Debugging": 'Abelha: Depuração'
           "Artist: Debugging": 'Artista: Depuração'
           "Bee: Conditionals": 'Abelha: Condicionais'
-          description_short: "O Curso 2 foi elaborado para os alunos que já conseguem ler. Recomendado para os anos de 2 a 5."
           "Artist: Sequence2": 'Artista: Sequência 2'
           "Maze: Sequence2": 'Labirinto: Sequência 2'
           "Artist: Nested Loops": 'Artista: Laços Aninhados'
+          description_audience: 'Ages  6+ (reading required)'
+          description_short: Course 2 is designed for students who can read.
         course3:
-          The Maze: "O Labirinto"
+          The Maze: O Labirinto
           "Studio: Create a Story": 'Laboratório: Crie uma história'
-          The Artist: "O Artista"
-          title: "Curso 3"
-          Artist Functions: "Funções do artista"
-          Artist For Loops: "Laços for do Artista"
-          Artist Nested Loops: "Laços aninhados do artista"
-          Bee Conditionals: "Condicionais da abelha"
-          Bee Nested Loops: "Laços aninhados da abelha"
-          Bee Debuggin: "Depuração da abelha"
-          Bee Debugging: "Depuração da abelha"
-          Bee Functions: "Funções da abelha"
-          Artist Functions with Params: "Funções do artista com parâmetros"
-          Bounce: "Pingue-pongue"
-          Maze Conditionals: "Condicionais do labirinto"
-          Artist Functions with Parameters: "Funções do artista com parâmetros"
-          Computational Thinking: "Pensamento Computacional"
-          Functional Suncatchers: "Caça-sóis funcionais"
-          Songwriting Parameters: "Parâmetros de composição"
-          Dice Race: "Jogo de dados"
-          Internet: "Internet"
-          Crowdsourcing: "Crowdsourcing"
-          Digital Citizenship: "Cidadania digital"
+          The Artist: O Artista
+          title: Curso 3
+          Artist Functions: Funções do artista
+          Artist For Loops: Laços for do Artista
+          Artist Nested Loops: Laços aninhados do artista
+          Bee Conditionals: Condicionais da abelha
+          Bee Nested Loops: Laços aninhados da abelha
+          Bee Debuggin: Depuração da abelha
+          Bee Debugging: Depuração da abelha
+          Bee Functions: Funções da abelha
+          Artist Functions with Params: Funções do artista com parâmetros
+          Bounce: Pingue-pongue
+          Maze Conditionals: Condicionais do labirinto
+          Artist Functions with Parameters: Funções do artista com parâmetros
+          Computational Thinking: Pensamento Computacional
+          Functional Suncatchers: Caça-sóis funcionais
+          Songwriting Parameters: Parâmetros de composição
+          Dice Race: Jogo de dados
+          Internet: Internet
+          Crowdsourcing: Crowdsourcing
+          Digital Citizenship: Cidadania digital
           Farmer - While Loops: 'A Fazendeira - Laços enquanto'
-          description: "O Curso 3 foi desenvolvido para estudantes que já fizeram o Curso 2. Os estudantes se aprofundarão nos tópicos de programação introduzidos nos cursos anteriores, buscando soluções flexíveis para problemas mais complexos. No final deste curso, os estudantes criam histórias e jogos interativos que podem compartilhar com qualquer pessoa. Este curso é recomendado para alunos de 4º-5º ano."
+          description: O Curso 3 foi desenvolvido para estudantes que já fizeram o Curso 2. Os estudantes se aprofundarão nos tópicos de programação introduzidos nos cursos anteriores, buscando soluções flexíveis para problemas mais complexos. No final deste curso, os estudantes criam histórias e jogos interativos que podem compartilhar com qualquer pessoa. Este curso é recomendado para alunos de 4º-5º ano.
           "Studio: Create a Game": 'Laboratório: Crie um jogo'
-          Maze: "Labirinto"
-          Artist: "Artista"
+          Maze: Labirinto
+          Artist: Artista
           "Artist: Functions": 'Artista: Funções'
           "Bee: Functions": 'Abelha: Funções'
           "Bee: Conditionals": 'Abelha: Condicionais'
@@ -117,9 +119,8 @@
           "Farmer: While Loops": 'Fazendeira: Laços Enquanto'
           "Bee: Nested Loops": 'Abelha: Laços Aninhados'
           "Bee: Debugging": 'Abelha: Depuração'
-          description_short: "O curso 3 é uma continuação do Curso 2. Recomendado para os anos de 4 a 5."
-          Maze2: "Labirinto2"
-          Artist2: "Artista2"
+          Maze2: Labirinto2
+          Artist2: Artista2
           "Artist: Functions2": 'Artista: Funções2'
           "Bee: Functions2": 'Abelha: Funções2'
           "Bee: Conditionals2": 'Abelha: Condicionais2'
@@ -129,90 +130,115 @@
           "Bee: Nested Loops2": 'Abelha: Laços Aninhados2'
           "Bee: Debugging2": 'Abelha: Depuração2'
           "Artist: Patterns": 'Artista: padrões'
-          Songwriting: "Composição"
+          Songwriting: Composição
+          description_audience: Ages 8+ (after Course 2)
+          description_short: Course 3 is a follow-up to Course 2.
         msm:
-          title: "Matemática para o ensino médio"
-          description: "Trabalho privado em andamento para matemática do ensino médio."
-          Graph Paper Programming: "Programação em Papel Quadriculado"
-          Assessments: "Avaliações"
-          Unit 1: "Unidade 1"
-          Unit 2: "Unidade 2"
-          Ninja Cat and the Coordinate Plane: "Gato ninja e o plano cartesiano"
+          title: Matemática para o ensino médio
+          description: Trabalho privado em andamento para matemática do ensino médio.
+          Graph Paper Programming: Programação em Papel Quadriculado
+          Assessments: Avaliações
+          Unit 1: Unidade 1
+          Unit 2: Unidade 2
+          Ninja Cat and the Coordinate Plane: Gato ninja e o plano cartesiano
           "Calc: Circles of Evaluation": 'Cálculo: círculos de avaliação'
-          "Artist: Strings and Images": 'Artista: sequências de caracteres e imagens'
-          Contracts: "Contratos"
+          "Artist: Strings and Images": 'Artista: strings e imagens'
+          Contracts: Contratos
           "Artist: Writing Contracts": 'Artista: escrever contratos'
           "Calc: Defining Variables": 'Cálculo: definir variáveis'
           "Play Lab: Defining Variables": 'Laboratório: definir variáveis'
-          The Design Recipe: "A receita de design"
+          The Design Recipe: A receita de design
           "Artist: Defining Functions": 'Artista: definir funções'
-          "Play Lab: Defining Functions": 'Laboratório: definir funções'
+          "Play Lab: Defining Functions": 'Laboratório: Receita de design'
           "Artist: Functions": 'Artista: Funções'
           "Play Lab: Animation": 'Laboratório: animação'
-          Booleans: "Booleanos"
+          Booleans: Booleanos
           "Play Lab: Booleans": 'Laboratório: booleanos'
           "Calc: Boolean Operators": 'Cálculo: operadores booleanos'
           "Play Lab: Boolean Operators": 'Laboratório: operadores booleanos'
-          Conditionals and Piecewise Functions: "Condicionais e funções definidas por partes"
+          Conditionals and Piecewise Functions: Condicionais e funções definidas por partes
           "Artist: Conditionals": 'Artista: condicionais'
-          Collision Detection and the Distance Formula: "Detecção de colisões e a fórmula da distância"
+          Collision Detection and the Distance Formula: Detecção de colisões e a fórmula da distância
           "Play Lab: Collision Detection": 'Laboratório: detecção de colisões'
+          "Unplugged: Ninja Cat and the Coordinate Plane": 'Offline: Gato ninja e o plano cartesiano'
+          "Eval: Strings and Images": 'Eval: Strings e imagens'
+          "Unplugged: Contracts": 'Offline: contratos'
+          "Eval: Writing Contracts": 'Eval: Escrever contratos'
+          "Unplugged: The Design Recipe": 'Offline: a receita de design'
+          "Eval: Defining Functions": 'Eval: Funções rápidas'
+          "Eval: Functions": 'Eval: Receita de design'
+          "Unplugged: Booleans": 'Offline: booleanos'
+          "Unplugged: Conditionals and Piecewise Functions": 'Offline: condicionais e funções definidas por partes'
+          "Eval: Conditionals": 'Eval: Condicionais'
+          "Unplugged: Collision Detection and the Distance Formula": 'Offline: detecção de colisão e fórmula da distância'
+          "Calc: Evaluation Blocks": 'Calc: Blocos de avaliação'
+          "Unplugged: Video Games and Coordinate Planes": 'Offline: video games e planos de coordenadas'
+          "Eval: Boolean Operators": 'Eval: Operadores booleanos'
+          Blocks to Math: Dos blocos para a matemática
+          "Play Lab: Defining Variables (Big Game)": 'Laboratório: Definição de variáveis (O Grande Jogo)'
+          "Play Lab: Animation (Big Game)": 'Laboratório: Animação (O Grande Jogo)'
+          "Play Lab: Boolean (Big Game)": 'Laboratório: Booleano (O Grande Jogo)'
+          "Play Lab: Collision Detection (Big Game)": 'Laboratório: Detecção de colisão (O Grande Jogo)'
+          "Eval: Fast Functions": 'Eval: Funções rápidas'
+          "Play Lab: Design Recipe": 'Laboratório: Receita de design'
+          "Eval: Design Recipe": 'Eval: Receita de design'
         playlab:
-          title: "Laboratório"
-          description: "Crie uma história ou um jogo no Laboratório!"
-          Play Lab: "Laboratório"
-          description_short: "Crie uma história ou um jogo no Laboratório!"
+          title: Laboratório
+          description: Crie uma história ou um jogo no Laboratório!
+          Play Lab: Laboratório
+          description_short: Crie uma história ou um jogo no Laboratório!
         artist:
-          title: "Artista"
-          description: "Faça desenhos e figuras legais com o Artista!"
-          Artist: "Artista"
-          description_short: "Faça desenhos e figuras legais com o Artista!"
+          title: Artista
+          description: Faça desenhos e figuras legais com o Artista!
+          Artist: Artista
+          description_short: Faça desenhos e figuras legais com o Artista!
         scrat:
-          title: "Scrat"
-          description_short: "Scrat short description."
-          description: "Scrat long description"
+          title: Scrat
+          description_short: Breve descrição do Scrat.
+          description: Descrição detalhada do Scrat
           "Maze: Sequence": 'Labirinto: Sequência'
         hourofcode:
-          Maze: "Labirinto"
-          title: "Hora do Código"
-          description_short: "Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!"
-          description: "Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!"
+          Maze: Labirinto
+          title: Hora do Código
+          description: Conheça os conceitos básicos da ciência da computação com os personagens do Angry Birds, Plants vs. Zombies e com o Scrat, da Era do Gelo!
+          description_short: Try the basics of computer science with many fun characters!
         frozen:
-          title: "Frozen"
-          description_short: "Join the Royal Sisters of Arendelle, Anna and Elsa, as they explore the magic and beauty of ice. You will write code to create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
-          description: "Join the Royal Sisters of Arendelle, Anna and Elsa, as they explore the magic and beauty of ice. You will write code to create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
-          Artist: "Artista"
+          title: Programação com Anna e Elsa
+          description: Vamos usar programação para explorar a magia e a beleza do gelo junto com Anna e Elsa. Você vai criar flocos de neve e padrões enquanto patina no gelo e cria um país das maravilhas congelante que pode compartilhar com seus amigos!
+          Artist: Artista
+          description_short: Use a programação para explorar a mágica e a beleza do gelo com Anna e Elsa.
         course4:
-          description_short: "Os alunos que estiverem fazendo o Curso 4 já deverão ter concluído os Cursos 2 e 3."
-          description: "O Curso 4 foi elaborado para os alunos que já concluíram os Cursos 2 e 3. Os alunos mergulharão mais fundo nos tópicos da programação apresentados nos cursos anteriores, para obter soluções flexíveis para problemas mais complexos. Ao final deste curso, os alunos vão criar histórias e jogos interativos que poderão ser compartilhados com qualquer pessoa. Recomendado para os anos de 4 a 8."
+          description_short: Os alunos do Curso 4 já deverão ter concluído os Cursos 2 e 3.
+          description: O Curso 4 foi elaborado para os alunos que já concluíram os Cursos 2 e 3. Os alunos mergulharão mais fundo nos tópicos da programação apresentados nos cursos anteriores, para obter soluções flexíveis para problemas mais complexos. Ao final deste curso, os alunos vão criar histórias e jogos interativos que poderão ser compartilhados com qualquer pessoa. Recomendado para alunos do 4º ao 8º ano.
           "Artist: Variables": 'Artista: variáveis'
-          "Bee: For Loops": 'Abelha: para laços'
-          title: "Curso 4"
+          "Bee: For Loops": 'Abelha: laços for'
+          title: Curso 4
           "Algorithms: Tangrams": 'Algoritmos: tangrams'
-          Variables: "Variáveis"
-          "Play Lab: Variables": 'Brincadeira no laboratório: variáveis'
-          "Play Lab: Functions with Parameters": 'Brincadeira no laboratório: funções com parâmetros'
+          Variables: Variáveis
+          "Play Lab: Variables": 'Laboratório: variáveis'
+          "Play Lab: Functions with Parameters": 'Laboratório: funções com parâmetros'
           "Bee: Functions with Parameters": 'Abelha: funções com parâmetros'
-          "Artist: For Loops": 'Artista: para laços'
-          "Play Lab: For Loops": 'Brincadeira no laboratório: para laços'
+          "Artist: For Loops": 'Artista: laços for'
+          "Play Lab: For Loops": 'Laboratório: laços for'
           "Artist: Functions": 'Artista: Funções'
           "Artist: Functions with Paraqmeters": 'Artista: funções com parâmetros'
-          "Unplugged: Tangrams": 'Desconectado: tangrams'
-          Artist: "Artista"
-          Bee: "Abelha"
-          "Unplugged: Envelope Variables": 'Desconectado: variáveis do envelope'
-          "Unplugged: Madlibs": 'Desconectado: Mad Libs'
-          "Unplugged: For Loop Fun": 'Desconectado: para diversão com laços'
-          "Unplugged: Songwriting with Parameters": 'Desconectado: escrever músicas com parâmetros'
+          "Unplugged: Tangrams": 'Offline: tangrams'
+          Artist: Artista
+          Bee: Abelha
+          "Unplugged: Envelope Variables": 'Offline: variáveis do envelope'
+          "Unplugged: Madlibs": 'Offline: Madlibs'
+          "Unplugged: For Loop Fun": 'Offline: diversão com laços for'
+          "Unplugged: Songwriting with Parameters": 'Offline: escrever músicas com parâmetros'
           "Artist: Functions with Parameters": 'Artista: funções com parâmetros'
-          "Unplugged: Binary": 'Desconectado: binário'
+          "Unplugged: Binary": 'Offline: binário'
           Bee Binary: 'Abelha: binário'
-          Farmer Binary: "Fazendeiro binário"
-          Maze and Bee: "Labirinto e abelha"
-          Artist Binary: "Artist Binary"
+          Farmer Binary: 'Fazendeira: binário'
+          Maze and Bee: Labirinto e abelha
+          Artist Binary: 'Artista: binário'
+          description_audience: Ages 10+ (after Course 3)
         Course4pre:
-          description_short: "Uma breve revisão de conceitos para os alunos que não fizeram o Curso 2 e 3."
-          Course 4 Prerequisite: "Pré-requisitos do Curso 4"
+          description_short: Uma breve revisão dos conceitos para os alunos que não fizeram os Cursos 2 e 3.
+          Course 4 Prerequisite: Pré-requisitos para o Curso 4
           "Maze: Sequence": 'Labirinto: Sequência'
           "Artist: Sequence": 'Artista: Sequência'
           "Artist: Loops": 'Artista: Laços'
@@ -222,3 +248,36 @@
           "Bee: Nested Loops": 'Abelha: Laços Aninhados'
           "Artist: Functions": 'Artista: Funções'
           "Bee: Debugging": 'Abelha: Depuração'
+        course4pre:
+          description_short: Uma breve revisão dos conceitos para os alunos que não fizeram os Cursos 2 e 3.
+          Course 4 Prerequisite: Pré-requisitos para o Curso 4
+          "Maze: Sequence": 'Labirinto: Sequência'
+          "Artist: Sequence": 'Artista: Sequência'
+          "Artist: Loops": 'Artista: Laços'
+          "Bee: Conditionals": 'Abelha: Condicionais'
+          "Artist: Nested Loops": 'Artista: Laços Aninhados'
+          "Farmer: While Loops": 'Fazendeira: Laços Enquanto'
+          "Bee: Nested Loops": 'Abelha: Laços Aninhados'
+          "Artist: Functions": 'Artista: Funções'
+          "Bee: Debugging": 'Abelha: Depuração'
+        Course4pre (Case Conflict):
+          description_short: Uma breve revisão dos conceitos para os alunos que não fizeram os Cursos 2 e 3.
+          Course 4 Prerequisite: Pré-requisitos para o Curso 4
+          "Maze: Sequence": 'Labirinto: Sequência'
+          "Artist: Sequence": 'Artista: Sequência'
+          "Artist: Loops": 'Artista: Laços'
+          "Bee: Conditionals": 'Abelha: Condicionais'
+          "Artist: Nested Loops": 'Artista: Laços Aninhados'
+          "Farmer: While Loops": 'Fazendeira: Laços Enquanto'
+          "Bee: Nested Loops": 'Abelha: Laços Aninhados'
+          "Artist: Functions": 'Artista: Funções'
+          "Bee: Debugging": 'Abelha: Depuração'
+        usability:
+          Intro: Introdução
+          Variables and For Loops: Variáveis e laços for
+          Functions and Functions with Parameters: Funções e funções com parâmetros
+          title: Teste de usabilidade
+          description_short: ""
+          description: Uma seleção de níveis do Curso 4 para o teste de usabilidade.
+          Variables: Variáveis
+          For Loops: Laços for

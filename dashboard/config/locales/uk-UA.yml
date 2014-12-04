@@ -20,12 +20,9 @@
   hello: Привіт, світе
   welcome_back: З поверненням, %{name}
   add_teacher_form:
-    code_or_email:
-      label: 'Додати вчителя, по коду чи адресі електронної пошти:'
-      placeholder: Код (ABCDEF) або електронною поштою (teacher@school.edu)
     code:
-      label: 'Додати вчителя за кодом групи:'
-      placeholder: Код (ABCDEF)
+      label: 'Додати учителя:'
+      placeholder: Код групи (ABCDEF)
     submit: Додати викладача
   add_hint_form:
     placeholder: Будь ласка, введіть підказку сюди
@@ -393,12 +390,11 @@
     test_videos_help: Випробуйте наш новий відео-плеєр у своїй школі
     try_beta_courses: Новинка! Спробуйте наші бета-курси для учнів 1-5 класів
     use_as_teacher: Використовуйте цей сайт як вчитель
+    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
     heading_elementary: <h2>20-годинні курси для</h2><h1>початкових класів</h1>
     heading_apps: <h2>Цікавинки</h2><h1>для усіх</h1>
     heading_legacy: <h2>Загальний курс</h2><h1>для будь-якого віку</h1>
-    gallery:
-      your_turtle: Моє мистецтво
-      your_studio: Мої програми
+    your_gallery: Галерея
   gender:
     male: Чоловік
     female: Жінка
@@ -409,9 +405,10 @@
   footer:
     help_from_html: Інженери Google, Microsoft, Facebook і Twitter допомогли створити
       цей підручник.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
-      Всі права захищені.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
+      Всі права захищені.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
       Arts Inc.  Всі права захищені.
+    powered_by_aws: Powered by Amazon Web Services
     feedback: Надати відгук
     translate: Допоможіть нам перекласти вашою мовою
     support: Підтримка
@@ -452,16 +449,17 @@
   try_reloading: Спробуйте перезавантажити сторінку
   next_stage: Завершено! Перейти до наступного етапу
   download_pdf: Відкрити план уроку
-  lesson_plan: Lesson Plan
+  lesson_plan: План уроку
   view_lesson_plan: Переглянути план уроку
   pdf_download: Завантажити PDF
-  download_coming_soon: Downloadable activity coming soon.
-  video_coming_soon: Video Coming Soon!
+  download_coming_soon: Заготовки до діяльності скоро будуть.
+  video_coming_soon: Незабаром буде відео!
   share_code:
     title: Натисніть кнопку "Виконати", щоб побачити мою програму в дії
     bounce_og_title: Подивіться на мою гру Арканоід
     flappy_og_title: Поглянь на мою гру в Пурха (Flappy Game)
     studio_og_title: Погляньте на мою програму Ігрової студії
+    check_out_what_i_made: Подивіться, що у мене вийшло
     og_description: Я самостійно написав код з Code.org
     phone_number_not_allowed: Схоже, що це номер телефону. Спробуйте змінити текст.
     address_not_allowed: Схоже, що це адреса. Спробуйте змінити текст.
@@ -489,6 +487,14 @@
     20hour:
       title: Вступний курс
       body: Спробуйте наш 20-годинний вступний курс інформатики.
+    hoc2014:
+      try_new_tutorial: Спробуйте новий підручник Години коду в бета-версії
+      try_frozen: Художник з Анною та Ельзою, із Крижаного серця
+    gallery:
+      title: Галерея
+      body: Переглянути галерею програм та художніх зображень, створених нашими користувачами
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: Ці малюнки запрограмували учні!
     students_made_these_with_code: Це запрограмували учні!
@@ -502,10 +508,15 @@
     more: Більш &rarr;
     caption_by_name_age: від %{name}, віком %{age}
     caption_time_ago: '%{time_ago} тому'
+    header: Галерея
+    header_playlab: Ігрова студія
+    header_artist: Художник
   landing:
     prerelease: Це <span class='betatext'>бета</span>-курс. Це означає, що перед Вами
       не остаточна версія цього курсу і він підлягає змінам та покращенням відповідно
       до отриманих відгуків.
+    prerelease_hoc2014: Цей підручник є <span class='betatext'>бета-версією</span>.  Він
+      підлягає редагуванню відповідно до отриманих відгуків.
     feedback: Залишити відгук
     report_bug: Повідомити про помилку
     support: Отримати допомогу

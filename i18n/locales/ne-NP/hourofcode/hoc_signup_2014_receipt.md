@@ -1,6 +1,6 @@
 * * *
 
-बाट: "Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)' विषय: Hour of Code लाई होस्ट गर्न साइनिङ् गर्नु भएकोमा धन्यवाद! दृश्य: कुनै पनि होइन थिम: कुनै पनि होइन
+from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)" subject: "Thanks for signing up to host an Hour of Code!" litmus_tracking_id: "5g5lyi1a"
 
 * * *
 
@@ -10,12 +10,6 @@
 
 **हरेक** Hour of Code को व्यवस्थापकले 10 GB ड्रपबाकस वा Skype क्रडिटको $10 को रूपमा धन्यवाद आप प्राप्त गर्नेछ। [ विवरणहरू](http://<%= hostname %>/ पुरस्कारका)
 
-<% if @country == 'us' %>
-
-तपाइँको [ सबै विद्यालयलाई सहभागी हुन](http://<%= hostname %>/ पूरै-विद्यालय) को लागि तपाइँको सम्पूर्ण विद्यालयका ठूलो पुरस्कारको लागि अवसर लिन दिनुहोस्।
-
-<% end %>
-
 ## १. जानकारी फैलाउनुहोअस्
 
 #HourOfCode बारेमा साथिहरुलाई भन्नुहोश.
@@ -24,38 +18,30 @@
 
 ## २. तपाईको स्कूललाई Hour of Code को प्रस्ताब राखन भन्नुहोश
 
-[यो इमेललाई पठाउनुहोस्](http://<%= hostname %>/resources#email) वा [तपाइँको प्रधानाध्यापकलाई यो हातेपुस्तिका दिनुहोस्](http://<%= hostname %>/files/schools-handout.pdf)। एक पटक तपाइँको विद्यालय समितिमा भएपछि [ तपाइँको विद्यालय र समितिमा जान तपाइँको क्षेत्रका अन्य विद्यालयहरूलाई चुनौतीको लागि प्रविधिको विकासमा $10000 जित्न दर्ता गर्नुहोस्](http://<%= hostname %>/ पुरस्कारहरू)।
-
-<% else %>
-
-## २. तपाईको स्कूललाई Hour of Code को प्रस्ताब राखन भन्नुहोश
-
-[यो इमेललाई पठाउनुहोस्](http://<%= hostname %>/resources#email) वा [तपाइँको प्रधानाध्यापकलाई यो हातेपुस्तिका दिनुहोस्](http://<%= hostname %>/files/schools-handout.pdf)।
+[Send this email](http://<%= hostname %>/resources#email) or give [this handout](http://<%= hostname %>/files/schools-handout.pdf) to your principal.
 
 <% end %>
 
-## ३. तपाईको कम्पनीलाई संलग्न हुन भन्नुहोश
+## 3. Ask your employer to get involved
 
-[यो इमेललाई](http://<%= hostname %>/resources#email) तपाइँको व्यवस्थापक, वा CEO लाई पठाउनुहोस्। वा [तपाइँको प्रधानाध्यापकलाई यो हातेपुस्तिका दिनुहोस्।](http://<%= hostname %>/files/schools-handout.pdf).
+[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf).
 
-## ४. तपाईको समुदायमा Hour of Code को प्रवर्द्धन गर्नुहोश
+## 4. Promote Hour of Code within your community
 
-स्थानीय समूहलाई भर्ती - क्लब, मन्दिर, विश्वविद्यालय, वा श्रम संघ. अथवा आफ्नो छिमेकीका लागि Hour of Code "ब्लक पार्टी" को संचालन गर्नुहोश.
+Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
 
-## ५. Hour of Code समर्थनगर्नुकोलागी स्थानीय निर्वाचित आधिकारिकको सहयोग मग्नुहोश
+## 5. Ask a local elected official to support the Hour of Code
 
-[यो इमेललाई](http://<%= hostname %>/resources#politicians) तपाइँको मेयर, सहरका सभा, वा विद्यालयको समितिमा पठाउनुहोस्। वा [तिनिहरूलाई यो हातेपुस्तिका दिनुहोस्](http://<%= hostname %>/resources/hoc-one-pager.pdf) र तिनिहरूलाई तपाइँको विद्यालयमा जान आमन्त्रण गर्नुहोस्।
+[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
 
 <% if @country == 'ro' %>
 
-Multumim ca ne-ai anuntat despre evenimentul tau! Anunta-ne daca doresti informatii suplimentare sau daca ai intrebari। Hai sa facem istorie impreuna!
+Multumim ca ne-ai anuntat despre evenimentul tau! Anunta-ne daca doresti informatii suplimentare sau daca ai intrebari. Hai sa facem istorie impreuna!
 
-Code Romania रोमानियन इकिपा hoc@adfaber.org
+Echipa Hour of Code Romania hoc@adfaber.org
 
 <% end %>
 
 * * *
 
-Code.org 501c3 नाफा-मुखि होइन। हाम्रो ठेगाना 1301 5th Ave, Suite 1225, Seattle, WA, 98101 हो। यो इमेलहरूलाई रूचाउनु हुँदैन? [सदस्यता नबन्न](%= unsubscribe_link %) .
-
-![](<%= tracking_pixel %>)
+Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](%= unsubscribe_link %).

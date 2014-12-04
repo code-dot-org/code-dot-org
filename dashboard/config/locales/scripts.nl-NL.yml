@@ -46,9 +46,10 @@
           'Maze: Loops': 'Doolhof: lussen'
           'Bee: Loops': 'Bij: lussen'
           'Studio: Create a Story': 'Speel Lab: Maak een Verhaal'
+          'Artist: Loops': 'Kustenaar: lussen'
+          description_audience: Ages 4+ (pre-readers)
           description_short: Cursus 1 is bedoeld voor jonge lezers. Aanbevolen voor
             de rangen K-1.
-          'Artist: Loops': 'Kustenaar: lussen'
         course2:
           The Maze: Het Doolhof
           Suzi: Suzi
@@ -86,11 +87,12 @@
           'Bee: Debugging': 'Bij: Foutopsporing'
           'Artist: Debugging': 'Kunstenaar: foutopsporing'
           'Bee: Conditionals': 'Bij: voorwaardelijke instructies'
-          description_short: Cursus 2 is bedoeld voor studenten die kunnen lezen.  Aanbevolen
-            voor de rangen 2-5.
           'Artist: Sequence2': 'Kunstenaar: volgorde2'
           'Maze: Sequence2': 'Doolhof: Volgorde2'
           'Artist: Nested Loops': 'Kunstenaar: geneste lussen'
+          description_audience: Ages  6+ (reading required)
+          description_short: Cursus 2 is bedoeld voor studenten die kunnen lezen.  Aanbevolen
+            voor de rangen 2-5.
         course3:
           The Maze: Het Doolhof
           'Studio: Create a Story': 'Speel Lab: Maak een Verhaal'
@@ -133,8 +135,6 @@
           'Farmer: While Loops': 'Boer: Terwijl Lussen'
           'Bee: Nested Loops': 'Bij: geneste lussen'
           'Bee: Debugging': 'Bij: Foutopsporing'
-          description_short: Cursus 3 is een vervolg op cursus 2.  Aanbevolen voor
-            de rangen 4-5.
           Maze2: Doolhof2
           Artist2: Kunstenaar2
           'Artist: Functions2': 'Kunstenaar: Functies2'
@@ -147,6 +147,9 @@
           'Bee: Debugging2': 'Bij: Foutopsporing2'
           'Artist: Patterns': 'Kunstenaar: Patronen'
           Songwriting: Songwriting
+          description_audience: Ages 8+ (after Course 2)
+          description_short: Cursus 3 is een vervolg op cursus 2.  Aanbevolen voor
+            de rangen 4-5.
         msm:
           title: Middelbare School Wiskunde
           description: Particuliere werk in uitvoering voor Middelbare School Wiskunde.
@@ -154,27 +157,55 @@
           Assessments: Toetsen
           Unit 1: Eenheid 1
           Unit 2: Eenheid 2
-          Ninja Cat and the Coordinate Plane: Ninja Cat and the Coordinate Plane
-          'Calc: Circles of Evaluation': 'Calc: Circles of Evaluation'
+          Ninja Cat and the Coordinate Plane: Ninja Kat en het coördinaat vliegtuig
+          'Calc: Circles of Evaluation': 'Calc: Evaluatiekringen'
           'Artist: Strings and Images': 'Artiest: Tekst en afbeeldingen'
           Contracts: Contracten
           'Artist: Writing Contracts': 'Artiest: Contracten schrijven'
-          'Calc: Defining Variables': 'Calc: Defining Variables'
+          'Calc: Defining Variables': 'Calc: Variabelen definiëren'
           'Play Lab: Defining Variables': 'Speel Lab: Variabelen definiëren'
           The Design Recipe: Het ontwerp Recept
           'Artist: Defining Functions': 'Artiest: Functies Definiëren'
-          'Play Lab: Defining Functions': 'Speel Lab: Functies Definiëren'
+          'Play Lab: Defining Functions': 'Play Lab: Ontwerp recept'
           'Artist: Functions': 'Kunstenaar: Functies'
           'Play Lab: Animation': 'Speel Lab: Animatie'
           Booleans: Booleans
           'Play Lab: Booleans': 'Speel Lab: Booleans'
-          'Calc: Boolean Operators': 'Calc: Boolean Operators'
+          'Calc: Boolean Operators': 'Calc: Booleaanse operatoren'
           'Play Lab: Boolean Operators': 'Speel Lab: Boolean Operatoren'
-          Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
-          'Artist: Conditionals': 'Artist: Conditionals'
-          Collision Detection and the Distance Formula: Collision Detection and the
-            Distance Formula
-          'Play Lab: Collision Detection': 'Play Lab: Collision Detection'
+          Conditionals and Piecewise Functions: Conditionele en stuksgewijze functies
+          'Artist: Conditionals': 'Artiest: Conditionals'
+          Collision Detection and the Distance Formula: Botsingdetectie en de afstand
+            formule
+          'Play Lab: Collision Detection': 'Speel Lab: Botsingdetectie'
+          'Unplugged: Ninja Cat and the Coordinate Plane': 'Unplugged: Ninja Kat en
+            het coördinaten vliegtuig'
+          'Eval: Strings and Images': 'Eval: Tekenreeksen en afbeeldingen'
+          'Unplugged: Contracts': 'Unplugged: Contracten'
+          'Eval: Writing Contracts': 'Eval: Schrijven van contracten'
+          'Unplugged: The Design Recipe': 'Unplugged: Het ontwerp recept'
+          'Eval: Defining Functions': 'Eval: Snelle functies'
+          'Eval: Functions': 'Eval: Ontwerp recept'
+          'Unplugged: Booleans': 'Unplugged: Booleans'
+          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
+            en stuksgewijze functies'
+          'Eval: Conditionals': 'Eval: Conditionals'
+          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Botsingdetectie
+            en de afstand formule'
+          'Calc: Evaluation Blocks': 'Calc: Evaluatie blokken'
+          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video-Games
+            en Coordinaat Vliegtuigen'
+          'Eval: Boolean Operators': 'Eval: Booleaanse operatoren'
+          Blocks to Math: Blokken naar Wiskunde
+          'Play Lab: Defining Variables (Big Game)': 'Speel Lab: Variabelen definiëren
+            (Groot Spel)'
+          'Play Lab: Animation (Big Game)': 'Speel Lab: Animatie (Groot Spel)'
+          'Play Lab: Boolean (Big Game)': 'Speel Lab: Booleans (Groot Spel)'
+          'Play Lab: Collision Detection (Big Game)': 'Speel Lab: Botsingdetectie
+            (Groot Spel)'
+          'Eval: Fast Functions': 'Eval: Snelle functies'
+          'Play Lab: Design Recipe': 'Play Lab: Ontwerp recept'
+          'Eval: Design Recipe': 'Eval: Ontwerp recept'
         playlab:
           title: Speel Lab
           description: Maak een verhaal of een spel met Speel Lab!
@@ -187,64 +218,65 @@
           description_short: Teken coole plaatjes en ontwerpen met de Kunstenaar!
         scrat:
           title: Scrat
-          description_short: Scrat short description.
-          description: Scrat long description
+          description_short: Scrat korte beschrijving.
+          description: Scrat lange beschrijving
           'Maze: Sequence': 'Doolhof: Nummering'
         hourofcode:
           Maze: Doolhof
           title: Een Uur Code
-          description_short: Try the basics of computer science with characters from
-            Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description: Try the basics of computer science with characters from Angry
-            Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          description: Probeer de grondbeginselen van de informatica met figuren uit
+            angry Birds, Plant vs. Zombies en Scrat van Ice Age!
+          description_short: Probeer de grondbeginselen van de informatica met figuren
+            uit angry Birds, Plant vs. Zombies en Scrat van Ice Age!
         frozen:
-          title: Frozen
-          description_short: Join the Royal Sisters of Arendelle, Anna and Elsa, as
-            they explore the magic and beauty of ice. You will write code to create
-            snowflakes and patterns as you ice-skate and make a winter wonderland
-            that you can then share with your friends!
-          description: Join the Royal Sisters of Arendelle, Anna and Elsa, as they
-            explore the magic and beauty of ice. You will write code to create snowflakes
-            and patterns as you ice-skate and make a winter wonderland that you can
-            then share with your friends!
+          title: Code met Anna en Elsa
+          description: laten we code gebruiken om Anna en Elsa te helpen bij het ontdekken
+            van de magie en schoonheid van ijs. Je zal leren sneeuwvlokken en patronen
+            te maken terwijl je schaatst en een een mooi winterlandschap maken dat
+            je kan delen met je vrienden!
           Artist: Kunstenaar
+          description_short: Vervoeg Anna en Elsa op hun speurtocht naar de magie
+            en schoonheid van ijs door middel van programma-code.
         course4:
-          description_short: Students taking Course 4 should have already taken Courses
-            2 and 3.
-          description: Course 4 is designed for students who have taken Course 2 and
-            3. Students will delve deeper into programming topics introduced in previous
-            courses to flexible solutions to more complex problems. By the end of
-            this course, students create interactive stories and games they can share
-            with anyone. Recommended for grades 4-8.
-          'Artist: Variables': 'Artist: Variables'
-          'Bee: For Loops': 'Bee: For Loops'
-          title: Course 4
-          'Algorithms: Tangrams': 'Algorithms: Tangrams'
+          description_short: Leerlingen die les 4 starten moeten eerst lessen 2 en
+            3 doorlopen hebben.
+          description: Les 4 is ontwikkeld voor leerlingen die lessen 2 en 3 hebben
+            gevolgd. Leerlingen zullen dieper ingaan op de programmeeronderwerpen
+            die zijn geïntroduceerd in de vorige cursussen om flexibelere oplossingen
+            voor complexere problemen te vinden. Aan het eind van deze cursus maken
+            studenten interactieve verhalen en spellen, die ze met iedereen kunnen
+            delen.
+          'Artist: Variables': 'Artiest: variabelen'
+          'Bee: For Loops': 'Bij : For-lussen'
+          title: Les 4
+          'Algorithms: Tangrams': 'Algoritmen: Tangrams'
           Variables: Variabelen
-          'Play Lab: Variables': 'Play Lab: Variables'
-          'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
-          'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
-          'Artist: For Loops': 'Artist: For Loops'
-          'Play Lab: For Loops': 'Play Lab: For Loops'
+          'Play Lab: Variables': 'Speel Lab: variabelen'
+          'Play Lab: Functions with Parameters': 'Speel Lab: Functies met Parameters'
+          'Bee: Functions with Parameters': 'Bij: Functies met Parameters'
+          'Artist: For Loops': 'Artiest: For-lussen'
+          'Play Lab: For Loops': 'Speel Lab: For-lussen'
           'Artist: Functions': 'Kunstenaar: Functies'
-          'Artist: Functions with Paraqmeters': 'Artist: Functions with Paraqmeters'
+          'Artist: Functions with Paraqmeters': 'Artiest: Functies met Parameters'
           'Unplugged: Tangrams': 'Unplugged: Tangrams'
           Artist: Kunstenaar
           Bee: Bee
-          'Unplugged: Envelope Variables': 'Unplugged: Envelope Variables'
-          'Unplugged: Madlibs': 'Unplugged: Madlibs'
-          'Unplugged: For Loop Fun': 'Unplugged: For Loop Fun'
-          'Unplugged: Songwriting with Parameters': 'Unplugged: Songwriting with Parameters'
-          'Artist: Functions with Parameters': 'Artist: Functions with Parameters'
-          'Unplugged: Binary': 'Unplugged: Binary'
+          'Unplugged: Envelope Variables': 'Unplugged: Envelop variabelen'
+          'Unplugged: Madlibs': Unplugged:Madlibs
+          'Unplugged: For Loop Fun': 'Unplugged: Voor-Lus plezier'
+          'Unplugged: Songwriting with Parameters': 'Unplugged: Liedjes schrijven
+            met Parameters'
+          'Artist: Functions with Parameters': 'Artiest: Functies met Parameters'
+          'Unplugged: Binary': 'Unplugged: binair'
           Bee Binary: Bee Binary
-          Farmer Binary: Farmer Binary
-          Maze and Bee: Maze and Bee
-          Artist Binary: Artist Binary
+          Farmer Binary: Boer Binary
+          Maze and Bee: Maze en Bee
+          Artist Binary: Kunstenaar Binary
+          description_audience: Ages 10+ (after Course 3)
         Course4pre:
-          description_short: A brief rampup of concepts for students who have not
-            taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
+          description_short: Een korte samenvatting van concepten voor leerlingen
+            die cursus 2 en 3 niet hebben afgewerkt.
+          Course 4 Prerequisite: Vereisten voor cursus 4
           'Maze: Sequence': 'Doolhof: Nummering'
           'Artist: Sequence': 'Kunstenaar: volgorde'
           'Artist: Loops': 'Kustenaar: lussen'
@@ -254,3 +286,38 @@
           'Bee: Nested Loops': 'Bij: geneste lussen'
           'Artist: Functions': 'Kunstenaar: Functies'
           'Bee: Debugging': 'Bij: Foutopsporing'
+        course4pre:
+          description_short: Een korte samenvatting van concepten voor leerlingen
+            die cursus 2 en 3 niet hebben afgewerkt.
+          Course 4 Prerequisite: Vereisten voor cursus 4
+          'Maze: Sequence': 'Doolhof: Nummering'
+          'Artist: Sequence': 'Kunstenaar: volgorde'
+          'Artist: Loops': 'Kustenaar: lussen'
+          'Bee: Conditionals': 'Bij: voorwaardelijke instructies'
+          'Artist: Nested Loops': 'Kunstenaar: geneste lussen'
+          'Farmer: While Loops': 'Boer: Terwijl Lussen'
+          'Bee: Nested Loops': 'Bij: geneste lussen'
+          'Artist: Functions': 'Kunstenaar: Functies'
+          'Bee: Debugging': 'Bij: Foutopsporing'
+        Course4pre (Case Conflict):
+          description_short: Een korte samenvatting van concepten voor leerlingen
+            die cursus 2 en 3 niet hebben afgewerkt.
+          Course 4 Prerequisite: Vereisten voor cursus 4
+          'Maze: Sequence': 'Doolhof: Nummering'
+          'Artist: Sequence': 'Kunstenaar: volgorde'
+          'Artist: Loops': 'Kustenaar: lussen'
+          'Bee: Conditionals': 'Bij: voorwaardelijke instructies'
+          'Artist: Nested Loops': 'Kunstenaar: geneste lussen'
+          'Farmer: While Loops': 'Boer: Terwijl Lussen'
+          'Bee: Nested Loops': 'Bij: geneste lussen'
+          'Artist: Functions': 'Kunstenaar: Functies'
+          'Bee: Debugging': 'Bij: Foutopsporing'
+        usability:
+          Intro: Introductie
+          Variables and For Loops: Variabelen en For-lussen
+          Functions and Functions with Parameters: Functies en functies met Parameters
+          title: Gebruiksvriendelijkheid testen
+          description_short: ''
+          description: Een selectie van cursus 4 puzzels voor gebruiksvriendelijkheidstesten.
+          Variables: Variabelen
+          For Loops: For-lussen

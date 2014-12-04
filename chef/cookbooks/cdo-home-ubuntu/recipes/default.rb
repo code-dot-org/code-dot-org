@@ -5,6 +5,7 @@
 
 [
   '.bashrc',
+  '.inputrc',
   '.profile',
 ].each do |file|
   template "/home/#{node[:current_user]}/#{file}" do

@@ -1,8 +1,8 @@
 {
-  "compute":"compute",
-  "equivalentExpression":"Try reordering your arguments to get exactly the same expression.",
-  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"compute\" block?",
-  "goal":"Goal:",
-  "reinfFeedbackMsg":"You can press the \"Try again\" button to edit your expression.",
-  "yourExpression":"Your expression:"
+  "compute":"arvuta",
+  "equivalentExpression":"Proovi vahetada oma argumentide järjekorda ning saada täpselt sama avaldis.",
+  "extraTopBlocks":"Sul on kinnitamata klotse. Kas sa soovid kinnitada need \"arvuta\" klotsi külge?",
+  "goal":"Eesmärk:",
+  "reinfFeedbackMsg":"See on sinu mäng! Jätka selle kallal töötamist või liigu edasi järgmise mõistatuse juurde!",
+  "yourExpression":"Sinu avaldis:"
 }

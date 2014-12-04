@@ -5,6 +5,14 @@ class ScriptsController < ApplicationController
   authorize_resource
   before_action :set_script_file, only: [:edit, :update, :destroy]
 
+  def show
+    if request.path != (canonical_path = script_path(@script))
+      redirect_to canonical_path, status: :moved_permanently
+      return
+    end
+
+  end
+
   def index
     authorize! :manage, Script
     rake if params[:rake] == '1'
@@ -25,9 +33,6 @@ class ScriptsController < ApplicationController
     else
       render 'new'
     end
-  end
-
-  def show
   end
 
   def destroy

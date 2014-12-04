@@ -1,7 +1,9 @@
 <%
   def canonical_hostname(domain)
-    return "localhost.#{domain}" if rack_env?(:development)
-    return "#{node.name}.#{domain}" if ['console', 'hoc-levels'].include?(node.name)
+    return "console.#{domain}" if node.name == 'production-console'
+    return "daemon.#{domain}" if node.name == 'production-daemon'
+    return "levelbuilder.#{domain}" if node.name == 'levelbuilder-staging'
+    return "#{node.name}.#{domain}" if ['hoc-levels'].include?(node.name)
     return domain if rack_env?(:production)
     "#{node.chef_environment}.#{domain}"
   end
@@ -237,17 +239,6 @@ director dashboard round-robin {
 <% end %>
 }
 
-<% if rack_env?(:staging) %>
-# levelbuilder
-backend levelbuilder {
-  .host = "127.0.0.1";
-  .port = "<%= node['cdo-apps']['levelbuilder']['port'] %>";
-  .connect_timeout = 600s;
-  .first_byte_timeout = 600s;
-  .between_bytes_timeout = 600s;
-}
-<% end %>
-
 # api.change.org
 backend api_change_org_4 {
   .host = "104.16.4.13";
@@ -357,13 +348,6 @@ end
       set req.backend = dashboard;
     }
   }
-<% if rack_env?(:staging) %>
-  else if (req.http.host == "levelbuilder.code.org")
-  {
-    set req.backend = levelbuilder;
-    return(pass);
-  }
-<% end %>
   else if (req.url ~ "^/dashboardapi/")
   {
     # Map /dashboardapi to learn.code.org/api

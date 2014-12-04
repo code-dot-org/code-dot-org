@@ -100,15 +100,18 @@
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Start
           med en firkant<br/>Sæt en trekant oven på firkanten<br/>Sæt en trekant under
           firkanten
-        Start with a square<br/>Put a triangle right of square<br/>Put a rhombus below square<br/>Put triangle right of rhombus: Start
-          med et firkant<br/>Sæt en trekant til højre for firkanten<br/>Sætte en rhombe
-          under firkanten<br/>Sæt en trekant til højre for rhomben
-        Start with a square<br/>Put a rhombus above the square<br/>Put a triangle right of the rhombus: Start
-          med en firkant<br/>Sætte en rhombe over firkanten<br/>Sætte en trekant til
-          højre for rhomben
-        Start with a square<br/>Put a triangle below the square<br/>Put a rhombus right of the triangle: Start
-          med en firkant<br/>Sætte en trekant under firkanten<br/>Sætte en rhombe
-          til højre for trekanten
+        0: '? Start med et kvadrat <br/> Sæt en trekant til højre for kvadratet <br/>
+          Sæt et parallelogram nedenunder kvadratet <br/> sæt trekanten til højre
+          for parallelogrammet'
+        1: ': Start med et kvadrat <br/> sæt en trekant til højre for kvadratet <br/>
+          Sæt et parallelogram nedenfor kvadratet <br/> sæt trekanten til højre for
+          parallelogrammet'
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Start
+          med et kvadrat <br/> sæt et parallelogram ovenover kvadratet <br/> sætte
+          en trekant lige ved siden af parallelogrammet
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Start
+          med et kvadrat <br/> sæt en trekant under kvadratet <br/> sæt et parallelogram
+          ved siden af trekanten
       2-3 Algorithms Multi 2:
         Multiple Choice: Multiple Choice
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Start
@@ -292,8 +295,8 @@
         <h4>Eugene is a _____ city.</h4>: <h4>Roskilde er en _____ by.</h4>
       4-5 Crowdsourcing Multi 1:
         Multiple Choice: Multiple Choice
-        Which of these pictures best represents crowdsourcing?: Hvilke af disse bedste
-          billeder repræsenterer crowdsourcing?
+        Which of these pictures best represents crowdsourcing?: Hvilke af disse billeder
+          repræsenterer bedst crowdsourcing?
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png
       4-5 Crowdsourcing Multi 2:
@@ -364,11 +367,20 @@
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
+      Coordinates Multi 1:
+        Video game Coordinates: Video game Coordinates
+        Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
+        Which answer best describes the unicorn's movement?: Which answer best describes
+          the unicorn's movement?
+        The unicorn moves across the screen: The unicorn moves across the screen
+        The unicorn's y value changes: The unicorn's y value changes
+        The unicorn moves to the left: The unicorn moves to the left
+        The unicorn's x value changes: The unicorn's x value changes
       K-1 Artist 1 Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png,
           500
-        Which blocks solve this puzzle?: Hvilke blokke løser puslespillet?
+        Which blocks solve this puzzle?: Hvilke blokke løser opgaven?
         /script_assets/k_1_images/artist_images/W|S|S.png: /script_assets/k_1_images/artist_images/W|S|S.png
         /script_assets/k_1_images/artist_images/E|S|S.png: /script_assets/k_1_images/artist_images/E|S|S.png
         /script_assets/k_1_images/artist_images/S|E|E.png: /script_assets/k_1_images/artist_images/S|E|E.png
@@ -513,7 +525,7 @@
         Multiple Choice: Multiple Choice
         /script_assets/k_1_images/search_images/move.png, 450: /script_assets/k_1_images/search_images/move.png,
           450
-        Which blocks spell "MOVE"?: Hvilke blokke staver "Flytte"?
+        Which blocks spell "MOVE"?: Hvilke blokke staver "Flyt"?
         /script_assets/k_1_images/move_blocks/EEES.png: /script_assets/k_1_images/move_blocks/EEES.png
         /script_assets/k_1_images/move_blocks/EESS.png: /script_assets/k_1_images/move_blocks/EESS.png
         /script_assets/k_1_images/move_blocks/ESSS.png: /script_assets/k_1_images/move_blocks/ESSS.png

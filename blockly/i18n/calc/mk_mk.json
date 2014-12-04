@@ -1,8 +1,8 @@
 {
-  "compute": "compute",
-  "equivalentExpression": "Try reordering your arguments to get exactly the same expression.",
-  "extraTopBlocks": "You have unattached blocks. Did you mean to attach these to the \"compute\" block?",
-  "goal": "Goal:",
-  "reinfFeedbackMsg": "Does this look like what you want? You can press the \"Try again\" button to see your drawing.",
-  "yourExpression": "Your expression:"
+  "compute": "Пресметај",
+  "equivalentExpression": "Обидете се со промена на распоредот на вашите аргументи за да се добие ист израз.",
+  "extraTopBlocks": "Имате неповрзани блокови. Дали мислевте да се закачите на овие на \" пресмета\" блок ?",
+  "goal": "Цел:",
+  "reinfFeedbackMsg": "Еве ја твојата приказна ! Продолжи да работиш на неа, или се движи кон следниот мозаик!",
+  "yourExpression": "Вашиот израз:"
 }

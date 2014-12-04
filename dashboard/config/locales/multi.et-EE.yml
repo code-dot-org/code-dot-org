@@ -99,15 +99,16 @@
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Start
           with a square<br/>Put a triangle above the square<br/>Put a triangle below
           the square
-        Start with a square<br/>Put a triangle right of square<br/>Put a rhombus below square<br/>Put triangle right of rhombus: Start
-          with a square<br/>Put a triangle right of square<br/>Put a rhombus below
-          square<br/>Put triangle right of rhombus
-        Start with a square<br/>Put a rhombus above the square<br/>Put a triangle right of the rhombus: Start
-          with a square<br/>Put a rhombus above the square<br/>Put a triangle right
-          of the rhombus
-        Start with a square<br/>Put a triangle below the square<br/>Put a rhombus right of the triangle: Start
-          with a square<br/>Put a triangle below the square<br/>Put a rhombus right
-          of the triangle
+        0: '? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
+          below square<br/>Put triangle right of parallelogram'
+        1: ': Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
+          below square<br/>Put triangle right of parallelogram'
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Start
+          with a square<br/>Put a parallelogram above the square<br/>Put a triangle
+          right of the parallelogram
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Start
+          with a square<br/>Put a triangle below the square<br/>Put a parallelogram
+          right of the triangle
       2-3 Algorithms Multi 2:
         Multiple Choice: Multiple Choice
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Start
@@ -275,7 +276,7 @@
         <h4>Brushing your teeth</h4>: <h4>Brushing your teeth</h4>
         <h4>Baking cookies</h4>: <h4>Baking cookies</h4>
         <h4>Shopping from a grocery list</h4>: <h4>Shopping from a grocery list</h4>
-        <h4>Banana</h4>: <h4>Banana</h4>
+        <h4>Banana</h4>: <h4>Banaan</h4>
       4-5 Computational Thinking Multi 1:
         Multiple Choice: Multiple Choice
         0: '? Here are three sentences. Which of the templates below correctly abstracts
@@ -283,11 +284,12 @@
         1: ': Here are three sentences. Which of the templates below correctly abstracts
           so that all three match the same pattern as the template?'
         <h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>: <h4>Seattle
-          is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>
-        <h4>Seattle _____ a _____ _____.</h4>: <h4>Seattle _____ a _____ _____.</h4>
-        <h4>_____ is a _____ city.</h4>: <h4>_____ is a _____ city.</h4>
+          on üks suur linn.<br/>Eugene on üks tavapärane linn<br/>Hillview on üks
+          väike linn.</h4>
+        <h4>Seattle _____ a _____ _____.</h4>: <h4>Seattle _____ üks _____ _____.</h4>
+        <h4>_____ is a _____ city.</h4>: <h4>_____ on üks _____ linn.</h4>
         <h4>_____ is _____ a _____.</h4>: <h4>_____ is _____ a _____.</h4>
-        <h4>Eugene is a _____ city.</h4>: <h4>Eugene is a _____ city.</h4>
+        <h4>Eugene is a _____ city.</h4>: <h4>Eugene on üks _____ linn.</h4>
       4-5 Crowdsourcing Multi 1:
         Multiple Choice: Multiple Choice
         Which of these pictures best represents crowdsourcing?: Which of these pictures
@@ -306,10 +308,11 @@
         Multiple Choice: Multiple Choice
         Which piece of information listed below is okay to share on the internet?: Which
           piece of information listed below is okay to share on the internet?
-        <h4>Your birthday</h4>: <h4>Your birthday</h4>
-        <h4>Your favorite food</h4>: <h4>Your favorite food</h4>
-        <h4>Your address</h4>: <h4>Your address</h4>
-        <h4>Your parent's credit card number</h4>: <h4>Your parent's credit card number</h4>
+        <h4>Your birthday</h4>: <h4>Sinu sünnipäev</h4>
+        <h4>Your favorite food</h4>: <h4>Sinu lemmiktoit</h4>
+        <h4>Your address</h4>: <h4>Sinu aadress</h4>
+        <h4>Your parent's credit card number</h4>: <h4>Ühe sinu vanema krediitkaardi
+          number</h4>
       4-5 Internet Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
@@ -362,6 +365,15 @@
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
+      Coordinates Multi 1:
+        Video game Coordinates: Video game Coordinates
+        Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
+        Which answer best describes the unicorn's movement?: Which answer best describes
+          the unicorn's movement?
+        The unicorn moves across the screen: The unicorn moves across the screen
+        The unicorn's y value changes: The unicorn's y value changes
+        The unicorn moves to the left: The unicorn moves to the left
+        The unicorn's x value changes: The unicorn's x value changes
       K-1 Artist 1 Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png,
@@ -617,7 +629,7 @@
         /script_assets/matches/images/head.jpg,400: /script_assets/matches/images/head.jpg,400
         This puzzle is all about selecting the correct flowers.: This puzzle is all
           about selecting the correct flowers.
-        Instructions: Instructions
+        Instructions: Juhised
         Click the right answer, then submit. And here are some longer instructions just to test things more.  How's that word wrapping?: Click
           the right answer, then submit. And here are some longer instructions just
           to test things more.  How's that word wrapping?
@@ -638,7 +650,7 @@
         George Washington: George Washington
         George Jetson: George Jetson
       unique level name here:
-        title: title
+        title: pealkiri
         description here: description here
         Question: Question
         wrong answer: wrong answer

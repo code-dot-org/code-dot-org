@@ -8,6 +8,8 @@ class Artist < Blockly
     free_play
     permitted_errors
     impressive
+    shapeways_url
+    disable_sharing
   )
 
   before_save :update_ideal_level_source
@@ -132,7 +134,6 @@ class Artist < Blockly
       <block type="draw_upper_wave"></block>
       <block type="draw_lower_wave"></block>
       <block type="create_snowflake_dropdown"></block>
-
     </category>
     <category name="Loops">
       <block type="controls_for_counter">
@@ -191,6 +192,9 @@ class Artist < Blockly
         </value>
       </block>
       <block type="math_random_float"></block>
+    </category>
+    <category name="Text">
+      <block type="text"></block>
     </category>
     <category name="Variables" custom="VARIABLE"></category>
     <category name="Picker">

@@ -2,37 +2,34 @@
   activerecord:
     errors:
       messages:
-        blank: is required
+        blank: potrebno
     attributes:
       user:
-        name: Ime
+        name: Ime za prikaz
         email: E-mail
         username: Korisničko ime
         password: Lozinka
         password_confirmation: Potvrda lozinke
         current_password: Trenutna zaporka
         locale: Jezik
-        age: Age
+        age: Godine starosti
         gender: Spol
         edit_header: Uredi podatke o računu
         error:
-          future: can't be in the future
+          future: Ne može biti u budućnosti
   hello: Pozdrav svima
   welcome_back: Dobrodošao natrag, %{name}
   add_teacher_form:
-    code_or_email:
-      label: 'Dodaj učitelja koristeći kod ili adresu elektroničke pošte:'
-      placeholder: Code (ABCDEF) or email (teacher@school.edu)
     code:
-      label: 'Add a teacher by section code:'
-      placeholder: Code (ABCDEF)
+      label: 'Dodajte učitelja:'
+      placeholder: Dio koda (ABCDEF)
     submit: Dodaj učitelja
   add_hint_form:
-    placeholder: Please enter your hint here
+    placeholder: Molimo unesite vaš prijedlog
     submit: Dodaj pomoć
   appname: Code.org
   stage: Nivo
-  stage_number: Stage %{number}
+  stage_number: Faza %{number}
   puzzle: Zadatak
   trophies: Trofeji
   courses: Tečaji
@@ -40,46 +37,50 @@
   more: VIŠE
   less: MANJE
   try_hoc: 'Isprobaj Hour of Code, klikni ovdje >> '
-  try_k8intro: Ili isprobaj naš informtički tečaj za djecu do 8 godina (15-25 sati)
-  k8intro: K-8 Intro to Computer Science Course (15-25 hours)
+  try_k8intro: Ili isprobaj naš informatički tečaj za djecu u osnovnoj školi (15-25
+    sati)
+  k8intro: Uvod u informatiku za osnovnu školu (15-25 sati)
   already_started: 'Već si započeo? Nastavi ovdje >> '
-  demos: 'Admin: All Demos'
+  demos: 'Admin: Sve demo'
   continue: Nastavi
-  prize: prize
+  prize: nagrada
   more_info: Više informacija
   auth:
     sign_in_with: Prijavi se s %{provider}
     signed_in: Prijavljen!
-    signed_out: You have signed out of <a href="%{url}">Code.org</a>.
-    sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
-      to sign out of %{provider}.
+    signed_out: Odjavili ste se iz<a href="%{url}">Code.org</a>.
+    sign_out_of: Koristili ste %{provider} da biste se prijavili. <a href="%{url}">Kliknite
+      ovdje</a> da biste se odjavili %{provider}.
     already_signedup: Jesi li već prijavljen?
     notyet_signedup: Još se nisi pridružio?
-    google_oauth2: Google Account
+    google_oauth2: Google račun
     twitter: Twitter
     facebook: Facebook
-    windowslive: Microsoft Account
+    windowslive: Microsoft račun
     forgot_password: Zaboravio si lozinku?
     need_confirmation: Nisi primio upute za potvrdu?
     need_unlock: Nisi primio upute za otključavanje?
   signup_form:
-    overview_student: Sign up for an account to track your progress.
-    overview_teacher: Teach computer science in your classroom by signing up for an
-      account.<p/> You'll be able to track your students' progress and get rewards.
+    overview_student: Prijavite se za račun kako biste mogli pratiti svoj napredak.
+      Vaša e-pošta koristi se prvenstveno kako bi vam omogućili prijavu i ponovno
+      dobijanje lozinke. za više informacija pogledajte našu <a href="http://code.org/privacy">Policu
+      privatnosti</a>.
+    overview_teacher: Poučavajte informatiku u svom razredu tako što ćete se prijaviti
+      za korisnički račun.<p/>Moći ćete dodati svoje učenike i pratiti njihov napredak.
     no_signup_message: Možeš <a target="_blank" href="http://learn.code.org">pregledati
       razne nivoe i zadatke</a>, ali da bi tvoj napredak bio spremljen trebaš se prijaviti.
-    teacher_educator_guide: See educator guide
-    teacher_pitch: Teach the K-8 Intro to Computer Science in your classroom
+    teacher_educator_guide: Pogledajte vodič za edukatore
+    teacher_pitch: Prijava za učitelje za Code.org
     teacher_title: Prijava učitelja
-    student_pitch: 'Beyond 1 hour: try our K-8 Intro to Computer Science'
+    student_pitch: Prijava za učenike za Code.org
     student_title: Prijava učenika
     school_name: Naziv škole (nije obavezno)
     school_address: Adresa škole (nije obavezno)
     address_placeholder: adresa, grad, država, poštanski broj
     gender: Spol (nije obavezno)
     birthday: Datum rođenja (nije obavezno)
-    age: Age (optional)
-    user_type: Are you a student or teacher?
+    age: Godine starosti
+    user_type: Jeste li učenik ili učitelj?
     submit: Prijava
     teacher: Jeste li učitelj?
     valid_username: Dostupno!
@@ -87,13 +88,16 @@
     taken_username: Korisničko ime je već zauzeto
     valid_password: Valjana lozinka !
     invalid_password: Lozinka mora biti duga najmanje 6 znakova
-    mismatch_password: The two passwords you entered do not match
-    student_terms: I agree to be bound by the Code.org terms of service. If I am under
-      13 years of age, I confirm by submitting this form that I have my parent or
-      legal guardian's permission to use the Code.org services.
-    teacher_terms: I agree to be bound by the Code.org terms of service.
-    additional_information: We need some additional information to continue signing
-      you up.
+    mismatch_password: |
+      Dvije lozinke koje ste unijeli ne podudaraju se
+    student_terms: Slažem se poštivati <a href='http://code.org/tos'> Uvjete korištenja</a>
+      Code.org. Ako sam ispod 13 godina starosti, potvrđujem slanjem ovog obrasca
+      da moj roditelj ili zakonski skrbnik daje dozvolu za korištenje usluga Code.org.
+      <br/>Korisnicima ispod 13 godina starosti, e-mail adrese nisu pohranjene u obliku
+      koji nam omogućuje da ih kontaktiramo.
+    teacher_terms: Slažem se poštivati <a href='http://code.org/tos'> Uvjete korištenja</a>
+      Code.org.
+    additional_information: Trebamo dodatne informacije kako bi nastavili vašu prijavu.
   signin_form:
     title: Imate već račun? Prijavi se
     login: E-mail ili korisničko ime
@@ -101,14 +105,14 @@
     remember: Zapamti me
     submit: Prijava
   signin:
-    try_heading: Want to try coding without signing up?
+    try_heading: Želite probati kodiranje bez prijave?
     try_hoc: Isprobaj prvo Sat programiranja
-    try_20hours: Try our 20 hour Intro to Computer Science
+    try_20hours: Probajte naš 20-satni Uvod u informatiku
   signinsection:
-    welcome: Welcome to %{section_name}
-    name: Choose your name
-    picture: Now find your secret picture
-    words: Now enter your secret words
+    welcome: Dobrodošli na %{section_name}
+    name: Odaberite svoje ime
+    picture: Sada nađite svoju tajnu sliku
+    words: Sada unesite vaše tajne riječi
     login: Prijava
   password:
     reset_form:
@@ -122,27 +126,24 @@
       submit: Promijeni lozinku
   welcome_email:
     subject: Pridruži se mom razredu (na Code.org)
-    body: |
-      Click the link below to sign up for computer science tutorials on Code.org (with me as your "teacher"):
-
-      %{link}
-
-      The tutorials are fun, visually engaging, and teach the basic concepts of computer science using a simple, guided, game-like experience. Learn to code from Bill Gates, Mark Zuckerberg, Angry Birds, and Plants vs. Zombies! :-)
-
-      %{name}
+    body: Kliknite na link ispod da se prijavite na informatičke vodiče na Code.org
+      (sa mnom kao vašim "učiteljem"):%{link} vodiči su zabavni, vizualno privlačni,
+      poučavaju osnovnim konceptima informatike koristeći jednostavno, vođeno, iskustvo
+      poput igre. Naučite kodirati uz Bill Gates-a, Mark Zuckerberg,-a Angry Birds
+      i Plants vs Zombies! :-) %{name}
   follower:
     invite_sent: Pozivnica poslana
-    added_teacher: '%{name} added as your teacher'
-    registered: You've registered for %{section_name}.
+    added_teacher: '%{name} dodan kao vaš učitelj'
+    registered: Registrirali ste se za %{section_name}.
     error:
       signed_in: Molimo vas da se odjavite prije nastavka
       username_not_found: Korisničko ime %{username} nije pronađeno
-      username_in_use: '%{username} is already taken, please pick another'
-      no_teacher: Could not find anyone signed in with '%{teacher_email_or_code}'.
-        Please ask them to sign up here and then try adding them again
-      section_not_found: Could not find a section with code '%{section_code}'.
-      blank_code: Please enter a code or your teacher's email address
-      cant_join_own_section: Sorry, you can't join your own section.
+      username_in_use: '%{username} se već koristi, izaberite drugo korisničko ime'
+      no_teacher: Nije moguće pronaći bilo koga prijavljenog sa '%{teacher_email_or_code}'.
+        Molimo zatražite da se prijave ovdje i pokušajte ih ponovo dodati
+      section_not_found: Nije moguće pronaći sekciju s kodom '%{section_code}'.
+      blank_code: Molimo unesite kod sekcije
+      cant_join_own_section: Žao nam je, ne možete se pridružiti svom dijelu.
     mail:
       invite_student:
         subject: Join a class with %{teacher_name} at Code.org!
@@ -248,7 +249,7 @@
         playlab: Make an App
         artist: Draw Something
     user:
-      classroom: My students
+      classroom: Učiteljeva Početna stranica
       label: Hi %{username}
       stats: My progress
       settings: My account
@@ -387,27 +388,27 @@
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
+    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
     heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
     heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
     heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
-    gallery:
-      your_turtle: My Art
-      your_studio: My Apps
+    your_gallery: Gallery
   gender:
     male: Muško
     female: Žensko
     none: Radije ne bih o tome
   user_type:
     student: Učenik
-    teacher: Teacher
+    teacher: Učitelj
   footer:
     help_from_html: Inžinjeri iz <a href="http://www.google.com">Googlea</a>, <a href="http://www.microsoft.com">Microsofta</a>,
       <a href="http://www.facebook.com">Facebooka</a>, i<a href="http://www.twitter.com">Twittera</a>
       su pomogli u stvaranju ovog tutorijala.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 <a href="http://www.rovio.com">Rovio
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 <a href="http://www.rovio.com">Rovio
       Entertainment Ltd</a>. All Rights Reserved.<br/> Plants vs. Zombies&trade; &
       &copy; 2013 <a href="http://www.ea.com">Electronic Arts Inc.</a>. Sva prava
       pridržana.
+    powered_by_aws: Powered by Amazon Web Services
     feedback: Provide feedback
     translate: Help us translate to your language
     support: Support
@@ -459,6 +460,7 @@
     bounce_og_title: Check out my Bounce Game
     flappy_og_title: Check out my Flappy Game
     studio_og_title: Check out my story
+    check_out_what_i_made: Check out what I made
     og_description: I wrote the code myself with Code.org
     phone_number_not_allowed: It looks like there is a phone number in it. Try changing
       the text.
@@ -489,6 +491,14 @@
     20hour:
       title: Intro Course
       body: Try our 20-hour Intro to Computer Science course.
+    hoc2014:
+      try_new_tutorial: Try our new Hour of Code tutorial in beta
+      try_frozen: Artist with Anna and Elsa, from Frozen
+    gallery:
+      title: Gallery
+      body: View a gallery of app and artist images created by our users
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: Students made these with code!
@@ -502,8 +512,13 @@
     more: More &rarr;
     caption_by_name_age: by %{name}, age %{age}
     caption_time_ago: '%{time_ago} ago'
+    header: Gallery
+    header_playlab: Play Lab
+    header_artist: Artist
   landing:
     prerelease: This page is still under development.
+    prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
+      is subject to revision as feedback is received and improvements are made.
     feedback: Give Feedback
     report_bug: Report Bug
     support: Get Help
@@ -530,18 +545,18 @@
     script:
       name:
         20-hour:
-          title: K-8 Intro to Computer Science Course (15-25 hours)
+          title: Uvod u informatiku za osnovnu školu (15-25 sati)
           description: Ovaj 20-satni tečaj objašnjava iosnovne koncepte programiranja
             i nformatike. Tečaj je namijenjen za korištenje u nižim razredima osnovne
             škole, ali je zabavan za učenje bez obzira na dob polaznika.
         Hour of Code:
-          title: Hour of Code
+          title: Sat Kodiranja
           description: ''
         edit-code:
           title: Uredi kôd
           description: ''
         events:
-          title: Events
+          title: Događaji
           description: ''
         builder:
           title: Builder

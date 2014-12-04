@@ -64,7 +64,7 @@
   "penDown":"下筆",
   "penTooltip":"使用\"下筆\"或\"停筆\"來開始或停止繪畫動作。",
   "penUp":"停筆",
-  "reinfFeedbackMsg":"這看起來像你想要的嗎？你可以按\"再試一次\"按鈕來看看你畫出來的圖形。",
+  "reinfFeedbackMsg":"Here is your drawing! Keep working on it or continue to the next puzzle.",
   "setColour":"設定顏色",
   "setPattern":"set pattern",
   "setWidth":"設定寬度",

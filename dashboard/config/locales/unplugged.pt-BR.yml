@@ -68,7 +68,7 @@
       Unplug6:
         title: Condições
         desc: Essa aula é um jogo. Depois de introduzir a ideia de estruturas condicionais,
-          declarações se, e laços, os alunos podem praticar juntos, usando um programa,
+          instruções se e laços, os alunos podem praticar juntos, usando um programa,
           ou um baralho de cartas.
         pdfs:
         - unplug6
@@ -234,38 +234,56 @@
           distinguindo o que é seguro e o que não é seguro para compartilhar online.
       TangramAlgorithms:
         title: Algoritmos do tangram
-        desc: Esta aula nos mostra algo importante sobre os algoritmos, isto é, se
-          mantiver sua simplicidade, será possível fazer muitas coisas com eles. Se
-          quiser garantir que todos terminarão com o mesmo resultado, seu algoritmo
-          precisará de mais detalhes.
+        desc: 'Esta aula nos mostra algo importante sobre os algoritmos: se você o
+          mantiver simples, poderá fazer muitas coisas com ele; se quiser garantir
+          que todos tenham o mesmo resultado no final, seu algoritmo precisará de
+          mais detalhes.'
       EnvelopeVariables:
         title: Variáveis do envelope
-        desc: As variáveis permitem muita liberdade na ciência da computação. Esta
-          aula ajuda a explicar o que são variáveis e como podemos usá-las de diversas
-          maneiras diferentes. Faça esta atividade antes ou junto com a lição sobre
-          abstração, para que a ideia realmente faça sentido.
+        desc: As variáveis proporcionam muita liberdade na ciência da computação.
+          Esta aula ajuda a explicar o que são variáveis e como podemos usá-las de
+          diversas maneiras diferentes. Faça esta atividade antes ou junto com a aula
+          sobre abstração, para que a ideia realmente faça sentido.
       MadGlibs:
         title: Mad Glibs
-        desc: A abstração é uma das habilidades mais importantes para o entendimento
-          de um cientista da computação. Esta atividade fará com que seus alunos analisem
+        desc: A abstração é uma das habilidades mais importantes que um cientista
+          da computação deve conhecer. Essa atividade fará com que seus alunos analisem
           as diferenças entre histórias para que possam, então, abstraí-las. Essas
-          histórias abstraídas se tornam modelos para novas histórias doidas e divertidas.
+          histórias abstraídas se tornam modelos para novas histórias malucas e divertidas.
       ForLoopFun:
-        title: Para diversão com laços
+        title: Diversão com laços for
         desc: Sabemos que os laços nos permitem fazer algo repetidas vezes, mas, agora,
-          vamos aprender como usá-los com estruturas adicionais embutidas.
+          vamos aprender como usá-los com estruturas adicionais associadas.
       SongwritingWithParameters:
         title: Escrevendo uma canção com parâmetros
-        desc: 'Uma das estruturas mais incríveis do mundo da ciência da computação
+        desc: 'Uma das estruturas mais incríveis no mundo da ciência da computação
           é a função. As funções (chamadas às vezes de procedimentos) são miniprogramas
-          que podem ser usados repetidas vezes dentro do seu programa maior. Esta
-          aula ajudará os alunos a entender, de maneira intuitiva, por que combinar
-          blocos de códigos em funções é uma prática útil.  '
+          que podem ser usados repetidas vezes dentro do programa maior. Esta aula
+          ajudará os alunos a entender, de maneira intuitiva, por que combinar blocos
+          de códigos em funções é uma prática útil.  '
       BinaryImages:
         title: Imagens binárias
-        desc: Embora muitas pessoas vejam o binário estritamente como zeros e unidades,
-          nossos cursos anteriores ensinaram os alunos que as informações podem ser
+        desc: Embora muitas pessoas vejam o binário estritamente como zeros e uns,
+          nossos cursos anteriores ensinaram aos alunos que as informações podem ser
           representadas por uma grande variedade de opções binárias. Esta aula leva
           esse conceito um passo adiante, uma vez que demonstra como um computador
           também pode armazenar informações ainda mais complexas (como imagens e cores)
           em binário.
+      VideoGamesCoordinatePlanes:
+        title: Vídeo games e planos cartesianos
+        desc: Descrição da lição Video games e planos cartesianos
+      Contracts:
+        title: Contratos
+        desc: Descrição da lição offline Contratos
+      DesignRecipe:
+        title: A receita de design
+        desc: Descrição da lição Receita de design
+      Booleans:
+        title: Booleanos
+        desc: Descrição da lição Booleanos
+      ConditionalsPiecewiseFunctions:
+        title: Condicionais e funções definidas por partes
+        desc: Descrição da lição Condicionais e funções definidas por partes
+      CollisionDetection:
+        title: Detecção de colisão
+        desc: Descrição da lição Detecção de colisão

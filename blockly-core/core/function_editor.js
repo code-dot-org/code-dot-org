@@ -122,6 +122,7 @@ Blockly.FunctionEditor.prototype.openWithNewFunction = function(opt_blockCreatio
 
   var tempFunctionDefinitionBlock = Blockly.Xml.domToBlock_(Blockly.mainBlockSpace,
     Blockly.createSvgElement('block', {type: this.definitionBlockType}));
+  this.functionDefinitionBlock.userCreated = true;
   if (opt_blockCreationCallback) {
     opt_blockCreationCallback(tempFunctionDefinitionBlock);
   }
@@ -344,6 +345,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
         return metrics;
       });
   Blockly.modalBlockSpace = Blockly.modalBlockSpaceEditor.blockSpace;
+  Blockly.modalBlockSpace.customFlyoutMetrics_ = Blockly.mainBlockSpace.getMetrics;
 
   Blockly.modalBlockSpaceEditor.addChangeListener(
       Blockly.mainBlockSpace.fireChangeEvent);
@@ -462,9 +464,9 @@ Blockly.FunctionEditor.prototype.setupParametersToolbox_ = function () {
 };
 
 Blockly.FunctionEditor.prototype.addEditorFrame_ = function () {
-  var left = Blockly.hasCategories ? goog.dom.getElementByClass('blocklyToolboxDiv')
-      .getBoundingClientRect().width : goog.dom.getElementByClass('blocklyFlyoutBackground')
-      .getBoundingClientRect().width;
+  var left = Blockly.hasCategories ?
+      goog.dom.getElementByClass('blocklyToolboxDiv').getBoundingClientRect().width :
+      goog.dom.getElementByClass('blocklyFlyoutBackground').getBoundingClientRect().width;
   var top = 0;
   this.frameBase_ = Blockly.createSvgElement('rect', {
     x: left + FRAME_MARGIN_SIDE,

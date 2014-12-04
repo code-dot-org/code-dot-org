@@ -98,41 +98,6 @@
             </block>
           </statement>
         </block>
-        <block type="when_run" uservisible="false">
-          <next>
-            <block type="studio_setSpriteSpeedParams" inline="true" uservisible="false">
-              <value name="SPRITE">
-                <block type="math_number" uservisible="false">
-                  <title name="NUM">2</title>
-                </block>
-              </value>
-              <value name="VALUE">
-                <block type="math_number" uservisible="false">
-                  <title name="NUM">0</title>
-                </block>
-              </value>
-              <next>
-                <block type="variables_set" inline="false" uservisible="false">
-                  <title name="VAR">enemy_speed</title>
-                  <value name="VALUE">
-                    <block type="math_number" uservisible="false">
-                      <title name="NUM">0</title>
-                    </block>
-                  </value>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-        <block type="studio_whenArrow" uservisible="false">
-          <title name="VALUE">up</title>
-          <next>
-            <block type="studio_move" uservisible="false">
-              <title name="SPRITE">0</title>
-              <title name="DIR">1</title>
-            </block>
-          </next>
-        </block>
         <block type="procedures_defnoreturn" uservisible="false">
           <mutation>
             <arg name="points"/>
@@ -166,6 +131,41 @@
             <block type="studio_move" uservisible="false">
               <title name="SPRITE">0</title>
               <title name="DIR">4</title>
+            </block>
+          </next>
+        </block>
+        <block type="when_run" uservisible="false">
+          <next>
+            <block type="studio_setSpriteSpeedParams" inline="true" uservisible="false">
+              <value name="SPRITE">
+                <block type="math_number" uservisible="false">
+                  <title name="NUM">2</title>
+                </block>
+              </value>
+              <value name="VALUE">
+                <block type="math_number" uservisible="false">
+                  <title name="NUM">0</title>
+                </block>
+              </value>
+              <next>
+                <block type="variables_set" inline="false" uservisible="false">
+                  <title name="VAR">enemy_speed</title>
+                  <value name="VALUE">
+                    <block type="math_number" uservisible="false">
+                      <title name="NUM">0</title>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow" uservisible="false">
+          <title name="VALUE">up</title>
+          <next>
+            <block type="studio_move" uservisible="false">
+              <title name="SPRITE">0</title>
+              <title name="DIR">1</title>
             </block>
           </next>
         </block>
@@ -354,7 +354,9 @@
             </value>
           </block>
         </category>
-        <category name="Loops"/>
+        <category name="Loops">
+          <block type="studio_repeatForever"/>
+        </category>
         <category name="Logic">
           <block type="controls_if" inline="false">
             <value name="IF0">

@@ -1,8 +1,8 @@
 {
-  "compute": "compute",
-  "equivalentExpression": "Try reordering your arguments to get exactly the same expression.",
-  "extraTopBlocks": "You have unattached blocks. Did you mean to attach these to the \"compute\" block?",
-  "goal": "Goal:",
-  "reinfFeedbackMsg": "Ar tai atrodo taip, kaip norėjai? Gali nuspausti mygtuką „Pabandyk dar kartą“, kad pamatytum savo piešinį.",
-  "yourExpression": "Your expression:"
+  "compute": "skaičiuoti",
+  "equivalentExpression": "Pamėgink pertvarkyti argumentus, kad gautum lygiai tokį pat reiškinį.",
+  "extraTopBlocks": "Turite nesujungtų blokelių. Gal norėjote juos prikabinti prie blokelio „skaičiuoti“?",
+  "goal": "Tikslas:",
+  "reinfFeedbackMsg": "Štai tavo istorija! Tęsk darbą su ja arba pereik prie kito galvosūkio!",
+  "yourExpression": "Tavo reiškinys:"
 }

@@ -5,7 +5,7 @@ theme: none
 ---
 
 
-<%= partial('curriculum_header', :unplugged=>fales, :title=> 'Eval: Strings and Images',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>45) %>
+<%= partial('curriculum_header', :unittitle=> 'MSM', :lesson=> 3, :unplugged=>false, :title=> 'Eval: Strings and Images',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>(30-60)) %>
 
 [content]
 
@@ -19,7 +19,7 @@ Students will use the Eval app to learn about two new data types, Strings (any s
 ## Teaching Summary
 ### **Getting Started**
  
-1) [Vocabulary](#Vocab)
+1) [Vocabulary](#Vocab)<br/>
 2) [Introduction](#GetStarted)  
 
 ### **Activity: Eval Strings and Images**  

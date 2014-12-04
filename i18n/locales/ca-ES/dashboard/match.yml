@@ -1,10 +1,10 @@
-"ca":
+ca:
   data:
     match:
       2-3 artist loops match 1:
-        Artist Loops Matching One: "Artist Loops Matching One"
-        Matching loops: "Matching loops"
-        Match the loop to the shape: "Match the loop to the shape"
+        Artist Loops Matching One: Bucle Artista Relacionador 1
+        Matching loops: Enllaçant bucles
+        Match the loop to the shape: Relaciona el bucle amb la forma
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png
@@ -14,8 +14,8 @@
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png
       2-3 artist match 1:
-        Artist Matching: "Artist Matching"
-        Match the shape with the blocks that complete it.: Match the shape with the blocks that complete it.
+        Artist Matching: 'Artista: Relaciona'
+        Match the shape with the blocks that complete it.: Relaciona la forma amb els blocs que la completen.
         /script_assets/2-3_images/artist/2-3_artist_match_1_q1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png
@@ -25,9 +25,9 @@
         /script_assets/2-3_images/artist/2-3_artist_match_1_a3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a3.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png
       2-3 bounce match 1:
-        Bounce Matching: "Bounce Matching"
-        Matching: "Matching"
-        Match the events with the actions: "Match the events with the actions"
+        Bounce Matching: Bounce Matching
+        Matching: Correspondència
+        Match the events with the actions: Relaciona els esdeveniments amb les accions
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png
@@ -39,9 +39,9 @@
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png
       2-3 flappy match 1:
-        Flappy Matching One: "Flappy Matching One"
-        Matching: "Matching"
-        Match the events with the actions: "Match the events with the actions"
+        Flappy Matching One: 'Flappy: Relacionar un'
+        Matching: Correspondència
+        Match the events with the actions: Relaciona els esdeveniments amb les accions
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png
@@ -49,8 +49,8 @@
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png
       2-3 maze match 1:
-        Maze Match One: "Maze Match One"
-        Match the puzzles to the blocks: "Match the puzzles to the blocks"
+        Maze Match One: Relaciona Laberint 1
+        Match the puzzles to the blocks: Relaciona els trencaclosques amb els blocs
         /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png
@@ -58,10 +58,10 @@
         /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png
       2-3 Maze Match 2:
-        Maze Match: "Maze Match"
-        Match the puzzles to the blocks: "Match the puzzles to the blocks"
-        Instructions: "Instructions"
-        Drag the blocks to match.: Drag the blocks to match.
+        Maze Match: 'Laberint: Relaciona'
+        Match the puzzles to the blocks: Relaciona els trencaclosques amb els blocs
+        Instructions: Instruccions
+        Drag the blocks to match.: Arrossega els blocs per relacionar.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png
@@ -70,7 +70,7 @@
         /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_a3.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a3.png
       2-3 Big Event Match 1:
-        Matching: "Matching"
+        Matching: Correspondència
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
@@ -81,9 +81,9 @@
         /script_assets/k_1_images/unplugged_images/big_event_1_a3.png: /script_assets/k_1_images/unplugged_images/big_event_1_a3.png
         /script_assets/k_1_images/unplugged_images/big_event_1_a4.png: /script_assets/k_1_images/unplugged_images/big_event_1_a4.png
       2-3 Binary Match 1:
-        Matching: "Matching"
+        Matching: Correspondència
         /script_assets/2-3_images/unplugged/binary_1_q.png, 250: /script_assets/2-3_images/unplugged/binary_1_q.png, 250
-        Use the key to mach each code to its letter: "Use the key to mach each code to its letter"
+        Use the key to match each code to its letter: Utilitzar la clau per relacionar cada codi amb la seva lletra
         <strong>N</strong>: '<strong>N</strong>'
         <strong>O</strong>: '<strong>O</strong>'
         <strong>P</strong>: '<strong>P</strong>'
@@ -93,8 +93,8 @@
         /script_assets/2-3_images/unplugged/binary_1_a2.png: /script_assets/2-3_images/unplugged/binary_1_a2.png
         /script_assets/2-3_images/unplugged/binary_1_a4.png: /script_assets/2-3_images/unplugged/binary_1_a4.png
       2-3 Graph Paper Match 1:
-        Matching: "Matching"
-        Match the grid to the program: "Match the grid to the program"
+        Matching: Correspondència
+        Match the grid to the program: Fes coincidir el programa amb la quadrícula
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
@@ -102,8 +102,8 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
       2-3 Relay Programming Match 1:
-        Matching: "Matching"
-        Match the grid to the program: "Match the grid to the program"
+        Matching: Correspondència
+        Match the grid to the program: Fes coincidir el programa amb la quadrícula
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
@@ -111,10 +111,10 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
       4-5 maze match 1:
-        Maze Match: "Maze Match"
-        Match the puzzles to the blocks: "Match the puzzles to the blocks"
-        Instructions: "Instructions"
-        Drag the blocks to match.: Drag the blocks to match.
+        Maze Match: 'Laberint: Relaciona'
+        Match the puzzles to the blocks: Relaciona els trencaclosques amb els blocs
+        Instructions: Instruccions
+        Drag the blocks to match.: Arrossega els blocs per relacionar.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png
@@ -123,51 +123,51 @@
         /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_a3.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a3.png
       4-5 Algorithms Match 1:
-        Matching: "Matching"
-        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Match the steps in the Dice Race game to the order that they should appear in the algorithm.
+        Matching: Correspondència
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: "Uneix els pasos de la Cursa de Daus amb l'ordre que haurien d'aparèixer a l'algoritme."
         <h4>1)</h4>: '<h4>1)</h4>'
         <h4>2)</h4>: '<h4>2)</h4>'
         <h4>3)</h4>: '<h4>3)</h4>'
         <h4>4)</h4>: '<h4>4)</h4>'
-        <h4>Set Player 1 score to 0</h4>: '<h4>Set Player 1 score to 0</h4>'
-        <h4>Player 1 rolls die</h4>: '<h4>Player 1 rolls die</h4>'
-        <h4>Add Player 1 roll to total score</h4>: '<h4>Add Player 1 roll to total score</h4>'
-        <h4>Compare player scores to see who wins</h4>: '<h4>Compare player scores to see who wins</h4>'
+        <h4>Set Player 1 score to 0</h4>: '<h4>Estableix Jugador 1 puntuació a 0</h4>'
+        <h4>Player 1 rolls die</h4>: '<h4>Jugador 1 llença els daus</h4>'
+        <h4>Add Player 1 roll to total score</h4>: '<h4>Afegir tirada del jugador 1 a puntuació total</h4>'
+        <h4>Compare player scores to see who wins</h4>: '<h4>Compara els resultats dels jugador per veure qui guanya</h4>'
       4-5 Computational Thinking Match 1:
-        Matching: "Matching"
-        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.
-        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 0</h3>'
-        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 1</h3>'
-        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 6</h3>'
-        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": '<h3>Wheels/side: 3<br/>Windows/side: 2</h3>'
+        Matching: Correspondència
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: "Cada un d'aquests vehicles ha estat descompost en trossos més petits. Relaciona cada vehicle amb la seva llista."
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": '<h3>Rodes/costat: 2 <br/>Finestres/costat: 0</h3>'
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": '<h3>Rodes/costat: 2 <br/>Finestres/costat: 1</h3>'
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": '<h3>Rodes/costat: 2 <br/>Finestres/costat: 6</h3>'
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": '<h3>Rodes/costat: 3 <br/>Finestres/costat: 2</h3>'
         /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png
       4-5 Suncatchers Match 1:
-        Matching: "Matching"
-        Match each program to the word it makes, using the provided group of skills.: Match each program to the word it makes, using the provided group of skills.
+        Matching: Correspondència
+        Match each program to the word it makes, using the provided group of skills.: "Relaciona cada programa a la paraula que fa, utilitzant el grup d'habilitats donat."
         /script_assets/4-5_images/unplugged/suncatchers_1.png: /script_assets/4-5_images/unplugged/suncatchers_1.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a1.png: /script_assets/4-5_images/unplugged/suncatchers_1_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a2.png: /script_assets/4-5_images/unplugged/suncatchers_1_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a3.png: /script_assets/4-5_images/unplugged/suncatchers_1_a3.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a4.png: /script_assets/4-5_images/unplugged/suncatchers_1_a4.png
-        <h4>STACK</h4>: '<h4>STACK</h4>'
-        <h4>STAMP</h4>: '<h4>STAMP</h4>'
-        <h4>STAR</h4>: '<h4>STAR</h4>'
-        <h4>RAMP</h4>: '<h4>RAMP</h4>'
+        <h4>STACK</h4>: '<h4>Pila</h4>'
+        <h4>STAMP</h4>: '<h4>Segell</h4>'
+        <h4>STAR</h4>: '<h4>Estel</h4>'
+        <h4>RAMP</h4>: '<h4>Rampa</h4>'
       K-1 Artist 2 Match 1:
-        Matching: "Matching"
-        Is the square next to, above, or below the ball?: Is the square next to, above, or below the ball?
+        Matching: Correspondència
+        Is the square next to, above, or below the ball?: Està el quadrat prop, per sobre o sota de la pilota?
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
         /script_assets/k_1_images/artist_images/square_next_ball.png: /script_assets/k_1_images/artist_images/square_next_ball.png
-        <br/><br/>above: '<br/><br/>above'
-        <br/><br/>below: '<br/><br/>below'
-        <br/><br/>next to: '<br/><br/>next to'
+        <br/><br/>above: '<br/> <br/> per sobre'
+        <br/><br/>below: '<br/> <br/> per sota'
+        <br/><br/>next to: '<br/> <br/> al costat'
       K-1 Artist 2 Match 2:
-        Matching: "Matching"
-        Match the shapes based on type.: Match the shapes based on type.
+        Matching: Correspondència
+        Match the shapes based on type.: "Relaciona les formes d'acord al tipus."
         /script_assets/k_1_images/artist_images/small_circle.png: /script_assets/k_1_images/artist_images/small_circle.png
         /script_assets/k_1_images/artist_images/large_square.png: /script_assets/k_1_images/artist_images/large_square.png
         /script_assets/k_1_images/artist_images/medium_rectangle.png: /script_assets/k_1_images/artist_images/medium_rectangle.png
@@ -177,8 +177,8 @@
         /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
         /script_assets/k_1_images/artist_images/large_triangle.png: /script_assets/k_1_images/artist_images/large_triangle.png
       K-1 Artist 2 Match 3:
-        Matching: "Matching"
-        Match the shapes based on type.: Match the shapes based on type.
+        Matching: Correspondència
+        Match the shapes based on type.: "Relaciona les formes d'acord al tipus."
         /script_assets/k_1_images/artist_images/large_circle.png: /script_assets/k_1_images/artist_images/large_circle.png
         /script_assets/k_1_images/artist_images/small_square.png: /script_assets/k_1_images/artist_images/small_square.png
         /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
@@ -188,8 +188,8 @@
         /script_assets/k_1_images/artist_images/small_rectangle2.png: /script_assets/k_1_images/artist_images/small_rectangle2.png
         /script_assets/k_1_images/artist_images/large_triangle2.png: /script_assets/k_1_images/artist_images/large_triangle2.png
       K-1 Artist Loops Match 1:
-        Matching: "Matching"
-        Match the code to the stairs it draws.: Match the code to the stairs it draws.
+        Matching: Correspondència
+        Match the code to the stairs it draws.: Relaciona el codi amb les escales que dibuixa.
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png
@@ -197,8 +197,8 @@
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png
       K-1 Bee Loops Match 1:
-        Matching: "Matching"
-        Match the blocks: "Match the blocks"
+        Matching: Correspondència
+        Match the blocks: Relaciona els blocs
         /script_assets/k_1_images/bee_images/r4_gnectar.png: /script_assets/k_1_images/bee_images/r4_gnectar.png
         /script_assets/k_1_images/move_blocks/r3_N.png: /script_assets/k_1_images/move_blocks/r3_N.png
         /script_assets/k_1_images/bee_images/r5_ghoney.png: /script_assets/k_1_images/bee_images/r5_ghoney.png
@@ -208,8 +208,8 @@
         /script_assets/k_1_images/bee_images/5_ghoney.png: /script_assets/k_1_images/bee_images/5_ghoney.png
         /script_assets/k_1_images/move_blocks/EEEEE.png: /script_assets/k_1_images/move_blocks/EEEEE.png
       K-1 Flappy Match 1:
-        Matching: "Matching"
-        Match the blocks: "Match the blocks"
+        Matching: Correspondència
+        Match the blocks: Relaciona els blocs
         /script_assets/k_1_images/flappy_images/click.png: /script_assets/k_1_images/flappy_images/click.png
         /script_assets/k_1_images/flappy_images/hit_ground.png: /script_assets/k_1_images/flappy_images/hit_ground.png
         /script_assets/k_1_images/flappy_images/pass_obstacle.png: /script_assets/k_1_images/flappy_images/pass_obstacle.png
@@ -217,10 +217,10 @@
         /script_assets/k_1_images/flappy_images/end.png: /script_assets/k_1_images/flappy_images/end.png
         /script_assets/k_1_images/flappy_images/score.png: /script_assets/k_1_images/flappy_images/score.png
       K-1 Maze Match 1:
-        Matching: "Matching"
-        Match the puzzles and blocks: "Match the puzzles and blocks"
-        Instructions: "Instructions"
-        Drag the blocks to match.: Drag the blocks to match.
+        Matching: Correspondència
+        Match the puzzles and blocks: Relaciona els trencaclosques i els blocs
+        Instructions: Instruccions
+        Drag the blocks to match.: Arrossega els blocs per relacionar.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/k_1_images/maze_images/maze_EN.png: /script_assets/k_1_images/maze_images/maze_EN.png
         /script_assets/k_1_images/maze_images/maze_ENE.png: /script_assets/k_1_images/maze_images/maze_ENE.png
@@ -231,7 +231,7 @@
         /script_assets/k_1_images/move_blocks/WW.png: /script_assets/k_1_images/move_blocks/WW.png
         /script_assets/k_1_images/move_blocks/WSS.png: /script_assets/k_1_images/move_blocks/WSS.png
       K-1 Big Event Match 1:
-        Matching: "Matching"
+        Matching: Correspondència
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
@@ -240,8 +240,8 @@
         /script_assets/k_1_images/unplugged_images/big_event_1_a2.png: /script_assets/k_1_images/unplugged_images/big_event_1_a2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_a3.png: /script_assets/k_1_images/unplugged_images/big_event_1_a3.png
       K-1 Happy Maps Match 1:
-        Matching: "Matching"
-        Match the Map to the arrow that gets the Flurb to the treasure: "Match the Map to the arrow that gets the Flurb to the treasure"
+        Matching: Correspondència
+        Match the Map to the arrow that gets the Flurb to the treasure: Relaciona el mapa a la fletxa que porta la Flurb al tresor
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png
@@ -249,8 +249,8 @@
         /script_assets/k_1_images/unplugged_images/right.png: /script_assets/k_1_images/unplugged_images/right.png
         /script_assets/k_1_images/unplugged_images/left.png: /script_assets/k_1_images/unplugged_images/left.png
       K-1 Move It Match 1:
-        Matching: "Matching"
-        Match the Map to the algorithm that gets the Flurb to the flowers.: Match the Map to the algorithm that gets the Flurb to the flowers.
+        Matching: Correspondència
+        Match the Map to the algorithm that gets the Flurb to the flowers.: "Relaciona el mapa amb l'algorisme que porta la Flurb a les flors."
         /script_assets/k_1_images/unplugged_images/move_it_2_q1.png: /script_assets/k_1_images/unplugged_images/move_it_2_q1.png
         /script_assets/k_1_images/unplugged_images/move_it_2_q2.png: /script_assets/k_1_images/unplugged_images/move_it_2_q2.png
         /script_assets/k_1_images/unplugged_images/move_it_2_q3.png: /script_assets/k_1_images/unplugged_images/move_it_2_q3.png
@@ -258,20 +258,20 @@
         /script_assets/k_1_images/unplugged_images/rightrightup.png: /script_assets/k_1_images/unplugged_images/rightrightup.png
         /script_assets/k_1_images/unplugged_images/rightdown.png: /script_assets/k_1_images/unplugged_images/rightdown.png
       Coordinate Matching:
-        Coordinates of Ninjacat: "Coordinates of Ninjacat"
-        Match each character with its correct coordinate!: Match each character with its correct coordinate!
+        Coordinates of Ninjacat: Coordenades de Ninjacat
+        Match each character with its correct coordinate!: Relaciona cada personatge amb la seva coordenada correcta!
         /script_assets/msm/Unit 1/exercise_3_ninjacat.png: /script_assets/msm/Unit 1/exercise_3_ninjacat.png
-        Cloud: "Cloud"
-        Ruby: "Ruby"
-        Dog: "Dog"
-        Ninjacat: "Ninjacat"
+        Cloud: Núvol
+        Ruby: Ruby
+        Dog: Gos
+        Ninjacat: Ninjacat
         (250, 400): (250, 400)
         (500, 240): (500, 240)
         (480, 100): (480, 100)
         (320, 240): (320, 240)
       Match math to circles:
-        Converting Math to Circles of Evaluation: "Converting Math to Circles of Evaluation"
-        Match each mathematical expression with the correct circle of evaluation!: Match each mathematical expression with the correct circle of evaluation!
+        Converting Math to Circles of Evaluation: "Convertint les Matemàtiques en Cercles d'Avaluació"
+        Match each mathematical expression with the correct circle of evaluation!: "Relaciona cada expressió matemàtica amb el cercle d'avaluació correcte!"
         (2 + 3) * 5 / 2: '(2 + 3) * 5 / 2'
         2 + 3 * (5 / 2): '2 + 3 * (5 / 2)'
         (2 + 3 * 5) / 2: '(2 + 3 * 5) / 2'
@@ -280,8 +280,8 @@
         /script_assets/msm/Unit 1/Exercise_4_question_3.png: /script_assets/msm/Unit 1/Exercise_4_question_3.png
         /script_assets/msm/Unit 1/Exercise_4_question_4.png: /script_assets/msm/Unit 1/Exercise_4_question_4.png
       Match circles to code:
-        Converting Circles to Code: "Converting Circles to Code"
-        Match each circle of evaluation with the correct code!: Match each circle of evaluation with the correct code!
+        Converting Circles to Code: Conversió de cercles al codi
+        Match each circle of evaluation with the correct code!: "Fes coincidir cada cercle d'avaluació amb el codi correcte!"
         (+ (- (/ 4 7) 9) 3): '(+ (- (/ 4 7) 9) 3)'
         (+ (- 9 3) (* 4 7)): '(+ (- 9 3) (* 4 7))'
         (/ (+ 4 7) 3): (/ (+ 4 7) 3)
@@ -291,8 +291,8 @@
         /script_assets/msm/Unit 1/Exercise_5_question_3.png: /script_assets/msm/Unit 1/Exercise_5_question_3.png
         /script_assets/msm/Unit 1/Exercise_5_question_4.png: /script_assets/msm/Unit 1/Exercise_5_question_4.png
       Match math to code:
-        Converting Math to Code: "Converting Math to Code"
-        Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!
+        Converting Math to Code: Convertint Matemàtiques en Codi
+        Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: "Relaciona cada expressió matemàtica amb el codi correcte. Utilitza un cercle d'avaluació per ajudar-te a arribar a la resposta!"
         (15 + 3) x (72 - 19): '(15 + 3) x (72 - 19)'
         3 x 15 + (- 72 19): '3 x 15 + (- 72 19)'
         72 + 3 - 19 x 15: '72 + 3 - 19 x 15'
@@ -302,19 +302,20 @@
         (- (+ 72 3) (* 19 15)): '(- (+ 72 3) (* 19 15))'
         (+ (- (* 3 15) 72) 19): '(+ (- (* 3 15) 72) 19)'
       parts of contract:
-        Parts of a Contract: "Parts of a Contract"
-        Here is a contract for a new function. Match each item with the word that describes it.: Here is a contract for a new function. Match each item with the word that describes it.
-        yearbook-picture: yearbook-picture
-        string numer: "string numer"
-        image: "image"
-        (yearbook-picture "Sally" 1992): '(yearbook-picture "Sally" 1992)'
-        function name: "function name"
-        domain: "domain"
-        range: "range"
-        example: "example"
+        Parts of a Contract: "Parts d'un Contracte"
+        Here is a contract for a new function. Match each item with the word that describes it.: Aquí hi ha un contracte per a una nova funció. Relaciona cada element amb la paraula que el descriu.
+        yearbook-picture: imatge-anuari
+        string numer: string numer
+        image: imatge
+        (yearbook-picture "Sally" 1992): |-
+          (Imatge de l'Anuari "Sally" 1992)
+        function name: nom de la funció
+        domain: domini
+        range: rang
+        example: exemple
       Match example to contract:
-        Contracts of Functions: "Contracts of Functions"
-        Match each example with the correct contract!: Match each example with the correct contract!
+        Contracts of Functions: Contractes de Funcions
+        Match each example with the correct contract!: Relaciona cada exemple amb el contracte correcte!
         (big-string? "gigantic" 5): '(big-string? "gigantic" 5)'
         (find-price 4): (find-price 4)
         (small-star "blue"): '(small-star "blue")'
@@ -327,11 +328,11 @@
         "bigger-string: string string -> string": 'bigger-string: string string -> string'
         "find-price: string -> number": 'find-price: string -> number'
       test matching image:
-        Matching Images Two: "Matching Images Two"
-        Match up all the flowers by colour!: Match up all the flowers by colour!
+        Matching Images Two: Relacionant imatges 2
+        Match up all the flowers by colour!: Relaciona totes les flors pel color!
         /script_assets/matches/images/head.jpg,300: /script_assets/matches/images/head.jpg,300
-        Instructions: "Instructions"
-        Drag the images from right to center.: Drag the images from right to center.
+        Instructions: Instruccions
+        Drag the images from right to center.: Arrossega les imatges des de la dreta al centre.
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
         /script_assets/matches/images/q1.jpg: /script_assets/matches/images/q1.jpg
         /script_assets/matches/images/q2.jpg: /script_assets/matches/images/q2.jpg
@@ -341,13 +342,13 @@
         /script_assets/matches/images/a3.jpg: /script_assets/matches/images/a3.jpg
         /script_assets/matches/images/a4.jpg: /script_assets/matches/images/a4.jpg
       test matching text:
-        Matching: "Matching"
-        Some really easy stuff to match.  Drag it around until you get it.: 'Some really easy stuff to match.  Drag it around until you get it.'
-        What color is the sky?: What color is the sky?
-        What's in the ocean?: "What's in the ocean?"
-        What's Brent's last name?: "What's Brent's last name?"
-        Where is Brendan from?: Where is Brendan from?
-        blue: "blau"
-        salt: "salt"
-        Van Minnen: "Van Minnen"
-        Sydney: "Sydney"
+        Matching: Correspondència
+        Some really easy stuff to match.  Drag it around until you get it.: 'Algunes coses realment fàcils de relacionar.  Arrossega-les fins que ho aconsegueixis.'
+        What color is the sky?: De quin color és el cel?
+        What's in the ocean?: "Què hi ha a l'oceà?"
+        What's Brent's last name?: Quin és el cognom de Brent?
+        Where is Brendan from?: "D'on és Brendan?"
+        blue: blau
+        salt: sal
+        Van Minnen: Van Minnen
+        Sydney: Sydney

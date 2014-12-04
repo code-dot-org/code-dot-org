@@ -1,6 +1,6 @@
 
 
-# Prizes - terms and conditions
+# Çmimet - termat dhe kushtet
 
 ## Dropbox space or Skype credit:
 
@@ -22,7 +22,7 @@ Prize limited to public K-12 U.S. schools only. To qualify, your entire school m
 
 To clarify, this is not a sweepstakes or a contest involving pure chance.
 
-1) There is no financial stake or risk involved in applying - any school or classroom may participate, without any payment to Code.org or any other organization
+1) Nëse aplikoni, nuk ka risk financiare - çdo shkollë/klasë/indivudal ka mundësi të marri pjesë, pa pagesë tek Code.org ose organizata te ndryshme
 
 2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
 

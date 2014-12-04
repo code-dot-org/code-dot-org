@@ -1,25 +1,33 @@
 * * *
 
-title: Resources layout: wide nav: resources_nav
+title: Burimet paraqitja: e gjerë nav: resources_nav
 
 * * *
 
 <div class="row">
   <h1 class="col-sm-6">
-    Rezurse
+    Resurse
   </h1>
   
   <div class="col-sm-6 button-container centered">
-    <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Sign up your event</button></a>
   </div>
 </div>
 
-## Je nikoqir i Një Ore Kodim? [Shihe udhëzuesin praktik](<%= hoc_uri('/resources/how-to') %>)
+<% if @country == 'ie' %>
+
+## Hosting an Hour of Code in Ireland? [See the how-to guide](<%= hoc_uri('/resources/how-to-ireland') %>)
+
+<% else %>
+
+## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+
+<% end %>
 
 <a id="handouts"></p> 
 
 <h2>
-  Përdore këtë prospekt (flajer) për ta përhapur fjalën
+  Use this handout to spread the word
 </h2>
 
 <p>
@@ -27,7 +35,7 @@ title: Resources layout: wide nav: resources_nav
 </p>
 
 <h2>
-  Jepua këtë prospekt (flajer) mësuesve dhe shkollave
+  Give this handout to teachers and schools
 </h2>
 
 <p>
@@ -38,20 +46,20 @@ title: Resources layout: wide nav: resources_nav
   <a id="videos"></p> 
   
   <h2>
-    Tregoji këto video për t'i inspiruar studentët
+    Show these videos to inspire students
   </h2>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>What Most Schools Don't Teach (5 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>Çka Nuk Shpjegojnë Shumica e Shkollave (5 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Hour of Code is Here - Anybody Can Learn</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Ora e Kodimit Është Këtu - Kushdo Mund të Mësojë</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
@@ -61,14 +69,14 @@ title: Resources layout: wide nav: resources_nav
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>President Obama on computer science</strong></a>
+      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>Presidenti i SHBA Obama për shkencën kompjuterike</strong></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Anybody Can Learn (1 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Kushdo Mund të Mësojë (1 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
@@ -82,19 +90,11 @@ title: Resources layout: wide nav: resources_nav
     <a id="posters"></p> 
     
     <h2>
-      Ngjiti këto postere në shkollën tënde
+      Hang these posters in your school
     </h2>
     
     <p>
-      <% if @country == 'us' %>
-    </p>
-    
-    <h4>
-      <a href="http://hourofcode.com/#signup">Regjistroje</a> ngjarjen tënde të Orës së Kodimit dhe do t'ua dërgojmë me postë posterët falas.
-    </h4>
-    
-    <p>
-      <% end %> <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="image" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="image" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="image" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="image" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="image" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="image" /></a>
+      <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="image" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="image" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="image" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="image" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="image" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="image" /></a>
     </p>
     
     <p>
@@ -102,7 +102,7 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Paraqitni këta banera në websajtin tuaj
+      Feature these banners on your website
     </h2>
     
     <p>
@@ -122,7 +122,7 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <p>
-      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/image/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     
     <p>
@@ -142,7 +142,7 @@ title: Resources layout: wide nav: resources_nav
     </h2>
     
     <p>
-      Kompjuterët janë kudo, por më pak shkolla e mësojnë shkencën kompjuterike tash se sa para 10 vitesh. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
+      Kompjuterët janë kudo, por më pak shkolla e mësojnë shkencën kompjuterike tash se sa para 10 vitesh. Lajmi i mirë është se jemi në rrugë për ta ndryshuar këtë. If you heard about the Hour of Code last year, you might know it made history. Për një javë, 15 milionë studentë e provuan shkencën kompjuterike!
     </p>
     
     <p>
@@ -158,7 +158,7 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <p>
-      Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
+      Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com/<%= @country %>
     </p>
     
     <p>
@@ -242,7 +242,7 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <p>
-      See http://hourofcode.com for details, and help spread the word.
+      See http://hourofcode.com/<%= @country %> for details, and help spread the word.
     </p>
     
     <p>
@@ -286,5 +286,5 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <p>
-      <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>
+      <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up your event</button></a>
     </p>

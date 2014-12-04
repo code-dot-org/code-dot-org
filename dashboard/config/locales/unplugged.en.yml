@@ -153,5 +153,21 @@ en:
       'BinaryImages':
         title: 'Binary Images'
         desc: 'Though many people think of binary as strictly zeros and ones, our previous courses taught students that information can be represented in a variety of binary options.  This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.'
-
-
+      'VideoGamesCoordinatePlanes':
+        title: 'Video Games and Coordinate Planes'
+        desc: 'Video Games and Coordinate Planes lesson description'
+      'Contracts':
+        title: 'Contracts'
+        desc: 'Contracts unplugged lesson description'
+      'DesignRecipe':
+        title: 'The Design Recipe'
+        desc: 'Design Recipe lesson description'
+      'Booleans':
+        title: 'Booleans'
+        desc: 'Booleans lesson description'
+      'ConditionalsPiecewiseFunctions':
+        title: 'Conditionals and Piecewise Functions'
+        desc: 'Conditionals and Piecewise Functions lesson description'
+      'CollisionDetection':
+        title: 'Collision Detection'
+        desc: 'Collision Detection lesson description'

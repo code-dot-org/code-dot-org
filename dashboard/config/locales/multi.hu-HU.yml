@@ -49,7 +49,7 @@
         Bee Conditionals Multiple Choice Two: Bee Conditionals Multiple Choice Two
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png,
           500
-        Choose the best blocks.: Choose the best blocks.
+        Choose the best blocks.: Válaszd ki a legmegfelelőbb blokkokat!
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png
@@ -58,7 +58,7 @@
         Bee Conditionals Multiple Choice Two: Bee Conditionals Multiple Choice Two
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
           500
-        Choose the best blocks: Choose the best blocks
+        Choose the best blocks: Válaszd ki a legmegfelelőbb blokkokat!
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png
@@ -76,7 +76,7 @@
         Maze Multiple Choice One: Maze Multiple Choice One
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
           500
-        Choose the best answer.: Choose the best answer.
+        Choose the best answer.: Válaszd ki a legmegfelelőbb választ.
         Which blocks work?: Which blocks work?
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png
@@ -99,15 +99,16 @@
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Start
           with a square<br/>Put a triangle above the square<br/>Put a triangle below
           the square
-        Start with a square<br/>Put a triangle right of square<br/>Put a rhombus below square<br/>Put triangle right of rhombus: Start
-          with a square<br/>Put a triangle right of square<br/>Put a rhombus below
-          square<br/>Put triangle right of rhombus
-        Start with a square<br/>Put a rhombus above the square<br/>Put a triangle right of the rhombus: Start
-          with a square<br/>Put a rhombus above the square<br/>Put a triangle right
-          of the rhombus
-        Start with a square<br/>Put a triangle below the square<br/>Put a rhombus right of the triangle: Start
-          with a square<br/>Put a triangle below the square<br/>Put a rhombus right
-          of the triangle
+        0: '? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
+          below square<br/>Put triangle right of parallelogram'
+        1: ': Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
+          below square<br/>Put triangle right of parallelogram'
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Start
+          with a square<br/>Put a parallelogram above the square<br/>Put a triangle
+          right of the parallelogram
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Start
+          with a square<br/>Put a triangle below the square<br/>Put a parallelogram
+          right of the triangle
       2-3 Algorithms Multi 2:
         Multiple Choice: Multiple Choice
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Start
@@ -218,7 +219,7 @@
         1: ': A purple flower may have either 3, 2 or 1 nectars, but you don''t know
           how many. Which blocks correctly check and collect all of the nectar from
           a purple flower?'
-        Choose the best blocks.: Choose the best blocks.
+        Choose the best blocks.: Válaszd ki a legmegfelelőbb blokkokat!
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png
@@ -275,7 +276,7 @@
         <h4>Brushing your teeth</h4>: <h4>Brushing your teeth</h4>
         <h4>Baking cookies</h4>: <h4>Baking cookies</h4>
         <h4>Shopping from a grocery list</h4>: <h4>Shopping from a grocery list</h4>
-        <h4>Banana</h4>: <h4>Banana</h4>
+        <h4>Banana</h4>: <h4>Banán</h4>
       4-5 Computational Thinking Multi 1:
         Multiple Choice: Multiple Choice
         0: '? Here are three sentences. Which of the templates below correctly abstracts
@@ -362,6 +363,15 @@
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
+      Coordinates Multi 1:
+        Video game Coordinates: Video game Coordinates
+        Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
+        Which answer best describes the unicorn's movement?: Which answer best describes
+          the unicorn's movement?
+        The unicorn moves across the screen: The unicorn moves across the screen
+        The unicorn's y value changes: The unicorn's y value changes
+        The unicorn moves to the left: The unicorn moves to the left
+        The unicorn's x value changes: The unicorn's x value changes
       K-1 Artist 1 Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png,
@@ -477,8 +487,8 @@
         /script_assets/k_1_images/unplugged_images/right.png: /script_assets/k_1_images/unplugged_images/right.png
       K-1 Keep it Private Multi 1:
         Multiple Choice: Multiple Choice
-        Which information should you <strong>not</strong> share online?: Which information
-          should you <strong>not</strong> share online?
+        Which information should you <strong>not</strong> share online?: Melyik információt
+          <strong>nem</strong> kellene megosztanod online?
         /script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png
         /script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png
         /script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png
@@ -575,7 +585,8 @@
         (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2)))))): (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2))))))
       Warmup questions:
         Coding in Racket: Coding in Racket
-        Select the best answer to the question.: Select the best answer to the question.
+        Select the best answer to the question.: Válaszd ki a legmegfelelőbb választ
+          a kérdésre.
         When converting a circle to code, the correct order is: When converting a
           circle to code, the correct order is
         top, left, right: top, left, right
@@ -593,7 +604,8 @@
         (+ 5 (* (- 8 6) 4)): (+ 5 (* (- 8 6) 4))
       valid contracts multi:
         Valid Contracts: Valid Contracts
-        Pick the best answer to the question.: Pick the best answer to the question.
+        Pick the best answer to the question.: Válaszd ki a legmegfelelőbb választ
+          a kérdésre.
         Which of these is a valid contract for the function circle?: Which of these
           is a valid contract for the function circle?
         'circle: size style color -> image': 'circle: size style color -> image'
@@ -617,12 +629,12 @@
         /script_assets/matches/images/head.jpg,400: /script_assets/matches/images/head.jpg,400
         This puzzle is all about selecting the correct flowers.: This puzzle is all
           about selecting the correct flowers.
-        Instructions: Instructions
+        Instructions: Utasítások
         Click the right answer, then submit. And here are some longer instructions just to test things more.  How's that word wrapping?: Click
           the right answer, then submit. And here are some longer instructions just
           to test things more.  How's that word wrapping?
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
-        Which flowers are yellow?: Which flowers are yellow?
+        Which flowers are yellow?: Melyik virágok sárgák?
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
         /script_assets/matches/images/a2.jpg: /script_assets/matches/images/a2.jpg
         /script_assets/matches/images/a3.jpg: /script_assets/matches/images/a3.jpg
@@ -637,8 +649,8 @@
         George Washington: George Washington
         George Jetson: George Jetson
       unique level name here:
-        title: title
+        title: cím
         description here: description here
-        Question: Question
-        wrong answer: wrong answer
-        right answer: right answer
+        Question: Kérdés
+        wrong answer: rossz válasz
+        right answer: helyes válasz

@@ -20,12 +20,9 @@
   hello: Sveikas, pasauli
   welcome_back: Sveiki sugrįžę, %{name}
   add_teacher_form:
-    code_or_email:
-      label: 'Pridėk mokytoją įvedęs kodą arba jo el. pašto adresą:'
-      placeholder: Kodas (ABCDEF) arba mokytojo el. pašto adresas (mokytojas@paštas.lt)
     code:
-      label: 'Pridėti mokytoją pagal grupės kodą:'
-      placeholder: Kodas (ABCDEF)
+      label: 'Pridėkite mokytoja:'
+      placeholder: Grupės kodas (ABCDEF)
     submit: Pridėk mokytoją
   add_hint_form:
     placeholder: Įvesk savo suflerį čia
@@ -376,12 +373,11 @@
     test_videos_help: Išbandykite mūsų naują vaizdo grotuvą savo mokykloje
     try_beta_courses: Naujiena! Išmėginkite testuojamus kursus pradinukams
     use_as_teacher: Naudokite šią svetainę kaip mokytojas
+    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
     heading_elementary: <h2>20 valandų kursas </h2><h1>pradinių klasių mokiniams</h1>
     heading_apps: <h2>Smagumynai</h2><h1>visiems</h1>
     heading_legacy: <h2>Mūsų bendri kursai</h2><h1>visoms amžių grupėms</h1>
-    gallery:
-      your_turtle: Mano piešiniai
-      your_studio: Mano programėlės
+    your_gallery: Galerija
   gender:
     male: Vyras
     female: Moteris
@@ -392,9 +388,10 @@
   footer:
     help_from_html: Google, Microsoft, Facebook ir Twitter inžinieriai padėjo sukurti
       šias pamokėles.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
-      Visos teisės saugomos.<br/>Plants vs. Zombies&trade; & &copy; 2013 Electronic
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
+      Visos teisės saugomos.<br/>Plants vs. Zombies&trade; & &copy; 2014 Electronic
       Arts Inc. Visos teisės saugomos.
+    powered_by_aws: Powered by Amazon Web Services
     feedback: Pateikti atsiliepimus
     translate: Padėkite mums išversti į savo kalbą
     support: Pagalba
@@ -436,16 +433,17 @@
   try_reloading: Pabandykite perkrauti puslapį
   next_stage: Baigta! Pereikite į kitą etapą
   download_pdf: Atviros pamokos planas
-  lesson_plan: Lesson Plan
+  lesson_plan: Pamokos planas
   view_lesson_plan: Peržiūrėti pamokos planą
   pdf_download: Parsisiųsti PDF
-  download_coming_soon: Downloadable activity coming soon.
-  video_coming_soon: Video Coming Soon!
+  download_coming_soon: Jau netrukus bus galima parsisiųsti įvairias veiklas.
+  video_coming_soon: Vaizdo įrašas bus jau netrukus!
   share_code:
     title: Nuspausk „Paleisti“, kad programa būtų įvykdyta
     bounce_og_title: Peržiūrėk mano Bounce žaidimą
     flappy_og_title: Išmėginkite žaidimą my Flappy Game
     studio_og_title: Peržiūrėk mano istoriją
+    check_out_what_i_made: Pažiūrėkite, ką aš sukūriau
     og_description: Aš pats parašiau kodą Code.org svetainėje
     phone_number_not_allowed: Panašu, kad yra įrašytas kažkieno telefono numeris.
       Pakeisk tekstą.
@@ -475,6 +473,15 @@
     20hour:
       title: Įvadiniai kursai
       body: Išmėginkite mūsų 20-ties valandų įvadą į programavimą.
+    hoc2014:
+      try_new_tutorial: Išbandykite naująsias Programavimo valandos pamokėles beta
+        versijoje
+      try_frozen: Piešimas su Ana ir Elze iš "Ledo šalies"
+    gallery:
+      title: Galerija
+      body: Peržiūrėkite su menininku sukurtų piešinių galeriją
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: Mokiniai nupiešė juos parašę kodą!
     students_made_these_with_code: Mokinių sukurti pavyzdžiai.
@@ -487,9 +494,14 @@
     more: Daugiau &rarr;
     caption_by_name_age: sukūrė %{name}  (%{age} m.)
     caption_time_ago: 'prieš %{time_ago} '
+    header: Galerija
+    header_playlab: Laboratorija
+    header_artist: Menininkas
   landing:
     prerelease: Šis kursas yra <span class='betatext'>beta</span>. Tai reiškia, kad
       tai nėra galutinis šio kurso variantas ir jis dar yra tobulinamas.
+    prerelease_hoc2014: Šios pamokėlės yra <span class='betatext'>beta versijoje</span>.
+      Į pasiūlymus ir klaidų pranešimus bus atsižvelgta.
     feedback: Pateikti atsiliepimus
     report_bug: Pranešti apie problemą
     support: Pagalba
@@ -505,7 +517,7 @@
     correct_title: Teisingai
     correct_body: Tai yra teisingas atsakymas.
   text_match:
-    placeholder: Enter your answer here
+    placeholder: Įveskite savo atsakymą čia
   dialog:
     ok: gerai
   time:
@@ -521,7 +533,7 @@
             pagrindais. Jis yra skirtas naudoti pamokose nuo 5 klasės, bet smagu mokytis
             esant bet kurioje amžiaus grupėje.
         Hour of Code:
-          title: „Programavimo valanda“
+          title: Programavimo valanda
           description: ''
         edit-code:
           title: Redaguoti kodą
@@ -558,7 +570,7 @@
     support.code.org</a> nesiregistruojant arba paklausti savo tėvų ar mokytojų, kad
     susisiektų su mumis už jus.
   progress:
-    not_completed: not completed
-    completed_too_many_blocks: completed, too many blocks
-    completed_perfect: completed, perfect
-    furthest_level_attempted: furthest level attempted
+    not_completed: nebaigtas
+    completed_too_many_blocks: baigtas, panaudota per daug blokų
+    completed_perfect: puikiai išspręsta
+    furthest_level_attempted: išmėgintas aukščiausias lygis

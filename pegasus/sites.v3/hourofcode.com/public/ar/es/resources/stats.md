@@ -1,13 +1,17 @@
-# Cómo atraer los medios a tú evento "Hora de Código"
 
-## Algunas estadísticas impactantes (EUA):
 
-  * Habrá 1 millón más de empleos de computación que estudiantes en los próximos 10 años (sumando un total de $500 billones en salarios).
-  * Más del 50 por ciento de las ocupaciones proyectadas en Matemáticas y Ciencias están en el campo de la computación. 
-  * Los empleos en el campo de la computación están entre los mejor pagados para recién graduados. Sin embargo, menos del 3% de los estudiantes universitarios se gradúan de una licenciatura en Ciencias de la Computación.
-  * En 26 estados, las clases de Ciencias de la Computación no cuentan en los requerimientos de Matemáticas o Ciencias para la graduación secundaria. 
-  * Menos del 20% de los estudiantes de Ciencias de la Computación en niveles avanzados son mujeres. Menos del 10% son negros o Latinos.
+[<button style="float: right; margin-top: 50px">Registra tu evento</button>](/#join)
 
-## Versión infográfica:
+# Reseñas y estadisticas útiles
+
+## Use this short blurb in newsletters
+
+### Traiga las Ciencias de Computación a su escuela o colegio. Empiece con una Hora de Código
+
+Las computadoras están en todas partes, pero hoy, menos escuelas enseñan ciencia de la computación que hace 10 años. Las buenas noticias son que: estamos trabajando para cambiar esto. Si ha escuchado hablar de una Hora de Código, (Hour of Code), el año pasado, debe saber que fue un suceso que hizo historia. En una semana, 15 millones de estudiantes experimentaron con las ciencias de la computación! La Hora de Código, (Hour of Code), es una hora de introducción a las Ciencias de Computación, diseñada para desmitificar lo que se piensa sobre codificación y demostrar que cualquiera puede aprender los conceptos básicos. Regístrate para ser anfitriona o anfitrión de Hora de Código (Hour of Code) durante la semana de las Ciencias de Computación de diciembre 8 al 14 del 2014 y ayuda a alcanzar la meta de 100 millones de estudiantes para fin de año. Add your school to the map, go to <http://hourofcode.com>
+
+## Infographic version:
 
 ![imagen](http://code.org/images/fit-8000/Code.org_infographic.png)
+
+<a style="display: block" href="/#join"><button style="float: right;">Registra tu evento</button></a>

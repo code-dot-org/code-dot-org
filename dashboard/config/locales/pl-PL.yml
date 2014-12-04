@@ -2,7 +2,7 @@
   activerecord:
     errors:
       messages:
-        blank: is required
+        blank: jest wymagane
     attributes:
       user:
         name: Wyświetlana nazwa
@@ -20,12 +20,9 @@
   hello: Witaj świecie
   welcome_back: Witaj z powrotem, %{name}
   add_teacher_form:
-    code_or_email:
-      label: 'Dodaj nauczyciela używając kodu lub adresu e-mail:'
-      placeholder: Kod (ABCDEF) lub e-mail (teacher@school.edu)
     code:
-      label: 'Add a teacher by section code:'
-      placeholder: Code (ABCDEF)
+      label: 'Dodaj nauczyciela:'
+      placeholder: Sekcja Code (ABCDEF)
     submit: Dodaj nauczyciela
   add_hint_form:
     placeholder: Wprowadź tutaj swoją wskazówkę
@@ -254,7 +251,7 @@
         playlab: Make an App
         artist: Draw Something
     user:
-      classroom: Moi uczniowie
+      classroom: Domowa strona nauczyciela
       label: Witaj %{username}
       stats: Moje postępy
       settings: Moje konto
@@ -320,17 +317,17 @@
       add: Add section
       manage: Zarządzanie sekcjami
       section: Section
-      students: Students
+      students: Uczniowie
       section_code: Section Code
       add_section_code: Add Students Section-Code
       secret: Secret type
       grade: Grade
-      course: Course
+      course: Kurs
       rename: zmień nazwę
       edit: edit
-      delete: delete
-      confirm_delete: Are you sure you want to delete this section?
-      email: Send in email
+      delete: Usuń
+      confirm_delete: Czy na pewno chcesz usunąć tę sekcję?
+      email: mailem
     rollup: Tablica Postępów
     activity: Ostatnia aktywność klasy
     user_not_found: Nie można odnaleźć nauczyciela lub ucznia
@@ -395,32 +392,32 @@
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
+    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
     heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
     heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
     heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
-    gallery:
-      your_turtle: My Art
-      your_studio: My Apps
+    your_gallery: Galeria
   gender:
     male: Mężczyzna
     female: Kobieta
     none: Wolę nie odpowiadać
   user_type:
-    student: uczeń
-    teacher: Teacher
+    student: Uczeń
+    teacher: Nauczyciel
   footer:
     help_from_html: Ten samouczek pomogli utworzyć inżynierowie z <a href="http://www.google.com">Google</a>,
       <a href="http://www.microsoft.com">Microsoft</a>, <a href="http://www.facebook.com">Facebook</a>,
       i <a href="http://www.twitter.com">Twitter</a>.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 <a href="http://www.rovio.com">Rovio
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 <a href="http://www.rovio.com">Rovio
       Entertainment Ltd</a>. Wszystkie prawa zastrzeżone.<br/> Plants vs. Zombies&trade;
       & &copy; 2013 <a href="http://www.ea.com">Electronic Arts Inc.</a>. Wszystkie
       prawa zastrzeżone.
+    powered_by_aws: Powered by Amazon Web Services
     feedback: Wyraź swoją opinię
     translate: Pomóż nam tłumaczyć na Twój język
     support: Wsparcie
     support_url: http://support.code.org
-    tos: Warunki korzystania z usług
+    tos: Warunki
     privacy: Polityka prywatności
     secure: Secure Version
   reference_area:
@@ -444,7 +441,7 @@
         issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
         any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade
         your browser to a supported version</a>.
-      hide_this_warning: Hide this warning
+      hide_this_warning: Ukryj to ostrzeżenie
     upgrade:
       header: Uaktualnij swoją przeglądarkę.
       message: Code.org uses modern web technology. This makes the site faster to
@@ -459,7 +456,7 @@
   download_pdf: Otwórz plan lekcji
   lesson_plan: Lesson Plan
   view_lesson_plan: View Lesson Plan
-  pdf_download: Download PDF
+  pdf_download: Pobierz PDF
   download_coming_soon: Downloadable activity coming soon.
   video_coming_soon: Video Coming Soon!
   share_code:
@@ -467,6 +464,7 @@
     bounce_og_title: Sprawdź moją grę Bounce
     flappy_og_title: Sprawdź teraz moją grę Flappy
     studio_og_title: Check out my story
+    check_out_what_i_made: Check out what I made
     og_description: Sam napisałem w całości kod za pomocą Code.org
     phone_number_not_allowed: It looks like there is a phone number in it. Try changing
       the text.
@@ -497,6 +495,15 @@
     20hour:
       title: Wprowadzenie do kursu
       body: Wypróbuj nasze 20-sto godzinne wprowadzenie do kursu informatyki.
+    hoc2014:
+      try_new_tutorial: Wypróbuj nasz nowy samouczek Godziny Kodowania (Hour of Code)
+        w wersji beta
+      try_frozen: Artist with Anna and Elsa, from Frozen
+    gallery:
+      title: Galeria
+      body: View a gallery of app and artist images created by our users
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: Ten kod stworzyli uczniowie!
     students_made_these_with_code: Students made these with code!
@@ -510,8 +517,13 @@
     more: Więcej &rarr;
     caption_by_name_age: by %{name}, age %{age}
     caption_time_ago: '%{time_ago} ago'
+    header: Galeria
+    header_playlab: Play Lab
+    header_artist: Artist
   landing:
     prerelease: This page is still under development.
+    prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
+      is subject to revision as feedback is received and improvements are made.
     feedback: Give Feedback
     report_bug: Report Bug
     support: Get Help

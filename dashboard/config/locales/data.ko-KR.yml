@@ -50,6 +50,7 @@
           MazeEC: 1 단계
           Webapp: 2 단계
           ArtistEC: 3 단계
+          StudioEC: 4 단계
         events:
           desc: Bounce (beta)
           Bounce: 1 단계
@@ -101,6 +102,7 @@
         Webapp: 웹 앱
         ArtistEC: The Artist
         TextMatch: 글자 맞추기
+        StudioEC: Play Lab
     trophy:
       name:
         Bronze: 동
@@ -365,7 +367,8 @@
         studio_c3_game_4: 펭귄이 "Ouch!"라고 말하고, 공룡에 닿으면 "충돌 소리"를 출력하도록 한 후 방향키들을 움직여보세요.
         studio_c3_game_5: 펭귄이 문어에 닿으면 점수가 올라가게 만든 후 방향키를 눌러 움직여 보세요.
         studio_c3_game_6: 화면의 배경과 펭귄의 이동 스피드를 바꾼 후 방향키를 눌러 움직여 보세요.
-        studio_c3_game_7: 자신만의 게임을 만든 후 친구들이 스마트폰에 해 볼 수 있도록 공유해 보세요.
+        studio_c3_game_7: 자신만의 게임을 만들어보세요. 만들기가 완료되면 마치기를 눌러 친구들의 스마트폰에서 해볼 수 있도록
+          할 수 있습니다.
         studio_playlab_1: 강아지가 "hello world"라고 말하도록 할 수 있을까요?
         studio_playlab_2: 강아지가 어떤 말을 한 후에 고양이가 어떤 말을 하도로 할 수 있을까요?
         studio_playlab_3: 강아지가 고양이에게 움직이도록 할 수 있을까요?
@@ -376,8 +379,10 @@
           갔다를 반복하도록 할 수 있을까요?'
         studio_playlab_8: 펭귄이 문어에 닿았을 때 점수가 올라가도록 만든 후 방향키를 움직여 점수가 올라가는지 살펴보세요.
         studio_playlab_9: 화면의 배경과 펭귄의 스피드를 바꿀 수 있을까요? 점수를 득점할 때까지 방향키들을 움직여 보세요.
-        studio_playlab_10: 자신만의 게임을 만든 후 친구들이 스마트폰에 해 볼 수 있도록 공유해 보세요.
-        studio_full_sandbox: 자신만의 게임을 만든 후 친구들이 스마트폰에 해 볼 수 있도록 공유해 보세요.
+        studio_playlab_10: 자신만의 게임을 만들어보세요. 만들기가 완료되면 마치기를 눌러 친구들의 스마트폰에서 해볼 수 있도록
+          할 수 있습니다.
+        studio_full_sandbox: 자신만의 게임을 만들어보세요. 만들기가 완료되면 마치기를 눌러 친구들의 스마트폰에서 해볼 수 있도록
+          할 수 있습니다.
         studio_k1_1: 강아지가 "hello world"라고 말하도록 할 수 있을까요?
         studio_k1_2: 강아지가 어떤 말을 한 후에 고양이가 어떤 말을 하도로 할 수 있을까요?
         studio_k1_3: 강아지가 고양이에게 움지이도록 할 수 있을까요?
@@ -395,10 +400,112 @@
         maze_wordsearch_k_16: 어떤 방향으로 움직인 후에 "아래"로 이동시켜주세요.
         maze_wordsearch_k_20: 테스트입니다! 어떤 방향으로 움직인 후에 "스토리"로 이동시켜주세요.
         webapp_ec_simple: HtmlBlock 을 사용해 웹 앱 만들기
-        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
-          it in the new "penColour" block.'
+        turtle_ec_1_2: '이제, 사각형을 그려보세요. 참고: 새로운 "펜 색" 블럭을 이용해 원하는 색을 고를 수 있습니다.'
         turtle_ec_1_10: '잘했습니다! 이제 그리고 싶은 것을 마음대로 그려보세요. 몇 가지 재미있는 예시: 막대기 모양, 눈꽃모양,
           나선모양. 그리고 새로운 "펜 두께" 블럭을 이용해 보세요!'
+        studio_ec_sandbox: 자신만의 게임을 만들어보세요. 만들기가 완료되면 마치기를 눌러 친구들의 스마트폰에서 해볼 수 있도록
+          할 수 있습니다.
+    levelbuilder:
+      frozen line:
+        instructions: 안녕하세요! 저는 아렌델의 엘사입니다. 선 1개를 그릴 수 있도록 도와주세요.
+      frozen perpendicular:
+        instructions: 이제 두 개의 선을 90도 만큼 교차시켜 그릴 수 있는지 살펴보세요. "회전"블럭과 "이동" 블럭을 사용해야
+          할 것 입니다.
+      frozen square iterative:
+        instructions: 사각형을 만들기 위한 과정에 반정도 왔습니다. 모아서 사각형을 만들기 위해 4개의 선을 그려보세요.
+      frozen square loop:
+        instructions: 안녕하세요! 저는 아렌델의 안나에요! 적은 "반복" 블럭을 이용해 사각형을 만들어 볼까요? 사각형을 만들기
+          위해서 반복 블럭 안에 몇 번의 "반복" 블럭을 넣어야 할까요???
+      frozen square loop 3x:
+        instructions: 이제 3개의 사각형을 회전시킨 것을 만들어 보아요! 새로운 사각형을 그리기 전에 120도 만큼 회전하는 것을
+          잊지 마세요.
+      frozen square snowflake:
+        instructions: '"반복" 블럭을 10번 이용하고, 36도 만큼씩 사각형들을 회전시켜 그려서 눈송이를 그릴 수 있겠어요?'
+      frozen cross:
+        instructions: '"덧셈기호"를 그리기 위해서 "반복" 블럭을 사용해 보세요. 엘사가 앞뒤로 이동할 수 있다는 것 아시죠?'
+      frozen cross rotate:
+        instructions: 이제 10번 반복세 보세요. 각 선들을 그리면서 회전하기 위해서 몇 도가 필요할까요?
+      frozen cross rotate dense:
+        instructions: '이제 90번 반복해 보세요. 360도를 회전하려면 90도를 몇 번 회전해야 할까요? 힌트: 생각보다 작은
+          수입니다.'
+      frozen diamond:
+        instructions: '평행사변형을 그려보아요! 사각형하고 비슷하지만 각이 다릅니다: 사각형은 모두 90도이지만 60도, 120도의
+          각을 이루고 있습니다.'
+      frozen diamond mini snowflake:
+        instructions: 모든 눈송이들이 서로 다른 모양을 하고 있다는 것을 아시나요? 평행 사변형을 4번 그리기 위해 "반복"블럭을
+          사용하고, 각각을 90도 만큼씩 회전시켜 새로운 눈송이를 만들어보겠습니다.
+      frozen diamond snowflake:
+        instructions: 이제, 평행 사변형을 10번 그릴 수 있도록 반복 블럭을 사용하고, 각각을 36도 만큼씩 오른쪽으로 돌려 새로운
+          눈송이를 그려보겠습니다.
+      frozen circle:
+        instructions: 원은 특별한 도형입니다. 원을 그리기 위해서 물음표 부분에 어떤 수가 들어가야 할까요?
+      frozen circle function:
+        instructions: 새로운 "원 그리기" 블럭을 이용해 10개의 원을 겹쳐 그리세요. 원을 그리기 위해 점프 하는 것을 잊지 마세요.
+      frozen circle function in circle:
+        instructions: 이제 20개의 원을 겹치고, 각각을 18도씩 회전시키세요.
+      frozen circle function with parameter:
+        instructions: 원하는 크기로 그릴 수 있는 "원 그리기" 블럭이 있습니다. 이 블럭을 사용해 5 크기의 원과 10 크기의
+          원을 그릴 수 있겠어요?
+      frozen snowflower:
+        instructions: 아주 복잡한 눈송이 모양도 아주 간단한 모양들을 이용해 만들 수 있습니다. 5크기의 원을 5개, 10크기의
+          원을 5개 이용해 패턴을 만들 수 있겠어요?
+      frozen snowflake branch:
+        instructions: '"눈송이 가지 만들기" 블럭을 이용해 3개의 가지로 뻗어나가는 그럴 듯한 눈송이를 만들어보세요.'
+      frozen snowflake full:
+        instructions: 이제 이쁜 눈송이를 만들기 위해 8번 반복해 보세요.
+      frozen freeplay:
+        instructions: 와~ 여러분은 이제 진짜 예술가가 된 것 같아요! 겨울왕국을 만들고 친구들에게 공유해 보세요.
+      scrat 16:
+        instructions: 도토리! 도토리! 도토리! "만약" 블럭을 이용하고, 가장 적은 갯수의 블럭들을 이용해서 도토리가 있는 곳으로
+          보내주세요.
+      scrat 17:
+        instructions: 좋아요, 다시 한 번 해봅시다. - 크게 다르지는 않지만, 벽을 조심해야 해요!
+      scrat 18:
+        instructions: '"만약(if)-아니면(else)" 블럭은 조건을 검사하고, 두 가지 중 하나만 실행합니다. 도토리가 있는
+          위치로 이동시키기 위해 이 새로운 블럭을 사용하세요.'
+      scrat 19:
+        instructions: '"조건/선택" 블럭을 다시 한 번 사용해 보자~, 한 번에 성공할 수 있을까?'
+      scrat 20:
+        instructions: 좀 더 복잡한 미로를 해결할 수 있도록 3개의 블럭만 더 더해줄 수 있나요? 그렇게 해준다면, 길이가 얼마나
+          길던지 상관없이 꺽인 길에서 회전할 수 있게 됩니다. 빨리 빨리요! 얼음이 녹고 있어요!
+      Standalone_Artist_1:
+        instructions: Welcome to Artist! First off, let's try to make a simple square
+          using the turn right block and move forward block. Each side should be 100
+          pixels long.
+      Standalone_Artist_2:
+        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel
+          long sides.
+      Standalone_Artist_3:
+        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree
+          turns?
+      Standalone_Artist_4:
+        instructions: Now you've got a new block to play with, the loop. This will
+          repeat a set of commands. What happens if you loop these commands 6 times?
+      Standalone_Artist_5:
+        instructions: How many times do you need to loop this diamond to draw the
+          flower?
+      Standalone_Artist_5.5:
+        instructions: 'Notice how we simplified the diamond code by turning it into
+          a loop. You can loop that whole sequence 12 times to draw the flower. Hint:
+          You''ll need to turn 30 degrees after your diamond loop so you don''t keep
+          drawing over the same diamond.'
+      Standalone_Artist_6:
+        instructions: 'Loop this hexagon code 6 times to create the design. How many
+          degrees will you need to turn each time? Hint: divide the number of degrees
+          in a circle by the number of times you are looping.'
+      Standalone_Artist_7:
+        instructions: 'A function is another programming tool to help you avoid repeating
+          yourself. This function draws a flower, so you can use it any time you want
+          to draw a flower. Use this and the new jump block to draw these flowers.
+          Hint: The flowers are 150 pixels apart'
+      Standalone_Artist_8:
+        instructions: Here's a function called "Draw a shape" that we've programmed
+          to draw hexagons. Run the code to see what it does and then experiment with
+          the function to see what happens. Can you make it draw a pattern of squares,
+          triangles, or octagons?
+      Standalone_Artist_9:
+        instructions: Now go ahead and make whatever picture you'd like! You've even
+          got an empty function that you can make do whatever you want!
     video:
       name:
         maze_intro: 미로 퍼즐 소개
@@ -409,6 +516,7 @@
         loop_until: 반복(~할 때까지)
         if: 조건 실행
         if_else: 조건/선택 실행
+        if_else_scrat: 조건/선택 실행
         function: 함수
         loop_while: 반복(~인 동안)
         loop_for: 카운터
@@ -441,6 +549,7 @@
         C1_playlab_storytelling: Play Lab - 스토리 만들기
         C1_planting_seed: 씨앗 심기
         C1_building_foundation: 건물 기초 만들기
+        C1_going_places_safely: 안전하게 자리잡기
         C2_maze_intro: 미로 퍼즐 소개
         C2_artist_intro: 예술가 퍼즐 소개
         C2_zuck_repeat_loop: 미로 퍼즐 반복
@@ -455,6 +564,7 @@
         C2_binary_bracelets: 2진 팔찌
         C2_relay_programming: 릴레이 프로그래밍
         C2_paper_airplanes: 종이 비행기
+        C2_digital_footprint: 디지털 개인정보 흔적
         C3_maze_level_4: 미로 퍼즐 반복
         C3_artist_intro: 예술가 퍼즐 소개
         C3_artist_functions: 예술가 함수
@@ -473,6 +583,14 @@
         C3_crowdsourcing: 클라우드소싱
         C3_functional_suncatchers: 기능성 색유리
         C3_songwriting_with_parameters: 매개변수를 사용한 음악 작곡
+        C4_artist_math: Programming the Artist with Math
+        C4_create_functions: Creating Functions
+        C4_edit_functions: Editing Functions
+        C4_for_loops: 반복을 위한
+        C4_variables: 변수
+        frozen_intro: Hour of Code Intro
+        frozen_loops: Introduction to Loops
+        frozen_functions: Introduction to Functions
     callout:
       text:
         drag_blocks: '"움직이기" 블럭을 끌어다가 다른 블럭의 아래에 탁 붙여보세요.'
@@ -485,13 +603,40 @@
         set_sprite_image: '"케릭터 사용하기" 블럭을 "이야기가 시작되면" 블럭에 붙여 스토리가 가능하게 해 보세요. '
         studio_say_text: 큰 따옴표 사이에 케릭터가 해야하는 말을 입력하세요.
         jigsaw_click: 이 블럭을 클릭하세요!
-        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
-          Run" block to make Elsa move forward
-        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
-          determines how much Elsa turns
-        replace_questions: Use the drop-down to replace "???" with a number
-        replace_questions_degree: Use the drop-down to replace "???" with the correct
-          degree to turn
-        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
-          workspace
-        snowflake_dropdown: Use this drop-down to create different snowflakes!
+        move_elsa_forward: '"앞으로 이동" 블럭을 드래그해서 "실행하면" 블럭의 아래에 붙여 엘사가 앞으로 이동하게 해보세요.'
+        turn_elsa: '"돌기(회전)" 블럭을 사용해 엘사가 방향을 바꾸도록 해보세요. 선택 메뉴에서의 수는 엘사가 회전해야할 정도를
+          의미합니다.'
+        replace_questions: '"???" 부분에 수를 입력하면 됩니다.'
+        replace_questions_degree: '"???" 부분에 정확한 각도를 입력해 보세요.'
+        repeat_blocks: '"반복" 블럭의 안에 다른 블럭들을 넣어보세요.'
+        snowflake_dropdown: 다른 모양의 눈송이를 만들기 위해서 사용해 보세요.
+        degrees_per_side: 각각의 회전 각도를 얻어내기 위해, 면의 개수를 360으로 나누세요.
+        set_sides: 퍼즐을 해결하기 위해 필요한 면의 수를 설정하기 위해 이 블럭을 사용하세요.
+        set_length: 정확한 값으로 "길이"를 설정하기 위해 이 블럭을 사용하세요.
+        which_equation: 어떤 식이 각 모양에 대한 면들을 더 작게 만들 수 있을까요? 각각의 식을 실험해 보세요.
+        get_nectar: 새로운 "꽃꿀 얻기" 블럭을 사용하세요.
+        actions_category: 도구 상자가 새로운 모습으로 바뀌었습니다! 이제 "실행" 블럭들을 사용할 수 있습니다.
+        draw_square_hint: '힌트: 바로 전 퍼즐에서 사용했던 사각형 반복을 사용하세요.'
+        edit_function: 함수를 수정하기 위해 이 버튼을 사용하세요.
+        create_function: '"함수" 메뉴를 열어 함수를 만들기 위해, 여기를 누르세요. 그 다음에 "함수 만들기" 버튼을 누르세요. '
+        house_hint: 그림이 집처럼 보이지 않아도 괜찮습니다. 다음 퍼즐에서 해결할 것입니다.
+        edit_draw_square: 함수를 수정해 반복 실행을 추가하기 위해 이 버튼을 사용하세요.
+        edit_get_nectar: 이 버튼을 사용해 함수를 수정해서, 꿀벌이 꽃꿀 방향으로 회전할 수 있도록 하세요.
+        logic_category: '"논리" 메뉴를 열어 "만약/아니면" 블럭을 찾아보세요.'
+        length_parameter: 이 함수를 수정해서 "길이"를 매개변수로 사용할 수 있도록 해 보세요.
+        frozen_diamond_repeat: Use the repeat block to create this shape.
+        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
+          each circle.
+        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
+          and change the size.
+        frozen_snowflake_branch: Use the "create a snowflake branch" block
+        frozen_create_square: Attach more blocks here to create a square
+        playlab_drag_say: Drag the "say" block here and type "hello"
+        playlab_use_twice: Use this block twice and remember to change the actor number
+        playlab_move_girl: Use the "move right" block to move Tennis Girl
+        playlab_play_sound: Add "play sound" block here
+        playlab_arrow_keys: Remember to use these to move the witch after clicking
+          on Run
+        playlab_add_move: Add "move" blocks inside this repeat block
+        playlab_add_score: Add score blocks here
+        playlab_add_blocks: Add your blocks here

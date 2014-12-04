@@ -193,7 +193,7 @@ BlocklyApps.init = function(config) {
     // Enable param & var editing in levelbuilder, regardless of level setting
     config.level.disableParamEditing = false;
     config.level.disableVariableEditing = false;
-  } else if (!BlocklyApps.noPadding) {
+  } else if (!config.hide_source) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
   }
@@ -228,7 +228,9 @@ BlocklyApps.init = function(config) {
           phone_share_url: config.send_to_phone_url
         },
         sendToPhone: config.sendToPhone,
-        twitter: config.twitter
+        level: config.level,
+        twitter: config.twitter,
+        onMainPage: true
       }));
 
       dom.addClickTouchEvent(openWorkspace, function() {
@@ -289,7 +291,7 @@ BlocklyApps.init = function(config) {
       if (BlocklyApps.noPadding) {
         upSale.style.marginLeft = '10px';
       }
-    } else if (!dom.isMobile()) {
+    } else {
       upSale.innerHTML = require('./templates/learn.html')();
     }
     belowViz.appendChild(upSale);
@@ -441,7 +443,8 @@ BlocklyApps.init = function(config) {
       BlocklyApps.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
         mode: 'javascript',
         modeOptions: utils.generateDropletModeOptions(config.level.codeFunctions),
-        palette: utils.generateDropletPalette(config.level.codeFunctions)
+        palette: utils.generateDropletPalette(config.level.codeFunctions,
+                                              config.level.categoryInfo)
       });
 
       if (config.afterInject) {
@@ -474,6 +477,17 @@ BlocklyApps.init = function(config) {
         config.level.edit_blocks === 'toolbox_blocks') {
         // Don't show when run block for toolbox/required block editing
         config.forceInsertTopBlock = null;
+      }
+    }
+
+    // If levelbuilder provides an empty toolbox, some apps (like artist)
+    // replace it with a full toolbox. I think some levels may depend on this
+    // behavior. We want a way to specify no toolbox, which is <xml></xml>
+    if (config.level.toolbox) {
+      var toolboxWithoutWhitespace = config.level.toolbox.replace(/\s/g, '');
+      if (toolboxWithoutWhitespace === '<xml></xml>' ||
+          toolboxWithoutWhitespace === '<xml/>') {
+        config.level.toolbox = undefined;
       }
     }
 
@@ -513,6 +527,7 @@ BlocklyApps.init = function(config) {
       startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
     }
     startBlocks = BlocklyApps.arrangeBlockPosition(startBlocks, config.blockArrangement);
+    BlocklyApps.loadBlocks(startBlocks);
   }
 
   // Initialize the slider.
@@ -536,17 +551,13 @@ BlocklyApps.init = function(config) {
   });
   window.addEventListener('resize', BlocklyApps.onResize);
 
-  // call initial onResize() asynchronously - need 100ms delay to work
-  // around relayout which changes height on the left side to the proper
-  // value
+  // Call initial onResize() asynchronously - need 10ms delay to work around
+  // relayout which changes height on the left side to the proper value
   window.setTimeout(function() {
     BlocklyApps.onResize();
     var event = document.createEvent('UIEvents');
     event.initEvent('resize', true, true);  // event type, bubbling, cancelable
     window.dispatchEvent(event);
-    if (BlocklyApps.usingBlockly) {
-      BlocklyApps.loadBlocks(startBlocks);
-    }
   }, 10);
 
   BlocklyApps.reset(true);
@@ -785,7 +796,15 @@ BlocklyApps.onResize = function() {
 
   div.style.top = divParent.offsetTop + 'px';
   var fullWorkspaceWidth = parentWidth - (gameWidth + WORKSPACE_PLAYSPACE_GAP);
+  var oldWidth = parseInt(div.style.width, 10) || div.getBoundingClientRect().width;
   div.style.width = fullWorkspaceWidth + 'px';
+
+  // Keep blocks static relative to the right edge in RTL mode
+  if (BlocklyApps.usingBlockly && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
+    Blockly.mainBlockSpace.getTopBlocks().forEach(function(topBlock) {
+      topBlock.moveBy(fullWorkspaceWidth - oldWidth, 0);
+    });
+  }
 
   if (BlocklyApps.isRtl()) {
     div.style.marginRight = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';

@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Ahhh, we must need to add something between the square and the triangle. Which block do you need to add to get the triangle roof to sit on top of the square.",
+    "instructions": "Which block do you need to add to get the triangle to sit on top of the square?",
     "is_k1": "false",
     "skip_instructions_popup": "true",
     "disable_param_editing": "true",
@@ -19,7 +19,8 @@
     "slider_speed": ".7",
     "ideal": "25",
     "use_modal_function_editor": "true",
-    "use_contract_editor": "false"
+    "use_contract_editor": "false",
+    "embed": "false"
   }
 }]]></config>
   <blocks>
@@ -237,7 +238,7 @@
     </required_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" movable="false" deletable="false">
+        <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="procedures_callnoreturn">
               <mutation name="draw a triangle"/>
