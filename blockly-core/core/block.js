@@ -1981,7 +1981,7 @@ Blockly.Block.prototype.getInputTargetBlock = function(name) {
 Blockly.Block.prototype.attachBlockToInputName = function(newBlock, inputName) {
   var input = this.getInput(inputName);
   if (!input || !input.connection) {
-    throw 'Block has no input named' + name;
+    throw 'Block has no input named ' + name;
   }
 
   newBlock.previousConnection.connect(input.connection);
