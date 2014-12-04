@@ -1,0 +1,15 @@
+- levels = Script.find_by_name('frozen').script_levels
+
+- levels.each do |sl|
+  - result =
+  - if current_user
+    - UserLevel.find_by_user_id_and_level_id(current_user.id, sl.level.id).try(:best_result)
+  - elsif session[:progress] && session[:progress][sl.level_id]
+    - session[:progress][sl.level_id]
+
+  - if !result.nil?
+    %h2
+      Print your ice art
+    %button#print-button
+      Print All
+    - break
