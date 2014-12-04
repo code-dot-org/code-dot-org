@@ -1221,7 +1221,7 @@ BlocklyApps.reset = function(first) {
       size: constants.DEFAULT_SPRITE_SIZE,
       dir: Direction.NONE,
       displayDir: Direction.SOUTH,
-      emotion: Emotions.NORMAL,
+      emotion: level.defaultEmotion || Emotions.NORMAL,
       // tickCount of last time sprite moved,
       lastMove: Infinity,
       // overridden as soon as we call setSprite
