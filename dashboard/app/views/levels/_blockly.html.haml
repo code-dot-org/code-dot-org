@@ -80,7 +80,6 @@
         this.callouts.every(function(callout) {
           var selector = callout.element_id; // jquery selector.
           if ($(selector).length === 0 && !callout.on) {
-            console.log("Couldn't find callout target.");
             return true;
           }
 
