@@ -32,30 +32,23 @@ end
 
 get '/api/hour/certificate/:filename' do |filename|
   only_for ['code.org', 'csedweek.org', 'uk.code.org']
-  extnames = [ '.jpg', '.jpeg', '.png' ]
+
   extname = File.extname(filename)
+  pass unless settings.image_extnames.include?(extname)
 
   basename = File.basename(filename, extname)
   session, width = basename.split('-')
+  pass unless row = DB[:hoc_activity].where(session:session).first
 
   width = width.to_i
   width = 0 unless(width > 0 && width < 1754)
 
-  row = HourOfActivity.first(session: session)
-  pass if row.nil?
+  image = create_course_certificate_image(row[:name].to_s.strip, 'hoc')
+  image.resize_to_fit!(width) unless width == 0
+  image.format = extname[1..-1]
 
-  pass unless extnames.include?(extname)
-  format = extname[1..-1]
-
-  display_name = row.name.to_s.strip
-  display_name = row.email.to_s.strip if display_name.empty?
-
-  content_type format.to_sym
-  expires 0, :private, :must_revalidate
-
-  image = create_course_certificate_image(display_name, 'hoc')
-  image.resize_to_fit!(width) unless (width = width.to_i) == 0
-  image.format = format
+  dont_cache
+  content_type image.format.to_sym
   image.to_blob
 end
 
@@ -114,32 +107,36 @@ end
 
 get '/api/hour/status' do
   only_for ['code.org', 'csedweek.org', 'uk.code.org']
-  tutorial_status(request.cookies['hour_of_code'])
+  pass unless row = DB[:hoc_activity].where(session:request.cookies['hour_of_code']).first
+  dont_cache
+  content_type :json
+  JSON.pretty_generate session_status_for_row(row)
 end
 
 get '/api/hour/status/:code' do |code|
   only_for ['code.org', 'csedweek.org', 'uk.code.org']
-  tutorial_status(code)
+  pass unless row = DB[:hoc_activity].where(session:code).first
+  dont_cache
+  content_type :json
+  JSON.pretty_generate session_status_for_row(row)
 end
 
 post '/api/hour/certificate' do
   only_for ['code.org', 'csedweek.org', 'uk.code.org']
 
-  activity = HourOfActivity.first(session:params[:session_s])
-  unless activity.nil?
+  row = DB[:hoc_activity].where(session:params[:session_s]).first
+  if row
     begin
       form = insert_form('HocCertificate2013', params.merge(email_s:'anonymous@code.org'))
     rescue FormError=>e
       halt 400, {'Content-Type'=>'text/json'}, e.errors.to_json
     end
 
-    # For backward compatibility we update the activity as well.
-    activity.email = form.email
-    activity.name = form.name
-    activity.update_ip = request.ip
-    raise ValidationError.new(activity) unless activity.save
+    DB[:hoc_activity].update(name:form.name).where(id:row[:id])
+
+    row[:name] = form.name
   end
 
   content_type :json
-  HourOfActivity.stat(activity).to_json
+  session_status_for_row(row).to_json
 end
