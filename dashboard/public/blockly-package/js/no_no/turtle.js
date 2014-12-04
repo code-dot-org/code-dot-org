@@ -2607,6 +2607,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -2619,7 +2620,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -2629,16 +2632,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -14129,8 +14122,16 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
     // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
     Turtle.ctxPattern.rotate(Math.PI * (Turtle.heading - 90) / 180);
 
-    var clipSize = Math.min(Turtle.smoothAnimateStepSize, lineDistance);
-
+    var clipSize;
+    if (lineDistance % Turtle.smoothAnimateStepSize === 0) {
+      clipSize = Turtle.smoothAnimateStepSize;
+    } else if (lineDistance > Turtle.smoothAnimateStepSize) {
+      // this happens when our line was not divisible by smoothAnimateStepSize
+      // and we've hit our last chunk
+      clipSize = lineDistance % Turtle.smoothAnimateStepSize;
+    } else {
+      clipSize = lineDistance;
+    }
     if (img.width !== 0) {
       Turtle.ctxPattern.drawImage(img,
         // Start point for clipping image
@@ -14138,7 +14139,7 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
         // clip region size
         clipSize * retina, img.height,
         // some mysterious hand-tweaking done by Brendan
-        Math.round((Turtle.stepDistanceCovered - 7) * retina), Math.round((- 18) * retina),
+        Math.round((Turtle.stepDistanceCovered - clipSize - 2) * retina), Math.round((- 18) * retina),
         clipSize * retina, img.height);
     }
 
