@@ -73,6 +73,8 @@ max_age: 60
 
 = view 'popup_window.js'
 
+%iframe#print_frame{:src=>'/images/frozen-impressive-all.jpg', :style=>'display: none'}
+
 :javascript
 
   var cookieValue;
@@ -113,11 +115,14 @@ max_age: 60
       var printButton = $('#print-button');
       if (printButton) {
         printButton.click(function() {
-          createHiddenPrintWindow('/images/frozen-impressive-drawings.jpg');
-          //createHiddenPrintWindow('http://code.org/images/fit-200/avatars/ali_partovi_and_hadi_partovi.jpg');
+        var item = $("#print_frame")[0];
+          item.contentWindow.document.getElementsByTagName("img")[0].style.width="100%";
+          if (item.contentWindow.document.execCommand('print', false, null)) {
+          } else {
+            item.contentWindow.print();
+          }
         });
       }
-
       if (document.referrer.indexOf("3000") != -1 && document.referrer.indexOf("frozen") == -1) {
         $('#print-option').hide();
       }
