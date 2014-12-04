@@ -79,7 +79,9 @@
         $.fn.qtip.zindex = 500;
         this.callouts.every(function(callout) {
           var selector = callout.element_id; // jquery selector.
-          if ($(selector).length <= 0) { console.log("Couldn't find callout target."); return true;}
+          if ($(selector).length === 0 && !callout.on) {
+            return true;
+          }
 
           var defaultConfig = {
             content: {
@@ -109,8 +111,16 @@
           var config = $.extend(true, {}, defaultConfig, customConfig);
           config.style.classes = config.style.classes.concat(" cdo-qtips");
 
-          var calloutDomElement = $(selector).qtip(config);
-          calloutDomElement.qtip('show');
+          if (callout.on) {
+            window.addEventListener(callout.on, function() {
+              if (!callout.seen && $(selector).length > 0) {
+                callout.seen = true;
+                $(selector).qtip(config).qtip('show');
+              }
+            });
+          } else {
+            $(selector).qtip(config).qtip('show');
+          }
 
           return true;
         });
