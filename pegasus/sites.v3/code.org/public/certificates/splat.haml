@@ -1,23 +1,23 @@
 ---
 <%
-  row = HourOfActivity.first(session: File.basename(request.path_info))
-  raise Sinatra::NotFound if row.nil?
+  row = DB[:hoc_activity].where(session:File.basename(request.path_info)).first
+  raise Sinatra::NotFound unless row
 %>
-title: "Certificate for Completion of One Hour of Code for <%= row.name||row.email %>"
+title: "Certificate for Completion of One Hour of Code for <%= row[:name] %>"
 theme: responsive
 social:
   "twitter:card": photo
   "twitter:site": "@codeorg"
-  "twitter:url": "http://<%= request.host_with_port %>/certificates/<%= row.session %>"
-  "twitter:image:src" : "http://<%= request.host_with_port %>/api/hour/certificate/<%= row.session %>-640.jpg"
+  "twitter:url": "http://<%= request.host_with_port %>/certificates/<%= row[:session] %>"
+  "twitter:image:src" : "http://<%= request.host_with_port %>/api/hour/certificate/<%= row[:session] %>-640.jpg"
   "twitter:image:width" : "640"
   "twitter:image:height" : "451"
   "twitter:title": "I just finished the Hour of Code"
   "twitter:description": "Join tens of millions students to learn an hour of computer science. It's the largest learning event in world history."
   "og:title": "I just finished the Hour of Code"
   "og:description": "Join tens of millions students to learn an hour of computer science. It's the largest learning event in world history."
-  "og:image" : "http://<%= request.host_with_port %>/api/hour/certificate/<%= row.session %>-640.jpg"
-  "og:url" : "http://<%= request.host_with_port %>/certificates/<%= row.session %>"
+  "og:image" : "http://<%= request.host_with_port %>/api/hour/certificate/<%= row[:session] %>-640.jpg"
+  "og:url" : "http://<%= request.host_with_port %>/certificates/<%= row[:session] %>"
   "og:image:width": "640"
   "og:image:height": "451"
   "og:video": ""
@@ -25,10 +25,10 @@ social:
   "og:video:height": ""
   "og:video:type": ""
 ---
--row = HourOfActivity.first(session: File.basename(request.path_info))||OpenStruct.new({name:'',email:'',session:''})
+-row = DB[:hoc_activity].where(session:File.basename(request.path_info)).first || {name:'', session:''}
 #hoc-certificate
-  %a{:href=>"/printcertificate/#{row.session}"}
-    %img{:src=>"/api/hour/certificate/#{row.session}.jpg", :alt=>"Certificate for Completion of One Hour of Code for #{row.name||row.email}"}
+  %a{:href=>"/printcertificate/#{row[:session]}"}
+    %img{:src=>"/api/hour/certificate/#{row[:session]}.jpg", :alt=>"Certificate for Completion of One Hour of Code for #{row[:name]}"}
 #index
   #gap.feature-codeorg
 

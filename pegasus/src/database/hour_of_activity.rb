@@ -27,18 +27,6 @@ class HourOfActivity
   property :updated_on      , Date      # Automated by dm-timestampes
   property :update_ip       , String
 
-  def self.stat(row)
-    {
-      :session          => row ? row.session : nil,
-      :started          => row ? row.started : false,
-      :pixel_started    => row ? row.pixel_started : false,
-      :pixel_finished   => row ? row.pixel_finished : false,
-      :finished         => row ? row.finished : false,
-      :certificate_sent => row ? (!row.email.nil? && !row.email.empty?) : false,
-      :has_voted        => row ? (!row.vote.nil? && !row.vote.empty?) : false,
-    }
-  end
-
   def self.row_created(row)
     $log.debug "Looking up geolocation for #{row.create_ip}"
     results = Geocoder.search(row.create_ip)
