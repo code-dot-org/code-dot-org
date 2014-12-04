@@ -27,16 +27,15 @@
         subject: Kilidi açmaq üçün təlimatlar
     omniauth_callbacks:
       failure: Sizi %{kind} -dən "%{reason}" -ə görə təsdiqləyə bilmədik.
-      success: "%{kind} hesabından müvəffəqiyyətlə təsdiq edildi."
+      success: '%{kind} hesabından müvəffəqiyyətlə təsdiq edildi.'
     passwords:
       no_token: Bu səhifəyə yalnız parol yeniləmə e-məktubundan gələ bilərsiniz. Əgər
         siz parol yeniləmə e-məktubundan gəlirsinizsə, lütfən əmin olun ki, verilmiş
         tam URL-ünvandan istifadə etmisiniz.
       send_instructions: Siz bir neçə dəqiqəyə parolunuzu necə yeniləməniz barədə
         təlimatları özündə saxlayan bir e-məktub alacaqsınız.
-      send_paranoid_instructions: "Əgər sizin e-məktub ünvanınız bizim məlumatlar
-        bazamızda varsa, bir neçə dəqiqə ərzində parol yeniləmə keçidi e-məktub ünvanınıza
-        göndəriləcəkdir."
+      send_paranoid_instructions: Əgər sizin e-məktub ünvanınız bizim məlumatlar bazamızda
+        varsa, bir neçə dəqiqə ərzində parol yeniləmə keçidi e-məktub ünvanınıza göndəriləcəkdir.
       updated: Parolunuz müvəffəqiyyətlə dəyişdirildi. İndi hesabınıza daxil olubsunuz.
       updated_not_active: Parolunuz müvəffəqiyyətlə dəyişdirildi.
     registrations:
@@ -61,19 +60,19 @@
     unlocks:
       send_instructions: Bir neçə dəqiqəyə hesabınızın kilidini necə açacağınız barədə
         bir e-məktub alacaqsınız.
-      send_paranoid_instructions: "Əgər, hesabınız varsa, bir neçə dəqiqəyə onun kilidini
-        necə açacağınız barədə bir e-məktub alacaqsınız."
+      send_paranoid_instructions: Əgər, hesabınız varsa, bir neçə dəqiqəyə onun kilidini
+        necə açacağınız barədə bir e-məktub alacaqsınız.
       unlocked: Sizin hesabınızın kilidi müvəffəqiyyət ilə açılmışdır. Davam etmək
         üçün hesabınıza daxil olun.
   errors:
     messages:
       already_confirmed: artıq təsdiqlənmişdir, xahiş edirik hesabınıza daxil olmağa
         çalışın
-      confirmation_period_expired: "%{period} ərzində təsdiqlənməlidir, xahiş edirik
-        yeni sorğu göndərəsiniz"
+      confirmation_period_expired: '%{period} ərzində təsdiqlənməlidir, xahiş edirik
+        yeni sorğu göndərəsiniz'
       expired: istifadə müddəti bitmişdir, xahiş edirik yeni sorğu göndərəsiniz
       not_found: tapılmadı
       not_locked: Kilidlənməmişdi
       not_saved:
         one: '1 səhv bu %{resource} -in yadda saxlanılmasına qadağa qoymuşdur:'
-        other: "%{count} səhv bu %{resource} -in yadda saxlanılmasına qadağan qoymuşdur:"
+        other: '%{count} səhv bu %{resource} -in yadda saxlanılmasına qadağan qoymuşdur:'

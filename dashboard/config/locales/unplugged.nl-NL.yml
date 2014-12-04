@@ -274,20 +274,20 @@
           verder door te tonen hoe een computer nog meer complexe informatie (zoals
           afbeeldingen en kleuren) kan opslaan in binair.
       VideoGamesCoordinatePlanes:
-        title: Video Games and Coordinate Planes
-        desc: Video Games and Coordinate Planes lesson description
+        title: Video games en coördinatenstelsels
+        desc: Video games en coördinatenstelsels lesbeschrijving
       Contracts:
         title: Contracten
-        desc: Contracts unplugged lesson description
+        desc: Contracten lesbeschrijving
       DesignRecipe:
         title: Het ontwerp Recept
-        desc: Design Recipe lesson description
+        desc: Ontwerp recept lesbeschrijving
       Booleans:
         title: Booleans
-        desc: Booleans lesson description
+        desc: Booleans lesbeschrijving
       ConditionalsPiecewiseFunctions:
         title: Conditionele en stuksgewijze functies
-        desc: Conditionals and Piecewise Functions lesson description
+        desc: Voorwaardelijke instructies en stuksgewijse functies lesbeschrijving
       CollisionDetection:
-        title: Collision Detection
-        desc: Collision Detection lesson description
+        title: Botsingdetectie
+        desc: Botsingdetectie lesbeschrijving

@@ -21,7 +21,7 @@
     "use_contract_editor": "false",
     "ideal": "7",
     "embed": "false",
-    "callout_json": "[\r\n  {\"localization_key\": \"frozen_circle_function_with_parameter_circle\", \"element_id\": \"[block-id='1']\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"center left\", \"at\": \"bottom left\", \"adjust\": {\"x\": 0, \"y\":320}},\r\n    \"style\": { \"classes\": \"no-tip\" }}\r\n  }\r\n]",
+    "callout_json": "[\r\n  {\"localization_key\": \"frozen_circle_function_with_parameter_circle\", \"element_id\": \"#create_circle_qtip\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}}\r\n  }\r\n]",
     "disable_sharing": "false"
   }
 }]]></config>
@@ -49,7 +49,7 @@
           <title name="DIR">jumpForward</title>
           <title name="VALUE" config="50,100,150,200,300">100</title>
         </block>
-        <block type="create_a_circle_size" inline="false">
+        <block type="create_a_circle_size" inline="false" id="create_circle_qtip">
           <value name="VALUE">
             <block type="math_number_dropdown">
               <title name="NUM" config="1-10">???</title>

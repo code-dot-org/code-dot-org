@@ -115,11 +115,11 @@ az:
     subject: 'Sinifimizə qoşulun ("Code.org"da)'
     body: |
       "Code.org"dakı informatika dərslərinə qeydiyyatdan keçmək üçün aşağıdakı keçidi klikləyin (mən sizin "müəlliminiz" olacağam):
-
+      
       %{link}
-
+      
       Bu dərsliklər əyləncəli, baxımlıdır və sadə, göstərişlərlə müşayiət olunan, oyunabənzər tapşırıqlar vasitəsilə informatikanın əsas anlayışlarını öyrədir. Kod yazmağı Bill Qeyts, Mark Tsukerberq, "Angry Birds" və "Plants vs. Zombies"dən öyrənin! :-)
-
+      
       %{name}
   follower:
     invite_sent: Dəvətnamə göndərildi
@@ -221,7 +221,7 @@ az:
       logout: Çıxın
       signin: Daxil olun
       signup: Qeydiyyatdan keçin
-      already_registered: Already registered?
+      already_registered: Artıq qeydiyyatdan keçmisiniz?
     popup:
       progress: Sizin nəticələriniz
       lines: 'Yekun kod sətiri: %{lines}'
@@ -308,7 +308,7 @@ az:
     classroom_activity: Unplugged Activity
   home:
     title: Code Studio
-    all_courses: Overview of Courses 1, 2, and 3
+    all_courses: 1, 2 və 3-cü kursun icmalı
     lesson_plans: Dərs planları
     signin_message: 'Artıq qeydiyyatdan keçmisiniz? %{link}'
     student_reg_link: Şagird Qeydiyyatı
@@ -330,13 +330,14 @@ az:
     see_details: Təfərrüatına baxın
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to $1,000 in classroom rewards.'
     tryfirst: 'Or, you can try it first, and sign up later:'
-    trynow: Try now
+    trynow: Elə indi sınaqdan keçirin
     add_hint_help: Please help us to add smart hints to Code.org tutorials
     20hour_overview: Bu 20 saatlıq kurs informatikanın əsasları və proqramlaşdırmanın əsas anlayışlarını təqdim edir. Kurs K-8 yaş qrupunda (12-13 yaşlılar) olan siniflərdə istifadə olunmaq üçün hazırlanıb, lakin öyrənmək hər yaşda əyləncəlidir.
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Saytı müəllim olaraq istifadə edin
-    heading_elementary: '<h2>20 hour courses for</h2><h1>Elementary Students</h1>'
+    heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
+    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
     heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
     your_gallery: Gallery
@@ -350,6 +351,7 @@ az:
   footer:
     help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
+    powered_by_aws: Powered by Amazon Web Services
     feedback: Rəy verin
     translate: Sizin dilinizə tərcümə etməkdə bizə kömək edin
     support: Dəstək
@@ -413,7 +415,7 @@ az:
   upsell:
     hoc:
       title: Kod Saatı
-      body: Try the basics of computer science. Millions have given it a shot.
+      body: İnformatikanın əsaslarını öyrənməyə cəhd edin. Milyonlarla insan artıq bu fürsətdən istifadə edib.
     flappy:
       title: Flappy Code
       body: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
@@ -426,6 +428,8 @@ az:
     gallery:
       title: Gallery
       body: View a gallery of app and artist images created by our users
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: Students made these with code!

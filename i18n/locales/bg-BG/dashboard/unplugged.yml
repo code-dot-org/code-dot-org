@@ -165,20 +165,20 @@ bg:
         title: Бинарни образи(картини)
         desc: 'Въпреки че много хора мислят за бинарния код като за нули и единици, в нашите предишни курсове учениците научиха, че информацията може да бъде представена в различни варианти.  Този урок развива тази концепция с една стъпка напред, тъй като илюстрира как  компютърът може да съхранява още по-сложна информация (като изображения и цветове) с двоичен код.'
       VideoGamesCoordinatePlanes:
-        title: Video Games and Coordinate Planes
-        desc: Video Games and Coordinate Planes lesson description
+        title: Видео игрите и координатните системи
+        desc: 'Видео игрите и координатните системи- описание на урока'
       Contracts:
         title: Договори
-        desc: Contracts unplugged lesson description
+        desc: 'Договори - описание на ънплъгд урока'
       DesignRecipe:
         title: Рецепта за дизайн
-        desc: Design Recipe lesson description
+        desc: 'Рецепта за дизайн- описание на урок'
       Booleans:
         title: Booleans
-        desc: Booleans lesson description
+        desc: 'Booleans - описание на урока'
       ConditionalsPiecewiseFunctions:
         title: Условни и линейни функции
-        desc: Conditionals and Piecewise Functions lesson description
+        desc: 'Условия и Piecewise функции - описание на урока'
       CollisionDetection:
         title: Collision Detection
-        desc: Collision Detection lesson description
+        desc: 'Collision Detection - описание на урока'

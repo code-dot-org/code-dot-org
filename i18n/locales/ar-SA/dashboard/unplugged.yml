@@ -126,7 +126,7 @@ ar:
         desc: Students use the steps of computational thinking (decompose, pattern match, abstract, algorithm) to figure out how to play a game that comes with no instructions.
         video: C3_computational_thinking
       FunctionalSuncatchers:
-        title: Functional Suncatchers
+        title: سونكاتشيرس الوظيفية
         desc: Students create an algorithm with variables and functions (pieces of code that you want to use over and over again) to create suncatchers using string and beads.
         video: C3_functional_suncatchers
       SongwritingParameters:
@@ -146,7 +146,7 @@ ar:
         desc: Students use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone.
         video: C3_crowdsourcing
       DigitalCitizenship:
-        title: Digital Citizenship
+        title: المواطنة الرقمية
         desc: Students explore the difference between private information and personal information, distinguishing what is safe and unsafe to share online.
       TangramAlgorithms:
         title: Tangram Algorithms
@@ -170,16 +170,16 @@ ar:
         title: Video Games and Coordinate Planes
         desc: Video Games and Coordinate Planes lesson description
       Contracts:
-        title: Contracts
+        title: العقود
         desc: Contracts unplugged lesson description
       DesignRecipe:
-        title: The Design Recipe
+        title: وصفه التصميم
         desc: Design Recipe lesson description
       Booleans:
-        title: Booleans
+        title: القيم المنطقية
         desc: Booleans lesson description
       ConditionalsPiecewiseFunctions:
-        title: Conditionals and Piecewise Functions
+        title: الجمل الشرطية ووظائف Piecewise
         desc: Conditionals and Piecewise Functions lesson description
       CollisionDetection:
         title: Collision Detection

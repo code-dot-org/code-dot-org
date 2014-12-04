@@ -2,7 +2,7 @@
   activerecord:
     errors:
       messages:
-        blank: "è un dato obbligatorio"
+        blank: è un dato obbligatorio
     attributes:
       user:
         name: Nome da visualizzare
@@ -140,12 +140,12 @@
       Angry Birds e Plants vs Zombies! :-) \n\n%{name}\n"
   follower:
     invite_sent: Invito spedito
-    added_teacher: "%{name} è stato aggiunto come tuo insegnante"
+    added_teacher: '%{name} è stato aggiunto come tuo insegnante'
     registered: Ti sei iscritto alla classe %{section_name}.
     error:
       signed_in: Per favore esci prima di procedere
       username_not_found: Nome utente %{username} non trovato
-      username_in_use: "%{username} è già stato preso, per favore scegline un'altro"
+      username_in_use: '%{username} è già stato preso, per favore scegline un''altro'
       no_teacher: Non è stato trovato alcun insegnante con %{teacher_email_or_code}.
         Per favore chiedigli di iscriversi qui e poi prova ad aggiungerlo nuovamente
       section_not_found: Impossibile trovare una classe con il codice-classe '%{section_code}'.
@@ -192,7 +192,7 @@
         degli Stati Uniti.
       msg_visit_website: Visita il sito
     providers:
-      apple_itunes: "$10 Carta Regalo iTunes"
+      apple_itunes: $10 Carta Regalo iTunes
       donors_choose: Buono di $750 di DonorsChoose.org
       donors_choose_bonus: Buono di $250 di DonorsChoose.org
       dropbox: 10GB di spazio su Dropbox
@@ -255,9 +255,9 @@
     destroy: Elimina
     back: Indietro
     confirm: Sei sicuro?
-    created: "%{model} è stato creato correttamente."
-    updated: "%{model} è stato aggiornato correttamente."
-    destroyed: "%{model} è stato eliminato correttamente."
+    created: '%{model} è stato creato correttamente.'
+    updated: '%{model} è stato aggiornato correttamente.'
+    destroyed: '%{model} è stato eliminato correttamente.'
     access_denied: Non hai accesso a questo %{model}.
   nav:
     header:
@@ -284,13 +284,13 @@
       puzzle_map: Fasi
       prizes: Ottieni tutti i %{total_trophies} trofei e vinci premi!
       prize_earned: Hai ottenuto tutti i %{total_trophies} trofei. Hai vinto il premio!
-      prize_us_only: "(Solo per gli studenti degli Stati Uniti)"
+      prize_us_only: (Solo per gli studenti degli Stati Uniti)
       prizes_link: Più informazioni
   teacher:
     title:
       one: 'Il tuo insegnante:'
       other: 'I tuoi insegnanti:'
-    remove: "(rimuovi insegnante)"
+    remove: (rimuovi insegnante)
     confirm:
       remove: Sei sicuro di voler rimuovere questo insegnante?
     tools: Strumenti dell'insegnante
@@ -347,18 +347,18 @@
     rollup: Cruscotto di avanzamento
     activity: Attività recenti della classe
     user_not_found: L'insegnante o lo studente non è stato trovato
-    cant_remove_student_no_email: "%{student_name} non può essere rimosso come tuo
+    cant_remove_student_no_email: '%{student_name} non può essere rimosso come tuo
       studente perché %{student_name} non si è iscritto con un indirizzo di posta
-      elettronica"
-    cant_remove_teacher_no_email: "%{teacher_name} non può essere rimosso come tuo
-      insegnante perché non si è iscritto con un indirizzo di posta elettronica"
-    student_teacher_disassociated: "%{teacher_name} è stato rimosso come insegnante
-      per %{student_name}"
+      elettronica'
+    cant_remove_teacher_no_email: '%{teacher_name} non può essere rimosso come tuo
+      insegnante perché non si è iscritto con un indirizzo di posta elettronica'
+    student_teacher_disassociated: '%{teacher_name} è stato rimosso come insegnante
+      per %{student_name}'
   user:
     email_confirm_needed: 'L''indirizzo di posta elettronica non è stato confermato:'
     email_resend_confirm: Reinvia le istruzioni di conferma
-    new_password_hint: "(lascialo vuoto se non vuoi cambiarlo)"
-    current_password_hint: "(inserisci la tua password corrente per confermare i cambiamenti)"
+    new_password_hint: (lascialo vuoto se non vuoi cambiarlo)
+    current_password_hint: (inserisci la tua password corrente per confermare i cambiamenti)
     cancel:
       title: Cancella il mio account
       hint: Deluso?
@@ -412,10 +412,11 @@
     try_beta_courses: Novità! Prova i nostri corsi specifici per studenti delle scuole
       elementari (in versione provvisoria)
     use_as_teacher: Guarda questo sito come insegnante
-    heading_elementary: "<h2>Corsi in 20 lezioni per</h2><h1>studenti delle elementari</h1>"
-    heading_apps: "<h2>Divertimento per</h2><h1>tutti</h1>"
-    heading_legacy: "<h2>Il nostro Corso Introduttivo per </h2><h1>utenti di tutte
-      le età</h1>"
+    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
+    heading_elementary: <h2>Corsi in 20 lezioni per</h2><h1>studenti delle elementari</h1>
+    heading_apps: <h2>Divertimento per</h2><h1>tutti</h1>
+    heading_legacy: <h2>Il nostro Corso Introduttivo per </h2><h1>utenti di tutte
+      le età</h1>
     your_gallery: La tua collezione
   gender:
     male: Maschile
@@ -430,6 +431,7 @@
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
       Tutti i diritti riservati.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
       Arts Inc. Tutti i diritti riservati.
+    powered_by_aws: Powered by Amazon Web Services
     feedback: Facci sapere che ne pensi
     translate: Aiutaci a tradurre nella tua lingua
     support: Supporto
@@ -483,7 +485,7 @@
     bounce_og_title: Prova la mia versione del gioco Rimbalzo
     flappy_og_title: Prova la mia versione del gioco Flappy
     studio_og_title: Prova la mia versione del Gioco da Laboratorio
-    check_out_what_i_made: Check out what I made
+    check_out_what_i_made: Verifica che cosa ho fatto
     og_description: Ho scritto il codice per conto mio con Code.org
     phone_number_not_allowed: Sembra che ci sia un numero di telefono nel codice.
       Prova a cambiare il testo.
@@ -517,11 +519,13 @@
       title: Corso Introduttivo
       body: Prova il nostro corso introduttivo di informatica in 20 lezioni.
     hoc2014:
-      try_new_tutorial: Try our new Hour of Code tutorial in beta
-      try_frozen: Artist with Anna and Elsa, from Frozen
+      try_new_tutorial: Prova il nuovo tutorial dell'Ora del Codice in versione beta
+      try_frozen: Artista con Anna ed Elsa, da Frozen
     gallery:
       title: La tua collezione
-      body: View a gallery of app and artist images created by our users
+      body: Guarda una galleria di app e immagini artistiche create dai nostri utenti
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: Gli studenti li hanno disegnati con dei programmi!
     students_made_these_with_code: Gli studenti l'hanno creato scrivendo del codice!
@@ -534,7 +538,7 @@
     want_to_make_your_own: Vuoi farne uno tuo?
     more: Di più &rarr;
     caption_by_name_age: da %{name}, età %{age}
-    caption_time_ago: "%{time_ago} fa"
+    caption_time_ago: '%{time_ago} fa'
     header: La tua collezione
     header_playlab: Laboratorio
     header_artist: Artista
@@ -542,12 +546,12 @@
     prerelease: Questo corso è in <span class='betatext'>versione provvisoria</span>.  Significa
       che non è la versione finale ed è soggetto a revisioni man mano che arriveranno
       osservazioni e saranno fatti miglioramenti.
-    prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
-      is subject to revision as feedback is received and improvements are made.
+    prerelease_hoc2014: Questo tutorial è in <span class='betatext'>versione beta</span>.
+      È soggetto a revisione quando si ricevono feedback in modo da migliorarlo.
     feedback: Dicci che ne pensi
     report_bug: Segnala un errore
     support: Ottieni aiuto
-    support_url: "//programmailfuturo.it/aiuto"
+    support_url: //programmailfuturo.it/aiuto
   multi:
     wrong_title: Risposta non corretta
     wrong_body: La risposta che hai inserito non è corretta.  Per favore riprova!

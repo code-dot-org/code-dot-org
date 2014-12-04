@@ -22,9 +22,9 @@
   "repeatForeverTooltip":"A műveletek ismételt végrehajtása ebben a blokkban amíg az app fut.",
   "shareWebappTwitter":"Nézd meg az appot amit csináltam. Magam írtam a code.org felületén",
   "shareGame":"App megosztása:",
-  "stepIn":"Step in",
-  "stepOver":"Step over",
-  "stepOut":"Step out",
+  "stepIn":"Belépés",
+  "stepOver":"Átlépés",
+  "stepOut":"Kilépés",
   "turnBlack":"elsötétít",
   "turnBlackTooltip":"Elsötétíti a képernyőt.",
   "yes":"Igen"

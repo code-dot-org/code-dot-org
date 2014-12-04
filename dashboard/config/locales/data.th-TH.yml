@@ -3,147 +3,147 @@
     script:
       name:
         20-hour:
-          desc: "บทนำ K 8 หลักสูตรวิทยาศาสตร์คอมพิวเตอร์"
-          Unplug1: "ขั้นตอนที่ 1"
-          Maze: "ขั้นตอนที่ 2"
-          Unplug2: "ขั้นตอนที่ 3"
-          Unplug3: "ขั้นตอนที่ 4"
-          Artist: "ขั้นตอนที่ 5"
-          Unplug4: "ขั้นตอนที่ 6"
-          Artist2: "ขั้นตอนที่ 7"
-          Unplug5: "ขั้นตอนที่ 8"
-          Farmer: "ขั้นตอนที่ 9"
-          Unplug6: "ขั้นตอนที่ 10"
-          Artist3: "ขั้นตอนที่ 11"
-          Unplug7: "ขั้นตอนที่ 12"
-          Farmer2: "ขั้นตอนที่ 13"
-          Unplug8: "ขั้นตอนที่ 14"
-          Artist4: "ขั้นตอนที่ 15"
-          Unplug9: "ขั้นตอนที่ 16"
-          Farmer3: "ขั้นตอนที่ 17"
-          Unplug10: "ขั้นตอนที่ 18"
-          Artist5: "ขั้นตอนที่ 19"
-          Unplug11: "ขั้นตอนที่ 20"
+          desc: บทนำ K 8 หลักสูตรวิทยาศาสตร์คอมพิวเตอร์
+          Unplug1: ขั้นตอนที่ 1
+          Maze: ขั้นตอนที่ 2
+          Unplug2: ขั้นตอนที่ 3
+          Unplug3: ขั้นตอนที่ 4
+          Artist: ขั้นตอนที่ 5
+          Unplug4: ขั้นตอนที่ 6
+          Artist2: ขั้นตอนที่ 7
+          Unplug5: ขั้นตอนที่ 8
+          Farmer: ขั้นตอนที่ 9
+          Unplug6: ขั้นตอนที่ 10
+          Artist3: ขั้นตอนที่ 11
+          Unplug7: ขั้นตอนที่ 12
+          Farmer2: ขั้นตอนที่ 13
+          Unplug8: ขั้นตอนที่ 14
+          Artist4: ขั้นตอนที่ 15
+          Unplug9: ขั้นตอนที่ 16
+          Farmer3: ขั้นตอนที่ 17
+          Unplug10: ขั้นตอนที่ 18
+          Artist5: ขั้นตอนที่ 19
+          Unplug11: ขั้นตอนที่ 20
         Hour of Code:
-          desc: "ช่วงเวลาของ Code"
-          Maze: "ขั้นตอนที่ 1"
+          desc: ช่วงเวลาของ Code
+          Maze: ขั้นตอนที่ 1
         Edit Code:
-          desc: "แก้ไข Code"
-          MazeEC: "ขั้นตอนที่ 1"
+          desc: แก้ไข Code
+          MazeEC: ขั้นตอนที่ 1
         2014 Levels:
           desc: 2014 Puzzles (beta)
-          Bounce: "ขั้นตอนที่ 1"
+          Bounce: ขั้นตอนที่ 1
         Builder Levels:
           desc: User-Created Puzzles (beta)
-          Custom: "ขั้นตอนที่ 1"
+          Custom: ขั้นตอนที่ 1
         Flappy Levels:
           desc: Flappy Bird
-          Flappy: "ขั้นตอนที่ 1"
+          Flappy: ขั้นตอนที่ 1
         Jigsaw Levels:
           desc: Jigsaw (beta)
-          Jigsaw: "ขั้นตอนที่ 1"
+          Jigsaw: ขั้นตอนที่ 1
         Step Levels:
           desc: Maze (beta)
           MazeStep: Stage Step
         edit-code:
           desc: Edit Code (beta)
-          MazeEC: "ขั้นตอนที่ 1"
-          Webapp: "ขั้นตอนที่ 2"
-          ArtistEC: "ขั้นตอนที่ 3"
-          StudioEC: "ขั้นตอนที่ 4"
+          MazeEC: ขั้นตอนที่ 1
+          Webapp: ขั้นตอนที่ 2
+          ArtistEC: ขั้นตอนที่ 3
+          StudioEC: ขั้นตอนที่ 4
         events:
           desc: Bounce (beta)
-          Bounce: "ขั้นตอนที่ 1"
-          Studio: "ขั้นตอนที่ 2"
+          Bounce: ขั้นตอนที่ 1
+          Studio: ขั้นตอนที่ 2
         builder:
           desc: User-Created Puzzles (beta)
-          Custom: "ขั้นตอนที่ 1"
+          Custom: ขั้นตอนที่ 1
         flappy:
           desc: Flappy Bird
-          Flappy: "ขั้นตอนที่ 1"
+          Flappy: ขั้นตอนที่ 1
         jigsaw:
           desc: Jigsaw (beta)
-          Jigsaw: "ขั้นตอนที่ 1"
+          Jigsaw: ขั้นตอนที่ 1
         step:
           desc: Maze (beta)
           MazeStep: Stage Step
         wordsearch:
           desc: Spelling Bee (beta)
-          WordSearch: "ขั้นตอนที่ 1"
+          WordSearch: ขั้นตอนที่ 1
     game:
       name:
-        Unplug1: "แนะนำวิทยาการคอมพิวเตอร์เบื้องต้น"
-        Maze: "เขาวงกต"
+        Unplug1: แนะนำวิทยาการคอมพิวเตอร์เบื้องต้น
+        Maze: เขาวงกต
         Multi: Multiple Choice Stuffs
-        Unplug2: "คิดคำนวณ"
-        Unplug3: "การเขียนกระดาษกราฟ"
-        Artist: "ศิลปิน"
-        Unplug4: "อัลกอริทึม"
-        Artist2: "ศิลปิน 2"
-        Unplug5: "ฟังก์ชัน"
-        Farmer: "ชาวนา"
-        Unplug6: "เงื่อนไข "
-        Artist3: "ศิลปิน 3"
-        Unplug7: "การแต่งเพลง"
-        Farmer2: "ชาวนา 2"
+        Unplug2: คิดคำนวณ
+        Unplug3: การเขียนกระดาษกราฟ
+        Artist: ศิลปิน
+        Unplug4: อัลกอริทึม
+        Artist2: ศิลปิน 2
+        Unplug5: ฟังก์ชัน
+        Farmer: ชาวนา
+        Unplug6: 'เงื่อนไข '
+        Artist3: ศิลปิน 3
+        Unplug7: การแต่งเพลง
+        Farmer2: ชาวนา 2
         Unplug8: Abstraction
-        Artist4: "ศิลปิน 4"
-        Unplug9: "โปรแกรมการถ่ายทอดข้อมูล"
-        Farmer3: "ชาวนา 3"
-        Unplug10: "อินเทอร์เน็ต"
-        Artist5: "ศิลปิน 5"
+        Artist4: ศิลปิน 4
+        Unplug9: โปรแกรมการถ่ายทอดข้อมูล
+        Farmer3: ชาวนา 3
+        Unplug10: อินเทอร์เน็ต
+        Artist5: ศิลปิน 5
         Unplug11: Wrap-up
-        MazeEC: "เขาวงกต"
+        MazeEC: เขาวงกต
         Bounce: Bounce
         Flappy: Flappy Bird
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
         Webapp: Webapp
-        ArtistEC: "ศิลปิน"
+        ArtistEC: ศิลปิน
         TextMatch: Text Match
         StudioEC: Play Lab
     trophy:
       name:
-        Bronze: "ทองแดง"
-        Silver: "เงิน"
-        Gold: "ทอง"
+        Bronze: ทองแดง
+        Silver: เงิน
+        Gold: ทอง
     concept:
       description:
-        sequence: "ลำดับ"
+        sequence: ลำดับ
         if: If บล็อก
         if_else: If บล็อกในกรณีอื่น
-        loop_times: "ทำซ้ำช่วงเวลา"
-        loop_until: "ทำซ้ำจนถึงบล็อก"
-        loop_while: "ขณะที่บล็อก"
-        loop_for: "บล็อกนับ"
-        function: "ฟังก์ชัน"
-        parameters: "ฟังก์ชันกับพารามิเตอร์"
+        loop_times: ทำซ้ำช่วงเวลา
+        loop_until: ทำซ้ำจนถึงบล็อก
+        loop_while: ขณะที่บล็อก
+        loop_for: บล็อกนับ
+        function: ฟังก์ชัน
+        parameters: ฟังก์ชันกับพารามิเตอร์
     level:
       instructions:
         maze_2_2: คุณสามารถช่วยฉันจับหมูที่ซุกซนได้ไหม? จับคู่ของบล็อกย้ายไปข้างหน้าด้วยกัน
           และกด "Run Program" เพื่อช่วยให้ฉันถึงที่หมาย.
-        maze_2_1: "หมูนี้ทำให้ขนของฉันยุ่ง. ช่วยฉันตามหาเขา!"
-        maze_2_2_5: "ติดตามเส้นทาง และนำฉันไปหาเจ้าหมูบ้า หลีกเลี่ยงระเบิด หรือขนนกจะปลิว!"
-        maze_2_3: "นำฉันไป green evilness! (ระวังระเบิด)"
-        maze_2_4: "รักษาความสงบ และช่วยฉันหาหมูนิสัยไม่ดี มิฉะนั้นฉันอาจถูกโกรธ!"
-        maze_2_5: "มีทางที่ฉันสามารถไปถึงหมูบ้าโดยใช้เพียง 2 บล็อก คุณคิดออกไหม?"
-        maze_2_6: "นำฉันไปที่พื้นที่สีเขียวโดยใช้โค้ดแค่สามบล็อก"
+        maze_2_1: หมูนี้ทำให้ขนของฉันยุ่ง. ช่วยฉันตามหาเขา!
+        maze_2_2_5: ติดตามเส้นทาง และนำฉันไปหาเจ้าหมูบ้า หลีกเลี่ยงระเบิด หรือขนนกจะปลิว!
+        maze_2_3: นำฉันไป green evilness! (ระวังระเบิด)
+        maze_2_4: รักษาความสงบ และช่วยฉันหาหมูนิสัยไม่ดี มิฉะนั้นฉันอาจถูกโกรธ!
+        maze_2_5: มีทางที่ฉันสามารถไปถึงหมูบ้าโดยใช้เพียง 2 บล็อก คุณคิดออกไหม?
+        maze_2_6: นำฉันไปที่พื้นที่สีเขียวโดยใช้โค้ดแค่สามบล็อก
         maze_2_7: ช่วยฉันไล่หมูออกไป โดยใช้บล็อกโค้ดให้น้อยที่สุด. ลองใช้บล็อก "ทำซ้ำ
           (repeat times)" ให้มากกว่าหนึ่งบล็อก
         maze_2_8: 'แก้ไขปัญหานี้ได้โดยลองใช้ บล็อก "ทำซ้ำ (repeat)" แล้วใส่บล็อก "เคลื่อนที่"
           "เคลื่อนที่" "หัน..." เข้าไป.  '
         maze_2_9: เอาหล่ะ ลองใช้บล็อกอันใหม่ "ทำซ้ำจนกระทั่ง" สิ- มันจะทำซ้ำจนกว่าฉันจะไปถึงตัวหมูหล่ะ
-        maze_2_10: "การทดสอบครั้งสุดท้ายแล้ว คุณสามารถแก้ไขปัญหานี้โดยใช้โค้ดแค่สี่บล็อกได้ไหมนะ"
-        maze_2_11: "ถึงคุณ, ฉัน ซอมบี้, ฉันหิว ฉันต้องการดอกทานตะวัน คุณพาฉันไปหาดอกทานตะวันโดยใช้โค้ดแค่ห้าบล็อกได้ไหม?"
-        maze_2_12: "เอาหล่ะ นี่แตกต่างจากด่านที่แล้วนิดหน่อย คุณใช้แค่ห้าบล็อกได้ไหม?"
+        maze_2_10: การทดสอบครั้งสุดท้ายแล้ว คุณสามารถแก้ไขปัญหานี้โดยใช้โค้ดแค่สี่บล็อกได้ไหมนะ
+        maze_2_11: ถึงคุณ, ฉัน ซอมบี้, ฉันหิว ฉันต้องการดอกทานตะวัน คุณพาฉันไปหาดอกทานตะวันโดยใช้โค้ดแค่ห้าบล็อกได้ไหม?
+        maze_2_12: เอาหล่ะ นี่แตกต่างจากด่านที่แล้วนิดหน่อย คุณใช้แค่ห้าบล็อกได้ไหม?
         maze_2_13: |
           ใช้บล็อก "ถ้า" เพื่อให้ฉันตัดสินใจเมื่อจะหัน
           คำแนะนำ: ที่จริงคุณต้องการเพียงหนึ่งบล็อกเท่านั้น แต่เราให้คุณเรียนรู้ว่าเราจัดบล็อกอย่างไร  เพื่อที่คุณจะได้ทำเป็นด้วยตนเองในครั้งหน้า
         maze_2_14: นี่เป็นด่านสุดท้ายแล้วนะ แต่คุณต้องไม่ลืมวิธีการใช้บล็อก "ถ้า"
           และบล็อก "ทำซ้ำ" เข้าด้วยกัน
         maze_2_15: ฉันต้องการดอกทานตะวัน! ใช้บล็อก "ถ้า" เพื่อนำฉันไปที่นั่น และใช้บล็อกให้น้อยที่สุด
-        maze_2_16: "เอาหล่ะ ลองทำการทดสอบนี่อีกครั้ง , ไม่ต่างจากครั้งที่แล้วมาก แต่ระวังตัวChompersไว้ให้ดีๆ!"
+        maze_2_16: เอาหล่ะ ลองทำการทดสอบนี่อีกครั้ง , ไม่ต่างจากครั้งที่แล้วมาก แต่ระวังตัวChompersไว้ให้ดีๆ!
         maze_2_17: บล็อก "If-else" ตรวจสอบเงื่อนไข และจากนั้น ทำอย่างใดอย่างหนึ่ง
           ลองใช้บล็อกใหม่นี้พาฉันไปยังดอกทานตะวัน
         maze_2_18: อีกหนึ่งแบบฝึกหัดของบล็อก "if-else" สามารถทำสำเร็จตั้งแต่ครั้งแรกเลยไหม?
@@ -153,12 +153,12 @@
           Use a few blocks to make me draw over the gray lines in the picture.
         turtle_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
           it in the new "set color" block.'
-        turtle_1_3: "สร้างสี่เหลี่ยมจตุรัสโดยใช้เพียง 3 บล็อก"
+        turtle_1_3: สร้างสี่เหลี่ยมจตุรัสโดยใช้เพียง 3 บล็อก
         turtle_1_4: 'Draw a triangle whose sides are all in different colors, using
           the "random color" option that picks a different color each time. Hint:
           you''ll have to figure out how far to turn by clicking on the number in
           the turn block.'
-        turtle_1_5: "แบบฝึกหัด วาดรูปสามเหลี่ยม จากนั้นสี่เหลี่ยมเพื่อให้เป็นรูปซองจดหมาย"
+        turtle_1_5: แบบฝึกหัด วาดรูปสามเหลี่ยม จากนั้นสี่เหลี่ยมเพื่อให้เป็นรูปซองจดหมาย
         turtle_1_6: 'Can you figure out how draw this triangle and square? Hint: Do
           the triangle first, then figure out how much to turn before drawing the
           square.'
@@ -168,7 +168,7 @@
         turtle_1_8: Ok, try to figure out what happens if you run this code (or press
           "Run" to try it). Then, repeat it enough times to complete the drawing.
           The colors will be different every time.
-        turtle_1_9: "คิดออกไหมว่าต้องใส่เลขอะไรลงไปแทนเครื่องหมาย ? เพื่อที่จะวาดวงกลม?"
+        turtle_1_9: คิดออกไหมว่าต้องใส่เลขอะไรลงไปแทนเครื่องหมาย ? เพื่อที่จะวาดวงกลม?
         turtle_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a
           stick figure, snowflake, or spiral. Also try the new "set width" block.
           Have fun!'
@@ -524,27 +524,146 @@
           Have fun!'
         studio_ec_sandbox: Create your own game. When you're done, click Finish to
           let friends try your game on their phones.
+    levelbuilder:
+      frozen line:
+        instructions: Hi! I'm Elsa of Arendelle. Help me create a single line.
+      frozen perpendicular:
+        instructions: Now let's see if we can create two lines that are at a 90 degree
+          angle to each other. You will need to use the "Turn" block as well as the
+          "Move" block.
+      frozen square iterative:
+        instructions: It seems like we're halfway to making a square. Let's put 4
+          lines together to create a square.
+      frozen square loop:
+        instructions: Hi, I'm Anna of Arendelle! Let's make a square with the "Repeat"
+          block, which uses fewer blocks. How many times (???) should the "Repeat"
+          block loop the blocks inside it to make a square?
+      frozen square loop 3x:
+        instructions: Let's create three squares, turning after each square. Be sure
+          to turn by 120 degrees before each new square.
+      frozen square snowflake:
+        instructions: Can you create a snowflake using the "Repeat" block to make
+          a square 10 times, and the "Turn" block to turn 36 degrees between each
+          square?
+      frozen cross:
+        instructions: Use the "Repeat" block to create a plus sign. Did you notice
+          Elsa can move forward and backward?
+      frozen cross rotate:
+        instructions: Now try repeating it 10 times. How many degrees do you need
+          to turn between each line?
+      frozen cross rotate dense:
+        instructions: 'Let''s repeat it 90 times! How many times does 90 go into 360?
+          Hint: It''s a really small number.'
+      frozen diamond:
+        instructions: 'Let''s create a parallelogram. It''s just like a square but
+          has different angles: 60 and 120 degree angles instead of 90 degree angles.'
+      frozen diamond mini snowflake:
+        instructions: Did you know every snowflake is a different shape? Let's create
+          a new snowflake by using the "Repeat" block to repeat a parallelogram 4
+          times, turning right by 90 degrees between each parallelogram.
+      frozen diamond snowflake:
+        instructions: Now, let's create a new snowflake by using the repeat block
+          to repeat a parallelogram 10 times, turning right by 36 degrees between
+          each one.
+      frozen circle:
+        instructions: A circle is a special shape. Can you figure out what number
+          to replace the question marks with to draw a circle?
+      frozen circle function:
+        instructions: Use the new "Create a circle" block to create 10 overlapping
+          circles. Don't forget to jump forward between circles.
+      frozen circle function in circle:
+        instructions: Now let's create 20 overlapping circles, turning 18 degrees
+          between each circle.
+      frozen circle function with parameter:
+        instructions: Here's a "Create circle" block that can make circles of different
+          sizes. Can you use this to create a small circle of size 5 and a larger
+          circle of size 10?
+      frozen snowflower:
+        instructions: Intricate snow patterns can be created with very simple shapes.
+          Can you make a pattern by repeating 5 circles of size 5 and 5 circles of
+          size 10?
+      frozen snowflake branch:
+        instructions: Try using the "Create a snowflake branch" block to create three
+          branches, which starts to look like a snowflake.
+      frozen snowflake full:
+        instructions: Now let's repeat it 8 times to make a beautiful snowflake!
+      frozen freeplay:
+        instructions: You've officially become a master artist! Create a winter wonderland.
+      scrat 16:
+        instructions: Acorn! Acorn! Acorn! Use an "if" block to get me there with
+          the fewest number of blocks.
+      scrat 17:
+        instructions: Ok, let's do that again for practice - this isn't very different,
+          but watch out for the wall!
+      scrat 18:
+        instructions: The "If-else" blocks checks a condition, and then does one thing
+          OR another. To get me to the acorn try to use this new block.
+      scrat 19:
+        instructions: อีกหนึ่งแบบฝึกหัดของบล็อก "if-else" สามารถทำสำเร็จตั้งแต่ครั้งแรกเลยไหม?
+      scrat 20:
+        instructions: Can you add just 3 blocks to help me solve a more complex maze?
+          If you do it right, I can walk any curvy path no matter the length. Hurry!
+          The ice is melting!
+      Standalone_Artist_1:
+        instructions: Welcome to Artist! First off, let's try to make a simple square
+          using the turn right block and move forward block. Each side should be 100
+          pixels long.
+      Standalone_Artist_2:
+        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel
+          long sides.
+      Standalone_Artist_3:
+        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree
+          turns?
+      Standalone_Artist_4:
+        instructions: Now you've got a new block to play with, the loop. This will
+          repeat a set of commands. What happens if you loop these commands 6 times?
+      Standalone_Artist_5:
+        instructions: How many times do you need to loop this diamond to draw the
+          flower?
+      Standalone_Artist_5.5:
+        instructions: 'Notice how we simplified the diamond code by turning it into
+          a loop. You can loop that whole sequence 12 times to draw the flower. Hint:
+          You''ll need to turn 30 degrees after your diamond loop so you don''t keep
+          drawing over the same diamond.'
+      Standalone_Artist_6:
+        instructions: 'Loop this hexagon code 6 times to create the design. How many
+          degrees will you need to turn each time? Hint: divide the number of degrees
+          in a circle by the number of times you are looping.'
+      Standalone_Artist_7:
+        instructions: 'A function is another programming tool to help you avoid repeating
+          yourself. This function draws a flower, so you can use it any time you want
+          to draw a flower. Use this and the new jump block to draw these flowers.
+          Hint: The flowers are 150 pixels apart'
+      Standalone_Artist_8:
+        instructions: Here's a function called "Draw a shape" that we've programmed
+          to draw hexagons. Run the code to see what it does and then experiment with
+          the function to see what happens. Can you make it draw a pattern of squares,
+          triangles, or octagons?
+      Standalone_Artist_9:
+        instructions: Now go ahead and make whatever picture you'd like! You've even
+          got an empty function that you can make do whatever you want!
     video:
       name:
-        maze_intro: "บทนำเขาวงกต"
-        artist_intro: "แนะนำศิลปิน"
+        maze_intro: บทนำเขาวงกต
+        artist_intro: แนะนำศิลปิน
         farmer_intro: Farmer Intro
         flappy_intro: Flappy Intro
-        loop_times: "ทำซ้ำช่วงเวลา"
-        loop_until: "ทำซ้ำจนถึงบล็อก"
+        loop_times: ทำซ้ำช่วงเวลา
+        loop_until: ทำซ้ำจนถึงบล็อก
         if: If บล็อก
         if_else: If/else บล็อก
-        function: "ฟังก์ชัน"
-        loop_while: "ขณะที่บล็อก"
-        loop_for: "บล็อกนับ"
-        parameters: "ฟังก์ชันกับพารามิเตอร์"
-        hoc_wrapup: "ชั่วโมงของรหัส Wrapup"
+        if_else_scrat: If/else บล็อก
+        function: ฟังก์ชัน
+        loop_while: ขณะที่บล็อก
+        loop_for: บล็อกนับ
+        parameters: ฟังก์ชันกับพารามิเตอร์
+        hoc_wrapup: ชั่วโมงของรหัส Wrapup
         Unplug1: What is CS?
-        Unplug2: "คิดคำนวณ"
-        Unplug3: "การเขียนกระดาษกราฟ"
-        Unplug4: "อัลกอริทึม"
-        Unplug5: "ฟังก์ชัน"
-        Unplug6: "เงื่อนไข "
+        Unplug2: คิดคำนวณ
+        Unplug3: การเขียนกระดาษกราฟ
+        Unplug4: อัลกอริทึม
+        Unplug5: ฟังก์ชัน
+        Unplug6: 'เงื่อนไข '
         Unplug7: Songwriting
         Unplug8: Abstraction
         Unplug9: Relay programming
@@ -558,7 +677,7 @@
         C1_maze_intro_sequencing: Maze Sequencing Intro
         C1_maze_debugging: Maze Debugging
         C1_bee_level_intro: Bee Level - Intro
-        C1_artist_intro: "แนะนำศิลปิน"
+        C1_artist_intro: แนะนำศิลปิน
         C1_spelling_bee_intro: Spelling Bee Intro
         C1_zuck_repeat_loop: Maze Loops
         C1_bee_loops: Bee Loops
@@ -566,8 +685,9 @@
         C1_playlab_storytelling: Play Lab - Create a Story
         C1_planting_seed: Planting a Seed
         C1_building_foundation: Building a Foundation
-        C2_maze_intro: "บทนำเขาวงกต"
-        C2_artist_intro: "แนะนำศิลปิน"
+        C1_going_places_safely: Going Places Safely
+        C2_maze_intro: บทนำเขาวงกต
+        C2_artist_intro: แนะนำศิลปิน
         C2_zuck_repeat_loop: Maze Loops
         C2_artist_loops: Artist Loops
         C2_artist_debugging: Artist Debugging
@@ -575,13 +695,14 @@
         C2_bee_debugging: Bee Debugging
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: Play Lab - Create a Story
-        C2_graph_paper: "การเขียนกระดาษกราฟ"
-        C2_conditionals_with_cards: "เงื่อนไข "
+        C2_graph_paper: การเขียนกระดาษกราฟ
+        C2_conditionals_with_cards: 'เงื่อนไข '
         C2_binary_bracelets: Binary Bracelets
-        C2_relay_programming: "โปรแกรมการถ่ายทอดข้อมูล"
+        C2_relay_programming: โปรแกรมการถ่ายทอดข้อมูล
         C2_paper_airplanes: Paper Airplanes
+        C2_digital_footprint: Your Digital Footprint
         C3_maze_level_4: Maze Loops
-        C3_artist_intro: "แนะนำศิลปิน"
+        C3_artist_intro: แนะนำศิลปิน
         C3_artist_functions: Artist Functions
         C3_bee_functions: Bee Functions
         C3_bee_conditionals: Bee Conditionals
@@ -592,15 +713,20 @@
         C3_bee_debugging: Bee Debugging
         C3_bounce: Bounce
         C3_playlab_create_game: Play Lab - Create a Game
-        C3_computational_thinking: "คิดคำนวณ"
+        C3_computational_thinking: คิดคำนวณ
         C3_dice_race: Dice Race
         C3_internet: Internet
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
-        Frozen_intro: Hour of Code Intro
-        Frozen_loops: Introduction to Loops
-        Frozen_functions: Introduction to Functions
+        C4_artist_math: Programming the Artist with Math
+        C4_create_functions: Creating Functions
+        C4_edit_functions: Editing Functions
+        C4_for_loops: For Loops
+        C4_variables: ตัวแปร
+        frozen_intro: Hour of Code Intro
+        frozen_loops: Introduction to Loops
+        frozen_functions: Introduction to Functions
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
@@ -648,3 +774,19 @@
           the Bee will turn to get the nectar.
         logic_category: Open the "Logic" flyout to find the "if/else" block.
         length_parameter: Can you update this function so it uses the "length" parameter?
+        frozen_diamond_repeat: Use the repeat block to create this shape.
+        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
+          each circle.
+        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
+          and change the size.
+        frozen_snowflake_branch: Use the "create a snowflake branch" block
+        frozen_create_square: Attach more blocks here to create a square
+        playlab_drag_say: Drag the "say" block here and type "hello"
+        playlab_use_twice: Use this block twice and remember to change the actor number
+        playlab_move_girl: Use the "move right" block to move Tennis Girl
+        playlab_play_sound: Add "play sound" block here
+        playlab_arrow_keys: Remember to use these to move the witch after clicking
+          on Run
+        playlab_add_move: Add "move" blocks inside this repeat block
+        playlab_add_score: Add score blocks here
+        playlab_add_blocks: Add your blocks here

@@ -1244,7 +1244,7 @@ Blockly.Blocks.parameters_get = {init:function() {
   var a = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
   a.EDITABLE = !0;
   this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
-  this.setHSV(312, 0.32, 0.62);
+  this.setHSV(7, 0.8, 0.95);
   this.appendDummyInput().appendTitle(Blockly.Msg.VARIABLES_GET_TITLE).appendTitle(Blockly.disableVariableEditing ? a : new Blockly.FieldParameter(Blockly.Msg.VARIABLES_GET_ITEM), "VAR").appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
   this.setOutput(!0);
   this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP)

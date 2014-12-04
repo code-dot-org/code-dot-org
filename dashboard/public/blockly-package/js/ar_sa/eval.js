@@ -6813,6 +6813,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -6825,7 +6826,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -6835,16 +6838,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -14439,7 +14432,7 @@ exports.end = function(d){return "نهاية"};
 
 exports.emptyBlocksErrorMsg = function(d){return "قطعة \" أكرر\" أو \" اذا \" تحتاج ان تحتوي على قطع اخرى داخلها من اجل العمل . تأكد من القطع الداخلية بحيث يجب ان تكون تناسب القطع المحتوية في الداخل ."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "قطعة الدالة تحتاج إلى القطع الأخرى بداخله لكي يعمل."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "قطعة الدالة تحتاج إلى القطع الأخرى بداخلها لكي تعمل."};
 
 exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
 
@@ -14495,7 +14488,7 @@ exports.numLinesOfCodeWritten = function(d){return "لقد كتبت "+p(d,"numLi
 
 exports.play = function(d){return "إلعب"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "طباعة"};
 
 exports.puzzleTitle = function(d){return "اللغز "+v(d,"puzzle_number")+" من "+v(d,"stage_total")};
 
@@ -14511,7 +14504,7 @@ exports.score = function(d){return "النتيجة"};
 
 exports.showCodeHeader = function(d){return "اظهار الكود البرمجي"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "إظهار القطع"};
 
 exports.showGeneratedCode = function(d){return "اظهار الكود البرمجي"};
 
@@ -14539,11 +14532,11 @@ exports.hintRequest = function(d){return "شاهد تلميحاً"};
 
 exports.backToPreviousLevel = function(d){return "الرجوع إلى المستوى السابق"};
 
-exports.saveToGallery = function(d){return "حفظ في معرض الصور الخاص بك"};
+exports.saveToGallery = function(d){return "حفظ إلى المعرض"};
 
-exports.savedToGallery = function(d){return "حفظ في معرض الصور الخاص بك!"};
+exports.savedToGallery = function(d){return "تم الحفط في المعرض!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "عذراً، لا يمكن أن نشارك هذا البرنامج."};
 
 exports.typeFuncs = function(d){return "الدوال المتاحة: %1"};
 
@@ -14551,7 +14544,7 @@ exports.typeHint = function(d){return "تذكر أن الأقواس والفوا
 
 exports.workspaceHeader = function(d){return "أجمع القطع هنا: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "أكتب الكود البرمجي جافاسكريبت هنا"};
 
 exports.infinity = function(d){return "ما لانهاية"};
 
@@ -14575,7 +14568,7 @@ exports.hintHeader = function(d){return "إليك نصيحة:"};
 
 exports.genericFeedback = function(d){return "انظر كيف انتهى الأمر، و حاول إصلاح برنامجك."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "انظر ما الذي صنعته"};
 
 
 },{"messageformat":62}],50:[function(require,module,exports){
@@ -14597,23 +14590,23 @@ var MessageFormat = require("messageformat");MessageFormat.locale.ar = function(
   }
   return 'other';
 };
-exports.circleBlockTitle = function(d){return "circle (radius, style, color)"};
+exports.circleBlockTitle = function(d){return "دائرة (نصف القطر ، النمط ، اللون)"};
 
 exports.displayBlockTitle = function(d){return "عرض"};
 
-exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, color)"};
+exports.ellipseBlockTitle = function(d){return "القطع الناقص (العرض ، الارتفاع ، النمط واللون )"};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"};
+exports.extraTopBlocks = function(d){return "لديك كتل غير متصلة. هل تقصد بإتصال هذه إلى كتلة \"العرض\" ؟"};
 
-exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
+exports.overlayBlockTitle = function(d){return "تداخل (الأعلى، الأسفل)"};
 
 exports.placeImageBlockTitle = function(d){return "وضع الصورة (س، ص، صورة)"};
 
 exports.offsetBlockTitle = function(d){return "offset (x, y, image)"};
 
-exports.rectangleBlockTitle = function(d){return "المستطيل (العرض والارتفاع، ونمط ولون)"};
+exports.rectangleBlockTitle = function(d){return "المستطيل (العرض, الارتفاع، النمط, الون)"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to edit your drawing."};
+exports.reinfFeedbackMsg = function(d){return "يمكنك الضغط على زر \"حاول مرة أخرى\" لتحرير الرسم الخاص بك."};
 
 exports.rotateImageBlockTitle = function(d){return "تدوير (درجات، الصورة)"};
 
@@ -14625,17 +14618,17 @@ exports.starBlockTitle = function(d){return "نجمة (نصف القطر، نم�
 
 exports.radialStarBlockTitle = function(d){return "radial-star (points, inner, outer, style, color)"};
 
-exports.stringAppendBlockTitle = function(d){return "string-append (first, second)"};
+exports.stringAppendBlockTitle = function(d){return "إلحاق السلسلة (الأولى والثانية)"};
 
-exports.stringLengthBlockTitle = function(d){return "string-length (string)"};
+exports.stringLengthBlockTitle = function(d){return "السلسلة ذات الطول (سلسلة)"};
 
-exports.textBlockTitle = function(d){return "نص (سلسلة، والحجم، واللون)"};
+exports.textBlockTitle = function(d){return "نص (سلسلة، الحجم، اللون)"};
 
-exports.triangleBlockTitle = function(d){return "المثلث (حجم ونمط ولون)"};
+exports.triangleBlockTitle = function(d){return "مثلث (حجم, نمط ,لون)"};
 
-exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
+exports.underlayBlockTitle = function(d){return "الأساس الذي تقوم عليه (أسفل، أعلى)"};
 
-exports.outline = function(d){return "مخطط تفصيلي"};
+exports.outline = function(d){return "موجز"};
 
 exports.solid = function(d){return "صلب"};
 

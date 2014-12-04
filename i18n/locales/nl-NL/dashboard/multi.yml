@@ -85,10 +85,10 @@ nl:
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
         Choose an algorithm for the image provided: Kies een algoritme voor de gegeven afbeelding
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Start met een vierkant <br />Plaats een driehoek boven de vierkant<br/>Plaats een driehoek onder de vierkant'
-        0: '? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
-        1: ': Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
-        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 'Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram'
-        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: 'Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle'
+        0: '? Begin met een vierkant <br/> zet een driehoek rechts van het vierkant <br/> zet een parallellogram onder het vierkant <br/> zet een driehoek rechts van de parallellogram'
+        1: ':Begin met een vierkant <br/> zet een driehoek rechts van het vierkant <br/> zet een parallellogram onder het vierkant <br/> zet een driehoek rechts van de parallellogram'
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 'Begin met een vierkant <br/>zet een parallellogram boven het vierkant <br/> zet een driehoek rechts van de parallellogram'
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: 'Begin met een vierkant <br/> zet een driehoek onder het vierkant <br/> zet een parallellogram rechts van de driehoek'
       2-3 Algorithms Multi 2:
         Multiple Choice: Meerkeuze
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: 'Start met een driehoek<br />Plaats een vierkant onder de driehoek<br/>Plaats nog een driehoek onder het vierkant'
@@ -297,6 +297,14 @@ nl:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
+      Coordinates Multi 1:
+        Video game Coordinates: Video game Coordinates
+        Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
+        Which answer best describes the unicorn's movement?: "Which answer best describes the unicorn's movement?"
+        The unicorn moves across the screen: The unicorn moves across the screen
+        The unicorn's y value changes: "The unicorn's y value changes"
+        The unicorn moves to the left: The unicorn moves to the left
+        The unicorn's x value changes: "The unicorn's x value changes"
       K-1 Artist 1 Multi 1:
         Multiple Choice: Meerkeuze
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
@@ -531,7 +539,7 @@ nl:
         George Jetson: George Jetson
       unique level name here:
         title: titel
-        description here: description here
-        Question: Question
-        wrong answer: wrong answer
-        right answer: right answer
+        description here: beschrijving hier
+        Question: Vraag
+        wrong answer: verkeerd antwoord
+        right answer: juist antwoord

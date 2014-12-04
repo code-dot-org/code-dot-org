@@ -40,8 +40,8 @@
       updated: Tu contraseña fue cambiada con éxito. Ya has iniciado sesión.
       updated_not_active: Tu contraseña fue cambiada con éxito.
     registrations:
-      destroyed: "¡Adiós! Tu cuenta fue cancelada con éxito. Esperamos verte pronto."
-      signed_up: "¡Bienvenido! Te has registrado exitosamente."
+      destroyed: ¡Adiós! Tu cuenta fue cancelada con éxito. Esperamos verte pronto.
+      signed_up: ¡Bienvenido! Te has registrado exitosamente.
       signed_up_but_inactive: Te has registrado con éxito. Sin embargo, no has podido
         iniciar sesión porque tu cuenta todavía no fue activada.
       signed_up_but_locked: Te has registrado con éxito. Sin embargo, no has podido
@@ -74,4 +74,4 @@
       not_locked: No estaba bloqueada
       not_saved:
         one: '1 error impidió que este %{resource} se guardara:'
-        other: "%{count} errores impiden que este %{resource} sea guardado:"
+        other: '%{count} errores impiden que este %{resource} sea guardado:'

@@ -43,17 +43,18 @@
           'Artist: Shapes': 'Menininkas: formos'
           'Maze: Loops': 'Labirintas: kartojimas'
           'Bee: Loops': 'Bitė: kartojimas'
-          'Studio: Create a Story': "Žaidimų laboratorija: sukurk istoriją"
+          'Studio: Create a Story': 'Žaidimų laboratorija: sukurk istoriją'
+          'Artist: Loops': 'Menininkas: kartojimas'
+          description_audience: Ages 4+ (pre-readers)
           description_short: Kursas 1 yra skirtas pradinukams, dar tik pradedantiems
             skaityti.
-          'Artist: Loops': 'Menininkas: kartojimas'
         course2:
           The Maze: Labirintas
           Suzi: Suzi
           The Artist: Menininkas
           Artist Debugging: 'Menininkas: klaidų ieškojimas'
-          Bounce: "Šokinėjimas"
-          'Studio: Create a Story': "Žaidimų laboratorija: sukurk istoriją"
+          Bounce: Šokinėjimas
+          'Studio: Create a Story': 'Žaidimų laboratorija: sukurk istoriją'
           Artist Loops: 'Menininkas: kartojimas'
           Bee Conditionals: 'Bitė: sąlyginiai sakiniai'
           Flappy: Flappy
@@ -84,14 +85,15 @@
           'Bee: Debugging': 'Bitė: klaidų ieškojimas'
           'Artist: Debugging': 'Menininkas: klaidų ieškojimas'
           'Bee: Conditionals': 'Bitė: sąlyginiai sakiniai'
-          description_short: Kursas 2 yra skirtas jau mokantiems skaityti 2-5 kl.
-            moksleiviams.
           'Artist: Sequence2': 'Menininkas: seka2'
           'Maze: Sequence2': 'Labirintas: seka2'
           'Artist: Nested Loops': 'Menininkas: kartojimas kartojime'
+          description_audience: Ages  6+ (reading required)
+          description_short: Kursas 2 yra skirtas jau mokantiems skaityti 2-5 kl.
+            moksleiviams.
         course3:
           The Maze: Labirintas
-          'Studio: Create a Story': "Žaidimų laboratorija: sukurk istoriją"
+          'Studio: Create a Story': 'Žaidimų laboratorija: sukurk istoriją'
           The Artist: Menininkas
           title: Kursas 3
           Artist Functions: 'Menininkas: funkcijos'
@@ -103,7 +105,7 @@
           Bee Debugging: 'Bitė: klaidų ieškojimas'
           Bee Functions: Bitės komandos
           Artist Functions with Params: 'Menininkas: komandų kūrimas su parametrais'
-          Bounce: "Šokinėjimas"
+          Bounce: Šokinėjimas
           Maze Conditionals: 'Labirintas: sąlyginiai sakiniai'
           Artist Functions with Parameters: 'Menininkas: komandų kūrimas su parametrais'
           Computational Thinking: Skaičiuojamasis mąstymas
@@ -113,7 +115,7 @@
           Internet: Internetas
           Crowdsourcing: Komandinis programavimas
           Digital Citizenship: Virtuali pilietybė
-          Farmer - While Loops: "Ūkininkas: kartojimas"
+          Farmer - While Loops: 'Ūkininkas: kartojimas'
           description: Kursas 3 skirtas tiems, kas pabaigė Kursą 2.
           'Studio: Create a Game': 'Laboratorija: sukurk žaidimą'
           Maze: Labirintas
@@ -123,10 +125,9 @@
           'Bee: Conditionals': 'Bitė: sąlyginiai sakiniai'
           'Maze: Conditionals': 'Labirintas: sąlyginiai sakiniai'
           'Artist: Nested Loops': 'Menininkas: kartojimas kartojime'
-          'Farmer: While Loops': "Ūkininkas: kartojimas"
+          'Farmer: While Loops': 'Ūkininkas: kartojimas'
           'Bee: Nested Loops': 'Bitė: kartojimas kartojime'
           'Bee: Debugging': 'Bitė: klaidų ieškojimas'
-          description_short: Kursas 3 yra skirtas tiems, kas pabaigė 2 kursą :).
           Maze2: Labirintas2
           Artist2: Menininkas2
           'Artist: Functions2': 'Menininkas: komandų kūrimas 2'
@@ -134,16 +135,18 @@
           'Bee: Conditionals2': 'Bitė: sąlyginiai sakiniai2'
           'Maze: Conditionals2': 'Labirintas: sąlyginiai sakiniai2'
           'Artist: Nested Loops2': 'Menininkas: Kartojimas kartojime'
-          'Farmer: While Loops2': "Ūkininkas: kartojimas2"
+          'Farmer: While Loops2': 'Ūkininkas: kartojimas2'
           'Bee: Nested Loops2': 'Bitė: kartojimas kartojime'
           'Bee: Debugging2': 'Bitė: klaidų ieškojimas2'
           'Artist: Patterns': 'Menininkas: raštai'
           Songwriting: Dainų rašymas
+          description_audience: Ages 8+ (after Course 2)
+          description_short: Kursas 3 yra skirtas tiems, kas pabaigė 2 kursą :).
         msm:
           title: Vidurinės mokyklos matematika
           description: Private work in progress for Middle School Math.
           Graph Paper Programming: Programavimas ant languoto popieriaus
-          Assessments: "Žinių patikrinimas"
+          Assessments: Žinių patikrinimas
           Unit 1: Skyrius 1
           Unit 2: Skyrius 2
           Ninja Cat and the Coordinate Plane: Katė-ninzė ir koordinačių plokštuma
@@ -152,20 +155,20 @@
           Contracts: Contracts
           'Artist: Writing Contracts': 'Artist: Writing Contracts'
           'Calc: Defining Variables': 'Calc: Defining Variables'
-          'Play Lab: Defining Variables': "Žaidimų laboratorija: kintamieji"
+          'Play Lab: Defining Variables': 'Žaidimų laboratorija: kintamieji'
           The Design Recipe: The Design Recipe
           'Artist: Defining Functions': 'Menininkas: komandų kūrimas'
-          'Play Lab: Defining Functions': "Žaidimų laboratorija: komandų kūrimas"
+          'Play Lab: Defining Functions': 'Žaidimų laboratorija: komandų kūrimas'
           'Artist: Functions': 'Menininkas: komandų kūrimas'
-          'Play Lab: Animation': "Žaidimų laboratorija: animacija"
+          'Play Lab: Animation': 'Žaidimų laboratorija: animacija'
           Booleans: Loginės reikšmės
-          'Play Lab: Booleans': "Žaidimų laboratorija: loginės reikšmės"
+          'Play Lab: Booleans': 'Žaidimų laboratorija: loginės reikšmės'
           'Calc: Boolean Operators': 'Skaičiuotuvas: loginiai veiksmai'
-          'Play Lab: Boolean Operators': "Žaidimų laboratorija: loginiai veiksmai"
+          'Play Lab: Boolean Operators': 'Žaidimų laboratorija: loginiai veiksmai'
           Conditionals and Piecewise Functions: Sąlygos ir funkcijos iš dalių
           'Artist: Conditionals': 'Menininkas: sąlygos'
           Collision Detection and the Distance Formula: Susidūrimai ir atstumo formulė
-          'Play Lab: Collision Detection': "Žaidimų laboratorija: susidūrimai"
+          'Play Lab: Collision Detection': 'Žaidimų laboratorija: susidūrimai'
           'Unplugged: Ninja Cat and the Coordinate Plane': 'Unplugged: Ninja Cat and
             the Coordinate Plane'
           'Eval: Strings and Images': 'Eval: Strings and Images'
@@ -211,22 +214,19 @@
           'Maze: Sequence': 'Labirintas: seka'
         hourofcode:
           Maze: Labirintas
-          title: "„Programavimo valanda“"
-          description_short: Try the basics of computer science with characters from
-            Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          title: „Programavimo valanda“
           description: Try the basics of computer science with characters from Angry
             Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          description_short: Try the basics of computer science with characters from
+            Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
         frozen:
-          title: Frozen
-          description_short: Join the Royal Sisters of Arendelle, Anna and Elsa, as
-            they explore the magic and beauty of ice. You will write code to create
-            snowflakes and patterns as you ice-skate and make a winter wonderland
-            that you can then share with your friends!
-          description: Join the Royal Sisters of Arendelle, Anna and Elsa, as they
-            explore the magic and beauty of ice. You will write code to create snowflakes
-            and patterns as you ice-skate and make a winter wonderland that you can
-            then share with your friends!
+          title: Programuokite kartu su Ana ir Elze
+          description: Naudokime komandas, kad Ana ir Elzė kartu išbandytų ledo grožį
+            ir magiją. Čiuožinėdami pačiūžomis, piešime snaigių raštus. Savo kūriniais
+            galėsite pasidalinti su draugais!
           Artist: Menininkas
+          description_short: Naudokime komandas, kad Ana ir Elzė kartu išbandytų ledo
+            grožį ir magiją.
         course4:
           description_short: Students taking Course 4 should have already taken Courses
             2 and 3.
@@ -237,12 +237,12 @@
           title: Kursas 4
           'Algorithms: Tangrams': 'Algoritmai: tanagramos'
           Variables: Kintamieji
-          'Play Lab: Variables': "Žaidimų laboratorija: kintamieji"
-          'Play Lab: Functions with Parameters': "Žaidimų laboratorija: komandos su
-            parametrais"
+          'Play Lab: Variables': 'Žaidimų laboratorija: kintamieji'
+          'Play Lab: Functions with Parameters': 'Žaidimų laboratorija: komandos su
+            parametrais'
           'Bee: Functions with Parameters': 'Bitė: komandos su parametrais'
           'Artist: For Loops': 'Menininkas: kartojimai'
-          'Play Lab: For Loops': "Žaidimų laboratorija: kartojimai"
+          'Play Lab: For Loops': 'Žaidimų laboratorija: kartojimai'
           'Artist: Functions': 'Menininkas: komandų kūrimas'
           'Artist: Functions with Paraqmeters': 'Menininkas: komandos su parametrais'
           'Unplugged: Tangrams': 'Be kompiuterio: tanagramos'
@@ -259,6 +259,7 @@
           Farmer Binary: Farmer Binary
           Maze and Bee: Labirintas ir bitė
           Artist Binary: Artist Binary
+          description_audience: Ages 10+ (after Course 3)
         Course4pre:
           description_short: Trumpas įvadas moksleiviams, kurie nebandė 2 ir 3 kursų.
           Course 4 Prerequisite: Course 4 Prerequisite
@@ -267,7 +268,7 @@
           'Artist: Loops': 'Menininkas: kartojimas'
           'Bee: Conditionals': 'Bitė: sąlyginiai sakiniai'
           'Artist: Nested Loops': 'Menininkas: kartojimas kartojime'
-          'Farmer: While Loops': "Ūkininkas: kartojimas"
+          'Farmer: While Loops': 'Ūkininkas: kartojimas'
           'Bee: Nested Loops': 'Bitė: kartojimas kartojime'
           'Artist: Functions': 'Menininkas: komandų kūrimas'
           'Bee: Debugging': 'Bitė: klaidų ieškojimas'
@@ -279,7 +280,7 @@
           'Artist: Loops': 'Menininkas: kartojimas'
           'Bee: Conditionals': 'Bitė: sąlyginiai sakiniai'
           'Artist: Nested Loops': 'Menininkas: kartojimas kartojime'
-          'Farmer: While Loops': "Ūkininkas: kartojimas"
+          'Farmer: While Loops': 'Ūkininkas: kartojimas'
           'Bee: Nested Loops': 'Bitė: kartojimas kartojime'
           'Artist: Functions': 'Menininkas: komandų kūrimas'
           'Bee: Debugging': 'Bitė: klaidų ieškojimas'
@@ -291,7 +292,7 @@
           'Artist: Loops': 'Menininkas: kartojimas'
           'Bee: Conditionals': 'Bitė: sąlyginiai sakiniai'
           'Artist: Nested Loops': 'Menininkas: kartojimas kartojime'
-          'Farmer: While Loops': "Ūkininkas: kartojimas"
+          'Farmer: While Loops': 'Ūkininkas: kartojimas'
           'Bee: Nested Loops': 'Bitė: kartojimas kartojime'
           'Artist: Functions': 'Menininkas: komandų kūrimas'
           'Bee: Debugging': 'Bitė: klaidų ieškojimas'

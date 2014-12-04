@@ -1,8 +1,8 @@
 {
-  "compute":"compute",
-  "equivalentExpression":"Try reordering your arguments to get exactly the same expression.",
-  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"compute\" block?",
-  "goal":"Goal:",
-  "reinfFeedbackMsg":"Here is your story! Continue working on it, or move on to the next puzzle!",
-  "yourExpression":"Your expression:"
+  "compute":"محاسبه",
+  "equivalentExpression":"سعی کنید \"ارگومنت\" هایتان را مرتب کنید تا دقیقا همان عبارت را دریافت کنید.",
+  "extraTopBlocks":"شما بلوک های متصل نشده دارید. آیا منظورتان متصل کردن اینها به بلوک \"محاسبه\" بود؟",
+  "goal":"هدف:",
+  "reinfFeedbackMsg":"داستان از این قرار است! کار کردن روی آن را ادامه دهید, یا به پازل بعدی بروید!",
+  "yourExpression":"عبارت شما:"
 }

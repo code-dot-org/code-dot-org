@@ -210,7 +210,7 @@ zh:
         playlab: Make an App
         artist: Draw Something
     user:
-      classroom: Teacher Home Page
+      classroom: 教师主页
       label: '你好%{username}'
       stats: 我的进程
       settings: 我的账户
@@ -333,7 +333,8 @@ zh:
     test_videos_help: 在你的学校测试我们新的视频播放器
     try_beta_courses: 新增功能！尝试我们为K-5 学生准备的 beta 版课程
     use_as_teacher: 使用本网站作为一名教师
-    heading_elementary: '<h2>20 hour courses for</h2><h1>Elementary Students</h1>'
+    heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
+    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
     heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
     your_gallery: Gallery
@@ -343,10 +344,11 @@ zh:
     none: 不愿回答
   user_type:
     student: 学生
-    teacher: Teacher
+    teacher: 老师
   footer:
     help_from_html: 从谷歌、 微软、 Facebook 和 Twitter 工程师帮助创建本教程。
-    art_from_html: '愤怒的小鸟 ™ & © 2009年-2013 Rovio 娱乐有限公司版权所有。 <br/>植物与僵尸 ™ & © 2013年电子艺术公司保留所有的权利。'
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
+    powered_by_aws: Powered by Amazon Web Services
     feedback: 提供反馈
     translate: 帮助我们翻译成你的语言
     support: 支持
@@ -423,6 +425,8 @@ zh:
     gallery:
       title: Gallery
       body: View a gallery of app and artist images created by our users
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: Students made these with code!

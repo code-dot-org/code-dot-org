@@ -1,12 +1,12 @@
 sq-AL:
   hello: Pershendetje Botë
-  select_language: Please select your language
+  select_language: Ju lutem zgjedheni gjuhën tuaj
   computer_science: Shkenca Kompjuterike
   computer_science_edweek: Java Edukuese per Shkencat Kompjuterike
   csedweek_dates: 9-15 Dhjetor ,2013
-  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">plan your Hour of Code</a>'
-  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
-  n_have_learned_an_hoc: '<h1>#</h1><h3>have tried an</h3><h2>Hour of Code</h2>'
+  csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Ora e kodimit</a> po vjen. Të thirrur të gjithë mësuesit/ mësueset dhe organizatorët, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">planifikojeni Oren tuaj të Kodimit</a>'
+  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">A je ti nje mesues CS? Shiko burimet e Javes CS</a>'
+  n_have_learned_an_hoc: '<h1>#</h1><h3>kane provuar nje </h3><h2>Ore Kodimi</h2>'
   anybody_can_learn: Cdokush mund te mesoj.
   learn_now: Meso tani
   petition_message: Cdo student ne cdo shkolle duhet te kete mundesine te mesoje shkencat kompjuterike
@@ -15,22 +15,22 @@ sq-AL:
   email: Email
   zipcode: Kodi Postar ose Shteti
   submit: Dorëzo
-  twentyhours_heading: Try our Intro to Computer Science Course
-  twentyhours_text: Finished your first Hour of Code? Learn more core computer science and programming concepts in this follow-up course.
-  hoc2014_heading: 'Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December 8 - 14, 2014<br/>'
+  twentyhours_heading: Provojeni kursin tonë për Hyrje në Shkencat Kompjuterike
+  twentyhours_text: E mbaruat oren e pare te Kodimit? Tani mesoni me shume per Shkencen Kompjuterike dhe konceptet e programimit ne mesimin ne vazhdim.
+  hoc2014_heading: 'Bashkohu ne <a href="http://hourofcode.com"> Oren e Kodimit</a><br/>8-14 Dhjetor,2014<br/>'
   hoc2014_students: Students
-  hoc2014_try: Try it
-  hoc2014_teachers: Teachers
-  hoc2014_host: Host it
-  hoc2014_everyone: Everyone
-  hoc2014_support: Support it
-  hoc2014_whatishoc: What is the Hour of Code?
+  hoc2014_try: Provoje
+  hoc2014_teachers: Mesuesit
+  hoc2014_host: Behu ti miku i ketij eventi
+  hoc2014_everyone: Kushdo
+  hoc2014_support: Përkrahe
+  hoc2014_whatishoc: Çfarë është Ora e Kodimit?
   twentyhours_trynow: Provo tani
-  california_heading: Ask your school to teach computer science
-  california_text: "Any teacher can offer our <a href='http://studio.code.org/'>free courses</a>.  Any elementary school can <a href='http://code.org/educate/k5'>teach computer science</a>. Ask high schools to <a href='http://code.org/educate/districts'>partner with us."
-  california_button: Learn More
+  california_heading: Pyete shkollen tende qe te te mesoje shkence kompjuterike
+  california_text: "Cdo mesues mund te ofroje <a href='http://studio.code.org/'> falas mesimet tona</a>. Cdo shkolle fillore mund <a href='http://code.org/educate/k5'> te jape mesim shkenca komjuterike</a>. Pyetni shkollat e mesme te <a href='http://code.org/educate/districts'> behen partnere me ne."
+  california_button: Meso me shume
   flappy_heading: Flappy Birthday to Code.org
-  flappy_text: 'Code.org just turned 1 year old.<br/><br/> Celebrate with us by making your own custom <b>Flappy</b> game. Code your own rules, and share it with friends!'
+  flappy_text: 'Code.org sapo mbushi nje vit qe ekziston.<br/><br/> Festo me ne duke krijuar lojen tende <b>Flappy</b>. Kodo rregullat e tua dhe ndaje ate qe krijon me shoket e tu!'
   view_english_site: Shfaq faqen ne gjuhen Angleze
   non_english_tutorials: 'Mësimet e përkthyera në shumë gjuhë:'
   write_your_first_program: Shkruani programin e parë kompjuterik tuajin
@@ -45,7 +45,7 @@ sq-AL:
   get_a_certificate_of_achievement: Merr një çertifikatë të arritjes
   enter_valid_email: Ju lutem shkruani një email adresë të vlefshme
   get_a_certificate_message: "Ne do tu dergojme nje certifikate dhe informacione se si mund te mesoni <a href='/learn/beyond'>pertej Ores se Kodimit</a>"
-  get_a_certificate_message_after: "Click on the certificate to download or print it. Now, keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>."
+  get_a_certificate_message_after: "Kliko ne certifikate qe ta shkarkosh ose ta printosh. Tani vazhdo me <a href='http://studio.code.org'> mesimet e tjera</a>, ose shiko opsione te tjera ne <a href='/learn/beyond'> Meso me teper se nje ore.</a>"
   thanks_for_submitting: Faleminderit për dorëzimin!
   if_you_enjoyed: Ne qofte se u perlqeu te mesuarit, pyesni miqte ta provojne gjithashtu! Ne duam qe e gjithe bota te mesoje.
   personalize_certificate: Personalizo certifikaten tende
@@ -285,7 +285,7 @@ sq-AL:
   dashboard_faq: Frequently Asked Questions
   code_hoc_coming: 'The Hour of Code is coming - December 8-14!'
   code_sign_up: Sign up to participate during CS Education Week
-  learn_more: Learn More
+  learn_more: Meso me shume
   hoc2014_try_new_tutorials: Try our new Hour of Code tutorials
   hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
   hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
@@ -306,6 +306,7 @@ sq-AL:
   more_resources_educators: More resources for teachers and educators
   participants: participants
   teachers_notes: "Teacher's Notes"
+  teachers_notes_hoc: 'Teachers: Read important educator notes here'
   previous: Previous
   next: Next
   older_systems: Tutorials that work on older systems
@@ -313,6 +314,7 @@ sq-AL:
   mobile_devices: Tutorials for mobile devices
   frozen_name: Code with Anna and Elsa
   codeorg_name: Shkruani programin e parë kompjuterik tuajin
+  codeintl_name: Shkruani programin e parë kompjuterik tuajin
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: An introduction to JavaScript
   khanes_name: An introduction to JavaScript
@@ -334,7 +336,6 @@ sq-AL:
   codespark_name: The Foos (pre-readers welcome)
   kodable_name: Kodable (pre-readers welcome)
   tynkerapp_name: 'Tynker - on tablets'
-  hopscotch_name: 'Hopscotch: Code on your iPad'
   robomindnl_name: Program a virtual robot
   flappy_name: Make a Flappy game
   bitsbox_name: 'Bitsbox - make a game'
@@ -347,6 +348,7 @@ sq-AL:
   projguts_name: Rock, Paper, Scissors
   frozen_gradelevel: Ages 8+
   codeorg_gradelevel: Ages 4-104
+  codeintl_gradelevel: Ages 4-104
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Middle school +
   khanes_gradelevel: Middle school +
@@ -368,7 +370,6 @@ sq-AL:
   codespark_gradelevel: Shkollimi fillor
   kodable_gradelevel: Shkollimi fillor
   tynkerapp_gradelevel: Ages 5-13
-  hopscotch_gradelevel: Middle school +
   robomindnl_gradelevel: Ages 8-13
   flappy_gradelevel: Ages 4-104
   bitsbox_gradelevel: Shkollimi fillor
@@ -381,16 +382,17 @@ sq-AL:
   projguts_gradelevel: Ages 10-13
   frozen_platformtext: Modern browsers + tablets
   codeorg_platformtext: Modern browsers, smartphones, tablets
+  codeintl_platformtext: Modern browsers, smartphones, tablets
   thinkersmithspanish_platformtext: Unplugged
-  khan_platformtext: Modern Web browsers
-  khanes_platformtext: Modern Web browsers
-  tynker_platformtext: Modern web browsers
+  khan_platformtext: Modern web browsers
+  khanes_platformtext: Modern web browsers
+  tynker_platformtext: Modern browsers. (Follow-on course requires $$)
   scratch_platformtext: ALL browsers
   lightbot_platformtext: ALL browsers and iOS, Android, or Game Console
   thinkersmith_platformtext: Unplugged
   condcards_platformtext: Unuplugged
   lightbotintl_platformtext: iOS, Android (or web browser)
-  codehs_platformtext: Modern browsers
+  codehs_platformtext: 'Modern browsers. (Follow-on course requires  $$)'
   codecademy_platformtext: Modern web browsers. iOS, Android apps
   codecombat_platformtext: Modern web browsers
   codemonkey_platformtext: Modern web browsers
@@ -402,7 +404,6 @@ sq-AL:
   codespark_platformtext: iOS, Android (or web browser)
   kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, Android tablets
-  hopscotch_platformtext: iPad
   robomindnl_platformtext: Modern web browsers, Mobile web
   flappy_platformtext: Modern browsers, smartphones, tablets
   bitsbox_platformtext: Modern web browsers
@@ -415,6 +416,7 @@ sq-AL:
   projguts_platformtext: Unplugged
   frozen_shortdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
   codeorg_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
+  codeintl_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Learn to draw in JavaScript
   khanes_shortdescription: Learn to draw in JavaScript
@@ -427,7 +429,7 @@ sq-AL:
   codehs_shortdescription: Start coding with Karel the Dog, a fun and visual intro to programming!
   codecademy_shortdescription: Learn JavaScript programming, in a web-browser
   codecombat_shortdescription: Defeat ogres to learn Python or JavaScript in this epic programming game!
-  codemonkey_shortdescription: Students program a monkey to catch bananas while it gets slightly more complicated on each level.
+  codemonkey_shortdescription: Students program a monkey to catch bananas.
   codeavengers_shortdescription: Learn JavaScript programming, in a web-browser
   processing_shortdescription: A one hour tutorial in the Processing languages
   robomind_shortdescription: Write code for a virtual robot
@@ -436,13 +438,12 @@ sq-AL:
   quorum_shortdescription: Join Mary on a guided tour as she learns the Quorum programming language.
   codespark_shortdescription: The Foos is a fun, kid-friendly game to learn about programming.
   kodable_shortdescription: A fun iPad game to teach computer programming concepts
-  tynkerapp_shortdescription: Learn to code by solving fun puzzles and build your own mobile games.
-  hopscotch_shortdescription: Learn how to make food fight dodgeball and paddleball games with Hopscotch!
+  tynkerapp_shortdescription: 'Learn to program by solving fun coding puzzles. '
   robomindnl_shortdescription: Write code for a virtual robot
   flappy_shortdescription: 'Make your own game - Flappy Bird, Shark, or Submarine'
   bitsbox_shortdescription: Code a series of apps to play and share, using real Javascript.
   makegameswithus_shortdescription: Make an iPhone game! Learn by writing code to teach your monster new moves!
-  touchdevelop_shortdescription: Code mobile apps directly on your phone, tablet or laptop
+  touchdevelop_shortdescription: 'Solve puzzles, create games, and learn coding all on your phone. '
   appinventor_shortdescription: Make your own app! (Android-only)
   blockly_shortdescription: Download a ZIP file to learn offline
   thinkersmith2_shortdescription: Learn how computers use 1s and 0s to represent information
@@ -450,7 +451,8 @@ sq-AL:
   projguts_shortdescription: Try modeling and simulation using rock/paper/scissors
   frozen_longdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
   codeorg_longdescription: Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
-  thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
+  codeintl_longdescription: Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
+  thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubriran como guiarse de modo tal de llevar a cabo tareas especificas sin ser estas discutidas previamente. Este segmento ensena a los estudiantes la conexion entre simbolos y acciones asi como la valiosa habilidad de depuracion.'
   khan_longdescription: Learn the basics of JavaScript programming while creating fun drawings with your code. Do it on your own or with your class!
   khanes_longdescription: Learn the basics of JavaScript programming while creating fun drawings with your code. Do it on your own or with your class!
   tynker_longdescription: Build your own games and share with friends! Solve fun coding puzzles and learn programming concepts in each level. Personalize games with animated characters, multiple levels and rich props. Make your games realistic using physics. See the code as visual blocks or JavaScript. Take your games mobile on iPads and Android tablets. Over a dozen fun activities to choose from!
@@ -471,13 +473,12 @@ sq-AL:
   quorum_longdescription: This tutorial is accessible for the visually-impaired, and works with screenreaders. Join Mary on a tour as she joins a biology lab as a programmer and learns the Quorum programming language. This tutorial is student-guided with online example activities.
   codespark_longdescription: 'The Foos is a fun and kid-friendly way to learn about computer programming.  Program cute characters to solve puzzles and bring a virtual world to life.  The game is "word free" so all can play!'
   kodable_longdescription: Kodable is a self-guided iPad game that introduces kids 5+ to programming basics. Having a teacher or parent nearby is optimal, but not necessary.
-  tynkerapp_longdescription: Build your own games and share with friends! Solve fun coding puzzles and learn programming concepts in each level. Personalize games with animated characters, multiple levels and rich props. Lots of fun activities to choose from!
-  hopscotch_longdescription: "Build and play games, like food fight dodgeball and paddleball, using Hopscotch's drag and drop programming language. You'll learn computing concepts like sequence, loops, variables, and functions. When you're done, you can share your game with anyone through your iPad or iPhone. "
+  tynkerapp_longdescription: Learn to program by solving fun coding puzzles. Easily build games and stories using with themed graphics, 10+ game-kits and customizable characters. No Internet connectivity required. You can also access your creations on the web.
   robomindnl_longdescription: 'Students learn the basics of programming by controlling their own virtual robot. The online course is fully self-contained with short presentations, movies, quizzes and automatic guidance/hints to help with the programming exercises. '
   flappy_longdescription: Use drag-and-drop programming to make your own Flappy Bird game, and customize it to look different (Flappy Shark, Flappy Santa, whatever). Add the game to your phone in one click.
   bitsbox_longdescription: "Customize your very own virtual tablet, then code a series of apps to play and share. Simple walkthroughs make it possible for even young kids to program real Javascript, and the more advanced you are the further you'll go."
-  makegameswithus_longdescription: 'Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!'
-  touchdevelop_longdescription: Crazy drawings, flying monsters, swirling flowers... create your apps on your device with TouchDevelop, a friendly mobile app creation environment. Runs on iPhone, iPad, Android, Windows, Windows Phone, Linux, Mac.
+  makegameswithus_longdescription: Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pokemon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!
+  touchdevelop_longdescription: 'The touch-friendly editor will guide you in creating pixel art, solving the bear puzzle, or making your own jumping bird game. '
   appinventor_longdescription: Entertaining, quick video tutorials walk you through building three simple apps for your Android phone or tablet. Designed for novices and experts alike, this hour of code will get you ready to start building your own apps before you know it. Imagine sharing your own app creations with your friends! These activities are suitable for individuals and for teachers leading classes.
   blockly_longdescription: 'Got PCs with slow (or non-existent) internet access? Download the Blockly tutorials that were the precursor of the Code.org tutorials - a single 3MB ZIP file can be loaded onto any computer or used off a memory stick'
   thinkersmith2_longdescription: Students learn about representing and storing letters in binary, as functions of on and off. At the end, the class gets to encode their own initials to take home with them.
@@ -486,7 +487,7 @@ sq-AL:
   codeorg_beyond_name: Intro Computer Science (grades K-8)
   khan_beyond_name: Learn computer programming
   tynker_beyond_name: Learn programming at home
-  scratch_beyond_name: Create stories, games, and animations
+  scratch_beyond_name: Get creative with coding
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable

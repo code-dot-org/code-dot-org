@@ -297,6 +297,14 @@ el:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
+      Coordinates Multi 1:
+        Video game Coordinates: Video game Coordinates
+        Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
+        Which answer best describes the unicorn's movement?: "Which answer best describes the unicorn's movement?"
+        The unicorn moves across the screen: The unicorn moves across the screen
+        The unicorn's y value changes: "The unicorn's y value changes"
+        The unicorn moves to the left: The unicorn moves to the left
+        The unicorn's x value changes: "The unicorn's x value changes"
       K-1 Artist 1 Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
@@ -355,7 +363,7 @@ el:
       K-1 Maze Multiple Choice 2:
         Maze: Λαβύρινθος
         /script_assets/k_1_images/maze_images/maze_WS.png, 500: /script_assets/k_1_images/maze_images/maze_WS.png, 500
-        Which answer solves this level?: Which answer solves this level?
+        Which answer solves this level?: Ποια απάντηση λύνει αυτό το επίπεδο;
         /script_assets/k_1_images/move_blocks/EN.png: /script_assets/k_1_images/move_blocks/EN.png
         /script_assets/k_1_images/move_blocks/ES.png: /script_assets/k_1_images/move_blocks/ES.png
         /script_assets/k_1_images/move_blocks/WS.png: /script_assets/k_1_images/move_blocks/WS.png
@@ -370,7 +378,7 @@ el:
       K-1 Maze Loops Multi 2:
         Multiple Choice: Multiple Choice
         /script_assets/k_1_images/move_blocks/SESESEequals.png, 240: /script_assets/k_1_images/move_blocks/SESESEequals.png, 240
-        Pick the correct repeat block.: Pick the correct repeat block.
+        Pick the correct repeat block.: Επιλέξετε το σωστό μπλοκ επανάληψης.
         /script_assets/k_1_images/move_blocks/r3_S.png: /script_assets/k_1_images/move_blocks/r3_S.png
         /script_assets/k_1_images/move_blocks/r3_ES.png: /script_assets/k_1_images/move_blocks/r3_ES.png
         /script_assets/k_1_images/move_blocks/r3_SE.png: /script_assets/k_1_images/move_blocks/r3_SE.png
@@ -448,14 +456,14 @@ el:
       K-1 multi 4:
         Driver and Helper: Driver and Helper
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.'
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'Ένα από αυτά τα αγόρια είναι ο <b>Οδηγός</b>.  Και ένας είναι ο <b>Βοηθός</b>.'
         Which boy is the <large>helper</large>?: 'Which boy is the <large>helper</large>?'
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
         /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
       K-1 multi 5:
         Driver and Helper: Driver and Helper
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.'
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'Ένα από αυτά τα αγόρια είναι ο <b>Οδηγός</b>.  Και ένας είναι ο <b>Βοηθός</b>.'
         This time, which boy is the <large>driver</large>?: 'This time, which boy is the <large>driver</large>?'
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
         /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
@@ -512,26 +520,26 @@ el:
       test multi image:
         Maze Multiple Choice Two: Maze Multiple Choice Two
         /script_assets/matches/images/head.jpg,400: /script_assets/matches/images/head.jpg,400
-        This puzzle is all about selecting the correct flowers.: This puzzle is all about selecting the correct flowers.
+        This puzzle is all about selecting the correct flowers.: Αυτό το παζλ έχει να κάνει με την επιλογή των σωστών λουλουδιών.
         Instructions: Οδηγίες
-        Click the right answer, then submit. And here are some longer instructions just to test things more.  How's that word wrapping?: "Click the right answer, then submit. And here are some longer instructions just to test things more.  How's that word wrapping?"
+        Click the right answer, then submit. And here are some longer instructions just to test things more.  How's that word wrapping?: Κάντε κλικ στη σωστή απάντηση και μετά πατήστε υποβολή. Και εδώ είναι μερικές επιπλέον οδηγίες για να δοκιμάστε κι άλλα πράγματα. Πως τα πάτε με την αναδίπλωση λέξεων;
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
-        Which flowers are yellow?: Which flowers are yellow?
+        Which flowers are yellow?: Ποια λουλούδια είναι κίτρινα;
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
         /script_assets/matches/images/a2.jpg: /script_assets/matches/images/a2.jpg
         /script_assets/matches/images/a3.jpg: /script_assets/matches/images/a3.jpg
         /script_assets/matches/images/a4.jpg: /script_assets/matches/images/a4.jpg
       test multi text:
-        Presidents: Presidents
-        This multiple choice is all about the presidents of the United States.: This multiple choice is all about the presidents of the United States.
-        Who was the first president of the USA?: Who was the first president of the USA?
-        Fred Flintstone: Fred Flintstone
-        Martha Washington: Martha Washington
-        George Washington: George Washington
-        George Jetson: George Jetson
+        Presidents: Πρόεδροι
+        This multiple choice is all about the presidents of the United States.: Αυτό το τέστ πολλαπλής επιλογής έχει να κάνει με τους προέδρους των Ηνωμένων Πολιτειών.
+        Who was the first president of the USA?: Ποιος ήταν ο πρώτος Πρόεδρος των ΗΠΑ;
+        Fred Flintstone: Φρεντ Φλίντστοουν
+        Martha Washington: Μάρθα Ουάσιγκτον
+        George Washington: Τζωρτζ Ουάσιγκτον
+        George Jetson: Τζωρτζ Τζέτσον
       unique level name here:
         title: τίτλος
-        description here: description here
-        Question: Question
-        wrong answer: wrong answer
-        right answer: right answer
+        description here: περιγραφή εδώ
+        Question: Ερώτηση
+        wrong answer: λάθος απάντηση
+        right answer: σωστή απάντηση

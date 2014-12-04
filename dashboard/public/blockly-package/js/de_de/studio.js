@@ -6698,6 +6698,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -6710,7 +6711,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -6720,16 +6723,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -16059,6 +16052,7 @@ levels.playlab_2 = utils.extend(levels.dog_and_cat_hello, {
   firstSpriteIndex: 20, // cave boy
   timeoutFailureTick: null,
   timeoutAfterWhenRun: true,
+  defaultEmotion: Emotions.HAPPY,
   goal: {
     successCondition: function () {
       return Studio.allWhenRunBlocksComplete() && Studio.sayComplete > 1;
@@ -16249,6 +16243,7 @@ levels.playlab_4 = {
   },
   background: 'tennis',
   avatarList: ['tennisboy', 'tennisgirl'],
+  defaultEmotion: Emotions.SAD,
   requiredBlocks: [
     [{
       test: 'moveDistance',
@@ -16336,6 +16331,7 @@ levels.playlab_5 = utils.extend(levels.click_hello, {
   background: 'space',
   firstSpriteIndex: 23, // spacebot
   timeoutAfterWhenRun: true,
+  defaultEmotion: Emotions.HAPPY,
   toolbox: tb(blockOfType('studio_saySprite')),
   startBlocks:
    '<block type="studio_whenSpriteClicked" deletable="false" x="20" y="20"></block>'
@@ -16470,6 +16466,7 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
     success: 'blue_fireball',
     imageWidth: 800
   },
+  defaultEmotion: Emotions.ANGRY,
   toolbox:
     tb(
       blockOfType('studio_move', {DIR: 8}) +
@@ -16562,6 +16559,7 @@ levels.playlab_7 = {
     'downButton',
     'upButton'
   ],
+  defaultEmotion: Emotions.HAPPY,
   map: [
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -16790,6 +16788,7 @@ levels.playlab_8 = {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
   avatarList: ['unicorn', 'wizard'],
+  defaultEmotion: Emotions.HAPPY,
   goal: {
     successCondition: function () {
       return Studio.sprite[0].isCollidingWith(1) && Studio.playerScore === 1;
@@ -16936,6 +16935,7 @@ levels.playlab_9 = {
   scale: {
     snapRadius: 2
   },
+  defaultEmotion: Emotions.ANGRY,
   softButtons: [
     'leftButton',
     'rightButton',
@@ -18867,7 +18867,8 @@ Studio.init = function(config) {
   config.makeUrl = "http://code.org/studio";
   config.makeImage = BlocklyApps.assetUrl('media/promo.png');
 
-  config.enableShowCode = BlocklyApps.editCode;
+  // Disable "show code" button in feedback dialog when workspace is hidden
+  config.enableShowCode = !config.level.embed && BlocklyApps.editCode;
   config.varsInGlobals = true;
 
   Studio.initSprites();
@@ -19018,7 +19019,7 @@ BlocklyApps.reset = function(first) {
       size: constants.DEFAULT_SPRITE_SIZE,
       dir: Direction.NONE,
       displayDir: Direction.SOUTH,
-      emotion: Emotions.NORMAL,
+      emotion: level.defaultEmotion || Emotions.NORMAL,
       // tickCount of last time sprite moved,
       lastMove: Infinity,
       // overridden as soon as we call setSprite
@@ -19100,7 +19101,7 @@ var displayFeedback = function() {
       feedbackType: Studio.testResults,
       response: Studio.response,
       level: level,
-      showingSharing: level.freePlay,
+      showingSharing: !level.disableSharing && (level.freePlay),
       feedbackImage: Studio.feedbackImage,
       twitter: twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
@@ -21162,7 +21163,7 @@ exports.end = function(d){return "Ende"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Die \"Wiederholen\"- und die \"Wenn\"-Bausteine benötigten im Inneren andere Bausteine um zu funktionieren. Stelle sicher, dass der innere Baustein in den umschließenden Baustein passt."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "Der Funktionsblock muss andere Blöcke beinhalten um zu funktionieren."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Der Funktionsblock muss andere Blöcke beinhalten, um zu funktionieren."};
 
 exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
 
@@ -21178,7 +21179,7 @@ exports.errorUnusedFunction = function(d){return "You created a function, but ne
 
 exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
-exports.extraTopBlocks = function(d){return "Du hast die Bausteine entfernt. Wolltest du sie an den \"Wenn ausführen\" Baustein anhängen?"};
+exports.extraTopBlocks = function(d){return "Einige Blöcke sind nicht verbunden. Wolltest Du diese mit dem \"Wenn ausführen\" Block verbinden?"};
 
 exports.finalStage = function(d){return "Glückwunsch! Du hast das letzte Level erfolgreich abgeschlossen."};
 
@@ -21186,7 +21187,7 @@ exports.finalStageTrophies = function(d){return "Glückwunsch! Du hast das letzt
 
 exports.finish = function(d){return "Abschließen"};
 
-exports.generatedCodeInfo = function(d){return "Sogar Top-Universitäten unterrichten Baustein-basiertes programmieren (z.B."+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Die Bausteine, welche sie zusammengestellt haben, können auch in JavaScript dargestellt werden, die meistgenutzte Programmiersprache der Welt:"};
+exports.generatedCodeInfo = function(d){return "Selbst Eliteuniversitäten unterrichten blockbasiertes Programmieren (z.B. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Allerdings können die von Dir zusammengefügten Blöcke auch in JavaScript, der weltweit meistverbreiteten Programmierspache, dargestellt werden:"};
 
 exports.hashError = function(d){return "Ups, '%1' stimmt mit keinem gespeicherten Programm überein."};
 
@@ -21200,7 +21201,7 @@ exports.levelIncompleteError = function(d){return "Du benutzt alle nötigen Baus
 
 exports.listVariable = function(d){return "Liste"};
 
-exports.makeYourOwnFlappy = function(d){return "Erstelle Dein Eigenes \"Flappy Bird\" Spiel"};
+exports.makeYourOwnFlappy = function(d){return "Programmiere Dein eigenes \"Flappy\"-Spiel"};
 
 exports.missingBlocksErrorMsg = function(d){return "Versuche einen, oder mehrere Bausteine von unten zu verwenden, um dieses Puzzle zu lösen."};
 
@@ -21208,9 +21209,9 @@ exports.nextLevel = function(d){return "Glückwunsch! Du hast Puzzle "+v(d,"puzz
 
 exports.nextLevelTrophies = function(d){return "Glückwunsch! Du hast Puzzle "+v(d,"puzzleNumber")+" erfolgreich abgeschlossen und "+p(d,"numTrophies",0,"de",{"one":"eine Trophäe","other":n(d,"numTrophies")+" Trophäen"})+" gewonnen."};
 
-exports.nextStage = function(d){return "Herzlichen Glückwunsch! Du hast "+v(d,"stageName")+" erfolgreich abgeschlossen."};
+exports.nextStage = function(d){return "Glückwunsch! "+v(d,"stageName")+" abgeschlossen."};
 
-exports.nextStageTrophies = function(d){return "Herzlichen Glückwunsch! Du hast Teil "+v(d,"stageName")+" erfolgreich abgeschlossen und "+p(d,"numTrophies",0,"de",{"one":"eine Trophäe","other":n(d,"numTrophies")+" Trophäen"})+" gewonnen."};
+exports.nextStageTrophies = function(d){return "Glückwunsch! "+v(d,"stageName")+" abgeschlossen und "+p(d,"numTrophies",0,"de",{"eine":"a trophy","other":n(d,"numTrophies")+" trophies"})+" gewonnen."};
 
 exports.numBlocksNeeded = function(d){return "Glückwunsch! Du hast Puzzle "+v(d,"puzzleNumber")+" fertig gestellt. (Du hättest jedoch nur "+p(d,"numBlocks",0,"de",{"one":"1 Baustein","other":n(d,"numBlocks")+" Bausteine"})+" gebraucht.)"};
 
@@ -21218,7 +21219,7 @@ exports.numLinesOfCodeWritten = function(d){return "Du hast soeben "+p(d,"numLin
 
 exports.play = function(d){return "spielen"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Drucken"};
 
 exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" von "+v(d,"stage_total")};
 
@@ -21262,11 +21263,11 @@ exports.hintRequest = function(d){return "Hinweis anzeigen"};
 
 exports.backToPreviousLevel = function(d){return "Zurück zum vorherigen Level"};
 
-exports.saveToGallery = function(d){return "In deiner Galerie abspeichern"};
+exports.saveToGallery = function(d){return "In die Galerie abspeichern"};
 
-exports.savedToGallery = function(d){return "In deiner Gallerie gespeichert!"};
+exports.savedToGallery = function(d){return "In der Galerie gespeichert!"};
 
-exports.shareFailure = function(d){return "Leider können wir dieses Programm nicht teilen."};
+exports.shareFailure = function(d){return "Leider können wir dieses Programm nicht freigeben."};
 
 exports.typeFuncs = function(d){return "Verfügbare Funktionen:%1"};
 
@@ -21274,7 +21275,7 @@ exports.typeHint = function(d){return "Beachte, dass die runden Klammern und Sem
 
 exports.workspaceHeader = function(d){return "Setze die Bausteine hier zusammen: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Geben Sie hier Ihren JavaScript-code ein"};
+exports.workspaceHeaderJavaScript = function(d){return "Gib hier Deinen JavaScript-Code ein"};
 
 exports.infinity = function(d){return "Unendlichkeit"};
 
@@ -21288,17 +21289,17 @@ exports.watchVideo = function(d){return "Video anschauen"};
 
 exports.when = function(d){return "wenn"};
 
-exports.whenRun = function(d){return "Programmstart"};
+exports.whenRun = function(d){return "wenn ausführen"};
 
 exports.tryHOC = function(d){return "Probiere \"The Hour of Code\" aus"};
 
 exports.signup = function(d){return "Für den Einführungskurs anmelden"};
 
-exports.hintHeader = function(d){return "Hier ist ein Tipp:"};
+exports.hintHeader = function(d){return "Hier ein Tipp:"};
 
-exports.genericFeedback = function(d){return "Schau dir an, was du gemacht hast und versuche Fehler im Programm zu beheben."};
+exports.genericFeedback = function(d){return "Sieh Dir Dein Ergebnis an und versuche, Programmierfehler zu beheben."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Sieh was ich gemacht habe"};
 
 
 },{"messageformat":61}],49:[function(require,module,exports){
@@ -21625,15 +21626,15 @@ exports.setSpriteHidden = function(d){return "verstecke Bild"};
 
 exports.setSpriteHideK1 = function(d){return "ausblenden"};
 
-exports.setSpriteAnna = function(d){return "to a Anna image"};
+exports.setSpriteAnna = function(d){return "zum Anna Bild hinzu"};
 
-exports.setSpriteElsa = function(d){return "to a Elsa image"};
+exports.setSpriteElsa = function(d){return "zum Elsa Bild hinzu"};
 
-exports.setSpriteHiro = function(d){return "to a Hiro image"};
+exports.setSpriteHiro = function(d){return "zum Hiro Bild hinzu"};
 
-exports.setSpriteBaymax = function(d){return "to a Baymax image"};
+exports.setSpriteBaymax = function(d){return "zum babymax Bild hinzu"};
 
-exports.setSpriteRapunzel = function(d){return "to a Rapunzel image"};
+exports.setSpriteRapunzel = function(d){return "zum Rapunzel Bild hinzu"};
 
 exports.setSpriteKnight = function(d){return "zu einem Ritter machen"};
 

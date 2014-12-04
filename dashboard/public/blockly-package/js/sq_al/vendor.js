@@ -1439,7 +1439,7 @@ renameVar:function(a,b){Blockly.Names.equals(a,this.getTitleValue("VAR"))&&this.
 b.callback=Blockly.ContextMenu.callbackFactory(this,c);a.push(b)}};
 Blockly.Blocks.variables_set={init:function(){var a=new Blockly.FieldLabel(Blockly.Msg.VARIABLES_SET_ITEM);a.EDITABLE=!0;this.setHelpUrl(Blockly.Msg.VARIABLES_SET_HELPURL);this.setHSV(312,0.32,0.62);this.appendValueInput("VALUE").appendTitle(Blockly.Msg.VARIABLES_SET_TITLE).appendTitle(Blockly.disableVariableEditing?a:new Blockly.FieldVariable(Blockly.Msg.VARIABLES_SET_ITEM),"VAR").appendTitle(Blockly.Msg.VARIABLES_SET_TAIL);this.setPreviousStatement(!0);this.setNextStatement(!0);this.setTooltip(Blockly.Msg.VARIABLES_SET_TOOLTIP)},
 getVars:function(){return[this.getTitleValue("VAR")]},renameVar:function(a,b){Blockly.Names.equals(a,this.getTitleValue("VAR"))&&this.setTitleValue(b,"VAR")},contextMenuMsg_:Blockly.Msg.VARIABLES_SET_CREATE_GET,contextMenuType_:"variables_get",customContextMenu:Blockly.Blocks.variables_get.customContextMenu};
-Blockly.Blocks.parameters_get={init:function(){var a=new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);a.EDITABLE=!0;this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);this.setHSV(312,0.32,0.62);this.appendDummyInput().appendTitle(Blockly.Msg.VARIABLES_GET_TITLE).appendTitle(Blockly.disableVariableEditing?a:new Blockly.FieldParameter(Blockly.Msg.VARIABLES_GET_ITEM),"VAR").appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);this.setOutput(!0);this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP)},renameVar:function(a,
+Blockly.Blocks.parameters_get={init:function(){var a=new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);a.EDITABLE=!0;this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);this.setHSV(7,0.8,0.95);this.appendDummyInput().appendTitle(Blockly.Msg.VARIABLES_GET_TITLE).appendTitle(Blockly.disableVariableEditing?a:new Blockly.FieldParameter(Blockly.Msg.VARIABLES_GET_ITEM),"VAR").appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);this.setOutput(!0);this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP)},renameVar:function(a,
 b){Blockly.functionEditor&&(Blockly.functionEditor.renameParameter(a,b),Blockly.functionEditor.refreshParamsEverywhere())},removeVar:Blockly.Blocks.variables_get.removeVar};Blockly.Blocks.functionalProcedures={};
 Blockly.Blocks.functional_definition={init:function(){this.setHelpUrl(Blockly.Msg.PROCEDURES_DEFNORETURN_HELPURL);this.setHSV(94,0.84,0.6);this.setFunctional(!0,{headerHeight:0,rowBuffer:3});this.setFunctionalOutput(!0,"Number");var a=Blockly.Procedures.findLegalName(Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE,this);this.appendDummyInput().appendTitle(Blockly.Msg.DEFINE_FUNCTION_DEFINE).appendTitle(new Blockly.FieldTextInput(a,Blockly.Procedures.rename),"NAME").appendTitle("","PARAMS");this.appendFunctionalInput("STACK");
 this.setFunctional(!0);this.setTooltip(Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP);this.isFunctionalVariable_=!1;this.parameterNames_=[];this.paramIds_=[];this.parameterTypes_=[]},mutationToDom:function(){for(var a=document.createElement("mutation"),b=0;b<this.parameterNames_.length;b++){var c=document.createElement("arg");c.setAttribute("name",this.parameterNames_[b]);c.setAttribute("type",this.parameterTypes_[b]);a.appendChild(c)}this.description_&&(b=document.createElement("description"),
@@ -1563,9 +1563,9 @@ Blockly.JavaScript.parameters_set=Blockly.JavaScript.variables_set;
 goog.provide('Blockly.Msg.sq_al');
 goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "actual";
-Blockly.Msg.ADD = "Add";
+Blockly.Msg.ADD = "Shto";
 Blockly.Msg.ADD_COMMENT = "Vendos nje Koment";
-Blockly.Msg.ADD_PARAMETER = "Add Parameter";
+Blockly.Msg.ADD_PARAMETER = "Shto parametrin";
 Blockly.Msg.CHANGE_VALUE_TITLE = "Ndrysho Vlerat:";
 Blockly.Msg.COLLAPSE_ALL = "Mbyll blloqet";
 Blockly.Msg.COLLAPSE_BLOCK = "Mbyll bllokun";
@@ -1574,17 +1574,17 @@ Blockly.Msg.COLOUR_BLEND_COLOUR2 = "Ngjyra 2";
 Blockly.Msg.COLOUR_BLEND_HELPURL = "http://meyerweb.com/eric/tools/color-blend/";
 Blockly.Msg.COLOUR_BLEND_RATIO = "Perpjesetim";
 Blockly.Msg.COLOUR_BLEND_TITLE = "perziej";
-Blockly.Msg.COLOUR_BLEND_TOOLTIP = "Perzien dy ngjyra së bashku me një raport të dhënë (0.0 - 1.0).";
+Blockly.Msg.COLOUR_BLEND_TOOLTIP = "Përzien dy ngjyra me proporcionin e dhënë (0.0-1.0).\n";
 Blockly.Msg.COLOUR_PICKER_HELPURL = "http://en.wikipedia.org/wiki/Color";
-Blockly.Msg.COLOUR_PICKER_TOOLTIP = "Zgjidh nje ngjyre nga nje game ngjyrash.";
+Blockly.Msg.COLOUR_PICKER_TOOLTIP = "Zgjedh një ngjyrë prej paletës.";
 Blockly.Msg.COLOUR_RANDOM_HELPURL = "http://randomcolour.com";
-Blockly.Msg.COLOUR_RANDOM_TITLE = "ngjyre e rastesishme";
-Blockly.Msg.COLOUR_RANDOM_TOOLTIP = "Zgjidhni një ngjyrë në mënyrë të rastësishme.";
+Blockly.Msg.COLOUR_RANDOM_TITLE = "Ngjyrë e rastësishme";
+Blockly.Msg.COLOUR_RANDOM_TOOLTIP = "Zgedh një ngjyrë të rastësishme.";
 Blockly.Msg.COLOUR_RGB_BLUE = "blu";
 Blockly.Msg.COLOUR_RGB_GREEN = "jeshile";
 Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.html";
 Blockly.Msg.COLOUR_RGB_RED = "e kuqe";
-Blockly.Msg.COLOUR_RGB_TITLE = "ngjyre me";
+Blockly.Msg.COLOUR_RGB_TITLE = "Ngjyros me";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "Krijo një ngjyrë me shumën e specifikuar te te kuqes, te gjelbëres, dhe bluse. Te gjitha vlerat duhet te jene mes 0 dhe 100.";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "dil nga nje faze perseritese";

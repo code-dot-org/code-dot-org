@@ -1070,7 +1070,8 @@ Studio.init = function(config) {
   config.makeUrl = "http://code.org/studio";
   config.makeImage = BlocklyApps.assetUrl('media/promo.png');
 
-  config.enableShowCode = BlocklyApps.editCode;
+  // Disable "show code" button in feedback dialog when workspace is hidden
+  config.enableShowCode = !config.level.embed && BlocklyApps.editCode;
   config.varsInGlobals = true;
 
   Studio.initSprites();
@@ -1221,7 +1222,7 @@ BlocklyApps.reset = function(first) {
       size: constants.DEFAULT_SPRITE_SIZE,
       dir: Direction.NONE,
       displayDir: Direction.SOUTH,
-      emotion: Emotions.NORMAL,
+      emotion: level.defaultEmotion || Emotions.NORMAL,
       // tickCount of last time sprite moved,
       lastMove: Infinity,
       // overridden as soon as we call setSprite
@@ -1303,7 +1304,7 @@ var displayFeedback = function() {
       feedbackType: Studio.testResults,
       response: Studio.response,
       level: level,
-      showingSharing: level.freePlay,
+      showingSharing: !level.disableSharing && (level.freePlay),
       feedbackImage: Studio.feedbackImage,
       twitter: twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)

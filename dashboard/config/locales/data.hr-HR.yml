@@ -537,6 +537,126 @@
           Have fun!'
         studio_ec_sandbox: Create your own game. When you're done, click Finish to
           let friends try your game on their phones.
+    levelbuilder:
+      frozen line:
+        instructions: Bok! Ja sam Elsaiz Arendelle. Pomozi mi da napravim jednu liniju.
+      frozen perpendicular:
+        instructions: A sada, da vidimo možemo li napraviti dvije linije koje su okomite
+          jedna na drugu. Trebat ćeš koristiti blok "Okreni se" kao i blok "Pomakni
+          se".
+      frozen square iterative:
+        instructions: Čini se da smo na pola puta da napravimo kvadrat. Hajdemo staviti
+          sve 4 linije zajedno i napraviti kvadrat.
+      frozen square loop:
+        instructions: Bok, ja sam Anna iz Arendelle! Hajdemo napraviti kvadrat s blokom
+          "Ponovi" koji nam omogućava korištenje manje blokova. Koliko puta (???)
+          treba blok "Ponovi" ponavljati blokove unutar sebe da napravi kvadrat?
+      frozen square loop 3x:
+        instructions: Hajdemo napraviti tri kvadrata, okrečući se nakon svakog. Nemoj
+          se zaboraviti okrenuti za 120 stupnjeva prije novog kvadrata.
+      frozen square snowflake:
+        instructions: Možeš li napraviti pahuljicu koristeći blok "Ponovi" tako da
+          napraviš kvadrat 10 puta koristeći blok "Okreni se" da se okreneš za 36
+          stupnjeva nakon svakog kvadrata?
+      frozen cross:
+        instructions: Koristeći blok "Ponovi" napravi znak plus. Jesi li primijetio/primijetila
+          da se Elsa može kretati naprijed i nazad?
+      frozen cross rotate:
+        instructions: Sada pokušaj ponoviti to 10 puta. Za koliko stupnjeva se trebaš
+          okrenuti između svake linije?
+      frozen cross rotate dense:
+        instructions: 'Hajdemo to ponoviti 90 puta. Koliko je 360:90? Hint: to je
+          jako mali broj.'
+      frozen diamond:
+        instructions: 'Hajdemo napraviti paralelogram. On je sličan kao kvadrat, ali
+          ima različite kutove: 60 i 120 stupnjeva umjesto 90 stupnjeva.'
+      frozen diamond mini snowflake:
+        instructions: Jeste li znali da je svaka pahulja različitog oblika? Hajdemo
+          napraviti novu pahulju koristeći blok "Ponovi" da ponovimo crtanje paralelograma
+          4 puta, okrećući se u desno za 90 stupnjeva nakon svakog paralelograma.
+      frozen diamond snowflake:
+        instructions: Hajdemo sada napraviti novu pahulju koristeći blok "Ponovi"
+          da nacrtamo paralelogram 10 puta, okrećući se u desno za 36 stupnjeva nakon
+          svakog paralelograma.
+      frozen circle:
+        instructions: Kružnica je poseban oblik. Možeš li odgonetnuti koji broj treba
+          zamijeniti s upitnikom kako bi nacrtali kružnicu?
+      frozen circle function:
+        instructions: Koristeći novi blok "Nacrtaj kružnicu" , nacrtaj 10 kružnica
+          koje se preklapaju. Nemoj zaboraviti ići naprijed između kružnica.
+      frozen circle function in circle:
+        instructions: Hajdemo sada nacrtati 20 kružnica koje se preklapaju, okrećući
+          se za 18 stupnjeva nakon svake kružnice.
+      frozen circle function with parameter:
+        instructions: Ovdje imamo blok "Nacrtaj kružnicu" koji može crtati kružnice
+          različite veličine. Možeš li koristeći ga napraviti malu kružnicu veličine
+          5 i veću kružnicu veličine 10?
+      frozen snowflower:
+        instructions: Zamršeni snježni uzorci mogu se napraviti s vrlo jednostavnim
+          oblicima. Možeš li napraviti uzorak ponavljajući 5 kružnica veličine 5 i
+          5 kružnica veličine 10?
+      frozen snowflake branch:
+        instructions: Pokušaj koristeći blok "Nacrtaj granu pahulje" napraviti tri
+          grane, tako da izgledaju kao pahulja.
+      frozen snowflake full:
+        instructions: Hajdemo sada to ponoviti 8 puta da napravimo predivnu pahulju!
+      frozen freeplay:
+        instructions: Službeno si postao/postala majstor-umjetnik! Napravi snježnu
+          bajku i podijeli ju sa svojim prijateljima.
+      scrat 16:
+        instructions: Žir! Žir! Žir! Koristeći "ako" blok dovedi me do njega s najmanjim
+          brojem blokova.
+      scrat 17:
+        instructions: Ok, hajdemo to napraviti ponovno za vježbu - ovo je vrlo slično,
+          ali pazi na zid!
+      scrat 18:
+        instructions: '"Ako-inače" blokovi provjeravaju uvjet i ovisno o uvjetu rade
+          jednu ili drugu stvar. Probaj me dovesti do žira koristeći taj novi blok.'
+      scrat 19:
+        instructions: One more practice of the "if-else" block, can you get it right
+          on your first try?
+      scrat 20:
+        instructions: Možeš li dodati samo 3 bloka da mi pomogneš riješiti složeniji
+          labirint? Ako možeš, ja mogu hodati kroz bilo koji vijugavi put bez obzira
+          na njegovu duljinu! Požuri! Led se topi!
+      Standalone_Artist_1:
+        instructions: Welcome to Artist! First off, let's try to make a simple square
+          using the turn right block and move forward block. Each side should be 100
+          pixels long.
+      Standalone_Artist_2:
+        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel
+          long sides.
+      Standalone_Artist_3:
+        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree
+          turns?
+      Standalone_Artist_4:
+        instructions: Now you've got a new block to play with, the loop. This will
+          repeat a set of commands. What happens if you loop these commands 6 times?
+      Standalone_Artist_5:
+        instructions: How many times do you need to loop this diamond to draw the
+          flower?
+      Standalone_Artist_5.5:
+        instructions: 'Notice how we simplified the diamond code by turning it into
+          a loop. You can loop that whole sequence 12 times to draw the flower. Hint:
+          You''ll need to turn 30 degrees after your diamond loop so you don''t keep
+          drawing over the same diamond.'
+      Standalone_Artist_6:
+        instructions: 'Loop this hexagon code 6 times to create the design. How many
+          degrees will you need to turn each time? Hint: divide the number of degrees
+          in a circle by the number of times you are looping.'
+      Standalone_Artist_7:
+        instructions: 'A function is another programming tool to help you avoid repeating
+          yourself. This function draws a flower, so you can use it any time you want
+          to draw a flower. Use this and the new jump block to draw these flowers.
+          Hint: The flowers are 150 pixels apart'
+      Standalone_Artist_8:
+        instructions: Here's a function called "Draw a shape" that we've programmed
+          to draw hexagons. Run the code to see what it does and then experiment with
+          the function to see what happens. Can you make it draw a pattern of squares,
+          triangles, or octagons?
+      Standalone_Artist_9:
+        instructions: Now go ahead and make whatever picture you'd like! You've even
+          got an empty function that you can make do whatever you want!
     video:
       name:
         maze_intro: Maze Intro
@@ -547,6 +667,7 @@
         loop_until: Repeat Until Block
         if: If Block
         if_else: If/else Block
+        if_else_scrat: If/else Block
         function: Funkcije
         loop_while: While Block
         loop_for: Counter Block
@@ -579,6 +700,7 @@
         C1_playlab_storytelling: Play Lab - Create a Story
         C1_planting_seed: Planting a Seed
         C1_building_foundation: Building a Foundation
+        C1_going_places_safely: Going Places Safely
         C2_maze_intro: Maze Intro
         C2_artist_intro: Artist Intro
         C2_zuck_repeat_loop: Maze Loops
@@ -593,6 +715,7 @@
         C2_binary_bracelets: Binary Bracelets
         C2_relay_programming: Relay Programming
         C2_paper_airplanes: Paper Airplanes
+        C2_digital_footprint: Your Digital Footprint
         C3_maze_level_4: Maze Loops
         C3_artist_intro: Artist Intro
         C3_artist_functions: Artist Functions
@@ -611,9 +734,14 @@
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
-        Frozen_intro: Hour of Code Intro
-        Frozen_loops: Introduction to Loops
-        Frozen_functions: Introduction to Functions
+        C4_artist_math: Programming the Artist with Math
+        C4_create_functions: Creating Functions
+        C4_edit_functions: Editing Functions
+        C4_for_loops: For Loops
+        C4_variables: Varijable
+        frozen_intro: Hour of Code Intro
+        frozen_loops: Introduction to Loops
+        frozen_functions: Introduction to Functions
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
@@ -661,3 +789,19 @@
           the Bee will turn to get the nectar.
         logic_category: Open the "Logic" flyout to find the "if/else" block.
         length_parameter: Can you update this function so it uses the "length" parameter?
+        frozen_diamond_repeat: Use the repeat block to create this shape.
+        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
+          each circle.
+        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
+          and change the size.
+        frozen_snowflake_branch: Use the "create a snowflake branch" block
+        frozen_create_square: Attach more blocks here to create a square
+        playlab_drag_say: Drag the "say" block here and type "hello"
+        playlab_use_twice: Use this block twice and remember to change the actor number
+        playlab_move_girl: Use the "move right" block to move Tennis Girl
+        playlab_play_sound: Add "play sound" block here
+        playlab_arrow_keys: Remember to use these to move the witch after clicking
+          on Run
+        playlab_add_move: Add "move" blocks inside this repeat block
+        playlab_add_score: Add score blocks here
+        playlab_add_blocks: Add your blocks here

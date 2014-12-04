@@ -3495,6 +3495,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -3507,7 +3508,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -3517,16 +3520,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -11066,17 +11059,17 @@ var MessageFormat = require("messageformat");MessageFormat.locale.cs = function 
   }
   return 'other';
 };
-exports.compute = function(d){return "compute"};
+exports.compute = function(d){return "spočítat"};
 
-exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
+exports.equivalentExpression = function(d){return "Zkus změnit pořadí argumentů a tak získat přesně stejný výraz."};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"compute\" block?"};
+exports.extraTopBlocks = function(d){return "Máš nepřipojené bloky. Nechceš je připojit na blok \"vypočítat\"?"};
 
-exports.goal = function(d){return "Goal:"};
+exports.goal = function(d){return "Cíl:"};
 
-exports.reinfFeedbackMsg = function(d){return "Vypadá to, jako to, co chceš? Můžeš stisknout tlačítko \"Zkusit znovu\" a zobrazit svůj náčrt."};
+exports.reinfFeedbackMsg = function(d){return "Tady je tvůj příběh! Pokračuj v práci, nebo přejdi na další hádanku!"};
 
-exports.yourExpression = function(d){return "Your expression:"};
+exports.yourExpression = function(d){return "Výraz:"};
 
 
 },{"messageformat":53}],41:[function(require,module,exports){
@@ -11135,7 +11128,7 @@ exports.end = function(d){return "konec"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Bloky \"Opakovat\" nebo \"Pokud\" v sobě musí mít další bloky, aby fungovaly. Ujisti se, že vnitřní bloky jsou v pořádku vložené dovnitř vnějších bloků."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Blok funkce v sobě musí obsahovat další bloky."};
 
 exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
 
@@ -11151,7 +11144,7 @@ exports.errorUnusedFunction = function(d){return "You created a function, but ne
 
 exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
-exports.extraTopBlocks = function(d){return "Máš další extra bloky, které nejsou připojené k bloku událostí."};
+exports.extraTopBlocks = function(d){return "Máš nepřipojené bloky. Nechceš je připojit k bloku \"po spuštění\"?"};
 
 exports.finalStage = function(d){return "Dobrá práce! Dokončil si poslední fázi."};
 
@@ -11189,9 +11182,9 @@ exports.numBlocksNeeded = function(d){return "Dobrá práce! Dokončil jsi Háda
 
 exports.numLinesOfCodeWritten = function(d){return "Už jsi napsal "+p(d,"numLines",0,"cs",{"one":"1 řádek","other":n(d,"numLines")+" řádků"})+" kódu!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "hrát"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Tisk"};
 
 exports.puzzleTitle = function(d){return "Hádanka "+v(d,"puzzle_number")+" z "+v(d,"stage_total")};
 
@@ -11203,11 +11196,11 @@ exports.runProgram = function(d){return "Spustit"};
 
 exports.runTooltip = function(d){return "Spustí program definovaný bloky na pracovní ploše."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "výsledek"};
 
 exports.showCodeHeader = function(d){return "Zobrazit kód"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Zobrazit bloky"};
 
 exports.showGeneratedCode = function(d){return "Zobrazit kód"};
 
@@ -11231,15 +11224,15 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Celkově: "+p(d,"numLin
 
 exports.tryAgain = function(d){return "Zkusit znovu"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Viz tip"};
 
 exports.backToPreviousLevel = function(d){return "Zpět na předchozí úroveň"};
 
-exports.saveToGallery = function(d){return "Uložit do tvé galerie"};
+exports.saveToGallery = function(d){return "Uložit do galerie"};
 
-exports.savedToGallery = function(d){return "Uložit do tvé galerie!"};
+exports.savedToGallery = function(d){return "Uloženo v galerii!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Omlouváme se, ale tento program nemůžeme sdílet."};
 
 exports.typeFuncs = function(d){return "Dostupné funkce:%1"};
 
@@ -11247,7 +11240,7 @@ exports.typeHint = function(d){return "Všimni si, že závorky a středníky js
 
 exports.workspaceHeader = function(d){return "Sestav si zde své bloky: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Zde napiš tvůj kód v JavaScriptu"};
 
 exports.infinity = function(d){return "Nekonečno"};
 
@@ -11269,7 +11262,7 @@ exports.signup = function(d){return "Zaregistruj se do úvodního kurzu"};
 
 exports.hintHeader = function(d){return "Zde je rada:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Podívej se jak jsi skončil a zkus svůj program opravit."};
 
 exports.defaultTwitterText = function(d){return "Check out what I made"};
 

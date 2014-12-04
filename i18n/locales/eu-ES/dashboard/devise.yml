@@ -39,7 +39,7 @@ eu:
       update_needs_confirmation: Zure kontua ondo eguneratu duzu, baina zure eposta helbidea baieztatu behar dugu. Mesedez txekeatu zure eposta eta klikatu baieztapen esteka zure helbide berria baieztatzen bukatzeko.
       updated: Zure kontua ondo eguneratu da.
     sessions:
-      signed_in: Barruan zaude.
+      signed_in: ""
       signed_out: Kanpoan zaude.
     unlocks:
       send_instructions: Posta mezu bat jasoko duzu zure kontua minutu gutxi batzuetan desblokeatzeko argibideekin.

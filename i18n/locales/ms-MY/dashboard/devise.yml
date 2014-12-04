@@ -39,7 +39,7 @@ ms:
       update_needs_confirmation: Anda berjaya memperbaharui akaun anda, tetapi kami perlu menguji e-mel baru anda. Sila semak e-mel dan klik talian untuk pengesahan akhir alamat e-mel baru anda.
       updated: Akaun anda berjaya dikemas kini.
     sessions:
-      signed_in: Daftar masuk berjaya.
+      signed_in: ""
       signed_out: Berjaya didaftar keluar.
     unlocks:
       send_instructions: Anda akan menerima e-mel dengan arahan tentang bagaimana untuk mengesahkan akaun anda dalam masa beberapa minit.

@@ -6698,6 +6698,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -6710,7 +6711,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -6720,16 +6723,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -16059,6 +16052,7 @@ levels.playlab_2 = utils.extend(levels.dog_and_cat_hello, {
   firstSpriteIndex: 20, // cave boy
   timeoutFailureTick: null,
   timeoutAfterWhenRun: true,
+  defaultEmotion: Emotions.HAPPY,
   goal: {
     successCondition: function () {
       return Studio.allWhenRunBlocksComplete() && Studio.sayComplete > 1;
@@ -16249,6 +16243,7 @@ levels.playlab_4 = {
   },
   background: 'tennis',
   avatarList: ['tennisboy', 'tennisgirl'],
+  defaultEmotion: Emotions.SAD,
   requiredBlocks: [
     [{
       test: 'moveDistance',
@@ -16336,6 +16331,7 @@ levels.playlab_5 = utils.extend(levels.click_hello, {
   background: 'space',
   firstSpriteIndex: 23, // spacebot
   timeoutAfterWhenRun: true,
+  defaultEmotion: Emotions.HAPPY,
   toolbox: tb(blockOfType('studio_saySprite')),
   startBlocks:
    '<block type="studio_whenSpriteClicked" deletable="false" x="20" y="20"></block>'
@@ -16470,6 +16466,7 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
     success: 'blue_fireball',
     imageWidth: 800
   },
+  defaultEmotion: Emotions.ANGRY,
   toolbox:
     tb(
       blockOfType('studio_move', {DIR: 8}) +
@@ -16562,6 +16559,7 @@ levels.playlab_7 = {
     'downButton',
     'upButton'
   ],
+  defaultEmotion: Emotions.HAPPY,
   map: [
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -16790,6 +16788,7 @@ levels.playlab_8 = {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
   avatarList: ['unicorn', 'wizard'],
+  defaultEmotion: Emotions.HAPPY,
   goal: {
     successCondition: function () {
       return Studio.sprite[0].isCollidingWith(1) && Studio.playerScore === 1;
@@ -16936,6 +16935,7 @@ levels.playlab_9 = {
   scale: {
     snapRadius: 2
   },
+  defaultEmotion: Emotions.ANGRY,
   softButtons: [
     'leftButton',
     'rightButton',
@@ -18867,7 +18867,8 @@ Studio.init = function(config) {
   config.makeUrl = "http://code.org/studio";
   config.makeImage = BlocklyApps.assetUrl('media/promo.png');
 
-  config.enableShowCode = BlocklyApps.editCode;
+  // Disable "show code" button in feedback dialog when workspace is hidden
+  config.enableShowCode = !config.level.embed && BlocklyApps.editCode;
   config.varsInGlobals = true;
 
   Studio.initSprites();
@@ -19018,7 +19019,7 @@ BlocklyApps.reset = function(first) {
       size: constants.DEFAULT_SPRITE_SIZE,
       dir: Direction.NONE,
       displayDir: Direction.SOUTH,
-      emotion: Emotions.NORMAL,
+      emotion: level.defaultEmotion || Emotions.NORMAL,
       // tickCount of last time sprite moved,
       lastMove: Infinity,
       // overridden as soon as we call setSprite
@@ -19100,7 +19101,7 @@ var displayFeedback = function() {
       feedbackType: Studio.testResults,
       response: Studio.response,
       level: level,
-      showingSharing: level.freePlay,
+      showingSharing: !level.disableSharing && (level.freePlay),
       feedbackImage: Studio.feedbackImage,
       twitter: twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
@@ -21218,7 +21219,7 @@ exports.numLinesOfCodeWritten = function(d){return "Μόλις έγραψες "+
 
 exports.play = function(d){return "παίξε"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Εκτύπωσε"};
 
 exports.puzzleTitle = function(d){return "Παζλ "+v(d,"puzzle_number")+" από "+v(d,"stage_total")};
 
@@ -21234,7 +21235,7 @@ exports.score = function(d){return "σκορ"};
 
 exports.showCodeHeader = function(d){return "Προβολή κώδικα"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Εμφάνισε τα μπλοκ"};
 
 exports.showGeneratedCode = function(d){return "Προβολή κώδικα"};
 
@@ -21262,9 +21263,9 @@ exports.hintRequest = function(d){return "Δείτε την υπόδειξη"};
 
 exports.backToPreviousLevel = function(d){return "Πίσω στο προηγούμενο επίπεδο"};
 
-exports.saveToGallery = function(d){return "Αποθήκευσε το στη συλλογή σου"};
+exports.saveToGallery = function(d){return "Αποθήκευση στη συλλογή"};
 
-exports.savedToGallery = function(d){return "Αποθηκεύτηκε στη συλλογή σου!"};
+exports.savedToGallery = function(d){return "Αποθηκεύτηκε στη συλλογή!"};
 
 exports.shareFailure = function(d){return "Συγγνώμη, δεν μπορούμε να μοιράσουμε αυτό το πρόγραμμα."};
 
@@ -21274,7 +21275,7 @@ exports.typeHint = function(d){return "Σημείωσε ότι απαιτούν�
 
 exports.workspaceHeader = function(d){return "Συναρμολόγησε τα μπλοκ σου εδώ: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Πληκτρολογήστε τον Javascript κώδικά σας εδώ"};
 
 exports.infinity = function(d){return "Άπειρο"};
 
@@ -21298,7 +21299,7 @@ exports.hintHeader = function(d){return "Να μια συμβουλή:"};
 
 exports.genericFeedback = function(d){return "Δες πως κατέληξες και δοκίμασε να διορθώσεις το πρόγραμμά σου."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Δείτε τι έκανα"};
 
 
 },{"messageformat":61}],49:[function(require,module,exports){
@@ -21307,31 +21308,31 @@ exports.actor = function(d){return "ηθοποιός"};
 
 exports.alienInvasion = function(d){return "Alien Invasion!"};
 
-exports.backgroundBlack = function(d){return "black"};
+exports.backgroundBlack = function(d){return "μαύρο"};
 
-exports.backgroundCave = function(d){return "cave"};
+exports.backgroundCave = function(d){return "σπηλιά"};
 
-exports.backgroundCloudy = function(d){return "cloudy"};
+exports.backgroundCloudy = function(d){return "συννεφιασμένος"};
 
-exports.backgroundHardcourt = function(d){return "hardcourt"};
+exports.backgroundHardcourt = function(d){return "σκληρό γήπεδο"};
 
-exports.backgroundNight = function(d){return "night"};
+exports.backgroundNight = function(d){return "νύχτα"};
 
-exports.backgroundUnderwater = function(d){return "underwater"};
+exports.backgroundUnderwater = function(d){return "υποβρύχια"};
 
-exports.backgroundCity = function(d){return "city"};
+exports.backgroundCity = function(d){return "πόλη"};
 
-exports.backgroundDesert = function(d){return "desert"};
+exports.backgroundDesert = function(d){return "έρημος"};
 
-exports.backgroundRainbow = function(d){return "rainbow"};
+exports.backgroundRainbow = function(d){return "ουράνιο τόξο"};
 
-exports.backgroundSoccer = function(d){return "soccer"};
+exports.backgroundSoccer = function(d){return "ποδόσφαιρο"};
 
-exports.backgroundSpace = function(d){return "space"};
+exports.backgroundSpace = function(d){return "διάστημα"};
 
-exports.backgroundTennis = function(d){return "tennis"};
+exports.backgroundTennis = function(d){return "τένις"};
 
-exports.backgroundWinter = function(d){return "winter"};
+exports.backgroundWinter = function(d){return "χειμώνας"};
 
 exports.catActions = function(d){return "Ενέργειες"};
 
@@ -21363,7 +21364,7 @@ exports.emotion = function(d){return "διάθεση"};
 
 exports.finalLevel = function(d){return "Συγχαρητήρια! Έλυσες το τελευταίο Παζλ."};
 
-exports.for = function(d){return "for"};
+exports.for = function(d){return "για"};
 
 exports.hello = function(d){return "γεια σου"};
 
@@ -21523,15 +21524,15 @@ exports.projectileRedHearts = function(d){return "κόκκινες καρδιέ�
 
 exports.projectileRandom = function(d){return "τυχαίο"};
 
-exports.projectileAnna = function(d){return "Anna"};
+exports.projectileAnna = function(d){return "Άννα"};
 
-exports.projectileElsa = function(d){return "Elsa"};
+exports.projectileElsa = function(d){return "Έλσα"};
 
 exports.projectileHiro = function(d){return "Hiro"};
 
 exports.projectileBaymax = function(d){return "Baymax"};
 
-exports.projectileRapunzel = function(d){return "Rapunzel"};
+exports.projectileRapunzel = function(d){return "Ραπουνζέλ"};
 
 exports.reinfFeedbackMsg = function(d){return "Μπορείς να πατήσεις το πλήκτρο \"Δοκίμασε ξανά\" για να επιστρέψεις στο παιχνίδι σου."};
 
@@ -21581,9 +21582,9 @@ exports.setBackgroundWinter = function(d){return "όρισε φόντο χειμ
 
 exports.setBackgroundTooltip = function(d){return "Ορίζει την εικόνα στο φόντο"};
 
-exports.setEnemySpeed = function(d){return "set enemy speed"};
+exports.setEnemySpeed = function(d){return "καθόρισε ταχύτητα του εχθρού"};
 
-exports.setPlayerSpeed = function(d){return "set player speed"};
+exports.setPlayerSpeed = function(d){return "καθόρισε ταχύτητα παίκτη"};
 
 exports.setScoreText = function(d){return "όρισε σκορ"};
 
@@ -21625,15 +21626,15 @@ exports.setSpriteHidden = function(d){return "σε κρυμμένη εικόνα
 
 exports.setSpriteHideK1 = function(d){return "κρύψε"};
 
-exports.setSpriteAnna = function(d){return "to a Anna image"};
+exports.setSpriteAnna = function(d){return "προς μια εικόνα της Άννας"};
 
-exports.setSpriteElsa = function(d){return "to a Elsa image"};
+exports.setSpriteElsa = function(d){return "προς μια εικόνα της Έλσας"};
 
-exports.setSpriteHiro = function(d){return "to a Hiro image"};
+exports.setSpriteHiro = function(d){return "προς μια εικόνα του Hiro"};
 
-exports.setSpriteBaymax = function(d){return "to a Baymax image"};
+exports.setSpriteBaymax = function(d){return "προς μια εικόνα του Baymax"};
 
-exports.setSpriteRapunzel = function(d){return "to a Rapunzel image"};
+exports.setSpriteRapunzel = function(d){return "προς μια εικόνα του Ραπουνζέλ"};
 
 exports.setSpriteKnight = function(d){return "σε εικόνα ιππότη"};
 
@@ -21713,9 +21714,9 @@ exports.shareStudioTwitter = function(d){return "Κοίτα την ιστορί�
 
 exports.shareGame = function(d){return "Μοιράσου την ιστορία σου:"};
 
-exports.showCoordinates = function(d){return "show coordinates"};
+exports.showCoordinates = function(d){return "δες συντεταγμένες"};
 
-exports.showCoordinatesTooltip = function(d){return "show the protagonist's coordinates on the screen"};
+exports.showCoordinatesTooltip = function(d){return "δες τις συντεταγμένες του πρωταγωνιστή στην οθόνη"};
 
 exports.showTitleScreen = function(d){return "εμφάνιση οθόνης τίτλων"};
 
@@ -21729,7 +21730,7 @@ exports.showTSDefText = function(d){return "γράψε κείμενο εδώ"};
 
 exports.showTitleScreenTooltip = function(d){return "Εμφάνισε την οθόνη τίτλων με το σχετικό τίτλο και κείμενο."};
 
-exports.size = function(d){return "size"};
+exports.size = function(d){return "μέγεθος"};
 
 exports.setSprite = function(d){return "Γρίφος"};
 

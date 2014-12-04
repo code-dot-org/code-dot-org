@@ -2607,6 +2607,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -2619,7 +2620,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -2629,16 +2632,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -14129,8 +14122,16 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
     // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
     Turtle.ctxPattern.rotate(Math.PI * (Turtle.heading - 90) / 180);
 
-    var clipSize = Math.min(Turtle.smoothAnimateStepSize, lineDistance);
-
+    var clipSize;
+    if (lineDistance % Turtle.smoothAnimateStepSize === 0) {
+      clipSize = Turtle.smoothAnimateStepSize;
+    } else if (lineDistance > Turtle.smoothAnimateStepSize) {
+      // this happens when our line was not divisible by smoothAnimateStepSize
+      // and we've hit our last chunk
+      clipSize = lineDistance % Turtle.smoothAnimateStepSize;
+    } else {
+      clipSize = lineDistance;
+    }
     if (img.width !== 0) {
       Turtle.ctxPattern.drawImage(img,
         // Start point for clipping image
@@ -14138,7 +14139,7 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
         // clip region size
         clipSize * retina, img.height,
         // some mysterious hand-tweaking done by Brendan
-        Math.round((Turtle.stepDistanceCovered - 7) * retina), Math.round((- 18) * retina),
+        Math.round((Turtle.stepDistanceCovered - clipSize - 2) * retina), Math.round((- 18) * retina),
         clipSize * retina, img.height);
     }
 
@@ -14935,7 +14936,7 @@ exports.hintHeader = function(d){return "Berikut adalah tip:"};
 
 exports.genericFeedback = function(d){return "Lihatlah hasil anda dan cobalah untuk memperbaiki program Anda."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Lihat apa yang saya buat"};
 
 
 },{"messageformat":57}],45:[function(require,module,exports){
@@ -14960,23 +14961,23 @@ exports.catLogic = function(d){return "Logika"};
 
 exports.colourTooltip = function(d){return "Perubahan warna pensil."};
 
-exports.createACircle = function(d){return "create a circle"};
+exports.createACircle = function(d){return "buatlah lingkaran"};
 
-exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+exports.createSnowflakeSquare = function(d){return "buatlah sebuah kepingan salju berbentuk persegi"};
 
-exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+exports.createSnowflakeParallelogram = function(d){return "buatlah kepingan salju berbentuk jajar genjang"};
 
-exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+exports.createSnowflakeLine = function(d){return "buatlah kepingan salju berbentuk garis"};
 
-exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+exports.createSnowflakeSpiral = function(d){return "buatlah sebuah kepingan salju berbentuk pilin (spiral)"};
 
-exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+exports.createSnowflakeFlower = function(d){return "buatlah sebuah kepingan salju berbentuk bunga"};
 
-exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+exports.createSnowflakeFractal = function(d){return "buatlah sebuah kepingan salju berbentuk fraktal"};
 
-exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+exports.createSnowflakeRandom = function(d){return "buatlah kepingan salju berbentuk acak"};
 
-exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
+exports.createASnowflakeBranch = function(d){return "buatlah cabang kepingan salju"};
 
 exports.degrees = function(d){return "derajat"};
 
@@ -15016,7 +15017,7 @@ exports.drawUpperWave = function(d){return "menggambar atas gelombang"};
 
 exports.drawLowerWave = function(d){return "menggambar bawah gelombang"};
 
-exports.drawStamp = function(d){return "draw stamp"};
+exports.drawStamp = function(d){return "gambar cap"};
 
 exports.heightParameter = function(d){return "tinggi"};
 
@@ -15070,7 +15071,7 @@ exports.penTooltip = function(d){return "Mengangkat atau menurunkan pensil, mula
 
 exports.penUp = function(d){return "pensil keatas"};
 
-exports.reinfFeedbackMsg = function(d){return "Apa hasilnya sudah seperti apa yang Anda inginkan? Tekan tombol \"Ayo coba lagi\" untuk melihat gambar Anda."};
+exports.reinfFeedbackMsg = function(d){return "Inilah gambar Anda! Teruslah mengerjakan atau lanjutan ke teka-teki berikutnya."};
 
 exports.setColour = function(d){return "Atur warna"};
 
