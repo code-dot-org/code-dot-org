@@ -107,7 +107,7 @@ class Script < ActiveRecord::Base
   end
 
   def get_script_level_by_stage_and_position(stage_position, puzzle_position)
-    self.stages.find_by(position: stage_position).script_levels.find_by(position: puzzle_position)
+    self.stages.find_by!(position: stage_position).script_levels.find_by!(position: puzzle_position)
   end
 
   def get_script_level_by_chapter(chapter)
