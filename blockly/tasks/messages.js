@@ -36,8 +36,8 @@ module.exports = function(grunt) {
       // Initialize MessageFormat.
       var language = locale.split('_')[0];
       var backend_init = loadBackend(language);
-      var backend = backend_init['backend'];
-      var mf = backend_init['mf'];
+      var backend = backend_init.backend;
+      var mf = backend_init.mf;
 
       // Generate javascript message functions.
       var translated = grunt.file.readJSON(src);

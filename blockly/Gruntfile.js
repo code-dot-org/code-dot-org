@@ -305,7 +305,7 @@ if (process.env.MOOC_APP) {
 // Run uglify task across all apps in parallel
   config.concurrent = {
     uglify: _.map(['common'].concat(APPS), function (x) {
-      return 'uglify:' + x
+      return 'uglify:' + x;
     })
   };
 
@@ -433,7 +433,7 @@ if (process.env.MOOC_APP) {
 
   grunt.registerTask('rebuild', ['clean', 'build']);
 
-  config.concurrent['watch'] = {
+  config.concurrent.watch = {
     tasks: ['exec:watchify', 'watch'],
     options: {
       logConcurrentOutput: true
