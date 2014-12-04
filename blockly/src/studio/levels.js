@@ -151,7 +151,14 @@ levels.c2_1 = utils.extend(levels.dog_hello);
 levels.c3_story_1 = utils.extend(levels.dog_hello);
 levels.playlab_1 = utils.extend(levels.dog_hello, {
   background: 'winter',
+  timeoutFailureTick: null,
+  timeoutAfterWhenRun: true,
   firstSpriteIndex: 2, // penguin
+  goal: {
+    successCondition: function () {
+      return Studio.allWhenRunBlocksComplete() && Studio.sayComplete > 0;
+    }
+  },
   // difference is we say hello instead of hello world
   requiredBlocks: [
     saySpriteRequiredBlock({
@@ -207,6 +214,13 @@ levels.c3_story_2 = utils.extend(levels.dog_and_cat_hello, {});
 levels.playlab_2 = utils.extend(levels.dog_and_cat_hello, {
   background: 'desert',
   firstSpriteIndex: 20, // cave boy
+  timeoutFailureTick: null,
+  timeoutAfterWhenRun: true,
+  goal: {
+    successCondition: function () {
+      return Studio.allWhenRunBlocksComplete() && Studio.sayComplete > 1;
+    }
+  },
   requiredBlocks: [
     // make sure each sprite says something
     saySpriteRequiredBlock({
@@ -286,7 +300,8 @@ levels.playlab_3 = {
       titles: { DIR: '2', DISTANCE: '200'}
     }]
   ],
-  timeoutFailureTick: 100,
+  timeoutFailureTick: null,
+  timeoutAfterWhenRun: true,
   scale: {
     snapRadius: 2
   },
@@ -403,7 +418,9 @@ levels.playlab_4 = {
       titles: { SOUND: 'goal1'}
     }]
   ],
+  // timeout when we've hit 100 OR we had only when run commands and finished them
   timeoutFailureTick: 100,
+  timeoutAfterWhenRun: true,
   goal: {
     successCondition: function () {
       return Studio.playSoundCount > 0 && Studio.sprite[0].isCollidingWith(1);
@@ -475,7 +492,10 @@ levels.c3_game_1 = utils.extend(levels.click_hello, {});
 levels.playlab_5 = utils.extend(levels.click_hello, {
   background: 'space',
   firstSpriteIndex: 23, // spacebot
-  toolbox: tb(blockOfType('studio_saySprite'))
+  timeoutAfterWhenRun: true,
+  toolbox: tb(blockOfType('studio_saySprite')),
+  startBlocks:
+   '<block type="studio_whenSpriteClicked" deletable="false" x="20" y="20"></block>'
 });
 
 levels.octopus_happy =  {
@@ -609,10 +629,10 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
   },
   toolbox:
     tb(
-      blockOfType('studio_move', {DIR: 1}) +
+      blockOfType('studio_move', {DIR: 8}) +
       blockOfType('studio_move', {DIR: 2}) +
-      blockOfType('studio_move', {DIR: 4}) +
-      blockOfType('studio_move', {DIR: 8})
+      blockOfType('studio_move', {DIR: 1}) +
+      blockOfType('studio_move', {DIR: 4})
     ),
   map: [
     [1, 0, 0, 0, 0, 0, 1, 0],
@@ -942,25 +962,26 @@ levels.playlab_8 = {
   ),
   startBlocks:
     '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="20"></block>' +
-    '<block type="studio_whenLeft" deletable="false" x="20" y="150"><next>' +
-      blockOfType('studio_move', { SPRITE: 0, DIR: 8}) +
-    '</next></block>' +
-    '<block type="studio_whenRight" deletable="false" x="20" y="250"><next>' +
-      blockOfType('studio_move', { SPRITE: 0, DIR: 2}) +
-    '</next></block>' +
-    '<block type="studio_whenUp" deletable="false" x="20" y="350"><next>' +
-      blockOfType('studio_move', { SPRITE: 0, DIR: 1}) +
-    '</next></block>' +
-    '<block type="studio_whenDown" deletable="false" x="20" y="450"><next>' +
-      blockOfType('studio_move', { SPRITE: 0, DIR: 4}) +
-    '</next></block>' +
-    '<block type="studio_repeatForever" deletable="false" x="20" y="550">' +
+    '<block type="studio_repeatForever" deletable="false" x="20" y="150">' +
       '<statement name="DO">' +
         blockUtils.blockWithNext('studio_moveDistance', { SPRITE: 1, DIR: 2, DISTANCE: 400},
           blockOfType('studio_moveDistance', { SPRITE: 1, DIR: 8, DISTANCE: 400})
         ) +
       '</statement>' +
-    '</block>'
+    '</block>' +
+    '<block type="studio_whenLeft" deletable="false" x="20" y="300"><next>' +
+      blockOfType('studio_move', { SPRITE: 0, DIR: 8}) +
+    '</next></block>' +
+    '<block type="studio_whenRight" deletable="false" x="20" y="400"><next>' +
+      blockOfType('studio_move', { SPRITE: 0, DIR: 2}) +
+    '</next></block>' +
+    '<block type="studio_whenUp" deletable="false" x="20" y="500"><next>' +
+      blockOfType('studio_move', { SPRITE: 0, DIR: 1}) +
+    '</next></block>' +
+    '<block type="studio_whenDown" deletable="false" x="20" y="600"><next>' +
+      blockOfType('studio_move', { SPRITE: 0, DIR: 4}) +
+    '</next></block>'
+
 };
 
 // Can you add blocks to change the background and the speed of the penguin, and
@@ -1106,40 +1127,40 @@ levels.playlab_9 = {
   minWorkspaceHeight: 1250,
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"></block>' +
-    '<block type="studio_whenLeft" deletable="false" x="20" y="200">' +
-      '<next>' +
-        blockOfType('studio_move', {DIR: 8}) +
-      '</next>' +
-    '</block>' +
-    '<block type="studio_whenRight" deletable="false" x="20" y="330">' +
-      '<next>' +
-        blockOfType('studio_move', {DIR: 2}) +
-      '</next>' +
-    '</block>' +
-    '<block type="studio_whenUp" deletable="false" x="20" y="460">' +
-      '<next>' +
-        blockOfType('studio_move', {DIR: 1}) +
-      '</next>' +
-    '</block>' +
-    '<block type="studio_whenDown" deletable="false" x="20" y="590">' +
-      '<next>' +
-        blockOfType('studio_move', {DIR: 4}) +
-      '</next>' +
-    '</block>' +
-    '<block type="studio_repeatForever" deletable="false" x="20" y="720">' +
+    '<block type="studio_repeatForever" deletable="false" x="20" y="150">' +
       '<statement name="DO">' +
         blockUtils.blockWithNext('studio_moveDistance', {SPRITE: 1, DIR: 1, DISTANCE: 400},
           blockOfType('studio_moveDistance', {SPRITE: 1, DIR: 4, DISTANCE: 400})
         ) +
       '</statement>' +
     '</block>' +
-    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="880">' +
+    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="290">' +
       '<title name="SPRITE2">0</title>' +
       '<title name="SPRITE2">1</title>' +
       '<next>' +
         blockUtils.blockWithNext('studio_playSound', {SOUND: 'winpoint2'},
           blockOfType('studio_saySprite', {TEXT: msg.alienInvasion()})
         ) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenLeft" deletable="false" x="20" y="410">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 8}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenRight" deletable="false" x="20" y="510">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 2}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenUp" deletable="false" x="20" y="610">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 1}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenDown" deletable="false" x="20" y="710">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 4}) +
       '</next>' +
     '</block>'
 };

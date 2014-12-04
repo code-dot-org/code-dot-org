@@ -21,7 +21,7 @@ class LevelsController < ApplicationController
   # GET /levels/1
   # GET /levels/1.json
   def show
-    set_videos_and_blocks_and_callouts
+    set_videos_and_blocks_and_callouts_and_instructions
 
     @fallback_response = {
       success: {message: 'good job'},
@@ -29,7 +29,7 @@ class LevelsController < ApplicationController
     }
 
     @full_width = true
-    if request.query_parameters[:embed]
+    if params[:embed]
       @hide_source = true
       @embed = true
       @share = false

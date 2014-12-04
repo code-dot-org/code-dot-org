@@ -53,8 +53,13 @@ exports.text = function (text, fontSize, color) {
   return new EvalText(text, fontSize, color);
 };
 
-exports.star = function (radius, fontSize, color) {
-  return new EvalStar(radius, fontSize, color);
+exports.star = function (radius, style, color) {
+  var innerRadius = (3 - Math.sqrt(5)) / 2 * radius;
+  return new EvalStar(5, innerRadius, radius, style, color);
+};
+
+exports.radialStar = function (points, inner, outer, style, color) {
+  return new EvalStar(points, inner, outer, style, color);
 };
 
 exports.placeImage = function (x, y, image) {

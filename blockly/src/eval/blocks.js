@@ -126,6 +126,19 @@ exports.install = function(blockly, blockInstallOptions) {
   });
 
   installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'functional_radial_star',
+    blockTitle: msg.radialStarBlockTitle(),
+    apiName: 'radialStar',
+    args: [
+      { name: 'POINTS', type: 'Number' },
+      { name: 'INNER', type: 'Number' },
+      { name: 'OUTER', type: 'Number' },
+      { name: 'STYLE', type: 'string' },
+      { name: 'COLOR', type: 'string' }
+    ]
+  });
+
+  installFunctionalBlock(blockly, generator, gensym, {
     blockName: 'functional_text',
     blockTitle: msg.textBlockTitle(),
     apiName: 'text',

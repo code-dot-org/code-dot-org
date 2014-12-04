@@ -844,7 +844,7 @@ Blockly.Blocks.procedures_callnoreturn = {init:function() {
   this.setHelpUrl(Blockly.Msg.PROCEDURES_CALLNORETURN_HELPURL);
   this.setHSV(94, 0.84, 0.6);
   var a = this.appendDummyInput().appendTitle(Blockly.Msg.PROCEDURES_CALLNORETURN_CALL).appendTitle("", "NAME");
-  if(Blockly.functionEditor) {
+  if(Blockly.useModalFunctionEditor) {
     var b = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
     Blockly.bindEvent_(b.fieldGroup_, "mousedown", this, this.openEditor);
     a.appendTitle(b)
@@ -1339,7 +1339,7 @@ Blockly.Blocks.functional_call = {init:function() {
   this.setTooltip("Calls a user-defined function");
   this.setHSV(94, 0.84, 0.6);
   var a = this.appendDummyInput().appendTitle(new Blockly.FieldLabel("Function Call", {fixedSize:{height:35}}), "NAME").appendTitle("", "PARAM_TEXT");
-  if(Blockly.functionEditor && this.blockSpace !== Blockly.modalBlockSpace) {
+  if(Blockly.useContractEditor && this.blockSpace !== Blockly.modalBlockSpace) {
     var b = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
     Blockly.bindEvent_(b.fieldGroup_, "mousedown", this, this.openEditor);
     a.appendTitle(b);
