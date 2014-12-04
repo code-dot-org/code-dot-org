@@ -36,19 +36,22 @@
           Getting Loopy: Transformând în Buclă
           The Big Event: Marele eveniment
           Going Places Safely: Mergând în locuri în siguranţă
-          description: Cursul 1 este proiectat pentru cititorii începători din clasele
-            mai mici. Creează programe pe computer folosind bucle şi evenimente. Până
-            la sfârşitul cursului vei creea un joc, artă sau poveste proprie pe care
-            le poţi arăta şi altora.
+          description: Cursul 1 este proiectat pentru a permite cititorilor începători
+            să creeze programe de calculator, care îi vor ajuta să înveţe să colaboreze
+            cu alții, să-și dezvolte abilităţile de rezolvare a problemelor şi să
+            persevereze prin sarcini dificile. Până la sfârşitul acestui curs, elevii
+            vor crea propriul joc sau poveste personalizate, pe care îl/o pot partaja.
+            Recomandat pentru clasa 1.
           'Bee: Sequence': 'Ortografie: Secvenţă'
           'Artist: Sequence': 'Artist: Secvenţă'
           'Artist: Shapes': 'Artist: Forme'
           'Maze: Loops': 'Labirint: Bucle'
           'Bee: Loops': 'Ortografie: Bucle'
           'Studio: Create a Story': 'Laboratorul de Joacă: Creează o Poveste'
+          'Artist: Loops': 'Artist: Bucle'
+          description_audience: Ages 4+ (pre-readers)
           description_short: Cursul 1 este proiectat pentru cititorii începători din
             clase mai mici.
-          'Artist: Loops': 'Artist: Bucle'
         course2:
           The Maze: Labirintul
           Suzi: Suzi
@@ -75,10 +78,10 @@
           Binary Bracelets: Brăţări Binare
           The Big Event: Marele eveniment
           Your Digital Footprint: Amprenta ta Digitală
-          description: Cursul 2 este conceput pentru elevii care pot citi în clasele
-            elementare inferioare şi mijlocii. Creează programe folosind bucle, evenimente
-            şi condiţionale. Până la sfârşitul cursului, vei creea un joc, artă sau
-            poveste pe care le poţi arăta şi altora.
+          description: Cursul 2 este conceput pentru elevii care pot citi şi nu au
+            nici o experienţă anterioară de programare. În acest curs elevii vor crea
+            programe pentru a rezolva probleme şi vor dezvolta jocuri sau poveşti
+            interactive pe care le pot partaja. Recomandat pentru clasele 2-5.
           'Maze: Sequence': 'Labirint: Secvenţă'
           'Artist: Sequence': 'Artist: Secvenţă'
           'Maze: Loops': 'Labirint: Bucle'
@@ -87,11 +90,12 @@
           'Bee: Debugging': 'Ortografie: Depanare'
           'Artist: Debugging': 'Artist: Depanare'
           'Bee: Conditionals': 'Ortografie: Condiţionale'
-          description_short: Cursul 2 este conceput pentru elevii care pot citi în
-            clasele elementare inferioare şi mijlocii.
           'Artist: Sequence2': 'Artist: Secvenţă2'
           'Maze: Sequence2': 'Labirint: Secvenţă2'
           'Artist: Nested Loops': 'Artist: Bucle Adunate'
+          description_audience: Ages  6+ (reading required)
+          description_short: Cursul 2 este conceput pentru elevii care pot citi în
+            clasele elementare inferioare şi mijlocii.
         course3:
           The Maze: Labirintul
           'Studio: Create a Story': 'Laboratorul de Joacă: Creează o Poveste'
@@ -111,16 +115,17 @@
           Artist Functions with Parameters: Funcţii de Artist cu Parametri
           Computational Thinking: Gândire Computațională
           Functional Suncatchers: Prinzători ai Soarelui Funcţionali
-          Songwriting Parameters: Compunând Cântece
+          Songwriting Parameters: Parametri de compoziție
           Dice Race: Cursă de Zaruri
           Internet: Internet
           Crowdsourcing: Obţinând Informaţii/Critici
           Digital Citizenship: Cetățenia Digitală
           Farmer - While Loops: Fermier - În Timp ce Şerpuieşte
-          description: Elevii care participă în Cursul 3 ar trebui să fi participat
-            şi în Cursul 2. Elevii creează programe cu diferite feluri de bucle, evenimente,
-            funcţii şi condiţii. Până la sfârşitul cursului vei creea un joc, artă
-            sau poveste pe care le poţi arăta şi altora.
+          description: Cursul 3 este conceput pentru elevii care au parcurs cursul
+            2. Elevii vor aprofunda subiectele introduse în cursurile anterioare pentru
+            a le adapta la soluţii pentru probleme mai complexe de programare. Până
+            la sfârşitul acestui curs, elevii vor crea povești și jocuri interactive,
+            pe care le pot partaja cu oricine. Recomandat pentru clasele 4-5.
           'Studio: Create a Game': 'Laboratorul de Joacă: Creează un Joc'
           Maze: Labirint
           Artist: Artist
@@ -132,8 +137,6 @@
           'Farmer: While Loops': 'Fermier: În Timp ce Şerpuieşte'
           'Bee: Nested Loops': 'Ortografie: Bucle Adunate'
           'Bee: Debugging': 'Ortografie: Depanare'
-          description_short: Elevii care participă în Cursul 3 ar trebui să fi participat
-            şi în Cursul 2.
           Maze2: Labirint2
           Artist2: Artist2
           'Artist: Functions2': 'Artist: Funcţii2'
@@ -144,8 +147,11 @@
           'Farmer: While Loops2': 'Fermier: În Timp ce Şerpuieşte2'
           'Bee: Nested Loops2': 'Ortografie: Bucle Adunate2'
           'Bee: Debugging2': 'Ortografie: Depanare2'
-          'Artist: Patterns': 'Artist: Patterns'
+          'Artist: Patterns': 'Artist: Modele'
           Songwriting: Compunând Cântece
+          description_audience: Ages 8+ (after Course 2)
+          description_short: Elevii care participă în Cursul 3 ar trebui să fi participat
+            şi în Cursul 2.
         msm:
           title: Matematică de Şcoală Mijlocie
           description: Lucrare în progres pentru Matematică de Şcoală Mijlocie.
@@ -153,55 +159,55 @@
           Assessments: Evaluări
           Unit 1: Unitatea 1
           Unit 2: Unitatea 2
-          Ninja Cat and the Coordinate Plane: Ninja Cat and the Coordinate Plane
-          'Calc: Circles of Evaluation': 'Calc: Circles of Evaluation'
-          'Artist: Strings and Images': 'Artist: Strings and Images'
-          Contracts: Contracts
-          'Artist: Writing Contracts': 'Artist: Writing Contracts'
-          'Calc: Defining Variables': 'Calc: Defining Variables'
-          'Play Lab: Defining Variables': 'Play Lab: Defining Variables'
-          The Design Recipe: The Design Recipe
-          'Artist: Defining Functions': 'Artist: Defining Functions'
-          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          Ninja Cat and the Coordinate Plane: Pisica Ninja și planul de coordonate
+          'Calc: Circles of Evaluation': 'Calcul: Cercuri de evaluare'
+          'Artist: Strings and Images': 'Artist: Siruri de caractere şi imagini'
+          Contracts: Contracte
+          'Artist: Writing Contracts': 'Artist: Scrierea de contracte'
+          'Calc: Defining Variables': 'Calcul: Definirea variabilelor'
+          'Play Lab: Defining Variables': 'Laborator de joc: Definirea variabilelor'
+          The Design Recipe: Rețeta pentru design
+          'Artist: Defining Functions': 'Artist: Definirea funcțiilor'
+          'Play Lab: Defining Functions': 'Laboratorul de joc: Rețeta pentru design'
           'Artist: Functions': 'Artist: Funcţii'
-          'Play Lab: Animation': 'Play Lab: Animation'
-          Booleans: Booleans
-          'Play Lab: Booleans': 'Play Lab: Booleans'
-          'Calc: Boolean Operators': 'Calc: Boolean Operators'
-          'Play Lab: Boolean Operators': 'Play Lab: Boolean Operators'
-          Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
-          'Artist: Conditionals': 'Artist: Conditionals'
-          Collision Detection and the Distance Formula: Collision Detection and the
-            Distance Formula
-          'Play Lab: Collision Detection': 'Play Lab: Collision Detection'
-          'Unplugged: Ninja Cat and the Coordinate Plane': 'Unplugged: Ninja Cat and
-            the Coordinate Plane'
-          'Eval: Strings and Images': 'Eval: Strings and Images'
-          'Unplugged: Contracts': 'Unplugged: Contracts'
-          'Eval: Writing Contracts': 'Eval: Writing Contracts'
-          'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
-          'Eval: Defining Functions': 'Eval: Fast Functions'
-          'Eval: Functions': 'Eval: Design Recipe'
-          'Unplugged: Booleans': 'Unplugged: Booleans'
-          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
-            and Piecewise Functions'
-          'Eval: Conditionals': 'Eval: Conditionals'
-          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
-            Detection and the Distance Formula'
-          'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
-          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
-            and Coordinate Planes'
-          'Eval: Boolean Operators': 'Eval: Boolean Operators'
-          Blocks to Math: Blocks to Math
-          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Defining Variables
-            (Big Game)'
-          'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
-          'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
-          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
-            (Big Game)'
-          'Eval: Fast Functions': 'Eval: Fast Functions'
-          'Play Lab: Design Recipe': 'Play Lab: Design Recipe'
-          'Eval: Design Recipe': 'Eval: Design Recipe'
+          'Play Lab: Animation': 'Laboratorul de joc: Animație'
+          Booleans: Booleene
+          'Play Lab: Booleans': 'Laboratorul de joc: Booleene'
+          'Calc: Boolean Operators': 'Calcul: Operatori booleeni'
+          'Play Lab: Boolean Operators': 'Laborator de joc: Operatorii booleeni'
+          Conditionals and Piecewise Functions: Decizii și porțiuni de funcții
+          'Artist: Conditionals': 'Artist: Decizii'
+          Collision Detection and the Distance Formula: Detectarea coliziunilor şi
+            Formula pentru distanţă
+          'Play Lab: Collision Detection': 'Laborator de joc: Detectare coliziune'
+          'Unplugged: Ninja Cat and the Coordinate Plane': 'Fără calculator: Pisica
+            Ninja și planul de coordonate'
+          'Eval: Strings and Images': 'Evaluare: Șiruri de caractere și imagini'
+          'Unplugged: Contracts': 'Fără calculator: Contracte'
+          'Eval: Writing Contracts': 'Evaluare: Scrierea de contracte'
+          'Unplugged: The Design Recipe': 'Fără calculator: Rețeta pentru design'
+          'Eval: Defining Functions': 'Evaluare: Funcţii rapide'
+          'Eval: Functions': 'Evaluare: Rețeta pentru design'
+          'Unplugged: Booleans': 'Fără calculator: booleene'
+          'Unplugged: Conditionals and Piecewise Functions': 'Fără calculator: Decizii
+            și porțiuni de funcții'
+          'Eval: Conditionals': 'Evaluare: Decizii'
+          'Unplugged: Collision Detection and the Distance Formula': 'Fără calculator:
+            Detectarea de coliziuni și formula pentru distanță'
+          'Calc: Evaluation Blocks': 'Calcul: Blocuri de evaluare'
+          'Unplugged: Video Games and Coordinate Planes': 'Fără calculator: Jocuri
+            video și planuri de coordonate'
+          'Eval: Boolean Operators': 'Evaluare: Operatorii booleeni'
+          Blocks to Math: Blocuri în matematică
+          'Play Lab: Defining Variables (Big Game)': 'Laboratorul de joc: Definirea
+            de variabile (jocul mare)'
+          'Play Lab: Animation (Big Game)': 'Laboratorul de joc: Animație (jocul mare)'
+          'Play Lab: Boolean (Big Game)': 'Laboratorul de joc: Boolean (jocul mare)'
+          'Play Lab: Collision Detection (Big Game)': 'Laboratorul de joc: Detectarea
+            de coliziuni (jocul mare)'
+          'Eval: Fast Functions': 'Evaluare: Funcţii rapide'
+          'Play Lab: Design Recipe': 'Laboratorul de joc: Rețeta pentru design'
+          'Eval: Design Recipe': 'Evaluare: Rețeta pentru design'
         playlab:
           title: Laborator de Joacă
           description: Creează o poveste sau fă un joc cu Laboratorul de Joacă!
@@ -214,64 +220,64 @@
           description_short: Desenează poze şi proiecte mişto cu Artistul!
         scrat:
           title: Scrat
-          description_short: Scrat short description.
-          description: Scrat long description
+          description_short: Scurtă descriere a lui Scrat.
+          description: Descriere detaliată a lui Scrat
           'Maze: Sequence': 'Labirint: Secvenţă'
         hourofcode:
           Maze: Labirint
           title: Oră de Cod
+          description: Încercaţi bazele informaticii cu personaje din Angry Birds,
+            Plants vs Zombies şi Scrat din Ice Age!
           description_short: Try the basics of computer science with characters from
             Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description: Try the basics of computer science with characters from Angry
-            Birds, Plants vs. Zombies, and Scrat from Ice Age!
         frozen:
-          title: Frozen
-          description_short: Join the Royal Sisters of Arendelle, Anna and Elsa, as
-            they explore the magic and beauty of ice. You will write code to create
-            snowflakes and patterns as you ice-skate and make a winter wonderland
-            that you can then share with your friends!
-          description: Join the Royal Sisters of Arendelle, Anna and Elsa, as they
-            explore the magic and beauty of ice. You will write code to create snowflakes
-            and patterns as you ice-skate and make a winter wonderland that you can
-            then share with your friends!
+          title: Codați cu Anna și Elsa
+          description: Să folosim cod pentru a ne alătura Annei şi Elsei care explorează
+            magia şi frumuseţea de gheaţă. Veţi crea fulgi de zăpadă şi modele ca
+            la patinaj şi veți face un paradis de iarnă, pe care apoi veți putea să-l
+            partajați cu prietenii!
           Artist: Artist
+          description_short: Să folosim cod pentru a ne alătura Annei şi Elsei în
+            explorarea magiei şi frumuseţii de gheaţă.
         course4:
-          description_short: Students taking Course 4 should have already taken Courses
-            2 and 3.
-          description: Course 4 is designed for students who have taken Course 2 and
-            3. Students will delve deeper into programming topics introduced in previous
-            courses to flexible solutions to more complex problems. By the end of
-            this course, students create interactive stories and games they can share
-            with anyone. Recommended for grades 4-8.
-          'Artist: Variables': 'Artist: Variables'
-          'Bee: For Loops': 'Bee: For Loops'
-          title: Course 4
-          'Algorithms: Tangrams': 'Algorithms: Tangrams'
+          description_short: Elevii care vor să urmeze cursul 4 ar trebui să fi parcurs
+            cursurile 2 și 3.
+          description: Cursul 4 este conceput pentru elevii care au parcurs cursurile
+            2 și 3. Elevii vor aprofunda subiectele introduse în cursurile anterioare
+            pentru a le adapta la soluţii pentru probleme mai complexe de programare.
+            Până la sfârşitul acestui curs, elevii vor crea povești și jocuri interactive,
+            pe care le pot partaja cu oricine. Recomandat pentru clasele 4-8.
+          'Artist: Variables': 'Artist: Variabile'
+          'Bee: For Loops': 'Albină: Repetiții Pentru'
+          title: Curs 4
+          'Algorithms: Tangrams': 'Algoritmi: Tangram'
           Variables: Variabile
-          'Play Lab: Variables': 'Play Lab: Variables'
-          'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
-          'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
-          'Artist: For Loops': 'Artist: For Loops'
-          'Play Lab: For Loops': 'Play Lab: For Loops'
+          'Play Lab: Variables': 'Laboratorul de joc: Variabile'
+          'Play Lab: Functions with Parameters': 'Laboratorul de joc: Funcții cu parametri'
+          'Bee: Functions with Parameters': 'Albină: Funcții cu parametri'
+          'Artist: For Loops': 'Artist: Repetiții Pentru'
+          'Play Lab: For Loops': 'Laboratorul de joc: Repetiții For'
           'Artist: Functions': 'Artist: Funcţii'
-          'Artist: Functions with Paraqmeters': 'Artist: Functions with Paraqmeters'
-          'Unplugged: Tangrams': 'Unplugged: Tangrams'
+          'Artist: Functions with Paraqmeters': 'Artist: Funcţii cu parametri'
+          'Unplugged: Tangrams': 'Fără calculator: Tangram'
           Artist: Artist
-          Bee: Bee
-          'Unplugged: Envelope Variables': 'Unplugged: Envelope Variables'
-          'Unplugged: Madlibs': 'Unplugged: Madlibs'
-          'Unplugged: For Loop Fun': 'Unplugged: For Loop Fun'
-          'Unplugged: Songwriting with Parameters': 'Unplugged: Songwriting with Parameters'
-          'Artist: Functions with Parameters': 'Artist: Functions with Parameters'
-          'Unplugged: Binary': 'Unplugged: Binary'
-          Bee Binary: Bee Binary
-          Farmer Binary: Farmer Binary
-          Maze and Bee: Maze and Bee
-          Artist Binary: Artist Binary
+          Bee: Albină
+          'Unplugged: Envelope Variables': 'Fără calculator: Variabile plic'
+          'Unplugged: Madlibs': 'Fără calculator: Madlibs'
+          'Unplugged: For Loop Fun': 'Fără calculator: Distracție cu repetiția Pentru'
+          'Unplugged: Songwriting with Parameters': 'Fără calculator: Compoziție cu
+            parametri'
+          'Artist: Functions with Parameters': 'Artist: Funcţii cu parametri'
+          'Unplugged: Binary': 'Fără calculator: Binar'
+          Bee Binary: Binar cu Albină
+          Farmer Binary: Binar cu fermier
+          Maze and Bee: Labirint şi albină
+          Artist Binary: Binar cu artist
+          description_audience: Ages 10+ (after Course 3)
         Course4pre:
-          description_short: A brief rampup of concepts for students who have not
-            taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
+          description_short: O scurtă prezentare a conceptelor pentru elevii care
+            nu au parcurs cursurile 2 și 3.
+          Course 4 Prerequisite: Curs 4 Condiţii prealabile
           'Maze: Sequence': 'Labirint: Secvenţă'
           'Artist: Sequence': 'Artist: Secvenţă'
           'Artist: Loops': 'Artist: Bucle'
@@ -282,9 +288,9 @@
           'Artist: Functions': 'Artist: Funcţii'
           'Bee: Debugging': 'Ortografie: Depanare'
         course4pre:
-          description_short: A brief rampup of concepts for students who have not
-            taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
+          description_short: O scurtă prezentare a conceptelor pentru elevii care
+            nu au parcurs cursurile 2 și 3.
+          Course 4 Prerequisite: Curs 4 Condiţii prealabile
           'Maze: Sequence': 'Labirint: Secvenţă'
           'Artist: Sequence': 'Artist: Secvenţă'
           'Artist: Loops': 'Artist: Bucle'
@@ -295,9 +301,9 @@
           'Artist: Functions': 'Artist: Funcţii'
           'Bee: Debugging': 'Ortografie: Depanare'
         Course4pre (Case Conflict):
-          description_short: A brief rampup of concepts for students who have not
-            taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
+          description_short: O scurtă prezentare a conceptelor pentru elevii care
+            nu au parcurs cursurile 2 și 3.
+          Course 4 Prerequisite: Curs 4 Condiţii prealabile
           'Maze: Sequence': 'Labirint: Secvenţă'
           'Artist: Sequence': 'Artist: Secvenţă'
           'Artist: Loops': 'Artist: Bucle'
@@ -308,11 +314,11 @@
           'Artist: Functions': 'Artist: Funcţii'
           'Bee: Debugging': 'Ortografie: Depanare'
         usability:
-          Intro: Intro
-          Variables and For Loops: Variables and For Loops
-          Functions and Functions with Parameters: Functions and Functions with Parameters
-          title: Usability Testing
-          description_short: "[șir gol]"
-          description: A selection of Course 4 levels for usability testing.
+          Intro: Introducere
+          Variables and For Loops: Variabile și repetiții For
+          Functions and Functions with Parameters: Funcții și funcții cu parametri
+          title: Testarea utilizării
+          description_short: '[șir gol]'
+          description: O selecție din nivelurile cursului 4 pentru testarea utlizării.
           Variables: Variabile
-          For Loops: For Loops
+          For Loops: Repetiții Pentru

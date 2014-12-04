@@ -39,7 +39,7 @@
       update_needs_confirmation: Du har oppdatert kontoen din, men vi må verifisere din nye e-postadresse. Vennligst sjekk e-posten din og klikk på linken for å bekrefte din nye e-postadresse.
       updated: Kontoen din er blitt oppdatert.
     sessions:
-      signed_in: Logget inn.
+      signed_in: ""
       signed_out: Logget ut.
     unlocks:
       send_instructions: Du vil motta en e-post om noen få minutter som beskriver hvordan du kan låse opp kontoen din igjen.

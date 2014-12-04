@@ -3495,6 +3495,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -3507,7 +3508,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -3517,16 +3520,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -11058,17 +11051,17 @@ exports.parseElement = function(text) {
 
 },{}],40:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.fr=function(n){return n===0||n==1?"one":"other"}
-exports.compute = function(d){return "compute"};
+exports.compute = function(d){return "calculer"};
 
-exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
+exports.equivalentExpression = function(d){return "Essayez de réorganiser vos arguments pour obtenir exactement la même expression."};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"compute\" block?"};
+exports.extraTopBlocks = function(d){return "Vous avez des blocs libres. Vouliez vous les rattacher au bloc « calcul » ?"};
 
-exports.goal = function(d){return "Goal:"};
+exports.goal = function(d){return "Objectif :"};
 
-exports.reinfFeedbackMsg = function(d){return "Est-ce que ceci ressemble à ce que vous voulez ? Vous pouvez appuyer sur le bouton \"Réessayer\" pour voir votre dessin."};
+exports.reinfFeedbackMsg = function(d){return "Voici votre histoire ! Continuer à travailler dessus, ou passer à la prochaine énigme !"};
 
-exports.yourExpression = function(d){return "Your expression:"};
+exports.yourExpression = function(d){return "Votre expression :"};
 
 
 },{"messageformat":53}],41:[function(require,module,exports){
@@ -11175,7 +11168,7 @@ exports.numLinesOfCodeWritten = function(d){return "Vous venez d'écrire "+p(d,"
 
 exports.play = function(d){return "jouer"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Imprimer"};
 
 exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" sur "+v(d,"stage_total")};
 
@@ -11191,7 +11184,7 @@ exports.score = function(d){return "score"};
 
 exports.showCodeHeader = function(d){return "Afficher le code"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Afficher les blocs"};
 
 exports.showGeneratedCode = function(d){return "Afficher le code"};
 
@@ -11219,9 +11212,9 @@ exports.hintRequest = function(d){return "Voir astuce"};
 
 exports.backToPreviousLevel = function(d){return "Retour au niveau précédent"};
 
-exports.saveToGallery = function(d){return "Enregistrer dans votre galerie"};
+exports.saveToGallery = function(d){return "Sauvegarder dans la galerie"};
 
-exports.savedToGallery = function(d){return "Enregistré dans votre galerie !"};
+exports.savedToGallery = function(d){return "Enregistrées dans la Galerie !"};
 
 exports.shareFailure = function(d){return "Désolé, nous ne pouvons pas partager ce programme."};
 
@@ -11231,7 +11224,7 @@ exports.typeHint = function(d){return "Notez que les parenthèses et les point-v
 
 exports.workspaceHeader = function(d){return "Assemblez vos blocs ici : "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Tapez ici votre code JavaScript"};
 
 exports.infinity = function(d){return "Infini"};
 
@@ -11255,7 +11248,7 @@ exports.hintHeader = function(d){return "Voici une astuce :"};
 
 exports.genericFeedback = function(d){return "Observez le résultat et essayez de corriger les erreurs."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Découvrez ce que j'ai fait"};
 
 
 },{"messageformat":53}],42:[function(require,module,exports){

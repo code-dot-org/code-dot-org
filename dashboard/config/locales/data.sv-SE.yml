@@ -135,8 +135,10 @@
           tre block.
         maze_2_7: Hjälp mig att bannlysa den här dumma grisen genom att använda så
           få block som möjligt. Försök att använda mer än ett 'upprepa gånger' block.
-        maze_2_8: 'För att lösa detta, prova ett "Upprepa"-block med dessa 3 block
-          inuti: gå, gå, sväng.'
+        maze_2_8: 'När ett block är grått betyder det att du inte kan ta bort det.
+          Lös det här pusslet genom att använda "upprepa" blocket som upprepar 3 gånger.
+          Prova att sätta dessa tre block i det grå "upprepa" blocket: flytta, flytta,
+          sväng.'
         maze_2_9: Ok, försök nu att använda det nya 'upprepa tills' blocket - det
           kommer att 'upprepa tills' jag når den irriterande grisen.
         maze_2_10: Ok, en sista gång för att övning - kan du lösa den här med endast
@@ -546,6 +548,127 @@
           Have fun!'
         studio_ec_sandbox: Create your own game. When you're done, click Finish to
           let friends try your game on their phones.
+    levelbuilder:
+      frozen line:
+        instructions: Hej! Jag är Elsa av Arendal. Hjälp mig göra en rak linje.
+      frozen perpendicular:
+        instructions: Nu ska vi se om vi kan göra två linjer i 90 graders vinkel mot
+          varandra. Du kommer att behöva använda blocken "Sväng" och "Gå".
+      frozen square iterative:
+        instructions: Vi verkar vara halvvägs med att göra en kvadrat. Låt oss sätta
+          ihop 4 linjer så att det blir en kvadrat.
+      frozen square loop:
+        instructions: Hej, jag är Anna av Arendal! Låt oss göra en kvadrat med hjälp
+          av blocket "Upprepa", så att vi kan använda färre block. Hur många gånger
+          (???) ska "Upprepa" blocket repetera blocken inuti för att det ska bli en
+          kvadrat?
+      frozen square loop 3x:
+        instructions: Låt oss göra tre kvadrater, och svänga efter varje kvadrat.
+          Se till att svänga 120 grader före varje ny kvadrat.
+      frozen square snowflake:
+        instructions: Kan du skapa en snöflinga genom att använda "Upprepa" blocket
+          för att göra 10 kvadrater och "Sväng" blocket för att svänga 36 grader mellan
+          varje kvadrat?
+      frozen cross:
+        instructions: Använd blocket "Upprepa" för att skapa ett plustecken. Har du
+          märkt att Elsa kan gå både framåt och bakåt?
+      frozen cross rotate:
+        instructions: Prova nu att upprepa det 10 gånger. Hur många grader behöver
+          du svänga mellan varje linje?
+      frozen cross rotate dense:
+        instructions: 'Låt oss upprepa det 90 gånger! Hur många gånger går 90 på 360?
+          Tips: Det är en riktigt låg siffra.'
+      frozen diamond:
+        instructions: 'Vi skapar ett parallellogram. Det är som en kvadrat fast den
+          har andra vinklar: 60 och 120 graders vinklar istället för 90 graders vinklar.'
+      frozen diamond mini snowflake:
+        instructions: Visste du att varenda snöflinga har en helt unik form? Låt oss
+          skapa en ny snöflinga genom att använda "Upprepa" blocket och göra ett parallellogram
+          4 gånger, och svänga höger 90 grader mellan varje parallellogram.
+      frozen diamond snowflake:
+        instructions: Nu provar vi att skapa en ny snöflinga genom att använda upprepa
+          blocket för att göra 10 parallellogram och svänga höger med 36 grader mellan
+          varje.
+      frozen circle:
+        instructions: En cirkel är en speciell form. Kan du tänka ut vad frågetecknen
+          behöver ersättas med för siffra för att det ska bli en cirkel?
+      frozen circle function:
+        instructions: Använd det nya "skapa en cirkel" blocket för att göra 10 cirklar
+          som överlappar varandra. Glöm inte att hoppa framåt mellan cirklarna.
+      frozen circle function in circle:
+        instructions: Låt oss nu skapa 20 cirklar som överlappar varandra, och svänga18
+          grader mellan varje cirkel.
+      frozen circle function with parameter:
+        instructions: Här är ett "skapa en cirkel" block som kan göra cirklar i olika
+          storlekar. Kan du använda det för att skapa en liten cirkel med storlek
+          5 och en större cirkel med storlek 10?
+      frozen snowflower:
+        instructions: Enkla former kan kombineras och bli avancerade snömönster. Kan
+          du gör ett mönster genom att upprepa 5 cirklar med storlek 5 och 5 cirklar
+          med storlek 10?
+      frozen snowflake branch:
+        instructions: Prova att använda blocket "skapa en snöflinge-gren" för att
+          skapa tre grenar, som blir början på en snöflinga.
+      frozen snowflake full:
+        instructions: Prova nu att upprepa det 8 gånger, så att det blir en vacker
+          snöflinga!
+      frozen freeplay:
+        instructions: Du har blivit en konstnärlig mästare! Skapa ett vinterlandskap
+          och dela med dina vänner.
+      scrat 16:
+        instructions: Acorn! Acorn! Acorn! Use an "if" block to get me there with
+          the fewest number of blocks.
+      scrat 17:
+        instructions: Ok, let's do that again for practice - this isn't very different,
+          but watch out for the wall!
+      scrat 18:
+        instructions: The "If-else" blocks checks a condition, and then does one thing
+          OR another. To get me to the acorn try to use this new block.
+      scrat 19:
+        instructions: Mer träning med "Om/annars"-blocket, kan du få det rätt på första
+          försöket?
+      scrat 20:
+        instructions: Can you add just 3 blocks to help me solve a more complex maze?
+          If you do it right, I can walk any curvy path no matter the length. Hurry!
+          The ice is melting!
+      Standalone_Artist_1:
+        instructions: Welcome to Artist! First off, let's try to make a simple square
+          using the turn right block and move forward block. Each side should be 100
+          pixels long.
+      Standalone_Artist_2:
+        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel
+          long sides.
+      Standalone_Artist_3:
+        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree
+          turns?
+      Standalone_Artist_4:
+        instructions: Now you've got a new block to play with, the loop. This will
+          repeat a set of commands. What happens if you loop these commands 6 times?
+      Standalone_Artist_5:
+        instructions: How many times do you need to loop this diamond to draw the
+          flower?
+      Standalone_Artist_5.5:
+        instructions: 'Notice how we simplified the diamond code by turning it into
+          a loop. You can loop that whole sequence 12 times to draw the flower. Hint:
+          You''ll need to turn 30 degrees after your diamond loop so you don''t keep
+          drawing over the same diamond.'
+      Standalone_Artist_6:
+        instructions: 'Loop this hexagon code 6 times to create the design. How many
+          degrees will you need to turn each time? Hint: divide the number of degrees
+          in a circle by the number of times you are looping.'
+      Standalone_Artist_7:
+        instructions: 'A function is another programming tool to help you avoid repeating
+          yourself. This function draws a flower, so you can use it any time you want
+          to draw a flower. Use this and the new jump block to draw these flowers.
+          Hint: The flowers are 150 pixels apart'
+      Standalone_Artist_8:
+        instructions: Here's a function called "Draw a shape" that we've programmed
+          to draw hexagons. Run the code to see what it does and then experiment with
+          the function to see what happens. Can you make it draw a pattern of squares,
+          triangles, or octagons?
+      Standalone_Artist_9:
+        instructions: Now go ahead and make whatever picture you'd like! You've even
+          got an empty function that you can make do whatever you want!
     video:
       name:
         maze_intro: Labyrint Introduktion
@@ -556,6 +679,7 @@
         loop_until: '"Upprepa tills"-Block'
         if: '"Om"-block'
         if_else: '"Om/annars"-block'
+        if_else_scrat: '"Om/annars"-block'
         function: Funktioner
         loop_while: '"Medan"-block'
         loop_for: '"Räknar"-block'
@@ -588,6 +712,7 @@
         C1_playlab_storytelling: Play Lab - Create a Story
         C1_planting_seed: Planting a Seed
         C1_building_foundation: Building a Foundation
+        C1_going_places_safely: Going Places Safely
         C2_maze_intro: Labyrint Introduktion
         C2_artist_intro: Konstnär Introduktion
         C2_zuck_repeat_loop: Maze Loops
@@ -602,6 +727,7 @@
         C2_binary_bracelets: Binary Bracelets
         C2_relay_programming: Relä programmering
         C2_paper_airplanes: Paper Airplanes
+        C2_digital_footprint: Your Digital Footprint
         C3_maze_level_4: Maze Loops
         C3_artist_intro: Konstnär Introduktion
         C3_artist_functions: Artist Functions
@@ -620,16 +746,21 @@
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
-        Frozen_intro: Hour of Code Intro
-        Frozen_loops: Introduction to Loops
-        Frozen_functions: Introduction to Functions
+        C4_artist_math: Programming the Artist with Math
+        C4_create_functions: Creating Functions
+        C4_edit_functions: Editing Functions
+        C4_for_loops: For Loops
+        C4_variables: Variabler
+        frozen_intro: Hour of Code Intro
+        frozen_loops: Introduction to Loops
+        frozen_functions: Introduction to Functions
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
         run: Hit "Run" to try your program
         watch_again: Klicka här för att titta på videon igen
-        gray_block_explanation: Block som är grå kan inte flyttas eller tas bort.
-          Kan du lösa uppgiften ändå?
+        gray_block_explanation: Block som är grå kan inte tas bort. Kan du lösa pusslet
+          ändå?
         show_code_explanation: Klicka här för att se koden till programmet du gör
         instructions_repeat_explanation: Instruktionerna för varje uppgift upprepas
           här
@@ -638,16 +769,16 @@
           block to enable an actor for this story
         studio_say_text: Type what you want your actor to say within these quotes
         jigsaw_click: Click this block!
-        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
-          Run" block to make Elsa move forward
-        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
-          determines how much Elsa turns
+        move_elsa_forward: Dra ett "flytta framåt" block och fäst det under "när startat"
+          blocket för att få Elsa att gå framåt
+        turn_elsa: Använd "sväng" blocket för att få Elsa att vända sig. Siffran i
+          rullistan bestämmer hur mycket hon svänger
         replace_questions: Use the drop-down to replace "???" with a number
         replace_questions_degree: Use the drop-down to replace "???" with the correct
           degree to turn
         repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
           workspace
-        snowflake_dropdown: Use this drop-down to create different snowflakes!
+        snowflake_dropdown: Använd den här rullisten för att skapa olika snöflingor!
         degrees_per_side: Divide 360 by the number of sides to get the size of each
           angle in degrees.
         set_sides: Use this block to set "sides" to the number needed to complete
@@ -669,3 +800,19 @@
           the Bee will turn to get the nectar.
         logic_category: Open the "Logic" flyout to find the "if/else" block.
         length_parameter: Can you update this function so it uses the "length" parameter?
+        frozen_diamond_repeat: Use the repeat block to create this shape.
+        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
+          each circle.
+        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
+          and change the size.
+        frozen_snowflake_branch: Use the "create a snowflake branch" block
+        frozen_create_square: Attach more blocks here to create a square
+        playlab_drag_say: Drag the "say" block here and type "hello"
+        playlab_use_twice: Use this block twice and remember to change the actor number
+        playlab_move_girl: Use the "move right" block to move Tennis Girl
+        playlab_play_sound: Add "play sound" block here
+        playlab_arrow_keys: Remember to use these to move the witch after clicking
+          on Run
+        playlab_add_move: Add "move" blocks inside this repeat block
+        playlab_add_score: Add score blocks here
+        playlab_add_blocks: Add your blocks here

@@ -39,7 +39,7 @@ zh:
       update_needs_confirmation: 您成功地更新您的帳戶，但我們需要驗證您的新電子郵件地址。請檢查您的電子郵件，並按一下確認連結以最後確認您的新電子郵件地址。
       updated: 您已成功更新您的帳戶。
     sessions:
-      signed_in: 已成功登入。
+      signed_in: ""
       signed_out: 已成功登出。
     unlocks:
       send_instructions: 您將在幾分鐘內收到一封有關說明如何確認您的帳戶的電子郵件。

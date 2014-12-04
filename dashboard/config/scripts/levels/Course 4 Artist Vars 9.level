@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Modify this algorithm so it uses the \"sides\" variable instead of a fixed number to draw a triangle. Replace the number 3 with the \"sides\" variable. Hint: remember to use the \"set sides to\" block.",
+    "instructions": "Modify this algorithm so it uses the \"sides\" variable instead of a fixed number to draw a triangle. Replace the number 3 with the \"sides\" variable, and use the \"set sides to\" block.",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -20,7 +20,8 @@
     "free_play": "false",
     "impressive": "false",
     "slider_speed": ".5",
-    "ideal": "11"
+    "ideal": "11",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>

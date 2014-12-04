@@ -2607,6 +2607,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -2619,7 +2620,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -2629,16 +2632,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -14129,8 +14122,16 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
     // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
     Turtle.ctxPattern.rotate(Math.PI * (Turtle.heading - 90) / 180);
 
-    var clipSize = Math.min(Turtle.smoothAnimateStepSize, lineDistance);
-
+    var clipSize;
+    if (lineDistance % Turtle.smoothAnimateStepSize === 0) {
+      clipSize = Turtle.smoothAnimateStepSize;
+    } else if (lineDistance > Turtle.smoothAnimateStepSize) {
+      // this happens when our line was not divisible by smoothAnimateStepSize
+      // and we've hit our last chunk
+      clipSize = lineDistance % Turtle.smoothAnimateStepSize;
+    } else {
+      clipSize = lineDistance;
+    }
     if (img.width !== 0) {
       Turtle.ctxPattern.drawImage(img,
         // Start point for clipping image
@@ -14138,7 +14139,7 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
         // clip region size
         clipSize * retina, img.height,
         // some mysterious hand-tweaking done by Brendan
-        Math.round((Turtle.stepDistanceCovered - 7) * retina), Math.round((- 18) * retina),
+        Math.round((Turtle.stepDistanceCovered - clipSize - 2) * retina), Math.round((- 18) * retina),
         clipSize * retina, img.height);
     }
 
@@ -14828,7 +14829,7 @@ exports.errorUnusedFunction = function(d){return "You created a function, but ne
 
 exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
-exports.extraTopBlocks = function(d){return "Имаш блокове који нису повезани са основним блоком."};
+exports.extraTopBlocks = function(d){return "Имате незакачене блокове. Да ли сте хтели да их закачите за \"када се извршава\" блок?"};
 
 exports.finalStage = function(d){return "Честитамо! Завршили сте последњу етапу."};
 
@@ -14868,7 +14869,7 @@ exports.numLinesOfCodeWritten = function(d){return "Управо си напис
 
 exports.play = function(d){return "играј"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Одштампај"};
 
 exports.puzzleTitle = function(d){return "Мозгалица "+v(d,"puzzle_number")+" од "+v(d,"stage_total")};
 
@@ -14884,7 +14885,7 @@ exports.score = function(d){return "Резултат"};
 
 exports.showCodeHeader = function(d){return "Покажи Програмски код"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Покажи блокове"};
 
 exports.showGeneratedCode = function(d){return "Покажи код програма"};
 
@@ -14912,11 +14913,11 @@ exports.hintRequest = function(d){return "Види предлог"};
 
 exports.backToPreviousLevel = function(d){return "Натраг на претходни ниво"};
 
-exports.saveToGallery = function(d){return "Сачувај у своју галерију"};
+exports.saveToGallery = function(d){return "Сачувај у галерији"};
 
-exports.savedToGallery = function(d){return "Сачувано у твојој галерији!"};
+exports.savedToGallery = function(d){return "Сачувано у галерији!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Извините, не можемо да поделимо овај програм."};
 
 exports.typeFuncs = function(d){return "Доступне функције:%1"};
 
@@ -14924,7 +14925,7 @@ exports.typeHint = function(d){return "Уочи да су неопходне з�
 
 exports.workspaceHeader = function(d){return "Склопи своје блокове овде: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Укуцајте ваш JavaScript овде"};
 
 exports.infinity = function(d){return "Бесконачно"};
 

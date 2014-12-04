@@ -1,8 +1,8 @@
 {
-  "compute": "compute",
-  "equivalentExpression": "Try reordering your arguments to get exactly the same expression.",
-  "extraTopBlocks": "You have unattached blocks. Did you mean to attach these to the \"compute\" block?",
-  "goal": "Goal:",
-  "reinfFeedbackMsg": "Vypadá to, jako to, co chceš? Můžeš stisknout tlačítko \"Zkusit znovu\" a zobrazit svůj náčrt.",
-  "yourExpression": "Your expression:"
+  "compute": "spočítat",
+  "equivalentExpression": "Zkus změnit pořadí argumentů a tak získat přesně stejný výraz.",
+  "extraTopBlocks": "Máš nepřipojené bloky. Nechceš je připojit na blok \"vypočítat\"?",
+  "goal": "Cíl:",
+  "reinfFeedbackMsg": "Tady je tvůj příběh! Pokračuj v práci, nebo přejdi na další hádanku!",
+  "yourExpression": "Výraz:"
 }

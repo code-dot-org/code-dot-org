@@ -6698,6 +6698,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -6710,7 +6711,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -6720,16 +6723,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -16059,6 +16052,7 @@ levels.playlab_2 = utils.extend(levels.dog_and_cat_hello, {
   firstSpriteIndex: 20, // cave boy
   timeoutFailureTick: null,
   timeoutAfterWhenRun: true,
+  defaultEmotion: Emotions.HAPPY,
   goal: {
     successCondition: function () {
       return Studio.allWhenRunBlocksComplete() && Studio.sayComplete > 1;
@@ -16249,6 +16243,7 @@ levels.playlab_4 = {
   },
   background: 'tennis',
   avatarList: ['tennisboy', 'tennisgirl'],
+  defaultEmotion: Emotions.SAD,
   requiredBlocks: [
     [{
       test: 'moveDistance',
@@ -16336,7 +16331,10 @@ levels.playlab_5 = utils.extend(levels.click_hello, {
   background: 'space',
   firstSpriteIndex: 23, // spacebot
   timeoutAfterWhenRun: true,
-  toolbox: tb(blockOfType('studio_saySprite'))
+  defaultEmotion: Emotions.HAPPY,
+  toolbox: tb(blockOfType('studio_saySprite')),
+  startBlocks:
+   '<block type="studio_whenSpriteClicked" deletable="false" x="20" y="20"></block>'
 });
 
 levels.octopus_happy =  {
@@ -16468,12 +16466,13 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
     success: 'blue_fireball',
     imageWidth: 800
   },
+  defaultEmotion: Emotions.ANGRY,
   toolbox:
     tb(
-      blockOfType('studio_move', {DIR: 1}) +
+      blockOfType('studio_move', {DIR: 8}) +
       blockOfType('studio_move', {DIR: 2}) +
-      blockOfType('studio_move', {DIR: 4}) +
-      blockOfType('studio_move', {DIR: 8})
+      blockOfType('studio_move', {DIR: 1}) +
+      blockOfType('studio_move', {DIR: 4})
     ),
   map: [
     [1, 0, 0, 0, 0, 0, 1, 0],
@@ -16560,6 +16559,7 @@ levels.playlab_7 = {
     'downButton',
     'upButton'
   ],
+  defaultEmotion: Emotions.HAPPY,
   map: [
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -16788,6 +16788,7 @@ levels.playlab_8 = {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
   avatarList: ['unicorn', 'wizard'],
+  defaultEmotion: Emotions.HAPPY,
   goal: {
     successCondition: function () {
       return Studio.sprite[0].isCollidingWith(1) && Studio.playerScore === 1;
@@ -16803,25 +16804,26 @@ levels.playlab_8 = {
   ),
   startBlocks:
     '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="20"></block>' +
-    '<block type="studio_whenLeft" deletable="false" x="20" y="150"><next>' +
-      blockOfType('studio_move', { SPRITE: 0, DIR: 8}) +
-    '</next></block>' +
-    '<block type="studio_whenRight" deletable="false" x="20" y="250"><next>' +
-      blockOfType('studio_move', { SPRITE: 0, DIR: 2}) +
-    '</next></block>' +
-    '<block type="studio_whenUp" deletable="false" x="20" y="350"><next>' +
-      blockOfType('studio_move', { SPRITE: 0, DIR: 1}) +
-    '</next></block>' +
-    '<block type="studio_whenDown" deletable="false" x="20" y="450"><next>' +
-      blockOfType('studio_move', { SPRITE: 0, DIR: 4}) +
-    '</next></block>' +
-    '<block type="studio_repeatForever" deletable="false" x="20" y="550">' +
+    '<block type="studio_repeatForever" deletable="false" x="20" y="150">' +
       '<statement name="DO">' +
         blockUtils.blockWithNext('studio_moveDistance', { SPRITE: 1, DIR: 2, DISTANCE: 400},
           blockOfType('studio_moveDistance', { SPRITE: 1, DIR: 8, DISTANCE: 400})
         ) +
       '</statement>' +
-    '</block>'
+    '</block>' +
+    '<block type="studio_whenLeft" deletable="false" x="20" y="300"><next>' +
+      blockOfType('studio_move', { SPRITE: 0, DIR: 8}) +
+    '</next></block>' +
+    '<block type="studio_whenRight" deletable="false" x="20" y="400"><next>' +
+      blockOfType('studio_move', { SPRITE: 0, DIR: 2}) +
+    '</next></block>' +
+    '<block type="studio_whenUp" deletable="false" x="20" y="500"><next>' +
+      blockOfType('studio_move', { SPRITE: 0, DIR: 1}) +
+    '</next></block>' +
+    '<block type="studio_whenDown" deletable="false" x="20" y="600"><next>' +
+      blockOfType('studio_move', { SPRITE: 0, DIR: 4}) +
+    '</next></block>'
+
 };
 
 // Can you add blocks to change the background and the speed of the penguin, and
@@ -16933,6 +16935,7 @@ levels.playlab_9 = {
   scale: {
     snapRadius: 2
   },
+  defaultEmotion: Emotions.ANGRY,
   softButtons: [
     'leftButton',
     'rightButton',
@@ -16967,40 +16970,40 @@ levels.playlab_9 = {
   minWorkspaceHeight: 1250,
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"></block>' +
-    '<block type="studio_whenLeft" deletable="false" x="20" y="200">' +
-      '<next>' +
-        blockOfType('studio_move', {DIR: 8}) +
-      '</next>' +
-    '</block>' +
-    '<block type="studio_whenRight" deletable="false" x="20" y="330">' +
-      '<next>' +
-        blockOfType('studio_move', {DIR: 2}) +
-      '</next>' +
-    '</block>' +
-    '<block type="studio_whenUp" deletable="false" x="20" y="460">' +
-      '<next>' +
-        blockOfType('studio_move', {DIR: 1}) +
-      '</next>' +
-    '</block>' +
-    '<block type="studio_whenDown" deletable="false" x="20" y="590">' +
-      '<next>' +
-        blockOfType('studio_move', {DIR: 4}) +
-      '</next>' +
-    '</block>' +
-    '<block type="studio_repeatForever" deletable="false" x="20" y="720">' +
+    '<block type="studio_repeatForever" deletable="false" x="20" y="150">' +
       '<statement name="DO">' +
         blockUtils.blockWithNext('studio_moveDistance', {SPRITE: 1, DIR: 1, DISTANCE: 400},
           blockOfType('studio_moveDistance', {SPRITE: 1, DIR: 4, DISTANCE: 400})
         ) +
       '</statement>' +
     '</block>' +
-    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="880">' +
+    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="290">' +
       '<title name="SPRITE2">0</title>' +
       '<title name="SPRITE2">1</title>' +
       '<next>' +
         blockUtils.blockWithNext('studio_playSound', {SOUND: 'winpoint2'},
           blockOfType('studio_saySprite', {TEXT: msg.alienInvasion()})
         ) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenLeft" deletable="false" x="20" y="410">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 8}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenRight" deletable="false" x="20" y="510">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 2}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenUp" deletable="false" x="20" y="610">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 1}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenDown" deletable="false" x="20" y="710">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 4}) +
       '</next>' +
     '</block>'
 };
@@ -18864,7 +18867,8 @@ Studio.init = function(config) {
   config.makeUrl = "http://code.org/studio";
   config.makeImage = BlocklyApps.assetUrl('media/promo.png');
 
-  config.enableShowCode = BlocklyApps.editCode;
+  // Disable "show code" button in feedback dialog when workspace is hidden
+  config.enableShowCode = !config.level.embed && BlocklyApps.editCode;
   config.varsInGlobals = true;
 
   Studio.initSprites();
@@ -19015,7 +19019,7 @@ BlocklyApps.reset = function(first) {
       size: constants.DEFAULT_SPRITE_SIZE,
       dir: Direction.NONE,
       displayDir: Direction.SOUTH,
-      emotion: Emotions.NORMAL,
+      emotion: level.defaultEmotion || Emotions.NORMAL,
       // tickCount of last time sprite moved,
       lastMove: Infinity,
       // overridden as soon as we call setSprite
@@ -19097,7 +19101,7 @@ var displayFeedback = function() {
       feedbackType: Studio.testResults,
       response: Studio.response,
       level: level,
-      showingSharing: level.freePlay,
+      showingSharing: !level.disableSharing && (level.freePlay),
       feedbackImage: Studio.feedbackImage,
       twitter: twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
@@ -19357,7 +19361,7 @@ Studio.onPuzzleComplete = function() {
     Studio.testResults = BlocklyApps.getTestResults(levelComplete);
   }
 
-  if (Studio.testResults >= BlocklyApps.TestResults.FREE_PLAY) {
+  if (Studio.testResults >= BlocklyApps.TestResults.TOO_MANY_BLOCKS_FAIL) {
     BlocklyApps.playAudio('win');
   } else {
     BlocklyApps.playAudio('failure');
@@ -21215,7 +21219,7 @@ exports.numLinesOfCodeWritten = function(d){return "Tam olarak "+p(d,"numLines",
 
 exports.play = function(d){return "oynat"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Yazdır"};
 
 exports.puzzleTitle = function(d){return "Bulmaca "+v(d,"puzzle_number")+" / "+v(d,"stage_total")};
 
@@ -21231,7 +21235,7 @@ exports.score = function(d){return "puan"};
 
 exports.showCodeHeader = function(d){return "Kodu Görüntüle"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Bloklarını göster"};
 
 exports.showGeneratedCode = function(d){return "Kodu Görüntüle"};
 
@@ -21259,9 +21263,9 @@ exports.hintRequest = function(d){return "İpucunu gör"};
 
 exports.backToPreviousLevel = function(d){return "Önceki seviyeye dön"};
 
-exports.saveToGallery = function(d){return "Galerine kaydet"};
+exports.saveToGallery = function(d){return "Galerisine Kaydet"};
 
-exports.savedToGallery = function(d){return "Galerine kaydedildi!"};
+exports.savedToGallery = function(d){return "Galeri klasörüne kaydedilmiş!"};
 
 exports.shareFailure = function(d){return "Üzgünüz, bu programı paylaşamıyoruz."};
 
@@ -21271,7 +21275,7 @@ exports.typeHint = function(d){return "Parantezlerin ve noktalı virgüllerin ge
 
 exports.workspaceHeader = function(d){return "Bloklarını burda topla: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "JavaScript kodunuzu buraya yazın"};
 
 exports.infinity = function(d){return "Sonsuz"};
 
@@ -21295,7 +21299,7 @@ exports.hintHeader = function(d){return "İşte bir ipucu:"};
 
 exports.genericFeedback = function(d){return "Sonucunu gör ve programını düzeltmeyi dene."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Ne yaptığıma bakın"};
 
 
 },{"messageformat":61}],49:[function(require,module,exports){
@@ -21622,15 +21626,15 @@ exports.setSpriteHidden = function(d){return "gizli görüntü için"};
 
 exports.setSpriteHideK1 = function(d){return "gizle"};
 
-exports.setSpriteAnna = function(d){return "to a Anna image"};
+exports.setSpriteAnna = function(d){return "Anna'yı resmini görüntüle"};
 
-exports.setSpriteElsa = function(d){return "to a Elsa image"};
+exports.setSpriteElsa = function(d){return "Elsa resmini görüntüle"};
 
-exports.setSpriteHiro = function(d){return "to a Hiro image"};
+exports.setSpriteHiro = function(d){return "Hiro resmini görüntüle"};
 
-exports.setSpriteBaymax = function(d){return "to a Baymax image"};
+exports.setSpriteBaymax = function(d){return "Baymax resmini görüntüle"};
 
-exports.setSpriteRapunzel = function(d){return "to a Rapunzel image"};
+exports.setSpriteRapunzel = function(d){return "Rapunzel resmini görüntüle"};
 
 exports.setSpriteKnight = function(d){return "şövalye resmi için"};
 

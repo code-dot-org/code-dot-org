@@ -85,10 +85,10 @@ pt:
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
         Choose an algorithm for the image provided: Escolha um algoritmo para a imagem
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Comece com um quadrado<br/>Coloque um triângulo acima do quadrado<br/>Coloque um triângulo abaixo do quadrado'
-        0: '? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
-        1: ': Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
-        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 'Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram'
-        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: 'Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle'
+        0: '? Comece com um quadrado<br/>Coloque um triângulo à direita do quadrado<br/>Coloque um paralelogramo abaixo do quadrado<br/>Coloque um triângulo à direita do paralelogramo'
+        1: ': Comece com um quadrado<br/>Coloque um triângulo à direita do quadrado<br/>Coloque um paralelogramo abaixo do quadrado<br/>Coloque um triângulo à direita do paralelogramo'
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 'Comece com um quadrado<br/>Coloque um paralelogramo acima do quadrado<br/>Coloque um triângulo à direita do paralelogramo'
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: 'Comece com um quadrado<br/>Coloque um triângulo abaixo do quadrado<br/>Coloque um paralelogramo à direita do triângulo'
       2-3 Algorithms Multi 2:
         Multiple Choice: Múltipla Escolha
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: 'Comece com um triângulo<br/>Coloque um quadrado abaixo do triângulo<br/>Coloque outro triângulo abaixo do quadrado'
@@ -297,6 +297,14 @@ pt:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
+      Coordinates Multi 1:
+        Video game Coordinates: Video game Coordinates
+        Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
+        Which answer best describes the unicorn's movement?: "Which answer best describes the unicorn's movement?"
+        The unicorn moves across the screen: The unicorn moves across the screen
+        The unicorn's y value changes: "The unicorn's y value changes"
+        The unicorn moves to the left: The unicorn moves to the left
+        The unicorn's x value changes: "The unicorn's x value changes"
       K-1 Artist 1 Multi 1:
         Multiple Choice: Múltipla Escolha
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500

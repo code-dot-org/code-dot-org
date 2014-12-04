@@ -40,8 +40,9 @@ ta:
           "Maze: Loops": 'Maze: Loops'
           "Bee: Loops": 'Bee: Loops'
           "Studio: Create a Story": 'Play Lab: Create a Story'
-          description_short: Course 1 is designed for early readers. Recommended for grades K-1.
           "Artist: Loops": 'Artist: Loops'
+          description_audience: Ages 4+ (pre-readers)
+          description_short: Course 1 is designed for early readers.
         course2:
           The Maze: The Maze
           Suzi: Suzi
@@ -76,10 +77,11 @@ ta:
           "Bee: Debugging": 'Bee: Debugging'
           "Artist: Debugging": 'Artist: Debugging'
           "Bee: Conditionals": 'Bee: Conditionals'
-          description_short: 'Course 2 is designed for students who can read.  Recommended for grades 2-5.'
           "Artist: Sequence2": 'Artist: Sequence2'
           "Maze: Sequence2": 'Maze: Sequence2'
           "Artist: Nested Loops": 'Artist: Nested Loops'
+          description_audience: 'Ages  6+ (reading required)'
+          description_short: Course 2 is designed for students who can read.
         course3:
           The Maze: The Maze
           "Studio: Create a Story": 'Play Lab: Create a Story'
@@ -117,7 +119,6 @@ ta:
           "Farmer: While Loops": 'Farmer: While Loops'
           "Bee: Nested Loops": 'Bee: Nested Loops'
           "Bee: Debugging": 'Bee: Debugging'
-          description_short: 'Course 3 is a follow-up to Course 2.  Recommended for grades 4-5.'
           Maze2: Maze2
           Artist2: Artist2
           "Artist: Functions2": 'Artist: Functions2'
@@ -130,6 +131,8 @@ ta:
           "Bee: Debugging2": 'Bee: Debugging2'
           "Artist: Patterns": 'Artist: Patterns'
           Songwriting: Songwriting
+          description_audience: Ages 8+ (after Course 2)
+          description_short: Course 3 is a follow-up to Course 2.
         msm:
           title: Middle School Math
           description: Private work in progress for Middle School Math.
@@ -197,13 +200,13 @@ ta:
         hourofcode:
           Maze: Maze
           title: Hour of Code
-          description_short: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
           description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          description_short: Try the basics of computer science with many fun characters!
         frozen:
           title: Code with Anna and Elsa
-          description_short: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
           description: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
           Artist: Artist
+          description_short: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
         course4:
           description_short: Students taking Course 4 should have already taken Courses 2 and 3.
           description: Course 4 is designed for students who have taken Course 2 and 3. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.
@@ -232,6 +235,7 @@ ta:
           Farmer Binary: Farmer Binary
           Maze and Bee: Maze and Bee
           Artist Binary: Artist Binary
+          description_audience: Ages 10+ (after Course 3)
         Course4pre:
           description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
           Course 4 Prerequisite: Course 4 Prerequisite

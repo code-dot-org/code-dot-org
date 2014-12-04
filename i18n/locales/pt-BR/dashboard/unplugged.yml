@@ -33,7 +33,7 @@ pt:
         video: Unplug5
       Unplug6:
         title: Condições
-        desc: Essa aula é um jogo. Depois de introduzir a ideia de estruturas condicionais, declarações se, e laços, os alunos podem praticar juntos, usando um programa, ou um baralho de cartas.
+        desc: Essa aula é um jogo. Depois de introduzir a ideia de estruturas condicionais, instruções se e laços, os alunos podem praticar juntos, usando um programa, ou um baralho de cartas.
         pdfs:
           - unplug6
         video: Unplug6
@@ -165,20 +165,20 @@ pt:
         title: Imagens binárias
         desc: Embora muitas pessoas vejam o binário estritamente como zeros e uns, nossos cursos anteriores ensinaram aos alunos que as informações podem ser representadas por uma grande variedade de opções binárias. Esta aula leva esse conceito um passo adiante, uma vez que demonstra como um computador também pode armazenar informações ainda mais complexas (como imagens e cores) em binário.
       VideoGamesCoordinatePlanes:
-        title: Video Games and Coordinate Planes
-        desc: Video Games and Coordinate Planes lesson description
+        title: Vídeo games e planos cartesianos
+        desc: Descrição da lição Video games e planos cartesianos
       Contracts:
         title: Contratos
-        desc: Contracts unplugged lesson description
+        desc: Descrição da lição offline Contratos
       DesignRecipe:
         title: A receita de design
-        desc: Design Recipe lesson description
+        desc: Descrição da lição Receita de design
       Booleans:
         title: Booleanos
-        desc: Booleans lesson description
+        desc: Descrição da lição Booleanos
       ConditionalsPiecewiseFunctions:
         title: Condicionais e funções definidas por partes
-        desc: Conditionals and Piecewise Functions lesson description
+        desc: Descrição da lição Condicionais e funções definidas por partes
       CollisionDetection:
-        title: Collision Detection
-        desc: Collision Detection lesson description
+        title: Detecção de colisão
+        desc: Descrição da lição Detecção de colisão

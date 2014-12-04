@@ -5,7 +5,7 @@ lv:
         blank: ir nepieciešams
     attributes:
       user:
-        name: Attēlojamais vārds
+        name: Vārds ekrānā
         email: E-pasts
         username: Lietotājvārds
         password: Parole
@@ -18,7 +18,7 @@ lv:
         error:
           future: nevar būt nākotnē
   hello: Sveika, pasaule
-  welcome_back: 'Laipni lūgta atpakaļ, %{name}'
+  welcome_back: 'Laipni lūdzu atpakaļ, %{name}'
   add_teacher_form:
     code:
       label: 'Pievienot skolotāju:'
@@ -39,7 +39,7 @@ lv:
   try_hoc: 'Izmēģini "Programmēšanas stundu", spied šeit >> '
   try_k8intro: Izmēģini mūsu K-8 Ievadu Datorzinātņu kursos (15-25 stundas)
   k8intro: K-8 Ievads Datorzinātņu kursos (15-25stundas)
-  already_started: 'Jau sāki? Atsākt šeit > '
+  already_started: 'Jau iesāki? Atsākt šeit > '
   demos: 'Administrators: Visas demonstrācijas'
   continue: Turpināt
   prize: balva
@@ -115,11 +115,11 @@ lv:
     subject: Pievienoties manai klasei (code.org)
     body: |
       Uzklikšķini uz zemāk esošās hipersaites, lai pieteiktos uz datorzinātnes pamācību mājaslapā Code.org (Mani norādot kā savu "skolotāju"):
-
+      
       %{link}
-
+      
       Šīs pamācības ir jautras, vizuāli piesaistošas un, tās māca datorzinātnes pamatprincipus, izmantojot vienkāršu, vadītu, spēlei līdzīgu pieredzi. Mācies programmēt no Bill Gates, Mark Zuckerberg, Angry Birds un Plants vs. Zombies! :-)
-
+      
       %{name}
   follower:
     invite_sent: Uzaicinājums nosūtīts
@@ -148,7 +148,7 @@ lv:
     provider: 'Sniedzējs:'
     code: 'Kods:'
     redeem_header: 'Tiek saņemts:'
-    donorschoose_register: 'Reģistrējies par skolotāju lapā  DonorsChoose.org'
+    donorschoose_register: Reģistrējies par skolotāju lapā DonorsChoose.org
     donorschoose_project: Iesniegt projektu
     donorschoose_how_to: Kā izmantot savu kodu
     success: Jūsu balva ir veiksmīgi saņemta, kods atrodams zemāk.
@@ -187,11 +187,11 @@ lv:
       teacher:
         earned: '15 vai vairāk skolēni sakrājuši visas  %{num_trophies} trofejas. Jūs esat saņēmis skolotāju balvu! (tikai ASV skolniekiem)'
         not_earned_title: 'Māci klasi un nopelni līdz $1,000 <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'
-        not_earned: 'To reward first-time computer science teachers, you can earn up to $1,000 in <a href="http://DonorsChoose.org">DonorsChoose.org</a> credits for guiding a classroom through the K-8 intro course. To qualify, you need to successfully host a classroom of at least 15 students through the entire K-8 intro course, with all 15 students (or more) completing all tutorials and earning all %{num_trophies} trophies. If 7 or more of the students who earn all of the trophies are girls, your reward is $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits. Otherwise, your reward is $750 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits.  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits can only be used by teachers in U.S. public schools.'
+        not_earned: 'Tikai ASV skolām. Pirmreizēji datorzinību skolotāji saņems līdz 1000$ no <a href="http://DonorsChoose.org">DonorsChoose.org</a> par K-8 kursa novadīšanu. Lai pretendētu uz atlīdzību, jābūt vismaz vienai klasei ar 15 skolēniem, kuri pabeiguši visu krusu un saņēmuši %{num_trophies} novērtējumus. Ja vairāk kā 7 skolēni ir meitenes, balvā ir 1000$,  citādi 750$.'
         bonus:
-          not_earned_title: 'You can still earn an additional $250 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'
+          not_earned_title: 'Tikai ASV skolām. Jūs joprojām variet saņemt papildus 250$ <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> balvā'
           earned: '7 vai vairāk skolēni, kas sakrāja visas %{num_trophies} trofejas ir meitenes. Jūs esat ieguvis/-usi papildus balvu! (tikai ASV skolotāji)'
-          not_earned: 'If at least 7 of your students who earn all %{num_trophies} trophies are girls, your reward is an additional $250 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits. <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits can only be used by teachers in U.S. public schools.'
+          not_earned: 'Tikai ASV skolām. Ja vismaz 7 skolēni, kas saņems %{num_trophies} balvas būs meitenes, papildus saņemsiet 250$ balvā <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>.'
   crud:
     new_model: 'Jauns %{model}'
     show: Rādīt
@@ -242,7 +242,7 @@ lv:
     tools: Skolotāja rīki
     followers:
       section: 'Sadaļa:'
-      stages: 'Stage(s) to display:'
+      stages: 'Skatuve(s), kuras parādīt:'
       show_past: 'Parādīt skolēnu aktivitāti (%{bullet_html}) iepriekš:'
       levels_key: Līmeņu atslēga
       perfect: Pabeigts, izcili
@@ -260,12 +260,12 @@ lv:
       dashboard: Doties uz Skolotāja paneli
       add: Pievienot skolēnus
       remove: noņemt skolēnus
-      confirm_remove: Vai tiešām vēlaties noņemt šo studentu?
+      confirm_remove: Vai tiešām vēlaties noņemt šo skolēnu?
       help_reassign: Lai sadalītu savu klasi vairākās grupās, izvēlies skolēnus, ko pievienot jaunajai grupai.
-      help_register: Instead of making you spend a lot of time individually importing student data, you can set up your class quickly by asking them to signup. Your students will need to choose usernames and passwords, but they WILL NOT be required to provide an email address. If a student forgets their password, you will be able to reset it for them.
+      help_register: Tā vietā, lai pavadītu daudz laika ievadot katra skolēna datus, var ātri sagatavot savu klasi un likt skolēniem tajā reģistrēties. Skolēniem būs jāizvēlas lietotāju vārdi un paroles, bet viņiem nebūs prasīts norādīt e-pasta adreses. Ja skolēns aizmirsīs savu paroli, skolotājam ir iespēja to atjaunot.
       register: Paprasiet saviem skolēniem, lai viņi reģistrējas paši
       vist: Aiciniet savus skolēnus apmeklēt
-      section_code: 'and enter their section-code:'
+      section_code: 'un ievadi sekcijas kodu:'
       first_please: 'Pirmkārt, lūdzu %{add_section}'
       for: Pa
       enter: 'ievadiet:'
@@ -311,32 +311,33 @@ lv:
     all_courses: Pārskats par kursiem, 1, 2 un 3
     lesson_plans: Nodarbību plāni
     signin_message: 'Jau reģistrējies? %{link}'
-    student_reg_link: Pierakstīšanās kā skolniekam
+    student_reg_link: Pierakstīšanās kā skolēnam
     teacher_reg_link: Pierakstīšanās kā skolotājam
-    signin_directions: 'Izmantot kontu, lai izsekotu progresu. <br/> Skolotāji pārbauda visu klasi.'
+    signin_directions: 'Izmantot kontu, lai izsekotu progresu. <br/> Skolotāj, pārbauda visu klasi.'
     teacher_dashboard: Redzēt progresa joslu
     teacher_student_count_one: 'Jums ir %{count} skolēns.'
     teacher_student_count: 'Jums ir %{count} skolnieki.'
-    teacher_averages: 'Vidēji jūsu skolnieki ir ieguvuši %{trophy_average} no %{trophy_max} "Vispārēja meisterība" trofejas.'
-    teacher_print_certificates: Drukāt sertifikātus skolniekiem, kas pabeiguši kursu
+    teacher_averages: 'Vidēji jūsu skolnieki ir ieguvuši %{trophy_average} no %{trophy_max} "Vispārēja meistarība" trofejas.'
+    teacher_print_certificates: Drukāt sertifikātus skolēniem, kas pabeiguši kursu
     teacher_read_blog: Lasīt par jaunumiem un atjauninājumiem mūsu materiāliem pedagogu blogā
     classroom: Mūsu klase
-    student_progress: Jūsu mācību process
+    student_progress: Tavs mācību progress
     student_stats: 'Esat ieguvis %{trophy_count} no %{trophy_max} "Vispārēja meisterība" trofejas.'
-    student_left_off: 'Vieta, kur palikāt:'
+    student_left_off: 'Vieta, kur paliki:'
     student_finished: 'Esat pabeidzis visas apmācība, izvēlaties citu klasi %{online_link}vai %{local_school_link}'
     local_school: vietējā skola
     online: tiešsaiste
     see_details: Sīkāka informācija
     prize_info: 'Balvas par dalību (tikai ASV valsts skolu skolotājiem): līdz $1,000 savā klasē.'
-    tryfirst: 'Vai varat izmēģināt sākumā un pierakstīties vēlāk:'
-    trynow: Izmēģiniet tūlīt
+    tryfirst: 'Vai vari izmēģināt sākumā un pierakstīties vēlāk:'
+    trynow: Izmēģini tūlīt
     add_hint_help: Lūdzu palīdziet mums pievienot gudrus padomus Code.org pamācībās
-    20hour_overview: šis 20 stundu kurss iepazīstina datorzinātnes un programmēšanas kodolu. Kurss ir izveidots, lai to varēu izmantot klasēs un tas to būtu jautri mācīties visos vecumos.
+    20hour_overview: šis 20 stundu kurss iepazīstina ar datorzinību un programmēšanas pamatiem. Kurss ir izveidots, lai to varētu izmantot pamatskolas klasēs, bet tas sagādās prieku mācīties visos vecumos.
     test_videos_help: Izmēģinat mūsu jauno video atskaņotāju savā skolā
-    try_beta_courses: Jaunums! Izmēģinat mūsu BETA kursus K-5 studentiem
+    try_beta_courses: Jaunums! Izmēģinat mūsu BETA kursus K-5 (sākumskolas) skolēniem
     use_as_teacher: Izmantojiet šo vietni, kā skolotājs
-    heading_elementary: '<h2>20 stundu kursi</h2><h1>Pamatskolas skolēniem</h1>'
+    heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
+    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
     heading_apps: '<h2>Izklaide </h2><h1>visiem</h1>'
     heading_legacy: '<h2>Mūsu galvenais kurss ir </h2><h1>visiem vecumiem</h1>'
     your_gallery: Galerija
@@ -349,7 +350,8 @@ lv:
     teacher: Skolotāja
   footer:
     help_from_html: Inžinieri no Google, Microsoft, Facebook un Twitter palīzēja radīt šo pamācību.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Visas tiesības paturēt.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Visas tiesības paturēt.'
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
+    powered_by_aws: Powered by Amazon Web Services
     feedback: nodrošināt atsauksmes
     translate: Palīdzi mums tulkot savā valodā
     support: Atbalsts
@@ -373,14 +375,14 @@ lv:
   compatability:
     working:
       header: Mēs strādājam pie atbalsta jūsu pārlūkam.
-      message: "Code.org izmanto mūsdienu interneta tehnoloģijas. Tas palīdz saitei ātrāk darboties. Jūsu pārlūkprogramma neatbalsta visas nepieciešamās funkcijas un jums varētu būt nelieli traucējumi, kamēr izmantojat šo saites daļu. Lūdzu, palīdziet mums, <a href='%{report_issue_url}'> ziņojot visus traucējumus, ko jūs atrodat</a>. Jūs varat arī <a href='%{supported_browsers_url}'> nomainīt savu pārlūkprogrammu uz atbalstītu versiju</a>."
+      message: "Code.org izmanto mūsdienīgas tīmekļa lapu tehnoloģijas. Tas palīdz lapai ātrāk darboties. Tava pārlūkprogramma neatbalsta visas nepieciešamās funkcijas un tev varētu būt nelieli traucējumi, kamēr izmanto šo lapas daļu. Lūdzu, palīdzi mums, <a href='%{report_issue_url}'> ziņojot visus traucējumus, ko atrod</a>. Tu vari arī <a href='%{supported_browsers_url}'> nomainīt savu pārlūkprogrammu uz atbalstītu versiju</a>."
       hide_this_warning: Nerādīt šo brīdinājumu
     upgrade:
-      header: Lūdzu, atjaunojiet savu pārlūkprogrammu.
+      header: Lūdzu atjaunot savu pārlūkprogrammu.
       message: "Code.org lieto modernas tīmekļa tehnoloģijas. Tās padara vietni ātrāku. Diemžēl tavs pārlūks neatbalsta visas iezīmes, kas nepieciešamas, lai palaistu šo vietnes daļu.<br/><br/>Instalē pārlūku no atbalstīto pārlūku saraksta, lai turpinātu. Tu vari <a href='#'>mēģināt apskatīt lapu</a>, bet sagaidi, ka tā var darboties nepareizi."
       button: Parādīt atbalstīto pārlūkprogrammu sarakstu
   slow_loading: Tas aizņem vairāk laika nekā parasti...
-  try_reloading: Pamēģiniet pārlādēt pašreizējo lapu
+  try_reloading: Pamēģini pārlādēt pašreizējo lapu
   next_stage: Pabeigts! Turpināt ar nākamo līmeni
   download_pdf: Atvērt nodarbību plānu
   lesson_plan: Nodarbību plāns
@@ -390,12 +392,12 @@ lv:
   video_coming_soon: Video pieejams drīz!
   share_code:
     title: "Spied 'Palaist' , lai redzētu programmu darbībā"
-    bounce_og_title: Check out my Bounce Game
-    flappy_og_title: Apskati manu Flapija Spēli
-    studio_og_title: Check out my Play Lab App
+    bounce_og_title: Apskati manu atsitienu spēli
+    flappy_og_title: Apskati manu Flappy Spēli
+    studio_og_title: Apskati manu Spēļu laboratoriju
     check_out_what_i_made: Apskaties, ko esmu izveidojis
     og_description: Es uzrakstīju kodu pats ar Code.org
-    phone_number_not_allowed: Izskatās, ka tur atrodas tālruņa numuru. Mēģini mainīt tekstu.
+    phone_number_not_allowed: Izskatās, ka tur atrodas tālruņa numurs. Mēģini mainīt tekstu.
     address_not_allowed: Izskatās, ka tā ir adrese. Mēģini mainīt tekstu.
     email_not_allowed: Izskatās, ka tur atrodas e-pasts. Mēģint mainīt tekstu.
     profanity_not_allowed: Izskatās, ka tur atrodas lādēšana. Mēģini mainīt tekstu.
@@ -422,13 +424,15 @@ lv:
       body: Izmēģini mūsu 20 stundu ievadu Datorzinātņu kursā.
     hoc2014:
       try_new_tutorial: Pamēģini mūsu jauno Programmēšanas Stundas apmācību beta versijā
-      try_frozen: Artist with Anna and Elsa, from Frozen
+      try_frozen: 'Zīmē kopā ar Annu un Elzu no "Ledus sirds"'
     gallery:
       title: Galerija
-      body: View a gallery of app and artist images created by our users
+      body: Apskati lietotnes un mākslinieciskos zīmējumus, ko veidojuši citi lietotāji
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: Skolnieki uzzīmēja šos ar kodu!
-    students_made_these_with_code: Studenti izveidoja šos ar kodu!
+    students_made_these_with_code: Skolēni izveidoja šos ar kodu!
     picture_count: 'Agrākās <b>%{days}</b> dienās, skolnieki zīmēja <b>%{count}</b> attēlus taisot paši savas datorprogrammas. Noklikšķini uz attēla, lai apskatītu katru programmu darbībā.'
     activity_count: 'Agrākās <b>%{days}</b> dienās, veidoja <b>%{count}</b> attēlus un lietojamprogrammas  taisot paši savas datorprogrammas. Noklikšķini uz attēliem un ekrānšāviņiem, lai apskatītu katru programmu darbībā.'
     want_to_make_your_own: Vēlies uzveidot pats savu?
@@ -437,28 +441,28 @@ lv:
     caption_time_ago: '%{time_ago} pirms'
     header: Galerija
     header_playlab: Spēles laboratorija
-    header_artist: Izpildītājs
+    header_artist: Mākslinieks
   landing:
-    prerelease: "Šis kurss ir <span class='betatext'>BETA stadijā</span>.  Tas nozīmē, ka tā nav kursa pēdējā versija un var tikt pakļauta pārskatam kā atsauksmes, jo informācija ir saņemta un uzlabojumi tiek veikti."
-    prerelease_hoc2014: "This tutorial is in <span class='betatext'>beta</span>.  It is subject to revision as feedback is received and improvements are made."
+    prerelease: "Šis kurss ir <span class='betatext'>BETA stadijā</span>.  Tas nozīmē, ka tā nav kursa pēdējā versija un var tikt pakļauta pārskatam pēc atsauksmju saņemšanas, jo informācija ir saņemta un uzlabojumi tiek veikti."
+    prerelease_hoc2014: "Šī pamācība ir <span class='betatext'>beta</span >stadijā. Tā tiks pārskatīta un uzlabota, ņemot vērā lietotāju atsauksmes."
     feedback: Sniegt atsauksmes
     report_bug: Kļūdas ziņojums
     support: Saņemt palīdzību
     support_url: //support.code.org
   multi:
     wrong_title: Nepareiza atbilde
-    wrong_body: Ievadītā atbilde ir nekorekta. Lūdzu mēģiniet vēlreiz!
+    wrong_body: Ievadītā atbilde ir nekorekta. Lūdzu mēģini vēlreiz!
     correct_title: Pareizi
     correct_body: Tā ir pareizā atbilde.
   match:
     wrong_title: Nepareizs risinājums
-    wrong_body: Ievadītais risinājums nav pareizs. Lūdzu mēģinat vēl!
+    wrong_body: Ievadītais risinājums nav pareizs. Lūdzu mēģini vēl!
     correct_title: Pareizi
     correct_body: Tā ir pareizā atbilde.
   text_match:
     placeholder: Ievadi savu atbildi šeit
   dialog:
-    ok: OK
+    ok: Labi
   time:
     hour: 1 stunda
     day: diena
@@ -468,7 +472,7 @@ lv:
       name:
         20-hour:
           title: K-8 Ievads Datorzinātņu kursos (15-25stundas)
-          description: šis 20 stundu kurss iepazīstina datorzinātnes un programmēšanas kodolu. Kurss ir izveidots, lai to varēu izmantot klasēs un tas to būtu jautri mācīties visos vecumos.
+          description: šis 20 stundu kurss iepazīstina ar datorzinību un programmēšanas pamatiem. Kurss ir izveidots, lai to varētu izmantot pamatskolas klasēs, bet tas sagādās prieku mācīties visos vecumos.
         Hour of Code:
           title: Programmēšanas stunda
           description: ""
@@ -494,11 +498,11 @@ lv:
           title: Piemēru līmeņu konstruktors
           description: ""
   age_interstitial:
-    age: Jūsu vecums
+    age: Tavs vecums
     header: Konta informācijas atjaunināšana
     message: 'Mēs esam procesā, kas atjaunina mūsu pieredzi, lai nodrošinātu jūs ar vēl lielāku konfidencialitātes aizsardzību. Lai to paveiktu, mums ir nepieciešams esošiem lietotājiem ievadīt šeit viņu vecumu. <br/>Kā vienmēr, code.org nekad iznomāt, pārdot vai koplietot šo informāciju ar trešajām pusēm.'
     sign_out: 'Ja nevēlaties sniegt savu vecumu, jūs varat <a href="%{url}">izrakstīties</a>.'
-  zendesk_too_young_message: 'Atvainojiet, jaunākiem lietotājiem nav iespējas pierakstīties mūsu atbalsta lapā. Jūs varat pārlūkot <a href="http://support.code.org">support.code.org</a> bez pierakstīšanās vai varat prasīt savam vecākam vai skolotājam, lai sazinās ar mums jūsu vietā.'
+  zendesk_too_young_message: 'Atvainojiet, jaunākiem lietotājiem nav iespējas pierakstīties mūsu atbalsta lapā. Tu vari pārlūkot <a href="http://support.code.org">support.code.org</a> bez pierakstīšanās vai vari prasīt savam vecākam vai skolotājam, lai sazinās ar mums tavā vietā.'
   progress:
     not_completed: Nav pabeigts
     completed_too_many_blocks: Pabeigts, pārāk daudz bloki

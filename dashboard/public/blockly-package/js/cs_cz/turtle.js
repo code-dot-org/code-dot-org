@@ -2607,6 +2607,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -2619,7 +2620,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -2629,16 +2632,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -14129,8 +14122,16 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
     // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
     Turtle.ctxPattern.rotate(Math.PI * (Turtle.heading - 90) / 180);
 
-    var clipSize = Math.min(Turtle.smoothAnimateStepSize, lineDistance);
-
+    var clipSize;
+    if (lineDistance % Turtle.smoothAnimateStepSize === 0) {
+      clipSize = Turtle.smoothAnimateStepSize;
+    } else if (lineDistance > Turtle.smoothAnimateStepSize) {
+      // this happens when our line was not divisible by smoothAnimateStepSize
+      // and we've hit our last chunk
+      clipSize = lineDistance % Turtle.smoothAnimateStepSize;
+    } else {
+      clipSize = lineDistance;
+    }
     if (img.width !== 0) {
       Turtle.ctxPattern.drawImage(img,
         // Start point for clipping image
@@ -14138,7 +14139,7 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
         // clip region size
         clipSize * retina, img.height,
         // some mysterious hand-tweaking done by Brendan
-        Math.round((Turtle.stepDistanceCovered - 7) * retina), Math.round((- 18) * retina),
+        Math.round((Turtle.stepDistanceCovered - clipSize - 2) * retina), Math.round((- 18) * retina),
         clipSize * retina, img.height);
     }
 
@@ -14807,7 +14808,7 @@ exports.end = function(d){return "konec"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Bloky \"Opakovat\" nebo \"Pokud\" v sobě musí mít další bloky, aby fungovaly. Ujisti se, že vnitřní bloky jsou v pořádku vložené dovnitř vnějších bloků."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Blok funkce v sobě musí obsahovat další bloky."};
 
 exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
 
@@ -14823,7 +14824,7 @@ exports.errorUnusedFunction = function(d){return "You created a function, but ne
 
 exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
-exports.extraTopBlocks = function(d){return "Máš další extra bloky, které nejsou připojené k bloku událostí."};
+exports.extraTopBlocks = function(d){return "Máš nepřipojené bloky. Nechceš je připojit k bloku \"po spuštění\"?"};
 
 exports.finalStage = function(d){return "Dobrá práce! Dokončil si poslední fázi."};
 
@@ -14861,9 +14862,9 @@ exports.numBlocksNeeded = function(d){return "Dobrá práce! Dokončil jsi Háda
 
 exports.numLinesOfCodeWritten = function(d){return "Už jsi napsal "+p(d,"numLines",0,"cs",{"one":"1 řádek","other":n(d,"numLines")+" řádků"})+" kódu!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "hrát"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Tisk"};
 
 exports.puzzleTitle = function(d){return "Hádanka "+v(d,"puzzle_number")+" z "+v(d,"stage_total")};
 
@@ -14875,11 +14876,11 @@ exports.runProgram = function(d){return "Spustit"};
 
 exports.runTooltip = function(d){return "Spustí program definovaný bloky na pracovní ploše."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "výsledek"};
 
 exports.showCodeHeader = function(d){return "Zobrazit kód"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Zobrazit bloky"};
 
 exports.showGeneratedCode = function(d){return "Zobrazit kód"};
 
@@ -14903,15 +14904,15 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Celkově: "+p(d,"numLin
 
 exports.tryAgain = function(d){return "Zkusit znovu"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Viz tip"};
 
 exports.backToPreviousLevel = function(d){return "Zpět na předchozí úroveň"};
 
-exports.saveToGallery = function(d){return "Uložit do tvé galerie"};
+exports.saveToGallery = function(d){return "Uložit do galerie"};
 
-exports.savedToGallery = function(d){return "Uložit do tvé galerie!"};
+exports.savedToGallery = function(d){return "Uloženo v galerii!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Omlouváme se, ale tento program nemůžeme sdílet."};
 
 exports.typeFuncs = function(d){return "Dostupné funkce:%1"};
 
@@ -14919,7 +14920,7 @@ exports.typeHint = function(d){return "Všimni si, že závorky a středníky js
 
 exports.workspaceHeader = function(d){return "Sestav si zde své bloky: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Zde napiš tvůj kód v JavaScriptu"};
 
 exports.infinity = function(d){return "Nekonečno"};
 
@@ -14941,7 +14942,7 @@ exports.signup = function(d){return "Zaregistruj se do úvodního kurzu"};
 
 exports.hintHeader = function(d){return "Zde je rada:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Podívej se jak jsi skončil a zkus svůj program opravit."};
 
 exports.defaultTwitterText = function(d){return "Check out what I made"};
 
@@ -14958,7 +14959,7 @@ var MessageFormat = require("messageformat");MessageFormat.locale.cs = function 
 };
 exports.blocksUsed = function(d){return "Použité bloky: %1"};
 
-exports.branches = function(d){return "branches"};
+exports.branches = function(d){return "ramena"};
 
 exports.catColour = function(d){return "Barva"};
 
@@ -14976,27 +14977,27 @@ exports.catLogic = function(d){return "Logika"};
 
 exports.colourTooltip = function(d){return "Změní barvu tužky."};
 
-exports.createACircle = function(d){return "create a circle"};
+exports.createACircle = function(d){return "vytvoř kružnici"};
 
-exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+exports.createSnowflakeSquare = function(d){return "vytvořit vločku typu čtverec"};
 
-exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+exports.createSnowflakeParallelogram = function(d){return "vytvořit vločku typu rovnoběžník"};
 
-exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+exports.createSnowflakeLine = function(d){return "vytvořit vločku typu čára"};
 
-exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+exports.createSnowflakeSpiral = function(d){return "vytvořit vločku typu spirála"};
 
-exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+exports.createSnowflakeFlower = function(d){return "vytvořit vločku typu květina"};
 
-exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+exports.createSnowflakeFractal = function(d){return "vytvořit vločku typu fraktál"};
 
-exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+exports.createSnowflakeRandom = function(d){return "vytvořit vločku typu náhodná"};
 
-exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
+exports.createASnowflakeBranch = function(d){return "vytvoř rameno vločky"};
 
 exports.degrees = function(d){return "stupňů"};
 
-exports.depth = function(d){return "depth"};
+exports.depth = function(d){return "hloubka"};
 
 exports.dots = function(d){return "pixely"};
 
@@ -15006,33 +15007,33 @@ exports.drawATriangle = function(d){return "nakresli trojúhelník"};
 
 exports.drawACircle = function(d){return "nakresli kružnici"};
 
-exports.drawAFlower = function(d){return "draw a flower"};
+exports.drawAFlower = function(d){return "nakresli květinu"};
 
-exports.drawAHexagon = function(d){return "draw a hexagon"};
+exports.drawAHexagon = function(d){return "nakresli šestiúhelník"};
 
 exports.drawAHouse = function(d){return "nakresli dům"};
 
-exports.drawAPlanet = function(d){return "draw a planet"};
+exports.drawAPlanet = function(d){return "nakresli planetu"};
 
-exports.drawARhombus = function(d){return "draw a rhombus"};
+exports.drawARhombus = function(d){return "nakresli kosočtverec"};
 
-exports.drawARobot = function(d){return "draw a robot"};
+exports.drawARobot = function(d){return "nakresli robota"};
 
-exports.drawARocket = function(d){return "draw a rocket"};
+exports.drawARocket = function(d){return "nakresli raketu"};
 
-exports.drawASnowflake = function(d){return "draw a snowflake"};
+exports.drawASnowflake = function(d){return "nakresli sněhovou vločku"};
 
 exports.drawASnowman = function(d){return "nakresli sněhuláka"};
 
-exports.drawAStar = function(d){return "draw a star"};
+exports.drawAStar = function(d){return "nakresli hvězdu"};
 
 exports.drawATree = function(d){return "nakresli strom"};
 
-exports.drawUpperWave = function(d){return "draw upper wave"};
+exports.drawUpperWave = function(d){return "nakresli horní vlnku"};
 
-exports.drawLowerWave = function(d){return "draw lower wave"};
+exports.drawLowerWave = function(d){return "nakresli spodní vlnku"};
 
-exports.drawStamp = function(d){return "draw stamp"};
+exports.drawStamp = function(d){return "nakresli razítko"};
 
 exports.heightParameter = function(d){return "výška"};
 
@@ -15054,7 +15055,7 @@ exports.jumpSouthTooltip = function(d){return "Posune malíře na jih bez zanech
 
 exports.jumpWestTooltip = function(d){return "Posune malíře na západ bez zanechání stopy."};
 
-exports.lengthFeedback = function(d){return "You got it right except for the lengths to move."};
+exports.lengthFeedback = function(d){return "Máš to dobře kromě délky pohybu."};
 
 exports.lengthParameter = function(d){return "Délka"};
 
@@ -15086,11 +15087,11 @@ exports.penTooltip = function(d){return "Přiloží či odloží tužku a začne
 
 exports.penUp = function(d){return "odložit tužku"};
 
-exports.reinfFeedbackMsg = function(d){return "Vypadá to, jako to, co chceš? Můžeš stisknout tlačítko \"Zkusit znovu\" a zobrazit svůj náčrt."};
+exports.reinfFeedbackMsg = function(d){return "Tady je tvoje kresba! Můžeš na ní dál pracovat nebo pokračovat k další hádance."};
 
 exports.setColour = function(d){return "nastav barvu"};
 
-exports.setPattern = function(d){return "set pattern"};
+exports.setPattern = function(d){return "nastavit vzorek"};
 
 exports.setWidth = function(d){return "nastav šířku"};
 
@@ -15102,7 +15103,7 @@ exports.showTurtle = function(d){return "zobraz malíře"};
 
 exports.sizeParameter = function(d){return "size"};
 
-exports.step = function(d){return "step"};
+exports.step = function(d){return "krok"};
 
 exports.tooFewColours = function(d){return "V této hádance musíš použít alespoň %1 různých barev. Nyní jsi použil pouze %2."};
 

@@ -9,13 +9,13 @@ fi:
         video: Unplug1
       Unplug2:
         title: Laskennallinen ajattelu
-        desc: Vain paperia ja kyniä apuna käyttäen, oppilaat oppivat neljä askelta laskennalliseen ajatteluun. Lyhyen johdannon jälkeen, oppilaat jaetaan ryhmiin jissa he luovat ohjeita muille oppilaille tietyn hirviön piirtämiseksi (esivalittujen hirviöiden valikoimasta). Koko tehtävä täytyy osittaa, sitten tiimit analysoivat kaikki hirviöt valikoimassa yhteisten muotojen osalta, eristävät erilaiset yksityiskohdat hirviöistä ja käyttävät tätä tietoa luoden algoritmin (ohjeen) toiselle tiimille tietyn hirviön piirtämiseksi. Tiimit vaihtavat algoritmeja toisen ryhmän kanssa ja piirtävät hirviön algoritmiin perustuen. Vastaako kuva alkuperäisen tiimin tarkoittamaa?
+        desc: Käyttäen vain paperia ja kynää, oppilaat käyvät läpi laskennallisen ajattelun neljä perusaskelta. Lyhyen johdannon jälkeen oppilaat jaetaan ryhmiin, joissa he toisillensa ohjeita annettujen hirviöiden piirtämiseksi. Aluksi piirtotehtävä pilkotaan osiin. Seuraavaksi ryhmät analysoiva kaikki annetut hirviöt ja etsivät niistä yhteisiä piirteitä. Käyttäen tätä tietoa hyväkseen, ryhmät muodostavat algoritmin (sarjan ohjeita), jonka avulla toinen ryhmä voi piirtää valitun hirviön. Ryhmät vaihtavat algoritmeja keskenään ja piirtävät hirviön toisen ryhmän algoritmin mukaisesti. Lopuksi verrataan, vastaako kuva algoritmin antaneen ryhmän tarkoittamaa hirviötä.
         pdfs:
           - unplug2
         video: Unplug2
       Unplug3:
         title: Ruutupaperiohjelmointi
-        desc: "By programming one another to draw pictures, students will begin to understand what programming is really about. The class will begin by students instructing each other to color squares in on graph paper in an effort to reproduce an existing picture.  If there's time, the lesson can conclude with images that the students create themselves."
+        desc: Ohjelmoimalla toisensa piirtämään kuvia, oppilaat alkavat ymmärtää mistä ohjelmoinnissa on kyse. Tämä oppitunti alkaa oppilaiden neuvoessa toisiaan värittämään neliöitä ruutupaperilla yrittäessään toistaa olemassaolevaa kuvaa. Jos aikaa on, oppitunti voi päättyä kuviin jotka oppilaat itse luovat.
         pdfs:
           - unplug3
         video: Unplug3
@@ -26,7 +26,7 @@ fi:
           - unplug4
         video: Unplug4
       Unplug5:
-        title: funktiot
+        title: Funktiot
         desc: |-
           In this lesson, students will make a suncatcher out of string, beads, and a special charm. The students will follow a series of repetitive steps, then be asked to identify certain sets of "skills" that are duplicated several times. Once those skills are defined, they will be called from a main program and the whole beautiful process of creation will be recorded on a single sheet of paper. The final program will be geared toward the entire class, whatever their type of string, beads, and charms. To effectively allow for this, students will need to "abstract out" the details of their specific materials and create vague terms for an individual's supplies.  This use of generic placeholders is a wonderful introduction to variables.
         pdfs:
@@ -114,7 +114,7 @@ fi:
         desc: This lesson calls out ways we use algorithms in our daily lives, specifically making paper airplanes. This lesson also focuses on the bigger picture of computer science and how algorithms play an essential part.
         video: C2_paper_airplanes
       BinaryBracelets:
-        title: Binäärilistat
+        title: Binäärikorut
         desc: Students create bracelets as a binary representations of the first letter of their name. Students learn that data can be represented and stored in more than one way.
         video: C2_binary_bracelets
       DigitalFootprint:
@@ -161,7 +161,7 @@ fi:
         title: For Loop Fun
         desc: We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops with extra structure built right in.
       SongwritingWithParameters:
-        title: Songwriting With Parameters
+        title: Parametroitu laulunkirjoitus
         desc: 'One of the most magnificent structures in the computer science world is the function.  Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into functions is such a helpful practice.  '
       BinaryImages:
         title: Binäärikuvat

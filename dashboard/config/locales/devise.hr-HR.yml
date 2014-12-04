@@ -70,4 +70,4 @@
       not_locked: nije zaključan
       not_saved:
         one: '1 error prohibited this %{resource} from being saved:'
-        other: "%{count} errors prohibited this %{resource} from being saved:"
+        other: '%{count} errors prohibited this %{resource} from being saved:'

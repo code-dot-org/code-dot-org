@@ -115,11 +115,11 @@ lt:
     subject: Prisijungti prie mano klasės (Code.org svetainėje)
     body: |
       Nuspauskite žemiau esančią nuorodą, kad prisiregistruotumėte prie informatikos įvado Core.org svetainėję (aš būsiu Jūsų „mokytojas“):
-
+      
       %{link}
-
+      
       Pamokėlės yra linksmos, interaktyvios. Programavimo pagrindų galima išmokti tiesiog žaidžiant. Išmokite programuoti padedant Bilui Geitsui, Markui Cukerbergui ir žaidimams Angry Birds ir Plants vs. Zombies! :)
-
+      
       %{name}
   follower:
     invite_sent: Pakvietimas išsiųstas
@@ -338,7 +338,8 @@ lt:
     test_videos_help: Išbandykite mūsų naują vaizdo grotuvą savo mokykloje
     try_beta_courses: Naujiena! Išmėginkite testuojamus kursus pradinukams
     use_as_teacher: Naudokite šią svetainę kaip mokytojas
-    heading_elementary: '<h2>20 valandų kursas </h2><h1>pradinių klasių mokiniams</h1>'
+    heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
+    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
     heading_apps: '<h2>Smagumynai</h2><h1>visiems</h1>'
     heading_legacy: '<h2>Mūsų bendri kursai</h2><h1>visoms amžių grupėms</h1>'
     your_gallery: Galerija
@@ -351,7 +352,8 @@ lt:
     teacher: Mokytojas
   footer:
     help_from_html: Google, Microsoft, Facebook ir Twitter inžinieriai padėjo sukurti šias pamokėles.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Visos teisės saugomos.<br/>Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Visos teisės saugomos.'
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
+    powered_by_aws: Powered by Amazon Web Services
     feedback: Pateikti atsiliepimus
     translate: Padėkite mums išversti į savo kalbą
     support: Pagalba
@@ -395,7 +397,7 @@ lt:
     bounce_og_title: Peržiūrėk mano Bounce žaidimą
     flappy_og_title: Išmėginkite žaidimą my Flappy Game
     studio_og_title: Peržiūrėk mano istoriją
-    check_out_what_i_made: Check out what I made
+    check_out_what_i_made: Pažiūrėkite, ką aš sukūriau
     og_description: Aš pats parašiau kodą Code.org svetainėje
     phone_number_not_allowed: Panašu, kad yra įrašytas kažkieno telefono numeris. Pakeisk tekstą.
     address_not_allowed: Panašu, kad yra parašytas kažkieno adresas. Pakeisk tekstą.
@@ -423,11 +425,13 @@ lt:
       title: Įvadiniai kursai
       body: Išmėginkite mūsų 20-ties valandų įvadą į programavimą.
     hoc2014:
-      try_new_tutorial: Try our new Hour of Code tutorial in beta
-      try_frozen: Artist with Anna and Elsa, from Frozen
+      try_new_tutorial: Išbandykite naująsias Programavimo valandos pamokėles beta versijoje
+      try_frozen: 'Piešimas su Ana ir Elze iš "Ledo šalies"'
     gallery:
       title: Galerija
-      body: View a gallery of app and artist images created by our users
+      body: Peržiūrėkite su menininku sukurtų piešinių galeriją
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: Mokiniai nupiešė juos parašę kodą!
     students_made_these_with_code: Mokinių sukurti pavyzdžiai.
@@ -442,7 +446,7 @@ lt:
     header_artist: Menininkas
   landing:
     prerelease: "Šis kursas yra <span class='betatext'>beta</span>. Tai reiškia, kad tai nėra galutinis šio kurso variantas ir jis dar yra tobulinamas."
-    prerelease_hoc2014: "This tutorial is in <span class='betatext'>beta</span>.  It is subject to revision as feedback is received and improvements are made."
+    prerelease_hoc2014: "Šios pamokėlės yra <span class='betatext'>beta versijoje</span>. Į pasiūlymus ir klaidų pranešimus bus atsižvelgta."
     feedback: Pateikti atsiliepimus
     report_bug: Pranešti apie problemą
     support: Pagalba

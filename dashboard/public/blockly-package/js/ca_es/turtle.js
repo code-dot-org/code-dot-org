@@ -2607,6 +2607,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -2619,7 +2620,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -2629,16 +2632,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -14129,8 +14122,16 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
     // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
     Turtle.ctxPattern.rotate(Math.PI * (Turtle.heading - 90) / 180);
 
-    var clipSize = Math.min(Turtle.smoothAnimateStepSize, lineDistance);
-
+    var clipSize;
+    if (lineDistance % Turtle.smoothAnimateStepSize === 0) {
+      clipSize = Turtle.smoothAnimateStepSize;
+    } else if (lineDistance > Turtle.smoothAnimateStepSize) {
+      // this happens when our line was not divisible by smoothAnimateStepSize
+      // and we've hit our last chunk
+      clipSize = lineDistance % Turtle.smoothAnimateStepSize;
+    } else {
+      clipSize = lineDistance;
+    }
     if (img.width !== 0) {
       Turtle.ctxPattern.drawImage(img,
         // Start point for clipping image
@@ -14138,7 +14139,7 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
         // clip region size
         clipSize * retina, img.height,
         // some mysterious hand-tweaking done by Brendan
-        Math.round((Turtle.stepDistanceCovered - 7) * retina), Math.round((- 18) * retina),
+        Math.round((Turtle.stepDistanceCovered - clipSize - 2) * retina), Math.round((- 18) * retina),
         clipSize * retina, img.height);
     }
 
@@ -14837,7 +14838,7 @@ exports.levelIncompleteError = function(d){return "Estàs utilitzant tots els ti
 
 exports.listVariable = function(d){return "llista"};
 
-exports.makeYourOwnFlappy = function(d){return "Fes el teu propi \"Flappy Game\""};
+exports.makeYourOwnFlappy = function(d){return "Fes el teu propi joc Flappy"};
 
 exports.missingBlocksErrorMsg = function(d){return "Prova un o més dels blocs de sota per a resoldre aquest puzzle."};
 
@@ -14960,21 +14961,21 @@ exports.catLogic = function(d){return "Lògic"};
 
 exports.colourTooltip = function(d){return "Canvia el color del llapis."};
 
-exports.createACircle = function(d){return "crear un cercle"};
+exports.createACircle = function(d){return "crea un cercle"};
 
-exports.createSnowflakeSquare = function(d){return "crear un floc de neu de quadrat"};
+exports.createSnowflakeSquare = function(d){return "crea un floc de neu de tipus quadrat"};
 
-exports.createSnowflakeParallelogram = function(d){return "crear un floc de neu de paral·lelogram"};
+exports.createSnowflakeParallelogram = function(d){return "crea un floc de neu de tipus paral·lelogram"};
 
-exports.createSnowflakeLine = function(d){return "crear un floc de neu de línia"};
+exports.createSnowflakeLine = function(d){return "crea un floc de neu de tipus línia"};
 
-exports.createSnowflakeSpiral = function(d){return "crear un floc de neu d'espiral"};
+exports.createSnowflakeSpiral = function(d){return "crea un floc de neu tipus espiral"};
 
-exports.createSnowflakeFlower = function(d){return "crear un floc de neu de flor"};
+exports.createSnowflakeFlower = function(d){return "crea un floc de neu de tipus flor"};
 
-exports.createSnowflakeFractal = function(d){return "crear un floc de neu fractal"};
+exports.createSnowflakeFractal = function(d){return "crea un floc de neu tipus fractal"};
 
-exports.createSnowflakeRandom = function(d){return "crear un floc de neu de tipus aleatori"};
+exports.createSnowflakeRandom = function(d){return "crea un floc de neu de tipus aleatori"};
 
 exports.createASnowflakeBranch = function(d){return "crear una branca de floc de neu"};
 
@@ -14986,15 +14987,15 @@ exports.dots = function(d){return "píxels"};
 
 exports.drawASquare = function(d){return "dibuixa un quadrat"};
 
-exports.drawATriangle = function(d){return "Dibuixa un triangle"};
+exports.drawATriangle = function(d){return "dibuixa un triangle"};
 
-exports.drawACircle = function(d){return "Dibuixa un cercle"};
+exports.drawACircle = function(d){return "dibuixa un cercle"};
 
 exports.drawAFlower = function(d){return "dibuixa una flor"};
 
 exports.drawAHexagon = function(d){return "dibuixa un hexàgon"};
 
-exports.drawAHouse = function(d){return "Dibuixa una casa"};
+exports.drawAHouse = function(d){return "dibuixa una casa"};
 
 exports.drawAPlanet = function(d){return "dibuixa un planeta"};
 
@@ -15010,7 +15011,7 @@ exports.drawASnowman = function(d){return "dibuixa un ninot de neu"};
 
 exports.drawAStar = function(d){return "dibuixa una estrella"};
 
-exports.drawATree = function(d){return "Dibuixa un arbre"};
+exports.drawATree = function(d){return "dibuixa un arbre"};
 
 exports.drawUpperWave = function(d){return "dibuixa una onada alta"};
 
@@ -15030,15 +15031,15 @@ exports.jumpForward = function(d){return "salta cap endevant"};
 
 exports.jumpTooltip = function(d){return "Mou l'artista sense deixar ninguna marca."};
 
-exports.jumpEastTooltip = function(d){return "Desplaça l'artista a l'est sense deixar cap marca."};
+exports.jumpEastTooltip = function(d){return "Mou l'artista a l'est sense deixar cap marca."};
 
 exports.jumpNorthTooltip = function(d){return "Desplaça l'artista al nord sense deixar cap marca."};
 
-exports.jumpSouthTooltip = function(d){return "Desplaça l'artista al sud sense deixar cap marca."};
+exports.jumpSouthTooltip = function(d){return "Mou l'artista al sud sense deixar cap marca."};
 
 exports.jumpWestTooltip = function(d){return "Desplaça l'artista a l'oest sense deixar cap marca."};
 
-exports.lengthFeedback = function(d){return "És correcte excepte les longituds a moure's."};
+exports.lengthFeedback = function(d){return "Ho has fet bé excepte per les longituds a moure's."};
 
 exports.lengthParameter = function(d){return "longitud"};
 
@@ -15046,37 +15047,37 @@ exports.loopVariable = function(d){return "comptador"};
 
 exports.moveBackward = function(d){return "retrocedeix"};
 
-exports.moveEastTooltip = function(d){return "Desplaça l'artista cap a l'est."};
+exports.moveEastTooltip = function(d){return "Mou l'artista cap a l'est."};
 
 exports.moveForward = function(d){return "avança"};
 
-exports.moveForwardTooltip = function(d){return "Avança l'artista."};
+exports.moveForwardTooltip = function(d){return "Mou l'artista endavant."};
 
 exports.moveNorthTooltip = function(d){return "Desplaça l'artista cap al nord."};
 
-exports.moveSouthTooltip = function(d){return "Desplaça l'artista cap al sud."};
+exports.moveSouthTooltip = function(d){return "Mou l'artista cap al sud."};
 
-exports.moveWestTooltip = function(d){return "Desplaça l'artista cap a l'oest."};
+exports.moveWestTooltip = function(d){return "Mou l'artista cap a l'oest."};
 
-exports.moveTooltip = function(d){return "Avança o retrocedeix l'artista segons la quanitat especificada."};
+exports.moveTooltip = function(d){return "Avança o retrocedeix l'artista segons la quantitat especificada."};
 
 exports.notBlackColour = function(d){return "Necessites definir un color que no sigui negre per a aquest puzzle."};
 
 exports.numBlocksNeeded = function(d){return "Aquest puzzle pot ser resolt amb %1 blocs. Tu has utilitzat %2."};
 
-exports.penDown = function(d){return "llapis"};
+exports.penDown = function(d){return "baixa el llapis"};
 
-exports.penTooltip = function(d){return "Aixeca o baixa el llapis per començar o deixar de dibuixar."};
+exports.penTooltip = function(d){return "Puja o baixa el llapis per començar o deixar de dibuixar."};
 
 exports.penUp = function(d){return "puja el llapis"};
 
-exports.reinfFeedbackMsg = function(d){return "Aquí està el dibuix! Seguir treballant-hi o continuar all trencaclosques següent."};
+exports.reinfFeedbackMsg = function(d){return "Aquí tens el dibuix! Segueix treballant-hi o continua al puzzle següent."};
 
 exports.setColour = function(d){return "defineix color"};
 
-exports.setPattern = function(d){return "set pattern"};
+exports.setPattern = function(d){return "defineix el patró"};
 
-exports.setWidth = function(d){return "estableix l'amplada"};
+exports.setWidth = function(d){return "defineix l'amplada"};
 
 exports.shareDrawing = function(d){return "Comparteix el teu dibuix:"};
 
@@ -15088,7 +15089,7 @@ exports.sizeParameter = function(d){return "mida"};
 
 exports.step = function(d){return "pas"};
 
-exports.tooFewColours = function(d){return "Necessites utilitzar al menys %1 diferents colors per a aquest puzzle. Tu has utilitzat només %2."};
+exports.tooFewColours = function(d){return "Necessites utilitzar al menys %1 colors diferents per a aquest puzzle. Tu has utilitzat només %2."};
 
 exports.turnLeft = function(d){return "gira a l'esquerra"};
 
@@ -15098,9 +15099,9 @@ exports.turnRightTooltip = function(d){return "Gira l'artista cap a la dreta amb
 
 exports.turnTooltip = function(d){return "Gira l'artista cap a l'esquerra o dreta segons el nombre especificat de graus."};
 
-exports.turtleVisibilityTooltip = function(d){return "Fer l'artsita visible o invisible."};
+exports.turtleVisibilityTooltip = function(d){return "Fer l'artista visible o invisible."};
 
-exports.widthTooltip = function(d){return "Canvia l'amplada del llapis."};
+exports.widthTooltip = function(d){return "Canvia el gruix del llapis."};
 
 exports.wrongColour = function(d){return "La teva imatge té el color malament. Per a aquest puzzle necessita ser %1."};
 

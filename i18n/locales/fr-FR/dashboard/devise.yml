@@ -39,7 +39,7 @@ fr:
       update_needs_confirmation: Vous avez mis à jour votre compte avec succès, mais nous devons encore vérifier votre nouvelle adresse de messagerie. Ouvrez le courriel qui vous a été envoyé à cette fin et cliquez sur le lien de confirmation pour terminer la vérification.
       updated: Vous avez mis à jour votre compte avec succès.
     sessions:
-      signed_in: Connecté avec succès.
+      signed_in: ""
       signed_out: Déconnecté avec succès.
     unlocks:
       send_instructions: Vous recevrez dans quelques minutes un courriel contenant les instructions de déverrouillage de votre compte.

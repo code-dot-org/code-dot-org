@@ -39,7 +39,7 @@ de:
       update_needs_confirmation: Sie haben Ihr Konto erfolgreich aktualisiert, aber Sie müssen Ihre neue E-Mail Adresse noch verifzieren. Bitte überprüfen Sie Ihe E-Mails und klicken sie auf den Bestätigungslink um die Verifizierung abzuschließen.
       updated: Sie haben Ihr Konto erfolgreich aktualisiert.
     sessions:
-      signed_in: Erfolgreich angemeldet.
+      signed_in: ""
       signed_out: Erfolgreich abgemeldet.
     unlocks:
       send_instructions: Du wirst in wenigen Minuten eine Email mit Aweisungen erhalten, wie du dein Konto bestätigen kannst.

@@ -2607,6 +2607,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -2619,7 +2620,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -2629,16 +2632,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -14129,8 +14122,16 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
     // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
     Turtle.ctxPattern.rotate(Math.PI * (Turtle.heading - 90) / 180);
 
-    var clipSize = Math.min(Turtle.smoothAnimateStepSize, lineDistance);
-
+    var clipSize;
+    if (lineDistance % Turtle.smoothAnimateStepSize === 0) {
+      clipSize = Turtle.smoothAnimateStepSize;
+    } else if (lineDistance > Turtle.smoothAnimateStepSize) {
+      // this happens when our line was not divisible by smoothAnimateStepSize
+      // and we've hit our last chunk
+      clipSize = lineDistance % Turtle.smoothAnimateStepSize;
+    } else {
+      clipSize = lineDistance;
+    }
     if (img.width !== 0) {
       Turtle.ctxPattern.drawImage(img,
         // Start point for clipping image
@@ -14138,7 +14139,7 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
         // clip region size
         clipSize * retina, img.height,
         // some mysterious hand-tweaking done by Brendan
-        Math.round((Turtle.stepDistanceCovered - 7) * retina), Math.round((- 18) * retina),
+        Math.round((Turtle.stepDistanceCovered - clipSize - 2) * retina), Math.round((- 18) * retina),
         clipSize * retina, img.height);
     }
 
@@ -14970,41 +14971,41 @@ var MessageFormat = require("messageformat");MessageFormat.locale.pl = function 
 };
 exports.blocksUsed = function(d){return "Użyte bloki: %1"};
 
-exports.branches = function(d){return "branches"};
+exports.branches = function(d){return "rozgałęzienia"};
 
 exports.catColour = function(d){return "Kolor"};
 
-exports.catControl = function(d){return "pętle"};
+exports.catControl = function(d){return "Pętle"};
 
 exports.catMath = function(d){return "Matematyka"};
 
-exports.catProcedures = function(d){return "funkcje"};
+exports.catProcedures = function(d){return "Funkcje"};
 
 exports.catTurtle = function(d){return "Działania"};
 
-exports.catVariables = function(d){return "zmienne"};
+exports.catVariables = function(d){return "Zmienne"};
 
 exports.catLogic = function(d){return "Logika"};
 
 exports.colourTooltip = function(d){return "Zmienia kolor ołówka."};
 
-exports.createACircle = function(d){return "create a circle"};
+exports.createACircle = function(d){return "utwórz okrąg"};
 
-exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+exports.createSnowflakeSquare = function(d){return "utwórz śnieżynkę typu kwadrat"};
 
-exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+exports.createSnowflakeParallelogram = function(d){return "utwórz śnieżynkę typu równoległobok"};
 
-exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+exports.createSnowflakeLine = function(d){return "utwórz śnieżynkę typu linia"};
 
-exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+exports.createSnowflakeSpiral = function(d){return "utwórz śnieżynkę typu spirala"};
 
-exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+exports.createSnowflakeFlower = function(d){return "utwórz śnieżynkę typu kwiat"};
 
-exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+exports.createSnowflakeFractal = function(d){return "utwórz śnieżynkę typu fraktal"};
 
-exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+exports.createSnowflakeRandom = function(d){return "utwórz śnieżynkę losowego typu"};
 
-exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
+exports.createASnowflakeBranch = function(d){return "utwórz gałąź śnieżynki"};
 
 exports.degrees = function(d){return "stopnie"};
 
@@ -15040,23 +15041,23 @@ exports.drawAStar = function(d){return "narysuj gwiazdę"};
 
 exports.drawATree = function(d){return "narysuj drzewo"};
 
-exports.drawUpperWave = function(d){return "draw upper wave"};
+exports.drawUpperWave = function(d){return "narysuj górna falę"};
 
-exports.drawLowerWave = function(d){return "draw lower wave"};
+exports.drawLowerWave = function(d){return "narysuj dolną falę"};
 
-exports.drawStamp = function(d){return "draw stamp"};
+exports.drawStamp = function(d){return "narysuj stempel"};
 
 exports.heightParameter = function(d){return "wysokość"};
 
 exports.hideTurtle = function(d){return "ukryj artystę"};
 
-exports.jump = function(d){return "skacz"};
+exports.jump = function(d){return "skocz"};
 
 exports.jumpBackward = function(d){return "skocz do tyłu o"};
 
 exports.jumpForward = function(d){return "skocz do przodu o"};
 
-exports.jumpTooltip = function(d){return "Przesuwa artystę nie zostawiając żadnych śladów."};
+exports.jumpTooltip = function(d){return "Przenosi artystę nie zostawiając żadnych śladów."};
 
 exports.jumpEastTooltip = function(d){return "Przenosi artystę na wschód bez zostawiania śladów."};
 
@@ -15066,7 +15067,7 @@ exports.jumpSouthTooltip = function(d){return "Przenosi artystę na południe be
 
 exports.jumpWestTooltip = function(d){return "Przenosi artystę na zachód bez zostawiania śladów."};
 
-exports.lengthFeedback = function(d){return "You got it right except for the lengths to move."};
+exports.lengthFeedback = function(d){return "Zrobiłeś dobrze z wyjątkiem długości."};
 
 exports.lengthParameter = function(d){return "długość"};
 
@@ -15078,7 +15079,7 @@ exports.moveEastTooltip = function(d){return "Przenosi artystę na wschód."};
 
 exports.moveForward = function(d){return "przesuń do przodu o"};
 
-exports.moveForwardTooltip = function(d){return "Przesuwa artystę do przodu."};
+exports.moveForwardTooltip = function(d){return "Przenosi artystę do przodu."};
 
 exports.moveNorthTooltip = function(d){return "Przenosi artystę na północ."};
 
@@ -15086,7 +15087,7 @@ exports.moveSouthTooltip = function(d){return "Przenosi artystę na południe."}
 
 exports.moveWestTooltip = function(d){return "Przenosi artystę na zachód."};
 
-exports.moveTooltip = function(d){return "Przesuwa artystę do przodu lub do tyłu o określoną wielkość."};
+exports.moveTooltip = function(d){return "Przenosi artystę do przodu lub do tyłu o określoną wielkość."};
 
 exports.notBlackColour = function(d){return "Musisz ustalić kolor dla tej układanki inny niż czarny."};
 
@@ -15098,11 +15099,11 @@ exports.penTooltip = function(d){return "Podnosi lub opuszcza ołówek, by zako�
 
 exports.penUp = function(d){return "podnieś ołówek"};
 
-exports.reinfFeedbackMsg = function(d){return "Czy to wygląda tak, jak chciałeś? Możesz nacisnąć przycisk Spróbuj ponownie, aby zobaczyć swój rysunek."};
+exports.reinfFeedbackMsg = function(d){return "Oto Twój rysunek! Pracuj nad nim dalej lub przejdź do następnej łamigłówki."};
 
 exports.setColour = function(d){return "ustaw kolor"};
 
-exports.setPattern = function(d){return "set pattern"};
+exports.setPattern = function(d){return "ustaw wzór "};
 
 exports.setWidth = function(d){return "ustaw szerokość"};
 
@@ -15112,7 +15113,7 @@ exports.showMe = function(d){return "Pokaż mi"};
 
 exports.showTurtle = function(d){return "pokaż artystę"};
 
-exports.sizeParameter = function(d){return "size"};
+exports.sizeParameter = function(d){return "rozmiar"};
 
 exports.step = function(d){return "krok"};
 

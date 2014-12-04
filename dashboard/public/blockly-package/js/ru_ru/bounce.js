@@ -5315,6 +5315,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -5327,7 +5328,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -5337,16 +5340,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -12746,7 +12739,7 @@ exports.numLinesOfCodeWritten = function(d){return "Ты только что н�
 
 exports.play = function(d){return "играть"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Печать"};
 
 exports.puzzleTitle = function(d){return "Головоломка "+v(d,"puzzle_number")+" из "+v(d,"stage_total")};
 
@@ -12790,9 +12783,9 @@ exports.hintRequest = function(d){return "Посмотреть подсказк�
 
 exports.backToPreviousLevel = function(d){return "Вернуться на предыдущий уровень"};
 
-exports.saveToGallery = function(d){return "Сохранить в твоей галереи"};
+exports.saveToGallery = function(d){return "Сохранить в галерею"};
 
-exports.savedToGallery = function(d){return "Сохранено в твоей галереи!"};
+exports.savedToGallery = function(d){return "Сохранено в галерее!"};
 
 exports.shareFailure = function(d){return "К сожалению, мы не можем поделиться этой программой."};
 

@@ -1,8 +1,8 @@
 {
-  "compute":"computar",
+  "compute":"calcular",
   "equivalentExpression":"Intenta reorganizar tus argumentos para obtener exactamente la misma expresión.",
-  "extraTopBlocks":"Tienes bloques disponibles. ¿Quisiste unirlos al bloque \"calcular\"?",
-  "goal":"objetivo:",
-  "reinfFeedbackMsg":"¡Aquí está tu historia! Sigue trabajando en ella, o pasar al siguiente puzzle!",
+  "extraTopBlocks":"Tienes bloques sin unir. ¿Quisiste unirlos al bloque \"calcular\"?",
+  "goal":"Objetivo:",
+  "reinfFeedbackMsg":"¡Aquí está tu historia! Sigue trabajando en ella, o pasa al siguiente acertijo!",
   "yourExpression":"Tu expresión:"
 }

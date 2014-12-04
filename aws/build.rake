@@ -47,7 +47,7 @@ def threaded_each(array, thread_count=2)
   threads.each(&:join)
 end
 
-if rack_env?(:staging)
+if rack_env?(:staging) || rack_env?(:development)
   BLOCKLY_CORE_DEPENDENCIES = []#[aws_dir('build.rake')]
   BLOCKLY_CORE_PRODUCTS = [
     'blockly_compressed.js',

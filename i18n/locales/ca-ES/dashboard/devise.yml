@@ -39,7 +39,7 @@ ca:
       update_needs_confirmation: "Has actualitzat el teu compte amb èxit, però tenim que verificar la teva nova adreça de correu electrònic. Si us plau, revisa el teu correu i clica en l'enllaç de confirmació per finalitzar la confirmació de la teva nova adreça de correu electrònic."
       updated: Has actualitzat el teu compte correctament.
     sessions:
-      signed_in: Has iniciat sessió amb èxit.
+      signed_in: ""
       signed_out: Has tancat la teva sessió amb èxit.
     unlocks:
       send_instructions: "D'aquí uns minuts rebràs un email amb instruccions per desbloquejar el teu compte."

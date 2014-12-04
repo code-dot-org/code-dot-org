@@ -2607,6 +2607,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -2619,7 +2620,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -2629,16 +2632,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -14129,8 +14122,16 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
     // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
     Turtle.ctxPattern.rotate(Math.PI * (Turtle.heading - 90) / 180);
 
-    var clipSize = Math.min(Turtle.smoothAnimateStepSize, lineDistance);
-
+    var clipSize;
+    if (lineDistance % Turtle.smoothAnimateStepSize === 0) {
+      clipSize = Turtle.smoothAnimateStepSize;
+    } else if (lineDistance > Turtle.smoothAnimateStepSize) {
+      // this happens when our line was not divisible by smoothAnimateStepSize
+      // and we've hit our last chunk
+      clipSize = lineDistance % Turtle.smoothAnimateStepSize;
+    } else {
+      clipSize = lineDistance;
+    }
     if (img.width !== 0) {
       Turtle.ctxPattern.drawImage(img,
         // Start point for clipping image
@@ -14138,7 +14139,7 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
         // clip region size
         clipSize * retina, img.height,
         // some mysterious hand-tweaking done by Brendan
-        Math.round((Turtle.stepDistanceCovered - 7) * retina), Math.round((- 18) * retina),
+        Math.round((Turtle.stepDistanceCovered - clipSize - 2) * retina), Math.round((- 18) * retina),
         clipSize * retina, img.height);
     }
 
@@ -14837,7 +14838,7 @@ exports.levelIncompleteError = function(d){return "Käytät kaikkia oikeanlaisia
 
 exports.listVariable = function(d){return "lista"};
 
-exports.makeYourOwnFlappy = function(d){return "Tee oma Läpytin -pelisi"};
+exports.makeYourOwnFlappy = function(d){return "Tee oma Flappy-pelisi"};
 
 exports.missingBlocksErrorMsg = function(d){return "Yritä ratkaista pulma yhdellä tai useammalla alla olevalla lohkolla."};
 
@@ -14855,7 +14856,7 @@ exports.numLinesOfCodeWritten = function(d){return "Kirjoitit juuri "+p(d,"numLi
 
 exports.play = function(d){return "pelaa"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Tulosta"};
 
 exports.puzzleTitle = function(d){return "Pulma "+v(d,"puzzle_number")+" / "+v(d,"stage_total")};
 
@@ -14899,11 +14900,11 @@ exports.hintRequest = function(d){return "Katso vihje"};
 
 exports.backToPreviousLevel = function(d){return "Takaisin edelliseen tasoon"};
 
-exports.saveToGallery = function(d){return "Tallenna galleriaasi"};
+exports.saveToGallery = function(d){return "Tallenna galleriaan"};
 
-exports.savedToGallery = function(d){return "Tallennettu galleriaasi!"};
+exports.savedToGallery = function(d){return "Tallennettu galleriaan!"};
 
-exports.shareFailure = function(d){return "Emme valitettavasti toi jakaa tätä ohjelmaa."};
+exports.shareFailure = function(d){return "Emme valitettavasti voi jakaa tätä ohjelmaa."};
 
 exports.typeFuncs = function(d){return "Käytettävissä olevat funktiot: %1"};
 
@@ -14911,7 +14912,7 @@ exports.typeHint = function(d){return "Sulkeet ja puolipisteet ovat pakollisia."
 
 exports.workspaceHeader = function(d){return "Kokoa lohkosi täällä: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Kirjoita JavaScript koodi tähän"};
+exports.workspaceHeaderJavaScript = function(d){return "Kirjoita JavaScript-koodi tähän"};
 
 exports.infinity = function(d){return "Ääretön"};
 
@@ -14935,7 +14936,7 @@ exports.hintHeader = function(d){return "Tässä on Vihje:"};
 
 exports.genericFeedback = function(d){return "Katso miten päädyit tähän, ja koita korjata ohjelmasi."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Katso mitä tein"};
 
 
 },{"messageformat":57}],45:[function(require,module,exports){
@@ -14946,15 +14947,15 @@ exports.branches = function(d){return "haarat"};
 
 exports.catColour = function(d){return "Väri"};
 
-exports.catControl = function(d){return "silmukat"};
+exports.catControl = function(d){return "Silmukat"};
 
 exports.catMath = function(d){return "Matematiikka"};
 
-exports.catProcedures = function(d){return "funktiot"};
+exports.catProcedures = function(d){return "Funktiot"};
 
 exports.catTurtle = function(d){return "Toiminnot"};
 
-exports.catVariables = function(d){return "muuttujat"};
+exports.catVariables = function(d){return "Muuttujat"};
 
 exports.catLogic = function(d){return "Logiikka"};
 
@@ -14968,15 +14969,15 @@ exports.createSnowflakeParallelogram = function(d){return "luo suunnikkaan muoto
 
 exports.createSnowflakeLine = function(d){return "luo viivamainen lumihiutale"};
 
-exports.createSnowflakeSpiral = function(d){return "luo spiraalin muotoinen lumihiutale"};
+exports.createSnowflakeSpiral = function(d){return "luo spiraalimainen lumihiutale"};
 
 exports.createSnowflakeFlower = function(d){return "luo kukan muotoinen lumihiutale"};
 
-exports.createSnowflakeFractal = function(d){return "luo fraktaalin muotoinen lumihiutale"};
+exports.createSnowflakeFractal = function(d){return "luo fraktaalimainen lumihiutale"};
 
 exports.createSnowflakeRandom = function(d){return "luo satunnainen lumihiutale"};
 
-exports.createASnowflakeBranch = function(d){return "luo haaran muotoinen lumihiutale"};
+exports.createASnowflakeBranch = function(d){return "luo lumihiutaleen haara"};
 
 exports.degrees = function(d){return "astetta"};
 
@@ -15016,7 +15017,7 @@ exports.drawUpperWave = function(d){return "piirrä ylempi aalto"};
 
 exports.drawLowerWave = function(d){return "piirrä alempi aalto"};
 
-exports.drawStamp = function(d){return "Piirrä leima"};
+exports.drawStamp = function(d){return "piirrä postimerkki"};
 
 exports.heightParameter = function(d){return "korkeus"};
 
@@ -15028,7 +15029,7 @@ exports.jumpBackward = function(d){return "hyppää taaksepäin"};
 
 exports.jumpForward = function(d){return "hyppää eteenpäin"};
 
-exports.jumpTooltip = function(d){return "Siirtää taiteilijaa piirtämättä jälkeä."};
+exports.jumpTooltip = function(d){return "Siirtää hahmoa piirtämättä jälkeä."};
 
 exports.jumpEastTooltip = function(d){return "Siirtää hahmoa itään piirtämättä jälkeä."};
 
@@ -15050,7 +15051,7 @@ exports.moveEastTooltip = function(d){return "Siirtää hahmoa itään."};
 
 exports.moveForward = function(d){return "siirry eteenpäin"};
 
-exports.moveForwardTooltip = function(d){return "Siirtää taiteilijaa eteenpäin."};
+exports.moveForwardTooltip = function(d){return "Siirtää hahmoa eteenpäin."};
 
 exports.moveNorthTooltip = function(d){return "Siirtää hahmoa pohjoiseen."};
 
@@ -15058,7 +15059,7 @@ exports.moveSouthTooltip = function(d){return "Siirtää hahmoa etelään."};
 
 exports.moveWestTooltip = function(d){return "Siirtää hahmoa länteen."};
 
-exports.moveTooltip = function(d){return "Siirtää taiteilijaa eteenpäin tai taaksepäin annetun etäisyyden."};
+exports.moveTooltip = function(d){return "Siirtää hahmoa eteenpäin tai taaksepäin annetun etäisyyden."};
 
 exports.notBlackColour = function(d){return "Tässä pulmassa sinun täytyy käyttää jotain muuta kuin mustaa väriä."};
 
@@ -15070,7 +15071,7 @@ exports.penTooltip = function(d){return "Nostaa tai laskee kynän, aloittaakseen
 
 exports.penUp = function(d){return "kynä ylös"};
 
-exports.reinfFeedbackMsg = function(d){return "Näyttääkö tämä siltä, mitä halusit? Voit painaa \"Yritä uudelleen\" -painiketta nähdäksesi piirustuksesi."};
+exports.reinfFeedbackMsg = function(d){return "Tässä on piirustuksesi! Jatka työstämistä sen parissa tai siirry seuraavaan pulmaan."};
 
 exports.setColour = function(d){return "aseta väri"};
 

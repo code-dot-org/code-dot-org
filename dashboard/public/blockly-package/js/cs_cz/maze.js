@@ -2607,6 +2607,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -2619,7 +2620,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -2629,16 +2632,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -16527,7 +16520,7 @@ exports.end = function(d){return "konec"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Bloky \"Opakovat\" nebo \"Pokud\" v sobě musí mít další bloky, aby fungovaly. Ujisti se, že vnitřní bloky jsou v pořádku vložené dovnitř vnějších bloků."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Blok funkce v sobě musí obsahovat další bloky."};
 
 exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
 
@@ -16543,7 +16536,7 @@ exports.errorUnusedFunction = function(d){return "You created a function, but ne
 
 exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
-exports.extraTopBlocks = function(d){return "Máš další extra bloky, které nejsou připojené k bloku událostí."};
+exports.extraTopBlocks = function(d){return "Máš nepřipojené bloky. Nechceš je připojit k bloku \"po spuštění\"?"};
 
 exports.finalStage = function(d){return "Dobrá práce! Dokončil si poslední fázi."};
 
@@ -16581,9 +16574,9 @@ exports.numBlocksNeeded = function(d){return "Dobrá práce! Dokončil jsi Háda
 
 exports.numLinesOfCodeWritten = function(d){return "Už jsi napsal "+p(d,"numLines",0,"cs",{"one":"1 řádek","other":n(d,"numLines")+" řádků"})+" kódu!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "hrát"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Tisk"};
 
 exports.puzzleTitle = function(d){return "Hádanka "+v(d,"puzzle_number")+" z "+v(d,"stage_total")};
 
@@ -16595,11 +16588,11 @@ exports.runProgram = function(d){return "Spustit"};
 
 exports.runTooltip = function(d){return "Spustí program definovaný bloky na pracovní ploše."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "výsledek"};
 
 exports.showCodeHeader = function(d){return "Zobrazit kód"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Zobrazit bloky"};
 
 exports.showGeneratedCode = function(d){return "Zobrazit kód"};
 
@@ -16623,15 +16616,15 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Celkově: "+p(d,"numLin
 
 exports.tryAgain = function(d){return "Zkusit znovu"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Viz tip"};
 
 exports.backToPreviousLevel = function(d){return "Zpět na předchozí úroveň"};
 
-exports.saveToGallery = function(d){return "Uložit do tvé galerie"};
+exports.saveToGallery = function(d){return "Uložit do galerie"};
 
-exports.savedToGallery = function(d){return "Uložit do tvé galerie!"};
+exports.savedToGallery = function(d){return "Uloženo v galerii!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Omlouváme se, ale tento program nemůžeme sdílet."};
 
 exports.typeFuncs = function(d){return "Dostupné funkce:%1"};
 
@@ -16639,7 +16632,7 @@ exports.typeHint = function(d){return "Všimni si, že závorky a středníky js
 
 exports.workspaceHeader = function(d){return "Sestav si zde své bloky: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Zde napiš tvůj kód v JavaScriptu"};
 
 exports.infinity = function(d){return "Nekonečno"};
 
@@ -16661,7 +16654,7 @@ exports.signup = function(d){return "Zaregistruj se do úvodního kurzu"};
 
 exports.hintHeader = function(d){return "Zde je rada:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Podívej se jak jsi skončil a zkus svůj program opravit."};
 
 exports.defaultTwitterText = function(d){return "Check out what I made"};
 
@@ -16676,9 +16669,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.cs = function 
   }
   return 'other';
 };
-exports.atHoneycomb = function(d){return "ve včelím úlu"};
+exports.atHoneycomb = function(d){return "na plástvi"};
 
-exports.atFlower = function(d){return "v květině"};
+exports.atFlower = function(d){return "na květině"};
 
 exports.avoidCowAndRemove = function(d){return "Vyhni se krávě a odstraň 1"};
 
@@ -16712,7 +16705,7 @@ exports.fillTooltip = function(d){return "umísti 1 jednotku hlíny"};
 
 exports.finalLevel = function(d){return "Dobrá práce! Vyřešil jsi poslední hádanku."};
 
-exports.flowerEmptyError = function(d){return "The flower you're on has no more nectar."};
+exports.flowerEmptyError = function(d){return "Květina na které jsi už nemá nektar."};
 
 exports.get = function(d){return "získat"};
 
@@ -16722,11 +16715,11 @@ exports.holePresent = function(d){return "tady je díra"};
 
 exports.honey = function(d){return "vyrob med"};
 
-exports.honeyAvailable = function(d){return "honey"};
+exports.honeyAvailable = function(d){return "med"};
 
 exports.honeyTooltip = function(d){return "Vyrob med z nektaru"};
 
-exports.honeycombFullError = function(d){return "This honeycomb does not have room for more honey."};
+exports.honeycombFullError = function(d){return "V této plástvi není místo pro více medu."};
 
 exports.ifCode = function(d){return "Pokud"};
 
@@ -16738,17 +16731,17 @@ exports.ifTooltip = function(d){return "Pokud je v daném směru cesta, provede 
 
 exports.ifelseTooltip = function(d){return "Pokud je v daném směru cesta, proveď první blok akcí. V opačném případě proveď druhý blok akcí."};
 
-exports.ifFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do some actions."};
+exports.ifFlowerTooltip = function(d){return "Pokud je v určeném směru květina/plástev, pak udělej nějaké akce."};
 
-exports.ifelseFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do the first block of actions. Otherwise, do the second block of actions."};
+exports.ifelseFlowerTooltip = function(d){return "Pokud je v určeném směru květina/plástev, pak proveď první blok akcí. V opačném případě proveď druhý blok akcí."};
 
-exports.insufficientHoney = function(d){return "You're using all the right blocks, but you need to make the right amount of honey."};
+exports.insufficientHoney = function(d){return "Používáš správné bloky, ale je potřeba vyrobit správné množství medu."};
 
-exports.insufficientNectar = function(d){return "You're using all the right blocks, but you need to collect the right amount of nectar."};
+exports.insufficientNectar = function(d){return "Používáš správné bloky, ale je potřeba nasbírat správné množství nektaru."};
 
-exports.make = function(d){return "make"};
+exports.make = function(d){return "vyrob"};
 
-exports.moveBackward = function(d){return "move backward"};
+exports.moveBackward = function(d){return "posunout zpět"};
 
 exports.moveEastTooltip = function(d){return "Posuň mě na východ o jedno políčko."};
 
@@ -16760,13 +16753,13 @@ exports.moveNorthTooltip = function(d){return "Posuň mě na sever o jedno polí
 
 exports.moveSouthTooltip = function(d){return "Posuň mě na jih o jedno políčko."};
 
-exports.moveTooltip = function(d){return "Move me forward/backward one space"};
+exports.moveTooltip = function(d){return "Posuň mě vpřed/zpět o jedno políčko"};
 
 exports.moveWestTooltip = function(d){return "Posuň mě na západ o jedno políčko."};
 
 exports.nectar = function(d){return "získej nektar"};
 
-exports.nectarRemaining = function(d){return "nectar"};
+exports.nectarRemaining = function(d){return "nektar"};
 
 exports.nectarTooltip = function(d){return "Získej nektar z květiny"};
 
@@ -16780,9 +16773,9 @@ exports.noPathLeft = function(d){return "žádná cesta vlevo"};
 
 exports.noPathRight = function(d){return "žádná cesta vpravo"};
 
-exports.notAtFlowerError = function(d){return "You can only get nectar from a flower."};
+exports.notAtFlowerError = function(d){return "Nektar můžeš získat jenom z květiny."};
 
-exports.notAtHoneycombError = function(d){return "You can only make honey at a honeycomb."};
+exports.notAtHoneycombError = function(d){return "Med můžeš vyrobit jenom v plástvi."};
 
 exports.numBlocksNeeded = function(d){return "Tato hádanka může být vyřešena pomocí %1 bloků."};
 
@@ -16806,7 +16799,7 @@ exports.removeStack = function(d){return "odstranit štos "+v(d,"shovelfuls")+" 
 
 exports.removeSquare = function(d){return "odstraň čtverec"};
 
-exports.repeatCarefullyError = function(d){return "K vyřešení této hádanky, najdi vzorec, který se opakuje. Použij blok \"opakovat\" a do něj vlož tyto 3 bloky: posunout, posunout, otočit vpravo."};
+exports.repeatCarefullyError = function(d){return "Chceš-li to vyřešit, zamysli se nad dvěma posuny a jedním otočením v bloku \"opakuj\". Je v pořádku mít na konci jeden posun navíc."};
 
 exports.repeatUntil = function(d){return "Opakovat do"};
 
@@ -16816,9 +16809,9 @@ exports.repeatUntilFinish = function(d){return "opakuj do konce"};
 
 exports.step = function(d){return "Krok"};
 
-exports.totalHoney = function(d){return "total honey"};
+exports.totalHoney = function(d){return "medu celkem"};
 
-exports.totalNectar = function(d){return "total nectar"};
+exports.totalNectar = function(d){return "nektaru celkem"};
 
 exports.turnLeft = function(d){return "otočit vlevo"};
 
@@ -16826,19 +16819,19 @@ exports.turnRight = function(d){return "otočit vpravo"};
 
 exports.turnTooltip = function(d){return "Otočí mě doleva nebo doprava o 90 stupňů."};
 
-exports.uncheckedCloudError = function(d){return "Make sure to check all clouds to see if they're flowers or honeycombs."};
+exports.uncheckedCloudError = function(d){return "Nezapomeň zkontrolovat všechny mraky a zjisti, jestli jsou to květiny nebo plástve."};
 
-exports.uncheckedPurpleError = function(d){return "Make sure to check all purple flowers to see if they have nectar"};
+exports.uncheckedPurpleError = function(d){return "Nezapomeň zkontrolovat všechny fialové květiny a zjistit, jestli mají nektar"};
 
 exports.whileMsg = function(d){return "dokud"};
 
 exports.whileTooltip = function(d){return "Opakuje obsažené akce dokud nedosáhne cíle."};
 
-exports.word = function(d){return "Find the word"};
+exports.word = function(d){return "Najdi slovo"};
 
 exports.yes = function(d){return "Ano"};
 
-exports.youSpelled = function(d){return "You spelled"};
+exports.youSpelled = function(d){return "Vyhláskoval(a) jsi"};
 
 
 },{"messageformat":72}],61:[function(require,module,exports){

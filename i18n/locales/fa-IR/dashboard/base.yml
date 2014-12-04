@@ -2,17 +2,17 @@ fa:
   activerecord:
     errors:
       messages:
-        blank: is required
+        blank: '%s لازم است'
     attributes:
       user:
-        name: Display Name
+        name: نمایش نام
         email: ایمیل
         username: نام کاربری
         password: رمز عبور
         password_confirmation: تکرار کلمه عبور
         current_password: کلمه عبور فعلی
         locale: زبان
-        age: Age
+        age: سن
         gender: جنسیت
         edit_header: ویرایش اطلاعات کاربری
         error:
@@ -21,7 +21,7 @@ fa:
   welcome_back: '%{name}، خوش آمدید'
   add_teacher_form:
     code:
-      label: 'Add a teacher:'
+      label: 'افزودن یک معلم:'
       placeholder: Section Code (ABCDEF)
     submit: افزودن معلم
   add_hint_form:
@@ -51,10 +51,10 @@ fa:
     sign_out_of: 'You used %{provider} to sign in. <a href="%{url}">Click here</a> to sign out of %{provider}.'
     already_signedup: قبلا ثبت نام کرده‌اید؟
     notyet_signedup: تا به حال شرکت نکرده‌اید؟
-    google_oauth2: Google Account
+    google_oauth2: حساب Google
     twitter: توییتر
     facebook: فیس‌بوک
-    windowslive: Microsoft Account
+    windowslive: حساب مایکروسافت
     forgot_password: کلمه عبور خود را فراموش کرده اید؟
     need_confirmation: دستورالعمل فعال‌سازی حساب کاربری را دریافت نکرده‌اید؟
     need_unlock: دستورالعمل فعال‌سازی را دریافت نکرده‌اید؟
@@ -72,7 +72,7 @@ fa:
     address_placeholder: نشانی، شهر، استان، کدپستی
     gender: جنسیت (اختیاری)
     birthday: تاریخ تولد (اختیاری)
-    age: Age
+    age: سن
     user_type: Are you a student or teacher?
     submit: ثبت نام
     teacher: آیا شما یک معلم هستید؟
@@ -97,8 +97,8 @@ fa:
     try_20hours: دوره 20 ساعته معرفی (مقدماتی) علوم کامپیوتر ما را امتحان کنید
   signinsection:
     welcome: 'Welcome to %{section_name}'
-    name: Choose your name
-    picture: Now find your secret picture
+    name: نام خود را انتخاب کنید
+    picture: اکنون عکس مخفی خود را پیدا کنید
     words: Now enter your secret words
     login: ورود
   password:
@@ -115,10 +115,10 @@ fa:
     subject: عضویت در کلاس من (در Code.org)
     body: |
       روی لینک زیر برای ثبت نام آموزش علوم کامپیوتر در Code.org کلیک کنید ( با من به عنوان " معلم " ):
-
+      
       آموزشها جالب و مصور هستند و مفاهیم اساسی کامپیوتر را به سادگی تجربه یک بازی به شما یاد میدهند کد نویسی را از بیل گیتس ، مارک زاکربرگ ، angry birds و plants vs. zombies یاد بگیرید.
-
-
+      
+      
   follower:
     invite_sent: دعوتنامه ارسال شد
     added_teacher: '%{name} به عنوان معلم شما افزوده شد'
@@ -128,7 +128,7 @@ fa:
       username_not_found: 'نام کاربری %{username} یافت نشد'
       username_in_use: '%{username} قبلا انتخاب شده است، لطفا یک نام کاربری دیگر را امتحان کنید'
       no_teacher: "کسی با  '%{teacher_email_or_code}' وارد نشده است. لطفا از ایشان بخواهید تا ثبت نام کنند و بعد دوباره اضافه کردنشان را امتحان کنید"
-      section_not_found: "Could not find a section with code '%{section_code}'."
+      section_not_found: "قادر به یافتن یک بخش با کد '%{section_code}' نمی باشد."
       blank_code: Please enter a section code
       cant_join_own_section: "Sorry, you can't join your own section."
     mail:
@@ -164,7 +164,7 @@ fa:
       msg: 'آیا شما در مورد ادعای جایزه %{prize_name} مطمئنید؟'
       msg_student: 'توجه: شما تنها می توانید یک نوع جایزه انتخاب کنید.'
       msg_publicschool: لطفا تایید کنید که شما یک معلم مدرسه دولتی در ایالات متحده هستند.
-      msg_visit_website: Visit website
+      msg_visit_website: مشاهده وب سایت
     providers:
       apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
@@ -208,10 +208,10 @@ fa:
       finished_hoc: من ساعتی با کد خود را به پایان رسانده ام
       sign_in_to_save: وارد گردید تا پیشرفتتان ذخیره شود
       free_play:
-        playlab: Make an App
+        playlab: ایجاد یک برنامه
         artist: Draw Something
     user:
-      classroom: Teacher Home Page
+      classroom: صفحه اصلی معلم
       label: 'سلام %{username}'
       stats: پیشرفت من
       settings: حساب کاربری من
@@ -219,7 +219,7 @@ fa:
       logout: خروج
       signin: ورود
       signup: ثبت نام
-      already_registered: Already registered?
+      already_registered: قبلا ثبت نام کرده اید؟?
     popup:
       progress: پیشرفت شما
       lines: 'تعداد خطوط کد: %{lines}'
@@ -239,13 +239,13 @@ fa:
       remove: آیا برای حذف این معلم مطمئت هستبد؟
     tools: ابزار معلم
     followers:
-      section: 'Section:'
+      section: 'بخش:'
       stages: 'Stage(s) to display:'
       show_past: 'Show student activity (%{bullet_html}) in the past:'
       levels_key: Levels key
-      perfect: Completed, perfect
+      perfect: تکمیل, کامل
       completed: Completed, but using too many blocks
-      tried: Tried, but not completed
+      tried: سعی کردم، اما کامل نیست
       not_tried: Not tried yet
       activity: 'Indicates student activity in the last %{hours} %{plural}'
       no_section: No assigned section
@@ -255,16 +255,16 @@ fa:
       username: نام کاربری
       password: رمز عبور
       manage: مدیریت دانش آموزان
-      dashboard: Go to Teacher Dashboard
+      dashboard: رفتن به صفحهٔ معلم
       add: افزودن دانش آموزان
-      remove: remove student
-      confirm_remove: Are you sure you want to remove this student?
+      remove: حذف کردن دانش آموز
+      confirm_remove: آیا مطمئن هستید می خواهید این دانش آموز را حذف کنید؟?
       help_reassign: To divide your class into multiple sections, select students to assign to a new section.
       help_register: Instead of making you spend a lot of time individually importing student data, you can set up your class quickly by asking them to signup. Your students will need to choose usernames and passwords, but they WILL NOT be required to provide an email address. If a student forgets their password, you will be able to reset it for them.
       register: Ask your students to register themselves
       vist: Ask your students to visit
-      section_code: 'and enter their section-code:'
-      first_please: 'First, please %{add_section}'
+      section_code: 'و  کد  بخش  را وارد کنید:'
+      first_please: 'اول، لطفا %{add_section}'
       for: For
       enter: 'enter:'
     sections:
@@ -334,27 +334,29 @@ fa:
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
-    heading_elementary: '<h2>20 hour courses for</h2><h1>Elementary Students</h1>'
+    heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
+    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
     heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
-    your_gallery: Gallery
+    your_gallery: گالری
   gender:
     male: مرد
     female: زن
     none: ترجیح می دهم چواب ندهم
   user_type:
     student: دانش آموز
-    teacher: Teacher
+    teacher: معلم
   footer:
     help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
+    powered_by_aws: Powered by Amazon Web Services
     feedback: ارائه پیشنهادات و انتقادات
     translate: کمک به ما در ترجمه به زبان شما
     support: پشتیبانی
-    support_url: http://support.code.org
+    support_url: http://support.code.org/
     tos: Terms
     privacy: قوانین حفظ حریم خصوصی
-    secure: Secure Version
+    secure: نسخهٔ امن
   reference_area:
     title: کمک نیاز دارید؟
     subtitle: دیدن این فیلم ها و نکات
@@ -372,7 +374,7 @@ fa:
     working:
       header: ما در حال کار بر روی پشتیبانی از مرورگر شما هستیم.
       message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
-      hide_this_warning: Hide this warning
+      hide_this_warning: مخفی کردن هشدار
     upgrade:
       header: لطفا مرورگر خود را ارتقا دهید.
       message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
@@ -381,11 +383,11 @@ fa:
   try_reloading: درخواست مجدد نمایش صفحه
   next_stage: پایان! به مرحله بعد بروید
   download_pdf: طرح درس آزاد
-  lesson_plan: Lesson Plan
-  view_lesson_plan: View Lesson Plan
-  pdf_download: Download PDF
+  lesson_plan: طرح درس
+  view_lesson_plan: مشاهده طرح درس
+  pdf_download: دانلود پی دی اف
   download_coming_soon: Downloadable activity coming soon.
-  video_coming_soon: Video Coming Soon!
+  video_coming_soon: ویدئو بزودی!
   share_code:
     title: "'اجرا' را بزن تا برنامه من را در عمل ببینی"
     bounce_og_title: بازی Bounce من را ببین
@@ -422,8 +424,10 @@ fa:
       try_new_tutorial: Try our new Hour of Code tutorial in beta
       try_frozen: Artist with Anna and Elsa, from Frozen
     gallery:
-      title: Gallery
+      title: گالری
       body: View a gallery of app and artist images created by our users
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: دانش‌آموزان اینها را با کدنویسی رسم کرده‌اند!
     students_made_these_with_code: Students made these with code!
@@ -433,34 +437,34 @@ fa:
     more: 'بیشتر &rarr;'
     caption_by_name_age: 'by %{name}, age %{age}'
     caption_time_ago: '%{time_ago} ago'
-    header: Gallery
-    header_playlab: Play Lab
-    header_artist: Artist
+    header: گالری
+    header_playlab: آزمایشگاه بازی
+    header_artist: هنرمند
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     prerelease_hoc2014: "This tutorial is in <span class='betatext'>beta</span>.  It is subject to revision as feedback is received and improvements are made."
     feedback: Give Feedback
-    report_bug: Report Bug
-    support: Get Help
-    support_url: //support.code.org
+    report_bug: گزارش اشکال
+    support: کمک گرفتن
+    support_url: support.code.org
   multi:
     wrong_title: پاسخ اشتباه
     wrong_body: پاسخی که وارد کرده‌اید صحیح نیست. لطفا دوباره امتحان کنید!
-    correct_title: Correct
-    correct_body: That is the correct answer.
+    correct_title: صحیح است
+    correct_body: این پاسخ صحیح است
   match:
     wrong_title: راه‌حل نادرست
     wrong_body: راه‌حلی که شما وارد کرده‌اید صحیح نیست. لطفا دوباره امتحان کنید!
-    correct_title: Correct
-    correct_body: That is the correct answer.
+    correct_title: صحیح است
+    correct_body: این پاسخ صحیح است
   text_match:
-    placeholder: Enter your answer here
+    placeholder: پاسخ خود را اینجا وارد کنید
   dialog:
     ok: Ok
   time:
-    hour: 1 hour
-    day: day
-    week: week
+    hour: ۱ ساعت
+    day: روز
+    week: هفته
   data:
     script:
       name:
@@ -477,7 +481,7 @@ fa:
           title: رویدادها
           description: ""
         builder:
-          title: Builder
+          title: ساز
           description: ""
         flappy:
           title: کدنویسی Flappy
@@ -492,8 +496,8 @@ fa:
           title: Sample Level Builder
           description: ""
   age_interstitial:
-    age: Your age
-    header: Account Information Update
+    age: سن شما
+    header: بروز رسانی اطلاعات حساب کاربری
     message: "We're in the process of updating our experience to provide you with even stronger privacy protections. To do this, we need existing users to enter their age here.<br/>As always, code.org will never rent, sell or share this information with any third parties."
     sign_out: 'If you do not wish to provide your age you may <a href="%{url}">sign out</a>.'
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'

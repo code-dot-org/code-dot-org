@@ -39,7 +39,7 @@ pt-PT:
       update_needs_confirmation: Atualizaste a tua conta com êxito, mas precisamos de verificar de novo o teu endereço de e-mail. Por favor verifica o teu e-mail e clica no link para finalizar a confirmação do teu novo endereço de e-mail.
       updated: Atualizaste a tua conta com sucesso.
     sessions:
-      signed_in: Ligou-se com sucesso.
+      signed_in: ""
       signed_out: Desligou-se com sucesso.
     unlocks:
       send_instructions: Vais receber um e-mail com as instruções sobre como desbloquear a tua conta dentro de poucos minutos.

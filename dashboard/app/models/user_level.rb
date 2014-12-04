@@ -2,6 +2,7 @@
 class UserLevel < ActiveRecord::Base
   belongs_to :user
   belongs_to :level
+  belongs_to :script
 
   def best?
     Activity.best? best_result

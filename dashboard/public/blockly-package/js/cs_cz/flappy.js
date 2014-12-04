@@ -2607,6 +2607,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -2619,7 +2620,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -2629,16 +2632,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -12261,7 +12254,7 @@ exports.end = function(d){return "konec"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Bloky \"Opakovat\" nebo \"Pokud\" v sobě musí mít další bloky, aby fungovaly. Ujisti se, že vnitřní bloky jsou v pořádku vložené dovnitř vnějších bloků."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Blok funkce v sobě musí obsahovat další bloky."};
 
 exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
 
@@ -12277,7 +12270,7 @@ exports.errorUnusedFunction = function(d){return "You created a function, but ne
 
 exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
-exports.extraTopBlocks = function(d){return "Máš další extra bloky, které nejsou připojené k bloku událostí."};
+exports.extraTopBlocks = function(d){return "Máš nepřipojené bloky. Nechceš je připojit k bloku \"po spuštění\"?"};
 
 exports.finalStage = function(d){return "Dobrá práce! Dokončil si poslední fázi."};
 
@@ -12315,9 +12308,9 @@ exports.numBlocksNeeded = function(d){return "Dobrá práce! Dokončil jsi Háda
 
 exports.numLinesOfCodeWritten = function(d){return "Už jsi napsal "+p(d,"numLines",0,"cs",{"one":"1 řádek","other":n(d,"numLines")+" řádků"})+" kódu!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "hrát"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Tisk"};
 
 exports.puzzleTitle = function(d){return "Hádanka "+v(d,"puzzle_number")+" z "+v(d,"stage_total")};
 
@@ -12329,11 +12322,11 @@ exports.runProgram = function(d){return "Spustit"};
 
 exports.runTooltip = function(d){return "Spustí program definovaný bloky na pracovní ploše."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "výsledek"};
 
 exports.showCodeHeader = function(d){return "Zobrazit kód"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Zobrazit bloky"};
 
 exports.showGeneratedCode = function(d){return "Zobrazit kód"};
 
@@ -12357,15 +12350,15 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Celkově: "+p(d,"numLin
 
 exports.tryAgain = function(d){return "Zkusit znovu"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Viz tip"};
 
 exports.backToPreviousLevel = function(d){return "Zpět na předchozí úroveň"};
 
-exports.saveToGallery = function(d){return "Uložit do tvé galerie"};
+exports.saveToGallery = function(d){return "Uložit do galerie"};
 
-exports.savedToGallery = function(d){return "Uložit do tvé galerie!"};
+exports.savedToGallery = function(d){return "Uloženo v galerii!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Omlouváme se, ale tento program nemůžeme sdílet."};
 
 exports.typeFuncs = function(d){return "Dostupné funkce:%1"};
 
@@ -12373,7 +12366,7 @@ exports.typeHint = function(d){return "Všimni si, že závorky a středníky js
 
 exports.workspaceHeader = function(d){return "Sestav si zde své bloky: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Zde napiš tvůj kód v JavaScriptu"};
 
 exports.infinity = function(d){return "Nekonečno"};
 
@@ -12395,7 +12388,7 @@ exports.signup = function(d){return "Zaregistruj se do úvodního kurzu"};
 
 exports.hintHeader = function(d){return "Zde je rada:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Podívej se jak jsi skončil a zkus svůj program opravit."};
 
 exports.defaultTwitterText = function(d){return "Check out what I made"};
 
@@ -12500,7 +12493,7 @@ exports.setBackgroundSanta = function(d){return "nastavit scénu Santa"};
 
 exports.setBackgroundTooltip = function(d){return "Nastavit obrázek pozadí"};
 
-exports.setGapRandom = function(d){return "nastavit mezeru náhodně"};
+exports.setGapRandom = function(d){return "nastavit náhodnou mezeru"};
 
 exports.setGapVerySmall = function(d){return "nastavit velmi malou mezeru"};
 
@@ -12614,25 +12607,25 @@ exports.soundRandom = function(d){return "náhodně"};
 
 exports.soundBounce = function(d){return "Odrazit"};
 
-exports.soundCrunch = function(d){return "crunch"};
+exports.soundCrunch = function(d){return "křupnutí"};
 
-exports.soundDie = function(d){return "sad"};
+exports.soundDie = function(d){return "smutný"};
 
-exports.soundHit = function(d){return "smash"};
+exports.soundHit = function(d){return "rána"};
 
-exports.soundPoint = function(d){return "point"};
+exports.soundPoint = function(d){return "bod"};
 
-exports.soundSwoosh = function(d){return "swoosh"};
+exports.soundSwoosh = function(d){return "šustění"};
 
-exports.soundWing = function(d){return "wing"};
+exports.soundWing = function(d){return "křídlo"};
 
-exports.soundJet = function(d){return "jet"};
+exports.soundJet = function(d){return "stíhačka"};
 
-exports.soundCrash = function(d){return "crash"};
+exports.soundCrash = function(d){return "srážka"};
 
-exports.soundJingle = function(d){return "jingle"};
+exports.soundJingle = function(d){return "rolnička"};
 
-exports.soundSplash = function(d){return "splash"};
+exports.soundSplash = function(d){return "šplouchnutí"};
 
 exports.soundLaser = function(d){return "laser"};
 

@@ -228,7 +228,7 @@
         title: Colaboración Abierta
         desc: Los estudiantes usan crowdsourcing, una técnica habitual para resolver
           problemas en informática, para completar una tarea juntos como un aula,
-          más eficientemente que si un alumno intentara solo.
+          más eficientemente que si un alumno lo intentara solo.
         video: C3_crowdsourcing
       DigitalCitizenship:
         title: Ciudadanía Digital
@@ -274,20 +274,20 @@
           puede almacenar información aún más compleja (por ejemplo, imágenes y colores)
           en binario.
       VideoGamesCoordinatePlanes:
-        title: Video Games and Coordinate Planes
-        desc: Video Games and Coordinate Planes lesson description
+        title: Videojuegos y planos de coordenadas
+        desc: Descripción de la clase sobre videojuegos y planos de coordenadas
       Contracts:
         title: Contratos
-        desc: Contracts unplugged lesson description
+        desc: Descripción de la clase desenchufada sobre contratos
       DesignRecipe:
         title: La receta de diseño
-        desc: Design Recipe lesson description
+        desc: Descripción de la clase sobre recetas de diseño
       Booleans:
         title: Valores booleanos
-        desc: Booleans lesson description
+        desc: Descripción de la clase sobre booleanos
       ConditionalsPiecewiseFunctions:
         title: Funciones por partes y condicionales
-        desc: Conditionals and Piecewise Functions lesson description
+        desc: Descripción de la clase sobre funciones por trozos y condicionales
       CollisionDetection:
-        title: Collision Detection
-        desc: Collision Detection lesson description
+        title: Detección de colisiones
+        desc: Descripción de la clase sobre detección de colisiones

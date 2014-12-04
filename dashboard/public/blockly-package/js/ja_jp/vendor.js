@@ -1397,7 +1397,7 @@ this.setMutator(new Blockly.Mutator(["procedures_mutatorarg"]));this.setTooltip(
 domToMutation:Blockly.Blocks.procedures_defnoreturn.domToMutation,decompose:Blockly.Blocks.procedures_defnoreturn.decompose,compose:Blockly.Blocks.procedures_defnoreturn.compose,dispose:Blockly.Blocks.procedures_defnoreturn.dispose,getProcedureInfo:function(){return{name:this.getTitleValue("NAME"),parameterNames:this.parameterNames_,parameterIDs:this.paramIds_,type:this.type,callType:this.callType_}},getVars:Blockly.Blocks.procedures_defnoreturn.getVars,renameVar:Blockly.Blocks.procedures_defnoreturn.renameVar,
 customContextMenu:Blockly.Blocks.procedures_defnoreturn.customContextMenu,userCreated:Blockly.Blocks.procedures_defnoreturn.userCreated,callType_:"procedures_callreturn"};Blockly.Blocks.procedures_mutatorcontainer={init:function(){this.setHSV(94,0.84,0.6);this.appendDummyInput().appendTitle(Blockly.Msg.PROCEDURES_MUTATORCONTAINER_TITLE);this.appendStatementInput("STACK");this.setTooltip("");this.contextMenu=!1}};
 Blockly.Blocks.procedures_mutatorarg={init:function(){this.setHSV(94,0.84,0.6);this.appendDummyInput().appendTitle(Blockly.Msg.PROCEDURES_MUTATORARG_TITLE).appendTitle(new Blockly.FieldTextInput("x",this.validator),"NAME");this.setPreviousStatement(!0);this.setNextStatement(!0);this.setTooltip("");this.contextMenu=!1}};Blockly.Blocks.procedures_mutatorarg.validator=function(a){return(a=a.replace(/[\s\xa0]+/g," ").replace(/^ | $/g,""))||null};
-Blockly.Blocks.procedures_callnoreturn={init:function(){this.setHelpUrl(Blockly.Msg.PROCEDURES_CALLNORETURN_HELPURL);this.setHSV(94,0.84,0.6);var a=this.appendDummyInput().appendTitle(Blockly.Msg.PROCEDURES_CALLNORETURN_CALL).appendTitle("","NAME");if(Blockly.functionEditor){var b=new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);Blockly.bindEvent_(b.fieldGroup_,"mousedown",this,this.openEditor);a.appendTitle(b)}this.setPreviousStatement(!0);this.setNextStatement(!0);this.setTooltip(Blockly.Msg.PROCEDURES_CALLNORETURN_TOOLTIP);
+Blockly.Blocks.procedures_callnoreturn={init:function(){this.setHelpUrl(Blockly.Msg.PROCEDURES_CALLNORETURN_HELPURL);this.setHSV(94,0.84,0.6);var a=this.appendDummyInput().appendTitle(Blockly.Msg.PROCEDURES_CALLNORETURN_CALL).appendTitle("","NAME");if(Blockly.useModalFunctionEditor){var b=new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);Blockly.bindEvent_(b.fieldGroup_,"mousedown",this,this.openEditor);a.appendTitle(b)}this.setPreviousStatement(!0);this.setNextStatement(!0);this.setTooltip(Blockly.Msg.PROCEDURES_CALLNORETURN_TOOLTIP);
 this.currentParameterNames_=[];this.currentParameterIDs=this.parameterIDsToArgumentConnections=null},openEditor:function(a){a.stopPropagation();a=this.getTitleValue("NAME");this.blockSpace.blockSpaceEditor.hideChaff();Blockly.functionEditor.hide();Blockly.functionEditor.openAndEditFunction(a)},getCallName:function(){return this.getTitleValue("NAME")},renameProcedure:function(a,b){Blockly.Names.equals(a,this.getTitleValue("NAME"))&&(this.setTitleValue(b,"NAME"),this.setTooltip((this.outputConnection?
 Blockly.Msg.PROCEDURES_CALLRETURN_TOOLTIP:Blockly.Msg.PROCEDURES_CALLNORETURN_TOOLTIP).replace("%1",b)))},setProcedureParameters:function(a,b){if(b){if(b.length!=a.length)throw"Error: paramNames and paramIds must be the same length.";this.currentParameterIDs||(this.parameterIDsToArgumentConnections={},a.join("\n")==this.currentParameterNames_.join("\n")?this.currentParameterIDs=b:this.currentParameterIDs=[]);var c=this.rendered;this.rendered=!1;for(var d=this.currentParameterNames_.length-1;0<=d;d--){var e=
 this.getInput("ARG"+d);if(e){var f=e.connection.targetConnection;this.parameterIDsToArgumentConnections[this.currentParameterIDs[d]]=f;this.removeInput("ARG"+d)}}this.currentParameterNames_=[].concat(a);this.currentParameterIDs=b;for(d=0;d<this.currentParameterNames_.length;d++)if(e=this.appendValueInput("ARG"+d).setAlign(Blockly.ALIGN_RIGHT).appendTitle(this.currentParameterNames_[d]),this.currentParameterIDs){var g=this.currentParameterIDs[d];g in this.parameterIDsToArgumentConnections&&(f=this.parameterIDsToArgumentConnections[g],
@@ -1439,7 +1439,7 @@ renameVar:function(a,b){Blockly.Names.equals(a,this.getTitleValue("VAR"))&&this.
 b.callback=Blockly.ContextMenu.callbackFactory(this,c);a.push(b)}};
 Blockly.Blocks.variables_set={init:function(){var a=new Blockly.FieldLabel(Blockly.Msg.VARIABLES_SET_ITEM);a.EDITABLE=!0;this.setHelpUrl(Blockly.Msg.VARIABLES_SET_HELPURL);this.setHSV(312,0.32,0.62);this.appendValueInput("VALUE").appendTitle(Blockly.Msg.VARIABLES_SET_TITLE).appendTitle(Blockly.disableVariableEditing?a:new Blockly.FieldVariable(Blockly.Msg.VARIABLES_SET_ITEM),"VAR").appendTitle(Blockly.Msg.VARIABLES_SET_TAIL);this.setPreviousStatement(!0);this.setNextStatement(!0);this.setTooltip(Blockly.Msg.VARIABLES_SET_TOOLTIP)},
 getVars:function(){return[this.getTitleValue("VAR")]},renameVar:function(a,b){Blockly.Names.equals(a,this.getTitleValue("VAR"))&&this.setTitleValue(b,"VAR")},contextMenuMsg_:Blockly.Msg.VARIABLES_SET_CREATE_GET,contextMenuType_:"variables_get",customContextMenu:Blockly.Blocks.variables_get.customContextMenu};
-Blockly.Blocks.parameters_get={init:function(){var a=new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);a.EDITABLE=!0;this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);this.setHSV(312,0.32,0.62);this.appendDummyInput().appendTitle(Blockly.Msg.VARIABLES_GET_TITLE).appendTitle(Blockly.disableVariableEditing?a:new Blockly.FieldParameter(Blockly.Msg.VARIABLES_GET_ITEM),"VAR").appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);this.setOutput(!0);this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP)},renameVar:function(a,
+Blockly.Blocks.parameters_get={init:function(){var a=new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);a.EDITABLE=!0;this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);this.setHSV(7,0.8,0.95);this.appendDummyInput().appendTitle(Blockly.Msg.VARIABLES_GET_TITLE).appendTitle(Blockly.disableVariableEditing?a:new Blockly.FieldParameter(Blockly.Msg.VARIABLES_GET_ITEM),"VAR").appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);this.setOutput(!0);this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP)},renameVar:function(a,
 b){Blockly.functionEditor&&(Blockly.functionEditor.renameParameter(a,b),Blockly.functionEditor.refreshParamsEverywhere())},removeVar:Blockly.Blocks.variables_get.removeVar};Blockly.Blocks.functionalProcedures={};
 Blockly.Blocks.functional_definition={init:function(){this.setHelpUrl(Blockly.Msg.PROCEDURES_DEFNORETURN_HELPURL);this.setHSV(94,0.84,0.6);this.setFunctional(!0,{headerHeight:0,rowBuffer:3});this.setFunctionalOutput(!0,"Number");var a=Blockly.Procedures.findLegalName(Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE,this);this.appendDummyInput().appendTitle(Blockly.Msg.DEFINE_FUNCTION_DEFINE).appendTitle(new Blockly.FieldTextInput(a,Blockly.Procedures.rename),"NAME").appendTitle("","PARAMS");this.appendFunctionalInput("STACK");
 this.setFunctional(!0);this.setTooltip(Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP);this.isFunctionalVariable_=!1;this.parameterNames_=[];this.paramIds_=[];this.parameterTypes_=[]},mutationToDom:function(){for(var a=document.createElement("mutation"),b=0;b<this.parameterNames_.length;b++){var c=document.createElement("arg");c.setAttribute("name",this.parameterNames_[b]);c.setAttribute("type",this.parameterTypes_[b]);a.appendChild(c)}this.description_&&(b=document.createElement("description"),
@@ -1449,7 +1449,7 @@ updateParams_:function(){for(var a=!1,b={},c=0;c<this.parameterNames_.length;c++
 this.blockSpace,this.parameterNames_,this.paramIds_,this.parameterTypes_)},updateOutputType:function(a){this.outputType_=a;this.changeFunctionalOutput(this.outputType_)},dispose:function(a,b,c){if(!c){var d=this.getTitleValue("NAME");Blockly.Procedures.disposeCallers(d,this.blockSpace)}Blockly.Block.prototype.dispose.apply(this,arguments)},getProcedureInfo:function(){return{name:this.getTitleValue("NAME"),type:this.type,callType:this.callType_,parameterNames:this.parameterNames_,parameterTypes:this.parameterTypes_,
 isFunctionalVariable:this.isFunctionalVariable_}},getVars:function(){return this.parameterNames_},renameVar:function(a,b){for(var c=!1,d=0;d<this.parameterNames_.length;d++)Blockly.Names.equals(a,this.parameterNames_[d])&&(this.parameterNames_[d]=b,c=!0);if(c&&(this.updateParams_(),this.mutator&&this.mutator.isVisible()))for(var c=this.mutator.blockSpace_.getAllBlocks(),d=0,e;e=c[d];d++)"functional_procedures_mutatorarg"==e.type&&Blockly.Names.equals(a,e.getTitleValue("NAME"))&&e.setTitleValue(b,
 "NAME")},removeVar:function(a){a=this.parameterNames_.indexOf(a);-1<a&&(this.parameterNames_.splice(a,1),this.updateParams_())},callType_:"functional_call"};
-Blockly.Blocks.functional_call={init:function(){this.setHelpUrl(Blockly.Msg.PROCEDURES_CALLNORETURN_HELPURL);this.setTooltip("Calls a user-defined function");this.setHSV(94,0.84,0.6);var a=this.appendDummyInput().appendTitle(new Blockly.FieldLabel("Function Call",{fixedSize:{height:35}}),"NAME").appendTitle("","PARAM_TEXT");if(Blockly.functionEditor&&this.blockSpace!==Blockly.modalBlockSpace){var b=new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);Blockly.bindEvent_(b.fieldGroup_,"mousedown",this,
+Blockly.Blocks.functional_call={init:function(){this.setHelpUrl(Blockly.Msg.PROCEDURES_CALLNORETURN_HELPURL);this.setTooltip("Calls a user-defined function");this.setHSV(94,0.84,0.6);var a=this.appendDummyInput().appendTitle(new Blockly.FieldLabel("Function Call",{fixedSize:{height:35}}),"NAME").appendTitle("","PARAM_TEXT");if(Blockly.useContractEditor&&this.blockSpace!==Blockly.modalBlockSpace){var b=new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);Blockly.bindEvent_(b.fieldGroup_,"mousedown",this,
 this.openEditor);a.appendTitle(b);this.editLabel_=b}this.setFunctional(!0);this.currentParameterNames_=[];this.parameterIDsToArgumentConnections_={};this.currentParameterIDs_=[];this.currentParameterTypes_=[];this.currentDescription_=this.currentOutputType_=null;this.blockSpace.events.listen(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE,this.updateAttributesFromDefinition_,!1,this);this.changeFunctionalOutput("none")},updateAttributesFromDefinition_:function(){var a=Blockly.Procedures.getDefinition(this.getTitleValue("NAME"),
 this.blockSpace.blockSpaceEditor.blockSpace);a&&(a.outputType_&&a.outputType_!==this.currentOutputType_&&(this.currentOutputType_=a.outputType_,this.changeFunctionalOutput(a.outputType_)),a.description_&&a.description_!==this.currentDescription_&&(this.currentDescription_=a.description_,this.setTooltip(a.description_)))},beforeDispose:function(){this.blockSpace.events.unlisten(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE,this.updateAttributesFromDefinition_,!1,this)},openEditor:function(){Blockly.functionEditor.openAndEditFunction(this.getTitleValue("NAME"))},
 getCallName:function(){return this.getTitleValue("NAME")},renameProcedure:function(a,b){Blockly.Names.equals(a,this.getTitleValue("NAME"))&&this.setTitleValue(b,"NAME")},setProcedureParameters:function(a,b,c){if(b){if(b.length!=a.length)throw"Error: paramNames and paramIds must be the same length.";this.currentParameterIDs_||(this.parameterIDsToArgumentConnections_={},a.join("\n")===this.currentParameterNames_.join("\n")?this.currentParameterIDs_=b:this.currentParameterIDs_=[]);var d=this.rendered;
@@ -1562,15 +1562,15 @@ Blockly.JavaScript.parameters_set=Blockly.JavaScript.variables_set;
 
 goog.provide('Blockly.Msg.ja_jp');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "actual";
+Blockly.Msg.ACTUAL = "実際の";
 Blockly.Msg.ADD = "ついか";
 Blockly.Msg.ADD_COMMENT = "コメントを追加";
 Blockly.Msg.ADD_PARAMETER = "パラメータを追加します。";
 Blockly.Msg.CHANGE_VALUE_TITLE = "値の変更:";
 Blockly.Msg.COLLAPSE_ALL = "ブロックを折りたたむ";
 Blockly.Msg.COLLAPSE_BLOCK = "ブロックを折りたたむ";
-Blockly.Msg.COLOUR_BLEND_COLOUR1 = "カラー1";
-Blockly.Msg.COLOUR_BLEND_COLOUR2 = "カラー2";
+Blockly.Msg.COLOUR_BLEND_COLOUR1 = "色１";
+Blockly.Msg.COLOUR_BLEND_COLOUR2 = "色２";
 Blockly.Msg.COLOUR_BLEND_HELPURL = "http://meyerweb.com/eric/tools/color-blend/";
 Blockly.Msg.COLOUR_BLEND_RATIO = "割合";
 Blockly.Msg.COLOUR_BLEND_TITLE = "ブレンド";
@@ -1584,8 +1584,8 @@ Blockly.Msg.COLOUR_RGB_BLUE = "青";
 Blockly.Msg.COLOUR_RGB_GREEN = "緑";
 Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.html";
 Blockly.Msg.COLOUR_RGB_RED = "赤";
-Blockly.Msg.COLOUR_RGB_TITLE = "カラーと";
-Blockly.Msg.COLOUR_RGB_TOOLTIP = "赤、緑、および青の指定された量で色を作成します。すべての値は 0 ～ 100 の間でなければなりません。";
+Blockly.Msg.COLOUR_RGB_TITLE = "色";
+Blockly.Msg.COLOUR_RGB_TOOLTIP = "赤、緑、青、それぞれを指定して色を作ります。値は０から１００の間で指定します。";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "ループから抜け出す";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "ループの次の反復処理を続行します。";
@@ -1623,37 +1623,37 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_UNTIL = "までを繰り返します";
 Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_WHILE = "以下が満たされている間続行";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "値が 偽( false ) の間、構文を実行。";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "値が 真( ture ) の間、構文を実行。";
-Blockly.Msg.DEFINE_FUNCTION_DEFINE = "Define";
+Blockly.Msg.DEFINE_FUNCTION_DEFINE = "定義";
 Blockly.Msg.DELETE_BLOCK = "ブロックを削除";
 Blockly.Msg.DELETE_PARAMETER = "パラメータを削除します。";
-Blockly.Msg.DELETE_PARAMETER_TITLE = "This will delete all '%1' parameter occurrences. Are you sure?";
+Blockly.Msg.DELETE_PARAMETER_TITLE = "全てのパラメーター'%1'を削除します。よろしいですか？";
 Blockly.Msg.DELETE_X_BLOCKS = "ブロック%1を削除";
 Blockly.Msg.DISABLE_BLOCK = "ブロックを無効にする";
-Blockly.Msg.DUPLICATE_BLOCK = "コピー";
+Blockly.Msg.DUPLICATE_BLOCK = "複製";
 Blockly.Msg.ENABLE_BLOCK = "ブロックを有効にする";
-Blockly.Msg.EXAMPLE = "Example";
-Blockly.Msg.EXAMPLE_DESCRIPTION = "Defines an example with expected and actual behavior";
+Blockly.Msg.EXAMPLE = "例";
+Blockly.Msg.EXAMPLE_DESCRIPTION = "予想される挙動と実際の挙動からなる例を定義してください。";
 Blockly.Msg.EXPAND_ALL = "ブロックを展開する";
 Blockly.Msg.EXPAND_BLOCK = "ブロックを展開する";
-Blockly.Msg.EXPECTED = "expected";
+Blockly.Msg.EXPECTED = "予想";
 Blockly.Msg.EXTERNAL_INPUTS = "外部入力";
-Blockly.Msg.FUNCTION_CREATE = "Create a Function";
+Blockly.Msg.FUNCTION_CREATE = "関数を作成する";
 Blockly.Msg.FUNCTION_EDIT = "edit";
-Blockly.Msg.FUNCTION_NAME_LABEL = "Name your function:";
-Blockly.Msg.FUNCTION_DESCRIPTION_LABEL = "What is your function supposed to do?";
-Blockly.Msg.FUNCTION_PARAMETERS_LABEL = "What parameters does your function take?";
+Blockly.Msg.FUNCTION_NAME_LABEL = "関数に名前をつける:";
+Blockly.Msg.FUNCTION_DESCRIPTION_LABEL = "あなたの関数は何をするものですか？";
+Blockly.Msg.FUNCTION_PARAMETERS_LABEL = "あなたの関数はどんな引数をとりますか？";
 Blockly.Msg.FUNCTION_HEADER = "関数";
-Blockly.Msg.FUNCTIONAL_CREATE = "New Block";
+Blockly.Msg.FUNCTIONAL_CREATE = "新しいブロック";
 Blockly.Msg.FUNCTIONAL_EDIT = "edit";
 Blockly.Msg.FUNCTIONAL_NAME_LABEL = "名前";
-Blockly.Msg.FUNCTIONAL_TYPE_LABEL = "Choose type...";
-Blockly.Msg.FUNCTIONAL_DESCRIPTION_LABEL = "Description";
-Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL = "Domain";
-Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP = "Define a functional method";
-Blockly.Msg.FUNCTIONAL_RANGE_LABEL = "Range";
-Blockly.Msg.FUNCTIONAL_VARIABLE_CREATE = "Create a Variable";
-Blockly.Msg.FUNCTIONAL_VARIABLE_HEADER = "Variable";
-Blockly.Msg.FUNCTIONAL_VARIABLE_TYPE = "Type";
+Blockly.Msg.FUNCTIONAL_TYPE_LABEL = "タイプを選ぶ...";
+Blockly.Msg.FUNCTIONAL_DESCRIPTION_LABEL = "説明";
+Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL = "ドメイン";
+Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP = "メソッドを定義する";
+Blockly.Msg.FUNCTIONAL_RANGE_LABEL = "範囲";
+Blockly.Msg.FUNCTIONAL_VARIABLE_CREATE = "変数を作成する";
+Blockly.Msg.FUNCTIONAL_VARIABLE_HEADER = "変数";
+Blockly.Msg.FUNCTIONAL_VARIABLE_TYPE = "タイプ";
 Blockly.Msg.HELP = "ヘルプ";
 Blockly.Msg.INLINE_INPUTS = "インライン入力";
 Blockly.Msg.LISTS_CREATE_EMPTY_HELPURL = "http://en.wikipedia.org/wiki/Linked_list#Empty_lists";
@@ -1811,7 +1811,7 @@ Blockly.Msg.MATH_RANDOM_INT_TOOLTIP = "指定した下限の間、無作為な�
 Blockly.Msg.MATH_ROUND_HELPURL = "http://en.wikipedia.org/wiki/Rounding";
 Blockly.Msg.MATH_ROUND_OPERATOR_ROUND = "概数";
 Blockly.Msg.MATH_ROUND_OPERATOR_ROUNDDOWN = "端数を切り捨てる";
-Blockly.Msg.MATH_ROUND_OPERATOR_ROUNDUP = "数値を切り上げ";
+Blockly.Msg.MATH_ROUND_OPERATOR_ROUNDUP = "端数を切り上げる";
 Blockly.Msg.MATH_ROUND_TOOLTIP = "数値を切り上げるか切り捨てる";
 Blockly.Msg.MATH_SINGLE_HELPURL = "http://en.wikipedia.org/wiki/Square_root";
 Blockly.Msg.MATH_SINGLE_OP_ABSOLUTE = "絶対値";
@@ -1865,11 +1865,11 @@ Blockly.Msg.PROCEDURES_IFRETURN_WARNING = "警告: このブロックは、関�
 Blockly.Msg.PROCEDURES_MUTATORARG_TITLE = "入力名:";
 Blockly.Msg.PROCEDURES_MUTATORCONTAINER_TITLE = "入力";
 Blockly.Msg.REMOVE_COMMENT = "コメントを削除";
-Blockly.Msg.RENAME_PARAMETER = "Rename parameter...";
-Blockly.Msg.RENAME_PARAMETER_TITLE = "Rename all '%1' parameters to:";
+Blockly.Msg.RENAME_PARAMETER = "引数の名前を変更する...";
+Blockly.Msg.RENAME_PARAMETER_TITLE = "すべての引数'%1'の名前を変更する:";
 Blockly.Msg.RENAME_VARIABLE = "変数名を変更...";
 Blockly.Msg.RENAME_VARIABLE_TITLE = "すべての変数%1の名前を変更:";
-Blockly.Msg.SAVE_AND_CLOSE = "Save and Close";
+Blockly.Msg.SAVE_AND_CLOSE = "保存して閉じる";
 Blockly.Msg.TEXT_APPEND_APPENDTEXT = "テキストを追加します。";
 Blockly.Msg.TEXT_APPEND_HELPURL = "https://code.google.com/p/blockly/wiki/Text#Text_modification";
 Blockly.Msg.TEXT_APPEND_TO = "宛先";

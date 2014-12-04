@@ -17,7 +17,7 @@
   "numBlocksNeeded":"Detta pusslet kan lösas med %1 block.",
   "pause":"Break",
   "reinfFeedbackMsg":"You can press the \"Try again\" button to go back to running your app.",
-  "repeatForever":"repeat forever",
+  "repeatForever":"upprepa för evigt",
   "repeatDo":"utför",
   "repeatForeverTooltip":"Execute the actions in this block repeatedly while the app is running.",
   "shareWebappTwitter":"Check out the app I made. I wrote it myself with @codeorg",

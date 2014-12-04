@@ -1,36 +1,36 @@
 sr-SP:
   hello: Здраво свете
-  select_language: Please select your language
+  select_language: Молимо изаберите свој језик
   computer_science: Информатика
-  computer_science_edweek: Недељно предавање о рачунарским наукама
+  computer_science_edweek: Едукацијска седмица о информатици
   csedweek_dates: Децембар 9-15, 2013
-  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">plan your Hour of Code</a>'
-  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
+  csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Сат програмирања </a>долази.Позивајући све учитеље и организаторе,<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">да испланирате ваш Сат програмирања</a>'
+  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Да ли сте ви учитељ компјутерских наука?Видите друге на недељи едукације о компјутерској науци.</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>Покушао</h3><h2>сат кодирања</h2>'
   anybody_can_learn: Сви могу научити.
   learn_now: Учите сада
-  petition_message: Every student in every school should have the opportunity to learn computer science
+  petition_message: Сваки ученик у свакој школи треба да има прилику да учи компјутерску науку
   petition_sign_message: 'Ако се слажеш, упиши своје име. Придружи се # осталима.'
   name: Име
   email: Електронска пошта
   zipcode: Поштански број или име државе
   submit: Пошаљи
-  twentyhours_heading: Try our Intro to Computer Science Course
-  twentyhours_text: Finished your first Hour of Code? Learn more core computer science and programming concepts in this follow-up course.
-  hoc2014_heading: 'Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December 8 - 14, 2014<br/>'
+  twentyhours_heading: Пробајте наш курс Увод у Компјутерску науку
+  twentyhours_text: Завршили сте свој први Сат програмирања?Научите више основа компјутерске науке и концепта програмирања у овом курсу који следи.
+  hoc2014_heading: 'Придружите се<a href="http://hourofcode.com">Сату програмирања </a><br/>8.-14 .децембар,2014<br/>'
   hoc2014_students: Students
-  hoc2014_try: Try it
-  hoc2014_teachers: Teachers
-  hoc2014_host: Host it
-  hoc2014_everyone: Everyone
-  hoc2014_support: Support it
-  hoc2014_whatishoc: What is the Hour of Code?
+  hoc2014_try: Пробајте
+  hoc2014_teachers: Наставници
+  hoc2014_host: Одржите
+  hoc2014_everyone: Сви
+  hoc2014_support: Подржите
+  hoc2014_whatishoc: Шта је Сат програмирања?
   twentyhours_trynow: Испробај сада
-  california_heading: Ask your school to teach computer science
-  california_text: "Any teacher can offer our <a href='http://studio.code.org/'>free courses</a>.  Any elementary school can <a href='http://code.org/educate/k5'>teach computer science</a>. Ask high schools to <a href='http://code.org/educate/districts'>partner with us."
+  california_heading: Питајте вашу школу да се у њој учи компјутерска наука
+  california_text: "Било који учитељ може да понуди наше<a href='http://studio.code.org/'>бесплатне курсеве</a>.Било која основна школа може да<a href='http://code.org/educate/k5'>учи компјутерску науку</a>.Питајте средње школе да<a href='http://code.org/educate/districts'>буду партнери."
   california_button: Сазнајте више
-  flappy_heading: Flappy Birthday to Code.org
-  flappy_text: 'Code.org just turned 1 year old.<br/><br/> Celebrate with us by making your own custom <b>Flappy</b> game. Code your own rules, and share it with friends!'
+  flappy_heading: Флапи рођендан сајту Code.org
+  flappy_text: 'Code.org је управо напунио годину дана.<br/><br/>Прославите са нама прављењем сопствене<b>Флапи</b>игре.Програмирајте своја правила, и поделите их са пријатељима!'
   view_english_site: Погледај енглеску верзију
   non_english_tutorials: 'Туторијали преведени на више језика:'
   write_your_first_program: Напиши свој први компјутерски програм
@@ -45,12 +45,12 @@ sr-SP:
   get_a_certificate_of_achievement: Узмите сертификат о достигнућу
   enter_valid_email: Молимо да унесете валидну емаил адресу
   get_a_certificate_message: "Послаћемо Вам сертификат и информације како да <a href='/learn/beyond'> Научите и више од сата кодирања</a>"
-  get_a_certificate_message_after: "Click on the certificate to download or print it. Now, keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>."
+  get_a_certificate_message_after: "Кликните на диплому да би је преузели или одштампали.Сада,наставите са нашим<a href='http://studio.code.org'>другим курсевима</a>,или да би видели више могућности идите на<a href='/learn/beyond'>Научите више него у Сату програмирања</a>."
   thanks_for_submitting: Хвала на датим информацијама!
   if_you_enjoyed: Ако сте уживали учећи, питајте пријатеље да и они пробају! Ми желимо да цео свет научи.
   personalize_certificate: Персонализујте свој сертификат
   share_achievement: Поделите своје постигнуће
-  beyond_hour_message: "Keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>."
+  beyond_hour_message: "Наставите са нашим<a href='http://studio.code.org'>другим курсевима</a>,или видите више опција на<a href='/learn/beyond'>Научите више него у једном сату</a>."
   leaderboards_for_hoc: Лјествице за Сат Програмиранја.
   support_url: http://support.code.org/
   country: Землја
@@ -60,12 +60,12 @@ sr-SP:
   girls: Девојке
   give_my_hour: 'Дај мој сат следећем:'
   girls_team: Женски тим
-  boys_team: "Boys' Team"
+  boys_team: Дечачки тим
   tell_the_world: Подели Свету!
   thanks_for_voting: Хвала на гласању!
   share_on_facebook: Подели на Facebook-u
   share_on_twitter: Подели на Тwitteru
-  beyond_an_hour: 'Beyond an Hour of Code >'
+  beyond_an_hour: 'Више од Сата програмирања>'
   get_started: Покрени
   i_agree: Слажем се
   participant_select: -Изабери-
@@ -77,13 +77,13 @@ sr-SP:
   i_am_a: Ја сам
   never_spam: Никада вам нећемо слати нежељену пошту
   enter_country: Унеси земљу ако не живиш у САД-у
-  used_infrequent_updates: Only used for infrequent updates
-  privacy_practices_children: See our privacy practices for children
+  used_infrequent_updates: Само за ретка ажурирања
+  privacy_practices_children: Видите наше праксе за приватност за децу
   petition_thankyou: Хвала вам што сте потписали петицију
   continue_learning_header: Наставите ућити преко једног часа
   continue_learning_body: Постоји много опција. Можете научити преко интернета, или у локалној школи, или на летњем кампу.
-  learn_next_level: Continue to the next level
-  learn_online: Try other courses online
+  learn_next_level: Настави до следећег нивоа
+  learn_online: Пробајте друге курсеве на интернету
   learn_classes: Пронађите локалне часове
   hoc_is_here: '#HourOfCode је стигао - Погледајте га! @codeorg'
   just_did_hoc: 'Управо сам завршио #HourOfCode - погледајте га! @codeorg'
@@ -100,125 +100,125 @@ sr-SP:
   hoc_leaderboards: Табела најуспешнијих учесника сата кодирања
   students_and_lines: '%{students} студената је одрадило сат кодирања и напислао %{lines} линија кода.'
   start_hoc: Започните сат кодирања, сада
-  contact_form_topic_press: Press/media (interview or speaking engagement)
-  studiobar_title: "Explore <a href='http://studio.code.org'>Code Studio</a>"
-  studiobar_elementary_title: Elementary courses
-  studiobar_elementary_body: 'Our three new courses for K&#8209;5'
+  contact_form_topic_press: Штампа/медији (интервју или говор)
+  studiobar_title: "Истражите<a href='http://studio.code.org'>Студио Програмирања</a>"
+  studiobar_elementary_title: Основни курсеви
+  studiobar_elementary_body: 'Наша три нова курса за врт&#8209;ић'
   studiobar_hoc_title: сата кодирања
-  studiobar_hoc_body: Learn to code with Angry Birds
+  studiobar_hoc_body: Научите да програмирате уз Angry Birds
   studiobar_flappy_title: Flappy Code
-  studiobar_flappy_body: Make and share your own Flappy game
-  studiobar_teacher_title: Made for teachers
-  studiobar_teacher_body: Introduce Code Studio in your classroom
+  studiobar_flappy_body: Направите и поделите сопствену Флапи игру
+  studiobar_teacher_title: Направљено за учитеље
+  studiobar_teacher_body: Уведите Студио програмирања у вашу учионицу
   contact_form_topic_student: Ја сам студент
   contact_form_topic_parent: Ја сам родитељ
-  contact_form_topic_teacher: "I'm a teacher/educator"
-  contact_form_topic_outside_us: "I'm outside the U.S."
-  contact_form_topic_contribution: Charitable contribution
-  contact_form_topic_partner: "I'd like to partner"
+  contact_form_topic_teacher: Ја сам учитељ/едукатор
+  contact_form_topic_outside_us: Ја сам ван САД.
+  contact_form_topic_contribution: Добровољни принос
+  contact_form_topic_partner: Ја би желео да будем партнер
   contact_form_topic_other: Други
   contact_form_label_topic: Тема
-  contact_form_label_email: Your email address
+  contact_form_label_email: Ваша имејл адреса
   contact_form_label_message: Порука
   contact_form_label_submit: Пошаљи поруку
   class_submission_in_school: У школи
-  class_submission_in_school_daily_programming_course: Daily programming course
-  class_submission_in_school_ap_computer_science: AP computer science
-  class_submission_in_school_full_university_cs_curriculum: Full university CS curriculum
-  class_submission_in_school_robotics_club: Robotics club
-  class_submission_in_school_programming_integrated_in_other_classes: Programming integrated in other classes (math, science, etc)
-  class_submission_in_school_summer_school_cs_program: Summer school CS program
-  class_submission_in_school_exploring_computer_science: Exploring Computer Science
-  class_submission_in_school_other: Other in school
-  class_submission_out_of_school: Out of school
+  class_submission_in_school_daily_programming_course: Дневни курс програмирања
+  class_submission_in_school_ap_computer_science: AP(напредно знање)компјутерска наука
+  class_submission_in_school_full_university_cs_curriculum: Пуни универзитетски наставни план компјутерске науке
+  class_submission_in_school_robotics_club: Клуб роботике
+  class_submission_in_school_programming_integrated_in_other_classes: Програмирање унето у друге часове (математика,физика,итд)
+  class_submission_in_school_summer_school_cs_program: Програм летње школе компјутерске науке
+  class_submission_in_school_exploring_computer_science: Истраживајући компјутерску науку
+  class_submission_in_school_other: Други у школи
+  class_submission_out_of_school: Ван школе
   class_submission_out_of_school_summer_camp: Летњи камп
-  class_submission_out_of_school_afterschool_program: Afterschool program
-  class_submission_out_of_school_all-day_workshop: All-day workshop (up to 1 week)
-  class_submission_out_of_school_multi-week_workshop: Multi-week workshop
-  class_submission_out_of_school_other: Other out of school
-  class_submission_online: Online
-  class_submission_online_programming_class: Online programming class
-  class_submission_online_teacher_resource: Online teacher resource
-  class_submission_online_other: Other online
-  class_submission_level_preschool: Preschool
-  class_submission_level_elementary: Elementary
-  class_submission_level_middle_school: Middle school
-  class_submission_level_high_school: High school
-  class_submission_level_college: College
-  class_submission_level_vocational: Vocational
-  class_submission_languages_other: Other language(s)
-  volunteer_engineer_submission_commitment_uncertain: Uncertain
-  volunteer_engineer_submission_commitment_now_and_then: Every now and then
-  volunteer_engineer_submission_commitment_one_hr_per_week: 1 hour per week
-  volunteer_engineer_submission_commitment_three_hrs_per_week: 3 hours per week
-  volunteer_engineer_submission_commitment_five_hrs_per_week: 5 hours per week
-  volunteer_engineer_submission_commitment_more: More
-  volunteer_engineer_submission_location_flexibility_onsite: On-site at a school
-  volunteer_engineer_submission_location_flexibility_remote: Mentoring remotely (teachers or students)
-  volunteer_engineer_submission_location_flexibility_curriculum: Willing to help contribute to open-source curriculum projects
-  volunteer_engineer_submission_experience_unspecified: Unspecified
-  volunteer_engineer_submission_experience_university_student_or_researcher: Current university student (or researcher)
-  volunteer_engineer_submission_experience_software_professional: Software professional
+  class_submission_out_of_school_afterschool_program: Програм за после школе
+  class_submission_out_of_school_all-day_workshop: Целодневна радионица (до једне недеље)
+  class_submission_out_of_school_multi-week_workshop: Вишенедељна радионица
+  class_submission_out_of_school_other: Други ван школе
+  class_submission_online: На интернету
+  class_submission_online_programming_class: Час програмирања на интернету
+  class_submission_online_teacher_resource: Ресурси за учитеље на интернету
+  class_submission_online_other: Други на интернету
+  class_submission_level_preschool: Предшколско
+  class_submission_level_elementary: Основна школа (од 1. до 4. разреда)
+  class_submission_level_middle_school: Основна школа (од 5. до 8. разреда)
+  class_submission_level_high_school: Средња школа
+  class_submission_level_college: Факултет
+  class_submission_level_vocational: Професионални
+  class_submission_languages_other: Други језик/ци
+  volunteer_engineer_submission_commitment_uncertain: Несигурно
+  volunteer_engineer_submission_commitment_now_and_then: Свако сад и тад
+  volunteer_engineer_submission_commitment_one_hr_per_week: 1 сат по недељи
+  volunteer_engineer_submission_commitment_three_hrs_per_week: 3 сата по недељи
+  volunteer_engineer_submission_commitment_five_hrs_per_week: 5 сати по недељи
+  volunteer_engineer_submission_commitment_more: Више
+  volunteer_engineer_submission_location_flexibility_onsite: На сајту у школи
+  volunteer_engineer_submission_location_flexibility_remote: Учење на даљину (учитељи или ученици)
+  volunteer_engineer_submission_location_flexibility_curriculum: Желели би сте да допринесете отвореним програмима?
+  volunteer_engineer_submission_experience_unspecified: Неодређено
+  volunteer_engineer_submission_experience_university_student_or_researcher: Тренутни студент (или истраживач)
+  volunteer_engineer_submission_experience_software_professional: Професионалац за програмирање
   petition_age: Узраст
-  dashboard_landing_title: Teacher Home Page
-  dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
-  dashboard_landing_video: Watch this video
-  dashboard_landing_watch_video: for a tour of the new features!
-  dashboard_landing_view_as_student: View this site as a student
-  dashboard_landing_students_title: Your students
-  dashboard_landing_students_manage: View and manage your students
-  dashboard_landing_news_title: K-5 Educator Resources (in English only)
-  dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
-  dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
-  dashboard_landing_useful_links: Other useful links (in English only)
-  dashboard_landing_office_hours: Ask a question in person! Visit our monthly video office hours.
+  dashboard_landing_title: Почетна страница за учитеље
+  dashboard_landing_welcome: Добродошли на нову и побољшану учитељску контролну таблу.
+  dashboard_landing_video: Гледајте овај видео
+  dashboard_landing_watch_video: за обилазак нових функција!
+  dashboard_landing_view_as_student: Види овај сајт као ученик
+  dashboard_landing_students_title: Ваши ученици
+  dashboard_landing_students_manage: Видите и управљајте вашим ученицима
+  dashboard_landing_news_title: Ресурси едукатора за вртић (само на Енглеском)
+  dashboard_landing_new_beta: Ново! Пробајте наше пробне курсеве за вртић.
+  dashboard_landing_new_k5courses: Ново! Пробајте наше курсеве за вртић.
+  dashboard_landing_useful_links: Други корисни линкови (само на Енглеском)
+  dashboard_landing_office_hours: Питајте питање уживо! Посетите нашу месечну понуду видео разговарања.
   dashboard_landing_print_certificates: Print certificates for students who finish this course
   dashboard_landing_educator_blog: Read about news and updates to our materials at our Educator Blog
   dashboard_landing_smart_hints: Please help us to add smart hints to Code.org tutorials
   dashboard_landing_video_player: Test our new video player at your school
-  dashboard_landing_progress_title: Main class progress
-  dashboard_landing_progress_biggest: This is the progress for your biggest section.
-  dashboard_landing_view_progress: 'View Progress for %{biggest_section}'
-  dashboard_landing_available_title: Available courses
-  dashboard_landing_available_courses: Here are the courses currently available for you and your students.
-  dashboard_landing_loading: Loading...
+  dashboard_landing_progress_title: Напредак у главном курсу
+  dashboard_landing_progress_biggest: Ово је напредак за вашу највећу секцију.
+  dashboard_landing_view_progress: 'Видите напредак за%{biggest_section}'
+  dashboard_landing_available_title: Доступни курсеви
+  dashboard_landing_available_courses: Ово су курсеви тренутно доступни за вас и ваше ученике.
+  dashboard_landing_loading: Учитава се...
   dashboard_action_edit: Уреди
-  dashboard_action_save: Save
-  dashboard_action_save_all: Save all
+  dashboard_action_save: Сачувај
+  dashboard_action_save_all: Сачувај све
   dashboard_action_cancel: Откажи
-  dashboard_action_delete: Delete
-  dashboard_action_confirm: Delete?
+  dashboard_action_delete: Обриши
+  dashboard_action_confirm: Желите ли да избришете?
   dashboard_action_delete_yes: Да
   dashboard_action_delete_no: Не
-  dashboard_action_done: Done
-  dashboard_action_required: required
-  dashboard_navigation_home_page: Teacher home page
-  dashboard_navigation_all_sections: Student Accounts and Progress
-  dashboard_navigation_view_progress: View Progress
-  dashboard_navigation_add_students: Add Students
-  dashboard_navigation_manage_students: Manage Students
-  dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
-  dashboard_navigation_view_stats: View Stats
-  dashboard_navigation_section: 'Section: %{section_name}'
-  dashboard_navigation_student: 'Student: %{student_name}'
-  dashboard_sections_new_section: New section
-  dashboard_sections_jumbotron_instruction: Create new sections and add students to them. Sections help you organize students into smaller groups so you can track their progress and manage their accounts.
+  dashboard_action_done: Готово
+  dashboard_action_required: потребно
+  dashboard_navigation_home_page: Почетна страна за учитеље
+  dashboard_navigation_all_sections: Налози за ученике и напредак
+  dashboard_navigation_view_progress: Видите напредак
+  dashboard_navigation_add_students: Додајте ученике
+  dashboard_navigation_manage_students: Управљање ученицима
+  dashboard_navigation_lesson_plans_resources: План лекција и ресурса
+  dashboard_navigation_view_stats: Видите статистике
+  dashboard_navigation_section: 'Секција:%{section_name}'
+  dashboard_navigation_student: 'Ученик:%{student_name}'
+  dashboard_sections_new_section: Нова секција
+  dashboard_sections_jumbotron_instruction: Направите нову секцију и додајте ученике у њих.Секције вам помажу да организујете ученике у мање групе да би могли да видите њихов напредак и управљате њиховим налозима.
   dashboard_sections_table_section: Section
-  dashboard_sections_table_secret: Login Type
+  dashboard_sections_table_secret: Врста пријаве
   dashboard_sections_table_grade: Grade
   dashboard_sections_table_course: Course
   dashboard_sections_table_students: Students
   dashboard_sections_table_code: Section Code
-  dashboard_sections_name: Section Name
-  dashboard_sections_choose_secret: 'If you would like to provide accounts to your students, choose a secret type of <b>word</b> or <b>picture</b> for that section.'
-  dashboard_sections_secret_word: 'A <b>word</b> allows you to set a secret word for each student.'
-  dashboard_sections_secret_picture: "A <b>picture</b> allows you to set a secret picture for each student, ideal for younger students who can't yet type."
-  dashboard_sections_secret_none: 'If you would like your students to manage their own accounts, including choosing their own passwords, choose a secret type of <b>none</b>.'
-  dashboard_sections_print_secrets: You may then print a sheet of cards containing account information to be distributed to your students individually.
-  dashboard_sections_switch_section: 'Switch section:'
-  dashboard_students_add_student: Add student
-  dashboard_students_add_students: Add multiple students
-  dashboard_students_add_multiple: 'Type or paste the names of your students, one per line:'
+  dashboard_sections_name: Име секције
+  dashboard_sections_choose_secret: 'Ако желите да дате вашим ученицима, изаберите тајну <b>реч</b>или<b>слику</b>за ту секцију.'
+  dashboard_sections_secret_word: '<b>Реч</b>вам дозвољава да поставите тајну реч за сваког ученика.'
+  dashboard_sections_secret_picture: '<b>Слика</b>вам дозвољава да поставите тајну слику за сваког ученика,идеално за оне ученике који још не знају да пишу.'
+  dashboard_sections_secret_none: 'Ако бисте желели да ваши ученици управљају сопственим налозима, укључујући бирање сопствених лозинки, изаберите тајни тип<b>none</b>.'
+  dashboard_sections_print_secrets: 'Затим, можете отштампати листу са картицама на којима су подаци о налозима. Картице поделите  појединачно сваком ученику.'
+  dashboard_sections_switch_section: 'Промените групу:'
+  dashboard_students_add_student: Додајте ученика
+  dashboard_students_add_students: Додајте више ученика
+  dashboard_students_add_multiple: 'Укуцајте или налепите имена ваших ученика, у сваком реду по једног:'
   dashboard_students_new_section: "You've created a new section! Now add your students using the <b>Add student</b> and <b>Add multiple students</b> buttons above."
   dashboard_students_placeholder_name: Student Name
   dashboard_students_name: Име
@@ -306,6 +306,7 @@ sr-SP:
   more_resources_educators: More resources for teachers and educators
   participants: participants
   teachers_notes: "Teacher's Notes"
+  teachers_notes_hoc: 'Teachers: Read important educator notes here'
   previous: Previous
   next: Next
   older_systems: Tutorials that work on older systems
@@ -313,6 +314,7 @@ sr-SP:
   mobile_devices: Tutorials for mobile devices
   frozen_name: Code with Anna and Elsa
   codeorg_name: Напиши свој први компјутерски програм
+  codeintl_name: Напиши свој први компјутерски програм
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: An introduction to JavaScript
   khanes_name: An introduction to JavaScript
@@ -334,7 +336,6 @@ sr-SP:
   codespark_name: The Foos (pre-readers welcome)
   kodable_name: Kodable (pre-readers welcome)
   tynkerapp_name: 'Tynker - on tablets'
-  hopscotch_name: 'Hopscotch: Code on your iPad'
   robomindnl_name: Program a virtual robot
   flappy_name: Make a Flappy game
   bitsbox_name: 'Bitsbox - make a game'
@@ -347,6 +348,7 @@ sr-SP:
   projguts_name: Rock, Paper, Scissors
   frozen_gradelevel: Ages 8+
   codeorg_gradelevel: Ages 4-104
+  codeintl_gradelevel: Ages 4-104
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Middle school +
   khanes_gradelevel: Middle school +
@@ -356,24 +358,23 @@ sr-SP:
   thinkersmith_gradelevel: Сви узрасти
   condcards_gradelevel: Ages 8-12
   lightbotintl_gradelevel: Сви узрасти
-  codehs_gradelevel: High school
-  codecademy_gradelevel: High school
+  codehs_gradelevel: Средња школа
+  codecademy_gradelevel: Средња школа
   codecombat_gradelevel: Middle school +
   codemonkey_gradelevel: Middle school +
   codeavengers_gradelevel: Middle school +
-  processing_gradelevel: High school
+  processing_gradelevel: Средња школа
   robomind_gradelevel: Ages 8-13
   groklearning_gradelevel: Middle school +
   quorum_gradelevel: Middle school +
-  codespark_gradelevel: Elementary
-  kodable_gradelevel: Elementary
+  codespark_gradelevel: Основна школа (од 1. до 4. разреда)
+  kodable_gradelevel: Основна школа (од 1. до 4. разреда)
   tynkerapp_gradelevel: Ages 5-13
-  hopscotch_gradelevel: Middle school +
   robomindnl_gradelevel: Ages 8-13
   flappy_gradelevel: Ages 4-104
-  bitsbox_gradelevel: Elementary
-  makegameswithus_gradelevel: High school
-  touchdevelop_gradelevel: High school
+  bitsbox_gradelevel: Основна школа (од 1. до 4. разреда)
+  makegameswithus_gradelevel: Средња школа
+  touchdevelop_gradelevel: Средња школа
   appinventor_gradelevel: Middle school +
   blockly_gradelevel: Сви узрасти
   thinkersmith2_gradelevel: Ages 8+
@@ -381,16 +382,17 @@ sr-SP:
   projguts_gradelevel: Ages 10-13
   frozen_platformtext: Modern browsers + tablets
   codeorg_platformtext: Modern browsers, smartphones, tablets
+  codeintl_platformtext: Modern browsers, smartphones, tablets
   thinkersmithspanish_platformtext: Unplugged
-  khan_platformtext: Modern Web browsers
-  khanes_platformtext: Modern Web browsers
-  tynker_platformtext: Modern web browsers
+  khan_platformtext: Modern web browsers
+  khanes_platformtext: Modern web browsers
+  tynker_platformtext: Modern browsers. (Follow-on course requires $$)
   scratch_platformtext: ALL browsers
   lightbot_platformtext: ALL browsers and iOS, Android, or Game Console
   thinkersmith_platformtext: Unplugged
   condcards_platformtext: Unuplugged
   lightbotintl_platformtext: iOS, Android (or web browser)
-  codehs_platformtext: Modern browsers
+  codehs_platformtext: 'Modern browsers. (Follow-on course requires  $$)'
   codecademy_platformtext: Modern web browsers. iOS, Android apps
   codecombat_platformtext: Modern web browsers
   codemonkey_platformtext: Modern web browsers
@@ -402,7 +404,6 @@ sr-SP:
   codespark_platformtext: iOS, Android (or web browser)
   kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, Android tablets
-  hopscotch_platformtext: iPad
   robomindnl_platformtext: Modern web browsers, Mobile web
   flappy_platformtext: Modern browsers, smartphones, tablets
   bitsbox_platformtext: Modern web browsers
@@ -415,6 +416,7 @@ sr-SP:
   projguts_platformtext: Unplugged
   frozen_shortdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
   codeorg_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
+  codeintl_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Learn to draw in JavaScript
   khanes_shortdescription: Learn to draw in JavaScript
@@ -427,7 +429,7 @@ sr-SP:
   codehs_shortdescription: Start coding with Karel the Dog, a fun and visual intro to programming!
   codecademy_shortdescription: Learn JavaScript programming, in a web-browser
   codecombat_shortdescription: Defeat ogres to learn Python or JavaScript in this epic programming game!
-  codemonkey_shortdescription: Students program a monkey to catch bananas while it gets slightly more complicated on each level.
+  codemonkey_shortdescription: Students program a monkey to catch bananas.
   codeavengers_shortdescription: Learn JavaScript programming, in a web-browser
   processing_shortdescription: A one hour tutorial in the Processing languages
   robomind_shortdescription: Write code for a virtual robot
@@ -436,13 +438,12 @@ sr-SP:
   quorum_shortdescription: Join Mary on a guided tour as she learns the Quorum programming language.
   codespark_shortdescription: The Foos is a fun, kid-friendly game to learn about programming.
   kodable_shortdescription: A fun iPad game to teach computer programming concepts
-  tynkerapp_shortdescription: Learn to code by solving fun puzzles and build your own mobile games.
-  hopscotch_shortdescription: Learn how to make food fight dodgeball and paddleball games with Hopscotch!
+  tynkerapp_shortdescription: 'Learn to program by solving fun coding puzzles. '
   robomindnl_shortdescription: Write code for a virtual robot
   flappy_shortdescription: 'Make your own game - Flappy Bird, Shark, or Submarine'
   bitsbox_shortdescription: Code a series of apps to play and share, using real Javascript.
   makegameswithus_shortdescription: Make an iPhone game! Learn by writing code to teach your monster new moves!
-  touchdevelop_shortdescription: Code mobile apps directly on your phone, tablet or laptop
+  touchdevelop_shortdescription: 'Solve puzzles, create games, and learn coding all on your phone. '
   appinventor_shortdescription: Make your own app! (Android-only)
   blockly_shortdescription: Download a ZIP file to learn offline
   thinkersmith2_shortdescription: Learn how computers use 1s and 0s to represent information
@@ -450,7 +451,8 @@ sr-SP:
   projguts_shortdescription: Try modeling and simulation using rock/paper/scissors
   frozen_longdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
   codeorg_longdescription: Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
-  thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
+  codeintl_longdescription: Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
+  thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubriran como guiarse de modo tal de llevar a cabo tareas especificas sin ser estas discutidas previamente. Este segmento ensena a los estudiantes la conexion entre simbolos y acciones asi como la valiosa habilidad de depuracion.'
   khan_longdescription: Learn the basics of JavaScript programming while creating fun drawings with your code. Do it on your own or with your class!
   khanes_longdescription: Learn the basics of JavaScript programming while creating fun drawings with your code. Do it on your own or with your class!
   tynker_longdescription: Build your own games and share with friends! Solve fun coding puzzles and learn programming concepts in each level. Personalize games with animated characters, multiple levels and rich props. Make your games realistic using physics. See the code as visual blocks or JavaScript. Take your games mobile on iPads and Android tablets. Over a dozen fun activities to choose from!
@@ -471,13 +473,12 @@ sr-SP:
   quorum_longdescription: This tutorial is accessible for the visually-impaired, and works with screenreaders. Join Mary on a tour as she joins a biology lab as a programmer and learns the Quorum programming language. This tutorial is student-guided with online example activities.
   codespark_longdescription: 'The Foos is a fun and kid-friendly way to learn about computer programming.  Program cute characters to solve puzzles and bring a virtual world to life.  The game is "word free" so all can play!'
   kodable_longdescription: Kodable is a self-guided iPad game that introduces kids 5+ to programming basics. Having a teacher or parent nearby is optimal, but not necessary.
-  tynkerapp_longdescription: Build your own games and share with friends! Solve fun coding puzzles and learn programming concepts in each level. Personalize games with animated characters, multiple levels and rich props. Lots of fun activities to choose from!
-  hopscotch_longdescription: "Build and play games, like food fight dodgeball and paddleball, using Hopscotch's drag and drop programming language. You'll learn computing concepts like sequence, loops, variables, and functions. When you're done, you can share your game with anyone through your iPad or iPhone. "
+  tynkerapp_longdescription: Learn to program by solving fun coding puzzles. Easily build games and stories using with themed graphics, 10+ game-kits and customizable characters. No Internet connectivity required. You can also access your creations on the web.
   robomindnl_longdescription: 'Students learn the basics of programming by controlling their own virtual robot. The online course is fully self-contained with short presentations, movies, quizzes and automatic guidance/hints to help with the programming exercises. '
   flappy_longdescription: Use drag-and-drop programming to make your own Flappy Bird game, and customize it to look different (Flappy Shark, Flappy Santa, whatever). Add the game to your phone in one click.
   bitsbox_longdescription: "Customize your very own virtual tablet, then code a series of apps to play and share. Simple walkthroughs make it possible for even young kids to program real Javascript, and the more advanced you are the further you'll go."
-  makegameswithus_longdescription: 'Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!'
-  touchdevelop_longdescription: Crazy drawings, flying monsters, swirling flowers... create your apps on your device with TouchDevelop, a friendly mobile app creation environment. Runs on iPhone, iPad, Android, Windows, Windows Phone, Linux, Mac.
+  makegameswithus_longdescription: Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pokemon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!
+  touchdevelop_longdescription: 'The touch-friendly editor will guide you in creating pixel art, solving the bear puzzle, or making your own jumping bird game. '
   appinventor_longdescription: Entertaining, quick video tutorials walk you through building three simple apps for your Android phone or tablet. Designed for novices and experts alike, this hour of code will get you ready to start building your own apps before you know it. Imagine sharing your own app creations with your friends! These activities are suitable for individuals and for teachers leading classes.
   blockly_longdescription: 'Got PCs with slow (or non-existent) internet access? Download the Blockly tutorials that were the precursor of the Code.org tutorials - a single 3MB ZIP file can be loaded onto any computer or used off a memory stick'
   thinkersmith2_longdescription: Students learn about representing and storing letters in binary, as functions of on and off. At the end, the class gets to encode their own initials to take home with them.
@@ -486,7 +487,7 @@ sr-SP:
   codeorg_beyond_name: Intro Computer Science (grades K-8)
   khan_beyond_name: Learn computer programming
   tynker_beyond_name: Learn programming at home
-  scratch_beyond_name: Create stories, games, and animations
+  scratch_beyond_name: Get creative with coding
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
@@ -525,18 +526,18 @@ sr-SP:
   tynker_beyond_gradelevel: Ages 5-13
   scratch_beyond_gradelevel: Ages 8+
   lightbot_beyond_gradelevel: Сви узрасти
-  codecademy_beyond_gradelevel: High school
-  kodable_beyond_gradelevel: Elementary
-  scratchjr_beyond_gradelevel: Elementary
+  codecademy_beyond_gradelevel: Средња школа
+  kodable_beyond_gradelevel: Основна школа (од 1. до 4. разреда)
+  scratchjr_beyond_gradelevel: Основна школа (од 1. до 4. разреда)
   hopscotch_beyond_gradelevel: Middle school +
   pocketcode_beyond_gradelevel: Middle school +
   groklearning_beyond_gradelevel: Middle school +
-  hacketyhack_beyond_gradelevel: High school
+  hacketyhack_beyond_gradelevel: Средња школа
   robomind_beyond_gradelevel: Ages 8-13
-  makegameswithus_beyond_gradelevel: High school
+  makegameswithus_beyond_gradelevel: Средња школа
   appinventor_beyond_gradelevel: Middle school +
-  touchdevelop_beyond_gradelevel: High school
-  codehs_beyond_gradelevel: High school
+  touchdevelop_beyond_gradelevel: Средња школа
+  codehs_beyond_gradelevel: Средња школа
   udemy_beyond_gradelevel: High school +
   lynda_beyond_gradelevel: High school +
   edx_beyond_gradelevel: University
@@ -554,7 +555,7 @@ sr-SP:
   lego_beyond_gradelevel: Middle school +
   finch_beyond_gradelevel: Ages 8+
   arduino_beyond_gradelevel: High school +
-  processing_beyond_gradelevel: High school
+  processing_beyond_gradelevel: Средња школа
   alice_beyond_gradelevel: Middle school +
   sphero_beyond_gradelevel: Ages 8+
   codeorg_beyond_platformtext: Modern browsers, tablets

@@ -2607,6 +2607,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -2619,7 +2620,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -2629,16 +2632,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -12269,7 +12262,7 @@ exports.errorUnusedFunction = function(d){return "You created a function, but ne
 
 exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
-exports.extraTopBlocks = function(d){return "Du har extra block som inte är kopplade till händelseblock."};
+exports.extraTopBlocks = function(d){return "Du har okopplade block. Menade du att fästa dessa till \"när startat\" blocket?"};
 
 exports.finalStage = function(d){return "Grattis! Du har slutfört den sista nivån."};
 
@@ -12293,7 +12286,7 @@ exports.listVariable = function(d){return "lista"};
 
 exports.makeYourOwnFlappy = function(d){return "Gör ditt eget Flappy-spel"};
 
-exports.missingBlocksErrorMsg = function(d){return "Prova med en eller flera av blocken nedan att lösa pusslet."};
+exports.missingBlocksErrorMsg = function(d){return "Prova att använda ett eller flera av blocken nedan för att lösa pusslet."};
 
 exports.nextLevel = function(d){return "Grattis! Du slutförde pussel "+v(d,"puzzleNumber")+"."};
 
@@ -12305,11 +12298,11 @@ exports.nextStageTrophies = function(d){return "Grattis! Du klarade "+v(d,"stage
 
 exports.numBlocksNeeded = function(d){return "Grattis! Du slutförde pussel "+v(d,"puzzleNumber")+". (Men du skulle bara behövt använda"+p(d,"numBlocks",0,"sv",{"one":"1 block","other":n(d,"numBlocks")+" block"})+".)"};
 
-exports.numLinesOfCodeWritten = function(d){return "Du skrev bara "+p(d,"numLines",0,"sv",{"one":"1 rad","other":n(d,"numLines")+" rader"})+" kod!"};
+exports.numLinesOfCodeWritten = function(d){return "Du skrev "+p(d,"numLines",0,"sv",{"one":"1 rad","other":n(d,"numLines")+" rader"})+" kod!"};
 
 exports.play = function(d){return "play"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Skriv ut"};
 
 exports.puzzleTitle = function(d){return "Pussel "+v(d,"puzzle_number")+" av "+v(d,"stage_total")};
 
@@ -12317,7 +12310,7 @@ exports.repeat = function(d){return "upprepa"};
 
 exports.resetProgram = function(d){return "Återställ"};
 
-exports.runProgram = function(d){return "starta programmet"};
+exports.runProgram = function(d){return "Kör"};
 
 exports.runTooltip = function(d){return "Starta programmet som gjorts av blocken på arbetsytan."};
 
@@ -12335,7 +12328,7 @@ exports.subtitle = function(d){return "en visuell programmeringsmiljö"};
 
 exports.textVariable = function(d){return "text"};
 
-exports.tooFewBlocksMsg = function(d){return "Du använder alla nödvändiga typer av block, men prova att använda flera av denna typen av block för att slutföra pusslet."};
+exports.tooFewBlocksMsg = function(d){return "Du använder alla sorters block du behöver, prova att använda fler av samma sorter för att göra klart pusslet."};
 
 exports.tooManyBlocksMsg = function(d){return "Detta pusslet kan lösas med <x id='START_SPAN'/><x id='END_SPAN'/> block."};
 
@@ -12353,9 +12346,9 @@ exports.hintRequest = function(d){return "See hint"};
 
 exports.backToPreviousLevel = function(d){return "Gå tillbaka till föregående nivå"};
 
-exports.saveToGallery = function(d){return "Spara till ditt galleri"};
+exports.saveToGallery = function(d){return "Spara till galleriet"};
 
-exports.savedToGallery = function(d){return "Sparat till ditt galleri!"};
+exports.savedToGallery = function(d){return "Sparad i galleriet!"};
 
 exports.shareFailure = function(d){return "Sorry, we can't share this program."};
 
@@ -12381,7 +12374,7 @@ exports.when = function(d){return "when"};
 
 exports.whenRun = function(d){return "när startat"};
 
-exports.tryHOC = function(d){return "Prove en Timme med Kod"};
+exports.tryHOC = function(d){return "Prova Kodtimmen"};
 
 exports.signup = function(d){return "Registrera dig för introduktionskursen"};
 

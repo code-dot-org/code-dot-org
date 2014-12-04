@@ -26,14 +26,14 @@ pl:
           - unplug4
         video: Unplug4
       Unplug5:
-        title: funkcje
+        title: Funkcje
         desc: |-
           In this lesson, students will make a suncatcher out of string, beads, and a special charm. The students will follow a series of repetitive steps, then be asked to identify certain sets of "skills" that are duplicated several times. Once those skills are defined, they will be called from a main program and the whole beautiful process of creation will be recorded on a single sheet of paper. The final program will be geared toward the entire class, whatever their type of string, beads, and charms. To effectively allow for this, students will need to "abstract out" the details of their specific materials and create vague terms for an individual's supplies.  This use of generic placeholders is a wonderful introduction to variables.
         pdfs:
           - unplug5
         video: Unplug5
       Unplug6:
-        title: Conditions
+        title: Warunki
         desc: 'This is a class game.  After introducing the idea of conditionals, if-statements, and loops, the class can practice together using a pre-written program, a deck of cards, and luck of the draw.'
         pdfs:
           - unplug6
@@ -63,7 +63,7 @@ pl:
           - unplug10
         video: Unplug10
       Unplug11:
-        title: Wrap-Up
+        title: Podsumowanie
         desc: The final wrap-up in the first 20-hour series will help the class relive all of their favorite moments, while giving them next steps that they can take on their own if they are interested in continuing their computer science journey.
         pdfs:
           - unplug11
@@ -118,7 +118,7 @@ pl:
         desc: Students create bracelets as a binary representations of the first letter of their name. Students learn that data can be represented and stored in more than one way.
         video: C2_binary_bracelets
       DigitalFootprint:
-        title: Your Digital Footprint
+        title: Twój cyfrowy ślad
         desc: 'Teachers introduce to students the idea that putting information about themselves online creates a digital footprint or "trail" that has consequences.'
         video: C2_digital_footprint
       ComputationalThinking:
@@ -182,5 +182,5 @@ pl:
         title: Conditionals and Piecewise Functions
         desc: Conditionals and Piecewise Functions lesson description
       CollisionDetection:
-        title: Collision Detection
-        desc: Collision Detection lesson description
+        title: Wykrywanie kolizji
+        desc: Opis lekcji wykrywanie kolizji

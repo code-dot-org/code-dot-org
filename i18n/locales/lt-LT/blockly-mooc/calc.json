@@ -1,8 +1,8 @@
 {
   "compute":"skaičiuoti",
-  "equivalentExpression":"Try reordering your arguments to get exactly the same expression.",
+  "equivalentExpression":"Pamėgink pertvarkyti argumentus, kad gautum lygiai tokį pat reiškinį.",
   "extraTopBlocks":"Turite nesujungtų blokelių. Gal norėjote juos prikabinti prie blokelio „skaičiuoti“?",
   "goal":"Tikslas:",
-  "reinfFeedbackMsg":"Here is your story! Continue working on it, or move on to the next puzzle!",
-  "yourExpression":"Your expression:"
+  "reinfFeedbackMsg":"Štai tavo istorija! Tęsk darbą su ja arba pereik prie kito galvosūkio!",
+  "yourExpression":"Tavo reiškinys:"
 }

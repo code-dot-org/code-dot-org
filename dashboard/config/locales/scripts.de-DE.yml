@@ -9,7 +9,7 @@
           Match: Zuordnen
           Math Image: Mathe-Bild
           title: Testkurs
-          description: Ein interner Testkurs.
+          description: Nur ein interner Testkurs.
         course1:
           'Jigsaw: Learn to drag and drop': 'Jigsaw: Erlerne Drag und Drop'
           'Maze: Sequence': 'Labyrinth: Abfolge'
@@ -21,7 +21,7 @@
           'Bee 1: Intro': 'Biene 1: Einleitung'
           'Maze 2: Loops': 'Labyrinth 2: Schleifen'
           'Bee 2: Loops': 'Biene 2: Schleifen'
-          Multi & Match: Multi & Match
+          Multi & Match: Multi & Zuordnen
           K-1 Flappy: K-1 Flappy
           Flappy non blockly: Flappy non blockly
           title: Kurs 1
@@ -43,9 +43,10 @@
           'Maze: Loops': 'Labyrinth: Schleifen'
           'Bee: Loops': 'Biene: Schleifen'
           'Studio: Create a Story': 'Play Lab: Erstelle eine Story'
+          'Artist: Loops': 'Künstler: Schleifen'
+          description_audience: Ages 4+ (pre-readers)
           description_short: Course 1 is designed for early readers in the lower elementary
             grades.
-          'Artist: Loops': 'Künstler: Schleifen'
         course2:
           The Maze: Das Labyrinth
           Suzi: Suzi
@@ -80,11 +81,12 @@
           'Bee: Debugging': 'Biene: Debuggen'
           'Artist: Debugging': 'Künstler: Debuggen'
           'Bee: Conditionals': 'Biene: Bedingungen'
-          description_short: Kurs 2 richtet sich an Schüler/-innen, die in der unteren
-            und mittleren Grundschule lesen können.
           'Artist: Sequence2': 'Künstler: Sequenz2'
           'Maze: Sequence2': 'Labyrinth: Sequenz'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
+          'Artist: Nested Loops': 'Künstler: verschachtelte Schleifen'
+          description_audience: Ages  6+ (reading required)
+          description_short: Kurs 2 richtet sich an Schüler/-innen, die in der unteren
+            und mittleren Grundschule lesen können.
         course3:
           The Maze: Das Labyrinth
           'Studio: Create a Story': 'Play Lab: Erstelle eine Story'
@@ -100,7 +102,7 @@
           Bee Functions: Biene Funktionen
           Artist Functions with Params: Artist Functions with Params
           Bounce: Bounce
-          Maze Conditionals: Maze Conditionals
+          Maze Conditionals: 'Labyrinth: Bedingungen'
           Artist Functions with Parameters: Artist Functions with Parameters
           Computational Thinking: Computerorientiertes Denken
           Functional Suncatchers: Funktionale Sonnenfänger
@@ -114,19 +116,17 @@
           'Studio: Create a Game': 'Studio: Create a Game'
           Maze: Labyrinth
           Artist: Künstler
-          'Artist: Functions': 'Artist: Functions'
-          'Bee: Functions': 'Bee: Functions'
+          'Artist: Functions': 'Künstler: Funktionen'
+          'Bee: Functions': 'Biene: Funktionen'
           'Bee: Conditionals': 'Biene: Bedingungen'
-          'Maze: Conditionals': 'Maze: Conditionals'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
-          'Farmer: While Loops': 'Farmer: While Loops'
-          'Bee: Nested Loops': 'Bee: Nested Loops'
+          'Maze: Conditionals': 'Labyrinth: Bedingungen'
+          'Artist: Nested Loops': 'Künstler: verschachtelte Schleifen'
+          'Farmer: While Loops': 'Bauer: Solange Schleifen'
+          'Bee: Nested Loops': 'Biene: verschachtelte Schleifen'
           'Bee: Debugging': 'Biene: Debuggen'
-          description_short: Students taking Course 3 should have already taken Course
-            2.
-          Maze2: Maze2
-          Artist2: Artist2
-          'Artist: Functions2': 'Artist: Functions2'
+          Maze2: Labyrinth2
+          Artist2: Künstler2
+          'Artist: Functions2': 'Künstler: Funktionen2'
           'Bee: Functions2': 'Biene: Funktionen2'
           'Bee: Conditionals2': 'Biene: Bedingungen2'
           'Maze: Conditionals2': 'Labyrinth: Bedingungen2'
@@ -136,6 +136,9 @@
           'Bee: Debugging2': 'Biene: Debuggen2'
           'Artist: Patterns': 'Artist: Patterns'
           Songwriting: Songschreiben
+          description_audience: Ages 8+ (after Course 2)
+          description_short: Students taking Course 3 should have already taken Course
+            2.
         msm:
           title: Mittelschule Mathematik
           description: Selbständige Arbeit für mittelschule Mathematik.
@@ -153,7 +156,7 @@
           The Design Recipe: The Design Recipe
           'Artist: Defining Functions': 'Artist: Defining Functions'
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
-          'Artist: Functions': 'Artist: Functions'
+          'Artist: Functions': 'Künstler: Funktionen'
           'Play Lab: Animation': 'Play Lab: Animation'
           Booleans: Booleans
           'Play Lab: Booleans': 'Play Lab: Booleans'
@@ -204,27 +207,25 @@
           description_short: Zeichne coole Bilder und Designs mit dem Künstler!
         scrat:
           title: Scrat
-          description_short: Scrat short description.
-          description: Scrat long description
+          description_short: Scrat Kurzbeschreibung.
+          description: Scrat - ausführliche Beschreibung
           'Maze: Sequence': 'Labyrinth: Abfolge'
         hourofcode:
           Maze: Labyrinth
           title: Programmierstunde
-          description_short: Try the basics of computer science with characters from
-            Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
           description: Try the basics of computer science with characters from Angry
             Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          description_short: Try the basics of computer science with characters from
+            Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
         frozen:
-          title: Frozen
-          description_short: Join the Royal Sisters of Arendelle, Anna and Elsa, as
-            they explore the magic and beauty of ice. You will write code to create
-            snowflakes and patterns as you ice-skate and make a winter wonderland
-            that you can then share with your friends!
+          title: Programmiere mit Anna und Elsa
           description: Join the Royal Sisters of Arendelle, Anna and Elsa, as they
             explore the magic and beauty of ice. You will write code to create snowflakes
             and patterns as you ice-skate and make a winter wonderland that you can
             then share with your friends!
           Artist: Künstler
+          description_short: Verwende Code, um Anna und Elsa bei ihrer Entdeckung
+            der Magie und Schönheit von Eis zu begleiten.
         course4:
           description_short: Students taking Course 4 should have already taken Courses
             2 and 3.
@@ -235,7 +236,7 @@
             with anyone. Recommended for grades 4-8.
           'Artist: Variables': 'Artist: Variables'
           'Bee: For Loops': 'Bee: For Loops'
-          title: Course 4
+          title: Kurs 4
           'Algorithms: Tangrams': 'Algorithms: Tangrams'
           Variables: Variablen
           'Play Lab: Variables': 'Play Lab: Variables'
@@ -243,7 +244,7 @@
           'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
           'Artist: For Loops': 'Artist: For Loops'
           'Play Lab: For Loops': 'Play Lab: For Loops'
-          'Artist: Functions': 'Artist: Functions'
+          'Artist: Functions': 'Künstler: Funktionen'
           'Artist: Functions with Paraqmeters': 'Artist: Functions with Paraqmeters'
           'Unplugged: Tangrams': 'Unplugged: Tangrams'
           Artist: Künstler
@@ -258,6 +259,7 @@
           Farmer Binary: Farmer Binary
           Maze and Bee: Maze and Bee
           Artist Binary: Artist Binary
+          description_audience: Ages 10+ (after Course 3)
         Course4pre:
           description_short: A brief rampup of concepts for students who have not
             taken Course 2 and 3.
@@ -266,10 +268,10 @@
           'Artist: Sequence': 'Künstler: Sequenz'
           'Artist: Loops': 'Künstler: Schleifen'
           'Bee: Conditionals': 'Biene: Bedingungen'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
-          'Farmer: While Loops': 'Farmer: While Loops'
-          'Bee: Nested Loops': 'Bee: Nested Loops'
-          'Artist: Functions': 'Artist: Functions'
+          'Artist: Nested Loops': 'Künstler: verschachtelte Schleifen'
+          'Farmer: While Loops': 'Bauer: Solange Schleifen'
+          'Bee: Nested Loops': 'Biene: verschachtelte Schleifen'
+          'Artist: Functions': 'Künstler: Funktionen'
           'Bee: Debugging': 'Biene: Debuggen'
         course4pre:
           description_short: A brief rampup of concepts for students who have not
@@ -279,10 +281,10 @@
           'Artist: Sequence': 'Künstler: Sequenz'
           'Artist: Loops': 'Künstler: Schleifen'
           'Bee: Conditionals': 'Biene: Bedingungen'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
-          'Farmer: While Loops': 'Farmer: While Loops'
-          'Bee: Nested Loops': 'Bee: Nested Loops'
-          'Artist: Functions': 'Artist: Functions'
+          'Artist: Nested Loops': 'Künstler: verschachtelte Schleifen'
+          'Farmer: While Loops': 'Bauer: Solange Schleifen'
+          'Bee: Nested Loops': 'Biene: verschachtelte Schleifen'
+          'Artist: Functions': 'Künstler: Funktionen'
           'Bee: Debugging': 'Biene: Debuggen'
         Course4pre (Case Conflict):
           description_short: A brief rampup of concepts for students who have not
@@ -292,17 +294,17 @@
           'Artist: Sequence': 'Künstler: Sequenz'
           'Artist: Loops': 'Künstler: Schleifen'
           'Bee: Conditionals': 'Biene: Bedingungen'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
-          'Farmer: While Loops': 'Farmer: While Loops'
-          'Bee: Nested Loops': 'Bee: Nested Loops'
-          'Artist: Functions': 'Artist: Functions'
+          'Artist: Nested Loops': 'Künstler: verschachtelte Schleifen'
+          'Farmer: While Loops': 'Bauer: Solange Schleifen'
+          'Bee: Nested Loops': 'Biene: verschachtelte Schleifen'
+          'Artist: Functions': 'Künstler: Funktionen'
           'Bee: Debugging': 'Biene: Debuggen'
         usability:
-          Intro: Intro
-          Variables and For Loops: Variables and For Loops
-          Functions and Functions with Parameters: Functions and Functions with Parameters
+          Intro: Einleitung
+          Variables and For Loops: Variablen und "For"-Schleifen
+          Functions and Functions with Parameters: Funktionen und Funktionen mit Parametern
           title: Usability Testing
           description_short: ''
           description: A selection of Course 4 levels for usability testing.
           Variables: Variablen
-          For Loops: For Loops
+          For Loops: '"For"-Schleifen'

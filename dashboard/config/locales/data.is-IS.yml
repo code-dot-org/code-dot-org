@@ -4,26 +4,26 @@
       name:
         20-hour:
           desc: Inngangur að tölvunarfræði 13-14 ára
-          Unplug1: "Áfangi 1"
-          Maze: "Áfangi 2"
-          Unplug2: "Áfangi 3"
-          Unplug3: "Áfangi 4"
-          Artist: "Áfangi 5"
-          Unplug4: "Áfangi 6"
-          Artist2: "Áfangi 7"
-          Unplug5: "Áfangi 8"
-          Farmer: "Áfangi 9"
-          Unplug6: "Áfangi 10"
-          Artist3: "Áfangi 11"
-          Unplug7: "Áfangi 12"
-          Farmer2: "Áfangi 13"
-          Unplug8: "Áfangi 14"
-          Artist4: "Áfangi 15"
-          Unplug9: "Áfangi 16"
-          Farmer3: "Áfangi 17"
-          Unplug10: "Áfangi 18"
-          Artist5: "Áfangi 19"
-          Unplug11: "Áfangi 20"
+          Unplug1: Áfangi 1
+          Maze: Áfangi 2
+          Unplug2: Áfangi 3
+          Unplug3: Áfangi 4
+          Artist: Áfangi 5
+          Unplug4: Áfangi 6
+          Artist2: Áfangi 7
+          Unplug5: Áfangi 8
+          Farmer: Áfangi 9
+          Unplug6: Áfangi 10
+          Artist3: Áfangi 11
+          Unplug7: Áfangi 12
+          Farmer2: Áfangi 13
+          Unplug8: Áfangi 14
+          Artist4: Áfangi 15
+          Unplug9: Áfangi 16
+          Farmer3: Áfangi 17
+          Unplug10: Áfangi 18
+          Artist5: Áfangi 19
+          Unplug11: Áfangi 20
         Hour of Code:
           desc: Klukkustund kóðunar
           Maze: Stig 1
@@ -34,7 +34,7 @@
           desc: Skopp (beta)
           Bounce: Stig 1
         Builder Levels:
-          desc: "Þrautir gerðar af notendum (beta)"
+          desc: Þrautir gerðar af notendum (beta)
           Custom: Stig 1
         Flappy Levels:
           desc: Fuglinn Flappy
@@ -44,19 +44,19 @@
           Jigsaw: Stig 1
         Step Levels:
           desc: Völundarhús (beta)
-          MazeStep: "Þrep í áfanga"
+          MazeStep: Þrep í áfanga
         edit-code:
           desc: Breyta kóða (beta)
           MazeEC: Stig 1
-          Webapp: "Áfangi 2"
-          ArtistEC: "Áfangi 3"
-          StudioEC: "Áfangi 4"
+          Webapp: Áfangi 2
+          ArtistEC: Áfangi 3
+          StudioEC: Áfangi 4
         events:
           desc: Skopp (beta)
           Bounce: Stig 1
           Studio: Stig 2
         builder:
-          desc: "Þrautir gerðar af notendum (beta)"
+          desc: Þrautir gerðar af notendum (beta)
           Custom: Stig 1
         flappy:
           desc: Fuglinn Flappy
@@ -66,7 +66,7 @@
           Jigsaw: Stig 1
         step:
           desc: Völundarhús (beta)
-          MazeStep: "Þrep í áfanga"
+          MazeStep: Þrep í áfanga
         wordsearch:
           desc: Stafsetning (beta)
           WordSearch: Stig 1
@@ -124,14 +124,14 @@
         maze_2_2: 'Getur þú hjálpað mér að ná óþæga svíninu? Raðaðu nokkrum "fara
           áfram" kubbum saman og ýttu svo á "Keyra forrit" til að hjálpa mér að komast
           þangað. '
-        maze_2_1: "Þetta svín ýfir á mér fjaðrirnar. Hjálpaðu mér að finna það!"
+        maze_2_1: Þetta svín ýfir á mér fjaðrirnar. Hjálpaðu mér að finna það!
         maze_2_2_5: Fylgdu slóðinni og leiddu mig að svínka. Forðastu TNT sprengjuna
           annars verður fjaðrafok!
         maze_2_3: Leiddu mig að hinum illa græna grís! (Gættu þín á TNT sprengjunum)
         maze_2_4: Slappaðu af og hjálpaðu mér að finna vonda svínið. Annars gæti ég
           reiðst!
-        maze_2_5: "Ég get komist að svíninu með því að nota bara 2 kubba. Geturðu
-          fundið út úr því?"
+        maze_2_5: Ég get komist að svíninu með því að nota bara 2 kubba. Geturðu fundið
+          út úr því?
         maze_2_6: Reyndu að koma mér til grænu boðflennunnar með aðeins 3 kubbum.
         maze_2_7: Hjálpaðu mér að hrekja vonda grísinn í burtu með sem fæstum kubbum.
           Prófaðu að nota fleiri en einn "endurtaka" kubb.
@@ -173,8 +173,8 @@
         turtle_1_4: 'Teiknaðu þríhyrning með hliðar í mismunandi litum með því að
           nota kubbinn "einhver litur" sem velur lit af handahófi í hvert sinn. Vísbending:
           Þú þarft að finna út hve mikið á að snúa með því að smella á töluna í snúningskubbnum.'
-        turtle_1_5: "Æfðu þetta nú með því að teikna þríhyrning og ferning til að
-          búa til mynd af umslagi."
+        turtle_1_5: Æfðu þetta nú með því að teikna þríhyrning og ferning til að búa
+          til mynd af umslagi.
         turtle_1_6: 'Getur þú fundið út hvernig á að teikna þennan þríhyrning og ferning?
           Vísbending: Teiknaðu þríhyrninginn fyrst og finndu svo út hve mikið á að
           snúa áður en ferningurinn er teiknaður.'
@@ -229,9 +229,9 @@
           mold. Vísbending: Þú getur sett "endurtaka" blokk innan í "meðan" blokk.'
         maze_karel_1_6: Fjarlægðu alla moldarhaugana með sem fæstum kubbum. Nýju valkostirnir
           í fellilistanum á "meðan" kubbnum segja mér hvort ég standi á haug eða holu.
-        maze_karel_1_7: "Ég fann mjög djúpa holu! Ég veit ekki hve margar skóflur
-          þarf til að fylla hana. Getur þú skrifað forrit sem fyllir holuna þar til
-          yfirborðið er slétt?"
+        maze_karel_1_7: Ég fann mjög djúpa holu! Ég veit ekki hve margar skóflur þarf
+          til að fylla hana. Getur þú skrifað forrit sem fyllir holuna þar til yfirborðið
+          er slétt?
         maze_karel_1_8: Hjálpaðu mér að fylla holuna við endann á túninu og með sem
           fæstum kubbum.
         maze_karel_1_9: 'Láttu mig fjarlægja alla þessa moldarhauga. Reyndu að nota
@@ -256,9 +256,9 @@
           Þú vilt kannske nota sleðann til að láta mig fara hraðar.'
         turtle_2_5: Teiknaðu ferninga með 50, 60, 70, 80 og 90 pixla hliðar. Þú þarft
           að nota "teikna ferning" fallið fimm sinnum.
-        turtle_2_6: "Þetta forrit notar teljara til að teikna sömu ferninga og síðast.
+        turtle_2_6: 'Þetta forrit notar teljara til að teikna sömu ferninga og síðast.
           Hver ferningur á að hafa hlið sem er jafnstór og teljarinn svo þú verður
-          að nota teljarakubbinn. Vísbending: Hann er undir flokknum Breytur."
+          að nota teljarakubbinn. Vísbending: Hann er undir flokknum Breytur.'
         turtle_2_7: Hér er forrit sem teiknar spíral, en kubbarnir eru óvirkir svo
           þeir keyra ekki. Búðu til nýtt forrit með því að nota kubbana "telja með"
           (undir flokknum Lykkjur) og "teljari" (undir Breytur) til að teikna sama
@@ -286,9 +286,8 @@
           notaðu það til að hjálpa mér að slétta alla haugana.
         maze_karel_2_6: Notaðu tvö ný föll, "fylla 8" og "fjarlægja 8", til að hjálpa
           mér að slétta hauginn og fylla upp í holuna.
-        maze_karel_2_7: "Það er kýr á túninu mínu! Skrifaðu nýtt fall sem hjálpar
-          mér að forðast kúna en fjarlægja hauginn. Settu alla kubbana inn í nýja
-          fallið."
+        maze_karel_2_7: Það er kýr á túninu mínu! Skrifaðu nýtt fall sem hjálpar mér
+          að forðast kúna en fjarlægja hauginn. Settu alla kubbana inn í nýja fallið.
         maze_karel_2_8: Notaðu þetta nýja fall "forðast kúna og fjarlægja 1" til að
           hjálpa mér að fjarlægja alla haugana.
         maze_karel_2_9: Jæja, hér er fall sem fjarlægir 4 mismunandi moldarhauga lóðrétt.
@@ -319,8 +318,8 @@
           þetta breytta fall til að teikna þrjú hús.
         turtle_3_9: Getur þú búið til "teikna hús" fallið aftur án hjálpar? Reyndu
           það og teiknaðu svo röð af húsum.
-        turtle_3_10: "Þú hefur lært heilmikið! Notaðu kunnáttuna til að teikna hvað
-          sem þú vilt. Reyndu að teikna stjörnu, spíral eða flott snjókorn."
+        turtle_3_10: Þú hefur lært heilmikið! Notaðu kunnáttuna til að teikna hvað
+          sem þú vilt. Reyndu að teikna stjörnu, spíral eða flott snjókorn.
         maze_karel_debug_seq_1: Velkomin í villuleit! Kóðinn minn virkar ekki. Getur
           þú komið auga á ástæðuna og lagað kóðann svo ég geti sléttað akurinn og
           undirbúið hann fyrir sáningu?
@@ -356,8 +355,8 @@
         turtle_5_6: Prófaðu að keyra þetta forrit. Gerðu breytingar til að sjá hvaða
           áhrif þær hafa. Getur þú fundið út hvernig það virkar? (Eða eytt því og
           sett eitthvað allt annað í staðinn)
-        maze_3_1: "Ég verð að ná þessu svíni! Skrifaðu kóða sem kallar tvisvar á move();
-          svo ég geti fengið eggin mín til baka."
+        maze_3_1: Ég verð að ná þessu svíni! Skrifaðu kóða sem kallar tvisvar á move();
+          svo ég geti fengið eggin mín til baka.
         maze_3_2: Skrifaðu forrit fyrir mig svo ég nái alla leið til svínsins.
         maze_3_3: Hvernig kemst ég til svínsins? Gættu þess að ég rekist ekki á TNT
           sprengiefnið!
@@ -369,8 +368,8 @@
           Færðu spaðann til að ná báðum endamörkum.
         bounce_3: Reyndu nú eitthvað svipað með kubbnum "þegar upp ör". Færðu spaðann
           upp að endamarkinu.
-        bounce_4: "Í þetta sinn þarft þú að bæta við fjórum kubbum. Færðu spaðann
-          að öllum fjórum endamörkum til að ljúka þessari þraut."
+        bounce_4: Í þetta sinn þarft þú að bæta við fjórum kubbum. Færðu spaðann að
+          öllum fjórum endamörkum til að ljúka þessari þraut.
         bounce_5: Við ætlum að senda bolta svífandi niður í átt að spaðanum. Tengdu
           kubb við kubbinn "þegar bolti hittir spaða" til að tryggja að boltinn nái
           að endamarkinu.
@@ -407,9 +406,9 @@
           blaka vængjunum meira eða minna.
         flappy_7: Prófaðu svo að breyta leiknum með því að tengja annan kubb við "þegar
           keyrt" kubbinn.
-        flappy_8: "Þú getur stillt umhverfið hvenær sem er, ekki bara í byrjun. Prófaðu
+        flappy_8: Þú getur stillt umhverfið hvenær sem er, ekki bara í byrjun. Prófaðu
           að still umhverfið á HANDAHÓF þegar aðrir atburðir gerast, t.d. þegar farið
-          er framhjá hindrun."
+          er framhjá hindrun.
         flappy_9: Prófaðu nú aðra útfærslu með því að ljúka ekki leiknum heldur núllstilla
           skorið þegar rekist er á hindrun eða jörð.
         flappy_11: Búðu til þinn eiginn Flappy leik. Þú getur breytt öllu umhverfi
@@ -540,8 +539,8 @@
         maze_wordsearch_k_13: Færðu mig í eina átt svo aðra til að stafa orðið DEBUG
         maze_wordsearch_k_15: Færðu mig í eina átt svo aðra til að stafa orðið ABOVE
         maze_wordsearch_k_16: Færðu mig í eina átt svo aðra til að stafa orðið BELOW
-        maze_wordsearch_k_20: "Þetta er próf! Færðu mig í eina átt svo aðra til að
-          stafa orðið STORY"
+        maze_wordsearch_k_20: Þetta er próf! Færðu mig í eina átt svo aðra til að
+          stafa orðið STORY
         webapp_ec_simple: Búa til vefapp með því að nota createHtmlBlock.
         turtle_ec_1_2: 'Teiknaðu nú ferning. ATH.: notaðu uppáhaldslitinn þinn með
           því að velja hann í nýja "pennalitur" kubbnum.'
@@ -550,6 +549,125 @@
           Góða skemmtun!'
         studio_ec_sandbox: Búðu til þinn eigin leik. Smelltu á Ljúka þegar hann er
           tilbúinn svo vinir þínir geti prófað hann á sínum símum.
+    levelbuilder:
+      frozen line:
+        instructions: Hæ! Ég heiti Elsa frá Arendelle. Hjálpaðu mér að búa til eitt
+          strik.
+      frozen perpendicular:
+        instructions: Prófum nú að búa til tvær línur sem hafa 90 gráðu horn á milli
+          sín. Þú verður að nota bæði  "færa" kubbinn og "snúa" kubbinn.
+      frozen square iterative:
+        instructions: Við virðumst vera komin hálfa leið með að gera ferning. Setjum
+          nú 4 línur saman til að búa til ferning.
+      frozen square loop:
+        instructions: Hæ, ég er Anna frá Arendelle! Búum til ferning með "endurtaka"
+          kubbi því þá getum við notað færri kubba. Hve oft (???) ætti "endurtaka"
+          kubburinn að endurtaka kubbana innan í honum til að búa til ferning?
+      frozen square loop 3x:
+        instructions: Við skulum búa til þrjá ferninga og snúa eftir hvern ferning.
+          Gættu þess að snúa um 120 gráður.
+      frozen square snowflake:
+        instructions: Getur þú búið til snjókorn með því að nota "endurtaka" kubb
+          til að teikna ferning 10 sinnum og snúa um 36 gráður eftir hvern ferning?
+      frozen cross:
+        instructions: Notaðu "endurtaka" kubbinn til að búa til plús merki. Tekurðu
+          eftir því að Elsa getur fært sig bæði fram og aftur?
+      frozen cross rotate:
+        instructions: Prófaðu nú að endurtaka það 10 sinnum. Um hve margar gráður
+          þarf að snúa á milli lína?
+      frozen cross rotate dense:
+        instructions: 'Endurtökum þetta 90 sinnum! Hve oft gengur 90 upp í 360? Vísbending:
+          Það er mjög lítil tala.'
+      frozen diamond:
+        instructions: 'Búum til samsíðung. Hann er alveg eins og ferningur en þessi
+          hefur öðruvísi horn: 60 og 120 gráður í staðinn fyrir 90 gráðu horn.'
+      frozen diamond mini snowflake:
+        instructions: Vissirðu að engin tvö snjókorn hafa sömu lögun? Búum til nýtt
+          snjókorn með því að nota "endurtaka" kubbinn til að endurtaka samsíðunginn
+          4 sinnum og snúa til hægri um 90 gráður eftir hvern.
+      frozen diamond snowflake:
+        instructions: Nú skulum við nota "endurtaka" kubbinn til að búa til öðruvísi
+          snjókorn með því að endurtaka samsíðunginn 10 sinnum og snúa um 36 gráður
+          eftir hvern.
+      frozen circle:
+        instructions: Hringur er sérstakt form. Geturðu fundið út hvaða tölu þarf
+          að setja í stað spurningarmerkjanna til að teikna hring?
+      frozen circle function:
+        instructions: Notaðu nýja "búa til hring" kubbinn til að búa til 10 hringi
+          sem skarast. Ekki gleyma að hoppa fram á milli hringja.
+      frozen circle function in circle:
+        instructions: Gerum nú 20 hringi sem skarast og snúum um 18 gráður eftir hvern
+          hring.
+      frozen circle function with parameter:
+        instructions: Hér er "búa til hring" kubbur sem getur teiknað mismunandi stóra
+          hringi. Getur þú notað hann til að búa til lítinn hring af stærð 5 og annan
+          af stærð 10?
+      frozen snowflower:
+        instructions: Það er hægt að búa til margslungin snjómynstur úr mjög einföldum
+          formum. Getur þú búið til mynstur með því að endurtaka 5 hringi af stærð
+          5 og aðra 5 af stærð 10?
+      frozen snowflake branch:
+        instructions: Prófaðu að nota "búa til grein snjókorns" kubbinn til að búa
+          til þrjár greinar, svo mynstrið fari að líkjast snjókorni.
+      frozen snowflake full:
+        instructions: Endurtökum þetta nú 8 sinnum til að búa til fallegt snjókorn!
+      frozen freeplay:
+        instructions: Þú ert hér með orðin meistari í ísteikningu! Búðu nú til ævintýralegt
+          vetrarríki og deildu því með vinunum.
+      scrat 16:
+        instructions: Akarn! Akarn! Akarn! Notaðu "ef" kubb til að koma mér þangað
+          með sem fæstum kubbum.
+      scrat 17:
+        instructions: Jæja, gerum þetta aftur sem æfingu - þessi er ekki svo ólík,
+          en gættu þín á veggnum!
+      scrat 18:
+        instructions: '"Ef-annars" kubburinn athugar skilyrði og gerir síðan eitt
+          EÐA annað. Reyndu að koma mér til akarnsins með þessum nýja kubbi.'
+      scrat 19:
+        instructions: Ein æfing í viðbót með "ef-annars" kubbinn. Geturðu leyst þrautina
+          í fyrstu tilraun?
+      scrat 20:
+        instructions: Geturðu bætt við aðeins 3 kubbum til að hjálpa mér að rata flóknari
+          slóð? Ef þú gerir það rétt, get ég farið hvaða slóð sem er sama hversu löng.
+          Flýttu þér! Ísinn er að bráðna!
+      Standalone_Artist_1:
+        instructions: Welcome to Artist! First off, let's try to make a simple square
+          using the turn right block and move forward block. Each side should be 100
+          pixels long.
+      Standalone_Artist_2:
+        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel
+          long sides.
+      Standalone_Artist_3:
+        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree
+          turns?
+      Standalone_Artist_4:
+        instructions: Now you've got a new block to play with, the loop. This will
+          repeat a set of commands. What happens if you loop these commands 6 times?
+      Standalone_Artist_5:
+        instructions: How many times do you need to loop this diamond to draw the
+          flower?
+      Standalone_Artist_5.5:
+        instructions: 'Notice how we simplified the diamond code by turning it into
+          a loop. You can loop that whole sequence 12 times to draw the flower. Hint:
+          You''ll need to turn 30 degrees after your diamond loop so you don''t keep
+          drawing over the same diamond.'
+      Standalone_Artist_6:
+        instructions: 'Loop this hexagon code 6 times to create the design. How many
+          degrees will you need to turn each time? Hint: divide the number of degrees
+          in a circle by the number of times you are looping.'
+      Standalone_Artist_7:
+        instructions: 'A function is another programming tool to help you avoid repeating
+          yourself. This function draws a flower, so you can use it any time you want
+          to draw a flower. Use this and the new jump block to draw these flowers.
+          Hint: The flowers are 150 pixels apart'
+      Standalone_Artist_8:
+        instructions: Here's a function called "Draw a shape" that we've programmed
+          to draw hexagons. Run the code to see what it does and then experiment with
+          the function to see what happens. Can you make it draw a pattern of squares,
+          triangles, or octagons?
+      Standalone_Artist_9:
+        instructions: Now go ahead and make whatever picture you'd like! You've even
+          got an empty function that you can make do whatever you want!
     video:
       name:
         maze_intro: Kynning á Völundarhúsi
@@ -560,6 +678,7 @@
         loop_until: Endurtaka þar til kubbur
         if: Ef kubbur
         if_else: Ef-annars kubbur
+        if_else_scrat: Ef-annars kubbur
         function: Föll
         loop_while: Meðan kubbur
         loop_for: Teljarakubbur
@@ -592,6 +711,7 @@
         C1_playlab_storytelling: Leikjasmiðja - Búa til sögu
         C1_planting_seed: Fræsáning
         C1_building_foundation: Að byggja grunn
+        C1_going_places_safely: Ferðast í öryggi
         C2_maze_intro: Kynning á Völundarhúsi
         C2_artist_intro: Kynning á listamanni
         C2_zuck_repeat_loop: Lykkjur völundarhúss
@@ -606,6 +726,7 @@
         C2_binary_bracelets: Stafræn armbönd
         C2_relay_programming: Boðhlaupsforritun
         C2_paper_airplanes: Pappírsflaugar
+        C2_digital_footprint: Stafræna fótsporið þitt
         C3_maze_level_4: Lykkjur völundarhúss
         C3_artist_intro: Kynning á listamanni
         C3_artist_functions: Listamaður - föll
@@ -613,7 +734,7 @@
         C3_bee_conditionals: Býfluga - skilyrði
         C3_maze_conditionals: Völundarhús - skilyrði
         C3_artist_nested_loops: Innri lykkjur
-        C3_farmer_while: "Á meðan lykkjur"
+        C3_farmer_while: Á meðan lykkjur
         C3_bee_nested_loops: Innri lykkjur
         C3_bee_debugging: Býfluga - villuleit
         C3_bounce: Skopp
@@ -624,9 +745,14 @@
         C3_crowdsourcing: Hópvistun
         C3_functional_suncatchers: Sólarskraut með föllum
         C3_songwriting_with_parameters: Lagasmíð með stikum
-        Frozen_intro: Kynning á Klukkustund kóðunar
-        Frozen_loops: Kynning á lykkjum
-        Frozen_functions: Kynning á föllum
+        C4_artist_math: Programming the Artist with Math
+        C4_create_functions: Creating Functions
+        C4_edit_functions: Editing Functions
+        C4_for_loops: Frá lykkjur
+        C4_variables: Breytur
+        frozen_intro: Hour of Code Intro
+        frozen_loops: Introduction to Loops
+        frozen_functions: Introduction to Functions
     callout:
       text:
         drag_blocks: Dragðu "færa" kubb og festu hann neðan í hinn kubbinn
@@ -638,8 +764,8 @@
           búa til
         instructions_repeat_explanation: Leiðbeiningar fyrir hverja þraut eru endurteknar
           hér
-        category_explanation: "Þú hefur alla sömu kubbana en nú er búið að raða þeim
-          í flokka"
+        category_explanation: Þú hefur alla sömu kubbana en nú er búið að raða þeim
+          í flokka
         set_sprite_image: Tengdu "hafa leikmann" kubb við "þegar sagan byrjar" kubb
           til að virkja leikmann fyrir þessa sögu
         studio_say_text: Skrifaðu það sem leikmaðurinn á að segja innan þessara gæsalappa
@@ -656,8 +782,8 @@
         snowflake_dropdown: Notaðu þennan fellilista til að búa til mismunandi snjókorn!
         degrees_per_side: Deildu 360 með fjölda hliða til að fá stærð hvers horns
           í gráðum.
-        set_sides: Notaðu þennan kubb til að stilla "hliðar" á töluna sem vantar til
-          að ljúka þrautinni.
+        set_sides: Notaðu þennan kubb til að setja töluna fyrir "hliðar" sem vantar
+          til að ljúka þrautinni.
         set_length: Notaðu þennan kubb til að stilla "lengd" á rétt gildi.
         which_equation: Hvaða jafna gerir hverja hlið styttri eftir því sem formin
           hafa fleiri hliðar? Prófaðu allar jöfnurnar!
@@ -669,11 +795,27 @@
         edit_function: Notaðu þennan hnapp til að breyta fallinu.
         create_function: Smelltu hér til að opna hliðargluggann "Föll" og smelltu
           svo á "Búa til fall" hnappinn.
-        house_hint: "Það er í lagi þó myndin sé enn ekkert lík húsi. Við munum laga
-          það í næstu þraut."
+        house_hint: Það er í lagi þó myndin sé enn ekkert lík húsi. Við munum laga
+          það í næstu þraut.
         edit_draw_square: Notaðu þennan hnapp til að breyta fallinu og bæta lykkjunni
           við.
         edit_get_nectar: Notaðu þennan hnapp til að breyta fallinu og breyta í hvaða
           átt býflugan mun snúa til að sækja blómasafann.
         logic_category: Opnaðu "Rökvísi" hliðargluggann til að finna "ef/annars" kubbinn.
         length_parameter: Getur þú uppfært þetta fall svo það noti stikann "lengd"?
+        frozen_diamond_repeat: Use the repeat block to create this shape.
+        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
+          each circle.
+        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
+          and change the size.
+        frozen_snowflake_branch: Use the "create a snowflake branch" block
+        frozen_create_square: Attach more blocks here to create a square
+        playlab_drag_say: Drag the "say" block here and type "hello"
+        playlab_use_twice: Use this block twice and remember to change the actor number
+        playlab_move_girl: Use the "move right" block to move Tennis Girl
+        playlab_play_sound: Add "play sound" block here
+        playlab_arrow_keys: Remember to use these to move the witch after clicking
+          on Run
+        playlab_add_move: Add "move" blocks inside this repeat block
+        playlab_add_score: Add score blocks here
+        playlab_add_blocks: Add your blocks here
