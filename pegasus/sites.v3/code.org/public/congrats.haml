@@ -15,6 +15,8 @@ max_age: 60
 ---
 -cert_id = params[:i]
 
+%script{:src=>'/js/print-functions.js'}
+
 -if cert_id
   -share_url = "http://#{request.host_with_port}/certificates/#{cert_id}"
 -else
@@ -55,6 +57,12 @@ max_age: 60
     #certificate.col-50
       = view :congrats_certificate
       = view :congrats_share, cert_id:cert_id, facebook:facebook, twitter:twitter
+
+    %h2
+      Print Frozen drawings
+    %button#print-button
+      Print All
+
 
   %div{:style=>'clear: both; height:30px'}
 
@@ -126,3 +134,10 @@ max_age: 60
   {
     petition = new Petition();
   });
+
+  var printButton = $('#print-button');
+  if (printButton) {
+    printButton.click(function() {
+      createHiddenPrintWindow('/images/frozen-impressive-drawings.jpg');
+    });
+  }
