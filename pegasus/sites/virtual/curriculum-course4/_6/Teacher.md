@@ -1,17 +1,17 @@
 ---
-title: "Artist: Loops Review"
+title: "Artist: Variables"
 view: page_curriculum
 theme: none
 ---
 
-<%= partial('curriculum_header', :unittitle=>'Course 4', :lesson=>3, :title=> 'Artist: Loops Review', :unplugged=>false, :time=>30) %>
+<%= partial('curriculum_header', :unittitle=>'Course 4', :lesson=>6, :title=> 'Artist: Variables', :unplugged=>false, :time=>30) %>
 
 [content]
 
 [together]
 
 ## Lesson Overview 
-This is a review of loops and nested loops. Students will use the traditional artist character, as well as a very artistic zombie, to complete and recreate repetitive drawings.
+In this lesson, students will explore the creation of repetitive designs using variables. Students will learn how variables can be used to make code more simple to write and easier to read. 
 
 [summary]
 
@@ -20,7 +20,7 @@ This is a review of loops and nested loops. Students will use the traditional ar
 
 [Introduction](#GetStarted) <br/>
 
-### **Activity: Maze**
+### **Activity: Artist**
 
 [Maze](#Activity)
 

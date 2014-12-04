@@ -20,7 +20,7 @@ This is a review of loops and nested loops. Students will use the traditional ar
 
 [Introduction](#GetStarted) <br/>
 
-### **Activity: Maze**
+### **Activity: Artist**
 
 [Maze](#Activity)
 
