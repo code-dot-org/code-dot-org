@@ -1563,7 +1563,7 @@ Studio.onPuzzleComplete = function() {
     Studio.testResults = BlocklyApps.getTestResults(levelComplete);
   }
 
-  if (Studio.testResults >= BlocklyApps.TestResults.FREE_PLAY) {
+  if (Studio.testResults >= BlocklyApps.TestResults.TOO_MANY_BLOCKS_FAIL) {
     BlocklyApps.playAudio('win');
   } else {
     BlocklyApps.playAudio('failure');
