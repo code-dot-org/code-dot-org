@@ -152,6 +152,17 @@
           </block>
         </category>
         <category name="Actions">
+          <block type="studio_setSpriteParams" inline="true">
+            <title name="VALUE">"witch"</title>
+            <value name="SPRITE">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+          </block>
+          <block type="studio_setBackground">
+            <title name="VALUE">"cave"</title>
+          </block>
           <block type="studio_showTitleScreenParams" inline="false">
             <value name="TITLE">
               <block type="text">

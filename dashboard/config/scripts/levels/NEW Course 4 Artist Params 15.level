@@ -436,7 +436,7 @@
             <title name="DIR">moveForward</title>
             <value name="VALUE">
               <block type="math_number">
-                <title name="NUM">100</title>
+                <title name="NUM">???</title>
               </block>
             </value>
           </block>
@@ -444,7 +444,7 @@
             <title name="DIR">turnRight</title>
             <value name="VALUE">
               <block type="math_number">
-                <title name="NUM">90</title>
+                <title name="NUM">???</title>
               </block>
             </value>
           </block>
@@ -452,7 +452,7 @@
             <title name="DIR">turnLeft</title>
             <value name="VALUE">
               <block type="math_number">
-                <title name="NUM">90</title>
+                <title name="NUM">???</title>
               </block>
             </value>
           </block>
@@ -460,7 +460,7 @@
             <title name="DIR">jumpForward</title>
             <value name="VALUE">
               <block type="math_number">
-                <title name="NUM">100</title>
+                <title name="NUM">???</title>
               </block>
             </value>
           </block>
@@ -506,21 +506,27 @@
             <mutation counter="counter"/>
             <value name="FROM">
               <block type="math_number">
-                <title name="NUM">1</title>
+                <title name="NUM">???</title>
               </block>
             </value>
             <value name="TO">
               <block type="math_number">
-                <title name="NUM">100</title>
+                <title name="NUM">???</title>
               </block>
             </value>
             <value name="BY">
               <block type="math_number">
-                <title name="NUM">10</title>
+                <title name="NUM">???</title>
               </block>
             </value>
           </block>
-          <block type="controls_repeat_ext" inline="true"/>
+          <block type="controls_repeat_ext" inline="true">
+            <value name="TIMES">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
+          </block>
         </category>
         <category name="Math">
           <block type="math_number">
@@ -528,6 +534,16 @@
           </block>
           <block type="math_arithmetic" inline="true">
             <title name="OP">ADD</title>
+            <value name="A">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
           </block>
         </category>
         <category name="Variables" custom="VARIABLE">

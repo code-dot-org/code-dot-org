@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Click \"edit\" to fill in the function definition of \"draw a square.\" It should take a length parameter, just like the triangle. This time, draw 3 squares: 25, 50 and 75 pixels in length, each 100 pixels apart.",
+    "instructions": "Click \"edit\" to fill in the function definition of \"draw a square\" and add a parameter. It should take a length parameter, just like the triangle. This time, draw 3 squares: 25, 50 and 75 pixels in length, each 100 pixels apart.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",
