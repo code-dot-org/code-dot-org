@@ -40,11 +40,6 @@ namespace :seed do
 
   def update_scripts(opts = {})
     # optionally, only process modified scripts on staging/levelbuilder to speed up seed time
-    if opts[:incremental]
-      p 'incremental'
-    else
-      p 'normal'
-    end
     scripts_seeded_mtime = (opts[:incremental] && File.exist?(SEEDED)) ?
       File.mtime(SEEDED) : Time.at(0)
     touch SEEDED # touch seeded "early" to reduce race conditions
