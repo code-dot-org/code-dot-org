@@ -115,11 +115,11 @@ ko:
     subject: 내 학급 가기(on Code.org)
     body: |
       Code.org 의 컴퓨터과학(Computer Science, 정보과학) 기초개념학습 코스에 가입하려면, 아래 링크를 누르세요.(선생님을 등록하세요)
-
+      
       %{link}
-
+      
       이 과정에서는 재미있는 퍼즐들을 통해, 컴퓨터과학(Computer Science, 정보과학)의 몇가지 기초 개념들을 배울 수 있습니다. Bill Gates, Mark Zuckerberg, Angry Birds, and Plants vs. Zombies 등과 함께 경험해 보세요! :)
-
+      
       %{name}
   follower:
     invite_sent: 초대 메일을 발송하였습니다
@@ -336,7 +336,8 @@ ko:
     test_videos_help: 새로 만든 비디오 플레이어를 테스트해 보세요.
     try_beta_courses: K-5(~초등5학년) 학생들을 위한 새로운 시범 코스들을 경험해 보세요.
     use_as_teacher: 선생님으로 사이트 사용하기
-    heading_elementary: '<h1>초등학생들을 위한</h1><h2>20 시간 코스</h2>'
+    heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
+    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
     heading_apps: '<h1> 누구나 </h1><h2> 재미있게 </h2>'
     heading_legacy: '<h1>모든 연령대를 위한 </h1><h2>일반 코스</h2>'
     your_gallery: 갤러리
@@ -350,6 +351,7 @@ ko:
   footer:
     help_from_html: 구글, 마이크로소프트, 페이스북, 트위터의 컴퓨터과학자들이 이 튜토리얼을 만들었습니다.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
+    powered_by_aws: Powered by Amazon Web Services
     feedback: 피드백 남기기
     translate: 다른 언어로 번역
     support: 고객지원
@@ -425,7 +427,9 @@ ko:
       try_frozen: 프로즌 왕국에서온 안나와 엘사와 함께하는 예술가 퍼즐
     gallery:
       title: 갤러리
-      body: View a gallery of app and artist images created by our users
+      body: 다른 사람이 만든 앱과 이미지 갤러리 보기
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: 학생들이 코드로 그려낸 것들!
     students_made_these_with_code: 학생들이 만든 작품

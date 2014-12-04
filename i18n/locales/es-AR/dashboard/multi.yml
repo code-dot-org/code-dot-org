@@ -85,10 +85,10 @@ es-AR:
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
         Choose an algorithm for the image provided: Elige un algoritmo para la imagen provista
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Comienza con un cuadrado<br/>Coloca un triángulo sobre cuadrado<br/>Coloca un triángulo debajo del cuadrado'
-        0: '? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
-        1: ': Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
-        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 'Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram'
-        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: 'Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle'
+        0: '? Comienza con un cuadrado <br/> Pon un triángulo a la derecha del cuadrado <br/> Pon un paralelogramo debajo del cuadrado <br/> Pon un triángulo a la derecha del paralelogramo'
+        1: ': Comienza con un cuadrado <br/> Pon un triángulo a la derecha del cuadrado <br/> Pon un paralelogramo debajo del cuadrado <br/> Pon un triángulo a la derecha del paralelogramo'
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 'Comienza con un cuadrado <br/> Pon un paralelogramo sobre el cuadrado <br/> Pon un triángulo a la derecha del paralelogramo'
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: 'Comienza con un cuadrado <br/> Pon un triángulo debajo del cuadrado <br/> Pon un paralelogramo a la derecha del triángulo'
       2-3 Algorithms Multi 2:
         Multiple Choice: Opción Múltiple
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: 'Comienza con un triángulo <br/>Pon un cuadrado debajo del triángulo<br/>Pon otro triángulo debajo del cuadrado'
@@ -297,6 +297,14 @@ es-AR:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
+      Coordinates Multi 1:
+        Video game Coordinates: Video game Coordinates
+        Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
+        Which answer best describes the unicorn's movement?: "Which answer best describes the unicorn's movement?"
+        The unicorn moves across the screen: The unicorn moves across the screen
+        The unicorn's y value changes: "The unicorn's y value changes"
+        The unicorn moves to the left: The unicorn moves to the left
+        The unicorn's x value changes: "The unicorn's x value changes"
       K-1 Artist 1 Multi 1:
         Multiple Choice: Opción Múltiple
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
@@ -542,5 +550,5 @@ es-AR:
         title: Título
         description here: descripción aquí
         Question: Pregunta
-        wrong answer: Respuesta errónea
-        right answer: respuesta correcta
+        wrong answer: Respuesta incorrecta
+        right answer: Respuesta correcta

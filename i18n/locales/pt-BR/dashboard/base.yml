@@ -115,11 +115,11 @@ pt:
     subject: Entrar na minha turma (no Code.org)
     body: |
       Clique no link abaixo para se cadastrar e ver tutoriais de ciência da computação na Code.org (eu serei seu "professor"):
-
+      
       %{link}
-
+      
       Os tutoriais são divertidos, visualmente envolventes, e ensinam os conceitos básicos de ciência da computação de forma simples, como em um jogo. Aprenda a programar com a ajuda de Bill Gates, Mark Zuckerberg, Angry Birds e Plants vs Zombies! :-)
-
+      
       %{name}
   follower:
     invite_sent: Convite enviado
@@ -336,7 +336,8 @@ pt:
     test_videos_help: Teste nosso novo player de vídeo na sua escola
     try_beta_courses: Novo! Conheça nossos cursos experimentais para alunos do pré ao 5º ano
     use_as_teacher: Use este site como um professor
-    heading_elementary: '<h2>Cursos de 20 horas para</h2><h1>alunos do ensino fundamental</h1>'
+    heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
+    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
     heading_apps: '<h2>Diversão para</h2><h1>todos</h1>'
     heading_legacy: '<h2>Nosso curso geral para</h2><h1>todas as idades</h1>'
     your_gallery: Galeria
@@ -349,7 +350,8 @@ pt:
     teacher: Professor
   footer:
     help_from_html: Engenheiros da Google, Microsoft, Facebook e Twitter ajudaram a criar este tutorial.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Todos os direitos reservados.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Todos os direitos reservados.'
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
+    powered_by_aws: Powered by Amazon Web Services
     feedback: Fornecer feedback
     translate: Ajude-nos a traduzir para o seu idioma
     support: Suporte
@@ -425,7 +427,9 @@ pt:
       try_frozen: O Artista com Anna e Elsa, do filme Frozen
     gallery:
       title: Galeria
-      body: View a gallery of app and artist images created by our users
+      body: Veja uma galeria de aplicativos e imagens artísticas criadas por nossos usuários
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: Alunos criaram isso com programação!
     students_made_these_with_code: Os alunos criaram isso com programação!
@@ -440,7 +444,7 @@ pt:
     header_artist: Artista
   landing:
     prerelease: "Este curso está em sua versão <span class='betatext'>beta</span>. Isso significa que esta não é a versão final do curso, e ele está sujeito a revisões conforme os feedbacks são recebidos e as melhorias são feitas."
-    prerelease_hoc2014: "Este tutorial está na versão <span class='betatext'>beta</span>.  Ele está sujeito a revisão conforme o feedback é recebido e as melhorias são feitas."
+    prerelease_hoc2014: "Este tutorial está na versão <span class='betatext'>beta</span>. Ele está sujeito a revisões, conforme são recebidos feedbacks e melhorias são feitas."
     feedback: Dar feedback
     report_bug: Reportar erro
     support: Obter ajuda

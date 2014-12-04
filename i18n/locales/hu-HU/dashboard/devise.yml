@@ -39,7 +39,7 @@ hu:
       update_needs_confirmation: A fiókot sikeresen frissítette, de szükségünk van új e-mail cím megerősítésre. Kérjük, ellenőrizd az e-mail-ed, és kattints a megerősítés linkre hogy igazold az új e-mail címed.
       updated: A fiók sikeresen frissítve.
     sessions:
-      signed_in: Sikeresen belépve.
+      signed_in: ""
       signed_out: Sikeresen kilépve.
     unlocks:
       send_instructions: Néhány percen belül kapsz egy e-mailt arról, hogy miként erősítsd meg a fiókod.

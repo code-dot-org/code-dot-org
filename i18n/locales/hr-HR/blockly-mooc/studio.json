@@ -1,5 +1,6 @@
 {
   "actor":"lik",
+  "alienInvasion":"Alien Invasion!",
   "backgroundBlack":"crno",
   "backgroundCave":"špilja",
   "backgroundCloudy":"oblačno",
@@ -83,7 +84,7 @@
   "playSoundWinPoint":"pokreni zvuk dobiveni bod",
   "playSoundWinPoint2":"pokreni zvuk dobiven bod 2",
   "playSoundWood":"pokreni zvuk drvo",
-  "positionOutTopLeft":"to the above top left position",
+  "positionOutTopLeft":"ka gore lijevo",
   "positionOutTopRight":"to the above top right position",
   "positionTopOutLeft":"to the top outside left position",
   "positionTopLeft":"to the top left position",

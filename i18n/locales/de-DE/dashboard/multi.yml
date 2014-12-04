@@ -85,10 +85,10 @@ de:
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
         Choose an algorithm for the image provided: Wähle einen Algorithmus für das gezeigte Bild
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Starte mit einem Viereck<br/>Setze ein Dreieck auf das Viereck<br/>Setz ein Dreieck unter das Viereck'
-        0: '? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
-        1: ': Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
-        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 'Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram'
-        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: 'Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle'
+        0: Beginne mit einem Quadrat. Platziere dann ein Dreieck rechts vom Quadrat. Platziere anschliessend ein Parallelogramm unter das Quadrat. Setze schließlich ein Dreieck rechts vom Parallelogramm
+        1: Starte mit einem Qudrat. Setze ein Dreieck rechts neben das Quadrat. Setze nun das Parallelogramm unter das Quadrat. Sezte schliesslich ein Dreieck rechts neben das Parallelogramm
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Beginne mit einem Quadrat. Setze ein Parallelogramm über das Quadrat. Setze nun noch ein Dreieck rechts neben das Parallelogramm.
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Beginne mit einem Quadrat. Setze ein Dreieck unter das Quadrat. Setze nun noch ein Parallelogramm rechts neben das Dreieck.
       2-3 Algorithms Multi 2:
         Multiple Choice: Multiple-Choice
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: 'Starte mit einem Dreieck<br/>Setze ein Viereck unter das Dreieck<br/>Setze ein weiteres Dreieck unter das Viereck'
@@ -300,6 +300,14 @@ de:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
+      Coordinates Multi 1:
+        Video game Coordinates: Video game Coordinates
+        Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
+        Which answer best describes the unicorn's movement?: "Which answer best describes the unicorn's movement?"
+        The unicorn moves across the screen: The unicorn moves across the screen
+        The unicorn's y value changes: "The unicorn's y value changes"
+        The unicorn moves to the left: The unicorn moves to the left
+        The unicorn's x value changes: "The unicorn's x value changes"
       K-1 Artist 1 Multi 1:
         Multiple Choice: Multiple-Choice
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500

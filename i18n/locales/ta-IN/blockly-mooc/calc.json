@@ -1,8 +1,8 @@
 {
-  "compute":"compute",
-  "equivalentExpression":"Try reordering your arguments to get exactly the same expression.",
-  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"compute\" block?",
-  "goal":"Goal:",
-  "reinfFeedbackMsg":"Here is your story! Continue working on it, or move on to the next puzzle!",
-  "yourExpression":"Your expression:"
+  "compute":"கணி",
+  "equivalentExpression":"அதே தொடர் சரியாக பெற உங்கள் வாதங்களை மீள்ஒழுங்குபடுத்தி முயற்சிக்கவும்.",
+  "extraTopBlocks":"உங்களிடம் இணைக்கப்படாத தொகுதிகள் உள்ளன. \"கணிப்புக்கு \" இந்த தொகுதிகளை  இணைக்க வேண்டும் என்று கருதுகிறிர்களா?",
+  "goal":"குறிக்கோள்:",
+  "reinfFeedbackMsg":"இதோ உங்கள் கதை! அதில் தொடர், அல்லது அடுத்த புதிருக்கு நகர்!",
+  "yourExpression":"உங்கள் வெளிப்பாடு:"
 }

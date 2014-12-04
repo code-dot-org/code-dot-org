@@ -39,7 +39,7 @@ ko:
       update_needs_confirmation: 계정 정보가 수정되었습니다. 계정 인증이 다시 필요합니다. 새로운 메일로 계정을 인증해 주세요.
       updated: 계정 정보가 수정되었습니다.
     sessions:
-      signed_in: 로그인 되었습니다.
+      signed_in: ""
       signed_out: 로그아웃 되었습니다.
     unlocks:
       send_instructions: 계정 잠김 해제 메일이 전송되었습니다.

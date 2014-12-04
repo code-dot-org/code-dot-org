@@ -606,6 +606,126 @@
           Prova anche il nuovo blocco "larghezza della penna". Buon divertimento!'
         studio_ec_sandbox: Crea un gioco per conto tuo. Quando hai fatto, clicca su
           Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
+    levelbuilder:
+      frozen line:
+        instructions: Ciao! Io sono Elsa di Arendelle. Aiutami a creare una linea.
+      frozen perpendicular:
+        instructions: Ora vediamo se riusciamo a creare due linee che sono a 90 gradi
+          tra loro. Dovrai usare il blocco "Gira" oltre al blocco "Muovi".
+      frozen square iterative:
+        instructions: Sembra che siamo a metà strada per fare un quadrato. Mettiamo
+          insieme 4 linee per creare un quadrato.
+      frozen square loop:
+        instructions: Ciao, sono Anna di Arendelle! Facciamo un quadrato con il blocco
+          "Ripeti", che utilizza meno blocchi. Quante volte (???) il blocco "Ripeti"
+          dovrebbe ripetere i blocchi al suo interno per disegnare un quadrato?
+      frozen square loop 3x:
+        instructions: Creiamo tre quadrati, girando dopo aver completato ogni quadrato.
+          Assicurati di girare di 120 gradi prima di disegnare ogni nuovo quadrato.
+      frozen square snowflake:
+        instructions: Riesci a creare un fiocco di neve usando il blocco "Ripeti"
+          per disegnare un quadrato 10 volte, e il blocco "Ruota" per ruotare di 36
+          gradi tra un quadrato e il successivo?
+      frozen cross:
+        instructions: Utilizza il blocco "Ripeti" per creare un segno di addizione.
+          Hai notato che Elsa può muoversi avanti e indietro?
+      frozen cross rotate:
+        instructions: Ora prova a ripeterlo 10 volte. Quanti gradi devi girare tra
+          una riga e la successiva?
+      frozen cross rotate dense:
+        instructions: 'Ripetiamolo 90 volte! Quante volte il 90 sta in 360? Suggerimento:
+          È un numero molto piccolo.'
+      frozen diamond:
+        instructions: 'Creiamo un parallelogramma. È come un quadrato, ma ha angoli
+          diversi: angoli di 60 e 120 gradi invece di angoli di 90 gradi.'
+      frozen diamond mini snowflake:
+        instructions: Sapevi che ogni fiocco di neve ha una forma diversa? Creiamo
+          un nuovo fiocco di neve usando il blocco "Ripeti" per ripetere un parallelogramma
+          4 volte, ruotando a destra di 90 gradi tra un parallelogramma e il successivo.
+      frozen diamond snowflake:
+        instructions: Ora, creiamo un nuovo fiocco di neve usando il blocco "Ripeti"
+          per disegnare un parallelogramma 10 volte, girando a destra di 36 gradi
+          tra ogni parallelogramma e il successivo.
+      frozen circle:
+        instructions: Un cerchio è una forma speciale. Riesci a trovare quale numero
+          sostituire ai punti interrogativi per disegnare un cerchio?
+      frozen circle function:
+        instructions: Usa il nuovo blocco "Crea un cerchio" per creare 10 cerchi sovrapposti.
+          Non dimenticare di saltare in avanti tra un cerchio e il successivo.
+      frozen circle function in circle:
+        instructions: Ora creiamo 20 cerchi sovrapposti, girando di 18 gradi tra un
+          cerchio e il successivo.
+      frozen circle function with parameter:
+        instructions: Qui c'è un blocco "Crea cerchio" che può disegnare cerchi di
+          diverse dimensioni. Riesci a usarlo per creare un piccolo cerchio di dimensione
+          5 e un cerchio più grande di dimensione 10?
+      frozen snowflower:
+        instructions: Fiocchi di neve dai disegni complessi possono essere creati
+          partendo da forme molto semplici. Riesci a creare un disegno ripetendo 5
+          cerchi di dimensione 5 e 5 cerchi di dimensione 10?
+      frozen snowflake branch:
+        instructions: Prova a usare il blocco "Crea un ramo di fiocco di neve" per
+          creare tre rami, che inizia a sembrare un fiocco di neve.
+      frozen snowflake full:
+        instructions: Ora ripetiamolo 8 volte per disegnare un bel fiocco di neve!
+      frozen freeplay:
+        instructions: Sei ufficialmente diventato un maestro d'arte! Crea un fantastico
+          paesaggio invernale.
+      scrat 16:
+        instructions: Ghianda! Ghianda! Ghianda! Usa un blocco "se" per farmi arrivare
+          lì con il minor numero di blocchi.
+      scrat 17:
+        instructions: Ok, facciamolo ancora per fare pratica - stavolta non è molto
+          diverso, ma stai attento al muro!
+      scrat 18:
+        instructions: Il blocco "se-altrimenti" controlla una condizione, e poi fa
+          una cosa O un'altra. Per farmi raggiungere la ghianda, prova a utilizzare
+          questo nuovo blocco.
+      scrat 19:
+        instructions: 'Ancora un esercizio con il blocco "se-altrimenti": riesci a
+          risolverlo correttamente al primo tentativo?'
+      scrat 20:
+        instructions: Puoi aggiungere solo 3 blocchi per aiutarmi a risolvere un labirinto
+          più complesso? Se lo fai correttamente, posso percorrere una curva di qualunque
+          lunghezza. Sbrigati! Il ghiaccio si sta sciogliendo!
+      Standalone_Artist_1:
+        instructions: Welcome to Artist! First off, let's try to make a simple square
+          using the turn right block and move forward block. Each side should be 100
+          pixels long.
+      Standalone_Artist_2:
+        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel
+          long sides.
+      Standalone_Artist_3:
+        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree
+          turns?
+      Standalone_Artist_4:
+        instructions: Now you've got a new block to play with, the loop. This will
+          repeat a set of commands. What happens if you loop these commands 6 times?
+      Standalone_Artist_5:
+        instructions: How many times do you need to loop this diamond to draw the
+          flower?
+      Standalone_Artist_5.5:
+        instructions: 'Notice how we simplified the diamond code by turning it into
+          a loop. You can loop that whole sequence 12 times to draw the flower. Hint:
+          You''ll need to turn 30 degrees after your diamond loop so you don''t keep
+          drawing over the same diamond.'
+      Standalone_Artist_6:
+        instructions: 'Loop this hexagon code 6 times to create the design. How many
+          degrees will you need to turn each time? Hint: divide the number of degrees
+          in a circle by the number of times you are looping.'
+      Standalone_Artist_7:
+        instructions: 'A function is another programming tool to help you avoid repeating
+          yourself. This function draws a flower, so you can use it any time you want
+          to draw a flower. Use this and the new jump block to draw these flowers.
+          Hint: The flowers are 150 pixels apart'
+      Standalone_Artist_8:
+        instructions: Here's a function called "Draw a shape" that we've programmed
+          to draw hexagons. Run the code to see what it does and then experiment with
+          the function to see what happens. Can you make it draw a pattern of squares,
+          triangles, or octagons?
+      Standalone_Artist_9:
+        instructions: Now go ahead and make whatever picture you'd like! You've even
+          got an empty function that you can make do whatever you want!
     video:
       name:
         maze_intro: Introduzione a "Il Labirinto"
@@ -616,6 +736,7 @@
         loop_until: Blocco "ripeti fino a che"
         if: Blocco "se"
         if_else: Blocco "se-altrimenti"
+        if_else_scrat: Blocco "se-altrimenti"
         function: Funzioni
         loop_while: Blocco "Mentre"
         loop_for: Blocco "ripeti con contatore"
@@ -648,6 +769,7 @@
         C1_playlab_storytelling: 'Laboratorio: Crea una Storia'
         C1_planting_seed: Piantare un seme
         C1_building_foundation: Costruire le Fondamenta
+        C1_going_places_safely: Visitare Luoghi in Modo Sicuro
         C2_maze_intro: 'Labirinto - Corso 2: Introduzione'
         C2_artist_intro: 'Artista - Corso 2: Introduzione'
         C2_zuck_repeat_loop: 'Labirinto: Cicli'
@@ -662,6 +784,7 @@
         C2_binary_bracelets: Braccialetti Binari
         C2_relay_programming: Programmazione a Staffetta
         C2_paper_airplanes: Aeroplani di Carta
+        C2_digital_footprint: La tua Impronta Digitale
         C3_maze_level_4: 'Labirinto: Cicli'
         C3_artist_intro: 'Artista - Corso 3: Introduzione'
         C3_artist_functions: 'Artista: Funzioni'
@@ -680,9 +803,14 @@
         C3_crowdsourcing: Intelligenza Collettiva
         C3_functional_suncatchers: Acchiappa-sole Funzionale
         C3_songwriting_with_parameters: Composizione di Canzoni - Parametri
-        Frozen_intro: Hour of Code Intro
-        Frozen_loops: Introduction to Loops
-        Frozen_functions: Introduction to Functions
+        C4_artist_math: Programming the Artist with Math
+        C4_create_functions: Creating Functions
+        C4_edit_functions: Editing Functions
+        C4_for_loops: Cicli For
+        C4_variables: Variabili
+        frozen_intro: Hour of Code Intro
+        frozen_loops: Introduction to Loops
+        frozen_functions: Introduction to Functions
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto
@@ -716,24 +844,43 @@
           nell'area di lavoro
         snowflake_dropdown: Usa questo elenco a discesa per creare fiocchi di neve
           di varie forme!
-        degrees_per_side: Divide 360 by the number of sides to get the size of each
-          angle in degrees.
-        set_sides: Use this block to set "sides" to the number needed to complete
-          the puzzle.
-        set_length: Use this block to set "length" to the correct value.
-        which_equation: Which equation makes each side shorter for shapes with more
-          sides?  Try each equation!
-        get_nectar: Use the new "get nectar" block.
-        actions_category: The tool box got a new look! The "Actions" blocks are in
-          here now.
-        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
-        edit_function: Use this button to edit the function.
-        create_function: Click here to open the "Functions" flyout, then click the
-          "Create a Function" button.
-        house_hint: It's ok if the picture doesn't look like a house yet. We will
-          fix it in the next puzzle.
-        edit_draw_square: Use this button to edit the function and add the loop.
-        edit_get_nectar: Use this button to edit the function and change the direction
-          the Bee will turn to get the nectar.
-        logic_category: Open the "Logic" flyout to find the "if/else" block.
-        length_parameter: Can you update this function so it uses the "length" parameter?
+        degrees_per_side: Dividi 360 per il numero di lati per ottenere la dimensione
+          di ogni angolo in gradi.
+        set_sides: Utilizza questo blocco per impostare i "lati" al numero necessario
+          per completare il puzzle.
+        set_length: Usa questo blocco per impostare la "lunghezza" al valore corretto.
+        which_equation: Quale equazione rende ogni lato più corto per le figure con
+          più lati? Prova ogni equazione!
+        get_nectar: Usa il nuovo blocco "prendi il nettare".
+        actions_category: La cassetta degli strumenti ha un nuovo look! I blocchi
+          "Azione" ora sono qui.
+        draw_square_hint: 'Suggerimento: usa il ciclo del quadrato che hai appena
+          creato nel puzzle precedente.'
+        edit_function: Usa questo pulsante per modificare la funzione.
+        create_function: Fai clic qui per aprire il riquadro "Funzioni", quindi fai
+          clic sul pulsante "Crea una Funzione".
+        house_hint: Va bene se la foto non assomiglia ancora a una casa. La sistemeremo
+          nel prossimo puzzle.
+        edit_draw_square: Usa questo pulsante per modificare la funzione e aggiungere
+          il ciclo.
+        edit_get_nectar: Usa questo pulsante per modificare la funzione e cambiare
+          la direzione in modo che  l'Ape possa girarsi e raggiungere il nettare.
+        logic_category: Apri il riquadro  "Logico" per trovare il blocco "se/altrimenti".
+        length_parameter: Riesci ad aggiornare questa funzione in modo da utilizzare
+          il parametro "lunghezza"?
+        frozen_diamond_repeat: Use the repeat block to create this shape.
+        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
+          each circle.
+        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
+          and change the size.
+        frozen_snowflake_branch: Use the "create a snowflake branch" block
+        frozen_create_square: Attach more blocks here to create a square
+        playlab_drag_say: Drag the "say" block here and type "hello"
+        playlab_use_twice: Use this block twice and remember to change the actor number
+        playlab_move_girl: Use the "move right" block to move Tennis Girl
+        playlab_play_sound: Add "play sound" block here
+        playlab_arrow_keys: Remember to use these to move the witch after clicking
+          on Run
+        playlab_add_move: Add "move" blocks inside this repeat block
+        playlab_add_score: Add score blocks here
+        playlab_add_blocks: Add your blocks here

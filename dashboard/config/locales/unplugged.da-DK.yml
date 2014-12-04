@@ -269,20 +269,20 @@
           da den illustrerer hvordan en computer også kan gemme endnu mere komplekse
           oplysninger (f.eks. billeder og farver) i binære tal.
       VideoGamesCoordinatePlanes:
-        title: Video Games and Coordinate Planes
-        desc: Video Games and Coordinate Planes lesson description
+        title: Videospil og koordinere fly
+        desc: Videospil og koordinerese flys lektionsbeskrivelse
       Contracts:
         title: Kontrakter
-        desc: Contracts unplugged lesson description
+        desc: Kontrakter unplugged lektions beskrivelser
       DesignRecipe:
         title: Design opskrift
-        desc: Design Recipe lesson description
+        desc: Design opskrifter lektionsbeskrivelse
       Booleans:
         title: Booleans
-        desc: Booleans lesson description
+        desc: Booleans lektionsbeskrivelser
       ConditionalsPiecewiseFunctions:
         title: Konditioner og stykvise funktioner
-        desc: Conditionals and Piecewise Functions lesson description
+        desc: Conditionals og Piecewise Functions lektionsbeskrivelse
       CollisionDetection:
         title: Collision Detection
-        desc: Collision Detection lesson description
+        desc: Collision Detection lektionsbeskrivelse

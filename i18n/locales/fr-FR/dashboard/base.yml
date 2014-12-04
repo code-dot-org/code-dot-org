@@ -21,7 +21,7 @@ fr:
   welcome_back: 'Bienvenue, %{name}'
   add_teacher_form:
     code:
-      label: 'Add a teacher:'
+      label: 'Ajouter un enseignant :'
       placeholder: Section Code (ABCDEF)
     submit: Ajouter un enseignant
   add_hint_form:
@@ -116,11 +116,11 @@ fr:
     subject: Rejoindre ma classe (sur Code.org)
     body: |
       Cliquez sur le lien ci-dessous pour vous inscrire aux travaux dirigés d'informatique sur Code.org (avec moi comme votre « enseignant ») :
-
+      
       %{link}
-
+      
       Les tutoriels sont amusants, visuellement attrayants, et enseignent les concepts de base de l'informatique au travers d'une expérience simple, guidée à la manière d'un jeu. Apprenez à codez avec Bill Gates, Mark Zuckerberg, Angry Birds, et Plantes vs. Zombies ! :-)
-
+      
       %{name}
   follower:
     invite_sent: Invitation envoyée
@@ -216,7 +216,7 @@ fr:
         playlab: Créer une application
         artist: Dessine quelque chose
     user:
-      classroom: Teacher Home Page
+      classroom: "Page d'accueil des enseignants"
       label: 'Bonjour %{username}'
       stats: Ma progression
       settings: Mon compte
@@ -339,7 +339,8 @@ fr:
     test_videos_help: Essayez notre nouveau lecteur vidéo dans votre école
     try_beta_courses: "Nouveau ! Essayez nos cours bêta pour les élèves de l'école primaire"
     use_as_teacher: "Utiliser ce site en tant qu'enseignant"
-    heading_elementary: '<h2>de 20 heures de cours pour</h2><h1>Élèves du primaire</h1>'
+    heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
+    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
     heading_apps: '<h2>Amusant pour</h2><h1>Tout le monde</h1>'
     heading_legacy: '<h2>Nos cours pour</h2><h1>Tous les âges</h1>'
     your_gallery: Gallery
@@ -352,7 +353,8 @@ fr:
     teacher: Professeur
   footer:
     help_from_html: Les ingénieurs de Google, Microsoft, Facebook et Twitter ont contribué à créer ce didacticiel.
-    art_from_html: 'Angry Birds &trade; & &copy; 2009-2014 Rovio Entertainment Ltd. Tous droits réservés. <br/> Plantes vs Zombies &trade; & &copy; 2014 Electronic Arts Inc. Tous droits réservés.'
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
+    powered_by_aws: Powered by Amazon Web Services
     feedback: Envoyer un commentaire
     translate: Aidez-nous à traduire dans votre langue
     support: Assistance
@@ -386,17 +388,17 @@ fr:
   try_reloading: Essayez de recharger la page
   next_stage: "Terminé ! Passer à l'étape suivante"
   download_pdf: Ouvrir le plan de la leçon
-  lesson_plan: Lesson Plan
+  lesson_plan: Plan de leçon
   view_lesson_plan: Voir le plan de cours
   pdf_download: Télécharger le PDF
-  download_coming_soon: Downloadable activity coming soon.
-  video_coming_soon: Video Coming Soon!
+  download_coming_soon: Activité téléchargeable prochainement.
+  video_coming_soon: Vidéo à venir bientôt !
   share_code:
     title: Cliquez sur « Démarrer » pour voir mon programme en action
     bounce_og_title: Regardez mon jeu Rebond
     flappy_og_title: Regardez mon jeu Flappy Bird
     studio_og_title: Check out my Play Lab App
-    check_out_what_i_made: Check out what I made
+    check_out_what_i_made: "Découvrez ce que j'ai fait"
     og_description: "J'ai écrit le code moi-même avec Code.org"
     phone_number_not_allowed: Cela ressemble à un numéro de téléphone. Merci de modifier le texte.
     address_not_allowed: Cela ressemble à une adresse. Merci de modifier le texte.
@@ -424,11 +426,13 @@ fr:
       title: "Cours d'introduction"
       body: "Essayez notre cours de 20 heures d'introduction à l'informatique."
     hoc2014:
-      try_new_tutorial: Try our new Hour of Code tutorial in beta
+      try_new_tutorial: Essayez notre nouveau tutoriel heure de Code en version bêta
       try_frozen: Artist with Anna and Elsa, from Frozen
     gallery:
       title: Gallery
       body: View a gallery of app and artist images created by our users
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: Les élèves les ont dessinés avec du code !
     students_made_these_with_code: Les élèves ont réalisé ceci avec du code!
@@ -459,7 +463,7 @@ fr:
     correct_title: Correct
     correct_body: "C'est la bonne réponse."
   text_match:
-    placeholder: Enter your answer here
+    placeholder: Entrez votre réponse ici
   dialog:
     ok: OK
   time:
@@ -504,7 +508,7 @@ fr:
   zendesk_too_young_message: |-
     Désolé, les plus jeunes utilisateurs ne peuvent pas s'enregistrer sur notre site de support. Néanmoins, vous pouvez parcourir les <a href="http://support.code.org"> support.code.org</a> en ou demandez à votre parent ou enseignant à nous contacter pour vous.
   progress:
-    not_completed: not completed
-    completed_too_many_blocks: completed, too many blocks
-    completed_perfect: completed, perfect
+    not_completed: pas terminé
+    completed_too_many_blocks: terminé, trop de blocs
+    completed_perfect: terminé, parfait
     furthest_level_attempted: le plus haut niveau tenté

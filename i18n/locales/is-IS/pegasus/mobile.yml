@@ -19,11 +19,11 @@ is-IS:
   twentyhours_text: Búin(n) að ljúka fyrstu Klukkustund kóðunar? Fylgdu eftir með því að læra fleiri mikilvæg hugtök í tölvunarfræði og forritun á þessu námskeiði.
   hoc2014_heading: 'Vertu með í <a href="http://hourofcode.com">Klukkustund kóðunar</a><br/>8. - 14. desember 2014<br/>'
   hoc2014_students: Nemendur
-  hoc2014_try: Prófið það
+  hoc2014_try: Prófið hana
   hoc2014_teachers: Kennarar
-  hoc2014_host: Miðlið því
+  hoc2014_host: Miðlið henni
   hoc2014_everyone: Allir
-  hoc2014_support: Styðjið það
+  hoc2014_support: Styðjið þetta
   hoc2014_whatishoc: Hvað er Klukkustund kóðunar?
   twentyhours_trynow: Prófa núna
   california_heading: Biddu skólann þinn að kenna tölvunarfræði
@@ -308,6 +308,7 @@ is-IS:
   more_resources_educators: Fleiri tilföng fyrir kennara og leiðbeinendur
   participants: þátttakendur
   teachers_notes: Minnispunktar kennara
+  teachers_notes_hoc: 'Teachers: Read important educator notes here'
   previous: Fyrri
   next: Næsta
   older_systems: Kennsluefni sem virkar á eldri kerfum
@@ -315,11 +316,12 @@ is-IS:
   mobile_devices: Kennsluefni fyrir farandtæki
   frozen_name: Kóðaðu með Önnu og Elsu
   codeorg_name: Skrifaðu fyrsta forritið þitt
+  codeintl_name: Skrifaðu fyrsta forritið þitt
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Kynning á JavaScript
   khanes_name: Kynning á JavaScript
   tynker_name: Búðu til eigin leik
-  scratch_name: Get creative with coding
+  scratch_name: Virkjaðu sköpunargleðina með forritun
   lightbot_name: Lightbot
   thinkersmith_name: Vinir mínir vélmennin
   condcards_name: Skilyrði með kortum
@@ -336,9 +338,8 @@ is-IS:
   codespark_name: Foos (ólæsir velkomnir)
   kodable_name: Kodable (ólæsir velkomnir)
   tynkerapp_name: 'Tynker - á spjaldtölvum'
-  hopscotch_name: 'Hopscotch: Kóðað á iPad'
   robomindnl_name: Forrita sýndarvélmenni
-  flappy_name: Make a Flappy game
+  flappy_name: Búðu til Flappy leik
   bitsbox_name: 'Bitsbox - búa til leik'
   makegameswithus_name: Búðu til iPhone leik í vafranum þínum!
   touchdevelop_name: TouchDevelop
@@ -349,6 +350,7 @@ is-IS:
   projguts_name: Steinn, pappír, skæri
   frozen_gradelevel: 8+ ára
   codeorg_gradelevel: 4-104 ára
+  codeintl_gradelevel: 4-104 ára
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Miðskóli +
   khanes_gradelevel: Miðskóli +
@@ -370,7 +372,6 @@ is-IS:
   codespark_gradelevel: Grunnskólastig
   kodable_gradelevel: Grunnskólastig
   tynkerapp_gradelevel: 5-13 ára
-  hopscotch_gradelevel: Miðskóli +
   robomindnl_gradelevel: 8-13 ára
   flappy_gradelevel: 4-104 ára
   bitsbox_gradelevel: Grunnskólastig
@@ -381,18 +382,19 @@ is-IS:
   thinkersmith2_gradelevel: 8+ ára
   kodableunplugged_gradelevel: 8-13 ára
   projguts_gradelevel: 10-13 ára
-  frozen_platformtext: Modern browsers + tablets
+  frozen_platformtext: Fyrir nýjustu vafra, spjaldtölvur
   codeorg_platformtext: Nýjustu vafrar, snjallsímar, spjaldtölvur
+  codeintl_platformtext: Nýjustu vafrar, snjallsímar, spjaldtölvur
   thinkersmithspanish_platformtext: Án tölvu
   khan_platformtext: Nýjustu vafrar
   khanes_platformtext: Nýjustu vafrar
-  tynker_platformtext: Nýjustu vafrar
+  tynker_platformtext: Modern browsers. (Follow-on course requires $$)
   scratch_platformtext: ALLIR vafrar
   lightbot_platformtext: ALLIR vafrar og iOS, Android eða leikjastýri
   thinkersmith_platformtext: Án tölvu
   condcards_platformtext: Án tölvu
   lightbotintl_platformtext: iOS, Android (eða vefvafri)
-  codehs_platformtext: Nýjustu vafrar
+  codehs_platformtext: 'Modern browsers. (Follow-on course requires  $$)'
   codecademy_platformtext: Öpp fyrir nýjustu vafra, iOS, Android
   codecombat_platformtext: Nýjustu vafrar
   codemonkey_platformtext: Nýjustu vafrar
@@ -404,24 +406,24 @@ is-IS:
   codespark_platformtext: iOS, Android (eða vefvafri)
   kodable_platformtext: iPad
   tynkerapp_platformtext: iPad og Android spjaldtölvur
-  hopscotch_platformtext: iPad
   robomindnl_platformtext: Nýjustu vafrar, líka í farsímum
   flappy_platformtext: Nýjustu vafrar, snjallsímar, spjaldtölvur
   bitsbox_platformtext: Nýjustu vafrar
   makegameswithus_platformtext: Nýjustu vafrar
   touchdevelop_platformtext: Nýjustu vafrar, snjallsímar, öll tæki
-  appinventor_platformtext: Modern browsers + Android
+  appinventor_platformtext: Fyrir nýjustu vafra + Android
   blockly_platformtext: Aðeins nýjustu vafrar
   thinkersmith2_platformtext: Án tölvu
   kodableunplugged_platformtext: Án tölvu
   projguts_platformtext: Án tölvu
-  frozen_shortdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
+  frozen_shortdescription: Notum kóða til að fylgja Önnu og Elsu er þær kanna töfra og fegurð íss.
   codeorg_shortdescription: Lærðu að kóða með Mark Zuckerberg og Angry Birds!
+  codeintl_shortdescription: Lærðu að kóða með Mark Zuckerberg og Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Lærðu að teikna með JavaScript
   khanes_shortdescription: Lærðu að teikna með JavaScript
   tynker_shortdescription: Lærðu að kóða með því að leysa skemmtilegar þrautir og búðu til eigin símaleiki.
-  scratch_shortdescription: Create interactive games, stories, and animations.
+  scratch_shortdescription: Búðu til gagnvirka leiki, sögur og hreyfimyndir.
   lightbot_shortdescription: Forritaðu Lightbot til að leysa þrautir með föllum og lykkjum!
   thinkersmith_shortdescription: Kennslustund án tölvu fyrir hóp án tækja
   condcards_shortdescription: Lærðu á algrím með spilastokk
@@ -429,7 +431,7 @@ is-IS:
   codehs_shortdescription: Byrjaðu að kóða með hundinum Karel, sem er skemmtileg og myndræn kynning á forritun!
   codecademy_shortdescription: Lærðu JavaScript forritun, í vafra
   codecombat_shortdescription: Sigraðu tröll og lærðu um leið Python eða JavaScript í þessum hetjulega forritunarleik!
-  codemonkey_shortdescription: Nemendur forrita apa til að ná í banana en aðgerðirnar verða flóknari eftir því sem á líður.
+  codemonkey_shortdescription: Students program a monkey to catch bananas.
   codeavengers_shortdescription: Lærðu JavaScript forritun, í vafra
   processing_shortdescription: Klukkutíma kennsla í Processing forritunarmálunum
   robomind_shortdescription: Skrifaðu kóða fyrir sýndarvélmenni
@@ -437,13 +439,12 @@ is-IS:
   quorum_shortdescription: Slástu í för með Maríu á kynnisferð þar sem hún lærir Quorum forritunarmálið.
   codespark_shortdescription: Foos er skemmtilegur krakkavænn leikur sem fræðir um forritun.
   kodable_shortdescription: Skemmtilegur iPad leikur sem kennir hugtök í tölvuforritun
-  tynkerapp_shortdescription: Lærðu að kóða með því að leysa skemmtilegar þrautir og búðu til eigin símaleiki.
-  hopscotch_shortdescription: 'Lærðu að nota Hopscotch til að búa til bolta- og spaðaleiki!'
+  tynkerapp_shortdescription: 'Learn to program by solving fun coding puzzles. '
   robomindnl_shortdescription: Skrifaðu kóða fyrir sýndarvélmenni
-  flappy_shortdescription: 'Make your own game - Flappy Bird, Shark, or Submarine'
+  flappy_shortdescription: 'Búðu til eigin leik - Flappy Bird, Flappy hákarl eða Flappy kafbátur'
   bitsbox_shortdescription: Kóðaðu röð forrita til að spila og deila í alvöru JavaScript.
   makegameswithus_shortdescription: Búðu til iPhone leik! Lærðu með því að skrifa kóða sem gefur skrímslinu þínu nýja eiginleika!
-  touchdevelop_shortdescription: Notaðu símann, spjaldtölvu eða fartölvu til að kóða símaapp
+  touchdevelop_shortdescription: 'Solve puzzles, create games, and learn coding all on your phone. '
   appinventor_shortdescription: Búðu til eigið app! (Aðeins fyrir Android)
   blockly_shortdescription: Halaðu niður ZIP skrá til að læra án nettengingar
   thinkersmith2_shortdescription: Lærðu hvernig tölvur nota 1 og 0 til að tákna upplýsingar
@@ -451,11 +452,12 @@ is-IS:
   projguts_shortdescription: Prófaðu gerð hermilíkana með stein/pappír/skærum
   frozen_longdescription: Notum kóða til að fylgja Önnu og Elsu þegar þær kanna töfra og fegurð íssins. Þú munt búa til snjókorn og mynstur með því að láta þær skauta um ísinn og svo getur þú búið til eigin vetrarveröld til að deila með vinum!
   codeorg_longdescription: Lærðu grunnhugtók tölvunarfræði með kubbaforritun. Þetta er leikjamiðað, sjálfstýrt kennsluefni með fyrirlestrum í myndskeiðum þar sem koma við sögu Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies. Lærðu á lykkjur, skilyrði og grunnalgrím. Tiltækt á 34 tungumálum.
-  thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
+  codeintl_longdescription: Lærðu grunnhugtók tölvunarfræði með kubbaforritun. Þetta er leikjamiðað, sjálfstýrt kennsluefni með fyrirlestrum í myndskeiðum þar sem koma við sögu Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies. Lærðu á lykkjur, skilyrði og grunnalgrím. Tiltækt á 34 tungumálum.
+  thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubriran como guiarse de modo tal de llevar a cabo tareas especificas sin ser estas discutidas previamente. Este segmento ensena a los estudiantes la conexion entre simbolos y acciones asi como la valiosa habilidad de depuracion.'
   khan_longdescription: Lærðu grunnatriði JavaScript forritunar með því að teikna skemmtilegar myndir með kóða sem þú skrifar. Gerðu það ein/einn eða með bekknum þínum!
   khanes_longdescription: Lærðu grunnatriði JavaScript forritunar með því að teikna skemmtilegar myndir með kóða sem þú skrifar. Gerðu það ein/einn eða með bekknum þínum!
   tynker_longdescription: Búðu til eigin leiki og deildu með vinum! Leystu skemmtilegar kóðunarþrautir og lærðu forritunarhugtök í hverjum áfanga. Settu mark þitt á leiki með hreyfanlegum leikmönnum, mörgum borðum og úrvali leikmuna. Gerðu leikina raunverulegri með notkun eðlisfræði. Skoðaðu kóðann í kubbum eða JavaScript. Yfirfærðu leikina á iPad og Android spjaldtölvur. Meira en tugur skemmtilegra verkefna í boði!
-  scratch_longdescription: 'With Scratch, you can create your own interactive games, stories, animations &mdash; and share them with your friends. Get started by animating your name, creating a holiday card, or making a pong game.'
+  scratch_longdescription: 'Með Scratch getur þú búið til eigin gagnvirka leiki, sögur og hreyfimyndir &mdash; og deilt þeim með vinum þínum. Byrjaðu með að setja hreyfingu í nafnið þitt, búa til hátíðarkort eða búa til boltaleik.'
   lightbot_longdescription: Stjórnaðu Lightbot svo hann lýsi upp alla bláu reitina! Lightbot er þrautaleikur sem notar forritun á leikhreyfingum til að veita spilurum hagnýtan skilning á grunnatriðum forritunar. Lærðu að raða fyrirmælum, skrifa föll og nota lykkjur til að leysa einstök borð. Hentar öllum aldurshópum.
   thinkersmith_longdescription: 'Með fyrirfram skilgreindum "Vélmennaorðum" eiga nemendur að finna út hvernig þeir geti leitt aðra í gegnum tiltekinn verkefni án þess að ræða þau fyrst. Þessi kennslustund kennir börnum að tengja tákn og aðgerðir auk þess að efla færni þeirra í hinni dýrmætu list að villugreina, "Vinir mínir vélmennin" virkar best sem hópverkefni og það fylgir leiðarvísir fyrir kennara til notkunar með bekkjum.'
   condcards_longdescription: Lærðu um algrím og skilyrtar setningar í þessu verkefni án tölvu með því að nota spilastokk. Nemendur vinna þetta í teymum og þurfa einn spilastokk á hvert teymi.
@@ -471,13 +473,12 @@ is-IS:
   quorum_longdescription: Þessi námseining hentar fyrir sjónskerta og styður talgervla. Slástu í för með Maríu þegar hún fer að vinna á rannsóknarstofu í líffræði sem forritari og lærir forritunarmálið Quorum. Námseiningin er nemendastýrð með verkefnadæmi á netinu.
   codespark_longdescription: Foos er skemmtileg og barnvæn leið til að læra um tölvuforritun. Láttu krúttlegar verur leysa þrautir með forritun og búðu til lifandi sýndarheim. Þessi leikur er án orða svo allir geta spilað!
   kodable_longdescription: Kodable er sjálfleiðbeinandi iPad leikur sem kynnir grunnatriði forritunar fyrir börnum frá 5 ára aldri. Best er að hafa kennara eða foreldri með, en ekki nauðsynlegt.
-  tynkerapp_longdescription: Búðu til eigin leiki og deildu þeim með vinum! Leystu skemmtilegar forritunarþrautir og lærðu hugtök í forritun í hverjum áfanga. Gerðu leikina áhugaverðari með hreyfanlegum leikmönnum, mörgum borðum og fjölbreyttum leikmunum. Úr mörgum skemmtilegum verkefnum að velja!
-  hopscotch_longdescription: 'Búðu til og spilaðu bolta- og spaðaleiki með myndræna forritunarmálinu HopScotch. Þú munt læra hugtök eins og aðgerðaröð, lykkjur, breytur og föll. Þú getur síðan deilt tilbúnum leikjum með hverjum sem er í gegnum iPad eða iPhone. '
+  tynkerapp_longdescription: Learn to program by solving fun coding puzzles. Easily build games and stories using with themed graphics, 10+ game-kits and customizable characters. No Internet connectivity required. You can also access your creations on the web.
   robomindnl_longdescription: 'Nemendur læra grunnatriði forritunar með því að stjórna eigin sýndarvélmenni. Allt efni námskeiðsins er á netinu og samanstendur af stuttum kynningum, myndskeiðum, spurningum og sjálfvirkri leiðsögn/vísbendingum sem hjálpa við forritunarverkefnin. '
-  flappy_longdescription: Use drag-and-drop programming to make your own Flappy Bird game, and customize it to look different (Flappy Shark, Flappy Santa, whatever). Add the game to your phone in one click.
+  flappy_longdescription: Notaðu kubbaforritun til að búa til eigin Flappy Bird leik og sérhannaðu útlitið á honum (hafðu til dæmis Flappy hákarl eða Flappy jólasvein). Settu leikinn í símann þinn með einum smelli.
   bitsbox_longdescription: Sérstilltu þína eigin sýndarspjaldtölvu og forritaðu síðan röð leikja til að spila og deila. Einföld leiðsögn sem gerir mögulegt fyrir jafnvel ung börn að forrita með raunverulegu JavaScript. Því færari sem þú ert því lengra kemstu.
-  makegameswithus_longdescription: 'Lærðu að forrita með því að búa til iPhone leik með splunkunýju og byrjendavænu forritunarmáli sem nefnist Swift! Búðu til hasarleik sem er innblásinn af Pok&eacute;mon og skrifaðu kóða til að kenna skrímslinu þínu nýjar hreyfingar. Þú lærir að nota breytur, aðferðir og hluti til að hjálpa skrímslinu þínu að sigra!'
-  touchdevelop_longdescription: Furðulegar teikningar, fljúgandi skrímsl, þyrlandi blóm... búðu til öpp á eigin tæki með TouchDevelop, sem er notendavænt þróunarumhverfi appa fyrir tæki á ferðinni. Keyrir á iPhone, Android, Windows, Windows Phone, Linux, Mac.
+  makegameswithus_longdescription: Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pokemon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!
+  touchdevelop_longdescription: 'The touch-friendly editor will guide you in creating pixel art, solving the bear puzzle, or making your own jumping bird game. '
   appinventor_longdescription: Stutt og skemmtileg kennslumyndskeið leiðbeina við gerð þriggja einfaldra appa fyrir Android síma eða spjaldtölvur. Þessi klukkustund kóðunar hentar bæði byrjendum og kunnáttusömum og áður en þú veist af getur þú farið að búa til þín eigin öpp. Ekki slæmt að geta deilt eigin sköpunarverkum með vinum! Þessi verkefni henta fyrir sjálfsnám eða fyrir kennara í bekkjakennslu.
   blockly_longdescription: 'Er ekkert eða hægvirkt internet samband? Halaðu niður Blockly kennsluefninu sem var undanfari Code.org kennsluefnisins - þetta er stök 3MB ZIP skrá sem kemst fyrir á hvaða tölvu sem er eða á minniskubbi'
   thinkersmith2_longdescription: Nemendur fræðast um að tákna og geyma stafi á tvenndarsniði sem byggir á gildunum á og af. Í lokin fær bekkurinn að tákna stafina sína á þennan hátt til að fara með heim.
@@ -486,7 +487,7 @@ is-IS:
   codeorg_beyond_name: Kynning á tölvunarfræði (13 ára)
   khan_beyond_name: Lærðu tölvuforritun
   tynker_beyond_name: Lærðu forritun heima
-  scratch_beyond_name: Búðu til sögur, leiki og hreyfimyndir
+  scratch_beyond_name: Virkjaðu sköpunargleðina með forritun
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
@@ -566,7 +567,7 @@ is-IS:
   kodable_beyond_platformtext: iPad
   scratchjr_beyond_platformtext: iPad
   hopscotch_beyond_platformtext: iPad
-  pocketcode_beyond_platformtext: Farandforrit
+  pocketcode_beyond_platformtext: Símaapp
   groklearning_beyond_platformtext: Nýjustu vafrar
   hacketyhack_beyond_platformtext: Uppsetning á skjáborðstölvu
   robomind_beyond_platformtext: Nýjustu vafrar, líka í farsímum
@@ -597,7 +598,7 @@ is-IS:
   codeorg_beyond_shortdescription: Lærðu að kóða með Mark Zuckerberg og Angry Birds!
   khan_beyond_shortdescription: Lærðu að teikna með JavaScript
   tynker_beyond_shortdescription: 'Skemmtilegt og grípandi námskeið fyrir börn í 3. - 7. bekk'
-  scratch_beyond_shortdescription: Create interactive games, stories, and animations.
+  scratch_beyond_shortdescription: Búðu til gagnvirka leiki, sögur og hreyfimyndir.
   lightbot_beyond_shortdescription: Leikur sem kennir forritunarhugtök
   codecademy_beyond_shortdescription: Lærðu JavaScript forritun, í vafra
   kodable_beyond_shortdescription: Skemmtilegur iPad leikur sem kennir hugtök í tölvuforritun
@@ -634,7 +635,7 @@ is-IS:
   codeorg_beyond_longdescription: 'Lærðu grunnhugtök tölvunarfræði með kubbaforritun. Þrjú 15 - 20 stunda námskeið sem blanda saman "ótengdum" stofuverkefnum án tölvu og leikjamiðuðum, sjálfstýrðum æfingum sem kynntar eru í gegnum myndbandsfyrirlestra með Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies. Þú lærir á lykkjur, skilyrði, algrím, föll og breytur.'
   khan_beyond_longdescription: Lærðu grunnatriði JavaScript forritunar með því að teikna skemmtilegar myndir með kóða sem þú skrifar. Gerðu það ein/einn eða með bekknum þínum!
   tynker_beyond_longdescription: Með Tynker er gaman og auðvelt að læra forritun. Hún er gerð sjónræn. Börnin búa til leiki og símaöpp með þvi að raða saman forritskubbum. Þau þurfa því ekki að kunna rithátt forritunarmáls. Börnin geta samstundis breytt hugmyndum í hreyfimyndasögur og stærðfræðileg mynstur. Þau læra með því að prófa og gera. Eftir því sem börnin læra grunnatriðin kynnir Tynker flóknari hugtök þ.á.m. forritun þar sem ritháttur skiptir máli.
-  scratch_beyond_longdescription: 'With Scratch, you can create your own interactive games, stories, animations &mdash; and share them with your friends. Get started by animating your name, creating a holiday card, or making a pong game.'
+  scratch_beyond_longdescription: 'Með Scratch getur þú búið til eigin gagnvirka leiki, sögur og hreyfimyndir &mdash; og deilt þeim með vinum þínum. Byrjaðu með að setja hreyfingu í nafnið þitt, búa til hátíðarkort eða búa til boltaleik.'
   lightbot_beyond_longdescription: Lærðu rökvísa hugsun í forritun, allt frá algjörri grunnforritun fyrir aldurshópinn 4+, í iOS eða Android (eða vefvafra). Lærðu að raða skipunum, greina mynstur og nota lykkjur!
   codecademy_beyond_longdescription: 'Codeacademy er gagnvirk, nemendastýrð kynning á grunnatriðum tölvunarfræði sem nýtir JavaScript og er notuð af tugum miljóna nemenda um allan heim. Við höfum gert okkar Klukkustund kóðunar að aðgengilegri upplifun  ásamt meðfylgjandi spurningum, skyggnum og lokaverkefni fyrir nemendur að enda á.'
   kodable_beyond_longdescription: Kodable er sjálfleiðbeinandi iPad leikur sem kynnir grunnatriði forritunar fyrir börnum frá 5 ára aldri. Best er að hafa kennara eða foreldri með, en ekki nauðsynlegt.

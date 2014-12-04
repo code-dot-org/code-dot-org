@@ -1,5 +1,6 @@
 {
   "actor":"учесник",
+  "alienInvasion":"Alien Invasion!",
   "backgroundBlack":"black",
   "backgroundCave":"cave",
   "backgroundCloudy":"cloudy",
@@ -214,7 +215,7 @@
   "size":"size",
   "setSprite":"подеси",
   "setSpriteN":"set actor {spriteIndex}",
-  "soundCrunch":"crunch",
+  "soundCrunch":"крц",
   "soundGoal1":"goal 1",
   "soundGoal2":"goal 2",
   "soundHit":"hit",

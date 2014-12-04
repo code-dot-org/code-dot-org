@@ -10,8 +10,8 @@
     font-weight:bold">plan your Hour of Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
-  n_have_learned_an_hoc: "<h1>#</h1><h3>-ek </h3<h2>KODETZE ORDU BAT&trade;</h2><h3>frogatu
-    dute</h3>"
+  n_have_learned_an_hoc: <h1>#</h1><h3>-ek </h3<h2>KODETZE ORDU BAT&trade;</h2><h3>frogatu
+    dute</h3>
   anybody_can_learn: Edozeinek ikasi dezake.
   learn_now: Ikasi orain
   petition_message: Edozein eskoletako edozein ikaslek konputazio zientziak ikasteko
@@ -52,7 +52,7 @@
     baldin-orduan aginduak, eta oinarrizko algoritmoak.
   all_ages: Adin guztiak
   beginner: Hasierako maila
-  n_participants: "# parte hartzaile"
+  n_participants: '# parte hartzaile'
   go: Joan
   thank_you_: Eskerrik asko!
   congratulations: Zorionak!
@@ -88,7 +88,7 @@
   beyond_an_hour: KODE ORDUTIK haratago >
   get_started: Hasi
   i_agree: Ados
-  participant_select: "- Aukeratu -"
+  participant_select: '- Aukeratu -'
   participant_student: Ikaslea
   participant_parent: Gurasoa
   participant_educator: Hezitzailea
@@ -106,7 +106,7 @@
   learn_next_level: Jarraitu hurrengo mailara
   learn_online: Probatu beste online kurtsoak
   learn_classes: Bilatu gertuko klaseak
-  hoc_is_here: "#KodeOrdua hemen dago - probatu! @codeorg"
+  hoc_is_here: '#KodeOrdua hemen dago - probatu! @codeorg'
   just_did_hoc: 'Oraintxe #KodeOrdua egin dut - Probatu! @codeorg'
   learn_hoc: Ikasi kode ordu bat
   beyond_hoc: Ordubetetik haratago
@@ -115,12 +115,12 @@
   boy: Mutila
   help_recruit_coders: Lagundu kodegiel gehiago zure talderako biltzen!
   help_recruit: Kodegile gehaigo biltzen lagundu!
-  lines_of_code: "<b># KODE LERRO</b> BAINO GEHIAGO IDATZIAK GAUR ARTE."
-  lines_of_code_alt: "<b>#</b> KODE LERRO IKASLEEK IDATZIAK"
+  lines_of_code: <b># KODE LERRO</b> BAINO GEHIAGO IDATZIAK GAUR ARTE.
+  lines_of_code_alt: <b>#</b> KODE LERRO IKASLEEK IDATZIAK
   who_has_done_hoc: 'Zeinek egin du #KodeOrdua? @codeorg'
   hoc_leaderboards: Kode orduko buruak
-  students_and_lines: "%{students} ikaslek egin dute ordubete kode eta students have
-    done the Hour of  %{lines} kode lerro idatzi dituzte."
+  students_and_lines: '%{students} ikaslek egin dute ordubete kode eta students have
+    done the Hour of  %{lines} kode lerro idatzi dituzte.'
   start_hoc: Hasi Kode Ordua orain
   contact_form_topic_press: Sakatu/media (elkarrizketa edo ahozko adostasuna)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
@@ -359,6 +359,7 @@
   more_resources_educators: More resources for teachers and educators
   participants: participants
   teachers_notes: Teacher's Notes
+  teachers_notes_hoc: 'Teachers: Read important educator notes here'
   previous: Previous
   next: Next
   older_systems: Tutorials that work on older systems
@@ -368,6 +369,7 @@
   mobile_devices: Tutorials for mobile devices
   frozen_name: Code with Anna and Elsa
   codeorg_name: Idatzi zure lehenengo programa informatkoa
+  codeintl_name: Idatzi zure lehenengo programa informatkoa
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: An introduction to JavaScript
   khanes_name: An introduction to JavaScript
@@ -389,7 +391,6 @@
   codespark_name: The Foos (pre-readers welcome)
   kodable_name: Kodable
   tynkerapp_name: Tynker - on tablets
-  hopscotch_name: 'Hopscotch: Code on your iPad'
   robomindnl_name: Program a virtual robot
   flappy_name: Make a Flappy game
   bitsbox_name: Bitsbox - make a game
@@ -402,6 +403,7 @@
   projguts_name: Rock, Paper, Scissors
   frozen_gradelevel: Ages 8+
   codeorg_gradelevel: Ages 4-104
+  codeintl_gradelevel: Ages 4-104
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Middle school +
   khanes_gradelevel: Middle school +
@@ -423,7 +425,6 @@
   codespark_gradelevel: Lehen Hezkuntza
   kodable_gradelevel: Lehen Hezkuntza
   tynkerapp_gradelevel: Ages 5-13
-  hopscotch_gradelevel: Middle school +
   robomindnl_gradelevel: Ages 8-13
   flappy_gradelevel: Ages 4-104
   bitsbox_gradelevel: Lehen Hezkuntza
@@ -436,6 +437,7 @@
   projguts_gradelevel: Ages 10-13
   frozen_platformtext: Modern browsers + tablets
   codeorg_platformtext: Modern browsers, smartphones, tablets
+  codeintl_platformtext: Modern browsers, smartphones, tablets
   thinkersmithspanish_platformtext: Unplugged
   khan_platformtext: Modern Web browsers
   khanes_platformtext: Modern Web browsers
@@ -457,7 +459,6 @@
   codespark_platformtext: iOS, Android (or web browser)
   kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, Android tablets
-  hopscotch_platformtext: iPad
   robomindnl_platformtext: Modern web browsers, Mobile web
   flappy_platformtext: Modern browsers, smartphones, tablets
   bitsbox_platformtext: Modern web browsers
@@ -471,6 +472,7 @@
   frozen_shortdescription: Let's use code to join Anna and Elsa as they explore the
     magic and beauty of ice.
   codeorg_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
+  codeintl_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Learn to draw in JavaScript
   khanes_shortdescription: Learn to draw in JavaScript
@@ -496,7 +498,6 @@
   kodable_shortdescription: A fun iPad game to teach computer programming concepts
   tynkerapp_shortdescription: Learn to code by solving fun puzzles and build your
     own mobile games.
-  hopscotch_shortdescription: Learn visual programming on an iPad
   robomindnl_shortdescription: Write code for a virtual robot
   flappy_shortdescription: Make your own game - Flappy Bird, Shark, or Submarine
   bitsbox_shortdescription: Code a series of apps to play and share, using real Javascript.
@@ -512,6 +513,10 @@
     magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
     and make a winter wonderland that you can then share with your friends!
   codeorg_longdescription: Learn the basic concepts of Computer Science with drag
+    and drop programming. This is a game-like, self-directed tutorial starring video
+    lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
+    repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
+  codeintl_longdescription: Learn the basic concepts of Computer Science with drag
     and drop programming. This is a game-like, self-directed tutorial starring video
     lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
     repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
@@ -591,9 +596,6 @@
     coding puzzles and learn programming concepts in each level. Personalize games
     with animated characters, multiple levels and rich props. Lots of fun activities
     to choose from!
-  hopscotch_longdescription: Student-guided tutorial on the iPad using the Hopscotch
-    programming language. Students will build games and apps for their iPad on their
-    iPad. Students can work individually or with friends (up to 3 per iPad).
   robomindnl_longdescription: 'Students learn the basics of programming by controlling
     their own virtual robot. The online course is fully self-contained with short
     presentations, movies, quizzes and automatic guidance/hints to help with the programming
@@ -953,8 +955,3 @@
     program because we believe play is a powerful teacher. Whether you're an educator
     or a parent, SPRK lessons give kids a fun crash course in programming robots while
     sharpening their skills in math and science.
-  codeintl_name: "Write your first computer program"
-  codeintl_gradelevel: "Ages 4-104"
-  codeintl_platformtext: "Modern browsers, smartphones, tablets"
-  codeintl_shortdescription: "Learn to code with Mark Zuckerberg and Angry Birds!"
-  codeintl_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages."

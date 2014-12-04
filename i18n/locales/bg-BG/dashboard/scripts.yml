@@ -40,8 +40,9 @@ bg:
           "Maze: Loops": 'Лабиринт: цикли'
           "Bee: Loops": 'Пчела: цикли'
           "Studio: Create a Story": 'Театрална лаборатория: Създаване на история'
-          description_short: Курс 1 е предназначен за малките читатели. Препоръчва за клас K-1.
           "Artist: Loops": 'Художник - цикли'
+          description_audience: Ages 4+ (pre-readers)
+          description_short: Course 1 is designed for early readers.
         course2:
           The Maze: Лабиринтът
           Suzi: Сузи
@@ -76,10 +77,11 @@ bg:
           "Bee: Debugging": 'Пчела: отстраняване на грешки'
           "Artist: Debugging": 'Художник: отстраняване на грешки'
           "Bee: Conditionals": 'Пчела: условия'
-          description_short: 'Курс 2 е предназначен за ученици, които могат да четат.  Препоръчва се за ученици от 2-5 клас.'
           "Artist: Sequence2": 'Художник: последователност 2'
           "Maze: Sequence2": 'Лабиринт: последователност 2'
           "Artist: Nested Loops": 'Художник: въвеждане на цикли'
+          description_audience: 'Ages  6+ (reading required)'
+          description_short: Course 2 is designed for students who can read.
         course3:
           The Maze: Лабиринтът
           "Studio: Create a Story": 'Театрална лаборатория: Създаване на история'
@@ -117,7 +119,6 @@ bg:
           "Farmer: While Loops": 'Фермер: повторения "докато"'
           "Bee: Nested Loops": 'Пчела:  въвеждане на цикли'
           "Bee: Debugging": 'Пчела: отстраняване на грешки'
-          description_short: 'Курс 3 е продължение на курс 2.  Препоръчва се за ученици в 4-5 клас.'
           Maze2: Лабиринт 2
           Artist2: Художник 2
           "Artist: Functions2": 'Художник: функции 2'
@@ -130,6 +131,8 @@ bg:
           "Bee: Debugging2": 'Пчела: отстраняване на грешки 2'
           "Artist: Patterns": 'Художник: модели'
           Songwriting: Писане на песен
+          description_audience: Ages 8+ (after Course 2)
+          description_short: Course 3 is a follow-up to Course 2.
         msm:
           title: Математика за Средното училище
           description: Контролно за отчитане на напредъкът по математика в средното училище.
@@ -146,7 +149,7 @@ bg:
           "Play Lab: Defining Variables": 'Театрална лаборатория: Определяне на променливите'
           The Design Recipe: Рецепта за дизайн
           "Artist: Defining Functions": 'Художник: Деиниране на функции'
-          "Play Lab: Defining Functions": 'Play Lab: Design Recipe'
+          "Play Lab: Defining Functions": 'Игрална лаборатория: Рецепта за дизайн'
           "Artist: Functions": 'Художник: функции'
           "Play Lab: Animation": 'Театрална лаборатория: анимация'
           Booleans: Booleans
@@ -162,23 +165,23 @@ bg:
           "Unplugged: Contracts": 'Ънплъгд: договори'
           "Eval: Writing Contracts": 'Оценка: Писане на договори'
           "Unplugged: The Design Recipe": 'Ънплъгд: Напиши рецепта'
-          "Eval: Defining Functions": 'Eval: Fast Functions'
-          "Eval: Functions": 'Eval: Design Recipe'
+          "Eval: Defining Functions": 'Оценка: Бързи функции'
+          "Eval: Functions": 'Оценка: Рецепта за дизайн'
           "Unplugged: Booleans": 'Ънплъгд: Booleans'
           "Unplugged: Conditionals and Piecewise Functions": 'Ънплъгд: Условия и Piecewise функции'
           "Eval: Conditionals": 'Оценка: Условия'
           "Unplugged: Collision Detection and the Distance Formula": 'Ънплъгд: Collision Detection и формула за разстояние'
           "Calc: Evaluation Blocks": 'Калколиране: Оценка блокове'
           "Unplugged: Video Games and Coordinate Planes": 'Ънплъгд: видео игрите и координатните системи'
-          "Eval: Boolean Operators": 'Eval: Boolean Operators'
-          Blocks to Math: Blocks to Math
-          "Play Lab: Defining Variables (Big Game)": 'Play Lab: Defining Variables (Big Game)'
-          "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
-          "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Big Game)'
-          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
-          "Eval: Fast Functions": 'Eval: Fast Functions'
-          "Play Lab: Design Recipe": 'Play Lab: Design Recipe'
-          "Eval: Design Recipe": 'Eval: Design Recipe'
+          "Eval: Boolean Operators": 'Оценка: Булеви оператори'
+          Blocks to Math: Блокове за математика
+          "Play Lab: Defining Variables (Big Game)": 'Игрална лаборатория: Дефиниране на променливи (голямата игра)'
+          "Play Lab: Animation (Big Game)": 'Игрална лаборатория: Анимация (голямата игра)'
+          "Play Lab: Boolean (Big Game)": 'Игрална лаборатория: Boolean(голямата игра)'
+          "Play Lab: Collision Detection (Big Game)": 'Игрална лаборатория: Collision Detection (голямата игра)'
+          "Eval: Fast Functions": 'Оценка: Бързи функции'
+          "Play Lab: Design Recipe": 'Игрална лаборатория: Рецепта за дизайн'
+          "Eval: Design Recipe": 'Оценка: Рецепта за дизайн'
         playlab:
           title: Театрална лаборатория
           description: Създайте история или направете игра с Театрална лаборатория!
@@ -197,13 +200,13 @@ bg:
         hourofcode:
           Maze: Лабиринт
           title: Час на Кодирането
-          description_short: Опитайте основите на компютърните науки с герои отAngry Birds, Plants vs. Zombies и Scrat от Ледена епоха!
           description: Опитайте основите на компютърните науки с герои отAngry Birds, Plants vs. Zombies и Scrat от Ледена епоха!
+          description_short: Try the basics of computer science with many fun characters!
         frozen:
           title: Кодиране с Анна и Елза
-          description_short: Нека да използваме кода, за да се присъединим към Анна и Елза, докато те опознават магията и красотата на леда. Вие ще създадете снежинки и модели в градината на своята зимна приказка, която след това можете да споделите с приятелите си!
           description: Нека да използваме кода, за да се присъединим към Анна и Елза, докато те опознават магията и красотата на леда. Вие ще създадете снежинки и модели в градината на своята зимна приказка, която след това можете да споделите с приятелите си!
           Artist: Художник
+          description_short: 'Нека да използваме кода за да се присъединим към Анна и Елза, и заедно с тях опознаем  магията и красотата на леда.'
         course4:
           description_short: Учениците, изучаващи курс 4 трябва да са взели вече курсове 2 и 3.
           description: Курс 4 е предназначен за ученици, които са минали курс 2 и 3. Учениците ще задълбочат знанията си по програмиране, получени в предишни курсове, за да вземат гъвкави решения при по-сложни проблеми. До края на този курс учениците ще създават интерактивни истории и игри, които да могат да споделят с приятели. Препоръчва се за ученици от 4-8 клас.
@@ -232,6 +235,7 @@ bg:
           Farmer Binary: Фермер двоичен код
           Maze and Bee: Лабиринт и Пчела
           Artist Binary: Художник Бинарен код
+          description_audience: Ages 10+ (after Course 3)
         Course4pre:
           description_short: Кратък курс за концепциите, предназначен за ученици, които не са взели курс 2 и 3.
           Course 4 Prerequisite: Курс 4 предпоставка (необходимо условие)

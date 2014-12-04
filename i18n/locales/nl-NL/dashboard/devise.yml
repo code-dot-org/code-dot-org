@@ -39,7 +39,7 @@ nl:
       update_needs_confirmation: Je account is bijgewerkt, maar je moet je nieuwe email-adres nog bevestigen. Check je email en klik op de bevestigingslink om je nieuwe adres te bevestigen.
       updated: Je account is bijgewerkt.
     sessions:
-      signed_in: Je bent ingelogd.
+      signed_in: ""
       signed_out: Je bent uitgelogd.
     unlocks:
       send_instructions: Binnen een paar minuten krijg je een email met uitleg over het deblokkeren van je account.

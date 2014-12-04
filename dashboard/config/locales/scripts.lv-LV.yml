@@ -6,7 +6,7 @@
           'Jigsaw: Learn to drag and drop': 'Puzle: Mācies vilkt un nomest'
           The Maze: Labirints
           Multi: Multi
-          Match: Sērkociņš
+          Match: Sakrīt
           Math Image: Matemātikas attēls
           title: Testa kurss
           description: Tikai iekšējs testa kurss.
@@ -14,16 +14,16 @@
           'Jigsaw: Learn to drag and drop': 'Puzle: Mācies vilkt un nomest'
           'Maze: Sequence': 'Labirints: secība'
           'Maze: Debugging': 'Labirints: atkļūdošana'
-          'Artist 1: Intro': 'Mākslineiks 1: Ievads'
+          'Artist 1: Intro': 'Mākslinieks 1: Ievads'
           Artists 2: Mākslinieks 2
-          Spelling Bee: Pareizrakstības bite
+          Spelling Bee: Burtošanas bite
           Spelling Bee not blockly: Burtošanas bite nav blokveida
           'Bee 1: Intro': 'Bite 1: Ievads'
           'Maze 2: Loops': 'Labirints 2: cikli'
           'Bee 2: Loops': 'Bite 2: cikli'
-          Multi & Match: Pieaugošs un sērkociņš
+          Multi & Match: Multi un sakritība
           K-1 Flappy: K-1 Flapijs
-          Flappy non blockly: Flapijam nav bloku
+          Flappy non blockly: Flappy nevis blockly
           title: Kurss 1
           Artist 2: Mākslinieks 2
           Happy Maps: Laimīgās kartes
@@ -45,9 +45,10 @@
           'Maze: Loops': 'Labirints: Cikli'
           'Bee: Loops': 'Bite: Cikli'
           'Studio: Create a Story': 'Spēļu laboratorija: izvedot stāstu'
+          'Artist: Loops': 'Mākslinieks: cikli'
+          description_audience: Ages 4+ (pre-readers)
           description_short: Kurss 1 ir radīts jaunākiem lasītājiem. Ieteicams klasēm
             K-1.
-          'Artist: Loops': 'Mākslinieks: cikli'
         course2:
           The Maze: Labirints
           Suzi: Suzi
@@ -60,7 +61,7 @@
           Flappy: Flapijs
           title: Kurss 2
           Bee Loops: 'Bite: Cilpas'
-          Artist Functions: Izpildītāja funkcijas
+          Artist Functions: Mākslinieks funkcijas
           The Artist Debugging: Mākslinieka atkļūdošana
           Bee Debugging: Bites atkļūdošana
           Bee Functions: Bites funkcijas
@@ -69,7 +70,7 @@
           'Real-life Algorithms: Paper Planes': 'Reālās dzīves algoritmi: Papīra lidmašīnas'
           Getting Loopy: Kļūst ciklisks
           Relay programming: Releju programmēšana
-          Conditionals: Kondicionālis
+          Conditionals: Sazarojumi
           Binary Bracelets: Binārās aproces
           The Big Event: Lielais notikums
           Your Digital Footprint: Tavs digitālais nospiedums
@@ -85,28 +86,29 @@
           'Bee: Debugging': 'Bite: atkļūdošana'
           'Artist: Debugging': 'Mākslinieks: atkļūdošana'
           'Bee: Conditionals': 'Bite: nosacījumi'
-          description_short: 2. kurss ir veidots skolēniem, kas prot lasīt. Iteicams
-            no 2- 5. klasei.
           'Artist: Sequence2': 'Māsklinieks: secība 2'
           'Maze: Sequence2': 'Labirints: secība 2'
-          'Artist: Nested Loops': Mākslinieku ligzdoti cikli
+          'Artist: Nested Loops': 'Mākslinieks: Cikls ciklā'
+          description_audience: Ages  6+ (reading required)
+          description_short: 2. kurss ir veidots skolēniem, kas prot lasīt. Iteicams
+            no 2- 5. klasei.
         course3:
           The Maze: Labirints
           'Studio: Create a Story': 'Spēļu laboratorija: izvedot stāstu'
           The Artist: Mākslinieks
           title: 3. kurss
-          Artist Functions: Izpildītāja funkcijas
+          Artist Functions: Mākslinieks funkcijas
           Artist For Loops: Māsklinieks cikliem
-          Artist Nested Loops: Mākslinieku ligzdoti cikli
+          Artist Nested Loops: Mākslinieks Cikls ciklā
           Bee Conditionals: Bites nosacījumi
-          Bee Nested Loops: Bites ligzdotas cilpas
+          Bee Nested Loops: Bites Cikls ciklā
           Bee Debuggin: Bites atkļūdošana
           Bee Debugging: Bites atkļūdošana
           Bee Functions: Bites funkcijas
           Artist Functions with Params: Izpildītāja funkcijas ar parametriem
           Bounce: Atlekt
           Maze Conditionals: Labirinta nosacījums
-          Artist Functions with Parameters: Izpildītāja funkcijas ar parametriem
+          Artist Functions with Parameters: Mākslinieks Funkcijas ar parametriem
           Computational Thinking: Algoritmiska domāšana
           Functional Suncatchers: funkcionālie saulķērāji
           Songwriting Parameters: Dziesmu rakstīšanas parametri
@@ -114,55 +116,56 @@
           Internet: Internets
           Crowdsourcing: Pūļa ieguve
           Digital Citizenship: Digitālā pilsonība
-          Farmer - While Loops: 'Lauksaimnieks: Kamēr cilpas'
-          description: 3. kurss ir paredzēts skolniekiem, kas ir pabeiguši 2. kursu.
-            Skolnieki vairāk iedziņinās programmēšanas tēmās, ar kurām iepazinās iepriekšējos
-            kurso, lai atrastu vairāk atbildes grūtākām problēmām. Šī kursa beigās,
-            skolnieki izveido interaktīvus stāstus un spēles, lai dalītos ar pārējiem.
+          Farmer - While Loops: 'Lauksaimnieks: Nosacījuma cikli'
+          description: 3. kurss ir paredzēts skolēniem, kas ir pabeiguši 2. kursu.
+            Skolēni vairāk iedziļinās programmēšanas tēmās, ar kurām iepazinās iepriekšējos
+            kursos, lai atrastu vairāk atbildes grūtākām problēmām. Šī kursa beigās,
+            skolēni izveido interaktīvus stāstus un spēles, lai dalītos ar pārējiem.
             Ieteicams no 4.-5. klasei.
           'Studio: Create a Game': 'Spēļu laboratorija: Izveidot spēli'
           Maze: Labirints
-          Artist: Izpildītājs
-          'Artist: Functions': Izpildītāja funkcijas
+          Artist: Mākslinieks
+          'Artist: Functions': 'Mākslinieks: Funkcijas'
           'Bee: Functions': Bites funkcijas
           'Bee: Conditionals': 'Bite: nosacījumi'
           'Maze: Conditionals': Labirinta nosacījums
-          'Artist: Nested Loops': Mākslinieku ligzdoti cikli
-          'Farmer: While Loops': 'Lauksaimnieks: Kamēr cilpas'
-          'Bee: Nested Loops': Bites ligzdotas cilpas
+          'Artist: Nested Loops': 'Mākslinieks: Cikls ciklā'
+          'Farmer: While Loops': 'Lauksaimnieks: Nosacījuma cikli'
+          'Bee: Nested Loops': 'Bite: Nosacījuma cikli'
           'Bee: Debugging': 'Bite: atkļūdošana'
-          description_short: 3. kurss ir 2. kursa turpinājums. ieteicams no 4.-5.
-            klasei.
           Maze2: Labirints 2
           Artist2: Māklsinieks 2
-          'Artist: Functions2': Izpildītāja funkcijas 2
+          'Artist: Functions2': 'Mākslinieks: Funkcijas 2'
           'Bee: Functions2': Bites funkcijas 2
           'Bee: Conditionals2': Bites nosacījumi 2
           'Maze: Conditionals2': Labirinta nosacījumi 2
-          'Artist: Nested Loops2': Mākslinieku ligzdoti cikli 2
+          'Artist: Nested Loops2': Mākslinieks Cikls ciklā 2
           'Farmer: While Loops2': 'Lauksaimnieks: Kamēr cilpas 2'
           'Bee: Nested Loops2': Bites ligzdotas cilpas 2
           'Bee: Debugging2': Bites atkļūdošana 2
-          'Artist: Patterns': 'Izpildītājs: paraugi'
-          Songwriting: Songwriting
+          'Artist: Patterns': 'Mākslinieks: raksti'
+          Songwriting: Dziesmu rakstīšana
+          description_audience: Ages 8+ (after Course 2)
+          description_short: 3. kurss ir 2. kursa turpinājums. ieteicams no 4.-5.
+            klasei.
         msm:
           title: Vidusskolas matemātika
           description: Notiek privātie darbi pamatskolas matemātikai.
           Graph Paper Programming: Rūtiņpapīra programmēšana
           Assessments: Novērtējumi
-          Unit 1: 1. vienība
-          Unit 2: 2. vienība
+          Unit 1: 1. nodaļa
+          Unit 2: 2. nodaļa
           Ninja Cat and the Coordinate Plane: Kaķis nindzja un koordinātu plakne
           'Calc: Circles of Evaluation': 'Kalkulators: vērtēšanas apļi'
-          'Artist: Strings and Images': 'Izpildītājs: simbolu virkne un attēli'
+          'Artist: Strings and Images': 'Mākslinieks: simbolu virkne un attēli'
           Contracts: Līgumi
-          'Artist: Writing Contracts': 'Izpildītājs: Rakstiski līgumi'
+          'Artist: Writing Contracts': 'Mākslinieks: apraksta veidošana'
           'Calc: Defining Variables': 'Kalkulātors: mainīgo definēšana'
           'Play Lab: Defining Variables': 'Spēļu laboratorija: mainīgo definēšana'
           The Design Recipe: Dizaina recepte
           'Artist: Defining Functions': 'Izpildītājs: definējošas funkcijas'
-          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
-          'Artist: Functions': Izpildītāja funkcijas
+          'Play Lab: Defining Functions': 'Spēlu laboratorija: dizaina risinājums'
+          'Artist: Functions': 'Mākslinieks: Funkcijas'
           'Play Lab: Animation': 'Spēļu laboratorija: animācijas'
           Booleans: Booleans
           'Play Lab: Booleans': 'Spēles laboratorija: Būls'
@@ -179,37 +182,39 @@
           'Unplugged: Contracts': 'Atvienots: līgumi'
           'Eval: Writing Contracts': 'Vērtēšana: Rakstiski līgumi'
           'Unplugged: The Design Recipe': 'Atvienots: Dizaina recepte'
-          'Eval: Defining Functions': 'Eval: Fast Functions'
-          'Eval: Functions': 'Eval: Design Recipe'
+          'Eval: Defining Functions': 'Vērtēšana: ātrās funkcijas'
+          'Eval: Functions': 'Vērtēšana: dizaina risinājums'
           'Unplugged: Booleans': 'Atvienots: Būls'
           'Unplugged: Conditionals and Piecewise Functions': 'Atvienots: nosacījumi
             un hibrīdfunkcijas'
           'Eval: Conditionals': 'Vērtēšana: nosacījumi'
           'Unplugged: Collision Detection and the Distance Formula': 'Atvienots: Sadursmes
             atklāšana un distances formula'
-          'Calc: Evaluation Blocks': 'Kalkulātors: Novērtēšanas bloki'
+          'Calc: Evaluation Blocks': 'Kalkulators: Novērtēšanas bloki'
           'Unplugged: Video Games and Coordinate Planes': 'Atvienots: Videospēles
             un koordinātu plaksnes'
-          'Eval: Boolean Operators': 'Eval: Boolean Operators'
-          Blocks to Math: Blocks to Math
-          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Defining Variables
-            (Big Game)'
-          'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
-          'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
-          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
-            (Big Game)'
-          'Eval: Fast Functions': 'Eval: Fast Functions'
-          'Play Lab: Design Recipe': 'Play Lab: Design Recipe'
-          'Eval: Design Recipe': 'Eval: Design Recipe'
+          'Eval: Boolean Operators': 'Vērtēšana: būla operatori'
+          Blocks to Math: matemātiskie bloki
+          'Play Lab: Defining Variables (Big Game)': 'Spēlu laboratorija: mainīgo
+            definēšana (liela spēle)'
+          'Play Lab: Animation (Big Game)': 'Spēlu laboratorija: animācija (liela
+            spēle)'
+          'Play Lab: Boolean (Big Game)': 'Spēļu laboratorija: būla operatori (liela
+            spēle)'
+          'Play Lab: Collision Detection (Big Game)': 'Spēlu laboratorija: sadursmes
+            noteikšana (liela spēle)'
+          'Eval: Fast Functions': 'Vērtēšana: ātrās funkcijas'
+          'Play Lab: Design Recipe': 'Spēlu laboratorija: dizaina risinājums'
+          'Eval: Design Recipe': 'Vērtēšana: dizaina risinājums'
         playlab:
           title: Spēles laboratorija
           description: Izveidot stāstu vai spēli ar Spēles laboratoriju!
           Play Lab: Spēles laboratorija
           description_short: Izveidot stāstu vai spēli ar Spēles laboratoriju!
         artist:
-          title: Izpildītājs
+          title: Mākslinieks
           description: Uzzīmēt foršus attēlus un dizainus ar Izpildītāju!
-          Artist: Izpildītājs
+          Artist: Mākslinieks
           description_short: Uzzīmēt foršus attēlus un dizainus ar Izpildītāju!
         scrat:
           title: Skrets
@@ -219,26 +224,25 @@
         hourofcode:
           Maze: Labirints
           title: Programmēšanas stunda
+          description: Mēģiniet datorzinātņu pamatus ar tēliem no dusmīgajiem putniem,
+            augiem pret zombijiem un Skretu no Ledus laikmeta!
           description_short: Mēģiniet datorzinātņu pamatus ar tēliem no dusmīgajiem
             putniem, augi pret zombijiem un Skretu no Ledus laikmeta!
-          description: Mēģiniet datorzinātņu pamatus ar tēliem no dusmīgajiem putniem,
-            augi pret zombijiem un Skretu no Ledus laikmeta!
         frozen:
           title: Programmē ar Annu un Elzu
-          description_short: Izmantosim kodu, lai piebiedrotos Annai un Elzai pētīt
-            ledus burvību un skaistumu. Tu izdveidosi sniegprāslas un paraugus slidojot
-            un taisot Ziemes brīnumpasauli, ar kuru pēc tam vari dalīties starp draugiem!
           description: Izmantosim kodu, lai piebiedrotos Annai un Elzai pētīt ledus
             burvību un skaistumu. Tu izdveidosi sniegprāslas un paraugus slidojot
-            un taisot Ziemes brīnumpasauli, ar kuru pēc tam vari dalīties starp draugiem!
-          Artist: Izpildītājs
+            un taisot ziemas brīnumpasauli, ar kuru pēc tam vari dalīties ar draugiem!
+          Artist: Mākslinieks
+          description_short: Kodē, lai kopā ar Annu un Elzu iepazītu ledus skaistumu
+            un burvību.
         course4:
           description_short: Skolēniem, kas pilda 4. kursu vajadzēja pabeigt 2. un
             3. kursu.
-          description: 3. kurss ir paredzēts skolniekiem, kas ir pabeiguši 2. kursu.
-            Skolnieki vairāk iedziņinās programmēšanas tēmās, ar kurām iepazinās iepriekšējos
+          description: 3. kurss ir paredzēts skolnēniem, kas ir pabeiguši 2. kursu.
+            Skolēni vairāk iedziļinās programmēšanas tēmās, ar kurām iepazinās iepriekšējos
             kursos, lai atrastu vairāk atbildes grūtākām problēmām. Šī kursa beigās,
-            skolnieki izveido interaktīvus stāstus un spēles, lai dalītos ar pārējiem.
+            skolēni izveido interaktīvus stāstus un spēles, lai dalītos ar pārējiem.
             Ieteicams no 4.-5. klasei.
           'Artist: Variables': 'Izpildītājs: Mainīgie'
           'Bee: For Loops': 'Bite: Cikls ar skaitītāju'
@@ -249,62 +253,63 @@
           'Play Lab: Functions with Parameters': 'Spēles laboratorija: Funckijas ar
             parametriem'
           'Bee: Functions with Parameters': 'Bite: Funckijas ar parametriem'
-          'Artist: For Loops': 'Izpildītājs: Cikls ar skaitītāju'
-          'Play Lab: For Loops': 'Spēles laboratorija: "par" cilpas'
-          'Artist: Functions': Izpildītāja funkcijas
-          'Artist: Functions with Paraqmeters': 'Izpildītājs: Funckijas ar parametriem'
+          'Artist: For Loops': 'Mākslinieks: Cikls ar skaitītāju'
+          'Play Lab: For Loops': 'Spēles laboratorija: Cikls ar skaitītāju'
+          'Artist: Functions': 'Mākslinieks: Funkcijas'
+          'Artist: Functions with Paraqmeters': 'Mākslinieks: Funckijas ar parametriem'
           'Unplugged: Tangrams': 'Atvienots: Tangrams'
-          Artist: Izpildītājs
+          Artist: Mākslinieks
           Bee: Bite
           'Unplugged: Envelope Variables': 'Atvienots: Aplokšņu mainīgie'
           'Unplugged: Madlibs': 'Atvienots: Madlibs spēle'
           'Unplugged: For Loop Fun': 'Atvienots: jautrība ar "for" cikliem'
           'Unplugged: Songwriting with Parameters': 'Atvienots: Dziesmu rakstīšana
             ar parametriem'
-          'Artist: Functions with Parameters': 'Izpildītājs: Funckijas ar parametriem'
+          'Artist: Functions with Parameters': 'Mākslinieks: Funckijas ar parametriem'
           'Unplugged: Binary': 'Atvienots: binārs'
           Bee Binary: Bites binārs
-          Farmer Binary: Lauksaimniecības binārs
+          Farmer Binary: 'Fermeris: binārs'
           Maze and Bee: Labirints un Bite
-          Artist Binary: Binārais izpildītājs
+          Artist Binary: 'Mākslinieks: Binārais'
+          description_audience: Ages 10+ (after Course 3)
         Course4pre:
-          description_short: "Īss jēdzienu kopsavilkums skolēniekm, kas nav pildījuši
-            2. un 3. kursu."
+          description_short: Īss jēdzienu kopsavilkums skolēniem, kas nav pildījuši
+            2. un 3. kursu.
           Course 4 Prerequisite: 4. kursa priekšnoteikums
           'Maze: Sequence': 'Labirints: secība'
           'Artist: Sequence': 'Māsklinieks: secība'
           'Artist: Loops': 'Mākslinieks: cikli'
           'Bee: Conditionals': 'Bite: nosacījumi'
-          'Artist: Nested Loops': Mākslinieku ligzdoti cikli
-          'Farmer: While Loops': 'Lauksaimnieks: Kamēr cilpas'
-          'Bee: Nested Loops': Bites ligzdotas cilpas
-          'Artist: Functions': Izpildītāja funkcijas
+          'Artist: Nested Loops': 'Mākslinieks: Cikls ciklā'
+          'Farmer: While Loops': 'Lauksaimnieks: Nosacījuma cikli'
+          'Bee: Nested Loops': 'Bite: Nosacījuma cikli'
+          'Artist: Functions': 'Mākslinieks: Funkcijas'
           'Bee: Debugging': 'Bite: atkļūdošana'
         course4pre:
-          description_short: "Īss jēdzienu kopsavilkums skolēniekm, kas nav pildījuši
-            2. un 3. kursu."
+          description_short: Īss jēdzienu kopsavilkums skolēniem, kas nav pildījuši
+            2. un 3. kursu.
           Course 4 Prerequisite: 4. kursa priekšnoteikums
           'Maze: Sequence': 'Labirints: secība'
           'Artist: Sequence': 'Māsklinieks: secība'
           'Artist: Loops': 'Mākslinieks: cikli'
           'Bee: Conditionals': 'Bite: nosacījumi'
-          'Artist: Nested Loops': Mākslinieku ligzdoti cikli
-          'Farmer: While Loops': 'Lauksaimnieks: Kamēr cilpas'
-          'Bee: Nested Loops': Bites ligzdotas cilpas
-          'Artist: Functions': Izpildītāja funkcijas
+          'Artist: Nested Loops': 'Mākslinieks: Cikls ciklā'
+          'Farmer: While Loops': 'Lauksaimnieks: Nosacījuma cikli'
+          'Bee: Nested Loops': 'Bite: Nosacījuma cikli'
+          'Artist: Functions': 'Mākslinieks: Funkcijas'
           'Bee: Debugging': 'Bite: atkļūdošana'
         Course4pre (Case Conflict):
-          description_short: "Īss jēdzienu kopsavilkums skolēniekm, kas nav pildījuši
-            2. un 3. kursu."
+          description_short: Īss jēdzienu kopsavilkums skolēniem, kas nav pildījuši
+            2. un 3. kursu.
           Course 4 Prerequisite: 4. kursa priekšnoteikums
           'Maze: Sequence': 'Labirints: secība'
           'Artist: Sequence': 'Māsklinieks: secība'
           'Artist: Loops': 'Mākslinieks: cikli'
           'Bee: Conditionals': 'Bite: nosacījumi'
-          'Artist: Nested Loops': Mākslinieku ligzdoti cikli
-          'Farmer: While Loops': 'Lauksaimnieks: Kamēr cilpas'
-          'Bee: Nested Loops': Bites ligzdotas cilpas
-          'Artist: Functions': Izpildītāja funkcijas
+          'Artist: Nested Loops': 'Mākslinieks: Cikls ciklā'
+          'Farmer: While Loops': 'Lauksaimnieks: Nosacījuma cikli'
+          'Bee: Nested Loops': 'Bite: Nosacījuma cikli'
+          'Artist: Functions': 'Mākslinieks: Funkcijas'
           'Bee: Debugging': 'Bite: atkļūdošana'
         usability:
           Intro: Ievads

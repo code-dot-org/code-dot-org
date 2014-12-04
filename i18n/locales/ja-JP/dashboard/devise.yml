@@ -39,7 +39,7 @@ ja:
       update_needs_confirmation: あなたのアカウントは更新されましたが、新しいメールアドレスを照合する必要があります。あなたのメールをチェックして、新しいメールアドレスの確認を完了するリンクをクリックしてください。
       updated: あなたのアカウントを更新しました。
     sessions:
-      signed_in: 正しくサインインしました。
+      signed_in: ""
       signed_out: 正しくサインアウトしました。
     unlocks:
       send_instructions: 数分であなたのアカウントのロックを解除する方法が書かれたメールが届きます。

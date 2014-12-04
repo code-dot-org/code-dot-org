@@ -71,4 +71,4 @@
       not_locked: não foi bloqueado
       not_saved:
         one: '1 erro impede esse %{resource} de ser salvo:'
-        other: "%{count} erros impedem esse %{resource} de ser salvo:"
+        other: '%{count} erros impedem esse %{resource} de ser salvo:'

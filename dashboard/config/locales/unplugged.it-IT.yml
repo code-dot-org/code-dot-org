@@ -281,20 +281,20 @@
           possa memorizzare informazioni ancora più complesse (ad esempio immagini
           e colori) in formato binario.
       VideoGamesCoordinatePlanes:
-        title: Video Games and Coordinate Planes
-        desc: Video Games and Coordinate Planes lesson description
+        title: Videogiochi e Piani Cartesiani
+        desc: Descrizione della lezione Videogiochi e Piani Coordinati
       Contracts:
         title: Contratti
-        desc: Contracts unplugged lesson description
+        desc: Descrizione della lezione Contratti offline
       DesignRecipe:
         title: La Ricetta della Progettazione
-        desc: Design Recipe lesson description
+        desc: Descrizione della lezione Progettazione di Ricette
       Booleans:
         title: Valori booleani
-        desc: Booleans lesson description
+        desc: Descrizione della lezione sui Booleani
       ConditionalsPiecewiseFunctions:
         title: Istruzioni Condizionali e Funzioni a Tratti
-        desc: Conditionals and Piecewise Functions lesson description
+        desc: Descrizione della lezione sui Condizionali e le Funzioni a Tratti
       CollisionDetection:
-        title: Collision Detection
-        desc: Collision Detection lesson description
+        title: Rilevamento delle collisioni
+        desc: Descrizione della lezione sulla Rilevazione delle collisioni

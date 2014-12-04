@@ -21,8 +21,8 @@ ar:
   welcome_back: 'أهلا بكم من جديد, %{name}'
   add_teacher_form:
     code:
-      label: 'Add a teacher:'
-      placeholder: Section Code (ABCDEF)
+      label: 'أضف مدرسا:'
+      placeholder: مقطع التعليمات البرمجية (ABCDEF)
     submit: إضف معلم
   add_hint_form:
     placeholder: الرجاء إدخال التلميح الخاص بك هنا
@@ -73,7 +73,7 @@ ar:
     gender: الجنس (اختياري)
     birthday: تاريخ الميلاد (اختياري)
     age: العمر
-    user_type: Are you a student or teacher?
+    user_type: هل أنت طالب أو مدرس؟
     submit: تسجيل
     teacher: هل أنت معلم؟
     valid_username: متاح!
@@ -114,13 +114,13 @@ ar:
   welcome_email:
     subject: أنضم إلى صفي (في Code.org)
     body: |
-      انقر على الرابط أدناه للتسجيل في دروس علوم الكمبيوتر في Code.org ( مثل "معلمك الخاص"):
-
+      انقر على الرابط أدناه للتسجيل في دروس علوم الكمبيوتر في Code.org ( مثل "معلمك الخاص"): 
+      
       %{link}
-
-
+      
+      
       الدروس تجلب لكم المتعة لانها تعمل بشكل مرئي وتقدم لكم مجموعة من المفاهيم الأساسية لعلوم الكمبيوتر الآلي باستخدام التبسيط  والارشادات. تعلم البرمجة من بيل جيتس ومارك زوكربيرج، الطيور الغاضبة والنباتات ضد الزومبيز! :-)
-
+      
       %{name}
   follower:
     invite_sent: تم إرسال الدعوة
@@ -211,8 +211,8 @@ ar:
       finished_hoc: 'لقد انهيت ساعة من البرمجة '
       sign_in_to_save: قم بتسجيل الدخول لحفظ التقدم
       free_play:
-        playlab: Make an App
-        artist: Draw Something
+        playlab: اصنع تطبيقا
+        artist: ارسم شيئا
     user:
       classroom: الصفحة الرئيسية المعلم
       label: 'مرحباً %{username}'
@@ -309,8 +309,8 @@ ar:
     classroom_activity: نشاط موصول
   home:
     title: ستوديو كود
-    all_courses: Overview of Courses 1, 2, and 3
-    lesson_plans: Lesson plans
+    all_courses: مراجعة للدروس 1,2, و 3
+    lesson_plans: خطط الدرس
     signin_message: 'مسجل مسبقاً؟ %{link}'
     student_reg_link: تسجيل كطالب
     teacher_reg_link: تسجيل كمعلم
@@ -337,20 +337,22 @@ ar:
     test_videos_help: إختبر مشغل الفيديو الجديد الخاص بنا في مدرستك
     try_beta_courses: جديدنا ! جرب اللآن النسخة التجريبية من دورتنا التدريبية لطلاب K-5
     use_as_teacher: استخدم هذا الموقع كمدرس
-    heading_elementary: '<h2>20 ساعة من الدورات لـ</h2><h1>طلاب المرحلة الإبتدائية</h1>'
+    heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
+    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
     heading_apps: '<h2>المتعة</h2><h1>للجميع</h1>'
     heading_legacy: '<h2>دورتنا عامة لـ</h2><h1>جميع الأعمار</h1>'
-    your_gallery: Gallery
+    your_gallery: معرض
   gender:
     male: ذكر
     female: أنثى
     none: أفضل عدم الإجابة
   user_type:
     student: طالب
-    teacher: Teacher
+    teacher: المدرس
   footer:
     help_from_html: ساعد مهندسين من جوجل ومايكروسوفت والفيس بوك وتويتر في إنشاء هذه البرنامج التعليمية.
-    art_from_html: 'لعبة الطيور الغاضبة &trade;&copy;Angry Birds عام  2009 - 2014 جميع الحقوق محفوظة ريفو الترفيهية المحدودة. <br/>لعبة النباتات والزومبيس &trade;&copy;Plants vs. Zombie  عام 2014 جميع الحقوق محفوظة لشركة الفنون الإلكترونية.'
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
+    powered_by_aws: Powered by Amazon Web Services
     feedback: توفير التغذية الرجعية
     translate: ساعدنا على ترجمة لغتك
     support: الدعم
@@ -364,7 +366,7 @@ ar:
     teacher: انظر الى الحل
     auth_error: انت غير مسموح لك برؤية الحل.
     submit: تحديث موقع الفنان
-    direction: Start Direction (in degrees)
+    direction: بدء الاتجاه (بالدرجات)
   video:
     tab: فيديو.
     notes: لا يوجد فيديو؟ اظهر الملاحظات.
@@ -384,22 +386,22 @@ ar:
   try_reloading: حاول اعادة تحميل الصفحة
   next_stage: انتهى! استمر في المرحلة القادمة
   download_pdf: افتح خطة الدرس
-  lesson_plan: Lesson Plan
+  lesson_plan: خطة الدرس
   view_lesson_plan: عرض خطة الدرس
   pdf_download: تحميل ملف بي دي اف
-  download_coming_soon: Downloadable activity coming soon.
-  video_coming_soon: Video Coming Soon!
+  download_coming_soon: 'قريبا أنشطة قابلة للتحميل. '
+  video_coming_soon: قريبا فيديو!
   share_code:
     title: "انقر فوق 'تشغيل' لرؤية البرنامج الخاص بي في العمل"
     bounce_og_title: تحقق من لعبة الارتداد الخاصة بي
     flappy_og_title: تحقق من لعبة Flappy
     studio_og_title: تحقق من مختبر اللعب خاصتي
-    check_out_what_i_made: Check out what I made
+    check_out_what_i_made: انظر ما الذي صنعته
     og_description: كتبت المدونة نفسي بCode.org
-    phone_number_not_allowed: It looks like there is a phone number in it. Try changing the text.
-    address_not_allowed: It looks like there is an address in it. Try changing the text.
-    email_not_allowed: It looks like there is an email in it. Try changing the text.
-    profanity_not_allowed: It looks like there is profanity in it. Try changing the text.
+    phone_number_not_allowed: يبدو أنه يحتوي على رقم هاتف. حاول تغيير النص.
+    address_not_allowed: يبدو أنه يحتوي على عنوان. حاول تغيير النص.
+    email_not_allowed: يبدو أنه يحتوي على بريد إلكتروني. حاول تغيير النص.
+    profanity_not_allowed: 'يبدو أنه يحتوي على ألفاظ نابية. حاول تغيير النص. '
   builder:
     created: لقد أنشأت برنامج نصي جديد.
     destroyed: أنت دمرت البرنامج النصي.
@@ -422,30 +424,32 @@ ar:
       title: دورة مقدمة
       body: حاول 20 ساعة دورة مقدمة لعلوم الحاسب الآلي.
     hoc2014:
-      try_new_tutorial: Try our new Hour of Code tutorial in beta
-      try_frozen: Artist with Anna and Elsa, from Frozen
+      try_new_tutorial: 'جرب درس ساعة الكود الجديد ب"بيتا"'
+      try_frozen: الفنان مع آنا و إنسا, من Frozen
     gallery:
-      title: Gallery
-      body: View a gallery of app and artist images created by our users
+      title: معرض
+      body: 'عرض معرض صور "تطبيق" و "الفنان" التي تم إنشاؤها من قبل مستخدمينا'
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: ووجه الطلاب هذه بالكود!
-    students_made_these_with_code: Students made these with code!
+    students_made_these_with_code: طلاب صنعوا هذا بالكود!
     picture_count: 'في الماضي <b>% {يوما}</b> أيام، قد رسمها الطلاب الصور <b>% {عد}</b> بكتابة برامج الكمبيوتر الخاصة بهم. اضغط على الصور لمشاهدة كل البرنامج في العمل.'
-    activity_count: 'In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action.'
+    activity_count: 'في <b>%{days}</b> خلال الأيام الماضية، جعلت الطلاب تطبيقات <b>%{count}</b> والصور بكتابة برامج الكمبيوتر الخاصة بهم. انقر فوق الصور والمزيد من الصور لمشاهدة كل البرنامج في العمل.'
     want_to_make_your_own: هل ترغب في جعل الخاصة بك؟
     more: 'أكثر &rarr;'
-    caption_by_name_age: 'by %{name}, age %{age}'
-    caption_time_ago: '%{time_ago} ago'
-    header: Gallery
+    caption_by_name_age: 'طريق %{name}، %{age} العمر'
+    caption_time_ago: '%{time_ago} قبل'
+    header: معرض
     header_playlab: مختبر اللعب
     header_artist: الرسام
   landing:
     prerelease: "هذا الدرس ليزال بنسختة التجريبية <span class='betatext'> Beta </span> . مما يعني أن هذة النسخة ليست النسخة الأخيرة من هذا الدرس والهدف من ذلك المراجعة الحصول على الآراء التي سوف تسصنع التغيرات بناء عليها."
-    prerelease_hoc2014: "This tutorial is in <span class='betatext'>beta</span>.  It is subject to revision as feedback is received and improvements are made."
+    prerelease_hoc2014: "هذا البرنامج التعليمي في <span class='betatext'> بيتا</span>.  أنها تخضع لمراجعة كما تلقي التغذية المرتدة والتحسينات."
     feedback: إدلاء برأيك
     report_bug: الإبلاغ عن خلل
     support: للحصول على المساعدة
-    support_url: //support.code.org
+    support_url: support.code.org
   multi:
     wrong_title: الإجابة غير صحيحة
     wrong_body: 'أن الإجابة التي قمت بإدخالها غير صحيحة.  الرجاء المحاولة مرة أخرى!'
@@ -457,7 +461,7 @@ ar:
     correct_title: صحيح
     correct_body: هذا هو الجواب الصحيح.
   text_match:
-    placeholder: Enter your answer here
+    placeholder: 'ادخل إجابتك هنا '
   dialog:
     ok: موافق
   time:
@@ -501,7 +505,7 @@ ar:
     sign_out: 'إذا كنت لاترغب بالإدلاء بعمرك يمكن <a href="%{url}"> تسجيل الخروج</a>.'
   zendesk_too_young_message: 'عذرا ، المستخدمين الصغار لايمكنهم تسجيل الدخول إلى موقع دعمنا، يمكنك تصفح <a href="http://support.code.org">صفحة الدعم</a> بدون تسجيل الدخول أو أطلب من والديك أو معلمك لتواصل معنا نيابة عنك.'
   progress:
-    not_completed: not completed
-    completed_too_many_blocks: completed, too many blocks
-    completed_perfect: completed, perfect
-    furthest_level_attempted: furthest level attempted
+    not_completed: غير مكتمل
+    completed_too_many_blocks: أكملت، كتل كثيرة جداً
+    completed_perfect: مكتمل, ممتاز
+    furthest_level_attempted: حاول المستوى الأبعد
