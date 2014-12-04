@@ -18927,6 +18927,7 @@ Blockly.FunctionEditor.prototype.show = function() {
   if(Blockly.selected) {
     Blockly.selected.unselect()
   }
+  Blockly.fireUiEvent(window, "function_editor_opened")
 };
 Blockly.FunctionEditor.prototype.isOpen = function() {
   return this.isCreated() && goog.style.isElementShown(this.container_)
@@ -18956,7 +18957,8 @@ Blockly.FunctionEditor.prototype.hide = function() {
     goog.dom.getElement("paramAddText").value = ""
   }
   Blockly.modalBlockSpace.clear();
-  Blockly.focusedBlockSpace = Blockly.mainBlockSpace
+  Blockly.focusedBlockSpace = Blockly.mainBlockSpace;
+  Blockly.fireUiEvent(window, "function_editor_closed")
 };
 Blockly.FunctionEditor.prototype.create_ = function() {
   if(this.created_) {
