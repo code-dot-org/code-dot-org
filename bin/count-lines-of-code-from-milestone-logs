@@ -43,7 +43,7 @@ def main
       next unless match
       
       host = match[:host]
-      next if ['console', 'daemon', 'staging', 'test'].include? host
+      next if ['console', 'daemon', 'staging', 'test', 'levelbuilder-staging', 'development'].include? host
       
       cache[i.key] = count_lines_of_code(i) unless cache.has_key?(i.key) && File.extname(i.key) == '.gz'
 
@@ -59,4 +59,3 @@ def main
 end
 
 main
-
