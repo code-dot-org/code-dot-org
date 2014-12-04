@@ -2607,6 +2607,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -2619,7 +2620,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -2629,16 +2632,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -12244,7 +12237,7 @@ exports.catText = function(d){return "Besedilo"};
 
 exports.catVariables = function(d){return "Spremenljivke"};
 
-exports.codeTooltip = function(d){return "Poglej generirane kode JavaScript."};
+exports.codeTooltip = function(d){return "Poglej generirano kodo v JavaScriptu."};
 
 exports.continue = function(d){return "Nadaljuj"};
 
@@ -12264,7 +12257,7 @@ exports.end = function(d){return "konec"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Znotraj 'Ponovi' ali 'če' bloka morajo biti drugi bloki, da bo delovalo. Prepričaj se, da se notranji bloki ustrezno prilegajo zunanjemu bloku."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "Da bi blok funkcije delal potrebuje znotraj sebe druge bloke."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Da bi blok s funkcijo deloval, mora vsebovati druge bloke oz ukaze."};
 
 exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
 
@@ -12288,9 +12281,9 @@ exports.finalStageTrophies = function(d){return "Čestitke! Zaključil/a si stop
 
 exports.finish = function(d){return "Končaj"};
 
-exports.generatedCodeInfo = function(d){return "Celo najboljše univerze učijo kodiranje z bloki (npr. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ampak bloke, ki si jih sestavil, lahko prikažemo v JavaScriptu, najbolj rabljenem programskem jeziku:"};
+exports.generatedCodeInfo = function(d){return "Celo najboljše univerze učijo programirati s pomočjo blokov (npr. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Pod pokrovom pa se skrivajo pravi programi, napisani v JavaScriptu, enem najbolj uporabljanih programskih jezikov:"};
 
-exports.hashError = function(d){return "Oprosti, '%1' ne ustreza nobenemu shranjenemu programu."};
+exports.hashError = function(d){return "Žal, '%1' ne ustreza nobenemu shranjenemu programu."};
 
 exports.help = function(d){return "Pomoč"};
 
@@ -12302,25 +12295,25 @@ exports.levelIncompleteError = function(d){return "Uporabljaš vse potrebne tipe
 
 exports.listVariable = function(d){return "seznam"};
 
-exports.makeYourOwnFlappy = function(d){return "Izdelaj svojo lastno Flappy igro"};
+exports.makeYourOwnFlappy = function(d){return "Izdelaj svojo lastno igrico o Plahutaču (Flappyju)"};
 
-exports.missingBlocksErrorMsg = function(d){return "Poskusi enega ali več blokov spodaj, da rešiš uganko."};
+exports.missingBlocksErrorMsg = function(d){return "Če boš uporabil/a vsaj en blok, ki ga najdeš spodaj, ali več, boš rešil/a uganko."};
 
-exports.nextLevel = function(d){return "Čestitke! Rešil si uganko "+v(d,"puzzleNumber")+"."};
+exports.nextLevel = function(d){return "Čestitke! Rešil/a si uganko "+v(d,"puzzleNumber")+"."};
 
-exports.nextLevelTrophies = function(d){return "Čestitke! Zaključil/a si stopnjo "+v(d,"stageNumber")+" in osvojil/a "+p(d,"numTrophies",0,"sl",{"one":"trofejo","other":n(d,"numTrophies")+" trofej"})+"."};
+exports.nextLevelTrophies = function(d){return "Čestitke! Rešil/a si uganko "+v(d,"puzzleNumber")+" in osvojil/a "+p(d,"numTrophies",0,"sl",{"one":"lovoriko","other":n(d,"numTrophies")+" lovorik"})+"."};
 
-exports.nextStage = function(d){return "Čestitke! Opravili ste "+v(d,"stageName")+"."};
+exports.nextStage = function(d){return "Čestitke! Dokončal/a si "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Čestitke! Zaključil/a si stopnjo "+v(d,"stageNumber")+" in osvojil/a "+p(d,"numTrophies",0,"sl",{"one":"trofejo","other":n(d,"numTrophies")+" trofej"})+"."};
+exports.nextStageTrophies = function(d){return "Čestitke! Zaključil/a si stopnjo "+v(d,"stageName")+" in osvojil/a "+p(d,"numTrophies",0,"sl",{"one":"lovoriko","other":n(d,"numTrophies")+" lovorik"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Čestitke! Zaključil/a si uganko "+v(d,"puzzleNumber")+". (Vendar bi lahko uporabil samo  "+p(d,"numBlocks",0,"sl",{"one":"1 blok","other":n(d,"numBlocks")+" blokov"})+".)"};
 
-exports.numLinesOfCodeWritten = function(d){return "Ravnokar si napisal "+p(d,"numLines",0,"sl",{"one":"1 vrstica","other":n(d,"numLines")+" vrstic"})+" kode!"};
+exports.numLinesOfCodeWritten = function(d){return "Ravnokar si napisal/a "+p(d,"numLines",0,"sl",{"one":"1 vrstico","other":n(d,"numLines")+" vrstic"})+" kode!"};
 
 exports.play = function(d){return "igraj"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Natisni"};
 
 exports.puzzleTitle = function(d){return "Uganka "+v(d,"puzzle_number")+" od "+v(d,"stage_total")};
 
@@ -12328,7 +12321,7 @@ exports.repeat = function(d){return "ponovi"};
 
 exports.resetProgram = function(d){return "resetiraj"};
 
-exports.runProgram = function(d){return "Teči"};
+exports.runProgram = function(d){return "Zaženi program"};
 
 exports.runTooltip = function(d){return "Zaženi program, definiran z bloki na delovni površini."};
 
@@ -12336,7 +12329,7 @@ exports.score = function(d){return "rezultat"};
 
 exports.showCodeHeader = function(d){return "Pokaži kodo"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Prikaži bloke"};
 
 exports.showGeneratedCode = function(d){return "Pokaži kodo"};
 
@@ -12346,11 +12339,11 @@ exports.subtitle = function(d){return "vizualno programersko okolje"};
 
 exports.textVariable = function(d){return "besedilo"};
 
-exports.tooFewBlocksMsg = function(d){return "Uporabljaš vse potrebne tipe blokov, a poskusi uporabiti več teh tipov blokov, da zaključiš to uganko."};
+exports.tooFewBlocksMsg = function(d){return "Uporabil/a si prave tipe blokov, a potrebuješ jih še več za rešitev te uganke."};
 
 exports.tooManyBlocksMsg = function(d){return "Ta uganka je lahko rešena z <x id='START_SPAN'/><x id='END_SPAN'/> bloki."};
 
-exports.tooMuchWork = function(d){return "Zaradi tebe sem moral narediti veliko dela! Bi se lahko poskusil manjkrat ponavljati?"};
+exports.tooMuchWork = function(d){return "Si me pa utrudil/a! Bi se lahko poskusil/a manjkrat ponavljati?"};
 
 exports.toolboxHeader = function(d){return "Bloki"};
 
@@ -12364,11 +12357,11 @@ exports.hintRequest = function(d){return "Poglej namig"};
 
 exports.backToPreviousLevel = function(d){return "Nazaj na prejšnjo raven"};
 
-exports.saveToGallery = function(d){return "Shrani v svojo galerijo"};
+exports.saveToGallery = function(d){return "Shrani v galerijo"};
 
-exports.savedToGallery = function(d){return "Shranjeno v tvoji galeriji!"};
+exports.savedToGallery = function(d){return "Shranjeno v galerijo!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Žal, ne moremo objaviti tega programa."};
 
 exports.typeFuncs = function(d){return "Razpoložljive funkcije: %1"};
 
@@ -12376,11 +12369,11 @@ exports.typeHint = function(d){return "Zapomni si, oklepaji in podpičja so zaht
 
 exports.workspaceHeader = function(d){return "Tukaj sestavi tvoje bloke: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Vnesite kodo JavaScript"};
 
 exports.infinity = function(d){return "Neskončnost"};
 
-exports.rotateText = function(d){return "Zavrti tvojo napravo."};
+exports.rotateText = function(d){return "Zasukaj tvojo napravo."};
 
 exports.orientationLock = function(d){return "Izključi zaklepanje orientacije v nastavitvah naprave."};
 
@@ -12400,7 +12393,7 @@ exports.hintHeader = function(d){return "Tukaj je namig:"};
 
 exports.genericFeedback = function(d){return "Poglej kako si končal in poizkusi popraviti svoj program."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Poglej, kaj sem naredil"};
 
 
 },{"messageformat":52}],40:[function(require,module,exports){
@@ -12428,9 +12421,9 @@ exports.endGameTooltip = function(d){return "Konča igro."};
 
 exports.finalLevel = function(d){return "Čestitke! Rešil/a si zadnjo uganko."};
 
-exports.flap = function(d){return "zamahniti"};
+exports.flap = function(d){return "plahutaj"};
 
-exports.flapRandom = function(d){return "flap a random amount"};
+exports.flapRandom = function(d){return "plahutaj naključno dolgo"};
 
 exports.flapVerySmall = function(d){return "zamahni z zelo majhno močjo"};
 
@@ -12516,103 +12509,103 @@ exports.setGapNormal = function(d){return "Nastavite normalno vrzel"};
 
 exports.setGapLarge = function(d){return "Nastavite veliko vrzel"};
 
-exports.setGapVeryLarge = function(d){return "set a very large gap"};
+exports.setGapVeryLarge = function(d){return "nastavi zelo veliko vrzel"};
 
-exports.setGapHeightTooltip = function(d){return "Sets the vertical gap in an obstacle"};
+exports.setGapHeightTooltip = function(d){return "Nastavi navpično vrzel v oviro"};
 
-exports.setGravityRandom = function(d){return "set gravity random"};
+exports.setGravityRandom = function(d){return "težnost naključna"};
 
-exports.setGravityVeryLow = function(d){return "set gravity very low"};
+exports.setGravityVeryLow = function(d){return "težnost zelo majhna"};
 
-exports.setGravityLow = function(d){return "set gravity low"};
+exports.setGravityLow = function(d){return "težnost majhna"};
 
-exports.setGravityNormal = function(d){return "set gravity normal"};
+exports.setGravityNormal = function(d){return "težnost normalna"};
 
-exports.setGravityHigh = function(d){return "set gravity high"};
+exports.setGravityHigh = function(d){return "težnost velika"};
 
-exports.setGravityVeryHigh = function(d){return "set gravity very high"};
+exports.setGravityVeryHigh = function(d){return "težnost zelo velika"};
 
-exports.setGravityTooltip = function(d){return "Sets the level's gravity"};
+exports.setGravityTooltip = function(d){return "Nastavi težnost za ta nivo"};
 
-exports.setGround = function(d){return "set ground"};
+exports.setGround = function(d){return "nastavi ozadje"};
 
-exports.setGroundRandom = function(d){return "set ground Random"};
+exports.setGroundRandom = function(d){return "nastavi naključno ozadje"};
 
-exports.setGroundFlappy = function(d){return "set ground Ground"};
+exports.setGroundFlappy = function(d){return "nastavi ozadje Ozadje"};
 
-exports.setGroundSciFi = function(d){return "set ground Sci-Fi"};
+exports.setGroundSciFi = function(d){return "nastavi ZF ozadje"};
 
-exports.setGroundUnderwater = function(d){return "set ground Underwater"};
+exports.setGroundUnderwater = function(d){return "nastavi podvodno ozadje"};
 
-exports.setGroundCave = function(d){return "set ground Cave"};
+exports.setGroundCave = function(d){return "nastavi jamsko ozadje"};
 
-exports.setGroundSanta = function(d){return "set ground Santa"};
+exports.setGroundSanta = function(d){return "nastavi božično ozadje"};
 
-exports.setGroundLava = function(d){return "set ground Lava"};
+exports.setGroundLava = function(d){return "nastavi vulkansko ozadje"};
 
-exports.setGroundTooltip = function(d){return "Sets the ground image"};
+exports.setGroundTooltip = function(d){return "Nastavi sliko ozadja"};
 
-exports.setObstacle = function(d){return "set obstacle"};
+exports.setObstacle = function(d){return "nastavi ovire"};
 
-exports.setObstacleRandom = function(d){return "set obstacle Random"};
+exports.setObstacleRandom = function(d){return "določi oviro naključno"};
 
-exports.setObstacleFlappy = function(d){return "set obstacle Pipe"};
+exports.setObstacleFlappy = function(d){return "določi cevi kot oviro"};
 
-exports.setObstacleSciFi = function(d){return "set obstacle Sci-Fi"};
+exports.setObstacleSciFi = function(d){return "določi SF sliko kot oviro"};
 
-exports.setObstacleUnderwater = function(d){return "set obstacle Plant"};
+exports.setObstacleUnderwater = function(d){return "določi rastlino kot oviro"};
 
-exports.setObstacleCave = function(d){return "set obstacle Cave"};
+exports.setObstacleCave = function(d){return "določi jamo kot oviro"};
 
-exports.setObstacleSanta = function(d){return "set obstacle Chimney"};
+exports.setObstacleSanta = function(d){return "določi dimnik kot oviro"};
 
-exports.setObstacleLaser = function(d){return "set obstacle Laser"};
+exports.setObstacleLaser = function(d){return "določi laser kot oviro"};
 
-exports.setObstacleTooltip = function(d){return "Sets the obstacle image"};
+exports.setObstacleTooltip = function(d){return "Nastavi sliko ovire"};
 
-exports.setPlayer = function(d){return "set player"};
+exports.setPlayer = function(d){return "določi igralca"};
 
-exports.setPlayerRandom = function(d){return "set player Random"};
+exports.setPlayerRandom = function(d){return "določi igralca naključno"};
 
-exports.setPlayerFlappy = function(d){return "set player Yellow Bird"};
+exports.setPlayerFlappy = function(d){return "določi rumenega ptiča za igralca"};
 
-exports.setPlayerRedBird = function(d){return "set player Red Bird"};
+exports.setPlayerRedBird = function(d){return "določi rdečega ptiča za igralca"};
 
-exports.setPlayerSciFi = function(d){return "set player Spaceship"};
+exports.setPlayerSciFi = function(d){return "določi vesoljsko ladjo za igralca"};
 
-exports.setPlayerUnderwater = function(d){return "set player Fish"};
+exports.setPlayerUnderwater = function(d){return "določi ribo za igralca"};
 
-exports.setPlayerCave = function(d){return "set player Bat"};
+exports.setPlayerCave = function(d){return "določi netopirja za igralca"};
 
-exports.setPlayerSanta = function(d){return "set player Santa"};
+exports.setPlayerSanta = function(d){return "določi božička za igralca"};
 
-exports.setPlayerShark = function(d){return "set player Shark"};
+exports.setPlayerShark = function(d){return "določi morskega psa za igralca"};
 
-exports.setPlayerEaster = function(d){return "set player Easter Bunny"};
+exports.setPlayerEaster = function(d){return "določi velikonočnega zajca za igralca"};
 
-exports.setPlayerBatman = function(d){return "set player Bat guy"};
+exports.setPlayerBatman = function(d){return "določi človeka-netopirja za igralca"};
 
-exports.setPlayerSubmarine = function(d){return "set player Submarine"};
+exports.setPlayerSubmarine = function(d){return "določi podmornico za igralca"};
 
-exports.setPlayerUnicorn = function(d){return "set player Unicorn"};
+exports.setPlayerUnicorn = function(d){return "določi enoroga za igralca"};
 
-exports.setPlayerFairy = function(d){return "set player Fairy"};
+exports.setPlayerFairy = function(d){return "določi vilo za igralca"};
 
-exports.setPlayerSuperman = function(d){return "set player Flappyman"};
+exports.setPlayerSuperman = function(d){return "določi Plahutavca za igralca"};
 
-exports.setPlayerTurkey = function(d){return "set player Turkey"};
+exports.setPlayerTurkey = function(d){return "določi purana za igralca"};
 
-exports.setPlayerTooltip = function(d){return "Sets the player image"};
+exports.setPlayerTooltip = function(d){return "Nastavi sliko igralca"};
 
-exports.setScore = function(d){return "set score"};
+exports.setScore = function(d){return "nastavi rezultat"};
 
-exports.setScoreTooltip = function(d){return "Sets the player's score"};
+exports.setScoreTooltip = function(d){return "Nastavi igralčeve točke"};
 
-exports.setSpeed = function(d){return "set speed"};
+exports.setSpeed = function(d){return "nastavi hitrost"};
 
-exports.setSpeedTooltip = function(d){return "Sets the levels speed"};
+exports.setSpeedTooltip = function(d){return "Nastavi hitrost tega nivoja"};
 
-exports.shareFlappyTwitter = function(d){return "Check out the Flappy game I made. I wrote it myself with @codeorg"};
+exports.shareFlappyTwitter = function(d){return "Oglej si igrico Flappy, ki sem jo sam izdelal. Napisal sem jo z @codeorg"};
 
 exports.shareGame = function(d){return "Delite vašo igro z ostalimi:"};
 
@@ -12642,33 +12635,33 @@ exports.soundSplash = function(d){return "poškropiti"};
 
 exports.soundLaser = function(d){return "laser"};
 
-exports.speedRandom = function(d){return "set speed random"};
+exports.speedRandom = function(d){return "nastavi hitrost na naključno"};
 
-exports.speedVerySlow = function(d){return "set speed very slow"};
+exports.speedVerySlow = function(d){return "nastavi hitrost na zelo počasno"};
 
-exports.speedSlow = function(d){return "set speed slow"};
+exports.speedSlow = function(d){return "nastavi hitrost na počasno"};
 
-exports.speedNormal = function(d){return "set speed normal"};
+exports.speedNormal = function(d){return "nastavi hitrost na normalno"};
 
-exports.speedFast = function(d){return "set speed fast"};
+exports.speedFast = function(d){return "nastavi hitrost na hitro"};
 
-exports.speedVeryFast = function(d){return "set speed very fast"};
+exports.speedVeryFast = function(d){return "nastavi hitrost na zelo hitro"};
 
-exports.whenClick = function(d){return "when click"};
+exports.whenClick = function(d){return "ko kliknjen"};
 
-exports.whenClickTooltip = function(d){return "Execute the actions below when a click event occurs."};
+exports.whenClickTooltip = function(d){return "Ko se zgodi klik, naredi spodaj navedeno."};
 
-exports.whenCollideGround = function(d){return "when hit the ground"};
+exports.whenCollideGround = function(d){return "kadar zadene tla"};
 
-exports.whenCollideGroundTooltip = function(d){return "Execute the actions below when Flappy hits the ground."};
+exports.whenCollideGroundTooltip = function(d){return "Ko Flappy zadene tla, naredi spodaj navedeno."};
 
-exports.whenCollideObstacle = function(d){return "when hit an obstacle"};
+exports.whenCollideObstacle = function(d){return "ko zadene oviro"};
 
-exports.whenCollideObstacleTooltip = function(d){return "Execute the actions below when Flappy hits an obstacle."};
+exports.whenCollideObstacleTooltip = function(d){return "Ko Flappy zadene oviro, naredi spodaj navedeno."};
 
-exports.whenEnterObstacle = function(d){return "when pass obstacle"};
+exports.whenEnterObstacle = function(d){return "kadar mimo ovire"};
 
-exports.whenEnterObstacleTooltip = function(d){return "Execute the actions below when Flappy enters an obstacle."};
+exports.whenEnterObstacleTooltip = function(d){return "Ko Flappy doseže oviro, naredi spodaj navedeno."};
 
 exports.whenRunButtonClick = function(d){return "ko se igra začne"};
 

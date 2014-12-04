@@ -5315,6 +5315,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -5327,7 +5328,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -5337,16 +5340,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -12680,7 +12673,7 @@ exports.errorUnusedFunction = function(d){return "You created a function, but ne
 
 exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
-exports.extraTopBlocks = function(d){return "Du har ikke sammenhængende blokke. Ville du fastgøre disse til \"når køre\" blokken?"};
+exports.extraTopBlocks = function(d){return "Du har blokke, som ikke er knyttet til andre. Ville du fastgøre dem  til \"når kører\" blokken?"};
 
 exports.finalStage = function(d){return "Tillykke! Du har fuldført det sidste trin."};
 
@@ -12720,7 +12713,7 @@ exports.numLinesOfCodeWritten = function(d){return "Du har lige skrevet "+p(d,"n
 
 exports.play = function(d){return "afspil"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Udskriv"};
 
 exports.puzzleTitle = function(d){return "Puslespil "+v(d,"puzzle_number")+" af "+v(d,"stage_total")};
 
@@ -12764,9 +12757,9 @@ exports.hintRequest = function(d){return "Se hjælp"};
 
 exports.backToPreviousLevel = function(d){return "Tilbage til forrige niveau"};
 
-exports.saveToGallery = function(d){return "Gem til dit galleri"};
+exports.saveToGallery = function(d){return "Gem"};
 
-exports.savedToGallery = function(d){return "Gem til dit galleri!"};
+exports.savedToGallery = function(d){return "Gemt!"};
 
 exports.shareFailure = function(d){return "Beklager, ikke kan vi dele dette program."};
 
@@ -12800,7 +12793,7 @@ exports.hintHeader = function(d){return "Her er et tip:"};
 
 exports.genericFeedback = function(d){return "Se hvordan du endte, og prøve at rette dit program."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Se hvad jeg har lavet"};
 
 
 },{"messageformat":53}],42:[function(require,module,exports){

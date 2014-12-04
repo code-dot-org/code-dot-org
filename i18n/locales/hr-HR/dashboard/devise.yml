@@ -39,7 +39,7 @@ hr:
       update_needs_confirmation: You updated your account successfully, but we need to verify your new email address. Please check your email and click on the confirm link to finalize confirming your new email address.
       updated: Uspješno ste ažurirali svoj račun.
     sessions:
-      signed_in: Uspješno ste se prijavili.
+      signed_in: ""
       signed_out: Uspješno ste odjavljeni.
     unlocks:
       send_instructions: Za nekoliko minuta zaprimit ćete email poruku sa uputama kako da otključate svoj korisnički račun.

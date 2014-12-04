@@ -15,7 +15,7 @@
         - unplug1
         video: Unplug1
       Unplug2:
-        title: Computational Thinking
+        title: Računalniško razmišljanje
         desc: With nothing but paper and markers, students will learn the four steps
           of computational thinking. After a brief introduction, students should be
           split into groups where they will have to create directions for other students
@@ -30,7 +30,7 @@
         - unplug2
         video: Unplug2
       Unplug3:
-        title: Graph Paper Programming
+        title: Obarvajmo kvadratke
         desc: By programming one another to draw pictures, students will begin to
           understand what programming is really about. The class will begin by students
           instructing each other to color squares in on graph paper in an effort to
@@ -83,7 +83,7 @@
         - unplug7
         video: Unplug7
       Unplug8:
-        title: Abstraction
+        title: Abstrakcija
         desc: This lesson will introduce the concept of Computer Science and explain
           what a Computer Scientist does.  It will also give students an opportunity
           to assume the role of a computer scientist.  By the end of the activity,
@@ -173,7 +173,7 @@
           introduce how to stay safe while navigating the Internet.
         video: C1_going_places_safely
       GraphPaperProgramming:
-        title: Graph Paper Programming
+        title: Obarvajmo kvadratke
         desc: Students write an algorithm (a set of instructions) using a set of predefined
           commands to direct their classmates to reproduce a drawing.
         video: C2_graph_paper
@@ -195,7 +195,7 @@
           themselves online creates a digital footprint or "trail" that has consequences.
         video: C2_digital_footprint
       ComputationalThinking:
-        title: Computational Thinking
+        title: Računalniško razmišljanje
         desc: Students use the steps of computational thinking (decompose, pattern
           match, abstract, algorithm) to figure out how to play a game that comes
           with no instructions.

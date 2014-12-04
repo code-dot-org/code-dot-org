@@ -2607,6 +2607,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -2619,7 +2620,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -2629,16 +2632,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -12309,7 +12302,7 @@ exports.numLinesOfCodeWritten = function(d){return "Éppen most írtál újabb "
 
 exports.play = function(d){return "lejátszás"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Nyomtatás"};
 
 exports.puzzleTitle = function(d){return v(d,"puzzle_number")+"/"+v(d,"stage_total")+". feladvány"};
 
@@ -12353,9 +12346,9 @@ exports.hintRequest = function(d){return "Segítség"};
 
 exports.backToPreviousLevel = function(d){return "Vissza az előző szintre"};
 
-exports.saveToGallery = function(d){return "Mentés a galériába"};
+exports.saveToGallery = function(d){return "Mentése a galériába"};
 
-exports.savedToGallery = function(d){return "Elmentve a galáriádba"};
+exports.savedToGallery = function(d){return "Elmentve a galériában!"};
 
 exports.shareFailure = function(d){return "Sajnálom, de nem tudtam megosztani ezt a programot."};
 
@@ -12389,7 +12382,7 @@ exports.hintHeader = function(d){return "Egy tipp:"};
 
 exports.genericFeedback = function(d){return "Nem sikerült célba érnem. Kérlek javítsd a hibát."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Nézd meg, mit csináltam"};
 
 
 },{"messageformat":52}],40:[function(require,module,exports){
@@ -12532,7 +12525,7 @@ exports.setGroundTooltip = function(d){return "Beállítja a talaj típusát"};
 
 exports.setObstacle = function(d){return "akadály beállítása"};
 
-exports.setObstacleRandom = function(d){return "set obstacle Random"};
+exports.setObstacleRandom = function(d){return "akadály véletlenszerű beállítása"};
 
 exports.setObstacleFlappy = function(d){return "Akadály beállítása: cső"};
 
@@ -12598,25 +12591,25 @@ exports.soundRandom = function(d){return "véletlen"};
 
 exports.soundBounce = function(d){return "ugrál"};
 
-exports.soundCrunch = function(d){return "crunch"};
+exports.soundCrunch = function(d){return "ropogás"};
 
 exports.soundDie = function(d){return "szomorú"};
 
-exports.soundHit = function(d){return "smash"};
+exports.soundHit = function(d){return "összezúzás"};
 
-exports.soundPoint = function(d){return "point"};
+exports.soundPoint = function(d){return "mutatás"};
 
-exports.soundSwoosh = function(d){return "swoosh"};
+exports.soundSwoosh = function(d){return "süvítés"};
 
 exports.soundWing = function(d){return "szárny"};
 
-exports.soundJet = function(d){return "jet"};
+exports.soundJet = function(d){return "süvítés"};
 
-exports.soundCrash = function(d){return "crash"};
+exports.soundCrash = function(d){return "csattanás"};
 
-exports.soundJingle = function(d){return "jingle"};
+exports.soundJingle = function(d){return "csilingelés"};
 
-exports.soundSplash = function(d){return "splash"};
+exports.soundSplash = function(d){return "fröcskölés"};
 
 exports.soundLaser = function(d){return "lézer"};
 

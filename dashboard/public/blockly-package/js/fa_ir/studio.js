@@ -6698,6 +6698,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -6710,7 +6711,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -6720,16 +6723,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -16059,6 +16052,7 @@ levels.playlab_2 = utils.extend(levels.dog_and_cat_hello, {
   firstSpriteIndex: 20, // cave boy
   timeoutFailureTick: null,
   timeoutAfterWhenRun: true,
+  defaultEmotion: Emotions.HAPPY,
   goal: {
     successCondition: function () {
       return Studio.allWhenRunBlocksComplete() && Studio.sayComplete > 1;
@@ -16249,6 +16243,7 @@ levels.playlab_4 = {
   },
   background: 'tennis',
   avatarList: ['tennisboy', 'tennisgirl'],
+  defaultEmotion: Emotions.SAD,
   requiredBlocks: [
     [{
       test: 'moveDistance',
@@ -16336,6 +16331,7 @@ levels.playlab_5 = utils.extend(levels.click_hello, {
   background: 'space',
   firstSpriteIndex: 23, // spacebot
   timeoutAfterWhenRun: true,
+  defaultEmotion: Emotions.HAPPY,
   toolbox: tb(blockOfType('studio_saySprite')),
   startBlocks:
    '<block type="studio_whenSpriteClicked" deletable="false" x="20" y="20"></block>'
@@ -16470,6 +16466,7 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
     success: 'blue_fireball',
     imageWidth: 800
   },
+  defaultEmotion: Emotions.ANGRY,
   toolbox:
     tb(
       blockOfType('studio_move', {DIR: 8}) +
@@ -16562,6 +16559,7 @@ levels.playlab_7 = {
     'downButton',
     'upButton'
   ],
+  defaultEmotion: Emotions.HAPPY,
   map: [
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -16790,6 +16788,7 @@ levels.playlab_8 = {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
   avatarList: ['unicorn', 'wizard'],
+  defaultEmotion: Emotions.HAPPY,
   goal: {
     successCondition: function () {
       return Studio.sprite[0].isCollidingWith(1) && Studio.playerScore === 1;
@@ -16936,6 +16935,7 @@ levels.playlab_9 = {
   scale: {
     snapRadius: 2
   },
+  defaultEmotion: Emotions.ANGRY,
   softButtons: [
     'leftButton',
     'rightButton',
@@ -18867,7 +18867,8 @@ Studio.init = function(config) {
   config.makeUrl = "http://code.org/studio";
   config.makeImage = BlocklyApps.assetUrl('media/promo.png');
 
-  config.enableShowCode = BlocklyApps.editCode;
+  // Disable "show code" button in feedback dialog when workspace is hidden
+  config.enableShowCode = !config.level.embed && BlocklyApps.editCode;
   config.varsInGlobals = true;
 
   Studio.initSprites();
@@ -19018,7 +19019,7 @@ BlocklyApps.reset = function(first) {
       size: constants.DEFAULT_SPRITE_SIZE,
       dir: Direction.NONE,
       displayDir: Direction.SOUTH,
-      emotion: Emotions.NORMAL,
+      emotion: level.defaultEmotion || Emotions.NORMAL,
       // tickCount of last time sprite moved,
       lastMove: Infinity,
       // overridden as soon as we call setSprite
@@ -19100,7 +19101,7 @@ var displayFeedback = function() {
       feedbackType: Studio.testResults,
       response: Studio.response,
       level: level,
-      showingSharing: level.freePlay,
+      showingSharing: !level.disableSharing && (level.freePlay),
       feedbackImage: Studio.feedbackImage,
       twitter: twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
@@ -21178,7 +21179,7 @@ exports.errorUnusedFunction = function(d){return "You created a function, but ne
 
 exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
-exports.extraTopBlocks = function(d){return "شما بلوک های اضافه ای دارید که به یک بلوک رویداد متصل نیست."};
+exports.extraTopBlocks = function(d){return "بلوک‌های نچسبیده‌ای هنوز باقی مونده. آیا قصد داری اینها را به بلوک \"هنگام اجرا\" وصل کنی؟"};
 
 exports.finalStage = function(d){return "تبریک می‌گوییم! شما مرحله‌ی نهایی را به پایان رساندید."};
 
@@ -21218,7 +21219,7 @@ exports.numLinesOfCodeWritten = function(d){return "شما "+p(d,"numLines",0,"f
 
 exports.play = function(d){return "بازی"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "چاپ"};
 
 exports.puzzleTitle = function(d){return "معمای "+v(d,"puzzle_number")+" از "+v(d,"stage_total")};
 
@@ -21234,7 +21235,7 @@ exports.score = function(d){return "نمره"};
 
 exports.showCodeHeader = function(d){return "کد نمایش"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "نمایش بلوک‌ها"};
 
 exports.showGeneratedCode = function(d){return "نمایشِ کد"};
 
@@ -21262,11 +21263,11 @@ exports.hintRequest = function(d){return "تذکر را ببینید"};
 
 exports.backToPreviousLevel = function(d){return "برگرد به سطح قبلی"};
 
-exports.saveToGallery = function(d){return "ذخیره در گالری شما"};
+exports.saveToGallery = function(d){return "ذخیره در گالری"};
 
-exports.savedToGallery = function(d){return "در گالری شما ذخیره شد!"};
+exports.savedToGallery = function(d){return "در گالری ذخیره شد!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "شرمنده، ما نمیتوانیم این برنامه را به اشتراک بگذاریم."};
 
 exports.typeFuncs = function(d){return "توابع قابل استفاده: %1"};
 
@@ -21274,7 +21275,7 @@ exports.typeHint = function(d){return "توجه کن که علامت‌های پ
 
 exports.workspaceHeader = function(d){return "بلوک‌های خودت رو اینجا سرهم کن: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "کد جاوا اسکریپت خودت را اینجا وارد کن"};
 
 exports.infinity = function(d){return "بی نهایت"};
 
@@ -21303,35 +21304,35 @@ exports.defaultTwitterText = function(d){return "Check out what I made"};
 
 },{"messageformat":61}],49:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.fa=function(n){return "other"}
-exports.actor = function(d){return "actor"};
+exports.actor = function(d){return "بازیگر"};
 
 exports.alienInvasion = function(d){return "Alien Invasion!"};
 
-exports.backgroundBlack = function(d){return "black"};
+exports.backgroundBlack = function(d){return "سیاه"};
 
-exports.backgroundCave = function(d){return "cave"};
+exports.backgroundCave = function(d){return "غار"};
 
-exports.backgroundCloudy = function(d){return "cloudy"};
+exports.backgroundCloudy = function(d){return "ابری"};
 
 exports.backgroundHardcourt = function(d){return "hardcourt"};
 
-exports.backgroundNight = function(d){return "night"};
+exports.backgroundNight = function(d){return "شب"};
 
-exports.backgroundUnderwater = function(d){return "underwater"};
+exports.backgroundUnderwater = function(d){return "زیر آب"};
 
-exports.backgroundCity = function(d){return "city"};
+exports.backgroundCity = function(d){return "شهر"};
 
-exports.backgroundDesert = function(d){return "desert"};
+exports.backgroundDesert = function(d){return "بیابان"};
 
-exports.backgroundRainbow = function(d){return "rainbow"};
+exports.backgroundRainbow = function(d){return "رنگین کمان"};
 
-exports.backgroundSoccer = function(d){return "soccer"};
+exports.backgroundSoccer = function(d){return "فوتبال"};
 
-exports.backgroundSpace = function(d){return "space"};
+exports.backgroundSpace = function(d){return "فضا"};
 
-exports.backgroundTennis = function(d){return "tennis"};
+exports.backgroundTennis = function(d){return "تنیس"};
 
-exports.backgroundWinter = function(d){return "winter"};
+exports.backgroundWinter = function(d){return "زمستان"};
 
 exports.catActions = function(d){return "اقدامات"};
 
@@ -21349,43 +21350,43 @@ exports.catText = function(d){return "متن"};
 
 exports.catVariables = function(d){return "متغیرها"};
 
-exports.changeScoreTooltip = function(d){return "Add or remove a point to the score."};
+exports.changeScoreTooltip = function(d){return "افزودن یا حذف یک امتیاز به امتیازات .\n"};
 
-exports.changeScoreTooltipK1 = function(d){return "Add a point to the score."};
+exports.changeScoreTooltipK1 = function(d){return "افزودن یک امتیاز به امتیازات ."};
 
 exports.continue = function(d){return "ادامه"};
 
-exports.decrementPlayerScore = function(d){return "remove point"};
+exports.decrementPlayerScore = function(d){return "حذف امتیاز"};
 
 exports.defaultSayText = function(d){return "ایجا تایپ کن"};
 
-exports.emotion = function(d){return "mood"};
+exports.emotion = function(d){return "حالت"};
 
 exports.finalLevel = function(d){return "تبریک! شما پازل نهایی را حل کردید."};
 
-exports.for = function(d){return "for"};
+exports.for = function(d){return "برای"};
 
-exports.hello = function(d){return "hello"};
+exports.hello = function(d){return "سلام"};
 
-exports.helloWorld = function(d){return "Hello World!"};
+exports.helloWorld = function(d){return "سلام دنیا!"};
 
 exports.incrementPlayerScore = function(d){return "نمره امتیاز"};
 
-exports.makeProjectileDisappear = function(d){return "disappear"};
+exports.makeProjectileDisappear = function(d){return "ناپدید می شود"};
 
-exports.makeProjectileBounce = function(d){return "bounce"};
+exports.makeProjectileBounce = function(d){return "پریدن"};
 
-exports.makeProjectileBlueFireball = function(d){return "make blue fireball"};
+exports.makeProjectileBlueFireball = function(d){return "توپ آتشین آبی بساز"};
 
-exports.makeProjectilePurpleFireball = function(d){return "make purple fireball"};
+exports.makeProjectilePurpleFireball = function(d){return "توپ آتشین بنفش بساز"};
 
-exports.makeProjectileRedFireball = function(d){return "make red fireball"};
+exports.makeProjectileRedFireball = function(d){return "توپ آتشین قرمز بساز"};
 
-exports.makeProjectileYellowHearts = function(d){return "make yellow hearts"};
+exports.makeProjectileYellowHearts = function(d){return "قلب زرد بساز"};
 
-exports.makeProjectilePurpleHearts = function(d){return "make purple hearts"};
+exports.makeProjectilePurpleHearts = function(d){return "قلب های بنفش بساز"};
 
-exports.makeProjectileRedHearts = function(d){return "make red hearts"};
+exports.makeProjectileRedHearts = function(d){return "قلب های  قرمز بساز"};
 
 exports.makeProjectileTooltip = function(d){return "Make the projectile that just collided disappear or bounce."};
 
@@ -21419,7 +21420,7 @@ exports.moveDistanceTooltip = function(d){return "یک بازیگر رو در ج
 
 exports.moveSprite = function(d){return "حرکت"};
 
-exports.moveSpriteN = function(d){return "move actor "+v(d,"spriteIndex")};
+exports.moveSpriteN = function(d){return "بازیگر را حرکت بده"+v(d,"spriteIndex")+" "};
 
 exports.moveDown = function(d){return "برو پایین"};
 
@@ -21509,25 +21510,25 @@ exports.positionOutBottomRight = function(d){return "to the below bottom right p
 
 exports.positionRandom = function(d){return "به موقعیت تصادفی"};
 
-exports.projectileBlueFireball = function(d){return "blue fireball"};
+exports.projectileBlueFireball = function(d){return "توپ آتشین آبی"};
 
-exports.projectilePurpleFireball = function(d){return "purple fireball"};
+exports.projectilePurpleFireball = function(d){return "توپ آتشین بنفش"};
 
-exports.projectileRedFireball = function(d){return "red fireball"};
+exports.projectileRedFireball = function(d){return "توپ آتشین قرمز"};
 
-exports.projectileYellowHearts = function(d){return "yellow hearts"};
+exports.projectileYellowHearts = function(d){return "قلب های زرذ"};
 
-exports.projectilePurpleHearts = function(d){return "purple hearts"};
+exports.projectilePurpleHearts = function(d){return "قلب های بنفش"};
 
-exports.projectileRedHearts = function(d){return "red hearts"};
+exports.projectileRedHearts = function(d){return "قلب های قرمز"};
 
 exports.projectileRandom = function(d){return "در هم"};
 
-exports.projectileAnna = function(d){return "Anna"};
+exports.projectileAnna = function(d){return "آنا"};
 
-exports.projectileElsa = function(d){return "Elsa"};
+exports.projectileElsa = function(d){return "السا"};
 
-exports.projectileHiro = function(d){return "Hiro"};
+exports.projectileHiro = function(d){return "قهرمان"};
 
 exports.projectileBaymax = function(d){return "Baymax"};
 
@@ -21549,7 +21550,7 @@ exports.saySpriteTooltip = function(d){return "نمایش یک بیان صحبت
 
 exports.scoreText = function(d){return "امتیاز: "+v(d,"playerScore")};
 
-exports.setBackground = function(d){return "set background"};
+exports.setBackground = function(d){return "مجموعه پس زمینه"};
 
 exports.setBackgroundRandom = function(d){return "قراردادن زمینه تصادفی"};
 
@@ -21583,7 +21584,7 @@ exports.setBackgroundTooltip = function(d){return "تنظیم تصویر صحن�
 
 exports.setEnemySpeed = function(d){return "set enemy speed"};
 
-exports.setPlayerSpeed = function(d){return "set player speed"};
+exports.setPlayerSpeed = function(d){return "تنظیم سرعت پخش"};
 
 exports.setScoreText = function(d){return "تنظیم امتیاز"};
 
@@ -21591,7 +21592,7 @@ exports.setScoreTextTooltip = function(d){return "Sets the text to be displayed 
 
 exports.setSpriteEmotionAngry = function(d){return "to a angry emotion"};
 
-exports.setSpriteEmotionHappy = function(d){return "to a happy emotion"};
+exports.setSpriteEmotionHappy = function(d){return "به خلق و خوی شاد"};
 
 exports.setSpriteEmotionNormal = function(d){return "to a normal emotion"};
 
@@ -21605,9 +21606,9 @@ exports.setSpriteAlien = function(d){return "to an alien image"};
 
 exports.setSpriteBat = function(d){return "to a bat image"};
 
-exports.setSpriteBird = function(d){return "to a bird image"};
+exports.setSpriteBird = function(d){return "تصویر پرنده"};
 
-exports.setSpriteCat = function(d){return "to a cat image"};
+exports.setSpriteCat = function(d){return "تصویر گربه"};
 
 exports.setSpriteCaveBoy = function(d){return "to a cave boy image"};
 
@@ -21615,7 +21616,7 @@ exports.setSpriteCaveGirl = function(d){return "to a cave girl image"};
 
 exports.setSpriteDinosaur = function(d){return "to a dinosaur image"};
 
-exports.setSpriteDog = function(d){return "to a dog image"};
+exports.setSpriteDog = function(d){return "تصویر سگ"};
 
 exports.setSpriteDragon = function(d){return "to a dragon image"};
 
@@ -21623,75 +21624,75 @@ exports.setSpriteGhost = function(d){return "to a ghost image"};
 
 exports.setSpriteHidden = function(d){return "به یک تصویر مخفی"};
 
-exports.setSpriteHideK1 = function(d){return "hide"};
+exports.setSpriteHideK1 = function(d){return "پنهان کردن"};
 
-exports.setSpriteAnna = function(d){return "to a Anna image"};
+exports.setSpriteAnna = function(d){return "تصویر آنا"};
 
-exports.setSpriteElsa = function(d){return "to a Elsa image"};
+exports.setSpriteElsa = function(d){return "تصویر السا"};
 
-exports.setSpriteHiro = function(d){return "to a Hiro image"};
+exports.setSpriteHiro = function(d){return "تصویر Hiro"};
 
 exports.setSpriteBaymax = function(d){return "to a Baymax image"};
 
-exports.setSpriteRapunzel = function(d){return "to a Rapunzel image"};
+exports.setSpriteRapunzel = function(d){return "تصویر Rapunzel"};
 
 exports.setSpriteKnight = function(d){return "to a knight image"};
 
-exports.setSpriteMonster = function(d){return "to a monster image"};
+exports.setSpriteMonster = function(d){return "به تصویر هیولا"};
 
-exports.setSpriteNinja = function(d){return "to a masked ninja image"};
+exports.setSpriteNinja = function(d){return "به تصویر ماسک نینجا"};
 
-exports.setSpriteOctopus = function(d){return "to an octopus image"};
+exports.setSpriteOctopus = function(d){return "به تصویر هشت پا"};
 
-exports.setSpritePenguin = function(d){return "to a penguin image"};
+exports.setSpritePenguin = function(d){return "به تصویر پنگوئن"};
 
-exports.setSpritePirate = function(d){return "to a pirate image"};
+exports.setSpritePirate = function(d){return "به تصویر دزد دریایی"};
 
-exports.setSpritePrincess = function(d){return "to a princess image"};
+exports.setSpritePrincess = function(d){return "به تصویر شاهزاده خانم"};
 
 exports.setSpriteRandom = function(d){return "به یک تصویر تصادفی"};
 
-exports.setSpriteRobot = function(d){return "to a robot image"};
+exports.setSpriteRobot = function(d){return "به تصویر ربات"};
 
-exports.setSpriteShowK1 = function(d){return "show"};
+exports.setSpriteShowK1 = function(d){return "نشان می دهد"};
 
-exports.setSpriteSpacebot = function(d){return "to a spacebot image"};
+exports.setSpriteSpacebot = function(d){return "به تصویر ربات فضایی"};
 
-exports.setSpriteSoccerGirl = function(d){return "to a soccer girl image"};
+exports.setSpriteSoccerGirl = function(d){return "به تصویر دختر فوتبالیست"};
 
-exports.setSpriteSoccerBoy = function(d){return "to a soccer boy image"};
+exports.setSpriteSoccerBoy = function(d){return "به تصویر پسر فوتبالیست"};
 
-exports.setSpriteSquirrel = function(d){return "to a squirrel image"};
+exports.setSpriteSquirrel = function(d){return "به تصویر سنجاب"};
 
-exports.setSpriteTennisGirl = function(d){return "to a tennis girl image"};
+exports.setSpriteTennisGirl = function(d){return "به تصویر دختر تنیسور"};
 
-exports.setSpriteTennisBoy = function(d){return "to a tennis boy image"};
+exports.setSpriteTennisBoy = function(d){return "به تصویر پسر تنیسور"};
 
-exports.setSpriteUnicorn = function(d){return "to a unicorn image"};
+exports.setSpriteUnicorn = function(d){return "به تصویر تک شاخ"};
 
 exports.setSpriteWitch = function(d){return "به تصویر جادوگر"};
 
-exports.setSpriteWizard = function(d){return "to a wizard image"};
+exports.setSpriteWizard = function(d){return "به تصویر جادوگر"};
 
 exports.setSpritePositionTooltip = function(d){return "بلافاصله بازیگر را به موقعیت مشخص شده حرکت می‌دهد."};
 
-exports.setSpriteK1Tooltip = function(d){return "Shows or hides the specified actor."};
+exports.setSpriteK1Tooltip = function(d){return "بازیگر مشخص شده را نشان می دهد یا پنهان می کند ."};
 
 exports.setSpriteTooltip = function(d){return "تعیین تصویر بازیگر"};
 
-exports.setSpriteSizeRandom = function(d){return "to a random size"};
+exports.setSpriteSizeRandom = function(d){return "به اندازه تصادفی"};
 
-exports.setSpriteSizeVerySmall = function(d){return "to a very small size"};
+exports.setSpriteSizeVerySmall = function(d){return "به اندازه بسیار کوچک"};
 
-exports.setSpriteSizeSmall = function(d){return "to a small size"};
+exports.setSpriteSizeSmall = function(d){return "به اندازه کوچک"};
 
-exports.setSpriteSizeNormal = function(d){return "to a normal size"};
+exports.setSpriteSizeNormal = function(d){return "به اندازه معمولی"};
 
-exports.setSpriteSizeLarge = function(d){return "to a large size"};
+exports.setSpriteSizeLarge = function(d){return "به اندازه بزرگ"};
 
-exports.setSpriteSizeVeryLarge = function(d){return "to a very large size"};
+exports.setSpriteSizeVeryLarge = function(d){return "به اندازه بسیار بزرگ"};
 
-exports.setSpriteSizeTooltip = function(d){return "Sets the size of an actor"};
+exports.setSpriteSizeTooltip = function(d){return "اندازه را برای یک بازیگر مشخص کن"};
 
 exports.setSpriteSpeedRandom = function(d){return "به یک سرعت تصادفی"};
 
@@ -21707,67 +21708,67 @@ exports.setSpriteSpeedVeryFast = function(d){return "به سرعت خیلی سر
 
 exports.setSpriteSpeedTooltip = function(d){return "تعیین سرعت یک بازیگر"};
 
-exports.setSpriteZombie = function(d){return "to a zombie image"};
+exports.setSpriteZombie = function(d){return "به تصویر زامبی"};
 
 exports.shareStudioTwitter = function(d){return "داستانی که ساخته‌ام را ببین. من خودم آن را با @codeorg نوشته‌ام"};
 
 exports.shareGame = function(d){return "داستانت را به اشتراک بگذار:"};
 
-exports.showCoordinates = function(d){return "show coordinates"};
+exports.showCoordinates = function(d){return "نشان دادن مختصات"};
 
-exports.showCoordinatesTooltip = function(d){return "show the protagonist's coordinates on the screen"};
+exports.showCoordinatesTooltip = function(d){return "نشان دادن مختصات بازیگر اصلی در صفحه"};
 
-exports.showTitleScreen = function(d){return "show title screen"};
+exports.showTitleScreen = function(d){return "نمایش عنوان صفحه"};
 
-exports.showTitleScreenTitle = function(d){return "title"};
+exports.showTitleScreenTitle = function(d){return "عنوان"};
 
 exports.showTitleScreenText = function(d){return "متن"};
 
-exports.showTSDefTitle = function(d){return "type title here"};
+exports.showTSDefTitle = function(d){return "عنوان را اینجا بنویس"};
 
-exports.showTSDefText = function(d){return "type text here"};
+exports.showTSDefText = function(d){return "متن را اینجا بنویس"};
 
 exports.showTitleScreenTooltip = function(d){return "Show a title screen with the associated title and text."};
 
-exports.size = function(d){return "size"};
+exports.size = function(d){return "اندازه"};
 
 exports.setSprite = function(d){return "مجموعه"};
 
 exports.setSpriteN = function(d){return "set actor "+v(d,"spriteIndex")};
 
-exports.soundCrunch = function(d){return "crunch"};
+exports.soundCrunch = function(d){return "خرد شدن"};
 
-exports.soundGoal1 = function(d){return "goal 1"};
+exports.soundGoal1 = function(d){return "هدف 1"};
 
-exports.soundGoal2 = function(d){return "goal 2"};
+exports.soundGoal2 = function(d){return "هدف 2"};
 
-exports.soundHit = function(d){return "hit"};
+exports.soundHit = function(d){return "آمار"};
 
 exports.soundLosePoint = function(d){return "lose point"};
 
-exports.soundLosePoint2 = function(d){return "lose point 2"};
+exports.soundLosePoint2 = function(d){return "از دست دادن نقطه ای 2"};
 
-exports.soundRetro = function(d){return "retro"};
+exports.soundRetro = function(d){return "یکپارچه سازی با سیستم عامل"};
 
 exports.soundRubber = function(d){return "rubber"};
 
-exports.soundSlap = function(d){return "slap"};
+exports.soundSlap = function(d){return "سیلی"};
 
 exports.soundWinPoint = function(d){return "win point"};
 
 exports.soundWinPoint2 = function(d){return "win point 2"};
 
-exports.soundWood = function(d){return "wood"};
+exports.soundWood = function(d){return "چوب"};
 
-exports.speed = function(d){return "speed"};
+exports.speed = function(d){return "سرعت"};
 
-exports.stopSprite = function(d){return "stop"};
+exports.stopSprite = function(d){return "بایست"};
 
 exports.stopSpriteN = function(d){return "stop actor "+v(d,"spriteIndex")};
 
 exports.stopTooltip = function(d){return "Stops an actor's movement."};
 
-exports.throwSprite = function(d){return "throw"};
+exports.throwSprite = function(d){return "پرتاب"};
 
 exports.throwSpriteN = function(d){return "actor "+v(d,"spriteIndex")+" throw"};
 
@@ -21779,55 +21780,55 @@ exports.vanishActorN = function(d){return "vanish actor "+v(d,"spriteIndex")};
 
 exports.vanishTooltip = function(d){return "Vanishes the actor."};
 
-exports.waitFor = function(d){return "wait for"};
+exports.waitFor = function(d){return "منتظر ماندن برای"};
 
-exports.waitSeconds = function(d){return "seconds"};
+exports.waitSeconds = function(d){return "ثانیه"};
 
-exports.waitForClick = function(d){return "wait for click"};
+exports.waitForClick = function(d){return "برای کلیک کردن صبر کنید"};
 
 exports.waitForRandom = function(d){return "wait for random"};
 
-exports.waitForHalfSecond = function(d){return "wait for a half second"};
+exports.waitForHalfSecond = function(d){return "برای نیم ثانیه صبر کنید"};
 
-exports.waitFor1Second = function(d){return "wait for 1 second"};
+exports.waitFor1Second = function(d){return "برای 1 ثانیه صبر کنید"};
 
-exports.waitFor2Seconds = function(d){return "wait for 2 seconds"};
+exports.waitFor2Seconds = function(d){return "برای 2 ثانیه صبر کنید"};
 
-exports.waitFor5Seconds = function(d){return "wait for 5 seconds"};
+exports.waitFor5Seconds = function(d){return "برای 5 ثانیه صبر کنید"};
 
-exports.waitFor10Seconds = function(d){return "wait for 10 seconds"};
+exports.waitFor10Seconds = function(d){return "برای 10 ثانیه صبر کنید"};
 
 exports.waitParamsTooltip = function(d){return "Waits for a specified number of seconds or use zero to wait until a click occurs."};
 
 exports.waitTooltip = function(d){return "Waits for a specified amount of time or until a click occurs."};
 
-exports.whenArrowDown = function(d){return "down arrow"};
+exports.whenArrowDown = function(d){return "فلش سمت پایین"};
 
-exports.whenArrowLeft = function(d){return "left arrow"};
+exports.whenArrowLeft = function(d){return "فلش سمت چپ"};
 
-exports.whenArrowRight = function(d){return "right arrow"};
+exports.whenArrowRight = function(d){return "فلش سمت راست"};
 
-exports.whenArrowUp = function(d){return "up arrow"};
+exports.whenArrowUp = function(d){return "فلش سمت بالا"};
 
 exports.whenArrowTooltip = function(d){return "Execute the actions below when the specified arrow key is pressed."};
 
-exports.whenDown = function(d){return "when Down arrow"};
+exports.whenDown = function(d){return "وقتی که کلید فلش پایین فشار داده می شود"};
 
-exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
+exports.whenDownTooltip = function(d){return "کارهای زیر را انجام بده وقتی که فلش پایین فشار داده می شود."};
 
-exports.whenGameStarts = function(d){return "when game starts"};
+exports.whenGameStarts = function(d){return "وقتی که داستان شروع می شود"};
 
 exports.whenGameStartsTooltip = function(d){return "Execute the actions below when the game starts."};
 
-exports.whenLeft = function(d){return "when Left arrow"};
+exports.whenLeft = function(d){return "وقتی که کلید فلش چپ فشار داده می شود"};
 
-exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
+exports.whenLeftTooltip = function(d){return "کارهای زیر را انجام بده وقتی که کلید فلش چپ فشار داده می شود."};
 
-exports.whenRight = function(d){return "when Right arrow"};
+exports.whenRight = function(d){return "وقتی که کلید فلش راست فشار داده می شود"};
 
-exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
+exports.whenRightTooltip = function(d){return "کارهای زیر را انجام بده وقتی که کلید فلش راست فشار داده می شود."};
 
-exports.whenSpriteClicked = function(d){return "when actor clicked"};
+exports.whenSpriteClicked = function(d){return "وقتی که  بازیگر کلیک کرد"};
 
 exports.whenSpriteClickedN = function(d){return "when actor "+v(d,"spriteIndex")+" clicked"};
 
@@ -21837,11 +21838,11 @@ exports.whenSpriteCollidedN = function(d){return "when actor "+v(d,"spriteIndex"
 
 exports.whenSpriteCollidedTooltip = function(d){return "اجرای عملیات زیر هنگامیکه یک بازیگر به بازیگر دیگری می‌زسد."};
 
-exports.whenSpriteCollidedWith = function(d){return "touches"};
+exports.whenSpriteCollidedWith = function(d){return "لمس"};
 
 exports.whenSpriteCollidedWithAnyActor = function(d){return "touches any actor"};
 
-exports.whenSpriteCollidedWithAnyEdge = function(d){return "touches any edge"};
+exports.whenSpriteCollidedWithAnyEdge = function(d){return "لمس هر لبه"};
 
 exports.whenSpriteCollidedWithAnyProjectile = function(d){return "touches any projectile"};
 

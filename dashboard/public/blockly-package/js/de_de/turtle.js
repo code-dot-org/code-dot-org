@@ -2607,6 +2607,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -2619,7 +2620,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -2629,16 +2632,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -14129,8 +14122,16 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
     // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
     Turtle.ctxPattern.rotate(Math.PI * (Turtle.heading - 90) / 180);
 
-    var clipSize = Math.min(Turtle.smoothAnimateStepSize, lineDistance);
-
+    var clipSize;
+    if (lineDistance % Turtle.smoothAnimateStepSize === 0) {
+      clipSize = Turtle.smoothAnimateStepSize;
+    } else if (lineDistance > Turtle.smoothAnimateStepSize) {
+      // this happens when our line was not divisible by smoothAnimateStepSize
+      // and we've hit our last chunk
+      clipSize = lineDistance % Turtle.smoothAnimateStepSize;
+    } else {
+      clipSize = lineDistance;
+    }
     if (img.width !== 0) {
       Turtle.ctxPattern.drawImage(img,
         // Start point for clipping image
@@ -14138,7 +14139,7 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
         // clip region size
         clipSize * retina, img.height,
         // some mysterious hand-tweaking done by Brendan
-        Math.round((Turtle.stepDistanceCovered - 7) * retina), Math.round((- 18) * retina),
+        Math.round((Turtle.stepDistanceCovered - clipSize - 2) * retina), Math.round((- 18) * retina),
         clipSize * retina, img.height);
     }
 
@@ -14799,7 +14800,7 @@ exports.end = function(d){return "Ende"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Die \"Wiederholen\"- und die \"Wenn\"-Bausteine benötigten im Inneren andere Bausteine um zu funktionieren. Stelle sicher, dass der innere Baustein in den umschließenden Baustein passt."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "Der Funktionsblock muss andere Blöcke beinhalten um zu funktionieren."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Der Funktionsblock muss andere Blöcke beinhalten, um zu funktionieren."};
 
 exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
 
@@ -14815,7 +14816,7 @@ exports.errorUnusedFunction = function(d){return "You created a function, but ne
 
 exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
-exports.extraTopBlocks = function(d){return "Du hast die Bausteine entfernt. Wolltest du sie an den \"Wenn ausführen\" Baustein anhängen?"};
+exports.extraTopBlocks = function(d){return "Einige Blöcke sind nicht verbunden. Wolltest Du diese mit dem \"Wenn ausführen\" Block verbinden?"};
 
 exports.finalStage = function(d){return "Glückwunsch! Du hast das letzte Level erfolgreich abgeschlossen."};
 
@@ -14823,7 +14824,7 @@ exports.finalStageTrophies = function(d){return "Glückwunsch! Du hast das letzt
 
 exports.finish = function(d){return "Abschließen"};
 
-exports.generatedCodeInfo = function(d){return "Sogar Top-Universitäten unterrichten Baustein-basiertes programmieren (z.B."+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Die Bausteine, welche sie zusammengestellt haben, können auch in JavaScript dargestellt werden, die meistgenutzte Programmiersprache der Welt:"};
+exports.generatedCodeInfo = function(d){return "Selbst Eliteuniversitäten unterrichten blockbasiertes Programmieren (z.B. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Allerdings können die von Dir zusammengefügten Blöcke auch in JavaScript, der weltweit meistverbreiteten Programmierspache, dargestellt werden:"};
 
 exports.hashError = function(d){return "Ups, '%1' stimmt mit keinem gespeicherten Programm überein."};
 
@@ -14837,7 +14838,7 @@ exports.levelIncompleteError = function(d){return "Du benutzt alle nötigen Baus
 
 exports.listVariable = function(d){return "Liste"};
 
-exports.makeYourOwnFlappy = function(d){return "Erstelle Dein Eigenes \"Flappy Bird\" Spiel"};
+exports.makeYourOwnFlappy = function(d){return "Programmiere Dein eigenes \"Flappy\"-Spiel"};
 
 exports.missingBlocksErrorMsg = function(d){return "Versuche einen, oder mehrere Bausteine von unten zu verwenden, um dieses Puzzle zu lösen."};
 
@@ -14845,9 +14846,9 @@ exports.nextLevel = function(d){return "Glückwunsch! Du hast Puzzle "+v(d,"puzz
 
 exports.nextLevelTrophies = function(d){return "Glückwunsch! Du hast Puzzle "+v(d,"puzzleNumber")+" erfolgreich abgeschlossen und "+p(d,"numTrophies",0,"de",{"one":"eine Trophäe","other":n(d,"numTrophies")+" Trophäen"})+" gewonnen."};
 
-exports.nextStage = function(d){return "Herzlichen Glückwunsch! Du hast "+v(d,"stageName")+" erfolgreich abgeschlossen."};
+exports.nextStage = function(d){return "Glückwunsch! "+v(d,"stageName")+" abgeschlossen."};
 
-exports.nextStageTrophies = function(d){return "Herzlichen Glückwunsch! Du hast Teil "+v(d,"stageName")+" erfolgreich abgeschlossen und "+p(d,"numTrophies",0,"de",{"one":"eine Trophäe","other":n(d,"numTrophies")+" Trophäen"})+" gewonnen."};
+exports.nextStageTrophies = function(d){return "Glückwunsch! "+v(d,"stageName")+" abgeschlossen und "+p(d,"numTrophies",0,"de",{"eine":"a trophy","other":n(d,"numTrophies")+" trophies"})+" gewonnen."};
 
 exports.numBlocksNeeded = function(d){return "Glückwunsch! Du hast Puzzle "+v(d,"puzzleNumber")+" fertig gestellt. (Du hättest jedoch nur "+p(d,"numBlocks",0,"de",{"one":"1 Baustein","other":n(d,"numBlocks")+" Bausteine"})+" gebraucht.)"};
 
@@ -14855,7 +14856,7 @@ exports.numLinesOfCodeWritten = function(d){return "Du hast soeben "+p(d,"numLin
 
 exports.play = function(d){return "spielen"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Drucken"};
 
 exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" von "+v(d,"stage_total")};
 
@@ -14899,11 +14900,11 @@ exports.hintRequest = function(d){return "Hinweis anzeigen"};
 
 exports.backToPreviousLevel = function(d){return "Zurück zum vorherigen Level"};
 
-exports.saveToGallery = function(d){return "In deiner Galerie abspeichern"};
+exports.saveToGallery = function(d){return "In die Galerie abspeichern"};
 
-exports.savedToGallery = function(d){return "In deiner Gallerie gespeichert!"};
+exports.savedToGallery = function(d){return "In der Galerie gespeichert!"};
 
-exports.shareFailure = function(d){return "Leider können wir dieses Programm nicht teilen."};
+exports.shareFailure = function(d){return "Leider können wir dieses Programm nicht freigeben."};
 
 exports.typeFuncs = function(d){return "Verfügbare Funktionen:%1"};
 
@@ -14911,7 +14912,7 @@ exports.typeHint = function(d){return "Beachte, dass die runden Klammern und Sem
 
 exports.workspaceHeader = function(d){return "Setze die Bausteine hier zusammen: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Geben Sie hier Ihren JavaScript-code ein"};
+exports.workspaceHeaderJavaScript = function(d){return "Gib hier Deinen JavaScript-Code ein"};
 
 exports.infinity = function(d){return "Unendlichkeit"};
 
@@ -14925,17 +14926,17 @@ exports.watchVideo = function(d){return "Video anschauen"};
 
 exports.when = function(d){return "wenn"};
 
-exports.whenRun = function(d){return "Programmstart"};
+exports.whenRun = function(d){return "wenn ausführen"};
 
 exports.tryHOC = function(d){return "Probiere \"The Hour of Code\" aus"};
 
 exports.signup = function(d){return "Für den Einführungskurs anmelden"};
 
-exports.hintHeader = function(d){return "Hier ist ein Tipp:"};
+exports.hintHeader = function(d){return "Hier ein Tipp:"};
 
-exports.genericFeedback = function(d){return "Schau dir an, was du gemacht hast und versuche Fehler im Programm zu beheben."};
+exports.genericFeedback = function(d){return "Sieh Dir Dein Ergebnis an und versuche, Programmierfehler zu beheben."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Sieh was ich gemacht habe"};
 
 
 },{"messageformat":57}],45:[function(require,module,exports){
@@ -14960,23 +14961,23 @@ exports.catLogic = function(d){return "Logik"};
 
 exports.colourTooltip = function(d){return "Ändere die Farbe des Stiftes."};
 
-exports.createACircle = function(d){return "create a circle"};
+exports.createACircle = function(d){return "Erzeuge einen Kreis"};
 
-exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+exports.createSnowflakeSquare = function(d){return "Erzeuge eine Schneeflocke in Form eines Quadrats"};
 
-exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+exports.createSnowflakeParallelogram = function(d){return "Erzeuge eine Schneeflocke in Form eines Parallelogramms"};
 
-exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+exports.createSnowflakeLine = function(d){return "Erzeuge eine Schneeflocke in Form einer Linie"};
 
-exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+exports.createSnowflakeSpiral = function(d){return "Erzeuge eine Schneeflocke in Form einer Spirale"};
 
-exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+exports.createSnowflakeFlower = function(d){return "Erzeuge eine Schneeflocke in Form einer Blume"};
 
-exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+exports.createSnowflakeFractal = function(d){return "Erzeuge eine Schneeflocke in Form eines Fraktals"};
 
-exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+exports.createSnowflakeRandom = function(d){return "Erzeuge eine Schneeflocke in zufälliger Form"};
 
-exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
+exports.createASnowflakeBranch = function(d){return "Erzeuge eine Schneeflocke in Form eines Zweiges"};
 
 exports.degrees = function(d){return "Grad"};
 
@@ -15016,7 +15017,7 @@ exports.drawUpperWave = function(d){return "Zeichne obere Welle"};
 
 exports.drawLowerWave = function(d){return "Zeichne untere Welle"};
 
-exports.drawStamp = function(d){return "draw stamp"};
+exports.drawStamp = function(d){return "Male einen Stempel"};
 
 exports.heightParameter = function(d){return "Höhe"};
 
@@ -15030,13 +15031,13 @@ exports.jumpForward = function(d){return "springe vorwärts um"};
 
 exports.jumpTooltip = function(d){return "Bewegt den Künstler ohne Spuren zu hinterlassen."};
 
-exports.jumpEastTooltip = function(d){return "Bewegt den Künstler nach Osten ohne zu zeichnen."};
+exports.jumpEastTooltip = function(d){return "Bewegt den Künstler nach Osten ohne Spuren zurück zulassen."};
 
-exports.jumpNorthTooltip = function(d){return "Bewegt den Künstler nach Norden ohne zu zeichnen."};
+exports.jumpNorthTooltip = function(d){return "Bewegt den Künstler nach Norden ohne Spuren zurück zulassen."};
 
-exports.jumpSouthTooltip = function(d){return "Bewegt den Künstler nach Süden ohne zu zeichnen."};
+exports.jumpSouthTooltip = function(d){return "Bewegt den Künstler nach Süden ohne Spuren zurück zulassen."};
 
-exports.jumpWestTooltip = function(d){return "Bewegt den Künstler nach Westen ohne zu zeichnen."};
+exports.jumpWestTooltip = function(d){return "Bewegt den Künstler nach Westen ohne Spuren zurück zulassen."};
 
 exports.lengthFeedback = function(d){return "Die Länge der Bewegung muss noch korrigiert werden."};
 
@@ -15070,7 +15071,7 @@ exports.penTooltip = function(d){return "Hebt oder senkt den Stift um das Zeichn
 
 exports.penUp = function(d){return "Stift anheben"};
 
-exports.reinfFeedbackMsg = function(d){return "Sieht das so aus, wie du es möchtest? Drücke die \"Neuer Versuch\"-Taste, um deine Zeichnung zu sehen."};
+exports.reinfFeedbackMsg = function(d){return "Dein Bild ist fertig! Arbeite weiter daran oder gehe zum nächsten Level."};
 
 exports.setColour = function(d){return "Farbe festlegen"};
 

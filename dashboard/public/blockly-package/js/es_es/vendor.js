@@ -1439,7 +1439,7 @@ renameVar:function(a,b){Blockly.Names.equals(a,this.getTitleValue("VAR"))&&this.
 b.callback=Blockly.ContextMenu.callbackFactory(this,c);a.push(b)}};
 Blockly.Blocks.variables_set={init:function(){var a=new Blockly.FieldLabel(Blockly.Msg.VARIABLES_SET_ITEM);a.EDITABLE=!0;this.setHelpUrl(Blockly.Msg.VARIABLES_SET_HELPURL);this.setHSV(312,0.32,0.62);this.appendValueInput("VALUE").appendTitle(Blockly.Msg.VARIABLES_SET_TITLE).appendTitle(Blockly.disableVariableEditing?a:new Blockly.FieldVariable(Blockly.Msg.VARIABLES_SET_ITEM),"VAR").appendTitle(Blockly.Msg.VARIABLES_SET_TAIL);this.setPreviousStatement(!0);this.setNextStatement(!0);this.setTooltip(Blockly.Msg.VARIABLES_SET_TOOLTIP)},
 getVars:function(){return[this.getTitleValue("VAR")]},renameVar:function(a,b){Blockly.Names.equals(a,this.getTitleValue("VAR"))&&this.setTitleValue(b,"VAR")},contextMenuMsg_:Blockly.Msg.VARIABLES_SET_CREATE_GET,contextMenuType_:"variables_get",customContextMenu:Blockly.Blocks.variables_get.customContextMenu};
-Blockly.Blocks.parameters_get={init:function(){var a=new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);a.EDITABLE=!0;this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);this.setHSV(312,0.32,0.62);this.appendDummyInput().appendTitle(Blockly.Msg.VARIABLES_GET_TITLE).appendTitle(Blockly.disableVariableEditing?a:new Blockly.FieldParameter(Blockly.Msg.VARIABLES_GET_ITEM),"VAR").appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);this.setOutput(!0);this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP)},renameVar:function(a,
+Blockly.Blocks.parameters_get={init:function(){var a=new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);a.EDITABLE=!0;this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);this.setHSV(7,0.8,0.95);this.appendDummyInput().appendTitle(Blockly.Msg.VARIABLES_GET_TITLE).appendTitle(Blockly.disableVariableEditing?a:new Blockly.FieldParameter(Blockly.Msg.VARIABLES_GET_ITEM),"VAR").appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);this.setOutput(!0);this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP)},renameVar:function(a,
 b){Blockly.functionEditor&&(Blockly.functionEditor.renameParameter(a,b),Blockly.functionEditor.refreshParamsEverywhere())},removeVar:Blockly.Blocks.variables_get.removeVar};Blockly.Blocks.functionalProcedures={};
 Blockly.Blocks.functional_definition={init:function(){this.setHelpUrl(Blockly.Msg.PROCEDURES_DEFNORETURN_HELPURL);this.setHSV(94,0.84,0.6);this.setFunctional(!0,{headerHeight:0,rowBuffer:3});this.setFunctionalOutput(!0,"Number");var a=Blockly.Procedures.findLegalName(Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE,this);this.appendDummyInput().appendTitle(Blockly.Msg.DEFINE_FUNCTION_DEFINE).appendTitle(new Blockly.FieldTextInput(a,Blockly.Procedures.rename),"NAME").appendTitle("","PARAMS");this.appendFunctionalInput("STACK");
 this.setFunctional(!0);this.setTooltip(Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP);this.isFunctionalVariable_=!1;this.parameterNames_=[];this.paramIds_=[];this.parameterTypes_=[]},mutationToDom:function(){for(var a=document.createElement("mutation"),b=0;b<this.parameterNames_.length;b++){var c=document.createElement("arg");c.setAttribute("name",this.parameterNames_[b]);c.setAttribute("type",this.parameterTypes_[b]);a.appendChild(c)}this.description_&&(b=document.createElement("description"),
@@ -1639,8 +1639,8 @@ Blockly.Msg.EXPECTED = "Esperado";
 Blockly.Msg.EXTERNAL_INPUTS = "Entradas externas";
 Blockly.Msg.FUNCTION_CREATE = "Crear una función";
 Blockly.Msg.FUNCTION_EDIT = "Editar";
-Blockly.Msg.FUNCTION_NAME_LABEL = "Nombre de tu función:";
-Blockly.Msg.FUNCTION_DESCRIPTION_LABEL = "¿Qué supone hacer tu función?";
+Blockly.Msg.FUNCTION_NAME_LABEL = "Nombra  tu función:";
+Blockly.Msg.FUNCTION_DESCRIPTION_LABEL = "¿Qué se supone que hará tu función?";
 Blockly.Msg.FUNCTION_PARAMETERS_LABEL = "¿Qué parámetros toma tu función?";
 Blockly.Msg.FUNCTION_HEADER = "Función";
 Blockly.Msg.FUNCTIONAL_CREATE = "Nuevo bloque";
@@ -1653,7 +1653,7 @@ Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP = "Definir un método funcional"
 Blockly.Msg.FUNCTIONAL_RANGE_LABEL = "Rango";
 Blockly.Msg.FUNCTIONAL_VARIABLE_CREATE = "Crear una Variable";
 Blockly.Msg.FUNCTIONAL_VARIABLE_HEADER = "Variable";
-Blockly.Msg.FUNCTIONAL_VARIABLE_TYPE = "TIPO";
+Blockly.Msg.FUNCTIONAL_VARIABLE_TYPE = "Tipo";
 Blockly.Msg.HELP = "Ayuda";
 Blockly.Msg.INLINE_INPUTS = "Entradas en línea";
 Blockly.Msg.LISTS_CREATE_EMPTY_HELPURL = "http://en.wikipedia.org/wiki/Linked_list#Empty_lists";

@@ -2,8 +2,8 @@ da:
   data:
     match:
       2-3 artist loops match 1:
-        Artist Loops Matching One: Kunstner Løkke Matcher Ën
-        Matching loops: Matchende sløjfer
+        Artist Loops Matching One: Kunstner Loops Matcher Ën
+        Matching loops: Matchende loops
         Match the loop to the shape: Match løkken til figuren
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png
@@ -83,7 +83,7 @@ da:
       2-3 Binary Match 1:
         Matching: Matching
         /script_assets/2-3_images/unplugged/binary_1_q.png, 250: /script_assets/2-3_images/unplugged/binary_1_q.png, 250
-        Use the key to match each code to its letter: Use the key to match each code to its letter
+        Use the key to match each code to its letter: Brug nøglen til at matche hver kode med dets bogstav
         <strong>N</strong>: '<strong>N</strong>'
         <strong>O</strong>: '<strong>O</strong>'
         <strong>P</strong>: '<strong>P</strong>'

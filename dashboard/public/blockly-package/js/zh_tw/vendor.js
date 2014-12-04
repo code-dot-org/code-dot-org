@@ -1439,7 +1439,7 @@ renameVar:function(a,b){Blockly.Names.equals(a,this.getTitleValue("VAR"))&&this.
 b.callback=Blockly.ContextMenu.callbackFactory(this,c);a.push(b)}};
 Blockly.Blocks.variables_set={init:function(){var a=new Blockly.FieldLabel(Blockly.Msg.VARIABLES_SET_ITEM);a.EDITABLE=!0;this.setHelpUrl(Blockly.Msg.VARIABLES_SET_HELPURL);this.setHSV(312,0.32,0.62);this.appendValueInput("VALUE").appendTitle(Blockly.Msg.VARIABLES_SET_TITLE).appendTitle(Blockly.disableVariableEditing?a:new Blockly.FieldVariable(Blockly.Msg.VARIABLES_SET_ITEM),"VAR").appendTitle(Blockly.Msg.VARIABLES_SET_TAIL);this.setPreviousStatement(!0);this.setNextStatement(!0);this.setTooltip(Blockly.Msg.VARIABLES_SET_TOOLTIP)},
 getVars:function(){return[this.getTitleValue("VAR")]},renameVar:function(a,b){Blockly.Names.equals(a,this.getTitleValue("VAR"))&&this.setTitleValue(b,"VAR")},contextMenuMsg_:Blockly.Msg.VARIABLES_SET_CREATE_GET,contextMenuType_:"variables_get",customContextMenu:Blockly.Blocks.variables_get.customContextMenu};
-Blockly.Blocks.parameters_get={init:function(){var a=new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);a.EDITABLE=!0;this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);this.setHSV(312,0.32,0.62);this.appendDummyInput().appendTitle(Blockly.Msg.VARIABLES_GET_TITLE).appendTitle(Blockly.disableVariableEditing?a:new Blockly.FieldParameter(Blockly.Msg.VARIABLES_GET_ITEM),"VAR").appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);this.setOutput(!0);this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP)},renameVar:function(a,
+Blockly.Blocks.parameters_get={init:function(){var a=new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);a.EDITABLE=!0;this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);this.setHSV(7,0.8,0.95);this.appendDummyInput().appendTitle(Blockly.Msg.VARIABLES_GET_TITLE).appendTitle(Blockly.disableVariableEditing?a:new Blockly.FieldParameter(Blockly.Msg.VARIABLES_GET_ITEM),"VAR").appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);this.setOutput(!0);this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP)},renameVar:function(a,
 b){Blockly.functionEditor&&(Blockly.functionEditor.renameParameter(a,b),Blockly.functionEditor.refreshParamsEverywhere())},removeVar:Blockly.Blocks.variables_get.removeVar};Blockly.Blocks.functionalProcedures={};
 Blockly.Blocks.functional_definition={init:function(){this.setHelpUrl(Blockly.Msg.PROCEDURES_DEFNORETURN_HELPURL);this.setHSV(94,0.84,0.6);this.setFunctional(!0,{headerHeight:0,rowBuffer:3});this.setFunctionalOutput(!0,"Number");var a=Blockly.Procedures.findLegalName(Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE,this);this.appendDummyInput().appendTitle(Blockly.Msg.DEFINE_FUNCTION_DEFINE).appendTitle(new Blockly.FieldTextInput(a,Blockly.Procedures.rename),"NAME").appendTitle("","PARAMS");this.appendFunctionalInput("STACK");
 this.setFunctional(!0);this.setTooltip(Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP);this.isFunctionalVariable_=!1;this.parameterNames_=[];this.paramIds_=[];this.parameterTypes_=[]},mutationToDom:function(){for(var a=document.createElement("mutation"),b=0;b<this.parameterNames_.length;b++){var c=document.createElement("arg");c.setAttribute("name",this.parameterNames_[b]);c.setAttribute("type",this.parameterTypes_[b]);a.appendChild(c)}this.description_&&(b=document.createElement("description"),
@@ -1562,7 +1562,7 @@ Blockly.JavaScript.parameters_set=Blockly.JavaScript.variables_set;
 
 goog.provide('Blockly.Msg.zh_tw');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "actual";
+Blockly.Msg.ACTUAL = "實際";
 Blockly.Msg.ADD = "加入";
 Blockly.Msg.ADD_COMMENT = "加入註解";
 Blockly.Msg.ADD_PARAMETER = "加入參數";
@@ -1630,12 +1630,12 @@ Blockly.Msg.DELETE_PARAMETER_TITLE = "這會將全部參數「%1」刪除。真�
 Blockly.Msg.DELETE_X_BLOCKS = "刪除 %1 個程式積木";
 Blockly.Msg.DISABLE_BLOCK = "停用程式積木";
 Blockly.Msg.DUPLICATE_BLOCK = "複製\n";
-Blockly.Msg.ENABLE_BLOCK = "啟用區塊";
+Blockly.Msg.ENABLE_BLOCK = "啟用積木";
 Blockly.Msg.EXAMPLE = "範例";
-Blockly.Msg.EXAMPLE_DESCRIPTION = "Defines an example with expected and actual behavior";
+Blockly.Msg.EXAMPLE_DESCRIPTION = "定義一個預期和實際行為的例子";
 Blockly.Msg.EXPAND_ALL = "展開積木";
 Blockly.Msg.EXPAND_BLOCK = "展開區塊";
-Blockly.Msg.EXPECTED = "expected";
+Blockly.Msg.EXPECTED = "預期的";
 Blockly.Msg.EXTERNAL_INPUTS = "外部輸入";
 Blockly.Msg.FUNCTION_CREATE = "建立一個函數";
 Blockly.Msg.FUNCTION_EDIT = "編輯";
@@ -1648,11 +1648,11 @@ Blockly.Msg.FUNCTIONAL_EDIT = "編輯";
 Blockly.Msg.FUNCTIONAL_NAME_LABEL = "你的名字";
 Blockly.Msg.FUNCTIONAL_TYPE_LABEL = "請選擇類型...";
 Blockly.Msg.FUNCTIONAL_DESCRIPTION_LABEL = "描述";
-Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL = "域";
-Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP = "Define a functional method";
+Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL = "領域";
+Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP = "定義一個功能的方法";
 Blockly.Msg.FUNCTIONAL_RANGE_LABEL = "範圍";
-Blockly.Msg.FUNCTIONAL_VARIABLE_CREATE = "建立一個變量";
-Blockly.Msg.FUNCTIONAL_VARIABLE_HEADER = "變量";
+Blockly.Msg.FUNCTIONAL_VARIABLE_CREATE = "建立一個變數";
+Blockly.Msg.FUNCTIONAL_VARIABLE_HEADER = "變數";
 Blockly.Msg.FUNCTIONAL_VARIABLE_TYPE = "類型";
 Blockly.Msg.HELP = "說明";
 Blockly.Msg.INLINE_INPUTS = "內部輸入";
@@ -1837,7 +1837,7 @@ Blockly.Msg.MATH_TRIG_TOOLTIP_ATAN = "返回指定角度的反正切值。";
 Blockly.Msg.MATH_TRIG_TOOLTIP_COS = "返回指定角度的餘弦值(非弧度）。";
 Blockly.Msg.MATH_TRIG_TOOLTIP_SIN = "返回指定角度的正弦值(非弧度）。";
 Blockly.Msg.MATH_TRIG_TOOLTIP_TAN = "返回指定角度的正切值(非弧度）。";
-Blockly.Msg.NEW_VARIABLE = "新變量...";
+Blockly.Msg.NEW_VARIABLE = "新變數";
 Blockly.Msg.NEW_VARIABLE_TITLE = "新變量名稱:";
 Blockly.Msg.ORDINAL_NUMBER_SUFFIX = "";
 Blockly.Msg.PROCEDURES_BEFORE_PARAMS = "與：";
@@ -1889,7 +1889,7 @@ Blockly.Msg.TEXT_CHARAT_RANDOM = "取隨機一個字元";
 Blockly.Msg.TEXT_CHARAT_TAIL = "";
 Blockly.Msg.TEXT_CHARAT_TOOLTIP = "返回位於指定位置的字元。";
 Blockly.Msg.TEXT_CREATE_JOIN_ITEM_TOOLTIP = "將一個項目加入到字串中。";
-Blockly.Msg.TEXT_CREATE_JOIN_TITLE_JOIN = "加入";
+Blockly.Msg.TEXT_CREATE_JOIN_TITLE_JOIN = "結合";
 Blockly.Msg.TEXT_CREATE_JOIN_TOOLTIP = "添加、 刪除或重新排列各區塊來此重新配置這個文字積木。";
 Blockly.Msg.TEXT_GET_SUBSTRING_END_FROM_END = "到 倒數第 # 個字元";
 Blockly.Msg.TEXT_GET_SUBSTRING_END_FROM_START = "到 字元 #";
@@ -1911,7 +1911,7 @@ Blockly.Msg.TEXT_ISEMPTY_HELPURL = "網址  code.google.com/p/blockly/wiki/Text#
 Blockly.Msg.TEXT_ISEMPTY_TITLE = "%1 值為空";
 Blockly.Msg.TEXT_ISEMPTY_TOOLTIP = "如果提供的字串為空，則返回 真。";
 Blockly.Msg.TEXT_JOIN_HELPURL = "網址  code.google.com/p/blockly/wiki/Text#Text_creation";
-Blockly.Msg.TEXT_JOIN_TITLE_CREATEWITH = "建立字串使用";
+Blockly.Msg.TEXT_JOIN_TITLE_CREATEWITH = "建立字串, 使用";
 Blockly.Msg.TEXT_JOIN_TOOLTIP = "通過串起任意數量的項目來建立一段文字。";
 Blockly.Msg.TEXT_LENGTH_HELPURL = "網址  code.google.com/p/blockly/wiki/Text#Text_modification";
 Blockly.Msg.TEXT_LENGTH_TITLE = "%1的長度";

@@ -6698,6 +6698,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -6710,7 +6711,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -6720,16 +6723,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -16059,6 +16052,7 @@ levels.playlab_2 = utils.extend(levels.dog_and_cat_hello, {
   firstSpriteIndex: 20, // cave boy
   timeoutFailureTick: null,
   timeoutAfterWhenRun: true,
+  defaultEmotion: Emotions.HAPPY,
   goal: {
     successCondition: function () {
       return Studio.allWhenRunBlocksComplete() && Studio.sayComplete > 1;
@@ -16249,6 +16243,7 @@ levels.playlab_4 = {
   },
   background: 'tennis',
   avatarList: ['tennisboy', 'tennisgirl'],
+  defaultEmotion: Emotions.SAD,
   requiredBlocks: [
     [{
       test: 'moveDistance',
@@ -16336,6 +16331,7 @@ levels.playlab_5 = utils.extend(levels.click_hello, {
   background: 'space',
   firstSpriteIndex: 23, // spacebot
   timeoutAfterWhenRun: true,
+  defaultEmotion: Emotions.HAPPY,
   toolbox: tb(blockOfType('studio_saySprite')),
   startBlocks:
    '<block type="studio_whenSpriteClicked" deletable="false" x="20" y="20"></block>'
@@ -16470,6 +16466,7 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
     success: 'blue_fireball',
     imageWidth: 800
   },
+  defaultEmotion: Emotions.ANGRY,
   toolbox:
     tb(
       blockOfType('studio_move', {DIR: 8}) +
@@ -16562,6 +16559,7 @@ levels.playlab_7 = {
     'downButton',
     'upButton'
   ],
+  defaultEmotion: Emotions.HAPPY,
   map: [
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -16790,6 +16788,7 @@ levels.playlab_8 = {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
   avatarList: ['unicorn', 'wizard'],
+  defaultEmotion: Emotions.HAPPY,
   goal: {
     successCondition: function () {
       return Studio.sprite[0].isCollidingWith(1) && Studio.playerScore === 1;
@@ -16936,6 +16935,7 @@ levels.playlab_9 = {
   scale: {
     snapRadius: 2
   },
+  defaultEmotion: Emotions.ANGRY,
   softButtons: [
     'leftButton',
     'rightButton',
@@ -18867,7 +18867,8 @@ Studio.init = function(config) {
   config.makeUrl = "http://code.org/studio";
   config.makeImage = BlocklyApps.assetUrl('media/promo.png');
 
-  config.enableShowCode = BlocklyApps.editCode;
+  // Disable "show code" button in feedback dialog when workspace is hidden
+  config.enableShowCode = !config.level.embed && BlocklyApps.editCode;
   config.varsInGlobals = true;
 
   Studio.initSprites();
@@ -19018,7 +19019,7 @@ BlocklyApps.reset = function(first) {
       size: constants.DEFAULT_SPRITE_SIZE,
       dir: Direction.NONE,
       displayDir: Direction.SOUTH,
-      emotion: Emotions.NORMAL,
+      emotion: level.defaultEmotion || Emotions.NORMAL,
       // tickCount of last time sprite moved,
       lastMove: Infinity,
       // overridden as soon as we call setSprite
@@ -19100,7 +19101,7 @@ var displayFeedback = function() {
       feedbackType: Studio.testResults,
       response: Studio.response,
       level: level,
-      showingSharing: level.freePlay,
+      showingSharing: !level.disableSharing && (level.freePlay),
       feedbackImage: Studio.feedbackImage,
       twitter: twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
@@ -21153,7 +21154,7 @@ exports.catText = function(d){return "Besedilo"};
 
 exports.catVariables = function(d){return "Spremenljivke"};
 
-exports.codeTooltip = function(d){return "Poglej generirane kode JavaScript."};
+exports.codeTooltip = function(d){return "Poglej generirano kodo v JavaScriptu."};
 
 exports.continue = function(d){return "Nadaljuj"};
 
@@ -21173,7 +21174,7 @@ exports.end = function(d){return "konec"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Znotraj 'Ponovi' ali 'če' bloka morajo biti drugi bloki, da bo delovalo. Prepričaj se, da se notranji bloki ustrezno prilegajo zunanjemu bloku."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "Da bi blok funkcije delal potrebuje znotraj sebe druge bloke."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Da bi blok s funkcijo deloval, mora vsebovati druge bloke oz ukaze."};
 
 exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
 
@@ -21197,9 +21198,9 @@ exports.finalStageTrophies = function(d){return "Čestitke! Zaključil/a si stop
 
 exports.finish = function(d){return "Končaj"};
 
-exports.generatedCodeInfo = function(d){return "Celo najboljše univerze učijo kodiranje z bloki (npr. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ampak bloke, ki si jih sestavil, lahko prikažemo v JavaScriptu, najbolj rabljenem programskem jeziku:"};
+exports.generatedCodeInfo = function(d){return "Celo najboljše univerze učijo programirati s pomočjo blokov (npr. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Pod pokrovom pa se skrivajo pravi programi, napisani v JavaScriptu, enem najbolj uporabljanih programskih jezikov:"};
 
-exports.hashError = function(d){return "Oprosti, '%1' ne ustreza nobenemu shranjenemu programu."};
+exports.hashError = function(d){return "Žal, '%1' ne ustreza nobenemu shranjenemu programu."};
 
 exports.help = function(d){return "Pomoč"};
 
@@ -21211,25 +21212,25 @@ exports.levelIncompleteError = function(d){return "Uporabljaš vse potrebne tipe
 
 exports.listVariable = function(d){return "seznam"};
 
-exports.makeYourOwnFlappy = function(d){return "Izdelaj svojo lastno Flappy igro"};
+exports.makeYourOwnFlappy = function(d){return "Izdelaj svojo lastno igrico o Plahutaču (Flappyju)"};
 
-exports.missingBlocksErrorMsg = function(d){return "Poskusi enega ali več blokov spodaj, da rešiš uganko."};
+exports.missingBlocksErrorMsg = function(d){return "Če boš uporabil/a vsaj en blok, ki ga najdeš spodaj, ali več, boš rešil/a uganko."};
 
-exports.nextLevel = function(d){return "Čestitke! Rešil si uganko "+v(d,"puzzleNumber")+"."};
+exports.nextLevel = function(d){return "Čestitke! Rešil/a si uganko "+v(d,"puzzleNumber")+"."};
 
-exports.nextLevelTrophies = function(d){return "Čestitke! Zaključil/a si stopnjo "+v(d,"stageNumber")+" in osvojil/a "+p(d,"numTrophies",0,"sl",{"one":"trofejo","other":n(d,"numTrophies")+" trofej"})+"."};
+exports.nextLevelTrophies = function(d){return "Čestitke! Rešil/a si uganko "+v(d,"puzzleNumber")+" in osvojil/a "+p(d,"numTrophies",0,"sl",{"one":"lovoriko","other":n(d,"numTrophies")+" lovorik"})+"."};
 
-exports.nextStage = function(d){return "Čestitke! Opravili ste "+v(d,"stageName")+"."};
+exports.nextStage = function(d){return "Čestitke! Dokončal/a si "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Čestitke! Zaključil/a si stopnjo "+v(d,"stageNumber")+" in osvojil/a "+p(d,"numTrophies",0,"sl",{"one":"trofejo","other":n(d,"numTrophies")+" trofej"})+"."};
+exports.nextStageTrophies = function(d){return "Čestitke! Zaključil/a si stopnjo "+v(d,"stageName")+" in osvojil/a "+p(d,"numTrophies",0,"sl",{"one":"lovoriko","other":n(d,"numTrophies")+" lovorik"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Čestitke! Zaključil/a si uganko "+v(d,"puzzleNumber")+". (Vendar bi lahko uporabil samo  "+p(d,"numBlocks",0,"sl",{"one":"1 blok","other":n(d,"numBlocks")+" blokov"})+".)"};
 
-exports.numLinesOfCodeWritten = function(d){return "Ravnokar si napisal "+p(d,"numLines",0,"sl",{"one":"1 vrstica","other":n(d,"numLines")+" vrstic"})+" kode!"};
+exports.numLinesOfCodeWritten = function(d){return "Ravnokar si napisal/a "+p(d,"numLines",0,"sl",{"one":"1 vrstico","other":n(d,"numLines")+" vrstic"})+" kode!"};
 
 exports.play = function(d){return "igraj"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Natisni"};
 
 exports.puzzleTitle = function(d){return "Uganka "+v(d,"puzzle_number")+" od "+v(d,"stage_total")};
 
@@ -21237,7 +21238,7 @@ exports.repeat = function(d){return "ponovi"};
 
 exports.resetProgram = function(d){return "resetiraj"};
 
-exports.runProgram = function(d){return "Teči"};
+exports.runProgram = function(d){return "Zaženi program"};
 
 exports.runTooltip = function(d){return "Zaženi program, definiran z bloki na delovni površini."};
 
@@ -21245,7 +21246,7 @@ exports.score = function(d){return "rezultat"};
 
 exports.showCodeHeader = function(d){return "Pokaži kodo"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Prikaži bloke"};
 
 exports.showGeneratedCode = function(d){return "Pokaži kodo"};
 
@@ -21255,11 +21256,11 @@ exports.subtitle = function(d){return "vizualno programersko okolje"};
 
 exports.textVariable = function(d){return "besedilo"};
 
-exports.tooFewBlocksMsg = function(d){return "Uporabljaš vse potrebne tipe blokov, a poskusi uporabiti več teh tipov blokov, da zaključiš to uganko."};
+exports.tooFewBlocksMsg = function(d){return "Uporabil/a si prave tipe blokov, a potrebuješ jih še več za rešitev te uganke."};
 
 exports.tooManyBlocksMsg = function(d){return "Ta uganka je lahko rešena z <x id='START_SPAN'/><x id='END_SPAN'/> bloki."};
 
-exports.tooMuchWork = function(d){return "Zaradi tebe sem moral narediti veliko dela! Bi se lahko poskusil manjkrat ponavljati?"};
+exports.tooMuchWork = function(d){return "Si me pa utrudil/a! Bi se lahko poskusil/a manjkrat ponavljati?"};
 
 exports.toolboxHeader = function(d){return "Bloki"};
 
@@ -21273,11 +21274,11 @@ exports.hintRequest = function(d){return "Poglej namig"};
 
 exports.backToPreviousLevel = function(d){return "Nazaj na prejšnjo raven"};
 
-exports.saveToGallery = function(d){return "Shrani v svojo galerijo"};
+exports.saveToGallery = function(d){return "Shrani v galerijo"};
 
-exports.savedToGallery = function(d){return "Shranjeno v tvoji galeriji!"};
+exports.savedToGallery = function(d){return "Shranjeno v galerijo!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Žal, ne moremo objaviti tega programa."};
 
 exports.typeFuncs = function(d){return "Razpoložljive funkcije: %1"};
 
@@ -21285,11 +21286,11 @@ exports.typeHint = function(d){return "Zapomni si, oklepaji in podpičja so zaht
 
 exports.workspaceHeader = function(d){return "Tukaj sestavi tvoje bloke: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Vnesite kodo JavaScript"};
 
 exports.infinity = function(d){return "Neskončnost"};
 
-exports.rotateText = function(d){return "Zavrti tvojo napravo."};
+exports.rotateText = function(d){return "Zasukaj tvojo napravo."};
 
 exports.orientationLock = function(d){return "Izključi zaklepanje orientacije v nastavitvah naprave."};
 
@@ -21309,7 +21310,7 @@ exports.hintHeader = function(d){return "Tukaj je namig:"};
 
 exports.genericFeedback = function(d){return "Poglej kako si končal in poizkusi popraviti svoj program."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Poglej, kaj sem naredil"};
 
 
 },{"messageformat":61}],49:[function(require,module,exports){
@@ -21325,41 +21326,41 @@ var MessageFormat = require("messageformat");MessageFormat.locale.sl = function 
   }
   return 'other';
 };
-exports.actor = function(d){return "actor"};
+exports.actor = function(d){return "igralec"};
 
 exports.alienInvasion = function(d){return "Alien Invasion!"};
 
-exports.backgroundBlack = function(d){return "black"};
+exports.backgroundBlack = function(d){return "črna"};
 
-exports.backgroundCave = function(d){return "cave"};
+exports.backgroundCave = function(d){return "votlina"};
 
-exports.backgroundCloudy = function(d){return "cloudy"};
+exports.backgroundCloudy = function(d){return "oblačno"};
 
-exports.backgroundHardcourt = function(d){return "hardcourt"};
+exports.backgroundHardcourt = function(d){return "teniško igrišče"};
 
-exports.backgroundNight = function(d){return "night"};
+exports.backgroundNight = function(d){return "noč"};
 
-exports.backgroundUnderwater = function(d){return "underwater"};
+exports.backgroundUnderwater = function(d){return "pod vodo"};
 
-exports.backgroundCity = function(d){return "city"};
+exports.backgroundCity = function(d){return "mesto"};
 
-exports.backgroundDesert = function(d){return "desert"};
+exports.backgroundDesert = function(d){return "puščava"};
 
-exports.backgroundRainbow = function(d){return "rainbow"};
+exports.backgroundRainbow = function(d){return "mavrica"};
 
-exports.backgroundSoccer = function(d){return "soccer"};
+exports.backgroundSoccer = function(d){return "nogomet"};
 
-exports.backgroundSpace = function(d){return "space"};
+exports.backgroundSpace = function(d){return "vesolje"};
 
-exports.backgroundTennis = function(d){return "tennis"};
+exports.backgroundTennis = function(d){return "tenis"};
 
-exports.backgroundWinter = function(d){return "winter"};
+exports.backgroundWinter = function(d){return "zima"};
 
 exports.catActions = function(d){return "Dejanja"};
 
 exports.catControl = function(d){return "Zanke"};
 
-exports.catEvents = function(d){return "Events"};
+exports.catEvents = function(d){return "Dogodki"};
 
 exports.catLogic = function(d){return "Logika"};
 
@@ -21371,95 +21372,95 @@ exports.catText = function(d){return "Besedilo"};
 
 exports.catVariables = function(d){return "Spremenljivke"};
 
-exports.changeScoreTooltip = function(d){return "Add or remove a point to the score."};
+exports.changeScoreTooltip = function(d){return "Dodaj ali odstrani točko rezultatu."};
 
-exports.changeScoreTooltipK1 = function(d){return "Add a point to the score."};
+exports.changeScoreTooltipK1 = function(d){return "Dodaj točko rezultatu."};
 
 exports.continue = function(d){return "Nadaljuj"};
 
-exports.decrementPlayerScore = function(d){return "remove point"};
+exports.decrementPlayerScore = function(d){return "odstrani točko"};
 
-exports.defaultSayText = function(d){return "type here"};
+exports.defaultSayText = function(d){return "tipkaj tukaj"};
 
-exports.emotion = function(d){return "mood"};
+exports.emotion = function(d){return "razpoloženje"};
 
 exports.finalLevel = function(d){return "Čestitke! Rešil/a si zadnjo uganko."};
 
-exports.for = function(d){return "for"};
+exports.for = function(d){return "za"};
 
-exports.hello = function(d){return "hello"};
+exports.hello = function(d){return "zdravo"};
 
-exports.helloWorld = function(d){return "Hello World!"};
+exports.helloWorld = function(d){return "Pozdravljen svet!"};
 
 exports.incrementPlayerScore = function(d){return "dosežena točka"};
 
-exports.makeProjectileDisappear = function(d){return "disappear"};
+exports.makeProjectileDisappear = function(d){return "izgini"};
 
 exports.makeProjectileBounce = function(d){return "poskočiti"};
 
-exports.makeProjectileBlueFireball = function(d){return "make blue fireball"};
+exports.makeProjectileBlueFireball = function(d){return "naredi modro gorečo kroglo"};
 
-exports.makeProjectilePurpleFireball = function(d){return "make purple fireball"};
+exports.makeProjectilePurpleFireball = function(d){return "naredi vijolično gorečo kroglo"};
 
-exports.makeProjectileRedFireball = function(d){return "make red fireball"};
+exports.makeProjectileRedFireball = function(d){return "naredi rdečo gorečo kroglo"};
 
-exports.makeProjectileYellowHearts = function(d){return "make yellow hearts"};
+exports.makeProjectileYellowHearts = function(d){return "naredi rumena srca"};
 
-exports.makeProjectilePurpleHearts = function(d){return "make purple hearts"};
+exports.makeProjectilePurpleHearts = function(d){return "naredi vijolična srca"};
 
-exports.makeProjectileRedHearts = function(d){return "make red hearts"};
+exports.makeProjectileRedHearts = function(d){return "naredi rdeča srca"};
 
-exports.makeProjectileTooltip = function(d){return "Make the projectile that just collided disappear or bounce."};
+exports.makeProjectileTooltip = function(d){return "Naj se projektil, ki je ravnokar trčil, odbije ali izgine."};
 
-exports.makeYourOwn = function(d){return "Make Your Own Story"};
+exports.makeYourOwn = function(d){return "Izdelaj svojo igrico/aplikacijo v Play Lab"};
 
-exports.moveDirectionDown = function(d){return "down"};
+exports.moveDirectionDown = function(d){return "dol"};
 
-exports.moveDirectionLeft = function(d){return "left"};
+exports.moveDirectionLeft = function(d){return "levo"};
 
-exports.moveDirectionRight = function(d){return "right"};
+exports.moveDirectionRight = function(d){return "desno"};
 
-exports.moveDirectionUp = function(d){return "up"};
+exports.moveDirectionUp = function(d){return "gor"};
 
 exports.moveDirectionRandom = function(d){return "naključno"};
 
-exports.moveDistance25 = function(d){return "25 pixels"};
+exports.moveDistance25 = function(d){return "25 pikslov"};
 
-exports.moveDistance50 = function(d){return "50 pixels"};
+exports.moveDistance50 = function(d){return "50 pikslov"};
 
-exports.moveDistance100 = function(d){return "100 pixels"};
+exports.moveDistance100 = function(d){return "100 pikslov"};
 
-exports.moveDistance200 = function(d){return "200 pixels"};
+exports.moveDistance200 = function(d){return "200 pikslov"};
 
-exports.moveDistance400 = function(d){return "400 pixels"};
+exports.moveDistance400 = function(d){return "400 pikslov"};
 
 exports.moveDistancePixels = function(d){return "piksli"};
 
-exports.moveDistanceRandom = function(d){return "random pixels"};
+exports.moveDistanceRandom = function(d){return "naključno pikslov"};
 
-exports.moveDistanceTooltip = function(d){return "Move a character a specific distance in the specified direction."};
+exports.moveDistanceTooltip = function(d){return "Premakni igralca za določeno razdaljo v določeni smeri."};
 
-exports.moveSprite = function(d){return "move"};
+exports.moveSprite = function(d){return "premakni"};
 
-exports.moveSpriteN = function(d){return "move actor "+v(d,"spriteIndex")};
+exports.moveSpriteN = function(d){return "premakni igralca "+v(d,"spriteIndex")};
 
 exports.moveDown = function(d){return "premakni se dol"};
 
-exports.moveDownTooltip = function(d){return "Move the paddle down."};
+exports.moveDownTooltip = function(d){return "Premakni igralca dol."};
 
 exports.moveLeft = function(d){return "premakni se levo"};
 
-exports.moveLeftTooltip = function(d){return "Move the paddle to the left."};
+exports.moveLeftTooltip = function(d){return "Premakni igralca v levo."};
 
 exports.moveRight = function(d){return "premakni se desno"};
 
-exports.moveRightTooltip = function(d){return "Move the paddle to the right."};
+exports.moveRightTooltip = function(d){return "Premakni igralca v desno."};
 
 exports.moveUp = function(d){return "premakni se gor"};
 
-exports.moveUpTooltip = function(d){return "Move the paddle up."};
+exports.moveUpTooltip = function(d){return "Premakni igralca navzgor."};
 
-exports.moveTooltip = function(d){return "Move a character."};
+exports.moveTooltip = function(d){return "Premakni igralca."};
 
 exports.nextLevel = function(d){return "Čestitke! Zaključil/a si to uganko."};
 
@@ -21467,7 +21468,7 @@ exports.no = function(d){return "Ne"};
 
 exports.numBlocksNeeded = function(d){return "Ta uganka je lahko rešena z %1 bloki."};
 
-exports.ouchExclamation = function(d){return "Ouch!"};
+exports.ouchExclamation = function(d){return "Av!"};
 
 exports.playSoundCrunch = function(d){return "predvajaj zvok drobljenja"};
 
@@ -21495,53 +21496,53 @@ exports.playSoundWinPoint2 = function(d){return "predvajaj zvok: dobljena točka
 
 exports.playSoundWood = function(d){return "predvajaj zvok: lesen udarec"};
 
-exports.positionOutTopLeft = function(d){return "to the above top left position"};
+exports.positionOutTopLeft = function(d){return "na zgornji položaj, zgoraj levo"};
 
-exports.positionOutTopRight = function(d){return "to the above top right position"};
+exports.positionOutTopRight = function(d){return "na zgornji položaj, zgoraj desno"};
 
-exports.positionTopOutLeft = function(d){return "to the top outside left position"};
+exports.positionTopOutLeft = function(d){return "na vrhnji položaj, zunaj levo"};
 
-exports.positionTopLeft = function(d){return "to the top left position"};
+exports.positionTopLeft = function(d){return "na vrhnji položaj, levo"};
 
-exports.positionTopCenter = function(d){return "to the top center position"};
+exports.positionTopCenter = function(d){return "na vrhnji položaj, sredina"};
 
-exports.positionTopRight = function(d){return "to the top right position"};
+exports.positionTopRight = function(d){return "na vrhnji položaj, desno"};
 
-exports.positionTopOutRight = function(d){return "to the top outside right position"};
+exports.positionTopOutRight = function(d){return "na vrhnji položaj, zunaj desno"};
 
-exports.positionMiddleLeft = function(d){return "to the middle left position"};
+exports.positionMiddleLeft = function(d){return "na sredinski položaj, levo"};
 
-exports.positionMiddleCenter = function(d){return "to the middle center position"};
+exports.positionMiddleCenter = function(d){return "na sredinski položaj, sredina"};
 
-exports.positionMiddleRight = function(d){return "to the middle right position"};
+exports.positionMiddleRight = function(d){return "na sredinski položaj, desno"};
 
-exports.positionBottomOutLeft = function(d){return "to the bottom outside left position"};
+exports.positionBottomOutLeft = function(d){return "na položaj na dnu, zunaj levo"};
 
-exports.positionBottomLeft = function(d){return "to the bottom left position"};
+exports.positionBottomLeft = function(d){return "na položaj na dnu, levo"};
 
-exports.positionBottomCenter = function(d){return "to the bottom center position"};
+exports.positionBottomCenter = function(d){return "na položaj na dnu, sredina"};
 
-exports.positionBottomRight = function(d){return "to the bottom right position"};
+exports.positionBottomRight = function(d){return "na položaj na dnu, desno"};
 
-exports.positionBottomOutRight = function(d){return "to the bottom outside right position"};
+exports.positionBottomOutRight = function(d){return "na položaj na dnu, zunaj desno"};
 
-exports.positionOutBottomLeft = function(d){return "to the below bottom left position"};
+exports.positionOutBottomLeft = function(d){return "na spodnji položaj, levo"};
 
-exports.positionOutBottomRight = function(d){return "to the below bottom right position"};
+exports.positionOutBottomRight = function(d){return "na spodnji položaj, desno"};
 
-exports.positionRandom = function(d){return "to the random position"};
+exports.positionRandom = function(d){return "na naključni položaj"};
 
-exports.projectileBlueFireball = function(d){return "blue fireball"};
+exports.projectileBlueFireball = function(d){return "modri izstrelek"};
 
-exports.projectilePurpleFireball = function(d){return "purple fireball"};
+exports.projectilePurpleFireball = function(d){return "vijolični izstrelek"};
 
-exports.projectileRedFireball = function(d){return "red fireball"};
+exports.projectileRedFireball = function(d){return "rdeči izstrelek"};
 
-exports.projectileYellowHearts = function(d){return "yellow hearts"};
+exports.projectileYellowHearts = function(d){return "rumeni srčki"};
 
-exports.projectilePurpleHearts = function(d){return "purple hearts"};
+exports.projectilePurpleHearts = function(d){return "vijolični srčki"};
 
-exports.projectileRedHearts = function(d){return "red hearts"};
+exports.projectileRedHearts = function(d){return "rdeči srčki"};
 
 exports.projectileRandom = function(d){return "naključno"};
 
@@ -21553,343 +21554,343 @@ exports.projectileHiro = function(d){return "Hiro"};
 
 exports.projectileBaymax = function(d){return "Baymax"};
 
-exports.projectileRapunzel = function(d){return "Rapunzel"};
+exports.projectileRapunzel = function(d){return "Trnjulčica"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to playing your story."};
+exports.reinfFeedbackMsg = function(d){return "Lahko pritisnete gumb \"Znova\" za ponovno predvajanje zgodbe."};
 
-exports.repeatForever = function(d){return "repeat forever"};
+exports.repeatForever = function(d){return "ponavljaj kar naprej"};
 
 exports.repeatDo = function(d){return "izvrši"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the story is running."};
+exports.repeatForeverTooltip = function(d){return "Ves čas, ko poteka zgodba, ponavljaj spodaj navedena dejanja."};
 
-exports.saySprite = function(d){return "say"};
+exports.saySprite = function(d){return "reci (napiši)"};
 
-exports.saySpriteN = function(d){return "actor "+v(d,"spriteIndex")+" say"};
+exports.saySpriteN = function(d){return "igralec "+v(d,"spriteIndex")+" izjavi"};
 
-exports.saySpriteTooltip = function(d){return "Pop up a speech bubble with the associated text from the specified character."};
+exports.saySpriteTooltip = function(d){return "Prikaži oblaček z besedilom določenega igralca."};
 
 exports.scoreText = function(d){return "Dosežek: "+v(d,"playerScore")+" (Uporabnikove točke)"};
 
-exports.setBackground = function(d){return "set background"};
+exports.setBackground = function(d){return "nastavi ozadje"};
 
-exports.setBackgroundRandom = function(d){return "set random scene"};
+exports.setBackgroundRandom = function(d){return "nastavi naključno ozadje"};
 
-exports.setBackgroundBlack = function(d){return "set black background"};
+exports.setBackgroundBlack = function(d){return "nastavi črno ozadje"};
 
-exports.setBackgroundCave = function(d){return "set cave background"};
+exports.setBackgroundCave = function(d){return "nastavi jamsko ozadje"};
 
-exports.setBackgroundCloudy = function(d){return "set cloudy background"};
+exports.setBackgroundCloudy = function(d){return "nastavi oblačno ozadje"};
 
-exports.setBackgroundHardcourt = function(d){return "set hardcourt scene"};
+exports.setBackgroundHardcourt = function(d){return "nastavi teniško ozadje"};
 
-exports.setBackgroundNight = function(d){return "set night background"};
+exports.setBackgroundNight = function(d){return "nastavi nočno ozadje"};
 
-exports.setBackgroundUnderwater = function(d){return "set underwater background"};
+exports.setBackgroundUnderwater = function(d){return "nastavi podvodno ozadje"};
 
-exports.setBackgroundCity = function(d){return "set city background"};
+exports.setBackgroundCity = function(d){return "nastavi mestno ozadje"};
 
-exports.setBackgroundDesert = function(d){return "set desert background"};
+exports.setBackgroundDesert = function(d){return "nastavi puščavsko ozadje"};
 
-exports.setBackgroundRainbow = function(d){return "set rainbow background"};
+exports.setBackgroundRainbow = function(d){return "nastavi mavrično ozadje"};
 
-exports.setBackgroundSoccer = function(d){return "set soccer background"};
+exports.setBackgroundSoccer = function(d){return "nastavi nogometno ozadje"};
 
-exports.setBackgroundSpace = function(d){return "set space background"};
+exports.setBackgroundSpace = function(d){return "nastavi vesoljsko ozadje"};
 
-exports.setBackgroundTennis = function(d){return "set tennis background"};
+exports.setBackgroundTennis = function(d){return "nastavi teniško ozadje"};
 
-exports.setBackgroundWinter = function(d){return "set winter background"};
+exports.setBackgroundWinter = function(d){return "nastavi zimsko ozadje"};
 
 exports.setBackgroundTooltip = function(d){return "Nastavite sliko ozadja"};
 
-exports.setEnemySpeed = function(d){return "set enemy speed"};
+exports.setEnemySpeed = function(d){return "nastavi hitrost nasprotnika"};
 
-exports.setPlayerSpeed = function(d){return "set player speed"};
+exports.setPlayerSpeed = function(d){return "nastavi hitrost igralca"};
 
-exports.setScoreText = function(d){return "set score"};
+exports.setScoreText = function(d){return "nastavi rezultat"};
 
-exports.setScoreTextTooltip = function(d){return "Sets the text to be displayed in the score area."};
+exports.setScoreTextTooltip = function(d){return "Določi besedilo za izpis pri rezultatih."};
 
-exports.setSpriteEmotionAngry = function(d){return "to a angry emotion"};
+exports.setSpriteEmotionAngry = function(d){return "v jezno razpoloženje"};
 
-exports.setSpriteEmotionHappy = function(d){return "to a happy emotion"};
+exports.setSpriteEmotionHappy = function(d){return "v veselo razpoloženje"};
 
-exports.setSpriteEmotionNormal = function(d){return "to a normal emotion"};
+exports.setSpriteEmotionNormal = function(d){return "v povprečno razpoloženje"};
 
-exports.setSpriteEmotionRandom = function(d){return "to a random emotion"};
+exports.setSpriteEmotionRandom = function(d){return "v naključno razpoloženje"};
 
-exports.setSpriteEmotionSad = function(d){return "to a sad emotion"};
+exports.setSpriteEmotionSad = function(d){return "v žalostno razpoloženje"};
 
-exports.setSpriteEmotionTooltip = function(d){return "Sets the actor emotion"};
+exports.setSpriteEmotionTooltip = function(d){return "Nastavi igralčeva čustva"};
 
-exports.setSpriteAlien = function(d){return "to an alien image"};
+exports.setSpriteAlien = function(d){return "kot vesoljca"};
 
-exports.setSpriteBat = function(d){return "to a bat image"};
+exports.setSpriteBat = function(d){return "kot netopirja"};
 
-exports.setSpriteBird = function(d){return "to a bird image"};
+exports.setSpriteBird = function(d){return "kot ptico"};
 
-exports.setSpriteCat = function(d){return "to a cat image"};
+exports.setSpriteCat = function(d){return "kot mačko"};
 
-exports.setSpriteCaveBoy = function(d){return "to a cave boy image"};
+exports.setSpriteCaveBoy = function(d){return "kot jamskega dečka"};
 
-exports.setSpriteCaveGirl = function(d){return "to a cave girl image"};
+exports.setSpriteCaveGirl = function(d){return "kot jamsko deklico"};
 
-exports.setSpriteDinosaur = function(d){return "to a dinosaur image"};
+exports.setSpriteDinosaur = function(d){return "kot dinozaura"};
 
-exports.setSpriteDog = function(d){return "to a dog image"};
+exports.setSpriteDog = function(d){return "k sliki psa"};
 
-exports.setSpriteDragon = function(d){return "to a dragon image"};
+exports.setSpriteDragon = function(d){return "k sliki zmaja"};
 
-exports.setSpriteGhost = function(d){return "to a ghost image"};
+exports.setSpriteGhost = function(d){return "k sliki duha"};
 
-exports.setSpriteHidden = function(d){return "to a hidden image"};
+exports.setSpriteHidden = function(d){return "k skriti sliki"};
 
-exports.setSpriteHideK1 = function(d){return "hide"};
+exports.setSpriteHideK1 = function(d){return "skrij"};
 
-exports.setSpriteAnna = function(d){return "to a Anna image"};
+exports.setSpriteAnna = function(d){return "k sliki Anne"};
 
-exports.setSpriteElsa = function(d){return "to a Elsa image"};
+exports.setSpriteElsa = function(d){return "k sliki Else"};
 
-exports.setSpriteHiro = function(d){return "to a Hiro image"};
+exports.setSpriteHiro = function(d){return "k sliki Hiroja"};
 
-exports.setSpriteBaymax = function(d){return "to a Baymax image"};
+exports.setSpriteBaymax = function(d){return "k sliki Baymaxa"};
 
-exports.setSpriteRapunzel = function(d){return "to a Rapunzel image"};
+exports.setSpriteRapunzel = function(d){return "k sliki Trnjulčice"};
 
-exports.setSpriteKnight = function(d){return "to a knight image"};
+exports.setSpriteKnight = function(d){return "k sliki viteza"};
 
-exports.setSpriteMonster = function(d){return "to a monster image"};
+exports.setSpriteMonster = function(d){return "k sliki pošasti"};
 
-exports.setSpriteNinja = function(d){return "to a masked ninja image"};
+exports.setSpriteNinja = function(d){return "k sliki zamaskirane ninje"};
 
-exports.setSpriteOctopus = function(d){return "to an octopus image"};
+exports.setSpriteOctopus = function(d){return "k sliki hobotnice"};
 
-exports.setSpritePenguin = function(d){return "to a penguin image"};
+exports.setSpritePenguin = function(d){return "k sliki pingvina"};
 
-exports.setSpritePirate = function(d){return "to a pirate image"};
+exports.setSpritePirate = function(d){return "k sliki pirata"};
 
-exports.setSpritePrincess = function(d){return "to a princess image"};
+exports.setSpritePrincess = function(d){return "k sliki princese"};
 
-exports.setSpriteRandom = function(d){return "to a random image"};
+exports.setSpriteRandom = function(d){return "k naključni sliki"};
 
-exports.setSpriteRobot = function(d){return "to a robot image"};
+exports.setSpriteRobot = function(d){return "k sliki robota"};
 
-exports.setSpriteShowK1 = function(d){return "show"};
+exports.setSpriteShowK1 = function(d){return "prikaži"};
 
-exports.setSpriteSpacebot = function(d){return "to a spacebot image"};
+exports.setSpriteSpacebot = function(d){return "k sliki vesoljskega robota"};
 
-exports.setSpriteSoccerGirl = function(d){return "to a soccer girl image"};
+exports.setSpriteSoccerGirl = function(d){return "k sliki nogometašice"};
 
-exports.setSpriteSoccerBoy = function(d){return "to a soccer boy image"};
+exports.setSpriteSoccerBoy = function(d){return "k sliki nogometaša"};
 
-exports.setSpriteSquirrel = function(d){return "to a squirrel image"};
+exports.setSpriteSquirrel = function(d){return "k sliki veverice"};
 
-exports.setSpriteTennisGirl = function(d){return "to a tennis girl image"};
+exports.setSpriteTennisGirl = function(d){return "k sliki tenisačice"};
 
-exports.setSpriteTennisBoy = function(d){return "to a tennis boy image"};
+exports.setSpriteTennisBoy = function(d){return "k sliki tenisača"};
 
-exports.setSpriteUnicorn = function(d){return "to a unicorn image"};
+exports.setSpriteUnicorn = function(d){return "k sliki samoroga"};
 
-exports.setSpriteWitch = function(d){return "to a witch image"};
+exports.setSpriteWitch = function(d){return "k sliki čarovnice"};
 
-exports.setSpriteWizard = function(d){return "to a wizard image"};
+exports.setSpriteWizard = function(d){return "k sliki čarovnika"};
 
-exports.setSpritePositionTooltip = function(d){return "Instantly moves an actor to the specified location."};
+exports.setSpritePositionTooltip = function(d){return "Takoj prestavi igralca na določeno mesto."};
 
-exports.setSpriteK1Tooltip = function(d){return "Shows or hides the specified actor."};
+exports.setSpriteK1Tooltip = function(d){return "Pokaže ali skrije določenega igralca."};
 
-exports.setSpriteTooltip = function(d){return "Sets the character image"};
+exports.setSpriteTooltip = function(d){return "Nastavi sliko igralca"};
 
-exports.setSpriteSizeRandom = function(d){return "to a random size"};
+exports.setSpriteSizeRandom = function(d){return "na naključno velikost"};
 
-exports.setSpriteSizeVerySmall = function(d){return "to a very small size"};
+exports.setSpriteSizeVerySmall = function(d){return "na zelo majhno velikost"};
 
-exports.setSpriteSizeSmall = function(d){return "to a small size"};
+exports.setSpriteSizeSmall = function(d){return "na majhno velikost"};
 
-exports.setSpriteSizeNormal = function(d){return "to a normal size"};
+exports.setSpriteSizeNormal = function(d){return "na normalno velikost"};
 
-exports.setSpriteSizeLarge = function(d){return "to a large size"};
+exports.setSpriteSizeLarge = function(d){return "na veliko velikost"};
 
-exports.setSpriteSizeVeryLarge = function(d){return "to a very large size"};
+exports.setSpriteSizeVeryLarge = function(d){return "na zelo veliko velikost"};
 
-exports.setSpriteSizeTooltip = function(d){return "Sets the size of an actor"};
+exports.setSpriteSizeTooltip = function(d){return "Nastavi velikost igralca"};
 
-exports.setSpriteSpeedRandom = function(d){return "to a random speed"};
+exports.setSpriteSpeedRandom = function(d){return "na naključno hitrost"};
 
-exports.setSpriteSpeedVerySlow = function(d){return "to a very slow speed"};
+exports.setSpriteSpeedVerySlow = function(d){return "na zelo majhno hitrost"};
 
-exports.setSpriteSpeedSlow = function(d){return "to a slow speed"};
+exports.setSpriteSpeedSlow = function(d){return "na majhno hitrost"};
 
-exports.setSpriteSpeedNormal = function(d){return "to a normal speed"};
+exports.setSpriteSpeedNormal = function(d){return "na normalno hitrost"};
 
-exports.setSpriteSpeedFast = function(d){return "to a fast speed"};
+exports.setSpriteSpeedFast = function(d){return "na veliko hitrost"};
 
-exports.setSpriteSpeedVeryFast = function(d){return "to a very fast speed"};
+exports.setSpriteSpeedVeryFast = function(d){return "na zelo veliko hitrost"};
 
-exports.setSpriteSpeedTooltip = function(d){return "Sets the speed of a character"};
+exports.setSpriteSpeedTooltip = function(d){return "Določi hitrost igralca"};
 
-exports.setSpriteZombie = function(d){return "to a zombie image"};
+exports.setSpriteZombie = function(d){return "kot sliko zombija"};
 
-exports.shareStudioTwitter = function(d){return "Check out the story I made. I wrote it myself with @codeorg"};
+exports.shareStudioTwitter = function(d){return "Oglej si interaktivno zgodbo, ki sem jo sam/a izdelal/a. Napisal/a sem jo z @codeorg"};
 
-exports.shareGame = function(d){return "Share your story:"};
+exports.shareGame = function(d){return "Objavi svojo zgodbo:"};
 
-exports.showCoordinates = function(d){return "show coordinates"};
+exports.showCoordinates = function(d){return "prikazuj koordinate"};
 
-exports.showCoordinatesTooltip = function(d){return "show the protagonist's coordinates on the screen"};
+exports.showCoordinatesTooltip = function(d){return "koordinate junaka prikazuj na zaslonu"};
 
-exports.showTitleScreen = function(d){return "show title screen"};
+exports.showTitleScreen = function(d){return "prikaži naslovni zaslon"};
 
-exports.showTitleScreenTitle = function(d){return "title"};
+exports.showTitleScreenTitle = function(d){return "naslov"};
 
 exports.showTitleScreenText = function(d){return "besedilo"};
 
-exports.showTSDefTitle = function(d){return "type title here"};
+exports.showTSDefTitle = function(d){return "Natipkaj naslov tukaj"};
 
-exports.showTSDefText = function(d){return "type text here"};
+exports.showTSDefText = function(d){return "Vnesite besedilo tukaj"};
 
-exports.showTitleScreenTooltip = function(d){return "Show a title screen with the associated title and text."};
+exports.showTitleScreenTooltip = function(d){return "Prikaži prvi zaslon z naslovom in besedilom."};
 
-exports.size = function(d){return "size"};
+exports.size = function(d){return "velikost"};
 
 exports.setSprite = function(d){return "nastavi"};
 
-exports.setSpriteN = function(d){return "set actor "+v(d,"spriteIndex")};
+exports.setSpriteN = function(d){return "Določi igralca "+v(d,"spriteIndex")};
 
 exports.soundCrunch = function(d){return "hrustati"};
 
-exports.soundGoal1 = function(d){return "goal 1"};
+exports.soundGoal1 = function(d){return "zadetek"};
 
-exports.soundGoal2 = function(d){return "goal 2"};
+exports.soundGoal2 = function(d){return "zadetek 2"};
 
-exports.soundHit = function(d){return "hit"};
+exports.soundHit = function(d){return "zvok zadetka"};
 
-exports.soundLosePoint = function(d){return "lose point"};
+exports.soundLosePoint = function(d){return "izguba točke"};
 
-exports.soundLosePoint2 = function(d){return "lose point 2"};
+exports.soundLosePoint2 = function(d){return "izguba točke 2"};
 
 exports.soundRetro = function(d){return "retro"};
 
-exports.soundRubber = function(d){return "rubber"};
+exports.soundRubber = function(d){return "zvok gume"};
 
-exports.soundSlap = function(d){return "slap"};
+exports.soundSlap = function(d){return "lopni"};
 
-exports.soundWinPoint = function(d){return "win point"};
+exports.soundWinPoint = function(d){return "dosegel točko"};
 
-exports.soundWinPoint2 = function(d){return "win point 2"};
+exports.soundWinPoint2 = function(d){return "dosegel točko 2"};
 
-exports.soundWood = function(d){return "wood"};
+exports.soundWood = function(d){return "les"};
 
-exports.speed = function(d){return "speed"};
+exports.speed = function(d){return "hitrost"};
 
-exports.stopSprite = function(d){return "stop"};
+exports.stopSprite = function(d){return "zadrži pri miru"};
 
-exports.stopSpriteN = function(d){return "stop actor "+v(d,"spriteIndex")};
+exports.stopSpriteN = function(d){return "ustavi igralca "+v(d,"spriteIndex")};
 
-exports.stopTooltip = function(d){return "Stops an actor's movement."};
+exports.stopTooltip = function(d){return "Ustavi igralčevo gibanje."};
 
-exports.throwSprite = function(d){return "throw"};
+exports.throwSprite = function(d){return "vrže"};
 
-exports.throwSpriteN = function(d){return "actor "+v(d,"spriteIndex")+" throw"};
+exports.throwSpriteN = function(d){return "igralec "+v(d,"spriteIndex")+" vrže"};
 
-exports.throwTooltip = function(d){return "Throws a projectile from the specified actor."};
+exports.throwTooltip = function(d){return "Izstrelek poleti iz določenega igralca."};
 
-exports.vanish = function(d){return "vanish"};
+exports.vanish = function(d){return "naredi nevidnega"};
 
-exports.vanishActorN = function(d){return "vanish actor "+v(d,"spriteIndex")};
+exports.vanishActorN = function(d){return "igralca "+v(d,"spriteIndex")+" naredi nevidnega"};
 
-exports.vanishTooltip = function(d){return "Vanishes the actor."};
+exports.vanishTooltip = function(d){return "Igralca naredi nevidnega."};
 
-exports.waitFor = function(d){return "wait for"};
+exports.waitFor = function(d){return "počakaj na"};
 
-exports.waitSeconds = function(d){return "seconds"};
+exports.waitSeconds = function(d){return "sekund(e)"};
 
-exports.waitForClick = function(d){return "wait for click"};
+exports.waitForClick = function(d){return "počakaj na klik"};
 
-exports.waitForRandom = function(d){return "wait for random"};
+exports.waitForRandom = function(d){return "počakaj naključno dolgo"};
 
-exports.waitForHalfSecond = function(d){return "wait for a half second"};
+exports.waitForHalfSecond = function(d){return "počakaj pol sekunde"};
 
-exports.waitFor1Second = function(d){return "wait for 1 second"};
+exports.waitFor1Second = function(d){return "počakaj 1 sekundo"};
 
-exports.waitFor2Seconds = function(d){return "wait for 2 seconds"};
+exports.waitFor2Seconds = function(d){return "počakaj 2 sekundi"};
 
-exports.waitFor5Seconds = function(d){return "wait for 5 seconds"};
+exports.waitFor5Seconds = function(d){return "počakaj 5 sekund"};
 
-exports.waitFor10Seconds = function(d){return "wait for 10 seconds"};
+exports.waitFor10Seconds = function(d){return "počakaj 10 sekund"};
 
-exports.waitParamsTooltip = function(d){return "Waits for a specified number of seconds or use zero to wait until a click occurs."};
+exports.waitParamsTooltip = function(d){return "Počaka določeno število sekund oziroma (če je 0) na klik."};
 
-exports.waitTooltip = function(d){return "Waits for a specified amount of time or until a click occurs."};
+exports.waitTooltip = function(d){return "Čaka na klik ali določeno obdobje."};
 
-exports.whenArrowDown = function(d){return "down arrow"};
+exports.whenArrowDown = function(d){return "puščica dol"};
 
-exports.whenArrowLeft = function(d){return "left arrow"};
+exports.whenArrowLeft = function(d){return "puščica levo"};
 
-exports.whenArrowRight = function(d){return "right arrow"};
+exports.whenArrowRight = function(d){return "puščica desno"};
 
-exports.whenArrowUp = function(d){return "up arrow"};
+exports.whenArrowUp = function(d){return "puščica gor"};
 
-exports.whenArrowTooltip = function(d){return "Execute the actions below when the specified arrow key is pressed."};
+exports.whenArrowTooltip = function(d){return "Ko so pritisnjene smerne puščice, naredi spodaj navedeno."};
 
-exports.whenDown = function(d){return "when Down arrow"};
+exports.whenDown = function(d){return "ko puščica za navzdol"};
 
-exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
+exports.whenDownTooltip = function(d){return "Ko je pritisnjena puščica za navzdol, izvedi sledeče ukaze."};
 
-exports.whenGameStarts = function(d){return "when game starts"};
+exports.whenGameStarts = function(d){return "ko se začne zgodba"};
 
-exports.whenGameStartsTooltip = function(d){return "Execute the actions below when the game starts."};
+exports.whenGameStartsTooltip = function(d){return "Ko se zgodba začne, naredi spodaj navedeno."};
 
-exports.whenLeft = function(d){return "when Left arrow"};
+exports.whenLeft = function(d){return "ko leva puščica"};
 
-exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
+exports.whenLeftTooltip = function(d){return "Ko je pritisnjena desna puščica izvedi sledeče ukaze."};
 
 exports.whenRight = function(d){return "ko je pritisnjena puščica desno"};
 
 exports.whenRightTooltip = function(d){return "Ko je pritisnjena desna puščica izvedi sledeče ukaze."};
 
-exports.whenSpriteClicked = function(d){return "when actor clicked"};
+exports.whenSpriteClicked = function(d){return "ko je kliknjen igralec"};
 
-exports.whenSpriteClickedN = function(d){return "when actor "+v(d,"spriteIndex")+" clicked"};
+exports.whenSpriteClickedN = function(d){return "ko je kliknjen igralec "+v(d,"spriteIndex")};
 
-exports.whenSpriteClickedTooltip = function(d){return "Execute the actions below when a character is clicked."};
+exports.whenSpriteClickedTooltip = function(d){return "Ko je kliknjen igralec, naredi spodaj navedno."};
 
-exports.whenSpriteCollidedN = function(d){return "when actor "+v(d,"spriteIndex")};
+exports.whenSpriteCollidedN = function(d){return "ko igralec "+v(d,"spriteIndex")};
 
-exports.whenSpriteCollidedTooltip = function(d){return "Execute the actions below when a character touches another character."};
+exports.whenSpriteCollidedTooltip = function(d){return "Ko se igralec dotakne drugega igralca, naredi spodaj navedeno."};
 
-exports.whenSpriteCollidedWith = function(d){return "touches"};
+exports.whenSpriteCollidedWith = function(d){return "se dotakne"};
 
-exports.whenSpriteCollidedWithAnyActor = function(d){return "touches any actor"};
+exports.whenSpriteCollidedWithAnyActor = function(d){return "se dotakne kateregakoli igralca"};
 
-exports.whenSpriteCollidedWithAnyEdge = function(d){return "touches any edge"};
+exports.whenSpriteCollidedWithAnyEdge = function(d){return "se dotakne kateregakoli roba"};
 
-exports.whenSpriteCollidedWithAnyProjectile = function(d){return "touches any projectile"};
+exports.whenSpriteCollidedWithAnyProjectile = function(d){return "se dotakne kateregakoli projektila"};
 
-exports.whenSpriteCollidedWithAnything = function(d){return "touches anything"};
+exports.whenSpriteCollidedWithAnything = function(d){return "se dotakne česarkoli"};
 
-exports.whenSpriteCollidedWithN = function(d){return "touches actor "+v(d,"spriteIndex")};
+exports.whenSpriteCollidedWithN = function(d){return "se dotakne igralca "+v(d,"spriteIndex")};
 
-exports.whenSpriteCollidedWithBlueFireball = function(d){return "touches blue fireball"};
+exports.whenSpriteCollidedWithBlueFireball = function(d){return "se dotakne modrih izstrelkov"};
 
-exports.whenSpriteCollidedWithPurpleFireball = function(d){return "touches purple fireball"};
+exports.whenSpriteCollidedWithPurpleFireball = function(d){return "se dotakne vijoličnih izstrelkov"};
 
-exports.whenSpriteCollidedWithRedFireball = function(d){return "touches red fireball"};
+exports.whenSpriteCollidedWithRedFireball = function(d){return "se dotakne rdečih izstrelkov"};
 
-exports.whenSpriteCollidedWithYellowHearts = function(d){return "touches yellow hearts"};
+exports.whenSpriteCollidedWithYellowHearts = function(d){return "se dotakne rumenih srčkov"};
 
-exports.whenSpriteCollidedWithPurpleHearts = function(d){return "touches purple hearts"};
+exports.whenSpriteCollidedWithPurpleHearts = function(d){return "se dotakne vijoličnih srčkov"};
 
-exports.whenSpriteCollidedWithRedHearts = function(d){return "touches red hearts"};
+exports.whenSpriteCollidedWithRedHearts = function(d){return "se dotakne rdečih srčkov"};
 
-exports.whenSpriteCollidedWithBottomEdge = function(d){return "touches bottom edge"};
+exports.whenSpriteCollidedWithBottomEdge = function(d){return "se dotakne spodnjega roba"};
 
-exports.whenSpriteCollidedWithLeftEdge = function(d){return "touches left edge"};
+exports.whenSpriteCollidedWithLeftEdge = function(d){return "se dotakne levega roba"};
 
-exports.whenSpriteCollidedWithRightEdge = function(d){return "touches right edge"};
+exports.whenSpriteCollidedWithRightEdge = function(d){return "se dotakne desnega roba"};
 
-exports.whenSpriteCollidedWithTopEdge = function(d){return "touches top edge"};
+exports.whenSpriteCollidedWithTopEdge = function(d){return "se dotakne zgornjega roba"};
 
 exports.whenUp = function(d){return "ko je pritisnjena puščica gor"};
 

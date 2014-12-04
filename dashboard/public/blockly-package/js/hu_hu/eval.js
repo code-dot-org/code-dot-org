@@ -6813,6 +6813,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -6825,7 +6826,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -6835,16 +6838,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -14478,7 +14471,7 @@ exports.numLinesOfCodeWritten = function(d){return "Éppen most írtál újabb "
 
 exports.play = function(d){return "lejátszás"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Nyomtatás"};
 
 exports.puzzleTitle = function(d){return v(d,"puzzle_number")+"/"+v(d,"stage_total")+". feladvány"};
 
@@ -14522,9 +14515,9 @@ exports.hintRequest = function(d){return "Segítség"};
 
 exports.backToPreviousLevel = function(d){return "Vissza az előző szintre"};
 
-exports.saveToGallery = function(d){return "Mentés a galériába"};
+exports.saveToGallery = function(d){return "Mentése a galériába"};
 
-exports.savedToGallery = function(d){return "Elmentve a galáriádba"};
+exports.savedToGallery = function(d){return "Elmentve a galériában!"};
 
 exports.shareFailure = function(d){return "Sajnálom, de nem tudtam megosztani ezt a programot."};
 
@@ -14558,7 +14551,7 @@ exports.hintHeader = function(d){return "Egy tipp:"};
 
 exports.genericFeedback = function(d){return "Nem sikerült célba érnem. Kérlek javítsd a hibát."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Nézd meg, mit csináltam"};
 
 
 },{"messageformat":62}],50:[function(require,module,exports){
@@ -14571,7 +14564,7 @@ exports.ellipseBlockTitle = function(d){return "ellipszis (szélesség, magassá
 
 exports.extraTopBlocks = function(d){return "Vannak különálló blokkok a táblán. Csatold őket a \"Megjelenítés\" blokkhoz!"};
 
-exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
+exports.overlayBlockTitle = function(d){return "borítás (felső, alsó)"};
 
 exports.placeImageBlockTitle = function(d){return "hely-kép (x, y, kép)"};
 
@@ -14579,7 +14572,7 @@ exports.offsetBlockTitle = function(d){return "offset (x, y, image)"};
 
 exports.rectangleBlockTitle = function(d){return "téglalap (szélesség, magasság, stílus, szín)"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to edit your drawing."};
+exports.reinfFeedbackMsg = function(d){return "Kattints az \"Újrapróbálom\" gombra a rajod szerkesztéséhez."};
 
 exports.rotateImageBlockTitle = function(d){return "forgatás (kép, fok)"};
 
@@ -14591,7 +14584,7 @@ exports.starBlockTitle = function(d){return "csillag (sugár, stílus, szín)"};
 
 exports.radialStarBlockTitle = function(d){return "radial-star (points, inner, outer, style, color)"};
 
-exports.stringAppendBlockTitle = function(d){return "string-append (first, second)"};
+exports.stringAppendBlockTitle = function(d){return "szöveg-összefűzés (első, második)"};
 
 exports.stringLengthBlockTitle = function(d){return "szöveg hossza (szöveg)"};
 
@@ -14599,7 +14592,7 @@ exports.textBlockTitle = function(d){return "szöveg (szöveg, méret, szín)"};
 
 exports.triangleBlockTitle = function(d){return "háromszög (méret, stílus, szín)"};
 
-exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
+exports.underlayBlockTitle = function(d){return "aljzat (alsó, felső)"};
 
 exports.outline = function(d){return "körvonal"};
 

@@ -2607,6 +2607,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -2619,7 +2620,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -2629,16 +2632,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -12309,7 +12302,7 @@ exports.numLinesOfCodeWritten = function(d){return "Μόλις έγραψες "+
 
 exports.play = function(d){return "παίξε"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Εκτύπωσε"};
 
 exports.puzzleTitle = function(d){return "Παζλ "+v(d,"puzzle_number")+" από "+v(d,"stage_total")};
 
@@ -12325,7 +12318,7 @@ exports.score = function(d){return "σκορ"};
 
 exports.showCodeHeader = function(d){return "Προβολή κώδικα"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Εμφάνισε τα μπλοκ"};
 
 exports.showGeneratedCode = function(d){return "Προβολή κώδικα"};
 
@@ -12353,9 +12346,9 @@ exports.hintRequest = function(d){return "Δείτε την υπόδειξη"};
 
 exports.backToPreviousLevel = function(d){return "Πίσω στο προηγούμενο επίπεδο"};
 
-exports.saveToGallery = function(d){return "Αποθήκευσε το στη συλλογή σου"};
+exports.saveToGallery = function(d){return "Αποθήκευση στη συλλογή"};
 
-exports.savedToGallery = function(d){return "Αποθηκεύτηκε στη συλλογή σου!"};
+exports.savedToGallery = function(d){return "Αποθηκεύτηκε στη συλλογή!"};
 
 exports.shareFailure = function(d){return "Συγγνώμη, δεν μπορούμε να μοιράσουμε αυτό το πρόγραμμα."};
 
@@ -12365,7 +12358,7 @@ exports.typeHint = function(d){return "Σημείωσε ότι απαιτούν�
 
 exports.workspaceHeader = function(d){return "Συναρμολόγησε τα μπλοκ σου εδώ: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Πληκτρολογήστε τον Javascript κώδικά σας εδώ"};
 
 exports.infinity = function(d){return "Άπειρο"};
 
@@ -12389,7 +12382,7 @@ exports.hintHeader = function(d){return "Να μια συμβουλή:"};
 
 exports.genericFeedback = function(d){return "Δες πως κατέληξες και δοκίμασε να διορθώσεις το πρόγραμμά σου."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Δείτε τι έκανα"};
 
 
 },{"messageformat":52}],40:[function(require,module,exports){
@@ -12420,7 +12413,7 @@ exports.flapLarge = function(d){return "Φτερούγισε πολύ"};
 
 exports.flapVeryLarge = function(d){return "Φτερούγισε πάρα πολύ"};
 
-exports.flapTooltip = function(d){return "Πέτα τον Φλάπυ προς τα επάνω."};
+exports.flapTooltip = function(d){return "Πέτα τον Flappy προς τα επάνω."};
 
 exports.flappySpecificFail = function(d){return "Ο κώδικάς σου δείχνει σωστός - θα φτερουγίζει με κάθε κλικ. Αλλά χρειάζεται να κάνεις κλικ πολλές φορές για να πετάξεις προς το στόχο."};
 
@@ -12536,7 +12529,7 @@ exports.setObstacleRandom = function(d){return "όρισε Τυχαίο εμπό
 
 exports.setObstacleFlappy = function(d){return "όρισε εμπόδιο Σωλήνας"};
 
-exports.setObstacleSciFi = function(d){return "όρισε Διαστημικό εμπόδιο"};
+exports.setObstacleSciFi = function(d){return "όρισε εμπόδιο Διάστημα"};
 
 exports.setObstacleUnderwater = function(d){return "όρισε εμπόδιο Φυτό"};
 
@@ -12590,7 +12583,7 @@ exports.setSpeed = function(d){return "όρισε ταχύτητα"};
 
 exports.setSpeedTooltip = function(d){return "Ορίζει την ταχύτητα του επιπέδου"};
 
-exports.shareFlappyTwitter = function(d){return "Κοίτα το παιχνίδι Φλάπι που έφτιαξα. Το έγραψα μόνος μου με το @codeorg"};
+exports.shareFlappyTwitter = function(d){return "Κοίτα το παιχνίδι Flappy που έφτιαξα. Το έγραψα μόνος μου με το @codeorg"};
 
 exports.shareGame = function(d){return "Μοιράσου το παιχνίδι σου:"};
 
@@ -12634,15 +12627,15 @@ exports.speedVeryFast = function(d){return "όρισε πολύ μεγάλη τ�
 
 exports.whenClick = function(d){return "με το κλικ"};
 
-exports.whenClickTooltip = function(d){return "Εκτέλεσε τις παρακάτω ενέργειες όταν γίνει κλικ."};
+exports.whenClickTooltip = function(d){return "Εκτέλεσε τις παρακάτω ενέργειες όταν πατηθεί το κλικ."};
 
 exports.whenCollideGround = function(d){return "όταν χτυπήσει στο έδαφος"};
 
-exports.whenCollideGroundTooltip = function(d){return "Εκτέλεσε τις παρακάτω ενέργειες όταν ο Φλάπι χτυπήσει στο έδαφος."};
+exports.whenCollideGroundTooltip = function(d){return "Εκτέλεσε τις παρακάτω ενέργειες όταν ο Flappy χτυπήσει στο έδαφος."};
 
 exports.whenCollideObstacle = function(d){return "όταν χτυπήσει εμπόδιο"};
 
-exports.whenCollideObstacleTooltip = function(d){return "Εκτέλεσε τις παρακάτω ενέργειες όταν ο Φλάπι κτυπήσει ένα εμπόδιο."};
+exports.whenCollideObstacleTooltip = function(d){return "Εκτέλεσε τις παρακάτω ενέργειες όταν ο Flappy xτυπήσει ένα εμπόδιο."};
 
 exports.whenEnterObstacle = function(d){return "όταν περάσει εμπόδιο"};
 

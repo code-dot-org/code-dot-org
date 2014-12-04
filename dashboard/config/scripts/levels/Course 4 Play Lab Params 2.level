@@ -28,8 +28,7 @@
     ],
     "use_contract_editor": "false",
     "coordinate_grid_background": "false",
-    "embed": "false",
-    "maze_data": null
+    "embed": "false"
   }
 }]]></config>
   <blocks>
@@ -112,7 +111,7 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <category name="Numbers">
+        <category name="Math">
           <block type="math_number">
             <title name="NUM">100</title>
           </block>

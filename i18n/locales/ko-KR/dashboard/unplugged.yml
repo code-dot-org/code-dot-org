@@ -165,20 +165,20 @@ ko:
         title: 2진 이미지
         desc: '많은 사람들인 2진은 정확히 0과 1들로만 구성된다고 생각하지만, 이전 과정에서 정보가 0과1의 2진 표현으로 다양하게 표현될 수 있다는 것을 배웠습니다. 이번 내용에서는 더 나아가 이미지나 색과 같은 더 복잡한 정보들도 2진 표현으로 표현할 수 있음을 설명합니다. '
       VideoGamesCoordinatePlanes:
-        title: Video Games and Coordinate Planes
-        desc: Video Games and Coordinate Planes lesson description
+        title: 비디오 게임과 좌표 평면
+        desc: 비디오 게임과 좌표 평면 강의 내용
       Contracts:
-        title: 제한하기
-        desc: Contracts unplugged lesson description
+        title: 제한조건
+        desc: 제한조건 언플러그드 수업 설명
       DesignRecipe:
         title: 디자인 레시피
-        desc: Design Recipe lesson description
+        desc: 디자인 레시피 수업 설명
       Booleans:
         title: 불(참 또는 거짓)값들
-        desc: Booleans lesson description
+        desc: 불(참 또는 거짓)값들 수업 설명
       ConditionalsPiecewiseFunctions:
         title: 조건선택과 불연속 함수
-        desc: Conditionals and Piecewise Functions lesson description
+        desc: 조건선택과 불연속 함수 수업 설명
       CollisionDetection:
-        title: Collision Detection
-        desc: Collision Detection lesson description
+        title: 충돌 감지
+        desc: 충돌 감지 수업 설명

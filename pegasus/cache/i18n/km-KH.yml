@@ -1,8 +1,8 @@
 "km-KH":
-  hello: "សួស្ដី​ពិភពលោក"
+  hello: សួស្ដី​ពិភពលោក
   select_language: Please select your language
-  computer_science: "វិទ្យាសាស្ត្រ​កុំព្យូទ័រ"
-  computer_science_edweek: "សប្ដាហ៍​នៃ​ការ​សិក្សា​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ"
+  computer_science: វិទ្យាសាស្ត្រ​កុំព្យូទ័រ
+  computer_science_edweek: សប្ដាហ៍​នៃ​ការ​សិក្សា​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ
   csedweek_dates: December 9-15, 2013
   csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
@@ -10,13 +10,13 @@
     font-weight:bold">plan your Hour of Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
-  n_have_learned_an_hoc: "<h1>#</h1><h3>have tried an</h3><h2>HOUR of CODE&trade;</h2>"
+  n_have_learned_an_hoc: <h1>#</h1><h3>have tried an</h3><h2>HOUR of CODE&trade;</h2>
   anybody_can_learn: Anybody can learn.
-  learn_now: "ចាប់ផ្ដើមរៀននៅពេលនេះ"
-  petition_message: "សិស្សទាំងអស់ដែលរៀននៅសាលារៀន គួរតែមានឱកាសបានរៀនអំពីវិទ្យាសាស្រ្តកុំព្យូទ័រ"
+  learn_now: ចាប់ផ្ដើមរៀននៅពេលនេះ
+  petition_message: សិស្សទាំងអស់ដែលរៀននៅសាលារៀន គួរតែមានឱកាសបានរៀនអំពីវិទ្យាសាស្រ្តកុំព្យូទ័រ
   petition_sign_message: 'If you agree, sign your name.  Join # others.'
-  name: "ឈ្មោះ"
-  email: "អ៊ីមែល"
+  name: ឈ្មោះ
+  email: អ៊ីមែល
   zipcode: ZIP code or country
   submit: Submit
   twentyhours_heading: Try our Intro to Computer Science Course
@@ -37,7 +37,7 @@
     intro course</a>.  Any elementary school can <a href='http://code.org/educate/k5'>teach
     computer science</a>. Ask high schools to <a href='http://code.org/educate/districts'>partner
     with us.
-  california_button: "រៀនបន្ថែមទៀត"
+  california_button: រៀនបន្ថែមទៀត
   flappy_heading: Flappy Birthday to Code.org
   flappy_text: Code.org just turned 1 year old.<br/><br/> Celebrate with us by making
     your own custom <b>Flappy</b> game. Code your own rules, and share it with friends!
@@ -50,7 +50,7 @@
     statements, and basic algorithms.
   all_ages: All ages
   beginner: Beginner
-  n_participants: "# participants"
+  n_participants: '# participants'
   go: Go
   thank_you_: Thank you!
   congratulations: Congratulations!
@@ -73,20 +73,20 @@
   support_url: http://support.code.org/
   country: Country
   city: City
-  gender: "ភេទ"
-  boys: "ប្រុស"
+  gender: ភេទ
+  boys: ប្រុស
   girls: Girls
   give_my_hour: 'Give my Hour to:'
   girls_team: Girls' Team
   boys_team: Boys' Team
   tell_the_world: Tell the world!
   thanks_for_voting: Thanks for voting!
-  share_on_facebook: "ចែករំលែកទៅកាន់Facebook"
+  share_on_facebook: ចែករំលែកទៅកាន់Facebook
   share_on_twitter: Share on Twitter
   beyond_an_hour: Beyond an HOUR OF CODE >
   get_started: Start
   i_agree: I agree
-  participant_select: "- Select -"
+  participant_select: '- Select -'
   participant_student: Student
   participant_parent: Parent
   participant_educator: Educator
@@ -109,34 +109,34 @@
   learn_hoc: Learn an Hour of Code
   beyond_hoc: Beyond One Hour
   what_gender: What gender are you?
-  girl: "ស្រី"
-  boy: "ប្រុស"
+  girl: ស្រី
+  boy: ប្រុស
   help_recruit_coders: Help us recruit more coders to your team!
   help_recruit: Help us recruit more coders!
   lines_of_code: OVER <b># LINES OF CODE</b> WRITTEN TO DATE.
-  lines_of_code_alt: "<b>#</b> LINES OF CODE WRITTEN BY STUDENTS"
+  lines_of_code_alt: <b>#</b> LINES OF CODE WRITTEN BY STUDENTS
   who_has_done_hoc: 'Who has done the #HourOfCode? @codeorg'
   hoc_leaderboards: The Hour of Code Leaderboards
-  students_and_lines: "%{students} students have done the Hour of Code and written
-    %{lines} lines of code."
+  students_and_lines: '%{students} students have done the Hour of Code and written
+    %{lines} lines of code.'
   start_hoc: Start the Hour of Code now
   contact_form_topic_press: Press/media (interview or speaking engagement)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
   studiobar_elementary_title: Elementary courses
   studiobar_elementary_body: Our three new courses for K&#8209;5
-  studiobar_hoc_title: "ពេលវេលា​នៃ​កូដ"
+  studiobar_hoc_title: ពេលវេលា​នៃ​កូដ
   studiobar_hoc_body: Learn to code with Angry Birds
   studiobar_flappy_title: Flappy កូដ
   studiobar_flappy_body: Make and share your own Flappy game
   studiobar_teacher_title: Teacher dashboard
   studiobar_teacher_body: 'For teachers: view your students'' progress'
-  contact_form_topic_student: "ខ្ញុំគឺជាសិស្ស"
+  contact_form_topic_student: ខ្ញុំគឺជាសិស្ស
   contact_form_topic_parent: I'm a parent
-  contact_form_topic_teacher: "ខ្ញុំគឺជាគ្រូបង្រៀន"
+  contact_form_topic_teacher: ខ្ញុំគឺជាគ្រូបង្រៀន
   contact_form_topic_outside_us: I'm outside the U.S.
   contact_form_topic_contribution: Charitable contribution
   contact_form_topic_partner: I'd like to partner
-  contact_form_topic_other: "ផ្សេងៗ"
+  contact_form_topic_other: ផ្សេងៗ
   contact_form_label_topic: Topic
   contact_form_label_email: Your email address
   contact_form_label_message: Message
@@ -183,7 +183,7 @@
   volunteer_engineer_submission_experience_university_student_or_researcher: Current
     university student (or researcher)
   volunteer_engineer_submission_experience_software_professional: Software professional
-  petition_age: "អាយុ"
+  petition_age: អាយុ
   dashboard_landing_title: Teacher Home Page
   dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
   dashboard_landing_video: Watch this video
@@ -213,11 +213,11 @@
   dashboard_action_edit: Edit
   dashboard_action_save: Save
   dashboard_action_save_all: Save all
-  dashboard_action_cancel: "បោះបង់"
+  dashboard_action_cancel: បោះបង់
   dashboard_action_delete: Delete
   dashboard_action_confirm: Delete?
-  dashboard_action_delete_yes: "យល់ព្រម"
-  dashboard_action_delete_no: "ទេ"
+  dashboard_action_delete_yes: យល់ព្រម
+  dashboard_action_delete_no: ទេ
   dashboard_action_done: Done
   dashboard_action_required: required
   dashboard_navigation_home_page: Teacher home page
@@ -259,13 +259,13 @@
   dashboard_students_new_section: You've created a new section! Now add your students
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
   dashboard_students_placeholder_name: Student Name
-  dashboard_students_name: "ឈ្មោះ"
-  dashboard_students_age: "អាយុ"
-  dashboard_students_gender: "ភេទ"
+  dashboard_students_name: ឈ្មោះ
+  dashboard_students_age: អាយុ
+  dashboard_students_gender: ភេទ
   dashboard_students_male: Male
   dashboard_students_female: Female
   dashboard_students_secret: Secret
-  dashboard_students_password: "ពាក្យ​សម្ងាត់"
+  dashboard_students_password: ពាក្យ​សម្ងាត់
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: Completed Levels
@@ -310,10 +310,10 @@
   dashboard_student_worksheet: student worksheet
   dashboard_teacher_worksheet: teacher worksheet
   dashboard_grade_k: K
-  dashboard_grade_other: "ផ្សេងៗ"
+  dashboard_grade_other: ផ្សេងៗ
   dashboard_login_word: word
   dashboard_login_picture: picture
-  dashboard_login_none: "អ៊ីមែល"
+  dashboard_login_none: អ៊ីមែល
   dashboard_new_password: new password
   stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
     week alone:'
@@ -334,7 +334,7 @@
   dashboard_faq: Frequently Asked Questions
   code_hoc_coming: The Hour of Code is coming - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
-  learn_more: "រៀនបន្ថែមទៀត"
+  learn_more: រៀនបន្ថែមទៀត
   hoc2014_try_new_tutorials: Try our new Hour of Code tutorials
   hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
   hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
@@ -355,6 +355,7 @@
   more_resources_educators: More resources for teachers and educators
   participants: participants
   teachers_notes: Teacher's Notes
+  teachers_notes_hoc: 'Teachers: Read important educator notes here'
   previous: Previous
   next: Next
   older_systems: Tutorials that work on older systems
@@ -364,6 +365,7 @@
   mobile_devices: Tutorials for mobile devices
   frozen_name: Code with Anna and Elsa
   codeorg_name: Write your first computer program
+  codeintl_name: Write your first computer program
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: An introduction to JavaScript
   khanes_name: An introduction to JavaScript
@@ -385,7 +387,6 @@
   codespark_name: The Foos (pre-readers welcome)
   kodable_name: Kodable
   tynkerapp_name: Tynker - on tablets
-  hopscotch_name: 'Hopscotch: Code on your iPad'
   robomindnl_name: Program a virtual robot
   flappy_name: Make a Flappy game
   bitsbox_name: Bitsbox - make a game
@@ -398,6 +399,7 @@
   projguts_name: Rock, Paper, Scissors
   frozen_gradelevel: Ages 8+
   codeorg_gradelevel: Ages 4-104
+  codeintl_gradelevel: Ages 4-104
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Middle school +
   khanes_gradelevel: Middle school +
@@ -419,7 +421,6 @@
   codespark_gradelevel: Elementary
   kodable_gradelevel: Elementary
   tynkerapp_gradelevel: Ages 5-13
-  hopscotch_gradelevel: Middle school +
   robomindnl_gradelevel: Ages 8-13
   flappy_gradelevel: Ages 4-104
   bitsbox_gradelevel: Elementary
@@ -432,6 +433,7 @@
   projguts_gradelevel: Ages 10-13
   frozen_platformtext: Modern browsers + tablets
   codeorg_platformtext: Modern browsers, smartphones, tablets
+  codeintl_platformtext: Modern browsers, smartphones, tablets
   thinkersmithspanish_platformtext: Unplugged
   khan_platformtext: Modern Web browsers
   khanes_platformtext: Modern Web browsers
@@ -453,7 +455,6 @@
   codespark_platformtext: iOS, Android (or web browser)
   kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, Android tablets
-  hopscotch_platformtext: iPad
   robomindnl_platformtext: Modern web browsers, Mobile web
   flappy_platformtext: Modern browsers, smartphones, tablets
   bitsbox_platformtext: Modern web browsers
@@ -467,6 +468,7 @@
   frozen_shortdescription: Let's use code to join Anna and Elsa as they explore the
     magic and beauty of ice.
   codeorg_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
+  codeintl_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Learn to draw in JavaScript
   khanes_shortdescription: Learn to draw in JavaScript
@@ -492,7 +494,6 @@
   kodable_shortdescription: A fun iPad game to teach computer programming concepts
   tynkerapp_shortdescription: Learn to code by solving fun puzzles and build your
     own mobile games.
-  hopscotch_shortdescription: Learn visual programming on an iPad
   robomindnl_shortdescription: Write code for a virtual robot
   flappy_shortdescription: Make your own game - Flappy Bird, Shark, or Submarine
   bitsbox_shortdescription: Code a series of apps to play and share, using real Javascript.
@@ -508,6 +509,10 @@
     magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
     and make a winter wonderland that you can then share with your friends!
   codeorg_longdescription: Learn the basic concepts of Computer Science with drag
+    and drop programming. This is a game-like, self-directed tutorial starring video
+    lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
+    repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
+  codeintl_longdescription: Learn the basic concepts of Computer Science with drag
     and drop programming. This is a game-like, self-directed tutorial starring video
     lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
     repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
@@ -587,9 +592,6 @@
     coding puzzles and learn programming concepts in each level. Personalize games
     with animated characters, multiple levels and rich props. Lots of fun activities
     to choose from!
-  hopscotch_longdescription: Student-guided tutorial on the iPad using the Hopscotch
-    programming language. Students will build games and apps for their iPad on their
-    iPad. Students can work individually or with friends (up to 3 per iPad).
   robomindnl_longdescription: 'Students learn the basics of programming by controlling
     their own virtual robot. The online course is fully self-contained with short
     presentations, movies, quizzes and automatic guidance/hints to help with the programming
@@ -949,9 +951,3 @@
     program because we believe play is a powerful teacher. Whether you're an educator
     or a parent, SPRK lessons give kids a fun crash course in programming robots while
     sharpening their skills in math and science.
-  codeintl_name: "Write your first computer program"
-  codeintl_gradelevel: "Ages 4-104"
-  codeintl_platformtext: "Modern browsers, smartphones, tablets"
-  codeintl_shortdescription: "Learn to code with Mark Zuckerberg and Angry Birds!"
-  codeintl_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages."
-  

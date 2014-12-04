@@ -25,7 +25,7 @@
   "stepIn":"Step in",
   "stepOver":"Step over",
   "stepOut":"Step out",
-  "turnBlack":"vende sort",
-  "turnBlackTooltip":"Sætter skærmen sort.",
+  "turnBlack":"skift til sort",
+  "turnBlackTooltip":"Skift skærmen til sort.",
   "yes":"Ja"
 }

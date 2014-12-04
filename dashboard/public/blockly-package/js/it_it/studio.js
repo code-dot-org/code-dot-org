@@ -6698,6 +6698,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -6710,7 +6711,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -6720,16 +6723,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -16059,6 +16052,7 @@ levels.playlab_2 = utils.extend(levels.dog_and_cat_hello, {
   firstSpriteIndex: 20, // cave boy
   timeoutFailureTick: null,
   timeoutAfterWhenRun: true,
+  defaultEmotion: Emotions.HAPPY,
   goal: {
     successCondition: function () {
       return Studio.allWhenRunBlocksComplete() && Studio.sayComplete > 1;
@@ -16249,6 +16243,7 @@ levels.playlab_4 = {
   },
   background: 'tennis',
   avatarList: ['tennisboy', 'tennisgirl'],
+  defaultEmotion: Emotions.SAD,
   requiredBlocks: [
     [{
       test: 'moveDistance',
@@ -16336,6 +16331,7 @@ levels.playlab_5 = utils.extend(levels.click_hello, {
   background: 'space',
   firstSpriteIndex: 23, // spacebot
   timeoutAfterWhenRun: true,
+  defaultEmotion: Emotions.HAPPY,
   toolbox: tb(blockOfType('studio_saySprite')),
   startBlocks:
    '<block type="studio_whenSpriteClicked" deletable="false" x="20" y="20"></block>'
@@ -16470,6 +16466,7 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
     success: 'blue_fireball',
     imageWidth: 800
   },
+  defaultEmotion: Emotions.ANGRY,
   toolbox:
     tb(
       blockOfType('studio_move', {DIR: 8}) +
@@ -16562,6 +16559,7 @@ levels.playlab_7 = {
     'downButton',
     'upButton'
   ],
+  defaultEmotion: Emotions.HAPPY,
   map: [
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -16790,6 +16788,7 @@ levels.playlab_8 = {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
   avatarList: ['unicorn', 'wizard'],
+  defaultEmotion: Emotions.HAPPY,
   goal: {
     successCondition: function () {
       return Studio.sprite[0].isCollidingWith(1) && Studio.playerScore === 1;
@@ -16936,6 +16935,7 @@ levels.playlab_9 = {
   scale: {
     snapRadius: 2
   },
+  defaultEmotion: Emotions.ANGRY,
   softButtons: [
     'leftButton',
     'rightButton',
@@ -18867,7 +18867,8 @@ Studio.init = function(config) {
   config.makeUrl = "http://code.org/studio";
   config.makeImage = BlocklyApps.assetUrl('media/promo.png');
 
-  config.enableShowCode = BlocklyApps.editCode;
+  // Disable "show code" button in feedback dialog when workspace is hidden
+  config.enableShowCode = !config.level.embed && BlocklyApps.editCode;
   config.varsInGlobals = true;
 
   Studio.initSprites();
@@ -19018,7 +19019,7 @@ BlocklyApps.reset = function(first) {
       size: constants.DEFAULT_SPRITE_SIZE,
       dir: Direction.NONE,
       displayDir: Direction.SOUTH,
-      emotion: Emotions.NORMAL,
+      emotion: level.defaultEmotion || Emotions.NORMAL,
       // tickCount of last time sprite moved,
       lastMove: Infinity,
       // overridden as soon as we call setSprite
@@ -19100,7 +19101,7 @@ var displayFeedback = function() {
       feedbackType: Studio.testResults,
       response: Studio.response,
       level: level,
-      showingSharing: level.freePlay,
+      showingSharing: !level.disableSharing && (level.freePlay),
       feedbackImage: Studio.feedbackImage,
       twitter: twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
@@ -21218,7 +21219,7 @@ exports.numLinesOfCodeWritten = function(d){return "Hai appena scritto "+p(d,"nu
 
 exports.play = function(d){return "inizia"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Stampa"};
 
 exports.puzzleTitle = function(d){return "Esercizio "+v(d,"puzzle_number")+" di "+v(d,"stage_total")};
 
@@ -21262,9 +21263,9 @@ exports.hintRequest = function(d){return "Vedi il suggerimento"};
 
 exports.backToPreviousLevel = function(d){return "Torna al livello precedente"};
 
-exports.saveToGallery = function(d){return "Salva nella tua galleria"};
+exports.saveToGallery = function(d){return "Salva nella galleria"};
 
-exports.savedToGallery = function(d){return "Salvato nella tua galleria!"};
+exports.savedToGallery = function(d){return "Salvato nella galleria!"};
 
 exports.shareFailure = function(d){return "Ci dispiace, non possiamo condividere questo programma."};
 
@@ -21298,7 +21299,7 @@ exports.hintHeader = function(d){return "Ecco un suggerimento:"};
 
 exports.genericFeedback = function(d){return "Verifica il risultato e prova a correggere il tuo programma."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Verifica che cosa ho fatto"};
 
 
 },{"messageformat":61}],49:[function(require,module,exports){
@@ -21625,15 +21626,15 @@ exports.setSpriteHidden = function(d){return "a un'immagine nascosta"};
 
 exports.setSpriteHideK1 = function(d){return "nascondi"};
 
-exports.setSpriteAnna = function(d){return "to a Anna image"};
+exports.setSpriteAnna = function(d){return "a un'immagine di Anna"};
 
-exports.setSpriteElsa = function(d){return "to a Elsa image"};
+exports.setSpriteElsa = function(d){return "a un'immagine di Elsa"};
 
-exports.setSpriteHiro = function(d){return "to a Hiro image"};
+exports.setSpriteHiro = function(d){return "a un'immagine di Hiro"};
 
-exports.setSpriteBaymax = function(d){return "to a Baymax image"};
+exports.setSpriteBaymax = function(d){return "a un'immagine di Baymax"};
 
-exports.setSpriteRapunzel = function(d){return "to a Rapunzel image"};
+exports.setSpriteRapunzel = function(d){return "a un'immagine di Rapunzel"};
 
 exports.setSpriteKnight = function(d){return "all'immagine di un cavaliere"};
 

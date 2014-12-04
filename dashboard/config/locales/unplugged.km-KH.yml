@@ -2,17 +2,17 @@
   data:
     unplugged:
       Unplug1:
-        title: "សេចក្ដី​ណែនាំ​អំពី​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ"
-        desc: "មេរៀន​នេះ​នឹង​ណែនាំ​អំពី​គោល​គំនិត​នៃ វិទ្យាសាស្ត្រ​កុំព្យូទ័រ ហើយ​និង​ពន្យល់​ថា​តើ​អ្នក​ជំនាញ​ក្នុង​ផ្នែក​នេះ​មាន​អ្វី​ធ្វើ​ខ្លះ។
+        title: សេចក្ដី​ណែនាំ​អំពី​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ
+        desc: មេរៀន​នេះ​នឹង​ណែនាំ​អំពី​គោល​គំនិត​នៃ វិទ្យាសាស្ត្រ​កុំព្យូទ័រ ហើយ​និង​ពន្យល់​ថា​តើ​អ្នក​ជំនាញ​ក្នុង​ផ្នែក​នេះ​មាន​អ្វី​ធ្វើ​ខ្លះ។
           វា​ក៏​នឹង​ផ្ដល់​ឱកាស​ដល់​សិស្ស​ធ្វើ​ការ​សន្មត​ទៅ​លើ​តួនាទី​របស់​អ្នក​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ​ដែរ។
           នៅ​ចុង​បញ្ចប់​នៃ​សកម្មភាព សិស្ស​ម្នាក់ៗ​នឹង​ទទួល​បាន​មេរៀន​រំឭក​នៅ​ផ្ទះ​ចំពោះ​អ្វី​ដែល​ពួកគេ​បាន​រៀន។
           អ្នក​អាច​រំលង​ការ​បង្រៀន​ក្មេង​តូចៗ​អំពី​ពាក្យ​ពិបាកៗ​ដែល​មាន​នៅ​ក្នុង​មេរៀន
-          ជំនួស​ដោយ​ការ​បង្ហាញ​ពួកគេ​ជាមួយ​ភាព​សប្បាយ​រីករាយ​ដែល​ផ្ដល់​នូវ​ផលិតភាព​និង​លទ្ធផល​ដ៏​ល្អ​ប្រសើរ។"
+          ជំនួស​ដោយ​ការ​បង្ហាញ​ពួកគេ​ជាមួយ​ភាព​សប្បាយ​រីករាយ​ដែល​ផ្ដល់​នូវ​ផលិតភាព​និង​លទ្ធផល​ដ៏​ល្អ​ប្រសើរ។
         pdfs:
         - unplug1
         video: Unplug1
       Unplug2:
-        title: "ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ"
+        title: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
         desc: With nothing but paper and markers, students will learn the four steps
           of computational thinking. After a brief introduction, students should be
           split into groups where they will have to create directions for other students
@@ -47,7 +47,7 @@
         - unplug4
         video: Unplug4
       Unplug5:
-        title: "អនុ​គមន៍"
+        title: អនុ​គមន៍
         desc: In this lesson, students will make a suncatcher out of string, beads,
           and a special charm. The students will follow a series of repetitive steps,
           then be asked to identify certain sets of "skills" that are duplicated several
@@ -96,7 +96,7 @@
         - unplug9
         video: Unplug9
       Unplug10:
-        title: "អ៊ីនធឺណិត"
+        title: អ៊ីនធឺណិត
         desc: In this lesson, students will pretend to flow through the Internet,
           all the while learning about web addresses, IPs and the DNS.
         pdfs:
@@ -147,7 +147,7 @@
           erase everything back to that point.
         video: C2_relay_programming
       Conditionals:
-        title: "លក្ខខណ្ឌ"
+        title: លក្ខខណ្ឌ
         desc: To learn about conditional statements, students play a card game and
           create rules like "If I draw a red card, I get a point" and "If I draw a
           black card, you get a point."
@@ -187,7 +187,7 @@
           themselves online creates a digital footprint or "trail" that has consequences.
         video: C2_digital_footprint
       ComputationalThinking:
-        title: "ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ"
+        title: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
         desc: Students use the steps of computational thinking (decompose, pattern
           match, abstract, algorithm) to figure out how to play a game that comes
           with no instructions.

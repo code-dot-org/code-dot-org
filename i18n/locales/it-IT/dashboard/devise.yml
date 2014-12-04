@@ -39,7 +39,7 @@ it:
       update_needs_confirmation: Hai aggiornato il tuo account correttamente, ma abbiamo bisogno di verificare il tuo nuovo indirizzo di posta elettronica. Per favore controlla la tua casella di posta elettronica e clicca sul link di conferma per completare la modifica del tuo indirizzo di posta elettronica.
       updated: Hai aggiornato il tuo account correttamente.
     sessions:
-      signed_in: Accesso riuscito.
+      signed_in: ""
       signed_out: Sei uscito correttamente.
     unlocks:
       send_instructions: Riceverai entro pochi minuti un messaggio di posta elettronica con le istruzioni per sbloccare il tuo account.

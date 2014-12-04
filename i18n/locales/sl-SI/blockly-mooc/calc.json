@@ -1,8 +1,8 @@
 {
   "compute":"izračunaj",
   "equivalentExpression":"Poskusi preurediti argumente, tako da dobiš točno isti izraz.",
-  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"compute\" block?",
-  "goal":"Goal:",
-  "reinfFeedbackMsg":"Here is your story! Continue working on it, or move on to the next puzzle!",
-  "yourExpression":"Your expression:"
+  "extraTopBlocks":"Ostali so neuporabljeni bloki. Si jih nameraval  dodati v  blok \"izračun\"?",
+  "goal":"Cilj:",
+  "reinfFeedbackMsg":"Tukaj je tvoja zgodba! Nadaljuj z delom na tej zgodbi ali se  premakni na naslednjo uganko!",
+  "yourExpression":"Tvoj izraz:"
 }

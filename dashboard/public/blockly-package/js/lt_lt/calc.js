@@ -3495,6 +3495,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -3507,7 +3508,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -3517,16 +3520,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -11069,15 +11062,15 @@ var MessageFormat = require("messageformat");MessageFormat.locale.lt = function 
 };
 exports.compute = function(d){return "skaičiuoti"};
 
-exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
+exports.equivalentExpression = function(d){return "Pamėgink pertvarkyti argumentus, kad gautum lygiai tokį pat reiškinį."};
 
 exports.extraTopBlocks = function(d){return "Turite nesujungtų blokelių. Gal norėjote juos prikabinti prie blokelio „skaičiuoti“?"};
 
 exports.goal = function(d){return "Tikslas:"};
 
-exports.reinfFeedbackMsg = function(d){return "Ar tai atrodo taip, kaip norėjai? Gali nuspausti mygtuką „Pabandyk dar kartą“, kad pamatytum savo piešinį."};
+exports.reinfFeedbackMsg = function(d){return "Štai tavo istorija! Tęsk darbą su ja arba pereik prie kito galvosūkio!"};
 
-exports.yourExpression = function(d){return "Your expression:"};
+exports.yourExpression = function(d){return "Tavo reiškinys:"};
 
 
 },{"messageformat":53}],41:[function(require,module,exports){
@@ -11193,7 +11186,7 @@ exports.numLinesOfCodeWritten = function(d){return "Tu sukūrei "+p(d,"numLines"
 
 exports.play = function(d){return "žaisti"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Spausdinti"};
 
 exports.puzzleTitle = function(d){return "Užduotis "+v(d,"puzzle_number")+" iš "+v(d,"stage_total")};
 
@@ -11237,9 +11230,9 @@ exports.hintRequest = function(d){return "Užuomina"};
 
 exports.backToPreviousLevel = function(d){return "Grįžti į ankstesnį lygį"};
 
-exports.saveToGallery = function(d){return "Įrašyti į savo galeriją"};
+exports.saveToGallery = function(d){return "Įrašyti į galeriją"};
 
-exports.savedToGallery = function(d){return "Įrašyti į savo galeriją!"};
+exports.savedToGallery = function(d){return "Įrašyta į galeriją!"};
 
 exports.shareFailure = function(d){return "Deja, šios programos dalintis negalima."};
 
@@ -11273,7 +11266,7 @@ exports.hintHeader = function(d){return "Štai patarimas:"};
 
 exports.genericFeedback = function(d){return "Pažiūrėk, kaip pavyko ir pabandyk patobulinti programą."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Pažiūrėkite, ką aš sukūriau"};
 
 
 },{"messageformat":53}],42:[function(require,module,exports){

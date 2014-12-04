@@ -31,7 +31,7 @@
           <next>
             <block type="create_a_snowflake_branch" deletable="false" editable="false">
               <next>
-                <block type="draw_turn_by_constant_dropdown" deletable="false">
+                <block type="draw_turn_by_constant_dropdown">
                   <title name="DIR">turnRight</title>
                   <title name="VALUE" config="45,60,90,120,180">???</title>
                 </block>

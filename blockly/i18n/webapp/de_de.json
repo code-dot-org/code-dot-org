@@ -22,9 +22,9 @@
   "repeatForeverTooltip": "Führen Sie die Aktionen in diesem Block wiederholt aus, während die Anwendung ausgeführt wird.",
   "shareWebappTwitter": "Schau Dir die App an, die ich gemacht habe. Ich habe sie selbst mit @codeorg geschrieben",
   "shareGame": "Teilen Sie Ihre App:",
-  "stepIn": "Step in",
-  "stepOver": "Step over",
-  "stepOut": "Step out",
+  "stepIn": "Eintreten",
+  "stepOver": "Übertreten",
+  "stepOut": "Heraustreten",
   "turnBlack": "schwarz machen",
   "turnBlackTooltip": "Macht den Bildschirm schwarz.",
   "yes": "Ja"

@@ -68,4 +68,4 @@
       not_locked: var inte låst
       not_saved:
         one: '1 fel förbjöd %{resource} från att sparas:'
-        other: "%{count} fel förbjöd %{resource} från att sparas:"
+        other: '%{count} fel förbjöd %{resource} från att sparas:'

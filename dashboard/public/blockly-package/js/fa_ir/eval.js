@@ -6813,6 +6813,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -6825,7 +6826,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -6835,16 +6838,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -14438,7 +14431,7 @@ exports.errorUnusedFunction = function(d){return "You created a function, but ne
 
 exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
-exports.extraTopBlocks = function(d){return "شما بلوک های اضافه ای دارید که به یک بلوک رویداد متصل نیست."};
+exports.extraTopBlocks = function(d){return "بلوک‌های نچسبیده‌ای هنوز باقی مونده. آیا قصد داری اینها را به بلوک \"هنگام اجرا\" وصل کنی؟"};
 
 exports.finalStage = function(d){return "تبریک می‌گوییم! شما مرحله‌ی نهایی را به پایان رساندید."};
 
@@ -14478,7 +14471,7 @@ exports.numLinesOfCodeWritten = function(d){return "شما "+p(d,"numLines",0,"f
 
 exports.play = function(d){return "بازی"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "چاپ"};
 
 exports.puzzleTitle = function(d){return "معمای "+v(d,"puzzle_number")+" از "+v(d,"stage_total")};
 
@@ -14494,7 +14487,7 @@ exports.score = function(d){return "نمره"};
 
 exports.showCodeHeader = function(d){return "کد نمایش"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "نمایش بلوک‌ها"};
 
 exports.showGeneratedCode = function(d){return "نمایشِ کد"};
 
@@ -14522,11 +14515,11 @@ exports.hintRequest = function(d){return "تذکر را ببینید"};
 
 exports.backToPreviousLevel = function(d){return "برگرد به سطح قبلی"};
 
-exports.saveToGallery = function(d){return "ذخیره در گالری شما"};
+exports.saveToGallery = function(d){return "ذخیره در گالری"};
 
-exports.savedToGallery = function(d){return "در گالری شما ذخیره شد!"};
+exports.savedToGallery = function(d){return "در گالری ذخیره شد!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "شرمنده، ما نمیتوانیم این برنامه را به اشتراک بگذاریم."};
 
 exports.typeFuncs = function(d){return "توابع قابل استفاده: %1"};
 
@@ -14534,7 +14527,7 @@ exports.typeHint = function(d){return "توجه کن که علامت‌های پ
 
 exports.workspaceHeader = function(d){return "بلوک‌های خودت رو اینجا سرهم کن: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "کد جاوا اسکریپت خودت را اینجا وارد کن"};
 
 exports.infinity = function(d){return "بی نهایت"};
 
@@ -14563,49 +14556,49 @@ exports.defaultTwitterText = function(d){return "Check out what I made"};
 
 },{"messageformat":62}],50:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.fa=function(n){return "other"}
-exports.circleBlockTitle = function(d){return "circle (radius, style, color)"};
+exports.circleBlockTitle = function(d){return "دایره (شعاع، سبک، رنگ)"};
 
-exports.displayBlockTitle = function(d){return "display"};
+exports.displayBlockTitle = function(d){return "صفحه نمایش"};
 
-exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, color)"};
+exports.ellipseBlockTitle = function(d){return "بیضی (عرض، ارتفاع، سبک، رنگ)"};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"};
+exports.extraTopBlocks = function(d){return "شما تعدادی بلوک اتصال نشده دارید.آیا میخواهید اضافه شود به بلوک های نمایش داده شده؟"};
 
-exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
+exports.overlayBlockTitle = function(d){return "پوشش (بالا، پایین)"};
 
-exports.placeImageBlockTitle = function(d){return "place-image (x, y, image)"};
+exports.placeImageBlockTitle = function(d){return "مکان تصویر (x، y، تصویر)"};
 
 exports.offsetBlockTitle = function(d){return "offset (x, y, image)"};
 
-exports.rectangleBlockTitle = function(d){return "rectangle (width, height, style, color)"};
+exports.rectangleBlockTitle = function(d){return "مستطیل (عرض، ارتفاع، سبک، رنگ)"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to edit your drawing."};
+exports.reinfFeedbackMsg = function(d){return "شما می توانید  دکمه\"دوباره امتحان کنید\"  را فشار دهید ونقاشی خود را  ویرایش  کنید"};
 
-exports.rotateImageBlockTitle = function(d){return "rotate (degrees, image)"};
+exports.rotateImageBlockTitle = function(d){return "چرخش (درجه، تصویر)"};
 
-exports.scaleImageBlockTitle = function(d){return "scale (factor)"};
+exports.scaleImageBlockTitle = function(d){return "مقیاس (فاکتور)"};
 
-exports.squareBlockTitle = function(d){return "square (size, style, color)"};
+exports.squareBlockTitle = function(d){return "مربع (اندازه، سبک، رنگ)"};
 
-exports.starBlockTitle = function(d){return "star (radius, style, color)"};
+exports.starBlockTitle = function(d){return "ستاره (شعاع، سبک، رنگ)"};
 
 exports.radialStarBlockTitle = function(d){return "radial-star (points, inner, outer, style, color)"};
 
-exports.stringAppendBlockTitle = function(d){return "string-append (first, second)"};
+exports.stringAppendBlockTitle = function(d){return "رشته ی-الحاق (اول، دوم)"};
 
-exports.stringLengthBlockTitle = function(d){return "string-length (string)"};
+exports.stringLengthBlockTitle = function(d){return "طول رشته (رشته ای)"};
 
-exports.textBlockTitle = function(d){return "text (string, size, color)"};
+exports.textBlockTitle = function(d){return "متن (رشته، اندازه، رنگ)"};
 
-exports.triangleBlockTitle = function(d){return "triangle (size, style, color)"};
+exports.triangleBlockTitle = function(d){return "مثلث (اندازه، سبک، رنگ)"};
 
-exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
+exports.underlayBlockTitle = function(d){return "لایه زیرین (پایین، بالا)"};
 
-exports.outline = function(d){return "outline"};
+exports.outline = function(d){return "خط بیرونی"};
 
-exports.solid = function(d){return "solid"};
+exports.solid = function(d){return "جامد"};
 
-exports.string = function(d){return "string"};
+exports.string = function(d){return "رشته"};
 
 
 },{"messageformat":62}],51:[function(require,module,exports){

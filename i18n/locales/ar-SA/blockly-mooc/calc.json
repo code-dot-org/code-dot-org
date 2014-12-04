@@ -1,8 +1,8 @@
 {
-  "compute":"يحسب",
+  "compute":"إحصاء",
   "equivalentExpression":"حاول إعادة ترتيب حجتك للحصول على نفس التعبير.",
-  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"compute\" block?",
+  "extraTopBlocks":"لديك كتل غير متصلة. هل تقصد إتصال هذه إلى كتلة \"حساب\"؟",
   "goal":"الهدف:",
-  "reinfFeedbackMsg":"Here is your story! Continue working on it, or move on to the next puzzle!",
+  "reinfFeedbackMsg":"هذه هي قصتك! أكمل العمل عليها, أو انتقل إلى الأحجية التالية!",
   "yourExpression":"التعبير الخاص بك:"
 }

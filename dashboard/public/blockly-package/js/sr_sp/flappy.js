@@ -2607,6 +2607,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -2619,7 +2620,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -2629,16 +2632,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -12282,7 +12275,7 @@ exports.errorUnusedFunction = function(d){return "You created a function, but ne
 
 exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
-exports.extraTopBlocks = function(d){return "Имаш блокове који нису повезани са основним блоком."};
+exports.extraTopBlocks = function(d){return "Имате незакачене блокове. Да ли сте хтели да их закачите за \"када се извршава\" блок?"};
 
 exports.finalStage = function(d){return "Честитамо! Завршили сте последњу етапу."};
 
@@ -12322,7 +12315,7 @@ exports.numLinesOfCodeWritten = function(d){return "Управо си напис
 
 exports.play = function(d){return "играј"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Одштампај"};
 
 exports.puzzleTitle = function(d){return "Мозгалица "+v(d,"puzzle_number")+" од "+v(d,"stage_total")};
 
@@ -12338,7 +12331,7 @@ exports.score = function(d){return "Резултат"};
 
 exports.showCodeHeader = function(d){return "Покажи Програмски код"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Покажи блокове"};
 
 exports.showGeneratedCode = function(d){return "Покажи код програма"};
 
@@ -12366,11 +12359,11 @@ exports.hintRequest = function(d){return "Види предлог"};
 
 exports.backToPreviousLevel = function(d){return "Натраг на претходни ниво"};
 
-exports.saveToGallery = function(d){return "Сачувај у своју галерију"};
+exports.saveToGallery = function(d){return "Сачувај у галерији"};
 
-exports.savedToGallery = function(d){return "Сачувано у твојој галерији!"};
+exports.savedToGallery = function(d){return "Сачувано у галерији!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Извините, не можемо да поделимо овај програм."};
 
 exports.typeFuncs = function(d){return "Доступне функције:%1"};
 
@@ -12378,7 +12371,7 @@ exports.typeHint = function(d){return "Уочи да су неопходне з�
 
 exports.workspaceHeader = function(d){return "Склопи своје блокове овде: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Укуцајте ваш JavaScript овде"};
 
 exports.infinity = function(d){return "Бесконачно"};
 
@@ -12426,7 +12419,7 @@ exports.doCode = function(d){return "Уради"};
 
 exports.elseCode = function(d){return "у супротном"};
 
-exports.endGame = function(d){return "крај игре"};
+exports.endGame = function(d){return "заврши игру"};
 
 exports.endGameTooltip = function(d){return "Завршава игру."};
 
@@ -12434,7 +12427,7 @@ exports.finalLevel = function(d){return "Честитамо! Решили сте
 
 exports.flap = function(d){return "маши крилима"};
 
-exports.flapRandom = function(d){return "маши крилима насумичан број пута"};
+exports.flapRandom = function(d){return "маши крилима насумичном снагом"};
 
 exports.flapVerySmall = function(d){return "маши крилима врло мало"};
 
@@ -12492,7 +12485,7 @@ exports.reinfFeedbackMsg = function(d){return "Можете да притисн�
 
 exports.scoreText = function(d){return "Резултат: "+v(d,"playerScore")};
 
-exports.setBackground = function(d){return "set scene"};
+exports.setBackground = function(d){return "постави позадину"};
 
 exports.setBackgroundRandom = function(d){return "Постави сцену Насумично"};
 
@@ -12538,7 +12531,7 @@ exports.setGravityVeryHigh = function(d){return "Постави врло вис�
 
 exports.setGravityTooltip = function(d){return "Подешава ниво гравитације"};
 
-exports.setGround = function(d){return "set ground"};
+exports.setGround = function(d){return "постави подлогу"};
 
 exports.setGroundRandom = function(d){return "постави тло Насумично"};
 
@@ -12556,7 +12549,7 @@ exports.setGroundLava = function(d){return "постави тло Лава"};
 
 exports.setGroundTooltip = function(d){return "Поставља слику тла"};
 
-exports.setObstacle = function(d){return "set obstacle"};
+exports.setObstacle = function(d){return "постави препреку"};
 
 exports.setObstacleRandom = function(d){return "поставља препреку Насумично"};
 
@@ -12574,39 +12567,39 @@ exports.setObstacleLaser = function(d){return "поставља препреку
 
 exports.setObstacleTooltip = function(d){return "Поставља слику препреке"};
 
-exports.setPlayer = function(d){return "set player"};
+exports.setPlayer = function(d){return "постави лика"};
 
 exports.setPlayerRandom = function(d){return "поставља плејер Насумично"};
 
-exports.setPlayerFlappy = function(d){return "поставља плејер Жута птица"};
+exports.setPlayerFlappy = function(d){return "постави плејер Жута птица"};
 
-exports.setPlayerRedBird = function(d){return "поставља плејер Црвена птица"};
+exports.setPlayerRedBird = function(d){return "постави плејер Црвена птица"};
 
-exports.setPlayerSciFi = function(d){return "поставља плејер Свемирски брод"};
+exports.setPlayerSciFi = function(d){return "постави плејер Свемирски брод"};
 
-exports.setPlayerUnderwater = function(d){return "поставља плејер Риба"};
+exports.setPlayerUnderwater = function(d){return "постави плејер Риба"};
 
-exports.setPlayerCave = function(d){return "поставља плејер Слепи миш"};
+exports.setPlayerCave = function(d){return "постави плејер Слепи миш"};
 
-exports.setPlayerSanta = function(d){return "поставља плејер Деда Мраз"};
+exports.setPlayerSanta = function(d){return "постави плејер Деда Мраз"};
 
-exports.setPlayerShark = function(d){return "поставља плејер Ајкула"};
+exports.setPlayerShark = function(d){return "постави плејер Ајкула"};
 
-exports.setPlayerEaster = function(d){return "поставља плејер Ускршњи зека"};
+exports.setPlayerEaster = function(d){return "постави плејер Ускршњи зека"};
 
-exports.setPlayerBatman = function(d){return "поставља плејер Бетмен"};
+exports.setPlayerBatman = function(d){return "постави плејер Бетмен"};
 
-exports.setPlayerSubmarine = function(d){return "поставља плејер Подморница"};
+exports.setPlayerSubmarine = function(d){return "постави плејер Подморница"};
 
-exports.setPlayerUnicorn = function(d){return "поставља плејер Једнорог"};
+exports.setPlayerUnicorn = function(d){return "постави плејер Једнорог"};
 
-exports.setPlayerFairy = function(d){return "поставља плејер Вила"};
+exports.setPlayerFairy = function(d){return "постави плејер Вила"};
 
-exports.setPlayerSuperman = function(d){return "поставља плејер Флопи-човек"};
+exports.setPlayerSuperman = function(d){return "постави плејер Флапи-човек"};
 
-exports.setPlayerTurkey = function(d){return "поставља плејер Ћурка"};
+exports.setPlayerTurkey = function(d){return "постави плејер Ћурка"};
 
-exports.setPlayerTooltip = function(d){return "Поставља слику играча"};
+exports.setPlayerTooltip = function(d){return "Постави слику играча"};
 
 exports.setScore = function(d){return "постави резултат"};
 
@@ -12616,7 +12609,7 @@ exports.setSpeed = function(d){return "постави брзину"};
 
 exports.setSpeedTooltip = function(d){return "Поставља брзину нивоа"};
 
-exports.shareFlappyTwitter = function(d){return "Испробај Флопи-игру коју сам направио/ла. Сам/а сам је написао/ла користећи @codeorg"};
+exports.shareFlappyTwitter = function(d){return "Испробај Флапи-игру коју сам направио/ла. Сам/а сам је написао/ла користећи @codeorg"};
 
 exports.shareGame = function(d){return "Подели своју игру:"};
 
@@ -12624,27 +12617,27 @@ exports.soundRandom = function(d){return "насумичан"};
 
 exports.soundBounce = function(d){return "одбиј се"};
 
-exports.soundCrunch = function(d){return "crunch"};
+exports.soundCrunch = function(d){return "крц"};
 
-exports.soundDie = function(d){return "sad"};
+exports.soundDie = function(d){return "тужан звук"};
 
-exports.soundHit = function(d){return "smash"};
+exports.soundHit = function(d){return "звук ломљења"};
 
-exports.soundPoint = function(d){return "point"};
+exports.soundPoint = function(d){return "поен"};
 
-exports.soundSwoosh = function(d){return "swoosh"};
+exports.soundSwoosh = function(d){return "свуш"};
 
-exports.soundWing = function(d){return "wing"};
+exports.soundWing = function(d){return "звук крила"};
 
-exports.soundJet = function(d){return "jet"};
+exports.soundJet = function(d){return "звук млазњака"};
 
-exports.soundCrash = function(d){return "crash"};
+exports.soundCrash = function(d){return "ѕвук судара"};
 
-exports.soundJingle = function(d){return "jingle"};
+exports.soundJingle = function(d){return "звоњење"};
 
-exports.soundSplash = function(d){return "splash"};
+exports.soundSplash = function(d){return "звук прскања"};
 
-exports.soundLaser = function(d){return "laser"};
+exports.soundLaser = function(d){return "звук ласера"};
 
 exports.speedRandom = function(d){return "постави брзину насумично"};
 

@@ -583,13 +583,135 @@
         maze_wordsearch_k_20: Ini adalah tes! Gerakkan saya lurus, kemudian akan mengeja
           kata STORY
         webapp_ec_simple: Buatlah aplikasi web anda dengan memakai createHtmlBlock.
-        turtle_ec_1_2: 'Sekarang, gambarkan persegi. CATATAN: gunakan warna kesukaan
-          anda dengan cara memilih itu dalam new "penColour" blok.'
-        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
-          a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
-          Have fun!'
+        turtle_ec_1_2: 'Sekarang, gambarlah sebuah bujur sangkar. CATATAN: gunakan
+          warna favorit Anda dengan memilihnya dalam blok "penColor" yang baru.'
+        turtle_ec_1_10: 'Anda berhasil! Sekarang, gambarlah apapun yang Anda mau.
+          Beberapa ide asyik: gambar orang-orangan, butiran salju, atau spiral. Cobalah
+          juga blok "penWidth" yang baru. Selamat menikmati!'
         studio_ec_sandbox: Buat permainan Anda sendiri. Setelah selesai, klik Selesai
           untuk membiarkan teman-teman mencoba permainan Anda pada ponsel mereka.
+    levelbuilder:
+      frozen line:
+        instructions: Halo. Aku Elsa dari Arendelle. Bantu aku membuat sebuah garis.
+      frozen perpendicular:
+        instructions: Sekarang mari kita lihat apakah kita bisa membuat dua garis
+          yang tegak lurus 90 derajat satu dengan yang lain. Kamu akan menggunakan
+          blok "Belok" dan juga blok "Bergerak".
+      frozen square iterative:
+        instructions: Sepertinya kita sudah setengah jalan untuk membuat persegi.
+          Mari kita tempatkan 4 garis bersama untuk membuat sebuah persegi.
+      frozen square loop:
+        instructions: Halo. Aku Anna dari Arendelle! Mari membuat sebuah persegi dengan
+          blok "Ulangi", yang menggunakan blok lebih sedikit. Berapa kali (???) blok
+          "Ulangi" mengulangi blok-blok di dalamnya untuk membuat persegi?
+      frozen square loop 3x:
+        instructions: Mari kita membuat tiga persegi, berputar setelah setiap persegi.
+          Pastikan untuk berputar 120 derajat sebelum membuat setiap persegi baru.
+      frozen square snowflake:
+        instructions: Bisakah kamu membuat kepingan salju menggunakan blok "Ulangi"
+          untuk membuat persegi 10 kali dan blok "Belok" untuk berbelok 36 derajat
+          di antara setiap persegi?
+      frozen cross:
+        instructions: Gunakan blok "Ulangi" untuk membuat tanda tambah. Apakah kamu
+          perhatikan Elsa bisa bergerak maju dan mundur?
+      frozen cross rotate:
+        instructions: Sekarang coba ulangi 10 kali. Berapa derajat yang diperlukan
+          untuk berbelok antara setiap garis?
+      frozen cross rotate dense:
+        instructions: 'Mari kita ulangi 90 kali. Berapa kali 90 menjadi 360?  Petunjuk:
+          Ini angka yang sangat kecil.'
+      frozen diamond:
+        instructions: 'Mari membuat jajar genjang. Itu mirip persegi tetapi memiliki
+          sudut yang berbeda: 60 dan 120 derajat, bukan 90 derajat.'
+      frozen diamond mini snowflake:
+        instructions: Tahukah kamu setiap kepingan salju berbeda bentuk? Mari membuat
+          kepingan salju baru menggunakan blok "Ulangi" untuk mengulangi pembuatan
+          jajar genjang 4 kali, berbelok 90 derajat antara setiap jajar genjang.
+      frozen diamond snowflake:
+        instructions: Sekarang, mari kita membuat kepingan salju baru menggunakan
+          blok ulangi untuk mengulangi pembuatan jajar genjang 10 kali, berbelok 36
+          derajat antara masing-masing bentuk.
+      frozen circle:
+        instructions: Lingkaran adalah bentuk yang khusus. Bisakah kamu menebak angka
+          yang dapat menggantikan tanda tanya  itu untuk menggambar lingkaran?
+      frozen circle function:
+        instructions: Gunakan blok baru "Buat sebuah lingkaran" untuk membuat 10 lingkaran
+          yang tumpang tindih. Jangan lupa untuk lompat maju antara lingkaran.
+      frozen circle function in circle:
+        instructions: Sekarang mari kita membuat 20 lingkaran yang tumpang tindih,
+          berbelok 18 derajat antara setiap lingkaran.
+      frozen circle function with parameter:
+        instructions: Ini adalah blok "Buat lingkaran" yang dapat membuat lingkara-lingkaran
+          dengan ukuran yang berbeda. Bisakah kamu menggunakannya untuk membuat sebuah
+          lingkaran kecil berukuran 5 dan lingkaran yang lebih besar berukuran 10?
+      frozen snowflower:
+        instructions: Pola salju yang rumit dapat dibuang dengan bentuk yang sangat
+          sederhana. Bisakah kamu membuat pola dengan mengulangi membuat 5 lingkaran
+          berukuran 5 dan 5 lingkaran berukuran 10?
+      frozen snowflake branch:
+        instructions: Cobalah menggunakan "Buat cabang kepingan salju" untuk membuat
+          tiga cabang, yang mulai terlihat seperti kepingan salju.
+      frozen snowflake full:
+        instructions: Sekarang mari kita ulangi 8 kali untuk membuat kepingan salju
+          yang indah!
+      frozen freeplay:
+        instructions: Kamu telah resmi menjadi seniman ahli! Buatlah dunia musim dingin
+          dan bagikan dengan teman-temanmu.
+      scrat 16:
+        instructions: Biji ek! Gunakan blok "jika" (if) untuk mengantar saya ke sana
+          dengan jumlah blok paling sedikit.
+      scrat 17:
+        instructions: OK, mari kita coba lagi latihan itu - ini tidak terlalu berbeda,
+          tapi waspada temboknya!
+      scrat 18:
+        instructions: Blok "jika tidak" (if-else) memeriksa persyaratan, lalu melakukan
+          satu hal ATAU yang lain, Untuk menjalankan saya ke biji ek tersebut cobalah
+          gunakan blok baru ini.
+      scrat 19:
+        instructions: Cobalah sekali lagi praktekkan blok "jika tidak" (if-else),
+          bisakah Anda mendapatkannya jawaban yang benar pada percobaan pertama?
+      scrat 20:
+        instructions: Bisakah kamu menambahkan 3 blok saja untuk membantuku menyelesaikan
+          labirin yang lebih rumit? Kalau kamu melakukannya dengan benar, aku bisa
+          berjalan di jalan yang melengkung berapapun panjangnya. Cepat! Esnya meleleh!
+      Standalone_Artist_1:
+        instructions: Welcome to Artist! First off, let's try to make a simple square
+          using the turn right block and move forward block. Each side should be 100
+          pixels long.
+      Standalone_Artist_2:
+        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel
+          long sides.
+      Standalone_Artist_3:
+        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree
+          turns?
+      Standalone_Artist_4:
+        instructions: Now you've got a new block to play with, the loop. This will
+          repeat a set of commands. What happens if you loop these commands 6 times?
+      Standalone_Artist_5:
+        instructions: How many times do you need to loop this diamond to draw the
+          flower?
+      Standalone_Artist_5.5:
+        instructions: 'Notice how we simplified the diamond code by turning it into
+          a loop. You can loop that whole sequence 12 times to draw the flower. Hint:
+          You''ll need to turn 30 degrees after your diamond loop so you don''t keep
+          drawing over the same diamond.'
+      Standalone_Artist_6:
+        instructions: 'Loop this hexagon code 6 times to create the design. How many
+          degrees will you need to turn each time? Hint: divide the number of degrees
+          in a circle by the number of times you are looping.'
+      Standalone_Artist_7:
+        instructions: 'A function is another programming tool to help you avoid repeating
+          yourself. This function draws a flower, so you can use it any time you want
+          to draw a flower. Use this and the new jump block to draw these flowers.
+          Hint: The flowers are 150 pixels apart'
+      Standalone_Artist_8:
+        instructions: Here's a function called "Draw a shape" that we've programmed
+          to draw hexagons. Run the code to see what it does and then experiment with
+          the function to see what happens. Can you make it draw a pattern of squares,
+          triangles, or octagons?
+      Standalone_Artist_9:
+        instructions: Now go ahead and make whatever picture you'd like! You've even
+          got an empty function that you can make do whatever you want!
     video:
       name:
         maze_intro: Introduksi labirin
@@ -600,6 +722,7 @@
         loop_until: Blok Ulangi Sampai
         if: Blok Jika (if)
         if_else: Blok jika tidak (if/else)
+        if_else_scrat: Blok jika tidak (if/else)
         function: Fungsi
         loop_while: Blok Selagi (while)
         loop_for: Blok konter (Counter)
@@ -632,6 +755,7 @@
         C1_playlab_storytelling: Mainkan Lab - Buat sebuah Cerita
         C1_planting_seed: Penanaman benih
         C1_building_foundation: Membangun dasar
+        C1_going_places_safely: Going Places Safely
         C2_maze_intro: Apa itu Labirin?
         C2_artist_intro: Introduksi Artis
         C2_zuck_repeat_loop: Pengulangan labirin
@@ -646,6 +770,7 @@
         C2_binary_bracelets: Gelang biner
         C2_relay_programming: Pemrograman relay
         C2_paper_airplanes: Pesawat kertas
+        C2_digital_footprint: Your Digital Footprint
         C3_maze_level_4: Pengulangan labirin
         C3_artist_intro: Introduksi Artis
         C3_artist_functions: Fungsi Artis
@@ -664,9 +789,14 @@
         C3_crowdsourcing: Sumber kerumunan
         C3_functional_suncatchers: Fungsional pengkap matahari
         C3_songwriting_with_parameters: Parameter penulis lagu
-        Frozen_intro: Hour of Code Intro
-        Frozen_loops: Introduction to Loops
-        Frozen_functions: Introduction to Functions
+        C4_artist_math: Programming the Artist with Math
+        C4_create_functions: Creating Functions
+        C4_edit_functions: Editing Functions
+        C4_for_loops: For Loops
+        C4_variables: Variabel
+        frozen_intro: Hour of Code Intro
+        frozen_loops: Introduction to Loops
+        frozen_functions: Introduction to Functions
     callout:
       text:
         drag_blocks: Tarik blok "gerak" dan letakkan di bawah blok lain
@@ -716,3 +846,19 @@
           the Bee will turn to get the nectar.
         logic_category: Open the "Logic" flyout to find the "if/else" block.
         length_parameter: Can you update this function so it uses the "length" parameter?
+        frozen_diamond_repeat: Use the repeat block to create this shape.
+        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
+          each circle.
+        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
+          and change the size.
+        frozen_snowflake_branch: Use the "create a snowflake branch" block
+        frozen_create_square: Attach more blocks here to create a square
+        playlab_drag_say: Drag the "say" block here and type "hello"
+        playlab_use_twice: Use this block twice and remember to change the actor number
+        playlab_move_girl: Use the "move right" block to move Tennis Girl
+        playlab_play_sound: Add "play sound" block here
+        playlab_arrow_keys: Remember to use these to move the witch after clicking
+          on Run
+        playlab_add_move: Add "move" blocks inside this repeat block
+        playlab_add_score: Add score blocks here
+        playlab_add_blocks: Add your blocks here

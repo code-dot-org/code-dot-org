@@ -75,4 +75,4 @@
       not_locked: no estaba bloquejat
       not_saved:
         one: '1 error ha impedit que aquest %{resource} es guardàs:'
-        other: "%{count} errors impedeixen aquest %{resource} sigui desat:"
+        other: '%{count} errors impedeixen aquest %{resource} sigui desat:'

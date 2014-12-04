@@ -2607,6 +2607,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -2619,7 +2620,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -2629,16 +2632,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -14129,8 +14122,16 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
     // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
     Turtle.ctxPattern.rotate(Math.PI * (Turtle.heading - 90) / 180);
 
-    var clipSize = Math.min(Turtle.smoothAnimateStepSize, lineDistance);
-
+    var clipSize;
+    if (lineDistance % Turtle.smoothAnimateStepSize === 0) {
+      clipSize = Turtle.smoothAnimateStepSize;
+    } else if (lineDistance > Turtle.smoothAnimateStepSize) {
+      // this happens when our line was not divisible by smoothAnimateStepSize
+      // and we've hit our last chunk
+      clipSize = lineDistance % Turtle.smoothAnimateStepSize;
+    } else {
+      clipSize = lineDistance;
+    }
     if (img.width !== 0) {
       Turtle.ctxPattern.drawImage(img,
         // Start point for clipping image
@@ -14138,7 +14139,7 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
         // clip region size
         clipSize * retina, img.height,
         // some mysterious hand-tweaking done by Brendan
-        Math.round((Turtle.stepDistanceCovered - 7) * retina), Math.round((- 18) * retina),
+        Math.round((Turtle.stepDistanceCovered - clipSize - 2) * retina), Math.round((- 18) * retina),
         clipSize * retina, img.height);
     }
 
@@ -14815,7 +14816,7 @@ exports.errorUnusedFunction = function(d){return "You created a function, but ne
 
 exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
-exports.extraTopBlocks = function(d){return "Du har ikke sammenhængende blokke. Ville du fastgøre disse til \"når køre\" blokken?"};
+exports.extraTopBlocks = function(d){return "Du har blokke, som ikke er knyttet til andre. Ville du fastgøre dem  til \"når kører\" blokken?"};
 
 exports.finalStage = function(d){return "Tillykke! Du har fuldført det sidste trin."};
 
@@ -14855,7 +14856,7 @@ exports.numLinesOfCodeWritten = function(d){return "Du har lige skrevet "+p(d,"n
 
 exports.play = function(d){return "afspil"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Udskriv"};
 
 exports.puzzleTitle = function(d){return "Puslespil "+v(d,"puzzle_number")+" af "+v(d,"stage_total")};
 
@@ -14899,9 +14900,9 @@ exports.hintRequest = function(d){return "Se hjælp"};
 
 exports.backToPreviousLevel = function(d){return "Tilbage til forrige niveau"};
 
-exports.saveToGallery = function(d){return "Gem til dit galleri"};
+exports.saveToGallery = function(d){return "Gem"};
 
-exports.savedToGallery = function(d){return "Gem til dit galleri!"};
+exports.savedToGallery = function(d){return "Gemt!"};
 
 exports.shareFailure = function(d){return "Beklager, ikke kan vi dele dette program."};
 
@@ -14935,7 +14936,7 @@ exports.hintHeader = function(d){return "Her er et tip:"};
 
 exports.genericFeedback = function(d){return "Se hvordan du endte, og prøve at rette dit program."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Se hvad jeg har lavet"};
 
 
 },{"messageformat":57}],45:[function(require,module,exports){
@@ -15058,7 +15059,7 @@ exports.moveSouthTooltip = function(d){return "Flytter markøren syd."};
 
 exports.moveWestTooltip = function(d){return "Flytter markøren vest."};
 
-exports.moveTooltip = function(d){return "Bevæger kunstneren fremad eller bagud med et specifikt beløb."};
+exports.moveTooltip = function(d){return "Bevæger kunstneren fremad eller bagud med et specifikt antal."};
 
 exports.notBlackColour = function(d){return "Du skal angive en anden farve end sort til dette puslespil."};
 
@@ -15070,7 +15071,7 @@ exports.penTooltip = function(d){return "Lyfter eller sænker blyanten for at st
 
 exports.penUp = function(d){return "blyant op"};
 
-exports.reinfFeedbackMsg = function(d){return "Ser dette se ud, som det du ønsker? Du kan trykke på \"Prøv igen\" knappen for at se din tegning."};
+exports.reinfFeedbackMsg = function(d){return "Her er din tegningen! Fortsæt arbejdet med den eller fortsætte til næste opgave."};
 
 exports.setColour = function(d){return "sæt farve"};
 
@@ -15094,15 +15095,15 @@ exports.turnLeft = function(d){return "Drej til venstre ved"};
 
 exports.turnRight = function(d){return "Drej til højre ved"};
 
-exports.turnRightTooltip = function(d){return "Drejer kunstneren til højre ved en angivet vinkel."};
+exports.turnRightTooltip = function(d){return "Drejer kunstneren til højre med en angivet vinkel."};
 
-exports.turnTooltip = function(d){return "Drejer kunstneren til venstre eller højre ved den angivne vinkels grader."};
+exports.turnTooltip = function(d){return "Drejer kunstneren til venstre eller højre med den angivne vinkels grader."};
 
-exports.turtleVisibilityTooltip = function(d){return "Gør kunstneren synlige eller usynlige."};
+exports.turtleVisibilityTooltip = function(d){return "Gør kunstneren synlig eller usynlig."};
 
 exports.widthTooltip = function(d){return "Ændrer bredden på blyanten."};
 
-exports.wrongColour = function(d){return "Dit billede er den forkerte farve.  Til dette puslespil skal det være %1."};
+exports.wrongColour = function(d){return "Dit billede har den forkerte farve.  Til denne øvelse skal det være %1."};
 
 
 },{"messageformat":57}],46:[function(require,module,exports){

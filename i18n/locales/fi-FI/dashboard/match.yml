@@ -3,8 +3,8 @@ fi:
     match:
       2-3 artist loops match 1:
         Artist Loops Matching One: Artist Loops Matching One
-        Matching loops: Matching loops
-        Match the loop to the shape: Match the loop to the shape
+        Matching loops: Vastaavat silmukat
+        Match the loop to the shape: Yhdistä silmukka muotoon
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png
@@ -14,7 +14,7 @@ fi:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png
       2-3 artist match 1:
-        Artist Matching: Artist Matching
+        Artist Matching: Hahmojen yhteensovitus
         Match the shape with the blocks that complete it.: Yhdistä muotoon lohko, joka täydentää sen.
         /script_assets/2-3_images/artist/2-3_artist_match_1_q1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png

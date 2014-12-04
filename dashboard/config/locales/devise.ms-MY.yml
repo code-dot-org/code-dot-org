@@ -71,4 +71,4 @@
       not_locked: tidak dikunci
       not_saved:
         one: '1 kesilapan menghalang %{resource} daripada disimpan:'
-        other: "%{count} kesalahan menghalang %{resource} daripada disimpan:"
+        other: '%{count} kesalahan menghalang %{resource} daripada disimpan:'
