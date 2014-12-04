@@ -19,7 +19,7 @@ Make your programs smarter by using Conditional statements to let the computer m
 ## Teaching Summary
 ### **Getting Started**
  
-1) [Vocabulary](#Vocab)
+1) [Vocabulary](#Vocab)<br/>
 2) [Conditionals](#GetStarted)  
 
 ### **Activity: Conditionals and Piecewise Functions**  
@@ -27,7 +27,7 @@ Make your programs smarter by using Conditional statements to let the computer m
 3) [Conditionals](#Activity1)   
 
 ### **Assessment**
-6) [Conditionals Assessment](#Assessment)
+4) [Conditionals Assessment](#Assessment)
 
 [/summary]
 

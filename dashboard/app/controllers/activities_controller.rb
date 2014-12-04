@@ -8,12 +8,13 @@ class ActivitiesController < ApplicationController
   # TODO: milestone is the only action so the below lines essentially do nothing. commenting out bc
   # the TODO is to figure out why (forgery protection is useful -- why can't we use it? blockly?)
 #  protect_from_forgery except: :milestone
-#  check_authorization except: [:milestone]
-#  load_and_authorize_resource except: [:milestone]
-  before_filter :nonminimal, only: :milestone
+  before_filter :nonminimal
 
   MAX_INT_MILESTONE = 2147483647
   USER_ENTERED_TEXT_TITLE_NAMES = %w(TITLE TEXT)
+
+  MIN_LINES_OF_CODE = 0
+  MAX_LINES_OF_CODE = 1000
 
   def milestone
     # TODO: do we use the :result and :testResult params for the same thing?
@@ -38,17 +39,21 @@ class ActivitiesController < ApplicationController
       end
     end
 
-    log_milestone(@level_source, params)
+    if params[:lines] 
+      params[:lines] = params[:lines].to_i
+      params[:lines] = 0 if params[:lines] < MIN_LINES_OF_CODE
+      params[:lines] = MAX_LINES_OF_CODE if params[:lines] > MAX_LINES_OF_CODE
+    end
 
     # Store the image only if the image is set, and the image has not been saved
-    if params[:image] && @level_source
+    if params[:image] && @level_source.try(:id)
       @level_source_image = LevelSourceImage.find_or_create_by(:level_source_id => @level_source.id)
       @level_source_image.replace_image_if_better Base64.decode64(params[:image])
     end
 
     @new_level_completed = false
     if current_user
-      track_progress_for_user
+      track_progress_for_user if @script_level
     else
       track_progress_in_session
     end
@@ -65,7 +70,7 @@ class ActivitiesController < ApplicationController
                                     total_lines: total_lines,
                                     trophy_updates: @trophy_updates,
                                     solved?: solved,
-                                    level_source: @level_source,
+                                    level_source: @level_source.try(:hidden?) ? nil : @level_source,
                                     activity: @activity,
                                     new_level_completed: @new_level_completed,
                                     share_failure: share_failure)
@@ -75,7 +80,12 @@ class ActivitiesController < ApplicationController
          :level_id => @level.id,
          :user_agent => request.user_agent,
          :locale => locale) if solved
+
+    # log this at the end so that server errors (which might be caused by invalid input) prevent logging
+    log_milestone(@level_source, params)
   end
+
+  private
 
   def find_share_failure(program)
     return nil unless program.match /(#{USER_ENTERED_TEXT_TITLE_NAMES.join('|')})/
@@ -94,8 +104,6 @@ class ActivitiesController < ApplicationController
     end
     nil
   end
-
-  private
 
   def milestone_logger
     @@milestone_logger ||= Logger.new("#{Rails.root}/log/milestone.log")
@@ -125,7 +133,16 @@ class ActivitiesController < ApplicationController
                                  level_source: @level_source )
 
     retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      user_level = UserLevel.where(user: current_user, level: @level).first_or_create
+      # this contortion is necessary while we are in the process of
+      # migrating between UserLevels without scripts to UserLevels
+      # with scripts. When this is done we can just do first_or_create
+
+      user_level = UserLevel.where(user: current_user, level: @level, script_id: [@script_level.script_id, nil]).first
+
+      unless user_level
+        user_level = UserLevel.create(user: current_user, level: @level, script: @script_level.script)
+      end
+
       old_passing = user_level.passing?
       user_level.attempts += 1 unless user_level.best?
       user_level.best_result = user_level.best_result ?
@@ -145,7 +162,7 @@ class ActivitiesController < ApplicationController
       current_user.save!
     end
 
-    # blockly could send us 'undefined' when things are not defined...
+    # blockly sends us 'undefined', 'false', or 'true' so we have to check as a string value
     if params[:save_to_gallery] == 'true' && @level_source_image && solved
       @gallery_activity = GalleryActivity.create!(user: current_user, activity: @activity, autosaved: true)
     end
@@ -217,16 +234,6 @@ class ActivitiesController < ApplicationController
     end
   end
 
-  # Use callbacks to share common setup or constraints between actions.
-  def set_activity
-    @activity = Activity.find(params[:id])
-  end
-
-  # Never trust parameters from the scary internet, only allow the white list through.
-  def activity_params
-    params[:activity]
-  end
-
   def log_milestone(level_source, params)
     log_string = "Milestone Report:"
     if (current_user || session.id)
@@ -236,7 +243,7 @@ class ActivitiesController < ApplicationController
     end
     log_string += "\t#{request.remote_ip}\t#{params[:app]}\t#{params[:level]}\t#{params[:result]}" +
                   "\t#{params[:testResult]}\t#{params[:time]}\t#{params[:attempt]}\t#{params[:lines]}"
-    log_string += level_source.present? ? "\t#{level_source.id.to_s}" : "\t"
+    log_string += level_source.try(:id) ? "\t#{level_source.id.to_s}" : "\t"
     log_string += "\t#{request.user_agent}"
 
     milestone_logger.info log_string

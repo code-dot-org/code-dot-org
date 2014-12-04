@@ -471,6 +471,7 @@ BlocklyApps.init = function(config) {
           phone_share_url: config.send_to_phone_url
         },
         sendToPhone: config.sendToPhone,
+        level: config.level,
         twitter: config.twitter,
         onMainPage: true
       }));
@@ -722,6 +723,17 @@ BlocklyApps.init = function(config) {
       }
     }
 
+    // If levelbuilder provides an empty toolbox, some apps (like artist)
+    // replace it with a full toolbox. I think some levels may depend on this
+    // behavior. We want a way to specify no toolbox, which is <xml></xml>
+    if (config.level.toolbox) {
+      var toolboxWithoutWhitespace = config.level.toolbox.replace(/\s/g, '');
+      if (toolboxWithoutWhitespace === '<xml></xml>' ||
+          toolboxWithoutWhitespace === '<xml/>') {
+        config.level.toolbox = undefined;
+      }
+    }
+
     var div = document.getElementById('blockly');
     var options = {
       toolbox: config.level.toolbox,
@@ -951,7 +963,7 @@ BlocklyApps.arrangeBlockPosition = function(startBlocks, arrangement) {
 BlocklyApps.sortBlocksByVisibility = function(xmlBlocks) {
   var visibleXmlBlocks = [];
   var hiddenXmlBlocks = [];
-  for (var x = 0, xmlBlock; xmlBlocks && x < xmlBlocks.length; x++) {  
+  for (var x = 0, xmlBlock; xmlBlocks && x < xmlBlocks.length; x++) {
     xmlBlock = xmlBlocks[x];
     if (xmlBlock.getAttribute &&
         xmlBlock.getAttribute('uservisible') === 'false') {
@@ -6159,6 +6171,7 @@ exports.TestResults = {
   UNUSED_FUNCTION: 14,           // Function declared but not used in workspace.
   PARAM_INPUT_UNATTACHED: 15,    // Function not called with enough params.
   INCOMPLETE_BLOCK_IN_FUNCTION: 16, // Incomplete block inside a function.
+  QUESTION_MARKS_IN_NUMBER_FIELD: 17, // Block has ??? instead of a value.
 
   // The level was solved in a non-optimal way.  User may advance or retry.
   TOO_MANY_BLOCKS_FAIL: 20,   // More than the ideal number of blocks were used.
@@ -6660,6 +6673,9 @@ var getFeedbackMessage = function(options) {
         break;
       case TestResults.INCOMPLETE_BLOCK_IN_FUNCTION:
         message = msg.errorIncompleteBlockInFunction();
+        break;
+      case TestResults.QUESTION_MARKS_IN_NUMBER_FIELD:
+        message = msg.errorQuestionMarksInNumberField();
         break;
       case TestResults.TOO_MANY_BLOCKS_FAIL:
         message = msg.numBlocksNeeded({
@@ -7230,6 +7246,9 @@ exports.getTestResults = function(levelComplete, options) {
       return TestResults.INCOMPLETE_BLOCK_IN_FUNCTION;
     }
   }
+  if (hasQuestionMarksInNumberField()) {
+    return TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
+  }
   if (!hasAllRequiredBlocks()) {
     return levelComplete ? TestResults.MISSING_BLOCK_FINISHED :
       TestResults.MISSING_BLOCK_UNFINISHED;
@@ -7339,6 +7358,17 @@ var generateXMLForBlocks = function(blocks) {
   }
   return blockXMLStrings.join('');
 };
+
+/**
+ * Check for '???' instead of a value in block fields.
+ */
+function hasQuestionMarksInNumberField() {
+  return Blockly.mainBlockSpace.getAllBlocks().some(function(block) {
+    return block.getTitles().some(function(title) {
+      return title.value_ === '???';
+    });
+  });
+}
 
 /**
  * Ensure that all procedure definitions actually use the parameters they define
@@ -12851,8 +12881,11 @@ var ignorableAttributes = [
   'movable',
   'editable',
   'inline',
-  'uservisible'
+  'uservisible',
+  'usercreated',
+  'id'
 ];
+
 ignorableAttributes.contains = function (attr) {
   return ignorableAttributes.indexOf(attr.name) !== -1;
 };
@@ -15961,7 +15994,14 @@ levels.c2_1 = utils.extend(levels.dog_hello);
 levels.c3_story_1 = utils.extend(levels.dog_hello);
 levels.playlab_1 = utils.extend(levels.dog_hello, {
   background: 'winter',
+  timeoutFailureTick: null,
+  timeoutAfterWhenRun: true,
   firstSpriteIndex: 2, // penguin
+  goal: {
+    successCondition: function () {
+      return Studio.allWhenRunBlocksComplete() && Studio.sayComplete > 0;
+    }
+  },
   // difference is we say hello instead of hello world
   requiredBlocks: [
     saySpriteRequiredBlock({
@@ -16017,6 +16057,13 @@ levels.c3_story_2 = utils.extend(levels.dog_and_cat_hello, {});
 levels.playlab_2 = utils.extend(levels.dog_and_cat_hello, {
   background: 'desert',
   firstSpriteIndex: 20, // cave boy
+  timeoutFailureTick: null,
+  timeoutAfterWhenRun: true,
+  goal: {
+    successCondition: function () {
+      return Studio.allWhenRunBlocksComplete() && Studio.sayComplete > 1;
+    }
+  },
   requiredBlocks: [
     // make sure each sprite says something
     saySpriteRequiredBlock({
@@ -16096,7 +16143,8 @@ levels.playlab_3 = {
       titles: { DIR: '2', DISTANCE: '200'}
     }]
   ],
-  timeoutFailureTick: 100,
+  timeoutFailureTick: null,
+  timeoutAfterWhenRun: true,
   scale: {
     snapRadius: 2
   },
@@ -16213,7 +16261,9 @@ levels.playlab_4 = {
       titles: { SOUND: 'goal1'}
     }]
   ],
+  // timeout when we've hit 100 OR we had only when run commands and finished them
   timeoutFailureTick: 100,
+  timeoutAfterWhenRun: true,
   goal: {
     successCondition: function () {
       return Studio.playSoundCount > 0 && Studio.sprite[0].isCollidingWith(1);
@@ -16285,7 +16335,10 @@ levels.c3_game_1 = utils.extend(levels.click_hello, {});
 levels.playlab_5 = utils.extend(levels.click_hello, {
   background: 'space',
   firstSpriteIndex: 23, // spacebot
-  toolbox: tb(blockOfType('studio_saySprite'))
+  timeoutAfterWhenRun: true,
+  toolbox: tb(blockOfType('studio_saySprite')),
+  startBlocks:
+   '<block type="studio_whenSpriteClicked" deletable="false" x="20" y="20"></block>'
 });
 
 levels.octopus_happy =  {
@@ -16419,10 +16472,10 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
   },
   toolbox:
     tb(
-      blockOfType('studio_move', {DIR: 1}) +
+      blockOfType('studio_move', {DIR: 8}) +
       blockOfType('studio_move', {DIR: 2}) +
-      blockOfType('studio_move', {DIR: 4}) +
-      blockOfType('studio_move', {DIR: 8})
+      blockOfType('studio_move', {DIR: 1}) +
+      blockOfType('studio_move', {DIR: 4})
     ),
   map: [
     [1, 0, 0, 0, 0, 0, 1, 0],
@@ -16752,25 +16805,26 @@ levels.playlab_8 = {
   ),
   startBlocks:
     '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="20"></block>' +
-    '<block type="studio_whenLeft" deletable="false" x="20" y="150"><next>' +
-      blockOfType('studio_move', { SPRITE: 0, DIR: 8}) +
-    '</next></block>' +
-    '<block type="studio_whenRight" deletable="false" x="20" y="250"><next>' +
-      blockOfType('studio_move', { SPRITE: 0, DIR: 2}) +
-    '</next></block>' +
-    '<block type="studio_whenUp" deletable="false" x="20" y="350"><next>' +
-      blockOfType('studio_move', { SPRITE: 0, DIR: 1}) +
-    '</next></block>' +
-    '<block type="studio_whenDown" deletable="false" x="20" y="450"><next>' +
-      blockOfType('studio_move', { SPRITE: 0, DIR: 4}) +
-    '</next></block>' +
-    '<block type="studio_repeatForever" deletable="false" x="20" y="550">' +
+    '<block type="studio_repeatForever" deletable="false" x="20" y="150">' +
       '<statement name="DO">' +
         blockUtils.blockWithNext('studio_moveDistance', { SPRITE: 1, DIR: 2, DISTANCE: 400},
           blockOfType('studio_moveDistance', { SPRITE: 1, DIR: 8, DISTANCE: 400})
         ) +
       '</statement>' +
-    '</block>'
+    '</block>' +
+    '<block type="studio_whenLeft" deletable="false" x="20" y="300"><next>' +
+      blockOfType('studio_move', { SPRITE: 0, DIR: 8}) +
+    '</next></block>' +
+    '<block type="studio_whenRight" deletable="false" x="20" y="400"><next>' +
+      blockOfType('studio_move', { SPRITE: 0, DIR: 2}) +
+    '</next></block>' +
+    '<block type="studio_whenUp" deletable="false" x="20" y="500"><next>' +
+      blockOfType('studio_move', { SPRITE: 0, DIR: 1}) +
+    '</next></block>' +
+    '<block type="studio_whenDown" deletable="false" x="20" y="600"><next>' +
+      blockOfType('studio_move', { SPRITE: 0, DIR: 4}) +
+    '</next></block>'
+
 };
 
 // Can you add blocks to change the background and the speed of the penguin, and
@@ -16916,40 +16970,40 @@ levels.playlab_9 = {
   minWorkspaceHeight: 1250,
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"></block>' +
-    '<block type="studio_whenLeft" deletable="false" x="20" y="200">' +
-      '<next>' +
-        blockOfType('studio_move', {DIR: 8}) +
-      '</next>' +
-    '</block>' +
-    '<block type="studio_whenRight" deletable="false" x="20" y="330">' +
-      '<next>' +
-        blockOfType('studio_move', {DIR: 2}) +
-      '</next>' +
-    '</block>' +
-    '<block type="studio_whenUp" deletable="false" x="20" y="460">' +
-      '<next>' +
-        blockOfType('studio_move', {DIR: 1}) +
-      '</next>' +
-    '</block>' +
-    '<block type="studio_whenDown" deletable="false" x="20" y="590">' +
-      '<next>' +
-        blockOfType('studio_move', {DIR: 4}) +
-      '</next>' +
-    '</block>' +
-    '<block type="studio_repeatForever" deletable="false" x="20" y="720">' +
+    '<block type="studio_repeatForever" deletable="false" x="20" y="150">' +
       '<statement name="DO">' +
         blockUtils.blockWithNext('studio_moveDistance', {SPRITE: 1, DIR: 1, DISTANCE: 400},
           blockOfType('studio_moveDistance', {SPRITE: 1, DIR: 4, DISTANCE: 400})
         ) +
       '</statement>' +
     '</block>' +
-    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="880">' +
+    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="290">' +
       '<title name="SPRITE2">0</title>' +
       '<title name="SPRITE2">1</title>' +
       '<next>' +
         blockUtils.blockWithNext('studio_playSound', {SOUND: 'winpoint2'},
           blockOfType('studio_saySprite', {TEXT: msg.alienInvasion()})
         ) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenLeft" deletable="false" x="20" y="410">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 8}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenRight" deletable="false" x="20" y="510">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 2}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenUp" deletable="false" x="20" y="610">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 1}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenDown" deletable="false" x="20" y="710">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 4}) +
       '</next>' +
     '</block>'
 };
@@ -17898,7 +17952,8 @@ function loadLevel() {
   Studio.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Studio.minWorkspaceHeight = level.minWorkspaceHeight;
   Studio.softButtons_ = level.softButtons || {};
-  Studio.protagonistSpriteIndex = level.protagonistSpriteIndex;
+  // protagonistSpriteIndex was originally mispelled. accept either spelling.
+  Studio.protagonistSpriteIndex = level.protagonistSpriteIndex || level.protaganistSpriteIndex;
 
   if (level.avatarList) {
     Studio.startAvatars = level.avatarList.slice();
@@ -19305,7 +19360,7 @@ Studio.onPuzzleComplete = function() {
     Studio.testResults = BlocklyApps.getTestResults(levelComplete);
   }
 
-  if (Studio.testResults >= BlocklyApps.TestResults.FREE_PLAY) {
+  if (Studio.testResults >= BlocklyApps.TestResults.TOO_MANY_BLOCKS_FAIL) {
     BlocklyApps.playAudio('win');
   } else {
     BlocklyApps.playAudio('failure');
@@ -20284,7 +20339,33 @@ Studio.attachEventHandler = function (opts) {
   registerEventHandler(Studio.eventHandlers, opts.eventName, opts.func);
 };
 
+/**
+ * Return true if all of the blocks underneath when_run blocks have had their
+ * commands executed
+ */
+Studio.allWhenRunBlocksComplete = function () {
+  for (var i = 0; i < Studio.eventHandlers.length; i++) {
+    if (Studio.eventHandlers[i].name === 'whenGameStarts' &&
+        Studio.eventHandlers[i].cmdQueue.length !== 0) {
+      return false;
+    }
+  }
+  return true;
+};
+
 Studio.timedOut = function() {
+  // If the only event block that had children is when_run, and those commands
+  // are finished executing, don't wait for the timeout.
+  // If we have additional event blocks that DO have children, we don't timeout
+  // until timeoutFailureTick
+  if (level.timeoutAfterWhenRun) {
+    if (Studio.eventHandlers.length === 0 || (Studio.eventHandlers.length === 1 &&
+        Studio.eventHandlers[0].name === 'whenGameStarts' &&
+        Studio.allWhenRunBlocksComplete())) {
+    return true;
+    }
+  }
+
   return Studio.tickCount > Studio.timeoutFailureTick;
 };
 
@@ -20623,7 +20704,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/fil_ph/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n  <div class="social-buttons">\n  ');10; if (!options.onMainPage) { ; buf.push('\n    <button id="print-button">\n      ', escape((12,  msg.print() )), '\n    </button>\n  ');14; } ; buf.push('\n');15; if (options.alreadySaved) { ; buf.push('\n  <button class="saved-to-gallery" disabled>\n    ', escape((17,  msg.savedToGallery() )), '\n  </button>\n');19; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((21,  msg.saveToGallery() )), '\n  </button>\n');23; } ; buf.push('\n  </div>\n\n');26; if (options.response && options.response.level_source) { ; buf.push('\n  ');27; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((28,  options.appStrings.sharingText )), '</div>\n  ');29; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((32,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');36; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((36,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((37,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');39; }; buf.push('\n    ');40; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((40,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((41,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');43; }; buf.push('    ');43; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((44,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');46; }; buf.push('  </div>\n');47; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
+ buf.push('');1; var msg = require('../../locale/fil_ph/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n  <div class="social-buttons">\n  ');10; if (!options.onMainPage) { ; buf.push('\n    <button id="print-button">\n      ', escape((12,  msg.print() )), '\n    </button>\n  ');14; } ; buf.push('\n');15; if (options.alreadySaved) { ; buf.push('\n  <button class="saved-to-gallery" disabled>\n    ', escape((17,  msg.savedToGallery() )), '\n  </button>\n');19; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((21,  msg.saveToGallery() )), '\n  </button>\n');23; } ; buf.push('\n  </div>\n\n');26; if (options.response && options.response.level_source) { ; buf.push('\n  ');27; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((28,  options.appStrings.sharingText )), '</div>\n  ');29; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((32,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');36; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((36,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((37,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');39; }; buf.push('\n    ');40; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((40,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((41,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');43; }; buf.push('    ');43; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((44,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');46; }; buf.push('    ');46; if (options.level.shapewaysUrl) {; buf.push('      <a href=\'', escape((46,  options.level.shapewaysUrl )), '\' target="_blank">\n        <img src=\'', escape((47,  BlocklyApps.assetUrl("media/shapeways_purple.png") )), '\' />\n      </a>\n    ');49; }; buf.push('  </div>\n');50; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -21094,6 +21175,8 @@ exports.errorUnusedParam = function(d){return "You added a parameter block, but 
 exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
 
 exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+
+exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
 exports.extraTopBlocks = function(d){return "Meron kang extra na mga block na hindi nakasama sa event block."};
 

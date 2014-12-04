@@ -471,6 +471,7 @@ BlocklyApps.init = function(config) {
           phone_share_url: config.send_to_phone_url
         },
         sendToPhone: config.sendToPhone,
+        level: config.level,
         twitter: config.twitter,
         onMainPage: true
       }));
@@ -722,6 +723,17 @@ BlocklyApps.init = function(config) {
       }
     }
 
+    // If levelbuilder provides an empty toolbox, some apps (like artist)
+    // replace it with a full toolbox. I think some levels may depend on this
+    // behavior. We want a way to specify no toolbox, which is <xml></xml>
+    if (config.level.toolbox) {
+      var toolboxWithoutWhitespace = config.level.toolbox.replace(/\s/g, '');
+      if (toolboxWithoutWhitespace === '<xml></xml>' ||
+          toolboxWithoutWhitespace === '<xml/>') {
+        config.level.toolbox = undefined;
+      }
+    }
+
     var div = document.getElementById('blockly');
     var options = {
       toolbox: config.level.toolbox,
@@ -951,7 +963,7 @@ BlocklyApps.arrangeBlockPosition = function(startBlocks, arrangement) {
 BlocklyApps.sortBlocksByVisibility = function(xmlBlocks) {
   var visibleXmlBlocks = [];
   var hiddenXmlBlocks = [];
-  for (var x = 0, xmlBlock; xmlBlocks && x < xmlBlocks.length; x++) {  
+  for (var x = 0, xmlBlock; xmlBlocks && x < xmlBlocks.length; x++) {
     xmlBlock = xmlBlocks[x];
     if (xmlBlock.getAttribute &&
         xmlBlock.getAttribute('uservisible') === 'false') {
@@ -2068,6 +2080,7 @@ exports.TestResults = {
   UNUSED_FUNCTION: 14,           // Function declared but not used in workspace.
   PARAM_INPUT_UNATTACHED: 15,    // Function not called with enough params.
   INCOMPLETE_BLOCK_IN_FUNCTION: 16, // Incomplete block inside a function.
+  QUESTION_MARKS_IN_NUMBER_FIELD: 17, // Block has ??? instead of a value.
 
   // The level was solved in a non-optimal way.  User may advance or retry.
   TOO_MANY_BLOCKS_FAIL: 20,   // More than the ideal number of blocks were used.
@@ -2569,6 +2582,9 @@ var getFeedbackMessage = function(options) {
         break;
       case TestResults.INCOMPLETE_BLOCK_IN_FUNCTION:
         message = msg.errorIncompleteBlockInFunction();
+        break;
+      case TestResults.QUESTION_MARKS_IN_NUMBER_FIELD:
+        message = msg.errorQuestionMarksInNumberField();
         break;
       case TestResults.TOO_MANY_BLOCKS_FAIL:
         message = msg.numBlocksNeeded({
@@ -3139,6 +3155,9 @@ exports.getTestResults = function(levelComplete, options) {
       return TestResults.INCOMPLETE_BLOCK_IN_FUNCTION;
     }
   }
+  if (hasQuestionMarksInNumberField()) {
+    return TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
+  }
   if (!hasAllRequiredBlocks()) {
     return levelComplete ? TestResults.MISSING_BLOCK_FINISHED :
       TestResults.MISSING_BLOCK_UNFINISHED;
@@ -3248,6 +3267,17 @@ var generateXMLForBlocks = function(blocks) {
   }
   return blockXMLStrings.join('');
 };
+
+/**
+ * Check for '???' instead of a value in block fields.
+ */
+function hasQuestionMarksInNumberField() {
+  return Blockly.mainBlockSpace.getAllBlocks().some(function(block) {
+    return block.getTitles().some(function(title) {
+      return title.value_ === '???';
+    });
+  });
+}
 
 /**
  * Ensure that all procedure definitions actually use the parameters they define
@@ -8675,8 +8705,11 @@ var ignorableAttributes = [
   'movable',
   'editable',
   'inline',
-  'uservisible'
+  'uservisible',
+  'usercreated',
+  'id'
 ];
+
 ignorableAttributes.contains = function (attr) {
   return ignorableAttributes.indexOf(attr.name) !== -1;
 };
@@ -9271,7 +9304,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/hu_hu/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n  <div class="social-buttons">\n  ');10; if (!options.onMainPage) { ; buf.push('\n    <button id="print-button">\n      ', escape((12,  msg.print() )), '\n    </button>\n  ');14; } ; buf.push('\n');15; if (options.alreadySaved) { ; buf.push('\n  <button class="saved-to-gallery" disabled>\n    ', escape((17,  msg.savedToGallery() )), '\n  </button>\n');19; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((21,  msg.saveToGallery() )), '\n  </button>\n');23; } ; buf.push('\n  </div>\n\n');26; if (options.response && options.response.level_source) { ; buf.push('\n  ');27; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((28,  options.appStrings.sharingText )), '</div>\n  ');29; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((32,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');36; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((36,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((37,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');39; }; buf.push('\n    ');40; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((40,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((41,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');43; }; buf.push('    ');43; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((44,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');46; }; buf.push('  </div>\n');47; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
+ buf.push('');1; var msg = require('../../locale/hu_hu/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n  <div class="social-buttons">\n  ');10; if (!options.onMainPage) { ; buf.push('\n    <button id="print-button">\n      ', escape((12,  msg.print() )), '\n    </button>\n  ');14; } ; buf.push('\n');15; if (options.alreadySaved) { ; buf.push('\n  <button class="saved-to-gallery" disabled>\n    ', escape((17,  msg.savedToGallery() )), '\n  </button>\n');19; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((21,  msg.saveToGallery() )), '\n  </button>\n');23; } ; buf.push('\n  </div>\n\n');26; if (options.response && options.response.level_source) { ; buf.push('\n  ');27; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((28,  options.appStrings.sharingText )), '</div>\n  ');29; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((32,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');36; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((36,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((37,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');39; }; buf.push('\n    ');40; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((40,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((41,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');43; }; buf.push('    ');43; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((44,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');46; }; buf.push('    ');46; if (options.level.shapewaysUrl) {; buf.push('      <a href=\'', escape((46,  options.level.shapewaysUrl )), '\' target="_blank">\n        <img src=\'', escape((47,  BlocklyApps.assetUrl("media/shapeways_purple.png") )), '\' />\n      </a>\n    ');49; }; buf.push('  </div>\n');50; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -14779,6 +14812,8 @@ exports.errorUnusedParam = function(d){return "You added a parameter block, but 
 exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
 
 exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+
+exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
 
 exports.extraTopBlocks = function(d){return "Van különálló blokkod. Vagy csatlakoztasd a \"futtatáskor\" blokkhoz, vagy töröld."};
 

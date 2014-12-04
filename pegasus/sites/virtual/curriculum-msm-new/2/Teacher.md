@@ -19,7 +19,7 @@ Students will use the Calc app to begin looking at math as a language, and more 
 ## Teaching Summary
 ### **Getting Started**
  
-1) [Vocabulary](#Vocab)
+1) [Vocabulary](#Vocab)<br/>
 2) [Introduction](#GetStarted)  
 
 ### **Activity: Calc Evaluation Blocks**  

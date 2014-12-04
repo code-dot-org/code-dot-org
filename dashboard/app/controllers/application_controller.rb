@@ -90,7 +90,7 @@ class ApplicationController < ActionController::Base
       response[:message] = 'no script provided'
     end
 
-    if options[:level_source]
+    if options[:level_source].try(:id)
       response[:level_source] = level_source_url(options[:level_source])
       response[:phone_share_url] = send_to_phone_url
       response[:level_source_id] = options[:level_source].id
@@ -103,7 +103,7 @@ class ApplicationController < ActionController::Base
     # logged in users can save solved levels to a gallery (subject to
     # additional logic in the blockly code because blockly owns
     # which levels are worth saving)
-    if current_user && options[:level_source] && options[:solved?] && options[:activity]
+    if current_user && options[:level_source].try(:id) && options[:solved?] && options[:activity]
       response[:save_to_gallery_url] = gallery_activities_path(gallery_activity: {activity_id: options[:activity].id})
     end
 
