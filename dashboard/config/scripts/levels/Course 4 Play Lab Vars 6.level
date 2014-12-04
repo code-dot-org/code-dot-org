@@ -29,7 +29,8 @@
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
     "embed": "false",
-    "maze_data": null
+    "maze_data": null,
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
@@ -40,18 +41,18 @@
             <block type="variables_set" inline="false" deletable="false">
               <title name="VAR">points</title>
               <value name="VALUE">
-                <block type="math_number" deletable="false">
+                <block type="math_number">
                   <title name="NUM">0</title>
                 </block>
               </value>
             </block>
           </next>
         </block>
-        <block type="studio_whenSpriteCollided">
+        <block type="studio_whenSpriteCollided" deletable="false">
           <title name="SPRITE1">1</title>
           <title name="SPRITE2">anything</title>
           <next>
-            <block type="variables_set" inline="false">
+            <block type="variables_set" inline="false" deletable="false">
               <title name="VAR">points</title>
             </block>
           </next>

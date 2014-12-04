@@ -29,7 +29,8 @@
     "coordinate_grid_background": "false",
     "embed": "true",
     "protaganist_sprite_index": "2",
-    "maze_data": null
+    "maze_data": null,
+    "disable_sharing": "true"
   }
 }]]></config>
   <blocks>

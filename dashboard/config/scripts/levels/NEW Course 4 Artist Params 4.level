@@ -21,7 +21,6 @@
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
     "embed": "false",
-    "callout_json": "[{\r\n  \"localization_key\": \"length_parameter\",\r\n  \"element_id\": \"[block-id='44']\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}\r\n  }\r\n}]",
     "disable_sharing": "false"
   }
 }]]></config>
