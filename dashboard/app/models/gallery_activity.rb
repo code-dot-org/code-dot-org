@@ -11,6 +11,6 @@ class GalleryActivity < ActiveRecord::Base
 
   def self.pseudocount
     # select count(*) is not a fast query but this is
-    self.last.id
+    self.last.try(:id) || 0
   end
 end
