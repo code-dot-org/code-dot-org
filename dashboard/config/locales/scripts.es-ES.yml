@@ -46,9 +46,10 @@
           'Maze: Loops': Bucle
           'Bee: Loops': 'Abeja: Bucle'
           'Studio: Create a Story': 'Laboratorio de Juego: Crea un Historia'
+          'Artist: Loops': Bucles
+          description_audience: Ages 4+ (pre-readers)
           description_short: El curso 1 está diseñado para los primeros lectores.
             Es recomendado para los grados K-1.
-          'Artist: Loops': Bucles
         course2:
           The Maze: El Laberinto
           Suzi: Suzi
@@ -87,11 +88,12 @@
           'Bee: Debugging': 'Abeja: Depuración'
           'Artist: Debugging': 'Artista: Depuración'
           'Bee: Conditionals': 'Abeja: Condicionales'
-          description_short: El curso 2 está diseñado para los estudiantes que pueden
-            leer. Es recomendado para grados 2-5.
           'Artist: Sequence2': 'Artista: Secuencia2'
           'Maze: Sequence2': 'Laberinto: Secuencia2'
           'Artist: Nested Loops': 'Artista: Bucles Anidados'
+          description_audience: Ages  6+ (reading required)
+          description_short: El curso 2 está diseñado para los estudiantes que pueden
+            leer. Es recomendado para grados 2-5.
         course3:
           The Maze: El Laberinto
           'Studio: Create a Story': 'Laboratorio de Juego: Crea un Historia'
@@ -134,8 +136,6 @@
           'Farmer: While Loops': 'Granjera: Bucles Mientras'
           'Bee: Nested Loops': 'Abeja: Bucles Anidados'
           'Bee: Debugging': 'Abeja: Depuración'
-          description_short: El curso 3 es un seguimiento del curso 2. Es recomendado
-            para grados 4-5.
           Maze2: Laberinto2
           Artist2: Artista2
           'Artist: Functions2': 'Artista: Funciones2'
@@ -148,6 +148,9 @@
           'Bee: Debugging2': 'Abeja: Depuración2'
           'Artist: Patterns': 'Artista: Patrones'
           Songwriting: Composición Musical
+          description_audience: Ages 8+ (after Course 2)
+          description_short: El curso 3 es un seguimiento del curso 2. Es recomendado
+            para grados 4-5.
         msm:
           title: Matemáticas de Secundaria
           description: Trabajo privado en progreso para Matemáticas de Secundaria.
@@ -164,7 +167,7 @@
           'Play Lab: Defining Variables': 'Laboratorio de Juego: Definiendo Variables'
           The Design Recipe: La receta de diseño
           'Artist: Defining Functions': 'Artista: Definiendo funciones'
-          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Play Lab: Defining Functions': 'Laboratorio de juegos: Receta de diseño'
           'Artist: Functions': 'Artista: Funciones'
           'Play Lab: Animation': 'Laboratorio de Juegos: Animación'
           Booleans: Valores booleanos
@@ -176,45 +179,46 @@
           Collision Detection and the Distance Formula: Detección de colisiones y
             la fórmula de distancia
           'Play Lab: Collision Detection': 'Laboratorio de Juegos: Detección de colisiones'
-          'Unplugged: Ninja Cat and the Coordinate Plane': 'Desenchufada: El gato
+          'Unplugged: Ninja Cat and the Coordinate Plane': 'Desconectado: El gato
             ninja y el plano de coordenadas'
           'Eval: Strings and Images': 'Eval: Cadenas e imágenes'
-          'Unplugged: Contracts': 'Desenchufado: contratos'
-          'Eval: Writing Contracts': 'Eval: Cómo escribir contratos'
+          'Unplugged: Contracts': 'Desconectado: contratos'
+          'Eval: Writing Contracts': 'Eval: Redacción de contratos'
           'Unplugged: The Design Recipe': 'Desenchufado: La receta de diseño'
-          'Eval: Defining Functions': 'Eval: Fast Functions'
-          'Eval: Functions': 'Eval: Design Recipe'
-          'Unplugged: Booleans': 'Desenchufado: booleanos'
-          'Unplugged: Conditionals and Piecewise Functions': 'Desenchufado: Condicionales
+          'Eval: Defining Functions': 'Eval: Funciones rápidas'
+          'Eval: Functions': 'Eval: Receta de diseño'
+          'Unplugged: Booleans': 'Desconectado: Booleanos'
+          'Unplugged: Conditionals and Piecewise Functions': 'Desconectado: Condicionales
             y funciones por trozos'
           'Eval: Conditionals': 'Eval: condicionales'
-          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Detección
-            de colisiones y la fórmula de distancia'
+          'Unplugged: Collision Detection and the Distance Formula': 'Desconectado:
+            Detección de colisiones y la fórmula de distancia'
           'Calc: Evaluation Blocks': 'Calc: Bloques de evaluación'
-          'Unplugged: Video Games and Coordinate Planes': 'Desenchufado: videojuegos
+          'Unplugged: Video Games and Coordinate Planes': 'Desconectado: videojuegos
             y planos de coordenadas'
-          'Eval: Boolean Operators': 'Eval: Boolean Operators'
-          Blocks to Math: Blocks to Math
-          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Defining Variables
-            (Big Game)'
-          'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
-          'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
-          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
-            (Big Game)'
-          'Eval: Fast Functions': 'Eval: Fast Functions'
-          'Play Lab: Design Recipe': 'Play Lab: Design Recipe'
-          'Eval: Design Recipe': 'Eval: Design Recipe'
+          'Eval: Boolean Operators': 'Eval: Operadores booleanos'
+          Blocks to Math: Bloques para matemáticas
+          'Play Lab: Defining Variables (Big Game)': 'Laboratorio de juegos: Definición
+            de Variables (Big Game)'
+          'Play Lab: Animation (Big Game)': 'Laboratorio de juegos: Animación (Big
+            Game)'
+          'Play Lab: Boolean (Big Game)': 'Laboratorio de juegos: Booleano (Big Game)'
+          'Play Lab: Collision Detection (Big Game)': 'Laboratorio de juegos: Detección
+            de colisiones (Big Game)'
+          'Eval: Fast Functions': 'Eval: Funciones rápidas'
+          'Play Lab: Design Recipe': 'Laboratorio de juegos: Receta de diseño'
+          'Eval: Design Recipe': 'Eval: Receta de diseño'
         playlab:
           title: Laboratorio de Juegos
-          description: "¡Crea una historia o haz un juego con Laboratorio de Juegos!"
+          description: ¡Crea una historia o haz un juego con Laboratorio de Juegos!
           Play Lab: Laboratorio de Juegos
-          description_short: "¡Crea una historia o haz un juego con Laboratorio de
-            Juegos!"
+          description_short: ¡Crea una historia o haz un juego con Laboratorio de
+            Juegos!
         artist:
           title: Artista
-          description: "¡Dibuja imagenes estupendas y diseños con el Artista!"
+          description: ¡Dibuja imagenes estupendas y diseños con el Artista!
           Artist: Artista
-          description_short: "¡Dibuja imagenes estupendas y diseños con el Artista!"
+          description_short: ¡Dibuja imagenes estupendas y diseños con el Artista!
         scrat:
           title: Scrat
           description_short: Descripción corta de Scrat.
@@ -223,57 +227,56 @@
         hourofcode:
           Maze: Laberinto
           title: Hora del código
-          description_short: "¡Prueba los fundamentos de la informática con los personajes
-            de Angry Birds, Plants vs Zombies y Scrat de La Era del Hielo!"
-          description: "¡Prueba los fundamentos de la informática con los personajes
-            de Angry Birds, Plants vs Zombies y Scrat de La Era del Hielo!"
+          description: ¡Prueba los fundamentos de la informática con los personajes
+            de Angry Birds, Plants vs Zombies y Scrat de La Era del Hielo!
+          description_short: ¡Prueba los fundamentos de la informática con los personajes
+            de Angry Birds, Plants vs Zombies y Scrat de La Era del Hielo!
         frozen:
           title: Programa con Ana y Elsa
-          description_short: Vamos a usar código unirnos a Ana y Elsa mientras exploran
-            la magia y la belleza del hielo. Crearás copos de nieve y patrones a medida
-            que patinas sobre hielo y harás un paraíso invernal que luego puedes compartir
-            con tus amigos!
           description: Vamos a usar código unirnos a Ana y Elsa mientras exploran
             la magia y la belleza del hielo. Crearás copos de nieve y patrones a medida
             que patinas sobre hielo y harás un paraíso invernal que luego puedes compartir
             con tus amigos!
           Artist: Artista
+          description_short: Vamos a usar código para unirnos a Anna y Elsa mientras
+            exploran la magia y la belleza del hielo.
         course4:
-          description_short: Los alumnos que toman el curso 4 deben haber ya tomado
+          description_short: Los alumnos que hacen el curso 4 deben haber hecho ya
             los cursos 2 y 3.
-          description: El Curso 4 está diseñado para alumnos que hayan tomado los
-            cursos 2 y 3. Los estudiantes profundizarán en temas de programación introducidos
-            en los cursos anteriores que dan soluciones flexibles a problemas más
-            complejos. Para el final del curso, los estudiantes crean historias y
-            juegos interactivos que pueden compartir con cualquiera. Recomendado para
-            los grados 4-8.
+          description: El Curso 4 está diseñado para alumnos que hayan hecho los cursos
+            2 y 3. Los estudiantes profundizarán en los temas de programación iniciados
+            en los cursos anteriores desde soluciones flexibles hasta problemas más
+            complejos. Al final del curso, los estudiantes crearán historias y juegos
+            interactivos para compartir con cualquiera. Recomendado para los grados
+            4-8.
           'Artist: Variables': 'Artista: Variables'
-          'Bee: For Loops': 'Abeja: Bucles Para'
+          'Bee: For Loops': 'Abeja: Bucles For'
           title: Curso 4
-          'Algorithms: Tangrams': 'Algoritmos: Tangramas'
+          'Algorithms: Tangrams': 'Algoritmos: Tangrams'
           Variables: Variables
           'Play Lab: Variables': 'Laboratorio de juegos: Variables'
           'Play Lab: Functions with Parameters': 'Laboratorio de juegos: Funciones
             con parámetros'
           'Bee: Functions with Parameters': 'Abeja: Funciones con parámetros'
-          'Artist: For Loops': 'Artista: Bucles Para'
-          'Play Lab: For Loops': 'Laboratorio de Juegos: Bucles Para'
+          'Artist: For Loops': 'Artista: Bucles For'
+          'Play Lab: For Loops': 'Laboratorio de Juegos: Bucles For'
           'Artist: Functions': 'Artista: Funciones'
           'Artist: Functions with Paraqmeters': 'Artista: Funciones con Parámetros'
-          'Unplugged: Tangrams': 'Desenchufado: Tangramas'
+          'Unplugged: Tangrams': 'Desconectado: Tangrams'
           Artist: Artista
           Bee: Abeja
-          'Unplugged: Envelope Variables': 'Desenchufado: Variables de Sobre'
-          'Unplugged: Madlibs': 'Desenchufado: Madlibs'
-          'Unplugged: For Loop Fun': 'Desenchufado: Diversión con bucles Para'
-          'Unplugged: Songwriting with Parameters': 'Desenchufado: Composición con
+          'Unplugged: Envelope Variables': 'Desconectado: Variables de Sobre'
+          'Unplugged: Madlibs': 'Desconectado: Madlibs'
+          'Unplugged: For Loop Fun': 'Desenchufado: Cadenas para Diversión'
+          'Unplugged: Songwriting with Parameters': 'Desconectado: Composición con
             parámetros'
           'Artist: Functions with Parameters': 'Artista: Funciones con Parámetros'
-          'Unplugged: Binary': 'Desenchufado: binario'
+          'Unplugged: Binary': 'Desconectado: binario'
           Bee Binary: Abeja binario
           Farmer Binary: Granjero binario
           Maze and Bee: Laberinto y la abeja
           Artist Binary: Artista binario
+          description_audience: Ages 10+ (after Course 3)
         Course4pre:
           description_short: Un breve resumen de conceptos para los estudiantes que
             no han tomado los cursos 2 y 3.
@@ -315,7 +318,7 @@
           'Bee: Debugging': 'Abeja: Depuración'
         usability:
           Intro: Intro
-          Variables and For Loops: Variables y bucles Para
+          Variables and For Loops: Variables y bucles For
           Functions and Functions with Parameters: Funciones y funciones con parámetros
           title: Pruebas de usabilidad
           description_short: ''

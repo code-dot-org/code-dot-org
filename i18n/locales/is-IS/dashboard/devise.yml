@@ -39,7 +39,7 @@ is:
       update_needs_confirmation: Breytingin á reikningi þínum tókst, en við þurfum að fá nýja netfangið þitt staðfest. Vinsamlegast athugaðu tölvupóstinn þinn og smelltu á staðfestingarkrækjuna til að ljúka staðfestingu á nýju netfangi.
       updated: Breytingin á reikningi þínum tókst.
     sessions:
-      signed_in: Innskráning tókst.
+      signed_in: ""
       signed_out: Útskráning tókst.
     unlocks:
       send_instructions: Þú færð tölvupóst innan nokkurra mínútna með leiðbeiningum um hvernig á að aflæsa reikningum þínum.

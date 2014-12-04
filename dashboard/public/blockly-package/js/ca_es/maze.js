@@ -2607,6 +2607,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -2619,7 +2620,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -2629,16 +2632,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -16557,7 +16550,7 @@ exports.levelIncompleteError = function(d){return "Estàs utilitzant tots els ti
 
 exports.listVariable = function(d){return "llista"};
 
-exports.makeYourOwnFlappy = function(d){return "Fes el teu propi \"Flappy Game\""};
+exports.makeYourOwnFlappy = function(d){return "Fes el teu propi joc Flappy"};
 
 exports.missingBlocksErrorMsg = function(d){return "Prova un o més dels blocs de sota per a resoldre aquest puzzle."};
 
@@ -16668,9 +16661,9 @@ exports.avoidCowAndRemove = function(d){return "evita la vaca i elimina 1"};
 
 exports.continue = function(d){return "Continuar"};
 
-exports.dig = function(d){return "Suprimeix 1"};
+exports.dig = function(d){return "suprimeix 1"};
 
-exports.digTooltip = function(d){return "Suprimerix 1 unitat de brutícia"};
+exports.digTooltip = function(d){return "suprimerix 1 unitat de brutícia"};
 
 exports.dirE = function(d){return "E"};
 
@@ -16768,7 +16761,7 @@ exports.notAtFlowerError = function(d){return "Només es pot obtenir nèctar d'u
 
 exports.notAtHoneycombError = function(d){return "Només pot fer mel a un rusc."};
 
-exports.numBlocksNeeded = function(d){return "Aquest puzzle pot res resolt amb blocs de %1."};
+exports.numBlocksNeeded = function(d){return "Aquest puzzle pot res resolt amb %1 blocs."};
 
 exports.pathAhead = function(d){return "camí endevant"};
 
@@ -16818,7 +16811,7 @@ exports.whileMsg = function(d){return "mentres"};
 
 exports.whileTooltip = function(d){return "Repetiu les accions tancades fins que s'arribi al punt final."};
 
-exports.word = function(d){return "Trobar la paraula"};
+exports.word = function(d){return "Troba la paraula"};
 
 exports.yes = function(d){return "Sí"};
 

@@ -7,12 +7,12 @@
       send_paranoid_instructions: Ha az email címe létezik az a adatbázisunkban, akkor
         pár perc múlva kapni fog egy emailt a fiókja megerősítési instrukcióival.
     failure:
-      already_authenticated: "Ön már bejelentkezett."
+      already_authenticated: Ön már bejelentkezett.
       inactive: Fiókja még nincs aktiválva.
-      invalid: "Érvénytelen e-mail cím vagy jelszó."
-      invalid_token: "Érvénytelen azonosító."
+      invalid: Érvénytelen e-mail cím vagy jelszó.
+      invalid_token: Érvénytelen azonosító.
       locked: A fiókja zárolva van.
-      not_found_in_database: "Érvénytelen e-mail cím vagy jelszó."
+      not_found_in_database: Érvénytelen e-mail cím vagy jelszó.
       timeout: Hozzáférése a géphez lejárt, kérem jelentkezzen be újra a folytatáshoz.
       unauthenticated: Be kell lépnie, vagy regisztrálnia, mielőtt folytathatná.
       unconfirmed: A folytatás előtt vissza kell igazolnia a felhasználói adatait.
@@ -39,7 +39,7 @@
     registrations:
       destroyed: Szia! A felhasználói fiókot sikeresen törölte. Reméljük, hogy hamarosan
         újra találkozunk.
-      signed_up: "Üdvözlet! Sikeresen feliratkoztál."
+      signed_up: Üdvözlet! Sikeresen feliratkoztál.
       signed_up_but_inactive: Sikeresen feliratkoztál. Azonban nem sikerült a bejelentkezés
         mert a felhasználói fiókod még nincs aktiválva.
       signed_up_but_locked: Sikeresen feliratkoztál. Azonban nem sikerült a bejelentkezés
@@ -69,4 +69,4 @@
       not_locked: nem volt zárolva
       not_saved:
         one: '1 hiba tilos a  %{resource}  mentése:'
-        other: "%{count} hiba tiltja a %{resource} mentését :"
+        other: '%{count} hiba tiltja a %{resource} mentését :'

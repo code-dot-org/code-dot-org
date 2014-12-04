@@ -39,7 +39,7 @@ lt:
       update_needs_confirmation: Jūs sėkmingai atnaujinote savo paskyrą, tačiau mums reikia patikrinti Jūsų naują el. pašto adresą. Prašome pasitikrinti savo el. pašto dėžutę ir nuspausti ant atsiųstos nuorodos, kad patvirtintumėte savo el. pašto adresą.
       updated: Jūs sėkmingai atnaujinote savo paskyrą.
     sessions:
-      signed_in: Prisijungta sėkmingai.
+      signed_in: ""
       signed_out: Sėkmingai atsijungta.
     unlocks:
       send_instructions: Netrukus gausite el. laišką į savo pašto dėžutę su instrukcijomis, kad atrakintumėte Jūsų paskyrą.

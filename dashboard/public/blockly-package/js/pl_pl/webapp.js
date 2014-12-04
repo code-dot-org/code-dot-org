@@ -2607,6 +2607,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -2619,7 +2620,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -2629,16 +2632,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -11926,13 +11919,13 @@ exports.catVariables = function(d){return "Zmienne"};
 
 exports.continue = function(d){return "Dalej"};
 
-exports.createHtmlBlock = function(d){return "Tworzenie bloku kodu html"};
+exports.createHtmlBlock = function(d){return "utwórz blok html"};
 
 exports.createHtmlBlockTooltip = function(d){return "Tworzy blok kodu HTML w aplikacji."};
 
 exports.finalLevel = function(d){return "Gratulacje! Rozwiązałeś końcową łamigłówkę."};
 
-exports.makeYourOwn = function(d){return "Zrobić twój własny App"};
+exports.makeYourOwn = function(d){return "Utwórz własną aplikację"};
 
 exports.nextLevel = function(d){return "Gratulacje! Ukończyłeś tę łamigłówkę."};
 
@@ -11942,27 +11935,27 @@ exports.numBlocksNeeded = function(d){return "Ta łamigłówka może być rozwi�
 
 exports.pause = function(d){return "Przerwa"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
+exports.reinfFeedbackMsg = function(d){return "Możesz nacisnąć przycisk Spróbuj ponownie, aby wrócić do swojej aplikacji."};
 
 exports.repeatForever = function(d){return "powtarzaj w nieskończoność"};
 
 exports.repeatDo = function(d){return "wykonaj"};
 
-exports.repeatForeverTooltip = function(d){return "Wykonać czynności w tym bloku wielokrotnie podczas, gdy aplikacja jest uruchomiona."};
+exports.repeatForeverTooltip = function(d){return "Wykonuj czynności w tym bloku wielokrotnie, dopóki działa aplikacja."};
 
-exports.shareWebappTwitter = function(d){return "Sprawdź aplikacja, którą zrobiłem. Napisałem to sobie z @codeorg"};
+exports.shareWebappTwitter = function(d){return "Sprawdź aplikację, którą wykonałem. Napisałem ją samodzielnie korzystając z @codeorg"};
 
-exports.shareGame = function(d){return "Podziel się swoją aplikację:"};
+exports.shareGame = function(d){return "Podziel się swoją aplikacją:"};
 
-exports.stepIn = function(d){return "Krok do"};
+exports.stepIn = function(d){return "Wejdź"};
 
-exports.stepOver = function(d){return "Krok nad"};
+exports.stepOver = function(d){return "Przejdź"};
 
-exports.stepOut = function(d){return "Krok do tyłu"};
+exports.stepOut = function(d){return "Wyjdź"};
 
-exports.turnBlack = function(d){return "turn black"};
+exports.turnBlack = function(d){return "wróć do czarnego"};
 
-exports.turnBlackTooltip = function(d){return "Turns the screen black."};
+exports.turnBlackTooltip = function(d){return "Przywraca czarny ekran."};
 
 exports.yes = function(d){return "Tak"};
 

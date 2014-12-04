@@ -167,20 +167,20 @@ uk:
         title: Двійкові зображення
         desc: "Хоча багато людей сприймає двійкову систему строго як одиниці та нулі, наші попередні вправи продемонстрували, що різноманітну інформацію можна представити різними варіантами двійкового подання. У цій вправі ми просунемося далі, показавши, як комп'ютер може зберігати складніші дані (зображення та кольори) також у двійковому форматі."
       VideoGamesCoordinatePlanes:
-        title: Video Games and Coordinate Planes
-        desc: Video Games and Coordinate Planes lesson description
+        title: Відеоігри та координатні площини
+        desc: Опис уроку Відеоігри та координатні площини
       Contracts:
         title: Визначення
-        desc: Contracts unplugged lesson description
+        desc: Опис безмашинної вправи Визначення
       DesignRecipe:
         title: Рецепт дизайну
-        desc: Design Recipe lesson description
+        desc: Опис уроку Рецепт дизайну
       Booleans:
         title: Логічні вирази
-        desc: Booleans lesson description
+        desc: Опис уроку Логічні вирази
       ConditionalsPiecewiseFunctions:
         title: Умови та складні функції
-        desc: Conditionals and Piecewise Functions lesson description
+        desc: Опис уроку Умови та складні функції
       CollisionDetection:
-        title: Collision Detection
-        desc: Collision Detection lesson description
+        title: Виявлення зіткнень
+        desc: Опис уроку Виявлення зіткнень

@@ -6698,6 +6698,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -6710,7 +6711,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -6720,16 +6723,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -16059,6 +16052,7 @@ levels.playlab_2 = utils.extend(levels.dog_and_cat_hello, {
   firstSpriteIndex: 20, // cave boy
   timeoutFailureTick: null,
   timeoutAfterWhenRun: true,
+  defaultEmotion: Emotions.HAPPY,
   goal: {
     successCondition: function () {
       return Studio.allWhenRunBlocksComplete() && Studio.sayComplete > 1;
@@ -16249,6 +16243,7 @@ levels.playlab_4 = {
   },
   background: 'tennis',
   avatarList: ['tennisboy', 'tennisgirl'],
+  defaultEmotion: Emotions.SAD,
   requiredBlocks: [
     [{
       test: 'moveDistance',
@@ -16336,7 +16331,10 @@ levels.playlab_5 = utils.extend(levels.click_hello, {
   background: 'space',
   firstSpriteIndex: 23, // spacebot
   timeoutAfterWhenRun: true,
-  toolbox: tb(blockOfType('studio_saySprite'))
+  defaultEmotion: Emotions.HAPPY,
+  toolbox: tb(blockOfType('studio_saySprite')),
+  startBlocks:
+   '<block type="studio_whenSpriteClicked" deletable="false" x="20" y="20"></block>'
 });
 
 levels.octopus_happy =  {
@@ -16468,12 +16466,13 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
     success: 'blue_fireball',
     imageWidth: 800
   },
+  defaultEmotion: Emotions.ANGRY,
   toolbox:
     tb(
-      blockOfType('studio_move', {DIR: 1}) +
+      blockOfType('studio_move', {DIR: 8}) +
       blockOfType('studio_move', {DIR: 2}) +
-      blockOfType('studio_move', {DIR: 4}) +
-      blockOfType('studio_move', {DIR: 8})
+      blockOfType('studio_move', {DIR: 1}) +
+      blockOfType('studio_move', {DIR: 4})
     ),
   map: [
     [1, 0, 0, 0, 0, 0, 1, 0],
@@ -16560,6 +16559,7 @@ levels.playlab_7 = {
     'downButton',
     'upButton'
   ],
+  defaultEmotion: Emotions.HAPPY,
   map: [
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -16788,6 +16788,7 @@ levels.playlab_8 = {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
   avatarList: ['unicorn', 'wizard'],
+  defaultEmotion: Emotions.HAPPY,
   goal: {
     successCondition: function () {
       return Studio.sprite[0].isCollidingWith(1) && Studio.playerScore === 1;
@@ -16803,25 +16804,26 @@ levels.playlab_8 = {
   ),
   startBlocks:
     '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="20"></block>' +
-    '<block type="studio_whenLeft" deletable="false" x="20" y="150"><next>' +
-      blockOfType('studio_move', { SPRITE: 0, DIR: 8}) +
-    '</next></block>' +
-    '<block type="studio_whenRight" deletable="false" x="20" y="250"><next>' +
-      blockOfType('studio_move', { SPRITE: 0, DIR: 2}) +
-    '</next></block>' +
-    '<block type="studio_whenUp" deletable="false" x="20" y="350"><next>' +
-      blockOfType('studio_move', { SPRITE: 0, DIR: 1}) +
-    '</next></block>' +
-    '<block type="studio_whenDown" deletable="false" x="20" y="450"><next>' +
-      blockOfType('studio_move', { SPRITE: 0, DIR: 4}) +
-    '</next></block>' +
-    '<block type="studio_repeatForever" deletable="false" x="20" y="550">' +
+    '<block type="studio_repeatForever" deletable="false" x="20" y="150">' +
       '<statement name="DO">' +
         blockUtils.blockWithNext('studio_moveDistance', { SPRITE: 1, DIR: 2, DISTANCE: 400},
           blockOfType('studio_moveDistance', { SPRITE: 1, DIR: 8, DISTANCE: 400})
         ) +
       '</statement>' +
-    '</block>'
+    '</block>' +
+    '<block type="studio_whenLeft" deletable="false" x="20" y="300"><next>' +
+      blockOfType('studio_move', { SPRITE: 0, DIR: 8}) +
+    '</next></block>' +
+    '<block type="studio_whenRight" deletable="false" x="20" y="400"><next>' +
+      blockOfType('studio_move', { SPRITE: 0, DIR: 2}) +
+    '</next></block>' +
+    '<block type="studio_whenUp" deletable="false" x="20" y="500"><next>' +
+      blockOfType('studio_move', { SPRITE: 0, DIR: 1}) +
+    '</next></block>' +
+    '<block type="studio_whenDown" deletable="false" x="20" y="600"><next>' +
+      blockOfType('studio_move', { SPRITE: 0, DIR: 4}) +
+    '</next></block>'
+
 };
 
 // Can you add blocks to change the background and the speed of the penguin, and
@@ -16933,6 +16935,7 @@ levels.playlab_9 = {
   scale: {
     snapRadius: 2
   },
+  defaultEmotion: Emotions.ANGRY,
   softButtons: [
     'leftButton',
     'rightButton',
@@ -16967,40 +16970,40 @@ levels.playlab_9 = {
   minWorkspaceHeight: 1250,
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"></block>' +
-    '<block type="studio_whenLeft" deletable="false" x="20" y="200">' +
-      '<next>' +
-        blockOfType('studio_move', {DIR: 8}) +
-      '</next>' +
-    '</block>' +
-    '<block type="studio_whenRight" deletable="false" x="20" y="330">' +
-      '<next>' +
-        blockOfType('studio_move', {DIR: 2}) +
-      '</next>' +
-    '</block>' +
-    '<block type="studio_whenUp" deletable="false" x="20" y="460">' +
-      '<next>' +
-        blockOfType('studio_move', {DIR: 1}) +
-      '</next>' +
-    '</block>' +
-    '<block type="studio_whenDown" deletable="false" x="20" y="590">' +
-      '<next>' +
-        blockOfType('studio_move', {DIR: 4}) +
-      '</next>' +
-    '</block>' +
-    '<block type="studio_repeatForever" deletable="false" x="20" y="720">' +
+    '<block type="studio_repeatForever" deletable="false" x="20" y="150">' +
       '<statement name="DO">' +
         blockUtils.blockWithNext('studio_moveDistance', {SPRITE: 1, DIR: 1, DISTANCE: 400},
           blockOfType('studio_moveDistance', {SPRITE: 1, DIR: 4, DISTANCE: 400})
         ) +
       '</statement>' +
     '</block>' +
-    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="880">' +
+    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="290">' +
       '<title name="SPRITE2">0</title>' +
       '<title name="SPRITE2">1</title>' +
       '<next>' +
         blockUtils.blockWithNext('studio_playSound', {SOUND: 'winpoint2'},
           blockOfType('studio_saySprite', {TEXT: msg.alienInvasion()})
         ) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenLeft" deletable="false" x="20" y="410">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 8}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenRight" deletable="false" x="20" y="510">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 2}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenUp" deletable="false" x="20" y="610">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 1}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenDown" deletable="false" x="20" y="710">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 4}) +
       '</next>' +
     '</block>'
 };
@@ -18864,7 +18867,8 @@ Studio.init = function(config) {
   config.makeUrl = "http://code.org/studio";
   config.makeImage = BlocklyApps.assetUrl('media/promo.png');
 
-  config.enableShowCode = BlocklyApps.editCode;
+  // Disable "show code" button in feedback dialog when workspace is hidden
+  config.enableShowCode = !config.level.embed && BlocklyApps.editCode;
   config.varsInGlobals = true;
 
   Studio.initSprites();
@@ -19015,7 +19019,7 @@ BlocklyApps.reset = function(first) {
       size: constants.DEFAULT_SPRITE_SIZE,
       dir: Direction.NONE,
       displayDir: Direction.SOUTH,
-      emotion: Emotions.NORMAL,
+      emotion: level.defaultEmotion || Emotions.NORMAL,
       // tickCount of last time sprite moved,
       lastMove: Infinity,
       // overridden as soon as we call setSprite
@@ -19097,7 +19101,7 @@ var displayFeedback = function() {
       feedbackType: Studio.testResults,
       response: Studio.response,
       level: level,
-      showingSharing: level.freePlay,
+      showingSharing: !level.disableSharing && (level.freePlay),
       feedbackImage: Studio.feedbackImage,
       twitter: twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
@@ -19357,7 +19361,7 @@ Studio.onPuzzleComplete = function() {
     Studio.testResults = BlocklyApps.getTestResults(levelComplete);
   }
 
-  if (Studio.testResults >= BlocklyApps.TestResults.FREE_PLAY) {
+  if (Studio.testResults >= BlocklyApps.TestResults.TOO_MANY_BLOCKS_FAIL) {
     BlocklyApps.playAudio('win');
   } else {
     BlocklyApps.playAudio('failure');
@@ -21215,7 +21219,7 @@ exports.numLinesOfCodeWritten = function(d){return "Éppen most írtál újabb "
 
 exports.play = function(d){return "lejátszás"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Nyomtatás"};
 
 exports.puzzleTitle = function(d){return v(d,"puzzle_number")+"/"+v(d,"stage_total")+". feladvány"};
 
@@ -21259,9 +21263,9 @@ exports.hintRequest = function(d){return "Segítség"};
 
 exports.backToPreviousLevel = function(d){return "Vissza az előző szintre"};
 
-exports.saveToGallery = function(d){return "Mentés a galériába"};
+exports.saveToGallery = function(d){return "Mentése a galériába"};
 
-exports.savedToGallery = function(d){return "Elmentve a galáriádba"};
+exports.savedToGallery = function(d){return "Elmentve a galériában!"};
 
 exports.shareFailure = function(d){return "Sajnálom, de nem tudtam megosztani ezt a programot."};
 
@@ -21295,7 +21299,7 @@ exports.hintHeader = function(d){return "Egy tipp:"};
 
 exports.genericFeedback = function(d){return "Nem sikerült célba érnem. Kérlek javítsd a hibát."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Nézd meg, mit csináltam"};
 
 
 },{"messageformat":61}],49:[function(require,module,exports){
@@ -21310,7 +21314,7 @@ exports.backgroundCave = function(d){return "barlang"};
 
 exports.backgroundCloudy = function(d){return "felhős"};
 
-exports.backgroundHardcourt = function(d){return "hardcourt"};
+exports.backgroundHardcourt = function(d){return "salakos"};
 
 exports.backgroundNight = function(d){return "éjszaka"};
 
@@ -21324,7 +21328,7 @@ exports.backgroundRainbow = function(d){return "szivárvány"};
 
 exports.backgroundSoccer = function(d){return "foci"};
 
-exports.backgroundSpace = function(d){return "space"};
+exports.backgroundSpace = function(d){return "világűr"};
 
 exports.backgroundTennis = function(d){return "tenisz"};
 
@@ -21346,9 +21350,9 @@ exports.catText = function(d){return "szöveg"};
 
 exports.catVariables = function(d){return "változók"};
 
-exports.changeScoreTooltip = function(d){return "Adjon hozzá vagy vegyen el egy pontot a pontszámból."};
+exports.changeScoreTooltip = function(d){return "Adj hozzá vagy vegyél el egy pontot a pontszámból."};
 
-exports.changeScoreTooltipK1 = function(d){return "Adjon egy pontot a pontszámhoz."};
+exports.changeScoreTooltipK1 = function(d){return "Adj egy pontot a pontszámhoz."};
 
 exports.continue = function(d){return "Tovább"};
 
@@ -21370,7 +21374,7 @@ exports.incrementPlayerScore = function(d){return "pontszám"};
 
 exports.makeProjectileDisappear = function(d){return "eltűnik"};
 
-exports.makeProjectileBounce = function(d){return "ugrál"};
+exports.makeProjectileBounce = function(d){return "visszapattan"};
 
 exports.makeProjectileBlueFireball = function(d){return "legyen kék a tűzgolyó"};
 
@@ -21384,9 +21388,9 @@ exports.makeProjectilePurpleHearts = function(d){return "csinálj lila szíveket
 
 exports.makeProjectileRedHearts = function(d){return "csinálj piros szíveket"};
 
-exports.makeProjectileTooltip = function(d){return "Make the projectile that just collided disappear or bounce."};
+exports.makeProjectileTooltip = function(d){return "Állítsd be az éppen ütköző lövedéket hogy eltűnjön vagy visszapattanjon."};
 
-exports.makeYourOwn = function(d){return "Make Your Own Story"};
+exports.makeYourOwn = function(d){return "Készíts saját Play Lab alkalmazást"};
 
 exports.moveDirectionDown = function(d){return "le"};
 
@@ -21412,27 +21416,27 @@ exports.moveDistancePixels = function(d){return "képpontok"};
 
 exports.moveDistanceRandom = function(d){return "véletlenszerű képpontok"};
 
-exports.moveDistanceTooltip = function(d){return "Move a character a specific distance in the specified direction."};
+exports.moveDistanceTooltip = function(d){return "Mozgass egy szereplőt egy meghatározott távolságra a megadott irányba."};
 
 exports.moveSprite = function(d){return "mozogj"};
 
-exports.moveSpriteN = function(d){return "mozgasd a színészt "+v(d,"spriteIndex")};
+exports.moveSpriteN = function(d){return "mozgasd a "+v(d,"spriteIndex")+". szereplőt"};
 
 exports.moveDown = function(d){return "lejjebb"};
 
-exports.moveDownTooltip = function(d){return "mozgass egy művészt lefele"};
+exports.moveDownTooltip = function(d){return "Mozgass egy szereplőt lefele."};
 
 exports.moveLeft = function(d){return "balra"};
 
-exports.moveLeftTooltip = function(d){return "mozgass egy művészt balra"};
+exports.moveLeftTooltip = function(d){return "Mozgass egy szereplőt balra."};
 
 exports.moveRight = function(d){return "jobbra"};
 
-exports.moveRightTooltip = function(d){return "mozgass egy művészt jobbra."};
+exports.moveRightTooltip = function(d){return "Mozgass egy szereplőt jobbra."};
 
 exports.moveUp = function(d){return "feljebb"};
 
-exports.moveUpTooltip = function(d){return "művész mozogjon felfele."};
+exports.moveUpTooltip = function(d){return "Mozgass egy szereplőt felfele."};
 
 exports.moveTooltip = function(d){return "mozogjon a művész."};
 
@@ -21474,7 +21478,7 @@ exports.positionOutTopLeft = function(d){return "bal felső állásba"};
 
 exports.positionOutTopRight = function(d){return "jobb felső állásba"};
 
-exports.positionTopOutLeft = function(d){return "to the top outside left position"};
+exports.positionTopOutLeft = function(d){return "legfelülre a bal külső pozícióba"};
 
 exports.positionTopLeft = function(d){return "balra fölülre"};
 
@@ -21482,7 +21486,7 @@ exports.positionTopCenter = function(d){return "felülre középre"};
 
 exports.positionTopRight = function(d){return "jobbra felülre"};
 
-exports.positionTopOutRight = function(d){return "to the top outside right position"};
+exports.positionTopOutRight = function(d){return "legfelülre a jobb külső pozícióba"};
 
 exports.positionMiddleLeft = function(d){return "bal középsőre "};
 
@@ -21490,7 +21494,7 @@ exports.positionMiddleCenter = function(d){return "közép-középre"};
 
 exports.positionMiddleRight = function(d){return "jobbra középre "};
 
-exports.positionBottomOutLeft = function(d){return "to the bottom outside left position"};
+exports.positionBottomOutLeft = function(d){return "legalulra a bal külső pozícióba"};
 
 exports.positionBottomLeft = function(d){return "bal alsó pozícióba"};
 
@@ -21498,11 +21502,11 @@ exports.positionBottomCenter = function(d){return "alsó középső helyzetbe"};
 
 exports.positionBottomRight = function(d){return "a jobb alsó pozícióba"};
 
-exports.positionBottomOutRight = function(d){return "to the bottom outside right position"};
+exports.positionBottomOutRight = function(d){return "legalulra a jobb külső pozícióba"};
 
-exports.positionOutBottomLeft = function(d){return "to the below bottom left position"};
+exports.positionOutBottomLeft = function(d){return "az alábbi bal alsó pozícióba"};
 
-exports.positionOutBottomRight = function(d){return "to the below bottom right position"};
+exports.positionOutBottomRight = function(d){return "az alábbi jobb alsó pozícióba"};
 
 exports.positionRandom = function(d){return "véletlenszerű helyzetbe"};
 
@@ -21536,11 +21540,11 @@ exports.repeatForever = function(d){return "végtelen ismétlés"};
 
 exports.repeatDo = function(d){return "csináld"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the story is running."};
+exports.repeatForeverTooltip = function(d){return "Hajtsd vége a műveleteket a blokkban ismételve miközben a történet zajlik."};
 
 exports.saySprite = function(d){return "mondd"};
 
-exports.saySpriteN = function(d){return "actor "+v(d,"spriteIndex")+" say"};
+exports.saySpriteN = function(d){return v(d,"spriteIndex")+". szereplő mondja"};
 
 exports.saySpriteTooltip = function(d){return "Ugorjon fel egy beszéd buborék, a megadott szereplő szövegével."};
 
@@ -21556,7 +21560,7 @@ exports.setBackgroundCave = function(d){return "barlangos háttér beállítása
 
 exports.setBackgroundCloudy = function(d){return "felhős háttér beállítása"};
 
-exports.setBackgroundHardcourt = function(d){return "set hardcourt scene"};
+exports.setBackgroundHardcourt = function(d){return "salakos háttér beállítás"};
 
 exports.setBackgroundNight = function(d){return "éjszakai háttér beállítása"};
 
@@ -21614,23 +21618,23 @@ exports.setSpriteDinosaur = function(d){return "dinoszurusszá"};
 
 exports.setSpriteDog = function(d){return "kutyává"};
 
-exports.setSpriteDragon = function(d){return "to a dragon image"};
+exports.setSpriteDragon = function(d){return "sárkány képre"};
 
-exports.setSpriteGhost = function(d){return "to a ghost image"};
+exports.setSpriteGhost = function(d){return "szellem képre"};
 
-exports.setSpriteHidden = function(d){return "to a hidden image"};
+exports.setSpriteHidden = function(d){return "rejtett képre"};
 
-exports.setSpriteHideK1 = function(d){return "hide"};
+exports.setSpriteHideK1 = function(d){return "elrejt"};
 
-exports.setSpriteAnna = function(d){return "to a Anna image"};
+exports.setSpriteAnna = function(d){return "Anna képre"};
 
-exports.setSpriteElsa = function(d){return "to a Elsa image"};
+exports.setSpriteElsa = function(d){return "Elsa képre"};
 
-exports.setSpriteHiro = function(d){return "to a Hiro image"};
+exports.setSpriteHiro = function(d){return "Hiro képre"};
 
-exports.setSpriteBaymax = function(d){return "to a Baymax image"};
+exports.setSpriteBaymax = function(d){return "Baymax képre"};
 
-exports.setSpriteRapunzel = function(d){return "to a Rapunzel image"};
+exports.setSpriteRapunzel = function(d){return "Rapunzel képre"};
 
 exports.setSpriteKnight = function(d){return "lovaggá"};
 
@@ -21652,7 +21656,7 @@ exports.setSpriteRobot = function(d){return "robottá"};
 
 exports.setSpriteShowK1 = function(d){return "mutasd"};
 
-exports.setSpriteSpacebot = function(d){return "to a spacebot image"};
+exports.setSpriteSpacebot = function(d){return "űrrobot képre"};
 
 exports.setSpriteSoccerGirl = function(d){return "focistalánnyá"};
 
@@ -21674,7 +21678,7 @@ exports.setSpritePositionTooltip = function(d){return "Egy karakter azonnal átk
 
 exports.setSpriteK1Tooltip = function(d){return "Megjeleníti vagy elrejti a megadott karaktert."};
 
-exports.setSpriteTooltip = function(d){return "Karakter külsejének beállítása"};
+exports.setSpriteTooltip = function(d){return "A szereplő külsejének beállítása"};
 
 exports.setSpriteSizeRandom = function(d){return "véletlenszerű méretre"};
 
@@ -21730,9 +21734,9 @@ exports.size = function(d){return "méret"};
 
 exports.setSprite = function(d){return "állítsd be"};
 
-exports.setSpriteN = function(d){return "karakter beállítása "+v(d,"spriteIndex")};
+exports.setSpriteN = function(d){return v(d,"spriteIndex")+". szereplő beállítása"};
 
-exports.soundCrunch = function(d){return "crunch"};
+exports.soundCrunch = function(d){return "ropogás"};
 
 exports.soundGoal1 = function(d){return "1. cél"};
 
@@ -21740,19 +21744,19 @@ exports.soundGoal2 = function(d){return "2. cél"};
 
 exports.soundHit = function(d){return "találat"};
 
-exports.soundLosePoint = function(d){return "lose point"};
+exports.soundLosePoint = function(d){return "pont vesztés"};
 
-exports.soundLosePoint2 = function(d){return "lose point 2"};
+exports.soundLosePoint2 = function(d){return "2 pont vesztés"};
 
 exports.soundRetro = function(d){return "retro"};
 
 exports.soundRubber = function(d){return "gumi"};
 
-exports.soundSlap = function(d){return "slap"};
+exports.soundSlap = function(d){return "pofon"};
 
-exports.soundWinPoint = function(d){return "win point"};
+exports.soundWinPoint = function(d){return "pont nyerés"};
 
-exports.soundWinPoint2 = function(d){return "win point 2"};
+exports.soundWinPoint2 = function(d){return "2 pont nyerés"};
 
 exports.soundWood = function(d){return "fa"};
 
@@ -21764,17 +21768,17 @@ exports.stopSpriteN = function(d){return "karakter megállítása "+v(d,"spriteI
 
 exports.stopTooltip = function(d){return "Szereplő mozgásának megállítása."};
 
-exports.throwSprite = function(d){return "throw"};
+exports.throwSprite = function(d){return "dob"};
 
-exports.throwSpriteN = function(d){return "actor "+v(d,"spriteIndex")+" throw"};
+exports.throwSpriteN = function(d){return v(d,"spriteIndex")+". szereplő eldobás"};
 
 exports.throwTooltip = function(d){return "Adott karakter dobja a lövedéket."};
 
 exports.vanish = function(d){return "eltűnik"};
 
-exports.vanishActorN = function(d){return "eltűnik a karakter "+v(d,"spriteIndex")};
+exports.vanishActorN = function(d){return v(d,"spriteIndex")+". szereplő eltüntetése"};
 
-exports.vanishTooltip = function(d){return "Vanishes the actor."};
+exports.vanishTooltip = function(d){return "Eltünteti a szereplőt."};
 
 exports.waitFor = function(d){return "Várj, míg"};
 
@@ -21806,7 +21810,7 @@ exports.whenArrowRight = function(d){return "jobbra nyíl"};
 
 exports.whenArrowUp = function(d){return "felfelé nyíl"};
 
-exports.whenArrowTooltip = function(d){return "Execute the actions below when the specified arrow key is pressed."};
+exports.whenArrowTooltip = function(d){return "Hajtsd végre az alábbi műveleteket, ha az adott nyil gombot megnyomják."};
 
 exports.whenDown = function(d){return "Ha van lefelé nyíl"};
 
@@ -21814,7 +21818,7 @@ exports.whenDownTooltip = function(d){return "Végrehajtja az alábbi parancsoka
 
 exports.whenGameStarts = function(d){return "Amikor a történet kezdődik"};
 
-exports.whenGameStartsTooltip = function(d){return "Execute the actions below when the game starts."};
+exports.whenGameStartsTooltip = function(d){return "Hajtsd végre az alábbi műveleteket, a történet indulásakor."};
 
 exports.whenLeft = function(d){return "Ha van balra nyíl"};
 
@@ -21826,45 +21830,45 @@ exports.whenRightTooltip = function(d){return "Végrehajtja az alábbi parancsok
 
 exports.whenSpriteClicked = function(d){return "amikor a szereplőre kattintunk"};
 
-exports.whenSpriteClickedN = function(d){return "when actor "+v(d,"spriteIndex")+" clicked"};
+exports.whenSpriteClickedN = function(d){return "Amikor a "+v(d,"spriteIndex")+". szereplőre kattint"};
 
-exports.whenSpriteClickedTooltip = function(d){return "Execute the actions below when a character is clicked."};
+exports.whenSpriteClickedTooltip = function(d){return "Hajtsd végre az alábbi műveleteket, ha egy szereplőre kattintanak."};
 
-exports.whenSpriteCollidedN = function(d){return "when actor "+v(d,"spriteIndex")};
+exports.whenSpriteCollidedN = function(d){return "Amikor a "+v(d,"spriteIndex")+". szereplő"};
 
-exports.whenSpriteCollidedTooltip = function(d){return "Execute the actions below when a character touches another character."};
+exports.whenSpriteCollidedTooltip = function(d){return "Hajtsd végre az alábbi műveleteket, ha az egyik szereplő hozzáér egy másikhoz."};
 
-exports.whenSpriteCollidedWith = function(d){return "touches"};
+exports.whenSpriteCollidedWith = function(d){return "megérinti"};
 
-exports.whenSpriteCollidedWithAnyActor = function(d){return "touches any actor"};
+exports.whenSpriteCollidedWithAnyActor = function(d){return "színész érintése"};
 
-exports.whenSpriteCollidedWithAnyEdge = function(d){return "touches any edge"};
+exports.whenSpriteCollidedWithAnyEdge = function(d){return "szegély érintése"};
 
-exports.whenSpriteCollidedWithAnyProjectile = function(d){return "touches any projectile"};
+exports.whenSpriteCollidedWithAnyProjectile = function(d){return "tárgyvonal érintése"};
 
-exports.whenSpriteCollidedWithAnything = function(d){return "touches anything"};
+exports.whenSpriteCollidedWithAnything = function(d){return "bármi érintése"};
 
-exports.whenSpriteCollidedWithN = function(d){return "touches actor "+v(d,"spriteIndex")};
+exports.whenSpriteCollidedWithN = function(d){return "színész "+v(d,"spriteIndex")+" érintése"};
 
-exports.whenSpriteCollidedWithBlueFireball = function(d){return "touches blue fireball"};
+exports.whenSpriteCollidedWithBlueFireball = function(d){return "kék tűzgolyó érintése"};
 
-exports.whenSpriteCollidedWithPurpleFireball = function(d){return "touches purple fireball"};
+exports.whenSpriteCollidedWithPurpleFireball = function(d){return "lila tűzgolyó érintése"};
 
-exports.whenSpriteCollidedWithRedFireball = function(d){return "touches red fireball"};
+exports.whenSpriteCollidedWithRedFireball = function(d){return "piros tűzgolyó érintése"};
 
-exports.whenSpriteCollidedWithYellowHearts = function(d){return "touches yellow hearts"};
+exports.whenSpriteCollidedWithYellowHearts = function(d){return "sárga szívek érintése"};
 
-exports.whenSpriteCollidedWithPurpleHearts = function(d){return "touches purple hearts"};
+exports.whenSpriteCollidedWithPurpleHearts = function(d){return "lila szívek érintése"};
 
-exports.whenSpriteCollidedWithRedHearts = function(d){return "touches red hearts"};
+exports.whenSpriteCollidedWithRedHearts = function(d){return "piros szívek érintése"};
 
-exports.whenSpriteCollidedWithBottomEdge = function(d){return "touches bottom edge"};
+exports.whenSpriteCollidedWithBottomEdge = function(d){return "alsó szegély érintése"};
 
-exports.whenSpriteCollidedWithLeftEdge = function(d){return "touches left edge"};
+exports.whenSpriteCollidedWithLeftEdge = function(d){return "bal  szegély érintése"};
 
-exports.whenSpriteCollidedWithRightEdge = function(d){return "touches right edge"};
+exports.whenSpriteCollidedWithRightEdge = function(d){return "jobb  szegély érintése"};
 
-exports.whenSpriteCollidedWithTopEdge = function(d){return "touches top edge"};
+exports.whenSpriteCollidedWithTopEdge = function(d){return "felső  szegély érintése"};
 
 exports.whenUp = function(d){return "Ha van felfelé nyíl"};
 

@@ -3,6 +3,6 @@
   "equivalentExpression":"Tente reorganizar seus argumentos para obter exatamente a mesma expressão.",
   "extraTopBlocks":"Você tem blocos não conectados. Você pretendia conectá-los ao bloco \"calcular\"?",
   "goal":"Objetivo:",
-  "reinfFeedbackMsg":"Aqui está a sua história! Continue trabalhando nela, ou vá para o próximo desafio!",
+  "reinfFeedbackMsg":"Aqui está a sua história! Continue trabalhando nela, ou siga para o próximo desafio!",
   "yourExpression":"Sua expressão:"
 }

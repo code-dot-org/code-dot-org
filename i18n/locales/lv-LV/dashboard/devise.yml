@@ -39,7 +39,7 @@ lv:
       update_needs_confirmation: Tu atjaunoji sava konta informāciju veiksmīgi, bet mums ir jāapstiprina tava jaunā e-pasta adrese. Lūdzu pārbaudi savu e-pastu un uzklikšķini uz apstiprinājuma saites, lai apstiprinātu tavu jauno e-pasta adresi.
       updated: Tu atjaunoji sava konta informāciju veiksmīgi.
     sessions:
-      signed_in: Pierakstīšanās veiksmīga.
+      signed_in: ""
       signed_out: Atrakstīšanās veiksmīga.
     unlocks:
       send_instructions: Tu pēc dažam minūtēm saņemsi e-pastu ar instrukciju kā atslēgt savu kontu.

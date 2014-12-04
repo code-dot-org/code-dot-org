@@ -1,8 +1,8 @@
 {
-  "compute":"izračunati",
+  "compute":"izračunaj",
   "equivalentExpression":"Pokušaj presložiti svoje argumente da dobiješ posve jednak izraz.",
   "extraTopBlocks":"Postoje nespojeni blokovi. Želiš li da budu spojeni u blok \"izračunati\"?",
   "goal":"Cilj:",
-  "reinfFeedbackMsg":"Here is your story! Continue working on it, or move on to the next puzzle!",
+  "reinfFeedbackMsg":"Evo i tvoje priče! Nastavi raditi na njoj ili započni slijedeći zadatak!",
   "yourExpression":"Tvoj izraz:"
 }

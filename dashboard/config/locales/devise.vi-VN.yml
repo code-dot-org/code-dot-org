@@ -54,8 +54,8 @@
         bạn và bấm vào liên kết xác nhận để xác nhận địa chỉ email mới của bạn.
       updated: Bạn đã cập nhật tài khoản thành công.
     sessions:
-      signed_in: "Đăng nhập thành công."
-      signed_out: "Đăng xuất thành công."
+      signed_in: Đăng nhập thành công.
+      signed_out: Đăng xuất thành công.
     unlocks:
       send_instructions: Bạn sẽ nhận được một email hướng dẫn mở khóa tài khoản của
         bạn trong vài phút nữa.
@@ -65,12 +65,12 @@
         để tiếp tục.
   errors:
     messages:
-      already_confirmed: "đã được xác nhận, hãy thử đăng nhập"
+      already_confirmed: đã được xác nhận, hãy thử đăng nhập
       confirmation_period_expired: cần được xác nhận nhận trong khoảng %{period},
         xin vui lòng yêu cầu cái mới
-      expired: "đã hết hạn, xin vui lòng yêu cầu cái mới"
+      expired: đã hết hạn, xin vui lòng yêu cầu cái mới
       not_found: không tìm thấy
       not_locked: was not locked
       not_saved:
         one: '1 error prohibited this %{resource} from being saved:'
-        other: "%{count} errors prohibited this %{resource} from being saved:"
+        other: '%{count} errors prohibited this %{resource} from being saved:'

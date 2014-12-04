@@ -1,5 +1,6 @@
 {
   "actor":"Ator",
+  "alienInvasion":"Alien Invasion!",
   "backgroundBlack":"black",
   "backgroundCave":"cave",
   "backgroundCloudy":"cloudy",
@@ -73,7 +74,7 @@
   "playSoundCrunch":"toca som de triturar",
   "playSoundGoal1":"tocar som do objetivo 1",
   "playSoundGoal2":"tocar som do objetivo 2",
-  "playSoundHit":"play hit sound",
+  "playSoundHit":"tocar som de embate",
   "playSoundLosePoint":"tocar som de ponto perdido",
   "playSoundLosePoint2":"tocar som de ponto perdido 2",
   "playSoundRetro":"play retro sound",

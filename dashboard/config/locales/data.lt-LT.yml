@@ -3,7 +3,7 @@
     script:
       name:
         20-hour:
-          desc: "Įvadas į programavimo kursą 5-8 kl"
+          desc: Įvadas į programavimo kursą 5-8 kl
           Unplug1: 1 Etapas
           Maze: 2 Etapas
           Unplug2: 3 Etapas
@@ -25,7 +25,7 @@
           Artist5: 19 Etapas
           Unplug11: 20 Etapas
         Hour of Code:
-          desc: "„Programavimo valanda“"
+          desc: „Programavimo valanda“
           Maze: 1 Etapas
         Edit Code:
           desc: Redaguoti kodą (beta)
@@ -81,24 +81,24 @@
         Unplug4: Algoritmai
         Artist2: Menininkas 2
         Unplug5: Komandų kūrimas
-        Farmer: "Ūkininkas"
+        Farmer: Ūkininkas
         Unplug6: Sąlyginiai sakiniai
         Artist3: Menininkas 3
         Unplug7: Dainos ir funkcijos
-        Farmer2: "Ūkininkas 2"
+        Farmer2: Ūkininkas 2
         Unplug8: Komandos su parametrais
         Artist4: Menininkas 4
         Unplug9: Programavimas komandoje
-        Farmer3: "Ūkininkas 3"
+        Farmer3: Ūkininkas 3
         Unplug10: Internetas
         Artist5: Menininkas 5
         Unplug11: Apibendrinimas
         MazeEC: Labirintas
-        Bounce: "Šokinėjimas"
+        Bounce: Šokinėjimas
         Flappy: Flappy Bird
         Jigsaw: Dėlionės
         MazeStep: Labirintas Žingsnio režimu
-        Wordsearch: "Žodžių paieška"
+        Wordsearch: Žodžių paieška
         Webapp: Web-programėlė
         ArtistEC: Menininkas
         TextMatch: Text Match
@@ -112,10 +112,10 @@
       description:
         sequence: Seka
         if: Blokas „jei“
-        if_else: "„Jei-priešingu atveju“ blokas"
+        if_else: „Jei-priešingu atveju“ blokas
         loop_times: Blokas keleto kartų kartojimui
-        loop_until: "„Kartok kol įvyks“ blokas"
-        loop_while: "„Kol“ blokas"
+        loop_until: „Kartok kol įvyks“ blokas
+        loop_while: „Kol“ blokas
         loop_for: Blokelis-skaitiklis
         function: Komandų kūrimas
         parameters: Komandų parametrai (gaunama informacija)
@@ -123,7 +123,7 @@
       instructions:
         maze_2_2: 'Ar gali man padėti sugauti neklaužadą kiaulę? Sujunk keletą „ženk
           į priekį“ blokų ir nuspausk „Paleisti“, kad aš ją sugaučiau. '
-        maze_2_1: "Ši kiaulė sutaršė mano plunksnas. Padėk man ją pasiekti!"
+        maze_2_1: Ši kiaulė sutaršė mano plunksnas. Padėk man ją pasiekti!
         maze_2_2_5: Surask kelią ir nuvesk mane pas kvailą kiaulę. Tik neleisk man
           prisiliesti prie TNT dėžučių, nes susprogsiu!
         maze_2_3: Nuvesk mane pas tą žalią daiktą! (Saugokis TNT)
@@ -142,13 +142,13 @@
         maze_2_10: Ar išspręsi šią užduotį, panaudodamas tik 4 blokelius?
         maze_2_11: Mielas žmogau. Aš zombis. Aš alkanas. Turiu... pasiekti... saulėgrąžą.
           Ar padėsi man ten patekti panaudodamas tik 5 blokelius?
-        maze_2_12: "Ši situacija panaši, bet šiek tiek kitokia. Ar sugebėsi panaudoti
-          tik 5 blokelius?"
+        maze_2_12: Ši situacija panaši, bet šiek tiek kitokia. Ar sugebėsi panaudoti
+          tik 5 blokelius?
         maze_2_13: 'Panaudok naują „jei“ blokelį ir leisk man nuspręsti, kada man
           pasisukti. Sufleris: tau tereikės tik vieno naujo blokelio, bet pasistenk
           suprasti, kaip jie veikia, kad kitą kartą mokėtum viską padaryti pats.'
-        maze_2_14: "Čia yra viskas kaip ir praeitoje užduotyje, tau tereikia prisiminti,
-          kaip reikia kartu panaudoti blokelius „jei“ ir „kartok“."
+        maze_2_14: Čia yra viskas kaip ir praeitoje užduotyje, tau tereikia prisiminti,
+          kaip reikia kartu panaudoti blokelius „jei“ ir „kartok“.
         maze_2_15: Aš noriu saulėgrąžų! Panaudok blokelį „jei“, kad galėčiau pas ją
           nusigauti. Panaudok kuo mažiau blokelių.
         maze_2_16: Atlikime panašią užduotį, tačiau saugokis piktų gėlyčių!
@@ -163,7 +163,7 @@
           pilkomis linijomis.
         turtle_1_2: 'O dabar nubrėžk kvadratą. PASTABA: gali pasirinkti pieštuko spalvą
           naujame blokelyje „nustatyk spalvą“.'
-        turtle_1_3: "Šį kartą nubraižyk kvadratą panaudodamas tik 3 blokelius."
+        turtle_1_3: Šį kartą nubraižyk kvadratą panaudodamas tik 3 blokelius.
         turtle_1_4: 'Nubrėžk trikampį, kurio visos kraštinės yra skirtingų spalvų,
           panaudodamas blokelį „atsitiktinė spalva“. Jis kiekvieną kartą parenka vis
           kitą spalvą. Sufleris: turėsi nuspręsti, kiek laipsnių reikia pasisukti
@@ -175,9 +175,9 @@
         turtle_1_7: Nubrėžkime šiuos žalius akinius. Vieno kvadrato kraštinė yra 100
           pikselių, o jie abu vienas nuo kito nutolę yra per 50 pikselių. Nepamiršk
           pasirinkti žalios spalvos!
-        turtle_1_8: "Šį kartą prieš ką nors bandydamas, mėgink suprasti, ką daro jau
+        turtle_1_8: Šį kartą prieš ką nors bandydamas, mėgink suprasti, ką daro jau
           duotas kodas. Tau beliks tik pakartoti jį kažkiek kartų, kad gautum visą
-          piešinį."
+          piešinį.
         turtle_1_9: Ar sugalvosi, kiek kartų reikia pakartoti šiuos veiksmus, kad
           nubrėžtum apskritimą?
         turtle_1_10: 'Tau pavyko! O dabar nupiešk tai, ką nori. Štai keletas idėjų:
@@ -187,27 +187,27 @@
           100 pikselių, tik su 3 blokeliais? Sufleris: naudok kartojimo blokelį.'
         turtle_4_2: Pridėk blokelį „Pasisuk į dešinę per 90 laipsnių“ kažkur į programos
           kodo vidurį, kad nubrėžtum šiuos trikampius.
-        turtle_4_3: "Štai yra pateiktas kodas, kaip reikia nupiešti vieną trikampį.
+        turtle_4_3: Štai yra pateiktas kodas, kaip reikia nupiešti vieną trikampį.
           Ar sugebėsi pasinaudodamas kartojimo ir pasukimo blokeliais nupiešti gražią
-          gėlę?"
-        turtle_4_4: "Štai tas pats kodas iš praeitos užduoties, tačiau čia yra pasisukama
+          gėlę?
+        turtle_4_4: 'Štai tas pats kodas iš praeitos užduoties, tačiau čia yra pasisukama
           tik 36 laipsnius po kiekvieno nubrėžiamo trikampio. Kiek kartų reikia visa
           tai kartoti? (Sufleris: kai bus pasisukta iš viso 360 laipsnių, bus apeitas
-          ištisas ratas)"
-        turtle_4_5: "Štai tas pats kodas iš praeitos užduoties, tačiau yra kartojama
+          ištisas ratas)'
+        turtle_4_5: 'Štai tas pats kodas iš praeitos užduoties, tačiau yra kartojama
           36 kartus. Kiek laipsnių reikės pasisukti?  (Sufleris: kai bus pasisukta
-          iš viso 360 laipsnių, bus apeitas ištisas ratas)"
+          iš viso 360 laipsnių, bus apeitas ištisas ratas)'
         turtle_4_6: Panaudodamas tik 3 blokelius, ar sugebėsi nubrėžti kvadratą, kurio
           kraštinės yra po 20 pikselių?
-        turtle_4_7: "Štai kodas kvadratui nubrėžti iš praeitos užduoties. Ar sugebėsi
+        turtle_4_7: 'Štai kodas kvadratui nubrėžti iš praeitos užduoties. Ar sugebėsi
           nubrėžti dar 10 kvadratų, kad gautum kopėčias? Sufleris: tau tereikia tik
-          2 naujų blokelių."
-        turtle_4_8: "Štai praeitos užduoties sprendimas. Ar gali pridėti tik 2 blokelius,
-          kad užbaigtum piešinį?"
-        turtle_4_9: "Štai praeitos užduoties sprendimas. Kiek laipsnių reikia pasisukti,
-          kad užbaigti piešinį? (Spėlioti teks turbūt keletą kartų)"
-        turtle_4_10: "Štai praeitos užduoties sprendimas. Kiek kartų reikia pakartoti
-          veiksmus, kad užbaigti piešinį?"
+          2 naujų blokelių.'
+        turtle_4_8: Štai praeitos užduoties sprendimas. Ar gali pridėti tik 2 blokelius,
+          kad užbaigtum piešinį?
+        turtle_4_9: Štai praeitos užduoties sprendimas. Kiek laipsnių reikia pasisukti,
+          kad užbaigti piešinį? (Spėlioti teks turbūt keletą kartų)
+        turtle_4_10: Štai praeitos užduoties sprendimas. Kiek kartų reikia pakartoti
+          veiksmus, kad užbaigti piešinį?
         turtle_4_11: Pamėgink pakeisti skaičius sukimosi bei kartojimo blokeliuose,
           kad gautum skirtingus piešinius. Taip pat gali eksperimentuoti su likusiais
           blokeliais ir žiūrėti, kas gaunasi.
@@ -257,21 +257,21 @@
         turtle_2_5: Nubrėžk kvadratus, kurių kraštinės yra atitinkamai 50, 60, 70,
           80 ir 90 pikselių ilgio. Tau reikės panaudoti sudėtinę komandą „Nubrėžk
           kvadratą“ 5 kartus.
-        turtle_2_6: "Šioje programoje turėsi panaudoti skaitiklį, su kuriuo nubrėši
+        turtle_2_6: 'Šioje programoje turėsi panaudoti skaitiklį, su kuriuo nubrėši
           tokius pat kvadratus, kaip ir praeitą kartą. Kvadrato dydis turės būti toks
           pat, kaip ir skaitiklio dydis, todėl panaudok blokelį „skaitiklis“. Sufleris:
-          Jis yra kategorijoje „Kintamieji“."
+          Jis yra kategorijoje „Kintamieji“.'
         turtle_2_7: Yra pateikta programa, kuri nubrėš spiralę, tačiau jos blokeliai
           yra pilki ir jų neįmanoma aktyvuoti. Sukurk naują programą, panaudodamas
           „skaičiuok su“ blokelį (kategorijoje „Kartojimas“) ir „skaitiklio“ blokelį
           (kategorijoje „Kintamieji“), kuri nubrėš tokią pat spiralę.
-        turtle_2_7_5: "„Komandų kūrimas“ skyriuje yra aprašyta nauja komanda „Nupiešk
+        turtle_2_7_5: „Komandų kūrimas“ skyriuje yra aprašyta nauja komanda „Nupiešk
           sniego senį“. Panaudok ją, kad nupieštum du sniego senius. Vieno dydis turi
-          būti 250, o kito – 100."
-        turtle_2_8: "Ši užduotis šiek tiek sudėtingesnė. Panaudok sudėtinę komandą
-          \ „Nupiešk sniego senį“ ir naują blokelį „Peršok į priekį“ (jis yra kategorijoje
-          „Komandos“). Nupiešk 3 sniego senius skirtingomis spalvomis, tarp jų turi
-          būti po 100 pikselių atstumai."
+          būti 250, o kito – 100.
+        turtle_2_8: Ši užduotis šiek tiek sudėtingesnė. Panaudok sudėtinę komandą  „Nupiešk
+          sniego senį“ ir naują blokelį „Peršok į priekį“ (jis yra kategorijoje „Komandos“).
+          Nupiešk 3 sniego senius skirtingomis spalvomis, tarp jų turi būti po 100
+          pikselių atstumai.
         turtle_2_9: 'Panaudok blokelį „Skaičiuok su“, kad nupieštum sniego senių šeimą,
           kuri susideda iš tokio dydžio senių: 110, 100, 90, 80 ir 70. Tarpai tarp
           kiekvieno senio turi būti po 60 pikselių.'
@@ -282,8 +282,8 @@
           duobes. Naudok kartojimo blokelius, kad būtų galima panaudoti kuo mažiau
           blokelių. Sufleris: į vieną kartojimo blokelį galima įdėti net ir kitą kartojimo
           blokelį.'
-        maze_karel_2_2: "„Komandų kūrimas“ skyriuje atsirado naujas blokelis, pavadintas
-          „užpildyk 5“. Panaudok jį ir užpildyk šią duobę."
+        maze_karel_2_2: „Komandų kūrimas“ skyriuje atsirado naujas blokelis, pavadintas
+          „užpildyk 5“. Panaudok jį ir užpildyk šią duobę.
         maze_karel_2_3: 'Panaudok blokelį „užpildyk 5“, kad užpildytum visas duobes. '
         maze_karel_2_4: Sukurk naują komandą, kuri pašalina 7 kastuvus žemių. Tada
           panaudok ją, kad galėčiau pašalinti visas krūvas.
@@ -374,8 +374,8 @@
           Judink irklą, kad pasiektum abu taikinius.
         bounce_3: Dabar pabandyk atlikti kažką panašaus su blokeliu „kai rodyklė aukštyn“.
           Judink irklą iki taikinio viršuje.
-        bounce_4: "Šį kartą reikia pridėti keturis blokelius. Pajudink irklą į keturis
-          taškus, kad išspręstum šią užduotį."
+        bounce_4: Šį kartą reikia pridėti keturis blokelius. Pajudink irklą į keturis
+          taškus, kad išspręstum šią užduotį.
         bounce_5: Link irklo pradės skristi kamuolys. Pridėk bloką prie bloko „kai
           kamuolys paliečia irklą“, kad kamuolys pasiektų finišą.
         bounce_6: Dabar finišas yra viršuje. Tau reikia prijungti blokelius prie dviejų
@@ -423,7 +423,7 @@
         flappy_11: Sukurk savo Flappy žaidimą. Gali pakeisti išvaizdą ir taisykles,
           netgi gravitaciją. Kai baigsi, nuspausk „Pasidalinti“, kad tavo draugai
           galėtų pažaisti tavo žaidimą savo telefonuose.
-        flappy_k1_1: "Žaisk Flappy"
+        flappy_k1_1: Žaisk Flappy
         flappy_k1_2: Pridėk reikiamą blokelį prie blokelio „kai nuspausta“, o tada
           nuspausk „Paleisti“. Spustelk pelės klavišą arba ekraną, kad Flappy skristų
           į tikslą.
@@ -558,26 +558,141 @@
         webapp_ec_simple: Sukurk savo web-progrmėlę naudodamas "createHtmlBlock".
         turtle_ec_1_2: 'O dabar nubrėžk kvadratą. Pastaba: naudok savo mėgstamą spalvą,
           kurią gali pasirinkti naujame blokelyje „pieštuko spalva“.'
-        turtle_ec_1_10: "Šaunu, išsprendei tiek daug užduočių! O dabar gali nupiešti,
+        turtle_ec_1_10: 'Šaunu, išsprendei tiek daug užduočių! O dabar gali nupiešti,
           ką tik nori. Keletas idėjų: žmogeliukas, snaigė ar spiralė. Taip pat išmėgink
-          naują bloką: „pieštuko storis“. Smagaus piešimo!"
+          naują bloką: „pieštuko storis“. Smagaus piešimo!'
         studio_ec_sandbox: Sukurk savo žaidimą. Kai baigsi, nuspausk „Baigti“ ir duok
           draugams išmėginti žaidimą savo telefonuose.
+    levelbuilder:
+      frozen line:
+        instructions: Labas! Aš Elzė iš Arendelės. Padėk man nubrėžti liniją.
+      frozen perpendicular:
+        instructions: O ar galėtume nubrėžt dvi linijas, išdėstytas statmenai? Reikės
+          "pasisuk" ir "eik į priekį" komandų.
+      frozen square iterative:
+        instructions: Mes pusiau nupiešėme kvadratą. Nubrėžkime visas 4 linijas!
+      frozen square loop:
+        instructions: Labas, aš Ana iš Arendelio! Nupieškime kvadratą, naudodami "kartok"
+          - tada judėjimo komandas užteks paminėti po vieną kartą.
+      frozen square loop 3x:
+        instructions: Sukurkime 3 kvadratus, pasisukdami po kiekvieno 120 laipsnių.
+      frozen square snowflake:
+        instructions: Ar galėtum sukurti snaigę naudodamas "kartok" komandą? Nupiešk
+          10 kvadratų (tarp jų pasisukdamas po 36 laipsnius).
+      frozen cross:
+        instructions: Naudodamas "kartok" komandą, sukurk pliuso vaizdą. Ar pastebėjai,
+          kad Elzė gali judėti pirmyn ir atgal?
+      frozen cross rotate:
+        instructions: Dabar pabandyk 10 kartų. O po kiek laipsnių reiks pasisukti
+          šįkart?
+      frozen cross rotate dense:
+        instructions: 'Pakartokime 90 kartų! Po kiek bus 360 padalinus į 90 dalių?
+          Užuomina: tai bus nedidelis skaičius..'
+      frozen diamond:
+        instructions: Sukurkime lygiagretainį.  Jis irgi turi 4 kraštines, bet skirtingus
+          kampus - 60 ir 120 laipsnių vietoj 90.
+      frozen diamond mini snowflake:
+        instructions: Ar žinojai, kad kiekviena snaigė turi kitokią formą? Sukurkime
+          snaigę panaudodami kartojimo blokelį, ir nubrėžkime 4 lygiagretainius, tarp
+          kurių yra 90 laipsnių kampas.
+      frozen diamond snowflake:
+        instructions: O dabar sukurkime snaigę, naudodami kartojimo bloką, kad būtų
+          nubrėžta 10 vienodų lygiagretainių, tarp kurių kampas yra 36 laipsniai.
+      frozen circle:
+        instructions: Apskritimas yra ypatinga geometrinė figūra. Ar sugalvosi, kokį
+          skaičių reikia įrašyti vietoje klaustukų, kad nubrėžčiau apskritimą?
+      frozen circle function:
+        instructions: Panaudok naują blokelį „Sukurk apskritimą“ ir sukurk 10 persidengiančių
+          apskritimų. Nepamiršk, kad nuo vieno apskritimo iki kito reikia peršokti.
+      frozen circle function in circle:
+        instructions: O dabar sukurk 20 persidengiančių apskritimų. Tarp kiekvieno
+          apskritimo turi būti 18 laipsnių kampas.
+      frozen circle function with parameter:
+        instructions: Štai blokelis „Sukurk apskritimą“, kuris gali sukurti skirtingo
+          dydžio apskritimus. Ar sugebėsi panaudodamas jį sukurti mažą apskritimą,
+          kurio dydis yra 5 ir didesnį apskritimą, kurio dydis yra 10?
+      frozen snowflower:
+        instructions: Sudėtingi sniego raštai gali būti sukuriami panaudojant paprastas
+          figūras. Ar sugebėsi sukurti raštą, nubrėždamas 5 apskritimus, kurių dydis
+          yra 5 bei 5 apskritimus, kurių dydis yra 10?
+      frozen snowflake branch:
+        instructions: Pabandyk panaudoti blokelį „sukurk snaigės šaką“ ir sukurk tris
+          snaigės šakas, kurios pradeda atrodyti kaip snaigės.
+      frozen snowflake full:
+        instructions: O dabar pakartokime tai 8 kartus ir gaukime nuostabią snaigę!
+      frozen freeplay:
+        instructions: Tu tapai piešimo meistru! Sukurk gražų žiemos raštą ir pasidalink
+          juo su draugais.
+      scrat 16:
+        instructions: Gilė! Gilė! Gilė! Panaudok "kartok" ir "jei" bloką, kad pasiektum
+          tikslą su minimaliai komandų.
+      scrat 17:
+        instructions: Gerai, pamėginkime dar kartą – kad geriau išmoktum. Saugokis
+          sienos!
+      scrat 18:
+        instructions: Blokelis „jei-priešingu atveju“ pagal sąlygą atlieka vienus
+          ARBA kitus veiksmus. Panaudok šį blokelį, kad pasiekčiau gilę.
+      scrat 19:
+        instructions: Dar viena užduotis su „Jei-priešingu atveju“ blokeliu. Ar sugebėsi
+          ją atlikti iš pirmo karto?
+      scrat 20:
+        instructions: Ar gali pridėjęs 3 blokelius išspręsti šį labirintą? Jei viską
+          atliksi teisingai, aš galėsiu eiti vingiuotu keliu, nesvarbu, koks yra jo
+          ilgis. Paskubėk! Ledas tirpsta!
+      Standalone_Artist_1:
+        instructions: Welcome to Artist! First off, let's try to make a simple square
+          using the turn right block and move forward block. Each side should be 100
+          pixels long.
+      Standalone_Artist_2:
+        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel
+          long sides.
+      Standalone_Artist_3:
+        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree
+          turns?
+      Standalone_Artist_4:
+        instructions: Now you've got a new block to play with, the loop. This will
+          repeat a set of commands. What happens if you loop these commands 6 times?
+      Standalone_Artist_5:
+        instructions: How many times do you need to loop this diamond to draw the
+          flower?
+      Standalone_Artist_5.5:
+        instructions: 'Notice how we simplified the diamond code by turning it into
+          a loop. You can loop that whole sequence 12 times to draw the flower. Hint:
+          You''ll need to turn 30 degrees after your diamond loop so you don''t keep
+          drawing over the same diamond.'
+      Standalone_Artist_6:
+        instructions: 'Loop this hexagon code 6 times to create the design. How many
+          degrees will you need to turn each time? Hint: divide the number of degrees
+          in a circle by the number of times you are looping.'
+      Standalone_Artist_7:
+        instructions: 'A function is another programming tool to help you avoid repeating
+          yourself. This function draws a flower, so you can use it any time you want
+          to draw a flower. Use this and the new jump block to draw these flowers.
+          Hint: The flowers are 150 pixels apart'
+      Standalone_Artist_8:
+        instructions: Here's a function called "Draw a shape" that we've programmed
+          to draw hexagons. Run the code to see what it does and then experiment with
+          the function to see what happens. Can you make it draw a pattern of squares,
+          triangles, or octagons?
+      Standalone_Artist_9:
+        instructions: Now go ahead and make whatever picture you'd like! You've even
+          got an empty function that you can make do whatever you want!
     video:
       name:
         maze_intro: Labirinto užduoties įvadas
         artist_intro: Menininko užduoties įvadas
-        farmer_intro: "Įvadas į Ūkininką"
-        flappy_intro: "Įvadas į Flappy"
-        loop_times: "„Kartojimo“ blokelis"
-        loop_until: "„Kartoti, kol“ blokelis"
-        if: "„Jei“ blokelis"
-        if_else: "„Jei-priešingu atveju“ blokelis"
+        farmer_intro: Įvadas į Ūkininką
+        flappy_intro: Įvadas į Flappy
+        loop_times: „Kartojimo“ blokelis
+        loop_until: „Kartoti, kol“ blokelis
+        if: „Jei“ blokelis
+        if_else: „Jei-priešingu atveju“ blokelis
+        if_else_scrat: „Jei-priešingu atveju“ blokelis
         function: Komandų kūrimas
-        loop_while: "„Kol“ blokelis"
+        loop_while: „Kol“ blokelis
         loop_for: Blokelis-skaitiklis
         parameters: Komandų parametrai (gaunama informacija)
-        hoc_wrapup: "„Programavimo valandos“ apibendrinimas"
+        hoc_wrapup: „Programavimo valandos“ apibendrinimas
         Unplug1: Kas yra CS?
         Unplug2: Skaičiuojamasis mąstymas
         Unplug3: Programavimas ant languoto popieriaus
@@ -597,14 +712,15 @@
         C1_maze_intro_sequencing: 'Labirintas: įvadas į sekas'
         C1_maze_debugging: 'Labirintas: klaidų ieškojimas'
         C1_bee_level_intro: 'Bitė: pirmasis lygis'
-        C1_artist_intro: "Įvadas į Menininką"
+        C1_artist_intro: Įvadas į Menininką
         C1_spelling_bee_intro: 'Rašanti bitė: įvadas'
         C1_zuck_repeat_loop: 'Labirintas: kartojimas'
         C1_bee_loops: 'Bitė: kartojimas'
         C1_maze_loops: 'Labirintas: kartojimas'
-        C1_playlab_storytelling: "Žaidimų laboratorija: sukurk istoriją"
+        C1_playlab_storytelling: 'Žaidimų laboratorija: sukurk istoriją'
         C1_planting_seed: Sėklos sodinimas
         C1_building_foundation: Pamatų kūrimas
+        C1_going_places_safely: Saugus naršymas internete
         C2_maze_intro: Labirinto užduoties įvadas
         C2_artist_intro: Menininko užduoties įvadas
         C2_zuck_repeat_loop: 'Labirintas: kartojimas'
@@ -613,23 +729,24 @@
         C2_bee_loops: 'Bitė: kartojimas'
         C2_bee_debugging: 'Bitė: klaidų ieškojimas'
         C2_bee_conditionals: 'Bitė: sąlyginiai sakiniai'
-        C2_playlab_createstory: "Žaidimų laboratorija: sukurk istoriją"
+        C2_playlab_createstory: 'Žaidimų laboratorija: sukurk istoriją'
         C2_graph_paper: Programavimas ant languoto popieriaus
         C2_conditionals_with_cards: Sąlyginiai sakiniai
         C2_binary_bracelets: Dvejetainės apyrankės
         C2_relay_programming: Programavimas komandoje
         C2_paper_airplanes: Popieriniai lėktuvėliai
+        C2_digital_footprint: Virtualūs pirštų antspaudai
         C3_maze_level_4: 'Labirintas: kartojimas'
-        C3_artist_intro: "Įvadas į Menininką"
+        C3_artist_intro: Įvadas į Menininką
         C3_artist_functions: 'Menininkas: komandos'
         C3_bee_functions: 'Bitė: sudėtinės komandos'
         C3_bee_conditionals: 'Bitė: sąlyginiai sakiniai'
         C3_maze_conditionals: 'Labirintas: sąlyginiai sakiniai'
         C3_artist_nested_loops: Kartojimas kartojime
-        C3_farmer_while: "„Kol“ kartojimas"
+        C3_farmer_while: „Kol“ kartojimas
         C3_bee_nested_loops: Kartojimas kartojime
         C3_bee_debugging: 'Bitė: klaidų ieškojimas'
-        C3_bounce: "Šokinėjimas"
+        C3_bounce: Šokinėjimas
         C3_playlab_create_game: 'Laboratorija: sukurk žaidimą'
         C3_computational_thinking: Skaičiuojamasis mąstymas
         C3_dice_race: Kauliukų lenktynės
@@ -637,9 +754,14 @@
         C3_crowdsourcing: Komandinis programavimas
         C3_functional_suncatchers: Sekų suvokimas
         C3_songwriting_with_parameters: Dainų rašymas su parametrais
-        Frozen_intro: Hour of Code Intro
-        Frozen_loops: Introduction to Loops
-        Frozen_functions: Introduction to Functions
+        C4_artist_math: Programming the Artist with Math
+        C4_create_functions: Creating Functions
+        C4_edit_functions: Editing Functions
+        C4_for_loops: For Loops
+        C4_variables: Kintamieji
+        frozen_intro: Hour of Code Intro
+        frozen_loops: Introduction to Loops
+        frozen_functions: Introduction to Functions
     callout:
       text:
         drag_blocks: Nutempk blokelį „ženk į priekį“ ir sujunk jį su kitu tokiu pat
@@ -655,7 +777,7 @@
           surūšiuoti pagal kategorijas
         set_sprite_image: Prijunk "veikėjas = " prie bloko "kai istorija prasideda",
           kad jis dalyvautų šioje istorijoje.
-        studio_say_text: "Įvesk tai, ką nori, kad pasakytų tavo veikėjas"
+        studio_say_text: Įvesk tai, ką nori, kad pasakytų tavo veikėjas
         jigsaw_click: Nuspausk ant šio blokelio!
         move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
           Run" block to make Elsa move forward
@@ -688,3 +810,19 @@
           the Bee will turn to get the nectar.
         logic_category: Open the "Logic" flyout to find the "if/else" block.
         length_parameter: Can you update this function so it uses the "length" parameter?
+        frozen_diamond_repeat: Use the repeat block to create this shape.
+        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
+          each circle.
+        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
+          and change the size.
+        frozen_snowflake_branch: Use the "create a snowflake branch" block
+        frozen_create_square: Attach more blocks here to create a square
+        playlab_drag_say: Drag the "say" block here and type "hello"
+        playlab_use_twice: Use this block twice and remember to change the actor number
+        playlab_move_girl: Use the "move right" block to move Tennis Girl
+        playlab_play_sound: Add "play sound" block here
+        playlab_arrow_keys: Remember to use these to move the witch after clicking
+          on Run
+        playlab_add_move: Add "move" blocks inside this repeat block
+        playlab_add_score: Add score blocks here
+        playlab_add_blocks: Add your blocks here

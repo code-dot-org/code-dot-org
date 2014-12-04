@@ -39,7 +39,7 @@ ro:
       update_needs_confirmation: Ți-ai actualizat contul cu succes, dar noi trebuie sa verificăm noua ta adresa de email. Te rugăm să îți verifici emailul și să dai click pe linkul de confirmare pentru a finaliza modificarea adresei.
       updated: Ți-ai actualizat contul cu succes.
     sessions:
-      signed_in: Te-ai logat cu succes.
+      signed_in: '[șir gol]'
       signed_out: Te-ai delogat cu succes.
     unlocks:
       send_instructions: Vei primi un email cu instrucţiuni despre cum să îți deblochezi contul în câteva minute.

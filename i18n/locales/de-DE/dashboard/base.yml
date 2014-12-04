@@ -21,8 +21,8 @@ de:
   welcome_back: 'Willkommen zurück, %{name}'
   add_teacher_form:
     code:
-      label: 'Add a teacher:'
-      placeholder: Section Code (ABCDEF)
+      label: 'Lehrer hinzufügen:'
+      placeholder: Code für diese Sektion (ABCDEF)
     submit: Lehrer hinzufügen
   add_hint_form:
     placeholder: Gebe hier deinen Hinweis ein
@@ -115,11 +115,11 @@ de:
     subject: Besuchen Sie meine Klasse (auf Code.org)
     body: |
       Klicken Sie auf untenstehenden Link um sich für die Informatik Tutorials von Code.org (mit mir als Ihren "Lehrer") anzumelden:
-
+      
       %{link}
-
+      
       Die Anleitungen machen Spass, sind grafisch ansprechend und lehren das Grundkonzept der Informatik, indem einfache, geführte, Spiele ähnliche Erfahrungen verwendet werden. Lernen Sie von Bill Gates, Mark Zuckerberg, Angry Birds und Plants vs. Zombies zu programmieren! :-)
-
+      
       %{name}
   follower:
     invite_sent: Einladung gesendet
@@ -157,8 +157,8 @@ de:
     error_not_earned: Du hast diesen Preis noch nicht verdient.
     error_already_redeemed: Dein Preis wurde bereits eingelöst.
     no_prizes_available: Es tut uns leid, aber es stehen zur Zeit keine Preise zur Verfügung.
-    teacher_info_required: 'Lehrer Honorare erfordern Schulinformationen Name und Anschrift:'
-    teacher_email_required: 'Lehrer Honorare erfordern eine bestätigte eMail-Adresse:'
+    teacher_info_required: 'Gewinne für Lehrer erfordern die Angabe der Schule mit Name und Anschrift:'
+    teacher_email_required: 'Gewinne für Lehrer erfordern eine bestätigte eMail-Adresse:'
     confirm:
       title: Bitte bestätigen
       "no": Nein
@@ -188,7 +188,7 @@ de:
         earned: '15 oder mehr Schüler besitzen alle%{num_trophies} Trophäen. Sie haben einen Lehrerpreis gewonnen! (Nur in den USA)'
         not_earned_title: 'Unterrichte deine Klasse und verdiene bis zu 1.000 $ in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> Credits (nur für U.S. Lehrer)'
         not_earned: |
-          Um Lehrer zu belohnen die zum ersten Mal Informatik unterrichten, können Sie bis zu $1.000 in  <a href="http://DonorsChoose.org">DonorsChoose.org</a> Credits für die Führung einer Klasse durch den K-8 Einführungskurs verdienen. Um infrage zu kommen, müssen Sie erfolgreich eine Klasse von mindestens 15 Schülern im K-8 Einfürungskurs unterrichten. Dabei müssen alle 15 Schüler (oder mehr) die komplette Zahl an Tutorials beendet und alle %{num_trophies} Trophäen verdient haben.
+          Um Lehrer zu belohnen die zum ersten Mal Informatik unterrichten, können Sie bis zu $1.000 in  <a href="http://DonorsChoose.org">DonorsChoose.org</a> Credits für die Führung einer Klasse durch den K-8 Einführungskurs verdienen. Um infrage zu kommen, müssen Sie erfolgreich eine Klasse von mindestens 15 Schülern im K-8 Einfürungskurs unterrichten. Dabei müssen alle 15 Schüler (oder mehr) die komplette Zahl an Tutorials beendet und alle %{num_trophies} Trophäen verdient haben. 
           Wenn 7 oder mehr der Schüler die alle Trophäen verdient haben Mädchen sind, wird Ihre Belohnung $1.000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> Credits sein. Andernfalls wird Ihre Belohnung $750 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> Credits sein.
           <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> Credits können nur durch Lehrer an öffentlichen US-Schulen eingelöst werden.
         bonus:
@@ -339,20 +339,22 @@ de:
     test_videos_help: Testen Sie unseren neuen Video-Player an Ihrer Schule
     try_beta_courses: Neu! Probieren Sie unsere Beta-Kurse für Schüler der Schulstufen 1-6
     use_as_teacher: Verwende diese Seite als Lehrer
-    heading_elementary: '<h2>20 Stunden Kurse für</h2><h1>Grundschüler</h1>'
+    heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
+    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
     heading_apps: '<h2>Spass für</h2><h1>Alle</h1>'
     heading_legacy: '<h2>Unser allgemeiner Kurs für</h2><h1>Alle Altersstufen</h1>'
-    your_gallery: Gallery
+    your_gallery: Gallerie
   gender:
     male: Männlich
     female: Weiblich
     none: Möchte ich nicht beantworten
   user_type:
     student: Schüler
-    teacher: Teacher
+    teacher: Lehrer
   footer:
     help_from_html: Ingenieure von Google, Microsoft, Facebook und Twitter haben dazu beigetragen, dieses Tutorial zu erstellen.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009-2014 Rovio Entertainment Ltd. Alle Rechte vorbehalten. <br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Alle Rechte vorbehalten.'
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
+    powered_by_aws: Powered by Amazon Web Services
     feedback: Feedback geben
     translate: Helfen Sie uns in Ihre Sprache zu übersetzen
     support: Unterstützung
@@ -386,17 +388,17 @@ de:
   try_reloading: Versuchen Sie die Seite neu zu laden
   next_stage: Geschafft! Fahre mit dem nächsten Level fort.
   download_pdf: Unterrichtsplan öffnen
-  lesson_plan: Lesson Plan
+  lesson_plan: Stundenplan
   view_lesson_plan: Überblick des Unterrichtsplans
   pdf_download: PDF herunterladen
-  download_coming_soon: Downloadable activity coming soon.
-  video_coming_soon: Video Coming Soon!
+  download_coming_soon: 'Demnächst: Aktivitäten zum Herunterladen.'
+  video_coming_soon: 'Demnächst: Video!'
   share_code:
     title: 'Klicken Sie auf "Ausführen", um das Programm in Aktion zu sehen'
     bounce_og_title: Schau dir mein Sprung-Spiel an
     flappy_og_title: Schau dir mein Flappy Spiel an
     studio_og_title: Teste meinen Labor-App
-    check_out_what_i_made: Check out what I made
+    check_out_what_i_made: Sieh was ich gemacht habe
     og_description: Ich habe meinen Code selbst mit Code.org erstellt
     phone_number_not_allowed: Es sieht aus als wäre eine Telefonnummer darin. Versuche den Text zu verändern.
     address_not_allowed: Es sieht aus als wäre eine Adresse darin. Versuche den Text zu ändern.
@@ -424,11 +426,13 @@ de:
       title: Einführungskurs
       body: Versuche unseren 20-Stunden Informatik-Einführungskurs.
     hoc2014:
-      try_new_tutorial: Try our new Hour of Code tutorial in beta
-      try_frozen: Artist with Anna and Elsa, from Frozen
+      try_new_tutorial: Probiere unsere neue Testversion der Programmierstunde aus
+      try_frozen: Künstler mit Anna und Elsa, aus Gefrorenem
     gallery:
-      title: Gallery
-      body: View a gallery of app and artist images created by our users
+      title: Gallerie
+      body: Sieh dir eine Ausstellung von Anwendungen und Künstlerbildern an, die von unseren Nutzern erstellt wurden
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: Schüler haben folgendes mit Code gezeichnet!
     students_made_these_with_code: Schüler haben diesen Code gemacht!
@@ -438,12 +442,12 @@ de:
     more: 'Mehr &rarr;'
     caption_by_name_age: 'Von%{name}, Alter %{age}'
     caption_time_ago: '%{time_ago} früher'
-    header: Gallery
+    header: Gallerie
     header_playlab: Play Lab
     header_artist: Künstler
   landing:
     prerelease: "Dieser Kurs ist als <span class='betatext'> Beta</span> eingestuft.  Das bedeutet, dies ist nicht die endgültige Fassung des Kurses und er unterliegt Änderungen, da Feedback empfangen wird und Verbesserungen vorgenommen werden."
-    prerelease_hoc2014: "This tutorial is in <span class='betatext'>beta</span>.  It is subject to revision as feedback is received and improvements are made."
+    prerelease_hoc2014: "Die Einführung liegt als <span class='betatext'>Testversion</span> vor. Es wird gemäß den Rückmeldungen überarbeitet und verbessert."
     feedback: Feedback geben
     report_bug: Fehler melden
     support: Hilfe erhalten

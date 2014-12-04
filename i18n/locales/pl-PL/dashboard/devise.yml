@@ -39,7 +39,7 @@ pl:
       update_needs_confirmation: Pomyślnie uaktualniłeś swoje konto, ale musimy zweryfikować Twój adres mailowy. Sprawdź swoją skrzynkę i kliknij na link, aby potwierdzić swój nowy adres mailowy.
       updated: Pomyślnie uaktualniłeś swoje konto.
     sessions:
-      signed_in: Pomyślnie zalogowałeś się.
+      signed_in: ""
       signed_out: Pomyślnie wylogowałeś się.
     unlocks:
       send_instructions: Za kilka minut otrzymasz e-mail ze wskazówkami, jak odblokować swoje konto.

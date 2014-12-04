@@ -12,7 +12,7 @@ lv:
       2-3 artist loops multi 1:
         Artist Loops Multiple Choice: Mākslinieks Cikls Vairākas izvēles
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500
-        Which shape is made by this loop?: Kura forma ir veikta, šaja cikla?
+        Which shape is made by this loop?: Kura forma ir izveidota šajā ciklā?
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png
@@ -20,7 +20,7 @@ lv:
       2-3 artist loops multi 2:
         Artist Loops Multiple Choice: Mākslinieks Cikls Vairākas izvēles
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500
-        Which shape is made by this program?: Kura forma ir veikta, šaja programma?
+        Which shape is made by this program?: Kura forma ir izveidota šajā programmā?
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png
@@ -33,14 +33,14 @@ lv:
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png
       2-3 bee conditionals multi 1:
-        Bee Conditionals Multiple Choice One: Bišu kondicionālis Vairākas izvēles Viens
+        Bee Conditionals Multiple Choice One: Bišu sazarojumi Vairākas izvēles Viens
         Which comparison below is true?: Kurš no salīdzinājumiem ir patiess?
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png
       2-3 bee conditionals multi 2:
-        Bee Conditionals Multiple Choice Two: Bišu kondicionālis Vairākas izvēles Divi
+        Bee Conditionals Multiple Choice Two: Bišu sazarojums Vairākas izvēles Divi
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500
         Choose the best blocks.: Izvēlāties vislabākos blokus.
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png
@@ -48,7 +48,7 @@ lv:
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png
       2-3 bee conditionals multi 3:
-        Bee Conditionals Multiple Choice Two: Bišu kondicionālis Vairākas izvēles Divi
+        Bee Conditionals Multiple Choice Two: Bišu sazarojums Vairākas izvēles Divi
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500
         Choose the best blocks: Izvēlāties vislabākos blokus
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png
@@ -66,16 +66,16 @@ lv:
       2-3 maze multi 1:
         Maze Multiple Choice One: Labirints Vairakas izvēles Viens
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500
-        Choose the best answer.: Izvēlāties vislabāko atbildi.
-        Which blocks work?: Kurš bloks stradā?
+        Choose the best answer.: Izvēlies vislabāko atbildi.
+        Which blocks work?: Kurš bloks strādā?
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
       2-3 Maze Multi 2:
-        Maze Multiple Choice: Labirints Vairakas izvēles
+        Maze Multiple Choice: Labirints Vairākas izvēles
         /script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500
-        Which blocks work?: Kurš bloks stradā?
+        Which blocks work?: Kurš bloks strādā?
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png
@@ -83,16 +83,16 @@ lv:
       2-3 Algorithms Multi 1:
         Multiple Choice: Atbilžu varianti
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
-        Choose an algorithm for the image provided: Izvēlāties algoritmu attēla nodrošinašanai
-        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Sāc ar kvadrātu <br/> Novieto trīsstūri virs kvadrāta<br/> Novieto trijstūri zem kvadrāta'
-        0: '? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
-        1: ': Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
-        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 'Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram'
-        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: 'Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle'
+        Choose an algorithm for the image provided: Izvēlies algoritmu attēla nodrošināšanai
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Sāc ar kvadrātu <br/> Novieto trīsstūri virs kvadrāta<br/> Novieto trīsstūri zem kvadrāta'
+        0: '? Sāc ar kvadrātu<br/>Novieto trīsstūri pa labi no kvadrāta<br/>Novieto paralelogramu zem kvadrāta<br/>Novieto trijstūri pa labi no paralelograma'
+        1: ': Sāc ar kvadrātu<br/>Novieto trīsstūri pa labi no kvadrāta<br/>Noliec paralelogramu zem kvadrāta<br/>Noliec trijstūri pa labi no paralelograma'
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 'Sāc ar kvadrātu<br/>Noliec paralelogramu virs kvadrāta<br/>Noliec trīsstūri pa labi no paralelograma'
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: 'Sāc ar kvadrātu<br/>Noliec trīsstūri zem kvadrāta<br/>Noliec paralelogramu pa labi no trīsstūra'
       2-3 Algorithms Multi 2:
         Multiple Choice: Atbilžu varianti
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: 'Sāc ar trīsstūrī <br/> Novieto kvadrātu zem trīsstūra <br/> Novieto citu trijstūri zem kvadrāta'
-        Which image does <em>not</em> follow this algorithm?: 'Kurš attēls <em>ne</em> seko šim algoritmam?'
+        Which image does <em>not</em> follow this algorithm?: 'Kurš attēls <em>ne</em>seko šim algoritmam?'
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
         /script_assets/2-3_images/unplugged/algorithms_2_a3.png: /script_assets/2-3_images/unplugged/algorithms_2_a3.png
@@ -178,7 +178,7 @@ lv:
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png
       4-5 bee conditionals multi 1:
-        Bee Conditionals Multiple Choice: Bite Kondicionālis Vairākas izvēles
+        Bee Conditionals Multiple Choice: Bite nosacījumi Vairākas izvēles
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png
         0: '? Violetajai puķei var būt 3, 2 vai arī 1 nektāra vienības, bet tu nezini, cik daudz. Kuri bloki pareizi pārbauda un savāc visu nektāru no violetās puķes?'
         1: ': Violetajai puķei var būt 3, 2 vai arī 1 nektāra vienības, bet tu nezini, cik daudz. Kuri bloki pareizi pārbauda un savāc visu nektāru no violetās puķes?'
@@ -205,7 +205,7 @@ lv:
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png
       4-5 farmer loops multi 1:
-        Famer Loops Multiple Choice: 'Lauksaimnieks Cikli  Vairākas izvēles'
+        Famer Loops Multiple Choice: Fermeris Cikli Vairākas izvēles
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500
         Which blocks solve the puzzle?: Kuri programmas bloki atrisina šo mīklu?
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png
@@ -213,7 +213,7 @@ lv:
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png
       4-5 maze multi 1:
-        Maze Multiple Choice: Labirints Vairakas izvēles
+        Maze Multiple Choice: Labirints Vairākas izvēles
         /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500
         Which blocks solve the puzzle?: Kuri programmas bloki atrisina šo mīklu?
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png
@@ -221,7 +221,7 @@ lv:
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png
       4-5 maze conditionals multi 1:
-        Maze Conditionals Multiple Choice: Labirints Kondicionālis Vairākas izvēles
+        Maze Conditionals Multiple Choice: Labirints nosacījumi Vairākas izvēles
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500
         Which blocks solve the puzzle?: Kuri programmas bloki atrisina šo mīklu?
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png
@@ -251,7 +251,7 @@ lv:
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png
       4-5 Crowdsourcing Multi 2:
         Multiple Choice: Atbilžu varianti
-        Which one of these activities would be best for practicing crowdsourcing?: Kurš no šiem pasākumiem varētu būt labākais priekš pūļavotošanas praktizēšanas?
+        Which one of these activities would be best for practicing crowdsourcing?: Kurš no šiem pasākumiem varētu būt labākais komandas darbam?
         <h4>Cleaning your room</h4>: '<h4>Tīrīšana savā istabā</h4>'
         <h4>Eating your dessert</h4>: '<h4>Deserta ēšana</h4>'
         <h4>Brushing your hair</h4>: '<h4>Ķemmēt matus</h4>'
@@ -266,7 +266,7 @@ lv:
       4-5 Internet Multi 1:
         Multiple Choice: Atbilžu varianti
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
-        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Kad jūs mēģināt ienākt code.org, kura IP adrese ir DNS, kas visticamāk var notikt?
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Kad jūs mēģināt ienākt code.org, kura IP adrese visticamāk ir DNS serverim?
         <h4>23.23.224.106</h4>: '<h4>23.23.224.106</h4>'
         <h4>54.209.61.132</h4>: '<h4>54.209.61.132</h4>'
         <h4>64.14.68.10</h4>: '<h4>64.14.68.10</h4>'
@@ -282,8 +282,8 @@ lv:
       4-5 Songwriting Multi 1:
         Multiple Choice: Atbilžu varianti
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
-        0: '? What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?'
-        1: ': What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?'
+        0: '? Kāds ir lielākais dziesmas fragments, ko tu atpazīsti kā piedziedājumu, tā lai šo piedziedājumu atkārtotu precīzi katru reizi, kad izsauc?'
+        1: ': Kāds ir lielākais dziesmas fragments, ko tu atpazīsti kā piedziedājumu, tā lai šo piedziedājumu atkārtotu precīzi katru reizi, kad izsauc?'
         Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: 'Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.'
         2: "? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
@@ -297,6 +297,14 @@ lv:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
+      Coordinates Multi 1:
+        Video game Coordinates: Video game Coordinates
+        Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
+        Which answer best describes the unicorn's movement?: "Which answer best describes the unicorn's movement?"
+        The unicorn moves across the screen: The unicorn moves across the screen
+        The unicorn's y value changes: "The unicorn's y value changes"
+        The unicorn moves to the left: The unicorn moves to the left
+        The unicorn's x value changes: "The unicorn's x value changes"
       K-1 Artist 1 Multi 1:
         Multiple Choice: Atbilžu varianti
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
@@ -315,7 +323,7 @@ lv:
       K-1 Artist 2 Multi 1:
         Multiple Choice: Atbilžu varianti
         /script_assets/k_1_images/artist_images/sq+sq.png, 500: /script_assets/k_1_images/artist_images/sq+sq.png, 500
-        Which shape do these squares combine to make?: Which shape do these squares combine to make?
+        Which shape do these squares combine to make?: Kādu formu parāda šis kvadrātu salikums?
         /script_assets/k_1_images/artist_images/medium_circle.png: /script_assets/k_1_images/artist_images/medium_circle.png
         /script_assets/k_1_images/artist_images/small_rectangle.png: /script_assets/k_1_images/artist_images/small_rectangle.png
         /script_assets/k_1_images/artist_images/medium_square.png: /script_assets/k_1_images/artist_images/medium_square.png
@@ -347,7 +355,7 @@ lv:
       K-1 Maze Debugging Multi 1:
         Multiple Choice: Atbilžu varianti
         /script_assets/k_1_images/maze_images/EESq.png, 700: /script_assets/k_1_images/maze_images/EESq.png, 700
-        Which choice should be the final block?: Which choice should be the final block?
+        Which choice should be the final block?: Kurai izvēlei jābūt pēdējam blokam?
         /script_assets/k_1_images/move_blocks/N.png: /script_assets/k_1_images/move_blocks/N.png
         /script_assets/k_1_images/move_blocks/S.png: /script_assets/k_1_images/move_blocks/S.png
         /script_assets/k_1_images/move_blocks/E.png: /script_assets/k_1_images/move_blocks/E.png
@@ -377,7 +385,7 @@ lv:
       K-1 Digital Footprint Multi 1:
         Multiple Choice: Atbilžu varianti
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png
-        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: 'Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?'
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: 'Kuram dzīvniekam ir digitāli pēdu nospiedumi, kuri viņu padara <strong>apdraudētu</strong>?'
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png
@@ -460,25 +468,25 @@ lv:
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
         /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
       Math to Code 1:
-        Racket Code for Math Expressions: Racket Code for Math Expressions
-        0: '? Pick the Racket code that matches the mathematical expression given. Draw a circle of evaluation to help you find the right answer!'
-        1: ': Pick the Racket code that matches the mathematical expression given. Draw a circle of evaluation to help you find the right answer!'
+        Racket Code for Math Expressions: Raķetes kods matemātikas izteiksmēm
+        0: '? Izvēlies raķetes kodu, kas sakrīt ar doto matemātisko izteiksmi. Uzzīmē apli, lai novērtētu un atrastu pareizo atbildi!'
+        1: ': Izvēlies raķetes kodu, kas sakrīt ar doto matemātisko izteiksmi. Uzzīmē apli, lai novērtētu un atrastu pareizo atbildi!'
         (5 + 6) * 8 / 2: '(5 + 6) * 8 / 2'
         (/ (* 8 2) (+ 5 6)): '(/ (* 8 2) (+ 5 6))'
         (* (+ 5 6) (/ 8 2)): '(* (+ 5 6) (/ 8 2))'
         (/ (* (+ 5 6) 8) 2): '(/ (* (+ 5 6) 8) 2)'
         (/ (+ 5 6) (* 8 2)): '(/ (+ 5 6) (* 8 2))'
       Math to Code 2:
-        Racket Code for Math Expressions: Racket Code for Math Expressions
-        0: '? Pick the Racket code that matches the mathematical expression given. Draw a circle of evaluation to help you find the right answer!'
-        1: ': Pick the Racket code that matches the mathematical expression given. Draw a circle of evaluation to help you find the right answer!'
+        Racket Code for Math Expressions: Raķetes kods matemātikas izteiksmēm
+        0: '? Izvēlies raķetes kodu, kas sakrīt ar doto matemātisko izteiksmi. Uzzīmē apli, lai novērtētu un atrastu pareizo atbildi!'
+        1: ': Izvēlies raķetes kodu, kas sakrīt ar doto matemātisko izteiksmi. Uzzīmē apli, lai novērtētu un atrastu pareizo atbildi!'
         4 + 6 + 20 / 2 x 3 x 7 + 2: 4 + 6 + 20 / 2 x 3 x 7 + 2
         (+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7)) 2): '(+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7)) 2)'
         (+ (+ (* (* (/ 20 2) 3) 7) 2) (+ 4 6)): '(+ (+ (* (* (/ 20 2) 3) 7) 2) (+ 4 6))'
         (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2): '(+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2)'
         (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2)))))): '(+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2))))))'
       Warmup questions:
-        Coding in Racket: Coding in Racket
+        Coding in Racket: Kodēšana raķetē
         Select the best answer to the question.: Izvēlieties vislabāko atbildi uz jautājumu.
         When converting a circle to code, the correct order is: Konvertējot aplī koda, pareizā secībā ir
         top, left, right: augšā, pa kreisi, pa labi
@@ -486,25 +494,25 @@ lv:
         random: nejaušs
         left top right: pa kreisi, augšā, pa labi
       Circle to code:
-        Code from Circle: Kodet no apļa
+        Code from Circle: Kodēt no apļa
         /script_assets/msm/Unit%202/exercise_1.png: '/script_assets/msm/Unit%202/exercise_1.png'
-        Pick the Racket code that comes from the circle of evaluation!: Pick the Racket code that comes from the circle of evaluation!
+        Pick the Racket code that comes from the circle of evaluation!: Izvēlies raķetes kodu, kas nāk no novērtēšanas apļa!
         (+ 5 (* (- 6 8) 4)): '(+ 5 (* (- 6 8) 4))'
         (+ 5 (* 4 (- 8 6))): '(+ 5 (* 4 (- 8 6)))'
         (+ (* (- 8 6) 4) 5) : '(+ (* (- 8 6) 4) 5) '
         (+ 5 (* (- 8 6) 4)): '(+ 5 (* (- 8 6) 4))'
       valid contracts multi:
         Valid Contracts: Derīgs līgums
-        Pick the best answer to the question.: Izvēlāties vislabāko atbildi uz jautājumu.
-        Which of these is a valid contract for the function circle?: Which of these is a valid contract for the function circle?
+        Pick the best answer to the question.: Izvēlies vislabāko atbildi uz jautājumu.
+        Which of these is a valid contract for the function circle?: Kurš no dotā ir atbilstošs funkciju aplim?
         "circle: size style color -> image": 'aplis: izmērs stils krāsa-> attēls'
         "circle: number string string -> image": 'aplis: skaitlis rinda rinda -> attēls'
         "circle: number string string -> shape": 'aplis: skaitlis rinda rinda -> forma'
         "circle: 5 solid blue -> circle ": 'aplis: 5 nepārtraukts zils-> aplis '
       image code from circle:
-        Code from Circle: Kodet no apļa
+        Code from Circle: Kodēt no apļa
         /script_assets/msm/Unit%202/exercise_5.png: '/script_assets/msm/Unit%202/exercise_5.png'
-        Pick the Racket code that comes from the circle of evaluation!: Pick the Racket code that comes from the circle of evaluation!
+        Pick the Racket code that comes from the circle of evaluation!: Izvēlies raķetes kodu, kas nāk no novērtēšanas apļa!
         (rectangle (10) (2) "solid" "red"): '(rectangle (10) (2) "solid" "red")'
         (rectangle 10 2 "solid" "red"): '(rectangle 10 2 "solid" "red")'
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): '(rectangle (+ 8 2) (- 7 5) "solid" "red")'
@@ -514,7 +522,7 @@ lv:
         /script_assets/matches/images/head.jpg,400: /script_assets/matches/images/head.jpg,400
         This puzzle is all about selecting the correct flowers.: Šaja mīkla vajag izvēleties pareizo ziedu.
         Instructions: Instrukcijas
-        Click the right answer, then submit. And here are some longer instructions just to test things more.  How's that word wrapping?: 'Noklikšķiniet uz pareizas atbildes un iesniedziet, šeit ir dažas garākas instrukcijas lai pārbaudītu vairākas lietās.  Kā šis vārds parnesās pa rindam?'
+        Click the right answer, then submit. And here are some longer instructions just to test things more.  How's that word wrapping?: 'Noklikšķini uz pareizās atbildes un iesniedz. Te ir dažas garākas instrukcijas lai pārbaudītu vairākas lietās.  Kā šis vārds parnesas pa rindām?'
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         Which flowers are yellow?: Kuri ziedi ir dzelteni?
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg

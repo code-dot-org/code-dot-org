@@ -115,10 +115,10 @@ id:
     subject: Gabung dengan kelas saya (di Code.org)
     body: |
       Klik link dibawah untuk masuk bergabung dengan ilmu komputer tutorial di Code.org (saya akan menjadi "guru"mu): %{link}
-
+      
       Kursus ini menyenangkan, menarik untuk dilihat, dan mengajar konsep dasar ilmu informatika menggunakan latihan  yang sederhana, teratur, dan dalam bentuk permainan. Belajarlah cara memprogram dari Bill Gates, Mark Zuckerberg, Angry Birds, dan Plants vs. Zombies! :-)
       %{name}
-
+      
   follower:
     invite_sent: Undangan telah dikirim
     added_teacher: '%{name} telah dicantumkan sebagai nama guru Anda'
@@ -188,9 +188,9 @@ id:
         not_earned: 'Untuk memberi penghargaan kepada guru-guru ilmu komputer, Anda bisa mendapatkan hadiah sehingga $1.000 dari <a href="http://DonorsChoose.org"> DonorsChoose.org</a> kredit untuk membimbing kelas melalui kursus intro sekolah dasar. Untuk memenuhi persyaratan, Anda harus memiliki setidaknya 10 siswa-siswi yang menyelesaikan kursus, dengan minimal 10 siswa-siswi telah menyelesaikan semua tutorial dan mendapatkan semua Piala %{num_trophies}. Jika siswa-siswi Anda yang mendapatkan Piala terdiri dari setidaknya 40% anak perempuan, hadiah Anda adalah $1.000 dari <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> kredit. Jika tidak, hadiah Anda adalah $750 dari <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> kredit.  <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> kredit hanya berlaku untuk guru-guru di sekolah umum di Amerika Serikat.'
         bonus:
           not_earned_title: |
-
+            
             Anda masih bisa mendapatkan penghasilan tambahan  $250 dalam <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (Guru Sekolah di Amerika saja)
-
+            
           earned: '40% atau lebih dari siswa yang mengumpulkan semua Piala %{num_trophies} adalah perempuan. Anda telah memenangkan hadiah bonus $250! (hanya berlaku untuk guru dari Amerika Serikat)'
           not_earned: 'Jika siswa-siswi Anda yang telah mendapatkan semua Piala %{num_trophies} terdiri dari setidaknya 40% anak perempuan, Anda mendapat tambahan hadian $250 dari <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> kredit. <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> kredit hanya dapat berlaku untuk guru-guru sekolah umum di Amerika Serikat.'
   crud:
@@ -214,7 +214,7 @@ id:
         playlab: Buat App
         artist: Gambarlah Sesuatu
     user:
-      classroom: Teacher Home Page
+      classroom: Beranda Guru
       label: 'Halo %{username}'
       stats: Kemajuan saya
       settings: Akun saya
@@ -337,7 +337,8 @@ id:
     test_videos_help: Coba pemutar video baru kami di sekolah anda
     try_beta_courses: Baru! Cobalah kelas percobaan kami untuk siswa K-5
     use_as_teacher: Gunakan situs ini sebagai seorang guru
-    heading_elementary: '<h2>20 jam kursus untuk</h2><h1>Pelajar Sekolah Dasar</h1>'
+    heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
+    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
     heading_apps: '<h2>Menyenagkan bagi</h2><h1>Semua orang</h1>'
     heading_legacy: '<h2>Kursus umum kami untuk</h2><h1>Semua Umur</h1>'
     your_gallery: Galeri
@@ -351,6 +352,7 @@ id:
   footer:
     help_from_html: 'Tim teknis dari  Google, Microsoft, Facebook, dan Twitter yang membantu membuat tutorial ini.'
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
+    powered_by_aws: Powered by Amazon Web Services
     feedback: Berikan pendapat
     translate: Bantu menterjemahkan ke bahasa anda
     support: Dukungan
@@ -394,7 +396,7 @@ id:
     bounce_og_title: Check out permainan Bouncing ku
     flappy_og_title: Cobalah permainan Flappyku
     studio_og_title: Lihat Play Lab App Saya
-    check_out_what_i_made: Check out what I made
+    check_out_what_i_made: Lihat apa yang saya buat
     og_description: Saya menulis kode ini sendiri dengan Code.org
     phone_number_not_allowed: Tampaknya ada nomor telepon di sini. Harap perbaiki.
     address_not_allowed: Tampaknya ada alamat di sini. Harap perbaiki.
@@ -422,11 +424,13 @@ id:
       title: Kursus perkenalan
       body: Mencoba kami Introduksi Kursus ilmu komputer dalam 20 jam.
     hoc2014:
-      try_new_tutorial: Try our new Hour of Code tutorial in beta
-      try_frozen: Artist with Anna and Elsa, from Frozen
+      try_new_tutorial: Cobalah pedoman Hour of Code baru kami dalam versi beta
+      try_frozen: Seniman bersama Anna dan Elsa, dari Frozen
     gallery:
       title: Galeri
-      body: View a gallery of app and artist images created by our users
+      body: Lihat galeri gambarn aplikasi dan seniman yang dibuat oleh pengguna kami
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: Siswa-siswa telah menggambar ini dengan kode!
     students_made_these_with_code: Siswa membuat ini dengan kode program!
@@ -441,7 +445,7 @@ id:
     header_artist: Artist
   landing:
     prerelease: "Kursus ini dalam <span class='betatext'>beta</span>.  Ini bukan berarti sebuah kursus final dan ditujukan untuk revisi saat usulan diterima dan pengembangan dibuat."
-    prerelease_hoc2014: "This tutorial is in <span class='betatext'>beta</span>.  It is subject to revision as feedback is received and improvements are made."
+    prerelease_hoc2014: "Pedoman ini adalah dalam <span class='betatext'>versi beta</span>. Pedoman ini dapat direvisi seiring diterimanya masukan dan dibuatnya perbaikan."
     feedback: Berikan usulan
     report_bug: Laporkan kesalahan
     support: Dapatkan bantuan

@@ -1439,7 +1439,7 @@ renameVar:function(a,b){Blockly.Names.equals(a,this.getTitleValue("VAR"))&&this.
 b.callback=Blockly.ContextMenu.callbackFactory(this,c);a.push(b)}};
 Blockly.Blocks.variables_set={init:function(){var a=new Blockly.FieldLabel(Blockly.Msg.VARIABLES_SET_ITEM);a.EDITABLE=!0;this.setHelpUrl(Blockly.Msg.VARIABLES_SET_HELPURL);this.setHSV(312,0.32,0.62);this.appendValueInput("VALUE").appendTitle(Blockly.Msg.VARIABLES_SET_TITLE).appendTitle(Blockly.disableVariableEditing?a:new Blockly.FieldVariable(Blockly.Msg.VARIABLES_SET_ITEM),"VAR").appendTitle(Blockly.Msg.VARIABLES_SET_TAIL);this.setPreviousStatement(!0);this.setNextStatement(!0);this.setTooltip(Blockly.Msg.VARIABLES_SET_TOOLTIP)},
 getVars:function(){return[this.getTitleValue("VAR")]},renameVar:function(a,b){Blockly.Names.equals(a,this.getTitleValue("VAR"))&&this.setTitleValue(b,"VAR")},contextMenuMsg_:Blockly.Msg.VARIABLES_SET_CREATE_GET,contextMenuType_:"variables_get",customContextMenu:Blockly.Blocks.variables_get.customContextMenu};
-Blockly.Blocks.parameters_get={init:function(){var a=new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);a.EDITABLE=!0;this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);this.setHSV(312,0.32,0.62);this.appendDummyInput().appendTitle(Blockly.Msg.VARIABLES_GET_TITLE).appendTitle(Blockly.disableVariableEditing?a:new Blockly.FieldParameter(Blockly.Msg.VARIABLES_GET_ITEM),"VAR").appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);this.setOutput(!0);this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP)},renameVar:function(a,
+Blockly.Blocks.parameters_get={init:function(){var a=new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);a.EDITABLE=!0;this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);this.setHSV(7,0.8,0.95);this.appendDummyInput().appendTitle(Blockly.Msg.VARIABLES_GET_TITLE).appendTitle(Blockly.disableVariableEditing?a:new Blockly.FieldParameter(Blockly.Msg.VARIABLES_GET_ITEM),"VAR").appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);this.setOutput(!0);this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP)},renameVar:function(a,
 b){Blockly.functionEditor&&(Blockly.functionEditor.renameParameter(a,b),Blockly.functionEditor.refreshParamsEverywhere())},removeVar:Blockly.Blocks.variables_get.removeVar};Blockly.Blocks.functionalProcedures={};
 Blockly.Blocks.functional_definition={init:function(){this.setHelpUrl(Blockly.Msg.PROCEDURES_DEFNORETURN_HELPURL);this.setHSV(94,0.84,0.6);this.setFunctional(!0,{headerHeight:0,rowBuffer:3});this.setFunctionalOutput(!0,"Number");var a=Blockly.Procedures.findLegalName(Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE,this);this.appendDummyInput().appendTitle(Blockly.Msg.DEFINE_FUNCTION_DEFINE).appendTitle(new Blockly.FieldTextInput(a,Blockly.Procedures.rename),"NAME").appendTitle("","PARAMS");this.appendFunctionalInput("STACK");
 this.setFunctional(!0);this.setTooltip(Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP);this.isFunctionalVariable_=!1;this.parameterNames_=[];this.paramIds_=[];this.parameterTypes_=[]},mutationToDom:function(){for(var a=document.createElement("mutation"),b=0;b<this.parameterNames_.length;b++){var c=document.createElement("arg");c.setAttribute("name",this.parameterNames_[b]);c.setAttribute("type",this.parameterTypes_[b]);a.appendChild(c)}this.description_&&(b=document.createElement("description"),
@@ -1578,7 +1578,7 @@ Blockly.Msg.COLOUR_BLEND_TOOLTIP = "Amestecă două culori în funcție de un ra
 Blockly.Msg.COLOUR_PICKER_HELPURL = "http://ro.wikipedia.org/wiki/Culoare";
 Blockly.Msg.COLOUR_PICKER_TOOLTIP = "Alege o culoare din paleta de culori.";
 Blockly.Msg.COLOUR_RANDOM_HELPURL = "http://randomcolour.com";
-Blockly.Msg.COLOUR_RANDOM_TITLE = "culoare la întâmplare";
+Blockly.Msg.COLOUR_RANDOM_TITLE = "culoare aleatorie";
 Blockly.Msg.COLOUR_RANDOM_TOOLTIP = "Alege o culoare la întâmplare.";
 Blockly.Msg.COLOUR_RGB_BLUE = "albastru";
 Blockly.Msg.COLOUR_RGB_GREEN = "verde";
@@ -1623,7 +1623,7 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_UNTIL = "repetă până când";
 Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_WHILE = "repetă în timp ce";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "În timp ce o valoare este falsă, atunci fă unele declaraţii.";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "În timp ce o valoare este adevărată, atunci fă unele declaraţii.";
-Blockly.Msg.DEFINE_FUNCTION_DEFINE = "Define";
+Blockly.Msg.DEFINE_FUNCTION_DEFINE = "Defineste";
 Blockly.Msg.DELETE_BLOCK = "Șterge Bloc";
 Blockly.Msg.DELETE_PARAMETER = "Șterge parametrul...";
 Blockly.Msg.DELETE_PARAMETER_TITLE = "Aceasta va şterge toate apariţiile parametrului '%1'. Eşti sigur?";
@@ -1631,15 +1631,15 @@ Blockly.Msg.DELETE_X_BLOCKS = "Șterge %1 Blocuri";
 Blockly.Msg.DISABLE_BLOCK = "Dezactivează Blocul";
 Blockly.Msg.DUPLICATE_BLOCK = "Duplică";
 Blockly.Msg.ENABLE_BLOCK = "Activează blocul";
-Blockly.Msg.EXAMPLE = "Example";
-Blockly.Msg.EXAMPLE_DESCRIPTION = "Defines an example with expected and actual behavior";
+Blockly.Msg.EXAMPLE = "Exemplu";
+Blockly.Msg.EXAMPLE_DESCRIPTION = "Definește un exemplu cu comportamentul așteptat și cel real";
 Blockly.Msg.EXPAND_ALL = "Extinde blocuri";
 Blockly.Msg.EXPAND_BLOCK = "Extinde bloc";
-Blockly.Msg.EXPECTED = "expected";
+Blockly.Msg.EXPECTED = "aşteptat";
 Blockly.Msg.EXTERNAL_INPUTS = "Intrări Externe";
 Blockly.Msg.FUNCTION_CREATE = "Creare funcţie";
 Blockly.Msg.FUNCTION_EDIT = "editează";
-Blockly.Msg.FUNCTION_NAME_LABEL = "Denumește-ți funcția:";
+Blockly.Msg.FUNCTION_NAME_LABEL = "Numele functiei tale:";
 Blockly.Msg.FUNCTION_DESCRIPTION_LABEL = "Ce ar trebui să facă funcția ta?";
 Blockly.Msg.FUNCTION_PARAMETERS_LABEL = "Ce parametri are funcția ta?";
 Blockly.Msg.FUNCTION_HEADER = "Funcţie";
@@ -1649,11 +1649,11 @@ Blockly.Msg.FUNCTIONAL_NAME_LABEL = "Nume";
 Blockly.Msg.FUNCTIONAL_TYPE_LABEL = "Alege tip...";
 Blockly.Msg.FUNCTIONAL_DESCRIPTION_LABEL = "Descriere";
 Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL = "Domeniu";
-Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP = "Define a functional method";
+Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP = "Definește o metodă funcțională";
 Blockly.Msg.FUNCTIONAL_RANGE_LABEL = "Interval";
-Blockly.Msg.FUNCTIONAL_VARIABLE_CREATE = "Create a Variable";
-Blockly.Msg.FUNCTIONAL_VARIABLE_HEADER = "Variable";
-Blockly.Msg.FUNCTIONAL_VARIABLE_TYPE = "Type";
+Blockly.Msg.FUNCTIONAL_VARIABLE_CREATE = "Creează o variabilă";
+Blockly.Msg.FUNCTIONAL_VARIABLE_HEADER = "Variabilă";
+Blockly.Msg.FUNCTIONAL_VARIABLE_TYPE = "Tip";
 Blockly.Msg.HELP = "Ajutor";
 Blockly.Msg.INLINE_INPUTS = "Intrări de Linie";
 Blockly.Msg.LISTS_CREATE_EMPTY_HELPURL = "http://en.wikipedia.org/wiki/Linked_list#Empty_lists";
@@ -1865,11 +1865,11 @@ Blockly.Msg.PROCEDURES_IFRETURN_WARNING = "Avertisment: Acest bloc pot fi utiliz
 Blockly.Msg.PROCEDURES_MUTATORARG_TITLE = "nume de intrare:";
 Blockly.Msg.PROCEDURES_MUTATORCONTAINER_TITLE = "intrări";
 Blockly.Msg.REMOVE_COMMENT = "Elimină comentariu";
-Blockly.Msg.RENAME_PARAMETER = "Redenumește parametru...";
+Blockly.Msg.RENAME_PARAMETER = "Redenumește parametrul...";
 Blockly.Msg.RENAME_PARAMETER_TITLE = "Redenumește toți parametrii '%1' cu:";
 Blockly.Msg.RENAME_VARIABLE = "Redenumește variabila...";
 Blockly.Msg.RENAME_VARIABLE_TITLE = "Redenumeşte toate variabilele '%1' în:";
-Blockly.Msg.SAVE_AND_CLOSE = "Save and Close";
+Blockly.Msg.SAVE_AND_CLOSE = "Salvare şi închidere";
 Blockly.Msg.TEXT_APPEND_APPENDTEXT = "Adaugă text";
 Blockly.Msg.TEXT_APPEND_HELPURL = "https://code.google.com/p/blockly/wiki/Text#Text_modification";
 Blockly.Msg.TEXT_APPEND_TO = "la";

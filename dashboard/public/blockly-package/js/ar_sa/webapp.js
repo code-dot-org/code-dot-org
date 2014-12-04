@@ -2607,6 +2607,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -2619,7 +2620,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -2629,16 +2632,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -11756,7 +11749,7 @@ exports.end = function(d){return "نهاية"};
 
 exports.emptyBlocksErrorMsg = function(d){return "قطعة \" أكرر\" أو \" اذا \" تحتاج ان تحتوي على قطع اخرى داخلها من اجل العمل . تأكد من القطع الداخلية بحيث يجب ان تكون تناسب القطع المحتوية في الداخل ."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "قطعة الدالة تحتاج إلى القطع الأخرى بداخله لكي يعمل."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "قطعة الدالة تحتاج إلى القطع الأخرى بداخلها لكي تعمل."};
 
 exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
 
@@ -11812,7 +11805,7 @@ exports.numLinesOfCodeWritten = function(d){return "لقد كتبت "+p(d,"numLi
 
 exports.play = function(d){return "إلعب"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "طباعة"};
 
 exports.puzzleTitle = function(d){return "اللغز "+v(d,"puzzle_number")+" من "+v(d,"stage_total")};
 
@@ -11828,7 +11821,7 @@ exports.score = function(d){return "النتيجة"};
 
 exports.showCodeHeader = function(d){return "اظهار الكود البرمجي"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "إظهار القطع"};
 
 exports.showGeneratedCode = function(d){return "اظهار الكود البرمجي"};
 
@@ -11856,11 +11849,11 @@ exports.hintRequest = function(d){return "شاهد تلميحاً"};
 
 exports.backToPreviousLevel = function(d){return "الرجوع إلى المستوى السابق"};
 
-exports.saveToGallery = function(d){return "حفظ في معرض الصور الخاص بك"};
+exports.saveToGallery = function(d){return "حفظ إلى المعرض"};
 
-exports.savedToGallery = function(d){return "حفظ في معرض الصور الخاص بك!"};
+exports.savedToGallery = function(d){return "تم الحفط في المعرض!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "عذراً، لا يمكن أن نشارك هذا البرنامج."};
 
 exports.typeFuncs = function(d){return "الدوال المتاحة: %1"};
 
@@ -11868,7 +11861,7 @@ exports.typeHint = function(d){return "تذكر أن الأقواس والفوا
 
 exports.workspaceHeader = function(d){return "أجمع القطع هنا: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "أكتب الكود البرمجي جافاسكريبت هنا"};
 
 exports.infinity = function(d){return "ما لانهاية"};
 
@@ -11892,7 +11885,7 @@ exports.hintHeader = function(d){return "إليك نصيحة:"};
 
 exports.genericFeedback = function(d){return "انظر كيف انتهى الأمر، و حاول إصلاح برنامجك."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "انظر ما الذي صنعته"};
 
 
 },{"messageformat":52}],40:[function(require,module,exports){
@@ -11932,9 +11925,9 @@ exports.catVariables = function(d){return "المتغيرات"};
 
 exports.continue = function(d){return "أستمر"};
 
-exports.createHtmlBlock = function(d){return "إنشاء كتلة html"};
+exports.createHtmlBlock = function(d){return "إنشاء قطعة html"};
 
-exports.createHtmlBlockTooltip = function(d){return "إنشاء كتلة من HTML في التطبيق."};
+exports.createHtmlBlockTooltip = function(d){return "إنشاء قطعة من HTML في التطبيق."};
 
 exports.finalLevel = function(d){return "تهانينا ! لقد قمت بحل اللغز الاخير."};
 
@@ -11946,7 +11939,7 @@ exports.no = function(d){return "لا"};
 
 exports.numBlocksNeeded = function(d){return "يمكن حل هذا الغز ب  %1 من القطع."};
 
-exports.pause = function(d){return "إيقاف مؤقت"};
+exports.pause = function(d){return "فاصل"};
 
 exports.reinfFeedbackMsg = function(d){return "يمكنك الضغط على زر \"حاول مرة أخرى\" للعودة إلى تشغيل التطبيق الخاص بك."};
 
@@ -11954,21 +11947,21 @@ exports.repeatForever = function(d){return "تكرار إلى الأبد"};
 
 exports.repeatDo = function(d){return "نفّذ"};
 
-exports.repeatForeverTooltip = function(d){return "تنفيذ الإجراءات في هذه الكتلة مرارا وتكرارا أثناء تشغيل التطبيق."};
+exports.repeatForeverTooltip = function(d){return "تنفيذ الإجراءات في هذه المجموعة مرارا وتكرارا أثناء تشغيل التطبيق."};
 
-exports.shareWebappTwitter = function(d){return "Check out the app I made. I wrote it myself with @codeorg"};
+exports.shareWebappTwitter = function(d){return "تحقق من التطبيق الذي برمجت. لقد كتبته بنفسي عن طريق @codeorg"};
 
-exports.shareGame = function(d){return "Share your app:"};
+exports.shareGame = function(d){return "شارك التطبيق الخاص بك:"};
 
-exports.stepIn = function(d){return "Step in"};
+exports.stepIn = function(d){return "خطوة للداخل"};
 
-exports.stepOver = function(d){return "Step over"};
+exports.stepOver = function(d){return "خطوة للأعلى"};
 
-exports.stepOut = function(d){return "Step out"};
+exports.stepOut = function(d){return "خطوة للخارج"};
 
-exports.turnBlack = function(d){return "turn black"};
+exports.turnBlack = function(d){return "يتحول إلى اللون الأسود"};
 
-exports.turnBlackTooltip = function(d){return "Turns the screen black."};
+exports.turnBlackTooltip = function(d){return "تحويل الشاشة للأسود."};
 
 exports.yes = function(d){return "نعم"};
 

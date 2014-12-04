@@ -39,7 +39,7 @@ vi:
       update_needs_confirmation: Bạn cập nhật tài khoản của mình thành công, nhưng chúng ta cần phải xác minh địa chỉ email mới của bạn. Hãy kiểm tra email của bạn và bấm vào liên kết xác nhận để xác nhận địa chỉ email mới của bạn.
       updated: Bạn đã cập nhật tài khoản thành công.
     sessions:
-      signed_in: Đăng nhập thành công.
+      signed_in: ""
       signed_out: Đăng xuất thành công.
     unlocks:
       send_instructions: Bạn sẽ nhận được một email hướng dẫn mở khóa tài khoản của bạn trong vài phút nữa.

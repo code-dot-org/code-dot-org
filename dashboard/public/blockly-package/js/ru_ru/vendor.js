@@ -1439,7 +1439,7 @@ renameVar:function(a,b){Blockly.Names.equals(a,this.getTitleValue("VAR"))&&this.
 b.callback=Blockly.ContextMenu.callbackFactory(this,c);a.push(b)}};
 Blockly.Blocks.variables_set={init:function(){var a=new Blockly.FieldLabel(Blockly.Msg.VARIABLES_SET_ITEM);a.EDITABLE=!0;this.setHelpUrl(Blockly.Msg.VARIABLES_SET_HELPURL);this.setHSV(312,0.32,0.62);this.appendValueInput("VALUE").appendTitle(Blockly.Msg.VARIABLES_SET_TITLE).appendTitle(Blockly.disableVariableEditing?a:new Blockly.FieldVariable(Blockly.Msg.VARIABLES_SET_ITEM),"VAR").appendTitle(Blockly.Msg.VARIABLES_SET_TAIL);this.setPreviousStatement(!0);this.setNextStatement(!0);this.setTooltip(Blockly.Msg.VARIABLES_SET_TOOLTIP)},
 getVars:function(){return[this.getTitleValue("VAR")]},renameVar:function(a,b){Blockly.Names.equals(a,this.getTitleValue("VAR"))&&this.setTitleValue(b,"VAR")},contextMenuMsg_:Blockly.Msg.VARIABLES_SET_CREATE_GET,contextMenuType_:"variables_get",customContextMenu:Blockly.Blocks.variables_get.customContextMenu};
-Blockly.Blocks.parameters_get={init:function(){var a=new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);a.EDITABLE=!0;this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);this.setHSV(312,0.32,0.62);this.appendDummyInput().appendTitle(Blockly.Msg.VARIABLES_GET_TITLE).appendTitle(Blockly.disableVariableEditing?a:new Blockly.FieldParameter(Blockly.Msg.VARIABLES_GET_ITEM),"VAR").appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);this.setOutput(!0);this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP)},renameVar:function(a,
+Blockly.Blocks.parameters_get={init:function(){var a=new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);a.EDITABLE=!0;this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);this.setHSV(7,0.8,0.95);this.appendDummyInput().appendTitle(Blockly.Msg.VARIABLES_GET_TITLE).appendTitle(Blockly.disableVariableEditing?a:new Blockly.FieldParameter(Blockly.Msg.VARIABLES_GET_ITEM),"VAR").appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);this.setOutput(!0);this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP)},renameVar:function(a,
 b){Blockly.functionEditor&&(Blockly.functionEditor.renameParameter(a,b),Blockly.functionEditor.refreshParamsEverywhere())},removeVar:Blockly.Blocks.variables_get.removeVar};Blockly.Blocks.functionalProcedures={};
 Blockly.Blocks.functional_definition={init:function(){this.setHelpUrl(Blockly.Msg.PROCEDURES_DEFNORETURN_HELPURL);this.setHSV(94,0.84,0.6);this.setFunctional(!0,{headerHeight:0,rowBuffer:3});this.setFunctionalOutput(!0,"Number");var a=Blockly.Procedures.findLegalName(Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE,this);this.appendDummyInput().appendTitle(Blockly.Msg.DEFINE_FUNCTION_DEFINE).appendTitle(new Blockly.FieldTextInput(a,Blockly.Procedures.rename),"NAME").appendTitle("","PARAMS");this.appendFunctionalInput("STACK");
 this.setFunctional(!0);this.setTooltip(Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP);this.isFunctionalVariable_=!1;this.parameterNames_=[];this.paramIds_=[];this.parameterTypes_=[]},mutationToDom:function(){for(var a=document.createElement("mutation"),b=0;b<this.parameterNames_.length;b++){var c=document.createElement("arg");c.setAttribute("name",this.parameterNames_[b]);c.setAttribute("type",this.parameterTypes_[b]);a.appendChild(c)}this.description_&&(b=document.createElement("description"),
@@ -1562,7 +1562,7 @@ Blockly.JavaScript.parameters_set=Blockly.JavaScript.variables_set;
 
 goog.provide('Blockly.Msg.ru_ru');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "actual";
+Blockly.Msg.ACTUAL = "фактически";
 Blockly.Msg.ADD = "Добавить";
 Blockly.Msg.ADD_COMMENT = "Добавить комментарий";
 Blockly.Msg.ADD_PARAMETER = "Добавить параметр";
@@ -1623,7 +1623,7 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_UNTIL = "повторять пока н
 Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_WHILE = "повторять, пока";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "Пока значение ложно, выполнять команды.";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "Пока значение истинно, выполнять команды.";
-Blockly.Msg.DEFINE_FUNCTION_DEFINE = "Define";
+Blockly.Msg.DEFINE_FUNCTION_DEFINE = "Определение функции";
 Blockly.Msg.DELETE_BLOCK = "Удалить блок";
 Blockly.Msg.DELETE_PARAMETER = "Удалить параметр...";
 Blockly.Msg.DELETE_PARAMETER_TITLE = "Это приведет к удалению всех вхождений параметра «%1». Уверен?";
@@ -1631,11 +1631,11 @@ Blockly.Msg.DELETE_X_BLOCKS = "Удалить %1 блоков";
 Blockly.Msg.DISABLE_BLOCK = "Отключить блок";
 Blockly.Msg.DUPLICATE_BLOCK = "Скопировать";
 Blockly.Msg.ENABLE_BLOCK = "Включить блок";
-Blockly.Msg.EXAMPLE = "Example";
-Blockly.Msg.EXAMPLE_DESCRIPTION = "Defines an example with expected and actual behavior";
+Blockly.Msg.EXAMPLE = "Пример";
+Blockly.Msg.EXAMPLE_DESCRIPTION = "Определяет пример с ожидаемым и фактическим поведением";
 Blockly.Msg.EXPAND_ALL = "Развернуть блоки";
 Blockly.Msg.EXPAND_BLOCK = "Развернуть блок";
-Blockly.Msg.EXPECTED = "expected";
+Blockly.Msg.EXPECTED = "ожидается";
 Blockly.Msg.EXTERNAL_INPUTS = "Вставки снаружи";
 Blockly.Msg.FUNCTION_CREATE = "Создать процедуру";
 Blockly.Msg.FUNCTION_EDIT = "редактировать";
@@ -1649,11 +1649,11 @@ Blockly.Msg.FUNCTIONAL_NAME_LABEL = "Имя";
 Blockly.Msg.FUNCTIONAL_TYPE_LABEL = "Выберите тип...";
 Blockly.Msg.FUNCTIONAL_DESCRIPTION_LABEL = "Описание";
 Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL = "Домен";
-Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP = "Define a functional method";
+Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP = "Определение функционального метода";
 Blockly.Msg.FUNCTIONAL_RANGE_LABEL = "Диапазон";
-Blockly.Msg.FUNCTIONAL_VARIABLE_CREATE = "Create a Variable";
-Blockly.Msg.FUNCTIONAL_VARIABLE_HEADER = "Variable";
-Blockly.Msg.FUNCTIONAL_VARIABLE_TYPE = "Type";
+Blockly.Msg.FUNCTIONAL_VARIABLE_CREATE = "Создайте переменную\nСоздаёт переменную";
+Blockly.Msg.FUNCTIONAL_VARIABLE_HEADER = "Переменная";
+Blockly.Msg.FUNCTIONAL_VARIABLE_TYPE = "Тип";
 Blockly.Msg.HELP = "Справка";
 Blockly.Msg.INLINE_INPUTS = "Вставки внутри";
 Blockly.Msg.LISTS_CREATE_EMPTY_HELPURL = "http://en.wikipedia.org/wiki/Linked_list#Empty_lists";
@@ -1869,7 +1869,7 @@ Blockly.Msg.RENAME_PARAMETER = "Переименовать параметр...";
 Blockly.Msg.RENAME_PARAMETER_TITLE = "Переименование всех параметров «%1»:";
 Blockly.Msg.RENAME_VARIABLE = "Переименовать переменную…";
 Blockly.Msg.RENAME_VARIABLE_TITLE = "Переименовать все переменные '%1' в:";
-Blockly.Msg.SAVE_AND_CLOSE = "Save and Close";
+Blockly.Msg.SAVE_AND_CLOSE = "Сохранить и закрыть";
 Blockly.Msg.TEXT_APPEND_APPENDTEXT = "добавить текст";
 Blockly.Msg.TEXT_APPEND_HELPURL = "https://code.google.com/p/blockly/wiki/Text#Text_modification";
 Blockly.Msg.TEXT_APPEND_TO = "=";

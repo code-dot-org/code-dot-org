@@ -7,58 +7,58 @@
       user:
         name: Vis namn
         email: E-post
-        username: Brukarnamn
-        password: Passord
-        password_confirmation: Stadfesting av passord
-        current_password: Passordet du har no
+        username: brukernavn
+        password: passord
+        password_confirmation: Bekreftelse på passord
+        current_password: Nåværende passord
         locale: Språk
         age: Alder
         gender: Kjønn
-        edit_header: Rediger kontodetaljar
+        edit_header: Rediger kontodetaljer
         error:
           future: kan ikkje vere i framtida
-  hello: Hallo, verda
-  welcome_back: Velkommen attende, %{name}
+  hello: Hei, verden
+  welcome_back: Velkommen tilbake, %{name}
   add_teacher_form:
     code:
       label: 'Legg til ein lærar:'
       placeholder: Seksjonskode (ABCDEF)
-    submit: Legg til lærar
+    submit: Legg til lærer
   add_hint_form:
     placeholder: Skriv inn eit hint her
     submit: Legg til eit hint
   appname: Code.org
-  stage: Nivå
+  stage: nivå
   stage_number: Nivå %{number}
-  puzzle: Puslespel
-  trophies: Pokalar
-  courses: Kurs
+  puzzle: Oppgave
+  trophies: pokaler
+  courses: kurs
   of: av
-  more: MEIR
+  more: MER
   less: MINDRE
-  try_hoc: 'Prøv Kodetimen, klikk her >> '
+  try_hoc: 'Prøv Hour of Code (kodetimen), klikk her >> '
   try_k8intro: Eller prøv vår barneskuleintroduksjon til informatikkurs (15-25 timar)
   k8intro: Barneskuleintroduksjon til informatikkurs (15-25 timar)
-  already_started: 'Allereie starta? Hald fram her >> '
-  demos: 'Administrator: Alle demoar'
-  continue: Hald fram
+  already_started: 'Har du allerede startet? Fortsett her >> '
+  demos: 'Administrator: Alle demoer'
+  continue: Fortsett
   prize: premie
-  more_info: Meir info
+  more_info: Mer info
   auth:
     sign_in_with: Logg inn med %{provider}
-    signed_in: Logga inn!
+    signed_in: Logget inn!
     signed_out: Du har logga deg av <a href="%{url}">Code.org</a>.
     sign_out_of: Du nytta %{provider} for å logge inn. <a href="%{url}"> Klikk her</a>
       for å logge av %{provider}.
-    already_signedup: Allereie registrert?
-    notyet_signedup: Er du ikkje medlem enno?
+    already_signedup: Allerede registrert?
+    notyet_signedup: Har du ikke blitt medlem ennå?
     google_oauth2: Google-konto
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft-konto
-    forgot_password: Har du gløymt passordet ditt?
-    need_confirmation: Har du ikkje motteke instruksjonar om korleis du stadfester?
-    need_unlock: Har du ikkje motteke instruksjonar om korleis du låser opp?
+    forgot_password: Har du glemt passordet ditt?
+    need_confirmation: Mottok du ikke instruksjoner om hvordan du bekrefter?
+    need_unlock: Mottok du ingen instruksjoner om hvordan du låser opp?
   signup_form:
     overview_student: Registrer ein konto for å følgje med på framgangen din. Epostadressa
       din blir hovedsaklig brukt for å tillate deg å logge inn og for å gjenopprette
@@ -67,28 +67,28 @@
     overview_teacher: Lær datavitskap i klasserommet ved å registrere deg med ein
       konto. <p/> Du vil kunne legge til elevane og følge framdrifta deira.
     no_signup_message: Du kan <a target="_blank" href="http://learn.code.org">bla
-      gjennom dei ulike nivåa og oppgåvene</a>, men du må registrere deg for å lagre
-      kor langt du har nådd.
-    teacher_educator_guide: Sjå veiledning for lærar
+      gjennom de forskjellige nivåene og oppgavene</a>, men du må registrere deg for
+      å lagre hvor langt du har nådd.
+    teacher_educator_guide: Se lærerveiledningen
     teacher_pitch: Registrering for lærar på code.org
-    teacher_title: Registrering for lærar
+    teacher_title: Påmelding for lærere
     student_pitch: Registrering for elev på code.org
     student_title: Registrering for elev
-    school_name: Namnet på skulen (valfritt)
-    school_address: Adressa til skulen (valfritt)
-    address_placeholder: adresse, by, fylke, postnummer
-    gender: Kjønn (valfritt)
+    school_name: Skolens navn (valgfritt)
+    school_address: Skolens adresse (valgfritt)
+    address_placeholder: adresse, by, fylke, postkode
+    gender: Kjønn (valgfritt)
     birthday: Bursdag (valgfritt)
     age: Alder
     user_type: Er du elev eller lærar?
     submit: Meld deg på
-    teacher: Er du ein lærar?
-    valid_username: Tilgjengeleg!
-    invalid_username: Brukernamnet må vere minst fem teikn
-    taken_username: Brukarnamnet er alt i bruk
+    teacher: Er du en lærer?
+    valid_username: Tilgjengelig!
+    invalid_username: Brukernavnet må bestå av minimum fem tegn
+    taken_username: Brukernavnet er allerede tatt
     valid_password: Gyldig passord!
-    invalid_password: Passordet må ha minst seks teikn
-    mismatch_password: Dei to passorda du skreiv inn er ikkje like
+    invalid_password: Passordet må bestå av minimum seks tegn
+    mismatch_password: De to passordene du skrev inn samsvarer ikke
     student_terms: Eg godtar Code.org sine <a href='http://code.org/tos'>vilkår for
       bruk</a>. Dersom eg er under 13 år, stadfester eg ved å sende dette skjemaet
       at eg har løyve frå mine føresette til å bruke Code.org sine tenester. <br/>For
@@ -100,9 +100,9 @@
       di.
   signin_form:
     title: Har du alt ein konto? Logg på
-    login: E-post eller brukarnamn
-    password: Passord
-    remember: Hugs meg
+    login: E-post eller brukernavn
+    password: passord
+    remember: Husk meg
     submit: Logg inn
   signin:
     try_heading: Vil du prøve koding utan å registrere deg ?
@@ -116,40 +116,40 @@
     login: Logg inn
   password:
     reset_form:
-      title: Har du gløymt passordet ditt?
+      title: Har du glemt passordet ditt?
       email: E-postadresse
-      submit: Send meg instruksjonar for å tilbakestille passordet
+      submit: Send meg instruksjoner om å tilbakestille passordet
     change_form:
       title: Endre passordet ditt
-      new_password: Nytt passord
+      new_password: nytt passord
       confirm_password: Bekreft nytt passord
       submit: Endre passordet mitt
   welcome_email:
-    subject: Bli med i klassa mi (på Code.org)
+    subject: Delta i min klasse (på Code.org)
     body: |
-      Klikk på linken under for å melde deg på datakurs på Code.org (med meg som lærar):
+      Klikk linken under for å melde deg på informatikk-kurs på Code.org (med meg som lærer):
 
       %{link}
 
-      Kursene er morosame, visuelt stimulerende og lærer deg dei grunnleggjande konsepta innan informasjonsvitskap ved å nytte ein enkel, spill-liknande oppleving som du blir losa igjennom. Lær å kode av Bill Gates, Mark Zuckerberg, Angry Birds og Plantar mot Zombiar! :)
+      Kursene er morsomme, visuelt stimulerende og lærer deg de grunnleggende konseptene innen informatikk ved å benytte en enkel, spill-lignende opplevelse som du loses igjennom. Lær å kode av Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies! :)
 
       %{name}
   follower:
     invite_sent: Invitasjon er sendt
-    added_teacher: "%{name} er lagt til som læraren din"
+    added_teacher: '%{name} er lagt til som din lærer'
     registered: Du har meldt deg på %{section_name}.
     error:
-      signed_in: Ver snill å logge ut før du held fram
-      username_not_found: Brukarnamnet %{username} fins ikkje
-      username_in_use: "%{username} er opptatt. Velg eit anna"
-      no_teacher: Kunne ikkje finne nokon registrert med %{teacher_email_or_code}".
-        Be dei om å registrere seg her og prøv å legge dei til på nytt
+      signed_in: Vennligst logg ut før du fortsetter
+      username_not_found: Brukernavnet %{username} finnes ikke
+      username_in_use: '%{username} er allerede tatt. Vennligst velg et annet'
+      no_teacher: Kan ikke finne noen som er logget på med '%{teacher_email_or_code}'.
+        Vennligst be dem melde seg på og forsøk deretter å legge dem til på nytt
       section_not_found: Kunne ikkje finne ein seksjon med koden '%{section_code}'.
       blank_code: Oppi ein seksjonskode
       cant_join_own_section: Beklager, du kan ikkje bli med i din eigen seksjon.
     mail:
       invite_student:
-        subject: Bli med i ei av klassene til %{teacher_name} på Code.org!
+        subject: Bli med i en av klassene til %{teacher_name} på Code.org!
       student_disassociated:
         subject: 'Melding fra Code.org: %{student_name} er ikkje lenger tilknytta
           som din elev.'
@@ -158,57 +158,57 @@
           som din lærar.'
   reports:
     error:
-      access_denied: Du har ikkje tilgang til statistikk om denne personen
+      access_denied: Du har ikke tilgang til denne personens statistikk
   redeem_prizes:
-    title: 'Hent premiane dine: %{name}'
-    provider: 'Tilbydar:'
+    title: 'Hent dine premier: %{name}'
+    provider: 'Tilbyder:'
     code: 'Kode:'
     redeem_header: 'For å løyse inn:'
     donorschoose_register: Registrer deg som lærar på DonorsChoose.org
     donorschoose_project: Legg ut eit prosjekt
     donorschoose_how_to: Slik bruker du koden din
-    success: Premien din blei løyst inn, sj koden nedanfor.
-    error: Premien din kunne ikkje løysast inn. Prøv igjen!
-    error_us_only: Tilbodet om premiar gjelder berre for amerikanske brukarar.
-    error_not_earned: Du har enno ikkje gjort deg fortent denne premien.
-    error_already_redeemed: Premien din har alt blitt innløyst.
-    no_prizes_available: Vi er leie for deg, men vi har ingen premiar tilgjengeleg.
+    success: Premien din ble innløst, se koden nedenfor.
+    error: Premien din kunne ikke løses inn, prøv igjen.
+    error_us_only: Tilbudet om premier gjelder bare for amerikanske brukere.
+    error_not_earned: Du har ikke ennå fortjent denne premien.
+    error_already_redeemed: Premien din har allerede blitt innløst.
+    no_prizes_available: Beklager, men vi har ingen premiene tilgjengelig.
     teacher_info_required: 'Lærerpremiar krev navn og adresse til skulen:'
     teacher_email_required: 'Premier til lærara krev ei stadfesta e-postadresse:'
     confirm:
-      title: Ver snill og stadfest
+      title: Vennligst bekreft
       'no': Nei
       'yes': Ja
       msg: Er du sikker på at du vil be om %{prize_name} premien?
-      msg_student: 'Merk: Du kan berre velje ein type premie.'
-      msg_publicschool: Bekreft at du er ein amerikansk lærar i offentleg skule.
+      msg_student: 'Merk: Du kan bare velge én type premie.'
+      msg_publicschool: Bekreft at du er amerikanske offentlige skolelærer.
       msg_visit_website: Besøk webside
     providers:
-      apple_itunes: "$10 iTunes Gift Card"
+      apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
-      dropbox: 10GB lagringsplass i Dropbox
+      dropbox: 10GB Dropbox plass
       valve: Portal 2 (PC or Mac game download)
       ea_bejeweled: Bejeweled 3 (PC game download)
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: "$10 Skype credit"
+      skype: $10 Skype credit
     msg:
       choose: 'Velg en premie:'
       choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: Du har fortent ein premie! (Berre for amerikanske elevar)
+      earned: Du har fortjent en premie! (Kun amerikanske elever)
       not_earned_title: Fullfør veiledninga og få premier (Berre for amerikanske elevar)
-      not_earned: 'Lær teknikkane frå datavitskapen, samle alle %{num_trophies} pokalane
-        og få ordentlige premiar. Du kan velje mellom 10GB gratis lagringsplass Dropbox,
-        $10 i Skype-kreditt, og gratis nedlasting av spel. Merk: tilbodet gjeld berre
-        for amerikanske elevar, og berre så lenge lageret rekk.'
+      not_earned: 'Lær alle informatikkbegrepene, samle alle %{num_trophies} pokalene,
+        og få ordentlige premier. Du kan velge mellom et $10 iTunes-gavekort, 10GB
+        gratis lagringsplass på Dropbox, $10 i Skype-kreditt, og gratis spill nedlastinger.
+        Merk: tilbudet er bare for amerikanske elever, og bare så lenge som lageret
+        rekker.'
       teacher:
-        earned: 15 eller flere studenter samlet alle de %{num_trophies} pokalene.
-          Du har vunnet en lærerpremie! (Kun for lærere i USA)
-        not_earned_title: Undervis klassen, tjen opp til $1000 i  <a target="_blank"
-          href="http://DonorsChoose.org">DonorsChoose.org</a> kreditt (Kun amerikanske
-          lærere)
+        earned: 15 eller fleire elevar samla alle %{num_trophies} trofea. Du har vunne
+          ein lærarpremie! (Gjeld berre amerikanske lærarar)
+        not_earned_title: Lær klassen, ten opp til $1000 i <a target="_blank" href="http://DonorsChoose.org">
+          DonorsChoose.org</a> kreditt (gjeld berre amerikanske lærarar)
         not_earned: 'KUN I USA!: For å belønne første gangs lærere, kan du tjene opp
           til $1000 i <a href="http://DonorsChoose.org"> DonorsChoose.org</a> studiepoeng
           for å lede et klasserom gjennom kurset. For å kvalifisere, må du lede et
@@ -231,52 +231,52 @@
             brukes av lærere i amerikanske offentlige skoler.
   crud:
     new_model: Ny %{model}
-    show: Vis
+    show: vis
     edit: Rediger
     edit_model: Rediger %{model}
     update: Oppdater
-    destroy: "Ødelegg"
+    destroy: Ødelegg
     back: Tilbake
     confirm: Er du sikker?
-    created: "%{model} blei oppretta."
-    updated: "%{model} blei oppdatert."
-    destroyed: "%{model} blei sletta."
+    created: '%{model} ble opprettet.'
+    updated: '%{model} ble oppdatert.'
+    destroyed: '%{model} blei sletta.'
     access_denied: Du har ikkje tilgang til denne %{model}.
   nav:
     header:
-      finished_hoc: Eg har fullført Kodetimen min
-      sign_in_to_save: Logg inn for å lagre framgangen
+      finished_hoc: Jeg har fullført min Kodetimen
+      sign_in_to_save: Logg inn for å lagre fremdrift
       free_play:
         playlab: Lag ein app
         artist: Teikn noko
     user:
-      classroom: Lærerens startside
+      classroom: Lærar heimeside
       label: Hei %{username}
-      stats: Framgangen min
-      settings: Kontoen min
-      prizes: Premiar
+      stats: Min fremdrift
+      settings: Min konto
+      prizes: Premier
       logout: Logg ut
       signin: Logg inn
       signup: Meld deg på
       already_registered: Alt registrert?
     popup:
-      progress: Framgangen din
-      lines: 'Totalt tal på kodeliner: %{lines}'
+      progress: Din fremdrift
+      lines: 'Totalt antall linjer kode: %{lines}'
       close: LUKK
-      mastery: Konsept
-      puzzle_map: Nivå
-      prizes: Samle alle %{total_trophies} pokalane og vinn premiar!
-      prize_earned: Alle %{total_trophies} pokalane er samla.
-      prize_us_only: "(Berre for amerikanske elevar)"
-      prizes_link: Meir informasjon
+      mastery: Konsepter
+      puzzle_map: Stadier
+      prizes: Samle alle %{total_trophies} pokalene og vinn premier!
+      prize_earned: Alle %{total_trophies} premiene er samlet. Premien er vunnet!
+      prize_us_only: (Kun amerikanske elever)
+      prizes_link: Mer info
   teacher:
     title:
       one: 'Din lærar:'
-      other: 'Dine lærarar:'
-    remove: "(Fjern lærar)"
+      other: 'Dine lærere:'
+    remove: (Fjern lærar)
     confirm:
       remove: Er du sikker på at du vil fjerne denne læraren?
-    tools: Verkty for lærarar
+    tools: Lærerverktøy
     followers:
       section: 'Seksjon:'
       stages: 'Nivå å vise:'
@@ -288,14 +288,14 @@
       not_tried: Ikkje prøvd enno
       activity: Viser elevens aktivitet i dei siste %{hours} %{plural}
       no_section: Ikkje tilordna ein seksjon
-      trophies: Pokalar
+      trophies: pokaler
     students:
-      name: Namn
-      username: Brukarnamn
-      password: Passord
-      manage: Administrer elevar
+      name: Navn
+      username: brukernavn
+      password: passord
+      manage: Administrer elever
       dashboard: Gå til læraren sitt oversyn
-      add: Legg til elevar
+      add: Legg til elever
       remove: fjern elev
       confirm_remove: Er du sikker på at du vil fjerne denne eleven?
       help_reassign: For å dele klassa inn i fleire seksjonar, vel ut dei elevane
@@ -320,34 +320,35 @@
       secret: Hemmelighet
       grade: Karakter
       course: Leksjon
-      rename: gi nytt namn
+      rename: gi nytt navn
       edit: rediger
-      delete: slett
+      delete: Slett
       confirm_delete: Er du sikker på at du vil slette denne seksjonen?
       email: Send e-post
-    rollup: Framdrift Oversyn
-    activity: Siste aktivitetar i klassa
+    rollup: Fremdriftsoversikt
+    activity: Nylig klasseaktivitet
     user_not_found: Læraren eller eleven fans ikkje
-    cant_remove_student_no_email: "%{student_name} kan ikke fjernast som din elev
-      fordi %{student_name} ikkje har registrert ei e-postadresse"
-    cant_remove_teacher_no_email: "%{teacher_name} kan ikke fjernast som læraren din
-      fordi du ikkje har registrert ei e-postadresse"
-    student_teacher_disassociated: "%{teacher_name} er fjerna som lærar for %{student_name}"
+    cant_remove_student_no_email: '%{student_name} kan ikke fjernast som din elev
+      fordi %{student_name} ikkje har registrert ei e-postadresse'
+    cant_remove_teacher_no_email: '%{teacher_name} kan ikke fjernast som læraren din
+      fordi du ikkje har registrert ei e-postadresse'
+    student_teacher_disassociated: '%{teacher_name} er fjerna som lærar for %{student_name}'
   user:
     email_confirm_needed: 'E-postadressa er ikkje stadfesta:'
     email_resend_confirm: Send ny stadfesting
-    new_password_hint: "(la stå tomt dersom du ikkje vil forandre det)"
-    current_password_hint: "(vi treng passordet ditt for å stadfeste endringane dine)"
+    new_password_hint: (la stå tomt hvis du ikke vil endre det)
+    current_password_hint: (vi trenger ditt gjeldende passord for å bekrefte dine
+      endringer)
     cancel:
-      title: Steng kontoen min
-      hint: Ulykkeleg?
-      button: Steng kontoen min
+      title: Avslutt kontoen min
+      hint: Utilfreds?
+      button: Avslutt kontoen min
   user_level:
     completed: Fullført
     tried: Forsøkt
   user_stats:
-    recent_activity: Nyleg aktivitet
-    show_more: Vis meir
+    recent_activity: Nylig aktivitet
+    show_more: Vis mer
     classroom_activity: Aktivitet utan datamaskinar
   home:
     title: Kodestudio
@@ -358,53 +359,54 @@
     teacher_reg_link: Påmelding for lærar
     signin_directions: Bruke ein konto for å fylgje framgangen. <br/> Lærerarar kan
       fylgje med heile klassa.
-    teacher_dashboard: Sjå oversikta over framgangen
-    teacher_student_count_one: Du har %{count} elev.
-    teacher_student_count: Du har %{count} elevar.
-    teacher_averages: I gjennomsnitt har elevane dine fått %{trophy_average} av totalt
+    teacher_dashboard: Se fremdriftsoversikt
+    teacher_student_count_one: Du har %{count} elever.
+    teacher_student_count: Du har %{count} elever.
+    teacher_averages: I gjennomsnitt har dine elever fått %{trophy_average} av totalt
       %{trophy_max}  pokaler for "Konseptmestring".
     teacher_print_certificates: Skriv ut diplomar til elevar som fullfører dette kurset
-    teacher_read_blog: Les om nyheiter og oppdateringar av materiellet vårt i lærerbloggen
+    teacher_read_blog: Les om nyheter og oppdateringer til materiellet vårt i lærerbloggen
     classroom: Ditt klasserom
-    student_progress: Di læringskurve
-    student_stats: Du har fått %{trophy_count} av maksimalt %{trophy_max} pokalar
-      for å mestre konsept.
+    student_progress: Din læringskurve
+    student_stats: Du har fått %{trophy_count} av maks %{trophy_max} pokaler for Konseptmestring.
     student_left_off: 'Der du slapp:'
-    student_finished: Du har fullført alle leksjonane. Vel eit anna opplegg  %{online_link}
+    student_finished: Du har fullført alle øvelsene. Velge et annet opplegg  %{online_link}
       eller kurs ved %{local_school_link}
-    local_school: den lokale skulen
+    local_school: den lokale skolen
     online: på nett
-    see_details: Se detaljar
+    see_details: Se detaljer
     prize_info: 'Premier for deltaking (gjeld berre offentleg lærerarar i USA): opp
       til $1000 i klasseromsmidler.'
     tryfirst: 'Eller du kan prøve først og registrere deg seinare:'
-    trynow: Prøv no
-    add_hint_help: Ver snitt og hjelp oss med å legge inn smarte hint i Code.org-innføringskursa
-    20hour_overview: Dette kurset på 20 timar introduserer grunnleggjande informasjonsvitskap
-      og prinsipp frå programmering. Kurset er utvikla for bruk i 5. klasse og oppover,
-      men det er morosamt å lære for alle aldersgruppe.
+    trynow: Prøv nå
+    add_hint_help: Vennligst hjelp oss med å legge inn smarte hint i Code.org-innføringskursene
+    20hour_overview: Denne 20-timers kurset introduserer kjernebegreper innen informatikk
+      og programmering. Kurset er utviklet for bruk i 5.klasse og oppover, men det
+      er morsomt å lære for alle aldersgrupper.
     test_videos_help: Prøv den nye videospelaren på skulen din
     try_beta_courses: Nyheit! Prøv betaversjonar av kursa våre for elevar på barnetrinnet
     use_as_teacher: Bruk denne nettsida som lærar
-    heading_elementary: "<h2>20 timars kurs for</h2><h1>barnetrinnet</h1>"
-    heading_apps: "<h2>Moro for</h2><h1>Alle</h1>"
-    heading_legacy: "<h2>Våre generelle kurs for</h2><h1>Alle aldrar</h1>"
+    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
+    heading_elementary: <h2>20 timars kurs for</h2><h1>barnetrinnet</h1>
+    heading_apps: <h2>Moro for</h2><h1>Alle</h1>
+    heading_legacy: <h2>Våre generelle kurs for</h2><h1>Alle aldrar</h1>
     your_gallery: Galleri
   gender:
     male: Mann
     female: Kvinne
-    none: Foretrekker å ikkje svare
+    none: Foretrekker å ikke svare
   user_type:
     student: student
-    teacher: Lærer
+    teacher: Lærar
   footer:
     help_from_html: Ingeniørar frå Google, Microsoft, Facebook og Twitter hjelpte
       til med å lage denne guiden.
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
       Alle rettar reserverte.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
       Arts Inc. Alle rettar reserverte.
+    powered_by_aws: Powered by Amazon Web Services
     feedback: Gi tilbakemelding
-    translate: Hjelpe oss med å omsetje til ditt språk
+    translate: Hjelpe oss med å oversette til ditt språk
     support: Brukarstøtte
     support_url: http://support.code.org/
     tos: Vilkår
@@ -412,20 +414,20 @@
     secure: Sikker versjon
   reference_area:
     title: Trenger du hjelp?
-    subtitle: Sjå desse videoane og tipsa
-    teacher: Sjå løysinga
-    auth_error: Du er ikkje autorisert å sjå løysinga.
+    subtitle: Se disse videoene og tipsene
+    teacher: Se løsningen
+    auth_error: Du er ikke autorisert å se løsningen.
     submit: Endre startposisjonen for artisten
     direction: Startkurs (i grader)
   video:
     tab: Video.
-    notes: Ingen video? Vis forklaring.
+    notes: Ingen video? Vis notater.
     notes_coming_soon: Forklaringar til denne videoen kjem snart.
-    autoplay_option: Automatisk visning av videoar
+    autoplay_option: Autovisning av videoer
     download: Last ned video
   compatability:
     working:
-      header: Vi arbeider med å lage støtte for nettlesaren din.
+      header: Vi arbeider med å lage støtte for din nettleser.
       message: Code.org brukar moderne web-teknologi. Dette gjør nettstaden raskare
         å bruke. Nettlesaren støtter ikkje alle nødvnedige funksjonar, og det kan
         oppstå problemer medan du brukar denne delen av nettstaden. Hjelp oss ved
@@ -434,7 +436,7 @@
         som blir støtta</a>.
       hide_this_warning: Skjul denne advarselen
     upgrade:
-      header: Ver snill og oppgrade nettlesaren din.
+      header: Vennligst oppgrader din nettleser.
       message: Code.org brukar moderne web-teknologi. Dette gjer nettstaden raskere
         å bruke. Nettlesaren din støtter dessverre ikkje alle funksjonane som kreves
         for å køyre denne delen av nettstaden. <br/> <br/>For å fortsette installer
@@ -442,10 +444,10 @@
         href='#'> forsøke å vise sida</a>, men du må regne med at nokre funksjonar
         manglar/ikkje verkar.
       button: Gå til lista over støtta nettlesarar
-  slow_loading: Dette tar lengre tid enn vanleg...
-  try_reloading: Last sida på nytt
+  slow_loading: Dette tar lengre tid enn vanlig...
+  try_reloading: Last siden på nytt
   next_stage: Ferdig! Fortsett til neste nivå
-  download_pdf: "Åpne lista over oppgåver"
+  download_pdf: Åpne oppgavelisten
   lesson_plan: Plan over leksjonar
   view_lesson_plan: Vis oversyn over leksjonar
   pdf_download: Last ned PDF
@@ -456,7 +458,7 @@
     bounce_og_title: Sjekk ut sprette-spelet mitt
     flappy_og_title: Sjekk ut Flappy-spelet mitt
     studio_og_title: Sjekk ut Play Lab App'en min
-    check_out_what_i_made: Sjekk ut det jeg lagde
+    check_out_what_i_made: Sjekk ut det eg har laga
     og_description: Eg skreiv koden sjølv med Code.org
     phone_number_not_allowed: Det ser ut som om det er eit telefonnummer i det. Prøv
       å endre teksten.
@@ -476,21 +478,23 @@
       unused: Ubrukte nivå
   upsell:
     hoc:
-      title: Kodetimen
+      title: Hour of Code (kodetimen)
       body: Prøv grunnleggjande i datavitskap. Millionar andre har prøvd.
     flappy:
-      title: Flakse-kode
+      title: Flappy kode
       body: Vil du lage ditt eige spel på mindre enn 10 minutt? Prøv opplæringen i
         Flaksekode!
     20hour:
       title: Introduksjonskurs
       body: Prøv vårt 20-timars introduksjonskurs i datavitskap.
     hoc2014:
-      try_new_tutorial: Prøv den nye Kodetime veiledningen i beta
-      try_frozen: Kunstner med Anna og Elsa fra Frost
+      try_new_tutorial: Prøv den nye Kodetime-leksjonen (beta)
+      try_frozen: Skap kunst med Anna og Elsa frå Frost
     gallery:
       title: Galleri
       body: View a gallery of app and artist images created by our users
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: Elevar teikna desse ved å kode!
     students_made_these_with_code: Elever laga desse ved å kode!
@@ -503,9 +507,9 @@
     want_to_make_your_own: Vil du lage din eigen?
     more: Fleire &rarr;
     caption_by_name_age: av %{name}, %{age} år
-    caption_time_ago: "%{time_ago} sidan"
+    caption_time_ago: '%{time_ago} sidan'
     header: Galleri
-    header_playlab: Play Lab
+    header_playlab: Spel-lab
     header_artist: Kunstnar
   landing:
     prerelease: Dette kurset er i <span class='betatext'> beta</span>.  Det tyder
@@ -516,7 +520,7 @@
     feedback: Gi tilbakemelding
     report_bug: Rapporter feil
     support: Få hjelp
-    support_url: "//support.code.org"
+    support_url: //support.code.org
   multi:
     wrong_title: Feil svar
     wrong_body: Svaret du har gitt er ikkje rett.  Prøv på nytt!
@@ -540,11 +544,11 @@
       name:
         20-hour:
           title: Barneskuleintroduksjon til informatikkurs (15-25 timar)
-          description: Dette kurset på 20 timar introduserer grunnleggjande informasjonsvitskap
-            og prinsipp frå programmering. Kurset er utvikla for bruk i 5. klasse
-            og oppover, men det er morosamt å lære for alle aldersgruppe.
+          description: Denne 20-timers kurset introduserer kjernebegreper innen informatikk
+            og programmering. Kurset er utviklet for bruk i 5.klasse og oppover, men
+            det er morsomt å lære for alle aldersgrupper.
         Hour of Code:
-          title: Kodetimen
+          title: Hour of Code (kodetimen)
           description: ''
         edit-code:
           title: Rediger kode
@@ -556,14 +560,14 @@
           title: Bygger
           description: ''
         flappy:
-          title: Flakse-kode
+          title: Flappy kode
           description: Vil du lage ditt eige spel på mindre enn 10 minutt? Prøv opplæringen
             i Flaksekode!
         jigsaw:
           title: Puslespill
           description: ''
         step:
-          title: Tren
+          title: Trinn
           description: ''
         sample_level_builder:
           title: Eksempelkode for nivå
@@ -579,7 +583,7 @@
     for kundestøtte. Du kan bla gjennom <a href="http://support.code.org"> support.code.org</a>
     uten å logge på eller be en forelder eller lærer å kontakte oss for deg.
   progress:
-    not_completed: ikke fullført
+    not_completed: ikkje fullført
     completed_too_many_blocks: fullført, for mange blokker
-    completed_perfect: Perfekt fulført
+    completed_perfect: Perfekt fullført
     furthest_level_attempted: fremste nivå forsøkt

@@ -115,11 +115,11 @@ ja:
     subject: 私のクラス (Code.org) に参加します。
     body: |
       どうぞ下のリンクを使ってコンピュータ科学のチュートリアルにサインアップしてくださいい（Code.org から、私とあなたの「先生」として） 。
-
+      
       %{link}
-
+      
       チュートリアルは、視覚的に魅力的な楽しい、シンプル、ガイド付きのゲームのような経験を使用してコンピュータ ・ サイエンスの基本的な概念を習います。ビル ・ ゲイツ氏、Mark Zuckerbergさん、アングリーバード、地球　ｖｓ。ゾンビからコードを学ぼう ！:-)
-
+      
       %{name}
   follower:
     invite_sent: 招待状を送りました
@@ -213,7 +213,7 @@ ja:
         playlab: アプリを作る
         artist: なにか絵を描く
     user:
-      classroom: Teacher Home Page
+      classroom: 先生用ホームページ
       label: 'こんにちは  %{username}'
       stats: 私のプログレス
       settings: 私のアカウント
@@ -336,7 +336,8 @@ ja:
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
-    heading_elementary: '<h2>20 時間コース</h2><h1>小学生向け</h1>'
+    heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
+    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
     heading_apps: '<h2>お楽しみ</h2><h1>誰でも</h1>'
     heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
     your_gallery: Gallery
@@ -346,10 +347,11 @@ ja:
     none: 答えたくないです。
   user_type:
     student: 生徒
-    teacher: Teacher
+    teacher: 先生
   footer:
     help_from_html: このチュートリアルを作るにあたって、Google・Microsoft・Facebook・Twitterのエンジニアがサポートしました。
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
+    powered_by_aws: Powered by Amazon Web Services
     feedback: フィードバックを提供します。
     translate: あなたの言語に翻訳をお手伝い
     support: Support
@@ -426,6 +428,8 @@ ja:
     gallery:
       title: Gallery
       body: View a gallery of app and artist images created by our users
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: Students made these with code!
@@ -488,7 +492,7 @@ ja:
           title: ジグソーパズル
           description: ""
         step:
-          title: Step
+          title: ステップ
           description: ""
         sample_level_builder:
           title: Sample Level Builder

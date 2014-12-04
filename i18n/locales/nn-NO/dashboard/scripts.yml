@@ -27,11 +27,11 @@ nn:
           title: Kurs 1
           Artist 2: Kunstnar 2
           Happy Maps: Glade Kart
-          Move it, Move it: Flytt, flytt
-          "Real-life Algorithms: Plant a Seed": 'Verkelege algoritmar: Plante eit frø'
-          Building a Foundation: Bygge eit fundament
+          Move it, Move it: Flytte den, flytte den
+          "Real-life Algorithms: Plant a Seed": 'Virkelige algoritmer: Plante et frø'
+          Building a Foundation: Bygg ett grunnlag
           Getting Loopy: Me blir sløyfete
-          The Big Event: Den store hendinga
+          The Big Event: Den store begivenheten
           Going Places Safely: Går steder trygt
           description: Kurs 1 er laga for å la tidlege lesarar med å lage dataprogram som kan hjelpe dei med å lære å samarbeide med andre, å utvikle problemløysingsevner og med uthaldenheit gjennom krevjande oppgåver. Ved slutten av dette kurset lagar studenten sitt eiget spel eller sin eigen historie som dei kan dele. Tilrådd for elevar i 1. klasse.
           "Bee: Sequence": 'Bier: Rekkefølge'
@@ -40,33 +40,34 @@ nn:
           "Maze: Loops": 'Labyrint: Sløyfer'
           "Bee: Loops": 'Bier: Løkker'
           "Studio: Create a Story": 'Spel-lab: Lag ei historie'
-          description_short: Kurs 1 er laga for tidlege lesarar. Tilrådd for elevar i 1. klasse.
           "Artist: Loops": 'Kunstnar: Løkker'
+          description_audience: Ages 4+ (pre-readers)
+          description_short: Course 1 is designed for early readers.
         course2:
           The Maze: Labyrinten
           Suzi: Suzi
-          The Artist: Kunstnaren
+          The Artist: Kunstneren
           Artist Debugging: Kunstnar Feilsøking
-          Bounce: Sprett
+          Bounce: sprett
           "Studio: Create a Story": 'Spel-lab: Lag ei historie'
-          Artist Loops: Kunstnar Løkker
+          Artist Loops: Kunstner løkker
           Bee Conditionals: Bier Vilkår
           Flappy: Flappy
           title: Kurs 2
-          Bee Loops: Bier Løkker
-          Artist Functions: Kunstnar Funksjonar
+          Bee Loops: Bie løkker
+          Artist Functions: Kunstner funksjoner
           The Artist Debugging: Kunstnaren Feilsøking
-          Bee Debugging: Bier Feilsøking
-          Bee Functions: Bier Funksjonar
-          Maze Loops: 'Labyrint: Sløyfer'
-          Graph Paper Programming: Programmering på millimeterpapir
+          Bee Debugging: Bie feilsøking
+          Bee Functions: Bie funksjoner
+          Maze Loops: Labyrint løkker
+          Graph Paper Programming: Millimeterpapirprogrammering
           "Real-life Algorithms: Paper Planes": 'Verkelege algoritmar: Papirfly'
           Getting Loopy: Me blir sløyfete
-          Relay programming: Programmering med relé
+          Relay programming: Relé programmering
           Conditionals: Betingelser
           Binary Bracelets: Binær armbånd
-          The Big Event: Den store hendinga
-          Your Digital Footprint: Dine digitale fotspor
+          The Big Event: Den store begivenheten
+          Your Digital Footprint: Dine digitale fotavtrykk
           description: Kurs 2 er laga for elevar som kan lese, men ikkje har tidlegere erfaring med programmering. I dette kurset vil elevane lage program for å løyse problem, og utvikle interaktive spel eller historier dei kan dele. Tilrådd for 2.-5.klasse.
           "Maze: Sequence": 'Labyrint: sekvens'
           "Artist: Sequence": 'Kunstnar: Sekvens'
@@ -76,28 +77,29 @@ nn:
           "Bee: Debugging": 'Bier: Feilsøking'
           "Artist: Debugging": 'Kunstnar: Feilsøking'
           "Bee: Conditionals": 'Bier: Vilkår'
-          description_short: 'Kurs 2 er laga for studentar som kan lese.  Tilrådd for 2.-5. klasse.'
           "Artist: Sequence2": 'Kunstnar: Sekvens2'
           "Maze: Sequence2": 'Labyrint: Sekvens2'
           "Artist: Nested Loops": 'Kunstnar: Løkker inni løkker'
+          description_audience: 'Ages  6+ (reading required)'
+          description_short: Course 2 is designed for students who can read.
         course3:
           The Maze: Labyrinten
           "Studio: Create a Story": 'Spel-lab: Lag ei historie'
-          The Artist: Kunstnaren
+          The Artist: Kunstneren
           title: Kurs 3
-          Artist Functions: Kunstnar Funksjonar
+          Artist Functions: Kunstner funksjoner
           Artist For Loops: Kunstnar For-løkker
           Artist Nested Loops: Kunstnar Løkker inni løkker
           Bee Conditionals: Bier Vilkår
           Bee Nested Loops: Bier Løkker inni løkker
           Bee Debuggin: Bier Feilsøking
-          Bee Debugging: Bier Feilsøking
-          Bee Functions: Bier Funksjonar
+          Bee Debugging: Bie feilsøking
+          Bee Functions: Bie funksjoner
           Artist Functions with Params: Kunstnar Funksjonar med parameter
-          Bounce: Sprett
+          Bounce: sprett
           Maze Conditionals: Labyrint Vilkår
           Artist Functions with Parameters: Kunstnar Funksjonar med parameter
-          Computational Thinking: Programmeringstenking
+          Computational Thinking: Programmeringstenkning
           Functional Suncatchers: Fungerande solfangarar
           Songwriting Parameters: Låtskriving Parameter
           Dice Race: Terning Kappløp
@@ -117,7 +119,6 @@ nn:
           "Farmer: While Loops": 'Bonde: Medan-løkker'
           "Bee: Nested Loops": 'Bier: Løkker inni løkker'
           "Bee: Debugging": 'Bier: Feilsøking'
-          description_short: 'Kurs 3 er ein oppfølgar ar kurs 2.  Tilrådd for 4.-5. klasse.'
           Maze2: Labyrint2
           Artist2: Kunstnar2
           "Artist: Functions2": 'Kunstnar: Funksjonar2'
@@ -130,111 +131,114 @@ nn:
           "Bee: Debugging2": 'Bier: Feilsøking2'
           "Artist: Patterns": 'Artist: Mønster'
           Songwriting: Låtskriving
+          description_audience: Ages 8+ (after Course 2)
+          description_short: Course 3 is a follow-up to Course 2.
         msm:
           title: Matematikk for ungdomsskulen
           description: Privat arbeid på gang med ungdomsskule-matematikk.
-          Graph Paper Programming: Programmering på millimeterpapir
+          Graph Paper Programming: Millimeterpapirprogrammering
           Assessments: Vurderingar
           Unit 1: Eining 1
           Unit 2: Eining 2
-          Ninja Cat and the Coordinate Plane: Ninja Cat and the Coordinate Plane
-          "Calc: Circles of Evaluation": 'Calc: Circles of Evaluation'
-          "Artist: Strings and Images": 'Artist: Strings and Images'
-          Contracts: Contracts
-          "Artist: Writing Contracts": 'Artist: Writing Contracts'
-          "Calc: Defining Variables": 'Calc: Defining Variables'
-          "Play Lab: Defining Variables": 'Play Lab: Defining Variables'
-          The Design Recipe: The Design Recipe
-          "Artist: Defining Functions": 'Artist: Defining Functions'
-          "Play Lab: Defining Functions": 'Play Lab: Design Recipe'
+          Ninja Cat and the Coordinate Plane: Ninja katt og koordinatplanet
+          "Calc: Circles of Evaluation": 'Rekning: Evalueringssirklar'
+          "Artist: Strings and Images": 'Kunstnar: Tekst og bilder'
+          Contracts: Kontrakter
+          "Artist: Writing Contracts": 'Kunstnar: Å skrive kontrakter'
+          "Calc: Defining Variables": 'Rekning: Definere Variablar'
+          "Play Lab: Defining Variables": 'Spel-lab: Definere variablar'
+          The Design Recipe: Design oppskrifta
+          "Artist: Defining Functions": 'Kunstnar: Definere funksjonar'
+          "Play Lab: Defining Functions": 'Spel-lab: Design oppskrift'
           "Artist: Functions": 'Kunstnar: Funksjonar'
-          "Play Lab: Animation": 'Play Lab: Animation'
-          Booleans: Booleans
-          "Play Lab: Booleans": 'Play Lab: Booleans'
-          "Calc: Boolean Operators": 'Calc: Boolean Operators'
-          "Play Lab: Boolean Operators": 'Play Lab: Boolean Operators'
-          Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
-          "Artist: Conditionals": 'Artist: Conditionals'
-          Collision Detection and the Distance Formula: Collision Detection and the Distance Formula
-          "Play Lab: Collision Detection": 'Play Lab: Collision Detection'
-          "Unplugged: Ninja Cat and the Coordinate Plane": 'Unplugged: Ninja Cat and the Coordinate Plane'
-          "Eval: Strings and Images": 'Eval: Strings and Images'
-          "Unplugged: Contracts": 'Unplugged: Contracts'
-          "Eval: Writing Contracts": 'Eval: Writing Contracts'
-          "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
-          "Eval: Defining Functions": 'Eval: Fast Functions'
-          "Eval: Functions": 'Eval: Design Recipe'
-          "Unplugged: Booleans": 'Unplugged: Booleans'
-          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
-          "Eval: Conditionals": 'Eval: Conditionals'
-          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
-          "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
-          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
-          "Eval: Boolean Operators": 'Eval: Boolean Operators'
-          Blocks to Math: Blocks to Math
-          "Play Lab: Defining Variables (Big Game)": 'Play Lab: Defining Variables (Big Game)'
-          "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
-          "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Big Game)'
-          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
-          "Eval: Fast Functions": 'Eval: Fast Functions'
-          "Play Lab: Design Recipe": 'Play Lab: Design Recipe'
-          "Eval: Design Recipe": 'Eval: Design Recipe'
+          "Play Lab: Animation": 'Spel-lab: Animasjon'
+          Booleans: Boolske verdiar
+          "Play Lab: Booleans": 'Spel-lab: Boolske verdiar'
+          "Calc: Boolean Operators": 'Rekning: Boolske operatorara'
+          "Play Lab: Boolean Operators": 'Spel-lab: Boolske operatorar'
+          Conditionals and Piecewise Functions: Vilkår og stykkevise funksjonar
+          "Artist: Conditionals": 'Kunstnar: Vilkår'
+          Collision Detection and the Distance Formula: Deteksjon av kollisjonar og formel for avstand
+          "Play Lab: Collision Detection": 'Spel-lab: Deteksjon av kollisjon'
+          "Unplugged: Ninja Cat and the Coordinate Plane": 'Straumlaust: Ninaj katt og kooridinat planet'
+          "Eval: Strings and Images": 'Eval: Tekst og bilder'
+          "Unplugged: Contracts": 'Straumlaust: Kontrakter'
+          "Eval: Writing Contracts": 'Eval: Skrive kontrakter'
+          "Unplugged: The Design Recipe": 'Straumlaust: Design oppskrifta'
+          "Eval: Defining Functions": 'Eval: Raske funksjonar'
+          "Eval: Functions": 'Eval: Design oppskrifter'
+          "Unplugged: Booleans": 'Straumlaust: Boolske variable'
+          "Unplugged: Conditionals and Piecewise Functions": 'Straumlaust: Vilkår og stykkevise funksjonar'
+          "Eval: Conditionals": 'Eval: Vilkår'
+          "Unplugged: Collision Detection and the Distance Formula": 'Straumlaust: Deteksjon av kollisjonar og distanseformelen'
+          "Calc: Evaluation Blocks": 'Rekning: Evaluering av blokker'
+          "Unplugged: Video Games and Coordinate Planes": 'Straumlaust: Videospel og kooridinat-plan'
+          "Eval: Boolean Operators": 'Eval: Boolske operatorar'
+          Blocks to Math: Blokker til matematikk
+          "Play Lab: Defining Variables (Big Game)": 'Spel-lab: Definere variablar (Stort spel)'
+          "Play Lab: Animation (Big Game)": 'Spel-lab: Animasjon (Stort spel)'
+          "Play Lab: Boolean (Big Game)": 'Spel-lab: Boolsk (Stort spel)'
+          "Play Lab: Collision Detection (Big Game)": 'Spel-lab: Detekssjon av kollisjong (Stort spel)'
+          "Eval: Fast Functions": 'Eval: Raske funksjonar'
+          "Play Lab: Design Recipe": 'Spel-lab: Design oppskrift'
+          "Eval: Design Recipe": 'Eval: Design oppskrifter'
         playlab:
-          title: Play Lab
-          description: Lag en historie eller spill med Spill Labben!
-          Play Lab: Play Lab
-          description_short: Lag en historie eller spill med Spill Labben!
+          title: Spel-lab
+          description: Lag ein historie eller eit spel med Spel-lab!
+          Play Lab: Spel-lab
+          description_short: Lag ein historie eller eit spel med Spel-lab!
         artist:
           title: Kunstnar
-          description: Draw cool pictures and designs with the Artist!
+          description: Teikn stilige bilde og design med Kunstnaren!
           Artist: Kunstnar
-          description_short: Draw cool pictures and designs with the Artist!
+          description_short: Teikn stilige bilde og design med Kunstnaren!
         scrat:
           title: Scrat
-          description_short: Scrat short description.
-          description: Scrat long description
+          description_short: Scrat kort beskrivelse.
+          description: Scrat lang beskrivelse
           "Maze: Sequence": 'Labyrint: sekvens'
         hourofcode:
           Maze: Labyrint
-          title: Kodetimen
-          description_short: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          title: Hour of Code (kodetimen)
+          description: Prøv grunnleggjande programmering med figurane frå Angry Birds, planter mot zombiar og Scrat frå Istid!
+          description_short: Try the basics of computer science with many fun characters!
         frozen:
-          title: Code with Anna and Elsa
-          description_short: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
-          description: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
+          title: Koding med Anna og Elsa
+          description: La oss bruke kode og bli med Anna og Elsa når dei utforskar magien og skjønnheita med is. Du vil lage snøfnugg og mønster med kunstløp skøyter og skaper eit magisk vinterlandskap som du kan dele med venane dine!
           Artist: Kunstnar
+          description_short: La oss bruke kode for å bli med Anna og Elsa som utforskar den magiske og vakre isen.
         course4:
-          description_short: Students taking Course 4 should have already taken Courses 2 and 3.
-          description: Kurs 4 er laget for elever som har fullført kurs 2 og 3. Elevene vil gå nærmere innpå temaer som ble presentert i tidligere kurs, og de vil lære mer fleksible løsninger på mer komplekse problemer. Ved slutten av dette kurset vil elevene lage interaktive historier og spill som de kan dele med andre. Anbefalt for fjerde til syvende klasse.
-          "Artist: Variables": 'Artist: Variables'
-          "Bee: For Loops": 'Bee: For Loops'
+          description_short: Elevane som tek kurs 4, bør først ha teke kurs 2 og 3.
+          description: Kurs 4 er laga for elevar som har fullført kurs 2 og 3. Elevane vil gå djupare inn i programmeringsemner som blei presenterte i dei føregåande kursa og vil lære meir fleksible løysingar på meir komplekse problemer. Ved slutten av dette kurset vil elevane lage interaktive historier og spill som dei kan dele med andre. Anbefalt for fjerde til sjuande klasse.
+          "Artist: Variables": 'Kunstnar: Variablar'
+          "Bee: For Loops": 'Bier: For-løkker'
           title: Kurs 4
-          "Algorithms: Tangrams": 'Algorithms: Tangrams'
-          Variables: Variablar
-          "Play Lab: Variables": 'Spill Lab: Variabler'
-          "Play Lab: Functions with Parameters": 'Spill Lab: Funksjoner med parametere'
-          "Bee: Functions with Parameters": 'Bee: Functions with Parameters'
-          "Artist: For Loops": 'Artist: For Loops'
-          "Play Lab: For Loops": 'Play Lab: For Loops'
+          "Algorithms: Tangrams": 'Algoritmer: Tangram-puslespel'
+          Variables: Variabler
+          "Play Lab: Variables": 'Spel-lab: Variable'
+          "Play Lab: Functions with Parameters": 'Spel-lab: Funksjonar med parameter'
+          "Bee: Functions with Parameters": 'Bier: Funksjonar med parameter'
+          "Artist: For Loops": Kunstnar For-løkker
+          "Play Lab: For Loops": 'Spel-lab: For-løkker'
           "Artist: Functions": 'Kunstnar: Funksjonar'
-          "Artist: Functions with Paraqmeters": 'Artist: Functions with Paraqmeters'
-          "Unplugged: Tangrams": 'Unplugged: Tangrams'
+          "Artist: Functions with Paraqmeters": 'Kunstnar: Funksjonar med parameter'
+          "Unplugged: Tangrams": 'Struamlaust: Tangram-puslespel'
           Artist: Kunstnar
-          Bee: Bee
-          "Unplugged: Envelope Variables": 'Unplugged: Envelope Variables'
-          "Unplugged: Madlibs": 'Unplugged: Madlibs'
-          "Unplugged: For Loop Fun": 'Unplugged: For Loop Fun'
-          "Unplugged: Songwriting with Parameters": 'Unplugged: Songwriting with Parameters'
-          "Artist: Functions with Parameters": 'Artist: Functions with Parameters'
-          "Unplugged: Binary": 'Unplugged: Binary'
-          Bee Binary: Bee Binary
-          Farmer Binary: Farmer Binary
-          Maze and Bee: Maze and Bee
-          Artist Binary: Artist Binary
+          Bee: Bier
+          "Unplugged: Envelope Variables": 'Trådlaust: Konvolutt-variable'
+          "Unplugged: Madlibs": 'Straumlaust: Adjektiv-historier'
+          "Unplugged: For Loop Fun": 'Straumlaust: Moro med for-løkker'
+          "Unplugged: Songwriting with Parameters": 'Straumlaust: Låtskriving med parameter'
+          "Artist: Functions with Parameters": 'Kunstnar: Funksjonar med parameter'
+          "Unplugged: Binary": 'Straumlaust: Binær'
+          Bee Binary: 'Bier: binær'
+          Farmer Binary: Bonde binær
+          Maze and Bee: Labyrint og bier
+          Artist Binary: Kunstnar binær
+          description_audience: Ages 10+ (after Course 3)
         Course4pre:
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
+          description_short: Ei kort oppsummering av konsept for elevar som ikkje har tatt kurs 2 og 3.
+          Course 4 Prerequisite: Kurs 4 forkunnskapar
           "Maze: Sequence": 'Labyrint: sekvens'
           "Artist: Sequence": 'Kunstnar: Sekvens'
           "Artist: Loops": 'Kunstnar: Løkker'
@@ -245,8 +249,8 @@ nn:
           "Artist: Functions": 'Kunstnar: Funksjonar'
           "Bee: Debugging": 'Bier: Feilsøking'
         course4pre:
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
+          description_short: Ei kort oppsummering av konsept for elevar som ikkje har tatt kurs 2 og 3.
+          Course 4 Prerequisite: Kurs 4 forkunnskapar
           "Maze: Sequence": 'Labyrint: sekvens'
           "Artist: Sequence": 'Kunstnar: Sekvens'
           "Artist: Loops": 'Kunstnar: Løkker'
@@ -257,8 +261,8 @@ nn:
           "Artist: Functions": 'Kunstnar: Funksjonar'
           "Bee: Debugging": 'Bier: Feilsøking'
         Course4pre (Case Conflict):
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
+          description_short: Ei kort oppsummering av konsept for elevar som ikkje har tatt kurs 2 og 3.
+          Course 4 Prerequisite: Kurs 4 forkunnskapar
           "Maze: Sequence": 'Labyrint: sekvens'
           "Artist: Sequence": 'Kunstnar: Sekvens'
           "Artist: Loops": 'Kunstnar: Løkker'
@@ -269,11 +273,11 @@ nn:
           "Artist: Functions": 'Kunstnar: Funksjonar'
           "Bee: Debugging": 'Bier: Feilsøking'
         usability:
-          Intro: Intro
-          Variables and For Loops: Variables and For Loops
-          Functions and Functions with Parameters: Functions and Functions with Parameters
-          title: Usability Testing
+          Intro: Introduksjon
+          Variables and For Loops: Variablar og for-løkker
+          Functions and Functions with Parameters: Funksjonar og funksjonar med parameter
+          title: Brukbarheits testing
           description_short: ""
-          description: A selection of Course 4 levels for usability testing.
-          Variables: Variablar
-          For Loops: For Loops
+          description: Eit utval av tema om brukbarheitstesting frå kurs 4.
+          Variables: Variabler
+          For Loops: For-løkker

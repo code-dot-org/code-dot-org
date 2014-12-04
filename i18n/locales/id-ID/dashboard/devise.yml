@@ -39,7 +39,7 @@ id:
       update_needs_confirmation: Anda telah berhasil memperbarui akun anda, tetapi kita perlu memverifikasi alamat email baru Anda. Silakan periksa email Anda dan klik pada link konfirmasi untuk menyelesaikan konfirmasi alamat email baru anda.
       updated: Anda telah berhasil memperbarui akun Anda.
     sessions:
-      signed_in: Berhasil masuk.
+      signed_in: ""
       signed_out: Berhasil Keluar.
     unlocks:
       send_instructions: Anda akan menerima sebuah email dalam beberapa menit dengan instruksi cara konfirmasi akun anda.

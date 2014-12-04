@@ -10,12 +10,12 @@
     font-weight:bold">plan your Hour of Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
-  n_have_learned_an_hoc: "<h1>#</h1><h3>đã học xong khóa học</h3><h2>MỘT TIẾNG LẬP
-    TRÌNH</h2>"
+  n_have_learned_an_hoc: <h1>#</h1><h3>đã học xong khóa học</h3><h2>MỘT TIẾNG LẬP
+    TRÌNH</h2>
   anybody_can_learn: Tất cả mọi người điều có thể học.
   learn_now: Học ngay
-  petition_message: "Đăng ký tên của bạn nếu bạn nghĩ rằng mọi học sinh trong mọi
-    trường học nên có được cơ hội tìm hiểu về khoa học máy tính"
+  petition_message: Đăng ký tên của bạn nếu bạn nghĩ rằng mọi học sinh trong mọi trường
+    học nên có được cơ hội tìm hiểu về khoa học máy tính
   petition_sign_message: 'Nếu bạn đồng ý, điền tên của bạn.  Tham gia # những người
     khác.'
   name: Tên
@@ -64,10 +64,10 @@
   enter_valid_email: Vui lòng nhập một địa chỉ email hợp lệ
   get_a_certificate_message: Chúng tôi sẽ gửi cho bạn một Giấy Chứng Nhận và Thông
     Tin về việc làm thế nào để <a href='/learn/beyond'>Học Trong Vòng Một Giờ</a>
-  get_a_certificate_message_after: " Chứng chỉ của bạn được hoàn thành (Bạn đã học
+  get_a_certificate_message_after: ' Chứng chỉ của bạn được hoàn thành (Bạn đã học
     xong và lấy được Chứng Nhận). Nào, bây giờ xin hãy Tiếp tục với Khóa Học khác
-    của chúng ta  <a href='http://learn.code.org'>Khóa học 20 giờ</a>, hoặc xem thêm
-    những tùy chọn khác cho Khóa học  <a href='/learn/beyond'>Học Trong 1 Giờ</a>"
+    của chúng ta  <a href=''http://learn.code.org''>Khóa học 20 giờ</a>, hoặc xem
+    thêm những tùy chọn khác cho Khóa học  <a href=''/learn/beyond''>Học Trong 1 Giờ</a>'
   thanks_for_submitting: Cảm ơn bạn vì đã chấp nhận!
   if_you_enjoyed: Nếu bạn cảm thấy việc học Code thật thú vị thì hãy rủ bạn bè cùng
     tham gia nhé! Chúng tớ mong muốn cả thế giới có thể học về nó.
@@ -84,8 +84,8 @@
   boys: Nam
   girls: Nữ
   give_my_hour: 'Cho tôi giờ để:'
-  girls_team: "Đội nữ"
-  boys_team: "Đội nam"
+  girls_team: Đội nữ
+  boys_team: Đội nam
   tell_the_world: Nói với thê giới!
   thanks_for_voting: Cảm ơn bạn đã bỏ phiếu!
   share_on_facebook: Chia sẻ lên Facebook
@@ -93,7 +93,7 @@
   beyond_an_hour: Ngoài Một Giờ Lập Trình >
   get_started: Bắt đầu
   i_agree: Tôi đồng ý
-  participant_select: "-Chọn-"
+  participant_select: -Chọn-
   participant_student: học sinh
   participant_parent: Phụ Huynh
   participant_educator: Giáo viên
@@ -111,7 +111,7 @@
   learn_next_level: Tiếp tục đến cấp độ tiếp theo
   learn_online: Thử các khóa học trực tuyến khác
   learn_classes: Tìm một lớp học tại địa phương
-  hoc_is_here: "#HourOfCode là ở đây - kiểm tra nó xem! @codeorg"
+  hoc_is_here: '#HourOfCode là ở đây - kiểm tra nó xem! @codeorg'
   just_did_hoc: 'Tôi chỉ cần làm #HourOfCode - kiểm tra nó xem! @codeorg'
   learn_hoc: Học một Giờ lập trình
   beyond_hoc: Ngoài một giờ
@@ -122,11 +122,11 @@
     của bạn!
   help_recruit: Giúp chúng tôi tuyển dụng thêm lập trình viên!
   lines_of_code: OVER <b># NHỮNG DÒNG MÃ</b> VIẾT ĐẾN NAY.
-  lines_of_code_alt: "<b> # </b> NHỮNG DÒNG MÃ ĐƯỢC VIẾT BỞI SINH VIÊN"
+  lines_of_code_alt: '<b> # </b> NHỮNG DÒNG MÃ ĐƯỢC VIẾT BỞI SINH VIÊN'
   who_has_done_hoc: 'Những người đã hoàn thành #HourOfCode? @codeorg'
   hoc_leaderboards: Một Giờ Lập Trình Leaderboards
-  students_and_lines: "%{students} sinh viên có hoàn thành Một Giờ Lập Trình và viết%{lines}
-    những dòng lập trình."
+  students_and_lines: '%{students} sinh viên có hoàn thành Một Giờ Lập Trình và viết%{lines}
+    những dòng lập trình.'
   start_hoc: Bắt đầu một giờ lập trình ngay bây giờ
   contact_form_topic_press: Báo chí / truyền thông (phỏng vấn hoặc tham gia nói)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
@@ -142,11 +142,11 @@
   contact_form_topic_parent: Tôi là một phụ huynh
   contact_form_topic_teacher: Tôi là một giáo viên/giáo dục
   contact_form_topic_outside_us: Tôi đang ở ngoài nước Mỹ.
-  contact_form_topic_contribution: "Đóng góp từ thiện"
+  contact_form_topic_contribution: Đóng góp từ thiện
   contact_form_topic_partner: Tôi muốn là đối tác
   contact_form_topic_other: Khác
   contact_form_label_topic: Chủ đề
-  contact_form_label_email: "Địa chỉ email của bạn"
+  contact_form_label_email: Địa chỉ email của bạn
   contact_form_label_message: Tin nhắn
   contact_form_label_submit: Gửi thư
   class_submission_in_school: In school
@@ -207,8 +207,8 @@
     office hours.
   dashboard_landing_print_certificates: In giấy chứng nhận cho học sinh hoàn thành
     khóa học này
-  dashboard_landing_educator_blog: "Đọc về tin tức và cập nhật của chúng tôi tại tài
-    liệu blog giáo dục của chúng tôi"
+  dashboard_landing_educator_blog: Đọc về tin tức và cập nhật của chúng tôi tại tài
+    liệu blog giáo dục của chúng tôi
   dashboard_landing_smart_hints: Please help us to add smart hints to Code.org tutorials
   dashboard_landing_video_player: Test our new video player at your school
   dashboard_landing_progress_title: Main class progress
@@ -224,7 +224,7 @@
   dashboard_action_cancel: Huỷ
   dashboard_action_delete: Delete
   dashboard_action_confirm: Delete?
-  dashboard_action_delete_yes: "Đồng ý"
+  dashboard_action_delete_yes: Đồng ý
   dashboard_action_delete_no: Không
   dashboard_action_done: Done
   dashboard_action_required: required
@@ -321,7 +321,7 @@
   dashboard_grade_other: Khác
   dashboard_login_word: word
   dashboard_login_picture: picture
-  dashboard_login_none: "Địa chỉ email"
+  dashboard_login_none: Địa chỉ email
   dashboard_new_password: new password
   stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
     week alone:'
@@ -363,6 +363,7 @@
   more_resources_educators: More resources for teachers and educators
   participants: participants
   teachers_notes: Teacher's Notes
+  teachers_notes_hoc: 'Teachers: Read important educator notes here'
   previous: Previous
   next: Next
   older_systems: Tutorials that work on older systems
@@ -372,6 +373,7 @@
   mobile_devices: Tutorials for mobile devices
   frozen_name: Code with Anna and Elsa
   codeorg_name: Viết chương trình máy tính đầu tiên của bạn
+  codeintl_name: Viết chương trình máy tính đầu tiên của bạn
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: An introduction to JavaScript
   khanes_name: An introduction to JavaScript
@@ -393,7 +395,6 @@
   codespark_name: The Foos (pre-readers welcome)
   kodable_name: Kodable
   tynkerapp_name: Tynker - on tablets
-  hopscotch_name: 'Hopscotch: Code on your iPad'
   robomindnl_name: Program a virtual robot
   flappy_name: Make a Flappy game
   bitsbox_name: Bitsbox - make a game
@@ -406,6 +407,7 @@
   projguts_name: Rock, Paper, Scissors
   frozen_gradelevel: Ages 8+
   codeorg_gradelevel: Ages 4-104
+  codeintl_gradelevel: Ages 4-104
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Middle school +
   khanes_gradelevel: Middle school +
@@ -427,7 +429,6 @@
   codespark_gradelevel: Elementary
   kodable_gradelevel: Elementary
   tynkerapp_gradelevel: Ages 5-13
-  hopscotch_gradelevel: Middle school +
   robomindnl_gradelevel: Ages 8-13
   flappy_gradelevel: Ages 4-104
   bitsbox_gradelevel: Elementary
@@ -440,6 +441,7 @@
   projguts_gradelevel: Ages 10-13
   frozen_platformtext: Modern browsers + tablets
   codeorg_platformtext: Modern browsers, smartphones, tablets
+  codeintl_platformtext: Modern browsers, smartphones, tablets
   thinkersmithspanish_platformtext: Unplugged
   khan_platformtext: Modern Web browsers
   khanes_platformtext: Modern Web browsers
@@ -461,7 +463,6 @@
   codespark_platformtext: iOS, Android (or web browser)
   kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, Android tablets
-  hopscotch_platformtext: iPad
   robomindnl_platformtext: Modern web browsers, Mobile web
   flappy_platformtext: Modern browsers, smartphones, tablets
   bitsbox_platformtext: Modern web browsers
@@ -475,6 +476,7 @@
   frozen_shortdescription: Let's use code to join Anna and Elsa as they explore the
     magic and beauty of ice.
   codeorg_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
+  codeintl_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Learn to draw in JavaScript
   khanes_shortdescription: Learn to draw in JavaScript
@@ -500,7 +502,6 @@
   kodable_shortdescription: A fun iPad game to teach computer programming concepts
   tynkerapp_shortdescription: Learn to code by solving fun puzzles and build your
     own mobile games.
-  hopscotch_shortdescription: Learn visual programming on an iPad
   robomindnl_shortdescription: Write code for a virtual robot
   flappy_shortdescription: Make your own game - Flappy Bird, Shark, or Submarine
   bitsbox_shortdescription: Code a series of apps to play and share, using real Javascript.
@@ -516,6 +517,10 @@
     magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
     and make a winter wonderland that you can then share with your friends!
   codeorg_longdescription: Learn the basic concepts of Computer Science with drag
+    and drop programming. This is a game-like, self-directed tutorial starring video
+    lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
+    repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
+  codeintl_longdescription: Learn the basic concepts of Computer Science with drag
     and drop programming. This is a game-like, self-directed tutorial starring video
     lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
     repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
@@ -595,9 +600,6 @@
     coding puzzles and learn programming concepts in each level. Personalize games
     with animated characters, multiple levels and rich props. Lots of fun activities
     to choose from!
-  hopscotch_longdescription: Student-guided tutorial on the iPad using the Hopscotch
-    programming language. Students will build games and apps for their iPad on their
-    iPad. Students can work individually or with friends (up to 3 per iPad).
   robomindnl_longdescription: 'Students learn the basics of programming by controlling
     their own virtual robot. The online course is fully self-contained with short
     presentations, movies, quizzes and automatic guidance/hints to help with the programming
@@ -957,8 +959,3 @@
     program because we believe play is a powerful teacher. Whether you're an educator
     or a parent, SPRK lessons give kids a fun crash course in programming robots while
     sharpening their skills in math and science.
-  codeintl_name: "Write your first computer program"
-  codeintl_gradelevel: "Ages 4-104"
-  codeintl_platformtext: "Modern browsers, smartphones, tablets"
-  codeintl_shortdescription: "Learn to code with Mark Zuckerberg and Angry Birds!"
-  codeintl_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages."

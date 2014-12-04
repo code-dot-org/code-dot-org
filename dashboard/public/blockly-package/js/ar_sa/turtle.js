@@ -2607,6 +2607,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -2619,7 +2620,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -2629,16 +2632,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -14129,8 +14122,16 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
     // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
     Turtle.ctxPattern.rotate(Math.PI * (Turtle.heading - 90) / 180);
 
-    var clipSize = Math.min(Turtle.smoothAnimateStepSize, lineDistance);
-
+    var clipSize;
+    if (lineDistance % Turtle.smoothAnimateStepSize === 0) {
+      clipSize = Turtle.smoothAnimateStepSize;
+    } else if (lineDistance > Turtle.smoothAnimateStepSize) {
+      // this happens when our line was not divisible by smoothAnimateStepSize
+      // and we've hit our last chunk
+      clipSize = lineDistance % Turtle.smoothAnimateStepSize;
+    } else {
+      clipSize = lineDistance;
+    }
     if (img.width !== 0) {
       Turtle.ctxPattern.drawImage(img,
         // Start point for clipping image
@@ -14138,7 +14139,7 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
         // clip region size
         clipSize * retina, img.height,
         // some mysterious hand-tweaking done by Brendan
-        Math.round((Turtle.stepDistanceCovered - 7) * retina), Math.round((- 18) * retina),
+        Math.round((Turtle.stepDistanceCovered - clipSize - 2) * retina), Math.round((- 18) * retina),
         clipSize * retina, img.height);
     }
 
@@ -14816,7 +14817,7 @@ exports.end = function(d){return "نهاية"};
 
 exports.emptyBlocksErrorMsg = function(d){return "قطعة \" أكرر\" أو \" اذا \" تحتاج ان تحتوي على قطع اخرى داخلها من اجل العمل . تأكد من القطع الداخلية بحيث يجب ان تكون تناسب القطع المحتوية في الداخل ."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "قطعة الدالة تحتاج إلى القطع الأخرى بداخله لكي يعمل."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "قطعة الدالة تحتاج إلى القطع الأخرى بداخلها لكي تعمل."};
 
 exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
 
@@ -14872,7 +14873,7 @@ exports.numLinesOfCodeWritten = function(d){return "لقد كتبت "+p(d,"numLi
 
 exports.play = function(d){return "إلعب"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "طباعة"};
 
 exports.puzzleTitle = function(d){return "اللغز "+v(d,"puzzle_number")+" من "+v(d,"stage_total")};
 
@@ -14888,7 +14889,7 @@ exports.score = function(d){return "النتيجة"};
 
 exports.showCodeHeader = function(d){return "اظهار الكود البرمجي"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "إظهار القطع"};
 
 exports.showGeneratedCode = function(d){return "اظهار الكود البرمجي"};
 
@@ -14916,11 +14917,11 @@ exports.hintRequest = function(d){return "شاهد تلميحاً"};
 
 exports.backToPreviousLevel = function(d){return "الرجوع إلى المستوى السابق"};
 
-exports.saveToGallery = function(d){return "حفظ في معرض الصور الخاص بك"};
+exports.saveToGallery = function(d){return "حفظ إلى المعرض"};
 
-exports.savedToGallery = function(d){return "حفظ في معرض الصور الخاص بك!"};
+exports.savedToGallery = function(d){return "تم الحفط في المعرض!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "عذراً، لا يمكن أن نشارك هذا البرنامج."};
 
 exports.typeFuncs = function(d){return "الدوال المتاحة: %1"};
 
@@ -14928,7 +14929,7 @@ exports.typeHint = function(d){return "تذكر أن الأقواس والفوا
 
 exports.workspaceHeader = function(d){return "أجمع القطع هنا: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "أكتب الكود البرمجي جافاسكريبت هنا"};
 
 exports.infinity = function(d){return "ما لانهاية"};
 
@@ -14952,7 +14953,7 @@ exports.hintHeader = function(d){return "إليك نصيحة:"};
 
 exports.genericFeedback = function(d){return "انظر كيف انتهى الأمر، و حاول إصلاح برنامجك."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "انظر ما الذي صنعته"};
 
 
 },{"messageformat":57}],45:[function(require,module,exports){
@@ -14996,19 +14997,19 @@ exports.colourTooltip = function(d){return "تغيير لون القلم."};
 
 exports.createACircle = function(d){return "إنشاء دائرة"};
 
-exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+exports.createSnowflakeSquare = function(d){return "أنشء ندفة الثلج مربع الشكل"};
 
-exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+exports.createSnowflakeParallelogram = function(d){return "أنشئ ندفة الثلج من نوع متوازي أضلاع"};
 
-exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+exports.createSnowflakeLine = function(d){return "أنشئء ندفة الثلج على شكل خط"};
 
-exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+exports.createSnowflakeSpiral = function(d){return "أنشئ ندفة الثلج على شكل دوامة"};
 
-exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+exports.createSnowflakeFlower = function(d){return "أنشئ ندفة الثلج على شكل زهرة"};
 
-exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+exports.createSnowflakeFractal = function(d){return "أنشئ ندفة الثلج من النوع النمطي هندسي متكرر"};
 
-exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+exports.createSnowflakeRandom = function(d){return "أنشئ ندفة الثلج نوع عشوائي"};
 
 exports.createASnowflakeBranch = function(d){return "إنشاء فرع رقاقة الثلج"};
 
@@ -15026,7 +15027,7 @@ exports.drawACircle = function(d){return "رسم دائرة"};
 
 exports.drawAFlower = function(d){return "إرسم زهرة"};
 
-exports.drawAHexagon = function(d){return "إرسم مسدس"};
+exports.drawAHexagon = function(d){return "إرسم شكل سداسي"};
 
 exports.drawAHouse = function(d){return "ارسم بيت"};
 
@@ -15050,7 +15051,7 @@ exports.drawUpperWave = function(d){return "إرسم الموجة العليا"}
 
 exports.drawLowerWave = function(d){return "إرسم الموجة السفلى"};
 
-exports.drawStamp = function(d){return "draw stamp"};
+exports.drawStamp = function(d){return "أرسم طابع"};
 
 exports.heightParameter = function(d){return "الأرتفاع"};
 
@@ -15070,7 +15071,7 @@ exports.jumpNorthTooltip = function(d){return "حرك الفنان للشمال 
 
 exports.jumpSouthTooltip = function(d){return "حرك الفنان للجنوب دون ترك أي علامات."};
 
-exports.jumpWestTooltip = function(d){return "حرك الفنان للشمال دون ترك أي علامات."};
+exports.jumpWestTooltip = function(d){return "يتحرك الفنان للغرب دون ترك أي علامات."};
 
 exports.lengthFeedback = function(d){return "لقد عملتها بشكل صحيح عدا ضبط طول التحرك."};
 
@@ -15104,11 +15105,11 @@ exports.penTooltip = function(d){return "أرفع أو أخفض القلم , ل�
 
 exports.penUp = function(d){return "رفع القلم"};
 
-exports.reinfFeedbackMsg = function(d){return "هل هذا يشبه ماتريده؟ يمكنك الضغط على زر \"حاول مرة اخرى\" لمشاهدة الرسم الخاص بك."};
+exports.reinfFeedbackMsg = function(d){return "ها هو الرسم الخاص بك! إستمر في العمل عليه  أو توجه إلى اللغز التالي."};
 
 exports.setColour = function(d){return "تعيين اللون"};
 
-exports.setPattern = function(d){return "set pattern"};
+exports.setPattern = function(d){return "تعيين نمط"};
 
 exports.setWidth = function(d){return "تعيين العرض"};
 
@@ -15118,7 +15119,7 @@ exports.showMe = function(d){return "أرني"};
 
 exports.showTurtle = function(d){return "اظهار الاعب"};
 
-exports.sizeParameter = function(d){return "size"};
+exports.sizeParameter = function(d){return "الحجم"};
 
 exports.step = function(d){return "خطوة"};
 
