@@ -110,12 +110,12 @@ max_age: 60
       url: "/dashboardapi/print_option",
       type: "get",
     }).done(function(data) {
+      var item = $("#print_frame")[0];
+      item.contentWindow.document.getElementsByTagName("img")[0].style.width="100%";
       $("#print_option").html(data);
       var printButton = $('#print_button');
       if (printButton) {
         printButton.click(function() {
-        var item = $("#print_frame")[0];
-          item.contentWindow.document.getElementsByTagName("img")[0].style.width="100%";
           if (item.contentWindow.document.execCommand('print', false, null)) {
           } else {
             item.contentWindow.print();
