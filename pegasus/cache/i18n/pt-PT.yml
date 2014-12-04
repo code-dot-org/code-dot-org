@@ -1,16 +1,16 @@
 "pt-PT":
   hello: Olá mundo
-  select_language: Please select your language
+  select_language: Por favor seleccione o seu idioma
   computer_science: Ciência da computação
   computer_science_edweek: Semana da Educação da Ciência da Computação
   csedweek_dates: 9-15 de Dezembro de 2013
-  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
-    <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">plan your Hour of Code</a>'
+  csedweek_banner_hoc: 'A <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold">Hora de Código está a chegar</a>. Relembramos todos os professores
+    e organizadores, <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold"> a planear a sua Hora de Código</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
-    none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
-  n_have_learned_an_hoc: "<h1>#</h1><h3>tentaram uma</h3><h2>HORA do CÓDIGO&trade;</h2>"
+    none; font-weight: 400"> És um professor CS? Vê outros recursos CSEdWeek</a>'
+  n_have_learned_an_hoc: <h1>#</h1><h3>já tentei uma</h3><h2>Hora de Código</h2>
   anybody_can_learn: Qualquer pessoa pode aprender.
   learn_now: Aprende agora
   petition_message: Todos os alunos em todas as escolas deviam ter a oportunidade
@@ -23,22 +23,22 @@
   twentyhours_heading: Experimenta a nossa introdução a um curso de Ciências da Computação
   twentyhours_text: Terminaste a tua primeira Hora de Código? Aprende mais sobre a
     verdadeira ciência computacional e conceitos de programação neste curso de acompanhamento.
-  hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
-    8 - 14, 2014<br/>
+  hoc2014_heading: Junte-se à <a href="http://hourofcode.com">Hora de Código</a><br/>8
+    - 14 de Dezembro de 2014<br/>
   hoc2014_students: Students
-  hoc2014_try: Try it
-  hoc2014_teachers: Teachers
-  hoc2014_host: Host it
-  hoc2014_everyone: Everyone
-  hoc2014_support: Support it
-  hoc2014_whatishoc: What is the Hour of Code?
+  hoc2014_try: Experimente
+  hoc2014_teachers: Professores
+  hoc2014_host: Apresenta-o
+  hoc2014_everyone: Toda a gente
+  hoc2014_support: Suporta-o
+  hoc2014_whatishoc: O que é a Hora de Código?
   twentyhours_trynow: Experimenta agora
-  california_heading: Ask your school to teach computer science
-  california_text: Any teacher can offer our <a href='http://learn.code.org/'>free
-    intro course</a>.  Any elementary school can <a href='http://code.org/educate/k5'>teach
-    computer science</a>. Ask high schools to <a href='http://code.org/educate/districts'>partner
-    with us.
-  california_button: Learn More
+  california_heading: Solicite à sua escola para ensinar ciências da computação
+  california_text: Qualquer professor pode oferecer os nossos <a href='http://studio.code.org/'>cursos
+    gratuitos</a>. Qualquer escola pode <a href='http://code.org/educate/k5'>ensinar
+    ciências da computação</a>. Solicite às escolas de ensino médio para efectuarem
+    <a href='http://code.org/educate/districts'>uma parceria conosco.
+  california_button: Saiba mais
   flappy_heading: Feliz "Flappy" Aniversário para Code.org
   flappy_text: Code.org fez 1 ano.<br/><br/> Festeja connosco criando o teu jogo personalizado
     <b>Flappy</b>. Cria as tuas regras de código, e partilha com os teus amigos!
@@ -51,7 +51,7 @@
     programação se-então e algoritmos básicos.
   all_ages: Todas as idades
   beginner: Iniciante
-  n_participants: "# participantes"
+  n_participants: '# participantes'
   go: Ir
   thank_you_: Obrigado!
   congratulations: Parabéns!
@@ -60,17 +60,18 @@
   enter_valid_email: Introduz um endereço de e-mail válido
   get_a_certificate_message: Vamos enviar-te um certificado e informações sobre como
     <a href='/learn/beyond'>Aprender para além de Uma Hora</a>
-  get_a_certificate_message_after: O teu certificado está a caminho. Agora, continua
-    com o nosso <a href='http://learn.code.org'>curso de 20 horas</a>, ou vê mais
-    opções para <a href='/learn/beyond'>Aprende para além de Uma Hora</a>.
+  get_a_certificate_message_after: Clique no certificado para efectuar o download
+    ou imprimi-lo. Agora, continue com os nossos <a href='http://studio.code.org'>outros
+    cursos</a>, ou veja mais opções para <a href='/learn/beyond'>aprender, para além
+    de uma Hora de Código</a>.
   thanks_for_submitting: Obrigado por submeter!
   if_you_enjoyed: Se gostaste de aprender, convida os teus amigos a experimentarem
     também! Queremos que o mundo todo aprenda.
   personalize_certificate: Personaliza o teu certificado
   share_achievement: Partilha a tua conquista
-  beyond_hour_message: Continua com o nosso <a href='http://learn.code.org'>curso
-    de 20 horas</a>, ou vê mais opções para<a href='/learn/beyond'>Aprender para além
-    de Uma Hora</a>.
+  beyond_hour_message: Continue com os nossos <a href='http://studio.code.org'>outros
+    cursos</a>, ou veja mais opções para <a href='/learn/beyond'>aprender, para além
+    de uma Hora de Código</a>.
   leaderboards_for_hoc: Classificações para a Hora do Código.
   support_url: http://support.code.org/
   country: País
@@ -85,10 +86,10 @@
   thanks_for_voting: Obrigado por votar!
   share_on_facebook: Partilha no Facebook
   share_on_twitter: Partilha no Twitter
-  beyond_an_hour: Além de UMA HORA DE CÓDIGO >
-  get_started: Começar
+  beyond_an_hour: Além de uma Hora de Código >
+  get_started: Início
   i_agree: Concordo
-  participant_select: "-Selecione-"
+  participant_select: -Selecione-
   participant_student: estudante
   participant_parent: Pais
   participant_educator: Educador
@@ -97,8 +98,8 @@
   i_am_a: Eu sou um
   never_spam: Nós nunca te enviaremos spam
   enter_country: Introduzir nome do país se estiver fora dos Estados Unidos
-  used_infrequent_updates: Only used for infrequent updates
-  privacy_practices_children: See our privacy practices for children
+  used_infrequent_updates: Usado apenas para atualizações não frequentes
+  privacy_practices_children: Veja as nossas práticas de privacidade para crianças
   petition_thankyou: Obrigado por assinar a petição
   continue_learning_header: Continuar a aprender além de uma hora
   continue_learning_body: Existem muitas opções. Podes aprender online, numa escola
@@ -116,22 +117,22 @@
   help_recruit_coders: Ajuda-nos recrutar mais codificadores para a tua equipa!
   help_recruit: Ajuda-nos a recrutar mais programadores!
   lines_of_code: MAIS DE <b># LINHAS DE CÓDIGO</b> ESCRITAS ATÉ AGORA.
-  lines_of_code_alt: "<b>#</b> LINHAS DE CÓDIGO ESCRITAS POR ESTUDANTES"
+  lines_of_code_alt: <b>#</b> LINHAS DE CÓDIGO ESCRITAS POR ESTUDANTES
   who_has_done_hoc: 'Quem fez o #HourOfCode? @codeorg'
   hoc_leaderboards: Classificações da Hora do Código
-  students_and_lines: "%{students} os estudantes fizeram a Hora de Código e escreveram
-    %{lines} linhas de código."
+  students_and_lines: '%{students} os estudantes fizeram a Hora de Código e escreveram
+    %{lines} linhas de código.'
   start_hoc: Começa agora a Hora de Código
   contact_form_topic_press: Imprensa (entrevista ou palestra)
-  studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
-  studiobar_elementary_title: Elementary courses
-  studiobar_elementary_body: Our three new courses for K&#8209;5
-  studiobar_hoc_title: The Hour of Code
-  studiobar_hoc_body: Learn to code with Angry Birds
+  studiobar_title: Explore <a href='http://studio.code.org'>o Code Studio</a>
+  studiobar_elementary_title: Cursos elementares
+  studiobar_elementary_body: Os nossos três cursos para K&#8209;5
+  studiobar_hoc_title: A Hora de Código
+  studiobar_hoc_body: Aprenda a programar com o Angry Birds
   studiobar_flappy_title: Flappy Code
-  studiobar_flappy_body: Make and share your own Flappy game
-  studiobar_teacher_title: Teacher dashboard
-  studiobar_teacher_body: 'For teachers: view your students'' progress'
+  studiobar_flappy_body: Faça e compartilhe o seu próprio jogo Flappy
+  studiobar_teacher_title: Feito para professores
+  studiobar_teacher_body: Introduza o Code Studio na sua sala de aula
   contact_form_topic_student: Sou um estudante
   contact_form_topic_parent: Sou um encarregado de educação
   contact_form_topic_teacher: Sou um professor/educador
@@ -143,94 +144,99 @@
   contact_form_label_email: O teu endereço de e-mail
   contact_form_label_message: Mensagem
   contact_form_label_submit: Enviar mensagem
-  class_submission_in_school: In school
-  class_submission_in_school_daily_programming_course: Daily programming course
-  class_submission_in_school_ap_computer_science: AP computer science
-  class_submission_in_school_full_university_cs_curriculum: Full university CS curriculum
-  class_submission_in_school_robotics_club: Robotics club
-  class_submission_in_school_programming_integrated_in_other_classes: Programming
-    integrated in other classes
-  class_submission_in_school_summer_school_cs_program: Summer school CS program
-  class_submission_in_school_exploring_computer_science: Exploring Computer Science
-  class_submission_in_school_other: Other in school
-  class_submission_out_of_school: Out of school
-  class_submission_out_of_school_summer_camp: Summer camp
-  class_submission_out_of_school_afterschool_program: Afterschool program
-  class_submission_out_of_school_all-day_workshop: All-day workshop (up to 1 week)
-  class_submission_out_of_school_multi-week_workshop: Multi-week workshop
-  class_submission_out_of_school_other: Other out of school
+  class_submission_in_school: Na escola
+  class_submission_in_school_daily_programming_course: Curso de programação diário
+  class_submission_in_school_ap_computer_science: Ciências da computação AP
+  class_submission_in_school_full_university_cs_curriculum: Currículo Universidade
+    CS completo
+  class_submission_in_school_robotics_club: Clube de robótica
+  class_submission_in_school_programming_integrated_in_other_classes: Programação
+    integrada noutras aulas (matemática, ciências, etc)
+  class_submission_in_school_summer_school_cs_program: Programa de verão CS na escola
+  class_submission_in_school_exploring_computer_science: Explorando as ciências da
+    computação
+  class_submission_in_school_other: Outros na escola
+  class_submission_out_of_school: Fora da escola
+  class_submission_out_of_school_summer_camp: Acampamento de verão
+  class_submission_out_of_school_afterschool_program: Programa após-escola
+  class_submission_out_of_school_all-day_workshop: Workshop todo o dia (até 1 semana)
+  class_submission_out_of_school_multi-week_workshop: Workshop de várias semanas
+  class_submission_out_of_school_other: Outros fora da escola
   class_submission_online: Online
-  class_submission_online_programming_class: Online programming class
-  class_submission_online_teacher_resource: Online teacher resource
-  class_submission_online_other: Other online
-  class_submission_level_preschool: Preschool
-  class_submission_level_elementary: Elementary
-  class_submission_level_middle_school: Middle school
-  class_submission_level_high_school: High school
-  class_submission_level_college: College
-  class_submission_level_vocational: Vocational
-  class_submission_languages_other: Other language(s)
-  volunteer_engineer_submission_commitment_uncertain: Uncertain
-  volunteer_engineer_submission_commitment_now_and_then: Every now and then
-  volunteer_engineer_submission_commitment_one_hr_per_week: 1 hour per week
-  volunteer_engineer_submission_commitment_three_hrs_per_week: 3 hours per week
-  volunteer_engineer_submission_commitment_five_hrs_per_week: 5 hours per week
-  volunteer_engineer_submission_commitment_more: More
-  volunteer_engineer_submission_location_flexibility_onsite: On-site at a school
-  volunteer_engineer_submission_location_flexibility_remote: Mentoring remotely (teachers
-    or students)
-  volunteer_engineer_submission_location_flexibility_curriculum: Willing to help contribute
-    to open-source curriculum projects
-  volunteer_engineer_submission_experience_unspecified: Unspecified
-  volunteer_engineer_submission_experience_university_student_or_researcher: Current
-    university student (or researcher)
-  volunteer_engineer_submission_experience_software_professional: Software professional
+  class_submission_online_programming_class: Aula de programação online
+  class_submission_online_teacher_resource: Recursos do professor online
+  class_submission_online_other: Outros online
+  class_submission_level_preschool: Pré-escola
+  class_submission_level_elementary: Básica
+  class_submission_level_middle_school: Secundária
+  class_submission_level_high_school: Universidade
+  class_submission_level_college: Faculdade
+  class_submission_level_vocational: Profissional
+  class_submission_languages_other: Outro(s) idioma(s)
+  volunteer_engineer_submission_commitment_uncertain: Incerto
+  volunteer_engineer_submission_commitment_now_and_then: De vez em quando
+  volunteer_engineer_submission_commitment_one_hr_per_week: 1 hora por semana
+  volunteer_engineer_submission_commitment_three_hrs_per_week: 3 horas por semana
+  volunteer_engineer_submission_commitment_five_hrs_per_week: 5 horas por semana
+  volunteer_engineer_submission_commitment_more: Mais
+  volunteer_engineer_submission_location_flexibility_onsite: Presencial na escola
+  volunteer_engineer_submission_location_flexibility_remote: Aconselhamento remoto
+    (professores ou alunos)
+  volunteer_engineer_submission_location_flexibility_curriculum: Disposto a contribuir
+    para projetos de código-fonte aberto
+  volunteer_engineer_submission_experience_unspecified: Não especificado
+  volunteer_engineer_submission_experience_university_student_or_researcher: Actual
+    Estudante de Universidade (ou investigador)
+  volunteer_engineer_submission_experience_software_professional: Professional de
+    software
   petition_age: Idade
-  dashboard_landing_title: Teacher Home Page
-  dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
-  dashboard_landing_video: Watch this video
-  dashboard_landing_watch_video: for a tour of the new features!
-  dashboard_landing_view_as_student: View this site as a student
-  dashboard_landing_students_title: Your students
-  dashboard_landing_students_manage: View and manage your students
-  dashboard_landing_news_title: Latest news
-  dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
-  dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
-  dashboard_landing_useful_links: Other useful links
-  dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
-    office hours.
+  dashboard_landing_title: Página inicial do professor
+  dashboard_landing_welcome: Bem-vindo ao novo e melhorado painel do professor.
+  dashboard_landing_video: Assista a este vídeo
+  dashboard_landing_watch_video: para uma excursão sobre os novos recursos!
+  dashboard_landing_view_as_student: Visualizar este site como um estudante
+  dashboard_landing_students_title: Os seus alunos
+  dashboard_landing_students_manage: Exibir e administrar os seus alunos
+  dashboard_landing_news_title: Recursos para Educador K-5 (apenas em inglês)
+  dashboard_landing_new_beta: Novo! Experimente os nossos cursos beta para estudantes
+    K-5.
+  dashboard_landing_new_k5courses: Novo! Experimente os nossos cursos para estudantes
+    K-5.
+  dashboard_landing_useful_links: Outros links úteis (apenas em inglês)
+  dashboard_landing_office_hours: Faça uma pergunta em directo! Consulte o nosso vídeo
+    mensal nos horários de expediente.
   dashboard_landing_print_certificates: Print certificates for students who finish
     this course
   dashboard_landing_educator_blog: Read about news and updates to our materials at
     our Educator Blog
   dashboard_landing_smart_hints: Please help us to add smart hints to Code.org tutorials
   dashboard_landing_video_player: Test our new video player at your school
-  dashboard_landing_progress_title: Main class progress
-  dashboard_landing_progress_biggest: This is the progress for your biggest section.
-  dashboard_landing_view_progress: View Progress for %{biggest_section}
-  dashboard_landing_available_title: Available courses
-  dashboard_landing_available_courses: Here are the courses currently available for
-    you and your students.
-  dashboard_landing_loading: Loading...
+  dashboard_landing_progress_title: Progresso da turma principal
+  dashboard_landing_progress_biggest: Este é o progresso para a sua maior secção.
+  dashboard_landing_view_progress: Exibir progresso para %{biggest_section}
+  dashboard_landing_available_title: Cursos disponíveis
+  dashboard_landing_available_courses: Aqui estão os cursos actualmente disponíveis
+    para si e os seus alunos.
+  dashboard_landing_loading: A carregar...
   dashboard_action_edit: Editar
-  dashboard_action_save: Save
-  dashboard_action_save_all: Save all
+  dashboard_action_save: Guardar
+  dashboard_action_save_all: Guardar tudo
   dashboard_action_cancel: Cancelar
-  dashboard_action_delete: Delete
-  dashboard_action_confirm: Delete?
+  dashboard_action_delete: Apagar
+  dashboard_action_confirm: Apagar?
   dashboard_action_delete_yes: Sim
   dashboard_action_delete_no: Não
-  dashboard_action_done: Done
-  dashboard_action_required: required
-  dashboard_navigation_home_page: Teacher home page
-  dashboard_navigation_all_sections: All sections
-  dashboard_navigation_view_progress: View Progress
-  dashboard_navigation_add_students: Add Students
-  dashboard_navigation_manage_students: Manage Students
-  dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
-  dashboard_navigation_view_stats: View Stats
-  dashboard_navigation_section: 'Section: %{section_name}'
-  dashboard_navigation_student: 'Student: %{student_name}'
+  dashboard_action_done: Concluido
+  dashboard_action_required: necessário
+  dashboard_navigation_home_page: Página inicial do professor
+  dashboard_navigation_all_sections: Contas dos alunos e Progresso
+  dashboard_navigation_view_progress: Exibir progresso
+  dashboard_navigation_add_students: Adicionar alunos
+  dashboard_navigation_manage_students: Gerir alunos
+  dashboard_navigation_lesson_plans_resources: Planos de aula e Recursos
+  dashboard_navigation_view_stats: Exibir estatísticas
+  dashboard_navigation_section: 'Secção: %{section_name}'
+  dashboard_navigation_student: 'Aluno: %{student_name}'
   dashboard_sections_new_section: New section
   dashboard_sections_jumbotron_instruction: Create new sections and add students to
     them. Sections help you organize students into smaller groups so you can track
@@ -336,7 +342,7 @@
   dashboard_faq: Frequently Asked Questions
   code_hoc_coming: The Hour of Code is coming - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
-  learn_more: Learn More
+  learn_more: Saiba mais
   hoc2014_try_new_tutorials: Try our new Hour of Code tutorials
   hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
   hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
@@ -357,6 +363,7 @@
   more_resources_educators: More resources for teachers and educators
   participants: participants
   teachers_notes: Teacher's Notes
+  teachers_notes_hoc: 'Teachers: Read important educator notes here'
   previous: Previous
   next: Next
   older_systems: Tutorials that work on older systems
@@ -388,7 +395,6 @@
   codespark_name: The Foos (pre-readers welcome)
   kodable_name: Kodable
   tynkerapp_name: Tynker - on tablets
-  hopscotch_name: 'Hopscotch: Code on your iPad'
   robomindnl_name: Program a virtual robot
   flappy_name: Make a Flappy game
   bitsbox_name: Bitsbox - make a game
@@ -411,24 +417,23 @@
   thinkersmith_gradelevel: Todas as idades
   condcards_gradelevel: Ages 8-12
   lightbotintl_gradelevel: Todas as idades
-  codehs_gradelevel: High school
-  codecademy_gradelevel: High school
+  codehs_gradelevel: Universidade
+  codecademy_gradelevel: Universidade
   codecombat_gradelevel: Middle school +
   codemonkey_gradelevel: Middle school +
   codeavengers_gradelevel: Middle school +
-  processing_gradelevel: High school
+  processing_gradelevel: Universidade
   robomind_gradelevel: Ages 8-13
   groklearning_gradelevel: Middle school +
   quorum_gradelevel: Middle school +
-  codespark_gradelevel: Elementary
-  kodable_gradelevel: Elementary
+  codespark_gradelevel: Básica
+  kodable_gradelevel: Básica
   tynkerapp_gradelevel: Ages 5-13
-  hopscotch_gradelevel: Middle school +
   robomindnl_gradelevel: Ages 8-13
   flappy_gradelevel: Ages 4-104
-  bitsbox_gradelevel: Elementary
-  makegameswithus_gradelevel: High school
-  touchdevelop_gradelevel: High school
+  bitsbox_gradelevel: Básica
+  makegameswithus_gradelevel: Universidade
+  touchdevelop_gradelevel: Universidade
   appinventor_gradelevel: Middle school +
   blockly_gradelevel: Todas as idades
   thinkersmith2_gradelevel: Ages 8+
@@ -458,7 +463,6 @@
   codespark_platformtext: iOS, Android (or web browser)
   kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, Android tablets
-  hopscotch_platformtext: iPad
   robomindnl_platformtext: Modern web browsers, Mobile web
   flappy_platformtext: Modern browsers, smartphones, tablets
   bitsbox_platformtext: Modern web browsers
@@ -498,7 +502,6 @@
   kodable_shortdescription: A fun iPad game to teach computer programming concepts
   tynkerapp_shortdescription: Learn to code by solving fun puzzles and build your
     own mobile games.
-  hopscotch_shortdescription: Learn visual programming on an iPad
   robomindnl_shortdescription: Write code for a virtual robot
   flappy_shortdescription: Make your own game - Flappy Bird, Shark, or Submarine
   bitsbox_shortdescription: Code a series of apps to play and share, using real Javascript.
@@ -597,9 +600,6 @@
     coding puzzles and learn programming concepts in each level. Personalize games
     with animated characters, multiple levels and rich props. Lots of fun activities
     to choose from!
-  hopscotch_longdescription: Student-guided tutorial on the iPad using the Hopscotch
-    programming language. Students will build games and apps for their iPad on their
-    iPad. Students can work individually or with friends (up to 3 per iPad).
   robomindnl_longdescription: 'Students learn the basics of programming by controlling
     their own virtual robot. The online course is fully self-contained with short
     presentations, movies, quizzes and automatic guidance/hints to help with the programming
@@ -680,18 +680,18 @@
   tynker_beyond_gradelevel: Ages 5-13
   scratch_beyond_gradelevel: Ages 8+
   lightbot_beyond_gradelevel: Todas as idades
-  codecademy_beyond_gradelevel: High school
-  kodable_beyond_gradelevel: Elementary
-  scratchjr_beyond_gradelevel: Elementary
+  codecademy_beyond_gradelevel: Universidade
+  kodable_beyond_gradelevel: Básica
+  scratchjr_beyond_gradelevel: Básica
   hopscotch_beyond_gradelevel: Middle school +
   pocketcode_beyond_gradelevel: Middle school +
   groklearning_beyond_gradelevel: Middle school +
-  hacketyhack_beyond_gradelevel: High school
+  hacketyhack_beyond_gradelevel: Universidade
   robomind_beyond_gradelevel: Ages 8-13
-  makegameswithus_beyond_gradelevel: High school
+  makegameswithus_beyond_gradelevel: Universidade
   appinventor_beyond_gradelevel: Middle school +
-  touchdevelop_beyond_gradelevel: High school
-  codehs_beyond_gradelevel: High school
+  touchdevelop_beyond_gradelevel: Universidade
+  codehs_beyond_gradelevel: Universidade
   udemy_beyond_gradelevel: High school +
   lynda_beyond_gradelevel: High school +
   edx_beyond_gradelevel: University
@@ -709,7 +709,7 @@
   lego_beyond_gradelevel: Middle school +
   finch_beyond_gradelevel: Ages 8+
   arduino_beyond_gradelevel: High school +
-  processing_beyond_gradelevel: High school
+  processing_beyond_gradelevel: Universidade
   alice_beyond_gradelevel: Middle school +
   sphero_beyond_gradelevel: Ages 8+
   codeorg_beyond_platformtext: Modern browsers, tablets

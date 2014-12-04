@@ -6813,6 +6813,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -6825,7 +6826,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -6835,16 +6838,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -14591,15 +14584,15 @@ var MessageFormat = require("messageformat");MessageFormat.locale.pl = function 
   }
   return 'other';
 };
-exports.circleBlockTitle = function(d){return "koło (promień, styl, kolor)"};
+exports.circleBlockTitle = function(d){return "okrąg (promień, styl, kolor)"};
 
-exports.displayBlockTitle = function(d){return "Wyświetl"};
+exports.displayBlockTitle = function(d){return "wyświetl"};
 
-exports.ellipseBlockTitle = function(d){return "Elipsa (szerokość, wysokość, styl, kolor)"};
+exports.ellipseBlockTitle = function(d){return "elipsa (szerokość, wysokość, styl, kolor)"};
 
-exports.extraTopBlocks = function(d){return "Posiadasz niezałączone bloki. Czy chcesz je załączyć do bloku \"wyświetl\"?"};
+exports.extraTopBlocks = function(d){return "Masz niedołączone bloki. Czy chcesz je dołączyć do bloku wyświetl?"};
 
-exports.overlayBlockTitle = function(d){return "nakładki (góra, dół)"};
+exports.overlayBlockTitle = function(d){return "nakładka (góra, dół)"};
 
 exports.placeImageBlockTitle = function(d){return "położenie-obraz (x, y, obraz)"};
 
@@ -14607,11 +14600,11 @@ exports.offsetBlockTitle = function(d){return "offset (x, y, image)"};
 
 exports.rectangleBlockTitle = function(d){return "prostokąt (szerokość, wysokość, styl, kolor)"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to edit your drawing."};
+exports.reinfFeedbackMsg = function(d){return "Możesz nacisnąć przycisk Spróbuj ponownie, aby edytować swój rysunek. "};
 
 exports.rotateImageBlockTitle = function(d){return "obróć  (stopnie, obraz)"};
 
-exports.scaleImageBlockTitle = function(d){return "Skala (czynnik)"};
+exports.scaleImageBlockTitle = function(d){return "skala (czynnik)"};
 
 exports.squareBlockTitle = function(d){return "kwadrat (rozmiar, styl, kolor)"};
 
@@ -14619,21 +14612,21 @@ exports.starBlockTitle = function(d){return "gwiazda (promień, styl, kolor)"};
 
 exports.radialStarBlockTitle = function(d){return "radial-star (points, inner, outer, style, color)"};
 
-exports.stringAppendBlockTitle = function(d){return "ciąg-dołącz (pierwszy, drugi)"};
+exports.stringAppendBlockTitle = function(d){return "łańcuch-dołącz (pierwszy, drugi)"};
 
-exports.stringLengthBlockTitle = function(d){return "ciąg-długość (ciągu)"};
+exports.stringLengthBlockTitle = function(d){return "łańcuch-długość (łańcuch)"};
 
-exports.textBlockTitle = function(d){return "tekst (ciag, rozmiar, kolor)"};
+exports.textBlockTitle = function(d){return "tekst (łańcuch, rozmiar, kolor)"};
 
 exports.triangleBlockTitle = function(d){return "trójkąt (rozmiar, styl, kolor)"};
 
-exports.underlayBlockTitle = function(d){return "podłożenie (na dół, na górę)"};
+exports.underlayBlockTitle = function(d){return "podkładka (dół, góra)"};
 
 exports.outline = function(d){return "zarys"};
 
-exports.solid = function(d){return "stała"};
+exports.solid = function(d){return "trwały"};
 
-exports.string = function(d){return "ciąg"};
+exports.string = function(d){return "łańcuch"};
 
 
 },{"messageformat":62}],51:[function(require,module,exports){

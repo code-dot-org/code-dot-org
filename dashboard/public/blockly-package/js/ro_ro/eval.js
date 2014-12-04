@@ -6813,6 +6813,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -6825,7 +6826,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -6835,16 +6838,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -14487,7 +14480,7 @@ exports.numLinesOfCodeWritten = function(d){return "Ai scris doar "+p(d,"numLine
 
 exports.play = function(d){return "joacă"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Tipărire"};
 
 exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" din "+v(d,"stage_total")};
 
@@ -14531,9 +14524,9 @@ exports.hintRequest = function(d){return "Dă un indiciu"};
 
 exports.backToPreviousLevel = function(d){return "Înapoi la nivelul anterior"};
 
-exports.saveToGallery = function(d){return "Salvează în galeria proprie"};
+exports.saveToGallery = function(d){return "Salvare în galerie"};
 
-exports.savedToGallery = function(d){return "Salvat în galeria proprie!"};
+exports.savedToGallery = function(d){return "Salvat în galerie!"};
 
 exports.shareFailure = function(d){return "Ne pare rau, nu putem să distribuim acest program."};
 
@@ -14567,7 +14560,7 @@ exports.hintHeader = function(d){return "Iată un sfat:"};
 
 exports.genericFeedback = function(d){return "Vezi cum se termină şi încearcă să-ți corectezi programul."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Verifică ceea ce am creat"};
 
 
 },{"messageformat":62}],50:[function(require,module,exports){
@@ -14581,49 +14574,49 @@ var MessageFormat = require("messageformat");MessageFormat.locale.ro = function 
   }
   return 'other';
 };
-exports.circleBlockTitle = function(d){return "circle (radius, style, color)"};
+exports.circleBlockTitle = function(d){return "cerc (raza, stil, culoare)"};
 
-exports.displayBlockTitle = function(d){return "display"};
+exports.displayBlockTitle = function(d){return "afişare"};
 
-exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, color)"};
+exports.ellipseBlockTitle = function(d){return "elipsă (lăţime, înălţime, stil, culoare)"};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"};
+exports.extraTopBlocks = function(d){return "Aveţi blocuri neataşate. Aţi vrut să le ataşaţi la blocul \"afișare\"?"};
 
-exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
+exports.overlayBlockTitle = function(d){return "suprapunere (sus, jos)"};
 
-exports.placeImageBlockTitle = function(d){return "place-image (x, y, image)"};
+exports.placeImageBlockTitle = function(d){return "loc-imagine (x, y, imagine)"};
 
 exports.offsetBlockTitle = function(d){return "offset (x, y, image)"};
 
-exports.rectangleBlockTitle = function(d){return "rectangle (width, height, style, color)"};
+exports.rectangleBlockTitle = function(d){return "dreptunghi (lăţime, înălţime, stil, culoare)"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to edit your drawing."};
+exports.reinfFeedbackMsg = function(d){return "Aveţi posibilitatea să apăsaţi butonul \"Încercaţi din nou\" pentru a vă edita desenul."};
 
-exports.rotateImageBlockTitle = function(d){return "rotate (degrees, image)"};
+exports.rotateImageBlockTitle = function(d){return "rotire (grade, imagine)"};
 
-exports.scaleImageBlockTitle = function(d){return "scale (factor)"};
+exports.scaleImageBlockTitle = function(d){return "scară (factor)"};
 
-exports.squareBlockTitle = function(d){return "square (size, style, color)"};
+exports.squareBlockTitle = function(d){return "pătrat(mărime, stil, culoare)"};
 
-exports.starBlockTitle = function(d){return "star (radius, style, color)"};
+exports.starBlockTitle = function(d){return "stea (rază, stil, culoare)"};
 
 exports.radialStarBlockTitle = function(d){return "radial-star (points, inner, outer, style, color)"};
 
-exports.stringAppendBlockTitle = function(d){return "string-append (first, second)"};
+exports.stringAppendBlockTitle = function(d){return "șir-adăugare (primul, al_doilea)"};
 
-exports.stringLengthBlockTitle = function(d){return "string-length (string)"};
+exports.stringLengthBlockTitle = function(d){return "șir-lungime (șir)"};
 
-exports.textBlockTitle = function(d){return "text (string, size, color)"};
+exports.textBlockTitle = function(d){return "text(șir, mărime, culoare)"};
 
-exports.triangleBlockTitle = function(d){return "triangle (size, style, color)"};
+exports.triangleBlockTitle = function(d){return "triunghi (mărime, stil, culoare)"};
 
-exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
+exports.underlayBlockTitle = function(d){return "underlay (jos, sus)"};
 
-exports.outline = function(d){return "outline"};
+exports.outline = function(d){return "schiță"};
 
 exports.solid = function(d){return "solid"};
 
-exports.string = function(d){return "string"};
+exports.string = function(d){return "șir"};
 
 
 },{"messageformat":62}],51:[function(require,module,exports){

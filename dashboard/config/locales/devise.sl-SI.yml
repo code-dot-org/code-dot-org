@@ -4,9 +4,9 @@
       confirmed: Vaš e-poštni naslov je bil uspešno potrjen.
       send_instructions: E-pošto z navodilom o tem, kako potrdite svoj račun, boste
         prejeli v nekaj minutah.
-      send_paranoid_instructions: "Če vaš email naslov obstaja v naši bazi podatkov,
+      send_paranoid_instructions: Če vaš email naslov obstaja v naši bazi podatkov,
         boste v nekaj minutah prejeli e-pošto z navodili o tem, kako potrdite svoj
-        račun."
+        račun.
     failure:
       already_authenticated: Ste že vpisani.
       inactive: Vaš račun še ni bil aktiviran.
@@ -70,4 +70,4 @@
       not_locked: ni bil zaklenjen
       not_saved:
         one: '1 error prohibited this %{resource} from being saved:'
-        other: "%{count} errors prohibited this %{resource} from being saved:"
+        other: '%{count} errors prohibited this %{resource} from being saved:'

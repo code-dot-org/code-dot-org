@@ -19,7 +19,9 @@
     "disable_variable_editing": "true",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "impressive": "false"
+    "impressive": "false",
+    "embed": "false",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
@@ -29,19 +31,19 @@
           <next>
             <block type="variables_set" inline="false" movable="false">
               <title name="VAR">sides</title>
-              <value name="VALUE">
-                <block type="math_number" movable="false">
-                  <title name="NUM">3</title>
-                </block>
-              </value>
               <next>
                 <block type="controls_repeat_ext" inline="true" movable="false">
+                  <value name="TIMES">
+                    <block type="variables_get" movable="false">
+                      <title name="VAR">sides</title>
+                    </block>
+                  </value>
                   <statement name="DO">
-                    <block type="draw_move_by_constant" movable="false" editable="false" deletable="false">
+                    <block type="draw_move_by_constant" deletable="false" movable="false" editable="false">
                       <title name="DIR">moveForward</title>
                       <title name="VALUE">150</title>
                       <next>
-                        <block type="draw_turn_by_constant" movable="false" editable="false" deletable="false">
+                        <block type="draw_turn_by_constant" deletable="false" movable="false" editable="false">
                           <title name="DIR">turnLeft</title>
                           <title name="VALUE">120</title>
                         </block>
@@ -57,15 +59,15 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="variables_get">
-          <title name="VAR">sides</title>
+        <block type="math_number">
+          <title name="NUM">3</title>
         </block>
       </xml>
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="variables_get">
-          <title name="VAR">sides</title>
+        <block type="math_number">
+          <title name="NUM">3</title>
         </block>
       </xml>
     </required_blocks>

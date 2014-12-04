@@ -2607,6 +2607,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -2619,7 +2620,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -2629,16 +2632,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -16575,7 +16568,7 @@ exports.numLinesOfCodeWritten = function(d){return "あなたはたった今 "+p
 
 exports.play = function(d){return "再生"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "印刷"};
 
 exports.puzzleTitle = function(d){return "パズル "+v(d,"puzzle_number")+" の "+v(d,"stage_total")};
 
@@ -16621,7 +16614,7 @@ exports.backToPreviousLevel = function(d){return "前のレベルに戻る"};
 
 exports.saveToGallery = function(d){return "ギャラリーに保存"};
 
-exports.savedToGallery = function(d){return "ギャラリーに保存しました！"};
+exports.savedToGallery = function(d){return "ギャラリーに保存されました！"};
 
 exports.shareFailure = function(d){return "プログラムをシェアできませんでした。"};
 
@@ -16660,7 +16653,7 @@ exports.defaultTwitterText = function(d){return "Check out what I made"};
 
 },{"messageformat":72}],60:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.ja=function(n){return "other"}
-exports.atHoneycomb = function(d){return "ハニカムで"};
+exports.atHoneycomb = function(d){return "ハチの巣で"};
 
 exports.atFlower = function(d){return "はなで"};
 
@@ -16696,7 +16689,7 @@ exports.fillTooltip = function(d){return "泥を1つ置きます。"};
 
 exports.finalLevel = function(d){return "おめでとうございます ！最後のパズルを解決しました。"};
 
-exports.flowerEmptyError = function(d){return "The flower you're on has no more nectar."};
+exports.flowerEmptyError = function(d){return "あなたが止まっている花にもうミツはありません。"};
 
 exports.get = function(d){return "取得"};
 
@@ -16704,13 +16697,13 @@ exports.heightParameter = function(d){return "高さ"};
 
 exports.holePresent = function(d){return "穴があります。"};
 
-exports.honey = function(d){return "make honey"};
+exports.honey = function(d){return "ハチミツを作る"};
 
-exports.honeyAvailable = function(d){return "honey"};
+exports.honeyAvailable = function(d){return "ハチミツ"};
 
-exports.honeyTooltip = function(d){return "Make honey from nectar"};
+exports.honeyTooltip = function(d){return "花のミツからハチミツをつくる"};
 
-exports.honeycombFullError = function(d){return "This honeycomb does not have room for more honey."};
+exports.honeycombFullError = function(d){return "ハチの巣がいっぱいで、ハチミツ用の場所がありません。"};
 
 exports.ifCode = function(d){return "もし"};
 
@@ -16722,15 +16715,15 @@ exports.ifTooltip = function(d){return "指定した方向に道がある場合�
 
 exports.ifelseTooltip = function(d){return "指定した方向にパスがある場合は、最初のブロックにアクションを行います。それ以外の場合は、2 番目のブロックにアクションを行います。"};
 
-exports.ifFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do some actions."};
+exports.ifFlowerTooltip = function(d){return "ある向きに花/ハチの巣がある場合、何かをします。"};
 
-exports.ifelseFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do the first block of actions. Otherwise, do the second block of actions."};
+exports.ifelseFlowerTooltip = function(d){return "ある向きに花/ハチの巣がある場合、アクションの最初のブロックを実行します。そうでなければ、アクションにある２番目のブロックを実行します。"};
 
-exports.insufficientHoney = function(d){return "You're using all the right blocks, but you need to make the right amount of honey."};
+exports.insufficientHoney = function(d){return "すべて正しいブロックを使いました。しかし、ハチミツの量がたりません。"};
 
-exports.insufficientNectar = function(d){return "You're using all the right blocks, but you need to collect the right amount of nectar."};
+exports.insufficientNectar = function(d){return "すべて正しいブロックを使いました。しかし、集めたミツの量がたりません。"};
 
-exports.make = function(d){return "make"};
+exports.make = function(d){return "つくる"};
 
 exports.moveBackward = function(d){return "うしろにすすむ"};
 
@@ -16748,7 +16741,7 @@ exports.moveTooltip = function(d){return "まえかうしろに1個うごかし�
 
 exports.moveWestTooltip = function(d){return "ひだりに1つうごかしてください。"};
 
-exports.nectar = function(d){return "get nectar"};
+exports.nectar = function(d){return "ミツをあつめる。"};
 
 exports.nectarRemaining = function(d){return "花のみつ"};
 
@@ -16764,9 +16757,9 @@ exports.noPathLeft = function(d){return "左に道がありません"};
 
 exports.noPathRight = function(d){return "右に道がありません"};
 
-exports.notAtFlowerError = function(d){return "You can only get nectar from a flower."};
+exports.notAtFlowerError = function(d){return "ミツは花からしか集められません。"};
 
-exports.notAtHoneycombError = function(d){return "You can only make honey at a honeycomb."};
+exports.notAtHoneycombError = function(d){return "ハチミツはハチの巣でしかつくれません。"};
 
 exports.numBlocksNeeded = function(d){return "このパズルは%1個のブロックで解けます。"};
 
@@ -16790,7 +16783,7 @@ exports.removeStack = function(d){return v(d,"shovelfuls")+" 杭の山を削除�
 
 exports.removeSquare = function(d){return "正方形を削除します。"};
 
-exports.repeatCarefullyError = function(d){return "この問題を解くには、くり返しのパターンを見つけます。「移動」、「移動」、「右に回転」の3つのブロック（ブロック「くり返し」が中にはいっている）を使いましょう。"};
+exports.repeatCarefullyError = function(d){return "この問題を解くには、２つの移動と１つの方向転換を\"繰り返し\"ブロックの中に配置しなくてはなりません。注意深く考えましょう。最後に余計な方向転換が行われてもかまいません。"};
 
 exports.repeatUntil = function(d){return "までを繰り返します"};
 
@@ -16798,11 +16791,11 @@ exports.repeatUntilBlocked = function(d){return "前に道がある間"};
 
 exports.repeatUntilFinish = function(d){return "完了するまで繰り返し行います"};
 
-exports.step = function(d){return "Step"};
+exports.step = function(d){return "ステップ"};
 
-exports.totalHoney = function(d){return "total honey"};
+exports.totalHoney = function(d){return "ハチミツの合計"};
 
-exports.totalNectar = function(d){return "total nectar"};
+exports.totalNectar = function(d){return "ミツの合計"};
 
 exports.turnLeft = function(d){return "左に曲がる"};
 
@@ -16810,19 +16803,19 @@ exports.turnRight = function(d){return "右に回転"};
 
 exports.turnTooltip = function(d){return "私を左もしくは右に90 度曲がらせてください。"};
 
-exports.uncheckedCloudError = function(d){return "Make sure to check all clouds to see if they're flowers or honeycombs."};
+exports.uncheckedCloudError = function(d){return "花かハチの巣かどうか確認するために全ての雲をチェックしてください。"};
 
-exports.uncheckedPurpleError = function(d){return "Make sure to check all purple flowers to see if they have nectar"};
+exports.uncheckedPurpleError = function(d){return "ムラサキの花にミツがあるかすべてチェックしてください。"};
 
 exports.whileMsg = function(d){return "以下の間"};
 
 exports.whileTooltip = function(d){return "終点に到着するまで、封じられた行動を繰り返してください"};
 
-exports.word = function(d){return "Find the word"};
+exports.word = function(d){return "単語を見つけます"};
 
 exports.yes = function(d){return "はい"};
 
-exports.youSpelled = function(d){return "You spelled"};
+exports.youSpelled = function(d){return "あなたのスペル"};
 
 
 },{"messageformat":72}],61:[function(require,module,exports){

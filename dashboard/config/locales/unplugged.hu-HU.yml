@@ -29,11 +29,11 @@
         video: Unplug2
       Unplug3:
         title: Grafikus programozás
-        desc: By programming one another to draw pictures, students will begin to
-          understand what programming is really about. The class will begin by students
-          instructing each other to color squares in on graph paper in an effort to
-          reproduce an existing picture.  If there's time, the lesson can conclude
-          with images that the students create themselves.
+        desc: Egymás rajzolásra való beprogramozásával a diákok elkezdik megérteni,
+          hogy mi is a programozás igazából. Kezdésként a diákok egymásnak adnak utasításokat,
+          hogy egy négyzethálós papíron négyzeteket színezzenek, reprodukálva egy
+          már meglévő képet. Ha van rá idő, akkor a leckét a diákok saját képeivel
+          lehet zárni.
         pdfs:
         - unplug3
         video: Unplug3
@@ -49,34 +49,33 @@
         video: Unplug4
       Unplug5:
         title: funkciók
-        desc: In this lesson, students will make a suncatcher out of string, beads,
-          and a special charm. The students will follow a series of repetitive steps,
-          then be asked to identify certain sets of "skills" that are duplicated several
-          times. Once those skills are defined, they will be called from a main program
-          and the whole beautiful process of creation will be recorded on a single
-          sheet of paper. The final program will be geared toward the entire class,
-          whatever their type of string, beads, and charms. To effectively allow for
-          this, students will need to "abstract out" the details of their specific
-          materials and create vague terms for an individual's supplies.  This use
-          of generic placeholders is a wonderful introduction to variables.
+        desc: Ebben a leckében a diákok madzagból, gyöngyökből és speciális kiegészítőből
+          egy ablakdíszt készítenek. A diákok egy sor ismétlődő műveletet végeznek
+          el, amiket kérésre munkafázisként azonosítaniuk kell tudni. Amint ezeket
+          a fázisokat definiáltuk, már meg lehet őket hívni a fő "programból", és
+          a teljes alkotási folyamat rögzíthető egyetlen papírlapon. A végleges programot
+          az osztály is végrehajthatja a náluk lévő madzagtól, gyöngytől és dísztől
+          függetlenül. Hogy megfelelően alkalmazhassák a programot, ki kell emelni
+          az elérhető hozzávalókat. A helyettesítők ilyenfajta használata remek lehetőség
+          a változók bevezetésére.
         pdfs:
         - unplug5
         video: Unplug5
       Unplug6:
-        title: Conditions
-        desc: This is a class game.  After introducing the idea of conditionals, if-statements,
-          and loops, the class can practice together using a pre-written program,
-          a deck of cards, and luck of the draw.
+        title: Feltételek
+        desc: Ez egy osztálytermi játék. A feltételek, ha utasítások és ciklusok megismerése
+          után az osztály egy előre megírt program, egy kártyapakli és sorshúzás segítségével
+          gyakorolhatnak.
         pdfs:
         - unplug6
         video: Unplug6
       Unplug7:
         title: Dal iras
-        desc: Reading lyrics is a pretty intuitive venture for most students.  We'll
-          take an activity that's already common knowledge and shift it into a solid
-          education on defining and calling functions. Once students are familiar
-          with the define/call process, we will add the extra capabilities that come
-          along with passing parameters within those function calls.
+        desc: A dalszövegek olvasása a legtöbb diák számára természetes folyamat.
+          Egy olyan tevékenységet fogunk végezni, amivel már mindenki tisztában van,
+          és felhasználjuk ezt a függvények definiálására és meghívására. Miután a
+          diákok megértik a definiálás és a meghívás lényegét, bevezetjük az extra
+          lehetőségek biztosítását lehetővé tevő paramétereket.
         pdfs:
         - unplug7
         video: Unplug7
@@ -109,7 +108,7 @@
         - unplug10
         video: Unplug10
       Unplug11:
-        title: Wrap-Up
+        title: Összegzés
         desc: Az első 20 órás sorozat vége segít átélni az osztály kedvenc pillanatait
           és rávezeti őket a következő lépésekre, ha érdekli őket a számítógép tudománnyal
           megkezdett út folytatása.
@@ -122,12 +121,12 @@
           hogy egy karaktert egyetlen paranccsal átvezessenek egy labirintuson.
         video: C1_happy_maps_unplugged
       MoveIt:
-        title: Move it, Move it
+        title: Gyerünk, gyerünk!
         desc: A diákok egyszerű algoritmusokat (utasítások sorozta) hoznak létre,
           hogy egy karaktert egyetlen paranccsal átvezessenek egy labirintuson.
         video: C1_moveitmoveit_unplugged
       PlantASeed:
-        title: 'Real-life Algorithms: Plant a Seed'
+        title: 'Valós algoritmusok: Ültess el egy magot!'
         desc: Ebben a leckében az algoritmusok a mindennapi életünkben betöltött szerepét
           nézzük meg egy mag elvetésének példáján keresztül. A lecke emellett a számítástechnika
           nagyobb képét nézi, és hogy az algoritmusok ebben hogy játszanak alapvető
@@ -141,9 +140,9 @@
         video: C1_building_foundation
       GettingLoopy:
         title: Getting Loopy
-        desc: This lesson introduces the programming concept of loops (repeated instructions)
-          through a dance activity. Students will learn simple choreography, then
-          be instructed to repeat it.
+        desc: Ez a lecke bevezet a ciklusok (ismétlődő utasítások) programozásának
+          rejtelmeibe a tánc segítségével. A diákok megtanulnak egy egyszerű koreográfiát,
+          majd azt újra megismétlik.
         video: C1_getting_loopy
       RelayProgramming:
         title: Relay programming
@@ -205,15 +204,15 @@
           string and beads.
         video: C3_functional_suncatchers
       SongwritingParameters:
-        title: Songwriting with Parameters
+        title: Dalszerzés paraméterekkel
         desc: Diákok a kórus és dala segítségével értik meg a paraméterhelyettesítést
           (ami testreszabja a függvényt anélkül, hogy átírná azt).
         video: C3_songwriting_with_parameters
       DiceRace:
-        title: 'Real life algorithms: Dice Race'
-        desc: This lesson calls out ways we use algorithms in our daily lives. As
-          part of that, students will identify and write down the algorithm for a
-          dice race game.
+        title: 'Algoritmusok a hétköznapokban: kockadobás'
+        desc: Ez a lecke rávilágít a valós életben is használt algoritmusokra. Ennek
+          részeként a diákok azonosítják és leírják egy kockajáték során használt
+          algoritmusokat.
         video: C3_dice_race
       Internet:
         title: Internet
@@ -232,7 +231,7 @@
           információk között megkülönböztetve, mit biztonságos és mit nem biztonságos
           megosztani az interneten.
       TangramAlgorithms:
-        title: Tangram Algorithms
+        title: Tangram algoritmusok
         desc: Ez a lecke megmutat valami fontosat algoritmusokról. Ha egy algoritmus
           egyszerű marad nagyon sokmindenre használható.  Ha azt akarod, hogy a végeredmény
           mindig ugyanaz legyen, az algoritmusnak is részletesebbnek kell lennie.
@@ -249,26 +248,27 @@
           Ezek az elvonatkoztatott, absztrakt történetek szórakoztató és őrült új
           történetekké válnak. '
       ForLoopFun:
-        title: For Loop Fun
-        desc: We know that loops allow us to do things over and over again, but now
-          we’re going to learn how to use loops with extra structure built right in.
+        title: Szórakozás a For ciklussal
+        desc: Tudjuk, hogy a ciklusok lehetővé teszik, hogy dolgokat újra és újra
+          megismételjünk, de most megtanuljuk, hogy miként használhatjuk a ciklusok
+          beépített extra funkcióit.
       SongwritingWithParameters:
-        title: Songwriting With Parameters
+        title: Dalszerzés paraméterekkel
         desc: 'One of the most magnificent structures in the computer science world
           is the function.  Functions (sometimes called procedures) are mini programs
           that you can use over and over inside of your bigger program. This lesson
           will help students intuitively understand why combining chunks of code into
           functions is such a helpful practice.  '
       BinaryImages:
-        title: Binary Images
+        title: Bináris képek
         desc: Sokan azt hiszik, a bináris rendszer szigorúan nullákkal és egyesekkel
           operál, ám korábbi tanfolyamainkon megtanultuk,  a bináris opciók sokféle
           információt tudnak képviselni.  Ez a lecke ezt a koncepciót viszi előrébb
           egy lépéssel azt mutatva, hogy egy számítógép hogy képes tárolni összetett
           információt (például a képeket és színeket) is binárisan.
       VideoGamesCoordinatePlanes:
-        title: Video Games and Coordinate Planes
-        desc: Video Games and Coordinate Planes lesson description
+        title: Videó játékok és koordináta síkok
+        desc: A videó játékok és koordináta síkok lecke leírása
       Contracts:
         title: Contracts
         desc: Contracts unplugged lesson description
@@ -276,11 +276,11 @@
         title: The Design Recipe
         desc: Design Recipe lesson description
       Booleans:
-        title: Booleans
-        desc: Booleans lesson description
+        title: Logikai adattípus
+        desc: Boolean lecke leírása
       ConditionalsPiecewiseFunctions:
         title: Conditionals and Piecewise Functions
         desc: Conditionals and Piecewise Functions lesson description
       CollisionDetection:
-        title: Collision Detection
-        desc: Collision Detection lesson description
+        title: Ütközés felismerés
+        desc: Ütközés felismerés lecke leírása

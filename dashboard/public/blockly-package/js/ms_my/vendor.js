@@ -1439,7 +1439,7 @@ renameVar:function(a,b){Blockly.Names.equals(a,this.getTitleValue("VAR"))&&this.
 b.callback=Blockly.ContextMenu.callbackFactory(this,c);a.push(b)}};
 Blockly.Blocks.variables_set={init:function(){var a=new Blockly.FieldLabel(Blockly.Msg.VARIABLES_SET_ITEM);a.EDITABLE=!0;this.setHelpUrl(Blockly.Msg.VARIABLES_SET_HELPURL);this.setHSV(312,0.32,0.62);this.appendValueInput("VALUE").appendTitle(Blockly.Msg.VARIABLES_SET_TITLE).appendTitle(Blockly.disableVariableEditing?a:new Blockly.FieldVariable(Blockly.Msg.VARIABLES_SET_ITEM),"VAR").appendTitle(Blockly.Msg.VARIABLES_SET_TAIL);this.setPreviousStatement(!0);this.setNextStatement(!0);this.setTooltip(Blockly.Msg.VARIABLES_SET_TOOLTIP)},
 getVars:function(){return[this.getTitleValue("VAR")]},renameVar:function(a,b){Blockly.Names.equals(a,this.getTitleValue("VAR"))&&this.setTitleValue(b,"VAR")},contextMenuMsg_:Blockly.Msg.VARIABLES_SET_CREATE_GET,contextMenuType_:"variables_get",customContextMenu:Blockly.Blocks.variables_get.customContextMenu};
-Blockly.Blocks.parameters_get={init:function(){var a=new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);a.EDITABLE=!0;this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);this.setHSV(312,0.32,0.62);this.appendDummyInput().appendTitle(Blockly.Msg.VARIABLES_GET_TITLE).appendTitle(Blockly.disableVariableEditing?a:new Blockly.FieldParameter(Blockly.Msg.VARIABLES_GET_ITEM),"VAR").appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);this.setOutput(!0);this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP)},renameVar:function(a,
+Blockly.Blocks.parameters_get={init:function(){var a=new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);a.EDITABLE=!0;this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);this.setHSV(7,0.8,0.95);this.appendDummyInput().appendTitle(Blockly.Msg.VARIABLES_GET_TITLE).appendTitle(Blockly.disableVariableEditing?a:new Blockly.FieldParameter(Blockly.Msg.VARIABLES_GET_ITEM),"VAR").appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);this.setOutput(!0);this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP)},renameVar:function(a,
 b){Blockly.functionEditor&&(Blockly.functionEditor.renameParameter(a,b),Blockly.functionEditor.refreshParamsEverywhere())},removeVar:Blockly.Blocks.variables_get.removeVar};Blockly.Blocks.functionalProcedures={};
 Blockly.Blocks.functional_definition={init:function(){this.setHelpUrl(Blockly.Msg.PROCEDURES_DEFNORETURN_HELPURL);this.setHSV(94,0.84,0.6);this.setFunctional(!0,{headerHeight:0,rowBuffer:3});this.setFunctionalOutput(!0,"Number");var a=Blockly.Procedures.findLegalName(Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE,this);this.appendDummyInput().appendTitle(Blockly.Msg.DEFINE_FUNCTION_DEFINE).appendTitle(new Blockly.FieldTextInput(a,Blockly.Procedures.rename),"NAME").appendTitle("","PARAMS");this.appendFunctionalInput("STACK");
 this.setFunctional(!0);this.setTooltip(Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP);this.isFunctionalVariable_=!1;this.parameterNames_=[];this.paramIds_=[];this.parameterTypes_=[]},mutationToDom:function(){for(var a=document.createElement("mutation"),b=0;b<this.parameterNames_.length;b++){var c=document.createElement("arg");c.setAttribute("name",this.parameterNames_[b]);c.setAttribute("type",this.parameterTypes_[b]);a.appendChild(c)}this.description_&&(b=document.createElement("description"),
@@ -1562,10 +1562,10 @@ Blockly.JavaScript.parameters_set=Blockly.JavaScript.variables_set;
 
 goog.provide('Blockly.Msg.ms_my');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "actual";
-Blockly.Msg.ADD = "Add";
+Blockly.Msg.ACTUAL = "nyata";
+Blockly.Msg.ADD = "Tambah Masuk";
 Blockly.Msg.ADD_COMMENT = "Tambah Komen";
-Blockly.Msg.ADD_PARAMETER = "Add Parameter";
+Blockly.Msg.ADD_PARAMETER = "Tambah Arahan";
 Blockly.Msg.CHANGE_VALUE_TITLE = "Tukar nilai:";
 Blockly.Msg.COLLAPSE_ALL = "Kecilkan Blok-blok";
 Blockly.Msg.COLLAPSE_BLOCK = "Kecilkan Blok";
@@ -1574,18 +1574,18 @@ Blockly.Msg.COLOUR_BLEND_COLOUR2 = "warna 2";
 Blockly.Msg.COLOUR_BLEND_HELPURL = "http://meyerweb.com/eric/tools/color-blend/";
 Blockly.Msg.COLOUR_BLEND_RATIO = "nisbah";
 Blockly.Msg.COLOUR_BLEND_TITLE = "campuran";
-Blockly.Msg.COLOUR_BLEND_TOOLTIP = "Mencampuradukkan dua warna bersama-sama dengan nisbah yang tertentu (0.0 - 1.0).";
+Blockly.Msg.COLOUR_BLEND_TOOLTIP = "Gabungkan dua warna bersama berpandukan ratio (0.0 - 1.0).";
 Blockly.Msg.COLOUR_PICKER_HELPURL = "http://en.wikipedia.org/wiki/Color";
-Blockly.Msg.COLOUR_PICKER_TOOLTIP = "Memilih satu warna dari palet.";
+Blockly.Msg.COLOUR_PICKER_TOOLTIP = "Pilih warna dari palet.";
 Blockly.Msg.COLOUR_RANDOM_HELPURL = "http://randomcolour.com";
-Blockly.Msg.COLOUR_RANDOM_TITLE = "Warna rawak";
+Blockly.Msg.COLOUR_RANDOM_TITLE = "warna rawak";
 Blockly.Msg.COLOUR_RANDOM_TOOLTIP = "Pilih satu warna secara rawak.";
 Blockly.Msg.COLOUR_RGB_BLUE = "biru";
 Blockly.Msg.COLOUR_RGB_GREEN = "hijau";
 Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.html";
 Blockly.Msg.COLOUR_RGB_RED = "merah";
 Blockly.Msg.COLOUR_RGB_TITLE = "warna dengan";
-Blockly.Msg.COLOUR_RGB_TOOLTIP = "Mencipta satu warna dengan jumlah yang ditetapkan merah, hijau dan biru.  Semua nilai mestilah antara 0 dan 100.";
+Blockly.Msg.COLOUR_RGB_TOOLTIP = "Pilih satu warna dengan jumlah ditentukan dari merah, hijau, dan biru. Semua nilai perlu di antara 0 dan 100.";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "Keluar daripada gelung lingkaran";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "Teruskan dengan pengulangan seterusnya gelung";
@@ -1623,9 +1623,9 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_UNTIL = "ulang sehingga";
 Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_WHILE = "ulang apabila";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "Apabila nilai adalah palsu, lakukan beberapa penyata.";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "Apabila nilai adalah benar, lakukan beberapa penyata.";
-Blockly.Msg.DEFINE_FUNCTION_DEFINE = "Define";
+Blockly.Msg.DEFINE_FUNCTION_DEFINE = "Takrifkan";
 Blockly.Msg.DELETE_BLOCK = "Buang blok";
-Blockly.Msg.DELETE_PARAMETER = "Delete parameter...";
+Blockly.Msg.DELETE_PARAMETER = "Hapuskan parameter...";
 Blockly.Msg.DELETE_PARAMETER_TITLE = "This will delete all '%1' parameter occurrences. Are you sure?";
 Blockly.Msg.DELETE_X_BLOCKS = "Buang %1 Blok";
 Blockly.Msg.DISABLE_BLOCK = "Nyahaktif blok";

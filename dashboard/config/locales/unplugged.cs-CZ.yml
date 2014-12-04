@@ -2,15 +2,13 @@
   data:
     unplugged:
       Unplug1:
-        title: "Úvod do počítačové vědy"
-        desc: This lesson will introduce the concept of Computer Science and explain
-          what a Computer Scientist does.  It will also give students an opportunity
-          to assume the role of a computer scientist.  By the end of the activity,
-          each student will have a take-home reminder of what he or she learned.  You
-          may be tempted to skip teaching young children the vocabulary words that
-          are associated with the lessons that follow, but presenting them in a fun
-          and playful light now is far more productive than waiting for more advanced
-          opportunities.
+        title: Úvod do počítačové vědy
+        desc: Tato lekce představí koncept informatiky a vysvětlí, co dělají počítačoví
+          vědci. Také dá studentům možnost zaujmout roli počítačového vědce. Na konci
+          lekce každý student dostane shrnutí toho, co se naučil. Možná, že nebudete
+          chtít dětem vysvětlovat termíny, které se budou v lekcích vyskytovat, ale
+          když je jim představíte zábavně a hravě, bude to mnohem lepší, než když
+          budete čekat na pozdější příležitost.
         pdfs:
         - unplug1
         video: Unplug1
@@ -65,7 +63,7 @@
         - unplug5
         video: Unplug5
       Unplug6:
-        title: Conditions
+        title: Podmínky
         desc: This is a class game.  After introducing the idea of conditionals, if-statements,
           and loops, the class can practice together using a pre-written program,
           a deck of cards, and luck of the draw.
@@ -96,7 +94,7 @@
         - unplug8
         video: Unplug8
       Unplug9:
-        title: "Štafetové Programování"
+        title: Štafetové Programování
         desc: This lesson will take an idea from a previous activity (4. Graph Paper
           Programming) and use those skills to emphasize the importance of completing
           programs that operate in sequence and frequently checking programs for "bugs".

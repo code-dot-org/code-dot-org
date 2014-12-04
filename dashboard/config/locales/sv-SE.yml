@@ -13,7 +13,7 @@
         password_confirmation: Lösenordsbekräftelse
         current_password: Nuvarande lösenord
         locale: språk
-        age: Age
+        age: Ålder
         gender: Kön
         edit_header: Redigera kontouppgifter
         error:
@@ -37,7 +37,7 @@
   of: av
   more: MER
   less: MINDRE
-  try_hoc: 'Prova programmeringstimmen, klicka här >> '
+  try_hoc: 'Prova Hour of Code, klicka här >> '
   try_k8intro: 'Eller prova vår grundskolekurs: Introduktion till Datavetenskap (15-25
     timmar)'
   k8intro: K-8 Intro to Computer Science Course (15-25 hours)
@@ -78,10 +78,10 @@
     address_placeholder: adress, stad, län, postnummer
     gender: Kön (valfritt)
     birthday: Födelsedag (valfritt)
-    age: "Ålder (frivilligt)"
+    age: Ålder
     user_type: Are you a student or teacher?
     submit: Registrera dig
-    teacher: "Är du en lärare?"
+    teacher: Är du en lärare?
     valid_username: Tillgänglig!
     invalid_username: Användarnamnet måste innehålla minst fem tecken
     taken_username: Användarnamnet är upptaget
@@ -118,10 +118,10 @@
       email: E-postadress
       submit: Skicka "byta lösenord"-instruktioner till mig
     change_form:
-      title: "Ändra ditt lösenord"
+      title: Ändra ditt lösenord
       new_password: Nytt lösenord
       confirm_password: Bekräfta nytt lösenord
-      submit: "Ändra mitt lösenord"
+      submit: Ändra mitt lösenord
   welcome_email:
     subject: Gå med i min klass (på Code.org)
     body: |
@@ -134,12 +134,12 @@
       %{name}
   follower:
     invite_sent: Inbjuda skickades
-    added_teacher: "%{name} är tillagd som din lärare"
+    added_teacher: '%{name} är tillagd som din lärare'
     registered: Du har registrerat dig för %{section_name}.
     error:
       signed_in: Vänligen logga ut innan du fortsätter
       username_not_found: Användarnamnet %{username} hittades inte
-      username_in_use: "%{username} används redan, vänligen välj ett annat"
+      username_in_use: '%{username} används redan, vänligen välj ett annat'
       no_teacher: Kunde inte hitta någon inloggad med '%{teacher_email_or_code}'.
         Vänligen be dem att registrera sig här och försök sedan lägga till dem igen
       section_not_found: Could not find a section with code '%{section_code}'.
@@ -178,13 +178,13 @@
       title: Vänligen bekräfta
       'no': Nej
       'yes': Ja
-      msg: "Är du säker på att du vill begära %{prize_name} priset?"
+      msg: Är du säker på att du vill begära %{prize_name} priset?
       msg_student: 'OBS: Du kan bara välja en sorts pris.'
       msg_publicschool: Var vänlig och bekräfta att du är en amerikansk ''Public School''
         lärare.
       msg_visit_website: Visit website
     providers:
-      apple_itunes: "$10 iTunes Gift Card"
+      apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB Dropbox utrymme
@@ -193,12 +193,12 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: "$10 Skype credit"
+      skype: $10 Skype credit
     msg:
       choose: 'Välj ett pris:'
       choose_teacher: 'Click on the logo below to claim your prize:'
       earned: Du har förtjänat ett pris! (Endast amerikanska studenter)
-      not_earned_title: Finish the tutorial, earn rewards (U.S. students only)
+      not_earned_title: Slutför övningen och få belöningar (enbart elever i USA)
       not_earned: 'Lär dig alla datavetenskapliga begrepp, samla in alla % {num_trophies}
         troféer och få verkliga priser. Du kan välja mellan ett $10 iTunes-presentkort,
         10GB gratis lagringsutrymme i Dropbox, $10 i Skype krediter och gratis spelnerladdningar.
@@ -233,10 +233,10 @@
     update: Uppdatera
     destroy: Förstöra
     back: Tillbaka
-    confirm: "Är du säker?"
-    created: "%{model} har skapats."
-    updated: "%{model} har uppdaterats."
-    destroyed: "%{model} was successfully deleted."
+    confirm: Är du säker?
+    created: '%{model} har skapats.'
+    updated: '%{model} har uppdaterats.'
+    destroyed: '%{model} was successfully deleted.'
     access_denied: You do not have access to this %{model}.
   nav:
     header:
@@ -254,7 +254,7 @@
       logout: Logga ut
       signin: Logga in
       signup: Registrera dig
-      already_registered: Already registered?
+      already_registered: Redan registrerad?
     popup:
       progress: Dina framsteg
       lines: 'Totalt antal rader kod: %{lines}'
@@ -263,15 +263,15 @@
       puzzle_map: Nivåer
       prizes: Samla in alla %{total_trophies} troféer och vinn priser!
       prize_earned: Alla %{total_trophies} troféerna är insamlade. Pris vunnet!
-      prize_us_only: "(Endast US-studenter)"
+      prize_us_only: (Endast US-studenter)
       prizes_link: Mer information
   teacher:
     title:
       one: 'Din lärare:'
       other: 'Dina lärare:'
-    remove: "(ta bort lärare)"
+    remove: (ta bort lärare)
     confirm:
-      remove: "Är du säker du vill ta bort denna lärare?"
+      remove: Är du säker du vill ta bort denna lärare?
     tools: Lärar-verktyg
     followers:
       section: 'Grupp:'
@@ -326,18 +326,17 @@
     rollup: Framstegsmeny
     activity: Senaste klasshändelserna
     user_not_found: The teacher or student could not be found
-    cant_remove_student_no_email: "%{student_name} cannot be removed as your student
-      because %{student_name} has not registered an e-mail address"
-    cant_remove_teacher_no_email: "%{teacher_name} cannot be removed as your teacher
-      because you have not registered an e-mail address"
-    student_teacher_disassociated: "%{teacher_name} has been removed as a teacher
-      for %{student_name}"
+    cant_remove_student_no_email: '%{student_name} cannot be removed as your student
+      because %{student_name} has not registered an e-mail address'
+    cant_remove_teacher_no_email: '%{teacher_name} cannot be removed as your teacher
+      because you have not registered an e-mail address'
+    student_teacher_disassociated: '%{teacher_name} has been removed as a teacher
+      for %{student_name}'
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_resend_confirm: Resend confirmation instructions
-    new_password_hint: "(lämna tomt om du inte vill ändra det)"
-    current_password_hint: "(vi behöver ditt nuvarande lösenord att bekräfta dina
-      ändringar)"
+    new_password_hint: (lämna tomt om du inte vill ändra det)
+    current_password_hint: (vi behöver ditt nuvarande lösenord att bekräfta dina ändringar)
     cancel:
       title: Ta bort mitt konto
       hint: Missnöjd?
@@ -380,16 +379,17 @@
       completion and up to $1,000 in classroom rewards for public school teachers'
     tryfirst: 'Or, you can try it first, and sign up later:'
     trynow: Prova nu
-    add_hint_help: Please help us to add smart hints to Code.org tutorials
+    add_hint_help: Hjälp oss att lägga till smarta tips till Code.org övningar
     20hour_overview: Denna 20-timmars kurs introducerar grundläggande datavetenskap
       och programmeringsbegrepp. Kursen är utformad för användning i klassrummet från
       förskoleklass till årskurs 8, men det är roligt att lära sig i alla åldrar.
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
-    heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
-    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
-    heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
+    heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
+    heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
+    heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
     your_gallery: Gallery
   gender:
     male: Man
@@ -399,14 +399,13 @@
     student: Student
     teacher: Teacher
   footer:
-    help_from_html: Ingenjörer från <a href="http://www.google.com"> Google</a>, <a
-      href="http://www.microsoft.com"> Microsoft</a>, <a href="http://www.facebook.com">
-      Facebook</a> och <a href="http://www.twitter.com"> Twitter</a> har hjälpt till
-      att skapa dessa kurser.
+    help_from_html: Ingenjörer från Google, Microsoft, Facebook, och Twitter hjälpte
+      till med att skapa denna övning.
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 <a href="http://www.rovio.com">Rovio
       Entertainment Ltd</a>. All Rights Reserved.<br/> Plants vs. Zombies&trade; &
       &copy; 2013 <a href="http://www.ea.com">Electronic Arts Inc.</a>. All Rights
       Reserved.
+    powered_by_aws: Powered by Amazon Web Services
     feedback: Ge feedback
     translate: Hjälp oss översätta till ditt språk
     support: Stöd
@@ -430,31 +429,32 @@
   compatability:
     working:
       header: Vi arbetar för stöd till din webbläsare.
-      message: Code.org uses modern web technology. This makes the site faster to
-        use. Your browser doesn't support all the features required, and you may experience
-        issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
-        any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade
-        your browser to a supported version</a>.
+      message: Code.org använder modern webbteknik. Detta gör webbplatsen snabbare
+        att använda. Din webbläsare stöder inte alla funktioner som krävs, och du
+        kan uppleva problem när du använder denna del av webbplatsen. Hjälp oss genom
+        att <a href='%{report_issue_url}'> rapportera eventuella problem du hittar</a>.
+        Du kan även <a href='%{supported_browsers_url}'> uppgradera din webbläsare
+        till en version som stöds</a>.
       hide_this_warning: Hide this warning
     upgrade:
       header: Du måste uppgradera din webbläsare.
-      message: Code.org uses modern web technology. This makes the site faster to
-        use. Unfortunately your browser doesn't support all the features required
-        to run this part of the site.<br/><br/>Install a browser on our supported
-        browsers list to continue. You can <a href='#'>try viewing the page</a>, but
-        expect functionality to be broken.
-      button: Take me to the list of supported browsers
+      message: Code.org använder modern webbteknik. Detta gör webbplatsen snabbare
+        att använda. Tyvärr stöder din webbläsare inte alla funktioner som krävs för
+        att köra denna del av webbplatsen. <br/> <br/>Installera en webbläsare som
+        finns med på vår lista över webbläsare som stöds för att fortsätta. Du kan
+        <a href='#'> prova visa sidan</a>, men räkna med att allt inte fungerar.
+      button: Ta mig till listan över webbläsare som stöds
   slow_loading: Det här tar längre tid  än vanligt...
   try_reloading: Försök ladda sidan igen
   next_stage: Klar! Fortsätt till nästa nivå
-  download_pdf: "Öppen kursplan"
+  download_pdf: Öppen kursplan
   lesson_plan: Lesson Plan
   view_lesson_plan: View Lesson Plan
   pdf_download: Ladda ner PDF
   download_coming_soon: Downloadable activity coming soon.
   video_coming_soon: Video Coming Soon!
   share_code:
-    title: Klicka "Kör program" för att se vad mitt program gör
+    title: Klicka på 'Kör' för att testa mitt program
     bounce_og_title: Check out my Bounce Game
     flappy_og_title: Check out my Flappy Game
     studio_og_title: Check out my story
@@ -484,17 +484,19 @@
       body: Lär dig grunderna i programmering. Miljoner har provat denna.
     flappy:
       title: Flappy Code
-      body: Wanna write your own game in less than 10 minutes? Try our Flappy Code
-        tutorial!
+      body: Vill du skriva ditt egna spel på mindre än 10 minuter? Prova vår Flappy
+        Code övning!
     20hour:
       title: Grundkurs
       body: Prova vår 20-timmars grundkurs i programmering.
     hoc2014:
-      try_new_tutorial: Try our new Hour of Code tutorial in beta
-      try_frozen: Artist with Anna and Elsa, from Frozen
+      try_new_tutorial: Prova vår nya Hour of Code övning i betaversion
+      try_frozen: Konstnären, med Anna och Elsa från Frost
     gallery:
       title: Gallery
       body: View a gallery of app and artist images created by our users
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: Elever ritade dessa med kod!
     students_made_these_with_code: Students made these with code!
@@ -507,18 +509,18 @@
     want_to_make_your_own: Vill du göra din egen?
     more: Mer &rarr;
     caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: "%{time_ago} ago"
+    caption_time_ago: '%{time_ago} ago'
     header: Gallery
     header_playlab: Play Lab
     header_artist: Artist
   landing:
     prerelease: This page is still under development.
-    prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
-      is subject to revision as feedback is received and improvements are made.
+    prerelease_hoc2014: Den här övningen är en <span class='betatext'>betaversion</span>.  Den
+      revideras allteftersom synpunkter kommer in och förbättringar görs.
     feedback: Give Feedback
     report_bug: Report Bug
     support: Få hjälp
-    support_url: "//support.code.org"
+    support_url: //support.code.org
   multi:
     wrong_title: Incorrect answer
     wrong_body: The answer you've entered is not correct.  Please try again!
@@ -560,8 +562,8 @@
           description: ''
         flappy:
           title: Flappy Code
-          description: Wanna write your own game in less than 10 minutes? Try our
-            Flappy Code tutorial!
+          description: Vill du skriva ditt egna spel på mindre än 10 minuter? Prova
+            vår Flappy Code övning!
         jigsaw:
           title: Pussel
           description: ''

@@ -1439,7 +1439,7 @@ renameVar:function(a,b){Blockly.Names.equals(a,this.getTitleValue("VAR"))&&this.
 b.callback=Blockly.ContextMenu.callbackFactory(this,c);a.push(b)}};
 Blockly.Blocks.variables_set={init:function(){var a=new Blockly.FieldLabel(Blockly.Msg.VARIABLES_SET_ITEM);a.EDITABLE=!0;this.setHelpUrl(Blockly.Msg.VARIABLES_SET_HELPURL);this.setHSV(312,0.32,0.62);this.appendValueInput("VALUE").appendTitle(Blockly.Msg.VARIABLES_SET_TITLE).appendTitle(Blockly.disableVariableEditing?a:new Blockly.FieldVariable(Blockly.Msg.VARIABLES_SET_ITEM),"VAR").appendTitle(Blockly.Msg.VARIABLES_SET_TAIL);this.setPreviousStatement(!0);this.setNextStatement(!0);this.setTooltip(Blockly.Msg.VARIABLES_SET_TOOLTIP)},
 getVars:function(){return[this.getTitleValue("VAR")]},renameVar:function(a,b){Blockly.Names.equals(a,this.getTitleValue("VAR"))&&this.setTitleValue(b,"VAR")},contextMenuMsg_:Blockly.Msg.VARIABLES_SET_CREATE_GET,contextMenuType_:"variables_get",customContextMenu:Blockly.Blocks.variables_get.customContextMenu};
-Blockly.Blocks.parameters_get={init:function(){var a=new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);a.EDITABLE=!0;this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);this.setHSV(312,0.32,0.62);this.appendDummyInput().appendTitle(Blockly.Msg.VARIABLES_GET_TITLE).appendTitle(Blockly.disableVariableEditing?a:new Blockly.FieldParameter(Blockly.Msg.VARIABLES_GET_ITEM),"VAR").appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);this.setOutput(!0);this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP)},renameVar:function(a,
+Blockly.Blocks.parameters_get={init:function(){var a=new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);a.EDITABLE=!0;this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);this.setHSV(7,0.8,0.95);this.appendDummyInput().appendTitle(Blockly.Msg.VARIABLES_GET_TITLE).appendTitle(Blockly.disableVariableEditing?a:new Blockly.FieldParameter(Blockly.Msg.VARIABLES_GET_ITEM),"VAR").appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);this.setOutput(!0);this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP)},renameVar:function(a,
 b){Blockly.functionEditor&&(Blockly.functionEditor.renameParameter(a,b),Blockly.functionEditor.refreshParamsEverywhere())},removeVar:Blockly.Blocks.variables_get.removeVar};Blockly.Blocks.functionalProcedures={};
 Blockly.Blocks.functional_definition={init:function(){this.setHelpUrl(Blockly.Msg.PROCEDURES_DEFNORETURN_HELPURL);this.setHSV(94,0.84,0.6);this.setFunctional(!0,{headerHeight:0,rowBuffer:3});this.setFunctionalOutput(!0,"Number");var a=Blockly.Procedures.findLegalName(Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE,this);this.appendDummyInput().appendTitle(Blockly.Msg.DEFINE_FUNCTION_DEFINE).appendTitle(new Blockly.FieldTextInput(a,Blockly.Procedures.rename),"NAME").appendTitle("","PARAMS");this.appendFunctionalInput("STACK");
 this.setFunctional(!0);this.setTooltip(Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP);this.isFunctionalVariable_=!1;this.parameterNames_=[];this.paramIds_=[];this.parameterTypes_=[]},mutationToDom:function(){for(var a=document.createElement("mutation"),b=0;b<this.parameterNames_.length;b++){var c=document.createElement("arg");c.setAttribute("name",this.parameterNames_[b]);c.setAttribute("type",this.parameterTypes_[b]);a.appendChild(c)}this.description_&&(b=document.createElement("description"),
@@ -1565,7 +1565,7 @@ goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "real";
 Blockly.Msg.ADD = "Afegeix";
 Blockly.Msg.ADD_COMMENT = "Afegeix un comentari";
-Blockly.Msg.ADD_PARAMETER = "Afegir el paràmetre";
+Blockly.Msg.ADD_PARAMETER = "Afegeix el paràmetre";
 Blockly.Msg.CHANGE_VALUE_TITLE = "Canvia el valor:";
 Blockly.Msg.COLLAPSE_ALL = "Col·lapsa els blocs";
 Blockly.Msg.COLLAPSE_BLOCK = "Col·lapsa el bloc";
@@ -1585,7 +1585,7 @@ Blockly.Msg.COLOUR_RGB_GREEN = "verd";
 Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.html";
 Blockly.Msg.COLOUR_RGB_RED = "vermell";
 Blockly.Msg.COLOUR_RGB_TITLE = "color amb";
-Blockly.Msg.COLOUR_RGB_TOOLTIP = "Crear un color amb la quantitat justa de vermell, verd i blau.  Tots els valors han de ser entre 0 i 100.";
+Blockly.Msg.COLOUR_RGB_TOOLTIP = "Crea un color amb la quantitat justa de vermell, verd i blau. Tots els valors han d'estar entre 0 i 100.";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blocs/wiki/Loops#Loop_Termination_Blocs";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "surt del bucle";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "continua amb la següent iteració del bucle";
@@ -1651,7 +1651,7 @@ Blockly.Msg.FUNCTIONAL_DESCRIPTION_LABEL = "Descripció";
 Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL = "Domini";
 Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP = "Defineix un mètode funcional";
 Blockly.Msg.FUNCTIONAL_RANGE_LABEL = "Rang";
-Blockly.Msg.FUNCTIONAL_VARIABLE_CREATE = "Crea una Variable";
+Blockly.Msg.FUNCTIONAL_VARIABLE_CREATE = "Crea una variable";
 Blockly.Msg.FUNCTIONAL_VARIABLE_HEADER = "Variable";
 Blockly.Msg.FUNCTIONAL_VARIABLE_TYPE = "Tipus";
 Blockly.Msg.HELP = "Ajuda";
@@ -1705,7 +1705,7 @@ Blockly.Msg.LISTS_INLIST = "en la llista";
 Blockly.Msg.LISTS_IS_EMPTY_HELPURL = "https://code.google.com/p/blockly/wiki/Lists#is_empty";
 Blockly.Msg.LISTS_IS_EMPTY_TITLE = "%1 està buit";
 Blockly.Msg.LISTS_LENGTH_HELPURL = "https://code.google.com/p/blockly/wiki/Lists#length_of";
-Blockly.Msg.LISTS_LENGTH_INPUT_LENGTH = "de llarg";
+Blockly.Msg.LISTS_LENGTH_INPUT_LENGTH = "longitud";
 Blockly.Msg.LISTS_LENGTH_TITLE = "longitud de %1";
 Blockly.Msg.LISTS_LENGTH_TOOLTIP = "Retorna la quantitat d'elements d'una llista.";
 Blockly.Msg.LISTS_REPEAT_HELPURL = "https://code.google.com/p/blockly/wiki/Lists#create_list_with";
@@ -1865,8 +1865,8 @@ Blockly.Msg.PROCEDURES_IFRETURN_WARNING = "Avís: Aquest bloc només es pot util
 Blockly.Msg.PROCEDURES_MUTATORARG_TITLE = "Nom de la dada d'entrada:";
 Blockly.Msg.PROCEDURES_MUTATORCONTAINER_TITLE = "Dades d'entrada";
 Blockly.Msg.REMOVE_COMMENT = "Elimina el comentari";
-Blockly.Msg.RENAME_PARAMETER = "Canviar el nom de paràmetre...";
-Blockly.Msg.RENAME_PARAMETER_TITLE = "Canvia el nom de tots els paràmetres \"%1\" a:";
+Blockly.Msg.RENAME_PARAMETER = "Reanomena el paràmetre...";
+Blockly.Msg.RENAME_PARAMETER_TITLE = "Reanomena tots els paràmetres \"%1\" a:";
 Blockly.Msg.RENAME_VARIABLE = "Reanomena la variable...";
 Blockly.Msg.RENAME_VARIABLE_TITLE = "Reanomena totes les variables '%1' a:";
 Blockly.Msg.SAVE_AND_CLOSE = "Desa i tanca";

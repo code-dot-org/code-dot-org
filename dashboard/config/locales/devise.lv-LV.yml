@@ -69,5 +69,5 @@
       not_found: nav atrasts
       not_locked: nav slēgts
       not_saved:
-        one: "%{resource} netika saglabāts šādas kļūdas dēļ:"
-        other: "%{resource} netika saglabāts %{count} kļūdu dēļ:"
+        one: '%{resource} netika saglabāts šādas kļūdas dēļ:'
+        other: '%{resource} netika saglabāts %{count} kļūdu dēļ:'

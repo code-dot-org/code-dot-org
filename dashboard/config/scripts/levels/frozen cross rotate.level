@@ -19,7 +19,10 @@
     "impressive": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "ideal": "5"
+    "ideal": "5",
+    "embed": "false",
+    "disable_sharing": "false",
+    "callout_json": "[\r\n  {\"localization_key\": \"replace_questions_degree\", \"element_id\": \"#turn_right_qtip > .blocklyEditableText:eq(1)\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}}\r\n  }\r\n]"
   }
 }]]></config>
   <blocks>
@@ -35,7 +38,7 @@
                   <title name="DIR">moveBackward</title>
                   <title name="VALUE" config="50,100,150,200,300">100</title>
                   <next>
-                    <block type="draw_turn_by_constant_dropdown" deletable="false">
+                    <block type="draw_turn_by_constant_dropdown" id="turn_right_qtip">
                       <title name="DIR">turnRight</title>
                       <title name="VALUE" config="36,45,60,90,120,180">???</title>
                     </block>

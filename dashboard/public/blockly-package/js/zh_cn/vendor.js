@@ -1439,7 +1439,7 @@ renameVar:function(a,b){Blockly.Names.equals(a,this.getTitleValue("VAR"))&&this.
 b.callback=Blockly.ContextMenu.callbackFactory(this,c);a.push(b)}};
 Blockly.Blocks.variables_set={init:function(){var a=new Blockly.FieldLabel(Blockly.Msg.VARIABLES_SET_ITEM);a.EDITABLE=!0;this.setHelpUrl(Blockly.Msg.VARIABLES_SET_HELPURL);this.setHSV(312,0.32,0.62);this.appendValueInput("VALUE").appendTitle(Blockly.Msg.VARIABLES_SET_TITLE).appendTitle(Blockly.disableVariableEditing?a:new Blockly.FieldVariable(Blockly.Msg.VARIABLES_SET_ITEM),"VAR").appendTitle(Blockly.Msg.VARIABLES_SET_TAIL);this.setPreviousStatement(!0);this.setNextStatement(!0);this.setTooltip(Blockly.Msg.VARIABLES_SET_TOOLTIP)},
 getVars:function(){return[this.getTitleValue("VAR")]},renameVar:function(a,b){Blockly.Names.equals(a,this.getTitleValue("VAR"))&&this.setTitleValue(b,"VAR")},contextMenuMsg_:Blockly.Msg.VARIABLES_SET_CREATE_GET,contextMenuType_:"variables_get",customContextMenu:Blockly.Blocks.variables_get.customContextMenu};
-Blockly.Blocks.parameters_get={init:function(){var a=new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);a.EDITABLE=!0;this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);this.setHSV(312,0.32,0.62);this.appendDummyInput().appendTitle(Blockly.Msg.VARIABLES_GET_TITLE).appendTitle(Blockly.disableVariableEditing?a:new Blockly.FieldParameter(Blockly.Msg.VARIABLES_GET_ITEM),"VAR").appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);this.setOutput(!0);this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP)},renameVar:function(a,
+Blockly.Blocks.parameters_get={init:function(){var a=new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);a.EDITABLE=!0;this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);this.setHSV(7,0.8,0.95);this.appendDummyInput().appendTitle(Blockly.Msg.VARIABLES_GET_TITLE).appendTitle(Blockly.disableVariableEditing?a:new Blockly.FieldParameter(Blockly.Msg.VARIABLES_GET_ITEM),"VAR").appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);this.setOutput(!0);this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP)},renameVar:function(a,
 b){Blockly.functionEditor&&(Blockly.functionEditor.renameParameter(a,b),Blockly.functionEditor.refreshParamsEverywhere())},removeVar:Blockly.Blocks.variables_get.removeVar};Blockly.Blocks.functionalProcedures={};
 Blockly.Blocks.functional_definition={init:function(){this.setHelpUrl(Blockly.Msg.PROCEDURES_DEFNORETURN_HELPURL);this.setHSV(94,0.84,0.6);this.setFunctional(!0,{headerHeight:0,rowBuffer:3});this.setFunctionalOutput(!0,"Number");var a=Blockly.Procedures.findLegalName(Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE,this);this.appendDummyInput().appendTitle(Blockly.Msg.DEFINE_FUNCTION_DEFINE).appendTitle(new Blockly.FieldTextInput(a,Blockly.Procedures.rename),"NAME").appendTitle("","PARAMS");this.appendFunctionalInput("STACK");
 this.setFunctional(!0);this.setTooltip(Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP);this.isFunctionalVariable_=!1;this.parameterNames_=[];this.paramIds_=[];this.parameterTypes_=[]},mutationToDom:function(){for(var a=document.createElement("mutation"),b=0;b<this.parameterNames_.length;b++){var c=document.createElement("arg");c.setAttribute("name",this.parameterNames_[b]);c.setAttribute("type",this.parameterTypes_[b]);a.appendChild(c)}this.description_&&(b=document.createElement("description"),
@@ -1562,24 +1562,24 @@ Blockly.JavaScript.parameters_set=Blockly.JavaScript.variables_set;
 
 goog.provide('Blockly.Msg.zh_cn');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "actual";
-Blockly.Msg.ADD = "Add";
+Blockly.Msg.ACTUAL = "实际";
+Blockly.Msg.ADD = "添加";
 Blockly.Msg.ADD_COMMENT = "添加注释";
-Blockly.Msg.ADD_PARAMETER = "Add Parameter";
+Blockly.Msg.ADD_PARAMETER = "添加参数";
 Blockly.Msg.CHANGE_VALUE_TITLE = "更改值：";
 Blockly.Msg.COLLAPSE_ALL = "折叠块\n上下文菜单的选择块较小的隐藏一些关于它的信息的出现。使用相同的术语作为先前的消息。";
 Blockly.Msg.COLLAPSE_BLOCK = "折叠块\n上下文菜单 - 使选定块的外观较小的通过隐藏一些关于它的信息。";
-Blockly.Msg.COLOUR_BLEND_COLOUR1 = "颜色1";
-Blockly.Msg.COLOUR_BLEND_COLOUR2 = "颜色2";
+Blockly.Msg.COLOUR_BLEND_COLOUR1 = "颜色 1";
+Blockly.Msg.COLOUR_BLEND_COLOUR2 = "颜色 2";
 Blockly.Msg.COLOUR_BLEND_HELPURL = "http://meyerweb.com/eric/tools/color-blend/";
 Blockly.Msg.COLOUR_BLEND_RATIO = "比率\n块输入文本-在[https://code.google.com/p/blockly/wiki/Colour#Blending_colours blend] 的比例含有所述第一颜色;其余的比例是第二颜色。例如，如果第一个颜色是红色，第二个颜色为蓝色，以1:1的比例将产生纯红， .5的比例会产生紫（红，蓝等量） ，和1比0将产生纯蓝色。";
 Blockly.Msg.COLOUR_BLEND_TITLE = "混合";
-Blockly.Msg.COLOUR_BLEND_TOOLTIP = "以给定0.0 - 1.0 的比率混合两种颜色。\n提示 - 请参阅[https://code.google.com/p/blockly/wiki/Colour#Blending_colours https://code.google.com/p/blockly/wiki/Colour#Blending_colours].";
+Blockly.Msg.COLOUR_BLEND_TOOLTIP = "以给定的比率（0.0 - 1.0）混合两种颜色。";
 Blockly.Msg.COLOUR_PICKER_HELPURL = "http://zh.wikipedia.org/wiki/颜色";
-Blockly.Msg.COLOUR_PICKER_TOOLTIP = "从调色板中选择一种颜色。\n提示 - 请参阅[https://code.google.com/p/blockly/wiki/Colour#Picking_a_colour_from_a_palette https://code.google.com/p/blockly/wiki/Colour#Picking_a_colour_from_a_palette].";
+Blockly.Msg.COLOUR_PICKER_TOOLTIP = "从调色板选择一种颜色";
 Blockly.Msg.COLOUR_RANDOM_HELPURL = "http://randomcolour.com";
-Blockly.Msg.COLOUR_RANDOM_TITLE = "随机颜色\n文本块 - 块生成一个颜色随机的标题。";
-Blockly.Msg.COLOUR_RANDOM_TOOLTIP = "随机选择一种颜色。\n提示-请参阅[https://code.google.com/p/blockly/wiki/Colour#Generating_a_random_colour https://code.google.com/p/blockly/wiki/Colour#Generating_a_random_colour].";
+Blockly.Msg.COLOUR_RANDOM_TITLE = "随机颜色";
+Blockly.Msg.COLOUR_RANDOM_TOOLTIP = "随机选择一种颜色";
 Blockly.Msg.COLOUR_RGB_BLUE = "蓝色\n块输入文本-在使用蓝（从0到100 ）的量时，\n[https://code.google.com/p/blockly/wiki/Colour#Creating_a_colour_from_red,_green,_and_blue_components https://code.google.com/p/blockly/wiki/Colour#Creating_a_colour_from_red,_green,_and_blue_components].\n{{Identical|Blue}}";
 Blockly.Msg.COLOUR_RGB_GREEN = "绿色\n块输入文本-在使用绿色（从0到100 ）的量时，[https://code.google.com/p/blockly/wiki/Colour#Creating_a_colour_from_red,_green,_and_blue_components https://code.google.com/p/blockly/wiki/Colour#Creating_a_colour_from_red,_green,_and_blue_components]";
 Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.html";

@@ -299,15 +299,15 @@ pt:
         studio_c3_game_5: Você pode adicionar um bloco que some um ponto quando o pinguim se encontra com o polvo, e então movê-lo até que você consiga o ponto?
         studio_c3_game_6: Você pode adicionar blocos para mudar o plano de fundo e a velocidade do pinguim, e então movê-lo com as setas até que você pontue?
         studio_c3_game_7: Crie seu próprio jogo. Quando terminar, clique em Concluir para deixar que seus amigos experimentem seu jogo em seus celulares.
-        studio_playlab_1: 'Você consegue fazer esse cachorro dizer "Olá, mundo"?'
-        studio_playlab_2: Você pode fazer o cachorro dizer alguma coisa e, depois, fazer o gato dizer alguma coisa?
-        studio_playlab_3: Você consegue desenvolver um programa para fazer este cachorro se mover em direção ao gato?
-        studio_playlab_4: 'Você consegue desenvolver um programa que faça com que o cachorro se mova em direção ao gato e que faça com que o gato diga "Olá" quando o cachorro o alcançar?'
-        studio_playlab_5: 'Você pode escrever um programa para fazer o polvo dizer "olá" quando clicarem nele?'
-        studio_playlab_6: Você pode desenvolver um programa que faça o pinguim se mover usando as teclas com as setas para cima / para baixo / à esquerda / à direita, para atingir todos os alvos?
-        studio_playlab_7: 'O bloco "repita infinitamente" possibilita a execução contínua do programa. Você pode anexar blocos para mover esse dinossauro para cima e para baixo repetidamente?'
-        studio_playlab_8: Você pode adicionar um bloco que some um ponto quando o pinguim se encontra com o polvo, e então movê-lo até que você consiga o ponto?
-        studio_playlab_9: Você pode adicionar blocos para mudar o plano de fundo e a velocidade do pinguim, e então movê-lo com as setas até que você pontue?
+        studio_playlab_1: 'Penguin wants to say "hello" - can you help him?'
+        studio_playlab_2: 'Cave Boy (actor 1) and Cave Girl (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
+        studio_playlab_3: Can you help Tennis Girl get to the flag?
+        studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor 2) and play a sound when he gets there?
+        studio_playlab_5: 'Can you help the Spacebot say "greetings earthlings" when it is clicked? Don’t forget to click it after you click Run'
+        studio_playlab_6: Can you help the Witch move around using the up/down/right/left arrow keys to get to all the magical fireballs?
+        studio_playlab_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help the wizard move right and left repeatedly?'
+        studio_playlab_8: Can you add a block to score a point and a block to play a sound when the unicorn runs into the wizard, and then move him with the arrows until you score?
+        studio_playlab_9: Set the background for this alien invasion and help the Spacebot get to the alien faster by changing its speed. Then move him with the arrow keys to get to the Spacebot and alert everyone else
         studio_playlab_10: Crie seu próprio jogo. Quando terminar, clique em Concluir para deixar que seus amigos experimentem seu jogo em seus celulares.
         studio_full_sandbox: Crie seu próprio jogo. Quando terminar, clique em Concluir para deixar que seus amigos experimentem seu jogo em seus celulares.
         studio_k1_1: 'Você consegue fazer esse cachorro dizer "Olá, mundo"?'
@@ -330,6 +330,78 @@ pt:
         turtle_ec_1_2: 'Agora, desenhe um quadrado. NOTA: use sua cor preferida selecionando-a no novo bloco "Cor da caneta".'
         turtle_ec_1_10: 'Muito bem! Agora, desenhe o que quiser. Veja algumas ideias divertidas para desenhar: um boneco, um floco de neve ou uma espiral. Use também o novo bloco "Largura da caneta". Divirta-se!'
         studio_ec_sandbox: Crie seu próprio jogo. Quando terminar, clique em Concluir para deixar que seus amigos experimentem seu jogo em seus celulares.
+    levelbuilder:
+      frozen line:
+        instructions: Oi! Eu sou a Elsa de Arendelle. Você pode me ajudar a criar uma reta?
+      frozen perpendicular:
+        instructions: 'Agora, vamos ver se podemos criar duas retas que formam um ângulo de 90 graus entre elas. Você vai precisar usar o bloco "vire" e o bloco "mova".'
+      frozen square iterative:
+        instructions: Parece que estamos no meio do caminho para criar um quadrado. Vamos juntar 4 retas para criar um quadrado.
+      frozen square loop:
+        instructions: 'Oi, eu sou a Anna de Arendelle! Agora nós vamos fazer um quadrado usando o bloco "repita", que usa menos blocos. Quantas vezes (???) o bloco "repita" deve repetir os blocos dentro dele para criar um quadrado?'
+      frozen square loop 3x:
+        instructions: Vamos criar três quadrados, virando depois de cada quadrado. Lembre-se de virar 120 graus antes de cada novo quadrado.
+      frozen square snowflake:
+        instructions: 'Você consegue criar um floco de neve usando o bloco "repita" para criar um quadrado 10 vezes, e o bloco "vire" para virar 36 graus entre cada quadrado?'
+      frozen cross:
+        instructions: 'Use o bloco "Repita" para criar um sinal de adição. Você percebeu que Elsa pode ir para frente e para trás?'
+      frozen cross rotate:
+        instructions: Agora, tente repetir isso 10 vezes. Quantos graus você precisa virar entre cada reta?
+      frozen cross rotate dense:
+        instructions: 'Vamos repetir isso 90 vezes! Quantas vezes 90 cabe em 360? Dica: é um número realmente pequeno.'
+      frozen diamond:
+        instructions: 'Vamos criar um paralelogramo. Ele é igual a um quadrado, mas tem ângulos diferentes: ângulos de 60 e de 120 graus ao invés de ângulos de 90 graus.'
+      frozen diamond mini snowflake:
+        instructions: 'Você sabia que todo floco de neve tem uma forma diferente? Vamos criar um novo floco de neve usando o bloco "Repita" para repetir um paralelogramo 4 vezes, virando à direita 90 graus entre cada paralelogramo.'
+      frozen diamond snowflake:
+        instructions: Agora, vamos criar um novo floco de neve usando o bloco repita para repetir um paralelogramo 10 vezes, virando à direita 36 graus entre cada um.
+      frozen circle:
+        instructions: Um círculo é uma forma especial. Você sabe qual número deve substituir os pontos de interrogação para desenhar um círculo?
+      frozen circle function:
+        instructions: 'Use o novo bloco "Crie um círculo" para criar 10 círculos sobrepostos. Não se esqueça de pular para a frente entre os círculos.'
+      frozen circle function in circle:
+        instructions: Agora, vamos criar 20 círculos sobrepostos, virando 18 graus entre cada círculo.
+      frozen circle function with parameter:
+        instructions: 'Este é um bloco "crie um círculo", e ele pode criar círculos de tamanhos diferentes. Você consegue criar um círculo pequeno de tamanho 5, e um círculo maior de tamanho 10 usando esse bloco?'
+      frozen snowflower:
+        instructions: Padrões de neve complexos podem ser criados com formas muito simples. Você consegue criar um padrão repetindo 5 círculos de tamanho 5 e 5 círculos de tamanho 10?
+      frozen snowflake branch:
+        instructions: 'Tente usar o bloco "crie um floco de neve do tipo ramificado" para criar três ramificações, que começam a parecer com um floco de neve.'
+      frozen snowflake full:
+        instructions: Agora, vamos repetir isso 8 vezes para criar um lindo floco de neve!
+      frozen freeplay:
+        instructions: Você se tornou oficialmente um artista mestre! Crie um país das maravilhas congelante e compartilhe com seus amigos.
+      scrat 16:
+        instructions: 'Bolota! Bolota! Bolota! Use um bloco "se" para me levar até lá com o menor número de blocos.'
+      scrat 17:
+        instructions: 'Ok, vamos fazer novamente para pegar a prática - este não é muito diferente, mas cuidado com a parede!'
+      scrat 18:
+        instructions: 'Os blocos "se-senão" verificam uma condição e, em seguida, fazem uma coisa OU outra. Para que eu chegue até a bolota, tente usar este novo bloco.'
+      scrat 19:
+        instructions: 'Vamos praticar o uso do bloco "se-senão" mais uma vez, você consegue na primeira tentativa?'
+      scrat 20:
+        instructions: Você consegue adicionar apenas 3 blocos para me ajudar a percorrer um labirinto mais complexo? Se você acertar, eu posso andar por qualquer caminho cheio de curvas, não importa o comprimento. Rápido! O gelo está derretendo!
+      Standalone_Artist_1:
+        instructions: "Welcome to Artist! First off, let's try to make a simple square using the turn right block and move forward block. Each side should be 100 pixels long."
+      Standalone_Artist_2:
+        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel long sides.
+      Standalone_Artist_3:
+        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree turns?
+      Standalone_Artist_4:
+        instructions: "Now you've got a new block to play with, the loop. This will repeat a set of commands. What happens if you loop these commands 6 times?"
+      Standalone_Artist_5:
+        instructions: How many times do you need to loop this diamond to draw the flower?
+      Standalone_Artist_5.5:
+        instructions: "Notice how we simplified the diamond code by turning it into a loop. You can loop that whole sequence 12 times to draw the flower. Hint: You'll need to turn 30 degrees after your diamond loop so you don't keep drawing over the same diamond."
+      Standalone_Artist_6:
+        instructions: 'Loop this hexagon code 6 times to create the design. How many degrees will you need to turn each time? Hint: divide the number of degrees in a circle by the number of times you are looping.'
+      Standalone_Artist_7:
+        instructions: 'A function is another programming tool to help you avoid repeating yourself. This function draws a flower, so you can use it any time you want to draw a flower. Use this and the new jump block to draw these flowers. Hint: The flowers are 150 pixels apart'
+      Standalone_Artist_8:
+        instructions: |-
+          Here's a function called "Draw a shape" that we've programmed to draw hexagons. Run the code to see what it does and then experiment with the function to see what happens. Can you make it draw a pattern of squares, triangles, or octagons?
+      Standalone_Artist_9:
+        instructions: "Now go ahead and make whatever picture you'd like! You've even got an empty function that you can make do whatever you want!"
     video:
       name:
         maze_intro: Introdução ao Labirinto
@@ -340,6 +412,7 @@ pt:
         loop_until: Bloco repita até
         if: Bloco se
         if_else: Bloco se/senão
+        if_else_scrat: Bloco se/senão
         function: Funções
         loop_while: Bloco enquanto
         loop_for: Bloco contador
@@ -372,6 +445,7 @@ pt:
         C1_playlab_storytelling: 'Laboratório - Crie uma história'
         C1_planting_seed: Plantando uma semente
         C1_building_foundation: Criando uma base
+        C1_going_places_safely: Navegando com segurança
         C2_maze_intro: Introdução ao Labirinto
         C2_artist_intro: Introdução ao Artista
         C2_zuck_repeat_loop: Laços do labirinto
@@ -386,6 +460,7 @@ pt:
         C2_binary_bracelets: Pulseiras binárias
         C2_relay_programming: Programação Relay
         C2_paper_airplanes: Aviões de papel
+        C2_digital_footprint: Seu rastro digital
         C3_maze_level_4: Laços do labirinto
         C3_artist_intro: Introdução ao Artista
         C3_artist_functions: Funções do artista
@@ -404,9 +479,14 @@ pt:
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Caça-sóis funcionais
         C3_songwriting_with_parameters: Escrevendo uma canção com parâmetros
-        Frozen_intro: Introdução à Hora de Código
-        Frozen_loops: Introdução aos Laços
-        Frozen_functions: Introdução às Funções
+        C4_artist_math: Programming the Artist with Math
+        C4_create_functions: Creating Functions
+        C4_edit_functions: Editing Functions
+        C4_for_loops: Laços for
+        C4_variables: Variáveis
+        frozen_intro: Introdução à Hora de Código
+        frozen_loops: Introdução aos Laços
+        frozen_functions: Introdução às Funções
     callout:
       text:
         drag_blocks: 'Arraste um bloco "avance" e o encaixe embaixo do outro bloco'
@@ -426,9 +506,9 @@ pt:
         repeat_blocks: 'Use o bloco "Repita" e conecte-o aos blocos na área de trabalho'
         snowflake_dropdown: Use este menu suspenso para criar diferentes flocos de neve!
         degrees_per_side: Divida 360 pelo número de lados para obter o tamanho de cada ângulo em graus.
-        set_sides: 'Use este bloco para definir "lados" como o número necessário para completar o desafio.'
+        set_sides: 'Use este bloco para definir "lados" com o número necessário para completar o desafio.'
         set_length: 'Use este bloco para definir "comprimento" com o valor correto.'
-        which_equation: Qual equação faz com que cada lado seja mais curto para formas com mais lados? Experimente cada equação!
+        which_equation: Qual equação faz com que cada lado seja mais curto para formas com mais lados? Experimente todas as equações!
         get_nectar: 'Use o novo bloco "obtenha néctar".'
         actions_category: 'A caixa de ferramentas tem um novo visual! Os blocos de "Ação" estão aqui agora.'
         draw_square_hint: 'Dica: Use o laço do quadrado que você fez no último desafio.'
@@ -439,3 +519,16 @@ pt:
         edit_get_nectar: Use este botão para editar a função e alterar a direção para a qual a abelha vai virar para obter o néctar.
         logic_category: 'Abra o submenu "Lógica" para encontrar o bloco "se/senão".'
         length_parameter: 'Você pode atualizar esta função para que ela use o parâmetro "comprimento"?'
+        frozen_diamond_repeat: Use the repeat block to create this shape.
+        frozen_circle_function_in_circle_turn: "Don't forget to turn after creating each circle."
+        frozen_circle_function_with_parameter_circle: 'Use the "create a circle" block and change the size.'
+        frozen_snowflake_branch: 'Use the "create a snowflake branch" block'
+        frozen_create_square: Attach more blocks here to create a square
+        playlab_drag_say: 'Drag the "say" block here and type "hello"'
+        playlab_use_twice: Use this block twice and remember to change the actor number
+        playlab_move_girl: 'Use the "move right" block to move Tennis Girl'
+        playlab_play_sound: 'Add "play sound" block here'
+        playlab_arrow_keys: Remember to use these to move the witch after clicking on Run
+        playlab_add_move: 'Add "move" blocks inside this repeat block'
+        playlab_add_score: Add score blocks here
+        playlab_add_blocks: Add your blocks here

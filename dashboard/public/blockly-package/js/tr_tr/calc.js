@@ -3495,6 +3495,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -3507,7 +3508,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -3517,16 +3520,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -11066,7 +11059,7 @@ exports.extraTopBlocks = function(d){return "Bağlantı yapılmamış blokların
 
 exports.goal = function(d){return "Amaç:"};
 
-exports.reinfFeedbackMsg = function(d){return "Bu istediğin şeye benziyor mu ?\"Yeniden Dene\" butonuna basarak çizimini görebilirsin."};
+exports.reinfFeedbackMsg = function(d){return "İşte hikayesi!Bunun üzerinde çalışmaya devam, ya da bir sonraki bulmaca üzerine hareket!"};
 
 exports.yourExpression = function(d){return "İfadeniz:"};
 
@@ -11175,7 +11168,7 @@ exports.numLinesOfCodeWritten = function(d){return "Tam olarak "+p(d,"numLines",
 
 exports.play = function(d){return "oynat"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Yazdır"};
 
 exports.puzzleTitle = function(d){return "Bulmaca "+v(d,"puzzle_number")+" / "+v(d,"stage_total")};
 
@@ -11191,7 +11184,7 @@ exports.score = function(d){return "puan"};
 
 exports.showCodeHeader = function(d){return "Kodu Görüntüle"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Bloklarını göster"};
 
 exports.showGeneratedCode = function(d){return "Kodu Görüntüle"};
 
@@ -11219,9 +11212,9 @@ exports.hintRequest = function(d){return "İpucunu gör"};
 
 exports.backToPreviousLevel = function(d){return "Önceki seviyeye dön"};
 
-exports.saveToGallery = function(d){return "Galerine kaydet"};
+exports.saveToGallery = function(d){return "Galerisine Kaydet"};
 
-exports.savedToGallery = function(d){return "Galerine kaydedildi!"};
+exports.savedToGallery = function(d){return "Galeri klasörüne kaydedilmiş!"};
 
 exports.shareFailure = function(d){return "Üzgünüz, bu programı paylaşamıyoruz."};
 
@@ -11231,7 +11224,7 @@ exports.typeHint = function(d){return "Parantezlerin ve noktalı virgüllerin ge
 
 exports.workspaceHeader = function(d){return "Bloklarını burda topla: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "JavaScript kodunuzu buraya yazın"};
 
 exports.infinity = function(d){return "Sonsuz"};
 
@@ -11255,7 +11248,7 @@ exports.hintHeader = function(d){return "İşte bir ipucu:"};
 
 exports.genericFeedback = function(d){return "Sonucunu gör ve programını düzeltmeyi dene."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Ne yaptığıma bakın"};
 
 
 },{"messageformat":53}],42:[function(require,module,exports){

@@ -39,7 +39,7 @@ zh:
       update_needs_confirmation: 你已经成功更新了你的账户，但我们需要验证您的新电子邮件地址。请检查您的电子邮件，并单击确认链接来确认您的新电子邮件地址。
       updated: 您已成功更新您的帐户。
     sessions:
-      signed_in: 成功登入。
+      signed_in: ""
       signed_out: 成功登出。
     unlocks:
       send_instructions: 您将在几分钟之内收到一封关于如何解锁您的帐户的电子邮件,。

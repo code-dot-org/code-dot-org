@@ -39,7 +39,7 @@ da:
       update_needs_confirmation: Du opdaterede din konto, men vi har brug for at bekræfte din nye e-mail adresse. Kontroller din e-mail, og klik på bekræft linket for endeligt at bekræfte din nye e-mailadresse.
       updated: Du opdaterede din konto succesfuldt.
     sessions:
-      signed_in: Logged på succesfuldt.
+      signed_in: ""
       signed_out: Logged ud succesfuldt.
     unlocks:
       send_instructions: Du vil modtage en e-mail med instruktioner om, hvordan du bekræfter din konto om et par minutter.

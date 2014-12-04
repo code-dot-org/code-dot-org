@@ -39,7 +39,7 @@ tr:
       update_needs_confirmation: Hesabınız başarı ile güncelleştirildi, Ancak yeni e-posta adresini doğrulamamız gerekiyor. Lütfen e-posta adresinizi kontrol ederek onay bağlantısına tıklayın ve e-posta hesabınızı onaylama işlemini sonlandırın.
       updated: Hesabınızı başarı ile güncelleştirdiniz.
     sessions:
-      signed_in: Başarı ile giriş yapıldı.
+      signed_in: ""
       signed_out: Başarıyla oturum kapatıldı.
     unlocks:
       send_instructions: Birkaç dakika içinde hesabınızın kilidini nasıl açacağınızı anlatan bir e-posta alacaksınız.

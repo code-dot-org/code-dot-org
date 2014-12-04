@@ -73,4 +73,4 @@
       not_locked: war nicht gesperrt
       not_saved:
         one: '1 Fehler verhinderte das Speichern von %{resource}:'
-        other: "%{count} Fehler verhinderten das Speichern von %{resource}:"
+        other: '%{count} Fehler verhinderten das Speichern von %{resource}:'

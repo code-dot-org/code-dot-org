@@ -1,16 +1,16 @@
 "sq-AL":
   hello: Pershendetje Botë
-  select_language: Please select your language
+  select_language: Ju lutem zgjedheni gjuhën tuaj
   computer_science: Shkenca Kompjuterike
   computer_science_edweek: Java Edukuese per Shkencat Kompjuterike
   csedweek_dates: 9-15 Dhjetor ,2013
-  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
-    <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">plan your Hour of Code</a>'
+  csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold">Ora e kodimit</a> po vjen. Të thirrur të gjithë mësuesit/ mësueset
+    dhe organizatorët, <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold">planifikojeni Oren tuaj të Kodimit</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
-    none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
-  n_have_learned_an_hoc: "<h1>#</h1><h3>keni provuar</h3><h2>NJE ORE PROGRAMIMI&trade;</h2>"
+    none; font-weight: 400">A je ti nje mesues CS? Shiko burimet e Javes CS</a>'
+  n_have_learned_an_hoc: <h1>#</h1><h3>kane provuar nje </h3><h2>Ore Kodimi</h2>
   anybody_can_learn: Cdokush mund te mesoj.
   learn_now: Meso tani
   petition_message: Cdo student ne cdo shkolle duhet te kete mundesine te mesoje shkencat
@@ -21,28 +21,29 @@
   email: email adresa
   zipcode: Kodi Postar ose Shteti
   submit: Dorëzo
-  twentyhours_heading: Try our Intro to Computer Science Course
-  twentyhours_text: Finished your first Hour of Code? Learn more core computer science
-    and programming concepts in this follow-up course.
-  hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
-    8 - 14, 2014<br/>
+  twentyhours_heading: Provojeni kursin tonë për Hyrje në Shkencat Kompjuterike
+  twentyhours_text: E mbaruat oren e pare te Kodimit? Tani mesoni me shume per Shkencen
+    Kompjuterike dhe konceptet e programimit ne mesimin ne vazhdim.
+  hoc2014_heading: Bashkohu ne <a href="http://hourofcode.com"> Oren e Kodimit</a><br/>8-14
+    Dhjetor,2014<br/>
   hoc2014_students: Students
-  hoc2014_try: Try it
-  hoc2014_teachers: Teachers
-  hoc2014_host: Host it
-  hoc2014_everyone: Everyone
-  hoc2014_support: Support it
-  hoc2014_whatishoc: What is the Hour of Code?
+  hoc2014_try: Provoje
+  hoc2014_teachers: Mesuesit
+  hoc2014_host: Behu ti miku i ketij eventi
+  hoc2014_everyone: Kushdo
+  hoc2014_support: Përkrahe
+  hoc2014_whatishoc: Çfarë është Ora e Kodimit?
   twentyhours_trynow: Provo tani
-  california_heading: Ask your school to teach computer science
-  california_text: Any teacher can offer our <a href='http://learn.code.org/'>free
-    intro course</a>.  Any elementary school can <a href='http://code.org/educate/k5'>teach
-    computer science</a>. Ask high schools to <a href='http://code.org/educate/districts'>partner
-    with us.
-  california_button: Learn More
+  california_heading: Pyete shkollen tende qe te te mesoje shkence kompjuterike
+  california_text: Cdo mesues mund te ofroje <a href='http://studio.code.org/'> falas
+    mesimet tona</a>. Cdo shkolle fillore mund <a href='http://code.org/educate/k5'>
+    te jape mesim shkenca komjuterike</a>. Pyetni shkollat e mesme te <a href='http://code.org/educate/districts'>
+    behen partnere me ne.
+  california_button: Meso me shume
   flappy_heading: Flappy Birthday to Code.org
-  flappy_text: Code.org just turned 1 year old.<br/><br/> Celebrate with us by making
-    your own custom <b>Flappy</b> game. Code your own rules, and share it with friends!
+  flappy_text: Code.org sapo mbushi nje vit qe ekziston.<br/><br/> Festo me ne duke
+    krijuar lojen tende <b>Flappy</b>. Kodo rregullat e tua dhe ndaje ate qe krijon
+    me shoket e tu!
   view_english_site: Shfaq faqen ne gjuhen Angleze
   non_english_tutorials: 'Mësimet e përkthyera në shumë gjuhë:'
   write_your_first_program: Shkruani programin e parë kompjuterik tuajin
@@ -52,7 +53,7 @@
     fjalitë nëse-atëherë, dhe alegoritme fillestare.
   all_ages: Te gjitha moshat
   beginner: Fillestar
-  n_participants: "# pjesmarrës"
+  n_participants: '# pjesmarrës'
   go: Shko
   thank_you_: Faleminderit!
   congratulations: Urime!
@@ -61,9 +62,9 @@
   enter_valid_email: Ju lutem shkruani një email adresë të vlefshme
   get_a_certificate_message: Ne do tu dergojme nje certifikate dhe informacione se
     si mund te mesoni <a href='/learn/beyond'>pertej Ores se Kodimit</a>
-  get_a_certificate_message_after: We'll send you a certificate. Now, keep going with
-    our <a href='http://learn.code.org'>20-hour course</a>, or see more options to
-    <a href='/learn/beyond'>Learn beyond One Hour</a>.
+  get_a_certificate_message_after: Kliko ne certifikate qe ta shkarkosh ose ta printosh.
+    Tani vazhdo me <a href='http://studio.code.org'> mesimet e tjera</a>, ose shiko
+    opsione te tjera ne <a href='/learn/beyond'> Meso me teper se nje ore.</a>
   thanks_for_submitting: Faleminderit për dorëzimin!
   if_you_enjoyed: Ne qofte se u perlqeu te mesuarit, pyesni miqte ta provojne gjithashtu!
     Ne duam qe e gjithe bota te mesoje.
@@ -88,7 +89,7 @@
   beyond_an_hour: Beyond an HOUR OF CODE >
   get_started: Fillo
   i_agree: Un pranoj
-  participant_select: "- Zgjedh -"
+  participant_select: '- Zgjedh -'
   participant_student: student
   participant_parent: Prind
   participant_educator: Edukator
@@ -106,7 +107,7 @@
   learn_next_level: Continue to the next level
   learn_online: Meso online
   learn_classes: Gjej klasa te aferta
-  hoc_is_here: "#OraPerKodim eshte ketu - provoje! @codeorg"
+  hoc_is_here: '#OraPerKodim eshte ketu - provoje! @codeorg'
   just_did_hoc: 'Une sapo mbarova #OrenPerKodim - provoje! @codeorg'
   learn_hoc: Meso nje Ore kodim
   beyond_hoc: Pertej Ores se Kodimit
@@ -116,11 +117,11 @@
   help_recruit_coders: Na ndihmoni te rekrutojme me shume kodues ne skuadren tone!
   help_recruit: Na ndihmo te rekrutojme me shume kodues!
   lines_of_code: MBI <b># VIJAT E KODIT</b> SHKRUAR NE KOHE.
-  lines_of_code_alt: "<b>#</b> VIJAT E KODIMIT TE SHKRUARA NGA STUDENTET"
+  lines_of_code_alt: <b>#</b> VIJAT E KODIMIT TE SHKRUARA NGA STUDENTET
   who_has_done_hoc: 'Kush ka kryer #OrenPerKodim? @codeorg'
   hoc_leaderboards: Tabela e udheheqesve te Ores Se Kodimit
-  students_and_lines: "%{students} studente kane kryer Oren e Kodimit dhe jane shkruar
-    %{lines} rrjeshta me kode."
+  students_and_lines: '%{students} studente kane kryer Oren e Kodimit dhe jane shkruar
+    %{lines} rrjeshta me kode.'
   start_hoc: Fillo Oren e Kodimit tani
   contact_form_topic_press: Press/media (interview or speaking engagement)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
@@ -336,7 +337,7 @@
   dashboard_faq: Frequently Asked Questions
   code_hoc_coming: The Hour of Code is coming - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
-  learn_more: Learn More
+  learn_more: Meso me shume
   hoc2014_try_new_tutorials: Try our new Hour of Code tutorials
   hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
   hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
@@ -357,6 +358,7 @@
   more_resources_educators: More resources for teachers and educators
   participants: participants
   teachers_notes: Teacher's Notes
+  teachers_notes_hoc: 'Teachers: Read important educator notes here'
   previous: Previous
   next: Next
   older_systems: Tutorials that work on older systems
@@ -366,6 +368,7 @@
   mobile_devices: Tutorials for mobile devices
   frozen_name: Code with Anna and Elsa
   codeorg_name: Shkruani programin e parë kompjuterik tuajin
+  codeintl_name: Shkruani programin e parë kompjuterik tuajin
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: An introduction to JavaScript
   khanes_name: An introduction to JavaScript
@@ -387,7 +390,6 @@
   codespark_name: The Foos (pre-readers welcome)
   kodable_name: Kodable
   tynkerapp_name: Tynker - on tablets
-  hopscotch_name: 'Hopscotch: Code on your iPad'
   robomindnl_name: Program a virtual robot
   flappy_name: Make a Flappy game
   bitsbox_name: Bitsbox - make a game
@@ -400,6 +402,7 @@
   projguts_name: Rock, Paper, Scissors
   frozen_gradelevel: Ages 8+
   codeorg_gradelevel: Ages 4-104
+  codeintl_gradelevel: Ages 4-104
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Middle school +
   khanes_gradelevel: Middle school +
@@ -421,7 +424,6 @@
   codespark_gradelevel: Shkollimi fillor
   kodable_gradelevel: Shkollimi fillor
   tynkerapp_gradelevel: Ages 5-13
-  hopscotch_gradelevel: Middle school +
   robomindnl_gradelevel: Ages 8-13
   flappy_gradelevel: Ages 4-104
   bitsbox_gradelevel: Shkollimi fillor
@@ -434,6 +436,7 @@
   projguts_gradelevel: Ages 10-13
   frozen_platformtext: Modern browsers + tablets
   codeorg_platformtext: Modern browsers, smartphones, tablets
+  codeintl_platformtext: Modern browsers, smartphones, tablets
   thinkersmithspanish_platformtext: Unplugged
   khan_platformtext: Modern Web browsers
   khanes_platformtext: Modern Web browsers
@@ -455,7 +458,6 @@
   codespark_platformtext: iOS, Android (or web browser)
   kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, Android tablets
-  hopscotch_platformtext: iPad
   robomindnl_platformtext: Modern web browsers, Mobile web
   flappy_platformtext: Modern browsers, smartphones, tablets
   bitsbox_platformtext: Modern web browsers
@@ -469,6 +471,7 @@
   frozen_shortdescription: Let's use code to join Anna and Elsa as they explore the
     magic and beauty of ice.
   codeorg_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
+  codeintl_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Learn to draw in JavaScript
   khanes_shortdescription: Learn to draw in JavaScript
@@ -494,7 +497,6 @@
   kodable_shortdescription: A fun iPad game to teach computer programming concepts
   tynkerapp_shortdescription: Learn to code by solving fun puzzles and build your
     own mobile games.
-  hopscotch_shortdescription: Learn visual programming on an iPad
   robomindnl_shortdescription: Write code for a virtual robot
   flappy_shortdescription: Make your own game - Flappy Bird, Shark, or Submarine
   bitsbox_shortdescription: Code a series of apps to play and share, using real Javascript.
@@ -510,6 +512,10 @@
     magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
     and make a winter wonderland that you can then share with your friends!
   codeorg_longdescription: Learn the basic concepts of Computer Science with drag
+    and drop programming. This is a game-like, self-directed tutorial starring video
+    lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
+    repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
+  codeintl_longdescription: Learn the basic concepts of Computer Science with drag
     and drop programming. This is a game-like, self-directed tutorial starring video
     lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
     repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
@@ -589,9 +595,6 @@
     coding puzzles and learn programming concepts in each level. Personalize games
     with animated characters, multiple levels and rich props. Lots of fun activities
     to choose from!
-  hopscotch_longdescription: Student-guided tutorial on the iPad using the Hopscotch
-    programming language. Students will build games and apps for their iPad on their
-    iPad. Students can work individually or with friends (up to 3 per iPad).
   robomindnl_longdescription: 'Students learn the basics of programming by controlling
     their own virtual robot. The online course is fully self-contained with short
     presentations, movies, quizzes and automatic guidance/hints to help with the programming
@@ -951,8 +954,3 @@
     program because we believe play is a powerful teacher. Whether you're an educator
     or a parent, SPRK lessons give kids a fun crash course in programming robots while
     sharpening their skills in math and science.
-  codeintl_name: "Write your first computer program"
-  codeintl_gradelevel: "Ages 4-104"
-  codeintl_platformtext: "Modern browsers, smartphones, tablets"
-  codeintl_shortdescription: "Learn to code with Mark Zuckerberg and Angry Birds!"
-  codeintl_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages."

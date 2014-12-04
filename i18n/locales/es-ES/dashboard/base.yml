@@ -115,11 +115,11 @@ es:
     subject: Unirme a mi clase (en Code.org)
     body: |
       Haz click en el vínculo de más abajo para registrarte y usar tutoriales de ciencias de la computación en Code.org (conmigo como tu "maestro"):
-
+      
       %{link}
-
+      
       Los tutoriales son divertidos, visualmente atractivos, y enseñan los conceptos básicos de las ciencias de la computación usando una experiencia similar a un juego, simple y guiada. Aprende a programar con Bill Gates, Mark Zuckerberg, Angry Birds, y Plantas vs. Zombis! :-)
-
+      
       %{name}
   follower:
     invite_sent: Invitación enviada
@@ -336,7 +336,8 @@ es:
     test_videos_help: Pruebe nuestro nuevo reproductor de vídeo en su escuela
     try_beta_courses: ¡Nuevo! Prueba nuestros cursos en beta para estudiantes de 6 a 11 años K-5
     use_as_teacher: Usa este sitio como un maestro
-    heading_elementary: '<h2>Cursos de 20 horas para</h2><h1>alumnos de primaria</h1>'
+    heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
+    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
     heading_apps: '<h2>Diversión para</h2><h1>Todos</h1>'
     heading_legacy: '<h2>Nuestro curso general para</h2><h1>Todas las edades</h1>'
     your_gallery: Galeria
@@ -349,7 +350,8 @@ es:
     teacher: Profesor
   footer:
     help_from_html: Ingenieros de Google, Microsoft, Facebook y Twitter han ayudado a crear este tutorial.
-    art_from_html: 'Angry Brids&trade;&&copy; 2009-2014 Rovio Entertainment Ltd. Todos los derechos reservados. <br/>Plants vs. Zombies&trade;&&copy; 2014 Electronic Arts Inc. Todos los derechos reservados.'
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
+    powered_by_aws: Powered by Amazon Web Services
     feedback: Enviar comentarios
     translate: Ayúdanos a traducir a tu idioma
     support: Soporte
@@ -422,10 +424,12 @@ es:
       body: Prueba nuestro curso de 20 horas de introducción a las ciencias de la computación.
     hoc2014:
       try_new_tutorial: Prueba nuestro nuevo tutorial de la hora del código en beta
-      try_frozen: Artista con Anna y Elsa, de Frozen
+      try_frozen: 'Anna y Elsa artistas de "Frozen"'
     gallery:
       title: Galeria
-      body: View a gallery of app and artist images created by our users
+      body: Ver una galería de aplicaciones y de imágenes de artistas creadas por nuestros usuarios
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: ¡Los estudiantes dibujaron esto con código!
     students_made_these_with_code: ¡Los estudiantes hicieron éstos con código!

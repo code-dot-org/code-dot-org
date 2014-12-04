@@ -4,10 +4,10 @@
       1:
         image: |
           notes/hoc1_1.jpg
-        text: "مرحباً في أول ساعة من البرمجة! دعنا نتجه إلى تذوقك الأول للبرمجة ."
+        text: مرحباً في أول ساعة من البرمجة! دعنا نتجه إلى تذوقك الأول للبرمجة .
       2:
         image: notes/hoc1_2.jpg
-        text: "بلوكلي هي لغة برمجية مرئية تمكنك من سحب وافلات القطع لكتابة الكود البرمجي."
+        text: بلوكلي هي لغة برمجية مرئية تمكنك من سحب وافلات القطع لكتابة الكود البرمجي.
       3:
         image: notes/hoc1_3.jpg
         text: تتم كتابة معظم الاكواد البرمجية، ولكن بلوكلي هو مرئي. بحيث ان كل القطع
@@ -15,12 +15,12 @@
       4:
         image: |
           notes/hoc1_4.jpg
-        text: "أنت ستتعلم أسس علوم الكمبيوتر، والمفاهيم التي يتم استخدامها في أي مكان
-          من صنع تطبيقات للتحكم في تجول المريخ."
+        text: أنت ستتعلم أسس علوم الكمبيوتر، والمفاهيم التي يتم استخدامها في أي مكان
+          من صنع تطبيقات للتحكم في تجول المريخ.
       5:
         image: |
           notes/hoc1_5.jpg
-        text: "البرنامج هو مجموعة من الإيعازات التي يتبعها جهاز الكمبيوتر الخاص بك."
+        text: البرنامج هو مجموعة من الإيعازات التي يتبعها جهاز الكمبيوتر الخاص بك.
       6:
         image: |
           notes/hoc1_6.jpg
@@ -29,8 +29,8 @@
       7:
         image: |
           notes/hoc1_7.jpg
-        text: "الجانب الايسر هو مكان تنفيذ المتاهة. حيث يمكنك ايجاد الارشادات لكل
-          لغز والتي تكون اسفل المتاهة."
+        text: الجانب الايسر هو مكان تنفيذ المتاهة. حيث يمكنك ايجاد الارشادات لكل لغز
+          والتي تكون اسفل المتاهة.
       8:
         image: |
           notes/hoc1_8.jpg
@@ -39,9 +39,9 @@
       9:
         image: |
           notes/hoc1_9.jpg
-        text: "على الجانب الايمن توجد مساحة عمل بيضاء حيث يتم عليها سحب القطع من شريط
+        text: على الجانب الايمن توجد مساحة عمل بيضاء حيث يتم عليها سحب القطع من شريط
           الادوات من اجل بناء برنامجك . لحذف القطعة الغير مرغوب بها , عليك القيام
-          بسحبها الى سلة المهملات الواقعة في الزاوية."
+          بسحبها الى سلة المهملات الواقعة في الزاوية.
       10:
         image: |
           notes/hoc1_10.jpg
@@ -50,8 +50,8 @@
       11:
         image: |
           notes/hoc1_11.jpg
-        text: "للقيام بأكثر من اداء واحد ، يمكنك سحب الكثير من القطع إلى مساحة العمل
-          البيضاء وربطهم معاً. بحيث سوف يقوم الطير بنفيذ الأوامر من الأعلى إلى الأسفل."
+        text: للقيام بأكثر من اداء واحد ، يمكنك سحب الكثير من القطع إلى مساحة العمل
+          البيضاء وربطهم معاً. بحيث سوف يقوم الطير بنفيذ الأوامر من الأعلى إلى الأسفل.
       12:
         image: |
           notes/hoc1_12.jpg
@@ -60,17 +60,17 @@
       13:
         image: |
           notes/hoc1_13.jpg
-        text: "دعنا نذهب للحصول على المخلوق الاخضر!"
+        text: دعنا نذهب للحصول على المخلوق الاخضر!
     artist_intro:
       1:
         image: |
           notes/stage5_1.jpg
-        text: "مرحبا، أنا جر! كل فريق سباق سيارات بحاجة إلى علماء الكمبيوتر من اجل
-          الفوز.  هم يحللون البيانات من السيارة لجعلها تسير بسرعة."
+        text: مرحبا، أنا جر! كل فريق سباق سيارات بحاجة إلى علماء الكمبيوتر من اجل
+          الفوز.  هم يحللون البيانات من السيارة لجعلها تسير بسرعة.
       2:
         image: |
           notes/stage5_2.jpg
-        text: "في هذه الألغاز، أنت ستكون رسام يرسم خط في كل مكان."
+        text: في هذه الألغاز، أنت ستكون رسام يرسم خط في كل مكان.
       3:
         image: |
           notes/stage5_3.jpg
@@ -84,80 +84,80 @@
       5:
         image: |
           notes/stage5_5.jpg
-        text: "اضغط على السهم في أي من هذه القطع لتغيير مقدار تحرك الرسام للامام او
-          الانعطاف. العب من اجل ان تكون على دراية باستخدام هذه القطع الجديدة."
+        text: اضغط على السهم في أي من هذه القطع لتغيير مقدار تحرك الرسام للامام او
+          الانعطاف. العب من اجل ان تكون على دراية باستخدام هذه القطع الجديدة.
     farmer_intro:
       1:
         image: notes/stage9_1.jpg
-        text: "مرحبا، أنا باولا! في هذه الألغاز، انت ستصبح المزارع الذي يجب ان يقوم
-          بجعل حقله الزراعي مسطحا تماما من اجل البدء بزراعة المحاصيل."
+        text: مرحبا، أنا باولا! في هذه الألغاز، انت ستصبح المزارع الذي يجب ان يقوم
+          بجعل حقله الزراعي مسطحا تماما من اجل البدء بزراعة المحاصيل.
       2:
         image: notes/stage9_2.jpg
-        text: "بامكانك مساعدتها بأزلة جميع الاكداس من التراب و ملاْ جميع الثقوب."
+        text: بامكانك مساعدتها بأزلة جميع الاكداس من التراب و ملاْ جميع الثقوب.
       3:
         image: notes/stage9_3.jpg
-        text: "القطعة الجديدة ازالة مجرفة تراب واحدة من الكدس وتملأ مجرفة واحدة من
-          التراب في الحفرة."
+        text: القطعة الجديدة ازالة مجرفة تراب واحدة من الكدس وتملأ مجرفة واحدة من
+          التراب في الحفرة.
       4:
         image: notes/stage9_4.jpg
-        text: "الاكداس والثقوب مختلفة الاحجام, لذلك يجب ان تخبر المزارع كم عدد من
-          الجرافات تحتاج."
+        text: الاكداس والثقوب مختلفة الاحجام, لذلك يجب ان تخبر المزارع كم عدد من الجرافات
+          تحتاج.
     flappy_intro:
       1:
         image: notes/flappy01.jpg
-        text: "مرحبا، أنا كاتي! واحدة من الأمور الأكثر إثارة حول علوم الحاسوب هي ان
-          البرامج الحاسوبية تمكن أن تكون تفاعلية."
+        text: مرحبا، أنا كاتي! واحدة من الأمور الأكثر إثارة حول علوم الحاسوب هي ان
+          البرامج الحاسوبية تمكن أن تكون تفاعلية.
       2:
         image: notes/flappy02.jpg
-        text: "أي وقت شخص ينقر أو الصنابير أو أنواع على جهاز الكمبيوتر أو الهاتف،
-          الذي يولد هذا الحدث، وهناك بعض التعليمات البرمجية التي تقرر ما يجب القيام
-          به عند حدوث الحدث."
+        text: أي وقت شخص ينقر أو الصنابير أو أنواع على جهاز الكمبيوتر أو الهاتف، الذي
+          يولد هذا الحدث، وهناك بعض التعليمات البرمجية التي تقرر ما يجب القيام به
+          عند حدوث الحدث.
       3:
-        image: "الملاحظات/flappy03.jpg"
+        image: الملاحظات/flappy03.jpg
         text: 'على سبيل المثال، يمكن أن يكون لديك معالج الحدث الذي يقول "عندما يتم
           النقر على الماوس، تشغيل صوت" '
       4:
-        image: "الملاحظات/flappy04.jpg"
-        text: "هل سمعت من أي وقت مضى من فلابيبيرد اللعبة؟ باستخدام معالجات الأحداث،
-          نحن ذاهبون للتعرف إلى البرنامج الخاص بنا إصدار مخصص من فلابيبيرد!"
+        image: الملاحظات/flappy04.jpg
+        text: هل سمعت من أي وقت مضى من فلابيبيرد اللعبة؟ باستخدام معالجات الأحداث،
+          نحن ذاهبون للتعرف إلى البرنامج الخاص بنا إصدار مخصص من فلابيبيرد!
       5:
-        image: "الملاحظات/flappy05.jpg"
-        text: "التعليمات البرمجية التي سوف تكتب ينطوي على سحب وإسقاط القطع التي تمثل
+        image: الملاحظات/flappy05.jpg
+        text: التعليمات البرمجية التي سوف تكتب ينطوي على سحب وإسقاط القطع التي تمثل
           أوامر لجهاز الكمبيوتر. تحت غطاء محرك السيارة، يمثل كل من هذه الكتل البرمجية
-          الحقيقية."
+          الحقيقية.
       6:
-        image: "الملاحظات/flappy06.jpg"
+        image: الملاحظات/flappy06.jpg
         text: 'إذا كنت نلقي نظرة على مساحة العمل، وهناك بعض الكتل الخضراء التي تمتلئ
           لك--هذه "معالجات الأحداث" '
       7:
-        image: "الملاحظات/flappy07.jpg"
+        image: الملاحظات/flappy07.jpg
         text: إذا كنت تريد الطيور إلى رفرف عند النقر بالماوس، يمكنك القيام بذلك عن
           طريق ربط كتلة "رفرف" إلى معالج الحدث المناسب، والآن في اللعبة الخاصة بك
           كلما قمت بالنقر فوق الماوس، الطيور سوف رفرف.
       8:
-        image: "الملاحظات/flappy08.jpg"
-        text: "في كل لغز هذا النشاط سوف نقدم أنواع جديدة من الأحداث ككتل خضراء على
-          مساحة العمل، ويمكنك أن تقرر القطع المناسبة لإضافة ردا على تلك الأحداث."
+        image: الملاحظات/flappy08.jpg
+        text: في كل لغز هذا النشاط سوف نقدم أنواع جديدة من الأحداث ككتل خضراء على
+          مساحة العمل، ويمكنك أن تقرر القطع المناسبة لإضافة ردا على تلك الأحداث.
       9:
-        image: "الملاحظات/flappy09.jpg"
-        text: "عند ظهور القائمة المنسدلة السهم بمثل هذا، وهذا يعني يمكنك تغيير الإعدادات--مثل
-          ما الصوت للعب عندما يضرب flappy الأرض."
+        image: الملاحظات/flappy09.jpg
+        text: عند ظهور القائمة المنسدلة السهم بمثل هذا، وهذا يعني يمكنك تغيير الإعدادات--مثل
+          ما الصوت للعب عندما يضرب flappy الأرض.
       10:
-        image: "الملاحظات/flappy10.jpg"
-        text: "عليك أن تكون قادراً على إنشاء اللعبة الخاصة بك ومشاركتها مع أصدقائك
-          في اللغز النهائي. استمتع!"
+        image: الملاحظات/flappy10.jpg
+        text: عليك أن تكون قادراً على إنشاء اللعبة الخاصة بك ومشاركتها مع أصدقائك
+          في اللغز النهائي. استمتع!
     loop_times:
       1:
         image: |
           notes/hoc2_1.jpg
-        text: "مرحباً، أنا مارك! دعنا نتعرف على الحلقات التكرارية. بإستخدام الحلقات
+        text: مرحباً، أنا مارك! دعنا نتعرف على الحلقات التكرارية. بإستخدام الحلقات
           التكرارية يمكنك أن تأمر الكمبيوتر بتكرار أي مجموعة من الإجراءات عدة مرات،
-          بالاف أو حتى بلايين من المرات."
+          بالاف أو حتى بلايين من المرات.
       2:
         image: |
           notes/hoc2_2.jpg
-        text: "في هذا اللغز، نريد أن نقدم الطير الى الامام 5 خطوات من اجل الوصول الى
-          المخلوق الاخضر ."
+        text: في هذا اللغز، نريد أن نقدم الطير الى الامام 5 خطوات من اجل الوصول الى
+          المخلوق الاخضر .
       3:
         image: |
           notes/hoc2_3.jpg
@@ -189,7 +189,7 @@
       2:
         image: |
           notes/hoc3_2.jpg
-        text: "ماذا اذا لم نعرف كم مسافة التقدم بين الطير والمخلوق الاخضر ؟"
+        text: ماذا اذا لم نعرف كم مسافة التقدم بين الطير والمخلوق الاخضر ؟
       3:
         image: |
           notes/hoc3_3.jpg
@@ -260,17 +260,37 @@
       4:
         image: |
           notes/hoc5_4.jpg
-        text: "الآن، وصل هؤلاء الزومبي إلى حيث ينتمون!"
+        text: الآن، وصل هؤلاء الزومبي إلى حيث ينتمون!
+    if_else_scrat:
+      1:
+        image: notes/saloni_ifelse_scrat1.jpg
+        text: An if-else statement is a decision between two things. Let's see how
+          we can use an if-else statement with our buddy Scrat the squirrel.
+      2:
+        image: notes/saloni_ifelse_scrat2.jpg
+        text: This block looks the same as the "if" block, but there's an extra part
+          at the bottom that says "else". If I put a "move forward" block where it
+          says "do" and a "turn left" block where it says "else", that means Scrat
+          the squirrel will move forward if there's a path ahead. If there's not a
+          path ahead, Scrat will turn left.
+      3:
+        image: notes/saloni_ifelse_scrat3.jpg
+        text: It's making a decision and doing one of the two actions based on that
+          decision. And just like "if" blocks, you can put "if-else" blocks inside
+          "repeat" blocks.
+      4:
+        image: notes/saloni_ifelse_scrat4.jpg
+        text: Now let's help Scrat the squirrel get that acorn!
     function:
       1:
         image: notes/stage13_1.jpg
-        text: "مرحباً، أنا برينا، مهندسة في إينستاجرام. الدالة عبارة عن بعض الأسطر
+        text: مرحباً، أنا برينا، مهندسة في إينستاجرام. الدالة عبارة عن بعض الأسطر
           من الكود البرمجي التي تريد استخدامها مراراً وتكراراً، لذا بدلاً من كتابة
-          الكود البرمجي عدة مرات، يمكنك فقط استخدام قطعة واحدة."
+          الكود البرمجي عدة مرات، يمكنك فقط استخدام قطعة واحدة.
       2:
         image: notes/stage13_2.jpg
-        text: "نحن في طريقنا لمعرفة كيفية تعريف الدوال . تعرف الدالة بنجمة في الزاوية.
-          يتم كتابة اسم الدالة في السطر العلوي."
+        text: نحن في طريقنا لمعرفة كيفية تعريف الدوال . تعرف الدالة بنجمة في الزاوية.
+          يتم كتابة اسم الدالة في السطر العلوي.
       3:
         image: notes/stage13_3.jpg
         text: القطع التي تذهب داخل التعريف تخبرنا بعملها . لذلك هذه تعريف الدالة التي
@@ -291,13 +311,13 @@
         text: قطعة "اكرر طالما" ستنفذ اي شي في داخلها ما دام العبارة في الاعلى صحيحة.
       3:
         image: notes/stage9_7.jpg
-        text: "على سبيل المثال، إذا كان المزارع يقف على التكدس ، سستمر الجرافة بالازالة
-          في حين لايزال يوجد تكدس تحتها."
+        text: على سبيل المثال، إذا كان المزارع يقف على التكدس ، سستمر الجرافة بالازالة
+          في حين لايزال يوجد تكدس تحتها.
     loop_for:
       1:
         image: notes/stage11_1.jpg
-        text: "مرحبا، أنا ترينا، أعمل على بيكسار. لقد عملت على مجموعة من الأفلام،
-          من ضمنها فلم شريك."
+        text: مرحبا، أنا ترينا، أعمل على بيكسار. لقد عملت على مجموعة من الأفلام، من
+          ضمنها فلم شريك.
       2:
         image: notes/stage11_2.jpg
         text: هذه هي حلقة "العداد" الجديدة. ستقوم بتنفيذ الإجراءات مراراً وتكراراً،
@@ -309,20 +329,20 @@
           الى مكان "الطول".
       4:
         image: notes/stage11_4.jpg
-        text: "وهذا يعني الرسام سيقوم برسم مربع طول اضلاعه 50 بكسل، ثم يضيف 10 بكسلات
+        text: وهذا يعني الرسام سيقوم برسم مربع طول اضلاعه 50 بكسل، ثم يضيف 10 بكسلات
           ورسم مربعاً طول اضلاعه 60 بكسل. ثم نضيف 10 بكسلات اخرى ورسم المربعات حتى
-          تصل إلى 90. لذا سوف نحصل على مربعات من 50، 60، 70، 80 و 90."
+          تصل إلى 90. لذا سوف نحصل على مربعات من 50، 60، 70، 80 و 90.
     parameters:
       1:
         image: notes/stage15_1.jpg
-        text: "مرحباً، أنا جانيت، وأنا مهندسة في Zynga."
+        text: مرحباً، أنا جانيت، وأنا مهندسة في Zynga.
       2:
         image: notes/stage15_2.jpg
-        text: "ماذا اذا كنا نرغب برسم مجموعة من المثلثات ويكون اطوالهم بأحجام مختلفة؟"
+        text: ماذا اذا كنا نرغب برسم مجموعة من المثلثات ويكون اطوالهم بأحجام مختلفة؟
       3:
         image: notes/stage15_3.jpg
-        text: "يمكن أن نكتب جميع الكود البرمجي هذا باليد، أو يمكن أن نستخدم دالة مع
-          المعلمات."
+        text: يمكن أن نكتب جميع الكود البرمجي هذا باليد، أو يمكن أن نستخدم دالة مع
+          المعلمات.
       4:
         image: notes/stage15_4.jpg
         text: للقيام بهذا، اضغط فوق النجمة الزرقاء في "رسم المثلث" تعريف الدالة .
@@ -342,16 +362,16 @@
           "ارسم مثلث مع الطول".
       8:
         image: notes/stage15_8.jpg
-        text: "الآن يمكنك استخدام قطعة الرياضيات لإدخال أرقام مختلفة لرسم مثلثات ذات
-          أحجام مختلفة."
+        text: الآن يمكنك استخدام قطعة الرياضيات لإدخال أرقام مختلفة لرسم مثلثات ذات
+          أحجام مختلفة.
     hoc_wrapup:
       1:
         image: |
           notes/hoc6_1.jpg
-        text: "تهانينا! مع حل اللغز الاخر، انت لقد كتبت الكود البرمجي الذي يمكن أن
+        text: تهانينا! مع حل اللغز الاخر، انت لقد كتبت الكود البرمجي الذي يمكن أن
           يخبر اي روبوت عن كيفية العثور على طريقها من خلال المتاهات غير المتفرعة أو
           الأنفاق بأي طول، سواء أكان الزومبي، الطيور، مارس روفر (عربة المريخ)، أو
-          حتى سيارة ذاتية القيادة."
+          حتى سيارة ذاتية القيادة.
       2:
         image: |
           notes/hoc6_2.jpg
@@ -361,17 +381,145 @@
       3:
         image: |
           notes/hoc6_3.jpg
-        text: "إذا احببت الساعة الاولى من البرمجة ، قم بزيارة code.org لمواصلة تعلمك
+        text: إذا احببت الساعة الاولى من البرمجة ، قم بزيارة code.org لمواصلة تعلمك
           علوم الكمبيوتر! بمجرد إكمالك 20 ساعة من دورتنا التعليمية، ستكون قد أتقنت
           أساسيات البرمجة، ويمكن البدء بتعلم كيفية كتابة تطبيقات الهاتف الخليوي وأوامر
-          الروبوت والألعاب، وأختر ما شئت."
+          الروبوت والألعاب، وأختر ما شئت.
       4:
         image: |
           notes/hoc6_4.jpg
-        text: "التكنلوجيا غيرت كل شي نقوم به، ولا يهم إذا كنت صغير أو كبير فالبرمجة
-          متعة و إبداع، ويمكن للجميع تعلمها!"
+        text: التكنلوجيا غيرت كل شي نقوم به، ولا يهم إذا كنت صغير أو كبير فالبرمجة
+          متعة و إبداع، ويمكن للجميع تعلمها!
     20_wrapup:
       1:
         image: |
           notes/bird.png
-        text: "بيان الملاحظات قريبا!"
+        text: بيان الملاحظات قريبا!
+    frozen_intro:
+      1:
+        image: notes/frozen1_1.jpg
+        text: Hi, my name is Lyndsey. I model, act, and write my own apps. Let's use
+          code to join Anna and Elsa as they explore the magic and beauty of ice.
+      2:
+        image: notes/frozen1_2.jpg
+        text: You'll create snowflakes and patterns as you ice skate and make a winter
+          wonderland that you can then share with your friends.
+      3:
+        image: notes/frozen1_3.jpg
+        text: In the next hour, you're going to learn the basics of how to code. Traditional
+          programming is usually in text, but we'll use Blockly, which uses visual
+          blocks that you can drag and drop to write programs. This is how even university
+          students learn the basics. Under the hood, you're still creating code.
+      4:
+        image: notes/frozen1_4.jpg
+        text: A program is a set of instructions that tells a computer what to do.
+          Let's build a code, or a program, that will help Elsa create a simple line.
+          We will use this later to create more complex patterns.
+      5:
+        image: notes/frozen1_5.jpg
+        text: Your screen is split into three main parts. On the left, is the ice
+          surface where you'll run your program. The instructions for each level are
+          written right below the surface.
+      6:
+        image: notes/frozen1_6.jpg
+        text: This middle area is the toolbox, and each of these blocks is an action
+          that Elsa and Anna can do.
+      7:
+        image: notes/frozen1_7.jpg
+        text: The white space on the right is called the workspace, and this is where
+          we'll build our program. To move around the ice surface, you'll use the
+          "Move Forward" block.
+      8:
+        image: notes/frozen1_8.jpg
+        text: Here, the "Move Forward" block says, "move forward by 100 pixels." When
+          we press "Run", what happens? Elsa moves forward a certain amount on the
+          screen, 100 pixels in fact! Pixels are basically very tiny squares on your
+          computer screen.
+      9:
+        image: notes/frozen1_9.jpg
+        text: The other block we have in this puzzle says "turn right by 90 degrees."
+          And when we use this "Turn Right" block, that makes Elsa turn a certain
+          amount. You can play around with how far you want Elsa to turn. The angle
+          is measured from the path ahead of Elsa. So, this is a 90 degree turn. And
+          this is a 120 degree turn.
+      10:
+        image: notes/frozen1_10.jpg
+        text: Remember, you can change the number of pixels and degrees by clicking
+          the arrows next to them.
+    frozen_loops:
+      1:
+        image: notes/frozen2_1.jpg
+        text: Hi, I’m Paola! Computers are really good at repeating actions. You can
+          count to 10, 20, or 100. But a computer can count to a billion or a trillion.
+          It won't get bored and it will only take a few seconds. Whether it's counting,
+          or drawing, or anything--computers can repeat things hundreds or even billions
+          of times.
+      2:
+        image: notes/frozen2_2.jpg
+        text: In programming, we call this a loop. A loop is how you repeat your code
+          over and over again. For the next puzzle, your goal is to help Anna create
+          a square with the "Repeat" block.
+      3:
+        image: notes/frozen2_3.jpg
+        text: Any blocks of code you put inside the "Repeat" block will be repeated
+          in sequence, as many times as you want.
+      4:
+        image: notes/frozen2_4.jpg
+        text: To draw a square, you can use the "Move Forward" and "Turn Right" block
+          4 times. But the easier way is to tell the computer to "Move Forward" and
+          "Turn Right by 90 degrees" once, and then tell it to repeat this pair of
+          actions 4 times. To do that, you need to put the "Move Forward" and "Turn
+          Right" block inside a "Repeat" block.
+      5:
+        image: notes/frozen2_5.jpg
+        text: Remember, you can change the number in the "Repeat" block to anything,
+          and it will repeat what's inside the block that many times.
+    frozen_functions:
+      1:
+        image: notes/frozen3_1.jpg
+        text: Hi, I’m Chris Bosh. I’m a professional basketball player, and I coded
+          in college.
+      2:
+        image: notes/frozen3_2.jpg
+        text: One of the most important concepts in computer science is how to define
+          new commands. Most computer languages have only about 100 words or commands.
+          And really, the art and magic is in defining your own new words out of these
+          building blocks.
+      3:
+        image: notes/frozen3_3.jpg
+        text: Once you've taught a computer how to do an action once using this sequence
+          of commands, you can make up your own name for that action so it's easy
+          to repeat it later. When you define your own command and give it a name,
+          that's called a function.
+      4:
+        image: notes/frozen3_4.jpg
+        text: Hi, I’m Jess. When programming with blocks, you would use functions
+          if there are a set of actions you would like to use lots of times. For example,
+          you've written code to create a square.
+      5:
+        image: notes/frozen3_5.jpg
+        text: 'You can define this as a function called "create a square." '
+      6:
+        image: notes/frozen3_6.jpg
+        text: Now you have a new block that you can use multiple times to create multiple
+          squares.
+      7:
+        image: notes/frozen3_7.jpg
+        text: A lot of simple shapes can be used to create more complex patterns.
+          In the next puzzle, the code you recently wrote to make a circle is available
+          to you as a new function that can make circles of different sizes. Can you
+          use it to help Elsa create intricate and beautiful patterns in the snow?
+    C3_playlab_create_game:
+      1:
+        image: notes/playlab_1.png
+        text: So far you've been making an animation or a story that does the exact
+          same thing every time you run it. Now you can make an interactive game that
+          you can actually play.
+      2:
+        image: notes/playlab_2.png
+        text: There's the "when arrow" block and the "move actor" block. You can put
+          these blocks together to move the actors around with the arrow keys.
+      3:
+        image: notes/playlab_3.png
+        text: And there are some blocks that do stuff when actors collide or are clicked.
+          Check them out and have fun!

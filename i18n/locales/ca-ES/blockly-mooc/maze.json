@@ -3,8 +3,8 @@
   "atFlower":"a la flor",
   "avoidCowAndRemove":"evita la vaca i elimina 1",
   "continue":"Continuar",
-  "dig":"Suprimeix 1",
-  "digTooltip":"Suprimerix 1 unitat de brutícia",
+  "dig":"suprimeix 1",
+  "digTooltip":"suprimerix 1 unitat de brutícia",
   "dirE":"E",
   "dirN":"N",
   "dirS":"S",
@@ -53,7 +53,7 @@
   "noPathRight":"no hi ha camí cap a la dreta",
   "notAtFlowerError":"Només es pot obtenir nèctar d'una flor.",
   "notAtHoneycombError":"Només pot fer mel a un rusc.",
-  "numBlocksNeeded":"Aquest puzzle pot res resolt amb blocs de %1.",
+  "numBlocksNeeded":"Aquest puzzle pot res resolt amb %1 blocs.",
   "pathAhead":"camí endevant",
   "pathLeft":"si camí cap a l'esquerra",
   "pathRight":"si camí cap a la dreta",
@@ -78,7 +78,7 @@
   "uncheckedPurpleError":"Assegureu-vos de comprovar totes les flors porpres per veure si tenen nèctar",
   "whileMsg":"mentres",
   "whileTooltip":"Repetiu les accions tancades fins que s'arribi al punt final.",
-  "word":"Trobar la paraula",
+  "word":"Troba la paraula",
   "yes":"Sí",
   "youSpelled":"Has escrit"
 }

@@ -9,12 +9,12 @@ sv:
         email: E-post
         username: |
           användarnamn
-
+          
         password: Lösenord
         password_confirmation: Lösenordsbekräftelse
         current_password: Nuvarande lösenord
         locale: språk
-        age: Age
+        age: Ålder
         gender: Kön
         edit_header: Redigera kontouppgifter
         error:
@@ -38,7 +38,7 @@ sv:
   of: av
   more: MER
   less: MINDRE
-  try_hoc: 'Prova programmeringstimmen, klicka här >> '
+  try_hoc: 'Prova Hour of Code, klicka här >> '
   try_k8intro: Try our K-8 Intro to Computer Science Course (15-25 hours)
   k8intro: K-8 Intro to Computer Science Course (15-25 hours)
   already_started: 'Redan börjat? Fortsätt här >> '
@@ -74,7 +74,7 @@ sv:
     address_placeholder: adress, stad, län, postnummer
     gender: Kön (valfritt)
     birthday: Födelsedag (valfritt)
-    age: Age
+    age: Ålder
     user_type: Are you a student or teacher?
     submit: Registrera dig
     teacher: Är du en lärare?
@@ -117,11 +117,11 @@ sv:
     subject: Gå med i min klass (på Code.org)
     body: |
       Klicka på länken nedan för att registrera dig för datavetenskapskurser på Code.org (med mig som din "lärare"):
-
+      
       %{link}
-
+      
       Kurserna är roliga, visuellt engagerande, och lär ut grundläggande koncepten inom datavetenskap med en enkel, guidad, spel-liknande upplevelse. Lär dig att programmera från Bill Gates, Mark Zuckerberg, Angry Birds, och Plants vs Zombies! :)
-
+      
       %{name}
   follower:
     invite_sent: Inbjuda skickades
@@ -184,7 +184,7 @@ sv:
       choose: 'Välj ett pris:'
       choose_teacher: 'Click on the logo below to claim your prize:'
       earned: Du har förtjänat ett pris! (Endast amerikanska studenter)
-      not_earned_title: Finish the tutorial, earn rewards (U.S. students only)
+      not_earned_title: Slutför övningen och få belöningar (enbart elever i USA)
       not_earned: 'Lär dig alla datavetenskapliga begrepp, samla in alla % {num_trophies} troféer och få verkliga priser. Du kan välja mellan ett $10 iTunes-presentkort, 10GB gratis lagringsutrymme i Dropbox, $10 i Skype krediter och gratis spelnerladdningar. Obs: erbjudandet  gäller endast amerikanska studenter, och endast så länge som lagret räcker.'
       teacher:
         earned: '15 or more students collected all %{num_trophies} trophies. You have won a teacher prize! (U.S. teachers only)'
@@ -226,7 +226,7 @@ sv:
       logout: Logga ut
       signin: Logga in
       signup: Registrera dig
-      already_registered: Already registered?
+      already_registered: Redan registrerad?
     popup:
       progress: Dina framsteg
       lines: 'Totalt antal rader kod: %{lines}'
@@ -261,7 +261,7 @@ sv:
       name: Namn
       username: |
         användarnamn
-
+        
       password: Lösenord
       manage: Hantera elever
       dashboard: Go to Teacher Dashboard
@@ -338,12 +338,13 @@ sv:
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to $1,000 in classroom rewards.'
     tryfirst: 'Or, you can try it first, and sign up later:'
     trynow: Prova nu
-    add_hint_help: Please help us to add smart hints to Code.org tutorials
+    add_hint_help: Hjälp oss att lägga till smarta tips till Code.org övningar
     20hour_overview: Denna 20-timmars kurs introducerar grundläggande datavetenskap och programmeringsbegrepp. Kursen är utformad för användning i klassrummet från förskoleklass till årskurs 8, men det är roligt att lära sig i alla åldrar.
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
-    heading_elementary: '<h2>20 hour courses for</h2><h1>Elementary Students</h1>'
+    heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
+    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
     heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
     your_gallery: Gallery
@@ -355,8 +356,9 @@ sv:
     student: Student
     teacher: Teacher
   footer:
-    help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
+    help_from_html: Ingenjörer från Google, Microsoft, Facebook, och Twitter hjälpte till med att skapa denna övning.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
+    powered_by_aws: Powered by Amazon Web Services
     feedback: Ge feedback
     translate: Hjälp oss översätta till ditt språk
     support: Stöd
@@ -380,12 +382,12 @@ sv:
   compatability:
     working:
       header: Vi arbetar för stöd till din webbläsare.
-      message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
+      message: "Code.org använder modern webbteknik. Detta gör webbplatsen snabbare att använda. Din webbläsare stöder inte alla funktioner som krävs, och du kan uppleva problem när du använder denna del av webbplatsen. Hjälp oss genom att <a href='%{report_issue_url}'> rapportera eventuella problem du hittar</a>. Du kan även <a href='%{supported_browsers_url}'> uppgradera din webbläsare till en version som stöds</a>."
       hide_this_warning: Hide this warning
     upgrade:
       header: Du måste uppgradera din webbläsare.
-      message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
-      button: Take me to the list of supported browsers
+      message: "Code.org använder modern webbteknik. Detta gör webbplatsen snabbare att använda. Tyvärr stöder din webbläsare inte alla funktioner som krävs för att köra denna del av webbplatsen. <br/> <br/>Installera en webbläsare som finns med på vår lista över webbläsare som stöds för att fortsätta. Du kan <a href='#'> prova visa sidan</a>, men räkna med att allt inte fungerar."
+      button: Ta mig till listan över webbläsare som stöds
   slow_loading: 'Det här tar längre tid  än vanligt...'
   try_reloading: Försök ladda sidan igen
   next_stage: Klar! Fortsätt till nästa nivå
@@ -396,7 +398,7 @@ sv:
   download_coming_soon: Downloadable activity coming soon.
   video_coming_soon: Video Coming Soon!
   share_code:
-    title: "Click 'Run' to see my program in action"
+    title: "Klicka på 'Kör' för att testa mitt program"
     bounce_og_title: Check out my Bounce Game
     flappy_og_title: Check out my Flappy Game
     studio_og_title: Check out my Play Lab App
@@ -423,16 +425,18 @@ sv:
       body: Lär dig grunderna i programmering. Miljoner har provat denna.
     flappy:
       title: Flappy Code
-      body: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
+      body: Vill du skriva ditt egna spel på mindre än 10 minuter? Prova vår Flappy Code övning!
     20hour:
       title: Grundkurs
       body: Prova vår 20-timmars grundkurs i programmering.
     hoc2014:
-      try_new_tutorial: Try our new Hour of Code tutorial in beta
-      try_frozen: Artist with Anna and Elsa, from Frozen
+      try_new_tutorial: Prova vår nya Hour of Code övning i betaversion
+      try_frozen: Konstnären, med Anna och Elsa från Frost
     gallery:
       title: Gallery
       body: View a gallery of app and artist images created by our users
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: Elever ritade dessa med kod!
     students_made_these_with_code: Students made these with code!
@@ -447,7 +451,7 @@ sv:
     header_artist: Artist
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
-    prerelease_hoc2014: "This tutorial is in <span class='betatext'>beta</span>.  It is subject to revision as feedback is received and improvements are made."
+    prerelease_hoc2014: "Den här övningen är en <span class='betatext'>betaversion</span>.  Den revideras allteftersom synpunkter kommer in och förbättringar görs."
     feedback: Give Feedback
     report_bug: Report Bug
     support: Få hjälp
@@ -490,7 +494,7 @@ sv:
           description: ""
         flappy:
           title: Flappy Code
-          description: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
+          description: Vill du skriva ditt egna spel på mindre än 10 minuter? Prova vår Flappy Code övning!
         jigsaw:
           title: Pussel
           description: ""

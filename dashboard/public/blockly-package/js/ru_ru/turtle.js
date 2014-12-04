@@ -2607,6 +2607,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -2619,7 +2620,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -2629,16 +2632,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -14129,8 +14122,16 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
     // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
     Turtle.ctxPattern.rotate(Math.PI * (Turtle.heading - 90) / 180);
 
-    var clipSize = Math.min(Turtle.smoothAnimateStepSize, lineDistance);
-
+    var clipSize;
+    if (lineDistance % Turtle.smoothAnimateStepSize === 0) {
+      clipSize = Turtle.smoothAnimateStepSize;
+    } else if (lineDistance > Turtle.smoothAnimateStepSize) {
+      // this happens when our line was not divisible by smoothAnimateStepSize
+      // and we've hit our last chunk
+      clipSize = lineDistance % Turtle.smoothAnimateStepSize;
+    } else {
+      clipSize = lineDistance;
+    }
     if (img.width !== 0) {
       Turtle.ctxPattern.drawImage(img,
         // Start point for clipping image
@@ -14138,7 +14139,7 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
         // clip region size
         clipSize * retina, img.height,
         // some mysterious hand-tweaking done by Brendan
-        Math.round((Turtle.stepDistanceCovered - 7) * retina), Math.round((- 18) * retina),
+        Math.round((Turtle.stepDistanceCovered - clipSize - 2) * retina), Math.round((- 18) * retina),
         clipSize * retina, img.height);
     }
 
@@ -14868,7 +14869,7 @@ exports.numLinesOfCodeWritten = function(d){return "Ты только что н�
 
 exports.play = function(d){return "играть"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Печать"};
 
 exports.puzzleTitle = function(d){return "Головоломка "+v(d,"puzzle_number")+" из "+v(d,"stage_total")};
 
@@ -14912,9 +14913,9 @@ exports.hintRequest = function(d){return "Посмотреть подсказк�
 
 exports.backToPreviousLevel = function(d){return "Вернуться на предыдущий уровень"};
 
-exports.saveToGallery = function(d){return "Сохранить в твоей галереи"};
+exports.saveToGallery = function(d){return "Сохранить в галерею"};
 
-exports.savedToGallery = function(d){return "Сохранено в твоей галереи!"};
+exports.savedToGallery = function(d){return "Сохранено в галерее!"};
 
 exports.shareFailure = function(d){return "К сожалению, мы не можем поделиться этой программой."};
 
@@ -14986,23 +14987,23 @@ exports.catLogic = function(d){return "Логика"};
 
 exports.colourTooltip = function(d){return "Меняет цвет карандаша."};
 
-exports.createACircle = function(d){return "create a circle"};
+exports.createACircle = function(d){return "Создать круг"};
 
-exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+exports.createSnowflakeSquare = function(d){return "Создать квадратную снежинку"};
 
-exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+exports.createSnowflakeParallelogram = function(d){return "Создание снежинки-параллелограмма"};
 
-exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+exports.createSnowflakeLine = function(d){return "Создание снежинки-линии"};
 
-exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+exports.createSnowflakeSpiral = function(d){return "Создание снежинки-спирали"};
 
-exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+exports.createSnowflakeFlower = function(d){return "Создать снежинку-цветок"};
 
-exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+exports.createSnowflakeFractal = function(d){return "Создать снежинку-фрактал"};
 
-exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+exports.createSnowflakeRandom = function(d){return "Создать случайную снежинку"};
 
-exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
+exports.createASnowflakeBranch = function(d){return "Создать снежинку-ветвь"};
 
 exports.degrees = function(d){return "градусов"};
 
@@ -15042,7 +15043,7 @@ exports.drawUpperWave = function(d){return "нарисовать верхнюю 
 
 exports.drawLowerWave = function(d){return "нарисовать нижнюю волну"};
 
-exports.drawStamp = function(d){return "draw stamp"};
+exports.drawStamp = function(d){return "Создать штамп"};
 
 exports.heightParameter = function(d){return "высота"};
 
@@ -15096,11 +15097,11 @@ exports.penTooltip = function(d){return "Поднимает или опуска�
 
 exports.penUp = function(d){return "поднять карандаш"};
 
-exports.reinfFeedbackMsg = function(d){return "Получилось ли так, как ты и хотел? Ты можете нажать кнопку «Попытаться ещё раз», чтобы увидеть свой рисунок."};
+exports.reinfFeedbackMsg = function(d){return "Вот ваш рисунок! Продолжайте работать или перейдите к следующей загадке."};
 
 exports.setColour = function(d){return "выбрать цвет"};
 
-exports.setPattern = function(d){return "set pattern"};
+exports.setPattern = function(d){return "установить шаблон"};
 
 exports.setWidth = function(d){return "задать ширину"};
 

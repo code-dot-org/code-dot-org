@@ -1,8 +1,8 @@
 {
-  "compute": "compute",
-  "equivalentExpression": "Try reordering your arguments to get exactly the same expression.",
-  "extraTopBlocks": "You have unattached blocks. Did you mean to attach these to the \"compute\" block?",
+  "compute": "számítás",
+  "equivalentExpression": "Próbáld ki átrendezni az elemeket, hogy pontosan ugyanazt a kifejezést kapd.",
+  "extraTopBlocks": "Vannak szabad blokkjaid. Ezeket a \"számítás\" blokkhoz szeretted volna csatolni?",
   "goal": "Cél:",
-  "reinfFeedbackMsg": "Ez úgy néz ki amit akartál? Nyomd meg a \"Próbáld újra\" gombot ,hogy lásd a rajzod.",
+  "reinfFeedbackMsg": "Itt a történeted! Dolgozz rajta tovább, vagy menj a következő feladványra!",
   "yourExpression": "A kifejezésed:"
 }

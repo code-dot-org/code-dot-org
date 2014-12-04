@@ -2607,6 +2607,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -2619,7 +2620,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -2629,16 +2632,6 @@ var getFeedbackMessage = function(options) {
                                  stageCompleted ?
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
-        }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
-        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
-        // a more generic message
-        if (options.level.disableSharing) {
-          message = msg.finalStage();
         }
         break;
     }
@@ -12309,7 +12302,7 @@ exports.numLinesOfCodeWritten = function(d){return "Je schreef zojuist "+p(d,"nu
 
 exports.play = function(d){return "spelen"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Afdrukken"};
 
 exports.puzzleTitle = function(d){return "Puzzel "+v(d,"puzzle_number")+" van "+v(d,"stage_total")};
 
@@ -12353,9 +12346,9 @@ exports.hintRequest = function(d){return "Bekijk tip"};
 
 exports.backToPreviousLevel = function(d){return "Terug naar het vorige niveau"};
 
-exports.saveToGallery = function(d){return "Sla op in je galerij"};
+exports.saveToGallery = function(d){return "Opslaan in galerij"};
 
-exports.savedToGallery = function(d){return "Opgeslagen in je galerij!"};
+exports.savedToGallery = function(d){return "Opgeslagen in galerij!"};
 
 exports.shareFailure = function(d){return "Sorry, we kunnen dit programma niet delen."};
 
@@ -12389,7 +12382,7 @@ exports.hintHeader = function(d){return "Een tip:"};
 
 exports.genericFeedback = function(d){return "Kijk waar je uitkwam, en probeer je programma te verbeteren."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Kijk wat ik gemaakt heb"};
 
 
 },{"messageformat":52}],40:[function(require,module,exports){

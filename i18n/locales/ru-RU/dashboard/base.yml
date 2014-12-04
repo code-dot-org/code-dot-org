@@ -22,7 +22,7 @@ ru:
   add_teacher_form:
     code:
       label: 'Добавить учителя:'
-      placeholder: Section Code (ABCDEF)
+      placeholder: Код раздела (ABCDEF)
     submit: Добавить учителя
   add_hint_form:
     placeholder: Пожалуйста, введите Вашу подсказку здесь
@@ -206,7 +206,7 @@ ru:
       sign_in_to_save: Войдите для сохранения результатов
       free_play:
         playlab: Создать приложение
-        artist: Draw Something
+        artist: Нарисовать что-нибудь
     user:
       classroom: Домашняя страница Преподавателя
       label: 'Привет, %{username}'
@@ -237,14 +237,14 @@ ru:
     tools: Инструментарий учителя
     followers:
       section: 'Раздел:'
-      stages: 'Stage(s) to display:'
+      stages: 'Этап(ы) для отображения:'
       show_past: 'Показать деятельность ученика (%{bullet_html}) в прошлом:'
       levels_key: Levels key
-      perfect: Completed, perfect
+      perfect: Завершено, отлично
       completed: Завершено, но использовано слишком много блоков
-      tried: Tried, but not completed
-      not_tried: Not tried yet
-      activity: 'Indicates student activity in the last %{hours} %{plural}'
+      tried: Пытался, но не завершено
+      not_tried: Ещё не пытался
+      activity: 'Показывает активность студента за последние %{plural} %{hours}'
       no_section: No assigned section
       trophies: трофеи
     students:
@@ -331,7 +331,8 @@ ru:
     test_videos_help: Протестировать наш новый видео-плеер в вашей школе
     try_beta_courses: Новинка! Попробуйте наши бета-курсы для дошкольников и начальной школы
     use_as_teacher: Используйте этот сайт как учитель
-    heading_elementary: '<h2>20-часовые курсы для</h2><h1>Учащихся начальной школы</h1>'
+    heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
+    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
     heading_apps: '<h2>Развлечения для</h2><h1>всех</h1>'
     heading_legacy: '<h2>Наш общий курс для</h2><h1>Для всех возрастов</h1>'
     your_gallery: Галерея
@@ -344,7 +345,8 @@ ru:
     teacher: Учитель
   footer:
     help_from_html: Инженеры от Google, Microsoft, Facebook и Twitter помогли создать этот учебник.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Все права защищены.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Все права защищены.'
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
+    powered_by_aws: Powered by Amazon Web Services
     feedback: Оставить отзыв
     translate: Помогите нам выполнить перевод на Ваш язык
     support: Поддержка
@@ -421,6 +423,8 @@ ru:
     gallery:
       title: Галерея
       body: View a gallery of app and artist images created by our users
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: Ученики нарисовали это с помощью кода!
     students_made_these_with_code: Сделано учениками с помощью кода!

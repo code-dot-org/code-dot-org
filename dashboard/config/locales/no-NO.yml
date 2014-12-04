@@ -137,12 +137,12 @@
       %{name}
   follower:
     invite_sent: Invitasjon er sendt
-    added_teacher: "%{name} er lagt til som din lærer"
+    added_teacher: '%{name} er lagt til som din lærer'
     registered: Du har meldt deg på %{section_name}.
     error:
       signed_in: Vennligst logg ut før du fortsetter
       username_not_found: Brukernavnet %{username} finnes ikke
-      username_in_use: "%{username} er allerede tatt. Vennligst velg et annet"
+      username_in_use: '%{username} er allerede tatt. Vennligst velg et annet'
       no_teacher: Kan ikke finne noen som er logget på med '%{teacher_email_or_code}'.
         Vennligst be dem melde seg på og forsøk deretter å legge dem til på nytt
       section_not_found: Kunne ikke finne en seksjon med koden '%{section_code}'.
@@ -185,7 +185,7 @@
       msg_publicschool: Bekreft at du er amerikanske offentlige skolelærer.
       msg_visit_website: Besøk webside
     providers:
-      apple_itunes: "$10 iTunes Gift Card"
+      apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB Dropbox plass
@@ -194,7 +194,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: "$10 Skype credit"
+      skype: $10 Skype credit
     msg:
       choose: 'Velg en premie:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -237,12 +237,12 @@
     edit: Rediger
     edit_model: Rediger %{model}
     update: Oppdater
-    destroy: "Ødelegg"
+    destroy: Ødelegg
     back: Tilbake
     confirm: Er du sikker?
-    created: "%{model} ble opprettet."
-    updated: "%{model} ble oppdatert."
-    destroyed: "%{model} ble slettet."
+    created: '%{model} ble opprettet.'
+    updated: '%{model} ble oppdatert.'
+    destroyed: '%{model} ble slettet.'
     access_denied: Du har ikke tilgang til denne %{model}.
   nav:
     header:
@@ -269,13 +269,13 @@
       puzzle_map: Stadier
       prizes: Samle alle %{total_trophies} pokalene og vinn premier!
       prize_earned: Alle %{total_trophies} premiene er samlet. Premien er vunnet!
-      prize_us_only: "(Kun amerikanske elever)"
+      prize_us_only: (Kun amerikanske elever)
       prizes_link: Mer info
   teacher:
     title:
       one: 'Din lærer:'
       other: 'Dine lærere:'
-    remove: "(Fjern lærer)"
+    remove: (Fjern lærer)
     confirm:
       remove: Er du sikker på at du vil fjerne denne læreren?
     tools: Lærerverktøy
@@ -330,17 +330,17 @@
     rollup: Fremdriftsoversikt
     activity: Nylig klasseaktivitet
     user_not_found: Læreren eller studenten ble ikke funnet
-    cant_remove_student_no_email: "%{student_name} kan ikke fjernes som din student
-      fordi %{student_name} ikke har registrert en e-postadresse"
-    cant_remove_teacher_no_email: "%{teacher_name} kan ikke fjernes som din lærer
-      fordi du ikke har registrert en e-postadresse"
-    student_teacher_disassociated: "%{teacher_name} er fjernet som lærer for %{student_name}"
+    cant_remove_student_no_email: '%{student_name} kan ikke fjernes som din student
+      fordi %{student_name} ikke har registrert en e-postadresse'
+    cant_remove_teacher_no_email: '%{teacher_name} kan ikke fjernes som din lærer
+      fordi du ikke har registrert en e-postadresse'
+    student_teacher_disassociated: '%{teacher_name} er fjernet som lærer for %{student_name}'
   user:
     email_confirm_needed: 'E-postadressen er ikke bekreftet:'
     email_resend_confirm: Send bekreftelse på nytt
-    new_password_hint: "(la stå tomt hvis du ikke vil endre det)"
-    current_password_hint: "(vi trenger ditt gjeldende passord for å bekrefte dine
-      endringer)"
+    new_password_hint: (la stå tomt hvis du ikke vil endre det)
+    current_password_hint: (vi trenger ditt gjeldende passord for å bekrefte dine
+      endringer)
     cancel:
       title: Avslutt kontoen min
       hint: Utilfreds?
@@ -388,9 +388,10 @@
     test_videos_help: Test vår nye videospiller på skolen din
     try_beta_courses: Nyhet! Prøv våre betakurs for barneskoleelever
     use_as_teacher: Bruk denne nettsiden som lærer
-    heading_elementary: "<h2>20 timers kurs for</h2><h1>barneskoleelever</h1>"
-    heading_apps: "<h2>Moro for</h2><h1>Alle</h1>"
-    heading_legacy: "<h2>Våre generelle kurs for</h2><h1>Alle aldre</h1>"
+    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
+    heading_elementary: <h2>20 timers kurs for</h2><h1>barneskoleelever</h1>
+    heading_apps: <h2>Moro for</h2><h1>Alle</h1>
+    heading_legacy: <h2>Våre generelle kurs for</h2><h1>Alle aldre</h1>
     your_gallery: Galleri
   gender:
     male: Mann
@@ -405,6 +406,7 @@
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
       Alle rettigheter reservert.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
       Arts Inc. Alle rettigheter reservert.
+    powered_by_aws: Powered by Amazon Web Services
     feedback: Gi tilbakemelding
     translate: Hjelpe oss med å oversette til ditt språk
     support: Brukerstøtte
@@ -446,7 +448,7 @@
   slow_loading: Dette tar lengre tid enn vanlig...
   try_reloading: Last siden på nytt
   next_stage: Ferdig! Fortsett til neste nivå
-  download_pdf: "Åpne oppgavelisten"
+  download_pdf: Åpne oppgavelisten
   lesson_plan: Leksjonsplan
   view_lesson_plan: Vis leksjonsplan
   pdf_download: Last ned PDF
@@ -493,6 +495,8 @@
     gallery:
       title: Galleri
       body: View a gallery of app and artist images created by our users
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: Elever tegnet disse ved å kode.
     students_made_these_with_code: Elever laget disse ved å kode.
@@ -505,7 +509,7 @@
     want_to_make_your_own: Vil du lage din egen?
     more: Flere &rarr;
     caption_by_name_age: av %{name}, %{age} år
-    caption_time_ago: "%{time_ago} siden"
+    caption_time_ago: '%{time_ago} siden'
     header: Galleri
     header_playlab: Play Lab
     header_artist: Artist
@@ -518,7 +522,7 @@
     feedback: Gi tilbakemelding
     report_bug: Rapporter feil
     support: Få hjelp
-    support_url: "//support.code.org"
+    support_url: //support.code.org
   multi:
     wrong_title: Feil svar
     wrong_body: Svaret du har angitt er ikke riktig.  Prøv på nytt!

@@ -12,7 +12,7 @@
   "flapNormal":"räpyttele normaali määrä",
   "flapLarge":"räpyttele suuri määrä",
   "flapVeryLarge":"räpyttele hyvin suuri määrä",
-  "flapTooltip":"Lennätä Flappy:ä ylöspäin.",
+  "flapTooltip":"Lennätä Flappyä ylöspäin.",
   "flappySpecificFail":"Koodisi näyttää hyvältä - se räpyttelee joka klikkauksella. Sinun pitää vain klikkailla monta kertaa räpytelläksesi maaliin.",
   "incrementPlayerScore":"anna piste",
   "incrementPlayerScoreTooltip":"Lisää yksi piste pelaajan pisteisiin.",

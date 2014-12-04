@@ -2,38 +2,37 @@ nn:
   data:
     unplugged:
       Unplug1:
-        title: Introduksjon til datavitskap (informatikk)
-        desc: Denne leksjonen introduserer begrepet informatikk og forklarer hva en informatiker gjør. Den vil også gi elever muligheten til å prøve rollen som en informatiker. Etter aktiviteten vil eleven kunne ta med seg en påminnelse hjem av hva han eller hun har lært. Du kan bli fristet til å hoppe over å lære unge barn ordforrådet forbundet med oppgavene som følger, men presenter dem på et morsomt og lekent lys allerede nå er langt mer produktivt enn å vente på mer avanserte muligheter.
+        title: Introduksjon til informatikk
+        desc: Denne leksjonen introduserer omgrepet informasjonsvitskap og forklarer kva ein informatikar gjer. Den vil også gi elevar høve til å prøve seg som informatikar. Etter aktiviteten vil eleven få eit diplom til å ta med heim som prov på kva han eller ho har lært. Du kan bli fristet til å hoppe over å lære unge barn ordforrådet forbundet med leksonane som kjem, men å presenter dei alt no på ein morsam og leiken måte er langt meir produktivt enn å vente på meir avanserte muligheiter.
         pdfs:
           - unplug1
         video: Koble fra 1
       Unplug2:
-        title: Programmeringstenking
-        desc: Uten annet enn penn og papir kan elevene lære seg de fire trinnene i programmeringsbasert tenkning. Etter en kort introduksjon burde studentene bli delt inn i grupper hvor de skal lage kommandoer til andre studenter for å tegne et spesifikt monster (fra en kataolog av forhondsbestemte monstere). Hele oppgaven må brytes ned, så gruppene kan analysere alle monstrene i kataologen for mønstere, abstrahere forskjellige detaljer fra monstrene for å så bruke den informasjonen til å lage en algoritme (en rekke kommandoer) for et annet lag som skal tegne monsteret. Lagene skal så bytte algoritmer med en annen gruppe og tegne monsteret basert på hva algoritmen indikerer. Er tegningen hva det opprinnelige laget tenkte seg?
+        title: Programmeringstenkning
+        desc: Uten anna enn penn og papir kan elevane lære seg de fire stega i tenkemåten innan programmering. Etter ein kort introduksjon, bør elevane delast inn i grupper der dei må lage instruksjonar for korleis andre elevar skal teikne eit bestemt monster (frå ein kataolog av utvalde monster). Heile oppgåva må brytast ned, så gruppene kan analysere alle monstrene i kataologen for mønstere, abstrahere forskjellige detaljer fra monstrene for å så bruke den informasjonen til å lage ei algoritme (en rekkje instruksjonar) til eit anna lag som skal teikne monsteret. Lagane skal så byte algoritmer med en annan gruppe og teikne monsteret basert på kva algoritma indikerer. Er teikninga slik det opprinnelige laget tenkte seg?
         pdfs:
           - unplug2
         video: Unplug2
       Unplug3:
-        title: Programmering på millimeterpapir
-        desc: Ved å programmere en annen til å tegne bilder vil studentene begynne å forstå hva programmering egentlig handler om. Klassen begynner med at elever instruerer hverandre til å fargelegge firkanter på millimeterpapir for å reprodusere et eksisterende bilde. Hvis det er tid kan timen avslutte med bilder som elevene lager selv.
+        title: Millimeterpapirprogrammering
+        desc: Ved å programmere kvarandre til å teikne bilder, vil elevane begynne å forstå kva programmering eigentleg går ut på. Leksjonen vil starte med at elevar instruerer kvarandre til å fargelegge firkantar på millimeterpapir for å reprodusere eit eksisterande bilde. Hvis det blir tid til det, kan timen avsluttast med bilder som elevane lagar sjølv.
         pdfs:
           - unplug3
         video: Unplug3
       Unplug4:
         title: Algoritmer
-        desc: 'This lesson covers algorithms.  Using tangram shapes and graph paper, the first exercise will show how important it is to make each instruction as clear and unambiguous as possible.  Afterward, the class will explore how many ways you can fold paper into a rectangle, noting how some methods can take more or fewer folds than others.'
+        desc: 'Denne leksjonen dekkjer algoritmer.  Ved å bruke tangram figurar og millimeterpapir, viser den første øvelsen kor viktig det er å gjere kvar instruksjon så klart og tydeleg som mulig.  Etterpå vil leksjonen utforske kor mange måtar du kan brette papir til et rektangel, og leggje merke til korleis nokre metodar brukar fleire eller ferre brett enn andre.'
         pdfs:
           - unplug4
         video: Unplug4
       Unplug5:
-        title: Funksjonar
-        desc: |-
-          In this lesson, students will make a suncatcher out of string, beads, and a special charm. The students will follow a series of repetitive steps, then be asked to identify certain sets of "skills" that are duplicated several times. Once those skills are defined, they will be called from a main program and the whole beautiful process of creation will be recorded on a single sheet of paper. The final program will be geared toward the entire class, whatever their type of string, beads, and charms. To effectively allow for this, students will need to "abstract out" the details of their specific materials and create vague terms for an individual's supplies.  This use of generic placeholders is a wonderful introduction to variables.
+        title: Funksjoner
+        desc: 'I denne leksjonen vil eleverne lage ein solfangar af streng, perler og eit spesielt smykke. Elevane vil fylgje ein rekkje repeterande steg, og så bli spurt om å identifisere bestemte ferdigheiter", som blir gjentatt fleire gonger. Når desse ferdigheitene er defineret, vil dei bli kalla frå hovedprogrammet og heile den kreative prosessen vil notert på eit enkelt papirark. Det endelige programmet vil felles for heile klassa, uavhengig av type streng, perler og smykker. For å gjere dette effektivt, må elevane "abstraktahere" detaljane i deira specifikke materialer og finne felles begrep for den enkeltes forsyningar.  Denne bruken av generiske plasshaldar er ein nydeleg introduksjoon til variablar.'
         pdfs:
           - unplug5
         video: Unplug5
       Unplug6:
-        title: Betingelser
+        title: Vilkår
         desc: Dette er et spill for hele klassen. Etter en innføring av betingelser, hvis-setninger og løkker, kan klassen øve sammen med et forhåndsskrevet program, en kortstokk, og litt flaks.
         pdfs:
           - unplug6
@@ -51,7 +50,7 @@ nn:
           - unplug8
         video: Unplug8
       Unplug9:
-        title: Programmering med relé
+        title: Relé-programmering
         desc: 'This lesson will take an idea from a previous activity (4. Graph Paper Programming) and use those skills to emphasize the importance of completing programs that operate in sequence and frequently checking programs for "bugs".'
         pdfs:
           - unplug9
@@ -73,15 +72,15 @@ nn:
         desc: Elevene lage enkle algoritmer (sett med instruksjoner) for å flytte en figur gjennom en labyrint med én kommando.
         video: C1_happy_maps_unplugged
       MoveIt:
-        title: Flytt, flytt
+        title: Flytte den, flytte den
         desc: Elevene lage enkle algoritmer (sett med instruksjoner) for å flytte en figur gjennom en labyrint med én kommando.
         video: C1_moveitmoveit_unplugged
       PlantASeed:
-        title: 'Verkelege algoritmar: Plante eit frø'
+        title: 'Virkelige algoritmer: Plante et frø'
         desc: Denne leksjonen kaller ut måter vi bruker algoritmer i vårt daglige liv, ved hjelp av plante et frø som et eksempel. Det fokuserer også på det store bildet av informatikk og hvordan algoritmer spiller en essensiell rolle.
         video: C1_planting_seed
       BuildingAFoundation:
-        title: Bygge eit fundament
+        title: Bygg ett grunnlag
         desc: Students build a structure using only provided supplies. Structures must complete a task (reach a certain height or bear a certain weight), and students discuss the idea of being persistent when things get complicated.
         video: C1_building_foundation
       GettingLoopy:
@@ -89,7 +88,7 @@ nn:
         desc: This lesson introduces the programming concept of loops (repeated instructions) through a dance activity. Students will learn simple choreography, then be instructed to repeat it.
         video: C1_getting_loopy
       RelayProgramming:
-        title: Programmering med relé
+        title: Relé programmering
         desc: |-
           Students run a relay race, where they dash across the yard to write an algorithm based on a "Graph Paper Programming" image. They can only write one instruction at a time and if there's an error somewhere, they have to erase everything back to that point.
         video: C2_relay_programming
@@ -98,7 +97,7 @@ nn:
         desc: 'To learn about conditional statements, students play a card game and create rules like "If I draw a red card, I get a point" and "If I draw a black card, you get a point."'
         video: C2_conditionals_with_cards
       BigEvent:
-        title: Den store hendinga
+        title: Den store begivenheten
         desc: 'Students are introduced to the programming concept of "events," which are actions that a computer constantly monitors for. The teacher will press buttons on a paper remote and students will react depending on which button is pressed.'
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
@@ -106,7 +105,7 @@ nn:
         desc: Internett er en kraftig, men noen ganger farlig sted. Lærere presentere hvordan å være trygg når du navigerer på Internett.
         video: C1_going_places_safely
       GraphPaperProgramming:
-        title: Programmering på millimeterpapir
+        title: Millimeterpapirprogrammering
         desc: Students write an algorithm (a set of instructions) using a set of predefined commands to direct their classmates to reproduce a drawing.
         video: C2_graph_paper
       PaperPlanes:
@@ -118,11 +117,11 @@ nn:
         desc: Elevene lage armbånd som en binær representasjon av den første bokstaven i navnet. Elevene lærer at data kan være representert og lagret på mer enn én måte.
         video: C2_binary_bracelets
       DigitalFootprint:
-        title: Dine digitale fotspor
+        title: Dine digitale fotavtrykk
         desc: 'Lærere introdusere studenter ideen at sette informasjon om seg selv online skaper en digitale fotavtrykk eller "sti" som har konsekvenser.'
         video: C2_digital_footprint
       ComputationalThinking:
-        title: Programmeringstenking
+        title: Programmeringstenkning
         desc: Students use the steps of computational thinking (decompose, pattern match, abstract, algorithm) to figure out how to play a game that comes with no instructions.
         video: C3_computational_thinking
       FunctionalSuncatchers:
@@ -170,16 +169,16 @@ nn:
         title: Video Games and Coordinate Planes
         desc: Video Games and Coordinate Planes lesson description
       Contracts:
-        title: Contracts
+        title: Kontrakter
         desc: Contracts unplugged lesson description
       DesignRecipe:
-        title: The Design Recipe
+        title: Design oppskrifta
         desc: Design Recipe lesson description
       Booleans:
-        title: Booleans
+        title: Boolske verdiar
         desc: Booleans lesson description
       ConditionalsPiecewiseFunctions:
-        title: Conditionals and Piecewise Functions
+        title: Vilkår og stykkevise funksjonar
         desc: Conditionals and Piecewise Functions lesson description
       CollisionDetection:
         title: Collision Detection

@@ -60,7 +60,7 @@ nn:
       2-3 Maze Match 2:
         Maze Match: Labyrint Lag par
         Match the puzzles to the blocks: Set oppgåvene saman med dei tilhøyrande blokkene
-        Instructions: Istruksjonar
+        Instructions: Istruksjoner
         Drag the blocks to match.: Dra blokkene for å lage par.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png
@@ -113,7 +113,7 @@ nn:
       4-5 maze match 1:
         Maze Match: Labyrint Lag par
         Match the puzzles to the blocks: Set oppgåvene saman med dei tilhøyrande blokkene
-        Instructions: Istruksjonar
+        Instructions: Istruksjoner
         Drag the blocks to match.: Dra blokkene for å lage par.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png
@@ -219,7 +219,7 @@ nn:
       K-1 Maze Match 1:
         Matching: Samansetting
         Match the puzzles and blocks: Vel dei oppgåvene og blokkene som passar saman
-        Instructions: Istruksjonar
+        Instructions: Istruksjoner
         Drag the blocks to match.: Dra blokkene for å lage par.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/k_1_images/maze_images/maze_EN.png: /script_assets/k_1_images/maze_images/maze_EN.png
@@ -330,7 +330,7 @@ nn:
         Matching Images Two: Set saman bilder to
         Match up all the flowers by colour!: Set saman blomstrane etter farge!
         /script_assets/matches/images/head.jpg,300: /script_assets/matches/images/head.jpg,300
-        Instructions: Istruksjonar
+        Instructions: Istruksjoner
         Drag the images from right to center.: Dra bilda frå høgre til midten.
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
         /script_assets/matches/images/q1.jpg: /script_assets/matches/images/q1.jpg
