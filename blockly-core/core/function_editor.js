@@ -260,6 +260,7 @@ Blockly.FunctionEditor.prototype.hideIfOpen = function() {
     return;
   }
   this.hideAndRestoreBlocks_();
+  Blockly.modalBlockSpace.clear();
 };
 
 /**
@@ -268,10 +269,11 @@ Blockly.FunctionEditor.prototype.hideIfOpen = function() {
  * @protected
  */
 Blockly.FunctionEditor.prototype.hideAndRestoreBlocks_ = function() {
-  this.moveToMainBlockSpace_(this.functionDefinitionBlock);
-
   goog.style.showElement(this.container_, false);
   goog.style.showElement(this.modalBackground_, false);
+
+  this.moveToMainBlockSpace_(this.functionDefinitionBlock);
+  this.functionDefinitionBlock = null;
 
   goog.dom.getElement('functionNameText').value = '';
   goog.dom.getElement('functionDescriptionText').value = '';
@@ -279,7 +281,6 @@ Blockly.FunctionEditor.prototype.hideAndRestoreBlocks_ = function() {
     goog.dom.getElement('paramAddText').value = '';
   }
 
-  Blockly.modalBlockSpace.clear();
   Blockly.focusedBlockSpace = Blockly.mainBlockSpace;
 };
 

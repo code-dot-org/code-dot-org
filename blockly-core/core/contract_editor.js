@@ -162,52 +162,74 @@ Blockly.ContractEditor.prototype.create_ = function() {
 };
 
 Blockly.ContractEditor.prototype.hideAndRestoreBlocks_ = function() {
+  Blockly.ContractEditor.superClass_.hideAndRestoreBlocks_.call(this);
   this.exampleBlockViews_.forEach(function(exampleBlockView) {
     this.moveToMainBlockSpace_(exampleBlockView.block);
     exampleBlockView.header.removeSelf();
   }, this);
   this.functionDefinitionHeader_.removeSelf();
   goog.array.clear(this.exampleBlockViews_);
-  Blockly.ContractEditor.superClass_.hideAndRestoreBlocks_.call(this);
 };
 
-Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreationCallback) {
-  Blockly.ContractEditor.superClass_.openWithNewFunction.call(this, opt_blockCreationCallback);
-
-  for (var i = 0; i < Blockly.defaultNumExampleBlocks; i++) {
+Blockly.ContractEditor.prototype.openAndEditFunction = function(functionName) {
+  Blockly.ContractEditor.superClass_.openAndEditFunction.call(this, functionName);
+  var exampleBlocks = Blockly.mainBlockSpace.findFunctionExamples(functionName);
+  exampleBlocks.forEach(function(exampleBlock, index) {
     var exampleBlockView = new Blockly.ExampleBlockView(
-      this.createExampleBlock_(),
-      i,
-      goog.bind(this.position_, this));
+      this.moveToModalBlockSpace_(exampleBlock), index, goog.bind(this.position_, this));
     this.exampleBlockViews_.push(exampleBlockView);
-  }
+  }, this);
 
-  this.functionDefinitionHeader_ = new Blockly.SVGHeader(Blockly.modalBlockSpace.svgBlockCanvas_,
-    { headerText: Blockly.Msg.DEFINE_HEADER_DEFINITION }
-  );
-
+  this.createDefinitionHeader_();
   this.position_();
 };
 
+Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreationCallback) {
+  this.ensureCreated_();
+
+  var tempFunctionDefinitionBlock = Blockly.Xml.domToBlock_(Blockly.mainBlockSpace,
+    Blockly.createSvgElement('block', {type: this.definitionBlockType}));
+
+  if (opt_blockCreationCallback) {
+    opt_blockCreationCallback(tempFunctionDefinitionBlock);
+  }
+
+  for (var i = 0; i < Blockly.defaultNumExampleBlocks; i++) {
+    this.createExampleBlock_(tempFunctionDefinitionBlock);
+  }
+
+  this.openAndEditFunction(tempFunctionDefinitionBlock.getTitleValue('NAME'));
+};
+
+Blockly.ContractEditor.prototype.createDefinitionHeader_ = function () {
+  this.functionDefinitionHeader_ = new Blockly.SVGHeader(Blockly.modalBlockSpace.svgBlockCanvas_,
+    { headerText: Blockly.Msg.DEFINE_HEADER_DEFINITION }
+  );
+};
+
 /**
- * Creates a new example block in the modal BlockSpace
+ * Creates a new example block in the main BlockSpace
  * @returns {Blockly.Block} the newly added block
  * @private
  */
-Blockly.ContractEditor.prototype.createExampleBlock_ = function () {
+Blockly.ContractEditor.prototype.createExampleBlock_ = function (functionDefinitionBlock) {
   var temporaryExampleBlock = Blockly.Xml.domToBlock_(Blockly.mainBlockSpace,
     Blockly.createSvgElement('block', {type: Blockly.ContractEditor.EXAMPLE_BLOCK_TYPE}));
   var caller = Blockly.Procedures.createCallerFromDefinition(Blockly.mainBlockSpace,
-    this.functionDefinitionBlock);
+    functionDefinitionBlock);
   temporaryExampleBlock.attachBlockToInputName(
     caller, Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
-  return this.moveToModalBlockSpace_(temporaryExampleBlock);
+  return temporaryExampleBlock;
 };
 
 /**
  * @override
  */
 Blockly.ContractEditor.prototype.layOutBlockSpaceItems_ = function () {
+  if (!this.isOpen()) {
+    return;
+  }
+
   var headerHeight = 50;
 
   var fullWidth = Blockly.modalBlockSpace.getMetrics().viewWidth;
