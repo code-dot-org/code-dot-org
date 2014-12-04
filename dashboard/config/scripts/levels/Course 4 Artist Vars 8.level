@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Play around and see what happens to the size of the shape as you change the number of sides. Can you change the algorithm so that the overall size of the shape stays the same, no matter how many sides it has? Hint: You might have to use your math blocks (360 divided by \"sides\" in two places this time) ",
+    "instructions": "Play around with the number of sides this shape has. Can you change the algorithm so that the overall size of the shape stays the same, no matter how many sides it has? Hint: You might have to use your math blocks (360 divided by \"sides\" in two places this time) ",
     "x": "150",
     "y": "350",
     "start_direction": "90",
@@ -19,7 +19,8 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "impressive": "false",
-    "embed": "false"
+    "embed": "false",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>

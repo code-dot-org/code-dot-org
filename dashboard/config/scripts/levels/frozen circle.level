@@ -50,21 +50,21 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="draw_move_by_constant_dropdown">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE" config="1,50,100,150,200,300">1</title>
-        </block>
-        <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">turnRight</title>
-          <title name="VALUE" config="1,45,60,90,120,180">1</title>
-        </block>
-        <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">turnLeft</title>
-          <title name="VALUE" config="1,45,60,90,120,180">1</title>
-        </block>
-        <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="100, 200, 360">360</title>
-        </block>
+        <!--block type="draw_move_by_constant_dropdown">
+    <title name="DIR">moveForward</title>
+    <title name="VALUE" config="1,50,100,150,200,300">1</title>
+  </block>
+  <block type="draw_turn_by_constant_dropdown">
+    <title name="DIR">turnRight</title>
+    <title name="VALUE" config="1,45,60,90,120,180">1</title>
+  </block>
+  <block type="draw_turn_by_constant_dropdown">
+    <title name="DIR">turnLeft</title>
+    <title name="VALUE" config="1,45,60,90,120,180">1</title>
+  </block>
+  <block type="controls_repeat_dropdown">
+    <title name="TIMES" config="100, 200, 360">360</title>
+  </block-->
         <block type="draw_colour" inline="true">
           <value name="COLOUR">
             <block type="colour_picker">

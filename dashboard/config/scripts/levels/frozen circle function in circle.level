@@ -21,7 +21,6 @@
     "use_contract_editor": "false",
     "ideal": "8",
     "embed": "false",
-    "callout_json": "[\r\n  {\"localization_key\": \"frozen_circle_function_in_circle_turn\", \"element_id\": \"#repeat_qtip\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top left\", \"at\": \"bottom left\"}, \"style\": { \"classes\": \"no-tip\" }}\r\n  }\r\n]",
     "disable_sharing": "false"
   }
 }]]></config>
@@ -38,6 +37,12 @@
                     <block type="jump_by_constant_dropdown">
                       <title name="DIR">jumpForward</title>
                       <title name="VALUE" config="50,100,150,200,300">???</title>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE" config="18,45,60,90,120,180">???</title>
+                        </block>
+                      </next>
                     </block>
                   </next>
                 </block>
