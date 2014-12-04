@@ -1,39 +1,28 @@
 # Complete, external-facing Level Builder instructions live in this  [gdoc](https://docs.google.com/a/code.org/document/d/1HcYloRHibxk0Axnuw3A3w_Ht3AEmBHO0IUCaYFfs838/edit#heading=h.ihuilew1afmk).
 This .md file should only contain information which is specific to Code.org engineers.
 
-### How to update level builder
-(new instructions; updated 12/3 by @geoffrey-elliott)
-#### To update levelbuilder to match staging:
+# How to update level builder
+
+## To update levelbuilder to match staging:
+
 1. On GitHub, open a pull request from `staging` into `levelbuilder`
   1. Or in your local repository:
     - `git checkout levelbuilder`
-    - `git pull origin staging`
+    - `git pull origin levelbuilder` To make sure you're up-to-date.
+    - `git pull origin staging` To fetch and merge `staging` directly into `levelbuilder`.
     - `git push`
 1. Wait for levelbuilder to deploy.
 
-#### To commit changes from levelbuilder into staging:
+## To commit changes from levelbuilder into staging:
+
+1. Integrate `staging` into `levebuilder` as described above; wait for levelbuilder finish deploying.
 1. `ssh levelbuilder.studio.code.org`
 1. `cd levelbuilder`
-1. `git pull origin staging`
+1. `git branch` **If it doesn't say `levelbuilder` get the dev-of-the-week and/or Geoffrey.**
 1. `git add --all dashboard`
-1. `git commit -m "levelbuilder changes"`
+1. `git commit -m "levelbuilder changes committed by YOUR NAME HERE"`
 1. `git push`
 1. On GitHub, open a pull request from `levelbuilder` into `staging`.
-
-#### Old instructions
-(last updated 12/1 by @davidsbailey)
-* `ssh levelbuilder.code.org`
-* `cd levelbuilder`
-* `git branch # if it doesn't say 'staging', then checkout staging and complain to the dev-of-the-week`
-* `git add .`
-* `git commit -m "level builder changes committed by YOUR NAME HERE"`
-* `git pull`
-* `git push origin staging`
-* `rake build:dashboard`
-
-These steps will:
-* commit level builder changes
-* push latest staging changes to levelbuilder.
 
 # Did it break?
 
