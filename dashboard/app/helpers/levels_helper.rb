@@ -37,7 +37,7 @@ module LevelsHelper
     "#{root_url.chomp('/')}#{path}"
   end
 
-  def set_videos_and_blocks_and_callouts
+  def set_videos_and_blocks_and_callouts_and_instructions
     select_and_track_autoplay_video
 
     if @level.is_a? Blockly
