@@ -58,6 +58,7 @@ max_age: 60
       = view :congrats_certificate
       = view :congrats_share, cert_id:cert_id, facebook:facebook, twitter:twitter
 
+  #print-option
     %h2
       Print Frozen drawings
     %button#print-button
@@ -138,6 +139,12 @@ max_age: 60
   var printButton = $('#print-button');
   if (printButton) {
     printButton.click(function() {
-      createHiddenPrintWindow('/images/frozen-impressive-drawings.jpg');
+      //createHiddenPrintWindow('/images/frozen-impressive-drawings.jpg');
+      createHiddenPrintWindow('http://code.org/images/fit-200/avatars/ali_partovi_and_hadi_partovi.jpg');
     });
   }
+
+  if (document.referrer.indexOf("3000") != -1 && document.referrer.indexOf("frozen") == -1) {
+    $('#print-option').hide();
+  }
+
