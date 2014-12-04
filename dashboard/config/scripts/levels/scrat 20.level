@@ -6,7 +6,7 @@
   "user_id": 3,
   "properties": {
     "skin": "scrat",
-    "maze": "[[0,0,0,0,0,0,0,0],[1,1,1,1,1,1,1,1],[1,0,0,0,0,0,0,1],[1,0,1,1,1,1,1,1],[1,0,1,0,0,0,0,0],[1,0,1,0,3,1,1,1],[1,0,1,0,0,0,0,1],[2,0,1,1,1,1,1,1]]",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,3,0,0,0,0,0],[0,0,1,1,1,1,0,0],[0,0,0,0,0,1,0,0],[0,1,1,1,0,1,0,0],[0,1,0,1,1,1,0,0],[0,2,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "instructions": "Can you add just 3 blocks to help me solve a more complex maze? If you do it right, I can walk any curvy path no matter the length. Hurry! The ice is melting!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -17,6 +17,7 @@
     "step_mode": "0",
     "step_speed": "2",
     "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
     "maze_data": null
   }
 }]]></config>

@@ -264,3 +264,21 @@
           представена в различни варианти.  Този урок развива тази концепция с една
           стъпка напред, тъй като илюстрира как  компютърът може да съхранява още
           по-сложна информация (като изображения и цветове) с двоичен код.
+      VideoGamesCoordinatePlanes:
+        title: Видео игрите и координатните системи
+        desc: Видео игрите и координатните системи- описание на урока
+      Contracts:
+        title: Договори
+        desc: Договори - описание на ънплъгд урока
+      DesignRecipe:
+        title: Рецепта за дизайн
+        desc: Рецепта за дизайн- описание на урок
+      Booleans:
+        title: Booleans
+        desc: Booleans - описание на урока
+      ConditionalsPiecewiseFunctions:
+        title: Условни и линейни функции
+        desc: Условия и Piecewise функции - описание на урока
+      CollisionDetection:
+        title: Collision Detection
+        desc: Collision Detection - описание на урока

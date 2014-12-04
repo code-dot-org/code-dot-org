@@ -1,433 +1,533 @@
-"lv":
+lv:
   data:
     script:
       name:
         20-hour:
-          desc: "8. klašu ievads datorzinātņu kursā"
-          Unplug1: "Līmenis 1"
-          Maze: "Līmenis 2"
-          Unplug2: "Līmenis 3"
-          Unplug3: "Līmenis 4"
-          Artist: "Līmenis 5"
-          Unplug4: "Līmenis 6"
-          Artist2: "Līmenis 7"
-          Unplug5: "Līmenis 8"
-          Farmer: "Līmenis 9"
-          Unplug6: "Līmenis 10"
-          Artist3: "Līmenis 11"
-          Unplug7: "Līmenis 12"
-          Farmer2: "Līmenis 13"
-          Unplug8: "Līmenis 14"
-          Artist4: "Līmenis 15"
-          Unplug9: "Līmenis 16"
-          Farmer3: "Līmenis 17"
-          Unplug10: "Līmenis 18"
-          Artist5: "Līmenis 19"
-          Unplug11: "Līmenis 20"
+          desc: 8. klašu ievads datorzinātņu kursā
+          Unplug1: Līmenis 1
+          Maze: Līmenis 2
+          Unplug2: Līmenis 3
+          Unplug3: Līmenis 4
+          Artist: Līmenis 5
+          Unplug4: Līmenis 6
+          Artist2: Līmenis 7
+          Unplug5: Līmenis 8
+          Farmer: Līmenis 9
+          Unplug6: Līmenis 10
+          Artist3: Līmenis 11
+          Unplug7: Līmenis 12
+          Farmer2: Līmenis 13
+          Unplug8: Līmenis 14
+          Artist4: Līmenis 15
+          Unplug9: Līmenis 16
+          Farmer3: Līmenis 17
+          Unplug10: Līmenis 18
+          Artist5: Līmenis 19
+          Unplug11: Līmenis 20
         Hour of Code:
-          desc: "Programmēšanas stunda"
-          Maze: "Līmenis 1"
+          desc: Programmēšanas stunda
+          Maze: Līmenis 1
         Edit Code:
-          desc: "Labot kodu (beta)"
-          MazeEC: "Līmenis 1"
+          desc: Labot kodu (beta)
+          MazeEC: Līmenis 1
         2014 Levels:
-          desc: "Atlekt (beta)"
-          Bounce: "Līmenis 1"
+          desc: Atlekt (beta)
+          Bounce: Līmenis 1
         Builder Levels:
-          desc: "Lietotāju izveidotas puzles (beta)"
-          Custom: "Līmenis 1"
+          desc: Lietotāju izveidotas puzles (beta)
+          Custom: Līmenis 1
         Flappy Levels:
-          desc: "Flappy putns"
-          Flappy: "Līmenis 1"
+          desc: Flappy putns
+          Flappy: Līmenis 1
         Jigsaw Levels:
-          desc: "Atjautības puzle (beta)"
-          Jigsaw: "Līmenis 1"
+          desc: Atjautības puzle (beta)
+          Jigsaw: Līmenis 1
         Step Levels:
-          desc: "Labirints (beta)"
-          MazeStep: "Posma solis"
+          desc: Labirints (beta)
+          MazeStep: Posma solis
         edit-code:
-          desc: "Labot kodu (beta)"
-          MazeEC: "Līmenis 1"
-          Webapp: "Līmenis 2"
-          ArtistEC: "Līmenis 3"
+          desc: Labot kodu (beta)
+          MazeEC: Līmenis 1
+          Webapp: Līmenis 2
+          ArtistEC: Līmenis 3
+          StudioEC: Līmenis 4
         events:
-          desc: "Atlekt (beta)"
-          Bounce: "Līmenis 1"
-          Studio: "Līmenis 2"
+          desc: Atlekt (beta)
+          Bounce: Līmenis 1
+          Studio: Līmenis 2
         builder:
-          desc: "Lietotāju izveidotas puzles (beta)"
-          Custom: "Līmenis 1"
+          desc: Lietotāju izveidotas puzles (beta)
+          Custom: Līmenis 1
         flappy:
-          desc: "Flappy putns"
-          Flappy: "Līmenis 1"
+          desc: Flappy putns
+          Flappy: Līmenis 1
         jigsaw:
-          desc: "Atjautības puzle (beta)"
-          Jigsaw: "Līmenis 1"
+          desc: Atjautības puzle (beta)
+          Jigsaw: Līmenis 1
         step:
-          desc: "Labirints (beta)"
-          MazeStep: "Posma solis"
+          desc: Labirints (beta)
+          MazeStep: Posma solis
         wordsearch:
-          desc: "Burtošanas spēle (beta)"
-          WordSearch: "Līmenis 1"
+          desc: Burtošanas spēle (beta)
+          WordSearch: Līmenis 1
     game:
       name:
-        Unplug1: "Ievads datorzinātnēs"
-        Maze: "Labirints"
-        Multi: "Atbilžu varianti"
-        Unplug2: "Algoritmiska domāšana"
-        Unplug3: "Rūtiņpapīra programmēšana"
-        Artist: "Mākslinieks"
-        Unplug4: "Algoritmi"
-        Artist2: "Mākslinieks 2"
-        Unplug5: "Funkcijas"
-        Farmer: "Fermeris"
-        Unplug6: "Kondicionālis"
-        Artist3: "Mākslinieks 3"
-        Unplug7: "Dziesmas rakstīšana"
-        Farmer2: "Fermeris 2"
-        Unplug8: "Abstrakcija"
-        Artist4: "Mākslinieks 4"
-        Unplug9: "Releju programmēšana"
-        Farmer3: "Fermeris 3"
-        Unplug10: "Internets"
-        Artist5: "Mākslinieks 5"
-        Unplug11: "Ietīt"
-        MazeEC: "Labirints"
-        Bounce: "Atlekt"
-        Flappy: "Flappy putns"
-        Jigsaw: "Puzle"
-        MazeStep: "Labirinta soļa režīms"
-        Wordsearch: "Vārdu meklēšana"
-        Webapp: "Web lietotne"
-        ArtistEC: "Mākslinieks"
-        TextMatch: "Teksta atbilstība"
+        Unplug1: Ievads datorzinātnēs
+        Maze: Labirints
+        Multi: Atbilžu varianti
+        Unplug2: Algoritmiska domāšana
+        Unplug3: Rūtiņpapīra programmēšana
+        Artist: Mākslinieks
+        Unplug4: Algoritmi
+        Artist2: Mākslinieks 2
+        Unplug5: Funkcijas
+        Farmer: Fermeris
+        Unplug6: Sazarojumi
+        Artist3: Mākslinieks 3
+        Unplug7: Dziesmas rakstīšana
+        Farmer2: Fermeris 2
+        Unplug8: Abstrakcija
+        Artist4: Mākslinieks 4
+        Unplug9: Releju programmēšana
+        Farmer3: Fermeris 3
+        Unplug10: Internets
+        Artist5: Mākslinieks 5
+        Unplug11: Ietīt
+        MazeEC: Labirints
+        Bounce: Atlekt
+        Flappy: Flappy putns
+        Jigsaw: Puzle
+        MazeStep: Labirinta soļa režīms
+        Wordsearch: Vārdu meklēšana
+        Webapp: Web lietotne
+        ArtistEC: Mākslinieks
+        TextMatch: Teksta atbilstība
+        StudioEC: Spēles laboratorija
     trophy:
       name:
-        Bronze: "Bronzas"
-        Silver: "Sudraba"
-        Gold: "Zelta"
+        Bronze: Bronzas
+        Silver: Sudraba
+        Gold: Zelta
     concept:
       description:
-        sequence: "Secība"
-        if: "Ja bloks"
-        if_else: "Ja-tad bloks"
-        loop_times: "Atkārtot reizes bloks"
-        loop_until: "Atkārtot kamēr bloks"
-        loop_while: "Kamēr bloks"
-        loop_for: "Skaitītāja bloks"
-        function: "Funkcijas"
-        parameters: "Funkcijas ar parametriem"
+        sequence: Secība
+        if: Ja bloks
+        if_else: Ja-tad bloks
+        loop_times: Atkārtot reizes bloks
+        loop_until: Atkārtot kamēr bloks
+        loop_while: Kamēr bloks
+        loop_for: Skaitītāja bloks
+        function: Funkcijas
+        parameters: Funkcijas ar parametriem
     level:
       instructions:
         maze_2_2: 'Vai vari man palīdzēt notvert nerātno cūku? Saliec vairākus "kustēties uz priekšu" blokus kopā un spied "Skriet" lai palīdzēt man tur nonākt. '
-        maze_2_1: "Šī cūka ir man traucē. Palīdzi man to atrast!"
-        maze_2_2_5: "Izseko ceļu un aizved mani līdz muļķīgajai cūkai. Izvairies no Dinamīta, savādāk spalvas lidos!"
-        maze_2_3: "Aizved mani līdz zaļajam ļaunumam! (Izvairies no Dinamīta)"
-        maze_2_4: "Saglabā mieru un palīdzi man atrast ļauno cūku. Savādāk es varu sadusmoties!"
-        maze_2_5: "Eksistē veids kā es varu nonākt līdz cūkai, izmantojot tikai 2 blokus. Vai tu vari to izdomāt?"
-        maze_2_6: "Mēģini nogādāt mani līdz traucētājam, izmantojot tikai trīs blokus."
+        maze_2_1: Šī cūka ir man traucē. Palīdzi man to atrast!
+        maze_2_2_5: Izseko ceļu un aizved mani līdz muļķīgajai cūkai. Izvairies no Dinamīta, savādāk spalvas lidos!
+        maze_2_3: Aizved mani līdz zaļajam ļaunumam! (Izvairies no Dinamīta)
+        maze_2_4: Saglabā mieru un palīdzi man atrast ļauno cūku. Savādāk es varu sadusmoties!
+        maze_2_5: Eksistē veids kā es varu nonākt līdz cūkai, izmantojot tikai 2 blokus. Vai tu vari to izdomāt?
+        maze_2_6: Mēģini nogādāt mani līdz traucētājam, izmantojot tikai trīs blokus.
         maze_2_7: 'Palīdzi man izdzīt ļauno cūciņu, izmantojot pēc iespējas mazāku bloku daudzumu. Mēģini izmantot vairāk par vienu "Atkārtot reizes" bloku.'
         maze_2_8: 'Kad bloks ir pelēks, tas nozīmē, ka tu nevari to izdzēst. Atrisini puzli, izmantojot "atkārtot" bloku, kas atkārtojas 3 reizes. Mēģini izvietot šos 3 blokus iekšā pelēkajiem "atkārtot" blokiem: pārvietoties, pārvietoties, pagriesties.'
         maze_2_9: 'Tagad pamēģini jauno "atkārtot kamēr" bloku - tas atkārtosies tikmēr, kamēr es sasniegšu kaitinošo cūku.'
         maze_2_10: 'Pēdēja prakses reize - vai vari atrisināt, izmantojot tikai 4 blokus?'
-        maze_2_11: "Dārgais cilvēks. Es zombijs. Es izsalcis. Vajag... tikg... līdz saulespuķei... Vari mani tu nogādāt, izmantojot tikai 5 blokus?"
-        maze_2_12: "Šeit ir ļoti līdzīgi, bet nedaudz savādāk Vai vari atrisināt, izmantojot tikai 5 blokus?"
+        maze_2_11: Dārgais cilvēks. Es zombijs. Es izsalcis. Vajag... tikt... līdz saulespuķei... Vari mani tu nogādāt, izmantojot tikai 5 blokus?
+        maze_2_12: Šeit ir ļoti līdzīgi, bet nedaudz savādāk Vai vari atrisināt, izmantojot tikai 5 blokus?
         maze_2_13: 'Izmanto jauno "Ja" bloku, lai ļautu man izlemt kad pagriezties. Padoms: tev jāizmanto tikai vēl viens bloks, bet iemācies kā to uzstādīt pašam nākamajā reizē.'
         maze_2_14: 'Šī ir gluži kā ieprēkšējā mīkla, taču tev ir jāatceras kā tu izmantoji "Ja" bloku un "atkārtot" bloku kopā.'
         maze_2_15: 'Es gribēt saulespuķi! Izmanto "Ja" bloku, lai nogādāt mani tur ar pēc iespējas mazāku bloku skaitu.'
-        maze_2_16: "Labi, izdarīsim to vēlreiz. Šis nav pārāk atšķirībi, bet uzmanies no Čomperiem!"
+        maze_2_16: Labi, izdarīsim to vēlreiz. Šis nav pārāk atšķirībi, bet uzmanies no Čomperiem!
         maze_2_17: '"Ja-tad" bloks pārbauda nosacījumu un tad izpilda vienu vai otru darbību. Lai nogādātu mani līdz saulespuķei, mēģini izmantot šo jauno bloku.'
-        maze_2_18: 'One more practice of the "if-else" block, can you get it right on your first try?'
-        maze_2_19: "Can you add just 3 blocks to help me solve a more complex maze? If you do it right, I can walk any curvy path no matter the length."
-        turtle_1_1: "Hi, I'm an artist. You can write code to make me draw almost anything. Use a few blocks to make me draw over the grey lines in the picture."
-        turtle_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "set color" block.'
-        turtle_1_3: "Make a square using only 3 blocks."
-        turtle_1_4: |-
-          Draw a triangle whose sides are all in different colors, using the "random color" option that picks a different color each time. Hint: you'll have to figure out how far to turn by clicking on the number in the turn block.
-        turtle_1_5: "Now, for practice, draw a triangle and then a square to draw an envelope."
-        turtle_1_6: 'Can you figure out how draw this triangle and square? Hint: Do the triangle first, then figure out how much to turn before drawing the square.'
-        turtle_1_7: "Ok, let's make it a bit harder - see if you can draw these green glasses. The squares are 100 pixels on each side, and they're 50 pixels apart. Don't forget to draw in green!"
-        turtle_1_8: 'Ok, try to figure out what happens if you run this code (or press "Run" to try it). Then, repeat it enough times to complete the drawing. The colors will be different every time.'
-        turtle_1_9: "Can you figure out what number to replace the question marks with to draw a circle?"
-        turtle_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "set width" block. Have fun!'
-        turtle_4_1: 'Can you draw a triangle (with edges of 100 pixels) with only 3 blocks? Hint: use a "repeat" block.'
-        turtle_4_2: 'Add a "turn right by 90 degrees" block somewhere in the middle of the program already out on the workspace to draw these triangles.'
+        maze_2_18: 'Vēl viens uzdevums ar "ja-tad" bloku. Vai vari to atrisināt pareizi no pirmā mēģinājuma?'
+        maze_2_19: Vai vari pievienot tikai 3 blokus, lai palīdzētu man atrisināt sarežģītāku labirintu? Ja to izdarīsi pareizi, es varēšu noiet jebkuru līkločaino celiņu neatkarīgi no garuma.
+        turtle_1_1: Sveiks, es esmu mākslinieks. Tu vari uzrakstīt kodu, kas liks uzzīmēt gandrīz jebko. Izmanto dažus blokus, lai liktu man zīmēt pa virsu pelēkajām līnijām bildē.
+        turtle_1_2: 'Tagad uzzīmē kvadrātu. PIEZĪME: lai izmantotu savu mīļāko krāsu, izvēlies to jaunajā "noteikt krāsu" blokā.'
+        turtle_1_3: Uztaisi kvadrātu izmantojot tikai 3 blokus.
+        turtle_1_4: 'Uzzīmē trijstūri, kura visas malas ir dažādās krāsās, izmantojot "nejauša krāsa" izvēli, kura katru reizi paņem citu krāsu. Norādījums: Tev vajadzēs izdomāt cik tālu griesties, uzspiežot uz numura, griešanās blokā.'
+        turtle_1_5: Tagad treniņam uzzīmē trījstūri un pēc tam kvadrātu, lai uzzīmētu aploksni.
+        turtle_1_6: 'Vai Tu vari izdomāt kā uzzīmēt šo trijstūri un kvadrātu? Norādījums: Vispirms uzzīmē trijstūri, tad izdomā cik daudz tas ir jāpagriež, pirms uzzīmē kvadrātu.'
+        turtle_1_7: 'Tagad mazliet grūtāks uzdevums: vai tu vari uzzīmēt šīs zaļās briles? Kvadrāti katrā pusē ir 100 pikseļu  lieli un 50 pikseļu attālumā viens no otra. Neaizmirsti izmantot zaļo krāsu!'
+        turtle_1_8: 'Labi, izdomā, kas notiks, ja tu palaidīsi šo kodu (vai arī nospied "Palaist", lai izmēģinātu). Tad, atkārto to pietiekami daudz reizu, lai pabeigtu zīmējumu. Katru reizi krāsas būs citādākas.'
+        turtle_1_9: Vai vari izdomāt, ar kuru numuru aizstāt jautājumzīmes, lai uzzīmētu apli?
+        turtle_1_10: 'Tu to esi paveicis! Tagad vari uzzīmēt jebko, ko vēlies. Dažas interesantas idejas: kociņ cilvēciņš, sniegpārsla vai spirāle. Pamēģini arī "Noteikt platumu" bloku. Izpriecājies!'
+        turtle_4_1: 'Vai vari uzzīmēt trijstūri (kura malas ir 100 pikseļus garas)  ar tikai 3 blokiem? Norādījums: izmanto "atkārtot" bloku.'
+        turtle_4_2: 'Pievienojiet "pagriezties 90 grādus pa labi" bloku kaut kur jau uz darba lauka esošajā programmā, lai uzzīmētu šos trīsstūrus.'
         turtle_4_3: 'Šis ir kods, ko tu uzrakstīji, lai uzzīmētu vienu trijstūril. Vai vari pievienot "atkārtot" un "pagriezt" blokus lai izveidotu skaistu puķi?'
         turtle_4_4: 'Šis ir kods no iepriekšējās mīklas, bet pagriežot tikai 36 grādus pēc katra trijstūra uzzīmēšanas. Cik reizes ir jāatkārto šī darbība? (Padoms: pēc 360 grādu griešanas, zīmējums izveidos pilnu apli)'
         turtle_4_5: 'Šis ir kods no iepriekšējās mīklas, atkārtojot pagriezienus 36 reizes. Cik grādu lenķim vajadzētu būt katrā pagriezienā? (Padoms: pēc 360 grādu pagriešanas, zīmējums izveidos pilnu apli)'
-        turtle_4_6: "Vai tu vari uzzīmēt kvadrātu ar malu garumu 20 pikseļi, izmantojot tikai 3 blokus?"
+        turtle_4_6: Vai tu vari uzzīmēt kvadrātu ar malu garumu 20 pikseļi, izmantojot tikai 3 blokus?
         turtle_4_7: 'Šis ir kods, lai uzzīmētu kvadrātu no iepriekšējās mīklas. Vai tu vari atkārtot to, lai uzzīmētu 10 blakus esošus kvadrātus kā pakāpienus? Padoms: Tev vajag izmantot tikai papildus 2 blokus.'
-        turtle_4_8: "Šis ir risinājums iepriekšējai mīklai. Vai vari pievienot klāt vēl tikai 2 blokus, lai pabeigtu zīmējumu?"
-        turtle_4_9: "Šis ir risinājums iepriekšējai mīklai. Cik grādu leņķa pagriezienu jāizmanto, lai pabeigtu zīmējumu? (Iespējams vajadzēs minēt dažas reizes)"
-        turtle_4_10: "Šis ir risinājums iepriekšējai mīklai. Cik daudz reizes nepieciešams atkārtot šo darbību, lai pabeigtu zīmējumu?"
+        turtle_4_8: Šis ir risinājums iepriekšējai mīklai. Vai vari pievienot klāt vēl tikai 2 blokus, lai pabeigtu zīmējumu?
+        turtle_4_9: Šis ir risinājums iepriekšējai mīklai. Cik grādu leņķa pagriezienu jāizmanto, lai pabeigtu zīmējumu? (Iespējams vajadzēs minēt dažas reizes)
+        turtle_4_10: Šis ir risinājums iepriekšējai mīklai. Cik daudz reizes nepieciešams atkārtot šo darbību, lai pabeigtu zīmējumu?
         turtle_4_11: 'Mēģini izmainīt skaitļus "pagrieziens" un "atkārtot" blokos, lai veidot citus zīmējumus. Vai arī izmēģini mainīt citas koda daļas, lai zīmēt ko vien vēlies.'
         maze_karel_1_1: 'Sveiks, esmu fermeris. Man vajadzīga tava palīdzība, lai nolīdzinātu lauku manā fermā un tas būtu gatavs stādīšanai. Pārvieto mani līdz dubļu kaudzei un izmanto "izdzēst" bloku, lai to izņemt.'
         maze_karel_1_2: 'Tālāk, pārvieto mani pie cauruma un piepildi to ar divām lāpstām dubļu, izmantojot "aizpildīt" bloku.'
-        maze_karel_1_3: "Pārvieto mani pie dubļu kaudzes un pasaki man cik daudz lāpstas vajag izņemt izmantojot pēc iespējas mazāk bloku."
+        maze_karel_1_3: Pārvieto mani pie dubļu kaudzes un pasaki man cik daudz lāpstas vajag izņemt izmantojot pēc iespējas mazāk bloku.
         maze_karel_1_4: 'Vai vari palīdzēt izņemt visas četras kaudzes dubļu? Padoms: izmanto "atkārtot" bloku ja vari.'
         maze_karel_1_5: 'Palīdzi man aizpildīt visas bedres ar 5 lāpstām zemes. Padoms: tu vari ielikt "atkārtot" bloku iekšā "kamēr" blokā.'
         maze_karel_1_6: 'Izņem visas zemes kaudzes, izmantojot pēc iespējas mazāk bloku. Jaunās iespējas nolaižamajā izvēlnē "kamēr" blokā pateiks man priekšā vai es stāvu uz kaudzes vai bedres.'
-        maze_karel_1_7: "Vau, es atradu riktīgi dziļu bedri! Es nezinu cik lāpstas zemes tai nepieciešams. Vai vari uzrakstīt programmu, kas aizpilda to, kamēr zeme ir līdzena?"
-        maze_karel_1_8: "Palīdzi man aizpildīt bedri lauka galā, izmantojot pēc iespējas mazāk blokus."
+        maze_karel_1_7: Vau, es atradu riktīgi dziļu bedri! Es nezinu cik lāpstas zemes tai nepieciešams. Vai vari uzrakstīt programmu, kas aizpilda to, kamēr zeme ir līdzena?
+        maze_karel_1_8: Palīdzi man aizpildīt bedri lauka galā, izmantojot pēc iespējas mazāk blokus.
         maze_karel_1_9: 'Liec man izņemt visas šīs zemes kaudzes. Mēģini izmantot pēc iespējams mazāk blokus. Padoms: mēģini izmantot "kamēr" bloku.'
         maze_karel_1_10: 'Es strādāju vēlu, tāpēc te ir tumšs un es nespēju pateikt, cik lielas ir kaudzes. Tagad man vairs nav visas iespējas, kādas bija iepriekš, "kamēr" blokam. Pārvieto mani pa lauku un, ja tur ir kaudze, noņem to.'
         maze_karel_1_11: 'Vēljoprojām ir tumšs. Pārvieto mani pa lauku. Ja sastopies ar kaudzi, noņem to un ja tā ir bedre - piepildi to. Padoms: izmanto nolaižamo izvēlnes opciju "Ja" blokā.'
         turtle_2_1: 'Sveiks. Es zombij artists. Es mīlēt zīmēšanu! Paīdzi man uzzīmēt kvadrātu īpašā krāsā. Piezīme: Tev ir visi tie paši bloki, bet tagad tie ir sagrupēti kategorijās.'
         turtle_2_2: 'Esi sveicināts funkciju lietošanā, kas tev ļaus definēt jaunus blokus! Izmēģini jaunu "zīmēt kvadrātu" bloku, kas ir atrodams "Funkcijas" kategorijā, lai uzzīmētu mazu 50x50 zaļu kvadrātu.'
-        turtle_2_3: 'Use the "repeat" block (in the "Loops" category) to draw 3 squares of size 100, each 120 degrees apart. And do it in 3 different, random colors.'
-        turtle_2_4: "Now we're going to get fancy. Change the code to draw 36 squares, 100 pixels wide, and each 10 degrees apart. Hint: you may want to use the slider to make me go faster."
-        turtle_2_5: |-
-          Draw squares with sides of 50, 60, 70, 80, and 90 pixels.  You'll need to use the "draw a square" function five times.
-        turtle_2_6: |-
-          Ok, this program will use a counter, to draw the same squares as last time. You want the square to be the same size as the counter, so use the "counter" block. Hint: It's in the Variables category.
-        turtle_2_7: |-
-          Here's a program to draw a spiral, but the blocks are disabled so they won't run. Make a new program using a "count with" block (in the Loops category) and "counter" block (in the Variables category) to draw the same spiral.
-        turtle_2_7_5: |-
-          There's a new "draw a snowman" function (in the Functions category). Draw two snowmen, of height 250 and 100.
-        turtle_2_8: |-
-          This one's a bit tricky. Use the "draw a snowman" function and the new "jump forward" block (in the Actions category). Draw 3 snowmen in different colors, 100 pixels apart.
-        turtle_2_9: 'Use a "count with" loop to draw a family of snowmen with heights of 110, 100, 90, 80, and 70. The snowmen should all be 60 pixels apart.'
-        turtle_2_10: "Here's some code to try experimenting with different spirals.  What happens if you change the turn amount? Or set a random color in the loop?  Draw anything you like."
-        maze_karel_2_1: 'Try using the blocks to help me remove all the piles and fill in all the holes on the ground. Try to use loops instead of using too many blocks. Hint: you can put a loop inside another loop.'
-        maze_karel_2_2: |-
-          We've defined our own block called "fill 5", which is now in the Functions category. Use it to help me fill in this hole.
-        maze_karel_2_3: |-
-          Use the new "fill 5" function block to make me fill in all the holes. You'll have to drag out the "fill 5" block out from the Functions category.
-        maze_karel_2_4: "Define a new function that removes 7 shovelfuls. Then use it to write a program that helps me remove all the piles."
-        maze_karel_2_5: "Create a new function that removes 6 shovelfuls from a pile, and use it to help me level out all the piles."
-        maze_karel_2_6: 'Use two new functions, "fill 8" and "remove 8", to help me level out the pile and fill in the hole.'
-        maze_karel_2_7: "There's a cow in my field! Write a new function that helps me avoid the cow and remove the pile. Put all your blocks inside the new function."
-        maze_karel_2_8: 'Use this new function, "avoid the cow and remove 1", to help me remove all the piles.'
-        maze_karel_2_9: "Ok, here's a function that removes 4 different piles of dirt in a vertical column. Try putting this function inside a loop, so that you remove all the piles of dirt using only a few new blocks."
-        maze_karel_2_10: "Move me across the field, and use these two functions to help me remove all the piles and fill all the holes."
-        turtle_3_1: |-
-          This puzzle shows you how the "draw a square" and "draw a circle" functions are defined.  Defining a function doesn't run its blocks.  You have to pull out the "draw a square" block to actually draw a square.
-        turtle_3_2: 'Using the "draw a square" function as an example, create a "draw a triangle" function and use it.'
-        turtle_3_3: 'Draw triangular fences around the cats and a square fence around the cow.  Tip: test the program as you go along.'
-        turtle_3_4: 'See if you can figure out how to use "draw a square" and "draw a triangle" (and some other blocks) to draw a house around the lion.'
-        turtle_3_5: 'Now create a new "draw a house" function and use it to house two cats. Hint: create a new function using the "do something" block, and type your own text to name the block.'
-        turtle_3_6: 'Using "draw a square" as an example, add an input named "length" to "draw a triangle". Then, draw triangles in different sizes. (Hint: click the star to add an input to a function)'
-        turtle_3_7: 'Add an input named "length" to "draw a house" and build a big house for the elephant (with edges 150 pixels long)'
-        turtle_3_8: 'Here are all of the blocks from the previous puzzle.  Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
-        turtle_3_9: 'Can you re-create the "draw a house" function without help? Try it, and then draw a row of houses.'
-        turtle_3_10: "You've learned a lot! Now use it to draw whatever you want. Try to draw a star, or a spiral, or a fancy snowflake."
-        maze_karel_debug_seq_1: "Welcome to debugging! My code doesn't work right. Can you spot the problem and fix it so that I can get my field flat and ready for planting?"
-        maze_karel_debug_seq_2: "What's wrong with this program? How should you fix it so I can remove that pile?"
-        maze_karel_debug_repeat: "De-bug this program for me so my field will be nice and flat."
-        maze_karel_debug_while: "How should you change this program to help me fill the hole?"
-        maze_karel_debug_if: "Help! Fix the program so my field will be completely flat."
-        maze_karel_debug_if_else: "De-bug this program so I can fill in the holes and remove all the piles."
-        maze_karel_debug_function_1: "What should you change about this program to help me remove all the piles?"
-        maze_karel_debug_function_2: "Can you de-bug this program for me so I can make my field flat?"
-        maze_karel_debug_function_3: "Edit this program so I'll remove all the piles on my field. "
-        turtle_5_1: "Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)"
-        turtle_5_2: "Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)"
-        turtle_5_3: "Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)"
-        turtle_5_4: "Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)"
-        turtle_5_5: "Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)"
-        turtle_5_6: "Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)"
-        maze_3_1: "I need to get to that pig! Type in a couple of calls to move(); so I can get my eggs back."
-        maze_3_2: "Write me a program, so I can make it all the way to the pig."
-        maze_3_3: "How should I get to the pig? Make sure I don't run into the box of TNT!"
-        maze_3_4: "Argh! Write me a program that gets me around the TNT and to the pig."
-        bounce_1: 'Attach a block to the "when left arrow" block and press "Run". Move the paddle using the left arrow to reach the finish target.'
-        bounce_2: 'Attach a block to the "when right arrow" and "when left arrow" blocks. Move the paddle to reach both finish targets.'
-        bounce_3: 'Now try something similar with the "when up arrow" block. Move the paddle to the finish target at the top.'
-        bounce_4: "This time you need to add four blocks. Move the paddle to all four finish targets to complete this puzzle."
-        bounce_5: |-
-          We're going to send a ball flying down towards the paddle. Attach a block to the "when ball hits paddle" block to ensure the ball reaches the finish target.
-        bounce_6: 'Now the finish target is on the top. You need to attach blocks to both of the "when ball hits" blocks to solve this puzzle.'
-        bounce_7: 'Attach blocks to each of the "when" blocks. Bounce the ball until it hits the finish target.'
-        bounce_10: 'There is a now a goal at the top. Attach the "score point" and "score opponent point" blocks to the "when ball in goal" and "when ball misses paddle" blocks to make a game. See how many points you can score before your opponent scores twice.'
-        bounce_11: 'You can now attach blocks to the "when run" block. You have to attach the new "launch new ball" block in more than one place. Also, try changing the scene or the speed of the paddle and the ball and see how many points you can score before your opponent scores twice.'
-        bounce_12: "Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Finish to let friends try your game on their phones."
-        Custom_builder: 'Drag blocks from the toolbox to the workspace to draw the level you wish to create. Press "Run" when you are ready.'
-        flappy_1: 'Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.'
-        flappy_2: |-
-          Now we've added some ground.  Attach a block to the "when hit the ground" block.  Your code needs to 'END GAME' when Flappy crashes.
-        flappy_3: 'The "when run" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target.'
-        flappy_4: |-
-          Flappy will fly through obstacles unless you write code to make him crash. Attach a block to the "when hit an obstacle" block. Your code needs to 'END GAME' when Flappy crashes into the first set of pipes.
-        flappy_5: |-
-          Let's add a scoreboard, and count points when Flappy makes it past obstacles. Add to the "when pass an obstacle" block, and then score a point by flying Flappy through the first set of pipes.
-        flappy_6: "See if you can still score a point after making Flappy flap either a smaller or larger amount."
-        flappy_7: 'Next, try changing the scene by attaching another block to the "when run" block.'
-        flappy_8: "You can set visuals anytime, not just when the game starts. Try setting a RANDOM scene when other events happen, for example, when passing an obstacle."
-        flappy_9: "To mix things up, when hitting an obstacle or the ground, instead of ending the game try setting the score back to 0."
-        flappy_11: "Create your own Flappy game. You can change all the visuals and all the rules, even the gravity. When you're done, click Finish to let friends try your game on their phones."
-        flappy_k1_1: "Play Flappy"
-        flappy_k1_2: 'Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.'
-        flappy_k1_3: |-
-          Now we've added some ground.  Attach a block to the "when hit the ground" block.  Your code needs to 'END GAME' when Flappy crashes.
-        flappy_k1_4: 'The "when run" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target.'
-        flappy_k1_5: |-
-          Flappy will fly through obstacles unless you write code to make him crash. Attach a block to the "when hit an obstacle" block. Your code needs to 'END GAME' when Flappy crashes into the first set of pipes.
-        flappy_k1_6: |-
-          Let's add a scoreboard, and count points when Flappy makes it past obstacles. Add to the "when pass an obstacle" block, and then score a point by flying Flappy through the first set of pipes.
-        flappy_k1_7: "See if you can score multiple points for making it past an obstacle"
-        flappy_k1_8: 'Next, try changing the scene by attaching another block to the "when run" block.'
-        flappy_k1_9: 'Try changing the player by attaching a "set player" block to the "when run" block.'
-        jigsaw_1: "Click the block"
-        jigsaw_2: "Drag the block to the target"
-        jigsaw_3: "Arrange the blocks to form the image"
-        jigsaw_4: "Arrange the blocks to form the image"
-        jigsaw_5: "Arrange the blocks to form the image"
-        jigsaw_6: "Arrange the blocks to form the image"
-        jigsaw_7: "Arrange the blocks to form the image"
-        jigsaw_8: "Arrange the blocks to form the image"
-        jigsaw_9: "Arrange the blocks to form the image"
-        jigsaw_10: "Arrange the blocks to form the image"
-        jigsaw_11: "Arrange the blocks to form the image"
-        jigsaw_12: "Arrange the blocks to form the image"
-        jigsaw_13: "Fix the puzzle!"
-        mazestep_1: "Maze step description here"
-        mazestep_2: "Maze step description here"
-        mazestep_3: "Maze step description here"
-        mazestep_4: "Maze step description here"
-        mazestep_5: "Maze step description here"
-        studio_c2_1: 'Can you make this dog say "hello world"?'
-        studio_c2_2: "Can you make the dog say something and then have the cat say something afterwards?"
-        studio_c2_3: "Can you write a program to make this dog move to the cat?"
-        studio_c2_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
-        studio_c2_5: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_c2_6: "Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?"
-        studio_c2_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
-        studio_c2_8: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c2_9: "Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?"
-        studio_c2_10: "Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?"
-        studio_c2_11: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
-        studio_c3_story_1: 'Can you make this dog say "hello world"?'
-        studio_c3_story_2: "Can you make the dog say something and then have the cat say something afterwards?"
-        studio_c3_story_3: "Can you write a program to make this dog move to the cat?"
-        studio_c3_story_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
-        studio_c3_story_5: "Can you add a block to make the octopus happy?"
-        studio_c3_story_6: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
-        studio_c3_game_1: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_c3_game_2: "Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?"
-        studio_c3_game_3: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
-        studio_c3_game_4: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c3_game_5: "Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?"
-        studio_c3_game_6: "Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?"
-        studio_c3_game_7: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
-        studio_playlab_1: 'Can you make this dog say "hello world"?'
-        studio_playlab_2: "Can you make the dog say something and then have the cat say something afterwards?"
-        studio_playlab_3: "Can you write a program to make this dog move to the cat?"
-        studio_playlab_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
-        studio_playlab_5: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_playlab_6: "Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?"
-        studio_playlab_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
-        studio_playlab_8: "Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?"
-        studio_playlab_9: "Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?"
-        studio_playlab_10: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
-        studio_full_sandbox: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
-        studio_k1_1: 'Can you make this dog say "hello world"?'
-        studio_k1_2: "Can you make the dog say something and then have the cat say something afterwards?"
-        studio_k1_3: "Can you write a program to make this dog move to the cat?"
-        studio_k1_4: 'Make the dog move to the cat and the cat say "hello" when he gets there.'
-        studio_k1_5: "Can you add a block to make the octopus happy?"
-        studio_k1_6: "Create your own story! Move around the cat and dog, and make them say things."
-        maze_wordsearch_k_1: "Move me to spell the word EAST"
-        maze_wordsearch_k_2: "Move me to spell the word SOUTH"
-        maze_wordsearch_k_3: "Move me to spell the word WEST"
-        maze_wordsearch_k_4: "Move me to spell the word NORTH"
-        maze_wordsearch_k_6: "Move me East and then South to spell the word JUMP"
-        maze_wordsearch_k_9: "Move me one way, then another to spell the word CODE"
-        maze_wordsearch_k_13: "Move me one way, then another to spell the word DEBUG"
-        maze_wordsearch_k_15: "Move me one way, then another to spell the word ABOVE"
-        maze_wordsearch_k_16: "Move me one way, then another to spell the word BELOW"
-        maze_wordsearch_k_20: "This is a test! Move me one way, then another to spell the word STORY"
-        webapp_ec_simple: "Create your web app by using createHtmlBlock."
-        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColor" block.'
-        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "penWidth" block. Have fun!'
+        turtle_2_3: 'Izmanto "atkārtot" bloku ("Cilpas" kategorijā), lai uzzīmētu 3 kvadrātus izmērā 100, katru 120 grādu leņķī. Un izdari to ar 3 dažādām, nejaušām krāsām.'
+        turtle_2_4: 'Tagad pamēģināsim kaut ko nedaudz sarežģītāku. Pamaini savu kodu, lai uzzīmētu 36 kvadrātus, 100 pikseļus platus, katru 10 grādu leņķī vienu no otra. Norādījums: Tu vari izmantot slīdni, lai liktu man strādāt ātrāk.'
+        turtle_2_5: 'Uzzīmē 5 kvadrātus, vienu ar 50, 60, 70, 80 un 90 pikseļu garumu. Tev vajadzēs izmantot "Uzzīmēt kvadrātu" funkciju piecas reizes.'
+        turtle_2_6: 'Labi, šī programma izmantos skaitītāju, lai uzzīmētu tādus pašus kvadrātus kā iepriekš. Tev ir nepieciešams izdarīt tā, lai kvadrāta izmērs ir vienāds ar skaitītāju, tāpēc izmanto "Skaitītājs" bloku. Norādījums: Šis bloks ir kategorijā Mainīgie.'
+        turtle_2_7: 'Šeit ir dota programma, kura zīmē spirāli, taču bloki ir izslēgti, tāpēc tie nestrādās. Uztaisi programmu izmantojot "skaitīt ar" bloku (cilpu kategorijā) un "skaitītājs" bloku (mainīgo kategorijā), lai uzzīmētu tādu pašu spirāli.'
+        turtle_2_7_5: 'Te ir jauna funkcija "Zīmēt sniegavīru" (Funkciju kategorijā). Uzzīmē divus sniegavīrus, vienu ar augstumu 250 un otru ar augstumu 100.'
+        turtle_2_8: 'Šis uzdevums ir drusku viltīgs. Izmanto "Uzzīmēt sniegavīru" funkciju un jauno "pāriet uz priekšu" bloku (kategorijā Darbības). Uzzīmē 3 sniegavīrus 3 dažādās krāsās, 100 pikseļu attālumā vienu no otra.'
+        turtle_2_9: 'Izmanto "Skaitīt ar" cilpu, lai uzzīmētu sniegavīru ģimeni, kurā ģimenes locekļu augumi ir 110, 100, 90, 80 un 70. Visiem sniegavīriem vajadzētu būt 60 pikseļu attālumā vienam no otra.'
+        turtle_2_10: 'Šeit ir kods eksperimentēšanai ar dažādām spirālēm. Kas notiek, ja Tu pamaini apgriezienu daudzumu? Vai arī ciklā uzliec nejaušu krāsu?  Uzzīmē jebko, ko gribi.'
+        maze_karel_2_1: 'Pamēģini izmantot blokus, lai palīdzētu man noņemt visas čupiņas un aizpildīt visas bedres. Mēģini daudzo bloku vietā izmantot cilpas. Norādījums: Tu vari ielikt  vienu cilpa iekšā otrā cilpā.'
+        maze_karel_2_2: 'Mēs esam nodefinējuši savu bloku ar nosaukumu "pildījums 5", kurš tagad ir Funkciju kategorijā. Izmanto to, lai palīdzētu man aizpildīt šo bedri.'
+        maze_karel_2_3: 'Izmanto jauno "pildījums 5" funkcijas bloku, lai liktu man aizpildīt visus caurumus. Tev nāksies izvilkt bloku "pildījums 5" ārā no Funkciju kategorijas.'
+        maze_karel_2_4: Izveido jaunu funkciju, kas noņem 7 lāpstas racienus. Tad izmanto to, lai uzrakstītu programmu, kas palīdz man noņemt visas čupas.
+        maze_karel_2_5: Izveido jaunu funkciju, kas noņem 6 lāpstas racienus no čupas, un izmanto to, lai palīdzētu man izlīdzināt visas čupas.
+        maze_karel_2_6: 'Izmanto divas jaunas funkcijas, "pildījums 8" un "noņemt 8", lai palīdzētu man izlīdzināt čupu un aizpildīt bedri.'
+        maze_karel_2_7: Mana laukā ir govs! Uzraksti jaunu funkciju, kas palīdz man izvairīties no govīm un aizvākt kaudzi. Ievieto visus savus blokus jaunajā funkcija.
+        maze_karel_2_8: 'Izmanto šo jauno funkciju, "izvairies no govs un aizvāc 1", lai palīdzētu man  aizvākt visas čupas.'
+        maze_karel_2_9: Labi, šeit ir funkcija, kas aizvāc 4 dažādas dubļu čupas vertikālā kolonnā. Pamēģini ielikt šo funkciju iekš cilpas tā, ka Tu aizvāc visas dubļu čupas izmantojot tikai dažus jaunus blokus.
+        maze_karel_2_10: Aizved mani pāri laukam un izmanto šīs divas funkcijas, lai palīdzēt man aizvākt visas kaudzes un piepildīt visas bedres.
+        turtle_3_1: 'Šis uzdevums parāda tev, kā ir definētas "uzzīmēt kvadrātu" un "uzzīmēt apli" funkcijas. Funkcijas definēšana nepalaiž tās bloku. Tev vajag izvilkt "zīmēt kvadrātu" bloku, lai uzzīmēt kvadrātu.'
+        turtle_3_2: 'Izmantojot "zīmēt kvadrātu" funkciju kā piemēru, uztaisi "zīmēt trīsstūri" funkciju un pielietot to.'
+        turtle_3_3: 'Uzzīmē trīsstūrveida sētas apkārt kaķiem un kvadrātveida sētu apkārt govij. Padoms: izpēti programmu kamēr tu to izmanto.'
+        turtle_3_4: 'Paskaties vai tu vari izdomāt kā izmantot "zīmēt kvadrātu" un "zīmēt trīsstūri" (Un pāris citus programmas blokus) lai uzzīmētu māju apkārt lauvai.'
+        turtle_3_5: 'Tagad izveido jaunu "zīmēt māju" funkciju un izmanto to lai izveidotu māju abiem kaķiem. Padoms: Izveido jaunu funkciju izmantojot "dari kaut ko" programmas bloku un ievadi pats savu tekstu lai nosauktu bloku.'
+        turtle_3_6: 'Izmantojot "zīmēt kvadrātu" kā piemēru, pievieno ievadi ar nosaukumu "garums" pie "zīmē trīsstūri". Tad uzzīmē trīsstūrus ar dažādiem izmēriem. (Padoms: uzklikšķini uz zvaigznes, lai pievienotu ievadi funkcijai)'
+        turtle_3_7: 'Pievieno ievadi ar nosaukumu "garums" funkcijai "zīmēt māju" un uzzīmē lielu māju zilonim (malu garums 150 pikseļi)'
+        turtle_3_8: 'Šeit ir visi bloki no iepriekšējā uzdevuma. Izmaini "zīmēt māju" tā, lai es atrastos apakšējajā labajā stūrī, kad tiks uzzīmēta jauna māja. Izmanto izmainīto funkciju, lai uzzīmētu rīs mājas.'
+        turtle_3_9: |
+          Vai tu vari izveidot "uzzīmē māju " funkciju bez palīdzības? izmēģini to un tad uzzīmē veselu rindu ar mājām.
+          
+        turtle_3_10: Tu esi apguvis daudz! Tagad izmanto to lai zīmētu visu ko tu vēlies. Centies uzzīmēt zvaigzni vai spirāli vai daiļu sniegpārsliņu.
+        maze_karel_debug_seq_1: Esi sveicināts atkļūdošanā! Mans kods nestrādā pareizi. Vai tu vari pamanīt problēmu un izlabot to, lai es varu nolīdzināt manu lauku un gatavoties stādīšanai?
+        maze_karel_debug_seq_2: Kas nav pareizi šajā programmā? Kā to vajadzētu salabot tā, lai varu novākt šo kaudzi?
+        maze_karel_debug_repeat: Atkļūdo šo programmu, lai mans lauks būtu līdzens.
+        maze_karel_debug_while: Kā tev būtu jāmaina šī programma, lai palīdzētu man aizpildīt bedri?
+        maze_karel_debug_if: Palīgā! Izlabo šo programmu, lai mans lauks būtu pilnīgi līdzens.
+        maze_karel_debug_if_else: Atkļūdo šo programmu, lai es varu aizpildīt visas bedres un novākt visas kaudzes.
+        maze_karel_debug_function_1: Ko tev vajadzētu mainīt šajā programmā, lai palīdzētu man novākt visas kaudzes?
+        maze_karel_debug_function_2: Vai tu vari atkļūdot šo programmu, lai es varu nolīdzināt manu lauku?
+        maze_karel_debug_function_3: 'Rediģē šo programmu, tādējādi es novākšu visas kaudzes no mana lauka. '
+        turtle_5_1: Pamēģini palaist šo programmu, un veic izmaiņas, lai redzētu, kas notiek. Vai tu vari izdomāt, kā tā strādā? (Vai arī izdzēs to un aizvieto to ar kaut ko pavisam citādāku)
+        turtle_5_2: Pamēģini palaist šo programmu, un veic izmaiņas, lai redzētu, kas notiek. Vai tu vari izdomāt, kā tā strādā? (Vai arī izdzēs to un aizvieto to ar kaut ko pavisam citādāku)
+        turtle_5_3: Pamēģini palaist šo programmu, un veic izmaiņas, lai redzētu, kas notiek. Vai tu vari izdomāt, kā tā strādā? (Vai arī izdzēs to un aizvieto to ar kaut ko pavisam citādāku)
+        turtle_5_4: Pamēģini palaist šo programmu, un veic izmaiņas, lai redzētu, kas notiek. Vai tu vari izdomāt, kā tā strādā? (Vai arī izdzēs to un aizvieto to ar kaut ko pavisam citādāku)
+        turtle_5_5: Pamēģini palaist šo programmu, un veic izmaiņas, lai redzētu, kas notiek. Vai tu vari izdomāt, kā tā strādā? (Vai arī izdzēs to un aizvieto to ar kaut ko pavisam citādāku)
+        turtle_5_6: Pamēģini palaist šo programmu, un veic izmaiņas, lai redzētu, kas notiek. Vai tu vari izdomāt, kā tā strādā? (Vai arī izdzēs to un aizvieto to ar kaut ko pavisam citādāku)
+        maze_3_1: Man jātiek pie tās cūkas! Ievieto vairākas komandas move(); lai es dabonu atpakaļ savas olas.
+        maze_3_2: Uzraksti man programmu, lai es varu nokļūt līdz cūkai.
+        maze_3_3: Kādā veidā man vajag tikt līdz cūkai? Pārliecinies, lai es neieskrienu dinamīta kastē!
+        maze_3_4: Aahh! Uzraksti man programmu, kas aizved mani apkārt dinamītam un noved pie cūkas.
+        bounce_1: 'Pievieno bloku pie "kad kreisā bulta" un spied "Palaist". Parvieto dēlīti ar labo bultu lai sasniegtu mērķi.'
+        bounce_2: 'Pievieno bloku pie "kad labā bulta" un "kad kreisā bulta" blokiem. Parvieto dēlīti ar labo bultu lai sasniegtu abus mērķus.'
+        bounce_3: 'Tagad izmēģini ko līdzīgu ar "kad bulta uz augšu" bloku. Pārvieto dēlīti, lai sasniegtu augšējo mērķi.'
+        bounce_4: Šoreiz tev vajag pievienot četrus blokus. Pārvieto airi uz visiem četriem gala mērķiem, lai pabeigto šo puzli.
+        bounce_5: 'Liksim, lai bumba lido lejā dēlīša virzienā. Pievieno bloku pie "kad bumba atsit dēlīti", lai nodrošinātu, ka bumba sasniedz mērķi.'
+        bounce_6: 'Tagad gala mērķis ir augšā. Tev vajag pievienot blokus abiem "kad bumba trāpa" blokiem, lai atrisinātu šo puzli.'
+        bounce_7: 'Pievieno blokus pie katra "kad" bloka. Ļauj bumbai lidot, kamēr tā sasniedz mērķi.'
+        bounce_10: 'Tagad augšā ir mērķis. Pievieno "pieskaiti punktu" un "pieskaiti pretiniekam punktu" blakus "kad bumba mērķī" un "kad bumba neatsitas pret dēlīti" blokiem, lai veidotu spēli, Paskat, cik punktus tu var nopelnīt, pirms pretinieks nopelna divtik.'
+        bounce_11: |-
+          Tagad vari pievienot blokus pie "kad palaists" bloka. Pievieno jaunu "palaist" bumbu bloku vairākās vietās. Pamēģini arī'mainīt fona attēlu vai dēlīša un bumbas ātrumu, un skaties, cik var savākt punktus, kamēr pretinieks nav uzvarējis!
+        bounce_12: 'Izveido savu spēli "Pong". Vari mainīt visus noteikumus, pielāgot izskatu. Kad pabeigts, spied "Gatavs" un aicini draugus spēlēt tavu spēli.'
+        Custom_builder: 'Vel blokus no rīku kastes uz darba virsmas lai izveidotu tādu līmeni, kādu vēlies. Spied "Palaist", kad ir gatavs.'
+        flappy_1: 'Pievieno bloku pie "kad noklikšķināts" bloka, tad spied "Palaist". Klikšķini vai piesit ekrānam, lai virzītu Flappy uz mērķi.'
+        flappy_2: 'Tagad ir pievienota zeme. Pieliec bloku pie "kad atsitos pret zemi". Tavam kodam vajag "BEIGT SPĒLI", kad Flappy ietriecas zemē.'
+        flappy_3: '"Kad palaists" bloks vienmēr izpilda kodu, kad spēle ir iesākta. Pielāgo līmeņa ātrumu un lidošanas uz mērķi ātrumu.'
+        flappy_4: 'Flappy lido cauri šķēršļiem, ja vien tu neliksi viņam ietriekties. Pievieno bloku pie "kad ieskrien šķērslī". Tavam kodam vajag "BEIGT SPĒLI", kad Flappy ietriecas pirmajās caurulēs.'
+        flappy_5: 'Pievienosim rezultātu tabulu un skaitīsim punktus, kad Flappy pārvar šķērsli. Pievieno bloku pie "kad pārvar šķērsli" un saņem punktus, kad Flappy izvairās no pirmajām caurulēm.'
+        flappy_6: Pārbaudi, vai vari saņemt punktus, ja Flappy vēzē spārnus ātrāk vai lēnāk.
+        flappy_7: 'Tālāk mēģini nomainīt fonu, pievienojot jaunu bloku pie "kad palaists" bloka.'
+        flappy_8: Tu vari mainīt izskatu jebkad, ne tikai iesākoties spēlei. Izmēģini uzstādījumu RANDOM fons, kad kaut kas notiek, piemēram, kad izvairās no šķēršļa.
+        flappy_9: Lai dažādotu spēli, kad saskrienas ar šķērsli vai zemi, tā vietā lai beigtu spēli, atstati rezultātu atpakaļ uz 0.
+        flappy_11: Izveido pats savu Flappy spēli. Tu vari mainīt visus vizuālos efektus un noteikumus, pat gravitāciju. Kad esi pabeidzis, spied Pabeigt, lai ļautu draugiem izmēģināt tavu spēli savos telefonos.
+        flappy_k1_1: Spēlēt Flappy spēli
+        flappy_k1_2: 'Pievieno bloku pie "kad noklikšķināts" bloka, tad spied "Palaist". Klikšķini vai piesit ekrānam, lai virzītu Flappy uz mērķi.'
+        flappy_k1_3: 'Tagad ir pievienota zeme. Pieliec bloku pie "kad atsitos pret zemi". Tavam kodam vajag "BEIGT SPĒLI", kad Flappy ietriecas zemē.'
+        flappy_k1_4: '"Kad palaists" bloks vienmēr izpilda kodu, kad spēle ir iesākta. Pielāgo līmeņa ātrumu un lidošanas uz mērķi ātrumu.'
+        flappy_k1_5: 'Flappy lido cauri šķēršļiem, ja vien tu neliksi viņam ietriekties. Pievieno bloku pie "kad ieskrien šķērslī". Tavam kodam vajag "BEIGT SPĒLI", kad Flappy ietriecas pirmajās caurulēs.'
+        flappy_k1_6: 'Pievienosim rezultātu tabulu un skaitīsim punktus, kad Flappy pārvar šķērsli. Pievieno bloku pie "kad pārvar šķērsli" un saņem punktus, kad Flappy izvairās no pirmajām caurulēm.'
+        flappy_k1_7: Vai vari nopelnīt vairāk punktus, lidojot caur pirmo šķērsli?
+        flappy_k1_8: 'Tālāk mēģini nomainīt fonu, pievienojot jaunu bloku pie "kad palaists" bloka.'
+        flappy_k1_9: 'Mēģini mainīt spēlētāji, pieliekot "uzstādi spēlētāju" bloku pie "Kad palaists".'
+        jigsaw_1: Spied uz bloka
+        jigsaw_2: Aizvelc bloku līdz mērķi
+        jigsaw_3: Sakārto blokus tā, lai izveidotu attēlu
+        jigsaw_4: Sakārto blokus tā, lai izveidotu attēlu
+        jigsaw_5: Sakārto blokus tā, lai izveidotu attēlu
+        jigsaw_6: Sakārto blokus tā, lai izveidotu attēlu
+        jigsaw_7: Sakārto blokus tā, lai izveidotu attēlu
+        jigsaw_8: Sakārto blokus tā, lai izveidotu attēlu
+        jigsaw_9: Sakārto blokus tā, lai izveidotu attēlu
+        jigsaw_10: Sakārto blokus tā, lai izveidotu attēlu
+        jigsaw_11: Sakārto blokus tā, lai izveidotu attēlu
+        jigsaw_12: Sakārto blokus tā, lai izveidotu attēlu
+        jigsaw_13: Atrisini mīklu!
+        mazestep_1: Labirinta apraksts šeit
+        mazestep_2: Labirinta apraksts šeit
+        mazestep_3: Labirinta apraksts šeit
+        mazestep_4: Labirinta apraksts šeit
+        mazestep_5: Labirinta apraksts šeit
+        studio_c2_1: 'Vai vari likt šim sunim pateikt "Sveika pasaule"?'
+        studio_c2_2: Vai vari likt šim sunim ko pateikt un tad lai kaķis viņam atbild?
+        studio_c2_3: Vai tu vari uzrakstīt programmu lai liktu sunim pārvietot kaķi?
+        studio_c2_4: 'Vai tu vari uzrakstīt programmu kas liek sunim pārvietoties pie kaķa un kaķim pateikt "sveiks" kad suns ir viņu sasniedzis?'
+        studio_c2_5: 'Vai tu vari uzrakstīt programmu, kas liek astoņkājim pateikt "sveiks", kad uz tā uzklikšķina?'
+        studio_c2_6: Vai tu vari uzrakstīt programmu, kas liek pingvīnam kustēties apkārt izmantojot augšā/lejā/pa kreisi/pa labi, lai tas trāpītu visiem mērķiem?
+        studio_c2_7: '"Atkārtot mūžīgi" bloks ļauj tev palaist kodu nepārtraukti. Vai tu vari pievienot blokus, lai pārvietotu dinozauru uz augšu, uz leju atkārtoti?'
+        studio_c2_8: 'Vai tu vari likt pingvīnam pateikt "Au!" un nospēlēt  "Trāpīts" skaņu ja viņš ieskrien dinozaurā un tad pārvietot viņu ar bultiņām lai tas notiktu?'
+        studio_c2_9: Vai vari pievienot programmas bloku, lai pieskaitītu punktu, kad pingvīns ieskrien astoņkājī un tad pārvietot viņu ar bultiņām lai gūtu punktu?
+        studio_c2_10: Vai tu vari pievienot programmas blokus, lai izmainītu fona attēlu un pingvīna ātrumu, un tad pārvietot viņu ar bultiņām līdz tu gūsti punktu?
+        studio_c2_11: Izveido pats savu stāstu. Kad esi pabeidzis, klikšķini uz beigt un ļauj saviem draugiem izmēģināt tavu stāstu uz saviem telefoniem.
+        studio_c3_story_1: 'Vai vari likt šim sunim pateikt "Sveika pasaule"?'
+        studio_c3_story_2: Vai vari likt šim sunim ko pateikt un tad lai kaķis viņam atbild?
+        studio_c3_story_3: Vai tu vari uzrakstīt programmu lai liktu sunim pārvietot kaķi?
+        studio_c3_story_4: 'Vai tu vari uzrakstīt programmu kas liek sunim pārvietoties pie kaķa un kaķim pateikt "sveiks" kad suns ir viņu sasniedzis?'
+        studio_c3_story_5: Vai tu vari pievienot programmas bloku lai padarītu astoņkāji laimīgu?
+        studio_c3_story_6: Izveido pats savu stāstu. Kad esi pabeidzis, klikšķini uz beigt un ļauj saviem draugiem izmēģināt tavu stāstu uz saviem telefoniem.
+        studio_c3_game_1: 'Vai tu vari uzrakstīt programmu, kas liek astoņkājim pateikt "sveiks", kad uz tā uzklikšķina?'
+        studio_c3_game_2: Vai tu vari uzrakstīt programmu, kas liek pingvīnam kustēties apkārt izmantojot augšā/lejā/pa kreisi/pa labi, lai tas trāpītu visiem mērķiem?
+        studio_c3_game_3: '"Atkārtot mūžīgi" bloks ļauj tev palaist kodu nepārtraukti. Vai tu vari pievienot blokus, lai pārvietotu dinozauru uz augšu, uz leju atkārtoti?'
+        studio_c3_game_4: 'Vai tu vari likt pingvīnam pateikt "Au!" un nospēlēt  "Trāpīts" skaņu ja viņš ieskrien dinozaurā un tad pārvietot viņu ar bultiņām lai tas notiktu?'
+        studio_c3_game_5: Vai vari pievienot programmas bloku, lai pieskaitītu punktu, kad pingvīns ieskrien astoņkājī un tad pārvietot viņu ar bultiņām lai gūtu punktu?
+        studio_c3_game_6: Vai tu vari pievienot programmas blokus, lai izmainītu fona attēlu un pingvīna ātrumu, un tad pārvietot viņu ar bultiņām līdz tu gūsti punktu?
+        studio_c3_game_7: 'Izveido savu spēli. Kad gatavs, spied "Pabeigts" aicini draugus to spēlēt.'
+        studio_playlab_1: 'Penguin wants to say "hello" - can you help him?'
+        studio_playlab_2: 'Cave Boy (actor 1) and Cave Girl (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
+        studio_playlab_3: Can you help Tennis Girl get to the flag?
+        studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor 2) and play a sound when he gets there?
+        studio_playlab_5: 'Can you help the Spacebot say "greetings earthlings" when it is clicked? Don’t forget to click it after you click Run'
+        studio_playlab_6: Can you help the Witch move around using the up/down/right/left arrow keys to get to all the magical fireballs?
+        studio_playlab_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help the wizard move right and left repeatedly?'
+        studio_playlab_8: Can you add a block to score a point and a block to play a sound when the unicorn runs into the wizard, and then move him with the arrows until you score?
+        studio_playlab_9: Set the background for this alien invasion and help the Spacebot get to the alien faster by changing its speed. Then move him with the arrow keys to get to the Spacebot and alert everyone else
+        studio_playlab_10: 'Izveido savu spēli. Kad gatavs, spied "Pabeigts" aicini draugus to spēlēt.'
+        studio_full_sandbox: 'Izveido savu spēli. Kad gatavs, spied "Pabeigts" aicini draugus to spēlēt.'
+        studio_k1_1: 'Vai vari likt šim sunim pateikt "Sveika pasaule"?'
+        studio_k1_2: Vai vari likt šim sunim ko pateikt un tad lai kaķis viņam atbild?
+        studio_k1_3: Vai tu vari uzrakstīt programmu lai liktu sunim pārvietot kaķi?
+        studio_k1_4: 'Liec sunim pārvietoties pie kaķa un kaķim  teikt "sveiks" kad suns nonāk pie kaķa.'
+        studio_k1_5: Vai tu vari pievienot programmas bloku lai padarītu astoņkāji laimīgu?
+        studio_k1_6: Izveido savu stāstu! Liec sunim ar kaķi pārvietoties un sarunāties.
+        maze_wordsearch_k_1: Pārvieto mani, lai teiktu EAST
+        maze_wordsearch_k_2: Pārvieto mani, lai teiktu SOUTH
+        maze_wordsearch_k_3: Pārvieto mani, lai teiktu WEST
+        maze_wordsearch_k_4: Pārvieto mani, lai teiktu NORTH
+        maze_wordsearch_k_6: Pārvieto mani uz austrumiem un tad dienvidiem, lai teiktu JUMP
+        maze_wordsearch_k_9: Pārvieto manu uz vienu pusi, tad citu, lai pateiktu CODE
+        maze_wordsearch_k_13: Pārvieto manu uz vienu pusi, tad citu, lai pateiktu DEBUG
+        maze_wordsearch_k_15: Pārvieto manu uz vienu pusi, tad citu, lai pateiktu ABOVE
+        maze_wordsearch_k_16: Pārvieto manu uz vienu pusi, tad citu, lai pateiktu BELOW
+        maze_wordsearch_k_20: Šis ir izmēģinājums. Pārvieto manu uz vienu pusi, tad citu, lai pateiktu STORY
+        webapp_ec_simple: Izveido savu tīmekļa lietotni ar createHtmlBlock.
+        turtle_ec_1_2: 'Tagad uzzīmē kvadrātu. Ievēro: izmanto savu mīļāko krāsu, lietojot jauno "pildspalvas krāsa" bloku.'
+        turtle_ec_1_10: 'Tu to paveici! Tagad uzzīmē ko vēlies. Dažas idejas: vienkāršs cilvēciņš, sniegpārsla vai spirāle. Izmēģini arī jauno bloku "pildspalvas platums". Lai jautri!'
+        studio_ec_sandbox: 'Izveido savu spēli. Kad gatavs, spied "Pabeigts" aicini draugus to spēlēt.'
+    levelbuilder:
+      frozen line:
+        instructions: Čau! Esmu Elza no Arendellas. Palīdzi man izveidot vienu līniju.
+      frozen perpendicular:
+        instructions: 'Tagad paskatīsimies vai mēs varam izveidot divas līnijas, kuras ir 90 grādu leķņī viena pret otru. Tev būs nepieciešams izmantot "Pagrieziena"  bloku, kā arī "Kustības" bloku.'
+      frozen square iterative:
+        instructions: Šķiet, ka esam pusceļā, lai izveidotu kvadrātu. Liksim kopā 4 līnijas, lai izveidotu kvadrātu.
+      frozen square loop:
+        instructions: 'Sveiki,  esmu Anna no Arendellas! Izveidosim kvadrātu ar "Atkārtot" bloku, kurš izmanto mazāk blokus. Cik reizes (???) "Atkārtot" blokam būtu jāatkārto bloku cikls tā iekšpusē, lai  izveidotu kvadrātu?'
+      frozen square loop 3x:
+        instructions: Izveidosim trīs kvadrātus, pagriežoties pēc katra kvadrāta. Pārliecinies pagriezties par 120 grādiem pirms katra jaunā kvadrāta.
+      frozen square snowflake:
+        instructions: 'Vai Tu vari izveidot sniegpārsliņu izmantojot "Atkārtot" bloku, lai uztaisītu kvadrātu 10 reizes, un  "Pagrieziena" bloku, lai pagrieztos par 36 grādiem starp katru kvadrātu?'
+      frozen cross:
+        instructions: 'Izmanto "Atkārtot" bloku, lai izveidotu plusa zīmi. Vai tu pamanīji, ka Elza var pārvietoties uz priekšu un atpakaļ?'
+      frozen cross rotate:
+        instructions: Tagad mēģini to atkārtot 10 reizes. Par cik grādiem Tev jāpagriežas pēc katras līnijas?
+      frozen cross rotate dense:
+        instructions: 'Atkārtosim to 90 reizes! Cik reizes 90 ietilpst iekš 360? Mājiens: Tas ir ļoti mazs skaitlis.'
+      frozen diamond:
+        instructions: 'Izveidosim paralelogramu. Tas ir kā kvadrāts, bet tam ir dažādi leņķi: 60 un 120 grādu lieli leņķi nevis 90 grādu lieli leņķi.'
+      frozen diamond mini snowflake:
+        instructions: 'Vai tu zināji, ka katra sniegpārsla ir citā formā? Izveidosim jaunu sniegpārslu izmantojot "Atkārtot" bloku, lai atkārtotu paralelogramu 4 reizes, starp katru paralelogramu pagriežoties par 90 grādiem.'
+      frozen diamond snowflake:
+        instructions: Tagad izveidosim jaunu sniegpārslu izmantojot atkārtošanās bloku, lai atkārtotu paralelogramu 10 reizes, starp katru no tiem pagriežoties pa labi par 36 grādiem.
+      frozen circle:
+        instructions: Aplis ir īpaša figūra. Vai vari izdomāt, ar kādu numuru aizstāt jautājuma zīmes, lai uzzīmētu apli?
+      frozen circle function:
+        instructions: 'Izmanto  jaunu "Izveido apli" bloku, lai izveidotu 10 apļus, kas pārklājas.  Neaizmirsti pārvietoties starp apļiem.'
+      frozen circle function in circle:
+        instructions: Tagad izveidosim 20 apļus, kas pārklājas, pagriežoties par 18 grādiem starp katru apli.
+      frozen circle function with parameter:
+        instructions: 'Šeit ir "Izveido apli" bloks, kas var izveidot dažādu izmēru apļus. Vai tu vari to izmantot, lai uztaisītu mazu 5. izmēra apli un lielāku 10. izmēra apli?'
+      frozen snowflower:
+        instructions: Sarežģītus sniega rakstus var izveidot no ļoti vienkāršām figūrām. Vai vari izveidot rakstu, atkārtojot piecus apļus ar izmēru 5 un piecus apļus ar izmēru 10?
+      frozen snowflake branch:
+        instructions: 'Izmēģini bloku "Izveidot sniegpārsliņas zaru" , lai izveidotu trīs zarus, kas sāks izskatīties kā sniegpārsla.'
+      frozen snowflake full:
+        instructions: Tagad atkārtosim to 8 reizes, lai izveidotu skaistu sniegpārsliņu!
+      frozen freeplay:
+        instructions: Tagad tu esi īsts mākslinieks! Izveido ziemas brīnumzemi un dalies ar draugiem!
+      scrat 16:
+        instructions: 'Zīle! Zīle! Zīle! Izmanto "ja" bloku, lai aizvestu mani pie tās ar mazāko iespējamo bloku skaitu.'
+      scrat 17:
+        instructions: 'Labi, tupināsim tālāk - tas daudz savādāk, tomēr piesargies no sienām!'
+      scrat 18:
+        instructions: '"Ja-tad" bloki pārbauda nosacījumu un tad izpilda vienu VAI otru darbību. Lai aizvestu mani pie zīles, izmanto šo jauno bloku.'
+      scrat 19:
+        instructions: 'Vēl viens uzdevums ar "ja-tad" bloku. Vai vari to atrisināt pareizi no pirmā mēģinājuma?'
+      scrat 20:
+        instructions: Vai vari pievienot tikai 3 blokus, lai palīdzētu man iziet sarežģītāku labirintu? Ja izdarīsi to pareizi, es varēšu iziet jebkuru apļveida ceļu, neskatoties uz garumu. Pasteidzies! Ledus kūst!
+      Standalone_Artist_1:
+        instructions: "Welcome to Artist! First off, let's try to make a simple square using the turn right block and move forward block. Each side should be 100 pixels long."
+      Standalone_Artist_2:
+        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel long sides.
+      Standalone_Artist_3:
+        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree turns?
+      Standalone_Artist_4:
+        instructions: "Now you've got a new block to play with, the loop. This will repeat a set of commands. What happens if you loop these commands 6 times?"
+      Standalone_Artist_5:
+        instructions: How many times do you need to loop this diamond to draw the flower?
+      Standalone_Artist_5.5:
+        instructions: "Notice how we simplified the diamond code by turning it into a loop. You can loop that whole sequence 12 times to draw the flower. Hint: You'll need to turn 30 degrees after your diamond loop so you don't keep drawing over the same diamond."
+      Standalone_Artist_6:
+        instructions: 'Loop this hexagon code 6 times to create the design. How many degrees will you need to turn each time? Hint: divide the number of degrees in a circle by the number of times you are looping.'
+      Standalone_Artist_7:
+        instructions: 'A function is another programming tool to help you avoid repeating yourself. This function draws a flower, so you can use it any time you want to draw a flower. Use this and the new jump block to draw these flowers. Hint: The flowers are 150 pixels apart'
+      Standalone_Artist_8:
+        instructions: |-
+          Here's a function called "Draw a shape" that we've programmed to draw hexagons. Run the code to see what it does and then experiment with the function to see what happens. Can you make it draw a pattern of squares, triangles, or octagons?
+      Standalone_Artist_9:
+        instructions: "Now go ahead and make whatever picture you'd like! You've even got an empty function that you can make do whatever you want!"
     video:
       name:
-        maze_intro: "Maze Intro"
-        artist_intro: "Artist Intro"
-        farmer_intro: "Farmer Intro"
-        flappy_intro: "Flappy Intro"
-        loop_times: "Repeat Times Block"
-        loop_until: "Repeat Until Block"
-        if: "If Block"
-        if_else: "If/else Block"
-        function: "Funkcijas"
-        loop_while: "While Block"
-        loop_for: "Counter Block"
-        parameters: "Functions with Parameters"
-        hoc_wrapup: "Hour of Code Wrapup"
-        Unplug1: "What is CS?"
-        Unplug2: "Algoritmiska domāšana"
-        Unplug3: "Rūtiņpapīra programmēšana"
-        Unplug4: "Algoritmi"
-        Unplug5: "Funkcijas"
-        Unplug6: "Kondicionālis"
-        Unplug7: "Songwriting"
-        Unplug8: "Abstrakcija"
-        Unplug9: "Relay programming"
-        Unplug10: "Internet"
-        Unplug11: "Ietīt"
-        C1_happy_maps_unplugged: "Happy Maps"
-        C1_moveitmoveit_unplugged: "Move It, Move It"
-        C1_bigevent_unplugged: "The Big Event"
-        C1_getting_loopy: "Getting Loopy"
-        C1_pair_programming: "Pair Programming"
-        C1_maze_intro_sequencing: "Maze Sequencing Intro"
-        C1_maze_debugging: "Maze Debugging"
-        C1_bee_level_intro: 'Bee Level - Intro'
-        C1_artist_intro: "Artist Intro"
-        C1_spelling_bee_intro: "Spelling Bee Intro"
-        C1_zuck_repeat_loop: "Maze Loops"
-        C1_bee_loops: "Bee Loops"
-        C1_maze_loops: "Maze Loops"
-        C1_playlab_storytelling: 'Play Lab - Create a Story'
-        C1_planting_seed: "Planting a Seed"
-        C1_building_foundation: "Building a Foundation"
-        C2_maze_intro: "Maze Intro"
-        C2_artist_intro: "Artist Intro"
-        C2_zuck_repeat_loop: "Maze Loops"
-        C2_artist_loops: "Artist Loops"
-        C2_artist_debugging: "Artist Debugging"
-        C2_bee_loops: "Bee Loops"
-        C2_bee_debugging: "Bee Debugging"
-        C2_bee_conditionals: "Bee Conditionals"
-        C2_playlab_createstory: 'Play Lab - Create a Story'
-        C2_graph_paper: "Rūtiņpapīra programmēšana"
-        C2_conditionals_with_cards: "Kondicionālis"
-        C2_binary_bracelets: "Binary Bracelets"
-        C2_relay_programming: "Releju programmēšana"
-        C2_paper_airplanes: "Paper Airplanes"
-        C3_maze_level_4: "Maze Loops"
-        C3_artist_intro: "Artist Intro"
-        C3_artist_functions: "Artist Functions"
-        C3_bee_functions: "Bee Functions"
-        C3_bee_conditionals: "Bee Conditionals"
-        C3_maze_conditionals: "Maze Conditionals"
-        C3_artist_nested_loops: "Nested Loops"
-        C3_farmer_while: "While Loops"
-        C3_bee_nested_loops: "Nested Loops"
-        C3_bee_debugging: "Bee Debugging"
-        C3_bounce: "Atlekt"
-        C3_playlab_create_game: 'Play Lab - Create a Game'
-        C3_computational_thinking: "Algoritmiska domāšana"
-        C3_dice_race: "Dice Race"
-        C3_internet: "Internet"
-        C3_crowdsourcing: "Crowdsourcing"
-        C3_functional_suncatchers: "Functional Suncatchers"
-        C3_songwriting_with_parameters: "Songwriting With Parameters"
+        maze_intro: Labirinta ievads
+        artist_intro: Mākslinieka ievads
+        farmer_intro: Fermera ievads
+        flappy_intro: Flappy ievads
+        loop_times: '"Atkārto vairākas reizes" bloks'
+        loop_until: '"Atkārtot, kamēr" bloks'
+        if: Ja bloks
+        if_else: Ja/tad bloks
+        if_else_scrat: Ja/tad bloks
+        function: Funkcijas
+        loop_while: Kamēr bloks
+        loop_for: Skaitītāja bloks
+        parameters: Funkcijas ar parametriem
+        hoc_wrapup: Programmēšanas Stundas kopsavilkums
+        Unplug1: Kas ir IKT?
+        Unplug2: Algoritmiska domāšana
+        Unplug3: Rūtiņpapīra programmēšana
+        Unplug4: Algoritmi
+        Unplug5: Funkcijas
+        Unplug6: Sazarojumi
+        Unplug7: Dziesmu rakstīšana
+        Unplug8: Abstrakcija
+        Unplug9: Releju programmēšana
+        Unplug10: Internets
+        Unplug11: Ietīt
+        C1_happy_maps_unplugged: Laimīgās kartes
+        C1_moveitmoveit_unplugged: Ej, ej
+        C1_bigevent_unplugged: Lielais notikums
+        C1_getting_loopy: Kļūst ciklisks
+        C1_pair_programming: Pāru Programmēšana
+        C1_maze_intro_sequencing: Labirinta darbību ievads
+        C1_maze_debugging: Labirinta atkļūdošana
+        C1_bee_level_intro: 'Bite - Ievads'
+        C1_artist_intro: Mākslinieka ievads
+        C1_spelling_bee_intro: 'Pareizrakstība - ievads'
+        C1_zuck_repeat_loop: Labirinta Cilpas
+        C1_bee_loops: 'Bite: Cilpas'
+        C1_maze_loops: Labirinta Cilpas
+        C1_playlab_storytelling: 'Spēļu laboratorija - Izveido stāstu'
+        C1_planting_seed: Sēklu sēšana
+        C1_building_foundation: Veidot pamatus
+        C1_going_places_safely: Nokļūst galamērķos droši
+        C2_maze_intro: Labirinta ievads
+        C2_artist_intro: Mākslinieka ievads
+        C2_zuck_repeat_loop: Labirinta Cilpas
+        C2_artist_loops: Mākslinieku cikli
+        C2_artist_debugging: Mākslinieka atkļūdošana
+        C2_bee_loops: 'Bite: Cilpas'
+        C2_bee_debugging: Bites atkļūdošana
+        C2_bee_conditionals: Bites nosacījumi
+        C2_playlab_createstory: 'Spēļu laboratorija - Izveido stāstu'
+        C2_graph_paper: Rūtiņpapīra programmēšana
+        C2_conditionals_with_cards: Sazarojumi
+        C2_binary_bracelets: Binārās aproces
+        C2_relay_programming: Releju programmēšana
+        C2_paper_airplanes: Papīra lidmašīnas
+        C2_digital_footprint: Tavs digitālais nospiedums
+        C3_maze_level_4: Labirinta Cilpas
+        C3_artist_intro: Mākslinieka ievads
+        C3_artist_functions: Mākslinieks funkcijas
+        C3_bee_functions: Bites funkcijas
+        C3_bee_conditionals: Bites nosacījumi
+        C3_maze_conditionals: Labirinta nosacījums
+        C3_artist_nested_loops: Cikls ciklā
+        C3_farmer_while: Nosacījuma cikli
+        C3_bee_nested_loops: Cikls ciklā
+        C3_bee_debugging: Bites atkļūdošana
+        C3_bounce: Atlekt
+        C3_playlab_create_game: 'Spēļu laboratorija - Izveido stāstu'
+        C3_computational_thinking: Algoritmiska domāšana
+        C3_dice_race: kauliņu skrējiens
+        C3_internet: Internets
+        C3_crowdsourcing: Pūļa ieguve
+        C3_functional_suncatchers: funkcionālie saulķērāji
+        C3_songwriting_with_parameters: Dziesmu rakstīšana ar parametriem
+        C4_artist_math: Programming the Artist with Math
+        C4_create_functions: Creating Functions
+        C4_edit_functions: Editing Functions
+        C4_for_loops: '"par" cikli'
+        C4_variables: Mainīgie
+        frozen_intro: Hour of Code Intro
+        frozen_loops: Introduction to Loops
+        frozen_functions: Introduction to Functions
     callout:
       text:
-        drag_blocks: 'Drag a "move" block and snap it below the other block'
-        run: 'Hit "Run" to try your program'
-        watch_again: "Click here to watch the video again"
-        gray_block_explanation: "Blocks that are grey can't be deleted. Can you solve the puzzle anyway?"
-        show_code_explanation: "Click here to see the code for the program you're making"
-        instructions_repeat_explanation: "The instructions for each puzzle are repeated here"
-        category_explanation: "You have all the same blocks but they've now been arranged in categories"
-        set_sprite_image: 'Attach a "set actor to image" block to the "when story starts" block to enable an actor for this story'
-        studio_say_text: "Type what you want your actor to say within these quotes"
-        jigsaw_click: "Click this block!"
-        move_elsa_forward: 'Drag a "Move Forward" block and snap it below the "When Run" block to make Elsa move forward'
-        turn_elsa: 'Use the "Turn" block to make Elsa turn. The number in the drop-down determines how much Elsa turns'
-        replace_questions: 'Use the drop-down to replace "???" with a number'
-        replace_questions_degree: 'Use the drop-down to replace "???" with the correct degree to turn'
-        repeat_blocks: 'Use the "Repeat" block and wrap it around the blocks in the workspace'
-        snowflake_dropdown: "Use this drop-down to create different snowflakes!"
+        drag_blocks: 'Pārvieto "pārvietot" bloku un pielipini zem cita bloka'
+        run: 'Nospied "Palaist", lai izmēģinātu programmu'
+        watch_again: Spied šeit, lai noskatītos video vēlreiz
+        gray_block_explanation: Pelēkos blokus nevar izdzēst. Vai tu vari atrisināt uzdevumu neskatoties uz to?
+        show_code_explanation: Spied šeit, lai redzētu savas programmas kodu
+        instructions_repeat_explanation: Katra uzdevuma nosacījumi ir atkārtoti šeit
+        category_explanation: Tev ir pieejami tie paši bloki, bet tagad tie ir sakārtoti kategorijās
+        set_sprite_image: 'Pievieno "uzstādi tēlu attēlam" bloku pie "kad stāsts sakas" bloka, lai iespējotu tēlu šim stāstam'
+        studio_say_text: Šajās pēdiņās uzraksti, ko vēlies, lai tavs tēls teiktu
+        jigsaw_click: Klikšķini uz šī bloka!
+        move_elsa_forward: 'Velc "Iet uz priekšu" bloku un pieliec zem "Kad palaists" bloka, lai Elza ietu uz priekšu'
+        turn_elsa: 'Izmanto "Pagriezties" bloku, lai Elza pagrieztos. Skaitlis izkrītošajā izvēlnē nosaka, par cik Elza pagriezīsies'
+        replace_questions: 'Izmanto izkrītošo izvēlni, lai aizstātu "???" ar skaitli'
+        replace_questions_degree: 'Izmanto izkrītošo izvēlni, lai aizstātu "???" ar grādiem, par cik jāpagriežas'
+        repeat_blocks: 'Izmanto bloku "atkārtot" un ietver tajā visus blokus uz darbagalda'
+        snowflake_dropdown: Izmanto šo izvēlni, lai veidotu dažādas sniegpārslas!
+        degrees_per_side: Izdali 360 ar malu skaitu, lai iegūtu katra leņķa lielumu grādos.
+        set_sides: 'Izmanto šo bloku, lai iestatītu " malas"  uz vajadzīgo skaitli, lai pabeigt uzdevumu.'
+        set_length: 'Izmanto šo bloku, lai iestatītu "garums" pareizajā vērtībā.'
+        which_equation: Kurš vienādojums figūrām ar vairāk malām padara katru malu īsāku? Izmēģini katru!
+        get_nectar: 'Izmanto jauno "savākt nektāru" bloku.'
+        actions_category: 'Rīku josla ir ieguvusi jaunu dizainu! Tagad tajā ir "Darbības" bloki.'
+        draw_square_hint: 'Padoms: Izmanto iepriekšējā uzdevumā izveidoto kvadrāta ciklu.'
+        edit_function: Izmanto šo pogu, lai rediģētu funkciju.
+        create_function: 'Spied šeit, lau atvērtu Funkciju paneli, tad nospied "Izveidot funkciju" pogu.'
+        house_hint: Tas nekas, ja bildes pagaidām neizskatās pēc mājas. Mēs to labosim nākamajā uzdevumā.
+        edit_draw_square: Izmanto šo pogu, lai labotu funkciju un pievienotu ciklu.
+        edit_get_nectar: Izmanto šo pogu, lai rediģētu funkciju un mainītu virzienu, kurā bite griezīsies, lai savāktu nektāru.
+        logic_category: 'Atver paneli "Loģika", lai atrastu "if/else" bloku.'
+        length_parameter: 'Vai vari pārveidot šo funkciju tā, lai tā izmantotu "garums" parametru?'
+        frozen_diamond_repeat: Use the repeat block to create this shape.
+        frozen_circle_function_in_circle_turn: "Don't forget to turn after creating each circle."
+        frozen_circle_function_with_parameter_circle: 'Use the "create a circle" block and change the size.'
+        frozen_snowflake_branch: 'Use the "create a snowflake branch" block'
+        frozen_create_square: Attach more blocks here to create a square
+        playlab_drag_say: 'Drag the "say" block here and type "hello"'
+        playlab_use_twice: Use this block twice and remember to change the actor number
+        playlab_move_girl: 'Use the "move right" block to move Tennis Girl'
+        playlab_play_sound: 'Add "play sound" block here'
+        playlab_arrow_keys: Remember to use these to move the witch after clicking on Run
+        playlab_add_move: 'Add "move" blocks inside this repeat block'
+        playlab_add_score: Add score blocks here
+        playlab_add_blocks: Add your blocks here

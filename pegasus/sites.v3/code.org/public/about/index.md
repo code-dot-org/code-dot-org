@@ -14,12 +14,12 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding participa
 
 | Code.org Goal | Accomplishment |
 |------|----------------|
-| Inspire students | 47 million students have tried the [Hour of Code](/learn). |
+| Inspire students | 50 million students have tried the [Hour of Code](/learn). |
 | Create fantastic  courses | 99% of teachers recommend the Code.org [intro CS curriculum](http://learn.code.org) |
-| Reach classrooms | Our [intro course](http://studio.code.org) is in 56,000 classrooms, reaching 2.2M students |
-| Improve diversity in CS | In our online courses, [40% of the students are girls](http://codeorg.tumblr.com/post/98856300118/diversity). In our high school classrooms, [34% are girls, and 60% African American or Hispanic](http://codeorg.tumblr.com/post/98856300118/diversity) |
+| Reach classrooms | Our [intro course](http://studio.code.org) is in 68,000 classrooms, reaching 2.85M students |
+| Improve diversity in CS | In our online courses, [41% of the students are girls](http://codeorg.tumblr.com/post/98856300118/diversity). In our high school classrooms, [34% are girls, and 60% African American or Hispanic](http://codeorg.tumblr.com/post/98856300118/diversity) |
 | Go global | Our courses are available in 30+ languages, used in all 180+ countries |
-| Prep new CS teachers | We've prepared 1,700 new teachers across grades K-12. |
+| Prep new CS teachers | We've prepared 3,000 new teachers across grades K-12. |
 | Change school district curriculum | [30+ districts](/educate/partner-districts) are adding [CS classes](/educate/curriculum) with us, including all of the largest 3|
 | Set up policies to support CS | Policy changed in [16 states](/action) including CA, NY, FL, IL, OH.|
 

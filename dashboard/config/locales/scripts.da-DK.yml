@@ -7,7 +7,7 @@
           The Maze: Labyrinten
           Multi: Multi
           Match: Match
-          Math Image: Math billedet
+          Math Image: Matematik billede
           title: Test banen
           description: Bare en intern test bane.
         course1:
@@ -45,9 +45,10 @@
           'Maze: Loops': 'Labyrint: Sløjfer'
           'Bee: Loops': 'Bi: Sløjfer'
           'Studio: Create a Story': Spil Lab - Opret en historie
+          'Artist: Loops': 'Kunstner: Sløjfer'
+          description_audience: Ages 4+ (pre-readers)
           description_short: Kursus 1 er designet for tidlige læsere. Anbefales for
             0. til 1. klasse.
-          'Artist: Loops': 'Kunstner: Sløjfer'
         course2:
           The Maze: Labyrinten
           Suzi: Suzi
@@ -85,11 +86,12 @@
           'Bee: Debugging': 'Bi: Fejlfinding'
           'Artist: Debugging': 'Kunstner: Fejlfinding'
           'Bee: Conditionals': 'Bi: Betingelser'
-          description_short: Kursus 2 er designet til elever, der kan læse.  Anbefales
-            fra 2. til 5. klasse.
           'Artist: Sequence2': 'Kunstner: Sekvens 2'
           'Maze: Sequence2': 'Labyrint: Sekvens 2'
           'Artist: Nested Loops': 'Kunstner: Indlejrede løkker'
+          description_audience: Ages  6+ (reading required)
+          description_short: Kursus 2 er designet til elever, der kan læse.  Anbefales
+            fra 2. til 5. klasse.
         course3:
           The Maze: Labyrinten
           'Studio: Create a Story': Spil Lab - Opret en historie
@@ -131,8 +133,6 @@
           'Farmer: While Loops': 'Landmand: Når sløjfer'
           'Bee: Nested Loops': 'Bi: Indlejrede løkker'
           'Bee: Debugging': 'Bi: Fejlfinding'
-          description_short: Kursus 3 er en opfølgning til Kursus 2.  Anbefales fra
-            4. til 5. klasse.
           Maze2: Labyrint 2
           Artist2: Kunstner 2
           'Artist: Functions2': 'Kunstner: Funktioner 2'
@@ -145,6 +145,9 @@
           'Bee: Debugging2': 'Bi: Fejlfinding 2'
           'Artist: Patterns': 'Kunstner: Mønstre'
           Songwriting: Sangskrivning
+          description_audience: Ages 8+ (after Course 2)
+          description_short: Kursus 3 er en opfølgning til Kursus 2.  Anbefales fra
+            4. til 5. klasse.
         msm:
           title: Efterskole matematik
           description: Privat arbejde i gang for efterskole matematik.
@@ -161,7 +164,7 @@
           'Play Lab: Defining Variables': 'Spille Lab: Definere variabler'
           The Design Recipe: Design opskrift
           'Artist: Defining Functions': 'Kunstner: Definere funktioner'
-          'Play Lab: Defining Functions': 'Spille Lab: Definere funktioner'
+          'Play Lab: Defining Functions': 'Spille Lab: Design opskrift'
           'Artist: Functions': 'Kunstner: Funktioner'
           'Play Lab: Animation': 'Spille Lab: Animation'
           Booleans: Booleans
@@ -173,6 +176,34 @@
           Collision Detection and the Distance Formula: Kollisions detektion og afstands
             formlen
           'Play Lab: Collision Detection': 'Spille Lab: Sammenstød afsløring'
+          'Unplugged: Ninja Cat and the Coordinate Plane': 'Unplugged: Ninja Cat og
+            the Coordinate Plane'
+          'Eval: Strings and Images': 'Eval: Strings og Images'
+          'Unplugged: Contracts': 'Unplugged: kontrakter'
+          'Eval: Writing Contracts': 'Eval: Skrive kontrakter'
+          'Unplugged: The Design Recipe': 'Unplugged: Design opskrift'
+          'Eval: Defining Functions': 'Eval: Hurtige funktioner'
+          'Eval: Functions': 'Eval: Design opskrift'
+          'Unplugged: Booleans': 'Unplugged: Booleans'
+          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
+            og stykvise funktioner'
+          'Eval: Conditionals': 'Eval: Conditionals'
+          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
+            detection og the Distance Formula'
+          'Calc: Evaluation Blocks': 'Calc: Evaluering blokke'
+          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
+            og Coordinate Planes'
+          'Eval: Boolean Operators': 'Eval: Boolean Operators'
+          Blocks to Math: Blokke til matematik
+          'Play Lab: Defining Variables (Big Game)': 'Spille Lab: Definere variabler
+            (Big Game)'
+          'Play Lab: Animation (Big Game)': 'Spille Lab: Animation (Big Game)'
+          'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
+          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
+            (Big Game)'
+          'Eval: Fast Functions': 'Eval: Hurtige funktioner'
+          'Play Lab: Design Recipe': 'Spille Lab: Design opskrift'
+          'Eval: Design Recipe': 'Eval: Design opskrift'
         playlab:
           title: Spille Lab
           description: Oprette en historie eller lav et spil med Play Lab!
@@ -185,27 +216,24 @@
           description_short: Tegn seje billeder og designs med spilleren!
         scrat:
           title: Scrat
-          description_short: Scrat short description.
-          description: Scrat long description
+          description_short: Scrat kort beskrivelse.
+          description: Scrat lang beskrivelse
           'Maze: Sequence': 'Labyrint: Sekvens'
         hourofcode:
           Maze: Labyrint
           title: En Time af Kode
+          description: Prøv grundlæggende programmering med firgurer fra Angry Birds,
+            Plants vs. Zombies og Scrat fra Ice Age!
           description_short: Try the basics of computer science with characters from
             Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description: Try the basics of computer science with characters from Angry
-            Birds, Plants vs. Zombies, and Scrat from Ice Age!
         frozen:
-          title: Frozen
-          description_short: Join the Royal Sisters of Arendelle, Anna and Elsa, as
-            they explore the magic and beauty of ice. You will write code to create
-            snowflakes and patterns as you ice-skate and make a winter wonderland
-            that you can then share with your friends!
-          description: Join the Royal Sisters of Arendelle, Anna and Elsa, as they
-            explore the magic and beauty of ice. You will write code to create snowflakes
-            and patterns as you ice-skate and make a winter wonderland that you can
-            then share with your friends!
+          title: Kode med Anna og Elsa
+          description: Lad os bruge kode til at udforske isens magi og skønhed sammen
+            med Anna og Elsa. Du kan tegne snefnug og mønstre, mens du skøjter og
+            laver et vinterlandskab, som du derefter kan dele med dine venner!
           Artist: Kunstner
+          description_short: Lad os bruge noget kode for at slutte os til Anna og
+            Elsa, når de går på opdagelse i magien og isens skønhed.
         course4:
           description_short: Elever der tager kursus 4 skal allerede have gennemført
             kursus 2 og 3.
@@ -240,7 +268,8 @@
           Bee Binary: Vær binære
           Farmer Binary: Landmand binære
           Maze and Bee: Labyrint og bi
-          Artist Binary: Artist Binary
+          Artist Binary: Kunstner binære
+          description_audience: Ages 10+ (after Course 3)
         Course4pre:
           description_short: En kort opsamling af koncepter for elever, der ikke har
             taget kursus 2 og 3.
@@ -254,3 +283,38 @@
           'Bee: Nested Loops': 'Bi: Indlejrede løkker'
           'Artist: Functions': 'Kunstner: Funktioner'
           'Bee: Debugging': 'Bi: Fejlfinding'
+        course4pre:
+          description_short: En kort opsamling af koncepter for elever, der ikke har
+            taget kursus 2 og 3.
+          Course 4 Prerequisite: Kursus 4 forudsætninger
+          'Maze: Sequence': 'Labyrint: Sekvens'
+          'Artist: Sequence': 'Kunstner: Sekvens'
+          'Artist: Loops': 'Kunstner: Sløjfer'
+          'Bee: Conditionals': 'Bi: Betingelser'
+          'Artist: Nested Loops': 'Kunstner: Indlejrede løkker'
+          'Farmer: While Loops': 'Landmand: Når sløjfer'
+          'Bee: Nested Loops': 'Bi: Indlejrede løkker'
+          'Artist: Functions': 'Kunstner: Funktioner'
+          'Bee: Debugging': 'Bi: Fejlfinding'
+        Course4pre (Case Conflict):
+          description_short: En kort opsamling af koncepter for elever, der ikke har
+            taget kursus 2 og 3.
+          Course 4 Prerequisite: Kursus 4 forudsætninger
+          'Maze: Sequence': 'Labyrint: Sekvens'
+          'Artist: Sequence': 'Kunstner: Sekvens'
+          'Artist: Loops': 'Kunstner: Sløjfer'
+          'Bee: Conditionals': 'Bi: Betingelser'
+          'Artist: Nested Loops': 'Kunstner: Indlejrede løkker'
+          'Farmer: While Loops': 'Landmand: Når sløjfer'
+          'Bee: Nested Loops': 'Bi: Indlejrede løkker'
+          'Artist: Functions': 'Kunstner: Funktioner'
+          'Bee: Debugging': 'Bi: Fejlfinding'
+        usability:
+          Intro: Introduktion
+          Variables and For Loops: Variabler og For-loops
+          Functions and Functions with Parameters: Funktioner og funktioner med parametre
+          title: Usability test
+          description_short: ''
+          description: Et udvalg af øvelser med 4 niveauer til brugervenlighedstest.
+          Variables: Variabler
+          For Loops: For Loops

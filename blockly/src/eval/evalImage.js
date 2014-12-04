@@ -50,7 +50,7 @@ EvalImage.prototype.place = function (x, y) {
 };
 
 EvalImage.prototype.rotate = function (degrees) {
-  this.rotation_ = degrees;
+  this.rotation_ += degrees;
 };
 
 EvalImage.prototype.scale = function (scaleX, scaleY) {

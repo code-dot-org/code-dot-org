@@ -81,9 +81,9 @@
         - unplug7
         video: Unplug7
       Unplug8:
-        title: Kjarni
+        title: Útdráttur
         desc: Í þessu verkefni er blandað saman hversdagslegri rútínu nemenda og eyðufyllingarleik
-          til að hjálpa nemendum að skilja hve árangursrík greining aðalatriða er.
+          til að hjálpa nemendum að skilja hve árangursrík aðferð útdráttur er.
         pdfs:
         - unplug8
         video: Unplug8
@@ -107,7 +107,7 @@
         desc: Lokasamantektin eftir fyrstu 20 klst. verkefnaröðina á að hjálpa nemendum
           að rifja upp það sem þeim fannst best en um leið beina þeim á brautir sem
           þeir geta farið sjálfir ef þeir hafa áhuga á að halda áfram könnunarleiðangri
-          um heim tölvunarfræðinnar.
+          sínum um heim tölvunarfræðinnar.
         pdfs:
         - unplug11
         video: Unplug11
@@ -188,8 +188,8 @@
       ComputationalThinking:
         title: Tölvunarmiðuð hugsun
         desc: Nemendur nota þrepin í tölvunarmiðaðri hugsun (niðurbrot, greiningu
-          mynstra, greiningu aðalatriða, algrím) til að finna út hvernig á að spila
-          leik þar sem vantar leiðbeiningar.
+          mynstra, útdrátt, algrím) til að finna út hvernig á að spila leik þar sem
+          vantar leiðbeiningar.
         video: C3_computational_thinking
       FunctionalSuncatchers:
         title: Sólarskraut með föllum
@@ -232,8 +232,8 @@
         title: Umslagabreytur
         desc: Breytur gefa mikið frelsi í tölvunarfræði. Þessi kennslustund hjálpar
           við að útskýra hvað breytur eru og fjölbreytta notkun þeirra. Notaðu þetta
-          verkefni á undan (eða í tengslum við) kennslustundina um greiningu kjarna
-          til að koma þessari hugmynd enn betur til skila.
+          verkefni á undan (eða í tengslum við) kennslustundina um útdrátt til að
+          koma þessari hugmynd enn betur til skila.
       MadGlibs:
         title: Mad Glibs eyðufylling
         desc: Útdráttur er eitt af því mikilvægasta sem tölvunarfræðingur þarf að
@@ -241,7 +241,7 @@
           ólíkt í þeim og þannig finna sameiginlegan kjarna. Þessi sögukjarni verður
           síðan fyrirmynd að nýjum fyndnum og fáranlegum sögum.
       ForLoopFun:
-        title: Fyndnar For lykkjur
+        title: Fyndnar frá lykkjur
         desc: Við vitum að með lykkjum getum við gert eitthvað aftur og aftur, en
           nú ætlum við að læra hvernig við notum lykkjur með innbyggðum viðauka.
       SongwritingWithParameters:
@@ -254,7 +254,25 @@
       BinaryImages:
         title: Tvíundarmyndir
         desc: Þó margir ímyndi sér að tvíundir takmarkist alfarið við núll og einn,
-          kenndu fyrri námskeið nemendum okkarað það er hægt að nota ýmsar aðrar tvenndir
-          til tákna upplýsingar. Þessi kennslustund gengur skrefi lengra með þá hugmynd
-          þar sem hún sýnir hvernig tölva getur einnig geymt enn flóknari upplýsingar
-          (svo sem myndir og liti) með tvíundarsniði.
+          kenndu fyrri námskeið nemendum okkar að það er hægt að nota ýmsar aðrar
+          tvenndir til tákna upplýsingar. Þessi kennslustund gengur skrefi lengra
+          með þá hugmynd þar sem hún sýnir hvernig tölva getur einnig geymt enn flóknari
+          upplýsingar (svo sem myndir og liti) með tvíundarsniði.
+      VideoGamesCoordinatePlanes:
+        title: Tölvuleikir og hnitakerfi
+        desc: Tölvuleikir og hnitakerfi, lýsing kennslustundar
+      Contracts:
+        title: Samningar
+        desc: Samningar án tölvu, lýsing kennslustundar
+      DesignRecipe:
+        title: Hönnunaruppskriftin
+        desc: Hönnunaruppskrift, lýsing kennslustundar
+      Booleans:
+        title: Boolean gildi
+        desc: Boolean gildi, lýsing kennslustundar
+      ConditionalsPiecewiseFunctions:
+        title: Skilyrði og Piecewise föll
+        desc: Skilyrði og Piecewise föll, lýsing kennslustundar
+      CollisionDetection:
+        title: Skynjun árekstra
+        desc: Skynjun árekstra, lýsing kennslustundar

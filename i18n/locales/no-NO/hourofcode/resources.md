@@ -10,16 +10,24 @@ tittel: Resurser oppsett:bred nav: resurs_nav
   </h1>
   
   <div class="col-sm-6 button-container centered">
-    <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Sign up your event</button></a>
   </div>
 </div>
 
-## Skal du holde en Kodetime? [ Les hvordan det gjøres her](<%= hoc_uri('/resources/how-to') %>)
+<% if @country == 'ie' %>
+
+## Hosting an Hour of Code in Ireland? [See the how-to guide](<%= hoc_uri('/resources/how-to-ireland') %>)
+
+<% else %>
+
+## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+
+<% end %>
 
 <a id="handouts"></p> 
 
 <h2>
-  Bruk dette flygebladet til å annonsere
+  Use this handout to spread the word
 </h2>
 
 <p>
@@ -27,7 +35,7 @@ tittel: Resurser oppsett:bred nav: resurs_nav
 </p>
 
 <h2>
-  Gi dette flygebladet til lærere og skoler
+  Give this handout to teachers and schools
 </h2>
 
 <p>
@@ -38,7 +46,7 @@ tittel: Resurser oppsett:bred nav: resurs_nav
   <a id="videos"></p> 
   
   <h2>
-    Vis disse videoene for å inspirere elevene
+    Show these videos to inspire students
   </h2>
   
   <div style="float:left; padding:10px">
@@ -82,19 +90,11 @@ tittel: Resurser oppsett:bred nav: resurs_nav
     <a id="posters"></p> 
     
     <h2>
-      Heng opp disse plakatene på din skole
+      Hang these posters in your school
     </h2>
     
     <p>
-      <% if @country == 'us' %>
-    </p>
-    
-    <h4>
-      Hvis du <a href="http://hourofcode.com/#signup">registrerer deg</a> for Kodetimen, vil vi sende deg plakater gratis.
-    </h4>
-    
-    <p>
-      <% end %> <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="bilde" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="bilde" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="bilde" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="bilde" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="bilde" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="bilde" /></a>
+      <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="bilde" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="bilde" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="bilde" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="bilde" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="bilde" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="bilde" /></a>
     </p>
     
     <p>
@@ -102,7 +102,7 @@ tittel: Resurser oppsett:bred nav: resurs_nav
     </p>
     
     <h2>
-      Ha disse bannere på hjemmesiden din
+      Feature these banners on your website
     </h2>
     
     <p>
@@ -122,7 +122,7 @@ tittel: Resurser oppsett:bred nav: resurs_nav
     </p>
     
     <p>
-      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="bilde" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="bilde" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="bilde" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="bilde" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="bilde" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="bilde" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="bilde" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="bilde" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="bilde" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="bilde" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/image/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="bilde" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     
     <p>
@@ -158,7 +158,7 @@ tittel: Resurser oppsett:bred nav: resurs_nav
     </p>
     
     <p>
-      Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
+      Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com/<%= @country %>
     </p>
     
     <p>
@@ -242,7 +242,7 @@ tittel: Resurser oppsett:bred nav: resurs_nav
     </p>
     
     <p>
-      See http://hourofcode.com for details, and help spread the word.
+      See http://hourofcode.com/<%= @country %> for details, and help spread the word.
     </p>
     
     <p>
@@ -286,5 +286,5 @@ tittel: Resurser oppsett:bred nav: resurs_nav
     </p>
     
     <p>
-      <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>
+      <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up your event</button></a>
     </p>

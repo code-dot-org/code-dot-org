@@ -417,6 +417,12 @@ BlocklyApps.init = function(config) {
   }
 
   var visualizationColumn = document.getElementById('visualizationColumn');
+
+  // center game screen in embed mode
+  if(config.embed) {
+    visualizationColumn.style.margin = "0 auto";
+  }
+
   if (BlocklyApps.usingBlockly && config.level.edit_blocks) {
     // Set a class on the main blockly div so CSS can style blocks differently
     Blockly.addClass_(container.querySelector('#blockly'), 'edit');
@@ -430,7 +436,7 @@ BlocklyApps.init = function(config) {
     // Enable param & var editing in levelbuilder, regardless of level setting
     config.level.disableParamEditing = false;
     config.level.disableVariableEditing = false;
-  } else if (!BlocklyApps.noPadding) {
+  } else if (!config.hide_source) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
   }
@@ -465,7 +471,9 @@ BlocklyApps.init = function(config) {
           phone_share_url: config.send_to_phone_url
         },
         sendToPhone: config.sendToPhone,
-        twitter: config.twitter
+        level: config.level,
+        twitter: config.twitter,
+        onMainPage: true
       }));
 
       dom.addClickTouchEvent(openWorkspace, function() {
@@ -526,7 +534,7 @@ BlocklyApps.init = function(config) {
       if (BlocklyApps.noPadding) {
         upSale.style.marginLeft = '10px';
       }
-    } else if (!dom.isMobile()) {
+    } else {
       upSale.innerHTML = require('./templates/learn.html')();
     }
     belowViz.appendChild(upSale);
@@ -678,7 +686,8 @@ BlocklyApps.init = function(config) {
       BlocklyApps.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
         mode: 'javascript',
         modeOptions: utils.generateDropletModeOptions(config.level.codeFunctions),
-        palette: utils.generateDropletPalette(config.level.codeFunctions)
+        palette: utils.generateDropletPalette(config.level.codeFunctions,
+                                              config.level.categoryInfo)
       });
 
       if (config.afterInject) {
@@ -711,6 +720,17 @@ BlocklyApps.init = function(config) {
         config.level.edit_blocks === 'toolbox_blocks') {
         // Don't show when run block for toolbox/required block editing
         config.forceInsertTopBlock = null;
+      }
+    }
+
+    // If levelbuilder provides an empty toolbox, some apps (like artist)
+    // replace it with a full toolbox. I think some levels may depend on this
+    // behavior. We want a way to specify no toolbox, which is <xml></xml>
+    if (config.level.toolbox) {
+      var toolboxWithoutWhitespace = config.level.toolbox.replace(/\s/g, '');
+      if (toolboxWithoutWhitespace === '<xml></xml>' ||
+          toolboxWithoutWhitespace === '<xml/>') {
+        config.level.toolbox = undefined;
       }
     }
 
@@ -772,16 +792,14 @@ BlocklyApps.init = function(config) {
   });
   window.addEventListener('resize', BlocklyApps.onResize);
 
-  // call initial onResize() asynchronously - need 100ms delay to work
-  // around relayout which changes height on the left side to the proper
-  // value
+  // Call initial onResize() asynchronously - need 10ms delay to work around
+  // relayout which changes height on the left side to the proper value
   window.setTimeout(function() {
-      BlocklyApps.onResize();
-      var event = document.createEvent('UIEvents');
-      event.initEvent('resize', true, true);  // event type, bubbling, cancelable
-      window.dispatchEvent(event);
-    },
-    100);
+    BlocklyApps.onResize();
+    var event = document.createEvent('UIEvents');
+    event.initEvent('resize', true, true);  // event type, bubbling, cancelable
+    window.dispatchEvent(event);
+  }, 10);
 
   BlocklyApps.reset(true);
 
@@ -945,7 +963,7 @@ BlocklyApps.arrangeBlockPosition = function(startBlocks, arrangement) {
 BlocklyApps.sortBlocksByVisibility = function(xmlBlocks) {
   var visibleXmlBlocks = [];
   var hiddenXmlBlocks = [];
-  for (var x = 0, xmlBlock; xmlBlocks && x < xmlBlocks.length; x++) {  
+  for (var x = 0, xmlBlock; xmlBlocks && x < xmlBlocks.length; x++) {
     xmlBlock = xmlBlocks[x];
     if (xmlBlock.getAttribute &&
         xmlBlock.getAttribute('uservisible') === 'false') {
@@ -1019,7 +1037,15 @@ BlocklyApps.onResize = function() {
 
   div.style.top = divParent.offsetTop + 'px';
   var fullWorkspaceWidth = parentWidth - (gameWidth + WORKSPACE_PLAYSPACE_GAP);
+  var oldWidth = parseInt(div.style.width, 10) || div.getBoundingClientRect().width;
   div.style.width = fullWorkspaceWidth + 'px';
+
+  // Keep blocks static relative to the right edge in RTL mode
+  if (BlocklyApps.usingBlockly && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
+    Blockly.mainBlockSpace.getTopBlocks().forEach(function(topBlock) {
+      topBlock.moveBy(fullWorkspaceWidth - oldWidth, 0);
+    });
+  }
 
   if (BlocklyApps.isRtl()) {
     div.style.marginRight = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
@@ -1045,58 +1071,40 @@ BlocklyApps.onResize = function() {
   BlocklyApps.resizeHeaders(fullWorkspaceWidth);
 };
 
-// |         toolbox-header           | workspace-header  | show-code-header |
+// |          toolbox-header          | workspace-header  | show-code-header |
 // |
-// | categoriesWidth |  toolboxWidth  |
+// |           toolboxWidth           |
 // |                 |         <--------- workspaceWidth ---------->         |
 // |         <---------------- fullWorkspaceWidth ----------------->         |
 BlocklyApps.resizeHeaders = function (fullWorkspaceWidth) {
-  var categoriesWidth = 0;
-  var categories = BlocklyApps.editCode ?
-      document.querySelector('.droplet-palette-wrapper') :
-      Blockly.mainBlockSpaceEditor.toolbox &&
-      Blockly.mainBlockSpaceEditor.toolbox.HtmlDiv;
-  if (categories) {
+  var minWorkspaceWidthForShowCode = BlocklyApps.editCode ? 250 : 450;
+  var toolboxWidth = 0;
+  if (BlocklyApps.editCode) {
     // If in the droplet editor, but not using blocks, keep categoryWidth at 0
     if (!BlocklyApps.editCode || BlocklyApps.editor.currentlyUsingBlocks) {
-      // set CategoryWidth based on the block toolbox/palette width:
-      categoriesWidth = parseInt(window.getComputedStyle(categories).width, 10);
+      // Set toolboxWidth based on the block palette width:
+      var categories = document.querySelector('.droplet-palette-wrapper');
+      toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
     }
-  }
-
-  var workspaceWidth;
-  var toolboxWidth;
-  if (BlocklyApps.usingBlockly) {
-    workspaceWidth = Blockly.mainBlockSpaceEditor.getBlockSpaceWidth();
+  } else if (BlocklyApps.usingBlockly) {
     toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
   }
-  else {
-    workspaceWidth = fullWorkspaceWidth - categoriesWidth;
-    toolboxWidth = 0;
-  }
 
-  var headers = document.getElementById('headers');
-  var workspaceHeader = document.getElementById('workspace-header');
-  var toolboxHeader = document.getElementById('toolbox-header');
   var showCodeHeader = document.getElementById('show-code-header');
-
-  var showCodeWidth;
-  var minWorkspaceWidthForShowCode = BlocklyApps.editCode ? 250 : 450;
+  var showCodeWidth = 0;
   if (BlocklyApps.enableShowCode &&
-      (workspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
+      (fullWorkspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
     showCodeWidth = parseInt(window.getComputedStyle(showCodeHeader).width, 10);
     showCodeHeader.style.display = "";
   }
   else {
-    showCodeWidth = 0;
     showCodeHeader.style.display = "none";
   }
 
-  headers.style.width = (categoriesWidth + workspaceWidth) + 'px';
-  toolboxHeader.style.width = (categoriesWidth + toolboxWidth) + 'px';
-  workspaceHeader.style.width = (workspaceWidth -
-                                 toolboxWidth -
-                                 showCodeWidth) + 'px';
+  document.getElementById('headers').style.width = fullWorkspaceWidth + 'px';
+  document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
+  document.getElementById('workspace-header').style.width =
+      (fullWorkspaceWidth - toolboxWidth - showCodeWidth) + 'px';
 };
 
 /**
@@ -1246,7 +1254,7 @@ BlocklyApps.report = function(options) {
   // they cannot have modified. In that case, don't report it to the service
   // or call the onComplete() callback expected. The app will just sit
   // there with the Reset button as the only option.
-  if (!BlocklyApps.hideSource) {
+  if (!(BlocklyApps.hideSource && BlocklyApps.share)) {
     var onAttemptCallback = (function() {
       return function(builderDetails) {
         for (var option in builderDetails) {
@@ -1325,12 +1333,24 @@ exports.createToolbox = function(blocks) {
   return '<xml id="toolbox" style="display: none;">' + blocks + '</xml>';
 };
 
-exports.blockOfType = function(type) {
-  return '<block type="' + type + '"></block>';
+exports.blockOfType = function(type, titles) {
+  var titleText = '';
+  if (titles) {
+    for (var key in titles) {
+      titleText += '<title name="' + key + '">' + titles[key] + '</title>';
+    }
+  }
+  return '<block type="' + type + '">' + titleText +'</block>';
 };
 
-exports.blockWithNext = function (type, child) {
-  return '<block type="' + type + '"><next>' + child + '</next></block>';
+exports.blockWithNext = function (type, titles, child) {
+  var titleText = '';
+  if (titles) {
+    for (var key in titles) {
+      titleText += '<title name="' + key + '">' + titles[key] + '</title>';
+    }
+  }
+  return '<block type="' + type + '">' + titleText + '<next>' + child + '</next></block>';
 };
 
 /**
@@ -1342,7 +1362,7 @@ exports.blocksFromList = function (types) {
     return this.blockOfType(types[0]);
   }
 
-  return this.blockWithNext(types[0], this.blocksFromList(types.slice(1)));
+  return this.blockWithNext(types[0], {}, this.blocksFromList(types.slice(1)));
 };
 
 exports.createCategory = function(name, blocks, custom) {
@@ -4829,6 +4849,7 @@ exports.isNextStepSafeWhileUnwinding = function (interpreter) {
     case "CallExpression":
     case "Identifier":
     case "Literal":
+    case "Program":
       return true;
   }
   return false;
@@ -4874,9 +4895,11 @@ function aceFindRow(cumulativeLength, rows, rowe, pos) {
   return mid;
 }
 
-/**
- * Selects code in an ace editor.
- */
+exports.isAceBreakpointRow = function (session, userCodeRow) {
+  var bps = session.getBreakpoints();
+  return Boolean(bps[userCodeRow]);
+};
+
 function createSelection (selection, cumulativeLength, start, end) {
   var range = selection.getRange();
 
@@ -4888,9 +4911,15 @@ function createSelection (selection, cumulativeLength, start, end) {
   selection.setSelectionRange(range);
 }
 
+/**
+ * Selects code in droplet/ace editor.
+ *
+ * Returns the row (line) of code highlighted. If nothing is highlighted
+ * because it is outside of the userCode area, the return value is -1
+ */
 exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
                                       userCodeStartOffset, userCodeLength) {
-  var inUserCode = false;
+  var userCodeRow = -1;
   if (interpreter.stateStack[0]) {
     var node = interpreter.stateStack[0].node;
     // Adjust start/end by Webapp.userCodeStartOffset since the code running
@@ -4902,21 +4931,20 @@ exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
     // code (not inside code we inserted before or after their code that is
     // not visible in the editor):
     if (start > 0 && start < userCodeLength) {
+      userCodeRow = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
       // Highlight the code being executed in each step:
       if (editor.currentlyUsingBlocks) {
         var style = {color: '#FFFF22'};
-        var line = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
         editor.clearLineMarks();
         // NOTE: replace markLine with this new mark() call once we have a new
         // version of droplet
         
-        // editor.mark(line, start - cumulativeLength[line], style);
-        editor.markLine(line, style);
+        // editor.mark(userCodeRow, start - cumulativeLength[userCodeRow], style);
+        editor.markLine(userCodeRow, style);
       } else {
         var selection = editor.aceEditor.getSelection();
         createSelection(selection, cumulativeLength, start, end);
       }
-      inUserCode = true;
     }
   } else {
     if (editor.currentlyUsingBlocks) {
@@ -4925,7 +4953,7 @@ exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
       editor.aceEditor.getSelection().clearSelection();
     }
   }
-  return inUserCode;
+  return userCodeRow;
 };
 
 /**
@@ -5009,13 +5037,18 @@ exports.TestResults = {
 
   // The level was not solved.
   EMPTY_BLOCK_FAIL: 1,           // An "if" or "repeat" block was empty.
-  EMPTY_FUNCTION_BLOCK_FAIL: 12, // A "function" block was empty
   TOO_FEW_BLOCKS_FAIL: 2,        // Fewer than the ideal number of blocks used.
   LEVEL_INCOMPLETE_FAIL: 3,      // Default failure to complete a level.
   MISSING_BLOCK_UNFINISHED: 4,   // A required block was not used.
   EXTRA_TOP_BLOCKS_FAIL: 5,      // There was more than one top-level block.
   MISSING_BLOCK_FINISHED: 10,    // The level was solved without required block.
   APP_SPECIFIC_FAIL: 11,         // Application-specific failure.
+  EMPTY_FUNCTION_BLOCK_FAIL: 12, // A "function" block was empty
+  UNUSED_PARAM: 13,              // Param declared but not used in function.
+  UNUSED_FUNCTION: 14,           // Function declared but not used in workspace.
+  PARAM_INPUT_UNATTACHED: 15,    // Function not called with enough params.
+  INCOMPLETE_BLOCK_IN_FUNCTION: 16, // Incomplete block inside a function.
+  QUESTION_MARKS_IN_NUMBER_FIELD: 17, // Block has ??? instead of a value.
 
   // The level was solved in a non-optimal way.  User may advance or retry.
   TOO_MANY_BLOCKS_FAIL: 20,   // More than the ideal number of blocks were used.
@@ -5206,8 +5239,13 @@ exports.text = function (text, fontSize, color) {
   return new EvalText(text, fontSize, color);
 };
 
-exports.star = function (radius, fontSize, color) {
-  return new EvalStar(radius, fontSize, color);
+exports.star = function (radius, style, color) {
+  var innerRadius = (3 - Math.sqrt(5)) / 2 * radius;
+  return new EvalStar(5, innerRadius, radius, style, color);
+};
+
+exports.radialStar = function (points, inner, outer, style, color) {
+  return new EvalStar(points, inner, outer, style, color);
 };
 
 exports.placeImage = function (x, y, image) {
@@ -5219,6 +5257,18 @@ exports.placeImage = function (x, y, image) {
   // to our EvalImage.
   y = evalUtils.cartesianToPixel(y);
 
+  image.place(x, y);
+  return image;
+};
+
+exports.offset = function (x, y, image) {
+  evalUtils.ensureNumber(x);
+  evalUtils.ensureNumber(y);
+  evalUtils.ensureType(image, EvalImage);
+    
+  x = image.x_ + x;
+  y = image.y_ - y;
+    
   image.place(x, y);
   return image;
 };
@@ -5378,6 +5428,19 @@ exports.install = function(blockly, blockInstallOptions) {
   });
 
   installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'functional_radial_star',
+    blockTitle: msg.radialStarBlockTitle(),
+    apiName: 'radialStar',
+    args: [
+      { name: 'POINTS', type: 'Number' },
+      { name: 'INNER', type: 'Number' },
+      { name: 'OUTER', type: 'Number' },
+      { name: 'STYLE', type: 'string' },
+      { name: 'COLOR', type: 'string' }
+    ]
+  });
+
+  installFunctionalBlock(blockly, generator, gensym, {
     blockName: 'functional_text',
     blockTitle: msg.textBlockTitle(),
     apiName: 'text',
@@ -5413,6 +5476,17 @@ exports.install = function(blockly, blockInstallOptions) {
     blockName: 'place_image',
     blockTitle: msg.placeImageBlockTitle(),
     apiName: 'placeImage',
+    args: [
+      { name: 'X', type: 'Number' },
+      { name: 'Y', type: 'Number' },
+      { name: 'IMAGE', type: 'image' }
+    ]
+  });
+
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'offset',
+    blockTitle: msg.offsetBlockTitle(),
+    apiName: 'offset',
     args: [
       { name: 'X', type: 'Number' },
       { name: 'Y', type: 'Number' },
@@ -5966,7 +6040,7 @@ EvalImage.prototype.place = function (x, y) {
 };
 
 EvalImage.prototype.rotate = function (degrees) {
-  this.rotation_ = degrees;
+  this.rotation_ += degrees;
 };
 
 EvalImage.prototype.scale = function (scaleX, scaleY) {
@@ -6056,14 +6130,18 @@ EvalRect.prototype.draw = function (parent) {
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
-var EvalStar = function (radius, style, color) {
-  evalUtils.ensureNumber(radius);
+var EvalStar = function (pointCount, inner, outer, style, color) {
+  evalUtils.ensureNumber(pointCount);
+  evalUtils.ensureNumber(inner);
+  evalUtils.ensureNumber(outer);
   evalUtils.ensureString(style);
   evalUtils.ensureString(color);
 
   EvalImage.apply(this, [style, color]);
 
-  this.radius_ = radius;
+  this.outer_ = outer;
+  this.inner_ = inner;
+  this.pointCount_ = pointCount;
 
   this.element_ = null;
 };
@@ -6077,10 +6155,10 @@ EvalStar.prototype.draw = function (parent) {
   }
 
   var points = [];
-  var outerRadius = this.radius_;
-  var innerRadius = (3 - Math.sqrt(5)) / 2 * outerRadius;
+  var outerRadius = this.outer_;
+  var innerRadius = this.inner_;
 
-  var angleDelta = 2 * Math.PI / 5;
+  var angleDelta = 2 * Math.PI / this.pointCount_;
   for (var angle = 0; angle < 2 * Math.PI; angle += angleDelta) {
     points.push(outerRadius * Math.cos(angle) + "," + outerRadius * Math.sin(angle));
     points.push(innerRadius * Math.cos(angle + angleDelta / 2) + "," +
@@ -6088,6 +6166,9 @@ EvalStar.prototype.draw = function (parent) {
   }
 
   this.element_.setAttribute('points', points.join(' '));
+  if (this.pointCount_ % 2 == 1) {
+    this.rotate(-90 / this.pointCount_);
+  }
 
   EvalImage.prototype.draw.apply(this, arguments);
 };
@@ -6268,7 +6349,9 @@ module.exports = {
       blockUtils.blockOfType('functional_rectangle') +
       blockUtils.blockOfType('functional_ellipse') +
       blockUtils.blockOfType('functional_star') +
+      blockUtils.blockOfType('functional_radial_star') +
       blockUtils.blockOfType('place_image') +
+      blockUtils.blockOfType('offset') +
       blockUtils.blockOfType('overlay') +
       blockUtils.blockOfType('underlay') +
       blockUtils.blockOfType('rotate') +
@@ -6279,6 +6362,7 @@ module.exports = {
       blockUtils.blockOfType('functional_greater_than') +
       blockUtils.blockOfType('functional_less_than') +
       blockUtils.blockOfType('functional_number_equals') +
+      blockUtils.blockOfType('functional_string_equals') +
       blockUtils.blockOfType('functional_logical_and') +
       blockUtils.blockOfType('functional_logical_or') +
       blockUtils.blockOfType('functional_logical_not') +
@@ -6344,6 +6428,8 @@ var readonly = require('./templates/readonly.html');
 var codegen = require('./codegen');
 var msg = require('../locale/en_ploc/common');
 var dom = require('./dom');
+var xml = require('./xml');
+var _ = utils.getLodash();
 
 var TestResults = require('./constants').TestResults;
 
@@ -6368,7 +6454,7 @@ exports.displayFeedback = function(options) {
   var showingSharing = options.showingSharing && !hadShareFailure;
 
   var canContinue = exports.canContinueToNextLevel(options.feedbackType);
-  var displayShowCode = BlocklyApps.enableShowCode && canContinue;
+  var displayShowCode = BlocklyApps.enableShowCode && canContinue && !showingSharing;
   var feedback = document.createElement('div');
   var sharingDiv = (canContinue && showingSharing) ? exports.createSharingDiv(options) : null;
   var showCode = displayShowCode ? getShowCodeElement(options) : null;
@@ -6539,6 +6625,21 @@ exports.displayFeedback = function(options) {
     });
   }
 
+  function createHiddenPrintWindow(src) {
+    var iframe = $('<iframe id="print_frame" style="display: none"></iframe>'); // Created a hidden iframe with just the desired image as its contents
+    iframe.appendTo("body");
+    iframe[0].contentWindow.document.write("<img src='" + src + "'/>");
+    iframe[0].contentWindow.document.write("<script>if (document.execCommand('print', false, null)) {  } else { window.print();  } </script>");
+    $("#print_frame").remove(); // Remove the iframe when the print dialogue has been launched
+  }
+
+  var printButton = feedback.querySelector('#print-button');
+  if (printButton) {
+    dom.addClickTouchEvent(printButton, function() {
+      createHiddenPrintWindow(options.feedbackImage);
+    });
+  }
+
   feedbackDialog.show({
     backdrop: (options.app === 'flappy' ? 'static' : true)
   });
@@ -6655,8 +6756,13 @@ var getFeedbackMessage = function(options) {
             msg.emptyBlocksErrorMsg();
         break;
       case TestResults.EMPTY_FUNCTION_BLOCK_FAIL:
-        message = options.level.emptyFunctionBlocksErrorMsg ||
-            msg.emptyFunctionBlocksErrorMsg();
+        if (options.level.emptyFunctionBlocksErrorMsg) {
+          message = options.level.emptyFunctionBlocksErrorMsg;
+        } else if (Blockly.useContractEditor || Blockly.useModalFunctionEditor) {
+          message = msg.errorEmptyFunctionBlockModal();
+        } else {
+          message = msg.emptyFunctionBlocksErrorMsg();
+        }
         break;
       case TestResults.TOO_FEW_BLOCKS_FAIL:
         message = options.level.tooFewBlocksMsg || msg.tooFewBlocksMsg();
@@ -6670,6 +6776,21 @@ var getFeedbackMessage = function(options) {
         break;
       case TestResults.APP_SPECIFIC_FAIL:
         message = options.level.appSpecificFailError;
+        break;
+      case TestResults.UNUSED_PARAM:
+        message = msg.errorUnusedParam();
+        break;
+      case TestResults.UNUSED_FUNCTION:
+        message = msg.errorUnusedFunction();
+        break;
+      case TestResults.PARAM_INPUT_UNATTACHED:
+        message = msg.errorParamInputUnattached();
+        break;
+      case TestResults.INCOMPLETE_BLOCK_IN_FUNCTION:
+        message = msg.errorIncompleteBlockInFunction();
+        break;
+      case TestResults.QUESTION_MARKS_IN_NUMBER_FIELD:
+        message = msg.errorQuestionMarksInNumberField();
         break;
       case TestResults.TOO_MANY_BLOCKS_FAIL:
         message = msg.numBlocksNeeded({
@@ -6692,6 +6813,7 @@ var getFeedbackMessage = function(options) {
 
       // Success.
       case TestResults.ALL_PASS:
+      case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
             (options.response.message == "no more levels"));
         var stageCompleted = null;
@@ -6704,7 +6826,9 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.numTrophies > 0) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
+          message = options.appStrings.reinfFeedbackMsg;
+        } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
                                     msg.nextStageTrophies(msgParams) :
@@ -6715,11 +6839,6 @@ var getFeedbackMessage = function(options) {
                                      msg.nextStage(msgParams) :
                                      msg.nextLevel(msgParams);
         }
-        break;
-
-      // Free plays
-      case TestResults.FREE_PLAY:
-        message = options.appStrings.reinfFeedbackMsg;
         break;
     }
   }
@@ -6762,7 +6881,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -6957,7 +7075,11 @@ var FeedbackBlocks = function(options) {
       return;
     }
   } else {
-    blocksToDisplay = getMissingRequiredBlocks();
+    var missingRequiredBlocks = getMissingRequiredBlocks();
+    blocksToDisplay = missingRequiredBlocks.blocksToDisplay;
+    if (missingRequiredBlocks.message) {
+      options.message = missingRequiredBlocks.message;
+    }
   }
 
   if (blocksToDisplay.length === 0) {
@@ -7074,7 +7196,7 @@ var getEmptyContainerBlock = function() {
  * @return {boolean} true if all blocks are present, false otherwise.
  */
 var hasAllRequiredBlocks = function() {
-  return getMissingRequiredBlocks().length === 0;
+  return getMissingRequiredBlocks().blocksToDisplay.length === 0;
 };
 
 /**
@@ -7108,13 +7230,16 @@ var getCountableBlocks = function() {
 /**
  * Check to see if the user's code contains the required blocks for a level.
  * This never returns more than BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG.
- * @return {!Array} array of array of strings where each array of strings is
- * a set of blocks that at least one of them should be used. Each block is
- * represented as the prefix of an id in the corresponding template.soy.
+ * @return {{blocksToDisplay:!Array, message:?string}} 'missingBlocks' is an
+ * array of array of strings where each array of strings is a set of blocks that
+ * at least one of them should be used. Each block is represented as the prefix
+ * of an id in the corresponding template.soy. 'message' is an optional message
+ * to override the default error text.
  */
 var getMissingRequiredBlocks = function () {
   var missingBlocks = [];
-  var code = null;  // JavaScript code, which is initalized lazily.
+  var customMessage = null;
+  var code = null;  // JavaScript code, which is initialized lazily.
   if (BlocklyApps.REQUIRED_BLOCKS && BlocklyApps.REQUIRED_BLOCKS.length) {
     var userBlocks = getUserBlocks();
     // For each list of required blocks
@@ -7144,6 +7269,8 @@ var getMissingRequiredBlocks = function () {
             // Succeeded, moving to the next list of tests
             usedRequiredBlock = true;
             break;
+          } else {
+            customMessage = requiredBlock[testId].message || customMessage;
           }
         } else {
           throw new Error('Bad test: ' + test);
@@ -7155,7 +7282,10 @@ var getMissingRequiredBlocks = function () {
       }
     }
   }
-  return missingBlocks;
+  return {
+    blocksToDisplay: missingBlocks,
+    message: customMessage
+  };
 };
 
 /**
@@ -7210,6 +7340,23 @@ exports.getTestResults = function(levelComplete, options) {
   if (!options.allowTopBlocks && exports.hasExtraTopBlocks()) {
     return TestResults.EXTRA_TOP_BLOCKS_FAIL;
   }
+  if (Blockly.useContractEditor || Blockly.useModalFunctionEditor) {
+    if (hasUnusedParam()) {
+      return TestResults.UNUSED_PARAM;
+    }
+    if (hasUnusedFunction()) {
+      return TestResults.UNUSED_FUNCTION;
+    }
+    if (hasParamInputUnattached()) {
+      return TestResults.PARAM_INPUT_UNATTACHED;
+    }
+    if (hasIncompleteBlockInFunction()) {
+      return TestResults.INCOMPLETE_BLOCK_IN_FUNCTION;
+    }
+  }
+  if (hasQuestionMarksInNumberField()) {
+    return TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
+  }
   if (!hasAllRequiredBlocks()) {
     return levelComplete ? TestResults.MISSING_BLOCK_FINISHED :
       TestResults.MISSING_BLOCK_UNFINISHED;
@@ -7248,7 +7395,14 @@ exports.createModalDialogWithIcon = function(options) {
   var btn = options.contentDiv.querySelector(options.defaultBtnSelector);
   var keydownHandler = function(e) {
     if (e.keyCode == Keycodes.ENTER || e.keyCode == Keycodes.SPACE) {
-      Blockly.fireUiEvent(btn, 'click');
+      // Simulate a 'click':
+      var event = new MouseEvent('click', {
+          'view': window,
+          'bubbles': true,
+          'cancelable': true
+      });
+      btn.dispatchEvent(event);
+
       e.stopPropagation();
       e.preventDefault();
     }
@@ -7313,8 +7467,106 @@ var generateXMLForBlocks = function(blocks) {
   return blockXMLStrings.join('');
 };
 
+/**
+ * Check for '???' instead of a value in block fields.
+ */
+function hasQuestionMarksInNumberField() {
+  return Blockly.mainBlockSpace.getAllBlocks().some(function(block) {
+    return block.getTitles().some(function(title) {
+      return title.value_ === '???';
+    });
+  });
+}
 
-},{"../locale/en_ploc/common":49,"./codegen":8,"./constants":9,"./dom":10,"./templates/buttons.html":36,"./templates/code.html":37,"./templates/readonly.html":42,"./templates/shareFailure.html":43,"./templates/sharing.html":44,"./templates/showCode.html":45,"./templates/trophy.html":46,"./utils":47}],28:[function(require,module,exports){
+/**
+ * Ensure that all procedure definitions actually use the parameters they define
+ * inside the procedure.
+ */
+function hasUnusedParam() {
+  return Blockly.mainBlockSpace.getAllBlocks().some(function(userBlock) {
+    var params = userBlock.parameterNames_;
+    // Only search procedure definitions
+    return params && params.some(function(paramName) {
+      // Unused param if there's no parameters_get descendant with the same name
+      return !hasMatchingDescendant(userBlock, function(block) {
+        return (block.type === 'parameters_get' ||
+            block.type === 'variables_get') &&
+            block.getTitleValue('VAR') === paramName;
+      });
+    });
+  });
+}
+
+/**
+ * Ensure that all procedure calls have each parameter input connected.
+ */
+function hasParamInputUnattached() {
+  return Blockly.mainBlockSpace.getAllBlocks().some(function(userBlock) {
+    // Only check procedure_call* blocks
+    if (!/^procedures_call/.test(userBlock.type)) {
+      return false;
+    }
+    return userBlock.inputList.filter(function(input) {
+      return (/^ARG/.test(input.name));
+    }).some(function(argInput) {
+      // Unattached param input if any ARG* connection target is null
+      return !argInput.connection.targetConnection;
+    });
+  });
+}
+
+/**
+ * Ensure that all user-declared procedures have associated call blocks.
+ */
+function hasUnusedFunction() {
+  var userDefs = [];
+  var callBlocks = {};
+  Blockly.mainBlockSpace.getAllBlocks().forEach(function (block) {
+    var name = block.getTitleValue('NAME');
+    if (/^procedures_def/.test(block.type) && block.userCreated) {
+      userDefs.push(name);
+    } else if (/^procedures_call/.test(block.type)) {
+      callBlocks[name] = true;
+    }
+  });
+  // Unused function if some user def doesn't have a matching call
+  return userDefs.some(function(name) { return !callBlocks[name]; });
+}
+
+/**
+ * Ensure there are no incomplete blocks inside any function definitions.
+ */
+function hasIncompleteBlockInFunction() {
+  return Blockly.mainBlockSpace.getAllBlocks().some(function(userBlock) {
+    // Only search procedure definitions
+    if (!userBlock.parameterNames_) {
+      return false;
+    }
+    return hasMatchingDescendant(userBlock, function(block) {
+      // Incomplete block if any input connection target is null
+      return block.inputList.some(function(input) {
+        return input.type === Blockly.INPUT_VALUE &&
+            !input.connection.targetConnection;
+      });
+    });
+  });
+}
+
+/**
+ * Returns true if any descendant (inclusive) of the given node matches the
+ * given filter.
+ */
+function hasMatchingDescendant(node, filter) {
+  if (filter(node)) {
+    return true;
+  }
+  return node.childBlocks_.some(function (child) {
+    return hasMatchingDescendant(child, filter);
+  });
+}
+
+
+},{"../locale/en_ploc/common":49,"./codegen":8,"./constants":9,"./dom":10,"./templates/buttons.html":36,"./templates/code.html":37,"./templates/readonly.html":42,"./templates/shareFailure.html":43,"./templates/sharing.html":44,"./templates/showCode.html":45,"./templates/trophy.html":46,"./utils":47,"./xml":48}],28:[function(require,module,exports){
 var utils = require('./utils');
 var _ = utils.getLodash();
 
@@ -7328,9 +7580,16 @@ var colors = {
 module.exports.colors = colors;
 
 /**
- * Helper function to create the init section for a functional block
+ * Helper function to create the init section for a functional block.
+ * @param {Blockly.block} block The block to initialize.
+ * @param {string} title Localized block title to display.
+ * @param {string} type Block type which appears in xml.
+ * @param {Array} args Arguments to this block.
+ * @param {number=} wrapWidth Optional number of arguments after which
+ *     to wrap the next argument onto a new line when rendering the
+ *     block.
  */
-module.exports.initTitledFunctionalBlock = function (block, title, type, args) {
+module.exports.initTitledFunctionalBlock = function (block, title, type, args, wrapWidth) {
   block.setFunctional(true, {
     headerHeight: 30
   });
@@ -7347,7 +7606,8 @@ module.exports.initTitledFunctionalBlock = function (block, title, type, args) {
   for (var i = 0; i < args.length; i++) {
     var arg = args[i];
     var input = block.appendFunctionalInput(arg.name);
-    input.setInline(i > 0);
+    var wrapNextArg = wrapWidth && (i % wrapWidth) === 0;
+    input.setInline(i > 0 && !wrapNextArg);
     if (arg.type === 'none') {
       input.setHSV(0, 0, 0.99);
     } else {
@@ -12545,6 +12805,7 @@ if(typeof define == 'function' && define.amd) {
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
+var msg = require('../locale/en_ploc/common');
 var _ = utils.getLodash();
 
 /**
@@ -12610,10 +12871,16 @@ exports.makeTestsFromBuilderRequiredBlocks = function (customRequiredBlocks) {
     if (childNode.nodeType !== 1) {
       return;
     }
-    if (childNode.getAttribute('type') === 'pick_one') {
-      requiredBlocksTests.push(testsFromPickOne(childNode));
-    } else {
-      requiredBlocksTests.push([testFromBlock(childNode)]);
+    switch (childNode.getAttribute('type')) {
+      case 'pick_one':
+        requiredBlocksTests.push(testsFromPickOne(childNode));
+        break;
+      case 'procedures_defnoreturn':
+      case 'procedures_defreturn':
+        requiredBlocksTests.push(testsFromProcedure(childNode));
+        break;
+      default:
+        requiredBlocksTests.push([testFromBlock(childNode)]);
     }
   });
 
@@ -12639,29 +12906,53 @@ function testFromBlock (node) {
  * one of the child blocks is used.  If none are used, the first option will be
  * displayed as feedback
  */
- function testsFromPickOne(node) {
-   var tests = [];
-   // child of pick_one is a statement block.  we want first child of that
-   var statement = node.getElementsByTagName('statement')[0];
-   var block = statement.getElementsByTagName('block')[0];
-   var next;
-   do {
-     // if we have a next block, we want to generate our test without that
-     next = block.getElementsByTagName('next')[0];
-     if (next) {
-       block.removeChild(next);
-     }
-     tests.push(testFromBlock(block));
-     if (next) {
-       block = next.getElementsByTagName('block')[0];
-     }
-   } while (next);
-   return tests;
- }
+function testsFromPickOne(node) {
+  var tests = [];
+  // child of pick_one is a statement block.  we want first child of that
+  var statement = node.getElementsByTagName('statement')[0];
+  var block = statement.getElementsByTagName('block')[0];
+  var next;
+  do {
+    // if we have a next block, we want to generate our test without that
+    next = block.getElementsByTagName('next')[0];
+    if (next) {
+      block.removeChild(next);
+    }
+    tests.push(testFromBlock(block));
+    if (next) {
+      block = next.getElementsByTagName('block')[0];
+    }
+  } while (next);
+  return tests;
+}
+
+/**
+ * Given xml for a procedure block, generates tests that check for required
+ * number of params not declared
+ */
+function testsFromProcedure(node) {
+  var paramCount = node.querySelectorAll('mutation > arg').length;
+  var emptyBlock = node.cloneNode(true);
+  emptyBlock.removeChild(emptyBlock.lastChild);
+  return [{
+    // Ensure that all required blocks match a block with the same number of
+    // params. There's no guarantee users will name their function the same as
+    // the required block, so only match on number of params.
+    test: function(userBlock) {
+      if (userBlock.type === node.getAttribute('type')) {
+        return paramCount === userBlock.parameterNames_.length;
+      }
+      // Block isn't the same type, return false to keep searching.
+      return false;
+    },
+    message: msg.errorRequiredParamsMissing(),
+    blockDisplayXML: '<xml></xml>'
+  }];
+}
 
 /**
  * Checks two DOM elements to see whether or not they are equivalent
- * We condsider them equivalent if they have the same tagName, attributes,
+ * We consider them equivalent if they have the same tagName, attributes,
  * and children
  */
 function elementsEquivalent(expected, given) {
@@ -12698,8 +12989,11 @@ var ignorableAttributes = [
   'movable',
   'editable',
   'inline',
-  'uservisible'
+  'uservisible',
+  'usercreated',
+  'id'
 ];
+
 ignorableAttributes.contains = function (attr) {
   return ignorableAttributes.indexOf(attr.name) !== -1;
 };
@@ -12785,7 +13079,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"./block_utils":4,"./utils":47,"./xml":48}],32:[function(require,module,exports){
+},{"../locale/en_ploc/common":49,"./block_utils":4,"./utils":47,"./xml":48}],32:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
@@ -12802,12 +13096,17 @@ exports.install = function(blockly, generator, gensym) {
   installGreaterThan(blockly, generator, gensym);
   installLessThan(blockly, generator, gensym);
   installNumberEquals(blockly, generator, gensym);
+  installStringEquals(blockly, generator, gensym);
   installLogicalAnd(blockly, generator, gensym);
   installLogicalOr(blockly, generator, gensym);
   installLogicalNot(blockly, generator, gensym);
   installBoolean(blockly, generator, gensym);
   installMathNumber(blockly, generator, gensym);
   installString(blockly, generator, gensym);
+  installCond(blockly, generator, 1);
+  installCond(blockly, generator, 2);
+  installCond(blockly, generator, 3);
+  installCond(blockly, generator, 4);
 };
 
 function installPlus(blockly, generator, gensym) {
@@ -12935,6 +13234,24 @@ function installNumberEquals(blockly, generator, gensym) {
   generator.functional_number_equals = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
+    return '(' + arg1 + " == " + arg2 + ')';
+  };
+}
+
+function installStringEquals(blockly, generator, gensym) {
+  blockly.Blocks.functional_string_equals = {
+    helpUrl: '',
+    init: function() {
+      initTitledFunctionalBlock(this, msg.stringEquals(), 'boolean', [
+        { name: 'ARG1', type: 'string' },
+        { name: 'ARG2', type: 'string' }
+      ]);
+    }
+  };
+
+  generator.functional_string_equals = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || '';
+    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || '';
     return '(' + arg1 + " == " + arg2 + ')';
   };
 }
@@ -13077,6 +13394,57 @@ function installString(blockly, generator) {
 
   generator.functional_string = function() {
     return blockly.JavaScript.quote_(this.getTitleValue('VAL'));
+  };
+}
+
+/**
+ * Implements the cond block. numPairs represents the number of
+ * condition-value pairs before the default value.
+ */
+function installCond(blockly, generator, numPairs) {
+  var blockName = 'functional_cond_' + numPairs;
+  blockly.Blocks[blockName] = {
+    helpUrl: '',
+    init: function() {
+      var args = [];
+      for (var i = 0; i < numPairs; i++) {
+        args.push({name: 'COND' + i, type: 'boolean', default: 'false'});
+        args.push({name: 'VALUE' + i, type: 'none', default: ''});
+      }
+      args.push({name: 'DEFAULT', type: 'none', default: ''});
+      var blockTitle = 'cond';
+      var wrapWidth = 2;
+      initTitledFunctionalBlock(this, blockTitle, undefined, args, wrapWidth);
+    }
+  };
+
+  /**
+   * // generates code like:
+   * function() {
+   *   if (cond1) { return value1; }
+   *   else if (cond2) {return value2; }
+   *   ...
+   *   else { return default; }
+   * }()
+   */
+  generator[blockName] = function() {
+    var cond, value, defaultValue;
+    var code = 'function() {\n  ';
+    for (var i = 0; i < numPairs; i++) {
+      if (i > 0) {
+        code += 'else ';
+      }
+      cond = Blockly.JavaScript.statementToCode(this, 'COND' + i, false) ||
+          false;
+      value = Blockly.JavaScript.statementToCode(this, 'VALUE' + i, false) ||
+          '';
+      code += 'if (' + cond + ') { return ' + value + '; }\n  ';
+    }
+    defaultValue = Blockly.JavaScript.statementToCode(this, 'DEFAULT', false) ||
+        '';
+    code += 'else { return ' + defaultValue + '; }\n';
+    code += '}()';
+    return code;
   };
 }
 
@@ -13414,7 +13782,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/en_ploc/common'); ; buf.push('\n\n');3; if (data.ok) {; buf.push('  <div class="farSide" style="padding: 1ex 3ex 0">\n    <button id="ok-button" class="secondary">\n      ', escape((5,  msg.dialogOK() )), '\n    </button>\n  </div>\n');8; }; buf.push('\n');9; if (data.previousLevel) {; buf.push('  <button id="back-button" class="launch">\n    ', escape((10,  msg.backToPreviousLevel() )), '\n  </button>\n');12; }; buf.push('\n');13; if (data.tryAgain) {; buf.push('  ');13; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="again-button" class="launch arrow-container arrow-left">\n      <div class="arrow-head"><img src="', escape((14,  data.assetUrl('media/tryagain-arrow-head.png') )), '" alt="Arrowhead" width="67" height="130"/></div>\n      <div class="arrow-text">', escape((15,  msg.tryAgain() )), '</div>\n    </div>\n  ');17; } else {; buf.push('    ');17; if (data.hintRequestExperiment === "left") {; buf.push('      <button id="hint-request-button" class="launch">\n        ', escape((18,  msg.hintRequest() )), '\n      </button>\n      <button id="again-button" class="launch">\n        ', escape((21,  msg.tryAgain() )), '\n      </button>\n    ');23; } else if (data.hintRequestExperiment == "right") {; buf.push('      <button id="again-button" class="launch">\n        ', escape((24,  msg.tryAgain() )), '\n      </button>\n      <button id="hint-request-button" class="launch">\n        ', escape((27,  msg.hintRequest() )), '\n      </button>\n    ');29; } else {; buf.push('      <button id="again-button" class="launch">\n        ', escape((30,  msg.tryAgain() )), '\n      </button>\n    ');32; }; buf.push('  ');32; }; buf.push('');32; }; buf.push('\n');33; if (data.nextLevel) {; buf.push('  ');33; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="continue-button" class="launch arrow-container arrow-right">\n      <div class="arrow-head"><img src="', escape((34,  data.assetUrl('media/next-arrow-head.png') )), '" alt="Arrowhead" width="66" height="130"/></div>\n      <div class="arrow-text">', escape((35,  msg.continue() )), '</div>\n    </div>\n  ');37; } else {; buf.push('    <button id="continue-button" class="launch">\n      ', escape((38,  msg.continue() )), '\n    </button>\n  ');40; }; buf.push('');40; }; buf.push(''); })();
+ buf.push('');1; var msg = require('../../locale/en_ploc/common'); ; buf.push('\n\n');3; if (data.ok) {; buf.push('  <div class="farSide" style="padding: 1ex 3ex 0">\n    <button id="ok-button" class="secondary">\n      ', escape((5,  msg.dialogOK() )), '\n    </button>\n  </div>\n');8; }; buf.push('\n');9; if (data.previousLevel) {; buf.push('  <button id="back-button" class="launch">\n    ', escape((10,  msg.backToPreviousLevel() )), '\n  </button>\n');12; }; buf.push('\n');13; if (data.tryAgain) {; buf.push('  ');13; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="again-button" class="launch arrow-container arrow-left">\n      <div class="arrow-head"><img src="', escape((14,  data.assetUrl('media/tryagain-arrow-head.png') )), '" alt="Arrowhead" width="67" height="130"/></div>\n      <div class="arrow-text">', escape((15,  msg.tryAgain() )), '</div>\n    </div>\n  ');17; } else {; buf.push('    ');17; if (data.hintRequestExperiment === "left") {; buf.push('      <button id="hint-request-button" class="launch">\n        ', escape((18,  msg.hintRequest() )), '\n      </button>\n      <button id="again-button" class="launch">\n        ', escape((21,  msg.tryAgain() )), '\n      </button>\n    ');23; } else if (data.hintRequestExperiment == "right") {; buf.push('      <button id="again-button" class="launch">\n        ', escape((24,  msg.tryAgain() )), '\n      </button>\n      <button id="hint-request-button" class="launch">\n        ', escape((27,  msg.hintRequest() )), '\n      </button>\n    ');29; } else {; buf.push('      <button id="again-button" class="launch">\n        ', escape((30,  msg.tryAgain() )), '\n      </button>\n    ');32; }; buf.push('  ');32; }; buf.push('');32; }; buf.push('\n');33; if (data.nextLevel) {; buf.push('  ');33; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="continue-button" class="launch arrow-container arrow-right">\n      <div class="arrow-head"><img src="', escape((34,  data.assetUrl('media/next-arrow-head.png') )), '" alt="Arrowhead" width="66" height="130"/></div>\n      <div class="arrow-text">', escape((35,  msg.continue() )), '</div>\n    </div>\n  ');37; } else {; buf.push('    <button id="continue-button" class="launch" style="float: right">\n      ', escape((38,  msg.continue() )), '\n    </button>\n  ');40; }; buf.push('');40; }; buf.push(''); })();
 } 
 return buf.join('');
 };
@@ -13477,7 +13845,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/en_ploc/common') ; buf.push('\n\n');3; var root = location.protocol + '//' + location.host.replace('learn\.', ''); 
+ buf.push('');1; var msg = require('../../locale/en_ploc/common') ; buf.push('\n\n');3; var root = location.protocol + '//' + location.host.replace('learn\.', '').replace('studio\.', ''); 
 ; buf.push('\n\n<div id="learn">\n\n  <h1><a href="', escape((7,  root )), '">', escape((7,  msg.wantToLearn() )), '</a></h1>\n  <a href="', escape((8,  root )), '"><img id="learn-to-code" src="', escape((8,  BlocklyApps.assetUrl('media/promo.png') )), '"></a>\n  <a href="', escape((9,  root )), '">', escape((9,  msg.watchVideo() )), '</a>\n  <a href="', escape((10,  root )), '">', escape((10,  msg.tryHOC() )), '</a>\n  <a href="', escape((11,  location.protocol + '//' + location.host 
 )), '">', escape((11,  msg.signup() )), '</a>\n\n</div>\n'); })();
 } 
@@ -13589,7 +13957,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/en_ploc/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n');9; if (options.alreadySaved) { ; buf.push('\n  <div class="saved-to-gallery">\n    ', escape((11,  msg.savedToGallery() )), '\n  </div>\n');13; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <div class="social-buttons">\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((16,  msg.saveToGallery() )), '\n  </button>\n  </div>\n');19; } ; buf.push('\n\n');21; if (options.response && options.response.level_source) { ; buf.push('\n  ');22; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((23,  options.appStrings.sharingText )), '</div>\n  ');24; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((27,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');31; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((31,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((32,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');34; }; buf.push('\n    ');35; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((35,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((36,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');38; }; buf.push('    ');38; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((39,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');41; }; buf.push('  </div>\n');42; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
+ buf.push('');1; var msg = require('../../locale/en_ploc/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n  <div class="social-buttons">\n  ');10; if (!options.onMainPage) { ; buf.push('\n    <button id="print-button">\n      ', escape((12,  msg.print() )), '\n    </button>\n  ');14; } ; buf.push('\n');15; if (options.alreadySaved) { ; buf.push('\n  <button class="saved-to-gallery" disabled>\n    ', escape((17,  msg.savedToGallery() )), '\n  </button>\n');19; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((21,  msg.saveToGallery() )), '\n  </button>\n');23; } ; buf.push('\n  </div>\n\n');26; if (options.response && options.response.level_source) { ; buf.push('\n  ');27; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((28,  options.appStrings.sharingText )), '</div>\n  ');29; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((32,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');36; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((36,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((37,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');39; }; buf.push('\n    ');40; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((40,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((41,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');43; }; buf.push('    ');43; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((44,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');46; }; buf.push('    ');46; if (options.level.shapewaysUrl) {; buf.push('      <a href=\'', escape((46,  options.level.shapewaysUrl )), '\' target="_blank">\n        <img src=\'', escape((47,  BlocklyApps.assetUrl("media/shapeways_purple.png") )), '\' />\n      </a>\n    ');49; }; buf.push('  </div>\n');50; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -13805,7 +14173,7 @@ exports.generateCodeAliases = function (codeFunctions, parentObjName) {
 /**
  * Generate a palette for the droplet editor based on some level data.
  */
-exports.generateDropletPalette = function (codeFunctions) {
+exports.generateDropletPalette = function (codeFunctions, categoryInfo) {
   // TODO: figure out localization for droplet scenario
   var palette = [
     {
@@ -13858,8 +14226,8 @@ exports.generateDropletPalette = function (codeFunctions) {
           block: '__ < __',
           title: 'Compare two numbers'
         }, {
-          block: 'random(1, 100)',
-          title: 'Get a random number in a range'
+          block: 'random()',
+          title: 'Get a random number between 0 and 1'
         }, {
           block: 'round(__)',
           title: 'Round to the nearest integer'
@@ -13868,10 +14236,10 @@ exports.generateDropletPalette = function (codeFunctions) {
           title: 'Absolute value'
         }, {
           block: 'max(__, __)',
-          title: 'Absolute value'
+          title: 'Maximum value'
         }, {
           block: 'min(__, __)',
-          title: 'Absolute value'
+          title: 'Minimum value'
         }
       ]
     }, {
@@ -13895,14 +14263,16 @@ exports.generateDropletPalette = function (codeFunctions) {
     }
   ];
 
-  var appPaletteCategory = {
-    name: 'Actions',
-    color: 'blue',
-    blocks: []
+  var defCategoryInfo = {
+    'Actions': {
+      'color': 'blue',
+      'blocks': []
+    }
   };
+  categoryInfo = categoryInfo || defCategoryInfo;
 
   if (codeFunctions) {
-    for (var i = 0, blockIndex = 0; i < codeFunctions.length; i++) {
+    for (var i = 0; i < codeFunctions.length; i++) {
       var cf = codeFunctions[i];
       if (cf.category === 'hidden') {
         continue;
@@ -13921,12 +14291,14 @@ exports.generateDropletPalette = function (codeFunctions) {
         block: block,
         title: cf.func
       };
-      appPaletteCategory.blocks[blockIndex] = blockPair;
-      blockIndex++;
+      categoryInfo[cf.category || 'Actions'].blocks.push(blockPair);
     }
   }
 
-  palette.unshift(appPaletteCategory);
+  for (var category in categoryInfo) {
+    categoryInfo[category].name = category;
+    palette.unshift(categoryInfo[category]);
+  }
 
   return palette;
 };
@@ -13937,7 +14309,7 @@ exports.generateDropletPalette = function (codeFunctions) {
 exports.generateDropletModeOptions = function (codeFunctions) {
   var modeOptions = {
     blockFunctions: [],
-    valueFunctions: [],
+    valueFunctions: ['random', 'round', 'abs', 'max', 'min'],
     eitherFunctions: [],
   };
 
@@ -13952,11 +14324,14 @@ exports.generateDropletModeOptions = function (codeFunctions) {
 
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
-      if (codeFunctions[i].category === 'value') {
-        modeOptions.valueFunctions[i] = codeFunctions[i].func;
+      if (codeFunctions[i].type === 'value') {
+        modeOptions.valueFunctions.push(codeFunctions[i].func);
       }
-      else if (codeFunctions[i].category !== 'hidden') {
-        modeOptions.blockFunctions[i] = codeFunctions[i].func;
+      else if (codeFunctions[i].type === 'either') {
+        modeOptions.eitherFunctions.push(codeFunctions[i].func);
+      }
+      else if (codeFunctions[i].type !== 'hidden') {
+        modeOptions.blockFunctions.push(codeFunctions[i].func);
       }
     }
   }
@@ -14042,6 +14417,20 @@ exports.emptyBlocksErrorMsg = function(d){return "!!-The \"Repeat\" or \"If\" bl
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "!!-The function block needs to have other blocks inside it to work.-!!"};
 
+exports.errorEmptyFunctionBlockModal = function(d){return "!!-There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block.-!!"};
+
+exports.errorIncompleteBlockInFunction = function(d){return "!!-Click \"edit\" to make sure you don't have any blocks missing inside your function definition.-!!"};
+
+exports.errorParamInputUnattached = function(d){return "!!-Remember to attach a block to each parameter input on the function block in your workspace.-!!"};
+
+exports.errorUnusedParam = function(d){return "!!-You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block.-!!"};
+
+exports.errorRequiredParamsMissing = function(d){return "!!-Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition.-!!"};
+
+exports.errorUnusedFunction = function(d){return "!!-You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program.-!!"};
+
+exports.errorQuestionMarksInNumberField = function(d){return "!!-Try replacing \"???\" with a value.-!!"};
+
 exports.extraTopBlocks = function(d){return "!!-You have unattached blocks. Did you mean to attach these to the \"when run\" block?-!!"};
 
 exports.finalStage = function(d){return "!!-Congratulations! You have completed the final stage.-!!"};
@@ -14082,6 +14471,8 @@ exports.numLinesOfCodeWritten = function(d){return "!!-You just wrote "+p(d,"num
 
 exports.play = function(d){return "!!-play-!!"};
 
+exports.print = function(d){return "!!-Print-!!"};
+
 exports.puzzleTitle = function(d){return "!!-Puzzle "+v(d,"puzzle_number")+" of "+v(d,"stage_total")+"-!!"};
 
 exports.repeat = function(d){return "!!-repeat-!!"};
@@ -14099,6 +14490,8 @@ exports.showCodeHeader = function(d){return "!!-Show Code-!!"};
 exports.showBlocksHeader = function(d){return "!!-Show Blocks-!!"};
 
 exports.showGeneratedCode = function(d){return "!!-Show code-!!"};
+
+exports.stringEquals = function(d){return "!!-string=?-!!"};
 
 exports.subtitle = function(d){return "!!-a visual programming environment-!!"};
 
@@ -14122,9 +14515,9 @@ exports.hintRequest = function(d){return "!!-See hint-!!"};
 
 exports.backToPreviousLevel = function(d){return "!!-Back to previous level-!!"};
 
-exports.saveToGallery = function(d){return "!!-Save to your gallery-!!"};
+exports.saveToGallery = function(d){return "!!-Save to gallery-!!"};
 
-exports.savedToGallery = function(d){return "!!-Saved to your gallery!-!!"};
+exports.savedToGallery = function(d){return "!!-Saved in gallery!-!!"};
 
 exports.shareFailure = function(d){return "!!-Sorry, we can't share this program.-!!"};
 
@@ -14175,6 +14568,8 @@ exports.overlayBlockTitle = function(d){return "!!-overlay (top, bottom)-!!"};
 
 exports.placeImageBlockTitle = function(d){return "!!-place-image (x, y, image)-!!"};
 
+exports.offsetBlockTitle = function(d){return "!!-offset (x, y, image)-!!"};
+
 exports.rectangleBlockTitle = function(d){return "!!-rectangle (width, height, style, color)-!!"};
 
 exports.reinfFeedbackMsg = function(d){return "!!-You can press the \"Try again\" button to edit your drawing.-!!"};
@@ -14186,6 +14581,8 @@ exports.scaleImageBlockTitle = function(d){return "!!-scale (factor)-!!"};
 exports.squareBlockTitle = function(d){return "!!-square (size, style, color)-!!"};
 
 exports.starBlockTitle = function(d){return "!!-star (radius, style, color)-!!"};
+
+exports.radialStarBlockTitle = function(d){return "!!-radial-star (points, inner, outer, style, color)-!!"};
 
 exports.stringAppendBlockTitle = function(d){return "!!-string-append (first, second)-!!"};
 

@@ -19,9 +19,11 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "use_modal_function_editor": "true",
-    "instructions": "Let's add another parameter to the jump function so that we can use it with other actors. Each actor is represented by a number, starting from one. The \"actor\" parameter should take a number and pass that parameter to the \"move actor\" block.",
+    "instructions": "Let's add another parameter to the jump function so that we can use it with other actors. Each actor is represented by a number, starting from one. Edit the \"jump\" function so that the definition includes the \"actor\" parameter. ",
     "use_contract_editor": "false",
     "coordinate_grid_background": "false",
+    "embed": "false",
+    "callout_json": "[{\r\n  \"localization_key\": \"edit_function\",\r\n  \"element_id\": \"[block-id='2']>.blocklyIconGroup\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}\r\n  }\r\n}]",
     "maze_data": null
   }
 }]]></config>

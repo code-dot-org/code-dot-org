@@ -1,18 +1,18 @@
 * * *
 
-layout: wide
+title: How-to Guide for Organisations layout: wide nav: resources_nav
 
 * * *
 
-# Prizes - terms and conditions
+# Nagrody - regulamin
 
-## Dropbox space or Skype credit:
+## Przestrzeń dyskowa Dropbox lub środki Skype:
 
-The 10 GB of Dropbox space or $10 of Skype credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The 10 GB of free space must be added to an existing Dropbox account. Limit one redemption per organizer.
+10 GB miejsca na Dropbox lub 10 dolarów środków Skype są ograniczone do szkół, prowadzących kółka zainteresowań i organizacji edukacyjnych. 10 GB wolnego miejsca musi być dodane do istniejącego konta Dropbox. Dostępny jest tylko jeden kod na organizatora.
 
-Every organizer must register for the Hour of Code in order to receive the Dropbox space or Skype credit. If your entire school participates in the Hour of Code, each educator must individually register as an organizer to qualify.
+Każdy organizator musi się zarejestrować na Hour of Code, aby otrzymać przestrzeń dyskową Dropbox lub środki na koncie Skype. Jeśli cała szkoła uczestniczy w Hour of Code, każdy nauczyciel musi indywidualnie zarejestrować się jako organizator, aby się zakwalifikować do zdobycia nagrody.
 
-Code.org will contact organizers after the Hour of Code (Dec. 8-14) to provide instructions for redeeming Dropbox space or Skype credit.
+Code.org będzie kontaktować się z organizatorami po wydarzeniu Hour of Code(8-14 grudzień) w celu przyznania Dropbox miejsca lub środków na koncie Skype.
 
 <% if @country == 'us' %>
 

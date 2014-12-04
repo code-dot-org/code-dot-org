@@ -20,12 +20,9 @@
   hello: Helló világ
   welcome_back: Üdv újra, %{name}
   add_teacher_form:
-    code_or_email:
-      label: 'Adj meg egy tanárt kóddal, vagy e-mail címmel:'
-      placeholder: Kód (ABCDEF) vagy email (tanar@iskola.hu)
     code:
-      label: 'Tanár felvétele saját kóddal:'
-      placeholder: Kód (ABCDEF)
+      label: 'Tanár hozzáadása:'
+      placeholder: Szakasz kód (ABCDEF)
     submit: Tanár hozzáadása
   add_hint_form:
     placeholder: Kérjük, írja ide a véleményét
@@ -252,7 +249,7 @@
         playlab: Készíts egy applikációt
         artist: Rajzolj valamit
     user:
-      classroom: Diákjaim
+      classroom: Tanári kezdőlap
       label: Üdv %{username}
       stats: Fejlődésem
       settings: Profilom
@@ -312,7 +309,7 @@
       vist: Kérd meg a diákjaidat, hogy látogassák meg
       section_code: 'és írják be ezt a kódot:'
       first_please: Először is kérjük, %{add_section}
-      for: For
+      for: nak
       enter: 'írd be:'
     sections:
       add: Adj hozzá egy szakaszt
@@ -394,12 +391,11 @@
     test_videos_help: Teszteld az új videó lejátszót az iskolában
     try_beta_courses: ÚJ! Próbáld ki a béta kurzusokat elsős diákoknak
     use_as_teacher: használd ezt az oldalt tanárként
+    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
     heading_elementary: <h2> 20 órás kurzusok </h2><h1>alsósoknak</h1>
     heading_apps: <h2>Vidámság </h2><h1>Mindenkinek</h1>
     heading_legacy: <h2>Általános kurzus </h2><h1>Minden Korosztálynak</h1>
-    gallery:
-      your_turtle: Képeim
-      your_studio: Applikációim
+    your_gallery: Galéria
   gender:
     male: Férfi
     female: Nő
@@ -410,10 +406,11 @@
   footer:
     help_from_html: A Google, Microsoft, Facebook és Twitter mérnökei segítettek létrehozni
       ezt a bemutatót.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 <a href="http://www.rovio.com">Rovio
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 <a href="http://www.rovio.com">Rovio
       Entertainment Ltd</a>. All Rights Reserved.<br/> Plants vs. Zombies&trade; &
       &copy; 2013 <a href="http://www.ea.com">Electronic Arts Inc.</a>. All Rights
       Reserved.
+    powered_by_aws: Powered by Amazon Web Services
     feedback: Visszajelzés küldése
     translate: Segítsen lefordítani az oldalt az anyanyelvére
     support: Segítség
@@ -446,41 +443,42 @@
       hide_this_warning: Figyelmen kívül hagyom
     upgrade:
       header: Kérjük frissítse a böngészőjét.
-      message: Code.org uses modern web technology. This makes the site faster to
-        use. Unfortunately your browser doesn't support all the features required
-        to run this part of the site.<br/><br/>Install a browser on our supported
-        browsers list to continue. You can <a href='#'>try viewing the page</a>, but
-        expect functionality to be broken.
+      message: A Code.org modern webes technológiát használ. Így a webhely gyorsabban
+        használható. Sajnos az böngészője nem támogatja az oldal ezen részének futtatásához
+        szükséges összes jellemzőt. <br/> <br/>A folytatáshoz telepítsen egy új -
+        a támogatott böngésző listánkon lévő - böngészőt. <a href='#'> Megpróbálja</a>megnézni
+        az oldalt, de számítson a várható működési zavarokra.
       button: Mutasd meg az összes támogatott böngészőt
   slow_loading: Ez tovább tart majd, mint szokásosan...
   try_reloading: Próbálja meg újratölteni az oldalt
   next_stage: Befejezve! Folytatás a következő pályára
   download_pdf: Nyitott óravázlat
-  lesson_plan: Lesson Plan
-  view_lesson_plan: View Lesson Plan
-  pdf_download: Download PDF
-  download_coming_soon: Downloadable activity coming soon.
-  video_coming_soon: Video Coming Soon!
+  lesson_plan: Óravázlat
+  view_lesson_plan: Óravázlat megtekintése
+  pdf_download: Letöltés PDF-ben
+  download_coming_soon: Hamarosan lesz letölthető tevékenység.
+  video_coming_soon: Hamarosan lesz videó!
   share_code:
-    title: Kattints a 'Program futtatása'  gombra, hogy lásd, hogyan működik
+    title: Kattints a "Run"-ra, hogy lásd a programomat működés közben
     bounce_og_title: Nézd meg a Bounce Game-emet
     flappy_og_title: Jelentkezzen ki az én Flappy játékomból
-    studio_og_title: Check out my story
+    studio_og_title: Próbáld ki a Play Lab alkalmazásomat
+    check_out_what_i_made: Nézd meg, mit csináltam
     og_description: A kódját magam írtam a Code.org segítségével
-    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
-      the text.
-    address_not_allowed: It looks like there is an address in it. Try changing the
-      text.
-    email_not_allowed: It looks like there is an email in it. Try changing the text.
-    profanity_not_allowed: It looks like there is profanity in it. Try changing the
-      text.
+    phone_number_not_allowed: Olyan mintha telefonszámot tartalmazna. Próbálj módosítani
+      a szövegen.
+    address_not_allowed: Olyan mintha címet tartalmazna. Próbálj módosítani a szövegen.
+    email_not_allowed: Olyan mintha e-mail címet tartalmazna. Próbálj módosítani a
+      szövegen.
+    profanity_not_allowed: Úgy tűnik hogy profanitást tartalmaz. Próbálj módosítani
+      a szövegen.
   builder:
     created: Létrehozott egy új parancsfájlt.
     destroyed: Elpusztult a parancsfájlt.
     manage: Szintek építése
     view: Nézet
     back: Vissza a parancsfájlokhoz
-    success: You successfully edited the blocks.
+    success: Sikeresen szerkesztetted a blokkokat.
     level:
       create: Hozzon létre új szintet
       current: Aktuális szintek
@@ -496,37 +494,53 @@
     20hour:
       title: Bevezető kurzus
       body: Próbáld ki a 20 órás, bevezetés a számítógép-tudományba óránkat.
+    hoc2014:
+      try_new_tutorial: Próbáld ki az új Hour of Code oktató anyagunk béta változatát
+      try_frozen: Művészkedj Annával és  Elzával a Jégvarázsból
+    gallery:
+      title: Galéria
+      body: Nézd meg a felhasználóink által készített alkalmazás és művész kép galériát
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: Diákok rajzolták ezeket a kódot.
-    students_made_these_with_code: Students made these with code!
+    students_made_these_with_code: Ezeket diákok készítették kódolással!
     picture_count: Az elmúlt  <b>% {napok}</b> napon, diákok <b>% {count}</b>képet
       rajzoltak saját számítógépes programuk írásakor. Kattints a képekre, hogy minden
       egyes programot láthass működés közben.
-    activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
-      apps and pictures by writing their own computer programs. Click on the pictures
-      and screenshots to see each program in action.
+    activity_count: Az elmúlt <b>%{days}</b> nap a diákok <b>%{count}</b> alkalmazást
+      és a képet készítettek saját maguk, számítógépprogram írással. Kattints a képekre
+      illetve képernyőmentésekre, hogy megnézesd az egyes programokat működés közben.
     want_to_make_your_own: Szeretnéd elkészíteni a sajátodat?
     more: Több &rarr;
-    caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: '%{time_ago} ago'
+    caption_by_name_age: készítette %{name}, %{age} éves
+    caption_time_ago: '%{time_ago} ezelőtt'
+    header: Galéria
+    header_playlab: Játéklabor
+    header_artist: Művész
   landing:
-    prerelease: This page is still under development.
-    feedback: Give Feedback
-    report_bug: Report Bug
-    support: Get Help
+    prerelease: Ez a tananyag <span class='betatext'> béta állapotban van</span>.  Ez
+      azt jelenti, hogy ez nem a tananyag végleges változata, és a visszajelzések
+      beérkezése után felülvizsgálat alá kerül, és további fejlesztés várható.
+    prerelease_hoc2014: Ez a tananyag <span class='betatext'> béta állapotban van</span>.
+      A visszajelzések beérkezése után felülvizsgálat alá kerül, és további fejlesztés
+      várható.
+    feedback: Visszajelzés küldése
+    report_bug: Hiba bejelentése
+    support: Segítség kérés
     support_url: //support.code.org
   multi:
     wrong_title: Helytelen válasz
     wrong_body: A megadott válasz nem megfelelő.  Próbáld újra!
-    correct_title: Correct
-    correct_body: That is the correct answer.
+    correct_title: Helyes
+    correct_body: Ez a helyes válasz.
   match:
     wrong_title: Helytelen megoldás
     wrong_body: A megadott megoldás nem megfelelő.  Próbáld újra.
-    correct_title: Correct
-    correct_body: That is the correct answer.
+    correct_title: Helyes
+    correct_body: Ez a helyes válasz.
   text_match:
-    placeholder: Enter your answer here
+    placeholder: Itt add meg a válaszod
   dialog:
     ok: OK
   time:
@@ -542,7 +556,7 @@
             alap fogalmait. A kurzus általános iskolásoknak lett kitalálva, de mindenki
             számára jó időtöltés lehet.
         Hour of Code:
-          title: A kódolás órája
+          title: Kódolás Órája
           description: ''
         edit-code:
           title: Kód szerkesztése
@@ -569,17 +583,19 @@
   age_interstitial:
     age: Korod
     header: Felhasználói adatok frissítése
-    message: We're in the process of updating our experience to provide you with even
-      stronger privacy protections. To do this, we need existing users to enter their
-      age here.<br/>As always, code.org will never rent, sell or share this information
-      with any third parties.
-    sign_out: If you do not wish to provide your age you may <a href="%{url}">sign
-      out</a>.
-  zendesk_too_young_message: Sorry, younger users may not sign in to our support site.
-    You may browse <a href="http://support.code.org">support.code.org</a> without
-    signing in or ask your parent or teacher to contact us for you.
+    message: Folyamatosan megreformáljuk a gyakorlati eljárásainkat azért, hogy az
+      Ön számára még szigorúbb személyiség védelmet biztosíthassunk. Ehhez szükségünk
+      van arra, hogy a meglévő felhasználóink megadják az életkorukat itt. <br/>Ugyanúgy
+      mint eddig, a code.org soha nem fogja harmadik félnek bérbeadni, eladni vagy
+      továbbadni ezt az információt.
+    sign_out: Ha nem szeretnéd, megadni az életkorod, <a href="%{url}">Jelentkezz
+      ki</a>.
+  zendesk_too_young_message: Elnézést, de kiskorú felhasználók nem iratkozhatnak fel
+    a támogatói oldalunkra. Megnézheted a <a href="http://support.code.org"> support.code.org</a>oldalakat
+    feliratkozás nélkül, illetve kérd meg a szüleidet vagy tanáraidat, hogy lépjenek
+    kapcsolatba velünk a nevedben.
   progress:
-    not_completed: not completed
-    completed_too_many_blocks: completed, too many blocks
-    completed_perfect: completed, perfect
-    furthest_level_attempted: furthest level attempted
+    not_completed: Nincs készen
+    completed_too_many_blocks: elkészült, túl sok a blokk
+    completed_perfect: elkészült, tökéletes
+    furthest_level_attempted: a legmagasabb szint megpróbálva

@@ -806,7 +806,7 @@ Blockly.Blocks.procedures_defnoreturn = {init:function() {
   for(e = 0;e < this.parameterNames_.length;e++) {
     b = {enabled:!0}, c = this.parameterNames_[e], b.text = Blockly.Msg.VARIABLES_SET_CREATE_GET.replace("%1", c), d = goog.dom.createDom("title", null, c), d.setAttribute("name", "VAR"), d = goog.dom.createDom("block", null, d), d.setAttribute("type", "variables_get"), b.callback = Blockly.ContextMenu.callbackFactory(this, d), a.push(b)
   }
-}, callType_:"procedures_callnoreturn"};
+}, userCreated:!1, callType_:"procedures_callnoreturn"};
 Blockly.Blocks.procedures_defreturn = {init:function() {
   this.setHelpUrl(Blockly.Msg.PROCEDURES_DEFRETURN_HELPURL);
   this.setHSV(94, 0.84, 0.6);
@@ -821,7 +821,7 @@ Blockly.Blocks.procedures_defreturn = {init:function() {
 }, updateParams_:Blockly.Blocks.procedures_defnoreturn.updateParams_, updateCallerParams_:Blockly.Blocks.procedures_defnoreturn.updateCallerParams_, updateParamsFromArrays:Blockly.Blocks.procedures_defnoreturn.updateParamsFromArrays, mutationToDom:Blockly.Blocks.procedures_defnoreturn.mutationToDom, domToMutation:Blockly.Blocks.procedures_defnoreturn.domToMutation, decompose:Blockly.Blocks.procedures_defnoreturn.decompose, compose:Blockly.Blocks.procedures_defnoreturn.compose, dispose:Blockly.Blocks.procedures_defnoreturn.dispose, 
 getProcedureInfo:function() {
   return{name:this.getTitleValue("NAME"), parameterNames:this.parameterNames_, parameterIDs:this.paramIds_, type:this.type, callType:this.callType_}
-}, getVars:Blockly.Blocks.procedures_defnoreturn.getVars, renameVar:Blockly.Blocks.procedures_defnoreturn.renameVar, customContextMenu:Blockly.Blocks.procedures_defnoreturn.customContextMenu, callType_:"procedures_callreturn"};
+}, getVars:Blockly.Blocks.procedures_defnoreturn.getVars, renameVar:Blockly.Blocks.procedures_defnoreturn.renameVar, customContextMenu:Blockly.Blocks.procedures_defnoreturn.customContextMenu, userCreated:Blockly.Blocks.procedures_defnoreturn.userCreated, callType_:"procedures_callreturn"};
 Blockly.Blocks.procedures_mutatorcontainer = {init:function() {
   this.setHSV(94, 0.84, 0.6);
   this.appendDummyInput().appendTitle(Blockly.Msg.PROCEDURES_MUTATORCONTAINER_TITLE);
@@ -844,7 +844,7 @@ Blockly.Blocks.procedures_callnoreturn = {init:function() {
   this.setHelpUrl(Blockly.Msg.PROCEDURES_CALLNORETURN_HELPURL);
   this.setHSV(94, 0.84, 0.6);
   var a = this.appendDummyInput().appendTitle(Blockly.Msg.PROCEDURES_CALLNORETURN_CALL).appendTitle("", "NAME");
-  if(Blockly.functionEditor) {
+  if(Blockly.useModalFunctionEditor) {
     var b = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
     Blockly.bindEvent_(b.fieldGroup_, "mousedown", this, this.openEditor);
     a.appendTitle(b)
@@ -1244,7 +1244,7 @@ Blockly.Blocks.parameters_get = {init:function() {
   var a = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
   a.EDITABLE = !0;
   this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
-  this.setHSV(312, 0.32, 0.62);
+  this.setHSV(7, 0.8, 0.95);
   this.appendDummyInput().appendTitle(Blockly.Msg.VARIABLES_GET_TITLE).appendTitle(Blockly.disableVariableEditing ? a : new Blockly.FieldParameter(Blockly.Msg.VARIABLES_GET_ITEM), "VAR").appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
   this.setOutput(!0);
   this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP)
@@ -1339,7 +1339,7 @@ Blockly.Blocks.functional_call = {init:function() {
   this.setTooltip("Calls a user-defined function");
   this.setHSV(94, 0.84, 0.6);
   var a = this.appendDummyInput().appendTitle(new Blockly.FieldLabel("Function Call", {fixedSize:{height:35}}), "NAME").appendTitle("", "PARAM_TEXT");
-  if(Blockly.functionEditor && this.blockSpace !== Blockly.modalBlockSpace) {
+  if(Blockly.useContractEditor && this.blockSpace !== Blockly.modalBlockSpace) {
     var b = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
     Blockly.bindEvent_(b.fieldGroup_, "mousedown", this, this.openEditor);
     a.appendTitle(b);
@@ -1420,6 +1420,21 @@ Blockly.Blocks.functional_call = {init:function() {
   }
 }};
 Blockly.Blocks.procedural_to_functional_call = Blockly.Blocks.procedures_callreturn;
+Blockly.Blocks.functionalExamples = {};
+Blockly.Blocks.functional_example = {init:function() {
+  this.setHSV(94, 0.84, 0.6);
+  this.setFunctional(!0, {headerHeight:0, rowBuffer:3});
+  this.setFunctionalOutput(!1);
+  this.appendDummyInput().appendTitle(Blockly.Msg.EXAMPLE).appendTitle("(" + [Blockly.Msg.EXPECTED, Blockly.Msg.ACTUAL].join(", ") + ")");
+  this.appendFunctionalInput("EXPECTED").setAlign(Blockly.ALIGN_CENTRE);
+  this.appendFunctionalInput("ACTUAL").setAlign(Blockly.ALIGN_CENTRE).setInline(!0);
+  this.setTooltip(Blockly.Msg.EXAMPLE_DESCRIPTION)
+}, mutationToDom:function() {
+}, domToMutation:function(a) {
+}, updateOutputType:function(a) {
+  this.outputType_ = a;
+  this.changeFunctionalOutput(this.outputType_)
+}};
 Blockly.Blocks.functionalParameters = {};
 Blockly.Blocks.functional_parameters_get = {init:function() {
   var a = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);

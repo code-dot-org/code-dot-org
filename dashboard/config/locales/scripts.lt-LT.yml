@@ -44,9 +44,10 @@
           'Maze: Loops': 'Labirintas: kartojimas'
           'Bee: Loops': 'Bitė: kartojimas'
           'Studio: Create a Story': 'Žaidimų laboratorija: sukurk istoriją'
+          'Artist: Loops': 'Menininkas: kartojimas'
+          description_audience: Ages 4+ (pre-readers)
           description_short: Kursas 1 yra skirtas pradinukams, dar tik pradedantiems
             skaityti.
-          'Artist: Loops': 'Menininkas: kartojimas'
         course2:
           The Maze: Labirintas
           Suzi: Suzi
@@ -84,11 +85,12 @@
           'Bee: Debugging': 'Bitė: klaidų ieškojimas'
           'Artist: Debugging': 'Menininkas: klaidų ieškojimas'
           'Bee: Conditionals': 'Bitė: sąlyginiai sakiniai'
-          description_short: Kursas 2 yra skirtas jau mokantiems skaityti 2-5 kl.
-            moksleiviams.
           'Artist: Sequence2': 'Menininkas: seka2'
           'Maze: Sequence2': 'Labirintas: seka2'
           'Artist: Nested Loops': 'Menininkas: kartojimas kartojime'
+          description_audience: Ages  6+ (reading required)
+          description_short: Kursas 2 yra skirtas jau mokantiems skaityti 2-5 kl.
+            moksleiviams.
         course3:
           The Maze: Labirintas
           'Studio: Create a Story': 'Žaidimų laboratorija: sukurk istoriją'
@@ -126,7 +128,6 @@
           'Farmer: While Loops': 'Ūkininkas: kartojimas'
           'Bee: Nested Loops': 'Bitė: kartojimas kartojime'
           'Bee: Debugging': 'Bitė: klaidų ieškojimas'
-          description_short: Kursas 3 yra skirtas tiems, kas pabaigė 2 kursą :).
           Maze2: Labirintas2
           Artist2: Menininkas2
           'Artist: Functions2': 'Menininkas: komandų kūrimas 2'
@@ -139,6 +140,8 @@
           'Bee: Debugging2': 'Bitė: klaidų ieškojimas2'
           'Artist: Patterns': 'Menininkas: raštai'
           Songwriting: Dainų rašymas
+          description_audience: Ages 8+ (after Course 2)
+          description_short: Kursas 3 yra skirtas tiems, kas pabaigė 2 kursą :).
         msm:
           title: Vidurinės mokyklos matematika
           description: Private work in progress for Middle School Math.
@@ -166,6 +169,34 @@
           'Artist: Conditionals': 'Menininkas: sąlygos'
           Collision Detection and the Distance Formula: Susidūrimai ir atstumo formulė
           'Play Lab: Collision Detection': 'Žaidimų laboratorija: susidūrimai'
+          'Unplugged: Ninja Cat and the Coordinate Plane': 'Unplugged: Ninja Cat and
+            the Coordinate Plane'
+          'Eval: Strings and Images': 'Eval: Strings and Images'
+          'Unplugged: Contracts': 'Unplugged: Contracts'
+          'Eval: Writing Contracts': 'Eval: Writing Contracts'
+          'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
+          'Eval: Defining Functions': 'Eval: Fast Functions'
+          'Eval: Functions': 'Eval: Design Recipe'
+          'Unplugged: Booleans': 'Unplugged: Booleans'
+          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
+            and Piecewise Functions'
+          'Eval: Conditionals': 'Eval: Conditionals'
+          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
+            Detection and the Distance Formula'
+          'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
+          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
+            and Coordinate Planes'
+          'Eval: Boolean Operators': 'Eval: Boolean Operators'
+          Blocks to Math: Blocks to Math
+          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Defining Variables
+            (Big Game)'
+          'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
+          'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
+          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
+            (Big Game)'
+          'Eval: Fast Functions': 'Eval: Fast Functions'
+          'Play Lab: Design Recipe': 'Play Lab: Design Recipe'
+          'Eval: Design Recipe': 'Eval: Design Recipe'
         playlab:
           title: Laboratorija
           description: Sukurk istoriją arba žaidimą!
@@ -184,21 +215,18 @@
         hourofcode:
           Maze: Labirintas
           title: „Programavimo valanda“
-          description_short: Try the basics of computer science with characters from
-            Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
           description: Try the basics of computer science with characters from Angry
             Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          description_short: Try the basics of computer science with characters from
+            Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
         frozen:
-          title: Frozen
-          description_short: Join the Royal Sisters of Arendelle, Anna and Elsa, as
-            they explore the magic and beauty of ice. You will write code to create
-            snowflakes and patterns as you ice-skate and make a winter wonderland
-            that you can then share with your friends!
-          description: Join the Royal Sisters of Arendelle, Anna and Elsa, as they
-            explore the magic and beauty of ice. You will write code to create snowflakes
-            and patterns as you ice-skate and make a winter wonderland that you can
-            then share with your friends!
+          title: Programuokite kartu su Ana ir Elze
+          description: Naudokime komandas, kad Ana ir Elzė kartu išbandytų ledo grožį
+            ir magiją. Čiuožinėdami pačiūžomis, piešime snaigių raštus. Savo kūriniais
+            galėsite pasidalinti su draugais!
           Artist: Menininkas
+          description_short: Naudokime komandas, kad Ana ir Elzė kartu išbandytų ledo
+            grožį ir magiją.
         course4:
           description_short: Students taking Course 4 should have already taken Courses
             2 and 3.
@@ -231,6 +259,7 @@
           Farmer Binary: Farmer Binary
           Maze and Bee: Labirintas ir bitė
           Artist Binary: Artist Binary
+          description_audience: Ages 10+ (after Course 3)
         Course4pre:
           description_short: Trumpas įvadas moksleiviams, kurie nebandė 2 ir 3 kursų.
           Course 4 Prerequisite: Course 4 Prerequisite
@@ -243,3 +272,36 @@
           'Bee: Nested Loops': 'Bitė: kartojimas kartojime'
           'Artist: Functions': 'Menininkas: komandų kūrimas'
           'Bee: Debugging': 'Bitė: klaidų ieškojimas'
+        course4pre:
+          description_short: Trumpas įvadas moksleiviams, kurie nebandė 2 ir 3 kursų.
+          Course 4 Prerequisite: Course 4 Prerequisite
+          'Maze: Sequence': 'Labirintas: seka'
+          'Artist: Sequence': 'Menininkas: seka'
+          'Artist: Loops': 'Menininkas: kartojimas'
+          'Bee: Conditionals': 'Bitė: sąlyginiai sakiniai'
+          'Artist: Nested Loops': 'Menininkas: kartojimas kartojime'
+          'Farmer: While Loops': 'Ūkininkas: kartojimas'
+          'Bee: Nested Loops': 'Bitė: kartojimas kartojime'
+          'Artist: Functions': 'Menininkas: komandų kūrimas'
+          'Bee: Debugging': 'Bitė: klaidų ieškojimas'
+        Course4pre (Case Conflict):
+          description_short: Trumpas įvadas moksleiviams, kurie nebandė 2 ir 3 kursų.
+          Course 4 Prerequisite: Course 4 Prerequisite
+          'Maze: Sequence': 'Labirintas: seka'
+          'Artist: Sequence': 'Menininkas: seka'
+          'Artist: Loops': 'Menininkas: kartojimas'
+          'Bee: Conditionals': 'Bitė: sąlyginiai sakiniai'
+          'Artist: Nested Loops': 'Menininkas: kartojimas kartojime'
+          'Farmer: While Loops': 'Ūkininkas: kartojimas'
+          'Bee: Nested Loops': 'Bitė: kartojimas kartojime'
+          'Artist: Functions': 'Menininkas: komandų kūrimas'
+          'Bee: Debugging': 'Bitė: klaidų ieškojimas'
+        usability:
+          Intro: Intro
+          Variables and For Loops: Variables and For Loops
+          Functions and Functions with Parameters: Functions and Functions with Parameters
+          title: Usability Testing
+          description_short: ''
+          description: A selection of Course 4 levels for usability testing.
+          Variables: Kintamieji
+          For Loops: For Loops

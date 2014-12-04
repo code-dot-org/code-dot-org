@@ -20,12 +20,9 @@
   hello: Hej verden
   welcome_back: Velkommen tilbage %{name}
   add_teacher_form:
-    code_or_email:
-      label: 'Tilføj en lærer med kode eller e-mailadresse:'
-      placeholder: Kode (ABCDEF) eller e-mail (teacher@school.edu)
     code:
-      label: 'Tilføje en lærer af afsnittet kode:'
-      placeholder: Kode (ABCDEF)
+      label: 'Tilføje en lærer:'
+      placeholder: Afsnitskode (SOVS)
     submit: Tilføj lærer
   add_hint_form:
     placeholder: Skriv dit huske-ord her
@@ -40,7 +37,7 @@
   more: MERE
   less: MINDRE
   try_hoc: 'Prøv En Times Kodning, klik her >> '
-  try_k8intro: Prøv vores grundskole introduktion til datalogi kurset (15-25 timer)
+  try_k8intro: Prøv vores grundskole introduktionskursus i programmering (15-25 timer)
   k8intro: Grundskole introduktion til datalogi kursus (15-25 timer)
   already_started: 'Allerede startet? Fortsæt her >> '
   demos: 'Admin: Alle demoer'
@@ -50,7 +47,7 @@
   auth:
     sign_in_with: Log ind med %{provider}
     signed_in: Logget ind!
-    signed_out: Du har logget sig af <a href="%{url}"> Code.org</a>.
+    signed_out: Du har logget dig af <a href="%{url}"> Code.org</a>.
     sign_out_of: Du brugte %{provider} til at logge ind. <a href="%{url}"> Klik her</a>
       logge af %{provider}.
     already_signedup: Allerede tilmeldt?
@@ -63,14 +60,13 @@
     need_confirmation: Har ikke modtaget bekræftelses instruktioner?
     need_unlock: Ikke modtaget lås op instruktioner?
   signup_form:
-    overview_student: Tilmeld dig en konto til at spore dine fremskridt. Din email
+    overview_student: Tilmeld dig en konto for at spore dine fremskridt. Din email
       bruges primært til at tillade log ind og til gendannelse af din adgangskode.
       For mere information, se vores <a href="http://code.org/privacy">Privat Politik</a>.
-    overview_teacher: Undervis computer videnskab i dit klasseværelse ved tilmelding
-      til en konto. <p/> Du vil være i stand til at tilføje dine elever og spore deres
-      fremdrift.
+    overview_teacher: Undervis i programmering i din klasse ved at tilmelde til en
+      konto. <p/> Du vil være i stand til at tilføje dine elever og spore deres fremdrift.
     no_signup_message: Du kan <a target="_blank" href="http://learn.code.org">gennemse
-      de forskellige faser og gåder</a>, men du bliver nødt til at tilmelde dig for
+      de forskellige trin og øvelser</a>, men du bliver nødt til at tilmelde dig for
       at gemme dine fremskridt.
     teacher_educator_guide: Se lærerens guide
     teacher_pitch: Lærer tilmelding til Code.org
@@ -79,13 +75,13 @@
     student_title: Tilmelding for elever
     school_name: Skolens navn (valgfrit)
     school_address: Skolens adresse (valgfri)
-    address_placeholder: adresse, by, stat, postnummer
+    address_placeholder: adresse, by, postnummer
     gender: Køn (valgfri)
     birthday: Fødselsdag (valgfri)
     age: Alder
     user_type: Er du elev eller lærer?
     submit: Tilmeld
-    teacher: Er du en lærer?
+    teacher: Er du lærer?
     valid_username: Tilgængelig!
     invalid_username: Brugernavn skal være mindst 5 tegn
     taken_username: Brugernavnet er allerede taget
@@ -102,13 +98,13 @@
     additional_information: Vi har brug for nogle ekstra oplysninger til at fortsætte
       med at logge dig.
   signin_form:
-    title: Har allerede en konto? Log på
+    title: Har du allerede en konto? Log på
     login: Email eller Brugernavn
     password: Adgangskode
     remember: Husk mig
     submit: Log ind
   signin:
-    try_heading: Vil du prøvekøre kodning uden tilmelding?
+    try_heading: Vil du prøve kodning uden tilmelding?
     try_hoc: Prøv Hour of Code først
     try_20hours: Prøv vores 20 timers Introduktion til datalogi
   signinsection:
@@ -150,7 +146,7 @@
         dem.
       section_not_found: Kunne ikke finde en sektion med kode '%{section_code}'.
       blank_code: Angiv en sektions kode
-      cant_join_own_section: Desværre, ikke kan du deltage i dit eget afsnit.
+      cant_join_own_section: Desværre, kan ikke kan du deltage i dit eget afsnit.
     mail:
       invite_student:
         subject: Tilmeld dig en klasse med %{teacher_name} på Code.org!
@@ -204,10 +200,10 @@
       earned: Du har opnået en præmie! (Kun for amerikanske elever)
       not_earned_title: Gennemfør øvelse, for at optjene belønninger (kun for amerikanske
         elever)
-      not_earned: 'Lær alle datalogi begreberne, indsaml alle %{num_trophies} trofæer,
-        og vind præmier. Du kan vælge mellem 10GB gratis Dropbox plads, $10 i Skype
-        credits, og gratis spil downloads. Bemærk: gælder kun amerikanske elever,
-        og kun så længe lager haves.'
+      not_earned: 'Lær alle programmeringsbegreberne, indsaml alle %{num_trophies}
+        trofæer, og vind præmier. Du kan vælge mellem 10GB gratis Dropbox plads, $10
+        i Skype credits, og gratis spil downloads. Bemærk: gælder kun amerikanske
+        elever, og kun så længe lager haves.'
       teacher:
         earned: 15 eller flere elever har indsamlet alle %{num_trophies} trofæer.
           Du har vundet en lærerpræmie! (dog kun for amerikanske lærere)
@@ -307,14 +303,14 @@
       add: Tilføj elever
       remove: fjern elev
       confirm_remove: Sikker på, at du ønsker at fjerne denne elev?
-      help_reassign: For at opdele din klasse i flere grupper, skal du vælge de studerende
+      help_reassign: For at opdele din klasse i flere grupper, skal du vælge de elever
         du ønsker at flytte til en ny gruppe.
-      help_register: I stedet for at du bruger en masse tid individuelt at indlæse
-        de studerendes data, kan du oprette din klasse hurtigt ved at spørge dem til
-        tilmelding. Eleverne skal vælge brugernavne og adgangskoder, men de vil ikke
-        være forpligtet til at angive en e-mail-adresse. Hvis en elev glemmer sin
-        adgangskode, vil du kunne nulstille det til dem.
-      register: Spørg dine elever til at registrere sig selv
+      help_register: I stedet for at du bruger en masse tid individuelt på at indlæse
+        elevernes data, kan du oprette din klasse hurtigt ved at spørge dem om selv
+        at tilmelde sig. Eleverne skal vælge brugernavne og adgangskoder, men de vil
+        ikke være forpligtet til at angive en e-mail-adresse. Hvis en elev glemmer
+        sin adgangskode, vil du kunne nulstille det til dem.
+      register: Spørg dine elever om at registrere sig selv
       vist: Spørg dine elever til at besøge
       section_code: 'og indtaste deres afsnit-kode:'
       first_please: Først, venligst %{add_section}
@@ -326,7 +322,7 @@
       section: Afsnit
       students: Studerende
       section_code: Afsnitskode
-      add_section_code: Tilføje studerende afsnit-kode
+      add_section_code: Tilføje elev afsnit-kode
       secret: Hemmelig type
       grade: Graduering
       course: Kursus
@@ -338,7 +334,7 @@
     rollup: Fremskridts oversigt
     activity: Seneste klasse aktivitet
     user_not_found: Lærer eller elev kunne ikke findes
-    cant_remove_student_no_email: '%{student_name} kan ikke fjernes som din studerende,
+    cant_remove_student_no_email: '%{student_name} kan ikke fjernes som din elev,
       fordi %{student_name} ikke har registreret en e-mailadresse'
     cant_remove_teacher_no_email: '%{teacher_name} kan ikke fjernes som din lærer,
       fordi du ikke har registreret en e-mailadresse'
@@ -366,8 +362,8 @@
     all_courses: Oversigt over kursus 1, 2 og 3
     lesson_plans: Lektionsplaner
     signin_message: Allerede registreret? %{link}
-    student_reg_link: Tilmelding for studerende
-    teacher_reg_link: Tilmelding for studerende
+    student_reg_link: Tilmelding for elever
+    teacher_reg_link: Tilmelding for lærere
     signin_directions: Brug en konto til at følge op på fremdriften. <br/> Lærere,
       spor hele din klasse.
     teacher_dashboard: Se fremskridts oversigt
@@ -379,12 +375,12 @@
       med dette kursus
     teacher_read_blog: Læs om nyheder og opdateringer til vores materialer på vores
       underviser blog
-    classroom: Dit klasseværelse
+    classroom: Din klasse
     student_progress: Dit lærings fremskridt
     student_stats: Du har optjent %{trophy_count} ud af %{trophy_max} "Koncept beherskelses"
       trofæer.
     student_left_off: 'Hvor du stoppede sidst:'
-    student_finished: Du har fuldført alle tutorials, vælg en anden klasse %{online_link}
+    student_finished: Du har fuldført alle øvelser, vælg en anden klasse %{online_link}
       eller her %{local_school_link}
     local_school: lokal skole
     online: online
@@ -400,12 +396,11 @@
     test_videos_help: Teste vores nye video-afspiller på din skole
     try_beta_courses: Nyt! Prøv vores beta kurser for K-5 elever
     use_as_teacher: Bruge dette websted som en lærer
+    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
     heading_elementary: <h2>20 timers kurser for</h2><h1>grundskoleelever</h1>
     heading_apps: <h2>Sjov for</h2><h1>Alle</h1>
     heading_legacy: <h2>Vores generelle kursus for</h2><h1>Alle aldre</h1>
-    gallery:
-      your_turtle: Mit kunstværk
-      your_studio: Mine Apps
+    your_gallery: Galleri
   gender:
     male: Mand
     female: Kvinde
@@ -415,10 +410,11 @@
     teacher: Lærer
   footer:
     help_from_html: Ingeniører fra Google, Microsoft, Facebook og Twitter bidraget
-      til at skabe denne øvelse. Oversat af Jan Borup Coyle.
-    art_from_html: Angry birds&trade; & &copy; & © 2009-2013 Rovio Entertainment Ltd.
-      Alle rettigheder forbeholdt. <br/>Plants vs zombies&trade; & &copy; & © 2013
+      til at skabe denne øvelse.
+    art_from_html: Angry birds&trade; & &copy; & © 2009-2014 Rovio Entertainment Ltd.
+      Alle rettigheder forbeholdt. <br/>Plants vs zombies&trade; & &copy; & © 2014
       Electronic Arts Inc. Alle rettigheder forbeholdes.
+    powered_by_aws: Powered by Amazon Web Services
     feedback: Giv feedback
     translate: Hjælp os med at oversætte til dit sprog
     support: Support
@@ -461,16 +457,17 @@
   try_reloading: Prøv at genindlæse siden
   next_stage: Færdig! Fortsæt til næste fase
   download_pdf: Åben lektionsplan
-  lesson_plan: Lesson Plan
+  lesson_plan: Lektionsplan
   view_lesson_plan: Se lektionsplan
   pdf_download: Download PDF
-  download_coming_soon: Downloadable activity coming soon.
-  video_coming_soon: Video Coming Soon!
+  download_coming_soon: Aktiviter til download kommer snart.
+  video_coming_soon: Video kommer snart!
   share_code:
     title: Klik på 'Kør' for at se min program i aktion
-    bounce_og_title: Tjek mit hoppe spil
+    bounce_og_title: Tjek mit Hoppespil
     flappy_og_title: Tjek mit Flappy spil
     studio_og_title: Tjek min Spille-Lab-App
+    check_out_what_i_made: Se hvad jeg har lavet
     og_description: Jeg skrev selv koden med Code.org
     phone_number_not_allowed: Det ser ud som om der er et telefonnummer i det. Prøv
       at ændre teksten.
@@ -492,14 +489,22 @@
   upsell:
     hoc:
       title: En Time af Kode
-      body: Prøv grundlæggende i datalogi. Millioner har givet det et forsøg.
+      body: Prøv grundlæggende kodning. Millioner har allerede gjort det.
     flappy:
       title: Flappy kode
       body: Vil du skrive dit eget spil på mindre end 10 minutter? Prøv vores Flappy
         kode undervisning!
     20hour:
-      title: Intro kursus
+      title: Introkursus
       body: Prøv vores 20-timers Introduktionskursus til programmering og datalogi.
+    hoc2014:
+      try_new_tutorial: Prøv vores nye Hour of Code tutorial i beta-version
+      try_frozen: Kunstner med Anna og Elsa, fra Frozen
+    gallery:
+      title: Galleri
+      body: Se et galleri af app og kunstnerbilleder skabt af vores brugere
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: Elever har tegnet disse med kode!
     students_made_these_with_code: Elever har lavet disse med kode!
@@ -513,10 +518,15 @@
     more: Mere &rarr;
     caption_by_name_age: af %{name}, alder %{age}
     caption_time_ago: '%{time_ago} siden'
+    header: Galleri
+    header_playlab: Spille Lab
+    header_artist: Kunstner
   landing:
     prerelease: Dette kursus er i <span class='betatext'> beta</span>.  Dette betyder,
       at det ikke er den endelige version af kurset, og er undergivet revision som
       feedback modtages og forbedringer.
+    prerelease_hoc2014: Denne øvelse er i <span class='betatext'> beta</span>.  Det
+      er undergivet revision så feedback modtages og der arbejdes på forbedringer.
     feedback: Giv feedback
     report_bug: Rapporter fejl
     support: Få hjælp
@@ -575,14 +585,14 @@
   age_interstitial:
     age: Din alder
     header: Opdater konto oplysninger
-    message: Vi er i færd med at opdatere vores erfaring for at give dig endnu stærkere
-      privat beskyttelse. For at gøre dette, vi har brug for eksisterende brugere
-      til at indtaste deres alder her. <br/>Som altid, vil code.org aldrig leje, sælge
-      eller dele disse oplysninger med tredjemand.
+    message: Vi er i færd med at opdatere vores erfaring for at give dig endnu større
+      privat beskyttelse. For at gøre dette, har vi brug for at eksisterende brugere
+      indtaster deres alder her. <br/>Som altid, vil code.org aldrig leje, sælge eller
+      dele disse oplysninger med tredjepart.
     sign_out: Hvis du ikke ønsker at give din alder kan <a href="%{url}"> logge ud</a>.
-  zendesk_too_young_message: Beklager, yngre brugere kan ikke logge på til vores websted.
+  zendesk_too_young_message: Beklager, yngre brugere kan ikke logge på vores websted.
     Du kan gennemse <a href="http://support.code.org"> support.code.org</a> uden at
-    logge på eller spørg dine forældre eller lærer til at kontakte os for dig.
+    logge på eller spørg dine forældre eller lærer om at kontakte os for dig.
   progress:
     not_completed: ikke afsluttet
     completed_too_many_blocks: afsluttet, for mange blokke

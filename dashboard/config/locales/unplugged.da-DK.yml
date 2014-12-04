@@ -268,3 +268,21 @@
           i en række binære optioner.  Denne lektion tager konceptet et skridt længere,
           da den illustrerer hvordan en computer også kan gemme endnu mere komplekse
           oplysninger (f.eks. billeder og farver) i binære tal.
+      VideoGamesCoordinatePlanes:
+        title: Videospil og koordinere fly
+        desc: Videospil og koordinerese flys lektionsbeskrivelse
+      Contracts:
+        title: Kontrakter
+        desc: Kontrakter unplugged lektions beskrivelser
+      DesignRecipe:
+        title: Design opskrift
+        desc: Design opskrifter lektionsbeskrivelse
+      Booleans:
+        title: Booleans
+        desc: Booleans lektionsbeskrivelser
+      ConditionalsPiecewiseFunctions:
+        title: Konditioner og stykvise funktioner
+        desc: Conditionals og Piecewise Functions lektionsbeskrivelse
+      CollisionDetection:
+        title: Collision Detection
+        desc: Collision Detection lektionsbeskrivelse

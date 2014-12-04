@@ -3,270 +3,285 @@
     unplugged:
       Unplug1:
         title: Introducere în Informatică
-        desc: This lesson will introduce the concept of Computer Science and explain
-          what a Computer Scientist does.  It will also give students an opportunity
-          to assume the role of a computer scientist.  By the end of the activity,
-          each student will have a take-home reminder of what he or she learned.  You
-          may be tempted to skip teaching young children the vocabulary words that
-          are associated with the lessons that follow, but presenting them in a fun
-          and playful light now is far more productive than waiting for more advanced
-          opportunities.
+        desc: Această lecție va prezenta conceptul de Informatică și explică ce face
+          un programator. De asemenea, va oferi elevilor oportunitatea de a experimenta
+          rolul unui programator. La sfârșitul acestei activități, fiecare elev va
+          putea lua acasă noutățile pe care le-a învățat. Ați putea fi tentați să
+          omiteți a le preda copiilor cuvintele din vocabular asociate cu lecțiile
+          ce urmează, dar prezentându-le într-un mod distractiv și jucăuș este mult
+          mai productiv decât să așteptăm un nivel mai avansat.
         pdfs:
         - unplug1
         video: Unplug1
       Unplug2:
         title: Gândire Computațională
-        desc: With nothing but paper and markers, students will learn the four steps
-          of computational thinking. After a brief introduction, students should be
-          split into groups where they will have to create directions for other students
-          to draw a specific monster (from a catalog of pre-selected monsters). The
-          entire task must be decomposed, then teams will analyze all monsters in
-          the catalog for patterns, abstract different details from the monsters,
-          then use that information to create an algorithm (directions) for another
-          team to draw a certain monster. Teams will then switch algorithms with another
-          group and draw the monster based on what that algorithm indicates. Is the
-          drawing what the original team intended?
+        desc: Doar cu foarfecă și markere, elevii vor învăța cei patru pași ai gândirii
+          algoritmice. După o scurtă introducere, elevii ar trebui să se împartă în
+          grupuri în care vor avea de formulat instrucțiuni pentru alți elevi astfel
+          încât să deseneze un anumit monstruleț (dintr-un catalog cu monstruleți
+          preselectați). Întreaga sarcină trebuie descompusă, apoi echipele vor analiza
+          toți monstruleții din catalog pentru a observa modelele, diverse detalii
+          de generalizare a monstruleților, apoi vor folosi aceste informații pentru
+          a crea un algoritm (instrucțiuni) pentru o altă echipă care trebuie să deseneze
+          un anumit mosntruleț. Echipele vor face schimb de instrucțiuni și vor desena
+          monstrulețul indicat de algoritmul celuilalt grup. Este desenul așa cum
+          a intenționat echipa inițială?
         pdfs:
         - unplug2
         video: Unplug2
       Unplug3:
         title: Programare pe Hârtie Milimetrică
-        desc: By programming one another to draw pictures, students will begin to
-          understand what programming is really about. The class will begin by students
-          instructing each other to color squares in on graph paper in an effort to
-          reproduce an existing picture.  If there's time, the lesson can conclude
-          with images that the students create themselves.
+        desc: 'Programându-și unii altora ce imagini să deseneze, elevii vor începe
+          să înțeleagă ce este în realitate programarea. Ora va începe astfel: elevii
+          se vor învăța unii pe alții să deseneze pătrate pe o foaie grafică, încercând
+          să reproducă o anumită imagine. Dacă este timp, lecția poate încheia cu
+          imagini pe care chiar elevii le-au creat.'
         pdfs:
         - unplug3
         video: Unplug3
       Unplug4:
         title: Algoritmi
-        desc: This lesson covers algorithms.  Using tangram shapes and graph paper,
-          the first exercise will show how important it is to make each instruction
-          as clear and unambiguous as possible.  Afterward, the class will explore
-          how many ways you can fold paper into a rectangle, noting how some methods
-          can take more or fewer folds than others.
+        desc: Această lecție este despre algoritmi. Folosind piese de tangram și hârtie
+          grafică, primul exercițiu va arăta cât este de important ca fiecare instrucțiune
+          să fie formulată cât mai clar și fără ambiguități. După acesta, toată clasa
+          va explora cât mai multe modalități de a îndoi o foaie ca dreptunghi, observând
+          cum unele metode necesită mai multe sau mai puține îndoituri decât celelalte.
         pdfs:
         - unplug4
         video: Unplug4
       Unplug5:
         title: Funcţii
-        desc: In this lesson, students will make a suncatcher out of string, beads,
-          and a special charm. The students will follow a series of repetitive steps,
-          then be asked to identify certain sets of "skills" that are duplicated several
-          times. Once those skills are defined, they will be called from a main program
-          and the whole beautiful process of creation will be recorded on a single
-          sheet of paper. The final program will be geared toward the entire class,
-          whatever their type of string, beads, and charms. To effectively allow for
-          this, students will need to "abstract out" the details of their specific
-          materials and create vague terms for an individual's supplies.  This use
-          of generic placeholders is a wonderful introduction to variables.
+        desc: În această lecție, elevii vor crea un suncatcher din șir, mărgele și
+          un talisman special. Elevii vor urma o serie de pași repetitivi, apoi li
+          se va cere să identifice anumite seturi de ”competențe” care sunt multiplicate
+          de câteva ori. Odată definite acele competențe, vor fi apelate dintr-un
+          program principal și întregul minunat proces de creație va fi înregistrat
+          pe o singură foaie de hârtie. Programul final va fi îndreptat spre întreaga
+          clasă, indiferent de șirul, mărgelele și talismanele avute. Pentru a fi
+          permis acest lucru, elevii trebuie să facă abstracție de detaliile materialelor
+          lor și să formuleze termeni vagi pentru fiecare set de rechizite. Această
+          utilizare a unor substituienți generici este o introducere minunată în variabile.
         pdfs:
         - unplug5
         video: Unplug5
       Unplug6:
         title: Condiţii
-        desc: This is a class game.  After introducing the idea of conditionals, if-statements,
-          and loops, the class can practice together using a pre-written program,
-          a deck of cards, and luck of the draw.
+        desc: Acesta este un joc cu clasa. După prezentarea ideii deciziilor, instrucțiuni
+          dacă, și repetițiilor, elevii pot exersa împreună folosirea unui program
+          scris anterior, un pachet de cărți și șansa remizei.
         pdfs:
         - unplug6
         video: Unplug6
       Unplug7:
         title: Compunere muzicală
-        desc: Reading lyrics is a pretty intuitive venture for most students.  We'll
-          take an activity that's already common knowledge and shift it into a solid
-          education on defining and calling functions. Once students are familiar
-          with the define/call process, we will add the extra capabilities that come
-          along with passing parameters within those function calls.
+        desc: Cititul de poezii este o aventură destul de intuitivă pentru cei mai
+          mulți elevi. Vom lua o activitate bine cunoscută și o vom schimba într-o
+          învățătură riguroasă despre definirea și apelul funcțiilor. Odată ce elevii
+          sunt familiarizați cu procesul de definire/apel, vom adăuga funcționalități
+          suplimentare aduse de transmiterea de parametri la apelarea acelor funcții.
         pdfs:
         - unplug7
         video: Unplug7
       Unplug8:
         title: Abstractizare
-        desc: Această lecţie va introduce conceptul de Informatică şi va explica ceea
-          ce face un Informatician.  Aceasta, de asemenea, va oferi studenţilor o
-          oportunitate să-şi asume rolul unui informatician.  La sfârşitul activităţii,
-          fiecare student va avea un memento de luat-acasă cu ceea ce el sau ea a
-          învățat.  Ai putea fi tentat să sari peste a-i învăța pe copiii mici termenii
-          de vocabular complicat care sunt asociați cu lecţiile care urmează, dar
-          prezentarea lor într-o lumină distractivă şi jucăuşă făcută acum este mult
-          mai productivă decât aşteptarea în perspectiva unor oportunităţi ulterioare
-          mai avansate.
+        desc: Această activitate combină rutina zilnică a elevilor dvs. cu un joc
+          de gândire de tip Mad-Lib, pentru a ajuta elevii să învețe despre eficiența
+          abstractizării.
         pdfs:
         - unplug8
         video: Unplug8
       Unplug9:
         title: Programare de releu
-        desc: This lesson will take an idea from a previous activity (4. Graph Paper
-          Programming) and use those skills to emphasize the importance of completing
-          programs that operate in sequence and frequently checking programs for "bugs".
+        desc: Această lecție va prelua o idee dintr-o activitate anterioară (4. Programarea
+          pe hârtie grafică) și va folosi acele competențe pentru a evidenția importanța
+          completitudinii programelor care operează secvențial și a verificării frecvente
+          de bug-uri în programe.
         pdfs:
         - unplug9
         video: Unplug9
       Unplug10:
         title: Internetul
-        desc: In this lesson, students will pretend to flow through the Internet,
-          all the while learning about web addresses, IPs and the DNS.
+        desc: În această lecție, elevii își vor imagina că parcurg Internetul, în
+          timp ce vor învăța despre adresele web, IP-uri și DNS.
         pdfs:
         - unplug10
         video: Unplug10
       Unplug11:
         title: Terminare
-        desc: The final wrap-up in the first 20-hour series will help the class relive
-          all of their favorite moments, while giving them next steps that they can
-          take on their own if they are interested in continuing their computer science
-          journey.
+        desc: Revizuirea finală a primelor 20 de ore va ajuta elevii să evidențieze
+          toate momentele lor favorite, oferindu-le următorii pași pe care îi pot
+          parcurge pe cont propriu dacă sunt interesați să continue călătoria lor
+          în informatică.
         pdfs:
         - unplug11
         video: Unplug11
       UnplugHappyMaps:
         title: Hărţi Fericite
-        desc: Students create simple algorithms (sets of instructions) to move a character
-          through a maze using a single command.
-        video: C1_happy_maps_unplugged
+        desc: Elevii creează algoritmi simpli (seturi de instrucțiuni) pentru a deplasa
+          un personaj prin labirint folosind o singură comandă.
+        video: C1_hărți_fericite_fără calculator
       MoveIt:
         title: Mişcă-te, Mişcă-te
-        desc: Students create simple algorithms (sets of instructions) to move a character
-          through a maze using a single command.
-        video: C1_moveitmoveit_unplugged
+        desc: Elevii creează algoritmi simpli (seturi de instrucțiuni) pentru a deplasa
+          un personaj prin labirint folosind o singură comandă.
+        video: C1_mișcămișcă_fără calculator
       PlantASeed:
         title: 'Algoritmi din viaţa reală: Plantează o sămânţă'
-        desc: This lesson calls out ways we use algorithms in our daily lives, using
-          the act of planting a seed as an example. It also focuses on the bigger
-          picture of computer science and how algorithms play an essential part.
-        video: C1_planting_seed
+        desc: Această lecție extrage algoritmi pe care îi folosim în viața de zi cu
+          zi, luând ca exemplu plantarea unei semințe. Urmărește, de asemenea, să
+          formeze o imagine mai clară a informaticii și a rolului important pe care
+          îl au algoritmii.
+        video: C1_plantare_sămânță
       BuildingAFoundation:
         title: Construirea unei Fundaţii
-        desc: Students build a structure using only provided supplies. Structures
-          must complete a task (reach a certain height or bear a certain weight),
-          and students discuss the idea of being persistent when things get complicated.
-        video: C1_building_foundation
+        desc: Elevii construiesc o structură folosind numai rechizitele oferite. Structurile
+          trebuie să finalizeze o sarcină (ating o anumită înălțime sau suportă o
+          anumită greutate) și elevii discută ideea de a fi perseverent când lucrurile
+          devin complicate.
+        video: C1_construcție_fundație
       GettingLoopy:
         title: Transformând în Buclă
-        desc: This lesson introduces the programming concept of loops (repeated instructions)
-          through a dance activity. Students will learn simple choreography, then
-          be instructed to repeat it.
-        video: C1_getting_loopy
+        desc: Această lecție prezintă conceptul de repetiție în programare (instrucțiuni
+          repetate) printr-o activitate care implică dansul. Elevii vor învăța o coregrafie
+          simplă, apoi vor fi instruiți să o repete.
+        video: C1_începem_repetițiile
       RelayProgramming:
         title: Programare de releu
-        desc: Students run a relay race, where they dash across the yard to write
-          an algorithm based on a "Graph Paper Programming" image. They can only write
-          one instruction at a time and if there's an error somewhere, they have to
-          erase everything back to that point.
-        video: C2_relay_programming
+        desc: Elevii aleargă într-o cursă cu ștafetă, în care au de sărit garduri
+          pentru a scrie un algoritm pe baza unei imagini ”Programarea pe hârtie grafică”.
+          Ei pot scrie o singură instrucțiune la un moment dat și, dacă este vreo
+          eroare, trebuie să șteargă tot înapoi până la acel punct.
+        video: C2_programarea_cu_ștafetă
       Conditionals:
         title: Condiţionale
-        desc: To learn about conditional statements, students play a card game and
-          create rules like "If I draw a red card, I get a point" and "If I draw a
-          black card, you get a point."
-        video: C2_conditionals_with_cards
+        desc: 'Pentru a învăța despre instrucțiuni decizionale, elevii joacă un joc
+          de cărți și creează reguli precum: ”Dacă trag o carte roșie, obțin un punct”
+          și ”Dacă trag o carte neagră, tu obții un punct.”'
+        video: C2_decizii_cu_cărți
       BigEvent:
         title: Marele eveniment
-        desc: Students are introduced to the programming concept of "events," which
-          are actions that a computer constantly monitors for. The teacher will press
-          buttons on a paper remote and students will react depending on which button
-          is pressed.
-        video: C1_bigevent_unplugged
+        desc: Elevilor li se prezintă conceptul de ”eveniment” în programare, care
+          reprezintă o acțiune pe care o urmărește constant calculatorul. Profesorul
+          va apăsa butoane pe o telecomandă de hârtie, iar elevii vor reacționa în
+          funcție de butonul care a fost apăsat.
+        video: C1_marele eveniment_fără calculator
       GoingPlacesSafely:
         title: Mergând în locuri în siguranţă
-        desc: The Internet is a powerful, but sometimes dangerous place. Teachers
-          introduce how to stay safe while navigating the Internet.
-        video: C1_going_places_safely
+        desc: Internet-ul este o forță, dar uneori și un loc periculos. Profesorii
+          arată cum poate fi sigură navigarea pe Internet.
+        video: C1_vizitând_locuri_sigure
       GraphPaperProgramming:
         title: Programare pe Hârtie Milimetrică
-        desc: Students write an algorithm (a set of instructions) using a set of predefined
-          commands to direct their classmates to reproduce a drawing.
-        video: C2_graph_paper
+        desc: Elevii scriu un algoritm (set de instrucțiuni) folosind un set de comenzi
+          predefinite pentru a-i direcționa pe colegii de clasă să reproducă un desen.
+        video: C2_hârtie_grafică
       PaperPlanes:
         title: 'Algoritmi din viaţa reală: Avioane de Hârtie'
-        desc: This lesson calls out ways we use algorithms in our daily lives, specifically
-          making paper airplanes. This lesson also focuses on the bigger picture of
-          computer science and how algorithms play an essential part.
-        video: C2_paper_airplanes
+        desc: Această lecție evidențiază algoritmi pe care îi folosim în viața de
+          zi cu zi, de exemplu realizarea de avioane din hârtie. De asemenea, această
+          lecție încearcă să formeze o imagine mai clară despre informatică și rolul
+          esențial pe care îl au algoritmii.
+        video: C2_avioane_de_hârtie
       BinaryBracelets:
         title: Brăţări Binare
-        desc: Students create bracelets as a binary representations of the first letter
-          of their name. Students learn that data can be represented and stored in
-          more than one way.
-        video: C2_binary_bracelets
+        desc: Elevii creează brățări ca o reprezentare binară a primei litere din
+          numele lor. Elevii învață ca datele pot fi reprezentate și stocate în mai
+          multe feluri.
+        video: C2_brățări_binare
       DigitalFootprint:
         title: Amprenta ta Digitală
-        desc: Teachers introduce to students the idea that putting information about
-          themselves online creates a digital footprint or "trail" that has consequences.
+        desc: Profesorii introduc elevilor ideea că postarea informațiilor online
+          despre ei înșiși creează un "traseu", o amprentă digitală, care are consecințe.
         video: C2_digital_footprint
       ComputationalThinking:
         title: Gândire Computațională
-        desc: Students use the steps of computational thinking (decompose, pattern
-          match, abstract, algorithm) to figure out how to play a game that comes
-          with no instructions.
+        desc: Elevii folosesc paşii de gândire computaţională (descompune, model meci,
+          abstracte, algoritmul) să-și dea seama cum să joace un joc care vine fără
+          instrucţiuni.
         video: C3_computational_thinking
       FunctionalSuncatchers:
         title: Prinzători ai Soarelui Funcţionali
-        desc: Students create an algorithm with variables and functions (pieces of
-          code that you want to use over and over again) to create suncatchers using
-          string and beads.
+        desc: Elevii creează un algoritm cu variabile şi funcţii (bucăţi de cod pe
+          care doriţi să utilizaţi peste si peste din nou) pentru a crea suncatchers
+          folosind șiruri de mărgele.
         video: C3_functional_suncatchers
       SongwritingParameters:
-        title: Songwriting with Parameters
-        desc: Students use the concept of the chorus in a song to learn about passing
-          parameters (which customize a function without having to rewrite the entire
-          function).
-        video: C3_songwriting_with_parameters
+        title: Compoziții muzicale cu parametri
+        desc: Elevii folosesc conceptul de cor dintr-un cântec pentru a afla despre
+          transmiterea parametrilor (care personalizează o funcție fără a trebui să
+          rescrie întreaga funcție).
+        video: C3_compoziție_cu_parametri
       DiceRace:
-        title: 'Real life algorithms: Dice Race'
-        desc: This lesson calls out ways we use algorithms in our daily lives. As
-          part of that, students will identify and write down the algorithm for a
-          dice race game.
+        title: 'Algoritmi din viaţa reală: cursa de zaruri'
+        desc: Această lecție arată modul în care noi folosim algoritmi în viața de
+          zi cu zi. Elevii vor identifica şi nota algoritmul pentru un joc de zaruri.
         video: C3_dice_race
       Internet:
         title: Internet
-        desc: Students send messages representing various Internet transmission methods
-          using pieces of paper.
+        desc: Elevii transmit mesaje pe bucăți de hârtie simulând trimiterea mesajelor
+          folosind Internetul.
         video: C3_internet
       Crowdsourcing:
         title: Obţinând Informaţii/Critici
-        desc: Student use crowdsourcing, a problem-solving technique common in computer
-          science, to complete a task together as a classroom more efficiently than
-          if a student attempted it alone.
+        desc: Elevii folosesc crowdsourcing, o tehnica de rezolvare a problemelor
+          comune în informatică, pentru a finaliza o sarcină împreună ca o modalitate
+          mai eficientă decât rezolvarea individuală.
         video: C3_crowdsourcing
       DigitalCitizenship:
         title: Cetățenia Digitală
-        desc: Students explore the difference between private information and personal
-          information, distinguishing what is safe and unsafe to share online.
+        desc: Elevii exploreaza diferenţa dintre informaţii private şi informaţii
+          personale, distinge ceea ce este sigur şi nesigure pentru a partaja online.
       TangramAlgorithms:
-        title: Tangram Algorithms
-        desc: This lesson shows us something important about algorithms. If you keep
-          an algorithm simple there are lots of ways to use it. If you want to make
-          sure everyone ends up with the same thing, then your algorithm needs more
-          detail.
+        title: Algoritmi Tangram
+        desc: Această lecţie ne arată ceva important despre algoritmi. Dacă vă păstraţi
+          un algoritm simplu există o mulţime de moduri de a-l folosi. Dacă doriţi
+          să vă asiguraţi că toată lumea termină cu acelaşi lucru, atunci algoritmul
+          dumneavoastră are nevoie de mai multe detalii.
       EnvelopeVariables:
-        title: Envelope Variables
-        desc: Variables allow for a lot of freedom in computer science.  This lesson
-          helps to explain what variables are and how we can use them in many different
-          ways. Use this activity before (or in conjunction with) the lesson on abstraction
-          to really hit the idea home.
+        title: Plic Variabile
+        desc: Variabilele permit libertate în informatică.  Această lecţie vă ajută
+          să înțelegeți ce sunt variabile şi cum le putem folosi în moduri diferite.
+          Utilizați această activitate înainte de (sau în legătură cu) lecţia pe abstractizare.
       MadGlibs:
         title: Mad Glibs
-        desc: Abstraction is one of the most important skills for a computer scientist
-          to understand.  This activity will have your students analyzing stories
-          for differences so that they can abstract them away. Those abstracted stories
-          become templates for fun and crazy new ones.
+        desc: Abstractizarea este una dintre cele mai importante aptitudini pentru
+          ca un programator să înţeleagă.  Această activitate îi va pune pe elevii
+          dvs. să analizeze povestiri pentru a găsi diferenţe, astfel încât să poată
+          generaliza. Acele povestiri generalizate vor deveni șabloane pentru altele
+          noi, distractive și ciudate.
       ForLoopFun:
-        title: For Loop Fun
-        desc: We know that loops allow us to do things over and over again, but now
-          we’re going to learn how to use loops with extra structure built right in.
+        title: Distracție cu repetiția Pentru
+        desc: Ştim că repetițiile ne permit să reluăm lucruri iar și iar, dar acum
+          avem de gând să învăţăm cum să folosim repetiții cu structură extra încorporată.
       SongwritingWithParameters:
-        title: Songwriting With Parameters
-        desc: 'One of the most magnificent structures in the computer science world
-          is the function.  Functions (sometimes called procedures) are mini programs
-          that you can use over and over inside of your bigger program. This lesson
-          will help students intuitively understand why combining chunks of code into
-          functions is such a helpful practice.  '
+        title: Compozitie cu parametri
+        desc: 'Una dintre structurile cele mai magnifice din lumea informaticii este
+          funcţia.  Funcţiile (uneori numite proceduri) sunt mini-programe pe care
+          le puteţi folosi iar și iar in programul mai mare. Această lecţie va ajuta
+          elevii să înţeleagă intuitiv de ce combinarea de bucăţi de cod în funcţii
+          este o practică așa de utilă.  '
       BinaryImages:
-        title: Binary Images
-        desc: Though many people think of binary as strictly zeros and ones, our previous
-          courses taught students that information can be represented in a variety
-          of binary options.  This lesson takes that concept one step further as it
-          illustrates how a computer can store even more complex information (such
-          as images and colors) in binary, as well.
+        title: Imagini binare
+        desc: Deşi mulţi oameni cred că binar înseamnă strict zerouri și unu, cursurile
+          noastre anterioare predate elevilor arată că informaţiile pot fi reprezentate
+          într-o varietate de opţiuni binare.  Această lecţie face un pas mai departe
+          pentru dezvoltarea conceptului, ilustrând cum un computer poate stoca informații
+          complexe (precum imagini şi culori) în sistem binar.
+      VideoGamesCoordinatePlanes:
+        title: Jocuri Video și Planuri de coordonate
+        desc: Descrierea lecției Jocuri Video și Planuri de coordonate
+      Contracts:
+        title: Contracte
+        desc: Descrierea lecției fără calculator Contracte
+      DesignRecipe:
+        title: Rețeta pentru design
+        desc: Descrierea lecției Rețete pentru Design
+      Booleans:
+        title: Booleene
+        desc: Descrierea lecției Valori booleene
+      ConditionalsPiecewiseFunctions:
+        title: Decizii și porțiuni de funcții
+        desc: Descrierea lecției Decizii și Funcții inteligente
+      CollisionDetection:
+        title: Detectarea coliziunilor
+        desc: Detectarea coliziunilor - prezentare

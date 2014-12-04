@@ -15,16 +15,15 @@
         video: Unplug1
       Unplug2:
         title: Вычислительное мышление
-        desc: With nothing but paper and markers, students will learn the four steps
-          of computational thinking. After a brief introduction, students should be
-          split into groups where they will have to create directions for other students
-          to draw a specific monster (from a catalog of pre-selected monsters). The
-          entire task must be decomposed, then teams will analyze all monsters in
-          the catalog for patterns, abstract different details from the monsters,
-          then use that information to create an algorithm (directions) for another
-          team to draw a certain monster. Teams will then switch algorithms with another
-          group and draw the monster based on what that algorithm indicates. Is the
-          drawing what the original team intended?
+        desc: С помощью только бумаги и маркера студенты изучают четыре ступени алгоритмического
+          мышления. После краткого введения студентам следует разделиться на группы,
+          каждая группа выбирает одного определённого монстра (из каталога заранее
+          отобранных монстров). Всё задание делится на части, и команды анализируют
+          всех монстров в каталоге шаблонов, выделяя различные детали монстров. Эту
+          информацию команда использует для создания алгоритма (инструкции) для другой
+          команды, чтобы нарисовать определённого монстра. Затем команды обмениваются
+          алгоритмами с другой группой и рисуют монстра по заданному алгоритму. Похож
+          ли полученный рисунок на исходного монстра?
         pdfs:
         - unplug2
         video: Unplug2
@@ -40,11 +39,11 @@
         video: Unplug3
       Unplug4:
         title: Алгоритмы
-        desc: This lesson covers algorithms.  Using tangram shapes and graph paper,
-          the first exercise will show how important it is to make each instruction
-          as clear and unambiguous as possible.  Afterward, the class will explore
-          how many ways you can fold paper into a rectangle, noting how some methods
-          can take more or fewer folds than others.
+        desc: Этот урок посвящён алгоритмам.  С помощью фигур Танграма и миллиметровой
+          бумаги первое упражнение покажет, как важно, чтобы каждая команда была максимально
+          четкой и недвусмысленной.  Затем будет изучено, сколькими способами можно
+          сложить бумагу в прямоугольник, примечая, при каком методе будет меньше
+          складок.
         pdfs:
         - unplug4
         video: Unplug4
@@ -73,11 +72,11 @@
         video: Unplug6
       Unplug7:
         title: Написание песни
-        desc: Reading lyrics is a pretty intuitive venture for most students.  We'll
-          take an activity that's already common knowledge and shift it into a solid
-          education on defining and calling functions. Once students are familiar
-          with the define/call process, we will add the extra capabilities that come
-          along with passing parameters within those function calls.
+        desc: Чтение стихов является интуитивно понятным занятием для большинства
+          студентов.  Возьмем деятельность, которая уже знакома и перенесём её в твёрдые
+          знания об определении и вызове функций. После того, как студенты познакомятся
+          с процессом определения/вызова, мы добавим дополнительные возможности, которые
+          даёт передача параметров в пределах вызовов функций.
         pdfs:
         - unplug7
         video: Unplug7
@@ -104,8 +103,8 @@
         video: Unplug9
       Unplug10:
         title: Интернет
-        desc: In this lesson, students will pretend to flow through the Internet,
-          all the while learning about web addresses, IPs and the DNS.
+        desc: В этом уроке студенты двинутся сквозь Интернет чтобы больше узнать о
+          веб-адресации, IP-адресах и DNS.
         pdfs:
         - unplug10
         video: Unplug10
@@ -129,9 +128,9 @@
         video: C1_moveitmoveit_unplugged
       PlantASeed:
         title: 'Реальные алгоритмы: Посадить семя'
-        desc: This lesson calls out ways we use algorithms in our daily lives, using
-          the act of planting a seed as an example. It also focuses on the bigger
-          picture of computer science and how algorithms play an essential part.
+        desc: Этот урок покажет, как мы используем алгоритмы в нашей повседневной
+          жизни, на примере посева семян. Он также нацелен дать более широкую картину
+          вычислительных наук и обозначить, насколько важную роль играют алгоритмы.
         video: C1_planting_seed
       BuildingAFoundation:
         title: Создание основы
@@ -154,9 +153,9 @@
         video: C2_relay_programming
       Conditionals:
         title: Условные команды
-        desc: To learn about conditional statements, students play a card game and
-          create rules like "If I draw a red card, I get a point" and "If I draw a
-          black card, you get a point."
+        desc: 'Чтобы узнать об условных операторах, студенты поиграют в карты и создадут
+          правила, например: «Если я нарисовал красную карточку, я получаю очко» или
+          «Если я нарисую черную карточку, вы получите очко.»'
         video: C2_conditionals_with_cards
       BigEvent:
         title: Большое Событие
@@ -199,9 +198,9 @@
         video: C3_computational_thinking
       FunctionalSuncatchers:
         title: Functional Suncatchers
-        desc: Students create an algorithm with variables and functions (pieces of
-          code that you want to use over and over again) to create suncatchers using
-          string and beads.
+        desc: Студенты создадут алгоритм с переменными и функциями (фрагментами кода,
+          которые можно использовать снова и снова) для витражей, используя нить и
+          бусины.
         video: C3_functional_suncatchers
       SongwritingParameters:
         title: Написание песен с параметрами
@@ -222,16 +221,16 @@
         video: C3_internet
       Crowdsourcing:
         title: Crowdsourcing
-        desc: Student use crowdsourcing, a problem-solving technique common in computer
-          science, to complete a task together as a classroom more efficiently than
-          if a student attempted it alone.
+        desc: Студенты используют краудсорсинг, технологию решения проблем в области
+          компьютерных наук, для более эффективного решения задачи, чем если бы студент
+          работал в одиночку.
         video: C3_crowdsourcing
       DigitalCitizenship:
         title: Цифровое гражданство
-        desc: Students explore the difference between private information and personal
-          information, distinguishing what is safe and unsafe to share online.
+        desc: Студенты исследуют разницу между частной и личной информацией, учатся
+          различать, что такое безопасные и небезопасные способы поделиться онлайн.
       TangramAlgorithms:
-        title: Tangram Algorithms
+        title: Танграм алгоритмы
         desc: This lesson shows us something important about algorithms. If you keep
           an algorithm simple there are lots of ways to use it. If you want to make
           sure everyone ends up with the same thing, then your algorithm needs more
@@ -254,11 +253,11 @@
           we’re going to learn how to use loops with extra structure built right in.
       SongwritingWithParameters:
         title: Songwriting With Parameters
-        desc: 'One of the most magnificent structures in the computer science world
-          is the function.  Functions (sometimes called procedures) are mini programs
-          that you can use over and over inside of your bigger program. This lesson
-          will help students intuitively understand why combining chunks of code into
-          functions is such a helpful practice.  '
+        desc: 'Одним из самых великолепных структур в мире компьютерной науки является
+          функция.  Функции (иногда называемые процедурами) - это мини-программы,
+          которые можно использовать снова и снова внутри большой программы. Этот
+          урок поможет учащимся интуитивно понять, почему объединение частей кода
+          в функцию является такой полезной практикой.  '
       BinaryImages:
         title: Binary Images
         desc: Though many people think of binary as strictly zeros and ones, our previous
@@ -266,3 +265,21 @@
           of binary options.  This lesson takes that concept one step further as it
           illustrates how a computer can store even more complex information (such
           as images and colors) in binary, as well.
+      VideoGamesCoordinatePlanes:
+        title: Video Games and Coordinate Planes
+        desc: Video Games and Coordinate Planes lesson description
+      Contracts:
+        title: Контракты
+        desc: Contracts unplugged lesson description
+      DesignRecipe:
+        title: The Design Recipe
+        desc: Design Recipe lesson description
+      Booleans:
+        title: Booleans
+        desc: Booleans lesson description
+      ConditionalsPiecewiseFunctions:
+        title: Conditionals and Piecewise Functions
+        desc: Conditionals and Piecewise Functions lesson description
+      CollisionDetection:
+        title: Collision Detection
+        desc: Collision Detection lesson description

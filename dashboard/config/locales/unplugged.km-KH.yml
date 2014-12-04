@@ -3,14 +3,11 @@
     unplugged:
       Unplug1:
         title: សេចក្ដី​ណែនាំ​អំពី​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ
-        desc: This lesson will introduce the concept of Computer Science and explain
-          what a Computer Scientist does.  It will also give students an opportunity
-          to assume the role of a computer scientist.  By the end of the activity,
-          each student will have a take-home reminder of what he or she learned.  You
-          may be tempted to skip teaching young children the vocabulary words that
-          are associated with the lessons that follow, but presenting them in a fun
-          and playful light now is far more productive than waiting for more advanced
-          opportunities.
+        desc: មេរៀន​នេះ​នឹង​ណែនាំ​អំពី​គោល​គំនិត​នៃ វិទ្យាសាស្ត្រ​កុំព្យូទ័រ ហើយ​និង​ពន្យល់​ថា​តើ​អ្នក​ជំនាញ​ក្នុង​ផ្នែក​នេះ​មាន​អ្វី​ធ្វើ​ខ្លះ។
+          វា​ក៏​នឹង​ផ្ដល់​ឱកាស​ដល់​សិស្ស​ធ្វើ​ការ​សន្មត​ទៅ​លើ​តួនាទី​របស់​អ្នក​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ​ដែរ។
+          នៅ​ចុង​បញ្ចប់​នៃ​សកម្មភាព សិស្ស​ម្នាក់ៗ​នឹង​ទទួល​បាន​មេរៀន​រំឭក​នៅ​ផ្ទះ​ចំពោះ​អ្វី​ដែល​ពួកគេ​បាន​រៀន។
+          អ្នក​អាច​រំលង​ការ​បង្រៀន​ក្មេង​តូចៗ​អំពី​ពាក្យ​ពិបាកៗ​ដែល​មាន​នៅ​ក្នុង​មេរៀន
+          ជំនួស​ដោយ​ការ​បង្ហាញ​ពួកគេ​ជាមួយ​ភាព​សប្បាយ​រីករាយ​ដែល​ផ្ដល់​នូវ​ផលិតភាព​និង​លទ្ធផល​ដ៏​ល្អ​ប្រសើរ។
         pdfs:
         - unplug1
         video: Unplug1
@@ -264,3 +261,21 @@
           of binary options.  This lesson takes that concept one step further as it
           illustrates how a computer can store even more complex information (such
           as images and colors) in binary, as well.
+      VideoGamesCoordinatePlanes:
+        title: Video Games and Coordinate Planes
+        desc: Video Games and Coordinate Planes lesson description
+      Contracts:
+        title: Contracts
+        desc: Contracts unplugged lesson description
+      DesignRecipe:
+        title: The Design Recipe
+        desc: Design Recipe lesson description
+      Booleans:
+        title: Booleans
+        desc: Booleans lesson description
+      ConditionalsPiecewiseFunctions:
+        title: Conditionals and Piecewise Functions
+        desc: Conditionals and Piecewise Functions lesson description
+      CollisionDetection:
+        title: Collision Detection
+        desc: Collision Detection lesson description

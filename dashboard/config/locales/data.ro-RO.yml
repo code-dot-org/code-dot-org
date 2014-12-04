@@ -50,6 +50,7 @@
           MazeEC: Etapa 1
           Webapp: Etapa 2
           ArtistEC: Etapa 3
+          StudioEC: Etapa 4
         events:
           desc: Sări (beta)
           Bounce: Etapa 1
@@ -67,7 +68,7 @@
           desc: Labirint (beta)
           MazeStep: Pas de Etapă
         wordsearch:
-          desc: Ortografie (beta)
+          desc: Albina ortografiind (beta)
           WordSearch: Etapa 1
     game:
       name:
@@ -100,7 +101,8 @@
         Wordsearch: Cautare de cuvinte
         Webapp: Webapp
         ArtistEC: Artistul
-        TextMatch: Text Match
+        TextMatch: Potrivire de text
+        StudioEC: Laborator de Joacă
     trophy:
       name:
         Bronze: Bronz
@@ -431,9 +433,9 @@
           să setezi o scenă aleatorie când alte incidente se întâmplă.
         flappy_9: Pentru a complica lucrurile, la lovirea de un obstacol sau sol,
           în loc să se termine jocul încearcă stabilirea scorului înapoi la 0.
-        flappy_11: Crează-ți propriul joc Flappy. Poți schimba toate vizualele şi
-          toate regulile, chiar şi gravitatea. Când ai terminat, fă clic pe Distribuie
-          pentru a le permite prietenilor să-ți încerce jocul pe telefoanele lor.
+        flappy_11: Creați-vă propriul joc Flappy. Puteţi schimba toate aspectele vizuale
+          şi toate regulile, chiar şi gravitația. Când aţi terminat, faceţi clic pe
+          Terminare pentru a permite prietenilor să încerce jocul pe telefoanele lor.
         flappy_k1_1: Joacă Flappy
         flappy_k1_2: Atașează un bloc la blocul "când clic", apoi apasă "Rulează Programul".
           Fă clic sau bate ușor cu degetul pe ecran ca să îl muți pe Flappy la țintă.
@@ -451,11 +453,12 @@
           Flappy trece de obstacole. Adaugă-le la blocul "când trece de un obstacol",
           și apoi înscrie un punct de scor zburându-l pe Flappy prin primul set de
           conducte.
-        flappy_k1_7: See if you can score multiple points for making it past an obstacle
+        flappy_k1_7: Vedeți dacă puteţi înscrie mai multe puncte pentru a-l face să
+          treacă un obstacol
         flappy_k1_8: Apoi, încercaţi să schimbaţi scena prin ataşarea unui alt bloc
           la blocul "atunci când rulaţi".
-        flappy_k1_9: Try changing the player by attaching a "set player" block to
-          the "when run" block.
+        flappy_k1_9: Încercaţi schimbarea jucătorului prin ataşarea un bloc "setare
+          jucător" la blocul "atunci când rulează".
         jigsaw_1: Fă clic pe bloc
         jigsaw_2: Trage blocul către ţintă
         jigsaw_3: Aranjează blocurile pentru a forma imaginea
@@ -477,48 +480,58 @@
         studio_c2_1: Poți face acest câine să spună "Bună ziua lume"?
         studio_c2_2: Puteţi face cainele sa spuna ceva şi apoi dupa aceea pisica sa
           continue sa spuna altceva?
-        studio_c2_3: Can you write a program to make this dog move to the cat?
+        studio_c2_3: Puteţi scrie un program pentru a face acest câine să se miște
+          spre pisică?
         studio_c2_4: Poți scrie un program care să îl facă pe câine să meargă către
           pisică, iar atunci când o ajunge, aceasta să spună "Bună"?
-        studio_c2_5: Can you write a program to make the octopus say "hello" when
-          it is clicked?
-        studio_c2_6: Can you write a program to make this penguin move around using
-          the up / down / left /right keys to hit all of the targets?
-        studio_c2_7: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_c2_8: Can you have the penguin say "Ouch!" and play a "hit" sound if
-          he runs into the dinosaur, and then move him with the arrows to make that
-          happen?
-        studio_c2_9: Can you add a block to score a point when the penguin runs into
-          the octopus, and then move him with the arrows until you score?
-        studio_c2_10: Can you add blocks to change the background and the speed of
-          the penguin, and then move him with the arrows until you score?
-        studio_c2_11: Create your own story. When you're done, click Finish to let
-          friends try your story on their phones.
+        studio_c2_5: Puteţi scrie un program pentru a face caracatiţa să spună "hello",
+          atunci când se dă clic pe ea?
+        studio_c2_6: Puteţi scrie un program pentru a face acest pinguin să se deplaseze
+          folosind tastele sus / jos / stânga/dreapta pentru a lovi toate obiectivele?
+        studio_c2_7: Blocul "repetă pentru totdeauna" vă permite să rulaţi cod continuu.
+          Puteți ataşa blocuri pentru a muta acest dinozaur în sus şi în jos în mod
+          repetat?
+        studio_c2_8: Puteți face acest pinguin să spună "Ouch!" şi să redea un sunet
+          "lovit" dacă el aleargă la dinozaur, şi apoi să îl mutaţi cu săgeţile pentru
+          a face să se întâmple asta?
+        studio_c2_9: Puteţi adăuga un bloc pentru a înscrie un punct când pinguinul
+          aleargă la caracatiţă şi apoi să îl mutaţi cu săgeţile până când înscrieți
+          puncte?
+        studio_c2_10: Puteţi adăuga blocuri pentru a schimba fundalul şi viteza pinguinului,
+          şi apoi să îl mutaţi cu săgeţile până când marcați?
+        studio_c2_11: Creați-vă propria poveste. Când aţi terminat, faceţi clic pe
+          Terminare pentru a lăsa prietenii să vă încerce povestea pe telefoanele
+          lor.
         studio_c3_story_1: Poți face acest câine să spună "Bună ziua lume"?
         studio_c3_story_2: Puteţi face cainele sa spuna ceva şi apoi dupa aceea pisica
           sa continue sa spuna altceva?
-        studio_c3_story_3: Can you write a program to make this dog move to the cat?
+        studio_c3_story_3: Puteţi scrie un program pentru a face acest câine să se
+          miște spre pisică?
         studio_c3_story_4: Poți scrie un program care să îl facă pe câine să meargă
           către pisică, iar atunci când o ajunge, aceasta să spună "Bună"?
-        studio_c3_story_5: Can you add a block to make the octopus happy?
-        studio_c3_story_6: Create your own story. When you're done, click Finish to
-          let friends try your story on their phones.
-        studio_c3_game_1: Can you write a program to make the octopus say "hello"
-          when it is clicked?
-        studio_c3_game_2: Can you write a program to make this penguin move around
-          using the up / down / left /right keys to hit all of the targets?
-        studio_c3_game_3: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_c3_game_4: Can you have the penguin say "Ouch!" and play a "hit" sound
-          if he runs into the dinosaur, and then move him with the arrows to make
-          that happen?
-        studio_c3_game_5: Can you add a block to score a point when the penguin runs
-          into the octopus, and then move him with the arrows until you score?
-        studio_c3_game_6: Can you add blocks to change the background and the speed
-          of the penguin, and then move him with the arrows until you score?
-        studio_c3_game_7: Create your own game. When you're done, click Finish to
-          let friends try your story on their phones.
+        studio_c3_story_5: Puteţi să adăugaţi un bloc pentru a face caracatiţa fericită?
+        studio_c3_story_6: Creați-vă propria poveste. Când aţi terminat, faceţi clic
+          pe Terminare pentru a lăsa prietenii să vă încerce povestea pe telefoanele
+          lor.
+        studio_c3_game_1: Puteţi scrie un program pentru a face caracatiţa să spună
+          "hello", atunci când se dă clic pe ea?
+        studio_c3_game_2: Puteţi scrie un program pentru a face acest pinguin să se
+          deplaseze folosind tastele sus / jos / stânga/dreapta pentru a lovi toate
+          obiectivele?
+        studio_c3_game_3: Blocul "repetă pentru totdeauna" vă permite să rulaţi cod
+          continuu. Puteți ataşa blocuri pentru a muta acest dinozaur în sus şi în
+          jos în mod repetat?
+        studio_c3_game_4: Puteți face acest pinguin să spună "Ouch!" şi să redea un
+          sunet "lovit" dacă el aleargă la dinozaur, şi apoi să îl mutaţi cu săgeţile
+          pentru a face să se întâmple asta?
+        studio_c3_game_5: Puteţi adăuga un bloc pentru a înscrie un punct când pinguinul
+          aleargă la caracatiţă şi apoi să îl mutaţi cu săgeţile până când înscrieți
+          puncte?
+        studio_c3_game_6: Puteţi adăuga blocuri pentru a schimba fundalul şi viteza
+          pinguinului, şi apoi să îl mutaţi cu săgeţile până când marcați?
+        studio_c3_game_7: Creați-vă propriul joc. Când aţi terminat, faceţi clic pe
+          Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele
+          lor.
         studio_playlab_1: Poți face acest câine să spună "Bună ziua lume"?
         studio_playlab_2: Puteţi face cainele sa spuna ceva şi apoi dupa aceea pisica
           sa continue sa spuna altceva?
@@ -535,36 +548,170 @@
           into the octopus, and then move him with the arrows until you score?
         studio_playlab_9: Can you add blocks to change the background and the speed
           of the penguin, and then move him with the arrows until you score?
-        studio_playlab_10: Create your own game. When you're done, click Finish to
-          let friends try your story on their phones.
-        studio_full_sandbox: Create your own game. When you're done, click Finish
-          to let friends try your story on their phones.
+        studio_playlab_10: Creați-vă propriul joc. Când aţi terminat, faceţi clic
+          pe Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele
+          lor.
+        studio_full_sandbox: Creați-vă propriul joc. Când aţi terminat, faceţi clic
+          pe Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele
+          lor.
         studio_k1_1: Poți face acest câine să spună "Bună ziua lume"?
         studio_k1_2: Puteţi face cainele sa spuna ceva şi apoi dupa aceea pisica sa
           continue sa spuna altceva?
-        studio_k1_3: Can you write a program to make this dog move to the target?
-        studio_k1_4: Make the dog move to the cat and the cat say "hello" when he
-          gets there.
-        studio_k1_5: Can you add a block to make the octopus happy?
-        studio_k1_6: Can you write a program to make this penguin move around using
-          the up / down / left /right keys to hit all of the targets?
-        maze_wordsearch_k_1: Move me to spell the word EAST
-        maze_wordsearch_k_2: Move me to spell the word SOUTH
-        maze_wordsearch_k_3: Move me to spell the word WEST
-        maze_wordsearch_k_4: Move me to spell the word NORTH
-        maze_wordsearch_k_6: Move me East and then South to spell the word JUMP
-        maze_wordsearch_k_9: Move me one way, then another to spell the word CODE
-        maze_wordsearch_k_13: Move me one way, then another to spell the word DEBUG
-        maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
-        maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
-        maze_wordsearch_k_20: This is a test! Move me one way, then another to spell
-          the word STORY
-        webapp_ec_simple: Create your web app by using createHtmlBlock.
-        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
-          it in the new "penColour" block.'
-        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
-          a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
-          Have fun!'
+        studio_k1_3: Puteţi scrie un program pentru a face acest câine să se miște
+          spre pisică?
+        studio_k1_4: Faceți câinele să se miște spre pisică și pe aceasta să spună
+          "hello", atunci când el ajunge acolo.
+        studio_k1_5: Puteţi să adăugaţi un bloc pentru a face caracatiţa fericită?
+        studio_k1_6: Creați-vă propria poveste! Deplasați împrejur pisica şi câinele
+          şi făceți-le să spună ceva.
+        maze_wordsearch_k_1: Mutați-mă ca să spun literele cuvântului EST
+        maze_wordsearch_k_2: Mutați-mă ca să spun literele cuvântului SUD
+        maze_wordsearch_k_3: Mutați-mă ca să spun literele cuvântului VEST
+        maze_wordsearch_k_4: Mutați-mă ca să spun literele cuvântului NORD
+        maze_wordsearch_k_6: Mutați-mă spre Est, apoi spre Sud ca să spun literele
+          cuvântului SALT
+        maze_wordsearch_k_9: Mișcați-mă într-un sens, apoi în celălalt ca să spun
+          literele cuvântului COD
+        maze_wordsearch_k_13: Mișcați-mă într-un sens, apoi în celălalt ca să spun
+          literele cuvântului DEPANARE
+        maze_wordsearch_k_15: Mișcați-mă într-un sens, apoi în celălalt ca să spun
+          literele cuvântului DEASUPRA
+        maze_wordsearch_k_16: Mișcați-mă într-un sens, apoi în celălalt ca să spun
+          literele cuvântului DEDESUBT
+        maze_wordsearch_k_20: Acesta este un test! Mișcați-mă într-un sens, apoi în
+          celălalt ca să spun literele cuvântului POVESTE
+        webapp_ec_simple: Creați-vă propria aplicație web folosind createHtmlBlock.
+        turtle_ec_1_2: 'Acum, desenați un pătrat. Atenție: folosți culoarea favorită
+          alegând-o din noul bloc ”penColor”.'
+        turtle_ec_1_10: 'Ați reușit! Acum, desenați orice doriți. Unele idei distractive:
+          o figură băţ, fulg de nea sau spirală. Încercați, de asemenea, noul bloc
+          "penWidth". Distracţie plăcută!'
+        studio_ec_sandbox: Creați-vă propriul joc. Când aţi terminat, faceţi clic
+          pe Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele
+          lor.
+    levelbuilder:
+      frozen line:
+        instructions: Salutare! Eu sunt Elsa din Arendelle. Ajutați-mă să creez o
+          singură linie.
+      frozen perpendicular:
+        instructions: Acum să vedem dacă putem crea două linii care formează un unghi
+          de 90 de grade. Va trebui să folosiți blocuri ”Rotește” și ”Mișcă”.
+      frozen square iterative:
+        instructions: Se pare că am parcurs jumătate de drum în crearea unui pătrat.
+          Să punem 4 linii împreună pentru a crea un pătrat.
+      frozen square loop:
+        instructions: Salutare, eu sunt Anna din Arendelle! Haideți să facem un pătrat
+          cu blocul repetă, care folosește mai puține blocuri. De câte ori (???) ar
+          trebui să reia blocul ”Repetă” blocurile din interior pentru a face un pătrat?
+      frozen square loop 3x:
+        instructions: Haideți să creăm trei pătrate, rotind după fiecare pătrat. Asigurați-vă
+          că rotiți cu 120 de grade înainte de fiecare pătrat nou.
+      frozen square snowflake:
+        instructions: Puteți să creați un fulg de nea folosind blocul ”Repetă” pentru
+          a face un pătrat de 10 ori și blocul ”Rotește” să rotească 36 de grade între
+          pătrate?
+      frozen cross:
+        instructions: Utilizaţi blocul "Repetă" pentru a crea un semn plus. Ați observat
+          că Elsa se poate muta înainte şi înapoi?
+      frozen cross rotate:
+        instructions: Acum, încercaţi să îl repetați de 10 ori. Câte grade trebuie
+          să rotiți după fiecare linie?
+      frozen cross rotate dense:
+        instructions: 'Haideți să îl repetăm de 90 de ori! De câte ori intră 90 în
+          360? Sugestie: Este un număr chiar foarte mic.'
+      frozen diamond:
+        instructions: 'Haideți să creăm un paralelogram. Este chiar ca un pătrat dar
+          are unghiuri diferite: unghiuri de 60 și 120 de grade în loc de unghiuri
+          de 90 de grade.'
+      frozen diamond mini snowflake:
+        instructions: Ştiaţi că fiecare fulg de nea are o formă diferită? Haideți
+          să creăm un nou fulg de nea utilizând blocul "Repetă" pentru a repeta un
+          paralelogram de 4 ori, rontind la dreapta 90 de grade după fiecare paralelogram.
+      frozen diamond snowflake:
+        instructions: Acum, haideți să creăm un nou fulg de zăpadă utilizând blocul
+          de repetare pentru a repeta un paralelogram de 10 ori, rotind la dreapta
+          36 de grade după fiecare dintre ele.
+      frozen circle:
+        instructions: Un cerc este o formă specială. Puteți să vă dați seama cu ce
+          număr să înlocuim semnul de întrebare pentru a desena un cerc?
+      frozen circle function:
+        instructions: Utilizaţi noul bloc "Creare cerc" pentru a crea 10 cercuri suprapuse.
+          Nu uitaţi să săriți în față între cercuri.
+      frozen circle function in circle:
+        instructions: Acum haideți să creăm 20 de cercuri suprapuse, rotind 18 grade
+          după fiecare cerc.
+      frozen circle function with parameter:
+        instructions: Aici este un bloc "Creare cerc", care poate face cercuri de
+          diferite dimensiuni. Îl puteţi folosi pentru a crea un mic cerc de dimensiunea
+          5 şi un cerc mai mare de dimensiune 10?
+      frozen snowflower:
+        instructions: Se pot crea modele complicare de zăpadă cu forme foarte simple.
+          Puteți face un model repetând 5 cercuri de dimensiune 5 și 5 cercuri de
+          dimensiune 10?
+      frozen snowflake branch:
+        instructions: Încercaţi să utilizaţi blocul "Creare ramură de fulg de nea"
+          pentru a crea trei ramuri, care încep să arate ca un fulg de nea.
+      frozen snowflake full:
+        instructions: Acum haideţi să îl repetăm de 8 ori pentru a face un frumos
+          fulg de nea!
+      frozen freeplay:
+        instructions: Aţi devenit oficial un artist maestru! Creați un paradis de
+          iarnă.
+      scrat 16:
+        instructions: Ghindă! Ghindă! Ghindă! Utilizaţi un bloc "dacă" pentru a mă
+          acolo cu cel mai mic număr de blocuri.
+      scrat 17:
+        instructions: OK, haideți să exersăm din nou - nu este foarte diferit, dar
+          uitați-vă după perete!
+      scrat 18:
+        instructions: Blocurile "dacă-altfel" verifică o condiţie, şi apoi execută
+          un lucru sau altul. Pentru a mă duce la ghindă încercaţi să utilizaţi acest
+          bloc nou.
+      scrat 19:
+        instructions: Încă un exercițiu de practică cu blocul "dacă-altfel", poate
+          reușești chiar prima încercare?
+      scrat 20:
+        instructions: Puteți să mai adăugați doar 3 blocuri pentru a mă ajuta să rezolv
+          un labirint mai complex? Dacă o faceți bine, voi putea să merg pe orice
+          traseu curbat, indiferent de lungime. Uraaa! Gheața se topește!
+      Standalone_Artist_1:
+        instructions: Welcome to Artist! First off, let's try to make a simple square
+          using the turn right block and move forward block. Each side should be 100
+          pixels long.
+      Standalone_Artist_2:
+        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel
+          long sides.
+      Standalone_Artist_3:
+        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree
+          turns?
+      Standalone_Artist_4:
+        instructions: Now you've got a new block to play with, the loop. This will
+          repeat a set of commands. What happens if you loop these commands 6 times?
+      Standalone_Artist_5:
+        instructions: How many times do you need to loop this diamond to draw the
+          flower?
+      Standalone_Artist_5.5:
+        instructions: 'Notice how we simplified the diamond code by turning it into
+          a loop. You can loop that whole sequence 12 times to draw the flower. Hint:
+          You''ll need to turn 30 degrees after your diamond loop so you don''t keep
+          drawing over the same diamond.'
+      Standalone_Artist_6:
+        instructions: 'Loop this hexagon code 6 times to create the design. How many
+          degrees will you need to turn each time? Hint: divide the number of degrees
+          in a circle by the number of times you are looping.'
+      Standalone_Artist_7:
+        instructions: 'A function is another programming tool to help you avoid repeating
+          yourself. This function draws a flower, so you can use it any time you want
+          to draw a flower. Use this and the new jump block to draw these flowers.
+          Hint: The flowers are 150 pixels apart'
+      Standalone_Artist_8:
+        instructions: Here's a function called "Draw a shape" that we've programmed
+          to draw hexagons. Run the code to see what it does and then experiment with
+          the function to see what happens. Can you make it draw a pattern of squares,
+          triangles, or octagons?
+      Standalone_Artist_9:
+        instructions: Now go ahead and make whatever picture you'd like! You've even
+          got an empty function that you can make do whatever you want!
     video:
       name:
         maze_intro: Intro Labirint
@@ -575,12 +722,13 @@
         loop_until: Bloc Repetă Până La
         if: Bloc Dacă
         if_else: Bloc Dacă/Altfel
+        if_else_scrat: Bloc Dacă/Altfel
         function: Funcţii
         loop_while: Bloc În timp ce
         loop_for: Bloc Contor
         parameters: Funcții cu Parametrii
         hoc_wrapup: Încheierea Orei de Cod
-        Unplug1: What is CS?
+        Unplug1: Ce este informatica?
         Unplug2: Gândire de Calcul
         Unplug3: Programare pe Hârtie Milimetrică
         Unplug4: Algoritmi
@@ -592,21 +740,22 @@
         Unplug10: Internet
         Unplug11: Încheiere
         C1_happy_maps_unplugged: Hărţi Fericite
-        C1_moveitmoveit_unplugged: Move It, Move It
+        C1_moveitmoveit_unplugged: Mutaţi-l, mutați-l
         C1_bigevent_unplugged: Marele eveniment
         C1_getting_loopy: Transformând în Buclă
-        C1_pair_programming: Pair Programming
-        C1_maze_intro_sequencing: Maze Sequencing Intro
-        C1_maze_debugging: Maze Debugging
-        C1_bee_level_intro: Bee Level - Intro
+        C1_pair_programming: Programare în perechi
+        C1_maze_intro_sequencing: Introducere în secvențierea unui labirint
+        C1_maze_debugging: Labirint Depanare
+        C1_bee_level_intro: Albină Nivel - Introducere
         C1_artist_intro: 'Intro Artist '
-        C1_spelling_bee_intro: Spelling Bee Intro
+        C1_spelling_bee_intro: Introducere în Albina ortografiind
         C1_zuck_repeat_loop: Bucle de Labirint
         C1_bee_loops: Bucle de Ortografie
         C1_maze_loops: Bucle de Labirint
-        C1_playlab_storytelling: Play Lab - Create a Story
-        C1_planting_seed: Planting a Seed
+        C1_playlab_storytelling: Rulare laborator - Creează o poveste
+        C1_planting_seed: Plantarea unei semințe
         C1_building_foundation: Construirea unei Fundaţii
+        C1_going_places_safely: Mergând în locuri în siguranţă
         C2_maze_intro: Intro Labirint
         C2_artist_intro: 'Intro Artist '
         C2_zuck_repeat_loop: Bucle de Labirint
@@ -615,37 +764,46 @@
         C2_bee_loops: Bucle de Ortografie
         C2_bee_debugging: Depanarea Ortografiei
         C2_bee_conditionals: Condiţii de Ortografie
-        C2_playlab_createstory: Play Lab - Create a Story
+        C2_playlab_createstory: Rulare laborator - Creează o poveste
         C2_graph_paper: Programare pe Hârtie Milimetrică
         C2_conditionals_with_cards: Condiţionale
         C2_binary_bracelets: Brăţări Binare
         C2_relay_programming: Programare de releu
-        C2_paper_airplanes: Paper Airplanes
+        C2_paper_airplanes: Avioane de hârtie
+        C2_digital_footprint: Amprenta ta Digitală
         C3_maze_level_4: Bucle de Labirint
         C3_artist_intro: 'Intro Artist '
         C3_artist_functions: Funcţii de Artist
         C3_bee_functions: Funcţii de Ortografie
         C3_bee_conditionals: Condiţii de Ortografie
         C3_maze_conditionals: Condiţionale de Labirint
-        C3_artist_nested_loops: Nested Loops
-        C3_farmer_while: While Loops
-        C3_bee_nested_loops: Nested Loops
+        C3_artist_nested_loops: Repetiții imbricate
+        C3_farmer_while: Repetiții While
+        C3_bee_nested_loops: Repetiții imbricate
         C3_bee_debugging: Depanarea Ortografiei
         C3_bounce: Săritură
-        C3_playlab_create_game: Play Lab - Create a Game
+        C3_playlab_create_game: Rulare laborator - Creează un joc
         C3_computational_thinking: Gândire de Calcul
         C3_dice_race: Cursă de Zaruri
         C3_internet: Internet
         C3_crowdsourcing: Obţinând Informaţii/Critici
         C3_functional_suncatchers: Prinzători ai Soarelui Funcţionali
-        C3_songwriting_with_parameters: Songwriting With Parameters
+        C3_songwriting_with_parameters: Compozitie cu parametri
+        C4_artist_math: Programming the Artist with Math
+        C4_create_functions: Creating Functions
+        C4_edit_functions: Editing Functions
+        C4_for_loops: Repetiții Pentru
+        C4_variables: Variabile
+        frozen_intro: Hour of Code Intro
+        frozen_loops: Introduction to Loops
+        frozen_functions: Introduction to Functions
     callout:
       text:
         drag_blocks: Trage un bloc "mutare" şi fixează-l sub alt bloc
         run: Apasă "Rulează" pentru a încerca programul tău
         watch_again: Click aici pentru a viziona video din nou
-        gray_block_explanation: Blocks that are grey can't be moved or deleted. Can
-          you solve the puzzle anyway?
+        gray_block_explanation: Blocurile cu gri nu pot fi șterse. Puteți, totuși,
+          să rezolvați puzzle-ul?
         show_code_explanation: Click aici pentru a vedea codul pentru programul pe
           care îl faci
         instructions_repeat_explanation: Instrucţiunile pentru fiecare puzzle sunt
@@ -656,13 +814,56 @@
           povestea începe" pentru a seta un actor pentru această poveste
         studio_say_text: Tastează ceea ce dorești să spună actorul în aceste citate
         jigsaw_click: Faceţi clic pe acest bloc!
-        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
-          Run" block to make Elsa move forward
-        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
-          determines how much Elsa turns
-        replace_questions: Use the drop-down to replace "???" with a number
-        replace_questions_degree: Use the drop-down to replace "???" with the correct
-          degree to turn
-        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
-          workspace
-        snowflake_dropdown: Use this drop-down to create different snowflakes!
+        move_elsa_forward: Trageţi un bloc de "Mutare înainte" şi fixaţi-l sub blocul
+          "Atunci când rulaţi" pentru a o face pe Elsa să avanseze
+        turn_elsa: Utilizaţi blocul "Întoarce" pentru a o face pe Elsa să se întoarcă.
+          Numărul din listă determină de câte ori se întoarce Elsa
+        replace_questions: Utilizaţi meniul derulant pentru a înlocui "???" cu un
+          număr
+        replace_questions_degree: Utilizaţi meniul derulant pentru a înlocui "???"
+          cu măsura corectă în grade pentru întoarcere
+        repeat_blocks: Utilizaţi blocul "Repetă" şi aduceți-l lângă blocurile din
+          spațiul de lucru
+        snowflake_dropdown: Utilizaţi acest meniu derulant pentru a crea diferiți
+          fulgi de zăpadă!
+        degrees_per_side: Împărțiți 360 la numărul de laturi pentru a obține mărimea
+          în grade a fiecărui unghi.
+        set_sides: Utilizaţi acest bloc ca să setați "laturi" la numărul necesar pentru
+          a finaliza puzzle-ul.
+        set_length: Utilizaţi acest bloc pentru a seta "lungime" la valoarea corectă.
+        which_equation: Care ecuație face mai mică fiecare latură pentru a forma mai
+          multe laturi? Încercați fiecare ecuație!
+        get_nectar: Utilizaţi noul bloc "obţine nectar".
+        actions_category: Caseta de instrumente are acum un nou aspect! Blocurile
+          "Acţiuni" sunt aici acum.
+        draw_square_hint: 'Sugestie: Utilizaţi exact repetiția pe care tocmai aţi
+          făcut-o în ultimul puzzle.'
+        edit_function: Utilizaţi acest buton pentru a edita funcţia.
+        create_function: Click aici pentru a deschide bara de instrumente "Funcţii",
+          apoi faceţi clic pe butonul "Creează o funcţie".
+        house_hint: Este ok, chiar dacă imaginea nu arată ca o casă încă. O vom repara
+          în puzzle-ul următor.
+        edit_draw_square: Utilizaţi acest buton pentru a edita funcţia şi pentru a
+          adăuga repetiția.
+        edit_get_nectar: Utilizaţi acest buton pentru a edita funcţia şi pentru a
+          schimba direcţia spre care se va întoarce albina ca să obţină nectarul.
+        logic_category: Deschideți bara de instrumente "Logică" pentru a găsi blocul
+          "dacă/altfel".
+        length_parameter: Puteţi actualiza această funcţie, astfel încât ea să folosească
+          parametrul "lungime"?
+        frozen_diamond_repeat: Use the repeat block to create this shape.
+        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
+          each circle.
+        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
+          and change the size.
+        frozen_snowflake_branch: Use the "create a snowflake branch" block
+        frozen_create_square: Attach more blocks here to create a square
+        playlab_drag_say: Drag the "say" block here and type "hello"
+        playlab_use_twice: Use this block twice and remember to change the actor number
+        playlab_move_girl: Use the "move right" block to move Tennis Girl
+        playlab_play_sound: Add "play sound" block here
+        playlab_arrow_keys: Remember to use these to move the witch after clicking
+          on Run
+        playlab_add_move: Add "move" blocks inside this repeat block
+        playlab_add_score: Add score blocks here
+        playlab_add_blocks: Add your blocks here

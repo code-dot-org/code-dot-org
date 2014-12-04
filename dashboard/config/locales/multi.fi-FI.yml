@@ -2,51 +2,54 @@
   data:
     multi:
       2-3 artist debug multi 1:
-        Artist Debugging Multiple Choice One: Artist Debugging Multiple Choice One
+        Artist Debugging Multiple Choice One: Taiteilija Virheenkorjaus Monivalintakysymyksiä
+          Yksi
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
           700
-        Why won't this circle go all the way around?: Why won't this circle go all
-          the way around?
+        Why won't this circle go all the way around?: Miksi tämä ympyrä ei ole kokonainen?
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png
       2-3 artist loops multi 1:
-        Artist Loops Multiple Choice: Artist Loops Multiple Choice
+        Artist Loops Multiple Choice: Taiteilija Silmukoita Monivalintakysymyksiä
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
           500
-        Which shape is made by this loop?: Which shape is made by this loop?
+        Which shape is made by this loop?: Minkä kuvion tämä toisto lohko on tehnyt?
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png
       2-3 artist loops multi 2:
-        Artist Loops Multiple Choice: Artist Loops Multiple Choice
+        Artist Loops Multiple Choice: Taiteilija Silmukoita Monivalintakysymyksiä
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
           500
-        Which shape is made by this program?: Which shape is made by this program?
+        Which shape is made by this program?: Minkä kuvion tämä ohjelma on tehnyt?
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png
       2-3 artist functions multi 1:
-        Artist Functions Multiple Choice One: Artist Functions Multiple Choice One
+        Artist Functions Multiple Choice One: Taiteilija Toimintoja Monivalintakysymyksiä
+          Yksi
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png,
           500
-        Pick the correct blocks to draw this image using the given functions: Pick
-          the correct blocks to draw this image using the given functions
+        Pick the correct blocks to draw this image using the given functions: Valitse
+          oikea lohko joka piirtää tämän kuvan käyttäen annettuja toimintoja
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png
       2-3 bee conditionals multi 1:
-        Bee Conditionals Multiple Choice One: Bee Conditionals Multiple Choice One
-        Which comparison below is true?: Which comparison below is true?
+        Bee Conditionals Multiple Choice One: Mehiläinen Ehtoilausekkeita Monivalintakysymyksiä
+          Yksi
+        Which comparison below is true?: Mikä allaolevista vertailuista on totta?
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png
       2-3 bee conditionals multi 2:
-        Bee Conditionals Multiple Choice Two: Bee Conditionals Multiple Choice Two
+        Bee Conditionals Multiple Choice Two: Mehiläinen Ehtolohkoja Monivalintakysymyksiä
+          Kaksi
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png,
           500
         Choose the best blocks.: Valitse parhaat lohkot.
@@ -55,7 +58,8 @@
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png
       2-3 bee conditionals multi 3:
-        Bee Conditionals Multiple Choice Two: Bee Conditionals Multiple Choice Two
+        Bee Conditionals Multiple Choice Two: Mehiläinen Ehtolohkoja Monivalintakysymyksiä
+          Kaksi
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
           500
         Choose the best blocks: Valitse parhaat lohkot
@@ -64,7 +68,8 @@
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png
       2-3 bee loops multi 1:
-        Bee Loops Multiple Choice One: Bee Loops Multiple Choice One
+        Bee Loops Multiple Choice One: Mehiläinen Silmukoita Monivalintakysymyksiä
+          Yksi
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png,
           500
         Which blocks collect all of the nectar?: Mikä lohko kerää kaiken meden?
@@ -73,7 +78,7 @@
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png
       2-3 maze multi 1:
-        Maze Multiple Choice One: Maze Multiple Choice One
+        Maze Multiple Choice One: Sokkelo Monivalintakysymyksiä Yksi
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
           500
         Choose the best answer.: Valitse paras vastaus.
@@ -83,7 +88,7 @@
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
       2-3 Maze Multi 2:
-        Maze Multiple Choice: Maze Multiple Choice
+        Maze Multiple Choice: Sokkelo Monivalintakysymyksiä
         /script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_2_q.png,
           500
         Which blocks work?: Mitkä lohkot toimivat?
@@ -94,27 +99,27 @@
       2-3 Algorithms Multi 1:
         Multiple Choice: Monivalinta
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
-        Choose an algorithm for the image provided: Choose an algorithm for the image
-          provided
+        Choose an algorithm for the image provided: Valitse kuvaa vastaava algoritmi
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Start
           with a square<br/>Put a triangle above the square<br/>Put a triangle below
           the square
-        Start with a square<br/>Put a triangle right of square<br/>Put a rhombus below square<br/>Put triangle right of rhombus: Start
-          with a square<br/>Put a triangle right of square<br/>Put a rhombus below
-          square<br/>Put triangle right of rhombus
-        Start with a square<br/>Put a rhombus above the square<br/>Put a triangle right of the rhombus: Start
-          with a square<br/>Put a rhombus above the square<br/>Put a triangle right
-          of the rhombus
-        Start with a square<br/>Put a triangle below the square<br/>Put a rhombus right of the triangle: Start
-          with a square<br/>Put a triangle below the square<br/>Put a rhombus right
-          of the triangle
+        0: '? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
+          below square<br/>Put triangle right of parallelogram'
+        1: ': Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
+          below square<br/>Put triangle right of parallelogram'
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Start
+          with a square<br/>Put a parallelogram above the square<br/>Put a triangle
+          right of the parallelogram
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Start
+          with a square<br/>Put a triangle below the square<br/>Put a parallelogram
+          right of the triangle
       2-3 Algorithms Multi 2:
         Multiple Choice: Monivalinta
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Start
           with a triangle<br/>Put a square below the triangle<br/>Put another triangle
           below the square
-        Which image does <em>not</em> follow this algorithm?: Which image does <em>not</em>
-          follow this algorithm?
+        Which image does <em>not</em> follow this algorithm?: Mikä kuva <em>ei</em>
+          toteuta tätä algoritmia?
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
         /script_assets/2-3_images/unplugged/algorithms_2_a3.png: /script_assets/2-3_images/unplugged/algorithms_2_a3.png
@@ -122,15 +127,15 @@
       2-3 Binary Multi 1:
         Multiple Choice: Monivalinta
         /script_assets/2-3_images/unplugged/graph_paper_1_q.png: /script_assets/2-3_images/unplugged/graph_paper_1_q.png
-        Which program makes this image?: Which program makes this image?
+        Which program makes this image?: Mikä ohjelma piirtää tämän kuvan?
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a2.png: /script_assets/2-3_images/unplugged/graph_paper_1_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a3.png: /script_assets/2-3_images/unplugged/graph_paper_1_a3.png
       2-3 Conditionals Multi 1:
         Multiple Choice: Monivalinta
         /script_assets/2-3_images/unplugged/conditionals_1_q.png: /script_assets/2-3_images/unplugged/conditionals_1_q.png
-        According to the rules of the game, which set of cards is scored correctly?: According
-          to the rules of the game, which set of cards is scored correctly?
+        According to the rules of the game, which set of cards is scored correctly?: Mikä
+          joukko kortteja on pisteytetty oikein pelin sääntöjen mukaan?
         /script_assets/2-3_images/unplugged/conditionals_1_a1.png: /script_assets/2-3_images/unplugged/conditionals_1_a1.png
         /script_assets/2-3_images/unplugged/conditionals_1_a2.png: /script_assets/2-3_images/unplugged/conditionals_1_a2.png
         /script_assets/2-3_images/unplugged/conditionals_1_a3.png: /script_assets/2-3_images/unplugged/conditionals_1_a3.png
@@ -138,8 +143,8 @@
       2-3 Getting Loopy Multi 1:
         Multiple Choice: Monivalinta
         /script_assets/2-3_images/unplugged/getting_loopy_1_q.png: /script_assets/2-3_images/unplugged/getting_loopy_1_q.png
-        How would you simplify this sequence with loops?: How would you simplify this
-          sequence with loops?
+        How would you simplify this sequence with loops?: Miten voisit yksinkertaistaa
+          tämän komentosarjan silmukoilla?
         /script_assets/2-3_images/unplugged/getting_loopy_1_a1.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a1.png
         /script_assets/2-3_images/unplugged/getting_loopy_1_a2.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a2.png
         /script_assets/2-3_images/unplugged/getting_loopy_1_a3.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a3.png
@@ -147,22 +152,21 @@
       2-3 Graph Paper Multi 1:
         Multiple Choice: Monivalinta
         /script_assets/2-3_images/unplugged/graph_paper_1_q.png: /script_assets/2-3_images/unplugged/graph_paper_1_q.png
-        Which program makes this image?: Which program makes this image?
+        Which program makes this image?: Mikä ohjelma piirtää tämän kuvan?
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a2.png: /script_assets/2-3_images/unplugged/graph_paper_1_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a3.png: /script_assets/2-3_images/unplugged/graph_paper_1_a3.png
       2-3 Relay Programming Multi 1:
         Multiple Choice: Monivalinta
         /script_assets/2-3_images/unplugged/relay_programming_1_q.png: /script_assets/2-3_images/unplugged/relay_programming_1_q.png
-        Which program does not create this image?: Which program does not create this
-          image?
+        Which program does not create this image?: Mikä ohjelma ei piirrä tätä kuvaa?
         /script_assets/2-3_images/unplugged/relay_programming_1_a1.png: /script_assets/2-3_images/unplugged/relay_programming_1_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_1_a2.png: /script_assets/2-3_images/unplugged/relay_programming_1_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_1_a3.png: /script_assets/2-3_images/unplugged/relay_programming_1_a3.png
       2-3 Relay Programming Multi 2:
         Multiple Choice: Monivalinta
-        Which image-program combo does not contain mistakes?: Which image-program
-          combo does not contain mistakes?
+        Which image-program combo does not contain mistakes?: Mikä kuva-ohjelma ei
+          sisällä virheitä?
         /script_assets/2-3_images/unplugged/relay_programming_2_a1.png: /script_assets/2-3_images/unplugged/relay_programming_2_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
@@ -176,7 +180,7 @@
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png
       4-5 artist multi 2:
         Artist Multiple Choice: Artist Multiple Choice
-        Which drawing is symmetric?: Which drawing is symmetric?
+        Which drawing is symmetric?: Mikä piirroksista on symmetrinen?
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png
@@ -185,17 +189,17 @@
         Artist Functions Multiple Choice: Artist Functions Multiple Choice
         /script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png,
           500
-        Which function creates a rectangle that can change its size?: Which function
-          creates a rectangle that can change its size?
+        Which function creates a rectangle that can change its size?: Mikä funktio
+          luo suorakaiteen, joka voi vaihtaa kokoaan?
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png
       4-5 artist loops multi 1:
-        Artist Loops Multiple Choice: Artist Loops Multiple Choice
+        Artist Loops Multiple Choice: Taiteilija Silmukoita Monivalintakysymyksiä
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png,
           500
-        Which blocks will create the design?: Which blocks will create the design?
+        Which blocks will create the design?: Mitkä lohkot luovat kuvion?
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png
@@ -236,7 +240,7 @@
       4-5 bee loops multi 1:
         Bee Loops Multiple Choice: Bee Loops Multiple Choice
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png
-        Which blocks will solve the puzzle?: Which blocks will solve the puzzle?
+        Which blocks will solve the puzzle?: Mitkä lohkot ratkaisevat ongelman?
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png
@@ -245,16 +249,16 @@
         Famer Loops Multiple Choice: Famer Loops Multiple Choice
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png,
           500
-        Which blocks solve the puzzle?: Which blocks solve the puzzle?
+        Which blocks solve the puzzle?: Mitkä lohkot ratkaisevat ongelman?
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png
       4-5 maze multi 1:
-        Maze Multiple Choice: Maze Multiple Choice
+        Maze Multiple Choice: Sokkelo Monivalintakysymyksiä
         /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png,
           500
-        Which blocks solve the puzzle?: Which blocks solve the puzzle?
+        Which blocks solve the puzzle?: Mitkä lohkot ratkaisevat ongelman?
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png
@@ -263,7 +267,7 @@
         Maze Conditionals Multiple Choice: Maze Conditionals Multiple Choice
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png,
           500
-        Which blocks solve the puzzle?: Which blocks solve the puzzle?
+        Which blocks solve the puzzle?: Mitkä lohkot ratkaisevat ongelman?
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png
@@ -272,10 +276,10 @@
         Multiple Choice: Monivalinta
         Which one of these items is hardest to describe an algorithm for?: Which one
           of these items is hardest to describe an algorithm for?
-        <h4>Brushing your teeth</h4>: <h4>Brushing your teeth</h4>
-        <h4>Baking cookies</h4>: <h4>Baking cookies</h4>
-        <h4>Shopping from a grocery list</h4>: <h4>Shopping from a grocery list</h4>
-        <h4>Banana</h4>: <h4>Banana</h4>
+        <h4>Brushing your teeth</h4>: <h4>Harjaa hampaat</h4>
+        <h4>Baking cookies</h4>: <h4>Paista keksejä</h4>
+        <h4>Shopping from a grocery list</h4>: <h4>Ostosten teko kauppalistan mukaan</h4>
+        <h4>Banana</h4>: <h4>Banaani</h4>
       4-5 Computational Thinking Multi 1:
         Multiple Choice: Monivalinta
         0: '? Here are three sentences. Which of the templates below correctly abstracts
@@ -283,15 +287,16 @@
         1: ': Here are three sentences. Which of the templates below correctly abstracts
           so that all three match the same pattern as the template?'
         <h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>: <h4>Seattle
-          is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>
+          on iso kaupunki. <br/>Eugene on keskikokoinen kaupunki <br/> Hillview on
+          pikkukaupunki.</h4>
         <h4>Seattle _____ a _____ _____.</h4>: <h4>Seattle _____ a _____ _____.</h4>
         <h4>_____ is a _____ city.</h4>: <h4>_____ is a _____ city.</h4>
         <h4>_____ is _____ a _____.</h4>: <h4>_____ is _____ a _____.</h4>
         <h4>Eugene is a _____ city.</h4>: <h4>Eugene is a _____ city.</h4>
       4-5 Crowdsourcing Multi 1:
         Multiple Choice: Monivalinta
-        Which of these pictures best represents crowdsourcing?: Which of these pictures
-          best represents crowdsourcing?
+        Which of these pictures best represents crowdsourcing?: Mikä seuraavista kuvista
+          parhaiten kuvaa joukkoistamista?
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png
       4-5 Crowdsourcing Multi 2:
@@ -304,11 +309,11 @@
         <h4>Washing your face</h4>: <h4>Washing your face</h4>
       4-5 Digital Footprint Multi 1:
         Multiple Choice: Monivalinta
-        Which piece of information listed below is okay to share on the internet?: Which
-          piece of information listed below is okay to share on the internet?
-        <h4>Your birthday</h4>: <h4>Your birthday</h4>
-        <h4>Your favorite food</h4>: <h4>Your favorite food</h4>
-        <h4>Your address</h4>: <h4>Your address</h4>
+        Which piece of information listed below is okay to share on the internet?: Mikä
+          seuraavista tiedoista on turvallista jakaa internetissä?
+        <h4>Your birthday</h4>: <h4>Syntymäpäiväsi</h4>
+        <h4>Your favorite food</h4>: <h4>Suosikkiruokasi</h4>
+        <h4>Your address</h4>: <h4>Osoitteesi</h4>
         <h4>Your parent's credit card number</h4>: <h4>Your parent's credit card number</h4>
       4-5 Internet Multi 1:
         Multiple Choice: Monivalinta
@@ -362,11 +367,20 @@
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
+      Coordinates Multi 1:
+        Video game Coordinates: Video game Coordinates
+        Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
+        Which answer best describes the unicorn's movement?: Which answer best describes
+          the unicorn's movement?
+        The unicorn moves across the screen: The unicorn moves across the screen
+        The unicorn's y value changes: The unicorn's y value changes
+        The unicorn moves to the left: The unicorn moves to the left
+        The unicorn's x value changes: The unicorn's x value changes
       K-1 Artist 1 Multi 1:
         Multiple Choice: Monivalinta
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png,
           500
-        Which blocks solve this puzzle?: Which blocks solve this puzzle?
+        Which blocks solve this puzzle?: Mitkä lohkot ratkaisevat ongelman?
         /script_assets/k_1_images/artist_images/W|S|S.png: /script_assets/k_1_images/artist_images/W|S|S.png
         /script_assets/k_1_images/artist_images/E|S|S.png: /script_assets/k_1_images/artist_images/E|S|S.png
         /script_assets/k_1_images/artist_images/S|E|E.png: /script_assets/k_1_images/artist_images/S|E|E.png
@@ -393,7 +407,7 @@
         Multiple Choice: Monivalinta
         /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png, 300: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png,
           300
-        Which blocks create this picture?: Which blocks create this picture?
+        Which blocks create this picture?: Mitkä lohkot luovat tämän kuvan?
         /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a3.png
@@ -460,8 +474,8 @@
       K-1 Getting Loopy Multi 1:
         Multiple Choice: Monivalinta
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png
-        How would you simplify this sequence with loops?: How would you simplify this
-          sequence with loops?
+        How would you simplify this sequence with loops?: Miten voit yksinkertaistaa
+          tämän sekvenssin silmukoilla?
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png
@@ -526,11 +540,11 @@
         /script_assets/k_1_images/search_images/square.png, 700: /script_assets/k_1_images/search_images/square.png,
           700
         Which word is spelled?: Minkä sanan lohkot tavaavat?
-        SET: SET
-        SQUARE: SQUARE
-        SOUTH: SOUTH
+        SET: ASETA
+        SQUARE: NELIÖ
+        SOUTH: ETELÄ
       K-1 multi 4:
-        Driver and Helper: Driver and Helper
+        Driver and Helper: Kuljettaja ja apuri
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: One
           of these boys is the <b>driver</b>.  And one is the <b>helper</b>.
@@ -538,7 +552,7 @@
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
         /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
       K-1 multi 5:
-        Driver and Helper: Driver and Helper
+        Driver and Helper: Kuljettaja ja apuri
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: One
           of these boys is the <b>driver</b>.  And one is the <b>helper</b>.
@@ -576,10 +590,10 @@
         Select the best answer to the question.: Select the best answer to the question.
         When converting a circle to code, the correct order is: When converting a
           circle to code, the correct order is
-        top, left, right: top, left, right
-        left, right, top: left, right, top
+        top, left, right: ylös, vasen, oikea
+        left, right, top: vasen, oikea, ylös
         random: satunnainen
-        left top right: left top right
+        left top right: vasen yläoikea
       Circle to code:
         Code from Circle: Code from Circle
         /script_assets/msm/Unit%202/exercise_1.png: /script_assets/msm/Unit%202/exercise_1.png
@@ -590,10 +604,10 @@
         (+ (* (- 8 6) 4) 5): '(+ (* (- 8 6) 4) 5) '
         (+ 5 (* (- 8 6) 4)): (+ 5 (* (- 8 6) 4))
       valid contracts multi:
-        Valid Contracts: Valid Contracts
+        Valid Contracts: Voimassaolevat sopimukset
         Pick the best answer to the question.: Valitse paras vastaus kysymykseen.
-        Which of these is a valid contract for the function circle?: Which of these
-          is a valid contract for the function circle?
+        Which of these is a valid contract for the function circle?: Mikä näistä sopimuksista
+          on voimassa ympyräfunktiolle?
         'circle: size style color -> image': 'circle: size style color -> image'
         'circle: number string string -> image': 'circle: number string string ->
           image'
@@ -611,7 +625,7 @@
           "red")
         (rectangle (+ 8 2) (- 7 5) solid red): (rectangle (+ 8 2) (- 7 5) solid red)
       test multi image:
-        Maze Multiple Choice Two: Maze Multiple Choice Two
+        Maze Multiple Choice Two: Sokkelo monivalinta kaksi
         /script_assets/matches/images/head.jpg,400: /script_assets/matches/images/head.jpg,400
         This puzzle is all about selecting the correct flowers.: This puzzle is all
           about selecting the correct flowers.

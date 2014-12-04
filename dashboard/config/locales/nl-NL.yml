@@ -2,7 +2,7 @@
   activerecord:
     errors:
       messages:
-        blank: verplicht veld
+        blank: is vereist
     attributes:
       user:
         name: Weergegeven naam
@@ -20,12 +20,9 @@
   hello: Hallo wereld
   welcome_back: Welkom terug, %{name}
   add_teacher_form:
-    code_or_email:
-      label: 'voeg een leraar toe door code of e-mail adres:'
-      placeholder: code (ABCDEF) of email (teacher@school.edu)
     code:
-      label: 'Voeg een leraar toe via onderdeel code:'
-      placeholder: Code (ABCDEF)
+      label: 'Voeg een leraar toe:'
+      placeholder: Sectiecode (ABCDEF)
     submit: voeg leraar toe
   add_hint_form:
     placeholder: Voer hier uw hint
@@ -86,7 +83,7 @@
     age: Leeftijd
     user_type: Bent u een leerling of een leraar?
     submit: Meld je aan
-    teacher: Bent u een leraar?
+    teacher: Ben je een leraar?
     valid_username: Beschikbaar!
     invalid_username: Gebruikersnaam moet minstens 5 tekens zijn
     taken_username: Gebruikersnaam is al in gebruik
@@ -406,12 +403,11 @@
     test_videos_help: Test de nieuwe video-speler op uw school
     try_beta_courses: Nieuw! Probeer cursussen die nog in ontwikkeling zijn voor basisschoolleerlingen
     use_as_teacher: Gebruik de site als leerkracht
+    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
     heading_elementary: <h2>Cursussen van 20 uur voor</h2><h2>Basisschoolleerlingen</h1>
     heading_apps: <h2>Leuk voor</h2><h1>Iedereen</h1>
     heading_legacy: <h2>Onze algemene cursus voor</h2><h1>Alle Leeftijden</h1>
-    gallery:
-      your_turtle: Mijn Kunst
-      your_studio: Mijn Apps
+    your_gallery: Galerij
   gender:
     male: Man
     female: Vrouw
@@ -422,10 +418,11 @@
   footer:
     help_from_html: Werknemers van Google, Microsoft, Facebook en Twitter hebben geholpen
       bij het samenstellen van deze opdracht.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 <a href="http://www.rovio.com">Rovio
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 <a href="http://www.rovio.com">Rovio
       Entertainment Ltd</a>. Alle rechten voorbehouden.<br/> Plants vs. Zombies&trade;
       & &copy; 2013 <a href="http://www.ea.com">Electronic Arts Inc.</a>. Alle rechten
       voorbehouden.
+    powered_by_aws: Powered by Amazon Web Services
     feedback: Geef feedback
     translate: Help ons om te vertalen naar uw taal
     support: Ondersteuning
@@ -467,16 +464,17 @@
   try_reloading: Probeer de pagina opnieuw te laden
   next_stage: Klaar! Verder naar het volgende niveau
   download_pdf: Open lesplan
-  lesson_plan: Lesson Plan
+  lesson_plan: Lesplan
   view_lesson_plan: Lesplan bekijken
   pdf_download: PDF downloaden
-  download_coming_soon: Downloadable activity coming soon.
-  video_coming_soon: Video Coming Soon!
+  download_coming_soon: Downloadbare activiteit weldra beschikbaar.
+  video_coming_soon: Video weldra beschikbaar!
   share_code:
     title: Klik op 'Uitvoeren' om mijn programma te draaien
     bounce_og_title: Bekijk mijn Stuiterspel
     flappy_og_title: Check mijn Flappy Game
     studio_og_title: Check mijn Play Lab App
+    check_out_what_i_made: Kijk wat ik gemaakt heb
     og_description: Ik heb met Code.org het programma zelf geschreven
     phone_number_not_allowed: Het lijkt erop dat er een telefoonnummer in zit. Probeer
       de tekst te veranderen.
@@ -508,6 +506,14 @@
     20hour:
       title: Introductiecursus
       body: Probeer onze cursus Introductie Informatica van 20 uur.
+    hoc2014:
+      try_new_tutorial: Probeer onze nieuwe Uur Code in beta
+      try_frozen: Maak kunst met Anna en Elsa van Frozen
+    gallery:
+      title: Galerij
+      body: Bekijk een galerij van apps en kunstwerken gemaakt door onze gebruikers
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: Leerlingen wonnen deze met programmeren!
     students_made_these_with_code: Leerlingen hebben dit gemaakt met code!
@@ -521,10 +527,16 @@
     more: Meer &rarr;
     caption_by_name_age: door %{name}, %{age} jaar
     caption_time_ago: '%{time_ago} geleden'
+    header: Galerij
+    header_playlab: Speel Lab
+    header_artist: Kunstenaar
   landing:
     prerelease: Deze cursus is in <span class='betatext'>beta</span>. Dat betekent
       dat het nog niet de uiteindelijke versie van de cursus is, en nog zal worden
       aangepast wanneer we feedback krijgen en verbeteringen doorvoeren.
+    prerelease_hoc2014: Deze handleiding is in <span class='betatext'>beta</span>.
+      Deze handleiding wordt bijgewerkt afhankelijk van ontvangen feedback en er worden
+      verbeteringen aan aangebracht.
     feedback: Geef Feedback
     report_bug: Meld Bug
     support: Help
@@ -556,7 +568,7 @@
             en programmeren. De cursus is bedoeld voor basisschool-klassen, maar is
             voor alle leeftijden leuk om te leren.
         Hour of Code:
-          title: Een Uur Code
+          title: Uur Code
           description: ''
         edit-code:
           title: Bewerk de code

@@ -37,7 +37,7 @@ module LevelsHelper
     "#{root_url.chomp('/')}#{path}"
   end
 
-  def set_videos_and_blocks_and_callouts
+  def set_videos_and_blocks_and_callouts_and_instructions
     select_and_track_autoplay_video
 
     if @level.is_a? Blockly
@@ -46,6 +46,7 @@ module LevelsHelper
     end
 
     select_and_remember_callouts if @script_level
+    localize_levelbuilder_instructions
   end
 
   def select_and_track_autoplay_video
@@ -165,6 +166,11 @@ module LevelsHelper
     "false"
   end
 
+  def localize_levelbuilder_instructions
+    loc_val = data_t("levelbuilder.#{@level.name}", "instructions")
+    @level.properties['instructions'] = loc_val unless loc_val.nil?
+  end
+
   # Code for generating the blockly options hash
   def blockly_options(local_assigns={})
     # Use values from properties json when available (use String keys instead of Symbols for consistency)
@@ -206,6 +212,7 @@ module LevelsHelper
       maze:map
       artist_builder:builder
       ani_gif_url:aniGifURL
+      shapeways_url
       images
       free_play
       min_workspace_height
@@ -229,6 +236,7 @@ module LevelsHelper
       impressive
       open_function_definition
       callout_json
+      disable_sharing
     ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
     .each do |dashboard, blockly|
       # Select first valid value from 1. local_assigns, 2. property of @level object, 3. named instance variable, 4. properties json
@@ -281,10 +289,29 @@ module LevelsHelper
     path, width = text.split(',')
     if %w(.jpg .png .gif).include? File.extname(path)
       "<img src='#{path.strip}' #{"width='#{width.strip}'" if width}></img>"
+    elsif File.extname(path).ends_with? '_blocks'
+      # '.start_blocks' takes the XML from the start_blocks of the specified level.
+      ext = File.extname(path)
+      base_level = File.basename(path, ext)
+      level = Level.find_by(name: base_level)
+      content_tag(:iframe, '', {
+          src: url_for(controller: :levels, action: :embed_blocks, level_id: level.id, block_type: ext.slice(1..-1)).strip,
+          width: width ? width.strip : '100%',
+          scrolling: 'no',
+          seamless: 'seamless',
+          style: 'border: none;',
+      })
     elsif File.extname(path) == '.level'
       base_level = File.basename(path, '.level')
       level = Level.find_by(name: base_level)
-      "<div class='aspect-ratio'><iframe src='#{url_for(:id => level.id, :controller => 'levels', :action => 'show', :embed => true).strip}' width='#{width ? width.strip : '100%'}' scrolling='no' seamless='seamless' style='border: none;'></iframe></div>"
+      content_tag(:div,
+        content_tag(:iframe, '', {
+          src: url_for(id: level.id, controller: :levels, action: :show, embed: true).strip,
+          width: (width ? width.strip : '100%'),
+          scrolling: 'no',
+          seamless: 'seamless',
+          style: 'border: none;'
+        }), {class: 'aspect-ratio'})
     else
       data_t(prefix + '.' + @level.name, text)
     end

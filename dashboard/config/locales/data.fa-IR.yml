@@ -50,6 +50,7 @@
           MazeEC: مرحله 1
           Webapp: مرحله 2
           ArtistEC: مرحله 3
+          StudioEC: مرحله 4
         events:
           desc: Bounce (beta)
           Bounce: مرحله 1
@@ -101,6 +102,7 @@
         Webapp: Webapp
         ArtistEC: هنرمند
         TextMatch: Text Match
+        StudioEC: آزمایشگاه بازی
     trophy:
       name:
         Bronze: برنز
@@ -528,6 +530,127 @@
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
           a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
           Have fun!'
+        studio_ec_sandbox: Create your own game. When you're done, click Finish to
+          let friends try your game on their phones.
+    levelbuilder:
+      frozen line:
+        instructions: سلام ! من السا هستم از آرندل . به من کمک کنید تا یک خط بکشم
+          .
+      frozen perpendicular:
+        instructions: حالا بیاین ببینیم می تونیم دو تا خط بکشیم که با هم زاویه 90
+          درجه داشته باشند . شما به بلوک چرخش و بلوک حرکت نیاز دارید .
+      frozen square iterative:
+        instructions: به نظر می رسد که ما نصف راه را برای کشیدن یک مربع رفته ایم .
+          حالا بیایید برای ساختن یک مربع ،  4 خط را کنار هم قرار دهیم .
+      frozen square loop:
+        instructions: سلام ، من آنا هستم از آرندل ! بیایید با استفاده از بلوک تکرار
+          یک مربع بکشیم که از بلوک های کمتری استفاده کنیم . چند بار (؟؟؟) باید بلوک
+          داخل بلوک تکرار را ، تکرار کنیم تا یک مربع ساخته شود ؟
+      frozen square loop 3x:
+        instructions: Let's create three squares, turning after each square. Be sure
+          to turn by 120 degrees before each new square.
+      frozen square snowflake:
+        instructions: Can you create a snowflake using the "Repeat" block to make
+          a square 10 times, and the "Turn" block to turn 36 degrees between each
+          square?
+      frozen cross:
+        instructions: Use the "Repeat" block to create a plus sign. Did you notice
+          Elsa can move forward and backward?
+      frozen cross rotate:
+        instructions: Now try repeating it 10 times. How many degrees do you need
+          to turn between each line?
+      frozen cross rotate dense:
+        instructions: 'Let''s repeat it 90 times! How many times does 90 go into 360?
+          Hint: It''s a really small number.'
+      frozen diamond:
+        instructions: 'Let''s create a parallelogram. It''s just like a square but
+          has different angles: 60 and 120 degree angles instead of 90 degree angles.'
+      frozen diamond mini snowflake:
+        instructions: Did you know every snowflake is a different shape? Let's create
+          a new snowflake by using the "Repeat" block to repeat a parallelogram 4
+          times, turning right by 90 degrees between each parallelogram.
+      frozen diamond snowflake:
+        instructions: Now, let's create a new snowflake by using the repeat block
+          to repeat a parallelogram 10 times, turning right by 36 degrees between
+          each one.
+      frozen circle:
+        instructions: A circle is a special shape. Can you figure out what number
+          to replace the question marks with to draw a circle?
+      frozen circle function:
+        instructions: Use the new "Create a circle" block to create 10 overlapping
+          circles. Don't forget to jump forward between circles.
+      frozen circle function in circle:
+        instructions: Now let's create 20 overlapping circles, turning 18 degrees
+          between each circle.
+      frozen circle function with parameter:
+        instructions: Here's a "Create circle" block that can make circles of different
+          sizes. Can you use this to create a small circle of size 5 and a larger
+          circle of size 10?
+      frozen snowflower:
+        instructions: Intricate snow patterns can be created with very simple shapes.
+          Can you make a pattern by repeating 5 circles of size 5 and 5 circles of
+          size 10?
+      frozen snowflake branch:
+        instructions: Try using the "Create a snowflake branch" block to create three
+          branches, which starts to look like a snowflake.
+      frozen snowflake full:
+        instructions: Now let's repeat it 8 times to make a beautiful snowflake!
+      frozen freeplay:
+        instructions: You've officially become a master artist! Create a winter wonderland.
+      scrat 16:
+        instructions: Acorn! Acorn! Acorn! Use an "if" block to get me there with
+          the fewest number of blocks.
+      scrat 17:
+        instructions: Ok, let's do that again for practice - this isn't very different,
+          but watch out for the wall!
+      scrat 18:
+        instructions: The "If-else" blocks checks a condition, and then does one thing
+          OR another. To get me to the acorn try to use this new block.
+      scrat 19:
+        instructions: یک تمرین بیشتر با بلوک "if-else"، آیا می توانید با سعی خود جواب
+          درست بدهی؟
+      scrat 20:
+        instructions: Can you add just 3 blocks to help me solve a more complex maze?
+          If you do it right, I can walk any curvy path no matter the length. Hurry!
+          The ice is melting!
+      Standalone_Artist_1:
+        instructions: Welcome to Artist! First off, let's try to make a simple square
+          using the turn right block and move forward block. Each side should be 100
+          pixels long.
+      Standalone_Artist_2:
+        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel
+          long sides.
+      Standalone_Artist_3:
+        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree
+          turns?
+      Standalone_Artist_4:
+        instructions: Now you've got a new block to play with, the loop. This will
+          repeat a set of commands. What happens if you loop these commands 6 times?
+      Standalone_Artist_5:
+        instructions: How many times do you need to loop this diamond to draw the
+          flower?
+      Standalone_Artist_5.5:
+        instructions: 'Notice how we simplified the diamond code by turning it into
+          a loop. You can loop that whole sequence 12 times to draw the flower. Hint:
+          You''ll need to turn 30 degrees after your diamond loop so you don''t keep
+          drawing over the same diamond.'
+      Standalone_Artist_6:
+        instructions: 'Loop this hexagon code 6 times to create the design. How many
+          degrees will you need to turn each time? Hint: divide the number of degrees
+          in a circle by the number of times you are looping.'
+      Standalone_Artist_7:
+        instructions: 'A function is another programming tool to help you avoid repeating
+          yourself. This function draws a flower, so you can use it any time you want
+          to draw a flower. Use this and the new jump block to draw these flowers.
+          Hint: The flowers are 150 pixels apart'
+      Standalone_Artist_8:
+        instructions: Here's a function called "Draw a shape" that we've programmed
+          to draw hexagons. Run the code to see what it does and then experiment with
+          the function to see what happens. Can you make it draw a pattern of squares,
+          triangles, or octagons?
+      Standalone_Artist_9:
+        instructions: Now go ahead and make whatever picture you'd like! You've even
+          got an empty function that you can make do whatever you want!
     video:
       name:
         maze_intro: معرفی پیچ و خم
@@ -538,6 +661,7 @@
         loop_until: بلوک "Repeat Until"
         if: بلوک "if"
         if_else: بلوک "if/else"
+        if_else_scrat: بلوک "if/else"
         function: توابع
         loop_while: بلوک while
         loop_for: بلوک شمارشگر
@@ -554,9 +678,9 @@
         Unplug9: Relay programming
         Unplug10: Internet
         Unplug11: خلاصه
-        C1_happy_maps_unplugged: Happy Maps
+        C1_happy_maps_unplugged: نقشه های شاد
         C1_moveitmoveit_unplugged: Move It, Move It
-        C1_bigevent_unplugged: The Big Event
+        C1_bigevent_unplugged: رویداد بزرگ
         C1_getting_loopy: Getting Loopy
         C1_pair_programming: Pair Programming
         C1_maze_intro_sequencing: Maze Sequencing Intro
@@ -564,31 +688,33 @@
         C1_bee_level_intro: Bee Level - Intro
         C1_artist_intro: معرفی هنرمند
         C1_spelling_bee_intro: Spelling Bee Intro
-        C1_zuck_repeat_loop: Maze Loops
-        C1_bee_loops: Bee Loops
-        C1_maze_loops: Maze Loops
+        C1_zuck_repeat_loop: پیچ و خم حلقه
+        C1_bee_loops: حلقه های زنبور عسل
+        C1_maze_loops: پیچ و خم حلقه
         C1_playlab_storytelling: Play Lab - Create a Story
         C1_planting_seed: Planting a Seed
         C1_building_foundation: Building a Foundation
+        C1_going_places_safely: Going Places Safely
         C2_maze_intro: معرفی پیچ و خم
         C2_artist_intro: معرفی هنرمند
-        C2_zuck_repeat_loop: Maze Loops
+        C2_zuck_repeat_loop: پیچ و خم حلقه
         C2_artist_loops: Artist Loops
         C2_artist_debugging: Artist Debugging
-        C2_bee_loops: Bee Loops
+        C2_bee_loops: حلقه های زنبور عسل
         C2_bee_debugging: Bee Debugging
-        C2_bee_conditionals: Bee Conditionals
+        C2_bee_conditionals: شرطها زنبور عسل
         C2_playlab_createstory: Play Lab - Create a Story
         C2_graph_paper: 'برنامه نویسی روی کاغذ شطرنجی '
         C2_conditionals_with_cards: مشروط
-        C2_binary_bracelets: Binary Bracelets
+        C2_binary_bracelets: دستبند دودویی
         C2_relay_programming: برنامه نویسی رله
         C2_paper_airplanes: Paper Airplanes
-        C3_maze_level_4: Maze Loops
+        C2_digital_footprint: Your Digital Footprint
+        C3_maze_level_4: پیچ و خم حلقه
         C3_artist_intro: معرفی هنرمند
         C3_artist_functions: Artist Functions
         C3_bee_functions: Bee Functions
-        C3_bee_conditionals: Bee Conditionals
+        C3_bee_conditionals: شرطها زنبور عسل
         C3_maze_conditionals: Maze Conditionals
         C3_artist_nested_loops: Nested Loops
         C3_farmer_while: While Loops
@@ -602,6 +728,14 @@
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
+        C4_artist_math: Programming the Artist with Math
+        C4_create_functions: Creating Functions
+        C4_edit_functions: Editing Functions
+        C4_for_loops: برای حلقه
+        C4_variables: متغیرها
+        frozen_intro: Hour of Code Intro
+        frozen_loops: Introduction to Loops
+        frozen_functions: Introduction to Functions
     callout:
       text:
         drag_blocks: یک بلوک "حرکت" را بکش و آن را زیر بلوک دیگری بچسبان
@@ -628,3 +762,40 @@
         repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
           workspace
         snowflake_dropdown: Use this drop-down to create different snowflakes!
+        degrees_per_side: Divide 360 by the number of sides to get the size of each
+          angle in degrees.
+        set_sides: Use this block to set "sides" to the number needed to complete
+          the puzzle.
+        set_length: Use this block to set "length" to the correct value.
+        which_equation: Which equation makes each side shorter for shapes with more
+          sides?  Try each equation!
+        get_nectar: Use the new "get nectar" block.
+        actions_category: The tool box got a new look! The "Actions" blocks are in
+          here now.
+        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
+        edit_function: Use this button to edit the function.
+        create_function: Click here to open the "Functions" flyout, then click the
+          "Create a Function" button.
+        house_hint: It's ok if the picture doesn't look like a house yet. We will
+          fix it in the next puzzle.
+        edit_draw_square: Use this button to edit the function and add the loop.
+        edit_get_nectar: Use this button to edit the function and change the direction
+          the Bee will turn to get the nectar.
+        logic_category: Open the "Logic" flyout to find the "if/else" block.
+        length_parameter: Can you update this function so it uses the "length" parameter?
+        frozen_diamond_repeat: Use the repeat block to create this shape.
+        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
+          each circle.
+        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
+          and change the size.
+        frozen_snowflake_branch: Use the "create a snowflake branch" block
+        frozen_create_square: Attach more blocks here to create a square
+        playlab_drag_say: Drag the "say" block here and type "hello"
+        playlab_use_twice: Use this block twice and remember to change the actor number
+        playlab_move_girl: Use the "move right" block to move Tennis Girl
+        playlab_play_sound: Add "play sound" block here
+        playlab_arrow_keys: Remember to use these to move the witch after clicking
+          on Run
+        playlab_add_move: Add "move" blocks inside this repeat block
+        playlab_add_score: Add score blocks here
+        playlab_add_blocks: Add your blocks here

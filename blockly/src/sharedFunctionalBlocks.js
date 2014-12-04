@@ -14,12 +14,17 @@ exports.install = function(blockly, generator, gensym) {
   installGreaterThan(blockly, generator, gensym);
   installLessThan(blockly, generator, gensym);
   installNumberEquals(blockly, generator, gensym);
+  installStringEquals(blockly, generator, gensym);
   installLogicalAnd(blockly, generator, gensym);
   installLogicalOr(blockly, generator, gensym);
   installLogicalNot(blockly, generator, gensym);
   installBoolean(blockly, generator, gensym);
   installMathNumber(blockly, generator, gensym);
   installString(blockly, generator, gensym);
+  installCond(blockly, generator, 1);
+  installCond(blockly, generator, 2);
+  installCond(blockly, generator, 3);
+  installCond(blockly, generator, 4);
 };
 
 function installPlus(blockly, generator, gensym) {
@@ -147,6 +152,24 @@ function installNumberEquals(blockly, generator, gensym) {
   generator.functional_number_equals = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
+    return '(' + arg1 + " == " + arg2 + ')';
+  };
+}
+
+function installStringEquals(blockly, generator, gensym) {
+  blockly.Blocks.functional_string_equals = {
+    helpUrl: '',
+    init: function() {
+      initTitledFunctionalBlock(this, msg.stringEquals(), 'boolean', [
+        { name: 'ARG1', type: 'string' },
+        { name: 'ARG2', type: 'string' }
+      ]);
+    }
+  };
+
+  generator.functional_string_equals = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || '';
+    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || '';
     return '(' + arg1 + " == " + arg2 + ')';
   };
 }
@@ -289,5 +312,56 @@ function installString(blockly, generator) {
 
   generator.functional_string = function() {
     return blockly.JavaScript.quote_(this.getTitleValue('VAL'));
+  };
+}
+
+/**
+ * Implements the cond block. numPairs represents the number of
+ * condition-value pairs before the default value.
+ */
+function installCond(blockly, generator, numPairs) {
+  var blockName = 'functional_cond_' + numPairs;
+  blockly.Blocks[blockName] = {
+    helpUrl: '',
+    init: function() {
+      var args = [];
+      for (var i = 0; i < numPairs; i++) {
+        args.push({name: 'COND' + i, type: 'boolean', default: 'false'});
+        args.push({name: 'VALUE' + i, type: 'none', default: ''});
+      }
+      args.push({name: 'DEFAULT', type: 'none', default: ''});
+      var blockTitle = 'cond';
+      var wrapWidth = 2;
+      initTitledFunctionalBlock(this, blockTitle, undefined, args, wrapWidth);
+    }
+  };
+
+  /**
+   * // generates code like:
+   * function() {
+   *   if (cond1) { return value1; }
+   *   else if (cond2) {return value2; }
+   *   ...
+   *   else { return default; }
+   * }()
+   */
+  generator[blockName] = function() {
+    var cond, value, defaultValue;
+    var code = 'function() {\n  ';
+    for (var i = 0; i < numPairs; i++) {
+      if (i > 0) {
+        code += 'else ';
+      }
+      cond = Blockly.JavaScript.statementToCode(this, 'COND' + i, false) ||
+          false;
+      value = Blockly.JavaScript.statementToCode(this, 'VALUE' + i, false) ||
+          '';
+      code += 'if (' + cond + ') { return ' + value + '; }\n  ';
+    }
+    defaultValue = Blockly.JavaScript.statementToCode(this, 'DEFAULT', false) ||
+        '';
+    code += 'else { return ' + defaultValue + '; }\n';
+    code += '}()';
+    return code;
   };
 }

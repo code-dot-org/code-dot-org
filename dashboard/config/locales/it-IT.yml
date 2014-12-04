@@ -20,14 +20,9 @@
   hello: Ciao a tutti
   welcome_back: Bentornato, %{name}
   add_teacher_form:
-    code_or_email:
-      label: 'Aggiungi il tuo insegnante attraverso il codice-classe o il suo indirizzo
-        di posta elettronica:'
-      placeholder: Codice-classe (ABCDEF) o indirizzo di posta elettronica (insegnante@istruzione.it)
     code:
-      label: 'Aggiungi il tuo insegnante inserendo qua sotto il codice-classe che
-        ti ha comunicato:'
-      placeholder: codice-classe (ABCDEF)
+      label: 'Aggiungi un insegnante:'
+      placeholder: Codice Classe (ABCDEF)
     submit: Aggiungi insegnante
   add_hint_form:
     placeholder: Scrivi qui il tuo suggerimento
@@ -378,7 +373,7 @@
   home:
     title: Officina del Codice
     all_courses: Panoramica dei corsi 1, 2 e 3
-    lesson_plans: Piani delle lezioni
+    lesson_plans: Piani di lavoro delle lezioni
     signin_message: Già iscritto? %{link}
     student_reg_link: Iscrizione studenti
     teacher_reg_link: Iscrizione insegnanti
@@ -417,13 +412,12 @@
     try_beta_courses: Novità! Prova i nostri corsi specifici per studenti delle scuole
       elementari (in versione provvisoria)
     use_as_teacher: Guarda questo sito come insegnante
+    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
     heading_elementary: <h2>Corsi in 20 lezioni per</h2><h1>studenti delle elementari</h1>
     heading_apps: <h2>Divertimento per</h2><h1>tutti</h1>
     heading_legacy: <h2>Il nostro Corso Introduttivo per </h2><h1>utenti di tutte
       le età</h1>
-    gallery:
-      your_turtle: I miei lavori artistici
-      your_studio: Le mie applicazioni
+    your_gallery: La tua collezione
   gender:
     male: Maschile
     female: Femminile
@@ -434,9 +428,10 @@
   footer:
     help_from_html: Gli ingegneri di Google, Microsoft, Facebook e Twitter hanno contribuito
       a creare questo corso.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
-      Tutti i diritti riservati.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
+      Tutti i diritti riservati.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
       Arts Inc. Tutti i diritti riservati.
+    powered_by_aws: Powered by Amazon Web Services
     feedback: Facci sapere che ne pensi
     translate: Aiutaci a tradurre nella tua lingua
     support: Supporto
@@ -480,16 +475,17 @@
   try_reloading: Prova a ricaricare la pagina
   next_stage: Finito! Prosegui con la lezione successiva
   download_pdf: Apri il piano di lavoro di questa lezione
-  lesson_plan: Lesson Plan
+  lesson_plan: Piano di lavoro della lezione
   view_lesson_plan: Leggi il piano di lavoro di questa lezione
   pdf_download: Scarica il PDF
-  download_coming_soon: Downloadable activity coming soon.
-  video_coming_soon: Video Coming Soon!
+  download_coming_soon: La descrizione di questa attività è in corso di preparazione.
+  video_coming_soon: Il video è in corso di preparazione!
   share_code:
     title: Clicca su "Esegui" per vedere il mio programma in azione
     bounce_og_title: Prova la mia versione del gioco Rimbalzo
     flappy_og_title: Prova la mia versione del gioco Flappy
     studio_og_title: Prova la mia versione del Gioco da Laboratorio
+    check_out_what_i_made: Verifica che cosa ho fatto
     og_description: Ho scritto il codice per conto mio con Code.org
     phone_number_not_allowed: Sembra che ci sia un numero di telefono nel codice.
       Prova a cambiare il testo.
@@ -522,6 +518,14 @@
     20hour:
       title: Corso Introduttivo
       body: Prova il nostro corso introduttivo di informatica in 20 lezioni.
+    hoc2014:
+      try_new_tutorial: Prova il nuovo tutorial dell'Ora del Codice in versione beta
+      try_frozen: Artista con Anna ed Elsa, da Frozen
+    gallery:
+      title: La tua collezione
+      body: Guarda una galleria di app e immagini artistiche create dai nostri utenti
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: Gli studenti li hanno disegnati con dei programmi!
     students_made_these_with_code: Gli studenti l'hanno creato scrivendo del codice!
@@ -535,10 +539,15 @@
     more: Di più &rarr;
     caption_by_name_age: da %{name}, età %{age}
     caption_time_ago: '%{time_ago} fa'
+    header: La tua collezione
+    header_playlab: Laboratorio
+    header_artist: Artista
   landing:
     prerelease: Questo corso è in <span class='betatext'>versione provvisoria</span>.  Significa
       che non è la versione finale ed è soggetto a revisioni man mano che arriveranno
       osservazioni e saranno fatti miglioramenti.
+    prerelease_hoc2014: Questo tutorial è in <span class='betatext'>versione beta</span>.
+      È soggetto a revisione quando si ricevono feedback in modo da migliorarlo.
     feedback: Dicci che ne pensi
     report_bug: Segnala un errore
     support: Ottieni aiuto

@@ -1,3 +1,5 @@
+
+
 # Premios - términos y condiciones
 
 ## Espacio de Dropbox o crédito de Skype:
@@ -12,11 +14,11 @@ Code.org se comunicará con los organizadores después de la Hora de Programaci�
 
 ## Video chat con un orador invitado:
 
-Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 14, 2014. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
+Este premio está limitado a las aulas K-12 en los Estados Unidos y Canadá únicamente. Para calificar inscribe a tu clase antes del 14 de Noviembre de 2014. Code.org seleccionará las clases ganadoras, asignará el horario para el chat y coordinará con el profesor correspondiente para preparar los detalles de la tecnología a usar. No es necesario que toda tu escuela aplique para calificar para este premio. Escuelas tanto públicas como privadas son elegibles para ganar.
 
 ## Paquete de laptops (ó $10,000 para otras tecnologías):
 
-El premio es para escuelas públicas K-12 en Estados Unidos únicamente. To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
+El premio es para escuelas públicas K-12 en Estados Unidos únicamente. Para calificar toda tu escuela debe registarse para la Hora de la Programación antes del 14 de noviembre de 2014. Una escuela en cada estado de Estados Unidos recibirá un conjunto de computadoras para una clase. Code.org seleccionará y notificará a los ganadores vía correo electrónico antes del 1ro de diciembre de 2014.
 
 Como aclaración, esto no es una lotería o un concurso que involucre sólo suerte.
 

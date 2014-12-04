@@ -21,7 +21,7 @@
   "isWall":"est-ce un mur",
   "isWallTooltip":"Retourne vrai s'il y a un mur ici",
   "launchBall":"lancer une nouvelle balle",
-  "launchBallTooltip":"Met une balle en jeu.",
+  "launchBallTooltip":"Mets une balle en jeu.",
   "makeYourOwn":"Créez votre propre jeu Pong",
   "moveDown":"déplacer vers le bas",
   "moveDownTooltip":"Déplace la raquette vers le bas.",

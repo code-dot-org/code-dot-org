@@ -20,12 +20,9 @@
   hello: Olá, mundo
   welcome_back: Bem-vindo de volta, %{name}
   add_teacher_form:
-    code_or_email:
-      label: 'Adicionar um professor por código ou endereço de email:'
-      placeholder: Código (ABCDEF) ou email (professor@escola.edu)
     code:
-      label: 'Adicione um professor pelo código da seção:'
-      placeholder: Código (ABCDEF)
+      label: 'Adicionar professor:'
+      placeholder: Código da seção (ABCDEF)
     submit: Adicionar professor
   add_hint_form:
     placeholder: Digite sua dica aqui
@@ -404,12 +401,11 @@
     try_beta_courses: Novo! Conheça nossos cursos experimentais para alunos do pré
       ao 5º ano
     use_as_teacher: Use este site como um professor
+    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
     heading_elementary: <h2>Cursos de 20 horas para</h2><h1>alunos do ensino fundamental</h1>
     heading_apps: <h2>Diversão para</h2><h1>todos</h1>
     heading_legacy: <h2>Nosso curso geral para</h2><h1>todas as idades</h1>
-    gallery:
-      your_turtle: Minha arte
-      your_studio: Meus aplicativos
+    your_gallery: Galeria
   gender:
     male: Masculino
     female: Feminino
@@ -420,9 +416,10 @@
   footer:
     help_from_html: Engenheiros da Google, Microsoft, Facebook e Twitter ajudaram
       a criar este tutorial.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
-      Todos os direitos reservados.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
+      Todos os direitos reservados.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
       Arts Inc. Todos os direitos reservados.
+    powered_by_aws: Powered by Amazon Web Services
     feedback: Fornecer feedback
     translate: Ajude-nos a traduzir para o seu idioma
     support: Suporte
@@ -466,16 +463,17 @@
   try_reloading: Tente recarregar a página
   next_stage: Concluído! Continuar para a próxima fase
   download_pdf: Abrir Plano de Aula
-  lesson_plan: Lesson Plan
+  lesson_plan: Plano de aula
   view_lesson_plan: Exibir plano de aula
   pdf_download: Baixar PDF
-  download_coming_soon: Downloadable activity coming soon.
-  video_coming_soon: Video Coming Soon!
+  download_coming_soon: Atividade disponível para download em breve.
+  video_coming_soon: Vídeo em breve!
   share_code:
     title: Clique em 'Executar' para ver meu programa em ação
     bounce_og_title: Veja meu jogo de Pingue-pongue
     flappy_og_title: Dê uma olhada no meu jogo Flappy
     studio_og_title: Confira meu Aplicativo do Laboratório
+    check_out_what_i_made: Veja o que eu fiz
     og_description: Eu mesmo escrevi o código com a Code.org
     phone_number_not_allowed: Parece que há um número de telefone. Tente alterar o
       texto.
@@ -505,6 +503,16 @@
     20hour:
       title: Curso Introdutório
       body: Experimente nossa introdução ao curso de Ciência da Computação de 20 horas.
+    hoc2014:
+      try_new_tutorial: Experimente nosso novo tutorial da Hora do Código na versão
+        beta
+      try_frozen: O Artista com Anna e Elsa, do filme Frozen
+    gallery:
+      title: Galeria
+      body: Veja uma galeria de aplicativos e imagens artísticas criadas por nossos
+        usuários
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: Alunos criaram isso com programação!
     students_made_these_with_code: Os alunos criaram isso com programação!
@@ -518,10 +526,16 @@
     more: Mais &rarr;
     caption_by_name_age: feito por %{name}, %{age} anos
     caption_time_ago: há %{time_ago}
+    header: Galeria
+    header_playlab: Laboratório
+    header_artist: Artista
   landing:
     prerelease: Este curso está em sua versão <span class='betatext'>beta</span>.
       Isso significa que esta não é a versão final do curso, e ele está sujeito a
       revisões conforme os feedbacks são recebidos e as melhorias são feitas.
+    prerelease_hoc2014: Este tutorial está na versão <span class='betatext'>beta</span>.
+      Ele está sujeito a revisões, conforme são recebidos feedbacks e melhorias são
+      feitas.
     feedback: Dar feedback
     report_bug: Reportar erro
     support: Obter ajuda

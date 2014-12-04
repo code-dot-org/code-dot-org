@@ -99,15 +99,16 @@
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Byrja
           með ferning<br/>Setja þríhyrning ofan við ferninginn<br/>Setja þríhyrning
           neðan við ferninginn
-        Start with a square<br/>Put a triangle right of square<br/>Put a rhombus below square<br/>Put triangle right of rhombus: Byrja
-          með ferning<br/>Setja þríhyrning til hægri við ferninginn<br/>Setja tígul
-          neðan við ferninginn<br/>Setja þríhyrning til hægri við tígulinn
-        Start with a square<br/>Put a rhombus above the square<br/>Put a triangle right of the rhombus: Byrja
-          með ferning<br/>Setja tígul ofan við ferninginn<br/>Setja þríhyrning til
-          hægri við tígulinn
-        Start with a square<br/>Put a triangle below the square<br/>Put a rhombus right of the triangle: Byrja
-          með ferning<br/>Setja þríhyrning neðan við ferninginn<br/>Setja tígul til
-          hægri við þríhyrninginn
+        0: '? Byrja með ferning<br/>Setja þríhyrning hægra megin við ferning<br/>Setja
+          samsíðung neðan við ferning<br/>Setja þríhyrning hægra megin við samsíðung'
+        1: ': Byrja með ferning<br/>Setja þríhyrning hægra megin við ferning<br/>Setja
+          samsíðung neðan við ferning<br/>Setja þríhyrning hægra megin við samsíðung'
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Byrja
+          með ferning<br/>Setja samsíðung ofan við ferninginn<br/>Setja þríhyrning
+          hægra megin við samsíðunginn
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Byrja
+          með ferning<br/>Setja þríhyrning neðan við ferninginn<br/>Setja samsíðung
+          hægra megin við þríhyrninginn
       2-3 Algorithms Multi 2:
         Multiple Choice: Valspurningar
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Byrja
@@ -361,6 +362,15 @@
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
+      Coordinates Multi 1:
+        Video game Coordinates: Video game Coordinates
+        Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
+        Which answer best describes the unicorn's movement?: Which answer best describes
+          the unicorn's movement?
+        The unicorn moves across the screen: The unicorn moves across the screen
+        The unicorn's y value changes: The unicorn's y value changes
+        The unicorn moves to the left: The unicorn moves to the left
+        The unicorn's x value changes: The unicorn's x value changes
       K-1 Artist 1 Multi 1:
         Multiple Choice: Valspurningar
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png,

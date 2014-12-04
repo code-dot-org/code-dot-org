@@ -20,19 +20,16 @@
   hello: Salutare lume
   welcome_back: Bine ai revenit, %{name}
   add_teacher_form:
-    code_or_email:
-      label: 'Adaugă un profesor prin cod sau adresă de email:'
-      placeholder: Cod (ABCDEF) sau e-mail (profesor@școală.edu)
     code:
-      label: 'Adaugă un profesor în funcţie de secţiunea codului:'
-      placeholder: Cod (ABCDEF)
+      label: 'Adaugă un profesor:'
+      placeholder: Secțiune Cod (ABCDEF)
     submit: Adaugă profesor
   add_hint_form:
     placeholder: Te rugăm să introduci indiciul tău aici
     submit: Adaugă sugestie
   appname: Code.org
   stage: etapă
-  stage_number: Stage %{number}
+  stage_number: Etapa %{number}
   puzzle: Puzzle
   trophies: trofee
   courses: cursuri
@@ -63,9 +60,12 @@
     need_confirmation: Nu ai primit instrucţiuni de confirmare?
     need_unlock: Nu ai primit instrucţiuni de deblocare?
   signup_form:
-    overview_student: Înscrie-te pentru un cont şi vei putea urmări progresul tău.
-    overview_teacher: Predă ştiinţa calculatoarelor în clasa ta prin crearea unui
-      cont. <p/> Vei putea urmări progresul elevilor tăi şi obţine recompense.
+    overview_student: Creaţi-vă un cont pentru a vă putea urmări progresul. Email-ul
+      este utilizat în principal pentru a vă permite să vă conectaţi şi pentru recuperarea
+      parolei. Pentru informaţii suplimentare, consultaţi <a href="http://code.org/privacy">
+      Politica de confidenţialitate</a>.
+    overview_teacher: Predați informatica în clasa dvs. prin crearea unui cont. <p/>
+      Veţi putea să adăugaţi eleviii dumneavoastră şi să urmăriţi progresul lor.
     no_signup_message: Poţi <a target="_blank" href="http://learn.code.org"> parcurge
       diverse stadii şi puzzle-uri</a>, dar va trebui să te înregistrezi pentru a-ți
       salva progresul.
@@ -80,7 +80,7 @@
     gender: Sex (opţional)
     birthday: Ziua de naştere (opţional)
     age: Vârsta
-    user_type: Are you a student or teacher?
+    user_type: Sunteți elev sau profesor?
     submit: Inregistrează-te
     teacher: Ești profesor?
     valid_username: Disponibil!
@@ -89,9 +89,11 @@
     valid_password: Parolă validă!
     invalid_password: Parola trebuie să conţină cel puțin 6 caractere
     mismatch_password: Cele două parole introduse nu se potrivesc
-    student_terms: Sunt de acord cu termenii și condițiile Code.org. Dacă am vârsta
-      sub 13 ani, atunci eu confirm prin trimiterea acestui formular că am permisiunea
-      părinților mei sau a tutorelui legal pentru a folosi serviciile Code.org.
+    student_terms: Sunt de acord să respect <a href='http://code.org/tos'> termenii
+      și condițiile</a> Code.org. Dacă eu sunt sub vârsta de 13 ani, confirm prin
+      trimiterea acestui formular că am permisiunea părintelui sau tutorelui legal
+      de a utiliza serviciile Code.org. <br/>Pentru utilizatorii sub 13 ani, adresele
+      de e-mail nu sunt stocate într-un formular care să ne permită să-l contactăm.
     teacher_terms: Sunt de acord cu <a href='http://code.org/tos'>termenii de serviciu</a>
       de pe Code.org.
     additional_information: Mai avem nevoie de nişte informaţii pentru a te putea
@@ -255,7 +257,7 @@
       finished_hoc: Am terminat Ora mea de Cod
       sign_in_to_save: Loghează-te pentru a salva progresul
       free_play:
-        playlab: Make an App
+        playlab: Creare aplicație
         artist: Desenează ceva
     user:
       classroom: Pagina de Start a Profesorilor
@@ -362,8 +364,8 @@
     classroom_activity: Activitate Unplugged
   home:
     title: Studio de Cod
-    all_courses: Overview of Courses 1, 2, and 3
-    lesson_plans: Lesson plans
+    all_courses: Prezentare generală a cursurilor 1, 2 și 3
+    lesson_plans: Planuri de lecție
     signin_message: Deja înregistrat? %{link}
     student_reg_link: Înregistrare student
     teacher_reg_link: Înregistrare profesor
@@ -399,29 +401,29 @@
     test_videos_help: Încearcă noul nostru video player la şcoala ta
     try_beta_courses: Nou! Încearcă cursele noastre beta pentru elevi K-5
     use_as_teacher: Foloseşte acest site drept profesor
+    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
     heading_elementary: <h2>curse de 20 de ore pentru</h2><h1>Elevi Primari</h1>
     heading_apps: <h2>Distracţie pentru</h2><h1>Toată lumea</h1>
     heading_legacy: <h2>Cursul nostru general pentru</h2><h1>Toate vârstele</h1>
-    gallery:
-      your_turtle: My Art
-      your_studio: My Apps
+    your_gallery: Galerie
   gender:
     male: De sex masculin
     female: De sex feminin
     none: Prefer să nu răspund
   user_type:
     student: elev
-    teacher: Teacher
+    teacher: Profesor
   footer:
     help_from_html: Ingineri de la Google, Microsoft, Facebook şi Twitter au ajutat
       la creearea acestui tutorial.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
-      Toate Drepturile Rezervate.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
+      Toate Drepturile Rezervate.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
       Arts Inc. Toate Drepturile Rezervate.
+    powered_by_aws: Powered by Amazon Web Services
     feedback: Oferă feedback
     translate: Ajută-ne să  traducem în limba ta
     support: Suport
-    support_url: http://support.code.org
+    support_url: http://support.code.org/
     tos: Termeni
     privacy: Politică de confidențialitate
     secure: Versiunea Securizată
@@ -431,7 +433,7 @@
     teacher: Vezi soluția
     auth_error: Nu ești autorizat pentru a vedea soluția.
     submit: Actualizează locaţia Artistului
-    direction: Începe Direcţia
+    direction: Direcţia de început (în grade)
   video:
     tab: Video.
     notes: Nici un video? Arată note.
@@ -441,42 +443,45 @@
   compatability:
     working:
       header: Momentan efectuăm lucrări de susținere a browser-ului tău.
-      message: Code.org uses modern web technology. This makes the site faster to
-        use. Your browser doesn't support all the features required, and you may experience
-        issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
-        any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade
-        your browser to a supported version</a>.
-      hide_this_warning: Hide this warning
+      message: Code.org folosește tehnologii web moderne. Acest lucru face site-ul
+        mai rapid de utilizat. Browserul pe care îl folosiți nu suportă toate caracteristicile
+        necesare şi este posibil să întâmpinați probleme în timp ce utilizaţi această
+        parte a site-ului. Vă rugăm să ne ajute prin <a href='%{report_issue_url}'>
+        raportarea problemelor întâlnite</a>. Puteţi, de asemenea, <a href='%{supported_browsers_url}'>
+        să faceți upgrade pentru browser la o versiune acceptată</a>.
+      hide_this_warning: Ascunde această avertizare
     upgrade:
       header: Te rugăm să-ți actualizezi browser-ul.
-      message: Code.org uses modern web technology. This makes the site faster to
-        use. Unfortunately your browser doesn't support all the features required
-        to run this part of the site.<br/><br/>Install a browser on our supported
-        browsers list to continue. You can <a href='#'>try viewing the page</a>, but
-        expect functionality to be broken.
-      button: Take me to the list of supported browsers
+      message: Code.org folosește tehnologii web moderne. Acest lucru face site-ul
+        mai rapid de utilizat. Din păcate, browser-ul dumneavoastră nu suportă toate
+        caracteristicile necesare pentru a rula această parte a site-ului. <br/> <br/>Instalaţi
+        un browser de pe lista noastră de browsere acceptate pentru a continua. Aveţi
+        posibilitatea să <a href='#'> încercaţi să vizualizaţi pagina</a>, dar puteți
+        să vă aşteptați la întreruperea funcţionalității.
+      button: Du-mă la lista browserelor suportate
   slow_loading: Aceasta durează mai mult decât de obicei...
   try_reloading: Încearcă să reîncarci pagina
   next_stage: Ai terminat! Continuă cu următoarea etapă
   download_pdf: Plan de lecţie deschisă
-  lesson_plan: Lesson Plan
+  lesson_plan: Plan de lecţie
   view_lesson_plan: Vezi Planul de Lecţii
   pdf_download: Descarcă PDF
-  download_coming_soon: Downloadable activity coming soon.
-  video_coming_soon: Video Coming Soon!
+  download_coming_soon: Activitate de descărcat în curând.
+  video_coming_soon: Video în curând!
   share_code:
     title: Faceţi clic pe 'Run' pentru a vedea programul meu în acţiune
     bounce_og_title: Verifică jocul meu Bounce
     flappy_og_title: Aruncă-ți o privire asupra jocului meu Flappy
-    studio_og_title: Verifică-mi povestea
+    studio_og_title: Verificarea aplicației my Play Lab
+    check_out_what_i_made: Verifică ceea ce am creat
     og_description: Am scris codul chiar eu cu Code.org
-    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
-      the text.
-    address_not_allowed: It looks like there is an address in it. Try changing the
-      text.
-    email_not_allowed: It looks like there is an email in it. Try changing the text.
-    profanity_not_allowed: It looks like there is profanity in it. Try changing the
-      text.
+    phone_number_not_allowed: Se pare că textul conține un număr de telefon. Încercați
+      să îl schimbați.
+    address_not_allowed: Se pare că textul conține o adresă. Încercați să îl modificați.
+    email_not_allowed: Se pare că textul conține o adresă de email. Încercați să îl
+      modificați.
+    profanity_not_allowed: Se pare că textul conține o blasfemie. Încercați să îl
+      schimbați.
   builder:
     created: Ai creat un nou script.
     destroyed: Ai distrus un script.
@@ -500,23 +505,37 @@
     20hour:
       title: Curs Introductiv
       body: Încearcă cursul nostru de 20 de ore Introducere în Știința Calculatorului.
+    hoc2014:
+      try_new_tutorial: Încercați noul nostru tutorial Ora de cod în versiune beta
+      try_frozen: Artist cu Anna și Elsa, din Frozen
+    gallery:
+      title: Galerie
+      body: Vedeți o galerie de imagini pentru aplicații și artiști, create de utilizatorii
+        noștri
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: Elevii au realizat aceste desene prin programare!
-    students_made_these_with_code: Students made these with code!
+    students_made_these_with_code: Elevii au făcut acestea cu secvențe de cod!
     picture_count: In ultimele  <b>%{days}</b> zile, studenții au desenat<b>%{count}</b>
       imagini prin propriile programe pe calculator. Selectează imaginile pentru a
       vedea fiecare program în acțiune.
-    activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
-      apps and pictures by writing their own computer programs. Click on the pictures
-      and screenshots to see each program in action.
+    activity_count: În ultimele <b>%{days}</b> zile, elevii au făcut <b>%{count}</b>
+      aplicații şi imagini scriindu-și propriile programe pentru calculator. Faceţi
+      clic pe imagini și capturi de ecran pentru a vedea fiecare program în acţiune.
     want_to_make_your_own: Vrei să realizezi propriul tău program?
     more: Mai mult &rarr;
-    caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: '%{time_ago} ago'
+    caption_by_name_age: de %{name}, vârsta %{age}
+    caption_time_ago: '%{time_ago} în urmă'
+    header: Galerie
+    header_playlab: Laborator de Joacă
+    header_artist: Artist
   landing:
     prerelease: Acest curs este în <span class='betatext'>beta</span>. Asta înseamnă
       că aceasta nu este versiunea finală a cursului, şi poate fii revizuit din moment
       ce orice critică este bine venită şi cursul este îmbunătăţit.
+    prerelease_hoc2014: Acest tutorial este în <span class='betatext'> versiune beta</span>.  Acesta
+      este obiectul revizuirii pe măsură ce se primește feedback şi sunt făcute îmbunătăţiri.
     feedback: Trimiteți feedback
     report_bug: Raporteazã eroare
     support: Obţine ajutor
@@ -532,7 +551,7 @@
     correct_title: Corect
     correct_body: Acela este răspunsul corect.
   text_match:
-    placeholder: Enter your answer here
+    placeholder: Completați răspunsul aici
   dialog:
     ok: OK
   time:
@@ -584,7 +603,7 @@
     pe site-ul nostru de sprijin. Te poţi uita prin <a href="http://support.code.org">support.code.org</a>
     fără să te loghezi, sau poţi cere ajutorul unui părinte sau profesor.
   progress:
-    not_completed: not completed
-    completed_too_many_blocks: completed, too many blocks
-    completed_perfect: completed, perfect
-    furthest_level_attempted: furthest level attempted
+    not_completed: nefinalizat
+    completed_too_many_blocks: finalizat, prea multe blocuri
+    completed_perfect: finalizat, perfect
+    furthest_level_attempted: cel mai îndepărtat nivel încercat

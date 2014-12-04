@@ -1,0 +1,189 @@
+sl:
+  site_name: Ura za kodo
+  language: Slovenščina
+  front_title: Pridružite se največjemu izobraževalnemu dogodku v zgodovini, 8. do 14. decembra 2014
+  coming_soon: Coming Soon
+  front_header_banner: Pridružite se največjemu izobraževalnemu dogodku v zgodovini, 8. do 14. decembra 2014
+  front_intro_default: 'Ura za kodo je globalno gibanje, ki dosega desetine milijonov učencev, dijakov in študentov v več kot 180 državah. Kdorkoli in kjerkoli lahko organizira svoj dogodek Ura za kodo. Enourni tečaji so na voljo v več kot 30 jezikih. Brez obveznega predznanja. <strong>Za vse med 4 in 104 leti.</strong>'
+  front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of people in 180+ countries. Anyone can organize an Hour of Code event. Over 3M people did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
+  front_watch_video: Oglejte si novi video
+  header_menu_resources: Viri
+  header_menu_faq: Pogosta vprašanja
+  header_menu_prizes: Nagrade
+  header_menu_uk_code_org: uk.code.org
+  company_4-H: 4-H Youth Development
+  company_asa: Afterschool Alliance
+  company_bgca: Boys and Girls Club of America
+  company_bsusa: Boy Scouts of America
+  company_cgcs: Council of the Great City Schools
+  company_gsusa: Girl Scouts of America
+  company_khanacademy: Khan Academy
+  company_mesa: Mathematics Engineering Science Achievement
+  company_napcs: National Alliance of Public Charter Schools
+  company_ngcp: National Girls Collaborative Project
+  company_teachforall: Teach for All
+  company_teachforamerica: Teach for America
+  company_tntp: TNTP
+  prizes_all: Nagrade za vsakega organizatorja
+  prizes_every_organizer: Vsak organizator dogodka Ura za kodo bo v zahvalo dobil Skype ali Dropbox kreditne točke
+  prizes_technology: Ena šola v vsaki zvezni državi bo za nagrado dobila tehnologijo v vrednosti $10.000
+  prizes_tech_chats: '# classrooms will win video chats with very special guests'
+  prizes_robots: 100 razredov bo zadelo zbirko robotov, ki se jih da programirati
+  prizes_brilliant: One school in each province and territory will receive $2000 for a Brilliant Project
+  prizes_actua: "15 schools across Canada will receive 2 hands-on STEM workshops by one of Actua's members"
+  prizes_details: Podrobnosti
+  whats_next_header: "What's Next?"
+  whats_next_description: "We'll send you materials and helpful tips for your event. New 2014 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
+  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>How to run an Hour of Code</a>"
+  whats_next_promote: "<a href='http://hourofcode.com/resources'>Promote the Hour of Code</a>"
+  n_have_learned_an_hoc: '<h1>#</h1><h3>so preizkusili</h3><h2>Uro za kodo</h2>'
+  anybody_can_learn: Vsakdo se lahko nauči.
+  register_now: Registrirajte se zdaj
+  front_join_us_heading: Uro za kodo za vsakega učenca, dijaka ali študenta.
+  front_join_us_description: Računalništvo je temelj znanja. Pomagajte nam, da ga predstavimo novim 100 milijonov mladih.
+  front_join_us_button: Pridružite se nam
+  front_what_is_hoc: Kaj je Ura za kodo?
+  front_join_us_header: Anyone can learn the basics, and have fun doing it!
+  front_join_us_header_uk: Kadarkoli med 8 in 14 decembrom, lahko gostujete dogodek, kjer se bo kdorkoli lahko naučil osnov in se pri tem zabaval!
+  front_join_us_teacher: Ali ste učitelj?
+  front_join_us_inspire: Inspire students with
+  front_join_us_inspire_link: an Hour of Code in the classroom.
+  front_join_us_parent: Ali ste starš?
+  front_join_us_ask_link: Vprašajte vaše šolo
+  front_join_us_ask: da organizira dogodek Ura za kodo.
+  front_join_us_computer_science: Ste računalniški navdušenec?
+  front_join_us_spread: Spread the word.
+  front_join_us_organize: Ali organizirajte dogodek sami.
+  front_join_us_how_to_run: Kako lahko organizirate vaš dogodek Ura za kodo
+  front_join_us_help_promote: Pomagajte nam promovirati projekt Ura za kodo
+  front_join_us_students: Učenci
+  front_join_us_teachers: Učitelji
+  front_join_us_everyone: Kdorkoli
+  front_join_us_try: Preizkusite
+  front_join_us_host: Organizirajte
+  front_join_us_support: Podprite
+  signup_header: 'Organize an Hour of Code event during Dec 8 - 14, and register it here.'
+  signup_name_label: Vaše ime
+  signup_email_label: Vaš email
+  signup_organization_name_label: Ime šole ali organizacije
+  signup_event_type_label: Vrsta dogodka
+  signup_event_entire_school_label: Moja celotna šola sodeluje
+  signup_event_location_label: Lokacija dogodka (neobvezno)
+  signup_special_event_flag_label: Poudarite moj poseben dogodek
+  signup_special_event_details_label: Podrobnosti o posebnem dogodku
+  signup_send_posters_flag_label: 'Pošlji <a href= "/resources#posters">plakate</a> moji šoli ali organizaciji'
+  signup_send_posters_address_label: Naslov šole ali organizacije
+  signup_whole_school_flag_label: Ta dogodek je za celotno šolo
+  signup_your_event: Prijavi svoj dogodek
+  signup_name_placeholder: Vaše ime
+  signup_email_placeholder: ime@example.com
+  signup_organization_name_placeholder: Na primer Lincoln High School
+  signup_event_location_placeholder: "Poštna številka in država ali poln naslov. \r (potrebujemo, da dodamo dogodek na naš zemljevid)"
+  signup_special_event_details_placeholder: Opišite, zakaj gre za poseben dogodek
+  signup_send_posters_address_placeholder: Ta naslov ne bo treba deljen na našem zemljevidu
+  signup_event_type_in_school: V šoli
+  signup_event_type_out_of_school: Izven šole
+  signup_submit_label: Registracija
+  signup_submit_error_message: Prišlo je do napake. Prosim prepričajte se, da so vsa zahtevana polja izpolnjena pravilno.
+  signup_thank_you_header: Hvala za prijavo vašega dogodka Ura za kodo.
+  signup_thank_you_message: Poslali smo potrditveno e-pošto z informacijami, ki vam bodo pomagale začeti.
+  map_header: '# dogodkov Ura za kodo po svetu'
+  map_header_company: '# by company organizers'
+  meta_tag_og_title: Prihaja Ura za kodo
+  meta_tag_og_description: Ura za koda je globalno gibanje, ki je doseglo desetine milijonov učencev, dijakov in študentov, od 4 do 104 let, v več kot 180 državah in več kot 30 jezikih.
+  meta_tag_twitter_title: Prihaja Ura za kodo
+  meta_tag_twitter_description: Ura za koda je globalno gibanje, ki je doseglo desetine milijonov učencev, dijakov in študentov, od 4 do 104 let, v več kot 180 državah in več kot 30 jezikih.
+  twitter_default_text: 'Sodelujem v #UraZaKodo, kaj pa ti? @codeorg'
+  hardware_prizes_form_name_label: Vaše ime
+  hardware_prizes_form_name_placeholder: Vaše ime
+  hardware_prizes_form_email_label: Vaš email
+  hardware_prizes_form_email_placeholder: Vaš email
+  hardware_prizes_form_school_name_label: Ime šole
+  hardware_prizes_form_school_name_placeholder: Ime šole
+  hardware_prizes_form_school_address_label: Naslov šole
+  hardware_prizes_form_school_address_placeholder: Naslov šole
+  hardware_prizes_form_school_type_label: Vrsta šole
+  hardware_prizes_form_school_type_option_elementary: Osnovna šola
+  hardware_prizes_form_school_type_option_middle_school: Srednja šola
+  hardware_prizes_form_school_type_option_high_school: Višja šola
+  hardware_prizes_form_qualifying_school_label: Javna osnovna šola
+  hardware_prizes_form_number_students_label: Število sodelujočih učencev
+  hardware_prizes_form_number_students_placeholder: Število učencev
+  hardware_prizes_form_plan_file_label: Naložite vaš logistični načrt za Uro za kodo
+  hardware_prizes_form_plan_file_description: 'Pošlji enostaven razpored, kako nameravate organizirati, da bodo vsi vsak učenci na vaši šoli opraviti Uro za kodo. Vzorčni načrt: #PDF # | #Word #'
+  hardware_prizes_form_submit_label: Potrdi
+  hoc_faq_title: Pogosto zastavljena vprašanja
+  hoc_faq_what_is_hoc_q: Kaj je Ura za kodo?
+  hoc_faq_what_is_hoc_a: "Uro za kodo je eno urni uvod v računalništvo, namenjen pokazati, da se lahko vsakdo naučiti osnov programske kode. <a href='http://code.org/learn'> Oglejte si vaje</a>. Spremljajte spletno stran tudi v prihodnje, kmalu bodo na voljo nove."
+  hoc_faq_last_year: Poskusite lanskoletne vaje
+  hoc_faq_when_is_hoc_q: Kdaj je Ura za kodo?
+  hoc_faq_when_is_hoc_a: "Vsakdo lahko gostite Uro za kodo kadarkoli, osnovni cilj akcije ostaja, da desetine milijonov dijakov poskusiti Uro za kodo med 8. in 14. decembrom, 2014, ko poteka <a href='http://csedweek.org'> Computer Science Education Week</a>. Je to eno posebna, točno določena <i>ura</i>? Ne. Uro za kodo lahko izvedete kadarkoli v tem tednu. (lahko pa tudi teden pred ali za tem)."
+  hoc_faq_why_cs_q: Zakaj računalništvo?
+  hoc_faq_why_cs_a: "<i>Vsak</i> učenec mora imeti priložnost za učenje računalništva. Izboljšuje reševanje težav, logiko in ustvarjalnost. Z zgodnjim začetkom bodo imeli temelje za uspeh v vseh poklicih 21. stoletja. Več statistik na <a href='http://code.org'> Code.org</a>."
+  hoc_faq_how_participate_q: Kako lahko sodelujem v Uri za kodo?
+  hoc_faq_how_participate_a: "Prijavite se in gostujte vaš dogodek Ura za kodo <a href='http://hourofcode.org'> tu</a>, in <a href='target-resources-how-to'> začnite načrtovati</a>. Dogodek Lahko organizirate v vaši šoli ali drugje, ko na primer v izven klubu, krožku, neprofitni organizaciji ali v podjetju."
+  hoc_faq_behind_hoc_q: Kdo stoji za Uro za kodo?
+  hoc_faq_behind_hoc_a: "Uro za kodo organizira <a href='http://code.org'> Code.org</a>, javna neprofitna organizacija, posvečena širitvi računalništva v šolah in povečevanje udeležbe žensk ter manjšin. <a href='http://code.org/about/partners'>Velika koalicija partnerjev </a>, vključno z Microsoft-om in Apple-om, se je združila v podporo Uri za kodo."
+  hoc_faq_host_q: Ne vem ničesar o pisanju kode. Še vedno lahko gostujem dogodek?
+  hoc_faq_host_a: "Vsekakor. Aktivnosti so vodene. Vse kar morate storiti je, <a href='http://code.org/learn'> poskusite naše trenutne tečaje</a>, izberite način za učitelje in izbrati eno uro &mdash; za vse ostalo bomo poskrbeli. Imamo aktivnosti za vsako starost in izkušnje, od vrtca in naprej. Začnite načrtovanje vašega dogodka <a href='target-resources-how-to'>vodičem</a>."
+  hoc_faq_need_computers_q: Potrebujem računalnike za vsakega sodelujočega?
+  hoc_faq_need_computers_a: "Ne. Imamo tečaje, ki delujejo na računalnikih, pametnih telefonih, tablet, in nekatere, ki ne sploh zahtevajo računalnika! Pridružite se lahko, kjerkoli že ste, s čimerkoli. <p><i>Tukaj je nekaj možnosti:</i> <br><ul><li><b>Delo v parih.</b> Raziskave kažejo, da se učenci učijo najbolje z <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'> programiranjem v parih</a>, pri čemer delijo računalnik. Spodbudite učence, da sodelujejo. <li><b>Uporabite načrtovani zaslon.</b> Če imate projektor, lahko celotna skupina sodeluje in rešuje skupaj. Oglejte si video in se izmenjujte pri reševanju ugank ali odgovore na vprašanja. <li><b>Brez povezave.</b> Nudimo tudi vaje, ki ne zahtevajo računalnika. </ul>"
+  hoc_faq_international_q: 'I am in <country>. How do I participate internationally?'
+  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='target-resources'>here</a>."
+  hoc_faq_tutorial_q: Kako lahko uro naredim vodič?
+  hoc_faq_tutorial_a: "Če ste zainteresirani, lahko postati partner za vodiče, <a href='target-tutorial-guidelines'> oglejte si naše smernice in navodila</a>. Radi bi gostili čim večje število, vendar glavni cilj je cim boljša izkušnja za vse, ki so novi v računalništvu."
+  hoc_faq_more_questions_q: Imate dodatna vprašanja?
+  hoc_faq_more_questions_a: "Poskusite najti odgovor na <a href='http://support.code.org'> forumu za podporo</a>."
+  hoc_faq_more_questions_br_q: Outras dúvidas?
+  hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
+  hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
+  hoc_faq_when_is_hoc_uk_a: "The Hour of Code will take place during December 8-14, 2014. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. The Hour of Code in the UK will happen at the same time as in the US where it is timed to celebrate the annual <a href='http://csedweek.org'>Computer Science Education Week.</a>"
+  hoc_faq_why_cs_uk_a: '<i>Every</i> student should have the opportunity to learn computer science. It helps nurture problem-solving skills, logic and creativity. By starting early, students will have a foundation for success in any 21st-century career path.'
+  hoc_faq_how_participate_uk_a: "Sign up to host an Hour of Code event <a href='http://hourofcode.com/uk'>here</a> and start planning. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 8 arrives."
+  hoc_faq_behind_hoc_uk_a: "The Hour of Code is organised by <a href='http://uk.code.org'>Code.org</a>, a public 501c3 non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. An <a href='http://uk.code.org/about/partners'>unprecedented coalition of partners</a> have come together to support the Hour of Code, too &mdash; including Microsoft, Google, Cambridge University Press, Tech City and The Department of Education."
+  hoc_faq_host_uk_a: "Of course. Hour of Code activities are self-guided. All you have to do is pick the tutorial you want and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. <a href='http://uk.code.org/learn'>Try our current tutorials</a>."
+  stats_hoc_2013_heading: 'Neverjetne statistike iz lanskoletne Uro za kode. Samo v enem tednu:'
+  stats_hoc_2013_image_alt: 'Statistika Ure za kodo 2013 '
+  stats_growth: To je najhitrejša storitev, ki je prišla do 15 milijonov uporabnikov.
+  stats_tumblr: 'Tumblr: 3,5 let'
+  stats_facebook: 'Facebook: 3 leta'
+  stats_twitter: 'Twitter: 2,5 let'
+  stats_pinterest: 'Pinterest: 2 leti'
+  stats_instagram: 'Instagram: 14 mesecev'
+  stats_hoc: 'Ura za kodo: 5 dni'
+  stats_global: 15 milijonov se je pridružilo Uri za kodo
+  stats_girls_more: Več deklet je preizkusilo računalništvo kot v zadnjih 70 letih.
+  stats_girls_million: Več kot 10 milijonov deklet v 2013
+  stats_nina: '"Vsak dan je prinesel enake rezultate &mdash; 100 % vseh je z veseljem sodelovalo."-Nina Nichols Peery, učitelj'
+  stats_student: '"Vedela sem, da je to <b>enkratna priložnost</b>." - Mariana Alzate, 5 razred'
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  resources_how_to: Vodič za učitelje
+  resources_how_to_events: Event how-to guide
+  resources_how_to_districts: How-to guide for districts
+  resources_how_to_officials: How-to guide for public officials
+  resources_handouts: Handouts to spread the word
+  resources_videos: Video posnetki
+  resources_posters: Plakati
+  resources_social: Socialno
+  resources_banners: Pasice
+  resources_emails: Vzorčna pošta
+  resources_stats: Useful stats and blurbs
+  resources_press_kit: Za medije
+  events_title: 'Vsi dogodki Ura za kodo '
+  events_nav_all: Vsi dogodki
+  events_nav_whole_schools: Celotne šole
+  events_nav_special: Posebni dogodki
+  events_nav_orgs: Organizations
+  events_all_title: Vsi dogodki Ura za kodo
+  events_whole_school_title: Dogodki Ura za kodo za celotne šole
+  events_special_title: Posebni dogodki Ura za kodo
+  events_orgs_title: All Hour of Code events organized by Partner Organizations
+  event: dogodek
+  events: dogodki
+  footer_copyright_message: Copyright 2014 Code.org. Vse pravice pridržane.
+  footer_trademark_message: Hour of Code™ je blagovna znamka Code.org.
+  footer_menu_partners: Partnerji
+  footer_menu_contact: Kontaktirajte nas
+  footer_menu_support: Podpora
+  footer_menu_terms: Pogoji
+  footer_menu_privacy: Politika zasebnosti

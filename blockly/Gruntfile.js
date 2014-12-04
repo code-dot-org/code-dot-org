@@ -5,7 +5,7 @@ module.exports = function (grunt) {
 
   var config = {};
 
-  var APPS = process.env.MOOC_APP ? [process.env.MOOC_APP] : [
+  var APPS = [
     'maze',
     'turtle',
     'bounce',
@@ -16,6 +16,14 @@ module.exports = function (grunt) {
     'webapp',
     'eval'
   ];
+
+if (process.env.MOOC_APP) {
+  var app = process.env.MOOC_APP;
+  if (APPS.indexOf(app) === -1) {
+    throw new Error('Unknown app: ' + app);
+  }
+  APPS = [app];
+}
 
 // Parse options from environment.
   var MINIFY = (process.env.MOOC_MINIFY === '1');
@@ -157,7 +165,7 @@ module.exports = function (grunt) {
         {
           expand: true,
           cwd: 'lib/jsinterpreter',
-          src: ['acorn_interpreter.js'],
+          src: ['*.js'],
           dest: 'build/package/js/jsinterpreter/'
         }
       ]

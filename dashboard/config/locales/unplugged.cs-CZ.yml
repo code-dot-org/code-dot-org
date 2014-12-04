@@ -3,14 +3,12 @@
     unplugged:
       Unplug1:
         title: Úvod do počítačové vědy
-        desc: This lesson will introduce the concept of Computer Science and explain
-          what a Computer Scientist does.  It will also give students an opportunity
-          to assume the role of a computer scientist.  By the end of the activity,
-          each student will have a take-home reminder of what he or she learned.  You
-          may be tempted to skip teaching young children the vocabulary words that
-          are associated with the lessons that follow, but presenting them in a fun
-          and playful light now is far more productive than waiting for more advanced
-          opportunities.
+        desc: Tato lekce představí koncept informatiky a vysvětlí, co dělají počítačoví
+          vědci. Také dá studentům možnost zaujmout roli počítačového vědce. Na konci
+          lekce každý student dostane shrnutí toho, co se naučil. Možná, že nebudete
+          chtít dětem vysvětlovat termíny, které se budou v lekcích vyskytovat, ale
+          když je jim představíte zábavně a hravě, bude to mnohem lepší, než když
+          budete čekat na pozdější příležitost.
         pdfs:
         - unplug1
         video: Unplug1
@@ -65,7 +63,7 @@
         - unplug5
         video: Unplug5
       Unplug6:
-        title: Conditions
+        title: Podmínky
         desc: This is a class game.  After introducing the idea of conditionals, if-statements,
           and loops, the class can practice together using a pre-written program,
           a deck of cards, and luck of the draw.
@@ -269,3 +267,21 @@
           of binary options.  This lesson takes that concept one step further as it
           illustrates how a computer can store even more complex information (such
           as images and colors) in binary, as well.
+      VideoGamesCoordinatePlanes:
+        title: Video Games and Coordinate Planes
+        desc: Video Games and Coordinate Planes lesson description
+      Contracts:
+        title: Contracts
+        desc: Contracts unplugged lesson description
+      DesignRecipe:
+        title: The Design Recipe
+        desc: Design Recipe lesson description
+      Booleans:
+        title: Booleans
+        desc: Booleans lesson description
+      ConditionalsPiecewiseFunctions:
+        title: Conditionals and Piecewise Functions
+        desc: Conditionals and Piecewise Functions lesson description
+      CollisionDetection:
+        title: Collision Detection
+        desc: Collision Detection lesson description

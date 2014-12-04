@@ -1,7 +1,7 @@
 {
   "catActions": "Tegevused",
   "catControl": "Tsüklid",
-  "catEvents": "Events",
+  "catEvents": "Sündmused",
   "catLogic": "Loogika",
   "catMath": "Matemaatika",
   "catProcedures": "Funktsioonid",
@@ -22,6 +22,9 @@
   "repeatForeverTooltip": "Execute the actions in this block repeatedly while the app is running.",
   "shareWebappTwitter": "Vaata seda rakendust, mis ma tegin. Kirjutasin selle ise @codeorg-is",
   "shareGame": "Jaga oma rakendust:",
+  "stepIn": "Step in",
+  "stepOver": "Step over",
+  "stepOut": "Step out",
   "turnBlack": "tee mustaks",
   "turnBlackTooltip": "Teeb ekraani mustaks.",
   "yes": "Jah"

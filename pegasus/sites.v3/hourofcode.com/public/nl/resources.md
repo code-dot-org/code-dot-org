@@ -3,14 +3,30 @@ layout: wide
 nav: resources_nav
 ---
 
-# Middelen
+<div class="row">
+  <h1 class="col-sm-6">
+    Middelen
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Meld uw evenement aan</button></a>
+  </div>
+</div>
 
-## Een uur Code organiseren? [ Lees de handleiding ](<%= hoc_uri('/resources/how-to') %>)
+<% if @country == 'ie' %>
+
+## Hosting an Hour of Code in Ireland? [See the how-to guide](<%= hoc_uri('/resources/how-to-ireland') %>)
+
+<% else %>
+
+## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+
+<% end %>
 
 <a id="handouts"></p> 
 
 <h2>
-  Gebruik deze documenten om iedereen te informeren
+  Use this handout to spread the word
 </h2>
 
 <p>
@@ -18,7 +34,7 @@ nav: resources_nav
 </p>
 
 <h2>
-  Geef deze documenten aan leerkrachten en scholen
+  Give this handout to teachers and schools
 </h2>
 
 <p>
@@ -29,7 +45,7 @@ nav: resources_nav
   <a id="videos"></p> 
   
   <h2>
-    Toon deze video's om leerlingen te inspireren
+    Show these videos to inspire students
   </h2>
   
   <div style="float:left; padding:10px">
@@ -73,19 +89,11 @@ nav: resources_nav
 <a id="posters"></p> 
 
 <h2>
-  Hang deze posters in je school
+  Hang these posters in your school
 </h2>
 
 <p>
-  <% if @country == 'us' %>
-</p>
-
-<h4>
-  Uw uur Code kan u <a href="http://hourofcode.com/#signup">aanmelden</a> en wij sturen u de affiches kosteloos op.
-</h4>
-
-<p>
-  <% end %> <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="afbeelding" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="afbeelding" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="afbeelding" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="afbeelding" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="afbeelding" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="afbeelding" /></a>
+  <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="afbeelding" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="afbeelding" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="afbeelding" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="afbeelding" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="afbeelding" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="afbeelding" /></a>
 </p>
 
 <p>
@@ -93,7 +101,7 @@ nav: resources_nav
 </p>
 
 <h2>
-  Laat deze banners op uw website zien
+  Feature these banners on your website
 </h2>
 
 <p>
@@ -109,11 +117,11 @@ nav: resources_nav
 </h2>
 
 <p>
-  <a href="/images/social-1.jpg"><img src="/images/fit-200/social-1.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-200/social-2.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-200/social-3.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="/images/social-1.jpg"><img src="/images/fit-250/social-1.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-250/social-2.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-250/social-3.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
 <p>
-  <a href="/images/mark.jpg"><img src="/images/fit-200/mark.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-200/susan.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-200/ashton.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-200/marissa.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-200/chris.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/image/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
 <p>
@@ -133,7 +141,7 @@ nav: resources_nav
 </h2>
 
 <p>
-  Computers zijn overal, maar minder scholen doceren informatica dan 10 jaar geleden. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
+  Computers zijn overal, maar minder scholen doceren informatica dan 10 jaar geleden. Het goede nieuws is, we zijn op weg om dit te veranderen. If you heard about the Hour of Code last year, you might know it made history. In een week hebben 15 miljoen leerlingen informatica geprobeerd!
 </p>
 
 <p>
@@ -149,7 +157,7 @@ nav: resources_nav
 </p>
 
 <p>
-  Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
+  Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com/<%= @country %>
 </p>
 
 <p>
@@ -233,7 +241,7 @@ nav: resources_nav
 </p>
 
 <p>
-  See http://hourofcode.com for details, and help spread the word.
+  See http://hourofcode.com/<%= @country %> for details, and help spread the word.
 </p>
 
 <p>
@@ -274,4 +282,8 @@ nav: resources_nav
 
 <p>
   Sincerely, [NAME], [TITLE]
+</p>
+
+<p>
+  <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Meld uw evenement aan</button></a>
 </p>

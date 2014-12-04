@@ -19,7 +19,9 @@
     "impressive": "true",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "ideal": "7"
+    "ideal": "7",
+    "embed": "false",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
@@ -40,7 +42,7 @@
                       <title name="DIR">moveBackward</title>
                       <title name="VALUE" config="50,100,150,200,300">100</title>
                       <next>
-                        <block type="draw_turn_by_constant_dropdown" deletable="false">
+                        <block type="draw_turn_by_constant_dropdown">
                           <title name="DIR">turnRight</title>
                           <title name="VALUE" config="4,45,60,90,120,180">???</title>
                         </block>

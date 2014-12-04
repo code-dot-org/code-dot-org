@@ -13,47 +13,18 @@
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
-    "use_modal_function_editor": "true",
+    "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "free_play": "false",
     "impressive": "false",
-    "instructions": "Here's a function that takes a binary string of 1's and 0's and instructs the artist to turn on the go from left to right, top to bottom, turning on the squares where the number has a zero. Run this code to see how the artist uses binary to draw this pattern."
+    "instructions": "Here's a function that takes a binary string of 1's and 0's and instructs the artist to turn on the go from left to right, top to bottom, filling in the squares when it sees a 1 and ignoring it when it sees a 0. Run this code to see how the artist uses binary to draw this pattern.",
+    "embed": "false",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="controls_repeat">
-              <title name="TIMES">4</title>
-              <statement name="DO">
-                <block type="procedures_callnoreturn" inline="true">
-                  <mutation name="draw">
-                    <arg name="binary"/>
-                  </mutation>
-                  <value name="ARG0">
-                    <block type="text">
-                      <title name="TEXT">10101010</title>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="procedures_callnoreturn" inline="true">
-                      <mutation name="draw">
-                        <arg name="binary"/>
-                      </mutation>
-                      <value name="ARG0">
-                        <block type="text">
-                          <title name="TEXT">01010101</title>
-                        </block>
-                      </value>
-                    </block>
-                  </next>
-                </block>
-              </statement>
-            </block>
-          </next>
-        </block>
         <block type="procedures_defnoreturn" uservisible="false">
           <mutation>
             <arg name="binary"/>
@@ -125,7 +96,7 @@
                           </value>
                           <value name="B">
                             <block type="math_number" uservisible="false">
-                              <title name="NUM">0</title>
+                              <title name="NUM">1</title>
                             </block>
                           </value>
                         </block>
@@ -220,6 +191,37 @@
               </next>
             </block>
           </statement>
+        </block>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">4</title>
+              <statement name="DO">
+                <block type="procedures_callnoreturn" inline="true">
+                  <mutation name="draw">
+                    <arg name="binary"/>
+                  </mutation>
+                  <value name="ARG0">
+                    <block type="text">
+                      <title name="TEXT">10101010</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="procedures_callnoreturn" inline="true">
+                      <mutation name="draw">
+                        <arg name="binary"/>
+                      </mutation>
+                      <value name="ARG0">
+                        <block type="text">
+                          <title name="TEXT">01010101</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
         </block>
         <block type="procedures_defnoreturn" uservisible="false">
           <mutation/>
@@ -374,7 +376,7 @@
                           </value>
                           <value name="B">
                             <block type="math_number" uservisible="false">
-                              <title name="NUM">0</title>
+                              <title name="NUM">1</title>
                             </block>
                           </value>
                         </block>

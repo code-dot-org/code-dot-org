@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+require_relative '../../config/environment'
+
+STDIN.each do |row|
+  email = row.split(',').first
+  if email && email =~ /@/
+    if user = User.find_by_email(email)
+      # no user
+      puts [email,
+            user.students.count,
+            user.students.map{|s| s.user_levels.where("best_result >= #{Activity::MINIMUM_PASS_RESULT}").count}.reduce(:+)].
+        join(',')
+    else
+      # no user
+      puts [email, '-', '-'].join(',')
+    end
+  else
+    puts row
+  end
+end

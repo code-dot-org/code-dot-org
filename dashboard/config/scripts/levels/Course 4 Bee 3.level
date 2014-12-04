@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "The unknown object is either a flower or a honeycomb. Use the if/else block to collect nectar if it is a flower, else to make honey (because it is a honeycomb).",
+    "instructions": "The unknown object is either a flower or a honeycomb. Use the if/else block to collect nectar if it is a flower, else make honey (because then it would be a honeycomb).",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -20,7 +20,7 @@
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
-    "maze_data": null
+    "use_contract_editor": "false"
   }
 }]]></config>
   <blocks>
@@ -35,9 +35,6 @@
         </block>
         <block type="maze_nectar"/>
         <block type="maze_honey"/>
-        <block type="controls_repeat">
-          <title name="TIMES">???</title>
-        </block>
         <block type="bee_ifElseFlower">
           <title name="LOC">atFlower</title>
         </block>

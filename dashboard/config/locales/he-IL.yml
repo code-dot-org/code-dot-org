@@ -2,17 +2,17 @@
   activerecord:
     errors:
       messages:
-        blank: is required
+        blank: נדרש
     attributes:
       user:
-        name: שם
+        name: שם תצוגה
         email: דואר אלקטרוני
         username: שם משתמש
         password: סיסמה
         password_confirmation: וידוא סיסמא
         current_password: הסיסמה הנוכחית
         locale: שפה
-        age: Age
+        age: גיל
         gender: מין
         edit_header: שינוי פרטי החשבון
         error:
@@ -20,11 +20,8 @@
   hello: שלום עולם
   welcome_back: ברוך שובך, %{name}
   add_teacher_form:
-    code_or_email:
-      label: 'הוספת מורה על-ידי קוד או כתובת אימייל:'
-      placeholder: קוד (ABCDEF) או אימייל (teacher@school.edu)
     code:
-      label: 'Add a teacher by section code:'
+      label: 'הוסף מורה:'
       placeholder: Code (ABCDEF)
     submit: הוסף מורה
   add_hint_form:
@@ -55,10 +52,10 @@
       to sign out of %{provider}.
     already_signedup: כבר נרשמת?
     notyet_signedup: לא הצטרפת עדיין?
-    google_oauth2: Google Account
+    google_oauth2: חשבון גוגל
     twitter: טוויטר
     facebook: פייסבוק
-    windowslive: Microsoft Account
+    windowslive: חשבון מיקרוסופט
     forgot_password: שכחת את הסיסמא שלך?
     need_confirmation: לא קיבלת את  ההוראות האישור?
     need_unlock: לא קיבלת את ההוראות הפתיחה?
@@ -78,8 +75,8 @@
     address_placeholder: כתובת, עיר, מדינה, מיקוד
     gender: מין (אופציונלי)
     birthday: יום הולדת (אופציונלי)
-    age: גיל (לא חובה)
-    user_type: Are you a student or teacher?
+    age: גיל
+    user_type: אתה סטודנט או מורה?
     submit: הירשם
     teacher: האם אתה מורה?
     valid_username: זמין!
@@ -106,9 +103,9 @@
     try_20hours: נסה את קורס ה-20 שעות שלנו - מבוא למדעי המחשב
   signinsection:
     welcome: Welcome to %{section_name}
-    name: Choose your name
-    picture: Now find your secret picture
-    words: Now enter your secret words
+    name: בחר את השם שלך
+    picture: עכשיו מצא את התמונה הסודית שלך
+    words: כעת הכנס את המילים הסודיות שלך
     login: התחבר
   password:
     reset_form:
@@ -172,13 +169,13 @@
     teacher_info_required: 'פרסים של מורים מחייבים שם בי"ס וכתובת:'
     teacher_email_required: 'פרסי מורים דורשים כתובת דוא"ל מאושרת:'
     confirm:
-      title: Please Confirm
+      title: אנא אשר
       'no': לא
       'yes': כן
       msg: אתה בטוח שאתה רוצה לבחור בפרס %{prize_name}?
       msg_student: 'הערה: ניתן לבחור רק סוג אחד של פרס.'
       msg_publicschool: נא אשר כי הנך מורה בבית-ספר ציבורי בארה"ב.
-      msg_visit_website: Visit website
+      msg_visit_website: בקר באתר
     providers:
       apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
@@ -291,7 +288,7 @@
       manage: נהל תלמידים
       dashboard: Go to Teacher Dashboard
       add: הוסף תלמיד
-      remove: remove student
+      remove: הסר סטודנט
       confirm_remove: Are you sure you want to remove this student?
       help_reassign: To divide your class into multiple sections, select students
         to assign to a new section.
@@ -317,10 +314,10 @@
       grade: Grade
       course: Course
       rename: שינוי שם
-      edit: edit
-      delete: delete
-      confirm_delete: Are you sure you want to delete this section?
-      email: Send in email
+      edit: עריכה
+      delete: מחק
+      confirm_delete: האם אתה בטוח שברצונך למחוק קטע זה?
+      email: שלח בדואר אלקטרוני
     rollup: לוח התקדמות
     activity: פעילות אחרונה בכיתה
     user_not_found: לא ניתן היה למצוא את המורה או התלמיד
@@ -380,12 +377,11 @@
     test_videos_help: נסה את נגן הוידאו החדש שלנו בבית ספרך
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
+    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
     heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
     heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
     heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
-    gallery:
-      your_turtle: My Art
-      your_studio: My Apps
+    your_gallery: גלריה
   gender:
     male: גבר
     female: אישה
@@ -397,9 +393,10 @@
     help_from_html: המהנדסים של <a href="http://www.google.com"> גוגל</a>, <a href="http://www.microsoft.com">
       מיקרוסופט</a>, <a href="http://www.facebook.com"> פייסבוק</a>, <a href="http://www.twitter.com">
       טוויטר</a> עזרו ליצור ערכת לימוד זו.
-    art_from_html: Angry Birds&trade; ו&copy; 2009-2013 <a href="http://www.rovio.com">Rovio
+    art_from_html: Angry Birds&trade; ו&copy; 2009-2014 <a href="http://www.rovio.com">Rovio
       Entertainment Ltd</a>כל הזכויות שמורות.<br/>Plants vs. Zombies&trade; ו&copy;
       2013<a href="http://www.ea.com">Electronic Arts Inc.</a>. כל הזכויות שמורות.
+    powered_by_aws: Powered by Amazon Web Services
     feedback: משוב
     translate: עזרו לנו לתרגם לשפתך
     support: תמיכה
@@ -428,7 +425,7 @@
         issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
         any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade
         your browser to a supported version</a>.
-      hide_this_warning: Hide this warning
+      hide_this_warning: הסתר את האזהרה הזו
     upgrade:
       header: אנא שדרג את הדפדפן.
       message: Code.org uses modern web technology. This makes the site faster to
@@ -443,14 +440,15 @@
   download_pdf: שיעור פתוח
   lesson_plan: Lesson Plan
   view_lesson_plan: View Lesson Plan
-  pdf_download: Download PDF
+  pdf_download: הורדת PDF
   download_coming_soon: Downloadable activity coming soon.
-  video_coming_soon: Video Coming Soon!
+  video_coming_soon: וידאו בקרוב!
   share_code:
     title: לחץ'ריצה' כדי לראות את התקדמותי בזמן פעולה
     bounce_og_title: תראה את המשחק קפיצה שלי
     flappy_og_title: תראה את משחק ההתנופפות שלי
     studio_og_title: תראה את הסיפור שלי
+    check_out_what_i_made: Check out what I made
     og_description: כתבתי קוד בעצמי באמצעות code.org
     phone_number_not_allowed: It looks like there is a phone number in it. Try changing
       the text.
@@ -480,6 +478,14 @@
     20hour:
       title: קורס מבוא
       body: נסה את קורס מדעי המחשב בן 20 השעות שלנו.
+    hoc2014:
+      try_new_tutorial: Try our new Hour of Code tutorial in beta
+      try_frozen: Artist with Anna and Elsa, from Frozen
+    gallery:
+      title: גלריה
+      body: View a gallery of app and artist images created by our users
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: תלמידים ציירו את אלה בעזרת קוד!
     students_made_these_with_code: Students made these with code!
@@ -492,8 +498,13 @@
     more: עוד &rarr;
     caption_by_name_age: by %{name}, age %{age}
     caption_time_ago: '%{time_ago} ago'
+    header: גלריה
+    header_playlab: Play Lab
+    header_artist: Artist
   landing:
     prerelease: This page is still under development.
+    prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
+      is subject to revision as feedback is received and improvements are made.
     feedback: Give Feedback
     report_bug: Report Bug
     support: Get Help
@@ -513,9 +524,9 @@
   dialog:
     ok: אישור
   time:
-    hour: 1 hour
-    day: day
-    week: week
+    hour: שעה אחת
+    day: יום
+    week: שבוע
   data:
     script:
       name:
@@ -530,7 +541,7 @@
           title: עריכת קוד
           description: ''
         events:
-          title: Events
+          title: אירועים
           description: ''
         builder:
           title: Builder

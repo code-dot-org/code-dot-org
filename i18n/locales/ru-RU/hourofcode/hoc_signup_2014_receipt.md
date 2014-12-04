@@ -1,6 +1,6 @@
 * * *
 
-Тема: Спасибо за то, что вы зарегистрировались как организатор Часа Кодирования! просмотр: нет тема: нет
+from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)" subject: "Thanks for signing up to host an Hour of Code!" litmus_tracking_id: "5g5lyi1a"
 
 * * *
 
@@ -10,12 +10,6 @@
 
 **КАЖДЫЙ** организатор Часа Кода в благодарность получит 10 ГБ пространства на Dropbox или $10 в Skype. <a
 
-<% if @country == 'us' %>
-
-При участии [всей школы в Часе Кодирования](http://<%= hostname %>/всей школы)у вас появляется возможность получить большие призы для всей школы.
-
-<% end %>
-
 ## 1. Распространите новость
 
 Расскажите своим друзьям про #ЧасКода.
@@ -24,27 +18,21 @@
 
 ## 2. Попросите провести Час Программирования в Вашей школе
 
-[Отправьте этот e-mail](http://<%= hostname %>/resources#email) или [передайте эту брошюру директору вашей школы](http://<%= hostname %>/files/schools-handout.pdf). Когда ваша школа будет зарегистрирована как участник в проекте Час Кодирования, [она получает возможность выиграть компюьтерную технику на стоимость в 10,000 дол. США](http://<%= hostname %>/prizes) Пригласите другие школы в вашем районе участвовать в проекте и в розыгрыше приза.
-
-<% else %>
-
-## 2. Попросите провести Час Программирования в Вашей школе
-
-[Отправьте этот e-mail](http://<%= hostname %>/resources#email) или передайте [эту брошюру](http://<%= hostname %>/files/schools-handout.pdf) директору вашей школы.
+[Send this email](http://<%= hostname %>/resources#email) or give [this handout](http://<%= hostname %>/files/schools-handout.pdf) to your principal.
 
 <% end %>
 
-## Обратитесь к вашему руководству с предложением принять участие в проекте Час Кодирования
+## 3. Ask your employer to get involved
 
-[Отправьте этот e-mail](http://<%= hostname %>/resources#email) вашему менеджеру, или исполнительному директору. Или  передайте им эту брошюру.</p> 
+[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf).
 
-## 4. Расскажите о проекте Час Кодирования там, где вы живете 
+## 4. Promote Hour of Code within your community
 
-Привлеките к участию в проекте местный детский клуб, церковь, университет, местную организацию по интересам. Или станьте организатором Часа Кодирования в своем районе.
+Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
 
-## 5.Обратитесь с своему депутату с просьбой поддержать проект Час Кодирования.
+## 5. Ask a local elected official to support the Hour of Code
 
-[Отправьте этот e-mail](http://<%= hostname %>/ресурсы#политики)мэру вашего города, в городскую администрацию,в администрацию вашей школы. Или [передайте им эту брошюру](http://<%= hostname %>/ресурсы/hoc-one-pager.pdf) и пригласите их в свою школу.
+[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
 
 <% if @country == 'ro' %>
 
@@ -56,6 +44,4 @@ Echipa Hour of Code Romania hoc@adfaber.org
 
 * * *
 
-Code.org - это некоммерческая организация 501c3. Мы расположены по адресу: 1301 5th Ave, Suite 1225, Сиэттл, WA, 98101. Не хотите больше получать наши письма? [Откажитесь от подписки](%= unsubscribe_link %).
-
-![](<%= tracking_pixel %>)
+Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](%= unsubscribe_link %).

@@ -44,25 +44,26 @@
           'Maze: Loops': 'Völundarhús: Lykkjur'
           'Bee: Loops': 'Býfluga: Lykkjur'
           'Studio: Create a Story': 'Leikjasmiðja: Búa til sögu'
+          'Artist: Loops': 'Listamaður: Lykkjur'
+          description_audience: Ages 4+ (pre-readers)
           description_short: Námskeið 1 er ætlað byrjendum í lestri. Mælt með fyrir
             5 - 6 ára.
-          'Artist: Loops': 'Listamaður: Lykkjur'
         course2:
           The Maze: Völundarhúsið
           Suzi: Súsí
           The Artist: Listamaðurinn
-          Artist Debugging: Listamaður - Villuleit
+          Artist Debugging: Villuleit listamanns
           Bounce: Skopp
-          'Studio: Create a Story': 'Leikjasmiðja: Búa til sögu'
+          'Studio: Create a Story': 'Leikjasmiðjan: Búa til sögu'
           Artist Loops: Lykkjur listamanns
           Bee Conditionals: Skilyrði býflugu
           Flappy: Flappy
           title: Námskeið 2
           Bee Loops: Lykkjur býflugu
           Artist Functions: Föll listamanns
-          The Artist Debugging: Listamaðurinn - villuleit
-          Bee Debugging: Býfluga - villuleit
-          Bee Functions: Býfluga - föll
+          The Artist Debugging: Villuleit listamannsins
+          Bee Debugging: Villuleit býflugu
+          Bee Functions: Föll býflugu
           Maze Loops: Lykkjur völundarhúss
           Graph Paper Programming: Forritun rúðublaða
           'Real-life Algorithms: Paper Planes': 'Algrím úr raunheimi: Pappírsskutlur'
@@ -84,11 +85,12 @@
           'Bee: Debugging': 'Býfluga: Villuleit'
           'Artist: Debugging': 'Listamaður: Villuleit'
           'Bee: Conditionals': 'Býfluga: Skilyrði'
-          description_short: Námskeið 2 er ætlað nemendur sem geta lesið. Mælt með
-            fyrir 6 - 9 ára.
           'Artist: Sequence2': 'Listamaður: Röð2'
           'Maze: Sequence2': 'Völundarhús: Röð2'
           'Artist: Nested Loops': 'Listamaður: Innri lykkjur'
+          description_audience: Ages  6+ (reading required)
+          description_short: Námskeið 2 er ætlað nemendum sem geta lesið. Mælt með
+            fyrir 6 - 9 ára.
         course3:
           The Maze: Völundarhúsið
           'Studio: Create a Story': 'Leikjasmiðja: Búa til sögu'
@@ -130,8 +132,6 @@
           'Farmer: While Loops': 'Bóndi: Meðan lykkjur'
           'Bee: Nested Loops': 'Býfluga: Innri lykkjur'
           'Bee: Debugging': 'Býfluga: Villuleit'
-          description_short: Námskeið 3 er framhald á Námskeiði 2. Mælt með fyrir
-            8 - 9 ára.
           Maze2: Völundarhús2
           Artist2: Listamaður2
           'Artist: Functions2': 'Listamaður: Föll2'
@@ -144,6 +144,9 @@
           'Bee: Debugging2': 'Býfluga: Villuleit2'
           'Artist: Patterns': 'Listamaður: Mynstur'
           Songwriting: Lagasmíð
+          description_audience: Ages 8+ (after Course 2)
+          description_short: Námskeið 3 er framhald á Námskeiði 2. Mælt með fyrir
+            8 - 9 ára.
         msm:
           title: Miðskólastærðfræði
           description: Verið er að vinna í miðskólastærðfræði.
@@ -152,7 +155,7 @@
           Unit 1: 1. eining
           Unit 2: 2. eining
           Ninja Cat and the Coordinate Plane: Ninjuköttur og hnitakerfið
-          'Calc: Circles of Evaluation': 'Reiknir: Matshringir'
+          'Calc: Circles of Evaluation': 'Reiknir: Greiningarhringir'
           'Artist: Strings and Images': 'Listamaðurinn: Strengir og myndir'
           Contracts: Samningar
           'Artist: Writing Contracts': 'Listamaður: Ritun samninga'
@@ -160,17 +163,45 @@
           'Play Lab: Defining Variables': 'Leikjasmiðjan: Skilgreining á breytum'
           The Design Recipe: Hönnunaruppskriftin
           'Artist: Defining Functions': 'Listamaðurinn: Skilgreining á föllum'
-          'Play Lab: Defining Functions': 'Leikjasmiðjan: Skilgreining á föllum'
+          'Play Lab: Defining Functions': 'Leikjasmiðjan: Hönnunaruppskriftin'
           'Artist: Functions': 'Listamaður: Föll'
           'Play Lab: Animation': 'Leikjasmiðjan: Hreyfing'
           Booleans: Boolean gildi
           'Play Lab: Booleans': 'Leikjasmiðjan: Boolean gildi'
-          'Calc: Boolean Operators': 'Reiknir: Boolean virkjar'
+          'Calc: Boolean Operators': 'Reiknir: Boolean aðgerðir'
           'Play Lab: Boolean Operators': 'Leikjasmiðjan: Booelan aðgerðir'
           Conditionals and Piecewise Functions: Skilyrði og Piecewise föll
           'Artist: Conditionals': 'Listamaðurinn: Skilyrði'
           Collision Detection and the Distance Formula: Skynjun árekstra og fjarlægðarformúlan
           'Play Lab: Collision Detection': 'Leikjasmiðjan: Skynjun árekstra'
+          'Unplugged: Ninja Cat and the Coordinate Plane': 'Verkefni án tölvu: Ninja
+            köttur og hnitakerfið'
+          'Eval: Strings and Images': 'Greining: Strengir og myndir'
+          'Unplugged: Contracts': 'Verkefni án tölvu: Samningar'
+          'Eval: Writing Contracts': 'Greining: Ritun samninga'
+          'Unplugged: The Design Recipe': 'Verkefni án tölvu: Hönnunaruppskriftin'
+          'Eval: Defining Functions': 'Greining: Flýtiföll'
+          'Eval: Functions': 'Greining: Hönnunaruppskriftin'
+          'Unplugged: Booleans': 'Verkefni án tölvu: Boolean gildi'
+          'Unplugged: Conditionals and Piecewise Functions': 'Verkefni án tölvu: Skilyrði
+            og Piecewise föll'
+          'Eval: Conditionals': 'Greining: Skilyrði'
+          'Unplugged: Collision Detection and the Distance Formula': 'Verkefni án
+            tölvu: Skynjun árekstra og fjarlægðarformúlan'
+          'Calc: Evaluation Blocks': 'Reiknir: Greiningarkubbar'
+          'Unplugged: Video Games and Coordinate Planes': 'Verkefni án tölvu: Tölvuleikir
+            og hnitakerfi'
+          'Eval: Boolean Operators': 'Greining: Boolean virkjar'
+          Blocks to Math: Kubbar og stærðfræði
+          'Play Lab: Defining Variables (Big Game)': 'Leikjasmiðjan: Skilgreina breytur
+            (Stórleikur)'
+          'Play Lab: Animation (Big Game)': 'Leikjasmiðjan: Hreyfing (Stórleikur)'
+          'Play Lab: Boolean (Big Game)': 'Leikjasmiðjan: Boolean gildi (Stórleikur)'
+          'Play Lab: Collision Detection (Big Game)': 'Leikjasmiðjan: Skynjun árekstra
+            (Stórleikur)'
+          'Eval: Fast Functions': 'Greining: Flýtiföll'
+          'Play Lab: Design Recipe': 'Leikjasmiðjan: Hönnunaruppskriftin'
+          'Eval: Design Recipe': 'Greining: Hönnunaruppskriftin'
         playlab:
           title: Leikjasmiðja
           description: Búðu til sögu eða leik með Leikjasmiðju!
@@ -183,27 +214,25 @@
           description_short: Teiknaðu flottar myndir og mynstur með listamanninum!
         scrat:
           title: Scrat
-          description_short: Scrat stutt lýsing.
-          description: Scrat löng lýsing
+          description_short: Stutt lýsing á Scrat.
+          description: Löng lýsing á Scrat
           'Maze: Sequence': 'Völundarhús: Röð'
         hourofcode:
           Maze: Völundarhús
           title: Klukkustund kóðunar
-          description_short: Prófaðu undirstöðuatriði í tölvunarfræði með persónum
-            úr Angry Birds, Plants vs. Zombies og Scrat úr Ísaldarmyndunum!
           description: Prófaðu undirstöðuatriði í tölvunarfræði með persónum úr Angry
             Birds, Plants vs. Zombies og Scrat úr Ísaldarmyndunum!
+          description_short: Prófaðu undirstöðuatriði í tölvunarfræði með persónum
+            úr Angry Birds, Plants vs. Zombies og Scrat úr Ísaldarmyndunum!
         frozen:
-          title: Frozen
-          description_short: Vertu með konunglegu systrunum Arendelle, Önnu og Elsu
-            þegar þær kanna töfra og fegurð íss. Þú munt skrifa kóða til að búa til
-            snjókorn og mynstur um leið og þú skautar og býrð til vetrarveröld sem
-            þú getur svo deilt með vinum þínum!
-          description: Vertu með konunglegu systrunum Arendelle, Önnu og Elsu þegar
-            þær kanna töfra og fegurð íss. Þú munt skrifa kóða til að búa til snjókorn
-            og mynstur um leið og þú skautar og býrð til vetrarveröld sem þú getur
-            svo deilt með vinum þínum!
+          title: Kóðaðu með Önnu og Elsu
+          description: Notum kóða til að fylgja Önnu og Elsu þegar þær kanna töfra
+            og fegurð íssins. Þú munt búa til snjókorn og mynstur með því að láta
+            þær skauta um ísinn og svo getur þú búið til eigin vetrarveröld til að
+            deila með vinum!
           Artist: Listamaður
+          description_short: Notum kóða til að fylgja Önnu og Elsu er þær kanna töfra
+            og fegurð íss.
         course4:
           description_short: Nemendur sem taka Námskeið 4 ættu að hafa lokið námskeiðum
             2 og 3 áður.
@@ -213,31 +242,32 @@
             námskeiðs búa nemendur til gagnvirkar sögur og leiki sem þeir geta svo
             deilt með öðrum. Mælt með fyrir 8 - 12 ára.
           'Artist: Variables': 'Listamaður: Breytur'
-          'Bee: For Loops': 'Býfluga: For lykkjur'
+          'Bee: For Loops': 'Býfluga: Frá lykkjur'
           title: Námskeið 4
           'Algorithms: Tangrams': 'Algrím: Tangram'
           Variables: Breytur
-          'Play Lab: Variables': 'Leikjasmiðja: Breytur'
-          'Play Lab: Functions with Parameters': 'Leikjasmiðja: Föll með stikum'
+          'Play Lab: Variables': 'Leikjasmiðjan: Breytur'
+          'Play Lab: Functions with Parameters': 'Leikjasmiðjan: Föll með stikum'
           'Bee: Functions with Parameters': 'Býfluga: Föll með stikum'
-          'Artist: For Loops': 'Listamaður: For lykkjur'
-          'Play Lab: For Loops': 'Leikjasmiðja: For lykkjur'
+          'Artist: For Loops': 'Listamaður: Frá lykkjur'
+          'Play Lab: For Loops': 'Leikjasmiðjan: Frá lykkjur'
           'Artist: Functions': 'Listamaður: Föll'
           'Artist: Functions with Paraqmeters': 'Listamaður: Föll með stikum'
           'Unplugged: Tangrams': 'Verkefni án tölvu: Tangram'
           Artist: Listamaður
-          Bee: Býflugan
+          Bee: Býfluga
           'Unplugged: Envelope Variables': 'Verkefni án tölvu: Umslagabreytur'
           'Unplugged: Madlibs': 'Verkefni án tölvu: Fyllt í eyður'
-          'Unplugged: For Loop Fun': 'Verkefni án tölvu: Fyndnar For lykkjur'
+          'Unplugged: For Loop Fun': 'Verkefni án tölvu: Fyndnar frá lykkjur'
           'Unplugged: Songwriting with Parameters': 'Verkefni án tölvu: Lagasmíð með
             stikum'
-          'Artist: Functions with Parameters': 'Listamaðurinn: Föllum með stikum'
+          'Artist: Functions with Parameters': 'Listamaður: Föll með stikum'
           'Unplugged: Binary': 'Verkefni án tölvu: Tvíundir'
-          Bee Binary: 'Býflugan: Tvíundir'
+          Bee Binary: 'Býfluga: Tvíundir'
           Farmer Binary: 'Bóndinn: Tvíundir'
           Maze and Bee: Völundarhús og býfluga
           Artist Binary: 'Listamaður: Tvíundir'
+          description_audience: Ages 10+ (after Course 3)
         Course4pre:
           description_short: Stutt yfirferð á hugtökum fyrir nemendur sem hafa ekki
             farið á Námskeið 2 og 3.
@@ -251,3 +281,38 @@
           'Bee: Nested Loops': 'Býfluga: Innri lykkjur'
           'Artist: Functions': 'Listamaður: Föll'
           'Bee: Debugging': 'Býfluga: Villuleit'
+        course4pre:
+          description_short: Stutt yfirferð á hugtökum fyrir nemendur sem hafa ekki
+            farið á Námskeið 2 og 3.
+          Course 4 Prerequisite: Forkröfur Námskeiðs 4
+          'Maze: Sequence': 'Völundarhús: Röð'
+          'Artist: Sequence': 'Listamaður: Röð'
+          'Artist: Loops': 'Listamaður: Lykkjur'
+          'Bee: Conditionals': 'Býfluga: Skilyrði'
+          'Artist: Nested Loops': 'Listamaður: Innri lykkjur'
+          'Farmer: While Loops': 'Bóndi: Meðan lykkjur'
+          'Bee: Nested Loops': 'Býfluga: Innri lykkjur'
+          'Artist: Functions': 'Listamaður: Föll'
+          'Bee: Debugging': 'Býfluga: Villuleit'
+        Course4pre (Case Conflict):
+          description_short: Stutt yfirferð á hugtökum fyrir nemendur sem hafa ekki
+            farið á Námskeið 2 og 3.
+          Course 4 Prerequisite: Forkröfur Námskeiðs 4
+          'Maze: Sequence': 'Völundarhús: Röð'
+          'Artist: Sequence': 'Listamaður: Röð'
+          'Artist: Loops': 'Listamaður: Lykkjur'
+          'Bee: Conditionals': 'Býfluga: Skilyrði'
+          'Artist: Nested Loops': 'Listamaður: Innri lykkjur'
+          'Farmer: While Loops': 'Bóndi: Meðan lykkjur'
+          'Bee: Nested Loops': 'Býfluga: Innri lykkjur'
+          'Artist: Functions': 'Listamaður: Föll'
+          'Bee: Debugging': 'Býfluga: Villuleit'
+        usability:
+          Intro: Kynning
+          Variables and For Loops: Breytur og frá lykkjur
+          Functions and Functions with Parameters: Föll og föll með stikum
+          title: Notkunarprófun
+          description_short: ''
+          description: Valdir áfangar úr Námskeiði 4 til notkunarprófunar.
+          Variables: Breytur
+          For Loops: Frá lykkjur

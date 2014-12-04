@@ -1,8 +1,8 @@
 {
   "compute":"laskea",
-  "equivalentExpression":"Kokeile vaihtaa komentojesi järjestystä saadaksesi täsmälleen saman lausekkeen.",
-  "extraTopBlocks":"Sinulla on liittämättömiä lohkoja. Tarkoititko liittää nämä \"laske\" lohkoon?",
+  "equivalentExpression":"Kokeile vaihtaa komentojesi järjestystä saadaksesi aikaan täsmälleen saman lausekkeen.",
+  "extraTopBlocks":"Sinulla on liittämättömiä lohkoja. Tarkoititko liittää nämä \"laske\"-lohkoon?",
   "goal":"Tavoite:",
-  "reinfFeedbackMsg":"Voit painaa \"yritä uudelleen\" muokataksesi lausekettasi.",
+  "reinfFeedbackMsg":"Tässä on tarinasi! Jatka sen työstämistä, tai siirry seuraavaan pulmaan!",
   "yourExpression":"Lausekkeesi:"
 }

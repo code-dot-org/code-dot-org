@@ -1,11 +1,15 @@
 {
+  "ac": {
+    "full_name": "Africa",
+    "default_language": "en"
+  },
   "ad": {
     "full_name": "Andorra",
     "default_language": "ca"
   },
   "af": {
-    "full_name": "Africa",
-    "default_language": "en"
+    "full_name": "Afghanistan",
+    "default_language": "af"
   },
   "al": {
     "full_name": "Albania",
@@ -22,6 +26,10 @@
   "au": {
     "full_name": "Australia",
     "default_language": "en"
+  },
+  "az": {
+    "full_name": "Azerbaijan",
+    "default_language": "az"
   },
   "bg": {
     "full_name": "Bulgaria",
@@ -51,6 +59,10 @@
     "full_name": "Germany",
     "default_language": "de"
   },
+  "dk": {
+    "full_name": "Denmark",
+    "default_language": "da"
+  },
   "eg": {
     "full_name": "Egypt",
     "default_language": "ar"
@@ -70,6 +82,10 @@
   "gr": {
     "full_name": "Greece",
     "default_language": "el"
+  },
+  "hk": {
+    "full_name": "Hong Kong",
+    "default_language": "zh"
   },
   "hr": {
     "full_name": "Croatia",
@@ -107,6 +123,10 @@
     "full_name": "Korea",
     "default_language": "ko"
   },
+  "lv": {
+    "full_name": "Latvia",
+    "default_language": "lv"
+  },
   "me": {
     "full_name": "Middle East",
     "default_language": "ar"
@@ -139,6 +159,10 @@
     "full_name": "Peru",
     "default_language": "es"
   },
+  "pl": {
+    "full_name": "Poland",
+    "default_language": "pl"
+  },
   "ps": {
     "full_name": "Palestine",
     "default_language": "ar"
@@ -154,6 +178,10 @@
   "ru": {
     "full_name": "Russia",
     "default_language": "ru"
+  },
+  "si": {
+    "full_name": "Slovenia",
+    "default_language": "sl"
   },
   "tr": {
     "full_name": "Turkey",

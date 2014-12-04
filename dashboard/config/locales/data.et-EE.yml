@@ -25,10 +25,10 @@
           Artist5: Stage 19
           Unplug11: Stage 20
         Hour of Code:
-          desc: Hour of Code
+          desc: Koodi Tund
           Maze: Stage 1
         Edit Code:
-          desc: Edit Code (beta)
+          desc: Muuda koodi (beeta)
           MazeEC: Stage 1
         2014 Levels:
           desc: Bounce (beta)
@@ -43,13 +43,14 @@
           desc: Jigsaw (beta)
           Jigsaw: Stage 1
         Step Levels:
-          desc: Maze (beta)
+          desc: Labürint (beeta)
           MazeStep: Stage Step
         edit-code:
-          desc: Edit Code (beta)
+          desc: Muuda koodi (beeta)
           MazeEC: Stage 1
           Webapp: Stage 2
           ArtistEC: Stage 3
+          StudioEC: Stage 4
         events:
           desc: Bounce (beta)
           Bounce: Stage 1
@@ -64,35 +65,35 @@
           desc: Jigsaw (beta)
           Jigsaw: Stage 1
         step:
-          desc: Maze (beta)
+          desc: Labürint (beeta)
           MazeStep: Stage Step
         wordsearch:
           desc: Spelling Bee (beta)
           WordSearch: Stage 1
     game:
       name:
-        Unplug1: Introduction to Computer Science
-        Maze: The Maze
+        Unplug1: Sissejuhatus arvutiõpetusse
+        Maze: Labürint
         Multi: Multiple Choice Stuffs
         Unplug2: Computational Thinking
         Unplug3: Graph Paper Programming
         Artist: The Artist
-        Unplug4: Algorithms
+        Unplug4: Algoritmid
         Artist2: The Artist 2
         Unplug5: Funktsioonid
         Farmer: The Farmer
-        Unplug6: Conditionals
+        Unplug6: Tingimuslaused
         Artist3: The Artist 3
-        Unplug7: Song Writing
+        Unplug7: Laulu kirjutamine
         Farmer2: The Farmer 2
         Unplug8: Abstraction
         Artist4: The Artist 4
         Unplug9: Relay Programming
         Farmer3: The Farmer 3
-        Unplug10: The Internet
+        Unplug10: Internet
         Artist5: The Artist 5
-        Unplug11: Wrap-up
-        MazeEC: The Maze
+        Unplug11: Kokkuvõte
+        MazeEC: Labürint
         Bounce: Bounce
         Flappy: Flappy Bird
         Jigsaw: Jigsaw
@@ -101,6 +102,7 @@
         Webapp: Webapp
         ArtistEC: The Artist
         TextMatch: Text Match
+        StudioEC: Play Lab
     trophy:
       name:
         Bronze: Bronze
@@ -537,6 +539,127 @@
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
           a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
           Have fun!'
+        studio_ec_sandbox: Create your own game. When you're done, click Finish to
+          let friends try your game on their phones.
+    levelbuilder:
+      frozen line:
+        instructions: Hei! Minu nimi on Elsa. Aita mul joonistada üks joon.
+      frozen perpendicular:
+        instructions: Nüüd vaatame, kas meil õnnestub joonistada kaks joont, mis oleksid
+          üksteise suhtes 90 kraadise nurgaga. Sul on vaja kasutada "Keera" plokki
+          ja "Liigu" plokki.
+      frozen square iterative:
+        instructions: Tundub, et me oleme poolel teel, et teha ruut. Paneme 4 joont
+          kokku, et joonistada ruut.
+      frozen square loop:
+        instructions: Hei, minu nimi on Anna! Teeme ühe ruudu "Korda" ploki abil,
+          mis kasutaks vähem plokke. Kui mitu korda (???) peaks "Korda" plokk sisemisi
+          plokke läbima, et valmistada ruut?
+      frozen square loop 3x:
+        instructions: Teeme kolm ruutu, pöörates pärast igat ruutu. Kontrolli, et
+          sa pöörad 120 kraadi enne igat uut ruutu.
+      frozen square snowflake:
+        instructions: Kas sa suudad teha lumehelbe, kasutades "Korda" plokki 10 korda
+          ruutu tegemiseks ja "Keera" plokki et pöörata 36 kraadi iga ruudu vahel?
+      frozen cross:
+        instructions: Kasuta "Korda" plokki, et teha plussmärk. Kas sa panid tähele,
+          et Elsa saab liikuda nii edasi kui ka tagasi?
+      frozen cross rotate:
+        instructions: Nüüd proovi seda korrata 10 korda. Mitu kraadi sa pead iga joone
+          vahel pöörama?
+      frozen cross rotate dense:
+        instructions: 'Kordame seda 90 korda! Mitu korda mahub 360 sisse 90? Vihje:
+          See on väga väike number.'
+      frozen diamond:
+        instructions: 'Teeme rööpküliku. See on muidu nagu ruut aga sellel on erinevad
+          nurgad: 90 kraadiste nurkade asemel on 60 ja 120 kraadised nurgad.'
+      frozen diamond mini snowflake:
+        instructions: Kas sa teadsid, et iga lumehelves on erineva kujuga?Teeme uue
+          lumehelbe kasutades "Korda" plokki et teha rööpkülikut 4 korda, keerates
+          iga rööpküliku vahel 90 kraadi võrra paremale.
+      frozen diamond snowflake:
+        instructions: Nüüd, teeme uue lumehelbe, kasutades "Korda" plokki, et korrata
+          rööpkülikut 10 korda, pöörates igaühe vahel 36 kraadi paremale.
+      frozen circle:
+        instructions: Ring on eriline kujund. Kas sa suudad välja mõelda, mis numbriga
+          tuleks küsimärgid asendada, et joonistada ring?
+      frozen circle function:
+        instructions: Kasuta uut "Loo ring" plokki, et teha 10 osaliselt kattuvat
+          ringi. Ära unusta ringide vahel edasi hüpata.
+      frozen circle function in circle:
+        instructions: Nüüd loome 20 osaliselt kattuvat ringi, pöörates iga ringi vahel
+          18 kraadi.
+      frozen circle function with parameter:
+        instructions: Siin on "Loo ring" plokk, mis suudab teha erinevate suurustega
+          ringe. Kas sa saaksid seda kasutades luua väikse ringi suurusega 5 ja suurema
+          ringi suurusega 10?
+      frozen snowflower:
+        instructions: Keerulisemaid lumemustreid saab teha väga lihtsate kujunditega.
+          Kas sa saaksid teha mustri, tehes viis korda ringi suurusega 5 ja viis korda
+          ringi suurusega 10?
+      frozen snowflake branch:
+        instructions: Proovi kasutada "Tee lumehelbe haru" plokki, et luua 3 haru,
+          mis hakkaks meenutama lumehelvest.
+      frozen snowflake full:
+        instructions: Nüüd kordame seda 8 korda, et teha ilus lumehelves!
+      frozen freeplay:
+        instructions: Sa oled saanud ametlikult meister-kunstnikuks! Loo oma talve
+          võlumaailma ja jaga seda oma sõpradega.
+      scrat 16:
+        instructions: Tammetõru! Tammetõru! Tammetõru! Kasuta "kui" plokki, et aidata
+          mul jõuda tammetõruni vähima arvu plokkide abil.
+      scrat 17:
+        instructions: Olgu, teeme seda praktika mõttes korra veel - see ei ole eriti
+          teistmoodi, aga pea silmas seinu!
+      scrat 18:
+        instructions: '"Kui-siis" plokid kontrollivad tingimusi ja seejärel teevad
+          kas ühte asja VÕI teist. Et aidata mind tammetõruni, proovi seda uut plokki
+          kasutada.'
+      scrat 19:
+        instructions: One more practice of the "if-else" block, can you get it right
+          on your first try?
+      scrat 20:
+        instructions: Kas sa saaksid lisada täpselt 3 plokki, et aidata mul lahendada
+          keerulisemat labürinti? Kui sa teed seda õigesti, siis ma saan kõnida igat
+          loogelist teed pidi, vahet pole kui pikalt. Kiirusta! Jää on sulamas!
+      Standalone_Artist_1:
+        instructions: Welcome to Artist! First off, let's try to make a simple square
+          using the turn right block and move forward block. Each side should be 100
+          pixels long.
+      Standalone_Artist_2:
+        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel
+          long sides.
+      Standalone_Artist_3:
+        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree
+          turns?
+      Standalone_Artist_4:
+        instructions: Now you've got a new block to play with, the loop. This will
+          repeat a set of commands. What happens if you loop these commands 6 times?
+      Standalone_Artist_5:
+        instructions: How many times do you need to loop this diamond to draw the
+          flower?
+      Standalone_Artist_5.5:
+        instructions: 'Notice how we simplified the diamond code by turning it into
+          a loop. You can loop that whole sequence 12 times to draw the flower. Hint:
+          You''ll need to turn 30 degrees after your diamond loop so you don''t keep
+          drawing over the same diamond.'
+      Standalone_Artist_6:
+        instructions: 'Loop this hexagon code 6 times to create the design. How many
+          degrees will you need to turn each time? Hint: divide the number of degrees
+          in a circle by the number of times you are looping.'
+      Standalone_Artist_7:
+        instructions: 'A function is another programming tool to help you avoid repeating
+          yourself. This function draws a flower, so you can use it any time you want
+          to draw a flower. Use this and the new jump block to draw these flowers.
+          Hint: The flowers are 150 pixels apart'
+      Standalone_Artist_8:
+        instructions: Here's a function called "Draw a shape" that we've programmed
+          to draw hexagons. Run the code to see what it does and then experiment with
+          the function to see what happens. Can you make it draw a pattern of squares,
+          triangles, or octagons?
+      Standalone_Artist_9:
+        instructions: Now go ahead and make whatever picture you'd like! You've even
+          got an empty function that you can make do whatever you want!
     video:
       name:
         maze_intro: Maze Intro
@@ -547,6 +670,7 @@
         loop_until: Repeat Until Block
         if: If Block
         if_else: If/else Block
+        if_else_scrat: If/else Block
         function: Funktsioonid
         loop_while: While Block
         loop_for: Counter Block
@@ -555,14 +679,14 @@
         Unplug1: What is CS?
         Unplug2: Computational Thinking
         Unplug3: Graph Paper Programming
-        Unplug4: Algorithms
+        Unplug4: Algoritmid
         Unplug5: Funktsioonid
-        Unplug6: Conditionals
+        Unplug6: Tingimuslaused
         Unplug7: Songwriting
         Unplug8: Abstraction
         Unplug9: Relay programming
         Unplug10: Internet
-        Unplug11: Wrap-up
+        Unplug11: Kokkuvõte
         C1_happy_maps_unplugged: Happy Maps
         C1_moveitmoveit_unplugged: Move It, Move It
         C1_bigevent_unplugged: The Big Event
@@ -579,6 +703,7 @@
         C1_playlab_storytelling: Play Lab - Create a Story
         C1_planting_seed: Planting a Seed
         C1_building_foundation: Building a Foundation
+        C1_going_places_safely: Going Places Safely
         C2_maze_intro: Maze Intro
         C2_artist_intro: Artist Intro
         C2_zuck_repeat_loop: Maze Loops
@@ -589,10 +714,11 @@
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: Play Lab - Create a Story
         C2_graph_paper: Graph Paper Programming
-        C2_conditionals_with_cards: Conditionals
+        C2_conditionals_with_cards: Tingimuslaused
         C2_binary_bracelets: Binary Bracelets
         C2_relay_programming: Relay Programming
         C2_paper_airplanes: Paper Airplanes
+        C2_digital_footprint: Your Digital Footprint
         C3_maze_level_4: Maze Loops
         C3_artist_intro: Artist Intro
         C3_artist_functions: Artist Functions
@@ -611,6 +737,14 @@
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
+        C4_artist_math: Programming the Artist with Math
+        C4_create_functions: Creating Functions
+        C4_edit_functions: Editing Functions
+        C4_for_loops: For Loops
+        C4_variables: Muutujad
+        frozen_intro: Hour of Code Intro
+        frozen_loops: Introduction to Loops
+        frozen_functions: Introduction to Functions
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
@@ -637,3 +771,40 @@
         repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
           workspace
         snowflake_dropdown: Use this drop-down to create different snowflakes!
+        degrees_per_side: Divide 360 by the number of sides to get the size of each
+          angle in degrees.
+        set_sides: Use this block to set "sides" to the number needed to complete
+          the puzzle.
+        set_length: Use this block to set "length" to the correct value.
+        which_equation: Which equation makes each side shorter for shapes with more
+          sides?  Try each equation!
+        get_nectar: Use the new "get nectar" block.
+        actions_category: The tool box got a new look! The "Actions" blocks are in
+          here now.
+        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
+        edit_function: Use this button to edit the function.
+        create_function: Click here to open the "Functions" flyout, then click the
+          "Create a Function" button.
+        house_hint: It's ok if the picture doesn't look like a house yet. We will
+          fix it in the next puzzle.
+        edit_draw_square: Use this button to edit the function and add the loop.
+        edit_get_nectar: Use this button to edit the function and change the direction
+          the Bee will turn to get the nectar.
+        logic_category: Open the "Logic" flyout to find the "if/else" block.
+        length_parameter: Can you update this function so it uses the "length" parameter?
+        frozen_diamond_repeat: Use the repeat block to create this shape.
+        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
+          each circle.
+        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
+          and change the size.
+        frozen_snowflake_branch: Use the "create a snowflake branch" block
+        frozen_create_square: Attach more blocks here to create a square
+        playlab_drag_say: Drag the "say" block here and type "hello"
+        playlab_use_twice: Use this block twice and remember to change the actor number
+        playlab_move_girl: Use the "move right" block to move Tennis Girl
+        playlab_play_sound: Add "play sound" block here
+        playlab_arrow_keys: Remember to use these to move the witch after clicking
+          on Run
+        playlab_add_move: Add "move" blocks inside this repeat block
+        playlab_add_score: Add score blocks here
+        playlab_add_blocks: Add your blocks here

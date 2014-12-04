@@ -16,26 +16,24 @@
         video: Unplug1
       Unplug2:
         title: Laskennallinen ajattelu
-        desc: With nothing but paper and markers, students will learn the four steps
-          of computational thinking. After a brief introduction, students should be
-          split into groups where they will have to create directions for other students
-          to draw a specific monster (from a catalog of pre-selected monsters). The
-          entire task must be decomposed, then teams will analyze all monsters in
-          the catalog for patterns, abstract different details from the monsters,
-          then use that information to create an algorithm (directions) for another
-          team to draw a certain monster. Teams will then switch algorithms with another
-          group and draw the monster based on what that algorithm indicates. Is the
-          drawing what the original team intended?
+        desc: Käyttäen vain paperia ja kynää, oppilaat käyvät läpi laskennallisen
+          ajattelun neljä perusaskelta. Lyhyen johdannon jälkeen oppilaat jaetaan
+          ryhmiin, joissa he toisillensa ohjeita annettujen hirviöiden piirtämiseksi.
+          Aluksi piirtotehtävä pilkotaan osiin. Seuraavaksi ryhmät analysoiva kaikki
+          annetut hirviöt ja etsivät niistä yhteisiä piirteitä. Käyttäen tätä tietoa
+          hyväkseen, ryhmät muodostavat algoritmin (sarjan ohjeita), jonka avulla
+          toinen ryhmä voi piirtää valitun hirviön. Ryhmät vaihtavat algoritmeja keskenään
+          ja piirtävät hirviön toisen ryhmän algoritmin mukaisesti. Lopuksi verrataan,
+          vastaako kuva algoritmin antaneen ryhmän tarkoittamaa hirviötä.
         pdfs:
         - unplug2
         video: Unplug2
       Unplug3:
         title: Ruutupaperiohjelmointi
-        desc: By programming one another to draw pictures, students will begin to
-          understand what programming is really about. The class will begin by students
-          instructing each other to color squares in on graph paper in an effort to
-          reproduce an existing picture.  If there's time, the lesson can conclude
-          with images that the students create themselves.
+        desc: Ohjelmoimalla toisensa piirtämään kuvia, oppilaat alkavat ymmärtää mistä
+          ohjelmoinnissa on kyse. Tämä oppitunti alkaa oppilaiden neuvoessa toisiaan
+          värittämään neliöitä ruutupaperilla yrittäessään toistaa olemassaolevaa
+          kuvaa. Jos aikaa on, oppitunti voi päättyä kuviin jotka oppilaat itse luovat.
         pdfs:
         - unplug3
         video: Unplug3
@@ -50,7 +48,7 @@
         - unplug4
         video: Unplug4
       Unplug5:
-        title: funktiot
+        title: Funktiot
         desc: In this lesson, students will make a suncatcher out of string, beads,
           and a special charm. The students will follow a series of repetitive steps,
           then be asked to identify certain sets of "skills" that are duplicated several
@@ -148,7 +146,7 @@
           be instructed to repeat it.
         video: C1_getting_loopy
       RelayProgramming:
-        title: Relay programming
+        title: Releohjelmointi
         desc: Students run a relay race, where they dash across the yard to write
           an algorithm based on a "Graph Paper Programming" image. They can only write
           one instruction at a time and if there's an error somewhere, they have to
@@ -184,7 +182,7 @@
           computer science and how algorithms play an essential part.
         video: C2_paper_airplanes
       BinaryBracelets:
-        title: Binary Bracelets
+        title: Binäärikorut
         desc: Students create bracelets as a binary representations of the first letter
           of their name. Students learn that data can be represented and stored in
           more than one way.
@@ -224,13 +222,13 @@
           using pieces of paper.
         video: C3_internet
       Crowdsourcing:
-        title: Crowdsourcing
+        title: Joukkoistaminen
         desc: Student use crowdsourcing, a problem-solving technique common in computer
           science, to complete a task together as a classroom more efficiently than
           if a student attempted it alone.
         video: C3_crowdsourcing
       DigitalCitizenship:
-        title: Digital Citizenship
+        title: Digitaalinen kansalaisuus
         desc: Students explore the difference between private information and personal
           information, distinguishing what is safe and unsafe to share online.
       TangramAlgorithms:
@@ -256,7 +254,7 @@
         desc: We know that loops allow us to do things over and over again, but now
           we’re going to learn how to use loops with extra structure built right in.
       SongwritingWithParameters:
-        title: Songwriting With Parameters
+        title: Parametroitu laulunkirjoitus
         desc: 'One of the most magnificent structures in the computer science world
           is the function.  Functions (sometimes called procedures) are mini programs
           that you can use over and over inside of your bigger program. This lesson
@@ -269,3 +267,21 @@
           of binary options.  This lesson takes that concept one step further as it
           illustrates how a computer can store even more complex information (such
           as images and colors) in binary, as well.
+      VideoGamesCoordinatePlanes:
+        title: Video Games and Coordinate Planes
+        desc: Video Games and Coordinate Planes lesson description
+      Contracts:
+        title: Contracts
+        desc: Contracts unplugged lesson description
+      DesignRecipe:
+        title: Suunnitteluresepti
+        desc: Design Recipe lesson description
+      Booleans:
+        title: Booleans
+        desc: Booleans lesson description
+      ConditionalsPiecewiseFunctions:
+        title: Conditionals and Piecewise Functions
+        desc: Conditionals and Piecewise Functions lesson description
+      CollisionDetection:
+        title: Collision Detection
+        desc: Collision Detection lesson description

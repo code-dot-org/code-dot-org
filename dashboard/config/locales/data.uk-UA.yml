@@ -50,6 +50,7 @@
           MazeEC: Етап 1
           Webapp: Етап 2
           ArtistEC: Етап 3
+          StudioEC: Етап 4
         events:
           desc: Арканоід (бета-версія)
           Bounce: Етап 1
@@ -101,6 +102,7 @@
         Webapp: Webapp
         ArtistEC: Художник
         TextMatch: Співставлення тексту
+        StudioEC: Ігрова студія
     trophy:
       name:
         Bronze: Бронза
@@ -506,8 +508,8 @@
           на восьминога і потім перемістити його стрілками поки не отримаєте бал?
         studio_c3_game_6: Ви можете додати блоки, щоб змінити фон і швидкість руху
           пінгвіна і потім перемістити його стрілками до отримання балу?
-        studio_c3_game_7: Створіть власну гру. Коли завершите, клацніть Готово, щоб
-          запросити друзів випробувати її на своїх телефонах.
+        studio_c3_game_7: Створіть власну гру. Коли завершите, натисніть кнопку Готово,
+          щоб поділитись грою з друзями.
         studio_playlab_1: Можете запрограмувати собаку, щоб він сказав "Привіт, світе"?
         studio_playlab_2: Можете запрограмувати собаку, щоб він щось говорив, а потім,
           щоб щось говорив кіт?
@@ -525,10 +527,10 @@
           на восьминога і потім перемістити його стрілками поки не отримаєте бал?
         studio_playlab_9: Ви можете додати блоки, щоб змінити фон і швидкість руху
           пінгвіна і потім перемістити його стрілками до отримання балу?
-        studio_playlab_10: Створіть власну гру. Коли завершите, клацніть Готово, щоб
-          запросити друзів випробувати її на своїх телефонах.
-        studio_full_sandbox: Створіть свою власну гру. Коли завершите, натисніть кнопку
-          Готово, щоб друзі спробували вашу гру на своїх телефонах.
+        studio_playlab_10: Створіть власну гру. Коли завершите, натисніть кнопку Готово,
+          щоб поділитись грою з друзями.
+        studio_full_sandbox: Створіть власну гру. Коли завершите, натисніть кнопку
+          Готово, щоб поділитись грою з друзями.
         studio_k1_1: Можете запрограмувати собаку, щоб він сказав "Привіт, світе"?
         studio_k1_2: Можете запрограмувати собаку, щоб він щось говорив, а потім,
           щоб щось говорив кіт?
@@ -555,11 +557,131 @@
         maze_wordsearch_k_20: Це перевірка! Переміщуйте мене в різні сторони, щоб
           написати слово STORY (ІСТОРІЯ)
         webapp_ec_simple: Створити свій веб-додаток за допомогою createHtmlBlock.
-        turtle_ec_1_2: 'Тепер намалюйте квадрат. Примітка: використайте свій улюблений
-          колір, вибравши його у новому блоці "penColour".'
+        turtle_ec_1_2: 'Тепер, намалюйте квадрат. Примітка: використайте свій улюблений
+          колір, за допомогою нового блоку "колір олівця".'
         turtle_ec_1_10: 'Ви це зробили! Тепер можете малювати, що завгодно. Деякі
           ідеї для зацікавлення: фігурка, сніжинка або спіраль. Також спробуйте новий
           блок "ширина пера". Розважайтеся!'
+        studio_ec_sandbox: Створіть власну гру. Коли завершите, натисніть кнопку Готово,
+          щоб поділитись грою з друзями.
+    levelbuilder:
+      frozen line:
+        instructions: Привіт! Я Ельза з Еренделу. Допоможіть мені намалювати лінію.
+      frozen perpendicular:
+        instructions: Тепер подивимось, чи зможемо ми створити дві лінії, розміщені
+          на 90 градусів одна відносно іншої. Вам знадобляться блоки "Повернути" та
+          "Переміститись".
+      frozen square iterative:
+        instructions: Схоже, що ми знаходимося на півдорозі до малювання квадрату.
+          Складемо 4 лінії, щоб утворився квадрат.
+      frozen square loop:
+        instructions: Привіт, я Анна з Еренделу! Намалюємо квадрат за допомогою блоку
+          "Повторити", що зменшить кількість блоків програми. Скільки разів (???)
+          потрібно повторювати дії всередині цього блоку, щоб отримати квадрат?
+      frozen square loop 3x:
+        instructions: Спробуємо створити три квадрати, повертаючи трохи після кожного
+          із них. Обов'язково повертайте на 120 градусів перед кожним із квадратів.
+      frozen square snowflake:
+        instructions: Зможете створити сніжинку, використовуючи блок "Повторити",
+          щоб намалювати 10 квадратів, та блок "Повернути", щоб повертати на 36 градусів
+          після кожного із них?
+      frozen cross:
+        instructions: Скористайтесь блоком "Повторити", щоб намалювати плюсик. Ви
+          зауважили, як Ельза рухається вперед та назад?
+      frozen cross rotate:
+        instructions: А тепер спробуйте повторити це 10 разів. На скільки градусів
+          слід повертати після кожної з ліній?
+      frozen cross rotate dense:
+        instructions: 'А повторимо це 90 разів! Скільки разів 90 входить у 360? Підказка:
+          це дуже мале число.'
+      frozen diamond:
+        instructions: 'Створимо паралелограм. Він схожий на квадрат, але має різні
+          кути: 60 та 120 градусів, замість усіх по 90 градусів.'
+      frozen diamond mini snowflake:
+        instructions: А ви знали, що кожна сніжинка має іншу форму? Створимо нову
+          сніжинку, за допомогою блоку "Повторити", щоб намалювати паралелограм 4
+          рази, щоразу повертаючи після малювання фігури на 90 градусів.
+      frozen diamond snowflake:
+        instructions: А тепер створимо сніжинку, повторюючи малювання паралелограма
+          10 разів, і повертаючи щоразу на 36 градусів.
+      frozen circle:
+        instructions: Коло є особливою фігурою. Здогадаєтесь, яке число потрібно поставити
+          замість знаків питання, щоб намалювати коло?
+      frozen circle function:
+        instructions: Використайте блок "Створити коло", щоб намалювати 10 кіл, котрі
+          накладаються. Не забувайте перескакувати між колами.
+      frozen circle function in circle:
+        instructions: А тепер створимо 20 кіл, котрі накладаються, повертаючи на 18
+          градусів між колами.
+      frozen circle function with parameter:
+        instructions: Тепер блок "Створити коло" може малювати кола різного розміру.
+          Можете скористатись ним, щоб намалювати мале коло розміром 5, і велике коло
+          розміром 10?
+      frozen snowflower:
+        instructions: Складні морозні узори можна створювати за допомогою простих
+          фігур. Зможете створити цей узор з 5 кіл розміром 5, та 5 кіл розміру 10?
+      frozen snowflake branch:
+        instructions: Спробуйте використати блок "Створити гілочку сніжинки", щоб
+          створити 3 гілочки, котрі вже нагадують сніжинку.
+      frozen snowflake full:
+        instructions: А тепер повторіть 8 разів, щоб утворилась красива сніжинка!
+      frozen freeplay:
+        instructions: Ви офіційно стали головним художником! Створіть зимову казку
+          та поділіться нею з друзями.
+      scrat 16:
+        instructions: Жолудь! Жолудь! Жолудь! Використайте блок "якщо" з якомога меншою
+          кількістю інших блоків, щоб допомогти дістатися до нього.
+      scrat 17:
+        instructions: Що ж, спробуємо ще раз - це мало відрізняється, але зважайте
+          на стіну!
+      scrat 18:
+        instructions: Блоки "якщо-інакше" перевіряють умову, і виконують одну дію
+          АБО іншу. Скористайтесь цим блоком, щоб провести мене до жолудя.
+      scrat 19:
+        instructions: Ще трохи практики використання блоку "якщо-або". Ви зможете
+          зробити усе правильно з першої спроби?
+      scrat 20:
+        instructions: Зможете пройти складніший лабіринт, додавши всього 3 блоки?
+          Якщо зробите все правильно, я зможу пройти будь-який звивистий шлях довільної
+          довжини. Поспішіть! Лід тане!
+      Standalone_Artist_1:
+        instructions: Welcome to Artist! First off, let's try to make a simple square
+          using the turn right block and move forward block. Each side should be 100
+          pixels long.
+      Standalone_Artist_2:
+        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel
+          long sides.
+      Standalone_Artist_3:
+        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree
+          turns?
+      Standalone_Artist_4:
+        instructions: Now you've got a new block to play with, the loop. This will
+          repeat a set of commands. What happens if you loop these commands 6 times?
+      Standalone_Artist_5:
+        instructions: How many times do you need to loop this diamond to draw the
+          flower?
+      Standalone_Artist_5.5:
+        instructions: 'Notice how we simplified the diamond code by turning it into
+          a loop. You can loop that whole sequence 12 times to draw the flower. Hint:
+          You''ll need to turn 30 degrees after your diamond loop so you don''t keep
+          drawing over the same diamond.'
+      Standalone_Artist_6:
+        instructions: 'Loop this hexagon code 6 times to create the design. How many
+          degrees will you need to turn each time? Hint: divide the number of degrees
+          in a circle by the number of times you are looping.'
+      Standalone_Artist_7:
+        instructions: 'A function is another programming tool to help you avoid repeating
+          yourself. This function draws a flower, so you can use it any time you want
+          to draw a flower. Use this and the new jump block to draw these flowers.
+          Hint: The flowers are 150 pixels apart'
+      Standalone_Artist_8:
+        instructions: Here's a function called "Draw a shape" that we've programmed
+          to draw hexagons. Run the code to see what it does and then experiment with
+          the function to see what happens. Can you make it draw a pattern of squares,
+          triangles, or octagons?
+      Standalone_Artist_9:
+        instructions: Now go ahead and make whatever picture you'd like! You've even
+          got an empty function that you can make do whatever you want!
     video:
       name:
         maze_intro: Вступ до лабіринту
@@ -570,6 +692,7 @@
         loop_until: Блок „Повторити до“
         if: Блок Якщо
         if_else: Блок Якщо/інакше
+        if_else_scrat: Блок Якщо/інакше
         function: Функції
         loop_while: Блок "повторити поки"
         loop_for: Блок лічильника
@@ -602,6 +725,7 @@
         C1_playlab_storytelling: 'Ігрова студія: Створення історії'
         C1_planting_seed: Висаджування насіння
         C1_building_foundation: Закладання основ
+        C1_going_places_safely: Безпечне добирання
         C2_maze_intro: Вступ до лабіринту
         C2_artist_intro: Вступ до художника
         C2_zuck_repeat_loop: Лабіринт - цикли
@@ -616,6 +740,7 @@
         C2_binary_bracelets: Двійкові браслети
         C2_relay_programming: Релейне програмування
         C2_paper_airplanes: Паперові літачки
+        C2_digital_footprint: Твій цифровий слід
         C3_maze_level_4: 'Лабіринт: цикли'
         C3_artist_intro: Вступ до художника
         C3_artist_functions: Художник - функції
@@ -634,6 +759,14 @@
         C3_crowdsourcing: Краудсорсинг
         C3_functional_suncatchers: Функції для блискіток
         C3_songwriting_with_parameters: Пісні з параметрами
+        C4_artist_math: Programming the Artist with Math
+        C4_create_functions: Creating Functions
+        C4_edit_functions: Editing Functions
+        C4_for_loops: Цикли For
+        C4_variables: Змінні
+        frozen_intro: Hour of Code Intro
+        frozen_loops: Introduction to Loops
+        frozen_functions: Introduction to Functions
     callout:
       text:
         drag_blocks: Перетягніть блок "рухатись" і прикріпіть його під іншим блоком
@@ -651,13 +784,55 @@
           "коли історія починається", щоб обрати персонажа своєї історії
         studio_say_text: Впишіть фразу персонажа всередину лапок
         jigsaw_click: Клацніть цей блок!
-        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
-          Run" block to make Elsa move forward
-        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
-          determines how much Elsa turns
-        replace_questions: Use the drop-down to replace "???" with a number
-        replace_questions_degree: Use the drop-down to replace "???" with the correct
-          degree to turn
-        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
-          workspace
-        snowflake_dropdown: Use this drop-down to create different snowflakes!
+        move_elsa_forward: Перемістіть блок "Рухатися вперед" та прикріпіть його під
+          блоком "Коли гра починається", щоб змусити Ельзу рухатися вперед
+        turn_elsa: Використайте блок "Повернути", щоб змусити Ельзу розвернутись.
+          Число у розкривному списку визначає, наскільки повернеться Ельза
+        replace_questions: Скористайтесь розкривним списком, щоб змінити "???" на
+          число
+        replace_questions_degree: Скористайтесь розкривним списком, щоб змінити "???"
+          на кількість градусів повороту
+        repeat_blocks: Використайте блок "Повторити" та розмістіть всередині нього
+          інші блоки на робочій області
+        snowflake_dropdown: Скористайтесь розкривним списком, щоб створювати різні
+          сніжинки!
+        degrees_per_side: Поділіть 360 на кількість сторін та отримайте розмір кожного
+          кута в градусах.
+        set_sides: Скористайтесь блоком позначення числом кількості "сторін" для розв'язання
+          задачі.
+        set_length: Використайте цей блок для правильного визначення "довжини".
+        which_equation: Яке рівняння зробить кожну із сторін коротшою, щоб отримати
+          фігуру з більшою кількістю сторін? Спробуйте кожне із них!
+        get_nectar: Використайте новий блок "отримати нектар".
+        actions_category: Панель інструментів тепер виглядає інакше! Блоки "Дії" тепер
+          знаходяться тут.
+        draw_square_hint: 'Підказка: використайте квадратний цикл, створений у попередній
+          вправі.'
+        edit_function: Скористайтесь цією кнопкою, щоб редагувати функцію.
+        create_function: Клацніть тут, щоб відкрити спливаюче вікно "Функції", а тоді
+          клацніть кнопку "Створити функцію".
+        house_hint: Нічого, що зображення поки не схоже на будинок. Ми це виправимо
+          у наступній вправі.
+        edit_draw_square: Скористайтесь цією кнопкою, щоб змінити функцію та додати
+          цикл.
+        edit_get_nectar: Скористайтесь цією кнопкою, щоб відредагувати функцію та
+          змінити напрям, у якому Бджола повертатиме для отримання нектару.
+        logic_category: Відкрийте спливаюче вікно "Логіка", щоб знайти блок "якщо/інакше".
+        length_parameter: Можете оновити цю функцію так, щоб застосувати параметр
+          "довжина"?
+        frozen_diamond_repeat: Use the repeat block to create this shape.
+        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
+          each circle.
+        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
+          and change the size.
+        frozen_snowflake_branch: Use the "create a snowflake branch" block
+        frozen_create_square: Attach more blocks here to create a square
+        playlab_drag_say: Drag the "say" block here and type "hello"
+        playlab_use_twice: Use this block twice and remember to change the actor number
+        playlab_move_girl: Use the "move right" block to move Tennis Girl
+        playlab_play_sound: Add "play sound" block here
+        playlab_arrow_keys: Remember to use these to move the witch after clicking
+          on Run
+        playlab_add_move: Add "move" blocks inside this repeat block
+        playlab_add_score: Add score blocks here
+        playlab_add_blocks: Add your blocks here

@@ -20,9 +20,6 @@
   hello: ハローワールド
   welcome_back: Welcome Back, %{name}
   add_teacher_form:
-    code_or_email:
-      label: コード，メールアドレスで教師を追加
-      placeholder: コード (ABCDEF) かメール (teacher@school.edu)
     code:
       label: セクションコードを入力して先生を追加
       placeholder: コード (ABCDEF)
@@ -233,7 +230,7 @@
         playlab: アプリを作る
         artist: なにか絵を描く
     user:
-      classroom: 私の生徒
+      classroom: 先生用ホームページ
       label: こんにちは  %{username}
       stats: 私のプログレス
       settings: 私のアカウント
@@ -364,25 +361,25 @@
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
+    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
     heading_elementary: <h2>20 時間コース</h2><h1>小学生向け</h1>
     heading_apps: <h2>お楽しみ</h2><h1>誰でも</h1>
     heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
-    gallery:
-      your_turtle: My Art
-      your_studio: My Apps
+    your_gallery: Gallery
   gender:
     male: 男性
     female: 女性
     none: 答えたくないです。
   user_type:
     student: 生徒
-    teacher: Teacher
+    teacher: 先生
   footer:
     help_from_html: このチュートリアルを作るにあたって、Google・Microsoft・Facebook・Twitterのエンジニアがサポートしました。
     art_from_html: アングリバード＆トレード; & &copy; 2009 - 2013 <a href="http://www.rovio.com">Rovio
       Entertainment Ltd</a>. All Rights Reserved.<br/> Plants vs. Zombies&trade; &
       &copy; 2013 <a href="http://www.ea.com">Electronic Arts Inc.</a>. All Rights
       Reserved.
+    powered_by_aws: Powered by Amazon Web Services
     feedback: フィードバックを提供します。
     translate: あなたの言語に翻訳をお手伝い
     support: Support
@@ -434,6 +431,7 @@
     bounce_og_title: Check out my Bounce Game
     flappy_og_title: わたしのFlappyゲームをみてください！
     studio_og_title: Check out my story
+    check_out_what_i_made: Check out what I made
     og_description: Code.org でコード（プログラム）を書きました。
     phone_number_not_allowed: It looks like there is a phone number in it. Try changing
       the text.
@@ -463,6 +461,14 @@
     20hour:
       title: 入門コース
       body: コンピューター科学コースの入門編（20時間）に挑戦してみてください。
+    hoc2014:
+      try_new_tutorial: Try our new Hour of Code tutorial in beta
+      try_frozen: Artist with Anna and Elsa, from Frozen
+    gallery:
+      title: Gallery
+      body: View a gallery of app and artist images created by our users
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: Students made these with code!
@@ -476,8 +482,13 @@
     more: More &rarr;
     caption_by_name_age: 作成者： %{name} ( %{age} 歳)
     caption_time_ago: '%{time_ago} 前'
+    header: Gallery
+    header_playlab: Play Lab
+    header_artist: アーティスト
   landing:
     prerelease: This page is still under development.
+    prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
+      is subject to revision as feedback is received and improvements are made.
     feedback: Give Feedback
     report_bug: バグを報告
     support: Get Help
@@ -525,7 +536,7 @@
           title: ジグソーパズル
           description: ''
         step:
-          title: Step
+          title: ステップ
           description: ''
         sample_level_builder:
           title: Sample Level Builder

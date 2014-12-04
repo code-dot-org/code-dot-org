@@ -2,29 +2,26 @@
   activerecord:
     errors:
       messages:
-        blank: is required
+        blank: ត្រូវការ
     attributes:
       user:
-        name: ឈ្មោះ
+        name: បង្ហាញ​ឈ្មោះ
         email: អ៊ីមែល
         username: ឈ្មោះ​អ្នកប្រើ
         password: ពាក្យ​សម្ងាត់
         password_confirmation: ការ​បញ្ជាក់​ពាក្យ​សម្ងាត់
         current_password: ពាក្យ​សម្ងាត់​បច្ចុប្បន្ន
         locale: ភាសា
-        age: Age
+        age: អាយុ
         gender: ភេទ
         edit_header: កែសម្រួល​ព័ត៌មាន​គណនី
         error:
-          future: can't be in the future
+          future: មិន​អាច​នៅ​ក្នុង​ថ្ងៃ​ក្រោយ
   hello: សួស្ដី​ពិភពលោក
   welcome_back: ស្វាគមន៍​ការ​មក​វិញ, %{name}
   add_teacher_form:
-    code_or_email:
-      label: បន្ថែម​គ្រូ​បង្រៀន​តាម​លេខ​កូដ ឬ​អាសយដ្ឋាន​អ៊ីមែល៖
-      placeholder: កូដ (ABCDEF) ឬ​អ៊ីមែល (teacher@school.edu)
     code:
-      label: 'Add a teacher by section code:'
+      label: បន្ថែម​គ្រូ​ម្នាក់៖
       placeholder: Code (ABCDEF)
     submit: បន្ថែម​គ្រូ
   add_hint_form:
@@ -32,7 +29,7 @@
     submit: Add hint
   appname: Code.org
   stage: ដំណាក់​កាល
-  stage_number: Stage %{number}
+  stage_number: ដំណាក់កាល %{number}
   puzzle: ល្បែង​ប្រាជ្ញា
   trophies: ពាន​រង្វាន់
   courses: វគ្គ​សិក្សា
@@ -45,28 +42,29 @@
   already_started: 'បាន​ចាប់​ផ្ដើម​ហើយ? បន្ត​នៅ​ទីនេះ >> '
   demos: 'Admin: All Demos'
   continue: បន្ត
-  prize: prize
+  prize: រង្វាន់
   more_info: ព័ត៌មាន​បន្ថែម
   auth:
     sign_in_with: ចូល​គណនី​ជាមួយ %{provider}
     signed_in: បាន​ចូល​គណនី!
-    signed_out: You have signed out of <a href="%{url}">Code.org</a>.
-    sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
-      to sign out of %{provider}.
+    signed_out: អ្នក​បាន​ចាកចេញ​ពី  <a href="%{url}">Code.org</a>។
+    sign_out_of: អ្នក​បាន​ប្រើ %{provider} ដើម្បី​ចូល។ <a href="%{url}">ចុច​ទីនេះ</a>
+      ដើម្បី​ចេញ​ពី %{provider}។
     already_signedup: បាន​ចុះ​ឈ្មោះ​រួច​ហើយ?
     notyet_signedup: មិន​បាន​ចូលរួម​ទេ?
-    google_oauth2: Google Account
+    google_oauth2: គណនី Google
     twitter: Twitter
     facebook: Facebook
-    windowslive: Microsoft Account
+    windowslive: គណនី Microsoft
     forgot_password: បាន​ភ្លេច​ពាក្យ​សម្ងាត់​របស់​អ្នក?
     need_confirmation: មិន​បាន​ទទួល​ការ​ណែនាំ​អំពី​វិធី​បញ្ជាក់​ទេ?
     need_unlock: មិន​បាន​ទទួល​ការណែនាំ​អំពី​វិធី​ដោះសោ​ទេ?
   signup_form:
-    overview_student: ចុះ​ឈ្មោះ​យក​គណនី​មួយ ដើម្បី​តាមដាន​ភាព​រីកចម្រើន​របស់​អ្នក។
-    overview_teacher: បង្រៀន​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ​នៅ​ក្នុង​ថ្នាក់រៀន​របស់​អ្នក
-      ដោយ​ចុះឈ្មោះ​យក​គណនី​មួយ។</p> អ្នក​ក៏​នឹង​អាច​តាមដាន​អំពី​ភាព​រីកចម្រើន​នៃ​សិស្ស​របស់​អ្នក
-      ហើយ​ទទួល​បាន​រង្វាន់​នានា។
+    overview_student: បង្កើត​គណនី​មួយ​សម្រាប់​កត់ត្រា​ដំណើរ​របស់​អ្នក។ អ៊ីមែល​របស់​អ្នក​នឹង​ត្រូវបាន​ប្រើ​សម្រាប់​ការ​ចូល​គណនី
+      និង​សម្រាប់​ការ​កំណត់​ពាក្យ​សម្ងាត់​ឡើង​វិញូ។ សម្រាប់​ព័ត៌មាន​បន្ថែម សូម​មើល
+      <a href="http://code.org/privacy">គោលការណ៍​ភាព​ឯកជន</a> របស់​យើង។
+    overview_teacher: បង្រៀន​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ​ក្នុង​ថ្នាក់​របស់​អ្នក ដោយ​គ្រាន់​តែ​បង្កើត​គណនី​មួយ។<p/>
+      អ្នក​ថែម​ទាំងអាច​បន្ថែម​សិស្ស និង​តាមដាន​ដំណើរការ​របស់​ពួកគេ​ថែម​ទៀត​ផង។
     no_signup_message: អ្នក​អាច​<a target="_blank" href="http://learn.code.org">រក​មើល​ដំណាក់កាល​និង​ល្បែង​ប្រាជ្ញា​ជា​ច្រើន​បាន</a>,
       ប៉ុន្តែ​អ្នក​ត្រូវ​ចុះឈ្មោះ ដើម្បី​រក្សាទុក​ដំណើរការ​របស់​អ្នក។
     teacher_educator_guide: មើល​ការណែនាំ​សម្រាប់​អ្នក​បង្រៀន
@@ -79,8 +77,8 @@
     address_placeholder: អាសយដ្ឋាន, ក្រុង, រដ្ឋ, លេខ​ប្រៃសណីយ៍
     gender: ភេទ (ស្រេច​ចិត្ត)
     birthday: ថ្ងៃ​ខែ​ឆ្នាំ​កំណើត (ស្រេច​ចិត្ត)
-    age: អាយុ (ស្រេច​ចិត្ត)
-    user_type: Are you a student or teacher?
+    age: អាយុ
+    user_type: តើ​អ្នក​គឺ​ជា​សិស្ស ឬ​ក៏​គ្រូ​បង្រៀន?
     submit: ចុះឈ្មោះ
     teacher: តើ​អ្នក​ជា​គ្រូ​បង្រៀន​មែនទេ?
     valid_username: អាច​ប្រើ​បាន!
@@ -93,8 +91,7 @@
       13 years of age, I confirm by submitting this form that I have my parent or
       legal guardian's permission to use the Code.org services.
     teacher_terms: I agree to be bound by the Code.org terms of service.
-    additional_information: We need some additional information to continue signing
-      you up.
+    additional_information: ពួក​យើង​ត្រូវការ​ព័ត៌មាន​បន្ថែម ដើម្បី​បន្ត​ការ​ចុះឈ្មោះ​របស់​អ្នក។
   signin_form:
     title: មាន​គណនី​រួច​ហើយ​មែនទេ? ចូលគណនី
     login: អ៊ីមែល ឬ ឈ្មោះ​អ្នក​ប្រើ
@@ -106,10 +103,10 @@
     try_hoc: សាក​ល្បង Hour of Code សិន
     try_20hours: Try our 20 hour Intro to Computer Science
   signinsection:
-    welcome: Welcome to %{section_name}
-    name: Choose your name
-    picture: Now find your secret picture
-    words: Now enter your secret words
+    welcome: សូមស្វាគមន៍​មក​កាន់ %{section_name}
+    name: ជ្រើស​ឈ្មោះ​របស់​អ្នក
+    picture: ឥឡូវ ស្វែងរក​រូបភាព​អាថ៌កំបាំង​របស់​អ្នក
+    words: ឥឡូវ បញ្ចូល​ពាក្យ​អាថ៌កំបាំង​របស់​អ្នក
     login: ចូល​គណនី
   password:
     reset_form:
@@ -124,16 +121,16 @@
   welcome_email:
     subject: ចូលរួម​ក្នុង​ថ្នាក់​របស់​ខ្ញុំ (នៅ Code.org)
     body: |
-      Click the link below to sign up for computer science tutorials on Code.org (with me as your "teacher"):
+      ចុច​តំណ​ខាង​ក្រោម​ដើម្បី​ចុះ​ឈ្មោះ​រៀន​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ​នៅ​លើ Code.org (ដោយ​មាន​ខ្ញុំ​ជា​គ្រូ​បង្រៀន​អ្នក)៖
 
       %{link}
 
-      The tutorials are fun, visually engaging, and teach the basic concepts of computer science using a simple, guided, game-like experience. Learn to code from Bill Gates, Mark Zuckerberg, Angry Birds, and Plants vs. Zombies! :-)
+      មេរៀន​ទាំងនេះ​មាន​ភាព​សប្បាយ ទាក់​ភ្នែក ហើយ​មាន​បង្រៀន​អំពី​គោលគំនិត​សំខាន់​នៃ​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ ដោយ​ប្រើ​ការ​ពន្យល់​ងាយៗ តាម​លំដាប់​លំដោយ និង​មាន​លក្ខណៈ​ជា​ហ្គេម។ រៀន​សរសេរ​កូដ​ពី​លោក Bill Gates, Mark Zuckerberge, Angry BIrds, និង Plants vs. Zombies! :-)
 
       %{name}
   follower:
     invite_sent: បាន​ផ្ញើ​ការ​អញ្ជើញ
-    added_teacher: '%{name} added as your teacher'
+    added_teacher: '%{name} ត្រូវបាន​បន្ថែម​ជា​គ្រូ​របស់​អ្នក'
     registered: អ្នក​បាន​ចុះឈ្មោះ​សម្រាប់ %{section_name}
     error:
       signed_in: សូម​ចាក​ចេញ​មុនពេល​ធ្វើ​បន្ត
@@ -251,34 +248,34 @@
     user:
       classroom: My students
       label: Hi %{username}
-      stats: My progress
-      settings: My account
-      prizes: Prizes
-      logout: Sign out
+      stats: ដំណើការ​របស់​ខ្ញុំ
+      settings: គណនី​របស់​ខ្ញុំ
+      prizes: រង្វាន់
+      logout: ចាកចេញ
       signin: ចូល​គណនី
       signup: ចុះឈ្មោះ
-      already_registered: Already registered?
+      already_registered: បាន​ចុះ​ឈ្មោះ​រួច​ហើយ?
     popup:
-      progress: Your progress
-      lines: 'Total lines of code: %{lines}'
-      close: CLOSE
-      mastery: Concepts
-      puzzle_map: Stages
-      prizes: Collect all %{total_trophies} trophies and win prizes!
-      prize_earned: All %{total_trophies} trophies collected. Prize won!
-      prize_us_only: (U.S. students only)
-      prizes_link: more info
+      progress: ដំណើរការ​របស់​អ្នក
+      lines: បន្ទាត់​កូដ​សរុប៖ %{lines}
+      close: បិទ
+      mastery: គោល​គំនិត
+      puzzle_map: ដំណាក់កាល
+      prizes: ប្រមូល​ពាន​ឲ្យ​បាន %{total_trophies} ហើយ​ឈ្នះ​រង្វាន់!
+      prize_earned: បាន​ប្រមូល​ពាន​គ្រប់ %{total_trophies} ។ ឈ្នះ​រង្វាន់​ហើយ!
+      prize_us_only: (បាន​តែ​សិស្ស​នៅ​សហរដ្ឋ​អាមេរិក​ប៉ុណ្ណោះ)
+      prizes_link: ព័ត៌មាន​បន្ថែម
   teacher:
     title:
-      one: 'Your teacher:'
-      other: 'Your teachers:'
-    remove: (remove teacher)
+      one: គ្រូ​របស់​អ្នក៖
+      other: គ្រូ​របស់​អ្នក៖
+    remove: (ដក​គ្រូ​ចេញ)
     confirm:
       remove: តើ​អ្នក​ពិត​ជា​ចង់​ដក​គ្រូ​បង្រៀន​ម្នាក់​នេះ​មែនទេ?
     tools: ឧបករណ៍​គ្រូបង្រៀន
     followers:
       section: 'Section:'
-      stages: 'Stage(s) to display:'
+      stages: ដំណាក់កាល​ដែល​ត្រូវ​បង្ហាញ៖
       show_past: 'Show student activity (%{bullet_html}) in the past:'
       levels_key: Levels key
       perfect: Completed, perfect
@@ -388,12 +385,11 @@
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
+    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
     heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
     heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
     heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
-    gallery:
-      your_turtle: My Art
-      your_studio: My Apps
+    your_gallery: Gallery
   gender:
     male: Male
     female: Female
@@ -405,10 +401,11 @@
     help_from_html: វិស្វករ​ទាំង​ឡាយ​មក​ពី <a href="http://www.google.com">Google</a>,
       <a href="http://www.microsoft.com">Microsoft</a>, <a href="http://www.facebook.com">Facebook</a>,
       និង <a href="http://www.twitter.com">Twitter</a> បាន​ជួយ​បង្កើត​មេរៀន​នេះ​ឡើង។
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 <a href="http://www.rovio.com">Rovio
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 <a href="http://www.rovio.com">Rovio
       Entertainment Ltd</a>. All Rights Reserved.<br/> Plants vs. Zombies&trade; &
       &copy; 2013 <a href="http://www.ea.com">Electronic Arts Inc.</a>. All Rights
       Reserved.
+    powered_by_aws: Powered by Amazon Web Services
     feedback: ផ្ដល់​មតិ​កែ​លម្អ
     translate: ជួយ​ពួក​យើង​ក្នុង​ការ​បកប្រែ​ទៅ​ភាសា​របស់​អ្នក
     support: ការ​គាំទ្រ
@@ -460,6 +457,7 @@
     bounce_og_title: Check out my Bounce Game
     flappy_og_title: Check out my Flappy Game
     studio_og_title: Check out my story
+    check_out_what_i_made: Check out what I made
     og_description: ខ្ញុំ​បាន​សរសេរ​កូដ​ដោយ​ខ្លួន​ឯង​ជាមួយ Code.org
     phone_number_not_allowed: It looks like there is a phone number in it. Try changing
       the text.
@@ -490,6 +488,14 @@
     20hour:
       title: Intro Course
       body: Try our 20-hour Intro to Computer Science course.
+    hoc2014:
+      try_new_tutorial: Try our new Hour of Code tutorial in beta
+      try_frozen: Artist with Anna and Elsa, from Frozen
+    gallery:
+      title: Gallery
+      body: View a gallery of app and artist images created by our users
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: Students made these with code!
@@ -503,10 +509,15 @@
     more: ច្រើន​ទៀត &rarr;
     caption_by_name_age: by %{name}, age %{age}
     caption_time_ago: '%{time_ago} ago'
+    header: Gallery
+    header_playlab: Play Lab
+    header_artist: Artist
   landing:
     prerelease: This course is in <span class='betatext'>beta</span>.  This means
       it is not the final version of the course, and is subject to revision as feedback
       is received and improvements are made.
+    prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
+      is subject to revision as feedback is received and improvements are made.
     feedback: Give Feedback
     report_bug: Report Bug
     support: Get Help

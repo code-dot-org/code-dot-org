@@ -1,8 +1,8 @@
 {
   "compute":"berechnen",
-  "equivalentExpression":"Versuchen Sie eine Neuanordnung ihrer Argumente um das exakt gleiche Ergebnis zubekommen.",
+  "equivalentExpression":"Versuche deine Argumente neu zu ordnen, um genau das gleiche Ergebnis zu bekommen.",
   "extraTopBlocks":"Sie haben unverbundene Blöcke. Wollten sie diese an den \"berechnen\" Block knüpfen?",
   "goal":"Ziel:",
-  "reinfFeedbackMsg":"Du kannst den \"Nochmal Versuchen\"Knopf Drücken um deinen Ausdruck zu bearbeiten.",
+  "reinfFeedbackMsg":"Fertig, hier ist Deine Geschichte! Arbeite weiter daran und gehe zum nächsten Level!",
   "yourExpression":"Dein Ausdruck:"
 }

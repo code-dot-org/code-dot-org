@@ -42,8 +42,9 @@
           'Maze: Loops': '미로 퍼즐: 반복'
           'Bee: Loops': '꿀벌: 반복'
           'Studio: Create a Story': 'Play Lab: 스토리 만들기'
-          description_short: 과정1은 읽기에 익숙하지 않은 학생들을 위해 설계되었습니다. 초1 학생에게 권장합니다.
           'Artist: Loops': '예술가: 반복'
+          description_audience: Ages 4+ (pre-readers)
+          description_short: 과정1은 읽기에 익숙하지 않은 학생들을 위해 설계되었습니다. 초1 학생에게 권장합니다.
         course2:
           The Maze: 미로 퍼즐
           Suzi: 수지
@@ -80,10 +81,11 @@
           'Bee: Debugging': '꿀벌: 디버깅'
           'Artist: Debugging': '예술가: 디버깅'
           'Bee: Conditionals': '꿀벌: 조건선택'
-          description_short: 과정2는 읽기가 가능한 학생들을 위해 설계되었습니다. 초등2~5 학생들에게 권장합니다.
           'Artist: Sequence2': '예술가: 순차2'
           'Maze: Sequence2': '미로: 순차2'
           'Artist: Nested Loops': '예술가: 중첩반복'
+          description_audience: Ages  6+ (reading required)
+          description_short: 과정2는 읽기가 가능한 학생들을 위해 설계되었습니다. 초등2~5 학생들에게 권장합니다.
         course3:
           The Maze: 미로 퍼즐
           'Studio: Create a Story': 'Play Lab: 스토리 만들기'
@@ -123,7 +125,6 @@
           'Farmer: While Loops': '농부: ~인동안 반복'
           'Bee: Nested Loops': '꿀벌: 중첩반복'
           'Bee: Debugging': '꿀벌: 디버깅'
-          description_short: 과정3은 과정2의 다음 과정입니다. 초등4~5 학생들에게 권장합니다.
           Maze2: 미로 퍼즐2
           Artist2: 예술가2
           'Artist: Functions2': '예술가: 함수2'
@@ -136,6 +137,8 @@
           'Bee: Debugging2': '꿀벌: 디버깅2'
           'Artist: Patterns': '예술가: 패턴'
           Songwriting: 노래 만들기
+          description_audience: Ages 8+ (after Course 2)
+          description_short: 과정3은 과정2의 다음 과정입니다. 초등4~5 학생들에게 권장합니다.
         msm:
           title: 중학교 수학
           description: 중학교 수학 과정 개인 진도
@@ -152,7 +155,7 @@
           'Play Lab: Defining Variables': '플레이 랩: 변수 정의하기'
           The Design Recipe: 디자인 레시피
           'Artist: Defining Functions': '예술가: 함수 정의하기'
-          'Play Lab: Defining Functions': '플레이 랩: 함수 정의하기'
+          'Play Lab: Defining Functions': '플레이랩: 디자인 레시피'
           'Artist: Functions': '예술가: 함수'
           'Play Lab: Animation': '플레이 랩: 애니메이션'
           Booleans: 불(참 또는 거짓)값들
@@ -163,6 +166,29 @@
           'Artist: Conditionals': '예술가: 조건선택'
           Collision Detection and the Distance Formula: 충돌 감지와 거리 공식
           'Play Lab: Collision Detection': '플레이 랩: 충돌 감지'
+          'Unplugged: Ninja Cat and the Coordinate Plane': '언플러그드: 닌자 고양이와 좌표 평면'
+          'Eval: Strings and Images': '평가: 문자열(문장)과 이미지'
+          'Unplugged: Contracts': '언플러그드 : 제한 조건'
+          'Eval: Writing Contracts': '평가: 제한 조건 쓰기'
+          'Unplugged: The Design Recipe': '언플러그드: 디자인 레시피'
+          'Eval: Defining Functions': '평가: 빠른 함수'
+          'Eval: Functions': '평가: 디자인 레시피'
+          'Unplugged: Booleans': '언플러그드: 참/거짓값'
+          'Unplugged: Conditionals and Piecewise Functions': '언플러그드: 조건/선택과 함수 조각'
+          'Eval: Conditionals': '평가: 조건/선택'
+          'Unplugged: Collision Detection and the Distance Formula': '언플러그드: 충돌 감지와
+            거리 계산식'
+          'Calc: Evaluation Blocks': '계산: 평가(결과 계산) 블럭'
+          'Unplugged: Video Games and Coordinate Planes': '언플러그드: 비디오 게임과 좌표 평면'
+          'Eval: Boolean Operators': '평가: 참/거짓(논리) 연산자'
+          Blocks to Math: 계산 블럭
+          'Play Lab: Defining Variables (Big Game)': '플레이 랩: 변수 정의하기 (빅 게임)'
+          'Play Lab: Animation (Big Game)': '플레이 랩: 애니메이션 (빅 게임)'
+          'Play Lab: Boolean (Big Game)': '플레이 랩: 참/거짓값 (빅 게임)'
+          'Play Lab: Collision Detection (Big Game)': '플레이 랩: 충돌 감지 (빅 게임)'
+          'Eval: Fast Functions': '평가: 빠른 함수'
+          'Play Lab: Design Recipe': '플레이랩: 디자인 레시피'
+          'Eval: Design Recipe': '평가: 디자인 레시피'
         playlab:
           title: Play Lab
           description: Play Lab을 이용해 스토리나 게임을 만드세요!
@@ -175,27 +201,22 @@
           description_short: 예술가를 이용해 멋진 그림과 디자인을 만들어보세요!
         scrat:
           title: Scrat
-          description_short: Scrat short description.
-          description: Scrat long description
+          description_short: Scrat 간단한 설명
+          description: Scrat 자세한 설명
           'Maze: Sequence': '미로 퍼즐: 순차'
         hourofcode:
           Maze: Maze
           title: Hour of Code
-          description_short: Try the basics of computer science with characters from
-            Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description: Try the basics of computer science with characters from Angry
-            Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          description: 컴퓨터과학(정보과학)의 기초를 앵그리버드, Plats vs Zombies, 아이스 에이지의 Scrat과 함께
+            배워보세요.
+          description_short: 컴퓨터과학(정보과학)의 기초를 앵그리버드, Plats vs Zombies, 아이스 에이지의 Scrat과
+            함께 배워보세요.
         frozen:
-          title: Frozen
-          description_short: Join the Royal Sisters of Arendelle, Anna and Elsa, as
-            they explore the magic and beauty of ice. You will write code to create
-            snowflakes and patterns as you ice-skate and make a winter wonderland
-            that you can then share with your friends!
-          description: Join the Royal Sisters of Arendelle, Anna and Elsa, as they
-            explore the magic and beauty of ice. You will write code to create snowflakes
-            and patterns as you ice-skate and make a winter wonderland that you can
-            then share with your friends!
+          title: 안나, 엘사와 함께하는 코드
+          description: 얼음의 마술과 아름다움을 탐구하는 안나, 엘사와 함께 코드를 해보세요. 스케이트를 타는 것 처럼 쉽게 눈
+            송이와 패턴을 만들어서 겨울왕국을 꾸밀 수 있게 될 것입니다. 그렇게 만든 것들은 친구들에게 자랑하세요!
           Artist: 예술가
+          description_short: 얼음의 마술과 아름다움을 탐구하는 안나, 엘사와 함께 코드를 사용하세요.
         course4:
           description_short: 과정4는 과정2와 과정3을 먼저 완료했어야 합니다.
           description: 과정4는 과정2와 과정3을 이미 완료한 학생들을 위해 설계되었습니다. 학생들은 이전 과정에서 배운 프로그래밍
@@ -225,7 +246,8 @@
           Bee Binary: 꿀벌 2진
           Farmer Binary: 농부 2진
           Maze and Bee: 미로와 꿀벌
-          Artist Binary: Artist Binary
+          Artist Binary: 2진 예술가
+          description_audience: Ages 10+ (after Course 3)
         Course4pre:
           description_short: 과정2와 과정3을 이미 완료한 학생들을 위한 간단한 개념 확장
           Course 4 Prerequisite: 과정4 준비조건
@@ -238,3 +260,36 @@
           'Bee: Nested Loops': '꿀벌: 중첩반복'
           'Artist: Functions': '예술가: 함수'
           'Bee: Debugging': '꿀벌: 디버깅'
+        course4pre:
+          description_short: 과정2와 과정3을 이미 완료한 학생들을 위한 간단한 개념 확장
+          Course 4 Prerequisite: 과정4 준비조건
+          'Maze: Sequence': '미로 퍼즐: 순차'
+          'Artist: Sequence': '예술가: 순차'
+          'Artist: Loops': '예술가: 반복'
+          'Bee: Conditionals': '꿀벌: 조건선택'
+          'Artist: Nested Loops': '예술가: 중첩반복'
+          'Farmer: While Loops': '농부: ~인동안 반복'
+          'Bee: Nested Loops': '꿀벌: 중첩반복'
+          'Artist: Functions': '예술가: 함수'
+          'Bee: Debugging': '꿀벌: 디버깅'
+        Course4pre (Case Conflict):
+          description_short: 과정2와 과정3을 이미 완료한 학생들을 위한 간단한 개념 확장
+          Course 4 Prerequisite: 과정4 준비조건
+          'Maze: Sequence': '미로 퍼즐: 순차'
+          'Artist: Sequence': '예술가: 순차'
+          'Artist: Loops': '예술가: 반복'
+          'Bee: Conditionals': '꿀벌: 조건선택'
+          'Artist: Nested Loops': '예술가: 중첩반복'
+          'Farmer: While Loops': '농부: ~인동안 반복'
+          'Bee: Nested Loops': '꿀벌: 중첩반복'
+          'Artist: Functions': '예술가: 함수'
+          'Bee: Debugging': '꿀벌: 디버깅'
+        usability:
+          Intro: 소개
+          Variables and For Loops: 변수, 그리고 반복을 위한
+          Functions and Functions with Parameters: 함수와 매개변수가 있는 함수
+          title: 사용성 테스트
+          description_short: ''
+          description: 사용성 테스트를 위한 4가지 수준의 코스 선택
+          Variables: 변수
+          For Loops: 반복을 위한

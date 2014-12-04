@@ -27,7 +27,7 @@ We’d like to host a variety of engaging options, but the primary goal is to op
 
 A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators.
 
-**Tutorials will be listed higher if they are:**
+**ترتيب الانشطة المنشورة سيكون افضل اذا:**
 
   * جودة عالية
   * ذات توجيه ذاتي، لا تتطلب أي تعليمات
@@ -47,7 +47,7 @@ A committee of computer science educators will rank submissions based on qualita
   * موجهة لجنس معين ( مثلا للاولاد)
   * تكون ذربعة لدعم منصة تعليمية غير مجانية
 
-**Tutorials will NOT be listed if they:**
+**لن يتم ادراج الدروس إذا:**
 
   * تتطلب درجة عالية من المشاركة من جانب معلم مع الكثير من الإعداد (أي ليست موجهة ذاتيا)
   * لم تصمم لتكون نشاطا يدوم ساعة واحدة (تقريبا)
@@ -63,7 +63,7 @@ Note also, that the 2013 CSEdWeek was a fantastic success as measured by the res
 
 As a result, the existing listings are certainly “good enough,” and the driving reason to add tutorials to the Hour of Code listings isn’t to broaden the choices, but to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2014 campaign.
 
-[**Back to the top**](#top)
+[**العودة إلى الأعلى**](#top)
 
 <a id="guidelines"></a>
 
@@ -80,15 +80,15 @@ As a result, the existing listings are certainly “good enough,” and the driv
       * **ممكن، لكن ليس المفضل:** تثبيت التطبيق، و البرمجيات التي تشتغل على الحواسيب فقط، أو على اجهزة العاب الفيديو.
   * **الشكل:** دروس ذات توجيه ذاتي، واختياريا بمساعدة المعلم. بجب ان يكون هناك توجيهات للتلاميذ على عكس التحدى الفتوح الذي يدوم ساعة. ومن الناحية المثالية، تكون التعليمات والدروس موجودة بمنصة واحدة، و ذلك لتجنب التنقل بين النوافذ او التنقل بين الدرس و برنامج الانجاز.
 
-[**Back to the top**](#top)
+[**العودة إلى الأعلى**](#top)
 
 <a id="submit"></a>
 
 ## كيفية التقديم (آخر موعد 01/10/2014)
 
-Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) and follow the steps to submit your tutorial.
+قم بزيارة [صفحة "ساعة من الكود البرمجي"](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) واتبع الخطوات لتقديم الدرس الخاص بك.
 
-**What you’ll need:**
+**ما ستحتاج :**
 
   * الاسم والشعار (jpg، png، إلخ.)
   * عنوان الرابط او صورة تسويقية للنشاط. الصور/اللقطات ينبغي أن تكون ابعادها 446 في 335 بالضبط. إذا لم يتم ارسال صورة مناسبة، قد نضطر لأخذها بنفسنا او قد نختار عدم ادراج النشاط في القائمة.
@@ -136,7 +136,7 @@ Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code
       * For offline activities 
           * Number of downloads of paper version of activity (if applicable)
 
-[**Back to the top**](#top)
+[**العودة إلى الأعلى**](#top)
 
 <a id="design"></a>
 
@@ -177,7 +177,7 @@ Benefits of Pair Programming:
   * Show that coding is not a solo activity, but one involving social interaction
   * Not all classrooms or labs have enough computers for a 1:1 experience
 
-[**Back to the top**](#top)
+[**العودة إلى الأعلى**](#top)
 
 <a id="tm"></a>
 
@@ -195,7 +195,7 @@ One piece of this is to protect the trademark "Hour of Code" to prevent confusio
 
   4. No use of "Hour of Code" in app names
 
-[**Back to the top**](#top)
+[**العودة إلى الأعلى**](#top)
 
 <a id="pixel"></a>
 
@@ -215,7 +215,7 @@ IMG SRC="http://code.org/api/hour/begin_appinventor.png/"
 
 IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
 
-[**Back to the top**](#top)
+[**العودة إلى الأعلى**](#top)
 
 <a id="promote"></a>
 
@@ -229,7 +229,7 @@ We are asking everyone to promote their own 1-hour tutorial to your users. Pleas
   * استضافة حدث محلي، أو أطلب من موظفيك لاستضافة حدث في المدارس المحلية أو الجماعات المحلية.
   * راجع قائمة الموارد للحصول على مزيد من المعلومات (قريبا).
 
-[**Back to the top**](#top)
+[**العودة إلى الأعلى**](#top)
 
 <a id="disabilities"></a>
 
@@ -237,4 +237,4 @@ We are asking everyone to promote their own 1-hour tutorial to your users. Pleas
 
 If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. We have not yet received such a tutorial, and would be eager to include one as an option for these students.
 
-[**Back to the top**](#top)
+[**العودة إلى الأعلى**](#top)

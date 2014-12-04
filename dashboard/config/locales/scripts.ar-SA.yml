@@ -24,7 +24,7 @@
           Multi & Match: التعدد والتوصيل
           K-1 Flappy: لعبة الطائر الوثاب لصف K-1
           Flappy non blockly: لعبة الطائر الوثاب الغير تركيبية
-          title: الدورة 1
+          title: الدرس الأول
           Artist 2: الفنان 2
           Happy Maps: الخرائط السعيدة
           Move it, Move it: حركها ! حركها
@@ -34,18 +34,21 @@
           Getting Loopy: القبض على المعتوهون
           The Big Event: الحدث الكبير
           Going Places Safely: الذهاب للأماكن بأمان
-          description: الدرس الأول صمم للقارئين الناشئيين في الصفوف الإبتدائية الأولية.
-            إصنع برامج حاسوبية بستخدام الحلقات والأحداث. في نهاية الدورة قم بصناعة
-            لعبتك أو فنك أو قصتك المصممة بطريقتك الخاصة ثم يمكنك مشاركتهم مع الآخرين.
+          description: تم تصميم الدورة 1 للسماح للقراء في وقت مبكر إنشاء برامج الكمبيوتر
+            التي سوف تساعدهم على التعلم بالتعاون مع الآخرين، وتطوير مهارات حل المشاكل،
+            وتستمر من خلال المهام الصعبة. بنهاية هذه الدورة التدريبية، إنشاء الطلاب
+            على لعبة مخصصة الخاصة جداً أو القصة التي يمكن أن تشترك فيها. وأوصت للصفوف
+            1 ك.
           'Bee: Sequence': 'التهجئة: التسلسل'
           'Artist: Sequence': 'الرسام : التسلسل'
           'Artist: Shapes': 'الفنان: الأشكال'
           'Maze: Loops': 'المتاهة : الحلقات'
           'Bee: Loops': 'النحلة : الحلقات'
           'Studio: Create a Story': 'مختبر اللعب: إنشاء قصة'
+          'Artist: Loops': 'الرسام : الحلقات'
+          description_audience: Ages 4+ (pre-readers)
           description_short: الدورة 1 مصممة للقراء الصغار في الصفوف الدنيا من المرحلة
             الابتدائية .
-          'Artist: Loops': 'الرسام : الحلقات'
         course2:
           The Maze: المتاهة
           Suzi: سوزي
@@ -72,10 +75,9 @@
           Binary Bracelets: أساور الثنائية
           The Big Event: الحدث الكبير
           Your Digital Footprint: البصمة الرقمية الخاصة بك
-          description: الدورة 2 مصممة للطلاب الذين يستطيعون القراءة في الصفوف الدنيا
-            و المتوسطة من المرحلة الإبتدائية . أنشئ البرامج باستخدام الحلقات و الأحداث
-            و الجمل الشرطية . في نهاية الدورة أنشئ بطريقتك لعبتك الخاصة , بفنك , أو
-            قصة تشاركها مع أي أحد .
+          description: تم تصميم الدورة 2 للطلاب الذين يستطيعون القراءة وقد قبل لا
+            خبرة في البرمجة. في هذه الحال سيقوم الطلاب بتكوين برامج حل المشاكل وتطوير
+            ألعاب تفاعلية أو قصص يمكنهم مشاركة. وأوصت للصفوف من 2-5.
           'Maze: Sequence': 'المتاهة : التسلسل'
           'Artist: Sequence': 'الرسام : التسلسل'
           'Maze: Loops': 'المتاهة : الحلقات'
@@ -84,18 +86,19 @@
           'Bee: Debugging': 'النحلة: تصحيح الأخطاء'
           'Artist: Debugging': 'الرسام : تصحيح الأخطاء'
           'Bee: Conditionals': 'النحلة: الجمل الشرطية'
-          description_short: الدورة 2 مصممة للطلاب الذين يستطيعون القراءة في الصفوف
-            الابتدائية , الدنيا والمتوسطة.
           'Artist: Sequence2': 'الرسام : التسلسل 2'
           'Maze: Sequence2': 'المتاهة : التسلسل 2'
           'Artist: Nested Loops': 'الرسام : الحلقات المتداخلة'
+          description_audience: Ages  6+ (reading required)
+          description_short: الدورة 2 مصممة للطلاب الذين يستطيعون القراءة في الصفوف
+            الابتدائية , الدنيا والمتوسطة.
         course3:
           The Maze: المتاهة
           'Studio: Create a Story': 'مختبر اللعب: إنشاء قصة'
           The Artist: الاعب
           title: الدورة الثالثة
           Artist Functions: وظائف الرسام
-          Artist For Loops: Artist For Loops
+          Artist For Loops: الفنان للحلقات
           Artist Nested Loops: 'الرسام : الحلقات المتداخلة'
           Bee Conditionals: النحل الشرطية
           Bee Nested Loops: حلقات النحلة المتداخلة
@@ -107,17 +110,17 @@
           Maze Conditionals: متاهة الشرطية
           Artist Functions with Parameters: مهام الرسام مع المعلمات
           Computational Thinking: التفكير الحاسوبي
-          Functional Suncatchers: Functional Suncatchers
-          Songwriting Parameters: تأليف الأغاني
+          Functional Suncatchers: سونكاتشيرس الوظيفية
+          Songwriting Parameters: معلمات تأليف الأغاني
           Dice Race: سباق الزهر
           Internet: الإنترنت
           Crowdsourcing: التعهيد الجماعي
-          Digital Citizenship: Digital Citizenship
+          Digital Citizenship: المواطنة الرقمية
           Farmer - While Loops: 'المزارع : حلقات بينما'
-          description: الطلاب الذين يأخذون الدورة 3 يجب أن يكونوا قد أخذوا الدورة
-            2 . الطلاب يقومون بإنشاء البرامج مع أنواع مختلفة من الحلقات و الأحداث
-            و الوظائف و الشروط . في نهاية الدورة , أنشئ بطريقتك لعبتك الخاصة , بفنك
-            , أو قصة تشاركها مع أي أحد .
+          description: تم تصميم الدورة 3 للطلاب الذين أخذوا 2 بالطبع. وسوف يتعمق الطلاب
+            في البرمجة المواضيع التي أدخلت في الدورات السابقة لحلول مرنة لمشاكل أكثر
+            تعقيداً. بنهاية هذه الدورة، والطلاب إنشاء القصص التفاعلية والألعاب التي
+            يمكن مشاركتها مع أي شخص. وأوصت للصفوف 4-5.
           'Studio: Create a Game': 'مختبر اللعب : أنشئ لعبة'
           Maze: المتاهة
           Artist: الرسام
@@ -129,8 +132,6 @@
           'Farmer: While Loops': 'المزارع : حلقات بينما'
           'Bee: Nested Loops': 'النحلة : الحلقات المتداخلة'
           'Bee: Debugging': 'النحلة: تصحيح الأخطاء'
-          description_short: الطلاب الذين يأخذون الدورة 3 يجب أن يكونوا قد أنهوا الدورة
-            2 .
           Maze2: المتاهة 2
           Artist2: الرسام 2
           'Artist: Functions2': 'الرسام : المهام 2'
@@ -141,8 +142,11 @@
           'Farmer: While Loops2': 'المزارع : حلقات بينما 2'
           'Bee: Nested Loops2': 'النحلة : الحلقات المتداخلة 2'
           'Bee: Debugging2': 'النحلة: تصحيح الأخطاء 2'
-          'Artist: Patterns': 'Artist: Patterns'
+          'Artist: Patterns': 'الفنان: أنماط'
           Songwriting: تأليف الأغاني
+          description_audience: Ages 8+ (after Course 2)
+          description_short: الطلاب الذين يأخذون الدورة 3 يجب أن يكونوا قد أنهوا الدورة
+            2 .
         msm:
           title: مدرسة الرياضيات المتوسطة
           description: العمل الخاص في التقدم لمدرسة الرياضيات المتوسطة .
@@ -150,27 +154,55 @@
           Assessments: التقييمات
           Unit 1: الوحدة الأولى
           Unit 2: الوحدة الثانية
-          Ninja Cat and the Coordinate Plane: Ninja Cat and the Coordinate Plane
-          'Calc: Circles of Evaluation': 'Calc: Circles of Evaluation'
-          'Artist: Strings and Images': 'Artist: Strings and Images'
-          Contracts: Contracts
-          'Artist: Writing Contracts': 'Artist: Writing Contracts'
-          'Calc: Defining Variables': 'Calc: Defining Variables'
-          'Play Lab: Defining Variables': 'Play Lab: Defining Variables'
-          The Design Recipe: The Design Recipe
-          'Artist: Defining Functions': 'Artist: Defining Functions'
-          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          Ninja Cat and the Coordinate Plane: القط النينجا وتنسيق الطائرة
+          'Calc: Circles of Evaluation': 'احسب: الدوائر للتقييم'
+          'Artist: Strings and Images': 'الفنان: سلاسل والصور'
+          Contracts: العقود
+          'Artist: Writing Contracts': 'الفنان: كتابة العقود'
+          'Calc: Defining Variables': 'احسب: تعريف المتغيرات'
+          'Play Lab: Defining Variables': 'مختبر اللعب: تعريف المتغيرات'
+          The Design Recipe: وصفه التصميم
+          'Artist: Defining Functions': 'الفنان: تحديد المهام'
+          'Play Lab: Defining Functions': 'اللعب المعمل: وصفه تصميم'
           'Artist: Functions': 'الرسام : المهام'
-          'Play Lab: Animation': 'Play Lab: Animation'
-          Booleans: Booleans
-          'Play Lab: Booleans': 'Play Lab: Booleans'
-          'Calc: Boolean Operators': 'Calc: Boolean Operators'
-          'Play Lab: Boolean Operators': 'Play Lab: Boolean Operators'
-          Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
-          'Artist: Conditionals': 'Artist: Conditionals'
-          Collision Detection and the Distance Formula: Collision Detection and the
-            Distance Formula
-          'Play Lab: Collision Detection': 'Play Lab: Collision Detection'
+          'Play Lab: Animation': 'تشغيل مختبر: الرسوم المتحركة'
+          Booleans: القيم المنطقية
+          'Play Lab: Booleans': 'تشغيل مختبر: القيم المنطقية'
+          'Calc: Boolean Operators': 'وأحسب: العوامل المنطقية'
+          'Play Lab: Boolean Operators': 'مختبر اللعب: العوامل المنطقية'
+          Conditionals and Piecewise Functions: الجمل الشرطية ووظائف Piecewise
+          'Artist: Conditionals': 'الفنان: الجمل الشرطية'
+          Collision Detection and the Distance Formula: الكشف عن التصادم وصيغة المسافة
+          'Play Lab: Collision Detection': 'اللعب المعمل: الكشف عن التصادم'
+          'Unplugged: Ninja Cat and the Coordinate Plane': 'موصول: القط النينجا وتنسيق
+            الطائرة'
+          'Eval: Strings and Images': 'Eval: سلاسل والصور'
+          'Unplugged: Contracts': 'موصول: العقود'
+          'Eval: Writing Contracts': 'Eval: كتابة العقود'
+          'Unplugged: The Design Recipe': 'موصول: الوصفة التصميم'
+          'Eval: Defining Functions': 'Eval: وظائف سريعة'
+          'Eval: Functions': 'Eval: تصميم الوصفة'
+          'Unplugged: Booleans': 'موصول: القيم المنطقية'
+          'Unplugged: Conditionals and Piecewise Functions': 'موصول: الشرطية ووظائف
+            Piecewise'
+          'Eval: Conditionals': 'Eval: الجمل الشرطية'
+          'Unplugged: Collision Detection and the Distance Formula': 'موصول: الكشف
+            عن التصادم وصيغة المسافة'
+          'Calc: Evaluation Blocks': 'احسب: كتل التقييم'
+          'Unplugged: Video Games and Coordinate Planes': 'موصول: ألعاب الفيديو وتنسيق
+            طائرات'
+          'Eval: Boolean Operators': 'Eval: عوامل التشغيل المنطقية'
+          Blocks to Math: كتل للرياضيات
+          'Play Lab: Defining Variables (Big Game)': 'مختبر اللعب: تعريف المتغيرات
+            (اللعبة الكبرى)'
+          'Play Lab: Animation (Big Game)': 'مختبر اللعب: الرسوم المتحركة (اللعبة
+            الكبرى)'
+          'Play Lab: Boolean (Big Game)': 'مختبر اللعب: قيمة منطقية (اللعبة الكبرى)'
+          'Play Lab: Collision Detection (Big Game)': 'مختبر اللعب: الكشف عن التصادم
+            (اللعبة الكبرى)'
+          'Eval: Fast Functions': 'Eval: وظائف سريعة'
+          'Play Lab: Design Recipe': 'اللعب المعمل: وصفه تصميم'
+          'Eval: Design Recipe': 'Eval: تصميم الوصفة'
         playlab:
           title: مختبر اللعب
           description: أنشئ قصة أو إصنع لعبة مع مختبر اللعب !
@@ -189,21 +221,19 @@
         hourofcode:
           Maze: المتاهة
           title: ساعة من البرمجة
-          description_short: Try the basics of computer science with characters from
-            Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
           description: Try the basics of computer science with characters from Angry
             Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          description_short: Try the basics of computer science with characters from
+            Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
         frozen:
           title: Frozen
-          description_short: Join the Royal Sisters of Arendelle, Anna and Elsa, as
-            they explore the magic and beauty of ice. You will write code to create
-            snowflakes and patterns as you ice-skate and make a winter wonderland
-            that you can then share with your friends!
           description: Join the Royal Sisters of Arendelle, Anna and Elsa, as they
             explore the magic and beauty of ice. You will write code to create snowflakes
             and patterns as you ice-skate and make a winter wonderland that you can
             then share with your friends!
           Artist: الرسام
+          description_short: دعونا استخدام التعليمات البرمجية للانضمام إلى آنا و إليسا,
+            و نستكشف سحر وجمال الجليد.
         course4:
           description_short: Students taking Course 4 should have already taken Courses
             2 and 3.
@@ -237,6 +267,7 @@
           Farmer Binary: Farmer Binary
           Maze and Bee: Maze and Bee
           Artist Binary: Artist Binary
+          description_audience: Ages 10+ (after Course 3)
         Course4pre:
           description_short: A brief rampup of concepts for students who have not
             taken Course 2 and 3.
@@ -250,3 +281,38 @@
           'Bee: Nested Loops': 'النحلة : الحلقات المتداخلة'
           'Artist: Functions': 'الرسام : المهام'
           'Bee: Debugging': 'النحلة: تصحيح الأخطاء'
+        course4pre:
+          description_short: A brief rampup of concepts for students who have not
+            taken Course 2 and 3.
+          Course 4 Prerequisite: Course 4 Prerequisite
+          'Maze: Sequence': 'المتاهة : التسلسل'
+          'Artist: Sequence': 'الرسام : التسلسل'
+          'Artist: Loops': 'الرسام : الحلقات'
+          'Bee: Conditionals': 'النحلة: الجمل الشرطية'
+          'Artist: Nested Loops': 'الرسام : الحلقات المتداخلة'
+          'Farmer: While Loops': 'المزارع : حلقات بينما'
+          'Bee: Nested Loops': 'النحلة : الحلقات المتداخلة'
+          'Artist: Functions': 'الرسام : المهام'
+          'Bee: Debugging': 'النحلة: تصحيح الأخطاء'
+        Course4pre (Case Conflict):
+          description_short: A brief rampup of concepts for students who have not
+            taken Course 2 and 3.
+          Course 4 Prerequisite: Course 4 Prerequisite
+          'Maze: Sequence': 'المتاهة : التسلسل'
+          'Artist: Sequence': 'الرسام : التسلسل'
+          'Artist: Loops': 'الرسام : الحلقات'
+          'Bee: Conditionals': 'النحلة: الجمل الشرطية'
+          'Artist: Nested Loops': 'الرسام : الحلقات المتداخلة'
+          'Farmer: While Loops': 'المزارع : حلقات بينما'
+          'Bee: Nested Loops': 'النحلة : الحلقات المتداخلة'
+          'Artist: Functions': 'الرسام : المهام'
+          'Bee: Debugging': 'النحلة: تصحيح الأخطاء'
+        usability:
+          Intro: Intro
+          Variables and For Loops: Variables and For Loops
+          Functions and Functions with Parameters: Functions and Functions with Parameters
+          title: Usability Testing
+          description_short: ''
+          description: A selection of Course 4 levels for usability testing.
+          Variables: المتغيرات
+          For Loops: For Loops

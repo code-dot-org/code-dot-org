@@ -3,240 +3,321 @@
     script:
       name:
         test:
-          'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
+          'Jigsaw: Learn to drag and drop': 'Trencaclosques: Aprendre a arrossegar
+            i deixar anar'
           The Maze: El Laberint
           Multi: Multi
-          Match: Match
+          Match: Relacionar
           Math Image: Math Image
-          title: Test Course
-          description: Just an internal test course.
+          title: Curs de prova
+          description: Només un curs intern de prova.
         course1:
-          'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
-          'Maze: Sequence': 'Maze: Sequence'
-          'Maze: Debugging': 'Maze: Debugging'
-          'Artist 1: Intro': 'Artist 1: Intro'
-          Artists 2: Artists 2
+          'Jigsaw: Learn to drag and drop': 'Trencaclosques: Aprendre a arrossegar
+            i deixar anar'
+          'Maze: Sequence': 'Laberint: seqüència'
+          'Maze: Debugging': 'Laberint: Corregeix els errors'
+          'Artist 1: Intro': 'Artista 1: introducció'
+          Artists 2: Artistes 2
           Spelling Bee: Spelling Bee
           Spelling Bee not blockly: Spelling Bee not blockly
-          'Bee 1: Intro': 'Bee 1: Intro'
-          'Maze 2: Loops': 'Maze 2: Loops'
-          'Bee 2: Loops': 'Bee 2: Loops'
-          Multi & Match: Multi & Match
-          K-1 Flappy: K-1 Flappy
+          'Bee 1: Intro': 'Abella 1: introducció'
+          'Maze 2: Loops': 'Laberint 2: bucles'
+          'Bee 2: Loops': 'Abella 2: bucles'
+          Multi & Match: Multi & Relacionar
+          K-1 Flappy: Flappy per cicle inicial de primària
           Flappy non blockly: Flappy non blockly
-          title: Course 1
-          Artist 2: Artist 2
+          title: Curs 1
+          Artist 2: Artista 2
           Happy Maps: Happy Maps
           Move it, Move it: Move it, Move it
-          'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
+          'Real-life Algorithms: Plant a Seed': 'Algoritmes reals: Planta una llavor'
           Building a Foundation: Building a Foundation
-          Getting Loopy: Getting Loopy
-          The Big Event: The Big Event
-          Going Places Safely: Going Places Safely
-          description: A course for K-1 students who can't yet read.
-          'Bee: Sequence': 'Bee: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
-          'Artist: Shapes': 'Artist: Shapes'
-          'Maze: Loops': 'Maze: Loops'
-          'Bee: Loops': 'Bee: Loops'
-          'Studio: Create a Story': 'Studio: Create a Story'
+          Getting Loopy: Fent bucles
+          The Big Event: El gran esdeveniment
+          Going Places Safely: Anant a llocs segurs
+          description: El Curs 1 està dissenyat per permetre als lectors novells crear
+            programes informàtics que els ajudaran a aprendre a col·laborar amb els
+            altres, desenvolupar habilitats de resolució de problemes, i persistir
+            a través de tasques difícils. Al final del curs, els alumnes creen el
+            seu propi joc o història que poden compartir. Recomanat per infantil i
+            cicle inicial de primària.
+          'Bee: Sequence': 'Abella: seqüència'
+          'Artist: Sequence': 'Artista: seqüència'
+          'Artist: Shapes': 'Artista: formes'
+          'Maze: Loops': 'Laberint: bucles'
+          'Bee: Loops': 'Abella: bucles'
+          'Studio: Create a Story': 'Play Lab: Crea una història'
+          'Artist: Loops': 'Artista: bucles'
+          description_audience: Ages 4+ (pre-readers)
           description_short: Course 1 is designed for early readers in the lower elementary
             grades.
-          'Artist: Loops': 'Artist: Loops'
         course2:
           The Maze: El Laberint
           Suzi: Suzi
           The Artist: L'artista
-          Artist Debugging: Artist Debugging
-          Bounce: Bounce
-          'Studio: Create a Story': 'Studio: Create a Story'
-          Artist Loops: Artist Loops
-          Bee Conditionals: Bee Conditionals
+          Artist Debugging: 'Artista: Correcció d''errors'
+          Bounce: Rebot
+          'Studio: Create a Story': 'Play Lab: Crea una història'
+          Artist Loops: 'Artista: bucles'
+          Bee Conditionals: 'Abella: Condicionals'
           Flappy: Flappy
-          title: Course 2
-          Bee Loops: Bee Loops
-          Artist Functions: Artist Functions
-          The Artist Debugging: The Artist Debugging
-          Bee Debugging: Bee Debugging
-          Bee Functions: Bee Functions
-          Maze Loops: Maze Loops
+          title: Curs 2
+          Bee Loops: 'Abella: bucles'
+          Artist Functions: 'Artista: Funcions'
+          The Artist Debugging: 'L'' artista: correcció d''errors'
+          Bee Debugging: 'Abella: Correcció d''errors'
+          Bee Functions: 'Abella: funcions'
+          Maze Loops: 'Laberint: bucles'
           Graph Paper Programming: Programació de paper quadriculat
-          'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
-          Getting Loopy: Getting Loopy
-          Relay programming: Relay programming
+          'Real-life Algorithms: Paper Planes': 'Algoritmes de la vida quotidiana:
+            Avions de paper'
+          Getting Loopy: Fent bucles
+          Relay programming: Programació en relleus
           Conditionals: Condicionals
-          Binary Bracelets: Binary Bracelets
-          The Big Event: The Big Event
+          Binary Bracelets: Polseres binàries
+          The Big Event: El gran esdeveniment
           Your Digital Footprint: Your Digital Footprint
-          description: Formerly known as a 2-3 course.
-          'Maze: Sequence': 'Maze: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
-          'Maze: Loops': 'Maze: Loops'
-          'Artist: Loops': 'Artist: Loops'
-          'Bee: Loops': 'Bee: Loops'
-          'Bee: Debugging': 'Bee: Debugging'
-          'Artist: Debugging': 'Artist: Debugging'
-          'Bee: Conditionals': 'Bee: Conditionals'
+          description: El Curs 2 està dissenyat per a alumnes que saben llegir i no
+            tenen experiència prèvia en programació. En aquest curs els alumnes crearan
+            programes per resoldre problemes i desenvoluparan jocs interactius o històries
+            que poden compartir. Recomanat per educació primària.
+          'Maze: Sequence': 'Laberint: seqüència'
+          'Artist: Sequence': 'Artista: seqüència'
+          'Maze: Loops': 'Laberint: bucles'
+          'Artist: Loops': 'Artista: bucles'
+          'Bee: Loops': 'Abella: bucles'
+          'Bee: Debugging': 'Abella: Correcció d''errors'
+          'Artist: Debugging': 'Artista: Correcció d''errors'
+          'Bee: Conditionals': 'Abella: Condicionals'
+          'Artist: Sequence2': 'Artista: seqüència2'
+          'Maze: Sequence2': 'Laberint: seqüència2'
+          'Artist: Nested Loops': 'Artista: bucles imbricats'
+          description_audience: Ages  6+ (reading required)
           description_short: Course 2 is designed for students who can read in the
             lower and middle elementary grades.
-          'Artist: Sequence2': 'Artist: Sequence2'
-          'Maze: Sequence2': 'Maze: Sequence2'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
         course3:
           The Maze: El Laberint
-          'Studio: Create a Story': 'Studio: Create a Story'
+          'Studio: Create a Story': 'Play Lab: Crea una història'
           The Artist: L'artista
-          title: Course 3
-          Artist Functions: Artist Functions
+          title: Curs 3
+          Artist Functions: 'Artista: Funcions'
           Artist For Loops: Artist For Loops
-          Artist Nested Loops: Artist Nested Loops
-          Bee Conditionals: Bee Conditionals
-          Bee Nested Loops: Bee Nested Loops
-          Bee Debuggin: Bee Debuggin
-          Bee Debugging: Bee Debugging
-          Bee Functions: Bee Functions
-          Artist Functions with Params: Artist Functions with Params
-          Bounce: Bounce
-          Maze Conditionals: Maze Conditionals
-          Artist Functions with Parameters: Artist Functions with Parameters
+          Artist Nested Loops: 'Artista: bucles imbricats'
+          Bee Conditionals: 'Abella: Condicionals'
+          Bee Nested Loops: 'Abella: bucles imbricats'
+          Bee Debuggin: 'Abella: Correcció d''errors'
+          Bee Debugging: 'Abella: Correcció d''errors'
+          Bee Functions: 'Abella: funcions'
+          Artist Functions with Params: 'Artista: funcions amb paràmetres'
+          Bounce: Rebot
+          Maze Conditionals: 'Laberint: els condicionals'
+          Artist Functions with Parameters: 'Artista: Funcions amb paràmetres'
           Computational Thinking: Pensament computacional
           Functional Suncatchers: Functional Suncatchers
           Songwriting Parameters: Songwriting Parameters
-          Dice Race: Dice Race
+          Dice Race: Cursa de daus
           Internet: Internet
-          Crowdsourcing: Crowdsourcing
-          Digital Citizenship: Digital Citizenship
+          Crowdsourcing: Col·laboració oberta
+          Digital Citizenship: Ciutadania digital
           Farmer - While Loops: Farmer - While Loops
-          description: Formerly known as a 4-5 course.
-          'Studio: Create a Game': 'Studio: Create a Game'
+          description: El Curs 3 està dissenyat per alumnes que ja han fet el Curs
+            2. Els alumnes aprofundiran en els temes de programació introduïts en
+            els cursos anteriors cap a solucions flexibles i problemes més complexos.
+            Al final del curs, els alumnes creen històries interactives i jocs que
+            poden compartir amb tothom. Recomanat per cicle superior de primària.
+          'Studio: Create a Game': 'Play Lab: Crea un joc'
           Maze: Laberint
-          Artist: Artist
-          'Artist: Functions': 'Artist: Functions'
-          'Bee: Functions': 'Bee: Functions'
-          'Bee: Conditionals': 'Bee: Conditionals'
-          'Maze: Conditionals': 'Maze: Conditionals'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
+          Artist: Artista
+          'Artist: Functions': 'Artista: Funcions'
+          'Bee: Functions': 'Abella: funcions'
+          'Bee: Conditionals': 'Abella: Condicionals'
+          'Maze: Conditionals': 'Laberint: els condicionals'
+          'Artist: Nested Loops': 'Artista: bucles imbricats'
           'Farmer: While Loops': 'Farmer: While Loops'
-          'Bee: Nested Loops': 'Bee: Nested Loops'
-          'Bee: Debugging': 'Bee: Debugging'
+          'Bee: Nested Loops': 'Abella: bucles imbricats'
+          'Bee: Debugging': 'Abella: Correcció d''errors'
+          Maze2: Laberint2
+          Artist2: Artista2
+          'Artist: Functions2': 'Artista: Funcions2'
+          'Bee: Functions2': 'Abella: Funcions2'
+          'Bee: Conditionals2': 'Abella: Condicionals2'
+          'Maze: Conditionals2': 'Laberint: els condicionals2'
+          'Artist: Nested Loops2': 'Artista: bucles imbricats2'
+          'Farmer: While Loops2': 'Farmer: While Loops2'
+          'Bee: Nested Loops2': 'Abella: bucles imbricats2'
+          'Bee: Debugging2': 'Abella: Correcció d''errors2'
+          'Artist: Patterns': 'Artista: patrons'
+          Songwriting: Composició
+          description_audience: Ages 8+ (after Course 2)
           description_short: Students taking Course 3 should have already taken Course
             2.
-          Maze2: Maze2
-          Artist2: Artist2
-          'Artist: Functions2': 'Artist: Functions2'
-          'Bee: Functions2': 'Bee: Functions2'
-          'Bee: Conditionals2': 'Bee: Conditionals2'
-          'Maze: Conditionals2': 'Maze: Conditionals2'
-          'Artist: Nested Loops2': 'Artist: Nested Loops2'
-          'Farmer: While Loops2': 'Farmer: While Loops2'
-          'Bee: Nested Loops2': 'Bee: Nested Loops2'
-          'Bee: Debugging2': 'Bee: Debugging2'
-          'Artist: Patterns': 'Artist: Patterns'
-          Songwriting: Songwriting
         msm:
-          title: Middle School Math
-          description: Private work in progress for Middle School Math.
+          title: Matemàtiques ESO
+          description: Treball privat en progrés per a ESO.
           Graph Paper Programming: Programació de paper quadriculat
-          Assessments: Assessments
-          Unit 1: Unit 1
-          Unit 2: Unit 2
+          Assessments: Avaluacions
+          Unit 1: Unitat 1
+          Unit 2: Unitat 2
           Ninja Cat and the Coordinate Plane: Ninja Cat and the Coordinate Plane
           'Calc: Circles of Evaluation': 'Calc: Circles of Evaluation'
-          'Artist: Strings and Images': 'Artist: Strings and Images'
+          'Artist: Strings and Images': 'Artista: cadenes i imatges'
           Contracts: Contracts
           'Artist: Writing Contracts': 'Artist: Writing Contracts'
           'Calc: Defining Variables': 'Calc: Defining Variables'
-          'Play Lab: Defining Variables': 'Play Lab: Defining Variables'
+          'Play Lab: Defining Variables': 'Play Lab: Definint Variables'
           The Design Recipe: The Design Recipe
-          'Artist: Defining Functions': 'Artist: Defining Functions'
+          'Artist: Defining Functions': 'Artista: Definint funcions'
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
-          'Artist: Functions': 'Artist: Functions'
-          'Play Lab: Animation': 'Play Lab: Animation'
-          Booleans: Booleans
-          'Play Lab: Booleans': 'Play Lab: Booleans'
-          'Calc: Boolean Operators': 'Calc: Boolean Operators'
+          'Artist: Functions': 'Artista: Funcions'
+          'Play Lab: Animation': 'Play Lab: Animació'
+          Booleans: Veritat o fals
+          'Play Lab: Booleans': 'Play Lab: Veritat o fals'
+          'Calc: Boolean Operators': 'Calc: Operadors booleans'
           'Play Lab: Boolean Operators': 'Play Lab: Boolean Operators'
           Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
-          'Artist: Conditionals': 'Artist: Conditionals'
+          'Artist: Conditionals': 'Artista: els condicionals'
           Collision Detection and the Distance Formula: Collision Detection and the
             Distance Formula
-          'Play Lab: Collision Detection': 'Play Lab: Collision Detection'
+          'Play Lab: Collision Detection': 'Play Lab: Detecció de col·lisió'
+          'Unplugged: Ninja Cat and the Coordinate Plane': 'Unplugged: Ninja Cat and
+            the Coordinate Plane'
+          'Eval: Strings and Images': 'Eval: Strings and Images'
+          'Unplugged: Contracts': 'Unplugged: Contracts'
+          'Eval: Writing Contracts': 'Eval: Writing Contracts'
+          'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
+          'Eval: Defining Functions': 'Eval: Fast Functions'
+          'Eval: Functions': 'Eval: Design Recipe'
+          'Unplugged: Booleans': 'Sense connexió: Veritat o fals'
+          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
+            and Piecewise Functions'
+          'Eval: Conditionals': 'Eval: Conditionals'
+          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
+            Detection and the Distance Formula'
+          'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
+          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
+            and Coordinate Planes'
+          'Eval: Boolean Operators': 'Eval: Boolean Operators'
+          Blocks to Math: Blocks to Math
+          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Defining Variables
+            (Big Game)'
+          'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
+          'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
+          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
+            (Big Game)'
+          'Eval: Fast Functions': 'Eval: Fast Functions'
+          'Play Lab: Design Recipe': 'Play Lab: Design Recipe'
+          'Eval: Design Recipe': 'Eval: Design Recipe'
         playlab:
           title: Play Lab
-          description: Create a story or make a game with Play Lab!
+          description: Crea una història o fes una partida amb Play Lab!
           Play Lab: Play Lab
-          description_short: Create a story or make a game with Play Lab!
+          description_short: Crea una història o fes una partida amb Play Lab!
         artist:
-          title: Artist
-          description: Draw cool pictures and designs with the Artist!
-          Artist: Artist
-          description_short: Draw cool pictures and designs with the Artist!
+          title: Artista
+          description: Dibuixar imatges estupendes i dissenys amb l'artista!
+          Artist: Artista
+          description_short: Dibuixar imatges estupendes i dissenys amb l'artista!
         scrat:
           title: Scrat
-          description_short: Scrat short description.
-          description: Scrat long description
-          'Maze: Sequence': 'Maze: Sequence'
+          description_short: Descripció breu de Scrat.
+          description: Descripció llarga de Scrat
+          'Maze: Sequence': 'Laberint: seqüència'
         hourofcode:
           Maze: Laberint
           title: Hora del codi
+          description: Prova els bàsics de la informàtica amb els personatges d'Angry
+            Birds, Plants vs. Zombies, i Scrat de Ice Age!
           description_short: Try the basics of computer science with characters from
             Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description: Try the basics of computer science with characters from Angry
-            Birds, Plants vs. Zombies, and Scrat from Ice Age!
         frozen:
-          title: Frozen
-          description_short: Join the Royal Sisters of Arendelle, Anna and Elsa, as
-            they explore the magic and beauty of ice. You will write code to create
-            snowflakes and patterns as you ice-skate and make a winter wonderland
-            that you can then share with your friends!
+          title: Codi amb Anna i Elsa
           description: Join the Royal Sisters of Arendelle, Anna and Elsa, as they
             explore the magic and beauty of ice. You will write code to create snowflakes
             and patterns as you ice-skate and make a winter wonderland that you can
             then share with your friends!
-          Artist: Artist
+          Artist: Artista
+          description_short: Anem a utilitzar el codi per unir l'Anna i l'Elsa mentre
+            exploren la màgia i la bellesa del gel.
         course4:
-          description_short: Students taking Course 4 should have already taken Courses
-            2 and 3.
-          description: Course 4 is designed for students who have taken Course 2 and
-            3. Students will delve deeper into programming topics introduced in previous
-            courses to flexible solutions to more complex problems. By the end of
-            this course, students create interactive stories and games they can share
-            with anyone. Recommended for grades 4-8.
-          'Artist: Variables': 'Artist: Variables'
-          'Bee: For Loops': 'Bee: For Loops'
-          title: Course 4
-          'Algorithms: Tangrams': 'Algorithms: Tangrams'
+          description_short: Els alumnes del Curs 4 haurien d'haver fet prèviament
+            els cursos 2 i 3.
+          description: El Curs 3 està dissenyat per alumnes que ja han fet el Curs
+            2. Els alumnes aprofundiran en els temes de programació introduïts en
+            els cursos anteriors cap a solucions flexibles i problemes més complexos.
+            Al final del curs, els alumnes creen històries interactives i jocs que
+            poden compartir amb tothom. Recomanat per cicle superior de primària.
+          'Artist: Variables': 'Artista: Variables'
+          'Bee: For Loops': 'Abelles: Per bucles'
+          title: Curs 4
+          'Algorithms: Tangrams': 'Algoritmes: Tàngrams'
           Variables: Variables
           'Play Lab: Variables': 'Play Lab: Variables'
-          'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
-          'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
-          'Artist: For Loops': 'Artist: For Loops'
-          'Play Lab: For Loops': 'Play Lab: For Loops'
-          'Artist: Functions': 'Artist: Functions'
-          'Artist: Functions with Paraqmeters': 'Artist: Functions with Paraqmeters'
-          'Unplugged: Tangrams': 'Unplugged: Tangrams'
-          Artist: Artist
-          Bee: Bee
+          'Play Lab: Functions with Parameters': 'Play Lab: Funcions amb paràmetres'
+          'Bee: Functions with Parameters': 'Abelles: Les funcions amb paràmetres'
+          'Artist: For Loops': 'Artista: Per bucles'
+          'Play Lab: For Loops': 'Play Lab: Per bucles'
+          'Artist: Functions': 'Artista: Funcions'
+          'Artist: Functions with Paraqmeters': 'Artista: Funcions amb paràmetres'
+          'Unplugged: Tangrams': 'Sense connexió: Tangrams'
+          Artist: Artista
+          Bee: Abella
           'Unplugged: Envelope Variables': 'Unplugged: Envelope Variables'
           'Unplugged: Madlibs': 'Unplugged: Madlibs'
-          'Unplugged: For Loop Fun': 'Unplugged: For Loop Fun'
-          'Unplugged: Songwriting with Parameters': 'Unplugged: Songwriting with Parameters'
-          'Artist: Functions with Parameters': 'Artist: Functions with Parameters'
-          'Unplugged: Binary': 'Unplugged: Binary'
-          Bee Binary: Bee Binary
-          Farmer Binary: Farmer Binary
-          Maze and Bee: Maze and Bee
-          Artist Binary: Artist Binary
+          'Unplugged: For Loop Fun': 'Sense connexió: Diversió amb bucles'
+          'Unplugged: Songwriting with Parameters': 'Sense connexió: Composició musical
+            amb paràmetres'
+          'Artist: Functions with Parameters': 'Artista: Funcions amb paràmetres'
+          'Unplugged: Binary': 'Sense connexió: Binari'
+          Bee Binary: Abella binària
+          Farmer Binary: Granger binari
+          Maze and Bee: Laberint i abella
+          Artist Binary: Artista binari
+          description_audience: Ages 10+ (after Course 3)
         Course4pre:
           description_short: A brief rampup of concepts for students who have not
             taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
-          'Maze: Sequence': 'Maze: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
-          'Artist: Loops': 'Artist: Loops'
-          'Bee: Conditionals': 'Bee: Conditionals'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
+          Course 4 Prerequisite: Curs 4 prerequisit
+          'Maze: Sequence': 'Laberint: seqüència'
+          'Artist: Sequence': 'Artista: seqüència'
+          'Artist: Loops': 'Artista: bucles'
+          'Bee: Conditionals': 'Abella: Condicionals'
+          'Artist: Nested Loops': 'Artista: bucles imbricats'
           'Farmer: While Loops': 'Farmer: While Loops'
-          'Bee: Nested Loops': 'Bee: Nested Loops'
-          'Artist: Functions': 'Artist: Functions'
-          'Bee: Debugging': 'Bee: Debugging'
+          'Bee: Nested Loops': 'Abella: bucles imbricats'
+          'Artist: Functions': 'Artista: Funcions'
+          'Bee: Debugging': 'Abella: Correcció d''errors'
+        course4pre:
+          description_short: A brief rampup of concepts for students who have not
+            taken Course 2 and 3.
+          Course 4 Prerequisite: Curs 4 prerequisit
+          'Maze: Sequence': 'Laberint: seqüència'
+          'Artist: Sequence': 'Artista: seqüència'
+          'Artist: Loops': 'Artista: bucles'
+          'Bee: Conditionals': 'Abella: Condicionals'
+          'Artist: Nested Loops': 'Artista: bucles imbricats'
+          'Farmer: While Loops': 'Farmer: While Loops'
+          'Bee: Nested Loops': 'Abella: bucles imbricats'
+          'Artist: Functions': 'Artista: Funcions'
+          'Bee: Debugging': 'Abella: Correcció d''errors'
+        Course4pre (Case Conflict):
+          description_short: A brief rampup of concepts for students who have not
+            taken Course 2 and 3.
+          Course 4 Prerequisite: Curs 4 prerequisit
+          'Maze: Sequence': 'Laberint: seqüència'
+          'Artist: Sequence': 'Artista: seqüència'
+          'Artist: Loops': 'Artista: bucles'
+          'Bee: Conditionals': 'Abella: Condicionals'
+          'Artist: Nested Loops': 'Artista: bucles imbricats'
+          'Farmer: While Loops': 'Farmer: While Loops'
+          'Bee: Nested Loops': 'Abella: bucles imbricats'
+          'Artist: Functions': 'Artista: Funcions'
+          'Bee: Debugging': 'Abella: Correcció d''errors'
+        usability:
+          Intro: Introducció
+          Variables and For Loops: Variables and For Loops
+          Functions and Functions with Parameters: Funcions i funcions amb paràmetres
+          title: Proves d'ús
+          description_short: ''
+          description: Una selecció de nivells del Curs 4 per proves d'ús.
+          Variables: Variables
+          For Loops: Per bucles

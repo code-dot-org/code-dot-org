@@ -1,5 +1,5 @@
 {
-  "bounceBall":"bounce ball",
+  "bounceBall":"топката отскача",
   "bounceBallTooltip":"Отблъсни топката на разстояние от обекта.",
   "continue":"Напред",
   "dirE":"И",
@@ -14,8 +14,8 @@
   "ifPathAhead":"ако има път напред",
   "ifTooltip":"Ако има път в тази посока, то направи следните действия",
   "ifelseTooltip":"Ако има път в тази посока,  извърши първия блок действия. Ако няма, извърши втория блок действия.",
-  "incrementOpponentScore":"резултат на противника в точки",
-  "incrementOpponentScoreTooltip":"Добавя една към текущият резултат на противника.",
+  "incrementOpponentScore":"точка на противника",
+  "incrementOpponentScoreTooltip":"Добавя една към текущия резултат на противника.",
   "incrementPlayerScore":"точка",
   "incrementPlayerScoreTooltip":"Добавя една точка към текущия резултат на играча.",
   "isWall":"ако това е стена",

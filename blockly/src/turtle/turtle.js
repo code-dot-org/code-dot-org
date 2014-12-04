@@ -43,13 +43,16 @@ var utils = require('../utils');
 var level;
 var skin;
 
-BlocklyApps.CHECK_FOR_EMPTY_BLOCKS = false;
+BlocklyApps.CHECK_FOR_EMPTY_BLOCKS = true;
 BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
 
 var JOINT_RADIUS = 4;
+
+var SMOOTH_ANIMATE_STEP_SIZE = 5;
+var FAST_SMOOTH_ANIMATE_STEP_SIZE = 15;
 
 /**
  * Minimum joint segment length
@@ -300,7 +303,7 @@ Turtle.drawLogOnCanvas = function(log, canvas) {
   while (log.length) {
     var tuple = log.shift();
     Turtle.step(tuple[0], tuple.splice(1), {smoothAnimate: false});
-    clearTuple();
+    resetStepInfo();
   }
   canvas.globalCompositeOperation = 'copy';
   canvas.drawImage(Turtle.ctxScratch.canvas, 0, 0);
@@ -449,7 +452,7 @@ Turtle.drawTurtle = function() {
       sourceX * retina + sourceWidth  * retina -0 > Turtle.avatarImage.width ||
       sourceY * retina + sourceHeight * retina > Turtle.avatarImage.height)
   {
-    if (console.log) {
+    if (console && console.log) {
       console.log("drawImage is out of source bounds!");
     }
     return;
@@ -608,14 +611,18 @@ BlocklyApps.reset = function(ignore) {
   // Stop the looping sound.
   BlocklyApps.stopLoopingAudio('start');
 
-  clearTuple();
+  resetStepInfo();
 };
 
-function clearTuple()
-{
+/**
+ * When smooth animate is true, steps can be broken up into multiple animations.
+ * At the end of each step, we want to reset any incremental information, which
+ * is what this does.
+ */
+function resetStepInfo() {
   Turtle.stepStartX = Turtle.x;
   Turtle.stepStartY = Turtle.y;
-  jumpDistanceCovered = 0;
+  Turtle.stepDistanceCovered = 0;
 }
 
 
@@ -676,6 +683,7 @@ BlocklyApps.runButtonClick = function() {
   }
   BlocklyApps.attempts++;
   Turtle.execute();
+
 };
 
 Turtle.evalCode = function(code) {
@@ -753,11 +761,6 @@ Turtle.execute = function() {
   }
 };
 
-// Divide each jump into substeps so that we can animate every movement.
-var jumpDistance = 5;
-var jumpDistanceCovered;
-
-
 /**
  * Special case: if we have a turn, followed by a move forward, then we can just
  * do the turn instantly and then begin the move forward in the same frame.
@@ -792,7 +795,6 @@ function checkforTurnAndMove() {
  * Attempt to execute one command from the log of API commands.
  */
 function executeTuple () {
-
   if (api.log.length === 0) {
     return false;
   }
@@ -820,7 +822,7 @@ function executeTuple () {
 
     if (tupleDone) {
       api.log.shift();
-      clearTuple();
+      resetStepInfo();
     }
   } while (executeSecondTuple);
 
@@ -842,8 +844,17 @@ function finishExecution () {
  * Iterate through the recorded path and animate the turtle's actions.
  */
 Turtle.animate = function() {
+
   // All tasks should be complete now.  Clean up the PID list.
   Turtle.pid = 0;
+
+  // Scale the speed non-linearly, to give better precision at the fast end.
+  var stepSpeed = 1000 * Math.pow(1 - Turtle.speedSlider.getValue(), 2) / skin.speedModifier;
+
+  // when smoothAnimate is true, we divide long steps into partitions of this
+  // size.
+  Turtle.smoothAnimateStepSize = (stepSpeed === 0 ?
+    FAST_SMOOTH_ANIMATE_STEP_SIZE : SMOOTH_ANIMATE_STEP_SIZE);
 
   if (level.editCode) {
     var stepped = true;
@@ -880,49 +891,44 @@ Turtle.animate = function() {
     }
   }
 
-  // Scale the speed non-linearly, to give better precision at the fast end.
-  var stepSpeed = 1000 * Math.pow(1 - Turtle.speedSlider.getValue(), 2);
-  if (skin.id == "anna" || skin.id == "elsa")
-  {
-    stepSpeed /= 10;
-  }
   Turtle.pid = window.setTimeout(Turtle.animate, stepSpeed);
 };
 
-
-Turtle.doSmoothAnimate = function(options, distance)
-{
+Turtle.calculateSmoothAnimate = function(options, distance) {
   var tupleDone = true;
+  var stepDistanceCovered = Turtle.stepDistanceCovered;
 
-  if (options && options.smoothAnimate)
-  {
+  if (options && options.smoothAnimate) {
     var fullDistance = distance;
+    var smoothAnimateStepSize = Turtle.smoothAnimateStepSize;
 
     if (fullDistance < 0) {
       // Going backward.
-      if (jumpDistanceCovered - jumpDistance <= fullDistance) {
+      if (stepDistanceCovered - smoothAnimateStepSize <= fullDistance) {
         // clamp at maximum
-        distance = fullDistance - jumpDistanceCovered;
-        jumpDistanceCovered = fullDistance;
+        distance = fullDistance - stepDistanceCovered;
+        stepDistanceCovered = fullDistance;
       } else {
-        distance = -jumpDistance;
-        jumpDistanceCovered -= jumpDistance;
+        distance = -smoothAnimateStepSize;
+        stepDistanceCovered -= smoothAnimateStepSize;
         tupleDone = false;
       }
 
     } else {
       // Going foward.
-      if (jumpDistanceCovered + jumpDistance >= fullDistance) {
+      if (stepDistanceCovered + smoothAnimateStepSize >= fullDistance) {
         // clamp at maximum
-        distance = fullDistance - jumpDistanceCovered;
-        jumpDistanceCovered = fullDistance;
+        distance = fullDistance - stepDistanceCovered;
+        stepDistanceCovered = fullDistance;
       } else {
-        distance = jumpDistance;
-        jumpDistanceCovered += jumpDistance;
+        distance = smoothAnimateStepSize;
+        stepDistanceCovered += smoothAnimateStepSize;
         tupleDone = false;
       }
     }
   }
+
+  Turtle.stepDistanceCovered = stepDistanceCovered;
 
   return { tupleDone: tupleDone, distance: distance };
 };
@@ -943,20 +949,20 @@ Turtle.step = function(command, values, options) {
   switch (command) {
     case 'FD':  // Forward
       distance = values[0];
-      result = Turtle.doSmoothAnimate(options, distance);
+      result = Turtle.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
       Turtle.moveForward_(result.distance);
       break;
     case 'JF':  // Jump forward
       distance = values[0];
-      result = Turtle.doSmoothAnimate(options, distance);
+      result = Turtle.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
       Turtle.jumpForward_(result.distance);
       break;
     case 'MV':  // Move (direction)
       distance = values[0];
       heading = values[1];
-      result = Turtle.doSmoothAnimate(options, distance);
+      result = Turtle.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
       Turtle.setHeading_(heading);
       Turtle.moveForward_(result.distance);
@@ -964,14 +970,14 @@ Turtle.step = function(command, values, options) {
     case 'JD':  // Jump (direction)
       distance = values[0];
       heading = values[1];
-      result = Turtle.doSmoothAnimate(options, distance);
+      result = Turtle.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
       Turtle.setHeading_(heading);
       Turtle.jumpForward_(result.distance);
       break;
     case 'RT':  // Right Turn
       distance = values[0];
-      result = Turtle.doSmoothAnimate(options, distance);
+      result = Turtle.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
       Turtle.turnByDegrees_(result.distance);
       break;
@@ -1091,7 +1097,7 @@ Turtle.moveForward_ = function (distance) {
     return;
   }
   if (Turtle.isDrawingWithPattern) {
-    Turtle.drawForwardWithPattern_(distance);
+    Turtle.drawForwardLineWithPattern_(distance);
 
     // Frozen gets both a pattern and a line over the top of it.
     if (skin.id != "elsa" && skin.id != "anna") {
@@ -1108,11 +1114,6 @@ Turtle.drawForward_ = function (distance) {
   } else {
     Turtle.drawForwardLine_(distance);
   }
-};
-
-Turtle.drawForwardWithPattern_ = function (distance) {
-  //TODO: deal with drawing joints, if appropriate
-  Turtle.drawForwardLineWithPattern_(distance);
 };
 
 /**
@@ -1169,20 +1170,33 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
     startX = Turtle.stepStartX;
     startY = Turtle.stepStartY;
 
-    var lineDistance = Math.abs(jumpDistanceCovered);
+    var lineDistance = Math.abs(Turtle.stepDistanceCovered);
 
     Turtle.ctxPattern.save();
     Turtle.ctxPattern.translate(startX * retina, startY * retina);
-    Turtle.ctxPattern.rotate(Math.PI * (Turtle.heading - 90) / 180); // increment the angle and rotate the image.
-                                                                     // Need to subtract 90 to accomodate difference in canvas
-                                                                     // vs. Turtle direction
+    // increment the angle and rotate the image.
+    // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
+    Turtle.ctxPattern.rotate(Math.PI * (Turtle.heading - 90) / 180);
 
+    var clipSize;
+    if (lineDistance % Turtle.smoothAnimateStepSize === 0) {
+      clipSize = Turtle.smoothAnimateStepSize;
+    } else if (lineDistance > Turtle.smoothAnimateStepSize) {
+      // this happens when our line was not divisible by smoothAnimateStepSize
+      // and we've hit our last chunk
+      clipSize = lineDistance % Turtle.smoothAnimateStepSize;
+    } else {
+      clipSize = lineDistance;
+    }
     if (img.width !== 0) {
       Turtle.ctxPattern.drawImage(img,
-        Math.round(lineDistance * retina), 0,        // Start point for clipping image
-        jumpDistance * retina, img.height,           // clip region size
-        Math.round((jumpDistanceCovered - 7) * retina), Math.round((- 18) * retina),      // draw location relative to the ctx.translate point pre-rotation
-        jumpDistance * retina, img.height);
+        // Start point for clipping image
+        Math.round(lineDistance * retina), 0,
+        // clip region size
+        clipSize * retina, img.height,
+        // some mysterious hand-tweaking done by Brendan
+        Math.round((Turtle.stepDistanceCovered - clipSize - 2) * retina), Math.round((- 18) * retina),
+        clipSize * retina, img.height);
     }
 
     Turtle.ctxPattern.restore();
@@ -1197,14 +1211,18 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
     Turtle.jumpForward_(distance);
     Turtle.ctxScratch.save();
     Turtle.ctxScratch.translate(startX, startY);
-    Turtle.ctxScratch.rotate(Math.PI * (Turtle.heading - 90) / 180); // increment the angle and rotate the image.
-                                                                     // Need to subtract 90 to accomodate difference in canvas
-                                                                     // vs. Turtle direction
+    // increment the angle and rotate the image.
+    // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
+    Turtle.ctxScratch.rotate(Math.PI * (Turtle.heading - 90) / 180);
+
     if (img.width !== 0) {
       Turtle.ctxScratch.drawImage(img,
-        0, 0,                                 // Start point for clipping image
-        distance+img.height / 2, img.height,  // clip region size
-        -img.height / 4, -img.height / 2,     // draw location relative to the ctx.translate point pre-rotation
+        // Start point for clipping image
+        0, 0,
+        // clip region size
+        distance+img.height / 2, img.height,
+        // draw location relative to the ctx.translate point pre-rotation
+        -img.height / 4, -img.height / 2,
         distance+img.height / 2, img.height);
     }
 
@@ -1255,7 +1273,7 @@ var displayFeedback = function() {
     level: level,
     feedbackImage: feedbackImageCanvas.canvas.toDataURL("image/png"),
     // add 'impressive':true to non-freeplay levels that we deem are relatively impressive (see #66990480)
-    showingSharing: level.freePlay || level.impressive,
+    showingSharing: !level.disableSharing && (level.freePlay || level.impressive),
     // impressive levels are already saved
     alreadySaved: level.impressive,
     // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)

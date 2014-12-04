@@ -2,17 +2,17 @@
   activerecord:
     errors:
       messages:
-        blank: is required
+        blank: '%s لازم است'
     attributes:
       user:
-        name: نام
+        name: نمایش نام
         email: ایمیل
         username: نام کاربری
         password: رمز عبور
         password_confirmation: تکرار کلمه عبور
         current_password: کلمه عبور فعلی
         locale: زبان
-        age: Age
+        age: سن
         gender: جنسیت
         edit_header: ویرایش اطلاعات کاربری
         error:
@@ -20,11 +20,8 @@
   hello: سلام دنیا
   welcome_back: '%{name}، خوش آمدید'
   add_teacher_form:
-    code_or_email:
-      label: 'افزودن معلم از طریق کد شناسایی یا رایانامه:'
-      placeholder: کد شناسایی (ABCDEF) یا رایانامه (teacher@school.edu)
     code:
-      label: 'Add a teacher by section code:'
+      label: 'افزودن یک معلم:'
       placeholder: Code (ABCDEF)
     submit: افزودن معلم
   add_hint_form:
@@ -55,10 +52,10 @@
       to sign out of %{provider}.
     already_signedup: قبلا ثبت نام کرده‌اید؟
     notyet_signedup: تا به حال شرکت نکرده‌اید؟
-    google_oauth2: گوگل پلاس
+    google_oauth2: حساب Google
     twitter: توییتر
     facebook: فیس‌بوک
-    windowslive: ویندوز لایو
+    windowslive: حساب مایکروسافت
     forgot_password: کلمه عبور خود را فراموش کرده اید؟
     need_confirmation: دستورالعمل فعال‌سازی حساب کاربری را دریافت نکرده‌اید؟
     need_unlock: دستورالعمل فعال‌سازی را دریافت نکرده‌اید؟
@@ -79,7 +76,7 @@
     address_placeholder: نشانی، شهر، استان، کدپستی
     gender: جنسیت (اختیاری)
     birthday: تاریخ تولد (اختیاری)
-    age: Age (optional)
+    age: سن
     user_type: Are you a student or teacher?
     submit: ثبت نام
     teacher: آیا شما یک معلم هستید؟
@@ -108,8 +105,8 @@
     try_20hours: دوره 20 ساعته معرفی (مقدماتی) علوم کامپیوتر ما را امتحان کنید
   signinsection:
     welcome: Welcome to %{section_name}
-    name: Choose your name
-    picture: Now find your secret picture
+    name: نام خود را انتخاب کنید
+    picture: اکنون عکس مخفی خود را پیدا کنید
     words: Now enter your secret words
     login: ورود
   password:
@@ -139,7 +136,7 @@
         امتحان کنید'
       no_teacher: کسی با  '%{teacher_email_or_code}' وارد نشده است. لطفا از ایشان
         بخواهید تا ثبت نام کنند و بعد دوباره اضافه کردنشان را امتحان کنید
-      section_not_found: Could not find a section with code '%{section_code}'.
+      section_not_found: قادر به یافتن یک بخش با کد '%{section_code}' نمی باشد.
       blank_code: لطفا یک کد یا آدرس ایمیل معلمتان را وارد کنید
       cant_join_own_section: Sorry, you can't join your own section.
     mail:
@@ -177,7 +174,7 @@
       msg_student: 'توجه: شما تنها می توانید یک نوع جایزه انتخاب کنید.'
       msg_publicschool: لطفا تایید کنید که شما یک معلم مدرسه دولتی در ایالات متحده
         هستند.
-      msg_visit_website: Visit website
+      msg_visit_website: مشاهده وب سایت
     providers:
       apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
@@ -245,10 +242,10 @@
       finished_hoc: من ساعتی با کد خود را به پایان رسانده ام
       sign_in_to_save: وارد گردید تا پیشرفتتان ذخیره شود
       free_play:
-        playlab: Make an App
+        playlab: ایجاد یک برنامه
         artist: Draw Something
     user:
-      classroom: دانش آموزان من
+      classroom: صفحه اصلی معلم
       label: سلام %{username}
       stats: پیشرفت من
       settings: حساب کاربری من
@@ -256,7 +253,7 @@
       logout: خروج
       signin: ورود
       signup: ثبت نام
-      already_registered: Already registered?
+      already_registered: قبلا ثبت نام کرده اید؟?
     popup:
       progress: پیشرفت شما
       lines: 'تعداد خطوط کد: %{lines}'
@@ -276,13 +273,13 @@
       remove: آیا برای حذف این معلم مطمئت هستبد؟
     tools: ابزار معلم
     followers:
-      section: 'Section:'
+      section: 'بخش:'
       stages: 'Stage(s) to display:'
       show_past: 'Show student activity (%{bullet_html}) in the past:'
       levels_key: Levels key
-      perfect: Completed, perfect
+      perfect: تکمیل, کامل
       completed: Completed, but using too many blocks
-      tried: Tried, but not completed
+      tried: سعی کردم، اما کامل نیست
       not_tried: Not tried yet
       activity: Indicates student activity in the last %{hours} %{plural}
       no_section: No assigned section
@@ -292,10 +289,10 @@
       username: نام کاربری
       password: رمز عبور
       manage: مدیریت دانش آموزان
-      dashboard: Go to Teacher Dashboard
+      dashboard: رفتن به صفحهٔ معلم
       add: افزودن دانش آموزان
-      remove: remove student
-      confirm_remove: Are you sure you want to remove this student?
+      remove: حذف کردن دانش آموز
+      confirm_remove: آیا مطمئن هستید می خواهید این دانش آموز را حذف کنید؟?
       help_reassign: To divide your class into multiple sections, select students
         to assign to a new section.
       help_register: Instead of making you spend a lot of time individually importing
@@ -305,8 +302,8 @@
         you will be able to reset it for them.
       register: Ask your students to register themselves
       vist: Ask your students to visit
-      section_code: 'and enter their section-code:'
-      first_please: First, please %{add_section}
+      section_code: 'و  کد  بخش  را وارد کنید:'
+      first_please: اول، لطفا %{add_section}
       for: For
       enter: 'enter:'
     sections:
@@ -390,34 +387,34 @@
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
+    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
     heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
     heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
     heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
-    gallery:
-      your_turtle: My Art
-      your_studio: My Apps
+    your_gallery: گالری
   gender:
     male: مرد
     female: زن
     none: ترجیح می دهم چواب ندهم
   user_type:
     student: دانش آموز
-    teacher: Teacher
+    teacher: معلم
   footer:
     help_from_html: مهندسینی از <a href="http://www.google.com"> گوگل</a>، <a href="http://www.microsoft.com">
       مایکروسافت</a>، <a href="http://www.facebook.com"> فیس بوک</a> و <a href="http://www.twitter.com">
       توییتر</a> در ایجاد این آموزش کمک کرده اند.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 <a href="http://www.rovio.com">Rovio
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 <a href="http://www.rovio.com">Rovio
       Entertainment Ltd</a>. کلیه حقوق این وبسایت محفوظ می باشد.<br/> Plants vs. Zombies&trade;
       & &copy; 2013 <a href="http://www.ea.com">Electronic Arts Inc.</a>کلیه حقوق
       این وبسایت محفوظ می باشد.
+    powered_by_aws: Powered by Amazon Web Services
     feedback: ارائه پیشنهادات و انتقادات
     translate: کمک به ما در ترجمه به زبان شما
     support: پشتیبانی
-    support_url: http://support.code.org
+    support_url: http://support.code.org/
     tos: شرایط و ضوابط خدمات
     privacy: قوانین حفظ حریم خصوصی
-    secure: Secure Version
+    secure: نسخهٔ امن
   reference_area:
     title: کمک نیاز دارید؟
     subtitle: دیدن این فیلم ها و نکات
@@ -439,7 +436,7 @@
         issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
         any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade
         your browser to a supported version</a>.
-      hide_this_warning: Hide this warning
+      hide_this_warning: مخفی کردن هشدار
     upgrade:
       header: لطفا مرورگر خود را ارتقا دهید.
       message: Code.org uses modern web technology. This makes the site faster to
@@ -452,16 +449,17 @@
   try_reloading: درخواست مجدد نمایش صفحه
   next_stage: پایان! به مرحله بعد بروید
   download_pdf: طرح درس آزاد
-  lesson_plan: Lesson Plan
-  view_lesson_plan: View Lesson Plan
-  pdf_download: Download PDF
+  lesson_plan: طرح درس
+  view_lesson_plan: مشاهده طرح درس
+  pdf_download: دانلود پی دی اف
   download_coming_soon: Downloadable activity coming soon.
-  video_coming_soon: Video Coming Soon!
+  video_coming_soon: ویدئو بزودی!
   share_code:
     title: '''اجرا'' را بزن تا برنامه من را در عمل ببینی'
     bounce_og_title: بازی Bounce من را ببین
     flappy_og_title: بازی Flappy من را ببین
     studio_og_title: Check out my story
+    check_out_what_i_made: Check out what I made
     og_description: من خودم با Code.org کد را نوشتم
     phone_number_not_allowed: It looks like there is a phone number in it. Try changing
       the text.
@@ -492,6 +490,14 @@
     20hour:
       title: دوره مقدمه
       body: دوره 20 ساعته آشنایی با علوم کامپیوتر را امتحان کن.
+    hoc2014:
+      try_new_tutorial: Try our new Hour of Code tutorial in beta
+      try_frozen: Artist with Anna and Elsa, from Frozen
+    gallery:
+      title: گالری
+      body: View a gallery of app and artist images created by our users
+    frozen:
+      title: Frozen
   gallery:
     students_drew_these_with_code: دانش‌آموزان اینها را با کدنویسی رسم کرده‌اند!
     students_made_these_with_code: Students made these with code!
@@ -505,30 +511,35 @@
     more: بیشتر &rarr;
     caption_by_name_age: by %{name}, age %{age}
     caption_time_ago: '%{time_ago} ago'
+    header: گالری
+    header_playlab: آزمایشگاه بازی
+    header_artist: هنرمند
   landing:
     prerelease: این صفحه هنوز در دست ساخت است.
+    prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
+      is subject to revision as feedback is received and improvements are made.
     feedback: Give Feedback
-    report_bug: Report Bug
-    support: Get Help
-    support_url: //support.code.org
+    report_bug: گزارش اشکال
+    support: کمک گرفتن
+    support_url: support.code.org
   multi:
     wrong_title: پاسخ اشتباه
     wrong_body: پاسخی که وارد کرده‌اید صحیح نیست. لطفا دوباره امتحان کنید!
-    correct_title: Correct
-    correct_body: That is the correct answer.
+    correct_title: صحیح است
+    correct_body: این پاسخ صحیح است
   match:
     wrong_title: راه‌حل نادرست
     wrong_body: راه‌حلی که شما وارد کرده‌اید صحیح نیست. لطفا دوباره امتحان کنید!
-    correct_title: Correct
-    correct_body: That is the correct answer.
+    correct_title: صحیح است
+    correct_body: این پاسخ صحیح است
   text_match:
-    placeholder: Enter your answer here
+    placeholder: پاسخ خود را اینجا وارد کنید
   dialog:
     ok: Ok
   time:
-    hour: 1 hour
-    day: day
-    week: week
+    hour: ۱ ساعت
+    day: روز
+    week: هفته
   data:
     script:
       name:
@@ -539,7 +550,7 @@
             تا پایان دوره راهنمایی)طراحی شده است، اما می تواند برای همه سنین دیگر
             نیز جالب باشد.
         Hour of Code:
-          title: ساعتی با کد
+          title: ساعت كد نويسي
           description: ''
         edit-code:
           title: ویرایش کد
@@ -548,7 +559,7 @@
           title: رویدادها
           description: ''
         builder:
-          title: Builder
+          title: ساز
           description: ''
         flappy:
           title: کدنویسی Flappy
@@ -564,8 +575,8 @@
           title: Sample Level Builder
           description: ''
   age_interstitial:
-    age: Your age
-    header: Account Information Update
+    age: سن شما
+    header: بروز رسانی اطلاعات حساب کاربری
     message: We're in the process of updating our experience to provide you with even
       stronger privacy protections. To do this, we need existing users to enter their
       age here.<br/>As always, code.org will never rent, sell or share this information

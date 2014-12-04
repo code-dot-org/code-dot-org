@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 require_relative '../../../src/env'
 require src_dir 'database'
+require 'cdo/poste'
 require 'cdo/hip_chat'
 
 SENDY_DB = Sequel.connect(CDO.sendy_db_reader.sub('mysql:', 'mysql2:'))
@@ -10,8 +11,8 @@ def main()
   total = unsubscribed = 0
 
   SENDY_DB[:subscribers].where('unsubscribed=1 OR complaint=1').each do |i|
-    unless Contact.unsubscribed?(i[:email])
-      Contact.unsubscribe(i[:email], ip_address:'127.0.0.1')
+    unless Poste.unsubscribed?(i[:email])
+      Poste.unsubscribe(i[:email], ip_address:'127.0.0.1')
       unsubscribed += 1
     end
     total += 1

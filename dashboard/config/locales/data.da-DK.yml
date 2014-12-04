@@ -50,6 +50,7 @@
           MazeEC: Trin 1
           Webapp: Fase 2
           ArtistEC: Trin 3
+          StudioEC: Trin 4
         events:
           desc: Hoppe (beta)
           Bounce: Trin 1
@@ -101,6 +102,7 @@
         Webapp: WebApp
         ArtistEC: Kunstneren
         TextMatch: Tekst Match
+        StudioEC: Spille Lab
     trophy:
       name:
         Bronze: Bronze
@@ -503,8 +505,8 @@
           løber ind i blæksprutten, og derefter flytte ham med pilene indtil du scorer?
         studio_c3_game_6: Kan du tilføje blokke til at ændre baggrunden og hastigheden
           af pingvinen, og derefter flytte ham med pilene indtil du scorer?
-        studio_c3_game_7: Opret din egen historie. Når du er færdig, skal du klikke
-          på "Udfør" for at lade dine venner prøve din historie på deres telefoner.
+        studio_c3_game_7: Oprette dit eget spil. Når du er færdig, skal du klikke
+          på Udfør for at lade venner prøve dit spil på deres mobiler.
         studio_playlab_1: Kan du få denne hund sige "Hej verden!"?
         studio_playlab_2: Kan du få hunden til at sige noget, og derefter få katten
           sige noget bagefter?
@@ -523,10 +525,10 @@
           løber ind i blæksprutten, og derefter flytte ham med pilene indtil du scorer?
         studio_playlab_9: Kan du tilføje blokke til at ændre baggrunden og hastigheden
           af pingvinen, og derefter flytte ham med pilene indtil du scorer?
-        studio_playlab_10: Opret din egen historie. Når du er færdig, skal du klikke
-          på "Udfør" for at lade dine venner prøve din historie på deres telefoner.
-        studio_full_sandbox: Opret din egen historie. Når du er færdig, skal du klikke
-          på "Udfør" for at lade dine venner prøve din historie på deres telefoner.
+        studio_playlab_10: Oprette dit eget spil. Når du er færdig, skal du klikke
+          på Udfør for at lade venner prøve dit spil på deres mobiler.
+        studio_full_sandbox: Oprette dit eget spil. Når du er færdig, skal du klikke
+          på Udfør for at lade venner prøve dit spil på deres mobiler.
         studio_k1_1: Kan du få denne hund sige "Hej verden!"?
         studio_k1_2: Kan du få hunden til at sige noget, og derefter få katten sige
           noget bagefter?
@@ -549,11 +551,134 @@
         maze_wordsearch_k_20: Dette er en test! Flytte mig en måde, så en anden til
           at stave ordet STORY
         webapp_ec_simple: Opret din WebApp ved hjælp af createHtmlBlock.
-        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
-          it in the new "penColour" block.'
+        turtle_ec_1_2: 'Nu skal du tegne en firkant. Bemærk: Brug din favorit farve,
+          vælg den i den nye "penColor" blok.'
         turtle_ec_1_10: 'Du har du klaret det! Tegn nu noget som du ønsker. Her er
           nogle ideer: en tændstikmand, et snefnug eller en spiral. Prøv også den
           nye "penWidth" blok. Hav det sjovt!'
+        studio_ec_sandbox: Oprette dit eget spil. Når du er færdig, skal du klikke
+          på Udfør for at lade venner prøve dit spil på deres mobiler.
+    levelbuilder:
+      frozen line:
+        instructions: Hej jeg hedder Elsa af Arendelle. Hjælp mig med at lave en linje.
+      frozen perpendicular:
+        instructions: Lad os se om vi kan lave to linjer, der er 90 grader i forhold
+          til hinanden. Du skal bruge "Drej" og "Flyt" blokkene.
+      frozen square iterative:
+        instructions: Det ser ud som om vi er nået halvvejs med at tegne et kvadrat.
+          Lad os sætte 4 linier sammen for at skabe et helt kvadrat.
+      frozen square loop:
+        instructions: Hej jeg hedder Anna fra Arendelle! Lad os lave et kvadrat med
+          "Gentag" blokke, som bruger færre blokke. Hvor mange gange skal "Gentag"
+          blokken gentage det, der der stå inden i den, for at lave et kvadrat?
+      frozen square loop 3x:
+        instructions: Lad os lave tre kvadrater, der drejer efter hinanden. Sørg for
+          at at dreje 120 grader før hvert nye kvadrat.
+      frozen square snowflake:
+        instructions: Kan du lave et snefnug ved, at benytte "Gentag" blokken til
+          at laver et kvadrat 10 gange, og "Drej" blokken for at dreje 36 grader mellem
+          hvert kvadrat?
+      frozen cross:
+        instructions: Brug "Gentag" blokken til at tegne et plustegn. Lagde du mærke
+          til at Elsa kan flytte frem og tilbage?
+      frozen cross rotate:
+        instructions: Prøv nu at gentage det 10 gange. Hvor mange grader skal du dreje
+          mellem hver linje?
+      frozen cross rotate dense:
+        instructions: 'Lad os gentage det 90 gange! Hvor mange gange går 90 op i 360?
+          Tip: Det er et rigtigt lille antal.'
+      frozen diamond:
+        instructions: 'Lad os oprette et parallelogram. Det er ligesom en firkant,
+          men har forskellige vinkler: 60 og 120 graders vinkler, i stedet for 90
+          graders vinkler.'
+      frozen diamond mini snowflake:
+        instructions: Vidste du at alle snefnug har forskellig form? Lad os skabe
+          et nyt snefnug ved hjælp af "Gentag" blokken, for at gentage et parallelogram
+          4 gange, drej 90 grader mellem hvert parallelogram.
+      frozen diamond snowflake:
+        instructions: Lad os nu skabe et nyt snefnug, ved at bruge Gentage-blokke,
+          til at gentage et parallelogram 10 gange, og dreje det 36 grader mellem
+          hvert enkelt.
+      frozen circle:
+        instructions: En cirkel har en speciel facon. Kan du finde ud af, hvilket
+          nummer der kan erstatte spørgsmålstegnet for at tegne en cirkel?
+      frozen circle function:
+        instructions: Brug den nye "Opret en cirkel" blok til at oprette 10 overlappende
+          cirkler. Glem ikke at springe fremad mellem cirklerne.
+      frozen circle function in circle:
+        instructions: Nu lad os oprette 20 overlappende cirkler, drej 18 grader mellem
+          hver cirkel.
+      frozen circle function with parameter:
+        instructions: Her er en "Opret cirkel" blok, der kan lave cirkler af forskellige
+          størrelser. Kan du bruge den til at oprette en lille cirkel af størrelsen
+          5 og en større cirkel af størrelsen 10?
+      frozen snowflower:
+        instructions: Indviklede snemønstre kan være lavet af meget enkle former.
+          Kan du lave et mønster ved at gentagne 5 cirkler af størrelsen 5 og 5 cirkler
+          af størrelsen 10?
+      frozen snowflake branch:
+        instructions: Prøv at bruge "Opret en snefnug-gren" blokken til at oprette
+          tre grene. Det begynder at ligne et snefnug.
+      frozen snowflake full:
+        instructions: Nu lad os gentage det 8 gange for at lave et smukt snefnug!
+      frozen freeplay:
+        instructions: Du er nu blevet en stor kunstner! Opret et Vinter drømmeland
+          og del det med dine venner.
+      scrat 16:
+        instructions: Agern! Agern! Agern! Brug en "Hvis" blok til at få mig derhen,
+          med færrest mulige blokke.
+      scrat 17:
+        instructions: OK, lad os gøre det igen, bare for at øve - dette er ikke meget
+          anderledes, men pas på ud for væggen!
+      scrat 18:
+        instructions: '"Hvis-ellers" blokke kontrollerer en betingelse, og derefter
+          gør den enten det éne eller det andet. For at få mig hen til agernet, forsøg
+          at bruge den nye blok.'
+      scrat 19:
+        instructions: En mere øvelse med "Hvis-Ellers" blokken, kan du løse den i
+          første forsøg?
+      scrat 20:
+        instructions: Kan du tilføje bare 3 blokke mere for, at hjælpe mig med at
+          løse en mere kompleks labyrint? Hvis du gør det rigtigt, kan jeg gå nogen
+          snoede veje uanset længden. Skynd dig! Isen smelter!
+      Standalone_Artist_1:
+        instructions: Welcome to Artist! First off, let's try to make a simple square
+          using the turn right block and move forward block. Each side should be 100
+          pixels long.
+      Standalone_Artist_2:
+        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel
+          long sides.
+      Standalone_Artist_3:
+        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree
+          turns?
+      Standalone_Artist_4:
+        instructions: Now you've got a new block to play with, the loop. This will
+          repeat a set of commands. What happens if you loop these commands 6 times?
+      Standalone_Artist_5:
+        instructions: How many times do you need to loop this diamond to draw the
+          flower?
+      Standalone_Artist_5.5:
+        instructions: 'Notice how we simplified the diamond code by turning it into
+          a loop. You can loop that whole sequence 12 times to draw the flower. Hint:
+          You''ll need to turn 30 degrees after your diamond loop so you don''t keep
+          drawing over the same diamond.'
+      Standalone_Artist_6:
+        instructions: 'Loop this hexagon code 6 times to create the design. How many
+          degrees will you need to turn each time? Hint: divide the number of degrees
+          in a circle by the number of times you are looping.'
+      Standalone_Artist_7:
+        instructions: 'A function is another programming tool to help you avoid repeating
+          yourself. This function draws a flower, so you can use it any time you want
+          to draw a flower. Use this and the new jump block to draw these flowers.
+          Hint: The flowers are 150 pixels apart'
+      Standalone_Artist_8:
+        instructions: Here's a function called "Draw a shape" that we've programmed
+          to draw hexagons. Run the code to see what it does and then experiment with
+          the function to see what happens. Can you make it draw a pattern of squares,
+          triangles, or octagons?
+      Standalone_Artist_9:
+        instructions: Now go ahead and make whatever picture you'd like! You've even
+          got an empty function that you can make do whatever you want!
     video:
       name:
         maze_intro: Labyrint Intro
@@ -564,6 +689,7 @@
         loop_until: Gentag Indtil blok
         if: Hvis blok
         if_else: Hvis/ellers blok
+        if_else_scrat: Hvis/ellers blok
         function: Funktioner
         loop_while: Imens blok
         loop_for: Tæller blok
@@ -596,6 +722,7 @@
         C1_playlab_storytelling: Spil Lab - Opret en historie
         C1_planting_seed: Plante et frø
         C1_building_foundation: Opbygge et fundament
+        C1_going_places_safely: Gå til sikre steder
         C2_maze_intro: Labyrint Intro
         C2_artist_intro: Kunstner Intro
         C2_zuck_repeat_loop: Labyrint sløjfer
@@ -610,6 +737,7 @@
         C2_binary_bracelets: Binære armbånd
         C2_relay_programming: Stafet-programmering
         C2_paper_airplanes: Papir fly
+        C2_digital_footprint: Dit digitale fodspor
         C3_maze_level_4: Labyrint sløjfer
         C3_artist_intro: Kunstner Intro
         C3_artist_functions: Kunstner funktioner
@@ -628,6 +756,14 @@
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Funktionelle solfangere
         C3_songwriting_with_parameters: Sangskrivning med parametre
+        C4_artist_math: Programming the Artist with Math
+        C4_create_functions: Creating Functions
+        C4_edit_functions: Editing Functions
+        C4_for_loops: For Loops
+        C4_variables: Variabler
+        frozen_intro: Hour of Code Intro
+        frozen_loops: Introduction to Loops
+        frozen_functions: Introduction to Functions
     callout:
       text:
         drag_blocks: Træk i en "flyt fremad" blok og fastgør den under den anden blok
@@ -644,13 +780,51 @@
           starter"-blokken for at aktivere en spiller for denne historie
         studio_say_text: Skriv hvad du vil have din spiller til at sige i dette citat
         jigsaw_click: Klik på denne blok!
-        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
-          Run" block to make Elsa move forward
-        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
-          determines how much Elsa turns
-        replace_questions: Use the drop-down to replace "???" with a number
-        replace_questions_degree: Use the drop-down to replace "???" with the correct
-          degree to turn
-        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
-          workspace
-        snowflake_dropdown: Use this drop-down to create different snowflakes!
+        move_elsa_forward: Træk en "Flyt fremad" blok og fastgøre den under "Når køre"
+          blokken for at bevæge Elsa fremad
+        turn_elsa: Brug "Turn"-blokken for at Elsa tænder. Numret i drop-down bestemmer
+          hvor meget Elsa drejer
+        replace_questions: Brug drop-down til at erstatte "???" med et nummer
+        replace_questions_degree: Brug drop-down til at erstatte "???" med det korrekte
+          antal grad der skal drejes
+        repeat_blocks: Brug "Repeat" blokken og lad omslutte blokkene på arbejdsområdet
+        snowflake_dropdown: Brug denne drop-down menu til at oprette forskellige snefnug!
+        degrees_per_side: Divider 360 med antallet af sider for, at få størrelsen
+          af hver vinkel i grader.
+        set_sides: Brug denne blok til at angive "Side" antallet der skal bruge for
+          at færdiggøre opgaven.
+        set_length: Brug denne blok til at angive "længden" til den rigtige værdi.
+        which_equation: Hvilken ligning gør siderne kortere for figurer med flere
+          sider?  Prøv hver ligning!
+        get_nectar: Brug den nye "få nektar" blok.
+        actions_category: Værktøjskassen fik et nyt look! "Handlings" blokke kan nu
+          bruges.
+        draw_square_hint: 'Tip: Brug firkant loop som du lige har lavet i den sidste
+          opgave.'
+        edit_function: Brug denne knap til at redigere funktionen.
+        create_function: Klik her for at åbne "Funktioner", klik derefter på knappen
+          "Opret en funktion".
+        house_hint: Det er ok, hvis billedet ligner ikke et hus endnu. Vi vil ordne
+          det i den næste opgave.
+        edit_draw_square: Brug denne knap til at rediger funktionen og tilføje loopét.
+        edit_get_nectar: Brug denne knap til, at rediger funktionen og ændre den retning,
+          som Bee vil dreje for at få nektar.
+        logic_category: Åbn "Logik" undermenuen for at finde "if/else" blokken.
+        length_parameter: Kan du opdatere denne funktion, så det bruger parameteren
+          "længde"?
+        frozen_diamond_repeat: Use the repeat block to create this shape.
+        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
+          each circle.
+        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
+          and change the size.
+        frozen_snowflake_branch: Use the "create a snowflake branch" block
+        frozen_create_square: Attach more blocks here to create a square
+        playlab_drag_say: Drag the "say" block here and type "hello"
+        playlab_use_twice: Use this block twice and remember to change the actor number
+        playlab_move_girl: Use the "move right" block to move Tennis Girl
+        playlab_play_sound: Add "play sound" block here
+        playlab_arrow_keys: Remember to use these to move the witch after clicking
+          on Run
+        playlab_add_move: Add "move" blocks inside this repeat block
+        playlab_add_score: Add score blocks here
+        playlab_add_blocks: Add your blocks here

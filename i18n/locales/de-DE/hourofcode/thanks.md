@@ -1,6 +1,6 @@
 * * *
 
-title: Thanks for signing up to host an Hour of Code! layout: wide
+title: Vielen Dank für die Anmeldung zur Durchführung einer Hour of Code Veranstaltung! layout: wide
 
 social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/rH7AjDMz_dc"
 
@@ -14,13 +14,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Danke das du dich als Veranstalter für eine Hour of Code angemeldet hast!
 
-**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](<%= hoc_uri('/prizes') %>)
-
-<% if @country == 'us' %>
-
-Get your [whole school to participate](<%= hoc_uri('/prizes') %>) for a chance for big prizes for your entire school.
-
-<% end %>
+**JEDER** Veranstalter einer Hour of Code erhält 10 GB Dropbox Speicherplatz oder $10 Skype-Guthaben als Dankeschön. [Details](<%= hoc_uri('/prizes') %>)
 
 ## 1. Weitersagen
 
@@ -32,30 +26,30 @@ Erzähl deinen Freunden von #HourOfCode.
 
 ## 2. Frage deine Schule eine Hour of Code anzubieten
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>). Falls deine Schule teilnimmt, [melde sie an um Hardware im Wert von 10.000 $ zu gewinnen](/prizes) und fordere weitere Schulen auf ebenfalls mit zu machen.
+[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](/resources/hoc-one-pager.pdf) to your principal.
 
 <% else %>
 
 ## 2. Frage deine Schule eine Hour of Code anzubieten
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>) to your principal.
+[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](/resources/hoc-one-pager.pdf) this handout</a> to your principal.
 
 <% end %>
 
-## 3. Make a generous donation
+## 3. Mache eine großzügige Spende
 
-[Donate to our crowdfunding campaign.](http://<%= codeorg_url() %>/donate) To teach 100 million children, we need your support. We just launched what could be the [largest education crowdfunding campaign](http://<%= codeorg_url() %>/donate) in history. Every dollar will be matched by major Code.org [donors](http://<%= codeorg_url() %>/about/donors), doubling your impact.
+[Donate to our crowdfunding campaign.](http://<%= codeorg_url() %>/donate) To teach 100 million children, we need your support. We just launched the [largest education crowdfunding campaign](http://<%= codeorg_url() %>/donate) in history. *Every* dollar will be matched [donors](http://<%= codeorg_url() %>/about/donors), doubling your impact.
 
-## 4. Ask your employer to get involved
+## 4. Bitte Deinen Arbeitgeber sich zu engagieren
 
-[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>).
+[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf).
 
-## 5. Promote Hour of Code within your community
+## 4. Stelle die Hour of Code in Deiner Community vor
 
-Stelle Hour of Code in deiner Region vor, bei Kirchen, Universitäten oder Gewerkschaften. Oder veranstalte eine Hour of Code "Strassenparty" für deine Nachbarschaft.
+Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
 
 ## 6. Ask a local elected official to support the Hour of Code
 
-[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>) and invite them to visit your school.
+[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf) and invite them to visit your school.
 
 <%= view 'popup_window.js' %>

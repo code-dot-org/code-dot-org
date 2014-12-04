@@ -4,6 +4,6 @@ layout: wide
 
 * * *
 
-# Hacé que toda tu escuela participe
+# Haz que tu escuela entera participe
 
-Información sobre cómo facilitar la participación de escuelas enteras en la Hora del Código irá aquí.
+Información sobre hacer que escuelas completas participen en la Hora de Programación irá aquí.

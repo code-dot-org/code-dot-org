@@ -1,11 +1,11 @@
 ---
-title: Eval Defining Functions
+title: Eval Fast Functions
 view: page_curriculum
 theme: none
 ---
 
 
-<%= partial('curriculum_header', :unplugged=>false, :title=> 'Eval: Defining Functions',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>45) %>
+<%= partial('curriculum_header', :unittitle=> 'MSM', :lesson=> 8, :unplugged=>false, :title=> 'Eval: Fast Functions',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>(30-60)) %>
 
 [content]
 
@@ -22,7 +22,7 @@ In the past lessons students have defined Variables - containers for values that
  
 1) [Introduction](#GetStarted)  
 
-### **Activity: Eval Defining Functions**  
+### **Activity: Eval Fast Functions**  
 
 2) [Online Puzzles](#Activity1)
 
@@ -58,7 +58,7 @@ and so on...
 
 [together]
 
-## Activity: Eval Defining Functions
+## Activity: Eval Fast Functions
 ### <a name="Activity1"></a> 2) Online Puzzles
 
 In this stage you'll define simple functions. Head to [MSM stage 8](http://studio.code.org/s/msm/stage/8/puzzle/1) in Code Studio to get started programming.

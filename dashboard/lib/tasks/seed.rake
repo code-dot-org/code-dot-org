@@ -4,12 +4,7 @@ namespace :seed do
   verbose false
 
   task videos: :environment do
-    Video.transaction do
-      Video.reset_db
-      CSV.read('config/videos.csv', { col_sep: "\t", headers: true }).each_with_index do |row, id|
-        Video.create!(id: id + 1, key: row['Key'], youtube_code: row['YoutubeCode'], download: row['Download'])
-      end
-    end
+    Video.setup
   end
 
   STANFORD_HINTS_FILE = 'config/stanford-hints-bestPath1.tsv'
@@ -43,9 +38,9 @@ namespace :seed do
     update_scripts
   end
 
-  def update_scripts
-    # Only process modified scripts on staging/levelbuilder to speed up seed time
-    scripts_seeded_mtime = ((Rails.env.staging? || Rails.env.levelbuilder?) && File.exist?(SEEDED)) ?
+  def update_scripts(opts = {})
+    # optionally, only process modified scripts to speed up seed time
+    scripts_seeded_mtime = (opts[:incremental] && File.exist?(SEEDED)) ?
       File.mtime(SEEDED) : Time.at(0)
     touch SEEDED # touch seeded "early" to reduce race conditions
     begin
@@ -60,8 +55,13 @@ namespace :seed do
     end
   end
 
-  task scripts: [:environment, :games, :custom_levels, :multis, :matches, :dsls] do
-    update_scripts
+  SCRIPTS_DEPENDENCIES = [:environment, :games, :custom_levels, :multis, :matches, :dsls]
+  task scripts: SCRIPTS_DEPENDENCIES do
+    update_scripts(incremental: false)
+  end
+
+  task scripts_incremental: SCRIPTS_DEPENDENCIES do
+    update_scripts(incremental: true)
   end
 
   # cronjob that detects changes to .multi files
@@ -294,4 +294,5 @@ namespace :seed do
   end
 
   task all: [:videos, :concepts, :scripts, :trophies, :prize_providers, :callouts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
+  task incremental: [:videos, :concepts, :scripts_incremental, :trophies, :prize_providers, :callouts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
 end

@@ -174,6 +174,5 @@ require src_dir 'database/validation_error'
 require src_dir 'database/hour_of_activity'
 require src_dir 'database/district_partner'
 require src_dir 'database/form'
-require src_dir 'poste/database'
 DataMapper.finalize
 DataMapper.auto_upgrade! unless CDO.read_only

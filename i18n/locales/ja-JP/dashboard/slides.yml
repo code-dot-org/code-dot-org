@@ -1,242 +1,260 @@
-"ja":
+ja:
   slides:
     maze_intro:
       1:
-        image: "notes/hoc1_1.jpg"
-        text: "初めての「1時間コース」へようこそ！プログラミングを今すぐ体験してみましょう。"
+        image: notes/hoc1_1.jpg
+        text: 初めての「1時間コース」へようこそ！プログラミングを今すぐ体験してみましょう。
       2:
-        image: "notes/hoc1_2.jpg"
+        image: notes/hoc1_2.jpg
         text: 'ブロックをドラッグ&ドロップしてコードを記述するビジュアルプログラミング言語ブロッキーを使っています。'
       3:
-        image: "notes/hoc1_3.jpg"
-        text: "ほとんどのコードは文字で書かれますが、ブロッキーは絵でできています。それぞれのブロックは「本物の」コードの１行に対応します。"
+        image: notes/hoc1_3.jpg
+        text: ほとんどのコードは文字で書かれますが、ブロッキーは絵でできています。それぞれのブロックは「本物の」コードの１行に対応します。
       4:
-        image: "notes/hoc1_4.jpg"
-        text: "アプリを作ることから火星探査車をコントロールすることまで、いろいろなところで使われるコンピューター科学の基礎を学習します。"
+        image: notes/hoc1_4.jpg
+        text: アプリを作ることから火星探査車をコントロールすることまで、いろいろなところで使われるコンピューター科学の基礎を学習します。
       5:
-        image: "notes/hoc1_5.jpg"
-        text: "プログラムはあなたのコンピュータを動かす命令の集まりです。"
+        image: notes/hoc1_5.jpg
+        text: プログラムはあなたのコンピュータを動かす命令の集まりです。
       6:
-        image: "notes/hoc1_6.jpg"
-        text: "あなたの最初のプログラムの目標は、アングリーバードに迷路を通り抜けて緑のブタにぶつけさせることです。"
+        image: notes/hoc1_6.jpg
+        text: あなたの最初のプログラムの目標は、アングリーバードに迷路を通り抜けて緑のブタにぶつけさせることです。
       7:
-        image: "notes/hoc1_7.jpg"
-        text: "左側はプログラムを実行させる迷路です。それぞれのパズルの説明は迷路の下にあります。"
+        image: notes/hoc1_7.jpg
+        text: 左側はプログラムを実行させる迷路です。それぞれのパズルの説明は迷路の下にあります。
       8:
-        image: "notes/hoc1_8.jpg"
-        text: "真ん中のツールボックスにはアングリーバードのコマンドがあります。これらはあなたのコードを組み立てるのに使います。"
+        image: notes/hoc1_8.jpg
+        text: 真ん中のツールボックスにはアングリーバードのコマンドがあります。これらはあなたのコードを組み立てるのに使います。
       9:
-        image: "notes/hoc1_9.jpg"
-        text: "右には、ブロックをツールボックスからドラッグしてプログラムを組み立てるためのワークスペースがあります。ブロックを削除するには、隅にあるゴミ箱へドラッグします。"
+        image: notes/hoc1_9.jpg
+        text: 右には、ブロックをツールボックスからドラッグしてプログラムを組み立てるためのワークスペースがあります。ブロックを削除するには、隅にあるゴミ箱へドラッグします。
       10:
-        image: "notes/hoc1_10.jpg"
-        text: "ブロックはそれぞれ、1つの命令を表します。「前に進む」ブロックをワークスペースにドラッグして「プログラムの実行」をクリックすると、鳥は迷路の中を1マス進みます。"
+        image: notes/hoc1_10.jpg
+        text: ブロックはそれぞれ、1つの命令を表します。「前に進む」ブロックをワークスペースにドラッグして「プログラムの実行」をクリックすると、鳥は迷路の中を1マス進みます。
       11:
-        image: "notes/hoc1_11.jpg"
-        text: "1つ以上の動作をするには、複数のブロックをワークスペースにドラッグして、それらをつなぎ合わせます。鳥は上から順に、置かれたコマンド（ブロック）の動作を行います。"
+        image: notes/hoc1_11.jpg
+        text: To do more than one action, you can drag many blocks to your workspace and attach them together. The bird will do the commands from top to bottom.
       12:
-        image: "notes/hoc1_12.jpg"
-        text: "プログラムを実行後、修正してやり直したいときは、「リセット」ボタンをクリックします。"
+        image: notes/hoc1_12.jpg
+        text: プログラムを実行後、修正してやり直したいときは、「リセット」ボタンをクリックします。
       13:
-        image: "notes/hoc1_13.jpg"
-        text: "ブタを捕まえに行こう！"
+        image: notes/hoc1_13.jpg
+        text: ブタを捕まえに行こう！
     artist_intro:
       1:
-        image: "notes/stage5_1.jpg"
-        text: "やあ、私はJR！レーシングカーのチームにはコンピュータ科学者が必要です。彼らは車をより速く走らせるためにデータを分析します。"
+        image: notes/stage5_1.jpg
+        text: やあ、私はJR！レーシングカーのチームにはコンピュータ科学者が必要です。彼らは車をより速く走らせるためにデータを分析します。
       2:
-        image: "notes/stage5_2.jpg"
-        text: "これらのパズルでは、あなたは芸術家になってどこでも行った後ろに線を描きます。"
+        image: notes/stage5_2.jpg
+        text: これらのパズルでは、あなたは芸術家になってどこでも行った後ろに線を描きます。
       3:
-        image: "notes/stage5_3.jpg"
-        text: "このブロックは「100ピクセル前方に移動」です。ピクセルとは、あなたの画面の本当に小さな点のことです。"
+        image: notes/stage5_3.jpg
+        text: このブロックは「100ピクセル前方に移動」です。ピクセルとは、あなたの画面の本当に小さな点のことです。
       4:
-        image: "notes/stage5_4.jpg"
-        text: "このブロックは「右に90度回転」です。これは、迷路パズルでの回転ブロックと同じように、あなたの芸術家が回ります。"
+        image: notes/stage5_4.jpg
+        text: このブロックは「右に90度回転」です。これは、迷路パズルでの回転ブロックと同じように、あなたの芸術家が回ります。
       5:
-        image: "notes/stage5_5.jpg"
-        text: "芸術家が前に行く距離や回る角度を変えるために、これらのブロックの矢印をクリックしてください。新しいブロックに慣れるために遊んでみよう。"
+        image: notes/stage5_5.jpg
+        text: 芸術家が前に行く距離や回る角度を変えるために、これらのブロックの矢印をクリックしてください。新しいブロックに慣れるために遊んでみよう。
     farmer_intro:
       1:
-        image: "notes/stage9_1.jpg"
-        text: "こんにちは、私はパオラです！これらのパズルでは、あなたは農家になって作物を植えるために畑を平らにしなければなりません。"
+        image: notes/stage9_1.jpg
+        text: こんにちは、私はパオラです！これらのパズルでは、あなたは農家になって作物を植えるために畑を平らにしなければなりません。
       2:
-        image: "notes/stage9_2.jpg"
-        text: "あなたは彼女がすべての土の山を取り除いて、すべての穴を埋めるのを手伝わなければなりません。"
+        image: notes/stage9_2.jpg
+        text: あなたは彼女がすべての土の山を取り除いて、すべての穴を埋めるのを手伝わなければなりません。
       3:
-        image: "notes/stage9_3.jpg"
-        text: "新しいブロックは山から土をシャベル1杯分だけ取り除いたり、穴に土をシャベル1杯分だけ埋めたりできます。"
+        image: notes/stage9_3.jpg
+        text: 新しいブロックは山から土をシャベル1杯分だけ取り除いたり、穴に土をシャベル1杯分だけ埋めたりできます。
       4:
-        image: "notes/stage9_4.jpg"
-        text: "泥山や穴は大きさが違うので、あなたは農民にシャベルを何回使えばいいか教えなければなりません。"
+        image: notes/stage9_4.jpg
+        text: 泥山や穴は大きさが違うので、あなたは農民にシャベルを何回使えばいいか教えなければなりません。
     flappy_intro:
       1:
-        image: "notes/flappy01.jpg"
-        text: "こんにちは、私はケイティ です！コンピューター科学について最もエキサイティングなものの 1 つは、コンピューター プログラムが双方向性（対話すること）です。"
+        image: notes/flappy01.jpg
+        text: こんにちは、私はケイティ です！コンピューター科学について最もエキサイティングなものの 1 つは、コンピューター プログラムが双方向性（対話すること）です。
       2:
-        image: "notes/flappy02.jpg"
-        text: "誰かがPCや携帯電話上をクリック、タップまたはタイプした時はいつでも、"
+        image: notes/flappy02.jpg
+        text: 誰かがPCや携帯電話上をクリック、タップまたはタイプした時はいつでも、
       3:
-        image: "notes/flappy03.jpg"
+        image: notes/flappy03.jpg
         text: '例えば、EVENT-HANDLERを使うと「マウスをクリックしたとき、音を再生する」という命令ができます。 '
       4:
-        image: "notes/flappy04.jpg"
-        text: "フラッピーバードというゲームは聞いたことがありますか？イベントハンドラー(Event handlers)を使用することで、独自のカスタマイズしたフラッピーバードのプログラムを学ぶことができます。"
+        image: notes/flappy04.jpg
+        text: フラッピーバードというゲームは聞いたことがありますか？イベントハンドラー(Event handlers)を使用することで、独自のカスタマイズしたフラッピーバードのプログラムを学ぶことができます。
       5:
-        image: "notes/flappy05.jpg"
+        image: notes/flappy05.jpg
         text: 'コンピュータに指示を与えるブロックをドラッグ&ドロップした、あなたのコード（プログラム）はコンピュータの中でブロックそれぞれが実際のコード（プログラム）に書き表されます。'
       6:
-        image: "notes/flappy06.jpg"
+        image: notes/flappy06.jpg
         text: 'ワークスペースを見ると、いくつかの緑色のブロックがあります。それが「イベントハンドラー（event handlers）」なのです。 '
       7:
-        image: "notes/flappy07.jpg"
-        text: "マウスをクリックしたときにバードを飛ばしたいなら、「飛ぶ(flap)」ブロックを適切なイベントハンドラー(event handler)に接続しましょう。するとゲームでマウスをクリックすると、バードが飛びます。"
+        image: notes/flappy07.jpg
+        text: マウスをクリックしたときにバードを飛ばしたいなら、「飛ぶ(flap)」ブロックを適切なイベントハンドラー(event handler)に接続しましょう。するとゲームでマウスをクリックすると、バードが飛びます。
       8:
-        image: "notes/flappy08.jpg"
-        text: "アクティビティの一つ一つのパズルで、新しいイベントを紹介していきます。そこであなたはイベントに応じて適切なブロックを追加していくのです。"
+        image: notes/flappy08.jpg
+        text: アクティビティの一つ一つのパズルで、新しいイベントを紹介していきます。そこであなたはイベントに応じて適切なブロックを追加していくのです。
       9:
-        image: "notes/flappy09.jpg"
-        text: "次のようにドロップダウンの矢印が表示されたら、設定を変えることができます。たとえば、フラッピーが地面にヒットしたときの再生音などです。"
+        image: notes/flappy09.jpg
+        text: 次のようにドロップダウンの矢印が表示されたら、設定を変えることができます。たとえば、フラッピーが地面にヒットしたときの再生音などです。
       10:
-        image: "notes/flappy10.jpg"
-        text: "最終的なパズルでは、あなた自身のゲームを作成して、友人と共有することができます。ぜひ楽しんで！"
+        image: notes/flappy10.jpg
+        text: 最終的なパズルでは、あなた自身のゲームを作成して、友人と共有することができます。ぜひ楽しんで！
     loop_times:
       1:
-        image: "notes/hoc2_1.jpg"
-        text: "こんにちは、私はマーク！繰り返しについて学びましょう。繰り返しを使うと、操作の集まりを何度も何度も、何千回でも何億回でも繰り返すようにコンピュータに伝えることができます。"
+        image: notes/hoc2_1.jpg
+        text: こんにちは、私はマーク！繰り返しについて学びましょう。繰り返しを使うと、操作の集まりを何度も何度も、何千回でも何億回でも繰り返すようにコンピュータに伝えることができます。
       2:
-        image: "notes/hoc2_2.jpg"
-        text: "このパズルでは、鳥がブタのところに行くように鳥を5だけ前に移動させましょう。"
+        image: notes/hoc2_2.jpg
+        text: このパズルでは、鳥がブタのところに行くように鳥を5だけ前に移動させましょう。
       3:
-        image: "notes/hoc2_3.jpg"
-        text: "私たちの助けになる新しい「繰り返し」ブロックを使うことができます。"
+        image: notes/hoc2_3.jpg
+        text: 私たちの助けになる新しい「繰り返し」ブロックを使うことができます。
       4:
-        image: "notes/hoc2_4.jpg"
-        text: "5回「前方に移動する」ブロックをドラッグしてくる代わりに・・・"
+        image: notes/hoc2_4.jpg
+        text: 5回「前方に移動する」ブロックをドラッグしてくる代わりに・・・
       5:
-        image: "notes/hoc2_5.jpg"
-        text: "「前方に移動する」ブロックを「繰り返し」ブロックの中に置いて、何回繰り返すのかブロックに数を書くことができます。"
+        image: notes/hoc2_5.jpg
+        text: 「前方に移動する」ブロックを「繰り返し」ブロックの中に置いて、何回繰り返すのかブロックに数を書くことができます。
       6:
-        image: "notes/hoc2_6.jpg"
-        text: "重要なこと：「繰り返し」ブロックの内には1つ以上の命令を置くことができます。"
+        image: notes/hoc2_6.jpg
+        text: 重要なこと：「繰り返し」ブロックの内には1つ以上の命令を置くことができます。
       7:
-        image: "notes/hoc2_7.jpg"
-        text: "新しい「繰り返し」ブロックを使って楽しもう！"
+        image: notes/hoc2_7.jpg
+        text: 新しい「繰り返し」ブロックを使って楽しもう！
     loop_until:
       1:
-        image: "notes/hoc3_1.jpg"
-        text: "こんにちは、私はクリスです。マイアミ・ヒートに参加する前は、ジョージア工科大学へコンピュータサイエンスを勉強しに行ってました。私たちの新しいブロック「まで繰り返し」ブロックを試してみましょう。"
+        image: notes/hoc3_1.jpg
+        text: こんにちは、私はクリスです。マイアミ・ヒートに参加する前は、ジョージア工科大学へコンピュータサイエンスを勉強しに行ってました。私たちの新しいブロック「まで繰り返し」ブロックを試してみましょう。
       2:
-        image: "notes/hoc3_2.jpg"
-        text: "鳥がブタのところまで移動するのにどれだけ遠いかわからなかったらどうしましょうか？"
+        image: notes/hoc3_2.jpg
+        text: 鳥がブタのところまで移動するのにどれだけ遠いかわからなかったらどうしましょうか？
       3:
-        image: "notes/hoc3_3.jpg"
-        text: "「まで繰り返し」ブロックの中に「前方に移動する」ブロックを置けば、鳥はブタのところへ行く（または壁に当たってしまう）まで前に進みます。"
+        image: notes/hoc3_3.jpg
+        text: 「まで繰り返し」ブロックの中に「前方に移動する」ブロックを置けば、鳥はブタのところへ行く（または壁に当たってしまう）まで前に進みます。
       4:
-        image: "notes/hoc3_4.jpg"
-        text: "重要なこと：これまでのように、「まで繰り返し」ブロック内に複数のブロックを置くことができて、すべて繰り返されます。"
+        image: notes/hoc3_4.jpg
+        text: 重要なこと：これまでのように、「まで繰り返し」ブロック内に複数のブロックを置くことができて、すべて繰り返されます。
     if:
       1:
-        image: "notes/hoc4_1.jpg"
-        text: "こんにちは、私はビルです。新しい基本的な概念「もし」の文を学びましょう。これは、コンピューターが何かを決めるときに使われます。"
+        image: notes/hoc4_1.jpg
+        text: こんにちは、私はビルです。新しい基本的な概念「もし」の文を学びましょう。これは、コンピューターが何かを決めるときに使われます。
       2:
-        image: "notes/hoc4_2.jpg"
-        text: "「もし」の文は日常生活でも使います。朝外に出る前、「もし」外が雨なら、ジャケットを着る必要がある、という風に。"
+        image: notes/hoc4_2.jpg
+        text: 「もし」の文は日常生活でも使います。朝外に出る前、「もし」外が雨なら、ジャケットを着る必要がある、という風に。
       3:
-        image: "notes/hoc4_3.jpg"
-        text: "左側に道があるかをゾンビに聞いて、もし(If)左側に道があれば、その方向に曲がるようゾンビに指示します。"
+        image: notes/hoc4_3.jpg
+        text: 左側に道があるかをゾンビに聞いて、もし(If)左側に道があれば、その方向に曲がるようゾンビに指示します。
       4:
-        image: "notes/hoc4_4.jpg"
-        text: "このコードを書くには、「もし」のブロックを引き出した後、「左に曲がれ」のブロックをその中に入れます。"
+        image: notes/hoc4_4.jpg
+        text: このコードを書くには、「もし」のブロックを引き出した後、「左に曲がれ」のブロックをその中に入れます。
       5:
-        image: "notes/hoc4_5.jpg"
-        text: "では、「前に進め」ブロックをその上に置き、「くり返す」ブロックをすべての周りに置いてみましょう。ゾンビが前に進むたびに左側に道があるかをチェックし、そして曲がります。「くり返す」の命令は重要で、一歩進むごとに曲がるかどうかをチェックします。"
+        image: notes/hoc4_5.jpg
+        text: では、「前に進め」ブロックをその上に置き、「くり返す」ブロックをすべての周りに置いてみましょう。ゾンビが前に進むたびに左側に道があるかをチェックし、そして曲がります。「くり返す」の命令は重要で、一歩進むごとに曲がるかどうかをチェックします。
       6:
-        image: "notes/hoc4_6.jpg"
-        text: "「もし」の文はコンピュータサイエンスではとても重要です。私が最初に作ったプログラムは「三目並べ」ですが、その中に、「もし相手が勝ちそうになったら、相手のマークが３つ並ばないようブロックせよ」、という「もし」の文がありました。"
+        image: notes/hoc4_6.jpg
+        text: 「もし」の文はコンピュータサイエンスではとても重要です。私が最初に作ったプログラムは「三目並べ」ですが、その中に、「もし相手が勝ちそうになったら、相手のマークが３つ並ばないようブロックせよ」、という「もし」の文がありました。
       7:
-        image: "notes/hoc4_7.jpg"
-        text: "「もし」ブロックを使って遊んでみましょう。"
+        image: notes/hoc4_7.jpg
+        text: 「もし」ブロックを使って遊んでみましょう。
     if_else:
       1:
-        image: "notes/hoc5_1.jpg"
-        text: "こんにちは、私の名前はサローニです。私は健康や薬についての問題を解決するため、コンピュータサイエンスを使います。「もし～でなければ」ブロックを勉強しましょう。「もし」ブロックに似ていますが、「でなければ」というのがついています。"
+        image: notes/hoc5_1.jpg
+        text: |-
+          Hi, my name is Saloni. I use computer science to help solve problems in health and medicine. Let's learn about the "if else" block. It looks like the "if" block, but it has an extra part at the end that says "else".
       2:
-        image: "notes/hoc5_2.jpg"
-        text: "「せよ」と書かれたところに「前に進め」ブロックを配置し、「でなければ」と書かれたところに「左に曲がれ」を配置すると、ゾンビは２つの選択肢を持つことになります。前方に道があればゾンビは前に進み、でなければ（前方に道がなければ）ゾンビは左に曲がります。"
+        image: notes/hoc5_2.jpg
+        text: |-
+          If I put a "move forward" block in the spot where it says "do" and a "turn left" block where it says "else" that means that the zombie will choose between 2 options. IF there is a path ahead, the zombie will move forward, and OTHERWISE (there isn't a path ahead), the zombie will turn left.
       3:
-        image: "notes/hoc5_3.jpg"
-        text: "「もし」ブロックと同様に、「もし～でなければ」ブロックを「繰り返す」ブロックの中に入れると、ゾンビは動き続け、「もし～でなければ」ブロックによって曲がれるかどうかをチェックし続けます。"
+        image: notes/hoc5_3.jpg
+        text: |-
+          Just like the "if" block, we can put "if else" blocks inside a "repeat" blocks so that the zombie keeps moving and the "if else" block will keep checking if there's somewhere to turn.
       4:
-        image: "notes/hoc5_4.jpg"
-        text: "では、ゾンビを元の場所に戻してやりましょう。"
+        image: notes/hoc5_4.jpg
+        text: Now, get those zombies where they belong!
+    if_else_scrat:
+      1:
+        image: notes/saloni_ifelse_scrat1.jpg
+        text: "An if-else statement is a decision between two things. Let's see how we can use an if-else statement with our buddy Scrat the squirrel."
+      2:
+        image: notes/saloni_ifelse_scrat2.jpg
+        text: |-
+          This block looks the same as the "if" block, but there's an extra part at the bottom that says "else". If I put a "move forward" block where it says "do" and a "turn left" block where it says "else", that means Scrat the squirrel will move forward if there's a path ahead. If there's not a path ahead, Scrat will turn left.
+      3:
+        image: notes/saloni_ifelse_scrat3.jpg
+        text: |-
+          It's making a decision and doing one of the two actions based on that decision. And just like "if" blocks, you can put "if-else" blocks inside "repeat" blocks.
+      4:
+        image: notes/saloni_ifelse_scrat4.jpg
+        text: "Now let's help Scrat the squirrel get that acorn!"
     function:
       1:
-        image: "notes/stage13_1.jpg"
-        text: "こんにちは、私はブリナ。インスタグラムで働くエンジニアです。「関数」とは、繰り返し使うコードの塊のことで、毎回同じコードを書く代わりに、一つのブロックとして使うことができます。"
+        image: notes/stage13_1.jpg
+        text: こんにちは、私はブリナ。インスタグラムで働くエンジニアです。「関数」とは、繰り返し使うコードの塊のことで、毎回同じコードを書く代わりに、一つのブロックとして使うことができます。
       2:
-        image: "notes/stage13_2.jpg"
-        text: "関数をどのように定義するか勉強しましょう。関数の定義には、角に星印がついています。関数の名前は一番上に書かれています。"
+        image: notes/stage13_2.jpg
+        text: 関数をどのように定義するか勉強しましょう。関数の定義には、角に星印がついています。関数の名前は一番上に書かれています。
       3:
-        image: "notes/stage13_3.jpg"
-        text: "定義の中に入るブロックは何をするかを私たちに告げます。そうですこの関数定義は『５を塗りつぶす」と呼ばれ、そして「繰り返し」ブロックと「塗りつぶし」ブロックで成り立っています。"
+        image: notes/stage13_3.jpg
+        text: 定義の中に入るブロックは何をするかを私たちに告げます。そうですこの関数定義は『５を塗りつぶす」と呼ばれ、そして「繰り返し」ブロックと「塗りつぶし」ブロックで成り立っています。
       4:
-        image: "notes/stage13_4.jpg"
+        image: notes/stage13_4.jpg
         text: 'ワークスペースの上に定義が位置づいていますが、私たちの農民は、関数カテゴリーから"fill 5"関数をドラッグしてこないとその関数は実行しません。'
       5:
-        image: "notes/stage13_5.jpg"
+        image: notes/stage13_5.jpg
         text: |-
           Let's put the "fun" back in "FUNction!"
     loop_while:
       1:
-        image: "notes/stage9_5.jpg"
+        image: notes/stage9_5.jpg
         text: |-
           Hi, I'm Makinde! Let's learn about the "while block."
       2:
-        image: "notes/stage9_6.jpg"
+        image: notes/stage9_6.jpg
         text: |
           ステートメントの上がTrueである限り「間ブロック」の中に何をいれても動きます。
           
       3:
-        image: "notes/stage9_7.jpg"
-        text: "たとえば、農民が積山に立っていると、彼女の下に積山があるのに、彼女は1シャベルを削除し続けるでしょう。"
+        image: notes/stage9_7.jpg
+        text: たとえば、農民が積山に立っていると、彼女の下に積山があるのに、彼女は1シャベルを削除し続けるでしょう。
     loop_for:
       1:
-        image: "notes/stage11_1.jpg"
-        text: "こんにちは、私はトリーナとピクサーで働いています。シュレックを含むたくさんの映画作りに携わってきました。"
+        image: notes/stage11_1.jpg
+        text: こんにちは、私はトリーナとピクサーで働いています。シュレックを含むたくさんの映画作りに携わってきました。
       2:
-        image: "notes/stage11_2.jpg"
-        text: "これは私たちの新しい「カウンター」ループです。アクションが何度も繰り返し実行され、アクションを毎回少しずつ変更を行うことができます。"
+        image: notes/stage11_2.jpg
+        text: これは私たちの新しい「カウンター」ループです。アクションが何度も繰り返し実行され、アクションを毎回少しずつ変更を行うことができます。
       3:
-        image: "notes/stage11_3.jpg"
+        image: notes/stage11_3.jpg
         text: |
           この例では、私たちの「カウンター」ループは「50から90までを10
           ずつ計算機で数える」といいます、その中で、私たちは私たちの「正方形を描く」ブロックを持っています。「長さ」スポットのなかの「可変」セクションから「カウンター」ブロックをドラッグしなさい。
           
           
       4:
-        image: "notes/stage11_4.jpg"
+        image: notes/stage11_4.jpg
         text: |
           つまり、私たちのアーティストは50ピクセルの辺を持つ正方形を描くという事です。そして更に10を加えて60ピクセルのへんを持つ正方形を描きます。そしてその後90ピクセルになるまで10
           ずつ加えて、正方形を作っていきます。そうすると私たちは50, 60, 70, 80, そして90の正方形が出来上がります。
     parameters:
       1:
-        image: "notes/stage15_1.jpg"
-        text: "こんにちは、私は ジャネッテです。私は Zynga のエンジニアです。"
+        image: notes/stage15_1.jpg
+        text: こんにちは、私は ジャネッテです。私は Zynga のエンジニアです。
       2:
-        image: "notes/stage15_2.jpg"
+        image: notes/stage15_2.jpg
         text: |
           もし私たちがたくさんの三角形を描画したい、長さが違うサイズにしたかったらどうしますか？
           
           
       3:
-        image: "notes/stage15_3.jpg"
-        text: "手ですべてのコードを書くことができる、または私たちはパラメーターを持つ関数を使用できます。"
+        image: notes/stage15_3.jpg
+        text: 手ですべてのコードを書くことができる、または私たちはパラメーターを持つ関数を使用できます。
       4:
-        image: "notes/stage15_4.jpg"
-        text: "これを行うに、「三角形を描く」関数の定義の上の青い星をクリックすます。それから、Inputブロックの中にあるInput nameをドラッグしてください。"
+        image: notes/stage15_4.jpg
+        text: これを行うに、「三角形を描く」関数の定義の上の青い星をクリックすます。それから、Inputブロックの中にあるInput nameをドラッグしてください。
       5:
-        image: "notes/stage15_5.jpg"
+        image: notes/stage15_5.jpg
         text: |
           その時、もし"x"とあるスポットの中に「長さ」を記述をし、"Enter"キーを押すことで、あなた用の長さ入力の関数が作成できます。
           
@@ -244,23 +262,23 @@
           
           それが言うところのスポットで「長さ」を記述する場合、"x"と"Enter キーを押します"、長さの入力関数を作成します。
       6:
-        image: "notes/stage15_6.jpg"
+        image: notes/stage15_6.jpg
         text: |
           それから星をクリックしてください。次に変数カテゴリの上をクリックします、そして
           あなたの関数定義の「前へ進む」ブロックの中に「長さ」ブロックをドラッグします。そして
           古い数字ブロックをドラッグして消します。
       7:
-        image: "notes/stage15_7.jpg"
+        image: notes/stage15_7.jpg
         text: |
           パラメーターを持つ関数を使用するには、関数カテゴリをクリックし、「長さ」関数と一緒に「三角形を描く」をドラッグで引き出します。
           
           
       8:
-        image: "notes/stage15_8.jpg"
-        text: "次に、異なる寸法の三角形を描くには、違う数字を入力する事で数学ブロックを使う事ができます。"
+        image: notes/stage15_8.jpg
+        text: 次に、異なる寸法の三角形を描くには、違う数字を入力する事で数学ブロックを使う事ができます。
     hoc_wrapup:
       1:
-        image: "notes/hoc6_1.jpg"
+        image: notes/hoc6_1.jpg
         text: |
           おめでとうございます ！最後のパズルを解決したという事は、たった今、あなたが、どんなロボットにも分岐点のない迷路や、どんなに長いのトンネルでも、それがゾンビだろうと、鳥だろうと火星無人探知機だろうと、もしくは自動運転車だろうと、進む道を見つける方法を導くコードを書き上げました。
           
@@ -268,17 +286,99 @@
           
           とだけ言うことができるあらゆるロボット迷路の非分岐または任意の長さのトンネルを介しての方法を検索する方法も、自車の運転や火星ローバー鳥ゾンビかどうかのコードを書いた。
       2:
-        image: "notes/hoc6_2.jpg"
+        image: notes/hoc6_2.jpg
         text: |2
           あなたが用いた基本概念は全てのプログラミングやこれからトライするであろうアプリの中心あります。私たちは「繰り返しループ」、「まで繰り返す」、「ifステートメント」そして「if
            elseステートメント」について学びました。
       3:
-        image: "notes/hoc6_3.jpg"
-        text: "初めての「１時間コース」が気に入ったら、code.orgに行ってコンピューター科学の勉強を続けましょう！20時間コースを終わるころには、あなたはプログラミングの基本を完全にマスターしているはずです。そしてもっと難しい携帯アプリやロポット操作、ゲームなどをどうやって書けば良いか勉強できるようになります。"
+        image: notes/hoc6_3.jpg
+        text: 初めての「１時間コース」が気に入ったら、code.orgに行ってコンピューター科学の勉強を続けましょう！20時間コースを終わるころには、あなたはプログラミングの基本を完全にマスターしているはずです。そしてもっと難しい携帯アプリやロポット操作、ゲームなどをどうやって書けば良いか勉強できるようになります。
       4:
-        image: "notes/hoc6_4.jpg"
-        text: "テクノロジーは私たちがする事のすべてを変えています、そしてあなたが若かろうと、年をとっていようと、全く関係ありません。プログラミングは楽しいです。創造的で、誰でも学べます！"
+        image: notes/hoc6_4.jpg
+        text: テクノロジーは私たちがする事のすべてを変えています、そしてあなたが若かろうと、年をとっていようと、全く関係ありません。プログラミングは楽しいです。創造的で、誰でも学べます！
     20_wrapup:
       1:
-        image: "notes/bird.png"
-        text: "ノートの表示は近日公開予定！"
+        image: notes/bird.png
+        text: ノートの表示は近日公開予定！
+    frozen_intro:
+      1:
+        image: notes/frozen1_1.jpg
+        text: "Hi, my name is Lyndsey. I model, act, and write my own apps. Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
+      2:
+        image: notes/frozen1_2.jpg
+        text: "You'll create snowflakes and patterns as you ice skate and make a winter wonderland that you can then share with your friends."
+      3:
+        image: notes/frozen1_3.jpg
+        text: "In the next hour, you're going to learn the basics of how to code. Traditional programming is usually in text, but we'll use Blockly, which uses visual blocks that you can drag and drop to write programs. This is how even university students learn the basics. Under the hood, you're still creating code."
+      4:
+        image: notes/frozen1_4.jpg
+        text: "A program is a set of instructions that tells a computer what to do. Let's build a code, or a program, that will help Elsa create a simple line. We will use this later to create more complex patterns."
+      5:
+        image: notes/frozen1_5.jpg
+        text: "Your screen is split into three main parts. On the left, is the ice surface where you'll run your program. The instructions for each level are written right below the surface."
+      6:
+        image: notes/frozen1_6.jpg
+        text: This middle area is the toolbox, and each of these blocks is an action that Elsa and Anna can do.
+      7:
+        image: notes/frozen1_7.jpg
+        text: |-
+          The white space on the right is called the workspace, and this is where we'll build our program. To move around the ice surface, you'll use the "Move Forward" block.
+      8:
+        image: notes/frozen1_8.jpg
+        text: 'Here, the "Move Forward" block says, "move forward by 100 pixels." When we press "Run", what happens? Elsa moves forward a certain amount on the screen, 100 pixels in fact! Pixels are basically very tiny squares on your computer screen.'
+      9:
+        image: notes/frozen1_9.jpg
+        text: 'The other block we have in this puzzle says "turn right by 90 degrees." And when we use this "Turn Right" block, that makes Elsa turn a certain amount. You can play around with how far you want Elsa to turn. The angle is measured from the path ahead of Elsa. So, this is a 90 degree turn. And this is a 120 degree turn.'
+      10:
+        image: notes/frozen1_10.jpg
+        text: Remember, you can change the number of pixels and degrees by clicking the arrows next to them.
+    frozen_loops:
+      1:
+        image: notes/frozen2_1.jpg
+        text: "Hi, I’m Paola! Computers are really good at repeating actions. You can count to 10, 20, or 100. But a computer can count to a billion or a trillion. It won't get bored and it will only take a few seconds. Whether it's counting, or drawing, or anything--computers can repeat things hundreds or even billions of times."
+      2:
+        image: notes/frozen2_2.jpg
+        text: 'In programming, we call this a loop. A loop is how you repeat your code over and over again. For the next puzzle, your goal is to help Anna create a square with the "Repeat" block.'
+      3:
+        image: notes/frozen2_3.jpg
+        text: 'Any blocks of code you put inside the "Repeat" block will be repeated in sequence, as many times as you want.'
+      4:
+        image: notes/frozen2_4.jpg
+        text: 'To draw a square, you can use the "Move Forward" and "Turn Right" block 4 times. But the easier way is to tell the computer to "Move Forward" and "Turn Right by 90 degrees" once, and then tell it to repeat this pair of actions 4 times. To do that, you need to put the "Move Forward" and "Turn Right" block inside a "Repeat" block.'
+      5:
+        image: notes/frozen2_5.jpg
+        text: |-
+          Remember, you can change the number in the "Repeat" block to anything, and it will repeat what's inside the block that many times.
+    frozen_functions:
+      1:
+        image: notes/frozen3_1.jpg
+        text: Hi, I’m Chris Bosh. I’m a professional basketball player, and I coded in college.
+      2:
+        image: notes/frozen3_2.jpg
+        text: One of the most important concepts in computer science is how to define new commands. Most computer languages have only about 100 words or commands. And really, the art and magic is in defining your own new words out of these building blocks.
+      3:
+        image: notes/frozen3_3.jpg
+        text: "Once you've taught a computer how to do an action once using this sequence of commands, you can make up your own name for that action so it's easy to repeat it later. When you define your own command and give it a name, that's called a function."
+      4:
+        image: notes/frozen3_4.jpg
+        text: "Hi, I’m Jess. When programming with blocks, you would use functions if there are a set of actions you would like to use lots of times. For example, you've written code to create a square."
+      5:
+        image: notes/frozen3_5.jpg
+        text: 'You can define this as a function called "create a square." '
+      6:
+        image: notes/frozen3_6.jpg
+        text: Now you have a new block that you can use multiple times to create multiple squares.
+      7:
+        image: notes/frozen3_7.jpg
+        text: A lot of simple shapes can be used to create more complex patterns. In the next puzzle, the code you recently wrote to make a circle is available to you as a new function that can make circles of different sizes. Can you use it to help Elsa create intricate and beautiful patterns in the snow?
+    C3_playlab_create_game:
+      1:
+        image: notes/playlab_1.png
+        text: "So far you've been making an animation or a story that does the exact same thing every time you run it. Now you can make an interactive game that you can actually play."
+      2:
+        image: notes/playlab_2.png
+        text: |-
+          There's the "when arrow" block and the "move actor" block. You can put these blocks together to move the actors around with the arrow keys.
+      3:
+        image: notes/playlab_3.png
+        text: And there are some blocks that do stuff when actors collide or are clicked. Check them out and have fun!

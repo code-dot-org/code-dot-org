@@ -8,7 +8,7 @@
 'use strict';
 
 var BlocklyApps = require('../base');
-var Direction = require('./tiles').Direction;
+var Direction = require('./constants').Direction;
 
 //
 // Collidable constructor

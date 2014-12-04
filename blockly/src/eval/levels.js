@@ -26,7 +26,9 @@ module.exports = {
       blockUtils.blockOfType('functional_rectangle') +
       blockUtils.blockOfType('functional_ellipse') +
       blockUtils.blockOfType('functional_star') +
+      blockUtils.blockOfType('functional_radial_star') +
       blockUtils.blockOfType('place_image') +
+      blockUtils.blockOfType('offset') +
       blockUtils.blockOfType('overlay') +
       blockUtils.blockOfType('underlay') +
       blockUtils.blockOfType('rotate') +
@@ -37,6 +39,7 @@ module.exports = {
       blockUtils.blockOfType('functional_greater_than') +
       blockUtils.blockOfType('functional_less_than') +
       blockUtils.blockOfType('functional_number_equals') +
+      blockUtils.blockOfType('functional_string_equals') +
       blockUtils.blockOfType('functional_logical_and') +
       blockUtils.blockOfType('functional_logical_or') +
       blockUtils.blockOfType('functional_logical_not') +
