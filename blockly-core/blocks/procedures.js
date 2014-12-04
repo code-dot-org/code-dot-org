@@ -341,7 +341,7 @@ Blockly.Blocks.procedures_callnoreturn = {
       .appendTitle(Blockly.Msg.PROCEDURES_CALLNORETURN_CALL)
       .appendTitle('', 'NAME');
 
-    if (Blockly.functionEditor) {
+    if (Blockly.useModalFunctionEditor) {
       var editLabel = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
       Blockly.bindEvent_(editLabel.fieldGroup_, 'mousedown', this, this.openEditor);
       mainTitle.appendTitle(editLabel);

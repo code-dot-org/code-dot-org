@@ -57,6 +57,7 @@ class Eval < Blockly
         <block type="functional_rectangle"></block>
         <block type="functional_ellipse"></block>
         <block type="functional_star"></block>
+        <block type="functional_radial_star"></block>
         <block type="place_image"></block>
         <block type="offset"></block>
         <block type="overlay"></block>

@@ -19,7 +19,7 @@ Booleans are the fourth and final data type that students will learn about in th
 ## Teaching Summary
 ### **Getting Started**
  
-1) [Vocabulary](#Vocab)
+1) [Vocabulary](#Vocab)<br/>
 2) [Booleans - True or False?](#GetStarted)  
 
 ### **Activity: Booleans**  
@@ -27,7 +27,7 @@ Booleans are the fourth and final data type that students will learn about in th
 3) [Booleans](#Activity1)   
 
 ### **Assessment**
-6) [Boolean Assessment](#Assessment)
+4) [Boolean Assessment](#Assessment)
 
 [/summary]
 

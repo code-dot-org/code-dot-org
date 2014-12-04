@@ -1,17 +1,17 @@
 ---
-title: Maze and Bee
+title: "Maze and Bee"
 view: page_curriculum
 theme: none
 ---
 
-<%= partial('curriculum_header', :unittitle=>'Course 3', :lesson=>2, :title=> 'Maze', :unplugged=>false, :time=>30) %>
+<%= partial('curriculum_header', :unittitle=>'Course 4', :lesson=>2, :title=> 'Maze and Bee', :unplugged=>false, :time=>30) %>
 
 [content]
 
 [together]
 
 ## Lesson Overview 
-This course is a review of maze concepts from Course 2. Students will help the zombie get to the sunflower using a combination of sequences and loops.
+This course is a review of maze concepts from Courses 2 and 3. Students will first help the zombie get to the sunflower using a combination of sequences and loops, then review conditionals with the flower-hunting bee.
 
 [summary]
 
@@ -37,7 +37,7 @@ This course is a review of maze concepts from Course 2. Students will help the z
 - Create a program for a given task using sequential steps
 - Count the number of times an action should be repeated and represent it as a loop
 - Analyze a problem and complete it as efficiently as possible
-- Employ a combination of sequential and looped commands to reach the end of a maze
+- Employ conditional statements to assess which actions are correct for a given step
 
 [/together]
 
@@ -51,15 +51,16 @@ Review with students the basic maze navigation, particularly:
 - Moving forward
 - Turning left/right
 - Looping
+- Conditionals
 
 [/together]
 
 [together]
 
 ## Activity
-### <a name="Activity"></a> [Maze](http://learn.code.org/s/course3/stage/2/puzzle/1)
+### <a name="Activity"></a> [Maze](http://learn.code.org/s/course4/stage/2/puzzle/1)
 
-As your students work through the puzzles, observe how they plan the path for the zombie. Identify different strategies used and ask students to share with the whole class. This helps students to recognize that there are many ways to approach these problems.
+As your students work through the puzzles, observe how they plan the path for the zombie or bee. Identify different strategies used and ask students to share with the whole class. This helps students to recognize that there are many ways to approach these problems.
 You may want to go through a few puzzles on the projector. While doing this you can ask a one student to trace the path on the screen while another writes the directions on a whiteboard.
 
 
@@ -77,8 +78,7 @@ You may want to go through a few puzzles on the projector. While doing this you 
 
 ### Create Your Own
 
-In small groups, let students design their own mazes and challenge each other to write programs to solve them.
-For added fun, make life size mazes with students as the zombie and flower.
+In small groups, let students design their own mazes and challenge using checkerboards and strips of paper.  Can they recreate a bee conditionals puzzle using red and black checkers?
 
 [/together]
 

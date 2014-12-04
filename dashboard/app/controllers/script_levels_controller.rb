@@ -93,7 +93,7 @@ private
     @game = @level.game
     @stage = @script_level.stage
 
-    set_videos_and_blocks_and_callouts
+    set_videos_and_blocks_and_callouts_and_instructions
 
     @callback = milestone_url(user_id: current_user.try(:id) || 0, script_level_id: @script_level)
     @full_width = true
