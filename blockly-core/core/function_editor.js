@@ -237,6 +237,7 @@ Blockly.FunctionEditor.prototype.show = function() {
   if (Blockly.selected) {
     Blockly.selected.unselect();
   }
+  Blockly.fireUiEvent(window, 'function_editor_opened');
 };
 
 /**
@@ -283,6 +284,7 @@ Blockly.FunctionEditor.prototype.hideAndRestoreBlocks_ = function() {
   }
 
   Blockly.focusedBlockSpace = Blockly.mainBlockSpace;
+  Blockly.fireUiEvent(window, 'function_editor_closed');
 };
 
 /**

@@ -533,7 +533,9 @@ input[type="radio"] {
       .generated-code-container .generatedCodeMessage a:hover {
         text-decoration: underline; }
   .generated-code-container .generatedCode {
-    font-size: 14px; }
+    font-size: 14px;
+    overflow: scroll;
+    max-height: 400px; }
 
 .modal-content {
   margin-left: 110px; }
