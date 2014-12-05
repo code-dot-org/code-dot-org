@@ -1,6 +1,6 @@
 Sequel.migration do
   up do
-    #add_column :hoc_activity, :name, String, size:255
+    add_column :hoc_activity, :name, String, size:255
     add_column :hoc_activity, :country, String, size:50
     add_column :hoc_activity, :state, String, size:50
 
