@@ -36,8 +36,7 @@ In this lesson, students will explore the creation of repetitive designs using v
 
 - Create programs that utilize repitition to create gorgeous designs
 - Use trial and error to recreate detailed designs in proper scale
-- Divide the number of degrees in a circle into even segments
-- Calculate the angles in equilateral and 30 60 90 triangles
+- Calculate angles by dividing 360 by the number of sides in a polygon
 - Decompose a shape into its smallest repeatable sequence
 
 [/together]
@@ -47,7 +46,15 @@ In this lesson, students will explore the creation of repetitive designs using v
 ## Getting Started
 
 ### <a name="GetStarted"></a> Introduction
-Review with students the basic artist navigation, particularly:
+
+Remind your students of the unplugged lesson from a previous class.  
+
+- What if you wanted to draw a square on the board and each side was labeled "side"
+  - What would happen if you had an envelope labeled "side" with "10 inches inside"?
+  - What would happen to the square if you switched the paper in the "side" envelope to "20 inches"?
+  - What if you labeled the sides of the square with "2*side"?
+
+Next, review with students the basic artist navigation, particularly:
 
 - Moving forward
 - Turning left/right
@@ -59,9 +66,9 @@ Review with students the basic artist navigation, particularly:
 [together]
 
 ## Activity
-### <a name="Activity"></a> [Maze](http://learn.code.org/s/course4/stage/2/puzzle/1)
+### <a name="Activity"></a> [Maze](http://learn.code.org/s/course4/stage/6/puzzle/1)
 
-Students will see a variety of shapes in this lesson.  Some of the designs get pretty intricate. Your class may find it helpful to have a protractor and paper on hand. Feel free to promote trial and error as well.
+This lesson explores the use of variables as a way to quickly change many values at one time. Not only will the students be dealing with the looping of designs and repetition of angles, they'll also be doing math on variables.  It can be helpful for them to have paper and pencil to figure out values as they go. Also, let them know ahead of time that there will likely be some puzzles that confuse or frustrate them. This is normal, and expected.  Students should prepare themselves for persistence and perserverance.
 
 
 [/together]
@@ -76,9 +83,14 @@ Students will see a variety of shapes in this lesson.  Some of the designs get p
 ## Extended Learning 
 <a name="Extended"></a>Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
 
-### Paper Snowflakes
+### Get Steppin'
 
-Hand your class small square sheets of paper and have them fold the papers in half then cut simple designs.  How many times is the design repeated?  What are the points of symmetry? What happens when you fold another piece of paper a second time and cut a pattern?  How many times is it repeated?  What do you think will happen if you fold the paper three times?  Four?
+Get a few volunteers to come to the front of the room.  Assign the group a shape (like a line, a triangle, or a square) with each side length "side". Give each volunteer an envelope labeled "side" with different numbers of steps inside of each.  Have them all start walking to make whatever shape you assigned, but each only gets to walk the number of steps inside their envelope before they turn. 
+
+- Do one sample, then ask the class if they can tell where the variable came in
+- After you've done the square, ask the class how we might be able to use the same variable to create a rectangle with a length that's twice the width.
+- How else might we use the same variable to change our polygons?
+- Where could we use a second variable? What might we call it?
 
 [/together]
 
