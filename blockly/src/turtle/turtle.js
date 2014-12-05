@@ -1271,7 +1271,7 @@ var displayFeedback = function() {
     message: Turtle.message,
     response: Turtle.response,
     level: level,
-    feedbackImage: feedbackImageCanvas.canvas.toDataURL("image/png"),
+    feedbackImage: getFeedbackImage(),
     // add 'impressive':true to non-freeplay levels that we deem are relatively impressive (see #66990480)
     showingSharing: !level.disableSharing && (level.freePlay || level.impressive),
     // impressive levels are already saved
@@ -1444,6 +1444,10 @@ var getFeedbackImage = function() {
   Turtle.ctxFeedback.globalCompositeOperation = 'copy';
   Turtle.ctxFeedback.drawImage(feedbackImageCanvas.canvas, 0, 0, 154, 154);
   var feedbackCanvas = Turtle.ctxFeedback.canvas;
-  return encodeURIComponent(
-      feedbackCanvas.toDataURL("image/png").split(',')[1]);
+  try {
+    return encodeURIComponent(
+        feedbackCanvas.toDataURL("image/png").split(',')[1]);
+  } catch (e) { // Can't read pixels from filesystem images in offline mode
+    return null;
+  }
 };

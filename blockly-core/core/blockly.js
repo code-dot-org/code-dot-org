@@ -305,6 +305,10 @@ Blockly.createSoundFromBuffer_ = function(options) {
  * @private
  */
 Blockly.loadWebAudio_ = function(filename, name) {
+  if (!location.host) {
+    // Can't XHR in offline mode
+    return;
+  }
   var request = new XMLHttpRequest();
   request.open('GET', filename, true);
   request.responseType = 'arraybuffer';
