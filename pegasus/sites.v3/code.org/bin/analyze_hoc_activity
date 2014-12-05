@@ -20,7 +20,7 @@ def analyze_day_fast(date)
     "FROM hoc_activity WHERE finished_at LIKE '#{date.strftime('%Y-%m-%d')} %' OR pixel_finished_at LIKE '#{date.strftime('%Y-%m-%d')} %'",
   ]
 
-  HipChat.log "Analyzing by <b>tutorial</b>..."
+  HipChat.log "Analyzing by <b>tutorial</b>..." if rack_env?(:production)
   tutorials = {}
   froms.each do |from_where|
     DB_READONLY.fetch(
@@ -31,7 +31,7 @@ def analyze_day_fast(date)
     end
   end
 
-  HipChat.log "Analyzing by <b>country</b>..."
+  HipChat.log "Analyzing by <b>country</b>..." if rack_env?(:production)
   countries = {}
   froms.each do |from_where|
     DB_READONLY.fetch(
@@ -42,7 +42,7 @@ def analyze_day_fast(date)
     end
   end
   
-  HipChat.log 'Analyzing by <b>state</b>...'
+  HipChat.log 'Analyzing by <b>state</b>...' if rack_env?(:production)
   states = {}
   froms.each do |from_where|
     DB_READONLY.fetch(
@@ -53,7 +53,7 @@ def analyze_day_fast(date)
     end
   end
   
-  HipChat.log 'Analyzing by <b>city</b>...'
+  HipChat.log 'Analyzing by <b>city</b>...' if rack_env?(:production)
   cities = {}
   froms.each do |from_where|
     DB_READONLY.fetch(
@@ -64,13 +64,13 @@ def analyze_day_fast(date)
     end
   end
 
-  HipChat.log 'Calculating total started...'
+  HipChat.log 'Calculating total started...' if rack_env?(:production)
   started = 0;
   froms.each do |from_where|
     started += DB_READONLY.fetch("SELECT COUNT(id) as count #{from_where}").first[:count]
   end
 
-  HipChat.log 'Calculating total finished...'
+  HipChat.log 'Calculating total finished...' if rack_env?(:production)
   finished = 0;
   finished_froms.each do |from_where|
     finished += DB_READONLY.fetch("SELECT COUNT(id) as count #{from_where}").first[:count]
