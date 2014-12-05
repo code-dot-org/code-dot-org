@@ -78,7 +78,8 @@ module LevelsHelper
         available_callouts = JSON.parse(@level.callout_json).map do |callout_definition|
           Callout.new(element_id: callout_definition['element_id'],
               localization_key: callout_definition['localization_key'],
-              qtip_config: callout_definition['qtip_config'].to_json)
+              qtip_config: callout_definition['qtip_config'].to_json,
+              on: callout_definition['on'])
         end
       end
     else

@@ -39,9 +39,9 @@
                     %a{:href=>url, :target=>'_blank'}
                       =short_url
                 -unless tutorial[:teachers_notes].nil_or_empty?
-                  .slide-teachers-notes-link<
+                  .slide-teachers-notes-link{style: "font-weight: 500; font-size: 12px; margin-top: 20px; padding-right: 0px;"}<
                     %a{:href=>tutorial[:teachers_notes], :target=>'blank'}<
-                      = I18n.t(:teachers_notes)
+                      = I18n.t(:teachers_notes_hoc)
                 %a{:href=>url, :target=>'_blank'}<
                   .btn-carousel-slide=I18n.t(:go)
             -count += 1
