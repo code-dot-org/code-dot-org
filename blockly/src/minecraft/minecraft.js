@@ -177,6 +177,7 @@ Minecraft.execute = function() {
 
   // Get a result
   Minecraft.result = evalCode(codeWhenRunButton);
+  return; // TODO(bjordan): remove
   Minecraft.testResults = BlocklyApps.getTestResults(Minecraft.result);
 
   if (level.freePlay) {
