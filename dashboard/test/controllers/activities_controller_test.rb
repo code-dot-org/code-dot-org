@@ -64,7 +64,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
                          "total_lines"=>35,
                          "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>"http://test.host/u/#{assigns(:level_source).id}",
+                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
                          "save_to_gallery_url"=>"/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}",
                          "design"=>"white_background"}
 
@@ -190,7 +190,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
                          "total_lines" => 15, # no change
                          "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>"http://test.host/u/#{assigns(:level_source).id}",
+                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
                          "save_to_gallery_url"=>"/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}",
                          "design"=>"white_background"}
 
@@ -224,7 +224,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
                          "total_lines" => 1015, # pretended it was 1000
                          "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>"http://test.host/u/#{assigns(:level_source).id}",
+                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
                          "save_to_gallery_url"=>"/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}",
                          "design"=>"white_background"}
 
@@ -262,7 +262,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
                          "total_lines" => 1000, # no change
                          "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>"http://test.host/u/#{assigns(:level_source).id}",
+                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
                          "design"=>"white_background"}
 
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
@@ -304,7 +304,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
                          "total_lines"=>35,
                          "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>"http://test.host/u/#{assigns(:level_source).id}",
+                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
                          "save_to_gallery_url"=>"/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}",
                          "design"=>"white_background"}
 
@@ -338,7 +338,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
                          "total_lines"=>35,
                          "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>"http://test.host/u/#{assigns(:level_source).id}",
+                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
                          "save_to_gallery_url"=>"/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}",
                          "design"=>"white_background"}
 
@@ -372,7 +372,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
                          "total_lines"=>35,
                          "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>"http://test.host/u/#{assigns(:level_source).id}",
+                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
                          "save_to_gallery_url"=>"/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}",
                          "design"=>"white_background"}
 
@@ -404,7 +404,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
                          "total_lines"=>35,
                          "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>"http://test.host/u/#{assigns(:level_source).id}",
+                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
                          "save_to_gallery_url"=>"/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}",
                          "design"=>"white_background"}
 
@@ -429,7 +429,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expected_response = {"previous_level"=>"/s/1/level/#{@script_level_prev.id}",
                          "message"=>"try again",
-                         "level_source"=>"http://test.host/u/#{assigns(:level_source).id}",
+                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
                          "design"=>"white_background"}
 
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
@@ -454,7 +454,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expected_response = {"previous_level"=>"/s/1/level/#{@script_level_prev.id}",
                          "message"=>"try again",
-                         "level_source"=>"http://test.host/u/#{assigns(:level_source).id}",
+                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
                          "design"=>"white_background"}
 
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
@@ -482,7 +482,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
                          "total_lines"=>35,
                          "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>"http://test.host/u/#{assigns(:level_source).id}",
+                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
                          "save_to_gallery_url"=>"/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}",
                          "design"=>"white_background"}
 
@@ -521,7 +521,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
                          "total_lines"=>35,
                          "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>"http://test.host/u/#{assigns(:level_source).id}",
+                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
                          "save_to_gallery_url"=>"/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}",
                          "design"=>"white_background"}
 
@@ -553,7 +553,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
                          "total_lines"=>35,
                          "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>"http://test.host/u/#{assigns(:level_source).id}",
+                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
                          "save_to_gallery_url"=>"/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}",
                          "design"=>"white_background"}
 
@@ -585,7 +585,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
                          "total_lines"=>35,
                          "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>"http://test.host/u/#{assigns(:level_source).id}",
+                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
                          "save_to_gallery_url"=>"/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}",
                          "design"=>"white_background"}
 
@@ -617,7 +617,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
                          "total_lines"=>35,
                          "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>"http://test.host/u/#{assigns(:level_source).id}",
+                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
                          "save_to_gallery_url"=>"/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}",
                          "design"=>"white_background"}
 
@@ -661,7 +661,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
                          "total_lines"=>35,
                          "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>"http://test.host/u/#{assigns(:level_source).id}",
+                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
                          "save_to_gallery_url"=>"/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}",
                          "design"=>"white_background"}
 
@@ -712,7 +712,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
                          "total_lines"=>20,
                          "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>"http://test.host/u/#{assigns(:level_source).id}",
+                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
                          "design"=>"white_background"}
 
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
@@ -749,7 +749,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
                          "total_lines"=>30,
                          "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>"http://test.host/u/#{assigns(:level_source).id}",
+                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
                          "design"=>"white_background"}
 
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
@@ -779,7 +779,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
     expected_response = {"previous_level"=>"/s/1/level/#{@script_level_prev.id}",
                          "message"=>"try again",
-                         "level_source"=>"http://test.host/u/#{assigns(:level_source).id}",
+                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
                          "design"=>"white_background"}
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -815,7 +815,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
                          "total_lines"=>30,
                          "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
-                         "level_source"=>"http://test.host/u/#{assigns(:level_source).id}",
+                         "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
                          "design"=>"white_background"}
 
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
