@@ -20,7 +20,9 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "impressive": "false",
-    "embed": "false"
+    "embed": "false",
+    "video_key": "C4_artist_math",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>

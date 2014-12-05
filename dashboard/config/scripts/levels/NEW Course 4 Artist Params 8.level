@@ -213,13 +213,27 @@
             </block>
           </value>
         </block>
-        <block type="draw_turn" inline="true">
-          <title name="DIR">turnLeft</title>
-          <value name="VALUE">
-            <block type="math_number">
-              <title name="NUM">120</title>
+        <block type="pick_one">
+          <statement name="PICK">
+            <block type="draw_turn" inline="true">
+              <title name="DIR">turnLeft</title>
+              <value name="VALUE">
+                <block type="math_number">
+                  <title name="NUM">120</title>
+                </block>
+              </value>
+              <next>
+                <block type="draw_turn" inline="true">
+                  <title name="DIR">turnRight</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">120</title>
+                    </block>
+                  </value>
+                </block>
+              </next>
             </block>
-          </value>
+          </statement>
         </block>
       </xml>
     </required_blocks>
