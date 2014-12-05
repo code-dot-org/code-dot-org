@@ -1,0 +1,8 @@
+---
+en:
+  data:
+    contract_match:
+      Enter name here:
+        Enter title here: Enter title here
+        Enter prompt here: Enter prompt here
+        Contract Name|Number|Domain1:Number|Domain2:string: Contract Name|Number|Domain1:Number|Domain2:string
