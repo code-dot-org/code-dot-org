@@ -31,18 +31,32 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     assert_redirected_to '/s/course3'
   end
 
-  test 'redirects /sh to /u' do
+  test 'redirects /sh to /c' do
     get '/sh/1'
-    assert_redirected_to '/u/1'
+    assert_redirected_to '/c/1'
 
     get '/sh/1/edit'
-    assert_redirected_to '/u/1/edit'
+    assert_redirected_to '/c/1/edit'
 
     get '/sh/1/original_image'
-    assert_redirected_to '/u/1/original_image'
+    assert_redirected_to '/c/1/original_image'
 
     get '/sh/1/generate_image'
-    assert_redirected_to '/u/1/generate_image'
+    assert_redirected_to '/c/1/generate_image'
+  end
+
+  test 'redirects /u to /c' do
+    get '/u/1'
+    assert_redirected_to '/c/1'
+
+    get '/u/1/edit'
+    assert_redirected_to '/c/1/edit'
+
+    get '/u/1/original_image'
+    assert_redirected_to '/c/1/original_image'
+
+    get '/u/1/generate_image'
+    assert_redirected_to '/c/1/generate_image'
   end
 
 end
