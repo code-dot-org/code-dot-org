@@ -9,7 +9,7 @@
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,2,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,2,0,0,0,0],[0,0,0,3,0,0,0,0],[0,0,0,4,0,0,0,0],[0,0,0,5,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "instructions": "Let's give that \"for\" loop a try. This is the same for loop that counts from 1 to 5 by 1, and runs the contents of the loop each time it counts. Help the Bee get the nectar.",
+    "instructions": "Replace the ??? in the for loop with the largest amount of nectar the bee has to collect. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -20,7 +20,9 @@
     "nectar_goal": "15",
     "ideal": "9",
     "use_modal_function_editor": "false",
-    "use_contract_editor": "false"
+    "use_contract_editor": "false",
+    "maze_data": null,
+    "callout_json": "[\r\n  {\"localization_key\": \"bee_for_loop\", \"element_id\": \"#bee_for_loop_qtip\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}}\r\n  }\r\n]"
   }
 }]]></config>
   <blocks>
@@ -36,8 +38,8 @@
                 </block>
               </value>
               <value name="TO">
-                <block type="math_number">
-                  <title name="NUM">5</title>
+                <block type="math_number" id="bee_for_loop_qtip">
+                  <title name="NUM">???</title>
                 </block>
               </value>
               <value name="BY">
@@ -51,8 +53,8 @@
                   <next>
                     <block type="controls_repeat_ext" inline="true">
                       <value name="TIMES">
-                        <block type="math_number">
-                          <title name="NUM">???</title>
+                        <block type="variables_get">
+                          <title name="VAR">counter</title>
                         </block>
                       </value>
                       <statement name="DO">
@@ -69,8 +71,8 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="variables_get">
-          <title name="VAR">counter</title>
+        <block type="math_number">
+          <title name="NUM">5</title>
         </block>
       </xml>
     </toolbox_blocks>

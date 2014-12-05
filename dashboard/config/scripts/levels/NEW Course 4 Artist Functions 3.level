@@ -70,10 +70,7 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="procedures_callnoreturn">
-          <mutation name="draw a square"/>
-        </block>
-      </xml>
+</xml>
     </toolbox_blocks>
     <required_blocks>
       <xml/>

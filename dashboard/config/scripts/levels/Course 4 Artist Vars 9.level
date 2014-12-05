@@ -21,7 +21,8 @@
     "impressive": "false",
     "slider_speed": ".5",
     "ideal": "11",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "callout_json": "[{\r\n  \"localization_key\": \"set_sides\",\r\n  \"element_id\": \"#set_sides_qtip\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}\r\n  }\r\n}]"
   }
 }]]></config>
   <blocks>
@@ -111,7 +112,7 @@
         <block type="math_arithmetic" inline="true">
           <title name="OP">ADD</title>
         </block>
-        <block type="variables_set" inline="false">
+        <block type="variables_set" inline="false" id="set_sides_qtip">
           <title name="VAR">sides</title>
           <value name="VALUE">
             <block type="math_number">
