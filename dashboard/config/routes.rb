@@ -22,16 +22,19 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  get '/sh/:id', to: redirect('/u/%{id}')
-  get '/sh/:id/:action', to: redirect('/u/%{id}/%{action}')
+  get '/sh/:id', to: redirect('/c/%{id}')
+  get '/sh/:id/:action', to: redirect('/c/%{id}/%{action}')
 
-  resources :level_sources, path: '/u/', only: [:show, :edit, :update] do
+  get '/u/:id', to: redirect('/c/%{id}')
+  get '/u/:id/:action', to: redirect('/c/%{id}/%{action}')
+
+  resources :level_sources, path: '/c/', only: [:show, :edit, :update] do
     member do
       get 'generate_image'
       get 'original_image'
     end
   end
-  get '/share/:id', to: redirect('/sh/%{id}')
+  get '/share/:id', to: redirect('/c/%{id}')
 
   get '/s/k-1(/*all)', to: redirect('/s/course1')
   get '/s/2-3(/*all)', to: redirect('/s/course2')
