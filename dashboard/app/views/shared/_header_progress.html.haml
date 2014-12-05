@@ -25,7 +25,10 @@
     - if @script.hoc?
       .header_finished_link
         %a{href: hoc_finish_url(@script)}
-          = t('nav.header.finished_hoc')
+          - if @script.name == Script::SPECIAL_NAME
+            = t('upsell.hoc.title')
+          - else
+            = t('nav.header.finished_hoc')
     - if @script.trophies
       - if current_user
         - progress = current_user.progress(@script)
