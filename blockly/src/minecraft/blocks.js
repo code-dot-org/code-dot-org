@@ -191,4 +191,137 @@ exports.install = function(blockly, blockInstallOptions) {
       //this.setInputsInline(true);
     }
   };
+
+  blockly.Blocks.minecraft_whenRightClick = {
+    // Block to handle event where mouse is clicked
+    helpUrl: '',
+    init: function () {
+      this.setHSV(140, 1.00, 0.74);
+      this.appendDummyInput().appendTitle('when rightclick');
+      this.setPreviousStatement(false);
+      this.setNextStatement(true);
+      this.setTooltip('when rightclick');
+    }
+  };
+
+  blockly.Blocks.minecraft_whenLeftClick = {
+    // Block to handle event where mouse is clicked
+    helpUrl: '',
+    init: function () {
+      this.setHSV(140, 1.00, 0.74);
+      this.appendDummyInput().appendTitle('when leftclick');
+      this.setPreviousStatement(false);
+      this.setNextStatement(true);
+      this.setTooltip('when leftclick');
+    }
+  };
+
+  generator.minecraft_whenRightClick = function () {
+    // Generate JavaScript for handling click event.
+    return '\n';
+  };
+  generator.minecraft_whenLeftClick = function () {
+    // Generate JavaScript for handling click event.
+    return '\n';
+  };
+
+  blockly.Blocks.minecraft_adjacent_target_x = {
+    // adjacent target x.
+    init: function () {
+      this.setHSV(258, 0.35, 0.62);
+      this.setOutput(true, 'Number');
+      this.appendDummyInput()
+        .appendTitle('adjacent x');
+      this.setTooltip('adjacent x');
+    }
+  };
+
+  generator.minecraft_adjacent_target_x = function () {
+    // Generate JavaScript for handling click event.
+
+    return ['Minecraft.getAdjacentTargetX()\n', Blockly.JavaScript.ORDER_ATOMIC];
+  };
+
+  blockly.Blocks.minecraft_adjacent_target_y = {
+    // adjacent target y.
+    init: function () {
+      this.setHSV(258, 0.35, 0.62);
+      this.setOutput(true, 'Number');
+      this.appendDummyInput()
+        .appendTitle('adjacent y');
+      this.setTooltip('adjacent y');
+    }
+  };
+
+  generator.minecraft_adjacent_target_y = function () {
+    // Generate JavaScript for handling click event.
+    return ['Minecraft.getAdjacentTargetY()\n', Blockly.JavaScript.ORDER_ATOMIC];
+  };
+
+  blockly.Blocks.minecraft_adjacent_target_z = {
+    // adjacent target z.
+    init: function () {
+      this.setHSV(258, 0.35, 0.62);
+      this.setOutput(true, 'Number');
+      this.appendDummyInput()
+        .appendTitle('adjacent z');
+      this.setTooltip('adjacent z');
+    }
+  };
+
+  generator.minecraft_adjacent_target_z = function () {
+    // Generate JavaScript for handling click event.
+    return ['Minecraft.getAdjacentTargetZ()\n', Blockly.JavaScript.ORDER_ATOMIC];
+  };
+
+
+  blockly.Blocks.minecraft_selected_target_x = {
+    // selected target x.
+    init: function () {
+      this.setHSV(258, 0.35, 0.62);
+      this.setOutput(true, 'Number');
+      this.appendDummyInput()
+        .appendTitle('selected x');
+      this.setTooltip('selected x');
+    }
+  };
+
+  generator.minecraft_selected_target_x = function () {
+    // Generate JavaScript for handling click event.
+
+    return ['Minecraft.getSelectedTargetX()\n', Blockly.JavaScript.ORDER_ATOMIC];
+  };
+
+  blockly.Blocks.minecraft_selected_target_y = {
+    // selected target y.
+    init: function () {
+      this.setHSV(258, 0.35, 0.62);
+      this.setOutput(true, 'Number');
+      this.appendDummyInput()
+        .appendTitle('selected y');
+      this.setTooltip('selected y');
+    }
+  };
+
+  generator.minecraft_selected_target_y = function () {
+    // Generate JavaScript for handling click event.
+    return ['Minecraft.getSelectedTargetY()\n', Blockly.JavaScript.ORDER_ATOMIC];
+  };
+
+  blockly.Blocks.minecraft_selected_target_z = {
+    // selected target z.
+    init: function () {
+      this.setHSV(258, 0.35, 0.62);
+      this.setOutput(true, 'Number');
+      this.appendDummyInput()
+        .appendTitle('selected z');
+      this.setTooltip('selected z');
+    }
+  };
+
+  generator.minecraft_selected_target_z = function () {
+    // Generate JavaScript for handling click event.
+    return ['Minecraft.getSelectedTargetZ()\n', Blockly.JavaScript.ORDER_ATOMIC];
+  };
+
 };

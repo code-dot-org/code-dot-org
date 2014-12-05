@@ -97,9 +97,26 @@ Minecraft.init = function(config) {
     // base's BlocklyApps.resetButtonClick will be called first
     var resetButton = document.getElementById('resetButton');
     dom.addClickTouchEvent(resetButton, Minecraft.resetButtonClick);
+
+    window.game.plugins.get('voxel-reach').on('use', function(target) { Minecraft.handleWhenRightClick(target);});
+    //window.game.plugins.get('voxel-reach').on('start mining', function(target) { Minecraft.handleWhenLeftClick(target);});
+    window.game.on('fire', function() { Minecraft.handleWhenLeftClick();});
+
   };
 
   BlocklyApps.init(config);
+};
+
+Minecraft.handleWhenRightClick = function(target) {
+  evalCode(Blockly.Generator.blockSpaceToCode(
+    'JavaScript',
+    'minecraft_whenRightClick'));
+};
+
+Minecraft.handleWhenLeftClick = function(target) {
+  evalCode(Blockly.Generator.blockSpaceToCode(
+    'JavaScript',
+    'minecraft_whenLeftClick'));
 };
 
 /**
