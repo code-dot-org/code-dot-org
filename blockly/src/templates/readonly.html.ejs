@@ -4,7 +4,10 @@
   <meta charset="utf-8">
   <title>Blockly</title>
   <script type="text/javascript" src="<%= assetUrl('js/' + options.locale + '/vendor.js') %>"></script>
-  <script type="text/javascript" src="<%= assetUrl('js/' + options.locale + '/' + app + '.js') %>"></script>
+  <script type="text/javascript" src="<%= assetUrl('js/common.js') %>"></script>
+  <script type="text/javascript" src="<%= assetUrl('js/' + options.locale + '/common_locale.js') %>"></script>
+  <script type="text/javascript" src="<%= assetUrl('js/' + options.locale + '/' + app + '_locale.js') %>"></script>
+  <script type="text/javascript" src="<%= assetUrl('js/' + app + '.js') %>"></script>
   <script type="text/javascript">
     <% // delay to onload to fix IE9. %>
     window.onload = function() {
