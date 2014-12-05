@@ -216,4 +216,10 @@ class HomeControllerTest < ActionController::TestCase
     assert_select 'a[href=http://test.host/redeemprizes]'
   end
 
+  test 'health_check sets no cookies' do
+    get :health_check
+    # this stuff is not really a hash but it pretends to be
+    assert_equal "{}", @response.cookies.inspect
+    assert_equal "{}", session.inspect
+  end
 end
