@@ -1,0 +1,164 @@
+<Minecraft>
+  <config><![CDATA[{
+  "game_id": 40,
+  "created_at": "2014-12-05T21:21:19.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "embed": "false",
+    "skin": "minecraft",
+    "instructions": "Can you use a Repeat loop and Variable to make Right Click create a tree with 10 blocks instead of just one? Hint: the tree trunk is the type number 12!",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "min_workspace_height": "1800",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "free_play": "false"
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="minecraft_setGravity">
+              <title name="VALUE">-1.7999999499807017e-7</title>
+            </block>
+          </next>
+        </block>
+        <block type="minecraft_whenRightClick">
+          <next>
+            <block type="variables_set" inline="false">
+              <title name="VAR">x</title>
+              <value name="VALUE">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">10</title>
+                  <statement name="DO">
+                    <block type="minecraft_setBlock" inline="false">
+                      <value name="VALUE_X">
+                        <block type="minecraft_adjacent_target_x"/>
+                      </value>
+                      <value name="VALUE_Y">
+                        <block type="variables_get">
+                          <title name="VAR">x</title>
+                        </block>
+                      </value>
+                      <value name="VALUE_Z">
+                        <block type="minecraft_adjacent_target_z"/>
+                      </value>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">12</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="variables_set" inline="false">
+                          <title name="VAR">x</title>
+                          <value name="VALUE">
+                            <block type="math_arithmetic" inline="true">
+                              <title name="OP">ADD</title>
+                              <value name="A">
+                                <block type="variables_get">
+                                  <title name="VAR">x</title>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <block type="math_number">
+                                  <title name="NUM">1</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="when_run"/>
+        <block type="minecraft_whenRightClick"/>
+        <block type="minecraft_whenLeftClick"/>
+        <block type="minecraft_setGravity">
+          <title name="VALUE">-1.7999999499807017e-7</title>
+        </block>
+        <block type="minecraft_setSpeed">
+          <title name="VALUE">0.0028</title>
+        </block>
+        <block type="minecraft_setBlock" inline="false"/>
+        <block type="math_random_int" inline="true">
+          <value name="FROM">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+          <value name="TO">
+            <block type="math_number">
+              <title name="NUM">37</title>
+            </block>
+          </value>
+        </block>
+        <block type="minecraft_adjacent_target_x"/>
+        <block type="minecraft_adjacent_target_y"/>
+        <block type="minecraft_adjacent_target_z"/>
+        <block type="minecraft_selected_target_x"/>
+        <block type="minecraft_selected_target_y"/>
+        <block type="minecraft_selected_target_z"/>
+        <block type="minecraft_log"/>
+        <block type="controls_repeat">
+          <title name="TIMES">4</title>
+        </block>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">???</title>
+        </block>
+        <block type="controls_repeat_ext" inline="true"/>
+        <block type="math_number">
+          <title name="NUM">0</title>
+        </block>
+        <block type="math_number_dropdown">
+          <title name="NUM" config="1-10">5</title>
+        </block>
+        <block type="math_arithmetic" inline="true">
+          <title name="OP">ADD</title>
+        </block>
+        <block type="math_random_int" inline="true">
+          <value name="FROM">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+          <value name="TO">
+            <block type="math_number">
+              <title name="NUM">100</title>
+            </block>
+          </value>
+        </block>
+        <block type="math_random_float"/>
+        <block type="variables_set" inline="false">
+          <title name="VAR">x</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">???</title>
+            </block>
+          </value>
+        </block>
+        <block type="variables_get">
+          <title name="VAR">x</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Minecraft>
