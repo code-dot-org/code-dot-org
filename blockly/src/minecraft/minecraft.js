@@ -159,9 +159,12 @@ Minecraft.execute = function() {
   Minecraft.message = undefined;
 
   // Run the app
+  var codeWhenRunButton = Blockly.Generator.blockSpaceToCode(
+    'JavaScript',
+    'when_run');
 
   // Get a result
-  Minecraft.result = evalCode();
+  Minecraft.result = evalCode(codeWhenRunButton);
   Minecraft.testResults = BlocklyApps.getTestResults(Minecraft.result);
 
   if (level.freePlay) {

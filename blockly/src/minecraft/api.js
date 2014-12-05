@@ -4,3 +4,8 @@ exports.log = function (id) {
   alert('log');
   console.log('');
 };
+
+exports.playSound = function(id, soundName) {
+  BlocklyApps.highlight(id);
+  BlocklyApps.playAudio(soundName);
+};
