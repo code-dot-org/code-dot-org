@@ -200,4 +200,12 @@ class ScriptTest < ActiveSupport::TestCase
       assert Script.find_by_name(s).hidden?, "#{s} is not hidden when it should be"
     end
   end
+
+  test 'get_script_level_by_stage_and_position raises RecordNotFound instead of NoMethodError when not found' do
+    artist = Script.find_by_name('artist')
+    assert_raises(ActiveRecord::RecordNotFound) do
+      # no stage 11 in artist
+      artist.get_script_level_by_stage_and_position(11, 1)
+    end
+  end
 end

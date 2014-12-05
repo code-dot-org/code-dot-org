@@ -2,8 +2,9 @@ class ApplicationController < ActionController::Base
   include LocaleHelper
   include ApplicationHelper
 
-  include SeamlessDatabasePool::ControllerFilter
-  use_database_pool :all => :master
+#  commenting this stuff out because even if we don't have a reader configured it will set stuff in the session
+# include SeamlessDatabasePool::ControllerFilter
+#  use_database_pool :all => :master
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
