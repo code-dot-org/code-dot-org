@@ -44,7 +44,7 @@ The best Hour of Code experience will be with Internet-connected computers. But 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
   * De originele Code.org lancering video, met daarin Bill Gates, Mark Zuckerberg en NBA ster Chris Bosh (er zijn versies voor [1 minuut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuten](https://www.youtube.com/watch?v=nKIu9yen5nc), en [9 minuten](https://www.youtube.com/watch?v=dU1xS07N-FA))
-  * De [Uur Code 2013 lancering video](https://www.youtube.com/watch?v=FC5FbmsH4fw), of de < % als @country == 'uk' %> [Uur Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ) < % anders %> [Uur Code 2014 video](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
+  * De [Uur Code 2013 lancering video](https://www.youtube.com/watch?v=FC5FbmsH4fw), of de [Uur Code 2014 video](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q)
   * [President Obama roept alle leerlingen op om te leren programmeren](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
 **Get your students excited - give them a short intro**
