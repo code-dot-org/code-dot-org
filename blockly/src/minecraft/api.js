@@ -19,3 +19,8 @@ exports.setSpeed = function(id, speedValue) {
   BlocklyApps.highlight(id);
   window.game.controls.walk_max_speed = speedValue;
 };
+
+exports.setBlock = function(value, x, y, z, id) {
+  BlocklyApps.highlight(id);
+  window.game.setBlock([x,y,z], value);
+};

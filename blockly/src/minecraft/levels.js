@@ -12,7 +12,11 @@ module.exports = {
       blockUtils.blockOfType('minecraft_playSound') +
       blockUtils.blockOfType('minecraft_log') +
       blockUtils.blockOfType('minecraft_setGravity') +
-      blockUtils.blockOfType('minecraft_setSpeed')
+      blockUtils.blockOfType('minecraft_setSpeed') +
+      blockUtils.blockOfType('minecraft_setBlock') +
+        '<block type="controls_repeat"><title name="TIMES">4</title></block><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block><block type="controls_repeat_ext"><value name="TIMES"></value><statement name="DO"></statement></block>' +
+      '<block type="math_number"></block><block type="math_number_dropdown"><title name="NUM" config="1-10">5</title></block><block type="math_arithmetic" inline="true"></block><block type="math_random_int"><value name="FROM"><block type="math_number"><title name="NUM">1</title></block></value><value name="TO"><block type="math_number"><title name="NUM">100</title></block></value></block><block type="math_random_float"></block>' +
+      '<block type="variables_set" inline="false"><title name="VAR">x</title><value name="VALUE"><block type="math_number"><title name="NUM">???</title></block></value></block><block type="variables_get"><title name="VAR">x</title></block>'
     ),
     startBlocks: '',
     requiredBlocks: '',

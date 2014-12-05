@@ -119,6 +119,76 @@ exports.install = function(blockly, blockInstallOptions) {
     return generateSetterCode(this, 'setSpeed');
   };
 
-};
+  generator.minecraft_setBlock = function() {
+    var value = Blockly.JavaScript.valueToCode(this, 'VALUE', Blockly.JavaScript.ORDER_NONE);
+    var x = Blockly.JavaScript.valueToCode(this, 'VALUE_X', Blockly.JavaScript.ORDER_NONE);
+    var y = Blockly.JavaScript.valueToCode(this, 'VALUE_Y', Blockly.JavaScript.ORDER_NONE);
+    var z = Blockly.JavaScript.valueToCode(this, 'VALUE_Z', Blockly.JavaScript.ORDER_NONE);
+    return 'Minecraft.setBlock(' + value + ', ' + x + ', ' + y + ', ' + z + ', \'block_id_' + this.id + '\');\n';
+  };
 
-//game.controls.walk_max_speed
+  var MINECRAFT_BLOCKS =
+    [
+      ['Empty', '0'],
+      ['1', '1'],
+      ['2', '2'],
+      ['3', '3'],
+      ['4', '4'],
+      ['5', '5'],
+      ['6', '6'],
+      ['7', '7'],
+      ['8', '8'],
+      ['9', '9'],
+      ['10', '10'],
+      ['11', '11'],
+      ['12', '12'],
+      ['13', '13'],
+      ['14', '14'],
+      ['15', '15'],
+      ['16', '16'],
+      ['17', '17'],
+      ['18', '18'],
+      ['19', '19'],
+      ['20', '20'],
+      ['21', '21'],
+      ['22', '22'],
+      ['23', '23'],
+      ['24', '24'],
+      ['25', '25'],
+      ['26', '26'],
+      ['27', '27'],
+      ['28', '28'],
+      ['29', '29'],
+      ['30', '30'],
+      ['31', '31'],
+      ['32', '32'],
+      ['33', '33'],
+      ['34', '34'],
+      ['35', '35'],
+      ['36', '36'],
+      ['37', '37']
+    ];
+
+  blockly.Blocks.minecraft_setBlock = {
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle('set block at');
+      this.appendValueInput('VALUE_X');
+      this.appendDummyInput()
+        .appendTitle(',');
+      this.appendValueInput('VALUE_Y');
+      this.appendDummyInput()
+        .appendTitle(',');
+      this.appendValueInput('VALUE_Z');
+      this.appendDummyInput()
+        .appendTitle('to');
+      this.appendValueInput('VALUE');
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip('set block');
+      //this.setInputsInline(true);
+    }
+  };
+};
