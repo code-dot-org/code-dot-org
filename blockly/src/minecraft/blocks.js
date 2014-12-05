@@ -195,10 +195,10 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.setHSV(140, 1.00, 0.74);
-      this.appendDummyInput().appendTitle('when rightclick');
+      this.appendDummyInput().appendTitle('when right click');
       this.setPreviousStatement(false);
       this.setNextStatement(true);
-      this.setTooltip('when rightclick');
+      this.setTooltip('when right click');
     }
   };
 
@@ -207,10 +207,10 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.setHSV(140, 1.00, 0.74);
-      this.appendDummyInput().appendTitle('when leftclick');
+      this.appendDummyInput().appendTitle('when left click');
       this.setPreviousStatement(false);
       this.setNextStatement(true);
-      this.setTooltip('when leftclick');
+      this.setTooltip('when left click');
     }
   };
 
