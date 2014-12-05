@@ -26,22 +26,22 @@ nav: pd3_nav
 [col-50]
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<button>Phase 4</button>](/educate/pd/1)
+[<button>Phase 4</button>](http://code.org/educate/pd3/1)
 
 [/col-50]
 
 [col-50]
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<button>Phase 1</button>](/educate/pd/phase1)
+[<button>Phase 1</button>](http://code.org/educate/pd3/phase1)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<button>Phase 2</button>](/educate/pd/phase2)
+[<button>Phase 2</button>](http://code.org/educate/pd3/phase2)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<button>Phase 3</button>](/educate/pd/phase3)
+[<button>Phase 3</button>](http://code.org/educate/pd3/phase3)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<button>Phase 4</button>](/educate/pd/phase4)
+[<button>Phase 4</button>](http://code.org/educate/pd3/phase4)
 
 [/col-50]

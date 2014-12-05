@@ -668,6 +668,8 @@ $aniGifPreviewHeight: 60px;
   }
   .generatedCode {
     font-size: 14px;
+    overflow: scroll;
+    max-height: 400px;
   }
 }
 
