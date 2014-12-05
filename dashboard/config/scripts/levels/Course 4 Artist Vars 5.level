@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Alright, let's try using variables in a different block. Use the variable \"sides\" to control how many times this loop gets run.",
+    "instructions": "Use the variable \"sides\" to control how many times this loop gets run.",
     "x": "125",
     "y": "250",
     "start_direction": "90",

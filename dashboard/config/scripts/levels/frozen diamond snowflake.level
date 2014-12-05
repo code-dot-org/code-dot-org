@@ -22,7 +22,8 @@
     "ideal": "10",
     "embed": "false",
     "callout_json": "[\r\n  {\"localization_key\": \"frozen_diamond_repeat\", \"element_id\": \"#toolbox_repeat_qtip\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}}\r\n  }\r\n]",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "shapeways_url": "https://www.shapeways.com/model/2925828/"
   }
 }]]></config>
   <blocks>
