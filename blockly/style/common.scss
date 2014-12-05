@@ -853,6 +853,26 @@ $modal-image-margin-gap: 10px;
   text-align: center;
 }
 
+#shapeways-print-go-button {
+  margin-bottom: 10px;
+}
+
+#shapeways-message-body {
+  font-size: 15px;
+  margin-bottom: 7px;
+  line-height: 26px;
+}
+
+#shapeways-message-body-disclaimer {
+  font-size: 11px;
+  margin-bottom: -11px;
+}
+
+#shapeways-message {
+  display: block;
+  text-align: center;
+}
+
 .modal-image {
   width: $modal-image-width;
   height: auto;
