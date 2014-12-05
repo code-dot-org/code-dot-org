@@ -19,7 +19,10 @@
     "disable_variable_editing": "true",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "impressive": "false"
+    "impressive": "false",
+    "embed": "false",
+    "callout_json": "[\r\n  {\"localization_key\": \"place_variable\", \"element_id\": \"#place_variable_qtip > .blocklyPath\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\", \"adjust\": {\"x\": 60, \"y\": -10}}}\r\n  }\r\n]",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
@@ -38,7 +41,7 @@
                 <block type="controls_repeat" deletable="false" movable="false" editable="false">
                   <title name="TIMES">4</title>
                   <statement name="DO">
-                    <block type="draw_move" inline="true" movable="false">
+                    <block type="draw_move" inline="true" movable="false" id="place_variable_qtip">
                       <title name="DIR">moveForward</title>
                       <value name="VALUE">
                 </value>
