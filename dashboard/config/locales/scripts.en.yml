@@ -323,3 +323,15 @@ en:
           description_short: special
           description: special
           Special: Special
+          Binary: Binary
+        usabilitymsm:
+          Usability testing for MSM: Usability testing for MSM
+          Evaluation Blocks: Evaluation Blocks
+          Blocks to Math: Blocks to Math
+          Strings and Images: Strings and Images
+          Defining Variables: Defining Variables
+          Defining Functions: Defining Functions
+          Design Recipe: Design Recipe
+          Booleans: Booleans
+          Conditionals: Conditionals
+          Free Play: Free Play

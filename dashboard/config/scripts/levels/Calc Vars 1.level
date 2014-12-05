@@ -7,7 +7,7 @@
   "properties": {
     "skin": "calc",
     "embed": "false",
-    "instructions": "Variables allow us to store values that we can then use repeatedly throughout our programs. Here's a variable called \"age\" - set it to your 14 and click run.",
+    "instructions": "Variables allow us to store values that we can then use repeatedly throughout our programs. Here's a variable called \"age\" - set its value to 14 and click run.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
