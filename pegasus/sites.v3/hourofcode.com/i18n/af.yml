@@ -89,10 +89,10 @@ af:
   signup_thank_you_message: ما يك ايميل تاييد همراه با اطلاعاتي براي كمك به شروع فعاليت برايتان ارسال كرديم.
   map_header: 'تعداد رويدادهاي "ساعت كدنويسي" در سراسر دنيا'
   map_header_company: '# by company organizers'
-  meta_tag_og_title: '"ساعت كد نويسي" مي آيد'
-  meta_tag_og_description: ساعت کد جنبش جهانی رسیدن به ده ها میلیون نفر از دانش آموزان در اضافه تر از 180 کشور و بیش از 30 زبان است. سنین 4-104.
-  meta_tag_twitter_title: '"ساعت كد نويسي" مي آيد'
-  meta_tag_twitter_description: '"ساعت کد نويسي" يك حركت جهاني در راستاي رسيدن به ده ها ميليون دانش آموز در بيش از ١٨٠ كشور با بيش از ٣٠ زبان است. براي سنین ٤ تا ١٠٤ سال.'
+  meta_tag_og_title: 'ساعت كد نويسي مي آيد'
+  meta_tag_og_description: 'ساعت کد جنبش جهانی رسیدن به ده ها میلیون نفر از دانش آموزان در اضافه تر از 180 کشور و بیش از 30 زبان است. سنین 4-104.'
+  meta_tag_twitter_title: 'ساعت كد نويسي مي آيد'
+  meta_tag_twitter_description: 'ساعت کد نويسي يك حركت جهاني در راستاي رسيدن به ده ها ميليون دانش آموز در بيش از ١٨٠ كشور با بيش از ٣٠ زبان است. براي سنین ٤ تا ١٠٤ سال.'
   twitter_default_text: 'من در"ساعت كد نويسي" #HourOfCode امسال شركت مي كنم، شما چطور؟ @codeorg'
   hardware_prizes_form_name_label: اسم شما
   hardware_prizes_form_name_placeholder: اسم شما

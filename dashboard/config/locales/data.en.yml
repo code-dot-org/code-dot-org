@@ -388,25 +388,25 @@ en:
         instructions: "One more practice of the \"if-else\" block, can you get it right on your first try?"
       'scrat 20':
         instructions: "Can you add just 3 blocks to help me solve a more complex maze? If you do it right, I can walk any curvy path no matter the length. Hurry! The ice is melting!"
-      'Standalone_Artist_1':  
+      'Standalone_Artist_1':
         instructions: "Welcome to Artist! First off, let's try to make a simple square using the turn right block and move forward block. Each side should be 100 pixels long."
-      'Standalone_Artist_2':  
+      'Standalone_Artist_2':
         instructions: "Draw this diamond with 120 and 60 degree angles and 150 pixel long sides."
-      'Standalone_Artist_3':  
+      'Standalone_Artist_3':
         instructions: "Can you draw this hexagon with 100 pixel sides and 60 degree turns?"
-      'Standalone_Artist_4':  
+      'Standalone_Artist_4':
         instructions: "Now you've got a new block to play with, the loop. This will repeat a set of commands. What happens if you loop these commands 6 times?"
-      'Standalone_Artist_5':  
+      'Standalone_Artist_5':
         instructions: "How many times do you need to loop this diamond to draw the flower?"
-      'Standalone_Artist_5.5':  
+      'Standalone_Artist_5.5':
         instructions: "Notice how we simplified the diamond code by turning it into a loop. You can loop that whole sequence 12 times to draw the flower. Hint: You'll need to turn 30 degrees after your diamond loop so you don't keep drawing over the same diamond."
-      'Standalone_Artist_6':  
+      'Standalone_Artist_6':
         instructions: "Loop this hexagon code 6 times to create the design. How many degrees will you need to turn each time? Hint: divide the number of degrees in a circle by the number of times you are looping."
-      'Standalone_Artist_7':  
+      'Standalone_Artist_7':
         instructions: "A function is another programming tool to help you avoid repeating yourself. This function draws a flower, so you can use it any time you want to draw a flower. Use this and the new jump block to draw these flowers. Hint: The flowers are 150 pixels apart"
-      'Standalone_Artist_8':  
+      'Standalone_Artist_8':
         instructions: "Here's a function called \"Draw a shape\" that we've programmed to draw hexagons. Run the code to see what it does and then experiment with the function to see what happens. Can you make it draw a pattern of squares, triangles, or octagons?"
-      'Standalone_Artist_9':  
+      'Standalone_Artist_9':
         instructions: "Now go ahead and make whatever picture you'd like! You've even got an empty function that you can make do whatever you want!"
     video:
       name:
@@ -517,6 +517,8 @@ en:
         replace_questions: 'Use the drop-down to replace "???" with a number'
         replace_questions_degree: 'Use the drop-down to replace "???" with the correct degree to turn'
         repeat_blocks: 'Use the "Repeat" block and wrap it around the blocks in the workspace'
+        repeat_blocks_1: '(1) Use this block and put it around the grey blocks in the workspace'
+        repeat_blocks_2: '(2) Move the "Repeat" block here, and place the gray blocks inside'
         snowflake_dropdown: 'Use this drop-down to create different snowflakes!'
         degrees_per_side: 'Divide 360 by the number of sides to get the size of each angle in degrees.'
         set_sides: 'Use this block to set "sides" to the number needed to complete the puzzle.'

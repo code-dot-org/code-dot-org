@@ -44,7 +44,7 @@ The best Hour of Code experience will be with Internet-connected computers. But 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
   * Videoclipul original al lansării Hour of Code, care îi înfățișează pe Bill Gates, Mark Zuckerberg și starul NBA Chris Bosh ( există versiuni de [1](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5](https://www.youtube.com/watch?v=nKIu9yen5nc) sau [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA))
-  * Videoclipul de lansare [Hour of Code 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw) sau [Hour of Code 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% end %>
+  * Videoclipul de lansare [Hour of Code 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw) sau [Hour of Code 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ)
   * [Videoclipul în care președintele Obama îndeamnă toți elevii să învețe tehnologia computerelor și programare](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
 **Get your students excited - give them a short intro**
