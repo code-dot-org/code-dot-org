@@ -159,6 +159,10 @@ class LevelsController < ApplicationController
         @game = Game.eval
         @level = @type_class.new
         render :edit
+      elsif @type_class <= Minecraft
+        @game = Game.minecraft
+        @level = @type_class.new
+        render :edit
       elsif @type_class <= Maze
         @game = Game.custom_maze
         @level = @type_class.new

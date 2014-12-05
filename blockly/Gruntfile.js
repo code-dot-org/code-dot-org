@@ -12,7 +12,8 @@ var APPS = [
   'jigsaw',
   'calc',
   'webapp',
-  'eval'
+  'eval',
+  'minecraft'
 ];
 
 if (process.env.MOOC_APP) {
