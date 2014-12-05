@@ -63,4 +63,62 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.minecraft_playSound = function() {
     return generateSetterCode(this, 'playSound');
   };
+
+  var EARTH_GRAVITY = -0.0000035999998999614036;
+  var GRAVITY_VAL =
+    [
+      ['Asteroid', (EARTH_GRAVITY / 20).toString()],
+      ['Moon', (EARTH_GRAVITY / 2).toString()],
+      ['Earth', (EARTH_GRAVITY).toString()],
+      ['Venus', (EARTH_GRAVITY * 2).toString()],
+      ['Jupiter', (EARTH_GRAVITY * 4).toString()]
+    ];
+
+  blockly.Blocks.minecraft_setGravity = {
+    // Block for playing sound.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle('set gravity')
+        .appendTitle(new blockly.FieldDropdown(GRAVITY_VAL), 'VALUE');
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip('set gravity');
+    }
+  };
+
+  generator.minecraft_setGravity = function() {
+    return generateSetterCode(this, 'setGravity');
+  };
+
+  var WALK_SPEED = 0.0056;
+  var WALK_SPEEDS =
+    [
+      ['Crawl', (WALK_SPEED / 2).toString()],
+      ['Walk', (WALK_SPEED).toString()],
+      ['Run', (WALK_SPEED * 2).toString()],
+      ['Sprint', (WALK_SPEED * 4).toString()],
+      ['Super Sprint', (WALK_SPEED * 8).toString()]
+    ];
+
+  blockly.Blocks.minecraft_setSpeed = {
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle('set speed')
+        .appendTitle(new blockly.FieldDropdown(WALK_SPEEDS), 'VALUE');
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip('set speed');
+    }
+  };
+
+  generator.minecraft_setSpeed = function() {
+    return generateSetterCode(this, 'setSpeed');
+  };
+
 };
+
+//game.controls.walk_max_speed

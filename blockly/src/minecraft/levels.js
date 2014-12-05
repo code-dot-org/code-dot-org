@@ -10,7 +10,9 @@ module.exports = {
     toolbox: blockUtils.createToolbox(
       blockUtils.blockOfType('when_run') +
       blockUtils.blockOfType('minecraft_playSound') +
-      blockUtils.blockOfType('minecraft_log')
+      blockUtils.blockOfType('minecraft_log') +
+      blockUtils.blockOfType('minecraft_setGravity') +
+      blockUtils.blockOfType('minecraft_setSpeed')
     ),
     startBlocks: '',
     requiredBlocks: '',
