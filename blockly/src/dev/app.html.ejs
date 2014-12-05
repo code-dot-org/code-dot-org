@@ -9,6 +9,50 @@
   <link rel="stylesheet" type="text/css" href="../css/common.css">
   <link rel="stylesheet" type="text/css" href="../css/<%= app %>.css">
 
+<% if (app === "minecraft") { %>
+  <style>
+    body {
+      margin: 0px;
+      overflow: hidden;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+    }
+
+    #crosshair {
+      /* centered on div */
+      position: relative;
+      top: 50%;
+      left: 50%;
+      margin: -16px 0 0 -16px;
+      width: 32px;
+      height: 32px;
+    }
+
+    #stats {
+      bottom: 0px;
+      right: 0px;
+    }
+
+    .logo {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+    }
+
+    .errorMessage {
+      text-align: center;
+      width: 200px;
+      margin: 20px auto;
+    }
+
+    #container {
+      width: 400px;
+      height: 400px;
+    }
+  </style>
+  <script type="text/javascript" src="https://s3.amazonaws.com/cdo-dist/cdo-voxel/bundle.js"></script>
+  <% } %>
 <% if ((app === "maze" && options.levelId.indexOf('3_') === 0) ||
        (app === "webapp" && options.levelId.indexOf('ec_') === 0) ||
        (app === "studio" && options.levelId.indexOf('ec_') === 0) ||
