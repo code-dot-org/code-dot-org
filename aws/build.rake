@@ -123,11 +123,22 @@ def stop_frontend(name, host, log_path)
 end
 
 def upgrade_frontend(name, host)
-  command = [
+  commands = [
     'cd production',
     'git pull',
     'rake build',
-  ].join(' && ')
+  ]
+  
+  if name =~ /^frontend-[a-z]\d\d$/
+    i = name[-2..-1].to_i
+    if i < 4
+      commands << 'sudo service dashboard stop'
+    else
+      commands << 'sudo service pegasus stop'
+    end
+  end
+  
+  command = commands.join(' && ')
 
   HipChat.log "Upgrading <b>#{name}</b> (#{host})..."
 
