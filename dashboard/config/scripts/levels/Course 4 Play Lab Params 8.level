@@ -21,8 +21,11 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
-    "instructions": "Use a \"when touching\" block to send the dog back to the top-left if he touches and of the other actors.",
-    "first_sprite_index": "0"
+    "instructions": "Use a \"when touching\" block to send the Dog back to the top-left if the Dog touches any of the other actors.",
+    "first_sprite_index": "0",
+    "embed": "false",
+    "maze_data": null,
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>

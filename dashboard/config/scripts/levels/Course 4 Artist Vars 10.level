@@ -20,7 +20,7 @@
     "use_contract_editor": "false",
     "impressive": "false",
     "embed": "false",
-    "callout_json": "[{\r\n  \"localization_key\": \"set_sides\",\r\n  \"element_id\": \"[block-id='11']\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}\r\n  }\r\n}]",
+    "callout_json": "[{\r\n  \"localization_key\": \"set_sides\",\r\n  \"element_id\": \"[block-id='12']\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}\r\n  }\r\n}]",
     "disable_sharing": "false"
   }
 }]]></config>

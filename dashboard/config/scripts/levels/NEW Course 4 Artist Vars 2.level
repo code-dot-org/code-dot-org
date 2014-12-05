@@ -20,8 +20,7 @@
     "y": "250",
     "free_play": "false",
     "impressive": "false",
-    "disable_sharing": "false",
-    "video_key": "C4_variables"
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
@@ -89,6 +88,9 @@
         </block>
       </xml>
     </start_blocks>
+    <toolbox_blocks>
+      <xml/>
+    </toolbox_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

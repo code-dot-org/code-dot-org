@@ -51,8 +51,8 @@
                   <next>
                     <block type="controls_repeat_ext" inline="true">
                       <value name="TIMES">
-                        <block type="math_number">
-                          <title name="NUM">???</title>
+                        <block type="variables_get">
+                          <title name="VAR">counter</title>
                         </block>
                       </value>
                       <statement name="DO">
@@ -69,43 +69,8 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="maze_move">
-          <title name="DIR">moveForward</title>
-        </block>
-        <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-        </block>
-        <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-        </block>
-        <block type="maze_nectar"/>
-        <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-            <block type="math_number">
-              <title name="NUM">???</title>
-            </block>
-          </value>
-        </block>
-        <block type="controls_for" inline="true">
-          <title name="VAR">counter</title>
-          <value name="FROM">
-            <block type="math_number">
-              <title name="NUM">1</title>
-            </block>
-          </value>
-          <value name="TO">
-            <block type="math_number">
-              <title name="NUM">10</title>
-            </block>
-          </value>
-          <value name="BY">
-            <block type="math_number">
-              <title name="NUM">1</title>
-            </block>
-          </value>
-        </block>
-        <block type="variables_get">
-          <title name="VAR">counter</title>
+        <block type="math_number">
+          <title name="NUM">0</title>
         </block>
       </xml>
     </toolbox_blocks>

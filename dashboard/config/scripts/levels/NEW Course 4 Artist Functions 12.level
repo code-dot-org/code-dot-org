@@ -20,7 +20,8 @@
     "embed": "false",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "ideal": "17"
   }
 }]]></config>
   <blocks>

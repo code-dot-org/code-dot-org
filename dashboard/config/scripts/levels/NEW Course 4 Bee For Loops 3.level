@@ -21,7 +21,9 @@
     "instructions": "Ah, the for loop makes this much easier! All the code you need is there, take a look at how it is put together then click \"Run\" to see how it works. ",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "maze_data": null
+    "maze_data": null,
+    "callout_json": "[\r\n  {\"localization_key\": \"run\", \"element_id\": \"#runButton\"}\r\n]",
+    "video_key": "C4_for_loops"
   }
 }]]></config>
   <blocks>
