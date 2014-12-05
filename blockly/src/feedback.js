@@ -507,12 +507,21 @@ exports.createSharingDiv = function(options) {
     });
   }
 
-//  SMS-to-phone feature
+  var sharingShapeways = sharingDiv.querySelector('#sharing-shapeways');
+  if (sharingShapeways) {
+    dom.addClickTouchEvent(sharingShapeways, function() {
+      $('#send-to-phone').hide();
+      $('#shapeways-message').toggle();
+    });
+  }
+
+  //  SMS-to-phone feature
   var sharingPhone = sharingDiv.querySelector('#sharing-phone');
   if (sharingPhone && options.sendToPhone) {
     dom.addClickTouchEvent(sharingPhone, function() {
       var sendToPhone = sharingDiv.querySelector('#send-to-phone');
       if ($(sendToPhone).is(':hidden')) {
+        $('#shapeways-message').hide();
         sendToPhone.setAttribute('style', 'display:inline-block');
         var phone = $(sharingDiv.querySelector("#phone"));
         var submitted = false;
