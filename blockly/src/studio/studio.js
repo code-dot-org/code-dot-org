@@ -1857,6 +1857,10 @@ Studio.callCmd = function (cmd) {
       BlocklyApps.highlight(cmd.id);
       Studio.setSpritePosition(cmd.opts);
       break;
+    case 'setSpriteXY':
+      BlocklyApps.highlight(cmd.id);
+      Studio.setSpriteXY(cmd.opts);
+      break;
     case 'playSound':
       BlocklyApps.highlight(cmd.id);
       BlocklyApps.playAudio(cmd.opts.soundName, { volume: 1.0 });
@@ -2495,6 +2499,24 @@ Studio.setSpritePosition = function (opts) {
   // Reset to "no direction" so no turn animation will take place
   sprite.dir = Direction.NONE;
 };
+
+Studio.setSpriteXY = function (opts) {
+  var sprite = Studio.sprite[opts.spriteIndex];
+  opts.x -= sprite.width / 2;
+  opts.y -= sprite.height / 2;
+  var samePosition = (sprite.x === opts.x && sprite.y === opts.y);
+  
+  
+  // Don't reset collisions inside stop() if we're in the same position
+  Studio.stop({'spriteIndex': opts.spriteIndex,
+               'dontResetCollisions': samePosition});
+  sprite.x = opts.x;
+  sprite.y = opts.y;
+  // Reset to "no direction" so no turn animation will take place
+  sprite.dir = Direction.NONE;
+};
+
+
 
 Studio.moveSingle = function (opts) {
   var sprite = Studio.sprite[opts.spriteIndex];
