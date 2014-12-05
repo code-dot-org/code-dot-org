@@ -44,7 +44,7 @@ The best Hour of Code experience will be with Internet-connected computers. But 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
   * Оригинальное начальное видео от Code.org, в котором вы сможете увидеть Билла Гейтса, Марка Цукерберга и звезду NBA Криса Боша ([1минутная версия](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5-минутная версия](https://www.youtube.com/watch?v=nKIu9yen5nc) и [9-минутная версия](https://www.youtube.com/watch?v=dU1xS07N-FA))
-  * [Начальное видео Час Программирования 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), или <% if @country == 'uk' %>[ Видео Час Программирования 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ)<% также%> [Видео Час Программирования 2014](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
+  * [Начальное видео Час Программирования 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), или <% if @country == 'uk' %>[ Видео Час Программирования 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [Видео Час Программирования 2014](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
   * [ПРезидент Обама призывает всех учеников изучать компьютерные науки](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
 **Get your students excited - give them a short intro**

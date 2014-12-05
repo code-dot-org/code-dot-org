@@ -38,24 +38,24 @@ One lucky school in ***every*** U.S. state (+ Washington D.C.) won $10,000 worth
 ### Tune into the live chats, or watch the video archives:
 
 **TUESDAY**, December 9 <br />
-10:00 AM PST - [Lyndsey Scott](http://www.youtube.com/watch?v=oyNQciBMXzQ) <br />
-12:00 PM PST - [Jack Dorsey](http://www.youtube.com/watch?v=o4mPg5pmyj4) <br />
-3:00 PM PST - [Ashton Kutcher](http://www.youtube.com/watch?v=0cVjD0wiOmo) <br />
+10:00 AM PST - [Lyndsey Scott](http://www.youtube.com/watch?v=6s5oxGmbXy4) <br />
+12:00 PM PST - [Jack Dorsey](http://www.youtube.com/watch?v=PBGJfpbSWjY) <br />
+3:00 PM PST - [Ashton Kutcher](http://www.youtube.com/watch?v=d1LuhJPJP9s) <br />
 
 **WEDNESDAY**, December 10 <br />
-7:30 AM PST - [Cory Booker](http://www.youtube.com/watch?v=jrC_lzucwBI) <br />
-10:00 AM PST - [JR Hildebrand](http://www.youtube.com/watch?v=CKaaIFx90qA) <br />
-11:00 AM PST - [Clara Shih](http://www.youtube.com/watch?v=Sww3-rJ27BU) <br />
-12:00 PM PST - [Jessica Alba](http://www.youtube.com/watch?v=IFL3WN0F_Gg) <br />
+7:30 AM PST - [Cory Booker](http://www.youtube.com/watch?v=wD0Heuvv87I) <br />
+10:00 AM PST - [JR Hildebrand](http://www.youtube.com/watch?v=DfhAdnosy58) <br />
+11:00 AM PST - [Clara Shih](http://www.youtube.com/watch?v=2p7uhb1qulA) <br />
+12:00 PM PST - [Jessica Alba](http://www.youtube.com/watch?v=Kxm7PK-iS3c) <br />
 
 **THURSDAY**, December 11 <br />
-5:30 AM PST - [Karlie Kloss](http://www.youtube.com/watch?v=fvydHOG-ILY) <br />
-9 AM PST - [David Karp](http://www.youtube.com/watch?v=dOWWtqiZzJo) <br />
-10 AM PST - [Jess Lee](http://www.youtube.com/watch?v=W04XKIk73QQ) <br />
-11 AM PST - [Usher](http://www.youtube.com/watch?v=YMxYLPxz7Hg) <br />
+5:30 AM PST - [Karlie Kloss](http://www.youtube.com/watch?v=6SzsRGTmjy0) <br />
+9 AM PST - [David Karp](http://www.youtube.com/watch?v=1tVei0jOyVQ) <br />
+10 AM PST - [Jess Lee](http://www.youtube.com/watch?v=wXKPrtfaoi8) <br />
+11 AM PST - [Usher](http://www.youtube.com/watch?v=xvQSSaCD4yw) <br />
 
 **FRIDAY**, December 12 <br />
-10:00 AM PST - [Hadi Partovi](http://www.youtube.com/watch?v=eJ40qOodafo)
+10:00 AM PST - [Hadi Partovi](http://www.youtube.com/watch?v=PDnjt6iIBzo)
 
 \*Recordings of Bill Gates and Sheryl Sandberg chats will be available on [our YouTube channel](https://www.youtube.com/user/CodeOrg/)
 
