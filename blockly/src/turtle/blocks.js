@@ -931,17 +931,11 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  if (skin.id == "anna" || skin.id == "elsa") {
-    blockly.Blocks.turtle_stamp.VALUES = [
-      [skin.assetUrl('snowflake.png'), 'snowflake1'],
-      [skin.assetUrl('snowflake.png'), 'snowflake2'],
-      [skin.assetUrl('snowflake.png'), 'snowflake3'],
-    ];
-  } else {
-    blockly.Blocks.turtle_stamp.VALUES = [
-      [skin.patternDefault, 'DEFAULT']
-    ];
-  }
+  // block is currently unused. if we want to add it back in the future, add
+  // stamp images here
+  blockly.Blocks.turtle_stamp.VALUES = [
+    [skin.avatar, 'DEFAULT']
+  ];
 
   // Preload stamp images
   Turtle.stamps = [];

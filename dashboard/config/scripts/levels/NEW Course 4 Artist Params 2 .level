@@ -7,7 +7,7 @@
   "properties": {
     "skin": "artist",
     "embed": "false",
-    "instructions": "Create a “draw a triangle function with 50 pixels sides” from scratch.",
+    "instructions": "Create a “draw a triangle\" function with 50 pixels sides from scratch.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -21,7 +21,8 @@
     "start_direction": "90",
     "x": "175",
     "y": "250",
-    "ideal": "9"
+    "ideal": "9",
+    "video_key": "C4_create_functions"
   }
 }]]></config>
   <blocks>
@@ -140,31 +141,38 @@
     </required_blocks>
     <solution_blocks>
       <xml>
-        <block type="procedures_defnoreturn" movable="false">
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="procedures_callnoreturn">
+              <mutation name="draw a triangle"/>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false" usercreated="true">
           <mutation>
             <description>draw a triangle that is 50 pixels in size</description>
           </mutation>
           <title name="NAME">draw a triangle</title>
           <statement name="STACK">
-            <block type="controls_repeat_ext" inline="true">
+            <block type="controls_repeat_ext" inline="true" uservisible="false">
               <value name="TIMES">
-                <block type="math_number">
+                <block type="math_number" uservisible="false">
                   <title name="NUM">3</title>
                 </block>
               </value>
               <statement name="DO">
-                <block type="draw_move" inline="true">
+                <block type="draw_move" inline="true" uservisible="false">
                   <title name="DIR">moveForward</title>
                   <value name="VALUE">
-                    <block type="math_number">
+                    <block type="math_number" uservisible="false">
                       <title name="NUM">50</title>
                     </block>
                   </value>
                   <next>
-                    <block type="draw_turn" inline="true">
+                    <block type="draw_turn" inline="true" uservisible="false">
                       <title name="DIR">turnLeft</title>
                       <value name="VALUE">
-                        <block type="math_number">
+                        <block type="math_number" uservisible="false">
                           <title name="NUM">120</title>
                         </block>
                       </value>
@@ -174,13 +182,6 @@
               </statement>
             </block>
           </statement>
-        </block>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="procedures_callnoreturn">
-              <mutation name="draw a triangle"/>
-            </block>
-          </next>
         </block>
       </xml>
     </solution_blocks>

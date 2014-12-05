@@ -21,7 +21,6 @@
     "ideal": "4",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "callout_json": "[{\r\n  \"localization_key\": \"get_nectar\",\r\n  \"element_id\": \"[block-id='2']\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}\r\n  }\r\n}]",
     "maze_data": null
   }
 }]]></config>

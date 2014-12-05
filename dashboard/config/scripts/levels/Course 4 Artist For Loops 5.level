@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Try using a for loop that counts from 1 to 10 by 1 for this one",
+    "instructions": "Good job on the last puzzle! Let's use that \"counter\" variable block again to draw this cool picture. ",
     "x": "200",
     "y": "125",
     "start_direction": "90",
@@ -18,7 +18,9 @@
     "impressive": "false",
     "ideal": "11",
     "use_modal_function_editor": "false",
-    "use_contract_editor": "false"
+    "use_contract_editor": "false",
+    "embed": "false",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
@@ -26,25 +28,50 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat_ext" inline="true">
-              <value name="TIMES">
+            <block type="controls_for_counter" inline="true">
+              <mutation counter="counter"/>
+              <value name="FROM">
                 <block type="math_number">
-                  <title name="NUM">60</title>
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <value name="TO">
+                <block type="math_number">
+                  <title name="NUM">10</title>
+                </block>
+              </value>
+              <value name="BY">
+                <block type="math_number">
+                  <title name="NUM">1</title>
                 </block>
               </value>
               <statement name="DO">
-                <block type="draw_move" inline="true">
-                  <title name="DIR">moveForward</title>
-                  <next>
-                    <block type="draw_turn" inline="true">
-                      <title name="DIR">turnRight</title>
+                <block type="controls_repeat_ext" inline="true">
+                  <value name="TIMES">
+                    <block type="math_number">
+                      <title name="NUM">60</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="draw_move" inline="true">
+                      <title name="DIR">moveForward</title>
                       <value name="VALUE">
                         <block type="math_number">
-                          <title name="NUM">6</title>
+                          <title name="NUM">???</title>
                         </block>
                       </value>
+                      <next>
+                        <block type="draw_turn" inline="true">
+                          <title name="DIR">turnRight</title>
+                          <value name="VALUE">
+                            <block type="math_number">
+                              <title name="NUM">6</title>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
                     </block>
-                  </next>
+                  </statement>
                 </block>
               </statement>
             </block>

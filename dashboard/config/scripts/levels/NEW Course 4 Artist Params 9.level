@@ -28,6 +28,32 @@
   <blocks>
     <start_blocks>
       <xml>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation>
+            <description>draws squares with lengths of differing sizes, depending on the parameter</description>
+          </mutation>
+          <title name="NAME">draw a square</title>
+          <statement name="STACK">
+            <block type="controls_repeat" uservisible="false">
+              <title name="TIMES">4</title>
+              <statement name="DO">
+                <block type="draw_move" inline="true" uservisible="false">
+                  <title name="DIR">moveForward</title>
+                  <next>
+                    <block type="draw_turn" inline="true" uservisible="false">
+                      <title name="DIR">turnRight</title>
+                      <value name="VALUE">
+                        <block type="math_number" uservisible="false">
+                          <title name="NUM">90</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="procedures_callnoreturn">
@@ -44,10 +70,6 @@
               </next>
             </block>
           </next>
-        </block>
-        <block type="procedures_defnoreturn" uservisible="false">
-          <mutation/>
-          <title name="NAME">draw a square</title>
         </block>
       </xml>
     </start_blocks>

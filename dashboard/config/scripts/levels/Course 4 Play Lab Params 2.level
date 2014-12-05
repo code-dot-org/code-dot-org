@@ -111,19 +111,15 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <category name="Math">
-          <block type="math_number">
-            <title name="NUM">100</title>
-          </block>
-          <block type="math_number">
-            <title name="NUM">200</title>
-          </block>
-        </category>
-        <category name="Functions" custom="PROCEDURE">
-          <block type="procedures_callnoreturn">
-            <mutation name="jump"/>
-          </block>
-        </category>
+        <block type="math_number">
+          <title name="NUM">100</title>
+        </block>
+        <block type="math_number">
+          <title name="NUM">200</title>
+        </block>
+        <block type="procedures_callnoreturn">
+          <mutation name="jump"/>
+        </block>
       </xml>
     </toolbox_blocks>
   </blocks>

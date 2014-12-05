@@ -21,7 +21,7 @@
     "ideal": "9",
     "use_contract_editor": "false",
     "embed": "false",
-    "callout_json": "[{\r\n  \"localization_key\": \"edit_function\",\r\n  \"element_id\": \"[block-id='9']>.blocklyIconGroup:eq(-1)\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}\r\n  }\r\n}]",
+    "callout_json": "[{\r\n  \"localization_key\": \"edit_function\",\r\n  \"element_id\": \"#edit_function_qtip > .blocklyIconGroup:eq(-1)\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}\r\n  }\r\n}, {\r\n  \"on\": \"function_editor_opened\",\r\n  \"localization_key\": \"change_here\",\r\n  \"element_id\": \"#change_here_qtip\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}\r\n  }\r\n}]",
     "disable_sharing": "false"
   }
 }]]></config>
@@ -30,14 +30,14 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="procedures_callnoreturn">
+            <block type="procedures_callnoreturn" id="edit_function_qtip">
               <mutation name="draw a square"/>
             </block>
           </next>
         </block>
         <block type="procedures_defnoreturn" uservisible="false">
           <mutation>
-            <description>draws a square that is 100 pixels in size and the size can be modified </description>
+            <description>Draws a square that is 200 pixels in size.</description>
           </mutation>
           <title name="NAME">draw a square</title>
           <statement name="STACK">
@@ -51,7 +51,7 @@
                 <block type="draw_move" inline="true" uservisible="false">
                   <title name="DIR">moveForward</title>
                   <value name="VALUE">
-                    <block type="math_number" uservisible="false">
+                    <block type="math_number" uservisible="false" id="change_here_qtip">
                       <title name="NUM">100</title>
                     </block>
                   </value>
@@ -125,41 +125,6 @@
         <category name="Functions" custom="PROCEDURE">
           <block type="procedures_callnoreturn">
             <mutation name="draw a square"/>
-          </block>
-          <block type="procedures_defnoreturn" uservisible="false">
-            <mutation>
-              <description>draws a square that is 100 pixels in size and the size can be modified </description>
-            </mutation>
-            <title name="NAME">draw a square</title>
-            <statement name="STACK">
-              <block type="controls_repeat_ext" inline="true" uservisible="false">
-                <value name="TIMES">
-                  <block type="math_number" uservisible="false">
-                    <title name="NUM">4</title>
-                  </block>
-                </value>
-                <statement name="DO">
-                  <block type="draw_move" inline="true" uservisible="false">
-                    <title name="DIR">moveForward</title>
-                    <value name="VALUE">
-                      <block type="math_number" uservisible="false">
-                        <title name="NUM">100</title>
-                      </block>
-                    </value>
-                    <next>
-                      <block type="draw_turn" inline="true" uservisible="false">
-                        <title name="DIR">turnLeft</title>
-                        <value name="VALUE">
-                          <block type="math_number" uservisible="false">
-                            <title name="NUM">90</title>
-                          </block>
-                        </value>
-                      </block>
-                    </next>
-                  </block>
-                </statement>
-              </block>
-            </statement>
           </block>
         </category>
       </xml>

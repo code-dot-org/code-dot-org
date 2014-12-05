@@ -29,7 +29,7 @@
       <xml>
         <block type="when_run" movable="false" deletable="false">
           <next>
-            <block type="procedures_callnoreturn">
+            <block type="procedures_callnoreturn" movable="false">
               <mutation name="draw a line of  squares"/>
             </block>
           </next>
@@ -38,32 +38,32 @@
           <mutation/>
           <title name="NAME">draw a line of  squares</title>
           <statement name="STACK">
-            <block type="controls_repeat_ext" inline="true" uservisible="false">
+            <block type="controls_repeat_ext" inline="true" uservisible="false" movable="false">
               <value name="TIMES">
-                <block type="math_number" uservisible="false">
+                <block type="math_number" uservisible="false" movable="false">
                   <title name="NUM">6</title>
                 </block>
               </value>
               <statement name="DO">
-                <block type="controls_repeat_ext" inline="true" uservisible="false">
+                <block type="controls_repeat_ext" inline="true" uservisible="false" movable="false">
                   <value name="TIMES">
-                    <block type="math_number" uservisible="false">
+                    <block type="math_number" uservisible="false" movable="false">
                       <title name="NUM">4</title>
                     </block>
                   </value>
                   <statement name="DO">
-                    <block type="draw_move" inline="true" uservisible="false">
+                    <block type="draw_move" inline="true" uservisible="false" movable="false">
                       <title name="DIR">moveForward</title>
                       <value name="VALUE">
-                        <block type="math_number" uservisible="false">
+                        <block type="math_number" uservisible="false" movable="false">
                           <title name="NUM">40</title>
                         </block>
                       </value>
                       <next>
-                        <block type="draw_turn" inline="true" uservisible="false">
+                        <block type="draw_turn" inline="true" uservisible="false" movable="false">
                           <title name="DIR">turnLeft</title>
                           <value name="VALUE">
-                            <block type="math_number" uservisible="false">
+                            <block type="math_number" uservisible="false" movable="false">
                               <title name="NUM">90</title>
                             </block>
                           </value>
@@ -72,10 +72,10 @@
                     </block>
                   </statement>
                   <next>
-                    <block type="draw_move" inline="true" uservisible="false">
+                    <block type="draw_move" inline="true" uservisible="false" movable="false">
                       <title name="DIR">moveForward</title>
                       <value name="VALUE">
-                        <block type="math_number" uservisible="false">
+                        <block type="math_number" uservisible="false" movable="false">
                           <title name="NUM">40</title>
                         </block>
                       </value>
