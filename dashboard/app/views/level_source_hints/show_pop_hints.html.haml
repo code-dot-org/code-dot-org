@@ -4,7 +4,7 @@
   - if @restriction
     Only showing level sources with hints whose status is:
     = succeed '.' do
-      %b= LevelSourceHint::USER_VISIBLE_NAMES["#{@restriction}"]
+      %strong= LevelSourceHint::USER_VISIBLE_NAMES["#{@restriction}"]
     Switch to:
   - else
     Restrict to hints whose status is:
