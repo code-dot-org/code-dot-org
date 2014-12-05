@@ -16,6 +16,8 @@ namespace :db do
 
   desc 'Perform migration up to latest migration available'
   task :migrate do
+    DataMapper.auto_upgrade!
+
     Sequel::Migrator.run(DB, migrations_dir)
     Rake::Task['db:version'].execute
   end
