@@ -151,6 +151,7 @@ class Studio < Grid
     </value>
   </block>
   <block type="studio_setSpritePosition" />
+  <block type="studio_setSpriteXY" />
   <block type="studio_throw" />
   <block type="studio_makeProjectile" />
   <block type="studio_setSpriteSpeed" />

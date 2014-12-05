@@ -580,6 +580,48 @@ exports.install = function(blockly, blockInstallOptions) {
       name: 'setSpritePosition'});
   };
 
+  blockly.Blocks.studio_setSpriteXY = {
+    // Block for jumping a sprite to specific XY location.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.00, 0.74);
+      if (spriteCount > 1) {
+        this.appendValueInput('SPRITE')
+          .setCheck('Number')
+          .appendTitle(msg.moveSpriteN({spriteIndex: ''}));
+      } else {
+        this.appendDummyInput()
+          .appendTitle(msg.setSprite());
+      }
+      this.appendDummyInput()
+        .appendTitle('to');
+      this.appendValueInput('XPOS')
+        .setCheck('Number');
+      this.appendDummyInput()
+        .appendTitle('x');
+      this.appendValueInput('YPOS')
+        .setCheck('Number');
+      this.appendDummyInput()
+        .appendTitle('y');
+      this.setPreviousStatement(true);
+      this.setInputsInline(true);
+      this.setNextStatement(true);
+    }
+  };
+
+  generator.studio_setSpriteXY = function() {
+    var spriteParam = getSpriteIndex(this);
+    var xParam = Blockly.JavaScript.valueToCode(this, 'XPOS',
+        Blockly.JavaScript.ORDER_NONE) || '0';
+    var yParam = Blockly.JavaScript.valueToCode(this, 'YPOS',
+        Blockly.JavaScript.ORDER_NONE) || '0';
+    return 'Studio.setSpriteXY(\'block_id_' + this.id +
+      '\', ' +
+      spriteParam + ', ' +
+      xParam + ', ' +
+      yParam + ');\n';
+  };
+    
   var SimpleMove = {
     DIRECTION_CONFIGS: {
       West: {

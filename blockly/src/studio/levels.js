@@ -1316,6 +1316,7 @@ levels.full_sandbox =  {
                         <value name="TEXT"><block type="text"></block> \
                         </value></block>' +
                         blockOfType('studio_setSpritePosition') +
+                        blockOfType('studio_setSpriteXY') +
                         blockOfType('studio_throw') +
                         blockOfType('studio_makeProjectile') +
                         blockOfType('studio_setSpriteSpeed') +
