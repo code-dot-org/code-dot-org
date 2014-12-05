@@ -1,7 +1,5 @@
 Sequel.migration do
   up do
-    drop_table?(:hoc_activity)
-
     create_table(:hoc_activity, charset:'utf8') do
       primary_key :id
       String :session, unique:true, null:false, index:true, size:50
