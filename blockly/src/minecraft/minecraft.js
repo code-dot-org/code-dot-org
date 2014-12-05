@@ -83,13 +83,6 @@ Minecraft.init = function(config) {
   };
 
   config.afterInject = function() {
-    var svg = document.getElementById('svgMinecraft');
-    if (!svg) {
-      throw "something bad happened";
-    }
-    svg.setAttribute('width', CANVAS_WIDTH);
-    svg.setAttribute('height', CANVAS_HEIGHT);
-
     Blockly.BROKEN_CONTROL_POINTS = false; // necessary hack?
     // Add to reserved word list: API, local variables in execution environment
     // (execute) and the infinite loop detection function.
