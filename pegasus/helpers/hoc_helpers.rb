@@ -31,7 +31,6 @@ def session_status_for_row(row)
 end
 
 def set_hour_of_code_cookie_for_row(row)
-  puts "set_hour_of_code_cookie_for_row '#{row[:session]}'"
   response.set_cookie('hour_of_code', {value:row[:session], domain:'.code.org', path:'/api/hour/'})
 end
 
@@ -39,10 +38,10 @@ def complete_tutorial(tutorial={})
   unless settings.read_only
     row = DB[:hoc_activity].where(session:request.cookies['hour_of_code']).first
     if row
-      DB[:hoc_activity].update(
+      DB[:hoc_activity].where(id:row[:id]).update(
         finished_at:DateTime.now,
         finished_ip:request.ip,
-      ).where(id:row[:id])
+      )
     else
       row = create_session_row(
         referer:request.host_with_port,
@@ -63,11 +62,11 @@ end
 def complete_tutorial_pixel(tutorial={})
   unless settings.read_only
     row = DB[:hoc_activity].where(session:request.cookies['hour_of_code']).first
-    if row && row[:pixel_finished_at] && !row[:finished_at]
-      DB[:hoc_activity].update(
+    if row && !row[:pixel_finished_at] && !row[:finished_at]
+      DB[:hoc_activity].where(id:row[:id]).update(
         pixel_finished_at:DateTime.now,
         pixel_finished_ip:request.ip,
-      ).where(id:row[:id])
+      )
     else
       row = create_session_row(
         referer:request.host_with_port,
@@ -103,10 +102,10 @@ def launch_tutorial_pixel(tutorial)
   unless settings.read_only
     row = DB[:hoc_activity].where(session:request.cookies['hour_of_code']).first
     if row && !row[:pixel_started_at] && !row[:pixel_finished_at] && !row[:finished_at]
-      DB[:hoc_activity].update(
+      DB[:hoc_activity].where(id:row[:id]).update(
         pixel_started_at:DateTime.now,
         pixel_started_ip:request.ip,
-      ).where(id:row[:id])
+      )
     else
       row = create_session_row(
         referer:request.host_with_port,
