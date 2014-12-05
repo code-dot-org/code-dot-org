@@ -21,7 +21,9 @@
     "instructions": "Ah, the for loop makes this much easier! All the code you need is there, take a look at how it is put together then click \"Run\" to see how it works. ",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "maze_data": null
+    "maze_data": null,
+    "callout_json": "[\r\n  {\"localization_key\": \"run\", \"element_id\": \"#runButton\"}\r\n]",
+    "video_key": "C4_for_loops"
   }
 }]]></config>
   <blocks>
@@ -29,34 +31,34 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_for" inline="true" deletable="false" movable="false" editable="false">
+            <block type="controls_for" inline="true" deletable="true" movable="true" editable="true">
               <title name="VAR">counter</title>
               <value name="FROM">
-                <block type="math_number" deletable="false" movable="false" editable="false">
+                <block type="math_number" deletable="true" movable="true" editable="true">
                   <title name="NUM">1</title>
                 </block>
               </value>
               <value name="TO">
-                <block type="math_number" deletable="false" movable="false" editable="false">
+                <block type="math_number" deletable="true" movable="true" editable="true">
                   <title name="NUM">5</title>
                 </block>
               </value>
               <value name="BY">
-                <block type="math_number" deletable="false" movable="false" editable="false">
+                <block type="math_number" deletable="true" movable="true" editable="true">
                   <title name="NUM">1</title>
                 </block>
               </value>
               <statement name="DO">
-                <block type="maze_moveForward">
+                <block type="maze_moveForward" deletable="false">
                   <next>
-                    <block type="controls_repeat_ext" inline="true">
+                    <block type="controls_repeat_ext" inline="true" deletable="false">
                       <value name="TIMES">
-                        <block type="variables_get">
+                        <block type="variables_get" deletable="false">
                           <title name="VAR">counter</title>
                         </block>
                       </value>
                       <statement name="DO">
-                        <block type="maze_nectar"/>
+                        <block type="maze_nectar" deletable="false"/>
                       </statement>
                     </block>
                   </next>

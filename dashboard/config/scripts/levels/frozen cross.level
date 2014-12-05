@@ -20,7 +20,7 @@
     "use_modal_function_editor": "false",
     "ideal": "5",
     "use_contract_editor": "false",
-    "callout_json": "[\r\n  {\"localization_key\": \"repeat_blocks\", \"element_id\": \"#repeat_toolbox_qtip\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}}\r\n  }\r\n]",
+    "callout_json": "[\r\n  {\"localization_key\": \"repeat_blocks_1\", \"element_id\": \"#repeat_toolbox_qtip1\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}}\r\n  },\r\n  {\"localization_key\": \"repeat_blocks_2\", \"element_id\": \"#repeat_toolbox_qtip2\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top left\", \"at\": \"top left\", \"adjust\": {\"x\": 22, \"y\":36}}}\r\n  }\r\n]",
     "embed": "false",
     "disable_sharing": "false"
   }
@@ -28,7 +28,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
+        <block type="when_run" deletable="false" movable="false" id="repeat_toolbox_qtip2">
           <next>
             <block type="draw_move_by_constant_dropdown" deletable="false" editable="false">
               <title name="DIR">moveForward</title>
@@ -68,7 +68,7 @@
           <title name="DIR">turnLeft</title>
           <title name="VALUE" config="45,60,90,120,180">90</title>
         </block>
-        <block type="controls_repeat_dropdown" id="repeat_toolbox_qtip">
+        <block type="controls_repeat_dropdown" id="repeat_toolbox_qtip1">
           <title name="TIMES" config="3-10">4</title>
         </block>
       </xml>

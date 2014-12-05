@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "I've put the code for drawing a triangle inside a for loop that counts from 50 to 100 by 10. What happens if you use the \"counter\" variable to control the length of the sides?",
+    "instructions": "I've put the code for drawing a triangle inside a for loop that counts from 50 to 100 by 10. Take a look at how I built the code then click on \"Run\" when you are ready to see it in action. ",
     "x": "150",
     "y": "250",
     "start_direction": "90",
@@ -20,7 +20,8 @@
     "embed": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "impressive": "false"
+    "impressive": "false",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
@@ -55,6 +56,11 @@
                   <statement name="DO">
                     <block type="draw_move" inline="true">
                       <title name="DIR">moveForward</title>
+                      <value name="VALUE">
+                        <block type="variables_get">
+                          <title name="VAR">counter</title>
+                        </block>
+                      </value>
                       <next>
                         <block type="draw_turn" inline="true">
                           <title name="DIR">turnLeft</title>
@@ -76,51 +82,7 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="draw_move" inline="true">
-          <title name="DIR">moveForward</title>
-          <value name="VALUE">
-            <block type="math_number">
-              <title name="NUM">100</title>
-            </block>
-          </value>
-        </block>
-        <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-            <block type="math_number">
-              <title name="NUM">90</title>
-            </block>
-          </value>
-        </block>
-        <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"/>
-          <value name="FROM">
-            <block type="math_number">
-              <title name="NUM">1</title>
-            </block>
-          </value>
-          <value name="TO">
-            <block type="math_number">
-              <title name="NUM">100</title>
-            </block>
-          </value>
-          <value name="BY">
-            <block type="math_number">
-              <title name="NUM">10</title>
-            </block>
-          </value>
-        </block>
-        <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-            <block type="math_number">
-              <title name="NUM">???</title>
-            </block>
-          </value>
-        </block>
-        <block type="variables_get">
-          <title name="VAR">counter</title>
-        </block>
-      </xml>
+</xml>
     </toolbox_blocks>
     <required_blocks>
       <xml>
