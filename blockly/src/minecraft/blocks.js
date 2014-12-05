@@ -175,16 +175,14 @@ exports.install = function(blockly, blockInstallOptions) {
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
         .appendTitle('set block at');
-      this.appendValueInput('VALUE_X');
-      this.appendDummyInput()
-        .appendTitle(',');
-      this.appendValueInput('VALUE_Y');
-      this.appendDummyInput()
-        .appendTitle(',');
-      this.appendValueInput('VALUE_Z');
-      this.appendDummyInput()
-        .appendTitle('to');
-      this.appendValueInput('VALUE');
+      this.appendValueInput('VALUE_X')
+        .appendTitle('x');
+      this.appendValueInput('VALUE_Y')
+        .appendTitle('y');
+      this.appendValueInput('VALUE_Z')
+        .appendTitle('z');
+      this.appendValueInput('VALUE')
+        .appendTitle('type');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip('set block');
