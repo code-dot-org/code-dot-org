@@ -1,0 +1,17 @@
+title 'Make your Own Minecraft'
+description_short "Make your own Minecraft-like game!"
+description "Make your own Minecraft-like game!"
+hidden 'true'
+
+stage 'Minecraft'
+skin 'minecraft'
+level 'blockly:Minecraft:minecraft1'
+level 'blockly:Minecraft:minecraft2'
+level 'blockly:Minecraft:minecraft3'
+level 'blockly:Minecraft:minecraft4'
+level 'blockly:Minecraft:minecraft5'
+level 'blockly:Minecraft:minecraft6'
+level 'blockly:Minecraft:minecraft7'
+level 'blockly:Minecraft:minecraft8'
+level 'blockly:Minecraft:minecraft9'
+level 'blockly:Minecraft:minecraft10'
