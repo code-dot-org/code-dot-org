@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141124180534) do
+ActiveRecord::Schema.define(version: 20141204214536) do
 
   create_table "activities", force: true do |t|
     t.integer  "user_id"
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20141124180534) do
     t.datetime "updated_at"
     t.integer  "script_level_id"
     t.text     "qtip_config"
+    t.string   "on"
   end
 
   create_table "concepts", force: true do |t|
@@ -386,6 +387,7 @@ ActiveRecord::Schema.define(version: 20141124180534) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   add_index "users", ["teacher_bonus_prize_id"], name: "index_users_on_teacher_bonus_prize_id", unique: true, using: :btree
   add_index "users", ["teacher_prize_id"], name: "index_users_on_teacher_prize_id", unique: true, using: :btree
+  add_index "users", ["unconfirmed_email"], name: "index_users_on_unconfirmed_email", using: :btree
   add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
   create_table "videos", force: true do |t|
