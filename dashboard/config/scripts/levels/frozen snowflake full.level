@@ -29,7 +29,7 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="create_a_snowflake_branch" deletable="false" editable="false">
+            <block type="create_a_snowflake_branch" editable="false">
               <next>
                 <block type="draw_turn_by_constant_dropdown">
                   <title name="DIR">turnRight</title>

@@ -29,7 +29,7 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="create_a_circle" deletable="false" editable="false">
+            <block type="create_a_circle" editable="false">
               <next>
                 <block type="jump_by_constant_dropdown">
                   <title name="DIR">jumpForward</title>

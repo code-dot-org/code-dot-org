@@ -22,7 +22,8 @@
     "ideal": "6",
     "embed": "false",
     "disable_sharing": "false",
-    "callout_json": "[\r\n  {\"localization_key\": \"replace_questions\", \"element_id\": \"#repeat_block_qtip > .blocklyEditableText\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}}\r\n  }\r\n]"
+    "callout_json": "[\r\n  {\"localization_key\": \"replace_questions\", \"element_id\": \"#repeat_block_qtip > .blocklyEditableText\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}}\r\n  }\r\n]",
+    "shapeways_url": "https://www.shapeways.com/model/2925794/"
   }
 }]]></config>
   <blocks>

@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Take a look at the code, can you see how the \"set length\" block and \"length\" block works together? Click on \"Run\" to see it in action. ",
+    "instructions": "Take a look at this code. Can you see how the \"set length\" block and \"length\" block works together? Click on \"Run\" to see it in action. ",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -88,6 +88,9 @@
         </block>
       </xml>
     </start_blocks>
+    <toolbox_blocks>
+      <xml/>
+    </toolbox_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

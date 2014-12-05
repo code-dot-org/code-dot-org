@@ -21,66 +21,90 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "You don't have to write any code, just play the game! Who can collect the most flags? \r\nUse the down arrow to control the Dog. Press \"Finish\" when you're done playing.",
+    "instructions": "You don't have to write any code, just hit \"run\" to play the game! In this game, you're the Dog who is trying to collect more flags than the Cat. Use the down arrow to control the Dog. Press \"Finish\" when you're done playing.",
     "predraw_blocks": "<xml><block type=\"studio_whenArrow\" movable=\"false\"><title name=\"VALUE\">right</title><next><block type=\"studio_moveDistance\" movable=\"false\" editable=\"false\"><title name=\"SPRITE\">0</title><title name=\"DIR\">2</title><title name=\"DISTANCE\">25</title></block></next></block><block type=\"studio_repeatForever\"><statement name=\"DO\"><block type=\"studio_moveDistance\"><title name=\"SPRITE\">1</title><title name=\"DIR\">1</title><title name=\"DISTANCE\">25</title><next><block type=\"studio_moveDistance\"><title name=\"SPRITE\">1</title><title name=\"DIR\">4</title><title name=\"DISTANCE\">25</title></block></next></block></statement></block></xml>",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "coordinate_grid_background": "false",
-    "embed": "true",
+    "embed": "false",
     "protaganist_sprite_index": "2",
-    "maze_data": null
+    "disable_sharing": "true",
+    "maze_data": null,
+    "video_key": "C4_variables"
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="studio_whenArrow">
+        <block type="when_run" movable="false">
+          <next>
+            <block type="variables_set" inline="false" movable="false">
+              <title name="VAR">dog_speed</title>
+              <value name="VALUE" deletable="false">
+                <block type="math_number_dropdown" movable="false" editable="false">
+                  <title name="NUM" config="1">1</title>
+                </block>
+              </value>
+              <next>
+                <block type="variables_set" inline="false" movable="false">
+                  <title name="VAR">cat_speed</title>
+                  <value name="VALUE">
+                    <block type="math_number_dropdown" movable="false" editable="false">
+                      <title name="NUM" config="3">3</title>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow" movable="false">
           <title name="VALUE">down</title>
           <next>
-            <block type="studio_move">
+            <block type="studio_move" movable="false">
               <title name="SPRITE">0</title>
               <title name="DIR">4</title>
             </block>
           </next>
         </block>
-        <block type="studio_whenArrow">
+        <block type="studio_whenArrow" movable="false">
           <title name="VALUE">up</title>
           <next>
-            <block type="studio_move">
+            <block type="studio_move" movable="false">
               <title name="SPRITE">0</title>
               <title name="DIR">1</title>
             </block>
           </next>
         </block>
-        <block type="studio_repeatForever">
+        <block type="studio_repeatForever" uservisible="false">
           <statement name="DO">
-            <block type="studio_move">
+            <block type="studio_move" uservisible="false">
               <title name="SPRITE">1</title>
               <title name="DIR">4</title>
             </block>
           </statement>
         </block>
-        <block type="procedures_defnoreturn">
+        <block type="procedures_defnoreturn" uservisible="false">
           <mutation/>
           <title name="NAME">set score</title>
           <statement name="STACK">
-            <block type="studio_setScoreText" inline="true">
+            <block type="studio_setScoreText" inline="true" uservisible="false">
               <value name="TEXT">
-                <block type="text_join" inline="false">
+                <block type="text_join" inline="false" uservisible="false">
                   <mutation items="3"/>
                   <value name="ADD0">
-                    <block type="variables_get">
+                    <block type="variables_get" uservisible="false">
                       <title name="VAR">dog_score</title>
                     </block>
                   </value>
                   <value name="ADD1">
-                    <block type="text">
+                    <block type="text" uservisible="false">
                       <title name="TEXT"> -score- </title>
                     </block>
                   </value>
                   <value name="ADD2">
-                    <block type="variables_get">
+                    <block type="variables_get" uservisible="false">
                       <title name="VAR">cat_score</title>
                     </block>
                   </value>
@@ -168,25 +192,123 @@
                               <title name="SPRITE">1</title>
                               <title name="VALUE">"cat"</title>
                               <next>
-                                <block type="studio_setSpritePosition" uservisible="false">
-                                  <title name="SPRITE">0</title>
-                                  <title name="VALUE">7</title>
+                                <block type="studio_setSpriteSpeed" uservisible="false">
+                                  <title name="SPRITE">1</title>
+                                  <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
                                   <next>
-                                    <block type="studio_setSpritePosition" uservisible="false">
-                                      <title name="SPRITE">1</title>
-                                      <title name="VALUE">9</title>
-                                      <next>
+                                    <block type="controls_if" inline="false" uservisible="false">
+                                      <mutation elseif="4" else="1"/>
+                                      <value name="IF0">
+                                        <block type="logic_compare" inline="true" uservisible="false">
+                                          <title name="OP">EQ</title>
+                                          <value name="A">
+                                            <block type="variables_get" uservisible="false">
+                                              <title name="VAR">dog_speed</title>
+                                            </block>
+                                          </value>
+                                          <value name="B">
+                                            <block type="math_number" uservisible="false">
+                                              <title name="NUM">1</title>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </value>
+                                      <statement name="DO0">
+                                        <block type="studio_setSpriteSpeed" uservisible="false">
+                                          <title name="SPRITE">0</title>
+                                          <title name="VALUE">Studio.SpriteSpeed.VERY_SLOW</title>
+                                        </block>
+                                      </statement>
+                                      <value name="IF1">
+                                        <block type="logic_compare" inline="true" uservisible="false">
+                                          <title name="OP">EQ</title>
+                                          <value name="A">
+                                            <block type="variables_get" uservisible="false">
+                                              <title name="VAR">dog_speed</title>
+                                            </block>
+                                          </value>
+                                          <value name="B">
+                                            <block type="math_number" uservisible="false">
+                                              <title name="NUM">1</title>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </value>
+                                      <statement name="DO1">
                                         <block type="studio_setSpriteSpeed" uservisible="false">
                                           <title name="SPRITE">0</title>
                                           <title name="VALUE">Studio.SpriteSpeed.SLOW</title>
-                                          <next>
-                                            <block type="studio_setSpriteSpeed" uservisible="false">
-                                              <title name="SPRITE">1</title>
-                                              <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
-                                            </block>
-                                          </next>
                                         </block>
-                                      </next>
+                                      </statement>
+                                      <value name="IF2">
+                                        <block type="logic_compare" inline="true" uservisible="false">
+                                          <title name="OP">EQ</title>
+                                          <value name="A">
+                                            <block type="variables_get" uservisible="false">
+                                              <title name="VAR">dog_speed</title>
+                                            </block>
+                                          </value>
+                                          <value name="B">
+                                            <block type="math_number" uservisible="false">
+                                              <title name="NUM">2</title>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </value>
+                                      <statement name="DO2">
+                                        <block type="studio_setSpriteSpeed" uservisible="false">
+                                          <title name="SPRITE">0</title>
+                                          <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
+                                        </block>
+                                      </statement>
+                                      <value name="IF3">
+                                        <block type="logic_compare" inline="true" uservisible="false">
+                                          <title name="OP">EQ</title>
+                                          <value name="A">
+                                            <block type="variables_get" uservisible="false">
+                                              <title name="VAR">dog_speed</title>
+                                            </block>
+                                          </value>
+                                          <value name="B">
+                                            <block type="math_number" uservisible="false">
+                                              <title name="NUM">3</title>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </value>
+                                      <statement name="DO3">
+                                        <block type="studio_setSpriteSpeed" uservisible="false">
+                                          <title name="SPRITE">0</title>
+                                          <title name="VALUE">Studio.SpriteSpeed.FAST</title>
+                                        </block>
+                                      </statement>
+                                      <value name="IF4">
+                                        <block type="logic_compare" inline="true" uservisible="false">
+                                          <title name="OP">EQ</title>
+                                          <value name="A">
+                                            <block type="variables_get" uservisible="false">
+                                              <title name="VAR">dog_speed</title>
+                                            </block>
+                                          </value>
+                                          <value name="B">
+                                            <block type="math_number" uservisible="false">
+                                              <title name="NUM">4</title>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </value>
+                                      <statement name="DO4">
+                                        <block type="studio_setSpriteSpeed" uservisible="false">
+                                          <title name="SPRITE">0</title>
+                                          <title name="VALUE">Studio.SpriteSpeed.VERY_FAST</title>
+                                        </block>
+                                      </statement>
+                                      <statement name="ELSE">
+                                        <block type="studio_setSpriteSpeed" uservisible="false">
+                                          <title name="SPRITE">0</title>
+                                          <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
+                                        </block>
+                                      </statement>
                                     </block>
                                   </next>
                                 </block>
