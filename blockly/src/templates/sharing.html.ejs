@@ -49,7 +49,7 @@
         <img src='<%= BlocklyApps.assetUrl("media/phone_purple.png") %>' />
       </a>
     <% } -%>
-    <% if (options.level.shapewaysUrl && !options.onMainPage) { -%>
+    <% if (options.level.shapewaysUrl && !options.onMainPage && options.sendToPhone) { -%>
       <a id="sharing-shapeways" href="" onClick="return false;">
         <img src='<%= BlocklyApps.assetUrl("media/shapeways_purple.png") %>' />
       </a>
