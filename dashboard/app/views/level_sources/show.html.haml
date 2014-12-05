@@ -19,14 +19,14 @@ fjs.parentNode.insertBefore(js, fjs);
     = tag('meta', :property => 'og:type', :content => 'article')
     = tag('meta', :property => 'og:title', :content => t('share_code.check_out_what_i_made'))
     = tag('meta', :property => 'og:description', :content => t('share_code.og_description'))
-    = tag('meta', :property => 'og:image', :content => show_image(:id => @level_source_id))
+    = tag('meta', :property => 'og:image', :content => meta_image_url(level_source: @level_source))
     = tag('meta', :property => 'article:publisher', :content => 'https://www.facebook.com/Code.org')
     = tag('meta', :property => 'og:url', :content => request.original_url)
     = tag('meta', :name => 'twitter:title', :content => t('share_code.check_out_what_i_made'))
     = tag('meta', :name => 'twitter:description', :content => t('share_code.og_description'))
     = tag('meta', :name => 'twitter:site', :content => '@codeorg')
     = tag('meta', :name => 'twitter:card', :content => "photo")
-    = tag('meta', :name => 'twitter:image', :content => show_image(:id => @level_source_id))
+    = tag('meta', :name => 'twitter:image', :content => meta_image_url(level_source: @level_source))
     = tag('meta', :name => 'twitter:url', :content => request.original_url)
 
     - if @game.app == Game::ARTIST

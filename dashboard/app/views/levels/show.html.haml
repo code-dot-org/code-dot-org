@@ -1,7 +1,7 @@
 - @page_title = level_title
 - content_for :head do
   - if @game.share_mobile_fullscreen?
-    = tag('meta', :property => 'og:image', :content => show_image(:app => @game.app))
+    = tag('meta', :property => 'og:image', :content => meta_image_url(:app => @game.app))
   - if @game.app == 'flappy'
     = tag 'meta', :name => 'description', :content => "Code your own Flappy game"
 

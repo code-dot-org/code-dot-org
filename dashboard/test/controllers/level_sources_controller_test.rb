@@ -78,13 +78,13 @@ class LevelSourcesControllerTest < ActionController::TestCase
   end
 
   test 'routing' do
-    assert_routing({ path: '/u/1', method: :get },
+    assert_routing({ path: '/c/1', method: :get },
                    { controller: 'level_sources', action: 'show', id: '1' })
-    assert_routing({ path: '/u/1/edit', method: :get },
+    assert_routing({ path: '/c/1/edit', method: :get },
                    { controller: 'level_sources', action: 'edit', id: '1' })
-    assert_routing({ path: '/u/1/original_image', method: :get }, 
+    assert_routing({ path: '/c/1/original_image', method: :get }, 
                    {controller: 'level_sources', action: 'original_image', id: '1' })
-    assert_routing({ path: '/u/1/generate_image', method: :get },
+    assert_routing({ path: '/c/1/generate_image', method: :get },
                    { controller: 'level_sources', action: 'generate_image', id: '1' })
   end
 

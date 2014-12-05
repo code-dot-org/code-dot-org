@@ -18841,7 +18841,8 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   this.functionDefinitionBlock = this.moveToModalBlockSpace_(targetFunctionDefinitionBlock);
   this.populateParamToolbox_();
   goog.dom.getElement("functionNameText").value = functionName;
-  goog.dom.getElement("functionDescriptionText").value = this.functionDefinitionBlock.description_ || ""
+  goog.dom.getElement("functionDescriptionText").value = this.functionDefinitionBlock.description_ || "";
+  Blockly.fireUiEvent(window, "function_editor_opened")
 };
 Blockly.FunctionEditor.prototype.setupUIForBlock_ = function(targetFunctionDefinitionBlock) {
 };
@@ -18950,7 +18951,6 @@ Blockly.FunctionEditor.prototype.show = function() {
   if(Blockly.selected) {
     Blockly.selected.unselect()
   }
-  Blockly.fireUiEvent(window, "function_editor_opened")
 };
 Blockly.FunctionEditor.prototype.isOpen = function() {
   return this.isCreated() && goog.style.isElementShown(this.container_)

@@ -1,51 +1,81 @@
 #!/usr/bin/env ruby
-require 'sequel'
 require_relative '../../../src/env'
+require 'cdo/hip_chat'
 require src_dir 'database'
 
 DB_READONLY = Sequel.connect(CDO.pegasus_db_reader.sub('mysql:', 'mysql2:'))
 
+def add_count_to_hash(hash, key, count)
+  hash[key] = hash.has_key?(key) ? hash[key] + count : count
+end
+
 def analyze_day_fast(date)
-  from_where = "FROM hour_of_activities WHERE updated_on=DATE('#{date.strftime('%Y-%m-%d')}') AND (started=1 OR pixel_started=1)"
+  froms = [
+    "FROM hour_of_activities WHERE updated_on=DATE('#{date.strftime('%Y-%m-%d')}') AND (started=1 OR pixel_started=1)",
+    "FROM hoc_activity WHERE started_at LIKE '#{date.strftime('%Y-%m-%d')} %' OR pixel_started_at LIKE '#{date.strftime('%Y-%m-%d')} %'",
+  ]
+  
+  finished_froms = [
+    "FROM hour_of_activities WHERE updated_on=DATE('#{date.strftime('%Y-%m-%d')}') AND (finished=1 OR pixel_finished=1)",
+    "FROM hoc_activity WHERE finished_at LIKE '#{date.strftime('%Y-%m-%d')} %' OR pixel_finished_at LIKE '#{date.strftime('%Y-%m-%d')} %'",
+  ]
 
-  $log.info 'Tutorials for leaderboards.'
+  HipChat.log "Analyzing by <b>tutorial</b>..." if rack_env?(:production)
   tutorials = {}
-  DB_READONLY.fetch(
-    "SELECT tutorial, COUNT(id) as count #{from_where} AND tutorial IS NOT NULL AND tutorial <> '' GROUP BY tutorial ORDER BY count DESC"
-  ).each do |row|
-    tutorials[row[:tutorial]] = row[:count]
+  froms.each do |from_where|
+    DB_READONLY.fetch(
+      "SELECT tutorial, COUNT(id) as count #{from_where} GROUP BY tutorial ORDER BY count DESC"
+    ).each do |row|
+      next if row[:tutorial].nil_or_empty?
+      add_count_to_hash tutorials, row[:tutorial], row[:count]
+    end
   end
 
-  $log.info 'Countries for leaderboards.'
+  HipChat.log "Analyzing by <b>country</b>..." if rack_env?(:production)
   countries = {}
-  DB_READONLY.fetch(
-    "SELECT country, COUNT(id) as count #{from_where} AND country IS NOT NULL AND country <> '' AND country <> 'Reserved' GROUP BY country ORDER BY count DESC"
-  ).each do |row|
-    countries[row[:country]] = row[:count]
+  froms.each do |from_where|
+    DB_READONLY.fetch(
+      "SELECT country, COUNT(id) as count #{from_where} GROUP BY country ORDER BY count DESC"
+    ).each do |row|
+      row[:country] = 'Other' if row[:country].nil_or_empty? || row[:country] == 'Reserved'
+      add_count_to_hash countries, row[:country], row[:count]
+    end
   end
-
-  $log.info 'States for leaderboards.'
+  
+  HipChat.log 'Analyzing by <b>state</b>...' if rack_env?(:production)
   states = {}
-  DB_READONLY.fetch(
-    "SELECT state, COUNT(id) as count #{from_where} AND state IS NOT NULL AND state <> '' AND state <> 'Reserved' GROUP BY state ORDER BY count DESC"
-  ).each do |row|
-    states[row[:state]] = row[:count]
+  froms.each do |from_where|
+    DB_READONLY.fetch(
+      "SELECT state, COUNT(id) as count #{from_where} GROUP BY state ORDER BY count DESC"
+    ).each do |row|
+      row[:state] = 'Other' if row[:state].nil_or_empty? || row[:state] == 'Reserved'
+      add_count_to_hash states, row[:state], row[:count]
+    end
   end
-
-  $log.info 'Cities for leaderboards.'
+  
+  HipChat.log 'Analyzing by <b>city</b>...' if rack_env?(:production)
   cities = {}
-  DB_READONLY.fetch(
-    "SELECT city, COUNT(id) AS count #{from_where} AND city IS NOT NULL AND city <> '' AND city <> 'Reserved' GROUP BY TRIM(CONCAT(city, ' ', state)) ORDER BY count DESC"
-  ).each do |row|
-    cities[row[:city]] = row[:count]
+  froms.each do |from_where|
+    DB_READONLY.fetch(
+      "SELECT city, COUNT(id) AS count #{from_where} GROUP BY TRIM(CONCAT(city, ' ', state)) ORDER BY count DESC"
+    ).each do |row|
+      row[:city] = 'Other' if row[:city].nil_or_empty? || row[:city] == 'Reserved'
+      add_count_to_hash cities, row[:city], row[:count]
+    end
   end
 
-  $log.info 'Total started.'
-  started = DB_READONLY.fetch("SELECT COUNT(id) as count #{from_where}").first[:count]
+  HipChat.log 'Calculating total started...' if rack_env?(:production)
+  started = 0;
+  froms.each do |from_where|
+    started += DB_READONLY.fetch("SELECT COUNT(id) as count #{from_where}").first[:count]
+  end
 
-  $log.info 'Total finished.'
-  finished = DB_READONLY.fetch("SELECT COUNT(id) as count FROM hour_of_activities WHERE updated_on=DATE('#{date.strftime('%Y-%m-%d')}') AND (finished=1 OR pixel_finished=1)").first[:count]
-
+  HipChat.log 'Calculating total finished...' if rack_env?(:production)
+  finished = 0;
+  finished_froms.each do |from_where|
+    finished += DB_READONLY.fetch("SELECT COUNT(id) as count #{from_where}").first[:count]
+  end
+  
   {
     'started'=>started,
     'finished'=>finished,

@@ -8,7 +8,7 @@
     "skin": "artist",
     "instructions": "Which block do you need to add to get the triangle to sit on top of the square?",
     "is_k1": "false",
-    "skip_instructions_popup": "true",
+    "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "start_direction": "90",
