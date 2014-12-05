@@ -98,7 +98,8 @@ Minecraft.init = function(config) {
     // Adjust visualizationColumn width.
     var visualizationColumn = document.getElementById('visualizationColumn');
     visualizationColumn.style.width = '400px';
-    visualizationColumn.appendChild(document.getElementById('container'));
+    var visualization = document.getElementById('visualization');
+    visualization.appendChild(document.getElementById('container'));
 
     // base's BlocklyApps.resetButtonClick will be called first
     var resetButton = document.getElementById('resetButton');
