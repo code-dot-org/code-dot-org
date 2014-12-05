@@ -21,6 +21,7 @@ class Game < ActiveRecord::Base
   ARTIST = TURTLE = 'turtle' # heh
   FLAPPY = 'flappy'
   BOUNCE = 'bounce'
+  MINECRAFT = 'minecraft'
   PLAYLAB = STUDIO = 'studio'
 
   def self.custom_studio
@@ -49,6 +50,10 @@ class Game < ActiveRecord::Base
 
   def match?
     app == MATCH
+  end
+
+  def minecraft?
+    app == MINECRAFT
   end
 
   def supports_sharing?

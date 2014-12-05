@@ -5,6 +5,13 @@
 - embed = local[:embed] || @embed
 - level['showFinish'] = local[:embed]
 
+- if @game.minecraft?
+  #container{width:"400", height:"400"}
+    #crosshair
+      %img{src:"https://s3.amazonaws.com/cdo-dist/cdo-voxel/crosshair4.png"}
+
+  %script{type:"text/javascript", src:"https://s3.amazonaws.com/cdo-dist/cdo-voxel/bundlev2.js"}
+
 -if local[:embed]
   #title
     %h4{style: 'margin-left: auto; margin-right: auto; max-width: 800px;'}!= level['instructions']

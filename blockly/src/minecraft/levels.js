@@ -28,6 +28,7 @@ module.exports = {
     ),
     startBlocks: '',
     requiredBlocks: '',
+    minWorkspaceHeight: 1800,
     freePlay: false
   },
   // Level builder defaults
