@@ -9,7 +9,7 @@
     "maze": "[[0,0,0,2,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,2,0,0,0,0],[0,0,0,3,0,0,0,0],[0,0,0,4,0,0,0,0],[0,0,0,5,0,0,0,0],[0,0,0,6,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "instructions": "Can you help the Bee collect the rest of the honey using counter loop? ",
+    "instructions": "Can you help the Bee collect the rest of the honey using this for loop? ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -19,7 +19,8 @@
     "start_direction": "2",
     "step_mode": "0",
     "nectar_goal": "21",
-    "flower_type": "redWithNectar"
+    "flower_type": "redWithNectar",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
@@ -49,8 +50,8 @@
                   <next>
                     <block type="controls_repeat_ext" inline="true">
                       <value name="TIMES">
-                        <block type="math_number">
-                          <title name="NUM">???</title>
+                        <block type="variables_get">
+                          <title name="VAR">counter</title>
                         </block>
                       </value>
                       <statement name="DO">
@@ -69,9 +70,6 @@
       <xml>
         <block type="math_number">
           <title name="NUM">6</title>
-        </block>
-        <block type="variables_get">
-          <title name="VAR">counter</title>
         </block>
       </xml>
     </toolbox_blocks>

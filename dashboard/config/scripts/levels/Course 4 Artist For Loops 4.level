@@ -21,7 +21,8 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "impressive": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "callout_json": "[\r\n  {\"localization_key\": \"place_counter_variable\", \"element_id\": \"#place_counter_variable_qtip\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}}\r\n  }\r\n]"
   }
 }]]></config>
   <blocks>
@@ -57,7 +58,7 @@
                     <block type="draw_move" inline="true">
                       <title name="DIR">moveForward</title>
                       <value name="VALUE">
-                        <block type="math_number">
+                        <block type="math_number" id="place_counter_variable_qtip">
                           <title name="NUM">???</title>
                         </block>
                       </value>

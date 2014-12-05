@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "Here's one of the games we were working on earlier. We've added a function called \"score_points\" that takes a parameter \"points.\" Edit the function so that the \"points\" parameter is added to the \"player_points\" variable.",
+    "instructions": "Here's one of the games we were working on earlier. We've added a function called \"score_points\" that takes a parameter \"points.\" Edit the function so that the \"points\" parameter is added to the \"player_points\" variable. Have the Dog score 10 points to move on to the next puzzle. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -30,6 +30,7 @@
     "coordinate_grid_background": "false",
     "open_function_definition": "score_points",
     "embed": "false",
+    "disable_sharing": "false",
     "maze_data": null
   }
 }]]></config>

@@ -21,7 +21,8 @@
     "use_contract_editor": "false",
     "ideal": "8",
     "embed": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "shapeways_url": "https://www.shapeways.com/model/2925886/"
   }
 }]]></config>
   <blocks>
@@ -32,7 +33,7 @@
             <block type="controls_repeat_dropdown" id="repeat_qtip">
               <title name="TIMES" config="3, 5, 10, 20">???</title>
               <statement name="DO">
-                <block type="create_a_circle" deletable="false" editable="false">
+                <block type="create_a_circle" editable="false">
                   <next>
                     <block type="jump_by_constant_dropdown">
                       <title name="DIR">jumpForward</title>

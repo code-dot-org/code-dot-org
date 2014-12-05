@@ -18,9 +18,10 @@
     "flower_type": "redWithNectar",
     "nectar_goal": "15",
     "ideal": "15",
-    "instructions": "Collect all of the nectar from these flowers. Hint: it's ok to use a lot of blocks. In the next puzzle, you'll learn an easier way.",
+    "instructions": "Add the code necessary to make sure the bee collects all the nectar. Look at how much code you need for this puzzle! (We'll learn a simpler way in the next puzzle.)",
     "use_modal_function_editor": "false",
-    "use_contract_editor": "false"
+    "use_contract_editor": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
