@@ -9,7 +9,11 @@ This .md file should only contain information which is specific to Code.org engi
   1. Or in your local repository:
     - `git checkout levelbuilder`
     - `git pull origin levelbuilder` To make sure you're up-to-date.
-    - `git pull origin staging` To fetch and merge `staging` directly into `levelbuilder`.
+    - `git pull origin staging` To fetch and merge `staging` directly into `levelbuilder`. You'll likely get "both modified" merge conflicts in `dashboard/public/blockly-package/*` and for `blockly-core/blockly_compressed.js` and `blockly-core/blockly_uncompressed.js`. We don't want to merge in `staging`'s copies of the `blockly-core` and `blockly` build products because they're out of date and need to be rebuilt immediately anyway. Do this:
+      1. `git checkout --ours dashboard/public/blockly-package blockly-core/blockly_compressed.js blockly-core/blockly_uncompressed.js`
+      1. `git add dashboard/public/blockly-package blockly-core/blockly_compressed.js blockly-core/blockly_uncompressed.js`
+      1. Fix any remaining merge conficts, if any.
+      1. `git commit`
     - `git push`
 1. Wait for levelbuilder to deploy.
 
