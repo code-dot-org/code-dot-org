@@ -88,6 +88,8 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   goog.dom.getElement('functionNameText').value = functionName;
   goog.dom.getElement('functionDescriptionText').value =
       this.functionDefinitionBlock.description_ || '';
+
+  Blockly.fireUiEvent(window, 'function_editor_opened');
 };
 
 /**
@@ -237,7 +239,6 @@ Blockly.FunctionEditor.prototype.show = function() {
   if (Blockly.selected) {
     Blockly.selected.unselect();
   }
-  Blockly.fireUiEvent(window, 'function_editor_opened');
 };
 
 /**

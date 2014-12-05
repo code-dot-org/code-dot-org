@@ -18,7 +18,7 @@
     "nectar_goal": "9",
     "flower_type": "redWithNectar",
     "ideal": "32",
-    "instructions": "Now there are flowers on both sides! Maybe you can use a parameter so that the same function works for flowers on either side. I've added a parameter called \"direction\" to the function. Use the \"left\" and \"right\" variables to control direction.",
+    "instructions": "Now there are flowers on both sides! I've added a parameter called \"direction\" to the function. Use the \"left\" and \"right\" variables to control direction. Fill in the rest of the function definition and then click \"Save and Close.\"",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
     "open_function_definition": "get 3 nectar",

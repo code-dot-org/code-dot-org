@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Hey, look at that! Instead of \"moving forward 100,\" now my \"move\" block is referencing the variable \"length.\" Can you set \"length\" to 150 to draw this new triangle?",
+    "instructions": "Now, it's your turn! Instead of \"moving forward 100,\" the \"move\" block is referencing the variable \"length.\" Can you set \"length\" to 150 to draw this new triangle?",
     "x": "125",
     "y": "250",
     "start_direction": "90",
@@ -20,7 +20,9 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "impressive": "false",
-    "embed": "false"
+    "embed": "false",
+    "disable_sharing": "false",
+    "callout_json": "[{\"localization_key\": \"set_length\", \r\n   \"element_id\": \"#variable_set_qtip > .blocklyPath\", \r\n   \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}\r\n  }\r\n}]"
   }
 }]]></config>
   <blocks>
@@ -28,7 +30,7 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="variables_set" inline="false" deletable="false" movable="false">
+            <block type="variables_set" inline="false" deletable="false" movable="false" id="variable_set_qtip">
               <title name="VAR">length</title>
               <next>
                 <block type="controls_repeat" deletable="false" movable="false" editable="false">
