@@ -6,8 +6,8 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  get '/s/minecraft/stage/1/puzzle/JehkobasFantasy_4.zip', to: redirect('/voxel_textures.zip')
-  get '/levels/JehkobasFantasy_4.zip', to: redirect('/voxel_textures.zip')
+  get '/s/minecraft/stage/1/puzzle/voxel_textures.zip', to: redirect('/voxel_textures.zip')
+  get '/levels/voxel_textures.zip', to: redirect('/voxel_textures.zip')
 
   resources :activity_hints, only: [:update]
   resources :callouts
