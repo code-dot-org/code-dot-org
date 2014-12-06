@@ -17,7 +17,7 @@
   "stringLengthBlockTitle":"merkkijonon pituus (merkkijono)",
   "textBlockTitle":"teksti (merkkijono, koko, väri)",
   "triangleBlockTitle":"kolmio (koko, tyyli, väri)",
-  "underlayBlockTitle":"aluste (alaosa, yläosa)",
+  "underlayBlockTitle":"aluste (alhaalta, ylhäältä)",
   "outline":"ääriviiva",
   "solid":"kiinteä",
   "string":"merkkijono"

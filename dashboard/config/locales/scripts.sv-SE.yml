@@ -227,7 +227,7 @@
           description: Vi kan använda kod för att följa Anna och Elsa när de utforskar
             isens magi och skönhet. Du kommer att skapa snöflingor och mönster genom
             skridskoåkning och skapa ett underbart vinterland som du kan dela med
-            dina vän!
+            dina vänner!
           Artist: Artist
           description_short: Vi kan använda kod för att följa Anna och Elsa när de
             utforskar isens magi och skönhet.
@@ -313,3 +313,13 @@
           description: A selection of Course 4 levels for usability testing.
           Variables: Variabler
           For Loops: For Loops
+        potus:
+          title: special
+          description_short: special
+          description: special
+          Special: Special
+        special:
+          title: special
+          description_short: special
+          description: special
+          Special: Special

@@ -131,7 +131,7 @@
           through a maze using a single command.
         video: C1_moveitmoveit_unplugged
       PlantASeed:
-        title: 'Real-life Algorithms: Plant a Seed'
+        title: 'Les algorithmes : Planter une graine'
         desc: This lesson calls out ways we use algorithms in our daily lives, using
           the act of planting a seed as an example. It also focuses on the bigger
           picture of computer science and how algorithms play an essential part.
@@ -149,7 +149,7 @@
           be instructed to repeat it.
         video: C1_getting_loopy
       RelayProgramming:
-        title: Relay programming
+        title: Les relais
         desc: Students run a relay race, where they dash across the yard to write
           an algorithm based on a "Graph Paper Programming" image. They can only write
           one instruction at a time and if there's an error somewhere, they have to
@@ -179,19 +179,19 @@
           commands to direct their classmates to reproduce a drawing.
         video: C2_graph_paper
       PaperPlanes:
-        title: 'Real-life Algorithms: Paper Planes'
+        title: 'Les algorithmes : Les avions en papier'
         desc: This lesson calls out ways we use algorithms in our daily lives, specifically
           making paper airplanes. This lesson also focuses on the bigger picture of
           computer science and how algorithms play an essential part.
         video: C2_paper_airplanes
       BinaryBracelets:
-        title: Binary Bracelets
+        title: Les bracelets binaires
         desc: Students create bracelets as a binary representations of the first letter
           of their name. Students learn that data can be represented and stored in
           more than one way.
         video: C2_binary_bracelets
       DigitalFootprint:
-        title: Your Digital Footprint
+        title: Votre empreinte numérique
         desc: Teachers introduce to students the idea that putting information about
           themselves online creates a digital footprint or "trail" that has consequences.
         video: C2_digital_footprint

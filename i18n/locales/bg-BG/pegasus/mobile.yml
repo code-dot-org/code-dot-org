@@ -293,7 +293,7 @@ bg-BG:
   carousel_heading_international: Уроци на вашия език
   carousel_heading_domestic: Уроците са на английски
   carousel_heading_beginners: Уроци за начинаещи
-  carousel_heading_javascript: Уроци, които преподават Javascript
+  carousel_heading_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: 'Нямате устройство или интернет? Опитайте "ънплъгд" уроците по компютърни науки'
   carousel_heading_devices: Образователни приложения за телефони и таблети
   carousel_heading_languages: Уроци за други езици за програмиране
@@ -306,7 +306,7 @@ bg-BG:
   more_resources_educators: Повече ресурси за учители и възпитатели
   participants: участници
   teachers_notes: Указания за учители
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: 'Учители: Прочетете важни бележки тук'
   previous: Назад
   next: Напред
   older_systems: Уроци, които работят на по-стари системи
@@ -386,13 +386,13 @@ bg-BG:
   thinkersmithspanish_platformtext: Ънплъгд
   khan_platformtext: Съвременни уеб браузъри
   khanes_platformtext: Съвременни уеб браузъри
-  tynker_platformtext: Modern browsers. (Follow-on course requires $$)
+  tynker_platformtext: Съвременни браузъри. (Започването на курса изисква $$)
   scratch_platformtext: ВСИЧКИ браузъри
   lightbot_platformtext: ВСИЧКИ браузъри и iOS, Android или игрална конзола
   thinkersmith_platformtext: Ънплъгд
   condcards_platformtext: Ънплъгд
   lightbotintl_platformtext: iOS, Android (или уеб браузър)
-  codehs_platformtext: 'Modern browsers. (Follow-on course requires  $$)'
+  codehs_platformtext: Съвременни браузъри. (Започването на курса изисква $$)
   codecademy_platformtext: Съвременни уеб браузъри. iOS, Android приложения
   codecombat_platformtext: Съвременни уеб браузъри
   codemonkey_platformtext: Съвременни уеб браузъри
@@ -429,7 +429,7 @@ bg-BG:
   codehs_shortdescription: Започнете да програмирате с кучето Карел, забавно и визуално въведение в програмирането!
   codecademy_shortdescription: Научете да програмирате с JavaScript в уеб браузър
   codecombat_shortdescription: Победете оргитата, за да научите JavaScript или Python, чрез тази епична игра за програмиране!
-  codemonkey_shortdescription: Students program a monkey to catch bananas.
+  codemonkey_shortdescription: Учениците създават програма за маймуната, за да си вземе банани.
   codeavengers_shortdescription: Научете да програмирате с JavaScript в уеб браузър
   processing_shortdescription: Едночасов урок на езика Processing
   robomind_shortdescription: Писане на код за виртуален робот
@@ -437,12 +437,12 @@ bg-BG:
   quorum_shortdescription: Присъединете се към Мери, която се отправя на екскурзия, за да научи езикът за програмиране Quorum.
   codespark_shortdescription: Foos е забавна, насочена към децата игра за изучаване на програмирането.
   kodable_shortdescription: Забавна игра на iPad за преподаване на понятия от компютърното програмиране
-  tynkerapp_shortdescription: 'Learn to program by solving fun coding puzzles. '
+  tynkerapp_shortdescription: 'Научете се да програмирате чрез решаване на забавни пъзели за кодиране. '
   robomindnl_shortdescription: Писане на код за виртуален робот
   flappy_shortdescription: 'Направете своя собствена игра - Flappy Bird, Shark или Submarine'
   bitsbox_shortdescription: Кодирайте серия от приложения за игра и споделяне, използвайки real Javascript.
   makegameswithus_shortdescription: Направете iPhone игра! Научете се да пишете код, за да научите чудовището си да се движи!
-  touchdevelop_shortdescription: 'Solve puzzles, create games, and learn coding all on your phone. '
+  touchdevelop_shortdescription: 'Решавайте пъзели, създавайте игри и се научете да кодирате на вашия телефон. '
   appinventor_shortdescription: Направете свое приложение! (Само за Android)
   blockly_shortdescription: Изтеглете ZIP файла за да програмирате офлайн
   thinkersmith2_shortdescription: Научете как компютрите използват единици и нули за представяне на информация
@@ -451,7 +451,7 @@ bg-BG:
   frozen_longdescription: Нека да използваме кода, за да се присъединим към Анна и Елза, докато те опознават магията и красотата на леда. Вие ще създадете снежинки и модели в градината на своята зимна приказка, която след това можете да споделите с приятелите си!
   codeorg_longdescription: 'Научете основните понятия на компютърните науки с drag and drop програмиране. Това е като игра, самонасочващи уроци с  видео лекции от Бил Гейтс, Марк Зукерберг, Angry Birds и Plants vs. Zombies. Научете за повторения-цикли, условия и основни алгоритми. Наличен на 34 езика.'
   codeintl_longdescription: 'Научете основните понятия на компютърните науки с drag and drop програмиране. Това е като игра, самонасочващи уроци с  видео лекции от Бил Гейтс, Марк Зукерберг, Angry Birds и Plants vs. Zombies. Научете за повторения-цикли, условия и основни алгоритми. Наличен на 34 езика.'
-  thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubriran como guiarse de modo tal de llevar a cabo tareas especificas sin ser estas discutidas previamente. Este segmento ensena a los estudiantes la conexion entre simbolos y acciones asi como la valiosa habilidad de depuracion.'
+  thinkersmithspanish_longdescription: 'С помощта на предварително  определен "Речник на робота", учениците ще се ръководят по такъв начин, че да изпълнят конкретни задачи, които не са  обсъдени по-рано. Този сегмент учи учениците за връзката между символи и действия, както и ценното умение на отстраняване на грешки.'
   khan_longdescription: Научете основите на програмирането с JavaScript докато създавате забавни рисунки с вашия код. Направете го сами или с класа си!
   khanes_longdescription: Научете основите на програмирането с JavaScript докато създавате забавни рисунки с вашия код. Направете го сами или с класа си!
   tynker_longdescription: 'Изградете свои собствени игри  и ги споделете с приятели! Решете забавни пъзели за кодиране и научете понятия от програмирането на всяко ниво. Персонализирайте  игри с анимационни герои, няколко нива и богата гама от добавки. Направете си игри с реалистична  физика. Вижте кода си като визуални блокове или JavaScript. Вземете  игрите си за iPad и Андроид таблети. Повече от дузина забавни дейности, от които да избирате!'
@@ -471,12 +471,12 @@ bg-BG:
   quorum_longdescription: 'Този урок е достъпен за лица с увредено зрение и работи с  екранен четец. Присъединете се към Мери на турне, в което тя ще се присъедини към биологична лаборатория като програмист и ще научи езикът за програмиране Quorum. Този урок е насочен към ученици  с примерни онлайн дейности.'
   codespark_longdescription: 'С Foos е забавно и за най-малките деца, защото те ще научат по забавен начин програмирането.  Програмата  има сладки геройчета, които трябва да решават пъзели и вдъхват живот на един виртуален свят.  Играта е "без думи", така че всички могат да я играят!'
   kodable_longdescription: Kodable е самонасочваща iPad игра, която въвежда децата на 5 + в основите на програмирането. Наличието на учител или родител е желателно, но не задължително.
-  tynkerapp_longdescription: Learn to program by solving fun coding puzzles. Easily build games and stories using with themed graphics, 10+ game-kits and customizable characters. No Internet connectivity required. You can also access your creations on the web.
+  tynkerapp_longdescription: Научете се да програмирате чрез решаване на забавни пъзели за кодиране. Лесно изграждане на игри и истории чрез използване с тематични графики, 10 + игри – комплекти и адаптивни знаци. Не се изисква Интернет връзка. Можете също да достъпите до вашите творения в Интернет.
   robomindnl_longdescription: 'Учениците изучават основите на програмирането чрез контролиране на техните собствени виртуални роботи. Онлайн курсът е напълно самостоятелен и придружен от кратки презентации, филми, викторини и съвети, за да ви помогнем в упражненията по програмиране. '
   flappy_longdescription: 'Използвайте drag-and-drop програмиране за да направите своя  Flappy  Bird игра и я персонализирайте (Flappy акула, Flappy Санта и др.). Добавете играта на телефона си с едно щракване.'
   bitsbox_longdescription: Персонализирайте вашия собствен виртуален таблет, след което създайте серия от приложения за игра и споделяне. Опростеният пътеводител прави възможно дори за малки деца да програмират на real Javascript, а по-напредналите да продължат напред.
-  makegameswithus_longdescription: Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pokemon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!
-  touchdevelop_longdescription: 'The touch-friendly editor will guide you in creating pixel art, solving the bear puzzle, or making your own jumping bird game. '
+  makegameswithus_longdescription: 'Научете се да кодирате като направите iPhone игра, използвайки чисто нов и предназначен за начинаещи приятелски език за програмиране наречен Swift! Създавайте  Покемон вдъхновяваща екшън игра и чрез писане на код,  научите вашето чудовище на нови движения. Ще научите как да използвате променливи, методи и обекти, за да помогнете да спечели чудовището ви!'
+  touchdevelop_longdescription: 'Насочения към тъч устройства редактор ще ви помогне в създаването на пиксел изкуство, решаването на мечи пъзел или в правенето на своя jumping bird" игра. '
   appinventor_longdescription: Забавни, бързи видео уроци ще ви преведат през изграждането на три прости приложения за вашия андроид телефон или таблет. Предназначен за начинаещи и за експерти. В този Час на кодирането ще се научите да изграждате собствени програми. Представете си възможността да споделите собствените си приложения с вашите приятели! Тези дейности са подходящи индивидуално и за класове.
   blockly_longdescription: 'Имате бавни компютри с бавен (или липсва) достъп до интернет? Изтеглете Blockly уроците, които са предшественик на Code.org уроците - размерът е само 3 MB ZIP  файл и може да бъдат инсталирани на всеки компютър или флаш памет'
   thinkersmith2_longdescription: Учениците ще научават за представяне и съхранение на буквите бинарно, като функциите за включване и изключване. Накрая учениците получават задача да кодират своите инициали и да ги занесат вкъщи.

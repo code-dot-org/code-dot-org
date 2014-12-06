@@ -402,7 +402,7 @@
     none: ترجیح می دهم چواب ندهم
   user_type:
     student: دانش آموز
-    teacher: معلم
+    teacher: دبیر
   footer:
     help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped
       create this tutorial.

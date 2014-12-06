@@ -281,3 +281,13 @@ nl:
           description: Een selectie van cursus 4 puzzels voor gebruiksvriendelijkheidstesten.
           Variables: Variabelen
           For Loops: For-lussen
+        potus:
+          title: special
+          description_short: special
+          description: special
+          Special: Special
+        special:
+          title: special
+          description_short: special
+          description: special
+          Special: Special

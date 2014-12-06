@@ -293,7 +293,7 @@ de-DE:
   carousel_heading_international: Anleitungen in deiner Sprache
   carousel_heading_domestic: Einführungen auf englisch
   carousel_heading_beginners: Einführungen für Anfänger
-  carousel_heading_javascript: Einführungen zu Javascript
+  carousel_heading_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: "Kein Computer oder Internet? Probiere 'Freiluft'-Informatik aus"
   carousel_heading_devices: Einführungen für Telefon und Tablett
   carousel_heading_languages: Einführungen in anderen Sprachen
@@ -306,7 +306,7 @@ de-DE:
   more_resources_educators: Weitere Quellen für Lehrer und Erzieher
   participants: Teilnehmer
   teachers_notes: Anmerkungen des Lehrers
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: 'Lehrer: Lesen Sie hier wichtige Lehrhinweise'
   previous: Zurück
   next: Weiter
   older_systems: Einführungen für ältere Systeme
@@ -386,13 +386,13 @@ de-DE:
   thinkersmithspanish_platformtext: Nicht angeschlossen
   khan_platformtext: Aktuelle Web-Browser
   khanes_platformtext: Aktuelle Web-Browser
-  tynker_platformtext: Modern browsers. (Follow-on course requires $$)
+  tynker_platformtext: Moderne Browser. (Ein Weiterführender Kurs kostet Geld)
   scratch_platformtext: ALLE Browser
   lightbot_platformtext: Alle Browser, iOS, Android oder Spielkonsolen
   thinkersmith_platformtext: Nicht angeschlossen
   condcards_platformtext: ohne Computer
   lightbotintl_platformtext: iOS, Android (odr Internet-Browser)
-  codehs_platformtext: 'Modern browsers. (Follow-on course requires  $$)'
+  codehs_platformtext: Moderne Browser. (Ein Weiterführender Kurs kostet Geld)
   codecademy_platformtext: 'Aktuelle Web-Browser, iOS- und Android-Apps'
   codecombat_platformtext: Aktuelle Web-Browser
   codemonkey_platformtext: Aktuelle Web-Browser
@@ -429,7 +429,7 @@ de-DE:
   codehs_shortdescription: Beginne mit Karel dem Hund zu Programmieren, ein lustiges und visuelles Intro in die Programmierung!
   codecademy_shortdescription: Erlerne JavaScript-Programmierung in einem Web-Browser
   codecombat_shortdescription: Besiege Oger in diesem epischem Programmier-Spiel, um Python oder JavaScript zu lernen!
-  codemonkey_shortdescription: Students program a monkey to catch bananas.
+  codemonkey_shortdescription: Schüler programmieren einen Affen um Bananen zu fangen.
   codeavengers_shortdescription: Erlerne JavaScript-Programmierung in einem Web-Browser
   processing_shortdescription: Eine Stunde, um Computer-Sprachen zu lernen
   robomind_shortdescription: Schreibe ein Programm für einen virtuellen Roboter
@@ -438,12 +438,12 @@ de-DE:
   quorum_shortdescription: Begleite Mary wie sie die Programmiersprache Quorum lernt.
   codespark_shortdescription: '"Foos" ist ein Spiel, das Spass macht und bei dem Kinder das Programmieren lernen.'
   kodable_shortdescription: Ein iPad-Spiel, das Spass macht und Methoden der Programmierung vermittelt
-  tynkerapp_shortdescription: 'Learn to program by solving fun coding puzzles. '
+  tynkerapp_shortdescription: Lerne programmieren durch das lösen von spaßigen Codierungsrätseln.
   robomindnl_shortdescription: Schreibe ein Programm für einen virtuellen Roboter
   flappy_shortdescription: Entwickele Dein eigenes Spiel, z.B. Flappy Bird, Shark oder Submarine
   bitsbox_shortdescription: Nutze Javascript, um Apps zum Spielen und Austauschen zu entwickeln.
   makegameswithus_shortdescription: Entwickele ein iPad-Spiel. Lerne dies durch die Programmierung von Bewegungen Deines Monsters!
-  touchdevelop_shortdescription: 'Solve puzzles, create games, and learn coding all on your phone. '
+  touchdevelop_shortdescription: Löse Rätsel, entwickle Spiele und lerne zu programmieren und das alles auf deinem Smartphone.
   appinventor_shortdescription: Erstelle deine eigene Anwendung! (nur Android)
   blockly_shortdescription: Lade eine ZIP-Datei herunter, um ohne Internet-Verbindung lernen zu können
   thinkersmith2_shortdescription: Lerne, wie Computer mit den Zahlen 1 und 0 Informationen darstellen

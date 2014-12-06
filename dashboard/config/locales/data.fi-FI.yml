@@ -121,7 +121,7 @@
         parameters: Parametrilliset funktiot
     level:
       instructions:
-        maze_2_2: 'Auta minua pyydystämään ilkeä possu. Pinoa muutama "siirry eteenpäin"
+        maze_2_2: 'Auta minua pyydystämään ilkeä possu. Pinoa muutama "liiku eteenpäin"
           -lohko yhteen ja paina "Suorita" -nappia. '
         maze_2_1: Tuo possu kiusaa minua. Auta minua löytämään hänet!
         maze_2_2_5: Seuraa reittiä ja auta minut hölmön possun luo. Vältä TNT-laatikkoa
@@ -134,7 +134,7 @@
         maze_2_7: Auta minua hävittämään tämä paha possu käyttäen pienintä määrää
           lohkoja. Yritä käyttää enemmän, kuin yhtä "toista"-lohkoa.
         maze_2_8: 'Kun lohko on harmaa, se tarkoittaa, ettet voi poistaa sitä. Ratkaise
-          tämä ongelma käyttäen "toista" -lohkoa, joka toistaa 3 kertaa. Koita laittaa
+          tämä tehtävä käyttäen "toista" -lohkoa, joka toistaa 3 kertaa. Koita laittaa
           nämä 3 lohkoa harmaan "toista" -lohkon sisälle: liiku, liiku, käänny.'
         maze_2_9: Noniin, kokeile nyt uutta "toista kunnes" -lohkoa - se toistaa asioita
           niin kauan, kunnes saavutan tuon ärsyttävän possun.
@@ -147,7 +147,7 @@
         maze_2_13: 'Käytä uutta "jos"-lohkoa päättämään, milloin käännyn. Vihje: tarvitset
           vain yhtä lisälohkoa, mutta opettele nyt miten me teimme sen, jotta osaat
           itse seuraavalla kerralla.'
-        maze_2_14: Hyvä! Tämä on ihan kuin edellinen pulma, mutta nyt sinun pitää
+        maze_2_14: Hyvä! Tämä on ihan kuin edellinen tehtävä, mutta nyt sinun pitää
           itse muistaa, miten "jos"-lohkoa ja "toista"-lohkoa käytettiin yhdessä.
         maze_2_15: Tahtoo auringonkukan! Käytä "jos"-lohkoa viedäksesi minut sinne
           käyttäen mahdollisimman pientä määrää lohkoja.
@@ -192,22 +192,23 @@
           kohtaan työtilassa olevaa ohjelmaa.
         turtle_4_3: Selvä! Tässä koodi, jota käytit piirtääksesi kolmion. Voitko lisätä
           "toista" ja "käänny"-lohkot, joilla se muuttuu hienoksi kukkaseksi?
-        turtle_4_4: 'Tässä on sama koodi, kuin edellisessä pulmassa, mutta se kääntyy
+        turtle_4_4: 'Tässä on sama koodi, kuin edellisessä tehtävässä, mutta se kääntyy
           vain 36 astetta kunkin kolmion välillä. Kuinka monta kertaa sitä täytyy
           toistaa? (Vihje: ympyrässä on 360 astetta)'
-        turtle_4_5: 'Tässä on sama koodi, kuin edellisessä pulmassa, mutta se toistuu
+        turtle_4_5: 'Tässä on sama koodi, kuin edellisessä tehtävässä, mutta se toistuu
           tasan 36 kertaa. Kuinka monta astetta pitää kääntyä toistojen välillä? (Vihje:
           ympyrässä on 360 astetta)'
         turtle_4_6: Käyttäen vain kolmea lohkoa, osaatko piirtää neliön, jonka sivu
           on 20 kuvapistettä?
-        turtle_4_7: 'Tässä on koodi edellisestä pulmasta. Voitko toistamalla sitä
+        turtle_4_7: 'Tässä on koodi edellisestä tehtävästä. Voitko toistamalla sitä
           saada aikaan kymmenen vierekkäistä neliötä niin, että ne muodostavat tikapuut?
           Vihje: tarvitset vain kaksi lohkoa lisää.'
-        turtle_4_8: Tässä on ratkaisu edelliseen pulmaan. Saatko kuvan valmiiksi lisäämällä
-          vain kaksi uutta lohkoa?
-        turtle_4_9: Tässä on edellisen pulman vastaus. Kuinka monta astetta sen tulisi
-          kääntyä, jotta kuva tulisi valmiiksi? (Joudut ehkä arvaamaan muutaman kerran)
-        turtle_4_10: Tässä on edellisen pulman vastaus. Kuinka monta toistoa siinä
+        turtle_4_8: Tässä on ratkaisu edelliseen tehtävään. Saatko kuvan valmiiksi
+          lisäämällä vain kaksi uutta lohkoa?
+        turtle_4_9: Tässä on edellisen tehtävän vastaus. Kuinka monta astetta sen
+          tulisi kääntyä, jotta kuva tulisi valmiiksi? (Joudut ehkä arvaamaan muutaman
+          kerran)
+        turtle_4_10: Tässä on edellisen tehtävän vastaus. Kuinka monta toistoa siinä
           täytyy olla, jotta kuva valmistuu?
         turtle_4_11: Kokeile muutaa numeroita "käänny" ja "toista"-lohkoissa saadaksesi
           aikaan eri kuvioita. Voit toki tehdä kokeita muullakin osalla koodista ja
@@ -215,9 +216,9 @@
         maze_karel_1_1: Hei! Minä olen maanviljeliä. Tarvitsen apua maan tasoittamisessa,
           jotta voin istuttaa siihen kasveja. Siirrä minut maakasan luo ja käytä "poista"-lohkoa
           poistaaksesi sen.
-        maze_karel_1_2: Seuraavaksi siirrä minut kuopan luo ja täytä se KAHDELLA lapiollisella
-          multaa, käyttäen "täytä"-lohkoa.
-        maze_karel_1_3: Siirrä minut maakasan luo ja kerro minulle, montako lapiollista
+        maze_karel_1_2: Seuraavaksi liikuta minut kuopan luo ja täytä se KAHDELLA
+          lapiollisella multaa, käyttäen "täytä"-lohkoa.
+        maze_karel_1_3: Liikuta minut maakasan luo ja kerro minulle, montako lapiollista
           poistaa. Käytä mahdollisimman pientä määrää lohkoja.
         maze_karel_1_4: 'Pystytkö auttamaan minua poistamaan kaikki neljä kasaa? Vihje:
           käytä toistolohkoa jos voit.'
@@ -290,14 +291,15 @@
           funktion sisään.
         maze_karel_2_8: Käytä nyt tätä uutta funktiota "vältä lehmä ja poista 1" ja
           auta minua poistamaan kaikki kasat.
-        maze_karel_2_9: Noniin! Tässä on funktio, joka poistaa 4 eri maakasaa. Kokeile
+        maze_karel_2_9: No niin! Tässä on funktio, joka poistaa 4 eri maakasaa. Kokeile
           laittaa tämä funktio silmukan sisään siten, että saat kaikki kasat poistettua
           käyttäen vain muutamaa uutta lohkoa.
         maze_karel_2_10: Liikuta minua pitkin peltoa ja auta minua tasaamaan se. Käytä
           näitä kahta uutta funktiota.
-        turtle_3_1: Tämä pulma näyttää, miten "piirrä neliö" ja "piirrä ympyrä" -funtkiot
-          on määritetty. Funktion määrittäminen ei vielä aja sitä, vaan sinun pitää
-          raahata "piirrä neliö" lohko "Funktiot"-valikosta ajaaksesi se.
+        turtle_3_1: Tämä tehtävä esittää, miten "piirrä neliö" ja "piirrä ympyrä"
+          -funtkiot on määritetty. Funktion määrittäminen ei vielä aja sitä, vaan
+          sinun pitää raahata "piirrä neliö" -lohko "Funktiot"-valikosta ajaaksesi
+          se.
         turtle_3_2: Käyttäen "piirrä neliö" -funktiota esimerkkinä, luo "piirrä kolmio"
           -funktio ja käytä sitä.
         turtle_3_3: 'Piirrä kolmion muotoisia aitoja kissojen ympärille ja neliön
@@ -314,7 +316,7 @@
           (Vihje: klikkaa tähteä funktion vasemmassa yläkulmassa)'
         turtle_3_7: Lisää syöte "pituus" "piirrä talo" -funktiolle ja piirrä iso talo
           elefantille (sivun pituus 150 kuvapistettä ).
-        turtle_3_8: Tässä on kaikki edellisen pulman lohkot. Muokkaa "piirrä talo":a
+        turtle_3_8: Tässä on kaikki edellisen pulman lohkot. Muokkaa "piirrä talo"-funktiota
           niin, että päädyn talon oikeaan alakulmaan piirtämisen jälkeen. Käytä muutettua
           funktiota ja piirrä kolme taloa.
         turtle_3_9: Osaatko luoda "piirrä talo" -funktion ilman apua? Kokeile ja sitten
@@ -364,13 +366,13 @@
         maze_3_3: Miten pääsisin possun luo? Varmistathan, etten törmää TNT-laatikoihin!
         maze_3_4: Argh! Kirjoita minulle ohjelma, jolla pääsen TNT-laatikoiden ohi
           possun luo.
-        bounce_1: Liitä lohko "kun vasen nuoli" lohkoon ja paina "Suorita." Siirrä
+        bounce_1: Liitä lohko "kun vasen nuoli" lohkoon ja paina "Suorita." Liikuta
           mailaa käyttäen vasenta nuolta, kunnes se osuu lippuun.
-        bounce_2: Liitä lohko "kun oikea nuoli" lohkoon ja paina "Suorita." Siirrä
+        bounce_2: Liitä lohko "kun oikea nuoli" lohkoon ja paina "Suorita." Liikuta
           mailaa käyttäen oikeaa nuolta, kunnes se osuu lippuun.
-        bounce_3: Yritä nyt jotain vastaavaa "kun ylös nuoli"-lohkon kanssa. Siirrä
+        bounce_3: Yritä nyt jotain vastaavaa "kun ylös nuoli"-lohkon kanssa. Liikuta
           maila yläreunassa olevaan lippuun.
-        bounce_4: Tällä kertaa sinun täytyy lisätä neljä lohkoa. Kuljeta mailaa, niin
+        bounce_4: Tällä kertaa sinun täytyy lisätä neljä lohkoa. Liikuta mailaa, niin
           että se osuu kaikkiin neljään lippuun ratkaistaksesi tämän tehtävän.
         bounce_5: Nyt laukaisemme pallon alas kohti mailaa. Liitä "kun pallo osuu
           mailaan" lohkoon toinen lohko, jonka ansiosta pallo osuu lippuun.
@@ -455,8 +457,7 @@
         mazestep_4: Maze step description here
         mazestep_5: Maze step description here
         studio_c2_1: Osaatko laittaa koiran sanomaan "hei maailma"?
-        studio_c2_2: Osaatko laittaa koiran sanomaan jotain ja sitten kissan vastaamaan
-          heti sen jälkeen?
+        studio_c2_2: Osaatko laittaa koiran sanomaan jotain ja kissan vastaamaan siihen?
         studio_c2_3: Can you write a program to make this dog move to the cat?
         studio_c2_4: Osaatko kirjoittaa ohjelman, jossa koira liikkuu kissan luo ja
           kissa sanoo "hei", kun koira saapuu tämän luokse?
@@ -466,9 +467,9 @@
           the up / down / left /right keys to hit all of the targets?
         studio_c2_7: The "repeat forever" block allows you to run code continuously.
           Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_c2_8: Can you have the penguin say "Ouch!" and play a "hit" sound if
-          he runs into the dinosaur, and then move him with the arrows to make that
-          happen?
+        studio_c2_8: Osaatko laittaa pingviinin sanomaan "Ouch!" ja soittamaan "osuma"-äänen,
+          kun hän osuu dinosaurukseen? Tee niin ja liikuta sitten pingviiniä nuolinäppäimillä,
+          kunnes hän osuu.
         studio_c2_9: Can you add a block to score a point when the penguin runs into
           the octopus, and then move him with the arrows until you score?
         studio_c2_10: Can you add blocks to change the background and the speed of
@@ -476,8 +477,8 @@
         studio_c2_11: Create your own story. When you're done, click Finish to let
           friends try your story on their phones.
         studio_c3_story_1: Osaatko laittaa koiran sanomaan "hei maailma"?
-        studio_c3_story_2: Osaatko laittaa koiran sanomaan jotain ja sitten kissan
-          vastaamaan heti sen jälkeen?
+        studio_c3_story_2: Osaatko laittaa koiran sanomaan jotain ja kissan vastaamaan
+          siihen?
         studio_c3_story_3: Can you write a program to make this dog move to the cat?
         studio_c3_story_4: Osaatko kirjoittaa ohjelman, jossa koira liikkuu kissan
           luo ja kissa sanoo "hei", kun koira saapuu tämän luokse?
@@ -490,9 +491,9 @@
           using the up / down / left /right keys to hit all of the targets?
         studio_c3_game_3: The "repeat forever" block allows you to run code continuously.
           Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_c3_game_4: Can you have the penguin say "Ouch!" and play a "hit" sound
-          if he runs into the dinosaur, and then move him with the arrows to make
-          that happen?
+        studio_c3_game_4: Osaatko laittaa pingviinin sanomaan "Ouch!" ja soittamaan
+          "osuma"-äänen, kun hän osuu dinosaurukseen? Tee niin ja liikuta sitten pingviiniä
+          nuolinäppäimillä, kunnes hän osuu.
         studio_c3_game_5: Can you add a block to score a point when the penguin runs
           into the octopus, and then move him with the arrows until you score?
         studio_c3_game_6: Can you add blocks to change the background and the speed
@@ -520,8 +521,7 @@
         studio_full_sandbox: Create your own game. When you're done, click Finish
           to let friends try your story on their phones.
         studio_k1_1: Osaatko laittaa koiran sanomaan "hei maailma"?
-        studio_k1_2: Osaatko laittaa koiran sanomaan jotain ja sitten kissan vastaamaan
-          heti sen jälkeen?
+        studio_k1_2: Osaatko laittaa koiran sanomaan jotain ja kissan vastaamaan siihen?
         studio_k1_3: Can you write a program to make this dog move to the target?
         studio_k1_4: Laita koira siirtymään kissan luo ja kissan sanomaan "hei" kun
           koira on perillä.
@@ -531,17 +531,17 @@
         maze_wordsearch_k_2: Liikuta minua ja tavaa sana SOUTH (etelään suomeksi)
         maze_wordsearch_k_3: Liikuta minua ja tavaa sana WEST (länteen suomeksi)
         maze_wordsearch_k_4: Liikuta minua ja tavaa sana NORTH (pohjoiseen suomeksi)
-        maze_wordsearch_k_6: Siirrä minua itään ja sitten etelään ja kirjoita sana
+        maze_wordsearch_k_6: Liikuta minua itään ja sitten etelään ja kirjoita sana
           JUMP (hypätä suomeksi)
-        maze_wordsearch_k_9: Siirrä minua yhteen suuntaan, sitten toiseen suuntaan
+        maze_wordsearch_k_9: Liikuta minua yhteen suuntaan, sitten toiseen suuntaan
           ja kirjoita sana CODE (koodi suomeksi)
-        maze_wordsearch_k_13: Siirrä minua yhteen suuntaan, sitten toiseen suuntaan
+        maze_wordsearch_k_13: Liikuta minua yhteen suuntaan, sitten toiseen suuntaan
           ja kirjoita sana DEBUG (virheenkorjaus suomeksi)
-        maze_wordsearch_k_15: Siirrä minua yhteen suuntaan, sitten toiseen suuntaan
+        maze_wordsearch_k_15: Liikuta minua yhteen suuntaan, sitten toiseen suuntaan
           ja kirjoita sana ABOVE (yläpuolella suomeksi)
-        maze_wordsearch_k_16: Siirrä minua yhteen suuntaan, sitten toiseen suuntaan
+        maze_wordsearch_k_16: Liikuta minua yhteen suuntaan, sitten toiseen suuntaan
           ja kirjoita sana BELOW (alla suomeksi)
-        maze_wordsearch_k_20: Tämä on kokeilu! Siirrä minua yhteen suuntaan, sitten
+        maze_wordsearch_k_20: Tämä on kokeilu! Liikuta minua yhteen suuntaan, sitten
           toiseen suuntaan ja kirjoita sana STORY (tarina suomeksi)
         webapp_ec_simple: Create your web app by using createHtmlBlock.
         turtle_ec_1_2: 'Piirrä nyt neliö. Huomautus: käytä suosikkiväriäsi valitsemalla
@@ -555,11 +555,11 @@
       frozen line:
         instructions: Hei! Olen Arendelin Elsa. Auta minua luomaan yksittäinen viiva.
       frozen perpendicular:
-        instructions: Kokeillaanpa nyt luoda kaksi viivaa jotka ovat 90 asteen kulmassa
-          toisiinsa nähden. Sinun täytyy käyttää "Käännä"-lohkoa sekä "Siirry"-lohkoa.
+        instructions: Kokeillaanpa nyt luoda kaksi viivaa, jotka ovat 90 asteen kulmassa
+          toisiinsa nähden. Sinun täytyy käyttää "Käännä"-lohkoa sekä "Liiku"-lohkoa.
       frozen square iterative:
-        instructions: Näyttää siltä että olemme puolessa välissä neliön piirtämistä.
-          Laitetaanpa yhteen 4 viiva niin, että saadaan aikaan neliö.
+        instructions: Näyttää siltä eä että olemme puolessa välissä neliön piirtämiseksi.
+          Laitetaan 4 viiva yhteen neliön luomiseksi.
       frozen square loop:
         instructions: Hei, olen Arendelin Anna! Tehdäänpä neliö "Toista"-lohkolla,
           joka käyttää vähemmän lohkoja. Kuinka monta kertaa (???) pitäisi "Toista"-lohkon
@@ -633,9 +633,9 @@
           vain kolme uutta lohkoa? Jos teet sen oikein, voin kävellä kaarevan polun
           riippumatta sen pituudesta. Kiirehdi! Jää sulaa jo!
       Standalone_Artist_1:
-        instructions: Welcome to Artist! First off, let's try to make a simple square
-          using the turn right block and move forward block. Each side should be 100
-          pixels long.
+        instructions: Tervetuloa Taiteilijaan! Ensimmäiseksi tehdään yksinkertainen
+          neliö käyttäen "käänny oikealle" ja "liiku eteenpäin" -lohkoja. Kunkin sivun
+          tulee olla 100 kuvapistettä pitkä.
       Standalone_Artist_2:
         instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel
           long sides.
@@ -698,29 +698,29 @@
         Unplug10: Internet
         Unplug11: Yhteenveto
         C1_happy_maps_unplugged: Iloiset kartat
-        C1_moveitmoveit_unplugged: Siirrä, siirrä se
+        C1_moveitmoveit_unplugged: Liikuta, liikuta
         C1_bigevent_unplugged: Suuri tapahtuma
         C1_getting_loopy: Mennään silmukoille
         C1_pair_programming: Pariohjelmointi
-        C1_maze_intro_sequencing: Sokkelo sekvenssien esittely
+        C1_maze_intro_sequencing: 'Sokkelo: komentosarjat - esittely'
         C1_maze_debugging: Sokkelo virheenkorjaus
-        C1_bee_level_intro: Mehiläinen taso - Esittely
+        C1_bee_level_intro: Mehiläistaso - Johdanto
         C1_artist_intro: Taiteilijan johdanto
         C1_spelling_bee_intro: Kirjurimehiläinen johdanto
-        C1_zuck_repeat_loop: Sokkelo silmukoita
-        C1_bee_loops: Mehiläinen silmukoita
-        C1_maze_loops: Sokkelo silmukoita
+        C1_zuck_repeat_loop: 'Sokkelo: silmukat'
+        C1_bee_loops: 'Mehiläinen: silmukat'
+        C1_maze_loops: 'Sokkelo: silmukat'
         C1_playlab_storytelling: Pelilabra - Luo tarina
         C1_planting_seed: Siemen istutus
         C1_building_foundation: Rakennetaan perustus
         C1_going_places_safely: Menossa turvallisesti
         C2_maze_intro: Sokkelon johdanto
         C2_artist_intro: Taiteilijan johdanto
-        C2_zuck_repeat_loop: Sokkelo silmukoita
-        C2_artist_loops: Taiteilija silmukoita
-        C2_artist_debugging: Taiteilija virheenkorjaus
-        C2_bee_loops: Mehiläinen silmukoita
-        C2_bee_debugging: Mehiläinen virheenkorjaus
+        C2_zuck_repeat_loop: 'Sokkelo: silmukat'
+        C2_artist_loops: 'Taiteilija: silmukat'
+        C2_artist_debugging: 'Taiteilija: virheenkorjaus'
+        C2_bee_loops: 'Mehiläinen: silmukat'
+        C2_bee_debugging: 'Mehiläinen: virheenkorjaus'
         C2_bee_conditionals: Mehiläisen ehtolauseet
         C2_playlab_createstory: Pelilabra - Luo tarina
         C2_graph_paper: Ruutupaperiohjelmointi
@@ -729,39 +729,39 @@
         C2_relay_programming: Releohjelmointi
         C2_paper_airplanes: Paperilentokoneet
         C2_digital_footprint: Digitaalinen jalanjälkesi
-        C3_maze_level_4: Sokkelo silmukoita
+        C3_maze_level_4: 'Sokkelo: silmukat'
         C3_artist_intro: Taiteilijan johdanto
-        C3_artist_functions: Taiteilijan funtiot
+        C3_artist_functions: Taiteilijan funktiot
         C3_bee_functions: Mehiläisen funktiot
         C3_bee_conditionals: Mehiläisen ehtolauseet
-        C3_maze_conditionals: Sokkelo ehtolauseet
+        C3_maze_conditionals: 'Sokkelo: ehtolauseet'
         C3_artist_nested_loops: Sisäkkäiset silmukat
-        C3_farmer_while: Kunnes-silmukat
+        C3_farmer_while: Niin kauan kuin -silmukat
         C3_bee_nested_loops: Sisäkkäiset silmukat
-        C3_bee_debugging: Mehiläinen virheenkorjaus
+        C3_bee_debugging: 'Mehiläinen: virheenkorjaus'
         C3_bounce: Bounce
         C3_playlab_create_game: Pelilabra - Luo peli
         C3_computational_thinking: Laskennallinen ajattelu
         C3_dice_race: Noppakisa
         C3_internet: Internet
         C3_crowdsourcing: Joukkoistaminen
-        C3_functional_suncatchers: Functional Suncatchers
+        C3_functional_suncatchers: Funktionaaliset auringonkerääjät
         C3_songwriting_with_parameters: Parametroitu laulunkirjoitus
         C4_artist_math: Programming the Artist with Math
         C4_create_functions: Creating Functions
-        C4_edit_functions: Editing Functions
-        C4_for_loops: For Loops
+        C4_edit_functions: Funktioiden muokkaus
+        C4_for_loops: Silmukat
         C4_variables: Muuttujat
-        frozen_intro: Hour of Code Intro
+        frozen_intro: Koodaustunnin esittely
         frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
+        frozen_functions: Johdanto funktioihin
     callout:
       text:
-        drag_blocks: Raahaa "siirrä" lohko ja napsauta se kiinni toisen lohkon alalaitaan
+        drag_blocks: Vedö "liikuta" lohko ja napsauta se kiinni toisen lohkon alalaitaan
         run: Paina "Suorita" kokeillaksesi ohjelmaa
         watch_again: Klikkaa tästä jos haluat katsella videon uudelleen
         gray_block_explanation: Harmaita lohkoja ei voi poistaa. Pystytkö silti ratkaisemaan
-          pulman?
+          tehtävän?
         show_code_explanation: Klikkaa tästä, jos haluat nähdä koodin ohjelmalle,
           jota teet
         instructions_repeat_explanation: Tehtävän ohjeet voit kerrata täältä
@@ -771,39 +771,43 @@
           block to enable an actor for this story
         studio_say_text: Kirjoita lainausmerkkien väliin se, mitä haluat hahmon sanovan
         jigsaw_click: Klikkaa tätä lohkoa!
-        move_elsa_forward: Vedä "siirry eteenpäin" lohko ja kiinnitä se "kun suoritetaan"
-          lohkon alle jotta Elsa siirtyisi eteenpäin
-        turn_elsa: Käytä "käänny" lohkoa niin saat Elsan kääntymään. Lohkossa oleva
-          numero määrittää kuinka paljon Elsa kääntyy
-        replace_questions: Käytä alas aukeavaa listaa ja korvaa "???" numerolla
-        replace_questions_degree: Käytä alas aukeavaa listaa ja korvaa "???" oikealla
+        move_elsa_forward: Saat Elsan siirtymään eteenpäin, kun vedät "liiku eteenpäin"
+          -lohkoa ja kiinnität sen "kun suoritetaan" -lohkon alle
+        turn_elsa: Käytä "käänny" lohkoa niin saat Elsan kääntymään. Alasvetovalikossa
+          oleva numero määrittää kuinka paljon Elsa kääntyy
+        replace_questions: Käytä alasvetovalikkoa ja korvaa "???" numerolla
+        replace_questions_degree: Käytä alasvetovalikkoa ja korvaa "???" oikealla
           astekulmalla
         repeat_blocks: Käytä "Toista" lohkoa ja laita se työtilassa olevien toisten
           lohkojen ympärille
+        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the
+          workspace
+        repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks
+          inside
         snowflake_dropdown: Käytä tätä alasvetovalikkoa luodaksesi erilaisia lumihiutaleita!
         degrees_per_side: Divide 360 by the number of sides to get the size of each
           angle in degrees.
-        set_sides: Käytä tätä lohkoa asettaaksesi sivujen lukumäärän selvittääksesi
-          pulman.
+        set_sides: Käytä tätä lohkoa asettaaksesi sivujen lukumäärän tehtävän ratkaisun
+          mukaiseksi.
         set_length: Käytä tätä lohkoa asettaaksesi pituuden oikean arvon.
         which_equation: Which equation makes each side shorter for shapes with more
           sides?  Try each equation!
-        get_nectar: Käytä uutta "hanki nektaria" -lohkoa.
+        get_nectar: Käytä uutta "kerää mesi" -lohkoa.
         actions_category: The tool box got a new look! The "Actions" blocks are in
           here now.
-        draw_square_hint: 'Vihje: Käytä nelikulmiosilmukkaa jonka juuri teit edellisessä
-          pulmassa.'
+        draw_square_hint: 'Vihje: Käytä nelikulmiosilmukkaa, jonka juuri teit edellisessä
+          tehtävässä.'
         edit_function: Käytä tätä nappia muokataksesi toimintoa.
         create_function: Click here to open the "Functions" flyout, then click the
           "Create a Function" button.
-        house_hint: Se on aivan ok, vaikka kuva ei näyttäisikään talolta vielä. Korjaamme
-          sen seuraavassa pulmassa.
-        edit_draw_square: Tämän painikkeen avulla voit muokata toimintoa ja lisätä
+        house_hint: On ihan Ok, vaikka kuva ei näyttäisikään vielä talolta. Korjaamme
+          sen seuraavassa tehtävässä.
+        edit_draw_square: Tämän painikkeen avulla voit muokata funktiota ja lisätä
           silmukan.
-        edit_get_nectar: Use this button to edit the function and change the direction
-          the Bee will turn to get the nectar.
+        edit_get_nectar: Käytä tätä nappia muokataksesi funktiota. Muuta suuntaa,
+          jonne mehiläinen kääntyy keräämään mettä.
         logic_category: Open the "Logic" flyout to find the "if/else" block.
-        length_parameter: Osaatko päivittä tämän toiminnon niin, että se käyttää "pituus"
+        length_parameter: Osaatko päivittää tämän funktion niin, että se käyttää "pituus"
           parametria?
         frozen_diamond_repeat: Use the repeat block to create this shape.
         frozen_circle_function_in_circle_turn: Don't forget to turn after creating
@@ -814,10 +818,20 @@
         frozen_create_square: Attach more blocks here to create a square
         playlab_drag_say: Drag the "say" block here and type "hello"
         playlab_use_twice: Use this block twice and remember to change the actor number
-        playlab_move_girl: Use the "move right" block to move Tennis Girl
+        playlab_move_girl: Käytä "liiku oikealle" -lohkoa liikuttamaan Tennis-tyttöä
         playlab_play_sound: Add "play sound" block here
-        playlab_arrow_keys: Remember to use these to move the witch after clicking
-          on Run
-        playlab_add_move: Add "move" blocks inside this repeat block
+        playlab_arrow_keys: Muista käyttää näitä liikuttaaksesi noitaa sen jälkeen
+          kun olet napsauttanut Suorita
+        playlab_add_move: Lisää "liiku"-lohkoja tämän toistolohkon sisään
         playlab_add_score: Add score blocks here
         playlab_add_blocks: Add your blocks here
+        set_variable: Drag a number block here to set your variable
+        place_variable: Drag your variable inside this block
+        bee_for_loop: Drag the largest number of nectar you want the bee to collect
+          here
+        place_counter_variable: Drag your counter variable inside this block
+        function_editor_draw_square: This is your function definition. These blocks
+          run everytime you use the "draw a square" block
+        change_here: Make your change here
+        write_draw_square_function: Drag blocks from the toolbox into here that draw
+          a square

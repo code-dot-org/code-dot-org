@@ -293,7 +293,7 @@ cs-CZ:
   carousel_heading_international: Výuka ve tvém jazyce
   carousel_heading_domestic: Kurzy dostupné v angličtině
   carousel_heading_beginners: Kurzy pro začátečníky
-  carousel_heading_javascript: Kurzy, které učí Javascript
+  carousel_heading_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: 'Žádné zařízení nebo internet? Zkuste informatiku "unplugged"'
   carousel_heading_devices: Aplikace s kurzy pro telefony a tablety
   carousel_heading_languages: Výukové programy v jiných programovacích jazycích
@@ -306,7 +306,7 @@ cs-CZ:
   more_resources_educators: Další zdroje pro učitele
   participants: účastníci
   teachers_notes: Poznámky pro učitele
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: 'Učitelé: Zde si přečtěte důležité informace pro vyučující'
   previous: Předchozí
   next: Další
   older_systems: Výukové programy, které pracují na starších systémech
@@ -386,13 +386,13 @@ cs-CZ:
   thinkersmithspanish_platformtext: Unplugged
   khan_platformtext: Moderní webové prohlížeče
   khanes_platformtext: Moderní webové prohlížeče
-  tynker_platformtext: Modern browsers. (Follow-on course requires $$)
+  tynker_platformtext: Moderní prohlížeče. (Následující kurz vyžaduje $$)
   scratch_platformtext: VŠECHNY prohlížeče
   lightbot_platformtext: VŠECHNY prohlížeče, iOS, Android nebo herní konzole
   thinkersmith_platformtext: Unplugged
   condcards_platformtext: Unplugged
   lightbotintl_platformtext: iOS, Android (nebo webový prohlížeč)
-  codehs_platformtext: 'Modern browsers. (Follow-on course requires  $$)'
+  codehs_platformtext: Moderní prohlížeče. (Následující kurz vyžaduje $$)
   codecademy_platformtext: Moderní webové prohlížeče. iOS, aplikace pro Android
   codecombat_platformtext: Moderní webové prohlížeče
   codemonkey_platformtext: Moderní webové prohlížeče
@@ -429,7 +429,7 @@ cs-CZ:
   codehs_shortdescription: Začněte kódovat s psem Karlem, zábavný a vizuální úvod do programování!
   codecademy_shortdescription: Naučte JavaScript programování v prohlížeči
   codecombat_shortdescription: Porazte zlobry a naučte Python nebo JavaScript v této epické programovací hře!
-  codemonkey_shortdescription: Students program a monkey to catch bananas.
+  codemonkey_shortdescription: Studenti programují opici chytající banány.
   codeavengers_shortdescription: Naučte JavaScript programování v prohlížeči
   processing_shortdescription: Jednohodinový úvod do programovacího jazyka Processing
   robomind_shortdescription: Napište kód pro virtuálního robota
@@ -437,12 +437,12 @@ cs-CZ:
   quorum_shortdescription: Přidejte se k Marii na prohlídku, na které se bude učit programovací jazyk Quorum.
   codespark_shortdescription: Foos je zábavná, k dětem přátelská hra, učící programování.
   kodable_shortdescription: Zábavná hra na iPad, která učí koncepty programování
-  tynkerapp_shortdescription: 'Learn to program by solving fun coding puzzles. '
+  tynkerapp_shortdescription: Nauč se programovat řešením zábavných hlavolamů.
   robomindnl_shortdescription: Napište kód pro virtuálního robota
   flappy_shortdescription: 'Vytvořte si vlastní hru - Flappy Bird, Žralok nebo Ponorka'
   bitsbox_shortdescription: Naprogramujte řadu aplikací, které můžete hrát a sdílet, pomocí skutečného Javascriptu.
   makegameswithus_shortdescription: Vytvořte hru pro iPhone! Zkuste se psaním kódu naučit vaše monstrum novým pohybům!
-  touchdevelop_shortdescription: 'Solve puzzles, create games, and learn coding all on your phone. '
+  touchdevelop_shortdescription: Řeš puzzle, tvoř hry a nauč se programovat prostřednictvím tvého mobilu.
   appinventor_shortdescription: Vytvořte si vlastní aplikaci! (Pouze pro Android)
   blockly_shortdescription: Stáhněte si ZIP soubor offline výuku
   thinkersmith2_shortdescription: Naučte se, jak počítače reprezentují informace pomocí jedniček a nul
@@ -477,7 +477,7 @@ cs-CZ:
   bitsbox_longdescription: Nastav si svůj vlastní virtuální tablet a naprogramuj, hrej a sdílej sérii aplikací. Jednoduché průchody umožňují i pro malé děti programovat v Javascriptu, a čím více jste pokročilý tím dále půjdete.
   makegameswithus_longdescription: Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pokemon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!
   touchdevelop_longdescription: 'The touch-friendly editor will guide you in creating pixel art, solving the bear puzzle, or making your own jumping bird game. '
-  appinventor_longdescription: Entertaining, quick video tutorials walk you through building three simple apps for your Android phone or tablet. Designed for novices and experts alike, this hour of code will get you ready to start building your own apps before you know it. Imagine sharing your own app creations with your friends! These activities are suitable for individuals and for teachers leading classes.
+  appinventor_longdescription: Zábavné, rychlé video tutoriály tě provedou tvorbou třech jednoduchých aplikací pro tvůj Android telefon nebo tablet. Tato hodinka kódu, navrhnuta pro nováčky i experty, tě připraví na tvorbu tvých vlastních aplikací než se naděješ. Představ si sdílení tvých vlastních výtvorů s tvými přáteli! Vhodné pro jednotlivce i pro učitele vedoucí třídy.
   blockly_longdescription: 'Got PCs with slow (or non-existent) internet access? Download the Blockly tutorials that were the precursor of the Code.org tutorials - a single 3MB ZIP file can be loaded onto any computer or used off a memory stick'
   thinkersmith2_longdescription: Žáci se učí o reprezentaci a ukládání znaků v dvojkové soustavě, stejně jako funkce zapnutí a vypnutí. Na konci třída dostane zakódovat vlastní iniciály, aby si je vzala s sebou domů.
   kodableunplugged_longdescription: 'Designed for use with plain paper, the fuzzFamily Frenzy is an introduction to programming logic for kids 5 and up. A teacher should explain the game, then students program a partner to complete a simple obstacle course. '
@@ -644,7 +644,7 @@ cs-CZ:
   hacketyhack_beyond_longdescription: "Hackety Hack will teach you the absolute basics of programming from the ground up. No previous programming experience is needed! With Hackety Hack, you'll learn the Ruby programming language. Ruby is used for all kinds of programs, including desktop applications and websites. [Note: Desktop install required]"
   robomind_beyond_longdescription: 'Students learn the basics of programming by controling their own virtual robot. The online course is fully self-contained with short presentations, movies, quizzes and automatic guidance/hints to help with the programming exercises. '
   makegameswithus_beyond_longdescription: "Know some ObjectiveC? Learn to make an iPhone game in an hour! We'll guide you through the process, to code, test, and play your game entirely in the browser and then share it on Facebook for friends to try! No prior iPhone development experience is required. You must understand what variables, methods, and objects are."
-  appinventor_beyond_longdescription: Entertaining, quick video tutorials walk you through building three simple apps for your Android phone or tablet. Designed for novices and experts alike, this hour of code will get you ready to start building your own apps before you know it. Imagine sharing your own app creations with your friends! These activities are suitable for individuals and for teachers leading classes.
+  appinventor_beyond_longdescription: Zábavné, rychlé video tutoriály tě provedou tvorbou třech jednoduchých aplikací pro tvůj Android telefon nebo tablet. Tato hodinka kódu, navrhnuta pro nováčky i experty, tě připraví na tvorbu tvých vlastních aplikací než se naděješ. Představ si sdílení tvých vlastních výtvorů s tvými přáteli! Vhodné pro jednotlivce i pro učitele vedoucí třídy.
   touchdevelop_beyond_longdescription: TouchDevelop lets you create apps on iPad, iPhone, Android, PC, Mac, Windows Phone. Our touch-friendly editor makes coding fun, even on your phone or tablet!
   codehs_beyond_longdescription: 'Learn the basics of programming with Karel the Dog, a fun, accessible and visual introduction to coding, where giving commands to a computer is just like giving commands to a dog. This tutorial is great if led by a teacher, but can also be done independently. [Note: payment is required]'
   udemy_beyond_longdescription: "Whether you've never seen a line of code or you code for a living, Udemy has a course for you, taught by professional instructors. [Note: payment is required]"
@@ -655,7 +655,7 @@ cs-CZ:
   teachingtree_beyond_longdescription: TeachingTree is an open platform that lets anybody organize educational content. Our goal is for students to quickly access the exact clips they need in order to learn individual concepts. Everyone is encouraged to help by adding videos or tagging concepts.
   kodu_beyond_longdescription: Kodu lets kids create games on the PC and XBox via a simple visual programming language. Kodu can be used to teach creativity, problem solving, storytelling, as well as programming. Anyone can use Kodu to make a game, young children as well as adults with no design or programming skills. Kodu for the PC is available to download for free. Kodu for the XBox is also available in the USA on the XBox Marketplace, in the Indie Games channel for about $5.
   cargobot_beyond_longdescription: Cargo-Bot is a puzzle game where you teach a robot how to move crates. Sounds simple, right? It features 36 fiendishly clever puzzles, haunting music and stunning retina graphics. You can even record your solutions and share them on YouTube to show your friends.
-  kidsruby_beyond_longdescription: "Have fun and make games, or hack your homework using Ruby! Just tell your parents or teachers you're learning Ruby programming... ;). Free and works on any computer. [Note: Desktop install required]"
+  kidsruby_beyond_longdescription: 'Zabav se a vytvoř hru, nebo se staň hackerem své domácí úlohy pomocí Ruby. Jen řekni tvým rodičům nebo učitelům, že se učíš programovací jazyk Ruby... ;) Je zdarma a funkční na každém počítač. [Poznámka: Je vyžadována Desktop instalace]'
   w3schools_beyond_longdescription: Learn to create websites on your own computer. Learn the server basics in less than a day. Learn to add databases to your website
   codeavengers_beyond_longdescription: Learn how to program games, apps and websites. Designed by experts with perfect level of difficulty for beginners, easy to understand instructions and great help when you need it. Our HTML, CSS and JavaScript courses include code challenges and revision games that make learning fun and effective for all ages.
   mozilla_beyond_longdescription: Thimble makes it ridiculously simple to create and share your own web pages. Write and edit HTML and CSS right in your browser, then instantly preview your work. Host and share your finished projects with a single click. Perfect for beginners and experts alike.

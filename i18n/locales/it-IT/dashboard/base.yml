@@ -338,8 +338,8 @@ it:
     test_videos_help: 'Prova nella tua scuola  il nostro nuovo visualizzatore di video'
     try_beta_courses: Novità! Prova i nostri corsi specifici per studenti delle scuole elementari (in versione provvisoria)
     use_as_teacher: Guarda questo sito come insegnante
-    heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
-    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
+    heading_hoc2014: "<h2>L'Ora del Codice per</h2><h1>Tutte le Età</h1>"
+    heading_elementary: '<h2>Corsi di 20 ore per</h2><h1>Principianti (tutte le età)</h1>'
     heading_apps: '<h2>Divertimento per</h2><h1>tutti</h1>'
     heading_legacy: '<h2>Il nostro Corso Introduttivo per </h2><h1>utenti di tutte le età</h1>'
     your_gallery: La tua collezione
@@ -352,7 +352,7 @@ it:
     teacher: Insegnante
   footer:
     help_from_html: Gli ingegneri di Google, Microsoft, Facebook e Twitter hanno contribuito a creare questo corso.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Tutti i Diritti Riservati.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Tutti i Diritti Riservati.'
     powered_by_aws: Powered by Amazon Web Services
     feedback: Facci sapere che ne pensi
     translate: Aiutaci a tradurre nella tua lingua

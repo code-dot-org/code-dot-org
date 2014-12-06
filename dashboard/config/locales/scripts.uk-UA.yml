@@ -320,3 +320,13 @@
           description: Підбірка Курсу 4 рівня для тестування юзабіліті.
           Variables: Змінні
           For Loops: Цикли For
+        potus:
+          title: special
+          description_short: special
+          description: special
+          Special: Special
+        special:
+          title: special
+          description_short: special
+          description: special
+          Special: Special
