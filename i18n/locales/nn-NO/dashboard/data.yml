@@ -500,15 +500,17 @@ nn:
         replace_questions: Bruk nedtrekkslista for å erstatte «???» med eit tal
         replace_questions_degree: Bruk nedtrekkslista for å erstatte «???» med rett antal grader for å snu
         repeat_blocks: Bruk «Gjenta»-blokka og legg den rundt blokkene i arbeidsområdet
+        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the workspace
+        repeat_blocks_2: '(2) Move the "Repeat" block here, and place the gray blocks inside'
         snowflake_dropdown: Bruk denne nedtrekkslista for å lage ulike snøflak!
         degrees_per_side: Del 360 på antall sider for å få størrelsen på hver vinkel i grader.
         set_sides: 'Bruk denne blokken for å angi antall "sider" som er nødvendig for å løse oppgaven .'
         set_length: 'Bruk denne blokken for å sette "lengde" til den riktige verdien.'
-        which_equation: 'Hvilken likning gjør hver side kortere for figurer med flere sider?  Prøv hver formel!'
+        which_equation: Which equation makes each side shorter for shapes with more sides?
         get_nectar: 'Bruk den nye "få nektar" blokken.'
         actions_category: 'Verktøykassa fikk et nytt utseende! "Handlinger" blokkene er her nå.'
         draw_square_hint: 'Tips: Bruk firkant løkken som du lagde i den forrige oppgaven.'
-        edit_function: Bruk denne knappen til å redigere funksjonen.
+        edit_function: Click here to edit your function.
         create_function: 'Klikk her for å åpne"Funksjoner" menyen og klikk deretter "Opprette en funksjon" knappen.'
         house_hint: Det er ok hvis bildet ikke ser ut som et hus ennå. Vi skal fikse det i den neste oppgaven.
         edit_draw_square: Bruk denne knappen for å redigere funksjonen og legge til løkken.
@@ -528,3 +530,10 @@ nn:
         playlab_add_move: 'Add "move" blocks inside this repeat block'
         playlab_add_score: Add score blocks here
         playlab_add_blocks: Add your blocks here
+        set_variable: Drag a number block here to set your variable
+        place_variable: Drag your variable inside this block
+        bee_for_loop: Drag the largest number of nectar you want the bee to collect here
+        place_counter_variable: Drag your counter variable inside this block
+        function_editor_draw_square: 'This is your function definition. These blocks run everytime you use the "draw a square" block'
+        change_here: Make your change here
+        write_draw_square_function: Drag blocks from the toolbox into here that draw a square

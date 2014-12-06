@@ -17,53 +17,53 @@
         Type the arithmetic expression here: Geben Sie hier den mathematischen Ausdruck
           ein
       Blocks to Math 1:
-        Convert Blocks to Math: Konvertiert die Blöcke zu Mathematik
+        Convert Blocks to Math: Konvertiere die Blöcke zu Mathematik
         Type out the arithmetic expression that matches this code: Geben Sie den arithmetischen
-          Ausdruck ein, die dieserm Code entspricht
-        /script_assets/msm/unit1/blockstomath1.png: /script_assets/msm/Einheit1/BloeckezuMathematik1.pgn
+          Ausdruck ein, der diesem Code entspricht
+        /script_assets/msm/unit1/blockstomath1.png: /script_assets/msm/Einheit1/BloeckezuMathematik1.png
         Enter answer here: Antwort hier eingeben
         4 + 5: 4 + 5
         Type the arithmetic expression here: Geben Sie hier den mathematischen Ausdruck
           ein
       Blocks to Math 2:
-        Convert Blocks to Math: Konvertiert die Blöcke zu Mathematik
+        Convert Blocks to Math: Konvertiere die Blöcke zu Mathematik
         Type out the arithmetic expression that matches this code: Geben Sie den arithmetischen
-          Ausdruck ein, die dieserm Code entspricht
+          Ausdruck ein, der diesem Code entspricht
         /script_assets/msm/unit1/blockstomath2.png: /script_assets/msm/Einheit1/BloeckezuMathematik2.pgn
         7 * 6: 7 * 6
         Type the arithmetic expression here: Geben Sie hier den mathematischen Ausdruck
           ein
       Blocks to Math 3:
-        Convert Blocks to Math: Konvertiert die Blöcke zu Mathematik
+        Convert Blocks to Math: Konvertiere die Blöcke zu Mathematik
         Type out the arithmetic expression that matches this code: Geben Sie den arithmetischen
-          Ausdruck ein, die dieserm Code entspricht
+          Ausdruck ein, der diesem Code entspricht
         /script_assets/msm/unit1/blockstomath3.png: /script_assets/msm/Einheit1/BloeckezuMathematik3.pgn
         (2 * 3) - (1 + 0): (2 * 3) - (1 + 0)
         2 * 3 - (1 + 0): 2 * 3 - (1 + 0)
         Type the arithmetic expression here: Geben Sie hier den mathematischen Ausdruck
           ein
       Blocks to Math 4:
-        Convert Blocks to Math: Konvertiert die Blöcke zu Mathematik
+        Convert Blocks to Math: Konvertiere die Blöcke zu Mathematik
         Type out the arithmetic expression that matches this code: Geben Sie den arithmetischen
-          Ausdruck ein, die dieserm Code entspricht
+          Ausdruck ein, der diesem Code entspricht
         /script_assets/msm/unit1/blockstomath4.png: /script_assets/msm/Einheit1/BloeckezuMathematik4.pgn
         (5 + 8) - 12: (5 + 8) - 12
         5 + 8 - 12: 5 + 8-12
         Type the arithmetic expression here: Geben Sie hier den mathematischen Ausdruck
           ein
       Blocks to Math 5:
-        Convert Blocks to Math: Konvertiert die Blöcke zu Mathematik
+        Convert Blocks to Math: Konvertiere die Blöcke zu Mathematik
         Type out the arithmetic expression that matches this code: Geben Sie den arithmetischen
-          Ausdruck ein, die dieserm Code entspricht
+          Ausdruck ein, der diesem Code entspricht
         /script_assets/msm/unit1/blockstomath5.png: /script_assets/msm/Einheit1/BloeckezuMathematik5.pgn
         (-2) * (-6):
         - 2 * -6: -2 *-6
         Type the arithmetic expression here: Geben Sie hier den mathematischen Ausdruck
           ein
       Blocks to Math 6:
-        Convert Blocks to Math: Konvertiert die Blöcke zu Mathematik
+        Convert Blocks to Math: Konvertiere die Blöcke zu Mathematik
         Type out the arithmetic expression that matches this code: Geben Sie den arithmetischen
-          Ausdruck ein, die dieserm Code entspricht
+          Ausdruck ein, der diesem Code entspricht
         /script_assets/msm/unit1/blockstomath6.png: /script_assets/msm/Einheit1/BloeckezuMathematik6.pgn
         ((4 - 1) * (-2)) + 12: ((4-1) * (-2)) + 12
         ((4 - 1) * -2) + 12: ((4-1) * (-2)) + 12
@@ -72,25 +72,25 @@
         Type the arithmetic expression here: Geben Sie hier den mathematischen Ausdruck
           ein
       Blocks to Math 7:
-        Convert Blocks to Math: Konvertiert die Blöcke zu Mathematik
+        Convert Blocks to Math: Konvertiere die Blöcke zu Mathematik
         Type out the arithmetic expression that matches this code: Geben Sie den arithmetischen
-          Ausdruck ein, die dieserm Code entspricht
+          Ausdruck ein, der diesem Code entspricht
         /script_assets/msm/unit1/blockstomath7.png: /script_assets/msm/Einheit1/BloeckezuMathematik7.pgn
         10 / (2 * (3 + 1)): 10 / (2 * (3 + 1))
         Type the arithmetic expression here: Geben Sie hier den mathematischen Ausdruck
           ein
       Blocks to Bools 1:
-        Convert Blocks to Math: Konvertiert die Blöcke zu Mathematik
+        Convert Blocks to Math: Konvertiere die Blöcke zu Mathematik
         Type out the arithmetic expression that matches this code: Geben Sie den arithmetischen
-          Ausdruck ein, die dieserm Code entspricht
+          Ausdruck ein, der diesem Code entspricht
         /script_assets/msm/unit6/blockstomath1.png: /script_assets/msm/Einheit6/BloeckezuMathematik1.pgn
         (4+5) > 9: (4 + 5) > 9
         Type the arithmetic expression here: Geben Sie hier den mathematischen Ausdruck
           ein
       Blocks to Bools 2:
-        Convert Blocks to Math: Konvertiert die Blöcke zu Mathematik
+        Convert Blocks to Math: Konvertiere die Blöcke zu Mathematik
         Type out the arithmetic expression that matches this code: Geben Sie den arithmetischen
-          Ausdruck ein, die dieserm Code entspricht
+          Ausdruck ein, der diesem Code entspricht
         /script_assets/msm/unit6/blockstomath2.png: /script_assets/msm/Einheit6/BloeckezuMathematik2.pgn
         (10 > 11) or (7 <= 9): (10 > 11) oder (7 < = 9)
         (10 > 11) || (7 <= 9): (10 > 11) || (7 < = 9)
@@ -98,9 +98,9 @@
           ein
         (10 > 11) OR (7 <= 9): (10 > 11) oder (7 < = 9)
       Blocks to Bools 3:
-        Convert Blocks to Math: Konvertiert die Blöcke zu Mathematik
+        Convert Blocks to Math: Konvertiere die Blöcke zu Mathematik
         Type out the arithmetic expression that matches this code: Geben Sie den arithmetischen
-          Ausdruck ein, die dieserm Code entspricht
+          Ausdruck ein, der diesem Code entspricht
         /script_assets/msm/unit6/blockstomath3.png: /script_assets/msm/Einheit6/BloeckezuMathematik3.pgn
         (5 < 10) and (10 < 15): (5 < 10) und (10 < 15)
         (5 < 10) AND (10 < 15): (5 < 10) UND (10 < 15)
@@ -108,9 +108,9 @@
         Type the arithmetic expression here: Geben Sie hier den mathematischen Ausdruck
           ein
       Blocks to Bools 4:
-        Convert Blocks to Math: Konvertiert die Blöcke zu Mathematik
+        Convert Blocks to Math: Konvertiere die Blöcke zu Mathematik
         Type out the arithmetic expression that matches this code: Geben Sie den arithmetischen
-          Ausdruck ein, die dieserm Code entspricht
+          Ausdruck ein, der diesem Code entspricht
         /script_assets/msm/unit6/blockstomath4.png: /script_assets/msm/Einheit6/BloeckezuMathematik4.pgn
         ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): ((1 < x) und (x < 5)) ODER
           ((8 < x) und (x < 10))

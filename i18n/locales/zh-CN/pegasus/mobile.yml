@@ -293,7 +293,7 @@ zh-CN:
   carousel_heading_international: 中文教程
   carousel_heading_domestic: 英文教程可用
   carousel_heading_beginners: 初学者教程
-  carousel_heading_javascript: JavaScript教程
+  carousel_heading_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: 没有设备或互联网接入？试试’离线‘计算机科学课程
   carousel_heading_devices: 为手机和平板电脑定制的教程应用
   carousel_heading_languages: 用其他编程语言所写的教程
@@ -306,7 +306,7 @@ zh-CN:
   more_resources_educators: 给教师和教育工作者们的更多资源
   participants: 参与者
   teachers_notes: 老师的笔记
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: 教师：请阅读这些重要的教育者说明
   previous: 前一项
   next: 下一项
   older_systems: 能在旧一点的系统上运行的教程
@@ -386,13 +386,13 @@ zh-CN:
   thinkersmithspanish_platformtext: 离线的
   khan_platformtext: 现代的Web浏览器
   khanes_platformtext: 现代的Web浏览器
-  tynker_platformtext: Modern browsers. (Follow-on course requires $$)
+  tynker_platformtext: 现代的浏览器。（后续课程需要 $$）
   scratch_platformtext: 所有浏览器
   lightbot_platformtext: 所有浏览器及iOS，安卓系统或游戏主机
   thinkersmith_platformtext: 离线的
   condcards_platformtext: 离线的
   lightbotintl_platformtext: iOS，Android（或浏览器）
-  codehs_platformtext: 'Modern browsers. (Follow-on course requires  $$)'
+  codehs_platformtext: 现代的浏览器。（后续课程需要 $$）
   codecademy_platformtext: 现代的Web浏览器。iOS，Android应用程序
   codecombat_platformtext: 现代的Web浏览器
   codemonkey_platformtext: 现代的Web浏览器
@@ -429,7 +429,7 @@ zh-CN:
   codehs_shortdescription: 与小狗卡莱尔一起开始编程，一个对编程的有趣的视觉化介绍！
   codecademy_shortdescription: 在网页浏览器中学习JavaScript编程
   codecombat_shortdescription: 在这个史诗般的编程游戏中打败食人魔来学会Python或JavaScript！
-  codemonkey_shortdescription: Students program a monkey to catch bananas.
+  codemonkey_shortdescription: 学生们编写一只抓住香蕉的猴子
   codeavengers_shortdescription: 在网页浏览器中学习JavaScript编程
   processing_shortdescription: 一个关于Processing语言的一小时教程
   robomind_shortdescription: 为一个虚拟机器人编写代码
@@ -437,12 +437,12 @@ zh-CN:
   quorum_shortdescription: 加入玛丽学习Quorum编程语言的引导学习之旅。
   codespark_shortdescription: The Foos是一种有趣的，孩子也能玩的学习编程的游戏。
   kodable_shortdescription: 一个有趣的、教授计算机编程概念的iPad游戏
-  tynkerapp_shortdescription: 'Learn to program by solving fun coding puzzles. '
+  tynkerapp_shortdescription: '通过解决有趣的代码谜题来学习编程。 '
   robomindnl_shortdescription: 为一个虚拟机器人编写代码
   flappy_shortdescription: '制作你自己的游戏 - Flappy Bird、Shark、或Submarine'
   bitsbox_shortdescription: 用真正的JavaScript来编写一系列的用来播放和分享的应用。
   makegameswithus_shortdescription: 写一个iPhone游戏! 学习编写代码来教你的怪物做新的动作!
-  touchdevelop_shortdescription: 'Solve puzzles, create games, and learn coding all on your phone. '
+  touchdevelop_shortdescription: '在您的手机上解谜，编写游戏，和学习编程。 '
   appinventor_shortdescription: 让你自己的 (Android) 应用程序 !
   blockly_shortdescription: 下载一个ZIP文件，离线学习。
   thinkersmith2_shortdescription: 了解计算机如何使用 0 和 1 来表示信息
@@ -471,12 +471,12 @@ zh-CN:
   quorum_longdescription: 本教案可供视障人士透过辅助器阅读与流览。与玛丽以一名程式设计师加入生物学实验室，并学习Quorum程式语言。本教案包含线上示例活动的学生引导式课程。
   codespark_longdescription: 'Foos是一个有趣的，以友好孩子的方式来学习电脑程式设计。设计可爱的人物来解决难题，并为生活带来一个虚拟的世界。这场比赛是"不需言语的"，所以任何人都可以玩！'
   kodable_longdescription: Kodable 是一个自我引导的iPad 游戏，为5 岁以上的孩子介绍程式设计的基础知识。最好有老师或家长的陪伴，但不是必需的。
-  tynkerapp_longdescription: Learn to program by solving fun coding puzzles. Easily build games and stories using with themed graphics, 10+ game-kits and customizable characters. No Internet connectivity required. You can also access your creations on the web.
+  tynkerapp_longdescription: 通过解决有趣的代码谜题来学习编程。 使用主题图案，10个以上的游戏包和可自定义的角色来轻松地创作游戏和故事。不需要连接互联网。你也可以在网页上查看你的作品。
   robomindnl_longdescription: '学生用控制自己的虚拟机器人来学习编程的基础知识. 在线课程是完全独立的短演示,电影,测验和 自动导引/提示来帮助编程练习. '
   flappy_longdescription: 使用拖放式的程式语言设计你自己Flappy鸟游戏，并可自订它不同的外观（Flappy鲨鱼、Flappy圣诞老人、或任何角色）。只要按一下，就可将游戏加到您的手机中。
   bitsbox_longdescription: 定制您自己的虚拟平板电脑，然后编写一系列的Apps来使用及分享。让非常小的孩子透过简单体验来使用真正JAVAscript ，成为可能的事，您会达到比您想到还远。
-  makegameswithus_longdescription: Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pokemon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!
-  touchdevelop_longdescription: 'The touch-friendly editor will guide you in creating pixel art, solving the bear puzzle, or making your own jumping bird game. '
+  makegameswithus_longdescription: 通过使用全新，初学者友好的Swift编程语言制作一个iPhone游戏来学习编程！创作一个受宠物小精灵启发的动作游戏并通过编写代码来让教你的小怪兽移动。你将学会如何使用变量，方法和物件来帮助你的怪兽赢得胜利！
+  touchdevelop_longdescription: '这个触摸屏友好的编辑器将引导您创建像素艺术品、解决小熊谜题，或者创作你自己的跳跳鸟游戏。 '
   appinventor_longdescription: 娱乐、 简短的影片教案引导您在您的Andr​​oid 手机或平板电脑上完成建立三个简单的APPs程式。它设计给新手和专家，此Hour of Code活动让你开始建构自己的Apps，在你了解它之前。想像一下与朋友分享您自己创造的应用程式！这些活动适合个人自学和教师带领的班级课程。
   blockly_longdescription: 您有网际网路连线很慢（或根本不存在）的电脑吗？下载Blockly 的自学教案，Code.org 教案的前辈元老— — 一个3 MB ZIP 档案可以载入到任何一台电脑上或存在一个随身碟上使用。
   thinkersmith2_longdescription: 学生以打开和关闭的功能学习如何在二进位档案中表示和储存字母。结束时，此课程获取自己名字的编码带回家。

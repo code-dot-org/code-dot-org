@@ -201,7 +201,7 @@ pt-PT:
   dashboard_navigation_view_stats: Exibir estatísticas
   dashboard_navigation_section: 'Secção: %{section_name}'
   dashboard_navigation_student: 'Aluno: %{student_name}'
-  dashboard_sections_new_section: New section
+  dashboard_sections_new_section: Nova secção
   dashboard_sections_jumbotron_instruction: Create new sections and add students to them. Sections help you organize students into smaller groups so you can track their progress and manage their accounts.
   dashboard_sections_table_section: Section
   dashboard_sections_table_secret: Login Type
@@ -293,7 +293,7 @@ pt-PT:
   carousel_heading_international: Tutoriais na tua língua
   carousel_heading_domestic: Tutorials available in English
   carousel_heading_beginners: Tutorials for Beginners
-  carousel_heading_javascript: Tutorials that teach Javascript
+  carousel_heading_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: "No device or internet? Try 'unplugged' computer science"
   carousel_heading_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: Tutorials in other programming languages

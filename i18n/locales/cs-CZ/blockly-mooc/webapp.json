@@ -15,7 +15,7 @@
   "nextLevel":"Dobrá práce! Dokončil jsi tuto hádanku.",
   "no":"Ne",
   "numBlocksNeeded":"Tato hádanka může být vyřešena pomocí %1 bloků.",
-  "pause":"Break",
+  "pause":"Přerušit",
   "reinfFeedbackMsg":"Můžete stisknout tlačítko \"Zkusit znovu\" a vrátit se ke spuštění vaší aplikace.",
   "repeatForever":"repeat forever",
   "repeatDo":"proveď",
@@ -25,7 +25,7 @@
   "stepIn":"Step in",
   "stepOver":"Step over",
   "stepOut":"Step out",
-  "turnBlack":"turn black",
+  "turnBlack":"zčernat",
   "turnBlackTooltip":"Zčerná obrazovku.",
   "yes":"Ano"
 }

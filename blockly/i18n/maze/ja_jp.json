@@ -77,7 +77,7 @@
   "uncheckedCloudError": "花かハチの巣かどうか確認するために全ての雲をチェックしてください。",
   "uncheckedPurpleError": "ムラサキの花にミツがあるかすべてチェックしてください。",
   "whileMsg": "以下の間",
-  "whileTooltip": "終点に到着するまで、封じられた行動を繰り返してください",
+  "whileTooltip": "終点に到着するまで、とりかこんだアクションを繰り返してください。",
   "word": "単語を見つけます",
   "yes": "はい",
   "youSpelled": "あなたのスペル"

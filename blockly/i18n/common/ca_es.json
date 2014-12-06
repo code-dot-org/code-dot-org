@@ -23,7 +23,7 @@
   "end": "final",
   "emptyBlocksErrorMsg": "Els blocs \"Repetir\" o el \"Si\" necessiten tenir altres blocs dins per a treballar. Assegureu-vos que el bloc interior encaixa bé dins del bloc que conté.",
   "emptyFunctionBlocksErrorMsg": "La funció bloc ha de tenir altres blocs a dins perquè funcioni.",
-  "errorEmptyFunctionBlockModal": "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block.",
+  "errorEmptyFunctionBlockModal": "Cal que hi hagi blocs dins de la definició de la teva funció. Fes clic a \"Edita\" i arrossega els blocs que calgui dins del bloc verd.",
   "errorIncompleteBlockInFunction": "Click \"edit\" to make sure you don't have any blocks missing inside your function definition.",
   "errorParamInputUnattached": "Remember to attach a block to each parameter input on the function block in your workspace.",
   "errorUnusedParam": "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block.",

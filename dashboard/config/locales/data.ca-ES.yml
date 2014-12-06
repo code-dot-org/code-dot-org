@@ -520,19 +520,18 @@
           pingüí, i llavors moure'l amb les fletxes fins que puntuïs?
         studio_c3_game_7: Crea el teu propi joc. Quan hagis acabat, fes clic a Finalitza
           per fer que els teus amics provin el teu joc als seus mòbils.
-        studio_playlab_1: Can you make this dog say "hello world"?
+        studio_playlab_1: El pingüí vol dir "Hola" - el pots ajudar?
         studio_playlab_2: Can you make the dog say something and then have the cat
           say something afterwards?
-        studio_playlab_3: Pots escriure un programa per fer que el gos es mogui cap
-          al gat?
+        studio_playlab_3: Pots ajudar a la tennista a arribar a la bandera?
         studio_playlab_4: Pot escriure un programa que fa que el gos es mogui cap
           al gat, i el gat digui "hola" quan el gos el toqui?
         studio_playlab_5: Can you write a program to make the octopus say "hello"
           when it is clicked?
         studio_playlab_6: Can you write a program to make this penguin move around
           using the up / down / left /right keys to hit all of the targets?
-        studio_playlab_7: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to move this dinosaur up and down repeatedly?
+        studio_playlab_7: El bloc "repetir per sempre" et permet executar codi contínuament.
+          Pots incloure-hi blocs per ajudar al mag a moure's a dreta i esquerra constantment?
         studio_playlab_8: Can you add a block to score a point when the penguin runs
           into the octopus, and then move him with the arrows until you score?
         studio_playlab_9: Can you add blocks to change the background and the speed
@@ -662,11 +661,11 @@
           using the turn right block and move forward block. Each side should be 100
           pixels long.
       Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel
-          long sides.
+        instructions: Dibuixa aquest diamant amb angles de 120 i 60 graus i costats
+          de 150 píxels de llargada.
       Standalone_Artist_3:
-        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree
-          turns?
+        instructions: Pots dibuixar aquest hexàgon de 100 píxels de costat i girant
+          60 graus?
       Standalone_Artist_4:
         instructions: Now you've got a new block to play with, the loop. This will
           repeat a set of commands. What happens if you loop these commands 6 times?
@@ -773,13 +772,13 @@
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Composició Amb Paràmetres
         C4_artist_math: Programming the Artist with Math
-        C4_create_functions: Creating Functions
+        C4_create_functions: Creació de funcions
         C4_edit_functions: Editing Functions
         C4_for_loops: Per bucles
         C4_variables: Variables
-        frozen_intro: Hour of Code Intro
-        frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
+        frozen_intro: Introducció a l'Hora del Codi
+        frozen_loops: Introducció als bucles
+        frozen_functions: Introducció a les funcions
     callout:
       text:
         drag_blocks: Arrossegar un bloc "mou" i enganxa'l sota d'altre bloc
@@ -808,6 +807,10 @@
           pel nombre correcte de graus a girar
         repeat_blocks: Utilitza el bloc "Repeteix" i fica-hi a dins els blocs de l'àrea
           de treball
+        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the
+          workspace
+        repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks
+          inside
         snowflake_dropdown: Utilitza aquesta llista desplegable per crear diferents
           flocs de neu!
         degrees_per_side: Divideix 360 pel número de costats per obtenir la mida de
@@ -834,19 +837,31 @@
         logic_category: Obre el desplegable "Lògica" per trobar el bloc "si/sino".
         length_parameter: Pots actualitzar aquesta funció utilitzant el paràmetre
           "longitud"?
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
-          each circle.
-        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
-          and change the size.
-        frozen_snowflake_branch: Use the "create a snowflake branch" block
-        frozen_create_square: Attach more blocks here to create a square
-        playlab_drag_say: Drag the "say" block here and type "hello"
-        playlab_use_twice: Use this block twice and remember to change the actor number
-        playlab_move_girl: Use the "move right" block to move Tennis Girl
-        playlab_play_sound: Add "play sound" block here
+        frozen_diamond_repeat: Utilitza el bloc de repetició per crear aquesta forma.
+        frozen_circle_function_in_circle_turn: No t'oblidis de girar després de crear
+          cada cercle.
+        frozen_circle_function_with_parameter_circle: Utilitza el bloc "crear un cercle"
+          i canvia la mida.
+        frozen_snowflake_branch: Utilitza el bloc "crear una branca de floquet de
+          neu"
+        frozen_create_square: Uneix més blocs aquí per crear un quadrat
+        playlab_drag_say: Arrossega el bloc "digues" aquí i escriu "Hola"
+        playlab_use_twice: Utilitza aquest bloc dues vegades i recorda canviar el
+          nombre de l'actor
+        playlab_move_girl: Utilitza el bloc "mou-te a la dreta" per moure la tennista
+        playlab_play_sound: Afegeix el bloc "reprodueix un so" aquí
         playlab_arrow_keys: Remember to use these to move the witch after clicking
           on Run
-        playlab_add_move: Add "move" blocks inside this repeat block
-        playlab_add_score: Add score blocks here
-        playlab_add_blocks: Add your blocks here
+        playlab_add_move: Afegeix els blocs "mou" dins d'aquest bloc de repetició
+        playlab_add_score: Afegeix els blocs de puntuació aquí
+        playlab_add_blocks: Afegeix els teus blocs aquí
+        set_variable: Drag a number block here to set your variable
+        place_variable: Drag your variable inside this block
+        bee_for_loop: Drag the largest number of nectar you want the bee to collect
+          here
+        place_counter_variable: Drag your counter variable inside this block
+        function_editor_draw_square: This is your function definition. These blocks
+          run everytime you use the "draw a square" block
+        change_here: Make your change here
+        write_draw_square_function: Drag blocks from the toolbox into here that draw
+          a square

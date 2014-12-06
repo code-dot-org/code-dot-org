@@ -214,7 +214,7 @@ fil:
         playlab: Make an App
         artist: Draw Something
     user:
-      classroom: Teacher Home Page
+      classroom: Home Page ng Teacher
       label: 'Hi %{username}'
       stats: My progress
       settings: My account

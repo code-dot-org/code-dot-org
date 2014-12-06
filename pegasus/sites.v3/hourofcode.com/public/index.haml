@@ -130,8 +130,8 @@ social:
     .col-xs-10{style: "text-align: center; font-size: 24px; line-height:30px; font-weight: 500; color: rgb(26,172,186)"}
       =hoc_s(:front_intro_default)
 
-  %br/
-  %br/
+  #maparea
+    =view :map
 
   .row
     .col-xs-12
@@ -168,9 +168,6 @@ social:
       %img{src: "/images/stats-kid3.jpg", style: "width: 70%"}
       %br/
       =hoc_s(:stats_michael)
-
-  #maparea
-    =view :map 
 
   #join
     %h1=hoc_s(:front_join_us_button)
