@@ -1,4 +1,4 @@
-"en-US":
+en-US:
   hello: "Hello world"
   select_language: "Please select your language"
   computer_science: "Computer Science"
@@ -65,7 +65,7 @@
   thanks_for_voting: "Thanks for voting!"
   share_on_facebook: "Share on Facebook"
   share_on_twitter: "Share on Twitter"
-  beyond_an_hour: "Beyond an Hour of Code >"
+  beyond_an_hour: "Beyond an Hour of Code"
   get_started: "Start"
   i_agree: "I agree"
   participant_select: '- Select -'
