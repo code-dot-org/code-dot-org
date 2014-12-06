@@ -351,36 +351,33 @@ zh:
       frozen cross:
         instructions: 利用“重复”块来绘制一个十字（加）号。您注意到艾莎可以向前和向后移动吗？
       frozen cross rotate:
-        instructions: Now try repeating it 10 times. How many degrees do you need to turn between each line?
+        instructions: 现在请尝试重复 10 次。每个行之间你需要转多少度？
       frozen cross rotate dense:
-        instructions: "Let's repeat it 90 times! How many times does 90 go into 360? Hint: It's a really small number."
+        instructions: 让我们重复90次！ 90进入360是多少次？提示：这是一个非常小的数目。
       frozen diamond:
-        instructions: "Let's create a parallelogram. It's just like a square but has different angles: 60 and 120 degree angles instead of 90 degree angles."
+        instructions: 让我们创建一个平行四边形。它就像一个方形，但有不同的角度：60和120度角，而不是90度角。
       frozen diamond mini snowflake:
-        instructions: |-
-          Did you know every snowflake is a different shape? Let's create a new snowflake by using the "Repeat" block to repeat a parallelogram 4 times, turning right by 90 degrees between each parallelogram.
+        instructions: 你知道每个雪花是一个不同的形嗎? 让我们创建一个新的雪花, 使用“重复”块来重复一个平行四边形4次，把每一个平行四边形之间转右90度.
       frozen diamond snowflake:
-        instructions: "Now, let's create a new snowflake by using the repeat block to repeat a parallelogram 10 times, turning right by 36 degrees between each one."
+        instructions: 現在，让我们创建一个新的雪花, 使用“重复”块来重复一个平行四边形10次，把每一个平行四边形之间转右36度
       frozen circle:
-        instructions: A circle is a special shape. Can you figure out what number to replace the question marks with to draw a circle?
+        instructions: 圆形是一种特殊的形. 你可以计算出什么号码能取代问号来画圆形吗?
       frozen circle function:
-        instructions: |-
-          Use the new "Create a circle" block to create 10 overlapping circles. Don't forget to jump forward between circles.
+        instructions: 使用新的“创建圈子”功能块来创建10个交叠的圆圈. 不要忘了在每个圆圈之间跳跃前进.
       frozen circle function in circle:
-        instructions: "Now let's create 20 overlapping circles, turning 18 degrees between each circle."
+        instructions: 现在让我们创建20个交叠的圆圈，在每圆圈之间转18度。
       frozen circle function with parameter:
-        instructions: |-
-          Here's a "Create circle" block that can make circles of different sizes. Can you use this to create a small circle of size 5 and a larger circle of size 10?
+        instructions: '这里有一个“创建圈子”块，可以做不同大小的圆圈.  你可以用它来创建一个5号码的小圆圈和10号码的大圆圈吗?'
       frozen snowflower:
-        instructions: Intricate snow patterns can be created with very simple shapes. Can you make a pattern by repeating 5 circles of size 5 and 5 circles of size 10?
+        instructions: 错综复杂的雪模式可以用非常简单的形状来创建。 你可用重复5个5号码的圈和5个10号码的圈来做一个模式吗?
       frozen snowflake branch:
-        instructions: 'Try using the "Create a snowflake branch" block to create three branches, which starts to look like a snowflake.'
+        instructions: 尝试使用“创建雪花分支”块创建三个分支，看起来它开始像一片雪花。
       frozen snowflake full:
-        instructions: "Now let's repeat it 8 times to make a beautiful snowflake!"
+        instructions: 现在，让我们重复8次，做一个漂亮的雪花!
       frozen freeplay:
-        instructions: "You've officially become a master artist! Create a winter wonderland."
+        instructions: 你已经正式成为艺术大师！创建一个冬季仙境.
       scrat 16:
-        instructions: 'Acorn! Acorn! Acorn! Use an "if" block to get me there with the fewest number of blocks.'
+        instructions: 橡果！橡果！橡果！使用“如果”块让我用最少块数到达那里.
       scrat 17:
         instructions: "Ok, let's do that again for practice - this isn't very different, but watch out for the wall!"
       scrat 18:
@@ -512,15 +509,17 @@ zh:
         replace_questions: 'Use the drop-down to replace "???" with a number'
         replace_questions_degree: 'Use the drop-down to replace "???" with the correct degree to turn'
         repeat_blocks: 'Use the "Repeat" block and wrap it around the blocks in the workspace'
+        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the workspace
+        repeat_blocks_2: '(2) Move the "Repeat" block here, and place the gray blocks inside'
         snowflake_dropdown: Use this drop-down to create different snowflakes!
         degrees_per_side: Divide 360 by the number of sides to get the size of each angle in degrees.
         set_sides: 'Use this block to set "sides" to the number needed to complete the puzzle.'
         set_length: 'Use this block to set "length" to the correct value.'
-        which_equation: 'Which equation makes each side shorter for shapes with more sides?  Try each equation!'
+        which_equation: Which equation makes each side shorter for shapes with more sides?
         get_nectar: 'Use the new "get nectar" block.'
         actions_category: 'The tool box got a new look! The "Actions" blocks are in here now.'
         draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
-        edit_function: Use this button to edit the function.
+        edit_function: Click here to edit your function.
         create_function: 'Click here to open the "Functions" flyout, then click the "Create a Function" button.'
         house_hint: "It's ok if the picture doesn't look like a house yet. We will fix it in the next puzzle."
         edit_draw_square: Use this button to edit the function and add the loop.
@@ -540,3 +539,10 @@ zh:
         playlab_add_move: 'Add "move" blocks inside this repeat block'
         playlab_add_score: Add score blocks here
         playlab_add_blocks: Add your blocks here
+        set_variable: Drag a number block here to set your variable
+        place_variable: Drag your variable inside this block
+        bee_for_loop: Drag the largest number of nectar you want the bee to collect here
+        place_counter_variable: Drag your counter variable inside this block
+        function_editor_draw_square: 'This is your function definition. These blocks run everytime you use the "draw a square" block'
+        change_here: Make your change here
+        write_draw_square_function: Drag blocks from the toolbox into here that draw a square

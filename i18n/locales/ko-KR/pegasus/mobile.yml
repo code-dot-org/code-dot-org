@@ -306,7 +306,7 @@ ko-KR:
   more_resources_educators: 선생님들과 교육자를 위한 더 많은 자료들
   participants: 참여자
   teachers_notes: 선생님 참고사항들
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: '선생님들: 교육자들을 위한 중요한 안내사항들을 살펴보세요.'
   previous: 이전
   next: 다음
   older_systems: 저사양 시스템용 튜토리얼들
@@ -386,13 +386,13 @@ ko-KR:
   thinkersmithspanish_platformtext: 언플러그드
   khan_platformtext: 최신 웹 브라우져
   khanes_platformtext: 최신 웹 브라우져
-  tynker_platformtext: Modern browsers. (Follow-on course requires $$)
+  tynker_platformtext: 최신 웹 브라우저들. (이후 과정들에는 $$ 가 필요합니다.)
   scratch_platformtext: 모든 웹브라우저
   lightbot_platformtext: 모든 웹브라우저, iOS, 안드로이드, 콘솔 게임기
   thinkersmith_platformtext: 언플러그드
   condcards_platformtext: 언플러그드
   lightbotintl_platformtext: iOS, 안드로이드(또는 웹 브라우져)
-  codehs_platformtext: 'Modern browsers. (Follow-on course requires  $$)'
+  codehs_platformtext: 최신 웹 브라우저들. (이후 과정들에는 $$ 가 필요합니다.)
   codecademy_platformtext: 최신 웹 브라우져. iOS, 안드로이드 앱
   codecombat_platformtext: 최신 웹 브라우져
   codemonkey_platformtext: 최신 웹 브라우져
@@ -429,7 +429,7 @@ ko-KR:
   codehs_shortdescription: 카렐과 강아지와 함께 재미있는 비주얼 프로그래밍 시작하기!
   codecademy_shortdescription: 웹 브라우져에서 동작하는 자바스크립트 프로그래밍 배우기
   codecombat_shortdescription: 이 이야기 진행식 게임 프로그래밍을 통해 괴물을 물리치는 파이썬(Python)이나 자바스크립트(JavaScript) 배우기!
-  codemonkey_shortdescription: Students program a monkey to catch bananas.
+  codemonkey_shortdescription: 학생들은 원숭이가 바나나들을 잡도록하는 프로그래밍을 하게 됩니다.
   codeavengers_shortdescription: 웹 브라우져에서 동작하는 자바스크립트 프로그래밍 배우기
   processing_shortdescription: 한 시간짜리 프로세싱(Processing) 언어 튜토리얼
   robomind_shortdescription: 가상 로봇을 위한 코드 작성하기
@@ -437,12 +437,12 @@ ko-KR:
   quorum_shortdescription: 가이드 투어를 통해 Quorum 프로그래밍 언어를 배우고 있는 마리와 함께 하세요.
   codespark_shortdescription: Foos 는 프로그래밍에 대해서 배울 수 있는 재미있는 아이들 용 게임입니다.
   kodable_shortdescription: 컴퓨터 프로그래밍 개념들을 가르칠 수 있는 재미있는 아이패드 게임
-  tynkerapp_shortdescription: 'Learn to program by solving fun coding puzzles. '
+  tynkerapp_shortdescription: '재미있는 코딩 퍼즐들을 풀어가면서 프로그램을 배워보세요. '
   robomindnl_shortdescription: 가상 로봇을 위한 코드 작성하기
   flappy_shortdescription: '게임을 직접 만들어보세요 - 플래피 버드, 샤크, 잠수함'
   bitsbox_shortdescription: 진짜 자바스크립트를 이용한 앱들을 코딩해 보고 공유해 보세요.
   makegameswithus_shortdescription: 아이폰 게임을 만들어보세요! 여러분의 몬스터를 가르쳐 움직이는 코드를 만들어 보면서 배워보세요.
-  touchdevelop_shortdescription: 'Solve puzzles, create games, and learn coding all on your phone. '
+  touchdevelop_shortdescription: '스마트폰에서 퍼즐을 풀고, 게임을 만들고, 코딩에 대한 모든 것을 배워보세요. '
   appinventor_shortdescription: 앱을 직접 만들어보세요!(안드로이드 만 가능)
   blockly_shortdescription: 오프라인에서도 배울 수 있도록 압축(ZIP) 파일을 다운로드 하세요.
   thinkersmith2_shortdescription: 정보를 표현하기 위해 컴퓨터에서 사용하는 1/0 들의 표현을 배워보세요.
@@ -471,12 +471,12 @@ ko-KR:
   quorum_longdescription: 이 튜토리얼은 시각 장애인을 고려하여 만들어졌으며, 화면 읽기 도구와 함께 동작합니다. 여행 중인 마리를 생물학 연구실에 프로그래머로 참여하도록 하여 Quorum 프로그래밍 언어를 배울 수 있도록 해보세요. 이 튜토리얼은 온라인 예시 활동들과 함께 혼자 힘으로도 충분히 할 수 있습니다.
   codespark_longdescription: '푸스(Foos)는 아이들에게 친근하면서도 재미있는 방법으로 컴퓨터 프로그래밍에 대해 배울 수 있도록 해줍니다. 귀여운 캐릭터를 프로그램하여 퍼즐을 풀고 가상의 세계를 실제 세상으로 가져와 보세요. 이 게임은 "무료" 이기 때문에 누구나 해볼 수 있습니다.'
   kodable_longdescription: 코더블(Kodable)은 자기 주도적인 아이패드 게임으로 5세 이상의 아이들에게 프로그래밍 기초들을 소개합니다. 선생님이나 부모님과도 함께 할 수 있습니다.
-  tynkerapp_longdescription: Learn to program by solving fun coding puzzles. Easily build games and stories using with themed graphics, 10+ game-kits and customizable characters. No Internet connectivity required. You can also access your creations on the web.
+  tynkerapp_longdescription: 재미있는 코딩 퍼즐들을 해결해 가면서 프로그래밍을 배워보세요. 테마 그래픽, 10개 이상의 게임키트와 수정가능한 캐릭터들을 이용해 게임과 이야기들을 아주 쉽게 만들 수 있습니다. 인터넷 연결이 반드시 필요하지는 않습니다. 자신이 만든 것을 웹에서도 확인할 수 있습니다.
   robomindnl_longdescription: 학생들은 자신의 가상 로봇을 제어함으로서 프로그래밍의 기초를 배울 수 있습니다. 온라인 과정은 간단한 프레젠테이션 자료, 동영상, 퀴즈와 프로그래밍 경험을 돕기 위한 자동응답식 가이드/힌트들을 통해 혼자 힘으로도 충분히 배울 수 있습니다.
   flappy_longdescription: 드래그 앤 드롭 프로그래밍으로 플래피 버드 게임을 직접 만들고, 다른 모양(플래피 샤크, 플래피 산타 등등)으로 변형해 보세요. 한 번의 클릭으로 아이폰에 게임으로 추가할 수 있습니다.
   bitsbox_longdescription: 자신의 가상 태블릿을 설정한 후, 실행할 수 있는 앱을 만들고 공유해 보세요. 간단한 과정을 통해 실제 자바스크립트(Javascript) 언어를 이용해 어린 아이들도 만들 수 있습니다. 그리고 더 자세히 배울 수 있는 경험을 얻어보세요.
-  makegameswithus_longdescription: Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pokemon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!
-  touchdevelop_longdescription: 'The touch-friendly editor will guide you in creating pixel art, solving the bear puzzle, or making your own jumping bird game. '
+  makegameswithus_longdescription: 스위프트(Swift)라는 초보자도 가능한 새로운 프로그래밍 언어를 이용해 아이폰 게임을 만들어보면서 코드 만드는 방법을 배울 수 있습니다. 포켓몬과 유사한 액션 게임을 만들고, 자신의 몬스터를 가르쳐 움직여 보세요. 변수, 매서드, 객체 등을 사용하는 방법을 배우고 자기 몬스터가 이기게 해 보세요!
+  touchdevelop_longdescription: 화면 터치 기반의 코드 편집기를 통해, 픽셀 아트, 퍼즐 풀기, 새 날리기 게임 등을 만드는 방법들에 대해서 가이드 받게 됩니다.
   appinventor_longdescription: 엔터테인먼트, 퀵 비디오 튜토리얼을 통해 여러분의 안드로이드폰이나 태블릿을 위한 3가지 간단한 앱을 만들어 보세요. 처음하는 사람들도 전문가들처럼 만들 수 있도록 설계되었으며, 이 hour of code 활동은 자기도 모르게 직접 앱을 만드는 방법을 알게 됩니다. 친구들에게 자기가 만든 앱을 나눠주는 것을 생각해보세요! 이 활동들은 개인활동 또는 선생님 지도에 따라 학급별로도 가능합니다.
   blockly_longdescription: '인터넷 접속이 느린(혹은 인터넷에 연결할 수 없거나) 컴퓨터들만 있다고요? 블러클리(Blockly) 튜토리얼을 다운로드 받으세요. 블러클리는 code.org 튜토리얼의 초기버전이라고 할 수 있습니다. - 3MB 의 적은 압축(ZIP) 파일을 다운로드 받으면 컴퓨터나 메모리스틱에 넣어 가지고 다닐 수 있습니다.'
   thinkersmith2_longdescription: 학생들은 문자들을 켜짐(on)과 꺼짐(offf) 으로 표현할 수 있는, 2진수 형태으로 표현하고 저장하는 방법에 대해 배울 수 있습니다. 수업을 마칠 때 쯤이면 학생들은 자기 이니셜을 코드화해서 집에 가져갈 수 있게 될 것입니다.

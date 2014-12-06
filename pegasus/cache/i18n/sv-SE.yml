@@ -51,7 +51,7 @@
   all_ages: Alla åldrar
   beginner: Nybörjare
   n_participants: '# deltagare'
-  go: Gå
+  go: Kör
   thank_you_: Tack!
   congratulations: Grattis!
   congratulations_on_completing_hoc: Grattis, du har slutfört en Hour of Code.
@@ -143,55 +143,55 @@
   contact_form_label_submit: Skicka meddelande
   class_submission_in_school: I skolan
   class_submission_in_school_daily_programming_course: Daglig programmeringskurs
-  class_submission_in_school_ap_computer_science: AP computer science
-  class_submission_in_school_full_university_cs_curriculum: Full university CS curriculum
-  class_submission_in_school_robotics_club: Robotics club
-  class_submission_in_school_programming_integrated_in_other_classes: Programming
-    integrated in other classes
-  class_submission_in_school_summer_school_cs_program: Summer school CS program
-  class_submission_in_school_exploring_computer_science: Exploring Computer Science
-  class_submission_in_school_other: Other in school
-  class_submission_out_of_school: Out of school
-  class_submission_out_of_school_summer_camp: Summer camp
-  class_submission_out_of_school_afterschool_program: Afterschool program
-  class_submission_out_of_school_all-day_workshop: All-day workshop (up to 1 week)
-  class_submission_out_of_school_multi-week_workshop: Multi-week workshop
-  class_submission_out_of_school_other: Other out of school
+  class_submission_in_school_ap_computer_science: AP Datavetenskap
+  class_submission_in_school_full_university_cs_curriculum: Högskoleläroplan i datavetenskap
+  class_submission_in_school_robotics_club: Robotklubb
+  class_submission_in_school_programming_integrated_in_other_classes: Programmering
+    som en del av andra kurser (matte, natur, osv)
+  class_submission_in_school_summer_school_cs_program: Sommarundervisning i datavetenskap
+  class_submission_in_school_exploring_computer_science: Utforskning av datavetenskap
+  class_submission_in_school_other: Annat i skolan
+  class_submission_out_of_school: Utanför skolan
+  class_submission_out_of_school_summer_camp: Sommarkollo
+  class_submission_out_of_school_afterschool_program: Fritidsverksamhet
+  class_submission_out_of_school_all-day_workshop: Heldagsworkshop (upp till 1 vecka)
+  class_submission_out_of_school_multi-week_workshop: Flera veckors workshop
+  class_submission_out_of_school_other: Annat utanför skolan
   class_submission_online: Online
-  class_submission_online_programming_class: Online programming class
-  class_submission_online_teacher_resource: Online teacher resource
-  class_submission_online_other: Other online
-  class_submission_level_preschool: Preschool
-  class_submission_level_elementary: Elementary
-  class_submission_level_middle_school: Middle school
-  class_submission_level_high_school: High school
-  class_submission_level_college: College
-  class_submission_level_vocational: Vocational
-  class_submission_languages_other: Other language(s)
-  volunteer_engineer_submission_commitment_uncertain: Uncertain
-  volunteer_engineer_submission_commitment_now_and_then: Every now and then
+  class_submission_online_programming_class: Online programmeringskurs
+  class_submission_online_teacher_resource: Resurs online för lärare
+  class_submission_online_other: Annan onlineskola
+  class_submission_level_preschool: Förskolan
+  class_submission_level_elementary: Grundskolan
+  class_submission_level_middle_school: Högstadiet
+  class_submission_level_high_school: Gymnasiet
+  class_submission_level_college: Högskolan
+  class_submission_level_vocational: Yrkeshögskola
+  class_submission_languages_other: Andra språk
+  volunteer_engineer_submission_commitment_uncertain: Osäkert
+  volunteer_engineer_submission_commitment_now_and_then: Då och då
   volunteer_engineer_submission_commitment_one_hr_per_week: En timme per vecka
   volunteer_engineer_submission_commitment_three_hrs_per_week: tre timmar per vecka
   volunteer_engineer_submission_commitment_five_hrs_per_week: Fem timmar per vecka
   volunteer_engineer_submission_commitment_more: Mer
-  volunteer_engineer_submission_location_flexibility_onsite: On-site at a school
-  volunteer_engineer_submission_location_flexibility_remote: Mentoring remotely (teachers
-    or students)
-  volunteer_engineer_submission_location_flexibility_curriculum: Willing to help contribute
-    to open-source curriculum projects
-  volunteer_engineer_submission_experience_unspecified: Unspecified
+  volunteer_engineer_submission_location_flexibility_onsite: På en skola
+  volunteer_engineer_submission_location_flexibility_remote: Mentorskap på distans
+    (lärare eller elever)
+  volunteer_engineer_submission_location_flexibility_curriculum: Villig att bidra
+    till open-source läroplaner
+  volunteer_engineer_submission_experience_unspecified: Ospecificerad
   volunteer_engineer_submission_experience_university_student_or_researcher: Nuvarande
     universitetsstudent (eller forskare)
-  volunteer_engineer_submission_experience_software_professional: Software professional
+  volunteer_engineer_submission_experience_software_professional: Professionell utvecklare
   petition_age: Ålder
-  dashboard_landing_title: Teacher Home Page
-  dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
+  dashboard_landing_title: Lärare hemsida
+  dashboard_landing_welcome: Välkommen till den nya och förbättrade lärarpanelen.
   dashboard_landing_video: Titta på denna video
-  dashboard_landing_watch_video: for a tour of the new features!
-  dashboard_landing_view_as_student: View this site as a student
-  dashboard_landing_students_title: Your students
-  dashboard_landing_students_manage: View and manage your students
-  dashboard_landing_news_title: Latest news
+  dashboard_landing_watch_video: för en rundtur av de nya funktionerna!
+  dashboard_landing_view_as_student: Titta på sidan som en elev
+  dashboard_landing_students_title: Dina elever
+  dashboard_landing_students_manage: Visa och hantera dina elever
+  dashboard_landing_news_title: Grundskolelärarresurser (endast på engelska)
   dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
   dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
   dashboard_landing_useful_links: Other useful links
@@ -336,16 +336,16 @@
   code_hoc_coming: The Hour of Code is coming - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: Lär dig mer
-  hoc2014_try_new_tutorials: Try our new Hour of Code tutorials
+  hoc2014_try_new_tutorials: Prova våra nya Hour of Code övningar
   hoc2014_try_new_tutorial: Prova vår nya Hour of Code övning i betaversion
   hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
   hoc2014_try_frozen: Konstnären, med Anna och Elsa från Frost
-  carousel_heading_international: Handledning på ditt språk
+  carousel_heading_international: Övningar på ditt språk
   carousel_heading_domestic: Övningar på engelska
   carousel_heading_beginners: Övningar för nybörjare
   carousel_heading_javascript: Övningar med Javascript
   carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science
-  carousel_heading_devices: Tutorial apps for phones and tablets
+  carousel_heading_devices: Appar med övningar för mobiler och sufplattor
   carousel_heading_languages: Övningar i andra programmeringsspråk
   carousel_heading_apps_games: Gör dina egna appar eller spel
   carousel_heading_university: University courses online
@@ -410,23 +410,23 @@
   thinkersmith_gradelevel: Alla åldrar
   condcards_gradelevel: Ages 8-12
   lightbotintl_gradelevel: Alla åldrar
-  codehs_gradelevel: High school
-  codecademy_gradelevel: High school
+  codehs_gradelevel: Gymnasiet
+  codecademy_gradelevel: Gymnasiet
   codecombat_gradelevel: Middle school +
   codemonkey_gradelevel: Middle school +
   codeavengers_gradelevel: Middle school +
-  processing_gradelevel: High school
+  processing_gradelevel: Gymnasiet
   robomind_gradelevel: Ages 8-13
   groklearning_gradelevel: Middle school +
   quorum_gradelevel: Middle school +
-  codespark_gradelevel: Elementary
-  kodable_gradelevel: Elementary
+  codespark_gradelevel: Grundskolan
+  kodable_gradelevel: Grundskolan
   tynkerapp_gradelevel: Åldrarna 5-13
   robomindnl_gradelevel: Ages 8-13
   flappy_gradelevel: Åldrarna 4-104
-  bitsbox_gradelevel: Elementary
-  makegameswithus_gradelevel: High school
-  touchdevelop_gradelevel: High school
+  bitsbox_gradelevel: Grundskolan
+  makegameswithus_gradelevel: Gymnasiet
+  touchdevelop_gradelevel: Gymnasiet
   appinventor_gradelevel: Middle school +
   blockly_gradelevel: Alla åldrar
   thinkersmith2_gradelevel: Ages 8+
@@ -508,7 +508,7 @@
   projguts_shortdescription: Try modeling and simulation using rock/paper/scissors
   frozen_longdescription: Vi kan använda kod för att följa Anna och Elsa när de utforskar
     isens magi och skönhet. Du kommer att skapa snöflingor och mönster genom skridskoåkning
-    och skapa ett underbart vinterland som du kan dela med dina vän!
+    och skapa ett underbart vinterland som du kan dela med dina vänner!
   codeorg_longdescription: Learn the basic concepts of Computer Science with drag
     and drop programming. This is a game-like, self-directed tutorial starring video
     lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
@@ -673,18 +673,18 @@
   tynker_beyond_gradelevel: Åldrarna 5-13
   scratch_beyond_gradelevel: Ages 8+
   lightbot_beyond_gradelevel: Alla åldrar
-  codecademy_beyond_gradelevel: High school
-  kodable_beyond_gradelevel: Elementary
-  scratchjr_beyond_gradelevel: Elementary
+  codecademy_beyond_gradelevel: Gymnasiet
+  kodable_beyond_gradelevel: Grundskolan
+  scratchjr_beyond_gradelevel: Grundskolan
   hopscotch_beyond_gradelevel: Middle school +
   pocketcode_beyond_gradelevel: Middle school +
   groklearning_beyond_gradelevel: Middle school +
-  hacketyhack_beyond_gradelevel: High school
+  hacketyhack_beyond_gradelevel: Gymnasiet
   robomind_beyond_gradelevel: Ages 8-13
-  makegameswithus_beyond_gradelevel: High school
+  makegameswithus_beyond_gradelevel: Gymnasiet
   appinventor_beyond_gradelevel: Middle school +
-  touchdevelop_beyond_gradelevel: High school
-  codehs_beyond_gradelevel: High school
+  touchdevelop_beyond_gradelevel: Gymnasiet
+  codehs_beyond_gradelevel: Gymnasiet
   udemy_beyond_gradelevel: High school +
   lynda_beyond_gradelevel: High school +
   edx_beyond_gradelevel: University
@@ -702,7 +702,7 @@
   lego_beyond_gradelevel: Middle school +
   finch_beyond_gradelevel: Ages 8+
   arduino_beyond_gradelevel: High school +
-  processing_beyond_gradelevel: High school
+  processing_beyond_gradelevel: Gymnasiet
   alice_beyond_gradelevel: Middle school +
   sphero_beyond_gradelevel: Ages 8+
   codeorg_beyond_platformtext: Modern browsers, tablets

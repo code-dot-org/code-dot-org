@@ -19,12 +19,12 @@ sl:
           Spelling Bee: Čebelica črkuje besede
           Spelling Bee not blockly: Spelling Bee not blockly
           "Bee 1: Intro": 'Čebelica 1: Uvod'
-          "Maze 2: Loops": 'Maze 2: Loops'
-          "Bee 2: Loops": 'Bee 2: Loops'
+          "Maze 2: Loops": 'Labirint 2: zanke'
+          "Bee 2: Loops": 'Čebelica 2: zanke'
           Multi & Match: 'Multi & Match'
-          K-1 Flappy: K-1 Flappy
-          Flappy non blockly: Flappy non blockly
-          title: Course 1
+          K-1 Flappy: Plahutaček za prvi razred
+          Flappy non blockly: Plahutaček ne blokaček
+          title: Tečaj 1
           Artist 2: Artist 2
           Happy Maps: Happy Maps
           Move it, Move it: Move it, Move it
@@ -130,7 +130,7 @@ sl:
           "Bee: Nested Loops2": 'Bee: Nested Loops2'
           "Bee: Debugging2": 'Bee: Debugging2'
           "Artist: Patterns": 'Artist: Patterns'
-          Songwriting: Songwriting
+          Songwriting: Napiši pesem
           description_audience: Ages 8+ (after Course 2)
           description_short: Course 3 is a follow-up to Course 2.
         msm:
@@ -281,3 +281,13 @@ sl:
           description: A selection of Course 4 levels for usability testing.
           Variables: Spremenljivke
           For Loops: For Loops
+        potus:
+          title: special
+          description_short: special
+          description: special
+          Special: Special
+        special:
+          title: special
+          description_short: special
+          description: special
+          Special: Special

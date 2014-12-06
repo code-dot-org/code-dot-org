@@ -298,13 +298,13 @@ bg:
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
       Coordinates Multi 1:
-        Video game Coordinates: Video game Coordinates
-        Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        Which answer best describes the unicorn's movement?: "Which answer best describes the unicorn's movement?"
-        The unicorn moves across the screen: The unicorn moves across the screen
-        The unicorn's y value changes: "The unicorn's y value changes"
-        The unicorn moves to the left: The unicorn moves to the left
-        The unicorn's x value changes: "The unicorn's x value changes"
+        Video game Coordinates: Видео игра Координати
+        Ninjacat Demo Embed.level: Ninjacat демо Embed.level
+        Which answer best describes the unicorn's movement?: Кой отговор най-добре описва движението на еднорога?
+        The unicorn moves across the screen: Еднорогът се движи по екрана
+        The unicorn's y value changes: 'Стойността "у" на еднорога се променя'
+        The unicorn moves to the left: Еднорогът се премества наляво
+        The unicorn's x value changes: 'Стойността "x" на еднорога се променя'
       K-1 Artist 1 Multi 1:
         Multiple Choice: избор от множество отговори
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500

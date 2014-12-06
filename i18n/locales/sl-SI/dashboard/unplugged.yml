@@ -33,7 +33,7 @@ sl:
           - unplug5
         video: Unplug5
       Unplug6:
-        title: Conditions
+        title: Pogoji
         desc: 'This is a class game.  After introducing the idea of conditionals, if-statements, and loops, the class can practice together using a pre-written program, a deck of cards, and luck of the draw.'
         pdfs:
           - unplug6
@@ -161,7 +161,7 @@ sl:
         title: For Loop Fun
         desc: We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops with extra structure built right in.
       SongwritingWithParameters:
-        title: Songwriting With Parameters
+        title: Pisanje pesmi s parametri
         desc: 'One of the most magnificent structures in the computer science world is the function.  Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into functions is such a helpful practice.  '
       BinaryImages:
         title: Binary Images

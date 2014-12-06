@@ -297,7 +297,7 @@ it-IT:
   carousel_heading_international: Corsi nella tua lingua
   carousel_heading_domestic: Lezioni disponibili in Inglese
   carousel_heading_beginners: Lezioni per principianti
-  carousel_heading_javascript: Lezioni che insegnano il linguaggio Javascript
+  carousel_heading_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: |-
     Non hai Internet o dispositivi informatici? Prova l'informatica "Senza Rete"
   carousel_heading_devices: App per imparare su smartphone e tablet
@@ -311,7 +311,7 @@ it-IT:
   more_resources_educators: Ulteriori risorse per insegnanti ed educatori in generale
   participants: partecipanti
   teachers_notes: Note per gli insegnanti
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: 'Insegnanti: leggete qui gli avvisi per gli educatori'
   previous: Precedente
   next: Seguente
   older_systems: Lezioni che funzionano anche su vecchi sistemi
@@ -391,13 +391,13 @@ it-IT:
   thinkersmithspanish_platformtext: '"Senza Rete"'
   khan_platformtext: Browser Web moderni
   khanes_platformtext: Browser Web moderni
-  tynker_platformtext: Modern browsers. (Follow-on course requires $$)
+  tynker_platformtext: Browser moderni. (Il proseguimento del corso è a pagamento)
   scratch_platformtext: Tutti i browser
   lightbot_platformtext: Tutti i browser, sistemi iOS o Android, console di gioco
   thinkersmith_platformtext: '"Senza Rete"'
   condcards_platformtext: '"Senza Rete"'
   lightbotintl_platformtext: iOS, Android (o browser web)
-  codehs_platformtext: 'Modern browsers. (Follow-on course requires  $$)'
+  codehs_platformtext: Browser moderni. (Il proseguimento del corso è a pagamento)
   codecademy_platformtext: Browser web moderni. iOS, applicazioni Android
   codecombat_platformtext: Browser Web moderni
   codemonkey_platformtext: Browser Web moderni
@@ -434,7 +434,7 @@ it-IT:
   codehs_shortdescription: "Inizia a programmare con il cane Karel, un'introduzione divertente alla programmazione visuale!"
   codecademy_shortdescription: Imparare a programmare in JavaScript, nel tuo browser Web
   codecombat_shortdescription: Sconfiggi gli orchi mentre impari Python o Javascript programmando questo gioco di guerra!
-  codemonkey_shortdescription: Students program a monkey to catch bananas.
+  codemonkey_shortdescription: Gli studenti programmano una scimmia a prendere le banane.
   codeavengers_shortdescription: Imparare a programmare in JavaScript, nel tuo browser Web
   processing_shortdescription: "Una lezione di un'ora sul linguaggio Processing"
   robomind_shortdescription: Scrivi programmi per un robot virtuale
@@ -442,12 +442,12 @@ it-IT:
   quorum_shortdescription: Segui Mary in una visita guidata mentre impara il linguaggio di programmazione Quorum.
   codespark_shortdescription: The Foos è un gioco adatto ai bambini e divertente, per imparare a programmare.
   kodable_shortdescription: "Un divertente gioco per l'iPad per insegnare i concetti base della programmazione"
-  tynkerapp_shortdescription: 'Learn to program by solving fun coding puzzles. '
+  tynkerapp_shortdescription: 'Impara a programmare risolvendo divertenti enigmi. '
   robomindnl_shortdescription: Scrivi programmi per un robot virtuale
   flappy_shortdescription: 'Crea il tuo gioco - Flappy Bird, Squalo o Sottomarino'
   bitsbox_shortdescription: Programma una serie di app reali per giocare e da condividere, usando Javascript.
   makegameswithus_shortdescription: "Costruisci un gioco per l'iPhone! Impara scrivendo codice che insegna nuove mosse ai tuoi mostri!"
-  touchdevelop_shortdescription: 'Solve puzzles, create games, and learn coding all on your phone. '
+  touchdevelop_shortdescription: 'Risolvi enigmi, crea giochi e impara a programmare usando il tuo telefono. '
   appinventor_shortdescription: Costruisci la tua app! (Solo per dispositivi Android)
   blockly_shortdescription: Scarica un file ZIP per imparare quando non sei connesso a Internet
   thinkersmith2_shortdescription: Impara come i computer utilizzano gli uni e gli zeri per rappresentare le informazioni
@@ -479,12 +479,12 @@ it-IT:
   quorum_longdescription: Questo tutorial è accessibile per i non vedenti e funziona con gli screenreader. Unisciti a Maria in un tour mentre partecipa come programmatore ad un laboratorio di biologia e impara il linguaggio di programmazione Quorum. Questo tutorial è pensato per gli studenti ed ha attività di esempio online.
   codespark_longdescription: 'I Foos sono un modo divertente e specifico per i bambini per imparare a conoscere la programmazione dei computer.  Programma dei simpatici personaggi per risolvere degli enigmi e far vivere un mondo virtuale.  Il gioco è "senza parole" così possono giocare tutti!'
   kodable_longdescription: Kodable è un gioco per iPad auto-guidato che introduce alle basi della programmazione i bambini dai 5 anni in su. La presenza di un insegnante o di un genitore è preferibile, ma non necessaria.
-  tynkerapp_longdescription: Learn to program by solving fun coding puzzles. Easily build games and stories using with themed graphics, 10+ game-kits and customizable characters. No Internet connectivity required. You can also access your creations on the web.
+  tynkerapp_longdescription: Impara a programmare risolvendo divertenti enigmi. Crea facilmente giochi e storie utilizzando grafica a tema, più di 10 kit di gioco e personaggi personalizzabili. Non è necessaria la connessione a Internet. Puoi accedere alle tue creazioni sul web.
   robomindnl_longdescription: 'Gli studenti imparano le basi della programmazione controllando il proprio robot virtuale. Il corso online è completamente autonomo con brevi presentazioni, filmati, quiz e orientamento/suggerimenti automatici per aiutare dello svolgimento degli esercizi di programmazione. '
   flappy_longdescription: Usa la programmazione a blocchi per creare il tuo gioco Flappy Bird e personalizzarlo per trasformarlo (Flappy Shark, Santa Flappy, quello che preferisci). Aggiungi il gioco al tuo cellulare con un click.
   bitsbox_longdescription: Personalizza il tuo tablet virtuale personale e programma tutta una serie di applicazioni per giocare e da condividere. Semplici procedure dettagliate rendono possibile anche per i più giovani programmare in Javascript, e più sai più lontano arriverai.
-  makegameswithus_longdescription: Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pokemon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!
-  touchdevelop_longdescription: 'The touch-friendly editor will guide you in creating pixel art, solving the bear puzzle, or making your own jumping bird game. '
+  makegameswithus_longdescription: Impara a programmare creando un gioco per iPhone utilizzando un linguaggio di programmazione nuovo di zecca e adatto ai principianti chiamato Swift! Crea un gioco di azione ispirato a Pokemon e scrivi un programma per insegnare nuove mosse al tuo mostro. Imparerai ad usare variabili, metodi e oggetti per aiutare il tuo mostro a vincere!
+  touchdevelop_longdescription: "L'editor ti guida in modo amichevole nell'arte della creazione di pixel, nel risolvere i puzzle dell'orso o nel creare la tua versione del gioco dell'uccello che salta. "
   appinventor_longdescription: 'Questo veloce video Tutorial ti guida attraverso la costruzione di tre semplici app per il tuo telefono o tablet Android. Progettato per novizi ed esperti, questa attività della Ora del Codice ti insegnerà a costruire da solo le tue app prima che tu te ne accorga. Immagina poter condividere  le app da te create con i tuoi amici! Queste attività sono adatte sia per singoli studenti sia per classi guidate da insegnanti.'
   blockly_longdescription: 'Avete PC con connessione internet lenta (o addirittura senza)? Scaricate i tutorial di Blockly che sono stati creati prima delle esercitazioni Code.org - un singolo ZIP file  di 3MB che può essere caricato su qualsiasi computer o usato direttamente su una pennina USB'
   thinkersmith2_longdescription: Gli studenti imparano come rappresentare e memorizzare le lettere in formato binario, come funzioni di acceso e spento. Alla fine tutti gli alunni della classe potranno codificare le proprie iniziali da portare a casa con loro.
@@ -567,7 +567,7 @@ it-IT:
   sphero_beyond_gradelevel: Da 8 anni in su
   codeorg_beyond_platformtext: Browser moderni, tablet
   khan_beyond_platformtext: Browser Web moderni
-  tynker_beyond_platformtext: Browser web moderni ($$ necessaria)
+  tynker_beyond_platformtext: Browser Web moderni (a pagamento)
   scratch_beyond_platformtext: Qualsiasi browser Web
   lightbot_beyond_platformtext: iOS, Android (o browser web)
   codecademy_beyond_platformtext: Browser web moderni. iOS, applicazioni Android
@@ -581,7 +581,7 @@ it-IT:
   makegameswithus_beyond_platformtext: Browser Web moderni
   appinventor_beyond_platformtext: Browser moderni + Android
   touchdevelop_beyond_platformtext: Browser moderni, smartphone, tutti i dispositivi
-  codehs_beyond_platformtext: Browser moderni ($$ necessaria)
+  codehs_beyond_platformtext: Browser moderni (a pagamento)
   udemy_beyond_platformtext: Attività basate sul Web
   lynda_beyond_platformtext: Web based (richiesto $$ )
   edx_beyond_platformtext: Browser moderni

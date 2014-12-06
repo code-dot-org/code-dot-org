@@ -45,9 +45,8 @@
           'Bee: Loops': 'Býfluga: Lykkjur'
           'Studio: Create a Story': 'Leikjasmiðja: Búa til sögu'
           'Artist: Loops': 'Listamaður: Lykkjur'
-          description_audience: Ages 4+ (pre-readers)
-          description_short: Námskeið 1 er ætlað byrjendum í lestri. Mælt með fyrir
-            5 - 6 ára.
+          description_audience: Fyrir 4+ ára (ekki læs)
+          description_short: Námskeið 1 er ætlað byrjendum í lestri.
         course2:
           The Maze: Völundarhúsið
           Suzi: Súsí
@@ -88,9 +87,8 @@
           'Artist: Sequence2': 'Listamaður: Röð2'
           'Maze: Sequence2': 'Völundarhús: Röð2'
           'Artist: Nested Loops': 'Listamaður: Innri lykkjur'
-          description_audience: Ages  6+ (reading required)
-          description_short: Námskeið 2 er ætlað nemendum sem geta lesið. Mælt með
-            fyrir 6 - 9 ára.
+          description_audience: Fyrir 6+ ára (sem eru læs)
+          description_short: Námskeið 2 er ætlað nemendum sem geta lesið.
         course3:
           The Maze: Völundarhúsið
           'Studio: Create a Story': 'Leikjasmiðja: Búa til sögu'
@@ -144,9 +142,8 @@
           'Bee: Debugging2': 'Býfluga: Villuleit2'
           'Artist: Patterns': 'Listamaður: Mynstur'
           Songwriting: Lagasmíð
-          description_audience: Ages 8+ (after Course 2)
-          description_short: Námskeið 3 er framhald á Námskeiði 2. Mælt með fyrir
-            8 - 9 ára.
+          description_audience: Fyrir 8+ ára (eftir Námskeið 2)
+          description_short: Námskeið 3 er eftirfari Námskeiðs 2.
         msm:
           title: Miðskólastærðfræði
           description: Verið er að vinna í miðskólastærðfræði.
@@ -222,8 +219,8 @@
           title: Klukkustund kóðunar
           description: Prófaðu undirstöðuatriði í tölvunarfræði með persónum úr Angry
             Birds, Plants vs. Zombies og Scrat úr Ísaldarmyndunum!
-          description_short: Prófaðu undirstöðuatriði í tölvunarfræði með persónum
-            úr Angry Birds, Plants vs. Zombies og Scrat úr Ísaldarmyndunum!
+          description_short: Prófaðu grunnatriði í tölvufræði með mörgum skemmtilegum
+            fígúrum!
         frozen:
           title: Kóðaðu með Önnu og Elsu
           description: Notum kóða til að fylgja Önnu og Elsu þegar þær kanna töfra
@@ -267,7 +264,7 @@
           Farmer Binary: 'Bóndinn: Tvíundir'
           Maze and Bee: Völundarhús og býfluga
           Artist Binary: 'Listamaður: Tvíundir'
-          description_audience: Ages 10+ (after Course 3)
+          description_audience: Fyrir 10+ ára (eftir Námskeið 3)
         Course4pre:
           description_short: Stutt yfirferð á hugtökum fyrir nemendur sem hafa ekki
             farið á Námskeið 2 og 3.
@@ -316,3 +313,13 @@
           description: Valdir áfangar úr Námskeiði 4 til notkunarprófunar.
           Variables: Breytur
           For Loops: Frá lykkjur
+        potus:
+          title: sérstakt
+          description_short: sérstakt
+          description: sérstakt
+          Special: Sérstakt
+        special:
+          title: sérstakt
+          description_short: sérstakt
+          description: sérstakt
+          Special: Sérstakt

@@ -21,7 +21,7 @@ fi:
         text: Ensimmäisen ohjelmasi tehtävä on ohjata Angry Bird -lintu sokkelon läpi ja osua vihreään possuun.
       7:
         image: notes/hoc1_7.jpg
-        text: Vasemmalla on sokkelo, jossa ohjelmasi suoritetaan. Jokaisen pulman ohjeet löytyvät sokkelon alapuolelta.
+        text: Vasemmalla on sokkelo, jossa ohjelmasi suoritetaan. Jokaisen tehtävän ohjeet löytyvät sokkelon alapuolelta.
       8:
         image: notes/hoc1_8.jpg
         text: Keskimmäinen työkalupakki sisältää komentoja Angry Bird -linnulle. Näitä käytetään koodisi rakentamiseen.
@@ -30,7 +30,7 @@ fi:
         text: Oikealla on työtilasi, johon rakennat ohjelmasi raahamalla lohkoja työkalupakista. Jos haluat poistaa lohkon, vedä se nurkasta löytyvään roskakoriin.
       10:
         image: notes/hoc1_10.jpg
-        text: 'Jokainen lohko on ohje. Jos vedät "siirry eteenpäin" -lohkon työtilaasi ja painat "suorita ohjelma" -nappia, lintu liikkuu yhden ruudun sokkelossa.'
+        text: 'Jokainen lohko on käsky. Jos vedät "liiku eteenpäin" -lohkon työtilaasi ja painat "suorita ohjelma" -nappia, lintu liikkuu yhden ruudun sokkelossa.'
       11:
         image: notes/hoc1_11.jpg
         text: To do more than one action, you can drag many blocks to your workspace and attach them together. The bird will do the commands from top to bottom.
@@ -46,20 +46,20 @@ fi:
         text: Hei, olen JR! Kaikki ralliautotiimit tarvitsevat tietojenkäsittelyasiantuntijan voittaakseen. He analysoivat auton tietoja saadakseen sen kulkemaan nopeammin.
       2:
         image: notes/stage5_2.jpg
-        text: Näissä pulmissa olet taiteilija, joka piirtää viivaa kulkiessaan.
+        text: Näissä tehtävissä olet taiteilija, joka piirtää viivaa kulkiessaan.
       3:
         image: notes/stage5_3.jpg
-        text: 'Tässä lohkossa lukee "mene eteenpäin 100 kuvapistettä". Kuvapisteet ovat pieniä pisteitä näytölläsi.'
+        text: 'Tässä lohkossa lukee "liiku eteenpäin 100 kuvapistettä". Kuvapisteet ovat pieniä pisteitä näytölläsi.'
       4:
         image: notes/stage5_4.jpg
         text: 'Tässä lohkossa lukee "käänny oikealle 90 astetta". Se kääntää taiteilijaasi saman verran kuin "käännä"-lohkot sokkelotehtävissä.'
       5:
         image: notes/stage5_5.jpg
-        text: Napsauttamalla lohkon päissä olevia nuolia, voit muuttaa sitä määrää, jonka hahmo kulkee tai kääntyy. Leiki nyt hetki näillä lohkoilla tutustuaksesi niihin paremmin.
+        text: Napsauttamalla lohkon päissä olevia nuolia, voit muuttaa sitä määrää, jonka taiteilija liikkuu eteenpäin tai kääntyy. Leiki nyt hetki näillä lohkoilla tutustuaksesi niihin paremmin.
     farmer_intro:
       1:
         image: notes/stage9_1.jpg
-        text: Hei, olen Paola! Näissä pulmissa olet maanviljelijä, jonka täytyy saada peltonsa täysin tasaiseksi aloittaakseen istutukset.
+        text: Hei, olen Paola! Näissä tehtävissä olet maanviljelijä, jonka täytyy saada peltonsa täysin tasaiseksi aloittaakseen istutukset.
       2:
         image: notes/stage9_2.jpg
         text: Sinun täytyy auttaa häntä poistamaan kaikki multakasat ja täyttämään kaikki kuopat.
@@ -78,13 +78,13 @@ fi:
         text: "Any time somebody clicks or taps or types on a computer or phone, that generates an EVENT, and there's some code that decides what to do when an EVENT occurs."
       3:
         image: notes/flappy03.jpg
-        text: 'For example, you could have an EVENT-HANDLER that says "when the mouse is clicked, play a sound" '
+        text: 'Esimerkiksi, sinulla voi olla tapahtumakäsittelijä, joka sanoo "kun hiirtä napsautetaan, soita ääni" '
       4:
         image: notes/flappy04.jpg
         text: "Have you ever heard of the game FlappyBird? By using Event handlers, we're going to learn to program our own custom version of FlappyBird!"
       5:
         image: notes/flappy05.jpg
-        text: "The code you'll write involves dragging and dropping blocks that represent commands for the computer. Under the hood, each of these blocks is represented by real code."
+        text: Nyt tehtävä koodaus tulee tapahtumaan raahaamalla koodia esittäviä lohkoja. Jokainen lohko vastaa yhtä tietokoneelle annettavaa komentoa. Pinnan alla kukin näistä lohkoista vastaa oikea koodia.
       6:
         image: notes/flappy06.jpg
         text: 'Kun tarkastelet työtilaa, huomaat joitain vihreitä lohkoja valmiiksi täytettynä - nämä ovat "tapahtumakäsittelijöitä"'
@@ -93,20 +93,20 @@ fi:
         text: 'If you want the bird to FLAP when you CLICK the mouse, you can do that by attaching the "FLAP" block to the appropriate event handler, and now in your game whenever you click the mouse, the bird will flap.'
       8:
         image: notes/flappy08.jpg
-        text: "In each puzzle of this activity we'll introduce new types of events as green blocks on the workspace, and you can decide the appropriate blocks to add in response to those events."
+        text: Jokaisessa tämän jakson tehtävässä esittelemme työtilassa yhden tai useamman uuden vihreän tapahtumalohkon. Liittämällä toimintolohkoja tapahtumalohkoihin, voit päättää mitä tapahtumista seuraa.
       9:
         image: notes/flappy09.jpg
-        text: 'Kun näet tälläisen nuolen alaspäin, se tarkoittaa että voit muuttaa asetuksia - kuten esimerkiksi, mikä ääni kuuluu kun flappy osuu maahan.'
+        text: 'Kun näet tälläisen nuolen alaspäin, se tarkoittaa että voit muuttaa asetuksia - kuten esimerkiksi, mikä ääni kuuluu, kun flappy osuu maahan.'
       10:
         image: notes/flappy10.jpg
-        text: Viimeisessä pulmassa voit luoda oman pelin ja jakaa sen ystäviesi kanssa. Pidä hauskaa!
+        text: Viimeisessä tehtävässä voit luoda oman pelin ja jakaa sen ystäviesi kanssa. Pidä hauskaa!
     loop_times:
       1:
         image: notes/hoc2_1.jpg
         text: Hei, olen Mark! Opetellaanpa silmukoita. Silmukalla voit ohjata tietokonetta toistamaan mitä vain toimintoa uudelleen ja uudelleen, tuhansia tai jopa miljardeja kertoja.
       2:
         image: notes/hoc2_2.jpg
-        text: Tässä pulmassa haluamme liikuttaa lintua 5 ruutua eteenpäin osuaksemme possuun.
+        text: Tässä tehtävässä haluamme liikuttaa lintua 5 ruutua eteenpäin osuaksemme possuun.
       3:
         image: notes/hoc2_3.jpg
         text: 'Voimme käyttää uutta "toista"-lohkoa apunamme.'
@@ -125,7 +125,7 @@ fi:
     loop_until:
       1:
         image: notes/hoc3_1.jpg
-        text: 'Hei, olen Chris. Ennen kuin liityin Miami Heatiin, opiskelin tietojenkäsittelyä Georgian teknillisessä oppilaitoksessa. Kokeillaanpa uutta "toista kunnes" -lohkoa.'
+        text: 'Hei, olen Chris. Ennen kuin liityin Miami Heatiin, opiskelin tietojenkäsittelytiedettä Georgian teknillisessä oppilaitoksessa. Kokeillaanpa uutta "toista kunnes" -lohkoa.'
       2:
         image: notes/hoc3_2.jpg
         text: Mitä jos emme tietäisi, kuinka pitkälle linnun pitäisi liikkua saavuttaakseen possun?
@@ -150,37 +150,34 @@ fi:
         text: 'Raahataan siis yksi "Jos"-lohko ja sen sisään "käänny vasemmalle" -lohko.'
       5:
         image: notes/hoc4_5.jpg
-        text: 'Nyt, jos laitamme "siirry eteenpäin" -lohkon sen yläpuolelle ja "toista"-lohkon sen ympärille, joka kerta kun zombie liikkuu, se tarkistaa onko vasemmalle reittiä ja kääntyy, JOS on. "Toista"-lohko on hyvin tärkeä, jotta tarkistus tehdään joka askeleella.'
+        text: 'Jos nyt laitamme "liiku eteenpäin" -lohkon sen yläpuolelle ja "toista"-lohkon sen ympärille, niin zombie tarkistaa joka kerta kun se liikkuu, onko vasemmalle reittiä – ja jos on, se kääntyy. "Toista"-lohko on hyvin tärkeä, jotta tarkistus tehdään joka askeleella.'
       6:
         image: notes/hoc4_6.jpg
-        text: 'Jos-lauseet ovat hyvin tärkeitä tietojenkäsittelyssä. Yksi ensimmäisistä ohjelmista, jonka kirjoitin, oli peli nimeltä ristinolla. Siinä oli jos-lause, joka sanoi "JOS toinen henkilö on voittamassa, estä se siirto, jolla hän voittaisi."'
+        text: 'Jos-lauseet ovat hyvin tärkeitä tietojenkäsittelytieteessä. Yksi ensimmäisistä ohjelmista, jonka kirjoitin, oli peli nimeltä ristinolla. Siinä oli jos-lause, joka sanoi "JOS toinen henkilö on voittamassa, estä se siirto, jolla hän voittaisi."'
       7:
         image: notes/hoc4_7.jpg
         text: 'Pidä hauskaa "Jos"-lohkolla!'
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: |-
-          Hi, my name is Saloni. I use computer science to help solve problems in health and medicine. Let's learn about the "if else" block. It looks like the "if" block, but it has an extra part at the end that says "else".
+        text: 'Hei, nimeni on Saloni. Käytän tietojenkäsittelytiedettä ratkomaan ongelmia terveyden ja lääketieteen alueella. Opiskellaanpa "jos muuten" -lohkosta. Se näyttää "jos"-lohkolta, mutta siinä on ylimääräinen pala lopussa, joka sanoo "muuten".'
       2:
         image: notes/hoc5_2.jpg
-        text: |-
-          If I put a "move forward" block in the spot where it says "do" and a "turn left" block where it says "else" that means that the zombie will choose between 2 options. IF there is a path ahead, the zombie will move forward, and OTHERWISE (there isn't a path ahead), the zombie will turn left.
+        text: 'Jos laitan "liiku eteenpäin" -lohkon paikkaan jossa on "tee" ja "käänny vasemmalle" -lohkot kohtaan jossa lukee "muuten" se tarkoittaa että zombie valitsee kahden vaihtoehdon väliltä. JOS edessä on reitti, zombie menee eteenpäin; MUUTEN (jos edessä ei ole reittiä) zombie kääntyy vasemmalle.'
       3:
         image: notes/hoc5_3.jpg
         text: |-
           Just like the "if" block, we can put "if else" blocks inside a "repeat" blocks so that the zombie keeps moving and the "if else" block will keep checking if there's somewhere to turn.
       4:
         image: notes/hoc5_4.jpg
-        text: Now, get those zombies where they belong!
+        text: No niin, laitetaanpa nuo zombiet sinne minne kuuluvat!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
         text: "An if-else statement is a decision between two things. Let's see how we can use an if-else statement with our buddy Scrat the squirrel."
       2:
         image: notes/saloni_ifelse_scrat2.jpg
-        text: |-
-          This block looks the same as the "if" block, but there's an extra part at the bottom that says "else". If I put a "move forward" block where it says "do" and a "turn left" block where it says "else", that means Scrat the squirrel will move forward if there's a path ahead. If there's not a path ahead, Scrat will turn left.
+        text: 'Tämä lohko näyttää "jos" lohkolta, mutta siinä on "muuten" lisäosa lopussa. Jos laitan "liiku eteenpäin" -lohkon kohtaan jossa on "tee" ja "käänny vasemmalle -lohkon kohtaan, jossa sanotaan "muuten", se tarkoittaa, että Scrat-orava liikkuu eteenpäin jos edessä on reitti. Jos edessä ei ole reittiä, Scrat kääntyy vasemmalle.'
       3:
         image: notes/saloni_ifelse_scrat3.jpg
         text: |-
@@ -213,11 +210,11 @@ fi:
         text: '"Niin kauan kuin" -lohko toistaa mitä tahansa asetat sen sisälle, niin kauan kuin ylhäällä oleva ehto pitää paikkansa eli on TOSI.'
       3:
         image: notes/stage9_7.jpg
-        text: Esimerkiksi, jos maanviljelijä seisoo kasan päällä, hän jatkaa yhden lapiollisen poistamista niin kauan kuin hänen allaan on kasaa jäljellä.
+        text: 'Esimerkiksi, jos maanviljelijä seisoo kasan päällä, hän jatkaa yhden lapiollisen poistamista "niin kauan kuin" hänen allaan on kasaa jäljellä.'
     loop_for:
       1:
         image: notes/stage11_1.jpg
-        text: Hei, minä olen Trina ja työskentelen Pixarilla. Olen tehnyt töitä liutaan elokuvia, kuten Shrekiin.
+        text: Hei, minä olen Trina ja työskentelen Pixarilla. Olen tehnyt töitä liutaan eri elokuvia, kuten esimerkiksi Shrekiin.
       2:
         image: notes/stage11_2.jpg
         text: 'Tämä on uusi "laskuri"-silmukkamme. Se suorittaa komentoja yhä uudelleen ja voit muuttaa silmukan toimintaa hieman jokaisella kerralla.'
@@ -245,7 +242,7 @@ fi:
         text: 'Jos sitten kirjoitat "pituus" kohtaan, jossa lukee "x" ja painat rivinvaihtonäppäintä ("Enter"), olet määrittänyt pituussyötteen funktiollesi.'
       6:
         image: notes/stage15_6.jpg
-        text: 'Napsauta sitten tähteä. Seuraavaksi avaa muuttujat-valikko ja raahaa "pituus"-lohko "siirry eteenpäin" -lohkoon funktiomäärityksessäsi. Rahaa myös pois vanha numero-lohko.'
+        text: 'Napsauta sitten tähteä. Seuraavaksi avaa muuttujat-valikko ja raahaa "pituus"-lohko "siirry eteenpäin" -lohkoon funktiomäärityksessäsi. Raahaa myös pois vanha numero-lohko.'
       7:
         image: notes/stage15_7.jpg
         text: 'Kun haluat käyttää parametrillista funktiota, avaa Funktiot-valikko ja raahaa sieltä "piirrä kolmio arvolla pituus" -funktio.'
@@ -264,7 +261,7 @@ fi:
         text: Jos pidit ensimmäisestä kooditunnistasi, vieraile code.org-sivustolla jatkaaksesi tietotekniikan opintojasi! Kun suoritat 20 tunnin kurssimme, opit ohjelmoinnin perusteet ja voit ryhtyä opettelemaan miten tehdään sovelluksia puhelimille, robottien ohjeita, pelejä tai mitä tahansa.
       4:
         image: notes/hoc6_4.jpg
-        text: 'Tekniikkaa muuttaa kaikkea mitä teemme, eikä sillä ole väliä, oletko nuori tai vanha: ohjelmointi on hauskaa, se on luovaa, ja kuka tahansa voi oppia!'
+        text: Teknologia muuttaa kaikkea mitä teemme. Sillä ole väliä, oletko nuori tai vanha; ohjelmointi on hauskaa, se on luovaa, ja kuka tahansa voi oppia!
     20_wrapup:
       1:
         image: notes/bird.png
@@ -275,13 +272,13 @@ fi:
         text: "Hi, my name is Lyndsey. I model, act, and write my own apps. Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
       2:
         image: notes/frozen1_2.jpg
-        text: "You'll create snowflakes and patterns as you ice skate and make a winter wonderland that you can then share with your friends."
+        text: Luot lumihiutaleita ja kuvioita luistellessasi. Tee talven ihmemaa jaettavaksi ystävillesi.
       3:
         image: notes/frozen1_3.jpg
-        text: "In the next hour, you're going to learn the basics of how to code. Traditional programming is usually in text, but we'll use Blockly, which uses visual blocks that you can drag and drop to write programs. This is how even university students learn the basics. Under the hood, you're still creating code."
+        text: Seuraavan tunnin aikana opit koodaamisen perusasiat. Perinteinen ohjelmointi tapahtuu yleinsä tekstillä, mutta me käytämme Blocklyä, jossa ohjelmia luodaan kokoamalla niitä visuaalisista lohkoista. Jopa osa yliopistoista käyttää samaa tapaa. Konepellin alla luot kuitenkin ihan oikeaa koodia.
       4:
         image: notes/frozen1_4.jpg
-        text: "A program is a set of instructions that tells a computer what to do. Let's build a code, or a program, that will help Elsa create a simple line. We will use this later to create more complex patterns."
+        text: Ohjelma on joukko ohjeita, jotka kertovat tietokoneelle mitä tehdä. Rakennetaanpa koodia, eli ohjelma, joka auttaa Elsaa luomaan yksinkertaisen viivan. Käytämme tätä myöhemmin luodessamme monimutkaisempia kuvioita.
       5:
         image: notes/frozen1_5.jpg
         text: "Your screen is split into three main parts. On the left, is the ice surface where you'll run your program. The instructions for each level are written right below the surface."
@@ -290,11 +287,10 @@ fi:
         text: This middle area is the toolbox, and each of these blocks is an action that Elsa and Anna can do.
       7:
         image: notes/frozen1_7.jpg
-        text: |-
-          The white space on the right is called the workspace, and this is where we'll build our program. To move around the ice surface, you'll use the "Move Forward" block.
+        text: 'Valkoista aluetta oikealla kutsutaan työtilaksi ja siinä rakennamme ohjelmamme. Liikkuaksesi jääpinnalla, käytä "Liiku eteenpäin"-lohkoa.'
       8:
         image: notes/frozen1_8.jpg
-        text: 'Here, the "Move Forward" block says, "move forward by 100 pixels." When we press "Run", what happens? Elsa moves forward a certain amount on the screen, 100 pixels in fact! Pixels are basically very tiny squares on your computer screen.'
+        text: 'Tässä "Liiku eteenpäin"-lohko sanoo "liiku eteenpäin 100 kuvapistettä". Kun painat "Suorita", mitä tapahtuu? Elsa siirtyy eteenpäin tietyn määrän ruudulla, itse asiassa 100 kuvapistettä! Kuvapisteet, eli pikselit ovat hyvin pieniä neliöitä tietokoneesi ruudulla.'
       9:
         image: notes/frozen1_9.jpg
         text: 'The other block we have in this puzzle says "turn right by 90 degrees." And when we use this "Turn Right" block, that makes Elsa turn a certain amount. You can play around with how far you want Elsa to turn. The angle is measured from the path ahead of Elsa. So, this is a 90 degree turn. And this is a 120 degree turn.'
@@ -304,16 +300,16 @@ fi:
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
-        text: "Hi, I’m Paola! Computers are really good at repeating actions. You can count to 10, 20, or 100. But a computer can count to a billion or a trillion. It won't get bored and it will only take a few seconds. Whether it's counting, or drawing, or anything--computers can repeat things hundreds or even billions of times."
+        text: Hei, olen Paola! Tietokoneet ovat tosi hyviä toistamaan toimenpiteitä. Sinä voit laskea 10, 20 tai 100:aan, mutta tietokone voi laskea miljardeihin tai vielä suurempiin lukuihin. Se ei kyllästy ja sillä kuluu siihen aikaa vain muutamia sekunteja. Mitä tahansa se tekee – laskee, piirtää tai jotain muuta – tietokone pystyy toistamaan asioita satoja tai vaikka miljardeja kertoja.
       2:
         image: notes/frozen2_2.jpg
-        text: 'In programming, we call this a loop. A loop is how you repeat your code over and over again. For the next puzzle, your goal is to help Anna create a square with the "Repeat" block.'
+        text: 'Ohjelmoinnissa tätä kutsutaan silmukaksi. Silmukalla toistat koodiasi kerta toisensa jälkeen. Seuraavassa tehtävässä sinun tulee auttaa Annaa luomaan neliö käyttäen "Toista"-lohkoa.'
       3:
         image: notes/frozen2_3.jpg
         text: 'Any blocks of code you put inside the "Repeat" block will be repeated in sequence, as many times as you want.'
       4:
         image: notes/frozen2_4.jpg
-        text: 'To draw a square, you can use the "Move Forward" and "Turn Right" block 4 times. But the easier way is to tell the computer to "Move Forward" and "Turn Right by 90 degrees" once, and then tell it to repeat this pair of actions 4 times. To do that, you need to put the "Move Forward" and "Turn Right" block inside a "Repeat" block.'
+        text: 'Piirtääksesi neliön, voit käyttää "Liiku eteenpäin" ja "Käänny oikealle" -lohkoja neljä kertaa. Mutta helpompaa on kertoa tietokoneelle "Liiku eteenpäin" ja "Käänny oikealle 90 astetta" kerran ja käskeä sitä toistamaan tämä toimintopari 4 kertaa. Tehdäksesi tämän, sinun täytyy laittaa "Liiku eteenpäin" ja "Käänny oikealle" -lohkot "Toista"-lohkon sisään.'
       5:
         image: notes/frozen2_5.jpg
         text: |-
@@ -321,10 +317,10 @@ fi:
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: Hi, I’m Chris Bosh. I’m a professional basketball player, and I coded in college.
+        text: Hei, olen Chris Bosh. Olen koripalloammattilainen ja koodasin yliopistossa.
       2:
         image: notes/frozen3_2.jpg
-        text: One of the most important concepts in computer science is how to define new commands. Most computer languages have only about 100 words or commands. And really, the art and magic is in defining your own new words out of these building blocks.
+        text: Yksi tietojenkäsittelytieteen tärkeimmistä käsitteistä on uusien komentojen luominen. Suurimmassa osassa ohjelmointikieliä on vain 100 käskysanaa tai komentoa. Ohjelmoinnin taika onkin omien uusien sanojen määrittely ja rakentaminen näistä rakennuspalikoista.
       3:
         image: notes/frozen3_3.jpg
         text: "Once you've taught a computer how to do an action once using this sequence of commands, you can make up your own name for that action so it's easy to repeat it later. When you define your own command and give it a name, that's called a function."
@@ -336,7 +332,7 @@ fi:
         text: 'You can define this as a function called "create a square." '
       6:
         image: notes/frozen3_6.jpg
-        text: Now you have a new block that you can use multiple times to create multiple squares.
+        text: Nyt sinulla on uusi lohko, jota voit käyttää kerta toisensa jälkeen luodaksesi määrättömästi uusia neliöitä.
       7:
         image: notes/frozen3_7.jpg
         text: A lot of simple shapes can be used to create more complex patterns. In the next puzzle, the code you recently wrote to make a circle is available to you as a new function that can make circles of different sizes. Can you use it to help Elsa create intricate and beautiful patterns in the snow?

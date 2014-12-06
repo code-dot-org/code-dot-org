@@ -30,14 +30,14 @@ fi:
   appname: Code.org
   stage: Taso
   stage_number: 'Taso %{number}'
-  puzzle: Pulma
+  puzzle: Tehtävä
   trophies: Pokaalit
   courses: Kurssit
   of: /
   more: LISÄÄ
   less: VÄHEMMÄN
   try_hoc: 'Kokeile Koodaustuntia, napsauta tästä >> '
-  try_k8intro: Tai kokeile ala-asteen johdantoa tietojenkäsittelyyn (15-25 tuntia)
+  try_k8intro: Kokeile ala-asteen johdantoa tietojenkäsittelytieteeseen (15-25 tuntia)
   k8intro: Johdanto tietotekniikkaan -kurssi 5–14-vuotiaille (15–25 tuntia)
   already_started: 'Aloititko jo? Jatka tästä >> '
   demos: 'Ylläpitäjä: Kaikki demot'
@@ -61,7 +61,7 @@ fi:
   signup_form:
     overview_student: 'Rekisteröidy niin voit seurata edistymistäsi. Sähköpostiosoitettasi käytetään pääasiassa sisäänkirjautumiseen ja salasanan palauttamiseen. Katso lisätietoja <a href="http://code.org/privacy">Yksityisyyskäytännöstämme</a>.'
     overview_teacher: 'Rekisteröidy niin saat apua tietojenkäsittelyn opettamiseen.<p/>Voit lisätä oppilaita ja seurata heidän edistymistään.'
-    no_signup_message: 'Voit <a target="_blank" href="http://learn.code.org">selata eri tasoja ja pulmia</a>, mutta sinun pitää rekistöröityä, jotta voit tallentaa edistymisesi.'
+    no_signup_message: 'Voit <a target="_blank" href="http://learn.code.org">selata eri tasoja ja tehtäviä</a>, mutta sinun pitää rekistöröityä, jotta voit tallentaa edistymisesi.'
     teacher_educator_guide: Katso opettajan opas
     teacher_pitch: Code.org:iin liittyminen opettajana
     teacher_title: Opettajien rekisteröityminen
@@ -345,8 +345,8 @@ fi:
     test_videos_help: Testaa uutta videosoitintamme koulussasi
     try_beta_courses: Uutta! Kokeile beta-kurssejamme K-5 oppilaille
     use_as_teacher: Käytä sivustoa opettajana
-    heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
-    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
+    heading_hoc2014: '<h2>Koodaustunti</h2><h1>kaikille ikäryhmille</h1>'
+    heading_elementary: '<h2>20 tunnin kurssit</h2><h1>aloittelijoille (kaikki ikäryhmät)</h1>'
     heading_apps: '<h2>Hauskaa</h2><h1>kaikille</h1>'
     heading_legacy: '<h2>Yleinen kurssimme</h2><h1>kaiken ikäisille</h1>'
     your_gallery: Galleria
@@ -432,7 +432,7 @@ fi:
       title: Johdantokurssi
       body: Kokeile 20 tunnin kurssia Johdanto tietojenkäsittelytieteeseen.
     hoc2014:
-      try_new_tutorial: Try our new Hour of Code tutorial in beta
+      try_new_tutorial: Betatestaa uusia Koodaustunti-kurssejamme
       try_frozen: Artist with Anna and Elsa, from Frozen
     gallery:
       title: Galleria

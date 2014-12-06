@@ -19,11 +19,11 @@ az-AZ:
   twentyhours_text: Finished your first Hour of Code? Learn more core computer science and programming concepts in this follow-up course.
   hoc2014_heading: '<a href="http://hourofcode.com">Kod Saatı</a>na qoşulun<br/>8 - 14 dekabr, 2014<br/>'
   hoc2014_students: Şagirdlər
-  hoc2014_try: Try it
+  hoc2014_try: Sınaqdan keçirin
   hoc2014_teachers: Müəllimlər
-  hoc2014_host: Host it
+  hoc2014_host: Təşkil edin
   hoc2014_everyone: Hamı
-  hoc2014_support: Support it
+  hoc2014_support: Dəstək verin
   hoc2014_whatishoc: Kod Saatı nədir?
   twentyhours_trynow: Elə indi sınaqdan keçirin
   california_heading: İnformatikanı tədris etməyi məktəbinizdən xahiş edin
@@ -293,7 +293,7 @@ az-AZ:
   carousel_heading_international: Sizin dilinizdə olan dərsliklər
   carousel_heading_domestic: Tutorials available in English
   carousel_heading_beginners: Tutorials for Beginners
-  carousel_heading_javascript: Tutorials that teach Javascript
+  carousel_heading_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: "No device or internet? Try 'unplugged' computer science"
   carousel_heading_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: Tutorials in other programming languages

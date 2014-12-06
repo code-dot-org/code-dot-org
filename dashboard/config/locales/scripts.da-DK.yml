@@ -318,3 +318,13 @@
           description: Et udvalg af øvelser med 4 niveauer til brugervenlighedstest.
           Variables: Variabler
           For Loops: For Loops
+        potus:
+          title: special
+          description_short: special
+          description: special
+          Special: Special
+        special:
+          title: special
+          description_short: special
+          description: special
+          Special: Special

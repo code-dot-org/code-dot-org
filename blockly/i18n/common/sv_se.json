@@ -47,7 +47,7 @@
   "nextLevelTrophies": "Grattis! Du slutförde pussel {puzzleNumber} och vann {numTrophies, plural, one {en trofé} other {# troféer}}.",
   "nextStage": "Grattis! Du har klarat {stageName}.",
   "nextStageTrophies": "Grattis! Du klarade {stageName} och har fått {numTrophies, plural, one {a trophy} other {# trophies}}.",
-  "numBlocksNeeded": "Grattis! Du slutförde pussel {puzzleNumber}. (Men du skulle bara behövt använda{numBlocks, plural, one {1 block} other {# block}}.)",
+  "numBlocksNeeded": "Grattis! Du klarade pussel {puzzleNumber}. (Men du borde bara behövt använda {numBlocks, plural, one {1 block} other {# block}}.)",
   "numLinesOfCodeWritten": "Du skrev {numLines, plural, one {1 rad} other {# rader}} kod!",
   "play": "play",
   "print": "Skriv ut",
