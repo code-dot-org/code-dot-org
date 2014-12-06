@@ -72,8 +72,8 @@ app.get('/calc', function(req, res) {
   renderApp('calc', req, res);
 });
 
-app.get('/minecraft', function(req, res) {
-  renderApp('minecraft', req, res);
+app.get('/voxel', function(req, res) {
+  renderApp('voxel', req, res);
 });
 
 app.get('/webapp', function(req, res) {

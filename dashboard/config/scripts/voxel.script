@@ -1,0 +1,14 @@
+title 'Make your Own Blocky World Game'
+description_short "Make your own Block World game!"
+description "Make your own Block World game!"
+hidden 'true'
+
+stage 'Voxel'
+skin 'voxel'
+level 'Blockworld' # jump height
+level 'Speed Setter'
+level 'Block Maker'
+level 'Block Destroyer'
+level 'Block Sprayer'
+level 'Crazy Block Spray'
+level 'blockly:Voxel:voxel1'

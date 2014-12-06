@@ -1,11 +1,11 @@
 var appMain = require('../appMain');
-window.Minecraft = require('./minecraft');
+window.Voxel = require('./voxel');
 var blocks = require('./blocks');
 var skins = require('../skins');
 var levels = require('./levels');
 
-window.minecraftMain = function(options) {
+window.voxelMain = function(options) {
   options.skinsModule = skins;
   options.blocksModule = blocks;
-  appMain(window.Minecraft, levels, options);
+  appMain(window.Voxel, levels, options);
 };

@@ -21,7 +21,7 @@ class Game < ActiveRecord::Base
   ARTIST = TURTLE = 'turtle' # heh
   FLAPPY = 'flappy'
   BOUNCE = 'bounce'
-  MINECRAFT = 'minecraft'
+  VOXEL = 'voxel'
   PLAYLAB = STUDIO = 'studio'
 
   def self.custom_studio
@@ -36,8 +36,8 @@ class Game < ActiveRecord::Base
     @@game_eval ||= find_by_name("Eval")
   end
 
-  def self.minecraft
-    @@game_eval ||= find_by_name("Minecraft")
+  def self.voxel
+    @@game_eval ||= find_by_name("Voxel")
   end
 
   def unplugged?
@@ -52,8 +52,8 @@ class Game < ActiveRecord::Base
     app == MATCH
   end
 
-  def minecraft?
-    app == MINECRAFT
+  def voxel?
+    app == VOXEL
   end
 
   def supports_sharing?
@@ -117,7 +117,7 @@ class Game < ActiveRecord::Base
         ArtistEC:turtle:artist_intro
         TextMatch
         StudioEC:studio
-        Minecraft:minecraft
+        Voxel:voxel
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
         Game.create!(id: id + 1, name: name, app: app, intro_video: Video.find_by_key(intro_video))

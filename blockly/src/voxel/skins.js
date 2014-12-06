@@ -9,7 +9,7 @@ var skinsBase = require('../skins');
 
 var CONFIGS = {
 
-  minecraft: {
+  voxel: {
   }
 
 };

@@ -1,4 +1,4 @@
-<Minecraft>
+<Voxel>
   <config><![CDATA[{
   "game_id": 40,
   "created_at": "2014-12-05T20:26:26.000Z",
@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "embed": "false",
-    "skin": "minecraft",
+    "skin": "voxel",
     "instructions": "Try setting Gravity to the Asteroid setting. Then jump around a few times!\r\n\r\nNote: if you spawned underground, try refreshing your browser.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -22,20 +22,20 @@
     <toolbox_blocks>
       <xml>
         <block type="when_run"/>
-        <block type="minecraft_setGravity">
+        <block type="voxel_setGravity">
           <title name="VALUE">-1.7999999499807017e-7</title>
         </block>
-        <block type="minecraft_setSpeed">
+        <block type="voxel_setSpeed">
           <title name="VALUE">0.0028</title>
         </block>
       </xml>
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="minecraft_setGravity">
+        <block type="voxel_setGravity">
           <title name="VALUE">-1.7999999499807017e-7</title>
         </block>
       </xml>
     </required_blocks>
   </blocks>
-</Minecraft>
+</Voxel>

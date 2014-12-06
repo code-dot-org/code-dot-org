@@ -1,5 +1,5 @@
 /**
- * Blockly Demo: Minecraft Graphics
+ * Blockly Demo: Voxel Graphics
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,15 +16,15 @@
 
 'use strict';
 
-var Minecraft = module.exports;
+var Voxel = module.exports;
 
 /**
  * Create a namespace for the application.
  */
 var BlocklyApps = require('../base');
-var Minecraft = module.exports;
+var Voxel = module.exports;
 var commonMsg = require('../../locale/current/common');
-var minecraftMsg = require('../../locale/current/minecraft');
+var voxelMsg = require('../../locale/current/voxel');
 var skins = require('../skins');
 var levels = require('./levels');
 var codegen = require('../codegen');
@@ -50,9 +50,9 @@ var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
 
 /**
- * Initialize Blockly and the Minecraft.  Called on page load.
+ * Initialize Blockly and the Voxel.  Called on page load.
  */
-Minecraft.init = function(config) {
+Voxel.init = function(config) {
 
   skin = config.skin;
   level = config.level;
@@ -86,7 +86,7 @@ Minecraft.init = function(config) {
     Blockly.BROKEN_CONTROL_POINTS = false; // necessary hack?
     // Add to reserved word list: API, local variables in execution environment
     // (execute) and the infinite loop detection function.
-    Blockly.JavaScript.addReservedWords('Minecraft,code');
+    Blockly.JavaScript.addReservedWords('Voxel,code');
 
     // Adjust visualizationColumn width.
     var visualizationColumn = document.getElementById('visualizationColumn');
@@ -96,27 +96,27 @@ Minecraft.init = function(config) {
 
     // base's BlocklyApps.resetButtonClick will be called first
     var resetButton = document.getElementById('resetButton');
-    dom.addClickTouchEvent(resetButton, Minecraft.resetButtonClick);
+    dom.addClickTouchEvent(resetButton, Voxel.resetButtonClick);
 
-    window.game.plugins.get('voxel-reach').on('use', function(target) { Minecraft.handleWhenRightClick(target);});
-    //window.game.plugins.get('voxel-reach').on('start mining', function(target) { Minecraft.handleWhenLeftClick(target);});
-    window.game.on('fire', function() { Minecraft.handleWhenLeftClick();});
+    window.game.plugins.get('voxel-reach').on('use', function(target) { Voxel.handleWhenRightClick(target);});
+    //window.game.plugins.get('voxel-reach').on('start mining', function(target) { Voxel.handleWhenLeftClick(target);});
+    window.game.on('fire', function() { Voxel.handleWhenLeftClick();});
 
   };
 
   BlocklyApps.init(config);
 };
 
-Minecraft.handleWhenRightClick = function(target) {
+Voxel.handleWhenRightClick = function(target) {
   evalCode(Blockly.Generator.blockSpaceToCode(
     'JavaScript',
-    'minecraft_whenRightClick'));
+    'voxel_whenRightClick'));
 };
 
-Minecraft.handleWhenLeftClick = function(target) {
+Voxel.handleWhenLeftClick = function(target) {
   evalCode(Blockly.Generator.blockSpaceToCode(
     'JavaScript',
-    'minecraft_whenLeftClick'));
+    'voxel_whenLeftClick'));
 };
 
 /**
@@ -126,14 +126,14 @@ BlocklyApps.runButtonClick = function() {
   BlocklyApps.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
   BlocklyApps.attempts++;
-  Minecraft.execute();
+  Voxel.execute();
 };
 
 /**
  * App specific reset button click logic.  BlocklyApps.resetButtonClick will be
  * called first.
  */
-Minecraft.resetButtonClick = function () {
+Voxel.resetButtonClick = function () {
 
 };
 
@@ -142,7 +142,7 @@ function evalCode (code) {
   try {
     return codegen.evalWith(code, {
       BlocklyApps: BlocklyApps,
-      Minecraft: api
+      Voxel: api
     });
   } catch (e) {
     // Infinity is thrown if we detect an infinite loop. In that case we'll
@@ -165,10 +165,10 @@ function evalCode (code) {
 /**
  * Execute the user's code.  Heaven help us...
  */
-Minecraft.execute = function() {
-  Minecraft.result = BlocklyApps.ResultType.UNSET;
-  Minecraft.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
-  Minecraft.message = undefined;
+Voxel.execute = function() {
+  Voxel.result = BlocklyApps.ResultType.UNSET;
+  Voxel.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
+  Voxel.message = undefined;
 
   // Run the app
   var codeWhenRunButton = Blockly.Generator.blockSpaceToCode(
@@ -176,23 +176,23 @@ Minecraft.execute = function() {
     'when_run');
 
   // Get a result
-  Minecraft.result = evalCode(codeWhenRunButton);
+  Voxel.result = evalCode(codeWhenRunButton);
   return; // TODO(bjordan): remove
-  Minecraft.testResults = BlocklyApps.getTestResults(Minecraft.result);
+  Voxel.testResults = BlocklyApps.getTestResults(Voxel.result);
 
   if (level.freePlay) {
-    Minecraft.testResults = BlocklyApps.TestResults.FREE_PLAY;
+    Voxel.testResults = BlocklyApps.TestResults.FREE_PLAY;
   }
 
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
   var reportData = {
-    app: 'minecraft',
+    app: 'voxel',
     level: level.id,
     builder: level.builder,
-    result: Minecraft.result,
-    testResult: Minecraft.testResults,
+    result: Voxel.result,
+    testResult: Voxel.testResults,
     program: encodeURIComponent(textBlocks),
     onComplete: onReportComplete
   };
@@ -206,16 +206,16 @@ Minecraft.execute = function() {
  */
 var displayFeedback = function(response) {
   // override extra top blocks message
-  level.extraTopBlocks = minecraftMsg.extraTopBlocks();
+  level.extraTopBlocks = voxelMsg.extraTopBlocks();
 
   BlocklyApps.displayFeedback({
-    app: 'Minecraft',
+    app: 'Voxel',
     skin: skin.id,
-    feedbackType: Minecraft.testResults,
+    feedbackType: Voxel.testResults,
     response: response,
     level: level,
     appStrings: {
-      reinfFeedbackMsg: minecraftMsg.reinfFeedbackMsg()
+      reinfFeedbackMsg: voxelMsg.reinfFeedbackMsg()
     },
   });
 };

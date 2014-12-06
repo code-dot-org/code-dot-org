@@ -159,8 +159,8 @@ class LevelsController < ApplicationController
         @game = Game.eval
         @level = @type_class.new
         render :edit
-      elsif @type_class <= Minecraft
-        @game = Game.minecraft
+      elsif @type_class <= Voxel
+        @game = Game.voxel
         @level = @type_class.new
         render :edit
       elsif @type_class <= Maze

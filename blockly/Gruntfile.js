@@ -13,7 +13,7 @@ var APPS = [
   'calc',
   'webapp',
   'eval',
-  'minecraft'
+  'voxel'
 ];
 
 if (process.env.MOOC_APP) {

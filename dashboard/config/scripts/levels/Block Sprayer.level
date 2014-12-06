@@ -1,4 +1,4 @@
-<Minecraft>
+<Voxel>
   <config><![CDATA[{
   "game_id": 40,
   "created_at": "2014-12-05T21:21:19.000Z",
@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "embed": "false",
-    "skin": "minecraft",
+    "skin": "voxel",
     "instructions": "Can you use a Repeat loop and Variable to make Right Click create a tree with 10 blocks instead of just one? Hint: the tree trunk is the type number 12!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -23,12 +23,12 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="minecraft_setGravity">
+            <block type="voxel_setGravity">
               <title name="VALUE">-1.7999999499807017e-7</title>
             </block>
           </next>
         </block>
-        <block type="minecraft_whenRightClick">
+        <block type="voxel_whenRightClick">
           <next>
             <block type="variables_set" inline="false">
               <title name="VAR">x</title>
@@ -41,9 +41,9 @@
                 <block type="controls_repeat">
                   <title name="TIMES">10</title>
                   <statement name="DO">
-                    <block type="minecraft_setBlock" inline="false">
+                    <block type="voxel_setBlock" inline="false">
                       <value name="VALUE_X">
-                        <block type="minecraft_adjacent_target_x"/>
+                        <block type="voxel_adjacent_target_x"/>
                       </value>
                       <value name="VALUE_Y">
                         <block type="variables_get">
@@ -51,7 +51,7 @@
                         </block>
                       </value>
                       <value name="VALUE_Z">
-                        <block type="minecraft_adjacent_target_z"/>
+                        <block type="voxel_adjacent_target_z"/>
                       </value>
                       <value name="VALUE">
                         <block type="math_number">
@@ -90,15 +90,15 @@
     <toolbox_blocks>
       <xml>
         <block type="when_run"/>
-        <block type="minecraft_whenRightClick"/>
-        <block type="minecraft_whenLeftClick"/>
-        <block type="minecraft_setGravity">
+        <block type="voxel_whenRightClick"/>
+        <block type="voxel_whenLeftClick"/>
+        <block type="voxel_setGravity">
           <title name="VALUE">-1.7999999499807017e-7</title>
         </block>
-        <block type="minecraft_setSpeed">
+        <block type="voxel_setSpeed">
           <title name="VALUE">0.0028</title>
         </block>
-        <block type="minecraft_setBlock" inline="false"/>
+        <block type="voxel_setBlock" inline="false"/>
         <block type="math_random_int" inline="true">
           <value name="FROM">
             <block type="math_number">
@@ -111,13 +111,13 @@
             </block>
           </value>
         </block>
-        <block type="minecraft_adjacent_target_x"/>
-        <block type="minecraft_adjacent_target_y"/>
-        <block type="minecraft_adjacent_target_z"/>
-        <block type="minecraft_selected_target_x"/>
-        <block type="minecraft_selected_target_y"/>
-        <block type="minecraft_selected_target_z"/>
-        <block type="minecraft_log"/>
+        <block type="voxel_adjacent_target_x"/>
+        <block type="voxel_adjacent_target_y"/>
+        <block type="voxel_adjacent_target_z"/>
+        <block type="voxel_selected_target_x"/>
+        <block type="voxel_selected_target_y"/>
+        <block type="voxel_selected_target_z"/>
+        <block type="voxel_log"/>
         <block type="controls_repeat">
           <title name="TIMES">4</title>
         </block>
@@ -161,4 +161,4 @@
       </xml>
     </toolbox_blocks>
   </blocks>
-</Minecraft>
+</Voxel>

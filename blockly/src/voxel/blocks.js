@@ -1,18 +1,18 @@
 
 /**
- * @fileoverview Demonstration of Blockly: Minecraft
+ * @fileoverview Demonstration of Blockly: Voxel
  * @author fraser@google.com (Neil Fraser)
  */
 'use strict';
 
-var msg = require('../../locale/current/minecraft');
+var msg = require('../../locale/current/voxel');
 var commonMsg = require('../../locale/current/common');
 var blockUtils = require('../block_utils');
 var utils = require('../utils');
 
 var generateSetterCode = function (ctx, name) {
   var value = ctx.getTitleValue('VALUE');
-  return 'Minecraft.' + name + '(\'block_id_' + ctx.id + '\', ' +
+  return 'Voxel.' + name + '(\'block_id_' + ctx.id + '\', ' +
     value + ');\n';
 };
 
@@ -24,11 +24,11 @@ exports.install = function(blockly, blockInstallOptions) {
 
 
   blockUtils.generateSimpleBlock(blockly, generator, {
-    name: 'minecraft_log',
+    name: 'voxel_log',
     helpUrl: 'http://google.com',
     title: "hello world", // TODO Localize
     tooltip: 'TODO Localize me', // TODO localize
-    functionName: 'Minecraft.log'
+    functionName: 'Voxel.log'
   });
 
 
@@ -39,7 +39,7 @@ exports.install = function(blockly, blockInstallOptions) {
     BlocklyApps.playAudio(utils.stripQuotes(soundValue), {volume: 1.0});
   }
 
-  blockly.Blocks.minecraft_playSound = {
+  blockly.Blocks.voxel_playSound = {
     // Block for playing sound.
     helpUrl: '',
     init: function() {
@@ -53,14 +53,14 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  blockly.Blocks.minecraft_playSound.K1_SOUNDS =
+  blockly.Blocks.voxel_playSound.K1_SOUNDS =
     [
       ['win', 'win'],
       ['start', 'start'],
       ['failure', 'failure']
     ];
 
-  generator.minecraft_playSound = function() {
+  generator.voxel_playSound = function() {
     return generateSetterCode(this, 'playSound');
   };
 
@@ -74,7 +74,7 @@ exports.install = function(blockly, blockInstallOptions) {
       ['Jupiter', (EARTH_GRAVITY * 4).toString()]
     ];
 
-  blockly.Blocks.minecraft_setGravity = {
+  blockly.Blocks.voxel_setGravity = {
     // Block for playing sound.
     helpUrl: '',
     init: function() {
@@ -88,7 +88,7 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  generator.minecraft_setGravity = function() {
+  generator.voxel_setGravity = function() {
     return generateSetterCode(this, 'setGravity');
   };
 
@@ -102,7 +102,7 @@ exports.install = function(blockly, blockInstallOptions) {
       ['Super Sprint', (WALK_SPEED * 8).toString()]
     ];
 
-  blockly.Blocks.minecraft_setSpeed = {
+  blockly.Blocks.voxel_setSpeed = {
     helpUrl: '',
     init: function() {
       this.setHSV(184, 1.00, 0.74);
@@ -115,19 +115,19 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  generator.minecraft_setSpeed = function() {
+  generator.voxel_setSpeed = function() {
     return generateSetterCode(this, 'setSpeed');
   };
 
-  generator.minecraft_setBlock = function() {
+  generator.voxel_setBlock = function() {
     var value = Blockly.JavaScript.valueToCode(this, 'VALUE', Blockly.JavaScript.ORDER_NONE);
     var x = Blockly.JavaScript.valueToCode(this, 'VALUE_X', Blockly.JavaScript.ORDER_NONE);
     var y = Blockly.JavaScript.valueToCode(this, 'VALUE_Y', Blockly.JavaScript.ORDER_NONE);
     var z = Blockly.JavaScript.valueToCode(this, 'VALUE_Z', Blockly.JavaScript.ORDER_NONE);
-    return 'Minecraft.setBlock(' + value + ', ' + x + ', ' + y + ', ' + z + ', \'block_id_' + this.id + '\');\n';
+    return 'Voxel.setBlock(' + value + ', ' + x + ', ' + y + ', ' + z + ', \'block_id_' + this.id + '\');\n';
   };
 
-  var MINECRAFT_BLOCKS =
+  var VOXEL_BLOCKS =
     [
       ['Empty', '0'],
       ['1', '1'],
@@ -169,7 +169,7 @@ exports.install = function(blockly, blockInstallOptions) {
       ['37', '37']
     ];
 
-  blockly.Blocks.minecraft_setBlock = {
+  blockly.Blocks.voxel_setBlock = {
     helpUrl: '',
     init: function() {
       this.setHSV(184, 1.00, 0.74);
@@ -190,7 +190,7 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  blockly.Blocks.minecraft_whenRightClick = {
+  blockly.Blocks.voxel_whenRightClick = {
     // Block to handle event where mouse is clicked
     helpUrl: '',
     init: function () {
@@ -202,7 +202,7 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  blockly.Blocks.minecraft_whenLeftClick = {
+  blockly.Blocks.voxel_whenLeftClick = {
     // Block to handle event where mouse is clicked
     helpUrl: '',
     init: function () {
@@ -214,16 +214,16 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  generator.minecraft_whenRightClick = function () {
+  generator.voxel_whenRightClick = function () {
     // Generate JavaScript for handling click event.
     return '\n';
   };
-  generator.minecraft_whenLeftClick = function () {
+  generator.voxel_whenLeftClick = function () {
     // Generate JavaScript for handling click event.
     return '\n';
   };
 
-  blockly.Blocks.minecraft_adjacent_target_x = {
+  blockly.Blocks.voxel_adjacent_target_x = {
     // adjacent target x.
     init: function () {
       this.setHSV(258, 0.35, 0.62);
@@ -234,13 +234,13 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  generator.minecraft_adjacent_target_x = function () {
+  generator.voxel_adjacent_target_x = function () {
     // Generate JavaScript for handling click event.
 
-    return ['Minecraft.getAdjacentTargetX()\n', Blockly.JavaScript.ORDER_ATOMIC];
+    return ['Voxel.getAdjacentTargetX()\n', Blockly.JavaScript.ORDER_ATOMIC];
   };
 
-  blockly.Blocks.minecraft_adjacent_target_y = {
+  blockly.Blocks.voxel_adjacent_target_y = {
     // adjacent target y.
     init: function () {
       this.setHSV(258, 0.35, 0.62);
@@ -251,12 +251,12 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  generator.minecraft_adjacent_target_y = function () {
+  generator.voxel_adjacent_target_y = function () {
     // Generate JavaScript for handling click event.
-    return ['Minecraft.getAdjacentTargetY()\n', Blockly.JavaScript.ORDER_ATOMIC];
+    return ['Voxel.getAdjacentTargetY()\n', Blockly.JavaScript.ORDER_ATOMIC];
   };
 
-  blockly.Blocks.minecraft_adjacent_target_z = {
+  blockly.Blocks.voxel_adjacent_target_z = {
     // adjacent target z.
     init: function () {
       this.setHSV(258, 0.35, 0.62);
@@ -267,13 +267,13 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  generator.minecraft_adjacent_target_z = function () {
+  generator.voxel_adjacent_target_z = function () {
     // Generate JavaScript for handling click event.
-    return ['Minecraft.getAdjacentTargetZ()\n', Blockly.JavaScript.ORDER_ATOMIC];
+    return ['Voxel.getAdjacentTargetZ()\n', Blockly.JavaScript.ORDER_ATOMIC];
   };
 
 
-  blockly.Blocks.minecraft_selected_target_x = {
+  blockly.Blocks.voxel_selected_target_x = {
     // selected target x.
     init: function () {
       this.setHSV(258, 0.35, 0.62);
@@ -284,13 +284,13 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  generator.minecraft_selected_target_x = function () {
+  generator.voxel_selected_target_x = function () {
     // Generate JavaScript for handling click event.
 
-    return ['Minecraft.getSelectedTargetX()\n', Blockly.JavaScript.ORDER_ATOMIC];
+    return ['Voxel.getSelectedTargetX()\n', Blockly.JavaScript.ORDER_ATOMIC];
   };
 
-  blockly.Blocks.minecraft_selected_target_y = {
+  blockly.Blocks.voxel_selected_target_y = {
     // selected target y.
     init: function () {
       this.setHSV(258, 0.35, 0.62);
@@ -301,12 +301,12 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  generator.minecraft_selected_target_y = function () {
+  generator.voxel_selected_target_y = function () {
     // Generate JavaScript for handling click event.
-    return ['Minecraft.getSelectedTargetY()\n', Blockly.JavaScript.ORDER_ATOMIC];
+    return ['Voxel.getSelectedTargetY()\n', Blockly.JavaScript.ORDER_ATOMIC];
   };
 
-  blockly.Blocks.minecraft_selected_target_z = {
+  blockly.Blocks.voxel_selected_target_z = {
     // selected target z.
     init: function () {
       this.setHSV(258, 0.35, 0.62);
@@ -317,9 +317,9 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  generator.minecraft_selected_target_z = function () {
+  generator.voxel_selected_target_z = function () {
     // Generate JavaScript for handling click event.
-    return ['Minecraft.getSelectedTargetZ()\n', Blockly.JavaScript.ORDER_ATOMIC];
+    return ['Voxel.getSelectedTargetZ()\n', Blockly.JavaScript.ORDER_ATOMIC];
   };
 
 };

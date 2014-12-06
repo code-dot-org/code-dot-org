@@ -1,4 +1,4 @@
-class Minecraft < Blockly
+class Voxel < Blockly
   serialized_attrs %w(
     solution_blocks
     free_play
@@ -16,13 +16,13 @@ class Minecraft < Blockly
 
   # List of possible skins, the first is used as a default.
   def self.skins
-    ['minecraft']
+    ['voxel']
   end
 
   def self.create_from_level_builder(params, level_params)
     create!(level_params.merge(
         user: params[:user],
-        game: Game.minecraft,
+        game: Game.voxel,
         level_num: 'custom',
         properties: {
           solution_blocks: params[:program] || '',
@@ -34,15 +34,15 @@ class Minecraft < Blockly
   def self.toolbox
     <<-XML.strip_heredoc.chomp
       <block type="when_run"></block>
-      <block type="minecraft_whenRightClick"></block>
-      <block type="minecraft_whenLeftClick"></block>
-      <block type="minecraft_setGravity">
+      <block type="voxel_whenRightClick"></block>
+      <block type="voxel_whenLeftClick"></block>
+      <block type="voxel_setGravity">
         <title name="VALUE">-1.7999999499807017e-7</title>
       </block>
-      <block type="minecraft_setSpeed">
+      <block type="voxel_setSpeed">
         <title name="VALUE">0.0028</title>
       </block>
-      <block type="minecraft_setBlock" inline="false"></block>
+      <block type="voxel_setBlock" inline="false"></block>
       <block type="math_random_int" inline="true">
         <value name="FROM">
           <block type="math_number">
@@ -55,13 +55,13 @@ class Minecraft < Blockly
           </block>
         </value>
       </block>
-      <block type="minecraft_adjacent_target_x"></block>
-      <block type="minecraft_adjacent_target_y"></block>
-      <block type="minecraft_adjacent_target_z"></block>
-      <block type="minecraft_selected_target_x"></block>
-      <block type="minecraft_selected_target_y"></block>
-      <block type="minecraft_selected_target_z"></block>
-      <block type="minecraft_log"></block>
+      <block type="voxel_adjacent_target_x"></block>
+      <block type="voxel_adjacent_target_y"></block>
+      <block type="voxel_adjacent_target_z"></block>
+      <block type="voxel_selected_target_x"></block>
+      <block type="voxel_selected_target_y"></block>
+      <block type="voxel_selected_target_z"></block>
+      <block type="voxel_log"></block>
       <block type="controls_repeat">
         <title name="TIMES">4</title>
       </block>
@@ -106,6 +106,6 @@ class Minecraft < Blockly
   end
 
   def toolbox(type)
-    Minecraft.toolbox
+    Voxel.toolbox
   end
 end

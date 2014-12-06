@@ -1,4 +1,4 @@
-<Minecraft>
+<Voxel>
   <config><![CDATA[{
   "game_id": 40,
   "created_at": "2014-12-05T21:17:01.000Z",
@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "embed": "false",
-    "skin": "minecraft",
+    "skin": "voxel",
     "instructions": "Can you make it so you can sprint around really fast?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -22,15 +22,15 @@
     <toolbox_blocks>
       <xml>
         <block type="when_run"/>
-        <block type="minecraft_whenRightClick"/>
-        <block type="minecraft_whenLeftClick"/>
-        <block type="minecraft_setGravity">
+        <block type="voxel_whenRightClick"/>
+        <block type="voxel_whenLeftClick"/>
+        <block type="voxel_setGravity">
           <title name="VALUE">-1.7999999499807017e-7</title>
         </block>
-        <block type="minecraft_setSpeed">
+        <block type="voxel_setSpeed">
           <title name="VALUE">0.0028</title>
         </block>
-        <block type="minecraft_setBlock" inline="false"/>
+        <block type="voxel_setBlock" inline="false"/>
         <block type="math_random_int" inline="true">
           <value name="FROM">
             <block type="math_number">
@@ -43,13 +43,13 @@
             </block>
           </value>
         </block>
-        <block type="minecraft_adjacent_target_x"/>
-        <block type="minecraft_adjacent_target_y"/>
-        <block type="minecraft_adjacent_target_z"/>
-        <block type="minecraft_selected_target_x"/>
-        <block type="minecraft_selected_target_y"/>
-        <block type="minecraft_selected_target_z"/>
-        <block type="minecraft_log"/>
+        <block type="voxel_adjacent_target_x"/>
+        <block type="voxel_adjacent_target_y"/>
+        <block type="voxel_adjacent_target_z"/>
+        <block type="voxel_selected_target_x"/>
+        <block type="voxel_selected_target_y"/>
+        <block type="voxel_selected_target_z"/>
+        <block type="voxel_log"/>
         <block type="controls_repeat">
           <title name="TIMES">4</title>
         </block>
@@ -93,4 +93,4 @@
       </xml>
     </toolbox_blocks>
   </blocks>
-</Minecraft>
+</Voxel>
