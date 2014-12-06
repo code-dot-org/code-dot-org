@@ -12385,7 +12385,7 @@ exports.parseElement = function(text) {
 
 },{}],40:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.ur=function(n){return n===1?"one":"other"}
-exports.bounceBall = function(d){return "bounce ball"};
+exports.bounceBall = function(d){return "اچھال کی گیند"};
 
 exports.bounceBallTooltip = function(d){return "Bounce a ball off of an object."};
 
@@ -12419,11 +12419,11 @@ exports.incrementOpponentScore = function(d){return "increment opponent score"};
 
 exports.incrementOpponentScoreTooltip = function(d){return "Add one to the current opponent score."};
 
-exports.incrementPlayerScore = function(d){return "increment player score"};
+exports.incrementPlayerScore = function(d){return "سکور پوائنٹ"};
 
 exports.incrementPlayerScoreTooltip = function(d){return "Add one to the current player score."};
 
-exports.isWall = function(d){return "is this a wall"};
+exports.isWall = function(d){return "یہ ایک دیوار ہے"};
 
 exports.isWallTooltip = function(d){return "Returns true if there is a wall here"};
 
@@ -12433,7 +12433,7 @@ exports.launchBallTooltip = function(d){return "Launch a ball into play."};
 
 exports.makeYourOwn = function(d){return "Make Your Own Bounce Game"};
 
-exports.moveDown = function(d){return "move down"};
+exports.moveDown = function(d){return "نیچے لانا"};
 
 exports.moveDownTooltip = function(d){return "Move the paddle down."};
 

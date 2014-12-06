@@ -12423,9 +12423,9 @@ exports.incrementPlayerScore = function(d){return "increment player score"};
 
 exports.incrementPlayerScoreTooltip = function(d){return "Lägg till ett till den nuvarande spelarens poängsumma."};
 
-exports.isWall = function(d){return "is this a wall"};
+exports.isWall = function(d){return "är detta en vägg"};
 
-exports.isWallTooltip = function(d){return "Returns true if there is a wall here"};
+exports.isWallTooltip = function(d){return "Returnerar sant om det finns en vägg här"};
 
 exports.launchBall = function(d){return "ny boll"};
 
@@ -12475,21 +12475,21 @@ exports.pilePresent = function(d){return "Det finns en hög"};
 
 exports.playSoundCrunch = function(d){return "spela krossa ljud"};
 
-exports.playSoundGoal1 = function(d){return "play goal 1 sound"};
+exports.playSoundGoal1 = function(d){return "spela mål 1 ljud"};
 
-exports.playSoundGoal2 = function(d){return "play goal 2 sound"};
+exports.playSoundGoal2 = function(d){return "spela mål 2 ljud"};
 
-exports.playSoundHit = function(d){return "play hit sound"};
+exports.playSoundHit = function(d){return "spela träffljud"};
 
-exports.playSoundLosePoint = function(d){return "play lose point sound"};
+exports.playSoundLosePoint = function(d){return "spela förlora poäng ljud"};
 
-exports.playSoundLosePoint2 = function(d){return "play lose point 2 sound"};
+exports.playSoundLosePoint2 = function(d){return "spela förlora poäng 2 ljud"};
 
 exports.playSoundRetro = function(d){return "spela retro-ljud"};
 
 exports.playSoundRubber = function(d){return "spela gummi-ljud"};
 
-exports.playSoundSlap = function(d){return "play slap sound"};
+exports.playSoundSlap = function(d){return "spela klappljud"};
 
 exports.playSoundTooltip = function(d){return "Spela upp det valda ljudet."};
 
@@ -12497,7 +12497,7 @@ exports.playSoundWinPoint = function(d){return "play win point sound"};
 
 exports.playSoundWinPoint2 = function(d){return "play win point 2 sound"};
 
-exports.playSoundWood = function(d){return "play wood sound"};
+exports.playSoundWood = function(d){return "spela träljud"};
 
 exports.putdownTower = function(d){return "lägg ner tornet"};
 
@@ -12511,7 +12511,7 @@ exports.repeatUntilBlocked = function(d){return "medan väg finns framåt"};
 
 exports.repeatUntilFinish = function(d){return "Upprepa tills målet nåtts"};
 
-exports.scoreText = function(d){return "Score: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
+exports.scoreText = function(d){return "Poäng: "+v(d,"playerScore")+": "+v(d,"opponentScore")};
 
 exports.setBackgroundRandom = function(d){return "ställ in tillfällig bakgrund"};
 
@@ -12575,7 +12575,7 @@ exports.turnRight = function(d){return "sväng höger"};
 
 exports.turnTooltip = function(d){return "Vänder mig åt vänster eller höger 90 grader."};
 
-exports.whenBallInGoal = function(d){return "when ball in goal"};
+exports.whenBallInGoal = function(d){return "när bollen är i mål"};
 
 exports.whenBallInGoalTooltip = function(d){return "Utföra åtgärderna nedan när en boll går in i målet."};
 
@@ -12716,7 +12716,7 @@ exports.nextStage = function(d){return "Grattis! Du har klarat "+v(d,"stageName"
 
 exports.nextStageTrophies = function(d){return "Grattis! Du klarade "+v(d,"stageName")+" och har fått "+p(d,"numTrophies",0,"sv",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
-exports.numBlocksNeeded = function(d){return "Grattis! Du slutförde pussel "+v(d,"puzzleNumber")+". (Men du skulle bara behövt använda"+p(d,"numBlocks",0,"sv",{"one":"1 block","other":n(d,"numBlocks")+" block"})+".)"};
+exports.numBlocksNeeded = function(d){return "Grattis! Du klarade pussel "+v(d,"puzzleNumber")+". (Men du borde bara behövt använda "+p(d,"numBlocks",0,"sv",{"one":"1 block","other":n(d,"numBlocks")+" block"})+".)"};
 
 exports.numLinesOfCodeWritten = function(d){return "Du skrev "+p(d,"numLines",0,"sv",{"one":"1 rad","other":n(d,"numLines")+" rader"})+" kod!"};
 

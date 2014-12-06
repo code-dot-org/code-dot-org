@@ -10771,7 +10771,7 @@ exports.emptyBlocksErrorMsg = function(d){return "قطعة \" أكرر\" أو \"
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "قطعة الدالة تحتاج إلى القطع الأخرى بداخلها لكي تعمل."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "يجب أن تكون هناك كتل داخل تعريف الدالة الخاصة بك. انقر فوق \"تحرير\" واسحب الكتل داخل الكتلة الخضراء."};
 
 exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
 
@@ -10781,9 +10781,9 @@ exports.errorUnusedParam = function(d){return "You added a parameter block, but 
 
 exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "لقد قمت بإنشاء دالة، ولكن لم تستخدمها في مساحة العمل الخاصة بك! انقر على \"المهام/الدوال\" في مربع الأدوات وتأكد من استخدامها في البرنامج الخاص بك."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "حاول أن  تغير قيمة \"؟؟؟\" ."};
 
 exports.extraTopBlocks = function(d){return "أنت لم تقم بإرفاق القطع . هل قصدت إرفاق هذه القطع إلى قطعة \"عند التشغيل\"؟"};
 

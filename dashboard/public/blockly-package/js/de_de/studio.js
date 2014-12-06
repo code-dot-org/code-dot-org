@@ -21174,19 +21174,19 @@ exports.emptyBlocksErrorMsg = function(d){return "Die \"Wiederholen\"- und die \
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Der Funktionsblock muss andere Blöcke beinhalten, um zu funktionieren."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "Es müssen Blöcke innerhalb deiner Funktionsdefinition sein. Klicke auf \"Bearbeiten\", und ziehe die Blöcke in den grünen Block."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "Klicke auf \"Bearbeiten\", um sicherzustellen, dass kein Block innerhalb deiner Funktionsdefinition fehlt."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "Vergiss nicht, im Funktionsblock in deinem Arbeitsbereich zu jeder Parametereingabe einen Block zu verknüpfen."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "Sie einen Parameterblock hinzugefügt, aber nicht in der Definition zu verwendet. Stellen Sie sicher, Ihre Parameter zu verwenden, indem Sie auf \"Bearbeiten\" klicken und den Parameterblock im grünen Block zu plazieren."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "Erstellen Sie einen Parameter für die Funktion, indem Sie auf \"Bearbeiten\" klicken und fügen sie die erforderlichen Parameter hinzu. Ziehen Sie die neuen Parameter-Blöcke in die Funktionsdefinition."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "Sie haben eine Funktion erstellt, aber sie nie im Arbeitsbereich verwendet! Klicken Sie auf \"Funktionen\" in der Toolbox, und stellen Sie sicher, dass sie es in Ihrem Programm verwenden."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "Versuchen sie \"???\" mit einem Wert zu ersetzen."};
 
 exports.extraTopBlocks = function(d){return "Einige Blöcke sind nicht verbunden. Wolltest Du diese mit dem \"Wenn ausführen\" Block verbinden?"};
 
@@ -21315,7 +21315,7 @@ exports.defaultTwitterText = function(d){return "Sieh was ich gemacht habe"};
 var MessageFormat = require("messageformat");MessageFormat.locale.de=function(n){return n===1?"one":"other"}
 exports.actor = function(d){return "Schauspieler"};
 
-exports.alienInvasion = function(d){return "Alien Invasion!"};
+exports.alienInvasion = function(d){return "Alien invasion!"};
 
 exports.backgroundBlack = function(d){return "schwarz"};
 

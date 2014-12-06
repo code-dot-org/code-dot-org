@@ -11171,7 +11171,7 @@ exports.nextStage = function(d){return "Grattis! Du har klarat "+v(d,"stageName"
 
 exports.nextStageTrophies = function(d){return "Grattis! Du klarade "+v(d,"stageName")+" och har fått "+p(d,"numTrophies",0,"sv",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
-exports.numBlocksNeeded = function(d){return "Grattis! Du slutförde pussel "+v(d,"puzzleNumber")+". (Men du skulle bara behövt använda"+p(d,"numBlocks",0,"sv",{"one":"1 block","other":n(d,"numBlocks")+" block"})+".)"};
+exports.numBlocksNeeded = function(d){return "Grattis! Du klarade pussel "+v(d,"puzzleNumber")+". (Men du borde bara behövt använda "+p(d,"numBlocks",0,"sv",{"one":"1 block","other":n(d,"numBlocks")+" block"})+".)"};
 
 exports.numLinesOfCodeWritten = function(d){return "Du skrev "+p(d,"numLines",0,"sv",{"one":"1 rad","other":n(d,"numLines")+" rader"})+" kod!"};
 

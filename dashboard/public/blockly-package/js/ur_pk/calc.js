@@ -11060,17 +11060,17 @@ exports.parseElement = function(text) {
 
 },{}],40:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.ur=function(n){return n===1?"one":"other"}
-exports.compute = function(d){return "compute"};
+exports.compute = function(d){return "کمپیوٹ"};
 
 exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
 
 exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"compute\" block?"};
 
-exports.goal = function(d){return "Goal:"};
+exports.goal = function(d){return "مقصد:"};
 
-exports.reinfFeedbackMsg = function(d){return "Does this look like what you want? You can press the \"Try again\" button to see your drawing."};
+exports.reinfFeedbackMsg = function(d){return "یہاں آپ کی داستان ہے! اس پر کام جاری رکھے یا اگلی پہیلی کی طرف بڑھیں!"};
 
-exports.yourExpression = function(d){return "Your expression:"};
+exports.yourExpression = function(d){return "آپ کا اظہار:"};
 
 
 },{"messageformat":53}],41:[function(require,module,exports){

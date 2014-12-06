@@ -14966,21 +14966,21 @@ exports.colourTooltip = function(d){return "Modifie la couleur du crayon."};
 
 exports.createACircle = function(d){return "create a circle"};
 
-exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+exports.createSnowflakeSquare = function(d){return "créer un flocon de type carré"};
 
-exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+exports.createSnowflakeParallelogram = function(d){return "créer un flocon de type parallélogramme"};
 
-exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+exports.createSnowflakeLine = function(d){return "créer un flocon de type ligne"};
 
-exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+exports.createSnowflakeSpiral = function(d){return "créer un flocon de type spirale"};
 
-exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+exports.createSnowflakeFlower = function(d){return "créer un flocon de type fleur"};
 
-exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+exports.createSnowflakeFractal = function(d){return "créer un flocon de type fractal"};
 
-exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+exports.createSnowflakeRandom = function(d){return "créer un flocon de type aléatoire"};
 
-exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
+exports.createASnowflakeBranch = function(d){return "créer une branche de flocon"};
 
 exports.degrees = function(d){return "degrés"};
 

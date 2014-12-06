@@ -16818,7 +16818,7 @@ exports.uncheckedPurpleError = function(d){return "ムラサキの花にミツ�
 
 exports.whileMsg = function(d){return "以下の間"};
 
-exports.whileTooltip = function(d){return "終点に到着するまで、封じられた行動を繰り返してください"};
+exports.whileTooltip = function(d){return "終点に到着するまで、とりかこんだアクションを繰り返してください。"};
 
 exports.word = function(d){return "単語を見つけます"};
 

@@ -12257,7 +12257,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Els blocs \"Repetir\" o el \"S
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "La funció bloc ha de tenir altres blocs a dins perquè funcioni."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "Cal que hi hagi blocs dins de la definició de la teva funció. Fes clic a \"Edita\" i arrossega els blocs que calgui dins del bloc verd."};
 
 exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
 

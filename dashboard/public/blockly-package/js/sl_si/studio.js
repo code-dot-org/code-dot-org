@@ -21185,19 +21185,19 @@ exports.emptyBlocksErrorMsg = function(d){return "Znotraj 'Ponovi' ali 'če' blo
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Da bi blok s funkcijo deloval, mora vsebovati druge bloke oz ukaze."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "Funkcija mora vsebovati bloke z ukazi. Klikni \"uredi\" (ang.\"edit\") in povleci bloke z ukazi v zeleni blok."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "Klikni \"edit\" in preveri, če manjka kateri izmed blokov v tvoji funkciji."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "Ne pozabi v funkcijskem bloku dodati še bloka k vnosu vsakega parametra."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "Dodal/a si blok k parametru, a si ga pozabil/a uporabiti v opredelitvi. Klikni na \"uredi\" (ang. \"edit\") in dodaj v zeleni blok ustrezen blok povezan s parametrom."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "Klikni na \"uredi\" (ang. \"edit\") in dodaj v svojo funkcijopotreben parametre tako, da ustrezen blok povezan s parametrom povlečeš v opredelitev funkcije."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "Usvaril/a si funkcijo, a si jo pozabil/a uporabiti v svojem delovnem prostoru. Klikni na \"Funkcije\" in poskrbi, da boš uporabil/a funkcijo v svojem programu."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "Poskusite zamenjati \"???\" z vrednostjo."};
 
 exports.extraTopBlocks = function(d){return "Imaš nedodeljene bloke. Si jih želel dodeliti bloku \"ob zagonu\"?"};
 
@@ -21259,7 +21259,7 @@ exports.showBlocksHeader = function(d){return "Prikaži bloke"};
 
 exports.showGeneratedCode = function(d){return "Pokaži kodo"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "črkovni niz =?"};
 
 exports.subtitle = function(d){return "vizualno programersko okolje"};
 
@@ -21337,7 +21337,7 @@ var MessageFormat = require("messageformat");MessageFormat.locale.sl = function 
 };
 exports.actor = function(d){return "igralec"};
 
-exports.alienInvasion = function(d){return "Alien Invasion!"};
+exports.alienInvasion = function(d){return "Nezemljani napadajo!"};
 
 exports.backgroundBlack = function(d){return "črna"};
 

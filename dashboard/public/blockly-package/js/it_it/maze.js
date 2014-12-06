@@ -16523,19 +16523,19 @@ exports.emptyBlocksErrorMsg = function(d){return "Il blocco \"ripeti\" o \"se\" 
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Un blocco funzione deve avere all'interno altri blocchi per poter funzionare."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "Ci devono essere dei blocchi all'interno della tua funzione. Fai clic su \"Modifica\" e trascina dei blocchi all'interno del blocco verde."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "Fai clic su \"Modifica\" per essere sicuro di non avere alcun blocco mancante nella tua funzione."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "Ricordati di attaccare un blocco a ciascun parametro di ingresso nel blocco della funzione presente nel tuo spazio di lavoro."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "Hai aggiunto un blocco di parametri, ma non lo hai utilizzato nella definizione. Assicurati di utilizzare il parametro facendo clic su \"Modifica\" e mettendo il blocco dei parametri all'interno del blocco verde."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "Crea un parametro per la funzione facendo clic su \"Modifica\" e aggiungendo i parametri necessari. Trascina i nuovi blocchi dei parametri nella tua definizione di funzione."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "Hai creato una funzione, ma non la hai mai usata nel tuo spazio di lavoro! Fai clic su \"Funzioni\" nella casella degli strumenti e assicurati di usarla nel tuo programma."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "Prova a sostituire \"???\" con un valore."};
 
 exports.extraTopBlocks = function(d){return "Ci sono dei blocchi non collegati agli altri. Volevi forse attaccarli al blocco 'quando si clicca su \"Esegui\" '?"};
 
@@ -16597,7 +16597,7 @@ exports.showBlocksHeader = function(d){return "Mostra i blocchi"};
 
 exports.showGeneratedCode = function(d){return "Mostra il codice"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "stringa=?"};
 
 exports.subtitle = function(d){return "un ambiente di programmazione visuale"};
 

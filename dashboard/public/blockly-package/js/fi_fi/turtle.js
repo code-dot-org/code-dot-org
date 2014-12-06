@@ -14803,21 +14803,21 @@ exports.end = function(d){return "loppu"};
 
 exports.emptyBlocksErrorMsg = function(d){return "\"Toista\" ja \"Jos\"-lohkot tarvitsevat toisen lohkon sisäänsä toimiakseen. Varmista, että sisempi lohko asettuu oikein ulompaan lohkoon."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "Lisää Funktio-lohkon sisään muita lohkoja saadaksesi koodin toimimaan oikein."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Lisää Funktio-lohkon sisään muita lohkoja saadaksesi koodi toimimaan oikein."};
 
 exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
 
 exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "Muista liittää lohko jokaiseen syöteparametriin työtilasi funktiolohkossa."};
 
 exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "Luo funktiollesi parametri painamalla \"muokkaa\" ja lisäämällä tarpeelliset parametrit. Raahaa uudet parametrilohkot funktiomäärittelyysi."};
 
 exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "Korvaa \"???\" arvolla."};
 
 exports.extraTopBlocks = function(d){return "Ohjelmassa on lohkoja, joita ei ole kiinnitetty mihinkään. Ehkä ne pitäisi kiinnittää \"suoritettaessa\"-lohkoon?"};
 
@@ -14843,11 +14843,11 @@ exports.listVariable = function(d){return "lista"};
 
 exports.makeYourOwnFlappy = function(d){return "Tee oma Flappy-pelisi"};
 
-exports.missingBlocksErrorMsg = function(d){return "Yritä ratkaista pulma yhdellä tai useammalla alla olevalla lohkolla."};
+exports.missingBlocksErrorMsg = function(d){return "Yritä ratkaista tehtävä yhdellä tai useammalla alla olevalla lohkolla."};
 
-exports.nextLevel = function(d){return "Onneksi olkoon! Olet suorittanut "+v(d,"puzzleNumber")+". pulman."};
+exports.nextLevel = function(d){return "Onneksi olkoon! Olet suorittanut "+v(d,"puzzleNumber")+". tehtävän."};
 
-exports.nextLevelTrophies = function(d){return "Onneksi olkoon! Olet suorittanut "+v(d,"puzzleNumber")+". pulman ja voittanut "+p(d,"numTrophies",0,"fi",{"one":"pokaalin","other":n(d,"numTrophies")+" pokaalia"})+"."};
+exports.nextLevelTrophies = function(d){return "Oneness olkoon! Let suorittanut tehtävän "+v(d,"puzzleNumber")+" ja voittanut "+p(d,"numTrophies",0,"fi",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.nextStage = function(d){return "Onnittelut! Olet suorittanut tason "+v(d,"stageName")+"."};
 
@@ -14861,7 +14861,7 @@ exports.play = function(d){return "pelaa"};
 
 exports.print = function(d){return "Tulosta"};
 
-exports.puzzleTitle = function(d){return "Pulma "+v(d,"puzzle_number")+" / "+v(d,"stage_total")};
+exports.puzzleTitle = function(d){return "Tehtävä "+v(d,"puzzle_number")+" / "+v(d,"stage_total")};
 
 exports.repeat = function(d){return "toista"};
 
@@ -14879,15 +14879,15 @@ exports.showBlocksHeader = function(d){return "Näytä lohkot"};
 
 exports.showGeneratedCode = function(d){return "Näytä koodi"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "merkkijono=?"};
 
 exports.subtitle = function(d){return "visuaalinen ohjelmointiympäristö"};
 
 exports.textVariable = function(d){return "teksti"};
 
-exports.tooFewBlocksMsg = function(d){return "Käytät kyllä kaikkia oikeanlaisia lohkoja, mutta yritä käyttää niitä lisää, jotta saat pulman ratkaistua."};
+exports.tooFewBlocksMsg = function(d){return "Käytät kyllä kaikkia oikeanlaisia lohkoja, mutta yritä käyttää niitä lisää, jotta saat tehtävän ratkaistua."};
 
-exports.tooManyBlocksMsg = function(d){return "Tämän pulman voi ratkaista <x id='START_SPAN'/><x id='END_SPAN'/> lohkolla."};
+exports.tooManyBlocksMsg = function(d){return "Tämän tehtävän voi ratkaista <x id='START_SPAN'/><x id='END_SPAN'/> lohkolla."};
 
 exports.tooMuchWork = function(d){return "Sait minut tekemään paljon töitä! Voisitko kokeilla samaa vähemmillä toistoilla?"};
 
@@ -15032,15 +15032,15 @@ exports.jumpBackward = function(d){return "hyppää taaksepäin"};
 
 exports.jumpForward = function(d){return "hyppää eteenpäin"};
 
-exports.jumpTooltip = function(d){return "Siirtää hahmoa piirtämättä jälkeä."};
+exports.jumpTooltip = function(d){return "Liikuttaa taiteilijaa piirtämättä jälkeä."};
 
-exports.jumpEastTooltip = function(d){return "Siirtää hahmoa itään piirtämättä jälkeä."};
+exports.jumpEastTooltip = function(d){return "Liikuttaa taiteilijaa itään piirtämättä jälkeä."};
 
-exports.jumpNorthTooltip = function(d){return "Siirtää hahmoa pohjoiseen piirtämättä jälkeä."};
+exports.jumpNorthTooltip = function(d){return "Liikuttaa taiteilijaa pohjoiseen piirtämättä jälkeä."};
 
-exports.jumpSouthTooltip = function(d){return "Siirtää hahmoa etelään piirtämättä jälkeä."};
+exports.jumpSouthTooltip = function(d){return "Liikuttaa taiteilijaa etelään piirtämättä jälkeä."};
 
-exports.jumpWestTooltip = function(d){return "Siirtää hahmoa länteen piirtämättä jälkeä."};
+exports.jumpWestTooltip = function(d){return "Liikuttaa taiteilijaa länteen piirtämättä jälkeä."};
 
 exports.lengthFeedback = function(d){return "Sait tämän oikein lukuunottamatta siirtojen pituuksia."};
 
@@ -15048,25 +15048,25 @@ exports.lengthParameter = function(d){return "pituus"};
 
 exports.loopVariable = function(d){return "laskuri"};
 
-exports.moveBackward = function(d){return "siirry taaksepäin"};
+exports.moveBackward = function(d){return "liiku taaksepäin"};
 
-exports.moveEastTooltip = function(d){return "Siirtää hahmoa itään."};
+exports.moveEastTooltip = function(d){return "Liikuttaa taiteilijaa itään."};
 
-exports.moveForward = function(d){return "siirry eteenpäin"};
+exports.moveForward = function(d){return "liiku eteenpäin"};
 
-exports.moveForwardTooltip = function(d){return "Siirtää hahmoa eteenpäin."};
+exports.moveForwardTooltip = function(d){return "Liikuttaa taiteilijaa eteenpäin."};
 
-exports.moveNorthTooltip = function(d){return "Siirtää hahmoa pohjoiseen."};
+exports.moveNorthTooltip = function(d){return "Liikuta taiteilijaa pohjoiseen."};
 
-exports.moveSouthTooltip = function(d){return "Siirtää hahmoa etelään."};
+exports.moveSouthTooltip = function(d){return "Liikuttaa taiteilijaa etelään."};
 
-exports.moveWestTooltip = function(d){return "Siirtää hahmoa länteen."};
+exports.moveWestTooltip = function(d){return "Liikuttaa taiteilijaa länteen."};
 
-exports.moveTooltip = function(d){return "Siirtää hahmoa eteenpäin tai taaksepäin annetun etäisyyden."};
+exports.moveTooltip = function(d){return "Liikuttaa taiteilijaa eteenpäin tai taaksepäin annetun etäisyyden."};
 
-exports.notBlackColour = function(d){return "Tässä pulmassa sinun täytyy käyttää jotain muuta kuin mustaa väriä."};
+exports.notBlackColour = function(d){return "Tässä tehtävässä sinun täytyy käyttää jotain muuta kuin mustaa väriä."};
 
-exports.numBlocksNeeded = function(d){return "Tämän pulman voi ratkaista %1 lohkolla. Käytit %2."};
+exports.numBlocksNeeded = function(d){return "Tämän tehtävän voi ratkaista %1 lohkolla. Käytit %2."};
 
 exports.penDown = function(d){return "kynä alas"};
 
@@ -15074,7 +15074,7 @@ exports.penTooltip = function(d){return "Nostaa tai laskee kynän, aloittaakseen
 
 exports.penUp = function(d){return "kynä ylös"};
 
-exports.reinfFeedbackMsg = function(d){return "Tässä on piirustuksesi! Jatka työstämistä sen parissa tai siirry seuraavaan pulmaan."};
+exports.reinfFeedbackMsg = function(d){return "Tässä on piirustuksesi! Jatka työstämistä sen parissa tai siirry seuraavaan tehtävään."};
 
 exports.setColour = function(d){return "aseta väri"};
 
@@ -15106,7 +15106,7 @@ exports.turtleVisibilityTooltip = function(d){return "Tekee taiteilijasta näkyv
 
 exports.widthTooltip = function(d){return "Muuttaa kynän paksuutta."};
 
-exports.wrongColour = function(d){return "Kuvasi on väärän värinen. Tässä pulmassa sen pitää olla %1."};
+exports.wrongColour = function(d){return "Kuvasi on väärän värinen. Tässä tehtävässä sen pitää olla %1."};
 
 
 },{"messageformat":57}],46:[function(require,module,exports){

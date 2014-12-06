@@ -10754,19 +10754,19 @@ exports.emptyBlocksErrorMsg = function(d){return "\"Tekrar\" bloğu veya \"Eğer
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Fonksiyon bloğunun çalışabilmesi için içine başka bloklar koymalısın."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "Fonksiyon tanımının içinde bloklara ihtiyacın var. \"Düzenle\" butonuna tıkla ve blokları yeşil bloğun içine sürükle."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "Fonksiyon tanımının içinde eksik blokların kalıp kalmadığından emin olmak için \"düzenle\" butonuna tıkla."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "Çalışma alanında bulunan fonksiyon bloğundaki her parametre girdisine bir blok eklemeyi unutma."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "Parametre bloğu ekledin ama bunu tanımında kullanmadın. \"Düzenle\" butonuna tıklayarak ve parametre bloğunu yeşil bloğun içine yerleştirerek parametreni kullandığından emin ol."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "\"Düzenle\" butonuna tıklayarak ve gerekli parametreleri ekleyecek fonksiyonun için bir parametre yarat. Yeni parametre bloğunu, fonksiyon tanımının içine sürükle."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "Bir fonksiyon yarattın ama çalışma alanında kullanmadın! Araç çubuğundaki \"fonksiyonlar\" kısmına tıkla ve fonksiyonunu programında kullandığına emin ol."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "\"???\" kısmını bir değerle değiştirmeyi deneyin."};
 
 exports.extraTopBlocks = function(d){return "Blokları bağlamadın. \"Çalıştığı zaman\" bloğuna bağlamayı denediniz mi?"};
 
@@ -10828,7 +10828,7 @@ exports.showBlocksHeader = function(d){return "Bloklarını göster"};
 
 exports.showGeneratedCode = function(d){return "Kodu Görüntüle"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "dizi=?"};
 
 exports.subtitle = function(d){return "Bir görsel programa ortamı"};
 

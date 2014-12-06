@@ -14426,19 +14426,19 @@ exports.emptyBlocksErrorMsg = function(d){return "Το μπλοκ του \"Repea
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Το μπλόκ της συνάρτησης χρειάζεται να έχει άλλα μπλοκ μέσα του για να δουλέψει."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "Πρέπει να εισάγετε κάποια μπλοκ μέσα στον ορισμό της λειτουργίας. Κάντε κλικ στο κουμπί \"Επεξεργασία\" και σύρετε τα μπλοκς μέσα στο πράσινο μπλοκ."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "Κάντε κλικ στο κουμπί \"Επεξεργασία\" για να βεβαιωθείτε ότι δε λείπει κάποιο μπλοκ μέσα στον ορισμό της λειτουργίας."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "Θυμηθείτε να ενώσετε ένα μπλοκ σε κάθε παράμετρο εισόδου στο μπλοκ της λειτουργίας στο χώρο εργασίας σας."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "Προσθέσατε ένα μπλοκ παραμέτρου, αλλά δεν το χρησιμοποιήσατε στον ορισμό. Για να χρησιμοποιήσετε την παράμετρο, κάντε κλικ στο \"Επεξεργασία\" και τοποθετήστε το μπλοκ παραμέτρου μέσα στο πράσινο μπλοκ."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "Δημιουργήστε μια παράμετρο για τη λειτουργία σας κάνοντας κλικ στο \"Επεξεργασία\" και προσθέτοντας τις απαραίτητες παραμέτρους. Σύρετε τα νέα μπλοκ παραμέτρων μέσα στον ορισμό της λειτουργίας σας."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "Δημιουργήσατε μια λειτουργία, αλλά δεν τη χρησιμοποιήσατε στο χώρο εργασίας σας! Κάνε κλικ στο \"Λειτουργίες\" στην εργαλειοθήκη και βεβαιωθείτε ότι τη χρησιμοποιείτε στο πρόγραμμά σας."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "Δοκιμάστε να αντικαταστήσετε τα ερωτηματικά με μια τιμή."};
 
 exports.extraTopBlocks = function(d){return "Έχεις ασύνδετα μπλοκ. Θέλεις να τα συνδέσεις στο μπλοκ \"όταν εκτελείται\";"};
 
@@ -14500,7 +14500,7 @@ exports.showBlocksHeader = function(d){return "Εμφάνισε τα μπλοκ"
 
 exports.showGeneratedCode = function(d){return "Προβολή κώδικα"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "συμβολοσειρά = ;"};
 
 exports.subtitle = function(d){return "ένα οπτικό περιβάλλον προγραμματισμού"};
 
@@ -14577,7 +14577,7 @@ exports.overlayBlockTitle = function(d){return "επικάλυμμα (επάνω
 
 exports.placeImageBlockTitle = function(d){return "τοποθέτησε-εικόνα (χ, ψ, εικόνα)"};
 
-exports.offsetBlockTitle = function(d){return "offset (x, y, image)"};
+exports.offsetBlockTitle = function(d){return "μετατόπιση (x, y, εικόνα)"};
 
 exports.rectangleBlockTitle = function(d){return "ορθογώνιο (πλάτος, ύψος, στυλ, χρώμα)"};
 
@@ -14591,7 +14591,7 @@ exports.squareBlockTitle = function(d){return "τετράγωνο (μέγεθο�
 
 exports.starBlockTitle = function(d){return "αστέρι (ακτίνα, στυλ, χρώμα)"};
 
-exports.radialStarBlockTitle = function(d){return "radial-star (points, inner, outer, style, color)"};
+exports.radialStarBlockTitle = function(d){return "Ακτινωτό-αστέρι (σημεία, εσωτερική ακτίνα, εξωτερική ακτίνα, στυλ, χρώμα)"};
 
 exports.stringAppendBlockTitle = function(d){return "συμβολοσειρά-πρoσάρτησε (πρώτη, δεύτερη)"};
 

@@ -14449,9 +14449,9 @@ exports.errorUnusedParam = function(d){return "You added a parameter block, but 
 
 exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "Вы создали функцию, но не использовали её в работе! Нажмите на «Функции» на панели инструментов и убедитесь, что вы используете его в своей программе."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "Попробуйте изменить значение \"???\"."};
 
 exports.extraTopBlocks = function(d){return "У тебя остались неприсоединённые блоки. Ты собирался присоединить их к блоку \"При запуске\"?"};
 
@@ -14483,9 +14483,9 @@ exports.nextLevel = function(d){return "Поздравляю! Головолом
 
 exports.nextLevelTrophies = function(d){return "Поздравляю! Ты завершил головоломку "+v(d,"puzzleNumber")+" и выиграл "+p(d,"numTrophies",0,"ru",{"one":"кубок","other":n(d,"numTrophies")+" кубков"})+"."};
 
-exports.nextStage = function(d){return "Поздравляю! Ты завершил "+v(d,"stageName")+"."};
+exports.nextStage = function(d){return "Поздравляем! Вы закончили "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Поздравляю! Ты завершил этап "+v(d,"stageName")+" и выиграл "+p(d,"numTrophies",0,"ru",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
+exports.nextStageTrophies = function(d){return "Поздравляем! Вы выполнили "+v(d,"stageName")+" и выиграли "+p(d,"numTrophies",0,"ru",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Поздравляю! Ты завершил головоломку "+v(d,"puzzleNumber")+". (Однако, можно было обойтись всего  "+p(d,"numBlocks",0,"ru",{"one":"1 блоком","other":n(d,"numBlocks")+" блоками"})+".)"};
 
@@ -14513,7 +14513,7 @@ exports.showBlocksHeader = function(d){return "Показать блоки"};
 
 exports.showGeneratedCode = function(d){return "Показать код"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "строка=?"};
 
 exports.subtitle = function(d){return "среда визуального программирования"};
 
@@ -14603,7 +14603,7 @@ exports.overlayBlockTitle = function(d){return "наложение (сверху
 
 exports.placeImageBlockTitle = function(d){return "поместить изображение (x, y, изображение)"};
 
-exports.offsetBlockTitle = function(d){return "offset (x, y, image)"};
+exports.offsetBlockTitle = function(d){return "сдвиг (x, y, изображение)"};
 
 exports.rectangleBlockTitle = function(d){return "прямоугольник (ширина, высота, стиль, цвет)"};
 
@@ -14617,7 +14617,7 @@ exports.squareBlockTitle = function(d){return "квадрат (размер, с�
 
 exports.starBlockTitle = function(d){return "звезда (радиус, стиль, цвет)"};
 
-exports.radialStarBlockTitle = function(d){return "radial-star (points, inner, outer, style, color)"};
+exports.radialStarBlockTitle = function(d){return "многоконечная-звезда (вершины, внутренний радиус, внешний радиус стиль, цвет)"};
 
 exports.stringAppendBlockTitle = function(d){return "добавить строки (первая, вторая)"};
 

@@ -21379,7 +21379,7 @@ exports.hello = function(d){return "hello"};
 
 exports.helloWorld = function(d){return "Hello World!"};
 
-exports.incrementPlayerScore = function(d){return "increment player score"};
+exports.incrementPlayerScore = function(d){return "سکور پوائنٹ"};
 
 exports.makeProjectileDisappear = function(d){return "disappear"};
 
@@ -21431,7 +21431,7 @@ exports.moveSprite = function(d){return "move"};
 
 exports.moveSpriteN = function(d){return "move actor "+v(d,"spriteIndex")};
 
-exports.moveDown = function(d){return "move down"};
+exports.moveDown = function(d){return "نیچے لانا"};
 
 exports.moveDownTooltip = function(d){return "Move the paddle down."};
 
@@ -21741,7 +21741,7 @@ exports.showTitleScreenTooltip = function(d){return "Show a title screen with th
 
 exports.size = function(d){return "size"};
 
-exports.setSprite = function(d){return "set"};
+exports.setSprite = function(d){return "رکهنا"};
 
 exports.setSpriteN = function(d){return "set actor "+v(d,"spriteIndex")};
 

@@ -14805,19 +14805,19 @@ exports.emptyBlocksErrorMsg = function(d){return "\"반복\" 블럭이나 \"조�
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "함수 블럭 안에는 다른 블럭을 넣어주어야 합니다."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "함수 정의 안에 블럭을 추가해야 합니다. \"편집\"을 클릭한 후 녹색 블럭 안으로 블럭을 드래그하세요."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "함수 정의 안에 빠진 블럭을 채우려면 \"편집\"을 클릭하세요."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "작업공간에서 함수 블럭의 각 파라매터 입력에 블럭을 추가하는 것을 잊지마세요."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "파라매터 블럭은 추가했지만 함수 정의에서 파라매터 블럭을 사용하지 않았습니다. \"편집\"을 클릭해서 파라매터를 사용하도록 만들고 파라매터 블럭을 녹색 블럭 안으로 옮기세요."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "\"편집\"을 클릭해서 함수에 파라매터를 만들고 필요한 파라매터를 추가해보세요. 파라매터 블럭을 함수 정의문으로 드래그하면 됩니다."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "작성한 함수가 한 번도 사용되지 않았습니다. 도구상자에서 \"함수\"를 클릭하고 프로그램에서 함수를 사용하도록 만드세요."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "\"???\"를 값으로 바꾸세요."};
 
 exports.extraTopBlocks = function(d){return "블럭들이 붙어있지 않습니다. 블럭들을 붙이겠습니까?"};
 
@@ -14879,7 +14879,7 @@ exports.showBlocksHeader = function(d){return "블럭 보이기"};
 
 exports.showGeneratedCode = function(d){return "코드 보기"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "문장=?"};
 
 exports.subtitle = function(d){return "비주얼 프로그래밍 환경"};
 

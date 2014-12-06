@@ -11751,19 +11751,19 @@ exports.emptyBlocksErrorMsg = function(d){return "Bloky \"Opakovat\" nebo \"Poku
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Blok funkce v sobě musí obsahovat další bloky."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "Musí být nějaké bloky uvnitř funkce. Klepněte na tlačítko \"Upravit\" a přetáhněte bloky do zeleného bloku."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "Klepněte na tlačítko \"Upravit\", ujistěte se, že nemáte žádné chybějící bloky uvnitř definice funkce."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "Nezapomeňte připojit blok pro každý vstupní parametr k bloku funkce v pracovním prostoru."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "Přidán blok parametru, ale nebyl nepoužit v definici. Ujistěte se, že parametr používáte klepnutím na tlačítko \"Upravit\" a uvedením parametru do zeleného bloku."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "Vytvořte parametr pro funkci klepnutím na tlačítko \"Upravit\" a přidáním potřebných parametrů. Přetáhněte nové bloky parametrů do vaší definice funkce."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "Vytvořili jste funkci, ale nikdy jste použili v pracovní prostor. Klikněte na \"Funkce\" v panelu a zkontrolujte, zda ji používáte ve vašem programu."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "Zkuste nahradit \"???\" hodnotou."};
 
 exports.extraTopBlocks = function(d){return "Máš nepřipojené bloky. Nechceš je připojit k bloku \"po spuštění\"?"};
 
@@ -11825,7 +11825,7 @@ exports.showBlocksHeader = function(d){return "Zobrazit bloky"};
 
 exports.showGeneratedCode = function(d){return "Zobrazit kód"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "řetězec =?"};
 
 exports.subtitle = function(d){return "vizuální programovací prostředí"};
 
@@ -11930,7 +11930,7 @@ exports.no = function(d){return "Ne"};
 
 exports.numBlocksNeeded = function(d){return "Tato hádanka může být vyřešena pomocí %1 bloků."};
 
-exports.pause = function(d){return "Pause"};
+exports.pause = function(d){return "Přerušit"};
 
 exports.reinfFeedbackMsg = function(d){return "Můžete stisknout tlačítko \"Zkusit znovu\" a vrátit se ke spuštění vaší aplikace."};
 
@@ -11950,7 +11950,7 @@ exports.stepOver = function(d){return "Step over"};
 
 exports.stepOut = function(d){return "Step out"};
 
-exports.turnBlack = function(d){return "turn black"};
+exports.turnBlack = function(d){return "zčernat"};
 
 exports.turnBlackTooltip = function(d){return "Zčerná obrazovku."};
 

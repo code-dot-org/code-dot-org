@@ -14565,15 +14565,15 @@ exports.defaultTwitterText = function(d){return "Check out what I made"};
 
 },{"messageformat":62}],50:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.ur=function(n){return n===1?"one":"other"}
-exports.circleBlockTitle = function(d){return "circle (radius, style, color)"};
+exports.circleBlockTitle = function(d){return "دائرہ (رداس، انداز، رنگ)"};
 
-exports.displayBlockTitle = function(d){return "display"};
+exports.displayBlockTitle = function(d){return "دکھانا"};
 
-exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, color)"};
+exports.ellipseBlockTitle = function(d){return "بیضوی (چوڑائی, قد, سٹائل, رنگ)"};
 
 exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"};
 
-exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
+exports.overlayBlockTitle = function(d){return "اتبشایی (اوپر، نیچے)"};
 
 exports.placeImageBlockTitle = function(d){return "place-image (x, y, image)"};
 
@@ -14585,15 +14585,15 @@ exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" b
 
 exports.rotateImageBlockTitle = function(d){return "rotate (degrees, image)"};
 
-exports.scaleImageBlockTitle = function(d){return "scale (factor)"};
+exports.scaleImageBlockTitle = function(d){return "پیمانہ (عنصر)"};
 
-exports.squareBlockTitle = function(d){return "square (size, style, color)"};
+exports.squareBlockTitle = function(d){return "مربع (سائز، سٹائل، رنگ)"};
 
-exports.starBlockTitle = function(d){return "star (radius, style, color)"};
+exports.starBlockTitle = function(d){return "ستارہ (رداس، سٹائل، رنگ)"};
 
-exports.radialStarBlockTitle = function(d){return "radial-star (points, inner, outer, style, color)"};
+exports.radialStarBlockTitle = function(d){return "شعاعی ستارہ (نکات، داخلی، خارجی، سٹائل، رنگ)"};
 
-exports.stringAppendBlockTitle = function(d){return "string-append (first, second)"};
+exports.stringAppendBlockTitle = function(d){return "سٹرنگ ملانا (پہلی، دوسری)"};
 
 exports.stringLengthBlockTitle = function(d){return "string-length (string)"};
 
@@ -14603,11 +14603,11 @@ exports.triangleBlockTitle = function(d){return "triangle (size, style, color)"}
 
 exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
 
-exports.outline = function(d){return "outline"};
+exports.outline = function(d){return "آؤٹ لائن"};
 
-exports.solid = function(d){return "solid"};
+exports.solid = function(d){return "ٹھوس"};
 
-exports.string = function(d){return "string"};
+exports.string = function(d){return "ڈور"};
 
 
 },{"messageformat":62}],51:[function(require,module,exports){

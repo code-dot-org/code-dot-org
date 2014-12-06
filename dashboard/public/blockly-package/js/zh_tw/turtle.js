@@ -15000,19 +15000,19 @@ exports.drawAHexagon = function(d){return "畫個六邊形"};
 
 exports.drawAHouse = function(d){return "畫一間房子"};
 
-exports.drawAPlanet = function(d){return "draw a planet"};
+exports.drawAPlanet = function(d){return "畫一顆行星"};
 
-exports.drawARhombus = function(d){return "draw a rhombus"};
+exports.drawARhombus = function(d){return "繪製菱形"};
 
-exports.drawARobot = function(d){return "draw a robot"};
+exports.drawARobot = function(d){return "畫一個機器人"};
 
-exports.drawARocket = function(d){return "draw a rocket"};
+exports.drawARocket = function(d){return "畫一個火箭"};
 
-exports.drawASnowflake = function(d){return "draw a snowflake"};
+exports.drawASnowflake = function(d){return "畫一片雪花"};
 
 exports.drawASnowman = function(d){return "畫一個雪人"};
 
-exports.drawAStar = function(d){return "draw a star"};
+exports.drawAStar = function(d){return "畫一顆星星"};
 
 exports.drawATree = function(d){return "畫一棵樹"};
 
@@ -15042,7 +15042,7 @@ exports.jumpSouthTooltip = function(d){return "不留下任何痕跡下把演出
 
 exports.jumpWestTooltip = function(d){return "不留下任何痕跡下把演出者向西移動"};
 
-exports.lengthFeedback = function(d){return "You got it right except for the lengths to move."};
+exports.lengthFeedback = function(d){return "你答對了除了移動的長度。"};
 
 exports.lengthParameter = function(d){return "長度"};
 
@@ -15074,7 +15074,7 @@ exports.penTooltip = function(d){return "使用\"下筆\"或\"停筆\"來開始�
 
 exports.penUp = function(d){return "停筆"};
 
-exports.reinfFeedbackMsg = function(d){return "這看起來像你想要的嗎？你可以按\"再試一次\"按鈕來看看你畫出來的圖形。"};
+exports.reinfFeedbackMsg = function(d){return "這是您的繪圖 ！繼續努力或者開始下一個謎題。"};
 
 exports.setColour = function(d){return "設定顏色"};
 
@@ -15090,7 +15090,7 @@ exports.showTurtle = function(d){return "顯示藝術家"};
 
 exports.sizeParameter = function(d){return "size"};
 
-exports.step = function(d){return "step"};
+exports.step = function(d){return "一步"};
 
 exports.tooFewColours = function(d){return "你必需使用至少 %1 種不同的顏色來完成這個關卡。你只使用了 %2 種顏色。"};
 

@@ -14435,19 +14435,19 @@ exports.emptyBlocksErrorMsg = function(d){return "Blocul \"Repetă\" sau \"Dacă
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Blocul de funcţie trebuie să aibă alte blocuri în interior ca să funcţioneze."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "În interiorul definiției unei funcții trebuie să includem blocuri. Dați clic pe ”editare” și trageți blocuri în interiorul blocului verde."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "Faceţi clic pe \"editare\" pentru a vă asigura că nu aveţi blocuri lipsă în interiorul definiţiei funcţiei dvs."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "Amintiţi-vă să ataşați un bloc pentru fiecare parametru de intrare în blocul funcţiei din spaţiul de lucru."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "Aţi adăugat un bloc de parametri, dar nu l-ați utilizat în definiţie. Asiguraţi-vă de utilizarea parametrului dvs. făcând clic pe \"Editaţi\" şi plasând blocul parametru în interiorul blocului verde."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "Creaţi un parametru pentru funcţia dvs. făcând clic pe \"Editaţi\" şi adăugând parametrii necesari. Glisaţi noile blocuri parametru în definiţia funcţiei dvs."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "Ați creat o funcţie, dar nu ați folosit-o în spaţiul de lucru! Faceţi clic pe \"Funcţii\" în caseta de instrumente şi asiguraţi-vă că o folosiţi în programul dvs."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "Încercaţi să înlocuiți \"???\" cu o valoare."};
 
 exports.extraTopBlocks = function(d){return "Ai blocuri neatașate. Ai vrut să ataşezi acestea la blocul \"atunci când rulaţi\"?"};
 
@@ -14509,7 +14509,7 @@ exports.showBlocksHeader = function(d){return "Afișează blocurile"};
 
 exports.showGeneratedCode = function(d){return "Arată codul"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "şir =?"};
 
 exports.subtitle = function(d){return "un mediu de programare vizual"};
 
@@ -14609,7 +14609,7 @@ exports.squareBlockTitle = function(d){return "pătrat(mărime, stil, culoare)"}
 
 exports.starBlockTitle = function(d){return "stea (rază, stil, culoare)"};
 
-exports.radialStarBlockTitle = function(d){return "radial-star (points, inner, outer, style, color)"};
+exports.radialStarBlockTitle = function(d){return "stea-radială (puncte, interior, exterior, stil, culoare)"};
 
 exports.stringAppendBlockTitle = function(d){return "șir-adăugare (primul, al_doilea)"};
 

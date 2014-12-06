@@ -14813,19 +14813,19 @@ exports.emptyBlocksErrorMsg = function(d){return "\"Atkārtojuma\" vai \"ja\" bl
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Lai tas strādātu, funkciju blokam ir nepieciešami citi bloki tajā."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "Funkcijā jābūt blokiem. Klikšķini \"labot\" un velc blokus zaļajā blokā."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "Klikšķini \"labot\", lai pārliecinātkos, ka definētajā funkcijā nepietrūkst neviena bloka."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "Atceries savā darba vietā pievienot bloku katra parametra ievadei funkcijā."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "Tu pievienoji parametra bloku, bet neizmanto to funkcijas definēšanā. Pārliecinies, ka izmanto parametru, klikšķinot \"labot\" un ievietojot parametra bloku zaļajā blokā."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "Izveido parametru funkcijai, klikšķinot \"labot\" un pievienojot nepieciešamos parametrus. Velc jauno parametra bloku savā definētajā funkcijā."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "Tu izveidoji funkciju, bet neizmanto to savā darbavietā. Klikšķini uz \"funkcijas\" rīku joslā un pārliecinies, ka izmanto to savā programmā."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "Nomaini \"???\" ar vērtību."};
 
 exports.extraTopBlocks = function(d){return "Tev ir nepievienoti bloki. Vai tu domā pievienot šos \"kad palaists\" blokam?"};
 
@@ -14887,7 +14887,7 @@ exports.showBlocksHeader = function(d){return "Parādīt blokus"};
 
 exports.showGeneratedCode = function(d){return "Parādīt kodu"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "virkne=?"};
 
 exports.subtitle = function(d){return "vizuāla programmēšanas vide"};
 

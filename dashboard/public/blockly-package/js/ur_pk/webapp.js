@@ -11900,13 +11900,13 @@ exports.catVariables = function(d){return "Variables"};
 
 exports.continue = function(d){return "Continue"};
 
-exports.createHtmlBlock = function(d){return "create html block"};
+exports.createHtmlBlock = function(d){return "html بلاک بنائیں"};
 
 exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
 
 exports.finalLevel = function(d){return "Congratulations! You have solved the final puzzle."};
 
-exports.makeYourOwn = function(d){return "Make Your Own App"};
+exports.makeYourOwn = function(d){return "اپنی خود اپلی کیشن بنائیں"};
 
 exports.nextLevel = function(d){return "Congratulations! You have completed this puzzle."};
 
@@ -11914,7 +11914,7 @@ exports.no = function(d){return "No"};
 
 exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks."};
 
-exports.pause = function(d){return "Pause"};
+exports.pause = function(d){return "توڑ"};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
 
@@ -11928,15 +11928,15 @@ exports.shareWebappTwitter = function(d){return "Check out the app I made. I wro
 
 exports.shareGame = function(d){return "Share your app:"};
 
-exports.stepIn = function(d){return "Step in"};
+exports.stepIn = function(d){return "اندر قدم رکھیں"};
 
-exports.stepOver = function(d){return "Step over"};
+exports.stepOver = function(d){return "پھلانگ"};
 
-exports.stepOut = function(d){return "Step out"};
+exports.stepOut = function(d){return "باہر قدم"};
 
 exports.turnBlack = function(d){return "turn black"};
 
-exports.turnBlackTooltip = function(d){return "Turns the screen black."};
+exports.turnBlackTooltip = function(d){return "سکرین سیاہ بدلنا"};
 
 exports.yes = function(d){return "Yes"};
 

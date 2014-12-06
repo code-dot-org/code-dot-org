@@ -21188,19 +21188,19 @@ exports.emptyBlocksErrorMsg = function(d){return "Blok powtórz lub blok jeśli 
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Blok funkcji musi zawierać inne bloki, by działał."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "Wewnątrz definicji Twojej funkcji powinny znajdować się bloki. Kliknij przycisk Edytuj i przeciągnij bloki do wnętrza zielonego bloku."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "Kliknij przycisk Edytuj, aby upewnić się, że wewnątrz definicji Twojej funkcji nie brakuje żadnego bloku."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "Pamiętaj, aby dołączyć blok do każdego parametru wejścia w bloku funkcji w Twoim obszarze roboczym."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "Dodałeś blok parametru, ale nie użyłeś go w definicji. Upewnij się, że używasz swojego parametru klikając na przycisk Editi i umieszczając blok parametru wewnątrz bloku zielonego."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "Utwórz parametr dla swojej funkcji klikając na przycisk Edytuj i dodając niezbędne parametry. Przeciągnij nowe bloki parametrów do definicji swojej funkcji."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "Utworzyłeś funkcję, ale nigdy nie użyłeś jej w swoim obszarze roboczym! W przyborniku kliknij na Funkcje i upewnij się, że używasz ich w swoim programie."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "Spróbuj zastąpić ??? wartością."};
 
 exports.extraTopBlocks = function(d){return "Masz niezałączone bloki. Czy chcesz je załączyć do bloku \"po uruchomieniu\"?"};
 
@@ -21262,7 +21262,7 @@ exports.showBlocksHeader = function(d){return "Pokaż Bloki"};
 
 exports.showGeneratedCode = function(d){return "Pokaż kod"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "łańcuch=?"};
 
 exports.subtitle = function(d){return "środowisko wizualnego programowania"};
 
@@ -21343,7 +21343,7 @@ var MessageFormat = require("messageformat");MessageFormat.locale.pl = function 
 };
 exports.actor = function(d){return "actor"};
 
-exports.alienInvasion = function(d){return "Alien Invasion!"};
+exports.alienInvasion = function(d){return "Inwazja obcych!"};
 
 exports.backgroundBlack = function(d){return "czarny"};
 
@@ -21427,7 +21427,7 @@ exports.makeProjectileRedHearts = function(d){return "utwórz czerwone serca"};
 
 exports.makeProjectileTooltip = function(d){return "Spraw by pocisk, który właśnie się zderzył, zniknął lub odbił się."};
 
-exports.makeYourOwn = function(d){return "Stwórz swoją własną Play Lab App"};
+exports.makeYourOwn = function(d){return "Stwórz swoją własną aplikację Play Lab"};
 
 exports.moveDirectionDown = function(d){return "dół"};
 
@@ -21511,19 +21511,19 @@ exports.playSoundWinPoint2 = function(d){return "zagraj dźwięk zdybycia punktu
 
 exports.playSoundWood = function(d){return "zagraj dźwięk drewna"};
 
-exports.positionOutTopLeft = function(d){return "do górnego lewego położenia"};
+exports.positionOutTopLeft = function(d){return "do powyżej górnej, lewej pozycji"};
 
-exports.positionOutTopRight = function(d){return "do górnego prawego położenia"};
+exports.positionOutTopRight = function(d){return "do powyżej górnej, prawej pozycji"};
 
-exports.positionTopOutLeft = function(d){return "do góry poza lewą pozycję"};
+exports.positionTopOutLeft = function(d){return "do góry na zewnątrz lewej pozycji"};
 
 exports.positionTopLeft = function(d){return "do górnej lewej pozycji"};
 
-exports.positionTopCenter = function(d){return "do górnej środkowej pozycji"};
+exports.positionTopCenter = function(d){return "do górnej, środkowej pozycji"};
 
-exports.positionTopRight = function(d){return "do górnej prawej pozycji"};
+exports.positionTopRight = function(d){return "do górnej, prawej pozycji"};
 
-exports.positionTopOutRight = function(d){return "do góry poza właściwą pozycję"};
+exports.positionTopOutRight = function(d){return "do góry na zewnątrz prawej pozycji"};
 
 exports.positionMiddleLeft = function(d){return "do środkowej pozycji z lewej"};
 
@@ -21541,9 +21541,9 @@ exports.positionBottomRight = function(d){return "na dolną pozycję z prawej"};
 
 exports.positionBottomOutRight = function(d){return "na dół poza właściwą pozycję"};
 
-exports.positionOutBottomLeft = function(d){return "to the below bottom left position"};
+exports.positionOutBottomLeft = function(d){return "do pozycji na lewo poniżej przycisku"};
 
-exports.positionOutBottomRight = function(d){return "to the below bottom right position"};
+exports.positionOutBottomRight = function(d){return "do pozycji na prawo poniżej przycisku"};
 
 exports.positionRandom = function(d){return "na losową pozycję"};
 
@@ -21689,27 +21689,27 @@ exports.setSpritePrincess = function(d){return "do obrazka z księżniczką"};
 
 exports.setSpriteRandom = function(d){return "na losowy obrazek"};
 
-exports.setSpriteRobot = function(d){return "to a robot image"};
+exports.setSpriteRobot = function(d){return "do obrazu robota"};
 
 exports.setSpriteShowK1 = function(d){return "pokaż"};
 
-exports.setSpriteSpacebot = function(d){return "to a spacebot image"};
+exports.setSpriteSpacebot = function(d){return "do obrazu spacebota"};
 
-exports.setSpriteSoccerGirl = function(d){return "to a soccer girl image"};
+exports.setSpriteSoccerGirl = function(d){return "do obrazu piłkarki"};
 
-exports.setSpriteSoccerBoy = function(d){return "to a soccer boy image"};
+exports.setSpriteSoccerBoy = function(d){return "do obrazu piłkarza"};
 
-exports.setSpriteSquirrel = function(d){return "to a squirrel image"};
+exports.setSpriteSquirrel = function(d){return "do obrazu wiewiórki"};
 
-exports.setSpriteTennisGirl = function(d){return "to a tennis girl image"};
+exports.setSpriteTennisGirl = function(d){return "do obrazu tenisistki"};
 
-exports.setSpriteTennisBoy = function(d){return "to a tennis boy image"};
+exports.setSpriteTennisBoy = function(d){return "do obrazu tenisisty"};
 
-exports.setSpriteUnicorn = function(d){return "to a unicorn image"};
+exports.setSpriteUnicorn = function(d){return "do obrazu jednorożca"};
 
 exports.setSpriteWitch = function(d){return "do obrazu czarownicy"};
 
-exports.setSpriteWizard = function(d){return "to a wizard image"};
+exports.setSpriteWizard = function(d){return "do obrazu kreatora"};
 
 exports.setSpritePositionTooltip = function(d){return "Natychmiast przenosi aktora do określonej lokalizacji."};
 
@@ -21719,9 +21719,9 @@ exports.setSpriteTooltip = function(d){return "Ustawia obraz aktora"};
 
 exports.setSpriteSizeRandom = function(d){return "do losowego rozmiaru"};
 
-exports.setSpriteSizeVerySmall = function(d){return "to a very small size"};
+exports.setSpriteSizeVerySmall = function(d){return "do bardzo małych rozmiarów"};
 
-exports.setSpriteSizeSmall = function(d){return "to a small size"};
+exports.setSpriteSizeSmall = function(d){return "do małego rozmiaru"};
 
 exports.setSpriteSizeNormal = function(d){return "do normalnego rozmiaru"};
 
@@ -21809,11 +21809,11 @@ exports.throwSprite = function(d){return "rzuć"};
 
 exports.throwSpriteN = function(d){return "rzut "+v(d,"spriteIndex")+" aktora"};
 
-exports.throwTooltip = function(d){return "Throws a projectile from the specified actor."};
+exports.throwTooltip = function(d){return "Wyrzuca pocisk z określonego aktora."};
 
-exports.vanish = function(d){return "vanish"};
+exports.vanish = function(d){return "znika"};
 
-exports.vanishActorN = function(d){return "vanish actor "+v(d,"spriteIndex")};
+exports.vanishActorN = function(d){return "znika aktor "+v(d,"spriteIndex")};
 
 exports.vanishTooltip = function(d){return "Wymazuje postać."};
 
@@ -21867,15 +21867,15 @@ exports.whenRightTooltip = function(d){return "Wykonaj poniższe czynności, gdy
 
 exports.whenSpriteClicked = function(d){return "po kliknięciu aktora"};
 
-exports.whenSpriteClickedN = function(d){return "when actor "+v(d,"spriteIndex")+" clicked"};
+exports.whenSpriteClickedN = function(d){return "kiedy aktor "+v(d,"spriteIndex")+" kliknął"};
 
 exports.whenSpriteClickedTooltip = function(d){return "Wykonaj czynności poniżej po kliknięciu na aktora."};
 
-exports.whenSpriteCollidedN = function(d){return "when actor "+v(d,"spriteIndex")};
+exports.whenSpriteCollidedN = function(d){return "kiedy aktor "+v(d,"spriteIndex")};
 
 exports.whenSpriteCollidedTooltip = function(d){return "Gdy aktor dotknie innego aktora, wykonaj poniższą akcję."};
 
-exports.whenSpriteCollidedWith = function(d){return "touches"};
+exports.whenSpriteCollidedWith = function(d){return "dotknięcia"};
 
 exports.whenSpriteCollidedWithAnyActor = function(d){return "dotyka kogoś innego"};
 
