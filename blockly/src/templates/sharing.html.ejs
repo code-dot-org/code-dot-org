@@ -66,7 +66,7 @@
 <% if (options.response && options.response.level_source && options.level.shapewaysUrl) { -%>
   <div id="shapeways-message" class="sharing" style="display: none">
     <div id="shapeways-message-body">You'll be redirected to Shapeways.com to order and purchase a 3D print.</div>
-    <button id="shapeways-print-go-button" onclick="location.href='<%= options.level.shapewaysUrl %>'">Go to Shapeways</button>
+    <button id="shapeways-print-go-button" onclick="window.open('<%= options.level.shapewaysUrl %>', '_blank')">Go to Shapeways</button>
     <div id="shapeways-message-body-disclaimer">Students under 13 years need a parent or guardian to do 3D printing.</div>
   </div>
 <% } -%>
