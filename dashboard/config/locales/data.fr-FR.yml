@@ -88,7 +88,7 @@
         Farmer2: Le Fermier 2
         Unplug8: Abstraction
         Artist4: L'Artiste 4
-        Unplug9: Relayer la programmation
+        Unplug9: Les relais
         Farmer3: Le Fermier 3
         Unplug10: La Toile
         Artist5: L'Artiste 5
@@ -648,17 +648,18 @@
           Répéter » pour faire 10 fois un carré et le bloc « Tourner » pour tourner
           de 36 degrés entre chaque carré ?
       frozen cross:
-        instructions: Use the "Repeat" block to create a plus sign. Did you notice
-          Elsa can move forward and backward?
+        instructions: Utiliser le bloc « Répéter » pour créer un signe plus. Avez-vous
+          remarqué qu'elsa peut se déplacer vers l'avant et vers l'arrière ?
       frozen cross rotate:
-        instructions: Now try repeating it 10 times. How many degrees do you need
-          to turn between each line?
+        instructions: Maintenant, essayez de le répéter 10 fois. De combien de degrés
+          avez-vous besoin de tourner entre chaque ligne ?
       frozen cross rotate dense:
-        instructions: 'Let''s repeat it 90 times! How many times does 90 go into 360?
-          Hint: It''s a really small number.'
+        instructions: 'Nous allons répéter 90 fois ! Combien de fois 90 va-t-il dans
+          360 ? Truc : C''est un très petit nombre.'
       frozen diamond:
-        instructions: 'Let''s create a parallelogram. It''s just like a square but
-          has different angles: 60 and 120 degree angles instead of 90 degree angles.'
+        instructions: 'Nous allons créer un parallélogramme. C''est comme un carré
+          mais avec des anges différents : les angles sont de 60 et 120 degrés au
+          lieu de 90 degrés.'
       frozen diamond mini snowflake:
         instructions: Did you know every snowflake is a different shape? Let's create
           a new snowflake by using the "Repeat" block to repeat a parallelogram 4
@@ -769,7 +770,7 @@
         Unplug6: Instructions conditionnelles
         Unplug7: Écriture de chansons
         Unplug8: Abstraction
-        Unplug9: Relay programming
+        Unplug9: Les relais
         Unplug10: Internet
         Unplug11: Résumé et ouverture
         C1_happy_maps_unplugged: Happy Maps
@@ -793,17 +794,17 @@
         C2_artist_intro: Introduction à l'Artiste
         C2_zuck_repeat_loop: Labyrinthe et boucles
         C2_artist_loops: Boucles d'artiste
-        C2_artist_debugging: Artist Debugging
+        C2_artist_debugging: Artiste et le débogage
         C2_bee_loops: Abeilles et boucles
-        C2_bee_debugging: Abeilles et debugging
+        C2_bee_debugging: Abeilles et débogage
         C2_bee_conditionals: Abeilles et instructions conditionnelles
         C2_playlab_createstory: Jouer au Labo - Créer une Histoire
         C2_graph_paper: Programmation sur papier quadrillé
         C2_conditionals_with_cards: Instructions conditionnelles
         C2_binary_bracelets: Bracelets binaires
-        C2_relay_programming: Relayer la programmation
+        C2_relay_programming: Les relais
         C2_paper_airplanes: Avions en papier
-        C2_digital_footprint: Your Digital Footprint
+        C2_digital_footprint: Votre empreinte numérique
         C3_maze_level_4: Labyrinthe et boucles
         C3_artist_intro: Introduction à l'Artiste
         C3_artist_functions: 'Artiste : les fonctions'
@@ -857,6 +858,10 @@
           degree to turn
         repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
           workspace
+        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the
+          workspace
+        repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks
+          inside
         snowflake_dropdown: Use this drop-down to create different snowflakes!
         degrees_per_side: Divide 360 by the number of sides to get the size of each
           angle in degrees.
@@ -895,3 +900,13 @@
         playlab_add_move: Add "move" blocks inside this repeat block
         playlab_add_score: Add score blocks here
         playlab_add_blocks: Add your blocks here
+        set_variable: Drag a number block here to set your variable
+        place_variable: Drag your variable inside this block
+        bee_for_loop: Drag the largest number of nectar you want the bee to collect
+          here
+        place_counter_variable: Drag your counter variable inside this block
+        function_editor_draw_square: This is your function definition. These blocks
+          run everytime you use the "draw a square" block
+        change_here: Make your change here
+        write_draw_square_function: Drag blocks from the toolbox into here that draw
+          a square

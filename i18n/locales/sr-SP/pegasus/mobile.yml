@@ -41,7 +41,7 @@ sr-SP:
   go: Иди
   thank_you_: Хвала!
   congratulations: Честитамо!
-  congratulations_on_completing_hoc: Ћеститамо јер сте завршили 1 Сат Програмирања.
+  congratulations_on_completing_hoc: Честитамо јер сте завршили 1 Сат Програмиранја.
   get_a_certificate_of_achievement: Узмите сертификат о достигнућу
   enter_valid_email: Молимо да унесете валидну емаил адресу
   get_a_certificate_message: "Послаћемо Вам сертификат и информације како да <a href='/learn/beyond'> Научите и више од сата кодирања</a>"
@@ -80,7 +80,7 @@ sr-SP:
   used_infrequent_updates: Само за ретка ажурирања
   privacy_practices_children: Видите наше праксе за приватност за децу
   petition_thankyou: Хвала вам што сте потписали петицију
-  continue_learning_header: Наставите ућити преко једног часа
+  continue_learning_header: Наставите учити преко једног часа
   continue_learning_body: Постоји много опција. Можете научити преко интернета, или у локалној школи, или на летњем кампу.
   learn_next_level: Настави до следећег нивоа
   learn_online: Пробајте друге курсеве на интернету
@@ -219,97 +219,97 @@ sr-SP:
   dashboard_students_add_student: Додајте ученика
   dashboard_students_add_students: Додајте више ученика
   dashboard_students_add_multiple: 'Укуцајте или налепите имена ваших ученика, у сваком реду по једног:'
-  dashboard_students_new_section: "You've created a new section! Now add your students using the <b>Add student</b> and <b>Add multiple students</b> buttons above."
-  dashboard_students_placeholder_name: Student Name
+  dashboard_students_new_section: 'Направили сте нову групу! Сада додајте ваше ученике користећи дугмад <b>Додајте ученика</b> и <b> Додајте више ученика</b> изнад.'
+  dashboard_students_placeholder_name: Име ученика
   dashboard_students_name: Име
   dashboard_students_age: Узраст
   dashboard_students_gender: Пол
   dashboard_students_male: Мушко
   dashboard_students_female: Женско
-  dashboard_students_secret: Secret
+  dashboard_students_secret: Тајна
   dashboard_students_password: Шифра
-  dashboard_students_username: 'Username: %{student_username}'
-  dashboard_students_email: 'Email: %{student_email}'
-  dashboard_students_completed_levels: Completed Levels
-  dashboard_students_total_lines: Lines of Code
-  dashboard_students_show_secret: Show secret
-  dashboard_students_auto_generated: Auto-generated
-  dashboard_students_reset_secret: Reset secret
-  dashboard_students_reset_password: Reset password
-  dashboard_students_share_section: "Share this section's sign in page with your students:"
-  dashboard_students_print_info: "Print out cards with your students' login information."
-  dashboard_students_secret_picture: Secret Picture
-  dashboard_students_reset_picture: "You may reset a student's secret picture at any time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new secret picture will be generated for that student to use when they sign in."
-  dashboard_students_secret_word: Secret Word
-  dashboard_students_reset_word: "You may reset a student's secret words at any time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new pair of secret words will be generated for that student to use when they sign in. "
-  dashboard_students_join_link: Tell your students to create their own accounts and join your section at
-  dashboard_students_no_email: "If your students do not have email addresses, or you would like to create accounts for them, change this section's secret type to <b>word</b> or <b>picture</b>."
-  dashboard_students_print_page: Print this page
-  dashboard_students_url: URL
-  dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Click here</a> for our privacy document that can be shared or printed for your students.'
-  dashboard_curriculum_overview: K-5 Curriculum Overview
-  dashboard_view_all_lesson_plans: View all lesson plans
-  dashboard_course1: 'Course 1:'
-  dashboard_course2: 'Course 2:'
-  dashboard_course3: 'Course 3:'
+  dashboard_students_username: 'Корисничко име:%{student_username}'
+  dashboard_students_email: 'Имејл:%{student_email}'
+  dashboard_students_completed_levels: Завршени нивои
+  dashboard_students_total_lines: Редови програма
+  dashboard_students_show_secret: Покажи тајну
+  dashboard_students_auto_generated: Само-генерисано
+  dashboard_students_reset_secret: Ресетуј тајну
+  dashboard_students_reset_password: Ресетуј лозинку
+  dashboard_students_share_section: 'Поделите страницу за пријаву ове групе са својим ученицима:'
+  dashboard_students_print_info: Отштампајте картице са подацима за пријављивање ученика/це.
+  dashboard_students_secret_picture: Тајна слика
+  dashboard_students_reset_picture: 'Можете да ресетујете тајну слику било када бирањем <b>Покажи тајну</b> и тада<b>Ресетуј тајну</b>. Нова слика ће бити изабрана за тог ученика када се пријаве.'
+  dashboard_students_secret_word: Тајна Реч
+  dashboard_students_reset_word: 'Можете ресетовати тајне речи ученика било када бирањем <b>Покажи тајну</b> и тад <b>Ресетуј тајну</b>. Нови пар тајних речи ће бити изабране за тог студента да их користи када се пријаве. '
+  dashboard_students_join_link: Реците вашим ученицима да направе сопствене налоге и придруже се вашој групи на
+  dashboard_students_no_email: 'Ако ваши студенти немају имејл адресе, или бисте желели да направите налоге за њих, промените тајну за групу у <b>реч</b> или <b>слику</b>.'
+  dashboard_students_print_page: Одштампај ову страницу
+  dashboard_students_url: УРЛ адреса странице
+  dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Кликните овде</a>да би добили наш документ о приватности који можете да поделите или одштампате са вашим ученицима.'
+  dashboard_curriculum_overview: Преглед наставног плана за вртић
+  dashboard_view_all_lesson_plans: Видите план свих лекција
+  dashboard_course1: 'Курс 1:'
+  dashboard_course2: 'Курс 2:'
+  dashboard_course3: 'Курс 3:'
   dashboard_sequence: Низ Акција
-  dashboard_framework: Framework
-  dashboard_standards: Standards
-  dashboard_implementation_guide: Implementation Guide
-  dashboard_glossary: Glossary
-  dashboard_classroom_strategies: Classroom strategies for teachers
-  dashboard_debugging: 'Debugging:'
-  dashboard_puzzle_solving: 'Puzzle-solving:'
-  dashboard_student_worksheet: student worksheet
-  dashboard_teacher_worksheet: teacher worksheet
-  dashboard_grade_k: K
+  dashboard_framework: Оквир
+  dashboard_standards: Стандарди
+  dashboard_implementation_guide: Водич за имплементацију
+  dashboard_glossary: Појмовник
+  dashboard_classroom_strategies: Стратегије подучавања за учитеље
+  dashboard_debugging: 'Отклањање грешака:'
+  dashboard_puzzle_solving: 'Решавање проблема:'
+  dashboard_student_worksheet: радна листови за ученике
+  dashboard_teacher_worksheet: радни листови за учитеље
+  dashboard_grade_k: Вртић
   dashboard_grade_other: Други
-  dashboard_login_word: Word
-  dashboard_login_picture: Picture
+  dashboard_login_word: Реч
+  dashboard_login_picture: Слика
   dashboard_login_none: Електронска пошта
-  dashboard_new_password: new password
-  stats_hoc_2013_heading: "Incredible stats from last year's Hour of Code. In one week alone:"
-  stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
-  dashboard_teacher: Teacher
+  dashboard_new_password: нова лозинка
+  stats_hoc_2013_heading: 'Невероватна статистика прошлогодишњег Сата програмирања. За само недељу дана:'
+  stats_hoc_2013_image_alt: Статистика за Сат програмирања 2013
+  dashboard_teacher: Учитељ
   dashboard_student: студент
-  dashboard_sections_email_question: Do all students have a valid email address?
-  dashboard_sections_account_creation_question: "Who creates the student's account?"
-  dashboard_sections_password_question: 'What do students use as a "password"?'
-  dashboard_sections_picture_account_creation: A picture assigned by Code.org
-  dashboard_sections_word_account_creation: A simple word assigned by Code.org
-  dashboard_sections_sign_in_question: Where do students sign-in?
-  dashboard_sections_sign_in_unique: 'Unique web-page listed on "Manage Students" tab'
-  dashboard_sections_sign_in_main: 'http://code.org and click "Sign in"'
-  dashboard_sections_password_account_creation: Student-created text password
-  dashboard_sections_login_type_explanation: "This table helps explain which of these login types, <b>picture, word, or email</b>, you'll want to choose for a section."
-  dashboard_faq: Frequently Asked Questions
-  code_hoc_coming: 'The Hour of Code is coming - December 8-14!'
-  code_sign_up: Sign up to participate during CS Education Week
+  dashboard_sections_email_question: Да ли сви студенти имају имејл адресу која функционише?
+  dashboard_sections_account_creation_question: Ко прави налог од ученика?
+  dashboard_sections_password_question: "Шта ученици користе као ''лозинку''?"
+  dashboard_sections_picture_account_creation: Слика додељена од Code.org
+  dashboard_sections_word_account_creation: Једноставна реч додељена од Code.org
+  dashboard_sections_sign_in_question: Где се ученици пријављују?
+  dashboard_sections_sign_in_unique: 'Јединствена интернет страница на  "Управљатјте ученицима"'
+  dashboard_sections_sign_in_main: 'http://code.or и кликните "Пријави ме"'
+  dashboard_sections_password_account_creation: Лозинке направљне од стране ученика
+  dashboard_sections_login_type_explanation: 'Ово вам објашњава који од ових брста пријављивања, <b>слику, реч или имејл адресу</b> , би сте изабрали за групу.'
+  dashboard_faq: Често постављана питања
+  code_hoc_coming: Сат програмирања долази -од 8-14 децембра!
+  code_sign_up: Пријавите се да учествујете током недеље за едукацију о компјутерској науци
   learn_more: Сазнајте више
-  hoc2014_try_new_tutorials: Try our new Hour of Code tutorials
+  hoc2014_try_new_tutorials: Пробајте наше нове водиче за Сат програмирања
   hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
-  hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
+  hoc2014_try_scrat: Angry Birds, Plants vs Zombies,и Ice age
   hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
   carousel_heading_international: Туторијали на твом језику
-  carousel_heading_domestic: Tutorials available in English
-  carousel_heading_beginners: Tutorials for Beginners
-  carousel_heading_javascript: Tutorials that teach Javascript
-  carousel_heading_unplugged: "No device or internet? Try 'unplugged' computer science"
-  carousel_heading_devices: Tutorial apps for phones and tablets
-  carousel_heading_languages: Tutorials in other programming languages
-  carousel_heading_apps_games: Make your own apps or games
-  carousel_heading_university: University courses online
-  carousel_heading_webpages: Learn to make web pages
-  carousel_heading_robots: Learn to program with robots
-  carousel_heading_ide: Platforms popular among teachers
-  educator_notes: Educator Notes
-  more_resources_educators: More resources for teachers and educators
-  participants: participants
-  teachers_notes: "Teacher's Notes"
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
-  previous: Previous
-  next: Next
-  older_systems: Tutorials that work on older systems
+  carousel_heading_domestic: Водичи на Енглеском
+  carousel_heading_beginners: Водичи за почетнике
+  carousel_heading_javascript: Tutorials that teach JavaScript
+  carousel_heading_unplugged: Без уређаја или интернета? Пробајте компјутерску науку у стварном свету
+  carousel_heading_devices: Апликације водичи за телефоне и таблете
+  carousel_heading_languages: Водичи у другим програмским језицима
+  carousel_heading_apps_games: Направите сопствене апликације или игрице
+  carousel_heading_university: Унивезетски курсеви на интернету
+  carousel_heading_webpages: Научите да правите интернет странице
+  carousel_heading_robots: Научите да програмирате са роботима
+  carousel_heading_ide: Платформе популарне са учитељима
+  educator_notes: Белешке за едукаторе
+  more_resources_educators: Више ресурса за учитеље и едукаторе
+  participants: учесници
+  teachers_notes: Белешке учитеља
+  teachers_notes_hoc: 'Учитељи: прочитајте важне белешке за едукаторе овде'
+  previous: Претходни
+  next: Следећи
+  older_systems: Водичи који раде на старијим системима
   older_systems_subheading: 'These should work on older Web browsers. To access all tutorials, upgrade to a <a href="http://browsehappy.com/" target="_blank">modern Web browser.</a>'
   mobile_devices: Tutorials for mobile devices
   frozen_name: Code with Anna and Elsa

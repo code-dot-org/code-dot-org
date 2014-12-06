@@ -321,3 +321,13 @@
           description: Una selecció de nivells del Curs 4 per proves d'ús.
           Variables: Variables
           For Loops: Per bucles
+        potus:
+          title: special
+          description_short: special
+          description: special
+          Special: Special
+        special:
+          title: special
+          description_short: special
+          description: special
+          Special: Special

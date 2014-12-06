@@ -293,7 +293,7 @@ no-NO:
   carousel_heading_international: Gjennomganger på norsk
   carousel_heading_domestic: Øvinger tilgjengelig på engelsk
   carousel_heading_beginners: Øvinger for nybegynnere
-  carousel_heading_javascript: Øvinger som underviser Javascript
+  carousel_heading_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: "Ingen enhet eller Internett? Prøv 'frakoblet' koding"
   carousel_heading_devices: Øvings-apper for telefoner og nettbrett
   carousel_heading_languages: Øvinger i andre programmeringsspråk
@@ -306,7 +306,7 @@ no-NO:
   more_resources_educators: Flere lærerressurser
   participants: deltakere
   teachers_notes: Lærernotater
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: 'Lærere: Les viktig opplæringsnotater her'
   previous: Forrige
   next: Neste
   older_systems: Øvinger som fungerer på eldre systemer
@@ -475,7 +475,7 @@ no-NO:
   robomindnl_longdescription: 'Elevene lærer grunnleggende programmering ved å kontrollere sin egne virtuelle robot. Det nettbaserte kurset er fullstendig med korte presentasjoner, filmer, quizer og automatisk veiledning/tips for å hjelpe til med programmeringsøvelsene. '
   flappy_longdescription: Bruk dra-og-slipp i programmeringen for å lage ditt eget Flappy Bird-spill, og tilpass det til å se annerledes ut(Flappy Hai, Flappy Julenisse, hva som helst). Legg inn spillet på telefonen din med ett klikk.
   bitsbox_longdescription: Tilpass ditt eget virtuelle nettbrett, for deretter å kode en rekke apper for å spille og dele. Enkle gjennomganger gjør det enkelt for selv små barn å programmere skikkelig Javascript. Jo mer avansert du er, jo lenger vil du komme.
-  makegameswithus_longdescription: Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pokemon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!
+  makegameswithus_longdescription: Lær å kode ved å lage et iPhone-spill gjennom å bruke et splitter nytt og brukervennlig programmeringsspråk kalt Swift! Lag et Pokemon-inspirert action-spill og skriv kode for å lære monsteret ditt nye bevegelser. Du kommer til å lære å bruke variabler, metoder og objekter for å hjelpe monsteret ditt til å vinne!
   touchdevelop_longdescription: 'The touch-friendly editor will guide you in creating pixel art, solving the bear puzzle, or making your own jumping bird game. '
   appinventor_longdescription: Underholdende, raske opplæringsvideoer viser deg hvordan du lager tre enkle programmer for Android-telefon eller nettbrett. Denne Kodetimen, som er designet både for nybegynnere og eksperter, den gjør deg klar til å begynne å lage dine egen programmer før du vet ordet av det. Forestill deg å dele dine egne apper sammen med vennene dine! Aktivitetene er egnet for både enkeltpersoner og lærere i klasseundervisning.
   blockly_longdescription: 'Opplever du langsom (eller ikke-eksisterende) Internett-tilgang? Last ned Blockly opplæringsfiler som var forløperen til Code.org opplæringsfiler - en enkel komprimert fil på 3MB kan lastes inn på enhver datamaskin eller brukes fra en minnepinne'

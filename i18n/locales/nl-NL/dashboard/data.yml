@@ -507,15 +507,17 @@ nl:
         replace_questions: 'Gebruik de vervolgkeuzelijst om "???" te vervangen door een getal'
         replace_questions_degree: 'Gebruik de vervolgkeuzelijst om "???" te vervangen door de correcte graden om te draaien'
         repeat_blocks: 'Gebruik van de blok "Repeat" en plaats deze rond de blokken in de werkruimte'
+        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the workspace
+        repeat_blocks_2: '(2) Move the "Repeat" block here, and place the gray blocks inside'
         snowflake_dropdown: Gebruik deze vervolgkeuzelijst om verschillende sneeuwvlokken te maken!
         degrees_per_side: Deel 360 door het aantal zijden om de grootte van de hoeken te krijgen in graden.
         set_sides: 'Gebruik dit blok om het aantal "zijden" te kiezen om deze puzzel te voltooien.'
         set_length: 'Gebruik deze blok om de "lengte" juist in te stellen.'
-        which_equation: Welke vergelijking maakt iedere zijde korter voor vormen met meer zijden? probeer iedere vergelijking!
+        which_equation: Which equation makes each side shorter for shapes with more sides?
         get_nectar: 'Gebruik de nieuwe "Krijg Nectar" blok.'
         actions_category: 'De gereedschapskist kreeg een nieuwe look! Hier zijn de "Actie" blokken.'
         draw_square_hint: 'Tip: Gebruik de vierkant lus die je in de vorige puzzel maakte.'
-        edit_function: Gebruik deze knop om de functie bewerken.
+        edit_function: Click here to edit your function.
         create_function: 'Klik hier om de Functies flyout te openen en klik vervolgens op "Creëer Functie" knop.'
         house_hint: Het is geen probleem dat je afbeelding er nog niet uitziet als een huis. We lossen dit op in de volgende puzzel.
         edit_draw_square: Gebruik deze knop om de functie te bewerken en een lus toe te voegen.
@@ -535,3 +537,10 @@ nl:
         playlab_add_move: 'Add "move" blocks inside this repeat block'
         playlab_add_score: Add score blocks here
         playlab_add_blocks: Add your blocks here
+        set_variable: Drag a number block here to set your variable
+        place_variable: Drag your variable inside this block
+        bee_for_loop: Drag the largest number of nectar you want the bee to collect here
+        place_counter_variable: Drag your counter variable inside this block
+        function_editor_draw_square: 'This is your function definition. These blocks run everytime you use the "draw a square" block'
+        change_here: Make your change here
+        write_draw_square_function: Drag blocks from the toolbox into here that draw a square

@@ -500,15 +500,17 @@ de:
         replace_questions: 'Verwenden Sie den Dropdown-Pfeil, um  "???" mit einer Nummer zu ersetzen'
         replace_questions_degree: 'Verwenden Sie den Dropdown-Pfeil, um "???" mit dem richtigen Grad zum drehen zu ersetzen'
         repeat_blocks: 'Verwenden Sie den "Repeat" Block und wickeln Sie es um die Blöcke im Arbeitsbereich'
+        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the workspace
+        repeat_blocks_2: '(2) Move the "Repeat" block here, and place the gray blocks inside'
         snowflake_dropdown: Verwenden Sie dieses Dropdown-Menü, um verschiedene Schneeflocken zu erstellen!
         degrees_per_side: Teilen Sie 360 durch die Anzahl der Seiten, um die Größe der einzelnen Winkel in Grad zu erhalten.
         set_sides: 'Verwenden Sie diesen Codeblock um "Seiten" so einzustellen, dass sie mit der Anzahl der Teile die für das Puzzel noch gebraucht werden übereinstimmen.'
         set_length: 'Verwenden Sie diesen Codeblock "Länge" auf den richtigen Wert festzulegen.'
-        which_equation: 'Welche Gleichung macht jede der Seite kürzer bei Formen mit mehr Seiten?  Versuchen Sie jede Gleichung!'
+        which_equation: Which equation makes each side shorter for shapes with more sides?
         get_nectar: 'Verwenden Sie den neuen "get-Nektar"-Block.'
         actions_category: 'Die Tool-Box hat einen neuen Look! Die "Aktionen"-Blöcke sind jetzt drin.'
         draw_square_hint: 'Tipp: Verwenden Sie die quadratische Schleife, die Sie gerade im letzten Rätsel gemacht haben.'
-        edit_function: Verwenden Sie diese Schaltfläche, um die Funktion zu bearbeiten.
+        edit_function: Click here to edit your function.
         create_function: 'Klicken Sie hier, um die Flyout "Funktionen" zu öffnen, dann klicken Sie auf "Erstellen einer Funktion".'
         house_hint: Es ist ok, wenn das Bild noch nicht wie ein Haus aussieht. Wir werden es im nächsten Rätsel beheben.
         edit_draw_square: Benutzen Sie diesen Knopf zum bearbeiten der Funktion und der Schleife.
@@ -528,3 +530,10 @@ de:
         playlab_add_move: 'Add "move" blocks inside this repeat block'
         playlab_add_score: Add score blocks here
         playlab_add_blocks: Add your blocks here
+        set_variable: Drag a number block here to set your variable
+        place_variable: Drag your variable inside this block
+        bee_for_loop: Drag the largest number of nectar you want the bee to collect here
+        place_counter_variable: Drag your counter variable inside this block
+        function_editor_draw_square: 'This is your function definition. These blocks run everytime you use the "draw a square" block'
+        change_here: Make your change here
+        write_draw_square_function: Drag blocks from the toolbox into here that draw a square

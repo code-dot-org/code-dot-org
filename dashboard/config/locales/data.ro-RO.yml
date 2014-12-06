@@ -532,22 +532,29 @@
         studio_c3_game_7: Creați-vă propriul joc. Când aţi terminat, faceţi clic pe
           Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele
           lor.
-        studio_playlab_1: Poți face acest câine să spună "Bună ziua lume"?
-        studio_playlab_2: Puteţi face cainele sa spuna ceva şi apoi dupa aceea pisica
-          sa continue sa spuna altceva?
-        studio_playlab_3: Can you write a program to make this dog move to the cat?
-        studio_playlab_4: Poți scrie un program care să îl facă pe câine să meargă
-          către pisică, iar atunci când o ajunge, aceasta să spună "Bună"?
-        studio_playlab_5: Can you write a program to make the octopus say "hello"
-          when it is clicked?
-        studio_playlab_6: Can you write a program to make this penguin move around
-          using the up / down / left /right keys to hit all of the targets?
-        studio_playlab_7: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_playlab_8: Can you add a block to score a point when the penguin runs
-          into the octopus, and then move him with the arrows until you score?
-        studio_playlab_9: Can you add blocks to change the background and the speed
-          of the penguin, and then move him with the arrows until you score?
+        studio_playlab_1: Pinguinul vrea să spună "Bună ziua" - îl puteți ajuta?
+        studio_playlab_2: Băiatul din peşteră (actor 1) şi Fata din peşteră (actor
+          2) ar dori să-și spună "hello". Îi puteți ajuta folosind blocul "spune"
+          de două ori?
+        studio_playlab_3: O puteți ajuta pe tenismenă să ajungă la pavilion?
+        studio_playlab_4: Îl puteți ajuta pe băiatul tenisman (actor 1) să ajungă
+          la fata de tenis (actor 2) și să lansați un sunet când ajunge acolo?
+        studio_playlab_5: Îl puteți ajuta pe robotul spatial să spună "Salutări pamantenilor"
+          când se dă clic pe el? Nu uitaţi să daţi clic pe el după ce daţi clic pe
+          Rulare
+        studio_playlab_6: O puteți ajuta pe Vrăjitoare să se miște împrejur folosind
+          tastele săgeți sus/jos/dreapta/stânga pentru a prinde toate mingile de foc
+          magice?
+        studio_playlab_7: Blocul "repetă pentru totdeauna" vă permite să rulaţi cod
+          continuu. Puteți ataşa blocuri pentru a ajuta Expertul să se miște la dreapta
+          şi la stânga în mod repetat?
+        studio_playlab_8: Puteţi adăuga un bloc pentru a marca un punct și un bloc
+          pentru a reda un sunet când unicornul îl lovește pe expert şi apoi să îl
+          mutaţi cu săgeţile până când marcați?
+        studio_playlab_9: Setați fundalul pentru această invazie extraterestră şi
+          ajutați-l pe Spacebot să ajungă mai repede la extraterestru, prin schimbarea
+          vitezei sale. Apoi, mutaţi-l cu tastele săgeată să ajungă la Spacebot şi  să-i
+          alerteze pe toți ceilalți
         studio_playlab_10: Creați-vă propriul joc. Când aţi terminat, faceţi clic
           pe Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele
           lor.
@@ -675,26 +682,28 @@
           un labirint mai complex? Dacă o faceți bine, voi putea să merg pe orice
           traseu curbat, indiferent de lungime. Uraaa! Gheața se topește!
       Standalone_Artist_1:
-        instructions: Welcome to Artist! First off, let's try to make a simple square
-          using the turn right block and move forward block. Each side should be 100
-          pixels long.
+        instructions: Bine ați venit la Artist! În primul rând, să încercăm să facem
+          un pătrat simplu folosind blocul rotește la dreapta şi blocul Mutare înainte.
+          Fiecare latură ar trebui să aibă lungimea de 100 pixeli.
       Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel
-          long sides.
+        instructions: Desenaţi acest diamant cu unghiuri de 120 şi 60 de grade şi
+          laturile de lungimi 150 pixeli.
       Standalone_Artist_3:
-        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree
-          turns?
+        instructions: Puteţi desena acest hexagon cu laturi de 100 pixeli şi rotiri
+          de 60 grade?
       Standalone_Artist_4:
-        instructions: Now you've got a new block to play with, the loop. This will
-          repeat a set of commands. What happens if you loop these commands 6 times?
+        instructions: Acum ați obținut un bloc nou cu care să vă jucați într-o repetiție.
+          Acesta va repeta un set de comenzi. Ce se întâmplă dacă repetați aceste
+          comenzi de 6 ori?
       Standalone_Artist_5:
-        instructions: How many times do you need to loop this diamond to draw the
-          flower?
+        instructions: De câte ori aveți nevoie să repetați acest diamant pentru a
+          desena floarea?
       Standalone_Artist_5.5:
-        instructions: 'Notice how we simplified the diamond code by turning it into
-          a loop. You can loop that whole sequence 12 times to draw the flower. Hint:
-          You''ll need to turn 30 degrees after your diamond loop so you don''t keep
-          drawing over the same diamond.'
+        instructions: 'Observaţi cum am simplificat codul diamantului transformându-l
+          într-o repetiție. Puteți să repetați întreaga secvență de 12 ori pentru
+          a desena floarea. Sugestie: Veţi avea nevoie să rotiți cu 30 de grade, după
+          repetiția diamantului dvs. astfel încât vă nu desenați tot peste acelaşi
+          diamant.'
       Standalone_Artist_6:
         instructions: 'Loop this hexagon code 6 times to create the design. How many
           degrees will you need to turn each time? Hint: divide the number of degrees
@@ -824,6 +833,10 @@
           cu măsura corectă în grade pentru întoarcere
         repeat_blocks: Utilizaţi blocul "Repetă" şi aduceți-l lângă blocurile din
           spațiul de lucru
+        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the
+          workspace
+        repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks
+          inside
         snowflake_dropdown: Utilizaţi acest meniu derulant pentru a crea diferiți
           fulgi de zăpadă!
         degrees_per_side: Împărțiți 360 la numărul de laturi pentru a obține mărimea
@@ -867,3 +880,13 @@
         playlab_add_move: Add "move" blocks inside this repeat block
         playlab_add_score: Add score blocks here
         playlab_add_blocks: Add your blocks here
+        set_variable: Drag a number block here to set your variable
+        place_variable: Drag your variable inside this block
+        bee_for_loop: Drag the largest number of nectar you want the bee to collect
+          here
+        place_counter_variable: Drag your counter variable inside this block
+        function_editor_draw_square: This is your function definition. These blocks
+          run everytime you use the "draw a square" block
+        change_here: Make your change here
+        write_draw_square_function: Drag blocks from the toolbox into here that draw
+          a square

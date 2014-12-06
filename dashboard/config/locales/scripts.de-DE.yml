@@ -84,9 +84,8 @@
           'Artist: Sequence2': 'Künstler: Sequenz2'
           'Maze: Sequence2': 'Labyrinth: Sequenz'
           'Artist: Nested Loops': 'Künstler: verschachtelte Schleifen'
-          description_audience: Ages  6+ (reading required)
-          description_short: Kurs 2 richtet sich an Schüler/-innen, die in der unteren
-            und mittleren Grundschule lesen können.
+          description_audience: Älter als 6 Jahre (Lesen erforderlich)
+          description_short: Kurs 2 richtet sich an Schüler, die lesen können.
         course3:
           The Maze: Das Labyrinth
           'Studio: Create a Story': 'Play Lab: Erstelle eine Story'
@@ -308,3 +307,13 @@
           description: A selection of Course 4 levels for usability testing.
           Variables: Variablen
           For Loops: '"For"-Schleifen'
+        potus:
+          title: special
+          description_short: special
+          description: special
+          Special: Special
+        special:
+          title: special
+          description_short: special
+          description: special
+          Special: Special

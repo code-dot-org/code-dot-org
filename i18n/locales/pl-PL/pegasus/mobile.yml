@@ -294,7 +294,7 @@ pl-PL:
   carousel_heading_international: Poradniki w Twoim języku
   carousel_heading_domestic: Poradniki (samouczki) dostępne w języku angielskim
   carousel_heading_beginners: Samouczki dla początkujących
-  carousel_heading_javascript: Samouczki do nauki Javascript
+  carousel_heading_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: 'Nie masz komputera lub dostępu do Internet? Poznaj informatykę "unplugged", czyli informatykę bez komputera'
   carousel_heading_devices: Aplikacje z poradnikami dla telefonów komórkowych i tabletów
   carousel_heading_languages: Poradniki dla innych języków programowania
@@ -307,7 +307,7 @@ pl-PL:
   more_resources_educators: Więcej zasobów dla nauczycieli i wychowawców
   participants: uczestnicy
   teachers_notes: Notatki nauczyciela
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: 'Nauczyciele: Przeczytaj tutaj ważne notatki pedagoga'
   previous: Poprzedni
   next: Następny
   older_systems: Samouczki, które działają w starszych systemach
@@ -387,13 +387,13 @@ pl-PL:
   thinkersmithspanish_platformtext: Odłączony (unplugged)/Bez komputera
   khan_platformtext: Nowoczesne przeglądarki sieci
   khanes_platformtext: Nowoczesne przeglądarki sieci
-  tynker_platformtext: Modern browsers. (Follow-on course requires $$)
+  tynker_platformtext: Nowoczesne przeglądarki. (Kurs, który następuje, wymaga $$)
   scratch_platformtext: WSZYSTKIE przeglądarki
   lightbot_platformtext: WSZYSTKIE przeglądarki i iOS, Android lub konsola do gier
   thinkersmith_platformtext: Odłączony (unplugged)/Bez komputera
   condcards_platformtext: Odłączony (unplugged)/Bez komputera
   lightbotintl_platformtext: iOS, Android (lub przeglądarki sieci web)
-  codehs_platformtext: 'Modern browsers. (Follow-on course requires  $$)'
+  codehs_platformtext: Nowoczesne przeglądarki. (Kurs, który następuje, wymaga $$)
   codecademy_platformtext: Nowoczesne przeglądarki. Aplikacje w systemach iOS i Android
   codecombat_platformtext: Nowoczesne przeglądarki sieci Web
   codemonkey_platformtext: Nowoczesne przeglądarki sieci Web
@@ -430,7 +430,7 @@ pl-PL:
   codehs_shortdescription: Rozpocznij kodowanie z Psem Karelem, zabawne i wizualne wprowadzenie do programowania!
   codecademy_shortdescription: Naucz się programować w JavaScript w przeglądarce sieci
   codecombat_shortdescription: Pokonaj ogry w tej epickiej grze, by poznać język programowania Python lub JavaScript!
-  codemonkey_shortdescription: Students program a monkey to catch bananas.
+  codemonkey_shortdescription: Studenci programują małpę, by łapała banany.
   codeavengers_shortdescription: Naucz się programować w JavaScript w przeglądarce sieci
   processing_shortdescription: Godzina tutorialu w języku Processing
   robomind_shortdescription: Napisz kod dla wirtualnego robota
@@ -438,12 +438,12 @@ pl-PL:
   quorum_shortdescription: Dołącz do Mary poznającej z przewodnikiem język programowania Quorum.
   codespark_shortdescription: Foos jest zabawną i przyjazną grą, służącą do nauki o programowaniu.
   kodable_shortdescription: Fajna gra na iPada, służąca do nauki pojęć związanych z programowaniem komputerów
-  tynkerapp_shortdescription: 'Learn to program by solving fun coding puzzles. '
+  tynkerapp_shortdescription: 'Ucz się programować rozwiązując zabawne łamigłówki kodowania. '
   robomindnl_shortdescription: Napisz kod dla wirtualnego robota
   flappy_shortdescription: 'Utwórz swoją własną grę - fruwający (Flappy) ptak, rekin lub okręt podwodny'
   bitsbox_shortdescription: Zakoduj używając Javascript kilka aplikacji do grania i podziel się nimi.
   makegameswithus_shortdescription: Utwórz grę na iPhona! Poznaj kodując, jak nauczyć Twojego potwora nowych ruchów!
-  touchdevelop_shortdescription: 'Solve puzzles, create games, and learn coding all on your phone. '
+  touchdevelop_shortdescription: 'Rozwiązuj zagadki, twórz gry i ucz się kodować, a wszystko na swoim telefonie. '
   appinventor_shortdescription: Utwórz swoją własna aplikację! (tylko dla systemu Android)
   blockly_shortdescription: Pobierz plik ZIP, aby uczyć się w trybie offline
   thinkersmith2_shortdescription: Dowiedz się, jak informacje są reprezentowane w komputerze za pomocą cyfr 1 i 0.
@@ -452,7 +452,7 @@ pl-PL:
   frozen_longdescription: Użyjmy kodowania, by przyłączyć się do Anny i Elsy, które poszukują magii i piękna w lodzie. Będziesz tworzył płatki śniegu oraz wzory podczas jazdy na łyżwach i przepiękną zimową krainę, którą później możesz udostępnić znajomym!
   codeorg_longdescription: Poznaj podstawowe pojęcia informatyki programując metodą przeciągnij i upuść. To jest jak gra, samodzielny samouczek z wykładami wideo Billa Gatesa, Marka Zuckerberga oraz udziałem Angry Birds i Plants vs. Zombies w rolach głównych. Nauczysz się stosować pętle, warunki oraz podstawowe algorytmy. Materiały są dostępne w 34 językach.
   codeintl_longdescription: Poznaj podstawowe pojęcia informatyki programując metodą przeciągnij i upuść. To jest jak gra, samodzielny samouczek z wykładami wideo Billa Gatesa, Marka Zuckerberga oraz udziałem Angry Birds i Plants vs. Zombies w rolach głównych. Nauczysz się stosować pętle, warunki oraz podstawowe algorytmy. Materiały są dostępne w 34 językach.
-  thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubriran como guiarse de modo tal de llevar a cabo tareas especificas sin ser estas discutidas previamente. Este segmento ensena a los estudiantes la conexion entre simbolos y acciones asi como la valiosa habilidad de depuracion.'
+  thinkersmithspanish_longdescription: 'Mediante el uso de ONZ "Vocabulario Robot" predefinido, los estudiantes descubriran como guiarse de modo tal llevar de cabo tareas especificas grzech ser estas discutidas previamente. Este segmento ensena los estudiantes la conexion entre simbolos y acciones asi como la valiosa habilidad de depuracion.'
   khan_longdescription: Poznaj podstawy programowania w JavaScript tworząc zabawne rysunki. Możesz to zrobić na własną rękę lub z klasy!
   khanes_longdescription: Poznaj podstawy programowania w JavaScript tworząc zabawne rysunki. Możesz to robić na własną rękę lub z klasą!
   tynker_longdescription: Buduj swoje własne gry i dziel się nimi z przyjaciółmi! Rozwiązuj zabawne łamigłówki kodowania i poznawaj pojęcia programowania na każdym poziomie. Personalizuj gry z animowanymi postaciami, na wielu poziomach i bogatych w rekwizyty. Czyń swoje gry realistyczne posługując się fizyką. Obserwuj kod jako wizualne bloki lub w JavaScript. Przenieś gry mobilne na iPad i tablety z Androidem. Kilkanaście zabawnych aktywności do wyboru!
@@ -472,12 +472,12 @@ pl-PL:
   quorum_longdescription: Ten samouczek jest dostępny dla niedowidzących i współpracuje z czytnikami ekranowymi. Dołącz do Mary, która jako programistka w laboratorium biologii uczy się języka programowania Quorum. Ten samouczek jest prowadzony przez uczniów i zawiera przykładowe aktywności online.
   codespark_longdescription: 'Foos jest zabawnym i przyjaznym sposobem poznania, czym jest programowanie komputerów. Zaprogramuj sprytne postacie, by rozwiązać łamigłówki i przywrócić wirtualny świat do życia.  Gra jest wolna od słów, każdy więc może w nią grać!'
   kodable_longdescription: Kodable jest grą z własnym przewodnikiem na iPada, która przybliża dzieciom 5+ podstawy programowania. Dobrze, jeśli nauczyciel lub rodzic są w pobliżu, ale nie jest to konieczne.
-  tynkerapp_longdescription: Learn to program by solving fun coding puzzles. Easily build games and stories using with themed graphics, 10+ game-kits and customizable characters. No Internet connectivity required. You can also access your creations on the web.
+  tynkerapp_longdescription: Ucz się programować rozwiązując zabawne łamigłówki kodowania. Możesz łatwo tworzyć gry i opowiadania wykorzystując tematyczną grafikę, 10+ zestawy do gier i konfigurowalne postacie. Nie jest wymagane połączenie z Internetem. Możesz również mieć dostęp do swoich kreacji w Internecie.
   robomindnl_longdescription: 'Uczniowie poznają podstawy programowania kontrolując swoje własne wirtualne roboty. Kurs jest online i całkowicie samowystarczalny, zawiera krótkie prezentacje, filmy, quizy i automatyczne wskazówki, które pomagają przy wykonywaniu ćwiczeń z programowania. '
   flappy_longdescription: Posługując się programowaniem metodą przeciągnij i upuść, utwórz swoje własne gry z ptakiem Flappy i spowoduj, by różnie wyglądały (Flappy rekin, Flappy Mikołaj, cokolwiek). Dodaj grę do swojego telefonu w jednym kliknięciu.
   bitsbox_longdescription: Dostosuj swój własny wirtualny tablet, a następnie utwórz aplikacje do gry i udostępnij je. Jest to możliwe, nawet małe dzieci programują w Javascript, im bardziej jesteś zaawansowany w programowaniu, tym dalej zajdziesz.
-  makegameswithus_longdescription: Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pokemon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!
-  touchdevelop_longdescription: 'The touch-friendly editor will guide you in creating pixel art, solving the bear puzzle, or making your own jumping bird game. '
+  makegameswithus_longdescription: Ucz się programować tworząc grę dla iPhona za pomocą nowego i przyjaznego dla początkujących języka programowania o nazwie Swift! Utwórz grę akcji inspirowaną przez grę Pokemon i napisz kod, uczący Twojego potwora nowych ruchów. Dowiesz się, jak używać zmiennych, metod i obiektów, aby pomóc Twojemu potworowi wygrać!
+  touchdevelop_longdescription: 'Przyjazny edytor dotykowy poprowadzi Cię przy tworzeniu dzieł złożonych z pikseli, w rozwiązywaniu łamigłówek niedźwiedzia lub przy tworzeniu własnej gry z podskakującym ptakiem. '
   appinventor_longdescription: Zabawne samouczki wideo prowadzą Cię przez trzy proste aplikacje dla Twojego telefonu z Androidem lub dla tabletu. Przeznaczona dla początkujących jak i dla ekspertów, ta Godzina Kodowania przygotuje Cię do tworzenia własnych aplikacji, zanim będziesz o tym wiedział. Wyobraź sobie, że dzielisz się swoim kreowaniem aplikacji z przyjaciółmi! Te aktywności są odpowiednie dla pojedynczych osób i dla nauczycieli prowadzących zajęcia.
   blockly_longdescription: 'Czy masz komputer z powolnym (lub żadnym) dostępem do Internetu? Pobierz Poradniki Blockly , które był prekursorem poradników dla Code.org - jeden plik ZIP o wielkości 3MB może być załadowany na dowolny komputer lub używany z pen-drive'
   thinkersmith2_longdescription: Uczniowie poznają binarną reprezentację liter jako funkcję. Na koniec zajęć uczniowie w klasie kodują własne inicjały, by zabrać je do domu.

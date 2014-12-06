@@ -35,7 +35,7 @@
         ponastaviti vaše geslo.
       send_paranoid_instructions: If your email address exists in our database, you
         will receive a password recovery link at your email address in a few minutes.
-      updated: Your password was changed successfully. You are now signed in.
+      updated: Tvoje geslo je bilo uspešno spremenjeno. Sedaj si se registriral/a.
       updated_not_active: Your password was changed successfully.
     registrations:
       destroyed: Bye! Your account was successfully cancelled. We hope to see you

@@ -807,6 +807,10 @@
           door de correcte graden om te draaien
         repeat_blocks: Gebruik van de blok "Repeat" en plaats deze rond de blokken
           in de werkruimte
+        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the
+          workspace
+        repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks
+          inside
         snowflake_dropdown: Gebruik deze vervolgkeuzelijst om verschillende sneeuwvlokken
           te maken!
         degrees_per_side: Deel 360 door het aantal zijden om de grootte van de hoeken
@@ -849,3 +853,13 @@
         playlab_add_move: Add "move" blocks inside this repeat block
         playlab_add_score: Add score blocks here
         playlab_add_blocks: Add your blocks here
+        set_variable: Drag a number block here to set your variable
+        place_variable: Drag your variable inside this block
+        bee_for_loop: Drag the largest number of nectar you want the bee to collect
+          here
+        place_counter_variable: Drag your counter variable inside this block
+        function_editor_draw_square: This is your function definition. These blocks
+          run everytime you use the "draw a square" block
+        change_here: Make your change here
+        write_draw_square_function: Drag blocks from the toolbox into here that draw
+          a square

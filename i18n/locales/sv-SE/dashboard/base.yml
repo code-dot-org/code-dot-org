@@ -218,7 +218,7 @@ sv:
         playlab: Make an App
         artist: Draw Something
     user:
-      classroom: Teacher Home Page
+      classroom: Lärare hemsida
       label: 'Hej %{username}'
       stats: Mina framsteg
       settings: Mitt konto
@@ -511,7 +511,7 @@ sv:
     sign_out: 'If you do not wish to provide your age you may <a href="%{url}">sign out</a>.'
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
   progress:
-    not_completed: not completed
-    completed_too_many_blocks: completed, too many blocks
-    completed_perfect: completed, perfect
+    not_completed: Ej avklarad
+    completed_too_many_blocks: Avklarad, med för många block
+    completed_perfect: Avklarad, perfekt
     furthest_level_attempted: furthest level attempted

@@ -49,9 +49,8 @@
           'Bee: Loops': 'Ape: Cicli'
           'Studio: Create a Story': 'Laboratorio: Crea una Storia'
           'Artist: Loops': 'Artista: Cicli'
-          description_audience: Ages 4+ (pre-readers)
-          description_short: Il Corso 1 è progettato per studenti che stanno iniziando
-            a leggere. Consigliato per la prima elementare.
+          description_audience: Età 4+ (pre-scolare)
+          description_short: Il corso 1 è progettato per chi sta iniziando a leggere.
         course2:
           The Maze: Il Labirinto
           Suzi: Suzi
@@ -94,9 +93,8 @@
           'Artist: Sequence2': 'Artista: Sequenza 2'
           'Maze: Sequence2': 'Labirinto: Sequenza 2'
           'Artist: Nested Loops': 'Artista: Cicli Annidati'
-          description_audience: Ages  6+ (reading required)
-          description_short: Il Corso 2 è progettato per studenti che hanno già imparato
-            a leggere.  Consigliato dalla seconda alla quinta elementare.
+          description_audience: Erà 6+ (richiesta abilità di lettura)
+          description_short: Il corso 2 è progettato per studenti che sanno leggere.
         course3:
           The Maze: Il Labirinto
           'Studio: Create a Story': 'Laboratorio: Crea una Storia'
@@ -151,9 +149,8 @@
           'Bee: Debugging2': 'Ape: Correzione di Errori 2'
           'Artist: Patterns': 'Artista: Schemi'
           Songwriting: Composizione di canzoni
-          description_audience: Ages 8+ (after Course 2)
-          description_short: Il Corso 3 è progettato come il seguito del corso 2.  Consigliato
-            per la quarta e quinta elementare.
+          description_audience: Età 8+ (dopo il Corso 2)
+          description_short: Il Corso 3 è la continuazione del Corso 2.
         msm:
           title: Matematica per la Scuola Media
           description: Lavoro privato in corso per la Matematica per la Scuola Media.
@@ -231,8 +228,8 @@
           title: L'Ora del Codice
           description: Impara i concetti base dell'informatica con i personaggi di
             Angry Birds, Plant vs. Zombies, e Scrat di L'Era Glaciale!
-          description_short: Impara i concetti base dell'informatica con i personaggi
-            di Angry Birds, Plant vs. Zombies, e Scrat di L'Era Glaciale!
+          description_short: Prova i fondamenti dell'informatica insieme a tanti personaggi
+            divertenti!
         frozen:
           title: Programma con Anna ed Elsa
           description: Cerchiamo di usare la programmazione per unirci ad Anna ed
@@ -277,7 +274,7 @@
           Farmer Binary: 'Agricoltore: Binario'
           Maze and Bee: Il Labirinto e l'Ape
           Artist Binary: 'Artista: Binario'
-          description_audience: Ages 10+ (after Course 3)
+          description_audience: Erà 10+ (dopo il Corso 3)
         Course4pre:
           description_short: Una breve presentazione dei concetti importanti per gli
             studenti che non hanno svolto i Corsi 2 e 3.
@@ -326,3 +323,13 @@
           description: Una selezione di 4 livelli del corso per test di usabilità.
           Variables: Variabili
           For Loops: Cicli For
+        potus:
+          title: special
+          description_short: special
+          description: special
+          Special: Special
+        special:
+          title: special
+          description_short: special
+          description: special
+          Special: Special
