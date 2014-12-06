@@ -78,7 +78,7 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   this.userVisible_ = true;
   this.collapsed_ = false;
   this.dragging_ = false;
-  /** 
+  /**
    * The label which can be clicked to edit this block. This field is
    * currently set only for functional_call blocks.
    * @type {Blockly.FieldIcon}
@@ -499,6 +499,7 @@ Blockly.Block.prototype.getHeightWidth = function() {
  * @private
  */
 Blockly.Block.prototype.onMouseDown_ = function(e) {
+  console.log("mousedown: " + this.id);
   // Stop the browser from scrolling/zooming the page
   e.preventDefault();
   // ...but this prevents blurring of inputs, so do it manually
@@ -517,10 +518,12 @@ Blockly.Block.prototype.onMouseDown_ = function(e) {
     // Right-click.
     // Unlike google Blockly, we don't want to show a context menu
     //this.showContextMenu_(e);
-  } else if (!this.isMovable()) {
+  } else if (!this.isMovable() || this.nodrag) {
     // Allow unmovable blocks to be selected and context menued, but not
     // dragged.  Let this event bubble up to document, so the blockSpace may be
     // dragged instead.
+    // todo - update comment above
+    e.stopPropagation();
     return;
   } else {
     // Left-click (or middle click)
