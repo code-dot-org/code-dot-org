@@ -819,13 +819,16 @@ Webapp.execute = function() {
                                           Webapp: api,
                                           console: consoleApi,
                                           JSON: JSONApi,
-                                          Globals: Webapp.Globals } );
-
+                                          Globals: Webapp.Globals });
 
         var getCallbackObj = interpreter.createObject(interpreter.FUNCTION);
+        // Only allow four levels of depth when marshalling the return value
+        // since we will occasionally return DOM Event objects which contain
+        // properties that recurse over and over...
         var wrapper = codegen.makeNativeMemberFunction(interpreter,
                                                        nativeGetCallback,
-                                                       null);
+                                                       null,
+                                                       4);
         interpreter.setProperty(scope,
                                 'getCallback',
                                 interpreter.createNativeFunction(wrapper));
