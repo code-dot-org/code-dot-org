@@ -379,7 +379,7 @@
   more_resources_educators: Ulteriori risorse per insegnanti ed educatori in generale
   participants: partecipanti
   teachers_notes: Note per gli insegnanti
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: 'Insegnanti: leggete qui gli avvisi per gli educatori'
   previous: Precedente
   next: Seguente
   older_systems: Lezioni che funzionano anche su vecchi sistemi
@@ -462,13 +462,13 @@
   thinkersmithspanish_platformtext: '"Senza Rete"'
   khan_platformtext: Browser Web moderni
   khanes_platformtext: Browser Web moderni
-  tynker_platformtext: Browser Web moderni
+  tynker_platformtext: Browser moderni. (Il proseguimento del corso è a pagamento)
   scratch_platformtext: Tutti i browser
   lightbot_platformtext: Tutti i browser, sistemi iOS o Android, console di gioco
   thinkersmith_platformtext: '"Senza Rete"'
   condcards_platformtext: '"Senza Rete"'
   lightbotintl_platformtext: iOS, Android (o browser web)
-  codehs_platformtext: Browser moderni
+  codehs_platformtext: Browser moderni. (Il proseguimento del corso è a pagamento)
   codecademy_platformtext: Browser web moderni. iOS, applicazioni Android
   codecombat_platformtext: Browser Web moderni
   codemonkey_platformtext: Browser Web moderni
@@ -512,8 +512,8 @@
     Web
   codecombat_shortdescription: Sconfiggi gli orchi mentre impari Python o Javascript
     programmando questo gioco di guerra!
-  codemonkey_shortdescription: Students program a monkey to catch bananas while it
-    gets slightly more complicated on each level.
+  codemonkey_shortdescription: Gli studenti programmano una scimmia a prendere le
+    banane.
   codeavengers_shortdescription: Imparare a programmare in JavaScript, nel tuo browser
     Web
   processing_shortdescription: Una lezione di un'ora sul linguaggio Processing
@@ -526,16 +526,15 @@
     per imparare a programmare.
   kodable_shortdescription: Un divertente gioco per l'iPad per insegnare i concetti
     base della programmazione
-  tynkerapp_shortdescription: Impara a programmare risolvendo divertenti esercizi
-    e costruisci la tua versione di giochi per dispositivi mobili.
+  tynkerapp_shortdescription: 'Impara a programmare risolvendo divertenti enigmi. '
   robomindnl_shortdescription: Scrivi programmi per un robot virtuale
   flappy_shortdescription: Crea il tuo gioco - Flappy Bird, Squalo o Sottomarino
   bitsbox_shortdescription: Programma una serie di app reali per giocare e da condividere,
     usando Javascript.
   makegameswithus_shortdescription: Costruisci un gioco per l'iPhone! Impara scrivendo
     codice che insegna nuove mosse ai tuoi mostri!
-  touchdevelop_shortdescription: Sviluppa app per dispositivi mobili direttamente
-    sul tuo smartphone, tablet o computer
+  touchdevelop_shortdescription: 'Risolvi enigmi, crea giochi e impara a programmare
+    usando il tuo telefono. '
   appinventor_shortdescription: Costruisci la tua app! (Solo per dispositivi Android)
   blockly_shortdescription: Scarica un file ZIP per imparare quando non sei connesso
     a Internet
@@ -643,10 +642,10 @@
   kodable_longdescription: Kodable è un gioco per iPad auto-guidato che introduce
     alle basi della programmazione i bambini dai 5 anni in su. La presenza di un insegnante
     o di un genitore è preferibile, ma non necessaria.
-  tynkerapp_longdescription: Build your own games and share with friends! Solve fun
-    coding puzzles and learn programming concepts in each level. Personalize games
-    with animated characters, multiple levels and rich props. Lots of fun activities
-    to choose from!
+  tynkerapp_longdescription: Impara a programmare risolvendo divertenti enigmi. Crea
+    facilmente giochi e storie utilizzando grafica a tema, più di 10 kit di gioco
+    e personaggi personalizzabili. Non è necessaria la connessione a Internet. Puoi
+    accedere alle tue creazioni sul web.
   robomindnl_longdescription: 'Gli studenti imparano le basi della programmazione
     controllando il proprio robot virtuale. Il corso online è completamente autonomo
     con brevi presentazioni, filmati, quiz e orientamento/suggerimenti automatici
@@ -658,14 +657,14 @@
     tutta una serie di applicazioni per giocare e da condividere. Semplici procedure
     dettagliate rendono possibile anche per i più giovani programmare in Javascript,
     e più sai più lontano arriverai.
-  makegameswithus_longdescription: Know some programming already? Learn to make an
-    iPhone game in an hour! We'll guide you through the process, to code, test, and
-    play your game entirely in the browser and then share it on Facebook for friends
-    to try! No prior iPhone development experience is required. You must understand
-    what variables, methods, and objects are.
-  touchdevelop_longdescription: Crazy drawings, flying monsters, swirling flowers...
-    create your apps on your device with TouchDevelop, a friendly mobile app creation
-    environment. Runs on iPhone, iPad, Android, Windows, Windows Phone, Linux, Mac.
+  makegameswithus_longdescription: Impara a programmare creando un gioco per iPhone
+    utilizzando un linguaggio di programmazione nuovo di zecca e adatto ai principianti
+    chiamato Swift! Crea un gioco di azione ispirato a Pokemon e scrivi un programma
+    per insegnare nuove mosse al tuo mostro. Imparerai ad usare variabili, metodi
+    e oggetti per aiutare il tuo mostro a vincere!
+  touchdevelop_longdescription: 'L''editor ti guida in modo amichevole nell''arte
+    della creazione di pixel, nel risolvere i puzzle dell''orso o nel creare la tua
+    versione del gioco dell''uccello che salta. '
   appinventor_longdescription: Questo veloce video Tutorial ti guida attraverso la
     costruzione di tre semplici app per il tuo telefono o tablet Android. Progettato
     per novizi ed esperti, questa attività della Ora del Codice ti insegnerà a costruire
@@ -765,7 +764,7 @@
   sphero_beyond_gradelevel: Da 8 anni in su
   codeorg_beyond_platformtext: Browser moderni, tablet
   khan_beyond_platformtext: Browser Web moderni
-  tynker_beyond_platformtext: Browser web moderni ($$ necessaria)
+  tynker_beyond_platformtext: Browser Web moderni (a pagamento)
   scratch_beyond_platformtext: Qualsiasi browser Web
   lightbot_beyond_platformtext: iOS, Android (o browser web)
   codecademy_beyond_platformtext: Browser web moderni. iOS, applicazioni Android
@@ -779,7 +778,7 @@
   makegameswithus_beyond_platformtext: Browser Web moderni
   appinventor_beyond_platformtext: Browser moderni + Android
   touchdevelop_beyond_platformtext: Browser moderni, smartphone, tutti i dispositivi
-  codehs_beyond_platformtext: Browser moderni ($$ necessaria)
+  codehs_beyond_platformtext: Browser moderni (a pagamento)
   udemy_beyond_platformtext: Attività basate sul Web
   lynda_beyond_platformtext: Web based (richiesto $$ )
   edx_beyond_platformtext: Browser moderni

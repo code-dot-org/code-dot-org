@@ -1,6 +1,6 @@
 {
   "actor": "színész",
-  "alienInvasion": "Alien Invasion!",
+  "alienInvasion": "Földönkívüli invázió!",
   "backgroundBlack": "fekete",
   "backgroundCave": "barlang",
   "backgroundCloudy": "felhős",
@@ -29,7 +29,7 @@
   "defaultSayText": "Ide írj",
   "emotion": "hangulat",
   "finalLevel": "Gratulálok, megoldottad az utolsó feladatot.",
-  "for": "for",
+  "for": "ciklus",
   "hello": "helló",
   "helloWorld": "Helló világ!",
   "incrementPlayerScore": "pontszám",
