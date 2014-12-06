@@ -56,8 +56,14 @@ max_age: 60
       = view :congrats_certificate
       = view :congrats_share, cert_id:cert_id, facebook:facebook, twitter:twitter
 
-  - ## Printing options inserted with AJAX
-  #print_option.col-50
+  #print_option.col-50{:style=>'display:none;'}
+    %h2{:style=>'margin-top:15px; margin-bottom:10px'}
+      Print your ice art
+    = view :frozen_print_gallery
+
+    %a{:href=>"http://#{canonical_hostname('studio.code.org')}/s/1/level/108"}
+      %button{:style=>'background-color: rgb(126, 92, 162); border-color: rgb(126, 92, 162);'}
+        Create art with zombie
 
   %div{:style=>'clear: both; height:30px'}
 
@@ -71,8 +77,6 @@ max_age: 60
   = view :petition
 
 = view 'popup_window.js'
-
-%iframe#print_frame{:src=>'/images/frozen-impressive-all.jpg', :style=>'display: none'}
 
 :javascript
 
@@ -106,27 +110,10 @@ max_age: 60
       $("#share-twitter").hide(); $("#follow-twitter").css('display', 'inline-block');
     });
 
-    $.ajax({
-      url: "/dashboardapi/print_option",
-      type: "get",
-    }).done(function(data) {
-      var item = $("#print_frame")[0];
-      item.contentWindow.document.getElementsByTagName("img")[0].style.width="100%";
-      $("#print_option").html(data);
-      var printButton = $('#print_button');
-      if (printButton) {
-        printButton.click(function() {
-          if (item.contentWindow.document.execCommand('print', false, null)) {
-          } else {
-            item.contentWindow.print();
-          }
-        });
-      }
-      // checking for "studio" won't work on local instances as domain is 0.0.0.0:3000
-      if (document.referrer.indexOf("studio") != -1 && document.referrer.indexOf("frozen") == -1) {
-        $('#print_option').hide();
-      }
-    });
+    // checking for "studio" won't work on local instances as domain is 0.0.0.0:3000
+    if (!(document.referrer.indexOf("studio") != -1 && document.referrer.indexOf("frozen") == -1)) {
+      $('#print_option').show();
+    }
 
     // placeholder text for non-HTML5 browsers
     $('input[type=text], textarea').placeholder();

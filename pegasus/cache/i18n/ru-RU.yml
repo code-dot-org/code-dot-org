@@ -371,7 +371,7 @@
   more_resources_educators: Больше ресурсов для учителей и преподавателей
   participants: участники
   teachers_notes: Заметки учителя
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: 'Учителям: ознакомьтесь с важными заметками для педагогов здесь'
   previous: Назад
   next: Далее
   older_systems: Уроки доступные на более старых системах
@@ -453,13 +453,15 @@
   thinkersmithspanish_platformtext: Офф-лайн
   khan_platformtext: Современные веб-браузеры
   khanes_platformtext: Современные веб-браузеры
-  tynker_platformtext: Modern web browsers
+  tynker_platformtext: Современные браузеры. (Для прохождения более углубленного курса
+    требуется $$)
   scratch_platformtext: ВСЕ браузеры
   lightbot_platformtext: ВСЕ браузеры и iOS, Android или Игровые Консоли
   thinkersmith_platformtext: Офф-лайн
   condcards_platformtext: Офф-лайн
   lightbotintl_platformtext: Операционные системы iOS и Android (или веб-браузер)
-  codehs_platformtext: Modern browsers
+  codehs_platformtext: Современные браузеры. (Для прохождения более углубленного курса
+    требуется $$)
   codecademy_platformtext: Современные веб-браузеры. Приложения для операционных систем
     iOS и Android
   codecombat_platformtext: Современные веб-браузеры
@@ -503,8 +505,8 @@
   codecademy_shortdescription: Изучайте программирование в JavaScript, в веб-браузере
   codecombat_shortdescription: Победите огров, чтобы изучить Python или JavaScript
     в этой эпичной игре!
-  codemonkey_shortdescription: Students program a monkey to catch bananas while it
-    gets slightly more complicated on each level.
+  codemonkey_shortdescription: Ученики запрограммируют обезьянку, чтобы она ловила
+    бананы.
   codeavengers_shortdescription: Изучайте программирование в JavaScript, в веб-браузере
   processing_shortdescription: Часовой урок о языках обработки
   robomind_shortdescription: Напишите код для виртуального робота
@@ -515,8 +517,7 @@
   codespark_shortdescription: The Foos - это веселя игра, подходящая для детей, чтобы
     помочь узнать им о программировании.
   kodable_shortdescription: Весёлые игры для iPad для обучения основам программирования
-  tynkerapp_shortdescription: Learn to code by solving fun puzzles and build your
-    own mobile games.
+  tynkerapp_shortdescription: 'Научись программировать, разгадывая веселые головоломки. '
   robomindnl_shortdescription: Напишите код для виртуального робота
   flappy_shortdescription: Создайте свою игру - Птица, котора машет крыльями, Акула,
     или Подводная Лодка
@@ -524,8 +525,8 @@
     настоящего Javascript.
   makegameswithus_shortdescription: Сделайте игру для iPhone! Учитесь, написав код
     для новых движений вашего монстра!
-  touchdevelop_shortdescription: Code mobile apps directly on your phone, tablet or
-    laptop
+  touchdevelop_shortdescription: 'Разгадывай головоломки, создавай игры и учись программировать,
+    и все это - на мобильном телефоне. '
   appinventor_shortdescription: Сделайте своё собственное приложение! (Только для
     Android)
   blockly_shortdescription: Скачать ZIP-файл, чтобы учиться в режиме offline
@@ -545,11 +546,12 @@
     программирования. Это похожий на игру самоучитель с видеолекциями Билла Гейтса,
     Марка Цукерберга, Angry Birds и Plants vs. Zombies. Изучите циклы, условные операторы
     и основные алгоритмы. Доступен на 34 языках.
-  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
+  thinkersmithspanish_longdescription: С помощью имеющегося "Словаря для роботов"
+    учащиеся попробуют, направляя друг друга, выполнить определенные задачи, при этом
+    не обсуждая их предварительно. Этот урок покажет детям связь между символами и
+    действиями, а также научит их незаменимому навыку поиска и исправления ошибок
+    в программе. "Мои друзья-роботы" лучше всего подходит в качестве группового задания
+    и включает в себя учебное пособие для преподователей для использования в классах.
   khan_longdescription: Изучите основы программирования на JavaScript при создании
     смешных рисунков с вашим кодом. Изучайте самостоятельно или вместе с одноклассниками!
   khanes_longdescription: Изучите основы программирования на JavaScript при создании

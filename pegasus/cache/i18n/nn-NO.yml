@@ -359,7 +359,7 @@
   more_resources_educators: Fleire ressursar for lærarar og utdannarar
   participants: deltakarar
   teachers_notes: Læraren sine notat
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: 'Lærere: Les viktig opplæringsnotater her'
   previous: Førre
   next: Neste
   older_systems: Leksjonar som fungerer på eldre system
@@ -625,9 +625,9 @@
     du kome.
   makegameswithus_longdescription: Lær å kode ved å lage et iPhone-spill gjennom å
     bruke et splitter nytt og brukervennlig programmeringsspråk kalt Swift! Lag et
-    Pok&eacute;mon-inspirert action-spill og skriv kode for å lære monsteret ditt
-    nye bevegelser. Du kommer til å lære hvordan å bruke variabler, metoder og objekter
-    for å hjelpe monsteret ditt til å vinne!
+    Pokemon-inspirert action-spill og skriv kode for å lære monsteret ditt nye bevegelser.
+    Du kommer til å lære å bruke variabler, metoder og objekter for å hjelpe monsteret
+    ditt til å vinne!
   touchdevelop_longdescription: Crazy drawings, flying monsters, swirling flowers...
     create your apps on your device with TouchDevelop, a friendly mobile app creation
     environment. Runs on iPhone, iPad, Android, Windows, Windows Phone, Linux, Mac.

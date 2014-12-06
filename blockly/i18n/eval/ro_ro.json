@@ -12,7 +12,7 @@
   "scaleImageBlockTitle": "scară (factor)",
   "squareBlockTitle": "pătrat(mărime, stil, culoare)",
   "starBlockTitle": "stea (rază, stil, culoare)",
-  "radialStarBlockTitle": "radial-star (points, inner, outer, style, color)",
+  "radialStarBlockTitle": "stea-radială (puncte, interior, exterior, stil, culoare)",
   "stringAppendBlockTitle": "șir-adăugare (primul, al_doilea)",
   "stringLengthBlockTitle": "șir-lungime (șir)",
   "textBlockTitle": "text(șir, mărime, culoare)",

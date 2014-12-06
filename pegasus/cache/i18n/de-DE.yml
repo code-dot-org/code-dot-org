@@ -376,7 +376,7 @@
   more_resources_educators: Weitere Quellen für Lehrer und Erzieher
   participants: Teilnehmer
   teachers_notes: Anmerkungen des Lehrers
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: 'Lehrer: Lesen Sie hier wichtige Lehrhinweise'
   previous: Zurück
   next: Weiter
   older_systems: Einführungen für ältere Systeme
@@ -458,13 +458,13 @@
   thinkersmithspanish_platformtext: Nicht angeschlossen
   khan_platformtext: Aktuelle Web-Browser
   khanes_platformtext: Aktuelle Web-Browser
-  tynker_platformtext: Modern web browsers
+  tynker_platformtext: Moderne Browser. (Ein Weiterführender Kurs kostet Geld)
   scratch_platformtext: ALLE Browser
   lightbot_platformtext: Alle Browser, iOS, Android oder Spielkonsolen
   thinkersmith_platformtext: Nicht angeschlossen
   condcards_platformtext: ohne Computer
   lightbotintl_platformtext: iOS, Android (odr Internet-Browser)
-  codehs_platformtext: Modern browsers
+  codehs_platformtext: Moderne Browser. (Ein Weiterführender Kurs kostet Geld)
   codecademy_platformtext: Aktuelle Web-Browser, iOS- und Android-Apps
   codecombat_platformtext: Aktuelle Web-Browser
   codemonkey_platformtext: Aktuelle Web-Browser
@@ -506,8 +506,7 @@
   codecademy_shortdescription: Erlerne JavaScript-Programmierung in einem Web-Browser
   codecombat_shortdescription: Besiege Oger in diesem epischem Programmier-Spiel,
     um Python oder JavaScript zu lernen!
-  codemonkey_shortdescription: Students program a monkey to catch bananas while it
-    gets slightly more complicated on each level.
+  codemonkey_shortdescription: Schüler programmieren einen Affen um Bananen zu fangen.
   codeavengers_shortdescription: Erlerne JavaScript-Programmierung in einem Web-Browser
   processing_shortdescription: Eine Stunde, um Computer-Sprachen zu lernen
   robomind_shortdescription: Schreibe ein Programm für einen virtuellen Roboter
@@ -518,8 +517,7 @@
     das Programmieren lernen.'
   kodable_shortdescription: Ein iPad-Spiel, das Spass macht und Methoden der Programmierung
     vermittelt
-  tynkerapp_shortdescription: Learn to code by solving fun puzzles and build your
-    own mobile games.
+  tynkerapp_shortdescription: Lerne programmieren durch das lösen von spaßigen Codierungsrätseln.
   robomindnl_shortdescription: Schreibe ein Programm für einen virtuellen Roboter
   flappy_shortdescription: Entwickele Dein eigenes Spiel, z.B. Flappy Bird, Shark
     oder Submarine
@@ -527,8 +525,8 @@
     zu entwickeln.
   makegameswithus_shortdescription: Entwickele ein iPad-Spiel. Lerne dies durch die
     Programmierung von Bewegungen Deines Monsters!
-  touchdevelop_shortdescription: Code mobile apps directly on your phone, tablet or
-    laptop
+  touchdevelop_shortdescription: Löse Rätsel, entwickle Spiele und lerne zu programmieren
+    und das alles auf deinem Smartphone.
   appinventor_shortdescription: Erstelle deine eigene Anwendung! (nur Android)
   blockly_shortdescription: Lade eine ZIP-Datei herunter, um ohne Internet-Verbindung
     lernen zu können

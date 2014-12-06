@@ -378,7 +378,7 @@
   more_resources_educators: Més recursos per a mestres i educadors
   participants: Participants
   teachers_notes: Notes del professor
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: 'Professors: Llegiu les notes importants per als educadors aquí'
   previous: Anterior
   next: Següent
   older_systems: Tutorials que funcionen en sistemes més vells
@@ -460,13 +460,13 @@
   thinkersmithspanish_platformtext: Sense connexió
   khan_platformtext: Navegadors moderns
   khanes_platformtext: Navegadors moderns
-  tynker_platformtext: Modern web browsers
+  tynker_platformtext: Navegadors moderns. (El seguiment del curs requereix $$)
   scratch_platformtext: Tots els navegadors
   lightbot_platformtext: Tots els navegadors i iOS, Android o consola de joc
   thinkersmith_platformtext: Sense connexió
   condcards_platformtext: Sense connexió
   lightbotintl_platformtext: iOS, Android (o navegador web)
-  codehs_platformtext: Navegadors moderns
+  codehs_platformtext: Navegadors moderns. (El seguiment del curs requereix $$)
   codecademy_platformtext: Navegadors web moderns. iOS, Android apps
   codecombat_platformtext: Navegadors moderns
   codemonkey_platformtext: Navegadors moderns
@@ -508,8 +508,8 @@
   codecademy_shortdescription: Aprèn programació amb JavaScript, en un navegador web
   codecombat_shortdescription: Derrota els ogres per aprendre Python o JavaScript
     en aquest èpic joc de programació!
-  codemonkey_shortdescription: Students program a monkey to catch bananas while it
-    gets slightly more complicated on each level.
+  codemonkey_shortdescription: Els estudiants han de programar un mico que ha d'agafar
+    plàtans.
   codeavengers_shortdescription: Aprèn programació amb JavaScript, en un navegador
     web
   processing_shortdescription: Un tutorial d'una hora en llenguatge de programació
@@ -522,16 +522,16 @@
     amigable pels petits.
   kodable_shortdescription: Un divertit joc per a iPad per ensenyar conceptes de programació
     informàtica
-  tynkerapp_shortdescription: Learn to code by solving fun puzzles and build your
-    own mobile games.
+  tynkerapp_shortdescription: 'Aprèn a programar mitjançant la resolució de divertits
+    trencaclosques amb programació. '
   robomindnl_shortdescription: Programa per a un robot virtual
   flappy_shortdescription: Fes el teu propi joc - ocell Flappy, tauró o submarí
   bitsbox_shortdescription: Programa una sèrie de apps per jugar i compartir, utilitzant
     Javascript real.
   makegameswithus_shortdescription: Fes un joc per a iPhone! Aprèn programant per
     ensenyar als teus monstres nous moviments!
-  touchdevelop_shortdescription: Code mobile apps directly on your phone, tablet or
-    laptop
+  touchdevelop_shortdescription: 'Resol puzzles, crea jocs i aprèn programació tot
+    al teu telèfon. '
   appinventor_shortdescription: Fes la teva pròpia app! (només Android)
   blockly_shortdescription: Descarrega't un arxiu comprimit ZIP per aprendre fora
     de línia
@@ -633,10 +633,10 @@
   kodable_longdescription: Kodable és un joc d'iPad autoguiats que introdueix els
     nens de mes de 5 anys els conceptes bàsics de la programació. Tenir un professor
     o un pare a prop és recomanable, però no necessari.
-  tynkerapp_longdescription: Build your own games and share with friends! Solve fun
-    coding puzzles and learn programming concepts in each level. Personalize games
-    with animated characters, multiple levels and rich props. Lots of fun activities
-    to choose from!
+  tynkerapp_longdescription: Aprèn a programar mitjançant la resolució de divertits
+    trencaclosques amb programació. Construeix jocs i contes fàcilment amb gràfics
+    temàtics, més de 10 kits de jocs i personatges personalitzables. No cal connexió
+    a Internet. També podràs accedir a les teves creacions a la web.
   robomindnl_longdescription: 'Els alumnes aprenen els fonaments de la programació
     controlant el seu propi robot virtual. Curs en línia totalment autònom amb presentacions
     breus, vídeos, qüestionaris i pistes automàtiques per ajudar amb els exercicis
@@ -648,14 +648,13 @@
     una sèrie d'aplicacions per jugar i compartir. Tutorials simples fan possible
     fins i tot per als nens mes petits programar en Javascript real i a  més avancin
     més lluny arribaran.
-  makegameswithus_longdescription: Know some programming already? Learn to make an
-    iPhone game in an hour! We'll guide you through the process, to code, test, and
-    play your game entirely in the browser and then share it on Facebook for friends
-    to try! No prior iPhone development experience is required. You must understand
-    what variables, methods, and objects are.
-  touchdevelop_longdescription: Crazy drawings, flying monsters, swirling flowers...
-    create your apps on your device with TouchDevelop, a friendly mobile app creation
-    environment. Runs on iPhone, iPad, Android, Windows, Windows Phone, Linux, Mac.
+  makegameswithus_longdescription: Aprèn a programar fent un joc per a iPhone utilitzant
+    un nou i agradable llenguatge de programació anomenat Swift! Crea un joc d'acció
+    inspirat en Pokémon i escriu un programa per ensenyar al teu monstre nous moviments.
+    Aprendràs com utilitzar variables, mètodes i objectes per ajudar al teu monstre
+    a guanyar!
+  touchdevelop_longdescription: 'L''editor tàctil et guiarà en la creació d''art digital,
+    resolent el trencaclosques de l''ós o fent el teu propi joc d''Angry birds. '
   appinventor_longdescription: Divertits, ràpids tutorials en vídeo et guiaran a través
     de la construcció de tres simples apps per al teu mòbil Android o tablet. Dissenyat
     per principiants i experts per igual, aquesta Hora del codi et tindrà llest per
