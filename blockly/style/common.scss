@@ -70,6 +70,10 @@ div.droplet-palette-group-header-selected {
   background-color: #e0e053;
 }
 
+.droplet-wrapper-div {
+  outline-style: none;
+}
+
 #show-code-button {
   @media screen and (max-device-width: 540px) {
     display: none;
