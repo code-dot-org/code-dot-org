@@ -34,4 +34,4 @@ def insert_data(data)
   data
 end
 
-# main if only_one_running?(__FILE__)
+main if only_one_running?(__FILE__)
