@@ -369,7 +369,7 @@
   more_resources_educators: Vairāk resursi priekš skolotājiem un pasniedzējiem
   participants: Paslēpt kontekstu - Pieprasīt kontekstu
   teachers_notes: Skolotāju pieraksti
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: 'Skolotāji: Izlasiet sev svarīgas piezīmes šeit'
   previous: Iepriekšējā
   next: Nākamā
   older_systems: Pamācības, kas darbojas uz vecākām sistēmām
@@ -451,13 +451,13 @@
   thinkersmithspanish_platformtext: Bezsaistē
   khan_platformtext: Modernas pārlūkprogrammas
   khanes_platformtext: Modernas pārlūkprogrammas
-  tynker_platformtext: Modernas pārlūkprogrammas
+  tynker_platformtext: Moderns pārlūks. (Aizstājošais kurss pieprasa $$)
   scratch_platformtext: Visi pārlūki
   lightbot_platformtext: Visas pārlūkprogrammas un iOS, Android vai spēļu konsoles
   thinkersmith_platformtext: Bezsaistē
   condcards_platformtext: Bezsaistes
   lightbotintl_platformtext: iOS,Android (vai pārlūkprogramma)
-  codehs_platformtext: Moderni pārlūki
+  codehs_platformtext: Moderns pārlūks. (Aizstājošais kurss pieprasa $$)
   codecademy_platformtext: Modernas pārlūkprogrammas. iOS, Android lietotnes
   codecombat_platformtext: Modernas pārlūkprogrammas
   codemonkey_platformtext: Modernas pārlūkprogrammas
@@ -501,8 +501,7 @@
   codecademy_shortdescription: Mācies JavaSkript programmēšanu pārlūkprogrammā
   codecombat_shortdescription: Sakauj cilvēkēdājus, lai iemācītos Python vai JavaScript
     šajā episkajā programmēšanas spēlē!
-  codemonkey_shortdescription: Skolēni programmē pērtiķi, lai tas ķertu banānus. Uzdevums
-    paliek arvien grūtāks katrā līmenī.
+  codemonkey_shortdescription: Skolēni programmē mērkaķi, lai tas ķer banānus.
   codeavengers_shortdescription: Mācies JavaSkript programmēšanu pārlūkprogrammā
   processing_shortdescription: Vienas stundas pamācība apstrādes valodās
   robomind_shortdescription: Rakstīt kodu virtuālam robotam
@@ -512,16 +511,16 @@
   codespark_shortdescription: Galda futbols ir jautra, spēle, lai mācītos par programmēšanu
     un to var spēlēt arī bērni.
   kodable_shortdescription: Jautra iPad spēle, lai mācītu programmēšanas konceptus
-  tynkerapp_shortdescription: Mācies kodu risinot interesantas puzles un veidojot
-    savas mobilās spēles.
+  tynkerapp_shortdescription: Mācies programmēt, saliekot aizraujošas programmēšanas
+    puzles.
   robomindnl_shortdescription: Rakstīt kodu virtuālam robotam
   flappy_shortdescription: Izveido pats savu spēli - Putns Flapijs, Haizivs vai Zemūdene
   bitsbox_shortdescription: Uzkodē vairākas lietotnes, izmantojot Javascript, lai
     tās spēlētu vai dalītos ar tām.
   makegameswithus_shortdescription: Izveido Iphone spēli! Mācies rakstot kodu, lai
     iemācītu savam monstram jaunas kustības!
-  touchdevelop_shortdescription: Kodē mobilās lietotnes tieši savā telefonā, planšetē
-    vai datorā
+  touchdevelop_shortdescription: Saliec puzles, veido spēles un mācies programmēt
+    ar savu telefonu.
   appinventor_shortdescription: Izveido savu lietotni! (Tikai uz Android)
   blockly_shortdescription: Lejuplādē ZIP failu, lai mācītos bezsaistē
   thinkersmith2_shortdescription: Iemācies, kā datori lieto vieniniekus un nulles,
@@ -540,11 +539,11 @@
     programmēšanu. Tas atgādinās spēlēšanos, skatoties video lekcijas ar Bilu Geitsu,
     Marku Zuckerberg, pikatajiem putniem un augiem pret zombijiem. Mācies cikliskas
     konstrukcijas, nosacījumus un vienkāršus algoritmus. Pieejams 34 valodās.
-  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
+  thinkersmithspanish_longdescription: Izmantojot iepriekš sagatavotu "Vārdnīcu -
+    robotu" skolēni izdomās, kā savstarpēji palīdzēt izpildīt darbības tās neapspriežot.
+    Šī nodarbība skolēniem māca saistību starp simboliem un darbībām, kā arī atkļūdošanas
+    prasmi. "Mani draugi - roboti" vislabāk veicama kā grupas aktivitāte un ir pieejams
+    arī skolotāja grāmata darbam ar klasi.
   khan_longdescription: Iemācies JavaScript programmēšanas valodas pamatus, radot
     jautrus zīmējumus ar savu kodu. Dari to patstāvīgi vai kopā ar klasi!
   khanes_longdescription: Iemācies JavaScript programmēšanas valodas pamatus, radot
@@ -613,10 +612,10 @@
   kodable_longdescription: Kodable ir interaktīva spēle iPad vidē, kas bērniem vecumā
     no 5 gadiem palīdz apgūt programmēšanu. Vecāku vai skolotāju klātbūtne ir vēlama,
     bet ne obligāta.
-  tynkerapp_longdescription: Build your own games and share with friends! Solve fun
-    coding puzzles and learn programming concepts in each level. Personalize games
-    with animated characters, multiple levels and rich props. Lots of fun activities
-    to choose from!
+  tynkerapp_longdescription: Mācies programmēt, saliekot aizraujošas programmēšanas
+    puzles. Vienkārši veido spēles un stāstus, izmatojot piemērotus attēlus. Spēļu
+    komplekti un pielāgojami tēli, piemēroti vecumam no 10 gadiem. Nav vajadzīgs interneta
+    pieslēgums. Paveiktajam vari piekļūt arī no tīmekļa.
   robomindnl_longdescription: Skolēni apgūst programmmēšanas pamatus, kontrolējot
     virtuālu robotu. Tiešsaistes kursā ir pieejamas īsas prezentācijas, video, testi
     un palīdzības sistēma, kas uzdevumu risināšanu padarīs vieglāku.
@@ -629,13 +628,12 @@
     pat maziem bērniem programmēt JavaScript un, paaugstinoties Tavam zināšanu līmenim,
     tu nokļūsi arvien tālāk.
   makegameswithus_longdescription: Mācies programmēt un taisi IPhone spēli izmantojot
-    pavisam jaunu un iesācējiem draudzīgu programmēšanas valodu Swift! Izveido Pok&eacute;monu
+    pavisam jaunu un iesācējiem draudzīgu programmēšanas valodu Swift! Izveido Pokemonu
     iedvesmotu spēli un raksti kodu, lai iemācītu savam briesmonim jaunas kustības.
     Tu iemācīsies izmantot mainīgos, metodes, un objektus, lai palīdzētu savam briesmonim
     uzvarēt!
-  touchdevelop_longdescription: Crazy drawings, flying monsters, swirling flowers...
-    create your apps on your device with TouchDevelop, a friendly mobile app creation
-    environment. Runs on iPhone, iPad, Android, Windows, Windows Phone, Linux, Mac.
+  touchdevelop_longdescription: Pieskāriendraudzīgais koda redaktors vadīs tevi, veidojot
+    attēlus no pikseļiem, risinot puzles vai veidojot spēlīti ar lēkājošiem putniem.
   appinventor_longdescription: Interesantās un īsās video pamācībās parādīts, kā izveidot
     trīs vienkāršas lietotnes tavai Android ierīcei. Izstrādāts iesācējiem, izskatās
     kā lietpratējiem - šī programmēšanas stunda tevi sagatavos izstrādāt savas lietotnes

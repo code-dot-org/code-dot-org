@@ -1,6 +1,6 @@
 {
   "actor": "actorul",
-  "alienInvasion": "Alien Invasion!",
+  "alienInvasion": "Invazia alienilor!",
   "backgroundBlack": "negru",
   "backgroundCave": "peșteră",
   "backgroundCloudy": "înnorat",
@@ -205,7 +205,7 @@
   "shareStudioTwitter": "Uite ce poveste am inventat. Am scris-o cu @codeorg",
   "shareGame": "Împărtăşeşte povestea ta:",
   "showCoordinates": "afișează coordonate",
-  "showCoordinatesTooltip": "afișează coordonatele ărotagonistului pe ecran",
+  "showCoordinatesTooltip": "afișează coordonatele protagonistului pe ecran",
   "showTitleScreen": "arată ecranul titlu",
   "showTitleScreenTitle": "titlu",
   "showTitleScreenText": "scris",

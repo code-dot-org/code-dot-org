@@ -61,6 +61,10 @@ max_age: 60
       Print your ice art
     = view :frozen_print_gallery
 
+    %a{:href=>"http://#{canonical_hostname('studio.code.org')}/s/1/level/108"}
+      %button{:style=>'background-color: rgb(126, 92, 162); border-color: rgb(126, 92, 162);'}
+        Create art with zombie
+
   %div{:style=>'clear: both; height:30px'}
 
   = view :congrats_continue
