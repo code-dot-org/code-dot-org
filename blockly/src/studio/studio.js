@@ -2502,15 +2502,15 @@ Studio.setSpritePosition = function (opts) {
 
 Studio.setSpriteXY = function (opts) {
   var sprite = Studio.sprite[opts.spriteIndex];
-  opts.x -= sprite.width / 2;
-  opts.y -= sprite.height / 2;
-  var samePosition = (sprite.x === opts.x && sprite.y === opts.y);
+  var x = opts.x - sprite.width / 2;
+  var y = opts.y - sprite.height / 2;
+  var samePosition = (sprite.x === x && sprite.y === y);
   
   // Don't reset collisions inside stop() if we're in the same position
   Studio.stop({'spriteIndex': opts.spriteIndex,
                'dontResetCollisions': samePosition});
-  sprite.x = opts.x;
-  sprite.y = opts.y;
+  sprite.x = x;
+  sprite.y = y;
   // Reset to "no direction" so no turn animation will take place
   sprite.dir = Direction.NONE;
 };
