@@ -14,17 +14,4 @@ social:
 
 %link{href: "/css/learn_tabs.css", rel: "stylesheet"}
 
-- if request.locale == 'en-US'
-  %h1{:style=>"margin-bottom: 0px; margin-top: 20px"}
-    = I18n.t(:code_hoc_coming)
-  %br/
-
-  %div{style: "background-color:#f8f8f8; padding-left:20px; padding-right:20px; padding-top:10px; padding-bottom:10px"}
-    %h3{:style=>"margin-top: 0px; font-size:16px; font-weight:600"}
-      = I18n.t(:code_sign_up)
-      &nbsp;
-      %a{:href=>'http://www.hourofcode.com'}
-        %button
-          = I18n.t(:learn_more)
-
 = view :learn_carousels, variation:'learn'
