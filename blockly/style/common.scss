@@ -36,6 +36,20 @@ a {
     background: none;
   }
 }
+strong {
+  font-family: 'Gotham 7r', sans-serif;
+  font-weight: normal;
+}
+
+em {
+  font-family: 'Gotham 4i', sans-serif;
+  font-style: normal;
+}
+
+strong em,
+em strong {
+  font-family: 'Gotham 7i', sans-serif;
+}
 .farSide {
   text-align: right;
 }
