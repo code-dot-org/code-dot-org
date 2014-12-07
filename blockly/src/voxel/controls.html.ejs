@@ -3,6 +3,8 @@
   var commonMsg = require('../../locale/current/common');
 %>
 
-<button id="continueButton" class="launch hide float-right">
-  <img src="<%= assetUrl('media/1x1.gif') %>"><%= commonMsg.continue() %>
-</button>
+<div id="right-button-cell">
+  <button id="rightButton" class="share">
+    <img src="<%= assetUrl('media/1x1.gif') %>"><%= "Share" %>
+  </button>
+</div>
