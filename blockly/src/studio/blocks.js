@@ -594,15 +594,11 @@ exports.install = function(blockly, blockInstallOptions) {
           .appendTitle(msg.setSprite());
       }
       this.appendDummyInput()
-        .appendTitle('to');
+        .appendTitle(msg.toXY());
       this.appendValueInput('XPOS')
         .setCheck('Number');
-      this.appendDummyInput()
-        .appendTitle('x');
       this.appendValueInput('YPOS')
         .setCheck('Number');
-      this.appendDummyInput()
-        .appendTitle('y');
       this.setPreviousStatement(true);
       this.setInputsInline(true);
       this.setNextStatement(true);

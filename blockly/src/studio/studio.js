@@ -2507,8 +2507,10 @@ Studio.setSpriteXY = function (opts) {
   var samePosition = (sprite.x === x && sprite.y === y);
   
   // Don't reset collisions inside stop() if we're in the same position
-  Studio.stop({'spriteIndex': opts.spriteIndex,
-               'dontResetCollisions': samePosition});
+  Studio.stop({
+    'spriteIndex': opts.spriteIndex,
+    'dontResetCollisions': samePosition
+  });
   sprite.x = x;
   sprite.y = y;
   // Reset to "no direction" so no turn animation will take place
