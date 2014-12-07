@@ -6,8 +6,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  get '/s/voxel/stage/1/puzzle/voxel_textures.zip', to: redirect('/voxel_textures.zip')
-  get '/levels/voxel_textures.zip', to: redirect('/voxel_textures.zip')
+  get '*voxel_textures.zip', to: redirect('/voxel_textures.zip')
 
   resources :activity_hints, only: [:update]
   resources :callouts
