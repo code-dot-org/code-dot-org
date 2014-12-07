@@ -16,8 +16,6 @@
 
 'use strict';
 
-var Voxel = module.exports;
-
 /**
  * Create a namespace for the application.
  */
@@ -53,6 +51,7 @@ var CANVAS_WIDTH = 400;
  * Initialize Blockly and the Voxel.  Called on page load.
  */
 Voxel.init = function(config) {
+  Voxel.globals = {};
 
   skin = config.skin;
   level = config.level;
@@ -98,25 +97,50 @@ Voxel.init = function(config) {
     var resetButton = document.getElementById('resetButton');
     dom.addClickTouchEvent(resetButton, Voxel.resetButtonClick);
 
-    window.game.plugins.get('voxel-reach').on('use', function(target) { Voxel.handleWhenRightClick(target);});
-    //window.game.plugins.get('voxel-reach').on('start mining', function(target) { Voxel.handleWhenLeftClick(target);});
-    window.game.on('fire', function() { Voxel.handleWhenLeftClick();});
+    var shareButton = document.getElementById('rightButton');
+    dom.addClickTouchEvent(shareButton, Voxel.endAttempt);
+    if (!level.freePlay) {
+      var shareButtonArea = document.getElementById('right-button-cell');
+      shareButtonArea.style.display = 'none';
+    }
 
+    window.game.plugins.get('voxel-reach').on('use', Voxel.generateEventBlockCodeRunner('voxel_whenRightClick'));
+    //window.game.plugins.get('voxel-reach').on('start mining', function(target) { Voxel.handleWhenLeftClick(target);});
+    window.game.on('fire', Voxel.generateEventBlockCodeRunner('voxel_whenRightClick'));
   };
 
   BlocklyApps.init(config);
 };
 
-Voxel.handleWhenRightClick = function(target) {
-  evalCode(Blockly.Generator.blockSpaceToCode(
-    'JavaScript',
-    'voxel_whenRightClick'));
+Voxel.generateEventBlockCodeRunner = function(blockType) {
+  return function() {
+    Voxel.evaluateCodeUnderBlockType(blockType);
+  };
 };
 
-Voxel.handleWhenLeftClick = function(target) {
-  evalCode(Blockly.Generator.blockSpaceToCode(
-    'JavaScript',
-    'voxel_whenLeftClick'));
+Voxel.evaluateCodeUnderBlockType = function(blockType) {
+  Voxel.evaluateCode(Voxel.allProcedures() + Blockly.Generator.blockSpaceToCode('JavaScript', blockType));
+};
+
+Voxel.allProcedures = function() {
+  return Voxel.defineProceduresForType('procedures_defreturn') +
+  Voxel.defineProceduresForType('procedures_defnoreturn') +
+  Voxel.defineProceduresForType('functional_definition');
+};
+
+Voxel.defineProceduresForType = function(blockType) {
+  return Blockly.Generator.blockSpaceToCode('JavaScript', blockType);
+};
+
+Voxel.evaluateCode = function(code) {
+  try {
+    codegen.evalWith(code, {
+        BlocklyApps: BlocklyApps,
+        Voxel: api,
+        Globals: Voxel.Globals
+      }
+    );
+  } catch (e) { }
 };
 
 /**
@@ -137,47 +161,13 @@ Voxel.resetButtonClick = function () {
 
 };
 
-
-function evalCode (code) {
-  try {
-    return codegen.evalWith(code, {
-      BlocklyApps: BlocklyApps,
-      Voxel: api
-    });
-  } catch (e) {
-    // Infinity is thrown if we detect an infinite loop. In that case we'll
-    // stop further execution, animate what occured before the infinite loop,
-    // and analyze success/failure based on what was drawn.
-    // Otherwise, abnormal termination is a user error.
-    if (e !== Infinity) {
-      // call window.onerror so that we get new relic collection.  prepend with
-      // UserCode so that it's clear this is in eval'ed code.
-      if (window.onerror) {
-        window.onerror("UserCode:" + e.message, document.URL, 0);
-      }
-      if (console && console.log) {
-        console.log(e);
-      }
-    }
-  }
-}
-
-/**
- * Execute the user's code.  Heaven help us...
- */
 Voxel.execute = function() {
   Voxel.result = BlocklyApps.ResultType.UNSET;
   Voxel.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
   Voxel.message = undefined;
 
-  // Run the app
-  var codeWhenRunButton = Blockly.Generator.blockSpaceToCode(
-    'JavaScript',
-    'when_run');
+  Voxel.evaluateCodeUnderBlockType('when_run');
 
-  // Get a result
-  Voxel.result = evalCode(codeWhenRunButton);
-  return; // TODO(bjordan): remove
   Voxel.testResults = BlocklyApps.getTestResults(Voxel.result);
 
   if (level.freePlay) {
@@ -194,10 +184,45 @@ Voxel.execute = function() {
     result: Voxel.result,
     testResult: Voxel.testResults,
     program: encodeURIComponent(textBlocks),
-    onComplete: onReportComplete
+    onComplete: Voxel.onReportComplete
   };
 
   BlocklyApps.report(reportData);
+};
+
+Voxel.endAttempt = function() {
+  if (level.freePlay) {
+    Voxel.result = BlocklyApps.ResultType.SUCCESS;
+  }
+
+  // If we know they succeeded, mark levelComplete true
+  // Note that we have not yet animated the succesful run
+  var levelComplete = (Voxel.result == BlocklyApps.ResultType.SUCCESS);
+
+  if (level.freePlay) {
+    Voxel.testResults = BlocklyApps.TestResults.FREE_PLAY;
+  } else {
+    Voxel.testResults = BlocklyApps.getTestResults(levelComplete);
+  }
+
+  if (Voxel.testResults >= BlocklyApps.TestResults.FREE_PLAY) {
+    BlocklyApps.playAudio('win');
+  } else {
+    BlocklyApps.playAudio('failure');
+  }
+
+  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+  var textBlocks = Blockly.Xml.domToText(xml);
+
+  // Report result to server.
+  BlocklyApps.report({
+    app: 'voxel',
+    level: level.id,
+    result: Voxel.result === BlocklyApps.ResultType.SUCCESS,
+    testResult: Voxel.testResults,
+    program: encodeURIComponent(textBlocks),
+    onComplete: Voxel.onReportComplete
+  });
 };
 
 /**
@@ -205,18 +230,17 @@ Voxel.execute = function() {
  * BlocklyApps.displayFeedback when appropriate
  */
 var displayFeedback = function(response) {
-  // override extra top blocks message
-  level.extraTopBlocks = voxelMsg.extraTopBlocks();
-
   BlocklyApps.displayFeedback({
     app: 'Voxel',
     skin: skin.id,
     feedbackType: Voxel.testResults,
     response: response,
     level: level,
+    showingSharing: level.freePlay,
     appStrings: {
-      reinfFeedbackMsg: voxelMsg.reinfFeedbackMsg()
-    },
+      reinfFeedbackMsg: voxelMsg.reinfFeedbackMsg(),
+      sharingText: voxelMsg.shareGame()
+    }
   });
 };
 
@@ -224,9 +248,7 @@ var displayFeedback = function(response) {
  * Function to be called when the service report call is complete
  * @param {object} JSON response (if available)
  */
-function onReportComplete(response) {
-  // Disable the run button until onReportComplete is called.
-  var runButton = document.getElementById('runButton');
-  runButton.disabled = false;
+Voxel.onReportComplete = function(response) {
+  Voxel.response = response;
   displayFeedback(response);
-}
+};
