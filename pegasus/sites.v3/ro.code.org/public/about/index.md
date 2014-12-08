@@ -37,7 +37,7 @@ Urmăriți Code.org pe rețelele de socializare:
 
 Te rugăm ajută la promovarea tehnologiei computerelor în comunitatea ta. 5% din venituri vor fi utilizate de către Code.org pentru a aduce Tehnologia Computerelor în mai multe școli. 
 
-<a href="http://www.zazzle.com/codeorg*?tc=codewebsite">
+<a href="http://store.code.org/">
 <img src="http://www.code.org/images/swag1.jpg" width=150/>
 <img src="http://www.code.org/images/swag4.jpg" width=150/>
 <img src="http://www.code.org/images/swag2.jpg" width=150/>

@@ -37,7 +37,7 @@ Siga Code.org nas mídias sociais:
 
 Ajude-nos a promover o ensino de ciência da computação em sua comunidade. Cinco por cento dos recursos serão utilizados pela Code.org para levar a ciência da computação para mais escolas.
 
-<a href="http://www.zazzle.com/codeorg*?tc=codewebsite">
+<a href="http://store.code.org/">
 <img src="http://www.code.org/images/swag1.jpg" width=150/>
 <img src="http://www.code.org/images/swag4.jpg" width=150/>
 <img src="http://www.code.org/images/swag2.jpg" width=150/>
