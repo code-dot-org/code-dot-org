@@ -5,7 +5,7 @@
 h1 {
   color: #7665a0;
   font-size: 32px;
-  font-weight: bold;
+  font-family: 'Gotham 7r', sans-serif;
   margin-top: 50px;
   margin-bottom: 30px;
   line-height: 1.2em;
@@ -14,7 +14,7 @@ h1 {
 h2 {
   color: #00adbc;
   font-size: 22px;
-  font-weight: 500;
+  font-family: 'Gotham 5r', sans-serif;
   margin-top:45px;
   margin-bottom:25px;
   line-height: 1.2em;
@@ -23,7 +23,7 @@ h2 {
 h3 {
   color: #5b6770;
   font-size: 14px;
-  font-weight: 500;
+  font-family: 'Gotham 5r', sans-serif;
   margin-top:25px;
   margin-bottom:12px;
   line-height: 1.2em;
@@ -32,16 +32,16 @@ h3 {
 h4 {
   color: #5b6770;
   font-size: 14px;
-  font-weight: 500;
+  font-family: 'Gotham 5r', sans-serif;
   line-height: 1.2em;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: 'Gotham A','Gotham B',sans-serif;
+  font-weight: normal;
 }
 
 a {
-  font-weight: bold;
+  font-family: 'Gotham 7r', sans-serif;
 }
 
 a:link {
@@ -73,12 +73,26 @@ blockquote p {
   line-height: 1.8;
 }
 
+strong {
+  font-family: 'Gotham 7r', sans-serif;
+  font-weight: normal;
+}
+
+em {
+  font-family: 'Gotham 4i', sans-serif;
+  font-style: normal;
+}
+
+strong em,
+em strong {
+  font-family: 'Gotham 7i', sans-serif;
+}
 
 body {
-  font-family: 'Gotham A','Gotham B',sans-serif;
+  font-family: 'Gotham 4r', sans-serif;
   font-size: 14px;
   line-height: 22px;
-  font-weight: 400;
+  font-weight: normal;
   color: dimgray;
   margin: 0;
 }     
@@ -127,6 +141,10 @@ td {
   padding: 15px;
 }
 
+th a:link, th a:visited, th a:hover, th a:active {
+  color: white;
+}
+
 .narrow_hr {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -156,6 +174,19 @@ td {
   border-top-right-radius: 4px;
 }
 
+#petition_form a {
+  font-family: 'Gotham 4r', sans-serif;
+}
+
+#petition_form a:link, #petition_form a:visited {
+  color: #dcdcdc;
+  text-decoration: none;
+}
+#petition_form a:hover, #petition_form a:active {
+  color: #fff;
+  text-decoration: underline;
+}
+
 #index #gap {
   height: 20px
 }
@@ -173,15 +204,19 @@ td {
 }
 
 #index .count {
-  color: white
+  color: white;
+  line-height: 1em;
 }
 
 #index .beyond {
   color: white;
 }
 
+
 #index .count h1 {
-  color: white; font-size: 56px; line-height: 56px; font-weight: 500; margin: 0px;
+  font-family: 'Gotham 5r', sans-serif;
+  color: white; font-size: 15px; line-height: 22px; font-weight: normal; margin: 0px;
+  display: inline; margin-right: 6px; margin-top:0px; margin-bottom:0px;
 }
 
 @media screen and (max-width: 320px)
@@ -192,13 +227,19 @@ td {
 }
 
 #index .count h2 {
-  color: white; font-size: 36px; line-height: 36px; font-weight: 600; margin-top:5px; margin-bottom: 0px;
+  font-family: 'Gotham 5r', sans-serif;
+  color: white; font-size: 15px; line-height: 22px; font-weight: normal; margin-top:5px; margin-bottom: 0px;
+  display: inline; margin-right: 6px; margin-top:0px; margin-bottom:0px;
 }
 #index .count h3 {
-  color: white; font-size: 32px; line-height: 32px; font-weight: 400; margin-top:5px; margin-bottom:0px;
+  font-family: 'Gotham 5r', sans-serif;
+  color: white; font-size: 15px; line-height: 22px; font-weight: normal; margin-top:5px; margin-bottom:0px;
+  display: inline; margin-right: 6px; margin-top:0px; margin-bottom:0px;
 }
 #index .count h4 {
-  color: white; font-size: 26px; line-height: 26px; font-weight: 400; margin-top:15px;
+  font-family: 'Gotham 5r', sans-serif;
+  color: white; font-size: 15px; line-height: 22px; font-weight: normal;
+  display: inline; margin-right: 6px; margin-top:0px; margin-bottom:0px;
 }
 
 #index #twentyhour {
@@ -242,12 +283,12 @@ td {
 
 .about_list_item_selected {
   color: #ff8a00;
-  font-weight: bold;
+  font-family: 'Gotham 7r', sans-serif;
 }
 
 a.about_list_item {
   color: #999c9f;
-  font-weight: 500;
+  font-family: 'Gotham 5r', sans-serif;
 }
 
 /* for learn.. */
@@ -381,7 +422,7 @@ button {
   color: rgb(255, 255, 255);
   cursor: pointer;
   display: inline-block;
-  font-family: 'Gotham A', 'Gotham B', sans-serif;
+  font-family: 'Gotham 4r', sans-serif;
   font-size: 14px;
   font-weight: normal;
   height: 34px;
@@ -403,6 +444,19 @@ button {
   white-space: nowrap;
   word-spacing: 0px;
   writing-mode: lr-tb;
+}
+
+.btn-white:hover
+{
+  background-color:#E6E6F3;
+  border-color:#adadad;
+}
+
+.btn-white
+{
+  color: #333;
+  background-color:white;
+  border-color:#ccc;
 }
 
 .dropdown {
@@ -448,7 +502,7 @@ button {
 a.lines_of_code_link {
   color:white;
   text-decoration:none;
-  font-weight:400;
+  font-family: 'Gotham 4r', sans-serif;
 }
 
 #sitemap #box {
@@ -467,6 +521,6 @@ a.lines_of_code_link {
 
 #sitemap #box a {
   color:white;
-  font-weight:400;
+  font-family: 'Gotham 4r', sans-serif;
 }
 
