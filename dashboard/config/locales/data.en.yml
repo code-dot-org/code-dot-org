@@ -499,6 +499,9 @@ en:
         'frozen_intro': 'Hour of Code Intro'
         'frozen_loops': 'Introduction to Loops'
         'frozen_functions': 'Introduction to Functions'
+        'playlab_intro' : 'Introduction to Play Lab'
+        'playlab_events' : 'Play Lab Events'
+        'playlab_repeat_forever' : 'Play Lab Repeat Forever'
     callout:
       text:
         # Keyed by #{callout.localization_key}
