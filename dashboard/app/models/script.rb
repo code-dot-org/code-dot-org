@@ -39,6 +39,10 @@ class Script < ActiveRecord::Base
     @@hoc_script ||= Script.includes([{script_levels: [{level: [:game, :concepts] }, :stage]}, :stages]).find_by_name(HOC_NAME)
   end
 
+  def cached?
+    self.name == FROZEN_NAME || self.name == HOC_NAME || self.id == TWENTY_HOUR_ID
+  end
+
   def starting_level
     raise "Script #{name} has no level to start at" if script_levels.empty?
     candidate_level = script_levels.first.or_next_progression_level
