@@ -4,17 +4,17 @@ banner: null
 <%
   if request.site == 'csedweek.org'
     twitter_meta = {
-      'title' => 'The Hour of Code is coming',
+      'title' => 'The Hour of Code is here',
       'description' => 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104.',
-      'image_src' => 'http://csedweek.org/images/hour-of-code-2014-video-thumbnail.jpg',
-      'player' => 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0',
+      'image_src' => 'http://csedweek.org/images/code-video-thumbnail.jpg',
+      'player' => 'https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0',
     }
   else
     twitter_meta = {
-      'title' => "The Hour of Code is coming",
+      'title' => "The Hour of Code is here",
       'description' => "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104.",
-      'image_src' => 'http://code.org/images/hour-of-code-2014-video-thumbnail.jpg',
-      'player' => 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0',
+      'image_src' => 'http://code.org/images/code-video-thumbnail.jpg',
+      'player' => 'https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0',
     }
   end
 %>
@@ -78,7 +78,7 @@ social:
         %div{:style=>'margin-bottom: 8px'}
           %a#trybutton{:href=>'/learn'}
             %button.optionbutton
-              =I18n.t :hoc2014_try
+              =I18n.t :get_started
         %a{:href=>'/learn/beyond', :style=>'font-size: 16px; color: white'}
           =I18n.t :beyond_an_hour
 
@@ -118,7 +118,7 @@ social:
         %img{:src=>"/images/twitter_purple.png"}
       %a{:href=>"http://codeorg.tumblr.com/", :title=>'Tumblr', :target=>"_blank", :style=>"text-decoration:none"}
         %img{:src=>"/images/tumblr_purple.png"}
-      %a{:href=>"http://zazzle.com/codeorg", :title=>'Zazzle', :target=>"_blank", :style=>"text-decoration:none"}
+      %a{:href=>"/shop", :title=>'Zazzle', :target=>"_blank", :style=>"text-decoration:none"}
         %img{:src=>"/images/zazzle_purple.png"}
       %a{:href=>"/donate", :title=>'Donate', :style=>"text-decoration:none"}
         %img{:src=>"/images/donate_normal.png"}
