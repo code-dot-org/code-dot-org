@@ -191,6 +191,11 @@
   english: "Dutch"
   native: "Nederlands"
 
+"nn": "nn-NO"
+"nn-NO":
+  english: "Norwegian Nynorsk"
+  native: "Nynorsk"
+
 "no": "no-NO"
 "no-NO":
   english: "Norwegian"
