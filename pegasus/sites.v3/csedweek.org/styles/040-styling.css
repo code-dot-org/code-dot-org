@@ -715,3 +715,24 @@ label {
   font-family: 'Gotham 5r', sans-serif;
   font-weight: normal;
 }
+@media screen and (max-width: 320px) {
+  #index .count h1 {
+    font-size: 46px;
+    line-height: 46px;
+  }
+
+  #index .count h2 {
+    font-size: 26px;
+    line-height: 26px;
+  }
+
+  #index .count h3 {
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  #index .count h4 {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
