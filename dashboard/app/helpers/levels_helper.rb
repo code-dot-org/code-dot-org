@@ -83,7 +83,8 @@ module LevelsHelper
         end
       end
     else
-      available_callouts = Callout.where(script_level_id: @script_level)
+      @@available_callouts ||= {}
+      available_callouts = @@available_callouts[@script_level.id] ||= Callout.where(script_level_id: @script_level)
         .select(:id, :element_id, :qtip_config, :localization_key)
     end
     @callouts_to_show = available_callouts
