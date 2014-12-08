@@ -17,7 +17,9 @@
         <div class='navbar-header'>
           <div class='row header_row'>
             <div class='header_logo'>
-              <img alt="Codeorg studio logo" src="assets/codeorg-studio-logo.png" />
+              <a href="http://studio.code.org">
+                <img alt="Codeorg studio logo" src="assets/codeorg-studio-logo.png" />
+              </a>
             </div>
             <div class='header_middle'>
               <div class='header_level'>
@@ -249,6 +251,8 @@
             });
           }, this));
         });
+      } else {
+        $('#reference_area').hide();
       }
 
       appOptions.baseUrl = '';
