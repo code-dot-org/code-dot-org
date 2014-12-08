@@ -32,7 +32,13 @@ class ScriptLevel < ActiveRecord::Base
 
   def previous_level
     if self.stage
-      self.higher_item
+      if self.script.cached?
+        i = self.script.script_levels.index(self)
+        return nil if i.nil? || i == 0
+        self.script.script_levels[i - 1]
+      else
+        self.higher_item
+      end
     else
       self.script.try(:get_script_level_by_chapter, self.chapter - 1)
     end
