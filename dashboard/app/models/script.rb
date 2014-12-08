@@ -39,8 +39,20 @@ class Script < ActiveRecord::Base
     @@hoc_script ||= Script.includes([{script_levels: [{level: [:game, :concepts] }, :stage]}, :stages]).find_by_name(HOC_NAME)
   end
 
+  def self.flappy_script
+    @@flappy_script ||= Script.includes([{script_levels: [{level: [:game, :concepts] }, :stage]}, :stages]).find(FLAPPY_ID)
+  end
+
+  def self.playlab_script
+    @@playlab_script ||= Script.includes([{script_levels: [{level: [:game, :concepts] }, :stage]}, :stages]).find_by_name(PLAYLAB_NAME)
+  end
+
   def cached?
-    self.equal?(Script.twenty_hour_script) || self.equal?(Script.frozen_script) || self.equal?(Script.hoc_script)
+    self.equal?(Script.twenty_hour_script) ||
+        self.equal?(Script.frozen_script) ||
+        self.equal?(Script.hoc_script) ||
+        self.equal?(Script.flappy_script) ||
+        self.equal?(Script.playlab_script)
   end
 
   def starting_level
@@ -55,6 +67,8 @@ class Script < ActiveRecord::Base
       when TWENTY_HOUR_ID then twenty_hour_script
       when FROZEN_NAME then frozen_script
       when HOC_NAME then hoc_script
+      when PLAYLAB_NAME then playlab_script
+      when FLAPPY_ID then flappy_script
     else
       # a bit of trickery so we support both ids which are numbers and
       # names which are strings that may contain numbers (eg. 2-3)
