@@ -87,3 +87,17 @@ label.has-error {
         margin-top: 0px;
     }
 }
+@media (max-width: 500px) {
+  .front-header-banner h1 {
+      font-size: 36px;
+  }
+  .front-header-banner h2 {
+      font-size: 16px;
+  }
+  .front-header-banner h3 {
+      font-size: 12px;
+  }
+  .front-header-banner h4 {
+      font-size: 16px;
+  }
+}
