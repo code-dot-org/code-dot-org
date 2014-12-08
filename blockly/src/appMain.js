@@ -71,7 +71,9 @@ module.exports = function(app, levels, options) {
       isK1: options.level && options.level.isK1
     };
 
-    if (options.level && options.level.edit_blocks) {
+    BlocklyApps.isLevelBuilder = options.level && options.level.edit_blocks;
+
+    if (BlocklyApps.isLevelBuilder) {
       utils.wrapNumberValidatorsForLevelBuilder();
     }
 

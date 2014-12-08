@@ -156,7 +156,9 @@ BlocklyApps.runButtonClick = function() {
   BlocklyApps.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
   BlocklyApps.attempts++;
-  Voxel.execute();
+  // Only show feedback after run button click if we're in the level builder
+  var shouldSendReportAndShowFeedback = BlocklyApps.isLevelBuilder;
+  Voxel.execute(!shouldSendReportAndShowFeedback);
 };
 
 /**
@@ -167,12 +169,19 @@ Voxel.resetButtonClick = function () {
 
 };
 
-Voxel.execute = function() {
+/**
+ * @param noReportOrFeedback (optional) don't send report or feedback
+ */
+Voxel.execute = function(noReportOrFeedback) {
   Voxel.result = BlocklyApps.ResultType.UNSET;
   Voxel.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
   Voxel.message = undefined;
 
   Voxel.evaluateCodeUnderBlockType('when_run');
+
+  if (noReportOrFeedback) {
+    return;
+  }
 
   Voxel.testResults = BlocklyApps.getTestResults(Voxel.result);
 
