@@ -90,6 +90,9 @@
   participant_educator: מחנך
   participant_engineer: מהנדס תוכנה
   participant_other: אף אחד מאלו
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: אני
   never_spam: לעולם לא נשלח לך דואר זבל
   enter_country: הזן מדינה באם מחוץ לארצות הברית
@@ -128,6 +131,10 @@
   studiobar_flappy_body: Make and share your own Flappy game
   studiobar_teacher_title: Teacher dashboard
   studiobar_teacher_body: 'For teachers: view your students'' progress'
+  studiobar_frozen_title: שעה של קוד
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: אני תלמיד
   contact_form_topic_parent: אני הורה
   contact_form_topic_teacher: . אני מורה/מחנך

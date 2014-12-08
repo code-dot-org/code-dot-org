@@ -98,6 +98,9 @@
   participant_educator: Educator
   participant_engineer: Inginer de software
   participant_other: Niciuna din cele de mai sus
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Sunt un/o
   never_spam: Noi nu îți vom trimite niciodată spam
   enter_country: Introdu ţara dacă te afli în afara Statelor Unite
@@ -136,6 +139,10 @@
   studiobar_flappy_body: Creează şi împărtăşeşte propriul tău joc Flappy
   studiobar_teacher_title: Create pentru profesori
   studiobar_teacher_body: Prezentați-i clasei dvs. Code Studio
+  studiobar_frozen_title: Oră de Cod
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Sunt student
   contact_form_topic_parent: Sunt părinte
   contact_form_topic_teacher: Sunt profesor/educator
@@ -367,7 +374,7 @@
   carousel_heading_international: Tutoriale în limba ta
   carousel_heading_domestic: Tutoriale disponibile în engleză
   carousel_heading_beginners: Tutoriale pentru începători
-  carousel_heading_javascript: Tutoriale care predau JavaScript
+  carousel_heading_javascript: Tutoriale pentru JavaScript
   carousel_heading_unplugged: Nu ai device sau internet? Încearca tehnologia computerelor
     'deconectate'
   carousel_heading_devices: Aplicații-tutorial pentru orice device
@@ -381,7 +388,7 @@
   more_resources_educators: Mai multe resurse pentru profesori și educatori
   participants: participanți
   teachers_notes: Notițele profesorului
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: 'Profesori: Citiţi notele importante pentru educator aici'
   previous: Anterior
   next: Următorul
   older_systems: Tutoriale care funcționează pe sisteme mai vechi
@@ -463,13 +470,13 @@
   thinkersmithspanish_platformtext: Unplugged
   khan_platformtext: Browsere web moderne
   khanes_platformtext: Browsere web moderne
-  tynker_platformtext: Browsere web moderne
+  tynker_platformtext: Browsere moderne. (Continuare curs necesită $$)
   scratch_platformtext: TOATE browserele
   lightbot_platformtext: TOATE browserele şi iOS, Android sau consolă de jocuri
   thinkersmith_platformtext: Unplugged
   condcards_platformtext: Unuplugged (fără calculator)
   lightbotintl_platformtext: iOS, Android (sau browser web)
-  codehs_platformtext: Browsere web moderne
+  codehs_platformtext: Browsere moderne. (Continuare curs necesită $$)
   codecademy_platformtext: Browsere web moderne, iOS, Aplicații Android
   codecombat_platformtext: Browsere web moderne
   codemonkey_platformtext: Browsere web moderne
@@ -511,8 +518,7 @@
   codecademy_shortdescription: Învață programare JavaScript într-un browser web
   codecombat_shortdescription: Învinge căpcăuni pentru a învăţa Python sau JavaScript
     în acest joc epic de programare!
-  codemonkey_shortdescription: Students program a monkey to catch bananas while it
-    gets slightly more complicated on each level.
+  codemonkey_shortdescription: Program pentru elevii - o maimuță prinde bananele.
   codeavengers_shortdescription: Învață programare JavaScript într-un browser web
   processing_shortdescription: Un tutorial de o oră pentru programare Processing
   robomind_shortdescription: Programează pentru un robot virtual
@@ -524,16 +530,16 @@
     îi învaţă despre programare.
   kodable_shortdescription: Un joc distractiv pentru iPad, pentru învățarea conceptelor
     de bază în programare
-  tynkerapp_shortdescription: Learn to code by solving fun puzzles and build your
-    own mobile games.
+  tynkerapp_shortdescription: 'Înveți distractiv să programezi rezolvând puzzle-uri
+    de codificare. '
   robomindnl_shortdescription: Programează pentru un robot virtual
   flappy_shortdescription: Creează-ți propriul joc - Flappy Bird, shark sau Submarine
   bitsbox_shortdescription: Codează o serie de aplicații pentru a juca partaja, folosind
     Javascript.
   makegameswithus_shortdescription: Fă un joc pentru iPhone! Studiază scriind cod
     ca să îți înveți monstrul să facă noi mișcări!
-  touchdevelop_shortdescription: Programează aplicații de mobil direct de pe telefon,
-    tabletă sau laptop
+  touchdevelop_shortdescription: 'Rezolva puzzle-uri, crează jocuri, şi învaţă să
+    codezi, toate pe telefonul tău. '
   appinventor_shortdescription: Construiește-ți propria aplicație! (Doar pentru Android)
   blockly_shortdescription: Descarcă arhiva ZIP ca să înveți offline
   thinkersmith2_shortdescription: Învață cum folosesc computerele 1 și 0 pentru a
@@ -552,11 +558,10 @@
     ce conține clipuri video cu Bil Gates, Mark Zukerberg Angry Birds and Plants vs.
     Zombies. Învață algoritmi de bază, repeat-loops, conditionals. Disponibil în 34
     de limbi.
-  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
+  thinkersmithspanish_longdescription: Folosind un "Dicționar pentru roboți" predefinit
+    studenții își vor da seama cum să se ghideze reciproc pentru a realiza sarcini
+    specifice fără a le discuta în prealabil. Această lecție învață copiii conexiunea
+    dintre simboluri și acțiuni, ca și abilitatea neprețuită de depanare.
   khan_longdescription: Învață bazele programării JavaScript, în timp ce desenezi
     programând. Fă asta singur sau alături de clasă.
   khanes_longdescription: Învață bazele programării JavaScript, în timp ce desenezi
@@ -633,10 +638,10 @@
   kodable_longdescription: Kodable este un joc pentru iPad intuitiv, ce introduce
     copiii de peste 5 ani în bazele programarii. A avea un parinte sau profesor în
     preajma este optim dar nu neaparat necesar.
-  tynkerapp_longdescription: Build your own games and share with friends! Solve fun
-    coding puzzles and learn programming concepts in each level. Personalize games
-    with animated characters, multiple levels and rich props. Lots of fun activities
-    to choose from!
+  tynkerapp_longdescription: Învață să programezi prin rezolvarea de puzzle-uri amuzante
+    de codare. Construiește cu ușurință jocuri și povești cu grafică tematică, kituri
+    de jocuri pentru 10+ și caractere personalizabile. Nu e necesară conexiune la
+    Internet. Poți de asemenea să îți accesezi creațiile pe web.
   robomindnl_longdescription: Elevii învață bazele programării controlând robotul
     lor virtual. Cursul online conține prezentări scurte, filme, teste si recomandări
     automate/ indicii, pentru a ajuta la rezolvarea exercițiilor de programare.
@@ -647,15 +652,13 @@
     o serie de aplicații pentru a juca și partaja. O simplă plimbare face posibil
     ca și cei mai mici copii să programeze JavaScript și cu cât sunteți mai avansați
     cu atât mai departe veți ajunge.
-  makegameswithus_longdescription: Știi ceva programare deja? Învață să construiești
-    un joc pentru iPhone într-o oră. Noi te ghidăm în acest timp să programezi, să
-    testezi, și să joci jocul tău utilizănd un browser, ca mai apoi să îl distribui
-    și prietenilor de pe Facebook sa îl încerce. Nu este necesară experiență anterioară,
-    trebuie doar să întelegi ce reprezintă variabilele, metodele și obiectele.
-  touchdevelop_longdescription: 'Desene ciudate, monștri zburători, Crazy drawings,
-    flying monsters, flori cățărătoare… creează-ți propriile aplicații pe device-ul
-    tău cu TouchDevelop, un mediu prietenos de programare a aplicațiilor. Merge pe
-    iPhone, iPad, Android, Windows, Windows Phone, Linux, Mac. '
+  makegameswithus_longdescription: Învățați să codați făcând un joc iPhone cu ajutorul
+    lui Swift - un limbaj de programare foarte nou și prietenos cu începătorii! Creați
+    un joc de acțiune  inspirat de Pokemon și scrieți cod pentru a vă învăța monstrulețul
+    noi mișcări. Veți învăța cum să folosiți variabile, metode și obiecte pentru a
+    vă ajuta monstrulețul să câștige!
+  touchdevelop_longdescription: 'Editorul touch-friendly vă va ghida în crearea de
+    artă pixel, rezolvarea puzzle urs sau a face propriul joc cu pasăre săritoare. '
   appinventor_longdescription: Clipuri video interactive te ajută să creezi 3 aplicații
     simple pentru tableta sau telefonul tău Android. Create pentru începători și avansați
     deopotrivă, aceasta oră de programare te va ajuta să creezi propriile tale aplicații

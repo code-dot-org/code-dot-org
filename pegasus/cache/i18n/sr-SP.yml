@@ -95,6 +95,9 @@
   participant_educator: Учитељ
   participant_engineer: Софтверски инжињер
   participant_other: Ништа од наведеног
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Ја сам
   never_spam: Никада вам нећемо слати нежељену пошту
   enter_country: Унеси земљу ако не живиш у САД-у
@@ -133,6 +136,10 @@
   studiobar_flappy_body: Направите и поделите сопствену Флапи игру
   studiobar_teacher_title: Направљено за учитеље
   studiobar_teacher_body: Уведите Студио програмирања у вашу учионицу
+  studiobar_frozen_title: Час кода
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Ја сам студент
   contact_form_topic_parent: Ја сам родитељ
   contact_form_topic_teacher: Ја сам учитељ/едукатор

@@ -94,6 +94,9 @@
   participant_educator: Pedagóg
   participant_engineer: Softvérový inžinier
   participant_other: Nič z uvedeného
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Ja som
   never_spam: Nikdy ťa nebudeme spamovať
   enter_country: Zadaj krajinu ak si mimo Spojené štáty
@@ -132,6 +135,10 @@
   studiobar_flappy_body: Vytvor a zdieľaj svoju vlastnú hru Flappy
   studiobar_teacher_title: Pripravené pre učitelov
   studiobar_teacher_body: Zaveďte Štúdio Programovania (Code Studio) do vašej triede
+  studiobar_frozen_title: Hodina kódovania
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: som študent
   contact_form_topic_parent: Som rodič
   contact_form_topic_teacher: Som učiteľ/vzdelávateľ
