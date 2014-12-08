@@ -39,6 +39,7 @@ Dashboard::Application.routes.draw do
   get '/s/k-1(/*all)', to: redirect('/s/course1')
   get '/s/2-3(/*all)', to: redirect('/s/course2')
   get '/s/4-5(/*all)', to: redirect('/s/course3')
+  get '/s/frozen(/*all)', to: redirect('/offline/')
 
   resources :level_source_hints
   get '/add_hint/:level_source_id', :to => 'level_source_hints#add_hint', as: 'add_hint'

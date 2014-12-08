@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Code.org</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/application.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/turtle.css">
+    <script src="assets/application.js"></script>
+</head>
+<body style="padding: 0;">
+  <div class='header-wrapper hide_on_mobile'>
+    <div class='header navbar-static-top'>
+      <div class='container' style='width: 880px;'>
+        <div class='navbar-header'>
+          <div class='row header_row'>
+            <div class='header_logo'>
+              <img alt="Codeorg studio logo" src="assets/codeorg-studio-logo.png" />
+            </div>
+            <div class='header_middle'>
+              <div class='header_level'>
+                <div class='header_level_container'>
+                  <div class='header_text'>Code with Anna and Elsa</div>
+                  <div class='progress_container'>
+                    <!-- level links will be inserted here -->
+                  </div>
+                  <div class='header_finished_link'>
+                    <a href='//code.org/api/hour/finish/frozen'>I've finished my Hour of Code</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='full_container'>
+    <div id="blocklyApp">
+      <div class='loading'></div>
+    </div>
+  </div>
+  <div class='navbar-static-top footer'>
+    <div class='container' style='padding: 10px;width: 855px; margin-left: 25px;'>
+      <div class='row'>
+        <div class='span8' style='width: 560px;'>
+          <small class='fineprint dim'>
+            Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
+            <br>
+            Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.
+            <br>
+            Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.
+            <br>
+            Powered by Amazon Web Services
+          </small>
+        </div>
+      <div class='span3' style='text-align: right; width: 140px; margin-left: 0px'>
+        <small class='dim'>&copy; Code.org, 2014</small>
+      </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/en_us/vendor.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script type="text/javascript" src="js/en_us/common_locale.js"></script>
+  <script type="text/javascript" src="js/en_us/turtle_locale.js"></script>
+  <script type="text/javascript" src="js/turtle.js"></script>
+  <script type="text/javascript" src="scripts/frozen.js"></script>
+  <script type="text/javascript" src="default_options.js"></script>
+  <script type="text/javascript">
+    var scripts = scripts || {};
+    
+    function loadLevel(name, callback) {
+      var script = $('<script>').attr('src', 'levels/' + name + '.js')[0];
+      script.onload = callback;
+      document.head.appendChild(script);
+    }
+    
+    function getNextLevel(params) {
+      var copy = $.extend({}, params);
+      copy.puzzle++;
+      return copy;
+    }
+    
+    // Get level info from URL (set some defaults first)
+    var params = {
+      s: 'frozen',
+      stage: '1',
+      puzzle: '1'
+    };
+    location.href.split(/\?|&/).slice(1).forEach(function(param) {
+      var kv = param.split('=');
+      params[kv[0]] = kv[1];
+    });
+    
+    var currentScript = scripts[params.s];
+    var progressContainer = $('.progress_container');
+    currentScript.puzzles.forEach(function(levelName, index, levels) {
+      var link = $.extend({}, params);
+      link.puzzle = index + 1 + '';
+      var div = $("<div>")
+          .addClass(link.puzzle === params.puzzle ? 'puzzle_outer_current' : 'puzzle_outer_level')
+          .append("<a class='level_link not_tried' href='?" + $.param(link) + "'>" + link.puzzle + "</a>");
+      if (index === levels.length - 1) {
+        div.addClass('last');
+      }
+      progressContainer.append(div).append('\n');
+    });
+    loadLevel(currentScript.puzzles[params.puzzle - 1], function() {
+      appOptions.baseUrl = '';
+      appOptions.onInitialize = null;
+      appOptions.fallbackResponse = {
+        "success": {
+          "level_path": '?' + $.param(params),
+          "redirect": '?' + $.param(getNextLevel(params)),
+          "design": "white_background"
+        },
+        "failure": {
+          "message": "try again",
+          "design": "white_background"
+        }
+      };
+      $.extend(appOptions, defaultOptions);
+      window.script_path = null;
+      window.trackEvent = function() {};
+      window.stopTiming = function() {};
+      turtleMain(appOptions);
+    });
+  </script>
+  <!--script type="text/javascript" src="chrome34Workaround.js"></script-->
+</body>
+</html>

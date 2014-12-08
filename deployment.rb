@@ -38,6 +38,7 @@ def load_configuration()
   rack_env = env.to_sym
 
   {
+    'frozen_offline'              => true, # When true, Frozen script redirects to offline version
     'app_servers'                 => {},
     'build_blockly'               => false,
     'build_blockly_core'          => false,
