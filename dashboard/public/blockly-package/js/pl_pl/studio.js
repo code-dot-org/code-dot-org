@@ -21184,7 +21184,7 @@ exports.directionWestLetter = function(d){return "W (Zachód)"};
 
 exports.end = function(d){return "koniec"};
 
-exports.emptyBlocksErrorMsg = function(d){return "Blok powtórz lub blok jeśli muszą zawierać inne bloki, by poprawnie działać. Upewnij się, czy wewnętrzny blok pasuje do zewnętrznego."};
+exports.emptyBlocksErrorMsg = function(d){return "Blok \"powtarzaj\" lub blok \"jeśli\" muszą zawierać inne bloki, by poprawnie działać. Upewnij się, czy wewnętrzny blok pasuje do zewnętrznego."};
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Blok funkcji musi zawierać inne bloki, by działał."};
 
@@ -21246,7 +21246,7 @@ exports.print = function(d){return "Drukuj"};
 
 exports.puzzleTitle = function(d){return "Łamigłówka "+v(d,"puzzle_number")+" z "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "powtórz"};
+exports.repeat = function(d){return "powtarzaj"};
 
 exports.resetProgram = function(d){return "Zresetuj"};
 
@@ -21341,7 +21341,7 @@ var MessageFormat = require("messageformat");MessageFormat.locale.pl = function 
   }
   return 'other';
 };
-exports.actor = function(d){return "actor"};
+exports.actor = function(d){return "postać"};
 
 exports.alienInvasion = function(d){return "Inwazja obcych!"};
 
@@ -21383,9 +21383,9 @@ exports.catMath = function(d){return "Matematyka"};
 
 exports.catProcedures = function(d){return "Funkcje"};
 
-exports.catText = function(d){return "Tekstowe"};
+exports.catText = function(d){return "Tekst"};
 
-exports.catVariables = function(d){return "zmienne"};
+exports.catVariables = function(d){return "Zmienne"};
 
 exports.changeScoreTooltip = function(d){return "Dodaj lub usuń punkt do/z wyniku."};
 
@@ -21395,7 +21395,7 @@ exports.continue = function(d){return "Kontynuuj"};
 
 exports.decrementPlayerScore = function(d){return "usuń punkt"};
 
-exports.defaultSayText = function(d){return "wprowadź tutaj"};
+exports.defaultSayText = function(d){return "pisz tutaj"};
 
 exports.emotion = function(d){return "nastrój"};
 
@@ -21427,7 +21427,7 @@ exports.makeProjectileRedHearts = function(d){return "utwórz czerwone serca"};
 
 exports.makeProjectileTooltip = function(d){return "Spraw by pocisk, który właśnie się zderzył, zniknął lub odbił się."};
 
-exports.makeYourOwn = function(d){return "Stwórz swoją własną aplikację Play Lab"};
+exports.makeYourOwn = function(d){return "Utwórz swoją własną aplikację Play Lab"};
 
 exports.moveDirectionDown = function(d){return "dół"};
 
@@ -21451,9 +21451,9 @@ exports.moveDistance400 = function(d){return "400 pikseli"};
 
 exports.moveDistancePixels = function(d){return "piksele"};
 
-exports.moveDistanceRandom = function(d){return "losowy piksel"};
+exports.moveDistanceRandom = function(d){return "losowe piksele"};
 
-exports.moveDistanceTooltip = function(d){return "Przesuń aktora o określoną odległość w zadanym kierunku."};
+exports.moveDistanceTooltip = function(d){return "Przesuń postać o określoną odległość w zadanym kierunku."};
 
 exports.moveSprite = function(d){return "przesuń"};
 
@@ -21461,21 +21461,21 @@ exports.moveSpriteN = function(d){return "przenieś postać "+v(d,"spriteIndex")
 
 exports.moveDown = function(d){return "przesuń w dół"};
 
-exports.moveDownTooltip = function(d){return "Przesuń aktora w dół."};
+exports.moveDownTooltip = function(d){return "Przesuń postać w dół."};
 
 exports.moveLeft = function(d){return "przesuń w lewo"};
 
-exports.moveLeftTooltip = function(d){return "Przesuń aktora w lewo."};
+exports.moveLeftTooltip = function(d){return "Przesuń postać w lewo."};
 
 exports.moveRight = function(d){return "przesuń w prawo"};
 
-exports.moveRightTooltip = function(d){return "Przesuń aktora w prawo."};
+exports.moveRightTooltip = function(d){return "Przesuń postać w prawo."};
 
 exports.moveUp = function(d){return "przesuń w górę"};
 
-exports.moveUpTooltip = function(d){return "Przesuń aktora w górę."};
+exports.moveUpTooltip = function(d){return "Przesuń postać w górę."};
 
-exports.moveTooltip = function(d){return "Przesuń aktora."};
+exports.moveTooltip = function(d){return "Przesuń postać."};
 
 exports.nextLevel = function(d){return "Gratulacje! Ukończyłeś tę łamigłówkę."};
 
@@ -21493,9 +21493,9 @@ exports.playSoundGoal2 = function(d){return "odtwórz dźwięk gola nr 2"};
 
 exports.playSoundHit = function(d){return "odtwórz dźwięk trafienia"};
 
-exports.playSoundLosePoint = function(d){return "zagraj dzwięk utraty punktu"};
+exports.playSoundLosePoint = function(d){return "zagraj dźwięk utraty punktu"};
 
-exports.playSoundLosePoint2 = function(d){return "zagraj dzwięk utraty punktu nr 2"};
+exports.playSoundLosePoint2 = function(d){return "zagraj dźwięk utraty punktu nr 2"};
 
 exports.playSoundRetro = function(d){return "zagraj dźwięk retro"};
 
@@ -21505,53 +21505,53 @@ exports.playSoundSlap = function(d){return "zagraj dźwięk klaśnięcia"};
 
 exports.playSoundTooltip = function(d){return "Odtwórz wybrany dźwięk."};
 
-exports.playSoundWinPoint = function(d){return "zagraj dźwięk zdybycia punktu nr 1"};
+exports.playSoundWinPoint = function(d){return "zagraj dźwięk zdobycia punktu"};
 
-exports.playSoundWinPoint2 = function(d){return "zagraj dźwięk zdybycia punktu nr 2"};
+exports.playSoundWinPoint2 = function(d){return "zagraj dźwięk zdobycia punktu nr 2"};
 
 exports.playSoundWood = function(d){return "zagraj dźwięk drewna"};
 
-exports.positionOutTopLeft = function(d){return "do powyżej górnej, lewej pozycji"};
+exports.positionOutTopLeft = function(d){return "do powyżej górnej pozycji z lewej"};
 
-exports.positionOutTopRight = function(d){return "do powyżej górnej, prawej pozycji"};
+exports.positionOutTopRight = function(d){return "do powyżej górnej pozycji z prawej"};
 
-exports.positionTopOutLeft = function(d){return "do góry na zewnątrz lewej pozycji"};
+exports.positionTopOutLeft = function(d){return "do górnej zewnętrznej pozycji z lewej "};
 
-exports.positionTopLeft = function(d){return "do górnej lewej pozycji"};
+exports.positionTopLeft = function(d){return "do górnej pozycji z lewej"};
 
-exports.positionTopCenter = function(d){return "do górnej, środkowej pozycji"};
+exports.positionTopCenter = function(d){return "do górnej pozycji z centrum"};
 
-exports.positionTopRight = function(d){return "do górnej, prawej pozycji"};
+exports.positionTopRight = function(d){return "do górnej pozycji z prawej"};
 
-exports.positionTopOutRight = function(d){return "do góry na zewnątrz prawej pozycji"};
+exports.positionTopOutRight = function(d){return "do górnej pozycji na zewnątrz z prawej"};
 
 exports.positionMiddleLeft = function(d){return "do środkowej pozycji z lewej"};
 
-exports.positionMiddleCenter = function(d){return "na środkową pozycję"};
+exports.positionMiddleCenter = function(d){return "do środkowej pozycji w centrum"};
 
-exports.positionMiddleRight = function(d){return "na środkową pozycję z prawej"};
+exports.positionMiddleRight = function(d){return "do środkowej pozycji po prawej"};
 
-exports.positionBottomOutLeft = function(d){return "na dół poza lewą pozycję"};
+exports.positionBottomOutLeft = function(d){return "do dolnej pozycji na zewnątrz z lewej"};
 
-exports.positionBottomLeft = function(d){return "na środkową dolną pozycję z lewej"};
+exports.positionBottomLeft = function(d){return "do dolnej pozycji z lewej"};
 
-exports.positionBottomCenter = function(d){return "na środkową pozycję na dole"};
+exports.positionBottomCenter = function(d){return "do dolnej pozycji w centrum"};
 
-exports.positionBottomRight = function(d){return "na dolną pozycję z prawej"};
+exports.positionBottomRight = function(d){return "do dolnej pozycji z prawej"};
 
-exports.positionBottomOutRight = function(d){return "na dół poza właściwą pozycję"};
+exports.positionBottomOutRight = function(d){return "do dolnej pozycji na zewnątrz z prawej"};
 
-exports.positionOutBottomLeft = function(d){return "do pozycji na lewo poniżej przycisku"};
+exports.positionOutBottomLeft = function(d){return "do poniżej dolnej pozycji z lewej"};
 
-exports.positionOutBottomRight = function(d){return "do pozycji na prawo poniżej przycisku"};
+exports.positionOutBottomRight = function(d){return "do poniżej dolnej pozycji z prawej"};
 
-exports.positionRandom = function(d){return "na losową pozycję"};
+exports.positionRandom = function(d){return "do losowej pozycji"};
 
 exports.projectileBlueFireball = function(d){return "niebieska kula ognia"};
 
 exports.projectilePurpleFireball = function(d){return "purpurowa kula ognia"};
 
-exports.projectileRedFireball = function(d){return "czerwona ognista kula"};
+exports.projectileRedFireball = function(d){return "czerwona kula ognista"};
 
 exports.projectileYellowHearts = function(d){return "zółte serca"};
 
@@ -21569,25 +21569,25 @@ exports.projectileHiro = function(d){return "Hiro"};
 
 exports.projectileBaymax = function(d){return "Baymax"};
 
-exports.projectileRapunzel = function(d){return "Roszpunka"};
+exports.projectileRapunzel = function(d){return "Roszpunka (Rapunzel)"};
 
-exports.reinfFeedbackMsg = function(d){return "Możesz nacisnąć przycisk \"Spróbuj ponownie\", aby powrócić do swojej opowieści."};
+exports.reinfFeedbackMsg = function(d){return "Możesz nacisnąć przycisk Spróbuj ponownie, aby powrócić do swojej opowieści."};
 
 exports.repeatForever = function(d){return "powtarzaj w nieskończoność"};
 
 exports.repeatDo = function(d){return "wykonaj"};
 
-exports.repeatForeverTooltip = function(d){return "Wykonuj akcje w tym bloku bez przerwy dopóki trwa opowiadanie."};
+exports.repeatForeverTooltip = function(d){return "Wykonuj akcje w tym bloku bez przerwy, dopóki trwa opowieść."};
 
 exports.saySprite = function(d){return "powiedz"};
 
-exports.saySpriteN = function(d){return "aktor "+v(d,"spriteIndex")+" mówi"};
+exports.saySpriteN = function(d){return "postać "+v(d,"spriteIndex")+" mówi"};
 
-exports.saySpriteTooltip = function(d){return "Wyświetl dymek z wiadomością skojarzoną z postacią."};
+exports.saySpriteTooltip = function(d){return "Wyświetl dymek z odpowiednim tekstem od określonej postaci."};
 
 exports.scoreText = function(d){return "Wynik: "+v(d,"playerScore")};
 
-exports.setBackground = function(d){return "zestaw tło"};
+exports.setBackground = function(d){return "ustaw tło"};
 
 exports.setBackgroundRandom = function(d){return "ustaw losowe tło"};
 
@@ -21599,7 +21599,7 @@ exports.setBackgroundCloudy = function(d){return "ustaw pochmurne tło"};
 
 exports.setBackgroundHardcourt = function(d){return "ustaw tło boiska do tenisa"};
 
-exports.setBackgroundNight = function(d){return "utaw nocne tło"};
+exports.setBackgroundNight = function(d){return "ustaw nocne tło"};
 
 exports.setBackgroundUnderwater = function(d){return "ustaw tło podwodne"};
 
@@ -21639,87 +21639,87 @@ exports.setSpriteEmotionSad = function(d){return "na smutny nastrój"};
 
 exports.setSpriteEmotionTooltip = function(d){return "Ustawia nastój postaci"};
 
-exports.setSpriteAlien = function(d){return "do obrazu obcego"};
+exports.setSpriteAlien = function(d){return "do obcego obrazka"};
 
-exports.setSpriteBat = function(d){return "do obrazu nietoperza"};
+exports.setSpriteBat = function(d){return "do obrazka nietoperza"};
 
-exports.setSpriteBird = function(d){return "do obrazu ptaka"};
+exports.setSpriteBird = function(d){return "do obrazka ptaka"};
 
-exports.setSpriteCat = function(d){return "do obrazu kota"};
+exports.setSpriteCat = function(d){return "do obrazka kota"};
 
-exports.setSpriteCaveBoy = function(d){return "na obrazek chłopca z jaskini"};
+exports.setSpriteCaveBoy = function(d){return "do obrazka chłopca z jaskini"};
 
-exports.setSpriteCaveGirl = function(d){return "na obrazek dziewczynki z jaskini"};
+exports.setSpriteCaveGirl = function(d){return "do obrazka dziewczynki z jaskini"};
 
-exports.setSpriteDinosaur = function(d){return "do obrazu dinozaura"};
+exports.setSpriteDinosaur = function(d){return "do obrazka dinozaura"};
 
-exports.setSpriteDog = function(d){return "do obrazu psa"};
+exports.setSpriteDog = function(d){return "do obrazka psa"};
 
-exports.setSpriteDragon = function(d){return "do obrazu smoka"};
+exports.setSpriteDragon = function(d){return "do obrazka smoka"};
 
-exports.setSpriteGhost = function(d){return "do obrazu ducha"};
+exports.setSpriteGhost = function(d){return "do obrazka ducha"};
 
-exports.setSpriteHidden = function(d){return "na ukryty obrazek"};
+exports.setSpriteHidden = function(d){return "do ukrytego obrazka"};
 
 exports.setSpriteHideK1 = function(d){return "ukryj"};
 
-exports.setSpriteAnna = function(d){return "na obrazek Anny"};
+exports.setSpriteAnna = function(d){return "do obrazka Anny"};
 
-exports.setSpriteElsa = function(d){return "na obrazek Elsy"};
+exports.setSpriteElsa = function(d){return "do obrazka Elsy"};
 
-exports.setSpriteHiro = function(d){return "na obrazek Hira"};
+exports.setSpriteHiro = function(d){return "do obrazka Hira"};
 
-exports.setSpriteBaymax = function(d){return "na obrazek Baymaxa"};
+exports.setSpriteBaymax = function(d){return "do obrazka Baymaxa"};
 
 exports.setSpriteRapunzel = function(d){return "do obrazka z Roszpunką"};
 
-exports.setSpriteKnight = function(d){return "do obrazu rycerza"};
+exports.setSpriteKnight = function(d){return "do obrazka rycerza"};
 
-exports.setSpriteMonster = function(d){return "do obrazu potwora"};
+exports.setSpriteMonster = function(d){return "do obrazka potwora"};
 
-exports.setSpriteNinja = function(d){return "do obrazu zamaskowanego ninja"};
+exports.setSpriteNinja = function(d){return "do obrazka zamaskowanego ninja"};
 
-exports.setSpriteOctopus = function(d){return "do obrazka z ośmiornicą"};
+exports.setSpriteOctopus = function(d){return "do obrazka ośmiornicy"};
 
-exports.setSpritePenguin = function(d){return "do obrazka z pingwinem"};
+exports.setSpritePenguin = function(d){return "do obrazka pingwina"};
 
-exports.setSpritePirate = function(d){return "do obrazka z piratem"};
+exports.setSpritePirate = function(d){return "do obrazka pirata"};
 
-exports.setSpritePrincess = function(d){return "do obrazka z księżniczką"};
+exports.setSpritePrincess = function(d){return "do obrazka księżniczki"};
 
-exports.setSpriteRandom = function(d){return "na losowy obrazek"};
+exports.setSpriteRandom = function(d){return "do losowego obrazka"};
 
-exports.setSpriteRobot = function(d){return "do obrazu robota"};
+exports.setSpriteRobot = function(d){return "do obrazka robota"};
 
 exports.setSpriteShowK1 = function(d){return "pokaż"};
 
-exports.setSpriteSpacebot = function(d){return "do obrazu spacebota"};
+exports.setSpriteSpacebot = function(d){return "do obrazka spacebota"};
 
-exports.setSpriteSoccerGirl = function(d){return "do obrazu piłkarki"};
+exports.setSpriteSoccerGirl = function(d){return "do obrazka piłkarki"};
 
 exports.setSpriteSoccerBoy = function(d){return "do obrazu piłkarza"};
 
-exports.setSpriteSquirrel = function(d){return "do obrazu wiewiórki"};
+exports.setSpriteSquirrel = function(d){return "do obrazka wiewiórki"};
 
-exports.setSpriteTennisGirl = function(d){return "do obrazu tenisistki"};
+exports.setSpriteTennisGirl = function(d){return "do obrazka tenisistki"};
 
-exports.setSpriteTennisBoy = function(d){return "do obrazu tenisisty"};
+exports.setSpriteTennisBoy = function(d){return "do obrazka tenisisty"};
 
-exports.setSpriteUnicorn = function(d){return "do obrazu jednorożca"};
+exports.setSpriteUnicorn = function(d){return "do obrazka jednorożca"};
 
-exports.setSpriteWitch = function(d){return "do obrazu czarownicy"};
+exports.setSpriteWitch = function(d){return "do obrazka czarownicy"};
 
-exports.setSpriteWizard = function(d){return "do obrazu kreatora"};
+exports.setSpriteWizard = function(d){return "do obrazka kreatora"};
 
-exports.setSpritePositionTooltip = function(d){return "Natychmiast przenosi aktora do określonej lokalizacji."};
+exports.setSpritePositionTooltip = function(d){return "Natychmiast przenosi postać do określonej lokalizacji."};
 
-exports.setSpriteK1Tooltip = function(d){return "Pokazuje lub ukrywa określonego aktora."};
+exports.setSpriteK1Tooltip = function(d){return "Pokazuje lub ukrywa określoną postać ."};
 
-exports.setSpriteTooltip = function(d){return "Ustawia obraz aktora"};
+exports.setSpriteTooltip = function(d){return "Ustawia obrazek postaci"};
 
 exports.setSpriteSizeRandom = function(d){return "do losowego rozmiaru"};
 
-exports.setSpriteSizeVerySmall = function(d){return "do bardzo małych rozmiarów"};
+exports.setSpriteSizeVerySmall = function(d){return "do bardzo małego rozmiaru"};
 
 exports.setSpriteSizeSmall = function(d){return "do małego rozmiaru"};
 
@@ -21729,7 +21729,7 @@ exports.setSpriteSizeLarge = function(d){return "do dużego rozmiaru"};
 
 exports.setSpriteSizeVeryLarge = function(d){return "do bardzo dużego rozmiaru"};
 
-exports.setSpriteSizeTooltip = function(d){return "Ustawia rozmiar aktora"};
+exports.setSpriteSizeTooltip = function(d){return "Ustawia rozmiar postaci"};
 
 exports.setSpriteSpeedRandom = function(d){return "na losową prędkość"};
 
@@ -21743,13 +21743,13 @@ exports.setSpriteSpeedFast = function(d){return "na szybką prędkość"};
 
 exports.setSpriteSpeedVeryFast = function(d){return "na bardzo szybką prędkość"};
 
-exports.setSpriteSpeedTooltip = function(d){return "ustawia prędkość aktora"};
+exports.setSpriteSpeedTooltip = function(d){return "Ustawia prędkość postaci"};
 
 exports.setSpriteZombie = function(d){return "do obrazka z zombie"};
 
-exports.shareStudioTwitter = function(d){return "Zapoznaj się z opowieścią którą zrobiłem. Stworzyłem ją sam z @codeorg"};
+exports.shareStudioTwitter = function(d){return "Zapoznaj się z opowieścią, którą wykonałem. Utworzyłem ją sam z @codeorg"};
 
-exports.shareGame = function(d){return "Udopstępnij swoją opowieść:"};
+exports.shareGame = function(d){return "Udostępnij swoją opowieść:"};
 
 exports.showCoordinates = function(d){return "pokaż współrzędne"};
 
@@ -21757,29 +21757,29 @@ exports.showCoordinatesTooltip = function(d){return "pokaż współrzędne bohat
 
 exports.showTitleScreen = function(d){return "wyświetl ekran tytułowy"};
 
-exports.showTitleScreenTitle = function(d){return "Tytuł"};
+exports.showTitleScreenTitle = function(d){return "tytuł"};
 
-exports.showTitleScreenText = function(d){return "Tekst"};
+exports.showTitleScreenText = function(d){return "tekst"};
 
 exports.showTSDefTitle = function(d){return "wpisz tutaj tytuł"};
 
-exports.showTSDefText = function(d){return "wpisz tutaj tutaj"};
+exports.showTSDefText = function(d){return "wpisz tutaj tekst"};
 
-exports.showTitleScreenTooltip = function(d){return "Wyświetl tytułowy ekran i związane z nim tytuł i tekst."};
+exports.showTitleScreenTooltip = function(d){return "Wyświetl tytułowy ekran i związany z nim tytuł i tekst."};
 
 exports.size = function(d){return "rozmiar"};
 
 exports.setSprite = function(d){return "przypisz"};
 
-exports.setSpriteN = function(d){return "ustaw aktora "+v(d,"spriteIndex")};
+exports.setSpriteN = function(d){return "ustaw postać "+v(d,"spriteIndex")};
 
 exports.soundCrunch = function(d){return "chrzęst"};
 
-exports.soundGoal1 = function(d){return "cel 1"};
+exports.soundGoal1 = function(d){return "cel (gol) 1"};
 
-exports.soundGoal2 = function(d){return "Cel 2"};
+exports.soundGoal2 = function(d){return "cel (gol) 2"};
 
-exports.soundHit = function(d){return "hit"};
+exports.soundHit = function(d){return "trafienie (hit)"};
 
 exports.soundLosePoint = function(d){return "stracić punkt"};
 
@@ -21787,13 +21787,13 @@ exports.soundLosePoint2 = function(d){return "stracić punkt 2"};
 
 exports.soundRetro = function(d){return "retro"};
 
-exports.soundRubber = function(d){return "gumowe"};
+exports.soundRubber = function(d){return "guma"};
 
 exports.soundSlap = function(d){return "policzek"};
 
-exports.soundWinPoint = function(d){return "wygrać punkt"};
+exports.soundWinPoint = function(d){return "wygraj punkt"};
 
-exports.soundWinPoint2 = function(d){return "wygrać punkt 2"};
+exports.soundWinPoint2 = function(d){return "wygraj punkt 2"};
 
 exports.soundWood = function(d){return "drewno"};
 
@@ -21801,19 +21801,19 @@ exports.speed = function(d){return "prędkość"};
 
 exports.stopSprite = function(d){return "zatrzymaj"};
 
-exports.stopSpriteN = function(d){return "Zatrzymaj krasnoludka "+v(d,"spriteIndex")};
+exports.stopSpriteN = function(d){return "zatrzymaj postać "+v(d,"spriteIndex")};
 
-exports.stopTooltip = function(d){return "zatrzymaj ruch aktora."};
+exports.stopTooltip = function(d){return "Zatrzymuje ruch postaci."};
 
 exports.throwSprite = function(d){return "rzuć"};
 
-exports.throwSpriteN = function(d){return "rzut "+v(d,"spriteIndex")+" aktora"};
+exports.throwSpriteN = function(d){return "rzut "+v(d,"spriteIndex")+" postaci"};
 
-exports.throwTooltip = function(d){return "Wyrzuca pocisk z określonego aktora."};
+exports.throwTooltip = function(d){return "Wyrzuca pocisk z określonej postaci."};
 
 exports.vanish = function(d){return "znika"};
 
-exports.vanishActorN = function(d){return "znika aktor "+v(d,"spriteIndex")};
+exports.vanishActorN = function(d){return "znika postać "+v(d,"spriteIndex")};
 
 exports.vanishTooltip = function(d){return "Wymazuje postać."};
 
@@ -21821,61 +21821,61 @@ exports.waitFor = function(d){return "czekaj przez"};
 
 exports.waitSeconds = function(d){return "sekundy"};
 
-exports.waitForClick = function(d){return "poczekaj na kliknięcie"};
+exports.waitForClick = function(d){return "czekaj na kliknięcie"};
 
 exports.waitForRandom = function(d){return "poczekaj na losowe"};
 
 exports.waitForHalfSecond = function(d){return "czekaj pół sekundy"};
 
-exports.waitFor1Second = function(d){return "czekaj sekundę"};
+exports.waitFor1Second = function(d){return "poczekaj sekundę"};
 
-exports.waitFor2Seconds = function(d){return "czekaj 2 sekundy"};
+exports.waitFor2Seconds = function(d){return "poczekaj 2 sekundy"};
 
-exports.waitFor5Seconds = function(d){return "czekaj 5 sekund"};
+exports.waitFor5Seconds = function(d){return "poczekaj 5 sekund"};
 
-exports.waitFor10Seconds = function(d){return "czekaj 10 sekund"};
+exports.waitFor10Seconds = function(d){return "poczekaj 10 sekund"};
 
 exports.waitParamsTooltip = function(d){return "Czeka określoną liczbę sekund lub stosuje zero, czekając aż nastąpi kliknięcie."};
 
 exports.waitTooltip = function(d){return "Czeka przez określony czas lub do momentu kliknięcia."};
 
-exports.whenArrowDown = function(d){return "Strzałka w dół"};
+exports.whenArrowDown = function(d){return "strzałka w dół"};
 
-exports.whenArrowLeft = function(d){return "Strzałka w lewo"};
+exports.whenArrowLeft = function(d){return "strzałka w lewo"};
 
-exports.whenArrowRight = function(d){return "Strzałka w prawo"};
+exports.whenArrowRight = function(d){return "strzałka w prawo"};
 
-exports.whenArrowUp = function(d){return "Strzałka w górę"};
+exports.whenArrowUp = function(d){return "strzałka w górę"};
 
 exports.whenArrowTooltip = function(d){return "Wykonaj akcje poniżej, gdy naciśnięty zostaje określony klawisz ze strzałką."};
 
 exports.whenDown = function(d){return "kiedy strzałka w dół"};
 
-exports.whenDownTooltip = function(d){return "Wykonaj poniższe czynności, gdy wciśnięty jest klawisz strzałki w dół."};
+exports.whenDownTooltip = function(d){return "Wykonaj poniższe czynności, gdy naciśnięty zostaje klawisz strzałki w dół."};
 
-exports.whenGameStarts = function(d){return "gdy opowieść się zacznie"};
+exports.whenGameStarts = function(d){return "gdy opowieść się zaczyna"};
 
 exports.whenGameStartsTooltip = function(d){return "Wykonaj poniższe czynności, wraz z rozpoczęciem opowieści."};
 
 exports.whenLeft = function(d){return "kiedy strzałka w lewo"};
 
-exports.whenLeftTooltip = function(d){return "Wykonaj poniższe czynności, gdy wciśnięty jest klawisz strzałki w lewo."};
+exports.whenLeftTooltip = function(d){return "Wykonaj poniższe czynności, gdy naciśnięty zostaje klawisz strzałki w lewo."};
 
 exports.whenRight = function(d){return "kiedy strzałka w prawo"};
 
-exports.whenRightTooltip = function(d){return "Wykonaj poniższe czynności, gdy wciśnięty jest klawisz strzałki w prawo."};
+exports.whenRightTooltip = function(d){return "Wykonaj poniższe czynności, gdy naciśnięty zostaje klawisz strzałki w prawo."};
 
-exports.whenSpriteClicked = function(d){return "po kliknięciu aktora"};
+exports.whenSpriteClicked = function(d){return "gdy postać kliknie"};
 
-exports.whenSpriteClickedN = function(d){return "kiedy aktor "+v(d,"spriteIndex")+" kliknął"};
+exports.whenSpriteClickedN = function(d){return "gdy postać "+v(d,"spriteIndex")+" kliknie"};
 
-exports.whenSpriteClickedTooltip = function(d){return "Wykonaj czynności poniżej po kliknięciu na aktora."};
+exports.whenSpriteClickedTooltip = function(d){return "Wykonaj czynności poniżej po kliknięciu na postaci."};
 
-exports.whenSpriteCollidedN = function(d){return "kiedy aktor "+v(d,"spriteIndex")};
+exports.whenSpriteCollidedN = function(d){return "kiedy postać "+v(d,"spriteIndex")};
 
-exports.whenSpriteCollidedTooltip = function(d){return "Gdy aktor dotknie innego aktora, wykonaj poniższą akcję."};
+exports.whenSpriteCollidedTooltip = function(d){return "Wykonaj poniższe akcje, gdy postać dotknie inną postać."};
 
-exports.whenSpriteCollidedWith = function(d){return "dotknięcia"};
+exports.whenSpriteCollidedWith = function(d){return "dotyka"};
 
 exports.whenSpriteCollidedWithAnyActor = function(d){return "dotyka kogoś innego"};
 
@@ -21885,7 +21885,7 @@ exports.whenSpriteCollidedWithAnyProjectile = function(d){return "dotyka jakiego
 
 exports.whenSpriteCollidedWithAnything = function(d){return "dotyka czegoś"};
 
-exports.whenSpriteCollidedWithN = function(d){return "dotyka krasnoludka "+v(d,"spriteIndex")};
+exports.whenSpriteCollidedWithN = function(d){return "dotyka postaci "+v(d,"spriteIndex")};
 
 exports.whenSpriteCollidedWithBlueFireball = function(d){return "dotyka niebieskiej kuli ognia"};
 
@@ -21909,7 +21909,7 @@ exports.whenSpriteCollidedWithTopEdge = function(d){return "dotyka górnej kraw�
 
 exports.whenUp = function(d){return "kiedy strzałka w górę"};
 
-exports.whenUpTooltip = function(d){return "Wykonaj poniższe czynności, gdy wciśnięty jest klawisz strzałki w górę."};
+exports.whenUpTooltip = function(d){return "Wykonaj poniższe czynności, gdy naciśnięty zostaje klawisz strzałki w górę."};
 
 exports.yes = function(d){return "Tak"};
 

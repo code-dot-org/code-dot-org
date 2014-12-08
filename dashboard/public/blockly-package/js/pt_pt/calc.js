@@ -11060,9 +11060,9 @@ exports.parseElement = function(text) {
 
 },{}],40:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.pt=function(n){return n===1?"one":"other"}
-exports.compute = function(d){return "compute"};
+exports.compute = function(d){return "calcular"};
 
-exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
+exports.equivalentExpression = function(d){return "Tente reordenar os seus argumentos para obter exatamente a mesma expressão."};
 
 exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"compute\" block?"};
 

@@ -21168,25 +21168,25 @@ exports.directionEastLetter = function(d){return "Ö"};
 
 exports.directionWestLetter = function(d){return "V"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "slut"};
 
 exports.emptyBlocksErrorMsg = function(d){return "\"Upprepa\" eller \"Om\" blocken måste ha andra block inuti sig för att fungera. Se till att det inre blocket sitter rätt inuti blocket."};
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Funktionsblocket måste ha andra block i sig för att fungera."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "Det måste finnas block inuti din funktionsdefinition. Klicka på \"redigera\" och dra block in i det gröna blocket."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "Klicka på \"Redigera\" för att se till att  någon block inte saknas inuti din funktionsdefinition."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "Kom ihåg att bifoga ett block på varje parameter i blockets funktion på din arbetsyta."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "Du har lagt till ett parameterblock, men använder inte det i definitionen. Se till att använda parametern genom att klicka på \"Redigera\" och placera parameterblocket inuti gröna blocket."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "Skapa en parameter för din funktion genom att klicka på \"redigera\" och lägga till de nödvändiga parametrarna. Dra de nya parameterblocken in i din funktionsdefinition."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "Du skapade en funktion, men använde det aldrig på din arbetsyta! Klicka på \"Funktioner\" i verktygslådan och kontrollera att du använder det i ditt program."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "Prova att ersätta \"???\" med ett värde."};
 
 exports.extraTopBlocks = function(d){return "Du har okopplade block. Menade du att fästa dessa till \"när startat\" blocket?"};
 
@@ -21194,7 +21194,7 @@ exports.finalStage = function(d){return "Grattis! Du har slutfört den sista niv
 
 exports.finalStageTrophies = function(d){return "Grattis! Du har slutfört den sista nivån och vann "+p(d,"numTrophies",0,"sv",{"en":"en trofé","other":n(d,"numTrophies")+" troféer"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Avsluta"};
 
 exports.generatedCodeInfo = function(d){return "Även toppuniversitet lär ut blockbaserad programmering (t.ex. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Men under ytan kan blocken du har byggt ihop också visas som JavaScript, världens mest använda programmeringsspråk:"};
 
@@ -21226,7 +21226,7 @@ exports.numBlocksNeeded = function(d){return "Grattis! Du klarade pussel "+v(d,"
 
 exports.numLinesOfCodeWritten = function(d){return "Du skrev "+p(d,"numLines",0,"sv",{"one":"1 rad","other":n(d,"numLines")+" rader"})+" kod!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "spela"};
 
 exports.print = function(d){return "Skriv ut"};
 
@@ -21240,15 +21240,15 @@ exports.runProgram = function(d){return "Kör"};
 
 exports.runTooltip = function(d){return "Starta programmet som gjorts av blocken på arbetsytan."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "poäng"};
 
 exports.showCodeHeader = function(d){return "Visa kod"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Visa block"};
 
 exports.showGeneratedCode = function(d){return "Visa kod"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "sträng =?"};
 
 exports.subtitle = function(d){return "en visuell programmeringsmiljö"};
 
@@ -21268,7 +21268,7 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Totalt: "+p(d,"numLines
 
 exports.tryAgain = function(d){return "Försök igen"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Se tips"};
 
 exports.backToPreviousLevel = function(d){return "Gå tillbaka till föregående nivå"};
 
@@ -21276,7 +21276,7 @@ exports.saveToGallery = function(d){return "Spara till galleriet"};
 
 exports.savedToGallery = function(d){return "Sparad i galleriet!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Tyvärr kan inte vi dela detta program."};
 
 exports.typeFuncs = function(d){return "Tillgängliga funktioner:%1"};
 
@@ -21284,7 +21284,7 @@ exports.typeHint = function(d){return "Observera att parenteserna och semikolone
 
 exports.workspaceHeader = function(d){return "Sätt ihop dina block här: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Skriv din JavaScript-kod här"};
 
 exports.infinity = function(d){return "Oändligt"};
 
@@ -21296,7 +21296,7 @@ exports.wantToLearn = function(d){return "Vill du lära dig att programmera?"};
 
 exports.watchVideo = function(d){return "Titta på videon"};
 
-exports.when = function(d){return "when"};
+exports.when = function(d){return "när"};
 
 exports.whenRun = function(d){return "när startat"};
 
@@ -21306,16 +21306,16 @@ exports.signup = function(d){return "Registrera dig för introduktionskursen"};
 
 exports.hintHeader = function(d){return "Här är ett tips:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Se vad det blev, och försök fixa ditt program."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Kolla vad jag gjorde"};
 
 
 },{"messageformat":61}],49:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.sv=function(n){return n===1?"one":"other"}
-exports.actor = function(d){return "skådespelare"};
+exports.actor = function(d){return "figur"};
 
-exports.alienInvasion = function(d){return "Alien Invasion!"};
+exports.alienInvasion = function(d){return "Utomjordisk Invasion!"};
 
 exports.backgroundBlack = function(d){return "svart"};
 
@@ -21337,7 +21337,7 @@ exports.backgroundRainbow = function(d){return "regnbåge"};
 
 exports.backgroundSoccer = function(d){return "fotboll"};
 
-exports.backgroundSpace = function(d){return "space"};
+exports.backgroundSpace = function(d){return "utrymme"};
 
 exports.backgroundTennis = function(d){return "tennis"};
 
@@ -21347,7 +21347,7 @@ exports.catActions = function(d){return "Åtgärder"};
 
 exports.catControl = function(d){return "loopar"};
 
-exports.catEvents = function(d){return "Events"};
+exports.catEvents = function(d){return "Händelser"};
 
 exports.catLogic = function(d){return "Logik"};
 
@@ -21379,7 +21379,7 @@ exports.hello = function(d){return "hej"};
 
 exports.helloWorld = function(d){return "Hej Världen!"};
 
-exports.incrementPlayerScore = function(d){return "spelarens poäng"};
+exports.incrementPlayerScore = function(d){return "poäng punkt"};
 
 exports.makeProjectileDisappear = function(d){return "försvinna"};
 
@@ -21397,9 +21397,9 @@ exports.makeProjectilePurpleHearts = function(d){return "skapa lila hjärtan"};
 
 exports.makeProjectileRedHearts = function(d){return "skapa röda hjärtan"};
 
-exports.makeProjectileTooltip = function(d){return "Make the projectile that just collided disappear or bounce."};
+exports.makeProjectileTooltip = function(d){return "Gör så att projektilen som just kolliderade försvinner eller studsar."};
 
-exports.makeYourOwn = function(d){return "Skapa din egen berättelse"};
+exports.makeYourOwn = function(d){return "Gör din egen Play Lab App"};
 
 exports.moveDirectionDown = function(d){return "ner"};
 
@@ -21425,7 +21425,7 @@ exports.moveDistancePixels = function(d){return "pixlar"};
 
 exports.moveDistanceRandom = function(d){return "slumpade pixlar"};
 
-exports.moveDistanceTooltip = function(d){return "Move a character a specific distance in the specified direction."};
+exports.moveDistanceTooltip = function(d){return "Flytta en figur en specifik sträcka i angiven riktning."};
 
 exports.moveSprite = function(d){return "flytta"};
 
@@ -21477,45 +21477,45 @@ exports.playSoundSlap = function(d){return "spela klappljud"};
 
 exports.playSoundTooltip = function(d){return "Spela det valda ljudet."};
 
-exports.playSoundWinPoint = function(d){return "play win point sound"};
+exports.playSoundWinPoint = function(d){return "spela ljudet för vinn-punkten"};
 
-exports.playSoundWinPoint2 = function(d){return "play win point 2 sound"};
+exports.playSoundWinPoint2 = function(d){return "spela ljudet för vinn-punkt 2"};
 
 exports.playSoundWood = function(d){return "spela träljud"};
 
-exports.positionOutTopLeft = function(d){return "to the above top left position"};
+exports.positionOutTopLeft = function(d){return "till ovanstående övre vänster position"};
 
-exports.positionOutTopRight = function(d){return "to the above top right position"};
+exports.positionOutTopRight = function(d){return "till ovanstående övre höger position"};
 
-exports.positionTopOutLeft = function(d){return "to the top outside left position"};
+exports.positionTopOutLeft = function(d){return "till övre ytter vänster position"};
 
-exports.positionTopLeft = function(d){return "to the top left position"};
+exports.positionTopLeft = function(d){return "till övre vänster position"};
 
-exports.positionTopCenter = function(d){return "to the top center position"};
+exports.positionTopCenter = function(d){return "till övre mitt position"};
 
-exports.positionTopRight = function(d){return "to the top right position"};
+exports.positionTopRight = function(d){return "till övre höger position"};
 
-exports.positionTopOutRight = function(d){return "to the top outside right position"};
+exports.positionTopOutRight = function(d){return "till övre ytter höger position"};
 
-exports.positionMiddleLeft = function(d){return "to the middle left position"};
+exports.positionMiddleLeft = function(d){return "till vänster om mitten position"};
 
-exports.positionMiddleCenter = function(d){return "to the middle center position"};
+exports.positionMiddleCenter = function(d){return "till mitt position"};
 
-exports.positionMiddleRight = function(d){return "to the middle right position"};
+exports.positionMiddleRight = function(d){return "till höger om mitten position"};
 
-exports.positionBottomOutLeft = function(d){return "to the bottom outside left position"};
+exports.positionBottomOutLeft = function(d){return "till nedre ytter vänster position"};
 
-exports.positionBottomLeft = function(d){return "to the bottom left position"};
+exports.positionBottomLeft = function(d){return "till nedre vänster position"};
 
-exports.positionBottomCenter = function(d){return "to the bottom center position"};
+exports.positionBottomCenter = function(d){return "till nedre mitt position"};
 
-exports.positionBottomRight = function(d){return "to the bottom right position"};
+exports.positionBottomRight = function(d){return "till nedre höger position"};
 
-exports.positionBottomOutRight = function(d){return "to the bottom outside right position"};
+exports.positionBottomOutRight = function(d){return "till nedre ytter höger position"};
 
-exports.positionOutBottomLeft = function(d){return "to the below bottom left position"};
+exports.positionOutBottomLeft = function(d){return "till nedanför botten vänster position"};
 
-exports.positionOutBottomRight = function(d){return "to the below bottom right position"};
+exports.positionOutBottomRight = function(d){return "till nedanför botten höger position"};
 
 exports.positionRandom = function(d){return "till den slumpmässga positionen"};
 
@@ -21543,121 +21543,121 @@ exports.projectileBaymax = function(d){return "Baymax"};
 
 exports.projectileRapunzel = function(d){return "Rapunzel"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to playing your story."};
+exports.reinfFeedbackMsg = function(d){return "Du kan trycka på \"Försök igen\"-knappen för att gå tillbaka och spela din berättelse."};
 
 exports.repeatForever = function(d){return "upprepa för evigt"};
 
 exports.repeatDo = function(d){return "gör"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the story is running."};
+exports.repeatForeverTooltip = function(d){return "Utför åtgärder i detta block upprepade gånger medan historien är igång."};
 
 exports.saySprite = function(d){return "säg"};
 
-exports.saySpriteN = function(d){return "actor "+v(d,"spriteIndex")+" say"};
+exports.saySpriteN = function(d){return "figur "+v(d,"spriteIndex")+" säger"};
 
-exports.saySpriteTooltip = function(d){return "Pop up a speech bubble with the associated text from the specified character."};
+exports.saySpriteTooltip = function(d){return "Låter en pratbubbla dyka upp med texten från den angivna figuren."};
 
 exports.scoreText = function(d){return "Poäng: "+v(d,"playerScore")};
 
 exports.setBackground = function(d){return "sätt bakgrund"};
 
-exports.setBackgroundRandom = function(d){return "set random scene"};
+exports.setBackgroundRandom = function(d){return "Ange slumpmässig bakgrund"};
 
-exports.setBackgroundBlack = function(d){return "set black background"};
+exports.setBackgroundBlack = function(d){return "Ange svart bakgrund"};
 
-exports.setBackgroundCave = function(d){return "set cave background"};
+exports.setBackgroundCave = function(d){return "Ange grott- bakgrund"};
 
-exports.setBackgroundCloudy = function(d){return "set cloudy background"};
+exports.setBackgroundCloudy = function(d){return "Ange molnig bakgrund"};
 
-exports.setBackgroundHardcourt = function(d){return "set hardcourt scene"};
+exports.setBackgroundHardcourt = function(d){return "Ange hardcourt bakgrund"};
 
-exports.setBackgroundNight = function(d){return "set night background"};
+exports.setBackgroundNight = function(d){return "Ange natt -bakgrund"};
 
-exports.setBackgroundUnderwater = function(d){return "set underwater background"};
+exports.setBackgroundUnderwater = function(d){return "Ange undervattens-bakgrund"};
 
-exports.setBackgroundCity = function(d){return "set city background"};
+exports.setBackgroundCity = function(d){return "Ange stads- bakgrund"};
 
-exports.setBackgroundDesert = function(d){return "set desert background"};
+exports.setBackgroundDesert = function(d){return "Ange öken- bakgrund"};
 
-exports.setBackgroundRainbow = function(d){return "set rainbow background"};
+exports.setBackgroundRainbow = function(d){return "Ange regnbågs-bakgrund"};
 
-exports.setBackgroundSoccer = function(d){return "set soccer background"};
+exports.setBackgroundSoccer = function(d){return "Ange fotbolls- bakgrund"};
 
-exports.setBackgroundSpace = function(d){return "set space background"};
+exports.setBackgroundSpace = function(d){return "Ange rymd-bakgrund"};
 
-exports.setBackgroundTennis = function(d){return "set tennis background"};
+exports.setBackgroundTennis = function(d){return "Ange tennis- bakgrund"};
 
-exports.setBackgroundWinter = function(d){return "set winter background"};
+exports.setBackgroundWinter = function(d){return "Ange  vinter- bakgrund"};
 
 exports.setBackgroundTooltip = function(d){return "Ange bakgrundsbild"};
 
-exports.setEnemySpeed = function(d){return "set enemy speed"};
+exports.setEnemySpeed = function(d){return "Ange fiendens hastighet"};
 
-exports.setPlayerSpeed = function(d){return "set player speed"};
+exports.setPlayerSpeed = function(d){return "Ange spelarens hastighet"};
 
 exports.setScoreText = function(d){return "anger poäng"};
 
-exports.setScoreTextTooltip = function(d){return "Sets the text to be displayed in the score area."};
+exports.setScoreTextTooltip = function(d){return "Anger texten som ska visas i området poäng."};
 
-exports.setSpriteEmotionAngry = function(d){return "to a angry emotion"};
+exports.setSpriteEmotionAngry = function(d){return "till  argt humör"};
 
-exports.setSpriteEmotionHappy = function(d){return "to a happy emotion"};
+exports.setSpriteEmotionHappy = function(d){return "till glad stämning"};
 
-exports.setSpriteEmotionNormal = function(d){return "to a normal emotion"};
+exports.setSpriteEmotionNormal = function(d){return "till normal stämning"};
 
-exports.setSpriteEmotionRandom = function(d){return "to a random emotion"};
+exports.setSpriteEmotionRandom = function(d){return "till slumpmässig stämning"};
 
-exports.setSpriteEmotionSad = function(d){return "to a sad emotion"};
+exports.setSpriteEmotionSad = function(d){return "till ledsam stämning"};
 
-exports.setSpriteEmotionTooltip = function(d){return "Sets the actor emotion"};
+exports.setSpriteEmotionTooltip = function(d){return "anger figurens stämning"};
 
-exports.setSpriteAlien = function(d){return "to an alien image"};
+exports.setSpriteAlien = function(d){return "till en utomjordings- bild"};
 
-exports.setSpriteBat = function(d){return "to a bat image"};
+exports.setSpriteBat = function(d){return "i en fladdermus-bild"};
 
-exports.setSpriteBird = function(d){return "to a bird image"};
+exports.setSpriteBird = function(d){return "till en fågel bild"};
 
-exports.setSpriteCat = function(d){return "to a cat image"};
+exports.setSpriteCat = function(d){return "till en katt-bild"};
 
-exports.setSpriteCaveBoy = function(d){return "to a cave boy image"};
+exports.setSpriteCaveBoy = function(d){return "till en grottpojke- bild"};
 
-exports.setSpriteCaveGirl = function(d){return "to a cave girl image"};
+exports.setSpriteCaveGirl = function(d){return "till en grottflicka- bild"};
 
-exports.setSpriteDinosaur = function(d){return "to a dinosaur image"};
+exports.setSpriteDinosaur = function(d){return "till en dinosaurie-bild"};
 
-exports.setSpriteDog = function(d){return "to a dog image"};
+exports.setSpriteDog = function(d){return "att en hund bild"};
 
-exports.setSpriteDragon = function(d){return "to a dragon image"};
+exports.setSpriteDragon = function(d){return "till en drak- bild"};
 
-exports.setSpriteGhost = function(d){return "to a ghost image"};
+exports.setSpriteGhost = function(d){return "till en spök-bild"};
 
-exports.setSpriteHidden = function(d){return "to a hidden image"};
+exports.setSpriteHidden = function(d){return "till en dold bild"};
 
 exports.setSpriteHideK1 = function(d){return "göm"};
 
-exports.setSpriteAnna = function(d){return "to a Anna image"};
+exports.setSpriteAnna = function(d){return "till en Anna bild"};
 
-exports.setSpriteElsa = function(d){return "to a Elsa image"};
+exports.setSpriteElsa = function(d){return "till en Elsa bild"};
 
-exports.setSpriteHiro = function(d){return "to a Hiro image"};
+exports.setSpriteHiro = function(d){return "till en Hiro bild"};
 
-exports.setSpriteBaymax = function(d){return "to a Baymax image"};
+exports.setSpriteBaymax = function(d){return "till en Baymax bild"};
 
-exports.setSpriteRapunzel = function(d){return "to a Rapunzel image"};
+exports.setSpriteRapunzel = function(d){return "till en Rapunzel bild"};
 
-exports.setSpriteKnight = function(d){return "to a knight image"};
+exports.setSpriteKnight = function(d){return "till en riddar- bild"};
 
-exports.setSpriteMonster = function(d){return "to a monster image"};
+exports.setSpriteMonster = function(d){return "till en monster-bild"};
 
-exports.setSpriteNinja = function(d){return "to a masked ninja image"};
+exports.setSpriteNinja = function(d){return "till en maskerad ninja bild"};
 
-exports.setSpriteOctopus = function(d){return "to an octopus image"};
+exports.setSpriteOctopus = function(d){return "till en bläckfisk- bild"};
 
-exports.setSpritePenguin = function(d){return "to a penguin image"};
+exports.setSpritePenguin = function(d){return "till en pingvin -bild"};
 
-exports.setSpritePirate = function(d){return "to a pirate image"};
+exports.setSpritePirate = function(d){return "till en pirat-bild"};
 
-exports.setSpritePrincess = function(d){return "to a princess image"};
+exports.setSpritePrincess = function(d){return "till en prinsess-bild"};
 
 exports.setSpriteRandom = function(d){return "till en slumpmässig bild"};
 
@@ -21665,29 +21665,29 @@ exports.setSpriteRobot = function(d){return "till en robotbild"};
 
 exports.setSpriteShowK1 = function(d){return "visa"};
 
-exports.setSpriteSpacebot = function(d){return "to a spacebot image"};
+exports.setSpriteSpacebot = function(d){return "till en rymdrobot-bild"};
 
-exports.setSpriteSoccerGirl = function(d){return "to a soccer girl image"};
+exports.setSpriteSoccerGirl = function(d){return "till en fotbollsflicka -bild"};
 
-exports.setSpriteSoccerBoy = function(d){return "to a soccer boy image"};
+exports.setSpriteSoccerBoy = function(d){return "till en fotbollspojke-bild"};
 
-exports.setSpriteSquirrel = function(d){return "to a squirrel image"};
+exports.setSpriteSquirrel = function(d){return "till en ekorr-bild"};
 
-exports.setSpriteTennisGirl = function(d){return "to a tennis girl image"};
+exports.setSpriteTennisGirl = function(d){return "till en tennisflicka- bild"};
 
-exports.setSpriteTennisBoy = function(d){return "to a tennis boy image"};
+exports.setSpriteTennisBoy = function(d){return "till en tennispojke- bild"};
 
-exports.setSpriteUnicorn = function(d){return "to a unicorn image"};
+exports.setSpriteUnicorn = function(d){return "till en enhörning-bild"};
 
 exports.setSpriteWitch = function(d){return "till en häx-bild"};
 
-exports.setSpriteWizard = function(d){return "to a wizard image"};
+exports.setSpriteWizard = function(d){return "till en trollkarls-bild"};
 
-exports.setSpritePositionTooltip = function(d){return "Instantly moves an actor to the specified location."};
+exports.setSpritePositionTooltip = function(d){return "Omedelbart flyttar en figur till den angivna platsen."};
 
-exports.setSpriteK1Tooltip = function(d){return "Shows or hides the specified actor."};
+exports.setSpriteK1Tooltip = function(d){return "Visar eller döljer angiven figur."};
 
-exports.setSpriteTooltip = function(d){return "Sets the character image"};
+exports.setSpriteTooltip = function(d){return "Anger figurens bild"};
 
 exports.setSpriteSizeRandom = function(d){return "till en slumpmässig storlek"};
 
@@ -21701,7 +21701,7 @@ exports.setSpriteSizeLarge = function(d){return "till en stor storlek"};
 
 exports.setSpriteSizeVeryLarge = function(d){return "till en mycket stor storlek"};
 
-exports.setSpriteSizeTooltip = function(d){return "Sets the size of an actor"};
+exports.setSpriteSizeTooltip = function(d){return "Anger storleken på en figur"};
 
 exports.setSpriteSpeedRandom = function(d){return "till en slumpad hastighet"};
 
@@ -21711,173 +21711,173 @@ exports.setSpriteSpeedSlow = function(d){return "till en långsam hastighet"};
 
 exports.setSpriteSpeedNormal = function(d){return "till en normal hastighet"};
 
-exports.setSpriteSpeedFast = function(d){return "to a fast speed"};
+exports.setSpriteSpeedFast = function(d){return "till en snabb hastighet"};
 
-exports.setSpriteSpeedVeryFast = function(d){return "to a very fast speed"};
+exports.setSpriteSpeedVeryFast = function(d){return "till en mycket snabb hastighet"};
 
-exports.setSpriteSpeedTooltip = function(d){return "Sets the speed of a character"};
+exports.setSpriteSpeedTooltip = function(d){return "Anger hastigheten på en figur"};
 
-exports.setSpriteZombie = function(d){return "to a zombie image"};
+exports.setSpriteZombie = function(d){return "till en zombie-bild"};
 
-exports.shareStudioTwitter = function(d){return "Check out the story I made. I wrote it myself with @codeorg"};
+exports.shareStudioTwitter = function(d){return "Kolla in  berättelsen som jag har gjort. Jag skrev den själv med @codeorg"};
 
-exports.shareGame = function(d){return "Share your story:"};
+exports.shareGame = function(d){return "Dela din berättelse:"};
 
-exports.showCoordinates = function(d){return "show coordinates"};
+exports.showCoordinates = function(d){return "Visa koordinater"};
 
-exports.showCoordinatesTooltip = function(d){return "show the protagonist's coordinates on the screen"};
+exports.showCoordinatesTooltip = function(d){return "Visa huvudpersonens koordinater på skärmen"};
 
-exports.showTitleScreen = function(d){return "show title screen"};
+exports.showTitleScreen = function(d){return "Visa titelskärmen"};
 
-exports.showTitleScreenTitle = function(d){return "title"};
+exports.showTitleScreenTitle = function(d){return "titel"};
 
 exports.showTitleScreenText = function(d){return "text"};
 
-exports.showTSDefTitle = function(d){return "type title here"};
+exports.showTSDefTitle = function(d){return "skriv titelnhär"};
 
-exports.showTSDefText = function(d){return "type text here"};
+exports.showTSDefText = function(d){return "Skriv text här"};
 
-exports.showTitleScreenTooltip = function(d){return "Show a title screen with the associated title and text."};
+exports.showTitleScreenTooltip = function(d){return "Visa en titelskärm med tillhörande rubrik och text."};
 
-exports.size = function(d){return "size"};
+exports.size = function(d){return "storlek"};
 
 exports.setSprite = function(d){return "Välj"};
 
-exports.setSpriteN = function(d){return "set actor "+v(d,"spriteIndex")};
+exports.setSpriteN = function(d){return "ange figur "+v(d,"spriteIndex")};
 
-exports.soundCrunch = function(d){return "crunch"};
+exports.soundCrunch = function(d){return "krasch"};
 
-exports.soundGoal1 = function(d){return "goal 1"};
+exports.soundGoal1 = function(d){return "mål 1"};
 
-exports.soundGoal2 = function(d){return "goal 2"};
+exports.soundGoal2 = function(d){return "mål 2"};
 
-exports.soundHit = function(d){return "hit"};
+exports.soundHit = function(d){return "träff"};
 
-exports.soundLosePoint = function(d){return "lose point"};
+exports.soundLosePoint = function(d){return "förlora punkt"};
 
-exports.soundLosePoint2 = function(d){return "lose point 2"};
+exports.soundLosePoint2 = function(d){return "förlora punkt 2"};
 
 exports.soundRetro = function(d){return "retro"};
 
-exports.soundRubber = function(d){return "rubber"};
+exports.soundRubber = function(d){return "gummi"};
 
-exports.soundSlap = function(d){return "slap"};
+exports.soundSlap = function(d){return "slå"};
 
-exports.soundWinPoint = function(d){return "win point"};
+exports.soundWinPoint = function(d){return "vinna punkt"};
 
-exports.soundWinPoint2 = function(d){return "win point 2"};
+exports.soundWinPoint2 = function(d){return "vinna punkt 2"};
 
-exports.soundWood = function(d){return "wood"};
+exports.soundWood = function(d){return "trä"};
 
-exports.speed = function(d){return "speed"};
+exports.speed = function(d){return "hastighet"};
 
-exports.stopSprite = function(d){return "stop"};
+exports.stopSprite = function(d){return "stanna"};
 
-exports.stopSpriteN = function(d){return "stop actor "+v(d,"spriteIndex")};
+exports.stopSpriteN = function(d){return "stoppa figur "+v(d,"spriteIndex")};
 
-exports.stopTooltip = function(d){return "Stops an actor's movement."};
+exports.stopTooltip = function(d){return "Stoppar en figurs rörelse."};
 
-exports.throwSprite = function(d){return "throw"};
+exports.throwSprite = function(d){return "kasta"};
 
-exports.throwSpriteN = function(d){return "actor "+v(d,"spriteIndex")+" throw"};
+exports.throwSpriteN = function(d){return "figur"+v(d,"spriteIndex")+" kasta"};
 
-exports.throwTooltip = function(d){return "Throws a projectile from the specified actor."};
+exports.throwTooltip = function(d){return "Kastar en projektil från den angivna figuren."};
 
-exports.vanish = function(d){return "vanish"};
+exports.vanish = function(d){return "försvinna"};
 
-exports.vanishActorN = function(d){return "vanish actor "+v(d,"spriteIndex")};
+exports.vanishActorN = function(d){return "figur försvinner "+v(d,"spriteIndex")};
 
-exports.vanishTooltip = function(d){return "Vanishes the actor."};
+exports.vanishTooltip = function(d){return "Låter figuren försvinna."};
 
-exports.waitFor = function(d){return "wait for"};
+exports.waitFor = function(d){return "vänta i"};
 
-exports.waitSeconds = function(d){return "seconds"};
+exports.waitSeconds = function(d){return "sekunder"};
 
-exports.waitForClick = function(d){return "wait for click"};
+exports.waitForClick = function(d){return "vänta på klick"};
 
-exports.waitForRandom = function(d){return "wait for random"};
+exports.waitForRandom = function(d){return "vänta i slumpmässig tidsperiod"};
 
-exports.waitForHalfSecond = function(d){return "wait for a half second"};
+exports.waitForHalfSecond = function(d){return "vänta en halv sekund"};
 
-exports.waitFor1Second = function(d){return "wait for 1 second"};
+exports.waitFor1Second = function(d){return "vänta i 1 sekund"};
 
-exports.waitFor2Seconds = function(d){return "wait for 2 seconds"};
+exports.waitFor2Seconds = function(d){return "vänta 2 sekunder"};
 
-exports.waitFor5Seconds = function(d){return "wait for 5 seconds"};
+exports.waitFor5Seconds = function(d){return "vänta i 5 sekunder"};
 
-exports.waitFor10Seconds = function(d){return "wait for 10 seconds"};
+exports.waitFor10Seconds = function(d){return "vänta i 10 sekunder"};
 
-exports.waitParamsTooltip = function(d){return "Waits for a specified number of seconds or use zero to wait until a click occurs."};
+exports.waitParamsTooltip = function(d){return "Vänta i ett angivet antal sekunder eller använd noll för att vänta tills ett klick sker."};
 
-exports.waitTooltip = function(d){return "Waits for a specified amount of time or until a click occurs."};
+exports.waitTooltip = function(d){return "Vänta i en viss tid eller tills ett klick sker."};
 
-exports.whenArrowDown = function(d){return "down arrow"};
+exports.whenArrowDown = function(d){return "pil ner"};
 
-exports.whenArrowLeft = function(d){return "left arrow"};
+exports.whenArrowLeft = function(d){return "vänster pil"};
 
-exports.whenArrowRight = function(d){return "right arrow"};
+exports.whenArrowRight = function(d){return "höger pil"};
 
-exports.whenArrowUp = function(d){return "up arrow"};
+exports.whenArrowUp = function(d){return "pil upp"};
 
-exports.whenArrowTooltip = function(d){return "Execute the actions below when the specified arrow key is pressed."};
+exports.whenArrowTooltip = function(d){return "Utför åtgärderna nedan när den angivna piltangenten trycks."};
 
-exports.whenDown = function(d){return "when Down arrow"};
+exports.whenDown = function(d){return "när pil nedåt"};
 
 exports.whenDownTooltip = function(d){return "Utföra åtgärderna nedan när NEDPIL trycks."};
 
-exports.whenGameStarts = function(d){return "when game starts"};
+exports.whenGameStarts = function(d){return "När berättelsen börjar"};
 
-exports.whenGameStartsTooltip = function(d){return "Execute the actions below when the game starts."};
+exports.whenGameStartsTooltip = function(d){return "Utför åtgärderna nedan när berättelsen börjar."};
 
-exports.whenLeft = function(d){return "when Left arrow"};
+exports.whenLeft = function(d){return "när pil vänster"};
 
 exports.whenLeftTooltip = function(d){return "Utföra åtgärderna nedan när du trycker på VÄNSTERPIL."};
 
-exports.whenRight = function(d){return "when Right arrow"};
+exports.whenRight = function(d){return "när pil höger"};
 
 exports.whenRightTooltip = function(d){return "Utföra åtgärderna nedan när du trycker på HÖGERPIL."};
 
-exports.whenSpriteClicked = function(d){return "when actor clicked"};
+exports.whenSpriteClicked = function(d){return "När figuren klickas"};
 
-exports.whenSpriteClickedN = function(d){return "when actor "+v(d,"spriteIndex")+" clicked"};
+exports.whenSpriteClickedN = function(d){return "När figuren"+v(d,"spriteIndex")+" klickas"};
 
-exports.whenSpriteClickedTooltip = function(d){return "Execute the actions below when a character is clicked."};
+exports.whenSpriteClickedTooltip = function(d){return "Utför åtgärderna nedan när en figur klickas."};
 
-exports.whenSpriteCollidedN = function(d){return "when actor "+v(d,"spriteIndex")};
+exports.whenSpriteCollidedN = function(d){return "När figur "+v(d,"spriteIndex")};
 
-exports.whenSpriteCollidedTooltip = function(d){return "Execute the actions below when a character touches another character."};
+exports.whenSpriteCollidedTooltip = function(d){return "Utför åtgärderna nedan när en figur vidrör en annan figur."};
 
-exports.whenSpriteCollidedWith = function(d){return "touches"};
+exports.whenSpriteCollidedWith = function(d){return "berör"};
 
-exports.whenSpriteCollidedWithAnyActor = function(d){return "touches any actor"};
+exports.whenSpriteCollidedWithAnyActor = function(d){return "berör vilken figur som helst"};
 
-exports.whenSpriteCollidedWithAnyEdge = function(d){return "touches any edge"};
+exports.whenSpriteCollidedWithAnyEdge = function(d){return "berör vilken kant som helst"};
 
-exports.whenSpriteCollidedWithAnyProjectile = function(d){return "touches any projectile"};
+exports.whenSpriteCollidedWithAnyProjectile = function(d){return "berör vilken projektil som helst"};
 
-exports.whenSpriteCollidedWithAnything = function(d){return "touches anything"};
+exports.whenSpriteCollidedWithAnything = function(d){return "vidrör något"};
 
-exports.whenSpriteCollidedWithN = function(d){return "touches actor "+v(d,"spriteIndex")};
+exports.whenSpriteCollidedWithN = function(d){return "berör figur "+v(d,"spriteIndex")};
 
-exports.whenSpriteCollidedWithBlueFireball = function(d){return "touches blue fireball"};
+exports.whenSpriteCollidedWithBlueFireball = function(d){return "berör blå eldboll"};
 
-exports.whenSpriteCollidedWithPurpleFireball = function(d){return "touches purple fireball"};
+exports.whenSpriteCollidedWithPurpleFireball = function(d){return "berör lila eldboll"};
 
-exports.whenSpriteCollidedWithRedFireball = function(d){return "touches red fireball"};
+exports.whenSpriteCollidedWithRedFireball = function(d){return "berör röd eldboll"};
 
-exports.whenSpriteCollidedWithYellowHearts = function(d){return "touches yellow hearts"};
+exports.whenSpriteCollidedWithYellowHearts = function(d){return "berör gula hjärtan"};
 
-exports.whenSpriteCollidedWithPurpleHearts = function(d){return "touches purple hearts"};
+exports.whenSpriteCollidedWithPurpleHearts = function(d){return "berör lila hjärtan"};
 
-exports.whenSpriteCollidedWithRedHearts = function(d){return "touches red hearts"};
+exports.whenSpriteCollidedWithRedHearts = function(d){return "berör röda hjärtan"};
 
-exports.whenSpriteCollidedWithBottomEdge = function(d){return "touches bottom edge"};
+exports.whenSpriteCollidedWithBottomEdge = function(d){return "berör nedre kant"};
 
-exports.whenSpriteCollidedWithLeftEdge = function(d){return "touches left edge"};
+exports.whenSpriteCollidedWithLeftEdge = function(d){return "berör vänster kant"};
 
-exports.whenSpriteCollidedWithRightEdge = function(d){return "touches right edge"};
+exports.whenSpriteCollidedWithRightEdge = function(d){return "berör höger kant"};
 
-exports.whenSpriteCollidedWithTopEdge = function(d){return "touches top edge"};
+exports.whenSpriteCollidedWithTopEdge = function(d){return "berör översta kanten"};
 
 exports.whenUp = function(d){return "när pil upp"};
 

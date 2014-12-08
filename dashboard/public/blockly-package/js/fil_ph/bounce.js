@@ -12387,7 +12387,7 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.fil=function(n){return n===0||n==1?"one":"other"}
 exports.bounceBall = function(d){return "bounce ball"};
 
-exports.bounceBallTooltip = function(d){return "Bounce a ball off of an object."};
+exports.bounceBallTooltip = function(d){return "Patalbugin ang bola paalis sa bagay."};
 
 exports.continue = function(d){return "Magpatuloy"};
 
@@ -12417,15 +12417,15 @@ exports.ifelseTooltip = function(d){return "Kung meron daan sa nasabing direksyo
 
 exports.incrementOpponentScore = function(d){return "iskor puntos ng kalaban"};
 
-exports.incrementOpponentScoreTooltip = function(d){return "Add one to the current opponent score."};
+exports.incrementOpponentScoreTooltip = function(d){return "Magdagdag ng isa sa kasalukuyang score ng kalaban."};
 
 exports.incrementPlayerScore = function(d){return "increment player score"};
 
 exports.incrementPlayerScoreTooltip = function(d){return "Magdagdag ng isa sa kasalukuyang score ng manlalaro."};
 
-exports.isWall = function(d){return "is this a wall"};
+exports.isWall = function(d){return "ito ba ay pader"};
 
-exports.isWallTooltip = function(d){return "Returns true if there is a wall here"};
+exports.isWallTooltip = function(d){return "Ire-return na true kung meron pader dito"};
 
 exports.launchBall = function(d){return "gumamit ng bagong bola"};
 
@@ -12435,7 +12435,7 @@ exports.makeYourOwn = function(d){return "Gumawa ng sarili mong Bounce Game"};
 
 exports.moveDown = function(d){return "igalaw pababa"};
 
-exports.moveDownTooltip = function(d){return "Move the paddle down."};
+exports.moveDownTooltip = function(d){return "Galawin ang paddle pababa."};
 
 exports.moveForward = function(d){return "umabante"};
 
@@ -12443,15 +12443,15 @@ exports.moveForwardTooltip = function(d){return "Igalaw ako ng paunahan ng isang
 
 exports.moveLeft = function(d){return "igalaw pakaliwa"};
 
-exports.moveLeftTooltip = function(d){return "Move the paddle to the left."};
+exports.moveLeftTooltip = function(d){return "Galawin ang paddle papunta sa kaliwa."};
 
 exports.moveRight = function(d){return "igalaw pakanan"};
 
-exports.moveRightTooltip = function(d){return "Move the paddle to the right."};
+exports.moveRightTooltip = function(d){return "Galawin ang paddle papunta sa kanan."};
 
 exports.moveUp = function(d){return "igalaw pataas"};
 
-exports.moveUpTooltip = function(d){return "Move the paddle up."};
+exports.moveUpTooltip = function(d){return "Galawin ang paddle papunta sa taas."};
 
 exports.nextLevel = function(d){return "Maligayang pagbati! Natapos mo ang puzzle na ito."};
 
@@ -12575,13 +12575,13 @@ exports.turnRight = function(d){return "kumanan"};
 
 exports.turnTooltip = function(d){return "Iniikot ako pakaliwa o pakanan ng 90 degrees."};
 
-exports.whenBallInGoal = function(d){return "when ball in goal"};
+exports.whenBallInGoal = function(d){return "habang ang bola ay nasa goal"};
 
-exports.whenBallInGoalTooltip = function(d){return "Execute the actions below when a ball enters the goal."};
+exports.whenBallInGoalTooltip = function(d){return "I-execute ang mga aksyon sa ibaba habang ang bola ay papasok ng goal."};
 
-exports.whenBallMissesPaddle = function(d){return "when ball misses paddle"};
+exports.whenBallMissesPaddle = function(d){return "kapag na miss ng bola ang paddle"};
 
-exports.whenBallMissesPaddleTooltip = function(d){return "Execute the actions below when a ball misses the paddle."};
+exports.whenBallMissesPaddleTooltip = function(d){return "I-execute ang mga aksyon sa ibaba kapag na miss ng bola ang paddle."};
 
 exports.whenDown = function(d){return "kapag ang pababang arrow"};
 
@@ -12595,9 +12595,9 @@ exports.whenLeft = function(d){return "kapag ang kaliwa na arrow"};
 
 exports.whenLeftTooltip = function(d){return "Ipatupad ang mga aksyon sa ibaba kapag ang pataas na arrow key ay pinindot."};
 
-exports.whenPaddleCollided = function(d){return "when ball hits paddle"};
+exports.whenPaddleCollided = function(d){return "kapag tumama ang bola sa paddle"};
 
-exports.whenPaddleCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a paddle."};
+exports.whenPaddleCollidedTooltip = function(d){return "I-execute ang mga aksyon sa ibaba kapag ang bola ay tumama sa paddle."};
 
 exports.whenRight = function(d){return "kapag ang kanan na arrow"};
 
@@ -12607,9 +12607,9 @@ exports.whenUp = function(d){return "kapag ang pataas na arrow"};
 
 exports.whenUpTooltip = function(d){return "Ipatupad ang mga aksyon sa ibaba kapag ang pataas na arrow key ay pinindot."};
 
-exports.whenWallCollided = function(d){return "when ball hits wall"};
+exports.whenWallCollided = function(d){return "kapag ang bola ay tumama sa pader"};
 
-exports.whenWallCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a wall."};
+exports.whenWallCollidedTooltip = function(d){return "I-execute ang mga aksyon sa ibaba kapag ang bola ay tumama sa pader."};
 
 exports.whileMsg = function(d){return "habang"};
 
@@ -12662,7 +12662,7 @@ exports.directionEastLetter = function(d){return "E"};
 
 exports.directionWestLetter = function(d){return "W"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "tapos"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Ang \"Repeat\" o \"if\" block ay kailangan ng iba pang mga block sa loob nito upang gumana. Siguraduhin na ang block na asa loob ay nakasukat ng maayos sa loob ng naglalaman na block."};
 

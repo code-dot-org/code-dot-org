@@ -14438,7 +14438,7 @@ exports.errorRequiredParamsMissing = function(d){return "Create a parameter for 
 
 exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "سعی کنید به جای \"؟؟؟\" یک مقدار قرار دهید ."};
 
 exports.extraTopBlocks = function(d){return "بلوک‌های نچسبیده‌ای هنوز باقی مونده. آیا قصد داری اینها را به بلوک \"هنگام اجرا\" وصل کنی؟"};
 
@@ -14500,7 +14500,7 @@ exports.showBlocksHeader = function(d){return "نمایش بلوک‌ها"};
 
 exports.showGeneratedCode = function(d){return "نمایشِ کد"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "رشته =?"};
 
 exports.subtitle = function(d){return "یک محیط برنامه نویسیِ دیداری"};
 
@@ -14577,7 +14577,7 @@ exports.overlayBlockTitle = function(d){return "پوشش (بالا، پایین)
 
 exports.placeImageBlockTitle = function(d){return "مکان تصویر (x، y، تصویر)"};
 
-exports.offsetBlockTitle = function(d){return "offset (x, y, image)"};
+exports.offsetBlockTitle = function(d){return "افست (x، y، تصویر)"};
 
 exports.rectangleBlockTitle = function(d){return "مستطیل (عرض، ارتفاع، سبک، رنگ)"};
 
@@ -14591,7 +14591,7 @@ exports.squareBlockTitle = function(d){return "مربع (اندازه، سبک،
 
 exports.starBlockTitle = function(d){return "ستاره (شعاع، سبک، رنگ)"};
 
-exports.radialStarBlockTitle = function(d){return "radial-star (points, inner, outer, style, color)"};
+exports.radialStarBlockTitle = function(d){return "ستاره شعاعی (نقاط درونی، بیرونی، سبک، رنگ)"};
 
 exports.stringAppendBlockTitle = function(d){return "رشته ی-الحاق (اول، دوم)"};
 

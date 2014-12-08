@@ -14420,7 +14420,7 @@ exports.directionEastLetter = function(d){return "E"};
 
 exports.directionWestLetter = function(d){return "W"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "tapos"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Ang \"Repeat\" o \"if\" block ay kailangan ng iba pang mga block sa loob nito upang gumana. Siguraduhin na ang block na asa loob ay nakasukat ng maayos sa loob ng naglalaman na block."};
 
@@ -14565,15 +14565,15 @@ exports.defaultTwitterText = function(d){return "Check out what I made"};
 
 },{"messageformat":62}],50:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.fil=function(n){return n===0||n==1?"one":"other"}
-exports.circleBlockTitle = function(d){return "circle (radius, style, color)"};
+exports.circleBlockTitle = function(d){return "bilog (radius, klase, kulay)"};
 
 exports.displayBlockTitle = function(d){return "display"};
 
-exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, color)"};
+exports.ellipseBlockTitle = function(d){return "ellipse (lapad, taas, style, kulay)"};
 
 exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"};
 
-exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
+exports.overlayBlockTitle = function(d){return "overlay (taas, baba)"};
 
 exports.placeImageBlockTitle = function(d){return "place-image (x, y, image)"};
 
@@ -14583,11 +14583,11 @@ exports.rectangleBlockTitle = function(d){return "rectangle (width, height, styl
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to edit your drawing."};
 
-exports.rotateImageBlockTitle = function(d){return "rotate (degrees, image)"};
+exports.rotateImageBlockTitle = function(d){return "rotate (degrees, imahe)"};
 
 exports.scaleImageBlockTitle = function(d){return "scale (factor)"};
 
-exports.squareBlockTitle = function(d){return "square (size, style, color)"};
+exports.squareBlockTitle = function(d){return "square (size, style, kulay)"};
 
 exports.starBlockTitle = function(d){return "star (radius, style, color)"};
 
@@ -14597,7 +14597,7 @@ exports.stringAppendBlockTitle = function(d){return "string-append (first, secon
 
 exports.stringLengthBlockTitle = function(d){return "string-length (string)"};
 
-exports.textBlockTitle = function(d){return "text (string, size, color)"};
+exports.textBlockTitle = function(d){return "text (string, size, kulay)"};
 
 exports.triangleBlockTitle = function(d){return "triangle (size, style, color)"};
 

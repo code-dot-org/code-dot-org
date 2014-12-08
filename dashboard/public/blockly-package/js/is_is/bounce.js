@@ -12670,9 +12670,9 @@ exports.emptyFunctionBlocksErrorMsg = function(d){return "Fallkubburinn þarf a�
 
 exports.errorEmptyFunctionBlockModal = function(d){return "Það þurfa að vera kubbar innan í skilgreiningunni á fallinu. Smelltu á \"breyta\" og dragðu kubba inn í græna kubbinn."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Smelltu á \"breyta\" til að ganga úr skugga um að það vanti ekki neina kubba innan í skilgreiningunni á fallinu."};
+exports.errorIncompleteBlockInFunction = function(d){return "Smelltu á \"breyta\" til að ganga úr skugga um að það vanti ekki neina kubba í skilgreininguna á fallinu."};
 
-exports.errorParamInputUnattached = function(d){return "Mundu að tengja kubb við hvert inntak fyrir stika á kubbi fallsins á vinnusvæðinu."};
+exports.errorParamInputUnattached = function(d){return "Mundu að tengja kubb við hvert inntak fyrir stika sem er á kubbi fallsins á vinnusvæðinu."};
 
 exports.errorUnusedParam = function(d){return "Þú bættir við kubbi fyrir stika en notaðir hann ekki í skilgreiningunni. Gættu þess að nota stikann þinn með því að smella á \"breyta\" og setja stikakubbinn inn í græna kubbinn."};
 

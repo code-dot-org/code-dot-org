@@ -12515,7 +12515,7 @@ exports.scoreText = function(d){return "Score: "+v(d,"playerScore")+" : "+v(d,"o
 
 exports.setBackgroundRandom = function(d){return "এলোমেলো দৃশ্য সেট করুন"};
 
-exports.setBackgroundHardcourt = function(d){return "সেট হার্ডকোর্ট দৃশ্য"};
+exports.setBackgroundHardcourt = function(d){return "হার্ডকোর্ট দৃশ্য সেট করুন"};
 
 exports.setBackgroundRetro = function(d){return "বিপরীতমুখী দৃশ্য-বিন্যাস করুন"};
 
@@ -12523,7 +12523,7 @@ exports.setBackgroundTooltip = function(d){return "ব্যাকগ্রা�
 
 exports.setBallRandom = function(d){return "এলোমেলো বল সেট করুন"};
 
-exports.setBallHardcourt = function(d){return "সেট হার্ডকোর্ট বল"};
+exports.setBallHardcourt = function(d){return "হার্ডকোর্ট বল সেট করুন"};
 
 exports.setBallRetro = function(d){return "বিপরীতমুখী বল সেট করুন"};
 

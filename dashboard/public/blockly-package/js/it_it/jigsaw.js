@@ -10754,17 +10754,17 @@ exports.emptyBlocksErrorMsg = function(d){return "Il blocco \"ripeti\" o \"se\" 
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Un blocco funzione deve avere all'interno altri blocchi per poter funzionare."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "Ci devono essere dei blocchi all'interno della tua funzione. Fai clic su \"Modifica\" e trascina dei blocchi all'interno del blocco verde."};
+exports.errorEmptyFunctionBlockModal = function(d){return "Ci devono essere dei blocchi all'interno della tua funzione. Clicca su \"Modifica\" e trascina dei blocchi all'interno del blocco verde."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Fai clic su \"Modifica\" per essere sicuro di non avere alcun blocco mancante nella tua funzione."};
+exports.errorIncompleteBlockInFunction = function(d){return "Clicca su \"Modifica\" per essere sicuro di non avere alcun blocco mancante nella tua funzione."};
 
-exports.errorParamInputUnattached = function(d){return "Ricordati di attaccare un blocco a ciascun parametro di ingresso nel blocco della funzione presente nel tuo spazio di lavoro."};
+exports.errorParamInputUnattached = function(d){return "Ricordati di attaccare un blocco a ciascun parametro di ingresso della funzione presente nella tua area di lavoro."};
 
-exports.errorUnusedParam = function(d){return "Hai aggiunto un blocco di parametri, ma non lo hai utilizzato nella definizione. Assicurati di utilizzare il parametro facendo clic su \"Modifica\" e mettendo il blocco dei parametri all'interno del blocco verde."};
+exports.errorUnusedParam = function(d){return "Hai aggiunto un blocco di parametri, ma non l'hai utilizzato nella definizione. Assicurati di utilizzare il parametro cliccando su \"Modifica\" e mettendo il blocco dei parametri all'interno del blocco verde."};
 
-exports.errorRequiredParamsMissing = function(d){return "Crea un parametro per la funzione facendo clic su \"Modifica\" e aggiungendo i parametri necessari. Trascina i nuovi blocchi dei parametri nella tua definizione di funzione."};
+exports.errorRequiredParamsMissing = function(d){return "Crea un parametro per la tua funzione cliccando su \"Modifica\" ed aggiungendo i parametri necessari. Trascina i nuovi blocchi dei parametri nella tua definizione di funzione."};
 
-exports.errorUnusedFunction = function(d){return "Hai creato una funzione, ma non la hai mai usata nel tuo spazio di lavoro! Fai clic su \"Funzioni\" nella casella degli strumenti e assicurati di usarla nel tuo programma."};
+exports.errorUnusedFunction = function(d){return "Hai creato una funzione, ma non l'hai mai usata nella tua area di lavoro! Clicca su \"Funzioni\" nella cassetta degli attrezzi e assicurati di usarla nel tuo programma."};
 
 exports.errorQuestionMarksInNumberField = function(d){return "Prova a sostituire \"???\" con un valore."};
 
@@ -10828,7 +10828,7 @@ exports.showBlocksHeader = function(d){return "Mostra i blocchi"};
 
 exports.showGeneratedCode = function(d){return "Mostra il codice"};
 
-exports.stringEquals = function(d){return "stringa=?"};
+exports.stringEquals = function(d){return "stringa = ?"};
 
 exports.subtitle = function(d){return "un ambiente di programmazione visuale"};
 
@@ -10852,9 +10852,9 @@ exports.hintRequest = function(d){return "Vedi il suggerimento"};
 
 exports.backToPreviousLevel = function(d){return "Torna al livello precedente"};
 
-exports.saveToGallery = function(d){return "Salva nella galleria"};
+exports.saveToGallery = function(d){return "Salva nella collezione"};
 
-exports.savedToGallery = function(d){return "Salvato nella galleria!"};
+exports.savedToGallery = function(d){return "Salvato nella collezione!"};
 
 exports.shareFailure = function(d){return "Ci dispiace, non possiamo condividere questo programma."};
 
@@ -10888,7 +10888,7 @@ exports.hintHeader = function(d){return "Ecco un suggerimento:"};
 
 exports.genericFeedback = function(d){return "Verifica il risultato e prova a correggere il tuo programma."};
 
-exports.defaultTwitterText = function(d){return "Verifica che cosa ho fatto"};
+exports.defaultTwitterText = function(d){return "Guarda cosa ho fatto"};
 
 
 },{"messageformat":49}],37:[function(require,module,exports){
@@ -10901,7 +10901,7 @@ exports.no = function(d){return "No"};
 
 exports.numBlocksNeeded = function(d){return "Questo esercizio può essere risolto con %1 blocchi."};
 
-exports.reinfFeedbackMsg = function(d){return "Premi \"Ricomincia\" per ricominciare a giocare la tua partita."};
+exports.reinfFeedbackMsg = function(d){return "Premi \"Riprova\" per ricominciare a giocare la tua partita."};
 
 exports.share = function(d){return "Condividi"};
 

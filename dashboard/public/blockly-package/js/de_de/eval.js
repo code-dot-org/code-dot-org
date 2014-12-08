@@ -14577,7 +14577,7 @@ exports.overlayBlockTitle = function(d){return "Overlay (oben, unten)"};
 
 exports.placeImageBlockTitle = function(d){return "Ort-Bild (x, y, Bild)"};
 
-exports.offsetBlockTitle = function(d){return "offset (x, y, image)"};
+exports.offsetBlockTitle = function(d){return "versatz (x,y,Bild)"};
 
 exports.rectangleBlockTitle = function(d){return "Rechteck (Breite, Höhe, Stil, Farbe)"};
 

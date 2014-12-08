@@ -11737,7 +11737,7 @@ exports.directionEastLetter = function(d){return "E"};
 
 exports.directionWestLetter = function(d){return "W"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "tapos"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Ang \"Repeat\" o \"if\" block ay kailangan ng iba pang mga block sa loob nito upang gumana. Siguraduhin na ang block na asa loob ay nakasukat ng maayos sa loob ng naglalaman na block."};
 
@@ -11900,13 +11900,13 @@ exports.catVariables = function(d){return "Mga variable"};
 
 exports.continue = function(d){return "Magpatuloy"};
 
-exports.createHtmlBlock = function(d){return "create html block"};
+exports.createHtmlBlock = function(d){return "gumawa ng html block"};
 
 exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
 
 exports.finalLevel = function(d){return "Maligayang pagbati! Nalutas mo na ang pinakahuling puzzle."};
 
-exports.makeYourOwn = function(d){return "Make Your Own App"};
+exports.makeYourOwn = function(d){return "Gumawa ng Sarili Mong App"};
 
 exports.nextLevel = function(d){return "Maligayang pagbati! Natapos mo ang puzzle na ito."};
 
@@ -11926,15 +11926,15 @@ exports.repeatForeverTooltip = function(d){return "Execute the actions in this b
 
 exports.shareWebappTwitter = function(d){return "Check out the app I made. I wrote it myself with @codeorg"};
 
-exports.shareGame = function(d){return "Share your app:"};
+exports.shareGame = function(d){return "Ibahagi ang iyong app:"};
 
 exports.stepIn = function(d){return "Step in"};
 
 exports.stepOver = function(d){return "Step over"};
 
-exports.stepOut = function(d){return "Step out"};
+exports.stepOut = function(d){return "Umalis"};
 
-exports.turnBlack = function(d){return "turn black"};
+exports.turnBlack = function(d){return "gawing black"};
 
 exports.turnBlackTooltip = function(d){return "Turns the screen black."};
 

@@ -11934,7 +11934,7 @@ exports.stepOver = function(d){return "Step over"};
 
 exports.stepOut = function(d){return "Step out"};
 
-exports.turnBlack = function(d){return "turn black"};
+exports.turnBlack = function(d){return "qaralt"};
 
 exports.turnBlackTooltip = function(d){return "Ekranı qaraldır."};
 
