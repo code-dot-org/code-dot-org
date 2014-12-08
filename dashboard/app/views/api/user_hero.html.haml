@@ -1,4 +1,5 @@
 - if current_user
+  %div{:style=>'margin-top: 20px; border-top: 1px solid lightgrey'}
   #welcome= t('welcome_back', name: current_user.name)
 
   #student{ style: "width: 100%; float: left; padding-left:20px; box-sizing: border-box"}
