@@ -27,6 +27,9 @@ class Script < ActiveRecord::Base
   PLAYLAB_NAME = 'playlab'
   SPECIAL_NAME = 'special'
 
+
+  TWENTY_HOUR_NAME = '20-hour'
+
   def self.twenty_hour_script
     @@twenty_hour_script ||= Script.includes(script_levels: {level: [:game, :concepts] }).find(TWENTY_HOUR_ID)
   end
@@ -43,6 +46,10 @@ class Script < ActiveRecord::Base
     self.equal?(Script.twenty_hour_script) || self.equal?(Script.frozen_script) || self.equal?(Script.hoc_script)
   end
 
+  def should_be_cached?
+    self.id == TWENTY_HOUR_ID || self.name == FROZEN_NAME || self.name == HOC_NAME
+  end
+
   def starting_level
     raise "Script #{name} has no level to start at" if script_levels.empty?
     candidate_level = script_levels.first.or_next_progression_level
@@ -52,7 +59,7 @@ class Script < ActiveRecord::Base
 
   def self.get_from_cache(id)
     case id
-      when TWENTY_HOUR_ID then twenty_hour_script
+      when TWENTY_HOUR_ID, TWENTY_HOUR_NAME then twenty_hour_script
       when FROZEN_NAME then frozen_script
       when HOC_NAME then hoc_script
     else
