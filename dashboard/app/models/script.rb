@@ -27,8 +27,15 @@ class Script < ActiveRecord::Base
   PLAYLAB_NAME = 'playlab'
   SPECIAL_NAME = 'special'
 
+  # ids of scripts identified by names
+  FROZEN_ID = Script.find_by_name(FROZEN_NAME).id
+
   def self.twenty_hour_script
     @@twenty_hour_script ||= Script.includes(script_levels: { level: [:game, :concepts] }).find(TWENTY_HOUR_ID)
+  end
+
+  def self.frozen_script
+    @@frozen_script ||= Script.find_by_name(FROZEN_NAME)
   end
 
   def starting_level
@@ -40,7 +47,8 @@ class Script < ActiveRecord::Base
 
   def self.get_from_cache(id)
     case id
-    when TWENTY_HOUR_ID then twenty_hour_script
+      when TWENTY_HOUR_ID then twenty_hour_script
+      when FROZEN_ID then frozen_script
     else
       # a bit of trickery so we support both ids which are numbers and
       # names which are strings that may contain numbers (eg. 2-3)
