@@ -41,7 +41,7 @@ ar-SA:
   go: أذهب
   thank_you_: شكرا لك!
   congratulations: تهانينا!
-  congratulations_on_completing_hoc: تهانينا على اكمالك ساعة واحدة من البرمجة.
+  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   get_a_certificate_of_achievement: أحصل على شهادة الانجاز
   enter_valid_email: الرجاء ادخال عنوان بريد الكتروني صالح
   get_a_certificate_message: "نحن سوف نرسل لك شهادة ومعلومات حول كيفية <a href='/learn/beyond'> تعلم بعد ساعة واحدة من البرمجة</a>"
@@ -65,7 +65,7 @@ ar-SA:
   thanks_for_voting: شكرا للتصويت!
   share_on_facebook: انشرها على الفيس بوك
   share_on_twitter: انشرها على التويتر
-  beyond_an_hour: 'إلى أبعد من ساعة من البرمجة >'
+  beyond_an_hour: Beyond an Hour of Code
   get_started: إبدأ
   i_agree: أوافق
   participant_select: '- اختر -'
@@ -74,6 +74,9 @@ ar-SA:
   participant_educator: المعلم
   participant_engineer: مهندس برمجيات
   participant_other: لا شيء من ما ورد أعلاه
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: انا
   never_spam: نحن لن نزعجك
   enter_country: أدخل اسم البلد اذا كنت خارج الولايات المتحدة
@@ -110,6 +113,10 @@ ar-SA:
   studiobar_flappy_body: اصنع و شارك لعبة فلابي الخاصة بك
   studiobar_teacher_title: صنع من أجل المدرسين
   studiobar_teacher_body: 'يعرض "استوديو التعليمات البرمجية Code Studio " في الفصل الدراسي الخاص بك'
+  studiobar_frozen_title: ساعة من البرمجة
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: أنا طالب
   contact_form_topic_parent: أنا والد
   contact_form_topic_teacher: أنا مدرس/ معلم
@@ -285,7 +292,7 @@ ar-SA:
   dashboard_sections_password_account_creation: كلمة المرور المنشئة من طرف الطلاب
   dashboard_sections_login_type_explanation: 'هذا الجدول يساعد على تفسير أي من أنواع تسجيل الدخول هذه، <b>صورة، كلمة، أو البريد الإلكتروني</b>، تريد أن تختار لمقطع.'
   dashboard_faq: الأسئلة الشائعة
-  code_hoc_coming: 'قريبا ساعة من البرمجة - 8 - 14 كانون الأول / ديسمبر !'
+  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: قم بالتسجيل للمشاركة خلال أسبوع تعليم علوم الحاسوب
   learn_more: التعرف على المزيد
   hoc2014_try_new_tutorials: جرّب الدروس الجديدة لساعة البرمجة

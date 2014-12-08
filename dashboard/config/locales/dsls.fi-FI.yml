@@ -33,8 +33,8 @@
         /script_assets/msm/unit6/blockstomath4.png: /script_assets/msm/unit6/blockstomath4.png
         ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): ((1 < x) JA (x < 5)) TAI
           ((8 < x) JA (x < 10))
-        ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): ((1 < x) and (x < 5)) or
-          ((8 < x) and (x < 10))
+        ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): ((1 < x) ja (x < 5)) tai
+          ((8 < x) ja (x < 10))
         ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): ((1 < x) && (x < 5)) || ((8
           < x) && (x < 10))
         Type the arithmetic expression here: Kirjoita aritmeettinen lauseke tähän

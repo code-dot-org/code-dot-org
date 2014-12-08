@@ -99,6 +99,9 @@
   participant_educator: Преподавател
   participant_engineer: Софтуерен инженер
   participant_other: Никое от горните
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Аз съм
   never_spam: Ние никога няма да ви изпратим спам
   enter_country: Въведете страна, ако се намирате извън САЩ
@@ -137,6 +140,10 @@
   studiobar_flappy_body: Направете и споделете своя собствена Flappy игра
   studiobar_teacher_title: За учители
   studiobar_teacher_body: Представете Code Studio в класната си стая
+  studiobar_frozen_title: Час на Кодирането
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Аз съм ученик
   contact_form_topic_parent: Аз съм родител
   contact_form_topic_teacher: Аз съм учител/обучител

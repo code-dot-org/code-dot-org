@@ -83,6 +83,9 @@
   participant_educator: 教育人員
   participant_engineer: 軟體工程師
   participant_other: 以上皆非
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: 我是
   never_spam: 我們永遠不會發送垃圾郵件
   enter_country: 如果在美國以外，輸入您的國家
@@ -119,6 +122,10 @@
   studiobar_flappy_body: 製作和分享你自己的Flappy遊戲
   studiobar_teacher_title: 為導師們製造
   studiobar_teacher_body: 在您的課室裡介紹編程工作室
+  studiobar_frozen_title: 一小時的程式設計課程
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: 我是位學生
   contact_form_topic_parent: 我是位家長
   contact_form_topic_teacher: 我是個老師/教育家
@@ -306,7 +313,7 @@
   carousel_heading_international: 使用你語言的教程
   carousel_heading_domestic: 可用的在英語教程
   carousel_heading_beginners: 適合初學者的教程
-  carousel_heading_javascript: 教 JAVAscript 的教案
+  carousel_heading_javascript: 教 JAVAscript 的自學教案
   carousel_heading_unplugged: 沒有設備或網際網路嗎？試試 '不插電'的電腦科學
   carousel_heading_devices: 手機和平板電腦的自學APPs
   carousel_heading_languages: 其他程式設計語言的自學教案

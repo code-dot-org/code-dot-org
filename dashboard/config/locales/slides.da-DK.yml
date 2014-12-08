@@ -44,9 +44,9 @@
           en plads frem i labyrinten.
       11:
         image: notes/hoc1_11.jpg
-        text: For at gøre mere end én handling, kan du trække mange blokke til dit
-          arbejdsområde og lægge dem sammen. Angry Bird'en vil udføre kommandoerne
-          fra top til bund.
+        text: For at udføre mere end én handling, kan du trække mange blokke til dit
+          arbejdsområde og knytte dem sammen. Fuglen vil udføre kommandoerne fra top
+          til bund.
       12:
         image: notes/hoc1_12.jpg
         text: Hvis du kører et program og ønsker at ændre det og prøve igen, skal
@@ -220,45 +220,45 @@
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: Hej, mit navn er Saloni. Jeg bruger computer videnskab til at løse problemer
-          inden for sundhed og medicin. Lad os lære om "hvis ellers" blokken. Den
+        text: Hej, jeg hedder Saloni. Jeg bruger programmering til at løse problemer
+          inden for sundhed og medicin. Lad os lære om "hvis-ellers"-blokken. Den
           ligner "hvis"-blokken, men den har en ekstra del i slutningen, der siger
           "ellers".
       2:
         image: notes/hoc5_2.jpg
-        text: Hvis jeg sætte en "gå fremad" blok på stedet hvor der står "udfør" og
-          en "Drej til venstre" blok hvor der står "ellers" betyder at zombie vil
-          vælge mellem 2 muligheder. Hvis der er en vej fremad, vil zombien vil bevæge
-          sig fremad, og ellers (hvis der ikke er en vej fremad), vil zombien dreje
-          til venstre.
+        text: Hvis jeg placerer en "flyt fremad"-blok hvor der står "udfør" og en
+          "drej til venstre"-blok hvor der står "ellers", betyder det at zombien vil
+          vælge mellem to muligheder. HVIS der er en sti forude, vil zombien vil bevæge
+          sig fremad, og ELLERS (altså hvis der ikke er en sti forude), vil zombien
+          dreje til venstre.
       3:
         image: notes/hoc5_3.jpg
-        text: Ligesom "hvis"-blokken, kan vi sætte "hvis ellers" blokken ind i "gentag"
-          blokke, således at zombien bliver ved med at bevæge sig fremad og "hvis
-          ellers" blokken vil holde øje med om der er et sted at dreje.
+        text: Ligesom med "hvis"-blokken, kan vi sætte "hvis-ellers" blokke inden
+          i en "gentag"-blok,  så zombien fortsætter med at bevæge sig fremad, og
+          med "hvis-ellers"-blokken også holder øje med om der er et sted at dreje.
       4:
         image: notes/hoc5_4.jpg
-        text: Nå, flyt så de zombier hen hvor de hører hjemme!
+        text: Nå, få så de zombier hen hvor de hører hjemme!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
-        text: An if-else statement is a decision between two things. Let's see how
-          we can use an if-else statement with our buddy Scrat the squirrel.
+        text: En hvis-ellers sætning er et valg mellem to ting. Lad os se, hvordan
+          vi kan bruge en hvis-ellers sætning med vores ven, egernet Scrat.
       2:
         image: notes/saloni_ifelse_scrat2.jpg
-        text: This block looks the same as the "if" block, but there's an extra part
-          at the bottom that says "else". If I put a "move forward" block where it
-          says "do" and a "turn left" block where it says "else", that means Scrat
-          the squirrel will move forward if there's a path ahead. If there's not a
-          path ahead, Scrat will turn left.
+        text: Denne blok ligner en "hvis"-blok, men der er en ekstra del i bunden,
+          der siger "ellers". Hvis jeg sætter en "flyt fremad"-blok hvor der står
+          "udfør" og en "drej til venstre"-blok hvor der står "ellers", så betyder
+          det at egernet Scrat går videre, hvis der er en sti forude (fremad). Hvis
+          der ikke er en sti forude, vil Scrat dreje til venstre.
       3:
         image: notes/saloni_ifelse_scrat3.jpg
-        text: It's making a decision and doing one of the two actions based on that
-          decision. And just like "if" blocks, you can put "if-else" blocks inside
-          "repeat" blocks.
+        text: Det er at træffe et valg og udføre een af to handlinger baseret på dette
+          valg. Og ligesom "hvis"-blokke, kan du sætte "hvis-ellers"-blokke indeni
+          "gentag"-blokke.
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: Now let's help Scrat the squirrel get that acorn!
+        text: Lad os nu hjælpe egernet Scrat med at finde agern!
     function:
       1:
         image: notes/stage13_1.jpg
@@ -376,18 +376,20 @@
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
-        text: Hi, my name is Lyndsey. I model, act, and write my own apps. Let's use
-          code to join Anna and Elsa as they explore the magic and beauty of ice.
+        text: Hej, jeg hedder Lyndsey. Jeg er model, skuespiller, og skriver mine
+          egne apps. Lad os bruge kode til at udforske isens magi og skønhed, sammen
+          med Anna og Elsa.
       2:
         image: notes/frozen1_2.jpg
-        text: You'll create snowflakes and patterns as you ice skate and make a winter
-          wonderland that you can then share with your friends.
+        text: Du vil skabe snefnug og mønstre mens du skøjter og laver et eventyrligt
+          vinterlandskab, som du kan dele med dine venner.
       3:
         image: notes/frozen1_3.jpg
-        text: In the next hour, you're going to learn the basics of how to code. Traditional
-          programming is usually in text, but we'll use Blockly, which uses visual
-          blocks that you can drag and drop to write programs. This is how even university
-          students learn the basics. Under the hood, you're still creating code.
+        text: I den næste time vil du lære det grundlæggende i, hvordan man programmerer.
+          Traditionel programmering er normalt tekst-baseret, men vi vil bruge Blockly,
+          som bruger grafiske blokke, som du kan trække og slippe for at skrive programmer.
+          Også universitetsstuderende lærer det grundlæggende sådan. I baggrunden
+          opretter du stadig kode.
       4:
         image: notes/frozen1_4.jpg
         text: A program is a set of instructions that tells a computer what to do.
@@ -501,3 +503,75 @@
         image: notes/playlab_3.png
         text: And there are some blocks that do stuff when actors collide or are clicked.
           Check them out and have fun!
+    playlab_intro:
+      1:
+        image: notes/playlab_intro_1.png
+        text: We're going to create games using Play Lab. Good games have a story,
+          and every story has actors. We'll learn how to make our actors like witches,
+          alinens, and animals speak, move, and interact with each other. By the end
+          of this tutorial, you can build a game from scratch and share it with your
+          friends.
+      2:
+        image: notes/playlab_intro_2.png
+        text: Your screen is split into 3 main parts. On the left is the game space
+          where your program will run. The instructions for each level are written
+          below.
+      3:
+        image: notes/playlab_intro_3.png
+        text: The middle area is the toolbox, and each of these blocks is a piece
+          of code. The white space on the right is called the workspace and this is
+          where we'll build our program.
+      4:
+        image: notes/playlab_intro_4.png
+        text: To start off, you'll need to link your blocks to the orange "when run"
+          block. You can link multiple blocks together by dragging them out until
+          you see the yellow line, and then they'll snap together.
+      5:
+        image: notes/playlab_intro_5.png
+        text: In this first puzzle, our actor is a penguin and we'll be making it
+          say "Hello!" by dragging the say block out, linking it to the when run block,
+          and typing in "Hello." We can also make the penguin move by using the move
+          right and move left blocks. Once you have your blocks in place, hit the
+          run button to see what you've programmed.
+      6:
+        image: notes/playlab_intro_6.png
+        text: Get started and by the end, you'll be able to create your own game with
+          all kinds of players that can interact, turn happy or sad, score points,
+          or throw fireballs, or even vanish each other. It's all up to you and the
+          game you want to make.
+    playlab_events:
+      1:
+        image: notes/playlab_events_1.png
+        text: Now, we're going to learn about something that all game programmers
+          use everyday. They're called events. An event tells your program to listen
+          for when something happens. When that thing happens, it performs an action.
+      2:
+        image: notes/playlab_events_2.png
+        text: Some examples of events are listening for a mouse click, an arrow button,
+          or a tap on the screen.
+      3:
+        image: notes/playlab_events_3.png
+        text: Here, we're going to make the space bot greet the earthlings when a
+          player clicks on him. We'll use the "when clicked" block and attach the
+          "say" block to it. When the player clicks on the space bot, everything attached
+          to this "when clicked" event block will be performed. What does your alien
+          say?
+      4:
+        image: notes/playlab_events_4.png
+        text: There are also "when arrow" blocks. If you link the "move" blocks to
+          these, you can start to move your actors up, down, left, or right. Step
+          by step, your game is getting more interactive.
+    playlab_repeat_forever:
+      1:
+        image: notes/playlab_repeat_forever_1.png
+        text: This is the "repeat forever" block. Anything inside this block will
+          happen forever in the game.
+      2:
+        image: notes/playlab_repeat_forever_2.png
+        text: If we want an actor to do something repeatedly, without the player having
+          to do anything, we'll put those blocks inside the "repeat forever" block.
+      3:
+        image: notes/playlab_repeat_forever_3.png
+        text: In this next puzzle, our goal is to help the wizard patrol the boundaries
+          of the kingdom, left and right continuously. Learning how the repeat commands
+          works, will save you a ton of time later when you build your own game.

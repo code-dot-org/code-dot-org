@@ -87,6 +87,9 @@
   participant_educator: 교사입니다.
   participant_engineer: 소프트웨어 엔지니어입니다.
   participant_other: 아무것도 해당되지 않습니다.
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: 저는
   never_spam: 스팸 메일을 보내지 않습니다
   enter_country: 미국이 아닌 경우 국가명 입력
@@ -124,6 +127,10 @@
   studiobar_flappy_body: 자신만의 플래피 게임을 만들고 공유하세요.
   studiobar_teacher_title: 선생님용
   studiobar_teacher_body: 학급에 Code Studio 소개하기
+  studiobar_frozen_title: Hour of Code
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: 학생입니다.
   contact_form_topic_parent: 부모입니다.
   contact_form_topic_teacher: 교사/교육자입니다.

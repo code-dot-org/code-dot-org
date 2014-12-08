@@ -171,19 +171,19 @@ it:
         desc: 'Anche se molti pensano al sistema binario come costituito rigorosamente da zeri e uni, nelle precedenti lezioni gli studenti hanno visto che le informazioni possono essere rappresentate in una varietà di opzioni binarie.  Questa lezione sviluppa ulteriormente questo concetto illustrando come un computer possa memorizzare informazioni ancora più complesse (ad esempio immagini e colori) in formato binario.'
       VideoGamesCoordinatePlanes:
         title: Videogiochi e Piani Cartesiani
-        desc: Descrizione della lezione Videogiochi e Piani Coordinati
+        desc: Descrizione della lezione Videogiochi e Piani Cartesiani
       Contracts:
         title: Contratti
-        desc: Descrizione della lezione Contratti offline
+        desc: 'Descrizione della lezione "senza rete": Contratti'
       DesignRecipe:
         title: La Ricetta della Progettazione
-        desc: Descrizione della lezione Progettazione di Ricette
+        desc: 'Descrizione della lezione: La Ricetta della Progettazione'
       Booleans:
-        title: Valori booleani
-        desc: Descrizione della lezione sui Booleani
+        title: Valori Booleani
+        desc: 'Descrizione della lezione: Valori Booleani'
       ConditionalsPiecewiseFunctions:
         title: Istruzioni Condizionali e Funzioni a Tratti
-        desc: Descrizione della lezione sui Condizionali e le Funzioni a Tratti
+        desc: 'Descrizione della lezione: Istruzioni Condizionali e Funzioni a Tratti'
       CollisionDetection:
-        title: Rilevamento delle collisioni
-        desc: Descrizione della lezione sulla Rilevazione delle collisioni
+        title: Rilevamento delle Collisioni
+        desc: 'Descrizione della lezione: Rilevamento delle Collisioni'

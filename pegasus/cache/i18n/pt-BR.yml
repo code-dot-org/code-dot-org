@@ -95,6 +95,9 @@
   participant_educator: Educador
   participant_engineer: Engenheiro de Software
   participant_other: Outro
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Eu sou um
   never_spam: Nunca vamos enviar spam para você
   enter_country: Informe o país se você mora fora dos Estados Unidos
@@ -133,6 +136,10 @@
   studiobar_flappy_body: Faça e compartilhe seu próprio jogo Flappy bird
   studiobar_teacher_title: Feito para professores
   studiobar_teacher_body: Apresente o Code Studio em sua sala de aula
+  studiobar_frozen_title: Hora do Código
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Sou um estudante
   contact_form_topic_parent: Sou um pai
   contact_form_topic_teacher: Sou um professor/educador

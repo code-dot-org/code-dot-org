@@ -117,12 +117,12 @@
         - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: Happy Maps
+        title: Весёлые карты
         desc: Ученики создают простые алгоритмы (наборы инструкций) для перемещения
           персонажа через лабиринт с помощью одной команды.
         video: C1_happy_maps_unplugged
       MoveIt:
-        title: Move it, Move it
+        title: Двигайся, двигайся
         desc: Ученики создают простые алгоритмы (наборы инструкций) для перемещения
           персонажа через лабиринт с помощью одной команды.
         video: C1_moveitmoveit_unplugged

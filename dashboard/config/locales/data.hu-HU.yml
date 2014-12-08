@@ -342,9 +342,9 @@
           és távolítsa el a födhányásokat.
         maze_karel_debug_function_1: Mit kell változtatni ezen a programon, hogy segítsen
           eltávolítani a földkupacokat?
-        maze_karel_debug_function_2: Tudja Ön debuggolni  ez a programot nekem, hogy
-          a mezőmet elegyengesse?
-        maze_karel_debug_function_3: 'Szerkessze át a programot, hogy eltüntessek
+        maze_karel_debug_function_2: Ki tudnád javítani nekem ezt a programot úgy,
+          hogy a területemet el tudjam egyengetni?
+        maze_karel_debug_function_3: 'Szerkeszd át a programot úgy, hogy eltüntessek
           minden földkupacot a földemről. '
         turtle_5_1: Próbálja meg futtatni ezt a programot, és változtassa meg, hogy
           lássa, mi történik. Ki tudja kitalálni, hogyan fog működni? (Akár törölheti
@@ -545,23 +545,27 @@
         studio_k1_5: Hozzáadnál egy blokkot, hogy boldoggá tedd a polipot?
         studio_k1_6: Hozz létre egy saját történetet! Mozgasd a macskát és a kutyát,
           mindeközben beszéltesd őket!
-        maze_wordsearch_k_1: Move me to spell the word EAST
-        maze_wordsearch_k_2: Move me to spell the word SOUTH
-        maze_wordsearch_k_3: Move me to spell the word WEST
-        maze_wordsearch_k_4: Move me to spell the word NORTH
-        maze_wordsearch_k_6: Move me East and then South to spell the word JUMP
-        maze_wordsearch_k_9: Move me one way, then another to spell the word CODE
-        maze_wordsearch_k_13: Move me one way, then another to spell the word DEBUG
-        maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
-        maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
-        maze_wordsearch_k_20: This is a test! Move me one way, then another to spell
-          the word STORY
-        webapp_ec_simple: Create your web app by using createHtmlBlock.
-        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
-          it in the new "penColour" block.'
-        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
-          a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
-          Have fun!'
+        maze_wordsearch_k_1: Mozgass engem úgy, hogy az EAST szót betűzzem
+        maze_wordsearch_k_2: Mozgass engem úgy, hogy a SOUTH szót betűzzem
+        maze_wordsearch_k_3: Mozgass engem úgy, hogy a WEST szót betűzzem
+        maze_wordsearch_k_4: Mozgass engem úgy, hogy a NORTH szót betűzzem
+        maze_wordsearch_k_6: Mozgass engem Keletre majd Délre hogy a JUMP szót betűzzem
+        maze_wordsearch_k_9: Mozgass engem egy irányba, majd egy másikba hogy a CODE
+          szót betűzzem
+        maze_wordsearch_k_13: Mozgass engem egy irányba, majd egy másikba hogy a DEBUG
+          szót betűzzem
+        maze_wordsearch_k_15: Mozgass engem egy irányba, majd egy másikba hogy az
+          ABOVE szót betűzzem
+        maze_wordsearch_k_16: Mozgass engem egy irányba, majd egy másikba hogy a BELOW
+          szót betűzzem
+        maze_wordsearch_k_20: Ez egy próba! Mozgass engem egy irányba, majd egy másikba
+          hogy a STORY szót betűzzem
+        webapp_ec_simple: Hozz létre egy web alkalmazást a  createHtmlBlock használatával.
+        turtle_ec_1_2: 'Most rajzolj egy négyzetet. Megjegyzés: használd a kedvenc
+          színedet úgy, hogy azt az új "penColor" blokkból veszed ki.'
+        turtle_ec_1_10: 'Megcsináltad! Most rajzolj bármit amit csak akarsz. Néhány
+          szórakoztató ötlet: egy pálcikaember, hópehely, vagy spirál. Próbáld ki
+          az új "penWidth" blokkot is. Jó szórakozást!'
         studio_ec_sandbox: Hozz létre saját játékot! Ha elkészültél, kattints a Befejezés
           gombra, hogy barátaid is kipróbálhassák a játékodat a telefonjaikon!
     levelbuilder:
@@ -653,11 +657,11 @@
           using the turn right block and move forward block. Each side should be 100
           pixels long.
       Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel
-          long sides.
+        instructions: Rajzold le ezt a gyémántot 120 és 60 fokos szögekkel, valamint
+          150 pixel hosszúságú oldalakkal.
       Standalone_Artist_3:
-        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree
-          turns?
+        instructions: Le tudod rajzolni ezt a hexagont 100 pixeles oldalakkal és 60
+          fokos fordulatokkal?
       Standalone_Artist_4:
         instructions: Now you've got a new block to play with, the loop. This will
           repeat a set of commands. What happens if you loop these commands 6 times?
@@ -722,7 +726,7 @@
         C1_maze_debugging: 'Labirintus: hibakeresés'
         C1_bee_level_intro: Méh - Bevezető
         C1_artist_intro: Művész Intro
-        C1_spelling_bee_intro: Spelling Bee Intro
+        C1_spelling_bee_intro: Spelling Bee Bevezetés
         C1_zuck_repeat_loop: 'Labirintus: ciklusok'
         C1_bee_loops: Méh Ciklusok
         C1_maze_loops: 'Labirintus: ciklusok'
@@ -763,14 +767,26 @@
         C3_crowdsourcing: Csoportos megoldás
         C3_functional_suncatchers: Funkcionális Dekor
         C3_songwriting_with_parameters: Dalszerzés paraméterekkel
-        C4_artist_math: Művészi programozás a matematika segítségével
-        C4_create_functions: Függvények létrehozása
-        C4_edit_functions: Függvények szerkesztése
+        C4_intro: Introduction
+        C4_bee_conditional: Méh Feltételes mód
+        C4_variables_artist: Variables - Artist
+        C4_variables_playlab: Variables - Play Lab
         C4_for_loops: Számláló ciklusok
-        C4_variables: Változók
+        C4_math_artist: Programming the Artist with Math
+        C4_function_edit: Editing Functions
+        C4_function_create: Creating Functions
+        C4_unplugged_algorithms: Algorithms with Tangrams
+        C4_unplugged_madlibs: Mad Libs
+        C4_unplugged_variables: Variables in Envelopes
+        C4_unplugged_forloops: Számláló ciklusok
+        C4_unplugged_parameters: Dalszerzés paraméterekkel
+        C4_unplugged_binary: Binary
         frozen_intro: Bevezetés a Kódolás Órájába
         frozen_loops: Bevezetés a ciklusokba
         frozen_functions: Bevezetés a függvényekbe
+        playlab_intro: Introduction to Play Lab
+        playlab_events: Play Lab Events
+        playlab_repeat_forever: Play Lab Repeat Forever
     callout:
       text:
         drag_blocks: Húzz egy „előrelépni” blokkot, és csatold a másik blokk alá
@@ -789,9 +805,10 @@
         jigsaw_click: Kattints erre a blokkra!
         move_elsa_forward: Húzd az "Előre lépni" blokkot és illeszd azt a "Futtatás"
           blokk alá ahhoz, hogy Elza előre lépjen
-        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
-          determines how much Elsa turns
-        replace_questions: Use the drop-down to replace "???" with a number
+        turn_elsa: Használd a "Turn" blokkot, Elsa elfordításához. A legördülő menüben
+          lévő szám határozza meg, hogy Elsa mennyire fordul el
+        replace_questions: Használd a legördülő menüt hogy helyettesítsd a "???" egy
+          számmal
         replace_questions_degree: Use the drop-down to replace "???" with the correct
           degree to turn
         repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
@@ -812,40 +829,61 @@
         actions_category: The tool box got a new look! The "Actions" blocks are in
           here now.
         draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
-        edit_function: Use this button to edit the function.
+        edit_function: Kattints ide a függvényed szerkesztéséhez!
         create_function: Click here to open the "Functions" flyout, then click the
           "Create a Function" button.
         house_hint: It's ok if the picture doesn't look like a house yet. We will
           fix it in the next puzzle.
-        edit_draw_square: Use this button to edit the function and add the loop.
+        edit_draw_square: Használd ezt a gombot a funkció szerkesztéséhez és a ciklus
+          hozzáadásához.
         edit_get_nectar: 'Módosítsd e gomb segítségével a függvényt és változtasd
           meg az irányt: a méh irányt fog váltani, hogy begyűjtse a nektárt!'
         logic_category: Open the "Logic" flyout to find the "if/else" block.
         length_parameter: Frissítenéd ezt a függvényt, hogy benne legyen a "hossza"
           paraméter?
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
-          each circle.
-        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
-          and change the size.
-        frozen_snowflake_branch: Use the "create a snowflake branch" block
-        frozen_create_square: Attach more blocks here to create a square
-        playlab_drag_say: Drag the "say" block here and type "hello"
-        playlab_use_twice: Use this block twice and remember to change the actor number
-        playlab_move_girl: Use the "move right" block to move Tennis Girl
+        frozen_diamond_repeat: Használd az Ismétlő blokkot hogy létrehozd ezt a formát.
+        frozen_circle_function_in_circle_turn: Ne felejtsd el elfordulni az egyes
+          körök létrehozása után.
+        frozen_circle_function_with_parameter_circle: Használd az "egy kör létrehozása"
+          blokkot, és változtasd meg a méretét.
+        frozen_snowflake_branch: Használd az "egy hópehely ág készítő" blokkot
+        frozen_create_square: Csatolj több blokkot ide egy négyzet  létrehozásához
+        playlab_drag_say: Húzzd ide a "mondani" blokkot, és írd be hogy "hello"
+        playlab_use_twice: Használd kétszer ezt a blokkot, és ne feledd módosítani
+          a szereplő számát
+        playlab_move_girl: Használd a "jobbra mozgatás" blokkot a Tenisz lány mozgatásához
         playlab_play_sound: Itt add hozzá a "hang lejátszása" blokkot!
         playlab_arrow_keys: Remember to use these to move the witch after clicking
           on Run
-        playlab_add_move: Add "move" blocks inside this repeat block
-        playlab_add_score: Add score blocks here
-        playlab_add_blocks: Add your blocks here
-        set_variable: Drag a number block here to set your variable
-        place_variable: Drag your variable inside this block
-        bee_for_loop: Drag the largest number of nectar you want the bee to collect
-          here
-        place_counter_variable: Drag your counter variable inside this block
-        function_editor_draw_square: This is your function definition. These blocks
-          run everytime you use the "draw a square" block
-        change_here: Make your change here
-        write_draw_square_function: Drag blocks from the toolbox into here that draw
-          a square
+        playlab_add_move: Adj "menj" blokkot ebbe az ismétlés blokkba
+        playlab_add_score: Add hozzá a pontszám blokkokat itt!
+        playlab_add_blocks: Add hozzá a blokkokat itt!
+        set_variable: Húzz egy szám blokkot ide, hogy beállítsd a változódat
+        place_variable: Húzd a változódat a blokkba
+        bee_for_loop: Húzd a legnagyobb mennyiségű nektárt, amennyit szeretnél hogy
+          a méh összegyűjtsön
+        place_counter_variable: Húzd a számláló változót a blokkba
+        function_editor_draw_square: Ez itt a függvénydeklarációd. Ezek a blokkok
+          lefutnak minden egyes alkalommal, amikor használod a "négyzet rajzolása"
+          blokkot.
+        change_here: Végezd el a változtatásokat itt!
+        write_draw_square_function: Húzd át az eszközkészletből a blokkokat ide egy
+          négyzet rajzolásához!
+        write_draw_triangle_function: Drag blocks from the toolbox into here that
+          draw a triangle
+        edit_add_parameter: Click edit to add a parameter in your function
+        add_and_drag_parameter: Write in the name of your parameter here, click add,
+          and then drag it into your function definition
+        fill_in_actor: Fill in the ??? with numbers that correspond to each actor
+          (1, 2, and 3)
+        repeat: Put blocks inside the loop to repeat commands
+        if_bee_nectar: Use the "if" block to decide if the bee should get nectar
+        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower,
+          and makes honey if it's not a flower
+        repeat_full_circle: Enter in the number of times the zombie has to move to
+          make a full circle
+        place_length_variable: Drag the length variable here to replace the question
+          marks
+        arrows_move_actor: Use the arrows to move the actor
+        right_arrow_fireball: Use the right arrow to shoot fireballs
+        name_function: Write the name of your function here

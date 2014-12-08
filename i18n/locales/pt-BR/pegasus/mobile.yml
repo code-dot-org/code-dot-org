@@ -1,4 +1,4 @@
-pt-BR:
+pt:
   hello: Olá, mundo
   select_language: Selecione seu idioma
   computer_science: Ciência da Computação
@@ -41,7 +41,7 @@ pt-BR:
   go: Ir
   thank_you_: Obrigado!
   congratulations: Parabéns!
-  congratulations_on_completing_hoc: Parabéns pela conclusão da Hora do Código.
+  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   get_a_certificate_of_achievement: Obter um certificado de conclusão
   enter_valid_email: Informe um endereço de email válido
   get_a_certificate_message: "Vamos enviar-lhe um certificado e informações sobre como <a href='/learn/beyond'>aprender além de Uma Hora</a>"
@@ -65,7 +65,7 @@ pt-BR:
   thanks_for_voting: Obrigado por votar!
   share_on_facebook: Compartilhar no Facebook
   share_on_twitter: Compartilhar no Twitter
-  beyond_an_hour: 'Além da Hora do Código >'
+  beyond_an_hour: Beyond an Hour of Code
   get_started: Começar
   i_agree: Aceito
   participant_select: '- Selecionar -'
@@ -74,6 +74,9 @@ pt-BR:
   participant_educator: Educador
   participant_engineer: Engenheiro de Software
   participant_other: Outro
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Eu sou um
   never_spam: Nunca vamos enviar spam para você
   enter_country: Informe o país se você mora fora dos Estados Unidos
@@ -110,6 +113,10 @@ pt-BR:
   studiobar_flappy_body: Faça e compartilhe seu próprio jogo Flappy bird
   studiobar_teacher_title: Feito para professores
   studiobar_teacher_body: Apresente o Code Studio em sua sala de aula
+  studiobar_frozen_title: Hora do Código
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Sou um estudante
   contact_form_topic_parent: Sou um pai
   contact_form_topic_teacher: Sou um professor/educador
@@ -283,7 +290,7 @@ pt-BR:
   dashboard_sections_password_account_creation: Senha de texto criada pelo aluno
   dashboard_sections_login_type_explanation: 'Esta tabela ajuda a explicar qual desses tipos de login, <b>imagem, palavra ou e-mail</b>, você vai querer escolher para uma seção.'
   dashboard_faq: Tire suas dúvidas
-  code_hoc_coming: A Hora do Código está chegando, de 8 a 14 de dezembro!
+  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: Inscreva-se para participar durante a Semana da Educação em Ciência da Computação
   learn_more: Saiba Mais
   hoc2014_try_new_tutorials: Experimente nossos novos tutoriais da Hora do Código

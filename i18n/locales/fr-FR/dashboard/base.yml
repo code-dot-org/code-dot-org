@@ -289,8 +289,8 @@ fr:
       email: Envoyer par email
     rollup: Tableau de bord de progression
     activity: Activité récente de la classe
-    user_not_found: "L'enseignant ou l'élève n'a pas été trouvé"
-    cant_remove_student_no_email: "%{student_name} ne peut être retiré de votre liste d'étudiants car %{student_name} n'a pas enregistré d'adresse de messagerie"
+    user_not_found: "Le professeur ou l'élève n'a pas été trouvé"
+    cant_remove_student_no_email: "%{student_name} ne peut être retiré de votre liste d'élèves car %{student_name} n'a pas enregistré d'adresse de messagerie"
     cant_remove_teacher_no_email: "%{teacher_name} ne peut être retiré de votre liste d'enseignants car vous n'avez pas enregistré d'adresse de messagerie"
     student_teacher_disassociated: "%{teacher_name} n'est plus considéré comme l'enseignant de %{student_name}"
   user:

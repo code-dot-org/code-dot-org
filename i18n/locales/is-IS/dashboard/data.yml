@@ -296,13 +296,13 @@ is:
         studio_c3_game_6: Getur þú bætt við kubbum til að breyta bakgrunni og hraða mörgæsarinnar og síðan fært hana með örvarlyklunum þar til þú skorar?
         studio_c3_game_7: Búðu til þinn eigin leik. Smelltu á Ljúka þegar hann er tilbúinn svo vinir þínir geti prófað hann á sínum símum.
         studio_playlab_1: 'Mörgæsin vill segja "hæ" - getur þú hjálpað henni?'
-        studio_playlab_2: 'Hellisstrákur (leikmaður 1) og Hellisstelpa (leikmaður 2) vilja segja "hæ" við hvort annað. Getur þú hjálpað þeim með því að nota "segja" kubbinn tvisvar?'
+        studio_playlab_2: 'Hellisstrákur (leikmaður 1) og Hellisstelpa (leikmaður 2) vilja segja "hæ" við hvort annað. Getur þú hjálpað þeim með því að nota "segir" kubbinn tvisvar?'
         studio_playlab_3: Getur þú hjálpað Tennisstelpu að ná til flaggsins?
         studio_playlab_4: Getur þú hjálpað Tennisstrák (leikmanni 1) að komast til Tennisstelpu (leikmanns 2) og spilað hljóð þegar hann kemst þangað?
-        studio_playlab_5: 'Getur þú látið Geimróbóta segja "Sælar jarðverur" þegar smellt er á hann? Ekki gleyma að smella á hann eftir að þú smellir á Keyra'
+        studio_playlab_5: 'Getur þú látið Geimróbóta segja "Kveðja til jarðarbúa" þegar smellt er á hann? Ekki gleyma að smella á hann eftir að þú smellir á Keyra'
         studio_playlab_6: Getur þú látið Nornina hreyfast og ná öllum eldhnöttunum með því að nota upp/niður/hægri/vinstri örvarlyklana?
         studio_playlab_7: '"Endurtaka endalaust" kubburinn lætur kóða keyra án enda. Getur þú sett kubba í hann til að láta vitkann hreyfast stöðugt til hægri og vinstri?'
-        studio_playlab_8: Getur þú bætt við kubbi til að skora stig og kubbi til að spila hljóð þegar einhyrningurinn rekst á vitkann, og síðan fært hann með örvarlyklunum þar til þú skorar?
+        studio_playlab_8: 'Getur þú bætt við kubbum til að skora stig og  spila hljóð þegar einhyrningurinn rekst á vitkann, og síðan fært hann með örvarlyklunum þar til þú skorar?'
         studio_playlab_9: Settu bakgrunn fyrir innrás geimvera og auktu hraða Geimróbóta svo hann komist fljótar til geimverunnar. Færðu hann svo með örvarlyklunum til geimverunnar svo hann geti varað alla við innrásinni
         studio_playlab_10: Búðu til þinn eigin leik. Smelltu á Ljúka þegar hann er tilbúinn svo vinir þínir geti prófað hann á sínum símum.
         studio_full_sandbox: Búðu til þinn eigin leik. Smelltu á Ljúka þegar hann er tilbúinn svo vinir þínir geti prófað hann á sínum símum.
@@ -474,14 +474,26 @@ is:
         C3_crowdsourcing: Hópvistun
         C3_functional_suncatchers: Sólarskraut með föllum
         C3_songwriting_with_parameters: Lagasmíð með stikum
-        C4_artist_math: Forritun listamanns með stærðfræði
-        C4_create_functions: Gerð falla
-        C4_edit_functions: Breyting falla
+        C4_intro: Introduction
+        C4_bee_conditional: Skilyrði býflugu
+        C4_variables_artist: 'Variables - Artist'
+        C4_variables_playlab: 'Variables - Play Lab'
         C4_for_loops: Frá lykkjur
-        C4_variables: Breytur
+        C4_math_artist: Programming the Artist with Math
+        C4_function_edit: Editing Functions
+        C4_function_create: Creating Functions
+        C4_unplugged_algorithms: Algorithms with Tangrams
+        C4_unplugged_madlibs: Mad Libs
+        C4_unplugged_variables: Variables in Envelopes
+        C4_unplugged_forloops: Frá lykkjur
+        C4_unplugged_parameters: Lagasmíð með stikum
+        C4_unplugged_binary: Binary
         frozen_intro: Kynning á Klukkustund kóðunar
         frozen_loops: Kynning á lykkjum
         frozen_functions: Kynning á föllum
+        playlab_intro: Introduction to Play Lab
+        playlab_events: Play Lab Events
+        playlab_repeat_forever: Play Lab Repeat Forever
     callout:
       text:
         drag_blocks: 'Dragðu "færa" kubb og festu hann neðan í hinn kubbinn'
@@ -521,7 +533,7 @@ is:
         frozen_circle_function_with_parameter_circle: 'Notaðu "búa til hring" kubbinn og breyttu stærðinni.'
         frozen_snowflake_branch: 'Notaðu "búa til grein snjókorns" kubbinn'
         frozen_create_square: Bættu við fleiri kubbum hér til að búa til ferning
-        playlab_drag_say: 'Dragðu "segja" kubbinn hingað og skrifaðu "hæ"'
+        playlab_drag_say: 'Dragðu "segir" kubbinn hingað og skrifaðu "hæ"'
         playlab_use_twice: Notaðu þennan kubb tvisvar og mundu að breyta númeri leikmanns
         playlab_move_girl: 'Notaðu "færa til hægri" kubbinn til að færa Tennisstelpu'
         playlab_play_sound: 'Bættu "spila hljóð" kubbi við hér'
@@ -536,3 +548,16 @@ is:
         function_editor_draw_square: 'Þetta er skilgreiningin þín fyrir fall. Þessir kubbar keyra í hvert skipti sem þú notar "teikna ferning" kubbinn'
         change_here: Gerðu breytinguna hér
         write_draw_square_function: Dragðu hingað kubba úr verkfærunum svo þeir teikni ferning
+        write_draw_triangle_function: Drag blocks from the toolbox into here that draw a triangle
+        edit_add_parameter: Click edit to add a parameter in your function
+        add_and_drag_parameter: Write in the name of your parameter here, click add, and then drag it into your function definition
+        fill_in_actor: Fill in the ??? with numbers that correspond to each actor (1, 2, and 3)
+        repeat: Put blocks inside the loop to repeat commands
+        if_bee_nectar: 'Use the "if" block to decide if the bee should get nectar'
+        if_else_bee: |-
+          Use the "if/else" block so that the Bee gets nectar from a flower, and makes honey if it's not a flower
+        repeat_full_circle: Enter in the number of times the zombie has to move to make a full circle
+        place_length_variable: Drag the length variable here to replace the question marks
+        arrows_move_actor: Use the arrows to move the actor
+        right_arrow_fireball: Use the right arrow to shoot fireballs
+        name_function: Write the name of your function here

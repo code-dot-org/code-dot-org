@@ -320,12 +320,12 @@
           Variables: Променливи
           For Loops: За циклите
         potus:
-          title: special
-          description_short: special
-          description: special
-          Special: Special
+          title: специален
+          description_short: специален
+          description: специален
+          Special: Специален
         special:
-          title: special
-          description_short: special
-          description: special
-          Special: Special
+          title: специален
+          description_short: специален
+          description: специален
+          Special: Специален

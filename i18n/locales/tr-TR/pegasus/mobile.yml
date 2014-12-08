@@ -41,7 +41,7 @@ tr-TR:
   go: Git
   thank_you_: Teşekkür ederiz!
   congratulations: Tebrikler!
-  congratulations_on_completing_hoc: "Bir KOD SAATİ'ni tamamladığınız için tebrikler."
+  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   get_a_certificate_of_achievement: Başarı belgesi alın
   enter_valid_email: Lütfen geçerli bir e-posta adresi girin
   get_a_certificate_message: "Sana <a href='/learn/beyond'>Bir Saatte Öğren</a> hakkında bir belge ve bilgi göndereceğiz"
@@ -65,7 +65,7 @@ tr-TR:
   thanks_for_voting: Oylama için teşekkürler!
   share_on_facebook: "Facebook'ta paylaş"
   share_on_twitter: "Twitter'da paylaş"
-  beyond_an_hour: "Kod Saati'nin Ötesinde"
+  beyond_an_hour: Beyond an Hour of Code
   get_started: Başlayın
   i_agree: Kabul ediyorum
   participant_select: -Seçiniz-
@@ -74,6 +74,9 @@ tr-TR:
   participant_educator: Eğitmen
   participant_engineer: Yazılım Mühendisi
   participant_other: Yukarıdakilerden Hiçbiri
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Ben bir
   never_spam: Biz asla seni spamlamayacağız
   enter_country: "Eğer ABD'nin dışındaysanız ülkenizi girin"
@@ -110,6 +113,10 @@ tr-TR:
   studiobar_flappy_body: Kendi Flappy Bird oyununu yap ve paylaş
   studiobar_teacher_title: Öğretmenler için
   studiobar_teacher_body: "Sınıfınıza Code Studio 'yu tanıtın"
+  studiobar_frozen_title: Saat Kodu
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Bir öğrenciyim
   contact_form_topic_parent: Bir ebeveynim
   contact_form_topic_teacher: Bir öğretmen/eğitimciyim
@@ -285,7 +292,7 @@ tr-TR:
   dashboard_sections_password_account_creation: Öğrencinin oluşturduğu metin şifresi
   dashboard_sections_login_type_explanation: 'Bu tablo; seçmek istediğiniz kısımla ilgili oturum açma tiplerini, <b> resim, yazı ya da mail adresi gibi </b>, açıklamaya yardımcı olur.'
   dashboard_faq: Sık sorulan sorular
-  code_hoc_coming: Hour of Code geliyor, 8-14 Aralık!
+  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: "CS Education Week' e katılmak için kaydolun."
   learn_more: Daha Fazla Bilgi Edinin
   hoc2014_try_new_tutorials: Yeni Hour of Code eğitimlerimizi deneyin

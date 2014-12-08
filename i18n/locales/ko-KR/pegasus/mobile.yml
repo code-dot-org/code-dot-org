@@ -41,7 +41,7 @@ ko-KR:
   go: 시작하기
   thank_you_: 감사합니다!
   congratulations: 축하합니다!
-  congratulations_on_completing_hoc: 축하합니다! One Hour of Code 를 완료하셨습니다.
+  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   get_a_certificate_of_achievement: 인증서 받기
   enter_valid_email: 이메일을 정확히 입력해 주세요
   get_a_certificate_message: "인증서와 <a href='/learn'>Learn beyond One Hour</a> 에 대한 정보를 보내드립니다"
@@ -65,7 +65,7 @@ ko-KR:
   thanks_for_voting: 투표해 주셔서 감사합니다!
   share_on_facebook: Facebook 에 공유하기
   share_on_twitter: Twitter 에 공유하기
-  beyond_an_hour: 'Hour of Code를 넘어서 >'
+  beyond_an_hour: Beyond an Hour of Code
   get_started: '시작:'
   i_agree: 동의합니다
   participant_select: '- 선택 -'
@@ -74,6 +74,9 @@ ko-KR:
   participant_educator: 교사입니다.
   participant_engineer: 소프트웨어 엔지니어입니다.
   participant_other: 아무것도 해당되지 않습니다.
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: 저는
   never_spam: 스팸 메일을 보내지 않습니다
   enter_country: 미국이 아닌 경우 국가명 입력
@@ -110,6 +113,10 @@ ko-KR:
   studiobar_flappy_body: 자신만의 플래피 게임을 만들고 공유하세요.
   studiobar_teacher_title: 선생님용
   studiobar_teacher_body: 학급에 Code Studio 소개하기
+  studiobar_frozen_title: Hour of Code
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: 학생입니다.
   contact_form_topic_parent: 부모입니다.
   contact_form_topic_teacher: 교사/교육자입니다.
@@ -283,7 +290,7 @@ ko-KR:
   dashboard_sections_password_account_creation: 학생이 만든 텍스트 암호
   dashboard_sections_login_type_explanation: '이 표는 로그인 유형, <b>그림, 문자, 이메일</b> 등에 대한 내용입니다. 수업에 필요한 경우 선택적으로 사용할 수 있습니다.'
   dashboard_faq: 자주 묻는 질문
-  code_hoc_coming: 'Hour of Code가 곧(12.08 - 14) 시작됩니다!'
+  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: CS Education Week 기간 동안의 활동을 신청하세요.
   learn_more: 더 알아보기
   hoc2014_try_new_tutorials: 새로운 Hour of Code 튜토리얼을 경험해 보세요.
