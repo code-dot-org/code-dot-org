@@ -50,3 +50,6 @@ Create games on the PC and XBox via a simple visual programming language. Can be
 
 ### [Scratch](http://scratched.media.mit.edu/)
 Programming language that makes it easy to create your own interactive stories, animations, games, music and art - and share your creations on the web. 
+
+### [AgentCubes](http://sgda.cs.colorado.edu/arcade/?q=hour_of_code)
+Imagine a tool that allows you to turn 2D images into 3D shapes. Use AgentCubes online, the world's first 3D web-based programming & modeling tool, to learn to program by creating and sharing exciting 3D games. Rule your world!

@@ -70,7 +70,7 @@ module LevelsHelper
     @autoplay_video_info = video_info(autoplay_video) unless params[:noautoplay]
   end
 
-  def select_and_remember_callouts(always_show)
+  def select_and_remember_callouts(always_show = false)
     session[:callouts_seen] ||= Set.new()
     available_callouts = []
     if @level.custom?
@@ -83,7 +83,7 @@ module LevelsHelper
         end
       end
     else
-      available_callouts = Callout.where(script_level: @script_level)
+      available_callouts = Callout.where(script_level_id: @script_level)
         .select(:id, :element_id, :qtip_config, :localization_key)
     end
     @callouts_to_show = available_callouts

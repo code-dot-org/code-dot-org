@@ -373,7 +373,8 @@
   more_resources_educators: Mais recursos para professores e educadores
   participants: participantes
   teachers_notes: Observações do Professor
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: 'Professores: leiam algumas notas importantes para educadores
+    aqui'
   previous: Anterior
   next: Próximo
   older_systems: Tutoriais que funcionam em sistemas mais antigos
@@ -455,13 +456,13 @@
   thinkersmithspanish_platformtext: Offline
   khan_platformtext: Navegadores Web modernos
   khanes_platformtext: Navegadores Web modernos
-  tynker_platformtext: Navegadores Web modernos
+  tynker_platformtext: Navegadores modernos (a continuação do curso é paga)
   scratch_platformtext: TODOS os navegadores
   lightbot_platformtext: TODOS os navegadores e iOS, Android ou console de jogos
   thinkersmith_platformtext: Offline
   condcards_platformtext: Offline
   lightbotintl_platformtext: iOS, Android (ou navegador Web)
-  codehs_platformtext: Navegadores modernos
+  codehs_platformtext: Navegadores modernos (a continuação do curso é paga)
   codecademy_platformtext: Navegadores Web modernos. Aplicativos para iOS, Android
   codecombat_platformtext: Navegadores Web modernos
   codemonkey_platformtext: Navegadores Web modernos
@@ -505,8 +506,7 @@
     da Web
   codecombat_shortdescription: Lute contra ogros para aprender sobre Python ou JavaScript
     neste épico jogo de programação!
-  codemonkey_shortdescription: Os alunos programam um macaco que pega bananas, e o
-    jogo se torna um pouco mais complicado a cada nível.
+  codemonkey_shortdescription: Os alunos programam um macaco para pegar bananas.
   codeavengers_shortdescription: Aprenda sobre a programação JavaScript em um navegador
     da Web
   processing_shortdescription: Tutorial de uma hora sobre a linguagem Processing
@@ -519,16 +519,16 @@
     aprender sobre programação.
   kodable_shortdescription: Um jogo divertido para iPad que ensina conceitos de programação
     de computador
-  tynkerapp_shortdescription: Aprenda a programar solucionando desafios divertidos,
-    além de criar seus próprios jogos para dispositivos móveis.
+  tynkerapp_shortdescription: 'Aprenda a programar resolvendo desafios divertidos
+    de programação. '
   robomindnl_shortdescription: Programe um robô virtual
   flappy_shortdescription: Crie seu próprio jogo - Flappy Bird, Shark, ou Submarine
   bitsbox_shortdescription: Programe uma série de aplicativos para jogar e compartilhar,
     usando JavaScript de verdade.
   makegameswithus_shortdescription: Crie um jogo para iPhone! Veja como ensinar novos
     movimentos para sua criatura usando programação!
-  touchdevelop_shortdescription: Codifique aplicativos móveis diretamente no seu smartphone,
-    tablet ou laptop
+  touchdevelop_shortdescription: 'Resolva desafios, crie jogos e aprenda a programar
+    diretamente no seu smartphone. '
   appinventor_shortdescription: Faça seu próprio aplicativo! (Apenas para Android)
   blockly_shortdescription: Faça o download de um arquivo ZIP aprender off-line
   thinkersmith2_shortdescription: Aprenda como os computadores utilizam 1s e 0s para
@@ -549,11 +549,10 @@
     autoexplicativo e conta com a participação de Bill Gates, Mark Zuckerberg, Angry
     Birds e Plants vs. Zombies. Aprenda sobre laços-repetição, condicionais e algoritmos
     básicos. Este tutorial está disponível em 34 idiomas.
-  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
+  thinkersmithspanish_longdescription: Usando um "Vocabulário-robô" pré-definido,
+    os alunos vão descobrir como orientar uns aos outros a concluir tarefas específicas
+    sem discuti-las primeiro. Esta aula ensina as crianças sobre a conexão entre símbolos
+    e ações, bem como sobre a habilidade individual de depuração.
   khan_longdescription: Aprenda os conceitos básicos da programação JavaScript enquanto
     cria desenhos divertidos com seus códigos. Você pode fazer isso sozinho ou com
     sua turma!
@@ -633,10 +632,10 @@
   kodable_longdescription: Kodable é um jogo autoexplicativo para iPad que apresenta
     os conceitos básicos da programação para crianças a partir de 5 anos. Ter um professor
     ou um dos pais por perto é o ideal, mas não é necessário.
-  tynkerapp_longdescription: Crie seus próprios jogos e compartilhe-os com amigos!
-    Solucione desafios de programação divertidos e aprenda os conceitos de programação
-    de cada nível. Personalize os jogos com personagens animados, diversos níveis
-    e propriedades valiosas. Muitas atividades divertidas para escolher!
+  tynkerapp_longdescription: Aprenda a programar resolvendo desafios divertidos de
+    programação. Crie jogos e histórias com facilidade usando gráficos temáticos,
+    mais de 10 kits de jogos e personagens personalizáveis. Não é necessário se conectar
+    à Internet. Você também pode acessar suas criações na Web.
   robomindnl_longdescription: 'Os alunos aprendem os conceitos básicos de programação,
     controlando seus próprios robôs virtuais. O curso on-line é totalmente completo,
     com breves apresentações, filmes, testes e orientação/dicas automáticas que ajudam
@@ -650,14 +649,12 @@
     as crianças menores programem JavaScript de verdade, e quanto mais avançado você
     estiver, mais longe irá.
   makegameswithus_longdescription: Aprenda a programar ao fazer um jogo para iPhone
-    usando uma das mais recentes linguagens de programação, ideal para iniciantes,
-    a Swift! Crie um jogo de ação inspirado em Pok&eacute;mon e programe para ensinar
-    novos movimentos à sua criatura. Você aprenderá a usar variáveis, métodos e objetos
-    para ajudar sua criatura a vencer!
-  touchdevelop_longdescription: Desenhos pirados, monstros voadores, flores giratórias...
-    crie aplicativos no seu dispositivo com o TouchDevelop, o ambiente perfeito para
-    criação de aplicativos móveis. Executável no iPhone, iPad, Android, Windows, Windows
-    Phone, Linux e Mac.
+    usando uma nova linguagem de programação ideal para iniciantes, chamada Swift!
+    Crie um jogo de ação inspirado em Pokémon e programe para ensinar novos movimentos
+    aos seus monstros. Você aprenderá a usar variáveis, métodos e objetos para ajudar
+    seu monstro a vencer!
+  touchdevelop_longdescription: 'O editor táctil o ajudará a criar arte de pixels,
+    resolver o desafio do urso ou fazer seu próprio jogo do pássaro saltador. '
   appinventor_longdescription: Tutoriais em vídeo rápidos e divertidos o ajudam a
     desenvolver três aplicativos simples para seu smartphone ou tablet Android. Elaborada
     tanto para iniciantes como para experientes, essa hora do código vai prepará-lo

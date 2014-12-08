@@ -70,6 +70,11 @@ Dashboard::Application.routes.draw do
   get '/home/gallery_activites', to: 'home#gallery_activities'
 
   post '/locale', to: 'home#set_locale', as: 'locale'
+  
+  get '/lang/it', to: 'home#set_locale', as: 'lang/it', locale: 'it-IT'
+  get '/flappy/lang/ar', to: 'home#set_locale', as: 'flappy/lang/ar', locale: 'ar-SA', return_to: '/flappy/1'
+  get '/playlab/lang/ar', to: 'home#set_locale', as: 'playlab/lang/ar', locale: 'ar-SA', return_to: '/s/playlab/stage/1/puzzle/1'
+  get '/artist/lang/ar', to: 'home#set_locale', as: 'artist/lang/ar', locale: 'ar-SA', return_to: '/s/artist/stage/1/puzzle/1'
 
   resources :levels do
     get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'

@@ -237,7 +237,7 @@
   dashboard_navigation_view_stats: Exibir estatísticas
   dashboard_navigation_section: 'Secção: %{section_name}'
   dashboard_navigation_student: 'Aluno: %{student_name}'
-  dashboard_sections_new_section: New section
+  dashboard_sections_new_section: Nova secção
   dashboard_sections_jumbotron_instruction: Create new sections and add students to
     them. Sections help you organize students into smaller groups so you can track
     their progress and manage their accounts.

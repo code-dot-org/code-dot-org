@@ -1,8 +1,8 @@
 {
-  "compute": "compute",
+  "compute": "کمپیوٹ",
   "equivalentExpression": "Try reordering your arguments to get exactly the same expression.",
   "extraTopBlocks": "You have unattached blocks. Did you mean to attach these to the \"compute\" block?",
-  "goal": "Goal:",
-  "reinfFeedbackMsg": "Does this look like what you want? You can press the \"Try again\" button to see your drawing.",
-  "yourExpression": "Your expression:"
+  "goal": "مقصد:",
+  "reinfFeedbackMsg": "یہاں آپ کی داستان ہے! اس پر کام جاری رکھے یا اگلی پہیلی کی طرف بڑھیں!",
+  "yourExpression": "آپ کا اظہار:"
 }
