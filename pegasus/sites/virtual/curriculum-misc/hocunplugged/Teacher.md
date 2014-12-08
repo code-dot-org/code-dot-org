@@ -163,4 +163,4 @@ If you'd like to extend this activity:
 - Have students program each other to do other activities, like navigating the hallways, building a block tower, or making a sandwich.
 
 
-<link rel="stylesheet" type="text/css" href="../docs/morestyle.css"/>
+<link rel="stylesheet" type="text/css" href="morestyle.css"/>
