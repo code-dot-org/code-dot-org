@@ -96,7 +96,12 @@ private
   def present_level
     @level = @script_level.level
     @game = @level.game
-    @stage = @script_level.stage
+    if @script.cached?
+      @stage = @script.stages.to_a.find{|stage| stage.id == @script_level.stage_id}
+      @game_script_levels = @script.script_levels.to_a.select{|sl| sl.stage_id == @script_level.stage_id}
+    else
+      @stage = @script_level.stage
+    end
 
     set_videos_and_blocks_and_callouts_and_instructions
 
