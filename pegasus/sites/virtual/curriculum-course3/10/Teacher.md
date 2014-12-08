@@ -56,6 +56,7 @@ In this lesson, students will relate the concept of algorithms back to everyday 
 - Assessment Worksheet: [Daily Algorithms](/curriculum/course3/10/Assessment10-DiceRace.pdf)
 
 ### For the Teacher
+- [Lesson Video](http://youtu.be/BDDRw3wGnz4?list=PL2DhNKNdmOtpGJ79ZYYttiEmc-1Aq8hxm)
 - Teacher Lesson Guide
 - Print one [Real-Life Algorithms Worksheet](/curriculum/course3/10/Activity10-DiceRace.pdf) per group 
 - Print one Assessment Worksheet: [Daily Algorithms](/curriculum/course3/10/Assessment10-DiceRace.pdf) per student

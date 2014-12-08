@@ -117,8 +117,11 @@ When programmers write down the Domains and Ranges of each function, they write 
 Let's look at a few example contracts - for each contract we'll identify the Name, Domain, and Range
 
 - +: Number Number -> Number
+- <img src="functionalAdd.png" height="125px;"/>
 - triangle: Number String String -> Image
+- <img src="functionalTriangle.png" height="125px;"/>
 - rotate: Number Image -> Image
+- <img src="functionalRotate.png" height="125px;"/>
 
 ### <a name="Activity2"></a> 4) Writing Contracts
 
@@ -144,37 +147,16 @@ Common mistakes when students first write down contracts include: writing values
 
 [/tip]
 
-Here is the contract for a new function:  
+For each of the following Evaluation Blocks:
 
-**rectangle: Number Number String String -> Image**
- 
 - What is the Name of this function?
-- How many things are the Domain of this function?
-- What is the type of each thing in the Domain?
+- What is the Domain of this function?
 - What is the Range of this function?
+- Add this function's contract to your reference
 
-A Contract tells you exactly how to use the function, by writing its Name and then using values for each of the arguments in the Domain. Here is an example of an Evaluation Block, written to use rectangle:  
-
-(rectangle 100 50 "solid" "blue")
- 
-What do you think this code will produce?
-
-The Contract for + is shown below.  
-
-**+: Number Number -> Number**
- 
-Can you write the Contract for *, -, / and sqrt?
-
-
-### <a name="Activity2"></a> 4) What Can Contracts Tell Us
-
-Now that you know how to use a Contract to write an expression, here are the Contracts for several new functions that produce Images:  
-
-ellipse:  Number Number String String -> Image
-triangle: Number String String        -> Image
-circle:   Number String String        -> Image
- 
-See if you can figure out how to use these new functions to draw other shapes! Here's an example to get you started
+<img src="functionalRect.png" height="125px;"/><br/>
+<img src="functionalStringAppend.png" height="125px;"/><br/>
+<img src="functionalText.png" height="125px;"/><br/>
 
 [/together]
 
