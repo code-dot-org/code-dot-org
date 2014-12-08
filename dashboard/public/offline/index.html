@@ -109,8 +109,65 @@
       progressContainer.append(div).append('\n');
     });
     loadLevel(currentScript.puzzles[params.puzzle - 1], function() {
+      appOptions.onInitialize = function() {
+        this.createCallouts();
+        onInitializeListeners.forEach(function(listener) {
+          listener();
+        });
+      };
+      appOptions.createCallouts = function() {
+        $.fn.qtip.zindex = 500;
+        this.callouts.every(function(callout) {
+          var selector = callout.element_id; // jquery selector.
+          if ($(selector).length === 0 && !callout.on) {
+            return true;
+          }
+
+          var defaultConfig = {
+            content: {
+              text: callout.localized_text,
+              title: {
+                button: $('<div class="tooltip-x-close"/>').append($('<img src="assets/x_button.png"/>'))
+              }
+            },
+            style: {
+              classes: "",
+              tip: {
+                width: 20,
+                height: 20
+              }
+            },
+            position: {
+              my: "bottom left",
+              at: "top right"
+            },
+            hide: {
+              event: 'click mousedown touchstart'
+            },
+            show: false // don't show on mouseover
+          };
+
+          var customConfig = $.parseJSON(callout.qtip_config);
+          var config = $.extend(true, {}, defaultConfig, customConfig);
+          config.style.classes = config.style.classes.concat(" cdo-qtips");
+
+          if (callout.on) {
+            window.addEventListener(callout.on, function() {
+              if (!callout.seen && $(selector).length > 0) {
+                callout.seen = true;
+                $(selector).qtip(config).qtip('show');
+              }
+            });
+          } else {
+            $(selector).qtip(config).qtip('show');
+          }
+
+          return true;
+        });
+      };
+
       appOptions.baseUrl = '';
-      appOptions.onInitialize = null;
+//      appOptions.onInitialize = null;
       appOptions.fallbackResponse = {
         "success": {
           "level_path": '?' + $.param(params),
