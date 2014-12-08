@@ -7,9 +7,9 @@
     %ul.nav.nav-pills{style: 'margin: 0'}
       - if current_user && !current_user.working_on_user_scripts.empty?
         %li{class: active == :working ? 'active' : ''}
-          %a{href: '#working'} Courses you're working on
+          %a{href: '#working'}= I18n.t('studio.courses_working_on')
       - if current_user && !current_user.completed_user_scripts.empty?
         %li{class: active == :completed ? 'active' : ''}
-          %a{href: '#completed'} Completed courses
+          %a{href: '#completed'}= I18n.t('studio.completed_courses')
       %li{class: active == :all ? 'active' : ''}
-        %a{href: '#all'} All courses
+        %a{href: '#all'}= I18n.t('studio.all_courses')
