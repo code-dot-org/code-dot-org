@@ -12251,25 +12251,25 @@ exports.directionEastLetter = function(d){return "Ö"};
 
 exports.directionWestLetter = function(d){return "V"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "slut"};
 
 exports.emptyBlocksErrorMsg = function(d){return "\"Upprepa\" eller \"Om\" blocken måste ha andra block inuti sig för att fungera. Se till att det inre blocket sitter rätt inuti blocket."};
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Funktionsblocket måste ha andra block i sig för att fungera."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "Det måste finnas block inuti din funktionsdefinition. Klicka på \"redigera\" och dra block in i det gröna blocket."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "Klicka på \"Redigera\" för att se till att  någon block inte saknas inuti din funktionsdefinition."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "Kom ihåg att bifoga ett block på varje parameter i blockets funktion på din arbetsyta."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "Du har lagt till ett parameterblock, men använder inte det i definitionen. Se till att använda parametern genom att klicka på \"Redigera\" och placera parameterblocket inuti gröna blocket."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "Skapa en parameter för din funktion genom att klicka på \"redigera\" och lägga till de nödvändiga parametrarna. Dra de nya parameterblocken in i din funktionsdefinition."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "Du skapade en funktion, men använde det aldrig på din arbetsyta! Klicka på \"Funktioner\" i verktygslådan och kontrollera att du använder det i ditt program."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "Prova att ersätta \"???\" med ett värde."};
 
 exports.extraTopBlocks = function(d){return "Du har okopplade block. Menade du att fästa dessa till \"när startat\" blocket?"};
 
@@ -12277,7 +12277,7 @@ exports.finalStage = function(d){return "Grattis! Du har slutfört den sista niv
 
 exports.finalStageTrophies = function(d){return "Grattis! Du har slutfört den sista nivån och vann "+p(d,"numTrophies",0,"sv",{"en":"en trofé","other":n(d,"numTrophies")+" troféer"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Avsluta"};
 
 exports.generatedCodeInfo = function(d){return "Även toppuniversitet lär ut blockbaserad programmering (t.ex. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Men under ytan kan blocken du har byggt ihop också visas som JavaScript, världens mest använda programmeringsspråk:"};
 
@@ -12309,7 +12309,7 @@ exports.numBlocksNeeded = function(d){return "Grattis! Du klarade pussel "+v(d,"
 
 exports.numLinesOfCodeWritten = function(d){return "Du skrev "+p(d,"numLines",0,"sv",{"one":"1 rad","other":n(d,"numLines")+" rader"})+" kod!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "spela"};
 
 exports.print = function(d){return "Skriv ut"};
 
@@ -12323,15 +12323,15 @@ exports.runProgram = function(d){return "Kör"};
 
 exports.runTooltip = function(d){return "Starta programmet som gjorts av blocken på arbetsytan."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "poäng"};
 
 exports.showCodeHeader = function(d){return "Visa kod"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Visa block"};
 
 exports.showGeneratedCode = function(d){return "Visa kod"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "sträng =?"};
 
 exports.subtitle = function(d){return "en visuell programmeringsmiljö"};
 
@@ -12351,7 +12351,7 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Totalt: "+p(d,"numLines
 
 exports.tryAgain = function(d){return "Försök igen"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Se tips"};
 
 exports.backToPreviousLevel = function(d){return "Gå tillbaka till föregående nivå"};
 
@@ -12359,7 +12359,7 @@ exports.saveToGallery = function(d){return "Spara till galleriet"};
 
 exports.savedToGallery = function(d){return "Sparad i galleriet!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Tyvärr kan inte vi dela detta program."};
 
 exports.typeFuncs = function(d){return "Tillgängliga funktioner:%1"};
 
@@ -12367,7 +12367,7 @@ exports.typeHint = function(d){return "Observera att parenteserna och semikolone
 
 exports.workspaceHeader = function(d){return "Sätt ihop dina block här: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Skriv din JavaScript-kod här"};
 
 exports.infinity = function(d){return "Oändligt"};
 
@@ -12379,7 +12379,7 @@ exports.wantToLearn = function(d){return "Vill du lära dig att programmera?"};
 
 exports.watchVideo = function(d){return "Titta på videon"};
 
-exports.when = function(d){return "when"};
+exports.when = function(d){return "när"};
 
 exports.whenRun = function(d){return "när startat"};
 
@@ -12389,9 +12389,9 @@ exports.signup = function(d){return "Registrera dig för introduktionskursen"};
 
 exports.hintHeader = function(d){return "Här är ett tips:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Se vad det blev, och försök fixa ditt program."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Kolla vad jag gjorde"};
 
 
 },{"messageformat":52}],40:[function(require,module,exports){
@@ -12468,7 +12468,7 @@ exports.reinfFeedbackMsg = function(d){return "Du kan klicka på \"Försök igen
 
 exports.scoreText = function(d){return "Poäng: "+v(d,"playerScore")};
 
-exports.setBackground = function(d){return "set scene"};
+exports.setBackground = function(d){return "Ange scen"};
 
 exports.setBackgroundRandom = function(d){return "ange slumpmässig scen"};
 
@@ -12514,7 +12514,7 @@ exports.setGravityVeryHigh = function(d){return "ange väldigt hög gravitation"
 
 exports.setGravityTooltip = function(d){return "Anger nivåns gravitation"};
 
-exports.setGround = function(d){return "set ground"};
+exports.setGround = function(d){return "Ange mark"};
 
 exports.setGroundRandom = function(d){return "ange slumpmässig mark"};
 
@@ -12532,7 +12532,7 @@ exports.setGroundLava = function(d){return "ange lava-mark"};
 
 exports.setGroundTooltip = function(d){return "Anger mark-bilden"};
 
-exports.setObstacle = function(d){return "set obstacle"};
+exports.setObstacle = function(d){return "ange hinder"};
 
 exports.setObstacleRandom = function(d){return "ange slumpmässigt hinder"};
 
@@ -12550,7 +12550,7 @@ exports.setObstacleLaser = function(d){return "ange laser-hinder"};
 
 exports.setObstacleTooltip = function(d){return "Anger hinder-bild"};
 
-exports.setPlayer = function(d){return "set player"};
+exports.setPlayer = function(d){return "ange spelare"};
 
 exports.setPlayerRandom = function(d){return "ange slumpmässig spelare"};
 
@@ -12600,23 +12600,23 @@ exports.soundRandom = function(d){return "slumpad"};
 
 exports.soundBounce = function(d){return "studsa"};
 
-exports.soundCrunch = function(d){return "crunch"};
+exports.soundCrunch = function(d){return "krasch"};
 
-exports.soundDie = function(d){return "sad"};
+exports.soundDie = function(d){return "ledsen"};
 
 exports.soundHit = function(d){return "smash"};
 
-exports.soundPoint = function(d){return "point"};
+exports.soundPoint = function(d){return "punkt"};
 
 exports.soundSwoosh = function(d){return "swoosh"};
 
-exports.soundWing = function(d){return "wing"};
+exports.soundWing = function(d){return "vinge"};
 
-exports.soundJet = function(d){return "jet"};
+exports.soundJet = function(d){return "Jet"};
 
-exports.soundCrash = function(d){return "crash"};
+exports.soundCrash = function(d){return "krasch"};
 
-exports.soundJingle = function(d){return "jingle"};
+exports.soundJingle = function(d){return "jingel"};
 
 exports.soundSplash = function(d){return "splash"};
 

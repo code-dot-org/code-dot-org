@@ -43,7 +43,7 @@ ca-ES:
   go: Anar
   thank_you_: Gràcies!
   congratulations: Felicitats!
-  congratulations_on_completing_hoc: Felicitats per completar una Hora de Codi.
+  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   get_a_certificate_of_achievement: "Aconsegueix el certificat d'assoliment"
   enter_valid_email: Per favor, introdueïx una adreça de correu electrònic vàlida
   get_a_certificate_message: "T'enviarem un certificat i informació sobre com  <a href='/learn/beyond'>Aprendre més enllà d'una hora</a>"
@@ -67,7 +67,7 @@ ca-ES:
   thanks_for_voting: Gràcies per votar!
   share_on_facebook: Comparteix a Facebook
   share_on_twitter: Comparteix a Twitter
-  beyond_an_hour: "Més enllà de l'Hora del Codi >"
+  beyond_an_hour: Beyond an Hour of Code
   get_started: Inici
   i_agree: Accepto
   participant_select: Selecciona
@@ -76,6 +76,9 @@ ca-ES:
   participant_educator: Educador
   participant_engineer: Enginyer de software
   participant_other: Cap dels anteriors
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Jo sóc un
   never_spam: "Nosaltres mai t'enviarem spam"
   enter_country: Introdueix el país si estàs fora dels Estats Units
@@ -112,6 +115,10 @@ ca-ES:
   studiobar_flappy_body: Fes i comparteix el teu propi joc Flappy
   studiobar_teacher_title: Fet per a professors
   studiobar_teacher_body: Introdueix el Code Studio a la teva classe
+  studiobar_frozen_title: Hora del codi
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Sóc estudiant
   contact_form_topic_parent: Sóc pare o mare
   contact_form_topic_teacher: Sóc professor/educador
@@ -286,7 +293,7 @@ ca-ES:
   dashboard_sections_password_account_creation: Contrasenya de text creat per alumne
   dashboard_sections_login_type_explanation: "Aquesta taula t'explica quin d'aquests tipus d'inici de sessió,<b>imatge, paraula o correu electrònic</b>, vols triar per a la secció."
   dashboard_faq: Preguntes freqüents
-  code_hoc_coming: "L'hora de codi s'acosta - 8-14 de desembre!"
+  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: "Inscriure's a participar durant la setmana de l'educació CS"
   learn_more: Més informació
   hoc2014_try_new_tutorials: "Prova els nous tutorial de l'Hora del Codi"

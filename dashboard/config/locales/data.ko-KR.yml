@@ -578,14 +578,26 @@
         C3_crowdsourcing: 클라우드소싱
         C3_functional_suncatchers: 기능성 색유리
         C3_songwriting_with_parameters: 매개변수를 사용한 음악 작곡
-        C4_artist_math: 수학을 이용한 예술가 프로그래밍
-        C4_create_functions: 함수 만들기
-        C4_edit_functions: 함수 수정하기
+        C4_intro: Introduction
+        C4_bee_conditional: 꿀벌 조건선택
+        C4_variables_artist: Variables - Artist
+        C4_variables_playlab: Variables - Play Lab
         C4_for_loops: 반복을 위한
-        C4_variables: 변수
+        C4_math_artist: Programming the Artist with Math
+        C4_function_edit: Editing Functions
+        C4_function_create: Creating Functions
+        C4_unplugged_algorithms: Algorithms with Tangrams
+        C4_unplugged_madlibs: Mad Libs
+        C4_unplugged_variables: Variables in Envelopes
+        C4_unplugged_forloops: 반복을 위한
+        C4_unplugged_parameters: 매개변수를 사용하는 음악 작곡
+        C4_unplugged_binary: Binary
         frozen_intro: Hour of Code 소개
         frozen_loops: 반복(Loop) 소개
         frozen_functions: 함수(Function) 소개
+        playlab_intro: Introduction to Play Lab
+        playlab_events: Play Lab Events
+        playlab_repeat_forever: Play Lab Repeat Forever
     callout:
       text:
         drag_blocks: '"움직이기" 블럭을 끌어다가 다른 블럭의 아래에 탁 붙여보세요.'
@@ -642,3 +654,21 @@
           때마다 실행됩니다.
         change_here: 여기서 바꾸세요.
         write_draw_square_function: 도구 상자에 있는 블럭들을 여기로 드래그해서 사각형을 그려보세요.
+        write_draw_triangle_function: Drag blocks from the toolbox into here that
+          draw a triangle
+        edit_add_parameter: Click edit to add a parameter in your function
+        add_and_drag_parameter: Write in the name of your parameter here, click add,
+          and then drag it into your function definition
+        fill_in_actor: Fill in the ??? with numbers that correspond to each actor
+          (1, 2, and 3)
+        repeat: Put blocks inside the loop to repeat commands
+        if_bee_nectar: Use the "if" block to decide if the bee should get nectar
+        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower,
+          and makes honey if it's not a flower
+        repeat_full_circle: Enter in the number of times the zombie has to move to
+          make a full circle
+        place_length_variable: Drag the length variable here to replace the question
+          marks
+        arrows_move_actor: Use the arrows to move the actor
+        right_arrow_fireball: Use the right arrow to shoot fireballs
+        name_function: Write the name of your function here

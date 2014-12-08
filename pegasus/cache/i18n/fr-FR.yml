@@ -44,7 +44,7 @@
   flappy_text: Code.org vient de fêter ses 1 an.<br/><br/> Fais la fête avec nous
     en faisant ton propre jeu de <b>Flappy</b>. Programme tes propres règles et partage-le
     avec tes amis !
-  view_english_site: Visitez le site anglais
+  view_english_site: Voir le site en anglais
   non_english_tutorials: 'Tutoriels traduits en plusieurs langues :'
   write_your_first_program: Ecrivez votre premier programme informatique
   learn_cs_concepts: Apprenez les concepts de base de l'informatique avec la programmation
@@ -69,7 +69,7 @@
   if_you_enjoyed: Si vous avez apprécié apprendre, proposez à des amis de participer
     aussi ! Nous voulons que le monde entier apprenne.
   personalize_certificate: Personnalisez votre certificat
-  share_achievement: Partagez votre prestation
+  share_achievement: Partagez votre travail
   beyond_hour_message: Continuez avec nos <a href='http://studio.code.org'> autres
     cours</a>, ou voir plus d'options sur <a href='/learn/beyond'> Apprendre au-delà
     d'une heure</a>.
@@ -96,6 +96,9 @@
   participant_educator: Éducateur
   participant_engineer: Ingénieur logiciel
   participant_other: Autre
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Je suis un
   never_spam: Nous ne vous enverrons jamais de courrier électronique intempestif
   enter_country: Entrer le pays si hors des Etats-Unis
@@ -135,6 +138,10 @@
   studiobar_flappy_body: Programmez et partagez votre propre jeu Flappy bird
   studiobar_teacher_title: Pour les professeurs
   studiobar_teacher_body: Introduction à Code Studio dans votre salle de classe
+  studiobar_frozen_title: Heure de Code
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Je suis un étudiant
   contact_form_topic_parent: Je suis un parent
   contact_form_topic_teacher: Je suis un enseignant/éducateur
@@ -265,14 +272,14 @@
   dashboard_sections_print_secrets: Vous pouvez ensuite imprimer une feuille de cartes
     contenant des informations de compte à distribuer à vos élèves individuellement.
   dashboard_sections_switch_section: 'Changer de section:'
-  dashboard_students_add_student: Ajouter un étudiant
-  dashboard_students_add_students: Ajouter plusieurs étudiants
+  dashboard_students_add_student: Ajouter un élève
+  dashboard_students_add_students: Ajouter plusieurs élèves
   dashboard_students_add_multiple: 'Tapez ou collez le nom de vos élèves, un par ligne
     :'
   dashboard_students_new_section: Vous avez créé une nouvelle section ! Maintenant,
     ajoutez vos élèves en utilisant les boutons <b>Ajouter étudiant</b> et <b>Ajouter
     plusieurs étudiants</b> ci-dessus.
-  dashboard_students_placeholder_name: Nom de l'étudiant
+  dashboard_students_placeholder_name: Nom de l'élève
   dashboard_students_name: Nom
   dashboard_students_age: Age
   dashboard_students_gender: Sexe
@@ -954,41 +961,48 @@
     computers today: what is a computer, what is hardware, what is software, what
     is the internet. No previous experience is required other than the ability to
     use a web browser.'
-  udacity_beyond_longdescription: In this course you will learn key concepts in computer
-    science and learn how to write your own computer programs in the context of building
-    a web crawler. There is no prior programming knowledge needed for this course.
-    Beginners are welcome! At the end of this course, you will have learned key concepts
-    in computer science and enough programming to be able to write Python programs
-    to solve problems on your own. This course will prepare you to move on to intermediate-level
-    computing courses.
-  teachingtree_beyond_longdescription: TeachingTree is an open platform that lets
-    anybody organize educational content. Our goal is for students to quickly access
-    the exact clips they need in order to learn individual concepts. Everyone is encouraged
-    to help by adding videos or tagging concepts.
-  kodu_beyond_longdescription: Kodu lets kids create games on the PC and XBox via
-    a simple visual programming language. Kodu can be used to teach creativity, problem
-    solving, storytelling, as well as programming. Anyone can use Kodu to make a game,
-    young children as well as adults with no design or programming skills. Kodu for
-    the PC is available to download for free. Kodu for the XBox is also available
-    in the USA on the XBox Marketplace, in the Indie Games channel for about $5.
-  cargobot_beyond_longdescription: Cargo-Bot is a puzzle game where you teach a robot
-    how to move crates. Sounds simple, right? It features 36 fiendishly clever puzzles,
-    haunting music and stunning retina graphics. You can even record your solutions
-    and share them on YouTube to show your friends.
-  kidsruby_beyond_longdescription: 'Have fun and make games, or hack your homework
-    using Ruby! Just tell your parents or teachers you''re learning Ruby programming...
-    ;). Free and works on any computer. [Note: Desktop install required]'
-  w3schools_beyond_longdescription: Learn to create websites on your own computer.
-    Learn the server basics in less than a day. Learn to add databases to your website
-  codeavengers_beyond_longdescription: Learn how to program games, apps and websites.
-    Designed by experts with perfect level of difficulty for beginners, easy to understand
-    instructions and great help when you need it. Our HTML, CSS and JavaScript courses
-    include code challenges and revision games that make learning fun and effective
-    for all ages.
-  mozilla_beyond_longdescription: Thimble makes it ridiculously simple to create and
-    share your own web pages. Write and edit HTML and CSS right in your browser, then
-    instantly preview your work. Host and share your finished projects with a single
-    click. Perfect for beginners and experts alike.
+  udacity_beyond_longdescription: Dans ce cours vous apprendrez les concepts clés
+    en informatique et apprendrez à écrire vos propres programmes informatiques dans
+    le cadre de la construction d'un robot d'indexation. Aucune connaissance en programmation
+    n'est requise pour ce cours. Les débutants sont les bienvenus ! À la fin de ce
+    cours, vous aurez appris les concepts clés en informatique et assez de programmation
+    pour pouvoir écrire des programmes Python pour résoudre les problèmes de votre
+    cru. Ce cours vous préparera pour passer aux cours informatiques de niveau intermédiaire.
+  teachingtree_beyond_longdescription: TeachingTree est une plateforme ouverte permet
+    à n'importe qui d'organiser ses contenus éducatifs. Notre but est que les étudiants
+    accédent rapidement aux clips dont ils ont précisément besoin afin d'apprendre
+    les concepts particuliers. Tout le monde est invité à contribuer en ajoutant des
+    vidéos ou desmots-clés.
+  kodu_beyond_longdescription: Kodu permet aux enfants de créer des jeux sur PC et
+    XBox via un simple langage de programmation visuel. Kodu peut être utilisé pour
+    enseigner la créativité, la résolution de problème, la narration, aussi bien que
+    de programmation. Chacun peut utiliser Kodu pour créer un jeu, les jeunes enfants
+    aussi bien que les adultes sans projet ni compétences en programmation. Kodu pour
+    PC est disponible en téléchargement gratuit. Kodu pour la XBox est aussi disponible
+    aux USA sur le XBox Marketplace, à la rubrique Indie Games pour environ 5 $.
+  cargobot_beyond_longdescription: Cargo-Bot est un jeu de puzzle où vous apprenez
+    à un robot comment déplacer des caisses. Cela paraît simple, non ? Il comprend
+    36 puzzles diaboliquement astucieux, une musique envoûtante et de superbes graphismes
+    Retina. Vous pouvez même enregistrer vos solutions et les partager sur YouTube
+    pour les montrer à vos amis.
+  kidsruby_beyond_longdescription: 'Amusez-vous et créez des jeux, ou hackez vos devoirs
+    à l''aide de Ruby ! Pensez juste dire à vos parents ou enseignants que vous apprenez
+    la programmation en Ruby... ;). Gratuit et fonctionne sur n''importe quel ordinateur.
+    [Note : installation Desktop requise]'
+  w3schools_beyond_longdescription: Apprenez à créer des sites Web sur votre propre
+    ordinateur. Apprenez les bases d'un serveur en moins d'une journée. Apprenez comment
+    ajouter des bases de données à votre site Web
+  codeavengers_beyond_longdescription: Apprenez à programmer des jeux, des applis
+    et des sites Web. Conçu par des experts avec le parfait niveau de difficulté pour
+    des débutants, des instructions faciles à comprendre et une aide efficace quand
+    vous en avez besoin. Nos cours HTML, CSS et JavaScript comprennent des défis de
+    code et des jeux de révision qui rendent l'apprentissage amusant et efficace pour
+    tous les âges.
+  mozilla_beyond_longdescription: Thimble rend incroyablement simple la création et
+    le partage de vos propres pages web. Écrivez et éditez le HTML et le CSS directement
+    dans votre navigateur, puis obtenez instantanément un aperçu de votre travail.
+    Hébergez et partagez vos projets finis en un seul clic. Parfait pour les débutants
+    comme les experts.
   codecombat_beyond_longdescription: Incarnez un magicien du code (sorts) pour contrôler
     vos héros, naviguer dans des dédales, vaincre des ogres, tromper les ennemis et
     sauver vos alliés! Apprenez JavaScript dans ce jeu web en HTML 5 pour complets
@@ -1012,13 +1026,14 @@
     permettre aux artistes et aux concepteurs de travailler avec de véritables capteurs,
     des LEDs, des sonnettes, etc.. Le bac à sable virtuel Sparkfun vous apprendra
     du réel code Arduino directement dans votre navigateur.
-  processing_beyond_longdescription: Processing is a programming language, development
-    environment, and online community. Since 2001, Processing has promoted software
-    literacy within the visual arts and visual literacy within technology. Initially
-    created to serve as a software sketchbook and to teach computer programming fundamentals
-    within a visual context, Processing evolved into a development tool for professionals.
-    Today, there are tens of thousands of students, artists, designers, researchers,
-    and hobbyists who use Processing for learning, prototyping, and production.
+  processing_beyond_longdescription: Processing est un langage de programmation, un
+    environnement de développement et une communauté en ligne. Depuis 2001, Processing
+    a promu la culture logicielle dans les arts visuels et la culture visuelle au
+    sein de la technologie. Initialement créé comme un carnet de croquis électronique
+    et pour enseigner les fondements de la programmation dans un contexte visuel,
+    Processing est devenu un outil de développement pour les professionnels. Aujourd'hui,
+    des dizaines de milliers d'étudiants, artistes, designers, chercheurs et amateurs
+    utilisent Processing pour apprendre, concevoir et produire.
   alice_beyond_longdescription: En utilisant un environnement de programmation innovant
     pour soutenir la création d'animations 3D, le projet Alice fournit outils et matériel
     pour enseigner et apprendre la pensée de traitement, la résolution de problèmes

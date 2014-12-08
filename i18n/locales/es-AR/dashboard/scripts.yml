@@ -282,12 +282,12 @@ es-AR:
           Variables: Variables
           For Loops: Bucles Para
         potus:
-          title: special
-          description_short: special
-          description: special
-          Special: Special
+          title: Especial.
+          description_short: Especial.
+          description: Especial.
+          Special: Especial
         special:
-          title: special
-          description_short: special
-          description: special
-          Special: Special
+          title: Especial.
+          description_short: Especial.
+          description: Especial.
+          Special: Especial

@@ -41,7 +41,7 @@ es-ES:
   go: Ir
   thank_you_: ¡Gracias!
   congratulations: Felicidades!
-  congratulations_on_completing_hoc: Felicidades, has completado 1 Hora de Código.
+  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   get_a_certificate_of_achievement: Recibe un certificado de tu logro
   enter_valid_email: Por favor ingresa un correo electrónico válido
   get_a_certificate_message: "Te enviaremos un certificado e información sobre cómo hacer para que <a href='/learn/beyond'> Aprenda más allá de una hora</a>"
@@ -65,7 +65,7 @@ es-ES:
   thanks_for_voting: ¡ Gracias por tu voto!
   share_on_facebook: Compartir en Facebook
   share_on_twitter: Compartir en Twitter
-  beyond_an_hour: Más allá de una Hora de Código
+  beyond_an_hour: Beyond an Hour of Code
   get_started: Inicio
   i_agree: De acuerdo
   participant_select: -Seleccionar-
@@ -74,6 +74,9 @@ es-ES:
   participant_educator: Educador
   participant_engineer: Ingeniero de software
   participant_other: Ninguna de las anteriores
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Soy un
   never_spam: Nunca te enviaremos spam
   enter_country: Introduzca el país si reside fuera de los Estados Unidos
@@ -110,6 +113,10 @@ es-ES:
   studiobar_flappy_body: Crea y comparte tu propio juego Flappy
   studiobar_teacher_title: Hecho para los maestros
   studiobar_teacher_body: Presenta Code Studio en tu aula
+  studiobar_frozen_title: Hora del código
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Soy un estudiante
   contact_form_topic_parent: Soy un padre
   contact_form_topic_teacher: Soy un profesor/educador
@@ -283,7 +290,7 @@ es-ES:
   dashboard_sections_password_account_creation: Contraseña de texto creada por el estudiante
   dashboard_sections_login_type_explanation: 'Esta tabla ayuda a explicar cuál de estos tipos de inicio de sesión, <b>imagen, palabra o correo electrónico</b>, querrá elegir para una sección.'
   dashboard_faq: Preguntas frecuentes
-  code_hoc_coming: 'Está llegando la Hora del Código: ¡del 8 al 14 de diciembre!'
+  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: Inscribirse para participar durante la Semana de la Educación en Computación
   learn_more: Aprenda más
   hoc2014_try_new_tutorials: Pruebe nuestros nuevos tutoriales de la Hora del Código
@@ -293,7 +300,7 @@ es-ES:
   carousel_heading_international: Tutoriales en tu idioma
   carousel_heading_domestic: Tutoriales disponibles en inglés
   carousel_heading_beginners: Tutoriales para principiantes (en inglés)
-  carousel_heading_javascript: Tutorials that teach JavaScript
+  carousel_heading_javascript: Tutoriales que enseñan JavaScript
   carousel_heading_unplugged: ¿No tienes dispositivo o Internet? Prueba informática sin conexión
   carousel_heading_devices: Tutoriales en aplicaciones para teléfonos y tabletas
   carousel_heading_languages: Tutoriales en otros lenguajes de programación

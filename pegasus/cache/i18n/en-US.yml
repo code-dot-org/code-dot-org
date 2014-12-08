@@ -41,7 +41,7 @@ en-US:
   go: "Go"
   thank_you_: "Thank you!"
   congratulations: "Congratulations!"
-  congratulations_on_completing_hoc: "Congratulations on completing One Hour of Code."
+  congratulations_on_completing_hoc: "Congratulations on completing one Hour of Code"
   get_a_certificate_of_achievement: "Get a certificate of achievement"
   enter_valid_email: "Please enter a valid email address"
   get_a_certificate_message: "We'll send you a certificate and information about how to <a href='/learn/beyond'>Learn beyond One Hour</a>"

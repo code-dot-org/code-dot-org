@@ -93,6 +93,9 @@
   participant_educator: Lærer
   participant_engineer: programmerer
   participant_other: Ingen av de over
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Jeg er en
   never_spam: Vi vil aldri sende deg spam
   enter_country: Angi landet hvis det er utenfor USA
@@ -131,6 +134,10 @@
   studiobar_flappy_body: Lag og del ditt eige Flappy-spel
   studiobar_teacher_title: Laga for lærerar
   studiobar_teacher_body: Innfør Kode Studio i klasserommet
+  studiobar_frozen_title: Hour of Code (kodetimen)
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Eg er ein elev
   contact_form_topic_parent: Eg er ein forelder
   contact_form_topic_teacher: Eg er ein lærar
@@ -346,7 +353,7 @@
   carousel_heading_international: Gjennomganger på norsk
   carousel_heading_domestic: Leksjonar tilgjengeleg på engelsk
   carousel_heading_beginners: Leksjonar for nybegynnarar
-  carousel_heading_javascript: Leksjonar som lærer deg Javascript
+  carousel_heading_javascript: Øvinger som underviser JavaScript
   carousel_heading_unplugged: Ingen "dings" eller Internett? Prøv "fråkopla" koding
   carousel_heading_devices: Leksjons-app'ar for telefonar og nettbrett
   carousel_heading_languages: Leksjonar i andre programmeringsspråk
@@ -441,13 +448,13 @@
   thinkersmithspanish_platformtext: Straumlaust
   khan_platformtext: Moderne nettlesarar
   khanes_platformtext: Moderne nettlesarar
-  tynker_platformtext: Moderne nettlesere
+  tynker_platformtext: Moderne nettlesere. (Oppfølgingskurset krever $$)
   scratch_platformtext: ALLE nettlesarar
   lightbot_platformtext: ALLE nettlesarar og iOS, Android eller spelkonsoll
   thinkersmith_platformtext: Straumlaust
   condcards_platformtext: Struamlaust
   lightbotintl_platformtext: iOS, Android (eller nettlesar)
-  codehs_platformtext: Moderne nettlesere
+  codehs_platformtext: Moderne nettlesere. (Oppfølgingskurset krever $$)
   codecademy_platformtext: Moderne nettlesarar. iOS, Android app'ar
   codecombat_platformtext: Moderne nettlesarar
   codemonkey_platformtext: Moderne nettlesarar
@@ -490,8 +497,7 @@
   codecademy_shortdescription: Lær JavaScript-programmering, i ein nettlesar
   codecombat_shortdescription: Kjemp med monster for å lære Python eller JavaScript
     i dette episke programmeringsspelet!
-  codemonkey_shortdescription: Students program a monkey to catch bananas while it
-    gets slightly more complicated on each level.
+  codemonkey_shortdescription: Studenter programmerer en ape til å fange bananer.
   codeavengers_shortdescription: Lær JavaScript-programmering, i ein nettlesar
   processing_shortdescription: Leksjonar på ein time i programmeringsspråk
   robomind_shortdescription: Skriv kode for ein virtuell robot
@@ -503,15 +509,13 @@
     om programmering.
   kodable_shortdescription: Eit artig iPad-spel for å lære konsepta i programmering
     av datamaskiner
-  tynkerapp_shortdescription: Lær å kode ved å løse morsomme problemer og bygg dine
-    egne mobilspill.
+  tynkerapp_shortdescription: 'Lær å programmere ved å løse morsomme kode-oppgaver. '
   robomindnl_shortdescription: Skriv kode for ein virtuell robot
   flappy_shortdescription: Lag ditt eige spel - Flappy Bird, hai eller ubåt
   bitsbox_shortdescription: Kod ulike appar for å spele og dele ved å bruke ekte Javascript.
   makegameswithus_shortdescription: Lag eit iPhone-spel! Lær ved å skrive kode for
     å lære monsteret ditt nye rørsler!
-  touchdevelop_shortdescription: Lag mobilprogrammer direkte på din telefonen, nettbrett
-    eller bærbare datamaskin
+  touchdevelop_shortdescription: 'Løs gåter, lag spill og lær koding på telefonen. '
   appinventor_shortdescription: Lag din eigen app! (Berre for Android)
   blockly_shortdescription: Last ned ei ZIP-fil for å lære utan å vere tilkopla Internett
   thinkersmith2_shortdescription: Lær korleis datamaskinar brukar 1-arar og 0-ar for
@@ -609,10 +613,10 @@
   kodable_longdescription: Kodable er eit sjølvstyrt iPad-spel som introduserer barn
     frå 5 år og oppover for grunnleggjande programmering. Å ha ein lærar eller føresett
     i nærleiken er optimalt, men ikkje nødvendig.
-  tynkerapp_longdescription: Build your own games and share with friends! Solve fun
-    coding puzzles and learn programming concepts in each level. Personalize games
-    with animated characters, multiple levels and rich props. Lots of fun activities
-    to choose from!
+  tynkerapp_longdescription: Lær å programmere ved å løse morsomme kode-oppgaver.
+    Lettbygde spill og historier med tema-grafikk, 10 + spill-kit og tilpasselige
+    tegn. Ingen Internett-tilkobling kreves. Du kan også få tilgang til dine kreasjoner
+    på nettet.
   robomindnl_longdescription: 'Elevene lærer grunnleggjande programmering ved å styre
     sin eigen virtuelle robot. Det nettbaserte kurset er komplett med korte presentasjonar,
     filmar, oppgåver og automatisk veiledning/tips for hjelp med programmeringsøvingane. '
@@ -628,9 +632,8 @@
     Pokemon-inspirert action-spill og skriv kode for å lære monsteret ditt nye bevegelser.
     Du kommer til å lære å bruke variabler, metoder og objekter for å hjelpe monsteret
     ditt til å vinne!
-  touchdevelop_longdescription: Crazy drawings, flying monsters, swirling flowers...
-    create your apps on your device with TouchDevelop, a friendly mobile app creation
-    environment. Runs on iPhone, iPad, Android, Windows, Windows Phone, Linux, Mac.
+  touchdevelop_longdescription: 'Touch-vennlig redigeringsverktøy vil hjelpe deg med
+    å lage pixel-kunst, løse bjørne-oppgaven eller bygge ditt eget hoppende fugl-spill. '
   appinventor_longdescription: Underhaldande og korte opplæringsvideoar viser deg
     korleis du lagar tre enkle program for Android-telefonen eller nettbrettet ditt.
     Denne Kodetimen, som er laga både for novicer og ekspertar, gjør deg i stand til

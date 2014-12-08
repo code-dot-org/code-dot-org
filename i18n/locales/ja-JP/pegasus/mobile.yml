@@ -43,7 +43,7 @@ ja-JP:
   go: 行く
   thank_you_: ありがとう！
   congratulations: おめでとうございます ！
-  congratulations_on_completing_hoc: コード１時間を修了、おめでとうございます。
+  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   get_a_certificate_of_achievement: 達成の証明書を取得します。
   enter_valid_email: 有効なメール アドレスを入力してください。
   get_a_certificate_message: "証明書および<a href='/learn/beyond'>1 時間を超えて学ぶ</a>についてのやり方についての情報を送ります。"
@@ -67,7 +67,7 @@ ja-JP:
   thanks_for_voting: 投票ありがとう ！
   share_on_facebook: Facebook 上で共有します。
   share_on_twitter: ツイッターで共有します。
-  beyond_an_hour: 'Hour of Codeを超えて >'
+  beyond_an_hour: Beyond an Hour of Code
   get_started: スタート(はじめる)
   i_agree: 賛成です
   participant_select: -選択-
@@ -76,6 +76,9 @@ ja-JP:
   participant_educator: 教育者
   participant_engineer: ソフトウェア エンジニア
   participant_other: 上記に該当なし
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: 私は、
   never_spam: 私達は決してスパムをおくりません。
   enter_country: 米国以外の場合、国名を入力します。
@@ -112,6 +115,10 @@ ja-JP:
   studiobar_flappy_body: じぶんだけのFlappyゲームをつくってみんなにみせる
   studiobar_teacher_title: 先生用
   studiobar_teacher_body: コードスタジオをあなたのクラスで紹介してください
+  studiobar_frozen_title: コードの時間(Hour of code)
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: 私は学生です
   contact_form_topic_parent: 私は親です
   contact_form_topic_teacher: 私は、教師/教育者です
@@ -289,7 +296,7 @@ ja-JP:
     
     
   dashboard_faq: よくある質問
-  code_hoc_coming: 'Hour of Codeはすぐそこです - 12 月 8-14日！'
+  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: CS 教育週間の間に参加するためにサインアップします。
   learn_more: もっとくわしく見る
   hoc2014_try_new_tutorials: 新しいHour of Codeのチュートリアルを試しましょう
@@ -299,7 +306,7 @@ ja-JP:
   carousel_heading_international: あなたの言語のチュートリアル
   carousel_heading_domestic: 日本語のチュートリアルもあります
   carousel_heading_beginners: 初心者のためのチュートリアル
-  carousel_heading_javascript: Tutorials that teach JavaScript
+  carousel_heading_javascript: JavaScriptのチュートリアル
   carousel_heading_unplugged: "デバイスやインターネットがない？'アンプラグド（電源なし）' でコンピューター科学を提供します。"
   carousel_heading_devices: 携帯電話とタブレットのアプリのチュートリアル
   carousel_heading_languages: 他のプログラミング言語のチュートリアル
@@ -312,7 +319,7 @@ ja-JP:
   more_resources_educators: 教師と教育者用の多くのリソース
   participants: 参加者：
   teachers_notes: 教師のノート
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: 先生：先生用の重要事項に関する記述をご覧ください
   previous: 戻る
   next: 次へ
   older_systems: 古いシステム上で動作するチュートリアル
@@ -394,31 +401,31 @@ ja-JP:
   codeorg_platformtext: 最新のブラウザー, スマート フォン, タブレット
   codeintl_platformtext: 最新のブラウザー, スマート フォン, タブレット
   thinkersmithspanish_platformtext: アンプラグド（電源なし）
-  khan_platformtext: Modern web browsers
-  khanes_platformtext: Modern web browsers
-  tynker_platformtext: Modern browsers. (Follow-on course requires $$)
+  khan_platformtext: 最新の Web ブラウザー
+  khanes_platformtext: 最新の Web ブラウザー
+  tynker_platformtext: 最近のブラウザー。 (続くコースでは$$が必要になります)
   scratch_platformtext: すべてのブラウザー
   lightbot_platformtext: すべてのブラウザーと iOS、アンドロイド、またはゲーム コンソール
   thinkersmith_platformtext: アンプラグド（電源なし）
   condcards_platformtext: アンプラグド（電源なし）
-  lightbotintl_platformtext: iOS, Android (or web browser)
-  codehs_platformtext: 'Modern browsers. (Follow-on course requires  $$)'
-  codecademy_platformtext: Modern web browsers. iOS, Android apps
-  codecombat_platformtext: Modern web browsers
-  codemonkey_platformtext: Modern web browsers
-  codeavengers_platformtext: Modern web browsers
-  processing_platformtext: Modern web browsers
-  robomind_platformtext: Modern web browsers, Mobile web
-  groklearning_platformtext: Modern web browsers
+  lightbotintl_platformtext: iOS、Android (web ブラウザー)
+  codehs_platformtext: 最近のブラウザー。 (続くコースでは$$が必要になります)
+  codecademy_platformtext: 最新の web ブラウザー、iOS、Android アプリ
+  codecombat_platformtext: 最新の Web ブラウザー
+  codemonkey_platformtext: 最新の Web ブラウザー
+  codeavengers_platformtext: 最新の Web ブラウザー
+  processing_platformtext: 最新の Web ブラウザー
+  robomind_platformtext: 最新の web ブラウザー、モバイル web
+  groklearning_platformtext: 最新の Web ブラウザー
   quorum_platformtext: 最新の web ブラウザー。スクリーン リーダーがサポートされている。
-  codespark_platformtext: iOS, Android (or web browser)
+  codespark_platformtext: iOS、Android (web ブラウザー)
   kodable_platformtext: iPad
   tynkerapp_platformtext: iPad、アンドロイドのタブレット
-  robomindnl_platformtext: Modern web browsers, Mobile web
+  robomindnl_platformtext: 最新の web ブラウザー、モバイル web
   flappy_platformtext: 最新のブラウザー, スマート フォン, タブレット
-  bitsbox_platformtext: Modern web browsers
-  makegameswithus_platformtext: Modern Web browsers
-  touchdevelop_platformtext: Modern browsers, smartphones, all devices
+  bitsbox_platformtext: 最新の Web ブラウザー
+  makegameswithus_platformtext: 最新の Web ブラウザー
+  touchdevelop_platformtext: 最新のブラウザー、スマート フォン、すべてのデバイス
   appinventor_platformtext: 最新のブラウザー + アンドロイド
   blockly_platformtext: 最新のブラウザーのみ
   thinkersmith2_platformtext: アンプラグド（電源なし）
@@ -441,7 +448,7 @@ ja-JP:
   codehs_shortdescription: 見た目も楽しいイントロでプログラミング、犬のカレルと一緒にコーディングを開始しましょう！
   codecademy_shortdescription: Web ブラウザーで、JavaScript のプログラミングを学ぶ
   codecombat_shortdescription: この壮大なプログラミング ゲーム でPython や java スクリプトを学びながら鬼をやっつけよう！
-  codemonkey_shortdescription: Students program a monkey to catch bananas.
+  codemonkey_shortdescription: 生徒はバナナをキャッチするサルをプログラミングします。
   codeavengers_shortdescription: Web ブラウザーで、JavaScript のプログラミングを学ぶ
   processing_shortdescription: 処理言語で一時間のチュートリアル
   robomind_shortdescription: 仮想ロボットのためのコードを書く
@@ -454,12 +461,12 @@ ja-JP:
     
   codespark_shortdescription: フースは、プログラミングを学ぶ、子供向けの楽しいゲームです。
   kodable_shortdescription: 楽しいiPadのゲームはコンピューター プログラミングの概念を教えてくれます。
-  tynkerapp_shortdescription: 'Learn to program by solving fun coding puzzles. '
+  tynkerapp_shortdescription: '楽しいコーディングのパズルを通してプログラミングを学びましょう。 '
   robomindnl_shortdescription: 仮想ロボットのためのコードを書く
   flappy_shortdescription: '自分のゲームを作る- フラッピーバード、サメまたは、潜水艦'
   bitsbox_shortdescription: 実際にJavaScriptをつかって、遊んだり共有したりするようなアプリを作ってください
   makegameswithus_shortdescription: iPhoneのゲームを作りましょう！コードの書き方を勉強して、モンスターに新しい動きをさせましょう。
-  touchdevelop_shortdescription: 'Solve puzzles, create games, and learn coding all on your phone. '
+  touchdevelop_shortdescription: '携帯電話の上で、パズルを解いたり、ゲームを作ったりして、コーディングについて学びましょう。 '
   appinventor_shortdescription: あなたのアプリを作りましょう！(android限定)
   blockly_shortdescription: オフラインでも学習できるようにZIPファイルをダウンロードしてください。
   thinkersmith2_shortdescription: コンピューターが情報を表現するために１秒と０秒をどう使うのか勉強します
@@ -468,7 +475,7 @@ ja-JP:
   frozen_longdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
   codeorg_longdescription: ドラッグ＆ドロップによるプログラミングでコンピューターサイエンスの基本的なコンセプトを学習します。ゲーム感覚で独学で進められます。ビルゲイツやマークザッカバーグらによるビデオレクチャー、アングリーバードやプラネッツ対ゾンビなどを使った題材が用意されています。繰り返しループ、条件分岐、基本的なアルゴリズムを学習できます。３４もの言語に対応しています。
   codeintl_longdescription: ドラッグ＆ドロップによるプログラミングでコンピューターサイエンスの基本的なコンセプトを学習します。ゲーム感覚で独学で進められます。ビルゲイツやマークザッカバーグらによるビデオレクチャー、アングリーバードやプラネッツ対ゾンビなどを使った題材が用意されています。繰り返しループ、条件分岐、基本的なアルゴリズムを学習できます。３４もの言語に対応しています。
-  thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubriran como guiarse de modo tal de llevar a cabo tareas especificas sin ser estas discutidas previamente. Este segmento ensena a los estudiantes la conexion entre simbolos y acciones asi como la valiosa habilidad de depuracion.'
+  thinkersmithspanish_longdescription: '"ロボットボキャブラリー"という事前に用意されたものを使うことで、生徒は事前に打ち合わせをしなくても、お互い協力しながら課題を解決することができるようになります。子供たちは、このレッスンを通して、デバッグという非常に重要なスキルとともに、シンボル（記号）と行動の関連性について学びます。"ロボットのお友達"という課題はクラス課題として、グループ活動にもっともてきしています。'
   khan_longdescription: 楽しいお絵かきをしながらJavaScriptのプログラミングの基本を学習します。自分でやったり、クラスで取り組んだりすることができます。
   khanes_longdescription: 楽しいお絵かきをしながらJavaScriptのプログラミングの基本を学習します。自分でやったり、クラスで取り組んだりすることができます。
   tynker_longdescription: あなた独自のゲームを作って友達とシェアしましょう！楽しいコーディングのパズルに挑戦し、段階的にプログラミングの考え方を学びます。アニメの登場人物と一緒に、色々な楽しい課題に取り組みます。物理法則を活用したリアルなゲームも作成します。ブロックによるコードだけでなく、JavaScriptのコードも見ることができます。iPadやAndroidタブレットの上で実行できます。かなりたくさんのアクティビティが用意されています！
@@ -488,29 +495,29 @@ ja-JP:
   quorum_longdescription: このチュートリアルは、スクリーンリーダーに対応しているので視覚障害のある人にも利用できます。Maryは生物学の研究室にプログラマーとして所属しています。彼女にQuorumというプログラミング言語を紹介してもらいましょう。このチュートリアルはオンラインでの例題を通して独習することができます。
   codespark_longdescription: Foosではコンピュータープログラミングの学習方法です。楽しく、子供にも親しみやすいものです。かわいいキャラクタをプログラミングしてパズルを解き、仮想的な世界に命を吹き込みましょう。このゲームは言葉をつかいません。ですから誰でも楽しむことができます！
   kodable_longdescription: Kodableはプログラミング基本を５歳以上のこどもに紹介する独習用のiPadのゲームです。近くに先生や保護者がいるとよいですが、いなくても大丈夫です。
-  tynkerapp_longdescription: Learn to program by solving fun coding puzzles. Easily build games and stories using with themed graphics, 10+ game-kits and customizable characters. No Internet connectivity required. You can also access your creations on the web.
+  tynkerapp_longdescription: コーディングの楽しいパズルを解くことでプログラムの学習をします。簡単なゲームやお話を作ります。テーマに応じたグラフィック、10以上のゲームキット、カスタマイズできるキャラクターなどを使います。インターネット接続は必須ではありません。Web上の作品にアクセスすることもできます。
   robomindnl_longdescription: 生徒は仮想ロボットの制御を通してプログラミングの基本を学習できます。このオンラインのコースは簡単なプレゼンテーション、動画、クイズ、自動ガイダンスやヒントがついているので、独習することができます。
-  flappy_longdescription: Use drag-and-drop programming to make your own Flappy Bird game, and customize it to look different (Flappy Shark, Flappy Santa, whatever). Add the game to your phone in one click.
-  bitsbox_longdescription: "Customize your very own virtual tablet, then code a series of apps to play and share. Simple walkthroughs make it possible for even young kids to program real Javascript, and the more advanced you are the further you'll go."
-  makegameswithus_longdescription: Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pokemon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!
-  touchdevelop_longdescription: 'The touch-friendly editor will guide you in creating pixel art, solving the bear puzzle, or making your own jumping bird game. '
-  appinventor_longdescription: Entertaining, quick video tutorials walk you through building three simple apps for your Android phone or tablet. Designed for novices and experts alike, this hour of code will get you ready to start building your own apps before you know it. Imagine sharing your own app creations with your friends! These activities are suitable for individuals and for teachers leading classes.
-  blockly_longdescription: 'Got PCs with slow (or non-existent) internet access? Download the Blockly tutorials that were the precursor of the Code.org tutorials - a single 3MB ZIP file can be loaded onto any computer or used off a memory stick'
-  thinkersmith2_longdescription: Students learn about representing and storing letters in binary, as functions of on and off. At the end, the class gets to encode their own initials to take home with them.
-  kodableunplugged_longdescription: 'Designed for use with plain paper, the fuzzFamily Frenzy is an introduction to programming logic for kids 5 and up. A teacher should explain the game, then students program a partner to complete a simple obstacle course. '
-  projguts_longdescription: 'This "unplugged" activity helps students learn how modeling and simulation works by having a group of students play different versions of the Rock / Paper / Scissors game, and see the results as different modeling experiments.'
-  codeorg_beyond_name: Intro Computer Science (grades K-8)
-  khan_beyond_name: Learn computer programming
-  tynker_beyond_name: Learn programming at home
+  flappy_longdescription: 'ドラッグ&ドロップによるプログラミングであなた独自のパタパタ鳥ゲームをつくりましょう。見た目をカスタマイズしてみましょう(パタパタザメ、パタパタサンタ、等々)。そして、あなたの携帯にそのゲームを1クリックで登録しましょう。'
+  bitsbox_longdescription: あなた独自の仮想タブレットをカスタマイズし、アプリを作って、遊んで、共有しましょう。簡単なチュートリアルが用意されているので、小さなお子さんでも本当のJavaScriptでプログラムを作成することができます。そのあとより高度なことに進むことになるでしょう。
+  makegameswithus_longdescription: Swiftと呼ばれる初心者用のプログラミング言語を使って、iPhone用ゲームの作り方を勉強しまそう。あなたのモンスターの動きを制御するコードを描いて、ポケモン風のアクションゲームを作ります。モンスターを勝たせるために、変数、メソッド、オブジェクトなどの使い方を勉強します。
+  touchdevelop_longdescription: 'タッチで簡単に操作できるエディターを使って、ピクセルアートを作ったり、パズルを解いたり、鳥がジャンプするあなた独自のゲームを作成します。 '
+  appinventor_longdescription: 楽くて短いビデオチュートリアルが用意してあります。このビデオでは、Androidフォンやタブレット用の簡単なアプリ3つの作り方を紹介しています。初心者もエキスパートも同じように、このhour of codeでは、事前になにもしらなくてもあなた独自のアプリが作れるようになります。あなた独自のアプリを作って友達にシェアすることを想像してみてください！これらのアクティビティは生徒にも先生にも楽しいものとなっています。
+  blockly_longdescription: あなたのPCはインターネットへのアクセスが遅い状況(もしくは接続がない)でしょうか？ Code.orgのチュートリアルの前にBlocklyチュートリアルをダウンロードしておいてください。この約３MのZIPファイルをロードしておいてもいいですし、USBメモリを使ってオフラインでインストールすることもできます。
+  thinkersmith2_longdescription: オン・オフの関数の集まりとして、生徒はバイナリ形式で文字を格納したり表現したりすることを学びます。最終成果は、頭文字をエンコードできるようになることです。
+  kodableunplugged_longdescription: fuzzFamily Frenzyは5歳以上の子供を対象としたプログラミングロジック入門用の教材です。先生がゲームを説明し、生徒は簡単な課題を解決すべくプログラムを行います。
+  projguts_longdescription: 'この"オフライン"のアクティビティでは、モデリングとシミュレーションについて学びます。生徒はグループになって、じゃんけん風のゲームで遊びます。モデリングが違うと結果がどうかわってくるか見てみてください。'
+  codeorg_beyond_name: コンピューターサイエンス入門　(13-14歳程度)
+  khan_beyond_name: コンピュータ プログラミングを学ぶ
+  tynker_beyond_name: 自宅でプログラミングを学ぶ
   scratch_beyond_name: コーディングで創造的になりましょう。
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
-  scratchjr_beyond_name: ScratchJR for pre-readers
-  hopscotch_beyond_name: 'Hopscotch: Programming On Your iPad'
+  scratchjr_beyond_name: 幼児用のScratchJR
+  hopscotch_beyond_name: 'Hopscotch: iPadでプログラミング'
   pocketcode_beyond_name: Pocket Code
-  groklearning_beyond_name: Learn Python programming
-  hacketyhack_beyond_name: Learn Ruby
+  groklearning_beyond_name: Pythonプログラミングを学ぶ
+  hacketyhack_beyond_name: Rubyを学ぶ
   robomind_beyond_name: 仮想ロボットをプログラムします。
   makegameswithus_beyond_name: お使いのブラウザーで、iPhone のゲームを構築 ！
   appinventor_beyond_name: Hour of COdeでアップインべンター
@@ -518,22 +525,22 @@ ja-JP:
   codehs_beyond_name: カレル犬と一緒にコーディングを学ぶ
   udemy_beyond_name: オンラインのプログラミング コース
   lynda_beyond_name: オンラインのプログラミング コース
-  edx_beyond_name: Harvard CS50 class
-  coursera_beyond_name: Stanford CS 101 class
+  edx_beyond_name: ハーバードのコンピューターサイエンス入門クラス(CS50)
+  coursera_beyond_name: スタンフォードのコンピューターサイエンス入門クラス
   udacity_beyond_name: CS 101
-  teachingtree_beyond_name: University courses online
+  teachingtree_beyond_name: 大学のオンラインコース
   kodu_beyond_name: Kodu
   cargobot_beyond_name: Cargobot
   kidsruby_beyond_name: KidsRuby
-  w3schools_beyond_name: Learn HTML
-  codeavengers_beyond_name: Learn to Code Websites
+  w3schools_beyond_name: HTML を学ぶ
+  codeavengers_beyond_name: ウェブサイトの作り方を学ぶ
   mozilla_beyond_name: Webmaker
   codecombat_beyond_name: CodeCombat
   codea_beyond_name: Codea
   lego_beyond_name: Mindstorms
   finch_beyond_name: Finch
-  arduino_beyond_name: Arduino with Sparkfun
-  processing_beyond_name: Program with Processing
+  arduino_beyond_name: SparkfunでArduino
+  processing_beyond_name: Processingでプログラミング
   alice_beyond_name: Alice
   sphero_beyond_name: SPRK
   codeorg_beyond_gradelevel: 年齢 4歳-104歳
@@ -553,71 +560,71 @@ ja-JP:
   appinventor_beyond_gradelevel: 中学高 +
   touchdevelop_beyond_gradelevel: 高校
   codehs_beyond_gradelevel: 高校
-  udemy_beyond_gradelevel: High school +
-  lynda_beyond_gradelevel: High school +
-  edx_beyond_gradelevel: University
-  coursera_beyond_gradelevel: University
-  udacity_beyond_gradelevel: University
-  teachingtree_beyond_gradelevel: University
+  udemy_beyond_gradelevel: 高校生以上
+  lynda_beyond_gradelevel: 高校生以上
+  edx_beyond_gradelevel: 大学生
+  coursera_beyond_gradelevel: 大学生
+  udacity_beyond_gradelevel: 大学生
+  teachingtree_beyond_gradelevel: 大学生
   kodu_beyond_gradelevel: 年齢 8 才+
   cargobot_beyond_gradelevel: 年齢 8 才+
-  kidsruby_beyond_gradelevel: Ages 12+
-  w3schools_beyond_gradelevel: Ages 12+
+  kidsruby_beyond_gradelevel: 12歳以上
+  w3schools_beyond_gradelevel: 12歳以上
   codeavengers_beyond_gradelevel: 中学高 +
-  mozilla_beyond_gradelevel: Ages 12+
+  mozilla_beyond_gradelevel: 12歳以上
   codecombat_beyond_gradelevel: 中学高 +
-  codea_beyond_gradelevel: High school +
+  codea_beyond_gradelevel: 高校生以上
   lego_beyond_gradelevel: 中学高 +
   finch_beyond_gradelevel: 年齢 8 才+
-  arduino_beyond_gradelevel: High school +
+  arduino_beyond_gradelevel: 高校生以上
   processing_beyond_gradelevel: 高校
   alice_beyond_gradelevel: 中学高 +
   sphero_beyond_gradelevel: 年齢 8 才+
-  codeorg_beyond_platformtext: Modern browsers, tablets
-  khan_beyond_platformtext: Modern Web browsers
-  tynker_beyond_platformtext: Modern web browsers ($$ required)
-  scratch_beyond_platformtext: Any browser
-  lightbot_beyond_platformtext: iOS, Android (or web browser)
-  codecademy_beyond_platformtext: Modern web browsers. iOS, Android apps
+  codeorg_beyond_platformtext: 最新のブラウザー + タブレット
+  khan_beyond_platformtext: 最新の Web ブラウザー
+  tynker_beyond_platformtext: 最新の web ブラウザー ($$ が必要)
+  scratch_beyond_platformtext: 任意のブラウザー
+  lightbot_beyond_platformtext: iOS、Android (web ブラウザー)
+  codecademy_beyond_platformtext: 最新の web ブラウザー、iOS、Android アプリ
   kodable_beyond_platformtext: iPad
   scratchjr_beyond_platformtext: iPad
   hopscotch_beyond_platformtext: iPad
-  pocketcode_beyond_platformtext: Mobile App
-  groklearning_beyond_platformtext: Modern web browsers
-  hacketyhack_beyond_platformtext: Desktop install
-  robomind_beyond_platformtext: Modern web browsers, Mobile web
-  makegameswithus_beyond_platformtext: Modern Web browsers
-  appinventor_beyond_platformtext: Modern browser + Android
-  touchdevelop_beyond_platformtext: Modern browsers, smartphones, all devices
-  codehs_beyond_platformtext: Modern browsers ($$ required)
-  udemy_beyond_platformtext: Web based
-  lynda_beyond_platformtext: Web based ($$ required)
-  edx_beyond_platformtext: Modern browsers
-  coursera_beyond_platformtext: Modern browsers
-  udacity_beyond_platformtext: Modern browsers
-  teachingtree_beyond_platformtext: Web based
+  pocketcode_beyond_platformtext: 携帯アプリ
+  groklearning_beyond_platformtext: 最新の Web ブラウザー
+  hacketyhack_beyond_platformtext: デスクトップへのインストール
+  robomind_beyond_platformtext: 最新の web ブラウザー、モバイル web
+  makegameswithus_beyond_platformtext: 最新の Web ブラウザー
+  appinventor_beyond_platformtext: 最新のブラウザー + Android
+  touchdevelop_beyond_platformtext: 最新のブラウザー、スマート フォン、すべてのデバイス
+  codehs_beyond_platformtext: 最新のブラウザー ($$が必要)
+  udemy_beyond_platformtext: Web ベース
+  lynda_beyond_platformtext: Web ベース ($$ が必要)
+  edx_beyond_platformtext: 最新のブラウザー
+  coursera_beyond_platformtext: 最新のブラウザー
+  udacity_beyond_platformtext: 最新のブラウザー
+  teachingtree_beyond_platformtext: Web ベース
   kodu_beyond_platformtext: Windows, xBox
   cargobot_beyond_platformtext: iPad
-  kidsruby_beyond_platformtext: Desktop install
-  w3schools_beyond_platformtext: Modern Web browsers
-  codeavengers_beyond_platformtext: Modern Web browsers
-  mozilla_beyond_platformtext: Modern Web browsers
-  codecombat_beyond_platformtext: Web based (Firefox, Chrome, Safari, IE9+)
+  kidsruby_beyond_platformtext: デスクトップへのインストール
+  w3schools_beyond_platformtext: 最新の Web ブラウザー
+  codeavengers_beyond_platformtext: 最新の Web ブラウザー
+  mozilla_beyond_platformtext: 最新の Web ブラウザー
+  codecombat_beyond_platformtext: Web ベース (Firefox、クロム、サファリ、IE9 +)
   codea_beyond_platformtext: iPad
-  lego_beyond_platformtext: Robot purchase
-  finch_beyond_platformtext: Robot purchase
+  lego_beyond_platformtext: ロボットの購入
+  finch_beyond_platformtext: ロボットの購入
   arduino_beyond_platformtext: Web browser, then Kit purchase
-  processing_beyond_platformtext: Modern web browsers
-  alice_beyond_platformtext: Windows or Mac (install required)
-  sphero_beyond_platformtext: Robot purchase
+  processing_beyond_platformtext: 最新の Web ブラウザー
+  alice_beyond_platformtext: Windows または Mac (インストールが必要)
+  sphero_beyond_platformtext: ロボットの購入
   codeorg_beyond_shortdescription: マークザッカーバーグとアングリーバードと一緒にコーディングを学ぼう ！
   khan_beyond_shortdescription: Java スクリプトで絵画を学ぶ
-  tynker_beyond_shortdescription: A fun and engaging course for children in grades 4-8
+  tynker_beyond_shortdescription: 4-8学年の子供用の楽しいコース
   scratch_beyond_shortdescription: 対話型のゲーム、物語、およびアニメーションを作成します。
   lightbot_beyond_shortdescription: コーディング概念を教えるゲーム
   codecademy_beyond_shortdescription: Web ブラウザーで、JavaScript のプログラミングを学ぶ
   kodable_beyond_shortdescription: 楽しいiPadのゲームはコンピューター プログラミングの概念を教えてくれます。
-  scratchjr_beyond_shortdescription: 'Create interactive stories and games using ScratchJr. '
+  scratchjr_beyond_shortdescription: 'ScratchJRを使ってインタラクティブなお話やゲームを作ります。 '
   hopscotch_beyond_shortdescription: Learn visual programming on an iPad
   pocketcode_beyond_shortdescription: Create a game on your smartphone and share with friends to try!
   groklearning_beyond_shortdescription: Basic intro to python programming
@@ -661,7 +668,7 @@ ja-JP:
   hacketyhack_beyond_longdescription: "Hackety Hack will teach you the absolute basics of programming from the ground up. No previous programming experience is needed! With Hackety Hack, you'll learn the Ruby programming language. Ruby is used for all kinds of programs, including desktop applications and websites. [Note: Desktop install required]"
   robomind_beyond_longdescription: 'Students learn the basics of programming by controling their own virtual robot. The online course is fully self-contained with short presentations, movies, quizzes and automatic guidance/hints to help with the programming exercises. '
   makegameswithus_beyond_longdescription: "Know some ObjectiveC? Learn to make an iPhone game in an hour! We'll guide you through the process, to code, test, and play your game entirely in the browser and then share it on Facebook for friends to try! No prior iPhone development experience is required. You must understand what variables, methods, and objects are."
-  appinventor_beyond_longdescription: Entertaining, quick video tutorials walk you through building three simple apps for your Android phone or tablet. Designed for novices and experts alike, this hour of code will get you ready to start building your own apps before you know it. Imagine sharing your own app creations with your friends! These activities are suitable for individuals and for teachers leading classes.
+  appinventor_beyond_longdescription: 楽くて短いビデオチュートリアルが用意してあります。このビデオでは、Androidフォンやタブレット用の簡単なアプリ3つの作り方を紹介しています。初心者もエキスパートも同じように、このhour of codeでは、事前になにもしらなくてもあなた独自のアプリが作れるようになります。あなた独自のアプリを作って友達にシェアすることを想像してみてください！これらのアクティビティは生徒にも先生にも楽しいものとなっています。
   touchdevelop_beyond_longdescription: TouchDevelop lets you create apps on iPad, iPhone, Android, PC, Mac, Windows Phone. Our touch-friendly editor makes coding fun, even on your phone or tablet!
   codehs_beyond_longdescription: 'Learn the basics of programming with Karel the Dog, a fun, accessible and visual introduction to coding, where giving commands to a computer is just like giving commands to a dog. This tutorial is great if led by a teacher, but can also be done independently. [Note: payment is required]'
   udemy_beyond_longdescription: "Whether you've never seen a line of code or you code for a living, Udemy has a course for you, taught by professional instructors. [Note: payment is required]"

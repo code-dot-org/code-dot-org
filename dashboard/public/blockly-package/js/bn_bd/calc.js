@@ -11060,15 +11060,15 @@ exports.parseElement = function(text) {
 
 },{}],40:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.bn=function(n){return n===1?"one":"other"}
-exports.compute = function(d){return "compute"};
+exports.compute = function(d){return "গণনা"};
 
 exports.equivalentExpression = function(d){return "ঠিক একই অভিব্যক্তি পেতে আপনার কথাবার্তা রেকর্ড করতে চেষ্টা করুন ।"};
 
-exports.extraTopBlocks = function(d){return "তোমার অসংযুক্ত block আছে । তুমি  \"compute\" block এ যুক্ত করতে বুঝিয়েছিলে কি ?"};
+exports.extraTopBlocks = function(d){return "তোমার অসংযুক্ত block আছে । তুমি  \"compute\" block এ যুক্ত করতে চেয়েছিলে কি ?"};
 
-exports.goal = function(d){return "Goal:"};
+exports.goal = function(d){return "লক্ষ্য:"};
 
-exports.reinfFeedbackMsg = function(d){return "এটি তোমার কাহিনী নয় ! এতে কাজ করা চালিয়ে যাও, কিংবা পরের puzzleএ চলে যাও !"};
+exports.reinfFeedbackMsg = function(d){return "এটি তোমার কাহিনী ! এতে কাজ করা চালিয়ে যাও, কিংবা পরের puzzleএ চলে যাও !"};
 
 exports.yourExpression = function(d){return "তোমার অভিব্যাক্তি:"};
 

@@ -11062,7 +11062,7 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.fil=function(n){return n===0||n==1?"one":"other"}
 exports.compute = function(d){return "compute"};
 
-exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
+exports.equivalentExpression = function(d){return "Subukang ayusin ang iyong mga argument upang makuha ang parehong ekspresyon."};
 
 exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"compute\" block?"};
 
@@ -11117,7 +11117,7 @@ exports.directionEastLetter = function(d){return "E"};
 
 exports.directionWestLetter = function(d){return "W"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "tapos"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Ang \"Repeat\" o \"if\" block ay kailangan ng iba pang mga block sa loob nito upang gumana. Siguraduhin na ang block na asa loob ay nakasukat ng maayos sa loob ng naglalaman na block."};
 

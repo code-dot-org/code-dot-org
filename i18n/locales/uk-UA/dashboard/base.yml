@@ -336,8 +336,8 @@ uk:
     test_videos_help: Випробуйте наш новий відео-плеєр у своїй школі
     try_beta_courses: Новинка! Спробуйте наші бета-курси для учнів 1-5 класів
     use_as_teacher: Використовуйте цей сайт як вчитель
-    heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
-    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
+    heading_hoc2014: '<h2>Година коду</h2><h1>для будь-якого віку</h1>'
+    heading_elementary: '<h2>20-годинні курси</h2><h1>для початківців</h1>'
     heading_apps: '<h2>Цікавинки</h2><h1>для усіх</h1>'
     heading_legacy: '<h2>Загальний курс</h2><h1>для будь-якого віку</h1>'
     your_gallery: Галерея
@@ -350,8 +350,8 @@ uk:
     teacher: Вчитель
   footer:
     help_from_html: Інженери Google, Microsoft, Facebook і Twitter допомогли створити цей підручник.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
-    powered_by_aws: Powered by Amazon Web Services
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Всі права захищені.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Всі права захищені.'
+    powered_by_aws: На потужностях Amazon Web Services
     feedback: Надати відгук
     translate: Допоможіть нам перекласти вашою мовою
     support: Підтримка
@@ -429,7 +429,7 @@ uk:
       title: Галерея
       body: Переглянути галерею програм та художніх зображень, створених нашими користувачами
     frozen:
-      title: Frozen
+      title: Крижане серце
   gallery:
     students_drew_these_with_code: Ці малюнки запрограмували учні!
     students_made_these_with_code: Це запрограмували учні!

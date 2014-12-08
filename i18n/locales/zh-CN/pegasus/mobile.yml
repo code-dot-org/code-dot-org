@@ -41,7 +41,7 @@ zh-CN:
   go: 进行
   thank_you_: 谢谢！
   congratulations: 恭喜你！
-  congratulations_on_completing_hoc: 恭喜你完成编程一小时。
+  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   get_a_certificate_of_achievement: 获取证书
   enter_valid_email: 请输入一个有效的电子邮件地址
   get_a_certificate_message: "我们会向您发送证书和有关的信息 关于如何<a href='/learn/beyond'> 学习 超出一小时</a> "
@@ -65,7 +65,7 @@ zh-CN:
   thanks_for_voting: 感谢你的投票 ！
   share_on_facebook: 在 Facebook 上分享
   share_on_twitter: 在 Twitter 上分享
-  beyond_an_hour: 《一小时以外编程》
+  beyond_an_hour: Beyond an Hour of Code
   get_started: 开始
   i_agree: 我同意
   participant_select: -请选择-
@@ -74,6 +74,9 @@ zh-CN:
   participant_educator: 教师
   participant_engineer: 软件工程师
   participant_other: 以上都不是
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: 我是
   never_spam: 我们绝不会发送垃圾邮件
   enter_country: 如果在美国以外，请输入国家
@@ -110,6 +113,10 @@ zh-CN:
   studiobar_flappy_body: 创造自己的 Flappy 游戏并与别人分享
   studiobar_teacher_title: 为教师所制
   studiobar_teacher_body: 在您的教室内介绍《编程工作室》
+  studiobar_frozen_title: 编程一小时
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: 我是一个学生
   contact_form_topic_parent: 我是家长
   contact_form_topic_teacher: 我的老师或教育家
@@ -222,7 +229,7 @@ zh-CN:
   dashboard_students_new_section: '您已经创建了一个新的学习小组！现在，使用上面的<b>添加学生</b>和<b>添加多个学生</b>按钮来添加学生进组。'
   dashboard_students_placeholder_name: 学生姓名
   dashboard_students_name: 姓名
-  dashboard_students_age: Age
+  dashboard_students_age: 年龄
   dashboard_students_gender: 性别
   dashboard_students_male: 男性
   dashboard_students_female: 女性
@@ -283,17 +290,17 @@ zh-CN:
   dashboard_sections_password_account_creation: 学生创建的文本密码
   dashboard_sections_login_type_explanation: '此表可以帮助解释您想要为学习小组选择那种登录类型，<b>图片，词语或电子邮件</b>。'
   dashboard_faq: 常见的问题
-  code_hoc_coming: '编程一小时就要来啦 - 十二月8号到14号！'
+  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: 注册以便在CS教育周期间参加
   learn_more: 了解详情
   hoc2014_try_new_tutorials: 试试我们新的编程一小时教程
-  hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
+  hoc2014_try_new_tutorial: 试试我们新的beta 版的一小时代码教程
   hoc2014_try_scrat: 愤怒的小鸟、PvZ和Scrat
-  hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
+  hoc2014_try_frozen: 艺术家与冻结的安娜和艾尔莎
   carousel_heading_international: 中文教程
   carousel_heading_domestic: 英文教程可用
   carousel_heading_beginners: 初学者教程
-  carousel_heading_javascript: Tutorials that teach JavaScript
+  carousel_heading_javascript: 教 JavaScript 的教程
   carousel_heading_unplugged: 没有设备或互联网接入？试试’离线‘计算机科学课程
   carousel_heading_devices: 为手机和平板电脑定制的教程应用
   carousel_heading_languages: 用其他编程语言所写的教程

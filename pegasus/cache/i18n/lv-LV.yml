@@ -97,6 +97,9 @@
   participant_educator: Skolotājs
   participant_engineer: Programmatūras inženieris
   participant_other: Neviens no iepriekš minētajiem
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Es esmu
   never_spam: Es nekad nesūtīšu spamu
   enter_country: Ievadi valsti ja neesi no ASV
@@ -135,6 +138,10 @@
   studiobar_flappy_body: Izveido un dalies ar savu Flappy spēli
   studiobar_teacher_title: Radīts skolotājiem
   studiobar_teacher_body: Iepazīstini savus skolēnus ar Code Studio
+  studiobar_frozen_title: Programmēšanas stunda
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Skolēniem
   contact_form_topic_parent: Vecākiem
   contact_form_topic_teacher: Pasniedzējiem/skolotājiem
@@ -356,7 +363,7 @@
   carousel_heading_international: Pamācības tavā valodā
   carousel_heading_domestic: Pamācības, kas pieejamas Angļu valodā
   carousel_heading_beginners: Pamācības iesācējiem
-  carousel_heading_javascript: Pamācības tiem, kas māca javaskriptu
+  carousel_heading_javascript: Pamācības tiem, kas māca JavaScript
   carousel_heading_unplugged: Nav ierīces vai interneta? Mēģiniet 'atvienotās' datorzinātnes
   carousel_heading_devices: Pamācību aplikācija priekš telefoniem un planšetdatoriem
   carousel_heading_languages: Pamācības citās programēsanas valodās

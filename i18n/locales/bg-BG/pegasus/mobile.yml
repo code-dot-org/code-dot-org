@@ -41,7 +41,7 @@ bg-BG:
   go: Напред
   thank_you_: Благодарим Ви!
   congratulations: Поздравления!
-  congratulations_on_completing_hoc: Поздравления за завършване на предизвикателството Един Час Кодиране.
+  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   get_a_certificate_of_achievement: Получете сертификат за постижение
   enter_valid_email: Моля, въведете валиден имейл адрес
   get_a_certificate_message: "Ние ще ви изпратим сертификат и информация за това как да <a href='/learn/beyond'> учите и след първия час кодиране</a>"
@@ -65,7 +65,7 @@ bg-BG:
   thanks_for_voting: Благодарим за гласуването!
   share_on_facebook: Споделяне във Facebook
   share_on_twitter: Споделяне в Twitter
-  beyond_an_hour: 'След Часът на кодирането >'
+  beyond_an_hour: Beyond an Hour of Code
   get_started: Старт
   i_agree: Приемам
   participant_select: -Изберете-
@@ -74,6 +74,9 @@ bg-BG:
   participant_educator: Преподавател
   participant_engineer: Софтуерен инженер
   participant_other: Никое от горните
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Аз съм
   never_spam: Ние никога няма да ви изпратим спам
   enter_country: Въведете страна, ако се намирате извън САЩ
@@ -110,6 +113,10 @@ bg-BG:
   studiobar_flappy_body: Направете и споделете своя собствена Flappy игра
   studiobar_teacher_title: За учители
   studiobar_teacher_body: Представете Code Studio в класната си стая
+  studiobar_frozen_title: Час на Кодирането
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Аз съм ученик
   contact_form_topic_parent: Аз съм родител
   contact_form_topic_teacher: Аз съм учител/обучител
@@ -283,7 +290,7 @@ bg-BG:
   dashboard_sections_password_account_creation: Учениците си създават текстова парола
   dashboard_sections_login_type_explanation: 'Тази таблица помага да се обясни кой от тези типове вход- <b>картина, дума или електронна поща</b>, вие ще  изберете за вход в раздела.'
   dashboard_faq: Често задавани въпроси
-  code_hoc_coming: 'Часът на кодирането идва - декември 8-14!'
+  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: Регистрирайте се за участие по време на CS седмицата на образованието
   learn_more: Научете повече
   hoc2014_try_new_tutorials: Опитайте нашите нови уроци за Часа на кодирането
@@ -293,7 +300,7 @@ bg-BG:
   carousel_heading_international: Уроци на вашия език
   carousel_heading_domestic: Уроците са на английски
   carousel_heading_beginners: Уроци за начинаещи
-  carousel_heading_javascript: Tutorials that teach JavaScript
+  carousel_heading_javascript: Уроци, които преподават Javascript
   carousel_heading_unplugged: 'Нямате устройство или интернет? Опитайте "ънплъгд" уроците по компютърни науки'
   carousel_heading_devices: Образователни приложения за телефони и таблети
   carousel_heading_languages: Уроци за други езици за програмиране

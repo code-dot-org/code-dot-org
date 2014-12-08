@@ -161,8 +161,8 @@
           Ninja Cat and the Coordinate Plane: Ninja-macska és a koordináta sík
           'Calc: Circles of Evaluation': 'Számológép: Kiértékelő körök'
           'Artist: Strings and Images': 'Művész: szöveg és a képek'
-          Contracts: Contracts
-          'Artist: Writing Contracts': 'Artist: Writing Contracts'
+          Contracts: Szerződések
+          'Artist: Writing Contracts': 'Előadó: Szerződések írása'
           'Calc: Defining Variables': 'Számológép: Változók deklarációja'
           'Play Lab: Defining Variables': 'Játéklabor: Változók deklarálása'
           The Design Recipe: A dizájn receptje
@@ -183,8 +183,8 @@
           'Unplugged: Ninja Cat and the Coordinate Plane': 'Gép nélküli feladatok:
             Ninja-macska és koordináta sík'
           'Eval: Strings and Images': 'Kiértékelés: Szöveges típus és a képek'
-          'Unplugged: Contracts': 'Unplugged: Contracts'
-          'Eval: Writing Contracts': 'Eval: Writing Contracts'
+          'Unplugged: Contracts': 'Számítógép nélkül: Szerződések'
+          'Eval: Writing Contracts': 'Kiértékelés: Szerződések írása'
           'Unplugged: The Design Recipe': 'Gép nélküli feladatok: a dizájn receptje'
           'Eval: Defining Functions': 'Kiértékelés: Gyors függvények'
           'Eval: Functions': 'Kiértékelés: A recept dizájnja'
@@ -325,12 +325,12 @@
           Variables: Változók
           For Loops: Számláló ciklusok
         potus:
-          title: special
-          description_short: special
-          description: special
-          Special: Special
+          title: különleges
+          description_short: különleges
+          description: különleges
+          Special: Különleges
         special:
-          title: special
-          description_short: special
-          description: special
-          Special: Special
+          title: különleges
+          description_short: különleges
+          description: különleges
+          Special: Különleges

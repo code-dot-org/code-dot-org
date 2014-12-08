@@ -1,9 +1,9 @@
 fil:
   devise:
     confirmations:
-      confirmed: Your email address was successfully confirmed.
-      send_instructions: You will receive an email with instructions about how to confirm your account in a few minutes.
-      send_paranoid_instructions: If your email address exists in our database, you will receive an email with instructions about how to confirm your account in a few minutes.
+      confirmed: Ang iyong email address ay matagumpay na nakumpirma.
+      send_instructions: Ikaw ay makakatanggap ng email na meron mga instruction kung paano makumpirma ang iyong account sa ilang sandali.
+      send_paranoid_instructions: Kung ang iyong email address ay nasa aming database, ikaw ay makakatanggap ng email na meron mga instruction kung paano ma-confirm ang iyong account sa ilang sandali.
     failure:
       already_authenticated: Ikaw ay naka-sign in na.
       inactive: Ang iyong account ay hindi pa activated.

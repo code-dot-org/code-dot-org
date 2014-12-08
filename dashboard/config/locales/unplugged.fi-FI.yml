@@ -3,12 +3,13 @@
     unplugged:
       Unplug1:
         title: Johdanto tietojenkäsittelyyn
-        desc: Oppitunti opettaa tietojenkäsittelyn konseptin ja selittää mitä tietojenkäsittelijä
-          tekee. Se antaa oppilaille mahdollisuuden ottaa tietojenkäsittelijän roolin.
-          Tehtävän lopussa jokainen opiskelija saa mukaansa muistutuksen mitä hän
-          on oppinut. Saatat tunna houkutusta väistää opettamasta lapsille sanastoa,
-          joita tulee seuraavilla kursseilla, mutta niiden esittäminen hauskassa ja
-          leikkisässä valossa on tuottavampaa kuin myöhempien mahdollisuuksien odottaminen.
+        desc: Tämä oppitunti opettaa tietotekniikan käsitteen ja selittää mitä tietotekniikka-ammattilainen
+          tekee. Se myös antaa oppilaille mahdollisuuden ottaa tietotekniikka-ammattilaisen
+          roolin. Tehtävän loppuun mennessä kullakin oppilaalla on kotiin mukaan otettava
+          muistutus siitä mitä hän on oppinut. Saatat kokea houkutusta väistää opettamasta
+          tulevien oppituntien sanastoa nuorille lapsille, mutta niiden esittäminen
+          hauskassa ja leikkisässä valossa on tuottavampaa kuin edistyneempien mahdollisuuksien
+          odottaminen.
         pdfs:
         - unplug1
         video: Unplug1
@@ -169,8 +170,8 @@
         video: C2_graph_paper
       PaperPlanes:
         title: 'Tosielämän algoritmit: paperilentokoneet'
-        desc: Tällä tunnilla osoitetaan tapoja, joilla algoritmejä käytetään arkielämässä,
-          erityisesti paperilennokkien tekemisessä. Oppitunti keskittyy myös tietojenkäsittelytieteen
+        desc: Tällä tunnilla tutkitaan, miten algoritmit esiintyvät arkielämässämme,
+          esimerkkinä paperilennokkien tekeminen. Oppitunti keskittyy myös tietojenkäsittelytieteen
           kokonaiskuvaan ja kuinka algoritmeillä on siinä oleellinen rooli.
         video: C2_paper_airplanes
       BinaryBracelets:
@@ -197,7 +198,7 @@
           käyttäen narua ja helmiä.
         video: C3_functional_suncatchers
       SongwritingParameters:
-        title: Parametroitu laulunkirjoitus
+        title: Parametroitu sävellys
         desc: Opiskelijat käyttävät kuoron käsitettä oppiakseen muuttujien välityksestä
           (joilla voi muokata funktiota ilman että koko funktiota tarvitsee kirjoittaa
           uudestaan).
@@ -205,7 +206,7 @@
       DiceRace:
         title: 'Tosielämän algoritmit: Noppakisa'
         desc: Tällä oppitunnilla havainnollistaan kuinka algoritmejä käytetään arkielämässämme.
-          Tässä yhteydessä oppilaat tunnistavat ja kirjoittavat algoritmin noppakisapelille.
+          Oppilaat tunnistavat ja kirjoittavat algoritmin noppakisapelille.
         video: C3_dice_race
       Internet:
         title: Internet
@@ -240,7 +241,7 @@
           erojen varalta jotta he voivat yleistää ne. Näistä abstraktoiduista tarinoista
           tulee malleja hauskoille ja hassuille uusille tarinoille.
       ForLoopFun:
-        title: Silmukkahupiin
+        title: Silmukkahupia
         desc: Tiedämme, että silmukat antavat meidän tehdä asioita uudestaan ja uudestaan,
           mutta nyt opimme kuinka käyttää silmukoita sisäänrakennettujen lisärakenteiden
           kanssa.
@@ -263,16 +264,16 @@
         desc: Video Games and Coordinate Planes lesson description
       Contracts:
         title: Sopimukset
-        desc: Contracts unplugged lesson description
+        desc: 'Sopimukset: tietokoneettoman tekemisen oppitunnin kuvaus'
       DesignRecipe:
         title: Suunnitteluresepti
         desc: Design Recipe lesson description
       Booleans:
-        title: Booleans
-        desc: Booleans lesson description
+        title: Totuusarvot
+        desc: 'Totuusarvot: oppitunnin kuvaus'
       ConditionalsPiecewiseFunctions:
         title: Ehtolauseet ja paloittaiset funktiot
         desc: Conditionals and Piecewise Functions lesson description
       CollisionDetection:
-        title: Törmäyksen huomaaminen
+        title: Törmäyksen tunnistaminen
         desc: Collision Detection lesson description

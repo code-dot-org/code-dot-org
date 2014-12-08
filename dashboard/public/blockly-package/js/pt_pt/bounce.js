@@ -12485,7 +12485,7 @@ exports.playSoundLosePoint = function(d){return "tocar som de ponto perdido"};
 
 exports.playSoundLosePoint2 = function(d){return "tocar som de ponto perdido 2"};
 
-exports.playSoundRetro = function(d){return "play retro sound"};
+exports.playSoundRetro = function(d){return "tocar som retrô"};
 
 exports.playSoundRubber = function(d){return "tocar som de borracha"};
 
@@ -12515,21 +12515,21 @@ exports.scoreText = function(d){return "Pontuação: "+v(d,"playerScore")+" : "+
 
 exports.setBackgroundRandom = function(d){return "define uma cena aleatória"};
 
-exports.setBackgroundHardcourt = function(d){return "set hardcourt scene"};
+exports.setBackgroundHardcourt = function(d){return "definir cena de campo de ténis"};
 
-exports.setBackgroundRetro = function(d){return "set retro scene"};
+exports.setBackgroundRetro = function(d){return "definir a cena retrô"};
 
 exports.setBackgroundTooltip = function(d){return "definir a imagem de fundo"};
 
-exports.setBallRandom = function(d){return "set random ball"};
+exports.setBallRandom = function(d){return "definir bola aleatória"};
 
-exports.setBallHardcourt = function(d){return "set hardcourt ball"};
+exports.setBallHardcourt = function(d){return "definir bola de ténis"};
 
-exports.setBallRetro = function(d){return "set retro ball"};
+exports.setBallRetro = function(d){return "definir bola retrô"};
 
-exports.setBallTooltip = function(d){return "Sets the ball image"};
+exports.setBallTooltip = function(d){return "Define a imagem da bola"};
 
-exports.setBallSpeedRandom = function(d){return "set random ball speed"};
+exports.setBallSpeedRandom = function(d){return "definir velocidade da bola aleatória"};
 
 exports.setBallSpeedVerySlow = function(d){return "define velocidade da bola muito lenta"};
 

@@ -41,7 +41,7 @@ zh-TW:
   go: 開始
   thank_you_: 謝謝！
   congratulations: 恭喜你！
-  congratulations_on_completing_hoc: 恭喜你，你已完成 1 個小時的程式設計課程。
+  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   get_a_certificate_of_achievement: 獲取成就證書
   enter_valid_email: 請輸入一個有效的電子郵件信箱
   get_a_certificate_message: "我們將會寄送給您有關<a href='/learn/beyond'>一小時後的學習</a>的證書和相關訊息。"
@@ -65,7 +65,7 @@ zh-TW:
   thanks_for_voting: 感謝您的投票 ！
   share_on_facebook: 在 Facebook 上分享
   share_on_twitter: 在 Twitter 上分享
-  beyond_an_hour: 超越編程一小時
+  beyond_an_hour: Beyond an Hour of Code
   get_started: 開始
   i_agree: 我同意
   participant_select: -請選擇-
@@ -74,6 +74,9 @@ zh-TW:
   participant_educator: 教育人員
   participant_engineer: 軟體工程師
   participant_other: 以上皆非
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: 我是
   never_spam: 我們永遠不會發送垃圾郵件
   enter_country: 如果在美國以外，輸入您的國家
@@ -110,6 +113,10 @@ zh-TW:
   studiobar_flappy_body: 製作和分享你自己的Flappy遊戲
   studiobar_teacher_title: 為導師們製造
   studiobar_teacher_body: 在您的課室裡介紹編程工作室
+  studiobar_frozen_title: 一小時的程式設計課程
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: 我是位學生
   contact_form_topic_parent: 我是位家長
   contact_form_topic_teacher: 我是個老師/教育家
@@ -283,7 +290,7 @@ zh-TW:
   dashboard_sections_password_account_creation: 學生建立的文字密碼
   dashboard_sections_login_type_explanation: '本表協助説明您可以選擇的課程區段登入類型，<b>通關圖片、 通關密語或電子郵件</b>。'
   dashboard_faq: 常見問題集
-  code_hoc_coming: Hour of Code活動將於12 月 8-14日登場 ！
+  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: 註冊參與電腦科學教育週
   learn_more: 瞭解更多資訊
   hoc2014_try_new_tutorials: 試試我們新的Hour of Code活動教案
@@ -293,7 +300,7 @@ zh-TW:
   carousel_heading_international: 使用你語言的教程
   carousel_heading_domestic: 可用的在英語教程
   carousel_heading_beginners: 適合初學者的教程
-  carousel_heading_javascript: Tutorials that teach JavaScript
+  carousel_heading_javascript: 教 JAVAscript 的自學教案
   carousel_heading_unplugged: "沒有設備或網際網路嗎？試試 '不插電'的電腦科學"
   carousel_heading_devices: 手機和平板電腦的自學APPs
   carousel_heading_languages: 其他程式設計語言的自學教案

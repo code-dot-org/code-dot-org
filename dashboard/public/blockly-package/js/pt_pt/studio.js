@@ -21469,7 +21469,7 @@ exports.playSoundLosePoint = function(d){return "tocar som de ponto perdido"};
 
 exports.playSoundLosePoint2 = function(d){return "tocar som de ponto perdido 2"};
 
-exports.playSoundRetro = function(d){return "play retro sound"};
+exports.playSoundRetro = function(d){return "tocar som retrô"};
 
 exports.playSoundRubber = function(d){return "tocar som de borracha"};
 

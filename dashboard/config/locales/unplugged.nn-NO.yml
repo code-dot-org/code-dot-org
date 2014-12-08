@@ -65,9 +65,9 @@
         video: Unplug5
       Unplug6:
         title: Vilkår
-        desc: Dette er et spill for hele klassen. Etter en innføring av betingelser,
-          hvis-setninger og løkker, kan klassen øve sammen med et forhåndsskrevet
-          program, en kortstokk, og litt flaks.
+        desc: Dette er eit klasse-spel. Etter introduseringa av føresetnader, hvis-setninger
+          og løkker, kan klassa øve saman med eit ferdig-skreve program, ein kortstokk
+          og trekningshell.
         pdfs:
         - unplug6
         video: Unplug6

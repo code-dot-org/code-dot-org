@@ -97,6 +97,9 @@
   participant_educator: Eğitmen
   participant_engineer: Yazılım Mühendisi
   participant_other: Yukarıdakilerden Hiçbiri
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Ben bir
   never_spam: Biz asla seni spamlamayacağız
   enter_country: Eğer ABD'nin dışındaysanız ülkenizi girin
@@ -135,6 +138,10 @@
   studiobar_flappy_body: Kendi Flappy Bird oyununu yap ve paylaş
   studiobar_teacher_title: Öğretmenler için
   studiobar_teacher_body: Sınıfınıza Code Studio 'yu tanıtın
+  studiobar_frozen_title: Saat Kodu
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Bir öğrenciyim
   contact_form_topic_parent: Bir ebeveynim
   contact_form_topic_teacher: Bir öğretmen/eğitimciyim

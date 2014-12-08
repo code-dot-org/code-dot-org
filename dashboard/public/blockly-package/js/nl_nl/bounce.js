@@ -12668,19 +12668,19 @@ exports.emptyBlocksErrorMsg = function(d){return "De \"herhaal\" of \"als\" blok
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Het functie-blok moet andere blokken bevatten om te werken."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "Er moeten blokken staan binnen je functie-definitie. Klik op \"bewerk\" en sleep blokken binnen de groene blok."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "Klik \"bewerk\" en zorg ervoor dat je geen blokken mist in je functie-definitie."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "Denk er aan om aan iedere parameter input op het functieblok in je werkruimte een blok toe te voegen."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "Je voegde een parameter blok toe maar gebruikte deze niet in je functie. Zorg ervoor dat je je parameter gebruikt door op \"bewerk\" te klikken en de parameter blok binnen de groene blok te plaatsen."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "Maak een parameter voor je functie door op \"bewerk\" te klikken en de nodige parameters toe te voegen. Sleep de nieuwe parameter blok in je functie-definitie."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "Je maakte een functie  maar gebruikte deze nooit in je werkruimte! Klik op \"Functies\" in de gereedschapskist en zorg ervoor dat je ze gebruikt in je programma."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "Vervang \"???\" door een waarde."};
 
 exports.extraTopBlocks = function(d){return "Je hebt blokken die nergens aan vast zitten. Was het je bedoeling die aan het \"bij uitvoeren\"-blok toe te voegen?"};
 
@@ -12742,7 +12742,7 @@ exports.showBlocksHeader = function(d){return "Toon blokken"};
 
 exports.showGeneratedCode = function(d){return "Code weergeven"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "tekenreeks =?"};
 
 exports.subtitle = function(d){return "een visuele programmeeromgeving"};
 

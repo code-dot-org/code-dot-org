@@ -41,7 +41,7 @@ fa-AF:
   go: برو
   thank_you_: با سپاس!
   congratulations: تبریک!
-  congratulations_on_completing_hoc: تبریک برای تمام کردن کد در یک ساعت.
+  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   get_a_certificate_of_achievement: دریافت گواهی موفقیت
   enter_valid_email: لطفا یک آدرس ایمیل معتبر را وارد کنید
   get_a_certificate_message: "ما گواهی تحصیل و اطلاعات در مورد چگونگی <a/> یادگیری فراتراز یک ساعت <'a href='/learn/beyond> را برای شما ارسال خواهیم کرد"
@@ -65,7 +65,7 @@ fa-AF:
   thanks_for_voting: با سپاس از شما برای رای دادن!
   share_on_facebook: به اشتراک گذاشتن در فیسبوک
   share_on_twitter: به اشتراک گذاشتن در توییتر
-  beyond_an_hour: 'فراتر از یک ساعت کد >'
+  beyond_an_hour: Beyond an Hour of Code
   get_started: شروع
   i_agree: موافقم
   participant_select: '- انتخاب کنید -'
@@ -74,6 +74,9 @@ fa-AF:
   participant_educator: مربی
   participant_engineer: مهندس نرم‌افزار
   participant_other: هیچ کدام از موارد فوق
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: من هستم یک
   never_spam: ما هرگز برای شما اسپم نمی‌فرستیم
   enter_country: اگر خارج از ایالات متحده آمریکا هستید کشورتان را وارد کنید
@@ -110,6 +113,10 @@ fa-AF:
   studiobar_flappy_body: با پرنده های Flappy، بازیهای خودتان را بسازید و به اشتراک بگذارید
   studiobar_teacher_title: ساخته شده برای دبیران
   studiobar_teacher_body: در کلاس درسیِ خود Code Studio را معرفی کنید
+  studiobar_frozen_title: ساعتی با کد
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: من دانش آموز هستم
   contact_form_topic_parent: من پدر/مادر هستم
   contact_form_topic_teacher: من دبیر/استاد هستم
@@ -283,7 +290,7 @@ fa-AF:
   dashboard_sections_password_account_creation: کلمه عبور متنی ایجاد شده توسط دانش آموز
   dashboard_sections_login_type_explanation: 'این جدول به توضیح این که شما کدامیک از روش های ورود به سیستم،<b> مثل تصویر، کلمه، یا ایمیل</b>، را می خواهید برای یک بخش انتخاب کنید کمک می کند.'
   dashboard_faq: پرسش و پاسخ‌های متداول
-  code_hoc_coming: 'یک ساعت کدزدن در راه است - 8 تا 14 دسامبر!'
+  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: ثبت نام کنید تا در هفته ی آموزش CS شرکت کنید
   learn_more: بیشتر یاد بگیرید
   hoc2014_try_new_tutorials: آموزش‌های تازه‌ی ساعتِ کدنویسی ما را امتحان کنید
@@ -293,7 +300,7 @@ fa-AF:
   carousel_heading_international: آموزش به زبان شما
   carousel_heading_domestic: آموزش زبان انگلیسی
   carousel_heading_beginners: آموزش برای مبتدیان
-  carousel_heading_javascript: Tutorials that teach JavaScript
+  carousel_heading_javascript: آموزش جاوا اسکریپت
   carousel_heading_unplugged: "هیچ وسیله یا اینترنتی ندارید? علوم کامپیوتر 'بدون اتصال' را امتحان کنید"
   carousel_heading_devices: برنامه های آموزشی برای تلفن های همراه و تبلت ها
   carousel_heading_languages: آموزش ها به زبان های برنامه نویسی دیگر
@@ -309,7 +316,7 @@ fa-AF:
   teachers_notes_hoc: 'معلم ها: نکته های آموزنده ی مهم را اینجا بخوانید'
   previous: قبلی
   next: بعدي
-  older_systems: آموزش هایی که روی سیستم های قدیمی تر کار می کنند
+  older_systems: خودآموز هایی برای سیستمهای قدیمی تر
   older_systems_subheading: 'این ها باید روی مرورگرهای وب قدیمی تر کار کنند. برای دسترسی به تمام آموزش ها، به یک مرورگر وب <a href="http://browsehappy.com/" target="_blank"> به روز ارتقا پیدا کنید.</a>'
   mobile_devices: آموزش‌هایی برای موبایل
   frozen_name: کد با آنا و السا
@@ -398,13 +405,13 @@ fa-AF:
   codemonkey_platformtext: مرورگرهای وب مدرن
   codeavengers_platformtext: مرورگرهای وب مدرن
   processing_platformtext: مرورگرهای وب مدرن
-  robomind_platformtext: Modern web browsers, Mobile web
+  robomind_platformtext: مرورگرهای وب مدرن، وب همراه
   groklearning_platformtext: مرورگرهای وب مدرن
   quorum_platformtext: مرورگر های به روز. پشتیبانی شده برای خواندن صفحه نمایش(تکنولوژی برای کمک به نابینایان)
   codespark_platformtext: 'iOS, Android  (یا مرورگر وب)'
   kodable_platformtext: iPad
   tynkerapp_platformtext: آی پد و تبلت های آندرویدی
-  robomindnl_platformtext: Modern web browsers, Mobile web
+  robomindnl_platformtext: مرورگرهای وب مدرن، وب همراه
   flappy_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
   bitsbox_platformtext: مرورگرهای وب مدرن
   makegameswithus_platformtext: مرورگرهای وب مدرن
@@ -437,24 +444,24 @@ fa-AF:
     Teach "Eliza" the chatbot to fool your friends into thinking she's human!
   quorum_shortdescription: Join Mary on a guided tour as she learns the Quorum programming language.
   codespark_shortdescription: The Foos is a fun, kid-friendly game to learn about programming.
-  kodable_shortdescription: A fun iPad game to teach computer programming concepts
-  tynkerapp_shortdescription: 'Learn to program by solving fun coding puzzles. '
+  kodable_shortdescription: یک بازی سرگرم کننده آی پد برای آموزش مفاهیم برنامه نویسی کامپیوتر
+  tynkerapp_shortdescription: 'لذت یادگیری برنامه نویسی به وسیله حل  پازل سرگرم کننده .'
   robomindnl_shortdescription: کدنویسی برای ربات مجازی
-  flappy_shortdescription: 'Make your own game - Flappy Bird, Shark, or Submarine'
+  flappy_shortdescription: 'بازی خودتان را بسازید- فلپی برد, شرک,یا زیردریایی'
   bitsbox_shortdescription: کد یک سری از برنامه ها برای پخش و به اشتراک گذاری، با استفاده از جاوا اسکریپت واقعی.
-  makegameswithus_shortdescription: Make an iPhone game! Learn by writing code to teach your monster new moves!
-  touchdevelop_shortdescription: 'Solve puzzles, create games, and learn coding all on your phone. '
+  makegameswithus_shortdescription: یک بازی آی فون بسازید! با نوشتن کدی که به هیولای شما حرکات جدید آموزش بدهد خودتان هم بیشتر یاد بگیرید!
+  touchdevelop_shortdescription: حل کردن پازل, ایجاد بازی, و یادگیری برنامه تویسی همه ی این ها بر روی موبایل شما.
   appinventor_shortdescription: برنامه خودت را بساز( فقط آندروید)
   blockly_shortdescription: 'دانلود فایل زیپ برای یادگیری به صورت  آفلاین'
-  thinkersmith2_shortdescription: Learn how computers use 1s and 0s to represent information
+  thinkersmith2_shortdescription: 'یادبگیریم  که کامپیوتر ها چگونه از 0 ها و 1ها برای نشان دادن اطلاعات استفاده میکنند.'
   kodableunplugged_shortdescription: A fun unplugged exercise
-  projguts_shortdescription: Try modeling and simulation using rock/paper/scissors
+  projguts_shortdescription: 'مدل سازی و شبیه سازی  رابا استفاده از سنگ/کاغذ/قیچی امتحان کنید'
   frozen_longdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
-  codeorg_longdescription: Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
-  codeintl_longdescription: Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
+  codeorg_longdescription: با برنامه نویسی کشیدن و رها کردن مفاهیم اولیه علم کامپیوتر را یاد بگیرید. این یک آموزشی شبیه بازی است با حضور ویدیو سخنرانی بیل گیتس، مارک زوکربرگ، پرندگان عصبانی و گیاهان مقابل زامبی ها. در این آموزش حلقه های تکراری، شرطها و الگریتمهای ابتدایی را یاد بگیرید. این آموزش در 34 زبان مختلف در دسترس است.
+  codeintl_longdescription: با برنامه نویسی کشیدن و رها کردن مفاهیم اولیه علم کامپیوتر را یاد بگیرید. این یک آموزشی شبیه بازی است با حضور ویدیو سخنرانی بیل گیتس، مارک زوکربرگ، پرندگان عصبانی و گیاهان مقابل زامبی ها. در این آموزش حلقه های تکراری، شرطها و الگریتمهای ابتدایی را یاد بگیرید. این آموزش در 34 زبان مختلف در دسترس است.
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubriran como guiarse de modo tal de llevar a cabo tareas especificas sin ser estas discutidas previamente. Este segmento ensena a los estudiantes la conexion entre simbolos y acciones asi como la valiosa habilidad de depuracion.'
-  khan_longdescription: Learn the basics of JavaScript programming while creating fun drawings with your code. Do it on your own or with your class!
-  khanes_longdescription: Learn the basics of JavaScript programming while creating fun drawings with your code. Do it on your own or with your class!
+  khan_longdescription: درحالی که با کدی که نوشته اید نقاشی های با مزه میکشید، اصول اولیه برنامه نویسی جاوا اسکریپت را یاد بگیرید. این کار را به تنهایی یا با کمک همکلاسی هایتان انجام دهید!
+  khanes_longdescription: درحالی که با کدی که نوشته اید نقاشی های با مزه میکشید، اصول اولیه برنامه نویسی جاوا اسکریپت را یاد بگیرید. این کار را به تنهایی یا با کمک همکلاسی هایتان انجام دهید!
   tynker_longdescription: Build your own games and share with friends! Solve fun coding puzzles and learn programming concepts in each level. Personalize games with animated characters, multiple levels and rich props. Make your games realistic using physics. See the code as visual blocks or JavaScript. Take your games mobile on iPads and Android tablets. Over a dozen fun activities to choose from!
   scratch_longdescription: 'With Scratch, you can create your own interactive games, stories, animations &mdash; and share them with your friends. Get started by animating your name, creating a holiday card, or making a pong game.'
   lightbot_longdescription: Guide Lightbot to light up all the blue tiles! Lightbot is a puzzle game that uses programming game mechanics to let players gain a practical understanding of basic coding. Learn to sequence instructions, write procedures, and utilize loops to solve levels. Ideal for all ages.
@@ -468,8 +475,7 @@ fa-AF:
   codeavengers_longdescription: 'Build a 2 player 2D top-down game with JavaScript in 10 short tasks. Then continue learning some basics of programming (variables and if statements) as you create a Quiz to share with friends. Along the way  earn points and badges as you compete to reach the top of the class leaderboard.'
   processing_longdescription: An introduction to programming in the context of the visual arts using the Processing programming language. Short video lessons introduce coding exercises that lead to designing an interactive drawing program
   robomind_longdescription: 'Students learn the basics of programming by controlling their own virtual robot. The online course is fully self-contained with short presentations, movies, quizzes and automatic guidance/hints to help with the programming exercises. '
-  groklearning_longdescription: |-
-    Use the programming language Python to build a chatbot called "Eliza" to act as a robot psychotherapist. You'll teach Eliza how to talk and the right thing to say. Can she fool your friends into thinking she's a human not a computer?
+  groklearning_longdescription: 'با استفاده از زبان برنامه نویسی پایتون یک chatbot به نام "الیزا" بسازید تا به عنوان یک روان درمانگر عمل کند. شما به الیزا یاد میدهید چه بگوید و چگونه صحیح صحبت کند. آیا او میتواند دوستان شما را فریب بدهد به اینکه فکر کنند اون یک انسان است و نه یک رایانه؟'
   quorum_longdescription: This tutorial is accessible for the visually-impaired, and works with screenreaders. Join Mary on a tour as she joins a biology lab as a programmer and learns the Quorum programming language. This tutorial is student-guided with online example activities.
   codespark_longdescription: 'The Foos is a fun and kid-friendly way to learn about computer programming.  Program cute characters to solve puzzles and bring a virtual world to life.  The game is "word free" so all can play!'
   kodable_longdescription: Kodable is a self-guided iPad game that introduces kids 5+ to programming basics. Having a teacher or parent nearby is optimal, but not necessary.
@@ -492,7 +498,7 @@ fa-AF:
   codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
   scratchjr_beyond_name: ScratchJR for pre-readers
-  hopscotch_beyond_name: 'Hopscotch: Programming On Your iPad'
+  hopscotch_beyond_name: 'Hopscotch:  بر روی iPad خودتان برنامه نویسی کنید'
   pocketcode_beyond_name: کد جیبی
   groklearning_beyond_name: یادگیری برنامه نویسی پایتون
   hacketyhack_beyond_name: یادگیری روبی
@@ -511,7 +517,7 @@ fa-AF:
   cargobot_beyond_name: Cargobot
   kidsruby_beyond_name: KidsRuby
   w3schools_beyond_name: یادگیری اچ تی ام ال
-  codeavengers_beyond_name: Learn to Code Websites
+  codeavengers_beyond_name: یاد بگیرید وبسایت بسازید
   mozilla_beyond_name: Webmaker
   codecombat_beyond_name: CodeCombat
   codea_beyond_name: Codea
@@ -570,7 +576,7 @@ fa-AF:
   pocketcode_beyond_platformtext: نرم افزار موبایل
   groklearning_beyond_platformtext: مرورگرهای وب مدرن
   hacketyhack_beyond_platformtext: نصب دسکتاپ
-  robomind_beyond_platformtext: Modern web browsers, Mobile web
+  robomind_beyond_platformtext: مرورگرهای وب مدرن، وب همراه
   makegameswithus_beyond_platformtext: مرورگرهای وب مدرن
   appinventor_beyond_platformtext: مرورگر مدرن + آندروید
   touchdevelop_beyond_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تمام دستگاه های
@@ -601,12 +607,12 @@ fa-AF:
   scratch_beyond_shortdescription: بازی های تعاملی، داستان، و انیمیشن بسازید.
   lightbot_beyond_shortdescription: بازی برای آموزش مفاهیم برنامه نویسی
   codecademy_beyond_shortdescription: برنامه نویسی با JavaScrip، را در یک مرورگر وب یاد بگیرید
-  kodable_beyond_shortdescription: A fun iPad game to teach computer programming concepts
-  scratchjr_beyond_shortdescription: 'Create interactive stories and games using ScratchJr. '
+  kodable_beyond_shortdescription: یک بازی سرگرم کننده آی پد برای آموزش مفاهیم برنامه نویسی کامپیوتر
+  scratchjr_beyond_shortdescription: ' داستان های تعاملی و بازی را با استفاده از ScratchJr ایجاد کنید.'
   hopscotch_beyond_shortdescription: یادگیری برنامه نویسی بصری بر روی iPad
   pocketcode_beyond_shortdescription: سعی کنید برای یجاد یک بازی بر روی گوشی های هوشمند و به اشتراک گذاری با دوستان !
   groklearning_beyond_shortdescription: مقدمه اساسی به برنامه نویسی پایتون
-  hacketyhack_beyond_shortdescription: Learn Ruby from the ground up
+  hacketyhack_beyond_shortdescription: روبی را از پایه یاد بگیرید
   robomind_beyond_shortdescription: کدنویسی برای ربات مجازی
   makegameswithus_beyond_shortdescription: 'یاد بگیرید تا بازی آیفون  را در یک ساعت بسازید'
   appinventor_beyond_shortdescription: برنامه خودت را بساز( فقط آندروید)
@@ -628,12 +634,12 @@ fa-AF:
   codea_beyond_shortdescription: ساختن اپلیکیشن بر روی آی پد خود
   lego_beyond_shortdescription: ساخت و برنامه ربات
   finch_beyond_shortdescription: یک ربات برای آموزش علوم کامپیوتر
-  arduino_beyond_shortdescription: "Learn Arduino with Sparkfun's Digital Sandbox."
+  arduino_beyond_shortdescription: برنامه نویسی روی آردوینو را با بازی در زمین بازی مجازی اسپارک فان یاد بگیرید.
   processing_beyond_shortdescription: یادگیری زبان های پردازش
   alice_beyond_shortdescription: آموزش برنامه نویسی در یک محیط 3D
-  sphero_beyond_shortdescription: SPRK lessons give kids a fun crash course in programming robots while sharpening skills in math and science.
-  codeorg_beyond_longdescription: 'Learn the basic concepts of Computer Science with drag and drop programming. 3 full courses, each consists of 15-20 lessons that blend "unplugged" classroom activities interspersed with game-like, self-directed tutorials starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, basic algorithms, functions, and variables.'
-  khan_beyond_longdescription: Learn the basics of JavaScript programming while creating fun drawings with your code. Do it on your own or with your class!
+  sphero_beyond_shortdescription: درسهای اسپارک(SPRK) همزمان با آموزش فشرده برنامه نویسی برای روبات ها، به افزایش تواناییهای کودکان در ریاضیات و علوم هم کمک می کنند.
+  codeorg_beyond_longdescription: اصول پایه علوم کامپیوتر را با برنامه نویسی با بلوکهای پیش ساخته یاد بگیرید. سه واحد درسی هر یک شامل 15 تا 20 درس که بدون نیاز به هیچ ابزار دیگری محیط کلاس را با خود آموز های شبیه بازی ترکیب می کنند. در این خود آموز ها می توانید از بیل گیتس و مارک زاکربرگ تا پرنده های عصبانی و گیاهان بر ضد زامبی ها را بیابید. به این ترتیب حلقه های تکرار، شرط ها، الگوریتمهای پایه، مفهوم توابع و متغیر ها را خواهید آموخت.
+  khan_beyond_longdescription: درحالی که با کدی که نوشته اید نقاشی های با مزه میکشید، اصول اولیه برنامه نویسی جاوا اسکریپت را یاد بگیرید. این کار را به تنهایی یا با کمک همکلاسی هایتان انجام دهید!
   tynker_beyond_longdescription: 'Tynker makes it fun & easy to learn programming. It makes it visual. Kids build games and mobile apps by arranging blocks of code. It removes the need to know programming syntax. Kids transform ideas into animated stories and math art right away. It promotes progressive learning. As kids learn fundamentals, Tynker introduces more advanced concepts including syntax driven programming.'
   scratch_beyond_longdescription: 'With Scratch, you can create your own interactive games, stories, animations &mdash; and share them with your friends. Get started by animating your name, creating a holiday card, or making a pong game.'
   lightbot_beyond_longdescription: Learn core programming logic, starting from super-basic programming, for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence commands, identify patterns, use procedures, and utilize loops!
@@ -658,12 +664,12 @@ fa-AF:
   kodu_beyond_longdescription: Kodu lets kids create games on the PC and XBox via a simple visual programming language. Kodu can be used to teach creativity, problem solving, storytelling, as well as programming. Anyone can use Kodu to make a game, young children as well as adults with no design or programming skills. Kodu for the PC is available to download for free. Kodu for the XBox is also available in the USA on the XBox Marketplace, in the Indie Games channel for about $5.
   cargobot_beyond_longdescription: Cargo-Bot is a puzzle game where you teach a robot how to move crates. Sounds simple, right? It features 36 fiendishly clever puzzles, haunting music and stunning retina graphics. You can even record your solutions and share them on YouTube to show your friends.
   kidsruby_beyond_longdescription: "Have fun and make games, or hack your homework using Ruby! Just tell your parents or teachers you're learning Ruby programming... ;). Free and works on any computer. [Note: Desktop install required]"
-  w3schools_beyond_longdescription: Learn to create websites on your own computer. Learn the server basics in less than a day. Learn to add databases to your website
+  w3schools_beyond_longdescription: یادبگیرید بر روی کامپیوتر خود وب سایت بسازید.یادگیری اصول اولیه سرور در کمتر از یک روز.اتصال بانک اطلاعاتی به وب سایت خودتان را یادبگیرید.
   codeavengers_beyond_longdescription: Learn how to program games, apps and websites. Designed by experts with perfect level of difficulty for beginners, easy to understand instructions and great help when you need it. Our HTML, CSS and JavaScript courses include code challenges and revision games that make learning fun and effective for all ages.
   mozilla_beyond_longdescription: Thimble makes it ridiculously simple to create and share your own web pages. Write and edit HTML and CSS right in your browser, then instantly preview your work. Host and share your finished projects with a single click. Perfect for beginners and experts alike.
   codecombat_beyond_longdescription: Play as a Wizard using code (spells) to control your heroes, navigate mazes, defeat ogres, trick enemies, and rescue allies! Learn JavaScript in this HTML 5 web game for complete beginners.
   codea_beyond_longdescription: "Codea for iPad lets you create games and simulations &mdash; or just about any visual idea you have. Turn your thoughts into interactive creations that make use of iPad features like Multi-Touch and the accelerometer. We think Codea is the most beautiful code editor you'll use, and it's easy. Codea is designed to let you touch your code. Want to change a number? Just tap and drag it. How about a color, or an image? Tapping will bring up visual editors that let you choose exactly what you want."
-  lego_beyond_longdescription: Create small, customizable and programmable robots using LEGO pieces.
+  lego_beyond_longdescription: روبات های کوچک، قابل تنظیم و قابل برنامه ریزی با استفاده از قطعات لگو را ایجاد کنید.
   finch_beyond_longdescription: "The Finch is a new robot for computer science education. Its design is the result of a four year study at Carnegie Mellon's CREATE lab. The Finch is designed to support an engaging introduction to the art of programming. It has support for over a dozen programming languages and environments, including several environments appropriate for students as young as eight years old. The Finch was designed to allow students to write richly interactive programs."
   arduino_beyond_longdescription: Arduino is a popular platform designed to allow artists and designers to work with real sensors, LEDs, buzzers, and more. The Sparkfun Virtual Sandbox will teach you real Arduino code right in your browser.
   processing_beyond_longdescription: Processing is a programming language, development environment, and online community. Since 2001, Processing has promoted software literacy within the visual arts and visual literacy within technology. Initially created to serve as a software sketchbook and to teach computer programming fundamentals within a visual context, Processing evolved into a development tool for professionals. Today, there are tens of thousands of students, artists, designers, researchers, and hobbyists who use Processing for learning, prototyping, and production.

@@ -277,10 +277,10 @@
         be required to provide an email address. If a student forgets their password,
         you will be able to reset it for them.
       register: Ask your students to register themselves
-      vist: Ask your students to visit
+      vist: 要求你的學生去參觀
       section_code: '並輸入他們的班級代碼:'
       first_please: 首先，請 %{add_section}
-      for: For
+      for: 為
       enter: 'enter:'
     sections:
       add: 增加班級
@@ -321,7 +321,7 @@
     show_more: 顯示更多
     classroom_activity: 不用電腦的活動
   home:
-    title: Code Studio
+    title: 程式工作室
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: 課程計畫
     signin_message: 已經註冊了? %{link}
@@ -457,9 +457,9 @@
       title: Gallery
       body: View a gallery of app and artist images created by our users
     frozen:
-      title: Frozen
+      title: 冰雪奇緣
   gallery:
-    students_drew_these_with_code: Students drew these with code!
+    students_drew_these_with_code: 學生用程式畫出這些圖案 ！
     students_made_these_with_code: Students made these with code!
     picture_count: In the past <b>%{days}</b> days, students have drawn <b>%{count}</b>
       pictures by writing their own computer programs. Click on the pictures to see
@@ -516,7 +516,7 @@
           title: 事件類別
           description: ''
         builder:
-          title: Builder
+          title: 生成器
           description: ''
         flappy:
           title: Flappy遊戲設計

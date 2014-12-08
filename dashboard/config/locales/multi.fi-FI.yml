@@ -185,7 +185,7 @@
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png
       4-5 artist functions multi 1:
-        Artist Functions Multiple Choice: Taiteilija Toiminnot Moivalinta
+        Artist Functions Multiple Choice: 'Taiteilija: funktiot, monivalinta'
         /script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png,
           500
         Which function creates a rectangle that can change its size?: Mikä funktio
@@ -204,7 +204,7 @@
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png
       4-5 artist loops multi 2:
-        Artist Functions Multiple Choice: Taiteilija Toiminnot Moivalinta
+        Artist Functions Multiple Choice: 'Taiteilija: funktiot, monivalinta'
         'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50': 'Valitse
           silmukka, joka esittää seuraavaa kaavaa: 5, 10, 15, 20, 25, 30, 35, 40,
           45, 50'
@@ -213,21 +213,21 @@
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png
       4-5 bee conditionals multi 1:
-        Bee Conditionals Multiple Choice: Bee Conditionals Multiple Choice
+        Bee Conditionals Multiple Choice: 'Mehiläinen: ehtolausekkeet, monivalinta'
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png
-        0: '? A purple flower may have either 3, 2 or 1 nectars, but you don''t know
-          how many. Which blocks correctly check and collect all of the nectar from
-          a purple flower?'
-        1: ': A purple flower may have either 3, 2 or 1 nectars, but you don''t know
-          how many. Which blocks correctly check and collect all of the nectar from
-          a purple flower?'
+        0: '? Violetilla kukalla voi olla 3, 2 tai 1 yksikköä mettä, mutta et tiedä
+          kuinka montako. Mitkä lohkot tarkistavat ja keräävät kaiken meden violetista
+          kukasta?'
+        1: ': Violetilla kukalla voi olla 3, 2 tai 1 yksikköä mettä, mutta et tiedä
+          kuinka montako. Mitkä lohkot tarkistavat ja keräävät kaiken meden violetista
+          kukasta?'
         Choose the best blocks.: Valitse parhaat lohkot.
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png
       4-5 bee debug multi 1:
-        Bee Debug Multiple Choice: Bee Debug Multiple Choice
+        Bee Debug Multiple Choice: 'Mehiläinen: virheenetsintä, monivalinta'
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png
         Which version of the function will work?: Mikä versio funktiosta toimii?
@@ -285,7 +285,8 @@
         1: ': Here are three sentences. Which of the templates below correctly abstracts
           so that all three match the same pattern as the template?'
         <h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>: <h4>Seattle
-          on iso kaupunki.<br/>Eugene on keskikokoinen kaupunki<br/>Hillview on pikkukaupunki.</h4>
+          on iso kaupunki.<br/>Eugene on keskikokoinen kaupunki<br/>Hillview on pieni
+          kaupunki.</h4>
         <h4>Seattle _____ a _____ _____.</h4>: <h4>Seattle _____ _____ _____.</h4>
         <h4>_____ is a _____ city.</h4>: <h4>_____ on _____ kaupunki.</h4>
         <h4>_____ is _____ a _____.</h4>: <h4>_____ on _____ _____.</h4>
@@ -300,10 +301,10 @@
         Multiple Choice: Monivalinta
         Which one of these activities would be best for practicing crowdsourcing?: Mikä
           seuraavista tehtävistä sopisi parhaiten joukkoistamiseen?
-        <h4>Cleaning your room</h4>: <h4>Cleaning your room</h4>
-        <h4>Eating your dessert</h4>: <h4>Eating your dessert</h4>
-        <h4>Brushing your hair</h4>: <h4>Brushing your hair</h4>
-        <h4>Washing your face</h4>: <h4>Washing your face</h4>
+        <h4>Cleaning your room</h4>: <h4>Huoneesi siivoaminen</h4>
+        <h4>Eating your dessert</h4>: <h4>Jälkiruuan syöminen</h4>
+        <h4>Brushing your hair</h4>: <h4>Hiuksien harjaaminen</h4>
+        <h4>Washing your face</h4>: <h4>Kasvojen pesu</h4>
       4-5 Digital Footprint Multi 1:
         Multiple Choice: Monivalinta
         Which piece of information listed below is okay to share on the internet?: Mikä
@@ -311,13 +312,13 @@
         <h4>Your birthday</h4>: <h4>Syntymäpäiväsi</h4>
         <h4>Your favorite food</h4>: <h4>Suosikkiruokasi</h4>
         <h4>Your address</h4>: <h4>Osoitteesi</h4>
-        <h4>Your parent's credit card number</h4>: <h4>Your parent's credit card number</h4>
+        <h4>Your parent's credit card number</h4>: <h4>Vanhempiesi luottokortin numero</h4>
       4-5 Internet Multi 1:
         Multiple Choice: Monivalinta
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
-        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: When
-          you try to log on to code.org, which IP address is the DNS most likely to
-          take you to?
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Kun
+          yrität kirjautua verkkotunnukseen code.org, mihin IP-osoitteeseen DNS sinut
+          todennäköisesti vie?
         <h4>23.23.224.106</h4>: <h4>23.23.224.106</h4>
         <h4>54.209.61.132</h4>: <h4>54.209.61.132</h4>
         <h4>64.14.68.10</h4>: <h4>64.14.68.10</h4>
@@ -325,9 +326,9 @@
       4-5 Internet Multi 2:
         Multiple Choice: Monivalinta
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
-        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: If
-          the DNS has sent you to the page at the IP address 100.42.50.110, which
-          website are you on?
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Jos
+          DNS on lähettänyt sinut sivulle IP-osoitteessa 100.42.50.110, millä verkkosivustolla
+          olet?
         <h4>code.org</h4>: <h4>code.org</h4>
         <h4>csisfun.com</h4>: <h4>csisfun.com</h4>
         <h4>thinkersmith.org</h4>: <h4>thinkersmith.org</h4>
@@ -370,9 +371,9 @@
         Which answer best describes the unicorn's movement?: Mikä vastaus parhaiten
           kuvaa yksisarvisen liikettä?
         The unicorn moves across the screen: Yksisarvinen liikkuu ruudun halki
-        The unicorn's y value changes: The unicorn's y value changes
+        The unicorn's y value changes: Yksisarvisen y-arvo muuttuu
         The unicorn moves to the left: Yksisarvinen liikkuu vasemmalle
-        The unicorn's x value changes: The unicorn's x value changes
+        The unicorn's x value changes: Yksisarvisen x-arvo muuttuu
       K-1 Artist 1 Multi 1:
         Multiple Choice: Monivalinta
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png,
@@ -394,8 +395,8 @@
         Multiple Choice: Monivalinta
         /script_assets/k_1_images/artist_images/sq+sq.png, 500: /script_assets/k_1_images/artist_images/sq+sq.png,
           500
-        Which shape do these squares combine to make?: Which shape do these squares
-          combine to make?
+        Which shape do these squares combine to make?: Minkä kuvion nämä neliöt muodostavat
+          yhdessä?
         /script_assets/k_1_images/artist_images/medium_circle.png: /script_assets/k_1_images/artist_images/medium_circle.png
         /script_assets/k_1_images/artist_images/small_rectangle.png: /script_assets/k_1_images/artist_images/small_rectangle.png
         /script_assets/k_1_images/artist_images/medium_square.png: /script_assets/k_1_images/artist_images/medium_square.png
@@ -462,9 +463,9 @@
       K-1 Digital Footprint Multi 1:
         Multiple Choice: Monivalinta
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png
-        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Which
-          animal has the digital footprint that leaves him or her the <strong>most
-          unsafe</strong>?
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Millä
+          eläimellä on digitaalinen jalanjälki, joka jättää hänet <strong>eniten ilman
+          turvaa</strong>?
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png
@@ -543,18 +544,17 @@
       K-1 multi 4:
         Driver and Helper: Kuljettaja ja apuri
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: One
-          of these boys is the <b>driver</b>.  And one is the <b>helper</b>.
-        Which boy is the <large>helper</large>?: Which boy is the <large>helper</large>?
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: Yksi
+          näistä pojista on <b>kuljettaja</b>.  Ja yksi on <b>apulainen</b>.
+        Which boy is the <large>helper</large>?: Kuka pojista on <large>apulainen</large>?
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
         /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
       K-1 multi 5:
         Driver and Helper: Kuljettaja ja apuri
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: One
-          of these boys is the <b>driver</b>.  And one is the <b>helper</b>.
-        This time, which boy is the <large>driver</large>?: This time, which boy is
-          the <large>driver</large>?
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: Yksi
+          näistä pojista on <b>kuljettaja</b>.  Ja yksi on <b>apulainen</b>.
+        This time, which boy is the <large>driver</large>?: Nyt, kuka on <large>kuljettaja</large>?
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
         /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
       Math to Code 1:
@@ -584,7 +584,7 @@
         (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2)))))): (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2))))))
       Warmup questions:
         Coding in Racket: Coding in Racket
-        Select the best answer to the question.: Select the best answer to the question.
+        Select the best answer to the question.: Valitse paras vastaus kysymykseen.
         When converting a circle to code, the correct order is: When converting a
           circle to code, the correct order is
         top, left, right: ylös, vasen, oikea
@@ -605,18 +605,18 @@
         Pick the best answer to the question.: Valitse paras vastaus kysymykseen.
         Which of these is a valid contract for the function circle?: Mikä näistä sopimuksista
           on voimassa ympyräfunktiolle?
-        'circle: size style color -> image': 'circle: size style color -> image'
-        'circle: number string string -> image': 'circle: number string string ->
-          image'
-        'circle: number string string -> shape': 'circle: number string string ->
-          shape'
+        'circle: size style color -> image': 'ympyrä: koko tyyli väri -> kuva'
+        'circle: number string string -> image': 'ympyrä: numero merkkijono merkkijono
+          -> kuva'
+        'circle: number string string -> shape': 'ympyrä: numero merkkijono merkkijono
+          -> muoto'
         'circle: 5 solid blue -> circle ': 'circle: 5 solid blue -> circle '
       image code from circle:
         Code from Circle: Code from Circle
         /script_assets/msm/Unit%202/exercise_5.png: /script_assets/msm/Unit%202/exercise_5.png
         Pick the Racket code that comes from the circle of evaluation!: Pick the Racket
           code that comes from the circle of evaluation!
-        (rectangle (10) (2) "solid" "red"): (rectangle (10) (2) "solid" "red")
+        (rectangle (10) (2) "solid" "red"): (suorakulmio (10) (2) "kiinteä" "punainen")
         (rectangle 10 2 "solid" "red"): (rectangle 10 2 "solid" "red")
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): (rectangle (+ 8 2) (- 7 5) "solid"
           "red")

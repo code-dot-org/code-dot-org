@@ -16533,7 +16533,7 @@ exports.directionWestLetter = function(d){return "W (Zachód)"};
 
 exports.end = function(d){return "koniec"};
 
-exports.emptyBlocksErrorMsg = function(d){return "Blok powtórz lub blok jeśli muszą zawierać inne bloki, by poprawnie działać. Upewnij się, czy wewnętrzny blok pasuje do zewnętrznego."};
+exports.emptyBlocksErrorMsg = function(d){return "Blok \"powtarzaj\" lub blok \"jeśli\" muszą zawierać inne bloki, by poprawnie działać. Upewnij się, czy wewnętrzny blok pasuje do zewnętrznego."};
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Blok funkcji musi zawierać inne bloki, by działał."};
 
@@ -16595,7 +16595,7 @@ exports.print = function(d){return "Drukuj"};
 
 exports.puzzleTitle = function(d){return "Łamigłówka "+v(d,"puzzle_number")+" z "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "powtórz"};
+exports.repeat = function(d){return "powtarzaj"};
 
 exports.resetProgram = function(d){return "Zresetuj"};
 
@@ -16744,7 +16744,7 @@ exports.honeycombFullError = function(d){return "W tym plastrze miodu nie ma mie
 
 exports.ifCode = function(d){return "jeśli (if)"};
 
-exports.ifInRepeatError = function(d){return "Potrzebujesz bloku jeśli (if) umieszczonego w bloku powtórz (repeat). Jeśli masz jakiś problem, to wróć na poprzedni poziom, by zobaczyć, jak to działa."};
+exports.ifInRepeatError = function(d){return "Potrzebujesz bloku \"jeśli\" (if) umieszczonego w bloku \"powtarzaj\" (repeat). Jeśli masz jakiś problem, to wróć na poprzedni poziom, by zobaczyć, jak to działa."};
 
 exports.ifPathAhead = function(d){return "jeśli jest ścieżka do przodu"};
 
@@ -16762,15 +16762,15 @@ exports.insufficientNectar = function(d){return "Używasz wszystkich prawidłowy
 
 exports.make = function(d){return "zrób"};
 
-exports.moveBackward = function(d){return "przesuń do tyłu"};
+exports.moveBackward = function(d){return "idź do tyłu"};
 
 exports.moveEastTooltip = function(d){return "Przesuń mnie o jedno miejsce na wschód."};
 
-exports.moveForward = function(d){return "przesuń do przodu"};
+exports.moveForward = function(d){return "idź do przodu"};
 
 exports.moveForwardTooltip = function(d){return "Przesuń mnie do przodu o jedno miejsce."};
 
-exports.moveNorthTooltip = function(d){return "Przenieś mnie o jedno miejsce na północ."};
+exports.moveNorthTooltip = function(d){return "Przesuń mnie o jedno miejsce na północ."};
 
 exports.moveSouthTooltip = function(d){return "Przesuń mnie o jedno miejsce na południe."};
 

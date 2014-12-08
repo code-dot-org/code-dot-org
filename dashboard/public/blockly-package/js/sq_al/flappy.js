@@ -12402,13 +12402,13 @@ exports.doCode = function(d){return "bej"};
 
 exports.elseCode = function(d){return "perndryshe"};
 
-exports.endGame = function(d){return "end game"};
+exports.endGame = function(d){return "fundi i lojës"};
 
-exports.endGameTooltip = function(d){return "Ends the game."};
+exports.endGameTooltip = function(d){return "Përfundon loja."};
 
 exports.finalLevel = function(d){return "Urime! Ju keni perfunduar enigmen perfundimatare."};
 
-exports.flap = function(d){return "flap"};
+exports.flap = function(d){return "përplas flatrrat"};
 
 exports.flapRandom = function(d){return "flap a random amount"};
 
