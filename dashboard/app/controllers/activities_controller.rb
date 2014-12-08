@@ -52,7 +52,7 @@ class ActivitiesController < ApplicationController
     end
 
     @new_level_completed = false
-    if current_user
+    if current_user && !(@script_level.try(:script).try(:name) == Script::FROZEN_NAME)
       track_progress_for_user if @script_level
     else
       track_progress_in_session
