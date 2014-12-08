@@ -359,6 +359,7 @@ a.header_status_bar:hover {
   a:visited {font-family: 'Gotham 7r', sans-serif; font-weight: normal; color:$dark_color;}
   a:hover {font-family: 'Gotham 7r', sans-serif; font-weight: normal; color:$dark_color; background-color: transparent;   text-decoration: underline; }  /* mouse over link */
   a:active {font-family: 'Gotham 7r', sans-serif; font-weight: normal; color:$dark_color; background-color: transparent;}  /* selected link */
+  a.fa:link, a.fa:visited, a.fa:hover, a.fa:active {font-family: FontAwesome;}
 }
 
 /* This styling helps to push the footer to the bottom of a page. */
