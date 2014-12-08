@@ -12,6 +12,7 @@ class ScriptLevelsController < ApplicationController
       @full_width = true
       @share = true
       @level_source_id = @level.ideal_level_source_id
+      @level_source = LevelSource.find(@level_source_id)
       render 'level_sources/show'
     else
       flash[:alert] = I18n.t('reference_area.auth_error')
