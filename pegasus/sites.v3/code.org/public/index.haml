@@ -34,7 +34,7 @@ social:
   %div
     = view :index_hoc
 - elsif request.site == 'code.org'
-  %div
+  %div.desktop-feature
     = view :index_loc
 
 -facebook = {:u=>"http://#{request.site}/"}
@@ -58,7 +58,7 @@ social:
       = view :index_video
 
     #start.col-36
-
+      %div.desktop-feature{:style=>'height: 25px;'}
       #hoc2014
 
         .count{:style=>"font-family: 'Gotham 5r', sans-serif; margin-bottom:15px" }
@@ -71,7 +71,7 @@ social:
             %a{:href=>'/leaderboards', :style=>'text-decoration:none'}
               =count_string
             %h4
-              Anybody can learn.
+              =I18n.t :anybody_can_learn
           -else
             =count_string
 
