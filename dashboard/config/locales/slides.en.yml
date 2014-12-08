@@ -383,9 +383,12 @@ en:
     playlab_repeat_forever:
       1:
         image: 'notes/playlab_repeat_forever_1.png'
-        text: "This is the \"repeat forever\" block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly, without the player having to do anything, we'll put those blocks inside the \"repeat forever\" block."
-      2: 
+        text: "This is the \"repeat forever\" block. Anything inside this block will happen forever in the game."
+      2:
         image: 'notes/playlab_repeat_forever_2.png'
+        text: "If we want an actor to do something repeatedly, without the player having to do anything, we'll put those blocks inside the \"repeat forever\" block."
+      3: 
+        image: 'notes/playlab_repeat_forever_3.png'
         text: "In this next puzzle, our goal is to help the wizard patrol the boundaries of the kingdom, left and right continuously. Learning how the repeat commands works, will save you a ton of time later when you build your own game."
     
     
