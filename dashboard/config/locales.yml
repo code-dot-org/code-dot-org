@@ -229,8 +229,8 @@
 "sl": "sl-SI"
 "sl-SI":
   english: "Slovenian"
-  native: "slovenski jezik"
-  debug: true
+  native: "Slovenščina"
+  webfonts: false
 
 "sq": "sq-AL"
 "sq-AL":
