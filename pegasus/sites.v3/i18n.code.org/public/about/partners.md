@@ -2,7 +2,7 @@
 title: XX Hour of Code Partners
 nav: about_nav
 social:
-  'og:title' : 'The %{XX} Hour of Code is coming'
+  'og:title' : 'The %{XX} Hour of Code is here'
   'og:description' : "For every student and classroom: learn how fun coding is in just one hour March 3 - 9."
   'og:image' : ""
   'og:image:width' : ""
