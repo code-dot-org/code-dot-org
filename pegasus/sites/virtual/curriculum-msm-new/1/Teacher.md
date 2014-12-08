@@ -31,7 +31,7 @@ Students discuss the components of their favorite videogames, and discover that 
 5) [Flash Chat](#WrapUp) - What did we learn?  
 
 ### **Assessment**
-6) [Computational Thinking Assessment](#Assessment)
+6) [Coordinate Plane Assessment](#Assessment)
 
 [/summary]
 
@@ -48,10 +48,11 @@ Students discuss the components of their favorite videogames, and discover that 
 
 ## Materials, Resources and Prep
 ### For the Student
-- Videogame description chart
+- Blank sheet of paper
 
 ### For the Teacher
-- Example Game
+- [Lesson slide deck](https://docs.google.com/a/code.org/presentation/d/1DF3XNkI4yellzRJL8ItqZU546UT9BaXWeKY7AmI0gsc/)
+- [Example Game](http://studio.code.org/s/msm/stage/1/puzzle/2/)
 - Character Cutouts
 
 [/together]
@@ -107,7 +108,8 @@ This game is made up of characters, each of which has its own behavior. The unic
 
 ### <a name="Activity2"></a> 4) Coordinate Planes
 
-Computers use numbers to represent a character’s position onscreen, using number lines as rulers to measure the distance from the bottom-left corner of the screen. For our videogame, we will place the numberline so that the screen runs from 0 (on the left) to 640 (on the right). We can take the image of the Dragon, stick it anywhere on the line, and measure the distance back to the lefthand edge. Anyone else who knows about our number line will be able to duplicate the exact position of the Dragon, knowing only the number. What is the coordinate of the Dragon on the righthand side of the screen? The center? What coordinate would place the Dragon beyond the lefthand edge of the screen?
+<img src="number_line.png" style="float:right; width: 200px; padding: 0 0 10px 10px"/>
+Computers use numbers to represent a character’s position on screen, using number lines as rulers to measure the distance from the bottom-left corner of the screen. For our video game, we will place the number line so that the screen runs from 0 (on the left) to 400 (on the right). We can take the image of the Dragon, stick it anywhere on the line, and measure the distance back to the lefthand edge. Anyone else who knows about our number line will be able to duplicate the exact position of the Dragon, knowing only the number. What is the coordinate of the Dragon on the righthand side of the screen? The center? What coordinate would place the Dragon beyond the lefthand edge of the screen?
 
 [tip]
 
@@ -117,7 +119,8 @@ The key point for students here is precision and objectivity. There are many pos
 
 [/tip]
 
-By adding a second number line, we can locate a character anywhere on the screen in either dimension. The first line is called the x-axis, which runs from left to right. The second line, which runs up and down, is called the y-axis. A 2-dimensional coordinate consists of both the x- and y-locations on the axes. Suppose we wanted to locate NinjaCat’s position on the screen. We can find the x-coordinate by dropping a line down from the Ninja and read the position on the number line. The y-coordinate is found by running a line to the y-axis.
+<img src="coordinate_plane.png" style="width: 200px; float: left;"/>
+By adding a second number line, we can locate a character anywhere on the screen in either dimension. The first line is called the x-axis, which runs from left to right. The second line, which runs up and down, is called the y-axis. A 2-dimensional coordinate consists of both the x- and y-locations on the axes. Suppose we wanted to locate the Ninja’s position on the screen. We can find the x-coordinate by dropping a line down from the Ninja and read the position on the number line. The y-coordinate is found by running a line to the y-axis.
 
 A coordinate represents a single point, and an image is (by definition) many points. Some students will ask whether a character’s coordinate refers to the center of the image, or one of the corners. In this particular program, the center serves as the coordinate - but other programs may use another location. The important point in discussion with students is that there is flexibility here, as long as the convention is used consistently.
 
