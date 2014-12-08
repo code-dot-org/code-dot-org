@@ -9,16 +9,17 @@ Welcome to Computer Science Education Week 2014 and the 1st anniversary of the H
 ## A brand new video to kick it off
 In a new video message, President Obama urges every young person to learn about the technology that touches all of our lives this week, with the Hour of Code.
 
-[![image](https://code.org/images/email/obama-video.jpg)](http://youtu.be/JDw1ii7aKwg)
-[Youtube link](http://youtu.be/JDw1ii7aKwg)&nbsp;&nbsp;[Download link](https://code.org/files/Obama-HoC-2014-original.mov)
+[![image](https://code.org/images/email/fit-300/obama-video.jpg)](http://youtu.be/JDw1ii7aKwg)<br />
+[**Youtube link**](http://youtu.be/JDw1ii7aKwg)&nbsp;&nbsp;[**Download link**](https://code.org/files/Obama-HoC-2014-original.mov)
 
 Start your students off with an inspirational video ‒ whether the one above, or [any of these](https://code.org/educate/inspire).
 
 ## Certificates for your students
-To finish your Hour of Code in style, print certificates for your students at [https://code.org/certificates](https://code.org/certificates). If students use our Artist with Anna and Elsa, this page will also let you print their Frozen-themed creations.
-[![image](https://code.org/images/email/certificate.jpg)]&nbsp;&nbsp;[![image](https://code.org/images/email/snowlakes-certificates.jpg)]
+To finish your Hour of Code in style, print certificates for your students at [https://code.org/certificates](https://code.org/certificates). If students use our Artist with Anna and Elsa tutorial, this page will also let you print their *Frozen*-themed creations.
 
-I’d like to personally thank every educator hosting the Hour of Code. You’ve been an inspiration to all of us at Code.org. Thank you for your support, and for your patience as we learn to do our jobs better. 
+[![image](https://code.org/images/email/fit-150/certificate.jpg)](https://code.org/certificates)&nbsp;&nbsp;[![image](https://code.org/images/email/fit-150/snowflakes-certificates.jpg)](https://code.org/certificates)
+
+I’d like to personally thank every educator hosting an Hour of Code. You’ve been an inspiration to all of us at Code.org. Thank you for your support, and for your patience as we learn to do our jobs better. 
 
 We hope your students have an amazing time!
 
