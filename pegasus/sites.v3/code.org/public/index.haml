@@ -33,6 +33,9 @@ social:
 - if request.site == 'csedweek.org'
   %div
     = view :index_hoc
+- elsif request.site == 'code.org'
+  %div
+    = view :index_loc
 
 -facebook = {:u=>"http://#{request.site}/"}
 
