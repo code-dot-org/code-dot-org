@@ -1,9 +1,7 @@
 %footer#pagefooter
   .content
     %div{:style=>"float:left"}
-      &copy;
-      %a.whitefooterlink{:href=>"http://code.org/"} Code.org
-      , 2014
+      &copy; Code.org, 2014
       &nbsp;
       &nbsp;
       &nbsp;
@@ -14,4 +12,4 @@
           &nbsp; &nbsp; | &nbsp; &nbsp;
         %a.whitefooterlink{:href=>link}= title
     %div{:style=>"float:right"}
-      =view :language
+      %a.whitefooterlink{:href=>"http://code.org/"}= @config[:us_site]

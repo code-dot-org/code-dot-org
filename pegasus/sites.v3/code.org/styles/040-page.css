@@ -98,19 +98,19 @@ body {
 }
 
 ul {
-    list-style: none;
-    padding:0;
-    margin:20px;
+  list-style: none;
+  padding:0;
+  margin:20px;
 }
 
 ul li {
-    padding-left: 1em;
-    text-indent: -.7em;
+  padding-left: 1em;
+  text-indent: -.7em;
 }
 
 ul li:before {
-    content: "• ";
-    color: rgb(0, 161, 230);
+  content: "• ";
+  color: rgb(0, 161, 230);
 }
 
 .invisiblelist li:before {
@@ -712,4 +712,25 @@ a.btn-default:active {
 label {
   font-family: 'Gotham 5r', sans-serif;
   font-weight: normal;
+}
+@media screen and (max-width: 450px) {
+  #index .count h1 {
+    font-size: 46px;
+    line-height: 46px;
+  }
+
+  #index .count h2 {
+    font-size: 26px;
+    line-height: 26px;
+  }
+
+  #index .count h3 {
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  #index .count h4 {
+    font-size: 16px;
+    line-height: 16px;
+  }
 }
