@@ -44,8 +44,14 @@ var skin;
 BlocklyApps.CHECK_FOR_EMPTY_BLOCKS = false;
 BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
-var CANVAS_HEIGHT = 400;
-var CANVAS_WIDTH = 400;
+Voxel.APP_SHORTNAME = 'voxel';
+Voxel.DASHBOARD_APP_SHORTNAME = 'Voxel';
+Voxel.WIN_SOUND_KEY = 'win';
+Voxel.START_SOUND_KEY = 'start';
+Voxel.FAILURE_SOUND_KEY = 'failure';
+Voxel.WHEN_RUN_BLOCK_KEY = 'when_run';
+Voxel.WHEN_RIGHT_CLICK_BLOCK_KEY = 'voxel_whenRightClick';
+Voxel.WHEN_LEFT_CLICK_BLOCK_KEY = 'voxel_whenLeftClick';
 
 /**
  * Initialize Blockly and the Voxel.  Called on page load.
@@ -57,7 +63,7 @@ Voxel.init = function(config) {
   level = config.level;
 
   config.grayOutUndeletableBlocks = true;
-  config.forceInsertTopBlock = 'when_run';
+  config.forceInsertTopBlock = Voxel.WHEN_RUN_BLOCK_KEY;
   config.enableShowCode = false;
 
   config.html = page({
@@ -76,9 +82,9 @@ Voxel.init = function(config) {
   });
 
   config.loadAudio = function() {
-    BlocklyApps.loadAudio(skin.winSound, 'win');
-    BlocklyApps.loadAudio(skin.startSound, 'start');
-    BlocklyApps.loadAudio(skin.failureSound, 'failure');
+    BlocklyApps.loadAudio(skin.winSound, Voxel.WIN_SOUND_KEY);
+    BlocklyApps.loadAudio(skin.startSound, Voxel.START_SOUND_KEY);
+    BlocklyApps.loadAudio(skin.failureSound, Voxel.FAILURE_SOUND_KEY);
   };
 
   config.afterInject = function() {
@@ -106,7 +112,7 @@ Voxel.init = function(config) {
 
     window.game.plugins.get('voxel-reach').on('use', Voxel.generateEventBlockCodeRunner('voxel_whenRightClick'));
     //window.game.plugins.get('voxel-reach').on('start mining', function(target) { Voxel.handleWhenLeftClick(target);});
-    window.game.on('fire', Voxel.generateEventBlockCodeRunner('voxel_whenRightClick'));
+    window.game.on('fire', Voxel.generateEventBlockCodeRunner('voxel_whenLeftClick'));
   };
 
   BlocklyApps.init(config);
@@ -206,9 +212,9 @@ Voxel.endAttempt = function() {
   }
 
   if (Voxel.testResults >= BlocklyApps.TestResults.FREE_PLAY) {
-    BlocklyApps.playAudio('win');
+    BlocklyApps.playAudio(Voxel.WIN_SOUND_KEY);
   } else {
-    BlocklyApps.playAudio('failure');
+    BlocklyApps.playAudio(Voxel.FAILURE_SOUND_KEY);
   }
 
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
@@ -216,7 +222,7 @@ Voxel.endAttempt = function() {
 
   // Report result to server.
   BlocklyApps.report({
-    app: 'voxel',
+    app: Voxel.APP_SHORTNAME,
     level: level.id,
     result: Voxel.result === BlocklyApps.ResultType.SUCCESS,
     testResult: Voxel.testResults,
@@ -231,7 +237,7 @@ Voxel.endAttempt = function() {
  */
 var displayFeedback = function(response) {
   BlocklyApps.displayFeedback({
-    app: 'Voxel',
+    app: Voxel.DASHBOARD_APP_SHORTNAME,
     skin: skin.id,
     feedbackType: Voxel.testResults,
     response: response,
@@ -246,7 +252,7 @@ var displayFeedback = function(response) {
 
 /**
  * Function to be called when the service report call is complete
- * @param {object} JSON response (if available)
+ * @param {object} response JSON response (if available)
  */
 Voxel.onReportComplete = function(response) {
   Voxel.response = response;
