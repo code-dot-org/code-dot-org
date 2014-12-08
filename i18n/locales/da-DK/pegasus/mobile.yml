@@ -41,7 +41,7 @@ da-DK:
   go: Kør
   thank_you_: Tak!
   congratulations: Tillykke!
-  congratulations_on_completing_hoc: Tillykke med gennemførelsen af En Times Kodning.
+  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   get_a_certificate_of_achievement: Få et certifikat for gennemførelsen
   enter_valid_email: Angiv en gyldig email adresse
   get_a_certificate_message: "Vi sender dig et certifikat og oplysninger om, hvordan man <a href='/learn/beyond'> lærer ud over En Time</a>"
@@ -65,7 +65,7 @@ da-DK:
   thanks_for_voting: Tak for at du stemte!
   share_on_facebook: Del på Facebook
   share_on_twitter: Del på Twitter
-  beyond_an_hour: 'Ud over Hour of Code >'
+  beyond_an_hour: Beyond an Hour of Code
   get_started: Start
   i_agree: Jeg er enig
   participant_select: '- Vælg -'
@@ -74,6 +74,9 @@ da-DK:
   participant_educator: Underviser
   participant_engineer: Software ingeniør
   participant_other: Ingen af ovenstående
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Jeg er en
   never_spam: Vi vil aldrig spamme dig
   enter_country: Indtast land, hvis du bor udenfor USA
@@ -110,6 +113,10 @@ da-DK:
   studiobar_flappy_body: Lav og del dit eget Flappy spil
   studiobar_teacher_title: Lavet til lærere
   studiobar_teacher_body: Indføre Kode Skole i klasselokalet
+  studiobar_frozen_title: En Time af Kode
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Jeg er elev
   contact_form_topic_parent: Jeg er en forælder
   contact_form_topic_teacher: Jeg er en lærer/pædagog
@@ -283,7 +290,7 @@ da-DK:
   dashboard_sections_password_account_creation: Elev-oprettede tekst adgangskode
   dashboard_sections_login_type_explanation: 'Denne tabel hjælper med at forklare hvilke af disse login typer, <b>billede, ord, eller e-mail</b>, du kan vælge for en sektion.'
   dashboard_faq: Ofte stillede spørgsmål
-  code_hoc_coming: 'Hour of Code kommer - 8. - 14 december!'
+  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: Tilmeld dig til at deltage i CS Education Week
   learn_more: Lær mere
   hoc2014_try_new_tutorials: Prøv vores nye Hour of Code tutorials

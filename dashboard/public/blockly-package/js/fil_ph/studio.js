@@ -21168,7 +21168,7 @@ exports.directionEastLetter = function(d){return "E"};
 
 exports.directionWestLetter = function(d){return "W"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "tapos"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Ang \"Repeat\" o \"if\" block ay kailangan ng iba pang mga block sa loob nito upang gumana. Siguraduhin na ang block na asa loob ay nakasukat ng maayos sa loob ng naglalaman na block."};
 
@@ -21317,23 +21317,23 @@ exports.actor = function(d){return "actor"};
 
 exports.alienInvasion = function(d){return "Alien Invasion!"};
 
-exports.backgroundBlack = function(d){return "black"};
+exports.backgroundBlack = function(d){return "itim"};
 
-exports.backgroundCave = function(d){return "cave"};
+exports.backgroundCave = function(d){return "kuweba"};
 
-exports.backgroundCloudy = function(d){return "cloudy"};
+exports.backgroundCloudy = function(d){return "maulap"};
 
 exports.backgroundHardcourt = function(d){return "hardcourt"};
 
-exports.backgroundNight = function(d){return "night"};
+exports.backgroundNight = function(d){return "gabi"};
 
 exports.backgroundUnderwater = function(d){return "underwater"};
 
-exports.backgroundCity = function(d){return "city"};
+exports.backgroundCity = function(d){return "siyudad"};
 
 exports.backgroundDesert = function(d){return "desert"};
 
-exports.backgroundRainbow = function(d){return "rainbow"};
+exports.backgroundRainbow = function(d){return "bahaghari"};
 
 exports.backgroundSoccer = function(d){return "soccer"};
 
@@ -21365,7 +21365,7 @@ exports.changeScoreTooltipK1 = function(d){return "Add a point to the score."};
 
 exports.continue = function(d){return "Magpatuloy"};
 
-exports.decrementPlayerScore = function(d){return "remove point"};
+exports.decrementPlayerScore = function(d){return "alisin ang point"};
 
 exports.defaultSayText = function(d){return "mag-type dito"};
 

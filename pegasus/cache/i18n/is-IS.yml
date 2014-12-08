@@ -97,6 +97,9 @@
   participant_educator: fræðari
   participant_engineer: tölvunarfræðingur
   participant_other: ekkert af þessu
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Ég er
   never_spam: Við munum aldrei senda þér ruslpóst
   enter_country: Skrifaðu land ef það er utan Bandaríkjanna
@@ -135,6 +138,10 @@
   studiobar_flappy_body: Búðu til og deildu þínum eigin Flappy leik
   studiobar_teacher_title: Gert fyrir kennara
   studiobar_teacher_body: Kynna Kóðastúdíó í skólastofunni
+  studiobar_frozen_title: Klukkustund kóðunar
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Ég er nemandi
   contact_form_topic_parent: Ég er foreldri
   contact_form_topic_teacher: Ég er kennari/fræðari
@@ -498,7 +505,7 @@
   codecademy_shortdescription: Lærðu JavaScript forritun, í vafra
   codecombat_shortdescription: Sigraðu tröll og lærðu um leið Python eða JavaScript
     í þessum hetjulega forritunarleik!
-  codemonkey_shortdescription: Nemendur forrita apa til að sækja sér banana.
+  codemonkey_shortdescription: Nemendur forrita apa til að ná í banana.
   codeavengers_shortdescription: Lærðu JavaScript forritun, í vafra
   processing_shortdescription: Klukkutíma kennsla í Processing forritunarmálunum
   robomind_shortdescription: Skrifaðu kóða fyrir sýndarvélmenni

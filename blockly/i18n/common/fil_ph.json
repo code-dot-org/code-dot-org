@@ -20,7 +20,7 @@
   "directionSouthLetter": "S",
   "directionEastLetter": "E",
   "directionWestLetter": "W",
-  "end": "end",
+  "end": "tapos",
   "emptyBlocksErrorMsg": "Ang \"Repeat\" o \"if\" block ay kailangan ng iba pang mga block sa loob nito upang gumana. Siguraduhin na ang block na asa loob ay nakasukat ng maayos sa loob ng naglalaman na block.",
   "emptyFunctionBlocksErrorMsg": "The function block needs to have other blocks inside it to work.",
   "errorEmptyFunctionBlockModal": "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block.",

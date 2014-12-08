@@ -12455,11 +12455,11 @@ exports.moveForward = function(d){return "idź do przodu"};
 
 exports.moveForwardTooltip = function(d){return "Przenieś mnie do przodu o jedno miejsce."};
 
-exports.moveLeft = function(d){return "przesuń w lewo"};
+exports.moveLeft = function(d){return "idź w lewo"};
 
 exports.moveLeftTooltip = function(d){return "Przesuń paletkę w lewo."};
 
-exports.moveRight = function(d){return "przesuń w prawo"};
+exports.moveRight = function(d){return "idź w prawo"};
 
 exports.moveRightTooltip = function(d){return "Przesuń paletkę w prawo."};
 
@@ -12692,7 +12692,7 @@ exports.directionWestLetter = function(d){return "W (Zachód)"};
 
 exports.end = function(d){return "koniec"};
 
-exports.emptyBlocksErrorMsg = function(d){return "Blok powtórz lub blok jeśli muszą zawierać inne bloki, by poprawnie działać. Upewnij się, czy wewnętrzny blok pasuje do zewnętrznego."};
+exports.emptyBlocksErrorMsg = function(d){return "Blok \"powtarzaj\" lub blok \"jeśli\" muszą zawierać inne bloki, by poprawnie działać. Upewnij się, czy wewnętrzny blok pasuje do zewnętrznego."};
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Blok funkcji musi zawierać inne bloki, by działał."};
 
@@ -12754,7 +12754,7 @@ exports.print = function(d){return "Drukuj"};
 
 exports.puzzleTitle = function(d){return "Łamigłówka "+v(d,"puzzle_number")+" z "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "powtórz"};
+exports.repeat = function(d){return "powtarzaj"};
 
 exports.resetProgram = function(d){return "Zresetuj"};
 

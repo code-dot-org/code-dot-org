@@ -12583,7 +12583,7 @@ exports.whenBallMissesPaddle = function(d){return "kun pallo ohittaa mailan"};
 
 exports.whenBallMissesPaddleTooltip = function(d){return "Suorita alla olevan toiminnot, kun pallo ohittaa mailan."};
 
-exports.whenDown = function(d){return "kun alas nuoli"};
+exports.whenDown = function(d){return "kun nuoli alas"};
 
 exports.whenDownTooltip = function(d){return "Suorita alla olevat toiminnot, kun alas-nuolinäppäintä painetaan."};
 
@@ -12591,7 +12591,7 @@ exports.whenGameStarts = function(d){return "kun peli alkaa"};
 
 exports.whenGameStartsTooltip = function(d){return "Suorita alla olevat toiminnot, kun peli alkaa."};
 
-exports.whenLeft = function(d){return "kun vasen nuoli"};
+exports.whenLeft = function(d){return "kun nuoli vasemmalle"};
 
 exports.whenLeftTooltip = function(d){return "Suorita alla olevat toiminnot, kun vasenta nuolinäppäintä painetaan."};
 
@@ -12599,11 +12599,11 @@ exports.whenPaddleCollided = function(d){return "kun pallo osuu mailaan"};
 
 exports.whenPaddleCollidedTooltip = function(d){return "Suorita alla olevat toiminnot, kun pallo osuu mailaan."};
 
-exports.whenRight = function(d){return "kun oikea nuoli"};
+exports.whenRight = function(d){return "kun nuoli oikealle"};
 
 exports.whenRightTooltip = function(d){return "Suorita alla olevat toiminnot, kun oikeaa nuolinäppäintä painetaan."};
 
-exports.whenUp = function(d){return "kun ylös nuoli"};
+exports.whenUp = function(d){return "kun nuoli ylös"};
 
 exports.whenUpTooltip = function(d){return "Suorita alla olevat toiminnot, kun ylös-nuolinäppäintä painetaan."};
 
@@ -12668,17 +12668,17 @@ exports.emptyBlocksErrorMsg = function(d){return "\"Toista\" ja \"Jos\"-lohkot t
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Lisää Funktio-lohkon sisään muita lohkoja saadaksesi koodi toimimaan oikein."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "Funktiomäärittelysi sisällä täytyy olla lohkoja. Napsauta \"muokkaa\" ja raahaa lohkoja vihreän lohkon sisään."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "Napsauta \"muokkaa\" varmistaaksesi että sinulta ei puutu lohkoja funktion määritelmän sisältä."};
 
 exports.errorParamInputUnattached = function(d){return "Muista liittää lohko jokaiseen syöteparametriin työtilasi funktiolohkossa."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "Lisäsit parametrilohkon, mutta et käyttänyt sitä määrittelyssä. Varmista että käytät parametrejäsi napsauttamalla \"muokkaa\" ja laittamalla parametrilohko vihreän lohkon sisään."};
 
 exports.errorRequiredParamsMissing = function(d){return "Luo funktiollesi parametri painamalla \"muokkaa\" ja lisäämällä tarpeelliset parametrit. Raahaa uudet parametrilohkot funktiomäärittelyysi."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "Teit Funktion, mutta et koskaan käyttänyt sitä työtilassasi! Napsauta \"Funktiot\" työkaluissa ja varmista että käytät sitä ohjelmassasi."};
 
 exports.errorQuestionMarksInNumberField = function(d){return "Korvaa \"???\" arvolla."};
 
@@ -12792,7 +12792,7 @@ exports.watchVideo = function(d){return "Katso video"};
 
 exports.when = function(d){return "kun"};
 
-exports.whenRun = function(d){return "kun suoritetaan"};
+exports.whenRun = function(d){return "suoritettaessa"};
 
 exports.tryHOC = function(d){return "Kokeile koodaustuntia"};
 

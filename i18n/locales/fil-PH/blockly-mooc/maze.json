@@ -1,6 +1,6 @@
 {
-  "atHoneycomb":"at honeycomb",
-  "atFlower":"at flower",
+  "atHoneycomb":"sa honeycomb",
+  "atFlower":"sa bulaklak",
   "avoidCowAndRemove":"iwasan ang baka at alisin ang 1",
   "continue":"Magpatuloy",
   "dig":"alisin ang 1",
@@ -21,7 +21,7 @@
   "get":"kunin",
   "heightParameter":"taas",
   "holePresent":"merong butas",
-  "honey":"make honey",
+  "honey":"gumawa ng honey",
   "honeyAvailable":"honey",
   "honeyTooltip":"Make honey from nectar",
   "honeycombFullError":"This honeycomb does not have room for more honey.",

@@ -11756,19 +11756,19 @@ exports.emptyBlocksErrorMsg = function(d){return "Блоки \"Повторит�
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Для функціонування цей блок повинен містити інші блоки."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "Потрібно розмістити блоки всередині блоку визначення функції. Клацніть \"Редагувати\" та перетягніть блоки всередину зеленого блоку."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "Натисніть кнопку \"Редагувати\", щоб переконатися, що всі потрібні блоки розміщено всередині визначення функції."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "Не забудьте вкласти блок для кожного вхідного параметра блоку функції на робочому просторі."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "Ви додали блок параметра, але не використали його у визначенні функції. Не забудьте використати його, клацніть \"Редагувати\" та розмістіть блок параметра всередині зеленого блоку."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "Створіть параметр для функції, клацнувши \"Редагувати\" та додаючи відповідні параметри. Перетягніть нові блоки параметрів у визначення функції."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "Ви створили функцію, але не скористалися нею у робочому просторі! Оберіть \"Функції\" на палітрі інструментів і переконайтеся, що ви використовуєте їх у своїй програмі."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "Спробуйте замінити \"???\" на значення."};
 
 exports.extraTopBlocks = function(d){return "У вас залишились зайві блоки. Ви збирались їх прикріпити до блоку \"під час виконання\"?"};
 
@@ -11830,7 +11830,7 @@ exports.showBlocksHeader = function(d){return "Показати блоки"};
 
 exports.showGeneratedCode = function(d){return "Показати код"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "рядок =?"};
 
 exports.subtitle = function(d){return "Візуальне середовище програмування"};
 

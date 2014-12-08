@@ -41,7 +41,7 @@ sr-SP:
   go: Иди
   thank_you_: Хвала!
   congratulations: Честитамо!
-  congratulations_on_completing_hoc: Честитамо јер сте завршили 1 Сат Програмиранја.
+  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   get_a_certificate_of_achievement: Узмите сертификат о достигнућу
   enter_valid_email: Молимо да унесете валидну емаил адресу
   get_a_certificate_message: "Послаћемо Вам сертификат и информације како да <a href='/learn/beyond'> Научите и више од сата кодирања</a>"
@@ -65,7 +65,7 @@ sr-SP:
   thanks_for_voting: Хвала на гласању!
   share_on_facebook: Подели на Facebook-u
   share_on_twitter: Подели на Тwitteru
-  beyond_an_hour: 'Више од Сата програмирања>'
+  beyond_an_hour: Beyond an Hour of Code
   get_started: Покрени
   i_agree: Слажем се
   participant_select: -Изабери-
@@ -74,6 +74,9 @@ sr-SP:
   participant_educator: Учитељ
   participant_engineer: Софтверски инжињер
   participant_other: Ништа од наведеног
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Ја сам
   never_spam: Никада вам нећемо слати нежељену пошту
   enter_country: Унеси земљу ако не живиш у САД-у
@@ -110,6 +113,10 @@ sr-SP:
   studiobar_flappy_body: Направите и поделите сопствену Флапи игру
   studiobar_teacher_title: Направљено за учитеље
   studiobar_teacher_body: Уведите Студио програмирања у вашу учионицу
+  studiobar_frozen_title: Час кода
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Ја сам студент
   contact_form_topic_parent: Ја сам родитељ
   contact_form_topic_teacher: Ја сам учитељ/едукатор
@@ -283,7 +290,7 @@ sr-SP:
   dashboard_sections_password_account_creation: Лозинке направљне од стране ученика
   dashboard_sections_login_type_explanation: 'Ово вам објашњава који од ових брста пријављивања, <b>слику, реч или имејл адресу</b> , би сте изабрали за групу.'
   dashboard_faq: Често постављана питања
-  code_hoc_coming: Сат програмирања долази -од 8-14 децембра!
+  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: Пријавите се да учествујете током недеље за едукацију о компјутерској науци
   learn_more: Сазнајте више
   hoc2014_try_new_tutorials: Пробајте наше нове водиче за Сат програмирања

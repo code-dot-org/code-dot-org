@@ -17,29 +17,31 @@
           'Artist 1: Intro': 'Kunstner 1: Intro'
           Artists 2: Kunstnere 2
           Spelling Bee: Stavekonkurranse
-          Spelling Bee not blockly: Spelling Bee not blockly
-          'Bee 1: Intro': 'Bee 1: Intro'
+          Spelling Bee not blockly: Stave Bie ikke blokker
+          'Bee 1: Intro': 'Bier 1: Introduksjon'
           'Maze 2: Loops': 'Labyrint 2: Løkker'
-          'Bee 2: Loops': 'Bee 2: Loops'
-          Multi & Match: Multi & Match
+          'Bee 2: Loops': 'Bier 2: Løkker'
+          Multi & Match: Flervalg og sammensetting
           K-1 Flappy: K-1 Flakse
-          Flappy non blockly: Flappy non blockly
+          Flappy non blockly: Flappy uten blokker
           title: Kurs 1
-          Artist 2: Artist 2
-          Happy Maps: Happy Maps
+          Artist 2: Kunstner 2
+          Happy Maps: Glade Kart
           Move it, Move it: Flytte den, flytte den
           'Real-life Algorithms: Plant a Seed': 'Virkelige algoritmer: Plante et frø'
           Building a Foundation: Bygg ett grunnlag
-          Getting Loopy: Getting Loopy
+          Getting Loopy: Gå i spinn
           The Big Event: Den store begivenheten
-          Going Places Safely: Going Places Safely
-          description: Course 1 is designed for early readers in the lower elementary
-            grades.  Create computer programs with loops and events.  By the end of
-            the course, create your very own custom game or story that you can share.
-          'Bee: Sequence': 'Bee: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
-          'Artist: Shapes': 'Artist: Shapes'
-          'Maze: Loops': 'Maze: Loops'
+          Going Places Safely: Trygg reise
+          description: Kurs 1 er utformet slik at barn som har lært å lese, kan få
+            lage data program som vil hjelpe dem til å lære samarbeid, utvikle ferdigheter
+            i problem-løsing og utholdenhet med vanskelige oppgaver. Ved å fullføre
+            kurset, vil elevene lage sine egne spill og historier som de kan dele.
+            Anbefalt for første klasse.
+          'Bee: Sequence': 'Bier: rekkefølge'
+          'Artist: Sequence': 'Kunstner: rekkefølge'
+          'Artist: Shapes': 'Kunstner: former'
+          'Maze: Loops': 'Labyring: Løkker'
           'Bee: Loops': 'Bee: Loops'
           'Studio: Create a Story': 'Studio: Create a Story'
           'Artist: Loops': 'Artist: Loops'
@@ -65,7 +67,7 @@
           Maze Loops: Labyrint løkker
           Graph Paper Programming: Millimeterpapirprogrammering
           'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
-          Getting Loopy: Getting Loopy
+          Getting Loopy: Gå i spinn
           Relay programming: Relé programmering
           Conditionals: Betingelser
           Binary Bracelets: Binær armbånd
@@ -76,8 +78,8 @@
             for å løse problemer, og utvikle interaktive spill eller historier de
             kan dele. Anbefalt for andre til femte klasse.
           'Maze: Sequence': 'Labyrint: sekvens'
-          'Artist: Sequence': 'Artist: Sequence'
-          'Maze: Loops': 'Maze: Loops'
+          'Artist: Sequence': 'Kunstner: rekkefølge'
+          'Maze: Loops': 'Labyring: Løkker'
           'Artist: Loops': 'Artist: Loops'
           'Bee: Loops': 'Bee: Loops'
           'Bee: Debugging': 'Bee: Debugging'
@@ -270,7 +272,7 @@
             taken Course 2 and 3.
           Course 4 Prerequisite: Course 4 Prerequisite
           'Maze: Sequence': 'Labyrint: sekvens'
-          'Artist: Sequence': 'Artist: Sequence'
+          'Artist: Sequence': 'Kunstner: rekkefølge'
           'Artist: Loops': 'Artist: Loops'
           'Bee: Conditionals': 'Bee: Conditionals'
           'Artist: Nested Loops': 'Artist: Nested Loops'
@@ -283,7 +285,7 @@
             taken Course 2 and 3.
           Course 4 Prerequisite: Course 4 Prerequisite
           'Maze: Sequence': 'Labyrint: sekvens'
-          'Artist: Sequence': 'Artist: Sequence'
+          'Artist: Sequence': 'Kunstner: rekkefølge'
           'Artist: Loops': 'Artist: Loops'
           'Bee: Conditionals': 'Bee: Conditionals'
           'Artist: Nested Loops': 'Artist: Nested Loops'
@@ -296,7 +298,7 @@
             taken Course 2 and 3.
           Course 4 Prerequisite: Course 4 Prerequisite
           'Maze: Sequence': 'Labyrint: sekvens'
-          'Artist: Sequence': 'Artist: Sequence'
+          'Artist: Sequence': 'Kunstner: rekkefølge'
           'Artist: Loops': 'Artist: Loops'
           'Bee: Conditionals': 'Bee: Conditionals'
           'Artist: Nested Loops': 'Artist: Nested Loops'

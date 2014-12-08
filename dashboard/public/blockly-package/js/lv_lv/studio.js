@@ -21437,7 +21437,7 @@ exports.moveDistance200 = function(d){return "200 pikseļi"};
 
 exports.moveDistance400 = function(d){return "400 pikseļi"};
 
-exports.moveDistancePixels = function(d){return "punktus"};
+exports.moveDistancePixels = function(d){return "punktiem"};
 
 exports.moveDistanceRandom = function(d){return "nejauši izvēlēti pikseļi"};
 

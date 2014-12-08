@@ -42,7 +42,7 @@ pl-PL:
   go: Idź
   thank_you_: Dziękujemy!
   congratulations: Gratulacje!
-  congratulations_on_completing_hoc: Gratulacje z okazji ukończenia godziny programowania (One Hour of Code).
+  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   get_a_certificate_of_achievement: Uzyskaj certyfikat osiągnięcia
   enter_valid_email: Podaj poprawny adres e-mail
   get_a_certificate_message: "Wyślemy Ci certyfikat oraz informację, jak <a href='/learn/beyond'>Kontynuować naukę po tej godzinie (One Hour)</a>"
@@ -66,7 +66,7 @@ pl-PL:
   thanks_for_voting: Dziękujemy za głosowanie!
   share_on_facebook: Udostępnij na Facebooku
   share_on_twitter: Udostępnij na Twitterze
-  beyond_an_hour: 'Poza Godziną Kodowania >'
+  beyond_an_hour: Beyond an Hour of Code
   get_started: Start
   i_agree: Zgadzam się
   participant_select: -Wybierz-
@@ -75,6 +75,9 @@ pl-PL:
   participant_educator: Nauczyciel
   participant_engineer: Programista
   participant_other: Żaden z powyższych
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Jestem
   never_spam: Nigdy nie wysyłamy spamu
   enter_country: Podaj kraj, jeśli inny niż Stany Zjednoczone
@@ -111,6 +114,10 @@ pl-PL:
   studiobar_flappy_body: "Utwórz i udostępnij swoją grę Flappy'ego"
   studiobar_teacher_title: Dla nauczycieli
   studiobar_teacher_body: Wprowadź Code Studio (Studio Kodowania) w swojej klasie
+  studiobar_frozen_title: Godzina kodowania
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Jestem uczniem
   contact_form_topic_parent: Jestem rodzicem
   contact_form_topic_teacher: Jestem nauczycielem/edukatorem
@@ -284,7 +291,7 @@ pl-PL:
   dashboard_sections_password_account_creation: Hasło w postaci tekstu utworzone przez ucznia
   dashboard_sections_login_type_explanation: 'Ta tabela pomaga wyjaśnić, który z tych typów logowania, <b>obrazek, słowo lub e-mail</b>, będziesz chciał wybrać dla sekcji.'
   dashboard_faq: Najczęściej zadawane pytania (FAQ)
-  code_hoc_coming: 'Zbliża się Godzina Kodowania - 8-14 Grudnia!'
+  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: Zarejestruj się, aby uczestniczyć w tygodniu edukacji informatycznej (CS Education Week)
   learn_more: Naucz się więcej
   hoc2014_try_new_tutorials: Wypróbuj nasze nowe samouczki Godziny Kodowania
@@ -294,7 +301,7 @@ pl-PL:
   carousel_heading_international: Poradniki w Twoim języku
   carousel_heading_domestic: Poradniki (samouczki) dostępne w języku angielskim
   carousel_heading_beginners: Samouczki dla początkujących
-  carousel_heading_javascript: Tutorials that teach JavaScript
+  carousel_heading_javascript: Samouczki do nauki Javascript
   carousel_heading_unplugged: 'Nie masz komputera lub dostępu do Internet? Poznaj informatykę "unplugged", czyli informatykę bez komputera'
   carousel_heading_devices: Aplikacje z poradnikami dla telefonów komórkowych i tabletów
   carousel_heading_languages: Poradniki dla innych języków programowania

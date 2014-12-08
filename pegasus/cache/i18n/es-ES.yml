@@ -96,6 +96,9 @@
   participant_educator: Educador
   participant_engineer: Ingeniero de software
   participant_other: Ninguna de las anteriores
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Soy un
   never_spam: Nunca te enviaremos spam
   enter_country: Introduzca el país si reside fuera de los Estados Unidos
@@ -136,6 +139,10 @@
   studiobar_flappy_body: Crea y comparte tu propio juego Flappy
   studiobar_teacher_title: Hecho para los maestros
   studiobar_teacher_body: Presenta Code Studio en tu aula
+  studiobar_frozen_title: Hora del código
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Soy un estudiante
   contact_form_topic_parent: Soy un padre
   contact_form_topic_teacher: Soy un profesor/educador
@@ -366,7 +373,7 @@
   carousel_heading_international: Tutoriales en tu idioma
   carousel_heading_domestic: Tutoriales disponibles en inglés
   carousel_heading_beginners: Tutoriales para principiantes (en inglés)
-  carousel_heading_javascript: Tutoriales que enseñan Javascript
+  carousel_heading_javascript: Tutoriales que enseñan JavaScript
   carousel_heading_unplugged: ¿No tienes dispositivo o Internet? Prueba informática
     sin conexión
   carousel_heading_devices: Tutoriales en aplicaciones para teléfonos y tabletas

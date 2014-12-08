@@ -98,6 +98,9 @@
   participant_educator: Educador
   participant_engineer: Enginyer de software
   participant_other: Cap dels anteriors
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Jo sóc un
   never_spam: Nosaltres mai t'enviarem spam
   enter_country: Introdueix el país si estàs fora dels Estats Units
@@ -137,6 +140,10 @@
   studiobar_flappy_body: Fes i comparteix el teu propi joc Flappy
   studiobar_teacher_title: Fet per a professors
   studiobar_teacher_body: Introdueix el Code Studio a la teva classe
+  studiobar_frozen_title: Hora del codi
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Sóc estudiant
   contact_form_topic_parent: Sóc pare o mare
   contact_form_topic_teacher: Sóc professor/educador

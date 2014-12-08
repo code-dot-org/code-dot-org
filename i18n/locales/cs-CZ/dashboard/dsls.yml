@@ -81,8 +81,8 @@ cs:
         10 / (2 * (3 + 1)): '10 / (2 * (3 + 1))'
         Type the arithmetic expression here: Zde napište aritmetický výraz
       text match test:
-        Mathematical Expression Assessment: Mathematical Expression Assessment
-        Type out the arithmetic expression that this circle of evaluation evaluates to: Type out the arithmetic expression that this circle of evaluation evaluates to
+        Mathematical Expression Assessment: Vyhodnocení matematického výrazu
+        Type out the arithmetic expression that this circle of evaluation evaluates to: Napište aritmetický výraz který bude vyhodnocen stejně jako tento kruh hodnocení
         /script_assets/msm/Unit 1/Exercise_5_question_2.png: /script_assets/msm/Unit 1/Exercise_5_question_2.png
         (9-3)+(4*7): '(9-3)+(4*7)'
         (9-3)+4: null

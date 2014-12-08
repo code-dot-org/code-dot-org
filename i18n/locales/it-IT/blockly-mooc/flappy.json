@@ -33,7 +33,7 @@
   "playSoundSplash":"riproduci il suono di un tuffo nell'acqua",
   "playSoundLaser":"riproduci il suono di un raggio laser",
   "playSoundTooltip":"Riproduci il suono scelto.",
-  "reinfFeedbackMsg":"Premi \"Ricomincia\" per ricominciare a giocare la tua partita.",
+  "reinfFeedbackMsg":"Premi \"Riprova\" per ricominciare a giocare la tua partita.",
   "scoreText":"Punteggio: {playerScore}",
   "setBackground":"imposta la scena",
   "setBackgroundRandom":"imposta una scena scelta a caso",

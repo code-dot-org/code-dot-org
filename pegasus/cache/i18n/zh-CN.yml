@@ -80,6 +80,9 @@
   participant_educator: 教师
   participant_engineer: 软件工程师
   participant_other: 以上都不是
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: 我是
   never_spam: 我们绝不会发送垃圾邮件
   enter_country: 如果在美国以外，请输入国家
@@ -116,6 +119,10 @@
   studiobar_flappy_body: 创造自己的 Flappy 游戏并与别人分享
   studiobar_teacher_title: 为教师所制
   studiobar_teacher_body: 在您的教室内介绍《编程工作室》
+  studiobar_frozen_title: 编程一小时
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: 我是一个学生
   contact_form_topic_parent: 我是家长
   contact_form_topic_teacher: 我的老师或教育家
@@ -230,7 +237,7 @@
   dashboard_students_new_section: 您已经创建了一个新的学习小组！现在，使用上面的<b>添加学生</b>和<b>添加多个学生</b>按钮来添加学生进组。
   dashboard_students_placeholder_name: 学生姓名
   dashboard_students_name: 姓名
-  dashboard_students_age: Age
+  dashboard_students_age: 年龄
   dashboard_students_gender: 性别
   dashboard_students_male: 男性
   dashboard_students_female: 女性
@@ -296,13 +303,13 @@
   code_sign_up: 注册以便在CS教育周期间参加
   learn_more: 了解详情
   hoc2014_try_new_tutorials: 试试我们新的编程一小时教程
-  hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
+  hoc2014_try_new_tutorial: 试试我们新的beta 版的一小时代码教程
   hoc2014_try_scrat: 愤怒的小鸟、PvZ和Scrat
-  hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
+  hoc2014_try_frozen: 艺术家与冻结的安娜和艾尔莎
   carousel_heading_international: 中文教程
   carousel_heading_domestic: 英文教程可用
   carousel_heading_beginners: 初学者教程
-  carousel_heading_javascript: JavaScript教程
+  carousel_heading_javascript: 教 JavaScript 的教程
   carousel_heading_unplugged: 没有设备或互联网接入？试试’离线‘计算机科学课程
   carousel_heading_devices: 为手机和平板电脑定制的教程应用
   carousel_heading_languages: 用其他编程语言所写的教程

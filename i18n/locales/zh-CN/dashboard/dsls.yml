@@ -6,7 +6,7 @@ zh:
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         /script_assets/msm/unit6/blockstomath1.png: /script_assets/msm/unit6/blockstomath1.png
         (4+5) > 9: '(4+5) > 9'
-        Type the arithmetic expression here: Type the arithmetic expression here
+        Type the arithmetic expression here: 在这里键入算术表达式
       Blocks to Bools 2:
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
@@ -14,7 +14,7 @@ zh:
         (10 > 11) or (7 <= 9): '(10 > 11) or (7 <= 9)'
         (10 > 11) OR (7 <= 9): '(10 > 11) OR (7 <= 9)'
         (10 > 11) || (7 <= 9): '(10 > 11) || (7 <= 9)'
-        Type the arithmetic expression here: Type the arithmetic expression here
+        Type the arithmetic expression here: 在这里键入算术表达式
       Blocks to Bools 3:
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
@@ -22,7 +22,7 @@ zh:
         (5 < 10) and (10 < 15): '(5 < 10) and (10 < 15)'
         (5 < 10) AND (10 < 15): '(5 < 10) AND (10 < 15)'
         (5 < 10) && (10 < 15): '(5 < 10) && (10 < 15)'
-        Type the arithmetic expression here: Type the arithmetic expression here
+        Type the arithmetic expression here: 在这里键入算术表达式
       Blocks to Bools 4:
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
@@ -30,33 +30,33 @@ zh:
         ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): '((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10))'
         ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): '((1 < x) and (x < 5)) or ((8 < x) and (x < 10))'
         ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): '((1 < x) && (x < 5)) || ((8 < x) && (x < 10))'
-        Type the arithmetic expression here: Type the arithmetic expression here
+        Type the arithmetic expression here: 在这里键入算术表达式
       Blocks to Math 1:
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         /script_assets/msm/unit1/blockstomath1.png: /script_assets/msm/unit1/blockstomath1.png
         4 + 5: 4 + 5
-        Type the arithmetic expression here: Type the arithmetic expression here
+        Type the arithmetic expression here: 在这里键入算术表达式
       Blocks to Math 2:
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         /script_assets/msm/unit1/blockstomath2.png: /script_assets/msm/unit1/blockstomath2.png
         7 * 6: '7 * 6'
-        Type the arithmetic expression here: Type the arithmetic expression here
+        Type the arithmetic expression here: 在这里键入算术表达式
       Blocks to Math 3:
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         /script_assets/msm/unit1/blockstomath3.png: /script_assets/msm/unit1/blockstomath3.png
         (2 * 3) - (1 + 0): '(2 * 3) - (1 + 0)'
         2 * 3 - (1 + 0): '2 * 3 - (1 + 0)'
-        Type the arithmetic expression here: Type the arithmetic expression here
+        Type the arithmetic expression here: 在这里键入算术表达式
       Blocks to Math 4:
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         /script_assets/msm/unit1/blockstomath4.png: /script_assets/msm/unit1/blockstomath4.png
         (5 + 8) - 12: '(5 + 8) - 12'
         5 + 8 - 12: '5 + 8 - 12'
-        Type the arithmetic expression here: Type the arithmetic expression here
+        Type the arithmetic expression here: 在这里键入算术表达式
       Blocks to Math 5:
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
@@ -64,7 +64,7 @@ zh:
         (-2) * (-6):
           - 
             2 * -6: '-2 * -6'
-        Type the arithmetic expression here: Type the arithmetic expression here
+        Type the arithmetic expression here: 在这里键入算术表达式
       Blocks to Math 6:
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
@@ -73,18 +73,18 @@ zh:
         ((4 - 1) * -2) + 12: '((4 - 1) * -2) + 12'
         (4 - 1) * (-2) + 12: '(4 - 1) * (-2) + 12'
         (4 - 1) * -2 + 12: '(4 - 1) * -2 + 12'
-        Type the arithmetic expression here: Type the arithmetic expression here
+        Type the arithmetic expression here: 在这里键入算术表达式
       Blocks to Math 7:
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         /script_assets/msm/unit1/blockstomath7.png: /script_assets/msm/unit1/blockstomath7.png
         10 / (2 * (3 + 1)): '10 / (2 * (3 + 1))'
-        Type the arithmetic expression here: Type the arithmetic expression here
+        Type the arithmetic expression here: 在这里键入算术表达式
       text match test:
-        Mathematical Expression Assessment: Mathematical Expression Assessment
-        Type out the arithmetic expression that this circle of evaluation evaluates to: Type out the arithmetic expression that this circle of evaluation evaluates to
+        Mathematical Expression Assessment: 数学表达式评估
+        Type out the arithmetic expression that this circle of evaluation evaluates to: 键入这个圈子的评价结果​​的算术表达式
         /script_assets/msm/Unit 1/Exercise_5_question_2.png: /script_assets/msm/Unit 1/Exercise_5_question_2.png
         (9-3)+(4*7): '(9-3)+(4*7)'
         (9-3)+4: null
         9-3+4: null
-        Type the arithmetic expression here: Type the arithmetic expression here
+        Type the arithmetic expression here: 在这里键入算术表达式

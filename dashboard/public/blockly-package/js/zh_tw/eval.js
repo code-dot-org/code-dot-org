@@ -14426,19 +14426,19 @@ exports.emptyBlocksErrorMsg = function(d){return "\"重複\"和\"如果\"程式�
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "\"函式\"積木裡面需要放其他程式積木才能運作"};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "在此需要定義您的函式區塊。按一下\"編輯\"並在綠色區塊內部拖曳區塊。"};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "按一下\"編輯\"來確保你的函式定義中沒有缺少任何區塊。"};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "在你的工作區，記得附加一區塊到每個函數區塊輸入的參數。"};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "你加入一個參數區塊，但是定義中沒有使用它。請點按\"編輯\"，並且在綠色區塊裏放入參數區塊，以確認使用你的參數。"};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "點按\"編輯\"和加入必要的參數值，為你的函數建立一個參數。拖曳新參數區塊到你的函數定義中。"};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "你建立一個函數，但從未在工作區上使用它 ！在工具箱中點按\"函數\"，並確認在你的程式中有使用它。"};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "試把 \"???\" 更換為一個值。"};
 
 exports.extraTopBlocks = function(d){return "你有一些程式積木沒連接上. 你是要把它們接在\"當按下執行時\"的積木後面嗎?"};
 
@@ -14480,7 +14480,7 @@ exports.numLinesOfCodeWritten = function(d){return "你已經撰寫了 "+p(d,"nu
 
 exports.play = function(d){return "玩"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "列印"};
 
 exports.puzzleTitle = function(d){return "階段 "+v(d,"stage_total")+" 的第"+v(d,"puzzle_number")+" 關"};
 
@@ -14500,7 +14500,7 @@ exports.showBlocksHeader = function(d){return "顯示積木"};
 
 exports.showGeneratedCode = function(d){return "顯示程式碼"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "字串=？"};
 
 exports.subtitle = function(d){return "一個視覺化的程式設計環境\n\n"};
 
@@ -14512,7 +14512,7 @@ exports.tooManyBlocksMsg = function(d){return "這個關卡可以用 < x id = 'S
 
 exports.tooMuchWork = function(d){return "你讓我做太多工作了! 可以試著減少一些重複次數嗎?"};
 
-exports.toolboxHeader = function(d){return "程式積木"};
+exports.toolboxHeader = function(d){return "程式模塊"};
 
 exports.openWorkspace = function(d){return "它如何運作的"};
 
@@ -14524,9 +14524,9 @@ exports.hintRequest = function(d){return "查看提示"};
 
 exports.backToPreviousLevel = function(d){return "返回上一階段"};
 
-exports.saveToGallery = function(d){return "保存到您的收藏簿。"};
+exports.saveToGallery = function(d){return "保存到作品集"};
 
-exports.savedToGallery = function(d){return "已經存放到您的收藏簿了！"};
+exports.savedToGallery = function(d){return "已經保存到作品集了！"};
 
 exports.shareFailure = function(d){return "抱歉, 我們無法分享這個程式"};
 
@@ -14569,41 +14569,41 @@ exports.circleBlockTitle = function(d){return "圓(半徑、 樣式、 顏色)"}
 
 exports.displayBlockTitle = function(d){return "顯示"};
 
-exports.ellipseBlockTitle = function(d){return "橢圓 （寬度、 高度、 風格、 顏色)"};
+exports.ellipseBlockTitle = function(d){return "橢圓(寬度,高度,樣式, 顏色)"};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"};
+exports.extraTopBlocks = function(d){return "你有未連接的區塊，難道你要將它們附加到\"顯示\"區塊嗎?"};
 
-exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
+exports.overlayBlockTitle = function(d){return "覆蓋 (頂部, 底部)"};
 
-exports.placeImageBlockTitle = function(d){return "place-image (x, y, image)"};
+exports.placeImageBlockTitle = function(d){return "放置圖片(x,y,圖片)"};
 
-exports.offsetBlockTitle = function(d){return "offset (x, y, image)"};
+exports.offsetBlockTitle = function(d){return "偏移量 (x,y,圖片)"};
 
-exports.rectangleBlockTitle = function(d){return "矩形 （寬度、 高度、 風格、 顏色)"};
+exports.rectangleBlockTitle = function(d){return "矩形 (寬度, 高度,樣式 , 顏色)"};
 
 exports.reinfFeedbackMsg = function(d){return "你可以按\"重試\"按鈕，就可以編輯你的圖畫。"};
 
-exports.rotateImageBlockTitle = function(d){return "rotate (degrees, image)"};
+exports.rotateImageBlockTitle = function(d){return "旋轉(度數,圖片)"};
 
-exports.scaleImageBlockTitle = function(d){return "scale (factor)"};
+exports.scaleImageBlockTitle = function(d){return "比例(因數)"};
 
-exports.squareBlockTitle = function(d){return "正方形 （大小、 樣式、 顏色）"};
+exports.squareBlockTitle = function(d){return "正方形(大小,樣式,顏色)"};
 
-exports.starBlockTitle = function(d){return "星 （半徑、 樣式、 顏色）"};
+exports.starBlockTitle = function(d){return "星形(半徑,樣式, 顏色)"};
 
-exports.radialStarBlockTitle = function(d){return "radial-star (points, inner, outer, style, color)"};
+exports.radialStarBlockTitle = function(d){return "放射狀星形 (點, 內, 外,樣式, 顏色)"};
 
-exports.stringAppendBlockTitle = function(d){return "string-append (first, second)"};
+exports.stringAppendBlockTitle = function(d){return "字串合併 (第一,第二)"};
 
-exports.stringLengthBlockTitle = function(d){return "字串長度 （字串）"};
+exports.stringLengthBlockTitle = function(d){return "字串長度(字串)"};
 
-exports.textBlockTitle = function(d){return "文本 （字串、 大小、 顏色）"};
+exports.textBlockTitle = function(d){return "文字(字串, 大小, 顏色)"};
 
-exports.triangleBlockTitle = function(d){return "三角形 （大小、 樣式、 顏色）"};
+exports.triangleBlockTitle = function(d){return "三角形 (大小,樣式, 顏色)"};
 
-exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
+exports.underlayBlockTitle = function(d){return "襯底(底部, 頂部)"};
 
-exports.outline = function(d){return "大綱"};
+exports.outline = function(d){return "輪廓"};
 
 exports.solid = function(d){return "實心"};
 

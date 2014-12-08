@@ -41,7 +41,7 @@ az-AZ:
   go: Getdik
   thank_you_: Sağ olun!
   congratulations: Təbriklər!
-  congratulations_on_completing_hoc: Sizi bir Kod Saatını başa vurmağınız münasibəti ilə təbrik edirik.
+  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   get_a_certificate_of_achievement: Nailiyyət sertifikatı əldə edin
   enter_valid_email: Zəhmət olmasa, düzgün e-poçt ünvanı daxil edin
   get_a_certificate_message: "Biz sizə sertifikat və <a href='/learn/beyond'>Kod Saatından sonra da öyrən</a>məyin yolları barədə məlumat göndərəcəyik"
@@ -65,7 +65,7 @@ az-AZ:
   thanks_for_voting: Səs verdiyinizə görə sağ olun!
   share_on_facebook: '"Facebook"da bölüşün'
   share_on_twitter: '"Twitter"də bölüşün'
-  beyond_an_hour: 'Beyond an Hour of Code >'
+  beyond_an_hour: Beyond an Hour of Code
   get_started: Start
   i_agree: Razıyam
   participant_select: '- Seçin -'
@@ -74,6 +74,9 @@ az-AZ:
   participant_educator: Təhsil işçisi
   participant_engineer: Proqramçı-mühəndis
   participant_other: Yuxarıdakılardan heç biri
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: 'Mən kiməm:'
   never_spam: Sizə heç vaxt spam göndərmərik
   enter_country: ABŞ-dan kənardasınızsa, ölkənizi daxil edin
@@ -110,6 +113,10 @@ az-AZ:
   studiobar_flappy_body: Make and share your own Flappy game
   studiobar_teacher_title: Made for teachers
   studiobar_teacher_body: Introduce Code Studio in your classroom
+  studiobar_frozen_title: Kod Saatı
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Mən şagirdəm
   contact_form_topic_parent: Mən valideynəm
   contact_form_topic_teacher: Mən müəllim/təlimçiyəm

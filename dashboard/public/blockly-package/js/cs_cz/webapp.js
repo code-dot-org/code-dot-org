@@ -11934,7 +11934,7 @@ exports.pause = function(d){return "Přerušit"};
 
 exports.reinfFeedbackMsg = function(d){return "Můžete stisknout tlačítko \"Zkusit znovu\" a vrátit se ke spuštění vaší aplikace."};
 
-exports.repeatForever = function(d){return "repeat forever"};
+exports.repeatForever = function(d){return "opakujte navždy"};
 
 exports.repeatDo = function(d){return "proveď"};
 
@@ -11944,11 +11944,11 @@ exports.shareWebappTwitter = function(d){return "Podívejte se na aplikaci, kter
 
 exports.shareGame = function(d){return "Sdílejte své aplikace:"};
 
-exports.stepIn = function(d){return "Step in"};
+exports.stepIn = function(d){return "Krok"};
 
-exports.stepOver = function(d){return "Step over"};
+exports.stepOver = function(d){return "Krok přes"};
 
-exports.stepOut = function(d){return "Step out"};
+exports.stepOut = function(d){return "Krok ven"};
 
 exports.turnBlack = function(d){return "zčernat"};
 

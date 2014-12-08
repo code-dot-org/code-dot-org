@@ -12387,7 +12387,7 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.zh=function(n){return "other"}
 exports.bounceBall = function(d){return "反彈球"};
 
-exports.bounceBallTooltip = function(d){return "Bounce a ball off of an object."};
+exports.bounceBallTooltip = function(d){return "從某一物體反彈的球。"};
 
 exports.continue = function(d){return "繼續"};
 
@@ -12415,9 +12415,9 @@ exports.ifTooltip = function(d){return "如果在指定的方向有路的話，�
 
 exports.ifelseTooltip = function(d){return "如果在指定的方向有路的話，就執行第一個程式積木的動作，否則就執行第二個程式積木的動作。"};
 
-exports.incrementOpponentScore = function(d){return "increment opponent score"};
+exports.incrementOpponentScore = function(d){return "對手的得分點"};
 
-exports.incrementOpponentScoreTooltip = function(d){return "Add one to the current opponent score."};
+exports.incrementOpponentScoreTooltip = function(d){return "增加一個到目前對手的得分。"};
 
 exports.incrementPlayerScore = function(d){return "得分"};
 
@@ -12435,7 +12435,7 @@ exports.makeYourOwn = function(d){return "設計屬於你的反彈球遊戲"};
 
 exports.moveDown = function(d){return "向下移動"};
 
-exports.moveDownTooltip = function(d){return "Move the paddle down."};
+exports.moveDownTooltip = function(d){return "槳向下移動。"};
 
 exports.moveForward = function(d){return "向前移動"};
 
@@ -12443,15 +12443,15 @@ exports.moveForwardTooltip = function(d){return "將我向前移動一格"};
 
 exports.moveLeft = function(d){return "向左移動"};
 
-exports.moveLeftTooltip = function(d){return "Move the paddle to the left."};
+exports.moveLeftTooltip = function(d){return "槳移到左邊。"};
 
 exports.moveRight = function(d){return "向右移動"};
 
-exports.moveRightTooltip = function(d){return "Move the paddle to the right."};
+exports.moveRightTooltip = function(d){return "槳向右移動。"};
 
 exports.moveUp = function(d){return "向上移動"};
 
-exports.moveUpTooltip = function(d){return "Move the paddle up."};
+exports.moveUpTooltip = function(d){return "槳向上移動。"};
 
 exports.nextLevel = function(d){return "恭喜！你已經完成這個關卡。"};
 
@@ -12668,19 +12668,19 @@ exports.emptyBlocksErrorMsg = function(d){return "\"重複\"和\"如果\"程式�
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "\"函式\"積木裡面需要放其他程式積木才能運作"};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "在此需要定義您的函式區塊。按一下\"編輯\"並在綠色區塊內部拖曳區塊。"};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "按一下\"編輯\"來確保你的函式定義中沒有缺少任何區塊。"};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "在你的工作區，記得附加一區塊到每個函數區塊輸入的參數。"};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "你加入一個參數區塊，但是定義中沒有使用它。請點按\"編輯\"，並且在綠色區塊裏放入參數區塊，以確認使用你的參數。"};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "點按\"編輯\"和加入必要的參數值，為你的函數建立一個參數。拖曳新參數區塊到你的函數定義中。"};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "你建立一個函數，但從未在工作區上使用它 ！在工具箱中點按\"函數\"，並確認在你的程式中有使用它。"};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "試把 \"???\" 更換為一個值。"};
 
 exports.extraTopBlocks = function(d){return "你有一些程式積木沒連接上. 你是要把它們接在\"當按下執行時\"的積木後面嗎?"};
 
@@ -12722,7 +12722,7 @@ exports.numLinesOfCodeWritten = function(d){return "你已經撰寫了 "+p(d,"nu
 
 exports.play = function(d){return "玩"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "列印"};
 
 exports.puzzleTitle = function(d){return "階段 "+v(d,"stage_total")+" 的第"+v(d,"puzzle_number")+" 關"};
 
@@ -12742,7 +12742,7 @@ exports.showBlocksHeader = function(d){return "顯示積木"};
 
 exports.showGeneratedCode = function(d){return "顯示程式碼"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "字串=？"};
 
 exports.subtitle = function(d){return "一個視覺化的程式設計環境\n\n"};
 
@@ -12754,7 +12754,7 @@ exports.tooManyBlocksMsg = function(d){return "這個關卡可以用 < x id = 'S
 
 exports.tooMuchWork = function(d){return "你讓我做太多工作了! 可以試著減少一些重複次數嗎?"};
 
-exports.toolboxHeader = function(d){return "程式積木"};
+exports.toolboxHeader = function(d){return "程式模塊"};
 
 exports.openWorkspace = function(d){return "它如何運作的"};
 
@@ -12766,9 +12766,9 @@ exports.hintRequest = function(d){return "查看提示"};
 
 exports.backToPreviousLevel = function(d){return "返回上一階段"};
 
-exports.saveToGallery = function(d){return "保存到您的收藏簿。"};
+exports.saveToGallery = function(d){return "保存到作品集"};
 
-exports.savedToGallery = function(d){return "已經存放到您的收藏簿了！"};
+exports.savedToGallery = function(d){return "已經保存到作品集了！"};
 
 exports.shareFailure = function(d){return "抱歉, 我們無法分享這個程式"};
 

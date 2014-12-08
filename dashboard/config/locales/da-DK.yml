@@ -396,8 +396,8 @@
     test_videos_help: Teste vores nye video-afspiller på din skole
     try_beta_courses: Nyt! Prøv vores beta kurser for K-5 elever
     use_as_teacher: Bruge dette websted som en lærer
-    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>20 timers kurser for</h2><h1>grundskoleelever</h1>
+    heading_hoc2014: <h2>Hour of Code for</h2><h1>Alle - uanset alder</h1>
+    heading_elementary: <h2>20 timers kurser for</h2><h1>Begyndere (alle aldre)</h1>
     heading_apps: <h2>Sjov for</h2><h1>Alle</h1>
     heading_legacy: <h2>Vores generelle kursus for</h2><h1>Alle aldre</h1>
     your_gallery: Galleri
@@ -411,8 +411,8 @@
   footer:
     help_from_html: Ingeniører fra Google, Microsoft, Facebook og Twitter bidraget
       til at skabe denne øvelse.
-    art_from_html: Angry birds&trade; & &copy; & © 2009-2014 Rovio Entertainment Ltd.
-      Alle rettigheder forbeholdt. <br/>Plants vs zombies&trade; & &copy; & © 2014
+    art_from_html: Angry Birds&trade; & &copy; & © 2009-2013 Rovio Entertainment Ltd.
+      Alle rettigheder forbeholdes. <br/>Plants vs zombies&trade; & &copy; & © 2013
       Electronic Arts Inc. Alle rettigheder forbeholdes.
     powered_by_aws: Powered by Amazon Web Services
     feedback: Giv feedback

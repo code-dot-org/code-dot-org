@@ -5,7 +5,7 @@
   "extraTopBlocks": "Sie haben freie Blöcke. Möchtest du diese an den \"Anzeige\" Block anfügen?",
   "overlayBlockTitle": "Overlay (oben, unten)",
   "placeImageBlockTitle": "Ort-Bild (x, y, Bild)",
-  "offsetBlockTitle": "offset (x, y, image)",
+  "offsetBlockTitle": "versatz (x,y,Bild)",
   "rectangleBlockTitle": "Rechteck (Breite, Höhe, Stil, Farbe)",
   "reinfFeedbackMsg": "Um Deine Zeichnung zu überarbeiten, drücke auf den \"Try again\"-Button",
   "rotateImageBlockTitle": "Drehen (Grad, Bild)",

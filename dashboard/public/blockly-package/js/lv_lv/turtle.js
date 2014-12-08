@@ -14998,11 +14998,11 @@ exports.createSnowflakeRandom = function(d){return "Izveidot nejaušā tipa snie
 
 exports.createASnowflakeBranch = function(d){return "Izveidot zaru sniegpārslu"};
 
-exports.degrees = function(d){return "grādi"};
+exports.degrees = function(d){return "grādiem"};
 
 exports.depth = function(d){return "dziļums"};
 
-exports.dots = function(d){return "punktus"};
+exports.dots = function(d){return "punktiem"};
 
 exports.drawASquare = function(d){return "zīmēt kvadrātu"};
 

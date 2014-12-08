@@ -12668,19 +12668,19 @@ exports.emptyBlocksErrorMsg = function(d){return "“Repeat”或“If”模块�
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "这个函数块，需要有其他块在里面才能工作"};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "你的函数定义内需要有区块. 按一下\"编辑\"并拖动区块到绿色区块内部."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "按一下\"编辑\"来确保你的函式定义中没有缺少任何区块."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "记住要将区块附加到你工作空间内的函数块的每个参数输入上."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "你加了一个参数块，但没有在定义中使用它. 确保通过按“编辑”来使用你的参数块并把参数块放在绿色区块内."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "通過按“編輯來給你的函數創建一個參數, 並添加必要的參數. 把新的参数块拖动到你的函数定义内."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "你创建一个函数，但从来没有使用它在你的工作空间! 按一下工具箱中的“函数”，并确保你在程序中使用它."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "尝试把\"???\"更换成一个值."};
 
 exports.extraTopBlocks = function(d){return "你有一些未连接上的模块。你是否要把这些模块连接在“运行”模块上？"};
 
@@ -12722,7 +12722,7 @@ exports.numLinesOfCodeWritten = function(d){return "你刚刚写了"+p(d,"numLin
 
 exports.play = function(d){return "玩"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "打印"};
 
 exports.puzzleTitle = function(d){return "第"+v(d,"stage_total")+"章的谜题 "+v(d,"puzzle_number")+" "};
 
@@ -12738,11 +12738,11 @@ exports.score = function(d){return "得分"};
 
 exports.showCodeHeader = function(d){return "显示代码"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "显示区块"};
 
 exports.showGeneratedCode = function(d){return "显示代码"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "字符串 = ？"};
 
 exports.subtitle = function(d){return "一个可视化的编程环境"};
 
@@ -12766,9 +12766,9 @@ exports.hintRequest = function(d){return "看提示"};
 
 exports.backToPreviousLevel = function(d){return "返回到上一级"};
 
-exports.saveToGallery = function(d){return "保存到您的画廊"};
+exports.saveToGallery = function(d){return "保存到画廊"};
 
-exports.savedToGallery = function(d){return "保存到您的画面场景"};
+exports.savedToGallery = function(d){return "已保存在画廊內!"};
 
 exports.shareFailure = function(d){return "对不起，我们无法分享这程序。"};
 
@@ -12778,7 +12778,7 @@ exports.typeHint = function(d){return "注意圆括号和分号是需要的。"}
 
 exports.workspaceHeader = function(d){return "在这里组装你的模块:"};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "在这里输入你的JavaScript代码"};
 
 exports.infinity = function(d){return "无限"};
 
@@ -12802,7 +12802,7 @@ exports.hintHeader = function(d){return "这里有一个提示："};
 
 exports.genericFeedback = function(d){return "看你的程序时如何结束的，并尝试修复你的程序"};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "看看我做了什么"};
 
 
 },{"messageformat":53}],42:[function(require,module,exports){

@@ -41,7 +41,7 @@ lv-LV:
   go: Sākt
   thank_you_: Paldies!
   congratulations: Apsveicu!
-  congratulations_on_completing_hoc: 'Apsveicam tevi ar "Programmēšanas stundas" pabeigšanu.'
+  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   get_a_certificate_of_achievement: Iegūsti sasniegumus apliecinošu sertefikātu
   enter_valid_email: Lūdzu, ievadi derīgu e-pasta adresi
   get_a_certificate_message: "Mēs tev nosūtīsim sertifikātu un informāciju kā <a href='/learn/beyond'> apgūt vairāk</a>"
@@ -67,7 +67,7 @@ lv-LV:
   thanks_for_voting: Paldies par balsojumu!
   share_on_facebook: Dalīties ar Facebook
   share_on_twitter: Share ar Twitter
-  beyond_an_hour: 'Ārpus "Programmēšanas stundas"'
+  beyond_an_hour: Beyond an Hour of Code
   get_started: Sākt
   i_agree: es piekrītu
   participant_select: -Izvēlēties-
@@ -76,6 +76,9 @@ lv-LV:
   participant_educator: Skolotājs
   participant_engineer: Programmatūras inženieris
   participant_other: Neviens no iepriekš minētajiem
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Es esmu
   never_spam: Es nekad nesūtīšu spamu
   enter_country: Ievadi valsti ja neesi no ASV
@@ -112,6 +115,10 @@ lv-LV:
   studiobar_flappy_body: Izveido un dalies ar savu Flappy spēli
   studiobar_teacher_title: Radīts skolotājiem
   studiobar_teacher_body: Iepazīstini savus skolēnus ar Code Studio
+  studiobar_frozen_title: Programmēšanas stunda
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Skolēniem
   contact_form_topic_parent: Vecākiem
   contact_form_topic_teacher: Pasniedzējiem/skolotājiem
@@ -285,7 +292,7 @@ lv-LV:
   dashboard_sections_password_account_creation: Skolēnu izveidotā parole
   dashboard_sections_login_type_explanation: 'Šī tabula palīdz paskaidrot, kuru no visiem pieteikšanās veidiem <b>attēls, vārds vai e-pasts</b>, tu gribēsi izvēlēties sadaļai.'
   dashboard_faq: Biežāk uzdotie jautājumi
-  code_hoc_coming: '"Programmēšanas Stunda" tuvojas - no 8. līdz 14. decembrim!'
+  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: Reģistrējies, lai piedalītos Datorzinību izglītības nedēļā
   learn_more: Uzzini vairāk
   hoc2014_try_new_tutorials: 'Izmēģini mūsu jauno "Programmēšanas stundas" pamācību'
@@ -295,7 +302,7 @@ lv-LV:
   carousel_heading_international: Pamācības tavā valodā
   carousel_heading_domestic: Pamācības, kas pieejamas Angļu valodā
   carousel_heading_beginners: Pamācības iesācējiem
-  carousel_heading_javascript: Tutorials that teach JavaScript
+  carousel_heading_javascript: Pamācības tiem, kas māca JavaScript
   carousel_heading_unplugged: "Nav ierīces vai interneta? Mēģiniet 'atvienotās' datorzinātnes"
   carousel_heading_devices: Pamācību aplikācija priekš telefoniem un planšetdatoriem
   carousel_heading_languages: Pamācības citās programēsanas valodās

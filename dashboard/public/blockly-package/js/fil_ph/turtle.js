@@ -14799,7 +14799,7 @@ exports.directionEastLetter = function(d){return "E"};
 
 exports.directionWestLetter = function(d){return "W"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "tapos"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Ang \"Repeat\" o \"if\" block ay kailangan ng iba pang mga block sa loob nito upang gumana. Siguraduhin na ang block na asa loob ay nakasukat ng maayos sa loob ng naglalaman na block."};
 
@@ -14964,7 +14964,7 @@ exports.catLogic = function(d){return "Lohika"};
 
 exports.colourTooltip = function(d){return "Napalitan ang kulay ng lapis."};
 
-exports.createACircle = function(d){return "create a circle"};
+exports.createACircle = function(d){return "gumawa ng bilog"};
 
 exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
 
@@ -14996,7 +14996,7 @@ exports.drawACircle = function(d){return "gumuhit ng bilog"};
 
 exports.drawAFlower = function(d){return "gumuhit ng bulaklak"};
 
-exports.drawAHexagon = function(d){return "draw a hexagon"};
+exports.drawAHexagon = function(d){return "gumuhit ng hexagon"};
 
 exports.drawAHouse = function(d){return "gumuhit ng bahay"};
 

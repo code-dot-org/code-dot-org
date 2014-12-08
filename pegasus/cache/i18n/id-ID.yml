@@ -98,6 +98,9 @@
   participant_educator: Guru
   participant_engineer: Programmer
   participant_other: Tidak satupun diatas
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Saya seorang
   never_spam: 'Kami tidak akan pernah mengirim anda spam '
   enter_country: Berikan negara jika anda berdomisili di luar Amerika Serikat
@@ -137,6 +140,10 @@
   studiobar_flappy_body: Buatlah dan bagikanlah permainan Flappy bikinan kamu sendiri
   studiobar_teacher_title: DIbuat untuk guru
   studiobar_teacher_body: Perkenalkan Code Studio di kelasmu
+  studiobar_frozen_title: Jam kode
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Saya seorang siswa
   contact_form_topic_parent: Saya orang tua
   contact_form_topic_teacher: Saya seorang guru

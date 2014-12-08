@@ -41,7 +41,7 @@ hu-HU:
   go: Menj
   thank_you_: Köszönjük!
   congratulations: Gratulálok!
-  congratulations_on_completing_hoc: Gratulálunk a Kód Órája befejezéséhez!
+  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   get_a_certificate_of_achievement: Kapjon egy bízonyítványt teljesítményéért
   enter_valid_email: Adj meg egy érvényes e-mail címet
   get_a_certificate_message: "Küldünk önnek egy tanúsítványt, és további információkat Önnek arról, hogy hogyan <a href='/learn/beyond'>tanuljon a Kód Óráján túl</a>"
@@ -65,7 +65,7 @@ hu-HU:
   thanks_for_voting: Köszönet a szavazásért!
   share_on_facebook: Megosztás a Facebookon
   share_on_twitter: Megosztás a Twitteren
-  beyond_an_hour: Egy Óra Kódoláson Túl
+  beyond_an_hour: Beyond an Hour of Code
   get_started: Kezdés
   i_agree: Egyetértek
   participant_select: '- Válassz -'
@@ -74,6 +74,9 @@ hu-HU:
   participant_educator: Pedagógus
   participant_engineer: Informatikus mérnök
   participant_other: A fentiek egyike sem
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Én vagyok egy
   never_spam: Mi soha sem fogunk spamet küldeni
   enter_country: Add meg az országot, ha az Egyesült Államokon kívül élsz
@@ -110,6 +113,10 @@ hu-HU:
   studiobar_flappy_body: Készítsd el és oszd meg saját Flappy Bird játékodat
   studiobar_teacher_title: Tanároknak
   studiobar_teacher_body: Mutasd be a Code Studiot az osztályodnak
+  studiobar_frozen_title: A kódolás órája
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Diák vagyok
   contact_form_topic_parent: Szülő vagyok
   contact_form_topic_teacher: Tanár/Oktató vagyok
@@ -283,7 +290,7 @@ hu-HU:
   dashboard_sections_password_account_creation: A diákok által létrehozott szöveges jelszó
   dashboard_sections_login_type_explanation: 'Ez a táblázat segít kiválasztani a szekciódnak megfelelőt a <b>kép, szó vagy e-mail</b> azonosítási típusok közül.'
   dashboard_faq: Gyakran ismételt kérdések
-  code_hoc_coming: 'Hamarosan itt a Kódolás Órája: december 8-14!'
+  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: Jelentkezz, hogy részt vehess a programon a számítástechnika-oktatás hete keretében
   learn_more: Tudj meg többet
   hoc2014_try_new_tutorials: Próbáld ki az új Kódolás Órája anyagainkat
@@ -293,7 +300,7 @@ hu-HU:
   carousel_heading_international: Oktatóanyagok az anyanyelveden
   carousel_heading_domestic: Az angolul elérhető oktatóanyagok
   carousel_heading_beginners: Oktatóanyagok kezdőknek
-  carousel_heading_javascript: Tutorials that teach JavaScript
+  carousel_heading_javascript: Oktatóanyagok JavaScript oktatásához
   carousel_heading_unplugged: Nincs eszközöd vagy internet kapcsolatod? Próbáld ki az offline számítástechnikát
   carousel_heading_devices: Oktató alkalmazások telefonra és tabletre
   carousel_heading_languages: Oktatóanyagok egyéb programozási nyelveken

@@ -15104,7 +15104,7 @@ exports.showMe = function(d){return "Ukaž mi"};
 
 exports.showTurtle = function(d){return "zobraz malíře"};
 
-exports.sizeParameter = function(d){return "size"};
+exports.sizeParameter = function(d){return "velikost"};
 
 exports.step = function(d){return "krok"};
 

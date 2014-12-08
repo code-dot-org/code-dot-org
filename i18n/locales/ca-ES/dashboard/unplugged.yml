@@ -103,7 +103,7 @@ ca:
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
         title: Anant a llocs segurs
-        desc: The Internet is a powerful, but sometimes dangerous place. Teachers introduce how to stay safe while navigating the Internet.
+        desc: "Internet és una eina potent, però a vegades també és un lloc perillós. Els mestres t'expliquen com navegar amb seguretat per internet."
         video: C1_going_places_safely
       GraphPaperProgramming:
         title: Programació de paper quadriculat

@@ -419,12 +419,12 @@ ru:
       body: Попробуйте наш 20-часовой курс Введение в информатику.
     hoc2014:
       try_new_tutorial: Try our new Hour of Code tutorial in beta
-      try_frozen: Artist with Anna and Elsa, from Frozen
+      try_frozen: 'Рисуй вместе с Анной и Эльзой из "Холодного сердца"'
     gallery:
       title: Галерея
       body: View a gallery of app and artist images created by our users
     frozen:
-      title: Frozen
+      title: '"Холодное сердце"'
   gallery:
     students_drew_these_with_code: Ученики нарисовали это с помощью кода!
     students_made_these_with_code: Сделано учениками с помощью кода!

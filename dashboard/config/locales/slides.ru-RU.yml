@@ -132,8 +132,9 @@
           соответствующие блоки для добавления в ответ на эти события.
       9:
         image: Примечания/flappy09.jpg
-        text: Когда вы видите падение вниз, как это, это означает, что вы можете изменить
-          настройки - как то, что мелодия звучит когда flappy падает на землю.
+        text: Если вы видите стрелки выпадающего меню, как эти, это значит, что можно
+          изменить настройки - например, какой будет звук, когда Птичка падает на
+          землю.
       10:
         image: Примечания/flappy10.jpg
         text: В последней головоломке у вас будет возможность создать свою собственную
@@ -240,23 +241,25 @@
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
-        text: An if-else statement is a decision between two things. Let's see how
-          we can use an if-else statement with our buddy Scrat the squirrel.
+        text: Утверждение "если/иначе" (if/else) - выбор между двумя действиями. Давайте
+          посмотрим, как можно использовать "если/иначе" вместе с нашим другом белкой
+          Скратом.
       2:
         image: notes/saloni_ifelse_scrat2.jpg
-        text: This block looks the same as the "if" block, but there's an extra part
-          at the bottom that says "else". If I put a "move forward" block where it
-          says "do" and a "turn left" block where it says "else", that means Scrat
-          the squirrel will move forward if there's a path ahead. If there's not a
-          path ahead, Scrat will turn left.
+        text: Этот блок такой же как блок "если" ("if"), но у него внизу есть дополнительная
+          часть "иначе" ("else"). Если я помещу блок "двигаться вперёд" ("move forward")
+          туда, где написано "выполнить" ("do"), а блок "повернуть вправо" ("turn
+          left") туда, где написано "иначе" ("else"), это значит, что Скрат будет
+          двигаться вперёд, если перед ним есть дорога. Если пути вперёд нет, Скрат
+          повернёт влево.
       3:
         image: notes/saloni_ifelse_scrat3.jpg
-        text: It's making a decision and doing one of the two actions based on that
-          decision. And just like "if" blocks, you can put "if-else" blocks inside
-          "repeat" blocks.
+        text: Это и есть принятие решения и совершение одного из двух возможных действии
+          на основании такого решения. И точно так же, как и блоки "если", блоки "если-иначе"
+          можно поместить внутрь блока "повторить" ("repeat").
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: Now let's help Scrat the squirrel get that acorn!
+        text: А теперь давай поможем Скрату добыть этот жёлудь!
     function:
       1:
         image: notes/stage13_1.jpg
@@ -428,66 +431,67 @@
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
-        text: Hi, I’m Paola! Computers are really good at repeating actions. You can
-          count to 10, 20, or 100. But a computer can count to a billion or a trillion.
-          It won't get bored and it will only take a few seconds. Whether it's counting,
-          or drawing, or anything--computers can repeat things hundreds or even billions
-          of times.
+        text: Привет, я - Паула! Компьютеры хорошо выполняют повторяющиеся действия.
+          Ты можешь сосчитать до 10, 20 или 100. А компьютер может сосчитать до миллиарда
+          и биллиона. И это совершенно не наскучит ему и займёт буквально несколько
+          секунд. Что бы компьютер ни делал - считал, рисовал или делал что-то другие
+          - он может повторять это сотни и даже миллиарды раз.
       2:
         image: notes/frozen2_2.jpg
-        text: In programming, we call this a loop. A loop is how you repeat your code
-          over and over again. For the next puzzle, your goal is to help Anna create
-          a square with the "Repeat" block.
+        text: В программировании мы называем это циклами. Цикл - это когда ты повторяешь
+          свой код снова и снова. В следующей головоломке твоя цель помочь Анне сделать
+          квадрат, используя блок "повторить".
       3:
         image: notes/frozen2_3.jpg
-        text: Any blocks of code you put inside the "Repeat" block will be repeated
-          in sequence, as many times as you want.
+        text: Любой блок кода, который ты поместишь внутрь блока "повторить", будет
+          повторён последовательно столько раз, сколько ты пожелаешь.
       4:
         image: notes/frozen2_4.jpg
-        text: To draw a square, you can use the "Move Forward" and "Turn Right" block
-          4 times. But the easier way is to tell the computer to "Move Forward" and
-          "Turn Right by 90 degrees" once, and then tell it to repeat this pair of
-          actions 4 times. To do that, you need to put the "Move Forward" and "Turn
-          Right" block inside a "Repeat" block.
+        text: Чтобы нарисовать квадрат, можно использовать блоки "двигаться вперёд"
+          и "повернуть вправо" по 4 раза. Но проще сказать компьютеру один раз "двигаться
+          вперёд" и "повернуть вправо на 90 градусов", а потом сказать повторить эти
+          два действия 4 раза. Чтобы это сделать, нужно поместить блоки "двигаться
+          вперёд" и "повернуть вправо" внутрь блока "повторить".
       5:
         image: notes/frozen2_5.jpg
-        text: Remember, you can change the number in the "Repeat" block to anything,
-          and it will repeat what's inside the block that many times.
+        text: Помни, ты можешь поменять число внутри блока "повторить" на любое другое,
+          и то, что находится внутри этого блока, повторится указанное число раз.
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: Hi, I’m Chris Bosh. I’m a professional basketball player, and I coded
-          in college.
+        text: Привет, я - Крис Бош. Я - профессиональный баскетболист и я программировал
+          в колледже.
       2:
         image: notes/frozen3_2.jpg
-        text: One of the most important concepts in computer science is how to define
-          new commands. Most computer languages have only about 100 words or commands.
-          And really, the art and magic is in defining your own new words out of these
-          building blocks.
+        text: В информатике очень важно понимать, как сформулировать новую команду.
+          Большинство языков программирования содержат около 100 слов или команд.
+          И это настоящее искусство и волшебство - собрать свои собственные новые
+          слова из этих строительных блоков.
       3:
         image: notes/frozen3_3.jpg
-        text: Once you've taught a computer how to do an action once using this sequence
-          of commands, you can make up your own name for that action so it's easy
-          to repeat it later. When you define your own command and give it a name,
-          that's called a function.
+        text: Как только ты научишь компьютер, как совершать действие, используя такую
+          последовательность команд, можно придумать этому действию название, и так
+          потом будет проще повторять его. Когда ты определяешь свою команду и называешь
+          её, это называется функция.
       4:
         image: notes/frozen3_4.jpg
-        text: Hi, I’m Jess. When programming with blocks, you would use functions
-          if there are a set of actions you would like to use lots of times. For example,
-          you've written code to create a square.
+        text: Привет, я - Джесс. Если при программировании с помощью блоков появляется
+          необходимость использовать какой-то набор действий несколько раз, следует
+          использовать функции. Например, тобой написан код для создания квадрата.
       5:
         image: notes/frozen3_5.jpg
-        text: 'You can define this as a function called "create a square." '
+        text: 'Можно определить это как функцию и назвать её "создать квадрат" '
       6:
         image: notes/frozen3_6.jpg
-        text: Now you have a new block that you can use multiple times to create multiple
-          squares.
+        text: Теперь у тебя есть новый блок, который можно использовать множество
+          раз, что бы создать множество квадратов.
       7:
         image: notes/frozen3_7.jpg
-        text: A lot of simple shapes can be used to create more complex patterns.
-          In the next puzzle, the code you recently wrote to make a circle is available
-          to you as a new function that can make circles of different sizes. Can you
-          use it to help Elsa create intricate and beautiful patterns in the snow?
+        text: Многие из простых фигур можно использовать для создания более сложных
+          узоров. В следующей головоломке написанный тобой код для создания круга
+          можно будет использовать в виде новой функции, которая позволит рисовать
+          круги разных размеров. Поможешь Эльзе создать сложные и красивы узоры из
+          снега?
     C3_playlab_create_game:
       1:
         image: notes/playlab_1.png
@@ -502,3 +506,75 @@
         image: notes/playlab_3.png
         text: And there are some blocks that do stuff when actors collide or are clicked.
           Check them out and have fun!
+    playlab_intro:
+      1:
+        image: notes/playlab_intro_1.png
+        text: We're going to create games using Play Lab. Good games have a story,
+          and every story has actors. We'll learn how to make our actors like witches,
+          alinens, and animals speak, move, and interact with each other. By the end
+          of this tutorial, you can build a game from scratch and share it with your
+          friends.
+      2:
+        image: notes/playlab_intro_2.png
+        text: Your screen is split into 3 main parts. On the left is the game space
+          where your program will run. The instructions for each level are written
+          below.
+      3:
+        image: notes/playlab_intro_3.png
+        text: The middle area is the toolbox, and each of these blocks is a piece
+          of code. The white space on the right is called the workspace and this is
+          where we'll build our program.
+      4:
+        image: notes/playlab_intro_4.png
+        text: To start off, you'll need to link your blocks to the orange "when run"
+          block. You can link multiple blocks together by dragging them out until
+          you see the yellow line, and then they'll snap together.
+      5:
+        image: notes/playlab_intro_5.png
+        text: In this first puzzle, our actor is a penguin and we'll be making it
+          say "Hello!" by dragging the say block out, linking it to the when run block,
+          and typing in "Hello." We can also make the penguin move by using the move
+          right and move left blocks. Once you have your blocks in place, hit the
+          run button to see what you've programmed.
+      6:
+        image: notes/playlab_intro_6.png
+        text: Get started and by the end, you'll be able to create your own game with
+          all kinds of players that can interact, turn happy or sad, score points,
+          or throw fireballs, or even vanish each other. It's all up to you and the
+          game you want to make.
+    playlab_events:
+      1:
+        image: notes/playlab_events_1.png
+        text: Now, we're going to learn about something that all game programmers
+          use everyday. They're called events. An event tells your program to listen
+          for when something happens. When that thing happens, it performs an action.
+      2:
+        image: notes/playlab_events_2.png
+        text: Some examples of events are listening for a mouse click, an arrow button,
+          or a tap on the screen.
+      3:
+        image: notes/playlab_events_3.png
+        text: Here, we're going to make the space bot greet the earthlings when a
+          player clicks on him. We'll use the "when clicked" block and attach the
+          "say" block to it. When the player clicks on the space bot, everything attached
+          to this "when clicked" event block will be performed. What does your alien
+          say?
+      4:
+        image: notes/playlab_events_4.png
+        text: There are also "when arrow" blocks. If you link the "move" blocks to
+          these, you can start to move your actors up, down, left, or right. Step
+          by step, your game is getting more interactive.
+    playlab_repeat_forever:
+      1:
+        image: notes/playlab_repeat_forever_1.png
+        text: This is the "repeat forever" block. Anything inside this block will
+          happen forever in the game.
+      2:
+        image: notes/playlab_repeat_forever_2.png
+        text: If we want an actor to do something repeatedly, without the player having
+          to do anything, we'll put those blocks inside the "repeat forever" block.
+      3:
+        image: notes/playlab_repeat_forever_3.png
+        text: In this next puzzle, our goal is to help the wizard patrol the boundaries
+          of the kingdom, left and right continuously. Learning how the repeat commands
+          works, will save you a ton of time later when you build your own game.

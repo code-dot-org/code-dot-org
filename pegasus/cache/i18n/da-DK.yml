@@ -93,6 +93,9 @@
   participant_educator: Underviser
   participant_engineer: Software ingeniør
   participant_other: Ingen af ovenstående
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Jeg er en
   never_spam: Vi vil aldrig spamme dig
   enter_country: Indtast land, hvis du bor udenfor USA
@@ -131,6 +134,10 @@
   studiobar_flappy_body: Lav og del dit eget Flappy spil
   studiobar_teacher_title: Lavet til lærere
   studiobar_teacher_body: Indføre Kode Skole i klasselokalet
+  studiobar_frozen_title: En Time af Kode
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Jeg er elev
   contact_form_topic_parent: Jeg er en forælder
   contact_form_topic_teacher: Jeg er en lærer/pædagog

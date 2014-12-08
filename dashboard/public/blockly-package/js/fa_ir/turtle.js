@@ -14817,7 +14817,7 @@ exports.errorRequiredParamsMissing = function(d){return "Create a parameter for 
 
 exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "سعی کنید به جای \"؟؟؟\" یک مقدار قرار دهید ."};
 
 exports.extraTopBlocks = function(d){return "بلوک‌های نچسبیده‌ای هنوز باقی مونده. آیا قصد داری اینها را به بلوک \"هنگام اجرا\" وصل کنی؟"};
 
@@ -14879,7 +14879,7 @@ exports.showBlocksHeader = function(d){return "نمایش بلوک‌ها"};
 
 exports.showGeneratedCode = function(d){return "نمایشِ کد"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "رشته =?"};
 
 exports.subtitle = function(d){return "یک محیط برنامه نویسیِ دیداری"};
 
@@ -14966,21 +14966,21 @@ exports.colourTooltip = function(d){return "رنگ قلم را تغییر می �
 
 exports.createACircle = function(d){return "ایجاد یک دایره"};
 
-exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+exports.createSnowflakeSquare = function(d){return "یک دانه برف از نوع مربع بساز"};
 
-exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+exports.createSnowflakeParallelogram = function(d){return "یک دانه ی برف از نوع متوازی الاضلاع بساز"};
 
-exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+exports.createSnowflakeLine = function(d){return "یک دانه برف از نوع خط ایجاد کن "};
 
-exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+exports.createSnowflakeSpiral = function(d){return "یک دانه ی برف مارپیچی ایجاد کن "};
 
-exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+exports.createSnowflakeFlower = function(d){return "یک دانه ی برف از نوع گل ایجاد کن"};
 
-exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+exports.createSnowflakeFractal = function(d){return "یک دانه ی برف از نوع فراکتال ایجاد کن "};
 
-exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+exports.createSnowflakeRandom = function(d){return "یک دانه ی برف تصادفی ایجاد کن "};
 
-exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
+exports.createASnowflakeBranch = function(d){return "یک شاخه از دانه ی برف ایجاد کن"};
 
 exports.degrees = function(d){return "درجه"};
 
@@ -14996,19 +14996,19 @@ exports.drawACircle = function(d){return "یک دایره بکشید"};
 
 exports.drawAFlower = function(d){return "یک گل نقاشی بکن"};
 
-exports.drawAHexagon = function(d){return "draw a hexagon"};
+exports.drawAHexagon = function(d){return "یک شش ضلعی بکش"};
 
 exports.drawAHouse = function(d){return "یک خانه بکشید"};
 
-exports.drawAPlanet = function(d){return "draw a planet"};
+exports.drawAPlanet = function(d){return "یک سیاره بکش"};
 
-exports.drawARhombus = function(d){return "draw a rhombus"};
+exports.drawARhombus = function(d){return "یک لوزی بکش"};
 
-exports.drawARobot = function(d){return "draw a robot"};
+exports.drawARobot = function(d){return "یک ربات بکش"};
 
-exports.drawARocket = function(d){return "draw a rocket"};
+exports.drawARocket = function(d){return "یک موشک بکش"};
 
-exports.drawASnowflake = function(d){return "draw a snowflake"};
+exports.drawASnowflake = function(d){return "یک دانه ی برف بکش"};
 
 exports.drawASnowman = function(d){return "یک آدم برفی بکشید"};
 
