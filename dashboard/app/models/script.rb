@@ -27,7 +27,7 @@ class Script < ActiveRecord::Base
   PLAYLAB_NAME = 'playlab'
   SPECIAL_NAME = 'special'
 
-
+  FLAPPY_NAME = 'flappy'
   TWENTY_HOUR_NAME = '20-hour'
 
   def self.twenty_hour_script
@@ -59,7 +59,13 @@ class Script < ActiveRecord::Base
   end
 
   def should_be_cached?
-    self.id == TWENTY_HOUR_ID || self.name == FROZEN_NAME || self.name == HOC_NAME
+    self.id == TWENTY_HOUR_ID ||
+      self.name == TWENTY_HOUR_NAME ||
+      self.name == FROZEN_NAME ||
+      self.name == PLAYLAB_NAME ||
+      self.id == FLAPPY_ID ||
+      self.name == FLAPPY_NAME ||
+      self.name == HOC_NAME
   end
 
   def starting_level
@@ -75,7 +81,7 @@ class Script < ActiveRecord::Base
       when FROZEN_NAME then frozen_script
       when HOC_NAME then hoc_script
       when PLAYLAB_NAME then playlab_script
-      when FLAPPY_ID then flappy_script
+      when FLAPPY_ID, FLAPPY_NAME then flappy_script
     else
       # a bit of trickery so we support both ids which are numbers and
       # names which are strings that may contain numbers (eg. 2-3)
