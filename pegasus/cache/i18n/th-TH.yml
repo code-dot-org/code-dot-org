@@ -1,6 +1,6 @@
 "th-TH":
   hello: สวัสดีชาวโลก
-  select_language: Please select your language
+  select_language: โปรดเลือกภาษาของคุณ
   computer_science: วิทยาการคอมพิวเตอร์
   computer_science_edweek: สัปดาห์การศึกษาวิทยาศาสตร์คอมพิวเตอร์
   csedweek_dates: 9-15 ธันวาคม 2013
@@ -26,9 +26,9 @@
     8 - 14, 2014<br/>
   hoc2014_students: Students
   hoc2014_try: Try it
-  hoc2014_teachers: Teachers
+  hoc2014_teachers: ครูผู้สอน
   hoc2014_host: Host it
-  hoc2014_everyone: Everyone
+  hoc2014_everyone: ทุกคน
   hoc2014_support: Support it
   hoc2014_whatishoc: What is the Hour of Code?
   twentyhours_trynow: ลองตอนนี้
@@ -92,6 +92,9 @@
   participant_educator: นักศึกษา
   participant_engineer: วิศวกรซอฟต์แวร์
   participant_other: None of the Above
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: I am a
   never_spam: เราจะไม่สแปมคุณ
   enter_country: กรุณาระบุประเทศ ถ้าคุณไม่ได้อยู่ในสหรัฐอเมริกา
@@ -123,26 +126,30 @@
   contact_form_topic_press: Press/media (interview or speaking engagement)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
   studiobar_elementary_title: Elementary courses
-  studiobar_elementary_body: Our three new courses for K&#8209;5
+  studiobar_elementary_body: สามหลักสูตรใหม่ของเราสำหรับ K &#8209; 5
   studiobar_hoc_title: The Hour of Code
   studiobar_hoc_body: Learn to code with Angry Birds
   studiobar_flappy_title: Flappy Code
   studiobar_flappy_body: Make and share your own Flappy game
   studiobar_teacher_title: Teacher dashboard
-  studiobar_teacher_body: 'For teachers: view your students'' progress'
-  contact_form_topic_student: I’m a student
-  contact_form_topic_parent: I’m a parent
-  contact_form_topic_teacher: I’m a teacher/educator
-  contact_form_topic_outside_us: I’m outside the U.S.
-  contact_form_topic_contribution: Charitable contribution
-  contact_form_topic_partner: I’d like to partner
-  contact_form_topic_other: Other
+  studiobar_teacher_body: แนะนำสถานที่หรือห้องเขียนโปรแกรม ในชั้นเรียนของคุณ
+  studiobar_frozen_title: ช่วงเวลาของ Code
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
+  contact_form_topic_student: ฉันเป็นนักเรียน
+  contact_form_topic_parent: ฉันเป็นผู้ปกครอง
+  contact_form_topic_teacher: ฉันเป็นอาจารย์ /ครูผู้สอน
+  contact_form_topic_outside_us: ฉันไม่ได้อยู่ในประเทศสหรัฐอเมริกา
+  contact_form_topic_contribution: การบริจาคเพื่อการกุศล
+  contact_form_topic_partner: ฉันต้องการที่จะเป็นหุ้นส่วน
+  contact_form_topic_other: อาชีพอื่น ๆ
   contact_form_label_topic: หัวข้อ
-  contact_form_label_email: Your email address
+  contact_form_label_email: อีเมล์ของคุณ
   contact_form_label_message: ข้อความ
   contact_form_label_submit: ส่งข้อความ
   class_submission_in_school: ในโรงเรียน
-  class_submission_in_school_daily_programming_course: Daily programming course
+  class_submission_in_school_daily_programming_course: หลักสูตรการเขียนโปรแกรมประจำวัน
   class_submission_in_school_ap_computer_science: AP computer science
   class_submission_in_school_full_university_cs_curriculum: Full university CS curriculum
   class_submission_in_school_robotics_club: Robotics club
@@ -157,8 +164,8 @@
   class_submission_out_of_school_all-day_workshop: All-day workshop (up to 1 week)
   class_submission_out_of_school_multi-week_workshop: Multi-week workshop
   class_submission_out_of_school_other: Other out of school
-  class_submission_online: Online
-  class_submission_online_programming_class: Online programming class
+  class_submission_online: ออนไลน์
+  class_submission_online_programming_class: เรียนเขียนโปรแกรมออนไลน์
   class_submission_online_teacher_resource: Online teacher resource
   class_submission_online_other: Other online
   class_submission_level_preschool: Preschool
@@ -170,10 +177,10 @@
   class_submission_languages_other: Other language(s)
   volunteer_engineer_submission_commitment_uncertain: Uncertain
   volunteer_engineer_submission_commitment_now_and_then: Every now and then
-  volunteer_engineer_submission_commitment_one_hr_per_week: 1 hour per week
-  volunteer_engineer_submission_commitment_three_hrs_per_week: 3 hours per week
-  volunteer_engineer_submission_commitment_five_hrs_per_week: 5 hours per week
-  volunteer_engineer_submission_commitment_more: More
+  volunteer_engineer_submission_commitment_one_hr_per_week: 1 ชั่วโมงต่อสัปดาห์
+  volunteer_engineer_submission_commitment_three_hrs_per_week: 3 ชั่วโมงต่อสัปดาห์
+  volunteer_engineer_submission_commitment_five_hrs_per_week: 5 ชั่วโมงต่อสัปดาห์
+  volunteer_engineer_submission_commitment_more: เพิ่มเติม
   volunteer_engineer_submission_location_flexibility_onsite: On-site at a school
   volunteer_engineer_submission_location_flexibility_remote: Mentoring remotely (teachers
     or students)
@@ -189,7 +196,7 @@
   dashboard_landing_video: Watch this video
   dashboard_landing_watch_video: for a tour of the new features!
   dashboard_landing_view_as_student: View this site as a student
-  dashboard_landing_students_title: Your students
+  dashboard_landing_students_title: นักเรียนของคุณ
   dashboard_landing_students_manage: View and manage your students
   dashboard_landing_news_title: Latest news
   dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
@@ -209,20 +216,20 @@
   dashboard_landing_available_title: Available courses
   dashboard_landing_available_courses: Here are the courses currently available for
     you and your students.
-  dashboard_landing_loading: Loading...
+  dashboard_landing_loading: กำลังโหลด...
   dashboard_action_edit: Edit
-  dashboard_action_save: Save
-  dashboard_action_save_all: Save all
+  dashboard_action_save: บันทึก
+  dashboard_action_save_all: บันทึกทั้งหมด
   dashboard_action_cancel: ยกเลิก
-  dashboard_action_delete: Delete
-  dashboard_action_confirm: Delete?
+  dashboard_action_delete: ลบ
+  dashboard_action_confirm: ลบหรือไม่?
   dashboard_action_delete_yes: ใช่
   dashboard_action_delete_no: ไม่ใช่
-  dashboard_action_done: Done
-  dashboard_action_required: required
-  dashboard_navigation_home_page: Teacher home page
-  dashboard_navigation_all_sections: All sections
-  dashboard_navigation_view_progress: View Progress
+  dashboard_action_done: เรียบร้อย
+  dashboard_action_required: ต้องระบุ
+  dashboard_navigation_home_page: หน้าแรกของคุณครู
+  dashboard_navigation_all_sections: บัญชีผู้ใช้ของนักเรียนและความคืบหน้า
+  dashboard_navigation_view_progress: ดูความคืบหน้า
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
   dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
@@ -292,8 +299,8 @@
     or <b>picture</b>.
   dashboard_students_print_page: Print this page
   dashboard_students_url: URL
-  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Click
-    here</a> for our privacy document that can be shared or printed for your students.
+  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">คลิกที่นี่</a>สำหรับเอกสารส่วนตัวของเราที่สามารถใช้ร่วมกัน
+    หรือพิมพ์สำหรับนักเรียนของคุณ
   dashboard_curriculum_overview: K-5 Curriculum Overview
   dashboard_view_all_lesson_plans: View all lesson plans
   dashboard_course1: 'Course 1:'
@@ -310,7 +317,7 @@
   dashboard_student_worksheet: student worksheet
   dashboard_teacher_worksheet: teacher worksheet
   dashboard_grade_k: K
-  dashboard_grade_other: Other
+  dashboard_grade_other: อาชีพอื่น ๆ
   dashboard_login_word: word
   dashboard_login_picture: picture
   dashboard_login_none: อีเมล

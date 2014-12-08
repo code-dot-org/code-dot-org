@@ -98,6 +98,9 @@
   participant_educator: Leraar
   participant_engineer: Software Engineer
   participant_other: Geen van allen
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Ik ben een
   never_spam: We versturen geen spam
   enter_country: Land (buiten Amerika)
@@ -136,6 +139,10 @@
   studiobar_flappy_body: Maak en deel je eigen Flappy spel
   studiobar_teacher_title: Gemaakt voor leerkrachten
   studiobar_teacher_body: Introduceer Code Studio in je klaslokaal
+  studiobar_frozen_title: Een Uur Code
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Ik ben een leerling
   contact_form_topic_parent: Ik ben een ouder
   contact_form_topic_teacher: Ik ben een leraar
@@ -371,7 +378,7 @@
   more_resources_educators: Meer middelen voor leraren en opvoeders
   participants: Deelnemers
   teachers_notes: Leraar-nota's
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: 'Leerkrachten: Lees belangrijke nota''s voor leerkrachten hier'
   previous: Vorige
   next: Volgende
   older_systems: Handleidingen die werken op oudere systemen
@@ -453,13 +460,13 @@
   thinkersmithspanish_platformtext: Unplugged
   khan_platformtext: Moderne webbrowsers
   khanes_platformtext: Moderne webbrowsers
-  tynker_platformtext: Moderne webbrowsers
+  tynker_platformtext: Moderne browsers. (Vervolg cursus is betalend)
   scratch_platformtext: ALLE browsers
   lightbot_platformtext: ALLE browsers en iOS, Android, of Game Console
   thinkersmith_platformtext: Unplugged
   condcards_platformtext: Unuplugged
   lightbotintl_platformtext: iOS, Android (of een webbrowser)
-  codehs_platformtext: Moderne browsers
+  codehs_platformtext: Moderne browsers. (Vervolg cursus is betalend)
   codecademy_platformtext: Moderne webbrowsers. iOS, Android apps
   codecombat_platformtext: Moderne webbrowsers
   codemonkey_platformtext: Moderne webbrowsers
@@ -504,8 +511,7 @@
   codecademy_shortdescription: Leer JavaScript programmeren , in een web-browser
   codecombat_shortdescription: Versla ogres om Python of Javascript te leren in dit
     episch programmeer-spel!
-  codemonkey_shortdescription: Students program a monkey to catch bananas while it
-    gets slightly more complicated on each level.
+  codemonkey_shortdescription: Leerlingen programmeren een aap die bananen vangt.
   codeavengers_shortdescription: Leer JavaScript programmeren , in een web-browser
   processing_shortdescription: een een uur durende cursus in de verwerkingstalen
   robomind_shortdescription: Schrijf code voor een virtuele robot
@@ -516,16 +522,16 @@
   codespark_shortdescription: De Foos is een leuk, kindvriendelijk spel om te leren
     over programmeren.
   kodable_shortdescription: Een leuke iPad spel om informatica-concepten te leren
-  tynkerapp_shortdescription: Leer programmeren door het oplossen van leuke puzzels
-    en bouw je eigen mobiele spelletjes.
+  tynkerapp_shortdescription: 'Leer programmeren door leuke codering puzzels op te
+    lossen. '
   robomindnl_shortdescription: Schrijf code voor een virtuele robot
   flappy_shortdescription: Maak je eigen spel - Flappy Bird, Shark, of Submarine
   bitsbox_shortdescription: Programmeer een reeks apps om te spelen en te delen met
     behulp van echte Javascript-code.
   makegameswithus_shortdescription: Maak een iPhonespel! Leer je monster nieuwe bewegingen
     aan door het schrijven van code!
-  touchdevelop_shortdescription: programmeer mobiele apps rechtstreeks op uw telefoon,
-    Tablet of laptop
+  touchdevelop_shortdescription: 'Los puzzels op, maak spelletjes en leer dit allemaal
+    te coderen op je telefoon. '
   appinventor_shortdescription: Maak uw eigen app! (Alleen voor android)
   blockly_shortdescription: Download een ZIP-bestand om offline te leren
   thinkersmith2_shortdescription: Leer hoe computers 1-en en 0-en gebruiken om gegevens
@@ -544,11 +550,12 @@
     drop programmeren. Dit is een spelvormig zelfgestuurde cursus met , Angry Birds,
     Plants vs Zombies en video lezingen door onder andere Bill Gates, Mark Zuckerberg.
     Leer repeat-loops, condities en basis algoritmes. Beschikbaar in 34 talen.
-  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
+  thinkersmithspanish_longdescription: Door gebruik te maken van een voorgedefinieerde
+    "Robot woordenschat" leren leerlingen hoe ze mekaar kunnen helpen om specifieke
+    taken uit te voeren zonder deze eerst te bespreken. Deze les leert kinderen het
+    verband tussen symbolen en acties en ook de waardevolle vaardigheid van het fouten
+    oplossen. "My Robotic Friends' is het best bruikbaar als groepsactiviteit en voorziet
+    een leerkracht werkboek voor gebruik in de klas.
   khan_longdescription: Leer de basis van JavaScript programmeren met het maken van
     leuke tekeningen door je code. Doe het alleen of met je hele klas!
   khanes_longdescription: Leer de basis van JavaScript programmeren met het maken
@@ -625,10 +632,10 @@
   kodable_longdescription: Kodable is een zelfsturende iPad spel dat kinderen vanaf
     5 jaar introduceert aan de grondbeginselen van programmeren. De ondersteuning
     van ouders of leerkrachten is optimaal, maar niet noodzakelijk.
-  tynkerapp_longdescription: Build your own games and share with friends! Solve fun
-    coding puzzles and learn programming concepts in each level. Personalize games
-    with animated characters, multiple levels and rich props. Lots of fun activities
-    to choose from!
+  tynkerapp_longdescription: Leer programmeren door leuke codeer puzzels op te lossen.
+    Bouw op een makkelijke manier spellen en verhalen met thematische afbeeldingen,
+    10+ spel-kits en aanpasbare figuren. Er is geen intenetverbinding nodig. Je kan
+    ook je creaties op het web openen.
   robomindnl_longdescription: 'Studenten leren de grondbeginselen van programmeren
     door het beheersen van hun eigen virtuele robot. De online cursus is volledig
     alleenstaand met korte presentaties, films, quizzen en automatische begeleiding/tips
@@ -640,15 +647,14 @@
     een serie van apps om te spelen en om te delen. Eenvoudige handleidingen maken
     het mogelijk om zelfs jonge kinderen echte Javascript te leren programmeren en
     de beter u wordt hoe verder je kunt gaan.
-  makegameswithus_longdescription: Kun je al een beetje programmeren? Leer om in een
-    uur een iPhonegame te maken! We begeleiden je door het proces, het programmeren,
-    het testen en het  spelen van je spel en dat alles in de browser! Deel je spel
-    op facebook, zodat je vrienden het ook kunnen proberen. Er is geen iPhone programmeer-ervaring
-    nodig, Wel moet je begrijpen wat variabelen, methodes en objecten zijn.
-  touchdevelop_longdescription: Gekke tekeningen, vliegende monsters, dwarrelende
-    bloemen... maak je apps op je eigen apparaat met TouchDevelop, een vriendelijke
-    mobiele app studio. Werkt op iPhone, iPad, Android, Windows, Windows Phone, Linux
-    en Mac.
+  makegameswithus_longdescription: Leer programmeren door het maken van een iPhone
+    spel met behulp van een gloednieuwe en beginners vriendelijke programmeertaal
+    genaamd Swift! Maak een Pokemon-geïnspireerd actiespel en schrijf code om uw nieuwe
+    monster nieuwe moves te leren. U leert hoe variabelen, methoden en objecten  te
+    gebruiken om uw monster te helpen winnen!
+  touchdevelop_longdescription: 'De aanraak-vriendelijke editor begeleidt je bij het
+    maken van pixelkunst, het oplossen van de beer puzzel of bij het maken van je
+    eigen "springende vogel'' spel. '
   appinventor_longdescription: Opbouwende korte videocursussen begeleiden je met het
     bouwen van drie simpele apps voor je Android of tablet. Deze cursus is ontwikkeld
     voor beginners en experts tegelijk. Deze Hour of Code maakt je voor je het weet

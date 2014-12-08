@@ -93,6 +93,9 @@
   participant_educator: Koolitaja
   participant_engineer: Tarkvara insener
   participant_other: Mitte ükski eelnimetatutest
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Ma olen
   never_spam: Me ei saada sulle kunagi rämpsposti
   enter_country: Sisestage riik kui asute väljaspool Ameerika Ühendriike
@@ -131,6 +134,10 @@
   studiobar_flappy_body: Tee valmis ja jaga oma Flappy mängu
   studiobar_teacher_title: Valmistatud õpetajate jaoks
   studiobar_teacher_body: Tutvusta Code Studio't oma klassis
+  studiobar_frozen_title: Koodi Tund
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Ma olen õpilane
   contact_form_topic_parent: Ma olen lapsevanem
   contact_form_topic_teacher: Ma olen õpetaja/koolitaja

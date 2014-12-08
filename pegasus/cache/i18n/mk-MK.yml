@@ -93,6 +93,9 @@
   participant_educator: Educator
   participant_engineer: Software Engineer
   participant_other: None of the Above
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: I am a
   never_spam: We'll never spam you
   enter_country: Enter country if outside the United States
@@ -131,6 +134,10 @@
   studiobar_flappy_body: Make and share your own Flappy game
   studiobar_teacher_title: Teacher dashboard
   studiobar_teacher_body: 'For teachers: view your students'' progress'
+  studiobar_frozen_title: Hour of Code
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: I'm a student
   contact_form_topic_parent: I'm a parent
   contact_form_topic_teacher: I'm a teacher/educator
