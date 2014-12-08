@@ -131,7 +131,7 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user
-    if Rails.configuration.minimal_mode
+    if Rails.configuration.minimal_mode || request.url.include?('/s/frozen')
       nil
     else
       super
