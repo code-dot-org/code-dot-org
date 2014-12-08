@@ -229,4 +229,4 @@ Use these activities to enhance student learning. They can be used as outside of
 [/content]
 
 
-<link rel="stylesheet" type="text/css" href="morestyle.css"/>
+<link rel="stylesheet" type="text/css" href="../docs/morestyle.css"/>
