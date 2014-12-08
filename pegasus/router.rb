@@ -450,9 +450,9 @@ class Documents < Sinatra::Base
     def social_metadata()
       if request.site == 'csedweek.org'
         metadata = {
-          'og:title'          => @header['title'] || "The Hour of Code is coming",
+          'og:title'          => @header['title'] || "The Hour of Code is here",
           'og:description'    => @header['description'] || "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104.",
-          'og:image'          => @header['og:image'] || 'http://csedweek.org/images/hour-of-code-2014-video-thumbnail.jpg',
+          'og:image'          => @header['og:image'] || 'http://csedweek.org/images/code-video-thumbnail.jpg',
           'og:image:width'    => @header['og:image:width'] || '1705',
           'og:image:height'   => @header['og:image:height'] || '949',
           'og:site_name'      => 'CSEd Week',
@@ -464,7 +464,7 @@ class Documents < Sinatra::Base
         metadata = {
           'og:title'          => @header['title'] || "The Hour of Code is coming",
           'og:description'    => @header['description'] || "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104.",
-          'og:image'          => @header['og:image'] || 'http://code.org/images/hour-of-code-2014-video-thumbnail.jpg',
+          'og:image'          => @header['og:image'] || 'http://code.org/images/code-video-thumbnail.jpg',
           'og:image:width'    => @header['og:image:width'] || '1705',
           'og:image:height'   => @header['og:image:height'] || '949',
           'og:site_name'      => 'Code.org',
