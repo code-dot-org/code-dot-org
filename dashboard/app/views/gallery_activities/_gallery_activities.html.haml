@@ -3,6 +3,7 @@
 %br{clear: :all}
 
 - gallery_activities.each do |gallery_activity|
+  - next unless gallery_activity.activity.level_source.level_source_image
   %div.gallery_activity
     - activity = gallery_activity.activity
     - level_source = activity.level_source
