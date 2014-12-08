@@ -715,7 +715,7 @@ label {
   font-family: 'Gotham 5r', sans-serif;
   font-weight: normal;
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 450px) {
   #index .count h1 {
     font-size: 46px;
     line-height: 46px;
