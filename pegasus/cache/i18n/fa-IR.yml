@@ -98,6 +98,9 @@
   participant_educator: مربی
   participant_engineer: مهندس نرم‌افزار
   participant_other: هیچ کدام از موارد فوق
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: من هستم یک
   never_spam: ما هرگز برای شما اسپم نمی‌فرستیم
   enter_country: اگر خارج از ایالات متحده آمریکا هستید کشورتان را وارد کنید
@@ -139,6 +142,10 @@
     بگذارید
   studiobar_teacher_title: ساخته شده برای دبیران
   studiobar_teacher_body: در کلاس درسیِ خود Code Studio را معرفی کنید
+  studiobar_frozen_title: ساعتی با کد
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: من دانش آموز هستم
   contact_form_topic_parent: من پدر/مادر هستم
   contact_form_topic_teacher: من دبیر/استاد هستم
@@ -381,7 +388,7 @@
   teachers_notes_hoc: 'معلم ها: نکته های آموزنده ی مهم را اینجا بخوانید'
   previous: قبلی
   next: بعدي
-  older_systems: آموزش هایی که روی سیستم های قدیمی تر کار می کنند
+  older_systems: خودآموز هایی برای سیستمهای قدیمی تر
   older_systems_subheading: این ها باید روی مرورگرهای وب قدیمی تر کار کنند. برای دسترسی
     به تمام آموزش ها، به یک مرورگر وب <a href="http://browsehappy.com/" target="_blank">
     به روز ارتقا پیدا کنید.</a>
@@ -472,14 +479,14 @@
   codemonkey_platformtext: مرورگرهای وب مدرن
   codeavengers_platformtext: مرورگرهای وب مدرن
   processing_platformtext: مرورگرهای وب مدرن
-  robomind_platformtext: Modern web browsers, Mobile web
+  robomind_platformtext: مرورگرهای وب مدرن، وب همراه
   groklearning_platformtext: مرورگرهای وب مدرن
   quorum_platformtext: مرورگر های به روز. پشتیبانی شده برای خواندن صفحه نمایش(تکنولوژی
     برای کمک به نابینایان)
   codespark_platformtext: iOS, Android  (یا مرورگر وب)
   kodable_platformtext: iPad
   tynkerapp_platformtext: آی پد و تبلت های آندرویدی
-  robomindnl_platformtext: Modern web browsers, Mobile web
+  robomindnl_platformtext: مرورگرهای وب مدرن، وب همراه
   flappy_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
   bitsbox_platformtext: مرورگرهای وب مدرن
   makegameswithus_platformtext: مرورگرهای وب مدرن
@@ -518,41 +525,49 @@
     language.
   codespark_shortdescription: The Foos is a fun, kid-friendly game to learn about
     programming.
-  kodable_shortdescription: A fun iPad game to teach computer programming concepts
-  tynkerapp_shortdescription: Learn to code by solving fun puzzles and build your
-    own mobile games.
+  kodable_shortdescription: یک بازی سرگرم کننده آی پد برای آموزش مفاهیم برنامه نویسی
+    کامپیوتر
+  tynkerapp_shortdescription: لذت یادگیری برنامه نویسی به وسیله حل  پازل سرگرم کننده
+    .
   robomindnl_shortdescription: کدنویسی برای ربات مجازی
-  flappy_shortdescription: Make your own game - Flappy Bird, Shark, or Submarine
+  flappy_shortdescription: بازی خودتان را بسازید- فلپی برد, شرک,یا زیردریایی
   bitsbox_shortdescription: کد یک سری از برنامه ها برای پخش و به اشتراک گذاری، با
     استفاده از جاوا اسکریپت واقعی.
-  makegameswithus_shortdescription: Learn to make an iPhone game in an hour
-  touchdevelop_shortdescription: Code mobile apps directly on your phone, tablet or
-    laptop
+  makegameswithus_shortdescription: یک بازی آی فون بسازید! با نوشتن کدی که به هیولای
+    شما حرکات جدید آموزش بدهد خودتان هم بیشتر یاد بگیرید!
+  touchdevelop_shortdescription: حل کردن پازل, ایجاد بازی, و یادگیری برنامه تویسی
+    همه ی این ها بر روی موبایل شما.
   appinventor_shortdescription: برنامه خودت را بساز( فقط آندروید)
   blockly_shortdescription: دانلود فایل زیپ برای یادگیری به صورت  آفلاین
-  thinkersmith2_shortdescription: Learn how computers use 1s and 0s to represent information
+  thinkersmith2_shortdescription: یادبگیریم  که کامپیوتر ها چگونه از 0 ها و 1ها برای
+    نشان دادن اطلاعات استفاده میکنند.
   kodableunplugged_shortdescription: A fun unplugged exercise
-  projguts_shortdescription: Try modeling and simulation using rock/paper/scissors
+  projguts_shortdescription: مدل سازی و شبیه سازی  رابا استفاده از سنگ/کاغذ/قیچی امتحان
+    کنید
   frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
     magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
     and make a winter wonderland that you can then share with your friends!
-  codeorg_longdescription: Learn the basic concepts of Computer Science with drag
-    and drop programming. This is a game-like, self-directed tutorial starring video
-    lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
-    repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
-  codeintl_longdescription: Learn the basic concepts of Computer Science with drag
-    and drop programming. This is a game-like, self-directed tutorial starring video
-    lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
-    repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
+  codeorg_longdescription: با برنامه نویسی کشیدن و رها کردن مفاهیم اولیه علم کامپیوتر
+    را یاد بگیرید. این یک آموزشی شبیه بازی است با حضور ویدیو سخنرانی بیل گیتس، مارک
+    زوکربرگ، پرندگان عصبانی و گیاهان مقابل زامبی ها. در این آموزش حلقه های تکراری،
+    شرطها و الگریتمهای ابتدایی را یاد بگیرید. این آموزش در 34 زبان مختلف در دسترس
+    است.
+  codeintl_longdescription: با برنامه نویسی کشیدن و رها کردن مفاهیم اولیه علم کامپیوتر
+    را یاد بگیرید. این یک آموزشی شبیه بازی است با حضور ویدیو سخنرانی بیل گیتس، مارک
+    زوکربرگ، پرندگان عصبانی و گیاهان مقابل زامبی ها. در این آموزش حلقه های تکراری،
+    شرطها و الگریتمهای ابتدایی را یاد بگیرید. این آموزش در 34 زبان مختلف در دسترس
+    است.
   thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
     los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
     espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
     a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
     como la valiosa habilidad de depuraci&oacute;n.
-  khan_longdescription: Learn the basics of JavaScript programming while creating
-    fun drawings with your code. Do it on your own or with your class!
-  khanes_longdescription: Learn the basics of JavaScript programming while creating
-    fun drawings with your code. Do it on your own or with your class!
+  khan_longdescription: درحالی که با کدی که نوشته اید نقاشی های با مزه میکشید، اصول
+    اولیه برنامه نویسی جاوا اسکریپت را یاد بگیرید. این کار را به تنهایی یا با کمک
+    همکلاسی هایتان انجام دهید!
+  khanes_longdescription: درحالی که با کدی که نوشته اید نقاشی های با مزه میکشید، اصول
+    اولیه برنامه نویسی جاوا اسکریپت را یاد بگیرید. این کار را به تنهایی یا با کمک
+    همکلاسی هایتان انجام دهید!
   tynker_longdescription: A collection of 8 fun activities for children of all ages
     to try programming. Solve a series of simple puzzles to help Pixel the puppy reach
     home, and Biff the spaceman reach his moon base. Build the Space Zombies game
@@ -601,11 +616,10 @@
     their own virtual robot. The online course is fully self-contained with short
     presentations, movies, quizzes and automatic guidance/hints to help with the programming
     exercises. '
-  groklearning_longdescription: Choose from 3 activities designed to give you your
-    first experience programming. For example, use the programming language Python
-    to build a chatbot called "Eliza". Can she fool your friends into think she's
-    a human not a computer? This can be done in either a student-guided or teacher-facilitated
-    form and comes with all notes and solutions.
+  groklearning_longdescription: با استفاده از زبان برنامه نویسی پایتون یک chatbot
+    به نام "الیزا" بسازید تا به عنوان یک روان درمانگر عمل کند. شما به الیزا یاد میدهید
+    چه بگوید و چگونه صحیح صحبت کند. آیا او میتواند دوستان شما را فریب بدهد به اینکه
+    فکر کنند اون یک انسان است و نه یک رایانه؟
   quorum_longdescription: This tutorial is accessible for the visually-impaired, and
     works with screenreaders. Join Mary on a tour as she joins a biology lab as a
     programmer and learns the Quorum programming language. This tutorial is student-guided
@@ -666,7 +680,7 @@
   codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
   scratchjr_beyond_name: ScratchJR for pre-readers
-  hopscotch_beyond_name: 'Hopscotch: Programming On Your iPad'
+  hopscotch_beyond_name: 'Hopscotch:  بر روی iPad خودتان برنامه نویسی کنید'
   pocketcode_beyond_name: کد جیبی
   groklearning_beyond_name: یادگیری برنامه نویسی پایتون
   hacketyhack_beyond_name: یادگیری روبی
@@ -685,7 +699,7 @@
   cargobot_beyond_name: Cargobot
   kidsruby_beyond_name: KidsRuby
   w3schools_beyond_name: یادگیری اچ تی ام ال
-  codeavengers_beyond_name: Learn to Code Websites
+  codeavengers_beyond_name: یاد بگیرید وبسایت بسازید
   mozilla_beyond_name: Webmaker
   codecombat_beyond_name: CodeCombat
   codea_beyond_name: Codea
@@ -744,7 +758,7 @@
   pocketcode_beyond_platformtext: نرم افزار موبایل
   groklearning_beyond_platformtext: مرورگرهای وب مدرن
   hacketyhack_beyond_platformtext: نصب دسکتاپ
-  robomind_beyond_platformtext: Modern web browsers, Mobile web
+  robomind_beyond_platformtext: مرورگرهای وب مدرن، وب همراه
   makegameswithus_beyond_platformtext: مرورگرهای وب مدرن
   appinventor_beyond_platformtext: مرورگر مدرن + آندروید
   touchdevelop_beyond_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تمام دستگاه های
@@ -778,13 +792,15 @@
   lightbot_beyond_shortdescription: بازی برای آموزش مفاهیم برنامه نویسی
   codecademy_beyond_shortdescription: برنامه نویسی با JavaScrip، را در یک مرورگر وب
     یاد بگیرید
-  kodable_beyond_shortdescription: A fun iPad game to teach computer programming concepts
-  scratchjr_beyond_shortdescription: 'Create interactive stories and games using ScratchJr. '
+  kodable_beyond_shortdescription: یک بازی سرگرم کننده آی پد برای آموزش مفاهیم برنامه
+    نویسی کامپیوتر
+  scratchjr_beyond_shortdescription: ' داستان های تعاملی و بازی را با استفاده از ScratchJr
+    ایجاد کنید.'
   hopscotch_beyond_shortdescription: یادگیری برنامه نویسی بصری بر روی iPad
   pocketcode_beyond_shortdescription: سعی کنید برای یجاد یک بازی بر روی گوشی های هوشمند
     و به اشتراک گذاری با دوستان !
   groklearning_beyond_shortdescription: مقدمه اساسی به برنامه نویسی پایتون
-  hacketyhack_beyond_shortdescription: Learn Ruby from the ground up
+  hacketyhack_beyond_shortdescription: روبی را از پایه یاد بگیرید
   robomind_beyond_shortdescription: کدنویسی برای ربات مجازی
   makegameswithus_beyond_shortdescription: یاد بگیرید تا بازی آیفون  را در یک ساعت
     بسازید
@@ -810,21 +826,21 @@
   codea_beyond_shortdescription: ساختن اپلیکیشن بر روی آی پد خود
   lego_beyond_shortdescription: ساخت و برنامه ربات
   finch_beyond_shortdescription: یک ربات برای آموزش علوم کامپیوتر
-  arduino_beyond_shortdescription: Prototype your own hardware
+  arduino_beyond_shortdescription: برنامه نویسی روی آردوینو را با بازی در زمین بازی
+    مجازی اسپارک فان یاد بگیرید.
   processing_beyond_shortdescription: یادگیری زبان های پردازش
   alice_beyond_shortdescription: آموزش برنامه نویسی در یک محیط 3D
-  sphero_beyond_shortdescription: Schools, Parents, Robots & Kids. We created the
-    SPRK program because we believe play is a powerful teacher. Whether you're an
-    educator or a parent, SPRK lessons give kids a fun crash course in programming
-    robots while sharpening their skills in math and science.
-  codeorg_beyond_longdescription: Learn the basic concepts of Computer Science with
-    drag and drop programming. 3 full courses, each consists of 15-20 lessons that
-    blend "unplugged" classroom activities interspersed with game-like, self-directed
-    tutorials starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds
-    and Plants vs. Zombies. Learn repeat-loops, conditionals, basic algorithms, functions,
-    and variables.
-  khan_beyond_longdescription: Learn the basics of JavaScript programming while creating
-    fun drawings with your code. Do it on your own or with your class!
+  sphero_beyond_shortdescription: درسهای اسپارک(SPRK) همزمان با آموزش فشرده برنامه
+    نویسی برای روبات ها، به افزایش تواناییهای کودکان در ریاضیات و علوم هم کمک می کنند.
+  codeorg_beyond_longdescription: اصول پایه علوم کامپیوتر را با برنامه نویسی با بلوکهای
+    پیش ساخته یاد بگیرید. سه واحد درسی هر یک شامل 15 تا 20 درس که بدون نیاز به هیچ
+    ابزار دیگری محیط کلاس را با خود آموز های شبیه بازی ترکیب می کنند. در این خود آموز
+    ها می توانید از بیل گیتس و مارک زاکربرگ تا پرنده های عصبانی و گیاهان بر ضد زامبی
+    ها را بیابید. به این ترتیب حلقه های تکرار، شرط ها، الگوریتمهای پایه، مفهوم توابع
+    و متغیر ها را خواهید آموخت.
+  khan_beyond_longdescription: درحالی که با کدی که نوشته اید نقاشی های با مزه میکشید،
+    اصول اولیه برنامه نویسی جاوا اسکریپت را یاد بگیرید. این کار را به تنهایی یا با
+    کمک همکلاسی هایتان انجام دهید!
   tynker_beyond_longdescription: Tynker makes it fun & easy to learn programming.
     It makes it visual. Kids build games and mobile apps by arranging blocks of code.
     It removes the need to know programming syntax. Kids transform ideas into animated
@@ -936,8 +952,8 @@
   kidsruby_beyond_longdescription: 'Have fun and make games, or hack your homework
     using Ruby! Just tell your parents or teachers you''re learning Ruby programming...
     ;). Free and works on any computer. [Note: Desktop install required]'
-  w3schools_beyond_longdescription: Learn to create websites on your own computer.
-    Learn the server basics in less than a day. Learn to add databases to your website
+  w3schools_beyond_longdescription: یادبگیرید بر روی کامپیوتر خود وب سایت بسازید.یادگیری
+    اصول اولیه سرور در کمتر از یک روز.اتصال بانک اطلاعاتی به وب سایت خودتان را یادبگیرید.
   codeavengers_beyond_longdescription: Learn how to program games, apps and websites.
     Designed by experts with perfect level of difficulty for beginners, easy to understand
     instructions and great help when you need it. Our HTML, CSS and JavaScript courses
@@ -957,8 +973,8 @@
     to let you touch your code. Want to change a number? Just tap and drag it. How
     about a color, or an image? Tapping will bring up visual editors that let you
     choose exactly what you want.
-  lego_beyond_longdescription: Create small, customizable and programmable robots
-    using LEGO pieces.
+  lego_beyond_longdescription: روبات های کوچک، قابل تنظیم و قابل برنامه ریزی با استفاده
+    از قطعات لگو را ایجاد کنید.
   finch_beyond_longdescription: The Finch is a new robot for computer science education.
     Its design is the result of a four year study at Carnegie Mellon's CREATE lab.
     The Finch is designed to support an engaging introduction to the art of programming.

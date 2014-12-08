@@ -98,6 +98,9 @@
   participant_educator: Εκπαιδευτικός
   participant_engineer: Μηχανικός λογισμικού
   participant_other: Κανένα από τα παραπάνω
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Είμαι ένας/μια
   never_spam: Δεν θα σας στείλουμε ποτέ ενοχλητική αλληλογραφία
   enter_country: Εισάγετε τη χώρα σας αν βρίσκεστε εκτός των Ηνωμένων Πολιτειών
@@ -137,6 +140,10 @@
   studiobar_flappy_body: Φτιάξτε και μοιράστε το δικό σας παιχνίδι Flappy
   studiobar_teacher_title: Φτιαγμένο για εκπαιδευτικούς
   studiobar_teacher_body: Εισάγετε το Στούντιο Κώδικα (Code Studio) στην τάξη σας
+  studiobar_frozen_title: Η Ώρα του Κώδικα
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Είμαι μαθητής
   contact_form_topic_parent: Είμαι γονέας
   contact_form_topic_teacher: Είμαι δάσκαλος/εκπαιδευτικός
@@ -373,7 +380,7 @@
   carousel_heading_international: Σεμινάρια στη γλώσσα σας
   carousel_heading_domestic: Βοηθήματα εκμάθησης που είναι διαθέσιμα στα αγγλικά
   carousel_heading_beginners: Βοηθήματα εκμάθησης για αρχάριους
-  carousel_heading_javascript: Βοηθήματα εκμάθησης που διδάσκουν Javascript
+  carousel_heading_javascript: Μαθήματα που διδάσκουν JavaScript
   carousel_heading_unplugged: Δεν διαθέτετε ψηφιακή συσκευή ή πρόσβαση στο Διαδίκτυο;
     Δοκιμάστε  την 'unplugged' Επιστήμη της Πληροφορικής
   carousel_heading_devices: Εφαρμογές εκμάθησης για τηλέφωνα και tablets

@@ -97,6 +97,9 @@
   participant_educator: Insegnante
   participant_engineer: Ingegnere del Software
   participant_other: Nessuna delle precedenti
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Io sono un
   never_spam: Non ti invieremo mai posta elettronica indesiderata
   enter_country: Inserisci la tua nazione se non sei negli Stati Uniti
@@ -137,6 +140,10 @@
   studiobar_flappy_body: Crea e condividi il tuo gioco di Flappy
   studiobar_teacher_title: Fatto per gli insegnanti
   studiobar_teacher_body: Introduci l'Officina del Codice nella tua classe
+  studiobar_frozen_title: L'Ora del Codice
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Io sono uno studente
   contact_form_topic_parent: Io sono un genitore
   contact_form_topic_teacher: Io sono un insegnante
@@ -235,7 +242,7 @@
   dashboard_action_done: Fatto
   dashboard_action_required: obbligatorio
   dashboard_navigation_home_page: Cruscotto di Controllo dell'insegnante
-  dashboard_navigation_all_sections: Account e progressi degli studenti
+  dashboard_navigation_all_sections: Gestione delle classi e degli studenti
   dashboard_navigation_view_progress: Controlla i progressi
   dashboard_navigation_add_students: Aggiungi i tuoi studenti
   dashboard_navigation_manage_students: Gestisci i tuoi studenti
@@ -358,8 +365,8 @@
   code_sign_up: Iscriviti per partecipare durante la Settimana di Educazione all'Informatica
   learn_more: Ulteriori informazioni
   hoc2014_try_new_tutorials: Prova le nuove lezioni dell'Ora del Codice
-  hoc2014_try_new_tutorial: Prova il nuovo tutorial dell'Ora del Codice in versione
-    beta
+  hoc2014_try_new_tutorial: Prova la nuova lezione dell'Ora del Codice in versione
+    provvisoria
   hoc2014_try_scrat: Angry Birds, PvZ, e Scrat
   hoc2014_try_frozen: Artista con Anna ed Elsa, da Frozen
   carousel_heading_international: Corsi nella tua lingua
@@ -406,14 +413,14 @@
   codeavengers_name: Costruisci un gioco con JavaScript
   processing_name: Disegna con il codice
   robomind_name: Programma un robot virtuale
-  groklearning_name: Eliza la dottoressa automatica
+  groklearning_name: Eliza la dottoressa robotica
   quorum_name: Programmazione in modalità accessibile (con il supporto di un lettore
     di schermo)
   codespark_name: The Foos (adatto anche a bambini che ancora non leggono)
   kodable_name: Kodable (adatto anche a bambini che ancora non leggono)
   tynkerapp_name: Tynker - per tablet
   robomindnl_name: Programma un robot virtuale
-  flappy_name: Costruisci un gioco Flappy
+  flappy_name: Costruisci la tua versione del gioco Flappy
   bitsbox_name: Bitsbox - crea un gioco
   makegameswithus_name: Costruisci un gioco per l'iPhone nel tuo browser!
   touchdevelop_name: TouchDevelop
@@ -490,8 +497,8 @@
   thinkersmith2_platformtext: '"Senza Rete"'
   kodableunplugged_platformtext: '"Senza Rete"'
   projguts_platformtext: '"Senza Rete"'
-  frozen_shortdescription: Usiamo il codice per unirci ad Anna ed Elsa mentre esplorano
-    la magia e la bellezza del ghiaccio.
+  frozen_shortdescription: Usiamo la programmazione per unirci ad Anna ed Elsa mentre
+    esplorano la magia e la bellezza del ghiaccio.
   codeorg_shortdescription: Impara a programmare con Mark Zuckerberg e Angry Birds!
   codeintl_shortdescription: Impara a programmare con Mark Zuckerberg e Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
@@ -518,8 +525,8 @@
     Web
   processing_shortdescription: Una lezione di un'ora sul linguaggio Processing
   robomind_shortdescription: Scrivi programmi per un robot virtuale
-  groklearning_shortdescription: Insegna a Eliza, la dottoressa automatica, a far
-    credere ai tuoi amici che è una persona!
+  groklearning_shortdescription: Insegna a Eliza, la dottoressa robotica, a far credere
+    ai tuoi amici che è una persona!
   quorum_shortdescription: Segui Mary in una visita guidata mentre impara il linguaggio
     di programmazione Quorum.
   codespark_shortdescription: The Foos è un gioco adatto ai bambini e divertente,
@@ -528,7 +535,7 @@
     base della programmazione
   tynkerapp_shortdescription: 'Impara a programmare risolvendo divertenti enigmi. '
   robomindnl_shortdescription: Scrivi programmi per un robot virtuale
-  flappy_shortdescription: Crea il tuo gioco - Flappy Bird, Squalo o Sottomarino
+  flappy_shortdescription: 'Crea la tua versione dei giochi: Flappy, Squalo o Sottomarino'
   bitsbox_shortdescription: Programma una serie di app reali per giocare e da condividere,
     usando Javascript.
   makegameswithus_shortdescription: Costruisci un gioco per l'iPhone! Impara scrivendo
@@ -542,10 +549,10 @@
     zeri per rappresentare le informazioni
   kodableunplugged_shortdescription: Un divertente esercizio "senza rete"
   projguts_shortdescription: Prova a modellare e simulare usando il gioco sasso/carta/forbici
-  frozen_longdescription: Cerchiamo di usare la programmazione per unirci ad Anna
-    ed Elsa nell'esplorazione della magia e bellezza del ghiaccio. Farai fiocchi di
-    neve, pattinerai sul ghiaccio e realizzerai un meraviglioso paesaggio  invernale
-    che potrai poi condividere con i tuoi amici!
+  frozen_longdescription: Usiamo la programmazione per unirci ad Anna ed Elsa mentre
+    esplorano la magia e la bellezza del ghiaccio. Farai fiocchi di neve, pattinerai
+    sul ghiaccio e realizzerai un meraviglioso paesaggio invernale che potrai poi
+    condividere con i tuoi amici!
   codeorg_longdescription: Impara i concetti di base dell'informatica con la programmazione
     visuale. Questo è un corso divertente, illustrato da lezioni video di Bill Gates
     e Mark Zuckerberg, ed ispirato ai giochi "Angry Birds" e "Plants vs Zombies".
@@ -628,7 +635,7 @@
     presentazioni, filmati, quiz e orientamento/suggerimenti automatici per aiutare
     dello svolgimento degli esercizi di programmazione. '
   groklearning_longdescription: Usa il linguaggio di programmazione Python per costruire
-    un chatbot chiamato "Eliza" che agisce come uno psicoterapeuta robotico. Insegnerai
+    una dottoressa robotica chiamata "Eliza" che agisce come uno psicoterapeuta. Insegna
     ad Eliza come parlare e le cose giuste da dire. Riuscirà ad ingannare i tuoi amici
     facendo pensare che lei sia un essere umano, non un computer?
   quorum_longdescription: Questo tutorial è accessibile per i non vedenti e funziona
@@ -652,7 +659,7 @@
     per aiutare dello svolgimento degli esercizi di programmazione. '
   flappy_longdescription: Usa la programmazione a blocchi per creare il tuo gioco
     Flappy Bird e personalizzarlo per trasformarlo (Flappy Shark, Santa Flappy, quello
-    che preferisci). Aggiungi il gioco al tuo cellulare con un click.
+    che preferisci). Carica il gioco sul tuo cellulare con un click.
   bitsbox_longdescription: Personalizza il tuo tablet virtuale personale e programma
     tutta una serie di applicazioni per giocare e da condividere. Semplici procedure
     dettagliate rendono possibile anche per i più giovani programmare in Javascript,
@@ -662,18 +669,18 @@
     chiamato Swift! Crea un gioco di azione ispirato a Pokemon e scrivi un programma
     per insegnare nuove mosse al tuo mostro. Imparerai ad usare variabili, metodi
     e oggetti per aiutare il tuo mostro a vincere!
-  touchdevelop_longdescription: 'L''editor ti guida in modo amichevole nell''arte
-    della creazione di pixel, nel risolvere i puzzle dell''orso o nel creare la tua
-    versione del gioco dell''uccello che salta. '
-  appinventor_longdescription: Questo veloce video Tutorial ti guida attraverso la
-    costruzione di tre semplici app per il tuo telefono o tablet Android. Progettato
-    per novizi ed esperti, questa attività della Ora del Codice ti insegnerà a costruire
-    da solo le tue app prima che tu te ne accorga. Immagina poter condividere  le
+  touchdevelop_longdescription: 'L''editor basato sui comandi touch ti guiderà nella
+    creazione di arte con i pixel, nel risolvere i puzzle dell''orso o nel creare
+    la tua versione del gioco dell''uccello che salta. '
+  appinventor_longdescription: Divertenti e veloci video tutorial ti guidano attraverso
+    la costruzione di tre semplici app per il tuo telefono o tablet Android. Progettato
+    per principianti ed esperti, questa attività della Ora del Codice ti insegnerà
+    a costruire da solo le tue app prima che tu te ne accorga. Immagina poter condividere  le
     app da te create con i tuoi amici! Queste attività sono adatte sia per singoli
     studenti sia per classi guidate da insegnanti.
   blockly_longdescription: Avete PC con connessione internet lenta (o addirittura
     senza)? Scaricate i tutorial di Blockly che sono stati creati prima delle esercitazioni
-    Code.org - un singolo ZIP file  di 3MB che può essere caricato su qualsiasi computer
+    Code.org - un singolo file ZIP di 3MB che può essere caricato su qualsiasi computer
     o usato direttamente su una pennina USB
   thinkersmith2_longdescription: Gli studenti imparano come rappresentare e memorizzare
     le lettere in formato binario, come funzioni di acceso e spento. Alla fine tutti
@@ -883,9 +890,9 @@
     che consente a bambini più piccoli di creare storie interattive e giochi. I bambini
     fanno muovere i personaggi, li fanno saltare, ballare e cantare attaccando insieme
     dei blocchi grafici di programmazione
-  hopscotch_beyond_longdescription: Tutorial pensato per gli studenti che utilizza
-    il linguaggio di programmazione Hopscotch su iPad. Gli studenti costruiranno giochi
-    e app per il loro iPad usando il loro iPad. Gli studenti possono lavorare individualmente
+  hopscotch_beyond_longdescription: Tutorial auto-guidato che utilizza il linguaggio
+    di programmazione Hopscotch su iPad. Gli studenti costruiranno giochi e app per
+    il loro iPad usando il loro iPad. Gli studenti possono lavorare individualmente
     o in gruppi (al massimo 3 studenti per ogni iPad).
   pocketcode_beyond_longdescription: Crea un gioco sul tuo smartphone con Pocket Code!
     Aiuta Steve il paracadutista a consegnare i suoi pacchi. Puoi condividerlo per
@@ -911,12 +918,12 @@
     condividere su Facebook in modo che anche i tuoi amici  possano provarlo! Non
     è necessaria nessuna esperienza nello sviluppo di app per iPhone. Per poter usare
     il tutorial è necessario sapere cosa siano le variabili, i metodi e gli oggetti.
-  appinventor_beyond_longdescription: Questo veloce video Tutorial ti guida attraverso
-    la costruzione di tre semplici app per il tuo telefono o tablet Android. Progettato
-    per novizi ed esperti, questa attività della Ora del Codice ti insegnerà a costruire
-    da solo le tue app prima che tu te ne accorga. Immagina poter condividere  le
-    app da te create con i tuoi amici! Queste attività sono adatte sia per singoli
-    studenti sia per classi guidate da insegnanti.
+  appinventor_beyond_longdescription: Divertenti e veloci video tutorial ti guidano
+    attraverso la costruzione di tre semplici app per il tuo telefono o tablet Android.
+    Progettato per principianti ed esperti, questa attività della Ora del Codice ti
+    insegnerà a costruire da solo le tue app prima che tu te ne accorga. Immagina
+    poter condividere  le app da te create con i tuoi amici! Queste attività sono
+    adatte sia per singoli studenti sia per classi guidate da insegnanti.
   touchdevelop_beyond_longdescription: TouchDevelop ti consente di creare app per
     iPad, iPhone, PC, Mac, Android e Windows Phone. Il nostro editor progettato per
     l'uso su dispositivi touch rende divertente la programmazione anche sul tuo telefono
@@ -996,22 +1003,21 @@
     (incantesimi) per controllare il tuo eroe, per attraversare i labirinti, sconfiggere
     gli orchi, ingannare i nemici e salvare i tuoi compagni! Impara JavaScript in
     questo gioco web scritto in HTML5 per principianti assoluti .
-  codea_beyond_longdescription: Codea per iPad ti consente di creare simulazioni e
-    giochi &mdash; o quasi ogni altra idea visiva che ti venga in mente. I pensieri
-    si trasformano in creazioni interattive che fanno uso delle caratteristiche di
-    iPad come il Multi-Touch e l'accelerometro. Pensiamo che Codea sia il più bell'editor
-    di codice che userai, ed è facile. Codea è progettato per consentirti di toccare
-    il codice. Vuoi cambiare un numero? Basta toccarlo e trascinarlo. E per un colore
-    o un'immagine? Il solo tocco farà apparire editori visuali che ti consentono di
-    scegliere esattamente quello che ti occorre.
+  codea_beyond_longdescription: Codea per Ipad ti permette di creare giochi e simulazioni;
+    oppure sviluppare una tua idea. Converti i tuoi pensieri in creazioni interattive
+    che sfruttino le caratteristiche dell'ipad come il multi tocco e l'accelerometro.
+    Sarà il miglior editor che tu abbia mai usato e di facile utilizzo. Codea è disegnato
+    per permetterti di toccare con mano il tuo codice. Vuoi cambiare un numero? Toccalo
+    e trascinalo. E un colore o un'immagine? Un semplice tocco mostrerà menù visuali
+    che ti permetteranno di scegliere ciò che vuoi.
   lego_beyond_longdescription: Crea piccoli robot personalizzati e programmabili utilizzando
     i mattoncini LEGO.
   finch_beyond_longdescription: Finch è un nuovo robot per l'apprendimento dell'informatica.
-    Il suo design è il risultato di quattro anni di studi nei laboratori Carnegie
-    Mellon. Finch è progettato per offrire un'avvincente introduzione all'arte della
-    programmazione. Supporta più di una dozzina di linguaggi e ambienti di programmazione,
-    inclusi diversi ambienti pensati per studenti di otto anni. Finch è stato creato
-    per permettere agli studenti di scrivere programmi estremamente interattivi.
+    Il suo design è il risultato di quattro anni di studi nel CREATE lab della Carnegie
+    Mellon University. Finch è progettato per offrire un'avvincente introduzione all'arte
+    della programmazione. Supporta più di una dozzina di linguaggi e ambienti di programmazione,
+    inclusi diversi ambienti pensati per studenti dagli otto anni in su. Finch è stato
+    creato per permettere agli studenti di scrivere programmi estremamente interattivi.
   arduino_beyond_longdescription: Arduino è una popolare piattaforma progettata per
     permettere ad artisti e progettisti di lavorare con veri sensori, luci, suoni
     e molto altro. La Virtual Sandbox di Sparkfun ti insegnerà il vero codice di Arduino

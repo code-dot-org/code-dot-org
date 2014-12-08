@@ -95,6 +95,9 @@
   participant_educator: Pedagógus
   participant_engineer: Informatikus mérnök
   participant_other: A fentiek egyike sem
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Én vagyok egy
   never_spam: Mi soha sem fogunk spamet küldeni
   enter_country: Add meg az országot, ha az Egyesült Államokon kívül élsz
@@ -133,6 +136,10 @@
   studiobar_flappy_body: Készítsd el és oszd meg saját Flappy Bird játékodat
   studiobar_teacher_title: Tanároknak
   studiobar_teacher_body: Mutasd be a Code Studiot az osztályodnak
+  studiobar_frozen_title: A kódolás órája
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Diák vagyok
   contact_form_topic_parent: Szülő vagyok
   contact_form_topic_teacher: Tanár/Oktató vagyok
@@ -352,7 +359,7 @@
   carousel_heading_international: Oktatóanyagok az anyanyelveden
   carousel_heading_domestic: Az angolul elérhető oktatóanyagok
   carousel_heading_beginners: Oktatóanyagok kezdőknek
-  carousel_heading_javascript: Oktatóanyagok Javascript oktatáshoz
+  carousel_heading_javascript: Oktatóanyagok JavaScript oktatásához
   carousel_heading_unplugged: Nincs eszközöd vagy internet kapcsolatod? Próbáld ki
     az offline számítástechnikát
   carousel_heading_devices: Oktató alkalmazások telefonra és tabletre
