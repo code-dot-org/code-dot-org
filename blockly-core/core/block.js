@@ -527,7 +527,7 @@ Blockly.Block.prototype.onMouseDown_ = function(e) {
     this.blockSpace.blockSpaceEditor.setCursorHand_(true);
 
     // Keep grey (non-deletable) blocks attached together.  Walk the stack
-    // upwards to find the topmost movable non-deletable block.
+    // upwards to find the topmost contiguous movable non-deletable block.
     var topDraggingBlock = this;
     for (var prev = this;
         prev && prev.movable_ && !prev.deletable_;
