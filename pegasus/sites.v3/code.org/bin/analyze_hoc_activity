@@ -11,12 +11,12 @@ end
 
 def analyze_day_fast(date)
   froms = [
-    "FROM hour_of_activities WHERE updated_on=DATE('#{date.strftime('%Y-%m-%d')}') AND (started=1 OR pixel_started=1)",
+    #"FROM hour_of_activities WHERE updated_on=DATE('#{date.strftime('%Y-%m-%d')}') AND (started=1 OR pixel_started=1)",
     "FROM hoc_activity WHERE started_at LIKE '#{date.strftime('%Y-%m-%d')} %' OR pixel_started_at LIKE '#{date.strftime('%Y-%m-%d')} %'",
   ]
   
   finished_froms = [
-    "FROM hour_of_activities WHERE updated_on=DATE('#{date.strftime('%Y-%m-%d')}') AND (finished=1 OR pixel_finished=1)",
+    #"FROM hour_of_activities WHERE updated_on=DATE('#{date.strftime('%Y-%m-%d')}') AND (finished=1 OR pixel_finished=1)",
     "FROM hoc_activity WHERE finished_at LIKE '#{date.strftime('%Y-%m-%d')} %' OR pixel_finished_at LIKE '#{date.strftime('%Y-%m-%d')} %'",
   ]
 
@@ -113,13 +113,10 @@ def main()
   while day <= today
     cache_path = pegasus_dir("cache/HourOfActivity_Results_#{day.strftime('%Y-%m-%d')}.json")
     if (day != today) && File.file?(cache_path)
-      $log.debug "Using cached HourOfActivity analysis for #{day} from #{cache_path}"
       day_data = JSON.load(IO.read(cache_path))
     else
-      $log.debug "Analyzing HourOfActivity records for #{day}"
       day_data = analyze_day_fast(day)
 
-      $log.debug "Writing HourOfActivity analysis to #{cache_path}"
       File.open(cache_path, 'wt') do |cache_file|
         cache_file << JSON.pretty_generate(day_data)
       end
@@ -144,6 +141,7 @@ def main()
     countries: total_countries,
   }
 
+  HipChat.log 'Calculating lines of code...' if rack_env?(:production)
   lines_of_code = rack_env?(:production) ? `#{deploy_dir('bin','count-lines-of-code-from-milestone-logs')}`.to_i : 0
 
   time = DateTime.now
