@@ -131,7 +131,7 @@ def upgrade_frontend(name, host)
   
   if name =~ /^frontend-[a-z]\d\d$/
     i = name[-2..-1].to_i
-    if i > 4
+    if i > 5
       commands << 'sudo service pegasus stop'
     end
   end
@@ -144,7 +144,7 @@ def upgrade_frontend(name, host)
 
   begin
     RakeUtils.system 'ssh', '-i', '~/.ssh/deploy-id_rsa', host, "'#{command} 2>&1'", '>', log_path
-    HipChat.log "Upgraded <b>#{name}</b> (#{host})."
+    #HipChat.log "Upgraded <b>#{name}</b> (#{host})."
   rescue
     HipChat.log "<b>#{name}</b> (#{host}) failed to upgrade, removing from rotation.", color:'red'
     stop_frontend name, host, log_path
