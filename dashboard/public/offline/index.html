@@ -60,35 +60,6 @@
           </li>
         </ul>
       </div>
-      <script>
-        var v = {
-          "src":"https://www.youtube.com/embed/H1-paxNG4kw/?autoplay=1\u0026iv_load_policy=3\u0026modestbranding=1\u0026rel=0\u0026showinfo=1\u0026v=H1-paxNG4kw\u0026wmode=transparent",
-          "key":"frozen_intro",
-          "name":"Hour of Code Intro",
-          "download":"http://videos.code.org/2014/Frozen-intro.mp4",
-          "thumbnail":"/c/video_thumbnails/90.jpg",
-          "enable_fallback":true,
-          "autoplay":true
-        };
-        showVideoDialog(v);
-        $('#reference_area').append(
-          '<a class="video_link" data-autoplay="true" data-download="' + v.download + '" data-enable-fallback="true" data-key="' + v.key + '" data-name="' + v.name + '" data-src="' + v.src + '" data-thumbnail="' + v.thumbnail + '" href="#"><img alt="video" class="video_thumbnail" height="235.0" id="thumbnail" src="' + v.thumbnail + '" width="183.3"><div class="video_name"> <span>' + v.name + '</span></div></a>'
-        );
-
-        $('.video_link').each(function() {
-          addClickTouchEvent($(this), $.proxy(function() {
-            showVideoDialog({
-              src: $(this).attr('data-src'),
-              name: $(this).attr('data-name'),
-              key: $(this).attr('data-key'),
-              download: $(this).attr('data-download'),
-              thumbnail: $(this).attr('data-thumbnail'),
-              enable_fallback: true,
-              autoplay: true
-            });
-          }, this));
-        });
-      </script>
     </div>
   </div>
   <div class='navbar-static-top footer'>
@@ -158,6 +129,11 @@
       progressContainer.append(div).append('\n');
     });
     loadLevel(currentScript.puzzles[params.puzzle - 1], function() {
+
+      appOptions.level.puzzle_number = params.puzzle;
+      appOptions.level.stage_total = 20;
+// ########################
+//      Callouts
       appOptions.onInitialize = function() {
         this.createCallouts();
         onInitializeListeners.forEach(function(listener) {
@@ -166,6 +142,9 @@
       };
       appOptions.createCallouts = function() {
         $.fn.qtip.zindex = 500;
+        if(this.callouts == 'null') {
+          this.callouts = [];
+        }
         this.callouts.every(function(callout) {
           var selector = callout.element_id; // jquery selector.
           if ($(selector).length === 0 && !callout.on) {
@@ -214,6 +193,63 @@
           return true;
         });
       };
+
+
+// ###########################
+//    Videos
+      var videoInfoByKey = {
+        'frozen_intro': {
+          "src":"https://www.youtube.com/embed/H1-paxNG4kw/?autoplay=1\u0026iv_load_policy=3\u0026modestbranding=1\u0026rel=0\u0026showinfo=1\u0026v=H1-paxNG4kw\u0026wmode=transparent",
+          "key":"frozen_intro",
+          "name":"Hour of Code Intro",
+          "download":"http://videos.code.org/2014/Frozen-intro.mp4",
+          "thumbnail":"video_thumbnails/90.jpg",
+          "enable_fallback":true,
+          "autoplay":true
+        },
+        "frozen_loops": {
+          "src":"https://www.youtube.com/embed/d7e48cYq7uc/?autoplay=1\u0026iv_load_policy=3\u0026modestbranding=1\u0026rel=0\u0026showinfo=1\u0026v=d7e48cYq7uc\u0026wmode=transparent",
+          "key":"frozen_loops",
+          "name":"Introduction to Loops",
+          "download":"http://videos.code.org/2014/Frozen-loops.mp4",
+          "thumbnail":"video_thumbnails/91.jpg",
+          "enable_fallback":true,
+          "autoplay":true
+        },
+        'frozen_functions': {
+          "src":"https://www.youtube.com/embed/0eo0ESEX9DE/?autoplay=1\u0026iv_load_policy=3\u0026modestbranding=1\u0026rel=0\u0026showinfo=1\u0026v=0eo0ESEX9DE\u0026wmode=transparent",
+          "key":"frozen_functions",
+          "name":"Introduction to Functions",
+          "download":"http://videos.code.org/2014/Frozen-functions.mp4",
+          "thumbnail":"video_thumbnails/92.jpg",
+          "enable_fallback":true,
+          "autoplay":true
+        }
+      };
+      var v = videoInfoByKey[appOptions.level.video_key];
+      if(v) {
+        showVideoDialog(v);
+        $('#reference_area').append(
+                '<a class="video_link" data-autoplay="true" data-download="' + v.download +
+                '" data-enable-fallback="true" data-key="' + v.key + '" data-name="' + v.name + '" data-src="' +
+                v.src + '" data-thumbnail="' + v.thumbnail + '" href="#"><img alt="video" class="video_thumbnail" ' +
+                'height="235.0" id="thumbnail" src="' + v.thumbnail + '" width="183.3"><div class="video_name">' +
+                '<span>' + v.name + '</span></div></a>'
+        );
+        $('.video_link').each(function() {
+          addClickTouchEvent($(this), $.proxy(function() {
+            showVideoDialog({
+              src: $(this).attr('data-src'),
+              name: $(this).attr('data-name'),
+              key: $(this).attr('data-key'),
+              download: $(this).attr('data-download'),
+              thumbnail: $(this).attr('data-thumbnail'),
+              enable_fallback: true,
+              autoplay: true
+            });
+          }, this));
+        });
+      }
 
       appOptions.baseUrl = '';
 //      appOptions.onInitialize = null;

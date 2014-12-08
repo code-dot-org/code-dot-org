@@ -47,7 +47,7 @@ var defaultOptions = {
       return;
     }
 
-    if ('') {
+    if (appOptions.level.video_key) {
       $('.video-modal').on('hidden.bs.modal', function () {
         showInstructions();
       });
