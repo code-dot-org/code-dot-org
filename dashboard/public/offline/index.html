@@ -45,11 +45,6 @@
       <div class="reference_area" id="reference_area">
         <p class="help_title">Need help?</p>
         <p class="help_subtitle">See these videos and hints</p>
-        <a class="video_link" data-autoplay="true" data-download="http://videos.code.org/2014/Frozen-intro.mp4" data-enable-fallback="true" data-key="frozen_intro" data-name="Hour of Code Intro" data-src="https://www.youtube.com/embed/H1-paxNG4kw/?autoplay=1&amp;iv_load_policy=3&amp;modestbranding=1&amp;rel=0&amp;showinfo=1&amp;v=H1-paxNG4kw&amp;wmode=transparent" data-thumbnail="/c/video_thumbnails/90.jpg" href="#"><img alt="90" class="video_thumbnail" height="235.0" id="thumbnail_H1-paxNG4kw" src="http://localhost:3000/c/video_thumbnails/90.jpg" width="183.3">
-          <div class="video_name">
-            <span>Hour of Code Intro</span>
-          </div>
-        </a>
         <div style="clear: both;"></div>
       </div>
       <div id='notes-content' style='display: none;'>
@@ -66,7 +61,33 @@
         </ul>
       </div>
       <script>
-        showVideoDialog({"src":"https://www.youtube.com/embed/H1-paxNG4kw/?autoplay=1\u0026iv_load_policy=3\u0026modestbranding=1\u0026rel=0\u0026showinfo=1\u0026v=H1-paxNG4kw\u0026wmode=transparent","key":"frozen_intro","name":"Hour of Code Intro","download":"http://videos.code.org/2014/Frozen-intro.mp4","thumbnail":"/c/video_thumbnails/90.jpg","enable_fallback":true,"autoplay":true})
+        var v = {
+          "src":"https://www.youtube.com/embed/H1-paxNG4kw/?autoplay=1\u0026iv_load_policy=3\u0026modestbranding=1\u0026rel=0\u0026showinfo=1\u0026v=H1-paxNG4kw\u0026wmode=transparent",
+          "key":"frozen_intro",
+          "name":"Hour of Code Intro",
+          "download":"http://videos.code.org/2014/Frozen-intro.mp4",
+          "thumbnail":"/c/video_thumbnails/90.jpg",
+          "enable_fallback":true,
+          "autoplay":true
+        };
+        showVideoDialog(v);
+        $('#reference_area').append(
+          '<a class="video_link" data-autoplay="true" data-download="' + v.download + '" data-enable-fallback="true" data-key="' + v.key + '" data-name="' + v.name + '" data-src="' + v.src + '" data-thumbnail="' + v.thumbnail + '" href="#"><img alt="video" class="video_thumbnail" height="235.0" id="thumbnail" src="' + v.thumbnail + '" width="183.3"><div class="video_name"> <span>' + v.name + '</span></div></a>'
+        );
+
+        $('.video_link').each(function() {
+          addClickTouchEvent($(this), $.proxy(function() {
+            showVideoDialog({
+              src: $(this).attr('data-src'),
+              name: $(this).attr('data-name'),
+              key: $(this).attr('data-key'),
+              download: $(this).attr('data-download'),
+              thumbnail: $(this).attr('data-thumbnail'),
+              enable_fallback: true,
+              autoplay: true
+            });
+          }, this));
+        });
       </script>
     </div>
   </div>
