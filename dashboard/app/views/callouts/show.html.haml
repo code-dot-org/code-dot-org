@@ -1,10 +1,10 @@
 %p#notice= notice
 
 %p
-  %b Element:
+  %strong Element:
   = @callout.element_id
 %p
-  %b Text:
+  %strong Text:
   = @callout.localization_key
 
 - if can? :update, @callout

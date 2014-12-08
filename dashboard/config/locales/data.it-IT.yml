@@ -547,27 +547,27 @@
           che segni un punto?
         studio_c3_game_7: Crea un gioco per conto tuo. Quando hai fatto, clicca su
           Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
-        studio_playlab_1: Riesci a far dire a questo cane "Ciao a tutti"?
-        studio_playlab_2: Riesci a far dire qualcosa al cane e dopo a far dire qualcosa
-          al gatto?
-        studio_playlab_3: Riesci a scrivere un programma che fa arrivare questo cane
-          fino al gatto?
-        studio_playlab_4: Riesci a scrivere un programma che fa arrivare questo cane
-          fino al gatto, e fa dire "Ciao" al gatto quando il cane lo raggiunge?
-        studio_playlab_5: Riesci a scrivere un programma per far dire "ciao" al polpo
-          quando viene cliccato?
-        studio_playlab_6: Riesci a scrivere un programma per spostare questo pinguino
-          in tutte le direzioni usando i tasti freccia in alto / in basso / a sinistra
-          / a destra in modo da fargli colpire tutti i bersagli?
-        studio_playlab_7: Il blocco "ripeti per sempre" ti permette di eseguire il
-          codice senza fermarti mai. Riesci a mettere insieme dei blocchi per spostare
-          in continuazione questo dinosauro su e giù?
-        studio_playlab_8: Riesci ad aggiungere un blocco per segnare un punto quando
-          il pinguino sbatte contro il polpo e poi a spostarlo con i tasti freccia
-          fino a che segni un punto?
-        studio_playlab_9: Riesci ad aggiungere dei blocchi per cambiare lo sfondo
-          e la velocità del pinguino e poi a spostarlo con i tasti freccia fino a
-          che segni un punto?
+        studio_playlab_1: Il pinguino vuole dire "ciao" - puoi aiutarlo?
+        studio_playlab_2: Il Cavernicolo (attore 1) e la Cavernicola (attore 2) vorrebbero
+          dirsi "ciao". Puoi aiutarli usando il blocco "Parla" due volte?
+        studio_playlab_3: Puoi aiutare la tennista a raggiungere la bandiera?
+        studio_playlab_4: Puoi aiutare il tennista (attore 1) a raggiungere la tennista
+          (attore 2) e ad emettere un suono quando la raggiunge?
+        studio_playlab_5: Potete aiutare  Spacebot a dire "salve terrestri" quando
+          fai clic su di lui ? Non dimenticare di fare clic su Spacebot dopo aver
+          fatto clic Esegui
+        studio_playlab_6: Puoi aiutare la Strega a muoversi usando i tasti freccia
+          su/giù/destra/sinistra per raggiungere le palle di fuoco magiche?
+        studio_playlab_7: Il blocco "Ripeti per sempre" permette di eseguire il codice
+          per sempre. Puoi attaccare ad esso dei blocchi  per aiutare il mago a spostarsi
+          a destra e a sinistra per sempre?
+        studio_playlab_8: Puoi aggiungere un blocco per segnare un punto e un blocco
+          per riprodurre un suono quando l'unicorno viene eseguito nella procedura
+          guidata e poi spostarlo con le frecce fino ad acquisire punti?
+        studio_playlab_9: Imposta lo sfondo per questa invasione aliena e aiuta la
+          Spacebot a raggiungere l'alieno più velocemente modificando la sua velocità.
+          Poi sposta l'alieno con i tasti freccia per arrivare alla Spacebot e avvisare
+          tutti gli altri
         studio_playlab_10: Crea un gioco per conto tuo. Quando hai fatto, clicca su
           Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
         studio_full_sandbox: Crea un gioco per conto tuo. Quando hai fatto, clicca
@@ -689,43 +689,45 @@
           più complesso? Se lo fai correttamente, posso percorrere una curva di qualunque
           lunghezza. Sbrigati! Il ghiaccio si sta sciogliendo!
       Standalone_Artist_1:
-        instructions: Welcome to Artist! First off, let's try to make a simple square
-          using the turn right block and move forward block. Each side should be 100
-          pixels long.
+        instructions: Benvenuto in Artista! Prima di tutto, proviamo a fare un semplice
+          quadrato utilizzando i blocchi "gira a destra" e "sposta in avanti". Ogni
+          lato deve essere lungo 100 pixel.
       Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel
-          long sides.
+        instructions: Disegna questo diamante con i lati di lunghezza pari a 100 pixel
+          disposti a 120 e 60 gradi.
       Standalone_Artist_3:
-        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree
-          turns?
+        instructions: Puoi disegnare questo esagono con lati di 100 pixel e con giri
+          di 60 gradi?
       Standalone_Artist_4:
-        instructions: Now you've got a new block to play with, the loop. This will
-          repeat a set of commands. What happens if you loop these commands 6 times?
+        instructions: Adesso hai un nuovo blocco con cui giocare, il ciclo. Questo
+          ripeterà un insieme di comandi. Cosa succede se ripeti questi comandi 6
+          volte?
       Standalone_Artist_5:
-        instructions: How many times do you need to loop this diamond to draw the
-          flower?
+        instructions: Quante volte è necessario eseguire un ciclo di questo diamante
+          per disegnare il fiore?
       Standalone_Artist_5.5:
-        instructions: 'Notice how we simplified the diamond code by turning it into
-          a loop. You can loop that whole sequence 12 times to draw the flower. Hint:
-          You''ll need to turn 30 degrees after your diamond loop so you don''t keep
-          drawing over the same diamond.'
+        instructions: 'Nota come abbiamo semplificato il codice del diamante utilizzando
+          un ciclo. Puoi eseguire il ciclo 12 volte per disegnare il fiore. Suggerimento:
+          È necessario ruotare di 30 gradi dopo ogni ciclo del diamante altrimenti
+          si otterrebbe sempre il disegno dello stesso diamante.'
       Standalone_Artist_6:
-        instructions: 'Loop this hexagon code 6 times to create the design. How many
-          degrees will you need to turn each time? Hint: divide the number of degrees
-          in a circle by the number of times you are looping.'
+        instructions: 'Ripeti 6 volte il codice relativo a questo esagono per creare
+          il disegno. Di quanti gradi dovrai girare ogni volta? Suggerimento: dividi
+          il numero di gradi in un cerchio per il numero di volte che ripeti il ciclo.'
       Standalone_Artist_7:
-        instructions: 'A function is another programming tool to help you avoid repeating
-          yourself. This function draws a flower, so you can use it any time you want
-          to draw a flower. Use this and the new jump block to draw these flowers.
-          Hint: The flowers are 150 pixels apart'
+        instructions: 'Una funzione è un altro strumento di programmazione per aiutarti
+          ad evitare inutili ripetizioni. Questa funzione disegna un fiore, così è
+          possibile utilizzarla ogni volta che vuoi disegnare un fiore. Utilizza questa
+          funzione e il nuovo blocco "salto" per disegnare questi fiori. Suggerimento:
+          I fiori sono distanti tra loro 150 pixel'
       Standalone_Artist_8:
-        instructions: Here's a function called "Draw a shape" that we've programmed
-          to draw hexagons. Run the code to see what it does and then experiment with
-          the function to see what happens. Can you make it draw a pattern of squares,
-          triangles, or octagons?
+        instructions: Ecco una funzione chiamata "Disegna una forma" che noi abbiamo
+          programmato per disegnare esagoni. Esegui il codice per vedere che cosa
+          fa e poi fai esperimenti con questa funzione per vedere cosa succede. Puoi
+          disegnare una composizione di quadrati, triangoli o ottagoni?
       Standalone_Artist_9:
-        instructions: Now go ahead and make whatever picture you'd like! You've even
-          got an empty function that you can make do whatever you want!
+        instructions: Ora vai avanti e crea qualsiasi immagine che desideri! Hai anche
+          una funzione vuota che puoi usare per fare quello che vuoi!
     video:
       name:
         maze_intro: Introduzione a "Il Labirinto"
@@ -803,14 +805,14 @@
         C3_crowdsourcing: Intelligenza Collettiva
         C3_functional_suncatchers: Acchiappa-sole Funzionale
         C3_songwriting_with_parameters: Composizione di Canzoni - Parametri
-        C4_artist_math: Programming the Artist with Math
-        C4_create_functions: Creating Functions
-        C4_edit_functions: Editing Functions
+        C4_artist_math: Programmazione dell'artista con la matematica
+        C4_create_functions: Creare Funzioni
+        C4_edit_functions: Modificare le funzioni
         C4_for_loops: Cicli For
         C4_variables: Variabili
-        frozen_intro: Hour of Code Intro
-        frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
+        frozen_intro: Introduzione all'Ora del Codice
+        frozen_loops: Introduzione ai Cicli
+        frozen_functions: Introduzione alle Funzioni
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto
@@ -842,6 +844,10 @@
           con il valore corretto di gradi di cui girare
         repeat_blocks: Usa il blocco "ripeti" ed includi in esso gli altri blocchi
           nell'area di lavoro
+        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the
+          workspace
+        repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks
+          inside
         snowflake_dropdown: Usa questo elenco a discesa per creare fiocchi di neve
           di varie forme!
         degrees_per_side: Dividi 360 per il numero di lati per ottenere la dimensione
@@ -868,19 +874,31 @@
         logic_category: Apri il riquadro  "Logico" per trovare il blocco "se/altrimenti".
         length_parameter: Riesci ad aggiornare questa funzione in modo da utilizzare
           il parametro "lunghezza"?
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
-          each circle.
-        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
-          and change the size.
-        frozen_snowflake_branch: Use the "create a snowflake branch" block
-        frozen_create_square: Attach more blocks here to create a square
-        playlab_drag_say: Drag the "say" block here and type "hello"
-        playlab_use_twice: Use this block twice and remember to change the actor number
-        playlab_move_girl: Use the "move right" block to move Tennis Girl
-        playlab_play_sound: Add "play sound" block here
-        playlab_arrow_keys: Remember to use these to move the witch after clicking
-          on Run
-        playlab_add_move: Add "move" blocks inside this repeat block
-        playlab_add_score: Add score blocks here
-        playlab_add_blocks: Add your blocks here
+        frozen_diamond_repeat: Usa il blocco di ripetizione per creare questa forma.
+        frozen_circle_function_in_circle_turn: Non dimenticare di girare dopo la creazione
+          di ogni cerchio.
+        frozen_circle_function_with_parameter_circle: Usa il blocco  "Crea un cerchio"
+          e modifica le dimensioni.
+        frozen_snowflake_branch: Usa il blocco "Crea un ramo del fiocco di neve"
+        frozen_create_square: Attacca più blocchi qui per creare un quadrato
+        playlab_drag_say: Trascina il blocco "Parla" qui e digita "ciao"
+        playlab_use_twice: Usa questo blocco due volte e ricorda di cambiare il numero
+          dell'attore
+        playlab_move_girl: Usa il blocco "sposta a destra" per spostare la tennista
+        playlab_play_sound: Aggiungi qui il blocco "riproduci l'audio"
+        playlab_arrow_keys: Ricorda di usare questi per spostare la strega dopo aver
+          fatto clic su Esegui
+        playlab_add_move: Aggiungi i blocchi  "sposta" all'interno di questo blocco
+          di ripetizione
+        playlab_add_score: Aggiungi i blocchi di punteggio qui
+        playlab_add_blocks: Aggiungi i tuoi blocchi qui
+        set_variable: Drag a number block here to set your variable
+        place_variable: Drag your variable inside this block
+        bee_for_loop: Drag the largest number of nectar you want the bee to collect
+          here
+        place_counter_variable: Drag your counter variable inside this block
+        function_editor_draw_square: This is your function definition. These blocks
+          run everytime you use the "draw a square" block
+        change_here: Make your change here
+        write_draw_square_function: Drag blocks from the toolbox into here that draw
+          a square

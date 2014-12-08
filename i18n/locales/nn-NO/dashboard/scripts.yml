@@ -281,3 +281,13 @@ nn:
           description: Eit utval av tema om brukbarheitstesting frå kurs 4.
           Variables: Variabler
           For Loops: For-løkker
+        potus:
+          title: special
+          description_short: special
+          description: special
+          Special: Special
+        special:
+          title: special
+          description_short: special
+          description: special
+          Special: Special

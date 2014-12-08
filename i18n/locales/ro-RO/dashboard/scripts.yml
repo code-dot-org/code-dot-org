@@ -18,7 +18,7 @@ ro:
           Artists 2: Artiştii 2
           Spelling Bee: Test de Ortografie
           Spelling Bee not blockly: Test de Ortografie fără Blockly
-          "Bee 1: Intro": 'Ortografie 1: Introducere'
+          "Bee 1: Intro": 'albinaa 1: Introducere'
           "Maze 2: Loops": 'Labirint 2: Bucle'
           "Bee 2: Loops": 'Ortografie 2: Bucle'
           Multi & Match: 'Multiplică & Potriveşte'
@@ -281,3 +281,13 @@ ro:
           description: O selecție din nivelurile cursului 4 pentru testarea utlizării.
           Variables: Variabile
           For Loops: Repetiții Pentru
+        potus:
+          title: special
+          description_short: special
+          description: special
+          Special: Special
+        special:
+          title: special
+          description_short: special
+          description: special
+          Special: Special

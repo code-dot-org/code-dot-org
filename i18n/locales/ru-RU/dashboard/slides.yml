@@ -33,7 +33,7 @@ ru:
         text: 'Каждый блок - это одна инструкция. Если вы перенесёте блок «двигаться вперед» в рабочую область и нажмете кнопку «Запустить программу», птица продвинется в лабиринте на одну клетку  вперед.'
       11:
         image: notes/hoc1_11.jpg
-        text: To do more than one action, you can drag many blocks to your workspace and attach them together. The bird will do the commands from top to bottom.
+        text: Чтобы совершить несколько действий, можно перетащить много блоков в рабочую область и соединить их. Птица будет выполнять команды, начиная с самой верхней.
       12:
         image: notes/hoc1_12.jpg
         text: Если вы запустили программу, а затем хотите что-то исправить и снова ее запустить, нажмите кнопку «Сброс».
@@ -75,10 +75,10 @@ ru:
         text: Привет меня зовут Кэти! Одна из самых интересных вещей в изучении компьютера то, что компьютерная программа может быть интерактивна.
       2:
         image: Примечания/flappy02.jpg
-        text: Каждый раз когда кто-то нажимает или печатает на компьютере или телефоне, генерируется событие, а этот код решает что делать когда случается событие.
+        text: Каждый раз, когда кто-то щёлкает мышью, касается экрана или печатает на компьютере или телефоне, это запускает СОБЫТИЕ и определённый код, который решает, что делать, когда происходит СОБЫТИЕ.
       3:
         image: Примечания/flappy03.jpg
-        text: 'Например, вы можете иметь обработчик событий, который говорит: «по щелчку мыши воспроизвести звук» '
+        text: 'Например, у вас может быть ОБРАБОТЧИК СОБЫТИЙ, который звучит так : «по щелчку мыши воспроизвести звук» '
       4:
         image: Примечания/flappy04.jpg
         text: 'Вы когда-нибудь слышали о игре "Порхающая птичка"? С помощью обработчиков событий, мы будем учиться программировать нашу собственную версию игры "Порхающая птичка"!'
@@ -160,8 +160,7 @@ ru:
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: |-
-          Hi, my name is Saloni. I use computer science to help solve problems in health and medicine. Let's learn about the "if else" block. It looks like the "if" block, but it has an extra part at the end that says "else".
+        text: 'Привет, меня зовут Салони. С помощью информатики я пытаюсь решить проблемы здоровья и медицины. Давайте изучим блок "if else" ("если иначе"). Он похож на блок "if" ("если"), но в конце у него есть дополнительная часть - "else" ("иначе").'
       2:
         image: notes/hoc5_2.jpg
         text: |-
@@ -278,35 +277,34 @@ ru:
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
-        text: "Hi, my name is Lyndsey. I model, act, and write my own apps. Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
+        text: Привет! Меня зовут Линдси. Я придумываю, моделирую и пишу приложения. Давайте использовать код и присоединимся к Анна и Эльзе в их исследовании магии и красоты льда.
       2:
         image: notes/frozen1_2.jpg
-        text: "You'll create snowflakes and patterns as you ice skate and make a winter wonderland that you can then share with your friends."
+        text: Будем кататься на коньках и рисовать на льду снежинки и узоры, создавать зимнюю страну чудес и делиться этим с друзьями.
       3:
         image: notes/frozen1_3.jpg
-        text: "In the next hour, you're going to learn the basics of how to code. Traditional programming is usually in text, but we'll use Blockly, which uses visual blocks that you can drag and drop to write programs. This is how even university students learn the basics. Under the hood, you're still creating code."
+        text: 'В течение следующего часа ты узнаешь основное о том, как создавать код. Традиционное программирование - это обычно текст, но мы будем пользоваться языком Блокли, использующим наглядные блоки, которые можно перетаскивать, чтобы писать программы. Таким образом изучают основы даже студенты университетов. Но под прикрытием блоков ты всё равно создаёшь код.'
       4:
         image: notes/frozen1_4.jpg
-        text: "A program is a set of instructions that tells a computer what to do. Let's build a code, or a program, that will help Elsa create a simple line. We will use this later to create more complex patterns."
+        text: 'Программа - это набор инструкций, говорящих компьютеру, что делать. Давай построим код, или программу, которая поможет Эльзе провести простую линию. Это позже пригодится нам для создания более сложных узоров.'
       5:
         image: notes/frozen1_5.jpg
-        text: "Your screen is split into three main parts. On the left, is the ice surface where you'll run your program. The instructions for each level are written right below the surface."
+        text: 'Экран поделён на три основные части. Слева - лёд, на котором будет запущена твоя программа. Ниже льда находится инструкция к каждому уровню.'
       6:
         image: notes/frozen1_6.jpg
-        text: This middle area is the toolbox, and each of these blocks is an action that Elsa and Anna can do.
+        text: 'Эта часть посередине - панель инструментов, и каждый из этих блоков - действие, которое Эльза и Анна могут совершить.'
       7:
         image: notes/frozen1_7.jpg
-        text: |-
-          The white space on the right is called the workspace, and this is where we'll build our program. To move around the ice surface, you'll use the "Move Forward" block.
+        text: 'Белое пространство справа называется рабочим пространством. Это то место, где мы будем строить программу. Чтобы двигаться по льду, ты будешь использовать блок "двигаться вперёд".'
       8:
         image: notes/frozen1_8.jpg
-        text: 'Here, the "Move Forward" block says, "move forward by 100 pixels." When we press "Run", what happens? Elsa moves forward a certain amount on the screen, 100 pixels in fact! Pixels are basically very tiny squares on your computer screen.'
+        text: 'Здесь в блоке "двигаться вперёд" указано "двигаться вперёд на 100 точек". Что произойдёт, когда мы нажмём кнопку "Выполнить"? Эльза передвинется вперёд на определённое расстояние, а именно на 100 точек! Точки - это пиксели, крохотные квадратики на экране компьютера.'
       9:
         image: notes/frozen1_9.jpg
-        text: 'The other block we have in this puzzle says "turn right by 90 degrees." And when we use this "Turn Right" block, that makes Elsa turn a certain amount. You can play around with how far you want Elsa to turn. The angle is measured from the path ahead of Elsa. So, this is a 90 degree turn. And this is a 120 degree turn.'
+        text: 'В другом блоке из этой задачи написано "повернуть вправо на 90 градусов". И когда мы используем такой  блок "повернуть вправо", он заставляет Эльзу повернуть на определённое количество градусов. Можно поиграться, разворачивая Эльзу настолько широко, насколько ты хочешь. Угол откладывается от линии пути впереди Эльзы. Это - поворот на 90 градусов. А это - поворот на 120 градусов.'
       10:
         image: notes/frozen1_10.jpg
-        text: Remember, you can change the number of pixels and degrees by clicking the arrows next to them.
+        text: Помни, что можно менять количество точек и градусов, нажимая на стрелки рядом с ними.
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg

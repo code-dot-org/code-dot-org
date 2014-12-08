@@ -757,7 +757,7 @@
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
-        run: Hit "Run" to try your program
+        run: Klicka på "Kör" för att prova ditt program
         watch_again: Klicka här för att titta på videon igen
         gray_block_explanation: Block som är grå kan inte tas bort. Kan du lösa pusslet
           ändå?
@@ -773,11 +773,14 @@
           blocket för att få Elsa att gå framåt
         turn_elsa: Använd "sväng" blocket för att få Elsa att vända sig. Siffran i
           rullistan bestämmer hur mycket hon svänger
-        replace_questions: Use the drop-down to replace "???" with a number
-        replace_questions_degree: Use the drop-down to replace "???" with the correct
-          degree to turn
-        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
+        replace_questions: Använd rullistan för att ersätta "???" med en siffra
+        replace_questions_degree: Använd rullistan för att ersätta "???" med rätt
+          antal grader att svänga
+        repeat_blocks: Använda "Upprepa" blocket, lägg det runt blocken i arbetsytan
+        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the
           workspace
+        repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks
+          inside
         snowflake_dropdown: Använd den här rullisten för att skapa olika snöflingor!
         degrees_per_side: Divide 360 by the number of sides to get the size of each
           angle in degrees.
@@ -800,13 +803,13 @@
           the Bee will turn to get the nectar.
         logic_category: Open the "Logic" flyout to find the "if/else" block.
         length_parameter: Can you update this function so it uses the "length" parameter?
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
-          each circle.
-        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
-          and change the size.
-        frozen_snowflake_branch: Use the "create a snowflake branch" block
-        frozen_create_square: Attach more blocks here to create a square
+        frozen_diamond_repeat: Använd upprepa blocket för att skapa den här formen.
+        frozen_circle_function_in_circle_turn: Glöm inte att svänga efter varje cirkel
+          du skapar.
+        frozen_circle_function_with_parameter_circle: Använd blocket "skapa en cirkel"  och
+          ändra storleken.
+        frozen_snowflake_branch: Använd blocket "skapa en snöflinge-gren"
+        frozen_create_square: Lägg till fler block här för att skapa en kvadrat
         playlab_drag_say: Drag the "say" block here and type "hello"
         playlab_use_twice: Use this block twice and remember to change the actor number
         playlab_move_girl: Use the "move right" block to move Tennis Girl
@@ -816,3 +819,13 @@
         playlab_add_move: Add "move" blocks inside this repeat block
         playlab_add_score: Add score blocks here
         playlab_add_blocks: Add your blocks here
+        set_variable: Drag a number block here to set your variable
+        place_variable: Drag your variable inside this block
+        bee_for_loop: Drag the largest number of nectar you want the bee to collect
+          here
+        place_counter_variable: Drag your counter variable inside this block
+        function_editor_draw_square: This is your function definition. These blocks
+          run everytime you use the "draw a square" block
+        change_here: Make your change here
+        write_draw_square_function: Drag blocks from the toolbox into here that draw
+          a square

@@ -3,14 +3,13 @@
     unplugged:
       Unplug1:
         title: Wprowadzenie do informatyki
-        desc: This lesson will introduce the concept of Computer Science and explain
-          what a Computer Scientist does.  It will also give students an opportunity
-          to assume the role of a computer scientist.  By the end of the activity,
-          each student will have a take-home reminder of what he or she learned.  You
-          may be tempted to skip teaching young children the vocabulary words that
-          are associated with the lessons that follow, but presenting them in a fun
-          and playful light now is far more productive than waiting for more advanced
-          opportunities.
+        desc: Na tej lekcji zostaną wprowadzone pojęcia informatyki i zostanie wyjaśnione,
+          czym zajmuje się informatyk. Będzie to okazją dla uczniów, by wcielili się
+          w rolę informatyka. Po zakończeniu tych zajęć każdy uczeń zabierze ze sobą
+          do domu to, czego się nauczył. Możesz ulec pokusie, by pominąć nauczenia
+          dzieci określeń, pojawiających w czasie lekcji, które są przed nami, prezentując
+          je jednak teraz w sposób zabawny i przyjemny może okazać się bardziej owocne,
+          niż oczekiwanie na bardziej zaawansowaną okazję.
         pdfs:
         - unplug1
         video: Unplug1
@@ -66,9 +65,9 @@
         video: Unplug5
       Unplug6:
         title: Warunki
-        desc: This is a class game.  After introducing the idea of conditionals, if-statements,
-          and loops, the class can practice together using a pre-written program,
-          a deck of cards, and luck of the draw.
+        desc: Jest to gra dla klasy. Po wprowadzeniu warunków, instrukcji warunkowych
+          if (jeśli) i pętli, klasa może wspólnie ćwiczyć korzystając z wcześniej
+          napisanego programu, talii kart i szczęścia w losowaniu.
         pdfs:
         - unplug6
         video: Unplug6
@@ -84,14 +83,9 @@
         video: Unplug7
       Unplug8:
         title: Abstrakcja
-        desc: This lesson will introduce the concept of Computer Science and explain
-          what a Computer Scientist does.  It will also give students an opportunity
-          to assume the role of a computer scientist.  By the end of the activity,
-          each student will have a take-home reminder of what he or she learned.  You
-          may be tempted to skip teaching young children the complicated vocabulary
-          words that are associated with the lessons that follow, but presenting them
-          in a fun and playful light now is far more productive than waiting for more
-          advanced opportunities.
+        desc: Ta aktywność jest połączeniem codziennych rutynowych działań Twoich
+          uczniów z grą polegającą na myśleniu w stylu Mad-Lib, aby pomóc Twojej klasie
+          dowiedzieć się o efektywności (skuteczności) abstrakcji.
         pdfs:
         - unplug8
         video: Unplug8
@@ -121,31 +115,32 @@
         video: Unplug11
       UnplugHappyMaps:
         title: Happy Maps
-        desc: Students create simple algorithms (sets of instructions) to move a character
-          through a maze using a single command.
+        desc: Uczniowie tworzą proste algorytmy (zestawy instrukcji), by przeprowadzić
+          postać (znak) przez labirynt posługując się pojedynczym poleceniem.
         video: C1_happy_maps_unplugged
       MoveIt:
-        title: Move it, Move it
-        desc: Students create simple algorithms (sets of instructions) to move a character
-          through a maze using a single command.
+        title: Przenieś go, Przenieś go
+        desc: Uczniowie tworzą proste algorytmy (zestawy instrukcji), by przeprowadzić
+          postać (znak) przez labirynt posługując się pojedynczym poleceniem.
         video: C1_moveitmoveit_unplugged
       PlantASeed:
-        title: 'Real-life Algorithms: Plant a Seed'
-        desc: This lesson calls out ways we use algorithms in our daily lives, using
-          the act of planting a seed as an example. It also focuses on the bigger
-          picture of computer science and how algorithms play an essential part.
+        title: 'Algorytmy z życia wzięte: sadź nasiona'
+        desc: Ta lekcja przywołuje sposoby stosowania algorytmów w naszym codziennym
+          życiu, posługując się przykładem sadzenia nasion. Koncentruje się również
+          na rozleglejszym obrazie informatyki i zasadniczej roli, jaką odgrywają
+          algorytmy.
         video: C1_planting_seed
       BuildingAFoundation:
-        title: Building a Foundation
+        title: Building a Foundation (Kładąc podwaliny)
         desc: Students build a structure using only provided supplies. Structures
           must complete a task (reach a certain height or bear a certain weight),
           and students discuss the idea of being persistent when things get complicated.
         video: C1_building_foundation
       GettingLoopy:
-        title: Getting Loopy
-        desc: This lesson introduces the programming concept of loops (repeated instructions)
-          through a dance activity. Students will learn simple choreography, then
-          be instructed to repeat it.
+        title: Coraz Loopy
+        desc: Ta lekcja wprowadza pętlę (instrukcje powtarzania), jedno z pojęć programowania,
+          z wykorzystaniem tańca. Uczniowie poznają prostą choreografię, a następnie
+          są proszeni o powtórzenie jej.
         video: C1_getting_loopy
       RelayProgramming:
         title: Relay programming

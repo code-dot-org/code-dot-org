@@ -33,6 +33,9 @@ social:
 - if request.site == 'csedweek.org'
   %div
     = view :index_hoc
+- elsif request.site == 'code.org'
+  %div
+    = view :index_loc
 
 -facebook = {:u=>"http://#{request.site}/"}
 
@@ -62,52 +65,22 @@ social:
           -if locale_chapter_partner?
             -count_string = I18n.t(:n_have_learned_an_hoc).gsub("#", format_integer_with_decimals(fetch_hoc_metrics['started']).to_s)
           -else
+
             -count_string = I18n.t(:n_have_learned_an_hoc).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
           -if request.locale == 'en-US'
             %a{:href=>'/leaderboards', :style=>'text-decoration:none'}
               =count_string
+            %h4
+              Anybody can learn.
           -else
             =count_string
 
-        #heading
-          =I18n.t :hoc2014_heading
-
-        %div{style: "height: 12px;"}
-          &nbsp;
-
-        .option
-          .optionleft
-            =I18n.t :hoc2014_students
-            &nbsp;
-          .optionright
-            %a#trybutton{:href=>'/learn'}
-              %button.optionbutton
-                =I18n.t :hoc2014_try
-            %br/
-
-        .option{style: "clear:both"}
-          .optionleft
-            =I18n.t :hoc2014_teachers
-            &nbsp;
-          .optionright
-            %a#hostbutton{:href=>"http://#{canonical_hostname('hourofcode.com')}/#join", target: "_blank"}
-              %button.optionbutton
-                =I18n.t :hoc2014_host
-            %br/
-
-        .option{style: "clear:both"}
-          .optionleft
-            =I18n.t :hoc2014_everyone
-            &nbsp;
-          .optionright
-            %a#supportbutton{:href=>'/donate'}
-              %button.optionbutton
-                =I18n.t :hoc2014_support
-            %br/
-
-        .whatishoc{style: "clear:both"}
-          %a{:href=>"http://#{canonical_hostname('hourofcode.com')}", :target=>'_blank'}
-            =I18n.t :hoc2014_whatishoc
+        %div{:style=>'margin-bottom: 8px'}
+          %a#trybutton{:href=>'/learn'}
+            %button.optionbutton
+              =I18n.t :hoc2014_try
+        %a{:href=>'/learn/beyond', :style=>'font-size: 16px; color: white'}
+          =I18n.t :beyond_an_hour
 
     -download_filename = (request.site == 'code.org') ? 'Code-5-minute.mov' : 'HoC-video-15mb.mp4'
     #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}
@@ -154,7 +127,7 @@ social:
     %h1.mobile-center
       =I18n.t :studiobar_title
     #body.mobile-pad-left64
-      - studiobar_items = [ {id: "elementary", url: "http://#{canonical_hostname('studio.code.org')}"}, {id: "hoc", url: "/api/hour/begin/codeorg"}, {id: "flappy", url: "http://#{canonical_hostname('studio.code.org')}/flappy/1"}, {id: "teacher", url: "/educate/k5"}]
+      - studiobar_items = [ {id: "elementary", url: "http://#{canonical_hostname('studio.code.org')}"}, {id: "frozen", url: "/frozen"}, {id: "teacher", url: "/educate/k5"}, {id: "donate", url: "/donate"}]
       - studiobar_items.each_with_index do |item, index|
         - if index < studiobar_items.length-1
           - other_style = "margin-right: 26px"

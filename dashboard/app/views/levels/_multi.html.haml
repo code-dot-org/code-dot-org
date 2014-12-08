@@ -14,7 +14,7 @@
   .answers
 
     %span
-      %b.multi-question!= data['questions'][0]['text']
+      %strong.multi-question!= data['questions'][0]['text']
 
     %br/
     %br/
@@ -34,7 +34,7 @@
             .item-radio{id: "radio_#{i}"}
               %input{id: "choice_#{i}", name: "vote", type: "radio", value: "#{i}", correct: "#{correct}"}
             .item-cross{id: "cross_#{i}", style: "display: none"}
-              %b X
+              %strong X
             .item-label
               %label{style: "height: #{height}"}!= multi_t(answer['text'])
 

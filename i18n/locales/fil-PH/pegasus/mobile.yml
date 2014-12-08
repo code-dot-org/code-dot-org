@@ -105,10 +105,10 @@ fil-PH:
   studiobar_elementary_title: Mga kurso pang elementary
   studiobar_elementary_body: 'Our three new courses for K&#8209;5'
   studiobar_hoc_title: Ang Hour of Code
-  studiobar_hoc_body: Learn to code with Angry Birds
+  studiobar_hoc_body: Matutong mag-code gamit ang Angry Birds
   studiobar_flappy_title: Flappy Code
   studiobar_flappy_body: Make and share your own Flappy game
-  studiobar_teacher_title: Made for teachers
+  studiobar_teacher_title: Ginawa para sa mga teacher
   studiobar_teacher_body: Introduce Code Studio in your classroom
   contact_form_topic_student: Ako ay estudyante
   contact_form_topic_parent: Ako ay magulang
@@ -160,7 +160,7 @@ fil-PH:
   volunteer_engineer_submission_experience_university_student_or_researcher: Kasalukuyang estudyante sa unibersidad (o researcher)
   volunteer_engineer_submission_experience_software_professional: Software professional
   petition_age: Age
-  dashboard_landing_title: Teacher Home Page
+  dashboard_landing_title: Home Page ng Teacher
   dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
   dashboard_landing_video: Panoorin ang video na ito
   dashboard_landing_watch_video: for a tour of the new features!
@@ -201,23 +201,23 @@ fil-PH:
   dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
-  dashboard_sections_new_section: New section
+  dashboard_sections_new_section: Bagong section
   dashboard_sections_jumbotron_instruction: Create new sections and add students to them. Sections help you organize students into smaller groups so you can track their progress and manage their accounts.
   dashboard_sections_table_section: Section
-  dashboard_sections_table_secret: Login Type
+  dashboard_sections_table_secret: Klase ng Login
   dashboard_sections_table_grade: Grade
   dashboard_sections_table_course: Course
   dashboard_sections_table_students: Students
   dashboard_sections_table_code: Section Code
-  dashboard_sections_name: Section Name
+  dashboard_sections_name: Pangalan ng Section
   dashboard_sections_choose_secret: 'If you would like to provide accounts to your students, choose a secret type of <b>word</b> or <b>picture</b> for that section.'
   dashboard_sections_secret_word: 'A <b>word</b> allows you to set a secret word for each student.'
   dashboard_sections_secret_picture: "A <b>picture</b> allows you to set a secret picture for each student, ideal for younger students who can't yet type."
   dashboard_sections_secret_none: 'If you would like your students to manage their own accounts, including choosing their own passwords, choose a secret type of <b>none</b>.'
   dashboard_sections_print_secrets: You may then print a sheet of cards containing account information to be distributed to your students individually.
-  dashboard_sections_switch_section: 'Switch section:'
-  dashboard_students_add_student: Add student
-  dashboard_students_add_students: Add multiple students
+  dashboard_sections_switch_section: 'Magpalit ng section:'
+  dashboard_students_add_student: Magdagdag ng estudyante
+  dashboard_students_add_students: Magdagdag ng maraming estudyante
   dashboard_students_add_multiple: 'Type or paste the names of your students, one per line:'
   dashboard_students_new_section: "You've created a new section! Now add your students using the <b>Add student</b> and <b>Add multiple students</b> buttons above."
   dashboard_students_placeholder_name: Student Name
@@ -293,7 +293,7 @@ fil-PH:
   carousel_heading_international: Mga tutorial sa iyong wika
   carousel_heading_domestic: Tutorials available in English
   carousel_heading_beginners: Tutorials for Beginners
-  carousel_heading_javascript: Tutorials that teach Javascript
+  carousel_heading_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: "No device or internet? Try 'unplugged' computer science"
   carousel_heading_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: Tutorials in other programming languages
