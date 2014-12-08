@@ -32,7 +32,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.frozen_script
-    @@frozen_script ||=  Script.includes([{script_levels: [{level: [:game, :concepts] }, :stage]}, :stages]).find_by_name(FROZEN_NAME)
+    @@frozen_script ||= Script.includes([{script_levels: [{level: [:game, :concepts] }, :stage]}, :stages]).find_by_name(FROZEN_NAME)
   end
 
   def self.hoc_script
@@ -40,7 +40,7 @@ class Script < ActiveRecord::Base
   end
 
   def cached?
-    self.name == FROZEN_NAME || self.name == HOC_NAME || self.id == TWENTY_HOUR_ID
+    self.equal?(Script.twenty_hour_script) || self.equal?(Script.frozen_script) || self.equal?(Script.hoc_script)
   end
 
   def starting_level
@@ -106,10 +106,6 @@ class Script < ActiveRecord::Base
 
   def find_script_level(level_id)
     self.script_levels.detect { |sl| sl.level_id == level_id }
-  end
-
-  def self.twenty_hour_script
-    Script.find(TWENTY_HOUR_ID)
   end
 
   def self.builder_script
