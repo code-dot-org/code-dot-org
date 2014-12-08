@@ -146,15 +146,15 @@ social:
       %br/
       =hoc_s(:stats_michael)
 
-  #join{:style=>'display: none'}
-    %h1=hoc_s(:front_join_us_button)
-    %div
-      .row
-        .col-md-6
-          =view :signup_form
-        .col-md-6
-          =view :join_us_description
-          =view :whats_next
+  -##join
+  -#  %h1=hoc_s(:front_join_us_button)
+  -#  %div
+  -#    .row
+  -#      .col-md-6
+  -#        =view :signup_form
+  -#      .col-md-6
+  -#        =view :join_us_description
+  -#        =view :whats_next
 
   %a#faqs{name:'faq'}
   .row
