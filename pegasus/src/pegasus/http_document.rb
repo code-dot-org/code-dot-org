@@ -23,11 +23,11 @@ end
 def social_metadata(request, header=nil)
   if request.site == 'csedweek.org'
     metadata = {
-      'og:title'          => header['title'] || "The Hour of Code is coming",
+      'og:title'          => header['title'] || "The Hour of Code is here",
       'og:description'    => header['description'] || "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104.",
-      'og:image'          => header['og:image'] || 'http://csedweek.org/images/hour-of-code-2014-video-thumbnail.jpg',
-      'og:image:width'    => header['og:image:width'] || '1705',
-      'og:image:height'   => header['og:image:height'] || '949',
+      'og:image'          => header['og:image'] || 'http://csedweek.org/images/code-video-thumbnail.jpg',
+      'og:image:width'    => header['og:image:width'] || '1440',
+      'og:image:height'   => header['og:image:height'] || '810',
       'og:site_name'      => 'CSEd Week',
       # 'og:video'          => 'https://youtube.googleapis.com/v/rH7AjDMz_dc',
       # 'og:video:width'    => '720',
@@ -35,11 +35,11 @@ def social_metadata(request, header=nil)
     }
   else
     metadata = {
-      'og:title'          => header['title'] || "The Hour of Code is coming",
+      'og:title'          => header['title'] || "The Hour of Code is here",
       'og:description'    => header['description'] || "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104.",
-      'og:image'          => header['og:image'] || 'http://code.org/images/hour-of-code-2014-video-thumbnail.jpg',
-      'og:image:width'    => header['og:image:width'] || '1705',
-      'og:image:height'   => header['og:image:height'] || '949',
+      'og:image'          => header['og:image'] || 'http://code.org/images/code-video-thumbnail.jpg',
+      'og:image:width'    => header['og:image:width'] || '1440',
+      'og:image:height'   => header['og:image:height'] || '810',
       'og:site_name'      => 'Code.org',
       # 'og:video'          => 'https://youtube.googleapis.com/v/rH7AjDMz_dc',
       # 'og:video:width'    => '720',
