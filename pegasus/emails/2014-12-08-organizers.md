@@ -1,7 +1,7 @@
 ---
 from: 'Hadi Partovi (Code.org) <hadi_partovi@code.org>'
 subject: "A special Hour of Code video, and new certificates"
-litmus_tracking_id: "r7uolzbn"
+litmus_tracking_id: "r4xvi6pf"
 ---
 
 Welcome to Computer Science Education Week 2014 and the 1st anniversary of the Hour of Code!
@@ -17,7 +17,7 @@ Start your students off with an inspirational video ‒ whether the one above, o
 ## Certificates for your students
 To finish your Hour of Code in style, print certificates for your students at [https://code.org/certificates](https://code.org/certificates). If students use our Artist with Anna and Elsa tutorial, this page will also let you print their *Frozen*-themed creations.
 
-[![image](https://code.org/images/email/fit-150/certificate.jpg)](https://code.org/certificates)&nbsp;&nbsp;[![image](https://code.org/images/email/fit-150/snowflakes-certificates.jpg)](https://code.org/certificates)
+[![image](https://code.org/images/email/fit-150/certificate.jpg)](https://code.org/certificates)&nbsp;&nbsp;[![image](https://code.org/images/email/fit-150/snowflakes-certificate.jpg)](https://code.org/certificates)
 
 I’d like to personally thank every educator hosting an Hour of Code. You’ve been an inspiration to all of us at Code.org. Thank you for your support, and for your patience as we learn to do our jobs better. 
 
