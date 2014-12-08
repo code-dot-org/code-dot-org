@@ -82,7 +82,7 @@ social:
         %a{:href=>'/learn/beyond', :style=>'font-size: 16px; color: white'}
           =I18n.t :beyond_an_hour
 
-    -download_filename = (request.site == 'code.org') ? 'Code-5-minute.mov' : 'HoC-video-15mb.mp4'
+    -download_filename = 'HoC-video-15mb.mp4'
     #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}
       = view :share_buttons, facebook:facebook, twitter:twitter, download_url:"http://s3.amazonaws.com/cdo-videos/#{download_filename}"
 
