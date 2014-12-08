@@ -6,20 +6,32 @@
   %img.print_icon{:src=>'/images/fit-50/frozen-impressive-5.jpg'}
   %img.print_icon{:src=>'/images/fit-50/frozen-impressive-6.jpg'}
 %button#print_button
-  Print All
+  =I18n.t :print_all
 %iframe#print_frame{:src=>'/images/frozen-impressive-all.jpg', :style=>'display:none'}
 :css
   .print_icon {
-    width: 14%;
+    width: 15.7%;
   }
   #icons {
-    width: 43%;
+    width: 82%;
     display: inline-block;
   }
   #print_button {
     background-color: rgb(126, 92, 162);
     border-color: rgb(126, 92, 162);
   }
+  @media (max-width: 500px) {
+    .print_icon {
+      width: 15%;
+    }
+    #icons {
+      width: 100%;
+    }
+    #print_button {
+      margin-top: 10px;
+    }
+  }
+
 
 :javascript
   $(document).ready(function()
