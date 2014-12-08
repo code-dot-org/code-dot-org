@@ -59,6 +59,7 @@ var LOCALES = (LOCALIZE ? [
   'lv_lv',
   'ms_my',
   'nl_nl',
+  'nn_no',
   'no_no',
   'pl_pl',
   'pt_br',

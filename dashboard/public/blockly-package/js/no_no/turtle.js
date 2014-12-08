@@ -14365,9 +14365,9 @@ Turtle.checkAnswer = function() {
   };
 
   // Get the canvas data for feedback.
-  if (Turtle.testResults >= BlocklyApps.TestResults.TOO_MANY_BLOCKS_FAIL) {
+  /*if (Turtle.testResults >= BlocklyApps.TestResults.TOO_MANY_BLOCKS_FAIL) {
     reportData.image = getFeedbackImage();
-  }
+  }*/
 
   BlocklyApps.report(reportData);
 
