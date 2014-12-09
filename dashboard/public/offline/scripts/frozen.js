@@ -22,5 +22,6 @@ scripts.frozen = {
     'frozen snowflake branch',
     'frozen snowflake full',
     'frozen freeplay'
-  ]
+  ],
+  finishedRedirectURL: 'http://code.org/api/hour/finish/frozen'
 };

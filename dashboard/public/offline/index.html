@@ -100,6 +100,15 @@
       document.head.appendChild(script);
     }
     
+    function getNextLevelLink(levelParams, scriptDefinition) {
+      var nextLevelParams = $.extend({}, levelParams);
+      nextLevelParams.puzzle = parseInt(nextLevelParams.puzzle) + 1;
+      if (!scriptDefinition.puzzles[nextLevelParams.puzzle]) {
+        return scriptDefinition.finishedRedirectURL;
+      }
+      return '?' + $.param(getNextLevel(nextLevelParams));
+    }
+
     function getNextLevel(params) {
       var copy = $.extend({}, params);
       copy.puzzle++;
@@ -109,8 +118,8 @@
     // Get level info from URL (set some defaults first)
     var params = {
       s: 'frozen',
-      stage: '1',
-      puzzle: '1'
+      stage: 1,
+      puzzle: 1
     };
     location.href.split(/\?|&/).slice(1).forEach(function(param) {
       var kv = param.split('=');
@@ -260,7 +269,7 @@
       appOptions.fallbackResponse = {
         "success": {
           "level_path": '?' + $.param(params),
-          "redirect": '?' + $.param(getNextLevel(params)),
+          "redirect": getNextLevelLink(params, currentScript),
           "design": "white_background"
         },
         "failure": {
