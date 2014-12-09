@@ -24,7 +24,10 @@
   - body = data_t_suffix('script.name', id, "description_short")
 
 - elsif ["artist", "playlab", "hourofcode", "frozen"].include?(id)
-  - url = script_reset_url(id)
+  - if id == "frozen"
+    - url = "http://static.studio.code.org/"
+  - else
+    - url = script_reset_url(id)
   - if id == "frozen"
     - title = t('upsell.frozen.title')
   - else
