@@ -34,7 +34,7 @@ opt_parser = OptionParser.new do |opts|
     Example: runner.rb -r"
   opts.separator ""
   opts.separator "Specific options:"
-  opts.on("-c", "--config BrowserConfigName", String, "Specify the name of one of the configs from ") do |c|
+  opts.on("-c", "--config BrowserConfigName,BrowserConfigName1", Array, "Specify the name of one or more of the configs from ") do |c|
     $options.config = c
   end
   opts.on("-b", "--browser BrowserName", String, "Specify a browser") do |b|
@@ -99,12 +99,14 @@ if $options.local
 end
 
 if $options.config
-  namedBrowser = $browsers.detect {|b| b['name'] == $options.config }
-  if !namedBrowser
-    puts "No config exists with name #{$options.config}"
-    exit
+  $browsers = $options.config.map do |name|
+    $browsers.detect {|b| b['name'] == name }.tap do |browser|
+      unless browser
+        puts "No config exists with name #{name}"
+        exit
+      end
+    end
   end
-  $browsers = [namedBrowser]
 end
 
 $logfile = File.open("success.log", "w")
