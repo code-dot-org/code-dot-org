@@ -4,6 +4,7 @@ require 'test_helper'
 class ActivitiesControllerTest < ActionController::TestCase
   include Devise::TestHelpers
   setup do
+    LevelSourceImage # make sure this is loaded before we mess around with mocking S3...
     CDO.disable_s3_image_uploads = true # make sure image uploads are disabled unless specified in individual tests
 
     @user = create(:user, total_lines: 15)
@@ -88,7 +89,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
 
     # created a user script
-    user_script = assigns(:user_script)
+    user_script = UserScript.last
     assert_equal @script_level.script, user_script.script
     assert_equal @user, user_script.user
     assert user_script.started_at
@@ -172,7 +173,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
 
     # created a user script
-    user_script = assigns(:user_script)
+    user_script = UserScript.last
     assert_equal @script_level.script, user_script.script
     assert_equal @user, user_script.user
     assert user_script.started_at
@@ -328,7 +329,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
 
     # created a user script that we started in the past with the other userlevel
-    user_script = assigns(:user_script)
+    user_script = UserScript.last
     assert_equal @script_level.script, user_script.script
     assert_equal @user, user_script.user
     assert_equal script_start_date.to_i, user_script.started_at.to_i
@@ -667,6 +668,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     # error and then succeeding by returning the existing userlevel
     user_level_finder = mock('user_level_finder')
     user_level_finder.stubs(:first).returns(nil)
+    user_level_finder.stubs(:update_all).with(attempts: 1, best_result: 100)
     UserLevel.stubs(:where).returns(user_level_finder)
 
     existing_user_level = UserLevel.create(user: @user, level: @script_level.level, script: @script_level.script)
@@ -674,6 +676,7 @@ class ActivitiesControllerTest < ActionController::TestCase
       raises(ActiveRecord::RecordNotUnique.new(Mysql2::Error.new("Duplicate entry '1208682-37' for key 'index_user_levels_on_user_id_and_level_id'"))).
       then.
       returns(existing_user_level)
+
 
     assert_creates(LevelSource, Activity) do
       assert_does_not_create(GalleryActivity, UserLevel) do

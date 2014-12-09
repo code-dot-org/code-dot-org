@@ -92,7 +92,7 @@ class ApplicationController < ActionController::Base
     end
 
     if options[:level_source].try(:id)
-      response[:level_source] = level_source_url(options[:level_source])
+      response[:level_source] = level_source_url(id: options[:level_source].id)
       response[:phone_share_url] = send_to_phone_url
       response[:level_source_id] = options[:level_source].id
     end
@@ -108,25 +108,25 @@ class ApplicationController < ActionController::Base
         options[:level_source].try(:id) &&
         options[:solved?] &&
         options[:activity] && 
-        options[:level_source].try(:level_source_image)
+        options[:level_source_image]
       response[:save_to_gallery_url] = gallery_activities_path(gallery_activity: {activity_id: options[:activity].id})
     end
 
-    unless options[:solved?]
-      # Call method to generate hint and related attributes, copying results into response.
-      hint_details = ExperimentActivity::determine_hint({
-          level_source: options[:level_source],
-          current_user: current_user,
-          enable_external_hints: Rails.env.production?,
-          ip: request.remote_ip,
-          uri: request.referer,
-          activity: options[:activity]})
-      response[:hint] = hint_details[:hint] if hint_details[:hint]
-      response[:hint_request_placement] = hint_details[:hint_request_placement] if
-          hint_details[:hint_request_placement]
-      response[:hint_requested_url] =
-         activity_hint_path(hint_details[:activity_hint]) if hint_details[:activity_hint]
-    end
+    # unless options[:solved?]
+    #   # Call method to generate hint and related attributes, copying results into response.
+    #   hint_details = ExperimentActivity::determine_hint({
+    #       level_source: options[:level_source],
+    #       current_user: current_user,
+    #       enable_external_hints: Rails.env.production?,
+    #       ip: request.remote_ip,
+    #       uri: request.referer,
+    #       activity: options[:activity]})
+    #   response[:hint] = hint_details[:hint] if hint_details[:hint]
+    #   response[:hint_request_placement] = hint_details[:hint_request_placement] if
+    #       hint_details[:hint_request_placement]
+    #   response[:hint_requested_url] =
+    #      activity_hint_path(hint_details[:activity_hint]) if hint_details[:activity_hint]
+    # end
 
     # Set up the background design
     response[:design] = ExperimentActivity::TYPE_FEEDBACK_DESIGN_WHITE

@@ -16,10 +16,7 @@
           -count = 0
           -items.each_pair do |key, tutorial|
             -tags = I18n.t("#{tutorial[:code]}_gradelevel") + ' | ' + I18n.t("#{tutorial[:code]}_platformtext")
-            -if request.locale == 'en-US'
-              -url = 'http://static.studio.code.org/'
-            -else
-              -url = tutorials.launch_url_for(key,request.host_with_port)
+            -url = tutorials.launch_url_for(key,request.host_with_port)
             -short_url = ('http://hourofcode.com/' + tutorial[:short_code]) unless tutorial[:short_code].nil_or_empty?
             .slide.clear{:style=>"background-color:white;"}
               .slide-img<

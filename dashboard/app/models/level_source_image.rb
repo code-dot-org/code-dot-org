@@ -8,7 +8,7 @@ class LevelSourceImage < ActiveRecord::Base
   
   def save_to_s3(image)
     return false if CDO.disable_s3_image_uploads
-    
+
     unless AWS::S3.upload_to_bucket('cdo-art', s3_filename, image, no_random: true)
       return false
     end
@@ -55,21 +55,4 @@ class LevelSourceImage < ActiveRecord::Base
     return "http://code.org/images/logo.png" if CDO.disable_s3_image_uploads
     S3_URL + s3_framed_filename
   end
-
-  def old_s3_filename
-    LevelSourceImage.hashify_filename "#{Rails.env}/#{id}.png"
-  end
-
-  def old_s3_framed_filename
-    LevelSourceImage.hashify_filename "#{Rails.env}/#{id}_framed.png"
-  end
-
-  def old_s3_url
-    S3_URL + old_s3_filename
-  end
-
-  def old_s3_framed_url
-    S3_URL + old_s3_framed_filename
-  end
-
 end
