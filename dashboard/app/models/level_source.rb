@@ -1,5 +1,9 @@
 require 'digest/md5'
 
+def level_source_cache()
+  @@level_sources_redis ||= rack_env?(:production) ? Redis.connect(url:CDO.level_sources_redis_url) : Hash.new
+end
+
 # A specific solution attempt for a specific level
 class LevelSource < ActiveRecord::Base
   belongs_to :level
@@ -17,9 +21,18 @@ class LevelSource < ActiveRecord::Base
 
   def self.find_identical_or_create(level, data)
     md5 = Digest::MD5.hexdigest(data)
-    self.where(level: level, md5: md5).first_or_create do |ls|
-      ls.data = data
+
+    redis_key = "#{level.id}-#{md5}"
+    level_source = level_source_cache[redis_key] if rack_env?(:production)
+    unless level_source
+      level_source = self.where(level: level, md5: md5).first_or_create do |ls|
+        ls.data = data
+      end
+      level_source.freeze
+      level_source_cache[redis_key] = level_source if rack_env?(:production)
     end
+
+    level_source
   end
 
   def standardized?
