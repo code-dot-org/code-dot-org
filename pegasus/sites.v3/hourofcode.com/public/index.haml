@@ -87,7 +87,7 @@ social:
                     =I18n.t :get_started
 
             #remainder{style: "text-align:center; margin-top: 15px;"}
-              %a{:href=>'/learn/beyond', :style=>'font-size: 16px; color: white'}
+              %a{:href=>"http://#{codeorg_url()}/learn/beyond", :style=>'font-size: 16px; color: white'}
                 =I18n.t :beyond_an_hour
               =view :share_buttons, facebook:facebook, twitter:twitter
           %br/
