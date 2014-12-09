@@ -4,6 +4,8 @@ require 'test_helper'
 class ActivitiesControllerTest < ActionController::TestCase
   include Devise::TestHelpers
   setup do
+    CDO.disable_s3_image_uploads = true # make sure image uploads are disabled unless specified in individual tests
+
     @user = create(:user, total_lines: 15)
     sign_in(@user)
 
@@ -21,6 +23,21 @@ class ActivitiesControllerTest < ActionController::TestCase
     @good_image = File.read('test/fixtures/artist_image_1.png', binmode: true)
     @another_good_image = File.read('test/fixtures/artist_image_2.png', binmode: true)
     @milestone_params = {user_id: @user, script_level_id: @script_level, lines: 20, attempt: '1', result: 'true', testResult: '100', time: '1000', app: 'test', program: '<hey>'}
+  end
+
+  def expect_s3_upload
+    CDO.disable_s3_image_uploads = false
+    AWS::S3.expects(:upload_to_bucket).returns(true).twice
+  end
+
+  def expect_s3_upload_failure
+    CDO.disable_s3_image_uploads = false
+    AWS::S3.expects(:upload_to_bucket).returns(nil)
+  end
+
+  def expect_no_s3_upload
+    CDO.disable_s3_image_uploads = false
+    AWS::S3.expects(:upload_to_bucket).never
   end
 
   # Ignore any additional keys in 'actual' not found in 'expected'.
@@ -327,7 +344,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     @controller.expects(:trophy_check).with(@user)
 
-    assert_creates(LevelSource, Activity, UserLevel) do
+    expect_s3_upload
+
+    assert_creates(LevelSource, Activity, UserLevel, GalleryActivity, LevelSourceImage) do
       assert_difference('@user.reload.total_lines', 20) do # update total lines
         post :milestone, @milestone_params.merge(save_to_gallery: 'true', image: Base64.encode64(@good_image))
       end
@@ -339,15 +358,15 @@ class ActivitiesControllerTest < ActionController::TestCase
                          "total_lines"=>35,
                          "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
                          "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
-#                         "save_to_gallery_url"=>"/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}",
+                         "save_to_gallery_url"=>"/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}",
                          "design"=>"white_background"}
 
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
 
     # created gallery activity and activity for user
     assert_equal @user, Activity.last.user
-#    assert_equal @user, GalleryActivity.last.user
-#    assert_equal Activity.last, GalleryActivity.last.activity
+    assert_equal @user, GalleryActivity.last.user
+    assert_equal Activity.last, GalleryActivity.last.activity
   end
 
   test "logged in milestone should not save to gallery when passing a level with undefined impressiveness" do
@@ -467,7 +486,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     @controller.expects(:trophy_check)
 
-    assert_creates(LevelSource, Activity, UserLevel) do
+    expect_s3_upload
+
+    assert_creates(LevelSource, Activity, UserLevel, LevelSourceImage) do
       assert_does_not_create(GalleryActivity) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
           post :milestone, @milestone_params.merge(image: Base64.encode64(@good_image))
@@ -475,7 +496,7 @@ class ActivitiesControllerTest < ActionController::TestCase
       end
     end
 
-#    assert_equal @good_image.size, LevelSourceImage.last.image.size
+    assert LevelSourceImage.last.s3?
 
     assert_response :success
 
@@ -483,7 +504,7 @@ class ActivitiesControllerTest < ActionController::TestCase
                          "total_lines"=>35,
                          "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
                          "level_source"=>"http://test.host/c/#{assigns(:level_source).id}",
-#                         "save_to_gallery_url"=>"/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}",
+                         "save_to_gallery_url"=>"/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}",
                          "design"=>"white_background"}
 
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
@@ -503,6 +524,8 @@ class ActivitiesControllerTest < ActionController::TestCase
       ls.image = @good_image
     end
     assert_equal @good_image.size, level_source_image.reload.image.size
+
+    expect_no_s3_upload
 
     assert_creates(Activity, UserLevel) do
       assert_does_not_create(LevelSource) do
@@ -528,13 +551,15 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
-  test "logged in milestone with existing level source and level source image updates image if old image was blank" do
+  test "logged in milestone with existing level source and level source image does not update image if old image was blank" do
     program = "<whatever>"
 
     level_source = LevelSource.find_identical_or_create(@script_level.level, program)
     level_source_image = LevelSourceImage.find_or_create_by(level_source_id: level_source.id) do |ls|
       ls.image = @blank_image
     end
+
+    expect_no_s3_upload
 
     assert_creates(Activity, UserLevel) do
       assert_does_not_create(LevelSource) do
@@ -543,8 +568,6 @@ class ActivitiesControllerTest < ActionController::TestCase
         end
       end
     end
-
-#    assert_equal @good_image.size, level_source_image.reload.image.size
 
     assert_response :success
 
@@ -567,6 +590,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     level_source_image = LevelSourceImage.find_or_create_by(level_source_id: level_source.id) do |ls|
       ls.image = @good_image
     end
+
+    expect_no_s3_upload
 
     assert_creates(Activity, UserLevel) do
       assert_does_not_create(LevelSource) do
@@ -599,6 +624,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     level_source_image = LevelSourceImage.find_or_create_by(level_source_id: level_source.id) do |ls|
       ls.image = @good_image
     end
+
+    expect_no_s3_upload
 
     assert_creates(Activity, UserLevel) do
       assert_does_not_create(LevelSource) do
@@ -797,7 +824,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     @controller.expects(:trophy_check).never # no trophy if not logged in
 
-    assert_creates(LevelSource) do
+    expect_s3_upload
+
+    assert_creates(LevelSource, LevelSourceImage) do
       assert_does_not_create(Activity, UserLevel, GalleryActivity) do
         post :milestone, @milestone_params.merge(user_id: 0, :save_to_gallery => 'true', image: Base64.encode64(@good_image))
       end
@@ -820,6 +849,31 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
+
+  test "does not save image when s3 upload fails" do
+    sign_out @user
+
+    # set up existing session
+    session['progress'] = {@script_level_prev.level_id => 50}
+    session['lines'] = 10
+
+    # do all the logging
+    @controller.expects :log_milestone
+    @controller.expects :slog
+
+    @controller.expects(:trophy_check).never # no trophy if not logged in
+
+    expect_s3_upload_failure
+
+    assert_creates(LevelSource) do
+      assert_does_not_create(Activity, UserLevel, GalleryActivity, LevelSourceImage) do
+        post :milestone, @milestone_params.merge(user_id: 0, :save_to_gallery => 'true', image: Base64.encode64(@good_image))
+      end
+    end
+
+    assert_equal nil, assigns(:level_source_image)
+  end
+
 
   test 'sharing program with swear word returns error' do
     return unless CDO.webpurify_key
