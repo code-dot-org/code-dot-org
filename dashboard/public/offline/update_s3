@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+# Self-contained wrapper script to update s3 and invalidate CloudFront for the static site
+
+def load_gem(name)
+  begin
+    gem name
+  rescue LoadError
+    system("gem install #{name}")
+    Gem.clear_paths
+    retry
+  end
+  require name
+end
+
+load_gem 's3_website'
+system "s3_website push --dry-run"
