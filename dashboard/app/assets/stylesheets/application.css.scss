@@ -914,6 +914,11 @@ html, body {
   font-weight: normal;
 }
 
+html[dir=rtl] .qtip-content {
+  direction: rtl;
+  text-align: right;
+}
+
 .qtip-default {
   background-color: #fff;
   color: #000;
