@@ -102,12 +102,11 @@
     }
     
     function getNextLevelLink(levelParams, scriptDefinition) {
-      var nextLevelParams = $.extend({}, levelParams);
-      nextLevelParams.puzzle = parseInt(nextLevelParams.puzzle) + 1;
+      var nextLevelParams = getNextLevel(levelParams);
       if (!scriptDefinition.puzzles[nextLevelParams.puzzle]) {
         return scriptDefinition.finishedRedirectURL;
       }
-      return '?' + $.param(getNextLevel(nextLevelParams));
+      return '?' + $.param(nextLevelParams);
     }
 
     function getNextLevel(params) {
