@@ -115,10 +115,6 @@ class ActivitiesController < ApplicationController
     @@milestone_logger ||= Logger.new("#{Rails.root}/log/milestone.log")
   end
 
-  def track_script_progress
-    @user_script = current_user.track_script_progress(@script_level.script)
-  end
-
   def track_progress_for_user
     authorize! :create, Activity
     authorize! :create, UserLevel
@@ -140,12 +136,13 @@ class ActivitiesController < ApplicationController
 
     if @script_level
       @new_level_completed = current_user.track_level_progress(@script_level, test_result)
-      track_script_progress
+      current_user.track_script_progress(@script_level.script)
     end
 
     passed = Activity.passing?(test_result)
     if lines > 0 && passed
       current_user.total_lines += lines
+      # bypass validations/transactions/etc
       User.where(id: current_user.id).update_all(total_lines: current_user.total_lines)
     end
 

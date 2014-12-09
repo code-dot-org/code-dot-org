@@ -563,12 +563,8 @@ SQL
         update[:completed_at] = time_now
       end
 
-      if update.empty?
-        return user_script
-      else
-        UserScript.where(id: user_script.id).update_all(update)
-        return UserScript.find(user_script.id)
-      end
+      # update_all bypasses validations/transactions/etc
+      UserScript.where(id: user_script.id).update_all(update)
     end
   end
 

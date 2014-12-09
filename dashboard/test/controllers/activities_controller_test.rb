@@ -88,7 +88,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
 
     # created a user script
-    user_script = assigns(:user_script)
+    user_script = UserScript.last
     assert_equal @script_level.script, user_script.script
     assert_equal @user, user_script.user
     assert user_script.started_at
@@ -172,7 +172,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
 
     # created a user script
-    user_script = assigns(:user_script)
+    user_script = UserScript.last
     assert_equal @script_level.script, user_script.script
     assert_equal @user, user_script.user
     assert user_script.started_at
@@ -328,7 +328,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
 
     # created a user script that we started in the past with the other userlevel
-    user_script = assigns(:user_script)
+    user_script = UserScript.last
     assert_equal @script_level.script, user_script.script
     assert_equal @user, user_script.user
     assert_equal script_start_date.to_i, user_script.started_at.to_i
