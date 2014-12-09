@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
 
   before_action :add_x_frame_options_header
   def add_x_frame_options_header
-    request.headers['X-Frame-Options'] = 'ALLOW-FROM http://www.cartoonnetworkarabic.com/'
+    response.headers['X-Frame-Options'] = 'ALLOW-FROM http://www.cartoonnetworkarabic.com/'
   end
 
   def fix_crawlers_with_bad_accept_headers
