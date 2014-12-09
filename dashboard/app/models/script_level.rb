@@ -90,4 +90,15 @@ class ScriptLevel < ActiveRecord::Base
     @@script_level_map ||= ScriptLevel.includes(:level, :script).index_by(&:id)
     @@script_level_map[id]
   end
+
+  def available_callouts
+    @@available_callouts ||= {}
+    @@available_callouts[self.id] ||=
+      Callout.where(script_level_id: self.id).select(:id, :element_id, :qtip_config, :localization_key)
+    return @@available_callouts[self.id]
+  end
+
+  def self.clear_available_callouts_cache
+    @@available_callouts = {}
+  end
 end
