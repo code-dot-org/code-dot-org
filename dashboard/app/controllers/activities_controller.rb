@@ -138,34 +138,15 @@ class ActivitiesController < ApplicationController
                                  time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
                                  level_source: @level_source )
 
-    retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      # this contortion is necessary while we are in the process of
-      # migrating between UserLevels without scripts to UserLevels
-      # with scripts. When this is done we can just do first_or_create
-
-      user_level = UserLevel.where(user: current_user, level: @level, script_id: [@script_level.script_id, nil]).first
-
-      unless user_level
-        user_level = UserLevel.create(user: current_user, level: @level, script: @script_level.script)
-      end
-
-      old_passing = user_level.passing?
-      user_level.attempts += 1 unless user_level.best?
-      user_level.best_result = user_level.best_result ?
-        [test_result, user_level.best_result].max :
-        test_result
-      user_level.save!
-      @new_level_completed = true if !old_passing && user_level.passing?
-    end
-
     if @script_level
+      @new_level_completed = current_user.track_level_progress(@script_level, test_result)
       track_script_progress
     end
 
     passed = Activity.passing?(test_result)
     if lines > 0 && passed
       current_user.total_lines += lines
-      current_user.save!
+      User.where(id: current_user.id).update_all(total_lines: current_user.total_lines)
     end
 
     # blockly sends us 'undefined', 'false', or 'true' so we have to check as a string value
