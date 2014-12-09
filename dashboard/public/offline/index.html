@@ -120,33 +120,39 @@
   <script type="text/javascript" src="js/en_us/vendor.js"></script>
   <script type="text/javascript" src="js/common.js"></script>
   <script type="text/javascript" src="js/en_us/common_locale.js"></script>
-  <script type="text/javascript" src="js/en_us/turtle_locale.js"></script>
-  <script type="text/javascript" src="js/turtle.js"></script>
+  <script type="text/javascript" src="scripts/hoc.js"></script>
   <script type="text/javascript" src="scripts/frozen.js"></script>
   <script type="text/javascript" src="default_options.js"></script>
   <script type="text/javascript">
     var scripts = scripts || {};
     
+    function loadApp(name, callback) {
+      var script = $('<script>').attr('src', 'js/' + name + '.js')[0];
+      script.onload = callback;
+      document.head.appendChild(script);
+    }
+
+    function loadLocale(name, callback) {
+      var script = $('<script>').attr('src', 'js/en_us/' + name + '_locale.js')[0];
+      script.onload = callback;
+      document.head.appendChild(script);
+    }
+
     function loadLevel(name, callback) {
       var script = $('<script>').attr('src', 'levels/' + name + '.js')[0];
       script.onload = callback;
       document.head.appendChild(script);
     }
-    
-    function getNextLevelLink(levelParams, scriptDefinition) {
-      var nextLevelParams = getNextLevel(levelParams);
-      if (!scriptDefinition.puzzles[nextLevelParams.puzzle]) {
-        return scriptDefinition.finishedRedirectURL;
-      }
-      return '?' + $.param(nextLevelParams);
-    }
 
-    function getNextLevel(params) {
+    function getNextLevelLink(params) {
       var copy = $.extend({}, params);
       copy.puzzle++;
-      return copy;
+      if (!currentScript.puzzles[copy.puzzle]) {
+        return currentScript.finishedRedirectURL;
+      }
+      return '?' + $.param(copy);
     }
-    
+
     // Get level info from URL (set some defaults first)
     var params = {
       s: 'frozen',
@@ -159,6 +165,8 @@
     });
     
     var currentScript = scripts[params.s];
+    $('.header_text').html(currentScript.title);
+    $('.header_finished_link').html('<a href="' + currentScript.finishedRedirectURL + '">I\'ve finished my Hour of Code</a>');
     var progressContainer = $('.progress_container');
     currentScript.puzzles.forEach(function(levelName, index, levels) {
       var link = $.extend({}, params);
@@ -317,7 +325,21 @@
       window.script_path = null;
       window.trackEvent = function() {};
       window.stopTiming = function() {};
-      turtleMain(appOptions);
+      loadLocale(currentScript.app, function() {
+        loadApp(currentScript.app, function() {
+          if (appOptions.levelId !== 'custom') {
+            var puzzle_number = appOptions.level.puzzle_number;
+            var stage_total = appOptions.level.stage_total;
+            var instructions = appOptions.level.instructions;
+            appOptions.level = legacy_mazes[appOptions.levelId];
+            appOptions.levelId = 'custom';
+            appOptions.level.puzzle_number = puzzle_number;
+            appOptions.level.stage_total = stage_total;
+            appOptions.level.instructions = instructions;
+          }
+          window[currentScript.app + 'Main'](appOptions);
+        });
+      });
     });
   </script>
   <!--script type="text/javascript" src="chrome34Workaround.js"></script-->
