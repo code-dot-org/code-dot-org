@@ -22,7 +22,7 @@ Find local camps, workshops, and schools that teach computer programming.
 
 ## 4) Buy and wear Code.org swag
 
-Wear shirts, hats, and more, from our [online store](http://www.zazzle.com/codeorg) to help support Code.org and spread the word.
+Wear shirts, hats, and more, from our [online store](http://store.code.org/) to help support Code.org and spread the word.
 
 <div><embed wmode="transparent" src="http://www.zazzle.com/utl/getpanel?zp=117342499302595486" flashvars="feedId=117342499302595486" width="700" height="400" type="application/x-shockwave-flash" /></div>
 

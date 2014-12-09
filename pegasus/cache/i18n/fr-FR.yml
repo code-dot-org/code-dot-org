@@ -355,7 +355,7 @@
   dashboard_sections_sign_in_question: Où les élèves s'authentifient-ils ?
   dashboard_sections_sign_in_unique: Page web unique figurant sur l'onglet "Gérer
     les élèves"
-  dashboard_sections_sign_in_main: http://code.org and et cliquer sur "S'authentifier"
+  dashboard_sections_sign_in_main: 'http: "//code.org and et cliquer sur \"S''authentifier\""'
   dashboard_sections_password_account_creation: Mot de passe créé par l'élève
   dashboard_sections_login_type_explanation: Ce tableau permet d'expliquer lequel
     de ces types de connexion,<b>photo, mot ou email</b>, vous voudrez choisir pour

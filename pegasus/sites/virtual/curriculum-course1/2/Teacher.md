@@ -57,6 +57,7 @@ This lesson will help students realize that in order to give clear instructions,
 - Glue
 
 ### For the Teacher
+- [Lesson Video](http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G)
 - Teacher Lesson Guide
 - Print one [Move It, Move It: Multi-Step Adventure](/curriculum/course1/2/Activity2-MoveItMoveIt.pdf) activity pack on Cardstock for each group
 - Print Assessment Worksheet: [Move the Flurbs 2](/curriculum/course1/2/Assessment2-MoveIt.pdf) for each student

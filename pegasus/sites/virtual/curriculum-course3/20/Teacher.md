@@ -58,6 +58,7 @@ offline and online communities as a step toward learning how to be good digital 
 - [Super Digital Citizen Assessment](Assessment20-DigitalCitizenship.pdf) for each student
 
 ### For the Teacher
+- [Lesson Video](http://youtu.be/fIlqt3P8Nsg?list=PL2DhNKNdmOtpGJ79ZYYttiEmc-1Aq8hxm)
 - This Teacher Lesson Guide
 - A good selection of male and female [Papercraft Super Heroes](https://www.google.com/search?q=cubeecraft+superheroes&es_sm=119&tbm=isch&tbo=u&source=univ&sa=X&ei=v9SxU4TnJdHroATI5YDYCA&ved=0CCEQsAQ&biw=1273&bih=635) sheets for the whole class
 - Print one [Super Digital Citizen Assessment](Assessment20-DigitalCitizenship.pdf) for each student

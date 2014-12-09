@@ -74,7 +74,7 @@
   thanks_for_voting: 感謝您的投票 ！
   share_on_facebook: 在 Facebook 上分享
   share_on_twitter: 在 Twitter 上分享
-  beyond_an_hour: 超越編程一小時
+  beyond_an_hour: 一個小時的代碼的進階
   get_started: 開始
   i_agree: 我同意
   participant_select: -請選擇-
@@ -83,9 +83,9 @@
   participant_educator: 教育人員
   participant_engineer: 軟體工程師
   participant_other: 以上皆非
-  print_all: Print all
-  print_ice_art: Print your ice art
-  create_art_with_zombie: or make advanced art with zombie
+  print_all: 全部列印
+  print_ice_art: 列印您的冰藝術作品
+  create_art_with_zombie: 或用僵屍製作進一部的藝術作品
   i_am_a: 我是
   never_spam: 我們永遠不會發送垃圾郵件
   enter_country: 如果在美國以外，輸入您的國家
@@ -123,9 +123,9 @@
   studiobar_teacher_title: 為導師們製造
   studiobar_teacher_body: 在您的課室裡介紹編程工作室
   studiobar_frozen_title: 一小時的程式設計課程
-  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
-  studiobar_donate_title: Donate
-  studiobar_donate_body: One child learns for each dollar you donate
+  studiobar_frozen_body: 與安娜和埃爾莎創建一個冬季仙境
+  studiobar_donate_title: 捐贈
+  studiobar_donate_body: 一個孩子學習為你捐的每一分錢
   contact_form_topic_student: 我是位學生
   contact_form_topic_parent: 我是位家長
   contact_form_topic_teacher: 我是個老師/教育家
@@ -209,6 +209,12 @@
   dashboard_action_done: 完成
   dashboard_action_required: 必須的
   dashboard_navigation_home_page: 教師主頁
+  dashboard_navigation_section_student_progress: 學生戶口及進度
+  dashboard_navigation_section_teacher_progress: Your Course Progress
+  dashboard_navigation_section_lesson_plans: 教案和資源
+  dashboard_navigation_section_community: Help and Community
+  dashboard_navigation_section_pd: Professional Development
+  dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
   dashboard_navigation_all_sections: 學生戶口及進度
   dashboard_navigation_view_progress: 查看進度
   dashboard_navigation_add_students: 新增學生
@@ -303,7 +309,7 @@
   dashboard_sections_password_account_creation: 學生建立的文字密碼
   dashboard_sections_login_type_explanation: 本表協助説明您可以選擇的課程區段登入類型，<b>通關圖片、 通關密語或電子郵件</b>。
   dashboard_faq: 常見問題集
-  code_hoc_coming: Hour of Code活動將於12 月 8-14日登場 ！
+  code_hoc_coming: 代碼小時就在這裡 — — 12 月 8-14 ！
   code_sign_up: 註冊參與電腦科學教育週
   learn_more: 瞭解更多資訊
   hoc2014_try_new_tutorials: 試試我們新的Hour of Code活動教案
@@ -339,6 +345,10 @@
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: JavaScript 簡介
   khanes_name: JavaScript 簡介
+  khanpt_name: JavaScript 簡介
+  khanhe_name: JavaScript 簡介
+  khanfr_name: JavaScript 簡介
+  khanpl_name: JavaScript 簡介
   tynker_name: 建立你自己的遊戲
   scratch_name: 用程式設計發揮創意
   lightbot_name: Lightbot
@@ -367,12 +377,17 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: 剪刀、石頭，布
-  frozen_gradelevel: 適合年齡８歲以上
+  hourofcode_name: Placeholder for new code.org/hoc
+  playlab_name: Placeholder for code.org/s/playlab
   codeorg_gradelevel: 適合年齡自 4 至104歲
   codeintl_gradelevel: 適合年齡自 4 至104歲
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: 中學以上
   khanes_gradelevel: 中學以上
+  khanpt_gradelevel: 中學以上
+  khanhe_gradelevel: 中學以上
+  khanfr_gradelevel: 中學以上
+  khanpl_gradelevel: 中學以上
   tynker_gradelevel: 適合年齡自 5至13歲
   scratch_gradelevel: 適合年齡８歲以上
   lightbot_gradelevel: 適合所有年齢
@@ -401,13 +416,19 @@
   thinkersmith2_gradelevel: 適合年齡８歲以上
   kodableunplugged_gradelevel: 適合年齡自 8至13歲
   projguts_gradelevel: 10-13 歲
-  frozen_platformtext: 當代瀏覽器 + 平板電腦
+  hourofcode_gradelevel: 適合年齡自 4 至104歲
+  frozen_gradelevel: 適合年齡８歲以上
+  playlab_gradelevel: 適合年齡自 4 至104歲
   codeorg_platformtext: 當代的瀏覽器、 智慧型手機、 平板電腦
   codeintl_platformtext: 當代的瀏覽器、 智慧型手機、 平板電腦
   thinkersmithspanish_platformtext: 不插電的
   khan_platformtext: 當代 Web 瀏覽器
   khanes_platformtext: 當代 Web 瀏覽器
-  tynker_platformtext: 現代的瀏覽器。(後續課程需要 $$)
+  khanpt_platformtext: 當代 Web 瀏覽器
+  khanhe_platformtext: 當代 Web 瀏覽器
+  khanfr_platformtext: 當代 Web 瀏覽器
+  khanpl_platformtext: 當代 Web 瀏覽器
+  tynker_platformtext: 當代 Web 瀏覽器
   scratch_platformtext: 所有瀏覽器
   lightbot_platformtext: 所有瀏覽器和 iOS、 Android系統或遊戲器
   thinkersmith_platformtext: 不插電的
@@ -435,12 +456,18 @@
   thinkersmith2_platformtext: 不插電的
   kodableunplugged_platformtext: 不插電的
   projguts_platformtext: 不插電的
-  frozen_shortdescription: 讓我們使用程式碼加入安娜(Anna)和愛莎(Elsa)一同探索神奇而美麗的冰。
+  hourofcode_platformtext: 當代的瀏覽器、 智慧型手機、 平板電腦
+  frozen_platformtext: 當代瀏覽器 + 平板電腦
+  playlab_platformtext: 當代的瀏覽器、 智慧型手機、 平板電腦
   codeorg_shortdescription: 與Facebook創辦人馬克 · 佐伯克及憤怒的小鳥一起學習程式碼 ！
   codeintl_shortdescription: 與Facebook創辦人馬克 · 佐伯克及憤怒的小鳥一起學習程式碼 ！
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: 用 JavaScript 語言學習繪圖
   khanes_shortdescription: 用 JavaScript 語言學習繪圖
+  khanpt_shortdescription: 用 JavaScript 語言學習繪圖
+  khanhe_shortdescription: 用 JavaScript 語言學習繪圖
+  khanfr_shortdescription: 用 JavaScript 語言學習繪圖
+  khanpl_shortdescription: 用 JavaScript 語言學習繪圖
   tynker_shortdescription: 透過有趣的拼圖學習程式碼，以及建立您自己的手機遊戲。
   scratch_shortdescription: 建立互動遊戲、 故事和動畫。
   lightbot_shortdescription: ' 用Lightbot的程序和迴圈程式來解謎題 ！'
@@ -469,9 +496,9 @@
   thinkersmith2_shortdescription: 瞭解電腦如何使用 0 和 1 來表示的資訊
   kodableunplugged_shortdescription: 一個有趣的拔出練習
   projguts_shortdescription: 嘗試建模與模擬使用石頭/布/剪刀
-  frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
-    magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
-    and make a winter wonderland that you can then share with your friends!
+  hourofcode_shortdescription: Placeholder for new code.org/hoc
+  frozen_shortdescription: 讓我們使用程式碼加入安娜(Anna)和愛莎(Elsa)一同探索神奇而美麗的冰。
+  playlab_shortdescription: Placeholder for code.org/s/playlab
   codeorg_longdescription: 學習電腦科學與阻力的基本概念，並將程式設計。這是主演視頻講座由比爾 · 蓋茨、 馬克 · 朱克伯格、 憤怒的小鳥和植物大戰僵屍的遊戲一樣，自編自導自演的教程。瞭解重複迴圈、
     條件和基本演算法。在 34 種語言中可用。
   codeintl_longdescription: 學習電腦科學與阻力的基本概念，並將程式設計。這是主演視頻講座由比爾 · 蓋茨、 馬克 · 朱克伯格、 憤怒的小鳥和植物大戰僵屍的遊戲一樣，自編自導自演的教程。瞭解重複迴圈、
@@ -480,6 +507,10 @@
     Robotic Friends)" 以群組方式活動最佳，其包含教師手冊給班級使用。
   khan_longdescription: 學習同時創造樂趣的 JavaScript 程式設計的基礎知識與您的代碼的圖紙。做你自己或你的類 ！
   khanes_longdescription: 學習同時創造樂趣的 JavaScript 程式設計的基礎知識與您的代碼的圖紙。做你自己或你的類 ！
+  khanpt_longdescription: 學習同時創造樂趣的 JavaScript 程式設計的基礎知識與您的代碼的圖紙。做你自己或你的類 ！
+  khanhe_longdescription: 學習同時創造樂趣的 JavaScript 程式設計的基礎知識與您的代碼的圖紙。做你自己或你的類 ！
+  khanfr_longdescription: 學習同時創造樂趣的 JavaScript 程式設計的基礎知識與您的代碼的圖紙。做你自己或你的類 ！
+  khanpl_longdescription: 學習同時創造樂趣的 JavaScript 程式設計的基礎知識與您的代碼的圖紙。做你自己或你的類 ！
   tynker_longdescription: 建立你自己的遊戲，與朋友分享 ！解決有趣的編碼拼圖和學習程式設計的概念，在每個級別。用動畫人物，多層次、 豐富的道具個人化遊戲。讓您的遊戲的現實使用物理。看到作為視覺塊或
     JavaScript 的代碼。把你的遊戲流通在 Ipad 和 Android 平板電腦。十幾個有趣的活動可供選擇 ！
   scratch_longdescription: 從頭開始，您可以創建您自己的互動遊戲、 故事、 動畫 &mdash; 和它們分享給你的朋友。開始通過動畫你的名字、
@@ -520,6 +551,11 @@
   thinkersmith2_longdescription: 學生以打開和關閉的功能學習如何在二進位檔案中表示和儲存字元。結束時，此課程獲取自己名字的編碼帶回家。
   kodableunplugged_longdescription: 使用普通紙的設計，fuzzFamily Frenzy教導 5 歲以上的孩子的程式設計邏輯。老師應解釋這個遊戲，然後學生作伴來完成一個簡單的障礙課程。
   projguts_longdescription: 這次"不插電"活動由一群學生玩不同版本的剪刀 / 石頭 / 布的遊戲，以協助學生學習如何建模與模擬運作原理，並查看結果作為不同的建模實驗。
+  hourofcode_longdescription: Placeholder for new code.org/hoc
+  frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
+    magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
+    and make a winter wonderland that you can then share with your friends!
+  playlab_longdescription: Placeholder for code.org/s/playlab
   codeorg_beyond_name: 介紹電腦科學 (學齡前到8 年級）
   khan_beyond_name: 學習電腦程式設計
   tynker_beyond_name: 在家學習程式設計
