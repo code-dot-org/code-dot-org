@@ -1,0 +1,12 @@
+i = 1
+seen_videos = []
+output = ""
+Script.find_by_name('hourofcode').script_levels.map{|sl| 
+  autoplay_video = sl.level.related_videos.find { |video| !seen_videos.include?(video.key) }
+  seen_videos << autoplay_video.key if autoplay_video
+  puts seen_videos
+  output += "Level #{i}: #{autoplay_video.key}\n" if autoplay_video
+  i += 1
+}
+
+output

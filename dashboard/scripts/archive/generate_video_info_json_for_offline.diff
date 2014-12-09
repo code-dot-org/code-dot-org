@@ -1,0 +1,16 @@
+diff --git a/dashboard/app/views/levels/_blockly.html.haml b/dashboard/app/views/levels/_blockly.html.haml
+index 93149e0..04524a5 100644
+--- a/dashboard/app/views/levels/_blockly.html.haml
++++ b/dashboard/app/views/levels/_blockly.html.haml
+@@ -37,6 +37,11 @@
+   - if @autoplay_video_info
+     :javascript
+       showVideoDialog(#{@autoplay_video_info.to_json})
++  = 'Video Lookup Table Here'
++  - lookup = {}
++  - Video.all.each do |v|
++    - lookup[v.key] = video_info(v, true).to_json
++  =raw lookup.to_json
+ 
+   - send_to_phone = request.location.try(:country_code) == 'US' ||              |
+       (!Rails.env.production? && request.location.try(:country_code) == 'RD') |
