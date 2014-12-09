@@ -19,6 +19,7 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'ruby-prof'
   gem 'quiet_assets'
+  gem 'active_record_query_trace'
 
   # for unit testing
   gem 'factory_girl_rails'
