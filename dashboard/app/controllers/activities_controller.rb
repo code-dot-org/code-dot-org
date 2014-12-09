@@ -33,7 +33,7 @@ class ActivitiesController < ApplicationController
       rescue OpenURI::HTTPError => share_checking_error
       end
 
-      unless share_failure
+      unless share_failure || request.url.include?('/hoc')
         @level_source = LevelSource.find_identical_or_create(@level, params[:program])
         slog(tag: 'share_checking_error', error: "#{share_checking_error}", level_source_id: @level_source.id) if share_checking_error
       end
