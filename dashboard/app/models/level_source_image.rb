@@ -6,36 +6,28 @@ require 'digest/md5'
 class LevelSourceImage < ActiveRecord::Base
   belongs_to :level_source
   
-#   MIN_GOOD_IMAGE_SIZE = 1000 # I just kind of arbitrarily picked this because all the empty images I saw were < 1000 bytes
-  
-  # def better?(new_image)
-  #   image.size < MIN_GOOD_IMAGE_SIZE &&
-  #     new_image.size > image.size
-  # end
-  
-  # def replace_image_if_better(new_image)
-  #   if image.blank? || better?(new_image)
-  #     self.image = new_image
-  #     save
-  #   end
-  # end
-
   def save_to_s3(image)
-    AWS::S3.upload_to_bucket('cdo-art', s3_filename, image, no_random: true)
+    return false if CDO.disable_s3_image_uploads
+    
+    unless AWS::S3.upload_to_bucket('cdo-art', s3_filename, image, no_random: true)
+      return false
+    end
 
     if level_source.level.skin == 'anna' || level_source.level.skin == 'elsa'
-      image_filename = "app/assets/images/blank_sharing_drawing_#{skin}.png"
+      image_filename = "app/assets/images/blank_sharing_drawing_#{level_source.level.skin}.png"
     else
       image_filename = "app/assets/images/blank_sharing_drawing.png"
     end
 
-    framed_image =  ImageLib::overlay_image(:background_url => Rails.root.join(image_filename),
-                                            :foreground_blob => image).to_blob
+    framed_image = ImageLib::overlay_image(:background_url => Rails.root.join(image_filename),
+                                           :foreground_blob => image).to_blob
     AWS::S3.upload_to_bucket('cdo-art', s3_framed_filename, framed_image, no_random: true)
+
+    self.image = 'S3'
+    self.save
   end
 
   def s3?
-    # if we don't have the image, it must be in s3
     image == 'S3'
   end
 
@@ -44,22 +36,40 @@ class LevelSourceImage < ActiveRecord::Base
   end
 
   def s3_filename
-    LevelSourceImage.hashify_filename "#{Rails.env}/#{id}.png"
+    LevelSourceImage.hashify_filename "#{Rails.env}/#{level_source.id}.png"
   end
 
   def s3_framed_filename
-    LevelSourceImage.hashify_filename "#{Rails.env}/#{id}_framed.png"
+    LevelSourceImage.hashify_filename "#{Rails.env}/#{level_source.id}_framed.png"
   end
 
   # TODO: make this url work for https
   S3_URL = "http://cdo-art.s3-website-us-east-1.amazonaws.com/"
 
   def s3_url
+    return "http://code.org/images/logo.png" if CDO.disable_s3_image_uploads
     S3_URL + s3_filename
   end
 
   def s3_framed_url
+    return "http://code.org/images/logo.png" if CDO.disable_s3_image_uploads
     S3_URL + s3_framed_filename
+  end
+
+  def old_s3_filename
+    LevelSourceImage.hashify_filename "#{Rails.env}/#{id}.png"
+  end
+
+  def old_s3_framed_filename
+    LevelSourceImage.hashify_filename "#{Rails.env}/#{id}_framed.png"
+  end
+
+  def old_s3_url
+    S3_URL + old_s3_filename
+  end
+
+  def old_s3_framed_url
+    S3_URL + old_s3_framed_filename
   end
 
 end
