@@ -5,7 +5,7 @@ theme: none
 ---
 
 
-<%= partial('curriculum_header', :unplugged=>true, :title=> 'The Design Recpie',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>25) %>
+<%= partial('curriculum_header', :unplugged=>true, :title=> 'The Design Recipe',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>25) %>
 
 [content]
 
@@ -40,6 +40,12 @@ The Design Recipe is a structured approach to writing functions that solve world
 [together]
 
 # Teaching Guide
+
+## Materials, Resources and Prep
+
+### For the Teacher
+- [Lesson Slide Deck](https://docs.google.com/a/code.org/presentation/d/1pKZEo764Rrr39fVnOJkjSFRRbqA_cq_vTCxP0dpbAy4)
+
 [/together]
 
 [together]
