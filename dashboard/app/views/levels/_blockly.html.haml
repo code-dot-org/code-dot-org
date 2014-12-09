@@ -62,6 +62,20 @@
         }
       }
     })(level);
+    function reverseDirection(token) {
+      if (/left/i.test(token)) {
+        token = 'right';
+      } else if (/right/i.test(token)) {
+        token = 'left';
+      }
+      return token;
+    }
+    function reverseCallout(position) {
+      position = position.split(/\s+/);
+      var a = position[0];
+      var b = position[1];
+      return reverseDirection(a) + reverseDirection(b);
+    }
     // See assets/javascripts/sendReport for definition of lastServerResponse
     var appOptions = {
       levelId: '#{@level.level_num}',
@@ -110,6 +124,15 @@
           var customConfig = $.parseJSON(callout.qtip_config);
           var config = $.extend(true, {}, defaultConfig, customConfig);
           config.style.classes = config.style.classes.concat(" cdo-qtips");
+
+          // Reverse callouts in RTL mode
+          if (Blockly.RTL) {
+            config.position.my = reverseCallout(config.position.my);
+            config.position.at = reverseCallout(config.position.at);
+            if (config.position.adjust) {
+              config.position.adjust.x *= -1;
+            }
+          }
 
           if (callout.on) {
             window.addEventListener(callout.on, function() {
