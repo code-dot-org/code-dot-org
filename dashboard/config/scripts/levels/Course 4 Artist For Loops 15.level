@@ -106,12 +106,6 @@
             </block>
           </next>
         </block>
-        <block type="variables_set" inline="false" uservisible="false">
-          <title name="VAR">length</title>
-        </block>
-        <block type="variables_set" inline="false" uservisible="false">
-          <title name="VAR">sides</title>
-        </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>

@@ -17,7 +17,7 @@
     "use_contract_editor": "false",
     "free_play": "false",
     "impressive": "false",
-    "instructions": "Which 7 digit binary string, repeated 11 times, will draw this image?",
+    "instructions": "Which 6 digit binary string, repeated 11 times, will draw this image?",
     "embed": "false",
     "disable_sharing": "false"
   }

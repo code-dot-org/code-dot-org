@@ -10,7 +10,7 @@
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,5,4,3,2,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "is_k1": "false",
-    "skip_instructions_popup": "true",
+    "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "true",
     "start_direction": "1",
@@ -21,7 +21,8 @@
     "instructions": "You can also use a for loop to count down. Try gathering this nectar by counting down from 5 to 1 by 1.",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "callout_json": "[{\r\n  \"localization_key\": \"actions_category\",\r\n  \"element_id\": \".blocklyTreeRow:eq(1)\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}\r\n  }\r\n}]"
+    "callout_json": "[{\r\n  \"localization_key\": \"actions_category\",\r\n  \"element_id\": \".blocklyTreeRow:eq(1)\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}\r\n  }\r\n}]",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
