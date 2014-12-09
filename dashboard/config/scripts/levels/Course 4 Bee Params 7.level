@@ -20,8 +20,7 @@
     "ideal": "42",
     "instructions": "Try using your new function to collect all of this nectar.",
     "use_modal_function_editor": "true",
-    "use_contract_editor": "false",
-    "maze_data": null
+    "use_contract_editor": "false"
   }
 }]]></config>
   <blocks>
@@ -63,7 +62,7 @@
                 <block type="logic_compare" inline="true" movable="false" uservisible="false">
                   <title name="OP">EQ</title>
                   <value name="A">
-                    <block type="variables_get" movable="false" uservisible="false">
+                    <block type="parameters_get" uservisible="false">
                       <title name="VAR">direction</title>
                     </block>
                   </value>
@@ -113,7 +112,7 @@
                                         <block type="logic_compare" inline="true" movable="false" uservisible="false">
                                           <title name="OP">EQ</title>
                                           <value name="A">
-                                            <block type="variables_get" movable="false" uservisible="false">
+                                            <block type="parameters_get" uservisible="false">
                                               <title name="VAR">direction</title>
                                             </block>
                                           </value>
