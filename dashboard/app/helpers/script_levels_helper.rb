@@ -1,22 +1,27 @@
 module ScriptLevelsHelper
-  def script_level_solved_response(response, script_level)
-    next_user_redirect = next_progression_level_or_redirect_path(script_level)
+  def script_level_solved_response(old_response, script_level)
+    add_to_response = Rails.cache.fetch("#{current_user.nil?}/#{script_level.cache_key}") do
+      response = {}
+      next_user_redirect = next_progression_level_or_redirect_path(script_level)
 
-    if has_another_level_to_go_to(script_level)
-      if script_level.end_of_stage?
-        response[:stage_changing] = {previous: {name: script_level.name}}
-      end
-    else
-      response[:message] = 'no more levels'
+      if has_another_level_to_go_to(script_level)
+        if script_level.end_of_stage?
+          response[:stage_changing] = {previous: {name: script_level.name}}
+        end
+      else
+        response[:message] = 'no more levels'
 
-      if script_level.script.wrapup_video
-        response[:video_info] = wrapup_video_then_redirect_response(
-            script_level.script.wrapup_video, next_user_redirect)
-        return
+        if script_level.script.wrapup_video
+          response[:video_info] = wrapup_video_then_redirect_response(
+              script_level.script.wrapup_video, next_user_redirect)
+          return
+        end
       end
+
+      response[:redirect] = next_user_redirect
+      response
     end
-
-    response[:redirect] = next_user_redirect
+    old_response.merge!(add_to_response)
   end
 
   def has_another_level_to_go_to(script_level)

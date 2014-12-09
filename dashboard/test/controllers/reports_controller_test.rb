@@ -188,13 +188,13 @@ class ReportsControllerTest < ActionController::TestCase
   end
 
   test "should get header_stats" do
-    get :header_stats
+    get :header_stats, script_id: @script.id
     assert_response :success
   end
 
   test "should get header_stats if not signed in" do
     sign_out @admin
-    get :header_stats
+    get :header_stats, script_id: @script.id
     assert_response :success
   end
 
