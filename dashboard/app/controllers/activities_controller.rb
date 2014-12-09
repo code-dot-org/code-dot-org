@@ -48,8 +48,13 @@ class ActivitiesController < ApplicationController
     # Store the image only if the image is set, and the image has not been saved
     if params[:image] && @level_source.try(:id)
       # don't create new level source images temporarily
-      @level_source_image = LevelSourceImage.find_by(:level_source_id => @level_source.id)
-#      @level_source_image.replace_image_if_better Base64.decode64(params[:image])
+      @level_source_image = LevelSourceImage.find_by(level_source_id: @level_source.id)
+      unless @level_source_image
+        @level_source_image = LevelSourceImage.create(level_source_id: @level_source.id, image: 'S3')
+        @level_source_image.save_to_s3 Base64.decode64(params[:image])
+        @level_source_image.image = 'S3'
+        @level_source_image.save
+      end
     end
 
     @new_level_completed = false
