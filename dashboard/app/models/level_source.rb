@@ -22,17 +22,24 @@ class LevelSource < ActiveRecord::Base
   def self.find_identical_or_create(level, data)
     md5 = Digest::MD5.hexdigest(data)
 
-    redis_key = "#{level.id}-#{md5}"
-    level_source = level_source_cache[redis_key] if rack_env?(:production)
-    unless level_source
-      level_source = self.where(level: level, md5: md5).first_or_create do |ls|
+    redis_key = "v5-#{level.id}-#{md5}"
+
+    cached_json = level_source_cache[redis_key] if rack_env?(:production)
+    level_source_object = OpenStruct.new(JSON.parse(cached_json)['table']) if cached_json
+
+    unless level_source_object
+      level_source_object = self.where(level: level, md5: md5).first_or_create do |ls|
         ls.data = data
       end
-      level_source.freeze
-      level_source_cache[redis_key] = level_source if rack_env?(:production)
+      return nil unless level_source_object
+
+      level_source_hash = {id:level_source_object.id, hidden:level_source_object.hidden}
+      level_source_cache[redis_key] = level_source_hash.to_json if rack_env?(:production)
+
+      level_source_object = OpenStruct.new(level_source_hash)
     end
 
-    level_source
+    level_source_object
   end
 
   def standardized?
