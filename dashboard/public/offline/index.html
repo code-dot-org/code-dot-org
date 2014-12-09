@@ -10,6 +10,38 @@
     <link rel="stylesheet" type="text/css" href="css/gotham-font.css">
     <link rel="stylesheet" type="text/css" href="css/turtle.css">
     <script src="assets/application.js"></script>
+  <script>
+    // Google Analytics snippet (https://developers.google.com/analytics/devguides/collection/analyticsjs/)
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-37745279-1', 'auto', {cookieDomain: 'auto'});
+    // Dimensions: 1=selected_language_dim, 2=age_dim, 3=gender_dim, 4=user_type_dim, 5=env_dim, 6=pixel_ratio
+    var dimensions = {
+      'dimension5': 'offline'
+    };
+    if ('devicePixelRatio' in window) {
+      dimensions["dimension6"] = window.devicePixelRatio;
+    }
+    ga('set', dimensions);
+    ga('send', 'pageview');
+    var userTimings = {};
+    function trackEvent(category, action, label, value) {
+      ga('send', 'event', category, action, label, value);
+    }
+    function startTiming(category, variable, label) {
+      var key = category + variable + label;
+      userTimings[key] = new Date().getTime();
+    }
+    function stopTiming(category, variable, label) {
+      var key = category + variable + label;
+      var endTime = new Date().getTime();
+      var startTime = userTimings[key];
+      var timeElapsed = endTime - startTime;
+      ga('send', 'timing', category, variable, timeElapsed, label);
+    }
+  </script>
 </head>
 <body style="padding: 0;">
   <div class='header-wrapper hide_on_mobile'>

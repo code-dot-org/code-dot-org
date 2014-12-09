@@ -13,4 +13,4 @@ def load_gem(name)
 end
 
 load_gem 's3_website'
-system "s3_website push --dry-run"
+system 's3_website push'
