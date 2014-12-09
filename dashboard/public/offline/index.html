@@ -148,7 +148,7 @@
       var copy = $.extend({}, params);
       copy.puzzle++;
       if (!currentScript.puzzles[copy.puzzle]) {
-        return 'http://code.org/api/hour/finish/frozen';
+        return currentScript.finishedRedirectURL;
       }
       return '?' + $.param(copy);
     }
@@ -166,6 +166,7 @@
     
     var currentScript = scripts[params.s];
     $('.header_text').html(currentScript.title);
+    $('.header_finished_link').html('<a href="' + currentScript.finishedRedirectURL + '">I\'ve finished my Hour of Code</a>');
     var progressContainer = $('.progress_container');
     currentScript.puzzles.forEach(function(levelName, index, levels) {
       var link = $.extend({}, params);
