@@ -300,7 +300,9 @@
             var puzzle_number = appOptions.level.puzzle_number;
             var stage_total = appOptions.level.stage_total;
             var instructions = appOptions.level.instructions;
+            var video_key = appOptions.level.video_key;
             appOptions.level = legacy_mazes[appOptions.levelId];
+            appOptions.level.video_key = video_key;
             appOptions.levelId = 'custom';
             appOptions.level.puzzle_number = puzzle_number;
             appOptions.level.stage_total = stage_total;
