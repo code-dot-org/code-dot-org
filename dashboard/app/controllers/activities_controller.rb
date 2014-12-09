@@ -76,7 +76,7 @@ class ActivitiesController < ApplicationController
                                     total_lines: total_lines,
                                     trophy_updates: @trophy_updates,
                                     solved?: solved,
-                                    level_source: @level_source.try(:hidden?) ? nil : @level_source,
+                                    level_source: @level_source.try(:hidden) ? nil : @level_source,
                                     activity: @activity,
                                     new_level_completed: @new_level_completed,
                                     share_failure: share_failure)
@@ -132,7 +132,7 @@ class ActivitiesController < ApplicationController
                                  attempt: params[:attempt].to_i,
                                  lines: lines,
                                  time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
-                                 level_source: @level_source )
+                                 level_source_id: @level_source.id )
 
     if @script_level
       @new_level_completed = current_user.track_level_progress(@script_level, test_result)
