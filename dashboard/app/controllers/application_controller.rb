@@ -18,6 +18,11 @@ class ApplicationController < ActionController::Base
 
   before_action :fix_crawlers_with_bad_accept_headers
 
+  before_action :add_x_frame_options_header
+  def add_x_frame_options_header
+    response.headers['X-Frame-Options'] = 'ALLOW-FROM http://www.cartoonnetworkarabic.com/'
+  end
+
   def fix_crawlers_with_bad_accept_headers
     # append text/html as an acceptable response type for Edmodo and weebly-agent's malformed HTTP_ACCEPT header.
 

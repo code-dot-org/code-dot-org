@@ -88,7 +88,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
                    { controller: 'level_sources', action: 'generate_image', id: '1' })
   end
 
-  test "generate image for artist" do
+  test "generate image for artist from db" do
     artist_level = create :level, game: create(:game, app: Game::ARTIST)
     level_source = create :level_source, level: artist_level
     level_source_image = create :level_source_image, level_source: level_source
@@ -98,6 +98,16 @@ class LevelSourcesControllerTest < ActionController::TestCase
     assert_response :success
     # generates a framed image
     assert level_source_image.image != @response.body, "generated image is the original image, not framed"
+  end
+
+  test "generate image for artist in s3" do
+    artist_level = create :level, game: create(:game, app: Game::ARTIST)
+    level_source = create :level_source, level: artist_level
+    level_source_image = create :level_source_image, level_source: level_source, image: 'S3'
+    
+    get :generate_image, id: level_source.id
+
+    assert_redirected_to level_source_image.s3_framed_url
   end
 
   test "original image for artist" do
@@ -112,6 +122,16 @@ class LevelSourcesControllerTest < ActionController::TestCase
     assert level_source_image.image == @response.body, "generated image is not the original image"
   end
 
+  test "original image for artist in s3" do
+    artist_level = create :level, game: create(:game, app: Game::ARTIST)
+    level_source = create :level_source, level: artist_level
+    level_source_image = create :level_source_image, level_source: level_source, image: 'S3'
+    
+    get :original_image, id: level_source.id
+
+    assert_redirected_to level_source_image.s3_url
+  end
+
   test "generate image for playlab" do
     playlab_level = create :level, game: create(:game, app: Game::PLAYLAB)
     level_source = create :level_source, level: playlab_level
@@ -122,6 +142,16 @@ class LevelSourcesControllerTest < ActionController::TestCase
     assert_response :success
     # returns the original image
     assert level_source_image.image == @response.body, "generated image is not the original image"
+  end
+
+  test "generate image for playlab in s3" do
+    playlab_level = create :level, game: create(:game, app: Game::PLAYLAB)
+    level_source = create :level_source, level: playlab_level
+    level_source_image = create :level_source_image, level_source: level_source, image: 'S3'
+
+    get :generate_image, id: level_source.id
+
+    assert_redirected_to level_source_image.s3_url
   end
 
   test "generate image 404 for hidden level_sources" do
