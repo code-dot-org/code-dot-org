@@ -50,10 +50,10 @@ class ActivitiesController < ApplicationController
       # don't create new level source images temporarily
       @level_source_image = LevelSourceImage.find_by(level_source_id: @level_source.id)
       unless @level_source_image
-        @level_source_image = LevelSourceImage.create(level_source_id: @level_source.id, image: 'S3')
-        @level_source_image.save_to_s3 Base64.decode64(params[:image])
-        @level_source_image.image = 'S3'
-        @level_source_image.save
+        @level_source_image = LevelSourceImage.new(level_source_id: @level_source.id)
+        if !@level_source_image.save_to_s3(Base64.decode64(params[:image]))
+          @level_source_image = nil
+        end
       end
     end
 
