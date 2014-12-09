@@ -7,7 +7,7 @@ class ActivitiesController < ApplicationController
 
   # TODO: milestone is the only action so the below lines essentially do nothing. commenting out bc
   # the TODO is to figure out why (forgery protection is useful -- why can't we use it? blockly?)
-  protect_from_forgery except: :milestone
+  # protect_from_forgery except: :milestone
   before_filter :nonminimal
 
   MAX_INT_MILESTONE = 2147483647
