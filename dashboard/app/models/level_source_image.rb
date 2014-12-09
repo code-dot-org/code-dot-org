@@ -14,7 +14,7 @@ class LevelSourceImage < ActiveRecord::Base
     end
 
     if level_source.level.skin == 'anna' || level_source.level.skin == 'elsa'
-      image_filename = "app/assets/images/blank_sharing_drawing_#{skin}.png"
+      image_filename = "app/assets/images/blank_sharing_drawing_#{level_source,level.skin}.png"
     else
       image_filename = "app/assets/images/blank_sharing_drawing.png"
     end
