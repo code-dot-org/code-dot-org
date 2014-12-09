@@ -38,7 +38,7 @@ class ScriptLevelsController < ApplicationController
 
     load_script_level
 
-    if request.path != (canonical_path = build_script_level_path(@script_level))
+    if request.path_parameters[:format] != 'json' && request.path != (canonical_path = build_script_level_path(@script_level))
       redirect_to canonical_path, status: :moved_permanently
       return
     end
@@ -113,6 +113,6 @@ private
       success: milestone_response(script_level: @script_level, solved?: true),
       failure: milestone_response(script_level: @script_level, solved?: false)
     }
-    render 'levels/show', formats: [:html]
+    render 'levels/show'
   end
 end

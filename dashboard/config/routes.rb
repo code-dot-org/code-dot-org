@@ -105,8 +105,8 @@ Dashboard::Application.routes.draw do
     get 'puzzle/:chapter', to: 'script_levels#show', as: 'puzzle', format: false
 
     # /s/xxx/stage/yyy/puzzle/zzz
-    resources :stages, only: [:show], path: "/stage", format: false do
-      resources :script_levels, only: [:show], path: "/puzzle", format: false do
+    resources :stages, only: [:show], path: "/stage" do
+      resources :script_levels, only: [:show], path: "/puzzle" do
       end
     end
   end
