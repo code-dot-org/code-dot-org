@@ -67,33 +67,32 @@ The Design Recipe is a roadmap for defining functions, which programmers use to 
 2. Write Examples based on the contract
 3. Define a function that matches the examples
 
-Let's start out by applying the Design Recipe together to the following problems:
+Let's start out by applying the Design Recipe together to the following problem:
 
-- Define a function ’purple-star’, that takes in the size of the star and produces an outlined, purple star of the given size.
-- Define a function ’spot’, that takes in a color and produces a solid circle of radius 50, filled in with that color
-- To find the average of two numbers, they should be added together and divided by two. Define a function ’average’, which takes in two numbers and produces their average
-- A company logo is a word drawn in big, red letters, rotated some number of degrees. Define a function ’logo’, that takes in a company name and a rotation, and produces a logo for that company
+**Define a function ’purple-star’, that takes in the size of the star and produces an outlined, purple star of the given size.**
+
+#### Step 1 - The Contract
+
+**purple-star: <span class="func-number">Number</span> -> <span class="func-image">Image</span>**
 
 Be sure to include a good Name for each function, and remember that the Domain and Range can only include types like Numbers, Images, Strings, etc.
 
 A Contract is the foundation for a function, which gives programmers just enough information to use them: the name of the function, the types of data it expects and the type of data it returns.
-Now that you’ve completed the Contracts for all four word problems, try to generate two Examples for each one.
 
-Challenge students to defend their Examples (their function name, the number of inputs, their types and the type of the returned value). Make sure that the two Examples for each function have different input values! For each of these questions, students must be able to point to the specific part of their Contract as the justification for their Example.
+#### Step 2 - Examples
+
+<img src="purpleStarEx1.png" style="max-width: 100%; max-height: 200px"/><br/>
+<img src="purpleStarEx2.png" style="max-width: 100%; max-height: 200px"/><br/>
 
 Once you have two or more Examples, it should be easy to identify what has changed between them. In fact, the number of things that change should match the number of things in the function’s Domain: if the Domain has a Number and a String in it, then those two values should be the things that differ between your Examples.
 
-Identify what has changed between these Examples, and use this information to define all four functions.
+#### Step 3 - Function Definition
 
-Make sure students have chosen good variable names for their function definitions, and ask students to justify every part of the function body. The only acceptable answers should be "I copied this because it’s the same in both Examples", or "I used a variable name because it differs between Examples."
+<img src="purpleStarFunc.png" style="max-width: 100%; max-height: 200px"/><br/>
 
-Circle the Name of the function, and underline what it takes in and what it produces.
+By identifying what has changed between these Examples, we can define our actual function.
 
-Write the Contract for this function, using what you underlined to help you find the Domain and Range.
-
-Underneath the Contract, write the Purpose Statement by summarizing what the function does in a single sentence
-
-Challenge students to explain why this function does not need to know the color of the square, or whether or not it is solid. They main idea here is that the function already "knows" these things, so the only thing that is changing is the size of the square. Note that there are actually two easy solutions here: using the square function, or using rectangle with the same variable for width and height.
+Challenge students to explain why this function does not need to know the color of the star, or whether or not it is solid. They main idea here is that the function already "knows" these things, so the only thing that is changing is the size of the star.
 
 Remember that the Contract and Purpose Statement can be used to write the Examples, even if a programmer isn’t sure how to begin.
 
@@ -127,6 +126,11 @@ Write the function definition on your paper.
 ## Activities:
 ### <a name="Activity1"></a> 3) Collaborative Design
 
+
+- Define a function ’spot’, that takes in a color and produces a solid circle of radius 50, filled in with that color
+- To find the average of two numbers, they should be added together and divided by two. Define a function ’average’, which takes in two numbers and produces their average
+- A company logo is a word drawn in big, red letters, rotated some number of degrees. Define a function ’logo’, that takes in a company name and a rotation, and produces a logo for that company
+
 Put students into groups of 3 - each member of the group will represent one step of the Design Recipe
 
 1. Contract
@@ -135,6 +139,16 @@ Put students into groups of 3 - each member of the group will represent one step
 
 Each group will work through the word problems on the [Design Recipe Worksheet](needadesignrecipeworksheet.pdf). Each group member should stay true to their role and make sure to complete the steps in the right order.
 
+[tip]
+
+## Lesson Tip
+
+Challenge students to defend their Examples (their function name, the number of inputs, their types and the type of the returned value). Make sure that the two Examples for each function have different input values! For each of these questions, students must be able to point to the specific part of their Contract as the justification for their Example.
+
+Make sure students have chosen good variable names for their function definitions, and ask students to justify every part of the function body. The only acceptable answers should be "I copied this because it’s the same in both Examples", or "I used a variable name because it differs between Examples."
+
+[/tip]
+
 [/together]
 
 [together]
@@ -142,7 +156,7 @@ Each group will work through the word problems on the [Design Recipe Worksheet](
 ## Assessment 
 ### <a name="Assessment"></a>4) The Design Recipe Assessment
 
-Visit [MSM Stage 8](http://studio.code.org/s/msm/stage/8/puzzle/1) in Code Studio to complete the assessments.
+Visit [MSM Stage 9](http://studio.code.org/s/msm/stage/9/puzzle/1) in Code Studio to complete the assessments.
 
 [/together]
 
