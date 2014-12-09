@@ -13,13 +13,14 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
-    "disable_variable_editing": "false",
+    "disable_variable_editing": "true",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "start_direction": "2",
     "step_mode": "0",
     "nectar_goal": "10",
-    "flower_type": "redWithNectar"
+    "flower_type": "redWithNectar",
+    "maze_data": null
   }
 }]]></config>
   <blocks>

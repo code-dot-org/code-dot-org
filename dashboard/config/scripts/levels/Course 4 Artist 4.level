@@ -18,7 +18,10 @@
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "impressive": "false",
-    "use_contract_editor": "false"
+    "use_contract_editor": "false",
+    "embed": "false",
+    "callout_json": "[\r\n  {\"localization_key\": \"repeat_full_circle\", \"element_id\": \"#repeat_block_qtip > .blocklyEditableText\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}}\r\n  }\r\n]",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
@@ -26,7 +29,7 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat" deletable="false">
+            <block type="controls_repeat" deletable="false" id="repeat_block_qtip">
               <title name="TIMES">???</title>
               <statement name="DO">
                 <block type="draw_colour" inline="true" deletable="false" editable="false">

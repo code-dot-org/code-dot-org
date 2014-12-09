@@ -28,8 +28,7 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
-    "embed": "false",
-    "maze_data": null
+    "embed": "false"
   }
 }]]></config>
   <blocks>
@@ -83,9 +82,6 @@
           <title name="NUM">0</title>
         </block>
         <block type="variables_set" inline="false">
-          <title name="VAR">points</title>
-        </block>
-        <block type="variables_get">
           <title name="VAR">points</title>
         </block>
       </xml>
