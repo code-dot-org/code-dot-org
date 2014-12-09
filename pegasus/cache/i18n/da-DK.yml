@@ -450,7 +450,7 @@
   thinkersmithspanish_platformtext: Unplugged
   khan_platformtext: Moderne web-browsere
   khanes_platformtext: Moderne web-browsere
-  tynker_platformtext: Moderne web-browsere
+  tynker_platformtext: Modern browsers. (Follow-on course requires $$)
   scratch_platformtext: Alle browsere
   lightbot_platformtext: Alle browsere og IOS, Android eller spillekonsoller
   thinkersmith_platformtext: Unplugged
@@ -539,10 +539,9 @@
     og Plants vs Zombier. Lære gentag-løkker, betingede og grundlæggende algoritmer.
     Tilgængelige i 34 sprog.
   thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
+    los estudiantes descubriran como guiarse de modo tal de llevar a cabo tareas especificas
+    sin ser estas discutidas previamente. Este segmento ensena a los estudiantes la
+    conexion entre simbolos y acciones asi como la valiosa habilidad de depuracion.
   khan_longdescription: Lær grundlæggende i JavaScript programmering samtidig skabe
     sjove tegninger med din kode. Gøre det på egen hånd eller med din klasse!
   khanes_longdescription: Lær grundlæggende i JavaScript programmering samtidig skabe
@@ -630,11 +629,10 @@
     en række apps, som du selv kan spille og dele med dine venner. Enkle øvelser gør
     det også muligt for små børn at programmere med Javascript, og jo dygtigere du
     bliver, jo længere du vil nå.
-  makegameswithus_longdescription: Know some programming already? Learn to make an
-    iPhone game in an hour! We'll guide you through the process, to code, test, and
-    play your game entirely in the browser and then share it on Facebook for friends
-    to try! No prior iPhone development experience is required. You must understand
-    what variables, methods, and objects are.
+  makegameswithus_longdescription: Learn to code by making an iPhone game using a
+    brand new and beginner-friendly programming language called Swift! Create a Pokemon-inspired
+    action game and write code to teach your monster new moves. You will learn how
+    to use variables, methods, and objects to help your monster win!
   touchdevelop_longdescription: Skøre tegninger, flyvende monstre, hvirvlende blomster...
     oprette dine apps på din enhed med TouchDevelop, en godt mobil apps udviklingsmiljø.
     Kan bruges på iPhone, iPad, Android, Windows, Windows Phone, Linux, Mac.

@@ -10,6 +10,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @admin = create(:admin)
     sign_in(@admin)
 
+    ScriptLevel.clear_available_callouts_cache
+    
     @script = Script.find(Script::TWENTY_HOUR_ID)
     @script_level = @script.script_levels.fifth
 
@@ -356,7 +358,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @controller.expects :slog
 
     create(:callout, script_level: @script_level, localization_key: 'run')
-    get :show, script_id: @script.id, id: @script_level.id
+    get :show, script_id: @script_level.script_id, id: @script_level.id
     assert assigns(:callouts).find{|c| c['localized_text'] == 'Hit "Run" to try your program'}
   end
 

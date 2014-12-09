@@ -243,6 +243,12 @@
   dashboard_action_done: Hecho
   dashboard_action_required: obligatorio
   dashboard_navigation_home_page: Página de inicio del maestro
+  dashboard_navigation_section_student_progress: Cuentas de estudiantes y sus progresos
+  dashboard_navigation_section_teacher_progress: Your Course Progress
+  dashboard_navigation_section_lesson_plans: Planificaciones de lecciones y recursos
+  dashboard_navigation_section_community: Help and Community
+  dashboard_navigation_section_pd: Professional Development
+  dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
   dashboard_navigation_all_sections: Cuentas de estudiantes y sus progresos
   dashboard_navigation_view_progress: Ver progreso
   dashboard_navigation_add_students: Añadir alumnos
@@ -401,6 +407,10 @@
   thinkersmithspanish_name: Mis amigos robóticos
   khan_name: Una introducción a JavaScript
   khanes_name: Una introducción a JavaScript
+  khanpt_name: Una introducción a JavaScript
+  khanhe_name: Una introducción a JavaScript
+  khanfr_name: Una introducción a JavaScript
+  khanpl_name: Una introducción a JavaScript
   tynker_name: Crea tu propio juego
   scratch_name: Despierta tu creatividad con la programación
   lightbot_name: Lightbot
@@ -429,12 +439,17 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Piedra, papel, tijera
-  frozen_gradelevel: Edad 8+
+  hourofcode_name: Placeholder for new code.org/hoc
+  playlab_name: Placeholder for code.org/s/playlab
   codeorg_gradelevel: Edad 4-104
   codeintl_gradelevel: Edad 4-104
   thinkersmithspanish_gradelevel: Todas las edades
   khan_gradelevel: Secundaria
   khanes_gradelevel: Secundaria
+  khanpt_gradelevel: Secundaria
+  khanhe_gradelevel: Secundaria
+  khanfr_gradelevel: Secundaria
+  khanpl_gradelevel: Secundaria
   tynker_gradelevel: Edad 5-13
   scratch_gradelevel: Edad 8+
   lightbot_gradelevel: Todas las edades
@@ -463,13 +478,19 @@
   thinkersmith2_gradelevel: Edad 8+
   kodableunplugged_gradelevel: Edad 8-13
   projguts_gradelevel: Edad 10-13
-  frozen_platformtext: Navegadores modernos y tabletas
+  hourofcode_gradelevel: Edad 4-104
+  frozen_gradelevel: Edad 8+
+  playlab_gradelevel: Edad 4-104
   codeorg_platformtext: Cualquier navegador moderno, smartphone, tableta
   codeintl_platformtext: Cualquier navegador moderno, smartphone, tableta
   thinkersmithspanish_platformtext: Desconectado
   khan_platformtext: Navegadores modernos
   khanes_platformtext: Navegadores modernos
-  tynker_platformtext: Navegadores modernos. (Seguir cursos requiere $$)
+  khanpt_platformtext: Navegadores modernos
+  khanhe_platformtext: Navegadores modernos
+  khanfr_platformtext: Navegadores modernos
+  khanpl_platformtext: Navegadores modernos
+  tynker_platformtext: Navegadores modernos
   scratch_platformtext: TODOS los navegadores
   lightbot_platformtext: TODOS los navegadores y iOS, Android o consola de juegos
   thinkersmith_platformtext: Desconectado
@@ -498,13 +519,18 @@
   thinkersmith2_platformtext: Desconectado
   kodableunplugged_platformtext: Desconectado
   projguts_platformtext: Desconectado
-  frozen_shortdescription: Vamos a usar código para unirnos a Anna y Elsa mientras
-    exploran la magia y la belleza del hielo.
+  hourofcode_platformtext: Cualquier navegador moderno, smartphone, tableta
+  frozen_platformtext: Navegadores modernos y tabletas
+  playlab_platformtext: Cualquier navegador moderno, smartphone, tableta
   codeorg_shortdescription: ¡Aprende a programar con Mark Zuckerberg y Angry Birds!
   codeintl_shortdescription: ¡Aprende a programar con Mark Zuckerberg y Angry Birds!
   thinkersmithspanish_shortdescription: Aprendé a programar sin computadora!
   khan_shortdescription: Aprenda a dibujar con JavaScript
   khanes_shortdescription: Aprenda a dibujar con JavaScript
+  khanpt_shortdescription: Aprenda a dibujar con JavaScript
+  khanhe_shortdescription: Aprenda a dibujar con JavaScript
+  khanfr_shortdescription: Aprenda a dibujar con JavaScript
+  khanpl_shortdescription: Aprenda a dibujar con JavaScript
   tynker_shortdescription: Aprende a programar resolviendo rompecabezas divertidos
     y construye tus propios juegos para móviles.
   scratch_shortdescription: Crea animaciones, historias y juegos interactivos.
@@ -548,10 +574,10 @@
   kodableunplugged_shortdescription: Un divertido ejercicio "desconectado"
   projguts_shortdescription: Aprende sobre modelado y simulación con piedra, papel,
     o tijeras
-  frozen_longdescription: Vamos a usar código para unirnos a Ana y Elsa mientras exploran
-    la magia y la belleza del hielo. Crearás copos de nieve y patrones a medida que
-    patinas sobre hielo y harás un paisaje invernal que luego puedes compartir con
-    tus amigos!
+  hourofcode_shortdescription: Placeholder for new code.org/hoc
+  frozen_shortdescription: Vamos a usar código para unirnos a Anna y Elsa mientras
+    exploran la magia y la belleza del hielo.
+  playlab_shortdescription: Placeholder for code.org/s/playlab
   codeorg_longdescription: Aprende los conceptos básicos de la programación mediante
     programación de arrastrar y soltar. Este tutorial autodirigido que se parece a
     un juego tiene videoconferencias protagonizadas por Bill Gates, Mark Zuckerberg,
@@ -570,6 +596,14 @@
   khan_longdescription: Aprendé los conceptos fundamentales de la programación en
     JavaScript mientras creás unos dibujos muy divertidos. Hacelo solo o con tus amigos!
   khanes_longdescription: Aprendé los conceptos fundamentales de la programación en
+    JavaScript mientras creás unos dibujos muy divertidos. Hacelo solo o con tus amigos!
+  khanpt_longdescription: Aprendé los conceptos fundamentales de la programación en
+    JavaScript mientras creás unos dibujos muy divertidos. Hacelo solo o con tus amigos!
+  khanhe_longdescription: Aprendé los conceptos fundamentales de la programación en
+    JavaScript mientras creás unos dibujos muy divertidos. Hacelo solo o con tus amigos!
+  khanfr_longdescription: Aprendé los conceptos fundamentales de la programación en
+    JavaScript mientras creás unos dibujos muy divertidos. Hacelo solo o con tus amigos!
+  khanpl_longdescription: Aprendé los conceptos fundamentales de la programación en
     JavaScript mientras creás unos dibujos muy divertidos. Hacelo solo o con tus amigos!
   tynker_longdescription: ¡Construye tus propios juegos y compártelos con amigos!
     Resuelve divertidos desafíos y aprende conceptos de programación en cada nivel.
@@ -686,6 +720,12 @@
     aprender cómo funciona el modelado y simulación, haciendo que un grupo de estudiantes
     jueguen distintas versiones del juego piedra, papel y tijeras, y viendo los resultados
     como diferentes experimentos de modelado.
+  hourofcode_longdescription: Placeholder for new code.org/hoc
+  frozen_longdescription: Vamos a usar código para unirnos a Ana y Elsa mientras exploran
+    la magia y la belleza del hielo. Crearás copos de nieve y patrones a medida que
+    patinas sobre hielo y harás un paisaje invernal que luego puedes compartir con
+    tus amigos!
+  playlab_longdescription: Placeholder for code.org/s/playlab
   codeorg_beyond_name: Introducción a ciencias de la computación (13 años)
   khan_beyond_name: Aprende programación de computadoras
   tynker_beyond_name: Aprende programación de computadoras en casa

@@ -82,7 +82,11 @@ private
     if params[:chapter]
       @script_level = @script.get_script_level_by_chapter(params[:chapter])
     elsif params[:stage_id]
-      @script_level = @script.script_levels.select{|sl| sl.stage.position == params[:stage_id].to_i && sl.position == params[:id].to_i}.first
+      if @script.cached?
+        @script_level = @script.script_levels.select{|sl| sl.stage.position == params[:stage_id].to_i && sl.position == params[:id].to_i}.first
+      else
+        @script_level = @script.get_script_level_by_stage_and_position(params[:stage_id], params[:id])
+      end
     else
       @script_level = @script.get_script_level_by_id(params[:id])
     end
@@ -92,13 +96,20 @@ private
   def present_level
     @level = @script_level.level
     @game = @level.game
-    @stage = @script_level.stage
+    if @script.cached?
+      @stage = @script.stages.to_a.find{|stage| stage.id == @script_level.stage_id}
+      @game_script_levels = @script.script_levels.to_a.select{|sl| sl.stage_id == @script_level.stage_id}
+    else
+      @stage = @script_level.stage
+    end
 
     set_videos_and_blocks_and_callouts_and_instructions
 
     @callback = milestone_url(user_id: current_user.try(:id) || 0, script_level_id: @script_level)
     @full_width = true
-    @fallback_response = {
+
+    @@fallback_responses ||= {}
+    @fallback_response = @@fallback_responses[@script_level.id] ||= {
       success: milestone_response(script_level: @script_level, solved?: true),
       failure: milestone_response(script_level: @script_level, solved?: false)
     }

@@ -445,7 +445,7 @@
   thinkersmithspanish_platformtext: Unplugged
   khan_platformtext: Modern Web browsers
   khanes_platformtext: Modern Web browsers
-  tynker_platformtext: Modern web browsers
+  tynker_platformtext: Modern browsers. (Follow-on course requires $$)
   scratch_platformtext: ALL browsers
   lightbot_platformtext: ALL browsers and iOS, Android, or Game Console
   thinkersmith_platformtext: Unplugged
@@ -531,10 +531,9 @@
     lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
     repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
   thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
+    los estudiantes descubriran como guiarse de modo tal de llevar a cabo tareas especificas
+    sin ser estas discutidas previamente. Este segmento ensena a los estudiantes la
+    conexion entre simbolos y acciones asi como la valiosa habilidad de depuracion.
   khan_longdescription: Learn the basics of JavaScript programming while creating
     fun drawings with your code. Do it on your own or with your class!
   khanes_longdescription: Learn the basics of JavaScript programming while creating
@@ -619,7 +618,7 @@
     kids to program real Javascript, and the more advanced you are the further you'll
     go.
   makegameswithus_longdescription: Learn to code by making an iPhone game using a
-    brand new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired
+    brand new and beginner-friendly programming language called Swift! Create a Pokemon-inspired
     action game and write code to teach your monster new moves. You will learn how
     to use variables, methods, and objects to help your monster win!
   touchdevelop_longdescription: Crazy drawings, flying monsters, swirling flowers...
