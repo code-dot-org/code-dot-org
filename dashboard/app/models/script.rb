@@ -76,12 +76,12 @@ class Script < ActiveRecord::Base
   end
 
   def self.get_from_cache(id)
-    case id
-      when TWENTY_HOUR_ID, TWENTY_HOUR_NAME then twenty_hour_script
+    case id.to_s
+      when TWENTY_HOUR_ID.to_s, TWENTY_HOUR_NAME then twenty_hour_script
       when FROZEN_NAME then frozen_script
       when HOC_NAME then hoc_script
       when PLAYLAB_NAME then playlab_script
-      when FLAPPY_ID, FLAPPY_NAME then flappy_script
+      when FLAPPY_ID.to_s, FLAPPY_NAME then flappy_script
     else
       # a bit of trickery so we support both ids which are numbers and
       # names which are strings that may contain numbers (eg. 2-3)
@@ -107,7 +107,7 @@ class Script < ActiveRecord::Base
   def multiple_games?
     # simplified check to see if we are in a script that has only one game (stage)
     stages.many? ||
-      (stages.empty? && levels.first.game_id != levels.last.game_id)
+      (stages.empty? && script_levels.first.level.game_id != script_levels.last.level.game_id)
   end
 
   def legacy_curriculum?
