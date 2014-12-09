@@ -61,7 +61,6 @@ max_age: 60
       = view :congrats_certificate
       = view :congrats_share, cert_id:cert_id, facebook:facebook, twitter:twitter
 
-  -if request.locale == 'en-US'
     #print_option.col-50{:style=>'display:none;'}
       %h2{:style=>'margin-top:15px; margin-bottom:10px'}
         =I18n.t :print_ice_art
