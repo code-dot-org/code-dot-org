@@ -1,5 +1,4 @@
 require 'digest/md5'
-require 'cdo/hip_chat'
 
 def level_source_cache()
   @@level_sources_redis ||= rack_env?(:production) ? Redis.connect(url:CDO.level_sources_redis_url) : Hash.new
@@ -27,7 +26,6 @@ class LevelSource < ActiveRecord::Base
 
     cached_json = level_source_cache[redis_key] if rack_env?(:production)
     level_source_object = OpenStruct.new(JSON.parse(cached_json)['table']) if cached_json
-    HipChat.log "/quote Cache: #{cached_json}" if level_source_object
 
     unless level_source_object
       level_source_object = self.where(level: level, md5: md5).first_or_create do |ls|
@@ -37,7 +35,6 @@ class LevelSource < ActiveRecord::Base
 
       level_source_hash = {id:level_source_object.id, hidden:level_source_object.hidden}
       level_source_cache[redis_key] = level_source_hash.to_json if rack_env?(:production)
-      HipChat.log "/quote New: #{level_source_hash.to_json}" if level_source_hash
 
       level_source_object = OpenStruct.new(level_source_hash)
     end
