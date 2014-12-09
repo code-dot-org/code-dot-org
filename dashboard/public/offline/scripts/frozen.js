@@ -1,6 +1,7 @@
 var scripts = scripts || {};
 scripts.frozen = {
   title: 'Code with Anna and Elsa',
+  app: 'turtle',
   puzzles: [
     'frozen line',
     'frozen perpendicular',
