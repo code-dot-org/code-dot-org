@@ -76,6 +76,10 @@
       var b = position[1];
       return reverseDirection(a) + reverseDirection(b);
     }
+    // Hide callouts when the function editor is closed (otherwise they jump to the top left corner)
+    $(window).on('function_editor_closed', function() {
+      $('.cdo-qtips').qtip('hide');
+    });
     // See assets/javascripts/sendReport for definition of lastServerResponse
     var appOptions = {
       levelId: '#{@level.level_num}',
