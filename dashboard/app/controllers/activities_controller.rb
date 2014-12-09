@@ -132,7 +132,7 @@ class ActivitiesController < ApplicationController
                                  attempt: params[:attempt].to_i,
                                  lines: lines,
                                  time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
-                                 level_source_id: @level_source.id )
+                                 level_source_id: @level_source.try(:id) )
 
     if @script_level
       @new_level_completed = current_user.track_level_progress(@script_level, test_result)
