@@ -1,5 +1,5 @@
 body {
-  font-family: 'Gotham A', 'Gotham B', sans-serif;
+  font-family: 'Gotham 4r', sans-serif;
   background-color: #f2f2f2;
   font-weight: 400;
   margin-top: 0; }
@@ -482,7 +482,7 @@ input[type="radio"] {
       display: block; } }
 
 .blocklyText, .blocklyMenuText, .blocklyTreeLabel, .blocklyHtmlInput, .blocklyIconMark, .blocklyTooltipText, .goog-menuitem-content {
-  font-family: 'Gotham A', 'Gotham B', sans-serif; }
+  font-family: 'Gotham 4r', sans-serif; }
 
 .goog-menu {
   box-shadow: 4px 4px 6px #bbbbbb;
