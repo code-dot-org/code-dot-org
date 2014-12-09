@@ -57,7 +57,7 @@
   go: Ir
   thank_you_: Obrigado!
   congratulations: Parabéns!
-  congratulations_on_completing_hoc: Parabéns pela conclusão da Hora do Código.
+  congratulations_on_completing_hoc: Parabéns, você concluiu a Hora do Código
   get_a_certificate_of_achievement: Obter um certificado de conclusão
   enter_valid_email: Informe um endereço de email válido
   get_a_certificate_message: Vamos enviar-lhe um certificado e informações sobre como
@@ -86,7 +86,7 @@
   thanks_for_voting: Obrigado por votar!
   share_on_facebook: Compartilhar no Facebook
   share_on_twitter: Compartilhar no Twitter
-  beyond_an_hour: Além da Hora do Código >
+  beyond_an_hour: Além da Hora do Código
   get_started: Começar
   i_agree: Aceito
   participant_select: '- Selecionar -'
@@ -95,9 +95,9 @@
   participant_educator: Educador
   participant_engineer: Engenheiro de Software
   participant_other: Outro
-  print_all: Print all
-  print_ice_art: Print your ice art
-  create_art_with_zombie: or make advanced art with zombie
+  print_all: Imprimir tudo
+  print_ice_art: Imprimir sua arte no gelo
+  create_art_with_zombie: ou fazer um desenho artístico avançado com o zumbi
   i_am_a: Eu sou um
   never_spam: Nunca vamos enviar spam para você
   enter_country: Informe o país se você mora fora dos Estados Unidos
@@ -137,9 +137,9 @@
   studiobar_teacher_title: Feito para professores
   studiobar_teacher_body: Apresente o Code Studio em sua sala de aula
   studiobar_frozen_title: Hora do Código
-  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
-  studiobar_donate_title: Donate
-  studiobar_donate_body: One child learns for each dollar you donate
+  studiobar_frozen_body: Crie um país das maravilhas congelante com Anna e Elsa
+  studiobar_donate_title: Faça uma doação
+  studiobar_donate_body: Para cada dólar doado, uma criança aprende
   contact_form_topic_student: Sou um estudante
   contact_form_topic_parent: Sou um pai
   contact_form_topic_teacher: Sou um professor/educador
@@ -239,6 +239,12 @@
   dashboard_action_done: Feito
   dashboard_action_required: obrigatório
   dashboard_navigation_home_page: Página inicial do professor
+  dashboard_navigation_section_student_progress: Contas e progresso do aluno
+  dashboard_navigation_section_teacher_progress: Your Course Progress
+  dashboard_navigation_section_lesson_plans: Planos e recursos da aula
+  dashboard_navigation_section_community: Help and Community
+  dashboard_navigation_section_pd: Professional Development
+  dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
   dashboard_navigation_all_sections: Contas e progresso do aluno
   dashboard_navigation_view_progress: Exibir progresso
   dashboard_navigation_add_students: Adicionar alunos
@@ -354,7 +360,7 @@
     tipos de login, <b>imagem, palavra ou e-mail</b>, você vai querer escolher para
     uma seção.
   dashboard_faq: Tire suas dúvidas
-  code_hoc_coming: A Hora do Código está chegando, de 8 a 14 de dezembro!
+  code_hoc_coming: 'A Hora do Código chegou: de 8 a 14 de dezembro!'
   code_sign_up: Inscreva-se para participar durante a Semana da Educação em Ciência
     da Computação
   learn_more: Saiba Mais
@@ -366,7 +372,7 @@
   carousel_heading_international: Tutoriais no seu idioma
   carousel_heading_domestic: Tutoriais disponíveis em inglês
   carousel_heading_beginners: Tutoriais para iniciantes
-  carousel_heading_javascript: Tutoriais que ensinam Javascript
+  carousel_heading_javascript: Tutoriais que ensinam JavaScript
   carousel_heading_unplugged: Não tem dispositivos eletrônicos nem Internet? Conheça
     as atividades de ciência da computação "offline"
   carousel_heading_devices: Aplicativos de tutoriais para telefones e tablets
@@ -395,6 +401,10 @@
   thinkersmithspanish_name: Meus amigos robóticos
   khan_name: Uma introdução ao JavaScript
   khanes_name: Uma introdução ao JavaScript
+  khanpt_name: Uma introdução ao JavaScript
+  khanhe_name: Uma introdução ao JavaScript
+  khanfr_name: Uma introdução ao JavaScript
+  khanpl_name: Uma introdução ao JavaScript
   tynker_name: Crie seu próprio jogo
   scratch_name: Solte sua imaginação com a programação
   lightbot_name: Lightbot
@@ -423,12 +433,17 @@
   thinkersmith2_name: Bugigangas binárias
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Pedra, papel, tesoura
-  frozen_gradelevel: A partir de 8 anos
+  hourofcode_name: Placeholder for new code.org/hoc
+  playlab_name: Placeholder for code.org/s/playlab
   codeorg_gradelevel: De 4 a 104 anos
   codeintl_gradelevel: De 4 a 104 anos
   thinkersmithspanish_gradelevel: Todas as idades
   khan_gradelevel: Ensino Fundamental II
   khanes_gradelevel: A partir do ensino fundamental II
+  khanpt_gradelevel: Ensino Fundamental II
+  khanhe_gradelevel: Ensino Fundamental II
+  khanfr_gradelevel: Ensino Fundamental II
+  khanpl_gradelevel: Ensino Fundamental II
   tynker_gradelevel: De 5 a 13 anos
   scratch_gradelevel: A partir de 8 anos
   lightbot_gradelevel: Todas as idades
@@ -457,13 +472,19 @@
   thinkersmith2_gradelevel: A partir de 8 anos
   kodableunplugged_gradelevel: De 8 a 13 anos
   projguts_gradelevel: De 10 a 13 anos
-  frozen_platformtext: Navegadores modernos + tablets
+  hourofcode_gradelevel: De 4 a 104 anos
+  frozen_gradelevel: A partir de 8 anos
+  playlab_gradelevel: De 4 a 104 anos
   codeorg_platformtext: Navegadores Web modernos, smartphones, tablets
   codeintl_platformtext: Navegadores Web modernos, smartphones, tablets
   thinkersmithspanish_platformtext: Offline
   khan_platformtext: Navegadores Web modernos
   khanes_platformtext: Navegadores Web modernos
-  tynker_platformtext: Navegadores modernos (a continuação do curso é paga)
+  khanpt_platformtext: Navegadores Web modernos
+  khanhe_platformtext: Navegadores Web modernos
+  khanfr_platformtext: Navegadores Web modernos
+  khanpl_platformtext: Navegadores Web modernos
+  tynker_platformtext: Navegadores Web modernos
   scratch_platformtext: TODOS os navegadores
   lightbot_platformtext: TODOS os navegadores e iOS, Android ou console de jogos
   thinkersmith_platformtext: Offline
@@ -491,13 +512,18 @@
   thinkersmith2_platformtext: Offline
   kodableunplugged_platformtext: Offline
   projguts_platformtext: Offline
-  frozen_shortdescription: Use a programação para explorar a mágica e a beleza do
-    gelo com Anna e Elsa.
+  hourofcode_platformtext: Navegadores Web modernos, smartphones, tablets
+  frozen_platformtext: Navegadores modernos + tablets
+  playlab_platformtext: Navegadores Web modernos, smartphones, tablets
   codeorg_shortdescription: Aprenda a programar com Mark Zuckerberg e Angry Birds!
   codeintl_shortdescription: Aprenda a programar com Mark Zuckerberg e Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Aprenda a desenhar em JavaScript
   khanes_shortdescription: Aprenda a desenhar em JavaScript
+  khanpt_shortdescription: Aprenda a desenhar em JavaScript
+  khanhe_shortdescription: Aprenda a desenhar em JavaScript
+  khanfr_shortdescription: Aprenda a desenhar em JavaScript
+  khanpl_shortdescription: Aprenda a desenhar em JavaScript
   tynker_shortdescription: Aprenda a programar solucionando desafios divertidos, além
     de criar seus próprios jogos para dispositivos móveis.
   scratch_shortdescription: Crie animações, histórias e jogos interativos.
@@ -542,10 +568,10 @@
     representar informações
   kodableunplugged_shortdescription: Um divertido exercício offline
   projguts_shortdescription: Conheça a modelagem e a simulação com pedra/papel/tesoura
-  frozen_longdescription: Vamos usar programação para explorar a magia e a beleza
-    do gelo junto com Anna e Elsa. Você vai criar flocos de neve e padrões enquanto
-    patina no gelo e cria um país das maravilhas congelante que pode compartilhar
-    com seus amigos!
+  hourofcode_shortdescription: Placeholder for new code.org/hoc
+  frozen_shortdescription: Use a programação para explorar a mágica e a beleza do
+    gelo com Anna e Elsa.
+  playlab_shortdescription: Placeholder for code.org/s/playlab
   codeorg_longdescription: Aprenda os conceitos básicos de Ciência da Computação com
     a programação de arrastar e soltar. Este tutorial se parece com um jogo, é autoexplicativo
     e conta com a participação de Bill Gates, Mark Zuckerberg, Angry Birds e Plants
@@ -564,6 +590,18 @@
     cria desenhos divertidos com seus códigos. Você pode fazer isso sozinho ou com
     sua turma!
   khanes_longdescription: Aprenda os conceitos básicos da programação JavaScript enquanto
+    cria desenhos divertidos com seus códigos. Você pode fazer isso sozinho ou com
+    sua turma!
+  khanpt_longdescription: Aprenda os conceitos básicos da programação JavaScript enquanto
+    cria desenhos divertidos com seus códigos. Você pode fazer isso sozinho ou com
+    sua turma!
+  khanhe_longdescription: Aprenda os conceitos básicos da programação JavaScript enquanto
+    cria desenhos divertidos com seus códigos. Você pode fazer isso sozinho ou com
+    sua turma!
+  khanfr_longdescription: Aprenda os conceitos básicos da programação JavaScript enquanto
+    cria desenhos divertidos com seus códigos. Você pode fazer isso sozinho ou com
+    sua turma!
+  khanpl_longdescription: Aprenda os conceitos básicos da programação JavaScript enquanto
     cria desenhos divertidos com seus códigos. Você pode fazer isso sozinho ou com
     sua turma!
   tynker_longdescription: Crie seus próprios jogos e compartilhe-os com seus amigos!
@@ -684,6 +722,12 @@
     a modelagem e a simulação funcionam, com um grupo de alunos jogando diferentes
     versões do jogo Pedra/Papel/Tesoura, e a ver os resultados como diferentes experiências
     de modelagem.
+  hourofcode_longdescription: Placeholder for new code.org/hoc
+  frozen_longdescription: Vamos usar programação para explorar a magia e a beleza
+    do gelo junto com Anna e Elsa. Você vai criar flocos de neve e padrões enquanto
+    patina no gelo e cria um país das maravilhas congelante que pode compartilhar
+    com seus amigos!
+  playlab_longdescription: Placeholder for code.org/s/playlab
   codeorg_beyond_name: Introdução à Ciência da Computação (Ensino Fundamental)
   khan_beyond_name: Aprenda programação de computador
   tynker_beyond_name: Aprenda a programar em casa

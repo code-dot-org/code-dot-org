@@ -3,7 +3,6 @@ title: Blurbs and Stats
 layout: wide
 nav: resources_nav
 ---
-<a href="/#join"><button style="float: right; margin-top: 50px">Sign up your event</button></a>
 
 # Blurbs and Useful Stats
 
@@ -15,5 +14,3 @@ Computers are everywhere, but fewer schools teach computer science than 10 years
 ## Infographic version:
 
 ![image](http://code.org/images/fit-8000/Code.org_infographic.png)
-
-<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>
