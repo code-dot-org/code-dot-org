@@ -8,6 +8,7 @@ exclude_from_upload:
   - update_s3
   - s3_website.yml
   - .env
+  - .gitignore
 cloudfront_distribution_id: <%= ENV['CLOUDFRONT_ID'] %>
 cloudfront_distribution_config:
   default_cache_behavior:
