@@ -98,7 +98,11 @@ private
     @game = @level.game
     if @script.cached?
       @stage = @script.stages.to_a.find{|stage| stage.id == @script_level.stage_id}
-      @game_script_levels = @script.script_levels.to_a.select{|sl| sl.stage_id == @script_level.stage_id}
+      if @stage
+        @game_script_levels = @script.script_levels.to_a.select{|sl| sl.stage_id == @script_level.stage_id}
+      else
+        @game_script_levels = @script.script_levels.to_a.select{|sl| sl.level.game_id == @script_level.level.game_id}
+      end
     else
       @stage = @script_level.stage
     end
