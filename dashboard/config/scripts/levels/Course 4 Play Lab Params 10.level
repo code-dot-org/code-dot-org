@@ -19,7 +19,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
-    "disable_variable_editing": "false",
+    "disable_variable_editing": "true",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
     "free_play": "false",

@@ -7,7 +7,7 @@
   "properties": {
     "skin": "artist",
     "embed": "false",
-    "instructions": "Create a “draw a triangle\" function with 50 pixels sides from scratch.",
+    "instructions": "Create a “draw a triangle function with 50 pixels sides” from scratch",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -22,7 +22,8 @@
     "x": "175",
     "y": "250",
     "ideal": "9",
-    "video_key": "C4_create_functions"
+    "callout_json": "[{\r\n  \"localization_key\": \"create_function\",\r\n  \"element_id\": \".blocklyTreeLabel:contains(Functions)\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}\r\n  }\r\n}, {\r\n  \"on\": \"function_editor_opened\",\r\n  \"localization_key\": \"name_function\",\r\n  \"element_id\": \"#functionNameText\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"right center\", \"at\": \"left center\"}\r\n  }\r\n}, {\r\n  \"on\": \"function_editor_opened\",\r\n  \"localization_key\": \"write_draw_triangle_function\",\r\n  \"element_id\": \"#modalContainer [block-id]:eq(0)\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"top left\", \"at\": \"top left\", \"adjust\": {\"x\": 44, \"y\": 37}}\r\n  }\r\n}]",
+    "video_key": "C4_function_create"
   }
 }]]></config>
   <blocks>
@@ -144,15 +145,15 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="procedures_callnoreturn">
-              <mutation name="draw a triangle"/>
+              <mutation name="draw triangle"/>
             </block>
           </next>
         </block>
         <block type="procedures_defnoreturn" uservisible="false" usercreated="true">
           <mutation>
-            <description>draw a triangle that is 50 pixels in size</description>
+            <description>draw a triangle</description>
           </mutation>
-          <title name="NAME">draw a triangle</title>
+          <title name="NAME">draw triangle</title>
           <statement name="STACK">
             <block type="controls_repeat_ext" inline="true" uservisible="false">
               <value name="TIMES">
