@@ -336,8 +336,8 @@ ro:
     test_videos_help: Încearcă noul nostru video player la şcoala ta
     try_beta_courses: Nou! Încearcă cursele noastre beta pentru elevi K-5
     use_as_teacher: Foloseşte acest site drept profesor
-    heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
-    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
+    heading_hoc2014: '<h2>Ora de programare pentru</h2><h1>toate vârstele</h1>'
+    heading_elementary: '<h2>cursuri de 20 ore pentru</h2><h1>începători(toate vârstele)</h1>'
     heading_apps: '<h2>Distracţie pentru</h2><h1>Toată lumea</h1>'
     heading_legacy: '<h2>Cursul nostru general pentru</h2><h1>Toate vârstele</h1>'
     your_gallery: Galerie
@@ -349,9 +349,9 @@ ro:
     student: elev
     teacher: Profesor
   footer:
-    help_from_html: Ingineri de la Google, Microsoft, Facebook şi Twitter au ajutat la creearea acestui tutorial.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
-    powered_by_aws: Powered by Amazon Web Services
+    help_from_html: Inginerii de la Google, Microsoft, Facebook şi Twitter au ajutat la creearea acestui tutorial.
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Toate Drepturile Rezervate.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Toate Drepturile Rezervate.'
+    powered_by_aws: Susținut de Amazon Web Services
     feedback: Oferă feedback
     translate: 'Ajută-ne să  traducem în limba ta'
     support: Suport

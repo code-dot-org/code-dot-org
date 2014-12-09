@@ -2,8 +2,9 @@ class ApplicationController < ActionController::Base
   include LocaleHelper
   include ApplicationHelper
 
-  include SeamlessDatabasePool::ControllerFilter
-  use_database_pool :all => :master
+#  commenting this stuff out because even if we don't have a reader configured it will set stuff in the session
+# include SeamlessDatabasePool::ControllerFilter
+#  use_database_pool :all => :master
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
@@ -103,7 +104,11 @@ class ApplicationController < ActionController::Base
     # logged in users can save solved levels to a gallery (subject to
     # additional logic in the blockly code because blockly owns
     # which levels are worth saving)
-    if current_user && options[:level_source].try(:id) && options[:solved?] && options[:activity]
+    if current_user &&
+        options[:level_source].try(:id) &&
+        options[:solved?] &&
+        options[:activity] && 
+        options[:level_source].try(:level_source_image)
       response[:save_to_gallery_url] = gallery_activities_path(gallery_activity: {activity_id: options[:activity].id})
     end
 

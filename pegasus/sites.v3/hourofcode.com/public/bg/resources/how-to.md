@@ -44,7 +44,7 @@ The best Hour of Code experience will be with Internet-connected computers. But 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
   * Оригиналният стартиращ Code.org клип, с участието на Бил Гейтс, Марк Зукерберг и НБА звезда Крис Бош (има версии за [ 1 минута](https://www.youtube.com/watch?v=qYZF6oIZtfc), [ 5 минути](https://www.youtube.com/watch?v=nKIu9yen5nc) и [ 9 минути](https://www.youtube.com/watch?v=dU1xS07N-FA))
-  * [ Стартиращото видео на миналогодишния час на кодирането](https://www.youtube.com/watch?v=FC5FbmsH4fw), или < % if @country == 'uk' %> [ Часът на кодирането 2014 видео](https://www.youtube.com/watch?v=96B5-JGA9EQ) < % else %> [ Часът на кодирането 2014 видео](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
+  * [ Стартиращото видео на миналогодишния час на кодирането](https://www.youtube.com/watch?v=FC5FbmsH4fw), или <% if @country == 'uk' %> [ Часът на кодирането 2014 видео](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [ Часът на кодирането 2014 видео](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
   * [Президентът Обама призовава всички ученици да учат компютърни науки](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
 **Get your students excited - give them a short intro**

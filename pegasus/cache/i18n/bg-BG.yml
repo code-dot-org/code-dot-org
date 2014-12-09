@@ -99,6 +99,9 @@
   participant_educator: Преподавател
   participant_engineer: Софтуерен инженер
   participant_other: Никое от горните
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Аз съм
   never_spam: Ние никога няма да ви изпратим спам
   enter_country: Въведете страна, ако се намирате извън САЩ
@@ -137,6 +140,10 @@
   studiobar_flappy_body: Направете и споделете своя собствена Flappy игра
   studiobar_teacher_title: За учители
   studiobar_teacher_body: Представете Code Studio в класната си стая
+  studiobar_frozen_title: Час на Кодирането
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Аз съм ученик
   contact_form_topic_parent: Аз съм родител
   contact_form_topic_teacher: Аз съм учител/обучител
@@ -371,7 +378,7 @@
   more_resources_educators: Повече ресурси за учители и възпитатели
   participants: участници
   teachers_notes: Указания за учители
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: 'Учители: Прочетете важни бележки тук'
   previous: Назад
   next: Напред
   older_systems: Уроци, които работят на по-стари системи
@@ -453,13 +460,13 @@
   thinkersmithspanish_platformtext: Ънплъгд
   khan_platformtext: Съвременни уеб браузъри
   khanes_platformtext: Съвременни уеб браузъри
-  tynker_platformtext: Съвременни уеб браузъри
+  tynker_platformtext: Съвременни браузъри. (Започването на курса изисква $$)
   scratch_platformtext: ВСИЧКИ браузъри
   lightbot_platformtext: ВСИЧКИ браузъри и iOS, Android или игрална конзола
   thinkersmith_platformtext: Ънплъгд
   condcards_platformtext: Ънплъгд
   lightbotintl_platformtext: iOS, Android (или уеб браузър)
-  codehs_platformtext: Съвременни браузъри
+  codehs_platformtext: Съвременни браузъри. (Започването на курса изисква $$)
   codecademy_platformtext: Съвременни уеб браузъри. iOS, Android приложения
   codecombat_platformtext: Съвременни уеб браузъри
   codemonkey_platformtext: Съвременни уеб браузъри
@@ -502,8 +509,8 @@
   codecademy_shortdescription: Научете да програмирате с JavaScript в уеб браузър
   codecombat_shortdescription: Победете оргитата, за да научите JavaScript или Python,
     чрез тази епична игра за програмиране!
-  codemonkey_shortdescription: Учениците ще програмират маймунката да си улови банани,
-    и това ще става все  по-сложно на всяко следващо ниво.
+  codemonkey_shortdescription: Учениците създават програма за маймуната, за да си
+    вземе банани.
   codeavengers_shortdescription: Научете да програмирате с JavaScript в уеб браузър
   processing_shortdescription: Едночасов урок на езика Processing
   robomind_shortdescription: Писане на код за виртуален робот
@@ -515,8 +522,8 @@
     на програмирането.
   kodable_shortdescription: Забавна игра на iPad за преподаване на понятия от компютърното
     програмиране
-  tynkerapp_shortdescription: Научете се да кодирате чрез решаване на забавни пъзели
-    и изградете свои собствени мобилни игри.
+  tynkerapp_shortdescription: 'Научете се да програмирате чрез решаване на забавни
+    пъзели за кодиране. '
   robomindnl_shortdescription: Писане на код за виртуален робот
   flappy_shortdescription: Направете своя собствена игра - Flappy Bird, Shark или
     Submarine
@@ -524,8 +531,8 @@
     real Javascript.
   makegameswithus_shortdescription: Направете iPhone игра! Научете се да пишете код,
     за да научите чудовището си да се движи!
-  touchdevelop_shortdescription: Създавайте мобилни приложения директно на вашия телефон,
-    таблет или лаптоп
+  touchdevelop_shortdescription: 'Решавайте пъзели, създавайте игри и се научете да
+    кодирате на вашия телефон. '
   appinventor_shortdescription: Направете свое приложение! (Само за Android)
   blockly_shortdescription: Изтеглете ZIP файла за да програмирате офлайн
   thinkersmith2_shortdescription: Научете как компютрите използват единици и нули
@@ -545,11 +552,10 @@
     and drop програмиране. Това е като игра, самонасочващи уроци с  видео лекции от
     Бил Гейтс, Марк Зукерберг, Angry Birds и Plants vs. Zombies. Научете за повторения-цикли,
     условия и основни алгоритми. Наличен на 34 езика.
-  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
+  thinkersmithspanish_longdescription: С помощта на предварително  определен "Речник
+    на робота", учениците ще се ръководят по такъв начин, че да изпълнят конкретни
+    задачи, които не са  обсъдени по-рано. Този сегмент учи учениците за връзката
+    между символи и действия, както и ценното умение на отстраняване на грешки.
   khan_longdescription: Научете основите на програмирането с JavaScript докато създавате
     забавни рисунки с вашия код. Направете го сами или с класа си!
   khanes_longdescription: Научете основите на програмирането с JavaScript докато създавате
@@ -623,10 +629,10 @@
   kodable_longdescription: Kodable е самонасочваща iPad игра, която въвежда децата
     на 5 + в основите на програмирането. Наличието на учител или родител е желателно,
     но не задължително.
-  tynkerapp_longdescription: Изгради своя собствена игра и я сподели с приятели! Решавайте
-    забавни пъзели за кодиране и научете понятия от програмирането във всяко ниво.
-    Персонализирайте игрите с анимационни герои, няколко нива и богати галерии с добавки.
-    Много забавни дейности, от които да избирате!
+  tynkerapp_longdescription: Научете се да програмирате чрез решаване на забавни пъзели
+    за кодиране. Лесно изграждане на игри и истории чрез използване с тематични графики,
+    10 + игри – комплекти и адаптивни знаци. Не се изисква Интернет връзка. Можете
+    също да достъпите до вашите творения в Интернет.
   robomindnl_longdescription: 'Учениците изучават основите на програмирането чрез
     контролиране на техните собствени виртуални роботи. Онлайн курсът е напълно самостоятелен
     и придружен от кратки презентации, филми, викторини и съвети, за да ви помогнем
@@ -640,13 +646,12 @@
     да продължат напред.
   makegameswithus_longdescription: Научете се да кодирате като направите iPhone игра,
     използвайки чисто нов и предназначен за начинаещи приятелски език за програмиране
-    наречен Swift! Създавайте  Пок&eacute;емон вдъхновена екшън игра и чрез писане
-    на код, да научите вашето чудовище на нови движения. Ще научите как да използвате
-    променливи, методи и обекти, за да помогнете да спечели чудовището ви!
-  touchdevelop_longdescription: Луди чертежи, летящи чудовища, въртящи се цветя...
-    създаване на програми на вашето устройство с TouchDevelop, среда за създаване
-    на мобилни приложения. Работи на iPhone, iPad, Android, Windows, Windows Phone,
-    Линукс, Мак.
+    наречен Swift! Създавайте  Покемон вдъхновяваща екшън игра и чрез писане на код,  научите
+    вашето чудовище на нови движения. Ще научите как да използвате променливи, методи
+    и обекти, за да помогнете да спечели чудовището ви!
+  touchdevelop_longdescription: 'Насочения към тъч устройства редактор ще ви помогне
+    в създаването на пиксел изкуство, решаването на мечи пъзел или в правенето на
+    своя jumping bird" игра. '
   appinventor_longdescription: Забавни, бързи видео уроци ще ви преведат през изграждането
     на три прости приложения за вашия андроид телефон или таблет. Предназначен за
     начинаещи и за експерти. В този Час на кодирането ще се научите да изграждате

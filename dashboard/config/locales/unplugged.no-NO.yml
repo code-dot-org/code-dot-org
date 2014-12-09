@@ -119,7 +119,7 @@
         - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: Happy Maps
+        title: Glade Kart
         desc: Elevene lage enkle algoritmer (sett med instruksjoner) for å flytte
           en figur gjennom en labyrint med én kommando.
         video: C1_happy_maps_unplugged
@@ -142,7 +142,7 @@
           and students discuss the idea of being persistent when things get complicated.
         video: C1_building_foundation
       GettingLoopy:
-        title: Getting Loopy
+        title: Gå i spinn
         desc: This lesson introduces the programming concept of loops (repeated instructions)
           through a dance activity. Students will learn simple choreography, then
           be instructed to repeat it.
@@ -168,7 +168,7 @@
           is pressed.
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
-        title: Going Places Safely
+        title: Trygg reise
         desc: Internett er en kraftig, men noen ganger farlig sted. Lærere presentere
           hvordan å være trygg når du navigerer på Internett.
         video: C1_going_places_safely

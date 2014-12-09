@@ -20,7 +20,7 @@ This is a review of loops and nested loops. Students will use the traditional ar
 
 [Introduction](#GetStarted) <br/>
 
-### **Activity: Maze**
+### **Activity: Artist**
 
 [Maze](#Activity)
 
@@ -34,7 +34,7 @@ This is a review of loops and nested loops. Students will use the traditional ar
 ## Lesson Objectives 
 ### Students will:
 
-- Create programs that utilize repitition to create gorgeous designs
+- Create programs that utilize repetition to create gorgeous designs
 - Use trial and error to recreate detailed designs in proper scale
 - Divide the number of degrees in a circle into even segments
 - Calculate the angles in equilateral and 30 60 90 triangles
@@ -59,7 +59,7 @@ Review with students the basic artist navigation, particularly:
 [together]
 
 ## Activity
-### <a name="Activity"></a> [Maze](http://learn.code.org/s/course4/stage/2/puzzle/1)
+### <a name="Activity"></a> [Maze](http://learn.code.org/s/course4/stage/3/puzzle/1)
 
 Students will see a variety of shapes in this lesson.  Some of the designs get pretty intricate. Your class may find it helpful to have a protractor and paper on hand. Feel free to promote trial and error as well.
 

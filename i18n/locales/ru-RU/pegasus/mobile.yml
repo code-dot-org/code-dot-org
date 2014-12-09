@@ -41,7 +41,7 @@ ru-RU:
   go: Старт
   thank_you_: Спасибо!
   congratulations: Поздравляем!
-  congratulations_on_completing_hoc: Поздравляем с завершением 1-го Часа программирования.
+  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   get_a_certificate_of_achievement: Получить сертификат о результате
   enter_valid_email: Пожалуйста, введите действительный адрес электронной почты
   get_a_certificate_message: "Мы вышлем Вам сертификат и информацию о том, как <a href='/learn/beyond'>Учиться дальше!</a>"
@@ -65,7 +65,7 @@ ru-RU:
   thanks_for_voting: Спасибо за голосование!
   share_on_facebook: Поделиться на Facebook
   share_on_twitter: Поделиться в Twitter
-  beyond_an_hour: 'После прохождения Часа Кода - что дальше?'
+  beyond_an_hour: Beyond an Hour of Code
   get_started: Начать
   i_agree: Я согласен
   participant_select: '- Выбрать -'
@@ -74,6 +74,9 @@ ru-RU:
   participant_educator: Педагог
   participant_engineer: Программист
   participant_other: Ни один из вышеперечисленных
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Я
   never_spam: Мы никогда не пришлём Вам спам
   enter_country: 'Введите страну, если Вы не в  США'
@@ -110,6 +113,10 @@ ru-RU:
   studiobar_flappy_body: Создай и поделись своей игрой Flappy
   studiobar_teacher_title: Сделано для учителей
   studiobar_teacher_body: Познакомьте Ваш класс со Студией Кода
+  studiobar_frozen_title: Hour of Code
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Я ученик
   contact_form_topic_parent: Я родитель
   contact_form_topic_teacher: Я преподаватель/воспитатель
@@ -283,17 +290,17 @@ ru-RU:
   dashboard_sections_password_account_creation: Текстовый пароль, созданный учеником
   dashboard_sections_login_type_explanation: 'Это таблица поможет понять, какой из типов входа, <b>изображение, слово, или email</b> Вам лучше всего использовать, чтобы выбрать раздел.'
   dashboard_faq: ЧАсто задаваемые ВОпросы
-  code_hoc_coming: 'Час Кода приближается - с 8 по 14  декабря!'
+  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: Зарегистрируйтесь для участия в Неделе Информатики
   learn_more: Подробнее
   hoc2014_try_new_tutorials: Попробуйте наши новые учебные материалы для Часа Кода
   hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
   hoc2014_try_scrat: Angry Birds, PvZ, и Scrat
-  hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
+  hoc2014_try_frozen: 'Рисуй вместе с Анной и Эльзой из "Холодного сердца"'
   carousel_heading_international: Обучающее руководство на Вашем языке
   carousel_heading_domestic: Учебные материалы доступны на английском языке
   carousel_heading_beginners: Учебники для начинающих
-  carousel_heading_javascript: Учебные материалы по Javascript
+  carousel_heading_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: 'Нет выхода в Интернет ? Попробуй "информатику оффлайн"'
   carousel_heading_devices: Обучающие приложения для телефонов и планшетов
   carousel_heading_languages: Учебные материалы по другим языкам программирования
@@ -306,13 +313,13 @@ ru-RU:
   more_resources_educators: Больше ресурсов для учителей и преподавателей
   participants: участники
   teachers_notes: Заметки учителя
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: 'Учителям: ознакомьтесь с важными заметками для педагогов здесь'
   previous: Назад
   next: Далее
   older_systems: Уроки доступные на более старых системах
   older_systems_subheading: 'Эти уроки должны работать в более старых браузерах. Для доступа ко всем урокам, установите <a href="http://browsehappy.com/" target="_blank">браузер новой версии.</a>'
   mobile_devices: Учебники для мобильных устройств
-  frozen_name: Code with Anna and Elsa
+  frozen_name: Программируй с Анной и Эльзой
   codeorg_name: Написать первую компьютерную программу
   codeintl_name: Написать первую компьютерную программу
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -386,13 +393,13 @@ ru-RU:
   thinkersmithspanish_platformtext: Офф-лайн
   khan_platformtext: Современные веб-браузеры
   khanes_platformtext: Современные веб-браузеры
-  tynker_platformtext: Modern browsers. (Follow-on course requires $$)
+  tynker_platformtext: Современные браузеры. (Для прохождения более углубленного курса требуется $$)
   scratch_platformtext: ВСЕ браузеры
   lightbot_platformtext: ВСЕ браузеры и iOS, Android или Игровые Консоли
   thinkersmith_platformtext: Офф-лайн
   condcards_platformtext: Офф-лайн
   lightbotintl_platformtext: Операционные системы iOS и Android (или веб-браузер)
-  codehs_platformtext: 'Modern browsers. (Follow-on course requires  $$)'
+  codehs_platformtext: Современные браузеры. (Для прохождения более углубленного курса требуется $$)
   codecademy_platformtext: Современные веб-браузеры. Приложения для операционных систем iOS и Android
   codecombat_platformtext: Современные веб-браузеры
   codemonkey_platformtext: Современные веб-браузеры
@@ -429,7 +436,7 @@ ru-RU:
   codehs_shortdescription: 'Начните программировать с Псом Карелом - веселое и визуальное введение в программирование!'
   codecademy_shortdescription: Изучайте программирование в JavaScript, в веб-браузере
   codecombat_shortdescription: Победите огров, чтобы изучить Python или JavaScript в этой эпичной игре!
-  codemonkey_shortdescription: Students program a monkey to catch bananas.
+  codemonkey_shortdescription: Ученики запрограммируют обезьянку, чтобы она ловила бананы.
   codeavengers_shortdescription: Изучайте программирование в JavaScript, в веб-браузере
   processing_shortdescription: Часовой урок о языках обработки
   robomind_shortdescription: Напишите код для виртуального робота
@@ -437,21 +444,21 @@ ru-RU:
   quorum_shortdescription: Присоединяйтесь к Мэри на экскурсии, где она узнает о языке программирования Quorum.
   codespark_shortdescription: 'The Foos - это веселя игра, подходящая для детей, чтобы помочь узнать им о программировании.'
   kodable_shortdescription: Весёлые игры для iPad для обучения основам программирования
-  tynkerapp_shortdescription: 'Learn to program by solving fun coding puzzles. '
+  tynkerapp_shortdescription: 'Научись программировать, разгадывая веселые головоломки. '
   robomindnl_shortdescription: Напишите код для виртуального робота
   flappy_shortdescription: 'Создайте свою игру - Птица, котора машет крыльями, Акула, или Подводная Лодка'
   bitsbox_shortdescription: Кодируйте приложения для игр и публикаций с использованием настоящего Javascript.
   makegameswithus_shortdescription: Сделайте игру для iPhone! Учитесь, написав код для новых движений вашего монстра!
-  touchdevelop_shortdescription: 'Solve puzzles, create games, and learn coding all on your phone. '
+  touchdevelop_shortdescription: 'Разгадывай головоломки, создавай игры и учись программировать, и все это - на мобильном телефоне. '
   appinventor_shortdescription: Сделайте своё собственное приложение! (Только для Android)
   blockly_shortdescription: Скачать ZIP-файл, чтобы учиться в режиме offline
   thinkersmith2_shortdescription: Узнайте, как компьютеры используют единички и нули для представления информации
   kodableunplugged_shortdescription: Весёлые упражнения без компьютера
   projguts_shortdescription: 'Испытайте моделирование с помощью игры "Камень - ножницы - бумага"'
-  frozen_longdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
+  frozen_longdescription: Давайте с помощью программирования кода присоединимся к Анне и Эльзе в их исследовании магии и красоты льда. Будем кататься на коньках и рисовать на льду снежинки и узоры, создавать зимнюю страну чудес и делиться этим с друзьями!
   codeorg_longdescription: Изучайте основные понятия информатики с помощью drag-and-drop программирования. Это похожий на игру самоучитель с видеолекциями Билла Гейтса, Марка Цукерберга, Angry Birds и Plants vs. Zombies. Изучите циклы, условные операторы и основные алгоритмы. Доступен на 34 языках.
   codeintl_longdescription: Изучайте основные понятия информатики с помощью drag-and-drop программирования. Это похожий на игру самоучитель с видеолекциями Билла Гейтса, Марка Цукерберга, Angry Birds и Plants vs. Zombies. Изучите циклы, условные операторы и основные алгоритмы. Доступен на 34 языках.
-  thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubriran como guiarse de modo tal de llevar a cabo tareas especificas sin ser estas discutidas previamente. Este segmento ensena a los estudiantes la conexion entre simbolos y acciones asi como la valiosa habilidad de depuracion.'
+  thinkersmithspanish_longdescription: 'С помощью имеющегося "Словаря для роботов" учащиеся попробуют, направляя друг друга, выполнить определенные задачи, при этом не обсуждая их предварительно. Этот урок покажет детям связь между символами и действиями, а также научит их незаменимому навыку поиска и исправления ошибок в программе. "Мои друзья-роботы" лучше всего подходит в качестве группового задания и включает в себя учебное пособие для преподователей для использования в классах.'
   khan_longdescription: Изучите основы программирования на JavaScript при создании смешных рисунков с вашим кодом. Изучайте самостоятельно или вместе с одноклассниками!
   khanes_longdescription: Изучите основы программирования на JavaScript при создании смешных рисунков с вашим кодом. Изучайте самостоятельно или вместе с одноклассниками!
   tynker_longdescription: 'Создайте свои игры и поделитесь ими с друзьями! Отгадывайте веселые загадки и учитесь информатике на каждом уровне. Сделайте свою игру уникальной при помощи фигур, разных уровней и богатых декораций. Сделайте свою игру более реалистичной при помощи физики.  Язык программирования можно видеть ввиде блоков или ввиде JavaScript. Создайте мобильную версию для Айпадов или планшетов с Андроид. Вы можете выбрать из более чем дюжины вариантов!'

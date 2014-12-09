@@ -32,7 +32,13 @@ class ScriptLevel < ActiveRecord::Base
 
   def previous_level
     if self.stage
-      self.higher_item
+      if self.script.cached?
+        i = self.script.script_levels.index(self)
+        return nil if i.nil? || i == 0
+        self.script.script_levels[i - 1]
+      else
+        self.higher_item
+      end
     else
       self.script.try(:get_script_level_by_chapter, self.chapter - 1)
     end
@@ -76,12 +82,25 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def stage_or_game_total
-    stage ? stage.script_levels.count :
-    script.script_levels_from_game(level.game_id).count
+    @@stage_or_game_total ||= {}
+    @@stage_or_game_total[self.id] ||=
+      stage ? stage.script_levels.count :
+              script.script_levels_from_game(level.game_id).count
   end
 
   def self.cache_find(id)
     @@script_level_map ||= ScriptLevel.includes(:level, :script).index_by(&:id)
     @@script_level_map[id]
+  end
+
+  def available_callouts
+    @@available_callouts ||= {}
+    @@available_callouts[self.id] ||=
+      Callout.where(script_level_id: self.id).select(:id, :element_id, :qtip_config, :localization_key)
+    return @@available_callouts[self.id]
+  end
+
+  def self.clear_available_callouts_cache
+    @@available_callouts = {}
   end
 end

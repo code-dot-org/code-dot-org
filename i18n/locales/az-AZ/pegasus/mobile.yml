@@ -19,11 +19,11 @@ az-AZ:
   twentyhours_text: Finished your first Hour of Code? Learn more core computer science and programming concepts in this follow-up course.
   hoc2014_heading: '<a href="http://hourofcode.com">Kod Saatı</a>na qoşulun<br/>8 - 14 dekabr, 2014<br/>'
   hoc2014_students: Şagirdlər
-  hoc2014_try: Try it
+  hoc2014_try: Sınaqdan keçirin
   hoc2014_teachers: Müəllimlər
-  hoc2014_host: Host it
+  hoc2014_host: Təşkil edin
   hoc2014_everyone: Hamı
-  hoc2014_support: Support it
+  hoc2014_support: Dəstək verin
   hoc2014_whatishoc: Kod Saatı nədir?
   twentyhours_trynow: Elə indi sınaqdan keçirin
   california_heading: İnformatikanı tədris etməyi məktəbinizdən xahiş edin
@@ -41,7 +41,7 @@ az-AZ:
   go: Getdik
   thank_you_: Sağ olun!
   congratulations: Təbriklər!
-  congratulations_on_completing_hoc: Sizi bir Kod Saatını başa vurmağınız münasibəti ilə təbrik edirik.
+  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   get_a_certificate_of_achievement: Nailiyyət sertifikatı əldə edin
   enter_valid_email: Zəhmət olmasa, düzgün e-poçt ünvanı daxil edin
   get_a_certificate_message: "Biz sizə sertifikat və <a href='/learn/beyond'>Kod Saatından sonra da öyrən</a>məyin yolları barədə məlumat göndərəcəyik"
@@ -65,7 +65,7 @@ az-AZ:
   thanks_for_voting: Səs verdiyinizə görə sağ olun!
   share_on_facebook: '"Facebook"da bölüşün'
   share_on_twitter: '"Twitter"də bölüşün'
-  beyond_an_hour: 'Beyond an Hour of Code >'
+  beyond_an_hour: Beyond an Hour of Code
   get_started: Start
   i_agree: Razıyam
   participant_select: '- Seçin -'
@@ -74,6 +74,9 @@ az-AZ:
   participant_educator: Təhsil işçisi
   participant_engineer: Proqramçı-mühəndis
   participant_other: Yuxarıdakılardan heç biri
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: 'Mən kiməm:'
   never_spam: Sizə heç vaxt spam göndərmərik
   enter_country: ABŞ-dan kənardasınızsa, ölkənizi daxil edin
@@ -110,6 +113,10 @@ az-AZ:
   studiobar_flappy_body: Make and share your own Flappy game
   studiobar_teacher_title: Made for teachers
   studiobar_teacher_body: Introduce Code Studio in your classroom
+  studiobar_frozen_title: Kod Saatı
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Mən şagirdəm
   contact_form_topic_parent: Mən valideynəm
   contact_form_topic_teacher: Mən müəllim/təlimçiyəm
@@ -283,7 +290,7 @@ az-AZ:
   dashboard_sections_password_account_creation: Student-created text password
   dashboard_sections_login_type_explanation: "This table helps explain which of these login types, <b>picture, word, or email</b>, you'll want to choose for a section."
   dashboard_faq: Frequently Asked Questions
-  code_hoc_coming: 'The Hour of Code is coming - December 8-14!'
+  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: Learn More
   hoc2014_try_new_tutorials: Try our new Hour of Code tutorials
@@ -293,7 +300,7 @@ az-AZ:
   carousel_heading_international: Sizin dilinizdə olan dərsliklər
   carousel_heading_domestic: Tutorials available in English
   carousel_heading_beginners: Tutorials for Beginners
-  carousel_heading_javascript: Tutorials that teach Javascript
+  carousel_heading_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: "No device or internet? Try 'unplugged' computer science"
   carousel_heading_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: Tutorials in other programming languages

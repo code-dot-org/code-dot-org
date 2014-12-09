@@ -41,7 +41,7 @@ pt-PT:
   go: Ir
   thank_you_: Obrigado!
   congratulations: Parabéns!
-  congratulations_on_completing_hoc: Parabéns por ter concluído a Hora de Código.
+  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   get_a_certificate_of_achievement: Obtem um certificado de realização
   enter_valid_email: Introduz um endereço de e-mail válido
   get_a_certificate_message: "Vamos enviar-te um certificado e informações sobre como <a href='/learn/beyond'>Aprender para além de Uma Hora</a>"
@@ -65,7 +65,7 @@ pt-PT:
   thanks_for_voting: Obrigado por votar!
   share_on_facebook: Partilha no Facebook
   share_on_twitter: Partilha no Twitter
-  beyond_an_hour: 'Além de uma Hora de Código >'
+  beyond_an_hour: Beyond an Hour of Code
   get_started: Início
   i_agree: Concordo
   participant_select: -Selecione-
@@ -74,6 +74,9 @@ pt-PT:
   participant_educator: Educador
   participant_engineer: Engenheiro de software
   participant_other: Nenhuma das anteriores
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Eu sou um
   never_spam: Nós nunca te enviaremos spam
   enter_country: Introduzir nome do país se estiver fora dos Estados Unidos
@@ -110,6 +113,10 @@ pt-PT:
   studiobar_flappy_body: Faça e compartilhe o seu próprio jogo Flappy
   studiobar_teacher_title: Feito para professores
   studiobar_teacher_body: Introduza o Code Studio na sua sala de aula
+  studiobar_frozen_title: Hora de Código
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Sou um estudante
   contact_form_topic_parent: Sou um encarregado de educação
   contact_form_topic_teacher: Sou um professor/educador
@@ -201,7 +208,7 @@ pt-PT:
   dashboard_navigation_view_stats: Exibir estatísticas
   dashboard_navigation_section: 'Secção: %{section_name}'
   dashboard_navigation_student: 'Aluno: %{student_name}'
-  dashboard_sections_new_section: New section
+  dashboard_sections_new_section: Nova secção
   dashboard_sections_jumbotron_instruction: Create new sections and add students to them. Sections help you organize students into smaller groups so you can track their progress and manage their accounts.
   dashboard_sections_table_section: Section
   dashboard_sections_table_secret: Login Type
@@ -283,7 +290,7 @@ pt-PT:
   dashboard_sections_password_account_creation: Student-created text password
   dashboard_sections_login_type_explanation: "This table helps explain which of these login types, <b>picture, word, or email</b>, you'll want to choose for a section."
   dashboard_faq: Frequently Asked Questions
-  code_hoc_coming: 'The Hour of Code is coming - December 8-14!'
+  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: Saiba mais
   hoc2014_try_new_tutorials: Try our new Hour of Code tutorials
@@ -293,7 +300,7 @@ pt-PT:
   carousel_heading_international: Tutoriais na tua língua
   carousel_heading_domestic: Tutorials available in English
   carousel_heading_beginners: Tutorials for Beginners
-  carousel_heading_javascript: Tutorials that teach Javascript
+  carousel_heading_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: "No device or internet? Try 'unplugged' computer science"
   carousel_heading_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: Tutorials in other programming languages

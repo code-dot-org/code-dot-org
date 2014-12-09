@@ -244,23 +244,25 @@ td {
   color: white;
 }
 
-
 #index .count h1 {
-  color: white; font-size: 15px; line-height: 22px; font-family: 'Gotham 5r', sans-serif; margin: 0px;
-  display: inline; margin-right: 6px; margin-top:0px; margin-bottom:0px;
+  font-family: 'Gotham 5r', sans-serif;
+  color: white; font-size: 56px; line-height: 56px; font-weight: normal; margin: 0px;
+  margin-top:0px; margin-bottom:0px;
 }
-
 #index .count h2 {
-  color: white; font-size: 15px; line-height: 22px; font-family: 'Gotham 5r', sans-serif; margin-top:5px; margin-bottom: 0px;
-  display: inline; margin-right: 6px; margin-top:0px; margin-bottom:0px;
+  font-family: 'Gotham 5r', sans-serif;
+  color: white; font-size: 36px; line-height: 36px; font-weight: normal; margin-top:5px; margin-bottom: 0px;
+  margin-top:0px; margin-bottom:0px;
 }
 #index .count h3 {
-  color: white; font-size: 15px; line-height: 22px; font-family: 'Gotham 5r', sans-serif; margin-top:5px; margin-bottom:0px;
-  display: inline; margin-right: 6px; margin-top:0px; margin-bottom:0px;
+  font-family: 'Gotham 5r', sans-serif;
+  color: white; font-size: 32px; line-height: 32px; font-weight: normal; margin-top:5px; margin-bottom:0px;
+  margin-top:0px; margin-bottom:0px;
 }
 #index .count h4 {
-  color: white; font-size: 15px; line-height: 22px; font-family: 'Gotham 5r', sans-serif;
-  display: inline; margin-right: 6px; margin-top:0px; margin-bottom:0px;
+  font-family: 'Gotham 5r', sans-serif;
+  color: white; font-size: 26px; line-height: 26px; font-weight: normal;
+  margin-top:15px;
 }
 
 .greybox {
@@ -712,4 +714,25 @@ a.btn-default:active {
 label {
   font-family: 'Gotham 5r', sans-serif;
   font-weight: normal;
+}
+@media screen and (max-width: 450px) {
+  #index .count h1 {
+    font-size: 46px;
+    line-height: 46px;
+  }
+
+  #index .count h2 {
+    font-size: 26px;
+    line-height: 26px;
+  }
+
+  #index .count h3 {
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  #index .count h4 {
+    font-size: 16px;
+    line-height: 16px;
+  }
 }

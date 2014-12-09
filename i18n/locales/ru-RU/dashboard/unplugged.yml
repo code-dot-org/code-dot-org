@@ -63,17 +63,17 @@ ru:
           - unplug10
         video: Unplug10
       Unplug11:
-        title: Wrap-Up
+        title: Итоги
         desc: Финальный обзор первой двадцатичасовой серии напомнит классу любимые моменты и поможет заинтересовавшимся информатикой в выборе последующих самостоятельных шагов.
         pdfs:
           - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: Happy Maps
+        title: Весёлые карты
         desc: Ученики создают простые алгоритмы (наборы инструкций) для перемещения персонажа через лабиринт с помощью одной команды.
         video: C1_happy_maps_unplugged
       MoveIt:
-        title: Move it, Move it
+        title: Двигайся, двигайся
         desc: Ученики создают простые алгоритмы (наборы инструкций) для перемещения персонажа через лабиринт с помощью одной команды.
         video: C1_moveitmoveit_unplugged
       PlantASeed:

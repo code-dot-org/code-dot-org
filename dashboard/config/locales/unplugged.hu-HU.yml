@@ -81,22 +81,18 @@
         video: Unplug7
       Unplug8:
         title: Absztrakció
-        desc: This lesson will introduce the concept of Computer Science and explain
-          what a Computer Scientist does.  It will also give students an opportunity
-          to assume the role of a computer scientist.  By the end of the activity,
-          each student will have a take-home reminder of what he or she learned.  You
-          may be tempted to skip teaching young children the complicated vocabulary
-          words that are associated with the lessons that follow, but presenting them
-          in a fun and playful light now is far more productive than waiting for more
-          advanced opportunities.
+        desc: Ezt a tevékenység ötvözi a tanulók mindennapi rutinját és a Mad-Lib
+          stílusú gondolkodtató játékot, hogy segítsen az osztálynak megtanulni az
+          absztrakció hatékonyságát.
         pdfs:
         - unplug8
         video: Unplug8
       Unplug9:
         title: Váltó programozás
-        desc: This lesson will take an idea from a previous activity (4. Graph Paper
-          Programming) and use those skills to emphasize the importance of completing
-          programs that operate in sequence and frequently checking programs for "bugs".
+        desc: Ezt a lecke egy korábbi tevékenységből (4. Grafikon papír programozás)
+          származó ötletet hasznosít és az ott szerzett képességeket használja hogy
+          kiemelje a sorrendben működő programok befejezésének fontosságát, valamint
+          gyakori program ellenőrzéseket a hibák kiszűréséhez.
         pdfs:
         - unplug9
         video: Unplug9
@@ -116,7 +112,7 @@
         - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: Happy Maps
+        title: Boldog térképek
         desc: A diákok egyszerű algoritmusokat (utasítások sorozta) hoznak létre,
           hogy egy karaktert egyetlen paranccsal átvezessenek egy labirintuson.
         video: C1_happy_maps_unplugged
@@ -133,19 +129,19 @@
           szerepet.
         video: C1_planting_seed
       BuildingAFoundation:
-        title: Building a Foundation
+        title: Az alap megépítése
         desc: Students build a structure using only provided supplies. Structures
           must complete a task (reach a certain height or bear a certain weight),
           and students discuss the idea of being persistent when things get complicated.
         video: C1_building_foundation
       GettingLoopy:
-        title: Getting Loopy
+        title: Ciklikusság
         desc: Ez a lecke bevezet a ciklusok (ismétlődő utasítások) programozásának
           rejtelmeibe a tánc segítségével. A diákok megtanulnak egy egyszerű koreográfiát,
           majd azt újra megismétlik.
         video: C1_getting_loopy
       RelayProgramming:
-        title: Relay programming
+        title: Váltó programozás
         desc: Students run a relay race, where they dash across the yard to write
           an algorithm based on a "Graph Paper Programming" image. They can only write
           one instruction at a time and if there's an error somewhere, they have to
@@ -158,14 +154,14 @@
           lapot, én kapok egy pontot", és "Ha fekete lapot húzok, te kapsz egy pontot."'
         video: C2_conditionals_with_cards
       BigEvent:
-        title: The Big Event
+        title: A nagy esemény
         desc: A diákok megismerkednek az "események" fogalmával, melyek olyan programozási
           cselekvések, amiket a számítógép folyamatosan figyel.  A tanár gombokat
           rajzol egy papírra és a diákok attól függően kell, hogy reagáljanak, hogy
           a tanár melyik gombot "nyomja meg".
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
-        title: Going Places Safely
+        title: Biztonságos utazás
         desc: Az interneten egy hatalmas, de néha veszélyes hely. A tanárok bemutatják,
           hogyan maradhat biztonságos az interneten való jelenlét.
         video: C1_going_places_safely
@@ -175,19 +171,19 @@
           egy sor előre definiált parancs segítségével, hogy reprodukáljanak egy rajzot.
         video: C2_graph_paper
       PaperPlanes:
-        title: 'Real-life Algorithms: Paper Planes'
+        title: 'Hétköznapi algoritmusok: Papírrepülők'
         desc: Ebben a leckében az algoritmusok mindennapi életünkben való használatáról
           szól, konkrétan papír repülőgépek segítségével. Ez a lecke nagyobb képet
           ad a számítógép-tudományról és arra összpontosít, hogyan játszanak alapvető
           szerepet a számítástechnikában az algoritmusok.
         video: C2_paper_airplanes
       BinaryBracelets:
-        title: Binary Bracelets
+        title: Bináris karkötők
         desc: Diákok karkötőket készítenek nevük első betűjének bináris ábrázolására.  A
           diákok így megtanulják az adatok több módon is megjeleníthetők és tárolhatók.
         video: C2_binary_bracelets
       DigitalFootprint:
-        title: Your Digital Footprint
+        title: A digitális lábnyomod
         desc: A tanárok bemutatják, hogy ha a diákok információt helyeznek el magukról
           online az digitális lábnyomot, nyomot hagy, ami az következményekkel járhat.
         video: C2_digital_footprint
@@ -198,7 +194,7 @@
           with no instructions.
         video: C3_computational_thinking
       FunctionalSuncatchers:
-        title: Functional Suncatchers
+        title: Funkcionális Dekor
         desc: Students create an algorithm with variables and functions (pieces of
           code that you want to use over and over again) to create suncatchers using
           string and beads.
@@ -220,13 +216,13 @@
           módszereket.
         video: C3_internet
       Crowdsourcing:
-        title: Crowdsourcing
+        title: Csoportos megoldás
         desc: Diákok közösen gondolkodnak, ez a közös gondolkodás gyakori problémamegoldási
           mód a számítógép-tudományban, együtt egy osztály sokkal hatékonyabb, mintha
           egy diák egyedül próbálkozna.
         video: C3_crowdsourcing
       DigitalCitizenship:
-        title: Digital Citizenship
+        title: Digitális állampolgárság
         desc: A diákok felfedezik a különbséget a személyes adatok és a személyes
           információk között megkülönböztetve, mit biztonságos és mit nem biztonságos
           megosztani az interneten.
@@ -236,11 +232,11 @@
           egyszerű marad nagyon sokmindenre használható.  Ha azt akarod, hogy a végeredmény
           mindig ugyanaz legyen, az algoritmusnak is részletesebbnek kell lennie.
       EnvelopeVariables:
-        title: Envelope Variables
-        desc: Variables allow for a lot of freedom in computer science.  This lesson
-          helps to explain what variables are and how we can use them in many different
-          ways. Use this activity before (or in conjunction with) the lesson on abstraction
-          to really hit the idea home.
+        title: Boríték változók
+        desc: A változók nagyon sok szabadságot biztosítanak a számítástechnikában.  Ez
+          a lecke segít megmagyarázni, hogy mik azok a változók és hogyan használhatjuk
+          őket, nagyon sokféle módon. Használd ezt a tevékenységet, az absztrakció
+          lecke előtt (vagy együtt), hogy igazán érthető legyen.
       MadGlibs:
         title: Mad Glibs
         desc: 'Az absztrakció, az egyik legfontosabb készsége egy számítógép tudósnak.  A
@@ -270,17 +266,17 @@
         title: Videó játékok és koordináta síkok
         desc: A videó játékok és koordináta síkok lecke leírása
       Contracts:
-        title: Contracts
-        desc: Contracts unplugged lesson description
+        title: Szerződések
+        desc: Szerződések "unplugged" lecke leírása
       DesignRecipe:
-        title: The Design Recipe
-        desc: Design Recipe lesson description
+        title: A dizájn receptje
+        desc: '"Dizájn recept" lecke leírása'
       Booleans:
         title: Logikai adattípus
         desc: Boolean lecke leírása
       ConditionalsPiecewiseFunctions:
-        title: Conditionals and Piecewise Functions
-        desc: Conditionals and Piecewise Functions lesson description
+        title: Feltételes utasítások és összetett függvények
+        desc: Feltételes és "Piecewise funkciók" lecke leírása
       CollisionDetection:
         title: Ütközés felismerés
         desc: Ütközés felismerés lecke leírása

@@ -49,8 +49,8 @@
         <img src='<%= BlocklyApps.assetUrl("media/phone_purple.png") %>' />
       </a>
     <% } -%>
-    <% if (options.level.shapewaysUrl) { -%>
-      <a href='<%= options.level.shapewaysUrl %>' target="_blank">
+    <% if (options.level.shapewaysUrl && !options.onMainPage && options.sendToPhone) { -%>
+      <a id="sharing-shapeways" href="" onClick="return false;">
         <img src='<%= BlocklyApps.assetUrl("media/shapeways_purple.png") %>' />
       </a>
     <% } -%>
@@ -63,3 +63,10 @@
   <button id="phone-submit" onClick="return false;">Send</button>
   <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>
 </div>
+<% if (options.response && options.response.level_source && options.level.shapewaysUrl) { -%>
+  <div id="shapeways-message" class="sharing" style="display: none">
+    <div id="shapeways-message-body">You'll be redirected to Shapeways.com to order and purchase a 3D print.</div>
+    <button id="shapeways-print-go-button" onclick="window.open('<%= options.level.shapewaysUrl %>', '_blank')">Go to Shapeways</button>
+    <div id="shapeways-message-body-disclaimer">Students under 13 years need a parent or guardian to do 3D printing.</div>
+  </div>
+<% } -%>

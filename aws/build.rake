@@ -123,11 +123,20 @@ def stop_frontend(name, host, log_path)
 end
 
 def upgrade_frontend(name, host)
-  command = [
+  commands = [
     'cd production',
     'git pull',
     'rake build',
-  ].join(' && ')
+  ]
+  
+  if name =~ /^frontend-[a-z]\d\d$/
+    i = name[-2..-1].to_i
+    if i > 5
+      commands << 'sudo service pegasus stop'
+    end
+  end
+  
+  command = commands.join(' && ')
 
   HipChat.log "Upgrading <b>#{name}</b> (#{host})..."
 
@@ -135,7 +144,7 @@ def upgrade_frontend(name, host)
 
   begin
     RakeUtils.system 'ssh', '-i', '~/.ssh/deploy-id_rsa', host, "'#{command} 2>&1'", '>', log_path
-    HipChat.log "Upgraded <b>#{name}</b> (#{host})."
+    #HipChat.log "Upgraded <b>#{name}</b> (#{host})."
   rescue
     HipChat.log "<b>#{name}</b> (#{host}) failed to upgrade, removing from rotation.", color:'red'
     stop_frontend name, host, log_path
@@ -149,7 +158,7 @@ $websites = build_task('websites', [deploy_dir('rebuild'), BLOCKLY_COMMIT_TASK])
     RakeUtils.system 'rake', 'build'
 
     if rack_env?(:production) && CDO.daemon
-      thread_count = (CDO.app_servers.keys.count / 5)
+      thread_count = 1 + (CDO.app_servers.keys.count / 10)
       threaded_each CDO.app_servers.keys, thread_count do |name|
         upgrade_frontend name, CDO.app_servers[name]
       end

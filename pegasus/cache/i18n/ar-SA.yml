@@ -13,7 +13,8 @@
   n_have_learned_an_hoc: <h1>#</h1><h3>هل جربت</h3><h2>ساعة من البرمجة</h2>
   anybody_can_learn: اي شخص بأستطاعته التعلم.
   learn_now: تعلم الآن
-  petition_message: يجب أن يكون كل طالب في كل مدرسة الفرصة لتعلم علوم الحاسب الآلي
+  petition_message: كل طالب في كل مدرسة يجب أن يحصل على الفرصة الفرصة لتعلم علوم الحاسب
+    الآلي
   petition_sign_message: 'اذا كنت توافق , وقع بأستخدام اسمك . شارك # مع الاخرين.'
   name: الاسم
   email: البريد الإلكتروني
@@ -91,6 +92,9 @@
   participant_educator: المعلم
   participant_engineer: مهندس برمجيات
   participant_other: لا شيء من ما ورد أعلاه
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: انا
   never_spam: نحن لن نزعجك
   enter_country: أدخل اسم البلد اذا كنت خارج الولايات المتحدة
@@ -130,6 +134,10 @@
   studiobar_teacher_title: صنع من أجل المدرسين
   studiobar_teacher_body: يعرض "استوديو التعليمات البرمجية Code Studio " في الفصل
     الدراسي الخاص بك
+  studiobar_frozen_title: ساعة من البرمجة
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: أنا طالب
   contact_form_topic_parent: أنا والد
   contact_form_topic_teacher: أنا مدرس/ معلم
@@ -342,7 +350,7 @@
   carousel_heading_international: دروس تعليمية بلغتك
   carousel_heading_domestic: البرامج التعليمية المتوفرة باللغة الإنجليزية
   carousel_heading_beginners: دروس للمبتدئين
-  carousel_heading_javascript: دروس لتعلم الجافا سكريت
+  carousel_heading_javascript: دروس تعليم جافا سكريبت
   carousel_heading_unplugged: لا يوجد جهاز أو إنترت ؟ جرب علم الحاسوب "مفكوك"
   carousel_heading_devices: دروس تعليمية للهواتف والألواح
   carousel_heading_languages: دروس في لغات البرمجة الأخرى
@@ -355,7 +363,7 @@
   more_resources_educators: المزيد من الموارد للمعلمين والمربين
   participants: المشتركون
   teachers_notes: ملاحظات المعلم
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: 'المعلمين: قراءة ملاحظات المدرس هنا'
   previous: السابق
   next: التالي
   older_systems: الدروس التي تعمل على أنظمة قديمة
@@ -437,13 +445,13 @@
   thinkersmithspanish_platformtext: غير مربوطة
   khan_platformtext: متصفحات الويب الحديثة
   khanes_platformtext: متصفحات الويب الحديثة
-  tynker_platformtext: Modern web browsers
+  tynker_platformtext: المتصفحات الحديثة. (الدرس التالي يتطلب $$)
   scratch_platformtext: جميع المتصفحات
   lightbot_platformtext: جميع المتصفحات و iOS، اندرويد، أو محطة ألعاب
   thinkersmith_platformtext: غير مربوطة
   condcards_platformtext: الغير موصولة
   lightbotintl_platformtext: آي أو إس iOS، الأندرويد (أو متصفح ويب)
-  codehs_platformtext: Modern browsers
+  codehs_platformtext: المتصفحات الحديثة. (الدرس التالي يتطلب $$)
   codecademy_platformtext: متصفحات الويب الحديثة. دآي أو إس iOS، تطبيقات الأندرويد
   codecombat_platformtext: متصفحات الويب الحديثة
   codemonkey_platformtext: متصفحات الويب الحديثة
@@ -483,8 +491,7 @@
   codecademy_shortdescription: تعلم برمجة جافا سكريبت، في مستعرض ويب
   codecombat_shortdescription: هزيمة الغيلان تعلم بيثون أو جافا سكريبت في هذه اللعبة
     ملحمة البرمجة!
-  codemonkey_shortdescription: Students program a monkey to catch bananas while it
-    gets slightly more complicated on each level.
+  codemonkey_shortdescription: الطلاب يبرمجون قرد ليلتقط الموز.
   codeavengers_shortdescription: تعلم برمجة جافا سكريبت، في مستعرض ويب
   processing_shortdescription: درس تعليمي في اللغات المعالجة
   robomind_shortdescription: كتابة التعليمات البرمجية لروبوت الظاهري
@@ -494,16 +501,15 @@
     "Quorum".
   codespark_shortdescription: فوس لعبة ممتعة، صديقة للأطفال لمعرفة المزيد عن البرمجة.
   kodable_shortdescription: لعبة أيباد ممتعة لتعليم مفاهيم البرمجة
-  tynkerapp_shortdescription: Learn to code by solving fun puzzles and build your
-    own mobile games.
+  tynkerapp_shortdescription: 'تعلم البرمجة عن طريق حل أحجية كود ممتعة. '
   robomindnl_shortdescription: كتابة التعليمات البرمجية لروبوت الظاهري
   flappy_shortdescription: برمج وإعمل لعبتك - فلابي بيرد, القرش أو الغواصة
   bitsbox_shortdescription: برمج عدد من التطبيقات للعب وشارك من خلال إستخدام لغة الجافا
     سكريبت.
   makegameswithus_shortdescription: برمج لعبة للأيفون! تعلم من خلال البرمجة الحركات
     الخاصة بك للوحش !
-  touchdevelop_shortdescription: Code mobile apps directly on your phone, tablet or
-    laptop
+  touchdevelop_shortdescription: 'حل الألغاز ، ابن الألعاب، وتعلم الترميز كل ذلك على
+    الهاتف الخاص بك. '
   appinventor_shortdescription: برمج تطبيقك الخاص! (فقط للأندرويد)
   blockly_shortdescription: للتعلم من دون الإتصال على الشبكة حمل الملف المضغوط
   thinkersmith2_shortdescription: تعلم كيفية استخدام أجهزة الكمبيوتر لل0 وال1 لتمثيل
@@ -522,10 +528,9 @@
     من بيل جيتس ومارك زوكربيرج، لعبة الأنجري بيردز ولعبة بلانتس والزومبي. تعلم تكرار
     الحلقات، والشرطية، والخوارزميات الأساسية. متاح ب 34 لغة.
   thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
+    los estudiantes descubriran como guiarse de modo tal de llevar a cabo tareas especificas
+    sin ser estas discutidas previamente. Este segmento ensena a los estudiantes la
+    conexion entre simbolos y acciones asi como la valiosa habilidad de depuracion.
   khan_longdescription: تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات الخاصة
     بك. برمج بنفسك أو مع صفك!
   khanes_longdescription: تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات
@@ -542,11 +547,11 @@
     لعبة ألغاز تستخدم لغة البرمجة للسماح للاعبين اكتساب فهم عملي لأساسيات البرمجة.
     تعلم تسلسل التعليمات، كتابة الإجراءات، والاستفادة من الحلقات لحل المستويات. مثالية
     لجميع الأعمار.
-  thinkersmith_longdescription: Using a pre-defined "Robot Vocabulary" students will
-    figure out how to guide each other to accomplish specific tasks without discussing
-    them first. This lesson teaches children the connection between symbols and actions,
-    as well as the invaluable skill of debugging. "My Robotic Friends" works best
-    as a group activity and includes a teacher workbook for classroom use.
+  thinkersmith_longdescription: باستخدام "مفردات روبوت" معرفة مسبقاً  الطلاب سوف يكتشفون
+    كيفية توجيه بعضهم البعض لإنجاز مهام محددة دون مناقشتها أولاً. هذا الدرس يعلم الأطفال
+    الصلة بين الرموز والإجراءات، فضلا عن مهارة لا تقدر بثمن لتصحيح الأخطاء. "أصدقائي
+    الروبوتيون" يعمل بشكل أفضل كنشاط مجموعة ويتضمن كراس معلم للاستخدام  في الفصول
+    الدراسية.
   condcards_longdescription: تعرف على الخوارزميات والعبارات الشرطية في هذا النشاط
     "الموصول" باستخدام أوراق اللعب. الطلاب تقيم هذا النشاط في فرق، وتحتاج حزمة واحدة
     من البطاقات لكل فريق.
@@ -567,10 +572,10 @@
   codemonkey_longdescription: '"كود مونكي" هي لعبة على الانترنت التي تعلم الترميز
     في لغة برمجة حقيقية! الطلاب يبرمجون القرد لإلتقات الموز في حين يزيد أكثر تعقيدا
     في كل مستوى. يحصلالطلاب على عشرات من النجوم في كل حل ويمكن مشاركتها بنقرة واحدة. '
-  codeavengers_longdescription: Build a 2 player 2D top-down game with JavaScript
-    in 10 short tasks. Then continue learning some basics of programming (variables
-    and if statements) as you create a Quiz to share with friends. Along the way  earn
-    points and badges as you compete to reach the top of the class leaderboard.
+  codeavengers_longdescription: ابن لعبة أعلى - أسفل ثنائية الأبعاد للاعبين اثنين
+    مع جافا سكريبت في 10 خطوات قصيرة . ثم استمر في تعلم بعض أساسيات البرمجة (المتغيرات
+    و تركيبة إذا) فيما تقوم بإنشاء مسابقة لتشاركها مع الأصدقاء. اثناء ذلك اكسب النقاط
+    والشارات فيما تتنافس للوصول إلى أعلى قائمة المتصدرين في الصف.
   processing_longdescription: مقدمة في البرمجة في سياق الفنون البصرية باستخدام لغة
     البرمجة التجهيز. دروس فيديو قصيرة للبرمجة والتمارين التي تؤدي إلى تصميم برنامج
     الرسم التفاعلي
@@ -588,10 +593,10 @@
     اللعبة هي "خالية من الكلمات" حتى يمكن الجميع اللعب!'
   kodable_longdescription: '"كودلبل" هي لعبة أيباد بتوجيه الذاتي الذي يقدم للأطفال
     5+ إلى الأساسيات البرمجة. وجود المعلم أو أحد الوالدين هو الأمثل، ولكن ليس من الضروري.'
-  tynkerapp_longdescription: Build your own games and share with friends! Solve fun
-    coding puzzles and learn programming concepts in each level. Personalize games
-    with animated characters, multiple levels and rich props. Lots of fun activities
-    to choose from!
+  tynkerapp_longdescription: تعلم أن تبرمج عن طريق حل أحجيات ترميز ممتعة. ابن ألعاب
+    وقصص بسهولة باستخدام رسومات معنونة، أكثر من عشر مجموعات ألعاب وشخصيات قابلة للتخصيص.
+    لا يلزم الاتصال بالإنترنت. يمكنك أيضا الوصول إلى الإبداعات الخاصة بك على شبكة
+    الإنترنت.
   robomindnl_longdescription: 'يتعلم الطلاب أساسيات البرمجة من خلال التحكم في الروبوت
     الافتراضي الخاص بهم. الدورة على شبكة الإنترنت متكامل مع عروض قصيرة، وأفلام، ومسابقات
     والتوجيه التلقائي/ إقتراحات للمساعدة في عمليات البرمجة. '
@@ -601,14 +606,12 @@
   bitsbox_longdescription: قم بتخصيص اللوح الأفتراضي الخاص بك، ثم برمج سلسلة من التطبيقات
     للعب والمشاركة. طرق وأمثال بسيطة تجعل من الممكن حتى الأطفال الصغار إلى برمجة الجافا
     سكريبت ومع كل تقدم تذهب إلى الأبعد في عالم البرمجة.
-  makegameswithus_longdescription: Know some programming already? Learn to make an
-    iPhone game in an hour! We'll guide you through the process, to code, test, and
-    play your game entirely in the browser and then share it on Facebook for friends
-    to try! No prior iPhone development experience is required. You must understand
-    what variables, methods, and objects are.
-  touchdevelop_longdescription: Crazy drawings, flying monsters, swirling flowers...
-    create your apps on your device with TouchDevelop, a friendly mobile app creation
-    environment. Runs on iPhone, iPad, Android, Windows, Windows Phone, Linux, Mac.
+  makegameswithus_longdescription: تعلم البرمجة من خلال صنع لعبة للأيفون باستخدام
+    لغة برمجة جديدة وصديقة للمبتدئين تدعى سويفت! إنشئ  لعبة أكشن مستوحاة من بوكيمون
+    وأكتب تعليمات البرمجية لتعليم الوحش حركات جديدة. سوف تتعلم كيفية استخدام المتغيرات
+    والأساليب، والأشياء لمساعدة الوحش الخاص بك للفوز!
+  touchdevelop_longdescription: 'محرر اللمس سيدلك على كيفية إنشاء الفن بكسل، حل لغز
+    الدب، أو إنشاء لعبة الطيور القافزة خاصة بك . '
   appinventor_longdescription: Entertaining, quick video tutorials walk you through
     building three simple apps for your Android phone or tablet. Designed for novices
     and experts alike, this hour of code will get you ready to start building your

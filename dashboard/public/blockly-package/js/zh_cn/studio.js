@@ -6816,12 +6816,21 @@ exports.createSharingDiv = function(options) {
     });
   }
 
-//  SMS-to-phone feature
+  var sharingShapeways = sharingDiv.querySelector('#sharing-shapeways');
+  if (sharingShapeways) {
+    dom.addClickTouchEvent(sharingShapeways, function() {
+      $('#send-to-phone').hide();
+      $('#shapeways-message').show();
+    });
+  }
+
+  //  SMS-to-phone feature
   var sharingPhone = sharingDiv.querySelector('#sharing-phone');
   if (sharingPhone && options.sendToPhone) {
     dom.addClickTouchEvent(sharingPhone, function() {
       var sendToPhone = sharingDiv.querySelector('#send-to-phone');
       if ($(sendToPhone).is(':hidden')) {
+        $('#shapeways-message').hide();
         sendToPhone.setAttribute('style', 'display:inline-block');
         var phone = $(sharingDiv.querySelector("#phone"));
         var submitted = false;
@@ -20705,7 +20714,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/zh_cn/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n  <div class="social-buttons">\n  ');10; if (!options.onMainPage) { ; buf.push('\n    <button id="print-button">\n      ', escape((12,  msg.print() )), '\n    </button>\n  ');14; } ; buf.push('\n');15; if (options.alreadySaved) { ; buf.push('\n  <button class="saved-to-gallery" disabled>\n    ', escape((17,  msg.savedToGallery() )), '\n  </button>\n');19; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((21,  msg.saveToGallery() )), '\n  </button>\n');23; } ; buf.push('\n  </div>\n\n');26; if (options.response && options.response.level_source) { ; buf.push('\n  ');27; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((28,  options.appStrings.sharingText )), '</div>\n  ');29; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((32,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');36; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((36,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((37,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');39; }; buf.push('\n    ');40; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((40,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((41,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');43; }; buf.push('    ');43; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((44,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');46; }; buf.push('    ');46; if (options.level.shapewaysUrl) {; buf.push('      <a href=\'', escape((46,  options.level.shapewaysUrl )), '\' target="_blank">\n        <img src=\'', escape((47,  BlocklyApps.assetUrl("media/shapeways_purple.png") )), '\' />\n      </a>\n    ');49; }; buf.push('  </div>\n');50; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
+ buf.push('');1; var msg = require('../../locale/zh_cn/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n  <div class="social-buttons">\n  ');10; if (!options.onMainPage) { ; buf.push('\n    <button id="print-button">\n      ', escape((12,  msg.print() )), '\n    </button>\n  ');14; } ; buf.push('\n');15; if (options.alreadySaved) { ; buf.push('\n  <button class="saved-to-gallery" disabled>\n    ', escape((17,  msg.savedToGallery() )), '\n  </button>\n');19; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((21,  msg.saveToGallery() )), '\n  </button>\n');23; } ; buf.push('\n  </div>\n\n');26; if (options.response && options.response.level_source) { ; buf.push('\n  ');27; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((28,  options.appStrings.sharingText )), '</div>\n  ');29; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((32,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');36; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((36,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((37,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');39; }; buf.push('\n    ');40; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((40,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((41,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');43; }; buf.push('    ');43; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((44,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');46; }; buf.push('    ');46; if (options.level.shapewaysUrl && !options.onMainPage && options.sendToPhone) {; buf.push('      <a id="sharing-shapeways" href="" onClick="return false;">\n        <img src=\'', escape((47,  BlocklyApps.assetUrl("media/shapeways_purple.png") )), '\' />\n      </a>\n    ');49; }; buf.push('  </div>\n');50; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n');58; if (options.response && options.response.level_source && options.level.shapewaysUrl) {; buf.push('  <div id="shapeways-message" class="sharing" style="display: none">\n    <div id="shapeways-message-body">You\'ll be redirected to Shapeways.com to order and purchase a 3D print.</div>\n    <button id="shapeways-print-go-button" onclick="window.open(\'', escape((60,  options.level.shapewaysUrl )), '\', \'_blank\')">Go to Shapeways</button>\n    <div id="shapeways-message-body-disclaimer">Students under 13 years need a parent or guardian to do 3D printing.</div>\n  </div>\n');63; }; buf.push(''); })();
 } 
 return buf.join('');
 };
@@ -21165,19 +21174,19 @@ exports.emptyBlocksErrorMsg = function(d){return "“Repeat”或“If”模块�
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "这个函数块，需要有其他块在里面才能工作"};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "你的函数定义内需要有区块. 按一下\"编辑\"并拖动区块到绿色区块内部."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "按一下\"编辑\"来确保你的函式定义中没有缺少任何区块."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "记住要将区块附加到你工作空间内的函数块的每个参数输入上."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "你加了一个参数块，但没有在定义中使用它. 确保通过按“编辑”来使用你的参数块并把参数块放在绿色区块内."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "通過按“編輯來給你的函數創建一個參數, 並添加必要的參數. 把新的参数块拖动到你的函数定义内."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "你创建一个函数，但从来没有使用它在你的工作空间! 按一下工具箱中的“函数”，并确保你在程序中使用它."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "尝试把\"???\"更换成一个值."};
 
 exports.extraTopBlocks = function(d){return "你有一些未连接上的模块。你是否要把这些模块连接在“运行”模块上？"};
 
@@ -21219,7 +21228,7 @@ exports.numLinesOfCodeWritten = function(d){return "你刚刚写了"+p(d,"numLin
 
 exports.play = function(d){return "玩"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "打印"};
 
 exports.puzzleTitle = function(d){return "第"+v(d,"stage_total")+"章的谜题 "+v(d,"puzzle_number")+" "};
 
@@ -21235,11 +21244,11 @@ exports.score = function(d){return "得分"};
 
 exports.showCodeHeader = function(d){return "显示代码"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "显示区块"};
 
 exports.showGeneratedCode = function(d){return "显示代码"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "字符串 = ？"};
 
 exports.subtitle = function(d){return "一个可视化的编程环境"};
 
@@ -21263,9 +21272,9 @@ exports.hintRequest = function(d){return "看提示"};
 
 exports.backToPreviousLevel = function(d){return "返回到上一级"};
 
-exports.saveToGallery = function(d){return "保存到您的画廊"};
+exports.saveToGallery = function(d){return "保存到画廊"};
 
-exports.savedToGallery = function(d){return "保存到您的画面场景"};
+exports.savedToGallery = function(d){return "已保存在画廊內!"};
 
 exports.shareFailure = function(d){return "对不起，我们无法分享这程序。"};
 
@@ -21275,7 +21284,7 @@ exports.typeHint = function(d){return "注意圆括号和分号是需要的。"}
 
 exports.workspaceHeader = function(d){return "在这里组装你的模块:"};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "在这里输入你的JavaScript代码"};
 
 exports.infinity = function(d){return "无限"};
 
@@ -21299,40 +21308,40 @@ exports.hintHeader = function(d){return "这里有一个提示："};
 
 exports.genericFeedback = function(d){return "看你的程序时如何结束的，并尝试修复你的程序"};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "看看我做了什么"};
 
 
 },{"messageformat":61}],49:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.zh=function(n){return "other"}
 exports.actor = function(d){return "男演员"};
 
-exports.alienInvasion = function(d){return "Alien Invasion!"};
+exports.alienInvasion = function(d){return "外星人入侵 !"};
 
-exports.backgroundBlack = function(d){return "black"};
+exports.backgroundBlack = function(d){return "黑色"};
 
-exports.backgroundCave = function(d){return "cave"};
+exports.backgroundCave = function(d){return "洞穴"};
 
-exports.backgroundCloudy = function(d){return "cloudy"};
+exports.backgroundCloudy = function(d){return "多云"};
 
-exports.backgroundHardcourt = function(d){return "hardcourt"};
+exports.backgroundHardcourt = function(d){return "硬地球场"};
 
-exports.backgroundNight = function(d){return "night"};
+exports.backgroundNight = function(d){return "夜"};
 
-exports.backgroundUnderwater = function(d){return "underwater"};
+exports.backgroundUnderwater = function(d){return "水底"};
 
-exports.backgroundCity = function(d){return "city"};
+exports.backgroundCity = function(d){return "城市"};
 
-exports.backgroundDesert = function(d){return "desert"};
+exports.backgroundDesert = function(d){return "沙漠"};
 
-exports.backgroundRainbow = function(d){return "rainbow"};
+exports.backgroundRainbow = function(d){return "彩虹"};
 
-exports.backgroundSoccer = function(d){return "soccer"};
+exports.backgroundSoccer = function(d){return "足球"};
 
-exports.backgroundSpace = function(d){return "space"};
+exports.backgroundSpace = function(d){return "空间"};
 
-exports.backgroundTennis = function(d){return "tennis"};
+exports.backgroundTennis = function(d){return "网球"};
 
-exports.backgroundWinter = function(d){return "winter"};
+exports.backgroundWinter = function(d){return "冬天"};
 
 exports.catActions = function(d){return "操作"};
 
@@ -21364,7 +21373,7 @@ exports.emotion = function(d){return "心情"};
 
 exports.finalLevel = function(d){return "恭喜你！你完成了最后一个谜题。"};
 
-exports.for = function(d){return "for"};
+exports.for = function(d){return "为"};
 
 exports.hello = function(d){return "你好"};
 
@@ -21376,21 +21385,21 @@ exports.makeProjectileDisappear = function(d){return "消失"};
 
 exports.makeProjectileBounce = function(d){return "反弹"};
 
-exports.makeProjectileBlueFireball = function(d){return "make blue fireball"};
+exports.makeProjectileBlueFireball = function(d){return "做蓝色的火球"};
 
-exports.makeProjectilePurpleFireball = function(d){return "make purple fireball"};
+exports.makeProjectilePurpleFireball = function(d){return "做紫色的火球"};
 
-exports.makeProjectileRedFireball = function(d){return "make red fireball"};
+exports.makeProjectileRedFireball = function(d){return "做红色的火球"};
 
-exports.makeProjectileYellowHearts = function(d){return "make yellow hearts"};
+exports.makeProjectileYellowHearts = function(d){return "做黄色的心"};
 
-exports.makeProjectilePurpleHearts = function(d){return "make purple hearts"};
+exports.makeProjectilePurpleHearts = function(d){return "做紫色的心"};
 
-exports.makeProjectileRedHearts = function(d){return "make red hearts"};
+exports.makeProjectileRedHearts = function(d){return "做红色的心"};
 
 exports.makeProjectileTooltip = function(d){return "使只是相撞的弹丸消失或反弹。"};
 
-exports.makeYourOwn = function(d){return "制作自己的故事"};
+exports.makeYourOwn = function(d){return "做自己的游戏实验室应用程序"};
 
 exports.moveDirectionDown = function(d){return "向下"};
 
@@ -21510,29 +21519,29 @@ exports.positionOutBottomRight = function(d){return "到右侧底部下面的位
 
 exports.positionRandom = function(d){return "到一个随机位置"};
 
-exports.projectileBlueFireball = function(d){return "blue fireball"};
+exports.projectileBlueFireball = function(d){return "蓝色火球"};
 
-exports.projectilePurpleFireball = function(d){return "purple fireball"};
+exports.projectilePurpleFireball = function(d){return "紫色火球"};
 
-exports.projectileRedFireball = function(d){return "red fireball"};
+exports.projectileRedFireball = function(d){return "红色火球"};
 
-exports.projectileYellowHearts = function(d){return "yellow hearts"};
+exports.projectileYellowHearts = function(d){return "黄心"};
 
-exports.projectilePurpleHearts = function(d){return "purple hearts"};
+exports.projectilePurpleHearts = function(d){return "紫心"};
 
-exports.projectileRedHearts = function(d){return "red hearts"};
+exports.projectileRedHearts = function(d){return "红心"};
 
 exports.projectileRandom = function(d){return "随机"};
 
-exports.projectileAnna = function(d){return "Anna"};
+exports.projectileAnna = function(d){return "安娜"};
 
-exports.projectileElsa = function(d){return "Elsa"};
+exports.projectileElsa = function(d){return "埃尔莎"};
 
-exports.projectileHiro = function(d){return "Hiro"};
+exports.projectileHiro = function(d){return "希罗"};
 
 exports.projectileBaymax = function(d){return "Baymax"};
 
-exports.projectileRapunzel = function(d){return "Rapunzel"};
+exports.projectileRapunzel = function(d){return "长发公主"};
 
 exports.reinfFeedbackMsg = function(d){return "你可以按“重试”按钮来返回你的游戏"};
 
@@ -21582,9 +21591,9 @@ exports.setBackgroundWinter = function(d){return "设置冬天背景"};
 
 exports.setBackgroundTooltip = function(d){return "设置背景图案"};
 
-exports.setEnemySpeed = function(d){return "set enemy speed"};
+exports.setEnemySpeed = function(d){return "设置敌人的速度"};
 
-exports.setPlayerSpeed = function(d){return "set player speed"};
+exports.setPlayerSpeed = function(d){return "设置竞赛者速度"};
 
 exports.setScoreText = function(d){return "设置得分"};
 
@@ -21626,15 +21635,15 @@ exports.setSpriteHidden = function(d){return "到一个隐藏的图像\n"};
 
 exports.setSpriteHideK1 = function(d){return "隐藏"};
 
-exports.setSpriteAnna = function(d){return "to a Anna image"};
+exports.setSpriteAnna = function(d){return "到安娜图象"};
 
-exports.setSpriteElsa = function(d){return "to a Elsa image"};
+exports.setSpriteElsa = function(d){return "到埃尔莎图像"};
 
-exports.setSpriteHiro = function(d){return "to a Hiro image"};
+exports.setSpriteHiro = function(d){return "到希罗图像"};
 
-exports.setSpriteBaymax = function(d){return "to a Baymax image"};
+exports.setSpriteBaymax = function(d){return "到Baymax 图像"};
 
-exports.setSpriteRapunzel = function(d){return "to a Rapunzel image"};
+exports.setSpriteRapunzel = function(d){return "到长发公主图像"};
 
 exports.setSpriteKnight = function(d){return "到骑士图片"};
 
@@ -21680,19 +21689,19 @@ exports.setSpriteK1Tooltip = function(d){return "显示或隐藏特定的演员�
 
 exports.setSpriteTooltip = function(d){return "设置小人形象"};
 
-exports.setSpriteSizeRandom = function(d){return "to a random size"};
+exports.setSpriteSizeRandom = function(d){return "以随机的尺寸"};
 
-exports.setSpriteSizeVerySmall = function(d){return "to a very small size"};
+exports.setSpriteSizeVerySmall = function(d){return "到一个非常小的尺寸"};
 
-exports.setSpriteSizeSmall = function(d){return "to a small size"};
+exports.setSpriteSizeSmall = function(d){return "到一个小的尺寸"};
 
-exports.setSpriteSizeNormal = function(d){return "to a normal size"};
+exports.setSpriteSizeNormal = function(d){return "到一个正常大小的尺寸"};
 
-exports.setSpriteSizeLarge = function(d){return "to a large size"};
+exports.setSpriteSizeLarge = function(d){return "到一个大尺寸"};
 
-exports.setSpriteSizeVeryLarge = function(d){return "to a very large size"};
+exports.setSpriteSizeVeryLarge = function(d){return "到非常大的尺寸"};
 
-exports.setSpriteSizeTooltip = function(d){return "Sets the size of an actor"};
+exports.setSpriteSizeTooltip = function(d){return "设置一个演员的大小"};
 
 exports.setSpriteSpeedRandom = function(d){return "到一个随机的速度"};
 
@@ -21714,9 +21723,9 @@ exports.shareStudioTwitter = function(d){return "看看我的故事。我用@cod
 
 exports.shareGame = function(d){return "分享您的故事："};
 
-exports.showCoordinates = function(d){return "show coordinates"};
+exports.showCoordinates = function(d){return "显示坐标"};
 
-exports.showCoordinatesTooltip = function(d){return "show the protagonist's coordinates on the screen"};
+exports.showCoordinatesTooltip = function(d){return "在屏幕上展现主角的坐标"};
 
 exports.showTitleScreen = function(d){return "显示标题屏幕"};
 
@@ -21730,7 +21739,7 @@ exports.showTSDefText = function(d){return "在此处键入文本"};
 
 exports.showTitleScreenTooltip = function(d){return "在一个标题屏幕显示有关的标题和文本。"};
 
-exports.size = function(d){return "size"};
+exports.size = function(d){return "大小："};
 
 exports.setSprite = function(d){return "设置"};
 
@@ -21778,7 +21787,7 @@ exports.vanish = function(d){return "消失"};
 
 exports.vanishActorN = function(d){return "消失的演员 "+v(d,"spriteIndex")};
 
-exports.vanishTooltip = function(d){return "Vanishes the actor."};
+exports.vanishTooltip = function(d){return "使演员消失"};
 
 exports.waitFor = function(d){return "等待"};
 
@@ -21798,7 +21807,7 @@ exports.waitFor5Seconds = function(d){return "等待 5 秒"};
 
 exports.waitFor10Seconds = function(d){return "等待 10 秒"};
 
-exports.waitParamsTooltip = function(d){return "Waits for a specified number of seconds or use zero to wait until a click occurs."};
+exports.waitParamsTooltip = function(d){return "等待指定的秒数或使用零等待，直到点击发生."};
 
 exports.waitTooltip = function(d){return "等待指定的时间长度或直到发生点击"};
 
@@ -21840,27 +21849,27 @@ exports.whenSpriteCollidedTooltip = function(d){return "当一个小人触碰到
 
 exports.whenSpriteCollidedWith = function(d){return "接近"};
 
-exports.whenSpriteCollidedWithAnyActor = function(d){return "touches any actor"};
+exports.whenSpriteCollidedWithAnyActor = function(d){return "触动任何一个演员"};
 
-exports.whenSpriteCollidedWithAnyEdge = function(d){return "touches any edge"};
+exports.whenSpriteCollidedWithAnyEdge = function(d){return "触摸任何边缘"};
 
-exports.whenSpriteCollidedWithAnyProjectile = function(d){return "touches any projectile"};
+exports.whenSpriteCollidedWithAnyProjectile = function(d){return "触摸任何弹丸"};
 
-exports.whenSpriteCollidedWithAnything = function(d){return "touches anything"};
+exports.whenSpriteCollidedWithAnything = function(d){return "触摸任何东西"};
 
 exports.whenSpriteCollidedWithN = function(d){return "接近演员 "+v(d,"spriteIndex")};
 
-exports.whenSpriteCollidedWithBlueFireball = function(d){return "touches blue fireball"};
+exports.whenSpriteCollidedWithBlueFireball = function(d){return "触摸蓝色火球"};
 
-exports.whenSpriteCollidedWithPurpleFireball = function(d){return "touches purple fireball"};
+exports.whenSpriteCollidedWithPurpleFireball = function(d){return "触摸紫色火球"};
 
-exports.whenSpriteCollidedWithRedFireball = function(d){return "touches red fireball"};
+exports.whenSpriteCollidedWithRedFireball = function(d){return "触摸红色火球"};
 
-exports.whenSpriteCollidedWithYellowHearts = function(d){return "touches yellow hearts"};
+exports.whenSpriteCollidedWithYellowHearts = function(d){return "触摸黄色的心"};
 
-exports.whenSpriteCollidedWithPurpleHearts = function(d){return "touches purple hearts"};
+exports.whenSpriteCollidedWithPurpleHearts = function(d){return "触摸紫色的心"};
 
-exports.whenSpriteCollidedWithRedHearts = function(d){return "touches red hearts"};
+exports.whenSpriteCollidedWithRedHearts = function(d){return "触摸红色的心"};
 
 exports.whenSpriteCollidedWithBottomEdge = function(d){return "接近地步边缘"};
 

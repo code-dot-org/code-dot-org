@@ -3,7 +3,7 @@ title: Terms of Service
 ---
 
 # Terms of Service
-Last Revised:  September 23, 2014
+Last Revised:  December 5, 2014
 
 Code.org is a 501(c)(3) non-profit organization (“Code.org”). Our mission is to give every student the opportunity to learn computer science. As a part of that mission, Code.org operates the web sites located at [http://code.org](http://code.org), [http://csedweek.org](http://csedweek.org), [http://computinginthecore.org](http://computinginthecore.org), [http://hourofcode.com](http://hourofcode.com), other websites, information, text, curricula, videos, graphics, photos, APIs, email notifications and other materials and related products and services (the “**Services**”), including the tutorial platform at [http://studio.code.org](http://studio.code.org) (“**Code Studio**”).
 
@@ -21,7 +21,7 @@ Some Services may be subject to additional posted guidelines, rules or terms of 
 We take steps to minimize the collection of personal data from Users under the age of 13 as explained in the Code.org [privacy policy](http://code.org/privacy). If you are under the age of 13, we encourage you to get the approval of a parent or legal guardian before creating an account on Code.org.
 Code.org allows certain representatives of school districts and schools, such as teachers, administrators, counselors, and other educators (a “**Educator**”) to connect with students through the Services in order to provide tutorial, educational and similar services. If you are an Educator, you may register accounts on the Services for one or more of your students.
 
-If you are a Educator and you register an account for a student who is under the age of 13 (a “**Child**”), you represent and warrant that you or the educational organization you work for has received express consent from such Child’s parent or guardian (“**Parent**”) for you to register the Child for the Services and for you to disclose certain of the Child’s personal information to Code.org in connection with the registration. In addition, you agree to be bound by these Terms on behalf of such Child, including being liable for the Child’s use of the Services when the liability for such use is not otherwise assumed by a Parent.
+If you are an Educator and you register an account for a student who is under the age of 13 (a “**Child**”), you represent and warrant that you or the educational organization you work for has proper permission to register the Child for educational services, such as Code.org, that collect some of the Child’s personal information for the use and benefit of the school and for no other commercial purpose. In addition, you agree to be bound by these Terms on behalf of the educational organization you work for.
 
 
 

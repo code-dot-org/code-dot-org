@@ -12,7 +12,7 @@
     none; font-weight: 400"> আপনি কি (CS) কম্পিউটার সায়েন্সের শিক্ষক ? CSEdWeek এর
     উপর অন্যান্য বিষয় গুলি জানুন</a>'
   n_have_learned_an_hoc: <h1>#</h1><h3>চেষ্টা করে দেখুন</h3><h2>Hour of Code</h2>
-  anybody_can_learn: যেকেউ শিখতে পারবে।
+  anybody_can_learn: যে কেউ শিখতে পারবে।
   learn_now: এবার শিখুন
   petition_message: প্রত্যেক স্কুলের প্রতিটি ছাত্রের কম্পিউটার বিজ্ঞান শিক্ষার সুযোগ
     থাকা উচিত
@@ -42,16 +42,16 @@
     > আমাদের সাথে সঙ্গী হতে।
   california_button: আরও জানুন
   flappy_heading: Code.org এর flappy জন্মদিন
-  flappy_text: Code.org ঠিক আছে 1 বছরের পুরনো। <br/> <br/> আপনার নিজের <b>Flappy</b>
+  flappy_text: Code.org এইমাত্র 1 বছরের হল। <br/> <br/> আপনার নিজের <b>Flappy</b>
     খেলা তৈরি করুন আর আমদের সাথে সেটার আনন্দ ভাগ করে নিন। সেটা চলবে আপনার নিজস্ব নিয়মে
     এবং তা বন্ধুদের সাথে শেয়ার করুন!
   view_english_site: ইংরেজি website দেখুন
-  non_english_tutorials: 'Tutorials: একাধিক ভাষায় অনুবাদ করুন।'
+  non_english_tutorials: Tutorials একাধিক ভাষায় অনুবাদ করা।
   write_your_first_program: আপনার প্রথম কম্পিউটার প্রোগ্রাম লেখুন
   learn_cs_concepts: কম্পিউটার বিজ্ঞানের প্রাথমিক ধারণা লাভ করুন অপসারণ এবং নিক্ষেপ
     প্রোগ্রামিং দ্বারা । বিল গেটস, মার্ক জাকারবার্গ, Angry Bird ও Plant vs. Zombies
-    দ্বারা ভিডিও বক্তৃতায় আপনারা দেখবেন খেলার ছলে শেখার উপায় বলা আছে। পুনরাবৃত্তি-loops,
-    যদি সেই বিবরণ এবং প্রাথমিক অ্যালগোরিদম জানুন।
+    দ্বারা ভিডিও বক্তৃতায় আপনারা দেখবেন খেলার ছলে শেখার উপায় বলা আছে। পুনরাবৃত্তি-loops
+    শিখুন, যদি-সেই বিবরণ এবং প্রাথমিক অ্যালগোরিদম জানুন।
   all_ages: সব বয়সের জন্য
   beginner: শিক্ষানবিশ
   n_participants: '# অংশগ্রহণকারীরা'
@@ -59,7 +59,7 @@
   thank_you_: আপনাকে ধন্যবাদ!
   congratulations: অভিনন্দন !
   congratulations_on_completing_hoc: এক Hour of Code সমাপ্ত করার জন্য আপনাকে অভিনন্দন।
-  get_a_certificate_of_achievement: আপনার শংসাপত্র গ্রহণ করুন
+  get_a_certificate_of_achievement: আপনার প্রশংসাপত্র গ্রহণ করুন
   enter_valid_email: অনুগ্রহ করে একটি বৈধ ই-মেইল ঠিকানা লিখুন।
   get_a_certificate_message: আমরা আপনার সার্টিফিকেট পাঠিয়ে দেব <a href='/learn/beyond'>
     এক ঘণ্টার কোড এর থেকে বেশি </a> শিখতে চান?
@@ -67,7 +67,7 @@
     করুন। এখন আমাদের <a href='http://studio.code.org'> অন্যান্য কোর্সে</a> যান বা
     <a href='/learn/beyond'> অধিক শেখার জন্য </a> আরও বিকল্প দেখুন।
   thanks_for_submitting: জমা দেওয়ার জন্য ধন্যবাদ!
-  if_you_enjoyed: আপনি যদি শিখে মজা পেয়েছেন, তবে আপনার বন্ধদেরও বলুন এটা চেষ্টা করে
+  if_you_enjoyed: আপনি যদি শিখে মজা পেয়েছেন, তবে আপনার বন্ধুদেরও বলুন এটা চেষ্টা করে
     দেখতে ! আমরা চাই সারা বিশ্বের সকলে যেন এটা শিখুন।
   personalize_certificate: আপনার সার্টিফিকেটকে ব্যক্তিকরণ করুন
   share_achievement: আপনার উপলব্ধি শেয়ার করুন
@@ -97,34 +97,37 @@
   participant_educator: শিক্ষাবিদ
   participant_engineer: সফটওয়্যার বিসয়ক পেশাদার
   participant_other: উপরের কোনটিই নয়।
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: আমি হলাম
   never_spam: আমরা কখনই আপনাকে spam পাঠাবো না
-  enter_country: Enter country if outside the United States
-  used_infrequent_updates: Only used for infrequent updates
-  privacy_practices_children: See our privacy practices for children
-  petition_thankyou: Thank you for signing the petition
-  continue_learning_header: Continue learning beyond One Hour
-  continue_learning_body: There are lots of options.  You can learn online, or at
-    a local school, or summer camp.
-  learn_next_level: Continue to the next level
-  learn_online: Learn online
-  learn_classes: Find local classes
-  hoc_is_here: 'The #HourOfCode is here - check it out! @codeorg'
-  just_did_hoc: 'I just did the #HourOfCode - check it out! @codeorg'
-  learn_hoc: Learn an Hour of Code
-  beyond_hoc: Beyond One Hour
+  enter_country: যুক্তরাষ্ট্রের বদলে অন্য দেশ হলে প্রবেশ করুন
+  used_infrequent_updates: শুধু অনিয়মিত update এর জন্য
+  privacy_practices_children: ছোটদের জন্য গোপনীয়তা নিয়ম দেখুন
+  petition_thankyou: অংশগ্রহনের জন্য ধন্যবাদ
+  continue_learning_header: এক ঘণ্টারও পরে শিখুন
+  continue_learning_body: অনেক শেখার সুযোগ আছে।  আপনি অনলাইন, অথবা স্থানীয় স্কুলে,
+    বা গ্রীষ্মকালীন ক্যাম্পে শিখতে পারেন।
+  learn_next_level: পরবর্তী ধাপে যান
+  learn_online: অনলাইনে অন্যান্য কোর্স করুন
+  learn_classes: স্থানীয় শ্রেণি খুঁজুন
+  hoc_is_here: '#HourOfCode  এসেছে, @codeorg -এ দেখুন'
+  just_did_hoc: '#HourOfCode সম্পন্ন করেছি @codeorg'
+  learn_hoc: সম্পন্ন করুন Hour of Code
+  beyond_hoc: এক ঘণ্টারও বেশি
   what_gender: আপনার লিঙ্গ কি?
   girl: মেয়ে
   boy: ছেলে
-  help_recruit_coders: Help us recruit more coders to your team!
-  help_recruit: Help us recruit more coders!
-  lines_of_code: OVER <b># LINES OF CODE</b> WRITTEN TO DATE.
-  lines_of_code_alt: <b>#</b> LINES OF CODE WRITTEN BY STUDENTS
-  who_has_done_hoc: 'Who has done the #HourOfCode? @codeorg'
-  hoc_leaderboards: The Hour of Code Leaderboards
-  students_and_lines: '%{students} students have done the Hour of Code and written
-    %{lines} lines of code.'
-  start_hoc: Start the Hour of Code now
+  help_recruit_coders: আপনার দলে আরও কোডার নিয়োগ করতে সাহায্য করুন!
+  help_recruit: আরও কোডার নিয়োগ করতে সাহায্য করুন!
+  lines_of_code: এ পর্যন্ত <b># LINES OF CODE</b> এরও বেশি লাইন কোড লেখা হয়েছে।
+  lines_of_code_alt: <b>#</b> লাইন এরও বেশি কোড ছাত্রদের দ্বারা
+  who_has_done_hoc: 'কারা @codeorg #HourOfCode করেছেন?'
+  hoc_leaderboards: Hour of Code শীর্ষ স্থান তালিকা
+  students_and_lines: '%{students} ছাত্র Hour of Code করেছে এবং %{lines} লাইন কোড
+    এরা লেখেছে।'
+  start_hoc: Hour of Code শুরু করুন
   contact_form_topic_press: Press/media (interview or speaking engagement)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
   studiobar_elementary_title: Elementary courses
@@ -135,6 +138,10 @@
   studiobar_flappy_body: Make and share your own Flappy game
   studiobar_teacher_title: শিক্ষকদের জন্য তৈরী
   studiobar_teacher_body: 'For teachers: view your students'' progress'
+  studiobar_frozen_title: Hour of Code
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: আমি একজন ছাত্র
   contact_form_topic_parent: আমি ছাত্রের বাবা/মা
   contact_form_topic_teacher: আমি একজন শিক্ষক/শিক্ষাবিদ
@@ -446,7 +453,7 @@
   thinkersmithspanish_platformtext: Unplugged
   khan_platformtext: Modern Web browsers
   khanes_platformtext: Modern Web browsers
-  tynker_platformtext: Modern web browsers
+  tynker_platformtext: Modern browsers. (Follow-on course requires $$)
   scratch_platformtext: সকল ব্রাউজারগুলি
   lightbot_platformtext: সকল ব্রাউজারগুলি এবং iOS, Android, বা গেইম কনসোল
   thinkersmith_platformtext: Unplugged
@@ -526,10 +533,9 @@
     lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
     repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
   thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
+    los estudiantes descubriran como guiarse de modo tal de llevar a cabo tareas especificas
+    sin ser estas discutidas previamente. Este segmento ensena a los estudiantes la
+    conexion entre simbolos y acciones asi como la valiosa habilidad de depuracion.
   khan_longdescription: Learn the basics of JavaScript programming while creating
     fun drawings with your code. Do it on your own or with your class!
   khanes_longdescription: Learn the basics of JavaScript programming while creating
@@ -612,11 +618,10 @@
     of apps to play and share. Simple walkthroughs make it possible for even young
     kids to program real Javascript, and the more advanced you are the further you'll
     go.
-  makegameswithus_longdescription: Know some programming already? Learn to make an
-    iPhone game in an hour! We'll guide you through the process, to code, test, and
-    play your game entirely in the browser and then share it on Facebook for friends
-    to try! No prior iPhone development experience is required. You must understand
-    what variables, methods, and objects are.
+  makegameswithus_longdescription: Learn to code by making an iPhone game using a
+    brand new and beginner-friendly programming language called Swift! Create a Pokemon-inspired
+    action game and write code to teach your monster new moves. You will learn how
+    to use variables, methods, and objects to help your monster win!
   touchdevelop_longdescription: Crazy drawings, flying monsters, swirling flowers...
     create your apps on your device with TouchDevelop, a friendly mobile app creation
     environment. Runs on iPhone, iPad, Android, Windows, Windows Phone, Linux, Mac.

@@ -41,8 +41,8 @@ bg:
           "Bee: Loops": 'Пчела: цикли'
           "Studio: Create a Story": 'Театрална лаборатория: Създаване на история'
           "Artist: Loops": 'Художник - цикли'
-          description_audience: Ages 4+ (pre-readers)
-          description_short: Course 1 is designed for early readers.
+          description_audience: Възраст 4 + (за неможещи да четат)
+          description_short: Курс 1 е предназначен за малките читатели.
         course2:
           The Maze: Лабиринтът
           Suzi: Сузи
@@ -80,8 +80,8 @@ bg:
           "Artist: Sequence2": 'Художник: последователност 2'
           "Maze: Sequence2": 'Лабиринт: последователност 2'
           "Artist: Nested Loops": 'Художник: въвеждане на цикли'
-          description_audience: 'Ages  6+ (reading required)'
-          description_short: Course 2 is designed for students who can read.
+          description_audience: Възраст 6 + (четене е необходимо)
+          description_short: Курс 2 е предназначен за ученици, които могат да четат.
         course3:
           The Maze: Лабиринтът
           "Studio: Create a Story": 'Театрална лаборатория: Създаване на история'
@@ -131,8 +131,8 @@ bg:
           "Bee: Debugging2": 'Пчела: отстраняване на грешки 2'
           "Artist: Patterns": 'Художник: модели'
           Songwriting: Писане на песен
-          description_audience: Ages 8+ (after Course 2)
-          description_short: Course 3 is a follow-up to Course 2.
+          description_audience: Възраст 8 + (след курс 2)
+          description_short: Курс 3 е продължение на курс 2.
         msm:
           title: Математика за Средното училище
           description: Контролно за отчитане на напредъкът по математика в средното училище.
@@ -201,7 +201,7 @@ bg:
           Maze: Лабиринт
           title: Час на Кодирането
           description: Опитайте основите на компютърните науки с герои отAngry Birds, Plants vs. Zombies и Scrat от Ледена епоха!
-          description_short: Try the basics of computer science with many fun characters!
+          description_short: Опитайте основите на компютърните науки с много забавни герои!
         frozen:
           title: Кодиране с Анна и Елза
           description: Нека да използваме кода, за да се присъединим към Анна и Елза, докато те опознават магията и красотата на леда. Вие ще създадете снежинки и модели в градината на своята зимна приказка, която след това можете да споделите с приятелите си!
@@ -235,7 +235,7 @@ bg:
           Farmer Binary: Фермер двоичен код
           Maze and Bee: Лабиринт и Пчела
           Artist Binary: Художник Бинарен код
-          description_audience: Ages 10+ (after Course 3)
+          description_audience: Възраст 10 + (след курс 3)
         Course4pre:
           description_short: Кратък курс за концепциите, предназначен за ученици, които не са взели курс 2 и 3.
           Course 4 Prerequisite: Курс 4 предпоставка (необходимо условие)
@@ -281,3 +281,13 @@ bg:
           description: Избор на курс 4 нива за ползваемост.
           Variables: Променливи
           For Loops: За циклите
+        potus:
+          title: специален
+          description_short: специален
+          description: специален
+          Special: Специален
+        special:
+          title: специален
+          description_short: специален
+          description: специален
+          Special: Специален

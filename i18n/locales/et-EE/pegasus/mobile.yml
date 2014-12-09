@@ -41,7 +41,7 @@ et-EE:
   go: Mine
   thank_you_: Aitäh!
   congratulations: Palju õnne!
-  congratulations_on_completing_hoc: Palju õnne Koodi Tunni lõpetamise puhul.
+  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   get_a_certificate_of_achievement: Saa tunnistus lõpetamise kohta
   enter_valid_email: Palun sisestage kehtiv e-posti aadress
   get_a_certificate_message: "Me saadame sulle tunnistuse ja info, kuidas <a href='/learn/beyond'>õppida edasi pärast Koodi Tundi</a>"
@@ -65,7 +65,7 @@ et-EE:
   thanks_for_voting: Aitäh hääletamast!
   share_on_facebook: Jaga Facebookis
   share_on_twitter: Jaga Twitteris
-  beyond_an_hour: Lisaks Koodi Tunnile
+  beyond_an_hour: Beyond an Hour of Code
   get_started: Alusta
   i_agree: Olen nõus
   participant_select: '- Vali -'
@@ -74,6 +74,9 @@ et-EE:
   participant_educator: Koolitaja
   participant_engineer: Tarkvara insener
   participant_other: Mitte ükski eelnimetatutest
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Ma olen
   never_spam: Me ei saada sulle kunagi rämpsposti
   enter_country: Sisestage riik kui asute väljaspool Ameerika Ühendriike
@@ -110,6 +113,10 @@ et-EE:
   studiobar_flappy_body: Tee valmis ja jaga oma Flappy mängu
   studiobar_teacher_title: Valmistatud õpetajate jaoks
   studiobar_teacher_body: "Tutvusta Code Studio't oma klassis"
+  studiobar_frozen_title: Koodi Tund
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Ma olen õpilane
   contact_form_topic_parent: Ma olen lapsevanem
   contact_form_topic_teacher: Ma olen õpetaja/koolitaja
@@ -283,7 +290,7 @@ et-EE:
   dashboard_sections_password_account_creation: Student-created text password
   dashboard_sections_login_type_explanation: "This table helps explain which of these login types, <b>picture, word, or email</b>, you'll want to choose for a section."
   dashboard_faq: Frequently Asked Questions
-  code_hoc_coming: 'The Hour of Code is coming - December 8-14!'
+  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: Registreeru kasutajaks, et osaleda Arvutiteaduse Hariduse Nädalal
   learn_more: Lisateave
   hoc2014_try_new_tutorials: Proovi meie uut Koodi Tunni juhendeid
@@ -293,7 +300,7 @@ et-EE:
   carousel_heading_international: Juhendid sinu keeles
   carousel_heading_domestic: Õpetused saadaval inglise keeles
   carousel_heading_beginners: Õpetused algajatele
-  carousel_heading_javascript: Javascripti õpetused
+  carousel_heading_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: Pole seadmeid või internetti? Proovi arvutivabu tegevusi klassis
   carousel_heading_devices: Juhendite rakendused telefonile ja tahvelarvutile
   carousel_heading_languages: Juhendid teistele programmeerimiskeeltele

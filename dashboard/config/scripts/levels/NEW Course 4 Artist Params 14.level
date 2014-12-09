@@ -52,8 +52,8 @@
                     <arg name="sides"/>
                   </mutation>
                   <value name="ARG0">
-                    <block type="math_number">
-                      <title name="NUM">???</title>
+                    <block type="variables_get">
+                      <title name="VAR">counter</title>
                     </block>
                   </value>
                   <value name="ARG1">
@@ -76,7 +76,7 @@
                       <title name="DIR">turnLeft</title>
                       <value name="VALUE">
                         <block type="math_number">
-                          <title name="NUM">???</title>
+                          <title name="NUM">360</title>
                         </block>
                       </value>
                       <next>
@@ -104,8 +104,8 @@
                                 <arg name="sides"/>
                               </mutation>
                               <value name="ARG0">
-                                <block type="math_number">
-                                  <title name="NUM">???</title>
+                                <block type="variables_get">
+                                  <title name="VAR">counter</title>
                                 </block>
                               </value>
                               <value name="ARG1">
@@ -126,7 +126,7 @@
                                       <title name="DIR">turnLeft</title>
                                       <value name="VALUE">
                                         <block type="math_number">
-                                          <title name="NUM">???</title>
+                                          <title name="NUM">180</title>
                                         </block>
                                       </value>
                                     </block>
@@ -160,8 +160,8 @@
                                     <arg name="sides"/>
                                   </mutation>
                                   <value name="ARG0">
-                                    <block type="math_number">
-                                      <title name="NUM">???</title>
+                                    <block type="variables_get">
+                                      <title name="VAR">counter</title>
                                     </block>
                                   </value>
                                   <value name="ARG1">
@@ -189,42 +189,33 @@
           </mutation>
           <title name="NAME">draw a spiral shape</title>
           <statement name="STACK">
-            <block type="controls_repeat_ext" inline="true" uservisible="false">
-              <value name="TIMES">
-                <block type="variables_get" uservisible="false">
-                  <title name="VAR">sides</title>
+            <block type="draw_move" inline="true" uservisible="false">
+              <title name="DIR">moveForward</title>
+              <value name="VALUE">
+                <block type="math_number" uservisible="false">
+                  <title name="NUM">???</title>
                 </block>
               </value>
-              <statement name="DO">
-                <block type="draw_move" inline="true" uservisible="false">
-                  <title name="DIR">moveForward</title>
+              <next>
+                <block type="draw_turn" inline="true" uservisible="false">
+                  <title name="DIR">turnLeft</title>
                   <value name="VALUE">
-                    <block type="variables_get" uservisible="false">
-                      <title name="VAR">length</title>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="draw_turn" inline="true" uservisible="false">
-                      <title name="DIR">turnLeft</title>
-                      <value name="VALUE">
-                        <block type="math_arithmetic" inline="true" uservisible="false">
-                          <title name="OP">DIVIDE</title>
-                          <value name="A">
-                            <block type="math_number" uservisible="false">
-                              <title name="NUM">360</title>
-                            </block>
-                          </value>
-                          <value name="B">
-                            <block type="variables_get" uservisible="false">
-                              <title name="VAR">sides</title>
-                            </block>
-                          </value>
+                    <block type="math_arithmetic" inline="true" uservisible="false">
+                      <title name="OP">DIVIDE</title>
+                      <value name="A">
+                        <block type="math_number" uservisible="false">
+                          <title name="NUM">360</title>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="parameters_get" uservisible="false">
+                          <title name="VAR">sides</title>
                         </block>
                       </value>
                     </block>
-                  </next>
+                  </value>
                 </block>
-              </statement>
+              </next>
             </block>
           </statement>
         </block>

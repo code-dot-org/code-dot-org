@@ -299,8 +299,8 @@ ar:
         studio_c3_game_5: هل يمكنك إضافة قطعة لتسجيل نقطة عندما يصطدم البطريق بالأخطبوط , ومن ثم القيام بتحريكه بالأسهم حتى تسجل نقاطاً ؟
         studio_c3_game_6: هل يمكنك إضافة قطع لتغيير الخلفية و سرعة البطريق , ومن ثم القيام بتحريكه بالأسهم حتى تسجل نقاطاً ؟
         studio_c3_game_7: 'إنشاء الخاصة بك اللعبة. عند الانتهاء من ذلك، انقر فوق "إنهاء" للسماح للأصدقاء تجربة اللعبة الخاصة بك على الهواتف الخاصة بهم.'
-        studio_playlab_1: 'Penguin wants to say "hello" - can you help him?'
-        studio_playlab_2: 'Cave Boy (actor 1) and Cave Girl (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
+        studio_playlab_1: 'البطريق يريد أن يقول "مرحبا"- هل يمكنك مساعدته؟'
+        studio_playlab_2: 'كهف الصبي (الفاعل 1) وفتاة الكهف (الفاعل 2) يودون أن يبادلو التحية "مرحبا" إلى بعضها البعض. هل يمكنك مساعدتهم باستخدام كتلة "يقول" مرتين؟'
         studio_playlab_3: Can you help Tennis Girl get to the flag?
         studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor 2) and play a sound when he gets there?
         studio_playlab_5: 'Can you help the Spacebot say "greetings earthlings" when it is clicked? Don’t forget to click it after you click Run'
@@ -350,7 +350,7 @@ ar:
       frozen cross rotate dense:
         instructions: 'دعنا نكررذلك 90 مرة! كم من مرة يوجد العدد 90 في 360؟ اشارة: هذا العدد صغير.'
       frozen diamond:
-        instructions: 'لنقم بإنشاء متوازي أضلاع. أنه مجرد شكل مثل المربع و لكن بزوايا مختلفة: قيس الزوايا 60 و 120 درجة بدلاً من زوايا 90 درجة.'
+        instructions: 'لنقم بإنشاء متوازي أضلاع. إنه مجرّد شكل مثل المربع و لكن بزوايا مختلفة: قيس الزوايا 60 و 120 درجة بدلاً من زوايا 90 درجة.'
       frozen diamond mini snowflake:
         instructions: 'هل تعلم أنّ كل رقاقة الثلج  لها شكل مختلف؟ لنقم بإنشاء رقاقة ثلج جديدة باستخدام كتلة "كرر" لتكرار متوازي أضلاع أربع مرات، استدر إلى اليمين بزاوية 90 درجة بين كل متوازي أضلاع.'
       frozen diamond snowflake:
@@ -364,7 +364,7 @@ ar:
       frozen circle function with parameter:
         instructions: 'هذه قطعة "إنشاء دائرة" التي يمكنها أن ترسم دوائر من أحجام مختلفة.هل يمكنك استخدام هذا لإنشاء دائرة صغيرة من حجم 5 ودائرة أكبر من حجم 10؟'
       frozen snowflower:
-        instructions: يمكن إنشاء اشكال معقدة من الثلوج باستخدام أشكال بسيطة جداً. يمكنك إنشاء شكل بتكرار 5 دوائر من الحجم 5 و 5 دوائر من حجم 10؟
+        instructions: يمكن إنشاء اشكال معقدة من الثلوج باستخدام أشكال بسيطة جداً. هل يمكنك إنشاء شكل بتكرار 5 دوائر من الحجم 5 و 5 دوائر من حجم 10؟
       frozen snowflake branch:
         instructions: 'حاول استخدام قطعة "إنشاء فرع رقاقة الثلج" لإنشاء ثلاثة فروع، التي تبدأ لتبدو وكأنها ندفة الثلج.'
       frozen snowflake full:
@@ -478,18 +478,30 @@ ar:
         C3_crowdsourcing: التعهيد الجماعي
         C3_functional_suncatchers: سونكاتشيرس الوظيفية
         C3_songwriting_with_parameters: تأليف الأغاني مع المعلمات
-        C4_artist_math: Programming the Artist with Math
-        C4_create_functions: Creating Functions
-        C4_edit_functions: Editing Functions
+        C4_intro: Introduction
+        C4_bee_conditional: النحل الشرطية
+        C4_variables_artist: 'Variables - Artist'
+        C4_variables_playlab: 'Variables - Play Lab'
         C4_for_loops: For Loops
-        C4_variables: المتغيرات
+        C4_math_artist: Programming the Artist with Math
+        C4_function_edit: Editing Functions
+        C4_function_create: Creating Functions
+        C4_unplugged_algorithms: Algorithms with Tangrams
+        C4_unplugged_madlibs: Mad Libs
+        C4_unplugged_variables: Variables in Envelopes
+        C4_unplugged_forloops: For Loops
+        C4_unplugged_parameters: Songwriting with Parameters
+        C4_unplugged_binary: Binary
         frozen_intro: Hour of Code Intro
         frozen_loops: Introduction to Loops
         frozen_functions: Introduction to Functions
+        playlab_intro: Introduction to Play Lab
+        playlab_events: Play Lab Events
+        playlab_repeat_forever: Play Lab Repeat Forever
     callout:
       text:
         drag_blocks: 'اسحب كتلة "التحرك" وثبتها تحت كتلة أخرى'
-        run: 'اضرب "تشغيل" لمحاولة البرنامج الخاص بك'
+        run: 'انقر على "تشغيل" لتجرّب برنامجك'
         watch_again: انقر هنا لمشاهدة الفيديو مرة أخرى
         gray_block_explanation: القطع باللون الرمادي لا يمكن حذفها . حل يمكنك حل اللغز بأي حال ؟
         show_code_explanation: انقر هنا لمشاهدة التعليمات البرمجية للبرنامج التي قمت بها
@@ -498,31 +510,33 @@ ar:
         set_sprite_image: 'إرفاق كتلة "تعيين الفاعل للصورة" لكتلة "عندما يبدأ قصة" لتمكين عنصر فاعل لهذه القصة'
         studio_say_text: اكتب ما تريد الممثل الخاص بك أن أقول داخل هذه الأقوال
         jigsaw_click: انقر فوق هذه الكتلة!
-        move_elsa_forward: 'اسحب كتلة "المضي قدما" وأنها المفاجئة أدناه كتلة "عند تشغيل" جعل اخر للمضي قدما'
-        turn_elsa: 'استخدام كتلة "تشغيل" جعل إلسا بدوره. يحدد العدد في القائمة المنسدلة كم يتحول إلسا'
-        replace_questions: 'استخدم القائمة المنسدلة لتحل محل "؟؟؟" مع عدد'
-        replace_questions_degree: 'استخدم القائمة المنسدلة لتحل محل "؟؟؟" مع درجة الصحيح لتشغيل'
-        repeat_blocks: 'استخدام كتلة "تكرار" والتفاف حولها الكتل في مساحة العمل'
+        move_elsa_forward: 'إسحب الكتلة "تقدم إلى الأمام"  و ركّبها تحت القطعة "عند التّشغيل" لجعل إلزا تتقدم إلى الأمام'
+        turn_elsa: 'إستخدم القطعة البرمجية "اتجه" لجعل إلسا تدور.العدد الموجود في القائمة يحدد الزاوية التي ستستديرها'
+        replace_questions: 'إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد'
+        replace_questions_degree: 'إستخدم القائمة لتغيير العلامات "؟؟؟" بالدرجة الصحيحة للاستدارة'
+        repeat_blocks: 'إستخدم كتلة "كرر" و لفّ حولها القطع في مساحة العمل'
+        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the workspace
+        repeat_blocks_2: '(2) Move the "Repeat" block here, and place the gray blocks inside'
         snowflake_dropdown: استخدم هذه القائمة المنسدلة لإنشاء مختلفة من الثلج!
         degrees_per_side: قسمة 360 على عدد الجانبين للحصول على حجم كل زاوية في درجات.
         set_sides: 'تستخدم هذه الكتلة لتعيين "الجانبين" إلى العدد المطلوب لإكمال اللغز.'
         set_length: 'تستخدم هذه الكتلة لتعيين "طول" إلى القيمة الصحيحة.'
-        which_equation: 'المعادلة التي تجعل كل جانب أقصر للأشكال مع الجانبين أكثر؟  حاول كل المعادلة!'
+        which_equation: Which equation makes each side shorter for shapes with more sides?
         get_nectar: 'استخدام الكتلة الجديدة "الحصول على رحيق".'
         actions_category: 'أداة مربع حصلت على نظرة جديدة! كتل "الإجراءات" هنا الآن.'
         draw_square_hint: 'تلميح: استخدام حلقة مربعة كنت للتو في لغز آخر.'
-        edit_function: استخدم هذا الزر لتحرير الدالة.
+        edit_function: Click here to edit your function.
         create_function: 'انقر هنا لفتح القائمة المنبثقة "المهام"، ثم انقر فوق الزر "إنشاء مهمة".'
         house_hint: موافق إذا كانت الصورة لا تبدو وكأنها منزل حتى الآن. سيتم إصلاحه في اللغز القادم.
         edit_draw_square: استخدم هذا الزر لتحرير الدالة وإضافة الحلقة.
         edit_get_nectar: استخدم هذا الزر لتحرير المهمة وتغيير اتجاه النحلة سوف تتحول إلى الحصول على الرحيق.
         logic_category: 'افتح القائمة المنبثقة "المنطق" العثور على كتلة "إذا/آخر".'
         length_parameter: 'يمكن أن تقوم بتحديث هذه الوظيفة حيث أنه يستخدم المعلمة "طول"؟'
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: "Don't forget to turn after creating each circle."
-        frozen_circle_function_with_parameter_circle: 'Use the "create a circle" block and change the size.'
-        frozen_snowflake_branch: 'Use the "create a snowflake branch" block'
-        frozen_create_square: Attach more blocks here to create a square
+        frozen_diamond_repeat: 'إستخدم القطعة "كرر" لإنشاء هذا الشكل.'
+        frozen_circle_function_in_circle_turn: لا تنسى أن تستدير بعد إنشاء كل دائرة.
+        frozen_circle_function_with_parameter_circle: 'إستخدم القطعة "إنشاء دائرة" و غيّر الحجم.'
+        frozen_snowflake_branch: 'إستخدم قطعة "إنشاء فرع رقاقة الثلج"'
+        frozen_create_square: ركّب المزيد من القطع لإنشاء دائرة
         playlab_drag_say: 'Drag the "say" block here and type "hello"'
         playlab_use_twice: Use this block twice and remember to change the actor number
         playlab_move_girl: 'Use the "move right" block to move Tennis Girl'
@@ -531,3 +545,23 @@ ar:
         playlab_add_move: 'Add "move" blocks inside this repeat block'
         playlab_add_score: Add score blocks here
         playlab_add_blocks: Add your blocks here
+        set_variable: Drag a number block here to set your variable
+        place_variable: Drag your variable inside this block
+        bee_for_loop: Drag the largest number of nectar you want the bee to collect here
+        place_counter_variable: Drag your counter variable inside this block
+        function_editor_draw_square: 'This is your function definition. These blocks run everytime you use the "draw a square" block'
+        change_here: Make your change here
+        write_draw_square_function: Drag blocks from the toolbox into here that draw a square
+        write_draw_triangle_function: Drag blocks from the toolbox into here that draw a triangle
+        edit_add_parameter: Click edit to add a parameter in your function
+        add_and_drag_parameter: Write in the name of your parameter here, click add, and then drag it into your function definition
+        fill_in_actor: Fill in the ??? with numbers that correspond to each actor (1, 2, and 3)
+        repeat: Put blocks inside the loop to repeat commands
+        if_bee_nectar: 'Use the "if" block to decide if the bee should get nectar'
+        if_else_bee: |-
+          Use the "if/else" block so that the Bee gets nectar from a flower, and makes honey if it's not a flower
+        repeat_full_circle: Enter in the number of times the zombie has to move to make a full circle
+        place_length_variable: Drag the length variable here to replace the question marks
+        arrows_move_actor: Use the arrows to move the actor
+        right_arrow_fireball: Use the right arrow to shoot fireballs
+        name_function: Write the name of your function here

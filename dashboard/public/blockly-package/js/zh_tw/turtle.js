@@ -2725,12 +2725,21 @@ exports.createSharingDiv = function(options) {
     });
   }
 
-//  SMS-to-phone feature
+  var sharingShapeways = sharingDiv.querySelector('#sharing-shapeways');
+  if (sharingShapeways) {
+    dom.addClickTouchEvent(sharingShapeways, function() {
+      $('#send-to-phone').hide();
+      $('#shapeways-message').show();
+    });
+  }
+
+  //  SMS-to-phone feature
   var sharingPhone = sharingDiv.querySelector('#sharing-phone');
   if (sharingPhone && options.sendToPhone) {
     dom.addClickTouchEvent(sharingPhone, function() {
       var sendToPhone = sharingDiv.querySelector('#send-to-phone');
       if ($(sendToPhone).is(':hidden')) {
+        $('#shapeways-message').hide();
         sendToPhone.setAttribute('style', 'display:inline-block');
         var phone = $(sharingDiv.querySelector("#phone"));
         var submitted = false;
@@ -9297,7 +9306,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/zh_tw/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n  <div class="social-buttons">\n  ');10; if (!options.onMainPage) { ; buf.push('\n    <button id="print-button">\n      ', escape((12,  msg.print() )), '\n    </button>\n  ');14; } ; buf.push('\n');15; if (options.alreadySaved) { ; buf.push('\n  <button class="saved-to-gallery" disabled>\n    ', escape((17,  msg.savedToGallery() )), '\n  </button>\n');19; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((21,  msg.saveToGallery() )), '\n  </button>\n');23; } ; buf.push('\n  </div>\n\n');26; if (options.response && options.response.level_source) { ; buf.push('\n  ');27; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((28,  options.appStrings.sharingText )), '</div>\n  ');29; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((32,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');36; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((36,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((37,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');39; }; buf.push('\n    ');40; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((40,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((41,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');43; }; buf.push('    ');43; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((44,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');46; }; buf.push('    ');46; if (options.level.shapewaysUrl) {; buf.push('      <a href=\'', escape((46,  options.level.shapewaysUrl )), '\' target="_blank">\n        <img src=\'', escape((47,  BlocklyApps.assetUrl("media/shapeways_purple.png") )), '\' />\n      </a>\n    ');49; }; buf.push('  </div>\n');50; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
+ buf.push('');1; var msg = require('../../locale/zh_tw/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n  <div class="social-buttons">\n  ');10; if (!options.onMainPage) { ; buf.push('\n    <button id="print-button">\n      ', escape((12,  msg.print() )), '\n    </button>\n  ');14; } ; buf.push('\n');15; if (options.alreadySaved) { ; buf.push('\n  <button class="saved-to-gallery" disabled>\n    ', escape((17,  msg.savedToGallery() )), '\n  </button>\n');19; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((21,  msg.saveToGallery() )), '\n  </button>\n');23; } ; buf.push('\n  </div>\n\n');26; if (options.response && options.response.level_source) { ; buf.push('\n  ');27; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((28,  options.appStrings.sharingText )), '</div>\n  ');29; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((32,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');36; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((36,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((37,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');39; }; buf.push('\n    ');40; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((40,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((41,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');43; }; buf.push('    ');43; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((44,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');46; }; buf.push('    ');46; if (options.level.shapewaysUrl && !options.onMainPage && options.sendToPhone) {; buf.push('      <a id="sharing-shapeways" href="" onClick="return false;">\n        <img src=\'', escape((47,  BlocklyApps.assetUrl("media/shapeways_purple.png") )), '\' />\n      </a>\n    ');49; }; buf.push('  </div>\n');50; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n');58; if (options.response && options.response.level_source && options.level.shapewaysUrl) {; buf.push('  <div id="shapeways-message" class="sharing" style="display: none">\n    <div id="shapeways-message-body">You\'ll be redirected to Shapeways.com to order and purchase a 3D print.</div>\n    <button id="shapeways-print-go-button" onclick="window.open(\'', escape((60,  options.level.shapewaysUrl )), '\', \'_blank\')">Go to Shapeways</button>\n    <div id="shapeways-message-body-disclaimer">Students under 13 years need a parent or guardian to do 3D printing.</div>\n  </div>\n');63; }; buf.push(''); })();
 } 
 return buf.join('');
 };
@@ -10816,17 +10825,11 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  if (skin.id == "anna" || skin.id == "elsa") {
-    blockly.Blocks.turtle_stamp.VALUES = [
-      [skin.assetUrl('snowflake.png'), 'snowflake1'],
-      [skin.assetUrl('snowflake.png'), 'snowflake2'],
-      [skin.assetUrl('snowflake.png'), 'snowflake3'],
-    ];
-  } else {
-    blockly.Blocks.turtle_stamp.VALUES = [
-      [skin.patternDefault, 'DEFAULT']
-    ];
-  }
+  // block is currently unused. if we want to add it back in the future, add
+  // stamp images here
+  blockly.Blocks.turtle_stamp.VALUES = [
+    [skin.avatar, 'DEFAULT']
+  ];
 
   // Preload stamp images
   Turtle.stamps = [];
@@ -14361,8 +14364,13 @@ Turtle.checkAnswer = function() {
     save_to_gallery: level.impressive
   };
 
+  // https://www.pivotaltracker.com/story/show/84171560
+  // Never send up frozen images for now.
+  var isFrozen = (skin.id === 'anna' || skin.id === 'elsa');
+
   // Get the canvas data for feedback.
-  if (Turtle.testResults >= BlocklyApps.TestResults.TOO_MANY_BLOCKS_FAIL) {
+  if (Turtle.testResults >= BlocklyApps.TestResults.TOO_MANY_BLOCKS_FAIL &&
+    !isFrozen && (level.freePlay || level.impressive)) {
     reportData.image = getFeedbackImage();
   }
 
@@ -14802,19 +14810,19 @@ exports.emptyBlocksErrorMsg = function(d){return "\"重複\"和\"如果\"程式�
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "\"函式\"積木裡面需要放其他程式積木才能運作"};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "在此需要定義您的函式區塊。按一下\"編輯\"並在綠色區塊內部拖曳區塊。"};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "按一下\"編輯\"來確保你的函式定義中沒有缺少任何區塊。"};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "在你的工作區，記得附加一區塊到每個函數區塊輸入的參數。"};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "你加入一個參數區塊，但是定義中沒有使用它。請點按\"編輯\"，並且在綠色區塊裏放入參數區塊，以確認使用你的參數。"};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "點按\"編輯\"和加入必要的參數值，為你的函數建立一個參數。拖曳新參數區塊到你的函數定義中。"};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "你建立一個函數，但從未在工作區上使用它 ！在工具箱中點按\"函數\"，並確認在你的程式中有使用它。"};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "試把 \"???\" 更換為一個值。"};
 
 exports.extraTopBlocks = function(d){return "你有一些程式積木沒連接上. 你是要把它們接在\"當按下執行時\"的積木後面嗎?"};
 
@@ -14856,7 +14864,7 @@ exports.numLinesOfCodeWritten = function(d){return "你已經撰寫了 "+p(d,"nu
 
 exports.play = function(d){return "玩"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "列印"};
 
 exports.puzzleTitle = function(d){return "階段 "+v(d,"stage_total")+" 的第"+v(d,"puzzle_number")+" 關"};
 
@@ -14876,7 +14884,7 @@ exports.showBlocksHeader = function(d){return "顯示積木"};
 
 exports.showGeneratedCode = function(d){return "顯示程式碼"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "字串=？"};
 
 exports.subtitle = function(d){return "一個視覺化的程式設計環境\n\n"};
 
@@ -14888,7 +14896,7 @@ exports.tooManyBlocksMsg = function(d){return "這個關卡可以用 < x id = 'S
 
 exports.tooMuchWork = function(d){return "你讓我做太多工作了! 可以試著減少一些重複次數嗎?"};
 
-exports.toolboxHeader = function(d){return "程式積木"};
+exports.toolboxHeader = function(d){return "程式模塊"};
 
 exports.openWorkspace = function(d){return "它如何運作的"};
 
@@ -14900,9 +14908,9 @@ exports.hintRequest = function(d){return "查看提示"};
 
 exports.backToPreviousLevel = function(d){return "返回上一階段"};
 
-exports.saveToGallery = function(d){return "保存到您的收藏簿。"};
+exports.saveToGallery = function(d){return "保存到作品集"};
 
-exports.savedToGallery = function(d){return "已經存放到您的收藏簿了！"};
+exports.savedToGallery = function(d){return "已經保存到作品集了！"};
 
 exports.shareFailure = function(d){return "抱歉, 我們無法分享這個程式"};
 
@@ -14961,23 +14969,23 @@ exports.catLogic = function(d){return "邏輯類別"};
 
 exports.colourTooltip = function(d){return "變更畫筆顏色。"};
 
-exports.createACircle = function(d){return "create a circle"};
+exports.createACircle = function(d){return "建立一個圓圈"};
 
-exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+exports.createSnowflakeSquare = function(d){return "建立方形型態的雪花"};
 
-exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+exports.createSnowflakeParallelogram = function(d){return "建立平行四邊形型態的雪花"};
 
-exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+exports.createSnowflakeLine = function(d){return "建立直線型態的雪花"};
 
-exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+exports.createSnowflakeSpiral = function(d){return "建立螺旋型態的雪花"};
 
-exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+exports.createSnowflakeFlower = function(d){return "建立花朵型態的雪花"};
 
-exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+exports.createSnowflakeFractal = function(d){return "建立不規則砕片型態的雪花"};
 
-exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+exports.createSnowflakeRandom = function(d){return "建立隨機型態的雪花"};
 
-exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
+exports.createASnowflakeBranch = function(d){return "建立雪花分支"};
 
 exports.degrees = function(d){return "度"};
 
@@ -14997,27 +15005,27 @@ exports.drawAHexagon = function(d){return "畫個六邊形"};
 
 exports.drawAHouse = function(d){return "畫一間房子"};
 
-exports.drawAPlanet = function(d){return "draw a planet"};
+exports.drawAPlanet = function(d){return "畫一顆行星"};
 
-exports.drawARhombus = function(d){return "draw a rhombus"};
+exports.drawARhombus = function(d){return "繪製菱形"};
 
-exports.drawARobot = function(d){return "draw a robot"};
+exports.drawARobot = function(d){return "畫一個機器人"};
 
-exports.drawARocket = function(d){return "draw a rocket"};
+exports.drawARocket = function(d){return "畫一個火箭"};
 
-exports.drawASnowflake = function(d){return "draw a snowflake"};
+exports.drawASnowflake = function(d){return "畫一片雪花"};
 
 exports.drawASnowman = function(d){return "畫一個雪人"};
 
-exports.drawAStar = function(d){return "draw a star"};
+exports.drawAStar = function(d){return "畫一顆星星"};
 
 exports.drawATree = function(d){return "畫一棵樹"};
 
-exports.drawUpperWave = function(d){return "draw upper wave"};
+exports.drawUpperWave = function(d){return "繪製上層波"};
 
-exports.drawLowerWave = function(d){return "draw lower wave"};
+exports.drawLowerWave = function(d){return "繪製下層波"};
 
-exports.drawStamp = function(d){return "draw stamp"};
+exports.drawStamp = function(d){return "繪製圖章"};
 
 exports.heightParameter = function(d){return "高度"};
 
@@ -15039,7 +15047,7 @@ exports.jumpSouthTooltip = function(d){return "不留下任何痕跡下把演出
 
 exports.jumpWestTooltip = function(d){return "不留下任何痕跡下把演出者向西移動"};
 
-exports.lengthFeedback = function(d){return "You got it right except for the lengths to move."};
+exports.lengthFeedback = function(d){return "你答對了除了移動的長度。"};
 
 exports.lengthParameter = function(d){return "長度"};
 
@@ -15071,11 +15079,11 @@ exports.penTooltip = function(d){return "使用\"下筆\"或\"停筆\"來開始�
 
 exports.penUp = function(d){return "停筆"};
 
-exports.reinfFeedbackMsg = function(d){return "這看起來像你想要的嗎？你可以按\"再試一次\"按鈕來看看你畫出來的圖形。"};
+exports.reinfFeedbackMsg = function(d){return "這是您的繪圖 ！繼續努力或者開始下一個謎題。"};
 
 exports.setColour = function(d){return "設定顏色"};
 
-exports.setPattern = function(d){return "set pattern"};
+exports.setPattern = function(d){return "設定模式"};
 
 exports.setWidth = function(d){return "設定寬度"};
 
@@ -15085,9 +15093,9 @@ exports.showMe = function(d){return "顯示"};
 
 exports.showTurtle = function(d){return "顯示藝術家"};
 
-exports.sizeParameter = function(d){return "size"};
+exports.sizeParameter = function(d){return "大小"};
 
-exports.step = function(d){return "step"};
+exports.step = function(d){return "一步"};
 
 exports.tooFewColours = function(d){return "你必需使用至少 %1 種不同的顏色來完成這個關卡。你只使用了 %2 種顏色。"};
 

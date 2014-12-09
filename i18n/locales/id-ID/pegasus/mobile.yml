@@ -41,7 +41,7 @@ id-ID:
   go: Gerak
   thank_you_: Terima kasih!
   congratulations: Selamat!
-  congratulations_on_completing_hoc: Selamat atas menyelesaikan 1 jam kode.
+  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   get_a_certificate_of_achievement: Ambil sertifikat prestasi
   enter_valid_email: Masukkan alamat email yang valid
   get_a_certificate_message: "Kami akan kirimkan sertifikat dan informasi tentang cara untuk <a href='/learn/beyond'> belajar lebih dari satu jam</a>"
@@ -65,7 +65,7 @@ id-ID:
   thanks_for_voting: Terima kasih untuk memilih!
   share_on_facebook: Berbagi melalui Facebook
   share_on_twitter: Berbagi melalui Twitter
-  beyond_an_hour: 'Di luar Hour of Code>'
+  beyond_an_hour: Beyond an Hour of Code
   get_started: Mulai
   i_agree: Saya setuju
   participant_select: -Pilih-
@@ -74,6 +74,9 @@ id-ID:
   participant_educator: Guru
   participant_engineer: Programmer
   participant_other: Tidak satupun diatas
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Saya seorang
   never_spam: 'Kami tidak akan pernah mengirim anda spam '
   enter_country: Berikan negara jika anda berdomisili di luar Amerika Serikat
@@ -110,6 +113,10 @@ id-ID:
   studiobar_flappy_body: Buatlah dan bagikanlah permainan Flappy bikinan kamu sendiri
   studiobar_teacher_title: DIbuat untuk guru
   studiobar_teacher_body: Perkenalkan Code Studio di kelasmu
+  studiobar_frozen_title: Jam kode
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Saya seorang siswa
   contact_form_topic_parent: Saya orang tua
   contact_form_topic_teacher: Saya seorang guru
@@ -283,7 +290,7 @@ id-ID:
   dashboard_sections_password_account_creation: Teks kata sandi yang dibuat murid
   dashboard_sections_login_type_explanation: 'Tabel ini membantu menjelaskan jenis-jenis login manakah, <b>gambar, kata, atau surat elektronik</b>, yang akan Anda pilih untuk satu bagian.'
   dashboard_faq: Pertanyaan yang Sering Diajukan
-  code_hoc_coming: 'The Hour of Code akan datang - 8-14 Desember!'
+  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: Daftarlah untuk ikut serta dalam Pekan Edukasi Ilmu Komputer
   learn_more: Pelajari lebih banyak
   hoc2014_try_new_tutorials: Cobalah pedoman Hour of Code terbaru kami
@@ -293,7 +300,7 @@ id-ID:
   carousel_heading_international: Tutorial dalam bahasa Anda
   carousel_heading_domestic: Pedoman tersedia dalam Bahasa Inggris
   carousel_heading_beginners: Pedoman untuk pemula
-  carousel_heading_javascript: Pedoman yang mengajarkan Javascript
+  carousel_heading_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: Tidak ada perangkat atau internet? Coba ilmu komputer luring (offline)
   carousel_heading_devices: Aplikasi pedoman untuk ponsel dan tablet
   carousel_heading_languages: Pedoman dalam bahasa pemrograman lain

@@ -13,7 +13,7 @@ We use [YouTube](http://www.youtube.com) to embed videos into Code.org and our [
 | Priority | URL |
 | -------- | ----------- |
 | **Required**   | `http://*.code.org` |
-| **Optional**    | `http://cloud.typography.com`<br />`http://cdn.optimizely.com`<br/>`http://www.google-analytics.com` |
+| **Optional**    | `http://cdn.optimizely.com`<br/>`http://www.google-analytics.com` |
 | **To use YouTube hosted videos**   | `https://s.youtube.com/*`<br/>`https://www.youtube.com/*`<br/>`https://*.googlevideo.com`<br/>`https://*.ytimg.com` |
 | **To use Code.org hosted videos**   | **Block:**<br/>`https://www.youtube.com/favicon.ico` |
 

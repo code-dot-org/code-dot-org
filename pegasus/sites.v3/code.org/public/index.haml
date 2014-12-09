@@ -4,17 +4,17 @@ banner: null
 <%
   if request.site == 'csedweek.org'
     twitter_meta = {
-      'title' => 'The Hour of Code is coming',
+      'title' => 'The Hour of Code is here',
       'description' => 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104.',
-      'image_src' => 'http://csedweek.org/images/hour-of-code-2014-video-thumbnail.jpg',
-      'player' => 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0',
+      'image_src' => 'http://csedweek.org/images/code-video-thumbnail.jpg',
+      'player' => 'https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0',
     }
   else
     twitter_meta = {
-      'title' => "The Hour of Code is coming",
+      'title' => "The Hour of Code is here",
       'description' => "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104.",
-      'image_src' => 'http://code.org/images/hour-of-code-2014-video-thumbnail.jpg',
-      'player' => 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0',
+      'image_src' => 'http://code.org/images/code-video-thumbnail.jpg',
+      'player' => 'https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0',
     }
   end
 %>
@@ -33,6 +33,9 @@ social:
 - if request.site == 'csedweek.org'
   %div
     = view :index_hoc
+- elsif request.site == 'code.org'
+  %div.desktop-feature
+    = view :index_loc
 
 -facebook = {:u=>"http://#{request.site}/"}
 
@@ -55,61 +58,31 @@ social:
       = view :index_video
 
     #start.col-36
-
+      %div.desktop-feature{:style=>'height: 25px;'}
       #hoc2014
 
         .count{:style=>"font-family: 'Gotham 5r', sans-serif; margin-bottom:15px" }
           -if locale_chapter_partner?
             -count_string = I18n.t(:n_have_learned_an_hoc).gsub("#", format_integer_with_decimals(fetch_hoc_metrics['started']).to_s)
           -else
+
             -count_string = I18n.t(:n_have_learned_an_hoc).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
           -if request.locale == 'en-US'
             %a{:href=>'/leaderboards', :style=>'text-decoration:none'}
               =count_string
+            %h4
+              =I18n.t :anybody_can_learn
           -else
             =count_string
 
-        #heading
-          =I18n.t :hoc2014_heading
+        %div{:style=>'margin-bottom: 8px'}
+          %a#trybutton{:href=>'/learn'}
+            %button.optionbutton
+              =I18n.t :get_started
+        %a{:href=>'/learn/beyond', :style=>'font-size: 16px; color: white'}
+          =I18n.t :beyond_an_hour
 
-        %div{style: "height: 12px;"}
-          &nbsp;
-
-        .option
-          .optionleft
-            =I18n.t :hoc2014_students
-            &nbsp;
-          .optionright
-            %a#trybutton{:href=>'/learn'}
-              %button.optionbutton
-                =I18n.t :hoc2014_try
-            %br/
-
-        .option{style: "clear:both"}
-          .optionleft
-            =I18n.t :hoc2014_teachers
-            &nbsp;
-          .optionright
-            %a#hostbutton{:href=>"http://#{canonical_hostname('hourofcode.com')}/#join", target: "_blank"}
-              %button.optionbutton
-                =I18n.t :hoc2014_host
-            %br/
-
-        .option{style: "clear:both"}
-          .optionleft
-            =I18n.t :hoc2014_everyone
-            &nbsp;
-          .optionright
-            %a#supportbutton{:href=>'/donate'}
-              %button.optionbutton
-                =I18n.t :hoc2014_support
-            %br/
-
-        .whatishoc{style: "clear:both"}
-          %a{:href=>"http://#{canonical_hostname('hourofcode.com')}", :target=>'_blank'}
-            =I18n.t :hoc2014_whatishoc
-
-    -download_filename = (request.site == 'code.org') ? 'Code-5-minute.mov' : 'HoC-video-15mb.mp4'
+    -download_filename = 'HoC-video-15mb.mp4'
     #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}
       = view :share_buttons, facebook:facebook, twitter:twitter, download_url:"http://s3.amazonaws.com/cdo-videos/#{download_filename}"
 
@@ -145,7 +118,7 @@ social:
         %img{:src=>"/images/twitter_purple.png"}
       %a{:href=>"http://codeorg.tumblr.com/", :title=>'Tumblr', :target=>"_blank", :style=>"text-decoration:none"}
         %img{:src=>"/images/tumblr_purple.png"}
-      %a{:href=>"http://zazzle.com/codeorg", :title=>'Zazzle', :target=>"_blank", :style=>"text-decoration:none"}
+      %a{:href=>"/shop", :title=>'Zazzle', :target=>"_blank", :style=>"text-decoration:none"}
         %img{:src=>"/images/zazzle_purple.png"}
       %a{:href=>"/donate", :title=>'Donate', :style=>"text-decoration:none"}
         %img{:src=>"/images/donate_normal.png"}
@@ -154,7 +127,7 @@ social:
     %h1.mobile-center
       =I18n.t :studiobar_title
     #body.mobile-pad-left64
-      - studiobar_items = [ {id: "elementary", url: "http://#{canonical_hostname('studio.code.org')}"}, {id: "hoc", url: "/api/hour/begin/codeorg"}, {id: "flappy", url: "http://#{canonical_hostname('studio.code.org')}/flappy/1"}, {id: "teacher", url: "/educate/k5"}]
+      - studiobar_items = [ {id: "elementary", url: "http://#{canonical_hostname('studio.code.org')}"}, {id: "frozen", url: "http://studio.code.org/s/frozen/reset"}, {id: "teacher", url: "/educate/k5"}, {id: "donate", url: "/donate"}]
       - studiobar_items.each_with_index do |item, index|
         - if index < studiobar_items.length-1
           - other_style = "margin-right: 26px"

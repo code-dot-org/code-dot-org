@@ -2725,12 +2725,21 @@ exports.createSharingDiv = function(options) {
     });
   }
 
-//  SMS-to-phone feature
+  var sharingShapeways = sharingDiv.querySelector('#sharing-shapeways');
+  if (sharingShapeways) {
+    dom.addClickTouchEvent(sharingShapeways, function() {
+      $('#send-to-phone').hide();
+      $('#shapeways-message').show();
+    });
+  }
+
+  //  SMS-to-phone feature
   var sharingPhone = sharingDiv.querySelector('#sharing-phone');
   if (sharingPhone && options.sendToPhone) {
     dom.addClickTouchEvent(sharingPhone, function() {
       var sendToPhone = sharingDiv.querySelector('#send-to-phone');
       if ($(sendToPhone).is(':hidden')) {
+        $('#shapeways-message').hide();
         sendToPhone.setAttribute('style', 'display:inline-block');
         var phone = $(sharingDiv.querySelector("#phone"));
         var submitted = false;
@@ -9297,7 +9306,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/sv_se/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n  <div class="social-buttons">\n  ');10; if (!options.onMainPage) { ; buf.push('\n    <button id="print-button">\n      ', escape((12,  msg.print() )), '\n    </button>\n  ');14; } ; buf.push('\n');15; if (options.alreadySaved) { ; buf.push('\n  <button class="saved-to-gallery" disabled>\n    ', escape((17,  msg.savedToGallery() )), '\n  </button>\n');19; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((21,  msg.saveToGallery() )), '\n  </button>\n');23; } ; buf.push('\n  </div>\n\n');26; if (options.response && options.response.level_source) { ; buf.push('\n  ');27; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((28,  options.appStrings.sharingText )), '</div>\n  ');29; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((32,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');36; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((36,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((37,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');39; }; buf.push('\n    ');40; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((40,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((41,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');43; }; buf.push('    ');43; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((44,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');46; }; buf.push('    ');46; if (options.level.shapewaysUrl) {; buf.push('      <a href=\'', escape((46,  options.level.shapewaysUrl )), '\' target="_blank">\n        <img src=\'', escape((47,  BlocklyApps.assetUrl("media/shapeways_purple.png") )), '\' />\n      </a>\n    ');49; }; buf.push('  </div>\n');50; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
+ buf.push('');1; var msg = require('../../locale/sv_se/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n  <div class="social-buttons">\n  ');10; if (!options.onMainPage) { ; buf.push('\n    <button id="print-button">\n      ', escape((12,  msg.print() )), '\n    </button>\n  ');14; } ; buf.push('\n');15; if (options.alreadySaved) { ; buf.push('\n  <button class="saved-to-gallery" disabled>\n    ', escape((17,  msg.savedToGallery() )), '\n  </button>\n');19; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((21,  msg.saveToGallery() )), '\n  </button>\n');23; } ; buf.push('\n  </div>\n\n');26; if (options.response && options.response.level_source) { ; buf.push('\n  ');27; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((28,  options.appStrings.sharingText )), '</div>\n  ');29; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((32,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');36; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((36,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((37,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');39; }; buf.push('\n    ');40; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((40,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((41,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');43; }; buf.push('    ');43; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((44,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');46; }; buf.push('    ');46; if (options.level.shapewaysUrl && !options.onMainPage && options.sendToPhone) {; buf.push('      <a id="sharing-shapeways" href="" onClick="return false;">\n        <img src=\'', escape((47,  BlocklyApps.assetUrl("media/shapeways_purple.png") )), '\' />\n      </a>\n    ');49; }; buf.push('  </div>\n');50; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n');58; if (options.response && options.response.level_source && options.level.shapewaysUrl) {; buf.push('  <div id="shapeways-message" class="sharing" style="display: none">\n    <div id="shapeways-message-body">You\'ll be redirected to Shapeways.com to order and purchase a 3D print.</div>\n    <button id="shapeways-print-go-button" onclick="window.open(\'', escape((60,  options.level.shapewaysUrl )), '\', \'_blank\')">Go to Shapeways</button>\n    <div id="shapeways-message-body-disclaimer">Students under 13 years need a parent or guardian to do 3D printing.</div>\n  </div>\n');63; }; buf.push(''); })();
 } 
 return buf.join('');
 };
@@ -10816,17 +10825,11 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  if (skin.id == "anna" || skin.id == "elsa") {
-    blockly.Blocks.turtle_stamp.VALUES = [
-      [skin.assetUrl('snowflake.png'), 'snowflake1'],
-      [skin.assetUrl('snowflake.png'), 'snowflake2'],
-      [skin.assetUrl('snowflake.png'), 'snowflake3'],
-    ];
-  } else {
-    blockly.Blocks.turtle_stamp.VALUES = [
-      [skin.patternDefault, 'DEFAULT']
-    ];
-  }
+  // block is currently unused. if we want to add it back in the future, add
+  // stamp images here
+  blockly.Blocks.turtle_stamp.VALUES = [
+    [skin.avatar, 'DEFAULT']
+  ];
 
   // Preload stamp images
   Turtle.stamps = [];
@@ -14361,8 +14364,13 @@ Turtle.checkAnswer = function() {
     save_to_gallery: level.impressive
   };
 
+  // https://www.pivotaltracker.com/story/show/84171560
+  // Never send up frozen images for now.
+  var isFrozen = (skin.id === 'anna' || skin.id === 'elsa');
+
   // Get the canvas data for feedback.
-  if (Turtle.testResults >= BlocklyApps.TestResults.TOO_MANY_BLOCKS_FAIL) {
+  if (Turtle.testResults >= BlocklyApps.TestResults.TOO_MANY_BLOCKS_FAIL &&
+    !isFrozen && (level.freePlay || level.impressive)) {
     reportData.image = getFeedbackImage();
   }
 
@@ -14796,25 +14804,25 @@ exports.directionEastLetter = function(d){return "Ö"};
 
 exports.directionWestLetter = function(d){return "V"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "slut"};
 
 exports.emptyBlocksErrorMsg = function(d){return "\"Upprepa\" eller \"Om\" blocken måste ha andra block inuti sig för att fungera. Se till att det inre blocket sitter rätt inuti blocket."};
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Funktionsblocket måste ha andra block i sig för att fungera."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "Det måste finnas block inuti din funktionsdefinition. Klicka på \"redigera\" och dra block in i det gröna blocket."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "Klicka på \"Redigera\" för att se till att  någon block inte saknas inuti din funktionsdefinition."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "Kom ihåg att bifoga ett block på varje parameter i blockets funktion på din arbetsyta."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "Du har lagt till ett parameterblock, men använder inte det i definitionen. Se till att använda parametern genom att klicka på \"Redigera\" och placera parameterblocket inuti gröna blocket."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "Skapa en parameter för din funktion genom att klicka på \"redigera\" och lägga till de nödvändiga parametrarna. Dra de nya parameterblocken in i din funktionsdefinition."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "Du skapade en funktion, men använde det aldrig på din arbetsyta! Klicka på \"Funktioner\" i verktygslådan och kontrollera att du använder det i ditt program."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "Prova att ersätta \"???\" med ett värde."};
 
 exports.extraTopBlocks = function(d){return "Du har okopplade block. Menade du att fästa dessa till \"när startat\" blocket?"};
 
@@ -14822,7 +14830,7 @@ exports.finalStage = function(d){return "Grattis! Du har slutfört den sista niv
 
 exports.finalStageTrophies = function(d){return "Grattis! Du har slutfört den sista nivån och vann "+p(d,"numTrophies",0,"sv",{"en":"en trofé","other":n(d,"numTrophies")+" troféer"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Avsluta"};
 
 exports.generatedCodeInfo = function(d){return "Även toppuniversitet lär ut blockbaserad programmering (t.ex. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Men under ytan kan blocken du har byggt ihop också visas som JavaScript, världens mest använda programmeringsspråk:"};
 
@@ -14850,11 +14858,11 @@ exports.nextStage = function(d){return "Grattis! Du har klarat "+v(d,"stageName"
 
 exports.nextStageTrophies = function(d){return "Grattis! Du klarade "+v(d,"stageName")+" och har fått "+p(d,"numTrophies",0,"sv",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
-exports.numBlocksNeeded = function(d){return "Grattis! Du slutförde pussel "+v(d,"puzzleNumber")+". (Men du skulle bara behövt använda"+p(d,"numBlocks",0,"sv",{"one":"1 block","other":n(d,"numBlocks")+" block"})+".)"};
+exports.numBlocksNeeded = function(d){return "Grattis! Du klarade pussel "+v(d,"puzzleNumber")+". (Men du borde bara behövt använda "+p(d,"numBlocks",0,"sv",{"one":"1 block","other":n(d,"numBlocks")+" block"})+".)"};
 
 exports.numLinesOfCodeWritten = function(d){return "Du skrev "+p(d,"numLines",0,"sv",{"one":"1 rad","other":n(d,"numLines")+" rader"})+" kod!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "spela"};
 
 exports.print = function(d){return "Skriv ut"};
 
@@ -14868,15 +14876,15 @@ exports.runProgram = function(d){return "Kör"};
 
 exports.runTooltip = function(d){return "Starta programmet som gjorts av blocken på arbetsytan."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "poäng"};
 
 exports.showCodeHeader = function(d){return "Visa kod"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Visa block"};
 
 exports.showGeneratedCode = function(d){return "Visa kod"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "sträng =?"};
 
 exports.subtitle = function(d){return "en visuell programmeringsmiljö"};
 
@@ -14896,7 +14904,7 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Totalt: "+p(d,"numLines
 
 exports.tryAgain = function(d){return "Försök igen"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Se tips"};
 
 exports.backToPreviousLevel = function(d){return "Gå tillbaka till föregående nivå"};
 
@@ -14904,7 +14912,7 @@ exports.saveToGallery = function(d){return "Spara till galleriet"};
 
 exports.savedToGallery = function(d){return "Sparad i galleriet!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Tyvärr kan inte vi dela detta program."};
 
 exports.typeFuncs = function(d){return "Tillgängliga funktioner:%1"};
 
@@ -14912,7 +14920,7 @@ exports.typeHint = function(d){return "Observera att parenteserna och semikolone
 
 exports.workspaceHeader = function(d){return "Sätt ihop dina block här: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Skriv din JavaScript-kod här"};
 
 exports.infinity = function(d){return "Oändligt"};
 
@@ -14924,7 +14932,7 @@ exports.wantToLearn = function(d){return "Vill du lära dig att programmera?"};
 
 exports.watchVideo = function(d){return "Titta på videon"};
 
-exports.when = function(d){return "when"};
+exports.when = function(d){return "när"};
 
 exports.whenRun = function(d){return "när startat"};
 
@@ -14934,9 +14942,9 @@ exports.signup = function(d){return "Registrera dig för introduktionskursen"};
 
 exports.hintHeader = function(d){return "Här är ett tips:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Se vad det blev, och försök fixa ditt program."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Kolla vad jag gjorde"};
 
 
 },{"messageformat":57}],45:[function(require,module,exports){
@@ -15017,7 +15025,7 @@ exports.drawUpperWave = function(d){return "rita övre våg"};
 
 exports.drawLowerWave = function(d){return "rita nedre vågen"};
 
-exports.drawStamp = function(d){return "draw stamp"};
+exports.drawStamp = function(d){return "Rita stämpel"};
 
 exports.heightParameter = function(d){return "höjd"};
 
@@ -15085,7 +15093,7 @@ exports.showMe = function(d){return "Visa mig"};
 
 exports.showTurtle = function(d){return "Visa konstnär"};
 
-exports.sizeParameter = function(d){return "size"};
+exports.sizeParameter = function(d){return "storlek"};
 
 exports.step = function(d){return "steg"};
 

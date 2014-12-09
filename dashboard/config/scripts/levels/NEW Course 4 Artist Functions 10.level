@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Create your own function block. Click on the \"Functions\" in the tool box, and click on \"create a function.\" Give your function block a name, then create a 40 pixel square as you have done before with the Actions and Loops blocks. Click on the \"Save and Close\" in the upper right hand corner. Hint: Don't forget to drag your new function block from the tool box to the \"When run\" block.",
+    "instructions": "Click \"edit\" to fill out the blocks in the function definition to make a 40 pixel square.",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -20,10 +20,28 @@
     "start_direction": "90",
     "x": "175",
     "y": "250",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "callout_json": "[{\r\n  \"on\": \"function_editor_opened\",\r\n  \"localization_key\": \"write_draw_square_function\",\r\n  \"element_id\": \"#write_draw_square_function_qtip\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}\r\n  }\r\n}]"
   }
 }]]></config>
   <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="procedures_callnoreturn">
+              <mutation name="draw a square"/>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false" id="write_draw_square_function_qtip">
+          <mutation>
+            <description>Draw a square that is 40 pixels in size.</description>
+          </mutation>
+          <title name="NAME">draw a square</title>
+        </block>
+      </xml>
+    </start_blocks>
     <toolbox_blocks>
       <xml>
         <category name="Actions">

@@ -95,6 +95,9 @@
   participant_educator: Pedagógus
   participant_engineer: Informatikus mérnök
   participant_other: A fentiek egyike sem
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Én vagyok egy
   never_spam: Mi soha sem fogunk spamet küldeni
   enter_country: Add meg az országot, ha az Egyesült Államokon kívül élsz
@@ -133,6 +136,10 @@
   studiobar_flappy_body: Készítsd el és oszd meg saját Flappy Bird játékodat
   studiobar_teacher_title: Tanároknak
   studiobar_teacher_body: Mutasd be a Code Studiot az osztályodnak
+  studiobar_frozen_title: A kódolás órája
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Diák vagyok
   contact_form_topic_parent: Szülő vagyok
   contact_form_topic_teacher: Tanár/Oktató vagyok
@@ -352,7 +359,7 @@
   carousel_heading_international: Oktatóanyagok az anyanyelveden
   carousel_heading_domestic: Az angolul elérhető oktatóanyagok
   carousel_heading_beginners: Oktatóanyagok kezdőknek
-  carousel_heading_javascript: Oktatóanyagok Javascript oktatáshoz
+  carousel_heading_javascript: Oktatóanyagok JavaScript oktatásához
   carousel_heading_unplugged: Nincs eszközöd vagy internet kapcsolatod? Próbáld ki
     az offline számítástechnikát
   carousel_heading_devices: Oktató alkalmazások telefonra és tabletre
@@ -366,7 +373,8 @@
   more_resources_educators: További segédletek tanárok és oktatók részére
   participants: résztvevők
   teachers_notes: Tanári jegyzetek
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: 'Tanároknak: Kérjük olvassák el az itt lévő fontos oktatási
+    instrukciókat'
   previous: Előző
   next: Következő
   older_systems: Régebbi rendszereken működő oktatóanyagok
@@ -448,13 +456,13 @@
   thinkersmithspanish_platformtext: Offline
   khan_platformtext: Modern web böngészők
   khanes_platformtext: Modern web böngészők
-  tynker_platformtext: Modern web browsers
+  tynker_platformtext: Modern böngészők. (A követő tanfolyam feltétele $$)
   scratch_platformtext: MINDEN böngésző
   lightbot_platformtext: Minden böngésző valamint iOS, Android vagy játék konzol
   thinkersmith_platformtext: Offline
   condcards_platformtext: Számítógép nélkül
   lightbotintl_platformtext: iOS, Android (vagy web böngésző)
-  codehs_platformtext: Modern browsers
+  codehs_platformtext: Modern böngészők. (A követő tanfolyam feltétele $$)
   codecademy_platformtext: Modern web böngésző. iOS, Android appok
   codecombat_platformtext: Modern web böngészők
   codemonkey_platformtext: Modern web böngészők
@@ -497,8 +505,8 @@
   codecademy_shortdescription: Tanulj JavaScriptben programozni egy web böngészőben
   codecombat_shortdescription: Győzd le az ogrékat ebben a játékban, hogy megtanulj
     Pythonban vagy JavaScriptben programozni!
-  codemonkey_shortdescription: Students program a monkey to catch bananas while it
-    gets slightly more complicated on each level.
+  codemonkey_shortdescription: A diákok egy majmot programoznak be, hogy elkapja a
+    banánokat.
   codeavengers_shortdescription: Tanulj JavaScriptben programozni egy web böngészőben
   processing_shortdescription: Egy egy órás oktatóanyag a feldolgozó nyelvekről
   robomind_shortdescription: Írj programot egy virtuális robotnak
@@ -509,8 +517,8 @@
   codespark_shortdescription: A Foos egy vidám, gyermekeknek szóló, programozást oktató
     játék.
   kodable_shortdescription: Egy vidám iPad játék a programozás alapgondolatainak megtanításához
-  tynkerapp_shortdescription: Learn to code by solving fun puzzles and build your
-    own mobile games.
+  tynkerapp_shortdescription: 'Tanulj meg programozni a szórakoztató kódolási rejtvények
+    megoldásával. '
   robomindnl_shortdescription: Írj programot egy virtuális robotnak
   flappy_shortdescription: Készítsd el a saját játékod - Flappy Birds, Shark vagy
     Submarine
@@ -518,8 +526,8 @@
     Javascripttel.
   makegameswithus_shortdescription: Készíts egy iPhone játékot! Tanuld meg - a kód
     írásával - hogyan taníthatod meg a szörnyet az új mozgásokra!
-  touchdevelop_shortdescription: Code mobile apps directly on your phone, tablet or
-    laptop
+  touchdevelop_shortdescription: 'Oldd meg a rejtvényeket, készíts játékokat, s tanuld
+    meg a kódírást a telefonodon. '
   appinventor_shortdescription: Készítsd el a saját app-od! (csak Androidra)
   blockly_shortdescription: Tölts le egy ZIP fájlt az offline tanuláshoz
   thinkersmith2_shortdescription: Tanuld meg hogy használják a számítógépek az egyeseket
@@ -540,11 +548,12 @@
     szerepel Bill Gates, Mark Zuckerberg, Andry Birds és a Plants vs. Zombies. Tanuld
     meg az ismétlő ciklusokat, feltételeket és az alapvető algoritmusokat. Elérhető
     34 nyelven.
-  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
+  thinkersmithspanish_longdescription: Egy előre meghatározott "Robot Szótár" használatával
+    a diákok ki fogják találni hogy irányítsák egymást a konkrét feladatok elvégzésénél,
+    anélkül hogy először megvitatnák azt. Ez a lecke a szimbólumok és műveletek közötti
+    kapcsolatot, valamint a felbecsülhetetlen értékű hibakeresési készséget tanítja
+    meg a gyerekeknek. A "My Robot Friends" legjobban csoportos tevékenységként működik,
+    és tantermi használathoz tartalmaz egy tanári munkafüzetet.
   khan_longdescription: Tanuld meg a JavaScript programozás alapjait, miközben szórakoztató
     rajzokat készítesz a programoddal. Csináld egyedül vagy akár az osztályoddal!
   khanes_longdescription: Tanuld meg a JavaScript programozás alapjait, miközben szórakoztató
@@ -622,10 +631,10 @@
   kodable_longdescription: Kodable egy önállóan használható iPad játék, ami 5 éves
     vagy annál idősebb gyerekeknek segít megismerni a programozás alapjait. Tanár
     vagy szülő jelenléte segítség, de nem feltétlen szükséges.
-  tynkerapp_longdescription: Build your own games and share with friends! Solve fun
-    coding puzzles and learn programming concepts in each level. Personalize games
-    with animated characters, multiple levels and rich props. Lots of fun activities
-    to choose from!
+  tynkerapp_longdescription: Tanulj programozni szórakoztató kódolási rejtvényekkel.  Vázlatos
+    grafikákat, 10 évnél idősebbeknek való játék-készleteket és testre szabható karaktereket
+    használó könnyen felépített játékok és történetek. Nincs szükség internet kapcsolatra.
+    A műveidhez hozzáférhetsz az interneten is.
   robomindnl_longdescription: 'A diákok a saját virtuális robotjuk irányításán keresztül
     tanulják meg a programozás alapjait. Az online kurzus teljesen önállóan végezhető,
     a programozási gyakorlatok során rövid prezentációk, videók, kvízek és automatikus
@@ -638,14 +647,14 @@
     egy sor játszható és megosztható appot. Az egyszerű bemutatók lehetővé teszik,
     hogy akár kicsi gyerekek is elkészíthessenek egy igazi JavaScipt programot. Minél
     többet tudsz, annál messzebb juthatsz.
-  makegameswithus_longdescription: Know some programming already? Learn to make an
-    iPhone game in an hour! We'll guide you through the process, to code, test, and
-    play your game entirely in the browser and then share it on Facebook for friends
-    to try! No prior iPhone development experience is required. You must understand
-    what variables, methods, and objects are.
-  touchdevelop_longdescription: Crazy drawings, flying monsters, swirling flowers...
-    create your apps on your device with TouchDevelop, a friendly mobile app creation
-    environment. Runs on iPhone, iPad, Android, Windows, Windows Phone, Linux, Mac.
+  makegameswithus_longdescription: Tanulj meg programozni iPhone játék készítése közben,
+    egy vadonat új, kezdőknek is egyszerű programozási nyelv, a Swift használatával.
+    Készíts egy Pokemon-szerű akciójátékot és írd meg a kódot, amivel új mozgásokra
+    taníthatod a szörnyedet. Ahhoz hogy a szörnyed nyerhessen, meg kell tanulnod a
+    változók, metódusok és objektumok használatát!
+  touchdevelop_longdescription: 'Az érintésbarát szerkesztő végigvezet majd a pixel
+    alkotások elkészítésén, a medve puzzle megoldásán , vagy a saját ugrálós-madár
+    játék megvalósításán. '
   appinventor_longdescription: Rövid, szórakoztató videós oktatóanyagok segítségével
     három egyszerű alkalmazást fejleszthetsz Android telefonodra vagy táblagépedre.
     Ezzel a kezdőknek és haladóknak egyaránt alkalmas programmal a Kódolás Órája alatt

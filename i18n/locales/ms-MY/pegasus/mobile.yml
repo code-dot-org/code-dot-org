@@ -41,7 +41,7 @@ ms-MY:
   go: Pergi
   thank_you_: Terima kasih!
   congratulations: Tahniah!
-  congratulations_on_completing_hoc: Tahniah kerana telah menyiapkan Hour of Code.
+  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   get_a_certificate_of_achievement: Dapatkan sijil pencapaian
   enter_valid_email: Sila masukkan alamat email yang sah
   get_a_certificate_message: "Kami akan menghantar sijil dan maklumat mengenai cara untuk <a href='/learn/beyond'> belajar lebih dari satu jam</a>"
@@ -65,7 +65,7 @@ ms-MY:
   thanks_for_voting: Terima kasih untuk mengundi!
   share_on_facebook: Kongsi di Facebook
   share_on_twitter: Kongsi di Twitter
-  beyond_an_hour: 'Beyond an Hour of Code >'
+  beyond_an_hour: Beyond an Hour of Code
   get_started: Mula
   i_agree: saya setuju
   participant_select: -Pilih-
@@ -74,6 +74,9 @@ ms-MY:
   participant_educator: Pendidik
   participant_engineer: Jurutera perisian
   participant_other: Tiada satu pun di atas
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Saya seorang
   never_spam: Kita tidak akan spam anda
   enter_country: Masukkan negara jika di luar Amerika Syarikat
@@ -110,6 +113,10 @@ ms-MY:
   studiobar_flappy_body: Make and share your own Flappy game
   studiobar_teacher_title: Dibuat untuk guru
   studiobar_teacher_body: Perkenalkan Studio Kod dalam kelas anda
+  studiobar_frozen_title: Hour of Code
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: saya seorang pelajar
   contact_form_topic_parent: Saya seorang ibu atau bapa
   contact_form_topic_teacher: Saya guru/pendidik
@@ -283,7 +290,7 @@ ms-MY:
   dashboard_sections_password_account_creation: Student-created text password
   dashboard_sections_login_type_explanation: "This table helps explain which of these login types, <b>picture, word, or email</b>, you'll want to choose for a section."
   dashboard_faq: Soalan yang kerap ditanya
-  code_hoc_coming: 'The Hour of Code is coming - December 8-14!'
+  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: Ketahui lebih lanjut
   hoc2014_try_new_tutorials: Cuba tutorial 1 Jam Pengaturcaraan yang baru dari kami
@@ -293,7 +300,7 @@ ms-MY:
   carousel_heading_international: Tutorial dalam bahasa anda
   carousel_heading_domestic: Tutorials available in English
   carousel_heading_beginners: Tutorials for Beginners
-  carousel_heading_javascript: Tutorials that teach Javascript
+  carousel_heading_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: "No device or internet? Try 'unplugged' computer science"
   carousel_heading_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: Tutorials in other programming languages

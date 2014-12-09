@@ -41,8 +41,8 @@ uk:
           "Bee: Loops": 'Бджола: цикли'
           "Studio: Create a Story": 'Ігрова студія: Створення історії'
           "Artist: Loops": 'Художник: цикли'
-          description_audience: Ages 4+ (pre-readers)
-          description_short: Course 1 is designed for early readers.
+          description_audience: Вік 4 + (не вміють читати)
+          description_short: Курс 1 призначений для початківців у читанні.
         course2:
           The Maze: Лабіринт
           Suzi: Сюзі
@@ -80,8 +80,8 @@ uk:
           "Artist: Sequence2": 'Художник: послідовність 2'
           "Maze: Sequence2": 'Лабіринт: послідовність 2'
           "Artist: Nested Loops": 'Художник - вкладені цикли'
-          description_audience: 'Ages  6+ (reading required)'
-          description_short: Course 2 is designed for students who can read.
+          description_audience: Вік 6 + (необхідне читання)
+          description_short: Курс 2 призначено для учнів, котрі вміють читати.
         course3:
           The Maze: Лабіринт
           "Studio: Create a Story": 'Ігрова студія: Створення історії'
@@ -131,8 +131,8 @@ uk:
           "Bee: Debugging2": 'Бджола - відлагодження 2'
           "Artist: Patterns": 'Художник: візерунки'
           Songwriting: Написання пісень
-          description_audience: Ages 8+ (after Course 2)
-          description_short: Course 3 is a follow-up to Course 2.
+          description_audience: Вік 8 + (після курсу 2)
+          description_short: Курс 3 є продовженням Курсу 2.
         msm:
           title: Математика середньої школи
           description: Відбувається робота над розділами математики для середньої школи.
@@ -201,7 +201,7 @@ uk:
           Maze: Лабіринт
           title: Година Коду
           description: 'Спробуйте основи інформатики з персонажами  Angry Birds, Plants vs. Zombies, та Білкою з Льодовикового періоду!'
-          description_short: Try the basics of computer science with many fun characters!
+          description_short: Спробуйте основи інформатики з цікавими персонажами!
         frozen:
           title: Програмуємо з Анною та Ельзою
           description: Скористаємось вмінням програмувати, щоб допомогти Анні та Ельзі познайомитись із красою чарівних крижинок. Ви складете сніжинки та узори, покатаєтесь на ковзанах та створите зимову казку, якою зможете поділитися з друзями!
@@ -235,7 +235,7 @@ uk:
           Farmer Binary: 'Фермер: двійкова система'
           Maze and Bee: Лабіринт і бджола
           Artist Binary: 'Художник: двійкова система'
-          description_audience: Ages 10+ (after Course 3)
+          description_audience: Вік 10 + (після курсу 3)
         Course4pre:
           description_short: Коротке узагальнення понять для учнів, котрі не проходили курси 2 та 3.
           Course 4 Prerequisite: Знання, необхідні для курсу 4
@@ -281,3 +281,13 @@ uk:
           description: Підбірка Курсу 4 рівня для тестування юзабіліті.
           Variables: Змінні
           For Loops: Цикли For
+        potus:
+          title: спеціальні
+          description_short: спеціальні
+          description: спеціальні
+          Special: Спеціальні
+        special:
+          title: спеціальні
+          description_short: спеціальні
+          description: спеціальні
+          Special: Спеціальні

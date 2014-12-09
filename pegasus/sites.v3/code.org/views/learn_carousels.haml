@@ -77,12 +77,9 @@
   var pegasusLocale = "#{request.locale}";
 
   // Special Frozen entry, English only right now, and not shown for mobile or IE8
-  if (pegasusLocale.substring(0,2) == "en")
+  if (!window.mobilecheck() && !is_ie8)
   {
-    if (!window.mobilecheck() && !is_ie8)
-    {
-      $('#carousel-frozen').show();
-    }
+    $('#carousel-frozen').show();
   }
 
   if (pegasusLocale.substring(0,2) == "en") 

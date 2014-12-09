@@ -41,7 +41,7 @@ lt-LT:
   go: Eiti
   thank_you_: Ačiū!
   congratulations: Sveikiname!
-  congratulations_on_completing_hoc: Sveikiname užbaigus „Programavimo valandą“!
+  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   get_a_certificate_of_achievement: Gauti pasiekimo sertifikatą
   enter_valid_email: Prašome įvesti galiojantį el. pašto adresą
   get_a_certificate_message: "Išsiųsime Jums sertifikatą ir informaciją apie  <a href='/learn/beyond'>„Programavimo valandą“</a>"
@@ -65,7 +65,7 @@ lt-LT:
   thanks_for_voting: Ačiū, kad balsavote!
   share_on_facebook: Dalintis per Facebook
   share_on_twitter: Dalintis per Twitter
-  beyond_an_hour: 'Užbaigusiems „Programavimo valandą“ >'
+  beyond_an_hour: Beyond an Hour of Code
   get_started: Pradėti
   i_agree: Sutinku
   participant_select: -Pasirinkite-
@@ -74,6 +74,9 @@ lt-LT:
   participant_educator: Pedagogas
   participant_engineer: Programuotojas
   participant_other: Nė vienas iš pateiktų
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Aš esu
   never_spam: "Mes Jums niekada nesiųsime šiukšlių („spam'o“)"
   enter_country: Nurodykite valstybę, jeigu ne JAV
@@ -110,6 +113,10 @@ lt-LT:
   studiobar_flappy_body: 'Sukurk ir pasidalink savo "Flappy" žaidimu'
   studiobar_teacher_title: Sukurta mokytojams
   studiobar_teacher_body: Pristatykite Code Studio savo klasėje
+  studiobar_frozen_title: „Programavimo valanda“
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Aš esu mokinys
   contact_form_topic_parent: Aš esu tėvas
   contact_form_topic_teacher: Aš esu pedagogas
@@ -283,7 +290,7 @@ lt-LT:
   dashboard_sections_password_account_creation: Tradicinis mokinio susigalvotas slaptažodis
   dashboard_sections_login_type_explanation: 'Paaiškinimai, kuo skiriasi prisijungimo  tipai: <b>paveikslėlis, žodis, el. paštas</b> (picture, word, emai).'
   dashboard_faq: Dažnai užduodami klausimai
-  code_hoc_coming: Programavimo valanda artėja – gruodžio 8–14 dienomis!
+  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: Užsiregistruokite ir dalyvaukite CS švietimo savaitėje
   learn_more: Sužinokite daugiau
   hoc2014_try_new_tutorials: Išmėginkite naujas Programavimo valandos pamokėles
@@ -293,7 +300,7 @@ lt-LT:
   carousel_heading_international: Pamokos Jūsų kalba
   carousel_heading_domestic: Daugiau pamokėlių anglų kalba
   carousel_heading_beginners: Pamokos pradedantiesiems
-  carousel_heading_javascript: Pamokos, kurios moko naudotis Javascript
+  carousel_heading_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: "No device or internet? Try 'unplugged' computer science"
   carousel_heading_devices: Pamokėlės telefonams ir planšetėms
   carousel_heading_languages: Pamokėlės kitomis programavimo kalbomis

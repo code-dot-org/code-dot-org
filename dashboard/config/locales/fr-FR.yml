@@ -29,7 +29,7 @@
     submit: Ajouter l'astuce
   appname: Code.org
   stage: étape
-  stage_number: pourcentage %{number}
+  stage_number: étape %{number}
   puzzle: Énigme
   trophies: trophées
   courses: cours
@@ -344,9 +344,9 @@
       email: Envoyer par email
     rollup: Tableau de bord de progression
     activity: Activité récente de la classe
-    user_not_found: L'enseignant ou l'élève n'a pas été trouvé
+    user_not_found: Le professeur ou l'élève n'a pas été trouvé
     cant_remove_student_no_email: '%{student_name} ne peut être retiré de votre liste
-      d''étudiants car %{student_name} n''a pas enregistré d''adresse de messagerie'
+      d''élèves car %{student_name} n''a pas enregistré d''adresse de messagerie'
     cant_remove_teacher_no_email: '%{teacher_name} ne peut être retiré de votre liste
       d''enseignants car vous n''avez pas enregistré d''adresse de messagerie'
     student_teacher_disassociated: '%{teacher_name} n''est plus considéré comme l''enseignant
@@ -387,10 +387,10 @@
     teacher_read_blog: Lisez l'actualité et les mises à jour de notre matériel sur
       notre Blog Enseignant
     classroom: Votre classe
-    student_progress: Votre progression dans l'apprentissage
+    student_progress: Votre progression
     student_stats: Vous avez remporté %{trophy_count} trophées « Maîtrise du Concept »
       sur %{trophy_max}.
-    student_left_off: 'Vous vous êtes arrêté sur :'
+    student_left_off: 'Votre dernière cours :'
     student_finished: Vous avez terminé tous les tutoriels, choisissez une autre classe
       %{online_link} ou à une %{local_school_link}
     local_school: école locale
@@ -408,7 +408,7 @@
     try_beta_courses: Nouveau ! Essayez nos cours bêta pour les élèves de l'école
       primaire
     use_as_teacher: Utiliser ce site en tant qu'enseignant
-    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
+    heading_hoc2014: <h2>L'heure du Code pour</h2><h1>Tous les âges</h1>
     heading_elementary: <h2>de 20 heures de cours pour</h2><h1>Élèves du primaire</h1>
     heading_apps: <h2>Amusant pour</h2><h1>Tout le monde</h1>
     heading_legacy: <h2>Nos cours pour</h2><h1>Tous les âges</h1>
@@ -418,7 +418,7 @@
     female: Féminin
     none: Je ne souhaite pas l'indiquer
   user_type:
-    student: étudiant
+    student: Elève
     teacher: Professeur
   footer:
     help_from_html: Les ingénieurs de Google, Microsoft, Facebook et Twitter ont contribué
@@ -503,9 +503,9 @@
       body: Lancez-vous dans la découverte des bases de l'informatique. Des millions
         de personnes ont essayé l'aventure.
     flappy:
-      title: Le code de Flappy
+      title: Flappy l'oiseau
       body: Vous voulez développer votre propre jeu vidéo en moins de 10 minutes ?
-        Suivez le didacticiel du code de Flappy !
+        C'est par ici!
     20hour:
       title: Cours d'introduction
       body: Essayez notre cours de 20 heures d'introduction à l'informatique.

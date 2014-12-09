@@ -41,7 +41,7 @@ sk-SK:
   go: Ísť
   thank_you_: Ďakujeme!
   congratulations: Gratulujem!
-  congratulations_on_completing_hoc: Blahoželáme vám k dokončeniu jednej hodiny kódu.
+  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   get_a_certificate_of_achievement: Získaj osvedčenie o dokončení
   enter_valid_email: Prosím, zadajte platnú e-mailovú adresu
   get_a_certificate_message: "Pošleme ti certifikát a informácie o tom, ako sa <a href='/learn/beyond'>učiť dlhšie ako jednu hodinu</a>"
@@ -65,7 +65,7 @@ sk-SK:
   thanks_for_voting: Vďaka za hlasovanie!
   share_on_facebook: Zdieľať na Facebooku
   share_on_twitter: Zdieľať na Twitteri
-  beyond_an_hour: 'Čo ďalej po Hodine Kódu >'
+  beyond_an_hour: Beyond an Hour of Code
   get_started: Spustiť
   i_agree: súhlasím
   participant_select: -Vyberte-
@@ -74,6 +74,9 @@ sk-SK:
   participant_educator: Pedagóg
   participant_engineer: Softvérový inžinier
   participant_other: Nič z uvedeného
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Ja som
   never_spam: Nikdy ťa nebudeme spamovať
   enter_country: Zadaj krajinu ak si mimo Spojené štáty
@@ -110,6 +113,10 @@ sk-SK:
   studiobar_flappy_body: Vytvor a zdieľaj svoju vlastnú hru Flappy
   studiobar_teacher_title: Pripravené pre učitelov
   studiobar_teacher_body: Zaveďte Štúdio Programovania (Code Studio) do vašej triede
+  studiobar_frozen_title: Hodina kódovania
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: som študent
   contact_form_topic_parent: Som rodič
   contact_form_topic_teacher: Som učiteľ/vzdelávateľ
@@ -283,7 +290,7 @@ sk-SK:
   dashboard_sections_password_account_creation: Textové heslo vytvorené študentom
   dashboard_sections_login_type_explanation: 'Táto tabuľka pomáha vysvetliť, ktoré z týchto typov prihlásenia <b>obrázok, slovo alebo e-mail</b> budete chcieť vybrať pre vašu skupinu.'
   dashboard_faq: Často kladené otázky
-  code_hoc_coming: 'Blíži se Hodina Kódu - 8.-14. decembra!'
+  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: 'Prihláste sa k účasti počas "CS Education Week"'
   learn_more: Ďalšie informácie
   hoc2014_try_new_tutorials: Vyskúšajte naše nové návody pre Hodinu Kódu
@@ -293,7 +300,7 @@ sk-SK:
   carousel_heading_international: Kurzy vo vašom jazyku
   carousel_heading_domestic: Kurzy dostupné v angličtine
   carousel_heading_beginners: Kurzy pre začiatočníkov
-  carousel_heading_javascript: Kurzy, ktoré učia Javascript
+  carousel_heading_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: 'Žiadne zariadenie alebo internet? Skúste informatiku "unplugged"'
   carousel_heading_devices: Aplikácie s kurzami pre telefóny a tablety
   carousel_heading_languages: Kurzy iných programovacích jazykov

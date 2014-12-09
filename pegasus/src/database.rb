@@ -175,4 +175,3 @@ require src_dir 'database/hour_of_activity'
 require src_dir 'database/district_partner'
 require src_dir 'database/form'
 DataMapper.finalize
-DataMapper.auto_upgrade! unless CDO.read_only

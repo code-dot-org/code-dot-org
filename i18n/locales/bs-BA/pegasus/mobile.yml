@@ -41,7 +41,7 @@ bs-BA:
   go: Go
   thank_you_: Thank you!
   congratulations: Congratulations!
-  congratulations_on_completing_hoc: Congratulations on completing One Hour of Code.
+  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   get_a_certificate_of_achievement: Get a certificate of achievement
   enter_valid_email: Please enter a valid email address
   get_a_certificate_message: "We'll send you a certificate and information about how to <a href='/learn/beyond'>Learn beyond One Hour</a>"
@@ -65,7 +65,7 @@ bs-BA:
   thanks_for_voting: Thanks for voting!
   share_on_facebook: Share on Facebook
   share_on_twitter: Share on Twitter
-  beyond_an_hour: 'Beyond an Hour of Code >'
+  beyond_an_hour: Beyond an Hour of Code
   get_started: Start
   i_agree: I agree
   participant_select: '- Select -'
@@ -74,6 +74,9 @@ bs-BA:
   participant_educator: Educator
   participant_engineer: Software Engineer
   participant_other: None of the Above
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: I am a
   never_spam: "We'll never spam you"
   enter_country: Enter country if outside the United States
@@ -110,6 +113,10 @@ bs-BA:
   studiobar_flappy_body: Make and share your own Flappy game
   studiobar_teacher_title: Made for teachers
   studiobar_teacher_body: Introduce Code Studio in your classroom
+  studiobar_frozen_title: Hour of Code
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: "I'm a student"
   contact_form_topic_parent: "I'm a parent"
   contact_form_topic_teacher: "I'm a teacher/educator"
@@ -283,7 +290,7 @@ bs-BA:
   dashboard_sections_password_account_creation: Student-created text password
   dashboard_sections_login_type_explanation: "This table helps explain which of these login types, <b>picture, word, or email</b>, you'll want to choose for a section."
   dashboard_faq: Frequently Asked Questions
-  code_hoc_coming: 'The Hour of Code is coming - December 8-14!'
+  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: 'Nauči još '
   hoc2014_try_new_tutorials: Try our new Hour of Code tutorials
@@ -293,7 +300,7 @@ bs-BA:
   carousel_heading_international: Tutorials in your language
   carousel_heading_domestic: Tutorials available in English
   carousel_heading_beginners: Tutorials for Beginners
-  carousel_heading_javascript: Tutorials that teach Javascript
+  carousel_heading_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: "No device or internet? Try 'unplugged' computer science"
   carousel_heading_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: Tutorials in other programming languages

@@ -5,7 +5,7 @@ title: "<%= hoc_s(:front_title) %>"
 social:
   "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
   "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
-  "og:image": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg"
+  "og:image": "http://<%=request.host%>/images/code-video-thumbnail.jpg"
   "og:image:width": 1705
   "og:image:height": 949
   "og:url": "http://<%=request.host%>"
@@ -15,7 +15,7 @@ social:
   "twitter:url": "http://<%=request.host%>"
   "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
   "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
-  "twitter:image:src": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg?123"
+  "twitter:image:src": "http://<%=request.host%>/images/code-video-thumbnail.jpg?123"
   "twitter:player": 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=1'
   "twitter:player:width": 1920
   "twitter:player:height": 1080
@@ -229,7 +229,7 @@ social:
     if (videoStarted)
       return;
 
-    $("<iframe allowfullscreen frameborder='0' src='http://wonderpl.com/embed/vimiL1unVJQ1YdyZsKMCF3NQ/' style='position:absolute; top: 0; left: 0; width: 100%; height: 100%; background-color:black;'></iframe>").appendTo("#videodiv");
+    $("<iframe allowfullscreen frameborder='0' src='//www.youtube.com/embed/96B5-JGA9EQ' style='position:absolute; top: 0; left: 0; width: 100%; height: 100%; background-color:black;'></iframe>").appendTo("#videodiv");
 
     $("#videodiv").fadeTo(1000, 1);
     $("#leftbutton").fadeTo(500, 0).remove();

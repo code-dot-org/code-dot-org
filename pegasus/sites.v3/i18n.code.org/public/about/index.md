@@ -2,7 +2,7 @@
 title: About the %{XX} Hour of Code
 nav: about_nav
 social:
-  'og:title' : 'The %{XX} Hour of Code is coming'
+  'og:title' : 'The %{XX} Hour of Code is here'
   'og:description' : "For every %{XX} student and classroom: learn how fun coding is in just one hour %{Dates}."
   'og:image' : ""
   'og:image:width' : ""
@@ -35,7 +35,7 @@ Follow Code.org on social media:
 
 Please help promote Computer Science education in your community. 5% of the proceeds will be used by Code.org to bring Computer Science to more schools.
 
-<a href="http://www.zazzle.com/codeorg*?tc=codewebsite">
+<a href="http://store.code.org/">
 <img src="http://www.code.org/images/swag1.jpg" width=150/>
 <img src="http://www.code.org/images/swag4.jpg" width=150/>
 <img src="http://www.code.org/images/swag2.jpg" width=150/>

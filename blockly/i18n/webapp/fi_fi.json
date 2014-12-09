@@ -10,11 +10,11 @@
   "continue": "Jatka",
   "createHtmlBlock": "Luo html lohko",
   "createHtmlBlockTooltip": "Luo HTML lohkon sovelluksessa.",
-  "finalLevel": "Onneksi olkoon! Olet suorittanut viimeisen pulman.",
+  "finalLevel": "Onneksi olkoon! Olet suorittanut viimeisen tehtävän.",
   "makeYourOwn": "Tee oma sovellus",
-  "nextLevel": "Onneksi olkoon! Olet suorittanut tämän pulman.",
+  "nextLevel": "Onneksi olkoon! Olet suorittanut tämän tehtävän.",
   "no": "Ei",
-  "numBlocksNeeded": "Pulman voi ratkaista %1 lohkolla.",
+  "numBlocksNeeded": "Tehtävän voi ratkaista %1 lohkolla.",
   "pause": "Tauko",
   "reinfFeedbackMsg": "Voit painaa \"Yritä uudelleen\"-painiketta jos haluat käynnistää sovelluksesi.",
   "repeatForever": "toista jatkuvasti",
@@ -25,7 +25,7 @@
   "stepIn": "Astu sisään",
   "stepOver": "Astu yli",
   "stepOut": "Astu ulos",
-  "turnBlack": "muuttuu mustaksi",
+  "turnBlack": "muuta mustaksi",
   "turnBlackTooltip": "Muuttaa näytön mustaksi.",
   "yes": "Kyllä"
 }

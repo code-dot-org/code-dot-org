@@ -399,8 +399,9 @@
     test_videos_help: Prova el nostre nou reproductor de vídeo a la teva escola
     try_beta_courses: Nou! Prova els nostres cursos beta per alumnes de infantil
     use_as_teacher: Utilitza aquest lloc com a mestre
-    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
+    heading_hoc2014: <h2>L'Hora de Codi per a</h2><h1>Totes les edats</h1>
+    heading_elementary: <h2>Cursos de 20 hores per a</h2><h1>Principiants (totes les
+      edats)</h1>
     heading_apps: <h2>Diversió per a</h2><h1>Tothom</h1>
     heading_legacy: <h2>El nostre curs general per a</h2><h1>Totes les edats</h1>
     your_gallery: Galeria
@@ -414,11 +415,10 @@
   footer:
     help_from_html: Enginyers de Google, Microsoft, Facebook i Twitter i han ajudat
       a crear aquesta classe.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 <a href="http://www.rovio.com">Rovio
-      Entertainment Ltd</a>. Tots els drets reservats.<br/> Plants vs. Zombies&trade;
-      & &copy; 2013 <a href="http://www.ea.com">Electronic Arts Inc.</a>. Tots els
-      drets reservats.
-    powered_by_aws: Powered by Amazon Web Services
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
+      Tots els drets reservats.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
+      Arts Inc. Tots els drets reservats.
+    powered_by_aws: Desenvolupat per Amazon Web Services
     feedback: Digues la teva
     translate: Ajuda'ns a traduir al teu idioma
     support: Suport

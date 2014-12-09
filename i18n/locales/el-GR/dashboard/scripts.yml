@@ -3,281 +3,291 @@ el:
     script:
       name:
         test:
-          "Jigsaw: Learn to drag and drop": 'Jigsaw: Learn to drag and drop'
+          "Jigsaw: Learn to drag and drop": 'Παζλ: Μάθε την μεταφορά και απόθεση'
           The Maze: Ο Λαβύρινθος
-          Multi: Multi
-          Match: Match
-          Math Image: Math Image
-          title: Test Course
-          description: Just an internal test course.
+          Multi: Πολύ
+          Match: Ταίριασμα
+          Math Image: Είκονα μαθηματικών
+          title: Δοκιμαστικό Μάθημα
+          description: Ένα απλό εσωτερικό δοκιμαστικό μάθημα.
         course1:
-          "Jigsaw: Learn to drag and drop": 'Jigsaw: Learn to drag and drop'
+          "Jigsaw: Learn to drag and drop": 'Παζλ: Μάθε την μεταφορά και απόθεση'
           "Maze: Sequence": 'Λαβύρινθος: Ακολουθία'
           "Maze: Debugging": 'Λαβύρινθος: εκσφαλμάτωση'
           "Artist 1: Intro": 'Καλλιτέχνης 1: Εισαγωγή'
           Artists 2: Καλλιτέχνες 2
-          Spelling Bee: Spelling Bee
-          Spelling Bee not blockly: Spelling Bee not blockly
+          Spelling Bee: Η μέλισσα της ορθογραφίας
+          Spelling Bee not blockly: Μέλισσα της ορθογραφίας, όχι blockly
           "Bee 1: Intro": 'Μέλισσα 1: Εισαγωγή'
           "Maze 2: Loops": 'Λαβύρινθος 2: Βρόγχοι'
           "Bee 2: Loops": 'Μέλισσα 2: Βρόγχοι'
-          Multi & Match: 'Multi & Match'
-          K-1 Flappy: K-1 Flappy
-          Flappy non blockly: Flappy non blockly
+          Multi & Match: Πολλαπλότητα και ταίριασμα
+          K-1 Flappy: Πουλάκι για Νηπιαγωγείο
+          Flappy non blockly: Πουλάκι σε μορφή κώδικα χωρίς μπλοκ
           title: Μάθημα 1
           Artist 2: Καλλιτέχνης 2
-          Happy Maps: Happy Maps
-          Move it, Move it: Move it, Move it
-          "Real-life Algorithms: Plant a Seed": 'Real-life Algorithms: Plant a Seed'
-          Building a Foundation: Building a Foundation
-          Getting Loopy: Getting Loopy
-          The Big Event: The Big Event
-          Going Places Safely: Going Places Safely
-          description: Course 1 is designed to allow early readers to create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.
-          "Bee: Sequence": 'Bee: Sequence'
-          "Artist: Sequence": 'Artist: Sequence'
-          "Artist: Shapes": 'Artist: Shapes'
-          "Maze: Loops": 'Maze: Loops'
-          "Bee: Loops": 'Bee: Loops'
-          "Studio: Create a Story": 'Play Lab: Create a Story'
-          "Artist: Loops": 'Artist: Loops'
-          description_audience: Ages 4+ (pre-readers)
-          description_short: Course 1 is designed for early readers.
+          Happy Maps: Χαρούμενοι Χάρτες
+          Move it, Move it: Κούνισέ το, Κούνισέ το
+          "Real-life Algorithms: Plant a Seed": 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
+          Building a Foundation: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
+          Getting Loopy: Παίρνοντας Επαναληπτικά
+          The Big Event: Το Μεγάλο Γεγονός
+          Going Places Safely: Πηγαίνοντας σε Μέρη με Ασφάλεια
+          description: Το Μάθημα 1 σχεδιάστηκε για να επιτρέψει σε νεαρούς αναγνώστες να δημιουργήσουν προγράμματα για τον υπολογιστή τα οποία τους βοηθούν να μάθουν να συνεργάζονται με άλλους, να αναπτύσσουν δεξιότητες επίλυσης προβλημάτων, και να επιμείνουν σε δύσκολες εργασίες. Στο τέλος του μαθήματος, οι μαθητές δημιουργούν το απόλυτα δικό τους παιχνίδι ή σενάριο το οποίο μπορούν να μοιραστούν. Συνιστάται για παιδιά Νηπιαγωγείου.
+          "Bee: Sequence": 'Μέλισσα: Ακολουθία'
+          "Artist: Sequence": 'Καλλιτέχνης: Ακολουθία'
+          "Artist: Shapes": 'Καλλιτέχνης: Σχήματα'
+          "Maze: Loops": 'Λαβύρινθος: Επαναλήψεις'
+          "Bee: Loops": 'Μέλισσα: Επαναλήψεις'
+          "Studio: Create a Story": 'Εργαστήρι Παιχνιδιού: Δημιουργία ενός Σεναρίου'
+          "Artist: Loops": 'Καλλιτέχνης: Επαναλήψεις'
+          description_audience: Ηλικίες 4+ (προ αναγνώστες)
+          description_short: Το Μάθημα 1 σχεδιάστηκε για νεαρούς αναγνώστες.
         course2:
           The Maze: Ο Λαβύρινθος
-          Suzi: Suzi
+          Suzi: Σούζι
           The Artist: Ο Καλλιτέχνης
-          Artist Debugging: Artist Debugging
+          Artist Debugging: Εκσφαλμάτωση Καλλιτέχνη
           Bounce: αναπήδησε
-          "Studio: Create a Story": 'Play Lab: Create a Story'
-          Artist Loops: Artist Loops
-          Bee Conditionals: Bee Conditionals
-          Flappy: Flappy
-          title: Course 2
-          Bee Loops: Bee Loops
-          Artist Functions: Artist Functions
-          The Artist Debugging: The Artist Debugging
-          Bee Debugging: Bee Debugging
+          "Studio: Create a Story": 'Εργαστήρι Παιχνιδιού: Δημιουργία ενός Σεναρίου'
+          Artist Loops: Επαναλήψεις Καλλιτέχνη
+          Bee Conditionals: Συνθήκες της Μέλισσας
+          Flappy: Πουλάκι
+          title: Μάθημα 2
+          Bee Loops: Επαναλήψεις της Μέλισσας
+          Artist Functions: Λειτουργίες Καλλιτέχνη
+          The Artist Debugging: Η Εκσφαλμάτωση του Καλλιτέχνη
+          Bee Debugging: Εκσφαλμάτωση της Μέλισσας
           Bee Functions: Λειτουργίες μέλισσας
-          Maze Loops: Maze Loops
+          Maze Loops: Επαναλήψεις του Λαβύρινθου
           Graph Paper Programming: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
-          "Real-life Algorithms: Paper Planes": 'Real-life Algorithms: Paper Planes'
-          Getting Loopy: Getting Loopy
-          Relay programming: Relay programming
+          "Real-life Algorithms: Paper Planes": 'Αλγόριθμοι Πραγματικής ζωής: Χάρτινα Αεροπλανάκια'
+          Getting Loopy: Παίρνοντας Επαναληπτικά
+          Relay programming: Προγραμματισμός με αναμετάδοση
           Conditionals: Έλεγχοι
-          Binary Bracelets: Binary Bracelets
-          The Big Event: The Big Event
-          Your Digital Footprint: Your Digital Footprint
-          description: Course 2 is designed for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
+          Binary Bracelets: Δυαδικά Βραχιόλια
+          The Big Event: Το Μεγάλο Γεγονός
+          Your Digital Footprint: Το Ψηφιακό σου Αποτύπωμα
+          description: Το Μάθημα 2 σχεδιάστηκε για μαθητές που μπορούν να διαβάσουν και χωρίς προηγούμενη εμπειρία προγραμματισμού. Στο μάθημα αυτό οι μαθητές θα δημιουργήσουν προγράμματα για επίλυση προβλημάτων και να αναπτύξουν διαδραστικά παιχνίδια ή σενάρια που μπορούν να μοιράσουν. Συνίσταται για τις πρώτες τάξεις του Δημοτικού.
           "Maze: Sequence": 'Λαβύρινθος: Ακολουθία'
-          "Artist: Sequence": 'Artist: Sequence'
-          "Maze: Loops": 'Maze: Loops'
-          "Artist: Loops": 'Artist: Loops'
-          "Bee: Loops": 'Bee: Loops'
-          "Bee: Debugging": 'Bee: Debugging'
-          "Artist: Debugging": 'Artist: Debugging'
-          "Bee: Conditionals": 'Bee: Conditionals'
-          "Artist: Sequence2": 'Artist: Sequence2'
-          "Maze: Sequence2": 'Maze: Sequence2'
-          "Artist: Nested Loops": 'Artist: Nested Loops'
-          description_audience: 'Ages  6+ (reading required)'
-          description_short: Course 2 is designed for students who can read.
+          "Artist: Sequence": 'Καλλιτέχνης: Ακολουθία'
+          "Maze: Loops": 'Λαβύρινθος: Επαναλήψεις'
+          "Artist: Loops": 'Καλλιτέχνης: Επαναλήψεις'
+          "Bee: Loops": 'Μέλισσα: Επαναλήψεις'
+          "Bee: Debugging": 'Μέλισσα: Επαναλήψεις'
+          "Artist: Debugging": 'Καλλιτέχνης: Εκσφαλμάτωση'
+          "Bee: Conditionals": 'Μέλισσα: Συνθήκες'
+          "Artist: Sequence2": 'Καλλιτέχνης: Ακολουθία2'
+          "Maze: Sequence2": 'Λαβύρινθος: Ακολουθία2'
+          "Artist: Nested Loops": 'Καλλιτέχνης: Εμφωλευμένες επαναλήψεις'
+          description_audience: Ηλικίες 6+ (απαιτείται ανάγνωση)
+          description_short: Το Μάθημα 2 σχεδιάστηκε για μαθητές που μπορούν να διαβάζουν.
         course3:
           The Maze: Ο Λαβύρινθος
-          "Studio: Create a Story": 'Play Lab: Create a Story'
+          "Studio: Create a Story": 'Εργαστήρι Παιχνιδιού: Δημιουργία ενός Σεναρίου'
           The Artist: Ο Καλλιτέχνης
           title: Μάθημα 3
-          Artist Functions: Artist Functions
-          Artist For Loops: Artist For Loops
-          Artist Nested Loops: Artist Nested Loops
-          Bee Conditionals: Bee Conditionals
-          Bee Nested Loops: Bee Nested Loops
-          Bee Debuggin: Bee Debuggin
-          Bee Debugging: Bee Debugging
+          Artist Functions: Λειτουργίες Καλλιτέχνη
+          Artist For Loops: 'Καλλιτέχνης - Βρόχοι for'
+          Artist Nested Loops: Καλλιτέχνης Εμφωλευμένες δομές επιλογής
+          Bee Conditionals: Συνθήκες της Μέλισσας
+          Bee Nested Loops: Μέλισσα Εμφωλευμένες επαναλήψεις
+          Bee Debuggin: Εκσφαλμάτωση της Μέλισσας
+          Bee Debugging: Εκσφαλμάτωση της Μέλισσας
           Bee Functions: Λειτουργίες μέλισσας
-          Artist Functions with Params: Artist Functions with Params
+          Artist Functions with Params: Συναρτήσεις του Καλλιτέχνη με παραμέτρους
           Bounce: αναπήδησε
-          Maze Conditionals: Maze Conditionals
-          Artist Functions with Parameters: Artist Functions with Parameters
+          Maze Conditionals: Συνθήκες λαβυρίνθου
+          Artist Functions with Parameters: Συναρτήσεις του Καλλιτέχνη με παραμέτρους
           Computational Thinking: Αλγοριθμική Σκέψη
-          Functional Suncatchers: Functional Suncatchers
-          Songwriting Parameters: Songwriting Parameters
-          Dice Race: Dice Race
+          Functional Suncatchers: Λειτουργικές Ηλιοκυνηγοί
+          Songwriting Parameters: Παράμετροι εγγραφής τραγουδιών
+          Dice Race: Αγώνας ζαριών
           Internet: Διαδίκτυο
           Crowdsourcing: Crowdsourcing
-          Digital Citizenship: Digital Citizenship
-          Farmer - While Loops: 'Farmer - While Loops'
-          description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
-          "Studio: Create a Game": 'Play Lab: Create a Game'
+          Digital Citizenship: Ψηφιακή υπηκοότητα
+          Farmer - While Loops: 'Αγρότης - Επαναλήψεις Όσο'
+          description: Το μάθημα 3 είναι σχεδιασμένο για μαθητές που εχουν πάρει το Μάθημα 2. Οι μαθητές θα εντρυφήσουν περισσότερο σε προγραμματιστικά θέματα που εισήχθησαν σε ποροηγούμενα μαθήματα σε ευέλικτες λύσεις σε πιο πολύπλοκα προβλήματα. Μέχρι το τέλος αυτού του μαθήματος οι μαθητές δημιουργούν αλληλεπιδραστικές ιστορίες και παιχνίδια που μπορούν να μοιραστούν με οποιονδήποτε. Προτεινόμενες για μεγαλύτερες ηλικίες.
+          "Studio: Create a Game": 'Εργαστήριο παιχνιδιών: Δημιουργήστε ένα παιχνίδι'
           Maze: Λαβύρινθος
-          Artist: Artist
-          "Artist: Functions": 'Artist: Functions'
+          Artist: Καλλιτέχνης
+          "Artist: Functions": 'Καλλιτέχνης: Συναρτήσεις'
           "Bee: Functions": Λειτουργίες μέλισσας
-          "Bee: Conditionals": 'Bee: Conditionals'
-          "Maze: Conditionals": 'Maze: Conditionals'
-          "Artist: Nested Loops": 'Artist: Nested Loops'
+          "Bee: Conditionals": 'Μέλισσα: Συνθήκες'
+          "Maze: Conditionals": 'Λαβύρινθος: Συνθήκες'
+          "Artist: Nested Loops": 'Καλλιτέχνης: Εμφωλευμένες επαναλήψεις'
           "Farmer: While Loops": 'Αγρότης: Βρόχοι όσο'
           "Bee: Nested Loops": 'Μέλισσα: Εμφωλευμένοι βρόχοι'
-          "Bee: Debugging": 'Bee: Debugging'
-          Maze2: Maze2
-          Artist2: Artist2
-          "Artist: Functions2": 'Artist: Functions2'
-          "Bee: Functions2": 'Bee: Functions2'
-          "Bee: Conditionals2": 'Bee: Conditionals2'
-          "Maze: Conditionals2": 'Maze: Conditionals2'
-          "Artist: Nested Loops2": 'Artist: Nested Loops2'
-          "Farmer: While Loops2": 'Farmer: While Loops2'
-          "Bee: Nested Loops2": 'Bee: Nested Loops2'
-          "Bee: Debugging2": 'Bee: Debugging2'
-          "Artist: Patterns": 'Artist: Patterns'
+          "Bee: Debugging": 'Μέλισσα: Επαναλήψεις'
+          Maze2: Λαβύρινθος2
+          Artist2: Καλλιτέχνης2
+          "Artist: Functions2": 'Καλλιτέχνης: Συναρτήσεις2'
+          "Bee: Functions2": 'Μέλισσα: Συναρτήσεις2'
+          "Bee: Conditionals2": 'Μέλισσα: Συνθήκες2'
+          "Maze: Conditionals2": 'Λαβύρινθος: Συνθήκες2'
+          "Artist: Nested Loops2": 'Καλλιτέχνης: Εμφωλευμένες επαναλήψεις2'
+          "Farmer: While Loops2": 'Αγρότης: Βρόχοι Όσο2'
+          "Bee: Nested Loops2": 'Μέλισσα: Εμφωλευμένοι Βρόχοι2'
+          "Bee: Debugging2": 'Μέλισσα: Αποσφαλματοποίηση2'
+          "Artist: Patterns": 'Καλλιτέχνης: Σχέδια'
           Songwriting: Σύνθεση τραγουδιού
-          description_audience: Ages 8+ (after Course 2)
-          description_short: Course 3 is a follow-up to Course 2.
+          description_audience: Ηλικίες 8+ (μετά το Μάθημα 2)
+          description_short: Το Μάθημα 3 είναι συνέχεια του Μαθήματος 2.
         msm:
-          title: Middle School Math
-          description: Private work in progress for Middle School Math.
+          title: Μαθηματικά Γυμνασίου
+          description: Ιδιωτικό έργο σε εξέλιξη για Μαθηματικά Γυμνασίου.
           Graph Paper Programming: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
-          Assessments: Assessments
-          Unit 1: Unit 1
-          Unit 2: Unit 2
-          Ninja Cat and the Coordinate Plane: Ninja Cat and the Coordinate Plane
-          "Calc: Circles of Evaluation": 'Calc: Circles of Evaluation'
-          "Artist: Strings and Images": 'Artist: Strings and Images'
-          Contracts: Contracts
-          "Artist: Writing Contracts": 'Artist: Writing Contracts'
-          "Calc: Defining Variables": 'Calc: Defining Variables'
-          "Play Lab: Defining Variables": 'Play Lab: Defining Variables'
-          The Design Recipe: The Design Recipe
-          "Artist: Defining Functions": 'Artist: Defining Functions'
-          "Play Lab: Defining Functions": 'Play Lab: Design Recipe'
-          "Artist: Functions": 'Artist: Functions'
-          "Play Lab: Animation": 'Play Lab: Animation'
-          Booleans: Booleans
-          "Play Lab: Booleans": 'Play Lab: Booleans'
-          "Calc: Boolean Operators": 'Calc: Boolean Operators'
-          "Play Lab: Boolean Operators": 'Play Lab: Boolean Operators'
-          Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
-          "Artist: Conditionals": 'Artist: Conditionals'
-          Collision Detection and the Distance Formula: Collision Detection and the Distance Formula
-          "Play Lab: Collision Detection": 'Play Lab: Collision Detection'
-          "Unplugged: Ninja Cat and the Coordinate Plane": 'Unplugged: Ninja Cat and the Coordinate Plane'
-          "Eval: Strings and Images": 'Eval: Strings and Images'
-          "Unplugged: Contracts": 'Unplugged: Contracts'
-          "Eval: Writing Contracts": 'Eval: Writing Contracts'
-          "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
-          "Eval: Defining Functions": 'Eval: Fast Functions'
-          "Eval: Functions": 'Eval: Design Recipe'
-          "Unplugged: Booleans": 'Unplugged: Booleans'
-          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
-          "Eval: Conditionals": 'Eval: Conditionals'
-          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
-          "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
-          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
-          "Eval: Boolean Operators": 'Eval: Boolean Operators'
-          Blocks to Math: Blocks to Math
-          "Play Lab: Defining Variables (Big Game)": 'Play Lab: Defining Variables (Big Game)'
-          "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
-          "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Big Game)'
-          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
-          "Eval: Fast Functions": 'Eval: Fast Functions'
-          "Play Lab: Design Recipe": 'Play Lab: Design Recipe'
-          "Eval: Design Recipe": 'Eval: Design Recipe'
+          Assessments: Αξιολογήσεις
+          Unit 1: Μονάδα 1
+          Unit 2: Μονάδα 2
+          Ninja Cat and the Coordinate Plane: Ο Γάτος Νίντζα και το Συντονισμένο Αεροπλάνο
+          "Calc: Circles of Evaluation": 'Υπολογιστήρας: Κύκλοι Αξιολόγησης'
+          "Artist: Strings and Images": 'Καλλιτέχνης: Κείμενα και Εικόνες'
+          Contracts: Συμβόλαια
+          "Artist: Writing Contracts": 'Καλλιτέχνης: Σύνταξη Συμβολαίων'
+          "Calc: Defining Variables": 'Υπολογιστήρας: Ορισμός Μεταβλητών'
+          "Play Lab: Defining Variables": 'Εργαστήριο Παιχνιδιού: Ορισμός Μεταβλητών'
+          The Design Recipe: Η Συνταγή του Σχεδιασμού
+          "Artist: Defining Functions": 'Καλλιτέχνης: Ορισμός Συναρτήσεων'
+          "Play Lab: Defining Functions": 'Εργαστήριο Παιχνιδού: Συνταγή Σχεδιασμού'
+          "Artist: Functions": 'Καλλιτέχνης: Συναρτήσεις'
+          "Play Lab: Animation": 'Εργαστήριο Παιχνιδιού: Κινούμενα Σχέδια'
+          Booleans: Δυαδικοί
+          "Play Lab: Booleans": 'Εργαστήριο Παιχνιδιού: Δυαδικοί'
+          "Calc: Boolean Operators": 'Υπολογιστήρας: Τελεστές Δυαδικών'
+          "Play Lab: Boolean Operators": 'Εργαστήριο Παιχνιδιού: Δυαδικοί Τελεστές'
+          Conditionals and Piecewise Functions: Συνθήκες και Συναρτήσεις Piecewise
+          "Artist: Conditionals": 'Καλλιτέχνης: Συνθήκες'
+          Collision Detection and the Distance Formula: Ανίχνευση Σύγκρουσης και Τύπος Απόστασης
+          "Play Lab: Collision Detection": 'Εργαστήριο Παιχνιδιού: Ανίχνευση Σύγκρουσης'
+          "Unplugged: Ninja Cat and the Coordinate Plane": 'Εκτός Σύνδεσης: Ο Νίντζα Γάτος και το Συντονισμένο Αεροπλάνο'
+          "Eval: Strings and Images": 'Εκτιμητής: Κείμενα και Εικόνες'
+          "Unplugged: Contracts": 'Εκτός Σύνδεσης: Συμβόλαια'
+          "Eval: Writing Contracts": 'Εκτιμητής: Σύνταξη Συμβολαίων'
+          "Unplugged: The Design Recipe": 'Εκτός Σύνδεσης: Συνταγή Σχεδιασμού'
+          "Eval: Defining Functions": 'Εκτιμητής: Γρήγορες Συναρτήσεις'
+          "Eval: Functions": 'Εκτιμητής: Συνταγή Σχεδιασμού'
+          "Unplugged: Booleans": 'Εκτός Σύνδεσης: Δυαδικοί'
+          "Unplugged: Conditionals and Piecewise Functions": 'Εκτός Σύνδεσης: Συνθήκες και Συναρτήσεις Piecewise'
+          "Eval: Conditionals": 'Εκτιμητής: Συνθήκες'
+          "Unplugged: Collision Detection and the Distance Formula": 'Εκτός Σύνδεσης: Ανίχνευση Σύγκρουσης και Τύπος Απόστασης'
+          "Calc: Evaluation Blocks": 'Εκτιμητής: Μπλοκ Αξιολόγησης'
+          "Unplugged: Video Games and Coordinate Planes": 'Εκτός Σύνδεσης: Βιντεοπαιχνίδια και Συντονισμένα Αεροπλάνα'
+          "Eval: Boolean Operators": 'Εκτιμητής: Δυαδικοί Τελεστές'
+          Blocks to Math: Από τα Μπλοκ στα Μαθηματικά
+          "Play Lab: Defining Variables (Big Game)": 'Εργαστήριο Παιχνιδιού: Ορισμός Μεταβλητών (Μεγάλο Παιχνίδι)'
+          "Play Lab: Animation (Big Game)": 'Εργαστήριο Παιχνιδιού: Κινούμενα Σχέδια (Μεγάλο Παιχνίδι)'
+          "Play Lab: Boolean (Big Game)": 'Εργαστήριο Παιχνιδιού: Δυαδικοί (Μεγάλο Παιχνίδι)'
+          "Play Lab: Collision Detection (Big Game)": 'Εργαστήριο Παιχνιδιού: Ανίχνευση Σύγκρουσης (Μεγάλο Παιχνίδι)'
+          "Eval: Fast Functions": 'Εκτιμητής: Γρήγορες Συναρτήσεις'
+          "Play Lab: Design Recipe": 'Εργαστήριο Παιχνιδού: Συνταγή Σχεδιασμού'
+          "Eval: Design Recipe": 'Εκτιμητής: Συνταγή Σχεδιασμού'
         playlab:
-          title: Play Lab
-          description: Create a story or make a game with Play Lab!
-          Play Lab: Play Lab
-          description_short: Create a story or make a game with Play Lab!
+          title: Εργαστήριο Παιχνιδιού
+          description: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι στο Εργαστήριο Παιχνιδιού!
+          Play Lab: Εργαστήριο Παιχνιδιού
+          description_short: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι στο Εργαστήριο Παιχνιδιού!
         artist:
-          title: Artist
-          description: Draw cool pictures and designs with the Artist!
-          Artist: Artist
-          description_short: Draw cool pictures and designs with the Artist!
+          title: Καλλιτέχνης
+          description: Σχεδιάστε καταπληκτικές εικόνες και σχέδια με τον Καλλιτέχνη!
+          Artist: Καλλιτέχνης
+          description_short: Σχεδιάστε καταπληκτικές εικόνες και σχέδια με τον Καλλιτέχνη!
         scrat:
           title: Scrat
-          description_short: Scrat short description.
-          description: Scrat long description
+          description_short: Μικρή περιγραφή του Scrat.
+          description: Μεγάλη περιγραφή του Scrat
           "Maze: Sequence": 'Λαβύρινθος: Ακολουθία'
         hourofcode:
           Maze: Λαβύρινθος
           title: Η Ώρα του Κώδικα
-          description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description_short: Try the basics of computer science with many fun characters!
+          description: Δοκιμάστε τα βασικά της επιστήμης της πληροφορικής με χαρακτήρες από τα Angry Birds, τα Plants vs. Zombies και τον Scrat από την Εποχή των Παγετών!
+          description_short: Δοκιμάστε τα βασικά της επιστήμης της πληροφορικής με πολλούς διασκεδαστικούς χαρακτήρες!
         frozen:
-          title: Code with Anna and Elsa
-          description: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
-          Artist: Artist
+          title: Γράψτε Κώδικα με την Άννα και την Έλσα
+          description: Ας χρησιμοποιήσουμε τον κώδικα για να βρεθούμε μαζί με την Άννα και την Έλσα καθώς εξερευνούν τη μαγεία και την ομορφιά του πάγου. Θα δημιουργήσετε νιφάδες χιονιού και σχέδια όπως αυτά του πατινάζ και θα φτιάξετε υπέροχα χειμωνιάτικα τοπία τα οποία μπορείτε να μοιραστείτε με τους φίλους σας!
+          Artist: Καλλιτέχνης
           description_short: Ας χρησιμοποιήσουμε τον Κώδικα να πάμε μαζί με την Άννα και την Έλσα, καθώς εξερευνούν τη μαγεία και την ομορφιά του πάγου.
         course4:
-          description_short: Students taking Course 4 should have already taken Courses 2 and 3.
-          description: Course 4 is designed for students who have taken Course 2 and 3. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.
-          "Artist: Variables": 'Artist: Variables'
-          "Bee: For Loops": 'Bee: For Loops'
-          title: Course 4
-          "Algorithms: Tangrams": 'Algorithms: Tangrams'
+          description_short: Οι μαθητές που λαμβάνουν μέρος στο Μάθημα 4 πρέπει να έχουν ολοκληρώσει τα Μαθήματα 2 και 3.
+          description: Το Μάθημα 4 είναι σχεδιασμένο για μαθητές που έχουν ολοκληρώσει τα Μαθήματα 2 και 3. Οι μαθητές θα εμβαθύνουν σε θέματα προγραμματισμού που έχουν παρουσιαστεί σε προηγούμενα μαθήματα και θα οδηγηθούν σε πιο ευέλικτες λύσεις σε πιο πολύπλοκα προβλήματα. Στο τέλος αυτού του μαθήματος οι μαθητές θα δημιουργήσουν διαδραστικές ιστορίες και παιχνίδια που μπορούν να μοιραστούν με οποιονδήποτε. Συνιστάται για ανώτερες τάξης Δημοτικού και Γυμνασίου.
+          "Artist: Variables": 'Καλλιτέχνης: Μεταβλητές'
+          "Bee: For Loops": 'Μέλισσα: Βρόχοι Για'
+          title: Μάθημα 4
+          "Algorithms: Tangrams": 'Αλγόριθμοι: Tangram'
           Variables: Μεταβλητές
-          "Play Lab: Variables": 'Play Lab: Variables'
-          "Play Lab: Functions with Parameters": 'Play Lab: Functions with Parameters'
-          "Bee: Functions with Parameters": 'Bee: Functions with Parameters'
-          "Artist: For Loops": 'Artist: For Loops'
-          "Play Lab: For Loops": 'Play Lab: For Loops'
-          "Artist: Functions": 'Artist: Functions'
-          "Artist: Functions with Paraqmeters": 'Artist: Functions with Paraqmeters'
-          "Unplugged: Tangrams": 'Unplugged: Tangrams'
-          Artist: Artist
-          Bee: Bee
-          "Unplugged: Envelope Variables": 'Unplugged: Envelope Variables'
-          "Unplugged: Madlibs": 'Unplugged: Madlibs'
-          "Unplugged: For Loop Fun": 'Unplugged: For Loop Fun'
-          "Unplugged: Songwriting with Parameters": 'Unplugged: Songwriting with Parameters'
-          "Artist: Functions with Parameters": 'Artist: Functions with Parameters'
-          "Unplugged: Binary": 'Unplugged: Binary'
-          Bee Binary: Bee Binary
-          Farmer Binary: Farmer Binary
-          Maze and Bee: Maze and Bee
-          Artist Binary: Artist Binary
-          description_audience: Ages 10+ (after Course 3)
+          "Play Lab: Variables": 'Εργαστήριο Παιχνιδιού: Μεταβλητές'
+          "Play Lab: Functions with Parameters": 'Εργαστήριο Παιχνιδιού: Συναρτήσεις με Παραμέτρους'
+          "Bee: Functions with Parameters": 'Μέλισσα: Συναρτήσεις με Παραμέτρους'
+          "Artist: For Loops": 'Καλλιτέχνης: Βρόχοι Για'
+          "Play Lab: For Loops": 'Εργαστήριο Παιχνιδιού: Βρόχοι Για'
+          "Artist: Functions": 'Καλλιτέχνης: Συναρτήσεις'
+          "Artist: Functions with Paraqmeters": 'Καλλιτέχνης: Συναρτήσεις με Παραμέτρους'
+          "Unplugged: Tangrams": 'Εκτός Σύνδεσης: Tangram'
+          Artist: Καλλιτέχνης
+          Bee: Μέλισσα
+          "Unplugged: Envelope Variables": 'Εκτός Σύνδεσης: Εμφακέλωση Μεταβλητών'
+          "Unplugged: Madlibs": 'Εκτός Σύνδεσης: Malibs'
+          "Unplugged: For Loop Fun": 'Εκτός Σύνδεσης: Διασκέδαση με Βρόχους Για'
+          "Unplugged: Songwriting with Parameters": 'Εκτός Σύνδεσης: Γράψιμο Τραγουδιών με Παραμέτρους'
+          "Artist: Functions with Parameters": 'Καλλιτέχνης: Συναρτήσεις με Παραμέτρους'
+          "Unplugged: Binary": 'Εκτός Σύνδεσης: Δυαδικοί'
+          Bee Binary: Δυαδικοί Μέλισσας
+          Farmer Binary: Δυαδικοί Αγρότη
+          Maze and Bee: Λαβύρινθος και Μέλισσα
+          Artist Binary: Δυαδικοί Καλλιτέχνη
+          description_audience: Ηλικίες 10+ (μετά το Μάθημα 3)
         Course4pre:
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
+          description_short: Μία σύντομη περίληψη εννοιών για τους μαθητές που δεν έχουν ολοκληρώσει τα Μαθήματα 2 και 3.
+          Course 4 Prerequisite: Προαπαιτούμενα Μαθήματος 4
           "Maze: Sequence": 'Λαβύρινθος: Ακολουθία'
-          "Artist: Sequence": 'Artist: Sequence'
-          "Artist: Loops": 'Artist: Loops'
-          "Bee: Conditionals": 'Bee: Conditionals'
-          "Artist: Nested Loops": 'Artist: Nested Loops'
+          "Artist: Sequence": 'Καλλιτέχνης: Ακολουθία'
+          "Artist: Loops": 'Καλλιτέχνης: Επαναλήψεις'
+          "Bee: Conditionals": 'Μέλισσα: Συνθήκες'
+          "Artist: Nested Loops": 'Καλλιτέχνης: Εμφωλευμένες επαναλήψεις'
           "Farmer: While Loops": 'Αγρότης: Βρόχοι όσο'
           "Bee: Nested Loops": 'Μέλισσα: Εμφωλευμένοι βρόχοι'
-          "Artist: Functions": 'Artist: Functions'
-          "Bee: Debugging": 'Bee: Debugging'
+          "Artist: Functions": 'Καλλιτέχνης: Συναρτήσεις'
+          "Bee: Debugging": 'Μέλισσα: Επαναλήψεις'
         course4pre:
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
+          description_short: Μία σύντομη περίληψη εννοιών για τους μαθητές που δεν έχουν ολοκληρώσει τα Μαθήματα 2 και 3.
+          Course 4 Prerequisite: Προαπαιτούμενα Μαθήματος 4
           "Maze: Sequence": 'Λαβύρινθος: Ακολουθία'
-          "Artist: Sequence": 'Artist: Sequence'
-          "Artist: Loops": 'Artist: Loops'
-          "Bee: Conditionals": 'Bee: Conditionals'
-          "Artist: Nested Loops": 'Artist: Nested Loops'
+          "Artist: Sequence": 'Καλλιτέχνης: Ακολουθία'
+          "Artist: Loops": 'Καλλιτέχνης: Επαναλήψεις'
+          "Bee: Conditionals": 'Μέλισσα: Συνθήκες'
+          "Artist: Nested Loops": 'Καλλιτέχνης: Εμφωλευμένες επαναλήψεις'
           "Farmer: While Loops": 'Αγρότης: Βρόχοι όσο'
           "Bee: Nested Loops": 'Μέλισσα: Εμφωλευμένοι βρόχοι'
-          "Artist: Functions": 'Artist: Functions'
-          "Bee: Debugging": 'Bee: Debugging'
+          "Artist: Functions": 'Καλλιτέχνης: Συναρτήσεις'
+          "Bee: Debugging": 'Μέλισσα: Επαναλήψεις'
         Course4pre (Case Conflict):
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
+          description_short: Μία σύντομη περίληψη εννοιών για τους μαθητές που δεν έχουν ολοκληρώσει τα Μαθήματα 2 και 3.
+          Course 4 Prerequisite: Προαπαιτούμενα Μαθήματος 4
           "Maze: Sequence": 'Λαβύρινθος: Ακολουθία'
-          "Artist: Sequence": 'Artist: Sequence'
-          "Artist: Loops": 'Artist: Loops'
-          "Bee: Conditionals": 'Bee: Conditionals'
-          "Artist: Nested Loops": 'Artist: Nested Loops'
+          "Artist: Sequence": 'Καλλιτέχνης: Ακολουθία'
+          "Artist: Loops": 'Καλλιτέχνης: Επαναλήψεις'
+          "Bee: Conditionals": 'Μέλισσα: Συνθήκες'
+          "Artist: Nested Loops": 'Καλλιτέχνης: Εμφωλευμένες επαναλήψεις'
           "Farmer: While Loops": 'Αγρότης: Βρόχοι όσο'
           "Bee: Nested Loops": 'Μέλισσα: Εμφωλευμένοι βρόχοι'
-          "Artist: Functions": 'Artist: Functions'
-          "Bee: Debugging": 'Bee: Debugging'
+          "Artist: Functions": 'Καλλιτέχνης: Συναρτήσεις'
+          "Bee: Debugging": 'Μέλισσα: Επαναλήψεις'
         usability:
-          Intro: Intro
-          Variables and For Loops: Variables and For Loops
-          Functions and Functions with Parameters: Functions and Functions with Parameters
-          title: Usability Testing
+          Intro: Εισαγωγή
+          Variables and For Loops: Συναρτήσεις και Βρόχοι Για
+          Functions and Functions with Parameters: Συναρτήσεις και Συναρτήσεις με Παραμέτρους
+          title: Δοκιμή χρηστικότητας
           description_short: ""
-          description: A selection of Course 4 levels for usability testing.
+          description: Μία επιλογή επιπέδων από το Μάθημα 4 για δοκιμή χρηστικότητας.
           Variables: Μεταβλητές
-          For Loops: For Loops
+          For Loops: Βρόχοι Για
+        potus:
+          title: Ειδικά / επιπλέον
+          description_short: Ειδικά / επιπλέον
+          description: Ειδικά / επιπλέον
+          Special: Ειδικά / επιπλέον
+        special:
+          title: Ειδικά / επιπλέον
+          description_short: Ειδικά / επιπλέον
+          description: Ειδικά / επιπλέον
+          Special: Ειδικά / επιπλέον

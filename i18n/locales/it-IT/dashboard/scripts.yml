@@ -41,8 +41,8 @@ it:
           "Bee: Loops": 'Ape: Cicli'
           "Studio: Create a Story": 'Laboratorio: Crea una Storia'
           "Artist: Loops": 'Artista: Cicli'
-          description_audience: Ages 4+ (pre-readers)
-          description_short: Course 1 is designed for early readers.
+          description_audience: Da 4 anni in su (pre-scolare)
+          description_short: Il corso 1 è progettato per chi sta iniziando a leggere.
         course2:
           The Maze: Il Labirinto
           Suzi: Suzi
@@ -80,8 +80,8 @@ it:
           "Artist: Sequence2": 'Artista: Sequenza 2'
           "Maze: Sequence2": 'Labirinto: Sequenza 2'
           "Artist: Nested Loops": 'Artista: Cicli Annidati'
-          description_audience: 'Ages  6+ (reading required)'
-          description_short: Course 2 is designed for students who can read.
+          description_audience: Da 6 anni in su (necessario saper leggere)
+          description_short: Il corso 2 è progettato per studenti che sanno leggere.
         course3:
           The Maze: Il Labirinto
           "Studio: Create a Story": 'Laboratorio: Crea una Storia'
@@ -131,8 +131,8 @@ it:
           "Bee: Debugging2": 'Ape: Correzione di Errori 2'
           "Artist: Patterns": 'Artista: Schemi'
           Songwriting: Composizione di canzoni
-          description_audience: Ages 8+ (after Course 2)
-          description_short: Course 3 is a follow-up to Course 2.
+          description_audience: Da 8 anni in su (dopo il Corso 2)
+          description_short: Il Corso 3 è la continuazione del Corso 2.
         msm:
           title: Matematica per la Scuola Media
           description: Lavoro privato in corso per la Matematica per la Scuola Media.
@@ -149,10 +149,10 @@ it:
           "Play Lab: Defining Variables": 'Laboratorio: Definizione di Variabili'
           The Design Recipe: La Ricetta della Progettazione
           "Artist: Defining Functions": 'Artista: Definizione di Funzioni'
-          "Play Lab: Defining Functions": 'Play Lab: La Ricetta della Progettazione'
+          "Play Lab: Defining Functions": 'Laboratorio: La Ricetta della Progettazione'
           "Artist: Functions": 'Artista: Funzioni'
           "Play Lab: Animation": 'Laboratorio: Animazione'
-          Booleans: Valori booleani
+          Booleans: Valori Booleani
           "Play Lab: Booleans": 'Laboratorio: Valori Booleani'
           "Calc: Boolean Operators": 'Calcolo: Operatori Booleani'
           "Play Lab: Boolean Operators": 'Laboratorio: Operatori Booleani'
@@ -160,28 +160,28 @@ it:
           "Artist: Conditionals": 'Artista: Istruzioni Condizionali'
           Collision Detection and the Distance Formula: Rilevamento delle Collisioni e Formula per la Distanza
           "Play Lab: Collision Detection": 'Laboratorio: Rilevamento delle Collisioni'
-          "Unplugged: Ninja Cat and the Coordinate Plane": 'Senza rete: Gatto Ninja e il Piano Cartesiano'
-          "Eval: Strings and Images": 'Eval: Stringhe e Immagini'
+          "Unplugged: Ninja Cat and the Coordinate Plane": 'Senza Rete: Gatto Ninja e il Piano Cartesiano'
+          "Eval: Strings and Images": 'Valutazione: Stringhe e Immagini'
           "Unplugged: Contracts": 'Senza Rete: Contratti'
-          "Eval: Writing Contracts": 'Eval: Scrivere Contratti'
+          "Eval: Writing Contracts": 'Valutazione: Scrittura di Contratti'
           "Unplugged: The Design Recipe": 'Senza rete: La Ricetta della Progettazione'
-          "Eval: Defining Functions": 'Eval: Funzioni Veloci'
-          "Eval: Functions": 'Eval: La Ricetta della Progettazione'
-          "Unplugged: Booleans": 'Senza rete: I Booleani'
-          "Unplugged: Conditionals and Piecewise Functions": 'Senza rete: Funzioni Condizionali e Funzioni a Tratti'
-          "Eval: Conditionals": 'Eval: Condizionali'
-          "Unplugged: Collision Detection and the Distance Formula": 'Senza rete: Rilevazione di Collisioni e la Formula della Distanza'
-          "Calc: Evaluation Blocks": 'Calc: Blocchi di Valutazione'
-          "Unplugged: Video Games and Coordinate Planes": 'Senza rete: Videogiochi e Piani Cartesiani'
-          "Eval: Boolean Operators": 'Eval: Operatori Booleani'
-          Blocks to Math: Blocchi di Matematica
-          "Play Lab: Defining Variables (Big Game)": 'Play Lab: Definire le Variabili (Big Game)'
-          "Play Lab: Animation (Big Game)": 'Play Lab: Animazione (Big Game)'
-          "Play Lab: Boolean (Big Game)": 'Play Lab: I Booleani (Big Game)'
-          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Rilevare le Collisioni (Big Game)'
-          "Eval: Fast Functions": 'Eval: Funzioni Veloci'
-          "Play Lab: Design Recipe": 'Play Lab: La Ricetta della Progettazione'
-          "Eval: Design Recipe": 'Eval: La Ricetta della Progettazione'
+          "Eval: Defining Functions": 'Valutazione: Funzioni Veloci'
+          "Eval: Functions": 'Valutazione: La Ricetta della Progettazione'
+          "Unplugged: Booleans": 'Senza Rete: Valori Booleani'
+          "Unplugged: Conditionals and Piecewise Functions": 'Lezione Senza Rete: Istruzioni Condizionali e Funzioni a Tratti'
+          "Eval: Conditionals": 'Valutazione: Istruzioni Condizionali'
+          "Unplugged: Collision Detection and the Distance Formula": 'Senza Rete: Rilevamento delle Collisioni e Formula per la Distanza'
+          "Calc: Evaluation Blocks": 'Calcolo: Blocchi di Valutazione'
+          "Unplugged: Video Games and Coordinate Planes": 'Senza Rete: Videogiochi e Piani Cartesiani'
+          "Eval: Boolean Operators": 'Valutazione: Operatori Booleani'
+          Blocks to Math: Dai Blocchi alla Matematica
+          "Play Lab: Defining Variables (Big Game)": 'Laboratorio: Definizione di Variabili (Big Game)'
+          "Play Lab: Animation (Big Game)": 'Laboratorio: Animazione (Big Game)'
+          "Play Lab: Boolean (Big Game)": 'Laboratorio: Valori Booleani (Big Game)'
+          "Play Lab: Collision Detection (Big Game)": 'Laboratorio: Rilevamento delle Collisioni (Big Game)'
+          "Eval: Fast Functions": 'Valutazione: Funzioni Veloci'
+          "Play Lab: Design Recipe": 'Laboratorio: La Ricetta della Progettazione'
+          "Eval: Design Recipe": 'Valutazione: La Ricetta della Progettazione'
         playlab:
           title: Laboratorio
           description: Crea una storia o inventa un gioco col Laboratorio!
@@ -201,12 +201,12 @@ it:
           Maze: Labirinto
           title: "L'Ora del Codice"
           description: "Impara i concetti base dell'informatica con i personaggi di Angry Birds, Plant vs. Zombies, e Scrat di L'Era Glaciale!"
-          description_short: Try the basics of computer science with many fun characters!
+          description_short: "Prova i fondamenti dell'informatica insieme a tanti personaggi divertenti!"
         frozen:
           title: Programma con Anna ed Elsa
-          description: "Cerchiamo di usare la programmazione per unirci ad Anna ed Elsa nell'esplorazione della magia e bellezza del ghiaccio. Farai fiocchi di neve, pattinerai sul ghiaccio e realizzerai un meraviglioso paesaggio  invernale che potrai poi condividere con i tuoi amici!"
+          description: Usiamo la programmazione per unirci ad Anna ed Elsa mentre esplorano la magia e la bellezza del ghiaccio. Farai fiocchi di neve, pattinerai sul ghiaccio e realizzerai un meraviglioso paesaggio invernale che potrai poi condividere con i tuoi amici!
           Artist: Artista
-          description_short: Usiamo il codice per unirci ad Anna ed Elsa mentre esplorano la magia e la bellezza del ghiaccio.
+          description_short: Usiamo la programmazione per unirci ad Anna ed Elsa mentre esplorano la magia e la bellezza del ghiaccio.
         course4:
           description_short: Gli studenti che seguono il Corso 4 dovrebbero aver già svolto i Corsi 2 e 3.
           description: Il Corso 4 è progettato per studenti che hanno già svolto i Corsi 2 e 3. Gli studenti approfondiscono ancora di più i concetti della programmazione introdotti nei corsi precedenti e imparano a definire soluzioni flessibili per problemi molto complessi. Alla fine del corso gli studenti creano giochi interattivi e storie da condividere con tutti. Il corso è raccomandato per studenti dalla quarta elementare alla terza media.
@@ -235,7 +235,7 @@ it:
           Farmer Binary: 'Agricoltore: Binario'
           Maze and Bee: "Il Labirinto e l'Ape"
           Artist Binary: 'Artista: Binario'
-          description_audience: Ages 10+ (after Course 3)
+          description_audience: Da 10 anni in su (dopo il Corso 3)
         Course4pre:
           description_short: Una breve presentazione dei concetti importanti per gli studenti che non hanno svolto i Corsi 2 e 3.
           Course 4 Prerequisite: Prerequisiti del Corso 4
@@ -274,10 +274,20 @@ it:
           "Bee: Debugging": 'Ape: Correzione di Errori'
         usability:
           Intro: Introduzione
-          Variables and For Loops: Variabili e Cicli FOR
+          Variables and For Loops: Variabili e Cicli con Contatore
           Functions and Functions with Parameters: Funzioni e Funzioni con Parametri
           title: Test di Usabilità
           description_short: ""
-          description: Una selezione di 4 livelli del corso per test di usabilità.
+          description: Una selezione di 4 livelli del corso per i test di usabilità.
           Variables: Variabili
-          For Loops: Cicli For
+          For Loops: Cicli con Contatore
+        potus:
+          title: speciale
+          description_short: speciale
+          description: speciale
+          Special: Speciale
+        special:
+          title: speciale
+          description_short: speciale
+          description: speciale
+          Special: Speciale

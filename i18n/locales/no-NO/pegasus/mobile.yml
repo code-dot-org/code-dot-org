@@ -41,7 +41,7 @@ no-NO:
   go: Gå
   thank_you_: Takk!
   congratulations: Gratulerer!
-  congratulations_on_completing_hoc: Gratulerer med å fullføre en kodetime.
+  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   get_a_certificate_of_achievement: Hent et diplom for din prestasjon
   enter_valid_email: Vennligst skriv inn en gyldig e-postadresse
   get_a_certificate_message: "Vi sender deg et sertifikat og informasjon om hvordan Lær <a href='/learn/beyond'> utover en time</a>"
@@ -65,7 +65,7 @@ no-NO:
   thanks_for_voting: Takk for at du stemte!
   share_on_facebook: Del via Facebook
   share_on_twitter: Del via Twitter
-  beyond_an_hour: 'Utover Kodetimen >'
+  beyond_an_hour: Beyond an Hour of Code
   get_started: Start
   i_agree: Jeg samtykker
   participant_select: '- Velg -'
@@ -74,6 +74,9 @@ no-NO:
   participant_educator: Lærer
   participant_engineer: programmerer
   participant_other: Ingen av de over
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Jeg er en
   never_spam: Vi vil aldri sende deg spam
   enter_country: Angi landet hvis det er utenfor USA
@@ -110,6 +113,10 @@ no-NO:
   studiobar_flappy_body: Lag og del ditt eget Flappyspill
   studiobar_teacher_title: Laget for lærere
   studiobar_teacher_body: Introduser Code Studio i klasserommet
+  studiobar_frozen_title: Hour of Code (kodetimen)
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Jeg er en elev
   contact_form_topic_parent: Jeg er en forelder
   contact_form_topic_teacher: Jeg er en lærer
@@ -283,7 +290,7 @@ no-NO:
   dashboard_sections_password_account_creation: Elev-opprettet tekstpassord
   dashboard_sections_login_type_explanation: 'Denne tabellen forklarer hvilken av disse innloggingstypene, <b>bilde, ord eller e-post</b>, du bør velge for et avsnitt.'
   dashboard_faq: Ofte stilte spørsmål
-  code_hoc_coming: Kodetimen nærmer seg – 8.–14. desember!
+  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: Registrer deg for å delta under CS Education Week
   learn_more: Lær mer
   hoc2014_try_new_tutorials: Prøv våre nye Kodetime-øvinger
@@ -293,7 +300,7 @@ no-NO:
   carousel_heading_international: Gjennomganger på norsk
   carousel_heading_domestic: Øvinger tilgjengelig på engelsk
   carousel_heading_beginners: Øvinger for nybegynnere
-  carousel_heading_javascript: Øvinger som underviser Javascript
+  carousel_heading_javascript: Øvinger som underviser JavaScript
   carousel_heading_unplugged: "Ingen enhet eller Internett? Prøv 'frakoblet' koding"
   carousel_heading_devices: Øvings-apper for telefoner og nettbrett
   carousel_heading_languages: Øvinger i andre programmeringsspråk
@@ -306,7 +313,7 @@ no-NO:
   more_resources_educators: Flere lærerressurser
   participants: deltakere
   teachers_notes: Lærernotater
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: 'Lærere: Les viktig opplæringsnotater her'
   previous: Forrige
   next: Neste
   older_systems: Øvinger som fungerer på eldre systemer
@@ -386,13 +393,13 @@ no-NO:
   thinkersmithspanish_platformtext: Frakobla
   khan_platformtext: Moderne nettlesere
   khanes_platformtext: Moderne nettlesere
-  tynker_platformtext: Modern browsers. (Follow-on course requires $$)
+  tynker_platformtext: Moderne nettlesere. (Oppfølgingskurset krever $$)
   scratch_platformtext: ALLE nettlesere
   lightbot_platformtext: ALLE nettlesere og iOS, Android eller Game Console
   thinkersmith_platformtext: Frakobla
   condcards_platformtext: frakoblet
   lightbotintl_platformtext: iOS, Android (eller nettleser)
-  codehs_platformtext: 'Modern browsers. (Follow-on course requires  $$)'
+  codehs_platformtext: Moderne nettlesere. (Oppfølgingskurset krever $$)
   codecademy_platformtext: Moderne nettlesere. iOS, Android apper
   codecombat_platformtext: Moderne nettlesere
   codemonkey_platformtext: Moderne nettlesere
@@ -429,7 +436,7 @@ no-NO:
   codehs_shortdescription: Start koding med hunden Karel, en morsom og visuell introduksjon til programmering!
   codecademy_shortdescription: Lær JavaScript-programmering, i ein nettlesar
   codecombat_shortdescription: Overvinn uhyrer til å lære Python eller JavaScript i dette episke programmeringsspillet!
-  codemonkey_shortdescription: Students program a monkey to catch bananas.
+  codemonkey_shortdescription: Studenter programmerer en ape til å fange bananer.
   codeavengers_shortdescription: Lær JavaScript-programmering, i ein nettlesar
   processing_shortdescription: Eintimes rettleiing i behandlingsspråk
   robomind_shortdescription: Skriv kode for ein virtuell robot
@@ -437,12 +444,12 @@ no-NO:
   quorum_shortdescription: Bli med Mary på en guidet tur mens hun lærer programmeringsspråket Quorum.
   codespark_shortdescription: Fooene er et morsomt, barnevennlig spill for å lære om programmering.
   kodable_shortdescription: Eit artig ipad-spel for å lære programmeringskonsept
-  tynkerapp_shortdescription: 'Learn to program by solving fun coding puzzles. '
+  tynkerapp_shortdescription: 'Lær å programmere ved å løse morsomme kode-oppgaver. '
   robomindnl_shortdescription: Skriv kode for ein virtuell robot
   flappy_shortdescription: 'Lag ditt eget spill - Flappy Bird, hai eller ubåt'
   bitsbox_shortdescription: Kod en rekke apper for å spille og dele, med ekte Javascript.
   makegameswithus_shortdescription: Lag et iPhone-spill! Lær ved å skrive kode for å lære monsteret ditt nye bevegelser!
-  touchdevelop_shortdescription: 'Solve puzzles, create games, and learn coding all on your phone. '
+  touchdevelop_shortdescription: 'Løs gåter, lag spill og lær koding på telefonen. '
   appinventor_shortdescription: Lag din egen app! (Kun Android)
   blockly_shortdescription: Last ned et ZIP-arkiv for å lære frakoblet
   thinkersmith2_shortdescription: Lær hvordan datamaskiner bruker 1-ere og 0-er for å representere informasjon
@@ -471,12 +478,12 @@ no-NO:
   quorum_longdescription: Denne guiden er tilgjengelig for synshemmede, og fungerer med skjermleser. Bli med Mary på en reise i det hun blir med på en biologi-lab som programmerer, og lærer programmeringsspråket Quorum. Denne opplæringen er rettet mot elever med nettbaserte aktivitetseksempler.
   codespark_longdescription: 'Foos er en morsom og barnevennlig måte å lære om programmering.  Programmer søte figurer til å løse gåter og bringe liv til en virtuell verden.  Spillet er "språkløst" slik at alle kan spille!'
   kodable_longdescription: Kodable er et selvforklarende iPad-spill som introduserer grunnleggende programmering for barn fra 5 år og oppover. Å ha en lærer eller foresatt i nærheten er optimalt, men ikke nødvendig.
-  tynkerapp_longdescription: Learn to program by solving fun coding puzzles. Easily build games and stories using with themed graphics, 10+ game-kits and customizable characters. No Internet connectivity required. You can also access your creations on the web.
+  tynkerapp_longdescription: Lær å programmere ved å løse morsomme kode-oppgaver. Lettbygde spill og historier med tema-grafikk, 10 + spill-kit og tilpasselige tegn. Ingen Internett-tilkobling kreves. Du kan også få tilgang til dine kreasjoner på nettet.
   robomindnl_longdescription: 'Elevene lærer grunnleggende programmering ved å kontrollere sin egne virtuelle robot. Det nettbaserte kurset er fullstendig med korte presentasjoner, filmer, quizer og automatisk veiledning/tips for å hjelpe til med programmeringsøvelsene. '
   flappy_longdescription: Bruk dra-og-slipp i programmeringen for å lage ditt eget Flappy Bird-spill, og tilpass det til å se annerledes ut(Flappy Hai, Flappy Julenisse, hva som helst). Legg inn spillet på telefonen din med ett klikk.
   bitsbox_longdescription: Tilpass ditt eget virtuelle nettbrett, for deretter å kode en rekke apper for å spille og dele. Enkle gjennomganger gjør det enkelt for selv små barn å programmere skikkelig Javascript. Jo mer avansert du er, jo lenger vil du komme.
-  makegameswithus_longdescription: Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pokemon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!
-  touchdevelop_longdescription: 'The touch-friendly editor will guide you in creating pixel art, solving the bear puzzle, or making your own jumping bird game. '
+  makegameswithus_longdescription: Lær å kode ved å lage et iPhone-spill gjennom å bruke et splitter nytt og brukervennlig programmeringsspråk kalt Swift! Lag et Pokemon-inspirert action-spill og skriv kode for å lære monsteret ditt nye bevegelser. Du kommer til å lære å bruke variabler, metoder og objekter for å hjelpe monsteret ditt til å vinne!
+  touchdevelop_longdescription: 'Touch-vennlig redigeringsverktøy vil hjelpe deg med å lage pixel-kunst, løse bjørne-oppgaven eller bygge ditt eget hoppende fugl-spill. '
   appinventor_longdescription: Underholdende, raske opplæringsvideoer viser deg hvordan du lager tre enkle programmer for Android-telefon eller nettbrett. Denne Kodetimen, som er designet både for nybegynnere og eksperter, den gjør deg klar til å begynne å lage dine egen programmer før du vet ordet av det. Forestill deg å dele dine egne apper sammen med vennene dine! Aktivitetene er egnet for både enkeltpersoner og lærere i klasseundervisning.
   blockly_longdescription: 'Opplever du langsom (eller ikke-eksisterende) Internett-tilgang? Last ned Blockly opplæringsfiler som var forløperen til Code.org opplæringsfiler - en enkel komprimert fil på 3MB kan lastes inn på enhver datamaskin eller brukes fra en minnepinne'
   thinkersmith2_longdescription: Elevene lærer å representere og lagre bokstaver i binære funksjoner som slås av på og av. På slutten får klassen får til å kode sine egne initialer for å ta med hjem med dem.

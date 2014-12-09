@@ -2,17 +2,17 @@
   activerecord:
     errors:
       messages:
-        blank: is required
+        blank: ay kailangan
     attributes:
       user:
-        name: Pangalan
+        name: Ipapakita na Pangalan
         email: Email
         username: Username
         password: Password
         password_confirmation: Kumpirmahin ang password
         current_password: Kasalukuyang Password
         locale: Lengwahe
-        age: Age
+        age: Edad
         gender: Kasarian
         edit_header: Palitan ang Account Details
         error:
@@ -21,7 +21,7 @@
   welcome_back: Maligayang pagbabalik, %{name}
   add_teacher_form:
     code:
-      label: 'Add a teacher by section code:'
+      label: 'Magdagdag ng guro:'
       placeholder: Code (ABCDEF)
     submit: Magdagdag ng guro
   add_hint_form:
@@ -79,7 +79,7 @@
     address_placeholder: Address, Cuidad, Probinsya, Zip Code
     gender: Kasarian (optional)
     birthday: Kaarawan (optional)
-    age: Edad (Opsyunal)
+    age: Edad
     user_type: Are you a student or teacher?
     submit: Sign up
     teacher: Ikaw ba ay isang guro?
@@ -251,7 +251,7 @@
         playlab: Make an App
         artist: Draw Something
     user:
-      classroom: My students
+      classroom: Home Page ng Teacher
       label: Hi %{username}
       stats: My progress
       settings: My account

@@ -41,7 +41,7 @@ de-DE:
   go: Start
   thank_you_: Vielen Dank!
   congratulations: Herzlichen Glückwunsch!
-  congratulations_on_completing_hoc: Herzlichen Glückwunsch zum Abschluss einer Programmierstunde.
+  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   get_a_certificate_of_achievement: Erhalte eine Bescheinigung für das Geleistete
   enter_valid_email: Bitte geben Sie eine gültige E-Mail-Adresse ein
   get_a_certificate_message: "Wir schicken Ihnen ein Zertifikat und Informationen über <a href='/learn/beyond'>lerne innerhalb einer Stunde</a>"
@@ -65,7 +65,7 @@ de-DE:
   thanks_for_voting: Vielen Dank für die Abstimmung!
   share_on_facebook: Auf Facebook teilen
   share_on_twitter: Über Twitter teilen
-  beyond_an_hour: 'Mehr als die Hour of Code >'
+  beyond_an_hour: Beyond an Hour of Code
   get_started: Start
   i_agree: Ich stimme zu
   participant_select: '- Auswählen -'
@@ -74,6 +74,9 @@ de-DE:
   participant_educator: Lehrer
   participant_engineer: informatiker
   participant_other: Keine der Aussagen trifft zu
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Ich bin ein
   never_spam: Wir werden Ihnen niemals Spam senden
   enter_country: Land angeben wenn Sie außerhalb der Vereinigten Staaten sind
@@ -110,6 +113,10 @@ de-DE:
   studiobar_flappy_body: Erstelle und teile dein Flappy Spiel
   studiobar_teacher_title: Für Lehrer gemacht
   studiobar_teacher_body: Code-Studio in Ihrem Unterricht einführen
+  studiobar_frozen_title: Programmierstunde
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Ich bin ein Schüler
   contact_form_topic_parent: Ich bin ein Elternteil
   contact_form_topic_teacher: Ich bin Lehrer/Erzieher
@@ -283,7 +290,7 @@ de-DE:
   dashboard_sections_password_account_creation: Passwort (Text), das von den Schülern gesetzt wird
   dashboard_sections_login_type_explanation: 'Diese Tabelle hilft dir bei der Wahl der Zugangsform zu einem Bereich <b>Bild, Wort oder e-Mail</b>.'
   dashboard_faq: Häufig gestellte Fragen
-  code_hoc_coming: 'Die "Stunde des Programmierens" steht vor der Tür - vom 8. bis 14. Dezember!'
+  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: Anmelden, um an der CS Lernwoche teilzunehmen
   learn_more: Erfahre mehr
   hoc2014_try_new_tutorials: Probiere unsere neuen Einführungen zur Programmierstunde aus
@@ -293,7 +300,7 @@ de-DE:
   carousel_heading_international: Anleitungen in deiner Sprache
   carousel_heading_domestic: Einführungen auf englisch
   carousel_heading_beginners: Einführungen für Anfänger
-  carousel_heading_javascript: Einführungen zu Javascript
+  carousel_heading_javascript: Tutorials die JavaScript lehren
   carousel_heading_unplugged: "Kein Computer oder Internet? Probiere 'Freiluft'-Informatik aus"
   carousel_heading_devices: Einführungen für Telefon und Tablett
   carousel_heading_languages: Einführungen in anderen Sprachen
@@ -306,7 +313,7 @@ de-DE:
   more_resources_educators: Weitere Quellen für Lehrer und Erzieher
   participants: Teilnehmer
   teachers_notes: Anmerkungen des Lehrers
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: 'Lehrer: Lesen Sie hier wichtige Lehrhinweise'
   previous: Zurück
   next: Weiter
   older_systems: Einführungen für ältere Systeme
@@ -386,13 +393,13 @@ de-DE:
   thinkersmithspanish_platformtext: Nicht angeschlossen
   khan_platformtext: Aktuelle Web-Browser
   khanes_platformtext: Aktuelle Web-Browser
-  tynker_platformtext: Modern browsers. (Follow-on course requires $$)
+  tynker_platformtext: Moderne Browser. (Ein Weiterführender Kurs kostet Geld)
   scratch_platformtext: ALLE Browser
   lightbot_platformtext: Alle Browser, iOS, Android oder Spielkonsolen
   thinkersmith_platformtext: Nicht angeschlossen
   condcards_platformtext: ohne Computer
   lightbotintl_platformtext: iOS, Android (odr Internet-Browser)
-  codehs_platformtext: 'Modern browsers. (Follow-on course requires  $$)'
+  codehs_platformtext: Moderne Browser. (Ein Weiterführender Kurs kostet Geld)
   codecademy_platformtext: 'Aktuelle Web-Browser, iOS- und Android-Apps'
   codecombat_platformtext: Aktuelle Web-Browser
   codemonkey_platformtext: Aktuelle Web-Browser
@@ -429,7 +436,7 @@ de-DE:
   codehs_shortdescription: Beginne mit Karel dem Hund zu Programmieren, ein lustiges und visuelles Intro in die Programmierung!
   codecademy_shortdescription: Erlerne JavaScript-Programmierung in einem Web-Browser
   codecombat_shortdescription: Besiege Oger in diesem epischem Programmier-Spiel, um Python oder JavaScript zu lernen!
-  codemonkey_shortdescription: Students program a monkey to catch bananas.
+  codemonkey_shortdescription: Schüler programmieren einen Affen um Bananen zu fangen.
   codeavengers_shortdescription: Erlerne JavaScript-Programmierung in einem Web-Browser
   processing_shortdescription: Eine Stunde, um Computer-Sprachen zu lernen
   robomind_shortdescription: Schreibe ein Programm für einen virtuellen Roboter
@@ -438,12 +445,12 @@ de-DE:
   quorum_shortdescription: Begleite Mary wie sie die Programmiersprache Quorum lernt.
   codespark_shortdescription: '"Foos" ist ein Spiel, das Spass macht und bei dem Kinder das Programmieren lernen.'
   kodable_shortdescription: Ein iPad-Spiel, das Spass macht und Methoden der Programmierung vermittelt
-  tynkerapp_shortdescription: 'Learn to program by solving fun coding puzzles. '
+  tynkerapp_shortdescription: Lerne programmieren durch das lösen von spaßigen Codierungsrätseln.
   robomindnl_shortdescription: Schreibe ein Programm für einen virtuellen Roboter
   flappy_shortdescription: Entwickele Dein eigenes Spiel, z.B. Flappy Bird, Shark oder Submarine
   bitsbox_shortdescription: Nutze Javascript, um Apps zum Spielen und Austauschen zu entwickeln.
   makegameswithus_shortdescription: Entwickele ein iPad-Spiel. Lerne dies durch die Programmierung von Bewegungen Deines Monsters!
-  touchdevelop_shortdescription: 'Solve puzzles, create games, and learn coding all on your phone. '
+  touchdevelop_shortdescription: Löse Rätsel, entwickle Spiele und lerne zu programmieren und das alles auf deinem Smartphone.
   appinventor_shortdescription: Erstelle deine eigene Anwendung! (nur Android)
   blockly_shortdescription: Lade eine ZIP-Datei herunter, um ohne Internet-Verbindung lernen zu können
   thinkersmith2_shortdescription: Lerne, wie Computer mit den Zahlen 1 und 0 Informationen darstellen
@@ -476,11 +483,11 @@ de-DE:
   quorum_longdescription: Dieses Tutorial ist für die Sehbehinderten zugänglich und arbeitet mit Screenreader. Begleiten Sie Maria auf eine Tour, wie sie einem Biologielabor als Programmierer beitritt und die Quorum Programmiersprache lernt. Dieses Tutorial ist Schüler-geführt mit online-Beispiel-Aktivitäten.
   codespark_longdescription: '"Foos" ist ein spannender und kindgerechter Ansatz, Programmiersprachen zu erlernen. Die Schüler programmieren ihre Figuren und bringen Ihnen bei, Rätsel zu lösen. Das Spiel ist kostenlos und kann überall auf der Welt gespielt werden.'
   kodable_longdescription: '"Kodable" ist ein iPad Spiel für das Selbststudium, das über 5-jährige an das Programmieren heranführt. Dabei kann ein Lehrer oder Elternteil unterstützen, muss es aber nicht.'
-  tynkerapp_longdescription: Learn to program by solving fun coding puzzles. Easily build games and stories using with themed graphics, 10+ game-kits and customizable characters. No Internet connectivity required. You can also access your creations on the web.
+  tynkerapp_longdescription: 'Lerne zu programmieren, indem du lustige Quellcode- Puzzleteile zusammensetzt. Mühelos entwirfst du Spiele und Geschichten unter Verwendung von thematischen Grafiken, 10+ Spiele- Bausätzen und vielseitig verwendbaren Figuren. Eine Internetverbindung ist nicht notwendig. Du kannst auf deine Entwürfe auch über das Internet zugreifen.'
   robomindnl_longdescription: 'Schüler lernen die Grundlagen der Programmierung durch die Kontrolle ihrer eigenen virtuellen Roboter. Der online-Kurs ist komplett eigenständig mit Kurzpräsentationen, Filmen, Quiz und automatische Anleitung/Tipps bei der Programmierung Übungen helfen. '
   flappy_longdescription: Verwenden Sie Drag-and-Drop Programmierung um eigene Flappy Bird Spiel zu machen, und machen Sie diese verschieden (Flappy Shark, Flappy Santa). Fügen Sie das Spiel mit einem Klick auf ihr Handy.
   bitsbox_longdescription: 'Passen Sie Ihre eigenen virtuellen Tablet, dann code eine Reihe von Apps zum spielen und teilen. Einfache Anleitungen machen es möglich, dass auch junge Kinder  echtes Javascript programmieren, und je fortgeschrittener sie sind, desto weiter werden Sie gehen.'
-  makegameswithus_longdescription: Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pokemon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!
+  makegameswithus_longdescription: 'Lerne, Quellcode zu schreiben, indem du ein iPhone- Spiel entwirftst. Dabei benutzt du die brandneue und anfängerfreundliche Programmiersprache Swift! Du entwirfst ein Pokemon- ähnliches Action- Spiel und schreibst Quellcode, um deinen Monstern neue Bewegungen beizubringen. Du lernst, Variablen, Methoden und Objekte zu bezutzen, damit deine Monster gewinnen!'
   touchdevelop_longdescription: 'The touch-friendly editor will guide you in creating pixel art, solving the bear puzzle, or making your own jumping bird game. '
   appinventor_longdescription: 'Unterhaltsam und schnelle video-Tutorials führen Sie durch den Bau von drei einfache Apps für Ihr Android-Handy oder Tablet. Für Anfänger und Experten gleichermaßen entwickelt, wird dieser Stunde des Codes Sie breit zum starten machen um Ihre eigenen Anwendungen zu erstellen, bevor du dich versiehst. Stellen Sie  Ihre eigene App-Kreationen her, die Sie mit Ihren Freunden teilen können! Diese Aktivitäten eignen sich für Einzelpersonen und für Lehrer um die mit Klassen durch zu führen.'
   blockly_longdescription: 'Haben Sie PCs mit langsamen (oder nicht Existent)-Internet-Zugang? Downloade die Blockly Tutorials, die der Vorläufer der Code.org Tutorials wurden - eine einzelne 3MB ZIP-Datei kann auf jedem Computer geladen oder von einem Memorystick verwendet werden'

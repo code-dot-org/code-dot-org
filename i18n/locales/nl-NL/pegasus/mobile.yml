@@ -41,7 +41,7 @@ nl-NL:
   go: Verder
   thank_you_: Bedankt!
   congratulations: Gefeliciteerd!
-  congratulations_on_completing_hoc: Gefeliciteerd met het volbrengen van een Uur Code.
+  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   get_a_certificate_of_achievement: Ontvang een certificaat van verworvenheid
   enter_valid_email: Vul een correct email-adres in
   get_a_certificate_message: "We sturen je een certificaat en informatie hoe je  <a href='/learn/beyond'>Verder dan een Uur Code</a> kunt leren"
@@ -65,7 +65,7 @@ nl-NL:
   thanks_for_voting: Bedankt voor je stem!
   share_on_facebook: Delen op Facebook
   share_on_twitter: Delen op Twitter
-  beyond_an_hour: 'verder dan een UUr Code >'
+  beyond_an_hour: Beyond an Hour of Code
   get_started: Start
   i_agree: Ik ga akkoord
   participant_select: '- Kiezen -'
@@ -74,6 +74,9 @@ nl-NL:
   participant_educator: Leraar
   participant_engineer: Software Engineer
   participant_other: Geen van allen
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Ik ben een
   never_spam: We versturen geen spam
   enter_country: Land (buiten Amerika)
@@ -110,6 +113,10 @@ nl-NL:
   studiobar_flappy_body: Maak en deel je eigen Flappy spel
   studiobar_teacher_title: Gemaakt voor leerkrachten
   studiobar_teacher_body: Introduceer Code Studio in je klaslokaal
+  studiobar_frozen_title: Een Uur Code
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Ik ben een leerling
   contact_form_topic_parent: Ik ben een ouder
   contact_form_topic_teacher: Ik ben een leraar
@@ -285,7 +292,7 @@ nl-NL:
   dashboard_sections_password_account_creation: Student-gemaakte wachtwoord
   dashboard_sections_login_type_explanation: 'Deze tabel helpt  met het verklaren welke log-in typen, <b>foto, woord, of e-mail</b> u zou willen kiezen voor uw groep.'
   dashboard_faq: Veelgestelde Vragen
-  code_hoc_coming: 'Het Uur Code komt - December 8-14!'
+  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: Meld u aan om deel te nemen tijdens de CS Onderwijs Week
   learn_more: Leer meer
   hoc2014_try_new_tutorials: Probeer onze nieuwe Uur Code-tutorials
@@ -308,7 +315,7 @@ nl-NL:
   more_resources_educators: Meer middelen voor leraren en opvoeders
   participants: Deelnemers
   teachers_notes: "Leraar-nota's"
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: "Leerkrachten: Lees belangrijke nota's voor leerkrachten hier"
   previous: Vorige
   next: Volgende
   older_systems: Handleidingen die werken op oudere systemen
@@ -388,13 +395,13 @@ nl-NL:
   thinkersmithspanish_platformtext: Unplugged
   khan_platformtext: Moderne webbrowsers
   khanes_platformtext: Moderne webbrowsers
-  tynker_platformtext: Modern browsers. (Follow-on course requires $$)
+  tynker_platformtext: Moderne browsers. (Vervolg cursus is betalend)
   scratch_platformtext: ALLE browsers
   lightbot_platformtext: ALLE browsers en iOS, Android, of Game Console
   thinkersmith_platformtext: Unplugged
   condcards_platformtext: Unuplugged
   lightbotintl_platformtext: iOS, Android (of een webbrowser)
-  codehs_platformtext: 'Modern browsers. (Follow-on course requires  $$)'
+  codehs_platformtext: Moderne browsers. (Vervolg cursus is betalend)
   codecademy_platformtext: Moderne webbrowsers. iOS, Android apps
   codecombat_platformtext: Moderne webbrowsers
   codemonkey_platformtext: Moderne webbrowsers
@@ -431,7 +438,7 @@ nl-NL:
   codehs_shortdescription: Begin met programmeren met Karel de Hond, een leuke en visuele intro tot programmeren!
   codecademy_shortdescription: Leer JavaScript programmeren , in een web-browser
   codecombat_shortdescription: Versla ogres om Python of Javascript te leren in dit episch programmeer-spel!
-  codemonkey_shortdescription: Students program a monkey to catch bananas.
+  codemonkey_shortdescription: Leerlingen programmeren een aap die bananen vangt.
   codeavengers_shortdescription: Leer JavaScript programmeren , in een web-browser
   processing_shortdescription: een een uur durende cursus in de verwerkingstalen
   robomind_shortdescription: Schrijf code voor een virtuele robot
@@ -439,12 +446,12 @@ nl-NL:
   quorum_shortdescription: voeg je bij Mary tijdens een rondleiding tijdens dewelke ze de Quorum programmeertaal leert.
   codespark_shortdescription: De Foos is een leuk, kindvriendelijk spel om te leren over programmeren.
   kodable_shortdescription: Een leuke iPad spel om informatica-concepten te leren
-  tynkerapp_shortdescription: 'Learn to program by solving fun coding puzzles. '
+  tynkerapp_shortdescription: 'Leer programmeren door leuke codering puzzels op te lossen. '
   robomindnl_shortdescription: Schrijf code voor een virtuele robot
   flappy_shortdescription: 'Maak je eigen spel - Flappy Bird, Shark, of Submarine'
   bitsbox_shortdescription: Programmeer een reeks apps om te spelen en te delen met behulp van echte Javascript-code.
   makegameswithus_shortdescription: Maak een iPhonespel! Leer je monster nieuwe bewegingen aan door het schrijven van code!
-  touchdevelop_shortdescription: 'Solve puzzles, create games, and learn coding all on your phone. '
+  touchdevelop_shortdescription: 'Los puzzels op, maak spelletjes en leer dit allemaal te coderen op je telefoon. '
   appinventor_shortdescription: Maak uw eigen app! (Alleen voor android)
   blockly_shortdescription: Download een ZIP-bestand om offline te leren
   thinkersmith2_shortdescription: Leer hoe computers 1-en en 0-en gebruiken om gegevens te onthouden
@@ -453,7 +460,8 @@ nl-NL:
   frozen_longdescription: laten we code gebruiken om Anna en Elsa te helpen bij het ontdekken van de magie en schoonheid van ijs. Je zal leren sneeuwvlokken en patronen te maken terwijl je schaatst en een een mooi winterlandschap maken dat je kan delen met je vrienden!
   codeorg_longdescription: Leer de basis concepten van de informatica met drag en drop programmeren. Dit is een spelvormig zelfgestuurde cursus met , Angry Birds, Plants vs Zombies en video lezingen door onder andere Bill Gates, Mark Zuckerberg. Leer repeat-loops, condities en basis algoritmes. Beschikbaar in 34 talen.
   codeintl_longdescription: Leer de basis concepten van de informatica met drag en drop programmeren. Dit is een spelvormig zelfgestuurde cursus met , Angry Birds, Plants vs Zombies en video lezingen door onder andere Bill Gates, Mark Zuckerberg. Leer repeat-loops, condities en basis algoritmes. Beschikbaar in 34 talen.
-  thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubriran como guiarse de modo tal de llevar a cabo tareas especificas sin ser estas discutidas previamente. Este segmento ensena a los estudiantes la conexion entre simbolos y acciones asi como la valiosa habilidad de depuracion.'
+  thinkersmithspanish_longdescription: |-
+    Door gebruik te maken van een voorgedefinieerde "Robot woordenschat" leren leerlingen hoe ze mekaar kunnen helpen om specifieke taken uit te voeren zonder deze eerst te bespreken. Deze les leert kinderen het verband tussen symbolen en acties en ook de waardevolle vaardigheid van het fouten oplossen. "My Robotic Friends' is het best bruikbaar als groepsactiviteit en voorziet een leerkracht werkboek voor gebruik in de klas.
   khan_longdescription: Leer de basis van JavaScript programmeren met het maken van leuke tekeningen door je code. Doe het alleen of met je hele klas!
   khanes_longdescription: Leer de basis van JavaScript programmeren met het maken van leuke tekeningen door je code. Doe het alleen of met je hele klas!
   tynker_longdescription: "Bouw je eigen spellen en deel ze met je vrienden! Los leuke programmeer puzzels op en leer nieuwe programmeerconcepten in elk niveau. Maak je eigen spel door gebruik te maken van bewegende figuren, meerdere niveau's en mooi onderwerpen. Maak je spellen realistisch door gebruik te maken van natuurkunde. Zie je code als visuele blokken of als JavaScript. Plaats je spellen op mobiele apparaten zoal de iPads en Android tablets. Meer dan een dozijn leuke activiteiten om uit te kiezen!"
@@ -476,12 +484,13 @@ nl-NL:
     Deze Cursus is leerling-gericht met online voorbeeldactiviteiten.
   codespark_longdescription: 'De Foos is een leuke en kindvriendelijke manier om te leren over computer programmeren. Programeer schattige karakters om puzzels op te lossen en breng een virtuele wereld tot leven.  Het spel is "woord vrij" zodat alle kunnen spelen!'
   kodable_longdescription: Kodable is een zelfsturende iPad spel dat kinderen vanaf 5 jaar introduceert aan de grondbeginselen van programmeren. De ondersteuning van ouders of leerkrachten is optimaal, maar niet noodzakelijk.
-  tynkerapp_longdescription: Learn to program by solving fun coding puzzles. Easily build games and stories using with themed graphics, 10+ game-kits and customizable characters. No Internet connectivity required. You can also access your creations on the web.
+  tynkerapp_longdescription: Leer programmeren door leuke codeer puzzels op te lossen. Bouw op een makkelijke manier spellen en verhalen met thematische afbeeldingen, 10+ spel-kits en aanpasbare figuren. Er is geen intenetverbinding nodig. Je kan ook je creaties op het web openen.
   robomindnl_longdescription: 'Studenten leren de grondbeginselen van programmeren door het beheersen van hun eigen virtuele robot. De online cursus is volledig alleenstaand met korte presentaties, films, quizzen en automatische begeleiding/tips om te helpen met de programmeeroefeningen. '
   flappy_longdescription: gebruik sleep-en-zet neer programmering om je eigen Flappy Bird spel te maken en aan te passen om er anders uit te zien (Flappy Haai, Flappy Kerstman, om het even wat). Voeg het spel met 1 klik toe aan je telefoon.
   bitsbox_longdescription: Pas uw eigen virtuele tablet aan en programmeer vervolgens een serie van apps om te spelen en om te delen. Eenvoudige handleidingen maken het mogelijk om zelfs jonge kinderen echte Javascript te leren programmeren en de beter u wordt hoe verder je kunt gaan.
-  makegameswithus_longdescription: Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pokemon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!
-  touchdevelop_longdescription: 'The touch-friendly editor will guide you in creating pixel art, solving the bear puzzle, or making your own jumping bird game. '
+  makegameswithus_longdescription: 'Leer programmeren door het maken van een iPhone spel met behulp van een gloednieuwe en beginners vriendelijke programmeertaal genaamd Swift! Maak een Pokemon-geïnspireerd actiespel en schrijf code om uw nieuwe monster nieuwe moves te leren. U leert hoe variabelen, methoden en objecten  te gebruiken om uw monster te helpen winnen!'
+  touchdevelop_longdescription: |-
+    De aanraak-vriendelijke editor begeleidt je bij het maken van pixelkunst, het oplossen van de beer puzzel of bij het maken van je eigen "springende vogel' spel. 
   appinventor_longdescription: Opbouwende korte videocursussen begeleiden je met het bouwen van drie simpele apps voor je Android of tablet. Deze cursus is ontwikkeld voor beginners en experts tegelijk. Deze Hour of Code maakt je voor je het weet een programmeur die zijn eigen apps maakt. Stel je voor dat je je eigen apps kunt delen met je vrienden! Deze activiteiten zijn geschikt voor individuelen en voor in de klas.
   blockly_longdescription: Heb je computers met langzame (of zelfs zonder) internettoegang? Download dan de Blockly cursussen. Dat waren de voorlopers van de Code.org-cursussen, Een simpele 3 MB ZIP-bestand kan op elke computer worden geladen of gebruikt worden vanaf een USB-stick
   thinkersmith2_longdescription: Leerlingen leren over het binair weergeven en opslaan van letters, als functies van aan en uit. Als afsluiting gaat de klas zijn eigen initialen encoderen om mee naar huis te nemen.

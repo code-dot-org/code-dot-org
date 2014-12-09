@@ -45,7 +45,7 @@ module LevelsHelper
       @start_blocks = initial_blocks(current_user, @level) || @start_blocks || @level.start_blocks
     end
 
-    select_and_remember_callouts if @script_level
+    select_and_remember_callouts(@script_level.nil?)
     localize_levelbuilder_instructions
   end
 
@@ -70,7 +70,7 @@ module LevelsHelper
     @autoplay_video_info = video_info(autoplay_video) unless params[:noautoplay]
   end
 
-  def select_and_remember_callouts
+  def select_and_remember_callouts(always_show = false)
     session[:callouts_seen] ||= Set.new()
     available_callouts = []
     if @level.custom?
@@ -78,15 +78,15 @@ module LevelsHelper
         available_callouts = JSON.parse(@level.callout_json).map do |callout_definition|
           Callout.new(element_id: callout_definition['element_id'],
               localization_key: callout_definition['localization_key'],
-              qtip_config: callout_definition['qtip_config'].to_json)
+              qtip_config: callout_definition['qtip_config'].to_json,
+              on: callout_definition['on'])
         end
       end
     else
-      available_callouts = Callout.where(script_level: @script_level)
-        .select(:id, :element_id, :qtip_config, :localization_key)
+      available_callouts = @script_level.available_callouts if @script_level
     end
     @callouts_to_show = available_callouts
-      .reject { |c| session[:callouts_seen].include?(c.localization_key) }
+      .reject { |c| !always_show && session[:callouts_seen].include?(c.localization_key) }
       .each { |c| session[:callouts_seen].add(c.localization_key) }
     @callouts = make_localized_hash_of_callouts(@callouts_to_show)
   end

@@ -9,22 +9,25 @@ $green: #b9bf15;
   width: auto;
 }
 @mixin font {
-  font-family: 'Gotham A', 'Gotham B', sans-serif;
+  font-family: 'Gotham 4r', sans-serif;
+  font-weight: normal;
 }
 
 
 body {
   @include font;
   background-color: #F2F2F2;
-  font-weight: 400;
+  font-weight: normal;
   margin-top: 0;
 }
 h1 {
-  font-weight: 700;
+  font-family: 'Gotham 7r', sans-serif;
+  font-weight: normal;
   font-size: 140%;
 }
 h2 {
-  font-weight: 500;
+  font-family: 'Gotham 5r', sans-serif;
+  font-weight: normal;
 }
 a {
   color: #0596CE;
@@ -32,6 +35,20 @@ a {
     color: #0596CE;
     background: none;
   }
+}
+strong {
+  font-family: 'Gotham 7r', sans-serif;
+  font-weight: normal;
+}
+
+em {
+  font-family: 'Gotham 4i', sans-serif;
+  font-style: normal;
+}
+
+strong em,
+em strong {
+  font-family: 'Gotham 7i', sans-serif;
 }
 .farSide {
   text-align: right;
@@ -433,7 +450,9 @@ input[type="radio"] {
   margin: 20px 0px 20px 0px;
   line-height: 28px;
   color: #7E5BA0;
-  font-weight: bold;
+  font-family: 'Gotham 7r', sans-serif;
+  font-weight: normal;
+
 }
 
 #show-code {
@@ -659,7 +678,8 @@ $aniGifPreviewHeight: 60px;
     margin-bottom: 10px;
 
     a {
-      font-weight: bold;
+      font-family: 'Gotham 7r', sans-serif;
+      font-weight: normal;
       color: $purple;
       &:hover {
         text-decoration: underline;
@@ -668,6 +688,8 @@ $aniGifPreviewHeight: 60px;
   }
   .generatedCode {
     font-size: 14px;
+    overflow: scroll;
+    max-height: 400px;
   }
 }
 
@@ -725,7 +747,8 @@ $modal-image-margin-gap: 10px;
     }
 
     .hint-header {
-      font-weight: bold;
+      font-family: 'Gotham 7r', sans-serif;
+      font-weight: normal;
     }
 
     .hint-image {
@@ -755,7 +778,8 @@ $modal-image-margin-gap: 10px;
 }
 
 .dialog-title {
-  font-weight: bold;
+  font-family: 'Gotham 7r', sans-serif;
+  font-weight: normal;
 }
 
 #ok-button {
@@ -848,6 +872,26 @@ $modal-image-margin-gap: 10px;
   margin: 0px;
   width: 48.5%;
   font-size: 13px;
+  text-align: center;
+}
+
+#shapeways-print-go-button {
+  margin-bottom: 10px;
+}
+
+#shapeways-message-body {
+  font-size: 15px;
+  margin-bottom: 7px;
+  line-height: 26px;
+}
+
+#shapeways-message-body-disclaimer {
+  font-size: 11px;
+  margin-bottom: -11px;
+}
+
+#shapeways-message {
+  display: block;
   text-align: center;
 }
 
