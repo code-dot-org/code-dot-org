@@ -337,7 +337,9 @@ node['cdo-apps']['i18n']['languages'].to_hash.keys.each do |language|
 end
 %>
 
-  if (req.http.host == "<%= canonical_hostname('learn.code.org') %>" || req.http.host == "<%= canonical_hostname('studio.code.org') %>")
+  if (req.http.host == "<%= canonical_hostname('learn.code.org') %>" ||
+      req.http.host == "<%= canonical_hostname('studio.code.org') %>" ||
+      req.http.host == "code-dot-org.cartoonnetworkarabic.com")
   {
     if (req.url ~ "^/v2/")
     {
