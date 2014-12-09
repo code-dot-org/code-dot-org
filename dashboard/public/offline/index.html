@@ -146,6 +146,7 @@
       appOptions.level.stage_total = 20;
 // ########################
 //      Callouts
+      appOptions.callouts = JSON.parse(appOptions.callouts);
       appOptions.onInitialize = function() {
         this.createCallouts();
         onInitializeListeners.forEach(function(listener) {
