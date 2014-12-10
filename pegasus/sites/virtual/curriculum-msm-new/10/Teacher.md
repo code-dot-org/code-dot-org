@@ -5,7 +5,7 @@ theme: none
 ---
 
 
-<%= partial('curriculum_header', :unittitle=> 'MSM', :lesson=> 10, :unplugged=>false, :title=> 'Play Lab: Design Recipe',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>(30-60)) %>
+<%= partial('curriculum_header', :unittitle=> 'MSM', :lesson=> 10, :unplugged=>false, :title=> 'Play Lab: Design Recipe',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>('30-60')) %>
 
 [content]
 
@@ -13,7 +13,7 @@ theme: none
 
 ## Lesson Overview
 
-Moving on from the simple functions students created in Eval, they will use the Design Recipe.
+Moving on from the simple functions students created in Eval, students will use the Design Recipe to write functions that solve word problems.
 
 [summary]
 
@@ -45,12 +45,13 @@ Moving on from the simple functions students created in Eval, they will use the 
 
 ### <a name="GetStarted"></a> 1) Introduction
 
-Functions are a key part of animation in computer programs. A function that draws a static picture of a cat, for example, can place the cat at a different location based on the input. When that input changes slightly based on time or user-interaction, the cat will appear to move. This is similar to the way that flip-book animations work, in which each page draws a static image that has changed by a small amount. When the pages are displayed quickly, the images appear to change smoothly.
+Functions are a key part of animation in computer programs. A function that draws a static picture of a bat, for example, can place the bat at a different location based on the input. When that input changes slightly based on time or user-interaction, the bat will appear to move. This is similar to the way that flip-book animations work, in which each page draws a static image that has changed by a small amount. When the pages are displayed quickly, the images appear to change smoothly.
 
-<img src="rocket_1.png" />
+<img src="bat_spritesheet.png" style="width: 100%" />
 
-<img src="rocket_2.gif" style="float:right;"/>
-Putting these images together, we arrive at an animation of the rocket moving up the screen.
+Putting these images together, we arrive at an animation of the bat turning around.
+
+<img src="bat_animated_fast.gif" style="display: block; margin: 0 auto;"/>
 
 [/together]
 
@@ -59,7 +60,7 @@ Putting these images together, we arrive at an animation of the rocket moving up
 ## Activity: Play Lab Design Recipe
 ### <a name="Activity1"></a> 2) Online Puzzles
 
-In this stage you'll write functions that animate images like this rocket. Head to [MSM stage 10](http://studio.code.org/s/msm/stage/10/puzzle/1) in Code Studio to get started programming.
+In this stage you'll write functions that manipulate images to create animations. Head to [MSM stage 10](http://studio.code.org/s/msm/stage/10/puzzle/1) in Code Studio to get started programming.
 
 [/together]
 
