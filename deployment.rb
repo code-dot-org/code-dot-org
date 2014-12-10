@@ -67,8 +67,6 @@ def load_configuration()
     'rack_env'                    => rack_env,
     'rack_envs'                   => [:development, :production, :staging, :test, :levelbuilder],
     'read_only'                   => false,
-    'redis_store'                 => nil,
-    'redis_expires_in'            => nil,
     'root_dir'                    => root_dir,
     'sendy_db_reader'             => 'mysql://root@localhost/',
     'sendy_db_writer'             => 'mysql://root@localhost/',
