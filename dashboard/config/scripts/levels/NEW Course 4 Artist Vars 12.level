@@ -12,7 +12,7 @@
     "skip_instructions_popup": "false",
     "slider_speed": ".5",
     "disable_param_editing": "true",
-    "disable_variable_editing": "false",
+    "disable_variable_editing": "true",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "free_play": "false",

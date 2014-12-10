@@ -21,7 +21,9 @@
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "maze_data": null
+    "callout_json": "[\r\n  {\"localization_key\": \"if_else_bee\", \"element_id\": \"#if_else_bee_qtip\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"right center\", \"at\": \"left center\"}}\r\n  }\r\n]",
+    "maze_data": null,
+    "video_key": "C4_conditionals"
   }
 }]]></config>
   <blocks>
@@ -36,7 +38,7 @@
         </block>
         <block type="maze_nectar"/>
         <block type="maze_honey"/>
-        <block type="bee_ifElseFlower">
+        <block type="bee_ifElseFlower" id="if_else_bee_qtip">
           <title name="LOC">atFlower</title>
         </block>
       </xml>

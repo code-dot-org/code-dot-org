@@ -76,11 +76,6 @@
             <value name="IF0">
               <block type="logic_compare" inline="true" movable="false">
                 <title name="OP">EQ</title>
-                <value name="A">
-                  <block type="variables_get" movable="false">
-                    <title name="VAR">direction</title>
-                  </block>
-                </value>
                 <value name="B">
                   <block type="variables_get">
                     <title name="VAR">left</title>
@@ -90,9 +85,8 @@
             </value>
           </block>
         </category>
-        <category name="Functions" custom="PROCEDURE">
-  </category>
-        <category name="Variables">
+        <category name="Functions" custom="PROCEDURE"/>
+        <category name="Variables" custom="VARIABLE">
           <block type="variables_get">
             <title name="VAR">left</title>
           </block>
