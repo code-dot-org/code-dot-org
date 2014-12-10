@@ -8,18 +8,16 @@ title: How-to Guide layout: wide nav: resources_nav
   <h1 class="col-sm-6">
     Kā iemācīt Programmēšanas stundu
   </h1>
-  
-  <div class="col-sm-6 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Piesakies savam pasākumam</button></a>
-  </div>
+</div>
+
 </div>
 
 ## 1) Watch this how-to video <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
 ## 2) Try the tutorials:
 
-Mēs organizēsim dažādas jautras, stundu garas apmācības visa vecuma skolēniem, ko izveidojuši dažādi partneri. Būs jaunas apmācības, lai uzsāktu "Programmēšanas stundu" pirms 8. decembra.
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
 
-**Visas "Programmēšanas stundas" apmācības:**
+**All Hour of Code tutorials:**
 
   * Prasa minimālu sagatavošanas laiku skolotājām
   * Tās atļauj skolēniem strādāt pašiem savā tempā un prasmju līmenī
@@ -60,7 +58,7 @@ Most kids don’t know what computer science is. Here are some ideas:
   * Vai: "Datorzinātnes ir mākla, kas apvieno cilvēku idejas ar digitāliem rīkiem, lai palielinātu mūsu spēkus. Datorzinātnieki strādā daudz dažādās jomās: aplikācijas telefoniem, slimību ārstēšana, animētu video veidošana, darbs sociālajos mēdijos, robotu izveide, lai pētītu citas planētas un vēl."
   * Apskatat padomus, lai interesētu meitenes datorzinātnēs [šeit](http://<%= codeorg_url() %>/girls). 
 
-## 6) Start your Hour of Code
+## 7) Start your Hour of Code
 
 **Direct students to the activity**
 

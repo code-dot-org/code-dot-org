@@ -8,10 +8,6 @@ crwdns20172:0crwdne20172:0
   <h1 class="col-sm-6">
     crwdns22134:0crwdne22134:0
   </h1>
-  
-  <div class="col-sm-6 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">crwdns22135:0crwdne22135:0</button></a>
-  </div>
 </div>
 
 <% if @country == 'ie' %>
@@ -122,7 +118,7 @@ crwdns20172:0crwdne20172:0
     </p>
     
     <p>
-      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="crwdns23891:0crwdne23891:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="crwdns23892:0crwdne23892:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="crwdns23893:0crwdne23893:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="crwdns23894:0crwdne23894:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="crwdns23895:0crwdne23895:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/image/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="crwdns23896:0crwdne23896:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="crwdns23891:0crwdne23891:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="crwdns23892:0crwdne23892:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="crwdns23893:0crwdne23893:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="crwdns23894:0crwdne23894:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="crwdns23895:0crwdne23895:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="crwdns23896:0crwdne23896:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     
     <p>
@@ -283,8 +279,4 @@ crwdns20172:0crwdne20172:0
     
     <p>
       crwdns23957:0[NAME]crwdnd23957:0[TITLE]crwdne23957:0
-    </p>
-    
-    <p>
-      <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">crwdns23958:0crwdne23958:0</button></a>
     </p>

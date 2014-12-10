@@ -26,30 +26,30 @@ Beritahu temanmu mengenai #HourOfCode.
 
 ## 2. Tawarkan pada seluruh isi sekolah anda untuk mengikuti Hour of Code
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](/resources/hoc-one-pager.pdf) to your principal.
+[Kirimkan email ini](<%= hoc_uri('/resources#email') %>) atau [selebaran ini](/resources/hoc-one-pager.pdf) kepada kepala sekolah anda.
 
 <% else %>
 
 ## 2. Tawarkan pada seluruh isi sekolah anda untuk mengikuti Hour of Code
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](/resources/hoc-one-pager.pdf) this handout</a> to your principal.
+[Kirimkan email ini](<%= hoc_uri('/resources#email') %>) atau berikan [selebaran ini](/resources/hoc-one-pager.pdf) selebaran ini</a> kepada kepala sekolah anda.
 
 <% end %>
 
 ## 3. Menyumbangkan dengan murah hati
 
-[Donate to our crowdfunding campaign.](http://<%= codeorg_url() %>/donate) To teach 100 million children, we need your support. We just launched the [largest education crowdfunding campaign](http://<%= codeorg_url() %>/donate) in history. *Every* dollar will be matched [donors](http://<%= codeorg_url() %>/about/donors), doubling your impact.
+[Berikanlah sumbangan gerakan crowdfunding kami](http://<%= codeorg_url() %>/donate). Untuk mengaja 100 juta anak, kami ingin bantuan anda. Kami baru saja meluncurkan <a href="http://<%= codeorg_url() %>/ " kampanye pengumpulan dana pendidikan terbesar</a> dalam sejarah. *Setiap* dollar akan disesuaikan dengan [donor-donor](http://<%= codeorg_url() %>/about/donors), itu akan mengadakan dampak.
 
 ## Tanyakan pada bos anda untuk ikut terlibat
 
-[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf).
+[Kirimkan ema ini](<%= hoc_uri('/resources#email') %>) kepada manager, atau CEO. Atau [berikan selebaran ini](http://hourofcode.com/resources/hoc-one-pager.pdf).
 
 ## 5. Promosikan Hour of Code dalam komunitas Anda
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+Rekrut kelompok lokal — anak Pramuka, gereja, Universitas, veteran kelompok atau Serikat pekerja. Atau selenggarakan Hour of Code "pesta blok" untuk lingkungan tempat Anda tinggal.
 
 ## 5. Tanyakan seorang pejabat terpilih setempat untuk mendukung Hour of Code
 
-[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Kirimkan email ini](<%= hoc_uri('/resources#politicians') %>) kepada walikota, dewan kota, or dewan sekolah. Atau [berikan mereka handout ini](http://hourofcode.com/resources/hoc-one-pager.pdf) dan undang mereka untuk mengunjungi sekolah Anda.
 
 <%= view 'popup_window.js' %>

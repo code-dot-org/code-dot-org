@@ -1,118 +1,118 @@
 * * *
 
-title: Hour of Code Event How-To layout: wide nav: resources_nav
+标题：如何开展编程一小时 布局：宽 导航：导航资源
 
 * * *
 
-# Hour of Code event guide
+# 编程一小时活动指南
 
-Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
+在计算机科学教育周（十二月8-14日）期间组织一场编程一小时活动，以此庆祝计算机科学并鼓励更多的学生尝试计算机科学。任何人在任何地点都可以组织一场编程一小时活动。
 
-## 1) Prepare for your event
+## 1) 你的活动准备
 
-  * Determine a venue, date and time
-  * Send [a letter](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) to invite your local mayor, congressman, governor, or influential business person to speak.
-  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= hoc_uri('/resources/press-kit') %>) for help.
+  * 确定地点，日期和时间
+  * 写[信](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>)，邀请当地的市长，众议员，州长，或是有影响力的商业人士来讲话。
+  * 邀请媒体/记者，如本地新闻台，报纸，教育/科技博客。请参阅我们的[新闻资料袋](<%= hoc_uri('/resources/press-kit') %>)寻求帮助。
 
-## 2) During your event
+## 2) 活动期间
 
-  * Kick off your event with one of our [inspirational videos](<%= hoc_uri('/resources#videos') %>).
-  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= hoc_uri('/resources/stats') %>).   
+  * 用我们其中一个[励志视频](<%= hoc_uri('/resources#videos') %>)开启你的活动.
+  * 给出一个计算机科学重要性的前瞻，使用这些[数据和信息图表](<%= hoc_uri('/resources/stats') %>)。   
       
     
-  * Other event ideas: 
-      * Invite a local industry leader to discuss his or her work involving computer science
-      * Invite a local politician and have students teach him or her how to code
-      * Watch one of the Q&A sessions with an Hour of Code ambassador. They will all be recorded and on Code.org’s YouTube page. This year’s participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more!
-      * Have a group of students demonstrate an unplugged activity
-      * Have a group of students teach the principal or a group of teachers how to code
-      * If your school already teaches computer science, have students demo projects
+  * 其他活动构思： 
+      * 邀请当地的行业领导者，讨论他或她的涉及到计算机科学的工作
+      * 邀请当地的政治家并让学生都教他或她如何编程
+      * 观看Q&amp；与编程一小时大使对话。 这些过程将会被记录并上传到Code.org的YouTube页面。 今年的参与者包括比尔·盖茨，桑德伯格，阿什顿·库彻等等！
+      * 组织学生展示不插电活动
+      * 组织学生教校长或老师如何编程
+      * 如果你的学校已经教过计算机科学，让学生来进行演示
 
-## 3) Share how it went
+## 3) 分享活动进程
 
-  * Share pictures of your event on Facebook and Twitter. 
-  * Use the hashtag **#HourofCode**
+  * 在Facebook和Twitter上分享此次活动的照片。 
+  * 使用＃标签**#HourofCode**
 
-## Example Event Plan
+## 活动计划示例
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**活动:**开启学校范围内的计算机科学教育周集会
 
-**Date:** Dec 8th (start of Computer Science Education Week)
+**日期:**十二月8日（启动计算机科学教育周）
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**时间:**上学日的某天，活动首选上午，约1小时。
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
+**地点：**学校礼堂（如剧院，体育馆，食堂）   
   
 
 
-## Run of Show
+## 流程演示
 
 <table>
   <tr>
     <th style="width:200px">
-      Time
+      时间
     </th>
     
     <th style="width:800px">
-      Action
+      活动
     </th>
   </tr>
   
   <tr>
     <td>
-      10:00-10:05 am
+      上午10：00-10：05
     </td>
     
     <td>
-      Open with one of our <a href="http://hourofcode.com/us/resources#videos">inspirational videos</a>
+      以其中一个<a href="http://hourofcode.com/us/resources#videos">励志视频</a>开场
     </td>
   </tr>
   
   <td>
-    10:05-11:15 am
+    10:05-10:15 am
   </td>
   
   <td>
-    Principal gives an intro overviewing the importance of computer science. Use these <a href="/resources/stats">stats and infographics</a>.
+    校长展望计算机科学的重要性，使用这些<a href="/resources/stats">数据和信息图表</a>.
   </td></tr> 
   
   <td>
-    11:15-11:17 am
+    10:15-10:17 am
   </td>
   
   <td>
-    Open with one of our <a href="http://hourofcode.com/us/resources#videos">inspirational videos</a>
+    以其中一个<a href="http://hourofcode.com/us/resources#videos">励志视频</a>开场
   </td></tr> 
   
   <td>
-    11:17-11:30 am
+    10:17-10:30 am
   </td>
   
   <td>
-    Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives.
+    特邀嘉宾谈谈他们的背景以及科技和计算机科学如何在他们的日常生活中起到重要作用。
   </td></tr> 
   
   <td>
-    11:30-11:40 am
+    10:30-10:40 am
   </td>
   
   <td>
-    Students do an Hour of Code demo for the school. Fun twist- have them teach the principal, politician or other students.
+    学生们为整个学校掩饰编程一小时，趣味转换—让学生们教校长，政要和其他学生。
   </td></tr> 
   
   <td>
-    11:40-12:00 pm
+    10:40-11:00 pm
   </td>
   
   <td>
-    Students demo an unplugged activity and how computer science can be taught without using computers.
+    学生演示不插电活动，如何在没有计算机的情况下也可以教大家计算机科学。
   </td></tr> 
   
   <td>
-    12:00-12:05 pm
+    11:00-11:05 pm
   </td>
   
   <td>
-    Teacher who help bring the school-wide event gives closing remarks.
+    由把编程一小时活动等带给全校的老师发表闭幕词。
   </td>
 </table>

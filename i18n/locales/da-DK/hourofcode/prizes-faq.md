@@ -4,13 +4,13 @@ layout: wide
 
 * * *
 
-# Prizes - FAQs
+# Præmier - ofte stillede spørgsmål
 
 ## Does your whole school have to enter to win the $10,000 in hardware?
 
 Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](<%= hoc_uri('/prizes') %>).
 
-## Does your whole school have to enter to win a the tech chat?
+## Skal hele skolen deltage for at vinde en tech-chat?
 
 Any classroom (public or private school) is eligible to win this prize. Your whole school need not apply.
 

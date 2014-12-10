@@ -8,29 +8,27 @@ title: How-to Guide layout: wide nav: resources_nav
   <h1 class="col-sm-6">
     Så använder du Hour of Code
   </h1>
-  
-  <div class="col-sm-6 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Sign up your event</button></a>
-  </div>
+</div>
+
 </div>
 
 ## 1) Watch this how-to video <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
 ## 2) Try the tutorials:
 
-Vi har en stor variation på roliga entimmeslektioner för alla åldrar, gjorda av olika samarbetspartners. Nya övningar kommer lagom till nästa Hour of Code 8-14 december. 
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
 
-**Alla övningar i Hour of Code:**
+**All Hour of Code tutorials:**
 
   * Kräver minimal förberedelse för lärare
   * Är självinstruerande så att alla kan jobba i sin takt på sin nivå
 
 [![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
 
-## 3) Register your Hour on the map
+## 3) Registrera din timme på kartan
 
 [Make sure to sign up](<%= hoc_uri('/') %>). We'll send you helpful info as the Hour of Code nears, and you'll see your Hour of Code on our map of worldwide events.
 
-## 4) Plan your hardware needs - computers are optional
+## 2) Vad behöver du för hårdvara? Datorer är inte nödvändiga
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every child, and can even do the Hour of Code without a computer at all.
 
@@ -38,12 +36,12 @@ The best Hour of Code experience will be with Internet-connected computers. But 
   * **Förhandsgranska Diplomsidan** för att se vad eleverna kommer att se när de är klara. 
   * **Fixa hörlurar till din klass**, eller be eleverna att ta med sig egna, om de övningar du väljer fungerar bäst med ljud.
 
-## 5) Plan ahead based on your technology available
+## 3) Planera baserat på den teknik som är tillgänglig
 
   * **Finns inte tillräckligt många enheter?** Använd [parprogrammering](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). När elever samarbetar, hjälper de varandra och vänder sig mindre till läraren. De ser också att programmering är socialt och bygger på samarbete.
   * **Är tillgängligheten till internet för dålig?** Planera att se videor på gemensamt, så att varje elev inte behöver ladda ner sina egna videos. Eller prova unplugged / offline övningar.
 
-## 6) Inspire students - show them a video
+## 4) Inspirera eleverna – Visa en video
 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
@@ -60,7 +58,7 @@ Most kids don’t know what computer science is. Here are some ideas:
   * Eller: "Datavetenskap är konsten att kombinera människors idéer och digitala verktyg för att öka vår makt. Datavetare arbetar inom många olika områden: bygger appar för telefoner, botar sjukdomar, skapar animerade filmer, jobbar med sociala medier, bygger robotar för att utforska andra planeter och mycket mer. "
   * Tips för att få tjejer intresserade av datavetenskap hittar du [här](http://<%= codeorg_url() %>/girls). 
 
-## 6) Start your Hour of Code
+## 7) Börja din kodtimme
 
 **Direct students to the activity**
 

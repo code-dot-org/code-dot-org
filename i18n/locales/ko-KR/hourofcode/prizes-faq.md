@@ -4,44 +4,44 @@ layout: wide
 
 * * *
 
-# Prizes - FAQs
+# 상품 - 자주묻는 질문
 
-## Does your whole school have to enter to win the $10,000 in hardware?
+## $10,000 상당의 지원금을 받기 위해서 학교 전체가 모두 참여해야 할까요?
 
-Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](<%= hoc_uri('/prizes') %>).
+예 그렇습니다. 상품을 타기 위해서는 학교 모두가 참여해야하지만, 지원금 상품을 받기 위한 신청은, 한 명만 [여기서 등록](<%= hoc_uri('/prizes') %>)하면 됩니다..
 
-## Does your whole school have to enter to win a the tech chat?
+## 비디오 채팅 기회를 얻기 위해서, 학교 모두가 참여해야 하나요?
 
-Any classroom (public or private school) is eligible to win this prize. Your whole school need not apply.
+(공립 사립 상관없이) 어떤 학급이던지 상품을 타기 위해 신청할 수 있습니다. 그렇다고 학교 모두가 신청할 필요는 없습니다.
 
-## Can non-public schools win the video chat prize?
+## 비 공립학교도 비디오 채팅 기회(상품)를 얻을 수 있나요?
 
-Yes! Private and independent schools are eligible along with public schools to win the video chat prizes.
+예 가능합니다! 사립학교, 독립 학교, 공립학교 모두 신청하고 기회를 얻을 수 있습니다.
 
-## Can non-US schools win the video chat prize?
+## 미국 이외의 학교들도 비디오 채팅 기회(상품)를 얻을 수 있나요?
 
-No, unfortunately, because of logistics we are unable to offer the video chat prize to schools outside of the U.S. and Canada. All international organizers **are** eligible to receive Dropbox space or Skype credit.
+안타깝게도 기회가 없습니다. 복잡한 준비와 계획/진행 때문에 미국과 캐나다 이외의 외국 학교들에는 비디오 채팅 기회를 제공할 수 없습니다. 모든 국제 **조직/운영자들은** Dropbox 저장공간이나, Skype 크레딧을 받을 수 있습니다.
 
-## Why is the $10,000 hardware prize only available to public schools?
+## 왜 공립학교들만 $10,000 상당의 하드웨어 지원금(상품)을 받을 기회가 있나요?
 
-We would love to help teachers in public and private schools alike, but at this time, it comes down to logistics. We have partnered with [DonorsChoose.org](http://donorschoose.org) to administer classroom funding prizes, which only works with public, US K-12 schools. According to DonorsChoose.org, the organization is better able to access consistent and accurate data that's available for public schools.
+공립학교, 사립학교 모두 도움을 주고 싶습니다만, 이번에는 준비/계획/절차 문제로 인해 불가능했습니다. [DonorsChoose.org](http://donorschoose.org)와 협력 제휴하여 응모한 학급들에게 지원할 수 있는 상품 펀드모금을 진행하였는데, 그 사용은 미국의 K-12 학교들에만 가능합니다. DonorsChoose.org 에 의하면, 그 조직은 공립학교들을 위한 지속적인 관리/지원와 정확한 데이터 수집이 가능하다고 합니다.
 
-## I’m outside the United States. Can I qualify for prizes?
+## 저는 미국 밖에 있습니다. 저도 상품들에 응모할 수 있나요?
 
-Due to a small full-time staff, Code.org is unable to handle the logistics of administering international prizes. Because of this people outside the US are unable to qualify for prizes.
+몇 번의 긴 스태프 회의의 논의 결과에 따르면, 국제적으로 상품들을 지원하고 관리하는 것이 거의 불가능하다고 합니다. 그래서 미국 이외의 사람들에게 참여 상품에 대한 응모가 불가능한 것입니다.
 
-## When is the deadline to apply for the hardware prize?
+## 하드웨어 지원금(상품)에 응모하기 위한 응모 기한 마감은 언제까지인가요?
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
+응모를 하기 위해서, 2014년 11월 14일까지 [하드웨어 지원 응모 양식](<%= hoc_uri('/prizes') %>)을 완료해 제출하고, 학교 전체가 Hour of Code 행사에 등록해야 합니다. 미국의 학교들 중, 주별로 한 학교씩 1학급 분량의 컴퓨터들을 받게 될 것입니다. Code.org 는 2014년12월01일 이전에 당첨된 학교에 이메일로 알릴 것입니다.
 
-## When is the deadline to be eligible to win a tech chat?
+## 비디오 채팅(상품)에 응모하기 위한 마감 기한은 언제인가요?
 
-To qualify, you must register your classroom for the Hour of Code by November 14, 2014. Classrooms will win a video chat with a celebrity. Code.org will select and notify winners via email by December 1, 2014.
+응모하려면 2014년 11월 14일까지 Hour of Code 행사 참여 학급을 등록해야 합니다. 학급들이 비디오 채팅(상품) 기회를 얻게 될 것입니다. Code.org 는 2014년12월01일 이전에 해당 당첨 학교에 이메일로 알릴 것입니다.
 
-## When will I be notified if my school or classroom wins a prize?
+## 우리 학교나 학급이 상품에 당첨되는지 언제 알 수 있을까요?
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. Code.org will select and notify winners via email by December 1, 2014.
+응모를 하기 위해서, 2014년 11월 14일까지 [하드웨어 지원 응모 양식](<%= hoc_uri('/prizes') %>)을 완료해 제출하고, 학교 전체가 Hour of Code 행사에 등록해야 합니다. Code.org 는 2014년12월01일 이전에 해당 학교에 이메일로 알릴 것입니다.
 
-## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 8-14), can I still qualify for prizes?
+## 컴퓨터과학교육주간(12월8일-14일) 동안에 Hour of Code 행사에 우리 학교 전체가 참여할 수 없어도? 상품 응모를 할 수 있나요?
 
-Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 14th.
+예, 응모할 수 없습니다. 11월14일까지 Hour of Code 에 등록하고, 적당한 참여 시간을 기록해 전체 학교가 참여하는 기획/계획/절차를 등록해야 합니다.

@@ -4,7 +4,7 @@
 
 * * *
 
-# Prizes - FAQs
+# 賞品 - よくあるご質問
 
 ## Does your whole school have to enter to win the $10,000 in hardware?
 

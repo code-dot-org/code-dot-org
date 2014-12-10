@@ -1,21 +1,17 @@
 * * *
 
-title: Blurbs and Stats layout: wide nav: resources_nav
+titulli: Njoftime dhe Statistika paraqitja: e gjerë nav: burimet_nav
 
 * * *
 
-[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
+# Njoftime dhe Statistika të Vyera
 
-# Njoftime dhe statistika të dobishme
+## Përdorni këto njoftime të shkurtëra për newsletter
 
-## Use this short blurb in newsletters
+### Sillni lëndët e shkencave kompjuterike në shkollën tuaj. Filloni me Orën e Kodimit
 
-### Bring computer science to your school. Start with an Hour of Code
+Kompjuterët janë kudo, por më pak shkolla e mësojnë shkencën kompjuterike tash se sa para 10 vitesh. Lajmi i mirë është se jemi në rrugë a sipër për ta ndryshuar këtë. If you heard about the [Hour of Code](<%= hoc_uri('/') %>) last year, you might know it made history. Për një javë 15 milionë nxënës u bënë pjesë e shkencave kompjuterike! The [Hour of Code](<%= hoc_uri('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= hoc_uri('/') %>) to host an Hour of Code this December 8-14 during Computer Science Education Week and help reach 100 million students by the end of the year. Add your school to the map, go to <http://hourofcode.com>
 
-Kompjuterët janë kudo, por më pak shkolla e mësojnë shkencën kompjuterike tash se sa para 10 vitesh. Lajmi i mirë është se jemi në rrugë për ta ndryshuar këtë. Nëse keni dëgjuar për [Orën e Kodimit](<%= hoc_uri('/') %>) vitin e kaluar, ndoshta e dini se ka bërë histori. Për një javë, 15 milionë studentë e provuan shkencën kompjuterike! [Ora e Kodimit](<%= hoc_uri('/') %>) është hyrje një-orëshe në shkencë kompjuterike, e dizajnuar ta demistifikojë kodin dhe të tregojë se kushdo mund t'i mësojë bazat. [Regjistrohu](<%= hoc_uri('/') %>) për të qenë nikoqir i Një Ore të Kodimit më 8-14 dhjetor gjatë Javës së Edukimit në Shkencë Kompjuterike dhe ndihmo të arrihen 100 milionë studentë deri në fund të vitit. Add your school to the map, go to <http://hourofcode.com>
-
-## Infographic version:
+## Versioni infografik:
 
 ![image](http://code.org/images/fit-8000/Code.org_infographic.png)
-
-<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

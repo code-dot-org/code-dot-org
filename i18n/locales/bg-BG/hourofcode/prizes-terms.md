@@ -1,6 +1,6 @@
 * * *
 
-title: How-to Guide for Organisations layout: wide nav: resources_nav
+Заглавие: "Как да" Пътеводител за организации оформление: широка nav: resources_nav
 
 * * *
 

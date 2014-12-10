@@ -8,18 +8,16 @@ title: How-to Guide layout: wide nav: resources_nav
   <h1 class="col-sm-6">
     كيف تدرس ساعة واحدة لتعلم البرمحة
   </h1>
-  
-  <div class="col-sm-6 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Sign up your event</button></a>
-  </div>
+</div>
+
 </div>
 
 ## 1) Watch this how-to video <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
 ## 2) Try the tutorials:
 
-سوف نستضيف مجموعة متنوعة من الدروس الممتعة، و التي تدوم ساعة واحدة لطلاب من جميع الإعمار، تم إنشاؤها بواسطة مجموعة من الشركاء. دروس جديدة تأتي لاطلاق حدث "ساعة البرمجة" قبل 8-14 كانون الأول/ديسمبر.
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
 
-**جميع دروس ساعة البرمجة:**
+**All Hour of Code tutorials:**
 
   * تتطلب الحد الأدنى من الوقت للاعداد بالنسبة للمعلمين
   * ذات توجيه ذاتي - و هو ما يمكن التلاميذ من العمل حسب نسقهم و مهارتهم
@@ -60,7 +58,7 @@ Most kids don’t know what computer science is. Here are some ideas:
   * Or: “Computer science is the art of blending human ideas and digital tools to increase our power. Computer scientists work in so many different areas: writing apps for phones, curing diseases, creating animated movies, working on social media, building robots that explore other planets and so much more."
   * See tips for getting girls interested in computer science [here](http://<%= codeorg_url() %>/girls). 
 
-## 6) Start your Hour of Code
+## 7) Start your Hour of Code
 
 **Direct students to the activity**
 

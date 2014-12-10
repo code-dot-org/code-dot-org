@@ -1,6 +1,6 @@
 * * *
 
-title: How-to Guide for Organisations layout: wide nav: resources_nav
+title: Təşkilatlar üçün təliamat layout: wide nav: resources_nav
 
 * * *
 

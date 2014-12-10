@@ -42,7 +42,7 @@ Un comité de educadores en Ciencias de la Computación evaluarán las propuesta
   * promueven aprendizaje en todos los grupos demográficos (especialmente los grupos marginados)
   * no se centran solamente en diseño web HTML+CSS - (nuestra meta es la ciencia computacional, no sólo codificación en HTML)
 
-**Los tutoriales aparecerán en posiciones más bajas si:**
+**Los tutoriales aparecerán más abajo si son:**
 
   * tienen baja calidad
   * tienen un nivel más avanzado de enseñanza (no para principiantes)
@@ -92,7 +92,7 @@ Como resultado, los listados actuales están "suficientemente bien", y la razón
 
 Visita la [página de envío de actividades para la Hora de Programación](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) y sigue los pasos ahí indicados para enviar tu tutorial.
 
-**Necesitas:**
+**Necesitarás:**
 
   * Tu nombre, logo (jpg, png, etc.)
   * URL para una imagen de pantalla o de marketing de la actividad de la Hora de Programación. Las imágenes deben tener una resolución de 446 x 335 exactamente. Si no se proporciona una imagen adecuada, podremos tomar una de tu tutoría O podremos NO incluirla.
@@ -146,9 +146,9 @@ Visita la [página de envío de actividades para la Hora de Programación](https
 
 ## Sugerencias para diseñar tu actividad
 
-**Incluya el logotipo de CSEdWeek logo en su tutorial.** Puede incluir el logotipo de CSEdWeek ([pequeño](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) o [grande](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) en su tutorial, pero no es obligatorio. También puede contactarnos para obtener el permiso para usar el logotipo "en colaboración con Code.org". ***Este logotipo solo puede ser utilizado cuando se otorga permiso explícito por Code.org.*** Puede ser que tengamos un logotipo de la Hora de Programación, pero en este momento no tenemos alguno. Bajo ninguna circunstancia se puede utilizar el nombre o logotipo de Code.org. Ambos son marca registrada, y no pueden ser combinado con una marca de terceros.
+**Incluya el logotipo de CSEdWeek logo en su tutorial.** Puede incluir el logotipo de CSEdWeek ([pequeño](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) o [grande](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) en su tutorial, pero no es obligatorio. También puede contactarnos para obtener el permiso para usar el logotipo "en colaboración con Code.org". ***Este logotipo solo puede ser utilizado cuando se otorga permiso explícito por Code.org.*** Puede ser que tengamos un logotipo de la Hora de Código, pero en este momento no tenemos alguno. Bajo ninguna circunstancia se puede utilizar el nombre o logotipo de Code.org. Ambos son marca registrada, y no pueden ser combinado con una marca de terceros.
 
-**Asegúrese de que el estudiante promedio pueda finalizar confortablemente en una hora.** Considere agregar una actividad abierta al final, para los alumnos que se muevan mas rápidamente durante la lección. Recuerde que la mayoría de los niños son principiantes iniciales para las ciencias de la computación y la programación.
+**Asegúrese de que el estudiante promedio pueda finalizar confortablemente en una hora.** Considere agregar una actividad abierta al final, para los alumnos que avancen más rápidamente durante la lección. Recuerde que la mayoría de los niños son principiantes iniciales para las ciencias de la computación y la programación.
 
 **Incluya las notas del profesor.** La mayoría de las actividades deben ser dirigidas por alumnos. Pero si una actividad debe ser facilitada o administrada por el profesor, por favor incluya instrucciones claras y simples en forma de "notas de profesor" en la URL enviada con su actividad. No solo los alumnos son principiantes, algunos profesores también lo son. Incluya información como:
 
@@ -159,7 +159,7 @@ Visita la [página de envío de actividades para la Hora de Programación](https
 
 **Incorpore retroalimentación al final de la actividad.** (Por Ejemplo: “¡Ha finalizado 10 niveles y aprendido sobre ciclos! ¡Felicidades!”)
 
-**Incorpore Medios Sociales.** Aliente a los alumnos a que publiquen en medios sociales (cuando sea apropiado) cuando hayan finalizado una actividad, por ejemplo "He terminado una Hora de Programación con ________, ¿y tu?" #HoraDeProgramacion” o “He hecho una #HoraDeProgramacion como parte de la #CSEdWeek. ¿y tu? @Scratch.” Use el HashTag **#HoraDeProgramacion** (Con letras H, D, P mayúsculas)
+**Incorpore Medios Sociales.** Aliente a los alumnos a que publiquen en medios sociales (cuando sea apropiado) cuando hayan finalizado una actividad, por ejemplo "He terminado una Hora de Código con ________, ¿y tu? #HoraDeCódigo” o “He hecho una #HoraDeCódigo como parte de la #CSEdWeek. ¿y tu? @Scratch.” Use el HashTag **#HoraDeCódigo** (Con letras H, D, C mayúsculas)
 
 **Crea tu actividad en otros idiomas además de en inglés**. Este año el foco de esta campaña es internacional y nos gustaría tener actividades para ofrecer a los participantes que no hablan inglés.
 
@@ -167,15 +167,15 @@ Visita la [página de envío de actividades para la Hora de Programación](https
 
 ** No hagas necesario el login o pago para que los estudiantes puedan probar el tutorial. ** Los tutoriales que requieren login o pago no serán listados.
 
-**Make sure your tutorial can be used in a [Pair Programming paradigm](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).**
+**Asegúrese de que su tutorial puede ser utilizado [Programación en Parejas](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).**
 
-The three rules of pair programming in a school setting:
+Las tres reglas de programación en el entorno escolar:
 
   * El conductor controla el ratón y el teclado.
   * El navegante hace sugerencias, señala errores y hace preguntas. 
   * Los estudiantes deben cambiar roles por lo menos dos veces en una sesión.
 
-Benefits of Pair Programming:
+Beneficios de la programación en parejas:
 
   * Los estudiantes pueden ayudarse mutuamente en lugar de pedir ayuda al profesor
   * Mostrar que la codificación no es una actividad individual, sino que involucra la interacción social
@@ -187,9 +187,9 @@ Benefits of Pair Programming:
 
 ## Guía de Marca Registrada
 
-With ~40 million students having tried the Hour of Code, and over 97% of participating teachers asking us to repeat the event annually, we are taking steps to make sure we set up the Hour of Code as a movement that can repeat annually with greater fidelity and without confusion.
+Habiendo probado 40 millones de estudiantes la hora de código, y con más de un 97% de los profesores participantes pidiendo que el evento se repita anualmente, estamos tomando medidas para asegurarnos de establecer la hora del código como un movimiento que pueda repetirse anualmente con mayor fidelidad y sin confusión.
 
-One piece of this is to protect the trademark "Hour of Code" to prevent confusion. Many of our tutorial partners have used "Hour of Code" on your web sites. We don't want to prevent this usage, but we want to make sure it fits within a few limits:
+Una pieza de esto es para proteger la marca "Hora de código" para evitar confusiones. Muchos de nuestros tutores asociados han usado "Hora de código" en sus sitios web. No queremos evitar este uso, pero queremos asegurarnos de que encaje dentro de unos límites:
 
   1. Cualquier referencia a "Hour Of Code" debe usarse de tal manera que no sugiera que es tu propia marca, sino hacer referencia a la "Hour Of Code" como un movimiento de base. Un buen ejemplo es: "Participa en la Hour of Code patrocinada por ACMECorp.com". Un mal uso es: "Participa en la Hour of Code de ACME Corp"
   2. Usa un "TM" subscrito en los lugares más donde menciones la "Hora de Programación", así como en tu sitio web o en descripciones interna de apps
@@ -205,15 +205,15 @@ One piece of this is to protect the trademark "Hour of Code" to prevent confusio
 
 ## Rastrear un Pixel
 
-Para rastrear con más precisión la participación le pedimos a cada socio que hace tutoriales incluir una imagen de 1 pixel en la primera y ultima hoja de sus tutoriales de Hora de Programación (Una imagen de un pixel al inicio y una imagen de un pixel en la página final. No en páginas intermedias).
+Para rastrear con más precisión la participación le pedimos a cada socio que hace tutoriales incluir una imagen de 1 pixel en la primera y última hoja de sus tutoriales de Hora de Código (Una imagen de un pixel al inicio y una imagen de un pixel en la página final. No en páginas intermedias).
 
-This will allow us to count users who you directly recruit to visit your website to do their Hour of Code, or users who visit when a teacher types your URL directly on their whiteboard. It will lead to more accurate participation counts for your tutorial, which will help you attract users. If you integrate the pixel at the end it will also allow us to measure tutorial completion rates.
+Esto permitirá a los usuarios cuentar directamente reclutar y visitar su página web para hacer su hora de código, o los usuarios que la visitan cuando un profesor escriba tu URL directamente en su pizarra. Conducirá a cuentas de participación más precisas para el tutorial, que le ayudará a atraer a los usuarios. Si usted integrar el pixel al final también permitirá medir las tasas de finalización.
 
-If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
+Si tu tutorial es aprobado e incluido en la última páginal, Code.org le proporcionará un seguimiento único píxel para integrar su tutorial. Ver ejemplo abajo.
 
-***NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)***
+***Nota: esto no es importante hacerlo para instalar aplicaciones (apps iOS/Android o aplicaciones de escritorio-install)***
 
-**Example tracking pixels for AppInventor:**
+**Ejemplo de pixeles de rastreo para AppInventor:**
 
 IMG SRC="http://code.org/api/hour/begin_appinventor.png/"
 

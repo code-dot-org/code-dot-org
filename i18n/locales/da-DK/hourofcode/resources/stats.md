@@ -1,21 +1,17 @@
 * * *
 
-title: Blurbs and Stats layout: wide nav: resources_nav
+Titel: Efterskrift og statistik layout: bred nav: resources_nav
 
 * * *
 
-[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
-
 # Efterskrift og statistik
 
-## Use this short blurb in newsletters
+## Brug denne kort tekst i et nyhedsbrev
 
 ### Bring kodning til din skole. Start med the Hour of Code
 
-Computere findes overalt, men langt færre skoler underviser i programmering end for 10 år siden. De gode nyheder er, at vi er på vej til at ændre dette. Hvis du hørte om [Hour of Code](<%= hoc_uri('/') %>) sidste år, så ved du måske at det skabte historie. På en uge, prøvede 15 millioner elever at programmere! The [ Hour of Code](<%= hoc_uri('/') %>) er en en-times introduktion til kodning, skabt for at afmystificere kodning og for at vise, at alle kan lære det grundlæggende. [ Tilmeld dig](<%= hoc_uri('/') %>) og vær vært for Hour of Code i dagene 8.-14. december, under Computer Science Education Week. Hjælp med at nå målet, at 100 millioner elever bruger en time på kodning inden udgangen af året. Add your school to the map, go to <http://hourofcode.com>
+Computere findes overalt, men langt færre skoler underviser i programmering end for 10 år siden. De gode nyheder er, at vi er på vej til at ændre dette. If you heard about the [Hour of Code](<%= hoc_uri('/') %>) last year, you might know it made history. På en uge, prøvede 15 millioner elever at programmere! The [Hour of Code](<%= hoc_uri('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= hoc_uri('/') %>) to host an Hour of Code this December 8-14 during Computer Science Education Week and help reach 100 million students by the end of the year. Add your school to the map, go to <http://hourofcode.com>
 
-## Infographic version:
+## Infografik:
 
 ![image](http://code.org/images/fit-8000/Code.org_infographic.png)
-
-<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

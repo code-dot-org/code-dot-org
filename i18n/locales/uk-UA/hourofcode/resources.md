@@ -8,26 +8,22 @@ title: Ресурси layout: wide nav: resources_nav
   <h1 class="col-sm-6">
     Ресурси
   </h1>
-  
-  <div class="col-sm-6 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Зареєструйте свій захід</button></a>
-  </div>
 </div>
 
 <% if @country == 'ie' %>
 
-## Hosting an Hour of Code in Ireland? [See the how-to guide](<%= hoc_uri('/resources/how-to-ireland') %>)
+## Проводите Годину коду в Ірландії? [ Подивіться інструкції](<%= hoc_uri('/resources/how-to-ireland') %>)
 
 <% else %>
 
-## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+## Проводите Годину коду? [ Подивіться інструкції](<%= hoc_uri('/resources/how-to') %>)
 
 <% end %>
 
 <a id="handouts"></p> 
 
 <h2>
-  Use this handout to spread the word
+  Поширюйте інформацію у цьому буклеті
 </h2>
 
 <p>
@@ -35,7 +31,7 @@ title: Ресурси layout: wide nav: resources_nav
 </p>
 
 <h2>
-  Give this handout to teachers and schools
+  Передайте цю роздруківку вчителям та школам
 </h2>
 
 <p>
@@ -46,7 +42,7 @@ title: Ресурси layout: wide nav: resources_nav
   <a id="videos"></p> 
   
   <h2>
-    Show these videos to inspire students
+    Покажіть ці відео, щоб надихати учнів
   </h2>
   
   <div style="float:left; padding:10px">
@@ -90,7 +86,7 @@ title: Ресурси layout: wide nav: resources_nav
     <a id="posters"></p> 
     
     <h2>
-      Hang these posters in your school
+      Повісьте плакати у школі
     </h2>
     
     <p>
@@ -102,7 +98,7 @@ title: Ресурси layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Feature these banners on your website
+      Розмістіть банери на своєму сайті
     </h2>
     
     <p>
@@ -114,7 +110,7 @@ title: Ресурси layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Post these on social media
+      Розмістіть у соціальних мережах
     </h2>
     
     <p>
@@ -122,7 +118,7 @@ title: Ресурси layout: wide nav: resources_nav
     </p>
     
     <p>
-      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/image/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     
     <p>
@@ -130,7 +126,7 @@ title: Ресурси layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Send these emails to help promote the Hour of Code
+      Розішліть ці листи, щоб поширити інформацію про Годину коду
     </h2>
     
     <p>
@@ -138,27 +134,27 @@ title: Ресурси layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Ask your school, employer or friends to sign up:
+      Запросіть підписатись свою школу, працедавця чи друзів:
     </h2>
     
     <p>
-      Комп'ютери поширені повсюдно, але все менше шкіл викладають інформатику, аніж 10 років тому. Хорошою новиною є те, що ми можемо це змінити. If you heard about the Hour of Code last year, you might know it made history. Лише за один тиждень 15 мільйонів учнів познайомились з інформатикою!
+      Комп'ютери поширені повсюдно, але все менше шкіл викладають інформатику, аніж 10 років тому. Хорошою новиною є те, що ми можемо це змінити. Якщо ви чули про Годину коду в минулому році, можливо ви знаєте, що вона увійшла в історію. Лише за один тиждень 15 мільйонів учнів познайомились з інформатикою!
     </p>
     
     <p>
-      Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+      Інформатика була на домашніх сторінках Google, MSN, Yahoo! та Діснею. Президент Обама, Шакіра і Ештон Катчер розпочали Годину коду відео-зверненням. Більше 100 партнерів підтримали цей рух.
     </p>
     
     <p>
-      This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014.
+      Цього року ми плануємо перевершити себе. Запрошуємо приєднатись до Години коду 2014. Зареєструйте свої заходи Години коду протягом тижня інформатики 8-14 грудня 2014 року.
     </p>
     
     <p>
-      Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
+      Поширюйте інформацію. Проведіть захід. Запросіть місцеву школу приєднатися. Або спробуйте Годину коду самі - кожен може вивчити основи.
     </p>
     
     <p>
-      Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com/<%= @country %>
+      Допомогти нам залучити 100 мільйонів учнів до кінця року! Починаємо з http://hourofcode.com/<%= @country %>
     </p>
     
     <p>
@@ -166,51 +162,51 @@ title: Ресурси layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Invite media to attend your event:
+      Запросіть ЗМІ на свій захід:
     </h2>
     
     <p>
-      <strong>Subject line:</strong> Local school joins mission to introduce 100m students to computer science
+      <strong>Тема:</strong> Місцева школа приєднується до кампанії із залучення 100 мільйонів учнів до інформатики
     </p>
     
     <p>
-      Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and minorities are severely underrepresented. Good news is, we’re on our way to change this.
+      Комп'ютери поширені повсюдно, але все менше шкіл викладають інформатику, аніж 10 років тому. Дівчатка та національні меншини представлені у галузі надто мало. Хороша новина полягає у тому, що ми можемо це змінити.
     </p>
     
     <p>
-      In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+      За один тиждень минулого року 15 мільйонів учнів спробували програмування! Інформатика була на домашніх сторінках Google, MSN, Yahoo! та Діснею. Президент Обама, Шакіра і Ештон Катчер розпочали Годину коду відео-зверненням. Більше 100 партнерів підтримали цей рух.
     </p>
     
     <p>
-      Now the Hour of Code movement is aiming for 100 million students.
+      Тепер рух Години коду прагне охопити 100 мільйонів учнів.
     </p>
     
     <p>
-      That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 8-14.
+      Ось чому кожен із [X number] учнів школи [SCHOOL NAME] приєднується до найбільшої освітньої події в історії: Години коду, протягом тижня інформатики 8-14 грудня.
     </p>
     
     <p>
-      I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
+      Я хочу запросити Вас відвідати наші вступні збори і побачити, як діти починають роботу [DATE].
     </p>
     
     <p>
-      The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a statement that today’s generation of students are ready to learn critical skills for 21st century success. Please join us.
+      Година коду, що проводиться некомерційною організацією Code.org і більш як сотнею інших, є доказом того, що нинішнє покоління учнів готове вчитися необхідним навичкам для успіху в 21-му столітті. Приєднуйтеся.
     </p>
     
     <p>
-      <strong>Contact:</strong> [YOUR NAME], [TITLE], cell: (212) 555-5555
+      <strong>Контакт:</strong> [YOUR NAME], [TITLE], тел.: (212) 555-5555
     </p>
     
     <p>
-      <strong>When:</strong> [DATE and TIME of your event]
+      <strong>Коли:</strong> [Дата і час Вашого заходу]
     </p>
     
     <p>
-      <strong>Where:</strong> [ADDRESS and DIRECTIONS]
+      <strong>Де:</strong> [Адреса і вказівки з добирання]
     </p>
     
     <p>
-      I look forward to being in touch.
+      Якщо є питання, будь ласка, звертайтесь.
     </p>
     
     <p>
@@ -218,39 +214,39 @@ title: Ресурси layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Tell parents about your school's event:
+      Повідомте батьків про заходи у вашій школі:
     </h2>
     
     <p>
-      Dear Parents,
+      Шановні батьки,
     </p>
     
     <p>
-      We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly hinge on understanding how technology works. But only a tiny fraction of us are learning computer science, and less students are studying it than a decade ago.
+      Ми живемо у світі, наповненому технологіями. І ми знаємо, що яку б професію не обрали наші учні у майбутньому, їхній успіх залежатиме від розуміння принципів роботи цих технологій. Але лише невеликий відсоток з нас вивчають інформатику і це менше, ніж десять років тому.
     </p>
     
     <p>
-      That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
+      Тому вся наша школа приєднується до найбільшої освітньої події в історії: Години коду, протягом тижня інформатики (8-14 грудня 2014 року). Минулого року інформатику спробували 15 мільйонів учнів. Цього року ми приєднуємось до 100 мільйонів учнів з усього світу!
     </p>
     
     <p>
-      Our Hour of Code is a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on your social media channels and consider hosting additional Hour of Code events in the community.
+      Наша Година коду є доказом того, що [Назва школи] готова навчати цих базових навичок 21го століття. Щоб продовжити вивчення програмування з нашими учнями, ми хочемо посилити важливість заходів Години коду. Я запрошую Вас до співпраці, поширення інформації серед ЗМІ, у соціальних мережах та проведення ознайомчих заходів у спільноті.
     </p>
     
     <p>
-      This is a chance to change the future of education in [TOWN/CITY NAME].
+      Це шанс змінити майбутнє освіти в [місто].
     </p>
     
     <p>
-      See http://hourofcode.com/<%= @country %> for details, and help spread the word.
+      Див http://hourofcode.com/<%= @country %> для детальнішої інформації та поширення її.
     </p>
     
     <p>
-      Sincerely,
+      З повагою,
     </p>
     
     <p>
-      Your principal
+      Директор
     </p>
     
     <p>
@@ -258,33 +254,29 @@ title: Ресурси layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Invite a local politician to your school's event:
+      Запросіть місцевих політиків на захід у Вашій школі:
     </h2>
     
     <p>
-      Dear [Mayor/Governor/Representative/Senator LAST NAME]:
+      Шановний [Прізвище мера, депутата, губернатора]:
     </p>
     
     <p>
-      Did you know that in today’s economy, computing jobs outnumber students graduating into the field by 3-to-1? And, computer science is foundational for <em>every</em> industry today. Yet 90% of schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
+      Чи знаєте ви, що в умовах сучасної економіки, робочих місць у сфері інформаційних технологій утричі більше, ніж студентів-випускників? А інформатика сьогодні є основоположною для <em>усіх</em> сфер діяльності. Проте у 90% шкіл цьому не навчають. Ми, у школі [SCHOOL NAME], намагаємося це змінити.
     </p>
     
     <p>
-      That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
+      Тому вся наша школа приєднується до найбільшої освітньої події в історії: Години коду, протягом тижня інформатики (8-14 грудня 2014 року). Минулого року інформатику спробували 15 мільйонів учнів. Цього року ми приєднуємось до 100 мільйонів учнів з усього світу!
     </p>
     
     <p>
-      I'm writing to invite you to take part in our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st century skills. We want to ensure that our students are on the forefront of creating technology of the future--not just consuming it.
+      Я хочу запросити Вас взяти участь в нашому заході Години коду і виступити на вступних зборах. Вони відбудуться [Дата, Час, Місце], і ми хотіли б наголосити, що [Місто] готове навчати учнів критичним навичкам 21-го століття. Ми хочемо, щоб переконатися, що наші перебувають в авангарді створення технологій майбутнього – а не просто їх споживання.
     </p>
     
     <p>
-      Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
+      Будь ласка, зв'яжіться зі мною за [номер телефону чи електронна адреса]. Чекатиму Вашої відповіді.
     </p>
     
     <p>
-      Sincerely, [NAME], [TITLE]
-    </p>
-    
-    <p>
-      <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Зареєструйте свій захід</button></a>
+      З повагою, [NAME], [TITLE]
     </p>

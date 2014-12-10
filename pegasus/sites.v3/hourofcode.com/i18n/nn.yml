@@ -5,7 +5,7 @@ nn:
   coming_soon: Kjem snart
   front_header_banner: Bli med på det største læringsarrangementet i historia, 8. til 14. desember 2014
   front_intro_default: 'Kodetimen er ei global rørsle som når ut til eit titalls millionar elever i over 180 land. Kven som helst kan organisere ein kodetime kvar som helst. Timeslange leksjonar er tilgjengelege på over 30 språk. Det trengs inga erfaring. <strong>Alder: frå 4 til 104.</strong>'
-  front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of people in 180+ countries. Anyone can organize an Hour of Code event. Over 3M people did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
+  front_intro_default_uk: 'Kodetimen (The Hour of Code) er ei global rørsle som råkar millionar av menneske i meir enn 180 land. Kven som helst kan organisera eit Kodetime-arrangement. Over 3 millionar menneske utførte den første Kodetimen i Storbritannia. La oss dobla dette i desember! <strong>Det er ikkje nødvendig med erfaring. Passar for aldersgruppa frå 4 til 104 år.</strong>'
   front_watch_video: Sjå den nye videoen
   header_menu_resources: Ressursar
   header_menu_faq: Spørsmål og svar
@@ -27,15 +27,15 @@ nn:
   prizes_all: Premiar til kvar einaste arrangør
   prizes_every_organizer: Kvar arrangør av Kodetimen vil få lagringsplass i Dropbox eller Skype-kreditt som takk for innsatsen
   prizes_technology: 'Ein offentleg skule i kvar stat i USA (& Washington DC) vil vinne utstyr til ein verdi av 10 000 dollar'
-  prizes_tech_chats: '# classrooms will win video chats with very special guests'
-  prizes_robots: 100 classrooms will win a set of programmable robots
-  prizes_brilliant: One school in each province and territory will receive $2000 for a Brilliant Project
+  prizes_tech_chats: '# klasserom vil vinne videosamtalar med veldig spesielle gjester'
+  prizes_robots: 100 klasserom vil vinne eit sett med programmerbare robotar
+  prizes_brilliant: Ein skule i kvar provins og territorie vil motta $2000 for et brilliant prosjekt (Kun i UK)
   prizes_actua: "15 schools across Canada will receive 2 hands-on STEM workshops by one of Actua's members"
   prizes_details: Detaljar
-  whats_next_header: "What's Next?"
-  whats_next_description: "We'll send you materials and helpful tips for your event. New 2014 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
-  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>How to run an Hour of Code</a>"
-  whats_next_promote: "<a href='http://hourofcode.com/resources'>Promote the Hour of Code</a>"
+  whats_next_header: Kva er neste?
+  whats_next_description: "Vi sender deg materiell og nyttige tips for ditt arrangement. Nye 2014-oppgaver kommer snart for alle nettlesere, mobiltelefoner, ja til og med oppgåver der du ikkje treng datamaskin!<a href='http://code.org/learn'>Prøv oppgåvene me har nå</a>"
+  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Korleis gjennomføre ein Kodetime</a>"
+  whats_next_promote: "<a href='http://hourofcode.com/resources'>Reklamer for Kodetimen</a>"
   n_have_learned_an_hoc: '<h1>#</h1><h3>har prøvd ein</h3><h2>KODETIME</h2>'
   anybody_can_learn: Alle kan lære.
   register_now: Registrer deg no
@@ -43,16 +43,16 @@ nn:
   front_join_us_description: Datavitenskap er eit grunnlag for kvar elev. Hjelp oss til å introdusere det for 100 millonar elevar.
   front_join_us_button: Bli med
   front_what_is_hoc: Kva er Kodetimen?
-  front_join_us_header: Anyone can learn the basics, and have fun doing it!
+  front_join_us_header: Alle kan lære det grunnleggjande, og har det gøy medan dei gjer det!
   front_join_us_header_uk: 'Organiser ein kodetime når dsom helst i perioda 8. - 14. desember, og vis at kven som helst kan lære seg grunnleggjande datavitskap og ha det gøy medan dei lærer!'
   front_join_us_teacher: Er du ein lærar?
-  front_join_us_inspire: Inspire students with
-  front_join_us_inspire_link: an Hour of Code in the classroom.
+  front_join_us_inspire: Inspirer elevane med
+  front_join_us_inspire_link: Kodetimen i klasserommet.
   front_join_us_parent: Er du ein forelder?
   front_join_us_ask_link: Spør den lokale skulen din om
   front_join_us_ask: å arrangere ein kodetime.
   front_join_us_computer_science: Er du entusiatisk for datavitskap?
-  front_join_us_spread: Spread the word.
+  front_join_us_spread: Spre ordet.
   front_join_us_organize: Eller arranger ein kodetime sjølv.
   front_join_us_how_to_run: Les om korleis du kan arrangere ein kodetime
   front_join_us_help_promote: Hjelp oss å med promotering av kodetimen
@@ -62,7 +62,7 @@ nn:
   front_join_us_try: Prøv
   front_join_us_host: Arranger
   front_join_us_support: Støtt
-  signup_header: 'Organize an Hour of Code event during Dec 8 - 14, and register it here.'
+  signup_header: 'Organiser eit Kodetime-arrangement i løpet av 8. - 14. desember og registrer det her.'
   signup_name_label: Namnet ditt
   signup_email_label: E-post
   signup_organization_name_label: Skule eller organisasjon
@@ -74,7 +74,7 @@ nn:
   signup_send_posters_flag_label: 'Send <a href= "/resources#posters">plakatar</a> til skulen eller organisasjonen min'
   signup_send_posters_address_label: Adressa til skulen eller organisasjonen
   signup_whole_school_flag_label: Dette arrangementet er for heile skulen
-  signup_your_event: Registrer arrangement ditt
+  signup_your_event: Registrer arrangementet ditt
   signup_name_placeholder: Namnet ditt
   signup_email_placeholder: deg@eksempel.no
   signup_organization_name_placeholder: For eksempel Lillevik skule
@@ -89,9 +89,12 @@ nn:
   signup_thank_you_message: Vi har sendt deg bekreftelse på e-post med informasjon for å hjelpe deg i gong.
   map_header: Talet på Kodetime-arrangementer over heile verda
   map_header_company: '# by company organizers'
-  meta_tag_og_title: Kodetimen kjem
+  map_search_placeholder: Search for Hour of Code events
+  map_search_search: Search
+  map_search_reset: Reset
+  meta_tag_og_title: The Hour of Code is here
   meta_tag_og_description: 'Kodetimen er ei verdensomsfattande rørsle som når ut til titalls millionar elevar i meir enn 180 land og fins på over 30 språk. Alder: 4 til 104.'
-  meta_tag_twitter_title: Kodetimen kjem
+  meta_tag_twitter_title: The Hour of Code is here
   meta_tag_twitter_description: 'Kodetimen er ei verdensomsfattande rørsle som når ut til titalls millionar elevar i meir enn 180 land og fins på over 30 språk. Alder: 4 til 104.'
   twitter_default_text: 'Eg skal vera med på #kodetime #HourOfCode i år, skal du? @codeorg'
   hardware_prizes_form_name_label: Namnet ditt
@@ -114,8 +117,8 @@ nn:
   hardware_prizes_form_submit_label: Send
   hoc_faq_title: Vanlege spørsmål
   hoc_faq_what_is_hoc_q: Kva er Kodetimen?
-  hoc_faq_what_is_hoc_a: "Kodetimen er ein timelang introduksjon til informasjonsvitskap, laga for å avmystifisere programmering og vise at alle kan lære det grunnleggjande. <a href='http://code.org/learn'> Sjå leksjonane</a>, og følg med når det kjem nye til kodetimen 2014."
-  hoc_faq_last_year: Prøv leksjonane frå i fjor
+  hoc_faq_what_is_hoc_a: "Kodetimen er ein timeslang introduksjon til datavitskap, designe for å avmystifisere kode og vise at alle kan læra det grunnleggande.<a href='http://code.org/learn'>Sjekk ut oppgåvene</a>."
+  hoc_faq_last_year: Prøv oppgåvene
   hoc_faq_when_is_hoc_q: Når er kodetimen?
   hoc_faq_when_is_hoc_a: "Hvem som helst kan arrangere ein Kodetime når som helst, men målet med grasrot-kampanja er at titalls millionar elevar skal få prøve ein Kodetime mellom 8. og 14. desember 2014, for å feire <a href='http://csedweek.org'>Datavitskap veka</a>. Er det ein bestemt <i>time</i>? Nei. Du kan halde ein Kodetime kva tid som helst i veka. (Og om du ikkje kan gjere det den veka, gjer det veka før eller etter)."
   hoc_faq_why_cs_q: Kvifor datavitskap?
@@ -128,12 +131,20 @@ nn:
   hoc_faq_host_a: "Sjølvsagt! Kodetime-aktivitetar er brukarstyrte. Alt du treng er å <a href='http://code.org/learn'>sjå på våre noverande veiledningar</a>, plukke den du ynskjer, og velgje ein &mdash; me gjer resten. Me har også val for alle aldre og erfaringsnivå, frå barnehagen og opp. Start hendingsplanleggjinga ved å lese vår <a href='target-resources-how-to'>veiledning</a>."
   hoc_faq_need_computers_q: Treng eg datamaskiner til kvar deltakar?
   hoc_faq_need_computers_a: "Nei. Me har Kodetime-veiledningar som fungerar på PC, smarttelefonar, nettbrett og nokre som ikkje treng datamaskiner i det heile teke. Du kan delta uansett kvar du er, med det du har. <p><i>Her er nokre val:</i><br><ul><li><b>Arbeid i par.</b> Forsking viser at elevar lærer best ved <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>parprogrammering</a>, ved å dele ei datamaskin og arbeide saman. Oppfordre elevane til å gå i par.</li><li><b>Bruk ei videokanon.</b> Om du har ein prosjektør og ein skjerm for ei datamaskin tilknytta internett, kan heile gruppa gjere ein Kodetime saman. Sjå videoar saman og ta runder der kvar og ein løyser gåter eller svarer på spørsmål</li><li><b>Heilt utan straum.</b> Me har også veiledningar som ikkje krev datamaskiner i det heile teke.</li></ul>"
-  hoc_faq_international_q: 'I am in <country>. How do I participate internationally?'
-  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='target-resources'>here</a>."
+  hoc_faq_international_q: 'Eg er i <country>. Korleis kan eg delta internasjonalt?'
+  hoc_faq_international_a: "Kven som helst kan organisere eit Kodetime-arrangement, kor som helst i verda. I fjor deltok elevar over heile verda saman i Kodetimen. Finn ut meir <a href='target-resources'> her</a>."
   hoc_faq_tutorial_q: Korleis kan eg lage ei veiledning for Kodetimen?
   hoc_faq_tutorial_a: "Om du er interessert i å bli ein veiledningspartner, <a href='target-tutorial-guidelines'>sjå våre retningslinjer og instruksjonar</a>. Me ynskjer å skape mange ulike mogelegheiter, men primærmålet er å optimalisere erfaringa for elevane og lærarane som er nye innan datavitskap."
   hoc_faq_more_questions_q: Har du framleis fleire spørsmål?
   hoc_faq_more_questions_a: "Sjå om du finn eit svar i vårt <a href='http://support.code.org'>brukarstøtteforum</a>."
+  hoc_faq_scratch_q: I skal bruke Scratch i Kodetimen, men kva om elevane har iPads i staden for laptops?
+  hoc_faq_scratch_a: "Scratch kjøyrer ikkje på nettbrett. Om elvane er små kan dei bruke appen ScratchJR for iPad(for dei som kan lese). Om du ser på oppgåvene på<a href='http://code.org/learn'>Code.org/learn</a>kan du finne andre oppgåver som passar for iPad - frå Code.org, Tynker, Lightbot eller CodeSpark."
+  hoc_faq_account_q: Må elevane logge på med ein konto?
+  hoc_faq_account_a: "Nei. Registrering eller innlogging er ikkje naudsynt for at elevar skal prøve Kodetimen. Dei fleste <a href='http://code.org/learn/beyond'>oppfølgingskursa</a>krev ein konto for å lagre elevanes framgong."
+  hoc_faq_frozen_q: Kvar er oppgåvene med Anna og Elsa?
+  hoc_faq_frozen_a: "Frost-oppgåvene er på<a href='http://code.org/learn'>Code.org/learn</a>. Me håpar du likar dei!"
+  hoc_faq_high_school_q: Kva for aktivitet bør eg gjere med elevar i vidaregåande skule?
+  hoc_faq_high_school_a: "Me anbefaler å starte med begynneroppgåvene på <a href='http://code.org/learn'>Code.org/learn</a>for alle aldersgrupper, for eksempel oppgåva med Angry Birds eller med Anna og Elsa frå Frost. Ein elev i vidaregåande skule bør klare desse på 30 minutt og kan gå vidare til ei meir avansert oppgåve i JavaScript, frå for eksempel KhanAcademy eller CodeHS."
   hoc_faq_more_questions_br_q: Outras dúvidas?
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
@@ -156,33 +167,33 @@ nn:
   stats_girls_million: Over 10 millionar jenter i 2013
   stats_nina: '«Kvar dag gav det same resultatet &mdash; 100 % engasjement.» – Nina Nichols Peery, lærar'
   stats_student: '«Eg visste dette var ein <b>sjanse eg berre ville få éin gong i livet</b>.» – Mariana Alzate, femteklassing'
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  stats_michael: '«Eg har <b>aldri, nokonsinne</b> sett elevane mine så interessert i å lære.» – Michael Clark, lærar'
   resources_how_to: Veiledning for lærarar
-  resources_how_to_events: Event how-to guide
-  resources_how_to_districts: How-to guide for districts
-  resources_how_to_officials: How-to guide for public officials
+  resources_how_to_events: Arrangementsguide
+  resources_how_to_districts: Områdeguide
+  resources_how_to_officials: How-to guide for offentlige tjenestemenn
   resources_handouts: Flygeblad for å spreie ordet
   resources_videos: Videoar
   resources_posters: Plakatar
   resources_social: Sosialt
   resources_banners: Bannere
   resources_emails: Eksempel-epostar
-  resources_stats: Useful stats and blurbs
+  resources_stats: Nyttige statistikkar og sitat
   resources_press_kit: Presse-sett
   events_title: Alle Kodetime-hendingar
   events_nav_all: Alle hendingar
   events_nav_whole_schools: Heile skular
   events_nav_special: Spesialhendingar
-  events_nav_orgs: Organizations
+  events_nav_orgs: Organisasjonar
   events_all_title: Alle Kodetime-hendingar
   events_whole_school_title: Kodetime-hendingar for heile skular
   events_special_title: Spesielle Kodetime-hendingar
-  events_orgs_title: All Hour of Code events organized by Partner Organizations
+  events_orgs_title: Alle Kodetime-arrangementer organisert av partnere
   event: hending
   events: arrangement
   footer_copyright_message: Opphavsrett 2014 Code.org. Alle rettigheter reservert.
   footer_trademark_message: Varemerket Hour of Code™ høyrer til Code.org.
-  footer_menu_partners: Partnerar
+  footer_menu_partners: Partnarar
   footer_menu_contact: Kontakt oss
   footer_menu_support: Kundestøtte
   footer_menu_terms: Vilkår
