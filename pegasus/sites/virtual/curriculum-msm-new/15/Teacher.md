@@ -5,7 +5,7 @@ theme: none
 ---
 
 
-<%= partial('curriculum_header', :unittitle=> 'MSM', :lesson=> 15, :unplugged=>false, :title=> 'Play Lab: Booleans',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>(30-60)) %>
+<%= partial('curriculum_header', :unittitle=> 'MSM', :lesson=> 15, :unplugged=>false, :title=> 'Play Lab: Booleans',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>('30-60')) %>
 
 [content]
 

@@ -1,5 +1,5 @@
 ---
-title: Videogames and Coordinate Planes
+title: Video Games and Coordinate Planes
 view: page_curriculum
 theme: none
 ---
@@ -12,7 +12,7 @@ theme: none
 [together]
 
 ## Lesson Overview
-Students discuss the components of their favorite videogames, and discover that they can be reduced to a series of coordinates. They then explore coordinates in Cartesian space, and identify the coordinates for the characters in a game at various points in time. Once they are comfortable with coordinates, they brainstorm their own games and create sample coordinate lists for different points in time in their own game.
+Students discuss the components of their favorite video games, and discover that they can be reduced to a series of coordinates. They then explore coordinates in Cartesian space, and identify the coordinates for the characters in a game at various points in time. Once they are comfortable with coordinates, they brainstorm their own games and create sample coordinate lists for different points in time in their own game.
 
 [summary]
 
@@ -22,7 +22,7 @@ Students discuss the components of their favorite videogames, and discover that 
 1) [Vocabulary](#Vocab)<br/>
 2) [Learning a Language](#GetStarted)  
 
-### **Activity: Videogames and the Coordinate Plane**
+### **Activity: Video Games and the Coordinate Plane**
 
 3) [Dissecting a Demo](#Activity1)<br/>
 4) [Coordinate Planes](#Activity2)  
@@ -77,8 +77,12 @@ _Connect the material that’s to come with things students already know:_
 - Does anyone speak a second (or third) language? Do you speak a different language than your parents/grandparents?
 - Are there languages that share features in common such as a common root (Romance, Germanic) or alphabet (Latin, Cyrillic, Arabic, Kanji)?
 - Are there languages that are designed for specific purposes or within certain constraints (sign language, Esperanto)?
-- Programming is very much a language, with its own syntax, semantics, etc
+- Math is a language, just like English, Spanish, or any other language!
+  - We use nouns, like "bread", "tomato", "mustard" and "cheese" to describe physical objects. Math has values, like the numbers 1, 2 or 3, to describe quantities
+  - We also use verbs like "toast", "slice", "spread" and "melt" to describe operations on these nouns. Mathematics has functions like addition and subtraction, which are operations performed on numbers.
+  - Just as you can "slice piece of bread", a person can also "add four and five".
 
+A mathematical expression is like a sentence: it’s an instruction for doing something. The expression 4+5 tells us to add 4 and 5. To evaluate an expression, we follow the instructions in the expression. The expression 4+5 evaluates to 9.
 
 [/together]
 
@@ -87,7 +91,7 @@ _Connect the material that’s to come with things students already know:_
 ## Activities:
 ### <a name="Activity1"></a> 3) Dissecting a Demo
 
-Let’s begin by exploring a simple videogame, and then figuring out how it works. Open this link to play the game, and spend a minute or two exploring it. You can use the arrow keys to move the ninja left, right and jump - try to catch the unicorn and avoid the dragon!
+Let’s begin by exploring a simple video game, and then figuring out how it works. Open this link to play the game, and spend a minute or two exploring it. You can use the arrow keys to move the ninja left, right and jump - try to catch the unicorn and avoid the dragon!
 
 This game is made up of characters, each of which has its own behavior. The unicorn moves from the right to the left, as does the dragon. The ninja only moves when you hit the arrow keys, and can move left, right, up and down. We can figure out how the game works by first understanding how each character works.
 
@@ -158,7 +162,7 @@ The structure of your students' games will very closely resemble the demo they'v
 [together]
 
 ## Assessment
-### <a name="Assessment"></a>6) Videogames and Coordinate Planes Assessment
+### <a name="Assessment"></a>6) Video Games and Coordinate Planes Assessment
 
 Visit [MSM Stage 1](http://studio.code.org/s/msm/stage/1/puzzle/1) in Code Studio to complete the assessments.
 
