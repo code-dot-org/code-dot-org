@@ -293,6 +293,11 @@ namespace :seed do
     SecretPicture.setup
   end
 
-  task all: [:videos, :concepts, :scripts, :trophies, :prize_providers, :callouts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
-  task incremental: [:videos, :concepts, :scripts_incremental, :trophies, :prize_providers, :callouts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
+  task clear_cache: :environment do
+    Rake::Task['tmp:create'].invoke if Rails.cache.is_a? ActiveSupport::Cache::FileStore
+    Rails.cache.clear
+  end
+
+  task all: [:videos, :concepts, :scripts, :trophies, :prize_providers, :callouts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures, :clear_cache]
+  task incremental: [:videos, :concepts, :scripts_incremental, :trophies, :prize_providers, :callouts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures, :clear_cache]
 end

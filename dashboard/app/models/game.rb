@@ -11,6 +11,13 @@ class Game < ActiveRecord::Base
     (@@game_cache ||= Game.all.index_by(&:name))[name].try(:id)
   end
 
+  def self.by_id(id)
+    cache = Rails.cache.fetch('Game.all') do
+      Game.all.index_by(&:id)
+    end
+    cache[id] || find(id)
+  end
+
   def self.custom_maze
     @@game_custom_maze ||= find_by_name("CustomMaze")
   end

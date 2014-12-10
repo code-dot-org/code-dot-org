@@ -26,46 +26,25 @@ class Script < ActiveRecord::Base
   FROZEN_NAME = 'frozen'
   PLAYLAB_NAME = 'playlab'
   SPECIAL_NAME = 'special'
-
   FLAPPY_NAME = 'flappy'
   TWENTY_HOUR_NAME = '20-hour'
 
   def self.twenty_hour_script
-    @@twenty_hour_script ||= Script.includes(script_levels: {level: [:game, :concepts] }).find(TWENTY_HOUR_ID)
-  end
-
-  def self.frozen_script
-    @@frozen_script ||= Script.includes([{script_levels: [{level: [:game, :concepts] }, :stage]}, :stages]).find_by_name(FROZEN_NAME)
-  end
-
-  def self.hoc_script
-    @@hoc_script ||= Script.includes([{script_levels: [{level: [:game, :concepts] }, :stage]}, :stages]).find_by_name(HOC_NAME)
-  end
-
-  def self.flappy_script
-    @@flappy_script ||= Script.includes([{script_levels: [{level: [:game, :concepts] }, :stage]}, :stages]).find(FLAPPY_ID)
-  end
-
-  def self.playlab_script
-    @@playlab_script ||= Script.includes([{script_levels: [{level: [:game, :concepts] }, :stage]}, :stages]).find_by_name(PLAYLAB_NAME)
+    self.get_from_cache(TWENTY_HOUR_ID)
   end
 
   def cached?
-    self.equal?(Script.twenty_hour_script) ||
-        self.equal?(Script.frozen_script) ||
-        self.equal?(Script.hoc_script) ||
-        self.equal?(Script.flappy_script) ||
-        self.equal?(Script.playlab_script)
+    self.equal?(self.class.get_from_cache(self.id))
   end
 
-  def should_be_cached?
-    self.id == TWENTY_HOUR_ID ||
-      self.name == TWENTY_HOUR_NAME ||
-      self.name == FROZEN_NAME ||
-      self.name == PLAYLAB_NAME ||
-      self.id == FLAPPY_ID ||
-      self.name == FLAPPY_NAME ||
-      self.name == HOC_NAME
+  def cache(name)
+    Rails.cache.fetch("#{cache_key}/#{name}") do
+      yield
+    end
+  end
+
+  def cached
+    self.class.get_from_cache(id)
   end
 
   def starting_level
@@ -75,20 +54,33 @@ class Script < ActiveRecord::Base
     candidate_level
   end
 
+  def get_stage_by_id(id)
+    stage_by_id = cache(:get_stage_by_id) do
+      cached.stages.index_by(&:id)
+    end
+    stage_by_id[id]
+  end
+
+  def get_script_level_by_id(id)
+    sl_by_id = cache(:get_script_level_by_id) do
+      cached.script_levels.index_by(&:id)
+    end
+    sl_by_id[id]
+  end
+
   def self.get_from_cache(id)
-    case id.to_s
-      when TWENTY_HOUR_ID.to_s, TWENTY_HOUR_NAME then twenty_hour_script
-      when FROZEN_NAME then frozen_script
-      when HOC_NAME then hoc_script
-      when PLAYLAB_NAME then playlab_script
-      when FLAPPY_ID.to_s, FLAPPY_NAME then flappy_script
-    else
-      # a bit of trickery so we support both ids which are numbers and
-      # names which are strings that may contain numbers (eg. 2-3)
-      find_by = (id.to_i.to_s == id.to_s) ? :id : :name
-      Script.find_by(find_by => id).tap do |s|
-        raise ActiveRecord::RecordNotFound.new("Couldn't find Script with id|name=#{id}") unless s
-      end
+    script_cache = Rails.cache.fetch('Script.cache') do
+      cache = Script.includes(stages: {script_levels: {level: [:game, :concepts]}}, script_levels: {level: [:game, :concepts]}).load
+      {by_id: cache.index_by(&:id), by_name: cache.index_by(&:name)}
+    end
+    from_cache = script_cache[:by_id][id] || script_cache[:by_name][id]
+    return from_cache if from_cache
+
+    # a bit of trickery so we support both ids which are numbers and
+    # names which are strings that may contain numbers (eg. 2-3)
+    find_by = (id.to_i.to_s == id.to_s) ? :id : :name
+    Script.find_by(find_by => id).tap do |s|
+      raise ActiveRecord::RecordNotFound.new("Couldn't find Script with id|name=#{id}") unless s
     end
   end
 
@@ -139,13 +131,8 @@ class Script < ActiveRecord::Base
     Script.find(BUILDER_ID)
   end
 
-  def get_script_level_by_id(script_level_id)
-    script_level_id = script_level_id.to_i
-    self.script_levels.select { |sl| sl.id == script_level_id }.first
-  end
-
   def get_script_level_by_stage_and_position(stage_position, puzzle_position)
-    self.stages.find_by!(position: stage_position).script_levels.find_by!(position: puzzle_position)
+    self.stages.detect{|stage|stage.position == stage_position}.script_levels.detect{|sl|sl.position == puzzle_position}
   end
 
   def get_script_level_by_chapter(chapter)
@@ -204,6 +191,7 @@ class Script < ActiveRecord::Base
                     hidden: script_data[:hidden].nil? ? true : script_data[:hidden]},
                    stages.map{|stage| stage[:levels]}.flatten)
       end
+      Rails.cache.clear
       [(default_scripts + custom_scripts), custom_i18n]
     end
   end

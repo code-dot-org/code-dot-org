@@ -17,10 +17,10 @@
             - puzzle_outer_class = 'puzzle_outer_assessment'
           - else
             - puzzle_outer_class = 'puzzle_outer_level'
-          - if sl.stage_or_game_position == @game_script_levels.count
+          - if sl.stage_or_game_position == count
             - puzzle_outer_class += ' last'
           %div{class: puzzle_outer_class}
-            %a.level_link{ href: link, class: css_class + (sl.level.unplugged? ? " unplugged_level " : "")}
+            %a.level_link{ href: link, class: css_class + (sl.unplugged? ? " unplugged_level " : "")}
               = sl.level_display_text
     - if @script.hoc?
       .header_finished_link

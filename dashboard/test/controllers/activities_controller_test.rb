@@ -732,7 +732,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # record activity in session
     expected_progress = {@script_level.level_id => 100}
-    assert_equal expected_progress, session["progress"]
+    assert_equal_expected_keys expected_progress, session["progress"]
 
     # record the total lines of code in session
     assert_equal 20, session['lines']
@@ -769,7 +769,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # record activity in session
     expected_progress = {@script_level_prev.level_id => 50, @script_level.level_id => 100}
-    assert_equal expected_progress, session['progress']
+    assert_equal_expected_keys expected_progress, session['progress']
 
     # record the total lines of code in session
     assert_equal 30, session['lines']
@@ -801,7 +801,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # record activity in session
     expected_progress = {@script_level.level_id => 0}
-    assert_equal expected_progress, session["progress"]
+    assert_equal_expected_keys expected_progress, session["progress"]
 
     # lines in session does not change
     assert_equal 10, session['lines']
@@ -837,7 +837,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # record activity in session
     expected_progress = {@script_level_prev.level_id => 50, @script_level.level_id => 100}
-    assert_equal expected_progress, session['progress']
+    assert_equal_expected_keys expected_progress, session['progress']
 
     # record the total lines of code in session
     assert_equal 30, session['lines']
