@@ -6,13 +6,13 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Take a look at this code. Can you see how the \"set length\" block and \"length\" block works together? Click on \"Run\" to see it in action. ",
+    "instructions": "Drag a number block to the \"set length\" block to draw a set of 50 pixel triangles. ",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": ".4",
     "disable_param_editing": "true",
-    "disable_variable_editing": "false",
+    "disable_variable_editing": "true",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "start_direction": "90",
@@ -30,38 +30,33 @@
           <next>
             <block type="variables_set" inline="false">
               <title name="VAR">length</title>
-              <value name="VALUE">
-                <block type="math_number">
-                  <title name="NUM">50</title>
-                </block>
-              </value>
               <next>
-                <block type="controls_repeat_ext" inline="true">
+                <block type="controls_repeat_ext" inline="true" movable="false">
                   <value name="TIMES">
-                    <block type="math_number">
+                    <block type="math_number" movable="false">
                       <title name="NUM">3</title>
                     </block>
                   </value>
                   <statement name="DO">
-                    <block type="controls_repeat_ext" inline="true">
+                    <block type="controls_repeat_ext" inline="true" movable="false">
                       <value name="TIMES">
-                        <block type="math_number">
+                        <block type="math_number" movable="false">
                           <title name="NUM">3</title>
                         </block>
                       </value>
                       <statement name="DO">
-                        <block type="draw_move" inline="true">
+                        <block type="draw_move" inline="true" movable="false">
                           <title name="DIR">moveForward</title>
                           <value name="VALUE">
-                            <block type="variables_get">
+                            <block type="variables_get" movable="false">
                               <title name="VAR">length</title>
                             </block>
                           </value>
                           <next>
-                            <block type="draw_turn" inline="true">
+                            <block type="draw_turn" inline="true" movable="false">
                               <title name="DIR">turnLeft</title>
                               <value name="VALUE">
-                                <block type="math_number">
+                                <block type="math_number" movable="false">
                                   <title name="NUM">120</title>
                                 </block>
                               </value>
@@ -70,10 +65,10 @@
                         </block>
                       </statement>
                       <next>
-                        <block type="draw_move" inline="true">
+                        <block type="draw_move" inline="true" movable="false">
                           <title name="DIR">moveForward</title>
                           <value name="VALUE">
-                            <block type="variables_get">
+                            <block type="variables_get" movable="false">
                               <title name="VAR">length</title>
                             </block>
                           </value>
@@ -89,7 +84,11 @@
       </xml>
     </start_blocks>
     <toolbox_blocks>
-      <xml/>
+      <xml>
+        <block type="math_number">
+          <title name="NUM">???</title>
+        </block>
+      </xml>
     </toolbox_blocks>
     <solution_blocks>
       <xml>

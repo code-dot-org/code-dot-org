@@ -84,6 +84,10 @@ A Contract is the foundation for a function, which gives programmers just enough
 <img src="purpleStarEx1.png" style="max-width: 100%; max-height: 200px"/><br/>
 <img src="purpleStarEx2.png" style="max-width: 100%; max-height: 200px"/><br/>
 
+- Every Example begins with the name of the function. Where could you find the name of the function?
+- Every Example has to include sample inputs. Where could you find out how many inputs this function needs, and what types they are?
+- Every Example has to include an expression for what the function should do when given an input. Where could you look to find out what this function does?
+
 Once you have two or more Examples, it should be easy to identify what has changed between them. In fact, the number of things that change should match the number of things in the function’s Domain: if the Domain has a Number and a String in it, then those two values should be the things that differ between your Examples.
 
 #### Step 3 - Function Definition
@@ -96,28 +100,6 @@ Challenge students to explain why this function does not need to know the color 
 
 Remember that the Contract and Purpose Statement can be used to write the Examples, even if a programmer isn’t sure how to begin.
 
-Using only the Contract and Purpose Statement, see if you can answer the following questions:
-Every Example begins with the name of the function. Where could you find the name of the function?
-
-Every Example has to include sample inputs. Where could you find out how many inputs this function needs, and what types they are?
-
-Every Example has to include an expression for what the function should do when given an input. Where could you look to find out what this function does?
-
-Write two Examples on your paper, then circle and label what is changing between them.
-
-Make sure students realize that every answer can be found in the Contract or Purpose Statement. Suggestion: write these steps on the board, and draw arrows between them to highlight the process. The goal here is to get students into the habit of asking themselves these questions each time they write Examples, and then using their own work from the previous step to find the answers. NOTE: students can solve this using either square or rectangle. The latter requires them to use the same variable twice, which is a useful thought-exercise.
-
-Once the two Examples are written and the variable (or variables) are labeled, it becomes easy to define the function.
-
-Using the Contract, Purpose Statement and Examples, see if you can answer the following questions:
-
-Every function definition begins with the name. Where did you write this already?
-
-Every definition has to include variable names for the inputs. Where did you write these down?
-
-Every definition should work exactly the way the Examples did. Where could you look to figure out what the function should do?
-
-Write the function definition on your paper.
 
 [/together]
 
