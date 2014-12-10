@@ -1,4 +1,5 @@
 class Level < ActiveRecord::Base
+  include Cached
   belongs_to :game
   has_and_belongs_to_many :concepts
   has_many :script_levels, dependent: :destroy

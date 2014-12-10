@@ -79,16 +79,14 @@ private
   end
 
   def load_script_level
-    if params[:chapter]
-      @script_level = @script.get_script_level_by_chapter(params[:chapter])
-    elsif params[:stage_id]
-      if @script.cached?
-        @script_level = @script.script_levels.select{|sl| sl.stage.position == params[:stage_id].to_i && sl.position == params[:id].to_i}.first
+    @script_level = @script.cached("#{params[:chapter]}/#{params[:stage_id]}/#{params[:id]}}") do
+      if params[:chapter]
+        @script_level = @script.get_script_level_by_chapter(params[:chapter])
+      elsif params[:stage_id]
+        @script_level = @script.get_script_level_by_stage_and_position(params[:stage_id].to_i, params[:id].to_i)
       else
-        @script_level = @script.get_script_level_by_stage_and_position(params[:stage_id], params[:id])
+        @script_level = @script.get_script_level_by_id(params[:id])
       end
-    else
-      @script_level = @script.get_script_level_by_id(params[:id])
     end
     raise ActiveRecord::RecordNotFound unless @script_level
   end
