@@ -63,7 +63,7 @@
                 <block type="logic_compare" inline="true" movable="false" uservisible="false">
                   <title name="OP">EQ</title>
                   <value name="A">
-                    <block type="variables_get" movable="false" uservisible="false">
+                    <block type="parameters_get" uservisible="false">
                       <title name="VAR">direction</title>
                     </block>
                   </value>
@@ -113,7 +113,7 @@
                                         <block type="logic_compare" inline="true" movable="false" uservisible="false">
                                           <title name="OP">EQ</title>
                                           <value name="A">
-                                            <block type="variables_get" movable="false" uservisible="false">
+                                            <block type="parameters_get" uservisible="false">
                                               <title name="VAR">direction</title>
                                             </block>
                                           </value>

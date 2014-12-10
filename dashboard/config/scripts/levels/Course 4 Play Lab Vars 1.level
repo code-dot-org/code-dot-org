@@ -23,7 +23,7 @@
     ],
     "instructions": "You don't have to write any code, just hit \"run\" to play the game! In this game, you're the Dog who is trying to collect more flags than the Cat. Use the down arrow to control the Dog. Press \"Finish\" when you're done playing.",
     "predraw_blocks": "<xml><block type=\"studio_whenArrow\" movable=\"false\"><title name=\"VALUE\">right</title><next><block type=\"studio_moveDistance\" movable=\"false\" editable=\"false\"><title name=\"SPRITE\">0</title><title name=\"DIR\">2</title><title name=\"DISTANCE\">25</title></block></next></block><block type=\"studio_repeatForever\"><statement name=\"DO\"><block type=\"studio_moveDistance\"><title name=\"SPRITE\">1</title><title name=\"DIR\">1</title><title name=\"DISTANCE\">25</title><next><block type=\"studio_moveDistance\"><title name=\"SPRITE\">1</title><title name=\"DIR\">4</title><title name=\"DISTANCE\">25</title></block></next></block></statement></block></xml>",
-    "disable_variable_editing": "false",
+    "disable_variable_editing": "true",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "coordinate_grid_background": "false",
@@ -31,7 +31,7 @@
     "protaganist_sprite_index": "2",
     "disable_sharing": "true",
     "maze_data": null,
-    "video_key": "C4_variables"
+    "callout_json": "[{\"localization_key\": \"arrows_move_actor\", \"element_id\": \"#soft-buttons\", \"qtip_config\": {\r\n  \"position\": {\"my\": \"bottom right\", \"at\": \"top center\"}}}]"
   }
 }]]></config>
   <blocks>
