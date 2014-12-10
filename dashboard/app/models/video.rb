@@ -1,6 +1,7 @@
 # Links to a YouTube video
 class Video < ActiveRecord::Base
   include Seeded
+  include Cached
 
   def self.check_i18n_names
     video_keys = Video.all.collect(&:key)
@@ -20,5 +21,12 @@ class Video < ActiveRecord::Base
       end
     end
     check_i18n_names
+  end
+
+  def self.find_by_key(key)
+    return nil if key.nil?
+    cached('find_by_key') do
+      Video.all.index_by(&:key)
+    end[:key] || find_by(key: key)
   end
 end
