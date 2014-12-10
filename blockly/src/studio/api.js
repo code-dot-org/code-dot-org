@@ -88,14 +88,6 @@ exports.setSpriteXY = function (id, spriteIndex, xpos, ypos) {
   });
 };
 
-exports.getSpriteX = function (id, spriteIndex) {
-  Studio.queueCmd(id, 'getSpriteX', {'spriteIndex': spriteIndex});
-};
-
-exports.getSpriteY = function (id, spriteIndex) {
-  Studio.queueCmd(id, 'getSpriteY', {'spriteIndex': spriteIndex});
-};
-
 exports.playSound = function(id, soundName) {
   Studio.queueCmd(id, 'playSound', {'soundName': soundName});
 };

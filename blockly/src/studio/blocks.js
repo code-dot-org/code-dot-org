@@ -617,50 +617,6 @@ exports.install = function(blockly, blockInstallOptions) {
       xParam + ', ' +
       yParam + ');\n';
   };
-  
-  blockly.Blocks.studio_getSpriteX = {
-    // Block retrieving current x coordinate of sprite's center.
-    helpUrl: '',
-    init: function() {
-      this.setHSV(184, 1.00, 0.74);
-      this.appendValueInput('SPRITE')
-        .setCheck('Number')
-        .appendTitle(msg.actor());
-      this.appendDummyInput()
-        .appendTitle('x');
-      this.setInputsInline(true);
-      this.setOutput(true, "Number");
-    }
-  };
-
-  generator.studio_getSpriteX = function() {
-    var spriteParam = getSpriteIndex(this) || 0;
-    var code = 'Studio.getSpriteX(\'block_id_' + this.id +
-      '\', ' + spriteParam + ' )\n';
-    return [code, Blockly.JavaScript.ORDER_NONE];
-  };
-  
-  blockly.Blocks.studio_getSpriteY = {
-    // Block retrieving current y coordinate of sprite's center.
-    helpUrl: '',
-    init: function() {
-      this.setHSV(184, 1.00, 0.74);
-      this.appendValueInput('SPRITE')
-        .setCheck('Number')
-        .appendTitle(msg.actor());
-      this.appendDummyInput()
-        .appendTitle('y');
-      this.setInputsInline(true);
-      this.setOutput(true, "Number");
-    }
-  };
-
-  generator.studio_getSpriteY = function() {
-    var spriteParam = getSpriteIndex(this);
-    var code =  'Studio.getSpriteY(\'block_id_' + this.id +
-      '\', ' + spriteParam + ' );\n';
-    return [code, Blockly.JavaScript.ORDER_NONE];
-  };
     
   var SimpleMove = {
     DIRECTION_CONFIGS: {
