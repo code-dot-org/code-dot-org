@@ -5,7 +5,7 @@ theme: none
 ---
 
 
-<%= partial('curriculum_header', :unittitle=> 'MSM', :lesson=> 2, :unplugged=>false, :title=> 'Calc: Evaluation Blocks',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>(30-60)) %>
+<%= partial('curriculum_header', :unittitle=> 'MSM', :lesson=> 2, :unplugged=>false, :title=> 'Calc: Evaluation Blocks',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>('30-60')) %>
 
 [content]
 
@@ -53,7 +53,6 @@ This lesson has six new and important words:<br/>
 - **Value** - a specific piece of data, like 5 or "hello"
 
 ### <a name="GetStarted"></a> 2) Introduction
-Math is a language, just like English, Spanish, or any other language. We use nouns, like "bread", "tomato", "mustard" and "cheese" to describe physical objects. Math has values, like the numbers 1, 2 or 3, to describe quantities. Humans also use verbs like "toast", "slice", "spread" and "melt" to describe operations on these nouns. Mathematics has functions like addition and subtraction, which are operations performed on numbers. Just as you can "slice piece of bread", a person can also "add four and five".
 
 A mathematical expression is like a sentence: it’s an instruction for doing something. The expression 4+5 tells us to add 4 and 5. To evaluate an expression, we follow the instructions in the expression. The expression 4+5 evaluates to 9.
 

@@ -55,7 +55,8 @@ class LevelSourcesController < ApplicationController
   end
 
   def framed_image(skin)
-    if @level_source.level_source_image.image == 'S3'
+    if @level_source.level_source_image.image == 'S3' ||
+        @level_source.level_source_image.save_to_s3(@level_source.level_source_image.image)
       redirect_to @level_source.level_source_image.s3_framed_url
       return
     end
@@ -79,7 +80,8 @@ class LevelSourcesController < ApplicationController
 
     expires_in 10.hours, :public => true # cache
 
-    if @level_source.level_source_image.image == 'S3'
+    if @level_source.level_source_image.image == 'S3' ||
+        @level_source.level_source_image.save_to_s3(@level_source.level_source_image.image)
       # image is in s3
       redirect_to @level_source.level_source_image.s3_url
       return
