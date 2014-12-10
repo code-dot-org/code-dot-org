@@ -25,7 +25,7 @@ class LevelSource < ActiveRecord::Base
     redis_key = "v5-#{level.id}-#{md5}"
 
     cached_json = level_source_cache[redis_key] if rack_env?(:production)
-    level_source_object = OpenStruct.new(JSON.parse(cached_json)['table']) if cached_json
+    level_source_object = OpenStruct.new(JSON.parse(cached_json)) if cached_json
 
     unless level_source_object
       level_source_object = self.where(level: level, md5: md5).first_or_create do |ls|
