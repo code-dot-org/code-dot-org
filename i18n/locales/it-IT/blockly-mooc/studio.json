@@ -118,7 +118,7 @@
   "repeatForever":"ripeti per sempre",
   "repeatDo":"esegui",
   "repeatForeverTooltip":"Esegui ripetutamente le azioni in questo blocco mentre la storia è in esecuzione.",
-  "saySprite":"di'",
+  "saySprite":"pronuncia",
   "saySpriteN":"il personaggio {spriteIndex} dice",
   "saySpriteTooltip":"Il personaggio specificato visualizza un fumetto con il testo indicato.",
   "scoreText":"Punteggio: {playerScore}",

@@ -1,9 +1,9 @@
 * * *
 
-title: Thank you layout: wide
+عنوان: آپ کا شکریہ ترتیب: وسیع
 
 * * *
 
-# Thank you
+# شکريہ
 
-Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).
+اب آپ کا پورا اسکول ایک کلاس-سٹ لیپ ٹاپ ( یا 10000$ کے دوسرے ٹیکنالوجی کے انعامات) جیتنے میں شامل ھو گیا ھے

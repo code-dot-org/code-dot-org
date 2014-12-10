@@ -581,3 +581,7 @@
     completed_too_many_blocks: valmis, liian monta lohkoa
     completed_perfect: valmis, täydellinen
     furthest_level_attempted: vaikein taso jota yritetty
+  studio:
+    courses_working_on: Courses you're working on
+    completed_courses: Completed courses
+    all_courses: All courses

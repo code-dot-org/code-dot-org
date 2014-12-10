@@ -1,21 +1,17 @@
 * * *
 
-title: Blurbs and Stats layout: wide nav: resources_nav
+title: Реклама та факти layout: wide nav: resources_nav
 
 * * *
 
-[<button style="float: right; margin-top: 50px">Зареєструйте свій захід</button>](/#join)
-
 # Цікава статистика
 
-## Use this short blurb in newsletters
+## Використайте ці дані для своїх матеріалів
 
 ### Залучіть інформатику до своєї школи. Розпочніть Годиною коду
 
-Комп'ютери поширені повсюдно, але все менше шкіл викладають інформатику, аніж 10 років тому. Хорошою новиною є те, що ми можемо це змінити. Якщо ви чули про [ Годину коду](<%= hoc_uri('/') %>) минулого року, можливо, ви знаєте, що вона увійшла в історію. Лише за один тиждень 15 мільйонів учнів познайомились з інформатикою! [Година коду](<%= hoc_uri('/') %>) - це одно-годинний вступ до інформатики, призначений для того, щоб показати легкість та доступність програмування для кожного. [Зареєструйте](<%= hoc_uri('/') %>) захід Години коду 8-14 грудня протягом тижня інформатики і допоможіть залучити 100 мільйонів учнів до кінця цього року. Add your school to the map, go to <http://hourofcode.com>
+Комп'ютери поширені повсюдно, але все менше шкіл викладають інформатику, аніж 10 років тому. Хорошою новиною є те, що ми можемо це змінити. If you heard about the [Hour of Code](<%= hoc_uri('/') %>) last year, you might know it made history. Лише за один тиждень 15 мільйонів учнів познайомились з інформатикою! The [Hour of Code](<%= hoc_uri('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= hoc_uri('/') %>) to host an Hour of Code this December 8-14 during Computer Science Education Week and help reach 100 million students by the end of the year. Add your school to the map, go to <http://hourofcode.com>
 
-## Infographic version:
+## Версія в інфографіці:
 
 ![image](http://code.org/images/fit-8000/Code.org_infographic.png)
-
-<a style="display: block" href="/#join"><button style="float: right;">Зареєструйте свій захід</button></a>

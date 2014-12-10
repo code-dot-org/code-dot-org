@@ -21691,7 +21691,7 @@ exports.setSpriteRobot = function(d){return "до зображення робо�
 
 exports.setSpriteShowK1 = function(d){return "показати"};
 
-exports.setSpriteSpacebot = function(d){return "до зображення космічного корабля"};
+exports.setSpriteSpacebot = function(d){return "до зображення космонавта"};
 
 exports.setSpriteSoccerGirl = function(d){return "на зображення дівчинки-футболістки"};
 

@@ -44,8 +44,8 @@
           el laberint.
       11:
         image: notes/hoc1_11.jpg
-        text: Per fer més d'una acció, pots arrossegar molts blocs a la teva àrea
-          de treball i unir-los. L'ocell executarà les ordres de dalt a baix.
+        text: Per fer més d'una acció, arrossegueu molts blocs a l'espai de treball
+          i ajunteu-los. L'ocell executarà les ordres de dalt a baix.
       12:
         image: notes/hoc1_12.jpg
         text: Si executes un programa i el vols arreglar i provar de nou, prem el
@@ -251,7 +251,7 @@
           "repeat" blocks.
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: Now let's help Scrat the squirrel get that acorn!
+        text: Ajudeu l'esquirol Scrat a aconseguir aquesta gla!
     function:
       1:
         image: notes/stage13_1.jpg
@@ -419,21 +419,21 @@
           this is a 120 degree turn.
       10:
         image: notes/frozen1_10.jpg
-        text: Remember, you can change the number of pixels and degrees by clicking
-          the arrows next to them.
+        text: Recordeu que podeu canviar el nombre de píxels i graus clicant a les
+          fletxes del seu costat.
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
-        text: Hi, I’m Paola! Computers are really good at repeating actions. You can
-          count to 10, 20, or 100. But a computer can count to a billion or a trillion.
-          It won't get bored and it will only take a few seconds. Whether it's counting,
-          or drawing, or anything--computers can repeat things hundreds or even billions
-          of times.
+        text: Hola, sóc Paola! Els ordinadors són realment bons en repetir accions.
+          Podeu comptar fins a 10, 20 o 100. Però un ordinador pot comptar fins a
+          mil milions o un trilió. No s'avorreixen i només tarden uns quants segons.
+          Tant si és comptar, dibuixar o qualsevol altre cosa -- els ordinadors poden
+          repetir coses centenars o fins i tot milers de milions de vegades.
       2:
         image: notes/frozen2_2.jpg
-        text: In programming, we call this a loop. A loop is how you repeat your code
-          over and over again. For the next puzzle, your goal is to help Anna create
-          a square with the "Repeat" block.
+        text: En programació, anomenem això bucle. Un bucle és la manera de repetir
+          el codi de programació una i altra vegada. Pel següent trencaclosques, l'objectiu
+          és que ajudeu l'Anna a crear un quadrat amb el bloc "repetir".
       3:
         image: notes/frozen2_3.jpg
         text: Any blocks of code you put inside the "Repeat" block will be repeated
@@ -452,8 +452,8 @@
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: Hi, I’m Chris Bosh. I’m a professional basketball player, and I coded
-          in college.
+        text: Hola, sóc en Chris Bosh. Sóc un jugador de bàsquet de la NBA i vaig
+          fer programació a l'institut.
       2:
         image: notes/frozen3_2.jpg
         text: One of the most important concepts in computer science is how to define
@@ -468,12 +468,12 @@
           that's called a function.
       4:
         image: notes/frozen3_4.jpg
-        text: Hi, I’m Jess. When programming with blocks, you would use functions
-          if there are a set of actions you would like to use lots of times. For example,
-          you've written code to create a square.
+        text: Hola, sóc Jess. Quan programeu amb blocs, utilitzeu funcions si hi ha
+          un conjunt d'accions que voleu utilitzar moltes vegades. Per exemple, heu
+          escrit un codi per crear un quadrat.
       5:
         image: notes/frozen3_5.jpg
-        text: 'You can define this as a function called "create a square." '
+        text: 'Podeu definir-ho com a una funció anomenada "crea un quadrat." '
       6:
         image: notes/frozen3_6.jpg
         text: Now you have a new block that you can use multiple times to create multiple
@@ -508,14 +508,14 @@
           friends.
       2:
         image: notes/playlab_intro_2.png
-        text: Your screen is split into 3 main parts. On the left is the game space
-          where your program will run. The instructions for each level are written
-          below.
+        text: La pantalla es divideix en 3 parts. L'esquerra és l'espai del joc on
+          el programa s'executarà. Les instruccions per a cada nivell estan escrites
+          a sota.
       3:
         image: notes/playlab_intro_3.png
-        text: The middle area is the toolbox, and each of these blocks is a piece
-          of code. The white space on the right is called the workspace and this is
-          where we'll build our program.
+        text: La zona central és la caixa d'eines, i cada un d'aquests blocs és una
+          peça de codi. L'espai blanc a la dreta s'anomena l'àrea de treball i aquí
+          és on construirem el programa.
       4:
         image: notes/playlab_intro_4.png
         text: To start off, you'll need to link your blocks to the orange "when run"
@@ -542,8 +542,8 @@
           for when something happens. When that thing happens, it performs an action.
       2:
         image: notes/playlab_events_2.png
-        text: Some examples of events are listening for a mouse click, an arrow button,
-          or a tap on the screen.
+        text: Alguns exemples d'esdeveniments s'activen amb un clic del ratolí, una
+          tecla de fletxa o quan es toca la pantalla.
       3:
         image: notes/playlab_events_3.png
         text: Here, we're going to make the space bot greet the earthlings when a
@@ -559,12 +559,12 @@
     playlab_repeat_forever:
       1:
         image: notes/playlab_repeat_forever_1.png
-        text: This is the "repeat forever" block. Anything inside this block will
-          happen forever in the game.
+        text: Aquest és el bloc de "repetir per sempre". Qualsevol cosa dins d'aquest
+          bloc es repetirà eternament al joc.
       2:
         image: notes/playlab_repeat_forever_2.png
-        text: If we want an actor to do something repeatedly, without the player having
-          to do anything, we'll put those blocks inside the "repeat forever" block.
+        text: Si volem que l'actor faci alguna cosa repetidament, sense que el jugador
+          hagi de fer res, posarem els blocs dins del bloc "repetir per sempre".
       3:
         image: notes/playlab_repeat_forever_3.png
         text: In this next puzzle, our goal is to help the wizard patrol the boundaries

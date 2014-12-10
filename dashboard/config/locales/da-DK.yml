@@ -598,3 +598,7 @@
     completed_too_many_blocks: afsluttet, for mange blokke
     completed_perfect: Afsluttet, perfekt
     furthest_level_attempted: længst opnåede niveau
+  studio:
+    courses_working_on: Kurser du er i gang med
+    completed_courses: Afsluttede kurser
+    all_courses: Alle kurser

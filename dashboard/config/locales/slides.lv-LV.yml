@@ -492,72 +492,70 @@
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png
-        text: We're going to create games using Play Lab. Good games have a story,
-          and every story has actors. We'll learn how to make our actors like witches,
-          alinens, and animals speak, move, and interact with each other. By the end
-          of this tutorial, you can build a game from scratch and share it with your
-          friends.
+        text: Spēļu laboratorijā mēs veidosim spēles. Labai spēlei ir stāsts, un katrā
+          stāstā ir savi tēli. Iemācīsimies kā mūsu tēliem raganai, citplanētiešiem
+          un dzīvniekiem runāt, pārvietoties un reaģēt citam ar citu. Pamācības beigās
+          varēsi veidot spēli no pašiem pamatiem un dalīties ar to ar draugiem.
       2:
         image: notes/playlab_intro_2.png
-        text: Your screen is split into 3 main parts. On the left is the game space
-          where your program will run. The instructions for each level are written
-          below.
+        text: Tavs ekrāns ir sadalīts trīs galvenajās daļās. Kreisajā pusē ir spēles
+          laukums, kur programma izpildīsies. Pamācība katram līmenim ir rakstīta
+          zem laukuma.
       3:
         image: notes/playlab_intro_3.png
-        text: The middle area is the toolbox, and each of these blocks is a piece
-          of code. The white space on the right is called the workspace and this is
-          where we'll build our program.
+        text: Vidējā daļa ir rīku josla, un katrs no šiem blokiem ir koda fragments.
+          Baltais laukums labajā pusē ir darba virsmā - tajā mēs veidosiem programmu.
       4:
         image: notes/playlab_intro_4.png
-        text: To start off, you'll need to link your blocks to the orange "when run"
-          block. You can link multiple blocks together by dragging them out until
-          you see the yellow line, and then they'll snap together.
+        text: Lai sāktu, tev nepieciešam savienot tavus blokus ar oranžo "kad palaists"
+          bloku. Tu vari savienot vairākus blokus kopā, tuvinot tos, kamēr ieraugi
+          dzeltenu līniju un tad bloki saķersies kopā.
       5:
         image: notes/playlab_intro_5.png
-        text: In this first puzzle, our actor is a penguin and we'll be making it
-          say "Hello!" by dragging the say block out, linking it to the when run block,
-          and typing in "Hello." We can also make the penguin move by using the move
-          right and move left blocks. Once you have your blocks in place, hit the
-          run button to see what you've programmed.
+        text: Pirmajā puzlē mūsu tēls ir pingvīns un mēs liksim viņam teikt "Sveiki!",
+          izvelkot ārā "teikt" bliku, savienojot to ar ar "kad palaists" bloku, un
+          ierakstot "Sveiki!". Varam pingvīnam arī likt kustēties, izmantojot "pārvietot
+          pa labi" un "pārvietot pa kreisi" blokus. Kad bloki salikti pa vietām, spied
+          pogu "Palaist" un skaties, ko esi uzprogrammējis.
       6:
         image: notes/playlab_intro_6.png
-        text: Get started and by the end, you'll be able to create your own game with
-          all kinds of players that can interact, turn happy or sad, score points,
-          or throw fireballs, or even vanish each other. It's all up to you and the
-          game you want to make.
+        text: Sāc darīt un beigās varēsi izveidot savu spēli ar dažādiem tēliem, kuri
+          viens uz otru reaģē, var priecāties vai bēdāties, skaitīt punktus vai ķert
+          ugunsbumbas vai pat likt cits citam izzust. Viss tavās rokas un iztēlē,
+          kādu spēli vēlies veidot.
     playlab_events:
       1:
         image: notes/playlab_events_1.png
-        text: Now, we're going to learn about something that all game programmers
-          use everyday. They're called events. An event tells your program to listen
-          for when something happens. When that thing happens, it performs an action.
+        text: Tagad iemācīsimies ko tādu, ko visi spēļu programmētāji izmanto ikdienā.
+          Tie ir notikumi. Notikumi liek programmai pamanīt, kad notiek kāda darbība.
+          Kad šī darbība notiek, izpildās daļa programmas.
       2:
         image: notes/playlab_events_2.png
-        text: Some examples of events are listening for a mouse click, an arrow button,
-          or a tap on the screen.
+        text: 'Daži notikumi piemēri: gaidīt peles klikšķi, klavietūras bultiņas piespiešanu
+          vai pieskārienu ekrānam.'
       3:
         image: notes/playlab_events_3.png
-        text: Here, we're going to make the space bot greet the earthlings when a
-          player clicks on him. We'll use the "when clicked" block and attach the
-          "say" block to it. When the player clicks on the space bot, everything attached
-          to this "when clicked" event block will be performed. What does your alien
-          say?
+        text: Tagad izdarīsim lai kosmosa robotiņš, ja uz viņa uzklikšķināts ar peli,
+          sasveicinās ar zemes iedzīvotājiem. Izmantosim bloku "kad noklikšķināts"
+          un savienosim ar "teik" bloku. Kad spēlētājs noklikšķinās uz robotiņa, tiks
+          izpildītas visas darbības, kas pievienotas pie "kad noklišķināts bloka.
+          Ko tavs citplanētietis teiks?
       4:
         image: notes/playlab_events_4.png
-        text: There are also "when arrow" blocks. If you link the "move" blocks to
-          these, you can start to move your actors up, down, left, or right. Step
-          by step, your game is getting more interactive.
+        text: Ir pieejami "kad bulta" bloku. Ja savienosi "pārvietot" blokus ar šiem,
+          varēsi kustināt savus tēlus uz augšu, leju, pa labi un kreisi. Soli pa solim
+          tava spēle kļūst interaktīvāka.
     playlab_repeat_forever:
       1:
         image: notes/playlab_repeat_forever_1.png
-        text: This is the "repeat forever" block. Anything inside this block will
-          happen forever in the game.
+        text: Šis ir "atkārtot nepārtraukti" bloks. Jebkas, kas tajā būš iekšā, atkārtosies
+          visas spēles laiku.
       2:
         image: notes/playlab_repeat_forever_2.png
-        text: If we want an actor to do something repeatedly, without the player having
-          to do anything, we'll put those blocks inside the "repeat forever" block.
+        text: Ja vēlamies, lai tēls kaut ko nemitīgi atkārto bez spēlētāja iejaukšanās,
+          šo darbību blokus ievietosim iekš "atkārtot nepārtraukti" bloka.
       3:
         image: notes/playlab_repeat_forever_3.png
-        text: In this next puzzle, our goal is to help the wizard patrol the boundaries
-          of the kingdom, left and right continuously. Learning how the repeat commands
-          works, will save you a ton of time later when you build your own game.
+        text: Šajā puzlē mūsu mērķis ir palīdzēt burvim visu laiku no labās puses
+          uz kreiso kontrolēt karalistes robežas. Iemācies kā atkārtot komandas, tā
+          ietaupīsi daudz laika, kad veidosi savu spēli.

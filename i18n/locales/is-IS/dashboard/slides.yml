@@ -346,46 +346,42 @@ is:
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png
-        text: "We're going to create games using Play Lab. Good games have a story, and every story has actors. We'll learn how to make our actors like witches, alinens, and animals speak, move, and interact with each other. By the end of this tutorial, you can build a game from scratch and share it with your friends."
+        text: Við ætlum að búa til leiki í Leikjasmiðjunni. Góðir leikir segja sögu og allar sögur hafa persónur. Við munum læra hvernig við getum látið persónur okkar, t.d. nornir, geimverur eða dýr tala, hreyfast og hafa áhrif hver á aðra. Í lok þessarar kennslueiningar munt þú geta búið til leik frá grunni og deilt honum með vinum.
       2:
         image: notes/playlab_intro_2.png
-        text: Your screen is split into 3 main parts. On the left is the game space where your program will run. The instructions for each level are written below.
+        text: Skjárinn þinn skiptist í 3 meginhluta. Vinstra megin er leiksvæðið þar sem forritin þín munu keyra. Leiðbeiningar fyrir hvern áfanga birtast fyrir neðan.
       3:
         image: notes/playlab_intro_3.png
-        text: "The middle area is the toolbox, and each of these blocks is a piece of code. The white space on the right is called the workspace and this is where we'll build our program."
+        text: Á miðsvæðinu er verkfærakassinn og hver þessara kubba er bútur af kóða. Hvíta svæðið hægra megin er kallað vinnusvæðið og það er hér sem við munum byggja upp forritin okkar.
       4:
         image: notes/playlab_intro_4.png
-        text: |-
-          To start off, you'll need to link your blocks to the orange "when run" block. You can link multiple blocks together by dragging them out until you see the yellow line, and then they'll snap together.
+        text: 'Til að byrja þarf að tengja kubba við appelsínugula "þegar keyrt" kubbinn. Þú getur tengt saman marga kubba með því að draga þá fram þar til þú sérð gulu línuna og þá munu þeir smella saman.'
       5:
         image: notes/playlab_intro_5.png
-        text: |-
-          In this first puzzle, our actor is a penguin and we'll be making it say "Hello!" by dragging the say block out, linking it to the when run block, and typing in "Hello." We can also make the penguin move by using the move right and move left blocks. Once you have your blocks in place, hit the run button to see what you've programmed.
+        text: 'Í þessari fyrstu þraut er persónan mörgæs og við ætlum að láta hana segja "Hæ!" með því að draga "segir" kubbinn fram, tengja hann við "þegar keyrt" kubbinn og skrifa í hann "Hæ!". Við getum líka hreyft mörgæsina með því að nota "færa hægri" og "færa vinstri" kubbana. Síðan ýtum við á "Keyra" hnappinn til að sjá hvað við höfum forritað.'
       6:
         image: notes/playlab_intro_6.png
-        text: "Get started and by the end, you'll be able to create your own game with all kinds of players that can interact, turn happy or sad, score points, or throw fireballs, or even vanish each other. It's all up to you and the game you want to make."
+        text: Byrjaðu nú og í lokin munt þú geta búið til þinn eigin leik með alls konar persónum sem geta átt samskipti, orðið glaðar eða daprar, skorað stig, kastað eldhnöttum eða jafnvel látið hverja aðra hverfa. Þetta er bara spurning um hvernig leik þú vilt búa til.
     playlab_events:
       1:
         image: notes/playlab_events_1.png
-        text: "Now, we're going to learn about something that all game programmers use everyday. They're called events. An event tells your program to listen for when something happens. When that thing happens, it performs an action."
+        text: Nú ætlum við læra nokkuð sem allir leikjaforritarar nota daginn út og inn. Þetta nokkuð er kallað atvik. Við segjum forriti að hlusta eftir einhverju sem gerist, sem sagt atviki. Við látum forritið svo bregðast við atvikinu með því að gera eitthvað.
       2:
         image: notes/playlab_events_2.png
-        text: Some examples of events are listening for a mouse click, an arrow button, or a tap on the screen.
+        text: Nokkur dæmi um atvik eru þegar mús er smellt, ýtt er á örvarlykil eða þegar pikkað er á snertiskjá.
       3:
         image: notes/playlab_events_3.png
-        text: |-
-          Here, we're going to make the space bot greet the earthlings when a player clicks on him. We'll use the "when clicked" block and attach the "say" block to it. When the player clicks on the space bot, everything attached to this "when clicked" event block will be performed. What does your alien say?
+        text: 'Hér ætlum við að láta geimróbótann heilsa upp á okkur jarðarbúana þegar notandinn smellir á hann. Við notum "þegar smellt" kubbinn og tengjum "segir" kubb við hann. Þegar notandi smellir á geimróbótann, mun allt, sem er tengt við "þegar smellt" atvikskubbinn, verða gert. Hvað segir róbótinn?'
       4:
         image: notes/playlab_events_4.png
-        text: 'There are also "when arrow" blocks. If you link the "move" blocks to these, you can start to move your actors up, down, left, or right. Step by step, your game is getting more interactive.'
+        text: 'Það eru líka "þegar ör" kubbar. Ef þú tengir "færa" kubba við þá, getur þú byrjað að láta persónurnar færast upp, niður, vinstri og hægri. Skref fyrir skref er leikurinn að verða gagnvirkari.'
     playlab_repeat_forever:
       1:
         image: notes/playlab_repeat_forever_1.png
-        text: 'This is the "repeat forever" block. Anything inside this block will happen forever in the game.'
+        text: 'Þetta er "endurtaka endalaust" kubburinn. Allt sem er inni í þessum kubbi mun verða endurtekið að eilífu í leiknum.'
       2:
         image: notes/playlab_repeat_forever_2.png
-        text: |-
-          If we want an actor to do something repeatedly, without the player having to do anything, we'll put those blocks inside the "repeat forever" block.
+        text: 'Ef við viljum láta persónu gera eitthvað aftur og aftur, án þess að notandinn þurfi að gera neitt, setjum við þá kubba inn í "endurtaka endalaust" kubbinn.'
       3:
         image: notes/playlab_repeat_forever_3.png
-        text: In this next puzzle, our goal is to help the wizard patrol the boundaries of the kingdom, left and right continuously. Learning how the repeat commands works, will save you a ton of time later when you build your own game.
+        text: Í næstu þraut er markmið okkar að hjálpa vitkanum að fylgjast með landamærum kóngsríkisins til vinstri og hægri endalaust. Ef þú lærir hvernig endurtaka skipunin virkar, mun það spara þér hellingstíma þegar kemur að því að smíða eigin leiki.

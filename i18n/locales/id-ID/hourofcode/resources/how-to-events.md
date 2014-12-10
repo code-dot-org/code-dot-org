@@ -4,57 +4,57 @@ title: Hour of Code Event How-To layout: wide nav: resources_nav
 
 * * *
 
-# Hour of Code event guide
+# Guide Acara Hour of Code
 
-Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
+Adakan acara Hour of Code saat Computer Science Education Week (Des 8-14) untuk selebrasi ilmu komputer dan menginspirasi pelajar untuk mencobanya. Siapa saja, dimana saja dapat mengorganisasikan sebuah acara Hour of Code.
 
-## 1) Prepare for your event
+## 1) Persiapkan acaramu
 
-  * Determine a venue, date and time
-  * Send [a letter](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) to invite your local mayor, congressman, governor, or influential business person to speak.
-  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= hoc_uri('/resources/press-kit') %>) for help.
+  * Tentukan tempat, tanggal dan waktu
+  * Kirimkan [sebuah surat](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) untuk menundang walikota, anggota dewan, gubernur, atau seorang pebisnis yang berpengaruh untuk menjadi pembicara.
+  * Undang media/pers, statsiun tv lokal, surat kabar, blogger edukasi/teknologi. Lihat [pers kit](<%= hoc_uri('/resources/press-kit') %>) kami untuk bantuan.
 
-## 2) During your event
+## 2) Saat acara
 
-  * Kick off your event with one of our [inspirational videos](<%= hoc_uri('/resources#videos') %>).
-  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= hoc_uri('/resources/stats') %>).   
+  * Awali acara anda dengan salah satu dari [ video inspiratif](<%= hoc_uri('/resources#videos') %>).
+  * Berikan pembukaan mengenai garis-garis besar pentingnya ilmu komputer, menggunakan [statistik dan infografik](<%= hoc_uri('/resources/stats') %>).   
       
     
-  * Other event ideas: 
-      * Invite a local industry leader to discuss his or her work involving computer science
-      * Invite a local politician and have students teach him or her how to code
-      * Watch one of the Q&A sessions with an Hour of Code ambassador. They will all be recorded and on Code.org’s YouTube page. This year’s participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more!
-      * Have a group of students demonstrate an unplugged activity
-      * Have a group of students teach the principal or a group of teachers how to code
-      * If your school already teaches computer science, have students demo projects
+  * Ide lain untuk acara: 
+      * Undang pemimpin industri lokal untuk mendiskusikan pekerjaannya yang berhubungan dengan ilmu komputer
+      * Undang politisi lokal dan buat pelajar untuk mengajarkannya cara mengkoding
+      * Tonton salah satu dari sesi Q&A dengan duta Hour of Code. Mereka akan direkam dan dapat di lihat pada halaman Code.org pada Youtube. Tahun ini partisipan termasuk Bill Gates, Sheryl Sandberg, Ashton Kutcher, dan banyak lagi!
+      * Buat sekelompok pelajar untuk mendemonstrasikan aktivitas tanpa komputer
+      * Buat sekelompok pelajar untuk mengajarkan kepala sekolah atau sekelompok uru bagaimana cara mengkoding
+      * Jika sekolah telah mengajarkan ilmu komputer, buat para pelajar mendemonstrasikan projek
 
-## 3) Share how it went
+## 3) Bagikan bagaimana jadinya
 
-  * Share pictures of your event on Facebook and Twitter. 
-  * Use the hashtag **#HourofCode**
+  * Bagikan foto dari acaramu pada Facebook dan Twitter. 
+  * Gunakan hashtag **#HourofCode**
 
-## Example Event Plan
+## Contoh Perencanaan Acara
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**Acara:** Pertemuan pembukaan Computer Science Education Week
 
-**Date:** Dec 8th (start of Computer Science Education Week)
+**Tanggal:** 8 Des (awal Computer Science Education Week)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Waktu:** Saat sekolah. Lebih dianjurkan acara pertengahan pagi. Perkiraan sekitar satu jam.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
+**Lokasi:** Ruang pertemuan (teater, gym, kafetaria,dll)   
   
 
 
-## Run of Show
+## Jadwal Acara
 
 <table>
   <tr>
     <th style="width:200px">
-      Time
+      Waktu
     </th>
     
     <th style="width:800px">
-      Action
+      Kegiatan
     </th>
   </tr>
   
@@ -64,55 +64,55 @@ Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to 
     </td>
     
     <td>
-      Open with one of our <a href="http://hourofcode.com/us/resources#videos">inspirational videos</a>
+      Dibuka dengan salah satu dari <a href="http://hourofcode.com/us/resources#videos">video inspiratif</a> kami
     </td>
   </tr>
   
   <td>
-    10:05-11:15 am
+    10:05-10:15 am
   </td>
   
   <td>
-    Principal gives an intro overviewing the importance of computer science. Use these <a href="/resources/stats">stats and infographics</a>.
+    Kepala sekolah memberikan kata pembuka mengenai pentingnya ilmu komputer. Gunakan <a href="/resources/stats">Statistik dan infographics</a> sebagai referensi.
   </td></tr> 
   
   <td>
-    11:15-11:17 am
+    10:15-10:17 am
   </td>
   
   <td>
-    Open with one of our <a href="http://hourofcode.com/us/resources#videos">inspirational videos</a>
+    Dibuka dengan salah satu dari <a href="http://hourofcode.com/us/resources#videos">video inspiratif</a> kami
   </td></tr> 
   
   <td>
-    11:17-11:30 am
+    10:17-10:30 am
   </td>
   
   <td>
-    Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives.
+    Tamu spesial yang berbicara mengenai latar belakang mereka dan bagiaman teknologi dan ilmu komputer memainkan peran penting pada kehidupan sehari-hari.
   </td></tr> 
   
   <td>
-    11:30-11:40 am
+    10:30-10:40 am
   </td>
   
   <td>
-    Students do an Hour of Code demo for the school. Fun twist- have them teach the principal, politician or other students.
+    Pelajar melakukan mendemostrasikan Hour of Code untuk skolah. Untuk hal menyenangkannya ajarkan kepala sekolah, politisi atau pelajar lain.
   </td></tr> 
   
   <td>
-    11:40-12:00 pm
+    10:40-11:00 pm
   </td>
   
   <td>
-    Students demo an unplugged activity and how computer science can be taught without using computers.
+    Pelajar mendemostrasikan kegiatan tanpa komputer dan bagaimana ilmu komputer dapat diajarkan tanpa menggunakan komputer.
   </td></tr> 
   
   <td>
-    12:00-12:05 pm
+    11:00-11:05 pm
   </td>
   
   <td>
-    Teacher who help bring the school-wide event gives closing remarks.
+    Guru yang membantu mengadakan acara di sekolah memberikan pidato penutupan.
   </td>
 </table>

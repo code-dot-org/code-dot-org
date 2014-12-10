@@ -1,140 +1,151 @@
-"sv":
-  site_name: "HOUR of CODE"
-  language: "Svenska"
-  front_title: "Delta i det största utbildningsevenemanget någonsin, 8-14 december 2014"
-  coming_soon: "Kommer snart"
-  front_header_banner: "Delta i det största utbildningsevenemanget någonsin, 8-14 december 2014"
+sv:
+  site_name: HOUR of CODE
+  language: Svenska
+  front_title: Delta i det största utbildningsevenemanget någonsin, 8-14 december 2014
+  coming_soon: Kommer snart
+  front_header_banner: Delta i det största utbildningsevenemanget någonsin, 8-14 december 2014
   front_intro_default: 'Hour of Code är en global rörelse som når tiotals miljoner studenter i mer än 180 länder. Vemsomhelst kan organisera en Hour of Code varsomhelst. Det finns entimmes introduktioner på mer än 30 språk. Inga förkunskaper behövs. <strong>Från 4 till 104 år</strong>'
   front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of people in 180+ countries. Anyone can organize an Hour of Code event. Over 3M people did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
-  front_watch_video: "Se den nya videon"
-  header_menu_resources: "Resurser"
-  header_menu_faq: "Vanliga Frågor"
-  header_menu_prizes: "Priser"
-  header_menu_uk_code_org: "uk.code.org"
+  front_watch_video: Se den nya videon
+  header_menu_resources: Resurser
+  header_menu_faq: Vanliga Frågor
+  header_menu_prizes: Priser
+  header_menu_uk_code_org: uk.code.org
   company_4-H: 4-H Youth Development
-  company_asa: "Afterschool Alliance"
-  company_bgca: "Boys and Girls Club of America"
-  company_bsusa: "Boy Scouts of America"
-  company_cgcs: "Council of the Great City Schools"
-  company_gsusa: "Girl Scouts of America"
-  company_khanacademy: "Khan Academy"
-  company_mesa: "Mathematics Engineering Science Achievement"
-  company_napcs: "National Alliance of Public Charter Schools"
-  company_ngcp: "National Girls Collaborative Project"
-  company_teachforall: "Teach for All"
-  company_teachforamerica: "Teach for America"
-  company_tntp: "TNTP"
-  prizes_all: "Priser för varje arrangör"
+  company_asa: Afterschool Alliance
+  company_bgca: Boys and Girls Club of America
+  company_bsusa: Boy Scouts of America
+  company_cgcs: Council of the Great City Schools
+  company_gsusa: Girl Scouts of America
+  company_khanacademy: Khan Academy
+  company_mesa: Mathematics Engineering Science Achievement
+  company_napcs: National Alliance of Public Charter Schools
+  company_ngcp: National Girls Collaborative Project
+  company_teachforall: Teach for All
+  company_teachforamerica: Teach for America
+  company_tntp: TNTP
+  prizes_all: Priser för varje arrangör
   prizes_every_organizer: 'Varje organistatör av en Hour of Code får Dropbox- eller Skype-krediter som tack'
   prizes_technology: 'En offentlig skola i varje amerikansk delstat (& Washington DC) kommer att vinna teknik till ett värde av $10.000'
   prizes_tech_chats: '# classrooms will win video chats with very special guests'
-  prizes_robots: "100 classrooms will win a set of programmable robots"
-  prizes_brilliant: "One school in each province and territory will receive $2000 for a Brilliant Project"
+  prizes_robots: 100 classrooms will win a set of programmable robots
+  prizes_brilliant: One school in each province and territory will receive $2000 for a Brilliant Project
   prizes_actua: "15 schools across Canada will receive 2 hands-on STEM workshops by one of Actua's members"
-  prizes_details: "Detaljer"
+  prizes_details: Detaljer
   whats_next_header: "What's Next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2014 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>How to run an Hour of Code</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Promote the Hour of Code</a>"
   n_have_learned_an_hoc: '<h1>#</h1><h3>har provat på en</h3><h2>Hour of Code</h2>'
-  anybody_can_learn: "Alla kan lära sig."
-  register_now: "Registrera dig nu"
-  front_join_us_heading: "En Hour of Code för varje elev."
-  front_join_us_description: "Datavetenskap är grundkunskap för alla studenter. Hjälp oss att nå ut till 100 miljoner."
-  front_join_us_button: "Delta"
-  front_what_is_hoc: "Vad är Hour of Code?"
-  front_join_us_header: "Anyone can learn the basics, and have fun doing it!"
-  front_join_us_header_uk: "Arrangera en Hour of Code-aktivitet någon gång mellan 8-14 december, för att visa att alla kan lära sig grunderna och ha roligt under tiden!"
-  front_join_us_teacher: "Är du lärare?"
-  front_join_us_inspire: "Inspire students with"
-  front_join_us_inspire_link: "an Hour of Code in the classroom."
-  front_join_us_parent: "Är du förälder?"
-  front_join_us_ask_link: "Be din lokala skola"
-  front_join_us_ask: "att anordna en Hour of Code."
-  front_join_us_computer_science: "Älskar du datavetenskap?"
-  front_join_us_spread: "Spread the word."
-  front_join_us_organize: "Eller anordna en Hour of Code själv."
-  front_join_us_how_to_run: "Så här kan du anordna en Hour of Code"
-  front_join_us_help_promote: "Hjälp till att främja Hour of Code"
-  front_join_us_students: "Elever"
-  front_join_us_teachers: "Lärare"
-  front_join_us_everyone: "Alla"
-  front_join_us_try: "Pröva"
-  front_join_us_host: "Anordna"
-  front_join_us_support: "Stöd"
+  anybody_can_learn: Alla kan lära sig.
+  register_now: Registrera dig nu
+  front_join_us_heading: En Hour of Code för varje elev.
+  front_join_us_description: Datavetenskap är grundkunskap för alla studenter. Hjälp oss att nå ut till 100 miljoner.
+  front_join_us_button: Delta
+  front_what_is_hoc: Vad är Hour of Code?
+  front_join_us_header: Anyone can learn the basics, and have fun doing it!
+  front_join_us_header_uk: Arrangera en Hour of Code-aktivitet någon gång mellan 8-14 december, för att visa att alla kan lära sig grunderna och ha roligt under tiden!
+  front_join_us_teacher: Är du lärare?
+  front_join_us_inspire: Inspire students with
+  front_join_us_inspire_link: an Hour of Code in the classroom.
+  front_join_us_parent: Är du förälder?
+  front_join_us_ask_link: Be din lokala skola
+  front_join_us_ask: att anordna en Hour of Code.
+  front_join_us_computer_science: Älskar du datavetenskap?
+  front_join_us_spread: Spread the word.
+  front_join_us_organize: Eller anordna en Hour of Code själv.
+  front_join_us_how_to_run: Så här kan du anordna en Hour of Code
+  front_join_us_help_promote: Hjälp till att främja Hour of Code
+  front_join_us_students: Elever
+  front_join_us_teachers: Lärare
+  front_join_us_everyone: Alla
+  front_join_us_try: Pröva
+  front_join_us_host: Anordna
+  front_join_us_support: Stöd
   signup_header: 'Organize an Hour of Code event during Dec 8 - 14, and register it here.'
-  signup_name_label: "Ditt namn"
-  signup_email_label: "Din epostadress"
-  signup_organization_name_label: "Namn på skolan eller organisationen"
-  signup_event_type_label: "Typ av evenemang"
-  signup_event_entire_school_label: "Hela min skola deltar"
-  signup_event_location_label: "Plats för evenemanget (valfritt)"
-  signup_special_event_flag_label: "Markera mitt evenemang"
-  signup_special_event_details_label: "Särskilda detaljer om evenemanget"
+  signup_name_label: Ditt namn
+  signup_email_label: Din epostadress
+  signup_organization_name_label: Namn på skolan eller organisationen
+  signup_event_type_label: Typ av evenemang
+  signup_event_entire_school_label: Hela min skola deltar
+  signup_event_location_label: Plats för evenemanget (valfritt)
+  signup_special_event_flag_label: Markera mitt evenemang
+  signup_special_event_details_label: Särskilda detaljer om evenemanget
   signup_send_posters_flag_label: 'Skicka <a href= "/resources#posters"> affischer</a> till min skola eller organisation'
-  signup_send_posters_address_label: "Adressen till skolan eller organisationen"
-  signup_whole_school_flag_label: "Detta evenemang gäller en hel skola"
-  signup_your_event: "Sign up your event"
-  signup_name_placeholder: "Ditt namn"
-  signup_email_placeholder: "du@exempel.se"
-  signup_organization_name_placeholder: "Till exempel Storskolan"
+  signup_send_posters_address_label: Adressen till skolan eller organisationen
+  signup_whole_school_flag_label: Detta evenemang gäller en hel skola
+  signup_your_event: Registrera ditt evenemang
+  signup_name_placeholder: Ditt namn
+  signup_email_placeholder: du@exempel.se
+  signup_organization_name_placeholder: Till exempel Storskolan
   signup_event_location_placeholder: "Postnummer och land ELLER fullständig adress. \r (Vi använder detta för att placera en nål på vår karta)"
-  signup_special_event_details_placeholder: "Beskriv vad som gör detta till ett särskilt evenemang"
-  signup_send_posters_address_placeholder: "Denna adress kommer inte att visas på kartan"
-  signup_event_type_in_school: "I en skola"
-  signup_event_type_out_of_school: "Utanför skolan"
-  signup_submit_label: "Registrera dig"
-  signup_submit_error_message: "Ett fel uppstod. Vänligen kontrollera att alla obligatoriska fält har fyllts i korrekt."
-  signup_thank_you_header: "Tack för att du anmält dig som värd för ett Hour of code-evenemang."
-  signup_thank_you_message: "Vi har skickat ett bekräftelsemail med information för att hjälpa dig komma igång."
+  signup_special_event_details_placeholder: Beskriv vad som gör detta till ett särskilt evenemang
+  signup_send_posters_address_placeholder: Denna adress kommer inte att visas på kartan
+  signup_event_type_in_school: I en skola
+  signup_event_type_out_of_school: Utanför skolan
+  signup_submit_label: Registrera dig
+  signup_submit_error_message: Ett fel uppstod. Vänligen kontrollera att alla obligatoriska fält har fyllts i korrekt.
+  signup_thank_you_header: Tack för att du anmält dig som värd för ett Hour of code-evenemang.
+  signup_thank_you_message: Vi har skickat ett bekräftelsemail med information för att hjälpa dig komma igång.
   map_header: '# Hour of Code evenemang runt om i världen'
   map_header_company: '# by company organizers'
-  meta_tag_og_title: "Hour of Code är på väg"
-  meta_tag_og_description: "Hour of Code är en global rörelse som når tiotals miljoner elever i 180+ länder och över 30 språk. Åldrar 4-104."
-  meta_tag_twitter_title: "Hour of Code är på väg"
-  meta_tag_twitter_description: "Hour of Code är en global rörelse som når tiotals miljoner elever i 180+ länder och över 30 språk. Åldrar 4-104."
+  map_search_placeholder: Search for Hour of Code events
+  map_search_search: Search
+  map_search_reset: Reset
+  meta_tag_og_title: The Hour of Code is here
+  meta_tag_og_description: Hour of Code är en global rörelse som når tiotals miljoner elever i 180+ länder och över 30 språk. Åldrar 4-104.
+  meta_tag_twitter_title: The Hour of Code is here
+  meta_tag_twitter_description: Hour of Code är en global rörelse som når tiotals miljoner elever i 180+ länder och över 30 språk. Åldrar 4-104.
   twitter_default_text: 'Jag deltar i årets #HourOfCode, gör du? @codeorg'
-  hardware_prizes_form_name_label: "Ditt namn"
-  hardware_prizes_form_name_placeholder: "Ditt namn"
-  hardware_prizes_form_email_label: "Din epostadress"
-  hardware_prizes_form_email_placeholder: "Din epostadress"
-  hardware_prizes_form_school_name_label: "Skolans namn"
-  hardware_prizes_form_school_name_placeholder: "Skolans namn"
-  hardware_prizes_form_school_address_label: "Skolans adress"
-  hardware_prizes_form_school_address_placeholder: "Skolans adress"
-  hardware_prizes_form_school_type_label: "Typ av skola"
-  hardware_prizes_form_school_type_option_elementary: "Grundskola"
-  hardware_prizes_form_school_type_option_middle_school: "Högstadiet"
-  hardware_prizes_form_school_type_option_high_school: "Gymnasiet"
-  hardware_prizes_form_qualifying_school_label: "This is a K-12 US public school"
-  hardware_prizes_form_number_students_label: "Antalet studenter som deltar"
-  hardware_prizes_form_number_students_placeholder: "Antal studenter"
-  hardware_prizes_form_plan_file_label: "Ladda upp en logistikplan för din Hour of Code"
+  hardware_prizes_form_name_label: Ditt namn
+  hardware_prizes_form_name_placeholder: Ditt namn
+  hardware_prizes_form_email_label: Din epostadress
+  hardware_prizes_form_email_placeholder: Din epostadress
+  hardware_prizes_form_school_name_label: Skolans namn
+  hardware_prizes_form_school_name_placeholder: Skolans namn
+  hardware_prizes_form_school_address_label: Skolans adress
+  hardware_prizes_form_school_address_placeholder: Skolans adress
+  hardware_prizes_form_school_type_label: Typ av skola
+  hardware_prizes_form_school_type_option_elementary: Grundskola
+  hardware_prizes_form_school_type_option_middle_school: Högstadiet
+  hardware_prizes_form_school_type_option_high_school: Gymnasiet
+  hardware_prizes_form_qualifying_school_label: This is a K-12 US public school
+  hardware_prizes_form_number_students_label: Antalet studenter som deltar
+  hardware_prizes_form_number_students_placeholder: Antal studenter
+  hardware_prizes_form_plan_file_label: Ladda upp en logistikplan för din Hour of Code
   hardware_prizes_form_plan_file_description: 'Lämna in en enkel plan för hur du tänker organisera så att varje elev på din skola gör Hour of Code. Exempelplan: #PDF # | #Word #'
-  hardware_prizes_form_submit_label: "Skicka in"
-  hoc_faq_title: "Vanliga frågor"
-  hoc_faq_what_is_hoc_q: "Vad är Hour of Code?"
-  hoc_faq_what_is_hoc_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
-  hoc_faq_last_year: "Prova förra årets övningar"
-  hoc_faq_when_is_hoc_q: "När är Hour of Code?"
+  hardware_prizes_form_submit_label: Skicka in
+  hoc_faq_title: Vanliga frågor
+  hoc_faq_what_is_hoc_q: Vad är Hour of Code?
+  hoc_faq_what_is_hoc_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://code.org/learn'>Check out the tutorials</a>."
+  hoc_faq_last_year: Try the tutorials
+  hoc_faq_when_is_hoc_q: När är Hour of Code?
   hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during December 8-14, 2014, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. (And if you can't do it during that week, do it the week before or after)."
-  hoc_faq_why_cs_q: "Varför datavetenskap?"
+  hoc_faq_why_cs_q: Varför datavetenskap?
   hoc_faq_why_cs_a: "<i>Every</i> student should have the opportunity to learn computer science. It helps nurture problem-solving skills, logic and creativity. By starting early, students will have a foundation for success in any 21st-century career path. See more stats on <a href='http://code.org'>Code.org</a>."
-  hoc_faq_how_participate_q: "How do I participate in the Hour of Code?"
+  hoc_faq_how_participate_q: How do I participate in the Hour of Code?
   hoc_faq_how_participate_a: "Sign up to host an Hour of Code event <a href='http://hourofcode.org'>here</a> and <a href='target-resources-how-to'>start planning</a>. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 8 arrives."
-  hoc_faq_behind_hoc_q: "Who is behind the Hour of Code?"
+  hoc_faq_behind_hoc_q: Who is behind the Hour of Code?
   hoc_faq_behind_hoc_a: "The Hour of Code is organized by <a href='http://code.org'>Code.org</a>, a public 501c3 non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. An <a href='http://code.org/about/partners'>unprecedented coalition of partners</a> have come together to support the Hour of Code, too &mdash; including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the College Board."
   hoc_faq_host_q: "I don't know anything about coding. Can I still host an event?"
   hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='http://code.org/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='target-resources-how-to'>how to guide</a>."
-  hoc_faq_need_computers_q: "Behöver jag en dator till varje deltagare?"
+  hoc_faq_need_computers_q: Behöver jag en dator till varje deltagare?
   hoc_faq_need_computers_a: "Nej. Vi har Hour of Code övningar som fungerar på datorer, smarttelefoner, surfplattor och en del som inte kräver dator alls! Du kan gå med vart du än är, med vad du än har. <p><i>Några alternativ:</i> <br> <ul> <li><b>Arbeta i par.</b> Forskning visar att elever lär sig bäst genom <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>par-programmering</a>, att dela på en dator och arbeta tillsammans. Uppmuntra eleverna att jobba i par. <li><b>Använda storbild.</b> Om du har en projektor som du kan koppla till en uppkopplad dator, så kan hela gruppen arbeta med Hour of Code tillsammans. Se delar av instruktionsfilmer tillsammans och turas om att lösa uppgifter eller svara på frågor. <li><b>Kör utan dator.</b> Vi har övningar som inte kräver dator alls. </ul>"
   hoc_faq_international_q: 'I am in <country>. How do I participate internationally?'
   hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='target-resources'>here</a>."
-  hoc_faq_tutorial_q: "Hur gör jag för att skapa en Hour of Code övning?"
+  hoc_faq_tutorial_q: Hur gör jag för att skapa en Hour of Code övning?
   hoc_faq_tutorial_a: "If you're interested in becoming a tutorial partner, <a href='target-tutorial-guidelines'>see our guidelines and instructions</a>. We'd like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science."
-  hoc_faq_more_questions_q: "Fler frågor?"
+  hoc_faq_more_questions_q: Fler frågor?
   hoc_faq_more_questions_a: "Se om svaret finns i vårt <a href='http://support.code.org'>support forum</a>."
-  hoc_faq_more_questions_br_q: "Outras dúvidas?"
+  hoc_faq_scratch_q: I am doing Scratch for Hour of Code, but what if my students have iPads rather than laptops?
+  hoc_faq_scratch_a: "Scratch doesn't run on tablets. If your students are young, they can use the ScratchJR iPad app (for early-readers). If you look at the tutorials on <a href='http://code.org/learn'>Code.org/learn</a>, you can find other tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark."
+  hoc_faq_account_q: Do students need to log on using an account?
+  hoc_faq_account_a: "No. Absolutely no signup or login is required for students to try the Hour of Code. Most of the <a href='http://code.org/learn/beyond'>follow-on courses</a> require account creation to save student progress."
+  hoc_faq_frozen_q: Where is the tutorial with Anna and Elsa?
+  hoc_faq_frozen_a: "It is now published on <a href='http://code.org/learn'>Code.org/learn</a>. We hope you enjoy it!"
+  hoc_faq_high_school_q: Which activity should I do with high school students?
+  hoc_faq_high_school_a: "Across all ages, we recommend trying one of the beginner tutorials on <a href='http://code.org/learn'>Code.org/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as KhanAcademy or CodeHS."
+  hoc_faq_more_questions_br_q: Outras dúvidas?
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
   hoc_faq_when_is_hoc_uk_a: "The Hour of Code will take place during December 8-14, 2014. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. The Hour of Code in the UK will happen at the same time as in the US where it is timed to celebrate the annual <a href='http://csedweek.org'>Computer Science Education Week.</a>"
@@ -143,47 +154,47 @@
   hoc_faq_behind_hoc_uk_a: "The Hour of Code is organised by <a href='http://uk.code.org'>Code.org</a>, a public 501c3 non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. An <a href='http://uk.code.org/about/partners'>unprecedented coalition of partners</a> have come together to support the Hour of Code, too &mdash; including Microsoft, Google, Cambridge University Press, Tech City and The Department of Education."
   hoc_faq_host_uk_a: "Of course. Hour of Code activities are self-guided. All you have to do is pick the tutorial you want and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. <a href='http://uk.code.org/learn'>Try our current tutorials</a>."
   stats_hoc_2013_heading: 'Fantastiska fakta om förra årets Hour of Code. På bara en vecka:'
-  stats_hoc_2013_image_alt: "Statistik från Hour of Code 2013"
-  stats_growth: "Nådde snabbast 15 miljoner användare."
+  stats_hoc_2013_image_alt: Statistik från Hour of Code 2013
+  stats_growth: Nådde snabbast 15 miljoner användare.
   stats_tumblr: 'Tumblr: 3,5 år'
   stats_facebook: 'Facebook: 3 år'
   stats_twitter: 'Twitter: 2,5 år'
   stats_pinterest: 'Pinterest: 2 år'
   stats_instagram: 'Instagram: 14 månader'
   stats_hoc: 'Hour of Code: 5 dagar'
-  stats_global: "15 miljoner elever över hela världen lärde sig med Hour of Code."
-  stats_girls_more: "Fler tjejer provade på datavetenskap än under de senaste 70 åren."
-  stats_girls_million: "Över 10 miljoner tjejer 2013"
+  stats_global: 15 miljoner elever över hela världen lärde sig med Hour of Code.
+  stats_girls_more: Fler tjejer provade på datavetenskap än under de senaste 70 åren.
+  stats_girls_million: Över 10 miljoner tjejer 2013
   stats_nina: '"Varje dag gav samma resultat &mdash; 100% engagemang."-Nina Nichols Peery, lärare'
   stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
   stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
-  resources_how_to: "How-to guide for teachers"
-  resources_how_to_events: "Event how-to guide"
-  resources_how_to_districts: "How-to guide for districts"
-  resources_how_to_officials: "How-to guide for public officials"
-  resources_handouts: "Handouts to spread the word"
-  resources_videos: "Filmer"
-  resources_posters: "Affischer"
-  resources_social: "Sociala medier"
-  resources_banners: "Banners"
-  resources_emails: "E-post exempel"
-  resources_stats: "Useful stats and blurbs"
-  resources_press_kit: "Presskit"
-  events_title: "Alla Hour of Code aktiviteter"
-  events_nav_all: "Alla Aktiviteter"
-  events_nav_whole_schools: "Hela skolor"
-  events_nav_special: "Speciella evenemang"
-  events_nav_orgs: "Organizations"
-  events_all_title: "Alla Hour of Code aktiviteter"
-  events_whole_school_title: "Whole-school Hour of Code events"
-  events_special_title: "Special Hour of Code events"
-  events_orgs_title: "All Hour of Code events organized by Partner Organizations"
-  event: "aktivitet"
-  events: "evenemang"
-  footer_copyright_message: "Copyright 2014 Code.org. All rights reserved."
-  footer_trademark_message: "Hour of Code™ is a trademark of Code.org."
-  footer_menu_partners: "Partners"
-  footer_menu_contact: "Kontakta oss"
-  footer_menu_support: "Support"
-  footer_menu_terms: "Villkor"
-  footer_menu_privacy: "Integritetspolicy"
+  resources_how_to: How-to guide for teachers
+  resources_how_to_events: Event how-to guide
+  resources_how_to_districts: How-to guide for districts
+  resources_how_to_officials: How-to guide for public officials
+  resources_handouts: Handouts to spread the word
+  resources_videos: Filmer
+  resources_posters: Affischer
+  resources_social: Sociala medier
+  resources_banners: Banners
+  resources_emails: E-post exempel
+  resources_stats: Useful stats and blurbs
+  resources_press_kit: Presskit
+  events_title: Alla Hour of Code aktiviteter
+  events_nav_all: Alla Aktiviteter
+  events_nav_whole_schools: Hela skolor
+  events_nav_special: Speciella evenemang
+  events_nav_orgs: Organizations
+  events_all_title: Alla Hour of Code aktiviteter
+  events_whole_school_title: Whole-school Hour of Code events
+  events_special_title: Special Hour of Code events
+  events_orgs_title: All Hour of Code events organized by Partner Organizations
+  event: aktivitet
+  events: evenemang
+  footer_copyright_message: Copyright 2014 Code.org. All rights reserved.
+  footer_trademark_message: Hour of Code™ is a trademark of Code.org.
+  footer_menu_partners: Partners
+  footer_menu_contact: Kontakta oss
+  footer_menu_support: Support
+  footer_menu_terms: Villkor
+  footer_menu_privacy: Integritetspolicy

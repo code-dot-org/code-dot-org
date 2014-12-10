@@ -21176,15 +21176,15 @@ exports.emptyFunctionBlocksErrorMsg = function(d){return "La funció bloc ha de 
 
 exports.errorEmptyFunctionBlockModal = function(d){return "Cal que hi hagi blocs dins de la definició de la teva funció. Fes clic a \"Edita\" i arrossega els blocs que calgui dins del bloc verd."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "Feu clic a \"Edita\" per assegurar-vos que no us falta cap bloc a la definició de funció."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "Recordeu d'afegir un bloc a cada entrada de paràmetre al bloc de funcions en el vostre espai de treball."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "Heu afegit un bloc de paràmetre, però no l'heu utilitzat a la definició. Assegureu-vos d'utilitzar el paràmetre fent clic a \"edita\" i col·locat en bloc de paràmetre dins el bloc verd."};
 
 exports.errorRequiredParamsMissing = function(d){return "Crea un paràmetre per a la funció fent clic a \"edita\" i afegint els paràmetres necessaris. Arrossega els nous blocs de paràmetres a la definició de funció."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "Heu creat una funció però no l'heu utilitzat al vostre espai de treball! Feu clic a \"Funcions\" a la caixa d'eines i assegureu-vos d'utilitzar-la en el programa."};
 
 exports.errorQuestionMarksInNumberField = function(d){return "Prova substituint \"???\" per un valor."};
 

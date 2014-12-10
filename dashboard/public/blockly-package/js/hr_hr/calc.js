@@ -11283,7 +11283,7 @@ exports.hintHeader = function(d){return "Evo savjeta:"};
 
 exports.genericFeedback = function(d){return "Pogledaj kako si završio i pokušaj popraviti svoj program."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Pogledaj što sam napravio"};
 
 
 },{"messageformat":53}],42:[function(require,module,exports){

@@ -1,10 +1,8 @@
 * * *
 
-title: Press Kit layout: wide nav: resources_nav
+title: Kit per la Stampa layout: wide nav: resources_nav
 
 * * *
-
-[<button style="float: right; margin-top: 50px">Iscriviti</button>](/#join)
 
 ## Come attirare l'attenzione dei media sul tuo evento dell'Ora del Codice
 
@@ -14,18 +12,18 @@ title: Press Kit layout: wide nav: resources_nav
 
   * Mettiti in contatto con i media due settimane prima dell'evento via e-mail. Se non ricevi una risposta, riprova via e-mail oppure via telefono.
   * Chiedi ad un volontario oppure a un collaboratore della scuola di scattare fotografie da condividere online o trasmettere ai giornali.
-  * Scrivi dell'Ora del Codice sulla homepage del sito web della suola e sul giornale scolastico. &Egrave; utile arricchire i testi con dettagli sugli eventi e con foto delle attività svolte dagli studenti.
+  * Scrivi dell'Ora del Codice sulla homepage del sito web della scuola e sul giornale scolastico. &Egrave; utile arricchire i testi con dettagli sugli eventi e con foto delle attività svolte dagli studenti.
   * Dall'8 al 14 dicembre condividi su Facebook e Twitter gli aggiornamenti sulle attività, gli annunci relativi agli eventi e aggiungi delle foto usando l'hashtag **#HourOfCode**. In questo modo, lo staff di Code.org potrà vedere i tuoi eventi e potrà promuoverli.
 
 ### Guida passo-passo:
 
 **1. Plan your event**
 
-  * Prevedi una assemblea per promuovere l'Ora del Codice.
+  * Organizza una assemblea per promuovere l'Ora del Codice.
   * Manda <a
-  * Send [a letter](<%= hoc_uri('/resources/#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
-  * Organizza attività di gruppo (come una dimostrazione oppure un'attività di programmazione autonoma), oppure organizza un'esibizione di attività svolte od organizzate dagli studenti.
-  * Show Code.org’s [Hour of Code video](<%= hoc_uri('/') %>) or one of [these](<%= hoc_uri('/resources#videos') %>) to inspire.
+  * Inviare [ una lettera](<%= hoc_uri('/resources/#sample-emails') %>) di invito al tuo sindaco, deputato, senatore o governatore o a influenti uomini d'affari perché partecipino e parlino con gli studenti.
+  * Organizza attività di gruppo (come una dimostrazione oppure un'attività di programmazione offline), oppure organizza un'esibizione di attività svolte od organizzate dagli studenti.
+  * Mostra il video [Ora del Codice](<%= hoc_uri('/') %>) di Code.org o uno di [questi video](<%= hoc_uri('/resources#videos') %>) per risvegliare l'interesse.
 
 **2. Identify specific local reporters that cover education or local events.**
 
@@ -53,11 +51,9 @@ In China, every students takes computer science to graduate high school. In the 
 
 "The Hour of Code is designed to demystify code and show that computer science is not rocket-science, anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "In one week last year, 15 million students tried an Hour of Code. Now we're aiming for 100 million worldwide to prove that the demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
 
-**About Code.org**
+**Chi siamo**
 
 Code.org® is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign — which has introduced millions of students to computer science — partnered with more than 30 public school districts nationwide, and launched Code Studio, an open-source, online learning platform for all ages. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
 Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).
-
-<a style="display: block" href="/#join"><button style="float: right;">Iscriviti</button></a>

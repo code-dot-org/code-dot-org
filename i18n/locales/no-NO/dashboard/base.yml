@@ -440,8 +440,8 @@
     caption_by_name_age: 'av %{name}, %{age} år'
     caption_time_ago: '%{time_ago} siden'
     header: Galleri
-    header_playlab: Play Lab
-    header_artist: Artist
+    header_playlab: Spill-Lab
+    header_artist: Kunstner
   landing:
     prerelease: "Dette kurset er i <span class='betatext'> beta</span>.  Det betyr at det ikke er den endelige versjonen av kurset, men at det blir endret når vi får tilbakemeldinger og forbedringer er laget."
     prerelease_hoc2014: "Denne veiledningen er i <span class='betatext'> beta</span>.  Den vil kunne endres ettersom vi mottar tilbakemeldinger og gjør forbedringer."
@@ -508,3 +508,7 @@
     completed_too_many_blocks: fullført, for mange blokker
     completed_perfect: Perfekt fulført
     furthest_level_attempted: fremste nivå forsøkt
+  studio:
+    courses_working_on: "Courses you're working on"
+    completed_courses: Completed courses
+    all_courses: All courses

@@ -1,47 +1,45 @@
 * * *
 
-from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)" subject: "Thanks for signing up to host an Hour of Code!" litmus_tracking_id: "5g5lyi1a"
+از: "هادی پرتوی (Code.org) [hadi_partovi @&#99; ode.org](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)" <0>&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;</0>" موضوع: "تشکر از شما برای ثبت نام در رابطه با میزبانی ساعت کدنویسی" litmus_tracking_id: "5g5lyi1a"
 
 * * *
 
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
 
+<% if @country == 'ro' %>
+
+Va multumim pentru inregistrare. Daca aveti nevoie de ajutor sau aveti orice intrebare contactati Echipa Hour of Code Romania la adresa: hoc@adfaber.org.
+
+<% end %>
+
 # با تشکر برای ورود به میزباني ساعت کدنويسي!
 
 **هر** سازمان‌دهنده ساعت كدنويسي، 10 گیگابایت از فضای دراپ باکس یا 10 دلار اعتبار اسکایپ به عنوان قدرداني دريافت خواهد كرد. [ جزئيات](http://<%= hostname %>/ جوایز)
 
-## 1. Spread the word
+## 1. گسترش واژه
 
-Tell your friends about the #HourOfCode.
+درباره #HourOfCode به دوستان خود بگویید.
 
 <% if @country == 'us' %>
 
-## 2. Ask your whole school to offer an Hour of Code
+## 2. از کل مدرسه خود بخواهید که یک ساعت برنامه نویسی را پیشنهاد دهد
 
-[Send this email](http://<%= hostname %>/resources#email) or give [this handout](http://<%= hostname %>/files/schools-handout.pdf) to your principal.
-
-<% end %>
-
-## 3. Ask your employer to get involved
-
-[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf).
-
-## 4. Promote Hour of Code within your community
-
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
-
-## 5. Ask a local elected official to support the Hour of Code
-
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
-
-<% if @country == 'ro' %>
-
-Multumim ca ne-ai anuntat despre evenimentul tau! Anunta-ne daca doresti informatii suplimentare sau daca ai intrebari. Hai sa facem istorie impreuna!
-
-Echipa Hour of Code Romania hoc@adfaber.org
+[ این ایمیل را ارسال کنید](http://<%= hostname %>/ منابع #email) یا [ را بدهید](http://<%= hostname %>/files/schools-handout.pdf) به مدیرتان. 
 
 <% end %>
+
+## 3. از شرکت خود بخواهید که درگیر مسئله شود
+
+[ این ایمیل را ارسال کنید](http://<%= hostname %>/ منابع #email) برای خود مدیر یا مدیر عامل. یا [ را به آنها ](http://<%= hostname %>/resources/hoc-one-pager.pdf) بدهید. .
+
+## 4. ساعت برنامه‌ نویسی را در جامعه خود ترویج کنید
+
+یک گروه محلی را به کار بگیری - گروه‌های دختر/پسر، کلیسا، دانشگاه، گروه‌های نظامی یا سازمان‌های کار. یا یک مهمانی بلوکی ساعت کد برای همسایه‌هایتان ترتیب دهید. 
+
+## از یک منتخب محلی برای حمایت از ساعت کدنویسی درخواست کنید
+
+[ این ایمیل را ارسال کنید](http://<%= hostname %>/ منابع #politicians) به شهردار، شورای شهر یا هیئت مدیره مدرسه. یا [give به آن‌ها این جزوه را بدهید](http://<%= hostname %>/resources/hoc-one-pager.pdf) و آن‌ها را به بازدید از مدرسه خود دعوت کنید.
 
 * * *
 
-Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](%= unsubscribe_link %).
+Code.org 501 c 3 سازمانی غیر انتفاعی است. آدرس ما 1301 5th، خیابان، سوئیت 1225، سیاتل، WA، 98101 است. این ایمیل‌ها را نمی‌خواهید دریافت کنید؟ [لغو اشتراک](%= unsubscribe_link %).

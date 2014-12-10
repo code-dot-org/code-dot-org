@@ -6,9 +6,15 @@ from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;
 
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
 
+<% if @country == 'ro' %>
+
+Va multumim pentru inregistrare. Daca aveti nevoie de ajutor sau aveti orice intrebare contactati Echipa Hour of Code Romania la adresa: hoc@adfaber.org.
+
+<% end %>
+
 # Hour of Codeのイベント主催への登録にご協力頂き大変ありがとうございます！
 
-**すべての**Hour of Codeの主催者には、お礼として Dropbox の容量 10 GB または Skype クレジット 10 ドルを差し上げています。[ 詳細](http://<%= hostname %>/prizes)
+**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](http://<%= hostname %>/prizes)
 
 ## 1. みんなに広めましょう
 
@@ -22,25 +28,17 @@ from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;
 
 <% end %>
 
-## 3. Ask your employer to get involved
+## 上司にも参加できるようお願いしてみましょう
 
 [Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf).
 
-## 4. Promote Hour of Code within your community
+## 4. あなたのコミュニティーにもHour of Codeを宣伝しましょう。
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+ボーイスカウト/ガールスカウト、教会、大学、退役軍人のグループ、労働組合など地域のグループにも募集をかけます。もしくは、近所でHour of Code地域の集いを主催してください。
 
-## 5. Ask a local elected official to support the Hour of Code
+## 5. 地元選出の議員にもHour of Codeのサポートをお願いしましょう
 
 [Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
-
-<% if @country == 'ro' %>
-
-Multumim ca ne-ai anuntat despre evenimentul tau! Anunta-ne daca doresti informatii suplimentare sau daca ai intrebari. Hai sa facem istorie impreuna!
-
-Echipa Hour of Code Romania hoc@adfaber.org
-
-<% end %>
 
 * * *
 

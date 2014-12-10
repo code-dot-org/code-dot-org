@@ -508,3 +508,7 @@ is:
     completed_too_many_blocks: lokið, of margir kubbar
     completed_perfect: lokið, fullkomið
     furthest_level_attempted: hæsti unninn áfangi
+  studio:
+    courses_working_on: Námskeið sem þú ert að fást við
+    completed_courses: Námskeið sem þú hefur lokið
+    all_courses: Öll námskeið

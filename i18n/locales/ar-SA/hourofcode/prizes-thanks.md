@@ -1,6 +1,6 @@
 * * *
 
-title: Thank you layout: wide
+العنوان: شكرا لك التخطيط: واسعة
 
 * * *
 

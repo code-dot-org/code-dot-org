@@ -609,3 +609,7 @@
     completed_too_many_blocks: concluído, muitos blocos
     completed_perfect: concluído, perfeito
     furthest_level_attempted: tentativa para o nível mais avançado
+  studio:
+    courses_working_on: Cursos que você está fazendo
+    completed_courses: Cursos concluídos
+    all_courses: Todos os cursos

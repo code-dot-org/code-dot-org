@@ -487,6 +487,7 @@ da:
         C4_math_artist: Programming the Artist with Math
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
+        C4_conditionals: Betingelser
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variables in Envelopes
@@ -538,8 +539,8 @@ da:
         frozen_circle_function_with_parameter_circle: 'Use the "create a circle" block and change the size.'
         frozen_snowflake_branch: 'Use the "create a snowflake branch" block'
         frozen_create_square: Attach more blocks here to create a square
-        playlab_drag_say: 'Drag the "say" block here and type "hello"'
-        playlab_use_twice: Use this block twice and remember to change the actor number
+        playlab_drag_say: 'Træk "sig"-blokken herhen og skriv "Hej"'
+        playlab_use_twice: Brug denne blok to gange og husk at ændre tallet for figuren
         playlab_move_girl: 'Use the "move right" block to move Tennis Girl'
         playlab_play_sound: 'Add "play sound" block here'
         playlab_arrow_keys: Remember to use these to move the witch after clicking on Run

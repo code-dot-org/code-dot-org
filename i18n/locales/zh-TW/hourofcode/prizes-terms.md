@@ -1,6 +1,6 @@
 * * *
 
-title: How-to Guide for Organisations layout: wide nav: resources_nav
+title: 招辦指南 layout: wide nav: resources_nav
 
 * * *
 

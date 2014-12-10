@@ -574,3 +574,7 @@
     completed_too_many_blocks: baigtas, panaudota per daug blokų
     completed_perfect: puikiai išspręsta
     furthest_level_attempted: išmėgintas aukščiausias lygis
+  studio:
+    courses_working_on: Courses you're working on
+    completed_courses: Completed courses
+    all_courses: All courses

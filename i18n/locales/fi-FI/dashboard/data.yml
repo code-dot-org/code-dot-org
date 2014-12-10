@@ -388,11 +388,11 @@ fi:
       Standalone_Artist_4:
         instructions: Sinulla on uusi lohko kokeiltavaksi, silmukka. Tämä toistaa joukon käskyjä. Mitä tapahtuu jos teet nämä komennot silmukassa 6 kertaa?
       Standalone_Artist_5:
-        instructions: Kuinka monta kertaa sinun täytyy tehdä silmukka tästä timantista piirtääksesi kukan?
+        instructions: Kuinka monta kertaa sinun täytyy toistaa tämä timantti silmukassa piirtääksesi kukan?
       Standalone_Artist_5.5:
         instructions: 'Huomaa kuinka yksinkertaistimme timantin koodia muuttamalla sen silmukaksi. Voit tehdä koko komentosarjasta 12 toistolla kukan. Vinkki: Sinun täytyy kääntyä 30 astetta timantin silmukan jälkeen jotta et piirrä uudelleen samaa timanttia.'
       Standalone_Artist_6:
-        instructions: 'Tee silmukka tästä kuusikulmisota 6 kertaa luodaksesi kuvio. Kuinka monta astetta sinun täytyy kääntyä kerrallaan? Vihje: jaa ympyrän astemäärä toistojen määrällä.'
+        instructions: 'Luo kuvio toistamalla tätä kuusikulmiota silmukassa 6 kertaa. Kuinka monta astetta sinun täytyy kääntyä kerrallaan? Vihje: jaa ympyrän astemäärä toistojen määrällä.'
       Standalone_Artist_7:
         instructions: 'Funktio on toinen ohjelmoinnin työkalu, joka auttaa sinua välttämään toistoa. Tämä funktio piirtää kukan, joten voit käyttää sitä koska tahansa halutessasi piirtää kukan. Käytä tätä ja uutta hyppää-lohkoa piirtääksesi nämä kukat. Vinkki: kukat ovat 150 kuvapisteen etäisyydellä toisistaan'
       Standalone_Artist_8:
@@ -476,26 +476,27 @@ fi:
         C3_crowdsourcing: Joukkoistaminen
         C3_functional_suncatchers: Funktionaaliset auringonkerääjät
         C3_songwriting_with_parameters: Parametroitu laulunkirjoitus
-        C4_intro: Introduction
+        C4_intro: Johdanto
         C4_bee_conditional: Mehiläisen ehtolauseet
-        C4_variables_artist: 'Variables - Artist'
-        C4_variables_playlab: 'Variables - Play Lab'
+        C4_variables_artist: 'Muuttujat - Taiteilija'
+        C4_variables_playlab: 'Muuttujat - Pelilabra'
         C4_for_loops: Silmukat
-        C4_math_artist: Programming the Artist with Math
-        C4_function_edit: Editing Functions
-        C4_function_create: Creating Functions
-        C4_unplugged_algorithms: Algorithms with Tangrams
+        C4_math_artist: Taitelijan ohjelmointi matematiikalla
+        C4_function_edit: Funktioiden muokkaus
+        C4_function_create: Funktioiden luominen
+        C4_conditionals: Ehtolausekkeet
+        C4_unplugged_algorithms: Tangram-algoritmeja
         C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Variables in Envelopes
+        C4_unplugged_variables: Muuttujat kirjekuorissa
         C4_unplugged_forloops: Silmukat
         C4_unplugged_parameters: Parametroitu sävellys
-        C4_unplugged_binary: Binary
+        C4_unplugged_binary: Binääri
         frozen_intro: Koodaustunnin esittely
         frozen_loops: Johdanto silmukoihin
         frozen_functions: Johdanto funktioihin
-        playlab_intro: Introduction to Play Lab
-        playlab_events: Play Lab Events
-        playlab_repeat_forever: Play Lab Repeat Forever
+        playlab_intro: Johdanto Pelilabraan
+        playlab_events: 'Pelilabra: tapahtumat'
+        playlab_repeat_forever: 'Pelilabra: ikuinen toisto'
     callout:
       text:
         drag_blocks: 'Vedä "liikuta"-lohko ja napsauta se kiinni toisen lohkon alalaitaan'
@@ -536,30 +537,29 @@ fi:
         frozen_snowflake_branch: 'Käytä "luo lumihiutalehaara" -lohkoa'
         frozen_create_square: Luo neliö liittämällä tähän lisää lohkoja
         playlab_drag_say: 'Raahaa "sano"-lohko tähän ja kirjoita "hei"'
-        playlab_use_twice: Käytä tätä lohkoa kahdesti ja muista muuttaa hahmon numero
+        playlab_use_twice: Käytä tätä lohkoa kahdesti ja muista muuttaa hahmon numeroa
         playlab_move_girl: 'Käytä "liiku oikealle" -lohkoa liikuttamaan tennistyttöä'
         playlab_play_sound: 'Lisää "soita ääni"-lohko tähän'
         playlab_arrow_keys: Muista käyttää näitä liikuttaaksesi noitaa sen jälkeen kun olet napsauttanut Suorita
         playlab_add_move: 'Lisää "liiku"-lohkoja tämän toistolohkon sisään'
         playlab_add_score: Lisää pistelohkoja tähän
         playlab_add_blocks: Lisää lohkosi tähän
-        set_variable: Vedä numerolohko tähän asettaaksesi muuttujasi
+        set_variable: Aseta muuttujasi arvo vetämällä numerolohko tähän
         place_variable: Vedä muuttujasi tähän lohkoon
         bee_for_loop: Vedä suurin lukumäärä nektaria, jonka haluat mehiläisen keräävän tähän
         place_counter_variable: Raahaa laskurimuuttujasi tähän lohkoon
         function_editor_draw_square: 'Tämä on funktionsi määritelmä. Nämä lohkot ajetaan joka kerta kun käytät "piirrä neliö" -lohkoa'
         change_here: Tee muutoksesi tähän
         write_draw_square_function: Piirrä neliö raahaamalla lohkoja työkaluista tänne
-        write_draw_triangle_function: Drag blocks from the toolbox into here that draw a triangle
-        edit_add_parameter: Click edit to add a parameter in your function
-        add_and_drag_parameter: Write in the name of your parameter here, click add, and then drag it into your function definition
-        fill_in_actor: Fill in the ??? with numbers that correspond to each actor (1, 2, and 3)
-        repeat: Put blocks inside the loop to repeat commands
-        if_bee_nectar: 'Use the "if" block to decide if the bee should get nectar'
-        if_else_bee: |-
-          Use the "if/else" block so that the Bee gets nectar from a flower, and makes honey if it's not a flower
-        repeat_full_circle: Enter in the number of times the zombie has to move to make a full circle
-        place_length_variable: Drag the length variable here to replace the question marks
-        arrows_move_actor: Use the arrows to move the actor
-        right_arrow_fireball: Use the right arrow to shoot fireballs
-        name_function: Write the name of your function here
+        write_draw_triangle_function: Piirrä kolmio vetämällä lohkoja työkaluista tänne
+        edit_add_parameter: Lisää funktioosi parametreja napsauttamalla muokkaa
+        add_and_drag_parameter: Kirjoita parametrisi nimi tähän, napsauta lisää ja sitten vedä se funktiosi määrittelyyn
+        fill_in_actor: Aseta ??? tilalle hahmoasi vastaava numero (1, 2 tai 3)
+        repeat: Toistaaksesi lohkojen komennot, aseta ne silmukan sisään
+        if_bee_nectar: 'Käytä "jos"-lohkoa päättääksesi pitääkö mehiläisen kerätä mettä'
+        if_else_bee: 'Käytä "jos-muuten"-lohkoa siten, että mehiläinen kerää mettä kukasta ja tekee hunajaa jos se ei ole kukassa'
+        repeat_full_circle: Syötä se määrä kertoja, jonka zombin pitää liikkua tehdäkseen täysi ympyrä
+        place_length_variable: 'Korvaa kysymysmerkit vetämällä pituusmuuttuja tähän '
+        arrows_move_actor: Käytä nuolia liikuttaaksesi hahmoa
+        right_arrow_fireball: Käytä oikeaa nuolta ampuaksesi tulipalloja
+        name_function: Kirjoita funktiosi nimi tähän

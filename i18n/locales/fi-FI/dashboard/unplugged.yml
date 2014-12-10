@@ -3,7 +3,7 @@ fi:
     unplugged:
       Unplug1:
         title: Johdanto tietojenkäsittelyyn
-        desc: Tämä oppitunti opettaa tietotekniikan käsitteen ja selittää mitä tietotekniikka-ammattilainen tekee. Se myös antaa oppilaille mahdollisuuden ottaa tietotekniikka-ammattilaisen roolin. Tehtävän loppuun mennessä kullakin oppilaalla on kotiin mukaan otettava muistutus siitä mitä hän on oppinut. Saatat kokea houkutusta väistää opettamasta tulevien oppituntien sanastoa nuorille lapsille, mutta niiden esittäminen hauskassa ja leikkisässä valossa on tuottavampaa kuin edistyneempien mahdollisuuksien odottaminen.
+        desc: Tällä oppitunnilla käydään läpi johdanto tietojenkäsittelytieteeseen ja selitetään, mitä tietotekniikan ammatilainen tekee. Oppitunti antaa myös oppilaille mahdollisuuden samaistua tietotekniikka-ammattilaisen rooliin. Suosittelemme, että tunnilla käydään läpi myös tietotekniikan sanastoa leikin ja hauskanpidon varjolla.
         pdfs:
           - unplug1
         video: Unplug1
@@ -21,7 +21,7 @@ fi:
         video: Unplug3
       Unplug4:
         title: Algoritmit
-        desc: Tämä oppitunti katta algoritmit. Käyttäen tangram-muotoja ja paperia, ensimmäinen harjoitus näyttää kuinka tärkeää on tehdä jokaisesta ohjeesta niin selkeä ja yksiselitteinen kuin mahdollista. Myöhemmin luokka tutkii kuinka monilla eri tavoin paperi voidaan taittaa suorakulmioksi, huomaten kuinka jotkin menetelmät vievät enemmän tai vähemmän taitoksia kuin toiset.
+        desc: Tällä oppitunnilla käsitellään algoritmeja. Hyödyntäen tangram-muotoja ja ruutupaperia, ensimmäiset harjoitukset osoittavat miten tärkeää on tehdä jokaisesta ohjeesta niin selkeä ja yksiselitteinen, kuin mahdollista. Tämän jälkeen oppilaat saavat tutkia, miten monella eri tavalla paperin voi taivutella suorakaiteen muotoiseksi ja samalla huomata, miten toiset tavat vaativat enemmän taitoksia, kuin toiset.
         pdfs:
           - unplug4
         video: Unplug4
@@ -149,36 +149,42 @@ fi:
       TangramAlgorithms:
         title: Tangram-algoritmit
         desc: Tämä oppitunti osoittaa meille jotakin tärkeää algoritmeistä. Jos pidät algoritmin yksinkertaisena niin sille löytyy monia käyttötapoja. Jos haluat, että kaikki päätyvät samaan lopputulokseen, niin algoritmisi tarvitsee enemmän yksityiskohtia.
+        video: C4_unplugged_algorithms
       EnvelopeVariables:
-        title: Envelope Variables
+        title: Kirjekuorimuuttujat
         desc: Muuttujat antavat vapautta ohjelmoinnissa. Tämä oppitunti selittää mitä muuttujat ovat ja kuinka voimme käyttää niitä monin eri tavoin. Käytä tätä toimintoa ennen (tai yhdessä) abstraktiotunnin kanssa, jotta idea tarttuu.
+        video: C4_unplugged_variables
       MadGlibs:
         title: Mad Glibs
         desc: Abstraktio on yksi tärkeimmistä tietojenkäsittelijän ymmärrettävistä taidoista. Tässä toiminnossa laitat opiskelijasi analysoimaan tarinoita erojen varalta jotta he voivat yleistää ne. Näistä abstraktoiduista tarinoista tulee malleja hauskoille ja hassuille uusille tarinoille.
+        video: C4_unplugged_madlibs
       ForLoopFun:
         title: Silmukkahupia
         desc: Tiedämme, että silmukat antavat meidän tehdä asioita uudestaan ja uudestaan, mutta nyt opimme kuinka käyttää silmukoita sisäänrakennettujen lisärakenteiden kanssa.
+        video: C4_unplugged_forloops
       SongwritingWithParameters:
         title: Parametroitu laulunkirjoitus
         desc: 'Eräs hienoimmista tietojenkäsittelytieteen rakenteista on funktio. Funktio (joita joskus kutsutaan proseduureiksi) ovat pienoisohjelmia, joita voit käyttää uudestaan ja uudestaan suuremman ohjelmasi sisältä. Tällä oppitunnilla opiskelijat intuitiivisesti oppivat miksi koodilohkojen yhdistäminen funktioiksi on niinkin kätevä käytäntö.  '
+        video: C4_unplugged_parameters
       BinaryImages:
         title: Binäärikuvat
         desc: Vaikka monet ajattelevat binääriä puhtaasti nollina ja ykkösinä, aiemmat kurssimme opettivat opiskelijoille, että informaatiota voidaan esittää monenlaisina binäärivaihtoehtoina. Tällä oppitunnilla viedään käsitettä askel pidemmälle, näyttäessään kuinka tietokone voi tallentaa jopa monimutkaisempaa informaatiota (kuen kuvia ja värejä) myös binäärisenä.
+        video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
-        title: Video Games and Coordinate Planes
-        desc: Video Games and Coordinate Planes lesson description
+        title: Tietokonepelit ja koordinaattitasot
+        desc: Tietokonepelit ja koordinaattiavaruus -oppitunnin kuvaus
       Contracts:
         title: Sopimukset
         desc: 'Sopimukset: tietokoneettoman tekemisen oppitunnin kuvaus'
       DesignRecipe:
         title: Suunnitteluresepti
-        desc: Design Recipe lesson description
+        desc: Suunnitteluresepti-oppitunnin kuvaus
       Booleans:
         title: Totuusarvot
         desc: 'Totuusarvot: oppitunnin kuvaus'
       ConditionalsPiecewiseFunctions:
         title: Ehtolauseet ja paloittaiset funktiot
-        desc: Conditionals and Piecewise Functions lesson description
+        desc: Ehtolauseet ja osittaiset funktiot -oppitunnin kuvaus
       CollisionDetection:
         title: Törmäyksen tunnistaminen
-        desc: Collision Detection lesson description
+        desc: Törmäyksen tunnistaminen -oppitunnin kuvaus

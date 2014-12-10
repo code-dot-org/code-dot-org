@@ -142,7 +142,7 @@
           'Bee: Debugging2': 'Пчела: Отладка2'
           'Artist: Patterns': 'Художник: Узоры'
           Songwriting: Написание песен
-          description_audience: Ages 8+ (after Course 2)
+          description_audience: Возраст 8+ (для закончивших Курс 2)
           description_short: Курс 3 является продолжением Курса 2.  Рекомендуется
             для 4-5 классов.
         msm:
@@ -219,10 +219,10 @@
         hourofcode:
           Maze: Лабиринт
           title: Hour of Code
-          description: Try the basics of computer science with characters from Angry
-            Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description_short: Try the basics of computer science with characters from
-            Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          description: Постигай азы программирования с персонажами Angry Birds, Plants
+            vs. Zombies, и Скратом из Ледникового периода!
+          description_short: Постигай азы программирования с персонажами Angry Birds,
+            Plants vs. Zombies, и Скратом из Ледникового периода!
         frozen:
           title: Программируй с Анной и Эльзой
           description: Давайте с помощью программирования кода присоединимся к Анне

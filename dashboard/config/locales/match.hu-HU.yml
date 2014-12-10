@@ -283,7 +283,7 @@
         /script_assets/msm/Unit 1/exercise_3_ninjacat.png: /script_assets/msm/Unit
           1/exercise_3_ninjacat.png
         Cloud: Felhő
-        Ruby: Ruby
+        Ruby: Rubin
         Dog: Kutya
         Ninjacat: Ninja macska
         (250, 400): (250, 400)
@@ -322,10 +322,10 @@
         /script_assets/msm/Unit 1/Exercise_5_question_4.png: /script_assets/msm/Unit
           1/Exercise_5_question_4.png
       Match math to code:
-        Converting Math to Code: Converting Math to Code
-        Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: Match
-          each mathematical expression with the correct code. Use a circle of evaluation
-          to help you get to the answer!
+        Converting Math to Code: Matematikai képletek átalakítása kóddá
+        Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: Párosítsd
+          minden egyes matematikai kifejezést a megfelelő kóddal. Használd a kiértékelő
+          kört a válaszodhoz!
         (15 + 3) x (72 - 19): (15 + 3) x (72 - 19)
         3 x 15 + (- 72 19): 3 x 15 + (- 72 19)
         72 + 3 - 19 x 15: 72 + 3 - 19 x 15
@@ -339,16 +339,16 @@
         Here is a contract for a new function. Match each item with the word that describes it.: Here
           is a contract for a new function. Match each item with the word that describes
           it.
-        yearbook-picture: yearbook-picture
+        yearbook-picture: évkönyv-kép
         string numer: string numer
         image: kép
         (yearbook-picture "Sally" 1992): (yearbook-picture "Sally" 1992)
         function name: függvény neve
-        domain: domain
+        domain: tartomány
         range: tartomány
         example: példa
       Match example to contract:
-        Contracts of Functions: Contracts of Functions
+        Contracts of Functions: Függvények deklarálása
         Match each example with the correct contract!: Match each example with the
           correct contract!
         (big-string? "gigantic" 5): (big-string? "gigantic" 5)

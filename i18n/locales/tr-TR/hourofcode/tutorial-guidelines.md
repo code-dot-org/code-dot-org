@@ -6,9 +6,9 @@ düzen: geniş
 
 # Kodlama Zamanı ve Bilgisayar Bilimi Eğitimi Haftası rehberi
 
-**Kod Saati 2014 etkinliği için gönderilecek eğitici rehber için son gönderim tarihi geçmiştir. Hazırladığınız rehberi yine de gönderebilirsiniz. Zaman bulabilirsek rehberinizi gözden geçireceğiz.**
+**Kodlama Saati 2014 için son öğretici gönderme tarihi geçmiştir. Hala göndermeye devam edebilirsiniz, zaman el verdikçe incelemeye çalışacağız.**
 
-Code.org sayfasında Kod Saati gibi çeşitli aktiviteler düzenleyecektir. Güncel liste aşağıdaki gibidir;[<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
+Code.org çeşitli Kodlama Saati aktivitelerine Code.org, Hour of Code, ve Bilgisayar Bilimi Eğitimi Haftası web sitelerinde ev sahipliği yapacaktır. Güncel liste buradadır [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
 
 We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
 
@@ -16,7 +16,7 @@ We’d like to host a variety of engaging options, but the primary goal is to op
 
 ## İçindekiler:
 
-  * [Öğreticiler eğitime dahil edilmesi için nasıl değerlendirilecek](#inclusion)
+  * [Öğreticilerin eğitime dahil edilmesi için değerlendirilme yolu](#inclusion)
   * [Bir Kodlama Saati aktivitesi yaratmak için genel bilgiler](#guidelines)
   * [Nasıl gönderilir (1 Ekim 2014'e kadar)](#submit)
   * [Aktivitenizi tasarlamak için öneriler](#design)
@@ -33,33 +33,33 @@ A committee of computer science educators will rank submissions based on qualita
 
 **Tutorials will be listed higher if they are:**
 
-  * Yüksek kaliteli
-  * Kendinden yönlendirmeli, hiçbir anlatıma ihtiyaç duymayan
-  * Yeni başlayanlar için tasarlanmış
-  * Yaklaşık 1 saat sürecek şekilde yapılmış
-  * Birçok işletim sisteminde çalışacak şekilde yaratılmış (mobil ve tablet ortamları da dahil)
-  * Birçok dilde çalışan
-  * Her nüfus grubunda öğrenime dahil olma isteğini uyandıracak (özellikle azınlık gruplarında)
-  * Sadece HTML+CSS web tasarımı odağında olmayan - (hedefimiz bilgisayar bilimi, sadece HTML kodlaması değil)
+  * yüksek kaliteli
+  * kendinden yönlendirmeli, hiçbir anlatıma ihtiyaç duymayan
+  * yeni başlayanlar için tasarlanmış
+  * yaklaşık 1 saat sürecek şekilde yapılmış
+  * birçok işletim sisteminde çalışacak şekilde yaratılmış (mobil ve tablet ortamları da dahil)
+  * birçok dilde çalışan
+  * her nüfus grubunda öğrenime dahil olma isteğini uyandıracak (özellikle azınlık gruplarında)
+  * sadece HTML+CSS web tasarımı odağında olmayan - (hedefimiz bilgisayar bilimi, sadece HTML kodlaması değil)
 
 **Tutorials will be listed lower if they are:**
 
-  * Düşük kaliteli
-  * Daha ileri düzeyde eğitime uygun (başlangıç düzeyine uygun olmayan)
-  * Kısıtlı işletim sistemi platformlarında çalışabilen - İnternet platformlarında IE9+ ve en son sürüm Chrome, Firefox ve Safari'yi desteklemesi gerekir
-  * Sadece İngilizce çalışan
-  * Tek bir cinsiyete hitap eden (örneğin, tema olarak sadece erkekler için tasarlanmış)
-  * Paralı bir eğitim sistemine yönlendirme amacıyla çalışan
+  * düşük kaliteli
+  * daha ileri düzeyde eğitime uygun (başlangıç düzeyine uygun olmayan)
+  * kısıtlı işletim sistemi platformlarında çalışabilen - İnternet platformlarında IE9+ ve en son sürüm Chrome, Firefox ve Safari'yi desteklemesi gerekir
+  * sadece İngilizce çalışan
+  * tek bir cinsiyete hitap eden (örneğin, tema olarak sadece erkekler için tasarlanmış)
+  * paralı bir eğitim sistemine yönlendirme amacıyla çalışan
 
 **Tutorials will NOT be listed if they:**
 
-  * Öğretmenin yüksek bir seviyede katılımını ve önceden hazırlığını gerektirecek olan (diğer bir deyişle, öğrenciler için kendinden yönlendirmeli olmayan)
-  * Bir saatten fazla uzun veya fazla kısa olan
-  * Kaydolmayı gerektiren 
-  * Ödeme gerektiren
-  * Yükleme gerektiren
-  * Sadece HTML + CSS web tasarımına odaklanmış
-  * Son gönderim tarihinden sonra veya eksik bilgiyle gönderilmiş (detaylar aşağıda)
+  * öğretmenin yüksek bir seviyede katılımını ve önceden hazırlığını gerektirecek olan (diğer bir deyişle, öğrenciler için kendinden yönlendirmeli olmayan)
+  * bir saatten fazla uzun veya fazla kısa olan
+  * kaydolmayı gerektiren 
+  * ödeme gerektiren
+  * yükleme gerektiren
+  * sadece HTML + CSS web tasarımına odaklanmış
+  * son gönderim tarihinden sonra veya eksik bilgiyle gönderilmiş (detaylar aşağıda)
 
 Ultimately, the goal of the Hour of Code campaign is to broaden participation in computer science by students and teachers, and to help show that computer science is accessible to all, and “easier than you think.” In many ways, this goal is better achieved by giving students and teachers fewer and simpler choices, with a focus on the highest quality options for a first-time user.
 

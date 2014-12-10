@@ -1,14 +1,14 @@
 * * *
 
-title: Hour of Code How-To for Districts layout: wide nav: resources_nav
+title: Година коду для освітніх районів layout: wide nav: resources_nav
 
 * * *
 
-# Bring the Hour of Code to your entire school district.
+# Проведіть Годину коду для всього району.
 
-## Get every school participating, every student learning!
+## Залучіть до участі кожну школу, а кожного учня - до навчання!
 
-  1. **Recruit local schools.** Share [this email](<%= hoc_uri('/resources#sample-emails') %>) and [teacher how to guide](<%= hoc_uri('/resources/how-to') %>), or include a [short blurb](<%= hoc_uri('/resources/stats') %>) in newsletters/district communications.
+  1. **Залучіть місцеві школи.** Надішліть [цього листа](<%= hoc_uri('/resources#sample-emails') %>) та [інструкції для вчителів](<%= hoc_uri('/resources/how-to') %>), або додайте [ коротку рекламку](<%= hoc_uri('/resources/stats') %>) у районну розсилку.
 
   2. **Provide a sample logistics plan for schools.** Share this sample logistics plan with schools to give them ideas of how to organize whole school participation. It’s as easy as doing it in every math class, homeroom period, or rotating throughout the week through the computer lab. They can submit their own plan for a chance to win $10,000 in hardware at [http://hourofcode.com/prizes](<%= hoc_uri('/prizes') %>).
 

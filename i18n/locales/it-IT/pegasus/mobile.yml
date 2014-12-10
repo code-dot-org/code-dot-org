@@ -44,7 +44,7 @@ it-IT:
   go: Inizia
   thank_you_: Grazie!
   congratulations: Complimenti!
-  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
+  congratulations_on_completing_hoc: "Congratulazioni per aver completato un'Ora del Codice"
   get_a_certificate_of_achievement: Ottieni un certificato dei risultati ottenuti
   enter_valid_email: Per favore inserisci un indirizzo valido di posta elettronica
   get_a_certificate_message: "Ti manderemo un certificato e le informazioni su come <a href='/learn/beyond'>continuare ad imparare dopo la prima Ora del Codice</a>"
@@ -68,7 +68,7 @@ it-IT:
   thanks_for_voting: Grazie per aver votato!
   share_on_facebook: Condividi su Facebook
   share_on_twitter: Condividi su Twitter
-  beyond_an_hour: Beyond an Hour of Code
+  beyond_an_hour: "Dopo l'Ora del Codice"
   get_started: Inizia
   i_agree: Firmo
   participant_select: '- Seleziona -'
@@ -77,9 +77,9 @@ it-IT:
   participant_educator: Insegnante
   participant_engineer: Ingegnere del Software
   participant_other: Nessuna delle precedenti
-  print_all: Print all
-  print_ice_art: Print your ice art
-  create_art_with_zombie: or make advanced art with zombie
+  print_all: Stampa tutto
+  print_ice_art: Stampa la tua arte di ghiaccio
+  create_art_with_zombie: "o fai dell'arte avanzata con gli zombie"
   i_am_a: Io sono un
   never_spam: Non ti invieremo mai posta elettronica indesiderata
   enter_country: Inserisci la tua nazione se non sei negli Stati Uniti
@@ -117,9 +117,9 @@ it-IT:
   studiobar_teacher_title: Fatto per gli insegnanti
   studiobar_teacher_body: "Introduci l'Officina del Codice nella tua classe"
   studiobar_frozen_title: "L'Ora del Codice"
-  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
-  studiobar_donate_title: Donate
-  studiobar_donate_body: One child learns for each dollar you donate
+  studiobar_frozen_body: Crea un meraviglioso paesaggio invernale con Anna ed Elsa
+  studiobar_donate_title: Sostienici
+  studiobar_donate_body: Per ogni dollaro che dai un bambino ha la possibilità di imparare
   contact_form_topic_student: Io sono uno studente
   contact_form_topic_parent: Io sono un genitore
   contact_form_topic_teacher: Io sono un insegnante
@@ -203,6 +203,12 @@ it-IT:
   dashboard_action_done: Fatto
   dashboard_action_required: obbligatorio
   dashboard_navigation_home_page: "Cruscotto di Controllo dell'insegnante"
+  dashboard_navigation_section_student_progress: Gestione delle classi e degli studenti
+  dashboard_navigation_section_teacher_progress: I tuoi progressi
+  dashboard_navigation_section_lesson_plans: Lesson Plans and Resources
+  dashboard_navigation_section_community: Aiuto e Comunità
+  dashboard_navigation_section_pd: Sviluppo Professionale
+  dashboard_navigation_section_speakers: 'Informatica<br/>Relatori Invitati'
   dashboard_navigation_all_sections: Gestione delle classi e degli studenti
   dashboard_navigation_view_progress: Controlla i progressi
   dashboard_navigation_add_students: Aggiungi i tuoi studenti
@@ -294,7 +300,7 @@ it-IT:
   dashboard_sections_password_account_creation: Password testuale creata dallo studente
   dashboard_sections_login_type_explanation: 'Questa tabella aiuta a spiegare quale tipo di accesso, <b>immagine, parola o e-mail</b>, scegliere per una classe.'
   dashboard_faq: 'FAQ - Domande e risposte'
-  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
+  code_hoc_coming: "L'Ora del Codice è qui: 8-14 Dicembre!"
   code_sign_up: "Iscriviti per partecipare durante la Settimana di Educazione all'Informatica"
   learn_more: Ulteriori informazioni
   hoc2014_try_new_tutorials: "Prova le nuove lezioni dell'Ora del Codice"
@@ -330,6 +336,10 @@ it-IT:
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: "Un'introduzione a JavaScript"
   khanes_name: "Un'introduzione a JavaScript"
+  khanpt_name: "Un'introduzione a JavaScript"
+  khanhe_name: "Un'introduzione a JavaScript"
+  khanfr_name: "Un'introduzione a JavaScript"
+  khanpl_name: "Un'introduzione a JavaScript"
   tynker_name: Costruisci un gioco come vuoi tu
   scratch_name: Scopri la tua creatività con la programmazione
   lightbot_name: Lightbot
@@ -358,12 +368,17 @@ it-IT:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Sasso, Carta, Forbici
-  frozen_gradelevel: Da 8 anni in su
+  hourofcode_name: Segnaposto per il nuovo code.org/hoc
+  playlab_name: Laboratorio
   codeorg_gradelevel: Da 4 a 104 anni
   codeintl_gradelevel: Da 4 a 104 anni
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Dalla scuola media in su
   khanes_gradelevel: Dalla scuola media in su
+  khanpt_gradelevel: Dalla scuola media in su
+  khanhe_gradelevel: Dalla scuola media in su
+  khanfr_gradelevel: Dalla scuola media in su
+  khanpl_gradelevel: Dalla scuola media in su
   tynker_gradelevel: Da 5 a 13 anni
   scratch_gradelevel: Da 8 anni in su
   lightbot_gradelevel: Per tutte le età
@@ -392,21 +407,27 @@ it-IT:
   thinkersmith2_gradelevel: Da 8 anni in su
   kodableunplugged_gradelevel: Da 8 a 13 anni
   projguts_gradelevel: Da 10 a 13 anni
-  frozen_platformtext: 'Browser moderni  + tablet'
+  hourofcode_gradelevel: Da 4 a 104 anni
+  frozen_gradelevel: Da 8 anni in su
+  playlab_gradelevel: Da 4 a 104 anni
   codeorg_platformtext: Browser moderni, smartphone, Tablet
   codeintl_platformtext: Browser moderni, smartphone, Tablet
   thinkersmithspanish_platformtext: '"Senza Rete"'
   khan_platformtext: Browser Web moderni
   khanes_platformtext: Browser Web moderni
-  tynker_platformtext: Browser moderni. (Il proseguimento del corso è a pagamento)
-  scratch_platformtext: Tutti i browser
+  khanpt_platformtext: Browser Web moderni
+  khanhe_platformtext: Browser Web moderni
+  khanfr_platformtext: Browser Web moderni
+  khanpl_platformtext: Browser Web moderni
+  tynker_platformtext: Browser Web moderni
+  scratch_platformtext: Browser web solo per desktop (non per tablet)
   lightbot_platformtext: Tutti i browser, sistemi iOS o Android, console di gioco
   thinkersmith_platformtext: '"Senza Rete"'
   condcards_platformtext: '"Senza Rete"'
   lightbotintl_platformtext: iOS, Android (o browser web)
   codehs_platformtext: Browser moderni. (Il proseguimento del corso è a pagamento)
   codecademy_platformtext: Browser web moderni. iOS, applicazioni Android
-  codecombat_platformtext: Browser Web moderni
+  codecombat_platformtext: Browser web moderni (Il proseguimento del corso è a pagamento)
   codemonkey_platformtext: Browser Web moderni
   codeavengers_platformtext: Browser Web moderni
   processing_platformtext: Browser Web moderni
@@ -426,12 +447,18 @@ it-IT:
   thinkersmith2_platformtext: '"Senza Rete"'
   kodableunplugged_platformtext: '"Senza Rete"'
   projguts_platformtext: '"Senza Rete"'
-  frozen_shortdescription: Usiamo la programmazione per unirci ad Anna ed Elsa mentre esplorano la magia e la bellezza del ghiaccio.
+  hourofcode_platformtext: Browser moderni, smartphone, Tablet
+  frozen_platformtext: 'Browser moderni  + tablet'
+  playlab_platformtext: Browser moderni, smartphone, Tablet
   codeorg_shortdescription: Impara a programmare con Mark Zuckerberg e Angry Birds!
   codeintl_shortdescription: Impara a programmare con Mark Zuckerberg e Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Imparare a disegnare usando codice JavaScript
   khanes_shortdescription: Imparare a disegnare usando codice JavaScript
+  khanpt_shortdescription: Imparare a disegnare usando codice JavaScript
+  khanhe_shortdescription: Imparare a disegnare usando codice JavaScript
+  khanfr_shortdescription: Imparare a disegnare usando codice JavaScript
+  khanpl_shortdescription: Imparare a disegnare usando codice JavaScript
   tynker_shortdescription: Impara a programmare risolvendo divertenti esercizi e costruisci la tua versione di giochi per dispositivi mobili.
   scratch_shortdescription: Crea giochi interattivi, storie e animazioni.
   lightbot_shortdescription: Programma il robot Lightbot a risolvere esercizi usando procedure e cicli!
@@ -452,7 +479,7 @@ it-IT:
   tynkerapp_shortdescription: 'Impara a programmare risolvendo divertenti enigmi. '
   robomindnl_shortdescription: Scrivi programmi per un robot virtuale
   flappy_shortdescription: 'Crea la tua versione dei giochi: Flappy, Squalo o Sottomarino'
-  bitsbox_shortdescription: Programma una serie di app reali per giocare e da condividere, usando Javascript.
+  bitsbox_shortdescription: Crea una serie di app per giocare e da condividere usando del vero codice JavaScript.
   makegameswithus_shortdescription: "Costruisci un gioco per l'iPhone! Impara scrivendo codice che insegna nuove mosse ai tuoi mostri!"
   touchdevelop_shortdescription: 'Risolvi enigmi, crea giochi e impara a programmare usando il tuo telefono. '
   appinventor_shortdescription: Costruisci la tua app! (Solo per dispositivi Android)
@@ -460,25 +487,32 @@ it-IT:
   thinkersmith2_shortdescription: Impara come i computer utilizzano gli uni e gli zeri per rappresentare le informazioni
   kodableunplugged_shortdescription: 'Un divertente esercizio "senza rete"'
   projguts_shortdescription: Prova a modellare e simulare usando il gioco sasso/carta/forbici
-  frozen_longdescription: Usiamo la programmazione per unirci ad Anna ed Elsa mentre esplorano la magia e la bellezza del ghiaccio. Farai fiocchi di neve, pattinerai sul ghiaccio e realizzerai un meraviglioso paesaggio invernale che potrai poi condividere con i tuoi amici!
+  hourofcode_shortdescription: Segnaposto per il nuovo code.org/hoc
+  frozen_shortdescription: Usiamo la programmazione per unirci ad Anna ed Elsa mentre esplorano la magia e la bellezza del ghiaccio.
+  playlab_shortdescription: Crea una storia o inventa un gioco col Laboratorio!
   codeorg_longdescription: |-
     Impara i concetti di base dell'informatica con la programmazione visuale. Questo è un corso divertente, illustrato da lezioni video di Bill Gates e Mark Zuckerberg, ed ispirato ai giochi "Angry Birds" e "Plants vs Zombies". Impara le istruzioni di ripetizione, le istruzioni di scelta e gli algoritmi fondamentali. Disponibile in 34 lingue.
   codeintl_longdescription: |-
     Impara i concetti di base dell'informatica con la programmazione visuale. Questo è un corso divertente, illustrato da lezioni video di Bill Gates e Mark Zuckerberg, ed ispirato ai giochi "Angry Birds" e "Plants vs Zombies". Impara le istruzioni di ripetizione, le istruzioni di scelta e gli algoritmi fondamentali. Disponibile in 34 lingue.
-  thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubriran como guiarse de modo tal de llevar a cabo tareas especificas sin ser estas discutidas previamente. Este segmento ensena a los estudiantes la conexion entre simbolos y acciones asi como la valiosa habilidad de depuracion.'
+  thinkersmithspanish_longdescription: |-
+    Usando un "Vocabolario per Robot" pre-definito gli studenti capiscono come guidarsi a vicenda per svolgere compiti specifici senza essersi prima accordati. Questa lezione insegna ai bambini la connessione tra simboli e azioni, nonché la preziosa capacità di debugging (correzione dei programmi). La lezione "I miei amici robotici" funziona meglio se sviluppata in gruppo e include una guida per l'insegnante per l'uso in aula.
   khan_longdescription: Imparare le basi della programmazione JavaScript creando divertenti disegni con il tuo codice. Fallo per conto tuo o con la tua classe!
   khanes_longdescription: Imparare le basi della programmazione JavaScript creando divertenti disegni con il tuo codice. Fallo per conto tuo o con la tua classe!
+  khanpt_longdescription: Imparare le basi della programmazione JavaScript creando divertenti disegni con il tuo codice. Fallo per conto tuo o con la tua classe!
+  khanhe_longdescription: Imparare le basi della programmazione JavaScript creando divertenti disegni con il tuo codice. Fallo per conto tuo o con la tua classe!
+  khanfr_longdescription: Imparare le basi della programmazione JavaScript creando divertenti disegni con il tuo codice. Fallo per conto tuo o con la tua classe!
+  khanpl_longdescription: Imparare le basi della programmazione JavaScript creando divertenti disegni con il tuo codice. Fallo per conto tuo o con la tua classe!
   tynker_longdescription: Costruisci i tuoi giochi e condividili con gli amici! Risolvi divertenti rompicapo di programmazione e impara i concetti della programmazione ad ogni livello. Personalizza i giochi con personaggi animati e livelli multipli. Rendi realistici i tuoi giochi usando le leggi della fisica. Guarda il codice sotto forma di blocchi visuali o di JavaScript. Usa i tuoi giochi su iPad e tablet Android. Più di una dozzina di divertenti attività tra cui scegliere!
   scratch_longdescription: 'Con Scratch puoi creare da solo giochi interattivi, storie e animazioni &mdash; e condividerli con i tuoi amici. Inizia animando il tuo nome, creando un biglietto di auguri oppure creando il classico gioco pong.'
   lightbot_longdescription: 'Guida Lightbot in modo che illumini tutte le caselle blu! Lightbot è un rompicapo che usa gli stessi meccanismi della programmazione dei giochi elettronici  in modo che i giocatori raggiungano una comprensione pratica dei fondamenti della programmazione. Impara a mettere le istruzioni in sequenza, a scrivere procedure e ad usare i cicli per risolvere i livelli del gioco. Ideale per tutte le età.'
   thinkersmith_longdescription: |-
-    Usando un "Vocabolario Robotico" pre-definito gli studenti capiranno come guidarsi a vicenda per svolgere compiti specifici senza essersi prima accordati. Questa lezione insegna ai bambini la connessione tra simboli e azioni, nonché la preziosa capacità di debugging (correzione dei programmi). "My Robotic Friends" funziona meglio come attività di gruppo e include una guida per l'insegnante per l'uso in aula.
+    Usando un "Vocabolario per Robot" pre-definito gli studenti capiscono come guidarsi a vicenda per svolgere compiti specifici senza essersi prima accordati. Questa lezione insegna ai bambini la connessione tra simboli e azioni, nonché la preziosa capacità di debugging (correzione dei programmi). La lezione "I miei amici robotici" funziona meglio se sviluppata in gruppo e include una guida per l'insegnante per l'uso in aula.
   condcards_longdescription: Impara cosa sono gli algoritmi e le istruzioni condizionali in questa attività usando un semplice mazzo di carte (non sono necessari dei PC). Gli studenti svolgono questa attività in squadre e hanno bisogno di un mazzo di carte per ogni squadra.
   lightbotintl_longdescription: 'Impara la logica fondamentale della programmazione partendo dalle tecniche di programmazione più semplici, per età 4+, su dispositivi  iOS o Android (o browser Web). Impara come mettere i comandi in sequenza, come identificare degli schemi, come usare le procedure e i cicli!'
   codehs_longdescription: 'Fornire comandi a un computer, che è ciò in cui consiste la programmazione, è come dare i comandi a un cane. Impara come programmare con Karel  il cane&mdash; una introduzione alla programmazione visuale, divertente e accessibile che insegna concetti fondamentali, come comandi e funzioni, a dei principianti assoluti. Il tutorial è pensato per gli studenti ma anche gli insegnanti possono registrarsi per accedere agli strumenti a loro dedicati e per monitorare i progressi degli studenti!'
   codecademy_longdescription: "Codecademy è un'introduzione interattiva ai concetti di base dell'Informatica tramite JavaScript pensata per gli studenti  che viene già usata da decine di milioni di studenti in tutto il mondo. Abbiamo preparato un semplice tutorial per l'Ora del Codice arricchito di quiz, di diapositive e di un progetto completato di accompagnamento per gli studenti."
   codecombat_longdescription: Sconfiggi gli orchi mentre impari Python o Javascript programmando questo gioco di guerra!
-  codemonkey_longdescription: 'CodeMonkey è un gioco online che insegna a programmare usando un vero linguaggio di programmazione! Gli studenti programmano una scimmia per farle prendere delle banane complicando leggermente le cose ogni volta che si passa ad un livello superiore. Fli studenti ottengono delle stelle per ciascuna soluzione che possono condividere con un singolo clic. '
+  codemonkey_longdescription: "CodeMonkey è un gioco online che insegna a programmare usando un vero linguaggio di programmazione! Gli studenti programmano una scimmia perché prenda delle banane e la cosa diventa sempre un po' più complicata di livello in livello. Gli studenti ottengono delle stelle per ciascuna soluzione e possono condividerla con un singolo click. "
   codeavengers_longdescription: 'Costruisci un gioco 2D a scorrimento verticale per 2 giocatori con JavaScript in 10 brevi passi. Poi continua imparando alcuni elementi di base della programmazione (variabili e comandi condizionali "se...allora") mediante la creazione di un Quiz da condividere con gli amici. Lungo il percorso guadagna punti e medaglie mentre gareggi per raggiungere la cima della classifica della classe.'
   processing_longdescription: "Un'introduzione alla programmazione nell'ambito delle arti visive utilizzando il linguaggio di programmazione Processing. Brevi videolezioni introducono gli esercizi di programmazione che portano a progettare un programma di disegno interattivo"
   robomind_longdescription: 'Gli studenti imparano le basi della programmazione controllando il proprio robot virtuale. Il corso online è completamente autonomo con brevi presentazioni, filmati, quiz e orientamento/suggerimenti automatici per aiutare dello svolgimento degli esercizi di programmazione. '
@@ -489,15 +523,18 @@ it-IT:
   tynkerapp_longdescription: Impara a programmare risolvendo divertenti enigmi. Crea facilmente giochi e storie utilizzando grafica a tema, più di 10 kit di gioco e personaggi personalizzabili. Non è necessaria la connessione a Internet. Puoi accedere alle tue creazioni sul web.
   robomindnl_longdescription: 'Gli studenti imparano le basi della programmazione controllando il proprio robot virtuale. Il corso online è completamente autonomo con brevi presentazioni, filmati, quiz e orientamento/suggerimenti automatici per aiutare dello svolgimento degli esercizi di programmazione. '
   flappy_longdescription: Usa la programmazione a blocchi per creare il tuo gioco Flappy Bird e personalizzarlo per trasformarlo (Flappy Shark, Santa Flappy, quello che preferisci). Carica il gioco sul tuo cellulare con un click.
-  bitsbox_longdescription: Personalizza il tuo tablet virtuale personale e programma tutta una serie di applicazioni per giocare e da condividere. Semplici procedure dettagliate rendono possibile anche per i più giovani programmare in Javascript, e più sai più lontano arriverai.
-  makegameswithus_longdescription: Impara a programmare creando un gioco per iPhone utilizzando un linguaggio di programmazione nuovo di zecca e adatto ai principianti chiamato Swift! Crea un gioco di azione ispirato a Pokemon e scrivi un programma per insegnare nuove mosse al tuo mostro. Imparerai ad usare variabili, metodi e oggetti per aiutare il tuo mostro a vincere!
-  touchdevelop_longdescription: "L'editor basato sui comandi touch ti guiderà nella creazione di arte con i pixel, nel risolvere i puzzle dell'orso o nel creare la tua versione del gioco dell'uccello che salta. "
+  bitsbox_longdescription: Personalizza il tuo tablet virtuale personale e programma tutta una serie di applicazioni per giocare e da condividere. Semplici procedure dettagliate rendono possibile anche per i più giovani programmare in Javascript, e più sai più potrai imparare.
+  makegameswithus_longdescription: Impara a programmare creando un gioco per iPhone utilizzando un linguaggio di programmazione nuovo di zecca e adatto ai principianti chiamato Swift! Crea un gioco di azione ispirato a Pokémon e scrivi un programma per insegnare nuove mosse al tuo mostro. Imparerai come usare variabili, metodi e oggetti per aiutare il tuo mostro a vincere!
+  touchdevelop_longdescription: "L'editor ti guida in modo amichevole nell'arte della creazione di pixel, nel risolvere i puzzle dell'orso o nel creare la tua versione del gioco dell'uccello che salta. "
   appinventor_longdescription: 'Divertenti e veloci video tutorial ti guidano attraverso la costruzione di tre semplici app per il tuo telefono o tablet Android. Progettato per principianti ed esperti, questa attività della Ora del Codice ti insegnerà a costruire da solo le tue app prima che tu te ne accorga. Immagina poter condividere  le app da te create con i tuoi amici! Queste attività sono adatte sia per singoli studenti sia per classi guidate da insegnanti.'
   blockly_longdescription: 'Avete PC con connessione internet lenta (o addirittura senza)? Scaricate i tutorial di Blockly che sono stati creati prima delle esercitazioni Code.org - un singolo file ZIP di 3MB che può essere caricato su qualsiasi computer o usato direttamente su una pennina USB'
   thinkersmith2_longdescription: Gli studenti imparano come rappresentare e memorizzare le lettere in formato binario, come funzioni di acceso e spento. Alla fine tutti gli alunni della classe potranno codificare le proprie iniziali da portare a casa con loro.
   kodableunplugged_longdescription: |-
     Progettato per essere usato con semplice carta, il fuzzFamily Frenzy è un'introduzione alla logica della programmazione per bambini dai 5 anni in su. L'insegnante deve spiegare il gioco, quindi gli studenti "programmano" un compagno per completare un semplice percorso ad ostacoli. 
   projguts_longdescription: Questa attività senza PC aiuta gli studenti a imparare come funzionano la modellazione e la simulazione facendo giocare un gruppo di studenti a diverse versioni del gioco sasso/carta/forbici e vedendo i risultati come diversi esperimenti di modellazione.
+  hourofcode_longdescription: Segnaposto per il nuovo code.org/hoc
+  frozen_longdescription: Usiamo la programmazione per unirci ad Anna ed Elsa mentre esplorano la magia e la bellezza del ghiaccio. Farai fiocchi di neve, pattinerai sul ghiaccio e realizzerai un meraviglioso paesaggio invernale che potrai poi condividere con i tuoi amici!
+  playlab_longdescription: Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!
   codeorg_beyond_name: Corso Introduttivo di Informatica per scuole elementari e medie inferiori
   khan_beyond_name: Impara la programmazione informatica
   tynker_beyond_name: Impara a casa la programmazione informatica

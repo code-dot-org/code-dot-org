@@ -1,37 +1,37 @@
 * * *
 
-title: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code layout: wide nav: resources_nav
+titlu: Model de acordare de sprijin pentru Saptamana Informaticii in Educatie si Ora de Cod dispunere: larga nav: resources_nav
 
 * * *
 
-### Below is a sample op-ed supportive of Computer Science Education Week and its goals that could be used by state, local legislators, business leaders etc.
+### Mai jos se gaseste un model de acordare de sprinjin pentru Saptamana Informaticii in Educatie si scopurile sale care poate fi folosit de stat, legislatorii locali, liderii de afaceri etc.
 
   
 
 
-Go to http://code.org/promote to find state specific information about computer science.
+Mergi la http://code.org/promote pentru a gasi informatii specifice despre informatica.
 
-**Title: Computing…Where the Jobs Are**
+**Titlu: Utilizarea computerului…La Locurile de Munca**
 
-**By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]**
+**De [NAME] si [CO-AUTORI PRECUM PEDAGOG, INSPECTOR SAU LIDER DE AFACERI]**
 
-Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
+Computerele sunt peste tot. Sunt in buzunarele noastre. Pe peretii nostri. In masinile noastr. Sunt un element indispensabil al infrastructurii noastre. De la retelele electrice, la semafoare, pana la functionarea pietelor noastre financiare. Si toate aceste computere au un lucru in comun. Ele depind de partea de programare pentru a le dicta ce sa execute.
 
-But who exactly is going to write this software?
+Dar cine mai exact va implementa aceste programe?
 
-Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
+Luând în considerare cât de repede este tranformată de tehnologie lumea noastră, probabil vă așteptați ca numărul de elevi care fac informatică în școala generală în ziua de azi să fie foarte ridicat. Dar nu e așa. De fapt, tot mai puțini elevi fac informatică și tot mai puține școli o predau, față de acum un deceniu.
 
-At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for a lack of enough individuals with the right skill sets.
+Acum când nevoia de programatori iscusiți este tot mai mare, scoatem tot mai puțini informaticieni. Chiar și acum când numarul șomerilor este foarte mare, mii de job-uri, multe dintre ele chiar aici **[INSERT STATE/CITY]**, rămân neocupate deoarece nu sunt suficiente persoane care să aibă abilitățle necesare.
 
-Why is this? And how can we address it?
+De ce se întâmplă asta? Și cum putem rezolva asta?
 
-The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
+Problema începe în școlile generale și în licee. Nouă din zece școli nu oferă ore de informatică. În **[SCHOOL DISTRICT]** anul trecut, doar **[NUMBER]** elevi au luat examenul de informatica, nivel de colegiu, Advance Placement (AP), doar **[%]** din toți studenții care au dat acest examen în statul nostru. Pur și simplu nu facem tot ce ne stă în puteri pentru a pregăti sau încuraja elevii să urmeze aceste cariere vitale și lucrative.
 
-Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
+Aproape toate inovațiile majore de calcul au fost inventate în această țară, dar suntem în pericol de a pierde acest avantaj dacă nu acționăm acum.
 
-We need to make some changes.
+Trebuie să facem niște schimbări.
 
-**[OPTIONAL FOR STATES WHERE THIS APPLIES]**
+**[OPȚIONAL PENTRU STATELE ÎN CARE ACEST LUCRU SE APLICĂ]**
 
 One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
 

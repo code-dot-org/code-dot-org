@@ -1,6 +1,6 @@
 * * *
 
-Naslov: partneri
+Naslov: Partneri
 
 * * *
 
@@ -10,30 +10,30 @@ Naslov: partneri
 
 * * *
 
-# Major Promotional Partners
+# Glavni partneri za promociju
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
 * * *
 
-# International Partners
+# Međunarodni partneri
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 * * *
 
-# Tutorial Partners
+# Partneri u pripremi tutorijala
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 * * *
 
-# Infrastructure partners and tools
+# Partneri za infrastrukturu i alate
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
 * * *
 
-# Additional Partners
+# Dodatni partneri
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>

@@ -30,7 +30,7 @@ Contact: [**CONTACT INFORMATION**]
 [**SAMPLE STOCK TEXT FOR CONTEXT:**]  
 Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education.
 
-During Computer Science Education Week last year, 15 million students tried the Hour of Code. Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+During Computer Science Education Week last year, 15 million students tried the Hour of Code. İnformatika "Google", "MSN", "Yahoo!"! və "Disney" səhifələrində idi. Prezident Obama, Şakira və Əşton Kutçer öz video bəyanatları ilə Kod Saatına start verdilər. 100-dən çox tərəfdaş bu hərəkata dəstək vermək üçün bir araya gəldi.
 
 This year the Hour of Code movement is aiming for 100 million students.
 

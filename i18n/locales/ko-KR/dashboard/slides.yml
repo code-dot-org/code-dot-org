@@ -346,46 +346,42 @@ ko:
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png
-        text: "We're going to create games using Play Lab. Good games have a story, and every story has actors. We'll learn how to make our actors like witches, alinens, and animals speak, move, and interact with each other. By the end of this tutorial, you can build a game from scratch and share it with your friends."
+        text: 이제 플레이 랩을 이용해 게임을 만들어보려고 합니다. 좋은 게임은 이야기가 있고, 모든 이야기들에는 주인공 캐릭터들이 있습니다. 이제 캐릭터들을 마녀, 외계인, 동물들로 설정하고 말하고, 움직이고 서로 서로 같이 이야기/반응하게 할 수 있습니다. 이 튜토리얼을 마칠 때 쯤이면 여러분들은 처음부터 시작해서 게임을 만들고 친구들에게 공유할 수 있게 될 것입니다.
       2:
         image: notes/playlab_intro_2.png
-        text: Your screen is split into 3 main parts. On the left is the game space where your program will run. The instructions for each level are written below.
+        text: 화면은 3개의 부분으로 구분해 볼 수 있습니다. 왼쪽의 공간은 프로그램이 실행되는 공간입니다. 각 단계에서 해결해야할 목표들은 그 아래에 작성되어있습니다.
       3:
         image: notes/playlab_intro_3.png
-        text: "The middle area is the toolbox, and each of these blocks is a piece of code. The white space on the right is called the workspace and this is where we'll build our program."
+        text: 가운데 공간은 도구 상자이며, 이 블럭들은 각각 어떤 코드 조각을 의미합니다. 오른쪽의 흰색 빈 공간은 작업공간(workspace)이라고 부르는 곳으로 그곳에서 프로그램을 만들게 됩니다.
       4:
         image: notes/playlab_intro_4.png
-        text: |-
-          To start off, you'll need to link your blocks to the orange "when run" block. You can link multiple blocks together by dragging them out until you see the yellow line, and then they'll snap together.
+        text: '처음 시작하기 위해서, 사용할 블럭들을 "실행하면" 이라는 주황색 블럭에 붙이면 됩니다. 필요한 여러개의 블럭들을 함께 사용하려면 드래그해서 노란색 줄이 보일 때까지 끌여당긴 후 붙이면 됩니다.'
       5:
         image: notes/playlab_intro_5.png
-        text: |-
-          In this first puzzle, our actor is a penguin and we'll be making it say "Hello!" by dragging the say block out, linking it to the when run block, and typing in "Hello." We can also make the penguin move by using the move right and move left blocks. Once you have your blocks in place, hit the run button to see what you've programmed.
+        text: '이 첫번째 퍼즐에서, 캐릭터는 펭귄이고 말하기(say) 블럭을 이용해 "Hello!"라고 말하도록 만들것입니다. 실행하면 블럭에 붙인 후 "Hello"라고 입력하면 됩니다. 그리고 오른쪽으로 이동, 왼쪽으로 이동 블럭을 이용해 펭귄을 움직이도록 할 수도 있습니다. 블럭을 붙여본 후에 실행하기 버튼을 눌러 어떻게 실행되는지 살펴보세요.'
       6:
         image: notes/playlab_intro_6.png
-        text: "Get started and by the end, you'll be able to create your own game with all kinds of players that can interact, turn happy or sad, score points, or throw fireballs, or even vanish each other. It's all up to you and the game you want to make."
+        text: 시작하고나서 마지막 쯤에는, 여러분이 직접 여러가지 캐릭터들을 이용해 게임을 만들고, 표정을 바꾸게하고, 점수를 올리거나 서로 파이어볼을 쏘거나 사라지게 할 수 있습니다. 게임을 어떻게 만들지는 여러분의 생각에 달려있습니다. 자유롭게 만들어보세요.
     playlab_events:
       1:
         image: notes/playlab_events_1.png
-        text: "Now, we're going to learn about something that all game programmers use everyday. They're called events. An event tells your program to listen for when something happens. When that thing happens, it performs an action."
+        text: 이제, 모든 게임 프로그래머들이 매일 매일 사용하는 것들을 배워보도록 하겠습니다. 이벤트라고 합니다. 하나의 이벤트는 어떤 일이 일어났는지 여러분이 만든 프로그램에게 알려줄 수 있습니다. 따라서, 어떤 일(이벤트)가 일어났을 때 어떤 동작을 실행하게 할 수 있는 것입니다.
       2:
         image: notes/playlab_events_2.png
-        text: Some examples of events are listening for a mouse click, an arrow button, or a tap on the screen.
+        text: 여러 가지 이벤트들 중 몇가지 예시는, 마우스 클릭, 방향 버튼, 화면 터치 등 입니다.
       3:
         image: notes/playlab_events_3.png
-        text: |-
-          Here, we're going to make the space bot greet the earthlings when a player clicks on him. We'll use the "when clicked" block and attach the "say" block to it. When the player clicks on the space bot, everything attached to this "when clicked" event block will be performed. What does your alien say?
+        text: '이제, 캐릭터를 클릭했을 때 지구인들에게 인사하는 우주 로봇을 만들어보도록 하겠습니다. "클릭하면"이라는 블럭을 이용하고 "말하기"블럭을 붙이면 됩니다. 플레이어가 우주 로봇을 클릭하면, "클릭하면" 블럭에 붙어있는 모든 것들이 순서대로 실행될 것입니다. 여러분의 외계인 캐릭터가 어떻게 동작할까요?'
       4:
         image: notes/playlab_events_4.png
-        text: 'There are also "when arrow" blocks. If you link the "move" blocks to these, you can start to move your actors up, down, left, or right. Step by step, your game is getting more interactive.'
+        text: '"방향키 누름"블럭이 있습니다. 이 블럭들에 "이동하기" 블럭을 붙이면 방향키를 눌렀을 때, 위로, 아래로, 왼쪽으로, 오른쪽으로 이동시킬 수 있습니다. 한 단계씩 여러분이 만든 게임이 더 인터랙티브하게 변화해 갈 것입니다.'
     playlab_repeat_forever:
       1:
         image: notes/playlab_repeat_forever_1.png
-        text: 'This is the "repeat forever" block. Anything inside this block will happen forever in the game.'
+        text: '이번에는 "무한 반복"블럭입니다. 이 블럭의 안에 넣은 블럭들은 게임이 실행되는 동안 계속해서 무한히 실행될 것입니다.'
       2:
         image: notes/playlab_repeat_forever_2.png
-        text: |-
-          If we want an actor to do something repeatedly, without the player having to do anything, we'll put those blocks inside the "repeat forever" block.
+        text: '만약에 캐릭터를 어떤 동작에 대해서 반복적으로 실행하게 하려면, 반복시킬 블럭들을 "무한 반복" 블럭 안에 넣으면 됩니다.'
       3:
         image: notes/playlab_repeat_forever_3.png
-        text: In this next puzzle, our goal is to help the wizard patrol the boundaries of the kingdom, left and right continuously. Learning how the repeat commands works, will save you a ton of time later when you build your own game.
+        text: 이 퍼즐에서, 우리의 목표는 마법사 캐릭터가 왕국의 경계를 순찰하도록 하는 것입니다. 왼쪽에서 오른쪽으로 계속 반복해서 움직이도록 하는 것입니다. 반복 실행 명령어를 배우고 이용하면, 여러분이 만든 게임에서 일일이 모두 반복적으로 작성할 필요가 없이, 한 번만 작성한 후에 계속해서 여러번 사용할 수 있게 되는 것입니다.

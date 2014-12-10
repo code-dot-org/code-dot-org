@@ -41,7 +41,7 @@ sl-SI:
   go: Pojdi
   thank_you_: Hvala!
   congratulations: Čestitamo!
-  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
+  congratulations_on_completing_hoc: Čestitamo za dokončanje Ure za kodo
   get_a_certificate_of_achievement: Dobite potrdilo o dosežku
   enter_valid_email: Vnesite veljaven email naslov
   get_a_certificate_message: "Poslali vam bomo potrdilo in informacije o tem, kako se lahko učite<a href='/learn/beyond'> tudi po Uri za kodo</a>"
@@ -65,7 +65,7 @@ sl-SI:
   thanks_for_voting: Hvala za vaš glas!
   share_on_facebook: Deli na Facebook
   share_on_twitter: Deli na Twitterju
-  beyond_an_hour: Beyond an Hour of Code
+  beyond_an_hour: Po Uri za kodo
   get_started: Začni
   i_agree: Strinjam se
   participant_select: -Izberite-
@@ -74,9 +74,9 @@ sl-SI:
   participant_educator: Vzgojitelj
   participant_engineer: Inženir računalništva
   participant_other: Nič od navedenega
-  print_all: Print all
-  print_ice_art: Print your ice art
-  create_art_with_zombie: or make advanced art with zombie
+  print_all: Natisni vse
+  print_ice_art: Natisni, kar si ustvaril
+  create_art_with_zombie: ali ustvari napredno umetnost z zombiji
   i_am_a: Jaz sem
   never_spam: Nikoli vam ne bomo pošiljali nezaželene pošte
   enter_country: Vnesite državo, če se nahajate izven ZDA
@@ -114,9 +114,9 @@ sl-SI:
   studiobar_teacher_title: Za učitelje
   studiobar_teacher_body: Vpeljite Code Studio v svoj razred
   studiobar_frozen_title: Ura kode
-  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
-  studiobar_donate_title: Donate
-  studiobar_donate_body: One child learns for each dollar you donate
+  studiobar_frozen_body: Ustvari čudežni svet z Anno in Elso
+  studiobar_donate_title: Doniraj
+  studiobar_donate_body: En otrok se nauči programirati za vsak doniran dolar
   contact_form_topic_student: Sem študent
   contact_form_topic_parent: Sem starš
   contact_form_topic_teacher: Sem učitelj/vzgojitelj
@@ -200,6 +200,12 @@ sl-SI:
   dashboard_action_done: Končano
   dashboard_action_required: zahtevano
   dashboard_navigation_home_page: Učiteljeva domača stran
+  dashboard_navigation_section_student_progress: Študentski računi in napredek
+  dashboard_navigation_section_teacher_progress: Tvoj napredek v tečaju
+  dashboard_navigation_section_lesson_plans: Učni načrti in viri
+  dashboard_navigation_section_community: Pomoč in Skupnosti
+  dashboard_navigation_section_pd: Strokovni razvoj
+  dashboard_navigation_section_speakers: 'Računalništvo <br/> gostujoči predavatelji'
   dashboard_navigation_all_sections: Študentski računi in napredek
   dashboard_navigation_view_progress: Prikaz napredka
   dashboard_navigation_add_students: Dodaj učence
@@ -290,7 +296,7 @@ sl-SI:
   dashboard_sections_password_account_creation: Besedilo geslo, ki ga ustvari učenec
   dashboard_sections_login_type_explanation: 'Ta tabela pomaga razložiti, katero vrsto prijave <b>sliko, besedo, ali e-pošte</b>, boste želeli izbrati za razdelek.'
   dashboard_faq: Pogosto zastavljena vprašanja
-  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
+  code_hoc_coming: 'Ura za kodo je tu - 8. do 14. december!'
   code_sign_up: Prijavite se za sodelovanje med Tednom poučevanja računalništva
   learn_more: Več o tem
   hoc2014_try_new_tutorials: Poskusite naše nove vaje Ure Za Kodo
@@ -325,6 +331,10 @@ sl-SI:
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Uvod v JavaScript
   khanes_name: Uvod v JavaScript
+  khanpt_name: Uvod v JavaScript
+  khanhe_name: Uvod v JavaScript
+  khanfr_name: Uvod v JavaScript
+  khanpl_name: Uvod v JavaScript
   tynker_name: Ustvari svojo igro
   scratch_name: Bodi ustvarjalen s kodiranjem
   lightbot_name: Lightbot
@@ -353,12 +363,17 @@ sl-SI:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Kamen, papir, škarje
-  frozen_gradelevel: Starost 8 +
+  hourofcode_name: Prostor za novi code.org/hoc
+  playlab_name: Play Lab
   codeorg_gradelevel: Starost 4-104
   codeintl_gradelevel: Starost 4-104
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Srednja šola +
   khanes_gradelevel: Srednja šola +
+  khanpt_gradelevel: Srednja šola +
+  khanhe_gradelevel: Srednja šola +
+  khanfr_gradelevel: Srednja šola +
+  khanpl_gradelevel: Srednja šola +
   tynker_gradelevel: Starost 5-13
   scratch_gradelevel: Starost 8 +
   lightbot_gradelevel: Vse starosti
@@ -387,21 +402,27 @@ sl-SI:
   thinkersmith2_gradelevel: Starost 8 +
   kodableunplugged_gradelevel: Starost 8-13
   projguts_gradelevel: Starost 10-13
-  frozen_platformtext: Sodobni brskalniki + tablica
+  hourofcode_gradelevel: Starost 4-104
+  frozen_gradelevel: Starost 8 +
+  playlab_gradelevel: Starost 4-104
   codeorg_platformtext: Sodobni brskalniki, pametni telefoni, tablice
   codeintl_platformtext: Sodobni brskalniki, pametni telefoni, tablice
   thinkersmithspanish_platformtext: Izštekano
   khan_platformtext: Sodobni brskalniki
   khanes_platformtext: Sodobni brskalniki
-  tynker_platformtext: Sodobni brskalniki. (Nadaljevalni tečaj zahteva $$)
-  scratch_platformtext: VSI brskalniki
+  khanpt_platformtext: Sodobni brskalniki
+  khanhe_platformtext: Sodobni brskalniki
+  khanfr_platformtext: Sodobni brskalniki
+  khanpl_platformtext: Sodobni brskalniki
+  tynker_platformtext: Sodobni brskalniki
+  scratch_platformtext: Samo namizni spletni brskalniki (ne tablice)
   lightbot_platformtext: VSI brskalniki in iOS, Android ali igralne konzole
   thinkersmith_platformtext: Izštekano
   condcards_platformtext: Izštekano
   lightbotintl_platformtext: iOS, Android (ali spletni brskalnik)
   codehs_platformtext: Sodobni brskalniki. (Nadaljevalni tečaj zahteva $$)
   codecademy_platformtext: Sodobni spletni brskalniki. iOS, Android applikacije
-  codecombat_platformtext: Sodobni brskalniki
+  codecombat_platformtext: Sodobni brskalniki. (Nadaljevalni tečaj zahteva $$)
   codemonkey_platformtext: Sodobni brskalniki
   codeavengers_platformtext: Sodobni brskalniki
   processing_platformtext: Sodobni brskalniki
@@ -421,12 +442,18 @@ sl-SI:
   thinkersmith2_platformtext: Izštekano
   kodableunplugged_platformtext: Izštekano
   projguts_platformtext: Izštekano
-  frozen_shortdescription: Uporabimo kodo in se pridružimo Anni in Elsi, pri raziskovanju čarabnosti in lepote ledu.
+  hourofcode_platformtext: Sodobni brskalniki, pametni telefoni, tablice
+  frozen_platformtext: Sodobni brskalniki + tablica
+  playlab_platformtext: Sodobni brskalniki, pametni telefoni, tablice
   codeorg_shortdescription: Naučite se kodirati z Markom Zuckerbergom in Jeznimi ptiči!
   codeintl_shortdescription: Naučite se kodirati z Markom Zuckerbergom in Jeznimi ptiči!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Naučite se risati v JavaScript
   khanes_shortdescription: Naučite se risati v JavaScript
+  khanpt_shortdescription: Naučite se risati v JavaScript
+  khanhe_shortdescription: Naučite se risati v JavaScript
+  khanfr_shortdescription: Naučite se risati v JavaScript
+  khanpl_shortdescription: Naučite se risati v JavaScript
   tynker_shortdescription: Nauči se kodirati z reševanjem zabavnih ugank in ustvari svoje mobilne igre.
   scratch_shortdescription: Ustvari interaktivne igre, zgodbe in animacije.
   lightbot_shortdescription: Lightbot program za reševanje ugank z uporabo procedur in zank!
@@ -447,7 +474,7 @@ sl-SI:
   tynkerapp_shortdescription: 'Nauči se programirati z reševanjem zabavnih programerskih ugank. '
   robomindnl_shortdescription: Napiši kodo za virtualnega robota
   flappy_shortdescription: 'Naredi svojo igro - Flappy Bird, Shark ali Submarine'
-  bitsbox_shortdescription: S čisto pravim Javascriptom napiši niz aplikacij za igro in jih deli s prijatelji.
+  bitsbox_shortdescription: Uporabi pravi JavaScript in ustvari vrsto aplikacij za igro in objavo.
   makegameswithus_shortdescription: Naredi igro za iPhone! Nauči se s pisanjem kode, kako naučiš svojo pošast novih potez!
   touchdevelop_shortdescription: 'Reši uganke, ustvari igre in nauči se programirati. Vse to na tvojem telefonu. '
   appinventor_shortdescription: Izdelaj svoj lasten app! (Samo za android)
@@ -455,12 +482,18 @@ sl-SI:
   thinkersmith2_shortdescription: Nauči se, kako računalniki uporabljajo 1ke in 0le, da predstavijo informacije
   kodableunplugged_shortdescription: Zabavna izštekana vaja
   projguts_shortdescription: Poskusite modeliranje in simulacijo z igro kamen/papir/škarje
-  frozen_longdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
+  hourofcode_shortdescription: Prostor za novi code.org/hoc
+  frozen_shortdescription: Uporabimo kodo in se pridružimo Anni in Elsi, pri raziskovanju čarabnosti in lepote ledu.
+  playlab_shortdescription: Create a story or make a game with Play Lab!
   codeorg_longdescription: Nauči se osnov računalništva s povleci in spusti programiranjem. To je igri podobna vaja z video predavanji, v katerih nastopajo Bill Gates, Mark Zuckerberg, Angry Birds in Rastline vs zombiji. Naučite se zanke repeat, pogojne stavke in osnovne algoritme. Na voljo v 34 jezikih.
   codeintl_longdescription: Nauči se osnov računalništva s povleci in spusti programiranjem. To je igri podobna vaja z video predavanji, v katerih nastopajo Bill Gates, Mark Zuckerberg, Angry Birds in Rastline vs zombiji. Naučite se zanke repeat, pogojne stavke in osnovne algoritme. Na voljo v 34 jezikih.
-  thinkersmithspanish_longdescription: 'Z uporabo naprej določenega "Robotskega besednjaka" bodo učenci odkrili kako voditi drug drugega, da bodo opravili določene naloge, ne da bi se o njih prej pogovarjali. Ta lekcija uči učence povezavo med simboli in dejanji, kot tudi neprecenljivo veščino razhroščevanja. "Moji robotski prijatelji" najbolje deluje kot skupinska dejavnost in vsebuje tudi pripravo za učitelja.'
+  thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
   khan_longdescription: Nauči se osnov JavaScript programiranja med ustvarjanjem zabavnih risb s svojo kodo. To naredite sami ali v svojem razredu!
   khanes_longdescription: Nauči se osnov JavaScript programiranja med ustvarjanjem zabavnih risb s svojo kodo. To naredite sami ali v svojem razredu!
+  khanpt_longdescription: Nauči se osnov JavaScript programiranja med ustvarjanjem zabavnih risb s svojo kodo. To naredite sami ali v svojem razredu!
+  khanhe_longdescription: Nauči se osnov JavaScript programiranja med ustvarjanjem zabavnih risb s svojo kodo. To naredite sami ali v svojem razredu!
+  khanfr_longdescription: Nauči se osnov JavaScript programiranja med ustvarjanjem zabavnih risb s svojo kodo. To naredite sami ali v svojem razredu!
+  khanpl_longdescription: Nauči se osnov JavaScript programiranja med ustvarjanjem zabavnih risb s svojo kodo. To naredite sami ali v svojem razredu!
   tynker_longdescription: Izdeljate svoje igre in jih delite s prijatelji! Rešite zabavne programerske uganke in se nauči konceptov programiranja v vsakem nivoju. Prilagodite igre z animiranimi liki, več nivoji in bogatimi rekviziti. Naredite svoje igre realistične, z uporabo fizike. Poglej si kodo kot vizualne bloke ali JavaScript. Vzemite vaše igre na mobilne iPads in Android tablice. Izbirate lahko med več kot ducat zabavnimi dejavnostmi!
   scratch_longdescription: 'S Scratch lahko ustvarite svojo lastne interaktivne igre, zgodbe, animacije &mdash; in jih delite s prijatelji. Začnite z animacijo vašega imena, ustvarjanjem praznične voščilnice ali izdelavo a igre pong.'
   lightbot_longdescription: Vodi robota Lightbot, da prižge vse modre ploščice! Lightbot je uganka, ki uporablja programiranje mehanike igre, da igralci pridobijo praktično razumevanje osnov programiranja. Naučite se zaporedje navodil, pisati procedure in uporabljati zanke, če želite rešiti posamezne nivoje. Idealno za vse starosti.
@@ -482,15 +515,18 @@ sl-SI:
   robomindnl_longdescription: 'Učenci se učijo osnov programiranja s kontroliranjem virtualnega robota. Spletni tečaj je celota prezentacij, filmčkov, kvizov in namigov, ki pomagajo pri vajah programiranja. '
   flappy_longdescription: Uporabi programiranje povleci in spusti in ustvari svojo lastno Flappy Ptič igro, in prilagodi njen izgled (Flappy morski pes, Flappy božiček, karkoli). Naloži igro na svoj telefon z enim klikom.
   bitsbox_longdescription: |
-    Prilagodi čisto svojo virtualno tablico in skodiraj nekaj aplikacij za igranje in deljenje prijateljem.
-    Preprosta navodila omogočijo tudi najmanjšim otrokom, da se učijo programiranja v JavaScriptu. Bolj kot napreduješ, dlje prideš.
-  makegameswithus_longdescription: Nauči se programiranja z izdelavo iPhone igrice, tako da uporabiš čisto nov, uporabniku prijazen programski jezik Swift. Izdelaj Pokemon akcijsko igro in napiši kodo, ki bo naučila tvojo pošast novih premikov. Naučil se boš kako uporabiti spremenljivke, metode in objekte, ki bodo pomagali tvoji pošasti, da zmaga!
+    Ustvari virtualno tablico in napiši nekaj aplikacij za igro in deljenje prijateljem.
+    Tudi najmlajši otroci se lahko naučijo programiranja v JavaScriptu. Več kot že znaš, dlje lahko prideš.
+  makegameswithus_longdescription: 'Nauči se programiranja z izdelavo iPhone igrice, tako da uporabiš čisto nov, uporabniku prijazen programski jezik Swift. Izdelaj Pok&eacute;mon akcijsko igro in napiši kodo, ki bo naučila tvojo zver novih premikov. Naučil se boš kako uporabiti spremenljivke, metode in objekte, ki bodo pomagali tvoji zverini, da zmaga!'
   touchdevelop_longdescription: 'Za dotik prijazen urejevalnik te bo vodil v ustvarjanju pixel umetnosti, v reševanju medvedje uganke ali pri izdelavi lastne igre Skakajoči ptič. '
   appinventor_longdescription: Zabavni, kratki video vodiči vodijo skozi gradnjo treh preprostih aplikacij za Android telefon ali tablico. Zasnovana za začetnike in strokovnjake, te bo ura za kodo pripravila za začetek gradnje svoje aplikacije, še preden se tega zaveš. Predstavljaj si, da deliš vaš lasten app in stvaritve s prijatelji! Te dejavnosti so primerne za posameznike in za učitelje, ki vodijo razrede.
   blockly_longdescription: 'Imaš računalnik s počasnim dostopom do internetna (ali interneta sploh nimaš). Prenesi Blockly vodiče, ki so predhodniki vodičev na Code.org - eno samo 3MB veliko ZIP datoteko lahko naložiš na računalnik ali na USB ključek'
   thinkersmith2_longdescription: 'Učenci spoznajo kako je mogoče predstaviti in shraniti črke v binarnem, kot funkcije vklopa in izklopa. Na koncu učenci v razredu  zakodirajo vsak svoje začetnice in jih odnesejo domov.'
   kodableunplugged_longdescription: 'Namenjena uporabi z navadnim papirjem, je fuzzFamily Frenzy uvod v programsko logiko za otroke od 5 let naprej. Učitelj naj pojasni igro, nato pa učenci programirajo partnerja, da pride do konca preproste proge z ovirami. '
   projguts_longdescription: 'Ta "izštekana" dejavnost pomaga učencem, da spoznajo, kako deluje modeliranje in simulacija, tako da skupina učencev igra različne različice igre kamen / papir / škarje, in opazuje izide kot poskuse za različne modele.'
+  hourofcode_longdescription: Prostor za novi code.org/hoc
+  frozen_longdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
+  playlab_longdescription: Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!
   codeorg_beyond_name: Uvod v računalništvo (razredi K-8)
   khan_beyond_name: Nauči se računalniškega programiranja
   tynker_beyond_name: Nauči se programiranja doma

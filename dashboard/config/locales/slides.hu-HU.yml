@@ -504,21 +504,22 @@
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png
-        text: We're going to create games using Play Lab. Good games have a story,
-          and every story has actors. We'll learn how to make our actors like witches,
-          alinens, and animals speak, move, and interact with each other. By the end
-          of this tutorial, you can build a game from scratch and share it with your
-          friends.
+        text: Játékokat fogunk létrehozni a Játéklabor használatával. A jó játékoknak
+          van egy története, és minden történetnek vannak szereplői. Megtanuljuk,
+          hogyan bírhatjuk rá a szereplőinket, mint a boszorkányokat, az űrlényeket
+          és az állatokat arra, hogy beszéljenek, mozogjanak és kölcsönhatásba lépjenek
+          egymással. E tanfolyam végére képes leszel arra, hogy elkészíts egy játékot
+          a semmiből és meg tudd osztani azt a barátaiddal.
       2:
         image: notes/playlab_intro_2.png
-        text: Your screen is split into 3 main parts. On the left is the game space
-          where your program will run. The instructions for each level are written
-          below.
+        text: 3 fő részre van felosztva a képernyőd. A bal oldalon van a játéktér,
+          ahol a program fog futni. Az utasítások minden egyes szinthez alól vannak
+          odaírva.
       3:
         image: notes/playlab_intro_3.png
-        text: The middle area is the toolbox, and each of these blocks is a piece
-          of code. The white space on the right is called the workspace and this is
-          where we'll build our program.
+        text: A középső területen az eszközkészlet van, és minden egyes blokk - egy
+          kódrészlet. A jobb oldalon lévő üres területet munkaterületnek nevezik,
+          és itt készítjük majd el a programunkat.
       4:
         image: notes/playlab_intro_4.png
         text: To start off, you'll need to link your blocks to the orange "when run"
@@ -570,6 +571,7 @@
           to do anything, we'll put those blocks inside the "repeat forever" block.
       3:
         image: notes/playlab_repeat_forever_3.png
-        text: In this next puzzle, our goal is to help the wizard patrol the boundaries
-          of the kingdom, left and right continuously. Learning how the repeat commands
-          works, will save you a ton of time later when you build your own game.
+        text: Ebben a feladványban a célunk, hogy segítünk a varázslónak felvigyázni
+          a Királyság határait, folyamatosan járőrözve balról jobbra. Megtanuljuk,
+          hogyan működnek az ismétléses utasítások, amivel egy csomó időt takaríthatunk
+          meg, ha majd saját játékot fogunk készíteni.

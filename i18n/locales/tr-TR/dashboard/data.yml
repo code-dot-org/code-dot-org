@@ -296,7 +296,7 @@ tr:
         studio_c3_game_5: 'Pengueni, ok tuşları ile etrafta hareket ettirip, ahtapota çarpınca "skor puanı" ekleyen bloğu ekleyebilir misin?'
         studio_c3_game_6: 'Arkaplanı ve penguenin hızını değiştiren, skor yapana kadar pengueni etrafta hareket ettiren  blokları ekleyebilir misin?'
         studio_c3_game_7: "Kendi oyununuzu yaratın. Bitirdiğinizde, Son'u tıklayın ve arkadaşlarınıza kendi telefonlarında oyununuzu denetin."
-        studio_playlab_1: 'Penguin wants to say "hello" - can you help him?'
+        studio_playlab_1: 'Penguen "Merhaba" demek istiyor - ona yardımcı olabilir misin?'
         studio_playlab_2: 'Cave Boy (actor 1) and Cave Girl (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
         studio_playlab_3: Can you help Tennis Girl get to the flag?
         studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor 2) and play a sound when he gets there?
@@ -485,6 +485,7 @@ tr:
         C4_math_artist: Programming the Artist with Math
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
+        C4_conditionals: Koşullar
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variables in Envelopes

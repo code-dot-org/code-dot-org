@@ -501,7 +501,8 @@
           pengueni etrafta hareket ettiren  blokları ekleyebilir misin?
         studio_c3_game_7: Kendi oyununuzu yaratın. Bitirdiğinizde, Son'u tıklayın
           ve arkadaşlarınıza kendi telefonlarında oyununuzu denetin.
-        studio_playlab_1: Köpeğin "Merhaba Dünya" demesini sağlayabilir misin?
+        studio_playlab_1: Penguen "Merhaba" demek istiyor - ona yardımcı olabilir
+          misin?
         studio_playlab_2: Önce köpeğin bir şeyler söylemesini sonra da kedinin bir
           şeyler söylemesini sağlayabilir misin?
         studio_playlab_3: Köpeği, kediye doğru hareket ettiren bir program yazabilir
@@ -765,6 +766,7 @@
         C4_math_artist: Programming the Artist with Math
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
+        C4_conditionals: Koşullar
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variables in Envelopes

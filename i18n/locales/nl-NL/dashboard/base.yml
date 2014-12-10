@@ -509,3 +509,7 @@ nl:
     completed_too_many_blocks: voltooid, teveel blokken
     completed_perfect: voltooid, perfect
     furthest_level_attempted: verste niveau geprobeerd
+  studio:
+    courses_working_on: Cursussen die u bezig bent
+    completed_courses: Voltooide cursussen
+    all_courses: Alle cursussen
