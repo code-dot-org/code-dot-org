@@ -43,4 +43,7 @@ Dashboard::Application.configure do
 
   # disable this for test by default, it won't make much sense if we keep wiping the db
   CDO.disable_s3_image_uploads = true
+
+  # see stack traces around sql queries in the log
+  ActiveRecordQueryTrace.enabled = true
 end
