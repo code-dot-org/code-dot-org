@@ -4,36 +4,34 @@ title: Hour of Code Event How-To layout: wide nav: resources_nav
 
 * * *
 
-# Hour of Code event guide
+# Guia de l'event l'Hora del Codi
 
-Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
+Acollir un esdeveniment de lHora del Codi durant la setmana per l'Educació en Informàtica (8-14 de desembre) per celebrar la informàtica i inspirar més estudiants de provar-ho. Qualsevol, a qualsevol lloc pot organitzar un esdeveniment de l'Hora del Codi.
 
-## 1) Prepare for your event
+## 1) Preparat per al teu esdeveniment
 
-  * Determine a venue, date and time
-  * Send [a letter](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) to invite your local mayor, congressman, governor, or influential business person to speak.
-  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= hoc_uri('/resources/press-kit') %>) for help.
+  * Determina un lloc, data i hora
+  * Envia [ una carta](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) per convidar el teu alcalde, parlamentari, diputat o persona influent del mon dels negocis a parlar.
+  * Convida la premsa/mitjans de comunicació. Per exemple emissores de radio locals, diaris, bloggers educació/tecnologia. Mira el nostre [ kit de premsa](<%= hoc_uri('/resources/press-kit') %>) per obtenir ajuda.
 
-## 2) During your event
+## 2) Durant l'esdeveniment
 
-  * Kick off your event with one of our [inspirational videos](<%= hoc_uri('/resources#videos') %>).
-  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= hoc_uri('/resources/stats') %>).   
-      
-    
-  * Other event ideas: 
-      * Invite a local industry leader to discuss his or her work involving computer science
-      * Invite a local politician and have students teach him or her how to code
-      * Watch one of the Q&A sessions with an Hour of Code ambassador. They will all be recorded and on Code.org’s YouTube page. This year’s participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more!
-      * Have a group of students demonstrate an unplugged activity
-      * Have a group of students teach the principal or a group of teachers how to code
-      * If your school already teaches computer science, have students demo projects
+  * Engega el teu esdeveniment amb un dels nostres [vídeos inspiradors](<%= hoc_uri('/resources#videos') %>).
+  * Dona una introducció sobre la importància de la informàtica, utilitzant aquestes <a
+  * Altres idees per a l'esdeveniment: 
+      * Convidar a un líder de la indústria local per discutir el seu treball d'informàtica
+      * Convida un polític local i fes que els alumnes l'ensenyin a programar
+      * Mira una de les sessions de Preguntes i Respostes amb un ambaixador de l'Hora del Codi. Totes seran gravades i col·locades en la pàgina de Code.org a YouTube. Hi participen enguany Bill Gates, Sheryl Sandberg, Ashton Kutcher i molt més!
+      * Fes que un grup d'alumnes demostrin una activitat sense ordinador
+      * Fes que un grup d'estudiants ensenyin al director o a un grup de mestres com programar
+      * Si la tes escola ja ensenya Informàtica, fes que els estudiants presentin els seus projectes
 
-## 3) Share how it went
+## 3) comparteix com ha anat
 
-  * Share pictures of your event on Facebook and Twitter. 
-  * Use the hashtag **#HourofCode**
+  * Comparteix fotos del teu esdeveniment a Facebook i Twitter. 
+  * Utilitza el hashtag # **#HourofCode**
 
-## Example Event Plan
+## Exemple d'ui pla pel teu event
 
 **Event:** School-wide Computer Science Education Week kick-off assembly
 
@@ -69,7 +67,7 @@ Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to 
   </tr>
   
   <td>
-    10:05-11:15 am
+    10:05-10:15 am
   </td>
   
   <td>
@@ -77,7 +75,7 @@ Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to 
   </td></tr> 
   
   <td>
-    11:15-11:17 am
+    10:15-10:17 am
   </td>
   
   <td>
@@ -85,7 +83,7 @@ Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to 
   </td></tr> 
   
   <td>
-    11:17-11:30 am
+    10:17-10:30 am
   </td>
   
   <td>
@@ -93,7 +91,7 @@ Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to 
   </td></tr> 
   
   <td>
-    11:30-11:40 am
+    10:30-10:40 am
   </td>
   
   <td>
@@ -101,7 +99,7 @@ Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to 
   </td></tr> 
   
   <td>
-    11:40-12:00 pm
+    10:40-11:00 pm
   </td>
   
   <td>
@@ -109,7 +107,7 @@ Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to 
   </td></tr> 
   
   <td>
-    12:00-12:05 pm
+    11:00-11:05 pm
   </td>
   
   <td>

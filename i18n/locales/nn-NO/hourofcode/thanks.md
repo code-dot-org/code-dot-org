@@ -26,27 +26,27 @@ Fortel venane dine om #Kodetimen.
 
 ## 2. Be heile skulen din om å tilby ein Kodetime
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](/resources/hoc-one-pager.pdf) to your principal.
+[Send denne e-mailen](<%= hoc_uri('/resources#email') %>) eller [dette utdraget](/resources/hoc-one-pager.pdf) til rektoren din.
 
 <% else %>
 
 ## 2. Be heile skulen din om å tilby ein Kodetime
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](/resources/hoc-one-pager.pdf) this handout</a> to your principal.
+[Send denne e-mailen](<%= hoc_uri('/resources#email') %>) eller gi [dette utdraget](/resources/hoc-one-pager.pdf) til rektoren din.
 
 <% end %>
 
 ## 3. Bidra med midler
 
-[Donate to our crowdfunding campaign.](http://<%= codeorg_url() %>/donate) To teach 100 million children, we need your support. We just launched the [largest education crowdfunding campaign](http://<%= codeorg_url() %>/donate) in history. *Every* dollar will be matched [donors](http://<%= codeorg_url() %>/about/donors), doubling your impact.
+[Doner til vår gruppe-fonderende kampanje.](http://<%= codeorg_url() %>/donate) For å lære 100 millioner barn, så trenger vi din støtte. We just launched the [largest education crowdfunding campaign](http://<%= codeorg_url() %>/donate) in history. *Every* dollar will be matched [donors](http://<%= codeorg_url() %>/about/donors), doubling your impact.
 
 ## 4. Be arbeidsgjevaren din om å engasjere seg
 
-[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf).
+[Send denne e-mailen](<%= hoc_uri('/resources#email') %>) til lederen din, eller sjefen din. Eller [gi dem dette utdraget.](http://hourofcode.com/resources/hoc-one-pager.pdf).
 
 ## Reklamer for Kodetimen i lokalmiljøet
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+Rekrutter en lokal klubb, ett idrettslag, universitet eller fagforening. Eller arranger en Kodetime "fest" for nabolaget.
 
 ## 6. Be ein lokalpolitikar om å støtte Kodetimen
 

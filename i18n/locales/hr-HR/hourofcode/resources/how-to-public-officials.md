@@ -1,31 +1,31 @@
 * * *
 
-title: How-to guide for public officials layout: wide nav: resources_nav
+title: Vodič za državne funkcionere layout: wide nav: resources_nav
 
 * * *
 
-## Bring the Hour of Code to your entire community.
+## Dovedite Sata Kodiranja u cijelu zajednicu.
 
-### Get every school participating, every student learning!
+### Neka svaka škola sudjeluje, a svaki student uči!
 
-  1. **Recruit local schools and districts.** Use [this email](<%= hoc_uri('/resources#sample-emails') %>) or [this blurb](<%= hoc_uri('/resources/stats') %>) as a starting point, and take a look at this [how-to](<%= hoc_uri('/resources/how-to') %>) for schools and districts. Let them know **every** participating educator will receive a [thank you gift](<%= hoc_uri('/resources/how-to') %>); that **100 classrooms** will win tech chats with **special guest speakers** (participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more); and, in **each state**, one participating school will win **$10,000 in technology**!
+  1. **Zaposlite lokalne škole i distrikte.** Koristite [ ovaj e-mail](<%= hoc_uri('/resources#sample-emails') %>) ili [ ove pohvale](<%= hoc_uri('/resources/stats') %>) kao početnu točku, i pogledajte ovaj [ vodič](<%= hoc_uri('/resources/how-to') %>) za škole i okruge. Neka znaju da će **svaki** učitelj koji učestvuje primiti [ dar zahvale](<%= hoc_uri('/resources/how-to') %>); **da će 100 učionica** osvojiti razgovore o tehnologiji ** sa posebnim gostima ** (sudionici su Bill Gates, Sheryl Sandberg, Ashton Kutcher i više); i u **svakoj državi**, jedna od škola učesnica će osvojiti **$10,000 u tehnologiji**!
 
-  2. **Host an Hour of Code event.** See our [event how-to guide](<%= hoc_uri('/resources/how-to-event') %>) for a sample run of show, media outreach kit and other event-planning resources. Hosting an event is a great way to promote the Hour of Code and increase participation.
+  2. **Budite domaćin događaja Sata Kodiranja.** Vidjeti naš [ vodič za događaj ](<%= hoc_uri('/resources/how-to-event') %>) da dobijete primjer kako da vodite događaj, način da obavijestite medije i druge resurse za planiranje događaja. Biti domaćin Sata Kodiranja je odličan način za promicanje Programiranja i povećanje interesa za sudjelovanje.
 
-  3. **Attend an event during Computer Science Education Week (Dec 8-14).** [Find classrooms and schools](<%= hoc_uri('/events') %>) participating in your district, city or state.
+  3. **Prisustvujte nekom od događaja tijekom tjedna računalne znanosti (Dec 8-14).** [Nađite učionice i škole koje sudjeluju ](<%= hoc_uri('/events') %>)u vašem području, gradu ili državi.
 
-  4. **Issue a proclamation or resolution.** See this [sample resolution](<%= hoc_uri('resources/proclamation') %>) supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+  4. **Izdajte proglas ili odluku.** Pogledajte ovaj [ uzorak rezolucije](<%= hoc_uri('resources/proclamation') %>) koji podržava tjedan računalne znanosti i njegove ciljeve.
 
-  5. **Draft an op-ed**. Consider publishing an opinion piece in your local paper. See this [sample op-ed](<%= hoc_uri('/resources/op-ed') %>) supporting comupter supportive of Computer Science Education Week and its goals.
+  5. **Nacrt op-ed**. Razmotriti objavljivanje članka o mišljenju o ovome događaju u vašim lokalnim novinama. Vidjeti ovaj [ uzorak op-ed](<%= hoc_uri('/resources/op-ed') %>) o podršci tjedna računalne znanosti i obrazovanja i njihovih ciljeva.
 
-  6. **Spread the word.** [Share the Hour of Code video on Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) and [talk about your support on Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Share pictures of events or a video of you and other adults doing the Hour of Code. Use the hashtag **#HourOfCode** so Code.org (@code.org) can see it and promote the support. Or, use these sample tweets:
+  6. **Podjeli na društvenim medijima.** Objavi na [Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) ili [Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Podijelite slike događaja ili video vas i drugih osoba kako učestvujete u Satu Kodiranja. Koristiti hashtag **#HourOfCode** tako Code.org (@code.org) može vidjeti i promovirati potporu. Ili, koristite ove uzorake:
     
-      * Last year 15 million students tried one #HourOfCode. Half were girls. This year, let’s get to 100 million. #HourOfCode <http://hourofcode.com>
-      * Every student, boy or girl, should have the chance to learn computer science. Join us in starting with one #HourOfCode <http://hourofcode.com>
-      * Today, we're proud to join the Hour of Code movement. Are you in? #HourOfCode <http://hourofcode.com>.   
+      * Prošle godine 15 milijuna studenata je učestvovalo u #HourOfCode. Pola njih su bile djevojke. Ove godine idemo na 100 milijuna. #HourOfCode <http://hourofcode.com>
+      * Svaki učenik, dječak ili djevojčica, treba imati priliku učiti o računarstvo. Pridružite nam se počevši sa #HourOfCode <http://hourofcode.com>
+      * Danas, mi smo ponosni da se pridružimo pokretu Sata Kodiranja. Učestvuješ li i ti? #HourOfCode <http://hourofcode.com>.   
           
         
 
-  7. **Issue a press release.** [Use this sample](<%= hoc_uri('/resources/official-press-release') %>) as a guide.
+  7. **Izdati članak u novinama.** [ Koristiti ovaj uzorak](<%= hoc_uri('/resources/official-press-release') %>) kao vodič.
 
-  8. **Connect locally.** Visit <http://code.org/promote> to learn more about computer science education in your state. Sign the petition there and you’ll get updates from Code.org on their local, state and federal advocacy efforts.
+  8. **Povezati se lokalno.** Posjetite <http://code.org/promote> da biste saznali više o obrazovanju u računaloj znanostu u državi. Potpišite peticiju tamo i dobit ćete ažuriranja od Code.org u vezi lokalnih, državnih i saveznih zagovaranja.

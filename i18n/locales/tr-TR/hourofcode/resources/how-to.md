@@ -8,18 +8,16 @@ title: How-to Guide layout: wide nav: resources_nav
   <h1 class="col-sm-6">
     How to teach one Hour of Code
   </h1>
-  
-  <div class="col-sm-6 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Sign up your event</button></a>
-  </div>
+</div>
+
 </div>
 
 ## 1) Watch this how-to video <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
 ## 2) Try the tutorials:
 
-Çeşitli ortaklarımız tarafından hazırlanmış, her yaşa uygun, bir saat süren, eğlenceli bir çok aktiviteye ev sahipliği yapacağız. Yeni öğreticilerle Kodlama Saati, 8-14 Aralıktan önce karşınızda olacak.
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
 
-**Tüm Kodlama Zamanı öğreticileri:**
+**All Hour of Code tutorials:**
 
   * Öğretmenler için çok az hazırlık zamanı gerektirir
   * Kendi yönlendirmelerine sahiptir - öğrencilerin kendi hızlarına ve seviyelerine uygun hareket etmelerine izin verir
@@ -60,7 +58,7 @@ Most kids don’t know what computer science is. Here are some ideas:
   * Or: “Computer science is the art of blending human ideas and digital tools to increase our power. Computer scientists work in so many different areas: writing apps for phones, curing diseases, creating animated movies, working on social media, building robots that explore other planets and so much more."
   * See tips for getting girls interested in computer science [here](http://<%= codeorg_url() %>/girls). 
 
-## 6) Start your Hour of Code
+## 7) Start your Hour of Code
 
 **Direct students to the activity**
 

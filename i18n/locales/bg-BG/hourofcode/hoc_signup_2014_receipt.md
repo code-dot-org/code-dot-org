@@ -1,10 +1,16 @@
 * * *
 
-from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)" subject: "Thanks for signing up to host an Hour of Code!" litmus_tracking_id: "5g5lyi1a"
+от: "'Хади Партови(Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)'тема: Благодаря Ви, че организирате Часът на кодирането
 
 * * *
 
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
+
+<% if @country == 'ro' %>
+
+Благодаря ви за регистриране. Ако имате нужда от помощ или имате въпроси, свържете се Hour на Code Румъния отбор на: hoc@adfaber.org.
+
+<% end %>
 
 # Благодаря за регистрирането ви като домакин на Часът на кодрането събитие!
 
@@ -18,30 +24,22 @@ from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;
 
 ## 2. Попитайте във вашето училище, дали се предлага участие в Часът на кодирането
 
-[Send this email](http://<%= hostname %>/resources#email) or give [this handout](http://<%= hostname %>/files/schools-handout.pdf) to your principal.
+[ Изпратете този имейл](http://<%= hostname %>/resources#email) или дайте [това изложение](http://<%= hostname %>/files/schools-handout.pdf) на своя ръководител.
 
 <% end %>
 
-## 3. Ask your employer to get involved
+## Предложете на вашия работодател да се включи в инициативата
 
-[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf).
+[Изпратете този имейл](http://<%= hostname %>/resources#email) на вашия ръководител или изпълнителен директор. Или [им дайте това изложение](http://<%= hostname %>/resources/hoc-one-pager.pdf).
 
-## 4. Promote Hour of Code within your community
+## Рекламирайте "Час на Кодиране " във вашата Община
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+Ангажирайте локална група — момчета или момичета от скаутски клуб, църковна общност, университет, група на ветерани или синдикат. Можете да промотирате Часът на кодирането на "block party" във вашия квартал.
 
-## 5. Ask a local elected official to support the Hour of Code
+## 5 Предложете на Общинската Администрация да подкрепи програмата "Един Час Програмиране"
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
-
-<% if @country == 'ro' %>
-
-Multumim ca ne-ai anuntat despre evenimentul tau! Anunta-ne daca doresti informatii suplimentare sau daca ai intrebari. Hai sa facem istorie impreuna!
-
-Echipa Hour of Code Romania hoc@adfaber.org
-
-<% end %>
+[Изпратете този имейл](http://<%= hostname %>/resources#politicians) до кмета, Общинския съвет или училищното настоятелство. Или [им дайте това изложение](http://<%= hostname %>/resources/hoc-one-pager.pdf) и ги поканете да посетят вашето училище.
 
 * * *
 
-Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](%= unsubscribe_link %).
+Code.org е организация с нестопанска цел. Нашият адрес е 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Не харесвате тези имейли? [ отпишете се](%= unsubscribe_link %).

@@ -1,33 +1,33 @@
 * * *
 
-title: How-to Guide for Organisations layout: wide nav: resources_nav
+Cilat janë udhëzimet për Organizata
 
 * * *
 
-# Çmimet - termat dhe kushtet
+# Shpërblime- termat dhe kushtet
 
-## Dropbox space or Skype credit:
+## Hapësira per Dropbox apo Skype
 
-The 10 GB of Dropbox space or $10 of Skype credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The 10 GB of free space must be added to an existing Dropbox account. Limit one redemption per organizer.
+Hapësira 10GB e Dropbox apo vlera 10$ ne Skype është e kufizuar për shkollat deri ne klase te 12-të, mësimdhënësit, grupet rinore të shkolles dhe organizatat shkollore. Hapësira e lirë prej 10 GB duhet të shtohet në llogarine egzistuese të Dropbox. çdo organizator ka vetëm një mundësi përmirësimi. 
 
-Every organizer must register for the Hour of Code in order to receive the Dropbox space or Skype credit. If your entire school participates in the Hour of Code, each educator must individually register as an organizer to qualify.
+çdo organizator duhet të regjistrohet në Orën e Kodimit për të siguruar hapësirë në DropBox ose në Skype. Nëse shkolla juaj është pjesëmarrëse e Orës së Kodimit, çdo institucion mësimor duhet të regjistrohet për tu kualifikuar si organizator.
 
-Code.org will contact organizers after the Hour of Code (Dec. 8-14) to provide instructions for redeeming Dropbox space or Skype credit.
+Code.org do të kontaktoj çdo organizator pas seancave të Orës së Kodimit (Dhjetor 8-14) me udhëzimet rikuperimin e hapësires në Dropbox dhe Skype.
 
 <% if @country == 'us' %>
 
-## Video chat with a guest speaker:
+## Komunikim përmes videos me mysafirin e ftuar:
 
-Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 14, 2014. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
+Shpërblime të dedikuara vetëm për nxenesit deri në klasë të 12-të në SHBA dhe Kanada. Për t'u kualifikuar, regjistro klasën tuaj jo më larg se 14 nëntor, 2014. Code.org do të përzgjedh klasën fituese, përcaktoje kohën kur të realizohet komunikim përmes web-it, dhe do të koordinojë mësimdhënësit për të përcaktuar detajet tjera teknologjike. Jo e gjithë shkolla juaj duhet të aplikoje për te kandiduar për shpërblim. Si shkollat publike dhe ato private kualifikohen për të fituar shpërblim.
 
-## Class-set of laptops (or $10,000 for other technology):
+## Set laptop për klase (ose $10,000 për mjete tjera teknologjike):
 
-Prize limited to public K-12 U.S. schools only. To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
+Shpërblim i dedikuar vetëm për shkollat Amerikane deri në klasë të 12-të. Për t'u kualifikuar, shkolla juaj duhet të regjistrohet për Orën e Kodimit jo më larg se 14 nëntor, 2014. Një shkollë nga cdo shtet në SHBA do të marrë/fitojë një set kompjuterash. Code.org do të përzgjedh dhe do të njoftojë fituesit përmes email-it, më 1 dhjetor 2014.
 
-To clarify, this is not a sweepstakes or a contest involving pure chance.
+Sa për sqarim, kjo nuk është një garë apo kompeticion që bazohet vetëm në fat.
 
-1) Nëse aplikoni, nuk ka risk financiare - çdo shkollë/klasë/indivudal ka mundësi të marri pjesë, pa pagesë tek Code.org ose organizata te ndryshme
+1) aplikimi juaj nuk ngerthen ndonje rrezik financiarë - çdo shkollë apo klasë mund të marr pjesë pa pagesë tek Code.org ose organizata te ndryshme
 
-2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
+2) Fituesit përzgjidhen vetëm nga shkollat ku e gjithë klasa ka qenë pjesëmarrëse në Orën e Kodimit, në të cilën përfshihen testet e nxënesve' dhe mësuesve' në vlerësimin e aftësive kolektive.
 
 <% end %>

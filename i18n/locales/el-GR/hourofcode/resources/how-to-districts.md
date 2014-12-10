@@ -1,21 +1,21 @@
 * * *
 
-title: Hour of Code How-To for Districts layout: wide nav: resources_nav
+Τίτλος: Ώρα του Κώδικα Οδηγός για Περιοχές / Διαμερίσματα layout: wide nav: resources_nav
 
 * * *
 
-# Bring the Hour of Code to your entire school district.
+# Φέρε την Ώρα του Κώδικα σε ολόκληρη τη σχολική περιοχή.
 
-## Get every school participating, every student learning!
+## Φέρε κάθε σχολείο να συμμετάσχει, κάθε σπουδαστή να μάθει!
 
-  1. **Recruit local schools.** Share [this email](<%= hoc_uri('/resources#sample-emails') %>) and [teacher how to guide](<%= hoc_uri('/resources/how-to') %>), or include a [short blurb](<%= hoc_uri('/resources/stats') %>) in newsletters/district communications.
+  1. **Στρατολόγησε τοπικά σχολεία.** Μοιράσου [ αυτό το email](<%= hoc_uri('/resources#sample-emails') %>) και [ τον οδηγό του δασκάλου](<%= hoc_uri('/resources/how-to') %>), ή συμπεριέλαβε μια [ μικρή αγγελία](<%= hoc_uri('/resources/stats') %>) σε ενημερωτικά δελτία / μέσα επικοινωνίας της περιοχής.
 
-  2. **Provide a sample logistics plan for schools.** Share this sample logistics plan with schools to give them ideas of how to organize whole school participation. It’s as easy as doing it in every math class, homeroom period, or rotating throughout the week through the computer lab. They can submit their own plan for a chance to win $10,000 in hardware at [http://hourofcode.com/prizes](<%= hoc_uri('/prizes') %>).
+  2. **Προμήθευσε ένα σχέδιο οργάνωσης για τα σχολεία.** Μοιράσου αυτό το δείγμα σχεδίου οργάνωσης με σχολεία για να τους δώσεις ιδέες για το πώς να οργανώσουν τη συμμετοχή ολόκληρου του σχολείου. Είναι το ίδιο εύκολο να το κάνουμε σε κάθε τάξη των μαθηματικών, σε ελεύθερη ώρα, ή διαδοχικά στο εργαστήριο υπολογιστών στη διάρκεια της εβδομάδας. Μπορούν να υποβάλλουν το δικό τους σχέδιο για να έχουν την ευκαιρία να κερδίσουν $10.000 σε υλικό στο <a
 
-  3. **Share on social media.** Post to [Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) or [Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Or share one of these inspirational [pictures and quotes](<%= hoc_uri('/resources#social') %>) from world leaders, or [stats](<%= hoc_uri('/resources/stats') %>)).
+  3. **Μοιράσου το στα κοινωνικά μέσα.** Στείλε το στο [Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) ή το [Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Ή μοιράσου μία από αυτές τις εμπνευσμένες [ εικόνες και αποσπάσματα](<%= hoc_uri('/resources#social') %>) από ηγέτες του κόσμου, ή <a
 
-  4. **Promote on your district’s homepage.** Add one of these [banners](<%= hoc_uri('/resources#banners') %>) to your district’s website to let visitors know about your participation. Link it to <http://hourofcode.com>.
+  4. **Προώθησέ το στην ιστοσελίδα της περιοχής σου.** Πρόσθεσε ένα από αυτά τα [ πανό / εμβλήματα](<%= hoc_uri('/resources#banners') %>) στην ιστοσελίδα της περιοχής σου για να ενημερώσεις τους επισκέπτες σχετικά με τη συμμετοχή σας. Συνδεσέ το με <http://hourofcode.com>.
 
-  5. **Host a district Hour of Code event.** See our [event how to guide](<%= hoc_uri('/resources/how-to-events') %>) for a sample run of show, media outreach kit and other supports.
+  5. **Φιλοξένησε μια εκδήλωση της ώρας του κώδικα στην περιοχή σου.** Δες την [εκδήλωση πώς να κατευθύνεις](<%= hoc_uri('/resources/how-to-events') %>) για ένα δείγμα οργάνωσης, μια εργαλειοθήκη για τον τρόπο προσέγγισης των μέσων και άλλου είδους υποστήριξη.
 
-  6. **More [prizes](<%= hoc_uri('/prizes') %>) for EVERY organizer.** Every participating educator will receive thank you gifts. 100 classrooms will win tech chats with special guest speakers. Participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more). And in each state, one participating school will win $10,000 in technology for their school!
+  6. **Περισσότερα [ βραβεία](<%= hoc_uri('/prizes') %>) για κάθε διοργανωτή.** Κάθε συμμετέχον παιδαγωγός θα λάβει ευχαριστήρια δώρα. 100 τάξεις θα κερδίσουν τεχνικές συνομιλίες με εξέχοντες προσκεκλημένος ομιλητές. Οι συμμετέχοντες περιλαμβάνουν τους Bill Gates, Sheryl Sandberg, Άστον Κούτσερ, και άλλους). Και σε κάθε πολιτεία, ένα σχολείο που συμμετέχει θα κερδίσει $10.000 σε υποδομές τεχνολογίας για το σχολείο του!

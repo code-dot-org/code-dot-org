@@ -8,18 +8,16 @@ title: How-to Guide layout: wide nav: resources_nav
   <h1 class="col-sm-6">
     چگونگی تدریس برنامه ساعت کد نویسی
   </h1>
-  
-  <div class="col-sm-6 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Sign up your event</button></a>
-  </div>
+</div>
+
 </div>
 
 ## 1) Watch this how-to video <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
 ## 2) Try the tutorials:
 
-ما ميزبان مجموعه‌اي از آموزش هاي يك‌ساعته سرگرم كننده براي دانش آموزان با هر سني هستيم كه توسط همکارانمان درست شد‌ه‌اند. آموزش هاي جديد قبل از شروع "برنامه ساعت كد نويسي" ٢٣-١٧آذرماه (١٤-٨ دسامبر) بر روي سايت قرار خواهند گرفت.
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
 
-**تمامي آموزش هاي "ساعت كد نويسي":**
+**All Hour of Code tutorials:**
 
   * نياز به حداقل زمان آماده سازي براي معلمان دارند
   * خود راهبر هستند- به دانش آموزان اين امكان را مي دهند كه با سطح مهارتي و سرعت خودشان حركت كنند
@@ -60,7 +58,7 @@ Most kids don’t know what computer science is. Here are some ideas:
   * و یا: "علم کامپیوتر هنر ترکیب ایده های انسانی و ابزارهای دیجیتال برای افزایش قدرت ما است. كارشناسان كامپيوتر در حوزه هاي مختلفي فعاليت مي كنند: نوشتن اپليكيشن ها براي موبايل ها، درمان بيماري ها، ساخت انيميشن ها، كار بر رسانه هاي جمعي، ساخت روبات ها براي كاوش ديگر سيارات و بسیاری چیزهای دیگر ."
   * اینجا نکاتی برای علاقمند کردن دختران به دانش کامپیوتر را مشاهده کنید </a><a
 
-## 6) Start your Hour of Code
+## 7) Start your Hour of Code
 
 **Direct students to the activity**
 

@@ -146,24 +146,24 @@ Navštivte [přihlašovací stránku Hodiny kódu](https://docs.google.com/a/cod
 
 ## Návrhy pro plánování činnosti
 
-**Uveďte logo CSEdWeek ve vašem materiálu.** Můžete uvíst logo CSEdWeek (.[malé.](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) nebo.[ velké.](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) ve vašem materiálu, ale není to povinné. Můžete nás kontaktovat pokud chcete speciální povolení pro použití loga "In Partnership with Code.org". ***Toto logo lze použít pouze v případě udělenÍ speciálního písemného povolení od Code.org.*** Možná v budoucnu vytvoříme logo Hodiny Kodu, ale v této chvíli jej nemáme. Za žádných okolností nelze použít logo Code.org, ani tento název. Obojí jsou ochrannou známkou a nelze je použít s názvem značky třetí strany.
+**Uveďte logo CSEdWeek ve vašem materiálu.** Můžete uvést logo CSEdWeek (.[malé.](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) nebo.[ velké.](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) ve vašem materiálu, ale není to povinné. Můžete nás kontaktovat pokud chcete speciální povolení pro použití loga "In Partnership with Code.org". ***Toto logo lze použít pouze v případě udělenÍ speciálního písemného povolení od Code.org.*** Možná v budoucnu vytvoříme logo Hodiny Kodu, ale v této chvíli jej nemáme. Za žádných okolností nelze používat logo ani název Code.org. Obojí jsou ochrannou známkou a nelze je použít s názvem značky třetí strany.
 
-**Ujistěte se, že průměrný student může pohodlně dokončit hodinu.** Zvažte zařazení otevřené aktivity na konec pro studenty, kteří rychleji zvládnou lekci. Nezapomeňte, že většina dětí budou absolutní začátečníci v informatice a kódování.
+**Ujistěte se, že průměrný student může pohodlně dokončit hodinu.** Zvažte zařazení otevřené aktivity na konec pro studenty, kteří rychleji zvládnou lekci. Nezapomeňte, že většina dětí budou absolutní začátečníci v informatice a programování.
 
-**Vložte poznámky pro učitele.** Většinu aktivit by měl zvládat student samostatně, ale pokud je některá aktivita je podporována nebo řízená učitelem, uveďte jasné a jednoduché pokyny pro učitele ve formě učitelské poznámky na samostatnou URL adresu s vaší činností. Nejenže jsou studenti začátečníci, někteří učitelé jsou taky začátečníci. Vložte informace jako např:
+**Vložte poznámky pro učitele.** Většinu aktivit by měl zvládat student samostatně, ale pokud je některá aktivita je podporována nebo řízená učitelem, uveďte jasné a jednoduché pokyny pro učitele ve formě učitelské poznámky na samostatnou URL adresu s vaší činností. Nejenže jsou studenti začátečníci, někteří učitelé také. Vložte informace jako např:
 
   * Náš kurz pracuje nejlépe na následujících platformách a prohlížečích
   * Pracuje na smartfounech? tabletech?
   * Doporučuje se programování ve dvojici ? 
   * Úvaha o použití ve třídě? Např. pokud obsahuje videa, poradit učitelům, aby se v učebně prohlíželo video na obrazovce společně
 
-**Začlenit zpětnou vazbu na konci aktivity.** (Např.: "dokončil jste 10 úrovní a naučil jste se o něco smyčkách! Skvělá práce!")
+**Začleňte zpětnou vazbu na konec aktivity.** (Např.: "dokončil jste 10 úrovní a naučil jste se o něco smyčkách! Skvělá práce!")
 
 **Začleňte sociální média.** Povzbuďte studenty, aby po dokončení přispívali na sociální média (kde je to vhodné), například "udělal jsem Hodinu kódu s ________ , ty taky? #HourOfCode" nebo "udělal jsem #HourofCode jako součást #CSEdWeek. Opravdu? @Scratch." Použijte hashtag**#HourOfCode** (s velkými písmeny H, O, C)
 
 **Vytvořte aktivitu v jazycích mimo angličtiny.** Tento rok zaměřujeme tuto kampaň mezinárodně a rádi bychom nabízeli řadu aktivit pro neanglicky mluvící účastníky.
 
-**Vysvětlete nebo spojte aktivitu se sociálně významným kontextem.** Počítačové programování se stává supervelmocí, vidí-li studenti, jak se svět může změnit k lepšímu!
+**Vysvětlete nebo spojte aktivitu se sociálně významným kontextem.** Programování se stává super-silou, vidí-li studenti, jak může svět změnit k lepšímu!
 
 **Nepožaduje registraci nebo platbu předem, než si mohou studenti vyzkoušet váš kurz.** Výukové programy vyžadující registraci nebo platbu nebudou zařazeny
 
@@ -225,7 +225,7 @@ IMG SRC = "http://code.org/api/hour/finish_appinventor.png/"
 
 ## Propagujte výukové programy, akce CSEdWeek a Hodina kódu
 
-Obracíme se žádostí na každého, aby představili svůj vlastní 1 hodinový kurz svím uživatelům. Prosím, odkažte je na vaší stránku Hodiny kódu. Vaši uživatelé budou jistě pravděpodobněji reagovat na váš mail o vašem kurzu. Využívejte mezinárodní kampaň Hodiny kódu pro Computer Science Eucation Week (Týden vzdělávání v informatice) jako záminku pro vybídnutí uživatelů k pozvání dalších, aby se k nám připojili, aby nám pomohli dosáhnout celkového počtu 100 milionů účastníků.
+Obracíme se žádostí na každého, aby představili svůj vlastní 1 hodinový kurz svým uživatelům. Prosím, odkažte je na vaší stránku Hodiny kódu. Vaši uživatelé budou jistě pravděpodobněji reagovat na váš mail o vašem kurzu. Využívejte mezinárodní kampaň Hodiny kódu pro Computer Science Eucation Week (Týden vzdělávání v informatice) jako záminku pro vybídnutí uživatelů k pozvání dalších, aby se k nám připojili, aby nám pomohli dosáhnout celkového počtu 100 milionů účastníků.
 
   * Uvádějte na vaší stránce Hour of Code a CSEdWeek.  
     Př.: <http://www.tynker.com/hour-of-code>

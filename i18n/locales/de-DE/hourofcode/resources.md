@@ -8,26 +8,22 @@ title: Ressourcen layout: wide nav: resources_nav
   <h1 class="col-sm-6">
     Ressourcen
   </h1>
-  
-  <div class="col-sm-6 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Melde Deine Veranstaltung an</button></a>
-  </div>
 </div>
 
 <% if @country == 'ie' %>
 
-## Hosting an Hour of Code in Ireland? [See the how-to guide](<%= hoc_uri('/resources/how-to-ireland') %>)
+## Veranstalten Sie eine Hour-of-Code in Irland? [Siehe Anleitung](<%= hoc_uri('/resources/how-to-ireland') %>)
 
 <% else %>
 
-## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+## Veranstalten Sie eine Hour-of-Code? [ Siehe Anleitung](<%= hoc_uri('/resources/how-to') %>)
 
 <% end %>
 
 <a id="handouts"></p> 
 
 <h2>
-  Use this handout to spread the word
+  Verwenden Sie diesen Flyer, um andere zu begeistern
 </h2>
 
 <p>
@@ -35,7 +31,7 @@ title: Ressourcen layout: wide nav: resources_nav
 </p>
 
 <h2>
-  Give this handout to teachers and schools
+  Geben Sie diesen Flyer Lehrern und Schulen
 </h2>
 
 <p>
@@ -46,20 +42,20 @@ title: Ressourcen layout: wide nav: resources_nav
   <a id="videos"></p> 
   
   <h2>
-    Show these videos to inspire students
+    Zeigen Sie Ihren Schülern dieses Video, um sie zu inspirieren!
   </h2>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>What Most Schools Don't Teach (5 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>Was die meisten Schulen nicht unterrichten (5 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Hour of Code is Here - Anybody Can Learn</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Die Hour-of-Code ist da - jeder kann lernen</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
@@ -69,7 +65,7 @@ title: Ressourcen layout: wide nav: resources_nav
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>President Obama on computer science</strong></a>
+      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>President Obama über Informatik</strong></a>
     </p>
   </div>
   
@@ -90,7 +86,7 @@ title: Ressourcen layout: wide nav: resources_nav
     <a id="posters"></p> 
     
     <h2>
-      Hang these posters in your school
+      Hängen Sie diese Plakate in Ihrer Schule aus
     </h2>
     
     <p>
@@ -102,7 +98,7 @@ title: Ressourcen layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Feature these banners on your website
+      Verwenden Sie diese Banners auf Ihrer Webseite
     </h2>
     
     <p>
@@ -114,7 +110,7 @@ title: Ressourcen layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Post these on social media
+      Posten diese auf Sozialnetzwerke
     </h2>
     
     <p>
@@ -122,7 +118,7 @@ title: Ressourcen layout: wide nav: resources_nav
     </p>
     
     <p>
-      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/image/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     
     <p>
@@ -130,7 +126,7 @@ title: Ressourcen layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Send these emails to help promote the Hour of Code
+      Schicken Sie diese e-Mails, um die Hour-of-Code zu fördern
     </h2>
     
     <p>
@@ -138,19 +134,19 @@ title: Ressourcen layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Ask your school, employer or friends to sign up:
+      Bitten Sie Ihre Schule, Ihren Arbeitgeber und Ihre Freunde, mitzumachen:
     </h2>
     
     <p>
-      Computer sind überall, aber weniger Schulen unterrichten Informatik als vor 10 Jahren. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
+      Computer sind überall, aber weniger Schulen unterrichten Informatik als vor 10 Jahren. Good news is, we’re on our way to change this. Falls Sie bereits letztes Jahr von der Hour-of-Code gehört haben, wissen Sie, dass sie Geschichte geschrieben hat. In one week, 15 million students tried computer science!
     </p>
     
     <p>
-      Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+      Informatik stand auf der Homepage von Google, MSN, Yahoo! und Disney. President Obama, Shakira und Ashton Kutsch verhalfen der Hour-of-Code zum Auftakt mit eigenen Videos. Über 100 Partner kamen zusammen, um dieses Projekt zu unterstützen.
     </p>
     
     <p>
-      This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014.
+      Helfen Sie uns, es dieses Jahr noch größer zu gestalten. Schließen Sie sich uns an und machen Sie bei der Hour-of-Code 2014 Veranstaltung während der Computer Science Education Week, 8.-14. Dezember, mit!
     </p>
     
     <p>
@@ -178,7 +174,7 @@ title: Ressourcen layout: wide nav: resources_nav
     </p>
     
     <p>
-      In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+      In one week last year, 15 million students tried computer science! Informatik stand auf der Homepage von Google, MSN, Yahoo! und Disney. President Obama, Shakira und Ashton Kutsch verhalfen der Hour-of-Code zum Auftakt mit eigenen Videos. Über 100 Partner kamen zusammen, um dieses Projekt zu unterstützen.
     </p>
     
     <p>
@@ -283,8 +279,4 @@ title: Ressourcen layout: wide nav: resources_nav
     
     <p>
       Sincerely, [NAME], [TITLE]
-    </p>
-    
-    <p>
-      <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Melde Deine Veranstaltung an</button></a>
     </p>
