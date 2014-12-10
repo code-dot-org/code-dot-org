@@ -1,6 +1,6 @@
 - script = (@script || (user && user.primary_script) || Script.twenty_hour_script).cached
 - script_levels = user ? user.levels_from_script(script) : script.script_levels
--#- concept_progress = user ? user.concept_progress : nil
+-# concept_progress = user ? user.concept_progress : nil
 
 .user-stats-block
   - levels = script_levels.group_by(&:stage_or_game)
@@ -41,6 +41,9 @@
 -#  %div{style:"clear:both"}
 -#  #trophies
 -#    =render partial: 'shared/concept_trophy_block', locals: { concept_progress: concept_progress, user: user, added_style: 'padding:10px;' }
+
+
+
 :javascript
   if (typeof(script_level_id) !== 'undefined') {
     $('#' + script_level_id).attr('class', 'puzzle_outer_current');
