@@ -10,7 +10,7 @@
 - <a href="<%= hoc_uri('/prizes#video_chat') %>">Video chat with a tech titan</a>
 <br />
 <% end %>
-- <a href="<%= hoc_uri('/prizes#gift_codes') %>">Skype credit or Dropbox space for every organizer</a>
+- <a href="<%= hoc_uri('/prizes#gift_code') %>">Skype credit or Dropbox space for every organizer</a>
 <br/>
 <% if @country == 'ca' %>
 - <a href="<%= hoc_uri('/prizes#brilliant_project') %>">$2,000 Brilliant Labs project</a>
