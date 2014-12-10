@@ -12,7 +12,7 @@
     "skip_instructions_popup": "false",
     "slider_speed": ".5",
     "disable_param_editing": "true",
-    "disable_variable_editing": "false",
+    "disable_variable_editing": "true",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "start_direction": "90",
@@ -20,7 +20,8 @@
     "y": "350",
     "free_play": "false",
     "impressive": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "callout_json": "[{\r\n  \"localization_key\": \"place_length_variable\",\r\n  \"element_id\": \".blocklyText:contains(???):eq(0)\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}\r\n  }\r\n}, {\r\n  \"localization_key\": \"place_length_variable\",\r\n  \"element_id\": \".blocklyText:contains(???):eq(1)\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}\r\n  }\r\n}]"
   }
 }]]></config>
   <blocks>
