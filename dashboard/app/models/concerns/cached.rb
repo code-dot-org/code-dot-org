@@ -8,14 +8,20 @@ module Cached
     cattr_reader :local_cache
   end
 
-  def cached(name)
+  def cached(name, force_cache = false)
+    if Rails.env.test? && !force_cache
+      return yield
+    end
     local_cache["#{cache_key}/#{name}"] ||= [1].map do
       yield
     end.first
   end
 
   module ClassMethods
-    def cached(name)
+    def cached(name, force_cache = false)
+      if Rails.env.test? && !force_cache
+        return yield
+      end
       local_cache["#{self.class}/#{name}"] ||= [1].map do
         yield
       end.first

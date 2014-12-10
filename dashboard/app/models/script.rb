@@ -64,12 +64,14 @@ class Script < ActiveRecord::Base
   end
 
   def self.get_from_cache(id)
-    script_cache = cached(:get) do
-      cache = Script.includes(stages: {script_levels: {level: [:game, :concepts]}}, script_levels: {level: [:game, :concepts]}).load
-      {by_id: cache.index_by(&:id), by_name: cache.index_by(&:name)}
+    unless Rails.env.test?
+      script_cache = cached(:get) do
+        cache = Script.includes(stages: {script_levels: {level: [:game, :concepts]}}, script_levels: {level: [:game, :concepts]}).load
+        {by_id: cache.index_by(&:id), by_name: cache.index_by(&:name)}
+      end
+      from_cache = script_cache[:by_id][id] || script_cache[:by_name][id]
+      return from_cache if from_cache
     end
-    from_cache = script_cache[:by_id][id] || script_cache[:by_name][id]
-    return from_cache if from_cache
 
     # a bit of trickery so we support both ids which are numbers and
     # names which are strings that may contain numbers (eg. 2-3)
