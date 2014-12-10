@@ -17,6 +17,8 @@
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "callout_json": "[\r\n  {\"localization_key\": \"repeat\", \"element_id\": \"#repeat_qtip\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}}\r\n  }\r\n]",
     "maze_data": null
   }
 }]]></config>
@@ -30,7 +32,7 @@
         <block type="maze_turn">
           <title name="DIR">turnRight</title>
         </block>
-        <block type="controls_repeat">
+        <block type="controls_repeat" id="repeat_qtip">
           <title name="TIMES">5</title>
         </block>
       </xml>

@@ -61,7 +61,7 @@
                   </value>
                   <next>
                     <block type="draw_turn" inline="true" uservisible="false">
-                      <title name="DIR">turnLeft</title>
+                      <title name="DIR">turnRight</title>
                       <value name="VALUE">
                         <block type="math_arithmetic" inline="true" uservisible="false">
                           <title name="OP">DIVIDE</title>
@@ -178,7 +178,7 @@
                     </value>
                     <next>
                       <block type="draw_turn" inline="true" uservisible="false">
-                        <title name="DIR">turnLeft</title>
+                        <title name="DIR">turnRight</title>
                         <value name="VALUE">
                           <block type="math_arithmetic" inline="true" uservisible="false">
                             <title name="OP">DIVIDE</title>
