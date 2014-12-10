@@ -61,7 +61,6 @@ max_age: 60
       = view :congrats_certificate
       = view :congrats_share, cert_id:cert_id, facebook:facebook, twitter:twitter
 
-  -if request.locale == 'en-US'
     #print_option.col-50{:style=>'display:none;'}
       %h2{:style=>'margin-top:15px; margin-bottom:10px'}
         =I18n.t :print_ice_art
@@ -115,7 +114,7 @@ max_age: 60
     });
 
     // checking for "studio" won't work on local instances as domain is 0.0.0.0:3000
-    if (!(document.referrer.indexOf("studio") != -1 && document.referrer.indexOf("frozen") == -1)) {
+    if (!((document.referrer.indexOf("studio") != -1 || document.referrer.indexOf("learn") != -1) && document.referrer.indexOf("frozen") == -1)) {
       $('#print_option').show();
     }
 
