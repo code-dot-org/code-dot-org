@@ -20,7 +20,8 @@
     "ideal": "37",
     "instructions": "Let's start from scratch - can you create a new function called \"get 5 nectar\" with a direction parameter?",
     "use_modal_function_editor": "true",
-    "use_contract_editor": "false"
+    "use_contract_editor": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
