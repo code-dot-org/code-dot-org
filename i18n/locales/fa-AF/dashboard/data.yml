@@ -376,13 +376,13 @@ fa-AF:
       scrat 16:
         instructions: 'بلوط ! بلوط ! بلوط ! از بلوک "if" ، برای استفاده از تعداد کمتری بلوک ، استفاده کنید .'
       scrat 17:
-        instructions: "Ok, let's do that again for practice - this isn't very different, but watch out for the wall!"
+        instructions: خوب، اجازه دهید که دوباره برای تمرین--این بسیار متفاوت نیست، اما سازمان دیده بان را برای دیوار!
       scrat 18:
-        instructions: 'The "If-else" blocks checks a condition, and then does one thing OR another. To get me to the acorn try to use this new block.'
+        instructions: 'بلوک "اگر دیگری" شرط را بررسی کرده و سپس یک چیز را نمی کند و یا یکی دیگر. من بلوط سعی کنید برای استفاده از این بلوک های جدید.'
       scrat 19:
         instructions: 'یک تمرین بیشتر با بلوک "if-else"، آیا می توانید با سعی خود جواب درست بدهی؟'
       scrat 20:
-        instructions: Can you add just 3 blocks to help me solve a more complex maze? If you do it right, I can walk any curvy path no matter the length. Hurry! The ice is melting!
+        instructions: شما فقط 3 بلوک برای کمک به من حل ماز پیچیده تر اضافه کنم؟ اگر شما آن را درست انجام دهید، می توانم هر مسیر منحنی هر طول راه رفتن. عجله کن! قادر به ذوب یخ است!
       Standalone_Artist_1:
         instructions: "Welcome to Artist! First off, let's try to make a simple square using the turn right block and move forward block. Each side should be 100 pixels long."
       Standalone_Artist_2:
@@ -489,6 +489,7 @@ fa-AF:
         C4_math_artist: Programming the Artist with Math
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
+        C4_conditionals: مشروط
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variables in Envelopes

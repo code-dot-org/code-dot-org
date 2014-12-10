@@ -210,10 +210,10 @@
   dashboard_action_required: 必須的
   dashboard_navigation_home_page: 教師主頁
   dashboard_navigation_section_student_progress: 學生戶口及進度
-  dashboard_navigation_section_teacher_progress: Your Course Progress
+  dashboard_navigation_section_teacher_progress: 您的課程進度
   dashboard_navigation_section_lesson_plans: 教案和資源
-  dashboard_navigation_section_community: Help and Community
-  dashboard_navigation_section_pd: Professional Development
+  dashboard_navigation_section_community: 説明和社區
+  dashboard_navigation_section_pd: 專業發展
   dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
   dashboard_navigation_all_sections: 學生戶口及進度
   dashboard_navigation_view_progress: 查看進度

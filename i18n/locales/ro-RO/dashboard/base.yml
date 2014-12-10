@@ -508,3 +508,7 @@ ro:
     completed_too_many_blocks: finalizat, prea multe blocuri
     completed_perfect: finalizat, perfect
     furthest_level_attempted: cel mai îndepărtat nivel încercat
+  studio:
+    courses_working_on: "Courses you're working on"
+    completed_courses: Completed courses
+    all_courses: All courses

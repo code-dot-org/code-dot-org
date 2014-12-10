@@ -489,21 +489,22 @@ uk:
         C4_variables_artist: 'Змінні - Художник'
         C4_variables_playlab: 'Змінні - Ігрова лабораторія'
         C4_for_loops: Цикли For
-        C4_math_artist: Programming the Artist with Math
-        C4_function_edit: Editing Functions
-        C4_function_create: Creating Functions
-        C4_unplugged_algorithms: Algorithms with Tangrams
-        C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Variables in Envelopes
+        C4_math_artist: Програмування Художника з математикою
+        C4_function_edit: Редагування функцій
+        C4_function_create: Створення функцій
+        C4_conditionals: Умови
+        C4_unplugged_algorithms: Алгоритми з танграмами
+        C4_unplugged_madlibs: Пропуски
+        C4_unplugged_variables: Змінні у конвертах
         C4_unplugged_forloops: Цикли For
         C4_unplugged_parameters: Пісні з параметрами
-        C4_unplugged_binary: Binary
+        C4_unplugged_binary: Двійкова система
         frozen_intro: Вступ до Години коду
         frozen_loops: Вступ до циклів
         frozen_functions: Вступ до функцій
-        playlab_intro: Introduction to Play Lab
-        playlab_events: Play Lab Events
-        playlab_repeat_forever: Play Lab Repeat Forever
+        playlab_intro: Вступ до Ігрової лабораторії
+        playlab_events: 'Ігрова лабораторія - події'
+        playlab_repeat_forever: 'Ігрова лабораторія - постійне повторення'
     callout:
       text:
         drag_blocks: 'Перетягніть блок "рухатись" і прикріпіть його під іншим блоком'
@@ -539,36 +540,35 @@ uk:
         edit_get_nectar: Скористайтесь цією кнопкою, щоб відредагувати функцію та змінити напрям, у якому Бджола повертатиме для отримання нектару.
         logic_category: 'Відкрийте спливаюче вікно "Логіка", щоб знайти блок "якщо/інакше".'
         length_parameter: 'Можете оновити цю функцію так, щоб застосувати параметр "довжина"?'
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: "Don't forget to turn after creating each circle."
-        frozen_circle_function_with_parameter_circle: 'Use the "create a circle" block and change the size.'
-        frozen_snowflake_branch: 'Use the "create a snowflake branch" block'
-        frozen_create_square: Attach more blocks here to create a square
+        frozen_diamond_repeat: Скористайтесь блоком повторення для створення цієї фігури.
+        frozen_circle_function_in_circle_turn: Не забувайте повертати після малювання кожного кола.
+        frozen_circle_function_with_parameter_circle: 'Використайте блок "створити коло" та змініть розмір фігури.'
+        frozen_snowflake_branch: 'Скористайтесь блоком "створити гілочку сніжинки"'
+        frozen_create_square: Додайте більше блоків, щоб вийшов квадрат
         playlab_drag_say: 'Перетягніть сюди блок "говорити" і надрукуйте "привіт"'
         playlab_use_twice: Використайте цей блок двічі, та не забудьте змінити номер персонажа
         playlab_move_girl: 'Використайте блок "переміститися праворуч", щоб перемістити Тенісистку'
-        playlab_play_sound: 'Add "play sound" block here'
-        playlab_arrow_keys: Remember to use these to move the witch after clicking on Run
-        playlab_add_move: 'Add "move" blocks inside this repeat block'
+        playlab_play_sound: 'Додайте блок "грати звук"'
+        playlab_arrow_keys: Не забудьте використати стрілки, щоб Відьмочка переміщувалась після запуску проекту
+        playlab_add_move: 'Додайте блок "рухатися" всередину цього блоку повторення'
         playlab_add_score: Розмістіть тут блоки додавання балу
         playlab_add_blocks: Розмістіть блоки тут
-        set_variable: Drag a number block here to set your variable
-        place_variable: Drag your variable inside this block
-        bee_for_loop: Drag the largest number of nectar you want the bee to collect here
-        place_counter_variable: Drag your counter variable inside this block
-        function_editor_draw_square: 'This is your function definition. These blocks run everytime you use the "draw a square" block'
+        set_variable: Перетягніть сюди блок з числом, щоб встановити значення для змінної
+        place_variable: Перетягніть змінну всередину цього блоку
+        bee_for_loop: Перетягніть сюди найбільшу кількість нектару, яку повинна зібрати Бджола
+        place_counter_variable: Перетягніть змінну-лічильник всередину цього блоку
+        function_editor_draw_square: 'Це визначення вашої функції. Ці блоки виконуватимуться щоразу, як ви використаєте блок "намалювати квадрат"'
         change_here: Внесіть зміни
-        write_draw_square_function: Drag blocks from the toolbox into here that draw a square
-        write_draw_triangle_function: Drag blocks from the toolbox into here that draw a triangle
-        edit_add_parameter: Click edit to add a parameter in your function
-        add_and_drag_parameter: Write in the name of your parameter here, click add, and then drag it into your function definition
-        fill_in_actor: Fill in the ??? with numbers that correspond to each actor (1, 2, and 3)
-        repeat: Put blocks inside the loop to repeat commands
-        if_bee_nectar: 'Use the "if" block to decide if the bee should get nectar'
-        if_else_bee: |-
-          Use the "if/else" block so that the Bee gets nectar from a flower, and makes honey if it's not a flower
-        repeat_full_circle: Enter in the number of times the zombie has to move to make a full circle
-        place_length_variable: Drag the length variable here to replace the question marks
-        arrows_move_actor: Use the arrows to move the actor
-        right_arrow_fireball: Use the right arrow to shoot fireballs
-        name_function: Write the name of your function here
+        write_draw_square_function: Перетягніть блоки сюди з палітри інструментів, для того щоб намалювати квадрат
+        write_draw_triangle_function: Перетягніть блоки сюди з палітри інструментів для того, щоб намалювати трикутник
+        edit_add_parameter: Клацніть, щоб додати параметр у свою функцію
+        add_and_drag_parameter: 'Запишіть назву параметра, клацніть "додати" та перетягніть його у визначення свої функції'
+        fill_in_actor: Заповніть ??? числами, котрі відповідають номерам персонажів (1, 2 та 3)
+        repeat: Розмістіть блоки всередині циклу, щоб повторювати команди
+        if_bee_nectar: 'Скористайтесь блоком "якщо", щоб вирішити, чи бджолі потрібно брати нектар'
+        if_else_bee: 'За допомогою блоку "якщо-інакше" допоможіть Бджолі взяти нектар з квітки, і зробити мед, якщо це не квітка'
+        repeat_full_circle: Вкажіть, скільки разів Зомбі має переміститись для утворення кола
+        place_length_variable: Перетягніть сюди змінну довжини, для заміни знаків питання
+        arrows_move_actor: Скористайтесь стрілками для переміщення персонажа
+        right_arrow_fireball: Скористайтесь стрілками для стрільби вогняними кулями
+        name_function: Запишіть тут назву своєї функції

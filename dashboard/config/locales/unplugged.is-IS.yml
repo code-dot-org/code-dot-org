@@ -228,22 +228,26 @@
         desc: Þessi kennslustund sýnir okkur nokkuð mikilvægt varðandi algrím. Ef
           algrím er einfalt er hægt að nota það á marga vegu. Ef þú vilt að allir
           fái sömu niðurstöðuna verður algrímið að vera nákvæmara.
+        video: C4_unplugged_algorithms
       EnvelopeVariables:
         title: Umslagabreytur
         desc: Breytur gefa mikið frelsi í tölvunarfræði. Þessi kennslustund hjálpar
           við að útskýra hvað breytur eru og fjölbreytta notkun þeirra. Notaðu þetta
           verkefni á undan (eða í tengslum við) kennslustundina um útdrátt til að
           koma þessari hugmynd enn betur til skila.
+        video: C4_unplugged_variables
       MadGlibs:
         title: Mad Glibs eyðufylling
         desc: Útdráttur er eitt af því mikilvægasta sem tölvunarfræðingur þarf að
           kunna skil á. Í þessu verkefni greina nemendur sögur til að finna hvað er
           ólíkt í þeim og þannig finna sameiginlegan kjarna. Þessi sögukjarni verður
           síðan fyrirmynd að nýjum fyndnum og fáranlegum sögum.
+        video: C4_unplugged_madlibs
       ForLoopFun:
         title: Fyndnar frá lykkjur
         desc: Við vitum að með lykkjum getum við gert eitthvað aftur og aftur, en
           nú ætlum við að læra hvernig við notum lykkjur með innbyggðum viðauka.
+        video: C4_unplugged_forloops
       SongwritingWithParameters:
         title: Lagasmíð með stikum
         desc: 'Ein stórkostlegasta einingin í heimi tölvunarfræðinnar er fallið (function).
@@ -251,6 +255,7 @@
           og aftur innan í stærra forriti. Þessi kennslustund mun hjálpa nemendum
           að öðlast skilning á því hvers vegna það er svona gagnlegt að setja kóðabúta
           í föll.  '
+        video: C4_unplugged_parameters
       BinaryImages:
         title: Tvíundarmyndir
         desc: Þó margir ímyndi sér að tvíundir takmarkist alfarið við núll og einn,
@@ -258,6 +263,7 @@
           tvenndir til tákna upplýsingar. Þessi kennslustund gengur skrefi lengra
           með þá hugmynd þar sem hún sýnir hvernig tölva getur einnig geymt enn flóknari
           upplýsingar (svo sem myndir og liti) með tvíundarsniði.
+        video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
         title: Tölvuleikir og hnitakerfi
         desc: Tölvuleikir og hnitakerfi, lýsing kennslustundar

@@ -605,3 +605,7 @@
     completed_too_many_blocks: zakończona, zbyt wiele bloków
     completed_perfect: zakończona, doskonale
     furthest_level_attempted: próbowano najdalszy poziom
+  studio:
+    courses_working_on: Courses you're working on
+    completed_courses: Completed courses
+    all_courses: All courses

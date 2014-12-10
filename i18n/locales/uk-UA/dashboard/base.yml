@@ -509,3 +509,7 @@ uk:
     completed_too_many_blocks: завершено, забагато блоків
     completed_perfect: виконано, ідеально
     furthest_level_attempted: останній відкритий рівень
+  studio:
+    courses_working_on: Відкриті курси
+    completed_courses: Завершені курси
+    all_courses: Всі курси

@@ -337,8 +337,8 @@ id:
     test_videos_help: Coba pemutar video baru kami di sekolah anda
     try_beta_courses: Baru! Cobalah kelas percobaan kami untuk siswa K-5
     use_as_teacher: Gunakan situs ini sebagai seorang guru
-    heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
-    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
+    heading_hoc2014: '<h2>The Hour of Code untuk</h2><h1>Segala Usia</h1>'
+    heading_elementary: '<h2>20 jam kursus untuk</h2><h1>Pemula (segala usia)</h1>'
     heading_apps: '<h2>Menyenagkan bagi</h2><h1>Semua orang</h1>'
     heading_legacy: '<h2>Kursus umum kami untuk</h2><h1>Semua Umur</h1>'
     your_gallery: Galeri
@@ -351,8 +351,8 @@ id:
     teacher: Pelajar
   footer:
     help_from_html: 'Tim teknis dari  Google, Microsoft, Facebook, dan Twitter yang membantu membuat tutorial ini.'
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
-    powered_by_aws: Powered by Amazon Web Services
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Hak Cipta Dilindungi.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Hak Cipta Dilindungi.'
+    powered_by_aws: Didukung oleh Amazon Web Services
     feedback: Berikan pendapat
     translate: Bantu menterjemahkan ke bahasa anda
     support: Dukungan
@@ -509,3 +509,7 @@ id:
     completed_too_many_blocks: selesai, terlalu banyak blok
     completed_perfect: selesai, sempurna
     furthest_level_attempted: tingkat terjauh yang dicoba
+  studio:
+    courses_working_on: Kursus yang sedang Anda kerjakan
+    completed_courses: Kursus yang telah diselesaikan
+    all_courses: Semua kursus

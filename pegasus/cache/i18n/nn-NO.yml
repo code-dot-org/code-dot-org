@@ -233,11 +233,11 @@
   dashboard_action_required: obligatorisk
   dashboard_navigation_home_page: Lærar heimeside
   dashboard_navigation_section_student_progress: Elevkontoar og framgang
-  dashboard_navigation_section_teacher_progress: Your Course Progress
+  dashboard_navigation_section_teacher_progress: Din gjennomføring av kurs
   dashboard_navigation_section_lesson_plans: Leksjonsplanar og ressursar
-  dashboard_navigation_section_community: Help and Community
-  dashboard_navigation_section_pd: Professional Development
-  dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
+  dashboard_navigation_section_community: Hjelp og brukergruppe
+  dashboard_navigation_section_pd: Profesjonell utvikling
+  dashboard_navigation_section_speakers: Informatikk <br/> Gjesteforelesere
   dashboard_navigation_all_sections: Elevkontoar og framgang
   dashboard_navigation_view_progress: Vis framdrift
   dashboard_navigation_add_students: Legg til elevar
@@ -418,8 +418,8 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Stein, saks, papir
-  hourofcode_name: Placeholder for new code.org/hoc
-  playlab_name: Placeholder for code.org/s/playlab
+  hourofcode_name: Plassholder for ny code.org/hoc
+  playlab_name: Spel-lab
   codeorg_gradelevel: Frå 4 - 104 år
   codeintl_gradelevel: Frå 4 - 104 år
   thinkersmithspanish_gradelevel: Por todos
@@ -470,14 +470,14 @@
   khanfr_platformtext: Moderne nettlesarar
   khanpl_platformtext: Moderne nettlesarar
   tynker_platformtext: Moderne nettlesarar
-  scratch_platformtext: ALLE nettlesarar
+  scratch_platformtext: Bare for PCer med nettleser (ikke nettbrett)
   lightbot_platformtext: ALLE nettlesarar og iOS, Android eller spelkonsoll
   thinkersmith_platformtext: Straumlaust
   condcards_platformtext: Struamlaust
   lightbotintl_platformtext: iOS, Android (eller nettlesar)
   codehs_platformtext: Moderne nettlesere. (Oppfølgingskurs krev $$)
   codecademy_platformtext: Moderne nettlesarar. iOS, Android app'ar
-  codecombat_platformtext: Moderne nettlesarar
+  codecombat_platformtext: Moderne nettlesere. (Videre leksjoner krever betaling)
   codemonkey_platformtext: Moderne nettlesarar
   codeavengers_platformtext: Moderne nettlesarar
   processing_platformtext: Moderne nettlesarar
@@ -538,7 +538,8 @@
   tynkerapp_shortdescription: 'Lær å programmere ved å løse morsomme kode-oppgaver. '
   robomindnl_shortdescription: Skriv kode for ein virtuell robot
   flappy_shortdescription: Lag ditt eige spel - Flappy Bird, hai eller ubåt
-  bitsbox_shortdescription: Kod ulike appar for å spele og dele ved å bruke ekte Javascript.
+  bitsbox_shortdescription: Kode en rekke apper med ekte JavaScript som du både kan
+    spille og dele.
   makegameswithus_shortdescription: Lag eit iPhone-spel! Lær ved å skrive kode for
     å lære monsteret ditt nye rørsler!
   touchdevelop_shortdescription: 'Løs gåter, lag spill og lær koding på telefonen. '
@@ -549,10 +550,10 @@
   kodableunplugged_shortdescription: Ei morsom fråkopla øving
   projguts_shortdescription: Prøv modellering og simulering ved å bruke stein, saks
     og papir
-  hourofcode_shortdescription: Placeholder for new code.org/hoc
+  hourofcode_shortdescription: Plassholder for ny code.org/hoc
   frozen_shortdescription: La oss bruke kode for å bli med Anna og Elsa som utforskar
     den magiske og vakre isen.
-  playlab_shortdescription: Placeholder for code.org/s/playlab
+  playlab_shortdescription: Lag ein historie eller eit spel med Spel-lab!
   codeorg_longdescription: Lær dei grunnlegjande konsepta for datavitksap med drag-og-slepp-programmering.
     Dette er ei spel-liknande, sjølvstyrt øving med videoforedrag av Bill Gates, Mark
     Zuckerberg, Angry Birds og Plantar mot Zombiar. Lær løkker, vilkår og grunnleggjande
@@ -561,11 +562,10 @@
     Dette er ei spel-liknande, sjølvstyrt øving med videoforedrag av Bill Gates, Mark
     Zuckerberg, Angry Birds og Plantar mot Zombiar. Lær løkker, vilkår og grunnleggjande
     algoritmer. Tilgjengeleg på 34 språk.
-  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
+  thinkersmithspanish_longdescription: Ved å bruke et forhåndsdefinert "Robot-språk"
+    vil finne ut hvordan de kan instruere hverandere til å utføre bestemte oppgaver
+    uten å diskutere dem først. Denne leksjonen lærer barn sammenhengen mellom symboler
+    og handlinger, i tillegg til uvurderlige ferdigheter i å finne feil.
   khan_longdescription: Lær JavaScript-programmering frå grunnen av medan du lagar
     artige tekningar ved hjelp av kode. Gjer det for deg sjølv eller saman med klassa
     di!
@@ -662,15 +662,15 @@
   flappy_longdescription: Bruk dra-og-slepp i programmeringen for å lage ditt eget
     Flappy Bird-spel, og tilpass det til å sjå ulikt ut (Flappy Hai, Flappy Julenisse,
     kva som helst). Legg spelet inn på telefonen din med eit klikk.
-  bitsbox_longdescription: Tilpass ditt eige virtuelle nettbrett, for deretter å kode
-    ei rekkje appear for å spille og dele. Enkle eksempel gjer det mogeleg for sjølv
-    små barn å programmere skikkeleg Javascript. Til flinkare du er, jo lenger vil
-    du kome.
+  bitsbox_longdescription: Tilpass ditt eget virtuelle nettbrett, for deretter å kode
+    en rekke apper som både kan  spilles og deles. Enkle leksjoner gjør det enkelt
+    for selv små barn å programmere skikkelig Javascript. Jo mer avansert du er, jo
+    lenger vil du komme.
   makegameswithus_longdescription: Lær å kode ved å lage et iPhone-spill gjennom å
     bruke et splitter nytt og brukervennlig programmeringsspråk kalt Swift! Lag et
-    Pokemon-inspirert action-spill og skriv kode for å lære monsteret ditt nye bevegelser.
-    Du kommer til å lære å bruke variabler, metoder og objekter for å hjelpe monsteret
-    ditt til å vinne!
+    Pok&eacute;mon-inspirert action-spill og skriv kode for å lære monsteret ditt
+    nye bevegelser. Du kommer til å lære og bruke variabler, metoder og objekter for
+    å hjelpe monsteret ditt til å vinne!
   touchdevelop_longdescription: 'Touch-vennlig redigeringsverktøy vil hjelpe deg med
     å lage pixel-kunst, løse bjørne-oppgaven eller bygge ditt eget hoppende fugl-spill. '
   appinventor_longdescription: Underhaldande og korte opplæringsvideoar viser deg
@@ -693,7 +693,7 @@
   projguts_longdescription: Denne "analoge" aktiviteten hjelper elevar å lære korleis
     modellering og simulering fungerer, ved at ei gruppe elevar spelar ulike versjonar
     av stein/saks/papir, og ser resultata som forskjellige modelleringseksperiment.
-  hourofcode_longdescription: Placeholder for new code.org/hoc
+  hourofcode_longdescription: Plassholder for ny code.org/hoc
   frozen_longdescription: La oss bruke kode og bli med Anna og Elsa når dei utforskar
     magien og skjønnheita med is. Du vil lage snøfnugg og mønster med kunstløp skøyter
     og skaper eit magisk vinterlandskap som du kan dele med venane dine!

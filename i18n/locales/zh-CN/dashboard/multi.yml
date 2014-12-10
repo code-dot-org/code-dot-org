@@ -2,23 +2,23 @@ zh:
   data:
     multi:
       2-3 artist debug multi 1:
-        Artist Debugging Multiple Choice One: Artist Debugging Multiple Choice One
+        Artist Debugging Multiple Choice One: 艺术家调试多个选择之一
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700
-        Why won't this circle go all the way around?: "Why won't this circle go all the way around?"
+        Why won't this circle go all the way around?: 为什么这个圆圈子不走完它周围的所有道路?
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png
       2-3 artist loops multi 1:
-        Artist Loops Multiple Choice: Artist Loops Multiple Choice
+        Artist Loops Multiple Choice: 艺术家循环多项选择
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500
-        Which shape is made by this loop?: Which shape is made by this loop?
+        Which shape is made by this loop?: 哪个形状是由这个循环做的呢？
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png
       2-3 artist loops multi 2:
-        Artist Loops Multiple Choice: Artist Loops Multiple Choice
+        Artist Loops Multiple Choice: 艺术家循环多项选择
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500
         Which shape is made by this program?: Which shape is made by this program?
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png
@@ -42,7 +42,7 @@ zh:
       2-3 bee conditionals multi 2:
         Bee Conditionals Multiple Choice Two: Bee Conditionals Multiple Choice Two
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500
-        Choose the best blocks.: Choose the best blocks.
+        Choose the best blocks.: 选择最佳的块。
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png
@@ -50,30 +50,30 @@ zh:
       2-3 bee conditionals multi 3:
         Bee Conditionals Multiple Choice Two: Bee Conditionals Multiple Choice Two
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500
-        Choose the best blocks: Choose the best blocks
+        Choose the best blocks: 选择最佳的块
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png
       2-3 bee loops multi 1:
-        Bee Loops Multiple Choice One: Bee Loops Multiple Choice One
+        Bee Loops Multiple Choice One: 蜜蜂循环倍数选择一
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500
-        Which blocks collect all of the nectar?: Which blocks collect all of the nectar?
+        Which blocks collect all of the nectar?: 哪些块收集所有的花蜜？
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png
       2-3 maze multi 1:
-        Maze Multiple Choice One: Maze Multiple Choice One
+        Maze Multiple Choice One: 迷宫倍数选择一
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500
-        Choose the best answer.: Choose the best answer.
+        Choose the best answer.: 选择最佳答案。
         Which blocks work?: Which blocks work?
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
       2-3 Maze Multi 2:
-        Maze Multiple Choice: Maze Multiple Choice
+        Maze Multiple Choice: 迷宫倍数选择
         /script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500
         Which blocks work?: Which blocks work?
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png
@@ -115,7 +115,7 @@ zh:
       2-3 Getting Loopy Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/2-3_images/unplugged/getting_loopy_1_q.png: /script_assets/2-3_images/unplugged/getting_loopy_1_q.png
-        How would you simplify this sequence with loops?: How would you simplify this sequence with loops?
+        How would you simplify this sequence with loops?: 你将如何简化这个序列循环?
         /script_assets/2-3_images/unplugged/getting_loopy_1_a1.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a1.png
         /script_assets/2-3_images/unplugged/getting_loopy_1_a2.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a2.png
         /script_assets/2-3_images/unplugged/getting_loopy_1_a3.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a3.png
@@ -141,14 +141,14 @@ zh:
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
       4-5 artist multi 1:
-        Artist Multiple Choice: Artist Multiple Choice
+        Artist Multiple Choice: 艺术家倍数选择
         Which blocks draw a rectangle with a perimeter of 100?: Which blocks draw a rectangle with a perimeter of 100?
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png
       4-5 artist multi 2:
-        Artist Multiple Choice: Artist Multiple Choice
+        Artist Multiple Choice: 艺术家倍数选择
         Which drawing is symmetric?: Which drawing is symmetric?
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png
@@ -163,7 +163,7 @@ zh:
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png
       4-5 artist loops multi 1:
-        Artist Loops Multiple Choice: Artist Loops Multiple Choice
+        Artist Loops Multiple Choice: 艺术家循环多项选择
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500
         Which blocks will create the design?: Which blocks will create the design?
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png
@@ -182,7 +182,7 @@ zh:
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png
         0: "? A purple flower may have either 3, 2 or 1 nectars, but you don't know how many. Which blocks correctly check and collect all of the nectar from a purple flower?"
         1: ": A purple flower may have either 3, 2 or 1 nectars, but you don't know how many. Which blocks correctly check and collect all of the nectar from a purple flower?"
-        Choose the best blocks.: Choose the best blocks.
+        Choose the best blocks.: 选择最佳的块。
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png
@@ -207,23 +207,23 @@ zh:
       4-5 farmer loops multi 1:
         Famer Loops Multiple Choice: Famer Loops Multiple Choice
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500
-        Which blocks solve the puzzle?: Which blocks solve the puzzle?
+        Which blocks solve the puzzle?: 哪些块解决这一难题？
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png
       4-5 maze multi 1:
-        Maze Multiple Choice: Maze Multiple Choice
+        Maze Multiple Choice: 迷宫倍数选择
         /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500
-        Which blocks solve the puzzle?: Which blocks solve the puzzle?
+        Which blocks solve the puzzle?: 哪些块解决这一难题？
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png
       4-5 maze conditionals multi 1:
-        Maze Conditionals Multiple Choice: Maze Conditionals Multiple Choice
+        Maze Conditionals Multiple Choice: 迷宫条件多项选择
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500
-        Which blocks solve the puzzle?: Which blocks solve the puzzle?
+        Which blocks solve the puzzle?: 哪些块解决这一难题？
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png
@@ -231,8 +231,8 @@ zh:
       4-5 Algorithms Multi 1:
         Multiple Choice: Multiple Choice
         Which one of these items is hardest to describe an algorithm for?: Which one of these items is hardest to describe an algorithm for?
-        <h4>Brushing your teeth</h4>: '<h4>Brushing your teeth</h4>'
-        <h4>Baking cookies</h4>: '<h4>Baking cookies</h4>'
+        <h4>Brushing your teeth</h4>: '<h4>刷你的牙齿</h4>'
+        <h4>Baking cookies</h4>: '<h4>烘烤饼干</h4>'
         <h4>Shopping from a grocery list</h4>: '<h4>Shopping from a grocery list</h4>'
         <h4>Banana</h4>: '<h4>Banana</h4>'
       4-5 Computational Thinking Multi 1:
@@ -255,14 +255,14 @@ zh:
         <h4>Cleaning your room</h4>: '<h4>Cleaning your room</h4>'
         <h4>Eating your dessert</h4>: '<h4>Eating your dessert</h4>'
         <h4>Brushing your hair</h4>: '<h4>Brushing your hair</h4>'
-        <h4>Washing your face</h4>: '<h4>Washing your face</h4>'
+        <h4>Washing your face</h4>: '<h4>洗你的脸</h4>'
       4-5 Digital Footprint Multi 1:
         Multiple Choice: Multiple Choice
         Which piece of information listed below is okay to share on the internet?: Which piece of information listed below is okay to share on the internet?
-        <h4>Your birthday</h4>: '<h4>Your birthday</h4>'
-        <h4>Your favorite food</h4>: '<h4>Your favorite food</h4>'
-        <h4>Your address</h4>: '<h4>Your address</h4>'
-        <h4>Your parent's credit card number</h4>: "<h4>Your parent's credit card number</h4>"
+        <h4>Your birthday</h4>: '<h4>你的生日</h4>'
+        <h4>Your favorite food</h4>: '<h4>你最喜欢的食物</h4>'
+        <h4>Your address</h4>: '<h4>您的地址</h4>'
+        <h4>Your parent's credit card number</h4>: '<h4>你父母的信用卡卡号</h4>'
       4-5 Internet Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
@@ -308,7 +308,7 @@ zh:
       K-1 Artist 1 Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
-        Which blocks solve this puzzle?: Which blocks solve this puzzle?
+        Which blocks solve this puzzle?: 哪些块解决这一难题？
         /script_assets/k_1_images/artist_images/W|S|S.png: /script_assets/k_1_images/artist_images/W|S|S.png
         /script_assets/k_1_images/artist_images/E|S|S.png: /script_assets/k_1_images/artist_images/E|S|S.png
         /script_assets/k_1_images/artist_images/S|E|E.png: /script_assets/k_1_images/artist_images/S|E|E.png
@@ -316,7 +316,7 @@ zh:
       K-1 Artist 1 Multi 2:
         Multiple Choice: Multiple Choice
         /script_assets/k_1_images/artist_images/square.png, 500: /script_assets/k_1_images/artist_images/square.png, 500
-        Which blocks draw the square?: Which blocks draw the square?
+        Which blocks draw the square?: 哪些块绘制正方形？
         /script_assets/k_1_images/artist_images/N|E|S|W.png: /script_assets/k_1_images/artist_images/N|E|S|W.png
         /script_assets/k_1_images/artist_images/E|S|W|N.png: /script_assets/k_1_images/artist_images/E|S|W|N.png
         /script_assets/k_1_images/artist_images/N|W|S|E.png: /script_assets/k_1_images/artist_images/N|W|S|E.png
@@ -331,7 +331,7 @@ zh:
       K-1 Artist Loops Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png, 300: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png, 300
-        Which blocks create this picture?: Which blocks create this picture?
+        Which blocks create this picture?: 哪些块创建这幅画？
         /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a3.png
@@ -339,7 +339,7 @@ zh:
       K-1 Bee 1 Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/k_1_images/bee_images/1nectar+2nectar.png: /script_assets/k_1_images/bee_images/1nectar+2nectar.png
-        How many nectars is this?: How many nectars is this?
+        How many nectars is this?: 这是多少蜜？
         /script_assets/k_1_images/bee_images/nectar.png: /script_assets/k_1_images/bee_images/nectar.png
         /script_assets/k_1_images/bee_images/2nectar.png: /script_assets/k_1_images/bee_images/2nectar.png
         /script_assets/k_1_images/bee_images/3nectar.png: /script_assets/k_1_images/bee_images/3nectar.png
@@ -347,7 +347,7 @@ zh:
       K-1 Bee 1 Multi 2:
         Multiple Choice: Multiple Choice
         /script_assets/k_1_images/bee_images/2nectar+2nectar.png: /script_assets/k_1_images/bee_images/2nectar+2nectar.png
-        How many nectars is this?: How many nectars is this?
+        How many nectars is this?: 这是多少蜜？
         /script_assets/k_1_images/bee_images/nectar.png: /script_assets/k_1_images/bee_images/nectar.png
         /script_assets/k_1_images/bee_images/2nectar.png: /script_assets/k_1_images/bee_images/2nectar.png
         /script_assets/k_1_images/bee_images/3nectar.png: /script_assets/k_1_images/bee_images/3nectar.png
@@ -355,7 +355,7 @@ zh:
       K-1 Maze Debugging Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/k_1_images/maze_images/EESq.png, 700: /script_assets/k_1_images/maze_images/EESq.png, 700
-        Which choice should be the final block?: Which choice should be the final block?
+        Which choice should be the final block?: 哪个选择应该是最后的块？
         /script_assets/k_1_images/move_blocks/N.png: /script_assets/k_1_images/move_blocks/N.png
         /script_assets/k_1_images/move_blocks/S.png: /script_assets/k_1_images/move_blocks/S.png
         /script_assets/k_1_images/move_blocks/E.png: /script_assets/k_1_images/move_blocks/E.png
@@ -363,7 +363,7 @@ zh:
       K-1 Maze Multiple Choice 2:
         Maze: 迷宫
         /script_assets/k_1_images/maze_images/maze_WS.png, 500: /script_assets/k_1_images/maze_images/maze_WS.png, 500
-        Which answer solves this level?: Which answer solves this level?
+        Which answer solves this level?: 哪个答案解决了这一水平？
         /script_assets/k_1_images/move_blocks/EN.png: /script_assets/k_1_images/move_blocks/EN.png
         /script_assets/k_1_images/move_blocks/ES.png: /script_assets/k_1_images/move_blocks/ES.png
         /script_assets/k_1_images/move_blocks/WS.png: /script_assets/k_1_images/move_blocks/WS.png
@@ -371,14 +371,14 @@ zh:
       K-1 Maze Loops Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/k_1_images/move_blocks/NNNequals.png, 300: /script_assets/k_1_images/move_blocks/NNNequals.png, 300
-        Which repeat block is the same?: Which repeat block is the same?
+        Which repeat block is the same?: 哪个重复块是一样的？
         /script_assets/k_1_images/move_blocks/r3_N.png: /script_assets/k_1_images/move_blocks/r3_N.png
         /script_assets/k_1_images/move_blocks/r3_NN.png: /script_assets/k_1_images/move_blocks/r3_NN.png
         /script_assets/k_1_images/move_blocks/r4_N.png: /script_assets/k_1_images/move_blocks/r4_N.png
       K-1 Maze Loops Multi 2:
         Multiple Choice: Multiple Choice
         /script_assets/k_1_images/move_blocks/SESESEequals.png, 240: /script_assets/k_1_images/move_blocks/SESESEequals.png, 240
-        Pick the correct repeat block.: Pick the correct repeat block.
+        Pick the correct repeat block.: 选择正确的重复块。
         /script_assets/k_1_images/move_blocks/r3_S.png: /script_assets/k_1_images/move_blocks/r3_S.png
         /script_assets/k_1_images/move_blocks/r3_ES.png: /script_assets/k_1_images/move_blocks/r3_ES.png
         /script_assets/k_1_images/move_blocks/r3_SE.png: /script_assets/k_1_images/move_blocks/r3_SE.png
@@ -392,14 +392,14 @@ zh:
       K-1 Getting Loopy Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png
-        How would you simplify this sequence with loops?: How would you simplify this sequence with loops?
+        How would you simplify this sequence with loops?: 你将如何简化这个序列循环?
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png
       K-1 Happy Maps Multi 1:
         Multiple Choice: Multiple Choice
         /script_assets/k_1_images/unplugged_images/happy_maps_1q.png: /script_assets/k_1_images/unplugged_images/happy_maps_1q.png
-        Which arrow gets the Flurb to the treasure?: Which arrow gets the Flurb to the treasure?
+        Which arrow gets the Flurb to the treasure?: 哪个箭头让Flurb得到宝藏？
         /script_assets/k_1_images/unplugged_images/up.png: /script_assets/k_1_images/unplugged_images/up.png
         /script_assets/k_1_images/unplugged_images/down.png: /script_assets/k_1_images/unplugged_images/down.png
         /script_assets/k_1_images/unplugged_images/left.png: /script_assets/k_1_images/unplugged_images/left.png

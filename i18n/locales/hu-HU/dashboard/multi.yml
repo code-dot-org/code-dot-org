@@ -33,7 +33,7 @@ hu:
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png
       2-3 bee conditionals multi 1:
-        Bee Conditionals Multiple Choice One: Bee Conditionals Multiple Choice One
+        Bee Conditionals Multiple Choice One: Méh Feltételes Többszörös választás Egy
         Which comparison below is true?: Melyik összehasonlítás helyes az alábbiak közül?
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png
@@ -64,7 +64,7 @@ hu:
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png
       2-3 maze multi 1:
-        Maze Multiple Choice One: Maze Multiple Choice One
+        Maze Multiple Choice One: Labirintus Többszörös választás Egy
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500
         Choose the best answer.: Válaszd ki a legmegfelelőbb választ.
         Which blocks work?: Melyik blokkok működnek?
@@ -73,7 +73,7 @@ hu:
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
       2-3 Maze Multi 2:
-        Maze Multiple Choice: Maze Multiple Choice
+        Maze Multiple Choice: Labirintus Több választási lehetőség
         /script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500
         Which blocks work?: Melyik blokkok működnek?
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png
@@ -155,7 +155,7 @@ hu:
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png
       4-5 artist functions multi 1:
-        Artist Functions Multiple Choice: Artist Functions Multiple Choice
+        Artist Functions Multiple Choice: Művész Függvények Többszörös választás
         /script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png, 500
         Which function creates a rectangle that can change its size?: Melyik függvény hoz létre egy olyan téglalapot, melynek meg lehet változtatni a méretét?
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png
@@ -171,14 +171,14 @@ hu:
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png
       4-5 artist loops multi 2:
-        Artist Functions Multiple Choice: Artist Functions Multiple Choice
+        Artist Functions Multiple Choice: Művész Függvények Többszörös választás
         "Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50": 'Válaszd ki a következő mintához tartozó ciklust: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50'
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png
       4-5 bee conditionals multi 1:
-        Bee Conditionals Multiple Choice: Bee Conditionals Multiple Choice
+        Bee Conditionals Multiple Choice: Méh Feltételes Többszörös választás
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png
         0: '? A lila virágban 3, 2 vagy 1 adag nektár lehet, de nem tudod hogy mennyi. Melyik blokkok ellenőrzik és gyűjtik össze helyesen a lila virág összes nektárját?'
         1: ': A lila virágban 3, 2 vagy 1 adag nektár lehet, de nem tudod hogy mennyi. Melyik blokkok ellenőrzik és gyűjtik össze helyesen a lila virág összes nektárját?'
@@ -188,7 +188,7 @@ hu:
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png
       4-5 bee debug multi 1:
-        Bee Debug Multiple Choice: Bee Debug Multiple Choice
+        Bee Debug Multiple Choice: Méh Hibakeresés Többszörös választás
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png
         Which version of the function will work?: A függvény melyik verziója fog működni?
@@ -197,7 +197,7 @@ hu:
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png
       4-5 bee loops multi 1:
-        Bee Loops Multiple Choice: Bee Loops Multiple Choice
+        Bee Loops Multiple Choice: Méh Ciklusok Többszörös választás
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png
         Which blocks will solve the puzzle?: Melyik blokkok fogják megoldani a rejtvényt?
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png
@@ -205,7 +205,7 @@ hu:
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png
       4-5 farmer loops multi 1:
-        Famer Loops Multiple Choice: Famer Loops Multiple Choice
+        Famer Loops Multiple Choice: Famer Ciklusok Többszörös választás
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500
         Which blocks solve the puzzle?: Melyik blokkok oldják meg ezt a rejtvényt?
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png
@@ -213,7 +213,7 @@ hu:
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png
       4-5 maze multi 1:
-        Maze Multiple Choice: Maze Multiple Choice
+        Maze Multiple Choice: Labirintus Több választási lehetőség
         /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500
         Which blocks solve the puzzle?: Melyik blokkok oldják meg ezt a rejtvényt?
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png
@@ -221,7 +221,7 @@ hu:
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png
       4-5 maze conditionals multi 1:
-        Maze Conditionals Multiple Choice: Maze Conditionals Multiple Choice
+        Maze Conditionals Multiple Choice: Labirintus Feltételes Többszörös választás
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500
         Which blocks solve the puzzle?: Melyik blokkok oldják meg ezt a rejtvényt?
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png
@@ -274,7 +274,7 @@ hu:
       4-5 Internet Multi 2:
         Multiple Choice: Feleletválasztós
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
-        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Ha a DNS a 100.42.50.110 IP-címen található oldalra küldött, melyik weboldalon vagy?
         <h4>code.org</h4>: '<h4>code.org</h4>'
         <h4>csisfun.com</h4>: '<h4>csisfun.com</h4>'
         <h4>thinkersmith.org</h4>: '<h4>thinkersmith.org</h4>'

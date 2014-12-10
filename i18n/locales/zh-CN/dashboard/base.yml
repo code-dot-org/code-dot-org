@@ -443,27 +443,27 @@ zh:
     prerelease: "本课程是在 <span class='betatext'> beta 版</span> 中. 这表示它不是最终版本. 当收到 反馈, 它会受修订并改善."
     prerelease_hoc2014: "本教程是在 <span class='betatext'> beta 版</span> 中. 当收到 反馈, 它会受修订并改善."
     feedback: 提供反馈。
-    report_bug: Report Bug
-    support: Get Help
+    report_bug: 报告错误
+    support: 获取帮助
     support_url: //support.code.org
   multi:
-    wrong_title: Incorrect answer
-    wrong_body: "The answer you've entered is not correct.  Please try again!"
+    wrong_title: 不正确的答案
+    wrong_body: 你已输入的答案不是正确的。请再试一次 ！
     correct_title: 正确。
-    correct_body: That is the correct answer.
+    correct_body: 这是正确的答案。
   match:
-    wrong_title: Incorrect solution
-    wrong_body: "The solution you've entered is not correct.  Please try again!"
+    wrong_title: 不正确的解决方案
+    wrong_body: 您输入的解决方案不是正确的。请再试一次 ！
     correct_title: 正确。
-    correct_body: That is the correct answer.
+    correct_body: 这是正确的答案。
   text_match:
-    placeholder: Enter your answer here
+    placeholder: 在这里输入你的答案
   dialog:
     ok: 确定
   time:
-    hour: 1 hour
-    day: day
-    week: week
+    hour: 1 小时
+    day: 日
+    week: 周
   data:
     script:
       name:
@@ -497,11 +497,15 @@ zh:
   age_interstitial:
     age: 你的年龄
     header: 帐户信息更新
-    message: "We're in the process of updating our experience to provide you with even stronger privacy protections. To do this, we need existing users to enter their age here.<br/>As always, code.org will never rent, sell or share this information with any third parties."
+    message: '我们正在更新我们的经验，为您提供更强的隐私保护。要做到这一点，我们需要现有用户在这里输入自己的年龄.<br/>一如往常，code.org 将永远不会出租、 出售或与任何第三方共享此信息。'
     sign_out: '如果你不想提供你的年龄你可以 <a href="%{url}">签出</a>。'
-  zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
+  zendesk_too_young_message: '对不起，年轻的用户不能登录到我们的支持站点。你无需登录能浏览 <a href="http://support.code.org"> support.code.org</a> 或询问你的父母或老师为你与我们联系。'
   progress:
-    not_completed: not completed
-    completed_too_many_blocks: completed, too many blocks
-    completed_perfect: completed, perfect
-    furthest_level_attempted: furthest level attempted
+    not_completed: 未完成
+    completed_too_many_blocks: 完成，使用太多块
+    completed_perfect: 完成了, 完美
+    furthest_level_attempted: 尝试过最远的水平
+  studio:
+    courses_working_on: 您正在进行的课程
+    completed_courses: 已完成的课程
+    all_courses: 所有的课程

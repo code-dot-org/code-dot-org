@@ -57,7 +57,7 @@
   go: Aller
   thank_you_: Merci!
   congratulations: Félicitations!
-  congratulations_on_completing_hoc: Félicitation d'avoir accompli une heure de code.
+  congratulations_on_completing_hoc: Félicitations pour avoir terminé 1 Heure de Code
   get_a_certificate_of_achievement: Obtenir une attestation de réussite
   enter_valid_email: Veuillez introduire une adresse mail valide
   get_a_certificate_message: Nous vous enverrons un certificat et des informations
@@ -87,7 +87,7 @@
   thanks_for_voting: Merci pour votre vote !
   share_on_facebook: Partagez sur Facebook
   share_on_twitter: Partagez sur Twitter
-  beyond_an_hour: Après l'Heure de Code
+  beyond_an_hour: Au-delà d'une heure de Code
   get_started: Commencer
   i_agree: Je suis d'accord
   participant_select: -Sélectionner-
@@ -96,7 +96,7 @@
   participant_educator: Éducateur
   participant_engineer: Ingénieur logiciel
   participant_other: Autre
-  print_all: Print all
+  print_all: Imprimer tout
   print_ice_art: Print your ice art
   create_art_with_zombie: or make advanced art with zombie
   i_am_a: Je suis un
@@ -140,8 +140,8 @@
   studiobar_teacher_body: Introduction à Code Studio dans votre salle de classe
   studiobar_frozen_title: Heure de Code
   studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
-  studiobar_donate_title: Donate
-  studiobar_donate_body: One child learns for each dollar you donate
+  studiobar_donate_title: Faire un don
+  studiobar_donate_body: Un enfant apprend pour chaque dollar donné
   contact_form_topic_student: Je suis un étudiant
   contact_form_topic_parent: Je suis un parent
   contact_form_topic_teacher: Je suis un enseignant/éducateur
@@ -240,6 +240,12 @@
   dashboard_action_done: Fait
   dashboard_action_required: requis
   dashboard_navigation_home_page: Page d'accueil de l'enseignant
+  dashboard_navigation_section_student_progress: Comptes et progrès des élèves
+  dashboard_navigation_section_teacher_progress: Your Course Progress
+  dashboard_navigation_section_lesson_plans: Plans de cours et ressources
+  dashboard_navigation_section_community: Help and Community
+  dashboard_navigation_section_pd: Perfectionnement professionnel
+  dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
   dashboard_navigation_all_sections: Comptes et progrès des élèves
   dashboard_navigation_view_progress: Voir les progrès
   dashboard_navigation_add_students: Ajouter des élèves
@@ -355,7 +361,7 @@
   dashboard_sections_sign_in_question: Où les élèves s'authentifient-ils ?
   dashboard_sections_sign_in_unique: Page web unique figurant sur l'onglet "Gérer
     les élèves"
-  dashboard_sections_sign_in_main: 'http: "//code.org and et cliquer sur \"S''authentifier\""'
+  dashboard_sections_sign_in_main: http://code.org and et cliquer sur "S'authentifier"
   dashboard_sections_password_account_creation: Mot de passe créé par l'élève
   dashboard_sections_login_type_explanation: Ce tableau permet d'expliquer lequel
     de ces types de connexion,<b>photo, mot ou email</b>, vous voudrez choisir pour
@@ -395,12 +401,16 @@
     anciens. Pour accéder à tous les tutoriels, <a href="http://browsehappy.com/"
     target="_blank">mettez à jour votre navigateur .</a>
   mobile_devices: Tutoriels pour appareils mobiles
-  frozen_name: Code with Anna and Elsa
+  frozen_name: Code avec Anna et Elsa
   codeorg_name: Ecrivez votre premier programme informatique
   codeintl_name: Ecrivez votre premier programme informatique
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Une introduction à JavaScript
   khanes_name: Une introduction à JavaScript
+  khanpt_name: Une introduction à JavaScript
+  khanhe_name: Une introduction à JavaScript
+  khanfr_name: Une introduction à JavaScript
+  khanpl_name: Une introduction à JavaScript
   tynker_name: Construit ton propre jeu
   scratch_name: Devenez créatif grâce au code
   lightbot_name: Lightbot
@@ -429,12 +439,17 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Pierre, papier, ciseaux
-  frozen_gradelevel: 8 ans et plus
+  hourofcode_name: Placeholder for new code.org/hoc
+  playlab_name: Labo
   codeorg_gradelevel: De 4 à 104 ans
   codeintl_gradelevel: De 4 à 104 ans
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Secondaire
   khanes_gradelevel: Secondaire
+  khanpt_gradelevel: Secondaire
+  khanhe_gradelevel: Secondaire
+  khanfr_gradelevel: Secondaire
+  khanpl_gradelevel: Secondaire
   tynker_gradelevel: De 5 à 13 ans
   scratch_gradelevel: 8 ans et plus
   lightbot_gradelevel: Tous les âges
@@ -463,13 +478,19 @@
   thinkersmith2_gradelevel: 8 ans et plus
   kodableunplugged_gradelevel: De 8 à 13 ans
   projguts_gradelevel: De 10 à 13 ans
-  frozen_platformtext: Navigateurs modernes + tablettes
+  hourofcode_gradelevel: De 4 à 104 ans
+  frozen_gradelevel: 8 ans et plus
+  playlab_gradelevel: De 4 à 104 ans
   codeorg_platformtext: Navigateurs modernes, smartphones, tablettes
   codeintl_platformtext: Navigateurs modernes, smartphones, tablettes
   thinkersmithspanish_platformtext: Débranché
   khan_platformtext: Navigateurs web modernes
   khanes_platformtext: Navigateurs web modernes
-  tynker_platformtext: Navigateurs récents. (Suivre le cours exige $$)
+  khanpt_platformtext: Navigateurs web modernes
+  khanhe_platformtext: Navigateurs web modernes
+  khanfr_platformtext: Navigateurs web modernes
+  khanpl_platformtext: Navigateurs web modernes
+  tynker_platformtext: Navigateurs web modernes
   scratch_platformtext: Tous les navigateurs
   lightbot_platformtext: Tous les navigateurs et iOS, Android ou consoles de jeu
   thinkersmith_platformtext: Débranché
@@ -497,8 +518,9 @@
   thinkersmith2_platformtext: Débranché
   kodableunplugged_platformtext: Débranché
   projguts_platformtext: Débranché
-  frozen_shortdescription: Aidons Anna et Elsa à explorer la magie et la beauté de
-    la glace.
+  hourofcode_platformtext: Navigateurs modernes, smartphones, tablettes
+  frozen_platformtext: Navigateurs modernes + tablettes
+  playlab_platformtext: Navigateurs modernes, smartphones, tablettes
   codeorg_shortdescription: Apprendre le code avec Mark Zuckerberg et Angry Birds
     !
   codeintl_shortdescription: Apprendre le code avec Mark Zuckerberg et Angry Birds
@@ -506,6 +528,10 @@
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Apprendre à dessiner en JavaScript
   khanes_shortdescription: Apprendre à dessiner en JavaScript
+  khanpt_shortdescription: Apprendre à dessiner en JavaScript
+  khanhe_shortdescription: Apprendre à dessiner en JavaScript
+  khanfr_shortdescription: Apprendre à dessiner en JavaScript
+  khanpl_shortdescription: Apprendre à dessiner en JavaScript
   tynker_shortdescription: Apprends à coder en résolvant des énigmes amusantes et
     crée tes propres jeux pour mobile.
   scratch_shortdescription: Crée des animations, des histoires et des jeux interactifs.
@@ -550,9 +576,10 @@
   kodableunplugged_shortdescription: Un exercice amusant sans connexion
   projguts_shortdescription: Essayez de la modélisation et de la simulation en utilisant
     le jeu de caillou/papier/ciseau
-  frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
-    magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
-    and make a winter wonderland that you can then share with your friends!
+  hourofcode_shortdescription: Placeholder for new code.org/hoc
+  frozen_shortdescription: Aidons Anna et Elsa à explorer la magie et la beauté de
+    la glace.
+  playlab_shortdescription: Programmer une histoire ou un jeu avec le Labo !
   codeorg_longdescription: Apprenez les concepts de base de l'informatique grâce à
     la programmation glissée-déposée . Il s'agit d'un didacticiel ludique, autogéré,
     mettant en vedette les conférences vidéo de Bill Gates, Mark Zuckerberg, Angry
@@ -572,6 +599,18 @@
     créant des dessins amusants avec votre code.  Faites-le par vous-même ou bien
     avec toute votre classe!
   khanes_longdescription: Apprenez les bases de la programmation JavaScript tout en
+    créant des dessins amusants avec votre code.  Faites-le par vous-même ou bien
+    avec toute votre classe!
+  khanpt_longdescription: Apprenez les bases de la programmation JavaScript tout en
+    créant des dessins amusants avec votre code.  Faites-le par vous-même ou bien
+    avec toute votre classe!
+  khanhe_longdescription: Apprenez les bases de la programmation JavaScript tout en
+    créant des dessins amusants avec votre code.  Faites-le par vous-même ou bien
+    avec toute votre classe!
+  khanfr_longdescription: Apprenez les bases de la programmation JavaScript tout en
+    créant des dessins amusants avec votre code.  Faites-le par vous-même ou bien
+    avec toute votre classe!
+  khanpl_longdescription: Apprenez les bases de la programmation JavaScript tout en
     créant des dessins amusants avec votre code.  Faites-le par vous-même ou bien
     avec toute votre classe!
   tynker_longdescription: Construisez vos propres jeux et partagez avec des amis !
@@ -696,6 +735,14 @@
     comment fonctionnent la modélisation et la simulation en faisant jouer un groupe
     d'étudiants à différentes versions de pierre/papier/ciseaux et en observant les
     résultats comme différentes expériences de modélisation.
+  hourofcode_longdescription: Placeholder for new code.org/hoc
+  frozen_longdescription: Utilisons le code pour rejoindre Anna et Elsa dans leur
+    exploration de la magie et de la beauté de la glace. Tu vas créer des flocons
+    de neige et des motifs en patinant sur la glace et faire un pays des merveilles
+    hivernal que tu pourras partager avec tes amis !
+  playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
+    pirates, zombies, ninjas, and many more characters move, make sounds, score points,
+    and even throw fireballs!
   codeorg_beyond_name: Introduction à l'informatique (4ème)
   khan_beyond_name: Apprenez la programmation informatique
   tynker_beyond_name: Apprenez à programmer à la maison

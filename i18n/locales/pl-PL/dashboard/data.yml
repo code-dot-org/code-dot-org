@@ -284,18 +284,18 @@ pl:
         studio_c2_9: Czy mógłbyś dodać blok, aby liczyć punkty, gdy pingwin wpada na ośmiornicę, a następnie przenosić go za pomocą strzałek, aż zdobędziesz punkt?
         studio_c2_10: Czy mógłbyś dodać bloki do zmiany tło i prędkość pingwina, a następnie poruszać nim za pomocą klawiszy ze strzałkami, aż osiągniesz wynik?
         studio_c2_11: Utwórz własną opowieść. Kiedy skończysz, kliknij przycisk Zakończ, aby umożliwić znajomym wypróbowanie Twojej opowieści na swoich telefonach.
-        studio_c3_story_1: 'Can you make this dog say "hello world"?'
-        studio_c3_story_2: Can you make the dog say something and then have the cat say something afterwards?
+        studio_c3_story_1: 'Czy mógłbyś spowodować, by ten pies powiedział "hello world"?'
+        studio_c3_story_2: Czy mógłbyś spowodować, by pies coś powiedział, a następnie by kot, coś powiedział?
         studio_c3_story_3: Czy mógłbyś napisać program, który spowoduje, że ten pies przesunie się do kota?
         studio_c3_story_4: 'Czy mógłbyś napisać program, który sprawia, że pies porusza się w kierunku kota i powoduje, że kot mówi "hello", gdy pies dochodzi do niego?'
-        studio_c3_story_5: Can you add a block to make the octopus happy?
+        studio_c3_story_5: Czy mógłbyś dodać blok powodujący, że ośmiornica poczuje się szczęśliwie?
         studio_c3_story_6: Utwórz własną opowieść. Kiedy skończysz, kliknij przycisk Zakończ, aby umożliwić znajomym wypróbowanie Twojej opowieści na swoich telefonach.
         studio_c3_game_1: 'Czy mógłbyś napisać program, który powoduje, że ośmiornica mówi "hello", po kliknięciu na niej?'
-        studio_c3_game_2: Czy mógłbyś napisać program, który powoduje, że pingwin porusza się za pomocą przycisków w górę / w dół / w lewo/w prawo, by uderzyć we wszystkie cele?
+        studio_c3_game_2: Czy mógłbyś napisać program, który powoduje, że pingwin porusza się za pomocą przycisków w górę /w dół /w lewo/w prawo, by uderzyć we wszystkie cele?
         studio_c3_game_3: 'Blok "powtarzaj zawsze" umożliwia wykonywanie kodu bez przerwy. Czy mógłbyś dołączyć bloki powodujące, że ten dinozaur porusza się w górę i w dół w nieskończoność?'
-        studio_c3_game_4: 'Czy mógłbyś spowodować, że Pingwin mówi "Och!" i gra dźwięk "hit", gdy wpadnie na dinozaura, a następnie przenieś go za pomocą strzałek, aby się to stało?'
+        studio_c3_game_4: 'Czy mógłbyś spowodować, że Pingwin mówi "Och!" i gra dźwięk "hit", gdy wpadnie na dinozaura, następnie przenieś go za pomocą strzałek, aby się to stało?'
         studio_c3_game_5: Czy mógłbyś dodać blok, aby liczyć punkty, gdy pingwin wpada na ośmiornicę, a następnie przenosić go za pomocą strzałek, aż zdobędziesz punkt?
-        studio_c3_game_6: Czy mógłbyś dodać bloki do zmiany tło i prędkość pingwina, a następnie poruszać nim za pomocą klawiszy ze strzałkami, aż osiągniesz wynik?
+        studio_c3_game_6: Czy mógłbyś dodać bloki do zmiany tła i prędkości pingwina, a następnie poruszać nim za pomocą klawiszy ze strzałkami, aż osiągniesz wynik?
         studio_c3_game_7: Utwórz własną grę. Kiedy skończysz, kliknij przycisk Zakończ, aby umożliwić znajomym wypróbowanie gry na swoich telefonach.
         studio_playlab_1: 'Pingwin chce powiedzieć "hello" - czy możesz mu pomóc?'
         studio_playlab_2: 'Chłopiec z jaskini (aktor 1) i dziewczyna z jaskini (aktor 2) chcieliby powiedzieć "hello" do siebie. Czy mógłbyś im pomóc wykorzystując dwa razy blok "powiedz"?'
@@ -304,16 +304,16 @@ pl:
         studio_playlab_5: 'Czy mógłbyś pomóc Spacebot powiedzieć "greetings earthlings" (pozdrowienia dla Ziemian) po kliknięciu na nim? Nie zapomnij kliknąć na nim, po kliknięciu przycisku Uruchom'
         studio_playlab_6: Czy mógłbyś pomóc czarownicy (Witch) poruszać za pomocą klawiszy strzałek w górę/w dół/w prawo/w lewo, aby dostać wszystkie magiczne kule ogniste?
         studio_playlab_7: 'Blok "powtarzaj zawsze" umożliwia wykonywanie kodu bez przerwy. Czy mógłbyś dołączyć do niego bloki powodujące, że  kreatora porusza się w górę i w dół bez przerwy?'
-        studio_playlab_8: Can you add a block to score a point and a block to play a sound when the unicorn runs into the wizard, and then move him with the arrows until you score?
-        studio_playlab_9: Set the background for this alien invasion and help the Spacebot get to the alien faster by changing its speed. Then move him with the arrow keys to get to the Spacebot and alert everyone else
+        studio_playlab_8: Czy mógłbyś dodać blok zdobycia punktu i blok do odtwarzania dźwięku, gdy jednorożec wpada na Kreatora, następnie przenoś go za pomocą strzałek aż zdobędziesz punkt?
+        studio_playlab_9: Ustaw tło dla tej inwazji obcych i pomóż Spacebot dotrzeć do obcych szybciej zmieniając jego prędkość. Następnie przenoś go za pomocą klawiszy strzałek, aby dostać się do Spacebot i zaalarmować wszystkich pozostałych
         studio_playlab_10: Utwórz własną grę. Kiedy skończysz, kliknij przycisk Zakończ, aby umożliwić znajomym wypróbowanie gry na swoich telefonach.
         studio_full_sandbox: Utwórz własną grę. Kiedy skończysz, kliknij przycisk Zakończ, aby umożliwić znajomym wypróbowanie gry na swoich telefonach.
-        studio_k1_1: 'Can you make this dog say "hello world"?'
-        studio_k1_2: Can you make the dog say something and then have the cat say something afterwards?
+        studio_k1_1: 'Czy mógłbyś spowodować, aby ten pies powiedział "hello world"?'
+        studio_k1_2: Czy mógłbyś spowodować, aby ten pies coś powiedzieć, a następnie, by kot coś powiedział po nim?
         studio_k1_3: Czy mógłbyś napisać program, który spowoduje, że ten pies przesunie się do kota?
-        studio_k1_4: 'Make the dog move to the cat and the cat say "hello" when he gets there.'
-        studio_k1_5: Can you add a block to make the octopus happy?
-        studio_k1_6: Create your own story! Move around the cat and dog, and make them say things.
+        studio_k1_4: 'Spowoduj, że pies przesuwa się w kierunku kota i kot mówi "hello", gdy dociera do niego pies.'
+        studio_k1_5: Czy mógłbyś dodać blok powodujący, że ośmiornica poczuje się szczęśliwa?
+        studio_k1_6: Utwórz własną historię! Przesuwaj dookoła kota i psa i powoduj, że coś mówią.
         maze_wordsearch_k_1: Move me to spell the word EAST
         maze_wordsearch_k_2: Move me to spell the word SOUTH
         maze_wordsearch_k_3: Move me to spell the word WEST
@@ -476,25 +476,26 @@ pl:
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Funkcjonalne Suncatchers
         C3_songwriting_with_parameters: Pisanie Piosenek z parametrami
-        C4_intro: Introduction
+        C4_intro: Wstęp
         C4_bee_conditional: Bee Conditionals
-        C4_variables_artist: 'Variables - Artist'
-        C4_variables_playlab: 'Variables - Play Lab'
+        C4_variables_artist: 'Zmienne - Artysta'
+        C4_variables_playlab: 'Zmienne - Play Lab'
         C4_for_loops: Pętle dla (for)
-        C4_math_artist: Programming the Artist with Math
-        C4_function_edit: Editing Functions
-        C4_function_create: Creating Functions
-        C4_unplugged_algorithms: Algorithms with Tangrams
+        C4_math_artist: Programowanie Artysty z pomocą matematyki
+        C4_function_edit: Edytowanie Funkcji
+        C4_function_create: Tworzenie Funkcji
+        C4_conditionals: Warunkowe
+        C4_unplugged_algorithms: Algorytmy z Tangramami
         C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Variables in Envelopes
-        C4_unplugged_forloops: For Loops
+        C4_unplugged_variables: Zmienne w Kopertach
+        C4_unplugged_forloops: Pętle dla (for)
         C4_unplugged_parameters: Songwriting with Parameters
-        C4_unplugged_binary: Binary
+        C4_unplugged_binary: Binarny
         frozen_intro: Wprowadzenie do Godziny Kodowania (Hour of Code)
         frozen_loops: Wprowadzenie do Pętli
         frozen_functions: Wprowadzenie do Funkcji
-        playlab_intro: Introduction to Play Lab
-        playlab_events: Play Lab Events
+        playlab_intro: Wprowadzenie do Play Lab
+        playlab_events: Zdarzenia Play Gry Lab
         playlab_repeat_forever: Play Lab Repeat Forever
     callout:
       text:

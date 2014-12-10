@@ -238,6 +238,12 @@
   dashboard_action_done: Fertig
   dashboard_action_required: benötigt
   dashboard_navigation_home_page: Lehrer-Hauptseite
+  dashboard_navigation_section_student_progress: Schülerkonten und Fortschritt
+  dashboard_navigation_section_teacher_progress: Your Course Progress
+  dashboard_navigation_section_lesson_plans: Unterrichtspläne und Material
+  dashboard_navigation_section_community: Help and Community
+  dashboard_navigation_section_pd: Professional Development
+  dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
   dashboard_navigation_all_sections: Schülerkonten und Fortschritt
   dashboard_navigation_view_progress: Fortschritt ansehen
   dashboard_navigation_add_students: Schüler hinzufügen
@@ -397,6 +403,10 @@
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Eine Einführung in JavaScript
   khanes_name: Eine Einführung in JavaScript
+  khanpt_name: Eine Einführung in JavaScript
+  khanhe_name: Eine Einführung in JavaScript
+  khanfr_name: Eine Einführung in JavaScript
+  khanpl_name: Eine Einführung in JavaScript
   tynker_name: Baue dein eigenes Spiel
   scratch_name: Wird kreativ mit Code
   lightbot_name: Lightbot
@@ -425,12 +435,17 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Schere, Stein, Papier
-  frozen_gradelevel: Alter 8 +
+  hourofcode_name: Placeholder for new code.org/hoc
+  playlab_name: Play Lab
   codeorg_gradelevel: Im Alter von 4-104
   codeintl_gradelevel: Im Alter von 4-104
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Mittelschule +
   khanes_gradelevel: Mittelschule +
+  khanpt_gradelevel: Mittelschule +
+  khanhe_gradelevel: Mittelschule +
+  khanfr_gradelevel: Mittelschule +
+  khanpl_gradelevel: Mittelschule +
   tynker_gradelevel: Alter 5-13
   scratch_gradelevel: Alter 8 +
   lightbot_gradelevel: Alle Altersgruppen
@@ -459,13 +474,19 @@
   thinkersmith2_gradelevel: Alter 8 +
   kodableunplugged_gradelevel: Alter 8-13
   projguts_gradelevel: Alter 10-13
-  frozen_platformtext: Moderne Browser und Tablets
+  hourofcode_gradelevel: Im Alter von 4-104
+  frozen_gradelevel: Alter 8 +
+  playlab_gradelevel: Im Alter von 4-104
   codeorg_platformtext: Moderne Browser, Smartphones, Tablets
   codeintl_platformtext: Moderne Browser, Smartphones, Tablets
   thinkersmithspanish_platformtext: Nicht angeschlossen
   khan_platformtext: Aktuelle Web-Browser
   khanes_platformtext: Aktuelle Web-Browser
-  tynker_platformtext: Moderne Browser. (Ein Weiterführender Kurs kostet Geld)
+  khanpt_platformtext: Aktuelle Web-Browser
+  khanhe_platformtext: Aktuelle Web-Browser
+  khanfr_platformtext: Aktuelle Web-Browser
+  khanpl_platformtext: Aktuelle Web-Browser
+  tynker_platformtext: Aktuelle Web-Browser
   scratch_platformtext: ALLE Browser
   lightbot_platformtext: Alle Browser, iOS, Android oder Spielkonsolen
   thinkersmith_platformtext: Nicht angeschlossen
@@ -493,13 +514,18 @@
   thinkersmith2_platformtext: Nicht angeschlossen
   kodableunplugged_platformtext: Nicht angeschlossen
   projguts_platformtext: Nicht angeschlossen
-  frozen_shortdescription: Verwende Code, um Anna und Elsa bei ihrer Entdeckung der
-    Magie und Schönheit von Eis zu begleiten.
+  hourofcode_platformtext: Moderne Browser, Smartphones, Tablets
+  frozen_platformtext: Moderne Browser und Tablets
+  playlab_platformtext: Moderne Browser, Smartphones, Tablets
   codeorg_shortdescription: Lerne mit Mark Zuckerberg und Angry Birds zu programmieren!
   codeintl_shortdescription: Lerne mit Mark Zuckerberg und Angry Birds zu programmieren!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Lerne zeichnen in JavaScript
   khanes_shortdescription: Lerne zeichnen in JavaScript
+  khanpt_shortdescription: Lerne zeichnen in JavaScript
+  khanhe_shortdescription: Lerne zeichnen in JavaScript
+  khanfr_shortdescription: Lerne zeichnen in JavaScript
+  khanpl_shortdescription: Lerne zeichnen in JavaScript
   tynker_shortdescription: Lerne durch das Lösen von lustigen Rätseln zu programmieren
     und baue deine eigenen Handy-Spiele.
   scratch_shortdescription: Erstelle interaktive Spiele, Geschichten und Animationen.
@@ -541,9 +567,10 @@
     darstellen
   kodableunplugged_shortdescription: Eine spaßige Übung ohne Computer
   projguts_shortdescription: Versuche, einen Stein, Papier oder eine Schere zu simulieren
-  frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
-    magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
-    and make a winter wonderland that you can then share with your friends!
+  hourofcode_shortdescription: Placeholder for new code.org/hoc
+  frozen_shortdescription: Verwende Code, um Anna und Elsa bei ihrer Entdeckung der
+    Magie und Schönheit von Eis zu begleiten.
+  playlab_shortdescription: Erstelle eine Geschichte oder ein Spiel mit Play Lab!
   codeorg_longdescription: |
     Lerne die Grundlagen des Programmierens ganz einfach durch "Drag & Drop". Ganz spielerisch kannst Du dich selbst durch unseren Unterricht mit Videos von Bill Gates, Mark Zuckerberg, Angry Birds oder Plants vs. Zombies navigieren.
     Lerne, Schleifen zu programmieren, Bedingungen einzusetzen und einfache Algorithmen zu entwickeln. Das Programm ist in 34 Sprachen verfügbar.
@@ -557,6 +584,14 @@
   khan_longdescription: Lerne die Grundfunktionen von JavaScript indem die lustige
     Zeichnungen programmiest. Du kannst alleine oder mit Deiner Klasse lernen!
   khanes_longdescription: Lerne die Grundfunktionen von JavaScript indem die lustige
+    Zeichnungen programmiest. Du kannst alleine oder mit Deiner Klasse lernen!
+  khanpt_longdescription: Lerne die Grundfunktionen von JavaScript indem die lustige
+    Zeichnungen programmiest. Du kannst alleine oder mit Deiner Klasse lernen!
+  khanhe_longdescription: Lerne die Grundfunktionen von JavaScript indem die lustige
+    Zeichnungen programmiest. Du kannst alleine oder mit Deiner Klasse lernen!
+  khanfr_longdescription: Lerne die Grundfunktionen von JavaScript indem die lustige
+    Zeichnungen programmiest. Du kannst alleine oder mit Deiner Klasse lernen!
+  khanpl_longdescription: Lerne die Grundfunktionen von JavaScript indem die lustige
     Zeichnungen programmiest. Du kannst alleine oder mit Deiner Klasse lernen!
   tynker_longdescription: Erstelle deine eigenen Spiele und teile Sie mit Freunden!
     Löse spaßige Code-Rätsel und erlerne mit jedem Level die Grundlagen der Programmierung.
@@ -677,6 +712,13 @@
     die Modellierung und Simulation arbeitet, indem eine gruppe von Schülern verschiedene
     Versionen von Schere/Stein/Papier spielt und die Ergebnise als verschiedene Modellierungs
     Experimente darstellt.
+  hourofcode_longdescription: Placeholder for new code.org/hoc
+  frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
+    magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
+    and make a winter wonderland that you can then share with your friends!
+  playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
+    pirates, zombies, ninjas, and many more characters move, make sounds, score points,
+    and even throw fireballs!
   codeorg_beyond_name: Einführung in Informatik und Programmieren für Kinder zwischen
     5 und 14 Jahre
   khan_beyond_name: Lerne Computer-Programmierung und Programmiersprachen

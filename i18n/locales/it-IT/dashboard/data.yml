@@ -321,7 +321,7 @@ it:
         studio_c3_game_6: Riesci ad aggiungere dei blocchi per cambiare lo sfondo e la velocità del pinguino e poi a spostarlo con i tasti freccia fino a che segni un punto?
         studio_c3_game_7: Crea un gioco per conto tuo. Quando hai fatto, clicca su Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
         studio_playlab_1: 'Il pinguino vuole dire "ciao" - puoi aiutarlo?'
-        studio_playlab_2: 'Il Cavernicolo (personaggio 1) e la Cavernicola (personaggio 2) vorrebbero dirsi "ciao". Puoi aiutarli usando due volte il blocco "Parla"?'
+        studio_playlab_2: 'Il Cavernicolo (personaggio 1) e la Cavernicola (personaggio 2) vorrebbero dirsi "ciao". Puoi aiutarli usando due volte il blocco "dice"?'
         studio_playlab_3: Puoi aiutare la tennista a raggiungere la bandiera?
         studio_playlab_4: Puoi aiutare il tennista (personaggio 1) a raggiungere la tennista (personaggio 2) e a riprodurre un suono quando la raggiunge?
         studio_playlab_5: 'Puoi aiutare il robot spaziale a dire "salve terrestri" quando clicchi su di lui ? Non dimenticarti di cliccare sul robot spaziale dopo aver cliccato su "Esegui"'
@@ -400,7 +400,7 @@ it:
         instructions: 'Ok, esercitiamoci di nuovo per far pratica: questo esercizio non è molto diverso, ma stai attento al muro!'
       scrat 18:
         instructions: |-
-          Il blocco "se-altrimenti" controlla una condizione, e poi fa una cosa OPPURE un'altra. Prova ad usare questo nuovo blocco per farmi raggiungere la ghianda, .
+          Il blocco "se-altrimenti" controlla una condizione, e poi fa una cosa OPPURE un'altra. Prova ad usare questo nuovo blocco per farmi raggiungere la ghianda.
       scrat 19:
         instructions: 'Ancora un esercizio con il blocco "se-altrimenti": riesci a risolverlo correttamente al primo tentativo?'
       scrat 20:
@@ -504,26 +504,27 @@ it:
         C3_crowdsourcing: Intelligenza Collettiva
         C3_functional_suncatchers: Acchiappa-sole Funzionale
         C3_songwriting_with_parameters: 'Composizione di Canzoni - Parametri'
-        C4_intro: Introduction
+        C4_intro: Introduzione
         C4_bee_conditional: 'Ape: Istruzioni Condizionali'
-        C4_variables_artist: 'Variables - Artist'
-        C4_variables_playlab: 'Variables - Play Lab'
+        C4_variables_artist: 'Artista: Variabili'
+        C4_variables_playlab: 'Laboratorio: Variabili'
         C4_for_loops: Cicli con Contatore
-        C4_math_artist: Programming the Artist with Math
-        C4_function_edit: Editing Functions
-        C4_function_create: Creating Functions
-        C4_unplugged_algorithms: Algorithms with Tangrams
-        C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Variables in Envelopes
+        C4_math_artist: "Programmazione de L'Artista con la matematica"
+        C4_function_edit: Modifica di funzioni
+        C4_function_create: Creazione di funzioni
+        C4_conditionals: Istruzioni condizionali
+        C4_unplugged_algorithms: Algoritmi per il Tangram
+        C4_unplugged_madlibs: Mad-Libs
+        C4_unplugged_variables: Variabili della Busta
         C4_unplugged_forloops: Cicli con Contatore
         C4_unplugged_parameters: 'Composizione di Canzoni - Parametri'
-        C4_unplugged_binary: Binary
+        C4_unplugged_binary: Binario
         frozen_intro: "Introduzione all'Ora del Codice"
         frozen_loops: Introduzione ai Cicli
         frozen_functions: Introduzione alle Funzioni
-        playlab_intro: Introduction to Play Lab
-        playlab_events: Play Lab Events
-        playlab_repeat_forever: Play Lab Repeat Forever
+        playlab_intro: Introduzione al Laboratorio
+        playlab_events: 'Laboratorio: Eventi'
+        playlab_repeat_forever: 'Laboratorio: Ripeti per Sempre'
     callout:
       text:
         drag_blocks: |-
@@ -571,7 +572,7 @@ it:
         frozen_circle_function_with_parameter_circle: 'Usa il blocco  "crea un cerchio" e modifica le dimensioni.'
         frozen_snowflake_branch: 'Usa il blocco "crea un ramo del fiocco di neve"'
         frozen_create_square: Attacca più blocchi qui per creare un quadrato
-        playlab_drag_say: 'Sposta qui il blocco "Parla" e scrivi "ciao"'
+        playlab_drag_say: 'Sposta qui il blocco "dice" e scrivi "ciao"'
         playlab_use_twice: Usa questo blocco due volte e ricorda di cambiare il numero del personaggio
         playlab_move_girl: 'Usa il blocco "sposta a destra" per spostare la tennista'
         playlab_play_sound: 'Aggiungi qui il blocco "riproduci un suono"'
@@ -587,16 +588,17 @@ it:
         function_editor_draw_square: 'Questa è la definizione della tua funzione. Questi blocchi verranno eseguiti ogni volta che si utilizza il blocco "disegna un quadrato"'
         change_here: Fai qui il tuo cambio
         write_draw_square_function: "Sposta i blocchi dalla cassetta degli attrezzi all'area di lavoro per disegnare un quadrato"
-        write_draw_triangle_function: Drag blocks from the toolbox into here that draw a triangle
-        edit_add_parameter: Click edit to add a parameter in your function
-        add_and_drag_parameter: Write in the name of your parameter here, click add, and then drag it into your function definition
-        fill_in_actor: Fill in the ??? with numbers that correspond to each actor (1, 2, and 3)
-        repeat: Put blocks inside the loop to repeat commands
-        if_bee_nectar: 'Use the "if" block to decide if the bee should get nectar'
+        write_draw_triangle_function: 'Sposta qui i blocchi, prendendoli dalla "cassetta degli attrezzi", per disegnare un triangolo'
+        edit_add_parameter: 'Clicca su "Modifica" per aggiungere un parametro alla tua funzione'
+        add_and_drag_parameter: 'Scrivi qui il nome del tuo parametro, clicca su "Aggiungi", e poi spostalo nella definizione della tua funzione'
+        fill_in_actor: Sostituisci a ??? il numero che corrisponde ad ogni personaggio (1, 2, e 3)
+        repeat: "Inserisci i blocchi all'interno del ciclo per ripetere le istruzioni"
+        if_bee_nectar: |-
+          Usa il blocco "se" per decidere se l'ape deve prendere il nettare
         if_else_bee: |-
-          Use the "if/else" block so that the Bee gets nectar from a flower, and makes honey if it's not a flower
-        repeat_full_circle: Enter in the number of times the zombie has to move to make a full circle
-        place_length_variable: Drag the length variable here to replace the question marks
-        arrows_move_actor: Use the arrows to move the actor
-        right_arrow_fireball: Use the right arrow to shoot fireballs
-        name_function: Write the name of your function here
+          Usa il blocco "se-altrimenti" in modo che l'ape prenda il nettare dal fiore, ma faccia il miele se non c'è un fiore
+        repeat_full_circle: Scrivi il numero di volte che lo zombie si deve spostare per creare un cerchio intero
+        place_length_variable: 'Sposta qui la variabile "lunghezza" a rimpiazzare i punti interrogativi'
+        arrows_move_actor: Usa le frecce per muovere il personaggio
+        right_arrow_fireball: Usa la freccia a destra per lanciare le palle di fuoco
+        name_function: Scrivi qui il nome della tua funzione

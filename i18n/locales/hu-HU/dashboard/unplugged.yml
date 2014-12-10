@@ -83,7 +83,7 @@ hu:
         video: C1_planting_seed
       BuildingAFoundation:
         title: Az alap megépítése
-        desc: Students build a structure using only provided supplies. Structures must complete a task (reach a certain height or bear a certain weight), and students discuss the idea of being persistent when things get complicated.
+        desc: Diákok építenek egy szerkezet csak a megadott összetevők igénybevételével. A szerkezeteknek kell tudni látniuk valamilyen feladatot (érjenek el egy bizonyos magasságot vagy kibírjanak egy bizonyos terhet), és a diákok meg kell tanulniuk megvitatni az elképzeléseiket az állandóan növekvő bonyolultsági fokozat mellett.
         video: C1_building_foundation
       GettingLoopy:
         title: Ciklikusság
@@ -91,8 +91,7 @@ hu:
         video: C1_getting_loopy
       RelayProgramming:
         title: Váltó programozás
-        desc: |-
-          Students run a relay race, where they dash across the yard to write an algorithm based on a "Graph Paper Programming" image. They can only write one instruction at a time and if there's an error somewhere, they have to erase everything back to that point.
+        desc: 'Diákok egy váltófutáson vesznek részt, ahol ők az udvaron futnak végig a "Milliméterpapírra történő programozás" képén ábrázolt algoritmus szerint. Ők csak egy utasítást írhatnak le egyszerre, és ha van egy hiba valahol, akkor mindent törölniük kell eddig a pontig.'
         video: C2_relay_programming
       Conditionals:
         title: Feltételek
@@ -124,11 +123,11 @@ hu:
         video: C2_digital_footprint
       ComputationalThinking:
         title: Számítógépes gondolkodás
-        desc: Students use the steps of computational thinking (decompose, pattern match, abstract, algorithm) to figure out how to play a game that comes with no instructions.
+        desc: Diákok a számítási gondolkodás lépéseit használják (a dekompozíciót, a mintával való összevetést, az elvonatkoztatást, az algoritmust) a játékmenet kitalálásához, mivel nincsenek megadva a játékszabályok.
         video: C3_computational_thinking
       FunctionalSuncatchers:
         title: Funkcionális Dekor
-        desc: Students create an algorithm with variables and functions (pieces of code that you want to use over and over again) to create suncatchers using string and beads.
+        desc: A diákok létrehoznak egy algoritmust változók és függvények (olyan kódrészletek, amiket újra és újra fel lehet használni) segítségével zsinórra fűzött csillogó dekor és gyöngyök elkészítéséhez.
         video: C3_functional_suncatchers
       SongwritingParameters:
         title: Dalszerzés paraméterekkel
@@ -152,21 +151,27 @@ hu:
       TangramAlgorithms:
         title: Tangram algoritmusok
         desc: 'Ez a lecke megmutat valami fontosat algoritmusokról. Ha egy algoritmus egyszerű marad nagyon sokmindenre használható.  Ha azt akarod, hogy a végeredmény mindig ugyanaz legyen, az algoritmusnak is részletesebbnek kell lennie.'
+        video: C4_unplugged_algorithms
       EnvelopeVariables:
         title: Boríték változók
         desc: 'A változók nagyon sok szabadságot biztosítanak a számítástechnikában.  Ez a lecke segít megmagyarázni, hogy mik azok a változók és hogyan használhatjuk őket, nagyon sokféle módon. Használd ezt a tevékenységet, az absztrakció lecke előtt (vagy együtt), hogy igazán érthető legyen.'
+        video: C4_unplugged_variables
       MadGlibs:
         title: Mad Glibs
         desc: 'Az absztrakció, az egyik legfontosabb készsége egy számítógép tudósnak.  A diákoknak történeteket kell elemezniük, eltéréseket keresve és elvonatkoztatniuk. Ezek az elvonatkoztatott, absztrakt történetek szórakoztató és őrült új történetekké válnak. '
+        video: C4_unplugged_madlibs
       ForLoopFun:
         title: Szórakozás a For ciklussal
         desc: Tudjuk, hogy a ciklusok lehetővé teszik, hogy dolgokat újra és újra megismételjünk, de most megtanuljuk, hogy miként használhatjuk a ciklusok beépített extra funkcióit.
+        video: C4_unplugged_forloops
       SongwritingWithParameters:
         title: Dalszerzés paraméterekkel
-        desc: 'One of the most magnificent structures in the computer science world is the function.  Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into functions is such a helpful practice.  '
+        desc: 'A számítógép-tudomány egyik legcsodálatosabb szerkezete a függvény. A függvények (más néven eljárások) egy mini programok, amiket használhatsz újra és újra a nagyobb programodban. Ez a lecke segít a diákoknak intuitív módon megérteni, miért hasznos gyakorlat kódrészleteket függvényekké egyesíteni.  '
+        video: C4_unplugged_parameters
       BinaryImages:
         title: Bináris képek
         desc: 'Sokan azt hiszik, a bináris rendszer szigorúan nullákkal és egyesekkel operál, ám korábbi tanfolyamainkon megtanultuk,  a bináris opciók sokféle információt tudnak képviselni.  Ez a lecke ezt a koncepciót viszi előrébb egy lépéssel azt mutatva, hogy egy számítógép hogy képes tárolni összetett információt (például a képeket és színeket) is binárisan.'
+        video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
         title: Videó játékok és koordináta síkok
         desc: A videó játékok és koordináta síkok lecke leírása

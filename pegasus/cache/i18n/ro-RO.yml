@@ -242,6 +242,12 @@
   dashboard_action_done: Gata
   dashboard_action_required: necesar
   dashboard_navigation_home_page: Pagina de pornire a profesorului
+  dashboard_navigation_section_student_progress: Conturile elevilor şi progresul lor
+  dashboard_navigation_section_teacher_progress: Your Course Progress
+  dashboard_navigation_section_lesson_plans: Planuri de lecţie şi resurse
+  dashboard_navigation_section_community: Help and Community
+  dashboard_navigation_section_pd: Professional Development
+  dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
   dashboard_navigation_all_sections: Conturile elevilor şi progresul lor
   dashboard_navigation_view_progress: Vedeți progresele
   dashboard_navigation_add_students: Adăugați elevi
@@ -402,6 +408,10 @@
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: O introducere în JavaScript
   khanes_name: O introducere în JavaScript
+  khanpt_name: O introducere în JavaScript
+  khanhe_name: O introducere în JavaScript
+  khanfr_name: O introducere în JavaScript
+  khanpl_name: O introducere în JavaScript
   tynker_name: Costruiește propriul tău joc
   scratch_name: Fiți creativi cu codarea
   lightbot_name: Lightbot
@@ -430,12 +440,17 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Piatră, hârtie, foarfece
-  frozen_gradelevel: Vârstă 8+
+  hourofcode_name: Placeholder for new code.org/hoc
+  playlab_name: Laborator de Joacă
   codeorg_gradelevel: Vârste între 4-104 ani
   codeintl_gradelevel: Vârste între 4-104 ani
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Gimnaziu
   khanes_gradelevel: Gimnaziu
+  khanpt_gradelevel: Gimnaziu
+  khanhe_gradelevel: Gimnaziu
+  khanfr_gradelevel: Gimnaziu
+  khanpl_gradelevel: Gimnaziu
   tynker_gradelevel: Vârste între 5-13 ani
   scratch_gradelevel: Vârstă 8+
   lightbot_gradelevel: Toate vârstele
@@ -464,13 +479,19 @@
   thinkersmith2_gradelevel: Vârstă 8+
   kodableunplugged_gradelevel: Vârste între 8-13 ani
   projguts_gradelevel: Vârstele 10-13
-  frozen_platformtext: Browsere web moderne, tablete
+  hourofcode_gradelevel: Vârste între 4-104 ani
+  frozen_gradelevel: Vârstă 8+
+  playlab_gradelevel: Vârste între 4-104 ani
   codeorg_platformtext: Browsere web moderne, smartphone-uri, tablete
   codeintl_platformtext: Browsere web moderne, smartphone-uri, tablete
   thinkersmithspanish_platformtext: Unplugged
   khan_platformtext: Browsere web moderne
   khanes_platformtext: Browsere web moderne
-  tynker_platformtext: Browsere moderne. (Continuare curs necesită $$)
+  khanpt_platformtext: Browsere web moderne
+  khanhe_platformtext: Browsere web moderne
+  khanfr_platformtext: Browsere web moderne
+  khanpl_platformtext: Browsere web moderne
+  tynker_platformtext: Browsere web moderne
   scratch_platformtext: TOATE browserele
   lightbot_platformtext: TOATE browserele şi iOS, Android sau consolă de jocuri
   thinkersmith_platformtext: Unplugged
@@ -498,13 +519,18 @@
   thinkersmith2_platformtext: Unplugged
   kodableunplugged_platformtext: Unplugged
   projguts_platformtext: Unplugged
-  frozen_shortdescription: Să folosim cod pentru a ne alătura Annei şi Elsei în explorarea
-    magiei şi frumuseţii de gheaţă.
+  hourofcode_platformtext: Browsere web moderne, smartphone-uri, tablete
+  frozen_platformtext: Browsere web moderne, tablete
+  playlab_platformtext: Browsere web moderne, smartphone-uri, tablete
   codeorg_shortdescription: Învață să programezi cu Mark Zuckerberg si Angry Birds!
   codeintl_shortdescription: Învață să programezi cu Mark Zuckerberg si Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Învață sa desenezi în JavaScript
   khanes_shortdescription: Învață sa desenezi în JavaScript
+  khanpt_shortdescription: Învață sa desenezi în JavaScript
+  khanhe_shortdescription: Învață sa desenezi în JavaScript
+  khanfr_shortdescription: Învață sa desenezi în JavaScript
+  khanpl_shortdescription: Învață sa desenezi în JavaScript
   tynker_shortdescription: Invață să codezi rezolvând puzzle-uri distractive și creându-ți
     propriile jocuri pe mobil.
   scratch_shortdescription: Creează jocuri interactive, povestiri şi animaţii.
@@ -546,9 +572,10 @@
     reprezenta informația
   kodableunplugged_shortdescription: Un exercițiu distractiv, unplugged
   projguts_shortdescription: Încercaţi modelare şi simulare folosind piatră/hârtie/foarfece
-  frozen_longdescription: Să folosim cod pentru a ne alătura Annei şi Elsei care explorează
-    magia şi frumuseţea de gheaţă. Veţi crea fulgi de zăpadă şi modele ca la patinaj
-    şi veți face un paradis de iarnă, pe care apoi veți putea să-l partajați cu prietenii!
+  hourofcode_shortdescription: Placeholder for new code.org/hoc
+  frozen_shortdescription: Să folosim cod pentru a ne alătura Annei şi Elsei în explorarea
+    magiei şi frumuseţii de gheaţă.
+  playlab_shortdescription: Creează o poveste sau fă un joc cu Laboratorul de Joacă!
   codeorg_longdescription: Învață conceptele de bază ale programării cu o metodă simplă,
     distractivă, drag&drop. Este un tutorial ca un joc, simplu de realizat ce conține
     clipuri video cu Bil Gates, Mark Zukerberg Angry Birds and Plants vs. Zombies.
@@ -565,6 +592,14 @@
   khan_longdescription: Învață bazele programării JavaScript, în timp ce desenezi
     programând. Fă asta singur sau alături de clasă.
   khanes_longdescription: Învață bazele programării JavaScript, în timp ce desenezi
+    programând. Fă asta singur sau alături de clasă.
+  khanpt_longdescription: Învață bazele programării JavaScript, în timp ce desenezi
+    programând. Fă asta singur sau alături de clasă.
+  khanhe_longdescription: Învață bazele programării JavaScript, în timp ce desenezi
+    programând. Fă asta singur sau alături de clasă.
+  khanfr_longdescription: Învață bazele programării JavaScript, în timp ce desenezi
+    programând. Fă asta singur sau alături de clasă.
+  khanpl_longdescription: Învață bazele programării JavaScript, în timp ce desenezi
     programând. Fă asta singur sau alături de clasă.
   tynker_longdescription: Creați-vă propriile jocuri și partajati-le cu prietenii!
     Rezolvați puzzle-uri distractive de cod și învățați conceptele programării pe
@@ -680,6 +715,13 @@
     modelarea și simularea prin jucarea unor versiuni diferite ale jocului Piatră/Hârtie/Foarfecă
     de către un grup de elevi și evidențierea rezultatelor ca experimente diferite
     de modelare.
+  hourofcode_longdescription: Placeholder for new code.org/hoc
+  frozen_longdescription: Să folosim cod pentru a ne alătura Annei şi Elsei care explorează
+    magia şi frumuseţea de gheaţă. Veţi crea fulgi de zăpadă şi modele ca la patinaj
+    şi veți face un paradis de iarnă, pe care apoi veți putea să-l partajați cu prietenii!
+  playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
+    pirates, zombies, ninjas, and many more characters move, make sounds, score points,
+    and even throw fireballs!
   codeorg_beyond_name: Introducere K-8 în Tehnologia Computerelor
   khan_beyond_name: Învață programare
   tynker_beyond_name: Învață programare acasă

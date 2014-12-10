@@ -599,3 +599,7 @@
     completed_too_many_blocks: завършено, но с повече блокове
     completed_perfect: завършено, перфектно
     furthest_level_attempted: последното пробвано ниво
+  studio:
+    courses_working_on: Курсове, върху който работите
+    completed_courses: Завършени курсове
+    all_courses: Всички курсове

@@ -353,8 +353,8 @@
     all_courses: Översikt över kurser 1, 2 och 3
     lesson_plans: Lektionsplaneringar
     signin_message: Redan registrerad? %{link}
-    student_reg_link: Elev Registrera
-    teacher_reg_link: Lärare Registrera
+    student_reg_link: Registrera dig som elev
+    teacher_reg_link: Registrera dig som lärare
     signin_directions: Använd ett konto för att spara framsteg.<br/> Lärare, se dina
       elevers framsteg.
     teacher_dashboard: Se framstegs-menyn
@@ -497,7 +497,7 @@
       title: Galleri
       body: Se ett galleri av app och artist bilder som skapats av våra användare
     frozen:
-      title: Fryst
+      title: Frost
   gallery:
     students_drew_these_with_code: Elever ritade dessa med kod!
     students_made_these_with_code: Elever gjorde dessa med kod!
@@ -592,3 +592,7 @@
     completed_too_many_blocks: Avklarad, med för många block
     completed_perfect: Avklarad, perfekt
     furthest_level_attempted: försökt nå bortersta nivån
+  studio:
+    courses_working_on: Courses you're working on
+    completed_courses: Completed courses
+    all_courses: All courses

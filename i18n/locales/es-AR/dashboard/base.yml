@@ -508,3 +508,7 @@ es-AR:
     completed_too_many_blocks: completado, pero tiene demasiados bloques
     completed_perfect: completado, perfecto
     furthest_level_attempted: Nivel más alto intentado
+  studio:
+    courses_working_on: Cursos en los que estás participando
+    completed_courses: Cursos finalizados
+    all_courses: Todos los cursos

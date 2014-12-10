@@ -346,46 +346,42 @@ bg:
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png
-        text: "We're going to create games using Play Lab. Good games have a story, and every story has actors. We'll learn how to make our actors like witches, alinens, and animals speak, move, and interact with each other. By the end of this tutorial, you can build a game from scratch and share it with your friends."
+        text: Ние ще създаваме игри като използваме Игрална Лаборатория. Добрите игри имат история, а всяка история си има герои. Ще се научим как да караме нашите герои като вещици, извънземни и животни да говорят, да се движат и да комуникират едни с други. До края на този урок, ще можеш да създаваш игра от подръчни средства и ще я споделяш със твоите приятели.
       2:
         image: notes/playlab_intro_2.png
-        text: Your screen is split into 3 main parts. On the left is the game space where your program will run. The instructions for each level are written below.
+        text: Екрана е разделен на 3 основни части. Вляво е игралното поле, където вашата програма ще се изпълни. Инструкции за всяко ниво са дадени под него.
       3:
         image: notes/playlab_intro_3.png
-        text: "The middle area is the toolbox, and each of these blocks is a piece of code. The white space on the right is called the workspace and this is where we'll build our program."
+        text: Средната зона е кутията с инструменти, и всеки от тези блокове е част от код. Празното пространство вдясно се нарича работната област и това е мястото, където ние ще изградим нашата програма.
       4:
         image: notes/playlab_intro_4.png
-        text: |-
-          To start off, you'll need to link your blocks to the orange "when run" block. You can link multiple blocks together by dragging them out until you see the yellow line, and then they'll snap together.
+        text: 'За да започнете, трябва да свържете вашите блокове с оранжевия "при стартиране" блок. Можете да свържете множество блокове заедно, като ги плъзнете докато виждате жълта линия, и след това те ще се съединят заедно.'
       5:
         image: notes/playlab_intro_5.png
-        text: |-
-          In this first puzzle, our actor is a penguin and we'll be making it say "Hello!" by dragging the say block out, linking it to the when run block, and typing in "Hello." We can also make the penguin move by using the move right and move left blocks. Once you have your blocks in place, hit the run button to see what you've programmed.
+        text: 'В този първи пъзел, нашият актьор е пингвин и ние ще го накараме да казва "Здравей!" като плъзнем "казва" блок, и го свържем към "при стартиране"  блока. Ще напишем в него "Здравей." Ние можем да движим пингвина с помощта на блоковете за движение. След като сте поставили блоковете на място, натиснете бутона Старт, за да видите какво сте програмирали.'
       6:
         image: notes/playlab_intro_6.png
-        text: "Get started and by the end, you'll be able to create your own game with all kinds of players that can interact, turn happy or sad, score points, or throw fireballs, or even vanish each other. It's all up to you and the game you want to make."
+        text: Започнете и до края, ще можете да създадете своя собствена игра с всички видове герои, които могат да си взаимодействат, щастливи или тъжни, да печелят точки, или да хвърлят огнени топки, или дори да изчезват от полето. Това е всичко е за вас и играта, която искате да направите.
     playlab_events:
       1:
         image: notes/playlab_events_1.png
-        text: "Now, we're going to learn about something that all game programmers use everyday. They're called events. An event tells your program to listen for when something happens. When that thing happens, it performs an action."
+        text: 'Сега ние ще учим за неща,  които всички  програмисти на игри използват всеки ден. Те се наричат събития. Събитието казва на програмата ви да слуша  когато нещо се случва. Когато това нещо се случи, тя извършва действие.'
       2:
         image: notes/playlab_events_2.png
-        text: Some examples of events are listening for a mouse click, an arrow button, or a tap on the screen.
+        text: Някои примери на събития слушат за щракване с мишката, бутон със стрелка или натискане на екрана.
       3:
         image: notes/playlab_events_3.png
-        text: |-
-          Here, we're going to make the space bot greet the earthlings when a player clicks on him. We'll use the "when clicked" block and attach the "say" block to it. When the player clicks on the space bot, everything attached to this "when clicked" event block will be performed. What does your alien say?
+        text: 'Тук ние ще да се накараме космическия робот да каже "Поздрави, земляни!", когато играчът кликне върху него. Ние ще използваме "когато е кликнато върху" блок и "казва" блока, които ще прикрепим към "при стартиране" блока. Когато играчът кликне върху робота, всичко, прикрепено към "когато е кликнато върху" събитийния блок ще се извърши. Какво ли би казало вашето извънземно?'
       4:
         image: notes/playlab_events_4.png
-        text: 'There are also "when arrow" blocks. If you link the "move" blocks to these, you can start to move your actors up, down, left, or right. Step by step, your game is getting more interactive.'
+        text: 'Има и "когато стрелка" блокове. Ако свържете блокове "премести" с тях, можете да движите актьорите нагоре, надолу, наляво, или надясно. Стъпка по стъпка играта става по-интерактивна.'
     playlab_repeat_forever:
       1:
         image: notes/playlab_repeat_forever_1.png
-        text: 'This is the "repeat forever" block. Anything inside this block will happen forever in the game.'
+        text: 'Това е "повтаря завинаги" блокът. Ако поставите друг блок вътре в него, той ще се повтаря завинаги в играта.'
       2:
         image: notes/playlab_repeat_forever_2.png
-        text: |-
-          If we want an actor to do something repeatedly, without the player having to do anything, we'll put those blocks inside the "repeat forever" block.
+        text: 'Ако искаме актьора да  направи нещо няколко пъти, се налага да поставим тези блокове вътре в блока, "повтаря завинаги".'
       3:
         image: notes/playlab_repeat_forever_3.png
-        text: In this next puzzle, our goal is to help the wizard patrol the boundaries of the kingdom, left and right continuously. Learning how the repeat commands works, will save you a ton of time later when you build your own game.
+        text: 'В този пъзел нашата цел е да помогнем на магьосника да патрулира по границите на кралството, наляво и надясно. Научете как  работят командите за повторение, това ще ви спести един тон време по-късно, когато създавате своя собствена игра.'

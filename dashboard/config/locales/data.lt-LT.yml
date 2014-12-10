@@ -94,7 +94,7 @@
         Artist5: Menininkas 5
         Unplug11: Apibendrinimas
         MazeEC: Labirintas
-        Bounce: Šokinėjimas
+        Bounce: Tenisas
         Flappy: Flappy Bird
         Jigsaw: Dėlionės
         MazeStep: Labirintas Žingsnio režimu
@@ -368,29 +368,28 @@
         maze_3_3: Kaip man pasiekti kiaulę? Saugokis, kad nepaliesčiau TNT dėžės!
         maze_3_4: Oi! Parašyk programą, kuri mane privers apibėgti aplinkui TNT dėžę
           ir pasiekti kiaulę.
-        bounce_1: Pridėk blokelį prie blokelio „kai rodyklė kairėn“ ir nuspausk „Paleisti“.
-          Judink irklą spausdamas kairę rodyklę klaviatūroje, kad pasiektum tikslą.
-        bounce_2: Pridėk blokelį prie blokelio „kai rodyklė dešinėn“ ir nuspausk „Paleisti“.
-          Judink irklą, kad pasiektum abu taikinius.
-        bounce_3: Dabar pabandyk atlikti kažką panašaus su blokeliu „kai rodyklė aukštyn“.
-          Judink irklą iki taikinio viršuje.
-        bounce_4: Šį kartą reikia pridėti keturis blokelius. Pajudink irklą į keturis
+        bounce_1: Prijunk blokelį prie  „kai ... rodyklė kairėn“ ir paleisk programą.
+          Kad pasiektum tikslą, judink raketę su rodykle.
+        bounce_2: Prijunk blokelį prie  „kai ... rodyklė dešinėn“ ir „kai ... kairėn“
+          . Judink raketę, kad pasiektum abu  taikinius.
+        bounce_3: Dabar pabandyk atlikti kažką panašaus su blokeliu „kai ... rodyklė
+          aukštyn“. Judink raketę iki taikinio viršuje.
+        bounce_4: Šį kartą reikia pridėti keturis blokelius. Nuvesk raketę į keturis
           taškus, kad išspręstum šią užduotį.
-        bounce_5: Link irklo pradės skristi kamuolys. Pridėk bloką prie bloko „kai
-          kamuolys paliečia irklą“, kad kamuolys pasiektų finišą.
+        bounce_5: Link raketės pradės skristi kamuolys. Pridėk reikiamą komandą prie
+          bloko „kai kamuolys paliečia raketę“, kad kamuolys pasiektų finišą.
         bounce_6: Dabar finišas yra viršuje. Tau reikia prijungti blokelius prie dviejų
           „kai kamuolys atsitrenkia“ blokelių, kad išspręstum šią užduotį.
         bounce_7: Prikabink blokelius prie kiekvieno „kai“ blokelio. Kamuolis tol
           turi judėti, kol palies finišą.
-        bounce_10: Dabar viršuje yra tikslas. Pridėk „pelnyti tašką“ ir „pelnyti tašką
-          priešininkui“ blokelius prie „kai kamuolys yra įvartyje“ ir „kai kamuolys
-          nepataiko į irklą“ blokelius, kad sukurtum žaidimą. Pažiūrėk, kiek taškų
-          surinksi per tą patį laiką, kai priešininkas surinks taškų dvigubai daugiau.
-        bounce_11: Dabar gali prikabinti blokelius prie blokelio „paleidus“. Tau reikia
-          prijungti naują blokelį „paleisk naują kamuolį“ daugiau nei vienoje vietoje.
-          Taip pat pamėgink pakeisti scenos foną ar irklo greitį ir pažiūrėk, kiek
-          taškų sugebėsi surinkti per tą patį laiką, kai tavo varžovas surinks dukart
-          daugiau taškų.
+        bounce_10: Dabar viršuje yra taikinys. Pridėk „pelnyti tašką“ ir „pelnyti
+          tašką priešininkui“  komandas  prie „kai kamuolys pataiko į tikslą“ ir „kai
+          kamuolys nepataiko į raketę“, kad sukurtum žaidimą. Išbandyk, kiek taškų
+          surinksi, kol "priešininkas" surinks dvigubai daugiau.
+        bounce_11: Tau reikia prijungti naują blokelį „paleisk naują kamuolį“ daugiau
+          nei vienoje vietoje. Taip pat pamėgink pakeisti scenos foną ar raketės greitį
+          . Išbandyk, kiek taškų sugebėsi surinkti, kol priešininkas jų gaus dvigubai
+          daugiau.
         bounce_12: Sukurk savo "Pong" žaidimą. Tu gali pakeisti išvaizdą bei taisykles.
           Kai pabaigsi, spustelk "Finišas", ir draugai galės išbandyti jį savo telefonuose
           (ar pan.).
@@ -518,8 +517,8 @@
           iki katino, o katiną priverčia pasakyti „Labas“, kai šuo prie jo prieina?
         studio_playlab_5: Ar gali sukurti programą, kad aštuonkojis pasakytų „Labas“,
           kai ant jo nuspaudi su pele?
-        studio_playlab_6: Ar gali parašyti programą, kad šis pingvinas judėtų spaudinėjant
-          klaviatūros rodykles ir pataikytų į visus taikinius?
+        studio_playlab_6: Raganiukei reikia surinkti visus magiškus ugnies kamuolius.
+          Ar gali jai padėti judėti, naudojant rodyklių mygtukus?
         studio_playlab_7: Blokelis „kartok amžinai“ leidžia kodui veikti nesustojant.
           Ar sugebėsi sudėti blokus taip, kad šis dinozauras judėtų aukštyn ir žemyn
           nesustodamas?
@@ -762,6 +761,7 @@
         C4_math_artist: Programming the Artist with Math
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
+        C4_conditionals: Sąlyginiai sakiniai
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variables in Envelopes

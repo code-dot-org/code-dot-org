@@ -357,46 +357,42 @@ nl:
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png
-        text: "We're going to create games using Play Lab. Good games have a story, and every story has actors. We'll learn how to make our actors like witches, alinens, and animals speak, move, and interact with each other. By the end of this tutorial, you can build a game from scratch and share it with your friends."
+        text: We gaan games maken met behulp van Play Lab. Goede games hebben een verhaal, en elk verhaal heeft acteurs. We gaan leren hoe we onze acteurs zoals heksen, aliens en dieren laten praten, bewegen en interactie met elkaar laten hebben. Aan het einde van deze tutorial, kunt u een spel van niks tot iets maken en het delen met je vrienden.
       2:
         image: notes/playlab_intro_2.png
-        text: Your screen is split into 3 main parts. On the left is the game space where your program will run. The instructions for each level are written below.
+        text: Je scherm is verdeeld in 3 delen. Aan de linker zijde wordt het programma uitgevoerd. De instructies voor elk level worden onderaan weergegeven.
       3:
         image: notes/playlab_intro_3.png
-        text: "The middle area is the toolbox, and each of these blocks is a piece of code. The white space on the right is called the workspace and this is where we'll build our program."
+        text: "Het middelste gedeelte is de gereedschapkist, en elk van deze blokken is een stuk code. Het witte gedeelte aan de rechterkant is de werkruimte en daar bouwen we onze progamma's."
       4:
         image: notes/playlab_intro_4.png
-        text: |-
-          To start off, you'll need to link your blocks to the orange "when run" block. You can link multiple blocks together by dragging them out until you see the yellow line, and then they'll snap together.
+        text: 'Om te beginnen, moet je blokken koppelen aan het oranje "when run" blok. Je kan meerdere blokken samenkoppelen door ze te slepen totdat je een gele lijn ziet, en dan zullen ze samengekoppelt worden.'
       5:
         image: notes/playlab_intro_5.png
-        text: |-
-          In this first puzzle, our actor is a penguin and we'll be making it say "Hello!" by dragging the say block out, linking it to the when run block, and typing in "Hello." We can also make the penguin move by using the move right and move left blocks. Once you have your blocks in place, hit the run button to see what you've programmed.
+        text: 'In deze eerste puzzel is onze acteur een pinguïn en we laten hem "Hallo!" zeggen door een zeg-blok en deze vast te hangen aan de wanneer-uitvoeren blok en door "Hallo!" te typen. We laten de pinguïn ook bewegen door de beweeg rechts en beweeg links blokken te gebruiken. Wanneer je blokken op zijn plaats staan klik dan op de uitvoeren knop om te zien wat je geprogrammeerd hebt.'
       6:
         image: notes/playlab_intro_6.png
-        text: "Get started and by the end, you'll be able to create your own game with all kinds of players that can interact, turn happy or sad, score points, or throw fireballs, or even vanish each other. It's all up to you and the game you want to make."
+        text: Ga aan de slag en op het einde zal je in staat zijn om je eigen spel te maken met verschillende soorten spelers die kunnen reageren, blij of verdrietig zijn, punten kunnen scoren of vuurballen gooien of zelfs verdwijnen. Het is helemaal aan jou welk spel je wil maken.
     playlab_events:
       1:
         image: notes/playlab_events_1.png
-        text: "Now, we're going to learn about something that all game programmers use everyday. They're called events. An event tells your program to listen for when something happens. When that thing happens, it performs an action."
+        text: Nu gaan we iets leren over iets wat programmeurs van spellen iedere dag gebruiken. Gebeurtenissen. Een gebeurtenis vertelt aan je programma om te luisteren wanneer er iets gebeurt. Wanneer dat iets gebeurt voert het een actie uit.
       2:
         image: notes/playlab_events_2.png
-        text: Some examples of events are listening for a mouse click, an arrow button, or a tap on the screen.
+        text: 'Enkele voorbeelden van gebeurtenissen zijn : luisteren voor een muisklik, een pijltjestoets of een tik op het scherm.'
       3:
         image: notes/playlab_events_3.png
-        text: |-
-          Here, we're going to make the space bot greet the earthlings when a player clicks on him. We'll use the "when clicked" block and attach the "say" block to it. When the player clicks on the space bot, everything attached to this "when clicked" event block will be performed. What does your alien say?
+        text: 'Hier zorgen we ervoor dat de ruimterobot de aardbewoners groet wanneer een speler hem aanklikt. We gebruiken de "wanneer geklikt" blok en hangen hier de "zeg" blok aan. Wanneer de speler de ruimterobot aanklikt wordt alles wat aan de "wanneer geklikt" eventblok vasthangt uitgevoerd. Wat zegt je buitenaards wezen?'
       4:
         image: notes/playlab_events_4.png
-        text: 'There are also "when arrow" blocks. If you link the "move" blocks to these, you can start to move your actors up, down, left, or right. Step by step, your game is getting more interactive.'
+        text: 'Er zijn ook "wanneer pijl" blokken. Als je de "beweeg" blokken vasthangt aan deze kan je je acteurs op en neer en links en rechts laten bewegen. Stap voor stap wordt je spel meer interactief.'
     playlab_repeat_forever:
       1:
         image: notes/playlab_repeat_forever_1.png
-        text: 'This is the "repeat forever" block. Anything inside this block will happen forever in the game.'
+        text: 'Dit is de "Herhaal voor altijd" blok. Alles wat binnen deze blok staat zal voor altijd blijven gebeuren in het spel.'
       2:
         image: notes/playlab_repeat_forever_2.png
-        text: |-
-          If we want an actor to do something repeatedly, without the player having to do anything, we'll put those blocks inside the "repeat forever" block.
+        text: 'Als we een acteur iets herhaaldelijk willen laten doen zonder dat de speler er iets voor moet doen, plaatsen we deze blokken in een "herhaal voor altijd" blok.'
       3:
         image: notes/playlab_repeat_forever_3.png
-        text: In this next puzzle, our goal is to help the wizard patrol the boundaries of the kingdom, left and right continuously. Learning how the repeat commands works, will save you a ton of time later when you build your own game.
+        text: In de volgende puzzel is ons doel om de tovernaar de grenzen van het koninkrijk te laten patrouilleren van links naar rechts en dit steeds opnieuw. Als je nu leert hoe de herhaal opdrachten werken, bespaar je je later veel tijd wanneer je je eigen spel maakt.

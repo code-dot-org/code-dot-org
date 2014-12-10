@@ -121,7 +121,7 @@ sv:
         parameters: Funktioner med parametrar
     level:
       instructions:
-        maze_2_2: 'Kan du hjälpa mig att fånga den stygga gris? Stapla ett par "framåt" block tillsammans och tryck på "Kör" för att hjälpa mig komma dit. '
+        maze_2_2: 'Kan du hjälpa mig att fånga den dumma grisen? Sätt ihop ett par "gå framåt" block och tryck på "Kör" för att hjälpa mig komma dit. '
         maze_2_1: Den här grisen stör mig. Hjälp mig att hitta honom!
         maze_2_2_5: Lägg ut vägen och led mig till den dumma grisen. Undvik TNT:t annars flyger fjädrarna!
         maze_2_3: Led mig till den gröna elakheten! (Se upp för TNT)
@@ -133,7 +133,7 @@ sv:
         maze_2_9: "Ok, försök nu att använda det nya 'upprepa tills' blocket - det kommer att 'upprepa tills' jag når den irriterande grisen."
         maze_2_10: 'Ok, en sista gång för att övning - kan du lösa den här med endast 4 block?'
         maze_2_11: 'Kära person.  Mig zombie. Mig hungrig. Måste... komma... till solros... Kan du få mig dit med bara 5 block?'
-        maze_2_12: Ok, detta är liknande, men lita annorlunda. Kan du göra det på bara 5 block?
+        maze_2_12: Den här är liknande, men lite annorlunda. Kan du klara det med bara 5 block?
         maze_2_13: 'Använda det nya "om"-blocket för att låta mig avgöra när jag ka svänga. Tips: behöver du bara ett block till, men lär dig hur vi satte upp det så du kan göra det på egen hand nästa gång.'
         maze_2_14: 'Ok, detta är precis som det förra pusslet, men du måste komma ihåg hur du använder "Om"-blocket och "Upprepa"-blocket tillsammans.'
         maze_2_15: 'Jag vill ha solros! Använd ett "Om"-block för att få mig dit med minsta antalet block.'
@@ -356,7 +356,7 @@ sv:
       frozen circle function:
         instructions: 'Använd det nya "skapa en cirkel" blocket för att göra 10 cirklar som överlappar varandra. Glöm inte att hoppa framåt mellan cirklarna.'
       frozen circle function in circle:
-        instructions: Låt oss nu skapa 20 cirklar som överlappar varandra, och svänga18 grader mellan varje cirkel.
+        instructions: Låt oss nu skapa 20 cirklar som överlappar varandra, och svänga 18 grader mellan varje cirkel.
       frozen circle function with parameter:
         instructions: 'Här är ett "skapa en cirkel" block som kan göra cirklar i olika storlekar. Kan du använda det för att skapa en liten cirkel med storlek 5 och en större cirkel med storlek 10?'
       frozen snowflower:
@@ -474,7 +474,7 @@ sv:
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Funktionella Solfångare
         C3_songwriting_with_parameters: Låtskrivande Med parametrar
-        C4_intro: Introduction
+        C4_intro: Introduktion
         C4_bee_conditional: Bee Villkorssatser
         C4_variables_artist: 'Variables - Artist'
         C4_variables_playlab: 'Variables - Play Lab'
@@ -482,16 +482,17 @@ sv:
         C4_math_artist: Programming the Artist with Math
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
+        C4_conditionals: Villkor
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variables in Envelopes
         C4_unplugged_forloops: "'För' loopar"
         C4_unplugged_parameters: Låtskrivande Med parametrar
         C4_unplugged_binary: Binary
-        frozen_intro: Timme av kod Intro
+        frozen_intro: Introduktion Hour of Code
         frozen_loops: Introduktion till loopar
         frozen_functions: Introduktion till funktioner
-        playlab_intro: Introduction to Play Lab
+        playlab_intro: Introduktion till Play Lab
         playlab_events: Play Lab Events
         playlab_repeat_forever: Play Lab Repeat Forever
     callout:
@@ -506,7 +507,7 @@ sv:
         set_sprite_image: 'Bifoga en "sätt figur till bild" block till "när berättelsen börjar" blocket för att ange figur/actor i  denna berättelse'
         studio_say_text: Skriv vad du vill att din figur ska säga inom dessa citat
         jigsaw_click: Klicka på detta block!
-        move_elsa_forward: 'Dra ett "flytta framåt" block och fäst det under "när startat" blocket för att få Elsa att gå framåt'
+        move_elsa_forward: 'Dra ett "gå framåt" block och fäst det under "när startat" blocket för att få Elsa att gå framåt'
         turn_elsa: 'Använd "sväng" blocket för att få Elsa att vända sig. Siffran i rullistan bestämmer hur mycket hon svänger'
         replace_questions: 'Använd rullistan för att ersätta "???" med en siffra'
         replace_questions_degree: 'Använd rullistan för att ersätta "???" med rätt antal grader att svänga'

@@ -41,7 +41,7 @@ lv-LV:
   go: Sākt
   thank_you_: Paldies!
   congratulations: Apsveicu!
-  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
+  congratulations_on_completing_hoc: 'Apsveicam tevi ar "Programmēšanas stundas" pabeigšanu'
   get_a_certificate_of_achievement: Iegūsti sasniegumus apliecinošu sertefikātu
   enter_valid_email: Lūdzu, ievadi derīgu e-pasta adresi
   get_a_certificate_message: "Mēs tev nosūtīsim sertifikātu un informāciju kā <a href='/learn/beyond'> apgūt vairāk</a>"
@@ -67,7 +67,7 @@ lv-LV:
   thanks_for_voting: Paldies par balsojumu!
   share_on_facebook: Dalīties ar Facebook
   share_on_twitter: Share ar Twitter
-  beyond_an_hour: Beyond an Hour of Code
+  beyond_an_hour: Pēc Programmēšanas stundas
   get_started: Sākt
   i_agree: es piekrītu
   participant_select: -Izvēlēties-
@@ -76,9 +76,9 @@ lv-LV:
   participant_educator: Skolotājs
   participant_engineer: Programmatūras inženieris
   participant_other: Neviens no iepriekš minētajiem
-  print_all: Print all
-  print_ice_art: Print your ice art
-  create_art_with_zombie: or make advanced art with zombie
+  print_all: Drukāt visu
+  print_ice_art: Izdrukā savu ledus galeriju
+  create_art_with_zombie: vai veido papildus mākslu ar zombiju
   i_am_a: Es esmu
   never_spam: Es nekad nesūtīšu spamu
   enter_country: Ievadi valsti ja neesi no ASV
@@ -116,9 +116,9 @@ lv-LV:
   studiobar_teacher_title: Radīts skolotājiem
   studiobar_teacher_body: Iepazīstini savus skolēnus ar Code Studio
   studiobar_frozen_title: Programmēšanas stunda
-  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
-  studiobar_donate_title: Donate
-  studiobar_donate_body: One child learns for each dollar you donate
+  studiobar_frozen_body: Veido ziemas brīnumzemi ar Annu un Elzu
+  studiobar_donate_title: Ziedot
+  studiobar_donate_body: Viens bērns par katru dolāru, ko ziedosi
   contact_form_topic_student: Skolēniem
   contact_form_topic_parent: Vecākiem
   contact_form_topic_teacher: Pasniedzējiem/skolotājiem
@@ -202,6 +202,12 @@ lv-LV:
   dashboard_action_done: Gatavs
   dashboard_action_required: nepieciešams
   dashboard_navigation_home_page: Skolotāju mājaslapa
+  dashboard_navigation_section_student_progress: Skolēnu konti un progress
+  dashboard_navigation_section_teacher_progress: Tavs progress kursā
+  dashboard_navigation_section_lesson_plans: Stundu plāni un resursi
+  dashboard_navigation_section_community: Palīdzība un kopiena
+  dashboard_navigation_section_pd: Profesionālā pilnveide
+  dashboard_navigation_section_speakers: 'Datorzinātņu<br/>Vieslektori'
   dashboard_navigation_all_sections: Skolēnu konti un progress
   dashboard_navigation_view_progress: Apskatīt sekmes
   dashboard_navigation_add_students: Pievienot skolēnus
@@ -292,7 +298,7 @@ lv-LV:
   dashboard_sections_password_account_creation: Skolēnu izveidotā parole
   dashboard_sections_login_type_explanation: 'Šī tabula palīdz paskaidrot, kuru no visiem pieteikšanās veidiem <b>attēls, vārds vai e-pasts</b>, tu gribēsi izvēlēties sadaļai.'
   dashboard_faq: Biežāk uzdotie jautājumi
-  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
+  code_hoc_coming: 'Programmēšanas stunda ir klāt: no 8. līdz 14. decembrim!'
   code_sign_up: Reģistrējies, lai piedalītos Datorzinību izglītības nedēļā
   learn_more: Uzzini vairāk
   hoc2014_try_new_tutorials: 'Izmēģini mūsu jauno "Programmēšanas stundas" pamācību'
@@ -327,6 +333,10 @@ lv-LV:
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Ievads JavaScript
   khanes_name: Ievads JavaScript
+  khanpt_name: Ievads JavaScript
+  khanhe_name: Ievads JavaScript
+  khanfr_name: Ievads JavaScript
+  khanpl_name: Ievads JavaScript
   tynker_name: Veidot savu spēli
   scratch_name: Esi radošs kodējot
   lightbot_name: Lightbot
@@ -355,12 +365,17 @@ lv-LV:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Akmens, Šķēres, Papīrīts
-  frozen_gradelevel: Vecumā no 8+
+  hourofcode_name: Vietturis uz jauno code.org/hoc
+  playlab_name: Spēles laboratorija
   codeorg_gradelevel: Vecums no 4-104
   codeintl_gradelevel: Vecums no 4-104
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Pamatskola +
   khanes_gradelevel: Pamatskola +
+  khanpt_gradelevel: Pamatskola +
+  khanhe_gradelevel: Pamatskola +
+  khanfr_gradelevel: Pamatskola +
+  khanpl_gradelevel: Pamatskola +
   tynker_gradelevel: Vecumā 5-13
   scratch_gradelevel: Vecumā no 8+
   lightbot_gradelevel: Visu vecumu
@@ -389,21 +404,27 @@ lv-LV:
   thinkersmith2_gradelevel: Vecumā no 8+
   kodableunplugged_gradelevel: Vecumā no 8-13
   projguts_gradelevel: Vecumā no 10-13
-  frozen_platformtext: Moderni pārlūki + planšetdatori
+  hourofcode_gradelevel: Vecums no 4-104
+  frozen_gradelevel: Vecumā no 8+
+  playlab_gradelevel: Vecums no 4-104
   codeorg_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
   codeintl_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
   thinkersmithspanish_platformtext: Bezsaistē
   khan_platformtext: Modernas pārlūkprogrammas
   khanes_platformtext: Modernas pārlūkprogrammas
-  tynker_platformtext: Moderns pārlūks. (Aizstājošais kurss pieprasa $$)
-  scratch_platformtext: Visi pārlūki
+  khanpt_platformtext: Modernas pārlūkprogrammas
+  khanhe_platformtext: Modernas pārlūkprogrammas
+  khanfr_platformtext: Modernas pārlūkprogrammas
+  khanpl_platformtext: Modernas pārlūkprogrammas
+  tynker_platformtext: Modernas pārlūkprogrammas
+  scratch_platformtext: Tikai klasiskā datora tīmekļa pārlūki (ne planšetes)
   lightbot_platformtext: Visas pārlūkprogrammas un iOS, Android vai spēļu konsoles
   thinkersmith_platformtext: Bezsaistē
   condcards_platformtext: Bezsaistes
   lightbotintl_platformtext: iOS,Android (vai pārlūkprogramma)
   codehs_platformtext: Moderns pārlūks. (Aizstājošais kurss pieprasa $$)
   codecademy_platformtext: Modernas pārlūkprogrammas. iOS, Android lietotnes
-  codecombat_platformtext: Modernas pārlūkprogrammas
+  codecombat_platformtext: Moderns pārlūks. (Aizstājošais kurss pieprasa $$)
   codemonkey_platformtext: Modernas pārlūkprogrammas
   codeavengers_platformtext: Modernas pārlūkprogrammas
   processing_platformtext: Modernas pārlūkprogrammas
@@ -423,12 +444,18 @@ lv-LV:
   thinkersmith2_platformtext: Bezsaistē
   kodableunplugged_platformtext: Bezsaistē
   projguts_platformtext: Bezsaistē
-  frozen_shortdescription: Kodē, lai kopā ar Annu un Elzu iepazītu ledus skaistumu un burvību.
+  hourofcode_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
+  frozen_platformtext: Moderni pārlūki + planšetdatori
+  playlab_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
   codeorg_shortdescription: Iemācies programmēt ar Mark Zuckerberg un Dusmīgajiem putniem!
   codeintl_shortdescription: Iemācies programmēt ar Mark Zuckerberg un Dusmīgajiem putniem!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Mācies zīmēt ar JavaScript
   khanes_shortdescription: Mācies zīmēt ar JavaScript
+  khanpt_shortdescription: Mācies zīmēt ar JavaScript
+  khanhe_shortdescription: Mācies zīmēt ar JavaScript
+  khanfr_shortdescription: Mācies zīmēt ar JavaScript
+  khanpl_shortdescription: Mācies zīmēt ar JavaScript
   tynker_shortdescription: Mācies kodu risinot interesantas puzles un veidojot savas mobilās spēles.
   scratch_shortdescription: Izveido interaktīvas spēles, stāstus un animācijas.
   lightbot_shortdescription: Programmē Lightbot, lai tas atrisinātu puzles, izmantojot procedūras un ciklus!
@@ -449,7 +476,7 @@ lv-LV:
   tynkerapp_shortdescription: Mācies programmēt, saliekot aizraujošas programmēšanas puzles.
   robomindnl_shortdescription: Rakstīt kodu virtuālam robotam
   flappy_shortdescription: 'Izveido pats savu spēli - Putns Flapijs, Haizivs vai Zemūdene'
-  bitsbox_shortdescription: Uzkodē vairākas lietotnes, izmantojot Javascript, lai tās spēlētu vai dalītos ar tām.
+  bitsbox_shortdescription: Kodē lietotnes ar ko spēlēties un dalīties, izmantojot īstu JavaScript
   makegameswithus_shortdescription: Izveido Iphone spēli! Mācies rakstot kodu, lai iemācītu savam monstram jaunas kustības!
   touchdevelop_shortdescription: Saliec puzles, veido spēles un mācies programmēt ar savu telefonu.
   appinventor_shortdescription: Izveido savu lietotni! (Tikai uz Android)
@@ -457,12 +484,18 @@ lv-LV:
   thinkersmith2_shortdescription: Iemācies, kā datori lieto vieniniekus un nulles, lai attēlotu informāciju
   kodableunplugged_shortdescription: Jautrs bezsaistes vingrinājums
   projguts_shortdescription: 'Izmēģini modelēšanu un simulāciju izmantojot "akmens, šķēres, papīrītis"'
-  frozen_longdescription: Izmantosim kodu, lai piebiedrotos Annai un Elzai pētīt ledus burvību un skaistumu. Tu izdveidosi sniegprāslas un paraugus slidojot un taisot ziemas brīnumpasauli, ar kuru pēc tam vari dalīties ar draugiem!
+  hourofcode_shortdescription: Vietturis uz jauno code.org/hoc
+  frozen_shortdescription: Kodē, lai kopā ar Annu un Elzu iepazītu ledus skaistumu un burvību.
+  playlab_shortdescription: Izveidot stāstu vai spēli ar Spēles laboratoriju!
   codeorg_longdescription: 'Apgūsti datorzinību pamatus ar vizuālo "velc un nomet" programmēšanu. Tas atgādinās spēlēšanos, skatoties video lekcijas ar Bilu Geitsu, Marku Zuckerberg, pikatajiem putniem un augiem pret zombijiem. Mācies cikliskas konstrukcijas, nosacījumus un vienkāršus algoritmus. Pieejams 34 valodās.'
   codeintl_longdescription: 'Apgūsti datorzinību pamatus ar vizuālo "velc un nomet" programmēšanu. Tas atgādinās spēlēšanos, skatoties video lekcijas ar Bilu Geitsu, Marku Zuckerberg, pikatajiem putniem un augiem pret zombijiem. Mācies cikliskas konstrukcijas, nosacījumus un vienkāršus algoritmus. Pieejams 34 valodās.'
-  thinkersmithspanish_longdescription: 'Izmantojot iepriekš sagatavotu "Vārdnīcu - robotu" skolēni izdomās, kā savstarpēji palīdzēt izpildīt darbības tās neapspriežot. Šī nodarbība skolēniem māca saistību starp simboliem un darbībām, kā arī atkļūdošanas prasmi. "Mani draugi - roboti" vislabāk veicama kā grupas aktivitāte un ir pieejams arī skolotāja grāmata darbam ar klasi.'
+  thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
   khan_longdescription: Iemācies JavaScript programmēšanas valodas pamatus, radot jautrus zīmējumus ar savu kodu. Dari to patstāvīgi vai kopā ar klasi!
   khanes_longdescription: Iemācies JavaScript programmēšanas valodas pamatus, radot jautrus zīmējumus ar savu kodu. Dari to patstāvīgi vai kopā ar klasi!
+  khanpt_longdescription: Iemācies JavaScript programmēšanas valodas pamatus, radot jautrus zīmējumus ar savu kodu. Dari to patstāvīgi vai kopā ar klasi!
+  khanhe_longdescription: Iemācies JavaScript programmēšanas valodas pamatus, radot jautrus zīmējumus ar savu kodu. Dari to patstāvīgi vai kopā ar klasi!
+  khanfr_longdescription: Iemācies JavaScript programmēšanas valodas pamatus, radot jautrus zīmējumus ar savu kodu. Dari to patstāvīgi vai kopā ar klasi!
+  khanpl_longdescription: Iemācies JavaScript programmēšanas valodas pamatus, radot jautrus zīmējumus ar savu kodu. Dari to patstāvīgi vai kopā ar klasi!
   tynker_longdescription: Izveido pats savas spēles un dalies ar draugiem! Atrisini jautras puzzles un iemācies programmēšanas pamatus katrā līmenī. Personalizē spēles ar kustīgiem tēliem un vairākiem līmeņiem. Izveido savas spēles realistiskas izmantojot fiziku. Apskati kodu kā vizuālu klucīti vai JavaScript. Ieliec savas mobilās spēles iPad vai Android planšetdatorā. Pieejamas vairākas jautrās nodarbībām no kā izvēlēties!
   scratch_longdescription: 'Ar Scratch tu vari izveidot interaktīvas spēles, stāstus un animācijas &mdash; un tad paveiktajā dalīties ar saviem draugiem. Sāc ar sava vārda animāciju, svētku kartiņu vai klasisko spēli Pong.'
   lightbot_longdescription: Vadi Lightbot robotiņu, lai iedegtu visus zilos lauciņus. Lightbot ir puzle, kas izmanto programmējamas spēles sastāvdaļas, lai spēlētajam radītu praktisku priekšstatu par programmēšanas pamatiem. Mācies salikt secībā instrukcijas, veidot procedūras un izpildīt ciklus, lai izietu visus līmeņus. Piemērots visiem vecumiem.
@@ -491,6 +524,9 @@ lv-LV:
   thinkersmith2_longdescription: Skolēni mācīsies kā attēlo un saglabāt burtus bināri. Kursa beigās klase šifrē savus iniciāļus.
   kodableunplugged_longdescription: Izstrādāts, lai izmantotu uz papīra. fuzzFamily Frenzy ir ievads programmēšanas loģikā bērniem no 5 gadu vecuma. Skolotājam ir jāizskaidro noteikumi, tad skolēni kopā pārvar šķēršļu joslu.
   projguts_longdescription: 'Šī "bezsaistes" aktivitāte skolēniem palīdz iemācīties kā strādā simulācija un modelēšana, dažādās grupās izspēlējot akmens - šķēres - papīrītis un novērtējot rezultātus, kā modelēšanas eksperimentu.'
+  hourofcode_longdescription: Vietturis uz jauno code.org/hoc
+  frozen_longdescription: Izmantosim kodu, lai piebiedrotos Annai un Elzai pētīt ledus burvību un skaistumu. Tu izdveidosi sniegprāslas un paraugus slidojot un taisot ziemas brīnumpasauli, ar kuru pēc tam vari dalīties ar draugiem!
+  playlab_longdescription: Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!
   codeorg_beyond_name: Ievads Datorzinātnēs (8. klases pākāpē)
   khan_beyond_name: Mācies datorprogrammēšanu
   tynker_beyond_name: Mācies programmēt mājās

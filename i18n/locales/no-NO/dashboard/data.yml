@@ -102,7 +102,7 @@
         Webapp: Nettapp
         ArtistEC: Kunstneren
         TextMatch: Teksttreff
-        StudioEC: Play Lab
+        StudioEC: Spill-Lab
     trophy:
       name:
         Bronze: Bronse
@@ -445,7 +445,7 @@
         C2_artist_intro: Kunstner intro
         C2_zuck_repeat_loop: Labyrint løkker
         C2_artist_loops: Kunstner løkker
-        C2_artist_debugging: Artist Debugging
+        C2_artist_debugging: Kunstner Feilsøking
         C2_bee_loops: Bie løkker
         C2_bee_debugging: Bie feilsøking
         C2_bee_conditionals: Bie Betingelser
@@ -474,26 +474,27 @@
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Fungerende solfangere
         C3_songwriting_with_parameters: Låtskriving med parametere
-        C4_intro: Introduction
-        C4_bee_conditional: Bee Conditionals
-        C4_variables_artist: 'Variables - Artist'
-        C4_variables_playlab: 'Variables - Play Lab'
-        C4_for_loops: For Loops
-        C4_math_artist: Programming the Artist with Math
-        C4_function_edit: Editing Functions
-        C4_function_create: Creating Functions
-        C4_unplugged_algorithms: Algorithms with Tangrams
-        C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Variables in Envelopes
-        C4_unplugged_forloops: For Loops
+        C4_intro: Introduksjon
+        C4_bee_conditional: Bie Betingelser
+        C4_variables_artist: 'Variabler - Kunstner'
+        C4_variables_playlab: 'Variabler - SpillLab'
+        C4_for_loops: For-løkker
+        C4_math_artist: Programmere Kunstneren med Matematikk
+        C4_function_edit: Redigere Funksjoner
+        C4_function_create: Lage Funksjoner
+        C4_conditionals: Betingelser
+        C4_unplugged_algorithms: Algoritmer med Tangram
+        C4_unplugged_madlibs: Sprø Bibliotek
+        C4_unplugged_variables: Variabler i konvolutter
+        C4_unplugged_forloops: For-løkker
         C4_unplugged_parameters: Songwriting with Parameters
-        C4_unplugged_binary: Binary
+        C4_unplugged_binary: Binær
         frozen_intro: Kodetimen Intro
         frozen_loops: Introduksjon til løkker
         frozen_functions: Introduksjon til funksjoner
-        playlab_intro: Introduction to Play Lab
-        playlab_events: Play Lab Events
-        playlab_repeat_forever: Play Lab Repeat Forever
+        playlab_intro: Introduksjon til SpilleLab
+        playlab_events: SpillLab Arrangement
+        playlab_repeat_forever: Spille Lab Gjenta for alltid
     callout:
       text:
         drag_blocks: 'Dra en "flytt" blokk og fest den under den andre blokken'
@@ -548,16 +549,15 @@
         function_editor_draw_square: 'Dette er din funksjonsdefinisjon. Disse blokkene kjører hver gang du bruker "tegn en firkant"-blokken'
         change_here: Gjør din endring her
         write_draw_square_function: Dra blokkene fra verktøykassen inn hit for å tegne en firkant
-        write_draw_triangle_function: Drag blocks from the toolbox into here that draw a triangle
-        edit_add_parameter: Click edit to add a parameter in your function
-        add_and_drag_parameter: Write in the name of your parameter here, click add, and then drag it into your function definition
-        fill_in_actor: Fill in the ??? with numbers that correspond to each actor (1, 2, and 3)
-        repeat: Put blocks inside the loop to repeat commands
-        if_bee_nectar: 'Use the "if" block to decide if the bee should get nectar'
-        if_else_bee: |-
-          Use the "if/else" block so that the Bee gets nectar from a flower, and makes honey if it's not a flower
-        repeat_full_circle: Enter in the number of times the zombie has to move to make a full circle
-        place_length_variable: Drag the length variable here to replace the question marks
-        arrows_move_actor: Use the arrows to move the actor
-        right_arrow_fireball: Use the right arrow to shoot fireballs
-        name_function: Write the name of your function here
+        write_draw_triangle_function: Dra blokker fra verktøykassen inn her for å tegne en trekant
+        edit_add_parameter: Klikk Rediger for å legge til en parameter i funksjonen din
+        add_and_drag_parameter: Skriv inn navnet på parameteren din her, klikk på Legg til og dra den deretter til funksjonsdefinisjonen din
+        fill_in_actor: Erstatt ??? med tall som passer for hver skuespiller (1, 2 og 3)
+        repeat: Sett blokker inni gjenta-løkken for å gjenta kommandoer
+        if_bee_nectar: 'Bruke "Hvis"-blokken for å avgjøre om bien skal få nektar'
+        if_else_bee: 'Bruk "if/else" blokken slik at bien får nektar fra en blomst og lager honning hvis det ikke er en blomst'
+        repeat_full_circle: Angi hvor mange ganger zombien må flytte for å lage en full sirkel
+        place_length_variable: Dra lengdevariabelen hit for å erstatte spørsmålstegnene
+        arrows_move_actor: Bruk pilene til å flytte skuespilleren
+        right_arrow_fireball: Bruk pil-høyre til å skyte ildkuler
+        name_function: Skriv navnet på funksjonen din her

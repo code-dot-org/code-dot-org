@@ -531,26 +531,29 @@
           sampai mendapatkan poin?
         studio_c3_game_7: Buat permainan Anda sendiri. Setelah selesai, klik Selesai
           untuk membiarkan teman-teman mencoba permainan Anda pada ponsel mereka.
-        studio_playlab_1: Dapatkah anda membuat anjing ini mengatakan "Halo dunia"?
-        studio_playlab_2: Bisakah Anda membuat anjing itu mengatakan sesuatu, kemudian
-          membuat kucing itu mengatakan sesuatu?
-        studio_playlab_3: Dapatkah anda menulis program untuk membuat anjing ini bergerak
-          menuju kucing?
-        studio_playlab_4: Dapatkah anda menulis program untuk membuat anjing menuju
-          kucing dan membuat kucing mengatakan "halo" ketika anjing mencapainya?
-        studio_playlab_5: Bisakah kamu menuliskan program untuk membuat si gurita
-          mengatakan "halo" saat diklik?
-        studio_playlab_6: Dapatkah anda menulis program untuk membuat penguin bergerak
-          menggunakan tombol atas / bawah / kiri / kanan untuk memukul semua sasaran?
-        studio_playlab_7: Blok "Ulangi selamanya" memungkinkan Anda untuk menjalankan
-          kode terus-menerus. Dapatkah anda menempatkan blok-blok untuk memindahkan
-          dinosaurus ini naik dan turun berulang kali?
-        studio_playlab_8: Bisakah kamu menambahkan sebuah balok untuk mendapatkan
-          1 poin saat si penguin tertabrak gurita, lalu menggerakan ia dengan panah-panahnya
-          sampai kamu mendapatkan poin?
-        studio_playlab_9: Bisakah kamu menambahkan blok-blok untuk mengubah latar
-          belakang dan kecepatan si penguin, lalu menggerakan ia dengan panah-panah
-          sampai mendapatkan poin?
+        studio_playlab_1: Penguin ingin mengatakan "Halo" - Maukah kamu membantunya?
+        studio_playlab_2: Lelaki Gua (aktor 1) dan Gadis Gua (aktor 2) ingin mengatakan
+          'halo' satu sama lain. Maukah kamu membantunya dengan menggunakan blok 'bicara'
+          sebanyak dua kali?
+        studio_playlab_3: Maukah kamu membantu Gadis Pemain Tenis mendapatkan bendera
+          itu?
+        studio_playlab_4: Maukah kamu membantu Lelaki Pemain Tenis (aktor 1) berjalan
+          menuju Gadis Pemain Tenis (aktor 2) lalu memainkan suara ketika ia sampai?
+        studio_playlab_5: Maukah kamu membantu Spacebot mengatakan "Salam, para penduduk
+          bumi" ketika di-klik? Jangan lupa untuk mengeklik Spacebot setelah mengeklik
+          'Jalankan'
+        studio_playlab_6: Maukah kamu membantu Penyihir untuk bergerak dengan menekan
+          tombol atas/bawah/kanan/kiri untuk mendapatkan semua bola api ajaib itu?
+        studio_playlab_7: "Blok \"ulangi selamanya\" memungkinkan kamu menjalankan
+          kode terus-menerus. \nMaukah kamu memasangkan blok padanya untuk menolong
+          Penyihir bergerak ke kanan dan ke kiri berulang-ulang?\n"
+        studio_playlab_8: "Maukah kamu \nmenambahkan satu buah blok untuk mencetak
+          skor & \nsatu buah blok untuk memainkan suara \nketika 'Unicorn' itu berlari
+          ke arah Penyihir itu, \nlalu membuat Penyihir bergerak sampai mendapatkan
+          skor?\n"
+        studio_playlab_9: "Atur gambar latar untuk adegan penyerangan alien ini \ndan
+          bantu Spacebot bergerak cepat menuju Alien dengan mengganti kecepatannya.\nLalu
+          gerakkan ia dengan tombol arah menuju Spacebot, lalu serukan pada yang lain\n"
         studio_playlab_10: Buat permainan Anda sendiri. Setelah selesai, klik Selesai
           untuk membiarkan teman-teman mencoba permainan Anda pada ponsel mereka.
         studio_full_sandbox: Buat permainan Anda sendiri. Setelah selesai, klik Selesai
@@ -675,12 +678,12 @@
           labirin yang lebih rumit? Kalau kamu melakukannya dengan benar, aku bisa
           berjalan di jalan yang melengkung berapapun panjangnya. Cepat! Esnya meleleh!
       Standalone_Artist_1:
-        instructions: Welcome to Artist! First off, let's try to make a simple square
-          using the turn right block and move forward block. Each side should be 100
-          pixels long.
+        instructions: |
+          Selamat datang, Seniman!
+          Pertama-tama, marilah kita mencoba membuat kotak sederhana dengan menggunakan blok 'belok kanan' dan blok 'maju'. Tiap sisinya harus sebesar 100 piksel.
       Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel
-          long sides.
+        instructions: "Gambarlah berlian ini \ndengan sudut 120 & 60 derajat, \nserta
+          sisi sepanjang 150 piksel.\n"
       Standalone_Artist_3:
         instructions: Can you draw this hexagon with 100 pixel sides and 60 degree
           turns?
@@ -797,6 +800,7 @@
         C4_math_artist: Programming the Artist with Math
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
+        C4_conditionals: Kondisi
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variables in Envelopes

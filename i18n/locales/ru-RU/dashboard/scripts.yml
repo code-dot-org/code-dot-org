@@ -131,7 +131,7 @@ ru:
           "Bee: Debugging2": 'Пчела: Отладка2'
           "Artist: Patterns": 'Художник: Узоры'
           Songwriting: Написание песен
-          description_audience: Ages 8+ (after Course 2)
+          description_audience: Возраст 8+ (для закончивших Курс 2)
           description_short: Course 3 is a follow-up to Course 2.
         msm:
           title: Математика средней школы
@@ -200,8 +200,8 @@ ru:
         hourofcode:
           Maze: Лабиринт
           title: Hour of Code
-          description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description_short: Try the basics of computer science with many fun characters!
+          description: Постигай азы программирования с персонажами Angry Birds, Plants vs. Zombies, и Скратом из Ледникового периода!
+          description_short: Постигай азы программирования с персонажами Angry Birds, Plants vs. Zombies, и Скратом из Ледникового периода!
         frozen:
           title: Программируй с Анной и Эльзой
           description: Давайте с помощью программирования кода присоединимся к Анне и Эльзе в их исследовании магии и красоты льда. Будем кататься на коньках и рисовать на льду снежинки и узоры, создавать зимнюю страну чудес и делиться этим с друзьями!

@@ -301,15 +301,26 @@ id:
         studio_c3_game_5: Bisakah kamu menambahkan sebuah balok untuk mendapatkan 1 poin saat si penguin tertabrak gurita, lalu menggerakan ia dengan panah-panahnya sampai kamu mendapatkan poin?
         studio_c3_game_6: Bisakah kamu menambahkan blok-blok untuk mengubah latar belakang dan kecepatan si penguin, lalu menggerakan ia dengan panah-panah sampai mendapatkan poin?
         studio_c3_game_7: Buat permainan Anda sendiri. Setelah selesai, klik Selesai untuk membiarkan teman-teman mencoba permainan Anda pada ponsel mereka.
-        studio_playlab_1: 'Penguin wants to say "hello" - can you help him?'
-        studio_playlab_2: 'Cave Boy (actor 1) and Cave Girl (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
-        studio_playlab_3: Can you help Tennis Girl get to the flag?
-        studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor 2) and play a sound when he gets there?
-        studio_playlab_5: 'Can you help the Spacebot say "greetings earthlings" when it is clicked? Don’t forget to click it after you click Run'
-        studio_playlab_6: Can you help the Witch move around using the up/down/right/left arrow keys to get to all the magical fireballs?
-        studio_playlab_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help the wizard move right and left repeatedly?'
-        studio_playlab_8: Can you add a block to score a point and a block to play a sound when the unicorn runs into the wizard, and then move him with the arrows until you score?
-        studio_playlab_9: Set the background for this alien invasion and help the Spacebot get to the alien faster by changing its speed. Then move him with the arrow keys to get to the Spacebot and alert everyone else
+        studio_playlab_1: 'Penguin ingin mengatakan "Halo" - Maukah kamu membantunya?'
+        studio_playlab_2: "Lelaki Gua (aktor 1) dan Gadis Gua (aktor 2) ingin mengatakan 'halo' satu sama lain. Maukah kamu membantunya dengan menggunakan blok 'bicara' sebanyak dua kali?"
+        studio_playlab_3: Maukah kamu membantu Gadis Pemain Tenis mendapatkan bendera itu?
+        studio_playlab_4: Maukah kamu membantu Lelaki Pemain Tenis (aktor 1) berjalan menuju Gadis Pemain Tenis (aktor 2) lalu memainkan suara ketika ia sampai?
+        studio_playlab_5: |-
+          Maukah kamu membantu Spacebot mengatakan "Salam, para penduduk bumi" ketika di-klik? Jangan lupa untuk mengeklik Spacebot setelah mengeklik 'Jalankan'
+        studio_playlab_6: Maukah kamu membantu Penyihir untuk bergerak dengan menekan tombol atas/bawah/kanan/kiri untuk mendapatkan semua bola api ajaib itu?
+        studio_playlab_7: |
+          Blok "ulangi selamanya" memungkinkan kamu menjalankan kode terus-menerus. 
+          Maukah kamu memasangkan blok padanya untuk menolong Penyihir bergerak ke kanan dan ke kiri berulang-ulang?
+        studio_playlab_8: |
+          Maukah kamu 
+          menambahkan satu buah blok untuk mencetak skor & 
+          satu buah blok untuk memainkan suara 
+          ketika 'Unicorn' itu berlari ke arah Penyihir itu, 
+          lalu membuat Penyihir bergerak sampai mendapatkan skor?
+        studio_playlab_9: |
+          Atur gambar latar untuk adegan penyerangan alien ini 
+          dan bantu Spacebot bergerak cepat menuju Alien dengan mengganti kecepatannya.
+          Lalu gerakkan ia dengan tombol arah menuju Spacebot, lalu serukan pada yang lain
         studio_playlab_10: Buat permainan Anda sendiri. Setelah selesai, klik Selesai untuk membiarkan teman-teman mencoba permainan Anda pada ponsel mereka.
         studio_full_sandbox: Buat permainan Anda sendiri. Setelah selesai, klik Selesai untuk membiarkan teman-teman mencoba permainan Anda pada ponsel mereka.
         studio_k1_1: 'Dapatkah anda membuat anjing ini mengatakan "Halo dunia"?'
@@ -384,9 +395,14 @@ id:
       scrat 20:
         instructions: Bisakah kamu menambahkan 3 blok saja untuk membantuku menyelesaikan labirin yang lebih rumit? Kalau kamu melakukannya dengan benar, aku bisa berjalan di jalan yang melengkung berapapun panjangnya. Cepat! Esnya meleleh!
       Standalone_Artist_1:
-        instructions: "Welcome to Artist! First off, let's try to make a simple square using the turn right block and move forward block. Each side should be 100 pixels long."
+        instructions: |
+          Selamat datang, Seniman!
+          Pertama-tama, marilah kita mencoba membuat kotak sederhana dengan menggunakan blok 'belok kanan' dan blok 'maju'. Tiap sisinya harus sebesar 100 piksel.
       Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel long sides.
+        instructions: |
+          Gambarlah berlian ini 
+          dengan sudut 120 & 60 derajat, 
+          serta sisi sepanjang 150 piksel.
       Standalone_Artist_3:
         instructions: Can you draw this hexagon with 100 pixel sides and 60 degree turns?
       Standalone_Artist_4:
@@ -489,6 +505,7 @@ id:
         C4_math_artist: Programming the Artist with Math
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
+        C4_conditionals: Kondisi
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variables in Envelopes
