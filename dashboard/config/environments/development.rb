@@ -13,11 +13,6 @@ Dashboard::Application.configure do
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
 
-  # To test Rails caching in development, set action_controller.perform_caching to true
-  # and uncomment one of the config.cache_store lines:
-  # config.cache_store = :file_store, Rails.root.join('tmp','cache')
-  # config.cache_store = :memory_store
-
   # Don't try to send mail in development. Messages will be logged in
   # development.log if you want to look at them
   config.action_mailer.perform_deliveries = false
