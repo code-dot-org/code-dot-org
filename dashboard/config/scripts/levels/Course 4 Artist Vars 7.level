@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you modify the \"set sides to\" variable to help me draw this hexagon?",
+    "instructions": "Can you modify the \"sides\" variable to help me draw this hexagon?",
     "x": "125",
     "y": "325",
     "start_direction": "90",
@@ -19,7 +19,9 @@
     "disable_variable_editing": "true",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "impressive": "false"
+    "impressive": "false",
+    "embed": "false",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
@@ -76,7 +78,6 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="when_run" movable="false" deletable="false"/>
         <block type="draw_move" inline="true">
           <title name="DIR">moveForward</title>
           <value name="VALUE">

@@ -390,7 +390,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     level = Level.where(level_num: "3_8").first
     script_level = ScriptLevel.where(level_id: level.id).first
     level_source = LevelSource.find_identical_or_create(level, blocks)
-    Activity.create!(user: @admin, level: level, lines: "1", attempt: "1", test_result: "100", time: "1000", level_source: level_source)
+    Activity.create!(user: @admin, level: level, lines: "1", attempt: "1", test_result: "100", time: "1000", level_source_id: level_source.id)
     next_script_level = ScriptLevel.where(level: Level.where(level_num: "3_9").first).first
     get :show, script_id: script_level.script.id, id: next_script_level.id
     assert_equal blocks, assigns["start_blocks"]
