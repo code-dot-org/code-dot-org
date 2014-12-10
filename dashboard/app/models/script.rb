@@ -75,13 +75,18 @@ class Script < ActiveRecord::Base
     candidate_level
   end
 
+  def self.script_cache
+    @@script_cache ||= {}.tap do |cache|
+      [twenty_hour_script, frozen_script, hoc_script, flappy_script, playlab_script].each do |script|
+        cache[script.name] = script
+        cache[script.id.to_s] = script
+      end
+    end
+  end
+
   def self.get_from_cache(id)
-    case id.to_s
-      when TWENTY_HOUR_ID.to_s, TWENTY_HOUR_NAME then twenty_hour_script
-      when FROZEN_NAME then frozen_script
-      when HOC_NAME then hoc_script
-      when PLAYLAB_NAME then playlab_script
-      when FLAPPY_ID.to_s, FLAPPY_NAME then flappy_script
+    if self.script_cache[id.to_s]
+      self.script_cache[id.to_s]
     else
       # a bit of trickery so we support both ids which are numbers and
       # names which are strings that may contain numbers (eg. 2-3)
