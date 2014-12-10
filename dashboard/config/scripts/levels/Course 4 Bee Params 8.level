@@ -21,7 +21,8 @@
     "instructions": "Oooh, now there's honey to deal with too! How could you update your function to either get nectar or make honey.",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
-    "open_function_definition": "get nectar make honey"
+    "open_function_definition": "get nectar make honey",
+    "maze_data": null
   }
 }]]></config>
   <blocks>

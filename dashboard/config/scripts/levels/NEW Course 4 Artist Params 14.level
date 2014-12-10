@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you recreate these shapes? Remove the loop within the function definition and use the counter variable in the function definition. The square counter should be 5/100/5, the triangle counter should be 10/100/10 and the hexagon is 2/100/2.",
+    "instructions": "Can you recreate these shapes? Drag the counter variable from the toolbox into the function definition. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": "1",
@@ -32,7 +32,7 @@
               <mutation counter="counter"/>
               <value name="FROM">
                 <block type="math_number">
-                  <title name="NUM">1</title>
+                  <title name="NUM">5</title>
                 </block>
               </value>
               <value name="TO">
@@ -42,7 +42,7 @@
               </value>
               <value name="BY">
                 <block type="math_number">
-                  <title name="NUM">10</title>
+                  <title name="NUM">5</title>
                 </block>
               </value>
               <statement name="DO">
@@ -84,7 +84,7 @@
                           <mutation counter="counter"/>
                           <value name="FROM">
                             <block type="math_number">
-                              <title name="NUM">1</title>
+                              <title name="NUM">10</title>
                             </block>
                           </value>
                           <value name="TO">
@@ -136,7 +136,7 @@
                                       <mutation counter="counter"/>
                                       <value name="FROM">
                                         <block type="math_number">
-                                          <title name="NUM">1</title>
+                                          <title name="NUM">2</title>
                                         </block>
                                       </value>
                                       <value name="TO">
@@ -146,7 +146,7 @@
                                       </value>
                                       <value name="BY">
                                         <block type="math_number">
-                                          <title name="NUM">10</title>
+                                          <title name="NUM">2</title>
                                         </block>
                                       </value>
                                       <statement name="DO">
@@ -191,11 +191,6 @@
           <statement name="STACK">
             <block type="draw_move" inline="true" uservisible="false">
               <title name="DIR">moveForward</title>
-              <value name="VALUE">
-                <block type="math_number" uservisible="false">
-                  <title name="NUM">???</title>
-                </block>
-              </value>
               <next>
                 <block type="draw_turn" inline="true" uservisible="false">
                   <title name="DIR">turnLeft</title>
