@@ -18,6 +18,10 @@ class Level < ActiveRecord::Base
 
   serialized_attrs %w(video_key embed)
 
+  def game
+    Game.by_id(game_id)
+  end
+
   # Fix STI routing http://stackoverflow.com/a/9463495
   def self.model_name
     self < Level ? Level.model_name : super
