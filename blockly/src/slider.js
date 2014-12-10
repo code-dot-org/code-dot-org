@@ -115,10 +115,10 @@ Slider.prototype.knobMouseDown_ = function(e) {
  */
 Slider.prototype.trackMouseDown_ = function(e) {
   var mouseSVGPosition = this.mouseToSvg_(e);
-  this.snapToPosition_(mouseSVGPosition);
+  this.snapToPosition_(mouseSVGPosition.x);
   this.beginDrag_(mouseSVGPosition);
 
-  // Halt propagation
+  // Stop browser from attempting to drag the track.
   e.preventDefault();
   return false;
 };
@@ -143,13 +143,11 @@ Slider.prototype.beginDrag_ = function(startMouseSVG) {
 
 /**
  * Snap the slider knob to the clicked position.
- * @param {!Object} mousePositionSVG Mouse position in SVG space
+ * @param {number} xPosition SVG x-coordinate
  * @private
  */
-Slider.prototype.snapToPosition_ = function(mousePositionSVG) {
-  console.log("Snap to " + mousePositionSVG.x);
-
-  var x = Math.min(Math.max(mousePositionSVG.x, 
+Slider.prototype.snapToPosition_ = function(xPosition) {
+  var x = Math.min(Math.max(xPosition, 
         this.KNOB_MIN_X_), this.KNOB_MAX_X_);
   this.knob_.setAttribute('transform',
       'translate(' + x + ',' + this.KNOB_Y_ + ')');
@@ -200,15 +198,7 @@ Slider.knobMouseMove_ = function(e) {
   }
   var x = thisSlider.mouseToSvg_(e).x - Slider.startMouseX_ +
       Slider.startKnobX_;
-  x = Math.min(Math.max(x, thisSlider.KNOB_MIN_X_), thisSlider.KNOB_MAX_X_);
-  thisSlider.knob_.setAttribute('transform',
-      'translate(' + x + ',' + thisSlider.KNOB_Y_ + ')');
-
-  thisSlider.value_ = (x - thisSlider.KNOB_MIN_X_) /
-      (thisSlider.KNOB_MAX_X_ - thisSlider.KNOB_MIN_X_);
-  if (thisSlider.changeFunc_) {
-    thisSlider.changeFunc_(thisSlider.value_);
-  }
+  thisSlider.snapToPosition_(x);
 };
 
 /**
