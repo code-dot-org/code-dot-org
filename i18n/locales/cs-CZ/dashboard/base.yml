@@ -508,3 +508,7 @@ cs:
     completed_too_many_blocks: dokončeno, až příliš mnoho bloků
     completed_perfect: dokončeno, perfektní
     furthest_level_attempted: furthest level attempted
+  studio:
+    courses_working_on: "Courses you're working on"
+    completed_courses: Completed courses
+    all_courses: All courses

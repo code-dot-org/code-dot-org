@@ -22,7 +22,7 @@ title: Partnere
 
 * * *
 
-# Tutorial Partners
+# Øvelses-partnere
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 

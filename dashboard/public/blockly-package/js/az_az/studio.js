@@ -21313,9 +21313,9 @@ exports.defaultTwitterText = function(d){return "Check out what I made"};
 
 },{"messageformat":61}],49:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.az=function(n){return n===1?"one":"other"}
-exports.actor = function(d){return "actor"};
+exports.actor = function(d){return "personaj"};
 
-exports.alienInvasion = function(d){return "Alien Invasion!"};
+exports.alienInvasion = function(d){return "Yadplanetlilərin hücumu!"};
 
 exports.backgroundBlack = function(d){return "qara"};
 
@@ -21327,7 +21327,7 @@ exports.backgroundHardcourt = function(d){return "hardcourt"};
 
 exports.backgroundNight = function(d){return "gecə"};
 
-exports.backgroundUnderwater = function(d){return "underwater"};
+exports.backgroundUnderwater = function(d){return "suyun altı"};
 
 exports.backgroundCity = function(d){return "şəhər"};
 
@@ -21337,7 +21337,7 @@ exports.backgroundRainbow = function(d){return "göy qurşağı"};
 
 exports.backgroundSoccer = function(d){return "futbol"};
 
-exports.backgroundSpace = function(d){return "space"};
+exports.backgroundSpace = function(d){return "kosmos"};
 
 exports.backgroundTennis = function(d){return "tennis"};
 
@@ -21365,7 +21365,7 @@ exports.changeScoreTooltipK1 = function(d){return "Add a point to the score."};
 
 exports.continue = function(d){return "Davam et"};
 
-exports.decrementPlayerScore = function(d){return "remove point"};
+exports.decrementPlayerScore = function(d){return "bir xal sil"};
 
 exports.defaultSayText = function(d){return "burada yazın"};
 
@@ -21455,7 +21455,7 @@ exports.no = function(d){return "Xeyr"};
 
 exports.numBlocksNeeded = function(d){return "Bu  tapmaca %1 blokla həll oluna bilər."};
 
-exports.ouchExclamation = function(d){return "Ouch!"};
+exports.ouchExclamation = function(d){return "Ouç!"};
 
 exports.playSoundCrunch = function(d){return "play crunch sound"};
 
@@ -21545,29 +21545,29 @@ exports.projectileRapunzel = function(d){return "Rapunzel"};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to playing your story."};
 
-exports.repeatForever = function(d){return "repeat forever"};
+exports.repeatForever = function(d){return "təkrar et sonsuz"};
 
 exports.repeatDo = function(d){return "et"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the story is running."};
 
-exports.saySprite = function(d){return "say"};
+exports.saySprite = function(d){return "söylə"};
 
-exports.saySpriteN = function(d){return "actor "+v(d,"spriteIndex")+" say"};
+exports.saySpriteN = function(d){return "personaj "+v(d,"spriteIndex")+" söylə"};
 
 exports.saySpriteTooltip = function(d){return "Pop up a speech bubble with the associated text from the specified character."};
 
 exports.scoreText = function(d){return "Score: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
 
-exports.setBackground = function(d){return "set background"};
+exports.setBackground = function(d){return "arxa fonu təyin et"};
 
-exports.setBackgroundRandom = function(d){return "set random scene"};
+exports.setBackgroundRandom = function(d){return "təsadüfi bir arxa fon təyin et"};
 
-exports.setBackgroundBlack = function(d){return "set black background"};
+exports.setBackgroundBlack = function(d){return "arxa fonu qara et"};
 
-exports.setBackgroundCave = function(d){return "set cave background"};
+exports.setBackgroundCave = function(d){return "arxa fonu mağara et"};
 
-exports.setBackgroundCloudy = function(d){return "set cloudy background"};
+exports.setBackgroundCloudy = function(d){return "arxa fonu buludlu et"};
 
 exports.setBackgroundHardcourt = function(d){return "set hardcourt scene"};
 
@@ -21591,9 +21591,9 @@ exports.setBackgroundWinter = function(d){return "set winter background"};
 
 exports.setBackgroundTooltip = function(d){return "Sets the background image"};
 
-exports.setEnemySpeed = function(d){return "set enemy speed"};
+exports.setEnemySpeed = function(d){return "düşmənin sürətini təyin et"};
 
-exports.setPlayerSpeed = function(d){return "set player speed"};
+exports.setPlayerSpeed = function(d){return "oyunçunun sürətini təyin et"};
 
 exports.setScoreText = function(d){return "set score"};
 

@@ -16766,9 +16766,9 @@ exports.noPathLeft = function(d){return "nessuna strada a sinistra"};
 
 exports.noPathRight = function(d){return "nessuna strada a destra"};
 
-exports.notAtFlowerError = function(d){return "Puoi prendere solo il nettare dal fiore."};
+exports.notAtFlowerError = function(d){return "Puoi prendere il nettare solo quando sei sul fiore."};
 
-exports.notAtHoneycombError = function(d){return "Puoi fare il miele solo quando sei in un favo."};
+exports.notAtHoneycombError = function(d){return "Puoi fare il miele solo quando sei sul favo."};
 
 exports.numBlocksNeeded = function(d){return "Questo esercizio può essere risolto con %1 blocchi."};
 

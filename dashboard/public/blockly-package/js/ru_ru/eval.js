@@ -14439,19 +14439,19 @@ exports.emptyBlocksErrorMsg = function(d){return "Блокам \"повторя�
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Блок процедуры требует для работы другие блоки внутри себя."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "В определении твоей функции обязательно должны быть блоки. Нажми \"Редактировать\" и перетащи блоки внутрь зеленого блока."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "Нажми \"Редактировать\" чтобы убедиться, что ты не пропустил никакие блоки в определении функции."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "Не забудь прикрепить блок к каждому входящему параметру блока функции в своем рабочем пространстве."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "Ты добавил блок параметра но не использовал его в определении функции. Чтобы убедиться, что используешь параметр, нажми на \"Редактировать\" и помести блок параметра внутрь зеленого блока."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "Создай параметр для твоей функции нажав \"Редактировать\" и добавив необходимые параметры. Перетащи новые блоки параметров в определение твоей функции."};
 
 exports.errorUnusedFunction = function(d){return "Вы создали функцию, но не использовали её в работе! Нажмите на «Функции» на панели инструментов и убедитесь, что вы используете его в своей программе."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Попробуйте изменить значение \"???\"."};
+exports.errorQuestionMarksInNumberField = function(d){return "Попробуй заменить \"???\" на значение."};
 
 exports.extraTopBlocks = function(d){return "У тебя остались неприсоединённые блоки. Ты собирался присоединить их к блоку \"При запуске\"?"};
 
@@ -14475,7 +14475,7 @@ exports.levelIncompleteError = function(d){return "Ты используешь �
 
 exports.listVariable = function(d){return "список"};
 
-exports.makeYourOwnFlappy = function(d){return "Создай Свою Flappy Игру"};
+exports.makeYourOwnFlappy = function(d){return "Создайте свою Flappy игру"};
 
 exports.missingBlocksErrorMsg = function(d){return "Для решения этой головоломки попробуй один или несколько из следующих блоков:"};
 
@@ -14483,9 +14483,9 @@ exports.nextLevel = function(d){return "Поздравляю! Головолом
 
 exports.nextLevelTrophies = function(d){return "Поздравляю! Ты завершил головоломку "+v(d,"puzzleNumber")+" и выиграл "+p(d,"numTrophies",0,"ru",{"one":"кубок","other":n(d,"numTrophies")+" кубков"})+"."};
 
-exports.nextStage = function(d){return "Поздравляем! Вы закончили "+v(d,"stageName")+"."};
+exports.nextStage = function(d){return "Поздравляю! Ты завершил "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Поздравляем! Вы выполнили "+v(d,"stageName")+" и выиграли "+p(d,"numTrophies",0,"ru",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
+exports.nextStageTrophies = function(d){return "Поздравляю! Ты завершил этап "+v(d,"stageName")+" и выиграл "+p(d,"numTrophies",0,"ru",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Поздравляю! Ты завершил головоломку "+v(d,"puzzleNumber")+". (Однако, можно было обойтись всего  "+p(d,"numBlocks",0,"ru",{"one":"1 блоком","other":n(d,"numBlocks")+" блоками"})+".)"};
 
@@ -14557,7 +14557,7 @@ exports.rotateText = function(d){return "Поверните ваше устро�
 
 exports.orientationLock = function(d){return "Выключите блокировку ориентации в настройках устройства."};
 
-exports.wantToLearn = function(d){return "Хотите научиться писать код?"};
+exports.wantToLearn = function(d){return "Хочешь научиться программировать?"};
 
 exports.watchVideo = function(d){return "Посмотреть видео"};
 

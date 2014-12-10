@@ -8,7 +8,7 @@ oppsett: bredt
 
 **Fristen for å levere inn en veiledning for Kodetimen 2014 har gått ut. Du kan fortsatt sende inn en veiledning og vi vil prøve å vurdere det om tiden tillater.**
 
-Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
+Code.org har mange Kodetime-aktiviteter på webområdene Code.org, Kodetimen og CSEdWeek. Her er listen [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
 
 Vi ønsker å arrangere flere forskjellige engasjerende muligheter, men hovedmålet er å gi studenter og lærere som er nye til datavitenskap en best mulig opplevelese. Vennligst bruk dette dokumentet for å veilede deg i utviklingen av din aktivitet, hvis målgruppe er brukere som har ingen bakgrunn i koden, programmering eller datavitenskap.
 

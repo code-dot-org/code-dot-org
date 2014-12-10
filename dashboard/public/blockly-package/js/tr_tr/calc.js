@@ -11064,7 +11064,7 @@ exports.compute = function(d){return "hesapla"};
 
 exports.equivalentExpression = function(d){return "Aynı ifadeyi elde etmek için argümanlarınızı yeniden sıralayınız."};
 
-exports.extraTopBlocks = function(d){return "Bağlantı yapılmamış blokların var. Bunları \"hesapla\" bloğuna mı ekleyecektiniz?"};
+exports.extraTopBlocks = function(d){return "Bağlantı yapılmamış bloklarınız var. Bunları \"hesapla\" bloğuna mı ekleyecektiniz?"};
 
 exports.goal = function(d){return "Amaç:"};
 

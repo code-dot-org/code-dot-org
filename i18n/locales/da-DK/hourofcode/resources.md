@@ -8,26 +8,22 @@ title: Ressourcer layout: wide nav: resources_nav
   <h1 class="col-sm-6">
     Ressourcer
   </h1>
-  
-  <div class="col-sm-6 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Sign up your event</button></a>
-  </div>
 </div>
 
 <% if @country == 'ie' %>
 
-## Hosting an Hour of Code in Ireland? [See the how-to guide](<%= hoc_uri('/resources/how-to-ireland') %>)
+## Afholdelse af #HourOfCode i Irland? [ Se denne how-to guide](<%= hoc_uri('/resources/how-to-ireland') %>)
 
 <% else %>
 
-## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+## Afholdelse af #HourOfCode? [ Se denne how-to guide](<%= hoc_uri('/resources/how-to') %>)
 
 <% end %>
 
 <a id="handouts"></p> 
 
 <h2>
-  Use this handout to spread the word
+  Brug dette materiale for at sprede budskabet
 </h2>
 
 <p>
@@ -35,7 +31,7 @@ title: Ressourcer layout: wide nav: resources_nav
 </p>
 
 <h2>
-  Give this handout to teachers and schools
+  Give denne materiale til lærere og skoler
 </h2>
 
 <p>
@@ -46,7 +42,7 @@ title: Ressourcer layout: wide nav: resources_nav
   <a id="videos"></p> 
   
   <h2>
-    Show these videos to inspire students
+    Vis disse videoer for at inspirere elever
   </h2>
   
   <div style="float:left; padding:10px">
@@ -90,7 +86,7 @@ title: Ressourcer layout: wide nav: resources_nav
     <a id="posters"></p> 
     
     <h2>
-      Hang these posters in your school
+      Hæng disse plakater op på din skole
     </h2>
     
     <p>
@@ -102,7 +98,7 @@ title: Ressourcer layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Feature these banners on your website
+      Vis disse bannere på din hjemmeside
     </h2>
     
     <p>
@@ -114,7 +110,7 @@ title: Ressourcer layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Post these on social media
+      Del dette på sociale medier
     </h2>
     
     <p>
@@ -122,7 +118,7 @@ title: Ressourcer layout: wide nav: resources_nav
     </p>
     
     <p>
-      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/image/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     
     <p>
@@ -130,7 +126,7 @@ title: Ressourcer layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Send these emails to help promote the Hour of Code
+      Send disse e-mails for at fremme Hour of Code
     </h2>
     
     <p>
@@ -138,27 +134,27 @@ title: Ressourcer layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Ask your school, employer or friends to sign up:
+      Opfordre din skole, arbejdsgiver eller venner om at tilmelde sig:
     </h2>
     
     <p>
-      Computere findes overalt, men langt færre skoler underviser i programmering end for 10 år siden. De gode nyheder er, at vi er på vej til at ændre dette. If you heard about the Hour of Code last year, you might know it made history. På en uge, prøvede 15 millioner elever at programmere!
+      Computere findes overalt, men langt færre skoler underviser i programmering end for 10 år siden. De gode nyheder er, at vi er på vej til at ændre dette. Hvis du har hørt om #HourOfCode sidste år, ved du måske også at det skabte historie. På en uge, prøvede 15 millioner elever at programmere!
     </p>
     
     <p>
-      Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+      Programmering var på hjemmesiderne hos Google, MSN, Yahoo! og Disney. Præsident Obama, Shakira og Ashton Kutcher satte #HourOfCode igang med videoer. Over 100 partnere fandt sammen om at støtte denne bevægelse.
     </p>
     
     <p>
-      This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014.
+      I år skal det være endnu større. Har du lyst til at deltage i Hour of Code 2014? Opret selv et Hour of Code arrangement i Computer Science Education ugen fra den 8. til 14. december 2014.
     </p>
     
     <p>
-      Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
+      Få dit budskab ud. Vær vært for en begivenhed. Bed en lokal skole om at tilmelde sig. Eller prøve Hour of Code selv – alle kan drage fordel af at lære det grundlæggende.
     </p>
     
     <p>
-      Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com/<%= @country %>
+      Hjælp os med at nå 100 millioner elever ved udgangen af året! Komme i gang på http://hourofcode.com/<%= @country %>
     </p>
     
     <p>
@@ -166,7 +162,7 @@ title: Ressourcer layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Invite media to attend your event:
+      Inviter medierne til at deltage i dit arrangement:
     </h2>
     
     <p>
@@ -178,7 +174,7 @@ title: Ressourcer layout: wide nav: resources_nav
     </p>
     
     <p>
-      In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+      In one week last year, 15 million students tried computer science! Programmering var på hjemmesiderne hos Google, MSN, Yahoo! og Disney. Præsident Obama, Shakira og Ashton Kutcher satte #HourOfCode igang med videoer. Over 100 partnere fandt sammen om at støtte denne bevægelse.
     </p>
     
     <p>
@@ -283,8 +279,4 @@ title: Ressourcer layout: wide nav: resources_nav
     
     <p>
       Sincerely, [NAME], [TITLE]
-    </p>
-    
-    <p>
-      <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up your event</button></a>
     </p>

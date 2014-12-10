@@ -508,3 +508,7 @@ ko:
     completed_too_many_blocks: 완료되었지만, 너무 많은 블럭들을 사용함
     completed_perfect: 완료
     furthest_level_attempted: 시도한 가장 높은 레벨
+  studio:
+    courses_working_on: 진행중인 코스
+    completed_courses: 완료한 코스
+    all_courses: 모든 코스

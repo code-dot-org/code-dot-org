@@ -12450,7 +12450,7 @@ exports.playSoundPoint = function(d){return "spel poeng-lyd"};
 
 exports.playSoundSwoosh = function(d){return "spel svosj-lyd"};
 
-exports.playSoundWing = function(d){return "spel vinge-lyd"};
+exports.playSoundWing = function(d){return "spel flakse-lyd"};
 
 exports.playSoundJet = function(d){return "spel jet-lyd"};
 
@@ -12468,13 +12468,13 @@ exports.reinfFeedbackMsg = function(d){return "Du kan trykke på \"Prøv igjen\"
 
 exports.scoreText = function(d){return "Poengsum: "+v(d,"playerScore")};
 
-exports.setBackground = function(d){return "vis scene"};
+exports.setBackground = function(d){return "angi scene"};
 
-exports.setBackgroundRandom = function(d){return "vis scene Tilfeldig"};
+exports.setBackgroundRandom = function(d){return "Angi scene Tilfeldig"};
 
-exports.setBackgroundFlappy = function(d){return "vis scena By (dag)"};
+exports.setBackgroundFlappy = function(d){return "Angi scenen By (dag)"};
 
-exports.setBackgroundNight = function(d){return "vis scena By (natt)"};
+exports.setBackgroundNight = function(d){return "Angi scena By (natt)"};
 
 exports.setBackgroundSciFi = function(d){return "vis scena Sci-Fi"};
 
@@ -12516,7 +12516,7 @@ exports.setGravityTooltip = function(d){return "Set styrken på tyngdekrafta"};
 
 exports.setGround = function(d){return "vis bakken"};
 
-exports.setGroundRandom = function(d){return "vis bakken tilfeldig"};
+exports.setGroundRandom = function(d){return "set bakken tilfeldig"};
 
 exports.setGroundFlappy = function(d){return "set bakken Bakke"};
 
@@ -12648,7 +12648,7 @@ exports.whenCollideObstacleTooltip = function(d){return "Utfør handlingane neda
 
 exports.whenEnterObstacle = function(d){return "når passerer hindring"};
 
-exports.whenEnterObstacleTooltip = function(d){return "Utfør setningane nedanfor når Flappy passerar ei hindring."};
+exports.whenEnterObstacleTooltip = function(d){return "Utfør handlingane nedanfor når Flappy passerar ei hindring."};
 
 exports.whenRunButtonClick = function(d){return "når spillet starter"};
 

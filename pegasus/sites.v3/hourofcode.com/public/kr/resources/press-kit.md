@@ -1,12 +1,10 @@
 
 
-[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
-
 ## Hour of Code 이벤트에 언론의 관심을 이끄는 방법
 
 *For all press and media inquiries, contact <press@code.org>*
 
-### 핵심 사항들
+### 핵심 팁들
 
   * 이벤트를 개최하기 2주 전에 이메일로 미디어들을 보내드립니다. 처음에 연락이 닿지 않으면 이메일과 휴대폰으로 알림이 발송됩니다.
   * 학교 직원들이나 자원봉사자들에게 행사 사진을 찍어 온라인으로 공유하거나 언론에 보낼 수 있도록 도움을 요청하세요.
@@ -55,5 +53,3 @@ Code.org® is a 501c3 public non-profit dedicated to expanding participation in 
 
   
 Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).
-
-<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

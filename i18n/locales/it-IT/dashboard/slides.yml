@@ -299,7 +299,7 @@ it:
         text: Ciao, mi chiamo Lyndsey. Faccio la modella, recito e ... scrivo le mie app. Usiamo la programmazione per unirci a Anna ed Elsa mentre esplorano la magia e la bellezza del ghiaccio.
       2:
         image: notes/frozen1_2.jpg
-        text: Potrai creare fiocchi di neve e trame di ghiaccio mentre pattini e realizzare un paradiso invernale da condividere con i tuoi amici.
+        text: Potrai creare fiocchi di neve e trame di ghiaccio mentre pattini e realizzare un meraviglioso paesaggio invernale da condividere con i tuoi amici.
       3:
         image: notes/frozen1_3.jpg
         text: 'Nella prossima ora, imparerai le basi della programmazione. I programmi tradizionali sono di solito del testo detto "codice".  Tu invece scriverai programmi con Blockly, che usa blocchi colorati. I blocchi vengono uniti per scrivere programmi. Anche gli studenti universitari imparano le basi della programmazione in questo modo. Anche se usi i blocchi, in realtà stai sempre scrivendo del codice.'
@@ -382,46 +382,46 @@ it:
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png
-        text: "We're going to create games using Play Lab. Good games have a story, and every story has actors. We'll learn how to make our actors like witches, alinens, and animals speak, move, and interact with each other. By the end of this tutorial, you can build a game from scratch and share it with your friends."
+        text: Creiamo giochi usando il Laboratorio. I giochi migliori hanno una storia ed ogni storia ha i suoi personaggi. Impariamo a far sì che i nostri personaggi, quali streghe, alieni e animali, parlino, si muovano ed interagiscano tra loro. Alla fine di questa lezione, saprai realizzare un gioco a partire da zero e condividerlo con i tuoi amici.
       2:
         image: notes/playlab_intro_2.png
-        text: Your screen is split into 3 main parts. On the left is the game space where your program will run. The instructions for each level are written below.
+        text: "Lo schermo è suddiviso in tre parti principali. Sulla sinistra c'è lo spazio del gioco dove viene eseguito il programma. Le spiegazioni per ogni esercizio sono scritte qui sotto."
       3:
         image: notes/playlab_intro_3.png
-        text: "The middle area is the toolbox, and each of these blocks is a piece of code. The white space on the right is called the workspace and this is where we'll build our program."
+        text: 'La zona centrale è la "cassetta degli attrezzi". Ognuno di questi blocchi è un pezzo di codice. Lo spazio bianco sulla destra si chiama "area di lavoro" e qui costruisci il tuo programma.'
       4:
         image: notes/playlab_intro_4.png
         text: |-
-          To start off, you'll need to link your blocks to the orange "when run" block. You can link multiple blocks together by dragging them out until you see the yellow line, and then they'll snap together.
+          Per cominciare, è necessario collegare i blocchi al blocco arancione 'quando si clicca su "Esegui" '. È possibile collegare più blocchi insieme trascinandoli fino a che non vedrai formarsi la linea gialla di contorno e non si attaccheranno tra loro.
       5:
         image: notes/playlab_intro_5.png
         text: |-
-          In this first puzzle, our actor is a penguin and we'll be making it say "Hello!" by dragging the say block out, linking it to the when run block, and typing in "Hello." We can also make the penguin move by using the move right and move left blocks. Once you have your blocks in place, hit the run button to see what you've programmed.
+          In questo primo esercizio il personaggio è un pinguino. Fagli dire "Ciao!" trascinando il blocco "dice" dalla cassetta degli attrezzi, collegandolo al blocco 'quando si clicca su "Esegui" ' e scrivendo al suo interno "Ciao!". Puoi anche fare muovere il pinguino utilizzando i blocchi "sposta a destra" e "sposta a sinistra". Una volta che i blocchi sono stati posizionati, clicca il pulsante "Esegui" per vedere quello che hai programmato.
       6:
         image: notes/playlab_intro_6.png
-        text: "Get started and by the end, you'll be able to create your own game with all kinds of players that can interact, turn happy or sad, score points, or throw fireballs, or even vanish each other. It's all up to you and the game you want to make."
+        text: "Inizia a lavorarci su e alla fine sarai in grado di creare il tuo gioco con tanti tipi di giocatori che possono interagire, andare in giro felici o tristi, guadagnare punti, lanciare palle di fuoco o perfino farsi scomparire l'un l'altro. Dipende tutto da te e dal gioco che vuoi creare."
     playlab_events:
       1:
         image: notes/playlab_events_1.png
-        text: "Now, we're going to learn about something that all game programmers use everyday. They're called events. An event tells your program to listen for when something happens. When that thing happens, it performs an action."
+        text: Adesso impari un meccanismo che tutti i programmatori di giochi usano ogni giorno. Parliamo degli eventi. Un evento dice al programma quando succede qualcosa. Quando quella cosa accade il programma svolge una azione.
       2:
         image: notes/playlab_events_2.png
-        text: Some examples of events are listening for a mouse click, an arrow button, or a tap on the screen.
+        text: "Alcuni esempi di eventi sono quelli rappresentati da un clic del mouse, dall'uso di un tasto freccia o dalla pressione di un dito sullo sullo schermo."
       3:
         image: notes/playlab_events_3.png
-        text: |-
-          Here, we're going to make the space bot greet the earthlings when a player clicks on him. We'll use the "when clicked" block and attach the "say" block to it. When the player clicks on the space bot, everything attached to this "when clicked" event block will be performed. What does your alien say?
+        text: 'In questo esercizio il robot spaziale saluta i terrestri quando un giocatore lo clicca. Usa il blocco "quando si clicca" (della categoria degli eventi) attaccandoci sotto un blocco "dice". Quando il giocatore clicca sul robot spaziale, tutto ciò che è attaccato al blocco "quando si clicca" viene eseguito. Cosa dice il tuo alieno?'
       4:
         image: notes/playlab_events_4.png
-        text: 'There are also "when arrow" blocks. If you link the "move" blocks to these, you can start to move your actors up, down, left, or right. Step by step, your game is getting more interactive.'
+        text: 'Ci sono anche i blocchi  "quando la freccia". Se gli colleghi i blocchi "vai avanti", puoi iniziare a muovere gli attori in su, in giù, a sinistra o a destra. Passo dopo passo, il tuo  gioco diventa sempre più interattivo.'
     playlab_repeat_forever:
       1:
         image: notes/playlab_repeat_forever_1.png
-        text: 'This is the "repeat forever" block. Anything inside this block will happen forever in the game.'
+        text: |-
+          Questo è il blocco "ripeti per sempre". Qualsiasi istruzione all'interno di questo blocco verrà ripetuta in continuazione durante il gioco.
       2:
         image: notes/playlab_repeat_forever_2.png
         text: |-
-          If we want an actor to do something repeatedly, without the player having to do anything, we'll put those blocks inside the "repeat forever" block.
+          Se vogliamo che un personaggio faccia qualcosa in continuazione, senza che il giocatore faccia nulla,  metteremo i relativi blocchi all'interno del blocco "ripeti per sempre".
       3:
         image: notes/playlab_repeat_forever_3.png
-        text: In this next puzzle, our goal is to help the wizard patrol the boundaries of the kingdom, left and right continuously. Learning how the repeat commands works, will save you a ton of time later when you build your own game.
+        text: 'In questo esercizio il nostro obiettivo è aiutare il mago a sorvegliare i confini del regno, muovendosi in continuazione a destra e a sinistra. Imparare come funziona il comando "ripeti" ti risparmierà moltissimo tempo quando costruirai il tuo gioco.'

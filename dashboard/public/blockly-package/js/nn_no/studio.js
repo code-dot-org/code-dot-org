@@ -21315,7 +21315,7 @@ exports.defaultTwitterText = function(d){return "Sjekk ut det eg har laga"};
 var MessageFormat = require("messageformat");MessageFormat.locale.en=function(n){return n===1?"one":"other"}
 exports.actor = function(d){return "skodespelar"};
 
-exports.alienInvasion = function(d){return "Romvesen-invasjon!"};
+exports.alienInvasion = function(d){return "Romveseninvasjon!"};
 
 exports.backgroundBlack = function(d){return "svart"};
 

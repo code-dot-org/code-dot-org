@@ -508,3 +508,7 @@ lv:
     completed_too_many_blocks: Pabeigts, pārāk daudz bloki
     completed_perfect: pabeigts, ideāli
     furthest_level_attempted: tālākais līmenis mēģināts
+  studio:
+    courses_working_on: Kursi, pie kuriem tu strādā
+    completed_courses: Pabeigtie kursi
+    all_courses: Visi kursi

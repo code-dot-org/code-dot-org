@@ -478,26 +478,27 @@ es:
         C3_crowdsourcing: Colaboración Abierta
         C3_functional_suncatchers: Tragaluces Funcionales
         C3_songwriting_with_parameters: Composición Musical con Parámetros
-        C4_intro: Introduction
+        C4_intro: Introducción
         C4_bee_conditional: Condiciones de la Abeja
-        C4_variables_artist: 'Variables - Artist'
-        C4_variables_playlab: 'Variables - Play Lab'
+        C4_variables_artist: 'Variables - Artista'
+        C4_variables_playlab: 'Variables - Laboratorio de juego'
         C4_for_loops: Bucles Para
-        C4_math_artist: Programming the Artist with Math
-        C4_function_edit: Editing Functions
-        C4_function_create: Creating Functions
-        C4_unplugged_algorithms: Algorithms with Tangrams
-        C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Variables in Envelopes
+        C4_math_artist: Programando al Artista con matemáticas
+        C4_function_edit: Editando funciones
+        C4_function_create: Creando funciones
+        C4_conditionals: Condicionales
+        C4_unplugged_algorithms: Algoritmos con Tangramas
+        C4_unplugged_madlibs: Bibliotecas locas
+        C4_unplugged_variables: Variables en sobres
         C4_unplugged_forloops: Bucles Para
         C4_unplugged_parameters: Composicion musical con Parámetros
-        C4_unplugged_binary: Binary
+        C4_unplugged_binary: Binario
         frozen_intro: Introducción a La Hora del Código
         frozen_loops: Introducción a los bucles
         frozen_functions: Introducción a las Funciones
-        playlab_intro: Introduction to Play Lab
-        playlab_events: Play Lab Events
-        playlab_repeat_forever: Play Lab Repeat Forever
+        playlab_intro: Introducción al laboratorio de juego
+        playlab_events: Eventos del laboratorio de juego
+        playlab_repeat_forever: Repetir para siempre en el laboratorio de juego
     callout:
       text:
         drag_blocks: 'Arrastra un bloque de "mover" y pégalo debajo del otro bloque'
@@ -516,7 +517,7 @@ es:
         replace_questions_degree: 'Usa el menú desplegable para reemplazar "???" con la cantidad correcta de grados a girar'
         repeat_blocks: 'Usa el bloque de "Repetir" y ponlo alrededor de los bloques del espacio de trabajo'
         repeat_blocks_1: (1) Usa este bloque y ponlo alrededor de los bloques grises en el espacio de trabajo.
-        repeat_blocks_2: '(2) Mueve el bloque "Repetir" aquí, y coloca los bloqques grises dentro.'
+        repeat_blocks_2: '(2) Mueve el bloque "Repetir" aquí, y coloca los bloques grises dentro'
         snowflake_dropdown: Usa este menú desplegable para crear diferentes copos de nieve!
         degrees_per_side: Divide 360 entre el número de lados para obtener el tamaño de cada ángulo en grados.
         set_sides: 'Usa este bloque para dar a "lados" el valor necesario para completar el rompecabezas.'
@@ -552,16 +553,15 @@ es:
         function_editor_draw_square: 'Esta es tu función definida. Estos bloques corren cada vez que usas el bloque "dibujar un cuadrado".'
         change_here: Haz tu cambio aquí.
         write_draw_square_function: Arrasta bloques de la caja de herramientas aquí que dibujen un cuadrado.
-        write_draw_triangle_function: Drag blocks from the toolbox into here that draw a triangle
-        edit_add_parameter: Click edit to add a parameter in your function
-        add_and_drag_parameter: Write in the name of your parameter here, click add, and then drag it into your function definition
-        fill_in_actor: Fill in the ??? with numbers that correspond to each actor (1, 2, and 3)
-        repeat: Put blocks inside the loop to repeat commands
-        if_bee_nectar: 'Use the "if" block to decide if the bee should get nectar'
-        if_else_bee: |-
-          Use the "if/else" block so that the Bee gets nectar from a flower, and makes honey if it's not a flower
-        repeat_full_circle: Enter in the number of times the zombie has to move to make a full circle
-        place_length_variable: Drag the length variable here to replace the question marks
-        arrows_move_actor: Use the arrows to move the actor
-        right_arrow_fireball: Use the right arrow to shoot fireballs
-        name_function: Write the name of your function here
+        write_draw_triangle_function: Arrastra bloques desde la caja de herramientas aquí para que dibujen un triángulo
+        edit_add_parameter: Haz clic en editar para agregar un parámetro en la función
+        add_and_drag_parameter: Escribe en nombre de su parámetro aquí, haga clic en agregar y luego arrastrarlo en la definición de la función
+        fill_in_actor: Rellene el ??? con números que corresponden a cada actor (1, 2 y 3)
+        repeat: Ponga bloques dentro del bucle para repetir comandos
+        if_bee_nectar: 'Utilice el bloque "si" para decidir si la abeja debe recibir néctar'
+        if_else_bee: 'Use el bloque "si/sino" para que la abeja obtenga néctar de una flor, y haga miel si no es una flor'
+        repeat_full_circle: Introduce el número de veces que el zombie tiene que moverse para hacer un círculo completo
+        place_length_variable: Arrastre aquí la variable longitud para reemplazar los signos de interrogación
+        arrows_move_actor: Usa las flechas para mover el actor
+        right_arrow_fireball: Use la flecha derecha para disparar bolas de fuego
+        name_function: Escriba el nombre de su función aquí

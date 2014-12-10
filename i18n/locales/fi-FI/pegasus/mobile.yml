@@ -74,9 +74,9 @@ fi-FI:
   participant_educator: Opettaja
   participant_engineer: Ohjelmistosuunnittelija
   participant_other: Ei mikään edellä mainituista
-  print_all: Print all
-  print_ice_art: Print your ice art
-  create_art_with_zombie: or make advanced art with zombie
+  print_all: Tulosta kaikki
+  print_ice_art: Tulosta jäätaiteesi
+  create_art_with_zombie: tai tee edistyneempää taidetta zombien kanssa
   i_am_a: Olen
   never_spam: Me emme koskaan lähetä sinulle roskapostia
   enter_country: Syötä maa, jos olet Yhdysvaltojen ulkopuolella
@@ -114,7 +114,7 @@ fi-FI:
   studiobar_teacher_title: Tehty opettajille
   studiobar_teacher_body: Ota Code Studio käyttöön luokassasi
   studiobar_frozen_title: Koodaustunti
-  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_frozen_body: Luo talven ihmemaa Annan ja Elsan kanssa
   studiobar_donate_title: Lahjoita
   studiobar_donate_body: Jokaista lahjoittamaasi dollaria kohden yksi lapsi saa oppia
   contact_form_topic_student: Olen oppilas
@@ -200,6 +200,12 @@ fi-FI:
   dashboard_action_done: Valmis
   dashboard_action_required: vaaditaan
   dashboard_navigation_home_page: Opettajan päänäyttö
+  dashboard_navigation_section_student_progress: Oppilaiden tunnukset ja edistyminen
+  dashboard_navigation_section_teacher_progress: Your Course Progress
+  dashboard_navigation_section_lesson_plans: Tuntisuunnitelmat ja resurssit
+  dashboard_navigation_section_community: Help and Community
+  dashboard_navigation_section_pd: Professional Development
+  dashboard_navigation_section_speakers: 'Computer Science <br/> Guest Speakers'
   dashboard_navigation_all_sections: Oppilaiden tunnukset ja edistyminen
   dashboard_navigation_view_progress: Tarkastele etenemistä
   dashboard_navigation_add_students: Lisää oppilaita
@@ -325,6 +331,10 @@ fi-FI:
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Johdanto JavaScript kieleen
   khanes_name: Johdanto JavaScript kieleen
+  khanpt_name: Johdanto JavaScript kieleen
+  khanhe_name: Johdanto JavaScript kieleen
+  khanfr_name: Johdanto JavaScript kieleen
+  khanpl_name: Johdanto JavaScript kieleen
   tynker_name: Tee oma peli
   scratch_name: Ala luovaksi koodaten
   lightbot_name: Lightbot
@@ -353,12 +363,17 @@ fi-FI:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Kivi, sakset, paperi
-  frozen_gradelevel: Ikä 8+
+  hourofcode_name: Placeholder for new code.org/hoc
+  playlab_name: Pelilabra
   codeorg_gradelevel: 4-104-vuotiaille
   codeintl_gradelevel: 4-104-vuotiaille
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Yläaste +
   khanes_gradelevel: Yläaste +
+  khanpt_gradelevel: Yläaste +
+  khanhe_gradelevel: Yläaste +
+  khanfr_gradelevel: Yläaste +
+  khanpl_gradelevel: Yläaste +
   tynker_gradelevel: 5-13-vuotiaille
   scratch_gradelevel: Ikä 8+
   lightbot_gradelevel: Kaikenikäiset
@@ -387,21 +402,27 @@ fi-FI:
   thinkersmith2_gradelevel: Ikä 8+
   kodableunplugged_gradelevel: 8-13-vuotiaille
   projguts_gradelevel: 10-13-vuotiaille
-  frozen_platformtext: Modernit selaimet ja tablettitietokoneet
+  hourofcode_gradelevel: 4-104-vuotiaille
+  frozen_gradelevel: Ikä 8+
+  playlab_gradelevel: 4-104-vuotiaille
   codeorg_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
   codeintl_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
   thinkersmithspanish_platformtext: Tietokoneeton tekeminen
   khan_platformtext: Nykyaikaiset verkkoselaimet
   khanes_platformtext: Nykyaikaiset verkkoselaimet
-  tynker_platformtext: Modernit selaimet. (Jatkokurssi vaatii $$)
-  scratch_platformtext: KAIKKI selaimet
+  khanpt_platformtext: Nykyaikaiset verkkoselaimet
+  khanhe_platformtext: Nykyaikaiset verkkoselaimet
+  khanfr_platformtext: Nykyaikaiset verkkoselaimet
+  khanpl_platformtext: Nykyaikaiset verkkoselaimet
+  tynker_platformtext: Nykyaikaiset verkkoselaimet
+  scratch_platformtext: Desktop-only web browsers (not tablets)
   lightbot_platformtext: Kaikki selaimet sekä iOS, Android tai pelikonsoli
   thinkersmith_platformtext: Tietokoneeton tekeminen
   condcards_platformtext: Tietokoneeton tekeminen
   lightbotintl_platformtext: iOS, Android (tai selain)
   codehs_platformtext: Modernit selaimet. (Jatkokurssi vaatii $$)
   codecademy_platformtext: Nykyaikaiset vekkoselaimet. iOS ja Android sovellukset
-  codecombat_platformtext: Nykyaikaiset verkkoselaimet
+  codecombat_platformtext: Modern web browsers (Follow-on course requires $$)
   codemonkey_platformtext: Nykyaikaiset verkkoselaimet
   codeavengers_platformtext: Nykyaikaiset verkkoselaimet
   processing_platformtext: Nykyaikaiset verkkoselaimet
@@ -421,12 +442,18 @@ fi-FI:
   thinkersmith2_platformtext: Tietokoneeton tekeminen
   kodableunplugged_platformtext: Tietokoneeton tekeminen
   projguts_platformtext: Tietokoneeton tekeminen
-  frozen_shortdescription: Liitymme Annan ja Elsan matkaan, kun he tutkivat jään taikaa ja kauneutta ohjelmoinnin avulla.
+  hourofcode_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
+  frozen_platformtext: Modernit selaimet ja tablettitietokoneet
+  playlab_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
   codeorg_shortdescription: Opi koodaamaan Mark Zuckerbergin ja Angry Birdsin kanssa!
   codeintl_shortdescription: Opi koodaamaan Mark Zuckerbergin ja Angry Birdsin kanssa!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Opi piirtämään JavaScriptillä
   khanes_shortdescription: Opi piirtämään JavaScriptillä
+  khanpt_shortdescription: Opi piirtämään JavaScriptillä
+  khanhe_shortdescription: Opi piirtämään JavaScriptillä
+  khanfr_shortdescription: Opi piirtämään JavaScriptillä
+  khanpl_shortdescription: Opi piirtämään JavaScriptillä
   tynker_shortdescription: Opi koodaamaan ratkoen hauskoja tehtäviä ja rakenna samalla oma mobiilipelisi.
   scratch_shortdescription: Luo interaktiivisia pelejä, tarinoita ja animaatioita.
   lightbot_shortdescription: Ohjelmoi Lightbot ratkomaan tehtäviä käyttäen aliohjelmia ja silmukoita!
@@ -447,7 +474,7 @@ fi-FI:
   tynkerapp_shortdescription: 'Opi ohjelmoimaan ratkaisemalla hauskoja ohjelmointitehtäviä. '
   robomindnl_shortdescription: Kirjoita koodia virtuaalirobotille
   flappy_shortdescription: 'Tee oma pelisi - Flappy Bird, Shark tai Submarine'
-  bitsbox_shortdescription: Ohjelmoi useita sovelluksia pelattavaksi ja jaettavaksi, oikeaa JavaScriptiä käyttäen.
+  bitsbox_shortdescription: Code a series of apps to play and share, using real JavaScript.
   makegameswithus_shortdescription: Tee iPhone-peli! Opi opettamaan hirviöllesi uusia liikkeitä koodia kirjoittaen!
   touchdevelop_shortdescription: 'Ratkaise tehtäviä, luo pelejä, ja opi ohjelmointia puhelimellasi. '
   appinventor_shortdescription: Tee oma sovelluksesi! (vain Android)
@@ -455,12 +482,18 @@ fi-FI:
   thinkersmith2_shortdescription: Opi kuinka tietokoneet käyttävät 1:iä ja 0:ia tiedon esittämiseen
   kodableunplugged_shortdescription: Hauska tietokoneettoman tekemisen harjoitus
   projguts_shortdescription: Kokeile mallinnusta ja simulointia kivi-sakset-paperi -pelin avulla
-  frozen_longdescription: Koodataan Annan ja Elsan kanssa kun he tutkivat jään kauneutta ja taikaa. Tässä pelissä luot lumihiutaleita ja kuvioita luistellen ja luot taianomaisen lumimaan, jonka voit myös jakaa ystäviesi kanssa!
+  hourofcode_shortdescription: Placeholder for new code.org/hoc
+  frozen_shortdescription: Liitymme Annan ja Elsan matkaan, kun he tutkivat jään taikaa ja kauneutta ohjelmoinnin avulla.
+  playlab_shortdescription: Suunnittele ja luo oma tarina tai peli Pelilabrassa!
   codeorg_longdescription: Opettele tietojenkäsittelytieteen perusteet rakentamalla tietokoneohjelmia palikoista. Tällä pelillisellä itseopiskelukurssilla johdantovideoilla (englanniksi, tekstit suomeksi) esiintyy Bill Gates, Mark Zuckerberg, Angry Birds ja Plants vs. Zombies. Kurssilla käydään läpi toistosilmukat, ehtolauseet ja yksinkertaisia algoritmeja. Tarjolla 34 kielellä.
   codeintl_longdescription: Opettele tietojenkäsittelytieteen perusteet rakentamalla tietokoneohjelmia palikoista. Tällä pelillisellä itseopiskelukurssilla johdantovideoilla (englanniksi, tekstit suomeksi) esiintyy Bill Gates, Mark Zuckerberg, Angry Birds ja Plants vs. Zombies. Kurssilla käydään läpi toistosilmukat, ehtolauseet ja yksinkertaisia algoritmeja. Tarjolla 34 kielellä.
-  thinkersmithspanish_longdescription: 'Käyttäen ennaltamääriteltyä "Robottisanastoa" oppilaat keksivät kuinka ohjata toisiaan tiettyjen tehtävien suorittamiseen ilman että keskustelevat niistä ensin. Oppitunti opettaa lapsille symboleiden ja toiminnan yhteyden, sekä virheenkorjaamisen korvaamattoman arvokkaan taidon.'
+  thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
   khan_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
   khanes_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
+  khanpt_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
+  khanhe_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
+  khanfr_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
+  khanpl_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
   tynker_longdescription: Luo omia pelejä ja jaa ne ystäviesi kanssa! Ratkaise hauskoja pulmia ja opi samalla ohjelmoinnin perusteet. Hauskoilla animaatiohahmoilla teet pelistä omanlaisesi. Useita tasoja ja paljon taustoja. Tee pelistä realistisempi fysiikan avulla. Näe koodi joko visuaalisina lohkoina tai JavaScriptinä. Vie pelisi iPadille tai Android-tabletille. Yli tusina hauskoja tehtäviä, joista voit valita!
   scratch_longdescription: 'Scratchin kanssa voit luoda oman interaktiivisen pelin, tarinan tai animaation &mdash; ja voit jakaa ne ystäviesi kanssa. Aloita animoimalla oma nimesi, luomalla syntymäpäiväkortti tai luomalla pong-peli.'
   lightbot_longdescription: Opasta valobotti sytyttämään kaikki siniset ruudut! Valobotti on ohjelmointia pelimuotona käyttävä pulmapeli, jonka avulla pelaajat oppivat ymmärtämään yksinkertaista koodia. Opi tekemään komentojonoja, kirjoittamaan aliohjelmia ja käyttämään silmukoita edetäksesi pelissä. Sopii kaiken ikäisille.
@@ -482,14 +515,17 @@ fi-FI:
   tynkerapp_longdescription: Opi ohjelmoimaan ratkaisemalla hauskoja koodaustehtäviä. Rakenna helposti pelejä ja tarinoita käyttäen teemaan sopivia grafiikoja, 10+ pelirakennussettiä ja muokattavissa olevia hahmoja. Ei vaadi verkkoyhteyttä. Pääset luomuksiisi myös verkon välityksellä.
   robomindnl_longdescription: 'Opiskelijat oppivat ohjelmoinnin perusteet ohjaamalla omaa virtuaalista robottiaan. Verkkokurssi sisältää kaiken tarvittavan - lyhyet esittelyt, elokuvat, tietovisat ja automaattiset  opastukset/vinkit, jotka auttavat ohjelmointiharjoitusten kanssa. '
   flappy_longdescription: 'Käytä "vedä ja pudota" ohjelmointia tehdäksesi oman Flappy Bird-pelin ja muokkaa se erilaisen näköiseksi (Flappy Bird, Flappy Santa, tai mitä tahansa). Lisää peli puhelimeesi yhdellä napsautuksella.'
-  bitsbox_longdescription: Muokkaa omaa virtuaalista tablettiasi ja ohjelmoi erilaisia sovelluksia joita voit pelata ja jakaa. Yksinkertaiset läpikäyntiohjeet mahdollistavat jopa nuorten lasten ohjelmoinnin oikealla Javascriptillä, ja mitä enemmän perehdyt, sitä pidemmälle pääset.
-  makegameswithus_longdescription: Opi ohjelmoimaan tekemällä iPhone-peli käyttäen upouutta ja aloittelijalle sopivaa Swift-ohjelmointikieltä! Luo Pokemon-teemainen toimintapeli ja kirjoita koodia opettaaksesi hirviöllesi uusia liikkeitä. Opit kuinka käyttää muuttujia, menetelmiä ja olioita auttaaksesi hirviötäsi voittamaan!
+  bitsbox_longdescription: "Customize your very own virtual tablet, then code a series of apps to play and share. Simple walkthroughs make it possible for even young kids to program real JavaScript, and the more advanced you are the further you'll go."
+  makegameswithus_longdescription: 'Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!'
   touchdevelop_longdescription: 'Kosketusystävällinen editori opastaa sinua pikselitaiteen luomisessa, karhuarvoituksen ratkaisemisessa ja tekemään oman pelin hyppivästä linnusta. '
   appinventor_longdescription: Viihdyttävät ja nopeat video-oppitunnit kuljettavat sinut läpi kolmen yksinkertaisen sovelluksen rakentamisen Android-puhelimellesi tai tabletillesi. Suunniteltuna sekä aloittelijoille että asiantuntijoille, tämä kooditunti valmistelee sinut omien ohjelmien tekemiseen ennen kuin huomaatkaan. Kuvittele jakavasi sovelluksiasi ystävillesi! Nämä tehtävät soveltuvat sekä yksilöille ja opettajille, jotka ohjaavat kursseja.
   blockly_longdescription: 'Onko sinulle PC:tä joissa on hidas (tai olematon) verkkoyhteys? Lataa Blocky-oppitunnit, jotka edeltivät Code.org:n oppitunteja - voit ladata yhden 3MB ZIP tiedoston mille tahansa tietokoneelle tai käyttää sitä muistitikulta'
   thinkersmith2_longdescription: 'Oppilaat oppivat esittämään ja tallentamaan merkkejä binäärisinä, funktioina, jotka ovat päällä tai  pois. Lopuksi luokka pääsee muuntamaan omat nimikirjaimensa ja viemään ne kotiinsa.'
   kodableunplugged_longdescription: 'Suunniteltuna käytettäväksi paperilla, fuzzFamily Frenzy on johdanto ohjelmointilogiikkaan lapsille iältään 5 tai enemmän. Opettajan pitäisi selittää peli, jonka jälkeen oppilaat ohjelmoivat luokkakaverinsa suorittamaan yksinkertaisen esteradan. '
   projguts_longdescription: Tämä tietokoneettoman tekemisen toiminta auttaa opiskelijoita oppimaan kuinka mallinnus ja simulointi toimii, laittaessaan oppilasryhmän pelaamaan eri versioita kivi-sakset-paperi -pelistä, ja näkemään erilaisten mallinnuskokeilujen tulokset.
+  hourofcode_longdescription: Placeholder for new code.org/hoc
+  frozen_longdescription: Koodataan Annan ja Elsan kanssa kun he tutkivat jään kauneutta ja taikaa. Tässä pelissä luot lumihiutaleita ja kuvioita luistellen ja luot taianomaisen lumimaan, jonka voit myös jakaa ystäviesi kanssa!
+  playlab_longdescription: Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!
   codeorg_beyond_name: Johdanto tietojenkäsittelytieteeseen (luokat 1.-8.)
   khan_beyond_name: Opi tietokoneohjelmointia
   tynker_beyond_name: Opi ohjelmointia kotona

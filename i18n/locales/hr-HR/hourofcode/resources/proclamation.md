@@ -1,15 +1,15 @@
 * * *
 
-title: Sample Resolution Supportive of Computer Science Education Week and Hour of Code layout: wide nav: resources_nav
+Naslov: Uzorak Op-ed podrške tjednu računarstva i Satu Kodiranja izgled: široki nav: resources_nav
 
 * * *
 
-### Below is a sample resolution supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+### Ispod je primjer podrške tjednu računarskog obrazovanja i njegovim ciljevima za državne i lokalne zakonodavce.
 
   
-[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+[Kuća, Senat, država, županija ili grad Odluka ili PROGLAS ###] – Budući da tjedan računarstva naglašava ključnu ulogu koju informatika ima u preobrazovanju našega društva i kako znanost omogućuje inovacije i stvara ekonomske prilike;
 
-[HOUSE OR SENATE RESOLUTION ###]
+[ REZOLUCIJA KUĆE ILI SENATA ###]
 
 [DATE]
 

@@ -4,25 +4,25 @@ rozvržení: široké
 
 * * *
 
-# Prizes - FAQs
+# Ceny - Časté dotazy
 
-## Does your whole school have to enter to win the $10,000 in hardware?
+## Musí do soutěže vstoupit celá škola aby vyhrála Hardware v hodnotě $10 000?
 
 Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](<%= hoc_uri('/prizes') %>).
 
-## Does your whole school have to enter to win a the tech chat?
+## Musí do soutěže vstoupit celá tvá škola aby vyhrála Tech chat?
 
 Any classroom (public or private school) is eligible to win this prize. Your whole school need not apply.
 
-## Can non-public schools win the video chat prize?
+## Mohou neveřejné školy vyhrát cenu video chat?
 
 Yes! Private and independent schools are eligible along with public schools to win the video chat prizes.
 
-## Can non-US schools win the video chat prize?
+## Mohou ne-americké školy vyhrát cenu video chat?
 
 No, unfortunately, because of logistics we are unable to offer the video chat prize to schools outside of the U.S. and Canada. All international organizers **are** eligible to receive Dropbox space or Skype credit.
 
-## Why is the $10,000 hardware prize only available to public schools?
+## Proč je cena Hardware v ceně $10 000 dostupná pouze veřejným školám?
 
 We would love to help teachers in public and private schools alike, but at this time, it comes down to logistics. We have partnered with [DonorsChoose.org](http://donorschoose.org) to administer classroom funding prizes, which only works with public, US K-12 schools. According to DonorsChoose.org, the organization is better able to access consistent and accurate data that's available for public schools.
 
@@ -38,7 +38,7 @@ To qualify, your entire school must register for the Hour of Code as well as com
 
 To qualify, you must register your classroom for the Hour of Code by November 14, 2014. Classrooms will win a video chat with a celebrity. Code.org will select and notify winners via email by December 1, 2014.
 
-## When will I be notified if my school or classroom wins a prize?
+## Budu upozorněn, když má škola nebo třída vyhraje cenu?
 
 To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. Code.org will select and notify winners via email by December 1, 2014.
 

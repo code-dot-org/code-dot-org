@@ -277,8 +277,8 @@
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png
       4-5 Algorithms Multi 1:
         Multiple Choice: Tipus test
-        Which one of these items is hardest to describe an algorithm for?: Which one
-          of these items is hardest to describe an algorithm for?
+        Which one of these items is hardest to describe an algorithm for?: Quin d'aquests
+          elements és el més difícil per descriure un algoritme?
         <h4>Brushing your teeth</h4>: <h4>Brushing your teeth</h4>
         <h4>Baking cookies</h4>: <h4>Baking cookies</h4>
         <h4>Shopping from a grocery list</h4>: <h4>Shopping from a grocery list</h4>
@@ -292,7 +292,7 @@
         <h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>: <h4>Seattle
           is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>
         <h4>Seattle _____ a _____ _____.</h4>: <h4>Seattle _____ a _____ _____.</h4>
-        <h4>_____ is a _____ city.</h4>: <h4>_____ is a _____ city.</h4>
+        <h4>_____ is a _____ city.</h4>: <h4>_____és una _____ciutat.</h4>
         <h4>_____ is _____ a _____.</h4>: <h4>_____ is _____ a _____.</h4>
         <h4>Eugene is a _____ city.</h4>: <h4>Eugene is a _____ city.</h4>
       4-5 Crowdsourcing Multi 1:
@@ -376,9 +376,9 @@
         Which answer best describes the unicorn's movement?: Which answer best describes
           the unicorn's movement?
         The unicorn moves across the screen: The unicorn moves across the screen
-        The unicorn's y value changes: The unicorn's y value changes
-        The unicorn moves to the left: The unicorn moves to the left
-        The unicorn's x value changes: The unicorn's x value changes
+        The unicorn's y value changes: El valor y de l'unicorn canvia
+        The unicorn moves to the left: L'unicorn es mou a l'esquerra
+        The unicorn's x value changes: El valor x de l'unicorn canvia
       K-1 Artist 1 Multi 1:
         Multiple Choice: Tipus test
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png,
@@ -469,9 +469,8 @@
       K-1 Digital Footprint Multi 1:
         Multiple Choice: Tipus test
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png
-        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Which
-          animal has the digital footprint that leaves him or her the <strong>most
-          unsafe</strong>?
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Quin
+          animal té una empremta digital que el deixa més<strong>desprotegit</strong>?
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png
@@ -611,13 +610,13 @@
       valid contracts multi:
         Valid Contracts: Valid Contracts
         Pick the best answer to the question.: Trieu la millor resposta a la pregunta.
-        Which of these is a valid contract for the function circle?: Which of these
-          is a valid contract for the function circle?
+        Which of these is a valid contract for the function circle?: Quin dels següents
+          és un contracte vàlid per a la funció cercle?
         'circle: size style color -> image': 'cercle: mida color estil-> imatge'
-        'circle: number string string -> image': 'circle: number string string ->
-          image'
-        'circle: number string string -> shape': 'circle: number string string ->
-          shape'
+        'circle: number string string -> image': 'cercle: nombre cadena cadena ->
+          imatge'
+        'circle: number string string -> shape': 'cercle: nombre cadena cadena ->
+          forma'
         'circle: 5 solid blue -> circle ': 'cercle: 5 blau sòlid-> cercle '
       image code from circle:
         Code from Circle: Code from Circle

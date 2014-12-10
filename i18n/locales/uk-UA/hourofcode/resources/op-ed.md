@@ -1,6 +1,6 @@
 * * *
 
-title: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code layout: wide nav: resources_nav
+title: Зразок резолюції підтримки тижня інформатики та Години коду layout: wide nav: resources_nav
 
 * * *
 

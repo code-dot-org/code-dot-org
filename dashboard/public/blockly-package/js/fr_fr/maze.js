@@ -16521,7 +16521,7 @@ exports.end = function(d){return "fin"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Le bloc « Répéter » ou « si » doit contenir d'autres blocs pour fonctionner. Assurez-vous que le bloc interne s'insère correctement à l'intérieur du bloc conteneur."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "Le bloc fonctionnel doit avoir d'autres blocs à l'intérieur pour fonctionner."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Le bloc « Fonction » doit contenir d'autres blocs pour fonctionner."};
 
 exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
 
@@ -16535,7 +16535,7 @@ exports.errorRequiredParamsMissing = function(d){return "Create a parameter for 
 
 exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "Essayez de remplacer \"???\" avec un nombre."};
 
 exports.extraTopBlocks = function(d){return "Vous avez des blocs non attachés. Est-ce que vous vouliez les attacher au bloc \"lors du lancement\" ?"};
 
@@ -16623,7 +16623,7 @@ exports.backToPreviousLevel = function(d){return "Retour au niveau précédent"}
 
 exports.saveToGallery = function(d){return "Sauvegarder dans la galerie"};
 
-exports.savedToGallery = function(d){return "Enregistrées dans la Galerie !"};
+exports.savedToGallery = function(d){return "Enregistré dans la galerie !"};
 
 exports.shareFailure = function(d){return "Désolé, nous ne pouvons pas partager ce programme."};
 
@@ -16728,9 +16728,9 @@ exports.ifFlowerTooltip = function(d){return "S'il y a une fleur/un nid d'abeill
 
 exports.ifelseFlowerTooltip = function(d){return "S'il y a une fleur ou une ruche dans la direction indiquée, alors le premier bloc d'actions est exécuté. Sinon, on exécute le deuxième bloc d'actions."};
 
-exports.insufficientHoney = function(d){return "Vous utilisez correctement tous les blocs, mais vous devez produire la bonne quantité de miel."};
+exports.insufficientHoney = function(d){return "Tu utilises correctement tous les blocs, mais tu dois produire la bonne quantité de miel."};
 
-exports.insufficientNectar = function(d){return "Vous utilisez correctement tous les blocs, mais vous devez collecter la bonne quantité de nectar."};
+exports.insufficientNectar = function(d){return "Tu utilises correctement tous les blocs, mais tu dois collecter la bonne quantité de nectar."};
 
 exports.make = function(d){return "faire"};
 
@@ -16792,7 +16792,7 @@ exports.removeStack = function(d){return "retirer une pile de "+v(d,"shovelfuls"
 
 exports.removeSquare = function(d){return "retirer le carré"};
 
-exports.repeatCarefullyError = function(d){return "Pour résoudre cette énigme, songez à la suite d'instructions contenant deux déplacements et une rotation, que vous pourriez insérer dans le bloc « répéter ». Cela ne pose pas de problème de se tourner une fois de trop à la fin."};
+exports.repeatCarefullyError = function(d){return "Pour résoudre cette énigme, pense à la suite d'instructions contenant deux déplacements et une rotation, que tu pourrais insérer dans le bloc « répéter ». Ce n'est pas grave de se tourner une fois de trop à la fin."};
 
 exports.repeatUntil = function(d){return "répéter jusqu’à"};
 

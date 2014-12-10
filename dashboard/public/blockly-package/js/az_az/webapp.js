@@ -11918,7 +11918,7 @@ exports.pause = function(d){return "Pause"};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
 
-exports.repeatForever = function(d){return "repeat forever"};
+exports.repeatForever = function(d){return "təkrar et sonsuz"};
 
 exports.repeatDo = function(d){return "et"};
 

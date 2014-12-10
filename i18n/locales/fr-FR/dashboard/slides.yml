@@ -388,8 +388,7 @@ fr:
           To start off, you'll need to link your blocks to the orange "when run" block. You can link multiple blocks together by dragging them out until you see the yellow line, and then they'll snap together.
       5:
         image: notes/playlab_intro_5.png
-        text: |-
-          In this first puzzle, our actor is a penguin and we'll be making it say "Hello!" by dragging the say block out, linking it to the when run block, and typing in "Hello." We can also make the penguin move by using the move right and move left blocks. Once you have your blocks in place, hit the run button to see what you've programmed.
+        text: "Dans ce premier puzzle, notre acteur est un manchot et nous allons lui faire dire « Bonjour » en faisant glisser le bloc « dire », en l'accrochant au bloc « lors du lancement » , et en tapant « Bonjour ». Nous pouvons aussi faire bouger le manchot en utilisant les blocs « aller à droite » et « aller à gauche ». Une fois tes blocs en place, appuie sur « Démarrer » pour voir ce que tu as programmé."
       6:
         image: notes/playlab_intro_6.png
         text: "Get started and by the end, you'll be able to create your own game with all kinds of players that can interact, turn happy or sad, score points, or throw fireballs, or even vanish each other. It's all up to you and the game you want to make."

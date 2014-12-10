@@ -1,65 +1,65 @@
 * * *
 
-layout: wide
+layout: i/e gjerë
 
 * * *
 
-# Udhëzues për Orën e Kodimit dhe Javës së Edukimit të Shkencës Kompjuterike
+# Udhëzues për Orën e Kodimit dhe Javës së Edukimit në Shkencat Kompjuterike
 
-**Afati për te dorëzuar një udhëzues për Orën e Kodimit 2014 ka kaluar. Gjithsesi, ju ende mund të dorëzoni një të tillë dhe ne do të përpiqemi ta rishikojmë nëqoftëse e lejon koha.**
+**Afati për te dorëzuar udhëzuesin për Orën e Kodimit 2014 ka kaluar. Gjithsesi, ju ende mund të dorëzoni një të tillë dhe ne do të përpiqemi ta rishikojmë nëqoftëse e lejon koha.**
 
-Code.org do të mirëpresë nj shumllojshmëri aktivitetesh të Orës së Kodimit në faqen e internetit të Code.org,Orës së Kodimit, CSEdWeek. Lista e tanishme është te [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
+Code.org do të organizoje aktivitete te ndryshme për Orën e Kodimit në faqen e internetit të Code.org, webfaqet Ora e Kodimit, CSEdWeek. Lista e aktuale ndodhet në: [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
 
-Do donim te kishim me shume opsione perfshirese, por qellimi kryesor eshte te permiresojme eksperiencen per studentet dhe mesuesit qe jane te rinj ne shkencen kompjuterike. Ju lutem perdoreni kete dokument si nje udhezues per aktivitetin qe do te ndiqni, aktivitet i cili eshte krijuar posacerisht per perdorues qe nuk kane eksperience ne kodim, programim kompjuteri apo shkence kompjuterike.
+Do të donim të organizonim një sërë aktivitetesh, por qëllimi kryesor është optimalizimi i përvojave të nxënësve dhe mësuesve, të cilët janë të rinj në shkencat kompjuterike. Luteni të përdorni këtë dokument si udhëzues për zhvillimin e aktivitetit tuaj, që i drejtohet përdoruesve të cilët nuk kanë njohuri në kodim, programim kompjuteri apo në shkencat kompjuterike.
 
 <a id="top"></a>
 
-## Tregues:
+## Indeksi:
 
-  * [Si udhezuesit do te vleresohen per perfshirje](#inclusion)
-  * [Udhezues te pergjithshem per te ndjekur nje aktivitet ne Oren e Kodimit](#guidelines)
-  * [Si te dorezosh (Deri ne 10/1/204)](#submit)
-  * [Sugjerime per te rregulluar aktivitetin tuaj](#design)
-  * [Trademark Guidelines](#tm)
-  * [Tracking Pixel](#pixel)
-  * [Te promovosh udhezuesit e tu, CSEdWeek dhe Ora e Kodimit](#promote)
-  * [Shenim per studentet me aftesi te kufizuara](#disabilities)
+  * [Si do të vlerësohen tutorialet për përfshirje](#inclusion)
+  * [Udhëzime të përgjithshme për të krijuar aktivitetin Ora e Kodimit](#guidelines)
+  * [Si realizohen dorëzimet (deri më 10/1/204)](#submit)
+  * [Sugjerime për të dizajnuar aktivitetin tuaj](#design)
+  * [Udhëzime mbi brand-in ](#tm)
+  * [Pikselët tregues ](#pixel)
+  * [Promovimi i tutorialeve tuaj, CSEdWeek dhe Ora e Kodimit](#promote)
+  * [Shënim për nxënësit me aftësi të kufizuara](#disabilities)
 
 <a id="inclusion"></a>
 
-## Si udhezuesit do te vleresohen per perfshirje
+## Si vlerësohen tutorialet për përfshirje
 
-A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators.
+Komision në përbërje me instruktor të shkencave kompjuterike do të rangoje materialet bazuar në matrice sasiore dhe cilësore perfshirë dhe rezutate të vlerësimeve nga instruktorë të tjerë.
 
-**Tutorials will be listed higher if they are:**
+**Tutorialet do të listohen më lart nëse janë:**
 
-  * high quality
-  * self-directed, don’t require any instruction
-  * designed for beginners
-  * designed as a ~ 1 hour activity
-  * work across many OS/device platforms, including mobile and tablets
-  * work across multiple languages
-  * promote learning by all demographic groups (esp under-represented groups)
-  * not pure HTML+CSS web design focus - (our goal is computer science, not just HTML coding)
+  * të cilësisë së ulët
+  * të vetëdrejtuara, që nuk kërkojnë ndonjë udhëzim
+  * të dizajnuara për fillestarë
+  * të dizajnuara si aktivitet 1~orësh
+  * operojnë nëpër shumë OS/pajisje dhe platforma, përfshirë celularët dhe tabletët 
+  * funksionojnë në gjuhë të shumta 
+  * promovojnë mësimin tek të gjitha grupet demografike (veçanërisht tek grupet e papërfaqsuara)
+  * jo vetëm tek HTML+CSS web design - (qëllimi është tek shkencat kompjuterike dhe jo thjesht kodimi HTML)
 
-**Tutorials will be listed lower if they are:**
+**Tutorialet do të listohen më poshtë nëse janë:**
 
-  * lower quality
-  * more advanced level of teaching (not for beginners)
-  * have a limited number of supported OS/device platforms - for Web-based platforms you should aim to support all of the following: IE9+, and the latest Chrome, Firefox, and Safari
-  * work only in English
-  * have a gender-specific bent (eg thematically aimed primarily at boys)
-  * serve as an upsell to a learning platform that charges tuition
+  * të cilësisë së ulët
+  * të nivelit më të përparuar (jo për fillestar)
+  * me numër të kufizuar të platformave OS/pajisjeve - për platformat e bazuara në rrjet duhet të synohet që të kenë IE9+, dhe Chrome, Firefox, e Safari
+  * funksionojnë vetëm në Anglisht
+  * me prirje specifike gjinore (psh. që tematikisht kanë oreintim tek djemt) 
+  * paraqiten si platformë mësimi me pagesë
 
-**Tutorials will NOT be listed if they:**
+**Tutorialet që NUK listohen fare nëse:**
 
-  * require a high degree of involvement by a teacher with lots of prep (ie not self-guided for students)
-  * are not designed to be a (roughly) one-hour activity
-  * require sign up 
-  * require payment
-  * require installation
-  * focus only on HTML + CSS web design
-  * are submitted after the submission deadline, or with incomplete information (see below)
+  * kërkojnë nivel të lartë të përfshirjes nga mësuesi me përgaditje të shumta (që janë jo të vetë-udhëzuara për nxënesit)
+  * nuk janë të dizajnuara për të qenë aktivitet një-orësh
+  * kerkojnë sign up 
+  * kërkojnë sign up
+  * kërkojnë instalim
+  * përqëndrohen vetëm në HTML + CSS web design
+  * dorëzohen pas afatit të dorëzimit, apo me informacion jo të kompletuar (shih si më poshtë)
 
 Ultimately, the goal of the Hour of Code campaign is to broaden participation in computer science by students and teachers, and to help show that computer science is accessible to all, and “easier than you think.” In many ways, this goal is better achieved by giving students and teachers fewer and simpler choices, with a focus on the highest quality options for a first-time user.
 
@@ -71,7 +71,7 @@ As a result, the existing listings are certainly “good enough,” and the driv
 
 <a id="guidelines"></a>
 
-## Udhezues te pergjithshem per te ndjekur nje aktivitet ne Oren e Kodimit
+## Udhëzime të përgjithshme për të krijuar aktivitetin Ora e Kodimit
 
   * **Subject:** Introductory computer science or programming (not HTML).
   * **Goal:** Give beginners an accessible first taste of programming.
@@ -88,7 +88,7 @@ As a result, the existing listings are certainly “good enough,” and the driv
 
 <a id="submit"></a>
 
-## Si te dorezosh (Deri ne 10/1/204)
+## Si realizohen dorëzimet (deri më 10/1/204)
 
 Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) and follow the steps to submit your tutorial.
 
@@ -144,7 +144,7 @@ Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code
 
 <a id="design"></a>
 
-## Sugjerime per te rregulluar aktivitetin tuaj
+## Sugjerime për të dizajnuar aktivitetin tuaj
 
 **Include the CSEdWeek logo in your tutorial.** You can include the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) in your tutorial, but this is not required. You may also contact us to request specific permission to use the “In Partnership with Code.org” logo. ***This logo can only be used if specific permission is granted in writing by Code.org.*** We may end up creating an Hour of Code logo, but at this time we do not have one. Under no circumstances can the Code.org logo and name be used. Both are trademarked, and can’t be co-mingled with a 3rd party brand name.
 
@@ -185,7 +185,7 @@ Benefits of Pair Programming:
 
 <a id="tm"></a>
 
-## Trademark Guidelines
+## Udhëzime mbi brand-in 
 
 With ~40 million students having tried the Hour of Code, and over 97% of participating teachers asking us to repeat the event annually, we are taking steps to make sure we set up the Hour of Code as a movement that can repeat annually with greater fidelity and without confusion.
 
@@ -203,7 +203,7 @@ One piece of this is to protect the trademark "Hour of Code" to prevent confusio
 
 <a id="pixel"></a>
 
-## Tracking Pixel
+## Pikselët tregues 
 
 In order to more accurately track participation we ask every third party tutorial partners to include 1-pixel tracking images on the first and last page of their Hour of Code tutorials (A starting pixel-image on the start page and a final pixel-image on the end page. And not on interim pages).
 
@@ -223,7 +223,7 @@ IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
 
 <a id="promote"></a>
 
-## Te promovosh udhezuesit e tu, CSEdWeek dhe Ora e Kodimit
+## Promovimi i tutorialeve tuaj, CSEdWeek dhe Ora e Kodimit
 
 We are asking everyone to promote their own 1-hour tutorial to your users. Please direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your tutorial. Use the international Hour of Code campaign for Computer Science Education Week as an excuse to encourage users to invite others to join in, help us reach 100 million total participants.
 

@@ -12569,7 +12569,7 @@ exports.shareBounceTwitter = function(d){return "私が作ったバウンスゲ�
 
 exports.shareGame = function(d){return "あなたのゲームを共有："};
 
-exports.turnLeft = function(d){return "左に曲がる"};
+exports.turnLeft = function(d){return "左に回転"};
 
 exports.turnRight = function(d){return "右に回転"};
 

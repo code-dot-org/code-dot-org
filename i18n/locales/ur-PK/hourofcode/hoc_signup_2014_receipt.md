@@ -1,47 +1,45 @@
 * * *
 
-from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)" subject: "Thanks for signing up to host an Hour of Code!" litmus_tracking_id: "5g5lyi1a"
+کی طرف سے: "ہادی پارٹووا (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)" موضوع: "ایک گھنٹہ کوڈ کے ضابطہ کی میزبانی کے لئے شکریہ!" "litmus_tracking_id: "5g5lyi1a
 
 * * *
 
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
 
-# Thanks for signing up to host an Hour of Code!
+<% if @country == 'ro' %>
 
-**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](http://<%= hostname %>/prizes)
+رجسٹر کرنے کا شکریہ. اگر آپ کو مدد کی ضرورت ہے یا کسی بھی سوال کا میں مشکل تو گھنٹے کے کوڈ - رومنی ٹیم سے رابطہ کریں: hoc@adfaber.org.
 
-## 1. Spread the word
+<% end %>
 
-Tell your friends about the #HourOfCode.
+# ایک گھنٹے کے کوڈ کی میزبانی کے لئے شکریہ!
+
+**ہر** کوڈکی گھڑی کے آرگنائزر 10 GB ڈروپبون جگہ یا اسکائپ کریڈٹ 10 ڈالر آپ کا شکریہ کے طور پر <a href="http://<%= hostname %>/ انعامات " وصول کریں گے.> تفصیلات</a>
+
+## 1. دوسروں تک بھجیں
+
+اپنے دوستوں کو #HourOfCode کے بارے میں بتائیں ۔
 
 <% if @country == 'us' %>
 
-## 2. Ask your whole school to offer an Hour of Code
+## 2. آپنے پورے اسکول کو ایک گھنٹے کے کوڈ کی پیشکش دیں۔
 
-[Send this email](http://<%= hostname %>/resources#email) or give [this handout](http://<%= hostname %>/files/schools-handout.pdf) to your principal.
-
-<% end %>
-
-## 3. Ask your employer to get involved
-
-[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf).
-
-## 4. Promote Hour of Code within your community
-
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
-
-## 5. Ask a local elected official to support the Hour of Code
-
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
-
-<% if @country == 'ro' %>
-
-Multumim ca ne-ai anuntat despre evenimentul tau! Anunta-ne daca doresti informatii suplimentare sau daca ai intrebari. Hai sa facem istorie impreuna!
-
-Echipa Hour of Code Romania hoc@adfaber.org
+[ یہ ای میل ارسال کریں](http://<%= hostname %>/ وسائل #email) یا یہ [this ہینڈ آؤٹ](http://<%= hostname %>/files/schools-handout.pdf) اپنے پرنسپل کو دے ۔
 
 <% end %>
+
+## 3. اپنے ایمپلائر کو ملوث/شامل ہونے کے لئے پوچھیں/کہے۔
+
+[ یہ ای میل بھیجیں](http://<%= hostname %>/ وسائل #email) آپ کی منیجر، یا CEO ۔ یا [ ان کو یہ ہینڈ آؤٹ دیں](http://<%= hostname %>/resources/hoc-one-pager.pdf).
+
+## 4. آپنی کمیونٹی میں کوڈ کی گھڑی کو فروغ دیں۔
+
+ایک مقامی گروپ کو بھرتی کرنا — لڑکا/لڑکی اسکاؤٹس کلب، چرچ، یونیورسٹی، ویٹرنز گروپ یا مزدور یونین ۔ یا ایک گھنٹہ کا کوڈ "بلاک پارٹی" اپنے محلے میں کروئیں۔
+
+## 5. کوڈ کی گھڑی کی حمایت کرنے کے لئے ایک مقامی منتخب اہلکار سے کہیں/پوچھیں۔
+
+[ یہ ای میل بھیجیں](http://<%= hostname %>/ وسائل #سیاستدانوں) آپنے میئر، سٹی کونسل یا اسکول بورڈ کو۔ یا [ یہ ھینڈ آوٹ انھیں دیں](http://<%= hostname %>/resources/hoc-one-pager.pdf) اور انہیں اپنے سکول کا دورہ کرنے کی دعوت دیں ۔
 
 * * *
 
-Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](%= unsubscribe_link %).
+Code.org ایک 501c3 غیر منافع بخش ہے ۔ ہمارا پتہ 1301 کے 5th یوینیو، سویٹ 1225، سیٹل، WA، 98101 ہے ۔ یہ ای میلز پسند نہیں آی؟ [رکنیت ختم](%= unsubscribe_link %).

@@ -753,26 +753,27 @@
         C3_crowdsourcing: Pūļa ieguve
         C3_functional_suncatchers: funkcionālie saulķērāji
         C3_songwriting_with_parameters: Dziesmu rakstīšana ar parametriem
-        C4_intro: Introduction
+        C4_intro: Ievads
         C4_bee_conditional: Bites nosacījumi
-        C4_variables_artist: Variables - Artist
-        C4_variables_playlab: Variables - Play Lab
+        C4_variables_artist: Mainīgie - mākslinieks
+        C4_variables_playlab: Mainīgie - spēļu laboratorija
         C4_for_loops: '"par" cikli'
-        C4_math_artist: Programming the Artist with Math
-        C4_function_edit: Editing Functions
-        C4_function_create: Creating Functions
-        C4_unplugged_algorithms: Algorithms with Tangrams
-        C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Variables in Envelopes
+        C4_math_artist: Programmē mākslinieku ar matemātiku
+        C4_function_edit: Funkciju labošana
+        C4_function_create: Funkciju veidošana
+        C4_conditionals: Sazarojumi
+        C4_unplugged_algorithms: Algoritmi ar figūrām
+        C4_unplugged_madlibs: Trakie teksti
+        C4_unplugged_variables: Mainīgie aploksnēs
         C4_unplugged_forloops: '"par" cikli'
         C4_unplugged_parameters: Dziesmu rakstīšana ar Parametriem
-        C4_unplugged_binary: Binary
+        C4_unplugged_binary: Binārie
         frozen_intro: Programmēšanas stundas ievads
         frozen_loops: Iepazīšanās ar cikliem
         frozen_functions: Ievads funkcijās
-        playlab_intro: Introduction to Play Lab
-        playlab_events: Play Lab Events
-        playlab_repeat_forever: Play Lab Repeat Forever
+        playlab_intro: Ievads spēļu laboratorijā
+        playlab_events: Spēļu laboratorijas notikumi
+        playlab_repeat_forever: Spēļu laboratorija, mūžīgie cikli
     callout:
       text:
         drag_blocks: Pārvieto "pārvietot" bloku un pielipini zem cita bloka
@@ -849,21 +850,19 @@
           katru reizi, kad izmanto bloku "zīmēt kvadrātu"
         change_here: Veic izmaiņas te
         write_draw_square_function: Velc blokus no rīkujoslas šeit, lai uzzīmētu kvadrātu
-        write_draw_triangle_function: Drag blocks from the toolbox into here that
-          draw a triangle
-        edit_add_parameter: Click edit to add a parameter in your function
-        add_and_drag_parameter: Write in the name of your parameter here, click add,
-          and then drag it into your function definition
-        fill_in_actor: Fill in the ??? with numbers that correspond to each actor
-          (1, 2, and 3)
-        repeat: Put blocks inside the loop to repeat commands
-        if_bee_nectar: Use the "if" block to decide if the bee should get nectar
-        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower,
-          and makes honey if it's not a flower
-        repeat_full_circle: Enter in the number of times the zombie has to move to
-          make a full circle
-        place_length_variable: Drag the length variable here to replace the question
-          marks
-        arrows_move_actor: Use the arrows to move the actor
-        right_arrow_fireball: Use the right arrow to shoot fireballs
-        name_function: Write the name of your function here
+        write_draw_triangle_function: Velc blokus no rīkujoslas šeit, lai uzzīmētu
+          trīsstūri
+        edit_add_parameter: Klikšķini labot, lai pievienotu savai funkcijai parametru
+        add_and_drag_parameter: Ieraksti parametra vārdu te, klikšķini pievienot un
+          tad velc to savā definētajā funkcijā.
+        fill_in_actor: Aizpildi ??? ar skatli, kas atbilst katram tēlam (1, 2 un 3)
+        repeat: Velc blokus iekšā ciklā, lai atkārtotu komandas
+        if_bee_nectar: Izmanto "Ja" bloku, lai izlemtu, vai bitei jāiegūst nektārs
+        if_else_bee: Izmanto "Ja/tad" bloku, lai bites iegūtu nektāru no zieda vai,
+          ja tas nav zieds, ražotu medu
+        repeat_full_circle: Ievadi skaitli, cik reižu zombijam jāpakustas, lai izveidotu
+          pilnu apli
+        place_length_variable: Velc garuma mainīgo te, lai aizstātu jautājuma zīmes
+        arrows_move_actor: Izmato bultas, lai pārvietotu tēlu
+        right_arrow_fireball: Izmanto labo bultu, lai sašautu ugunsbumbas
+        name_function: Raksti te savas funkcijas nosaukumu

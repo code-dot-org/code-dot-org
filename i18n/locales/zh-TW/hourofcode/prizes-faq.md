@@ -1,10 +1,10 @@
 * * *
 
-佈局： 寬
+佈局：寬
 
 * * *
 
-# Prizes - FAQs
+# 獎品-常見問題與解答
 
 ## Does your whole school have to enter to win the $10,000 in hardware?
 

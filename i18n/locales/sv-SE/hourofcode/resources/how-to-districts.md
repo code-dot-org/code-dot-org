@@ -1,6 +1,6 @@
 * * *
 
-title: Hour of Code How-To for Districts layout: wide nav: resources_nav
+Rekrytera lokala skolor. Dela detta mail och lärare hur att vägleda, eller innehålla en kort blurb på nyhetsbrev / distriktskommunikation. Ge en provlogistikplan för skolorna. Dela provlogistikplan med skolor för att ge dem idéer om hur man organiserar hela skolan deltar. Det är lika enkelt som att göra det i varje matematik klass, homeroom period, eller rotera hela veckan genom datasalen. De kan skicka in sin egen plan för en chans att vinna $ 10,000 i hårdvara på http://hourofcode.com/prizes. Dela på sociala medier. Skicka till Facebook eller Twitter. Eller dela en av dessa inspirerande bilder och citat från världens ledare, eller statistik). Främja på distriktets hemsida. Lägg en av dessa banners till distriktets hemsida för att låta besökarna veta om din medverkan. Länka den till http://hourofcode.com. Värd ett distrikt Hour of Code händelse. Se vårt evenemang hur man guide för en prov körning av show, media uppsökande kit och annat stöd. Fler priser för VARJE arrangör. Varje deltagande pedagog får tack gåvor. 100 klassrum vinner tech chattar med särskilda gästföreläsare. Bland deltagarna finns Bill Gates, Sheryl Sandberg, Ashton Kutcher och mer). Och i varje stat, kommer ett deltagande skola vinna $ 10.000 i teknik för sin skola!
 
 * * *
 

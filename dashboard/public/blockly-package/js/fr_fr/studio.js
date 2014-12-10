@@ -21172,7 +21172,7 @@ exports.end = function(d){return "fin"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Le bloc « Répéter » ou « si » doit contenir d'autres blocs pour fonctionner. Assurez-vous que le bloc interne s'insère correctement à l'intérieur du bloc conteneur."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "Le bloc fonctionnel doit avoir d'autres blocs à l'intérieur pour fonctionner."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Le bloc « Fonction » doit contenir d'autres blocs pour fonctionner."};
 
 exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
 
@@ -21186,7 +21186,7 @@ exports.errorRequiredParamsMissing = function(d){return "Create a parameter for 
 
 exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "Essayez de remplacer \"???\" avec un nombre."};
 
 exports.extraTopBlocks = function(d){return "Vous avez des blocs non attachés. Est-ce que vous vouliez les attacher au bloc \"lors du lancement\" ?"};
 
@@ -21274,7 +21274,7 @@ exports.backToPreviousLevel = function(d){return "Retour au niveau précédent"}
 
 exports.saveToGallery = function(d){return "Sauvegarder dans la galerie"};
 
-exports.savedToGallery = function(d){return "Enregistrées dans la Galerie !"};
+exports.savedToGallery = function(d){return "Enregistré dans la galerie !"};
 
 exports.shareFailure = function(d){return "Désolé, nous ne pouvons pas partager ce programme."};
 
@@ -21325,23 +21325,23 @@ exports.backgroundCloudy = function(d){return "nuageux"};
 
 exports.backgroundHardcourt = function(d){return "hardcourt"};
 
-exports.backgroundNight = function(d){return "night"};
+exports.backgroundNight = function(d){return "nuit"};
 
-exports.backgroundUnderwater = function(d){return "underwater"};
+exports.backgroundUnderwater = function(d){return "sous l'eau"};
 
-exports.backgroundCity = function(d){return "city"};
+exports.backgroundCity = function(d){return "ville"};
 
-exports.backgroundDesert = function(d){return "desert"};
+exports.backgroundDesert = function(d){return "désert"};
 
-exports.backgroundRainbow = function(d){return "rainbow"};
+exports.backgroundRainbow = function(d){return "arc en ciel"};
 
 exports.backgroundSoccer = function(d){return "soccer"};
 
-exports.backgroundSpace = function(d){return "space"};
+exports.backgroundSpace = function(d){return "espace"};
 
 exports.backgroundTennis = function(d){return "tennis"};
 
-exports.backgroundWinter = function(d){return "winter"};
+exports.backgroundWinter = function(d){return "hiver"};
 
 exports.catActions = function(d){return "Actions"};
 
@@ -21373,7 +21373,7 @@ exports.emotion = function(d){return "humeur"};
 
 exports.finalLevel = function(d){return "Félicitations ! Vous avez résolu l'énigme finale."};
 
-exports.for = function(d){return "for"};
+exports.for = function(d){return "pour"};
 
 exports.hello = function(d){return "salut"};
 
@@ -21673,7 +21673,7 @@ exports.setSpriteSoccerBoy = function(d){return "une image de joueur de football
 
 exports.setSpriteSquirrel = function(d){return "une image d'écureuil"};
 
-exports.setSpriteTennisGirl = function(d){return "une image de joueuse de tennis"};
+exports.setSpriteTennisGirl = function(d){return "en une image de Mademoiselle Tennis"};
 
 exports.setSpriteTennisBoy = function(d){return "une image de joueur de tennis"};
 

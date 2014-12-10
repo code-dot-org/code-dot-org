@@ -598,3 +598,7 @@
     completed_too_many_blocks: elkészült, túl sok a blokk
     completed_perfect: elkészült, tökéletes
     furthest_level_attempted: a legmagasabb szint megpróbálva
+  studio:
+    courses_working_on: Tanfolyamok amelyeken dolgozol
+    completed_courses: Teljesített tanfolyamok
+    all_courses: Minden tanfolyam

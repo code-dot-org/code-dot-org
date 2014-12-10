@@ -627,13 +627,13 @@
           форм. Сможете сделать шаблон, повторяя 5 кругов размером 5 и 5 кругов размером
           10?
       frozen snowflake branch:
-        instructions: Попробуй блок "Создать луч снежинки", чтобы создать три луча,
+        instructions: Попробуй блок "Создать снежинку-ветвь", чтобы создать три луча,
           из которых почти получается снежинка.
       frozen snowflake full:
         instructions: Теперь повторите 8 раз, чтобы сделать красивую снежинку!
       frozen freeplay:
-        instructions: Теперь ты - настоящий художником! Создай зимнюю Страну чудес
-          и поделись с друзьями.
+        instructions: Теперь ты - настоящий художник! Создай зимнюю Страну чудес и
+          поделись с друзьями.
       scrat 16:
         instructions: Жёлудь! Жёлудь! Жёлудь! Используй блок "если", чтобы мне добраться
           до него с наименьшим количеством блоков.
@@ -774,6 +774,7 @@
         C4_math_artist: Programming the Artist with Math
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
+        C4_conditionals: Условные команды
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variables in Envelopes

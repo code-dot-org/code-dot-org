@@ -4,11 +4,9 @@ title: Press Kit layout: wide nav: resources_nav
 
 * * *
 
-[<button style="float: right; margin-top: 50px">Přihlaste svoji událost</button>](/#join)
-
 ## Jak přilákat média na Vaší Hodinu Kódu
 
-*Pro všechny tiskové a mediální dotazy se obraťte na <press@code.org>*
+*For all press and media inquiries, contact <press@code.org>*
 
 ### Důležité tipy
 
@@ -59,5 +57,3 @@ Code.org® is a 501c3 public non-profit dedicated to expanding participation in 
 
   
 Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).
-
-<a style="display: block" href="/#join"><button style="float: right;">Přihlaste svoji událost</button></a>

@@ -252,7 +252,7 @@
           inuti "Upprepa" block.
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: Nu låt oss få hjälpa Scrat ekorren att få ekollon!
+        text: Låt oss hjälpa ekorren Scrat att få tag på ekollonet!
     function:
       1:
         image: notes/stage13_1.jpg
@@ -461,10 +461,10 @@
           byggstenar.
       3:
         image: notes/frozen3_3.jpg
-        text: När du har lärt en dator hur att göra en åtgärd en gång med denna sekvens
-          av kommandon, kan du hitta på ditt eget namn för åtgärden så det är lätt
-          att upprepa det senare. När du definierar ditt eget kommando  och ger det
-          ett namn, kallas det en funktion.
+        text: När du har lärt en dator hur den kan göra en åtgärd en gång med en viss
+          följd av kommandon, kan du hitta på ditt eget namn för åtgärden så att det
+          är lätt att upprepa den senare. När du definierar ditt eget kommando och
+          ger det ett namn, kallas det en funktion.
       4:
         image: notes/frozen3_4.jpg
         text: Hej, är jag Jess. När du programmerar med block använder du funktioner

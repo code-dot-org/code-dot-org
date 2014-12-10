@@ -12404,7 +12404,7 @@ exports.elseCode = function(d){return "kung hindi"};
 
 exports.endGame = function(d){return "tapusin ang laro"};
 
-exports.endGameTooltip = function(d){return "Nagtatapos ng laro."};
+exports.endGameTooltip = function(d){return "Tinatapos ang laro."};
 
 exports.finalLevel = function(d){return "Maligayang pagbati! Nalutas mo na ang pinakahuling puzzle."};
 
@@ -12468,29 +12468,29 @@ exports.reinfFeedbackMsg = function(d){return "Maaarin mo pindutin ang \"Subukan
 
 exports.scoreText = function(d){return "Puntos: "+v(d,"playerScore")};
 
-exports.setBackground = function(d){return "set scene"};
+exports.setBackground = function(d){return "i-set ang scene"};
 
-exports.setBackgroundRandom = function(d){return "ilagay ang scene sa Random"};
+exports.setBackgroundRandom = function(d){return "i-set ang scene sa Random"};
 
-exports.setBackgroundFlappy = function(d){return "ilagay ang scene sa Siyudad (umaga)"};
+exports.setBackgroundFlappy = function(d){return "i-set ang scene sa Siyudad (umaga)"};
 
-exports.setBackgroundNight = function(d){return "ilagay ang scene sa Siyudad (gabi)"};
+exports.setBackgroundNight = function(d){return "I-set ang scene sa Siyudad (gabi)"};
 
-exports.setBackgroundSciFi = function(d){return "ilagay ang scene sa Sci-Fi"};
+exports.setBackgroundSciFi = function(d){return "i-set ang scene sa Sci-Fi"};
 
-exports.setBackgroundUnderwater = function(d){return "ilagay ang scene sa Ilalim ng dagat"};
+exports.setBackgroundUnderwater = function(d){return "I-set ang scene sa Ilalim ng dagat"};
 
-exports.setBackgroundCave = function(d){return "ilagay ang scene sa Kuweba"};
+exports.setBackgroundCave = function(d){return "i-set ang scene sa Kuweba"};
 
-exports.setBackgroundSanta = function(d){return "ilagay ang scene sa Santa"};
+exports.setBackgroundSanta = function(d){return "i-set ang scene sa Santa"};
 
 exports.setBackgroundTooltip = function(d){return "Nilalagay ang larawan sa background"};
 
-exports.setGapRandom = function(d){return "maglagay ng random na gap"};
+exports.setGapRandom = function(d){return "mag-set ng random na gap"};
 
-exports.setGapVerySmall = function(d){return "maglagay ng napakaliit na gap"};
+exports.setGapVerySmall = function(d){return "mag-set ng napakaliit na gap"};
 
-exports.setGapSmall = function(d){return "maglagay ng maliit na gap"};
+exports.setGapSmall = function(d){return "mag-set ng maliit na gap"};
 
 exports.setGapNormal = function(d){return "maglagay ng normal na gap"};
 
@@ -12508,19 +12508,19 @@ exports.setGravityLow = function(d){return "ilagay ang gravity sa mababa"};
 
 exports.setGravityNormal = function(d){return "ilagay ang gravity sa normal"};
 
-exports.setGravityHigh = function(d){return "ilagay ang gravity sa mataas"};
+exports.setGravityHigh = function(d){return "i-set ang gravity sa mataas"};
 
-exports.setGravityVeryHigh = function(d){return "ilagay ang gravity sa pinakamataas"};
+exports.setGravityVeryHigh = function(d){return "i-set ang gravity sa pinakamataas"};
 
 exports.setGravityTooltip = function(d){return "Nilalagay ang level ng gravity"};
 
-exports.setGround = function(d){return "set ground"};
+exports.setGround = function(d){return "i-set ang ground"};
 
-exports.setGroundRandom = function(d){return "ilagay ang ground sa Random"};
+exports.setGroundRandom = function(d){return "i-set ang ground sa Random"};
 
-exports.setGroundFlappy = function(d){return "ilagay ang ground sa Ground"};
+exports.setGroundFlappy = function(d){return "i-set ang ground sa Ground"};
 
-exports.setGroundSciFi = function(d){return "ilagay ang ground sa Sci-Fi"};
+exports.setGroundSciFi = function(d){return "i-set ang ground sa Sci-Fi"};
 
 exports.setGroundUnderwater = function(d){return "ilagay ang ground sa Underwater"};
 
@@ -12532,7 +12532,7 @@ exports.setGroundLava = function(d){return "ilagay ang ground sa Lava"};
 
 exports.setGroundTooltip = function(d){return "Nilalagay ang imahe ng ground"};
 
-exports.setObstacle = function(d){return "set obstacle"};
+exports.setObstacle = function(d){return "i-set ang obstacle"};
 
 exports.setObstacleRandom = function(d){return "ilagay ang obstacle sa Random"};
 
@@ -12550,7 +12550,7 @@ exports.setObstacleLaser = function(d){return "ilagay ang obstacle sa Laser"};
 
 exports.setObstacleTooltip = function(d){return "Nilalagay ang imahe ng obstacle"};
 
-exports.setPlayer = function(d){return "set player"};
+exports.setPlayer = function(d){return "i-set ang player"};
 
 exports.setPlayerRandom = function(d){return "ilagay ang player sa Random"};
 
@@ -12602,15 +12602,15 @@ exports.soundBounce = function(d){return "bounce"};
 
 exports.soundCrunch = function(d){return "crunch"};
 
-exports.soundDie = function(d){return "sad"};
+exports.soundDie = function(d){return "malungkot"};
 
 exports.soundHit = function(d){return "smash"};
 
-exports.soundPoint = function(d){return "point"};
+exports.soundPoint = function(d){return "puntos"};
 
 exports.soundSwoosh = function(d){return "swoosh"};
 
-exports.soundWing = function(d){return "wing"};
+exports.soundWing = function(d){return "pakpak"};
 
 exports.soundJet = function(d){return "jet"};
 

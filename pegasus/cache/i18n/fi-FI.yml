@@ -93,9 +93,9 @@
   participant_educator: Opettaja
   participant_engineer: Ohjelmistosuunnittelija
   participant_other: Ei mikään edellä mainituista
-  print_all: Print all
-  print_ice_art: Print your ice art
-  create_art_with_zombie: or make advanced art with zombie
+  print_all: Tulosta kaikki
+  print_ice_art: Tulosta jäätaiteesi
+  create_art_with_zombie: tai tee edistyneempää taidetta zombien kanssa
   i_am_a: Olen
   never_spam: Me emme koskaan lähetä sinulle roskapostia
   enter_country: Syötä maa, jos olet Yhdysvaltojen ulkopuolella
@@ -135,7 +135,7 @@
   studiobar_teacher_title: Tehty opettajille
   studiobar_teacher_body: Ota Code Studio käyttöön luokassasi
   studiobar_frozen_title: Koodaustunti
-  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_frozen_body: Luo talven ihmemaa Annan ja Elsan kanssa
   studiobar_donate_title: Lahjoita
   studiobar_donate_body: Jokaista lahjoittamaasi dollaria kohden yksi lapsi saa oppia
   contact_form_topic_student: Olen oppilas
@@ -231,6 +231,12 @@
   dashboard_action_done: Valmis
   dashboard_action_required: vaaditaan
   dashboard_navigation_home_page: Opettajan päänäyttö
+  dashboard_navigation_section_student_progress: Oppilaiden tunnukset ja edistyminen
+  dashboard_navigation_section_teacher_progress: Your Course Progress
+  dashboard_navigation_section_lesson_plans: Tuntisuunnitelmat ja resurssit
+  dashboard_navigation_section_community: Help and Community
+  dashboard_navigation_section_pd: Professional Development
+  dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
   dashboard_navigation_all_sections: Oppilaiden tunnukset ja edistyminen
   dashboard_navigation_view_progress: Tarkastele etenemistä
   dashboard_navigation_add_students: Lisää oppilaita
@@ -380,6 +386,10 @@
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Johdanto JavaScript kieleen
   khanes_name: Johdanto JavaScript kieleen
+  khanpt_name: Johdanto JavaScript kieleen
+  khanhe_name: Johdanto JavaScript kieleen
+  khanfr_name: Johdanto JavaScript kieleen
+  khanpl_name: Johdanto JavaScript kieleen
   tynker_name: Tee oma peli
   scratch_name: Ala luovaksi koodaten
   lightbot_name: Lightbot
@@ -408,12 +418,17 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Kivi, sakset, paperi
-  frozen_gradelevel: Ikä 8+
+  hourofcode_name: Placeholder for new code.org/hoc
+  playlab_name: Pelilabra
   codeorg_gradelevel: 4-104-vuotiaille
   codeintl_gradelevel: 4-104-vuotiaille
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Yläaste +
   khanes_gradelevel: Yläaste +
+  khanpt_gradelevel: Yläaste +
+  khanhe_gradelevel: Yläaste +
+  khanfr_gradelevel: Yläaste +
+  khanpl_gradelevel: Yläaste +
   tynker_gradelevel: 5-13-vuotiaille
   scratch_gradelevel: Ikä 8+
   lightbot_gradelevel: Kaikenikäiset
@@ -442,13 +457,19 @@
   thinkersmith2_gradelevel: Ikä 8+
   kodableunplugged_gradelevel: 8-13-vuotiaille
   projguts_gradelevel: 10-13-vuotiaille
-  frozen_platformtext: Modernit selaimet ja tablettitietokoneet
+  hourofcode_gradelevel: 4-104-vuotiaille
+  frozen_gradelevel: Ikä 8+
+  playlab_gradelevel: 4-104-vuotiaille
   codeorg_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
   codeintl_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
   thinkersmithspanish_platformtext: Tietokoneeton tekeminen
   khan_platformtext: Nykyaikaiset verkkoselaimet
   khanes_platformtext: Nykyaikaiset verkkoselaimet
-  tynker_platformtext: Modernit selaimet. (Jatkokurssi vaatii $$)
+  khanpt_platformtext: Nykyaikaiset verkkoselaimet
+  khanhe_platformtext: Nykyaikaiset verkkoselaimet
+  khanfr_platformtext: Nykyaikaiset verkkoselaimet
+  khanpl_platformtext: Nykyaikaiset verkkoselaimet
+  tynker_platformtext: Nykyaikaiset verkkoselaimet
   scratch_platformtext: KAIKKI selaimet
   lightbot_platformtext: Kaikki selaimet sekä iOS, Android tai pelikonsoli
   thinkersmith_platformtext: Tietokoneeton tekeminen
@@ -476,13 +497,18 @@
   thinkersmith2_platformtext: Tietokoneeton tekeminen
   kodableunplugged_platformtext: Tietokoneeton tekeminen
   projguts_platformtext: Tietokoneeton tekeminen
-  frozen_shortdescription: Liitymme Annan ja Elsan matkaan, kun he tutkivat jään taikaa
-    ja kauneutta ohjelmoinnin avulla.
+  hourofcode_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
+  frozen_platformtext: Modernit selaimet ja tablettitietokoneet
+  playlab_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
   codeorg_shortdescription: Opi koodaamaan Mark Zuckerbergin ja Angry Birdsin kanssa!
   codeintl_shortdescription: Opi koodaamaan Mark Zuckerbergin ja Angry Birdsin kanssa!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Opi piirtämään JavaScriptillä
   khanes_shortdescription: Opi piirtämään JavaScriptillä
+  khanpt_shortdescription: Opi piirtämään JavaScriptillä
+  khanhe_shortdescription: Opi piirtämään JavaScriptillä
+  khanfr_shortdescription: Opi piirtämään JavaScriptillä
+  khanpl_shortdescription: Opi piirtämään JavaScriptillä
   tynker_shortdescription: Opi koodaamaan ratkoen hauskoja tehtäviä ja rakenna samalla
     oma mobiilipelisi.
   scratch_shortdescription: Luo interaktiivisia pelejä, tarinoita ja animaatioita.
@@ -524,9 +550,10 @@
   kodableunplugged_shortdescription: Hauska tietokoneettoman tekemisen harjoitus
   projguts_shortdescription: Kokeile mallinnusta ja simulointia kivi-sakset-paperi
     -pelin avulla
-  frozen_longdescription: Koodataan Annan ja Elsan kanssa kun he tutkivat jään kauneutta
-    ja taikaa. Tässä pelissä luot lumihiutaleita ja kuvioita luistellen ja luot taianomaisen
-    lumimaan, jonka voit myös jakaa ystäviesi kanssa!
+  hourofcode_shortdescription: Placeholder for new code.org/hoc
+  frozen_shortdescription: Liitymme Annan ja Elsan matkaan, kun he tutkivat jään taikaa
+    ja kauneutta ohjelmoinnin avulla.
+  playlab_shortdescription: Suunnittele ja luo oma tarina tai peli Pelilabrassa!
   codeorg_longdescription: Opettele tietojenkäsittelytieteen perusteet rakentamalla
     tietokoneohjelmia palikoista. Tällä pelillisellä itseopiskelukurssilla johdantovideoilla
     (englanniksi, tekstit suomeksi) esiintyy Bill Gates, Mark Zuckerberg, Angry Birds
@@ -544,6 +571,14 @@
   khan_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot hauskoja
     piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
   khanes_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot
+    hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
+  khanpt_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot
+    hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
+  khanhe_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot
+    hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
+  khanfr_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot
+    hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
+  khanpl_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot
     hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
   tynker_longdescription: Luo omia pelejä ja jaa ne ystäviesi kanssa! Ratkaise hauskoja
     pulmia ja opi samalla ohjelmoinnin perusteet. Hauskoilla animaatiohahmoilla teet
@@ -652,6 +687,13 @@
     oppimaan kuinka mallinnus ja simulointi toimii, laittaessaan oppilasryhmän pelaamaan
     eri versioita kivi-sakset-paperi -pelistä, ja näkemään erilaisten mallinnuskokeilujen
     tulokset.
+  hourofcode_longdescription: Placeholder for new code.org/hoc
+  frozen_longdescription: Koodataan Annan ja Elsan kanssa kun he tutkivat jään kauneutta
+    ja taikaa. Tässä pelissä luot lumihiutaleita ja kuvioita luistellen ja luot taianomaisen
+    lumimaan, jonka voit myös jakaa ystäviesi kanssa!
+  playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
+    pirates, zombies, ninjas, and many more characters move, make sounds, score points,
+    and even throw fireballs!
   codeorg_beyond_name: Johdanto tietojenkäsittelytieteeseen (luokat 1.-8.)
   khan_beyond_name: Opi tietokoneohjelmointia
   tynker_beyond_name: Opi ohjelmointia kotona

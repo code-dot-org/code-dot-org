@@ -16523,19 +16523,19 @@ exports.emptyBlocksErrorMsg = function(d){return "Blok \"Ulangi\" atau blok \"Ji
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Blok fungsi membutuhkan blok lain di dalamnya agar dapat bekerja."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "Diharuskan adanya blok di dalam fungsi mu. Klik \"sunting\" lalu geser blok itu ke dalam Blok Hijau."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "Klik \"sunting\" untuk memastikan bahwa Anda tidak menyisakan satupun blok di dalam fungsi ini."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "Jangan lupa untuk memasang blok pada setiap parameter masukan di dalam blok fungsi pada program ini."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "Anda menambahkan blok parameter, tapi tidak digunakan kemudian. Klik \"sunting\" untuk memastikan penggunaan parameter tersebut dan menempatkannya di blok parameter di dalam Blok Hijau."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "Buatlah sebuah parameter untuk fungsi ini dengan mengeklik \"sunting\" dan menambahkan parameter yang diperlukan. Geser blok parameter baru tersebut ke dalam fungsi ini."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "Anda membuat sebuah fungsi, tetapi tidak digunakan dalam program ini! Klik tombol \"Fungsi\" pada Kotak Perkakas dan pastikan Anda menggunakan fungsi tersebut."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "Cobalah mengganti \"???\" dengan sebuah nilai."};
 
 exports.extraTopBlocks = function(d){return "Anda memiliki blok tidak terpasang. Apakah maksud anda untuk menempelkannya ke blok \"when run\"?"};
 
@@ -16577,7 +16577,7 @@ exports.numLinesOfCodeWritten = function(d){return "Anda baru saja menulis "+p(d
 
 exports.play = function(d){return "mainkan"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Cetak"};
 
 exports.puzzleTitle = function(d){return "Teka-teki ke "+v(d,"puzzle_number")+" dari "+v(d,"stage_total")};
 
@@ -16593,7 +16593,7 @@ exports.score = function(d){return "Skor"};
 
 exports.showCodeHeader = function(d){return "Tampilkan kode"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Tampilkan blok-blok"};
 
 exports.showGeneratedCode = function(d){return "Tampilkan kode"};
 
@@ -16621,9 +16621,9 @@ exports.hintRequest = function(d){return "Lihat petunjuk"};
 
 exports.backToPreviousLevel = function(d){return "Kembali ke teka-teki sebelumnya"};
 
-exports.saveToGallery = function(d){return "Simpan ke galeri Anda"};
+exports.saveToGallery = function(d){return "Simpan di Galeri"};
 
-exports.savedToGallery = function(d){return "Simpan ke galeri Anda!"};
+exports.savedToGallery = function(d){return "Tersimpan di Galeri!"};
 
 exports.shareFailure = function(d){return "Maaf, kami tidak bisa membagikan program ini."};
 
@@ -16633,7 +16633,7 @@ exports.typeHint = function(d){return "Perhatikan bahwa tanda kurung dan titik k
 
 exports.workspaceHeader = function(d){return "Rakitlah blok Anda disini: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Ketiklah kode Javascript Anda di sini"};
 
 exports.infinity = function(d){return "∞"};
 

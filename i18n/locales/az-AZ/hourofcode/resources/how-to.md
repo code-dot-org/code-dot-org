@@ -8,18 +8,16 @@ title: How-to Guide layout: wide nav: resources_nav
   <h1 class="col-sm-6">
     Kod Saatını necə tədris etməli
   </h1>
-  
-  <div class="col-sm-6 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Tədbirinizi qeydiyyatdan keçirin</button></a>
-  </div>
+</div>
+
 </div>
 
 ## 1) Watch this how-to video <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
 ## 2) Try the tutorials:
 
-Hər yaşdan olan şagirdlər üçün müxtəlif tərəfdaşlarımızın hazırladığı, cürbəcür əyləncəli, bir saatlıq dərsliklər yerləşdirəcəyik. 8-14 dekabrdan əvvəl Kod Saatına start vermək üçün yeni dərsliklər də olacaq.
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
 
-**Bütün Kod Saatı dərslikləri:**
+**All Hour of Code tutorials:**
 
   * Hazırlıq üçün müəllimlərin az vaxtını alır
   * Müstəqil tədris üçün yararlıdır - hər kəsə öz tempi və bacarığına uyğun iş seçməyə imkan verir
@@ -60,7 +58,7 @@ Most kids don’t know what computer science is. Here are some ideas:
   * Yaxud: "İnformatika bizim gücümüzü artırmaq üçün insani ideyalar və rəqəmli alətləri qovuşduran bir sənətidir. İnformatika sahəsinin alimləri olduqca müxtəlif sahələrdə işləyirlər: telefonlar üçün tətbiqi prooqramlar yazır, xəstəlikləri sağaldır, animasiyalı filmlər düzəldir, sosial media üzərində işləyir, başqa planetləri tədqiq edən robotlar düzəldir, daha nələr edirlər".
   * Qızları informatika ilə maraqlandırmaq üçün məsləhətlərə [burada](http://<%= codeorg_url() %>/girls) baxın. 
 
-## 6) Start your Hour of Code
+## 7) Start your Hour of Code
 
 **Direct students to the activity**
 

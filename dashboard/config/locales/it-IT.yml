@@ -412,8 +412,8 @@
     try_beta_courses: Novità! Prova i nostri corsi specifici per studenti delle scuole
       elementari (in versione provvisoria)
     use_as_teacher: Guarda questo sito come insegnante
-    heading_hoc2014: <h2>L'Ora del Codice</h2><h1>per qualunque età</h1>
-    heading_elementary: <h2>Corsi di 20 ore</h2><h1>per principianti (di qualunque
+    heading_hoc2014: <h2>L'Ora del Codice</h2><h1>per tutte le età</h1>
+    heading_elementary: <h2>Corsi di 20 ore</h2><h1>per principianti (di tutte le
       età)</h1>
     heading_apps: <h2>Divertimento per</h2><h1>tutti</h1>
     heading_legacy: <h2>Il nostro Corso Introduttivo per </h2><h1>utenti di tutte
@@ -623,3 +623,7 @@
     completed_too_many_blocks: completato, ma usando troppi blocchi
     completed_perfect: completato in modo perfetto
     furthest_level_attempted: livello più avanzato che è stato provato
+  studio:
+    courses_working_on: Corsi su cui stai lavorando
+    completed_courses: Corsi completati
+    all_courses: Tutti i corsi

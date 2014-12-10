@@ -1,12 +1,12 @@
 * * *
 
-title: How-to guide for public officials layout: wide nav: resources_nav
+title: Керівництво для державних чиновників layout: wide nav: resources_nav
 
 * * *
 
 ## Bring the Hour of Code to your entire community.
 
-### Get every school participating, every student learning!
+### Залучіть до участі кожну школу, а кожного учня - до навчання!
 
   1. **Recruit local schools and districts.** Use [this email](<%= hoc_uri('/resources#sample-emails') %>) or [this blurb](<%= hoc_uri('/resources/stats') %>) as a starting point, and take a look at this [how-to](<%= hoc_uri('/resources/how-to') %>) for schools and districts. Let them know **every** participating educator will receive a [thank you gift](<%= hoc_uri('/resources/how-to') %>); that **100 classrooms** will win tech chats with **special guest speakers** (participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more); and, in **each state**, one participating school will win **$10,000 in technology**!
 

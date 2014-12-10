@@ -787,26 +787,27 @@
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Caça-sóis funcionais
         C3_songwriting_with_parameters: Escrevendo uma canção com parâmetros
-        C4_intro: Introduction
+        C4_intro: Introdução
         C4_bee_conditional: Condicionais da abelha
-        C4_variables_artist: Variables - Artist
-        C4_variables_playlab: Variables - Play Lab
+        C4_variables_artist: Variáveis - Artista
+        C4_variables_playlab: Variáveis - Laboratório
         C4_for_loops: Laços for
-        C4_math_artist: Programming the Artist with Math
-        C4_function_edit: Editing Functions
-        C4_function_create: Creating Functions
-        C4_unplugged_algorithms: Algorithms with Tangrams
+        C4_math_artist: Programação do Artista com matemática
+        C4_function_edit: Editando funções
+        C4_function_create: Criando funções
+        C4_conditionals: Condições
+        C4_unplugged_algorithms: Algoritmos com tangrams
         C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Variables in Envelopes
+        C4_unplugged_variables: Variáveis em envelopes
         C4_unplugged_forloops: Laços for
         C4_unplugged_parameters: Composição de música com parâmetros
-        C4_unplugged_binary: Binary
+        C4_unplugged_binary: Binário
         frozen_intro: Introdução à Hora de Código
         frozen_loops: Introdução aos Laços
         frozen_functions: Introdução às Funções
-        playlab_intro: Introduction to Play Lab
-        playlab_events: Play Lab Events
-        playlab_repeat_forever: Play Lab Repeat Forever
+        playlab_intro: Introdução ao Laboratório
+        playlab_events: Eventos do Laboratório
+        playlab_repeat_forever: 'Laboratório: repetir infinitamente'
     callout:
       text:
         drag_blocks: Arraste um bloco "avance" e o encaixe embaixo do outro bloco
@@ -833,10 +834,10 @@
         replace_questions_degree: Use o menu suspenso para substituir "???" pelo grau
           correto para virar
         repeat_blocks: Use o bloco "Repita" e conecte-o aos blocos na área de trabalho
-        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the
-          workspace
-        repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks
-          inside
+        repeat_blocks_1: (1) Use este bloco e coloque-o em torno dos blocos cinza
+          na área de trabalho
+        repeat_blocks_2: (2) Traga o bloco "repita" aqui e coloque os blocos cinza
+          dentro dele
         snowflake_dropdown: Use este menu suspenso para criar diferentes flocos de
           neve!
         degrees_per_side: Divida 360 pelo número de lados para obter o tamanho de
@@ -844,13 +845,13 @@
         set_sides: Use este bloco para definir "lados" com o número necessário para
           completar o desafio.
         set_length: Use este bloco para definir "comprimento" com o valor correto.
-        which_equation: Qual equação faz com que cada lado seja mais curto para formas
-          com mais lados? Experimente todas as equações!
+        which_equation: Qual equação torna cada lado mais curto nas formas com maior
+          número de lados?
         get_nectar: Use o novo bloco "obtenha néctar".
         actions_category: A caixa de ferramentas tem um novo visual! Os blocos de
           "Ação" estão aqui agora.
         draw_square_hint: 'Dica: Use o laço do quadrado que você fez no último desafio.'
-        edit_function: Use este botão para editar a função.
+        edit_function: Clique aqui para editar sua função.
         create_function: Clique aqui para abrir o submenu "Funções", e então clique
           no botão "Criar uma função".
         house_hint: Tudo bem se a imagem ainda não se parece com uma casa. Vamos arrumar
@@ -878,31 +879,31 @@
         playlab_add_move: Adicione blocos "mova" dentro deste bloco "repita"
         playlab_add_score: Adicione blocos de pontuação aqui
         playlab_add_blocks: Adicione seus blocos aqui
-        set_variable: Drag a number block here to set your variable
-        place_variable: Drag your variable inside this block
-        bee_for_loop: Drag the largest number of nectar you want the bee to collect
-          here
-        place_counter_variable: Drag your counter variable inside this block
-        function_editor_draw_square: This is your function definition. These blocks
-          run everytime you use the "draw a square" block
-        change_here: Make your change here
-        write_draw_square_function: Drag blocks from the toolbox into here that draw
-          a square
-        write_draw_triangle_function: Drag blocks from the toolbox into here that
-          draw a triangle
-        edit_add_parameter: Click edit to add a parameter in your function
-        add_and_drag_parameter: Write in the name of your parameter here, click add,
-          and then drag it into your function definition
-        fill_in_actor: Fill in the ??? with numbers that correspond to each actor
-          (1, 2, and 3)
-        repeat: Put blocks inside the loop to repeat commands
-        if_bee_nectar: Use the "if" block to decide if the bee should get nectar
-        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower,
-          and makes honey if it's not a flower
-        repeat_full_circle: Enter in the number of times the zombie has to move to
-          make a full circle
-        place_length_variable: Drag the length variable here to replace the question
-          marks
-        arrows_move_actor: Use the arrows to move the actor
-        right_arrow_fireball: Use the right arrow to shoot fireballs
-        name_function: Write the name of your function here
+        set_variable: Arraste um bloco de número aqui para definir sua variável
+        place_variable: Arraste sua variável para dentro deste bloco
+        bee_for_loop: Arraste o maior número de néctar que você quer a abelha colete
+          aqui
+        place_counter_variable: Arraste sua variável contador para dentro deste bloco
+        function_editor_draw_square: Esta é sua definição de função. Esses blocos
+          são executados sempre que você usar o bloco "desenhe um quadrado"
+        change_here: Faça sua alteração aqui
+        write_draw_square_function: Arraste os blocos da caixa de ferramentas que
+          desenham um quadrado aqui
+        write_draw_triangle_function: Arraste os blocos da caixa de ferramentas que
+          desenham um triângulo aqui
+        edit_add_parameter: Clique em editar para adicionar um parâmetro em sua função
+        add_and_drag_parameter: Escreva o nome do seu parâmetro aqui, clique em adicionar
+          e, em seguida, arraste-o para sua definição de função
+        fill_in_actor: Substitua ??? pelos números que correspondem a cada ator (1,
+          2 e 3)
+        repeat: Coloque os blocos dentro do laço para repetir os comandos
+        if_bee_nectar: Use o bloco "se" para decidir se a abelha deve coletar o néctar
+        if_else_bee: Use o bloco "se-senão" para que a abelha colete o néctar de uma
+          flor, e faça mel se não for uma flor
+        repeat_full_circle: Insira o número de vezes que o zumbi deve se mover para
+          fazer um círculo completo
+        place_length_variable: Arraste a variável de comprimento aqui para substituir
+          os pontos de interrogação
+        arrows_move_actor: Use as setas para mover o personagem
+        right_arrow_fireball: Use a seta para a direita para atirar bolas de fogo
+        name_function: Escreva o nome da sua função aqui

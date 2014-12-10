@@ -221,7 +221,7 @@ fi:
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png
       4-5 maze conditionals multi 1:
-        Maze Conditionals Multiple Choice: Maze Conditionals Multiple Choice
+        Maze Conditionals Multiple Choice: 'Sokkelo: ehtolauseet, monivalinta'
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500
         Which blocks solve the puzzle?: Mitkä lohkot ratkaisevat tehtävän?
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png
@@ -486,15 +486,15 @@ fi:
         (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2): '(+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2)'
         (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2)))))): '(+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2))))))'
       Warmup questions:
-        Coding in Racket: Coding in Racket
+        Coding in Racket: Racket-koodaus
         Select the best answer to the question.: Valitse paras vastaus kysymykseen.
-        When converting a circle to code, the correct order is: When converting a circle to code, the correct order is
+        When converting a circle to code, the correct order is: Kun ympyrän muuntaa koodiksi, oikea järjestys on
         top, left, right: ylös, vasen, oikea
         left, right, top: vasen, oikea, ylös
         random: satunnainen
         left top right: vasen, ylös, oikea
       Circle to code:
-        Code from Circle: Code from Circle
+        Code from Circle: Ympyräkoodi
         /script_assets/msm/Unit%202/exercise_1.png: '/script_assets/msm/Unit%202/exercise_1.png'
         Pick the Racket code that comes from the circle of evaluation!: Pick the Racket code that comes from the circle of evaluation!
         (+ 5 (* (- 6 8) 4)): '(+ 5 (* (- 6 8) 4))'
@@ -510,7 +510,7 @@ fi:
         "circle: number string string -> shape": 'ympyrä: numero merkkijono merkkijono -> muoto'
         "circle: 5 solid blue -> circle ": 'circle: 5 solid blue -> circle '
       image code from circle:
-        Code from Circle: Code from Circle
+        Code from Circle: Ympyräkoodi
         /script_assets/msm/Unit%202/exercise_5.png: '/script_assets/msm/Unit%202/exercise_5.png'
         Pick the Racket code that comes from the circle of evaluation!: Pick the Racket code that comes from the circle of evaluation!
         (rectangle (10) (2) "solid" "red"): '(suorakulmio (10) (2) "kiinteä" "punainen")'

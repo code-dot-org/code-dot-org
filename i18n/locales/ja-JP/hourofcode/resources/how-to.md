@@ -8,18 +8,16 @@ title: How-to Guide layout: wide nav: resources_nav
   <h1 class="col-sm-6">
     1 時間のコーディングの指導方法
   </h1>
-  
-  <div class="col-sm-6 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">イベントにサインアップする。</button></a>
-  </div>
+</div>
+
 </div>
 
 ## 1) Watch this how-to video <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
 ## 2) Try the tutorials:
 
-私たちは、様々なパートナー達によって作られた、バラエティに富んだ楽しい、全年齢の生徒のための一時間のチュートリアルを主催します。新しいチュートリアルは12月8-14日のHour of Codeの前にキックオフでお披露目されます。
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
 
-**すべてのHour of Codeのチュートリアル：**
+**All Hour of Code tutorials:**
 
   * 教員の皆さんは最小限の準備時間を必要とします。
   * 自己管理学習は自分のペースで、そして、自分のスキルレベルに見合った取り組み方を可能にします。
@@ -60,7 +58,7 @@ Most kids don’t know what computer science is. Here are some ideas:
   * または、「コンピューター科学は私たちに力をあたえてくれる、人間のアイデアとデジタルツールが融合した芸術です。 コンピューター科学は様々な分野で活躍しています：携帯アプリの制作、不治の病を治したり、アニメ制作、ソーシャルメディアの制作、他の惑星を発掘するロボットの構築、そのほかにもたくさん」
   * コンピューター科学をもっと女の子に興味持ってもらうヒントは [こちら ](http://<%= codeorg_url() %>/girls). 
 
-## 6) Start your Hour of Code
+## 7) Start your Hour of Code
 
 **Direct students to the activity**
 

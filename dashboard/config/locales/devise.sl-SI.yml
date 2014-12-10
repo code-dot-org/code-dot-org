@@ -50,24 +50,23 @@
       update_needs_confirmation: Vaš račun ste uspešno posodobili, vendar moramo preveriti
         vaš novi e-poštni naslov. Prosim poglejte svojo e-pošto in kliknite na povezavo,
         da dokončate potrditev vašega novega e-poštnega naslova.
-      updated: You updated your account successfully.
+      updated: Uspešno ste posodobili vaš račun.
     sessions:
       signed_in: Uspešen vpis.
       signed_out: Uspešen izpis.
     unlocks:
-      send_instructions: You will receive an email with instructions about how to
-        unlock your account in a few minutes.
-      send_paranoid_instructions: If your account exists, you will receive an email
-        with instructions about how to unlock it in a few minutes.
-      unlocked: Your account has been unlocked successfully. Please sign in to continue.
+      send_instructions: V naslednjih minutah boste prejeli e-pošto z navodilom kako
+        odkleniti vaš račun.
+      send_paranoid_instructions: Če ste že bili registrirani, boste v naslednjih
+        minutah prejeli e-pošto z navodilom kako odkleniti vaš račun.
+      unlocked: Vaš račun je bil uspešno odklenjen. Če želite nadaljevati, se vpišite.
   errors:
     messages:
-      already_confirmed: was already confirmed, please try signing in
-      confirmation_period_expired: needs to be confirmed within %{period}, please
-        request a new one
-      expired: has expired, please request a new one
+      already_confirmed: je že bil potrjen, zato se zdaj poskusite vpisati
+      confirmation_period_expired: mora biti potrjen v %{period}, zahtevajte novega
+      expired: je potekel čas za potrditev, zato vas prosimo, da zahtevate novega
       not_found: ni mogoče najti
       not_locked: ni bil zaklenjen
       not_saved:
-        one: '1 error prohibited this %{resource} from being saved:'
-        other: '%{count} errors prohibited this %{resource} from being saved:'
+        one: '1 napaka je onemogočila shranjevanje %{resource}:'
+        other: '%{count} napak je onemogočilo shranjevanje %{resource}:'
