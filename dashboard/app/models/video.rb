@@ -21,11 +21,4 @@ class Video < ActiveRecord::Base
     end
     check_i18n_names
   end
-
-  def self.find_by_key(key)
-    return nil if key.nil?
-    Rails.cache.fetch('find_by_key') do
-      Video.all.index_by(&:key)
-    end[:key] || find_by(key: key)
-  end
 end

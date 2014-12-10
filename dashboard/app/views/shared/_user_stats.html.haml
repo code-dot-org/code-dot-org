@@ -1,5 +1,5 @@
-- script = (@script || (user && user.primary_script) || Script.twenty_hour_script).cached
-- script_levels = user ? user.levels_from_script(script) : script.script_levels
+- script = @script || (user && user.primary_script) || Script.twenty_hour_script
+- script_levels = user ? user.levels_from_script(script) : script.script_levels.includes(:script, :stage, level: :game)
 -# concept_progress = user ? user.concept_progress : nil
 
 .user-stats-block
@@ -19,13 +19,15 @@
         - sl_group.each do |sl|
           .level
             - css_class, link = level_info(user, sl)
-            - if sl.assessment
+            - if params[:script_level_id] && params[:script_level_id] == sl.level_id.to_s
+              - puzzle_outer_class = 'puzzle_outer_current'
+            - elsif sl.assessment
               - puzzle_outer_class = 'puzzle_outer_assessment'
             - else
               - puzzle_outer_class = 'puzzle_outer_level'
-            %span{id: sl.level_id.to_s, class: puzzle_outer_class}
+            %span{class: puzzle_outer_class}
               %a.level_link{ href: link, class: css_class}
-                - unplugged = sl.unplugged?
+                - unplugged = sl.level.unplugged?
                 - if unplugged
                   %span.puzzle-named
                     =sl.level_display_text
@@ -44,7 +46,3 @@
 
 
 
-:javascript
-  if (typeof(script_level_id) !== 'undefined') {
-    $('#' + script_level_id).attr('class', 'puzzle_outer_current');
-  }
