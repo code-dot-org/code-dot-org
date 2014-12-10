@@ -21174,19 +21174,19 @@ exports.emptyBlocksErrorMsg = function(d){return "Blok \"Ulangi\" atau blok \"Ji
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Blok fungsi membutuhkan blok lain di dalamnya agar dapat bekerja."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "Diharuskan adanya blok di dalam fungsi mu. Klik \"sunting\" lalu geser blok itu ke dalam Blok Hijau."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "Klik \"sunting\" untuk memastikan bahwa Anda tidak menyisakan satupun blok di dalam fungsi ini."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "Jangan lupa untuk memasang blok pada setiap parameter masukan di dalam blok fungsi pada program ini."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "Anda menambahkan blok parameter, tapi tidak digunakan kemudian. Klik \"sunting\" untuk memastikan penggunaan parameter tersebut dan menempatkannya di blok parameter di dalam Blok Hijau."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "Buatlah sebuah parameter untuk fungsi ini dengan mengeklik \"sunting\" dan menambahkan parameter yang diperlukan. Geser blok parameter baru tersebut ke dalam fungsi ini."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "Anda membuat sebuah fungsi, tetapi tidak digunakan dalam program ini! Klik tombol \"Fungsi\" pada Kotak Perkakas dan pastikan Anda menggunakan fungsi tersebut."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "Cobalah mengganti \"???\" dengan sebuah nilai."};
 
 exports.extraTopBlocks = function(d){return "Anda memiliki blok tidak terpasang. Apakah maksud anda untuk menempelkannya ke blok \"when run\"?"};
 
@@ -21228,7 +21228,7 @@ exports.numLinesOfCodeWritten = function(d){return "Anda baru saja menulis "+p(d
 
 exports.play = function(d){return "mainkan"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Cetak"};
 
 exports.puzzleTitle = function(d){return "Teka-teki ke "+v(d,"puzzle_number")+" dari "+v(d,"stage_total")};
 
@@ -21244,7 +21244,7 @@ exports.score = function(d){return "Skor"};
 
 exports.showCodeHeader = function(d){return "Tampilkan kode"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Tampilkan blok-blok"};
 
 exports.showGeneratedCode = function(d){return "Tampilkan kode"};
 
@@ -21272,9 +21272,9 @@ exports.hintRequest = function(d){return "Lihat petunjuk"};
 
 exports.backToPreviousLevel = function(d){return "Kembali ke teka-teki sebelumnya"};
 
-exports.saveToGallery = function(d){return "Simpan ke galeri Anda"};
+exports.saveToGallery = function(d){return "Simpan di Galeri"};
 
-exports.savedToGallery = function(d){return "Simpan ke galeri Anda!"};
+exports.savedToGallery = function(d){return "Tersimpan di Galeri!"};
 
 exports.shareFailure = function(d){return "Maaf, kami tidak bisa membagikan program ini."};
 
@@ -21284,7 +21284,7 @@ exports.typeHint = function(d){return "Perhatikan bahwa tanda kurung dan titik k
 
 exports.workspaceHeader = function(d){return "Rakitlah blok Anda disini: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Ketiklah kode Javascript Anda di sini"};
 
 exports.infinity = function(d){return "∞"};
 
@@ -21315,33 +21315,33 @@ exports.defaultTwitterText = function(d){return "Lihat apa yang saya buat"};
 var MessageFormat = require("messageformat");MessageFormat.locale.id=function(n){return "other"}
 exports.actor = function(d){return "pelaku"};
 
-exports.alienInvasion = function(d){return "Alien Invasion!"};
+exports.alienInvasion = function(d){return "Serangan Alien!"};
 
-exports.backgroundBlack = function(d){return "black"};
+exports.backgroundBlack = function(d){return "hitam"};
 
-exports.backgroundCave = function(d){return "cave"};
+exports.backgroundCave = function(d){return "gua"};
 
-exports.backgroundCloudy = function(d){return "cloudy"};
+exports.backgroundCloudy = function(d){return "berawan"};
 
-exports.backgroundHardcourt = function(d){return "hardcourt"};
+exports.backgroundHardcourt = function(d){return "kasar"};
 
-exports.backgroundNight = function(d){return "night"};
+exports.backgroundNight = function(d){return "malam"};
 
-exports.backgroundUnderwater = function(d){return "underwater"};
+exports.backgroundUnderwater = function(d){return "di dalam air"};
 
-exports.backgroundCity = function(d){return "city"};
+exports.backgroundCity = function(d){return "Kota"};
 
-exports.backgroundDesert = function(d){return "desert"};
+exports.backgroundDesert = function(d){return "gurun"};
 
-exports.backgroundRainbow = function(d){return "rainbow"};
+exports.backgroundRainbow = function(d){return "Pelangi"};
 
-exports.backgroundSoccer = function(d){return "soccer"};
+exports.backgroundSoccer = function(d){return "sepak bola"};
 
-exports.backgroundSpace = function(d){return "space"};
+exports.backgroundSpace = function(d){return "Luar Angkasa"};
 
-exports.backgroundTennis = function(d){return "tennis"};
+exports.backgroundTennis = function(d){return "Tenis"};
 
-exports.backgroundWinter = function(d){return "winter"};
+exports.backgroundWinter = function(d){return "musim dingin"};
 
 exports.catActions = function(d){return "Aksi"};
 
@@ -21591,9 +21591,9 @@ exports.setBackgroundWinter = function(d){return "atur latar belakang musim ding
 
 exports.setBackgroundTooltip = function(d){return "Atur gambar latar belakang"};
 
-exports.setEnemySpeed = function(d){return "set enemy speed"};
+exports.setEnemySpeed = function(d){return "atur kecepatan musuh"};
 
-exports.setPlayerSpeed = function(d){return "set player speed"};
+exports.setPlayerSpeed = function(d){return "Atur kecepatan pemain"};
 
 exports.setScoreText = function(d){return "tetapkan skor"};
 
@@ -21635,15 +21635,15 @@ exports.setSpriteHidden = function(d){return "untuk gambar yang tersembunyi"};
 
 exports.setSpriteHideK1 = function(d){return "Sembunyikan"};
 
-exports.setSpriteAnna = function(d){return "to a Anna image"};
+exports.setSpriteAnna = function(d){return "atur gambar Anna"};
 
-exports.setSpriteElsa = function(d){return "to a Elsa image"};
+exports.setSpriteElsa = function(d){return "atur gambar Elsa"};
 
-exports.setSpriteHiro = function(d){return "to a Hiro image"};
+exports.setSpriteHiro = function(d){return "atur gambar Hiro"};
 
-exports.setSpriteBaymax = function(d){return "to a Baymax image"};
+exports.setSpriteBaymax = function(d){return "atur gambar Baymax"};
 
-exports.setSpriteRapunzel = function(d){return "to a Rapunzel image"};
+exports.setSpriteRapunzel = function(d){return "atur Gambar Rapunzel"};
 
 exports.setSpriteKnight = function(d){return "menjadi gambar knight"};
 
@@ -21723,9 +21723,9 @@ exports.shareStudioTwitter = function(d){return "Periksalah cerita saya dibuat. 
 
 exports.shareGame = function(d){return "Berbagi cerita Anda:"};
 
-exports.showCoordinates = function(d){return "show coordinates"};
+exports.showCoordinates = function(d){return "tampilkan koordinat"};
 
-exports.showCoordinatesTooltip = function(d){return "show the protagonist's coordinates on the screen"};
+exports.showCoordinatesTooltip = function(d){return "tampilkan koordinat pemeran utama pada layar"};
 
 exports.showTitleScreen = function(d){return "Tampilkan layar judul"};
 
@@ -21739,7 +21739,7 @@ exports.showTSDefText = function(d){return "Ketik teks disini"};
 
 exports.showTitleScreenTooltip = function(d){return "Tampilkan layar judul dengan judul dan teks terkait."};
 
-exports.size = function(d){return "size"};
+exports.size = function(d){return "ukuran"};
 
 exports.setSprite = function(d){return "tetapkan"};
 

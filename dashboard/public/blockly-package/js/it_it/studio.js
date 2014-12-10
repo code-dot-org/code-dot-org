@@ -21551,7 +21551,7 @@ exports.repeatDo = function(d){return "esegui"};
 
 exports.repeatForeverTooltip = function(d){return "Esegui ripetutamente le azioni in questo blocco mentre la storia è in esecuzione."};
 
-exports.saySprite = function(d){return "di'"};
+exports.saySprite = function(d){return "pronuncia"};
 
 exports.saySpriteN = function(d){return "il personaggio "+v(d,"spriteIndex")+" dice"};
 

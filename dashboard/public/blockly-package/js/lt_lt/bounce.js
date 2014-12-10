@@ -12394,7 +12394,7 @@ var MessageFormat = require("messageformat");MessageFormat.locale.lt = function 
   }
   return 'other';
 };
-exports.bounceBall = function(d){return "judantis kamuolys"};
+exports.bounceBall = function(d){return "atmušk kamuolį"};
 
 exports.bounceBallTooltip = function(d){return "Atmušk kamuolį nuo objekto."};
 
@@ -12424,7 +12424,7 @@ exports.ifTooltip = function(d){return "Jei kelias yra nurodytoje kryptyje, atli
 
 exports.ifelseTooltip = function(d){return "Jei kelias yra nurodytoje kryptyje, atlik pirmą veiksmų bloką. Priešingu atveju, atlik antrą veiksmų bloką."};
 
-exports.incrementOpponentScore = function(d){return "priešininko surinkti taškai"};
+exports.incrementOpponentScore = function(d){return "pridėk tašką priešininkui"};
 
 exports.incrementOpponentScoreTooltip = function(d){return "Pridėk vieną tašką dabartiniam priešininkui."};
 
@@ -12440,7 +12440,7 @@ exports.launchBall = function(d){return "paleisk naują kamuolį"};
 
 exports.launchBallTooltip = function(d){return "Paleidžia kamuolį į žaidimą."};
 
-exports.makeYourOwn = function(d){return "Sukurk savo Bounce Game žaidimą"};
+exports.makeYourOwn = function(d){return "Sukurk teniso žaidimą"};
 
 exports.moveDown = function(d){return "judėk žemyn"};
 
@@ -12574,7 +12574,7 @@ exports.setPaddleSpeedVeryFast = function(d){return "raketės greitis = labai di
 
 exports.setPaddleSpeedTooltip = function(d){return "Nustato raketės greitį"};
 
-exports.shareBounceTwitter = function(d){return "Pažiūrėk, kokį Bounce game žaidimą sukūriau. Parašiau jį pats puslapyje code.org"};
+exports.shareBounceTwitter = function(d){return "Pažiūrėk, kokį Teniso žaidimą sukūriau su code.org"};
 
 exports.shareGame = function(d){return "Bendrink savo žaidimą:"};
 
@@ -12592,7 +12592,7 @@ exports.whenBallMissesPaddle = function(d){return "kai kamuolys nepataiko į rak
 
 exports.whenBallMissesPaddleTooltip = function(d){return "Vykdyti žemiau nurodytus veiksmus, kai kamuolys nepataiko į raketę."};
 
-exports.whenDown = function(d){return "kai rodyklė žemyn"};
+exports.whenDown = function(d){return "kai paspausta rodyklė žemyn"};
 
 exports.whenDownTooltip = function(d){return "Įvykdyk žemiau nurodytus veiksmus, kai bus nuspaustas klaviatūros klavišas rodyklė žemyn."};
 
@@ -12600,7 +12600,7 @@ exports.whenGameStarts = function(d){return "kai žaidimas prasideda"};
 
 exports.whenGameStartsTooltip = function(d){return "Vykdyti nurodytus veiksmus, kai žaidimas prasideda."};
 
-exports.whenLeft = function(d){return "kai rodyklė į kairę"};
+exports.whenLeft = function(d){return "kai paspausta rodyklė kairėn"};
 
 exports.whenLeftTooltip = function(d){return "Įvykdyk žemiau nurodytus veiksmus, kai bus nuspaustas klaviatūros klavišas rodyklė į kairę."};
 
@@ -12608,11 +12608,11 @@ exports.whenPaddleCollided = function(d){return "kai kamuolys atsimuša į raket
 
 exports.whenPaddleCollidedTooltip = function(d){return "Įvykdyk žemiau nurodytus veiksmus, kai kamuolys atsitrenkia į raketę."};
 
-exports.whenRight = function(d){return "kai rodyklė į dešinę"};
+exports.whenRight = function(d){return "kai paspausta rodyklė dešinėn"};
 
 exports.whenRightTooltip = function(d){return "Įvykdyk žemiau nurodytus veiksmus, kai bus nuspaustas klaviatūros klavišas rodyklė dešinėn."};
 
-exports.whenUp = function(d){return "kai rodyklė aukštyn"};
+exports.whenUp = function(d){return "kai paspausta rodyklė aukštyn"};
 
 exports.whenUpTooltip = function(d){return "Įvykdyk žemiau nurodytus veiksmus, kai bus nuspaustas klaviatūros klavišas rodyklė aukštyn."};
 
@@ -12686,19 +12686,19 @@ exports.emptyBlocksErrorMsg = function(d){return "„Kartojimo“ arba „Jei“
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Komandos apraše turi būti išvardintos komandos (įdėtas bent vienas blokas)."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "Tavo kuriamoje komandoje turi būti veiksmų. Spustelk \"taisyti\" ir įkelk veiksmų į žalią bloką."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "Spustelk \"taisyti\", kad įsitikintum, ar tavo kuriamoje komandoje netrūksta veiksmų."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "Naudodamas sukurtą komandą, neužmiršk duoti jai reikalingų duomenų - argumentų. Prikabink reikšmes prie atitinkmų komandos vietų."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "Tu pridėjai argumento aprašą, bet argumento duomenų nenaudoji komandos veiksmuose..."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "Norėdamas perduoti komandai duomenis, turi juos aprašyti - spausk \"redaguoti\" ir pridėk reikiamus argumentų laukelius. Nutempk \"naujų argumentų\" laukelius į kuriamos  komandos bloką."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "Tu sukūrei naują komandą, bet jos nepanaudojai. Ją rasi kategorijoje \"Komandų kūrimas\"."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "Pabandyk pakeisti \"???\" kokia nors reikšme."};
 
 exports.extraTopBlocks = function(d){return "Tu turi nesujungtų blokų. Gal norėjai juos prijungti prie bloko „paleidus“?"};
 
@@ -12760,7 +12760,7 @@ exports.showBlocksHeader = function(d){return "Rodyti blokus"};
 
 exports.showGeneratedCode = function(d){return "Rodyti kodą"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "tekstas=?"};
 
 exports.subtitle = function(d){return "Vizuali programavimo aplinka"};
 

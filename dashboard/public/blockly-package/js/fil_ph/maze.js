@@ -16698,7 +16698,7 @@ exports.fillTooltip = function(d){return "maglagay ng 1 unit ng dumi"};
 
 exports.finalLevel = function(d){return "Maligayang pagbati! Nalutas mo na ang pinakahuling puzzle."};
 
-exports.flowerEmptyError = function(d){return "The flower you're on has no more nectar."};
+exports.flowerEmptyError = function(d){return "Ang bulaklak kung saan ikaw ang nakadapo ay wala ng nectar."};
 
 exports.get = function(d){return "kunin"};
 
@@ -16710,13 +16710,13 @@ exports.honey = function(d){return "gumawa ng honey"};
 
 exports.honeyAvailable = function(d){return "honey"};
 
-exports.honeyTooltip = function(d){return "Make honey from nectar"};
+exports.honeyTooltip = function(d){return "Gumawa ng honey mula sa nectar"};
 
-exports.honeycombFullError = function(d){return "This honeycomb does not have room for more honey."};
+exports.honeycombFullError = function(d){return "Ang honeycomb na ito ay wala ng paglalagyan ng honey."};
 
 exports.ifCode = function(d){return "kung"};
 
-exports.ifInRepeatError = function(d){return "You need an \"if\" block inside a \"repeat\" block. If you're having trouble, try the previous level again to see how it worked."};
+exports.ifInRepeatError = function(d){return "Kailangan mo ng \"if\" block sa loob ng \"repeat\" block. Kung nahihirapan, subukan ang previous na level muli upang makita kung paano ito gumana."};
 
 exports.ifPathAhead = function(d){return "kung ang daan sa unahan"};
 
@@ -16724,17 +16724,17 @@ exports.ifTooltip = function(d){return "Kung meron daanan sa tinukay na direksyo
 
 exports.ifelseTooltip = function(d){return "Kung meron daan sa nasabing direksyon, kung gayon ay gawin ang unang bloke ng mga aksyon. Kung hindi, gawin ang pangalawang bloke ng mga aksyon."};
 
-exports.ifFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do some actions."};
+exports.ifFlowerTooltip = function(d){return "Kung meron bulaklak/honeycomb sa itinurong direksyon, saka gawin ang mga aksyon."};
 
-exports.ifelseFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do the first block of actions. Otherwise, do the second block of actions."};
+exports.ifelseFlowerTooltip = function(d){return "Kung meron bulaklak/honeycomb sa itinurong direksyon, saka gawin ang unang mga block ng mga aksyon. Kung hindi, gawin ang pangalawang block ng mga aksyon."};
 
-exports.insufficientHoney = function(d){return "You're using all the right blocks, but you need to make the right amount of honey."};
+exports.insufficientHoney = function(d){return "Ginagamit mo ang lahat ng tamang mga block, ngunit kailangan mo gumawa ng tamang dami ng honey."};
 
-exports.insufficientNectar = function(d){return "You're using all the right blocks, but you need to collect the right amount of nectar."};
+exports.insufficientNectar = function(d){return "Ginagamit mo ang lahat ng tamang mga block, ngunit kailangan mo kumulekta ng tamang dami ng honey."};
 
-exports.make = function(d){return "make"};
+exports.make = function(d){return "gawin"};
 
-exports.moveBackward = function(d){return "move backward"};
+exports.moveBackward = function(d){return "gumalaw patalikod"};
 
 exports.moveEastTooltip = function(d){return "Igalaw ako pasilangan ng isang puwang."};
 
@@ -16746,15 +16746,15 @@ exports.moveNorthTooltip = function(d){return "Igalaw ako pahilaga ng isang puwa
 
 exports.moveSouthTooltip = function(d){return "Igalaw ako patimog ng isang puwang."};
 
-exports.moveTooltip = function(d){return "Move me forward/backward one space"};
+exports.moveTooltip = function(d){return "Gumalaw ng paabante/patalikod ng isang puwang"};
 
 exports.moveWestTooltip = function(d){return "Igalaw ako pakanluran ng isang puwang."};
 
-exports.nectar = function(d){return "get nectar"};
+exports.nectar = function(d){return "kunin ang nectar"};
 
 exports.nectarRemaining = function(d){return "nectar"};
 
-exports.nectarTooltip = function(d){return "Get nectar from a flower"};
+exports.nectarTooltip = function(d){return "Kumuha ng nectar mula sa bulaklak"};
 
 exports.nextLevel = function(d){return "Maligayang pagbati! Natapos mo ang puzzle na ito."};
 
@@ -16766,9 +16766,9 @@ exports.noPathLeft = function(d){return "walang daanan pakaliwa"};
 
 exports.noPathRight = function(d){return "walang daanan pakanan"};
 
-exports.notAtFlowerError = function(d){return "You can only get nectar from a flower."};
+exports.notAtFlowerError = function(d){return "Maaari ka lang kumuha ng nectar mula sa bulaklak."};
 
-exports.notAtHoneycombError = function(d){return "You can only make honey at a honeycomb."};
+exports.notAtHoneycombError = function(d){return "Maaari ka lang gumawa ng honey sa honeycomb."};
 
 exports.numBlocksNeeded = function(d){return "Ang puzzle na ito ay maaaring malutas sa %1 na mga block."};
 
@@ -16792,7 +16792,7 @@ exports.removeStack = function(d){return "alisin ang nakasalansan na mga "+v(d,"
 
 exports.removeSquare = function(d){return "alisin ang parisukat"};
 
-exports.repeatCarefullyError = function(d){return "To solve this, think carefully about the pattern of two moves and one turn to put in the \"repeat\" block.  It's okay to have an extra turn at the end."};
+exports.repeatCarefullyError = function(d){return "Upang masagot ito, pag-isipan ng mabuti ang pattern ng dalawang galaw at isang turn upang mailagay ang \"repeat\" block. Ayos lang na magkaroon ng extra na turn sa huli."};
 
 exports.repeatUntil = function(d){return "ulitin hanggang"};
 
@@ -16802,9 +16802,9 @@ exports.repeatUntilFinish = function(d){return "ulitin hanggang matapos"};
 
 exports.step = function(d){return "Hakbang"};
 
-exports.totalHoney = function(d){return "total honey"};
+exports.totalHoney = function(d){return "kabuuan ng honey"};
 
-exports.totalNectar = function(d){return "total nectar"};
+exports.totalNectar = function(d){return "kabuuan ng nectar"};
 
 exports.turnLeft = function(d){return "kumaliwa"};
 
@@ -16812,19 +16812,19 @@ exports.turnRight = function(d){return "kumanan"};
 
 exports.turnTooltip = function(d){return "Iniikot ako pakaliwa o pakanan ng 90 degrees."};
 
-exports.uncheckedCloudError = function(d){return "Make sure to check all clouds to see if they're flowers or honeycombs."};
+exports.uncheckedCloudError = function(d){return "Siguraduhin na natingnan ang lahat ng mga ulap upang malaman kung ito ay mga bulaklak o mga honeycomb."};
 
-exports.uncheckedPurpleError = function(d){return "Make sure to check all purple flowers to see if they have nectar"};
+exports.uncheckedPurpleError = function(d){return "Siguraduhin na natingnan ang lahat ng purple na bulaklak upang malaman kung ito ay may nectar"};
 
 exports.whileMsg = function(d){return "habang"};
 
 exports.whileTooltip = function(d){return "Ulitin ang mga nakalakip na mga aksyon hanggang ang dulo ay maabot."};
 
-exports.word = function(d){return "Find the word"};
+exports.word = function(d){return "Hanapin ang salita"};
 
 exports.yes = function(d){return "Oo"};
 
-exports.youSpelled = function(d){return "You spelled"};
+exports.youSpelled = function(d){return "Ini-spell mo ang"};
 
 
 },{"messageformat":72}],61:[function(require,module,exports){

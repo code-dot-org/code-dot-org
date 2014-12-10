@@ -12408,7 +12408,7 @@ exports.endGameTooltip = function(d){return "Vége a játéknak."};
 
 exports.finalLevel = function(d){return "Gratulálok! A megoldottad az utolsó feladványt."};
 
-exports.flap = function(d){return "Csap"};
+exports.flap = function(d){return "Csapj"};
 
 exports.flapRandom = function(d){return "Véletlen számút csap"};
 
@@ -12422,11 +12422,11 @@ exports.flapLarge = function(d){return "sokat csap"};
 
 exports.flapVeryLarge = function(d){return "nagyon sokat csap"};
 
-exports.flapTooltip = function(d){return "Flappy felszáll."};
+exports.flapTooltip = function(d){return "Szálljon Flappy felfelé."};
 
 exports.flappySpecificFail = function(d){return "A kódod nem rossz - Csap minden egyes kattintásra. De sokszor kell kattintania, hogy eljusson a célba."};
 
-exports.incrementPlayerScore = function(d){return "nyertes pont"};
+exports.incrementPlayerScore = function(d){return "nőjön eggyel a pontszám"};
 
 exports.incrementPlayerScoreTooltip = function(d){return "Adjon egyet az aktuális játékos pontjaihoz."};
 
@@ -12436,31 +12436,31 @@ exports.no = function(d){return "Nem"};
 
 exports.numBlocksNeeded = function(d){return "Ez a kirakó az elemek 1 %-ával megoldható"};
 
-exports.playSoundRandom = function(d){return "véletlenszerű hang lejátszása"};
+exports.playSoundRandom = function(d){return "játssz le véletlen hangot"};
 
-exports.playSoundBounce = function(d){return "pattanó hang lejátszása"};
+exports.playSoundBounce = function(d){return "játssz le pattogó hangot"};
 
 exports.playSoundCrunch = function(d){return "recsegő hang lejátszása"};
 
-exports.playSoundDie = function(d){return "szomorú hang lejátszása"};
+exports.playSoundDie = function(d){return "játssz le szomorú hangot"};
 
-exports.playSoundHit = function(d){return "reccsenő hang lejátszása"};
+exports.playSoundHit = function(d){return "játssz le reccsenő hangot"};
 
-exports.playSoundPoint = function(d){return "hegyes hang lejátszása"};
+exports.playSoundPoint = function(d){return "játssz le mutató hangot"};
 
-exports.playSoundSwoosh = function(d){return "Swoosh hang lejátszása"};
+exports.playSoundSwoosh = function(d){return "játssz le suhanó hangot"};
 
-exports.playSoundWing = function(d){return "szárny hangjának lejátszása"};
+exports.playSoundWing = function(d){return "játssz le szárcsapás hangot"};
 
-exports.playSoundJet = function(d){return "gázsugár hangjának lejátszása"};
+exports.playSoundJet = function(d){return "játssz le repülő hangot"};
 
-exports.playSoundCrash = function(d){return "roppanás hangjának lejátszása"};
+exports.playSoundCrash = function(d){return "játssz le csattanás hangot"};
 
-exports.playSoundJingle = function(d){return "csilingelő hang lejátszása"};
+exports.playSoundJingle = function(d){return "játssz le csilingelő hangot"};
 
-exports.playSoundSplash = function(d){return "csobbanás hangjának lejátszása"};
+exports.playSoundSplash = function(d){return "játssz le csobbanás hangot"};
 
-exports.playSoundLaser = function(d){return "lézer hangjának lejátszása"};
+exports.playSoundLaser = function(d){return "játssz le lézer hangot"};
 
 exports.playSoundTooltip = function(d){return "Kiválasztott hang lejátszása."};
 
@@ -12468,7 +12468,7 @@ exports.reinfFeedbackMsg = function(d){return "Nyomd meg az \"Próbáld újra\" 
 
 exports.scoreText = function(d){return "Pontszám: "+v(d,"playerScore")};
 
-exports.setBackground = function(d){return "jelenet beállítása"};
+exports.setBackground = function(d){return "jelenet kiválasztása"};
 
 exports.setBackgroundRandom = function(d){return "Jelenet kiválasztása: Véletlen"};
 
@@ -12516,7 +12516,7 @@ exports.setGravityTooltip = function(d){return "A pálya gravitációjának beá
 
 exports.setGround = function(d){return "talaj típusa"};
 
-exports.setGroundRandom = function(d){return "Véletlenszerű talaj beállítása"};
+exports.setGroundRandom = function(d){return "Talaj beállítása: Véletlenszerű"};
 
 exports.setGroundFlappy = function(d){return "Talaj beállítása: Föld"};
 
@@ -12534,7 +12534,7 @@ exports.setGroundTooltip = function(d){return "Beállítja a talaj típusát"};
 
 exports.setObstacle = function(d){return "akadály beállítása"};
 
-exports.setObstacleRandom = function(d){return "akadály véletlenszerű beállítása"};
+exports.setObstacleRandom = function(d){return "akadály beállítása: véletlenszerű"};
 
 exports.setObstacleFlappy = function(d){return "Akadály beállítása: cső"};
 
@@ -12550,7 +12550,7 @@ exports.setObstacleLaser = function(d){return "Akadály beállítása: Lézer"};
 
 exports.setObstacleTooltip = function(d){return "Akadály képének beállítása"};
 
-exports.setPlayer = function(d){return "játékos típusa"};
+exports.setPlayer = function(d){return "karakter beállítása"};
 
 exports.setPlayerRandom = function(d){return "Karakter beállítása: Véletlenszerű"};
 
@@ -12582,7 +12582,7 @@ exports.setPlayerSuperman = function(d){return "Karakter beállítása: Madárem
 
 exports.setPlayerTurkey = function(d){return "Karakter beállítása: Pulyka"};
 
-exports.setPlayerTooltip = function(d){return "Játékos képének beállítása"};
+exports.setPlayerTooltip = function(d){return "Karakter képének beállítása"};
 
 exports.setScore = function(d){return "Pontszám beállítása"};
 
@@ -12636,11 +12636,11 @@ exports.speedVeryFast = function(d){return "Nagyon magas sebesség beállítása
 
 exports.whenClick = function(d){return "Klikkelésre"};
 
-exports.whenClickTooltip = function(d){return "Végrehajtja a lenti műveletet klikkelésre."};
+exports.whenClickTooltip = function(d){return "Hajtsd végre a lenti műveletet klikkelésre."};
 
 exports.whenCollideGround = function(d){return "ha becsapódik a talajba"};
 
-exports.whenCollideGroundTooltip = function(d){return "Végrehajtja a lenti műveletet ha Flappy becsapódik a talajba."};
+exports.whenCollideGroundTooltip = function(d){return "Hajtsd végre a lenti műveletet, ha Flappy becsapódik a talajba."};
 
 exports.whenCollideObstacle = function(d){return "ha akadálynak ütközik"};
 
@@ -12648,7 +12648,7 @@ exports.whenCollideObstacleTooltip = function(d){return "Végrehajtja a lenti ut
 
 exports.whenEnterObstacle = function(d){return "ha átjut egy akadályon"};
 
-exports.whenEnterObstacleTooltip = function(d){return "Végrehajtja a lenti utasítást, ha Flappy átmegy egy akadályon."};
+exports.whenEnterObstacleTooltip = function(d){return "Hajtsd végre a lenti utasítást, ha Flappy átmegy egy akadályon."};
 
 exports.whenRunButtonClick = function(d){return "amikor a játék elindul"};
 

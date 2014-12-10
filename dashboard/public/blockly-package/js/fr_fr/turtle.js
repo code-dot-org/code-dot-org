@@ -14808,7 +14808,7 @@ exports.end = function(d){return "fin"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Le bloc « Répéter » ou « si » doit contenir d'autres blocs pour fonctionner. Assurez-vous que le bloc interne s'insère correctement à l'intérieur du bloc conteneur."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "Le bloc fonctionnel doit avoir d'autres blocs à l'intérieur pour fonctionner."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Le bloc « Fonction » doit contenir d'autres blocs pour fonctionner."};
 
 exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
 
@@ -14822,7 +14822,7 @@ exports.errorRequiredParamsMissing = function(d){return "Create a parameter for 
 
 exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "Essayez de remplacer \"???\" avec un nombre."};
 
 exports.extraTopBlocks = function(d){return "Vous avez des blocs non attachés. Est-ce que vous vouliez les attacher au bloc \"lors du lancement\" ?"};
 
@@ -14910,7 +14910,7 @@ exports.backToPreviousLevel = function(d){return "Retour au niveau précédent"}
 
 exports.saveToGallery = function(d){return "Sauvegarder dans la galerie"};
 
-exports.savedToGallery = function(d){return "Enregistrées dans la Galerie !"};
+exports.savedToGallery = function(d){return "Enregistré dans la galerie !"};
 
 exports.shareFailure = function(d){return "Désolé, nous ne pouvons pas partager ce programme."};
 
@@ -14969,7 +14969,7 @@ exports.catLogic = function(d){return "Logique"};
 
 exports.colourTooltip = function(d){return "Modifie la couleur du crayon."};
 
-exports.createACircle = function(d){return "create a circle"};
+exports.createACircle = function(d){return "créer un cercle"};
 
 exports.createSnowflakeSquare = function(d){return "créer un flocon de type carré"};
 

@@ -16738,7 +16738,7 @@ exports.moveBackward = function(d){return "Flyt bagud"};
 
 exports.moveEastTooltip = function(d){return "Flyt mig én plads øst."};
 
-exports.moveForward = function(d){return "bevæg fremad"};
+exports.moveForward = function(d){return "flyt fremad"};
 
 exports.moveForwardTooltip = function(d){return "Flyt mig en plads frem."};
 
