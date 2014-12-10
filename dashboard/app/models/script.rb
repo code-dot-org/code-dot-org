@@ -59,7 +59,7 @@ class Script < ActiveRecord::Base
   end
 
   def should_be_cached?
-    script_cache.has_key?(id.to_s)
+    Script.script_cache.has_key?(id.to_s)
   end
 
   def starting_level
