@@ -30,7 +30,7 @@ class Script < ActiveRecord::Base
   TWENTY_HOUR_NAME = '20-hour'
 
   def self.twenty_hour_script
-    self.class.get_from_cache(TWENTY_HOUR_ID)
+    self.get_from_cache(TWENTY_HOUR_ID)
   end
 
   def cached?
