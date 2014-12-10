@@ -6,7 +6,7 @@ nav: educate_nav
 # Computer Science Principles #
 
 ## What is CS Principles?
-The College Board has proposed a new AP® course called AP® Computer Science Principles.  The course is designed to be far more than a traditional introduction to programming - it is a rigorous, engaging, and approachable course that explores many of the big, foundational ideas of computing so that all students understand how these concepts are transforming the world we live in. The official AP® exam is set to go live in the 2016-17 school year with an exam and performance-based assessments.
+The College Board has proposed a new course called AP® Computer Science Principles.  This  course is designed to be far more than a traditional introduction to programming - it is a rigorous, engaging, and approachable course that explores many of the big, foundational ideas of computing so that all students understand how these concepts are transforming the world we live in. The official AP® exam is set to go live in the 2016-17 school year with an exam and performance-based assessments.
 
 Find more information about the College Board CS Principles project at: [http://apcsprinciples.org/](http://apcsprinciples.org/)
 
@@ -22,6 +22,7 @@ Code.org is creating a complete curriculum consisting of daily lesson plans, vid
 - Build problem solving skills through the use of computational widgets
 - Experience a blend of online, guided tutorials and open-ended, project-based learning
 - Learn from a diverse cast of role models, from well-known tech celebrities to social innovators who are using CS to tackle society's problems
+- Engage all students in constructing their own understanding of computer science concepts through equitable teaching practices and inquiry-based instructional strategies
 - Prepare for the AP® CS Principles exam through a curriculum intentionally designed around the latest developments in the College Board framework, including built-in preparation for the performance tasks  
 - Use, share, and customize the resources, as they are distributed under a [Creative Commons License](http://creativecommons.org/licenses/by-nc-sa/3.0/).
 
@@ -35,13 +36,14 @@ Several documents describe the overarching themes and direction of the course.
 - A [visual explanation](/files/CSPCurriculumMap.png) of Code.org's CSP curriculum units and overarching themes.  
 - A longer [overview](/files/CSPCurriculumOverview.pdf) of Code.org's CSP curriculum.
 
+<br />
 
 ## Lessons
 
 
 | Link| Unit Description |
 | :------------------:|-----------|
-|  [![binary magic](images/thumb_binaryMagic.png)](/educate/csp/unit1) [Unit 1](/educate/csp/unit1) | **Sending Bits** How do we get a single bit of information from one place to another? This unit explores the technical challenges and questions that arise from the need to transfer information between people and computational devices.| 
+|  [![binary magic](csp/images/thumb_binaryMagic.png "Unit 1")](/educate/csp/unit1) [Unit 1](/educate/csp/unit1) | **Sending Bits** How do we get a single bit of information from one place to another? This unit explores the technical challenges and questions that arise from the need to transfer information between people and computational devices.| 
 |*Coming Soon*| **Algorithms** Build students' problem solving skills through unplugged and computer-based problems. Students are asked to express algorithmic solutions with increasing formality of language to analyze algorithms.|
 |*Coming Soon*| **Programming** Introduces a formal programming language, JavaScript. The programming sequence enables students to write simple programs to be executed in web pages. |
 |*Coming Soon*| **Data** Students will develop an understanding of the nature and structure of data that enables them to ask and answer questions about the data effectively.|
