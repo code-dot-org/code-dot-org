@@ -59,13 +59,7 @@ class Script < ActiveRecord::Base
   end
 
   def should_be_cached?
-    self.id == TWENTY_HOUR_ID ||
-      self.name == TWENTY_HOUR_NAME ||
-      self.name == FROZEN_NAME ||
-      self.name == PLAYLAB_NAME ||
-      self.id == FLAPPY_ID ||
-      self.name == FLAPPY_NAME ||
-      self.name == HOC_NAME
+    script_cache[id.to_s].exists?
   end
 
   def starting_level
