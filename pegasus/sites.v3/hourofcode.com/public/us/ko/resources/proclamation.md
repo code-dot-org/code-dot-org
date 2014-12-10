@@ -1,48 +1,48 @@
 
 
-### Below is a sample resolution supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+### 아래는 컴퓨터과학교육주간 행사를 지원하는 예시 결의안으로, 주요 목표들은 주의원이나 지역국회의원들에 의해 활용될 수 있습니다.
 
   
-[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+[하원의원, 상원의원, 주, 국가 또는 도시 결의안 또는 선언문 ###] – 컴퓨터과학교육주간(Computer Science Education Week)이 컴퓨터과학(정보과학) 교육을 통해 우리 사회를 변화시키는데 매우 중요한 핵심적인 역할을 할 수 있다는 것, 기술적 혁신과 경제적 기회들을 만들어낼 수 있다는 것을 강조하는...;
 
-[HOUSE OR SENATE RESOLUTION ###]
+[하원의원 또는 상원의원 결의안 ###]
 
 [DATE]
 
-Whereas computing technology is an integral part of culture and is transforming how people interact with each other and the world around them;
+컴퓨팅 기술들은, 문화의 집약적인 한 부분이며, 살아가는 삶을 둘러싼 모든 것들과 인터랙티브하게 상호작용할 수 있도록 하면서 사람들을 연결시키고 변화시키고 있습니다;
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+컴퓨터과학(정보과학)은 산업을 변화시키고, 새로운 상업적 영역들을 만들어내고, 모든 과학분야에 혁신을 가져오고, 기존의 경제 영역에서의 생산성을 강화시키고 있습니다;
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+컴퓨터과학의 영역은 우리의 경제적 정보기술을 뒷받침하고 있으며, 미국의 경제적 산출물들에 매우 중요한 공헌을 하고 있습니다;
 
-Whereas the field of computer science is a foundational science for the digital age;
+컴퓨터과학의 영역들은 디지털 세대의 기초/핵심 과학 역할을 합니다;
 
-Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
+정보 기술 분야는 새로운 혁신 기술들의 연구와 개발을 통한 경제적 회복에 독특한 위치를 차지하고 있습니다;
 
-Whereas the outlook for computer science jobs is bright with one in every two STEM jobs in the country in computing occupations;
+컴퓨터과학 분야의 관점은 미국의 STEM 관련 일자리들과, 컴퓨팅 직업들에서 유망합니다;
 
-Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
+학생들에게 높은 수준의 컴퓨터과학 활동들에 참여할 수 있도록 하는 기회들을 주는 것은, 전체 삶을 살아가는데 있어서 매우 중요한 생각하는 방법과 기술들을 배울 수 있는 풍부한 기회들을 주는 것입니다;
 
-Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
+모든 학생들은 컴퓨터과학(정보과학) 교육에 대해 준비할만한 자격이 있습니다. 수준 높은 선생님, 컴퓨터과학기술, 나이에 따른 교육과정으로 컴퓨터과학(정보과학)을 초등학교부터 중고등학교 수준까지 교육받을 수 있도록 하는 것이 포함되어야 합니다.
 
-Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
+컴퓨터과학(정보과학) 교육은 충분히 논의되어야 합니다. 컴퓨터과학(정보과학) 수업 이수를 졸업 요건으로 포함시키는 것과 컴퓨터과학(정보과학) 선생님들에게 보다 전문적인 내용들을 제공하는 것등이 포함되어야 합니다.
 
-Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
+컴퓨터과학교육주간(Computer Science Education Week) 동안에 Hour of Code를 참여하는 것은 컴퓨터과학(정보과학)의 영역을 보다 이해하기 쉽게 배울 수 있으며, 더 많은 학생들이 컴퓨터과학에 대해서 더 많이 배울 수 있도록 격려할 수 있습니다.
 
-Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
+컴퓨터과학의 영역들을 논의하는데에는 중요한 가치로서의 문제들도 있습니다. 더 많은 여성들과 더 많은 소수자들을 포함한 다양한 수준의 다양한 영역의 사람들이 매력을 느낄 수 있도록 해야합니다;
 
-Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
+컴퓨터과학 분야의 최초의 여성인 그레이스 머레이 호퍼(Grace Murray Hopper)는 새로운 프로그래밍 언어를 만들어 내는데 공헌하였으며, 컴퓨터과학 분야의 수 많은 성과들을 만들어내는 기초가 된 컴퓨터 시스템의 기초 표준들을 만들어내는 선구자 역할을 하였습니다; 그리고
 
-Whereas the week of December 8, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
+이번 12월8일은 그레이스 호퍼의 생일을 기리며, 컴퓨터과학교육주간이 설계되었습니다; 이제, 그렇기 때문에, 이렇게 되어야 합니다.
 
-Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
+해결방안, [하원의원, 상원의원, 주정부, 지역, 시, 학교 위원회]는 --
 
-(1) supports the designation of Computer Science Education Week (December 8-14, 2014);
+(1) 컴퓨터과학교육주간(2014년 12월8일-14일)의 지정을 지지합니다.
 
-(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
+(2) 학교, 교육자, 학부모와 정책입안자들이 컴퓨터과학교육주간에 학생들이 Hour of Code 행사에 참여하도록 하는 것을 장려합니다;
 
-(3) encourages schools, teachers, researchers, universities, business leaders and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+(3) 학교, 선생님, 연구자, 대학, 비즈니스 리더들과 정책입안자들이 과정/단계/방법들을 생각해내고, 선생님들이 첨단의 전문적인 연수들을 받고 컴퓨터과학(정보과학)에 대한 지속적인 학습경험들을 모든 교육 단계와 수준에서 제공할 수 있도록 하여, 학생들이 컴퓨터과학(정보과학) 기초/개념/원리들을 배울 수 있도록 하는 것을 장려합니다.
 
-(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
+(4) 다른 수학이나 과학과 마찬가지로 컴퓨터과학(정보과학) 수업들도, 졸업 이수 조건으로 반영 할 수 있도록, 장애 요건들을 제거해 주기를 정책입안자들에게 요청합니다.
 
-(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+(5) 교육받을 수 있는 많은 기회들을 권장합니다. 현재 운영되고 있는 교육 프로그램들에서도 여성들과 소수자들이 컴퓨터과학 분야에 참여할 수 있도록 하는 것을 포함합니다.

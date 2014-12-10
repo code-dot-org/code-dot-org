@@ -18,30 +18,30 @@ Fale aos seus amigos sobre o #HoraDoCódigo.
 
 ## 2. Peça para sua escola oferecer uma Hora do Código
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](/resources/hoc-one-pager.pdf) to your principal.
+[Envie este e-mail](<%= hoc_uri('/resources#email') %>) ou [este folheto](/resources/hoc-one-pager.pdf) para seu diretor.
 
 <% else %>
 
 ## 2. Peça para sua escola oferecer uma Hora do Código
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](/resources/hoc-one-pager.pdf) this handout</a> to your principal.
+[Envie este e-mail](<%= hoc_uri('/resources#email') %>) ou entregue [este folheto](/resources/hoc-one-pager.pdf) </a> para seu diretor.
 
 <% end %>
 
 ## 3. Faça uma doação generosa
 
-[Donate to our crowdfunding campaign.](http://<%= codeorg_url() %>/donate) To teach 100 million children, we need your support. We just launched the [largest education crowdfunding campaign](http://<%= codeorg_url() %>/donate) in history. *Every* dollar will be matched [donors](http://<%= codeorg_url() %>/about/donors), doubling your impact.
+[Doe para nossa campanha de "crowdfunding".](http://<%= codeorg_url() %>/donate) Para ensinar 100 milhões de crianças, precisamos do seu apoio. Acabamos de lançar a [maior campanha de crowdfunding para educação](http://<%= codeorg_url() %>/donate) da história. Para *cada* dólar doado, nossos principais [doadores](http://<%= codeorg_url() %>/about/donors) darão mais um, dobrando o impacto da sua contribuição.
 
 ## 4. Peça para seu empregador participar
 
-[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf).
+[Envie este e-mail](<%= hoc_uri('/resources#email') %>) para seu gerente ou CEO. Ou [entregue a eles este folheto](http://hourofcode.com/resources/hoc-one-pager.pdf).
 
 ## 5. Promova a Hora do Código em sua comunidade
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+Reúna um grupo local — clube de escoteiros, igreja, universidade, grupo de veteranos ou sindicato. Ou sedie uma "festa dos blocos" da Hora do Código na sua vizinhança.
 
 ## 6. Peça a um representante político para apoiar a Hora do Código
 
-[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Envie este e-mail](<%= hoc_uri('/resources#politicians') %>) para seu prefeito, Câmara municipal ou conselho escolar. Ou [entregue a eles este folheto](http://hourofcode.com/resources/hoc-one-pager.pdf) e convide-os para visitar sua escola.
 
 <%= view 'popup_window.js' %>
