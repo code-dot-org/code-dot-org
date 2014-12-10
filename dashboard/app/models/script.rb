@@ -53,14 +53,14 @@ class Script < ActiveRecord::Base
     stage_by_id = cached(:get_stage_by_id) do
       get_cached.stages.index_by(&:id)
     end
-    stage_by_id[id]
+    stage_by_id[id.to_i]
   end
 
   def get_script_level_by_id(id)
     sl_by_id = cached(:get_script_level_by_id) do
       get_cached.script_levels.index_by(&:id)
     end
-    sl_by_id[id]
+    sl_by_id[id.to_i]
   end
 
   def self.get_from_cache(id)
@@ -129,7 +129,9 @@ class Script < ActiveRecord::Base
   end
 
   def get_script_level_by_stage_and_position(stage_position, puzzle_position)
-    self.stages.detect{|stage|stage.position == stage_position}.script_levels.detect{|sl|sl.position == puzzle_position}
+    (self.stages.detect{|stage|stage.position == stage_position}.try(:script_levels).try(:detect){|sl|sl.position == puzzle_position}).tap do |s|
+      raise ActiveRecord::RecordNotFound.new("Couldn't find ScriptLevel at=#{stage_position}/#{puzzle_position}") unless s
+    end
   end
 
   def get_script_level_by_chapter(chapter)

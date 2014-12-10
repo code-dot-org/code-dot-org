@@ -21,6 +21,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test "should return position when assigned to stage" do
     @script_level.update(stage: @stage)
+    @script_level.script.stages << @stage
     @script_level.move_to_bottom
     @script_level.update(game_chapter: 2)
     assert_equal 1, @script_level.stage_or_game_position
