@@ -240,11 +240,12 @@
   dashboard_action_required: obrigatório
   dashboard_navigation_home_page: Página inicial do professor
   dashboard_navigation_section_student_progress: Contas e progresso do aluno
-  dashboard_navigation_section_teacher_progress: Your Course Progress
+  dashboard_navigation_section_teacher_progress: Seu progresso no curso
   dashboard_navigation_section_lesson_plans: Planos e recursos da aula
-  dashboard_navigation_section_community: Help and Community
-  dashboard_navigation_section_pd: Professional Development
-  dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
+  dashboard_navigation_section_community: Ajuda e Comunidade
+  dashboard_navigation_section_pd: Desenvolvimento profissional
+  dashboard_navigation_section_speakers: Ciência da computação <br/> Palestrantes
+    convidados
   dashboard_navigation_all_sections: Contas e progresso do aluno
   dashboard_navigation_view_progress: Exibir progresso
   dashboard_navigation_add_students: Adicionar alunos
@@ -433,8 +434,8 @@
   thinkersmith2_name: Bugigangas binárias
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Pedra, papel, tesoura
-  hourofcode_name: Placeholder for new code.org/hoc
-  playlab_name: Placeholder for code.org/s/playlab
+  hourofcode_name: Espaço reservado para um novo code.org/hoc
+  playlab_name: Laboratório
   codeorg_gradelevel: De 4 a 104 anos
   codeintl_gradelevel: De 4 a 104 anos
   thinkersmithspanish_gradelevel: Todas as idades
@@ -485,14 +486,14 @@
   khanfr_platformtext: Navegadores Web modernos
   khanpl_platformtext: Navegadores Web modernos
   tynker_platformtext: Navegadores Web modernos
-  scratch_platformtext: TODOS os navegadores
+  scratch_platformtext: Navegadores Web apenas para desktop (e não para tablets)
   lightbot_platformtext: TODOS os navegadores e iOS, Android ou console de jogos
   thinkersmith_platformtext: Offline
   condcards_platformtext: Offline
   lightbotintl_platformtext: iOS, Android (ou navegador Web)
   codehs_platformtext: Navegadores modernos (a continuação do curso é paga)
   codecademy_platformtext: Navegadores Web modernos. Aplicativos para iOS, Android
-  codecombat_platformtext: Navegadores Web modernos
+  codecombat_platformtext: Navegadores Web modernos (a continuação do curso é paga)
   codemonkey_platformtext: Navegadores Web modernos
   codeavengers_platformtext: Navegadores Web modernos
   processing_platformtext: Navegadores Web modernos
@@ -568,10 +569,10 @@
     representar informações
   kodableunplugged_shortdescription: Um divertido exercício offline
   projguts_shortdescription: Conheça a modelagem e a simulação com pedra/papel/tesoura
-  hourofcode_shortdescription: Placeholder for new code.org/hoc
+  hourofcode_shortdescription: Espaço reservado para um novo code.org/hoc
   frozen_shortdescription: Use a programação para explorar a mágica e a beleza do
     gelo com Anna e Elsa.
-  playlab_shortdescription: Placeholder for code.org/s/playlab
+  playlab_shortdescription: Crie uma história ou um jogo no Laboratório!
   codeorg_longdescription: Aprenda os conceitos básicos de Ciência da Computação com
     a programação de arrastar e soltar. Este tutorial se parece com um jogo, é autoexplicativo
     e conta com a participação de Bill Gates, Mark Zuckerberg, Angry Birds e Plants
@@ -693,11 +694,11 @@
     de aplicativos para jogar e compartilhar. Orientações simples permitem que até
     as crianças menores programem JavaScript de verdade, e quanto mais avançado você
     estiver, mais longe irá.
-  makegameswithus_longdescription: Aprenda a programar ao fazer um jogo para iPhone
-    usando uma nova linguagem de programação ideal para iniciantes, chamada Swift!
-    Crie um jogo de ação inspirado em Pokémon e programe para ensinar novos movimentos
-    aos seus monstros. Você aprenderá a usar variáveis, métodos e objetos para ajudar
-    seu monstro a vencer!
+  makegameswithus_longdescription: 'Aprenda a programar fazendo um jogo para iPhone
+    com uma das mais recentes linguagens de programação, ideal para iniciantes: a
+    Swift! Crie um jogo de ação inspirado no Pok&eacute;mon e programe para ensinar
+    novos movimentos a sua criatura. Você aprenderá a usar variáveis, métodos e objetos
+    para ajudar sua criatura a vencer!'
   touchdevelop_longdescription: 'O editor táctil o ajudará a criar arte de pixels,
     resolver o desafio do urso ou fazer seu próprio jogo do pássaro saltador. '
   appinventor_longdescription: Tutoriais em vídeo rápidos e divertidos o ajudam a
@@ -722,7 +723,7 @@
     a modelagem e a simulação funcionam, com um grupo de alunos jogando diferentes
     versões do jogo Pedra/Papel/Tesoura, e a ver os resultados como diferentes experiências
     de modelagem.
-  hourofcode_longdescription: Placeholder for new code.org/hoc
+  hourofcode_longdescription: Espaço reservado para um novo code.org/hoc
   frozen_longdescription: Vamos usar programação para explorar a magia e a beleza
     do gelo junto com Anna e Elsa. Você vai criar flocos de neve e padrões enquanto
     patina no gelo e cria um país das maravilhas congelante que pode compartilhar
