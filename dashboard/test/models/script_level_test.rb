@@ -56,6 +56,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     # custom script
     sl = @script_level
     sl.update(stage: @stage)
+    @script_level.script.stages << @stage
     sl.move_to_bottom
     @script_level2.update(stage: @stage)
     @script_level2.move_to_bottom
