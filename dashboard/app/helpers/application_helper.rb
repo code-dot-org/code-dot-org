@@ -130,26 +130,8 @@ module ApplicationHelper
     
     # playlab/studio and artist/turtle can have images
     if level_source.try(:level_source_image).try(:image)
-      url_for(controller: "level_sources", action: "generate_image", id: level_source.id, only_path: false)
-    elsif app == Game::FLAPPY || app == Game::BOUNCE || app == Game::STUDIO
-      asset_url "#{app}_sharing_drawing.png"
-    else
-      asset_url 'sharing_drawing.png'
-    end
-  end
-
-  def original_image_url(params)
-    level_source = params[:level_source]
-    if level_source
-      app = level_source.level.game.app
-    else
-      app = params[:app]
-    end
-    
-    # playlab/studio and artist/turtle can have images
-    if image = level_source.try(:level_source_image).try(:image)
       if level_source.level_source_image.s3?
-        level_source.level_source_image.s3_url
+        level_source.level_source_image.s3_framed_url
       else
         url_for(controller: "level_sources", action: "generate_image", id: level_source.id, only_path: false)
       end
@@ -157,6 +139,14 @@ module ApplicationHelper
       asset_url "#{app}_sharing_drawing.png"
     else
       asset_url 'sharing_drawing.png'
+    end
+  end
+
+  def original_image_url(level_source)
+    if level_source.try(:level_source_image).try(:s3?)
+      level_source.level_source_image.s3_url
+    else
+      original_image_level_source_path(level_source.id)
     end
   end
 

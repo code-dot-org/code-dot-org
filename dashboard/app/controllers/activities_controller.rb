@@ -77,6 +77,7 @@ class ActivitiesController < ApplicationController
                                     trophy_updates: @trophy_updates,
                                     solved?: solved,
                                     level_source: @level_source.try(:hidden) ? nil : @level_source,
+                                    level_source_image: @level_source_image,
                                     activity: @activity,
                                     new_level_completed: @new_level_completed,
                                     share_failure: share_failure)

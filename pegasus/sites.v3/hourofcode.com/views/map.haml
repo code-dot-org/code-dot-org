@@ -19,11 +19,11 @@
       .col-xs-4
         .form-group
           %div
-            %input#geocomplete.form-control{name: "geocomplete", placeholder: "Search for Hour of Code events", type: "text"}/
+            %input#geocomplete.form-control{name: "geocomplete", placeholder: hoc_s(:map_search_placeholder), type: "text"}/
       .col-xs-8
         .form-group
-          %button#btn-submit.btn.btn-default{type: "submit"} Search
-          %button#btn-reset.btn.btn-link{type: "reset"} Reset
+          %button#btn-submit.btn.btn-default{type: "submit"} hoc_s(:map_search_search)
+          %button#btn-reset.btn.btn-link{type: "reset"} hoc_s(:map_search_reset)
 .row
   .col-xs-10.col-sm-12
     #gmap{style: 'width: 100%; max-width: 1024px;'}
