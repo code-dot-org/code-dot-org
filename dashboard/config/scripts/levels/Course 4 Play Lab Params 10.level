@@ -58,7 +58,18 @@
             </block>
           </next>
         </block>
-        <block type="studio_whenSpriteCollided">
+        <block type="studio_repeatForever" x="20" y="120">
+          <statement name="DO">
+            <block type="controls_if" inline="false">
+              <value name="IF0">
+                <block type="logic_compare" inline="true">
+                  <title name="OP">GT</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="studio_whenSpriteCollided" x="20" y="250">
           <title name="SPRITE1">0</title>
           <title name="SPRITE2">anything</title>
           <next>
@@ -74,7 +85,7 @@
             </block>
           </next>
         </block>
-        <block type="studio_whenSpriteCollided">
+        <block type="studio_whenSpriteCollided" x="20" y="350">
           <title name="SPRITE1">1</title>
           <title name="SPRITE2">anything</title>
           <next>
@@ -89,17 +100,6 @@
               </value>
             </block>
           </next>
-        </block>
-        <block type="studio_repeatForever">
-          <statement name="DO">
-            <block type="controls_if" inline="false">
-              <value name="IF0">
-                <block type="logic_compare" inline="true">
-                  <title name="OP">GT</title>
-                </block>
-              </value>
-            </block>
-          </statement>
         </block>
         <block type="procedures_defnoreturn" uservisible="false">
           <mutation>
