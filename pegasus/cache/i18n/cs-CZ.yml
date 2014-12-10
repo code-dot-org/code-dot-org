@@ -54,7 +54,7 @@
   go: Spustit
   thank_you_: Díky!
   congratulations: Blahopřejeme!
-  congratulations_on_completing_hoc: Gratulujeme k dokončení jedné Hodiny kódu.
+  congratulations_on_completing_hoc: Gratulujeme k dokončení jedné Hodiny kódu
   get_a_certificate_of_achievement: Získej osvědčení o účasti
   enter_valid_email: Prosím zadej platnou emailovou adresu
   get_a_certificate_message: Zašleme ti certifikát a informace o tom, jak se <a href='/learn/beyond'>Učit
@@ -137,7 +137,7 @@
   studiobar_teacher_body: Zaveďte studio programování (Code Studio) do vaší třídy
   studiobar_frozen_title: Hodina kódu
   studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
-  studiobar_donate_title: Donate
+  studiobar_donate_title: Přispějte
   studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Jsem student
   contact_form_topic_parent: Jsem rodič
@@ -233,6 +233,12 @@
   dashboard_action_done: Hotovo
   dashboard_action_required: požadováno
   dashboard_navigation_home_page: Učitelská domovská stránka
+  dashboard_navigation_section_student_progress: Studentské účty a pokrok
+  dashboard_navigation_section_teacher_progress: Your Course Progress
+  dashboard_navigation_section_lesson_plans: Plány hodin a zdroje
+  dashboard_navigation_section_community: Help and Community
+  dashboard_navigation_section_pd: Professional Development
+  dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
   dashboard_navigation_all_sections: Studentské účty a pokrok
   dashboard_navigation_view_progress: Zobrazit průběh
   dashboard_navigation_add_students: Přidat studenty
@@ -347,7 +353,7 @@
     z těchto typů přihlášení <b>obrázek, slovo nebo e-mail</b> budete chtít vybrat
     pro vaši skupinu.
   dashboard_faq: Často kladené dotazy
-  code_hoc_coming: Blíží se Hodina Kódu - 8.-14. prosince!
+  code_hoc_coming: Hodina kód je zde - prosinec 8-14!
   code_sign_up: Přihlaste se k účasti během týdne vzdělávání CS
   learn_more: Další informace
   hoc2014_try_new_tutorials: Vyzkoušejte naše nové návody pro Hodinu Kódu
@@ -384,6 +390,10 @@
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Úvod do JavaScriptu
   khanes_name: Úvod do JavaScriptu
+  khanpt_name: Úvod do JavaScriptu
+  khanhe_name: Úvod do JavaScriptu
+  khanfr_name: Úvod do JavaScriptu
+  khanpl_name: Úvod do JavaScriptu
   tynker_name: Vytvořte si vlastní hru
   scratch_name: Buďte kreativní s programováním
   lightbot_name: Lightbot
@@ -412,12 +422,17 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Kámen, nůžky, papír
-  frozen_gradelevel: Věk 8 +
+  hourofcode_name: Placeholder for new code.org/hoc
+  playlab_name: Play Lab
   codeorg_gradelevel: Stáří 4-104
   codeintl_gradelevel: Stáří 4-104
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Druhý stupeň a starší
   khanes_gradelevel: Druhý stupeň a starší
+  khanpt_gradelevel: Druhý stupeň a starší
+  khanhe_gradelevel: Druhý stupeň a starší
+  khanfr_gradelevel: Druhý stupeň a starší
+  khanpl_gradelevel: Druhý stupeň a starší
   tynker_gradelevel: Stáří 5-13
   scratch_gradelevel: Věk 8 +
   lightbot_gradelevel: Všechny věkové kategorie
@@ -446,13 +461,19 @@
   thinkersmith2_gradelevel: Věk 8 +
   kodableunplugged_gradelevel: Stáří 8-13
   projguts_gradelevel: Stáří 10-13
-  frozen_platformtext: Moderní prohlížeče + tablety
+  hourofcode_gradelevel: Stáří 4-104
+  frozen_gradelevel: Věk 8 +
+  playlab_gradelevel: Stáří 4-104
   codeorg_platformtext: Moderní prohlížeče, smartphony, tablety
   codeintl_platformtext: Moderní prohlížeče, smartphony, tablety
   thinkersmithspanish_platformtext: Unplugged
   khan_platformtext: Moderní webové prohlížeče
   khanes_platformtext: Moderní webové prohlížeče
-  tynker_platformtext: Moderní prohlížeče. (Následující kurz vyžaduje $$)
+  khanpt_platformtext: Moderní webové prohlížeče
+  khanhe_platformtext: Moderní webové prohlížeče
+  khanfr_platformtext: Moderní webové prohlížeče
+  khanpl_platformtext: Moderní webové prohlížeče
+  tynker_platformtext: Moderní webové prohlížeče
   scratch_platformtext: VŠECHNY prohlížeče
   lightbot_platformtext: VŠECHNY prohlížeče, iOS, Android nebo herní konzole
   thinkersmith_platformtext: Unplugged
@@ -480,13 +501,18 @@
   thinkersmith2_platformtext: Unplugged
   kodableunplugged_platformtext: Unplugged
   projguts_platformtext: Unplugged
-  frozen_shortdescription: Připojme se pomocí kódu k Anně a Else, které zkoumají kouzlo
-    a krásu ledu.
+  hourofcode_platformtext: Moderní prohlížeče, smartphony, tablety
+  frozen_platformtext: Moderní prohlížeče + tablety
+  playlab_platformtext: Moderní prohlížeče, smartphony, tablety
   codeorg_shortdescription: Naučte se programovat s Markem Zuckerbergem a Angry Birds!
   codeintl_shortdescription: Naučte se programovat s Markem Zuckerbergem a Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Naučte se kreslit v JavaScriptu
   khanes_shortdescription: Naučte se kreslit v JavaScriptu
+  khanpt_shortdescription: Naučte se kreslit v JavaScriptu
+  khanhe_shortdescription: Naučte se kreslit v JavaScriptu
+  khanfr_shortdescription: Naučte se kreslit v JavaScriptu
+  khanpl_shortdescription: Naučte se kreslit v JavaScriptu
   tynker_shortdescription: Naučte se programovat řešením zábavných hádanek a vyrobte
     si vlastní mobilní hry.
   scratch_shortdescription: Vytvořte interaktivní hry, příběhy a animace.
@@ -526,9 +552,10 @@
   kodableunplugged_shortdescription: Zábavné unplugged cvičení
   projguts_shortdescription: Vyzkoušejte modelování a simulaci pomocí kámen, nůžky,
     papír
-  frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
-    magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
-    and make a winter wonderland that you can then share with your friends!
+  hourofcode_shortdescription: Placeholder for new code.org/hoc
+  frozen_shortdescription: Připojme se pomocí kódu k Anně a Else, které zkoumají kouzlo
+    a krásu ledu.
+  playlab_shortdescription: Create a story or make a game with Play Lab!
   codeorg_longdescription: Nauč se základní pojmy informatiky pomocí tahání myší.
     Je to hravá, samostatně vedená výuka, v jejíchž videolekcích v hlavních rolích
     vystupují hvězdy jako Bill Gates, Mark Zuckerberg, Angry Birds a Plants vs. Zombies.
@@ -545,6 +572,14 @@
   khan_longdescription: Naučte se základy programování v jazyce JavaScript při vytváření
     zábavných kreseb s tvým vlastním programem. Spolupracuj ve třídě nebo udělej sám!
   khanes_longdescription: Naučte se základy programování v jazyce JavaScript při vytváření
+    zábavných kreseb s tvým vlastním programem. Spolupracuj ve třídě nebo udělej sám!
+  khanpt_longdescription: Naučte se základy programování v jazyce JavaScript při vytváření
+    zábavných kreseb s tvým vlastním programem. Spolupracuj ve třídě nebo udělej sám!
+  khanhe_longdescription: Naučte se základy programování v jazyce JavaScript při vytváření
+    zábavných kreseb s tvým vlastním programem. Spolupracuj ve třídě nebo udělej sám!
+  khanfr_longdescription: Naučte se základy programování v jazyce JavaScript při vytváření
+    zábavných kreseb s tvým vlastním programem. Spolupracuj ve třídě nebo udělej sám!
+  khanpl_longdescription: Naučte se základy programování v jazyce JavaScript při vytváření
     zábavných kreseb s tvým vlastním programem. Spolupracuj ve třídě nebo udělej sám!
   tynker_longdescription: Vytvoř své vlastní hry a sdílej je s přáteli! Řeš zábavné
     programovací hádanky a na každém levelu se nauč programovací pojmy. Přizpůsob
@@ -649,6 +684,13 @@
   projguts_longdescription: Tato "unplugged" aktivita bez počítače pomáhá žákům naučit
     se, jak modelovat a simulovat při skupinovém hraní různých verzí hry kámen / nůžky
     / papír a umožní vidět výsledky jako různé modelování experimentů.
+  hourofcode_longdescription: Placeholder for new code.org/hoc
+  frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
+    magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
+    and make a winter wonderland that you can then share with your friends!
+  playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
+    pirates, zombies, ninjas, and many more characters move, make sounds, score points,
+    and even throw fireballs!
   codeorg_beyond_name: Úvod do informatiky (2. stupeň ZŠ)
   khan_beyond_name: Nauč se programovat počítač
   tynker_beyond_name: Nauč se programovat doma

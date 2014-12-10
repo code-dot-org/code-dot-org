@@ -236,6 +236,12 @@
   dashboard_action_done: Bitti
   dashboard_action_required: gerekli
   dashboard_navigation_home_page: Öğretmen Ana Sayfa
+  dashboard_navigation_section_student_progress: Öğrenci hesapları ve ilerleme
+  dashboard_navigation_section_teacher_progress: Your Course Progress
+  dashboard_navigation_section_lesson_plans: Ders planları ve kaynaklar
+  dashboard_navigation_section_community: Help and Community
+  dashboard_navigation_section_pd: Professional Development
+  dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
   dashboard_navigation_all_sections: Öğrenci hesapları ve ilerleme
   dashboard_navigation_view_progress: İlerlemeyi Görüntüle
   dashboard_navigation_add_students: Öğrenci EKle
@@ -393,6 +399,10 @@
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: JavaScript'e giriş
   khanes_name: JavaScript'e giriş
+  khanpt_name: JavaScript'e giriş
+  khanhe_name: JavaScript'e giriş
+  khanfr_name: JavaScript'e giriş
+  khanpl_name: JavaScript'e giriş
   tynker_name: Kendi oyununu oluştur
   scratch_name: Kodlama ile yaratıcı olun
   lightbot_name: Lightbot
@@ -421,12 +431,17 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Taş,Kağıt, Makas
-  frozen_gradelevel: 8 + Yaş grubu
+  hourofcode_name: Placeholder for new code.org/hoc
+  playlab_name: Play Lab
   codeorg_gradelevel: 4-104 Yaş
   codeintl_gradelevel: 4-104 Yaş
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Ortaokul +
   khanes_gradelevel: Ortaokul +
+  khanpt_gradelevel: Ortaokul +
+  khanhe_gradelevel: Ortaokul +
+  khanfr_gradelevel: Ortaokul +
+  khanpl_gradelevel: Ortaokul +
   tynker_gradelevel: 5-13 yaş grubu
   scratch_gradelevel: 8 + Yaş grubu
   lightbot_gradelevel: Her yaştan
@@ -455,13 +470,19 @@
   thinkersmith2_gradelevel: 8 + Yaş grubu
   kodableunplugged_gradelevel: 8-13 yaş grubu
   projguts_gradelevel: 10-13 yaş grubu
-  frozen_platformtext: Modern tarayıcılar + Tablet
+  hourofcode_gradelevel: 4-104 Yaş
+  frozen_gradelevel: 8 + Yaş grubu
+  playlab_gradelevel: 4-104 Yaş
   codeorg_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
   codeintl_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
   thinkersmithspanish_platformtext: İnternetsiz
   khan_platformtext: Modern Web tarayıcıları
   khanes_platformtext: Modern Web tarayıcıları
-  tynker_platformtext: Modern tarayıcılar.(Kursu takip etmek ücretlidir.)
+  khanpt_platformtext: Modern Web tarayıcıları
+  khanhe_platformtext: Modern Web tarayıcıları
+  khanfr_platformtext: Modern Web tarayıcıları
+  khanpl_platformtext: Modern Web tarayıcıları
+  tynker_platformtext: Modern Web tarayıcıları
   scratch_platformtext: BÜTÜN tarayıcılar
   lightbot_platformtext: BÜTÜN tarayıcılar ve IOS, Android veya oyun konsolu
   thinkersmith_platformtext: İnternetsiz
@@ -489,13 +510,18 @@
   thinkersmith2_platformtext: İnternetsiz
   kodableunplugged_platformtext: İnternetsiz
   projguts_platformtext: İnternetsiz
-  frozen_shortdescription: Buzun büyüsü ve güzelliğini keşfetmek için Anna ve Elsa'ya
-    katılıp kodlama yapalım.
+  hourofcode_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
+  frozen_platformtext: Modern tarayıcılar + Tablet
+  playlab_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
   codeorg_shortdescription: Mark Zuckerberg ve Angry Birds ile kodlama öğrenin!
   codeintl_shortdescription: Mark Zuckerberg ve Angry Birds ile kodlama öğrenin!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: JavaScript içinde çizmeyi öğrenin
   khanes_shortdescription: JavaScript içinde çizmeyi öğrenin
+  khanpt_shortdescription: JavaScript içinde çizmeyi öğrenin
+  khanhe_shortdescription: JavaScript içinde çizmeyi öğrenin
+  khanfr_shortdescription: JavaScript içinde çizmeyi öğrenin
+  khanpl_shortdescription: JavaScript içinde çizmeyi öğrenin
   tynker_shortdescription: Eğlenceli bulmacalar çözerek kodlamayı öğrenin ve kendi
     mobil oyununuz oluşturun.
   scratch_shortdescription: İnteraktif oyunlar,hikayeler ve animasyonlar yaratın.
@@ -535,9 +561,10 @@
     nasıl gösterdiğini öğrenin
   kodableunplugged_shortdescription: Bilgisayarsız eğlenceli bir egzersiz
   projguts_shortdescription: Taş/Kağıt/Makas kullanarak modelleme ve simulasyon deneyin
-  frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
-    magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
-    and make a winter wonderland that you can then share with your friends!
+  hourofcode_shortdescription: Placeholder for new code.org/hoc
+  frozen_shortdescription: Buzun büyüsü ve güzelliğini keşfetmek için Anna ve Elsa'ya
+    katılıp kodlama yapalım.
+  playlab_shortdescription: Create a story or make a game with Play Lab!
   codeorg_longdescription: Learn the basic concepts of Computer Science with drag
     and drop programming. This is a game-like, self-directed tutorial starring video
     lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
@@ -553,6 +580,14 @@
   khan_longdescription: Kodlamayla eğlenceli çizimler oluştururken JavaScript dilinin
     temellerini öğrenin. Kendi kendinize ya da sınıfınızla birlikte yapabilirsiniz!
   khanes_longdescription: Kodlamayla eğlenceli çizimler oluştururken JavaScript dilinin
+    temellerini öğrenin. Kendi kendinize ya da sınıfınızla birlikte yapabilirsiniz!
+  khanpt_longdescription: Kodlamayla eğlenceli çizimler oluştururken JavaScript dilinin
+    temellerini öğrenin. Kendi kendinize ya da sınıfınızla birlikte yapabilirsiniz!
+  khanhe_longdescription: Kodlamayla eğlenceli çizimler oluştururken JavaScript dilinin
+    temellerini öğrenin. Kendi kendinize ya da sınıfınızla birlikte yapabilirsiniz!
+  khanfr_longdescription: Kodlamayla eğlenceli çizimler oluştururken JavaScript dilinin
+    temellerini öğrenin. Kendi kendinize ya da sınıfınızla birlikte yapabilirsiniz!
+  khanpl_longdescription: Kodlamayla eğlenceli çizimler oluştururken JavaScript dilinin
     temellerini öğrenin. Kendi kendinize ya da sınıfınızla birlikte yapabilirsiniz!
   tynker_longdescription: A collection of 8 fun activities for children of all ages
     to try programming. Solve a series of simple puzzles to help Pixel the puppy reach
@@ -659,6 +694,13 @@
   projguts_longdescription: This "unplugged" activity helps students learn how modeling
     and simulation works by having a group of students play different versions of
     the Rock / Paper / Scissors game, and see the results as different modeling experiments.
+  hourofcode_longdescription: Placeholder for new code.org/hoc
+  frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
+    magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
+    and make a winter wonderland that you can then share with your friends!
+  playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
+    pirates, zombies, ninjas, and many more characters move, make sounds, score points,
+    and even throw fireballs!
   codeorg_beyond_name: Bilgisayar Bilimlerine giriş (K-8. sınıflar)
   khan_beyond_name: Bilgisayar programlama öğrenin
   tynker_beyond_name: Evde programlama öğren

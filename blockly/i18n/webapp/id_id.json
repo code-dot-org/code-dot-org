@@ -22,10 +22,10 @@
   "repeatForeverTooltip": "Jalankan tindakan di blok ini secara berulang selagi aplikasi berjalan.",
   "shareWebappTwitter": "Lihatlah aplikasi yang saya buat. Saya membuatnya sendiri dengan @codeorg",
   "shareGame": "Bagikan aplikasi Anda:",
-  "stepIn": "Step in",
-  "stepOver": "Step over",
-  "stepOut": "Step out",
+  "stepIn": "Masuk",
+  "stepOver": "Melewati",
+  "stepOut": "Keluar",
   "turnBlack": "hitamkan",
-  "turnBlackTooltip": "Turns the screen black.",
+  "turnBlackTooltip": "Membuat layar berwarna hitam.",
   "yes": "Ya"
 }
