@@ -40,6 +40,8 @@ Smiley, Marius Moga, Elena Gheorge, Dan Chisu, Daniel Buzdugan, Mihai Gainusa, C
 
 Pentru profesorii care organizeaza Hour of Code in scoli iata cateva elemente ajutatoare:
 
+Daca aveti nevoie de ajutor va rugam sa ne scrieti la suport@adfaber.org.
+
 1. Tutoriale distractive cu suport video si text in limba romana:
 
 http://studio.code.org/hoc/1
