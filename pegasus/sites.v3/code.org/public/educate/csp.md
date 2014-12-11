@@ -5,18 +5,17 @@ nav: educate_nav
 
 # Computer Science Principles #
 
-## What is CS Principles?
+## <a name="whatis"></a>What is CS Principles?
 The College Board has proposed a new course called AP® Computer Science Principles.  This  course is designed to be far more than a traditional introduction to programming - it is a rigorous, engaging, and approachable course that explores many of the big, foundational ideas of computing so that all students understand how these concepts are transforming the world we live in. The official AP® exam is set to go live in the 2016-17 school year with an exam and performance-based assessments.
 
 Find more information about the College Board CS Principles project at: [http://apcsprinciples.org/](http://apcsprinciples.org/)
 
-<br />
-
 ## Code.org's CS Principles Curriculum
 Code.org is creating a complete curriculum consisting of daily lesson plans, videos, tutorials, tools, and assessments that covers the learning objectives from the [CS Principles Curriculum Framework](http://media.collegeboard.com/digitalServices/pdf/ap/comp-sci-principles-draft-cf-final.pdf). Check back often as batches of lessons will be released on a rolling basis from now until Summer 2015 when the entire curriculum will be publicly available. The resources will be distributed under a [Creative Commons License](http://creativecommons.org/licenses/by-nc-sa/3.0/).
 
+<iframe width="560" height="315" src="//www.youtube.com/embed/mjMLCpXz3eo" frameborder="0" allowfullscreen></iframe>
 
-### Features
+### <a name="features"></a>Features
 
 - Access the world of web applications using a block to text JavaScript programming environment
 - Build problem solving skills through the use of computational widgets
@@ -28,7 +27,7 @@ Code.org is creating a complete curriculum consisting of daily lesson plans, vid
 
 
 
-### Overview
+### <a name="overview"></a>Overview
 
 Several documents describe the overarching themes and direction of the course.
 
@@ -38,13 +37,13 @@ Several documents describe the overarching themes and direction of the course.
 
 <br />
 
-## Lessons
+## <a name="lessons"></a>Lessons
 
 
 | Link| Unit Description |
 | :------------------:|-----------|
-|  [![binary magic](csp/images/thumb_binaryMagic.png "Unit 1")](/educate/csp/unit1) [Unit 1](/educate/csp/unit1) | **Sending Bits** How do we get a single bit of information from one place to another? This unit explores the technical challenges and questions that arise from the need to transfer information between people and computational devices.| 
-|*Coming Soon*| **Algorithms** Build students' problem solving skills through unplugged and computer-based problems. Students are asked to express algorithmic solutions with increasing formality of language to analyze algorithms.|
+|  [![binary magic](csp/images/thumb_binaryMagic.png "Unit 1")](/educate/csp/unit1) [Unit 1](/educate/csp/unit1) | **Sending Bits and Encoding Information** What can be represented with a single bit and how do we get a single bit of information from one place to another? This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. Topics include: the digital representation of information - numbers, text, images, and communication protocols | 
+|*Coming Soon*| **Algorithms and Networking** Build students' problem solving skills through unplugged and computer-based problems. Students are asked to express algorithmic solutions with increasing formality of language to analyze algorithms. Topics include: encryption, security, computationally hard problems, and internet protocols|
 |*Coming Soon*| **Programming** Introduces a formal programming language, JavaScript. The programming sequence enables students to write simple programs to be executed in web pages. |
 |*Coming Soon*| **Data** Students will develop an understanding of the nature and structure of data that enables them to ask and answer questions about the data effectively.|
 |*Coming Soon*| **Innovation** Synthesizes the topics covered in the previous units and leads students through a the practice of researching and understanding the technology behind some modern innovations.|
