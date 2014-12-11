@@ -116,7 +116,9 @@ Calc.init = function(config) {
         config.forceInsertTopBlock);
     }
     Calc.expressions.target = getExpressionFromBlocks(solutionBlocks);
-    Calc.drawExpressions();
+    if (Calc.expressions.target) {
+      drawSvgExpression('answerExpression', Calc.expressions.target, false);
+    }
 
     // Adjust visualizationColumn width.
     var visualizationColumn = document.getElementById('visualizationColumn');
@@ -150,7 +152,7 @@ Calc.resetButtonClick = function () {
 
   appState.animating = false;
 
-  Calc.drawExpressions();
+  clearSvgExpression('userExpression');
 };
 
 
@@ -270,7 +272,8 @@ Calc.execute = function() {
   }
 
   // todo - should this be using ResultType.* instead?
-  appState.result = Calc.expressions.user.equals(Calc.expressions.target);
+  appState.result = Calc.expressions.target === null ||
+    Calc.expressions.user.equals(Calc.expressions.target);
   appState.testResults = BlocklyApps.getTestResults(appState.result);
 
   // equivalence means the expressions are the same if we ignore the ordering
@@ -284,7 +287,7 @@ Calc.execute = function() {
     appState.testResults = BlocklyApps.TestResults.FREE_PLAY;
   }
 
-  Calc.drawExpressions();
+  Calc.drawUserExpression();
 
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
@@ -334,7 +337,7 @@ Calc.step = function (ignoreFailures) {
 
   Calc.expressions.user.collapse(ignoreFailures);
 
-  Calc.drawExpressions();
+  Calc.drawUserExpression();
 
   window.setTimeout(function () {
     Calc.step(false);
@@ -344,31 +347,17 @@ Calc.step = function (ignoreFailures) {
 /**
  * Draw the current state of our two expressions.
  */
-Calc.drawExpressions = function () {
+Calc.drawUserExpression = function () {
   var expected = Calc.expressions.target;
   var user = Calc.expressions.user;
 
-  // todo - in cases where we have the wrong answer, marking the "next" operation
-  // for both doesn't necessarily make sense, i.e.
-  // goal: ((1 + 2) * (3 + 4))
-  // user: (0 * (3 + 4))
-  // right now, we'll highlight the 1 + 2 for goal, and the 3 + 4 for user
-
-  if (expected) {
-    expected.applyExpectation(expected);
-    drawSvgExpression('answerExpression', expected, user !== null);
+  if (!user) {
+    return;
   }
 
-  if (user) {
-    if (expected) {
-      user.applyExpectation(expected);
-    }
-    drawSvgExpression('userExpression', user, true);
-    var deepest = user.getDeepestOperation();
-    BlocklyApps.highlight(deepest ? deepest.blockId : null);
-  } else {
-    clearSvgExpression('userExpression');
-  }
+  drawSvgExpression('userExpression', user, expected);
+  var deepest = user.getDeepestOperation();
+  BlocklyApps.highlight(deepest ? deepest.blockId : null);
 };
 
 function clearSvgExpression(elementId) {
@@ -380,12 +369,12 @@ function clearSvgExpression(elementId) {
   }
 }
 
-function drawSvgExpression(elementId, expr, styleMarks) {
+function drawSvgExpression(elementId, expr, expected) {
   var i, text, textLength, char;
   var g = document.getElementById(elementId);
   clearSvgExpression(elementId);
 
-  var tokenList = expr.getTokenList(styleMarks);
+  var tokenList = expr.getTokenList(expected);
   var xPos = 0;
   for (i = 0; i < tokenList.length; i++) {
     text = document.createElementNS(Blockly.SVG_NS, 'text');
@@ -403,13 +392,14 @@ function drawSvgExpression(elementId, expr, styleMarks) {
     text.setAttribute('text-anchor', 'middle');
     xPos += textLength;
 
-    if (styleMarks && tokenList[i].marked) {
-      if (char === '(' || char === ')') {
-        text.setAttribute('class', 'highlightedParen');
-      } else {
-        text.setAttribute('class', 'exprMistake');
-      }
-    }
+    // todo - figure out
+    // if (tokenList[i].valid) {
+    //   if (char === '(' || char === ')') {
+    //     text.setAttribute('class', 'highlightedParen');
+    //   } else {
+    //     text.setAttribute('class', 'exprMistake');
+    //   }
+    // }
   }
 
   // center entire expression
