@@ -146,7 +146,7 @@ If you'd like to grab a task, have ideas for projects or want to discuss an item
 
 #### Manually
 
-We support recent versions of Firefox, Chrome, IE9, iOS Safari and the Android browsers. Be sure to try your feature out in IE9, iOS and Android if it's a risk. [BrowserStack live](http://www.browserstack.com) or [Sauce Labs manual](https://saucelabs.com/manual) let you run manual tests in these browsers remotely.
+We support recent versions of Firefox, Chrome, IE9, iOS Safari and the Android browsers ([full list of supported browsers and versions](https://support.code.org/hc/en-us/articles/202591743)). Be sure to try your feature out in IE9, iOS and Android if it's a risk. [BrowserStack live](http://www.browserstack.com) or [Sauce Labs manual](https://saucelabs.com/manual) let you run manual tests in these browsers remotely.
 
 #### Unit tests
 

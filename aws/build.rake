@@ -158,8 +158,10 @@ $websites = build_task('websites', [deploy_dir('rebuild'), BLOCKLY_COMMIT_TASK])
     RakeUtils.system 'rake', 'build'
 
     if rack_env?(:production) && CDO.daemon
-      HipChat.log "Putting <b>dashboard</b> scripts in redis..."
-      RakeUtils.rake 'seed:script_cache_to_redis'
+      Dir.chdir(dashboard_dir) do
+        HipChat.log "Putting <b>dashboard</b> scripts in redis..."
+        RakeUtils.rake 'seed:script_cache_to_redis'
+      end
 
       thread_count = 1 + (CDO.app_servers.keys.count / 10)
       threaded_each CDO.app_servers.keys, thread_count do |name|
