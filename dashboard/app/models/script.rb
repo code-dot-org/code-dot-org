@@ -73,32 +73,13 @@ class Script < ActiveRecord::Base
     candidate_level
   end
 
-  def self.redis
-    @@redis ||= CDO.level_sources_redis_url ? Redis.connect(url:CDO.level_sources_redis_url) : Hash.new
-  end
-
-  def self.script_cache_from_redis
-    if marshalled = self.redis['script-cache']
-      Script.connection # rails doesn't load the mysql libraries unless you ask it to, this confuses Marshal
-      Marshal.load marshalled
-    end
-  end
-
-  def self.script_cache_to_redis
-    redis['script-cache'] = Marshal.dump(script_cache_from_db)
-  end
-
-  def self.script_cache_from_db
-    {}.tap do |cache|
+  def self.script_cache
+    @@script_cache ||= {}.tap do |cache|
       [twenty_hour_script, frozen_script, hoc_script, flappy_script, playlab_script].each do |script|
         cache[script.name] = script
         cache[script.id.to_s] = script
       end
     end
-  end
-
-  def self.script_cache
-    @@script_cache ||= script_cache_from_redis || script_cache_from_db
   end
 
   def self.get_from_cache(id)

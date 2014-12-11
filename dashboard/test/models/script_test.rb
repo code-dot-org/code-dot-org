@@ -208,13 +208,4 @@ class ScriptTest < ActiveSupport::TestCase
       artist.get_script_level_by_stage_and_position(11, 1)
     end
   end
-
-  test 'gets script cache from redis (or fake redis)' do
-    Script.script_cache_to_redis # in test this is just a hash
-
-    Script.connection.disconnect!     # we don't need no stinkin db
-
-    assert_equal 'Flappy', Script.get_from_cache('flappy').script_levels[3].level.game.name
-    assert_equal 'anna', Script.get_from_cache('frozen').script_levels[5].level.skin
-  end
 end
