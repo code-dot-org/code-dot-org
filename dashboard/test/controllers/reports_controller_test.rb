@@ -152,7 +152,8 @@ class ReportsControllerTest < ActionController::TestCase
 
   test "should get usage" do
     get :usage, :user_id => @not_admin.id
-    assert_response :success
+    assert_response :forbidden # disabled for hoc
+    #assert_response :success
   end
 
   test "should not get usage if not signed in" do
@@ -166,8 +167,8 @@ class ReportsControllerTest < ActionController::TestCase
     sign_in @not_admin
 
     get :usage, :user_id => @not_admin.id
-
-    assert_response :success
+    assert_response :forbidden # disabled for hoc
+    #assert_response :success
   end
 
 
@@ -175,8 +176,9 @@ class ReportsControllerTest < ActionController::TestCase
     sign_in @teacher
 
     get :usage, :user_id => @student.id
+    assert_response :forbidden # disabled for hoc
 
-    assert_response :success
+    #assert_response :success
   end
 
   test "should not get usage for other users if not admin or teacher" do
@@ -216,11 +218,30 @@ class ReportsControllerTest < ActionController::TestCase
     assert_redirected_to_sign_in
   end
 
-  generate_admin_only_tests_for :all_usage
+  def self.generate_admin_forbidden_tests_for(action, params = {})
+    test "should get #{action}" do
+      get action, params
+      assert_response :forbidden 
+    end
 
-  generate_admin_only_tests_for :admin_stats
+    test "should not get #{action} if not signed in" do
+      sign_out @admin
+      get action, params
+      assert_redirected_to_sign_in
+    end
 
-  generate_admin_only_tests_for :admin_gallery
+    test "should not get #{action} if not admin" do
+      sign_in @not_admin
+      get action, params
+      assert_response :forbidden
+    end
+  end
+
+  generate_admin_forbidden_tests_for :all_usage # disabled for hoc
+
+  generate_admin_forbidden_tests_for :admin_stats # disabled for hoc
+
+  generate_admin_forbidden_tests_for :admin_gallery # disabled for hoc
 
   test "admin_gallery shows most recent 25 gallery items" do
     sign_in @admin
@@ -230,8 +251,9 @@ class ReportsControllerTest < ActionController::TestCase
     end
 
     get :admin_gallery
+    assert_response :forbidden # disabled for hoc
 
-    assert_equal 25, assigns(:gallery_activities).count
+#    assert_equal 25, assigns(:gallery_activities).count
   end
 
   test "students should redirect to new teacher dashboard" do
@@ -241,7 +263,9 @@ class ReportsControllerTest < ActionController::TestCase
 
   test "should get level_stats" do
     get :level_stats, {:level_id => create(:level).id}
-    assert_response :success
+
+    assert_response :forbidden # disabled for hoc
+#    assert_response :success
   end
 
   test "should not get level_stats if not admin" do
@@ -325,7 +349,8 @@ class ReportsControllerTest < ActionController::TestCase
 
   test 'should get admin progress' do
     get :admin_progress
-    assert_select 'h1', 'Admin progress'
+    assert_response :forbidden # disabled for hoc
+#    assert_select 'h1', 'Admin progress'
   end
 
 end
