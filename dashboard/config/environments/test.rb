@@ -45,5 +45,6 @@ Dashboard::Application.configure do
   CDO.disable_s3_image_uploads = true
 
   # see stack traces around sql queries in the log
-  ActiveRecordQueryTrace.enabled = true
+  # off by default because it slows things down
+#  ActiveRecordQueryTrace.enabled = true
 end
