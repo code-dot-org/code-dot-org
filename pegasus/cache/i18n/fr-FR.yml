@@ -97,8 +97,8 @@
   participant_engineer: Ingénieur logiciel
   participant_other: Autre
   print_all: Imprimer tout
-  print_ice_art: Print your ice art
-  create_art_with_zombie: or make advanced art with zombie
+  print_ice_art: Imprimez votre oeuvre de glace
+  create_art_with_zombie: ou faites de l'art avancé avec zombie
   i_am_a: Je suis un
   never_spam: Nous ne vous enverrons jamais de courrier électronique intempestif
   enter_country: Entrer le pays si hors des Etats-Unis
@@ -139,7 +139,7 @@
   studiobar_teacher_title: Pour les professeurs
   studiobar_teacher_body: Introduction à Code Studio dans votre salle de classe
   studiobar_frozen_title: Heure de Code
-  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_frozen_body: Créez un paradis hivernal avec Anna et Elsa
   studiobar_donate_title: Faire un don
   studiobar_donate_body: Un enfant apprend pour chaque dollar donné
   contact_form_topic_student: Je suis un étudiant
@@ -241,11 +241,11 @@
   dashboard_action_required: requis
   dashboard_navigation_home_page: Page d'accueil de l'enseignant
   dashboard_navigation_section_student_progress: Comptes et progrès des élèves
-  dashboard_navigation_section_teacher_progress: Your Course Progress
+  dashboard_navigation_section_teacher_progress: L'avancement de votre cours
   dashboard_navigation_section_lesson_plans: Plans de cours et ressources
-  dashboard_navigation_section_community: Help and Community
+  dashboard_navigation_section_community: Aide et Communauté
   dashboard_navigation_section_pd: Perfectionnement professionnel
-  dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
+  dashboard_navigation_section_speakers: Informatique <br/> Invités
   dashboard_navigation_all_sections: Comptes et progrès des élèves
   dashboard_navigation_view_progress: Voir les progrès
   dashboard_navigation_add_students: Ajouter des élèves
@@ -367,7 +367,7 @@
     de ces types de connexion,<b>photo, mot ou email</b>, vous voudrez choisir pour
     une section.
   dashboard_faq: Foire Aux Questions
-  code_hoc_coming: L'Heure de Code arriive - du 8 au 14 décembre!
+  code_hoc_coming: L'Heure de Code est ici - du 8 au 14 décembre!
   code_sign_up: Enregistrez vous pour participer à la Semaine de l'Education de l'Informatique
   learn_more: En savoir plus
   hoc2014_try_new_tutorials: Essayez notre nouveau tutoriel d'Heure de Code
@@ -439,7 +439,7 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Pierre, papier, ciseaux
-  hourofcode_name: Placeholder for new code.org/hoc
+  hourofcode_name: Espace réservé pour le nouveau code.org/hoc
   playlab_name: Labo
   codeorg_gradelevel: De 4 à 104 ans
   codeintl_gradelevel: De 4 à 104 ans
@@ -491,14 +491,14 @@
   khanfr_platformtext: Navigateurs web modernes
   khanpl_platformtext: Navigateurs web modernes
   tynker_platformtext: Navigateurs web modernes
-  scratch_platformtext: Tous les navigateurs
+  scratch_platformtext: Navigateurs pour les ordinateurs (pas pour les tablettes)
   lightbot_platformtext: Tous les navigateurs et iOS, Android ou consoles de jeu
   thinkersmith_platformtext: Débranché
   condcards_platformtext: Hors connexion
   lightbotintl_platformtext: iOS, Android (ou navigateur web)
   codehs_platformtext: Navigateurs récents. (Suivre le cours exige $$)
   codecademy_platformtext: Navigateurs web modernes. Applications iOS, Android
-  codecombat_platformtext: Navigateurs web modernes
+  codecombat_platformtext: Navigateurs modernes (cours suivant payant)
   codemonkey_platformtext: Navigateurs web modernes
   codeavengers_platformtext: Navigateurs web modernes
   processing_platformtext: Navigateurs web modernes
@@ -563,8 +563,8 @@
   tynkerapp_shortdescription: 'Apprends à programmer en résolvant des énigmes amusantes. '
   robomindnl_shortdescription: Écris du code pour un robot virtuel
   flappy_shortdescription: Crée ton propre jeu - Flappy Bird, Shark ou Sous-marin
-  bitsbox_shortdescription: Code une série d'applis pour jouer et partager, en utilisant
-    du vrai Javascript.
+  bitsbox_shortdescription: Codez une série d'application pour jouer et partager,
+    en utilisant JavaScript.
   makegameswithus_shortdescription: Faites un jeu iPhone!  Apprenez en écrivant du
     code qui enseigne à votre monstre de nouveaux mouvements!
   touchdevelop_shortdescription: 'Résous des énigmes, crée des jeux, apprends à coder,
@@ -576,7 +576,7 @@
   kodableunplugged_shortdescription: Un exercice amusant sans connexion
   projguts_shortdescription: Essayez de la modélisation et de la simulation en utilisant
     le jeu de caillou/papier/ciseau
-  hourofcode_shortdescription: Placeholder for new code.org/hoc
+  hourofcode_shortdescription: Espace réservé pour le nouveau code.org/hoc
   frozen_shortdescription: Aidons Anna et Elsa à explorer la magie et la beauté de
     la glace.
   playlab_shortdescription: Programmer une histoire ou un jeu avec le Labo !
@@ -702,15 +702,15 @@
   flappy_longdescription: Utilise la programmation par glisser-déposer pour créer
     ton propre jeu Flappy Bird, et personnalise-le pour le rendre différent (Flappy
     Shark, Flappy Santa, ou n'importe). Ajoute le jeu à ton téléphone en un clic.
-  bitsbox_longdescription: Personnalisez votre propre tablette virtuelle, puis codez
-    une série d'applications pour jouer et partager. Il est même possible pour de
-    jeunes enfants de programmer du vrai javascript grâce à des procédures pas à pas
-    simples, et plus vous êtes expérimenté, plus vous allez loin.
-  makegameswithus_longdescription: Apprenez à coder en créant un jeu Iphone à l'aide
-    un tout nouveau langage de programmation adapté aux débutants appelé Swift! Créez
-    un jeu d'action inspiré des Pokemon et écrivez le code pour apprendre à vos monstres
-    de nouveaux mouvements. Vous apprendrez comment utiliser les variables, méthodes
-    et objets pour aider votre monstre à gagner!
+  bitsbox_longdescription: Personnalisez votre propre tablette virtuelle, codez ensuite
+    une série d'applications pour jouer et partager. Des modes d'emploi simples permettent
+    même à de jeunes enfants de programmer en JavaScript, et plus vous vous perfectionnez
+    plus vous avancez.
+  makegameswithus_longdescription: Apprenez à codez en créant un jeu iPhone en utilisant
+    un tout nouveau langage de programmation adapté aux débutants qui s'appelle Swift!
+    Créez un jeu d'action inspiré des Pokemons et écrivez le code pour apprendre de
+    nouveaux mouvements à votre monstre. Vous apprendrez à utilisez les variables,
+    les méthodes et les objets pour aider votre monstre à gagner!
   touchdevelop_longdescription: 'L''éditeur, facile à utiliser par l''écran tactile,
     vous guidera pour créer du pixel art, résoudre le casse-tête de l''ours ou créer
     votre propre jeu du saut de l''oiseau. '
@@ -735,14 +735,14 @@
     comment fonctionnent la modélisation et la simulation en faisant jouer un groupe
     d'étudiants à différentes versions de pierre/papier/ciseaux et en observant les
     résultats comme différentes expériences de modélisation.
-  hourofcode_longdescription: Placeholder for new code.org/hoc
+  hourofcode_longdescription: Espace réservé pour le nouveau code.org/hoc
   frozen_longdescription: Utilisons le code pour rejoindre Anna et Elsa dans leur
     exploration de la magie et de la beauté de la glace. Tu vas créer des flocons
     de neige et des motifs en patinant sur la glace et faire un pays des merveilles
     hivernal que tu pourras partager avec tes amis !
-  playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
-    pirates, zombies, ninjas, and many more characters move, make sounds, score points,
-    and even throw fireballs!
+  playlab_longdescription: Créez une histoire ou un jeu avec Play Lab! Faites bouger
+    des animaux, des pirates, des zombies, des ninjas et beaucoup d'autres personnages,
+    créez des sons, marquez des points et jetez des boules de feu!
   codeorg_beyond_name: Introduction à l'informatique (4ème)
   khan_beyond_name: Apprenez la programmation informatique
   tynker_beyond_name: Apprenez à programmer à la maison
@@ -1001,13 +1001,13 @@
     l'encapsulation, la gestion des ressources, la sécurité, le génie logiciel et
     le développement web. Les langages incluent C, PHP et JavaScript plus SQL, CSS
     et HTML. La version présentielle CS50x est deuxième plus grand cours de Harvard.
-  coursera_beyond_longdescription: 'Stanford''s CS 101 class taught by Nick Parlante
-    (FREE!). CS101 teaches the essential ideas of Computer Science for a zero-prior-experience
-    audience. Play and experiment with short bits of code to bring to life to the
-    power and limitations of computers. CS101 also provides a general background on
-    computers today: what is a computer, what is hardware, what is software, what
-    is the internet. No previous experience is required other than the ability to
-    use a web browser.'
+  coursera_beyond_longdescription: 'Cours CS 101 de Stanford par Nick Parlante (GRATUIT!).
+    CS 101 enseigne les idées essentielles de l''informatique pour les personnes qui
+    n''ont aucune connaissance du sujet. Jouez et testez de petits morceaux de code
+    pour révéler le pouvoir et les limites des ordinateurs. CS 101 enseigne également
+    l''environnement général des ordinateurs aujourd''hui: qu''est-ce qu''un ordinateur,
+    qu''est-ce que l''hardware, le software, qu''est-ce qu''internet. Aucune expérience
+    antérieure n''est demandée autre que la capacité d''utiliser un navigateur internet.'
   udacity_beyond_longdescription: Dans ce cours vous apprendrez les concepts clés
     en informatique et apprendrez à écrire vos propres programmes informatiques dans
     le cadre de la construction d'un robot d'indexation. Aucune connaissance en programmation
@@ -1054,21 +1054,23 @@
     vos héros, naviguer dans des dédales, vaincre des ogres, tromper les ennemis et
     sauver vos alliés! Apprenez JavaScript dans ce jeu web en HTML 5 pour complets
     débutants.
-  codea_beyond_longdescription: Codea for iPad lets you create games and simulations&mdash;or
-    just about any visual idea you have. Turn your thoughts into interactive creations
-    that make use of iPad features like Multi-Touch and the accelerometer. We think
-    Codea is the most beautiful code editor you'll use, and it's easy. Codea is designed
-    to let you touch your code. Want to change a number? Just tap and drag it. How
-    about a color, or an image? Tapping will bring up visual editors that let you
-    choose exactly what you want.
+  codea_beyond_longdescription: Codea pour iPad vous permet de créer des jeux et des
+    simulations; ou tout autre idée visuelle que vous pourriez avoir. Transformez
+    vos pensées en créations interactives qui utilisent les caractéristiques de l'iPad
+    telles que Multi-Touch et l'accéléromètre. Nouw pensons que Codea est le plus
+    bel éditeur de code que vous utiliserez, et il est simple. Codea est conçu pour
+    vous laissez toucher votre code. Vous voulez changez un nombre? Touchez et glissez
+    le. Vous voulez une couleur, ou une image? En touchant l'écran, l'éditeur visuel
+    apparaîtra et vous laissera choisir ce que vous voulez.
   lego_beyond_longdescription: Créer des robots petits, personnalisables et programmables
     à l'aide de pièces LEGO.
-  finch_beyond_longdescription: The Finch is a new robot for computer science education.
-    Its design is the result of a four year study at Carnegie Mellon's CREATE lab.
-    The Finch is designed to support an engaging introduction to the art of programming.
-    It has support for over a dozen programming languages and environments, including
-    several environments appropriate for students as young as eight years old. The
-    Finch was designed to allow students to write richly interactive programs.
+  finch_beyond_longdescription: Le Finch est un nouveau robot pour l'enseignement
+    de l'informatique. Sa conception est le résultat de quatre années d'études au
+    laboratoire CREATE de Carnegie Mellon. Le Finch est conçu pour accompagner une
+    introduction à l'art de la programmation. Il peut aider plus d'une douzaine de
+    langages et d'environnements de programmation, y compris plusieurs environnements
+    adaptés aux élèves aussi jeunes que huit ans. Le Finch a été conçu pour permettre
+    aux élèves d'écrire des programmes très interactifs.
   arduino_beyond_longdescription: Arduino est une plate-forme populaire conçue pour
     permettre aux artistes et aux concepteurs de travailler avec de véritables capteurs,
     des LEDs, des sonnettes, etc.. Le bac à sable virtuel Sparkfun vous apprendra

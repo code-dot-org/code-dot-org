@@ -211,12 +211,12 @@
   dashboard_landing_useful_links: Druge korisne poveznice (samo na engleskom)
   dashboard_landing_office_hours: Postavite pitanje uživo! Posjetite naše mjesečne
     sate video pristupa.
-  dashboard_landing_print_certificates: Print certificates for students who finish
-    this course
-  dashboard_landing_educator_blog: Read about news and updates to our materials at
-    our Educator Blog
-  dashboard_landing_smart_hints: Please help us to add smart hints to Code.org tutorials
-  dashboard_landing_video_player: Test our new video player at your school
+  dashboard_landing_print_certificates: Ispišite potvrde za učenike koji su završili
+    ovaj tečaj
+  dashboard_landing_educator_blog: Pročitajte o novostima i ažuriranjima materijala
+    na našem pedagoškom blogu
+  dashboard_landing_smart_hints: Pomozite da dodamo pametne savjete na Code.org tutorijale
+  dashboard_landing_video_player: Testirajte naš novi video player u školi
   dashboard_landing_progress_title: Napredak u glavnom tečaju
   dashboard_landing_progress_biggest: Ovo je napredak u tvom najvećem dijelu.
   dashboard_landing_view_progress: Pogledaj napredak za %{biggest_section}
@@ -318,7 +318,7 @@
   dashboard_course1: 'Tečaj 1:'
   dashboard_course2: 'Tečaj 2:'
   dashboard_course3: 'Tečaj 3:'
-  dashboard_sequence: Sequence
+  dashboard_sequence: Redoslijed
   dashboard_framework: Okvir
   dashboard_standards: Standardi
   dashboard_implementation_guide: Vodič za implementaciju
