@@ -25,6 +25,8 @@ class ActiveSupport::TestCase
 
   setup do
     set_env :test
+
+    AWS::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
   end
 
   teardown do
