@@ -567,7 +567,7 @@ SQL
       end
 
       # update_all bypasses validations/transactions/etc
-      UserScript.where(id: user_script.id).update_all(update)
+      UserScript.where(id: user_script.id).update_all(update) unless update.empty?
     end
   end
 
