@@ -51,7 +51,7 @@
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png
       2-3 maze match 1:
         Maze Match One: Maze Match One
-        Match the puzzles to the blocks: Match the puzzles to the blocks
+        Match the puzzles to the blocks: Illeszd a darabokat a blokkokhoz
         /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png
@@ -60,9 +60,9 @@
         /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png
       2-3 Maze Match 2:
         Maze Match: Maze Match
-        Match the puzzles to the blocks: Match the puzzles to the blocks
+        Match the puzzles to the blocks: Illeszd a darabokat a blokkokhoz
         Instructions: Utasítások
-        Drag the blocks to match.: Drag the blocks to match.
+        Drag the blocks to match.: Húzd arrébb a blokkokat, hogy illeszkedjenek.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png
@@ -115,9 +115,9 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
       4-5 maze match 1:
         Maze Match: Maze Match
-        Match the puzzles to the blocks: Match the puzzles to the blocks
+        Match the puzzles to the blocks: Illeszd a darabokat a blokkokhoz
         Instructions: Utasítások
-        Drag the blocks to match.: Drag the blocks to match.
+        Drag the blocks to match.: Húzd arrébb a blokkokat, hogy illeszkedjenek.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png
@@ -237,7 +237,7 @@
         Matching: Megfelelő
         Match the puzzles and blocks: Párosítsd a feladványokat a blokkokkal!
         Instructions: Utasítások
-        Drag the blocks to match.: Drag the blocks to match.
+        Drag the blocks to match.: Húzd arrébb a blokkokat, hogy illeszkedjenek.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/k_1_images/maze_images/maze_EN.png: /script_assets/k_1_images/maze_images/maze_EN.png
         /script_assets/k_1_images/maze_images/maze_ENE.png: /script_assets/k_1_images/maze_images/maze_ENE.png
@@ -278,8 +278,8 @@
         /script_assets/k_1_images/unplugged_images/rightdown.png: /script_assets/k_1_images/unplugged_images/rightdown.png
       Coordinate Matching:
         Coordinates of Ninjacat: Ninja-macska koordinátái
-        Match each character with its correct coordinate!: Match each character with
-          its correct coordinate!
+        Match each character with its correct coordinate!: Illeszd az összes szereplőt
+          a megfelelő koordinátájára!
         /script_assets/msm/Unit 1/exercise_3_ninjacat.png: /script_assets/msm/Unit
           1/exercise_3_ninjacat.png
         Cloud: Felhő

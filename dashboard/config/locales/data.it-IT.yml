@@ -613,7 +613,7 @@
         instructions: Ciao! Io sono Elsa di Arendelle. Aiutami a creare una linea.
       frozen perpendicular:
         instructions: Ora vediamo se riusciamo a creare due linee che sono a 90 gradi
-          tra loro. Dovrai usare il blocco "gira ..." oltre al blocco "vai ...".
+          tra loro. Dovrai usare il blocco "gira" oltre al blocco "vai".
       frozen square iterative:
         instructions: Adesso siamo a metà strada per formare un quadrato. Uniamo 4
           linee tra loro per creare un quadrato.
@@ -625,11 +625,11 @@
         instructions: Creiamo tre quadrati, girando dopo aver completato ogni quadrato.
           Assicurati di girare di 120 gradi prima di disegnare ogni nuovo quadrato.
       frozen square snowflake:
-        instructions: Riesci a creare un fiocco di neve usando il blocco "ripeti ..."
-          per disegnare un quadrato 10 volte, e il blocco "gira ..." per ruotare di
-          36 gradi tra un quadrato e il successivo?
+        instructions: Riesci a creare un fiocco di neve usando il blocco "ripeti"
+          per disegnare un quadrato 10 volte, e il blocco "gira" per ruotare di 36
+          gradi tra un quadrato e il successivo?
       frozen cross:
-        instructions: Utilizza il blocco "ripeti ..." per creare un segno di addizione.
+        instructions: Utilizza il blocco "ripeti" per creare un segno di addizione.
           Hai notato che Elsa può muoversi avanti e indietro?
       frozen cross rotate:
         instructions: Ora prova a ripeterlo 10 volte. Quanti gradi devi girare tra
@@ -643,11 +643,11 @@
           uguali di 90 gradi ne ha due di 60 e due di 120 gradi.
       frozen diamond mini snowflake:
         instructions: Sapevi che ogni fiocco di neve ha una forma diversa? Creiamo
-          un nuovo fiocco di neve usando il blocco "ripeti ..." per ripetere un parallelogramma
+          un nuovo fiocco di neve usando il blocco "ripeti" per ripetere un parallelogramma
           4 volte, ruotando a destra di 90 gradi tra un parallelogramma e il successivo.
       frozen diamond snowflake:
-        instructions: Ora, creiamo un nuovo fiocco di neve usando il blocco "ripeti
-          ..." per disegnare un parallelogramma 10 volte, girando a destra di 36 gradi
+        instructions: Ora, creiamo un nuovo fiocco di neve usando il blocco "ripeti"
+          per disegnare un parallelogramma 10 volte, girando a destra di 36 gradi
           tra ogni parallelogramma e il successivo.
       frozen circle:
         instructions: Un cerchio è una forma speciale. Riesci a trovare quale numero
@@ -861,7 +861,7 @@
           nell'area di lavoro
         repeat_blocks_1: (1) Usa questo blocco e mettilo intorno ai blocchi grigi
           nell'area di lavoro
-        repeat_blocks_2: (2) Sposta qui  il blocco "ripeti ..." e posiziona i blocchi
+        repeat_blocks_2: (2) Sposta qui  il blocco "ripeti" e posiziona i blocchi
           grigi al suo interno
         snowflake_dropdown: Usa questo elenco a discesa per creare fiocchi di neve
           di varie forme!

@@ -276,7 +276,7 @@ nl:
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
-        text: 'Hallo, is mijn naam Lyndsey. Ik ben een model, ik acteer en schrijf mijn eigen apps. Laat ons coderen gebruiken om te  Anna en Elsa te helpen bij het ontdekken van de magie en schoonheid van ijs.'
+        text: Hallo, is mijn naam Lyndsey. Ik ben een model, ik acteer en schrijf mijn eigen apps. Laten we code gebruiken om Anna en Elsa te helpen bij het ontdekken van de magie en schoonheid van ijs.
       2:
         image: notes/frozen1_2.jpg
         text: Je maakt sneeuwvlokken en patronen terwijl je door een winter wonderlandschap schaatst dat je kan delen met je vrienden.
@@ -310,7 +310,7 @@ nl:
         text: 'Hallo, ik ben Paola! Computers zijn echt goed in het herhalen van acties. Je kan tellen tot 10,20 of 100. Een computer kan tellen tot een miljard of een biljoen en dit zal slechts enkele seconden duren. Of het nu gaat om tellen, tekenen of iets anders - computers kunnen dit honderden malen herhalen of zelfs miljarden malen.'
       2:
         image: notes/frozen2_2.jpg
-        text: 'In programmeren noemen we dit een lus. Een lus is hoe je code herhaalt en herhaalt. Voor de volgende puzzel is je doel om Anna een vierkant te helpen maken met de "Herhaal" blok.'
+        text: 'In programmeren noemen we dit een lus. Een lus gebruik je om code te herhalen. Voor de volgende puzzel is je doel om Anna een vierkant te helpen maken met het "Herhaal" blok.'
       3:
         image: notes/frozen2_3.jpg
         text: |-

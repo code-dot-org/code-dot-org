@@ -201,10 +201,10 @@
           'Play Lab: Design Recipe': 'Play Lab: Design Recipe'
           'Eval: Design Recipe': 'Eval: Design Recipe'
         playlab:
-          title: Play Lab
-          description: Create a story or make a game with Play Lab!
-          Play Lab: Play Lab
-          description_short: Create a story or make a game with Play Lab!
+          title: 播放實驗室
+          description: 創建一個故事或做遊戲玩實驗室！
+          Play Lab: 播放實驗室
+          description_short: 創建一個故事或做遊戲玩實驗室！
         artist:
           title: 畫家
           description: Draw cool pictures and designs with the Artist!

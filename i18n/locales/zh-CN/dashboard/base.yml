@@ -437,7 +437,7 @@ zh:
     caption_by_name_age: '通过 %{name}，年龄 %{age}'
     caption_time_ago: '%{time_ago}之前'
     header: 画廊
-    header_playlab: Play Lab
+    header_playlab: 播放实验室
     header_artist: Artist
   landing:
     prerelease: "本课程是在 <span class='betatext'> beta 版</span> 中. 这表示它不是最终版本. 当收到 反馈, 它会受修订并改善."

@@ -17,7 +17,7 @@ ja:
         edit_header: アカウント詳細を編集する
         error:
           future: 現在までの日付にする
-  hello: ハローワールド
+  hello: 世界の皆さん、こんにちは
   welcome_back: 'Welcome Back, %{name}'
   add_teacher_form:
     code:
@@ -37,8 +37,8 @@ ja:
   more: 詳細
   less: 隠す
   try_hoc: 'ここをクリックしてHour of Codeを試す >>'
-  try_k8intro: コンピュータ科学コース （15-25 時間）の入門編
-  k8intro: コンピュータ科学コース （15-25 時間）の入門編
+  try_k8intro: コンピュータサイエンスコース （15-25 時間）の入門編
+  k8intro: コンピュータサイエンスコース （15-25 時間）の入門編
   already_started: 'すでに開始しましたか？ここで再開する >>'
   demos: 管理者： 全部のデモ
   continue: 次へ
@@ -94,7 +94,7 @@ ja:
   signin:
     try_heading: 登録せずにコーディングに挑戦してみたいですか？
     try_hoc: 最初に 1 時間分のHour of Codeを試す
-    try_20hours: 20 時間分のコンピュータ科学入門編を試す
+    try_20hours: 20 時間分のコンピュータサイエンス入門編を試す
   signinsection:
     welcome: '%{section_name} へようこそ！'
     name: 名前を選ぶ
@@ -414,7 +414,7 @@ ja:
       unused: 未使用のレベル
   upsell:
     hoc:
-      title: コードの時間(Hour of code)
+      title: Hour of Code（Codeを学ぶ時間）
       body: コンピュータサイエンスの基本に挑戦してみてください。もう何百万人も挑戦した人がいます
     flappy:
       title: Flappy Code

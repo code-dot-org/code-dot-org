@@ -805,28 +805,28 @@
         which_equation: Kva for likning gjer kvar side kortare for former med fleire
           sider?
         get_nectar: Bruk den nye "få nektar"-blokka.
-        actions_category: Verktøykassa fikk et nytt utseende! "Handlinger" blokkene
-          er her nå.
-        draw_square_hint: 'Tips: Bruk firkant løkken som du lagde i den forrige oppgaven.'
+        actions_category: Verktøyboksen har fått ny utsjånad! "Handling"-blokkene
+          er her inne nå.
+        draw_square_hint: 'Hint: bruk firkant-løkka du laga i den forrige oppgava.'
         edit_function: Klikk her for å redigere funksjonen.
-        create_function: Klikk her for å åpne"Funksjoner" menyen og klikk deretter
-          "Opprette en funksjon" knappen.
-        house_hint: Det er ok hvis bildet ikke ser ut som et hus ennå. Vi skal fikse
-          det i den neste oppgaven.
-        edit_draw_square: Bruk denne knappen for å redigere funksjonen og legge til
-          løkken.
-        edit_get_nectar: Bruk denne knappen til å redigere funksjonen og endre retningen
-          som bien skal snu for å få nektar.
-        logic_category: Åpne "Logikk" menyen for å finne "hvis/ellers" blokken.
-        length_parameter: Kan du oppdatere denne funksjonen slik at den bruker parameteret
+        create_function: Klikk her for å åpne "Funksjonar"-menyen og klikk deretter
+          "Opprette ein funksjon"-knappen.
+        house_hint: Det er greit dersom bildet ikkje ser ut som eit hus enno. Vi skal
+          fikse det i den neste oppgåva.
+        edit_draw_square: Bruk denne knappen for å redigere funksjonen og leggje til
+          løkka.
+        edit_get_nectar: Bruk denne knappen til å redigere funksjonen og endre retninga
+          som bia skal snu for å få nektar.
+        logic_category: Åpne "Logikk" menyen for å finne "hvis/ellers"-blokka.
+        length_parameter: Kan du oppdatere denne funksjonen slik at han brukar parameteret
           "lengde"?
-        frozen_diamond_repeat: Bruk gjenta-blokken for å opprette denne figuren.
-        frozen_circle_function_in_circle_turn: Ikke glem å snu når du har opprettet
-          hver sirkel.
-        frozen_circle_function_with_parameter_circle: Bruk "Lag en sirkel"-blokken
+        frozen_diamond_repeat: Bruk gjenta-blokka for å lage denne figuren.
+        frozen_circle_function_in_circle_turn: Ikkje gløym å snu når du har laga kvar
+          sirkel.
+        frozen_circle_function_with_parameter_circle: Bruk "Lag ein sirkel"-blokka
           og endre størrelsen.
-        frozen_snowflake_branch: Bruk "Lag et snøfnugg-gren"-blokken
-        frozen_create_square: Legg til flere blokker her for å lage en firkant
+        frozen_snowflake_branch: Bruk "Lag ei snøfnugg-gren"-blokka
+        frozen_create_square: Legg til fleire blokker her for å lage eit kvadrat
         playlab_drag_say: Dra "si"-blokka hit og skriv "Hallo"
         playlab_use_twice: Bruk denne blokka to ganger og hugs å endre spelarnummer
         playlab_move_girl: Bruk "flytt til høgre"-blokka til å flytte Tennisjenta
@@ -836,31 +836,31 @@
         playlab_add_move: Legg til "flytt"-blokker inne i gjenta-blokka
         playlab_add_score: Legg til poeng-blokker her
         playlab_add_blocks: Legg til blokkene dine her
-        set_variable: Dra en nummer-blokk hit for å angi variabelen
-        place_variable: Dra variabelen din inn i denne blokken
-        bee_for_loop: Dra det største nummeret av nektar som du ønsker at bien skal
-          samle hit
-        place_counter_variable: Dra teller-variabelen din inn i denne blokken
-        function_editor_draw_square: Dette er din funksjonsdefinisjon. Disse blokkene
-          kjører hver gang du bruker "tegn en firkant"-blokken
-        change_here: Gjør din endring her
-        write_draw_square_function: Dra blokkene fra verktøykassen inn hit for å tegne
-          en firkant
-        write_draw_triangle_function: Dra blokker fra verktøykassen inn her for å
-          tegne en trekant
-        edit_add_parameter: Klikk Rediger for å legge til en parameter i funksjonen
+        set_variable: Dra ei nummer-blokk hit for å sette variabelen
+        place_variable: Dra variabelen din inn i denne blokka
+        bee_for_loop: Dra hit det største nummeret av nektar som du ynsker at bia
+          skal samle
+        place_counter_variable: Dra teller-variabelen din inn i denne blokka
+        function_editor_draw_square: Dette er funksjonsdefinisjonen din. Desse blokkene
+          køyrer kvar gong du bruker "tegn eit kvadrat"-blokka
+        change_here: Gjer endringa di her
+        write_draw_square_function: Dra blokkene frå verktøykassa inn hit for å teikne
+          eit kvadrat
+        write_draw_triangle_function: Dra blokker frå verktøykassa inn her for å teike
+          eit kvadrat
+        edit_add_parameter: Klikk Rediger for å legge til ein parameter i funksjonen
           din
-        add_and_drag_parameter: Skriv inn navnet på parameteren din her, klikk på
-          Legg til og dra den deretter til funksjonsdefinisjonen din
-        fill_in_actor: Erstatt ??? med tall som passer for hver skuespiller (1, 2
-          og 3)
-        repeat: Sett blokker inni gjenta-løkken for å gjenta kommandoer
-        if_bee_nectar: Bruke "Hvis"-blokken for å avgjøre om bien skal få nektar
-        if_else_bee: Bruk "if/else" blokken slik at bien får nektar fra en blomst
-          og lager honning hvis det ikke er en blomst
-        repeat_full_circle: Angi hvor mange ganger zombien må flytte for å lage en
+        add_and_drag_parameter: Skriv inn namnet på parameteren din her, klikk på
+          "Legg til" og dra den etter det til funksjonsdefinisjonen din
+        fill_in_actor: Erstatt ??? med tall som samsvarar med kvar skodespelar (1,
+          2 og 3)
+        repeat: Sett blokker inni løkka for å gjenta kommandoar
+        if_bee_nectar: Bruk "dersom"-blokka for å avgjere om bia skal få nektar
+        if_else_bee: Bruk "dersom/ellers"-blokka slik at bia får nektar frå ein blomster
+          og lagar honning dersom det ikkje er ein blomster
+        repeat_full_circle: Angi kor mange gonger zombien må flytte for å lage ein
           full sirkel
-        place_length_variable: Dra lengdevariabelen hit for å erstatte spørsmålstegnene
-        arrows_move_actor: Bruk pilene til å flytte skuespilleren
-        right_arrow_fireball: Bruk pil-høyre til å skyte ildkuler
-        name_function: Skriv navnet på funksjonen din her
+        place_length_variable: Dra lengdevariabelen hit for å erstatte spørsmålsteikna
+        arrows_move_actor: Bruk pilene til å flytte skodespelaren
+        right_arrow_fireball: Bruk pil-høyre til å skyte eldkuler
+        name_function: Skriv namnet på funksjonen din her

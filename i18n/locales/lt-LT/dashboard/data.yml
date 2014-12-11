@@ -142,7 +142,7 @@ lt:
         maze_2_18: Dar viena užduotis su „Jei-priešingu atveju“ blokeliu. Ar sugebėsi ją atlikti iš pirmo karto?
         maze_2_19: Jeigu sugebėsi sudėti tik 3 blokelius tinkamai, aš galėsiu eiti vingiuotu taku, visiškai nesvarbu, koks yra jo ilgis.
         turtle_1_1: Labas, aš esu menininkas. Tu gali sudėlioti kodą, kad nupieščiau beveik bet ką. Panaudok porą blokelių, kad aš nupieščiau tai, kas yra pavaizduota pilkomis linijomis.
-        turtle_1_2: 'O dabar nubrėžk kvadratą. PASTABA: gali pasirinkti pieštuko spalvą naujame blokelyje „nustatyk spalvą“.'
+        turtle_1_2: 'O dabar nubrėžk kvadratą. PASTABA: gali pasirinkti pieštuko spalvą naujame blokelyje „spalva = ...“.'
         turtle_1_3: Šį kartą nubraižyk kvadratą panaudodamas tik 3 blokelius.
         turtle_1_4: 'Nubrėžk trikampį, kurio visos kraštinės yra skirtingų spalvų, panaudodamas blokelį „atsitiktinė spalva“. Jis kiekvieną kartą parenka vis kitą spalvą. Sufleris: turėsi nuspręsti, kiek laipsnių reikia pasisukti – spustelk ant skaičiaus ir jį pakeisk.'
         turtle_1_5: Nubrėžk trikampį, o po to kvadratą, kad gautum voką.
@@ -416,7 +416,7 @@ lt:
         function: Komandų kūrimas
         loop_while: „Kol“ blokelis
         loop_for: Blokelis-skaitiklis
-        parameters: Komandų parametrai (gaunama informacija)
+        parameters: Komandoms perduodami duomenys
         hoc_wrapup: „Programavimo valandos“ apibendrinimas
         Unplug1: Kas yra CS?
         Unplug2: Skaičiuojamasis mąstymas
@@ -510,9 +510,9 @@ lt:
         instructions_repeat_explanation: Kiekvienos užduoties instrukcija yra parašyta čia
         category_explanation: Yra pateikti tie patys blokeliai, tačiau jie dabar yra surūšiuoti pagal kategorijas
         set_sprite_image: 'Prijunk "veikėjas = " prie bloko "kai istorija prasideda", kad jis dalyvautų šioje istorijoje.'
-        studio_say_text: Įvesk tai, ką nori, kad pasakytų tavo veikėjas
+        studio_say_text: Įvesk, ką tavo veikėjas turės pasakyti
         jigsaw_click: Nuspausk ant šio blokelio!
-        move_elsa_forward: 'Drag a "Move Forward" block and snap it below the "When Run" block to make Elsa move forward'
+        move_elsa_forward: 'Prijunk blokelį „ženk į priekį“  prie blokelio  "paleidus". '
         turn_elsa: 'Use the "Turn" block to make Elsa turn. The number in the drop-down determines how much Elsa turns'
         replace_questions: 'Use the drop-down to replace "???" with a number'
         replace_questions_degree: 'Use the drop-down to replace "???" with the correct degree to turn'

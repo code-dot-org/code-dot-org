@@ -78,6 +78,26 @@ Every educator who hosts an Hour of Code for students will receive 10 GB of Drop
 
 [Actua](http://actua.ca/) is Canada’s leader in Science, Technology, Engineering, and Math Outreach. Each year Actua reaches over 225,000 youth in over 500 communities through its barrier-breaking programming.
 
+**Congratulations to the 2014 winners!**
+
+|School|City|Actua Network Member|
+|---|---|---|
+|Spencer Middle School|Victoria|Science Venture|
+|Malcolm Tweddle School|Edmonton|DiscoverE|
+|Britannia Elementary|Vancouver|GEERing Up|
+|Captain John Palliser|Calgary|Minds in Motion|
+|St. Josaphat School|Regina|EYES|
+|Bishop Roborecki School|Saskatoon|SCI-FI|
+|Dalhousie Elementary School|Winnipeg|WISE Kid-Netic Energy|
+|Hillfield Strathallan College|Hamilton|Venture Engineering and Science|
+|Byron Northview Public School|London|Discovery Western|
+|Stanley Public School|Toronto|Science Explorations|
+|Ottawa Catholic School Board|Ottawa|Virtual Ventures|
+|École Arc-en-Ciel|Montreal|Folie Technique|
+|Saint Vincent Elementary School|Laval|Musee Armand Frappier|
+|Garden Creek School|Fredericton|Worlds UNBound|
+|Armbrae Academy|Halifax|SuperNOVA|
+
 <h2 id="kids_code">Kids Code Jeunesse will help support you in the classroom!</h2>
 
 Are you a teacher who wants to introduce computer programming to your students and would like support in the classroom? Any teacher that would like a trained Computer Programming volunteer to assist in the classroom can contact [Kids Code Jeunesse](http://www.kidscodejeunesse.org) and we’ll work on getting you supported! [Kids Code Jeunesse](http://www.kidscodejeunesse.org) is a Canadian not for profit aimed at providing every child with the opportunity to learn to code. And every teacher the opportunity to learn how to teach computer programming in the classroom.
