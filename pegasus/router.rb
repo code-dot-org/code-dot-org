@@ -155,11 +155,12 @@ class Documents < Sinatra::Base
 
     extname = File.extname(path).downcase
     pass unless settings.image_extnames.include?(extname)
+    image_format = extname[1..-1]
 
     basename = File.basename(path, extname)
     dirname = File.dirname(path)
 
-    # A
+    # Manipulated?
     if dirname =~ /\/(fit-|fill-)?(\d+)x?(\d*)$/ || dirname =~ /\/(fit-|fill-)?(\d*)x(\d+)$/
       manipulation = File.basename(dirname)
       dirname = File.dirname(dirname)
@@ -184,6 +185,8 @@ class Documents < Sinatra::Base
     
     if ((retina_in == retina_out) || retina_out) && !manipulation && File.extname(path) == extname
       # No [useful] modifications to make, return the original.
+      content_type image_format.to_sym
+      cache_control :public, :must_revalidate, max_age:settings.image_max_age
       send_file(path)
     else
       image = Magick::Image.read(path).first
@@ -229,9 +232,9 @@ class Documents < Sinatra::Base
       raise StandardError, 'Unreachable code reached!'
     end
 
-    image.format = extname[1..-1]
+    image.format = image_format
 
-    content_type image.format.to_sym
+    content_type image_format.to_sym
     cache_control :public, :must_revalidate, max_age:settings.image_max_age
     image.to_blob
   end
