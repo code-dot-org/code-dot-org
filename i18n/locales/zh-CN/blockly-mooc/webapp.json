@@ -18,7 +18,7 @@
   "pause":"断",
   "reinfFeedbackMsg":"你可以按\"重试\"按钮以返回到运行您的应用程序.",
   "repeatForever":"一直重复下去",
-  "repeatDo":"做",
+  "repeatDo":"执行",
   "repeatForeverTooltip":"当应用程序正在运行时, 反复执行此块的操作.",
   "shareWebappTwitter":"看看我做的应用程序. 我用@codeorg自己写的",
   "shareGame":"分享您的应用程序：",

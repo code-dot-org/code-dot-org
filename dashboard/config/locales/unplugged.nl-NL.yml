@@ -243,14 +243,14 @@
           eenvoudig houd zijn er veel manieren om het te gebruiken. Als u ervoor wilt
           zorgen dat iedereen eindigt met het zelfde ding, dan heeft het algoritme
           meer detail nodig.
-        video: C4_unplugged_algorithms
+        video: C4_unplugged_algoritmen
       EnvelopeVariables:
         title: Envelop variabelen
         desc: Variabelen zorgen voor een veel vrijheid in informatica. Deze les helpt
           uit te leggen wat variabelen zijn en hoe we ze kunnen gebruiken op vele
           verschillende manieren. Gebruik deze activiteit voordat (of in combinatie
           met) de les over abstractie.
-        video: C4_unplugged_variables
+        video: C4_unplugged_variabelen
       MadGlibs:
         title: Gekke Glibs
         desc: Abstract denken is een van de belangrijkste vaardigheid voor een informaticus.
@@ -262,7 +262,7 @@
         title: For Lus fun
         desc: We weten dat lussen ons toelalen om dingen steeds opnieuw te herhalen,
           nu gaan we leren om gebruik te maken van lussen met extra ingebouwde structuur.
-        video: C4_unplugged_forloops
+        video: C4_unplugged_forlussen
       SongwritingWithParameters:
         title: Songwriting met Parameters
         desc: 'Een van de meest prachtige structuren in de informatica wereld is de
@@ -278,7 +278,7 @@
           in een verscheidenheid van binair opties. In deze les gaan we nog een stapje
           verder door te tonen hoe een computer nog meer complexe informatie (zoals
           afbeeldingen en kleuren) kan opslaan in binair.
-        video: C4_unplugged_binary
+        video: C4_unplugged_binair
       VideoGamesCoordinatePlanes:
         title: Video games en coördinatenstelsels
         desc: Video games en coördinatenstelsels lesbeschrijving

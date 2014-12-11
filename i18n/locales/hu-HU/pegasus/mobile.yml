@@ -487,7 +487,7 @@ hu-HU:
   playlab_shortdescription: Hozz létre egy történetet vagy készíts egy játékok a Játéklaborral!
   codeorg_longdescription: 'Tanuld meg a számítástechnika alapgondolatait drag&drop elvű programozással. Ez egy játékszerű, önálló tutorial, amely video leckéiben szerepel Bill Gates, Mark Zuckerberg, Andry Birds és a Plants vs. Zombies. Tanuld meg az ismétlő ciklusokat, feltételeket és az alapvető algoritmusokat. Elérhető 34 nyelven.'
   codeintl_longdescription: 'Tanuld meg a számítástechnika alapgondolatait drag&drop elvű programozással. Ez egy játékszerű, önálló tutorial, amely video leckéiben szerepel Bill Gates, Mark Zuckerberg, Andry Birds és a Plants vs. Zombies. Tanuld meg az ismétlő ciklusokat, feltételeket és az alapvető algoritmusokat. Elérhető 34 nyelven.'
-  thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
+  thinkersmithspanish_longdescription: 'Az előre meghatározott "Robot Szótár" használatával a diákok ki fogják találni hogyan segítsenek egymáson a speciális feladatok végrehajtásában, anélkül hogy azt előre megbeszélnék. Ez az oktatóanyag megtanítja a gyerekeknek a szimbólumok és műveletek közötti összefüggéseket, valamint felbecsülhetetlen értékű hibakeresési tapasztalatot nyújt.'
   khan_longdescription: Tanuld meg a JavaScript programozás alapjait, miközben szórakoztató rajzokat készítesz a programoddal. Csináld egyedül vagy akár az osztályoddal!
   khanes_longdescription: Tanuld meg a JavaScript programozás alapjait, miközben szórakoztató rajzokat készítesz a programoddal. Csináld egyedül vagy akár az osztályoddal!
   khanpt_longdescription: Tanuld meg a JavaScript programozás alapjait, miközben szórakoztató rajzokat készítesz a programoddal. Csináld egyedül vagy akár az osztályoddal!
@@ -524,7 +524,7 @@ hu-HU:
   projguts_longdescription: Ez az offline tevékenység bemutatja, hogy miként működik a modellezés és a szimulálás. A gyerekek egy csoportja a kő, papír, olló különböző verzióit játssza, majd megfigyeli a különböző modellkísérletek eredményeit.
   hourofcode_longdescription: Az új code.org/hoc helyőrzője
   frozen_longdescription: Használjuk a programozást, hogy csatlakozzunk Annához és Elsához, ahogy felfedezik a jég varázsát és szépségét. Hópihéket fogsz készíteni és mintákat ahogy jégkorcsolyázol, és így egy téli csodaországot készítesz, amelyet majd megoszthatsz a barátaiddal!
-  playlab_longdescription: Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!
+  playlab_longdescription: Hozz létre egy történetet, vagy készíts egy játékot a Play Lab-bal! Hozd mozgásba az állatokat, a kalózokat, a zombikat, nindzsákat, és a többi karaktert, adj hozzá hangot, pontozd az eredményt, és még dobálj tűzgolyókat is!
   codeorg_beyond_name: Bevezetés a számítástechnikába (általános iskolai évfolyamok)
   khan_beyond_name: Tanulj programozni
   tynker_beyond_name: Tanulj programozni otthon

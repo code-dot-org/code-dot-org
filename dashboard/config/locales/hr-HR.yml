@@ -197,13 +197,14 @@
       choose_teacher: 'Click on the logo below to claim your prize:'
       earned: Zaslužili ste nagradu! (Samo za američke učenike)
       not_earned_title: Završite tutorijal, zaradite nagrade (samo za američke studente)
-      not_earned: 'Learn all the computer science concepts, collect all %{num_trophies}
-        trophies, and earn real-world prizes. You can choose between 10GB of free
-        Dropbox space, $10 in Skype credits, and free game downloads. NOTE: offer
-        only valid to U.S. students, and only as long as supplies last.'
+      not_earned: 'Naučite sve informatičke pojmove, prikupite svih %{num_trophies}
+        trofeja i zaradite nagrade u stvarnom svijetu. Možete birati između 10GB slobodnog
+        prostora na Dropboxu, $10 u Skype kreditima ili slobodno preuzimanje igara.
+        Napomena: Ponuda vrijedi samo za američke učenike i vrijedi samo do isteka
+        zaliha.'
       teacher:
-        earned: 10 or more students collected all %{num_trophies} trophies. You have
-          won a teacher prize! (U.S. teachers only)
+        earned: 15 ili više učenika sakupilo je svih %{num_trophies} trofeja. Osvojili
+          ste nagradu za učitelja! (Samo za američke učitelje)
         not_earned_title: Podučavajte razred, zaradite do $1,000 u <a target="_blank"
           href="http://DonorsChoose.org">DonorsChoose.org</a> valuti (samo za američke
           učitelje)
@@ -221,13 +222,13 @@
           not_earned_title: Još uvijek možete zaraditi dodatnih 250 $ u <a target="_blank"
             href="http://DonorsChoose.org"> DonorsChoose.org</a> kreditima (samo za
             američke učitelje)
-          earned: 7 or more of the students who collected all %{num_trophies} trophies
-            are girls. You have won a bonus prize! (U.S. teachers only)
-          not_earned: If at least 7 of your students who earn all %{num_trophies}
-            trophies are girls, your reward is an additional $250 in <a target="_blank"
-            href="http://DonorsChoose.org">DonorsChoose.org</a> credits. <a target="_blank"
-            href="http://DonorsChoose.org">DonorsChoose.org</a> credits can only be
-            used by teachers in U.S. public schools.
+          earned: 7 ili više učenika koji su sakupili svih %{num_trophies} trofeja
+            su djevojke. Dobili ste bonus nagradu! (Samo američki učitelji)
+          not_earned: Ako su najmanje 7 učenika koji su sakupili svih %{num_trophies}
+            trofeja djevojke, vaša nagrada je dodatnih 250 $ u obliku <a target="_blank"
+            href="http://DonorsChoose.org"> DonorsChoose.org</a> kredita. <a target="_blank"
+            href="http://DonorsChoose.org"> DonorsChoose.org</a> kredite mogu koristiti
+            isključivo učitelji u javnim školama SAD-a.
   crud:
     new_model: Novi %{model}
     show: Prikaži
@@ -237,10 +238,10 @@
     destroy: Uništi
     back: Nazad
     confirm: Jesi li siguran?
-    created: '%{model} was successfully created.'
-    updated: '%{model} was successfully updated.'
-    destroyed: '%{model} was successfully deleted.'
-    access_denied: You do not have access to this %{model}.
+    created: '%{model} je uspješno stvoren.'
+    updated: '%{model} je uspješno ažuriran.'
+    destroyed: '%{model} je uspješno izbrisan.'
+    access_denied: Nemate pristup ovom %{model}.
   nav:
     header:
       finished_hoc: Završih svoj Sat Kodiranja
@@ -297,17 +298,17 @@
       add: Dodavanje učenika
       remove: uklanjanje učenika
       confirm_remove: Jeste li sigurni da želite ukloniti ovog učenika?
-      help_reassign: To divide your class into multiple sections, select students
-        to assign to a new section.
-      help_register: Instead of making you spend a lot of time individually importing
-        student data, you can set up your class quickly by asking them to signup.
-        Your students will need to choose usernames and passwords, but they WILL NOT
-        be required to provide an email address. If a student forgets their password,
-        you will be able to reset it for them.
-      register: Ask your students to register themselves
-      vist: Ask your students to visit
-      section_code: 'and enter their section-code:'
-      first_please: First, please %{add_section}
+      help_reassign: Da biste podijelili razred u više dijelova, odaberite učenike
+        da im dodijelite novi dio.
+      help_register: Umjesto da potrošite puno vremena pojedinačno uvozeći podatke
+        o učenicima, možete brzo napraviti svoj razred tako da ih zamolite da se sami
+        prijave. Vaši učenici će trebati odabrati korisnička imena i lozinke, ali
+        od njih NEĆE biti zatraženo da daju adresu e-pošte. Ako učenik zaboravi svoju
+        lozinku, bit ćete u mogućnosti da je resetirate.
+      register: Zamolite učenike da se sami registriraju
+      vist: Zamolite učenike da posjete
+      section_code: 'i unesite svoju šifru za dio:'
+      first_please: Molim, prvo %{add_section}
       for: Za
       enter: 'unesite:'
     sections:
@@ -327,16 +328,15 @@
       email: Poslati e-poštom
     rollup: Upravljačka ploča napretka
     activity: Nedavna aktivnost razreda
-    user_not_found: The teacher or student could not be found
-    cant_remove_student_no_email: '%{student_name} cannot be removed as your student
-      because %{student_name} has not registered an e-mail address'
-    cant_remove_teacher_no_email: '%{teacher_name} cannot be removed as your teacher
-      because you have not registered an e-mail address'
-    student_teacher_disassociated: '%{teacher_name} has been removed as a teacher
-      for %{student_name}'
+    user_not_found: Učitelj ili učenik nije pronađen
+    cant_remove_student_no_email: '%{student_name} se ne može ukloniti kao vaš učenik
+      jer %{student_name} nema registriranu adresu e-pošte'
+    cant_remove_teacher_no_email: '%{teacher_name} ne može biti uklonjen kao vaš učitelj
+      jer niste registrirali adresu e-pošte'
+    student_teacher_disassociated: '%{teacher_name} je uklonjen kao učitelj za %{student_name}'
   user:
-    email_confirm_needed: 'Email address has not been confirmed:'
-    email_resend_confirm: Resend confirmation instructions
+    email_confirm_needed: 'E-mail adresa nije potvrđena:'
+    email_resend_confirm: Ponovno slanje uputa za potvrđivanje
     new_password_hint: (ostavite prazno ako ne želite promijeniti)
     current_password_hint: (za potvrdu promjene treba nam vaša trenutna lozinka)
     cancel:
@@ -362,31 +362,32 @@
     teacher_dashboard: Pogledajte upravljačku ploču napretka
     teacher_student_count_one: Imate %{count} učenik.
     teacher_student_count: Imate %{count} učenika.
-    teacher_averages: On average your students have earned %{trophy_average} out of
-      %{trophy_max} "Concept Mastery" trophies.
-    teacher_print_certificates: Print certificates for students who finish this course
-    teacher_read_blog: Read about news and updates to our materials at our Educator
-      Blog
+    teacher_averages: U prosjeku su vaši učenici zaradili %{trophy_average} od %{trophy_max}
+      "Concept Mastery" trofeja.
+    teacher_print_certificates: Ispišite potvrde za učenike koji su završili ovaj
+      tečaj
+    teacher_read_blog: Pročitajte o novostima i ažuriranjima materijala na našem pedagoškom
+      blogu
     classroom: Vaša učionica
     student_progress: Vaš napredak učenja
-    student_stats: You've earned %{trophy_count} out of %{trophy_max} "Concept Mastery"
-      trophies.
+    student_stats: Zaslužio si %{trophy_count} od %{trophy_max} "Concept Mastery"
+      trofeja.
     student_left_off: 'Gdje ste stali:'
-    student_finished: You've completed all tutorials, pick another class %{online_link}
-      or at a %{local_school_link}
+    student_finished: Završio si sve tutorijale, odaberi drugi tečaj na %{online_link}
+      ili na %{local_school_link}
     local_school: lokalna škola
     online: online
     see_details: Vidi detalje
-    prize_info: 'Prizes for participation (U.S. only): $10 gift cards for student
-      completion and up to $1,000 in classroom rewards for public school teachers'
-    tryfirst: 'Or, you can try it first, and sign up later:'
+    prize_info: 'Nagrade za sudjelovanje (samo za američke učitelje): do 1.000 dolara
+      u učioničkim nagradama.'
+    tryfirst: 'Ili, možete to prvo isprobati, a kasnije se prijaviti:'
     trynow: Probaj sad
-    add_hint_help: Please help us to add smart hints to Code.org tutorials
+    add_hint_help: Pomozite da dodamo pametne savjete na Code.org tutorijale
     20hour_overview: Ovaj 20-satni tečaj objašnjava iosnovne koncepte programiranja
       i nformatike. Tečaj je namijenjen za korištenje u nižim razredima osnovne škole,
       ali je zabavan za učenje bez obzira na dob polaznika.
-    test_videos_help: Test our new video player at your school
-    try_beta_courses: New! Try our beta courses for K-5 students
+    test_videos_help: Testirajte naš novi video player u školi
+    try_beta_courses: Novo! Isprobaj naše beta tečajeve za učenike razredne nastave
     use_as_teacher: Koristite ovo sjedište kao učitelj
     heading_hoc2014: <h2>Sat Kodiranja za</h2><h1>sve uzraste</h1>
     heading_elementary: <h2>20-satni tečajevi za</h2><h1>početnike (svih uzrasta)</h1>
@@ -401,13 +402,12 @@
     student: Učenik
     teacher: Učitelj
   footer:
-    help_from_html: Inžinjeri iz <a href="http://www.google.com">Googlea</a>, <a href="http://www.microsoft.com">Microsofta</a>,
-      <a href="http://www.facebook.com">Facebooka</a>, i<a href="http://www.twitter.com">Twittera</a>
-      su pomogli u stvaranju ovog tutorijala.
+    help_from_html: Inženjeri iz Googlea, Microsofta, Facebooka i Twittera su pomogli
+      napraviti ovaj tutorijal.
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
       Sva prava pridržana.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
       Arts Inc. Sva prava pridržana.
-    powered_by_aws: Powered by Amazon Web Services
+    powered_by_aws: Potpomognuto s Amazon Web Services
     feedback: Pošaljite povratne informacije
     translate: Pomozite nam prevesti na vaš jezik
     support: Podrška
@@ -430,20 +430,21 @@
     download: Preuzimanje videa
   compatability:
     working:
-      header: We are working on support for your browser.
-      message: Code.org uses modern web technology. This makes the site faster to
-        use. Your browser doesn't support all the features required, and you may experience
-        issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
-        any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade
-        your browser to a supported version</a>.
+      header: Radimo na podršci za vaš preglednik.
+      message: Code.org koristi moderne web tehnologije. To čini ovo sjedište bržim.
+        Vaš preglednik ne podržava sve potrebne značajke i mogu se pojaviti problemi
+        dok koristite ovaj dio sjedišta. Molimo vas da nam pomognete tako da nas <a
+        href='%{report_issue_url}'>izvijestite o problemima na koje ste naišli</a>.
+        Također možete <a href='%{supported_browsers_url}'>nadograditi svoj preglednik
+        na podržanu verziju</a>.
       hide_this_warning: Sakrij ovo upozorenje
     upgrade:
       header: Molimo vas da nadogradite vaš preglednik.
-      message: Code.org uses modern web technology. This makes the site faster to
-        use. Unfortunately your browser doesn't support all the features required
-        to run this part of the site.<br/><br/>Install a browser on our supported
-        browsers list to continue. You can <a href='#'>try viewing the page</a>, but
-        expect functionality to be broken.
+      message: Code.org koristi moderne web tehnologije. To čini ovo sjedište bržim.
+        Nažalost, vaš preglednik ne podržava sve značajke potrebne za korištenje ovog
+        dijela sjedišta.<br/><br/>Za nastavak instalirajte preglednik s naše liste
+        podržanih preglednika. Možete <a href='#'>pokušati pregledati stranicu</a>,
+        ali očekujte nepotpunu funkcionalnost.
       button: Odvedi me na popis podržanih preglednika
   slow_loading: Ovo traje dulje nego inače...
   try_reloading: Pokušajte ponovo učitati stranicu
@@ -461,16 +462,14 @@
     studio_og_title: Pogledaj moju igru Laboratorija
     check_out_what_i_made: Pogledaj što sam napravio
     og_description: Sam sam napisao kôd na Code.org
-    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
-      the text.
-    address_not_allowed: It looks like there is an address in it. Try changing the
-      text.
-    email_not_allowed: It looks like there is an email in it. Try changing the text.
-    profanity_not_allowed: It looks like there is profanity in it. Try changing the
-      text.
+    phone_number_not_allowed: Izgleda da ovdje ima telefonski broj. Pokušaj promijeniti
+      tekst.
+    address_not_allowed: Izgleda da ovdje ima adresa. Pokušaj promijeniti tekst.
+    email_not_allowed: Izgleda da ovdje ima e-mail. Pokušaj promijeniti tekst.
+    profanity_not_allowed: Izgleda da ovdje ima psovki. Pokušaj promijeniti tekst.
   builder:
-    created: You created a new script.
-    destroyed: You destroyed a script.
+    created: Napravio si novu skriptu.
+    destroyed: Uništio si skriptu.
     manage: Napravi nivoe
     view: Prikaz
     back: Povratak na skripte
@@ -516,16 +515,18 @@
     header_playlab: Play Lab
     header_artist: Artist
   landing:
-    prerelease: This page is still under development.
-    prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
-      is subject to revision as feedback is received and improvements are made.
+    prerelease: Ovaj tečaj je u <span class='betatext'> beta fazi</span>. To znači
+      da ovo nije konačna verzija tečaja, te da podliježe izmjenama u skladu s primljenim
+      povratnim informacijama i napravljenim poboljšanjima.
+    prerelease_hoc2014: Ovaj tutorial je u <span class='betatext'> beta fazi</span>.  Podliježe
+      izmjenama u skladu s primljenim povratnim informacijama i napravljenim poboljšanjima.
     feedback: Slanje povratnih informacija
     report_bug: Prijavi grešku
     support: Dobivanje pomoći
     support_url: //support.code.org
   multi:
     wrong_title: Netočan odgovor
-    wrong_body: The answer you've entered is not correct.  Please try again!
+    wrong_body: Odgovor koji ste unijeli nije ispravan.  Molimo pokušajte ponovo!
     correct_title: Ispravno
     correct_body: To je točan odgovor.
   match:
@@ -566,7 +567,7 @@
           description: Želite li napisati vlastitu igru u manje od 10 minuta? Isprobajte
             naš tutorijal izrade Flappy kôda!
         jigsaw:
-          title: Jigsaw
+          title: Slagalica
           description: ''
         step:
           title: korak
@@ -576,16 +577,16 @@
           description: ''
   age_interstitial:
     age: Tvoja dob
-    header: Account Information Update
-    message: We're in the process of updating our experience to provide you with even
-      stronger privacy protections. To do this, we need existing users to enter their
-      age here.<br/>As always, code.org will never rent, sell or share this information
-      with any third parties.
-    sign_out: If you do not wish to provide your age you may <a href="%{url}">sign
-      out</a>.
-  zendesk_too_young_message: Sorry, younger users may not sign in to our support site.
-    You may browse <a href="http://support.code.org">support.code.org</a> without
-    signing in or ask your parent or teacher to contact us for you.
+    header: Ažuriranje informacija o računu
+    message: Mi smo u procesu nadogradnje da bismo vam pružili još jaču zaštitu privatnosti.
+      Da bismo to učinili, trebamo da postojeći korisnici da unesu svoju dob. <br/>Kao
+      i uvijek, code.org neće nikada iznajmiti, prodati ili podijeliti te informacije
+      s drugim stranama.
+    sign_out: Ako ne želite unijeti svoju dob možete se<a href="%{url}">odjaviti</a>.
+  zendesk_too_young_message: Nažalost, mlađi korisnici se ne mogu prijaviti na našu
+    stranicu za podršku. Možeš pregledavati <a href="http://support.code.org"> support.code.org</a>
+    bez prijavljivanja ili pitaj roditelje ili učitelja da nas kontaktiraju umjesto
+    tebe.
   progress:
     not_completed: nije dovršeno
     completed_too_many_blocks: dovršeno, previše blokova

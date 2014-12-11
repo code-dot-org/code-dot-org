@@ -11,7 +11,7 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Ja esi informātikas skolotājs, apskati citus CSEdWeek
     resursus</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h3>esmu mēģinājis </h3><h2> "Programmēšanas stundu"</h2>
+  n_have_learned_an_hoc: <h1>#</h1><h3>ir izmēģinājuši </h3><h2> "Programmēšanas stundu"</h2>
   anybody_can_learn: Jebkurš var iemācīties.
   learn_now: Mācīties tagad
   petition_message: Katram skolēnam katrā skolā būtu jābūt iespējai apgūt programmēšanu
@@ -697,9 +697,9 @@
   frozen_longdescription: Izmantosim kodu, lai piebiedrotos Annai un Elzai pētīt ledus
     burvību un skaistumu. Tu izdveidosi sniegprāslas un paraugus slidojot un taisot
     ziemas brīnumpasauli, ar kuru pēc tam vari dalīties ar draugiem!
-  playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
-    pirates, zombies, ninjas, and many more characters move, make sounds, score points,
-    and even throw fireballs!
+  playlab_longdescription: Spēļu laboratorijā radi stāstu vai spēli. Liec dzīvniekiem,
+    pirātiem, zombijiem, nindzjām un citiem tēliem kustēties, skanēt, krāt punktus
+    un ķert ugunsbumbas!
   codeorg_beyond_name: Ievads Datorzinātnēs (8. klases pākāpē)
   khan_beyond_name: Mācies datorprogrammēšanu
   tynker_beyond_name: Mācies programmēt mājās

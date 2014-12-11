@@ -105,8 +105,8 @@
         video: Unplug9
       Unplug10:
         title: Internet
-        desc: In this lesson, students will pretend to flow through the Internet,
-          all the while learning about web addresses, IPs and the DNS.
+        desc: V tej lekciji se bodo učenci pretvarjali, da letijo skozi internet in
+          se med tem učili o spletnih naslovih, IP naslovih in DNS-u.
         pdfs:
         - unplug10
         video: Unplug10
@@ -174,8 +174,9 @@
         video: C1_going_places_safely
       GraphPaperProgramming:
         title: Obarvajmo kvadratke
-        desc: Students write an algorithm (a set of instructions) using a set of predefined
-          commands to direct their classmates to reproduce a drawing.
+        desc: Učenci bodo napisali algoritem (zaporedje navodil) z uporabo nabora
+          vnaprej pripravljenih ukazov in z njim usmerjali sošolce, ki bodo reproducirali
+          risbo.
         video: C2_graph_paper
       PaperPlanes:
         title: 'Real-life Algorithms: Paper Planes'
@@ -196,15 +197,15 @@
         video: C2_digital_footprint
       ComputationalThinking:
         title: Računalniško razmišljanje
-        desc: Students use the steps of computational thinking (decompose, pattern
-          match, abstract, algorithm) to figure out how to play a game that comes
-          with no instructions.
+        desc: Učenci uporabijo korake računalniškega razmišljanja (dekompozicija,
+          iskanje vzorcev, abstrakcija, algoritem), da ugotovijo kako igrati igro,
+          za katero nimajo navodil.
         video: C3_computational_thinking
       FunctionalSuncatchers:
         title: Functional Suncatchers
-        desc: Students create an algorithm with variables and functions (pieces of
-          code that you want to use over and over again) to create suncatchers using
-          string and beads.
+        desc: Učenci sestavijo algoritem s spremenljivkami in funkcijami (kosi kode,
+          ki jih želimo uporabiti večkrat), da sestavijo lovilce svetlobe s pomočjo
+          nitk in koraldic.
         video: C3_functional_suncatchers
       SongwritingParameters:
         title: Songwriting with Parameters
@@ -214,9 +215,9 @@
         video: C3_songwriting_with_parameters
       DiceRace:
         title: 'Real life algorithms: Dice Race'
-        desc: This lesson calls out ways we use algorithms in our daily lives. As
-          part of that, students will identify and write down the algorithm for a
-          dice race game.
+        desc: Ta lekcija bo priklicala načine, na katere uporabljamo algoritme v vsakdanjem
+          življenju. Kot del tega bodo učenci identificirali in zapisali algoritem
+          za igro s kocko.
         video: C3_dice_race
       Internet:
         title: Internet

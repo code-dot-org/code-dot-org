@@ -30,7 +30,7 @@
         - unplug2
         video: Unplug2
       Unplug3:
-        title: Graph Paper Programming
+        title: Grafičko programiranje
         desc: By programming one another to draw pictures, students will begin to
           understand what programming is really about. The class will begin by students
           instructing each other to color squares in on graph paper in an effort to
@@ -83,7 +83,7 @@
         - unplug7
         video: Unplug7
       Unplug8:
-        title: Abstraction
+        title: Apstrakcija
         desc: This lesson will introduce the concept of Computer Science and explain
           what a Computer Scientist does.  It will also give students an opportunity
           to assume the role of a computer scientist.  By the end of the activity,
@@ -96,7 +96,7 @@
         - unplug8
         video: Unplug8
       Unplug9:
-        title: Relay Programming
+        title: Programiranje u smjenama
         desc: This lesson will take an idea from a previous activity (4. Graph Paper
           Programming) and use those skills to emphasize the importance of completing
           programs that operate in sequence and frequently checking programs for "bugs".
@@ -173,7 +173,7 @@
           introduce how to stay safe while navigating the Internet.
         video: C1_going_places_safely
       GraphPaperProgramming:
-        title: Graph Paper Programming
+        title: Grafičko programiranje
         desc: Students write an algorithm (a set of instructions) using a set of predefined
           commands to direct their classmates to reproduce a drawing.
         video: C2_graph_paper
@@ -260,7 +260,7 @@
           we’re going to learn how to use loops with extra structure built right in.
         video: C4_unplugged_forloops
       SongwritingWithParameters:
-        title: Songwriting With Parameters
+        title: Pisanje pjesama s parametrima
         desc: 'One of the most magnificent structures in the computer science world
           is the function.  Functions (sometimes called procedures) are mini programs
           that you can use over and over inside of your bigger program. This lesson
