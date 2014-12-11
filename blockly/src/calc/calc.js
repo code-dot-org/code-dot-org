@@ -54,6 +54,8 @@ var appState = {
   testResults: null
 };
 
+var STEP_TIME = 2000;
+
 /**
  * Initialize Blockly and the Calc.  Called on page load.
  */
@@ -311,7 +313,7 @@ Calc.execute = function() {
     } else {
       stopAnimatingAndDisplayFeedback();
     }
-  }, 1000);
+  }, STEP_TIME);
 };
 
 function stopAnimatingAndDisplayFeedback() {
@@ -341,7 +343,7 @@ Calc.step = function (ignoreFailures) {
 
   window.setTimeout(function () {
     Calc.step(false);
-  }, 1000);
+  }, STEP_TIME);
 };
 
 /**
@@ -369,13 +371,18 @@ function clearSvgExpression(elementId) {
   }
 }
 
+// todo - hack. do better.
+var numCollapses = 0;
+
 function drawSvgExpression(elementId, expr, expected) {
-  var i, text, textLength, char;
-  var g = document.getElementById(elementId);
-  clearSvgExpression(elementId);
+  var i, text, textLength, char, g;
+  var parent = document.getElementById(elementId);
+  // clearSvgExpression(elementId);
 
   var tokenList = expr.getTokenList(expected);
   var xPos = 0;
+  g = document.createElementNS(Blockly.SVG_NS, 'g');
+  parent.appendChild(g);
   for (i = 0; i < tokenList.length; i++) {
     text = document.createElementNS(Blockly.SVG_NS, 'text');
 
@@ -406,11 +413,9 @@ function drawSvgExpression(elementId, expr, expected) {
   // todo (brent): handle case where expression is longer than width
   var width = g.getBoundingClientRect().width;
   var xPadding = (CANVAS_WIDTH - width) / 2;
-  var currentTransform = g.getAttribute('transform');
-  // IE has space separated args, others use comma to separate
-  var newTransform = currentTransform.replace(/translate\(.*[,|\s]/,
-    "translate(" + xPadding + ",");
-  g.setAttribute('transform', newTransform);
+  var yPos = (numCollapses * 20);
+  numCollapses++;
+  g.setAttribute('transform', 'translate(' + xPadding + ', ' + yPos + ')');
 }
 
 /**
@@ -441,9 +446,7 @@ var displayFeedback = function() {
   level.extraTopBlocks = calcMsg.extraTopBlocks();
   var appDiv = null;
   // Show svg in feedback dialog
-  if (appState.testResults === TestResults.LEVEL_INCOMPLETE_FAIL) {
-    appDiv = cloneNodeWithoutIds('svgCalc');
-  }
+  appDiv = cloneNodeWithoutIds('svgCalc');
   var options = {
     app: 'Calc',
     skin: skin.id,
