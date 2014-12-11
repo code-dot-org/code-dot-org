@@ -33,7 +33,10 @@ class Petition
     result = {}
 
     location = data['zip_code_s'] || data['country_s']
-    result['location_p'] = geocode_address(location) unless location.nil_or_empty?
+    begin
+      result['location_p'] = geocode_address(location) unless location.nil_or_empty?
+    rescue
+    end
 
     result
   end
