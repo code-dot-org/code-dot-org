@@ -7,6 +7,14 @@ nav: educate_nav
 
 ## Unit 1
 
+**Quick Links**
+
+[CSP Forum](https://support.code.org/hc/communities/public/topics/200138206-CS-Principles) | [About using these lesson plans](howToUse) | [About the widgets](aboutTheWidgets) | [Widget Directory](http://cspdashboard-c9-bfranke.c9.io/home.html) |  [Writing Team](team)
+
+**Invitation to Comment:** 
+
+The lesson plans below are shared as publicly commentable documents.  Some have been used by teachers in classrooms already and you will see their comments in the documents already.
+
 | Lesson Description| Lesson Plan | Widget |
 | ------------------|:-----------:|:------:|
 | **Lesson 01 - Impact of Innovation** Students are asked to consider the impact of technological innovation on their lives and multiple generations of their family.  e.g. “What technological innovation would your grandparent say affect them the most?”| [![lesson 1](images/thumb_lesson1.png)](https://docs.google.com/a/code.org/document/d/1nWrpzSNPgx_D7Q7rm2j4UdCB26ggyXaeta-MWr9zYPs) | [![binary magic](images/thumb_binaryMagic.png)](http://bakerfranke.pencilcode.net/home/widgets/binaryMagicSimple) |
