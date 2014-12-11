@@ -465,7 +465,7 @@ class Documents < Sinatra::Base
         }
       else
         metadata = {
-          'og:title'          => @header['title'] || "The Hour of Code is coming",
+          'og:title'          => @header['title'] || "The Hour of Code is here",
           'og:description'    => @header['description'] || "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104.",
           'og:image'          => @header['og:image'] || 'http://code.org/images/code-video-thumbnail.jpg',
           'og:image:width'    => @header['og:image:width'] || '1705',
