@@ -11755,7 +11755,7 @@ exports.errorRequiredParamsMissing = function(d){return "Create a parameter for 
 
 exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "\"???\"を何かの値に置きかえてみてください。"};
 
 exports.extraTopBlocks = function(d){return "ブロックを外しました。もしかして、「実行時」のブロックにつなげたかったですか？"};
 
@@ -11892,7 +11892,7 @@ exports.catLogic = function(d){return "ロジック（論理）"};
 
 exports.catMath = function(d){return "数値"};
 
-exports.catProcedures = function(d){return "関数"};
+exports.catProcedures = function(d){return "機能"};
 
 exports.catText = function(d){return "テキスト"};
 

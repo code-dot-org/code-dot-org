@@ -21337,7 +21337,7 @@ var MessageFormat = require("messageformat");MessageFormat.locale.lt = function 
 };
 exports.actor = function(d){return "veikėjas"};
 
-exports.alienInvasion = function(d){return "Alien Invasion!"};
+exports.alienInvasion = function(d){return "Ateivių įsiveržimas!"};
 
 exports.backgroundBlack = function(d){return "juoda"};
 
@@ -21455,21 +21455,21 @@ exports.moveSpriteN = function(d){return "pajudink veikėją "+v(d,"spriteIndex"
 
 exports.moveDown = function(d){return "judėk žemyn"};
 
-exports.moveDownTooltip = function(d){return "Perkelti aktorių žemyn."};
+exports.moveDownTooltip = function(d){return "Perkelti veikėją žemyn."};
 
 exports.moveLeft = function(d){return "judėk kairėn"};
 
-exports.moveLeftTooltip = function(d){return "Perkelti aktorių kairėn."};
+exports.moveLeftTooltip = function(d){return "Perkelti veikėją kairėn."};
 
 exports.moveRight = function(d){return "judėk dešinėn"};
 
-exports.moveRightTooltip = function(d){return "Perkelti aktorių dešinėn."};
+exports.moveRightTooltip = function(d){return "Perkelti veikėją dešinėn."};
 
 exports.moveUp = function(d){return "judėk aukštyn"};
 
-exports.moveUpTooltip = function(d){return "Perkelti aktorių aukštyn."};
+exports.moveUpTooltip = function(d){return "Perkelti veikėją aukštyn."};
 
-exports.moveTooltip = function(d){return "Perkelti aktorių."};
+exports.moveTooltip = function(d){return "Perkelti veikėją."};
 
 exports.nextLevel = function(d){return "Sveikinu! Išsprendei šią užduotį."};
 
@@ -21705,11 +21705,11 @@ exports.setSpriteWitch = function(d){return "išvaizda = ragana"};
 
 exports.setSpriteWizard = function(d){return "išvaizda = žynys"};
 
-exports.setSpritePositionTooltip = function(d){return "Iškart perkelia aktorių į nurodytą vietą."};
+exports.setSpritePositionTooltip = function(d){return "Iškart perkelia veikėją į nurodytą vietą."};
 
 exports.setSpriteK1Tooltip = function(d){return "Paslėpia/parodo veikėją."};
 
-exports.setSpriteTooltip = function(d){return "Nustato aktoriaus išvaizdą"};
+exports.setSpriteTooltip = function(d){return "Nustato veikėjo išvaizdą"};
 
 exports.setSpriteSizeRandom = function(d){return "dydis = atsitiktinis"};
 
@@ -21765,7 +21765,7 @@ exports.size = function(d){return "dydis"};
 
 exports.setSprite = function(d){return " "};
 
-exports.setSpriteN = function(d){return "nustatyk aktoriui "+v(d,"spriteIndex")+":"};
+exports.setSpriteN = function(d){return "veikėjas "+v(d,"spriteIndex")};
 
 exports.soundCrunch = function(d){return "trakšt"};
 
@@ -21797,7 +21797,7 @@ exports.stopSprite = function(d){return "sustok"};
 
 exports.stopSpriteN = function(d){return "sustabdyk veikėją "+v(d,"spriteIndex")};
 
-exports.stopTooltip = function(d){return "Sustabdo aktoriaus veiksmus."};
+exports.stopTooltip = function(d){return "Sustabdo veikėją."};
 
 exports.throwSprite = function(d){return "mesk"};
 
@@ -21807,9 +21807,9 @@ exports.throwTooltip = function(d){return "Nurodytas veikėjas išmeta objektą 
 
 exports.vanish = function(d){return "išnyk"};
 
-exports.vanishActorN = function(d){return "panaikink aktorių "+v(d,"spriteIndex")};
+exports.vanishActorN = function(d){return "panaikink veikėją "+v(d,"spriteIndex")};
 
-exports.vanishTooltip = function(d){return "Pašalina aktorių"};
+exports.vanishTooltip = function(d){return "Pašalina veikėją"};
 
 exports.waitFor = function(d){return "palauk "};
 
@@ -21863,11 +21863,11 @@ exports.whenSpriteClicked = function(d){return "kai veikėjas spustelimas"};
 
 exports.whenSpriteClickedN = function(d){return "kai veikėjas "+v(d,"spriteIndex")+" spustelimas"};
 
-exports.whenSpriteClickedTooltip = function(d){return "Vykdyti veiksmus, nurodytus žemiau, kai bus nuspausta ant aktoriaus."};
+exports.whenSpriteClickedTooltip = function(d){return "Vykdyti veiksmus,  kai bus spustelta ant veikėjo."};
 
 exports.whenSpriteCollidedN = function(d){return "kai veikėjas "+v(d,"spriteIndex")};
 
-exports.whenSpriteCollidedTooltip = function(d){return "Vykdyti veiksmus, nurodytus žemiau, kai aktorius paliečia kitą aktorių."};
+exports.whenSpriteCollidedTooltip = function(d){return "Vykdyti nurodytus veiksmus, kai veikėjas paliečia kitą veikėją."};
 
 exports.whenSpriteCollidedWith = function(d){return "paliečia"};
 

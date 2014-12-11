@@ -15099,11 +15099,11 @@ exports.penUp = function(d){return "pakelk pieštuką"};
 
 exports.reinfFeedbackMsg = function(d){return "Štai tavo piešinys! Gali ir toliau piešti arba eik toliau prie kito galvosūkio."};
 
-exports.setColour = function(d){return "nustatyk spalvą"};
+exports.setColour = function(d){return "spalva ="};
 
-exports.setPattern = function(d){return "nustatyk šabloną"};
+exports.setPattern = function(d){return "šablonas = "};
 
-exports.setWidth = function(d){return "nustatyk plotį"};
+exports.setWidth = function(d){return "plotis = "};
 
 exports.shareDrawing = function(d){return "Pasidalink savo piešiniu:"};
 

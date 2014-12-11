@@ -21583,15 +21583,15 @@ exports.projectileRapunzel = function(d){return "رابونزيل"};
 
 exports.reinfFeedbackMsg = function(d){return "يمكنك الضغط على زر \"حاول مرة أخرى\" للعودة للعبة الخاصة بك."};
 
-exports.repeatForever = function(d){return "تكرار إلى الأبد"};
+exports.repeatForever = function(d){return "كرّر باستمرار"};
 
 exports.repeatDo = function(d){return "نفّذ"};
 
 exports.repeatForeverTooltip = function(d){return "تنفيذ الإجراءات في هذه الكتلة مرارا وتكرارا أثناء تشغيل القصة."};
 
-exports.saySprite = function(d){return "قول"};
+exports.saySprite = function(d){return "قُل"};
 
-exports.saySpriteN = function(d){return "يقول الممثل "+v(d,"spriteIndex")};
+exports.saySpriteN = function(d){return "تقول الشخصية "+v(d,"spriteIndex")};
 
 exports.saySpriteTooltip = function(d){return "يطفو على فقاعة كلام مع النص المرتبط به من الفاعل المحدد."};
 
@@ -21875,7 +21875,7 @@ exports.whenRight = function(d){return "عندما يكون السهم الى ا
 
 exports.whenRightTooltip = function(d){return "تنفيذ الإجراءات أدناه عند الضغط على مفتاح السهم الأيمن."};
 
-exports.whenSpriteClicked = function(d){return "عند النقر فوق الفاعل"};
+exports.whenSpriteClicked = function(d){return "عند النقر على الشخصية"};
 
 exports.whenSpriteClickedN = function(d){return "عندما يضغط الممثل "+v(d,"spriteIndex")};
 

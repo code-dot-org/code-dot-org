@@ -16521,13 +16521,13 @@ exports.end = function(d){return "vége"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Akkor van értelme az \"Ismétel\" vagy a \"Ha\" blokknak, ha van  bennük egy vagy több blokk. Bizonyosodj meg róla, hogy a belső blokk megfelelően illeszkedik a külső blokkhoz."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "A függvény blokkok belsejében szükség van több elemre, hogy működjön."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "A függvény blokkon belül más blokknak is szerepelnie kell ahhoz, hogy működjön."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "Ott kell lennie a blokkoknak a függvényed deklarációjában. Kattints a \"szerkesztés\" gombra, és húzd bele a blokkokat a zöld blokkba!"};
+exports.errorEmptyFunctionBlockModal = function(d){return "A függvényed leírásában blokkoknak kell szerepelniük. Kattints a \"szerkesztés\" gombra, és húzd bele a blokkokat a zöld blokkba."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Kattints a \"szerkesztés\"-re, hogy meggyőződj arról, hogy nincsenek-e hiányzó blokkok a függvényed deklarálásában!"};
+exports.errorIncompleteBlockInFunction = function(d){return "Kattints a \"szerkesztés\"-re, hogy pótold az esetlegesen hiányzó blokkokat a függvényed definíciójából."};
 
-exports.errorParamInputUnattached = function(d){return "Ne feledd odailleszteni a blokkot minden paraméter bemenetéhez a függvény blokkban a munkaterületeden."};
+exports.errorParamInputUnattached = function(d){return "A munkaterületen levő függvények minden bemenő paraméteréhez illessz blokkot."};
 
 exports.errorUnusedParam = function(d){return "Hozzáadtál egy paraméterblokkot, de nem használtad fel azt a deklarálásodban. Győződj meg róla, hogy használod a paraméteredet, rákattintva a \"szerkesztés\"-re  és arról is, hogy bele van-e illesztve a paraméterblokkod a zöld blokkba!"};
 
@@ -16535,7 +16535,7 @@ exports.errorRequiredParamsMissing = function(d){return "Hozz létre egy paramé
 
 exports.errorUnusedFunction = function(d){return "Létrehoztál egy függvényt, de soha sem használtad fel azt a munkaterületeden! Kattints a \"Függvények\"-re az eszközkészleten, és győződj meg róla, hogy használod a függvényt a programodban."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Próbálja módosítani a \"???\" értéket."};
+exports.errorQuestionMarksInNumberField = function(d){return "Próbálj a \"???\" helyére értéket írni."};
 
 exports.extraTopBlocks = function(d){return "Van különálló blokkod. Vagy csatlakoztasd a \"futtatáskor\" blokkhoz, vagy töröld."};
 
@@ -16567,7 +16567,7 @@ exports.nextLevel = function(d){return "Gratulálok! Megoldottad a "+v(d,"puzzle
 
 exports.nextLevelTrophies = function(d){return "Gratulálok! Megoldottad a "+v(d,"puzzleNumber")+". feladványt és nyertél "+p(d,"numTrophies",0,"hu",{"one":"egy trófeát","other":n(d,"numTrophies")+" trófeát"})+"."};
 
-exports.nextStage = function(d){return "Gratulálok! Teljesítetted a "+v(d,"stageName")+"."};
+exports.nextStage = function(d){return "Gratulálok!  "+v(d,"stageName")+" teljesítve."};
 
 exports.nextStageTrophies = function(d){return "Gratulálok! Teljesítetted a "+v(d,"stageNumber")+". szakaszát és nyertél "+p(d,"numTrophies",0,"hu",{"one":"egy trófeát","other":n(d,"numTrophies")+" trófeát"})+"."};
 
@@ -16766,9 +16766,9 @@ exports.noPathLeft = function(d){return "nincs út balra"};
 
 exports.noPathRight = function(d){return "nincs út jobbra "};
 
-exports.notAtFlowerError = function(d){return "Csak a virágból tudsz nektárt gyűjteni."};
+exports.notAtFlowerError = function(d){return "Csak virágból tudsz nektárt gyűjteni."};
 
-exports.notAtHoneycombError = function(d){return "Csak a lépnél tudsz mézet készíteni."};
+exports.notAtHoneycombError = function(d){return "Csak lépnél tudsz mézet készíteni."};
 
 exports.numBlocksNeeded = function(d){return "Ez a feladat a(z) %1 blokkal megoldható."};
 
@@ -16792,7 +16792,7 @@ exports.removeStack = function(d){return "egy adag halom eltávolítása "+v(d,"
 
 exports.removeSquare = function(d){return "négyzet eltávolítása"};
 
-exports.repeatCarefullyError = function(d){return "A megoldáshoz gondold át hogyan lehetne két  \"Előrelépni\" és egy \"Fordulj\" parancsot berakni az \"Ismételd amíg\" blokkba. Nem baj ha a végére marad egy felesleges \"Fordulj\" parancs."};
+exports.repeatCarefullyError = function(d){return "A megoldáshoz gondold meg két  \"Előrelépni\" és egy \"Fordulj\" parancs használatát az \"Ismételd amíg\" blokkban. Nem baj hogyha a végén még egy külön \"Fordulj\" parancs lesz."};
 
 exports.repeatUntil = function(d){return "ismételd amíg nem"};
 
