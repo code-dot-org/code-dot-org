@@ -82,11 +82,7 @@ private
     if params[:chapter]
       @script_level = @script.get_script_level_by_chapter(params[:chapter])
     elsif params[:stage_id]
-      if @script.cached?
-        @script_level = @script.script_levels.select{|sl| sl.stage.position == params[:stage_id].to_i && sl.position == params[:id].to_i}.first
-      else
-        @script_level = @script.get_script_level_by_stage_and_position(params[:stage_id], params[:id])
-      end
+      @script_level = @script.get_script_level_by_stage_and_position(params[:stage_id], params[:id])
     else
       @script_level = @script.get_script_level_by_id(params[:id])
     end
@@ -96,15 +92,13 @@ private
   def present_level
     @level = @script_level.level
     @game = @level.game
-    if @script.cached?
-      @stage = @script.stages.to_a.find{|stage| stage.id == @script_level.stage_id}
-      if @stage
-        @game_script_levels = @script.script_levels.to_a.select{|sl| sl.stage_id == @script_level.stage_id}
-      else
-        @game_script_levels = @script.script_levels.to_a.select{|sl| sl.level.game_id == @script_level.level.game_id}
-      end
+
+    @stage = @script_level.stage # this should be included
+    cached_script = Script.get_from_cache(@script.id)
+    if @stage
+      @game_script_levels = cached_script.script_levels.to_a.select{|sl| sl.stage_id == @script_level.stage_id}
     else
-      @stage = @script_level.stage
+      @game_script_levels = cached_script.script_levels.to_a.select{|sl| sl.level.game_id == @script_level.level.game_id}
     end
 
     set_videos_and_blocks_and_callouts_and_instructions
