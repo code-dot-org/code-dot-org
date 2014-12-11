@@ -1,80 +1,117 @@
 /**
- * A node consisting of a value, and if that value is an operator, two operands.
- * Operands will always be stored internally as ExpressionNodes.
+ * A node consisting of an value, and potentially a set of operands.
+ * The value will be either an operator, a string representing a variable, a
+ * string representing a functional call, or a number.
+ * If args are not ExpressionNode, we convert them to be so, assuming any string
+ * represents a variable
  */
-var ExpressionNode = function (val, left, right, blockId) {
-  this.val = val;
-  this.left = null;
-  this.right = null;
-  this.blockId = blockId;
+var ValueType = {
+  ARITHMETIC: 1,
+  FUNCTION_CALL: 2,
+  VARIABLE: 3,
+  NUMBER: 4
+};
 
-  if (this.isOperation()) {
-    this.left = left instanceof ExpressionNode ? left : new ExpressionNode(left);
-    this.right = right instanceof ExpressionNode ? right : new ExpressionNode(right);
+var ExpressionNode = function (val, args, blockId) {
+  this.value = val;
+  this.blockId = blockId;
+  if (args === undefined) {
+    args = [];
   }
 
-  this.valMetExpectation_ = true;
+  if (!Array.isArray(args)) {
+    throw new Error("Expected array");
+  }
+
+  this.children = args.map(function (item) {
+    if (!(item instanceof ExpressionNode)) {
+      item = new ExpressionNode(item);
+    }
+    return item;
+  });
+
+  if (this.getType() === ValueType.NUMBER && args.length > 0) {
+    throw new Error("Can't have args for number ExpressionNode");
+  }
+
+  if (this.getType() === ValueType.ARITHMETIC && args.length !== 2) {
+    throw new Error("Arithmetic ExpressionNode needs 2 args");
+  }
 };
 module.exports = ExpressionNode;
 
-/**
- * Does the node represent a math operation vs. a single number.
- */
-ExpressionNode.prototype.isOperation = function () {
-  return !isNumber(this.val);
+ExpressionNode.ValueType = ValueType;
+
+// todo - get rid of
+ExpressionNode.prototype.applyExpectation = function () {
+};
+ExpressionNode.prototype.failedExpectation = function () {
+  return false;
 };
 
 /**
- * Convert to a string
+ * What type of expression node is this?
  */
-ExpressionNode.prototype.toString = function  () {
-  if (!this.isOperation()) {
-    return this.val;
+ExpressionNode.prototype.getType = function () {
+  if (["+", "-", "*", "/"].indexOf(this.value) !== -1) {
+    return ValueType.ARITHMETIC;
   }
-  // todo (brent) - do i need/want the outside parens? i think no
-  return "(" + this.left.toString() + " " + this.val + " " +
-    this.right.toString() + ")";
+
+  if (typeof(this.value) === 'string') {
+    if (this.children.length === 0) {
+      return ValueType.VARIABLE;
+    }
+    return ValueType.FUNCTION_CALL;
+  }
+
+  if (typeof(this.value) === 'number') {
+    return ValueType.NUMBER;
+  }
 };
 
 /**
  * Create a deep clone of this node
  */
 ExpressionNode.prototype.clone = function () {
-  return new ExpressionNode(this.val,
-    this.left ? this.left.clone() : null,
-    this.right ? this.right.clone() : null,
-    this.blockId);
+  var children = this.children.map(function (item) {
+    return item.clone();
+  });
+  return new ExpressionNode(this.value, children, this.blockId);
 };
 
 /**
- * Did we set an expectation for this node, which we did not meet.
- * @param {boolean} includeDescendants If true, we also check whether any
- *  descendants failed expectations, otherwise we only check this node's val.
+ * Replace an ExpressionNode's contents with those of another node.
  */
-ExpressionNode.prototype.failedExpectation = function (includeDescendants) {
-  var fails = (this.valMetExpectation_ === false);
-  if (includeDescendants && this.left && this.left.failedExpectation(true)) {
-    fails = true;
+ExpressionNode.prototype.replaceWith = function (newNode) {
+  if (!(newNode instanceof ExpressionNode)) {
+    throw new Error("Must replaceWith ExpressionNode");
   }
-  if (includeDescendants && this.right && this.right.failedExpectation(true)) {
-    fails = true;
-  }
-
-  return fails;
+  // clone so that we have our own copies of any objects
+  newNode = newNode.clone();
+  this.value = newNode.value;
+  this.children = newNode.children;
 };
 
 /**
  * Evaluate the expression, returning the result.
  */
 ExpressionNode.prototype.evaluate = function () {
-  if (!this.isOperation()) {
-    return this.val;
+  var type = this.getType();
+  if (type === ValueType.VARIABLE || type === ValueType.FUNCTION_CALL) {
+    throw new Error('Must resolve variables/functions before evaluation');
+  }
+  if (type === ValueType.NUMBER) {
+    return this.value;
   }
 
-  var left = this.left.evaluate();
-  var right = this.right.evaluate();
+  if (type !== ValueType.ARITHMETIC) {
+    throw new Error('Unexpected error');
+  }
 
-  switch (this.val) {
+  var left = this.children[0].evaluate();
+  var right = this.children[1].evaluate();
+
+  switch (this.value) {
     case '+':
       return left + right;
     case '-':
@@ -84,29 +121,105 @@ ExpressionNode.prototype.evaluate = function () {
     case '/':
       return left / right;
     default:
-      throw new Error('Unknown operator: ' + this.val);
+      throw new Error('Unknown operator: ' + this.value);
     }
+};
+
+// todo (brent) - it's possible that we never actually have to evaluate expressions
+// that have functions/variables
+
+/**
+ * Given a mapping of variables to values, replaces all instances of the variable
+ * in the ExpressionNode tree with the value.
+ */
+ExpressionNode.prototype.replaceVariables = function (mapping) {
+  if (this.getType() === ValueType.VARIABLE && mapping[this.value]) {
+    this.replaceWith(mapping[this.value]);
+  } else {
+    for (var i = 0; i < this.children.length; i++) {
+      this.children[i].replaceVariables(mapping);
+    }
+  }
+  return this;
+};
+
+/**
+ * example: f(x, y) = x + y
+ * functionName is f
+ * paramNames is [x, y]
+ * functionExpression is x +y
+ */
+ExpressionNode.prototype.replaceFunction = function (functionName, orderedParams,
+    functionExpression) {
+  var i;
+  if (this.getType() === ValueType.FUNCTION_CALL && this.value === functionName) {
+    if (orderedParams.length !== this.children.length) {
+      throw new Error("function with wrong number of params");
+    }
+    // create mapping of variables to values
+    var mapping = {};
+    for (i = 0; i < orderedParams.length; i++) {
+      mapping[orderedParams[i]] = this.children[i];
+    }
+    var replacement = functionExpression.clone().replaceVariables(mapping);
+    this.replaceWith(replacement);
+  } else {
+    for (i = 0; i < this.children.length; i++) {
+      this.children[i].replaceFunction(functionName, orderedParams, functionExpression);
+    }
+  }
 };
 
 /**
  * Depth of this node's tree. A lone value is considered to have a depth of 0.
  */
 ExpressionNode.prototype.depth = function () {
-  if (!this.isOperation()) {
-    return 0;
+  var max = 0;
+  for (var i = 0; i < this.children.length; i++) {
+    max = Math.max(max, 1 + this.children[i].depth());
   }
 
-  return 1 + Math.max(this.left.depth(), this.right.depth());
+  return max;
 };
 
 /**
- * Collapse the next node in the tree, where next is considered to be whichever
- * node is deepest, processing left to right.
- * @param {boolean} ignoreFailures If true, we will collapse whether or not the
- *   node met expectations. If false, we don't collpase when expectations are
- *   not met.
+ * Gets the deepest descendant operation ExpressionNode in the tree (i.e. the
+ * next node to collapse
  */
-ExpressionNode.prototype.collapse = function (ignoreFailures) {
+ExpressionNode.prototype.getDeepestOperation = function () {
+  if (this.children.length === 0) {
+    return null;
+  }
+
+  var deepestChild = null;
+  var deepestDepth = 0;
+  for (var i = 0; i < this.children.length; i++) {
+    var depth = this.children[i].depth();
+    if (depth > deepestDepth) {
+      deepestDepth = depth;
+      deepestChild = this.children[i];
+    }
+  }
+
+  if (deepestDepth === 0) {
+    return this;
+  }
+
+  return deepestChild.getDeepestOperation();
+};
+
+/**
+ * todo - describe and unit test
+ */
+ExpressionNode.prototype.canCollapse = function () {
+  return this.children.length > 0;
+};
+
+/**
+ * Collapses the next descendant in place. Next is defined as deepest, then
+ * furthest left. Returns whether collapse was successful.
+ */
+ExpressionNode.prototype.collapse = function () {
   var deepest = this.getDeepestOperation();
   if (deepest === null) {
     return false;
@@ -114,32 +227,43 @@ ExpressionNode.prototype.collapse = function (ignoreFailures) {
 
   // We're the depest operation, implying both sides are numbers
   if (this === deepest) {
-    if (this.failedExpectation(true) && !ignoreFailures) {
-      // dont allow collapsing if we're a leaf operation with a mistake
-      return false;
-    }
-    this.val = this.evaluate();
-    this.left = null;
-    this.right = null;
+    this.value = this.evaluate();
+    this.children = [];
+    return true;
   } else {
-    return deepest.collapse(ignoreFailures);
+    return deepest.collapse();
   }
-
-  return true;
 };
 
 /**
- * Specify what we expected an ExpressionNode to look like. This sets whether
- * vals are the same as what we expected on the entire tree.
+ * todo
  */
-ExpressionNode.prototype.applyExpectation = function (expected) {
-  this.valMetExpectation_ = expected ? expected.val === this.val : false;
-
-  if (this.isOperation()) {
-    this.left.applyExpectation(expected.left);
-    this.right.applyExpectation(expected.right);
+ExpressionNode.prototype.getTokenList = function (expected) {
+  // todo - handle expected
+  if (this.children.length === 0) {
+    return [token(this.value.toString(), true)];
   }
+
+  if (this.getType() === ValueType.ARITHMETIC) {
+    var list = [token('(', true)];
+    list = list.concat(this.children[0].getTokenList());
+    list.push(token(" " + this.value + " ", true));
+    list = list.concat(this.children[1].getTokenList());
+    list.push(token(')', true));
+    return list;
+  }
+
+  throw new Error("NYI");
 };
+
+
+
+///////////////////////////////////
+
+
+
+
+
 
 /**
  * Do the two nodes differ only in argument order.
@@ -149,18 +273,18 @@ ExpressionNode.prototype.isEquivalent = function (target) {
     return false;
   }
 
-  if (this.isOperation() !== target.isOperation()) {
-    return false;
-  }
-
-  if (!this.isOperation()) {
+  if (this.isLeaf()) {
     return true;
   }
 
-  if (this.left.isEquivalent(target.left)) {
-    return this.right.isEquivalent(target.right);
-  } else if (this.left.isEquivalent(target.right)) {
-    return this.right.isEquivalent(target.left);
+  if (this.isOperation()) {
+    if (this.args[0].isEquivalent(target.args[0])) {
+      return this.args[1].isEquivalent(target.args[1]);
+    } else if (this.args[0].isEquivalent(target.args[1])) {
+      return this.args[1].isEquivalent(target.args[0]);
+    }
+  } else {
+    throw new Error("todo: NYI - handle functions");
   }
 
   return false;
@@ -171,46 +295,50 @@ ExpressionNode.prototype.isEquivalent = function (target) {
  * string representation of that portion of the expression, and whether or not
  * it is correct.
  */
-ExpressionNode.prototype.getTokenList = function (markNextParens) {
-  if (!this.isOperation()) {
-    return [token(this.val.toString(), this.valMetExpectation_ === false)];
-  }
+// ExpressionNode.prototype.getTokenList = function (markNextParens) {
+//   var list;
+//   if (this.isLeaf()) {
+//     return [token(this.val.toString(), this.valMetExpectation_ === false)];
+//   }
+//
+//   if (this.isOperation()) {
+//     var left = this.args[0];
+//     var right = this.args[1];
+//
+//     var leafOperation = left.isLeaf() && right.isLeaf();
+//     var rightDeeper = right.depth() > left.depth();
+//
+//     list = [token("(", markNextParens === true && leafOperation)];
+//     list = list.concat(left.getTokenList(markNextParens && !rightDeeper));
+//     list = list.concat(token(" " + this.val + " ", this.valMetExpectation_ === false));
+//     list = list.concat(right.getTokenList(markNextParens && rightDeeper));
+//     list = list.concat(token(")", markNextParens === true && leafOperation));
+//     return list;
+//   } else {
+//     // todo - figure out marking when we have functions
+//     list = [token(this.val, false), token("(", false)];
+//     for (var i = 0; i < this.args.length; i++) {
+//       if (i > 0) {
+//         list = list.concat(token(",", false));
+//       }
+//       list = list.concat(this.args[i].getTokenList(markNextParens));
+//     }
+//     list = list.concat(token(")", false));
+//     return list;
+//   }
+// };
 
-  var leafOperation = !this.left.isOperation() && !this.right.isOperation();
-  var rightDeeper = this.right.depth() > this.left.depth();
 
-  var list = [token("(", markNextParens === true && leafOperation)];
-  list = list.concat(this.left.getTokenList(markNextParens && !rightDeeper));
-  list = list.concat(token(" " + this.val + " ", this.valMetExpectation_ === false));
-  list = list.concat(this.right.getTokenList(markNextParens && rightDeeper));
-  list = list.concat(token(")", markNextParens === true && leafOperation));
-  return list;
-};
-
-/**
- * Gets the deepest descendant operation ExpressionNode in the tree (i.e. the
- * next node to collapse
- */
-ExpressionNode.prototype.getDeepestOperation = function () {
-  if (!this.isOperation()) {
-    return null;
-  }
-  if (!this.left.isOperation() && !this.right.isOperation()) {
-    return this;
-  }
-
-  var rightDeeper = this.right.depth() > this.left.depth();
-  return rightDeeper ? this.right.getDeepestOperation() :
-    this.left.getDeepestOperation();
-};
 
 /**
  * Creates a token with the given char (which can really be a string), that
  * may or may not be "marked". Marking indicates different things depending on
  * the char.
+ * todo - update me
+ * todo - change from char to str?
  */
-function token(char, marked) {
-  return { char: char, marked: marked };
+function token(str, valid) {
+  return { char: str, valid: valid };
 }
 
 // todo (brent)- may want to use lodash's isNumber

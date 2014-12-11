@@ -45,25 +45,9 @@ exports.install = function(blockly, blockInstallOptions) {
 
   sharedFunctionalBlocks.install(blockly, generator, gensym);
 
-  // change generation code for Calc version of math blocks
-  modifyCalcGenerationCode(generator, 'functional_plus', '+');
-  modifyCalcGenerationCode(generator, 'functional_minus', '-');
-  modifyCalcGenerationCode(generator, 'functional_times', '*');
-  modifyCalcGenerationCode(generator, 'functional_dividedby', '/');
-
   installCompute(blockly, generator, gensym);
 
 };
-
-function modifyCalcGenerationCode(generator, blockType, operator) {
-  generator[blockType] = function() {
-    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
-    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    var blockId = '"block_id_' + this.id + '"';
-    return "Calc.expression('" + operator + "', " + arg1 + ", " + arg2 + ", " +
-      blockId + ")";
-  };
-}
 
 function initFunctionalBlock(block, title, numArgs) {
   block.setHSV(184, 1.00, 0.74);
