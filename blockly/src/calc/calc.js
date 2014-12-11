@@ -65,7 +65,6 @@ Calc.init = function(config) {
   Calc.expressions = {
     target: null, // the complete target expression
     user: null, // the current state of the user expression
-    current: null // the current state of the target expression
   };
 
   config.grayOutUndeletableBlocks = true;
@@ -147,7 +146,6 @@ BlocklyApps.runButtonClick = function() {
  */
 Calc.resetButtonClick = function () {
   Calc.expressions.user = null;
-  Calc.expressions.current = null;
   appState.message = null;
 
   appState.animating = false;
@@ -268,7 +266,6 @@ Calc.execute = function() {
   }
 
   if (Calc.expressions.target) {
-    Calc.expressions.current = Calc.expressions.target.clone();
     Calc.expressions.user.applyExpectation(Calc.expressions.target);
   }
 
@@ -335,27 +332,20 @@ Calc.step = function (ignoreFailures) {
     return;
   }
 
-  var collapsed = Calc.expressions.user.collapse(ignoreFailures);
-  if (!collapsed) {
-    stopAnimatingAndDisplayFeedback();
-    return;
-  } else {
-    if (Calc.expressions.current) {
-      Calc.expressions.current.collapse();
-    }
-    Calc.drawExpressions();
+  Calc.expressions.user.collapse(ignoreFailures);
 
-    window.setTimeout(function () {
-      Calc.step(false);
-    }, 1000);
-  }
+  Calc.drawExpressions();
+
+  window.setTimeout(function () {
+    Calc.step(false);
+  }, 1000);
 };
 
 /**
  * Draw the current state of our two expressions.
  */
 Calc.drawExpressions = function () {
-  var expected = Calc.expressions.current || Calc.expressions.target;
+  var expected = Calc.expressions.target;
   var user = Calc.expressions.user;
 
   // todo - in cases where we have the wrong answer, marking the "next" operation
