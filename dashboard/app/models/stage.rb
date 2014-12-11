@@ -1,8 +1,8 @@
 # Ordered partitioning of script levels within a script
 # (Intended to replace most of the functionality in Game, due to the need for multiple app types within a single Game/Stage)
 class Stage < ActiveRecord::Base
-  has_many :script_levels, -> { order('position ASC') }
-  belongs_to :script
+  has_many :script_levels, -> { order('position ASC') }, inverse_of: :stage
+  belongs_to :script, inverse_of: :stages
   acts_as_list scope: :script
 
   validates_uniqueness_of :name, scope: :script_id
