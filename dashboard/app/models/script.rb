@@ -30,32 +30,8 @@ class Script < ActiveRecord::Base
   FLAPPY_NAME = 'flappy'
   TWENTY_HOUR_NAME = '20-hour'
 
-  def self.twenty_hour_script
-    @@twenty_hour_script ||= Script.includes(script_levels: {level: [:game, :concepts] }).find(TWENTY_HOUR_ID)
-  end
-
-  def self.frozen_script
-    @@frozen_script ||= Script.includes([{script_levels: [{level: [:game, :concepts] }, :stage]}, :stages]).find_by_name(FROZEN_NAME)
-  end
-
-  def self.hoc_script
-    @@hoc_script ||= Script.includes([{script_levels: [{level: [:game, :concepts] }, :stage]}, :stages]).find_by_name(HOC_NAME)
-  end
-
-  def self.flappy_script
-    @@flappy_script ||= Script.includes([{script_levels: [{level: [:game, :concepts] }, :stage]}, :stages]).find(FLAPPY_ID)
-  end
-
-  def self.playlab_script
-    @@playlab_script ||= Script.includes([{script_levels: [{level: [:game, :concepts] }, :stage]}, :stages]).find_by_name(PLAYLAB_NAME)
-  end
-
-  def cached?
-    self.equal?(Script.twenty_hour_script) ||
-        self.equal?(Script.frozen_script) ||
-        self.equal?(Script.hoc_script) ||
-        self.equal?(Script.flappy_script) ||
-        self.equal?(Script.playlab_script)
+  def Script.twenty_hour_script
+    Script.get_from_cache(Script::TWENTY_HOUR_ID)
   end
 
   def Script.should_be_cached?(id)
@@ -63,7 +39,7 @@ class Script < ActiveRecord::Base
   end
 
   def should_be_cached?
-    Script.script_cache.has_key?(id.to_s)
+    Script.should_be_cached?(id.to_s)
   end
 
   def starting_level
@@ -90,10 +66,13 @@ class Script < ActiveRecord::Base
 
   def self.script_cache_from_db
     {}.tap do |cache|
-      [twenty_hour_script, frozen_script, hoc_script, flappy_script, playlab_script].each do |script|
-        cache[script.name] = script
-        cache[script.id.to_s] = script
-      end
+        [FLAPPY_ID, TWENTY_HOUR_ID, PLAYLAB_NAME, HOC_NAME, FROZEN_NAME].each do |id|
+          find_by = (id.to_i.to_s == id.to_s) ? :id : :name
+          script = Script.includes([{script_levels: [{level: [:game, :concepts] }, :stage]}, :stages]).
+            find_by(find_by => id)
+          cache[script.name] = script
+          cache[script.id.to_s] = script
+        end
     end
   end
 
@@ -167,7 +146,13 @@ class Script < ActiveRecord::Base
   end
 
   def get_script_level_by_stage_and_position(stage_position, puzzle_position)
-    self.stages.find_by!(position: stage_position).script_levels.find_by!(position: puzzle_position)
+    if should_be_cached?
+      Script.get_from_cache(id).script_levels.to_a.find do |sl|
+        sl.stage.position == stage_position.to_i && sl.position == puzzle_position.to_i
+      end
+    else
+      self.stages.find_by!(position: stage_position).script_levels.find_by!(position: puzzle_position)
+    end
   end
 
   def get_script_level_by_chapter(chapter)
@@ -372,11 +357,6 @@ class Script < ActiveRecord::Base
   private
   def Script.clear_cache
     # only call this in a test!
-   @@twenty_hour_script = nil
-   @@frozen_script = nil
-   @@hoc_script = nil
-   @@flappy_script = nil
-   @@playlab_script = nil
    @@script_cache = nil
   end
 end
