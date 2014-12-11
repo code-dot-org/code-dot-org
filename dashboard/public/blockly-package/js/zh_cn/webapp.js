@@ -11920,7 +11920,7 @@ exports.reinfFeedbackMsg = function(d){return "你可以按\"重试\"按钮以�
 
 exports.repeatForever = function(d){return "一直重复下去"};
 
-exports.repeatDo = function(d){return "做"};
+exports.repeatDo = function(d){return "执行"};
 
 exports.repeatForeverTooltip = function(d){return "当应用程序正在运行时, 反复执行此块的操作."};
 

@@ -21176,13 +21176,13 @@ exports.end = function(d){return "vége"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Akkor van értelme az \"Ismétel\" vagy a \"Ha\" blokknak, ha van  bennük egy vagy több blokk. Bizonyosodj meg róla, hogy a belső blokk megfelelően illeszkedik a külső blokkhoz."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "A függvény blokkok belsejében szükség van több elemre, hogy működjön."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "A függvény blokkon belül más blokknak is szerepelnie kell ahhoz, hogy működjön."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "Ott kell lennie a blokkoknak a függvényed deklarációjában. Kattints a \"szerkesztés\" gombra, és húzd bele a blokkokat a zöld blokkba!"};
+exports.errorEmptyFunctionBlockModal = function(d){return "A függvényed leírásában blokkoknak kell szerepelniük. Kattints a \"szerkesztés\" gombra, és húzd bele a blokkokat a zöld blokkba."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Kattints a \"szerkesztés\"-re, hogy meggyőződj arról, hogy nincsenek-e hiányzó blokkok a függvényed deklarálásában!"};
+exports.errorIncompleteBlockInFunction = function(d){return "Kattints a \"szerkesztés\"-re, hogy pótold az esetlegesen hiányzó blokkokat a függvényed definíciójából."};
 
-exports.errorParamInputUnattached = function(d){return "Ne feledd odailleszteni a blokkot minden paraméter bemenetéhez a függvény blokkban a munkaterületeden."};
+exports.errorParamInputUnattached = function(d){return "A munkaterületen levő függvények minden bemenő paraméteréhez illessz blokkot."};
 
 exports.errorUnusedParam = function(d){return "Hozzáadtál egy paraméterblokkot, de nem használtad fel azt a deklarálásodban. Győződj meg róla, hogy használod a paraméteredet, rákattintva a \"szerkesztés\"-re  és arról is, hogy bele van-e illesztve a paraméterblokkod a zöld blokkba!"};
 
@@ -21190,7 +21190,7 @@ exports.errorRequiredParamsMissing = function(d){return "Hozz létre egy paramé
 
 exports.errorUnusedFunction = function(d){return "Létrehoztál egy függvényt, de soha sem használtad fel azt a munkaterületeden! Kattints a \"Függvények\"-re az eszközkészleten, és győződj meg róla, hogy használod a függvényt a programodban."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Próbálja módosítani a \"???\" értéket."};
+exports.errorQuestionMarksInNumberField = function(d){return "Próbálj a \"???\" helyére értéket írni."};
 
 exports.extraTopBlocks = function(d){return "Van különálló blokkod. Vagy csatlakoztasd a \"futtatáskor\" blokkhoz, vagy töröld."};
 
@@ -21222,7 +21222,7 @@ exports.nextLevel = function(d){return "Gratulálok! Megoldottad a "+v(d,"puzzle
 
 exports.nextLevelTrophies = function(d){return "Gratulálok! Megoldottad a "+v(d,"puzzleNumber")+". feladványt és nyertél "+p(d,"numTrophies",0,"hu",{"one":"egy trófeát","other":n(d,"numTrophies")+" trófeát"})+"."};
 
-exports.nextStage = function(d){return "Gratulálok! Teljesítetted a "+v(d,"stageName")+"."};
+exports.nextStage = function(d){return "Gratulálok!  "+v(d,"stageName")+" teljesítve."};
 
 exports.nextStageTrophies = function(d){return "Gratulálok! Teljesítetted a "+v(d,"stageNumber")+". szakaszát és nyertél "+p(d,"numTrophies",0,"hu",{"one":"egy trófeát","other":n(d,"numTrophies")+" trófeát"})+"."};
 

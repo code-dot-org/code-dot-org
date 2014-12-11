@@ -11952,7 +11952,7 @@ exports.pause = function(d){return "فاصل"};
 
 exports.reinfFeedbackMsg = function(d){return "يمكنك الضغط على زر \"حاول مرة أخرى\" للعودة إلى تشغيل التطبيق الخاص بك."};
 
-exports.repeatForever = function(d){return "تكرار إلى الأبد"};
+exports.repeatForever = function(d){return "كرّر باستمرار"};
 
 exports.repeatDo = function(d){return "نفّذ"};
 
