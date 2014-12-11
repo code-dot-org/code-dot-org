@@ -1274,8 +1274,10 @@ a.download-video {
     width: 260px;
     float: left;
     img {
-      height: 100%;
+      height: auto;
       width: auto;
+      max-height: 100%;
+      max-width: 100%;
     }
   }
   .draggablecolumn {
@@ -1284,20 +1286,24 @@ a.download-video {
     -ms-touch-action: none;
   }
   li {
-    padding-top: 7px;
-    padding-bottom: 7px;
+    padding-top: 1px;
+    padding-bottom: 1px;
     background-color: lightgrey;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 4px;
+    padding-right: 4px;
     width: 220px;
     margin-top:2px;
     margin-bottom:2px;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 6px;
   }
   #questions {
     list-style-type: none;
     margin-left:0px;
     li {
-      background-color: lightgrey;
+      background-color: white;
+      border-color: lightgray;
     }
   }
   li {
@@ -1308,6 +1314,7 @@ a.download-video {
     margin-left: 0px;
     .emptyslot {
       background-color: #eee;
+      border-color: #eee;
       .giantmark {
         .text {
           opacity: 0.8;
@@ -1316,11 +1323,15 @@ a.download-video {
       }
     }
     .active {
+      border-color: lightyellow;
+    }
+    .active.emptyslot {
       background-color: lightyellow;
     }
   }
   .answer {
-    background-color: lightblue;
+    background-color: white;
+    border-color: lightblue;
     .active {
       background-color: green;
     }
@@ -1346,7 +1357,7 @@ a.download-video {
     width: 30px;
     padding-left: 0px;
     padding-right: 0px;
-    background-color: white;
+    background-color: transparent;
   }
 }
 
