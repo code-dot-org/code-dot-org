@@ -22,7 +22,8 @@
     "use_contract_editor": "false",
     "embed": "false",
     "callout_json": "[{\r\n  \"localization_key\": \"edit_add_parameter\",\r\n  \"element_id\": \"#edit_add_parameter_qtip > .blocklyIconGroup:eq(-1)\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}\r\n  }\r\n}, {\r\n  \"on\": \"function_editor_opened\",\r\n  \"localization_key\": \"add_and_drag_parameter\",\r\n  \"element_id\": \"#paramAddText\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"right center\", \"at\": \"left center\"}\r\n  }\r\n}]",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "video_key": "C4_function_parameters"
   }
 }]]></config>
   <blocks>
