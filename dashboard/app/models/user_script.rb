@@ -5,7 +5,7 @@ class UserScript < ActiveRecord::Base
   def check_completed?
     # the script is completed if there are no more "progression levels" to be completed
     # (unplugged levels are not progression levels, for one)
-    user.next_unpassed_progression_level(script).nil?
+    user.next_unpassed_progression_level(Script.get_from_cache(script_id)).nil?
   end
 
   def empty?
