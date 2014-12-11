@@ -647,16 +647,15 @@
     s menom "Eliza", ktorá bude rozprávať ako psychoterapeut. Naučíš Elizu hovoriť
     a to tie správne veci. Dokáže presvedčiť tvojich kamarátov, aby ju považovali
     za človeka a nie počítač?
-  quorum_longdescription: This tutorial is accessible for the visually-impaired, and
-    works with screenreaders. Join Mary on a tour as she joins a biology lab as a
-    programmer and learns the Quorum programming language. This tutorial is student-guided
-    with online example activities.
-  codespark_longdescription: The Foos is a fun and kid-friendly way to learn about
-    computer programming.  Program cute characters to solve puzzles and bring a virtual
-    world to life.  The game is "word free" so all can play!
-  kodable_longdescription: Kodable is a self-guided iPad game that introduces kids
-    5+ to programming basics. Having a teacher or parent nearby is optimal, but not
-    necessary.
+  quorum_longdescription: Toto cvičenie je prístupné aj pre zrakovo postihnutých a
+    pracuje s čítačkou obrazovky. Pripoj sak Márii, ktorá nastupuje do biologického
+    laboratória ako programátorka a učí sa programovací jazyk Quorum. Toto cvičenie
+    si riadi žiak sám a obsahuje online príklady úloh.
+  codespark_longdescription: Rodinka Foo je zábavná forma výuky programovania. Programuj
+    pekné postavičky, ktoré riešia hlavolamy a prenes virtuálny svet do života. Táto
+    hraje úplne "bez slov", tak si môže zahrať každý!
+  kodable_longdescription: Kodable je hra pre iPad, ktorá deťom od 5 rokov predstaví
+    základy programovania. Prítomnosť učiteľa je vhodná, ale nie je pre túto hru nutná.
   tynkerapp_longdescription: Build your own games and share with friends! Solve fun
     coding puzzles and learn programming concepts in each level. Personalize games
     with animated characters, multiple levels and rich props. Lots of fun activities
@@ -675,9 +674,9 @@
     brand new and beginner-friendly programming language called Swift! Create a Pokemon-inspired
     action game and write code to teach your monster new moves. You will learn how
     to use variables, methods, and objects to help your monster win!
-  touchdevelop_longdescription: Crazy drawings, flying monsters, swirling flowers...
-    create your apps on your device with TouchDevelop, a friendly mobile app creation
-    environment. Runs on iPhone, iPad, Android, Windows, Windows Phone, Linux, Mac.
+  touchdevelop_longdescription: 'Grafický editor na dotykové ovládanie Ťa prevedie
+    vytváraním umeia v pixeloch, riešením medvedích hádaniek a tvorbou vašej vlastnej
+    hry so skákajúcim vtáčikom. '
   appinventor_longdescription: Entertaining, quick video tutorials walk you through
     building three simple apps for your Android phone or tablet. Designed for novices
     and experts alike, this hour of code will get you ready to start building your
@@ -885,9 +884,9 @@
     žiakov na celom svete. Pripravili sme bezproblémovú Hodinu kódu, pri ktorej si
     vyskúšate sprievodné kvízy, vysvetľujúce obrázky a na konci žiaci vytvoria kompletný
     projekt.
-  kodable_beyond_longdescription: Kodable is a self-guided iPad game that introduces
-    kids 5+ to programming basics. Having a teacher or parent nearby is optimal, but
-    not necessary.
+  kodable_beyond_longdescription: Kodable je hra pre iPad, ktorá deťom od 5 rokov
+    predstaví základy programovania. Prítomnosť učiteľa je vhodná, ale nie je pre
+    túto hru nutná.
   scratchjr_beyond_longdescription: ScratchJr is an introductory programming language
     that enables young children to create their own interactive stories and games.
     Children snap together graphical programming blocks to make characters move, jump,
@@ -976,8 +975,9 @@
   kidsruby_beyond_longdescription: 'Have fun and make games, or hack your homework
     using Ruby! Just tell your parents or teachers you''re learning Ruby programming...
     ;). Free and works on any computer. [Note: Desktop install required]'
-  w3schools_beyond_longdescription: Learn to create websites on your own computer.
-    Learn the server basics in less than a day. Learn to add databases to your website
+  w3schools_beyond_longdescription: Naučte sa na svojom počítači vytvárať webstránky.
+    Naučte sa základy serverov za menej ako jeden deň. Naučte sa pridať databázu do
+    svojej  webstránky
   codeavengers_beyond_longdescription: Learn how to program games, apps and websites.
     Designed by experts with perfect level of difficulty for beginners, easy to understand
     instructions and great help when you need it. Our HTML, CSS and JavaScript courses
@@ -997,8 +997,8 @@
     to let you touch your code. Want to change a number? Just tap and drag it. How
     about a color, or an image? Tapping will bring up visual editors that let you
     choose exactly what you want.
-  lego_beyond_longdescription: Create small, customizable and programmable robots
-    using LEGO pieces.
+  lego_beyond_longdescription: Vytvorte malé, prispôsobiteľné a programovateľné roboty
+    z LEGO dielikov.
   finch_beyond_longdescription: The Finch is a new robot for computer science education.
     Its design is the result of a four year study at Carnegie Mellon's CREATE lab.
     The Finch is designed to support an engaging introduction to the art of programming.
