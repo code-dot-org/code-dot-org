@@ -308,9 +308,6 @@
             var video_key = appOptions.level.video_key;
             appOptions.level = legacy_mazes[appOptions.levelId];
             appOptions.level.video_key = video_key;
-            if (currentScript.app !== 'flappy') {
-              appOptions.levelId = 'custom';
-            }
             appOptions.level.puzzle_number = puzzle_number;
             appOptions.level.stage_total = stage_total;
             appOptions.level.instructions = instructions;
