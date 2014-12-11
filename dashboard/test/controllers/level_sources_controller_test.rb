@@ -5,9 +5,6 @@ class LevelSourcesControllerTest < ActionController::TestCase
     @admin = create(:admin)
     @level_source = create(:level_source)
     @hidden_level_source = create(:level_source, hidden: true)
-
-    # so we actually test this
-    CDO.disable_s3_image_uploads = false
   end
 
   test "should get edit" do
