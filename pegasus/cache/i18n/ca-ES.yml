@@ -437,7 +437,7 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Pedra, Paper, tisora
-  hourofcode_name: Placeholder for new code.org/hoc
+  hourofcode_name: Contenidor per al nou code.org/hoc
   playlab_name: Play Lab
   codeorg_gradelevel: Edat 4-104
   codeintl_gradelevel: Edat 4-104
@@ -573,7 +573,7 @@
     informació
   kodableunplugged_shortdescription: Un divertit exercici sense connexió
   projguts_shortdescription: Prova modelatge i simulació utilitzant pedra-paper-estisores
-  hourofcode_shortdescription: Placeholder for new code.org/hoc
+  hourofcode_shortdescription: Contenidor per al nou code.org/hoc
   frozen_shortdescription: Anem a utilitzar el codi per unir l'Anna i l'Elsa mentre
     exploren la màgia i la bellesa del gel.
   playlab_shortdescription: Crea una història o fes una partida amb Play Lab!
@@ -721,13 +721,13 @@
     aprendre com modelar i simular treballs fent que un grup d'alumnes jugui a diferents
     versions del joc Pedra / Paper / Tisores, i veient els resultats com a experiments
     de diferent modelatge.
-  hourofcode_longdescription: Placeholder for new code.org/hoc
+  hourofcode_longdescription: Contenidor per al nou code.org/hoc
   frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
     magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
     and make a winter wonderland that you can then share with your friends!
-  playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
-    pirates, zombies, ninjas, and many more characters move, make sounds, score points,
-    and even throw fireballs!
+  playlab_longdescription: Crea una història o fes un joc amb Play Lab! Fes que animals,
+    pirates, zombies, ninjes i molts més personatges es moguin, facin sons, puntuacions
+    i fins i tot llançar boles de foc!
   codeorg_beyond_name: Introducció a la programació (ESO)
   khan_beyond_name: Aprèn programació informàtica
   tynker_beyond_name: Aprendre programació des de casa

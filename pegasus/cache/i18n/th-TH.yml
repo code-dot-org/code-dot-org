@@ -547,79 +547,63 @@
     คุณสามารถทำได้ด้วยตนเองหรือกับเพื่อนๆของคุณ!
   khanpl_longdescription: เรียนรู้พื้นฐานการเขียนโปรแกรม Javascript ในขณะที่วาดภาพด้วยโค้ดของคุณ
     คุณสามารถทำได้ด้วยตนเองหรือกับเพื่อนๆของคุณ!
-  tynker_longdescription: A collection of 8 fun activities for children of all ages
-    to try programming. Solve a series of simple puzzles to help Pixel the puppy reach
-    home, and Biff the spaceman reach his moon base. Build the Space Zombies game
-    or create Math Art using our fun and easy visual approach to programming.  The
-    session can be teacher facilitated or self-paced.
-  scratch_longdescription: With Scratch, you can code your own interactive games,
-    stories, animations, and more. In this activity, you'll create an interactive
-    holiday card that you can share with friends and family.
-  lightbot_longdescription: Learn core programming logic, starting from super-basic
-    programming, for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence
-    commands, identify patterns, use procedures, and utilize loops!
-  thinkersmith_longdescription: Using a pre-defined "Robot Vocabulary" students will
-    figure out how to guide each other to accomplish specific tasks without discussing
-    them first. This lesson teaches children the connection between symbols and actions,
-    as well as the invaluable skill of debugging. "My Robotic Friends" works best
-    as a group activity and includes a teacher workbook for classroom use.
-  condcards_longdescription: Learn about algorithms and conditional statements in
-    this "unplugged" activity using a deck of cards. Students do this activity in
-    teams, and need one deck of cards per team.
-  lightbotintl_longdescription: Learn core programming logic, starting from super-basic
-    programming, for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence
-    commands, identify patterns, use procedures, and utilize loops!
-  codehs_longdescription: Learn the basics of programming with Karel the Dog, a fun,
-    accessible and visual introduction to coding, where giving commands to a computer
-    is just like giving commands to a dog. This tutorial is great if led by a teacher,
-    but can also be done independently.
-  codecademy_longdescription: Codecademy is an interactive, student-guided introduction
-    to the basics of CS through JavaScript that's used by tens of millions of students
-    around the world. We've prepared a no-hassle Hour of Code experience with accompanying
-    quizzes, slides, and a completed project for students at the end.
+  tynker_longdescription: สร้างเกมของคุณเองและแบ่งปันกับเพื่อนๆ! แก้ปริศนาของโค้ด
+    และเรียนรู้แนวคิดการเขียนโปรแกรมในระดับต่างๆ สร้างเกมที่มีตัวละครที่เคลื่อนไหว  ทำให้เกมของคุณสมจริงด้วยหลักการทางฟิสิกส์
+    ดูโค้ดเป็นภาษา JavaScript หรือ visual box  นำเกมมือถือของคุณคุณเองไปเล่นใน iPads
+    และแท็บเล็ต Android  สนุกกับกิจกรรมอีกมากมายที่ให้คุณเลือกเล่น
+  scratch_longdescription: ด้วย Scratch คุณสามารถสร้างเกมแบบโต้ตอบของคุณเอง มีเรื่องราว
+    ภาพเคลื่อนไหว &mdash; และแบ่งปันให้กับเพื่อนของคุณได้ เริ่มด้วยทำให้ชื่อของเคลื่อนไหว
+    สร้างการ์ดอวยพร หรือสร้างเกมปิงปอง
+  lightbot_longdescription: ควบคุม Lightbot ให้ไปสร้างแผ่นสีฟ้า! Lightbot เป็นเกมปริศนาที่ใช้กลศาสตร์เกม
+    ให้ผู้เล่นได้ลองปฏิบัติจริง และเข้าใจพื้นฐานการเขียนโค้ด เรียนรู้ การลำดับคำสั่ง
+    การเขียนแผนงาน ใช้ loop แก้ปริศนา เหมาะสำหรับทุกเพศทุกวัย
+  thinkersmith_longdescription: ใช้ "Robot Vocabulary" นักเรียนจะสามารถออกแบบวิธีการทำงานได้โดยไม่ต้องศึกษามาก่อน
+    บทเรียนนี้จะสอนเกี่ยวกับการเชื่อมโยงระหว่างสัญลักษณ์และคำสั่งต่างๆ รวมทั้งทักษะการตรวจแก้จุดบกพร่อง
+    "My Robotic Friends" ได้ผลดีที่สุดสำหรับกิจกรรมกลุ่ม และมีสมุดบันทึกสำหรับการเรียน
+  condcards_longdescription: เรียนรู้เกี่ยวกับอัลกอริทึมและเงื่อนไขต่างๆใน กิจกรรมอันปลั๊ก
+    (ไม่ต้องใช้คอมพิวเตอร์)  นักเรียนจะได้เรียนรู้การทำงานเป็นทีม กิจกรรมนี้จำเป็นต้องใช้ไพ่
+    1 สำรับ
+  lightbotintl_longdescription: เรียนรู้หลักการเขียนโปรแกรมพื้นฐาน สำหรับอายุ 4 ปีขึ้นไป
+    บน iOS หรือ Android (หรือเว็บเบราเซอร์) เรียนรู้วิธีการเขียน การลำดับคำสั่ง ระบุรูปแบบ
+    การใช้ลูป
+  codehs_longdescription: ออกคำสั่งกับคอมพิวเตอร์ (ซึ่งเป็นหัวใจของการเขียนโปรแกรม)
+    ก็เหมือนกับการออกคำสั่งให้สุนัข เรียนรู้วิธีเขียนโค้ดด้วย Karel &mdash; ด้วยสื่อที่แนะนำแนวคิดพื้นฐานของการเขียนโปรแกรม
+    เช่นคำสั่งและฟังก์ชัน  บทเรียนนี้สำหรับนักเรียน แต่คุณครูสามารถลงทะเบียนเพื่อเข้าสู่ส่วนเครื่องมือคุณครูแล้วติดตามผลการเรียนของนักเรียนได้
+  codecademy_longdescription: Codecademy เป็นการสอนพื้นฐานวิทยาการคอมพิวเตอร์ผ่านสื่อต่างๆ
+    นักเรียนจะได้เรียนรู้วิทยาการคอมพิวเตอร์ผ่านภาษา JavaScript ซึ่งนักเรียนกว่าสิบล้านคนทั่วโลกได้เริ่มเรียนแล้ว  บทเรียน
+    Hour of Code มาพร้อมกับแบบทดสอบต่างๆ รวมทั้งโปรเจคของนักเรียน
   codecombat_longdescription: ความพ่ายแพ้ของ ogres ที่จะเรียนรู้ Python หรือ JavaScript
     ในเกมนี้
-  codemonkey_longdescription: 'CodeMonkey is an online game that teaches coding in
-    a real programming language! Students program a monkey to catch bananas while
-    it gets slightly more complicated on each level. They get star scores on each
-    solution and can share it in a single click. '
+  codemonkey_longdescription: CodeMonkey เป็นเกมออนไลน์ที่สอนการเขียนโค้ดสำหรับใช้ในชีวิตจริง!
+    นักเรียนจะได้เขียนโปรแกรมให้ลิงไปหยิบกล้วย ซึ่งจะท้ายทายขึ้นตามเลเวลที่สูงขึ้น
+    นักเรียนจะได้รับคะแนนเป็นดาว ซึ่งสามารถแชร์บอกเพื่อนๆได้ เพียงกดแค่คลิกเดียว
   codeavengers_longdescription: Build a 2 player 2D top-down game with JavaScript
     in 10 short tasks. Then continue learning some basics of programming (variables
     and if statements) as you create a Quiz to share with friends. Along the way  earn
     points and badges as you compete to reach the top of the class leaderboard.
-  processing_longdescription: An introduction to programming in the context of the
-    visual arts using the Processing programming language. Short video lessons introduce
-    coding exercises that lead to designing an interactive drawing program
-  robomind_longdescription: 'Students learn the basics of programming by controlling
-    their own virtual robot. The online course is fully self-contained with short
-    presentations, movies, quizzes and automatic guidance/hints to help with the programming
-    exercises. '
-  groklearning_longdescription: Choose from 3 activities designed to give you your
-    first experience programming. For example, use the programming language Python
-    to build a chatbot called "Eliza". Can she fool your friends into think she's
-    a human not a computer? This can be done in either a student-guided or teacher-facilitated
-    form and comes with all notes and solutions.
+  processing_longdescription: แนะนำการเขียนโปรแกรมในบริบทของทัศนศิลป์โดยใช้ภาษา Processing  บทเรียนวิดีโอสั้นๆนี้จะแนะนำแบบฝึกหัดการเขียนโค้ด
+    ที่จะนำไปสู่การออกแบบโปรแกรมสำหรับวาดภาพ
+  robomind_longdescription: นักเรียนเรียนรู้พื้นฐานของการเขียนโปรแกรมโดยการควบคุมหุ่นยนต์ของตนเอง
+    หลักสูตรออนไลน์นี้สอนโดยคลิปวิดีโอสั้นๆ ภาพยนตร์ แบบทดสอบต่างๆ และคำแนะนำโดยอัตโนมัติ  เพื่อช่วยให้การเขียนโปรแกรมเป็นไปอย่างราบรื่น
+  groklearning_longdescription: ใช้ภาษา Python เพื่อสร้าง chatbot ที่ชื่อ "Eliza"
+    เพื่อทำหน้าที่เป็นหุ่นยนต์นักจิตบำบัด คุณจะสอน Eliza ในเรื่องวิธีการพูดที่ถูกต้อง
+    หุ่นยนต์ของเราจะหลอกเพื่อของคุณว่าเธอเป็นมนุษย์ได้หรือไม่?
   quorum_longdescription: This tutorial is accessible for the visually-impaired, and
     works with screenreaders. Join Mary on a tour as she joins a biology lab as a
     programmer and learns the Quorum programming language. This tutorial is student-guided
     with online example activities.
-  codespark_longdescription: The Foos is a fun and kid-friendly way to learn about
-    computer programming.  Program cute characters to solve puzzles and bring a virtual
-    world to life.  The game is "word free" so all can play!
-  kodable_longdescription: Kodable is a self-guided iPad game that introduces kids
-    5+ to programming basics. Having a teacher or parent nearby is optimal, but not
-    necessary.
-  tynkerapp_longdescription: Build your own games and share with friends! Solve fun
-    coding puzzles and learn programming concepts in each level. Personalize games
-    with animated characters, multiple levels and rich props. Lots of fun activities
-    to choose from!
-  robomindnl_longdescription: 'Students learn the basics of programming by controlling
-    their own virtual robot. The online course is fully self-contained with short
-    presentations, movies, quizzes and automatic guidance/hints to help with the programming
-    exercises. '
-  flappy_longdescription: Use drag-and-drop programming to make your own Flappy Bird
-    game, and customize it to look different (Flappy Shark, Flappy Santa, whatever).
-    Add the game to your phone in one click.
+  codespark_longdescription: Foos เป็นสิ่งที่สนุกและเด็กๆมักจะชื่นชอบ เขียนโปรแกรมให้ตัวละครแก้ปัญหาและทำให้เหมือนมีชีวิต
+    เกมนี้ไม่มีการใช้คำศัพท์ใดๆ ดังนั้นทุกคนสามารถเล่นได้!
+  kodable_longdescription: Kodable คือเกมใน iPad ที่ฝึกให้เด็กอายุ 5 ขวบขึ้นไป เขียนโปรแกรมอย่างง่ายๆ
+    โดยไม่จำเป็นต้องมีผู้ปกครองหรือครูคอยให้คำแนะนำ
+  tynkerapp_longdescription: 'เรียนรู้ที่จะเขียนโปรแกรมด้วยการแก้ปัญหาที่สนุกสนาน
+    สร้างเกมง่ายๆด้วยเทมเพลตกราฟิก ชุดคำสั่งการเขียนเกมและตัวละครต่างๆที่มีมาให้ ไม่จำเป็นต้องใช้อินเตอร์เน็ตในการเล่น
+    คุณสามารถเข้าถึงผลงานของคุณผ่านเว็บ '
+  robomindnl_longdescription: นักเรียนเรียนรู้พื้นฐานของการเขียนโปรแกรมโดยการควบคุมหุ่นยนต์ของตนเอง
+    หลักสูตรออนไลน์นี้สอนโดยคลิปวิดีโอสั้นๆ ภาพยนตร์ แบบทดสอบต่างๆ และคำแนะนำโดยอัตโนมัติ  เพื่อช่วยให้การเขียนโปรแกรมเป็นไปอย่างราบรื่น
+  flappy_longdescription: ใช้โปรแกรมแบบลากและวาง (Drag -Drop) เพื่อสร้างเกม Flappy
+    Bird และปรับแต่งให้มีหน้าตาที่แตกต่างออกไปเป็นแบบของคุณเอง เช่น เปลี่ยนนกให้เป็นปลาฉลาม
+    ซานตาครอส หรืออะไรก็ตาม เมื่อเสร็จแล้วนำเกมของคุณเข้าสู่มือถือในหนึ่งคลิก
   bitsbox_longdescription: Customize your very own virtual tablet, then code a series
     of apps to play and share. Simple walkthroughs make it possible for even young
     kids to program real Javascript, and the more advanced you are the further you'll
@@ -789,27 +773,25 @@
   codehs_beyond_shortdescription: เรียนรู้การเขียนโปรแกรมจาวาสคริปต์กับภาพจำลอง
   udemy_beyond_shortdescription: หลักสูตรเขียนโปรแกรมออนไลน์จำนวนมาก
   lynda_beyond_shortdescription: หลักสูตรเขียนโปรแกรมออนไลน์จำนวนมาก
-  edx_beyond_shortdescription: The most popular class at Harvard
-  coursera_beyond_shortdescription: Start with CS101
-  udacity_beyond_shortdescription: Start with CS101
-  teachingtree_beyond_shortdescription: 'Online Knowledge: Rapid and Unconstrained'
-  kodu_beyond_shortdescription: Design a 3D game world
-  cargobot_beyond_shortdescription: Program a robot arm on your iPad
-  kidsruby_beyond_shortdescription: Learn to program using Ruby
-  w3schools_beyond_shortdescription: Learn to make web sites
-  codeavengers_beyond_shortdescription: Learn to code games and websites
-  mozilla_beyond_shortdescription: Create and share web pages
-  codecombat_beyond_shortdescription: Play a game and learn JavaScript to win
-  codea_beyond_shortdescription: Make apps on your iPad
-  lego_beyond_shortdescription: Build and program a robot
-  finch_beyond_shortdescription: A robot for computer science education
-  arduino_beyond_shortdescription: Prototype your own hardware
-  processing_beyond_shortdescription: Learn the Processing languages
-  alice_beyond_shortdescription: Teach programming in a 3D environment
-  sphero_beyond_shortdescription: Schools, Parents, Robots & Kids. We created the
-    SPRK program because we believe play is a powerful teacher. Whether you're an
-    educator or a parent, SPRK lessons give kids a fun crash course in programming
-    robots while sharpening their skills in math and science.
+  edx_beyond_shortdescription: วิชาที่นิยมมากที่สุดที่ Harvard
+  coursera_beyond_shortdescription: เริ่มต้นด้วย CS101
+  udacity_beyond_shortdescription: เริ่มต้นด้วย CS101
+  teachingtree_beyond_shortdescription: 'ความรู้ออนไลน์: รวดเร็วและไม่มีเงื่อนไข'
+  kodu_beyond_shortdescription: ออกแบบเกม 3 มิติ
+  cargobot_beyond_shortdescription: เขียนโปรแกรมให้แขนของหุ่นยนต์ บน ipad ของคุณ
+  kidsruby_beyond_shortdescription: เรียนเขียนโปรแกรมโดยใช้ Ruby
+  w3schools_beyond_shortdescription: เรียนรู้การทำเว็บไซต์
+  codeavengers_beyond_shortdescription: เรียนการเขียนเกมและสร้างเว็บไซต์
+  mozilla_beyond_shortdescription: สร้างและแชร์เว็บเพจ
+  codecombat_beyond_shortdescription: เล่นเกม และเรียนรู้ JavaScript เพื่อที่จะเป็นผู้ชนะ
+  codea_beyond_shortdescription: ทำให้ปพลิเคชันบน iPad ของคุณ
+  lego_beyond_shortdescription: สร้างและเขียนโปรแกรมให้หุ่นยนต์
+  finch_beyond_shortdescription: หุ่นยนต์เพื่อการศึกษาวิทยาศาสตร์คอมพิวเตอร์
+  arduino_beyond_shortdescription: เรียนรู้ Arduino ด้วย Sparkfun's Digital Sandbox.
+  processing_beyond_shortdescription: เรียนรู้การประมวลผลภาษา
+  alice_beyond_shortdescription: สอนการเขียนโปรแกรมในระบบ 3D
+  sphero_beyond_shortdescription: บทเรียน SPRK จะทำให้เด็กสนุกกับการเขียนโปรแกรมหุ่นยนต์
+    ในขณะได้ฝึกทักษะทางคณิตศาสตร์และวิทยาศาสตร์
   codeorg_beyond_longdescription: Learn the basic concepts of Computer Science with
     drag and drop programming. 3 full courses, each consists of 15-20 lessons that
     blend "unplugged" classroom activities interspersed with game-like, self-directed
@@ -824,23 +806,17 @@
     stories and math art right away. It promotes progressive learning. As kids learn
     fundamentals, Tynker introduces more advanced concepts including syntax driven
     programming.
-  scratch_beyond_longdescription: With Scratch, you can program your own interactive
-    stories, games, and animations&mdash; and share your creations with others in
-    the online community. Scratch helps young people learn to think creatively, reason
-    systematically, and work collaboratively&mdash; essential skills for life in the
-    21st century. Scratch is a project of the Lifelong Kindergarten Group at the MIT
-    Media Lab. It is provided free of charge.
-  lightbot_beyond_longdescription: Learn core programming logic, starting from super-basic
-    programming, for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence
-    commands, identify patterns, use procedures, and utilize loops!
-  codecademy_beyond_longdescription: Codecademy is an interactive, student-guided
-    introduction to the basics of CS through JavaScript that's used by tens of millions
-    of students around the world. We've prepared a no-hassle Hour of Code experience
-    with accompanying quizzes, slides, and a completed project for students at the
-    end.
-  kodable_beyond_longdescription: Kodable is a self-guided iPad game that introduces
-    kids 5+ to programming basics. Having a teacher or parent nearby is optimal, but
-    not necessary.
+  scratch_beyond_longdescription: ด้วย Scratch คุณสามารถสร้างเกมแบบโต้ตอบของคุณเอง
+    มีเรื่องราว ภาพเคลื่อนไหว &mdash; และแบ่งปันให้กับเพื่อนของคุณได้ เริ่มด้วยทำให้ชื่อของเคลื่อนไหว
+    สร้างการ์ดอวยพร หรือสร้างเกมปิงปอง
+  lightbot_beyond_longdescription: เรียนรู้หลักการเขียนโปรแกรมพื้นฐาน สำหรับอายุ 4
+    ปีขึ้นไป บน iOS หรือ Android (หรือเว็บเบราเซอร์) เรียนรู้วิธีการเขียน การลำดับคำสั่ง
+    ระบุรูปแบบ การใช้ลูป
+  codecademy_beyond_longdescription: Codecademy เป็นการสอนพื้นฐานวิทยาการคอมพิวเตอร์ผ่านสื่อต่างๆ
+    นักเรียนจะได้เรียนรู้วิทยาการคอมพิวเตอร์ผ่านภาษา JavaScript ซึ่งนักเรียนกว่าสิบล้านคนทั่วโลกได้เริ่มเรียนแล้ว  บทเรียน
+    Hour of Code มาพร้อมกับแบบทดสอบต่างๆ รวมทั้งโปรเจคของนักเรียน
+  kodable_beyond_longdescription: Kodable คือเกมใน iPad ที่ฝึกให้เด็กอายุ 5 ขวบขึ้นไป
+    เขียนโปรแกรมอย่างง่ายๆ โดยไม่จำเป็นต้องมีผู้ปกครองหรือครูคอยให้คำแนะนำ
   scratchjr_beyond_longdescription: ScratchJr is an introductory programming language
     that enables young children to create their own interactive stories and games.
     Children snap together graphical programming blocks to make characters move, jump,
@@ -898,13 +874,11 @@
     engineering, and web development. Languages include C, PHP, and JavaScript plus
     SQL, CSS, and HTML. The on-campus version of CS50x is Harvard's second-largest
     course.
-  coursera_beyond_longdescription: 'Stanford''s CS 101 class taught by Nick Parlante
-    (FREE!). CS101 teaches the essential ideas of Computer Science for a zero-prior-experience
-    audience. Play and experiment with short bits of code to bring to life to the
-    power and limitations of computers. CS101 also provides a general background on
-    computers today: what is a computer, what is hardware, what is software, what
-    is the internet. No previous experience is required other than the ability to
-    use a web browser.'
+  coursera_beyond_longdescription: คลาสเรียน CS 101 ของ Stanford โดย Parlante Nick
+    (ฟรี)!  CS101 สอนความคิดสำคัญของวิทยาการคอมพิวเตอร์สำหรับผู้เรียนที่ไม่มีประสบการณ์มาก่อน
+    เล่นและทดลองกับโค้ดสั้นๆ เพื่อให้เข้าใจคอมพิวเตอร์ มากยิ่งขึ้น  CS101 ยังสอนหลักคอมพิวเตอร์พื้นฐาน
+    เช่น คอมพิวเตอร์ ฮาร์ดแวร์ ซอฟต์แวร์ อินเทอร์เน็ต คืออะไร?  ฉะนั้นไม่จำเป็นประสบการณ์ก่อนหน้านี้
+    แค่คุณใช้เว็บเบราว์เซอร์ได้ก็พอ
   udacity_beyond_longdescription: In this course you will learn key concepts in computer
     science and learn how to write your own computer programs in the context of building
     a web crawler. There is no prior programming knowledge needed for this course.
@@ -912,10 +886,8 @@
     in computer science and enough programming to be able to write Python programs
     to solve problems on your own. This course will prepare you to move on to intermediate-level
     computing courses.
-  teachingtree_beyond_longdescription: TeachingTree is an open platform that lets
-    anybody organize educational content. Our goal is for students to quickly access
-    the exact clips they need in order to learn individual concepts. Everyone is encouraged
-    to help by adding videos or tagging concepts.
+  teachingtree_beyond_longdescription: TeachingTree เป็นแพลตฟอร์แบบเปิด ที่จะช่วยให้ทุกคนจัดระเบียบเนื้อหาที่จะศึกษา
+    เป้าหมายของเราคือให้นักเรียนเข้าถึงคลิปวิดีโอได้อย่างถูกต้องและรวดเร็ว นักเรียนทุกคนจะให้การช่วยเหลือโดยการเพิ่มวิดีโอและกำหนดคอนเซ็ปต์
   kodu_beyond_longdescription: Kodu lets kids create games on the PC and XBox via
     a simple visual programming language. Kodu can be used to teach creativity, problem
     solving, storytelling, as well as programming. Anyone can use Kodu to make a game,
@@ -926,42 +898,32 @@
     how to move crates. Sounds simple, right? It features 36 fiendishly clever puzzles,
     haunting music and stunning retina graphics. You can even record your solutions
     and share them on YouTube to show your friends.
-  kidsruby_beyond_longdescription: 'Have fun and make games, or hack your homework
-    using Ruby! Just tell your parents or teachers you''re learning Ruby programming...
-    ;). Free and works on any computer. [Note: Desktop install required]'
-  w3schools_beyond_longdescription: Learn to create websites on your own computer.
-    Learn the server basics in less than a day. Learn to add databases to your website
-  codeavengers_beyond_longdescription: Learn how to program games, apps and websites.
-    Designed by experts with perfect level of difficulty for beginners, easy to understand
-    instructions and great help when you need it. Our HTML, CSS and JavaScript courses
-    include code challenges and revision games that make learning fun and effective
-    for all ages.
-  mozilla_beyond_longdescription: Thimble makes it ridiculously simple to create and
-    share your own web pages. Write and edit HTML and CSS right in your browser, then
-    instantly preview your work. Host and share your finished projects with a single
-    click. Perfect for beginners and experts alike.
-  codecombat_beyond_longdescription: Play as a Wizard using code (spells) to control
-    your heroes, navigate mazes, defeat ogres, trick enemies, and rescue allies! Learn
-    JavaScript in this HTML 5 web game for complete beginners.
-  codea_beyond_longdescription: Codea for iPad lets you create games and simulations&mdash;or
-    just about any visual idea you have. Turn your thoughts into interactive creations
-    that make use of iPad features like Multi-Touch and the accelerometer. We think
-    Codea is the most beautiful code editor you'll use, and it's easy. Codea is designed
-    to let you touch your code. Want to change a number? Just tap and drag it. How
-    about a color, or an image? Tapping will bring up visual editors that let you
-    choose exactly what you want.
-  lego_beyond_longdescription: Create small, customizable and programmable robots
-    using LEGO pieces.
-  finch_beyond_longdescription: The Finch is a new robot for computer science education.
-    Its design is the result of a four year study at Carnegie Mellon's CREATE lab.
-    The Finch is designed to support an engaging introduction to the art of programming.
-    It has support for over a dozen programming languages and environments, including
-    several environments appropriate for students as young as eight years old. The
-    Finch was designed to allow students to write richly interactive programs.
-  arduino_beyond_longdescription: Arduino is an open-source electronics prototyping
-    platform based on flexible, easy-to-use hardware and software. It's intended for
-    artists, designers, hobbyists, and anyone interested in creating interactive objects
-    or environments.
+  kidsruby_beyond_longdescription: สนุกกับการสร้างเกม หรือ แฮกการบ้านของคุณด้วยภาษา
+    Ruby! เพียงแค่บอกผู้ปกครองหรือคุณครูว่าคุณกำลังเรียนเขียนโปรแกรมด้วยภาษา Ruby
+    :) ฟรีและทำงานได้บนทุกคอมพิวเตอร์ (ต้องติดตั้ง)
+  w3schools_beyond_longdescription: เรียนรู้วิธีสร้างเว็บไซต์บนคอมพิวเตอร์ของคุณเอง
+    เรียนรู้พื้นฐานเซิร์ฟเวอร์ในเวลาไม่ถึงหนึ่งวัน เรียนรู้การสร้างฐานข้อมูลสำหรับเว็บไซต์ของคุณ
+  codeavengers_beyond_longdescription: เรียนรู้วิธีการสร้างเกม แอปพลิเคชัน และเว็บไซต์โดยผู้เชี่ยวชาญ
+    ด้วยระดับความยาก-ง่ายที่เหมาะสำหรับผู้เริ่มต้น เข้าใจง่าย คอร์สภาษา HTML, CSS
+    และ JavaScript ของเรามีโค้ดที่มีความท้าทายและการปรับปรุงเกม ที่ทำให้การเรียนสนุกสนานและมีประสิทธิภาพเหมาะสำหรับทุกเพศทุกวัย
+  mozilla_beyond_longdescription: Thimble เป็นเครื่องมือช่วยในการสร้างหน้าเว็บของคุณ
+    เขียนและแก้ไขโค้ด HTML และ CSS แล้วแสดงตัวอย่างงานของคุณทันที จัดการและแชร์โปรเวจของคุณด้วยคลิกเดียว
+    เหมาะสำหรับผู้เริ่มต้นและผู้เชี่ยวชาญ
+  codecombat_beyond_longdescription: ร่วมเป็นพ่อมดโดยใช้โค้ด(เวทย์มนต์) เพื่อควบคุมหุ่นยนต์ของคุณ
+    นำทางในเขาวงกต ต่อสู่กับศัตรู และช่วยชีวิตเพื่อนของเรา เรียนรู้ Javascript ในเกม
+    HTML5 ของเรา เกมนี้เหมาะสำหรับผู้เริ่มต้น
+  codea_beyond_longdescription: Codea สำหรับ iPad ช่วยให้คุณสร้างเกมและสถานการณ์จำลอง
+    &mdash; หรือความคิดใด ๆ เพียงเกี่ยวกับภาพที่คุณมี เปลี่ยนความคิดของคุณเป็นความสร้างสรรค์แบบโต้ตอบ
+    ที่ใช้เทคโนโลยีของ iPad เช่นมัลติทัช ฯลฯ เราเชื่อว่า Codea เป็นเครื่องมือที่สะดวกและใช้งานง่ายที่สุด  Codea
+    ถูกออกแบบมาเพื่อให้คุณสัมผัสกับโค้ดของคุณ เมื่อคุณต้องการเปลี่ยนตัวเลข ก็เพียงแตะและลาก
+    หรือเมื่อคุณต้องการใช้งานสีหรือรูปภาพ เพียงแตะไปที่หน้าจอ เครื่องมือต่างๆจะปรากฏให้คุณเลือกตามต้องการ
+  lego_beyond_longdescription: สร้างหุ่นยนต์เลโก้ ขนาดเล็กในแบบของคุณ
+  finch_beyond_longdescription: Finch เป็นหุ่นยนต์เพื่อการศึกษา ออกแบบจากการวิจัยของ
+    Carnegie Mellon's CREATE.  Finch ถูกออกแบบมาให้รับรองเข้ากับการเรียนรู้เกี่ยวกับพื้นฐานของการเขียนโปรแกรม
+    หุ่นยนต์นี้รองรับภาษาที่หลากหลาย ซึ่งรวมถึงภาษาง่ายๆที่เหมาะสำหรับเด็กอายุ 8 ปี
+    หุ่นยนต์ Finch นี้จะช่วยให้นักเรียนเขียนโค้ดได้อย่างเฉียบคม
+  arduino_beyond_longdescription: Arduino เป็นแพลตฟอร์มยอดนิยมที่ออกแบบมาให้ศิลปินและนักออกแบบทำงานกับเซ็นเซอร์จริง
+    เช่น ไฟLed ปุ่มกด และอื่นๆ Sparkfun Virtual Sandbox จะสอนคุณเขียนโค้ดที่ถูกต้องด้วยเบราว์เซอร์ของคุณ
   processing_beyond_longdescription: Processing is a programming language, development
     environment, and online community. Since 2001, Processing has promoted software
     literacy within the visual arts and visual literacy within technology. Initially
@@ -969,11 +931,7 @@
     within a visual context, Processing evolved into a development tool for professionals.
     Today, there are tens of thousands of students, artists, designers, researchers,
     and hobbyists who use Processing for learning, prototyping, and production.
-  alice_beyond_longdescription: Using an innovative programming environment to support
-    the creation of 3D animations, the Alice Project provides tools and materials
-    for teaching and learning computational thinking, problem solving, and computer
-    programming across a spectrum of ages and grade levels.
-  sphero_beyond_longdescription: Schools, Parents, Robots & Kids. We created the SPRK
-    program because we believe play is a powerful teacher. Whether you're an educator
-    or a parent, SPRK lessons give kids a fun crash course in programming robots while
-    sharpening their skills in math and science.
+  alice_beyond_longdescription: ใช้คุณสมบัติของการเขียนโปรแกรมรูปแบบใหม่ๆ เพื่อสนับสนุนการสร้างภาพเคลื่อนไหว
+    3D โครงการ Alice มีเครื่องมือและวัสดุสำหรับการสอนและการเรียนเรียนรู้เกี่ยวกับ
+    การคิดคำนวณ การแก้ปัญหา และการเขียนโปรแกรมสำหรับทุกเพศทุกวัย
+  sphero_beyond_longdescription: ไม่ว่าคุณจะเป็นผู้สอหรือผู้ปกครอง บทเรียน SPRK จะสอนให้เด็กๆสนุกกับการเขียนโปรแกรมหุ่นยนต์ในขณะที่ฝึกทักษะในทางคณิตศาสตร์และวิทยาศาสตร์ไปพร้อมๆกัน
