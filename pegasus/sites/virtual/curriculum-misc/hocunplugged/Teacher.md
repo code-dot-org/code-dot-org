@@ -101,7 +101,7 @@ The student being "programmed" will often try to help the programmers by doing w
 [together]
 
 ## Activity:
-### <a name="Activity1"></a> 4) [The Drawing Machine](drawing_commands.pdf)
+### <a name="Activity1"></a> 3) [The Drawing Machine](drawing_commands.pdf)
 
 > **Directions for Class:**
 
@@ -140,7 +140,7 @@ Understanding that the instructions are executed from the marker's point of view
 [together]
 
 ## Wrap-up
-### <a name="WrapUp"></a> 5) Flash Chat: Taking it online
+### <a name="WrapUp"></a> 4) Flash Chat: Taking it online
 
 - In the game we just played, who do you suppose was more like a programmer, and who was more like a computer?
 - What was the most challenging part of writing the instructions?

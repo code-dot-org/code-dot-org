@@ -1168,9 +1168,11 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       this.setHSV(312, 0.32, 0.62);
+      this.VALUES = [];
 
       var dropdown;
       if (isK1) {
+        this.VALUES = skin.backgroundChoicesK1;
         dropdown = new blockly.FieldImageDropdown(
                                   skin.backgroundChoicesK1,
                                   skin.dropdownThumbnailWidth,
@@ -1179,6 +1181,7 @@ exports.install = function(blockly, blockInstallOptions) {
           .appendTitle(msg.setBackground())
           .appendTitle(dropdown, 'VALUE');
       } else {
+        this.VALUES = skin.backgroundChoices;
         dropdown = new blockly.FieldDropdown(skin.backgroundChoices);
         this.appendDummyInput().appendTitle(dropdown, 'VALUE');
       }
@@ -1294,6 +1297,7 @@ exports.install = function(blockly, blockInstallOptions) {
     blockly.Blocks.studio_setSprite = {
       helpUrl: '',
       init: function() {
+        this.VALUES = skin.spriteChoices;
         var dropdown = new blockly.FieldDropdown(skin.spriteChoices);
         // default to first item after random/hidden
         dropdown.setValue(skin.spriteChoices[2][1]);

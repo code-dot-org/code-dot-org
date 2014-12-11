@@ -5,7 +5,7 @@ theme: none
 ---
 
 
-<%= partial('curriculum_header', :unittitle=> 'MSM', :lesson=> 7, :unplugged=>false, :title=> 'Play Lab: Defining Variables',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>(30-60)) %>
+<%= partial('curriculum_header', :unittitle=> 'MSM', :lesson=> 7, :unplugged=>false, :title=> 'Play Lab: Defining Variables',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>('30-60')) %>
 
 [content]
 
@@ -45,22 +45,13 @@ In this plugged activity, students will learn to define variables that store val
 
 ### <a name="GetStarted"></a> 1) Introduction
 
-Suppose we want to make an image with fifty identical, solid red triangles. To do so you'd have to create this Evaluation block fifty times!
-
-(triangle 50 "solid" "red")
-
-Even worse, if you decided you wanted fifty blue triangles instead, you'd have to go through and change each and every block. There must be a better way!
-
-We can store that red triangle Evaluation Block in a Variable, let's call it "red_triangle." That name "red_triangle" now becomes a shortcut for the blocks inside the variable, and we can use that shortcut over and over in our program. If we decide that we want that red triangle to be 100 pixels instead of 50, we only need to change it in the variable definition!
-
-** If students have used variables in other languages **
-It's really imporant to note that in functional programming, variables are considered immutable - meaning the value can't be changed during the execuation of a program. Think about it this way: x = x + 1 might make sense in Javascript, but it's impossible in Algebra.
+It's time to start working on your video game! In this stage you'll see some incomplete variable definitions for various aspects of your game - such as the character images, title, and background.
 
 [/together]
 
 [together]
 
-## Activity: Eval Writing Contracts
+## Activity: Play Lab Defining Variables
 ### <a name="Activity1"></a> 3) Online Puzzles
 
 In this stage you'll define and modify variables to changes how some games function. Head to [MSM stage 7](http://studio.code.org/s/msm/stage/7/puzzle/1) in Code Studio to get started programming.
