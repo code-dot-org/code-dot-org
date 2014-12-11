@@ -72,8 +72,13 @@
     </div>
   </div>
   <div class='full_container'>
-    <div id="blocklyApp">
+    <div id='blocklyApp'>
       <div class='loading'></div>
+      <div class='slow_load'>
+        This is taking longer than usual...
+        <br>
+        <a href='javascript: location.reload();'>Try reloading the page</a>
+      </div>
     </div>
     <div style="display:none;">
       <div class="reference_area" id="reference_area">
@@ -124,7 +129,7 @@
   <script type="text/javascript" src="default_options.js"></script>
   <script type="text/javascript">
     var scripts = scripts || {};
-    
+
     function loadApp(name, callback) {
       var script = $('<script>').attr('src', 'js/' + name + '.js')[0];
       script.onload = callback;
@@ -162,7 +167,7 @@
       var kv = param.split('=');
       params[kv[0]] = kv[1];
     });
-    
+
     var currentScript = scripts[params.s];
     $('.header_text').html(currentScript.title);
     $('.header_finished_link').html('<a href="' + currentScript.finishedRedirectURL + '">I\'ve finished my Hour of Code</a>');
