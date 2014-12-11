@@ -5,14 +5,14 @@ theme: none
 ---
 
 
-<%= partial('curriculum_header', :unplugged=>true, :title=> 'The Design Recipe',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>25) %>
+<%= partial('curriculum_header', :unplugged=>true, :title=> 'The Design Recipe',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>('30-60')) %>
 
 [content]
 
 [together]
 
 ## Lesson Overview
-The Design Recipe is a structured approach to writing functions that solve world problems.
+In the last stage students wrote some very simple functions - but more sophisticated functions demand a more thoughtful approach. The Design Recipe is a structured approach to writing functions that includes writing test cases to ensure that the function works as expected.
 
 [summary]
 
