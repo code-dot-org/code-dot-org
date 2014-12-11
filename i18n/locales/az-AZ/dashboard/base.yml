@@ -340,7 +340,7 @@ az:
     heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
     heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
-    your_gallery: Gallery
+    your_gallery: Qalereya
   gender:
     male: Kişi
     female: Qadın
@@ -426,7 +426,7 @@ az:
       try_new_tutorial: Try our new Hour of Code tutorial in beta
       try_frozen: Artist with Anna and Elsa, from Frozen
     gallery:
-      title: Gallery
+      title: Qalereya
       body: View a gallery of app and artist images created by our users
     frozen:
       title: Buzlu ürək
@@ -439,7 +439,7 @@ az:
     more: 'More &rarr;'
     caption_by_name_age: 'by %{name}, age %{age}'
     caption_time_ago: '%{time_ago} ago'
-    header: Gallery
+    header: Qalereya
     header_playlab: Oyun laboratoriyası
     header_artist: Artist
   landing:

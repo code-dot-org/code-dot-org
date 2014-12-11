@@ -51,7 +51,7 @@
           Suzi: Suzi
           The Artist: Umjetnik
           Artist Debugging: Artist Debugging
-          Bounce: Bounce
+          Bounce: Odskok
           'Studio: Create a Story': 'Studio: Create a Story'
           Artist Loops: Artist Loops
           Bee Conditionals: Bee Conditionals
@@ -63,7 +63,7 @@
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
           Maze Loops: Maze Loops
-          Graph Paper Programming: Graph Paper Programming
+          Graph Paper Programming: Grafičko programiranje
           'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
           Getting Loopy: Getting Loopy
           Relay programming: Relay programming
@@ -103,7 +103,7 @@
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
           Artist Functions with Params: Artist Functions with Params
-          Bounce: Bounce
+          Bounce: Odskok
           Maze Conditionals: Maze Conditionals
           Artist Functions with Parameters: Artist Functions with Parameters
           Computational Thinking: Razmišljati poput računala
@@ -140,14 +140,14 @@
           'Bee: Nested Loops2': 'Bee: Nested Loops2'
           'Bee: Debugging2': 'Bee: Debugging2'
           'Artist: Patterns': 'Artist: Patterns'
-          Songwriting: Songwriting
+          Songwriting: Pisanje pjesama
           description_audience: Ages 8+ (after Course 2)
           description_short: Students taking Course 3 should have already taken Course
             2.
         msm:
           title: Middle School Math
           description: Private work in progress for Middle School Math.
-          Graph Paper Programming: Graph Paper Programming
+          Graph Paper Programming: Grafičko programiranje
           Assessments: Assessments
           Unit 1: Unit 1
           Unit 2: Unit 2

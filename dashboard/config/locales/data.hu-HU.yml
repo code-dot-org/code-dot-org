@@ -607,8 +607,8 @@
         instructions: 'Készítsünk parallelogrammát. Ugyanolyan mint egy négyzet, de
           másmilyenek a szögei: 60 és 120 fokosak a 90 helyett.'
       frozen diamond mini snowflake:
-        instructions: Tudtad, hogy minden hópihe más alakzatú? Készítsünk egy új hópelyhet
-          az "Ismételd" blokkal, hogy készítsen parallerogrammát 4-szer, 90 fokkal
+        instructions: Tudtad, hogy minden hópihe más alakú? Készítsünk egy új hópelyhet
+          az "Ismételd" blokkal, úgy, hogy készítsen parallerogrammát 4-szer, 90 fokkal
           jobbra fordulva minden parallelogramma között.
       frozen diamond snowflake:
         instructions: Most készítsünk egy új hópelyhet az ismétlés blokk használatával,
@@ -625,8 +625,8 @@
           kör között.
       frozen circle function with parameter:
         instructions: Itt egy "Kör létrehozása" blokk, ami különböző méretű köröket
-          tud csinálni. Tudod használni ezt hogy készíts egy kis, ötös méretű és egy
-          nagyobb, tízes méretű kört?
+          tud csinálni. Tudod használni ezt hogy készíts egy kis, 5-ös méretű és egy
+          nagyobb, 10-es méretű kört?
       frozen snowflower:
         instructions: Bonyolult hóminták hozhatóak létre nagyon egyszerű alakzatokból.
           Tudsz csinálni egy mintát 5 darab 5-ös méretű kör és 5 darab 10-es méretű

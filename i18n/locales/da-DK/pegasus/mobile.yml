@@ -9,7 +9,7 @@ da-DK:
   n_have_learned_an_hoc: '<h1>#</h1><h3>har prøvet en</h3><h2>Hour of Code</h2>'
   anybody_can_learn: Alle kan lære.
   learn_now: Lær Nu
-  petition_message: Alle elever i alle skoler burde have muligheden for at lære datalogi
+  petition_message: Alle elever i alle skoler burde have muligheden for at lære programmering
   petition_sign_message: 'Hvis du er enig, underskriv dit navn.  Tilslut dig # andre.'
   name: Navn
   email: E-mail
@@ -65,7 +65,7 @@ da-DK:
   thanks_for_voting: Tak for at du stemte!
   share_on_facebook: Del på Facebook
   share_on_twitter: Del på Twitter
-  beyond_an_hour: Lær mere end een Hour of Code
+  beyond_an_hour: Lær mere når du har gennemført Hour of Code
   get_started: Start
   i_agree: Jeg er enig
   participant_select: '- Vælg -'
@@ -104,18 +104,18 @@ da-DK:
   students_and_lines: '%{students} studerende har lavet Hour of Code and har skrevet %{lines} linjer af kode.'
   start_hoc: Start Hour of Code nu
   contact_form_topic_press: Pressen/medierne (interview eller taler-arrangementer)
-  studiobar_title: "Udforske <a href='http://studio.code.org'>kode skolen</a>"
+  studiobar_title: "Udforsk <a href='http://studio.code.org'>kodeskolen</a>"
   studiobar_elementary_title: Grundlæggende kurser
-  studiobar_elementary_body: 'Vores tre nye kurser for K &#8209; 5'
+  studiobar_elementary_body: Vores tre nye kurser for indskoling og melemtrin
   studiobar_hoc_title: Kodetimen
   studiobar_hoc_body: Lær at kode med Angry Birds
   studiobar_flappy_title: Flappy kode
   studiobar_flappy_body: Lav og del dit eget Flappy spil
   studiobar_teacher_title: Lavet til lærere
-  studiobar_teacher_body: Indføre Kode Skole i klasselokalet
-  studiobar_frozen_title: En Time af Kode
+  studiobar_teacher_body: Brug Code Studio i din klasse
+  studiobar_frozen_title: Hour of Code
   studiobar_frozen_body: Skab et eventyrligt vinterlandskab med Anna og Elsa
-  studiobar_donate_title: Doner
+  studiobar_donate_title: Donér
   studiobar_donate_body: Hver gang du donerer hvad der svarer til en dollar, lærer et barn mere
   contact_form_topic_student: Jeg er elev
   contact_form_topic_parent: Jeg er en forælder
@@ -135,7 +135,7 @@ da-DK:
   class_submission_in_school_robotics_club: Robotteknologi klub
   class_submission_in_school_programming_integrated_in_other_classes: Programmering integreret i andre klasser (matematik, videnskab, osv)
   class_submission_in_school_summer_school_cs_program: Sommerskole CS program
-  class_submission_in_school_exploring_computer_science: At udforske datalogi
+  class_submission_in_school_exploring_computer_science: På opdagelse i programmering
   class_submission_in_school_other: Andre i skolen
   class_submission_out_of_school: Ud af skolen
   class_submission_out_of_school_summer_camp: Sommerlejr
@@ -167,8 +167,8 @@ da-DK:
   volunteer_engineer_submission_experience_university_student_or_researcher: Nuværende universitetsstuderende (eller forsker)
   volunteer_engineer_submission_experience_software_professional: Software professional
   petition_age: Alder
-  dashboard_landing_title: Lærer Startside
-  dashboard_landing_welcome: Velkommen til den nye og forbedrede lærer dashboard.
+  dashboard_landing_title: Lærerens Startside
+  dashboard_landing_welcome: Velkommen til den nye og forbedrede startside for undervisere.
   dashboard_landing_video: Se denne video
   dashboard_landing_watch_video: for en rundvisning i de nye funktioner!
   dashboard_landing_view_as_student: Se dette site som elev
@@ -187,7 +187,7 @@ da-DK:
   dashboard_landing_progress_biggest: Det er et fremskridt for dit største afsnit.
   dashboard_landing_view_progress: 'Se fremskridt for %{biggest_section}'
   dashboard_landing_available_title: Tilgængelige kurser
-  dashboard_landing_available_courses: Her er kurserne aktuelt tilgængelige for dig og dine elever.
+  dashboard_landing_available_courses: Her er kurserne som lige nu er tilgængelige for dig og dine elever.
   dashboard_landing_loading: Indlæser...
   dashboard_action_edit: Rediger
   dashboard_action_save: Gem
@@ -199,13 +199,13 @@ da-DK:
   dashboard_action_delete_no: Nej
   dashboard_action_done: Udfør
   dashboard_action_required: kræves
-  dashboard_navigation_home_page: Lærer Startside
+  dashboard_navigation_home_page: Lærerens Startside
   dashboard_navigation_section_student_progress: Elevernes konti og fremskridt
   dashboard_navigation_section_teacher_progress: Dine kurser
   dashboard_navigation_section_lesson_plans: Lektionsplaner og ressourcer
   dashboard_navigation_section_community: Hjælp og community
   dashboard_navigation_section_pd: Efteruddannelse
-  dashboard_navigation_section_speakers: 'Programmering <br/> Gæstetalere'
+  dashboard_navigation_section_speakers: 'Find en<br/> gæstetaler'
   dashboard_navigation_all_sections: Elevernes konti og fremskridt
   dashboard_navigation_view_progress: Se fremskridt
   dashboard_navigation_add_students: Tilføje elever
@@ -315,7 +315,7 @@ da-DK:
   carousel_heading_webpages: Lær at lave web-sider
   carousel_heading_robots: Lære at programmere med robotter
   carousel_heading_ide: Platforme populære blandt lærere
-  educator_notes: Undervisnings noter
+  educator_notes: Lærervejledning
   more_resources_educators: Flere ressourcer til lærere og undervisere
   participants: deltagerne
   teachers_notes: Lærerens noter
@@ -364,7 +364,7 @@ da-DK:
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Sten, saks, papir
   hourofcode_name: Pladsholder for nye code.org/hoc
-  playlab_name: Spille Lab
+  playlab_name: Play Lab
   codeorg_gradelevel: For 4-104-årige
   codeintl_gradelevel: For 4-104-årige
   thinkersmithspanish_gradelevel: Por todos

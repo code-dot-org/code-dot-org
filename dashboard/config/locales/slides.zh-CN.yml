@@ -33,7 +33,7 @@
         text: 每个块对应一条命令。如果你把”向前移动“块拖到工作区，并按”运行程序“，这只小鸟将在迷宫里向前移动一步。
       11:
         image: notes/hoc1_11.jpg
-        text: 你可以将许多块拖到工作区并把它们连接在一起，来让小鸟执行多个动作。小鸟会由上至下执行命令。
+        text: 需执行多个操作时，将多个块拖到您的工作区，并将他们连在一起。小鸟会从头到尾执行所有命令。
       12:
         image: notes/hoc1_12.jpg
         text: 如果你运行了一个程序，但是想要修改它再重试，按”重置“按钮。
@@ -160,21 +160,20 @@
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: 你好，我的名字是 Saloni。我用计算机科学来帮助解决健康和医学上的问题。让我们来学习如何使用"如果其他"块。它看起来很像"如果"块，但它在结尾多出了一部分，"其他"。
+        text: 你好，我是 Saloni。我用计算机科学来帮助解决健康和医学上的问题。让我们来学习如何使用 "如果-否则“ 模块。这个模块和"如果"模块类似，区别仅是在”如果“模块的结尾加上”否则”部分。
       2:
         image: notes/hoc5_2.jpg
-        text: 如果我把”向前移动“块放在写着”做“的地方，并且把”左转“块放在写着”其他“的地方，这表明僵尸将会在这两者之间做一个选择。如果前面有路，僵尸就会往前走，否则（如果前面没有路），僵尸就会向左转。
+        text: 如果我把”向前移动“块放在标注着”做“的地方，并且把”左转“块放在写着”否则“的地方，这表明僵尸将会在这两者之间做一个选择。如果前面有路，僵尸就会往前走，否则（意味着前面没有路），僵尸就会向左转。
       3:
         image: notes/hoc5_3.jpg
-        text: 就想”如果“块一样，我可以把”如果其他“块放在”重复“块里面，这样僵尸就会在重复向前移动，并检查是不是有需要转弯的地方。
+        text: 与“如果”模块类似，我们可以将“如果-否则”模块放在一个“循环”模块内，这样僵尸就不停的移动，“如果-否则”模块则不断的检查是否有其他地方可以拐弯。
       4:
         image: notes/hoc5_4.jpg
-        text: 现在，让这些僵尸去他们应该去的地方吧！
+        text: 现在，让这些僵尸回老家吧！
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
-        text: An if-else statement is a decision between two things. Let's see how
-          we can use an if-else statement with our buddy Scrat the squirrel.
+        text: If-else 语句描述在两个事件间的选择。让我们看看一个例子，与我们的好朋友松鼠Scrat一起使用if-else语句。
       2:
         image: notes/saloni_ifelse_scrat2.jpg
         text: This block looks the same as the "if" block, but there's an extra part

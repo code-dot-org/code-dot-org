@@ -521,21 +521,26 @@
         studio_c3_game_7: Crea el teu propi joc. Quan hagis acabat, fes clic a Finalitza
           per fer que els teus amics provin el teu joc als seus mòbils.
         studio_playlab_1: El pingüí vol dir "Hola" - el pots ajudar?
-        studio_playlab_2: Can you make the dog say something and then have the cat
-          say something afterwards?
+        studio_playlab_2: el noi de la Cova (actor 1) i la noia de la Cova (actor
+          2) volen dir-se "hola" mútuament. Pots ajudar-los utilitzant el bloc "dir"
+          dues vegades?
         studio_playlab_3: Pots ajudar a la tennista a arribar a la bandera?
-        studio_playlab_4: Pot escriure un programa que fa que el gos es mogui cap
-          al gat, i el gat digui "hola" quan el gos el toqui?
-        studio_playlab_5: Can you write a program to make the octopus say "hello"
-          when it is clicked?
-        studio_playlab_6: Can you write a program to make this penguin move around
-          using the up / down / left /right keys to hit all of the targets?
+        studio_playlab_4: Pots ajudar al nen del Tennis (actor 1) a  trobar la noia
+          del Tennis (actor 2) i reproduir un so quan aconsegueix arribar?
+        studio_playlab_5: Pots ajudar al Robot espacial dir "salutacions terrícoles"
+          quan se li fa clic? No t'oblidis de fer-hi clic en ell després de fer clic
+          a Executar
+        studio_playlab_6: Pots ajudar a la bruixa a moure amb les tecles de fletxa
+          amunt/avall/dreta/esquerra per arribar a totes les boles de foc màgiques?
         studio_playlab_7: El bloc "repetir per sempre" et permet executar codi contínuament.
           Pots incloure-hi blocs per ajudar al mag a moure's a dreta i esquerra constantment?
-        studio_playlab_8: Can you add a block to score a point when the penguin runs
-          into the octopus, and then move him with the arrows until you score?
-        studio_playlab_9: Can you add blocks to change the background and the speed
-          of the penguin, and then move him with the arrows until you score?
+        studio_playlab_8: Pots afegir un bloc d'anotar un punt i un bloc que reprodueix
+          un so quan l'unicorn corre cap al mag i llavors moure amb les fletxes fins
+          que  facis punt?
+        studio_playlab_9: Fes el fons per a aquesta invasió alienígena i ajuda el
+          Robot Espacial a obtenir a l'alien més ràpid canviant la seva velocitat.
+          Llavors mou-lo amb les tecles de fletxa per arribar al Robot Espacial i
+          avisa tothom
         studio_playlab_10: Crea el teu propi joc. Quan hagis acabat, fes clic a Finalitza
           per fer que els teus amics provin el teu joc als seus mòbils.
         studio_full_sandbox: Crea el teu propi joc. Quan hagis acabat, fes clic a
@@ -657,9 +662,9 @@
           més complex? Si ho fas bé, podré caminar per qualsevol camí amb corbes sense
           importar la llargada. Afanya't! S'està fonent el gel!
       Standalone_Artist_1:
-        instructions: Welcome to Artist! First off, let's try to make a simple square
-          using the turn right block and move forward block. Each side should be 100
-          pixels long.
+        instructions: Benvinguts a l'Artista! En primer lloc, anem a tractar de fer
+          un simple quadrat utilitzant el bloc gira a la dreta i el bloc mou cap endavant.
+          Cada costat hauria de fer 100 píxels de llarg.
       Standalone_Artist_2:
         instructions: Dibuixa aquest diamant amb angles de 120 i 60 graus i costats
           de 150 píxels de llargada.
@@ -667,33 +672,34 @@
         instructions: Pots dibuixar aquest hexàgon de 100 píxels de costat i girant
           60 graus?
       Standalone_Artist_4:
-        instructions: Now you've got a new block to play with, the loop. This will
-          repeat a set of commands. What happens if you loop these commands 6 times?
+        instructions: Ara tens un nou bloc per jugar, el bucle. Això repetirà un conjunt
+          d'ordres. Què passa si repeteixes aquestes comandes 6 vegades?
       Standalone_Artist_5:
-        instructions: How many times do you need to loop this diamond to draw the
-          flower?
+        instructions: Quantes vegades és necessita repetir aquest diamant per dibuixar
+          la flor?
       Standalone_Artist_5.5:
-        instructions: 'Notice how we simplified the diamond code by turning it into
-          a loop. You can loop that whole sequence 12 times to draw the flower. Hint:
-          You''ll need to turn 30 degrees after your diamond loop so you don''t keep
-          drawing over the same diamond.'
+        instructions: 'Dóna''t compte com hem simplificat el codi del diamant per
+          convertir-lo en un bucle. Pots fer  un bucle que tota seqüència 12 vegades
+          per dibuixar la flor. Pista: Necessites girar 30 graus després de dibuixar
+          el diamant per no repetir el dibuix sobre el mateix diamant.'
       Standalone_Artist_6:
-        instructions: 'Loop this hexagon code 6 times to create the design. How many
-          degrees will you need to turn each time? Hint: divide the number of degrees
-          in a circle by the number of times you are looping.'
+        instructions: 'Repeteix aquest codi de l''hexàgon 6 vegades per crear el disseny.
+          Quants graus necessitaràs girar cada vegada? Pista: Divideixi el nombre
+          de graus en un cercle pel nombre de vegades que fas el bucle.'
       Standalone_Artist_7:
-        instructions: 'A function is another programming tool to help you avoid repeating
-          yourself. This function draws a flower, so you can use it any time you want
-          to draw a flower. Use this and the new jump block to draw these flowers.
-          Hint: The flowers are 150 pixels apart'
+        instructions: 'La funció és una altra eina de programació per ajudar a evitar
+          repetir-te. Aquesta funció dibuixa una flor, així que pots utilitzar-la
+          en qualsevol moment que vulguis dibuixar una flor. Utilitzar això i el nou
+          bloc salta per dibuixar aquestes flors. Consell: Les flors són 150 píxels
+          a banda'
       Standalone_Artist_8:
-        instructions: Here's a function called "Draw a shape" that we've programmed
-          to draw hexagons. Run the code to see what it does and then experiment with
-          the function to see what happens. Can you make it draw a pattern of squares,
-          triangles, or octagons?
+        instructions: Aquí tens una funció anomenada "Dibuixa una forma" que hem programat
+          per dibuixar hexàgons. Executa el codi per veure què fa i després  experimenta
+          amb la funció a veure què passa. Pots fer-li dibuixar un patró de quadrats,
+          triangles o octògons?
       Standalone_Artist_9:
-        instructions: Now go ahead and make whatever picture you'd like! You've even
-          got an empty function that you can make do whatever you want!
+        instructions: Ara segueix endavant i fes qualsevol imatge que t'agradi! Fins
+          i tot hi ha una funció buida amb la que pots fer el que vulguis!
     video:
       name:
         maze_intro: 'Laberint: Introducció'
@@ -771,27 +777,27 @@
         C3_crowdsourcing: Col·laboració oberta
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Composició Amb Paràmetres
-        C4_intro: Introduction
+        C4_intro: Introducció
         C4_bee_conditional: 'Abella: Condicionals'
-        C4_variables_artist: Variables - Artist
-        C4_variables_playlab: Variables - Play Lab
+        C4_variables_artist: Variables - Artista
+        C4_variables_playlab: Variables - Laboratori de Jocs
         C4_for_loops: Per bucles
-        C4_math_artist: Programming the Artist with Math
-        C4_function_edit: Editing Functions
-        C4_function_create: Creating Functions
+        C4_math_artist: Programant l'Artista amb matemàtiques
+        C4_function_edit: Editant Funcions
+        C4_function_create: Creant Funcions
         C4_conditionals: Condicionals
-        C4_unplugged_algorithms: Algorithms with Tangrams
-        C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Variables in Envelopes
+        C4_unplugged_algorithms: Algorismes amb Tangrams
+        C4_unplugged_madlibs: Llibreries boges
+        C4_unplugged_variables: Variables en Sobres
         C4_unplugged_forloops: Per bucles
         C4_unplugged_parameters: Composició amb paràmetres
-        C4_unplugged_binary: Binary
+        C4_unplugged_binary: Binari
         frozen_intro: Introducció a l'Hora del Codi
         frozen_loops: Introducció als bucles
         frozen_functions: Introducció a les funcions
-        playlab_intro: Introduction to Play Lab
-        playlab_events: Play Lab Events
-        playlab_repeat_forever: Play Lab Repeat Forever
+        playlab_intro: Introducció al Laboratori de Jocs
+        playlab_events: Events del Laboratori de Jocs
+        playlab_repeat_forever: Repetir per sempre  Laboratori de Jocs
     callout:
       text:
         drag_blocks: Arrossegar un bloc "mou" i enganxa'l sota d'altre bloc
@@ -820,10 +826,9 @@
           pel nombre correcte de graus a girar
         repeat_blocks: Utilitza el bloc "Repeteix" i fica-hi a dins els blocs de l'àrea
           de treball
-        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the
-          workspace
-        repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks
-          inside
+        repeat_blocks_1: (1) utilitza aquest bloc i posa-ho al voltant dels blocs
+          grisos en l'àrea de treball
+        repeat_blocks_2: (2) Mou el bloc "Repetir" aquí i posa els blocs grisos dins
         snowflake_dropdown: Utilitza aquesta llista desplegable per crear diferents
           flocs de neu!
         degrees_per_side: Divideix 360 pel número de costats per obtenir la mida de
@@ -831,14 +836,14 @@
         set_sides: Utilitza aquest bloc per establir "costats" com el valor necessari
           per completar el trencaclosques.
         set_length: Utilitza aquest bloc per establir el valor correcte de "longitud".
-        which_equation: Quina és l'equació que fa cada costat més curt per formes
-          amb més costats?  Prova amb cada equació!
+        which_equation: Quina equació fa les costats més curts per obtenir formes
+          amb més costats?
         get_nectar: Utilitza el nou bloc "obtenir nèctar".
         actions_category: La caixa d'eines té un nou look! Els blocs de "Accions"
           són aquí ara.
         draw_square_hint: 'Pista: Fes servir el el bucle del quadrat que acabes de
           fer a l''últim puzzle.'
-        edit_function: Fes servir aquest botó per editar la funció.
+        edit_function: Fes clic aquí per editar la teva funció.
         create_function: Fes clic aquí per obrir el desplegable "Funcions", després
           fes clic al botó "Crea una funció".
         house_hint: Està bé si la imatge encara no es veu com una casa. Ho arreglarem
@@ -863,15 +868,15 @@
           nombre de l'actor
         playlab_move_girl: Utilitza el bloc "mou-te a la dreta" per moure la tennista
         playlab_play_sound: Afegeix el bloc "reprodueix un so" aquí
-        playlab_arrow_keys: Remember to use these to move the witch after clicking
-          on Run
+        playlab_arrow_keys: Recorda utilitzar això per moure la bruixa després de
+          fer clic a Executar
         playlab_add_move: Afegeix els blocs "mou" dins d'aquest bloc de repetició
         playlab_add_score: Afegeix els blocs de puntuació aquí
         playlab_add_blocks: Afegeix els teus blocs aquí
-        set_variable: Drag a number block here to set your variable
-        place_variable: Drag your variable inside this block
-        bee_for_loop: Drag the largest number of nectar you want the bee to collect
-          here
+        set_variable: Arrossega un número bloc aquí per ajustar la teva variable
+        place_variable: Arrossega la teva variable dins d'aquest bloc
+        bee_for_loop: Arrossega el major nombre de nèctar que vols que l'abella recollir
+          aquí
         place_counter_variable: Arrossegueu el comptador de variables dins d'aquest
           bloc
         function_editor_draw_square: Aquesta és la definició de funció. Aquests blocs
@@ -879,21 +884,22 @@
         change_here: Feu el canvi aquí
         write_draw_square_function: Arrossega blocs de la caixa d'eines aquí per dibuixar
           un quadrat
-        write_draw_triangle_function: Drag blocks from the toolbox into here that
-          draw a triangle
-        edit_add_parameter: Click edit to add a parameter in your function
-        add_and_drag_parameter: Write in the name of your parameter here, click add,
-          and then drag it into your function definition
-        fill_in_actor: Fill in the ??? with numbers that correspond to each actor
-          (1, 2, and 3)
-        repeat: Put blocks inside the loop to repeat commands
-        if_bee_nectar: Use the "if" block to decide if the bee should get nectar
-        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower,
-          and makes honey if it's not a flower
-        repeat_full_circle: Enter in the number of times the zombie has to move to
-          make a full circle
-        place_length_variable: Drag the length variable here to replace the question
-          marks
-        arrows_move_actor: Use the arrows to move the actor
-        right_arrow_fireball: Use the right arrow to shoot fireballs
-        name_function: Write the name of your function here
+        write_draw_triangle_function: Arrossega blocs de la caixa d'eines fins aquí
+          que dibuixin un triangle
+        edit_add_parameter: Fes clic a Edita per afegir un paràmetre a la funció
+        add_and_drag_parameter: Escriu el nom del teu paràmetre aquí, fes clic a Afegeix
+          i llavors arrossega-ho a la teva definició de funció
+        fill_in_actor: Omple els ??? amb números que corresponen a cada actor (1,
+          2 i 3)
+        repeat: Posa els blocs dins del bucle per repetir les ordres
+        if_bee_nectar: Utilitzar el bloc "si" per decidir si l'abella ha d'obtenir
+          nèctar
+        if_else_bee: Utilitzar el bloc "si/en cas contrari" per tal que l'abella arriba
+          nèctar d'una flor, i fagi mel si no és una flor
+        repeat_full_circle: Introdueix el nombre de vegades que el zombie ha de moures
+          fer un cercle complet
+        place_length_variable: Arrossega la variable de longitud aquí per substituir
+          els interrogants
+        arrows_move_actor: Utilitza les fletxes per moure l'actor
+        right_arrow_fireball: Utilitza la fletxa dreta per disparar boles de foc
+        name_function: Escriu el nom de la teva funció aquí

@@ -563,12 +563,13 @@
     playlab_repeat_forever:
       1:
         image: notes/playlab_repeat_forever_1.png
-        text: This is the "repeat forever" block. Anything inside this block will
-          happen forever in the game.
+        text: Ez az "ismételd mindig" blokk. Minden ezen a blokkon belül örökké ismétlődni
+          fog a játék ideje alatt.
       2:
         image: notes/playlab_repeat_forever_2.png
-        text: If we want an actor to do something repeatedly, without the player having
-          to do anything, we'll put those blocks inside the "repeat forever" block.
+        text: Ha azt akarjuk, hogy egy művész valamit többször, a játékos beavatkozása
+          nélkül csináljon meg, a végrehajtandó blokkokat berakjuk az "ismételd mindig"
+          blokkba.
       3:
         image: notes/playlab_repeat_forever_3.png
         text: Ebben a feladványban a célunk, hogy segítünk a varázslónak felvigyázni

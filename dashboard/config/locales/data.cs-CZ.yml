@@ -122,8 +122,8 @@
     level:
       instructions:
         maze_2_2: 'Pomůžete mi chytit zlobivý prase? Poskládejte dohromady několik
-          bloků "vpřed" a stiskněte tlačítko "Spustit", abyste mi pomohli dostat se
-          tam. '
+          bloků "posunout vpřed" a stiskněte tlačítko "Spustit", abyste mi pomohli
+          dostat se tam. '
         maze_2_1: To prase mi pije krev. Pomoz mi ho najít!
         maze_2_2_5: Najdi cestu a veď mě k tomu pošetilému praseti. Vyhni se TNT,
           nebo bude létat peří!
@@ -187,9 +187,8 @@
           tloušťku". Bav se!'
         turtle_4_1: 'Dokážeš nakreslit trojúhelník (všechny strany 100 pixelů) pouze
           pomocí 3 bloků? Tip: použij blok "opakovat".'
-        turtle_4_2: 'Zkus přidat jeden blok, aby jsi dokončil/a tento rébus. Tip:
-          postarali jsme se o bloky, které nakreslí 2 identické trojúhelníky, budeš
-          mezi ně muset vložit "otočit" a rozhodnout, o kolik se otočit.'
+        turtle_4_2: Přidej blok "otočit vpravo o 90 stupňů" někam doprostřed stávajícího
+          programu tak, aby nakreslil tyto trojúhelníky.
         turtle_4_3: Dobře, tady je kód, který jsi napsal/a pro nakreslení jednoho
           trojúhelníku. Můžeš přidat blok "opakovat", aby jsi vytvořil/a pěknou květinu?
         turtle_4_4: 'Zde je stejný kód jako v předešlém rébusu, ale s otočením pouhých
@@ -755,7 +754,7 @@
         playlab_repeat_forever: Play Lab Repeat Forever
     callout:
       text:
-        drag_blocks: Přetáhněte blok "posun vpřed" pod ten druhý blok
+        drag_blocks: Přetáhni blok "posunout vpřed" pod ten druhý blok
         run: Stisknutím tlačítka "Spustit" vyzkoušíš svůj program
         watch_again: Klikněte sem, pokud chcete vidět video znova
         gray_block_explanation: Bloky, které jsou šedé, nejde smazat, ani je přesunout
@@ -769,8 +768,8 @@
           bloku pro povolení herce pro tento příběh
         studio_say_text: Zadejte, co chcete, aby váš herec řekl do těchtu uvozovek
         jigsaw_click: Klepněte na tento blok!
-        move_elsa_forward: Přetáhněte blok "Posunout vpřed" a umístěte ho pod blok
-          "Při spuštění", aby se Elsa posunula vpřed
+        move_elsa_forward: Přetáhni blok "Posunout vpřed" a umístěte ho pod blok "Při
+          spuštění", aby se Elsa posunula vpřed
         turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
           determines how much Elsa turns
         replace_questions: Use the drop-down to replace "???" with a number
