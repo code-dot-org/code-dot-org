@@ -32,7 +32,7 @@ Code.org is creating a complete curriculum consisting of daily lesson plans, vid
 
 Several documents describe the overarching themes and direction of the course.
 
-- A [one-pager](/files/CSPcurriculumflyer.pdf) describing Code.org's CSP curriculum project, rationale, and features from the original team of authors in 2013.
+- A [one-pager](/files/CSPCurriculumFlyer.pdf) describing Code.org's CSP curriculum project, rationale, and features from the original team of authors in 2013.
 - A [visual explanation](/files/CSPCurriculumMap.png) of Code.org's CSP curriculum units and overarching themes.  
 - A longer [overview](/files/CSPCurriculumOverview.pdf) of Code.org's CSP curriculum.
 

@@ -2,8 +2,8 @@
 # A Script has one or more Levels, and a Level can belong to one or more Scripts
 class ScriptLevel < ActiveRecord::Base
   belongs_to :level
-  belongs_to :script
-  belongs_to :stage
+  belongs_to :script, inverse_of: :script_levels
+  belongs_to :stage, inverse_of: :script_levels
   acts_as_list scope: :stage
 
   NEXT = 'next'
@@ -31,7 +31,16 @@ class ScriptLevel < ActiveRecord::Base
     valid_progression_level? ? self : next_progression_level
   end
 
+  def cached_valid_progression_level?
+    cached_script = Script.get_from_cache(script_id)
+    cached_script_level = cached_script.script_levels.to_a.find{|sl| sl.id == self.id}
+    return false if cached_script_level.level.unplugged?
+    return false if cached_script_level.stage && cached_script_level.stage.unplugged?
+    true
+  end
+
   def valid_progression_level?
+    return cached_valid_progression_level? if Script.should_be_cached?(script_id)
     return false if level.unplugged?
     return false if stage && stage.unplugged?
     true
@@ -103,7 +112,7 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def self.cache_find(id)
-    @@script_level_map ||= ScriptLevel.includes(:level, :script).index_by(&:id)
+    @@script_level_map ||= ScriptLevel.includes([{level: [:game, :concepts]}, :script]).index_by(&:id)
     @@script_level_map[id]
   end
 
