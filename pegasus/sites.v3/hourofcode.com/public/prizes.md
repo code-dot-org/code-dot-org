@@ -46,7 +46,7 @@ One lucky school in ***every*** U.S. state (+ Washington D.C.) won $10,000 worth
 7:30 AM PST - [Cory Booker](http://www.youtube.com/watch?v=wD0Heuvv87I) <br />
 10:00 AM PST - [JR Hildebrand](http://www.youtube.com/watch?v=DfhAdnosy58) <br />
 11:00 AM PST - [Clara Shih](http://www.youtube.com/watch?v=2p7uhb1qulA) <br />
-12:00 PM PST - [Jessica Alba](http://www.youtube.com/watch?v=Kxm7PK-iS3c) <br />
+12:00 PM PST - [Jessica Alba](http://youtu.be/m4oEbAQbWCE) <br />
 
 **THURSDAY**, December 11 <br />
 5:30 AM PST - [Karlie Kloss](http://www.youtube.com/watch?v=6SzsRGTmjy0) <br />
