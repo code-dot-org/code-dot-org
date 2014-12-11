@@ -273,7 +273,7 @@ Calc.execute = function() {
   }
 
   // todo - should this be using ResultType.* instead?
-  appState.result = !Calc.expressions.user.failedExpectation(true);
+  appState.result = Calc.expressions.user.equals(Calc.expressions.target);
   appState.testResults = BlocklyApps.getTestResults(appState.result);
 
   // equivalence means the expressions are the same if we ignore the ordering
@@ -303,10 +303,14 @@ Calc.execute = function() {
   };
 
   BlocklyApps.report(reportData);
-  appState.animating = true;
 
+  appState.animating = true;
   window.setTimeout(function () {
-    Calc.step(false);
+    if (appState.result) {
+      Calc.step(false);
+    } else {
+      stopAnimatingAndDisplayFeedback();
+    }
   }, 1000);
 };
 

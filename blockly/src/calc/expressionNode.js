@@ -45,9 +45,6 @@ ExpressionNode.ValueType = ValueType;
 // todo - get rid of
 ExpressionNode.prototype.applyExpectation = function () {
 };
-ExpressionNode.prototype.failedExpectation = function () {
-  return false;
-};
 
 /**
  * What type of expression node is this?
@@ -124,6 +121,23 @@ ExpressionNode.prototype.evaluate = function () {
       throw new Error('Unknown operator: ' + this.value);
     }
 };
+
+// todo - rename/implement properly
+// todo - unit test
+ExpressionNode.prototype.equals = function (other) {
+  if (this.value !== other.value ||
+      this.children.length !== other.children.length) {
+    return false;
+  }
+
+  for (var i = 0; i < this.children.length; i++) {
+    if (!this.children[i].equals(other.children[i])) {
+      return false;
+    }
+  }
+  return true;
+};
+
 
 // todo (brent) - it's possible that we never actually have to evaluate expressions
 // that have functions/variables
@@ -269,6 +283,9 @@ ExpressionNode.prototype.getTokenList = function (expected) {
  * Do the two nodes differ only in argument order.
  */
 ExpressionNode.prototype.isEquivalent = function (target) {
+  return false;
+  // todo
+
   if (this.val !== target.val) {
     return false;
   }
