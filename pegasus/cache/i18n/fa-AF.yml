@@ -587,11 +587,10 @@
     زوکربرگ، پرندگان عصبانی و گیاهان مقابل زامبی ها. در این آموزش حلقه های تکراری،
     شرطها و الگریتمهای ابتدایی را یاد بگیرید. این آموزش در 34 زبان مختلف در دسترس
     است.
-  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
+  thinkersmithspanish_longdescription: با استفاده از "واژگان رباتی" از پیش تعیین شده
+    دانش آموزان خواهند آموخت چگونه برای انجام کارهای مشخص یکدیگر را هدایت کنند بدون
+    این که ابتدا راجع به آن ها بحث کنند. این درس به بچه ها ارتباط بین نماد ها و کار
+    ها را می آموزد، همان طور که مهارت خیلی با ارزش رفع عیب را می آموزد.
   khan_longdescription: درحالی که با کدی که نوشته اید نقاشی های با مزه میکشید، اصول
     اولیه برنامه نویسی جاوا اسکریپت را یاد بگیرید. این کار را به تنهایی یا با کمک
     همکلاسی هایتان انجام دهید!
@@ -616,24 +615,28 @@
     خود را با استفاده از فیزیک واقعی کنید. کد را به عنوان بلوک ها ی بصری یا جاوا اسکریپت
     ببینید. بازی های خود را روی آی پد ها یا تبلت های اندروید با خود ببرید. بیش از
     12 فعالیت جالب برای انتخاب!
-  scratch_longdescription: With Scratch, you can code your own interactive games,
-    stories, animations, and more. In this activity, you'll create an interactive
-    holiday card or game that you can share with friends and family.
-  lightbot_longdescription: Guide Lightbot to light up all the blue tiles! Lightbot
-    is a puzzle game that uses programming game mechanics to let players gain a practical
-    understanding of basic coding. Learn to sequence instructions, write procedures,
-    and utilize loops to solve levels. Ideal for all ages.
-  thinkersmith_longdescription: Using a pre-defined "Robot Vocabulary" students will
-    figure out how to guide each other to accomplish specific tasks without discussing
-    them first. This lesson teaches children the connection between symbols and actions,
-    as well as the invaluable skill of debugging. "My Robotic Friends" works best
-    as a group activity and includes a teacher workbook for classroom use.
-  condcards_longdescription: Learn about algorithms and conditional statements in
-    this "unplugged" activity using a deck of cards. Students do this activity in
-    teams, and need one deck of cards per team.
-  lightbotintl_longdescription: Learn core programming logic, starting from super-basic
-    programming, for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence
-    commands, identify patterns, use procedures, and utilize loops!
+  scratch_longdescription: با اسکرچ، شما می توانید بازی های تعاملی، داستان ها، انیمیشن
+    های &mdash; خودتان را بسازید و آن ها را با دوستانتان به اشتراک بگذارید. با انیمیشنی
+    کردن نامتان، ساختن یک کارت پستال برای تعطیلات، یا درست کردن یک بازی پینگ پنگ دو
+    بعدی شروع کنید.
+  lightbot_longdescription: ربات لامپی را هدایت کنید تا تمام کاشی های آبی را روشن
+    کند! ربات لامپی یک بازی معمایی است که از مکانیک برنامه نویسی بازی استفاده می کند
+    تا به بازی کنان اجازه دهد یک فهم عملی از کد نویسی ابتدایی بدست آورند. یاد بگیرید
+    که دستورالعمل ها را بخش بخش کنید، تابع بنویسید، و حلقه ها را برای حل کردن سطوح
+    بهینه کنید. ایده آل برای تمام سنین.
+  thinkersmith_longdescription: با استفاده از "واژگان رباتی" از پیش تعیین شده دانش
+    آموزان خواهند آموخت چگونه برای انجام کارهای مشخص یکدیگر را هدایت کنند بدون این
+    که ابتدا راجع به آن ها بحث کنند. این درس به بچه ها ارتباط بین نماد ها و کار ها
+    را می آموزد، همان طور که مهارت خیلی با ارزش رفع عیب را می آموزد. "دوستان رباتی
+    من" برای فعایت گروهی بهترین عملکرد را دارد و یک کتاب کار آموزگار برای استفاده
+    ی کلاسی دارد.
+  condcards_longdescription: درباره ی الگوریتم ها و جملات شرطی در این فعالیت "بدون
+    اتصال" با استفاده از یک دسته کارت بیاموزید. دانش آموزان این فعالیت را در گروه
+    ها انجام می دهند، و به یک دسته کارت در هر گروه نیاز دارند.
+  lightbotintl_longdescription: منطق برنامه نویسی هسته ای را بیاموزید، که از برنامه
+    نویسی فوق ابتدایی، برای سنین بالای 4 سال، روی آی او اس یا اندروید (یا مرورگر وب)
+    شروع می شود. یاد بگیرید چگونه دستورات را بخش بخش کنید، الگو ها را شناسایی کنید،
+    از تابع ها استفاده کنید، و حلقه ها را بهینه کنید!
   codehs_longdescription: Giving commands to a computer, which is what programming
     is all about, is just like giving commands to a dog. Learn how to code with Karel
     the Dog&mdash;a fun, accessible, and visual introduction to programming that teaches
@@ -896,15 +899,14 @@
     stories and math art right away. It promotes progressive learning. As kids learn
     fundamentals, Tynker introduces more advanced concepts including syntax driven
     programming.
-  scratch_beyond_longdescription: With Scratch, you can program your own interactive
-    stories, games, and animations &mdash; and share your creations with others in
-    the online community. Scratch helps young people learn to think creatively, reason
-    systematically, and work collaboratively &mdash; essential skills for life in
-    the 21st century. Scratch is a project of the Lifelong Kindergarten Group at the
-    MIT Media Lab. It is provided free of charge.
-  lightbot_beyond_longdescription: Learn core programming logic, starting from super-basic
-    programming, for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence
-    commands, identify patterns, use procedures, and utilize loops!
+  scratch_beyond_longdescription: با اسکرچ، شما می توانید بازی های تعاملی، داستان
+    ها، انیمیشن های &mdash; خودتان را بسازید و آن ها را با دوستانتان به اشتراک بگذارید.
+    با انیمیشنی کردن نامتان، ساختن یک کارت پستال برای تعطیلات، یا درست کردن یک بازی
+    پینگ پنگ دو بعدی شروع کنید.
+  lightbot_beyond_longdescription: منطق برنامه نویسی هسته ای را بیاموزید، که از برنامه
+    نویسی فوق ابتدایی، برای سنین بالای 4 سال، روی آی او اس یا اندروید (یا مرورگر وب)
+    شروع می شود. یاد بگیرید چگونه دستورات را بخش بخش کنید، الگو ها را شناسایی کنید،
+    از تابع ها استفاده کنید، و حلقه ها را بهینه کنید!
   codecademy_beyond_longdescription: Codecademy is an interactive, student-guided
     introduction to the basics of CS through JavaScript that's used by tens of millions
     of students around the world. We've prepared a no-hassle Hour of Code experience

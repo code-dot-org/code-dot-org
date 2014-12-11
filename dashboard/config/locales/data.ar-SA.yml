@@ -438,9 +438,9 @@
           ؟
         studio_c2_6: هل يمكنك كتابة برنامج لجعل البطريق يتنقل باستخدام المفاتيح أعلى
           / أسفل / يسار / يمين  لإصابة جميع الأهداف ؟
-        studio_c2_7: قطعة "تكرار إلى الأبد" تسمح لك بتشغيل التعليمات البرمجية بشكل
-          مستمر . هل تستطيع إرفاق القطع لجعل هذا الديناصور يتحرك أعلى و أسفل مراراً
-          و تكراراً ؟
+        studio_c2_7: قطعة "كرّر باستمرار" تسمح لك بتشغيل التعليمات البرمجية بشكل مستمر
+          . هل تستطيع إرفاق القطع لجعل هذا الديناصور يتحرك أعلى و أسفل مراراً و تكراراً
+          ؟
         studio_c2_8: هل يمكنك جعل البطريق يقول "أوتش" و تشغيل صوت "ضرب" عندما يصطدم
           بالديناصور , و ثم القيام بتحريكه باستخدام الأسهم لجعل هذا يحدث ؟
         studio_c2_9: هل يمكنك إضافة قطعة لتسجيل نقطة عندما يصطدم البطريق بالأخطبوط
@@ -474,20 +474,21 @@
         studio_c3_game_7: إنشاء الخاصة بك اللعبة. عند الانتهاء من ذلك، انقر فوق "إنهاء"
           للسماح للأصدقاء تجربة اللعبة الخاصة بك على الهواتف الخاصة بهم.
         studio_playlab_1: البطريق يريد أن يقول "مرحبا"- هل يمكنك مساعدته؟
-        studio_playlab_2: كهف الصبي (الفاعل 1) وفتاة الكهف (الفاعل 2) يودون أن يبادلو
-          التحية "مرحبا" إلى بعضها البعض. هل يمكنك مساعدتهم باستخدام كتلة "يقول" مرتين؟
-        studio_playlab_3: هل يمكنك كتابة برنامج لجعل هذا الكلب يتحرك إلى القط ؟
-        studio_playlab_4: يمكن كتابة برنامج الذي يجعل الكلب التحرك إلى القط، والقط
-          يقول "مرحبا" عندما يصل الكلب له؟
-        studio_playlab_5: هل يمكنك كتابة برنامج لجعل الأخطبوط يقول "مرحبا" عند النقر
-          فوقه ؟
-        studio_playlab_6: هل يمكنك كتابة برنامج لجعل البطريق يتنقل باستخدام المفاتيح
-          أعلى / أسفل / يسار / يمين  لإصابة جميع الأهداف ؟
-        studio_playlab_7: قطعة "تكرار إلى الأبد" تسمح لك بتشغيل التعليمات البرمجية
-          بشكل مستمر . هل تستطيع إرفاق القطع لجعل هذا الديناصور يتحرك أعلى و أسفل
-          مراراً و تكراراً ؟
-        studio_playlab_8: هل يمكنك إضافة قطعة لتسجيل نقطة عندما يصطدم البطريق بالأخطبوط
-          , ومن ثم القيام بتحريكه بالأسهم حتى تسجل ؟
+        studio_playlab_2: طفل الكهوف (الشخصية 1) و بنت الكهوف (الشخصية 2) يودون أن
+          يبادلو التحية "مرحبا" إلى بعضهم البعض. هل يمكنك مساعدتهم باستخدام القطعة
+          "تقول" مرتين؟
+        studio_playlab_3: هل يمكنك مساعدة "لاعبة التنس" الوصول إلى العلم؟
+        studio_playlab_4: هل يمكنك مساعدة "لاعب التنس" (الشخصية 1) الوصول إلى "لاعبة
+          التنس" (الشخصية 2) وإصدار صوت عندما يصلها؟
+        studio_playlab_5: هل يمكنك أن تساعد كائن الفضاء أن يقول "تحياتي يا أبناء الأرض"
+          عندما يتم النقر عليه؟ لا تنسى أن تنقر عليه بعد أن تقوم بالنقر على زر التشغيل
+        studio_playlab_6: يمكن أن تساعد هذه الساحرة التحرك في جميع الإتجاهات باستخدام
+          المفاتيح سهم لأعلى/أسفل/يمين/يسار للحصول على جميع الكرات النارية السحرية؟
+        studio_playlab_7: القطعة "كرر باستمرار" تسمح لك بتشغيل التعليمات البرمجية
+          بشكل مستمر. هل يمكنك إضافة قطع داخل تلك القطعة لمساعدة الساحر التحرك يميناً
+          ويساراً مرارا وتكرارا؟
+        studio_playlab_8: هل يمكنك إضافة قطعة برمجية لحساب النقاط  و قطعة أخرى لتشغيل
+          صوت عندما يلمس وحيد القرن الساحر، ومن ثم ينقله بالأسهم حتى يتحصل على النقاط؟
         studio_playlab_9: هل يمكنك إضافة قطع لتغيير الخلفية و سرعة البطريق , ومن ثم
           القيام بتحريكه بالأسهم حتى تسجل ؟
         studio_playlab_10: إنشاء الخاصة بك اللعبة. عند الانتهاء من ذلك، انقر فوق "إنهاء"
@@ -709,12 +710,12 @@
         C3_crowdsourcing: التعهيد الجماعي
         C3_functional_suncatchers: سونكاتشيرس الوظيفية
         C3_songwriting_with_parameters: تأليف الأغاني مع المعلمات
-        C4_intro: Introduction
+        C4_intro: مقدمة
         C4_bee_conditional: النحل الشرطية
-        C4_variables_artist: Variables - Artist
+        C4_variables_artist: المتغيرات-الفنان
         C4_variables_playlab: Variables - Play Lab
         C4_for_loops: For Loops
-        C4_math_artist: Programming the Artist with Math
+        C4_math_artist: برمجة الفنان مع الرياضيات
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
         C4_conditionals: الجمل الشرطية
@@ -724,8 +725,8 @@
         C4_unplugged_forloops: For Loops
         C4_unplugged_parameters: Songwriting with Parameters
         C4_unplugged_binary: Binary
-        frozen_intro: Hour of Code Intro
-        frozen_loops: Introduction to Loops
+        frozen_intro: تفديم ساعة البرمجة
+        frozen_loops: مقدمة للحلقات
         frozen_functions: Introduction to Functions
         playlab_intro: Introduction to Play Lab
         playlab_events: Play Lab Events
@@ -783,7 +784,7 @@
         frozen_snowflake_branch: إستخدم قطعة "إنشاء فرع رقاقة الثلج"
         frozen_create_square: ركّب المزيد من القطع لإنشاء دائرة
         playlab_drag_say: Drag the "say" block here and type "hello"
-        playlab_use_twice: Use this block twice and remember to change the actor number
+        playlab_use_twice: إستخدم هذه القطعة مرتين، وتذكر تغيير عدد الشخصيات
         playlab_move_girl: Use the "move right" block to move Tennis Girl
         playlab_play_sound: Add "play sound" block here
         playlab_arrow_keys: Remember to use these to move the witch after clicking

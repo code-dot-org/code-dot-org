@@ -507,24 +507,26 @@
           af pingvinen, og derefter flytte ham med pilene indtil du scorer?
         studio_c3_game_7: Oprette dit eget spil. Når du er færdig, skal du klikke
           på Udfør for at lade venner prøve dit spil på deres mobiler.
-        studio_playlab_1: Kan du få denne hund sige "Hej verden!"?
-        studio_playlab_2: Kan du få hunden til at sige noget, og derefter få katten
-          sige noget bagefter?
-        studio_playlab_3: Kan du skrive et program til at få hunden flyttet over til
-          katten?
-        studio_playlab_4: Kan du skrive et program, der får hunden flyttet til katten,
-          og få katten sige "Hej" Når hunden når ham?
-        studio_playlab_5: Kan du skrive et program til at få blæksprutten til at sige
-          "Hej" når det klikkes på den?
-        studio_playlab_6: Kan du skrive et program til at få denne pingvin til at
-          flytte rundt med tasterne op / ned / venstre / højre og ramme alle mål?
-        studio_playlab_7: '"Gentag for evigt" blokken tillader dig at køre koden for
-          altid. Kan du sætte blokke for at flytte denne dinosaur op og ned flere
-          gange?'
-        studio_playlab_8: Kan du tilføje en blok for at score et point når pingvin
-          løber ind i blæksprutten, og derefter flytte ham med pilene indtil du scorer?
-        studio_playlab_9: Kan du tilføje blokke til at ændre baggrunden og hastigheden
-          af pingvinen, og derefter flytte ham med pilene indtil du scorer?
+        studio_playlab_1: Pingvinen vil gerne sige "Hej" - kan du hjælpe den?
+        studio_playlab_2: Huledrengen (figur 1) og Hulepigen (figur 2) vil gerne sige
+          "hej" til hinanden. Kan du hjælpe dem ved at bruge "sig"-blokken to gange?
+        studio_playlab_3: Kan du hjælpe Tennis-pigen med at komme hen til flaget?
+        studio_playlab_4: Kan du hjælpe Tennis-drengen (figur1) med at komme hen til
+          Tennis-pigen (figur2) og afspille en lyd, når han er kommet derhen?
+        studio_playlab_5: Kan du hjælpe Rumrobotten med at sige "Vær hilset, jordboere"
+          når man klikker på den? Glem ikke at klikke på den, efter du har valgt "Kør"
+        studio_playlab_6: Kan du hjælpe Heksen med at flytte rundt med piletasterne
+          (op/ned/højre/venstre) så hun får fat i alle de magiske ildkugler?
+        studio_playlab_7: '"for evigt"-blokken kan du bruge til kode som skal køre
+          hele tiden. Kan du knytte blokke til den, som får Troldmanden til at bevæge
+          sig fra venstre til højre igen og igen?'
+        studio_playlab_8: Kan du tilføje en blok for at score et point, og en blok
+          som afspiller en lyd når Enhjørningen løber ind i Troldmanden, og så flytte
+          ham med piletasterne til du får et point?
+        studio_playlab_9: Sæt baggrunden for denne invasion af rumvæsener, og hjælp
+          Rumrobotten med at komme hurtigere hen til rumvæsenerne ved at ændre hans
+          hastighed. Flyt ham så med piletasterne for at komme hen til Rumrobotten
+          og advare alle andre
         studio_playlab_10: Oprette dit eget spil. Når du er færdig, skal du klikke
           på Udfør for at lade venner prøve dit spil på deres mobiler.
         studio_full_sandbox: Oprette dit eget spil. Når du er færdig, skal du klikke
@@ -642,43 +644,45 @@
           løse en mere kompleks labyrint? Hvis du gør det rigtigt, kan jeg gå nogen
           snoede veje uanset længden. Skynd dig! Isen smelter!
       Standalone_Artist_1:
-        instructions: Welcome to Artist! First off, let's try to make a simple square
-          using the turn right block and move forward block. Each side should be 100
-          pixels long.
+        instructions: Velkommen til Artist! Lad os starte med at lave en enkel firkant
+          ved at bruge "drej til højre"-blokken og "flyt fremad"-blokken. Hver side
+          skal være 100 pixel lang.
       Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel
-          long sides.
+        instructions: Tegn denne diamant med 120 og 60 graders vinkler og 150 pixel
+          lange sider.
       Standalone_Artist_3:
-        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree
-          turns?
+        instructions: Kan du tegne denne sekskant med 100 pixel lange sider og 60
+          graders drejninger?
       Standalone_Artist_4:
-        instructions: Now you've got a new block to play with, the loop. This will
-          repeat a set of commands. What happens if you loop these commands 6 times?
+        instructions: Nu har du fået en ny blok at lege med, "gentag". Den vil gentage
+          et sæt af kommandoer. Hvad sker der hvis du "gentag"-er disse kommandoer
+          6 gange?
       Standalone_Artist_5:
-        instructions: How many times do you need to loop this diamond to draw the
-          flower?
+        instructions: Hvor mange gange skal du gentage denne diamant for at tegne
+          blomsten?
       Standalone_Artist_5.5:
-        instructions: 'Notice how we simplified the diamond code by turning it into
-          a loop. You can loop that whole sequence 12 times to draw the flower. Hint:
-          You''ll need to turn 30 degrees after your diamond loop so you don''t keep
-          drawing over the same diamond.'
+        instructions: 'Bemærk hvordan vi forenklede diamantkoden ved at bruge en løkke
+          eller "gentag"-blok. Du kan gentage hele sekvensen 12 gange for at tegne
+          blomsten. Tip: Du skal dreje 30 grader efter din diamant løkke, så du ikke
+          bliver ved med at tegne oveni den samme diamant.'
       Standalone_Artist_6:
-        instructions: 'Loop this hexagon code 6 times to create the design. How many
-          degrees will you need to turn each time? Hint: divide the number of degrees
-          in a circle by the number of times you are looping.'
+        instructions: 'Gentag sekskant-koden seks gang for at tegne mønsteret. Hvor
+          mange grader skal du mon dreje hver gang? Tip: del antallet af grader i
+          en cirkel med det antal gentagelser du udfører.'
       Standalone_Artist_7:
-        instructions: 'A function is another programming tool to help you avoid repeating
-          yourself. This function draws a flower, so you can use it any time you want
-          to draw a flower. Use this and the new jump block to draw these flowers.
-          Hint: The flowers are 150 pixels apart'
+        instructions: 'En funktion er et andet programmeringsværktøj, som kan hjælpe
+          dig med at undgå at gentage dig selv. Denne funktion tegner en blomst, så
+          du kan bruge den hver gang du vil tegne en blomst. Brug denne blok og den
+          nye "hop"-blok til at tegne disse blomster. Tip: Blomsterne er 150 pixels
+          fra hinanden'
       Standalone_Artist_8:
-        instructions: Here's a function called "Draw a shape" that we've programmed
-          to draw hexagons. Run the code to see what it does and then experiment with
-          the function to see what happens. Can you make it draw a pattern of squares,
-          triangles, or octagons?
+        instructions: Her er en funktion kaldet "tegn en figur" som vi har programmeret
+          til at tegne sekskanter. Kør koden for at se, hvad den gør og eksperimenter
+          derefter med funktionen, for at se hvad der sker. Kan du tegne et mønster
+          af kvadrater, trekanter eller ottekanter?
       Standalone_Artist_9:
-        instructions: Now go ahead and make whatever picture you'd like! You've even
-          got an empty function that you can make do whatever you want!
+        instructions: Lav nu præcis det billede du selv har lyst til! Du har endda
+          en tom funktion, som du kan få til at gøre lige hvad du vil!
     video:
       name:
         maze_intro: Labyrint Intro
@@ -749,21 +753,21 @@
         C3_bee_nested_loops: Indlejret Løkker
         C3_bee_debugging: Bi fejlfinding
         C3_bounce: Hoppe
-        C3_playlab_create_game: Spille Lab - Oprette et spil
+        C3_playlab_create_game: Play Lab - Oprette et spil
         C3_computational_thinking: Data-Tænkning
         C3_dice_race: Terning Race
         C3_internet: Internet
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Funktionelle solfangere
         C3_songwriting_with_parameters: Sangskrivning med parametre
-        C4_intro: Introduction
+        C4_intro: Introduktion
         C4_bee_conditional: Bi betingelser
-        C4_variables_artist: Variables - Artist
-        C4_variables_playlab: Variables - Play Lab
+        C4_variables_artist: Variable - Kunstner
+        C4_variables_playlab: Variable - Play Lab
         C4_for_loops: For Loops
-        C4_math_artist: Programming the Artist with Math
-        C4_function_edit: Editing Functions
-        C4_function_create: Creating Functions
+        C4_math_artist: Programmering af Kunstneren med matematik
+        C4_function_edit: Redigering af funktioner
+        C4_function_create: Oprettelse af funktioner
         C4_conditionals: Betingelser
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs
@@ -772,11 +776,11 @@
         C4_unplugged_parameters: Sangskrivning med parametre
         C4_unplugged_binary: Binary
         frozen_intro: Hour of Code Intro
-        frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
-        playlab_intro: Introduction to Play Lab
-        playlab_events: Play Lab Events
-        playlab_repeat_forever: Play Lab Repeat Forever
+        frozen_loops: Introduktion til løkker
+        frozen_functions: Introduktion til funktioner
+        playlab_intro: Introduktion til Play Lab
+        playlab_events: Play Lab begivenheder
+        playlab_repeat_forever: Play Lab gentag for evigt
     callout:
       text:
         drag_blocks: Træk i en "flyt fremad" blok og fastgør den under den anden blok
@@ -793,8 +797,8 @@
           starter"-blokken for at aktivere en spiller for denne historie
         studio_say_text: Skriv hvad du vil have din spiller til at sige i dette citat
         jigsaw_click: Klik på denne blok!
-        move_elsa_forward: Træk en "Flyt fremad" blok og fastgøre den under "Når køre"
-          blokken for at bevæge Elsa fremad
+        move_elsa_forward: Træk i en "flyt fremad"-blok og fastgør den under "når
+          programmet kører"-blokken for at få Elsa til at bevæge sig fremad
         turn_elsa: Brug "Turn"-blokken for at Elsa tænder. Numret i drop-down bestemmer
           hvor meget Elsa drejer
         replace_questions: Brug drop-down til at erstatte "???" med et nummer
@@ -839,22 +843,22 @@
         playlab_drag_say: Træk "sig"-blokken herhen og skriv "Hej"
         playlab_use_twice: Brug denne blok to gange og husk at ændre tallet for figuren
         playlab_move_girl: Use the "move right" block to move Tennis Girl
-        playlab_play_sound: Add "play sound" block here
-        playlab_arrow_keys: Remember to use these to move the witch after clicking
-          on Run
-        playlab_add_move: Add "move" blocks inside this repeat block
-        playlab_add_score: Add score blocks here
-        playlab_add_blocks: Add your blocks here
-        set_variable: Drag a number block here to set your variable
-        place_variable: Drag your variable inside this block
-        bee_for_loop: Drag the largest number of nectar you want the bee to collect
-          here
-        place_counter_variable: Drag your counter variable inside this block
-        function_editor_draw_square: This is your function definition. These blocks
-          run everytime you use the "draw a square" block
-        change_here: Make your change here
-        write_draw_square_function: Drag blocks from the toolbox into here that draw
-          a square
+        playlab_play_sound: Tilføj "afspil lyd"-blok her
+        playlab_arrow_keys: Husk at bruge disse til at flytte heksen efter du klikker
+          på Kør
+        playlab_add_move: Tilføj "flyt"-blokke indeni denne gentag-blok
+        playlab_add_score: Tilføj score blokke her
+        playlab_add_blocks: Tilføj dine blokke her
+        set_variable: Træk en tal-blok hertil for at indstille variablen
+        place_variable: Træk din variabel ind i denne blok
+        bee_for_loop: Træk det største antal nektar du vil have bien til at indsamle
+          hertil
+        place_counter_variable: Træk din tælle-variabel ind i denne blok
+        function_editor_draw_square: Dette er definitionen af din funktion. Disse
+          blokke kører hver gang du bruger"tegn et kvadrat"-blokken
+        change_here: Lav dine ændringer her
+        write_draw_square_function: Træk blokke fra værktøjskassen som tegner et kvadrat
+          hertil
         write_draw_triangle_function: Drag blocks from the toolbox into here that
           draw a triangle
         edit_add_parameter: Click edit to add a parameter in your function
@@ -870,6 +874,6 @@
           make a full circle
         place_length_variable: Drag the length variable here to replace the question
           marks
-        arrows_move_actor: Use the arrows to move the actor
-        right_arrow_fireball: Use the right arrow to shoot fireballs
-        name_function: Write the name of your function here
+        arrows_move_actor: Brug pilene til at flytte figuren
+        right_arrow_fireball: Brug højre pil til at skyde ildkugler
+        name_function: Skriv navnet på din funktion her

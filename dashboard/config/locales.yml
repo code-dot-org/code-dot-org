@@ -293,12 +293,13 @@
   native: "Tiếng Việt"
   debug: true
 
+"zh": "zh-TW"
 "zh-TW":
   english: "Chinese (Traditional)"
   native: "繁體字"
   webfonts: false
 
-"zh-CN":
+"cn":
   english: "Chinese (Simplified)"
   native: "简体字"
   webfonts: false

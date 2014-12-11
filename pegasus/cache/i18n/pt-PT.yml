@@ -273,29 +273,29 @@
     de segredo <b>nenhum</b>.
   dashboard_sections_print_secrets: Em seguida, você pode imprimir uma folha de cartões
     contendo informações de conta para ser distribuído aos alunos individualmente.
-  dashboard_sections_switch_section: 'Switch section:'
+  dashboard_sections_switch_section: 'Seção do Interruptor:'
   dashboard_students_add_student: Adicionar aluno
   dashboard_students_add_students: Adicionar vários estudantes
-  dashboard_students_add_multiple: 'Type or paste the names of your students, one
-    per line:'
-  dashboard_students_new_section: You've created a new section! Now add your students
-    using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
-  dashboard_students_placeholder_name: Student Name
+  dashboard_students_add_multiple: 'Digite ou cole os nomes dos seus alunos, um por
+    linha:'
+  dashboard_students_new_section: Você criou uma nova seção! Agora adicione seus alunos
+    usando os botões <b>Adicionar aluno</b> e <b>adicionar vários estudantes</b> acima.
+  dashboard_students_placeholder_name: Nome do aluno
   dashboard_students_name: Nome
   dashboard_students_age: Idade
   dashboard_students_gender: Género
   dashboard_students_male: Masculino
   dashboard_students_female: Feminino
-  dashboard_students_secret: Secret
+  dashboard_students_secret: Segredo
   dashboard_students_password: palavra-passe
   dashboard_students_username: 'Username: %{student_username}'
-  dashboard_students_email: 'Email: %{student_email}'
-  dashboard_students_completed_levels: Completed Levels
-  dashboard_students_total_lines: Lines of Code
-  dashboard_students_show_secret: Show secret
-  dashboard_students_auto_generated: Auto-generated
-  dashboard_students_reset_secret: Reset secret
-  dashboard_students_reset_password: Reset password
+  dashboard_students_email: 'E-mail: %{student_email}'
+  dashboard_students_completed_levels: Níveis concluídos
+  dashboard_students_total_lines: Linhas de código
+  dashboard_students_show_secret: Mostrar Segredo
+  dashboard_students_auto_generated: Gerado automaticamente
+  dashboard_students_reset_secret: Redefinir o segredo
+  dashboard_students_reset_password: Redefinir palavra-passe
   dashboard_students_share_section: 'Share this section''s sign in page with your
     students:'
   dashboard_students_print_info: Print out cards with your students' login information.
@@ -312,14 +312,14 @@
   dashboard_students_no_email: If your students do not have email addresses, or you
     would like to create accounts for them, change this section's secret type to <b>word</b>
     or <b>picture</b>.
-  dashboard_students_print_page: Print this page
+  dashboard_students_print_page: Imprimir esta página
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Click
     here</a> for our privacy document that can be shared or printed for your students.
-  dashboard_curriculum_overview: K-5 Curriculum Overview
+  dashboard_curriculum_overview: Visão geral do currículo de K-5
   dashboard_view_all_lesson_plans: View all lesson plans
-  dashboard_course1: 'Course 1:'
-  dashboard_course2: 'Course 2:'
+  dashboard_course1: 'Curso 1:'
+  dashboard_course2: 'Curso 2:'
   dashboard_course3: 'Course 3:'
   dashboard_sequence: Seqüência
   dashboard_framework: Framework
@@ -370,21 +370,21 @@
   carousel_heading_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Make your own apps or games
   carousel_heading_university: University courses online
-  carousel_heading_webpages: Learn to make web pages
-  carousel_heading_robots: Learn to program with robots
-  carousel_heading_ide: Platforms popular among teachers
-  educator_notes: Educator Notes
-  more_resources_educators: More resources for teachers and educators
-  participants: participants
-  teachers_notes: Teacher's Notes
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
-  previous: Previous
-  next: Next
-  older_systems: Tutorials that work on older systems
+  carousel_heading_webpages: Aprender a fazer páginas web
+  carousel_heading_robots: Aprender a programar com robôs
+  carousel_heading_ide: Plataformas populares entre os professores
+  educator_notes: Notas do educador
+  more_resources_educators: Mais recursos para professores e educadores
+  participants: participantes
+  teachers_notes: Notas do professor
+  teachers_notes_hoc: 'Professores: Ler notas importante para o educador aqui'
+  previous: Anterior
+  next: Próxima
+  older_systems: Tutoriais que funcionam em sistemas mais antigos
   older_systems_subheading: These should work on older Web browsers. To access all
     tutorials, upgrade to a <a href="http://browsehappy.com/" target="_blank">modern
     Web browser.</a>
-  mobile_devices: Tutorials for mobile devices
+  mobile_devices: Tutoriais para dispositivos móveis
   frozen_name: Code with Anna and Elsa
   codeorg_name: Escreva o seu primeiro programa de computador
   codeintl_name: Escreva o seu primeiro programa de computador

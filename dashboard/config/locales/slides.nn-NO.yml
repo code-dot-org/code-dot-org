@@ -43,8 +43,8 @@
           og trykker "Kjør programmet", flyttes fuglen en plass på labyrinten.
       11:
         image: notes/hoc1_11.jpg
-        text: For må gjøre mer enn én handling, kan du dra mange blokker til arbeidsområdet
-          og sette dem sammen. Fuglen vil utføre kommandoene ovenfra og ned.
+        text: For å gjere meir enn ei handling, kan du dra mange blokker til arbeidsområdet
+          og sette dei saman. Fuglen vil utføre kommandoane frå toppen og nedover.
       12:
         image: notes/hoc1_12.jpg
         text: Hvis du kjører et program og ønsker å fikse det for å prøve på nytt,

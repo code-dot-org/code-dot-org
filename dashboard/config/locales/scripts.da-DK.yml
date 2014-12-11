@@ -119,7 +119,7 @@
             kurser til fleksible løsninger til mere komplekse problemer. Ved slutningen
             af dette kursus oprette studerende interaktive historier og spil de kan
             dele med nogen. Anbefales til 4. -5. klasses elever.
-          'Studio: Create a Game': 'Spille Lab: Oprette et spil'
+          'Studio: Create a Game': 'Play Lab: Opret et spil'
           Maze: Labyrint
           Artist: Kunstner
           'Artist: Functions': 'Kunstner: Funktioner'
@@ -166,12 +166,12 @@
           Booleans: Booleans
           'Play Lab: Booleans': 'Play Lab: Boolske operatorer'
           'Calc: Boolean Operators': 'Calc: Boolean Operatorer'
-          'Play Lab: Boolean Operators': 'Spille Lab: Boolean operatorer'
+          'Play Lab: Boolean Operators': 'Play Lab: Boolske operatorer'
           Conditionals and Piecewise Functions: Konditioner og stykvise funktioner
           'Artist: Conditionals': 'Kunstner: Conditionals'
           Collision Detection and the Distance Formula: Kollisions detektion og afstands
             formlen
-          'Play Lab: Collision Detection': 'Spille Lab: Sammenstød afsløring'
+          'Play Lab: Collision Detection': 'Play Lab: Sammenstød'
           'Unplugged: Ninja Cat and the Coordinate Plane': 'Unplugged: Ninja Cat og
             the Coordinate Plane'
           'Eval: Strings and Images': 'Eval: Strings og Images'
@@ -191,7 +191,7 @@
             og Coordinate Planes'
           'Eval: Boolean Operators': 'Eval: Boolean Operators'
           Blocks to Math: Blokke til matematik
-          'Play Lab: Defining Variables (Big Game)': 'Spille Lab: Definere variabler
+          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Definere variabler
             (Big Game)'
           'Play Lab: Animation (Big Game)': 'Spille Lab: Animation (Big Game)'
           'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
@@ -244,11 +244,11 @@
           title: Kursus 4
           'Algorithms: Tangrams': 'Algoritmer: Tangrams'
           Variables: Variabler
-          'Play Lab: Variables': 'Spille Lab: Variabler'
-          'Play Lab: Functions with Parameters': 'Spille Lab: Funktioner med parametre'
+          'Play Lab: Variables': 'Play Lab: Variable'
+          'Play Lab: Functions with Parameters': 'Play Lab: Funktioner med parametre'
           'Bee: Functions with Parameters': 'Bee: Funktioner med parametre'
           'Artist: For Loops': Kunstner For loops/sløjfer
-          'Play Lab: For Loops': 'Spille Lab: Til sløjfer'
+          'Play Lab: For Loops': 'Play Lab: For løkker'
           'Artist: Functions': 'Kunstner: Funktioner'
           'Artist: Functions with Paraqmeters': 'Kunstner: funktioner med parametre'
           'Unplugged: Tangrams': 'Unplugged: Tangrammer'
@@ -315,12 +315,12 @@
           Variables: Variabler
           For Loops: For Loops
         potus:
-          title: special
-          description_short: special
-          description: special
-          Special: Special
+          title: speciel
+          description_short: speciel
+          description: speciel
+          Special: Speciel
         special:
-          title: special
-          description_short: special
-          description: special
-          Special: Special
+          title: speciel
+          description_short: speciel
+          description: speciel
+          Special: Speciel

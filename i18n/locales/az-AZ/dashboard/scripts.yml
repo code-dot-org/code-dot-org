@@ -24,7 +24,7 @@ az:
           Multi & Match: 'Multi & Match'
           K-1 Flappy: K-1 Flappy
           Flappy non blockly: Flappy non blockly
-          title: Course 1
+          title: Kurs 1
           Artist 2: Artist 2
           Happy Maps: Happy Maps
           Move it, Move it: Move it, Move it
@@ -42,7 +42,7 @@ az:
           "Studio: Create a Story": 'Play Lab: Create a Story'
           "Artist: Loops": 'Artist: Loops'
           description_audience: Ages 4+ (pre-readers)
-          description_short: Course 1 is designed for early readers.
+          description_short: Kurs 1 oxumağı təzə öyrənənlər üçü hazırlarnıb.
         course2:
           The Maze: Labirint
           Suzi: Suzi
@@ -53,7 +53,7 @@ az:
           Artist Loops: Artist Loops
           Bee Conditionals: Bee Conditionals
           Flappy: Flappy
-          title: Course 2
+          title: Kurs 2
           Bee Loops: Bee Loops
           Artist Functions: Artist Functions
           The Artist Debugging: The Artist Debugging
@@ -132,7 +132,7 @@ az:
           "Artist: Patterns": 'Artist: Patterns'
           Songwriting: Songwriting
           description_audience: Ages 8+ (after Course 2)
-          description_short: Course 3 is a follow-up to Course 2.
+          description_short: Kurs 3 Kurs 2-nin davamıdır.
         msm:
           title: Middle School Math
           description: Private work in progress for Middle School Math.

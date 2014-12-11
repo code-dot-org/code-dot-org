@@ -2,8 +2,8 @@
 class Script < ActiveRecord::Base
   include Seeded
   has_many :levels, through: :script_levels
-  has_many :script_levels, -> { order('chapter ASC') }, dependent: :destroy # all script levels, even those w/ stages, are ordered by chapter, see Script#add_script
-  has_many :stages, -> { order('position ASC') }, dependent: :destroy
+  has_many :script_levels, -> { order('chapter ASC') }, dependent: :destroy, inverse_of: :script # all script levels, even those w/ stages, are ordered by chapter, see Script#add_script
+  has_many :stages, -> { order('position ASC') }, dependent: :destroy, inverse_of: :script
   belongs_to :wrapup_video, foreign_key: 'wrapup_video_id', class_name: 'Video'
   belongs_to :user
   validates :name, presence: true, uniqueness: { case_sensitive: false}
@@ -56,6 +56,10 @@ class Script < ActiveRecord::Base
         self.equal?(Script.hoc_script) ||
         self.equal?(Script.flappy_script) ||
         self.equal?(Script.playlab_script)
+  end
+
+  def Script.should_be_cached?(id)
+    Script.script_cache.has_key?(id.to_s)
   end
 
   def should_be_cached?

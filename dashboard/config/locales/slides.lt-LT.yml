@@ -44,9 +44,8 @@
           pajudės per vieną laukelį į priekį.
       11:
         image: notes/hoc1_11.jpg
-        text: Kad paukštis padarytų daugiau veiksmų, reikia sulipdyti su blokelius
-          baltame darbo lauke. Paukštis atliks visas sulipdytas komandas iš eilės
-          vieną po kitos.
+        text: Norėdami, kad paukštis atliktų kelis veiksmus, sujunkite blokelius vieną
+          paskui kitą.
       12:
         image: notes/hoc1_12.jpg
         text: Jeigu jau paleidote programą vieną kartą, galite ją pataisyti ir paspausti
@@ -326,7 +325,7 @@
       3:
         image: notes/stage15_3.jpg
         text: Mes galėtume viską sudėlioti rankomis (kas užimtų labai daug laiko)
-          arba tiesiog panaudoti funkciją su parametrais.
+          arba tiesiog panaudoti funkciją su gaunamais duomenimis.
       4:
         image: notes/stage15_4.jpg
         text: Kad funkcijai uždėtumėme parametrą, reikia nuspausti ant mėlynos žvaigždės
@@ -387,8 +386,8 @@
           code to join Anna and Elsa as they explore the magic and beauty of ice.
       2:
         image: notes/frozen1_2.jpg
-        text: You'll create snowflakes and patterns as you ice skate and make a winter
-          wonderland that you can then share with your friends.
+        text: Čiuoždami galėsite sukurti snaigių raštus ir šiomis žiemos grožybėmis
+          pasidalinti su draugais.
       3:
         image: notes/frozen1_3.jpg
         text: In the next hour, you're going to learn the basics of how to code. Traditional

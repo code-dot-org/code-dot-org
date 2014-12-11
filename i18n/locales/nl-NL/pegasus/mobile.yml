@@ -115,7 +115,7 @@ nl-NL:
   studiobar_teacher_body: Introduceer Code Studio in je klaslokaal
   studiobar_frozen_title: Een Uur Code
   studiobar_frozen_body: Maak een winterlandschap met Anna en Elsa
-  studiobar_donate_title: Doneren
+  studiobar_donate_title: Doneer
   studiobar_donate_body: Eén kind leert voor elke euro die u doneert
   contact_form_topic_student: Ik ben een leerling
   contact_form_topic_parent: Ik ben een ouder
@@ -485,7 +485,7 @@ nl-NL:
   kodableunplugged_shortdescription: Een leuke oefening zonder apparaten
   projguts_shortdescription: Probeer modellering en simulatie via Blad/Steen/Schaar
   hourofcode_shortdescription: Tijdelijke aanduiding voor nieuwe code.org/hoc
-  frozen_shortdescription: Vervoeg Anna en Elsa op hun speurtocht naar de magie en schoonheid van ijs door middel van programma-code.
+  frozen_shortdescription: Ga met Anna en Elsa mee op hun speurtocht naar de magie en schoonheid van ijs door middel van programma-code.
   playlab_shortdescription: Maak een verhaal of een spel met Speel Lab!
   codeorg_longdescription: Leer de basis concepten van de informatica met drag en drop programmeren. Dit is een spelvormig zelfgestuurde cursus met , Angry Birds, Plants vs Zombies en video lezingen door onder andere Bill Gates, Mark Zuckerberg. Leer repeat-loops, condities en basis algoritmes. Beschikbaar in 34 talen.
   codeintl_longdescription: Leer de basis concepten van de informatica met drag en drop programmeren. Dit is een spelvormig zelfgestuurde cursus met , Angry Birds, Plants vs Zombies en video lezingen door onder andere Bill Gates, Mark Zuckerberg. Leer repeat-loops, condities en basis algoritmes. Beschikbaar in 34 talen.
@@ -530,7 +530,7 @@ nl-NL:
   projguts_longdescription: 'Deze "unplugged" activiteit helpt leerlinge hoe modellering en simulatie werkt door groepjes leerlingen verschillende versies van het spel Blad/Steen/Schaar te laten spelen en de resultaten te belikken als verschillende modellering experimenten.'
   hourofcode_longdescription: Tijdelijke aanduiding voor nieuwe code.org/hoc
   frozen_longdescription: laten we code gebruiken om Anna en Elsa te helpen bij het ontdekken van de magie en schoonheid van ijs. Je zal leren sneeuwvlokken en patronen te maken terwijl je schaatst en een een mooi winterlandschap maken dat je kan delen met je vrienden!
-  playlab_longdescription: Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!
+  playlab_longdescription: Maak een verhaal of speel een spel met Play Lab! Laat dieren, piraten, zombies, ninjas en nog veel meer bewegen, geluiden maken, punten scoren en zelfs vuurballen gooien!
   codeorg_beyond_name: Introductie Informatica (brugklas middelbare school)
   khan_beyond_name: Leer computer programmeren
   tynker_beyond_name: Leer thuis programmeren
