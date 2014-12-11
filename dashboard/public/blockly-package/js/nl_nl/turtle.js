@@ -14810,7 +14810,7 @@ exports.emptyBlocksErrorMsg = function(d){return "De \"herhaal\" of \"als\" blok
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Het functie-blok moet andere blokken bevatten om te werken."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "Er moeten blokken staan binnen je functie-definitie. Klik op \"bewerk\" en sleep blokken binnen de groene blok."};
+exports.errorEmptyFunctionBlockModal = function(d){return "Er moeten blokken staan binnen je functie-definitie. Klik op \"bewerk\" en sleep blokken binnen het groene blok."};
 
 exports.errorIncompleteBlockInFunction = function(d){return "Klik \"bewerk\" en zorg ervoor dat je geen blokken mist in je functie-definitie."};
 
@@ -14852,7 +14852,7 @@ exports.missingBlocksErrorMsg = function(d){return "Probeer een of meer van de b
 
 exports.nextLevel = function(d){return "Gefeliciteerd! U voltooide puzzel "+v(d,"puzzleNumber")+"."};
 
-exports.nextLevelTrophies = function(d){return "Gefeliciteerd! U loste puzzel "+v(d,"puzzleNumber")+" op en won "+p(d,"numTrophies",0,"nl",{"one":"een trofee","other":n(d,"numTrophies")+" trofeeën"})+"."};
+exports.nextLevelTrophies = function(d){return "Gefeliciteerd! Je hebt puzzel "+v(d,"puzzleNumber")+" opgelost en je hebt "+p(d,"numTrophies",0,"nl",{"one":"een trofee","other":n(d,"numTrophies")+" trofeeën"})+" gewonnen."};
 
 exports.nextStage = function(d){return "Gefeliciteerd! Je hebt "+v(d,"stageName")+" af."};
 
@@ -14862,7 +14862,7 @@ exports.numBlocksNeeded = function(d){return "Gefeliciteerd! U voltooide puzzel 
 
 exports.numLinesOfCodeWritten = function(d){return "Je schreef zojuist "+p(d,"numLines",0,"nl",{"one":"1 regel","other":n(d,"numLines")+" regels"})+" code!"};
 
-exports.play = function(d){return "spelen"};
+exports.play = function(d){return "afspelen"};
 
 exports.print = function(d){return "Afdrukken"};
 
@@ -14920,7 +14920,7 @@ exports.typeHint = function(d){return "Merk op dat de haakjes en puntkomma's ver
 
 exports.workspaceHeader = function(d){return "Zet je blokken hier in elkaar:"};
 
-exports.workspaceHeaderJavaScript = function(d){return "Typ hier uw JavaScript-code"};
+exports.workspaceHeaderJavaScript = function(d){return "Typ hier jouw JavaScript-code"};
 
 exports.infinity = function(d){return "Oneindig"};
 
@@ -14934,7 +14934,7 @@ exports.watchVideo = function(d){return "Bekijk de video"};
 
 exports.when = function(d){return "wanneer"};
 
-exports.whenRun = function(d){return "begin"};
+exports.whenRun = function(d){return "als gestart"};
 
 exports.tryHOC = function(d){return "Probeer \"Hour of Code\""};
 
@@ -14942,7 +14942,7 @@ exports.signup = function(d){return "Neem deel aan de introductie cursus"};
 
 exports.hintHeader = function(d){return "Een tip:"};
 
-exports.genericFeedback = function(d){return "Kijk waar je uitkwam, en probeer je programma te verbeteren."};
+exports.genericFeedback = function(d){return "Kijk wat er gebeurde, en probeer je programma te verbeteren."};
 
 exports.defaultTwitterText = function(d){return "Kijk wat ik gemaakt heb"};
 

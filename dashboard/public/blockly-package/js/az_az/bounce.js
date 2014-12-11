@@ -12766,9 +12766,9 @@ exports.hintRequest = function(d){return "See hint"};
 
 exports.backToPreviousLevel = function(d){return "Əvvəlki mərhələyə qayıt"};
 
-exports.saveToGallery = function(d){return "Save to your gallery"};
+exports.saveToGallery = function(d){return "Qalereyada yadda saxla"};
 
-exports.savedToGallery = function(d){return "Saved to your gallery!"};
+exports.savedToGallery = function(d){return "Qalereyada yadda saxlandı!"};
 
 exports.shareFailure = function(d){return "Sorry, we can't share this program."};
 

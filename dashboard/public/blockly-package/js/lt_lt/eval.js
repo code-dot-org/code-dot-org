@@ -14595,7 +14595,7 @@ exports.overlayBlockTitle = function(d){return "padėk-aukščiau(viršutinis, a
 
 exports.placeImageBlockTitle = function(d){return "padėk-vaizdą(x, y, vaizdas)"};
 
-exports.offsetBlockTitle = function(d){return "offset (x, y, image)"};
+exports.offsetBlockTitle = function(d){return "poslinkis(x, y, paveiksliukas)"};
 
 exports.rectangleBlockTitle = function(d){return "kvadratas(plotis, aukštis, stilius, spalva)"};
 
@@ -14609,7 +14609,7 @@ exports.squareBlockTitle = function(d){return "kvadratas(dydis, stilius, spalva)
 
 exports.starBlockTitle = function(d){return "žvaigždė(spindulys, stilius, spalva)"};
 
-exports.radialStarBlockTitle = function(d){return "radial-star (points, inner, outer, style, color)"};
+exports.radialStarBlockTitle = function(d){return "žvaigždė(taškai, vidus, išorė, stilius, spalva)"};
 
 exports.stringAppendBlockTitle = function(d){return "sujunk-tekstą(pirmas, antras)"};
 

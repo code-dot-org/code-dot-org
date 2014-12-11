@@ -14824,7 +14824,7 @@ exports.errorUnusedFunction = function(d){return "Du har oprettet en funktion, m
 
 exports.errorQuestionMarksInNumberField = function(d){return "Prøv at erstatte \"???\" med en værdi."};
 
-exports.extraTopBlocks = function(d){return "Du har blokke, som ikke er knyttet til andre. Ville du fastgøre dem  til \"når kører\" blokken?"};
+exports.extraTopBlocks = function(d){return "Du har blokke, som ikke er knyttet til andre. Ville du fastgøre dem  til \"når programmet kører\"-blokken?"};
 
 exports.finalStage = function(d){return "Tillykke! Du har fuldført det sidste trin."};
 
@@ -14934,9 +14934,9 @@ exports.watchVideo = function(d){return "Se denne video"};
 
 exports.when = function(d){return "når"};
 
-exports.whenRun = function(d){return "Når programmet kører"};
+exports.whenRun = function(d){return "når programmet kører"};
 
-exports.tryHOC = function(d){return "Prøv en time af kodeing"};
+exports.tryHOC = function(d){return "Prøv Hour of Code"};
 
 exports.signup = function(d){return "Tilmeld til Introduktion kursus"};
 
@@ -15053,11 +15053,11 @@ exports.lengthParameter = function(d){return "længde"};
 
 exports.loopVariable = function(d){return "tæller"};
 
-exports.moveBackward = function(d){return "Flyt bagud ved"};
+exports.moveBackward = function(d){return "flyt bagud med"};
 
 exports.moveEastTooltip = function(d){return "Flytter markøren øst."};
 
-exports.moveForward = function(d){return "bevæg fremad ved"};
+exports.moveForward = function(d){return "flyt fremad med"};
 
 exports.moveForwardTooltip = function(d){return "Flytter kunstneren fremad."};
 
@@ -15099,9 +15099,9 @@ exports.step = function(d){return "trin"};
 
 exports.tooFewColours = function(d){return "Du skal bruge mindst %1 forskellige farver til dette puslespil. Du brugte kun %2."};
 
-exports.turnLeft = function(d){return "Drej til venstre ved"};
+exports.turnLeft = function(d){return "drej til venstre med"};
 
-exports.turnRight = function(d){return "Drej til højre ved"};
+exports.turnRight = function(d){return "drej til højre med"};
 
 exports.turnRightTooltip = function(d){return "Drejer kunstneren til højre med en angivet vinkel."};
 
