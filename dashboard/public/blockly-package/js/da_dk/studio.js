@@ -21192,7 +21192,7 @@ exports.errorUnusedFunction = function(d){return "Du har oprettet en funktion, m
 
 exports.errorQuestionMarksInNumberField = function(d){return "Prøv at erstatte \"???\" med en værdi."};
 
-exports.extraTopBlocks = function(d){return "Du har blokke, som ikke er knyttet til andre. Ville du fastgøre dem  til \"når kører\" blokken?"};
+exports.extraTopBlocks = function(d){return "Du har blokke, som ikke er knyttet til andre. Ville du fastgøre dem  til \"når programmet kører\"-blokken?"};
 
 exports.finalStage = function(d){return "Tillykke! Du har fuldført det sidste trin."};
 
@@ -21302,9 +21302,9 @@ exports.watchVideo = function(d){return "Se denne video"};
 
 exports.when = function(d){return "når"};
 
-exports.whenRun = function(d){return "Når programmet kører"};
+exports.whenRun = function(d){return "når programmet kører"};
 
-exports.tryHOC = function(d){return "Prøv en time af kodeing"};
+exports.tryHOC = function(d){return "Prøv Hour of Code"};
 
 exports.signup = function(d){return "Tilmeld til Introduktion kursus"};
 
@@ -21403,7 +21403,7 @@ exports.makeProjectileRedHearts = function(d){return "lav røde hjerter"};
 
 exports.makeProjectileTooltip = function(d){return "Lad kuglen, der netop ramte, forsvinde eller hoppe."};
 
-exports.makeYourOwn = function(d){return "Lav din egen Spille-Lab-App"};
+exports.makeYourOwn = function(d){return "Lav din egen Play Lab App"};
 
 exports.moveDirectionDown = function(d){return "ned"};
 

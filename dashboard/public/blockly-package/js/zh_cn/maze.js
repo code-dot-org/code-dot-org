@@ -16682,9 +16682,9 @@ exports.dirS = function(d){return "南"};
 
 exports.dirW = function(d){return "西"};
 
-exports.doCode = function(d){return "做"};
+exports.doCode = function(d){return "执行"};
 
-exports.elseCode = function(d){return "也"};
+exports.elseCode = function(d){return "或者"};
 
 exports.fill = function(d){return "填充1"};
 
