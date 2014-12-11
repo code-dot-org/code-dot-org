@@ -1,0 +1,63 @@
+#blockly {
+  width: 1024px; }
+
+#svgFlappy {
+  overflow: hidden; }
+
+/* 'Look' icon */
+#look > path {
+  display: none;
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-opacity: 0.7; }
+
+/* Sprited icons. */
+.icon21 {
+  height: 21px;
+  width: 21px;
+  background-image: url("/blockly/media/flappy/icons.png"); }
+
+.code {
+  background-position: -21px 0px; }
+
+.link {
+  background-position: 0px 0px; }
+
+.run {
+  background-position: 0px -21px;
+  margin-right: 3px; }
+
+.stop {
+  background-position: -21px -21px;
+  margin-right: 3px; }
+
+.left-btn {
+  background-position: -21px -42px;
+  margin-right: 3px; }
+
+.right-btn {
+  background-position: 0px -21px;
+  margin-right: 3px; }
+
+.up-btn {
+  background-position: 0px -63px;
+  margin-right: 3px; }
+
+.down-btn {
+  background-position: 0px -42px;
+  margin-right: 3px; }
+
+#right-button-cell {
+  display: none;
+  vertical-align: top; }
+  #right-button-cell.right-button-cell-enabled {
+    display: inline-block; }
+
+.flappy-score {
+  text-anchor: middle;
+  font-size: xx-large;
+  font-weight: bold;
+  fill: white;
+  stroke: black;
+  stroke-width: 2; }

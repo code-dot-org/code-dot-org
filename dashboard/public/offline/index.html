@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/application.css" media="all">
     <link rel="stylesheet" type="text/css" href="css/common.css">
     <link rel="stylesheet" type="text/css" href="css/gotham-font.css">
+    <link rel="stylesheet" type="text/css" href="css/flappy.css">
     <link rel="stylesheet" type="text/css" href="css/turtle.css">
     <link rel="stylesheet" type="text/css" href="css/maze.css">
     <script src="assets/application.js"></script>
@@ -121,6 +122,7 @@
   <script type="text/javascript" src="js/en_us/common_locale.js"></script>
   <script type="text/javascript" src="scripts/hoc.js"></script>
   <script type="text/javascript" src="scripts/frozen.js"></script>
+  <script type="text/javascript" src="scripts/flappy.js"></script>
   <script type="text/javascript" src="default_options.js"></script>
   <script type="text/javascript">
     var scripts = scripts || {};
@@ -146,8 +148,11 @@
     function getNextLevelLink(params) {
       var copy = $.extend({}, params);
       copy.puzzle++;
-      if (!currentScript.puzzles[copy.puzzle]) {
+      if (!currentScript.puzzles[copy.puzzle - 1]) {
         return currentScript.finishedRedirectURL;
+      }
+      if (copy.s === 'flappy' && copy.puzzle === 10) {
+        return 'http://studio.code.org/flappy/10';
       }
       return '?' + $.param(copy);
     }
@@ -303,7 +308,9 @@
             var video_key = appOptions.level.video_key;
             appOptions.level = legacy_mazes[appOptions.levelId];
             appOptions.level.video_key = video_key;
-            appOptions.levelId = 'custom';
+            if (currentScript.app !== 'flappy') {
+              appOptions.levelId = 'custom';
+            }
             appOptions.level.puzzle_number = puzzle_number;
             appOptions.level.stage_total = stage_total;
             appOptions.level.instructions = instructions;
