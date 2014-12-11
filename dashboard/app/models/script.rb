@@ -80,7 +80,21 @@ class Script < ActiveRecord::Base
   def self.script_cache_from_redis
     return unless redis
     if marshalled = self.redis['script-cache']
-      Marshal.load marshalled
+      begin
+        retried = false
+        Marshal.load marshalled
+      rescue NameError
+        # rails tries to do some fancy lazy loading of the database
+        # connection. If, somehow, this is called before we ever load
+        # a Script from the database, Marshal.load will get confused
+        # because not all of the classes Script depends on are
+        # loaded. Do a silly query to get everything loaded first.
+        self.exists?
+        unless retried
+          retried = true
+          retry
+        end
+      end
     end
   end
 
