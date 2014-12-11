@@ -78,7 +78,6 @@ class Script < ActiveRecord::Base
   end
 
   def self.script_cache_from_redis
-    return unless redis
     if marshalled = self.redis['script-cache']
       Script.connection # rails doesn't load the mysql libraries unless you ask it to, this confuses Marshal
       Marshal.load marshalled
@@ -86,7 +85,6 @@ class Script < ActiveRecord::Base
   end
 
   def self.script_cache_to_redis
-    return unless redis
     redis['script-cache'] = Marshal.dump(script_cache_from_db)
   end
 
