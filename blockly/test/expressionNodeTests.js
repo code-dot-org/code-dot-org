@@ -412,28 +412,115 @@ describe("ExpressionNode", function () {
 
   });
 
-  describe("getTokenList", function () {
-    it("expect single value", function () {
+  describe("getTokenListDiff", function () {
+    var node, tokenList;
+    describe("expect single value", function () {
       var expected = new ExpressionNode(1);
 
-      var node = new ExpressionNode(1);
-      var tokenList = node.getTokenList(expected);
-      assert.deepEqual(tokenList, [
-        { char: '1', valid: true}
+      it('is correct', function () {
+        node = new ExpressionNode(1);
+        tokenList = node.getTokenListDiff(expected);
+        assert.deepEqual(tokenList, [
+          { str: '1', different: false}
+        ]);
+      });
+
+      it('differs in value', function () {
+        node = new ExpressionNode(2);
+        tokenList = node.getTokenListDiff(expected);
+        assert.deepEqual(tokenList, [
+          { str: '2', different: true}
+        ]);
+      });
+
+      it('is an expression instead', function () {
+        node = new ExpressionNode('+', [1, 2]);
+        tokenList = node.getTokenListDiff(expected);
+        assert.deepEqual(tokenList, [
+          { str: '(',  different: true},
+          { str: '1',  different: true},
+          { str:' + ', different: true},
+          { str: '2',  different: true},
+          { str: ')',  different: true}
+        ]);
+      });
+    });
+
+    describe("expect simple expression", function () {
+      var expected = new ExpressionNode('+', [1, 2]);
+
+      it('is correct', function () {
+        node = expected.clone();
+        tokenList = node.getTokenListDiff(expected);
+        assert.deepEqual(tokenList, [
+          { str: '(',   different: false},
+          { str: '1',   different: false},
+          { str: ' + ', different: false},
+          { str: '2',   different: false},
+          { str: ')',   different: false}
+        ]);
+      });
+
+      it('differs in value', function () {
+        node = expected.clone();
+        node.value = '-';
+        tokenList = node.getTokenListDiff(expected);
+        assert.deepEqual(tokenList, [
+          { str: '(',  different: true},
+          { str: '1',  different: true},
+          { str:' - ', different: true},
+          { str: '2',  different: true},
+          { str: ')',  different: true}
+        ]);
+      });
+
+      it('differs in child 1', function () {
+        node = expected.clone();
+        node.children[0].value = 2;
+        tokenList = node.getTokenListDiff(expected);
+        assert.deepEqual(tokenList, [
+          { str: '(',  different: false},
+          { str: '2',  different: true},
+          { str:' + ', different: false},
+          { str: '2',  different: false},
+          { str: ')',  different: false}
+        ]);
+      });
+
+      it('differs in child 2', function () {
+        node = expected.clone();
+        node.children[1].value = 3;
+        tokenList = node.getTokenListDiff(expected);
+        assert.deepEqual(tokenList, [
+          { str: '(',  different: false},
+          { str: '1',  different: false},
+          { str:' + ', different: false},
+          { str: '3',  different: true},
+          { str: ')',  different: false}
+        ]);
+      });
+    });
+
+    it("works with collapse", function () {
+      var original = new ExpressionNode('*', [
+        new ExpressionNode('+', [1, 2]),
+        new ExpressionNode('+', [3, 4])
       ]);
+      var node = original.clone();
+      node.collapse();
 
-      // var node = new ExpressionNode('+', [1, 2]);
-      // var tokenList = node.getTokenList(expected);
-      // assert.deepEqual(tokenList, [
-      //   { str: '(', valid: false},
-      //   { str: '1', valid: false},
-      //   { str: '+', valid: false},
-      //   { str: '1', valid: false},
-      //   { str: ')', valid: false}
-      // ]);
-
-
-
+      var tokenList = node.getTokenListDiff(original);
+      assert.deepEqual(tokenList, [
+        { str: '(',  different: false},
+        { str: '3',  different: true},
+        { str:' * ', different: false},
+        { str: '(',  different: false},
+        { str: '3',  different: false},
+        { str:' + ', different: false},
+        { str: '4',  different: false},
+        { str: ')',  different: false},
+        { str: ')',  different: false}
+      ]);
     });
   });
 
