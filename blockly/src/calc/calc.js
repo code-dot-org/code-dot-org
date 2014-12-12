@@ -55,7 +55,7 @@ var appState = {
   currentAnimationDepth: 0
 };
 
-var STEP_TIME = 2000;
+var stepSpeed = 2000;
 
 /**
  * Initialize Blockly and the Calc.  Called on page load.
@@ -69,6 +69,10 @@ Calc.init = function(config) {
     target: null, // the complete target expression
     user: null, // the current state of the user expression
   };
+
+  if (level.scale && level.scale.stepSpeed !== undefined) {
+    stepSpeed = level.scale.stepSpeed;
+  }
 
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'functional_compute';
@@ -293,9 +297,6 @@ Calc.execute = function() {
     appState.testResults = BlocklyApps.TestResults.FREE_PLAY;
   }
 
-  // todo - show valid/invalid
-  animateUserExpression(0);
-
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
@@ -315,9 +316,14 @@ Calc.execute = function() {
   if (appState.result) {
     Calc.step();
   } else {
+    var expected = Calc.expressions.target;
+    var user = Calc.expressions.user;
+    clearSvgExpression('userExpression');
+    var tokenList = user.getTokenListDiff(expected);
+    addTokenList('userExpression', tokenList, 0, 'errorToken');
     window.setTimeout(function () {
       stopAnimatingAndDisplayFeedback();
-    }, STEP_TIME);
+    }, stepSpeed);
   }
 };
 
@@ -332,46 +338,15 @@ function stopAnimatingAndDisplayFeedback() {
  * will stop further evaluation.
  */
 Calc.step = function () {
-  if (!Calc.expressions.user) {
-    return;
-  }
-
   if (animateUserExpression(appState.currentAnimationDepth)) {
     stopAnimatingAndDisplayFeedback();
     return;
   }
   appState.currentAnimationDepth++;
 
-
-  // // If we've fully collapsed our expression, display feedback
-  // if (!Calc.expressions.user.canCollapse()) {
-  //   stopAnimatingAndDisplayFeedback();
-  //   return;
-  // }
-  //
-  // Calc.expressions.user.collapse(ignoreFailures);
-  //
-  // Calc.drawUserExpression();
-
   window.setTimeout(function () {
     Calc.step();
-  }, STEP_TIME);
-};
-
-/**
- * Draw the current state of our two expressions.
- */
-Calc.drawUserExpression = function () {
-  var expected = Calc.expressions.target;
-  var user = Calc.expressions.user;
-
-  if (!user) {
-    return;
-  }
-
-  drawSvgExpression('userExpression', user, expected);
-  var deepest = user.getDeepestOperation();
-  BlocklyApps.highlight(deepest ? deepest.blockId : null);
+  }, stepSpeed);
 };
 
 function clearSvgExpression(elementId) {
@@ -409,7 +384,7 @@ function animateUserExpression (numSteps) {
     } else {
       tokenList = current.getTokenList(currentDepth + 1 === numSteps);
     }
-    addTokenList('userExpression', tokenList, currentDepth);
+    addTokenList('userExpression', tokenList, currentDepth, 'markedToken');
     previous = current.clone();
     if (current.collapse()) {
       currentDepth++;
@@ -422,7 +397,7 @@ function animateUserExpression (numSteps) {
   return finished;
 }
 
-function addTokenList(parentId, tokenList, depth) {
+function addTokenList(parentId, tokenList, depth, markClass) {
   var str, text, textLength;
   var parent = document.getElementById(parentId);
 
@@ -443,49 +418,13 @@ function addTokenList(parentId, tokenList, depth) {
 
     text.setAttribute('x', xPos + textLength / 2);
     text.setAttribute('text-anchor', 'middle');
-    text.setAttribute('class', tokenList[i].marked ? 'markedToken' : '');
+    text.setAttribute('class', tokenList[i].marked ? markClass : '');
     xPos += textLength;
   }
 
   // todo (brent): handle case where expression is longer than width
   var xPadding = (CANVAS_WIDTH - g.getBoundingClientRect().width) / 2;
   var yPos = (depth * 20);
-  g.setAttribute('transform', 'translate(' + xPadding + ', ' + yPos + ')');
-}
-
-
-function drawSvgExpression(elementId, expr, expected) {
-  var i, text, textLength, char, g;
-  var parent = document.getElementById(elementId);
-  // clearSvgExpression(elementId);
-
-  var tokenList = expr.getTokenListDiff(expected);
-  var xPos = 0;
-  g = document.createElementNS(Blockly.SVG_NS, 'g');
-  parent.appendChild(g);
-  for (i = 0; i < tokenList.length; i++) {
-    text = document.createElementNS(Blockly.SVG_NS, 'text');
-
-    // getComputedTextLength doesn't respect trailing spaces, so we replace them
-    // with _, calculate our size, then return to the version with spaces.
-    char = tokenList[i].str;
-    text.textContent = char.replace(/ /g, '_');
-    g.appendChild(text);
-    // getComputedTextLength isn't available to us in our mochaTests
-    textLength = text.getComputedTextLength ? text.getComputedTextLength() : 0;
-    text.textContent = char;
-
-    text.setAttribute('x', xPos + textLength / 2);
-    text.setAttribute('text-anchor', 'middle');
-    xPos += textLength;
-  }
-
-  // center entire expression
-  // todo (brent): handle case where expression is longer than width
-  var width = g.getBoundingClientRect().width;
-  var xPadding = (CANVAS_WIDTH - width) / 2;
-  var yPos = (numCollapses * 20);
-  numCollapses++;
   g.setAttribute('transform', 'translate(' + xPadding + ', ' + yPos + ')');
 }
 
