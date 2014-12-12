@@ -1274,6 +1274,9 @@ a.download-video {
     width: 260px;
     float: left;
     img {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
       height: auto;
       width: auto;
       max-height: 100%;
