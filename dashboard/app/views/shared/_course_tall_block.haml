@@ -38,9 +38,6 @@
 - else
   - block_class = "miniblock-tall"
 
-- if id == "course4"
-  - beta = true
-
 .span3.miniblock{class: block_class, style: "overflow:hidden; position:relative"}
   =link_to url, {style:"text-decoration:none"} do
 
@@ -49,7 +46,7 @@
 
     .clear
 
-    - if beta
+    - if Script.beta? id
       .beta
         .heading
           %h3
