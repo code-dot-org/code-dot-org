@@ -314,71 +314,32 @@ ExpressionNode.prototype.getTokenList = function (highlightDeepest) {
 
 /**
  * Do the two nodes differ only in argument order.
+ * todo: unit test
  */
-ExpressionNode.prototype.isEquivalent = function (target) {
+ExpressionNode.prototype.isEquivalentTo = function (target) {
+  // only ignore argument order for ARITHMETIC
+  if (this.getType() !== ValueType.ARITHMETIC) {
+    return this.equals(target);
+  }
+
+  if (!target || this.value !== target.value) {
+    return false;
+  }
+
+  var myLeft = this.children[0];
+  var myRight = this.children[1];
+
+  var theirLeft = target.children[0];
+  var theirRight = target.children[1];
+
+  if (myLeft.isEquivalentTo(theirLeft)) {
+    return myRight.isEquivalentTo(theirRight);
+  }
+  if (myLeft.isEquivalentTo(theirRight)) {
+    return myRight.isEquivalentTo(theirLeft);
+  }
   return false;
-  // todo
-
-  // if (this.val !== target.val) {
-  //   return false;
-  // }
-  //
-  // if (this.isLeaf()) {
-  //   return true;
-  // }
-  //
-  // if (this.isOperation()) {
-  //   if (this.args[0].isEquivalent(target.args[0])) {
-  //     return this.args[1].isEquivalent(target.args[1]);
-  //   } else if (this.args[0].isEquivalent(target.args[1])) {
-  //     return this.args[1].isEquivalent(target.args[0]);
-  //   }
-  // } else {
-  //   throw new Error("todo: NYI - handle functions");
-  // }
-  //
-  // return false;
 };
-
-/**
- * Break down the expression into tokens, where each token consists of the
- * string representation of that portion of the expression, and whether or not
- * it is correct.
- */
-// ExpressionNode.prototype.getTokenList = function (markNextParens) {
-//   var list;
-//   if (this.isLeaf()) {
-//     return [token(this.val.toString(), this.valMetExpectation_ === false)];
-//   }
-//
-//   if (this.isOperation()) {
-//     var left = this.args[0];
-//     var right = this.args[1];
-//
-//     var leafOperation = left.isLeaf() && right.isLeaf();
-//     var rightDeeper = right.depth() > left.depth();
-//
-//     list = [token("(", markNextParens === true && leafOperation)];
-//     list = list.concat(left.getTokenListDiff(markNextParens && !rightDeeper));
-//     list = list.concat(token(" " + this.val + " ", this.valMetExpectation_ === false));
-//     list = list.concat(right.getTokenListDiff(markNextParens && rightDeeper));
-//     list = list.concat(token(")", markNextParens === true && leafOperation));
-//     return list;
-//   } else {
-//     // todo - figure out marking when we have functions
-//     list = [token(this.val, false), token("(", false)];
-//     for (var i = 0; i < this.args.length; i++) {
-//       if (i > 0) {
-//         list = list.concat(token(",", false));
-//       }
-//       list = list.concat(this.args[i].getTokenListDiff(markNextParens));
-//     }
-//     list = list.concat(token(")", false));
-//     return list;
-//   }
-// };
-
-
 
 /**
  * Creates a token with the given char (which can really be a string), that
@@ -388,9 +349,4 @@ ExpressionNode.prototype.isEquivalent = function (target) {
  */
 function token(str, marked) {
   return { str: str, marked: marked };
-}
-
-// todo (brent)- may want to use lodash's isNumber
-function isNumber(val) {
-  return typeof(val) === "number";
 }

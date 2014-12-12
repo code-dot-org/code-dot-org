@@ -218,7 +218,6 @@ function getExpressionFromBlocks(blockXml) {
 }
 
 // todo - think about naming
-// todo - missing blockIds
 function getExpressionFromBlock(block) {
   if (!block) {
     return null;
@@ -235,14 +234,14 @@ function getExpressionFromBlock(block) {
       var operation = block.getTitles()[0].getValue();
       var left = getExpressionFromBlock(block.getInputTargetBlock('ARG1')) || 0;
       var right = getExpressionFromBlock(block.getInputTargetBlock('ARG2')) || 0;
-      return new ExpressionNode(operation, [left, right]);
+      return new ExpressionNode(operation, [left, right], block.id);
     case 'functional_math_number':
     case 'functional_math_number_dropdown':
       var val = block.getTitleValue('NUM') || 0;
       if (val === '???') {
         val = 0;
       }
-      return new ExpressionNode(parseInt(val, 10));
+      return new ExpressionNode(parseInt(val, 10), [], block.id);
     case 'functional_call':
       var name = block.getProcedureCall();
       var args = [];
@@ -251,9 +250,9 @@ function getExpressionFromBlock(block) {
         args.push(getExpressionFromBlock(input));
         i++;
       }
-      return new ExpressionNode(name, args);
+      return new ExpressionNode(name, args, block.id);
     case 'functional_parameters_get':
-      return new ExpressionNode(block.getTitleValue('VAR'));
+      return new ExpressionNode(block.getTitleValue('VAR'), [], block.id);
     default:
       throw "Unknown block type: " + block.type;
   }
@@ -288,7 +287,7 @@ Calc.execute = function() {
 
   // equivalence means the expressions are the same if we ignore the ordering
   // of inputs
-  if (!appState.result && Calc.expressions.user.isEquivalent(Calc.expressions.target)) {
+  if (!appState.result && Calc.expressions.user.isEquivalentTo(Calc.expressions.target)) {
     appState.testResults = TestResults.APP_SPECIFIC_FAIL;
     appState.message = calcMsg.equivalentExpression();
   }
@@ -381,8 +380,14 @@ function animateUserExpression (numSteps) {
     var tokenList;
     if (currentDepth === numSteps) {
       tokenList = current.getTokenListDiff(previous);
+    } else if (currentDepth + 1 === numSteps) {
+      var deepest = current.getDeepestOperation();
+      if (deepest) {
+        BlocklyApps.highlight('block_id_' + deepest.blockId);
+      }
+      tokenList = current.getTokenList(true);
     } else {
-      tokenList = current.getTokenList(currentDepth + 1 === numSteps);
+      tokenList = current.getTokenList(false);
     }
     addTokenList('userExpression', tokenList, currentDepth, 'markedToken');
     previous = current.clone();
@@ -394,6 +399,9 @@ function animateUserExpression (numSteps) {
       finished = true;
     }
   }
+
+
+
   return finished;
 }
 
