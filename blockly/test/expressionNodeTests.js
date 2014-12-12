@@ -583,4 +583,69 @@ describe("ExpressionNode", function () {
     });
   });
 
+  it("isEquivalentTo", function () {
+    var node, target;
+
+    node = new ExpressionNode(0);
+    target = new ExpressionNode(0);
+    assert.equal(node.isEquivalentTo(target), true);
+
+    node = new ExpressionNode(0);
+    target = new ExpressionNode(1);
+    assert.equal(node.isEquivalentTo(target), false);
+
+    node = new ExpressionNode("+", [1, 2]);
+    target = new ExpressionNode("+", [1, 2]);
+    assert.equal(node.isEquivalentTo(target), true);
+
+    node = new ExpressionNode("+", [1, 2]);
+    target = new ExpressionNode("+", [2, 1]);
+    assert.equal(node.isEquivalentTo(target), true);
+
+    node = new ExpressionNode(3);
+    target = new ExpressionNode("+", [1, 2]);
+    assert.equal(node.isEquivalentTo(target), false);
+
+    node = new ExpressionNode("+", [1, 2]);
+    target = new ExpressionNode("-", [1, 2]);
+    assert.equal(node.isEquivalentTo(target), false);
+
+    node = new ExpressionNode("+", [1, 2]);
+    target = new ExpressionNode("-", [2, 1]);
+    assert.equal(node.isEquivalentTo(target), false);
+
+    node = new ExpressionNode("+", [
+      1,
+      new ExpressionNode("+", [2, 3])
+    ]);
+    target = new ExpressionNode("+", [
+      new ExpressionNode("+", [2, 3]),
+      1
+    ]);
+    assert.equal(node.isEquivalentTo(target), true);
+
+    node = new ExpressionNode("+", [
+      1,
+      new ExpressionNode("+", [2, 3])
+    ]);
+    target = new ExpressionNode("+", [
+      new ExpressionNode("+", [2, 4]),
+      1
+    ]);
+    assert.equal(node.isEquivalentTo(target), false);
+
+    node = new ExpressionNode("+", [
+      new ExpressionNode("*", [1, 2]),
+      new ExpressionNode("/", [3, 4])
+    ]);
+    target = new ExpressionNode("+", [
+      new ExpressionNode("/", [3, 4]),
+      new ExpressionNode("*", [1, 2])
+    ]);
+    assert.equal(node.isEquivalentTo(target), true);
+
+    // todo - more of these
+
+  });
+
 });
