@@ -1,5 +1,5 @@
 ---
-from: 'Alin Chiriac (România Chapter Partner) <support@adfaber.org>'
+from: 'Alin Chiriac (România Chapter Partner) <alin_chiriac@code.org>'
 subject: "O oră de programare pentru fiecare student."
 ---
 
