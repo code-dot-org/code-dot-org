@@ -1303,7 +1303,7 @@ a.download-video {
     margin-left:0px;
     li {
       background-color: white;
-      border-color: lightgray;
+      border-color: #c6cacd;
     }
   }
   li {
@@ -1313,8 +1313,8 @@ a.download-video {
     list-style-type: none;
     margin-left: 0px;
     .emptyslot {
-      background-color: #eee;
-      border-color: #eee;
+      background-color: #e7e8ea;
+      border-color: #e7e8ea;
       .giantmark {
         .text {
           opacity: 0.8;
@@ -1323,7 +1323,8 @@ a.download-video {
       }
     }
     .active {
-      border-color: lightyellow;
+      border-style: dotted;
+      border-color: #ffdb74;
     }
     .active.emptyslot {
       background-color: lightyellow;
@@ -1331,10 +1332,11 @@ a.download-video {
   }
   .answer {
     background-color: white;
-    border-color: lightblue;
-    .active {
-      background-color: green;
-    }
+    border-color: #a6daed;
+  }
+  .answer:hover {
+    border-color: #d1d567;
+    cursor: move;
   }
   #answerdest {
     width: 240px;
