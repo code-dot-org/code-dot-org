@@ -4,6 +4,63 @@ nav: about_nav
 ---
 # Job Openings at Code.org
 
+
+## Highschool Program Manager##
+**Job Summary:**
+Code.org is looking for a High School Program Manager to work with and support the goals of Code.org’s Education team through the development of high school computer science curriculum and related professional development.
+
+Code.org’s Education team designs and develops original computer science curriculum, while also supporting existing curricular projects in partnership with others.  While each Education member takes ownership of large parts of projects, we share work and tasks across projects to make sure all of our projects are aligned under the same philosophical model and contribute to a cohesive K-12 CS pathway.
+
+Responsibilities of the position include: 
+
+- Working closely with the high school education team members to design, develop, write, and “go to market” with original curricular materials 
+- Helping to plan and design curricular supports such as assessments, online tools, videos and a highly-scalable professional development model for educators
+- Planning for evaluating the effectiveness of curriculum (from both student and teacher perspectives) and making programmatic improvements
+- Collaborating with Product team to develop curriculum-specific technology tools
+
+**Qualifications:**
+
+The ideal candidate has related experience working with a team to design, develop, write, or implement curricular, educational or software products that have gone to market. 
+
+The candidate should have a Bachelor’s degree or higher in Education and a minimum of two (2) years of recent relevant introductory computer science experience at a secondary level (grades 6-12). Prior curriculum and professional development experience preferred. Must have strong leadership skills, possess exceptional writing and communications ability in English, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must
+
+Interested candidates should email a resume and cover letter, outlining how your skills and experience meet the qualifications of the position, to jobs@code.org. Please highlight relevant experience in working with a team to design, develop, write, or implement curricular, educational or software products that have gone to market. You may also choose to include a LinkedIn or related online profile.
+
+## Data Scientist##
+
+**Job Summary:**
+
+At Code.org we create and support computer science curriculum that reaches millions of students, and we train tens of thousands of teachers per year. The core function of this role is to help us gain an increasingly deeper and better understanding of two very important high-level questions:  
+
+1.  What and how much are our students learning? (and how can we improve the outcome?)
+2. How effective is our teacher professional development? (and how can we improve the outcome?)
+
+We already have tons of indicators and stats and data, but these very big questions go beyond a few database queries or analytics stats.  We already have a fantastic third party evaluator helping us research these questions, and this is a role to collaborate with them to address these questions from the perspective of the web-usage of millions of students in our online tutorials.  
+
+The responsibility in this job isn't just to answer analytic questions, but to establish the questions to ask in the first place, and then to figure out how to answer them, to measure and adjust our education products, services, and processes to improve outcomes for students, teachers and schools. 
+
+At its core this role is part engineer, part scientist, part educator.  Job responsibilities will include:
+
+- Owning and operating our existing in-house analytics tools and identifying new tools/services to use
+- Crafting key questions, measures, and assessments we use to track student learning and teacher preparedness across Code.org's online services
+- Working with education/curriculum/product team to “bake” assessment measures and metrics into curricular and professional development products currently under development 
+- Writing the code/scripts/queries and managing the tools and infrastructure to answer these questions and provide these measures
+- Collaborating with our third party evaluator to help evaluate and improve our work, as well as with university/academic groups to provide deeper research to help drive key insights which improve the outcomes of our work and the computer science education community as a whole
+
+**Qualifications:**
+
+- A degree in computer science, applied math, or statistics, with multiple years of experience in data and statistical analysis
+- A deep familiarity with traditional web-based analytics and data analysis tools - from Google Analytics to data mining to Hadoop to R. The ideal candidate should already know the best tools to use for different purposes based on past experience, and is familiar with recent cloud-based services that make this sort of analysis easier today than in past decades
+
+including at least one of the following types of experience:
+
+- Experience with using online student assessments to analyze education outcomes in a K-12 academic setting 
+- Experience with using web-based analysis (A/B testing and growth-hacking) to measure/improve online usage
+
+Ideally the position is in Seattle, but for an exceptional candidate working remotely from a home-office is a possibility.
+
+Interested candidates should email a resume and cover letter, outlining how your skills and experience meet the qualifications of the position, to jobs@code.org. You may also choose to include a LinkedIn or related online profile.
+
 ## Grant Writer and Relationships Manager##
 
 **Job Summary:**
