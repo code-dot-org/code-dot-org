@@ -109,7 +109,7 @@ grunt test
 To run an individual test, use the `--grep` option to target a file or Mocha `describe` identifier:
 
 ```
-grunt test --grep myTestName # e.g., 2_11, or requiredBlockUtils
+grunt mochaTest --grep myTestName # e.g., 2_11, or requiredBlockUtils
 ```
 
 To debug tests using the node-inspector Chrome-like debugger:
@@ -117,9 +117,16 @@ To debug tests using the node-inspector Chrome-like debugger:
 ```
 npm install -g node-inspector
 node-inspector &
-# open debugger URL
-node --debug-brk $(which grunt) --grep='testname'
+# open debugger URL, i.e. http://127.0.0.1:8080/debug?port=5858
+node --debug-brk $(which grunt) mochaTest --grep='testname'
 # This will breakpoint your inspector at the beginning of that test
+```
+Not there are two classes of mochaTests we have. The first class run in the same process as grunt, and the above commands will work a expected.
+For the second class, we launch a new node process, which your debugger will not have broken on. To debug this second class, we added a --dbg
+command that will break the debugger on the node process launch on port 5859.
+```
+grunt mochaTest --grep='testname' --dbg
+# open debugger URL on port 5859, i.e. http://127.0.0.1:8080/debug?port=5859
 ```
 
 - You can add new test files as /test/*Tests.js, see `/test/feedbackTests.js` as an example of adding a mock Blockly instance

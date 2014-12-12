@@ -30,6 +30,11 @@ class Script < ActiveRecord::Base
   FLAPPY_NAME = 'flappy'
   TWENTY_HOUR_NAME = '20-hour'
 
+  COURSE1_NAME = 'course1'
+  COURSE2_NAME = 'course2'
+  COURSE3_NAME = 'course3'
+  COURSE4_NAME = 'course4'
+
   def Script.twenty_hour_script
     Script.get_from_cache(Script::TWENTY_HOUR_ID)
   end
@@ -66,9 +71,11 @@ class Script < ActiveRecord::Base
 
   def self.script_cache_from_db
     {}.tap do |cache|
-        [FLAPPY_ID, TWENTY_HOUR_ID, PLAYLAB_NAME, HOC_NAME, FROZEN_NAME].each do |id|
+        [TWENTY_HOUR_ID,
+         FLAPPY_ID, PLAYLAB_NAME, HOC_NAME, FROZEN_NAME,
+         COURSE1_NAME, COURSE2_NAME, COURSE3_NAME, COURSE3_NAME].each do |id|
           find_by = (id.to_i.to_s == id.to_s) ? :id : :name
-          script = Script.includes([{script_levels: [{level: [:game, :concepts] }, :stage]}, :stages]).
+          script = Script.includes([{script_levels: [{level: [:game, :concepts] }, :stage, :callouts]}, :stages]).
             find_by(find_by => id)
           cache[script.name] = script
           cache[script.id.to_s] = script
