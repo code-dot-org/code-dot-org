@@ -227,5 +227,7 @@
     };
     $.extend(appOptions, #{app_options.to_json});
     #{'console.log(appOptions)' unless Rails.env.production?};
-    #{app}Main(appOptions);
+    $(document).ready(function () {
+      #{app}Main(appOptions);
+    });
     //]]>
