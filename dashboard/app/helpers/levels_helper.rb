@@ -83,7 +83,7 @@ module LevelsHelper
         end
       end
     else
-      available_callouts = @script_level.available_callouts if @script_level
+      available_callouts = @script_level.callouts if @script_level
     end
     @callouts_to_show = available_callouts
       .reject { |c| !always_show && session[:callouts_seen].include?(c.localization_key) }
