@@ -11,9 +11,9 @@ Smiley, Marius Moga, Elena Gheorge, Dan Chisu, Daniel Buzdugan, Mihai Gainusa, C
 
 1. Tutoriale distractive cu suport video si text in limba romana (Daca filmul nu incepe cu subtitrare in limba romana, in josul paginii cu tutorialul puteti selecta "limba romana" Apoi il puteti reporni din partea stanga jos a tutorialului):
 
-	* [Hour of Code](http://studio.code.org/hoc/1)
-	* [Frozen](http://studio.code.org/s/frozen/stage/1/puzzle/1)
-	* [Codul Flappy](http://studio.code.org/flappy/1)
+	* [Hour of Code](http://studio.code.org/hoc/reset)
+	* [Frozen](http://studio.code.org/s/frozen/reset)
+	* [Codul Flappy](http://studio.code.org/s/flappy/reset)
 
 2. Daca nu aveti conexiune la internet puteti rula [Tutorialul Fara Internet](https://github.com/google/blockly-games/raw/offline/generated/blockly-games-ro.zip). Dupa dezarhivare el ruleaza accesand fisierul "index" si se deschide in browserul de internet chiar daca nu aveti conexiune la internet.
 
