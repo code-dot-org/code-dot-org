@@ -3,7 +3,6 @@ from: 'Alin Chiriac (România Chapter Partner) <alin_chiriac@code.org>'
 subject: "O oră de programare pentru fiecare student."
 ---
 
-<% if country == 'ro' %>
 
 Smiley, Marius Moga, Elena Gheorge, Dan Chisu, Daniel Buzdugan, Mihai Gainusa, Calin Goia, Florin HIQ, Cornel de la Vunk sustin Hour of Code si ii invita pe toti elevii din Romania sa participe la cel mai mare eveniment de educatie din istorie pe [ro.code.org](http://ro.code.org)
 
@@ -48,7 +47,6 @@ Hour of Code
 
 You’re receiving this email because registered to host an Hour of Code at [hourofcode.com/ro](http://hourofcode.com/ro). We’ll send you only a few updates a year on our progress and the outcomes of your generous support. Don’t like these emails? [Unsubscribe](<%= unsubscribe_link %>).
 
-<% end %>
 
 ![](<%= tracking_pixel %>)
 
