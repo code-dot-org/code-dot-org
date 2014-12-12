@@ -166,12 +166,6 @@
             <arg name="actor"/>
           </mutation>
         </block>
-        <block type="variables_get">
-          <title name="VAR">actor</title>
-        </block>
-        <block type="variables_get">
-          <title name="VAR">height</title>
-        </block>
       </xml>
     </toolbox_blocks>
   </blocks>
