@@ -1,3 +1,6 @@
+var utils = require('../utils');
+var _ = utils.getLodash();
+
 /**
  * A node consisting of an value, and potentially a set of operands.
  * The value will be either an operator, a string representing a variable, a
@@ -251,20 +254,23 @@ ExpressionNode.prototype.collapse = function () {
 
 /**
  * todo
+ * other can be Falsey, indicating everything is "diff"
  */
-ExpressionNode.prototype.getTokenList = function (expected) {
-  // todo - handle expected
+ExpressionNode.prototype.getTokenListDiff = function (other) {
   if (this.children.length === 0) {
-    return [token(this.value.toString(), true)];
+    return [token(this.value.toString(), !this.equals(other))];
   }
 
   if (this.getType() === ValueType.ARITHMETIC) {
-    var list = [token('(', true)];
-    list = list.concat(this.children[0].getTokenList());
-    list.push(token(" " + this.value + " ", true));
-    list = list.concat(this.children[1].getTokenList());
-    list.push(token(')', true));
-    return list;
+    var nodesMatch = other && (this.value === other.value) &&
+      (this.children.length === other.children.length);
+    return _.flatten([
+      token('(', !nodesMatch),
+      this.children[0].getTokenListDiff(nodesMatch && other.children[0]),
+      token(" " + this.value + " ", !nodesMatch),
+      this.children[1].getTokenListDiff(nodesMatch && other.children[1]),
+      token(')', !nodesMatch)
+    ]);
   }
 
   throw new Error("NYI");
@@ -286,25 +292,25 @@ ExpressionNode.prototype.isEquivalent = function (target) {
   return false;
   // todo
 
-  if (this.val !== target.val) {
-    return false;
-  }
-
-  if (this.isLeaf()) {
-    return true;
-  }
-
-  if (this.isOperation()) {
-    if (this.args[0].isEquivalent(target.args[0])) {
-      return this.args[1].isEquivalent(target.args[1]);
-    } else if (this.args[0].isEquivalent(target.args[1])) {
-      return this.args[1].isEquivalent(target.args[0]);
-    }
-  } else {
-    throw new Error("todo: NYI - handle functions");
-  }
-
-  return false;
+  // if (this.val !== target.val) {
+  //   return false;
+  // }
+  //
+  // if (this.isLeaf()) {
+  //   return true;
+  // }
+  //
+  // if (this.isOperation()) {
+  //   if (this.args[0].isEquivalent(target.args[0])) {
+  //     return this.args[1].isEquivalent(target.args[1]);
+  //   } else if (this.args[0].isEquivalent(target.args[1])) {
+  //     return this.args[1].isEquivalent(target.args[0]);
+  //   }
+  // } else {
+  //   throw new Error("todo: NYI - handle functions");
+  // }
+  //
+  // return false;
 };
 
 /**
@@ -326,9 +332,9 @@ ExpressionNode.prototype.isEquivalent = function (target) {
 //     var rightDeeper = right.depth() > left.depth();
 //
 //     list = [token("(", markNextParens === true && leafOperation)];
-//     list = list.concat(left.getTokenList(markNextParens && !rightDeeper));
+//     list = list.concat(left.getTokenListDiff(markNextParens && !rightDeeper));
 //     list = list.concat(token(" " + this.val + " ", this.valMetExpectation_ === false));
-//     list = list.concat(right.getTokenList(markNextParens && rightDeeper));
+//     list = list.concat(right.getTokenListDiff(markNextParens && rightDeeper));
 //     list = list.concat(token(")", markNextParens === true && leafOperation));
 //     return list;
 //   } else {
@@ -338,7 +344,7 @@ ExpressionNode.prototype.isEquivalent = function (target) {
 //       if (i > 0) {
 //         list = list.concat(token(",", false));
 //       }
-//       list = list.concat(this.args[i].getTokenList(markNextParens));
+//       list = list.concat(this.args[i].getTokenListDiff(markNextParens));
 //     }
 //     list = list.concat(token(")", false));
 //     return list;
@@ -352,10 +358,9 @@ ExpressionNode.prototype.isEquivalent = function (target) {
  * may or may not be "marked". Marking indicates different things depending on
  * the char.
  * todo - update me
- * todo - change from char to str?
  */
-function token(str, valid) {
-  return { char: str, valid: valid };
+function token(str, different) {
+  return { str: str, different: different };
 }
 
 // todo (brent)- may want to use lodash's isNumber
