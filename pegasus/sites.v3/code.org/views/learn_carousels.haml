@@ -36,8 +36,9 @@
 %br
 
 -if variation == 'learn'
-  %a{:href=>"http://hourofcode.com/resources/how-to"}
-    = I18n.t(:educator_notes)
+  %h1 
+    %a{:href=>"http://hourofcode.com/resources/how-to"}
+      = I18n.t(:educator_notes)
 
 -if variation == 'beyond'
   %a{:href=>"/educate"}
