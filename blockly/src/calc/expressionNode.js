@@ -128,7 +128,7 @@ ExpressionNode.prototype.evaluate = function () {
 // todo - rename/implement properly
 // todo - unit test
 ExpressionNode.prototype.equals = function (other) {
-  if (this.value !== other.value ||
+  if (!other || this.value !== other.value ||
       this.children.length !== other.children.length) {
     return false;
   }
@@ -277,6 +277,33 @@ ExpressionNode.prototype.getTokenListDiff = function (other) {
 };
 
 
+/**
+ * todo - can i combine the two different token lists better?
+ */
+ExpressionNode.prototype.getTokenList = function (highlightDeepest) {
+  var depth = this.depth();
+  if (depth <= 1) {
+    return this.getTokenListDiff(highlightDeepest ? null : this);
+  }
+
+  if (this.getType() !== ValueType.ARITHMETIC) {
+    throw new Error("Unsupported");
+  }
+
+  var leftDepth = this.children[0].depth();
+  var rightDepth = this.children[1].depth();
+  var rightDeeper = rightDepth > leftDepth;
+
+  return _.flatten([
+    token('(', false),
+    this.children[0].getTokenList(highlightDeepest && !rightDeeper),
+    token(" " + this.value + " ", false),
+    this.children[1].getTokenList(highlightDeepest && rightDeeper),
+    token(')', false)
+  ]);
+};
+
+
 
 ///////////////////////////////////
 
@@ -355,12 +382,12 @@ ExpressionNode.prototype.isEquivalent = function (target) {
 
 /**
  * Creates a token with the given char (which can really be a string), that
- * may or may not be "marked". Marking indicates different things depending on
+ * may or may not be "marked". Marking indicates  things depending on
  * the char.
  * todo - update me
  */
-function token(str, different) {
-  return { str: str, different: different };
+function token(str, marked) {
+  return { str: str, marked: marked };
 }
 
 // todo (brent)- may want to use lodash's isNumber

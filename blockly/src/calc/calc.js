@@ -387,7 +387,7 @@ function clearSvgExpression(elementId) {
  * Draws a user expression and each step collapsing it, up to given depth.
  * Returns true if it couldn't collapse any further at this depth.
  */
-function animateUserExpression (depth) {
+function animateUserExpression (numSteps) {
   var finished = false;
 
   var expected = Calc.expressions.target;
@@ -402,18 +402,21 @@ function animateUserExpression (depth) {
   var current = user.clone();
   var previous = current;
   var currentDepth = 0;
-  for (var i = 0; i <= depth && !finished; i++) {
-    var isFinal = (i === depth);
-    // todo - for penultimate highlight deepest operation
-    var tokenList = current.getTokenListDiff(isFinal ? previous : current);
-    ('userExpression', tokenList, currentDepth);
+  for (var i = 0; i <= numSteps && !finished; i++) {
+    var tokenList;
+    if (currentDepth === numSteps) {
+      tokenList = current.getTokenListDiff(previous);
+    } else {
+      tokenList = current.getTokenList(currentDepth + 1 === numSteps);
+    }
+    addTokenList('userExpression', tokenList, currentDepth);
     previous = current.clone();
     if (current.collapse()) {
       currentDepth++;
-    } else {
+    } else if (i - currentDepth > 2) {
       // we want to go one more step after the last collapse so that we show
       // our last line without highlighting it
-      finished = !isFinal;
+      finished = true;
     }
   }
   return finished;
@@ -426,7 +429,7 @@ function addTokenList(parentId, tokenList, depth) {
   var g = document.createElementNS(Blockly.SVG_NS, 'g');
   parent.appendChild(g);
   var xPos = 0;
-  for (i = 0; i < tokenList.length; i++) {
+  for (var i = 0; i < tokenList.length; i++) {
     text = document.createElementNS(Blockly.SVG_NS, 'text');
 
     // getComputedTextLength doesn't respect trailing spaces, so we replace them
@@ -440,7 +443,7 @@ function addTokenList(parentId, tokenList, depth) {
 
     text.setAttribute('x', xPos + textLength / 2);
     text.setAttribute('text-anchor', 'middle');
-    text.setAttribute('class', tokenList[i].different ? 'highlightedParen' : '');
+    text.setAttribute('class', tokenList[i].marked ? 'markedToken' : '');
     xPos += textLength;
   }
 
@@ -475,15 +478,6 @@ function drawSvgExpression(elementId, expr, expected) {
     text.setAttribute('x', xPos + textLength / 2);
     text.setAttribute('text-anchor', 'middle');
     xPos += textLength;
-
-    // todo - figure out
-    // if (tokenList[i].valid) {
-    //   if (char === '(' || char === ')') {
-    //     text.setAttribute('class', 'highlightedParen');
-    //   } else {
-    //     text.setAttribute('class', 'exprMistake');
-    //   }
-    // }
   }
 
   // center entire expression

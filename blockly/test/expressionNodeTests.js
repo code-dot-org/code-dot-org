@@ -421,7 +421,7 @@ describe("ExpressionNode", function () {
         node = new ExpressionNode(1);
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
-          { str: '1', different: false}
+          { str: '1', marked: false}
         ]);
       });
 
@@ -429,7 +429,7 @@ describe("ExpressionNode", function () {
         node = new ExpressionNode(2);
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
-          { str: '2', different: true}
+          { str: '2', marked: true}
         ]);
       });
 
@@ -437,11 +437,11 @@ describe("ExpressionNode", function () {
         node = new ExpressionNode('+', [1, 2]);
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
-          { str: '(',  different: true},
-          { str: '1',  different: true},
-          { str:' + ', different: true},
-          { str: '2',  different: true},
-          { str: ')',  different: true}
+          { str: '(',  marked: true},
+          { str: '1',  marked: true},
+          { str:' + ', marked: true},
+          { str: '2',  marked: true},
+          { str: ')',  marked: true}
         ]);
       });
     });
@@ -453,11 +453,11 @@ describe("ExpressionNode", function () {
         node = expected.clone();
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
-          { str: '(',   different: false},
-          { str: '1',   different: false},
-          { str: ' + ', different: false},
-          { str: '2',   different: false},
-          { str: ')',   different: false}
+          { str: '(',   marked: false},
+          { str: '1',   marked: false},
+          { str: ' + ', marked: false},
+          { str: '2',   marked: false},
+          { str: ')',   marked: false}
         ]);
       });
 
@@ -466,11 +466,11 @@ describe("ExpressionNode", function () {
         node.value = '-';
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
-          { str: '(',  different: true},
-          { str: '1',  different: true},
-          { str:' - ', different: true},
-          { str: '2',  different: true},
-          { str: ')',  different: true}
+          { str: '(',  marked: true},
+          { str: '1',  marked: true},
+          { str:' - ', marked: true},
+          { str: '2',  marked: true},
+          { str: ')',  marked: true}
         ]);
       });
 
@@ -479,11 +479,11 @@ describe("ExpressionNode", function () {
         node.children[0].value = 2;
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
-          { str: '(',  different: false},
-          { str: '2',  different: true},
-          { str:' + ', different: false},
-          { str: '2',  different: false},
-          { str: ')',  different: false}
+          { str: '(',  marked: false},
+          { str: '2',  marked: true},
+          { str:' + ', marked: false},
+          { str: '2',  marked: false},
+          { str: ')',  marked: false}
         ]);
       });
 
@@ -492,11 +492,11 @@ describe("ExpressionNode", function () {
         node.children[1].value = 3;
         tokenList = node.getTokenListDiff(expected);
         assert.deepEqual(tokenList, [
-          { str: '(',  different: false},
-          { str: '1',  different: false},
-          { str:' + ', different: false},
-          { str: '3',  different: true},
-          { str: ')',  different: false}
+          { str: '(',  marked: false},
+          { str: '1',  marked: false},
+          { str:' + ', marked: false},
+          { str: '3',  marked: true},
+          { str: ')',  marked: false}
         ]);
       });
     });
@@ -511,15 +511,74 @@ describe("ExpressionNode", function () {
 
       var tokenList = node.getTokenListDiff(original);
       assert.deepEqual(tokenList, [
-        { str: '(',  different: false},
-        { str: '3',  different: true},
-        { str:' * ', different: false},
-        { str: '(',  different: false},
-        { str: '3',  different: false},
-        { str:' + ', different: false},
-        { str: '4',  different: false},
-        { str: ')',  different: false},
-        { str: ')',  different: false}
+        { str: '(',  marked: false},
+        { str: '3',  marked: true},
+        { str:' * ', marked: false},
+        { str: '(',  marked: false},
+        { str: '3',  marked: false},
+        { str:' + ', marked: false},
+        { str: '4',  marked: false},
+        { str: ')',  marked: false},
+        { str: ')',  marked: false}
+      ]);
+    });
+  });
+
+  describe("getTokenList", function () {
+    it("single value", function () {
+      var node = new ExpressionNode(1);
+      assert.deepEqual(node.getTokenList(false), [
+        { str: '1', marked: false }
+      ]);
+      assert.deepEqual(node.getTokenList(true), [
+        { str: '1', marked: true }
+      ]);
+    });
+
+    it("single operation", function () {
+      var node = new ExpressionNode('+', [1, 2]);
+      assert.deepEqual(node.getTokenList(false), [
+        { str: '(', marked: false },
+        { str: '1', marked: false },
+        { str:' + ',marked: false },
+        { str: '2', marked: false },
+        { str: ')', marked: false }
+      ]);
+      assert.deepEqual(node.getTokenList(true), [
+        { str: '(', marked: true },
+        { str: '1', marked: true },
+        { str:' + ',marked: true },
+        { str: '2', marked: true },
+        { str: ')', marked: true }
+      ]);
+    });
+
+    it("left deeper", function () {
+      var node = new ExpressionNode('+', [
+        new ExpressionNode('*', [1, 2]),
+        3
+      ]);
+      assert.deepEqual(node.getTokenList(false), [
+        { str: '(', marked: false },
+        { str: '(', marked: false },
+        { str: '1', marked: false },
+        { str:' * ',marked: false },
+        { str: '2', marked: false },
+        { str: ')', marked: false },
+        { str:' + ',marked: false },
+        { str: '3', marked: false },
+        { str: ')', marked: false }
+      ]);
+      assert.deepEqual(node.getTokenList(true), [
+        { str: '(', marked: false },
+        { str: '(', marked: true },
+        { str: '1', marked: true },
+        { str:' * ',marked: true },
+        { str: '2', marked: true },
+        { str: ')', marked: true },
+        { str:' + ',marked: false },
+        { str: '3', marked: false },
+        { str: ')', marked: false }
       ]);
     });
   });
