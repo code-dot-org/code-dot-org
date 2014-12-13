@@ -6,7 +6,8 @@
         = data_t_suffix('script.name', @script.name, "title")
         - if @script.beta?
           %span.betatext
-            != "&nbsp; beta"
+            &nbsp;
+            = t('beta')
 
       %p.smallwhitetext
         = data_t_suffix('script.name', @script.name, "description")

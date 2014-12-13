@@ -27,7 +27,7 @@
   "errorIncompleteBlockInFunction": "Klik \"sunting\" untuk memastikan bahwa Anda tidak menyisakan satupun blok di dalam fungsi ini.",
   "errorParamInputUnattached": "Jangan lupa untuk memasang blok pada setiap parameter masukan di dalam blok fungsi pada program ini.",
   "errorUnusedParam": "Anda menambahkan blok parameter, tapi tidak digunakan kemudian. Klik \"sunting\" untuk memastikan penggunaan parameter tersebut dan menempatkannya di blok parameter di dalam Blok Hijau.",
-  "errorRequiredParamsMissing": "Buatlah sebuah parameter untuk fungsi ini dengan mengeklik \"sunting\" dan menambahkan parameter yang diperlukan. Geser blok parameter baru tersebut ke dalam fungsi ini.",
+  "errorRequiredParamsMissing": "Buatlah sebuah parameter untuk fungsi ini dengan mengklik \"sunting\" dan menambahkan parameter yang diperlukan. Geser blok parameter baru tersebut ke dalam fungsi ini.",
   "errorUnusedFunction": "Anda membuat sebuah fungsi, tetapi tidak digunakan dalam program ini! Klik tombol \"Fungsi\" pada Kotak Perkakas dan pastikan Anda menggunakan fungsi tersebut.",
   "errorQuestionMarksInNumberField": "Cobalah mengganti \"???\" dengan sebuah nilai.",
   "extraTopBlocks": "Anda memiliki blok tidak terpasang. Apakah maksud anda untuk menempelkannya ke blok \"when run\"?",

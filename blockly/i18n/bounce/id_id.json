@@ -105,7 +105,7 @@
   "whenLeft": "Ketika anak panah kiri",
   "whenLeftTooltip": "Laksanakan tindakan-tindakan di bawah ini ketika tombol panah kiri ditekan.",
   "whenPaddleCollided": "ketika bola menyentuh kayuh",
-  "whenPaddleCollidedTooltip": "Melaksanakan aksi-aksi di bawah ini ketika bola bertabrakan dengan dayung.",
+  "whenPaddleCollidedTooltip": "Laksanakan aksi-aksi di bawah ini ketika bola bertabrakan dengan dayung.",
   "whenRight": "Ketika anak panah kanan",
   "whenRightTooltip": "Laksanakan tindakan-tindakan di bawah ini ketika tombol panah kanan ditekan.",
   "whenUp": "Bila tanda panah atas",

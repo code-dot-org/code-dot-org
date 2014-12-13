@@ -21,12 +21,12 @@ Contact: [**CONTACT INFORMATION**]
 **DATE** - [**INSERT NAME**] joined the principal and faculty members of [**INSERT NAME OF SCHOOL**], business leaders and local families today for [**NAME OF EVENT**] to participate in the Hour of Code as part of Computer Science Education Week . [INSERT NAME] and community members were among tens of millions of people around the world to take part in the largest learning event in history.
 
 [**INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:**]  
-“Daniels Run Elementary school held a school-wide Hour of Code event to expose its students to computer science. More than 700 students from all grades did at least one Hour of Code. And a dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.”
+“Daniels Run Elementary school held a school-wide Hour of Code event to expose its students to computer science. Mere end 700 elever på alle klassetrin var igennem mindst en Hour of Code. Og en halv snes forældre og frivillige fra lokalområdet hjalp med dagen og bragte børnene sammen, for at vise hvorfor programmering har betydning i disse elevers liv"
 
-[**SAMPLE STOCK TEXT FOR CONTEXT:**]  
-Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education.
+[**EKSEMPELTEKST SOM KONTEKST:**]   
+Vi finder computere overalt, men færre skoler underviser i programmering end for 10 år siden. Piger og farvede elever er stærkt underrepræsenterede. Den gode nyhed er, at vi er ved at ændre dette. The Hour of Code is gateway toward providing all students with access to high-quality computer science education.
 
-During Computer Science Education Week last year, 15 million students tried the Hour of Code. Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+During Computer Science Education Week last year, 15 million students tried the Hour of Code. Programmering var på hjemmesiderne hos Google, MSN, Yahoo! og Disney. Præsident Obama, Shakira og Ashton Kutcher satte #HourOfCode igang med videoer. Over 100 partnere fandt sammen om at støtte denne bevægelse.
 
 This year the Hour of Code movement is aiming for 100 million students.
 
