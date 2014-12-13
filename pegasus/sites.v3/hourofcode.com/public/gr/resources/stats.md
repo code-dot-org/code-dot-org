@@ -1,6 +1,6 @@
 
 
-[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
+
 
 # Blurbs and Useful Stats
 
@@ -14,4 +14,3 @@
 
 ![εικόνα](http://code.org/images/fit-8000/Code.org_infographic.png)
 
-<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>
