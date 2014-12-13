@@ -9,7 +9,7 @@
 
 [DATE]
 
-Whereas computing technology is an integral part of culture and is transforming how people interact with each other and the world around them;
+Computer-teknologi er en integreret del af vores kultur og forandrer hvordan mennesker interagerer med hinanden og verden omkring dem;
 
 Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
 
