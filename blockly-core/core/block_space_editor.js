@@ -501,7 +501,7 @@ Blockly.BlockSpaceEditor.prototype.onMouseDown_ = function(e) {
  * @private
  */
 Blockly.BlockSpaceEditor.prototype.onMouseUp_ = function(e) {
-  this.setCursorHand_(false);
+  Blockly.Css.setCursor(Blockly.Css.Cursor.OPEN);
   this.blockSpace.dragMode = false;
 };
 
@@ -692,30 +692,6 @@ Blockly.BlockSpaceEditor.prototype.hideChaff = function(opt_allowToolbox) {
     this.toolbox.flyout_ && this.toolbox.flyout_.autoClose) {
     this.toolbox.clearSelection();
   }
-};
-
-/**
- * Set the mouse cursor to be either a closed hand or the default.
- * @param {boolean} closed True for closed hand.
- * @private
- */
-Blockly.BlockSpaceEditor.prototype.setCursorHand_ = function(closed) {
-  if (Blockly.readOnly) {
-    return;
-  }
-  /* Hotspot coordinates are baked into the CUR file, but they are still
-   required due to a Chrome bug.
-   http://code.google.com/p/chromium/issues/detail?id=1446 */
-  var cursor = '';
-  if (closed) {
-    cursor = 'url(' + Blockly.assetUrl('media/handclosed.cur') + ') 7 3, auto';
-  }
-  if (Blockly.selected) {
-    Blockly.selected.getSvgRoot().style.cursor = cursor;
-  }
-  // Set cursor on the SVG surface as well as block so that rapid movements
-  // don't result in cursor changing to an arrow momentarily.
-  this.svg_.style.cursor = cursor;
 };
 
 /**

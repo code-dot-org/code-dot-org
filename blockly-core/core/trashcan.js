@@ -253,6 +253,8 @@ Blockly.Trashcan.prototype.setOpen_ = function(state) {
   }
   this.isOpen = state;
   this.animateLid_();
+  Blockly.Css.setCursor(state ? Blockly.Css.Cursor.DELETE :
+      Blockly.Css.Cursor.CLOSED);
 };
 
 /**
