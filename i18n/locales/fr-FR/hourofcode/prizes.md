@@ -32,7 +32,7 @@ One lucky school in ***every*** U.S. state (+ Washington D.C.) won $10,000 worth
 
 ## Lucky classrooms win a video chat with a guest speaker! {#video_chat}
 
-20 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Your students will be able to ask questions and chat with technology-industry leaders. **The submission period has ended. Winners will be announced soon.**
+20 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Your students will be able to ask questions and chat with technology-industry leaders. **The submission period has ended. Les gagnants seront annoncés bientôt.**
 
 <% end %>
 
@@ -54,7 +54,7 @@ One lucky school in ***every*** U.S. state (+ Washington D.C.) won $10,000 worth
 7:30 AM PST - [Cory Booker](http://www.youtube.com/watch?v=wD0Heuvv87I)   
 10:00 AM PST - [JR Hildebrand](http://www.youtube.com/watch?v=DfhAdnosy58)   
 11:00 AM PST - [Clara Shih](http://www.youtube.com/watch?v=2p7uhb1qulA)   
-12:00 PM PST - [Jessica Alba](http://www.youtube.com/watch?v=Kxm7PK-iS3c)   
+12:00 PM PST - [Jessica Alba](http://youtu.be/m4oEbAQbWCE)   
 
 
 **THURSDAY**, December 11   
@@ -90,6 +90,26 @@ Every educator who hosts an Hour of Code for students will receive 10 GB of Drop
 15 lucky schools across Canada will be gifted 2 hands-on STEM workshops delivered by one of Actua's [33 Network Members](http://www.actua.ca/about-members/). Actua members deliver science, technology, engineering, and math (STEM) workshops that are connected to provincial and territorial learning curriculum for K-12 students. These in-classroom experiences are delivered by passionate, highly-trained undergraduate student role models in STEM. Teachers can expect exciting demonstrations, interactive experiments and a lot of STEM fun for their students! Please note that in-classroom workshop availability may vary in remote and rural communities.
 
 [Actua](http://actua.ca/) is Canada’s leader in Science, Technology, Engineering, and Math Outreach. Each year Actua reaches over 225,000 youth in over 500 communities through its barrier-breaking programming.
+
+**Congratulations to the 2014 winners!**
+
+| School                          | City        | Actua Network Member            |
+| ------------------------------- | ----------- | ------------------------------- |
+| Spencer Middle School           | Victoria    | Science Venture                 |
+| Malcolm Tweddle School          | Edmonton    | DiscoverE                       |
+| Britannia Elementary            | Vancouver   | GEERing Up                      |
+| Captain John Palliser           | Calgary     | Minds in Motion                 |
+| St. Josaphat School             | Regina      | EYES                            |
+| Bishop Roborecki School         | Saskatoon   | SCI-FI                          |
+| Dalhousie Elementary School     | Winnipeg    | WISE Kid-Netic Energy           |
+| Hillfield Strathallan College   | Hamilton    | Venture Engineering and Science |
+| Byron Northview Public School   | London      | Discovery Western               |
+| Stanley Public School           | Toronto     | Science Explorations            |
+| Ottawa Catholic School Board    | Ottawa      | Virtual Ventures                |
+| École Arc-en-Ciel               | Montreal    | Folie Technique                 |
+| Saint Vincent Elementary School | Laval       | Musee Armand Frappier           |
+| Garden Creek School             | Fredericton | Worlds UNBound                  |
+| Armbrae Academy                 | Halifax     | SuperNOVA                       |
 
 ## Kids Code Jeunesse will help support you in the classroom! {#kids_code}
 
@@ -133,7 +153,7 @@ No, unfortunately, because of logistics we are unable to offer the video chat pr
 
 We would love to help teachers in public and private schools alike, but at this time, it comes down to logistics. We have partnered with [DonorsChoose.org](http://donorschoose.org) to administer classroom funding prizes, which only works with public, US K-12 schools. According to DonorsChoose.org, the organization is better able to access consistent and accurate data that's available for public schools.
 
-## I’m outside the United States. Can I qualify for prizes?
+## Je ne suis pas aux États-Unis. Suis-je eligible pour les prix ?
 
 Due to a small full-time staff, Code.org is unable to handle the logistics of administering international prizes. Because of this people outside the US are unable to qualify for prizes.
 

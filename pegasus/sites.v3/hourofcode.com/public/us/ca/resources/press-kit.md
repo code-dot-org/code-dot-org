@@ -1,6 +1,6 @@
 
 
-[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
+
 
 ## Com atraure els mitjans de comunicació al teu esdeveniment d'Hora de Codi
 
@@ -56,4 +56,3 @@ Code.org® és un estament públic 501c3 sense ànim de lucre dedicat a ampliar 
   
 Troba més recursos i correus d'exemple [aquí](<%= hoc_uri('/resources') %>).
 
-<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

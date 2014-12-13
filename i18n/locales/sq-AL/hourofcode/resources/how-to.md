@@ -4,13 +4,7 @@ titulli: Si të udhëzoni paraqitja: e gjerë nav: burime_nav
 
 * * *
 
-<div class="row">
-  <h1 class="col-sm-6">
-    Si mund të zhvilloni mësimin një Orë Kodim
-  </h1>
-</div>
-
-</div>
+# How to teach one Hour of Code
 
 ## 1) Shikoni këtë video  <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
 ## 2) Provoni këto tutoriale:
@@ -82,4 +76,4 @@ Most kids don’t know what computer science is. Here are some ideas:
     
     **What comes after the Hour of Code?**
     
-    The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up your event</button></a>
+    The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>

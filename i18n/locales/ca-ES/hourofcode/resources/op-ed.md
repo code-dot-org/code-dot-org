@@ -11,25 +11,25 @@ title: Sample Op-ed Supportive of Computer Science Education Week and Hour of Co
 
 Go to http://code.org/promote to find state specific information about computer science.
 
-**Title: Computing…Where the Jobs Are**
+**Títol: Programació…Allà on hi ha feina**
 
 **By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]**
 
-Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
+Els ordinadors són a tot arreu. Són a les nostres butxaques. Estan en les nostres parets. Estan als nostres cotxes. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. I tots aquests ordinadors tenen una cosa en comú. Ells depenen de programari per dir-los què fer.
 
-But who exactly is going to write this software?
+Però qui exactament escriurà aquest programari?
 
 Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
 
 At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for a lack of enough individuals with the right skill sets.
 
-Why is this? And how can we address it?
+A què es deu això? I com podem redreçar-ho?
 
 The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
 
 Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
 
-We need to make some changes.
+Hem de fer alguns canvis.
 
 **[OPTIONAL FOR STATES WHERE THIS APPLIES]**
 

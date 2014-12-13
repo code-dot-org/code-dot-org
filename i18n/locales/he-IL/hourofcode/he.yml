@@ -1,151 +1,153 @@
-"he":
-  site_name: "HOUR of CODE"
-  language: "עברית"
-  front_title: "הצטרף לאירוע הלמידה הגדול ביותר בהיסטוריה, 8-14 לדצמבר, 2014"
-  coming_soon: "בקרוב"
-  front_header_banner: "הצטרף לאירוע הלמידה הגדול ביותר בהיסטוריה, 8-14 לדצמבר, 2014"
+he:
+  site_name: HOUR of CODE
+  language: עברית
+  front_title: הצטרף לאירוע הלמידה הגדול ביותר בהיסטוריה, 8-14 לדצמבר, 2014
+  coming_soon: בקרוב
+  front_header_banner: הצטרף לאירוע הלמידה הגדול ביותר בהיסטוריה, 8-14 לדצמבר, 2014
   front_intro_default: 'שעה של קוד היא תנועה עולמית הנגישה לעשרות מיליוני סטודנטים במעל 180 מדינות. כל אחד, בכל מקום יכול לארגן אירוע עבור שעה של קוד. הדרכות של שעה זמינות ביותר מ-30 שפות. אין צורך בניסיון קודם. <strong>גילאים 4 עד 104.</strong>'
   front_intro_default_uk: 'השעה של הקוד היא תנועה עולמית בתפוצה של עשרות מיליוני אנשים וב 180+ מדינות . כל אחד יכול לארגן אירוע שעה של אירוע קוד . מעל 3 מליון אנשים עשו את השעה הראשונה של הקוד בבריטניה . בואו נכפיל  את התפוצה בחודש דצמבר ! <strong> לא ניסיון דרוש . גילאי 4-104 .</strong>'
-  front_watch_video: "צפה בסרטון החדש"
-  header_menu_resources: "מקורות"
-  header_menu_faq: "שאלות ותשובות"
-  header_menu_prizes: "פרסים"
-  header_menu_uk_code_org: "uk.code.org"
+  front_watch_video: צפה בסרטון החדש
+  header_menu_resources: מקורות
+  header_menu_faq: שאלות ותשובות
+  header_menu_prizes: פרסים
+  header_menu_uk_code_org: uk.code.org
   company_4-H: 4-H Youth Development
-  company_asa: "Afterschool Alliance"
-  company_bgca: "Boys and Girls Club of America"
-  company_bsusa: "Boy Scouts of America"
-  company_cgcs: "Council of the Great City Schools"
-  company_gsusa: "Girl Scouts of America"
-  company_khanacademy: "Khan Academy"
-  company_mesa: "Mathematics Engineering Science Achievement"
-  company_napcs: "National Alliance of Public Charter Schools"
-  company_ngcp: "National Girls Collaborative Project"
-  company_teachforall: "Teach for All"
-  company_teachforamerica: "Teach for America"
-  company_tntp: "TNTP"
-  prizes_all: "פרסים לכל מארגן"
-  prizes_every_organizer: "כל מארגן של שעה של קוד יקבל אשראי מ-Dropbox או סקייפ, כאות תודה"
+  company_asa: Afterschool Alliance
+  company_bgca: Boys and Girls Club of America
+  company_bsusa: Boy Scouts of America
+  company_cgcs: Council of the Great City Schools
+  company_gsusa: Girl Scouts of America
+  company_khanacademy: Khan Academy
+  company_mesa: Mathematics Engineering Science Achievement
+  company_napcs: National Alliance of Public Charter Schools
+  company_ngcp: National Girls Collaborative Project
+  company_teachforall: Teach for All
+  company_teachforamerica: Teach for America
+  company_tntp: TNTP
+  prizes_all: פרסים לכל מארגן
+  prizes_every_organizer: כל מארגן של שעה של קוד יקבל אשראי מ-Dropbox או סקייפ, כאות תודה
   prizes_technology: 'בית ספר ציבורי אחד בתוך כל ארה"ב יזכה במוצרי טכנולוגיה בשווי $10,000'
   prizes_tech_chats: '# כיתות יזכו לשיחות וידאו עם אורחים מיוחדים'
-  prizes_robots: "100 כיתות יזכו בסט של רובוטים ניתנים לתכנות"
-  prizes_brilliant: "בית ספר אחד בכל מחוז יקבל 2000 דולר עבור פרוייקט מבריק"
-  prizes_actua: "15 בתי-ספר ברחבי קנדה יקבלו 2 סדנאות STEM מעשית על ידי אחד החברים של Actua"
-  prizes_details: "פרטים"
-  whats_next_header: "מה הדבר הבא?"
+  prizes_robots: 100 כיתות יזכו בסט של רובוטים ניתנים לתכנות
+  prizes_brilliant: בית ספר אחד בכל מחוז יקבל 2000 דולר עבור פרוייקט מבריק
+  prizes_actua: 15 בתי-ספר ברחבי קנדה יקבלו 2 סדנאות STEM מעשית על ידי אחד החברים של Actua
+  prizes_details: פרטים
+  whats_next_header: מה הדבר הבא?
   whats_next_description: "אנו נשלח לך חומרים, עצות מועילות עבור האירוע שלכם. בקרוב יהיו חומרי לימוד חדשים של 2014 שהתאימו לכל דפדפן, טלפון חכם – או אפילו ללא מחשב! <a href='http://code.org/learn'> נסה הדרכות עדכניות</a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'> כיצד להפעיל Hour of Code</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'> לקדם את Hour of Code</a>"
   n_have_learned_an_hoc: '<h1>#</h1><h3>ניסו</h3><h2>שעה של קוד</h2>'
-  anybody_can_learn: "כל אחד יכול ללמוד."
-  register_now: "הירשם עכשיו"
-  front_join_us_heading: "שעה של קוד לכל תלמיד."
-  front_join_us_description: "מדעי המחשב הוא בסיס לכל תלמיד. עזרו לנו להציג את זה למאה מיליון."
-  front_join_us_button: "הצטרפו אלינו"
-  front_what_is_hoc: "מהו Hour of Code?"
-  front_join_us_header: "כל אחד יכול ללמוד את היסודות בכיף !"
+  anybody_can_learn: כל אחד יכול ללמוד.
+  register_now: הירשם עכשיו
+  front_join_us_heading: שעה של קוד לכל תלמיד.
+  front_join_us_description: מדעי המחשב הוא בסיס לכל תלמיד. עזרו לנו להציג את זה למאה מיליון.
+  front_join_us_button: הצטרפו אלינו
+  front_what_is_hoc: מהו Hour of Code?
+  front_join_us_header: כל אחד יכול ללמוד את היסודות בכיף !
   front_join_us_header_uk: 'בכל עת במהלך דצמבר 8-14  Hour of Code  מארגן אירוע כדי להראות כי כל אחד יכול ללמוד את היסודות ו לעשות את זה בכיף!'
-  front_join_us_teacher: "האם אתה מורה ?"
-  front_join_us_inspire: "השראה את הסטודנטים בעזרת"
-  front_join_us_inspire_link: "Hour of Code בכיתה."
-  front_join_us_parent: "האם אתה הורה?"
-  front_join_us_ask_link: "תבקש מבית הספר המקומי שלך"
-  front_join_us_ask: "לארח את Hour of Code."
-  front_join_us_computer_science: "אוהב מדעי המחשב?"
-  front_join_us_spread: ".תפיץ את זה בעולם."
-  front_join_us_organize: "או לארגן אירוע Hour of Code בעצמך."
-  front_join_us_how_to_run: "מידע אודות איך להפעיל Hour of Code"
-  front_join_us_help_promote: "לסייע בקידום Hour of Code"
-  front_join_us_students: "סטודנטים"
-  front_join_us_teachers: "מורים"
-  front_join_us_everyone: "כולם"
-  front_join_us_try: "נסה את זה"
-  front_join_us_host: "תארח אותו"
-  front_join_us_support: "תתמוך בו"
+  front_join_us_teacher: האם אתה מורה ?
+  front_join_us_inspire: השראה את הסטודנטים בעזרת
+  front_join_us_inspire_link: Hour of Code בכיתה.
+  front_join_us_parent: האם אתה הורה?
+  front_join_us_ask_link: תבקש מבית הספר המקומי שלך
+  front_join_us_ask: לארח את Hour of Code.
+  front_join_us_computer_science: אוהב מדעי המחשב?
+  front_join_us_spread: .תפיץ את זה בעולם.
+  front_join_us_organize: או לארגן אירוע Hour of Code בעצמך.
+  front_join_us_how_to_run: מידע אודות איך להפעיל Hour of Code
+  front_join_us_help_promote: לסייע בקידום Hour of Code
+  front_join_us_students: סטודנטים
+  front_join_us_teachers: מורים
+  front_join_us_everyone: כולם
+  front_join_us_try: נסה את זה
+  front_join_us_host: תארח אותו
+  front_join_us_support: תתמוך בו
   signup_header: 'תארגנ את האירוע  Hour of Code במהלך דצמבר 8-14, ולרשום את זה כאן.'
-  signup_name_label: "שמך"
+  signup_name_label: שמך
   signup_email_label: 'הדוא"ל שלך'
-  signup_organization_name_label: "שם בית הספר או הארגון"
-  signup_event_type_label: "סוג האירוע"
-  signup_event_entire_school_label: "כל הבית הספר שלי משתתף"
-  signup_event_location_label: "מיקום האירוע (אופציונלי)"
-  signup_special_event_flag_label: "סמן את האירוע המיוחד שלי"
-  signup_special_event_details_label: "פרטי אירוע מיוחד"
+  signup_organization_name_label: שם בית הספר או הארגון
+  signup_event_type_label: סוג האירוע
+  signup_event_entire_school_label: כל הבית הספר שלי משתתף
+  signup_event_location_label: מיקום האירוע (אופציונלי)
+  signup_special_event_flag_label: סמן את האירוע המיוחד שלי
+  signup_special_event_details_label: פרטי אירוע מיוחד
   signup_send_posters_flag_label: 'שלח <a href= "/resources#posters"> פוסטרים</a> בבית הספר או הארגון שלי'
-  signup_send_posters_address_label: "כתובת בית הספר או הארגון"
-  signup_whole_school_flag_label: "אירוע זה הוא עבור כל בית הספר"
-  signup_your_event: "הירשם האירוע שלכם"
-  signup_name_placeholder: "שמך"
-  signup_email_placeholder: "you@example.com"
-  signup_organization_name_placeholder: "לדוגמה, בית הספר תיכון לינקולן"
+  signup_send_posters_address_label: כתובת בית הספר או הארגון
+  signup_whole_school_flag_label: אירוע זה הוא עבור כל בית הספר
+  signup_your_event: הירשם האירוע שלכם
+  signup_name_placeholder: שמך
+  signup_email_placeholder: you@example.com
+  signup_organization_name_placeholder: לדוגמה, בית הספר תיכון לינקולן
   signup_event_location_placeholder: "מיקוד והמדינה או כתובת מלא ה. \r (נשתמש בזה כדי למקום סיכה על המפה שלנו)"
-  signup_special_event_details_placeholder: "לתאר מה הופך את זה אירוע מיוחד"
-  signup_send_posters_address_placeholder: "כתובת זו לא ישותף על המפה שלנו"
-  signup_event_type_in_school: "בבית הספר"
-  signup_event_type_out_of_school: "מחוץ לבית הספר"
-  signup_submit_label: "הירשם"
-  signup_submit_error_message: "אירעה שגיאה. בדוק כדי לוודא כי כל שדות החובה מולאו כראוי."
+  signup_special_event_details_placeholder: לתאר מה הופך את זה אירוע מיוחד
+  signup_send_posters_address_placeholder: כתובת זו לא ישותף על המפה שלנו
+  signup_event_type_in_school: בבית הספר
+  signup_event_type_out_of_school: מחוץ לבית הספר
+  signup_submit_label: הירשם
+  signup_submit_error_message: אירעה שגיאה. בדוק כדי לוודא כי כל שדות החובה מולאו כראוי.
   signup_thank_you_header: 'תודה על  נכונות לארח אירוע Hour of Code .'
-  signup_thank_you_message: "שלחנו לך מייל אישור עם פרטים, כדי לעזור לך להתחיל בעבודה."
+  signup_thank_you_message: שלחנו לך מייל אישור עם פרטים, כדי לעזור לך להתחיל בעבודה.
   map_header: '# אירועים של Hour of Code ברחבי העולם'
   map_header_company: '# לפי החברה המארגנת'
-  map_search_placeholder: "Search for Hour of Code events"
-  map_search_search: "Search"
-  map_search_reset: "Reset"
-  meta_tag_og_title: "The Hour of Code is here"
+  map_search_placeholder: 'לחיפוש אירועים של "שעה של קוד"'
+  map_search_search: חיפוש
+  map_search_reset: לאפס
+  meta_tag_og_title: '"שעה של הקוד" הוא כאן'
   meta_tag_og_description: 'Hour of Code הוא תנועה עולמית מגיעה לעשרות מיליוני תלמידים ב 180+ מדינות, מ- 30 שפות. גילאי 4 עד 104.'
-  meta_tag_twitter_title: "The Hour of Code is here"
+  meta_tag_twitter_title: '"שעה של הקוד" הוא כאן'
   meta_tag_twitter_description: 'Hour of Code הוא תנועה עולמית מגיעה לעשרות מיליוני תלמידים ב 180+ מדינות, מ- 30 שפות. גילאי 4 עד 104.'
   twitter_default_text: 'אני משתתפת בתערוכה של השנה #HourOfCode, האם אתה? @codeorg'
-  hardware_prizes_form_name_label: "שמך"
-  hardware_prizes_form_name_placeholder: "שמך"
+  hardware_prizes_form_name_label: שמך
+  hardware_prizes_form_name_placeholder: שמך
   hardware_prizes_form_email_label: 'הדוא"ל שלך'
   hardware_prizes_form_email_placeholder: 'הדוא"ל שלך'
-  hardware_prizes_form_school_name_label: "שם בית הספר"
-  hardware_prizes_form_school_name_placeholder: "שם בית הספר"
-  hardware_prizes_form_school_address_label: "כתובת בית הספר"
-  hardware_prizes_form_school_address_placeholder: "כתובת בית הספר"
-  hardware_prizes_form_school_type_label: "סוג בית הספר"
-  hardware_prizes_form_school_type_option_elementary: "בית ספר יסודי"
-  hardware_prizes_form_school_type_option_middle_school: "חטיבת הביניים"
-  hardware_prizes_form_school_type_option_high_school: "בית ספר תיכון"
+  hardware_prizes_form_school_name_label: שם בית הספר
+  hardware_prizes_form_school_name_placeholder: שם בית הספר
+  hardware_prizes_form_school_address_label: כתובת בית הספר
+  hardware_prizes_form_school_address_placeholder: כתובת בית הספר
+  hardware_prizes_form_school_type_label: סוג בית הספר
+  hardware_prizes_form_school_type_option_elementary: בית ספר יסודי
+  hardware_prizes_form_school_type_option_middle_school: חטיבת הביניים
+  hardware_prizes_form_school_type_option_high_school: בית ספר תיכון
   hardware_prizes_form_qualifying_school_label: '. זה ספר ציבורי K-12 של ארה"ב'
-  hardware_prizes_form_number_students_label: "מספר התלמידים המשתתפים"
-  hardware_prizes_form_number_students_placeholder: "מספר התלמידים"
+  hardware_prizes_form_number_students_label: מספר התלמידים המשתתפים
+  hardware_prizes_form_number_students_placeholder: מספר התלמידים
   hardware_prizes_form_plan_file_label: 'להעלות את התוכנית לוגיסטיקה ל Hour of Code '
   hardware_prizes_form_plan_file_description: 'להגיש לוח זמנים של איך אתה מתכוון לארגן עבודה של לכל תלמיד בHour of Code בבית הספר שלך. ראה תוכנית דגימה: #PDF # | #Word #'
-  hardware_prizes_form_submit_label: "שלח"
-  hoc_faq_title: "שאלות נפוצות"
-  hoc_faq_what_is_hoc_q: "מהו Hour of Code?"
-  hoc_faq_what_is_hoc_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://code.org/learn'>Check out the tutorials</a>."
-  hoc_faq_last_year: "Try the tutorials"
-  hoc_faq_when_is_hoc_q: "מתי הHour of Code?"
+  hardware_prizes_form_submit_label: שלח
+  hoc_faq_title: שאלות נפוצות
+  hoc_faq_what_is_hoc_q: מהו Hour of Code?
+  hoc_faq_what_is_hoc_a: |-
+    "שעה של הקוד" היא שעה אחת של מבוא למדעי המחשב, שנועדו להסביר מה זה קוד ולהראות כי כל אחד יכול ללמוד את היסודות של מדעי המחשב. <a href='http://code.org/learn'> בדוק את הלימוד</a>.
+  hoc_faq_last_year: נסה את חומר הלימוד
+  hoc_faq_when_is_hoc_q: מתי הHour of Code?
   hoc_faq_when_is_hoc_a: "כל אחד יכול לארח Hour of Code בכל עת, אך מטרת הקמפיין לאפשר לעשרות מיליוני סטודנטים לנסות שעה קוד במהלך דצמבר 8-14, 2014, חגיגות יום <a href='http://csedweek.org'> בשבוע חינוך מדעי המחשב</a>. זוא <i>שעה</i> ספציפית אחת? לא. אתה יכול לעשות Hour of Code בכל עת במהלך השבוע. (ו, אם אתה לא יכול לעשות את זה במהלך שבוע זה, לעשות את זה שבוע לפני או אחרי)."
-  hoc_faq_why_cs_q: "למה מדעי המחשב?"
+  hoc_faq_why_cs_q: למה מדעי המחשב?
   hoc_faq_why_cs_a: "<i>כל</i> תלמיד צריך את ההזדמנות ללמוד מדעי המחשב.  זה מסייעת לטפח מיומנויות לפתרון בעיות, לוגיקה ויצירתיות. על ידי התחלה מוקדמת, לתלמידים יהיה בסיס להצלחה בכל נתיב הקריירה המאה ה-21. ראה סטטיסטיקה ב- <a href='http://code.org'> Code.org</a>."
-  hoc_faq_how_participate_q: "כיצד ניתן להשתתף ב-לHour of Code?"
+  hoc_faq_how_participate_q: כיצד ניתן להשתתף ב-לHour of Code?
   hoc_faq_how_participate_a: "להירשם לארח אירוע Hour of Code <a href='http://hourofcode.org'> כאן</a>, <a href='target-resources-how-to'> להתחיל לתכנן</a>. באפשרותך לארגן אירוע Hour of Code בבית ספרך או מהקהילה שלכם &mdash; כמו במועדון אחרי שעות הלימודים, ללא כוונת רווח או בעבודה. או, פשוט נסה זאת בעצמך ב8 דצמבר."
-  hoc_faq_behind_hoc_q: "מי עומד מאחורי Hour of Code?"
+  hoc_faq_behind_hoc_q: מי עומד מאחורי Hour of Code?
   hoc_faq_behind_hoc_a: "שעה של הקוד מאורגן על ידי <a href='http://code.org'> Code.org</a>, a חברה הציבורית 501C3 ללא כוונת רווח מוקדשת להרחבת השתתפות במדעי המחשב על-ידי זמינותה בכמה שיותר בבתי ספר, הגדלת השתתפות על-ידי נשים וסטודנטים בעלי צבע עור שונה שאינם מיוצגים כראוי . <a href='http://code.org/about/partners'> קואליציה חסרת תקדים של שותפים</a> באים יחד כדי לתמוך ב-Hour of Code,  בתוחם &mdash; לרבות Microsoft, אפל, אמזון, בנים, בנות מועדונים של אמריקה, הנהלת המכללה."
-  hoc_faq_host_q: "אני לא יודע דבר אודות כתיבת קוד. . אני עדיין יכול לארח אירוע?"
+  hoc_faq_host_q: אני לא יודע דבר אודות כתיבת קוד. . אני עדיין יכול לארח אירוע?
   hoc_faq_host_a: "כמובן.  פעילויות של Hour of Code הן בהדרכה עצמית. כל מה שאתה צריך לעשות. זה <a href='http://code.org/learn'> לנסות הדרכות הנוכחיות שלנו</a>, לבחור את המדריך שאתה רוצה, לבחור שעה &mdash; נטפל בשאר. יש לנו גם אפשרויות עבור כל גיל, רמת הניסיון, מהגן ומעלה. להתחיל לתכנן את האירוע שלכם על-ידי קריאת <a href='target-resources-how-to'> כיצד להנחות</a>."
-  hoc_faq_need_computers_q: "האם יש צורך מחשבים עבור כל משתתף?"
+  hoc_faq_need_computers_q: האם יש צורך מחשבים עבור כל משתתף?
   hoc_faq_need_computers_a: "לא.  יש לנו הדרכות של Hour of Code העובדות על מחשבים אישיים, טלפונים חכמים, טבליות, וכמה הדורשים אין מחשב בכלל! באפשרותך להצטרף בכל מקום שאתה נמצא, עם כל מה שיש לך. <p><i>להלן כמה אפשרויות:</i> <br><ul><li><b>עובדים בזוגות.</b> מחקרים מראים שתלמידים לומדים בצורה הטובה ביותר ב <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'> תכנות זוגית</a>, חולקים מחשב ועבודים במשותף. לעודד את התלמידים שלך לחלוק חדר. <li><b>להשתמש המסך מוקרן.</b> אם יש לך מקרן ומסך עבור מחשב המחובר לאינטרנט, הקבוצה כולה שלך יכול לעשות שעה קוד ביחד. לצפות וידאו חלקים יחד וכל אחד בתורו לפתור חידות או לענות על שאלות. <li><b>ללכת מנותק.</b> אנו מציעים הדרכות שאינן הדורשות אין מחשב. </ul>"
   hoc_faq_international_q: 'אני ב<country>. כיצד ניתן להשתתף באירועה בינלאומי?'
   hoc_faq_international_a: "כל אחד יכול לארגן אירוע Hour of Code, בכל מקום בעולם. בשנה שעברה, תלמידים ברחבי העולם חברו יחד עבור Hour of Code. גלה עוד <a href='target-resources'> כאן</a>."
-  hoc_faq_tutorial_q: "איך אני יכול להכין חומרי הדרכה של Hour of Code?"
+  hoc_faq_tutorial_q: איך אני יכול להכין חומרי הדרכה של Hour of Code?
   hoc_faq_tutorial_a: "אם אתה מעוניין להיות שותף להכנת חומרי לימוד, <a href='target-tutorial-guidelines'> ראה הנחיות והוראות שלנו</a>. נשמח לארח מגוון אפשרויות , אבל המטרה העיקרית היא למטב את חוויית עבור תלמידים ומורים שונים במדעי המחשב."
-  hoc_faq_more_questions_q: "עדיין יש עוד שאלות?"
+  hoc_faq_more_questions_q: עדיין יש עוד שאלות?
   hoc_faq_more_questions_a: "נסה למצוא תשובה <a href='http://support.code.org'> בפורום התמיכה  שלנו</a>."
-  hoc_faq_scratch_q: "I am doing Scratch for Hour of Code, but what if my students have iPads rather than laptops?"
-  hoc_faq_scratch_a: "Scratch doesn't run on tablets. If your students are young, they can use the ScratchJR iPad app (for early-readers). If you look at the tutorials on <a href='http://code.org/learn'>Code.org/learn</a>, you can find other tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark."
-  hoc_faq_account_q: "Do students need to log on using an account?"
-  hoc_faq_account_a: "No. Absolutely no signup or login is required for students to try the Hour of Code. Most of the <a href='http://code.org/learn/beyond'>follow-on courses</a> require account creation to save student progress."
-  hoc_faq_frozen_q: "Where is the tutorial with Anna and Elsa?"
-  hoc_faq_frozen_a: "It is now published on <a href='http://code.org/learn'>Code.org/learn</a>. We hope you enjoy it!"
-  hoc_faq_high_school_q: "Which activity should I do with high school students?"
+  hoc_faq_scratch_q: 'אני עושה Scratch ל"שעה של קוד", אבל מה אם התלמידים שלי יש iPads ולא מחשבים ניידים?'
+  hoc_faq_scratch_a: "Scratch לא עובד על טאבלטים. אם התלמידים שלך הם צעירים, הם יוכלו להשתמש ScratchJR iPad app (עבור מוקדם-הקוראים). אם תעיינו בההדרכות באתר <a href='http://code.org/learn'> Code.org/learn</a>, תוכלו למצוא הדרכות העובדות על iPads - מ-Code.org, Tynker, Lightbot או CodeSpark."
+  hoc_faq_account_q: האם סטודנטים צריכים להיכנס למערכת באמצעות חשבון אישי?
+  hoc_faq_account_a: |-
+    לא. הכניסה לצורך הכרות עם "שעה של קוד" ללא הרשמה . רוב <a href='http://code.org/learn/beyond'> הקורסים המשכית</a> מחייבים יצירת חשבון כדי להציל את התקדמות התלמיד.
+  hoc_faq_frozen_q: איפה חומרי הדרכה עם אנה ואלסה?
+  hoc_faq_frozen_a: "עכשיו המדריך פורסם ב- <a href='http://code.org/learn'> Code.org/learn</a>. אנו מקווים שתהנו!"
+  hoc_faq_high_school_q: איזו פעילות עלי לעשות עם תלמידי התיכון?
   hoc_faq_high_school_a: "Across all ages, we recommend trying one of the beginner tutorials on <a href='http://code.org/learn'>Code.org/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as KhanAcademy or CodeHS."
-  hoc_faq_more_questions_br_q: "Outras dúvidas?"
+  hoc_faq_more_questions_br_q: Outras dúvidas?
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
   hoc_faq_when_is_hoc_uk_a: "The Hour of Code will take place during December 8-14, 2014. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. The Hour of Code in the UK will happen at the same time as in the US where it is timed to celebrate the annual <a href='http://csedweek.org'>Computer Science Education Week.</a>"
@@ -155,7 +157,7 @@
   hoc_faq_host_uk_a: "Of course. Hour of Code activities are self-guided. All you have to do is pick the tutorial you want and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. <a href='http://uk.code.org/learn'>Try our current tutorials</a>."
   stats_hoc_2013_heading: 'סטטיסטיקה מדהימה מן  Hour of Code  שנה שעברה. בשבוע אחד בלבד:'
   stats_hoc_2013_image_alt: 'סטטיסטיקה של  Hour of Code 2013'
-  stats_growth: "זה היה המהיר ביותר להגיע 15 מיליון משתמשים."
+  stats_growth: זה היה המהיר ביותר להגיע 15 מיליון משתמשים.
   stats_tumblr: 'טאמבלר: 3.5 שנים'
   stats_facebook: 'פייסבוק: 3 שנים'
   stats_twitter: 'טוויטר: 2.5 שנים'
@@ -163,38 +165,38 @@
   stats_instagram: 'Instagram: 14 חודשים'
   stats_hoc: ' Hour of Code: 5 ימים'
   stats_global: '15 מיליון תלמידים ברחבי העולם למדו  Hour of Code.'
-  stats_girls_more: "יותר בנות התנסו מדעי המחשב מאשר ב-70 השנים האחרונות."
-  stats_girls_million: "יותר מ-10 מיליון בנות בשנת 2013"
+  stats_girls_more: יותר בנות התנסו מדעי המחשב מאשר ב-70 השנים האחרונות.
+  stats_girls_million: יותר מ-10 מיליון בנות בשנת 2013
   stats_nina: '"בכל יום הניבו תוצאות זהות &mdash; 100% האירוסין."-Peery ניקולס נינה, מורה'
   stats_student: '". זאה היתה ההזדמנות <b>של פעם בחיים</b> ."-מריאנה Alzate, לזוז'
   stats_michael: '" <b>לעולם לא</b> ראיתי את התלמידים שלי מתרגשים כך מלמידה."-Michael קלארק, מורה'
   resources_how_to: "המדריך ' כיצד לבצע ' עבור מורים"
-  resources_how_to_events: "מדריך כיצד לבצע אירוע"
+  resources_how_to_events: מדריך כיצד לבצע אירוע
   resources_how_to_districts: "המדריך ' כיצד לבצע ' עבור מחוזות"
   resources_how_to_officials: "המדריך ' כיצד לבצע ' עבור עובדי ציבור"
-  resources_handouts: "דפי מידע להפצה"
-  resources_videos: "סרטוני וידיאו"
-  resources_posters: "פוסטרים"
-  resources_social: "רשתות חברתיות"
-  resources_banners: "באנרים"
+  resources_handouts: דפי מידע להפצה
+  resources_videos: סרטוני וידיאו
+  resources_posters: פוסטרים
+  resources_social: רשתות חברתיות
+  resources_banners: באנרים
   resources_emails: ' מיילים לדוגמה'
-  resources_stats: "סטטיסטיקה שימושי ותקצירים"
-  resources_press_kit: "ערכה לעיתונאים"
+  resources_stats: סטטיסטיקה שימושי ותקצירים
+  resources_press_kit: ערכה לעיתונאים
   events_title: 'כל האירועים של Hour of Code '
-  events_nav_all: "כל האירועים"
-  events_nav_whole_schools: "כל בתי הספר"
-  events_nav_special: "אירועים מיוחדים"
-  events_nav_orgs: "ארגונים"
-  events_all_title: "כל האירועים של Hour of Code"
+  events_nav_all: כל האירועים
+  events_nav_whole_schools: כל בתי הספר
+  events_nav_special: אירועים מיוחדים
+  events_nav_orgs: ארגונים
+  events_all_title: כל האירועים של Hour of Code
   events_whole_school_title: 'אירועים של Hour of Code  לכל בית הספר'
-  events_special_title: "אירועים מיוחדים של Hour of Code"
+  events_special_title: אירועים מיוחדים של Hour of Code
   events_orgs_title: 'כל  האירועים של Hour of Code המאורגנים על ידי ארגונים'
-  event: "אירוע"
-  events: "אירועים"
-  footer_copyright_message: "זכויות יוצרים 2014 Code.org. כל הזכויות שמורות."
-  footer_trademark_message: "Hour of Code ™ הוא סימן מסחרי של Code.org."
-  footer_menu_partners: "שותפים"
-  footer_menu_contact: "צור קשר"
-  footer_menu_support: "תמיכה"
-  footer_menu_terms: "תנאי שימוש"
-  footer_menu_privacy: "מדיניות הפרטיות"
+  event: אירוע
+  events: אירועים
+  footer_copyright_message: זכויות יוצרים 2014 Code.org. כל הזכויות שמורות.
+  footer_trademark_message: Hour of Code ™ הוא סימן מסחרי של Code.org.
+  footer_menu_partners: שותפים
+  footer_menu_contact: צור קשר
+  footer_menu_support: תמיכה
+  footer_menu_terms: תנאי שימוש
+  footer_menu_privacy: מדיניות הפרטיות

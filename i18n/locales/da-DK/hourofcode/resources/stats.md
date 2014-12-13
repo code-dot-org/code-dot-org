@@ -10,7 +10,7 @@ Titel: Efterskrift og statistik layout: bred nav: resources_nav
 
 ### Bring kodning til din skole. Start med the Hour of Code
 
-Computere findes overalt, men langt færre skoler underviser i programmering end for 10 år siden. De gode nyheder er, at vi er på vej til at ændre dette. If you heard about the [Hour of Code](<%= hoc_uri('/') %>) last year, you might know it made history. På en uge, prøvede 15 millioner elever at programmere! The [Hour of Code](<%= hoc_uri('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= hoc_uri('/') %>) to host an Hour of Code this December 8-14 during Computer Science Education Week and help reach 100 million students by the end of the year. Add your school to the map, go to <http://hourofcode.com>
+Computere findes overalt, men langt færre skoler underviser i programmering end for 10 år siden. De gode nyheder er, at vi er på vej til at ændre dette. Hvis du har hørt om [ Hour of Code](<%= hoc_uri('/') %>) sidste år, ved du måske også at det var stort. På en uge, prøvede 15 millioner elever at programmere! [ Hour of Code](<%= hoc_uri('/') %>) er en en-times introduktion til kodning, skabt for at afmystificere kodning og for at vise, at alle kan lære det grundlæggende. [ Tilmeld dig](<%= hoc_uri('/') %>) og arranger Hour of Code fra 8. til 14. december, under Computer Science Education Week. Hjælp med at nå målet, at 100 millioner elever bruger en time på kodning inden udgangen af året. Sæt din skole på kortet, gå til <http://hourofcode.com>
 
 ## Infografik:
 

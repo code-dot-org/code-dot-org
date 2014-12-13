@@ -10,13 +10,13 @@ title: Partnere
 
 * * *
 
-# Major Promotional Partners
+# Primære markedsføringspartnere
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
 * * *
 
-# International Partners
+# Internationale partnere
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
@@ -28,12 +28,12 @@ title: Partnere
 
 * * *
 
-# Infrastructure partners and tools
+# Infrastruktur partnere og værktøjer
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
 * * *
 
-# Additional Partners
+# Øvrige partnere
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
