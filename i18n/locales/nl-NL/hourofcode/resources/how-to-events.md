@@ -69,7 +69,7 @@ Organiseer een Code Uur tijdens de Computer Science Education Week (8-14 decembe
   </tr>
   
   <td>
-    10:05-10:15 am
+    10:05-11:15 am
   </td>
   
   <td>
@@ -101,7 +101,7 @@ Organiseer een Code Uur tijdens de Computer Science Education Week (8-14 decembe
   </td></tr> 
   
   <td>
-    10:40-11:00 pm
+    10:40-11:00 am
   </td>
   
   <td>
@@ -109,7 +109,7 @@ Organiseer een Code Uur tijdens de Computer Science Education Week (8-14 decembe
   </td></tr> 
   
   <td>
-    11:00-11:05 pm
+    11:00-11:05 am
   </td>
   
   <td>

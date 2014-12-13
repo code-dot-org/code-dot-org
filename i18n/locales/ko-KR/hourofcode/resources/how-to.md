@@ -4,13 +4,7 @@ title: How-to Guide layout: wide nav: resources_nav
 
 * * *
 
-<div class="row">
-  <h1 class="col-sm-6">
-    One Hour of Code를 가르치는 방법
-  </h1>
-</div>
-
-</div>
+# How to teach one Hour of Code
 
 ## 1) 이 사용방법 동영상을 살펴보세요. <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
 ## 2) 튜토리얼을 따라해 보세요:
@@ -82,4 +76,4 @@ The best Hour of Code experience will be with Internet-connected computers. But 
     
     **What comes after the Hour of Code?**
     
-    The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up your event</button></a>
+    The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>

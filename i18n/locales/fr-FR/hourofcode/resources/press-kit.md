@@ -17,7 +17,7 @@ title: Press Kit layout: wide nav: resources_nav
 
 ### Guide étape par étape :
 
-**1. Plan your event**
+**1. Planifier votre événement**
 
   * Planifier une réunion pour le coup d'envoi de une Heure de Code.
   * Envoyer [une lettre](<%= hoc_uri('/resources/#sample-emails') %>) aux parents en leur demandant de passer le mot.

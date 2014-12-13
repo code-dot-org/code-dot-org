@@ -69,7 +69,7 @@ Organiza un evento de la "Hora de Código" durante la Semana de la Educación en
   </tr>
   
   <td>
-    10:05-10:15 am
+    10:05-11:15 am
   </td>
   
   <td>

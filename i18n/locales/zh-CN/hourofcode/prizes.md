@@ -54,7 +54,7 @@ One lucky school in ***every*** U.S. state (+ Washington D.C.) won $10,000 worth
 7:30 AM PST - [Cory Booker](http://www.youtube.com/watch?v=wD0Heuvv87I)   
 10:00 AM PST - [JR Hildebrand](http://www.youtube.com/watch?v=DfhAdnosy58)   
 11:00 AM PST - [Clara Shih](http://www.youtube.com/watch?v=2p7uhb1qulA)   
-12:00 PM PST - [Jessica Alba](http://www.youtube.com/watch?v=Kxm7PK-iS3c)   
+12:00 PM PST - [Jessica Alba](http://youtu.be/m4oEbAQbWCE)   
 
 
 **THURSDAY**, December 11   
@@ -91,6 +91,26 @@ Every educator who hosts an Hour of Code for students will receive 10 GB of Drop
 
 [Actua](http://actua.ca/) is Canada’s leader in Science, Technology, Engineering, and Math Outreach. Each year Actua reaches over 225,000 youth in over 500 communities through its barrier-breaking programming.
 
+**Congratulations to the 2014 winners!**
+
+| School                          | City        | Actua Network Member            |
+| ------------------------------- | ----------- | ------------------------------- |
+| Spencer Middle School           | Victoria    | Science Venture                 |
+| Malcolm Tweddle School          | Edmonton    | DiscoverE                       |
+| Britannia Elementary            | Vancouver   | GEERing Up                      |
+| Captain John Palliser           | Calgary     | Minds in Motion                 |
+| St. Josaphat School             | Regina      | EYES                            |
+| Bishop Roborecki School         | Saskatoon   | SCI-FI                          |
+| Dalhousie Elementary School     | Winnipeg    | WISE Kid-Netic Energy           |
+| Hillfield Strathallan College   | Hamilton    | Venture Engineering and Science |
+| Byron Northview Public School   | London      | Discovery Western               |
+| Stanley Public School           | Toronto     | Science Explorations            |
+| Ottawa Catholic School Board    | Ottawa      | Virtual Ventures                |
+| École Arc-en-Ciel               | Montreal    | Folie Technique                 |
+| Saint Vincent Elementary School | Laval       | Musee Armand Frappier           |
+| Garden Creek School             | Fredericton | Worlds UNBound                  |
+| Armbrae Academy                 | Halifax     | SuperNOVA                       |
+
 ## Kids Code Jeunesse will help support you in the classroom! {#kids_code}
 
 Are you a teacher who wants to introduce computer programming to your students and would like support in the classroom? Any teacher that would like a trained Computer Programming volunteer to assist in the classroom can contact [Kids Code Jeunesse](http://www.kidscodejeunesse.org) and we’ll work on getting you supported! [Kids Code Jeunesse](http://www.kidscodejeunesse.org) is a Canadian not for profit aimed at providing every child with the opportunity to learn to code. And every teacher the opportunity to learn how to teach computer programming in the classroom.
@@ -115,39 +135,39 @@ Check out [Terms and Conditions](<%= hoc_uri('/prizes-terms') %>) or visit our f
 
 ## 需要整个学校参加才能获得10000美元的硬件奖励吗？
 
-Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](<%= hoc_uri('/prizes') %>).
+是的，你的整个学校参与才有资格获奖，但只需要一个人注册并提交硬件奖申请表[这里](<%= hoc_uri('/prizes') %>).
 
 ## 需要整个学校参与才能赢得科技会话吗？
 
-Any classroom (public or private school) is eligible to win this prize. Your whole school need not apply.
+任何班级（公立或私立学校）都有资格获得奖励，不需要整个学校的参与。
 
 ## 非公立学校可以赢得视频聊天奖吗？
 
-Yes! Private and independent schools are eligible along with public schools to win the video chat prizes.
+是的！私立或独立学校和公立学校一样有资格获得视频聊天奖励。
 
 ## 非美国的学校可以获得视频聊天奖励吗？
 
-No, unfortunately, because of logistics we are unable to offer the video chat prize to schools outside of the U.S. and Canada. All international organizers **are** eligible to receive Dropbox space or Skype credit.
+不，很遗憾，由于物流我们无法对美国和加拿大以外的学校提供视频聊天奖。 所有国际组织者**都有**资格获得Dropbox 空间或Skype 信用。
 
 ## 为什么只有公立学校可以获得10000美元硬件奖励？
 
-We would love to help teachers in public and private schools alike, but at this time, it comes down to logistics. We have partnered with [DonorsChoose.org](http://donorschoose.org) to administer classroom funding prizes, which only works with public, US K-12 schools. According to DonorsChoose.org, the organization is better able to access consistent and accurate data that's available for public schools.
+我们很愿意既帮助公立学校的老师又帮助私立学校的老师，但是现状涉及到物流问题。 我们已经与[ DonorsChoose.org](http://donorschoose.org)合作管理教室的资金奖励，仅适用于美国K-12公立学校。 通过DonorsChoose.org，该组织能够更好地获得可用于公立学校的一致和准确的数据。
 
 ## 我是在美国以外，我可以有资格获奖吗？
 
-Due to a small full-time staff, Code.org is unable to handle the logistics of administering international prizes. Because of this people outside the US are unable to qualify for prizes.
+由于处于小型专职人员模式，Code.org无法处理管理国际大奖的物流。因此美国以外的人是无法获得奖励。
 
 ## 申请硬件奖励的截止日期是什么时间？
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. 在美国各州都将有一所学校收到我们为其班级配备的电脑。 Code.org 将在 2014 年 12 月 1 日前选出获奖者并通过电子邮件告知。
+要获得资格，整个学校必须注册编程一小时，并在2014年11月14日前完成[硬件申请表](<%= hoc_uri('/prizes') %>)。 在美国各州都将有一所学校收到我们为其班级配备的电脑。 Code.org 将在 2014 年 12 月 1 日前选出获奖者并通过电子邮件告知。
 
 ## 赢得科技聊天资格的截止日期是什么时间？
 
-To qualify, you must register your classroom for the Hour of Code by November 14, 2014. Classrooms will win a video chat with a celebrity. Code.org 将在 2014 年 12 月 1 日前选出获奖者并通过电子邮件告知。
+要获得资格，你的教室必须在2014年11月14日前注册编程一小时。 教室将赢得与名人的视频聊天。 Code.org 将在 2014 年 12 月 1 日前选出获奖者并通过电子邮件告知。
 
 ## 如果我的学校或教室得奖什么时候会得到通知？
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. Code.org 将在 2014 年 12 月 1 日前选出获奖者并通过电子邮件告知。
+要获得资格，整个学校必须注册编程一小时，并在2014年11月14日前完成[硬件申请表](<%= hoc_uri('/prizes') %>)。 Code.org 将在 2014 年 12 月 1 日前选出获奖者并通过电子邮件告知。
 
 ## 如果我们全校没有在计算机科学教育周（十二月8-14日）期间参与编程一小时，我还有获奖资格吗？
 

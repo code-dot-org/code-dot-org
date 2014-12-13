@@ -4,44 +4,44 @@ Kodlama saati etkinlik rehperi
 
 * * *
 
-# Kodlama saati etkinlik rehperi
+# Kodlama saati etkinlik rehberi
 
-Bilgisayar bilimleri egitim haftasini(Aralik 8 -14) kutlamak ve daha fazla ogrenciye ilham vermek icin kodlama saati etkinligi duzenleyin. Herkes, heryerde kodlama saati etkinligi organize edebilir.
+Bilgisayar bilimleri eğitim haftasını (Aralik 8 -14) kutlamak ve daha fazla öğrenciye ilham vermek icin kodlama saati etkinliği düzenleyin. Herkes, her yerde kodlama saati etkinliği organize edebilir.
 
-## 1) Etkinliginiz icin hazirlik yapin
+## 1) Etkinliğiniz icin hazırlık yapın
 
-  * Yeri, zamani ve saati belirleyin
-  * Bulundugunuz sehirdeki belediye baskani'na, vali'ye, yada unlu kisilere etkinliginize katilmalari ve konusma yapmalari icin davetiye mektubu gonderin.
-  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= hoc_uri('/resources/press-kit') %>) for help.
+  * Yeri, zamanı ve saati belirleyin
+  * Bulunduğunuz şehirdeki belediye başkanına, valiye ya da iş adamlarına etkinliğinize katılmaları ve konuşma yapmaları için [davetiye mektubu](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) gönderin.
+  * Basını/ medyayı davet edin. Yerel haber istasyonları, gazeteler, eğitim/teknoloji bloggerları. Yardım için [basın kit](<%= hoc_uri('/resources/press-kit') %>)imizi ziyaret edin.
 
-## 2) During your event
+## 2) Etkinlik sırasında
 
-  * Kick off your event with one of our [inspirational videos](<%= hoc_uri('/resources#videos') %>).
-  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= hoc_uri('/resources/stats') %>).   
+  * Etkinliğinizi [ilham verici videolarımız](<%= hoc_uri('/resources#videos') %>) dan biri ile başlatın.
+  * [ İstatistikler ve veri grafikleri](<%= hoc_uri('/resources/stats') %>) kısmını kullanarak bilgisayar bilimin önemi hakkında bir konuşmayla giriş yapın.   
       
     
-  * Other event ideas: 
-      * Invite a local industry leader to discuss his or her work involving computer science
-      * Invite a local politician and have students teach him or her how to code
-      * Watch one of the Q&A sessions with an Hour of Code ambassador. They will all be recorded and on Code.org’s YouTube page. This year’s participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more!
+  * Dİğer etkinlik fikirleri: 
+      * Yerel bir endüstri liderini bilgisayar bilimi içeren işi hakkında tartışmak için davet edin
+      * Yerel bir politikacıyı davet edin ve öğrencileriniz nasıl kodlanacağını öğretsin
+      * Kodlama Saati büyükelçilerinden biri ile Q&A oturumlarından birini izleyin. Tamamı kaydedilecek ve Code.org'un YouTube sayfasında yer alacaktır. This year’s participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more!
       * Have a group of students demonstrate an unplugged activity
       * Have a group of students teach the principal or a group of teachers how to code
       * If your school already teaches computer science, have students demo projects
 
-## 3) Share how it went
+## 3) Nasıl geçtiğini paylaşın
 
   * Share pictures of your event on Facebook and Twitter. 
   * Use the hashtag **#HourofCode**
 
-## Example Event Plan
+## Örnek Etkinlik Planı
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**Etkinlik:** Okul çapında Bilgisayar Bilimleri Eğitim Haftası başlangıç toplantısı
 
-**Date:** Dec 8th (start of Computer Science Education Week)
+**Tarih:** 8 Aralık (Bilgisayar Bilimi Eğitim Haftası başlangıcı)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Zaman:** Ders saatleri boyunca. Sabahın erken saatleri tercih sebebidir. Yaklaşık 1 saat.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
+**Yer:** Okul toplantı salonu (tiyatro, spor salonu, kafeterya gibi)   
   
 
 
@@ -50,11 +50,11 @@ Bilgisayar bilimleri egitim haftasini(Aralik 8 -14) kutlamak ve daha fazla ogren
 <table>
   <tr>
     <th style="width:200px">
-      Time
+      Saat
     </th>
     
     <th style="width:800px">
-      Action
+      Etkinlik
     </th>
   </tr>
   

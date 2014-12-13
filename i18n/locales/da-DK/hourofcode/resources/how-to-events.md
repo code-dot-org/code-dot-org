@@ -69,7 +69,7 @@ Være vært for et Hour of Code arrangement under Computer Science Education Wee
   </tr>
   
   <td>
-    10:05-10:15 am
+    10:05-10:15
   </td>
   
   <td>
@@ -77,7 +77,7 @@ Være vært for et Hour of Code arrangement under Computer Science Education Wee
   </td></tr> 
   
   <td>
-    10:15-10:17 am
+    10:15-10:17
   </td>
   
   <td>
@@ -85,7 +85,7 @@ Være vært for et Hour of Code arrangement under Computer Science Education Wee
   </td></tr> 
   
   <td>
-    10:17-10:30 am
+    10:17-10:30
   </td>
   
   <td>
@@ -93,7 +93,7 @@ Være vært for et Hour of Code arrangement under Computer Science Education Wee
   </td></tr> 
   
   <td>
-    10:30-10:40 am
+    10:30-10:40
   </td>
   
   <td>
@@ -101,7 +101,7 @@ Være vært for et Hour of Code arrangement under Computer Science Education Wee
   </td></tr> 
   
   <td>
-    10:40-11:00 pm
+    10:40-11:00
   </td>
   
   <td>
@@ -109,7 +109,7 @@ Være vært for et Hour of Code arrangement under Computer Science Education Wee
   </td></tr> 
   
   <td>
-    11:00-11:05 pm
+    11:00-11:05
   </td>
   
   <td>

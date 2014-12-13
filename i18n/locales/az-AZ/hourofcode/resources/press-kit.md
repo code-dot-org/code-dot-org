@@ -17,7 +17,7 @@ title: Press Kit layout: wide nav: resources_nav
 
 ### Mərhələlər üzrə bələdçi:
 
-**1. Plan your event**
+**1. Tədbirinizi planlaşdırın**
 
   * Kod Saatəna başlamaq üçün yığıncaq təşkil edin.
   * Valideynlərə [məktub](<%= hoc_uri('/resources/#sample-emails') %>) göndərin. Məlumatı hər tərəfə yaymaqlarını xahiş edin.
