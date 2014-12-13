@@ -656,20 +656,19 @@
     hraje úplne "bez slov", tak si môže zahrať každý!
   kodable_longdescription: Kodable je hra pre iPad, ktorá deťom od 5 rokov predstaví
     základy programovania. Prítomnosť učiteľa je vhodná, ale nie je pre túto hru nutná.
-  tynkerapp_longdescription: Build your own games and share with friends! Solve fun
-    coding puzzles and learn programming concepts in each level. Personalize games
-    with animated characters, multiple levels and rich props. Lots of fun activities
-    to choose from!
+  tynkerapp_longdescription: Naučte sa programovať pri riešení zábavných hádaniek.
+    Ľahko tvorte hry a príbehy používaním grafických motívov, stavebníc a prispôsobiteľných
+    postavičiek. Pripojenie k Internetu nie je nutné. Ku svojim výtvorom sa dostanete
+    aj na webe.
   robomindnl_longdescription: 'Žiaci sa naučia základy programovania riadením vlastného
     virtuálneho robota. Online kurz je plne sebestačný s krátkymi prezentáciami, filmami,
     kvízmi a automatickým vedením a tipmi na pomoc pri programovacích cvičeniach. '
-  flappy_longdescription: Use drag-and-drop programming to make your own Flappy Bird
-    game, and customize it to look different (Flappy Shark, Flappy Santa, whatever).
-    Add the game to your phone in one click.
-  bitsbox_longdescription: Customize your very own virtual tablet, then code a series
-    of apps to play and share. Simple walkthroughs make it possible for even young
-    kids to program real Javascript, and the more advanced you are the further you'll
-    go.
+  flappy_longdescription: Vytvorte vlastnú hru Flappy Bird pomocou drag & drop programovania,
+    ktorú si môžete prispôsobiť nech vypadá inak (Flappy žralok, Flappy Santa, čokoľvek).
+    Hru do telefónu pridáte jedným klikom.
+  bitsbox_longdescription: Prispôsobte si svoj vlastný virtuálny tablet a potom nakódujte
+    sadu hier na hranie a zdieľanie. Vďaka jednoduchým návodom môžu aj malé deti programovať
+    v reálnom JavaScripte a čím ste pokročilejší, tým ďalej zájdete.
   makegameswithus_longdescription: Learn to code by making an iPhone game using a
     brand new and beginner-friendly programming language called Swift! Create a Pokemon-inspired
     action game and write code to teach your monster new moves. You will learn how

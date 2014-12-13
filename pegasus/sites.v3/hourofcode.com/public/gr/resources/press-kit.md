@@ -1,6 +1,6 @@
 
 
-[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
+
 
 ## Πώς να προσελκύσεις τα ΜΜΕ στην εκδήλωσή σου για την Ώρα του Κώδικα
 
@@ -56,4 +56,4 @@
       
     Βρείτε περισσότερους πόρους και email [ εδώ](<%= hoc_uri('/resources') %>).
     
-    <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>
+    
