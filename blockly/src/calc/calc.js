@@ -122,7 +122,7 @@ Calc.init = function(config) {
       solutionBlocks = blockUtils.forceInsertTopBlock(level.solutionBlocks,
         config.forceInsertTopBlock);
     }
-    var target = getExpressionFromBlocks(solutionBlocks);
+    var target = getExpressionFromBlockXml(solutionBlocks);
     if (target) {
       Calc.expressions.target = target;
       var tokenList = target.getTokenListDiff(target);
@@ -195,11 +195,10 @@ function evalCode (code) {
  * is provided, temporarily sticks those blocks into the workspace to generate
  * the ExpressionNode, then deletes blocks.
  */
-
-function getExpressionFromBlocks(blockXml) {
+function getExpressionFromBlockXml(blockXml) {
   if (blockXml) {
     if (Blockly.mainBlockSpace.getTopBlocks().length !== 0) {
-      throw new Error("getExpressionFromBlocks shouldn't be called with blocks if " +
+      throw new Error("getExpressionFromBlockXml shouldn't be called with blocks if " +
         "we already have blocks in the workspace");
     }
     // Temporarily put the blocks into the workspace so that we can generate code
@@ -217,7 +216,6 @@ function getExpressionFromBlocks(blockXml) {
   return object;
 }
 
-// todo - think about naming
 function getExpressionFromBlock(block) {
   if (!block) {
     return null;
@@ -230,7 +228,6 @@ function getExpressionFromBlock(block) {
     case 'functional_minus':
     case 'functional_times':
     case 'functional_dividedby':
-      // todo - a little hacky
       var operation = block.getTitles()[0].getValue();
       var left = getExpressionFromBlock(block.getInputTargetBlock('ARG1')) || 0;
       var right = getExpressionFromBlock(block.getInputTargetBlock('ARG2')) || 0;
@@ -276,13 +273,8 @@ Calc.execute = function() {
     Calc.expressions.user = new ExpressionNode(0);
   }
 
-  if (Calc.expressions.target) {
-    Calc.expressions.user.applyExpectation(Calc.expressions.target);
-  }
-
-  // todo - should this be using ResultType.* instead?
-  appState.result = Calc.expressions.target === null ||
-    Calc.expressions.user.equals(Calc.expressions.target);
+  appState.result = (Calc.expressions.target === null ||
+    Calc.expressions.user.equals(Calc.expressions.target));
   appState.testResults = BlocklyApps.getTestResults(appState.result);
 
   // equivalence means the expressions are the same if we ignore the ordering
