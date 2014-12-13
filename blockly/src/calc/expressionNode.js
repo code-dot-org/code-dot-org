@@ -45,10 +45,6 @@ module.exports = ExpressionNode;
 
 ExpressionNode.ValueType = ValueType;
 
-// todo - get rid of
-ExpressionNode.prototype.applyExpectation = function () {
-};
-
 /**
  * What type of expression node is this?
  */
@@ -253,64 +249,58 @@ ExpressionNode.prototype.collapse = function () {
 };
 
 /**
- * todo
- * other can be Falsey, indicating everything is "diff"
+ * Get a tokenList for this expression, where differences from other expression
+ * are marked
+ * @param {ExpressionNode} other The ExpressionNode to compare to.
  */
 ExpressionNode.prototype.getTokenListDiff = function (other) {
   if (this.children.length === 0) {
     return [token(this.value.toString(), !this.equals(other))];
   }
 
-  if (this.getType() === ValueType.ARITHMETIC) {
-    var nodesMatch = other && (this.value === other.value) &&
-      (this.children.length === other.children.length);
-    return _.flatten([
-      token('(', !nodesMatch),
-      this.children[0].getTokenListDiff(nodesMatch && other.children[0]),
-      token(" " + this.value + " ", !nodesMatch),
-      this.children[1].getTokenListDiff(nodesMatch && other.children[1]),
-      token(')', !nodesMatch)
-    ]);
-  }
-
-  throw new Error("NYI");
-};
-
-
-/**
- * todo - can i combine the two different token lists better?
- */
-ExpressionNode.prototype.getTokenList = function (highlightDeepest) {
-  var depth = this.depth();
-  if (depth <= 1) {
-    return this.getTokenListDiff(highlightDeepest ? null : this);
-  }
-
   if (this.getType() !== ValueType.ARITHMETIC) {
+    // Don't support getTokenListDiff for functions
     throw new Error("Unsupported");
   }
 
-  var leftDepth = this.children[0].depth();
-  var rightDepth = this.children[1].depth();
-  var rightDeeper = rightDepth > leftDepth;
-
+  var nodesMatch = other && (this.value === other.value) &&
+    (this.children.length === other.children.length);
   return _.flatten([
-    token('(', false),
-    this.children[0].getTokenList(highlightDeepest && !rightDeeper),
-    token(" " + this.value + " ", false),
-    this.children[1].getTokenList(highlightDeepest && rightDeeper),
-    token(')', false)
+    token('(', !nodesMatch),
+    this.children[0].getTokenListDiff(nodesMatch && other.children[0]),
+    token(" " + this.value + " ", !nodesMatch),
+    this.children[1].getTokenListDiff(nodesMatch && other.children[1]),
+    token(')', !nodesMatch)
   ]);
 };
 
 
+/**
+ * Get a tokenList for this expression, potentially marking those tokens
+ * that are in the deepest descendant expression.
+ * @param {boolean} markDeepest Mark tokens in the deepest descendant
+ */
+ExpressionNode.prototype.getTokenList = function (markDeepest) {
+  var depth = this.depth();
+  if (depth <= 1) {
+    return this.getTokenListDiff(markDeepest ? null : this);
+  }
 
-///////////////////////////////////
+  if (this.getType() !== ValueType.ARITHMETIC) {
+    // Don't support getTokenList for functions
+    throw new Error("Unsupported");
+  }
 
+  var rightDeeper = this.children[1].depth() > this.children[0].depth();
 
-
-
-
+  return _.flatten([
+    token('(', false),
+    this.children[0].getTokenList(markDeepest && !rightDeeper),
+    token(" " + this.value + " ", false),
+    this.children[1].getTokenList(markDeepest && rightDeeper),
+    token(')', false)
+  ]);
+};
 
 /**
  * Do the two nodes differ only in argument order.
