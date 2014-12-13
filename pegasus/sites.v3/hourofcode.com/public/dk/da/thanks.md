@@ -18,23 +18,23 @@ Fortæl dine venner om #HourOfCode.
 
 ## 2. Spørg om hele din skole kan deltage i Hour of Code
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](/resources/hoc-one-pager.pdf) to your principal.
+[ Send denne e-mail](<%= hoc_uri('/resources#email') %>) eller [dette materiale](/resources/hoc-one-pager.pdf) til din lære eller skoleleder.
 
 <% else %>
 
 ## 2. Spørg om hele din skole kan deltage i Hour of Code
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](/resources/hoc-one-pager.pdf) this handout</a> to your principal.
+[ Send denne e-mail](<%= hoc_uri('/resources#email') %>) eller giv [dette handout](/resources/hoc-one-pager.pdf) dette handout</a> til din skoleleder.
 
 <% end %>
 
 ## 3. Giv et bidrag
 
-[Donate to our crowdfunding campaign.](http://<%= codeorg_url() %>/donate) To teach 100 million children, we need your support. We just launched the [largest education crowdfunding campaign](http://<%= codeorg_url() %>/donate) in history. *Every* dollar will be matched [donors](http://<%= codeorg_url() %>/about/donors), doubling your impact.
+[Donér til vores crowdfunding kampagne.](http://<%= codeorg_url() %>/donate) For at undervise 100 millioner børn, har vi brug for din støtte. Vi har netop lanceret den [ største uddannelse crowdfunding kampagne](http://<%= codeorg_url() %>/ donere) i historien. *Every* dollar will be matched [donors](http://<%= codeorg_url() %>/about/donors), doubling your impact.
 
 ## 4. Få din arbejdsgiver involveret
 
-[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf).
+[ Send denne e-mail](<%= hoc_uri('/resources#email') %>) din manager eller direktør. Eller [give dem dette materiale](http://hourofcode.com/resources/hoc-one-pager.pdf).
 
 ## 5. Reklamér for Hour of Code i dit lokalområde
 
