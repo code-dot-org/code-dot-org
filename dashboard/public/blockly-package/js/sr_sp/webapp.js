@@ -11756,19 +11756,19 @@ exports.emptyBlocksErrorMsg = function(d){return "Да би блок \"Пона�
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Тело функције треба да се састоји из блокова како би радило."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "Треба да буде блокова унутар твоје дефиниције функције. Кликни \"измени\" и превуци блокове унутар зеленог блока."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "Кликни \"измени\" да би осигурао да немаш недостајућих блокова унутар твоје дефиниције функције."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "Запамти да спојиш неки блок сваком улазном параметру функцијског параметра у твом радном простору."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "Додао си параметарски блок, али га ниси користио у дефиницији. Користи параметар тако што ћеш кликнути \"измени\" и поставити блок параметра унутар зеленог блока."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "Направи параметар за своју функцију кликом на \"измени\" и додадањем неопходних параметара. Превуци нови параметарске блокове у своју дефиницију функције."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "Направио си функцију, али је ниси користио нигде у свом радном простору! Кликни на \"Функције\" у кутији алатки и користи је у свом програму."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "Покушај да замениш \"???\" неком вредношћу."};
 
 exports.extraTopBlocks = function(d){return "Имате незакачене блокове. Да ли сте хтели да их закачите за \"када се извршава\" блок?"};
 
@@ -11830,7 +11830,7 @@ exports.showBlocksHeader = function(d){return "Покажи блокове"};
 
 exports.showGeneratedCode = function(d){return "Покажи код програма"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "текст=?"};
 
 exports.subtitle = function(d){return "графичко окружење за програмирање"};
 
@@ -11926,13 +11926,13 @@ exports.catVariables = function(d){return "Променљиве"};
 
 exports.continue = function(d){return "Настави"};
 
-exports.createHtmlBlock = function(d){return "create html block"};
+exports.createHtmlBlock = function(d){return "направи хипертекст блок"};
 
-exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
+exports.createHtmlBlockTooltip = function(d){return "Прави блок хипертекста у апликацији."};
 
 exports.finalLevel = function(d){return "Честитамо! Решили сте финалну слагалицу."};
 
-exports.makeYourOwn = function(d){return "Make Your Own App"};
+exports.makeYourOwn = function(d){return "Направи сопствену апликацију"};
 
 exports.nextLevel = function(d){return "Честитамо! Завршили сте слагалицу."};
 
@@ -11940,29 +11940,29 @@ exports.no = function(d){return "не"};
 
 exports.numBlocksNeeded = function(d){return "Ова слагалица може бити решена са %1 блоком."};
 
-exports.pause = function(d){return "Pause"};
+exports.pause = function(d){return "Прелом"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
+exports.reinfFeedbackMsg = function(d){return "Можеш притиснути дугме \"Пробај опет\" да се вратиш на покретање своје апликације."};
 
 exports.repeatForever = function(d){return "repeat forever"};
 
 exports.repeatDo = function(d){return "уради"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
+exports.repeatForeverTooltip = function(d){return "Изврши акције у овом блоку више пута док је апликација покренута."};
 
-exports.shareWebappTwitter = function(d){return "Check out the app I made. I wrote it myself with @codeorg"};
+exports.shareWebappTwitter = function(d){return "Види какву сам апликацију направио. Сам сам је написао са @codeorg"};
 
-exports.shareGame = function(d){return "Share your app:"};
+exports.shareGame = function(d){return "Подели своју апликацију:"};
 
-exports.stepIn = function(d){return "Step in"};
+exports.stepIn = function(d){return "Ускочи"};
 
-exports.stepOver = function(d){return "Step over"};
+exports.stepOver = function(d){return "Прескочи"};
 
-exports.stepOut = function(d){return "Step out"};
+exports.stepOut = function(d){return "Искочи"};
 
-exports.turnBlack = function(d){return "turn black"};
+exports.turnBlack = function(d){return "зацрни"};
 
-exports.turnBlackTooltip = function(d){return "Turns the screen black."};
+exports.turnBlackTooltip = function(d){return "Затамњује екран."};
 
 exports.yes = function(d){return "Да"};
 

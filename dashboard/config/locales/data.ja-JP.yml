@@ -532,6 +532,7 @@
         C4_math_artist: Programming the Artist with Math
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
+        C4_function_parameters: パラメーター付き関数
         C4_conditionals: 条件
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs

@@ -11062,9 +11062,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.id=function(n){return "other"}
 exports.compute = function(d){return "hitung"};
 
-exports.equivalentExpression = function(d){return "Cobalah tata ulang argumen Anda untuk mengambil ekspresi yang sama persis."};
+exports.equivalentExpression = function(d){return "Cobalah tata ulang argumen Anda untuk mendapatkan ekspresi yang sama persis."};
 
-exports.extraTopBlocks = function(d){return "Terdapat blok yang tidak terpasang. Apa maksud Anda ialah memasangnya pada blok \"menghitung\"?"};
+exports.extraTopBlocks = function(d){return "Terdapat blok yang tidak terpasang. Apa maksud Anda ialah memasangnya pada blok \"hitung\"?"};
 
 exports.goal = function(d){return "Tujuan:"};
 
@@ -11131,7 +11131,7 @@ exports.errorParamInputUnattached = function(d){return "Jangan lupa untuk memasa
 
 exports.errorUnusedParam = function(d){return "Anda menambahkan blok parameter, tapi tidak digunakan kemudian. Klik \"sunting\" untuk memastikan penggunaan parameter tersebut dan menempatkannya di blok parameter di dalam Blok Hijau."};
 
-exports.errorRequiredParamsMissing = function(d){return "Buatlah sebuah parameter untuk fungsi ini dengan mengeklik \"sunting\" dan menambahkan parameter yang diperlukan. Geser blok parameter baru tersebut ke dalam fungsi ini."};
+exports.errorRequiredParamsMissing = function(d){return "Buatlah sebuah parameter untuk fungsi ini dengan mengklik \"sunting\" dan menambahkan parameter yang diperlukan. Geser blok parameter baru tersebut ke dalam fungsi ini."};
 
 exports.errorUnusedFunction = function(d){return "Anda membuat sebuah fungsi, tetapi tidak digunakan dalam program ini! Klik tombol \"Fungsi\" pada Kotak Perkakas dan pastikan Anda menggunakan fungsi tersebut."};
 

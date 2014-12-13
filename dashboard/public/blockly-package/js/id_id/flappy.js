@@ -12265,7 +12265,7 @@ exports.errorParamInputUnattached = function(d){return "Jangan lupa untuk memasa
 
 exports.errorUnusedParam = function(d){return "Anda menambahkan blok parameter, tapi tidak digunakan kemudian. Klik \"sunting\" untuk memastikan penggunaan parameter tersebut dan menempatkannya di blok parameter di dalam Blok Hijau."};
 
-exports.errorRequiredParamsMissing = function(d){return "Buatlah sebuah parameter untuk fungsi ini dengan mengeklik \"sunting\" dan menambahkan parameter yang diperlukan. Geser blok parameter baru tersebut ke dalam fungsi ini."};
+exports.errorRequiredParamsMissing = function(d){return "Buatlah sebuah parameter untuk fungsi ini dengan mengklik \"sunting\" dan menambahkan parameter yang diperlukan. Geser blok parameter baru tersebut ke dalam fungsi ini."};
 
 exports.errorUnusedFunction = function(d){return "Anda membuat sebuah fungsi, tetapi tidak digunakan dalam program ini! Klik tombol \"Fungsi\" pada Kotak Perkakas dan pastikan Anda menggunakan fungsi tersebut."};
 
@@ -12514,7 +12514,7 @@ exports.setGravityVeryHigh = function(d){return "atur gravitasi sangat tinggi"};
 
 exports.setGravityTooltip = function(d){return "atur tingkat gravitasi"};
 
-exports.setGround = function(d){return "menetapkan dasar"};
+exports.setGround = function(d){return "tetapkan dasar"};
 
 exports.setGroundRandom = function(d){return "atur permukaan secara acak"};
 

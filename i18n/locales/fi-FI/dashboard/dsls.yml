@@ -11,16 +11,16 @@ fi:
         Convert Blocks to Math: Muuta lohkot matematiikaksi
         Type out the arithmetic expression that matches this code: Kirjoita laskentakaava joka vastaa tätä koodia
         /script_assets/msm/unit6/blockstomath2.png: /script_assets/msm/unit6/blockstomath2.png
-        (10 > 11) or (7 <= 9): '(10 > 11) or (7 <= 9)'
-        (10 > 11) OR (7 <= 9): '(10 > 11) OR (7 <= 9)'
+        (10 > 11) or (7 <= 9): '(10 > 11) tai (7 <= 9)'
+        (10 > 11) OR (7 <= 9): '(10 > 11) TAI (7 <= 9)'
         (10 > 11) || (7 <= 9): '(10 > 11) || (7 <= 9)'
         Type the arithmetic expression here: Kirjoita aritmeettinen lauseke tähän
       Blocks to Bools 3:
         Convert Blocks to Math: Muuta lohkot matematiikaksi
         Type out the arithmetic expression that matches this code: Kirjoita laskentakaava joka vastaa tätä koodia
         /script_assets/msm/unit6/blockstomath3.png: /script_assets/msm/unit6/blockstomath3.png
-        (5 < 10) and (10 < 15): '(5 < 10) and (10 < 15)'
-        (5 < 10) AND (10 < 15): '(5 < 10) AND (10 < 15)'
+        (5 < 10) and (10 < 15): '(5 < 10) tai (10 < 15)'
+        (5 < 10) AND (10 < 15): '(5 < 10) JA (10 < 15)'
         (5 < 10) && (10 < 15): '(5 < 10) && (10 < 15)'
         Type the arithmetic expression here: Kirjoita aritmeettinen lauseke tähän
       Blocks to Bools 4:

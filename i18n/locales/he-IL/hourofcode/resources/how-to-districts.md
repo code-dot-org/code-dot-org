@@ -18,4 +18,4 @@
 
   5. **לארח אירוע "שעה של קוד" ברובע שלך.** לראות שלנו [ כיצד להנחות את ההאירוע ](<%= hoc_uri('/resources/how-to-events') %>) לדוגמה של המופע, ערכת מדיה לקשרי קהילה ותיכה אחרת.
 
-  6. **More [prizes](<%= hoc_uri('/prizes') %>) for EVERY organizer.** Every participating educator will receive thank you gifts. 100 classrooms will win tech chats with special guest speakers. Participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more). And in each state, one participating school will win $10,000 in technology for their school!
+  6. **יותר [ פרסים](<%= hoc_uri('/prizes') %>) עבור כל המארגנים.** כל מחנך המשתתף יקבל מתנות. כיתות 100 יזכה בשיחות בנושא טכנולוגי עם אורח מיוחד. המשתתפים כוללים ביל גייטס, שריל סנדברג, אשטון קוצ'ר ועוד). ובכל מדינה אחד מבתי ספר המשתתפים יזכה ב10,000 דולר לכיתות טכנולוגיה של הבית ספר!

@@ -1198,10 +1198,55 @@ a.download-video {
 
 .miniblock-tall {
   height:232px;
+
+  .heading {
+    padding-left: 10px;
+    padding-right:10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  h3 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: 'Gotham 5r', sans-serif;
+    font-weight: normal;
+    display: block;
+    float: left;
+    width: 200px;
+  }
+
+  .beta
+  {
+    .heading {
+      padding-right: 0px;
+    }
+
+    h3 {
+      width: 140px;
+    }
+
+    .betatext {
+      text-align: center;
+      display: block;
+      float: right;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      background-color: rgba(116, 128, 136, 0.37);
+      padding-left: 5px;
+      padding-right: 5px;
+      font-size: 24.5px;
+      height: 35px;
+      line-height: 40px;
+      width: 60px;
+    }
+  }
 }
 
 .miniblock-tall-audiencerow {
-  height:250px;
+  height:258px;
 }
 
 #signin {
@@ -1209,7 +1254,8 @@ a.download-video {
     margin-bottom:10px;
     a {
       font-size:18px;
-      font-family: 'Gotham 4r', sans-serif; font-weight: normal;
+      font-family: 'Gotham 4r', sans-serif;
+      font-weight: normal;
     }
   }
   .itemblock {

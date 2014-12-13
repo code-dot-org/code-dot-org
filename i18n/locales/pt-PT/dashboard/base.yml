@@ -36,6 +36,7 @@ pt:
   of: de
   more: MAIS
   less: MENOS
+  beta: beta
   try_hoc: 'Tenta a "Hora do código", clica aqui >> '
   try_k8intro: Tenta a nossa Introdução ao Curso de Ciência da Computação (15-25 horas) para o 3.º ciclo do ensino básico
   k8intro: Introdução ao curso de ciência da computação (15-25 horas) para o 3.º ciclo do ensino básico

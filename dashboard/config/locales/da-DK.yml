@@ -30,12 +30,13 @@
   appname: Code.org
   stage: trin
   stage_number: Fase %{number}
-  puzzle: Puslespil
+  puzzle: Opgave
   trophies: trofæer
   courses: kurser
   of: af
   more: MERE
   less: MINDRE
+  beta: beta
   try_hoc: 'Prøv En Times Kodning, klik her >> '
   try_k8intro: Prøv vores grundskole introduktionskursus i programmering (15-25 timer)
   k8intro: Grundskole introduktion til datalogi kursus (15-25 timer)

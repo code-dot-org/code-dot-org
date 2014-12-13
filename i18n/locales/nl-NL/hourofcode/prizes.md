@@ -50,11 +50,11 @@ Een gelukkige school in ***elke*** Amerikaanse staat (+ Washington D.C.) wint te
 3:00 PM PST - [Ashton Kutcher](http://www.youtube.com/watch?v=d1LuhJPJP9s)   
 
 
-**Woensdag**, 10 December   
+**WEDNESDAY**, December 10   
 7:30 AM PST - [Cory Booker](http://www.youtube.com/watch?v=wD0Heuvv87I)   
 10:00 AM PST - [JR Hildebrand](http://www.youtube.com/watch?v=DfhAdnosy58)   
 11:00 AM PST - [Clara Shih](http://www.youtube.com/watch?v=2p7uhb1qulA)   
-12:00 PM PST - [Jessica Alba](http://www.youtube.com/watch?v=Kxm7PK-iS3c)   
+12:00 PM PST - [Jessica Alba](http://youtu.be/m4oEbAQbWCE)   
 
 
 **THURSDAY**, December 11   
@@ -91,6 +91,26 @@ Every educator who hosts an Hour of Code for students will receive 10 GB of Drop
 
 [Actua](http://actua.ca/) is Canada’s leader in Science, Technology, Engineering, and Math Outreach. Each year Actua reaches over 225,000 youth in over 500 communities through its barrier-breaking programming.
 
+**Congratulations to the 2014 winners!**
+
+| School                          | City        | Actua Network Member            |
+| ------------------------------- | ----------- | ------------------------------- |
+| Spencer Middle School           | Victoria    | Science Venture                 |
+| Malcolm Tweddle School          | Edmonton    | DiscoverE                       |
+| Britannia Elementary            | Vancouver   | GEERing Up                      |
+| Captain John Palliser           | Calgary     | Minds in Motion                 |
+| St. Josaphat School             | Regina      | EYES                            |
+| Bishop Roborecki School         | Saskatoon   | SCI-FI                          |
+| Dalhousie Elementary School     | Winnipeg    | WISE Kid-Netic Energy           |
+| Hillfield Strathallan College   | Hamilton    | Venture Engineering and Science |
+| Byron Northview Public School   | London      | Discovery Western               |
+| Stanley Public School           | Toronto     | Science Explorations            |
+| Ottawa Catholic School Board    | Ottawa      | Virtual Ventures                |
+| École Arc-en-Ciel               | Montreal    | Folie Technique                 |
+| Saint Vincent Elementary School | Laval       | Musee Armand Frappier           |
+| Garden Creek School             | Fredericton | Worlds UNBound                  |
+| Armbrae Academy                 | Halifax     | SuperNOVA                       |
+
 ## Kids Code Jeunesse zal u helpen in uw klas! {#kids_code}
 
 Are you a teacher who wants to introduce computer programming to your students and would like support in the classroom? Any teacher that would like a trained Computer Programming volunteer to assist in the classroom can contact [Kids Code Jeunesse](http://www.kidscodejeunesse.org) and we’ll work on getting you supported! [Kids Code Jeunesse](http://www.kidscodejeunesse.org) is a Canadian not for profit aimed at providing every child with the opportunity to learn to code. And every teacher the opportunity to learn how to teach computer programming in the classroom.
@@ -119,7 +139,7 @@ Ja. Uw hele school moet deelnemen om in aanmerking te komen voor de prijs, maar 
 
 ## Moet je hele school deelnemen om een techchat te winnen?
 
-Any classroom (public or private school) is eligible to win this prize. Your whole school need not apply.
+Elke klas (openbare of particuliere school) komt in aanmerking om deze prijs te winnen. Uw hele school moet hier niet voor inschrijven.
 
 ## Kunnen niet openbare scholen het video-gesprek winnen?
 

@@ -24,14 +24,14 @@ fr:
           Multi & Match: 'Multi & Match'
           K-1 Flappy: K-1 Flappy
           Flappy non blockly: Flappy non blockly
-          title: Course 1
+          title: Cours 1
           Artist 2: "L'Artiste 2"
           Happy Maps: Happy Maps
           Move it, Move it: Move it, Move it
           "Real-life Algorithms: Plant a Seed": 'Les algorithmes : Planter une graine'
           Building a Foundation: Building a Foundation
           Getting Loopy: Getting Loopy
-          The Big Event: The Big Event
+          The Big Event: Le Grand Evénement
           Going Places Safely: Going Places Safely
           description: Course 1 is designed to allow early readers to create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.
           "Bee: Sequence": 'Bee: Sequence'
@@ -66,7 +66,7 @@ fr:
           Relay programming: Les relais
           Conditionals: Instructions conditionnelles
           Binary Bracelets: Les bracelets binaires
-          The Big Event: The Big Event
+          The Big Event: Le Grand Evénement
           Your Digital Footprint: Votre empreinte numérique
           description: "Le cours 2 s'adresse aux élèves qui savent lire et n'ont aucune expérience en programmation. Dans ce cours les élèves créeront des programmes pour résoudre des problèmes et de développer des jeux interactifs qu'ils pourront partager. Recommandé pour les CE1-CM2."
           "Maze: Sequence": 'Labyrinthe : Parcours'
@@ -81,7 +81,7 @@ fr:
           "Maze: Sequence2": 'Labyrinthe : Parcours2'
           "Artist: Nested Loops": 'Artiste : les boucles imbriquées'
           description_audience: 6 ans et + (lecture indispensable)
-          description_short: Course 2 is designed for students who can read.
+          description_short: "Cours 2 s'adresse aux élèves qui savent lire."
         course3:
           The Maze: Le labyrinthe
           "Studio: Create a Story": 'Labo: Créer une histoire'
@@ -105,7 +105,7 @@ fr:
           Dice Race: Dice Race
           Internet: Internet
           Crowdsourcing: Financement participatif
-          Digital Citizenship: Digital Citizenship
+          Digital Citizenship: Citoyenneté numérique
           Farmer - While Loops: 'Fermier - les boucles "tant que"'
           description: "Le cours 3 s'adresse aux élèves qui ont suivi le cours 2. Les élèves vont approfondir les concepts de programmation vus dans les cours précédents pour résoudre des problèmes plus complexes. A la fin de ce cours, les élèves pourront créer des histoires interactives et des jeux qu'ils pourront partager avec leurs amis. Recommandé pour les CM1-CM2."
           "Studio: Create a Game": 'Laboratoire : Créer un jeu'
@@ -137,13 +137,13 @@ fr:
           title: Middle School Math
           description: Private work in progress for Middle School Math.
           Graph Paper Programming: Programmation sur papier quadrillé
-          Assessments: Assessments
-          Unit 1: Unit 1
-          Unit 2: Unit 2
+          Assessments: Évaluations
+          Unit 1: Unité 1
+          Unit 2: Unité 2
           Ninja Cat and the Coordinate Plane: Ninja Cat and the Coordinate Plane
           "Calc: Circles of Evaluation": 'Calc: Circles of Evaluation'
           "Artist: Strings and Images": 'Artist: Strings and Images'
-          Contracts: Contracts
+          Contracts: Contrats
           "Artist: Writing Contracts": 'Artist: Writing Contracts'
           "Calc: Defining Variables": 'Calc: Defining Variables'
           "Play Lab: Defining Variables": 'Play Lab: Defining Variables'
@@ -212,19 +212,19 @@ fr:
           description: Course 4 is designed for students who have taken Course 2 and 3. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.
           "Artist: Variables": 'Artist: Variables'
           "Bee: For Loops": 'Abeille : Les boucles pour'
-          title: Course 4
+          title: Cours 4
           "Algorithms: Tangrams": 'Algorithms: Tangrams'
           Variables: Variables
-          "Play Lab: Variables": 'Play Lab: Variables'
-          "Play Lab: Functions with Parameters": 'Play Lab: Functions with Parameters'
+          "Play Lab: Variables": 'Labo : Variables'
+          "Play Lab: Functions with Parameters": 'Labo : Fonctions avec paramètres'
           "Bee: Functions with Parameters": 'Bee: Functions with Parameters'
           "Artist: For Loops": 'Artiste : Les boucles pour'
-          "Play Lab: For Loops": 'Play Lab: For Loops'
+          "Play Lab: For Loops": 'Labo : Pour les boucles'
           "Artist: Functions": 'Artiste : les fonctions'
           "Artist: Functions with Paraqmeters": 'Artist: Functions with Paraqmeters'
           "Unplugged: Tangrams": 'Unplugged: Tangrams'
           Artist: Artiste
-          Bee: Bee
+          Bee: Abeille
           "Unplugged: Envelope Variables": 'Unplugged: Envelope Variables'
           "Unplugged: Madlibs": 'Unplugged: Madlibs'
           "Unplugged: For Loop Fun": 'Unplugged: For Loop Fun'
@@ -235,7 +235,7 @@ fr:
           Farmer Binary: Farmer Binary
           Maze and Bee: Maze and Bee
           Artist Binary: Artist Binary
-          description_audience: Ages 10+ (after Course 3)
+          description_audience: 10 ans et + (après le Cours 3)
         Course4pre:
           description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
           Course 4 Prerequisite: Course 4 Prerequisite
@@ -275,7 +275,7 @@ fr:
         usability:
           Intro: Intro
           Variables and For Loops: Variables and For Loops
-          Functions and Functions with Parameters: Functions and Functions with Parameters
+          Functions and Functions with Parameters: Fonctions et fonctions avec paramètres
           title: Usability Testing
           description_short: ""
           description: A selection of Course 4 levels for usability testing.

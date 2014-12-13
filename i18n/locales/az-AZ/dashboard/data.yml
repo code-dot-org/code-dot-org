@@ -343,8 +343,7 @@ az:
       frozen square iterative:
         instructions: "It seems like we're halfway to making a square. Let's put 4 lines together to create a square."
       frozen square loop:
-        instructions: |-
-          Hi, I'm Anna of Arendelle! Let's make a square with the "Repeat" block, which uses fewer blocks. How many times (???) should the "Repeat" block loop the blocks inside it to make a square?
+        instructions: 'Salam, mən Arendelli Annayam! Gəlin daha az blokdan istifadə edən "təkrar et" bloku ilə kvadrat düzəldək. "Təkrar et" bloku daxildəki blokları neçə dəfə (???) dövr etdirməlidir ki, kvadrat alınsın?'
       frozen square loop 3x:
         instructions: "Let's create three squares, turning after each square. Be sure to turn by 120 degrees before each new square."
       frozen square snowflake:
@@ -496,6 +495,7 @@ az:
         C4_math_artist: Programming the Artist with Math
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
+        C4_function_parameters: Parametrli funksiyalar
         C4_conditionals: Şərti ifadələr
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs

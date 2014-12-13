@@ -489,6 +489,7 @@ nl:
         C4_math_artist: Programmeer de Kunstenaar met Math
         C4_function_edit: Bewerken van Functies
         C4_function_create: Maken van functies
+        C4_function_parameters: Functies met Parameters
         C4_conditionals: Voorwaardelijke instructies
         C4_unplugged_algorithms: Algoritmen met Tangrams
         C4_unplugged_madlibs: Mad Libs

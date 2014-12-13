@@ -11068,7 +11068,7 @@ exports.extraTopBlocks = function(d){return "Du har blokke, som ikke er knyttet 
 
 exports.goal = function(d){return "Mål:"};
 
-exports.reinfFeedbackMsg = function(d){return "Her er din historie! Fortsæt med at arbejde på den, eller gå videre til det næste puslespil!"};
+exports.reinfFeedbackMsg = function(d){return "Her er din historie! Fortsæt med at arbejde på den, eller gå videre til den næste opgave!"};
 
 exports.yourExpression = function(d){return "Dit udtryk:"};
 
@@ -11161,17 +11161,17 @@ exports.listVariable = function(d){return "liste"};
 
 exports.makeYourOwnFlappy = function(d){return "Lav dit eget Flappy spil"};
 
-exports.missingBlocksErrorMsg = function(d){return "Prøv en eller flere af blokkene nedenfor til at løse dette puslespil."};
+exports.missingBlocksErrorMsg = function(d){return "Prøv en eller flere af blokkene nedenfor for at løse denne opgave."};
 
-exports.nextLevel = function(d){return "Tillykke! Du fuldførte puslespillet "+v(d,"puzzleNumber")+"."};
+exports.nextLevel = function(d){return "Tillykke! Du har løst opgave "+v(d,"puzzleNumber")+"."};
 
-exports.nextLevelTrophies = function(d){return "Tillykke! Du fuldførte puslespillet "+v(d,"puzzleNumber")+" og vandt "+p(d,"numTrophies",0,"da",{"one":"et trofæ","other":n(d,"numTrophies")+" trofæer"})+"."};
+exports.nextLevelTrophies = function(d){return "Tillykke! Du har løst opgave "+v(d,"puzzleNumber")+" og vandt "+p(d,"numTrophies",0,"da",{"one":"et trofæ","other":n(d,"numTrophies")+" trofæer"})+"."};
 
 exports.nextStage = function(d){return "Tillykke! Du gennemførte "+v(d,"stageName")+"."};
 
 exports.nextStageTrophies = function(d){return "Tillykke! Du gennemførte "+v(d,"stageName")+" og vandt "+p(d,"numTrophies",0,"da",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
-exports.numBlocksNeeded = function(d){return "Tillykke! Du fuldførte puslespillet "+v(d,"puzzleNumber")+". (Men du kunne have brugt kun "+p(d,"numBlocks",0,"da",{"one":"1 blok","other":n(d,"numBlocks")+" blokke"})+".)"};
+exports.numBlocksNeeded = function(d){return "Tillykke! Du har løst opgave "+v(d,"puzzleNumber")+". (Men du kunne have løst den med "+p(d,"numBlocks",0,"da",{"one":"1 blok","other":n(d,"numBlocks")+" blokke"})+".)"};
 
 exports.numLinesOfCodeWritten = function(d){return "Du har lige skrevet "+p(d,"numLines",0,"da",{"one":"1 linje","other":n(d,"numLines")+" linjer"})+" kode!"};
 
@@ -11179,7 +11179,7 @@ exports.play = function(d){return "afspil"};
 
 exports.print = function(d){return "Udskriv"};
 
-exports.puzzleTitle = function(d){return "Puslespil "+v(d,"puzzle_number")+" af "+v(d,"stage_total")};
+exports.puzzleTitle = function(d){return "Opgave "+v(d,"puzzle_number")+" af "+v(d,"stage_total")};
 
 exports.repeat = function(d){return "gentag"};
 
@@ -11203,9 +11203,9 @@ exports.subtitle = function(d){return "et visuelt programmerings miljø"};
 
 exports.textVariable = function(d){return "tekst"};
 
-exports.tooFewBlocksMsg = function(d){return "Du bruger alle de nødvendige typer af blokke, men prøv at bruge flere af disse typer blokke til at fuldføre dette puslespil."};
+exports.tooFewBlocksMsg = function(d){return "Du bruger alle de nødvendige typer blokke, men prøv at bruge flere af disse blokke for at løse opgaven."};
 
-exports.tooManyBlocksMsg = function(d){return "Dette puslespil kan løses med <x id='START_SPAN'/><x id='END_SPAN'/> blokke."};
+exports.tooManyBlocksMsg = function(d){return "Denne opgave kan løses med <x id='START_SPAN'/><x id='END_SPAN'/> blokke."};
 
 exports.tooMuchWork = function(d){return "Du fik mig til at gøre en masse arbejde! Kunne du prøve at gentage færre gange?"};
 

@@ -121,12 +121,12 @@
         - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: Happy Maps
+        title: Pemetaan bahagia
         desc: Students create simple algorithms (sets of instructions) to move a character
           through a maze using a single command.
         video: C1_happy_maps_unplugged
       MoveIt:
-        title: Move it, Move it
+        title: Pindahkan, pindahkan
         desc: Students create simple algorithms (sets of instructions) to move a character
           through a maze using a single command.
         video: C1_moveitmoveit_unplugged
@@ -286,7 +286,7 @@
         title: The Design Recipe
         desc: Design Recipe lesson description
       Booleans:
-        title: Booleans
+        title: Boolean
         desc: Booleans lesson description
       ConditionalsPiecewiseFunctions:
         title: Conditionals and Piecewise Functions

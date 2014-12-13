@@ -99,7 +99,7 @@ ru:
         Jigsaw: Головоломки
         MazeStep: 'Лабиринт: Пошаговый режим'
         Wordsearch: Wordsearch
-        Webapp: Webapp
+        Webapp: Веб приложение
         ArtistEC: Художник
         TextMatch: Text Match
         StudioEC: Лаборатория игр
@@ -485,6 +485,7 @@ ru:
         C4_math_artist: Programming the Artist with Math
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
+        C4_function_parameters: Процедуры с параметрами
         C4_conditionals: Условные команды
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs

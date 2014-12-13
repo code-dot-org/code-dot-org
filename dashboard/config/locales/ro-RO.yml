@@ -36,6 +36,7 @@
   of: de
   more: MAI MULT
   less: MAI PUŢIN
+  beta: beta
   try_hoc: 'Încearcă Ora de Cod, faceți clic aici >> '
   try_k8intro: Încearcă Cursul nostru K-8 de introducere în Informatică (15-25 ore)
   k8intro: Cursul Introducere K-8 in Programare (15-25 ore)
@@ -608,6 +609,6 @@
     completed_perfect: finalizat, perfect
     furthest_level_attempted: cel mai îndepărtat nivel încercat
   studio:
-    courses_working_on: Courses you're working on
-    completed_courses: Completed courses
-    all_courses: All courses
+    courses_working_on: Cursurile la care lucrați
+    completed_courses: Curs terminat
+    all_courses: Toate cursurile

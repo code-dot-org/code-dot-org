@@ -313,7 +313,7 @@
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">
     Klik her</a> for vores privatlivs betingelser, der kan deles eller udskrives til
     dine elever.
-  dashboard_curriculum_overview: 5. Klasses Curriculum oversigt
+  dashboard_curriculum_overview: Indskoling og mellemtrin (0.-5. klasse)
   dashboard_view_all_lesson_plans: Se alle lektionsplaner
   dashboard_course1: 'Kursus 1:'
   dashboard_course2: 'Kursus 2:'
@@ -610,10 +610,10 @@
     lærer de grundlæggende begreber, som kommandoer og funktioner for nybegyndere.
     Øvelserne er elevstyrede, men lærere kan tilmelde dig adgang for lærerværktøjer
     og følge elevernes fremskridt!
-  codecademy_longdescription: KodeAkademiet er en interaktiv, studerende-styrede Introduktion
-    til grundlæggende i Kode Skole gennem JavaScript, der bruges af millioner af studerende
-    rundt om i verden. Vi har forberedt "En times kodning" med tilhørende quizzer,
-    dias og et afsluttet projekt for studerende i slutningen.
+  codecademy_longdescription: Codecademy er en interaktiv Introduktion til grundlæggende
+    programmering med JavaScript, som bruges af millioner af brugere rundt om i verden.
+    Vi har forberedt en "Hour of Code" med tilhørende quizzer, slides og et afsluttet
+    projekt for alle deltagere.
   codecombat_longdescription: Overvind orger for at lære Python eller JacaScript i
     dette episke programmeringsspil!
   codemonkey_longdescription: 'CodeMonkey er et online spil, der lærer kodning i et
@@ -691,9 +691,9 @@
   frozen_longdescription: Lad os bruge kode til at udforske isens magi og skønhed
     sammen med Anna og Elsa. Du kan tegne snefnug og mønstre, mens du skøjter og laver
     et vinterlandskab, som du derefter kan dele med dine venner!
-  playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
-    pirates, zombies, ninjas, and many more characters move, make sounds, score points,
-    and even throw fireballs!
+  playlab_longdescription: Skab en historie eller lav et spil i Play Lab! Få dyr,
+    pirater, zombier, ninjaer og mange flere figurer til at bevæge sig. Lav lyde,
+    scor point og endda kaste med ildkugler!
   codeorg_beyond_name: Intro til kodning (8. klasse)
   khan_beyond_name: Lær programmering
   tynker_beyond_name: Lær programmering i hjemmet
@@ -867,10 +867,10 @@
     fra Super-grundlæggende programmering, for aldre 4+, på iOS eller Android (eller
     webbrowser). Lær at sekvens kommandoer, identificere mønstre, bruge procedurer
     og udnyt sløjfer!
-  codecademy_beyond_longdescription: KodeAkademiet er en interaktiv, studerende-styrede
-    Introduktion til grundlæggende i Kode Skole gennem JavaScript, der bruges af millioner
-    af studerende rundt om i verden. Vi har forberedt "En times kodning" med tilhørende
-    quizzer, dias og et afsluttet projekt for studerende i slutningen.
+  codecademy_beyond_longdescription: Codecademy er en interaktiv Introduktion til
+    grundlæggende programmering med JavaScript, som bruges af millioner af brugere
+    rundt om i verden. Vi har forberedt en "Hour of Code" med tilhørende quizzer,
+    slides og et afsluttet projekt for alle deltagere.
   kodable_beyond_longdescription: Kodable er et selv-guidet iPad spil, der introducerer
     børn i alderen 5+ til bases programmering. At have en lærer eller forælder i nærheden
     er optimalt, men ikke nødvendigt.
