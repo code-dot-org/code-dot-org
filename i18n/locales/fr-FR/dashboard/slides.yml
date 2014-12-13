@@ -175,8 +175,7 @@ fr:
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: |-
-          Hi, my name is Saloni. I use computer science to help solve problems in health and medicine. Let's learn about the "if else" block. It looks like the "if" block, but it has an extra part at the end that says "else".
+        text: "Salut, je m'appelle Saloni. J'utilise l'informatique pour aider à résoudre des problèmes en santé et médecine. Apprenons un peu sur le bloc « si sinon ». Il ressemble au bloc « si », mais il a une partie à la fin qui dit « sinon »."
       2:
         image: notes/hoc5_2.jpg
         text: |-

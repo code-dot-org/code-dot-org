@@ -36,6 +36,7 @@
   of: av
   more: MER
   less: MINDRE
+  beta: beta
   try_hoc: 'Prøv Hour of Code (kodetimen), klikk her >> '
   try_k8intro: Prøv vårt introduksjonskurs i informatikk for elever opp til 8. klasse
     (15-25 timer)

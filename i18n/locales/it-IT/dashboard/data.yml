@@ -512,6 +512,7 @@ it:
         C4_math_artist: "Programmazione de L'Artista con la matematica"
         C4_function_edit: Modifica di funzioni
         C4_function_create: Creazione di funzioni
+        C4_function_parameters: Funzioni con parametri
         C4_conditionals: Istruzioni condizionali
         C4_unplugged_algorithms: Algoritmi per il Tangram
         C4_unplugged_madlibs: Mad-Libs

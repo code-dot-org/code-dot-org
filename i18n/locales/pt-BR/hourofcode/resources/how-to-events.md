@@ -69,7 +69,7 @@ Sedie um evento Hora do Código durante a Semana da Educação em Ciência da Co
   </tr>
   
   <td>
-    10:05-10:15 am
+    10h05-10h15
   </td>
   
   <td>
@@ -77,7 +77,7 @@ Sedie um evento Hora do Código durante a Semana da Educação em Ciência da Co
   </td></tr> 
   
   <td>
-    10:15-10:17 am
+    10h15-10h17
   </td>
   
   <td>
@@ -85,7 +85,7 @@ Sedie um evento Hora do Código durante a Semana da Educação em Ciência da Co
   </td></tr> 
   
   <td>
-    10:17-10:30 am
+    10h17-10h30
   </td>
   
   <td>
@@ -93,7 +93,7 @@ Sedie um evento Hora do Código durante a Semana da Educação em Ciência da Co
   </td></tr> 
   
   <td>
-    10:30-10:40 am
+    10h30-10h40
   </td>
   
   <td>
@@ -101,7 +101,7 @@ Sedie um evento Hora do Código durante a Semana da Educação em Ciência da Co
   </td></tr> 
   
   <td>
-    10:40-11:00 pm
+    10h40-11h00
   </td>
   
   <td>
@@ -109,7 +109,7 @@ Sedie um evento Hora do Código durante a Semana da Educação em Ciência da Co
   </td></tr> 
   
   <td>
-    11:00-11:05 pm
+    11h00-11h05
   </td>
   
   <td>

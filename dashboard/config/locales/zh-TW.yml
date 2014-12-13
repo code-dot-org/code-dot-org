@@ -36,6 +36,7 @@
   of: 的
   more: 更多
   less: 更少
+  beta: beta
   try_hoc: 試試看一小時的程式設計課程，請按一下這裡 >>
   try_k8intro: 或試試我們提供給 K-8 的電腦科學簡介課程 (15-25 小時)
   k8intro: 'K 8 簡介電腦科學課程 （15-25 小時） '
@@ -472,7 +473,7 @@
     caption_by_name_age: '%{name}, %{age} 歲'
     caption_time_ago: '%{time_ago} 前'
     header: Gallery
-    header_playlab: Play Lab
+    header_playlab: 播放實驗室
     header_artist: 畫家
   landing:
     prerelease: This page is still under development.

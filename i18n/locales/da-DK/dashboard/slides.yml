@@ -31,7 +31,7 @@ da:
       10:
         image: notes/hoc1_10.jpg
         text: |-
-          Hver blok er en instruktion. Hvis du trækker en "gå videre" blok til dit arbejdsområde og trykker på "Kør Program", bevæger Angry Bird'en sig en plads frem i labyrinten.
+          Hver blok er en instruktion. Hvis du trækker en "flyt fremad"-blok til dit arbejdsområde og trykker på "Kør", bevæger Angry Bird'en sig en plads frem i labyrinten.
       11:
         image: notes/hoc1_11.jpg
         text: For at udføre mere end én handling, kan du trække mange blokke til dit arbejdsområde og knytte dem sammen. Fuglen vil udføre kommandoerne fra top til bund.
@@ -94,13 +94,13 @@ da:
         text: 'Hvis du vil få fuglen til at FLAPPE når du klikker med musen, kan du gøre det ved at knytte "flap"-blokken til den passende hændelseshåndtering. Så vil fuglen flappe hver gang du klikker med musen i dit spil.'
       8:
         image: notes/flappy08.jpg
-        text: I hvert puslespil af denne aktivitet vil vi introducere nye typer af hændelser som grønne blokke på arbejdsområdet, og du kan beslutte passende blokke for at tilføje svar på disse begivenheder.
+        text: I hver opgave i denne aktivitet vil vi introducere nye typer af hændelser som grønne blokke på arbejdsområdet, og du kan vælge passende blokke at tilføje som reaktion på disse hændelser.
       9:
         image: notes/flappy09.jpg
         text: 'Når du ser en fald-ned pil som denne betyder det, at du kan ændre indstillinger - f.eks. hvilken lyd der afspilles når flappy rammer jorden.'
       10:
         image: notes/flappy10.jpg
-        text: I det sidste puslespil vil du være i stand til at skabe dit eget spil og dele det med dine venner. God fornøjelse!
+        text: I den sidste opgave vil du kunne lave dit eget spil og dele det med dine venner. God fornøjelse!
     loop_times:
       1:
         image: notes/hoc2_1.jpg

@@ -799,25 +799,26 @@
         C3_crowdsourcing: Obţinând Informaţii/Critici
         C3_functional_suncatchers: Prinzători ai Soarelui Funcţionali
         C3_songwriting_with_parameters: Compozitie cu parametri
-        C4_intro: Introduction
+        C4_intro: Introducere
         C4_bee_conditional: Condiţii de Ortografie
-        C4_variables_artist: Variables - Artist
-        C4_variables_playlab: Variables - Play Lab
+        C4_variables_artist: Variabile - Artist
+        C4_variables_playlab: Variabile - Joc Laborator
         C4_for_loops: Repetiții Pentru
-        C4_math_artist: Programming the Artist with Math
-        C4_function_edit: Editing Functions
-        C4_function_create: Creating Functions
+        C4_math_artist: Programarea Artistului cu matematică
+        C4_function_edit: Editare de funcții
+        C4_function_create: Crearea de funcții
+        C4_function_parameters: Funcții cu Parametrii
         C4_conditionals: Condiţionale
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Variables in Envelopes
+        C4_unplugged_variables: Variabile în plicuri
         C4_unplugged_forloops: Repetiții Pentru
         C4_unplugged_parameters: Compoziții muzicale cu parametri
-        C4_unplugged_binary: Binary
+        C4_unplugged_binary: Binar
         frozen_intro: Introducere în Ora de cod
         frozen_loops: Introducere în Bucle
         frozen_functions: Introducere în Funcții
-        playlab_intro: Introduction to Play Lab
+        playlab_intro: Introducere in Play Lab
         playlab_events: Play Lab Events
         playlab_repeat_forever: Play Lab Repeat Forever
     callout:
@@ -908,19 +909,21 @@
           pentru a desena un pătrat
         write_draw_triangle_function: Drag blocks from the toolbox into here that
           draw a triangle
-        edit_add_parameter: Click edit to add a parameter in your function
-        add_and_drag_parameter: Write in the name of your parameter here, click add,
-          and then drag it into your function definition
-        fill_in_actor: Fill in the ??? with numbers that correspond to each actor
-          (1, 2, and 3)
-        repeat: Put blocks inside the loop to repeat commands
-        if_bee_nectar: Use the "if" block to decide if the bee should get nectar
-        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower,
-          and makes honey if it's not a flower
-        repeat_full_circle: Enter in the number of times the zombie has to move to
-          make a full circle
+        edit_add_parameter: Clic editare pentru a adăuga un parametru în funcția ta
+        add_and_drag_parameter: Scrie numele parametrului tău aici, fă click pe "adaugă",
+          iar apoi trage-l în definiția funcției tale
+        fill_in_actor: Completează ??? cu numere care corespund fiecărui actor (1,
+          2 și 3)
+        repeat: Pune blocuri în interiorul buclei pentru a repeta comenzi
+        if_bee_nectar: Folosește blocul "dacă" pentru a decide dacă albina ar trebui
+          să ia nectarul
+        if_else_bee: Utilizaţi blocul "dacă/altfel", astfel încât albina ia nectar
+          de la o floare şi face miere dacă aceasta nu este o floare
+        repeat_full_circle: Introdu numărul necesar de mișcări ale zombie-ului astfel
+          încât acesta să facă un cerc complet
         place_length_variable: Drag the length variable here to replace the question
           marks
-        arrows_move_actor: Use the arrows to move the actor
-        right_arrow_fireball: Use the right arrow to shoot fireballs
-        name_function: Write the name of your function here
+        arrows_move_actor: Utilizează săgețile pentru a muta actorul
+        right_arrow_fireball: Utilizează săgeata dreapta pentru a trage mingiile de
+          foc
+        name_function: Scrie numele funcției aici

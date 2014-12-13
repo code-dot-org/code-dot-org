@@ -13,7 +13,7 @@ ca:
         course1:
           "Jigsaw: Learn to drag and drop": 'Trencaclosques: Aprendre a arrossegar i deixar anar'
           "Maze: Sequence": 'Laberint: seqüència'
-          "Maze: Debugging": 'Laberint: Corregeix els errors'
+          "Maze: Debugging": 'Laberint: Depuració'
           "Artist 1: Intro": 'Artista 1: introducció'
           Artists 2: Artistes 2
           Spelling Bee: Spelling Bee
@@ -41,14 +41,14 @@ ca:
           "Bee: Loops": 'Abella: bucles'
           "Studio: Create a Story": 'Play Lab: Crea una història'
           "Artist: Loops": 'Artista: bucles'
-          description_audience: Ages 4+ (pre-readers)
+          description_audience: Edat 4 + (pre-lectors)
           description_short: Course 1 is designed for early readers.
         course2:
           The Maze: El Laberint
           Suzi: Suzi
           The Artist: "L'artista"
           Artist Debugging: "Artista: Correcció d'errors"
-          Bounce: Rebot
+          Bounce: Bota
           "Studio: Create a Story": 'Play Lab: Crea una història'
           Artist Loops: 'Artista: bucles'
           Bee Conditionals: 'Abella: Condicionals'
@@ -81,7 +81,7 @@ ca:
           "Maze: Sequence2": 'Laberint: seqüència2'
           "Artist: Nested Loops": 'Artista: bucles imbricats'
           description_audience: 'Ages  6+ (reading required)'
-          description_short: Course 2 is designed for students who can read.
+          description_short: El Curs 2 està dissenyat per alumnes que saben llegir.
         course3:
           The Maze: El Laberint
           "Studio: Create a Story": 'Play Lab: Crea una història'
@@ -96,7 +96,7 @@ ca:
           Bee Debugging: "Abella: Correcció d'errors"
           Bee Functions: 'Abella: funcions'
           Artist Functions with Params: 'Artista: funcions amb paràmetres'
-          Bounce: Rebot
+          Bounce: Bota
           Maze Conditionals: 'Laberint: els condicionals'
           Artist Functions with Parameters: 'Artista: Funcions amb paràmetres'
           Computational Thinking: Pensament computacional
@@ -108,7 +108,7 @@ ca:
           Digital Citizenship: Ciutadania digital
           Farmer - While Loops: 'Farmer - While Loops'
           description: El Curs 3 està dissenyat per alumnes que ja han fet el Curs 2. Els alumnes aprofundiran en els temes de programació introduïts en els cursos anteriors cap a solucions flexibles i problemes més complexos. Al final del curs, els alumnes creen històries interactives i jocs que poden compartir amb tothom. Recomanat per cicle superior de primària.
-          "Studio: Create a Game": 'Play Lab: Crea un joc'
+          "Studio: Create a Game": 'Play Lab: Creeu un joc'
           Maze: Laberint
           Artist: Artista
           "Artist: Functions": 'Artista: Funcions'
@@ -131,8 +131,8 @@ ca:
           "Bee: Debugging2": "Abella: Correcció d'errors2"
           "Artist: Patterns": 'Artista: patrons'
           Songwriting: Composició
-          description_audience: Ages 8+ (after Course 2)
-          description_short: Course 3 is a follow-up to Course 2.
+          description_audience: Edats 8 + (continuació del Curs 2)
+          description_short: El Curs 3 és una continuació del Curs 2.
         msm:
           title: Matemàtiques ESO
           description: Treball privat en progrés per a ESO.
@@ -155,7 +155,7 @@ ca:
           Booleans: Veritat o fals
           "Play Lab: Booleans": 'Play Lab: Veritat o fals'
           "Calc: Boolean Operators": 'Calc: Operadors booleans'
-          "Play Lab: Boolean Operators": 'Play Lab: Boolean Operators'
+          "Play Lab: Boolean Operators": 'Play Lab: operadors Booleans'
           Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
           "Artist: Conditionals": 'Artista: els condicionals'
           Collision Detection and the Distance Formula: Collision Detection and the Distance Formula
@@ -173,7 +173,7 @@ ca:
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
           "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
           "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
-          "Eval: Boolean Operators": 'Eval: Boolean Operators'
+          "Eval: Boolean Operators": 'Eval: operadors Booleans'
           Blocks to Math: Blocks to Math
           "Play Lab: Defining Variables (Big Game)": 'Play Lab: Defining Variables (Big Game)'
           "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
@@ -201,10 +201,10 @@ ca:
           Maze: Laberint
           title: Hora del codi
           description: "Prova els bàsics de la informàtica amb els personatges d'Angry Birds, Plants vs. Zombies, i Scrat de Ice Age!"
-          description_short: Try the basics of computer science with many fun characters!
+          description_short: Prova els conceptes bàsics de la informàtica amb personatges divertits!
         frozen:
           title: Codi amb Anna i Elsa
-          description: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
+          description: "Programeu per unir-vos amb l' Anna i l' Elsa mentre exploren la màgia i la bellesa del gel. Creareu flocs de neu i patrons com patinatge sobre gel i la creació d'un món fantàstic d'hivern que podeu compartir amb els amics!"
           Artist: Artista
           description_short: "Anem a utilitzar el codi per unir l'Anna i l'Elsa mentre exploren la màgia i la bellesa del gel."
         course4:
@@ -235,7 +235,7 @@ ca:
           Farmer Binary: Granger binari
           Maze and Bee: Laberint i abella
           Artist Binary: Artista binari
-          description_audience: Ages 10+ (after Course 3)
+          description_audience: Edat 10 + (després del curs 3)
         Course4pre:
           description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
           Course 4 Prerequisite: Curs 4 prerequisit
@@ -282,12 +282,12 @@ ca:
           Variables: Variables
           For Loops: Per bucles
         potus:
-          title: special
-          description_short: special
-          description: special
-          Special: Special
+          title: Especial
+          description_short: Especial
+          description: Especial
+          Special: Especial
         special:
-          title: special
-          description_short: special
-          description: special
-          Special: Special
+          title: Especial
+          description_short: Especial
+          description: Especial
+          Special: Especial

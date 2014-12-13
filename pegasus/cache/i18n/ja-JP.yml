@@ -731,20 +731,15 @@
   teachingtree_beyond_longdescription: TeachingTreeは誰でも教育用コンテンツを提供できるオープンなプラットフォームです。私たちのゴールは生徒が個々の概念を学ぶ上で適切なクリップを素早く見つけられるようにすることです。ビデオとそれに関連する概念を紐づけて、私たちのサイトに追加してください。
   kodu_beyond_longdescription: KudoはPCやXbox用のゲームをつくるための視覚的なプログラミング言語です。Kutoはプログラミングと同時に、創造性、問題解決、物語の作成方法を教えるためにも利用できます。子供も大人も、デザインやプログラミングのスキルがなかったとしても、だれでもKudoでゲームを作ることができます。PC用のKudoは無料でダウンロードできます。Xbox用のKudoは米国で利用可能でXboxマーケットプレースのインディーズゲームで５＄で購入することができます。
   cargobot_beyond_longdescription: Cargo-Botはロボットに木箱を動かす方法を教えるパズルゲームです。簡単そうに聞こえますよね？恐怖の音楽と驚くほどきれいなグラフィックスからなる36個のすごく面白いパズルが用意されています。あなたの解き方を記録して、YouTubeに共有してともだちに見せることもできます。
-  kidsruby_beyond_longdescription: 'Have fun and make games, or hack your homework
-    using Ruby! Just tell your parents or teachers you''re learning Ruby programming...
-    ;). Free and works on any computer. [Note: Desktop install required]'
-  w3schools_beyond_longdescription: Learn to create websites on your own computer.
-    Learn the server basics in less than a day. Learn to add databases to your website
+  kidsruby_beyond_longdescription: Rubyを使って宿題をしたり、ゲームを作ったりして楽しみましょう。両親や先生にはRubyプログラミングの勉強をしているといっておきましょう
+    :-)　無料でどのコンピューターでも動作します [注：インストールが必要です]。
+  w3schools_beyond_longdescription: あなたのコンピューターでウェブサイトの作り方を学びましょう。サーバーの基本を1日以内に学びます。ウェブサイトにデータベースを追加しましょう。
   codeavengers_beyond_longdescription: Learn how to program games, apps and websites.
     Designed by experts with perfect level of difficulty for beginners, easy to understand
     instructions and great help when you need it. Our HTML, CSS and JavaScript courses
     include code challenges and revision games that make learning fun and effective
     for all ages.
-  mozilla_beyond_longdescription: Thimble makes it ridiculously simple to create and
-    share your own web pages. Write and edit HTML and CSS right in your browser, then
-    instantly preview your work. Host and share your finished projects with a single
-    click. Perfect for beginners and experts alike.
+  mozilla_beyond_longdescription: Thimbleを使うと、ウェブページの作成と共有が驚くほど簡単になります。HTMLとCSSをブラウザの中で編集し、その結果を簡単にプレビューすることができます。クリック一つで歓声したプロジェクトを共有できます。初心者にもエキスパートにも適しています。
   codecombat_beyond_longdescription: Play as a Wizard using code (spells) to control
     your heroes, navigate mazes, defeat ogres, trick enemies, and rescue allies! Learn
     JavaScript in this HTML 5 web game for complete beginners.
@@ -774,8 +769,5 @@
     within a visual context, Processing evolved into a development tool for professionals.
     Today, there are tens of thousands of students, artists, designers, researchers,
     and hobbyists who use Processing for learning, prototyping, and production.
-  alice_beyond_longdescription: Using an innovative programming environment to support
-    the creation of 3D animations, the Alice Project provides tools and materials
-    for teaching and learning computational thinking, problem solving, and computer
-    programming across a spectrum of ages and grade levels.
+  alice_beyond_longdescription: 3Dアニメーションの作成をサポートする革新的なプログラミング環境を使いながら、Aliceプロジェクトでは、幅広い年代の人に対して、コンピューターでの考え方、問題解決方法、コンピュータープログラミングを教えたり学んだりするための資料やツールを提供しています。
   sphero_beyond_longdescription: あなたが教育者であろうと保護者であろうと、SPRKのレッスンではロボットのプログラミングについて楽しく学ぶことができます。算数と科学のスキルも鍛えられます。

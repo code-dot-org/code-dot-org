@@ -586,6 +586,7 @@
         C4_math_artist: 수학 예술가 프로그래밍
         C4_function_edit: 함수 수정하기
         C4_function_create: 함수 만들기
+        C4_function_parameters: 함수(값 전달)
         C4_conditionals: 조건
         C4_unplugged_algorithms: 탱그램 알고리즘
         C4_unplugged_madlibs: 매드 립스(Mad Libs)

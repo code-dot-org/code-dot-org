@@ -15079,7 +15079,7 @@ exports.penTooltip = function(d){return "Şəkil çəkməyi başlamaq və ya day
 
 exports.penUp = function(d){return "karandaşı qaldır"};
 
-exports.reinfFeedbackMsg = function(d){return "Bu siz istəyən kimi görünürmü? Öz çəkdiyiniz rəsmi görmək üçün \"Bir daha cəhd edin\" düyməsini basın."};
+exports.reinfFeedbackMsg = function(d){return "Bu da sizin rəsm əsəri! Üzərində işləməyə davam edin və ya növbəti tapmacaya keçin."};
 
 exports.setColour = function(d){return "rəngi təyin et"};
 

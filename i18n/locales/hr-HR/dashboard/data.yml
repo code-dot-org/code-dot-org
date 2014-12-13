@@ -135,111 +135,98 @@ hr:
         maze_2_11: Dragi čovječe. Ja zombij. Ja gladan. Moram... otići ... do suncokreta... Možeš li me odvesti tamo koristeći samo 5 naredbi?
         maze_2_12: OK, ovo je slično, ali malo drugačije. Možeš li to riješiti sa samo 5 blokova?
         maze_2_13: 'Koristi novi blok "ako" da bih mogao odlučiti kada da skrenem. Savjet: trebaš još samo jedan blok, ali nauči kako smo ga postavili tako da to sljedeći put možeš učiniti samostalno.'
-        maze_2_14: 'Ok, this is just like the last puzzle, but you need to remember how you used the "if" block and the "repeat" block together.'
-        maze_2_15: 'Me want sunflower! Use an "if" block to get me there with the fewest number of blocks.'
-        maze_2_16: "Ok, let's do that again for practice - this isn't very different, but watch out for the chompers!"
-        maze_2_17: 'The "If-else" blocks checks a condition, and then does one thing OR another. To get me to the sunflower try to use this new block.'
-        maze_2_18: 'One more practice of the "if-else" block, can you get it right on your first try?'
-        maze_2_19: Can you add just 3 blocks to help me solve a more complex maze? If you do it right, I can walk any curvy path no matter the length.
-        turtle_1_1: "Hi, I'm an artist. You can write code to make me draw almost anything. Use a few blocks to make me draw over the grey lines in the picture."
+        maze_2_14: 'OK, ovo je baš kao i posljednji puzzle, ali morate se sjetiti kako ste zajedno koristili "ako" blok i blok "ponoviti".'
+        maze_2_15: 'Ja željeti suncokret! Koristi blok "ako" da me dovedeš do njega sa što je moguće manje blokova.'
+        maze_2_16: 'OK, za vježbu to napravi još jednom - ovo nije puno drugačije, ali pazi na mesožderke!'
+        maze_2_17: 'Blok "ako-inače" provjerava uvjet, a onda napravi ILI jedno ILI drugo. Da bi me doveo do suncokreta, probaj koristiti ovaj novi blok.'
+        maze_2_18: 'Još jedna vježba s "ako-inače" blokom, možeš li je riješiti iz prvog pokušaja?'
+        maze_2_19: Možeš li dodati samo 3 bloka da bi mi pomogao proći kroz složeniji labirint? Ako to napraviš kako treba, mogu hodati po bilo kako krivudavom putu bez obzira na dužinu.
+        turtle_1_1: Bok, ja sam umjetnik. Možeš napisati kôd da bih mogao nacrtati gotovo sve. Iskoristi nekoliko blokova da bih crtao po sivim linijama na slici.
         turtle_1_2: 'Sada nacrtaj kvadrat. NAPOMENA: koristi svoju omiljenu boje tako da je odabereš na novom bloku "postavi boju".'
         turtle_1_3: Napravi kvadrat koristeći samo 3 bloka.
-        turtle_1_4: |-
-          Draw a triangle whose sides are all in different colors, using the "random color" option that picks a different color each time. Hint: you'll have to figure out how far to turn by clicking on the number in the turn block.
-        turtle_1_5: Now, for practice, draw a triangle and then a square to draw an envelope.
-        turtle_1_6: 'Can you figure out how draw this triangle and square? Hint: Do the triangle first, then figure out how much to turn before drawing the square.'
-        turtle_1_7: "Ok, let's make it a bit harder - see if you can draw these green glasses. The squares are 100 pixels on each side, and they're 50 pixels apart. Don't forget to draw in green!"
-        turtle_1_8: 'Ok, try to figure out what happens if you run this code (or press "Run" to try it). Then, repeat it enough times to complete the drawing. The colors will be different every time.'
-        turtle_1_9: Can you figure out what number to replace the question marks with to draw a circle?
-        turtle_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "set width" block. Have fun!'
-        turtle_4_1: 'Can you draw a triangle (with edges of 100 pixels) with only 3 blocks? Hint: use a "repeat" block.'
-        turtle_4_2: 'Add a "turn right by 90 degrees" block somewhere in the middle of the program already out on the workspace to draw these triangles.'
-        turtle_4_3: |-
-          Ok, here's the code you wrote to draw a single triangle. Can you add a "repeat" and "turn" block to make a pretty flower?
-        turtle_4_4: "Here's the same code from the previous puzzle, but turning only 36 degrees after drawing each triangle. How many times does this need to repeat? (Hint: after 360 degrees of turning the drawing will come full circle)"
-        turtle_4_5: "Here's the same code from the previous puzzle, but repeating the turns 36 times. How many degrees should the turns be? (Hint: after 360 degrees of turning the drawing will come full circle)"
-        turtle_4_6: Using only 3 blocks, can you draw a square with edges of 20 pixels?
-        turtle_4_7: "Here's the code for drawing the square from last puzzle. Can you repeat it to draw 10 adjacent squares like a ladder? Hint: you only need 2 more blocks."
-        turtle_4_8: "Here's the solution to the previous puzzle. Can you add just 2 more blocks to complete the drawing?"
-        turtle_4_9: "Here's the solution to the previous puzzle. How many degrees should you turn to complete the drawing? (You probably need to guess a few times)"
-        turtle_4_10: "Here's the solution to the previous puzzle. How many times should you repeat to complete the drawing?"
-        turtle_4_11: 'Try changing the numbers in the "turn" and "repeat" blocks to make different patterns. Or, experiment changing the rest of the code to draw anything you want.'
-        maze_karel_1_1: |-
-          Hi, I'm a farmer. I need your help to flatten the field on my farm so it's ready for planting. Move me to the pile of dirt and use the "remove" block to remove it.
-        maze_karel_1_2: 'Next, move me to the hole and fill it with TWO shovelfuls of dirt, using the "fill" block.'
-        maze_karel_1_3: Move me to the pile of dirt and tell me how many shovelfuls to remove using as few blocks as possible.
-        maze_karel_1_4: 'Can you help me remove all four piles of dirt? Hint: use a repeat block if you can.'
-        maze_karel_1_5: 'Help me fill in all these holes with 5 shovelfuls of dirt. Hint: you can put a "repeat" block inside the "while" block.'
-        maze_karel_1_6: |-
-          Remove all the piles of dirt, using as few blocks as possible. The new options in the dropdown menu on the "while" block tell me if I'm standing on a pile or a hole.
-        maze_karel_1_7: "Wow, I found a really deep hole! I don't know how many shovelfuls of dirt it needs. Can you write a program that fills it until the ground is even?"
-        maze_karel_1_8: Help me fill in the hole at the end of the field, using as few blocks as possible.
-        maze_karel_1_9: 'Make me remove all these piles of dirt. Try to use as few blocks as possible. Hint: try using a "while" block.'
-        maze_karel_1_10: "I'm working late, so it's dark out, and I can't tell how large the piles are. Now I don't have all the options I used to have on the while block. Move me along the field, and if there is a pile, remove it."
-        maze_karel_1_11: |-
-          It's still dark outside. Move me along the field. If there is a pile, remove it, and if there is a hole, fill it in. Hint: use the dropdown menu of options on the "if" block.
-        turtle_2_1: "Hello. Me zombie artist. Me love drawing! Help me draw a square in a special color. Important note: you have all the same blocks but they've now been arranged in categories."
-        turtle_2_2: 'Welcome to using functions, which let you define new blocks! Try the new "draw a square" block, found in the "Functions" category, to draw a small 50x50 green square.'
-        turtle_2_3: 'Use the "repeat" block (in the "Loops" category) to draw 3 squares of size 100, each 120 degrees apart. And do it in 3 different, random colors.'
-        turtle_2_4: "Now we're going to get fancy. Change the code to draw 36 squares, 100 pixels wide, and each 10 degrees apart. Hint: you may want to use the slider to make me go faster."
-        turtle_2_5: |-
-          Draw squares with sides of 50, 60, 70, 80, and 90 pixels.  You'll need to use the "draw a square" function five times.
-        turtle_2_6: |-
-          Ok, this program will use a counter, to draw the same squares as last time. You want the square to be the same size as the counter, so use the "counter" block. Hint: It's in the Variables category.
-        turtle_2_7: |-
-          Here's a program to draw a spiral, but the blocks are disabled so they won't run. Make a new program using a "count with" block (in the Loops category) and "counter" block (in the Variables category) to draw the same spiral.
-        turtle_2_7_5: |-
-          There's a new "draw a snowman" function (in the Functions category). Draw two snowmen, of height 250 and 100.
-        turtle_2_8: |-
-          This one's a bit tricky. Use the "draw a snowman" function and the new "jump forward" block (in the Actions category). Draw 3 snowmen in different colors, 100 pixels apart.
-        turtle_2_9: 'Use a "count with" loop to draw a family of snowmen with heights of 110, 100, 90, 80, and 70. The snowmen should all be 60 pixels apart.'
-        turtle_2_10: "Here's some code to try experimenting with different spirals.  What happens if you change the turn amount? Or set a random color in the loop?  Draw anything you like."
-        maze_karel_2_1: 'Try using the blocks to help me remove all the piles and fill in all the holes on the ground. Try to use loops instead of using too many blocks. Hint: you can put a loop inside another loop.'
-        maze_karel_2_2: |-
-          We've defined our own block called "fill 5", which is now in the Functions category. Use it to help me fill in this hole.
-        maze_karel_2_3: |-
-          Use the new "fill 5" function block to make me fill in all the holes. You'll have to drag out the "fill 5" block out from the Functions category.
-        maze_karel_2_4: Define a new function that removes 7 shovelfuls. Then use it to write a program that helps me remove all the piles.
-        maze_karel_2_5: Create a new function that removes 6 shovelfuls from a pile, and use it to help me level out all the piles.
-        maze_karel_2_6: 'Use two new functions, "fill 8" and "remove 8", to help me level out the pile and fill in the hole.'
-        maze_karel_2_7: "There's a cow in my field! Write a new function that helps me avoid the cow and remove the pile. Put all your blocks inside the new function."
-        maze_karel_2_8: 'Use this new function, "avoid the cow and remove 1", to help me remove all the piles.'
-        maze_karel_2_9: "Ok, here's a function that removes 4 different piles of dirt in a vertical column. Try putting this function inside a loop, so that you remove all the piles of dirt using only a few new blocks."
-        maze_karel_2_10: Move me across the field, and use these two functions to help me remove all the piles and fill all the holes.
-        turtle_3_1: |-
-          This puzzle shows you how the "draw a square" and "draw a circle" functions are defined.  Defining a function doesn't run its blocks.  You have to pull out the "draw a square" block to actually draw a square.
-        turtle_3_2: 'Using the "draw a square" function as an example, create a "draw a triangle" function and use it.'
-        turtle_3_3: 'Draw triangular fences around the cats and a square fence around the cow.  Tip: test the program as you go along.'
-        turtle_3_4: 'See if you can figure out how to use "draw a square" and "draw a triangle" (and some other blocks) to draw a house around the lion.'
-        turtle_3_5: 'Now create a new "draw a house" function and use it to house two cats. Hint: create a new function using the "do something" block, and type your own text to name the block.'
-        turtle_3_6: 'Using "draw a square" as an example, add an input named "length" to "draw a triangle". Then, draw triangles in different sizes. (Hint: click the star to add an input to a function)'
-        turtle_3_7: 'Add an input named "length" to "draw a house" and build a big house for the elephant (with edges 150 pixels long)'
-        turtle_3_8: 'Here are all of the blocks from the previous puzzle.  Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
-        turtle_3_9: 'Can you re-create the "draw a house" function without help? Try it, and then draw a row of houses.'
-        turtle_3_10: "You've learned a lot! Now use it to draw whatever you want. Try to draw a star, or a spiral, or a fancy snowflake."
-        maze_karel_debug_seq_1: "Welcome to debugging! My code doesn't work right. Can you spot the problem and fix it so that I can get my field flat and ready for planting?"
-        maze_karel_debug_seq_2: "What's wrong with this program? How should you fix it so I can remove that pile?"
-        maze_karel_debug_repeat: De-bug this program for me so my field will be nice and flat.
-        maze_karel_debug_while: How should you change this program to help me fill the hole?
-        maze_karel_debug_if: Help! Fix the program so my field will be completely flat.
-        maze_karel_debug_if_else: De-bug this program so I can fill in the holes and remove all the piles.
-        maze_karel_debug_function_1: What should you change about this program to help me remove all the piles?
-        maze_karel_debug_function_2: Can you de-bug this program for me so I can make my field flat?
-        maze_karel_debug_function_3: "Edit this program so I'll remove all the piles on my field. "
-        turtle_5_1: Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)
-        turtle_5_2: Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)
-        turtle_5_3: Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)
-        turtle_5_4: Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)
-        turtle_5_5: Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)
-        turtle_5_6: Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)
-        maze_3_1: I need to get to that pig! Type in a couple of calls to move(); so I can get my eggs back.
-        maze_3_2: Write me a program, so I can make it all the way to the pig.
-        maze_3_3: "How should I get to the pig? Make sure I don't run into the box of TNT!"
-        maze_3_4: Argh! Write me a program that gets me around the TNT and to the pig.
-        bounce_1: 'Attach a block to the "when left arrow" block and press "Run". Move the paddle using the left arrow to reach the finish target.'
-        bounce_2: 'Attach a block to the "when right arrow" and "when left arrow" blocks. Move the paddle to reach both finish targets.'
-        bounce_3: 'Now try something similar with the "when up arrow" block. Move the paddle to the finish target at the top.'
-        bounce_4: This time you need to add four blocks. Move the paddle to all four finish targets to complete this puzzle.
+        turtle_1_4: 'Nactaj trokut čije su stranice u različitim bojama koristeći opciju "bilo koja boja" koja svaki put bira drugu boju. Savjet: sam ćeš morati otkriti koliko se treba okrenuti tako da klikneš na broj na bloku okretanja.'
+        turtle_1_5: Sada, za vježbu, nacrtajte trokut, a onda i kvadrat kako biste nacrtali omotnicu.
+        turtle_1_6: 'Možeš li riješiti kako nacrtati ovaj trokut i kvadrat? Savjet: Prvo nacrtaj trokut, a zatim zaključi koliko se umjetnik treba okrenuti prije crtanja kvadrata.'
+        turtle_1_7: 'OK, hajdemo sad malo teže - možeš li nacrtati ove zelene naočale? Stranice kvadrata su dugačke 100 piksela, a razmaknuti su 50 piksela. Nemoj ih zaboraviti crtati zelenom bojom!'
+        turtle_1_8: 'OK, pokušaj zaključiti što će se dogoditi ako pokreneš ovaj program (ili klikni na "Pokreni" da ga isprobaš). Zatim ga ponovi dovoljan broj puta da dovršiš crtež. Boje će svaki put biti drugačije.'
+        turtle_1_9: Možeš li otkriti s kojim brojem treba zamijeniti upitnik da bi nacrtao krug?
+        turtle_1_10: 'Uspio si! Sad možeš nacrtati sve što poželiš. Evo nekih zgodnih ideja: štapićasti čovječuljak, pahuljica ili spirala. Također isprobaj novi blok "postavi širinu". Dobro se zabavi!'
+        turtle_4_1: 'Možeš li nacrtati trokut (sa stranicama od 100 piksela) sa samo 3 bloka? Savjet: koristi blok "ponovi".'
+        turtle_4_2: 'Da bi nacrtao ove trokute, dodaj blok "okreni desno za 90 stupnjeva" negdje u sredini programa. Naći ćeš ga već postavljenog na radnu površinu.'
+        turtle_4_3: 'OK, ovdje je kôd za crtanje jednog trokuta koji si napravio. Možeš li dodati blokove "ponovi" i "okreni" da bi dobio lijepi cvijet?'
+        turtle_4_4: 'Ovdje je isti kôd iz prethodnog zadatka, ali se ovaj put nakon što nacrta trokut okreće za samo 36 stupnjeva. Koliko puta se to treba ponoviti? (Savjet: nakon okreta od 360 stupnjeva će crtež imati puni krug)'
+        turtle_4_5: 'Ovdje je isti kôd iz prethodnog zadatka, ali se ovaj put ponavlja 36 puta. Koliko stupnjeva se svaki put treba okrenuti? (Savjet: nakon okreta od 360 stupnjeva će crtež imati puni krug)'
+        turtle_4_6: Koristeći samo 3 bloka, možeš li nacrtati kvadrat sa stranicama duljine 20 piksela?
+        turtle_4_7: 'Ovdje je kôd za crtanje kvadrata iz prethodnog zadatka. Možeš li ga ponoviti tako da nacrta 10 kvadrata jedan do drugog tako da dobiješ ljestve? Savjet: trebaš dodati još samo dva bloka.'
+        turtle_4_8: Ovdje je rješenje prethodnog zadatka. Možeš li dodati još samo 2 bloka da dovršiš sliku?
+        turtle_4_9: Ovdje je rješenje prethodnog zadatka. Za koliko se stupnjeva trebaš okretati da dovršiš crtež? (Vjerojatno ćeš trebati pogađati nekoliko puta)
+        turtle_4_10: Ovo je rješenje prethodnog zadatka. Koliko puta to trebaš ponoviti da dovršiš crtež?
+        turtle_4_11: 'Pokušaj promijeniti brojeve u blokovima "okreni" i "ponovi" da bi dobio različite uzorke. Ili eksperimentiraj s izmjenama u ostatku koda da bi nacrtao što god želiš.'
+        maze_karel_1_1: 'Zdravo, ja sam farmer. Trebam tvoju pomoć da poravnam zemlju na farmi da bude spremna za sadnju. Pomakni me do hrpe zemlje i koristi blok "ukloni" da bi je uklonio.'
+        maze_karel_1_2: 'Zatim me pomakni do rupe i ispuni je s DVIJE lopate zemlje koristeći blok "ispuni".'
+        maze_karel_1_3: Pomakni me do hrpe zemlje i reci mi koliko lopata zemlje trebam ukloniti koristeći što je moguće manje blokova.
+        maze_karel_1_4: 'Možeš li mi pomoći ukloniti sve hrpe zemlje? Savjet: ako možeš, koristi blok "ponovi".'
+        maze_karel_1_5: 'Pomozi mi ispuniti sve ove rupe sa po 5 lopata zemlje. Savjet: možeš staviti blok "ponovi" unutar bloka "dok".'
+        maze_karel_1_6: 'Ukloni sve hrpe zemlje koristeći što je moguće manje blokova. Nova opcija na padajućem izborniku na bloku "dok" će mi reći stojim li pred hrpom ili pred rupom.'
+        maze_karel_1_7: Oh, našao sam stvarno duboku rupu! Ne znam koliko će mi lopata zemlje trebati da je napunim. Možeš li napisati program koji će je puniti dok se zemlja ne izravna?
+        maze_karel_1_8: Pomozi mi napuniti rupu na kraju polja koristeći što je moguće manje blokova.
+        maze_karel_1_9: 'Napravi da uklonim sve hrpe zemlje. Pokušaj koristiti što je moguće manje blokova. Savjet: koristi blok "dok".'
+        maze_karel_1_10: 'Kasno je i spustio se mrak. Ne mogu reći koliko su velike hrpe zemlje. Sad nemam sve opcije na koje sam navikao na bloku "dok". Pomiči me po polju i ako se tu nalazi hrpa, ukloni je.'
+        maze_karel_1_11: 'Još uvijek je vani mračno. Pomiči me po polju. Ako se tu nalazi hrpa, ukloni je, a ako se nalazi rupa, ispuni je. Savjet: koristi padajući izbornik na bloku "ako".'
+        turtle_2_1: 'Zdravo! Ja zombi umjetnik. Ja voljeti crtati! Pomozi mi nacrtati kvadrat u posebnoj boji. Važna napomena: imaš na raspolaganju iste blokove, ali su sada grupirani u kategorije.'
+        turtle_2_2: 'Dobrodošao u korištenje funkcija! One ti omogućavaju da definiraš nove blokove! Isprobaj novi blok "nacrtaj kvadrat", kojeg možeš naći u kategoriji "Funkcije", da bi nacrtao mali zeleni 50x50 kvadrat.'
+        turtle_2_3: 'Koristi blok "ponovi" (u kategoriji "Petlje") da nacrtaš 3 kvadrata veličine 100, s pomakom od 120 stupnjeva. Nacrtaj ih u tri različite, slučajno odabrane boje.'
+        turtle_2_4: 'Sad ćemo postati maštoviti. Promijeni kôd tako da nacrtaš 36 kvadrata, veličine 100 pixela, svaki zakrenut za 10 stupnjeva. Savjet: možeš koristiti klizač da bih crtao brže.'
+        turtle_2_5: 'Nacrtaj kvadrate sa stranicama duljine 50, 60, 70, 80 i 90 piksela. Trebat ćeš pet puta koristiti funkciju "nacrtaj kvadrat".'
+        turtle_2_6: 'Ovaj program će koristiti brojač, a crta iste kvadrate kao i prošli put. Želimo da kvadrat bude iste veličine kao i brojač, pa zato koristimo blok "brojač". Savjet: Nalazi se u kategoriji Varijable.'
+        turtle_2_7: 'Ovo je program koji crta spiralu, ali blokovi su isključeni pa program ne radi. Napravi novi program koristeći blok "broji s" (u kategoriji Petlje") i blok "brojač" (u kategoriji Varijable) da bi nacrtao istu spiralu.'
+        turtle_2_7_5: 'Ovdje je nova funkcija "nacrtaj snjegovića" (u kategoriji "Funkcije"). Nacrtaj dva snjegovića, visine 250 i 100.'
+        turtle_2_8: 'Ovo je malo zahtjevnije. Koristi funkciju "nacrtaj snjegovića" i novi blok "skoči naprijed" (u kategoriji Akcije). Nacrtaj 3 snjegovića u različitim bojama, razmaknute za 100 piksela.'
+        turtle_2_9: 'Koristi petlju "broji s" da bi nacrtao obitelj snjegovića visokih 110, 100, 90, 80 i 70 piksela. Snjegovići trebaju biti razmaknuti 60 piksela.'
+        turtle_2_10: Ovdje je nekakav kôd da eksperimentiraš s različitim spiralama. Što će se dogoditi ako promijeniš veličinu okreta? Ili ako staviš slučajni odabir boje u petlju? Nacrtaj što god želiš.
+        maze_karel_2_1: 'Korištenjem blokova mi pomogni ukloniti sva hrpe i ispuniti sve rupe na zemlji. Pokušaj koristiti petlje umjesto krištenja previše blokova. Savjet: možeš staviti petlju unutar druge petlje.'
+        maze_karel_2_2: 'Definirali smo vlastiti blok i nazvali ga "ispuni 5", a sad se nalazi u kategoriji Funkcije. Koristi ga da mi pomogneš ispuniti ovu rupu.'
+        maze_karel_2_3: 'Koristi novi blok funkcije "ispuni 5" da bih ispunio sve rupe. Trebat ćeš blok "ispuni 5" dovući iz kategorije Funkcije.'
+        maze_karel_2_4: Definiraj novu funkciju koja će uklanjati 7 lopata zemlje. Zatim je iskoristi u pisanju programa kojim ćeš mi pomoći ukloniti sve hrpe.
+        maze_karel_2_5: Napravi novu funkciju koja uklanja 6 lopata zemlje s hrpe i iskoristi je da mi pomogneš izravnati sve hrpe.
+        maze_karel_2_6: 'Koristeći dvije nove funkcije, "ispuni 8" i "ukloni 8", pomogni mi da izravnam hrpu i ispunim rupu.'
+        maze_karel_2_7: Na mojem polju je krava! Napiši novu funkciju koja će mi pomoći da izbjegnem kravu i uklonim hrpu. Postavi sve svoje blokove unutar nove funkcije.
+        maze_karel_2_8: 'Koristeći ovu novu funkciju, "izbjegni kravu i ukloni 1", pomogni mi ukloniti sve hrpe.'
+        maze_karel_2_9: Ovdje je funkcija koja uklanja 4 različite hrpe zemlje u okomitom stupcu. Probaj staviti tu funkciju unutar petlje, tako da ukloniš sve hrpe zemlje koristeći svega nekoliko novih blokova.
+        maze_karel_2_10: Pomiči me po polju i koristeći ove dvije funkcije pomogni mi ukloniti sve hrpe i ispuniti sve rupe.
+        turtle_3_1: 'Ovaj zadatak ti pokazuje kako su definirane funkcije "nacrtaj kvadrat" i "nacrtaj krug". Definiranje funkcija ne pokreće njihove blokove. Trebat ćeš izvući blok "nacrtaj kvadrat" da bi stvarno nacrtao kvadrat.'
+        turtle_3_2: 'Korištenjem funkcije "nacrtaj kvadrat" kao primjera, napravi funkciju "nacrtaj trokut" i iskoristi je.'
+        turtle_3_3: 'Nacrtaj trokutastu ogradu oko mačaka i kvadratnu oko krave. Savjet: često testiraj program da vidiš kako ti ide.'
+        turtle_3_4: 'Pokušaj smisliti kako iskoristiti "nacrtaj kvadrat" i "nacrtaj trokut" (i par drugih blokova) da nacrtaš kuću oko lava.'
+        turtle_3_5: 'Sada napravi novu funkciju "nacrtaj kuću" i iskoristi je da udomiš dvije mačke. Savjet: napravi novu funkciju koristeći blok "uradi nešto" i upiši vlastiti tekst da bi dao ime bloku.'
+        turtle_3_6: 'Koristeći "nacrtaj kvadrat" kao primjer, dodaj ulazni podatak nazvan "duljina" u funkciju "nacrtaj trokut". Potom nacrtaj trokute različitih veličina. (Savjet: klikni na zvjezicu da dodaš ulazni podatak u funkciju)'
+        turtle_3_7: 'Dodaj ulazni podatak nazvan "duljina" u "nacrtaj kuću" i napravi veliku kuću za slona (sa stranicama duljine 150 piksela)'
+        turtle_3_8: 'Ovdje su svi blokovi iz prethodnog zadatka. Izmijeni "nacrtaj kuću" tako da ja nakon crtanja nove kuće završim na njenom donjem desnom kutu. Upotrujebi ovu izmijenjenu funkciju da nacrtaš tri kuće.'
+        turtle_3_9: 'Možeš li ponovno napraviti funkciju "nacrtaj kuću" bez ičije pomoći? Pokušaj, a zatim nacrtaj niz kuća.'
+        turtle_3_10: Puno si naučio! Sada to iskoristi da nacrtaš što god želiš. Pokušaj nacrtati zvijezdu, spiralu ili kitnjastu pahuljicu.
+        maze_karel_debug_seq_1: Dobrodošao u ispravljanje grešaka! Moj kôd ne radi ispravno. Možeš li uočiti problem i popraviti ga tako da mogu poravnati zemljište i pripremiti ga za sadnju?
+        maze_karel_debug_seq_2: Što je krivo u ovom programu? Kako bi ga ti popravio tako da ja mogu ukloniti ovu hrpu?
+        maze_karel_debug_repeat: Ukloni mi greške u ovom programu tako da moje polje bude poravnato.
+        maze_karel_debug_while: Kako bi ti izmijenio ovaj program i pomogao mi da zatrpam rupu?
+        maze_karel_debug_if: Upomoć! Popravi program tako da moje polje bude posve poravnato.
+        maze_karel_debug_if_else: Ispravi greške u ovom programu tako da ja mogu zatrpati rupe i ukloniti sve hrpe.
+        maze_karel_debug_function_1: Koja izmjena u ovom programu bi mi pomogla ukloniti sve hrpe?
+        maze_karel_debug_function_2: Možeš li ukloniti greške u ovom programu tako da ja mogu poravnati svoje polje?
+        maze_karel_debug_function_3: 'Uredi ovaj program tako da uklonim sve hrpe na polju. '
+        turtle_5_1: Pokušaj pokrenuti ovaj program i napravi izmjene da vidiš što će se dogoditi. Možeš li shvatiti kako radi? (Ili ga izbriši i zamijeni s nečim posve drugačijim)
+        turtle_5_2: Pokušaj pokrenuti ovaj program i napravi izmjene da vidiš što će se dogoditi. Možeš li shvatiti kako radi? (Ili ga izbriši i zamijeni s nečim posve drugačijim)
+        turtle_5_3: Pokušaj pokrenuti ovaj program i napravi izmjene da vidiš što će se dogoditi. Možeš li shvatiti kako radi? (Ili ga izbriši i zamijeni s nečim posve drugačijim)
+        turtle_5_4: Pokušaj pokrenuti ovaj program i napravi izmjene da vidiš što će se dogoditi. Možeš li shvatiti kako radi? (Ili ga izbriši i zamijeni s nečim posve drugačijim)
+        turtle_5_5: Pokušaj pokrenuti ovaj program i napravi izmjene da vidiš što će se dogoditi. Možeš li shvatiti kako radi? (Ili ga izbriši i zamijeni s nečim posve drugačijim)
+        turtle_5_6: Pokušaj pokrenuti ovaj program i napravi izmjene da vidiš što će se dogoditi. Možeš li shvatiti kako radi? (Ili ga izbriši i zamijeni s nečim posve drugačijim)
+        maze_3_1: Trebam doći do te svinje! Natipkaj nekoliko poziva funkcije move(); tako da mogu dobiti svoja jaja natrag.
+        maze_3_2: Napiši mi program tako da mogu stići skroz do svinje.
+        maze_3_3: Kako da dođem do svinje? Potrudi se da se ne zaletim u kutiju TNT-a!
+        maze_3_4: Aaah! Napiši mi program koji će me voditi oko TNT-a i do svinje.
+        bounce_1: 'Dodaj blok na blok "kad je lijeva strelica" i klikni na "Kreni". Pomakni reket koristeći lijevu strelicu da dođeš do cilja.'
+        bounce_2: 'Dodaj blok na blokove "kad je desna strelica" i "kad je lijeva strelica". Pomiči reket da dođeš do oba cilja.'
+        bounce_3: 'Sad pokušaj nešto slično s blokom "kad je strelica gore". Pomiči reket do cilja na vrhu.'
+        bounce_4: Ovaj put trebaš dodati četiri bloka. Pomiči reket do sva četiri cilja da bi ispunio ovaj zadatak.
         bounce_5: |-
           We're going to send a ball flying down towards the paddle. Attach a block to the "when ball hits paddle" block to ensure the ball reaches the finish target.
         bounce_6: 'Now the finish target is on the top. You need to attach blocks to both of the "when ball hits" blocks to solve this puzzle.'
@@ -394,7 +381,7 @@ hr:
       scrat 18:
         instructions: '"Ako-inače" blokovi provjeravaju uvjet i ovisno o uvjetu rade jednu ili drugu stvar. Probaj me dovesti do žira koristeći taj novi blok.'
       scrat 19:
-        instructions: 'One more practice of the "if-else" block, can you get it right on your first try?'
+        instructions: 'Još jedna vježba s "ako-inače" blokom, možeš li je riješiti iz prvog pokušaja?'
       scrat 20:
         instructions: Možeš li dodati samo 3 bloka da mi pomogneš riješiti složeniji labirint? Ako možeš, ja mogu hodati kroz bilo koji vijugavi put bez obzira na njegovu duljinu! Požuri! Led se topi!
       Standalone_Artist_1:
@@ -503,6 +490,7 @@ hr:
         C4_math_artist: Programiranje Umjetnika s matematikom
         C4_function_edit: Uređivanje funkcija
         C4_function_create: Stvaranje funkcija
+        C4_function_parameters: Funkcije s parametrima
         C4_conditionals: Uvjeti
         C4_unplugged_algorithms: Algoritmi s Tangramom
         C4_unplugged_madlibs: Mad Libs

@@ -307,7 +307,7 @@ ar:
         studio_playlab_6: يمكن أن تساعد هذه الساحرة التحرك في جميع الإتجاهات باستخدام المفاتيح سهم لأعلى/أسفل/يمين/يسار للحصول على جميع الكرات النارية السحرية؟
         studio_playlab_7: 'القطعة "كرر باستمرار" تسمح لك بتشغيل التعليمات البرمجية بشكل مستمر. هل يمكنك إضافة قطع داخل تلك القطعة لمساعدة الساحر التحرك يميناً ويساراً مرارا وتكرارا؟'
         studio_playlab_8: 'هل يمكنك إضافة قطعة برمجية لحساب النقاط  و قطعة أخرى لتشغيل صوت عندما يلمس وحيد القرن الساحر، ومن ثم ينقله بالأسهم حتى يتحصل على النقاط؟'
-        studio_playlab_9: Set the background for this alien invasion and help the Spacebot get to the alien faster by changing its speed. Then move him with the arrow keys to get to the Spacebot and alert everyone else
+        studio_playlab_9: عين خلفية للغوز الخاص بالكائنات الفضائية، و ساعد سبايسبوت الحصول على الكائن الفضائي أسرع عن طريق تغيير سرعته. ثم حركه عن طريق مفاتيح الأسهم للحصول على الكائن الفضائي وتنبيه الجميع
         studio_playlab_10: 'إنشاء الخاصة بك اللعبة. عند الانتهاء من ذلك، انقر فوق "إنهاء" للسماح للأصدقاء تجربة اللعبة الخاصة بك على الهواتف الخاصة بهم.'
         studio_full_sandbox: 'إنشاء الخاصة بك اللعبة. عند الانتهاء من ذلك، انقر فوق "إنهاء" للسماح للأصدقاء تجربة اللعبة الخاصة بك على الهواتف الخاصة بهم.'
         studio_k1_1: 'يمكنك جعل هذا الكلب يقول "مرحبا العالم"؟'
@@ -484,21 +484,22 @@ ar:
         C4_variables_playlab: 'Variables - Play Lab'
         C4_for_loops: For Loops
         C4_math_artist: برمجة الفنان مع الرياضيات
-        C4_function_edit: Editing Functions
-        C4_function_create: Creating Functions
+        C4_function_edit: تغيير الدوال
+        C4_function_create: إضافة الدوال
+        C4_function_parameters: الدوال والمعاملات
         C4_conditionals: الجمل الشرطية
-        C4_unplugged_algorithms: Algorithms with Tangrams
+        C4_unplugged_algorithms: خوارزميات مع Tangrams
         C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Variables in Envelopes
+        C4_unplugged_variables: المتغيرات في مغلفات
         C4_unplugged_forloops: For Loops
         C4_unplugged_parameters: Songwriting with Parameters
-        C4_unplugged_binary: Binary
+        C4_unplugged_binary: ثنائي
         frozen_intro: تفديم ساعة البرمجة
         frozen_loops: مقدمة للحلقات
-        frozen_functions: Introduction to Functions
-        playlab_intro: Introduction to Play Lab
-        playlab_events: Play Lab Events
-        playlab_repeat_forever: Play Lab Repeat Forever
+        frozen_functions: تقديم للدوال
+        playlab_intro: مقدمة لمختبر Play اللعب
+        playlab_events: أحداث مختبر اللعب
+        playlab_repeat_forever: تشغيل مختبر تكرار
     callout:
       text:
         drag_blocks: 'اسحب كتلة "التحرك" وثبتها تحت كتلة أخرى'
@@ -516,7 +517,7 @@ ar:
         replace_questions: 'إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد'
         replace_questions_degree: 'إستخدم القائمة لتغيير العلامات "؟؟؟" بالدرجة الصحيحة للاستدارة'
         repeat_blocks: 'إستخدم كتلة "كرر" و لفّ حولها القطع في مساحة العمل'
-        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the workspace
+        repeat_blocks_1: (1) استخدام هذه الكتلة لوضعها حول الكتل الرمادية في مساحة العمل
         repeat_blocks_2: '(2) Move the "Repeat" block here, and place the gray blocks inside'
         snowflake_dropdown: استخدم هذه القائمة المنسدلة لإنشاء مختلفة من الثلج!
         degrees_per_side: قسمة 360 على عدد الجانبين للحصول على حجم كل زاوية في درجات.

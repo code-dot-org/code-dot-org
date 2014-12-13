@@ -36,6 +36,7 @@ nn:
   of: av
   more: MER
   less: MINDRE
+  beta: beta
   try_hoc: 'Prøv Hour of Code (kodetimen), klikk her >> '
   try_k8intro: Eller prøv vår barneskuleintroduksjon til informatikkurs (15-25 timar)
   k8intro: Barneskuleintroduksjon til informatikkurs (15-25 timar)
