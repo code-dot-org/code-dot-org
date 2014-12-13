@@ -11068,7 +11068,7 @@ exports.extraTopBlocks = function(d){return "Sizin qoşulmamış bloklarınız v
 
 exports.goal = function(d){return "Məqsəd:"};
 
-exports.reinfFeedbackMsg = function(d){return "İfadənizi redaktə etmək üçün \"Yenidən cəhd edin\" düyməsini basa bilərsiniz."};
+exports.reinfFeedbackMsg = function(d){return "Bu da sizin əhvalat! Üzərində işləməyə davam edin və ya növbəti tapmacaya keçin!"};
 
 exports.yourExpression = function(d){return "Sizin ifadəniz:"};
 
