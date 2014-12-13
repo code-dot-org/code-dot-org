@@ -1,7 +1,7 @@
 #! /usr/bin/env ruby
 
-# `crowdin-cli upload sources`
-# `crowdin-cli download`
+`crowdin-cli upload sources`
+`crowdin-cli download`
 
 # remove all metadata
 Dir.glob("../../pegasus/sites.v3/hourofcode.com/public/us/**/*.md").each do |file|
@@ -24,3 +24,5 @@ end
 Dir.glob("../../pegasus/sites.v3/hourofcode.com/public/us/**/resources.md").each do |file|
   File.write(file, "---\nlayout: wide\nnav: resources_nav\n---" + File.read(file))
 end
+
+
