@@ -568,7 +568,7 @@ Blockly.Flyout.prototype.blockMouseDown_ = function(block) {
     } else {
       // Left-click (or middle click)
       Blockly.removeAllRanges();
-      flyout.blockSpace_.blockSpaceEditor.setCursorHand_(true);
+      Blockly.Css.setCursor(Blockly.Css.Cursor.CLOSED);
       // Record the current mouse position.
       Blockly.Flyout.startDragMouseX_ = e.clientX;
       Blockly.Flyout.startDragMouseY_ = e.clientY;
