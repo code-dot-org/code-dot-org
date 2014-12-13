@@ -60,7 +60,7 @@
   thank_you_: Gràcies!
   congratulations: Felicitats!
   congratulations_on_completing_hoc: Felicitats per completar una Hora de Codi
-  get_a_certificate_of_achievement: Aconsegueix el certificat d'assoliment
+  get_a_certificate_of_achievement: Aconseguiu el certificat d'assoliment
   enter_valid_email: Per favor, introdueïx una adreça de correu electrònic vàlida
   get_a_certificate_message: T'enviarem un certificat i informació sobre com  <a href='/learn/beyond'>Aprendre
     més enllà d'una hora</a>
@@ -71,7 +71,7 @@
   if_you_enjoyed: Si has gaudit aprenent, demana als teus amics que ho intentin també.
     Volem que tot el món aprengui.
   personalize_certificate: Personalitza el teu certificat
-  share_achievement: Comparteix el teu assoliment
+  share_achievement: Compartiu el vostre assoliment
   beyond_hour_message: Segueix endavant amb <a href='http://studio.code.org'> altres
     cursos</a> nostres o mira més opcions per <a href='/learn/beyond'> aprendre més
     enllà d'una hora</a>.
@@ -281,7 +281,7 @@
     informació del compte per repartir als teus alumnes individualment.
   dashboard_sections_switch_section: 'Canvia de secció:'
   dashboard_students_add_student: Afegeix alumne
-  dashboard_students_add_students: Afegeix múltiples alumnes
+  dashboard_students_add_students: Afegiu múltiples alumnes
   dashboard_students_add_multiple: 'Escriu o enganxa els noms dels teus alumnes, un
     per línia:'
   dashboard_students_new_section: Has creat una secció nova! Ara afegeix els teus
@@ -523,12 +523,12 @@
   codeorg_shortdescription: Aprèn a programar amb Mark Zuckerberg i Angry Birds!
   codeintl_shortdescription: Aprèn a programar amb Mark Zuckerberg i Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
-  khan_shortdescription: Aprèn a dibuixar en JavaScript
-  khanes_shortdescription: Aprèn a dibuixar en JavaScript
-  khanpt_shortdescription: Aprèn a dibuixar en JavaScript
-  khanhe_shortdescription: Aprèn a dibuixar en JavaScript
-  khanfr_shortdescription: Aprèn a dibuixar en JavaScript
-  khanpl_shortdescription: Aprèn a dibuixar en JavaScript
+  khan_shortdescription: Apreneu a dibuixar en JavaScript
+  khanes_shortdescription: Apreneu a dibuixar en JavaScript
+  khanpt_shortdescription: Apreneu a dibuixar en JavaScript
+  khanhe_shortdescription: Apreneu a dibuixar en JavaScript
+  khanfr_shortdescription: Apreneu a dibuixar en JavaScript
+  khanpl_shortdescription: Apreneu a dibuixar en JavaScript
   tynker_shortdescription: Aprèn a programar resolent divertits trencaclosques i construint
     els teus propis jocs per mòbils.
   scratch_shortdescription: Crea jocs interactius, històries i animacions.
@@ -722,9 +722,9 @@
     versions del joc Pedra / Paper / Tisores, i veient els resultats com a experiments
     de diferent modelatge.
   hourofcode_longdescription: Contenidor per al nou code.org/hoc
-  frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
-    magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
-    and make a winter wonderland that you can then share with your friends!
+  frozen_longdescription: Programeu per unir-vos amb l' Anna i l' Elsa mentre exploren
+    la màgia i la bellesa del gel. Creareu flocs de neu i patrons com patinatge sobre
+    gel i la creació d'un món fantàstic d'hivern que podeu compartir amb els amics!
   playlab_longdescription: Crea una història o fes un joc amb Play Lab! Fes que animals,
     pirates, zombies, ninjes i molts més personatges es moguin, facin sons, puntuacions
     i fins i tot llançar boles de foc!
@@ -840,7 +840,7 @@
   alice_beyond_platformtext: Windows o Mac (requereix instal·lació)
   sphero_beyond_platformtext: Compra robot
   codeorg_beyond_shortdescription: Aprèn a programar amb Mark Zuckerberg i Angry Birds!
-  khan_beyond_shortdescription: Aprèn a dibuixar en JavaScript
+  khan_beyond_shortdescription: Apreneu a dibuixar en JavaScript
   tynker_beyond_shortdescription: Un divertit i engrescador curs per a nens de 4-8
   scratch_beyond_shortdescription: Crea jocs interactius, històries i animacions.
   lightbot_beyond_shortdescription: Un joc per ensenyar conceptes de programació
