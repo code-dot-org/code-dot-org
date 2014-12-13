@@ -12263,7 +12263,7 @@ exports.errorIncompleteBlockInFunction = function(d){return "Feu clic a \"Edita\
 
 exports.errorParamInputUnattached = function(d){return "Recordeu d'afegir un bloc a cada entrada de paràmetre al bloc de funcions en el vostre espai de treball."};
 
-exports.errorUnusedParam = function(d){return "Heu afegit un bloc de paràmetre, però no l'heu utilitzat a la definició. Assegureu-vos d'utilitzar el paràmetre fent clic a \"edita\" i col·locat en bloc de paràmetre dins el bloc verd."};
+exports.errorUnusedParam = function(d){return "Has afegit un bloc de paràmetre, però no l'has utilitzat a la definició. Assegura't d'utilitzar el paràmetre fent clic a \"edita\" i col·locant el bloc de paràmetre dins del bloc verd."};
 
 exports.errorRequiredParamsMissing = function(d){return "Crea un paràmetre per a la funció fent clic a \"edita\" i afegint els paràmetres necessaris. Arrossega els nous blocs de paràmetres a la definició de funció."};
 
@@ -12331,7 +12331,7 @@ exports.showBlocksHeader = function(d){return "Mostra els blocs"};
 
 exports.showGeneratedCode = function(d){return "Mostra el Codi"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "cadena=?"};
 
 exports.subtitle = function(d){return "un entorn de programació visual"};
 
@@ -12365,7 +12365,7 @@ exports.typeFuncs = function(d){return "Funcions disponibles:%1"};
 
 exports.typeHint = function(d){return "Tingueu en compte que els parèntesis i els punts i coma són obligatoris."};
 
-exports.workspaceHeader = function(d){return "Monta els teus blocs aquí: "};
+exports.workspaceHeader = function(d){return "Uneix els teus blocs aquí: "};
 
 exports.workspaceHeaderJavaScript = function(d){return "Escriviu el vostre codi JavaScript aquí"};
 

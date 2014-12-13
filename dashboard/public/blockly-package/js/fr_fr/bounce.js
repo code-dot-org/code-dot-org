@@ -12686,7 +12686,7 @@ exports.extraTopBlocks = function(d){return "Vous avez des blocs non attachés. 
 
 exports.finalStage = function(d){return "Félicitations ! Vous avez terminé l'étape finale."};
 
-exports.finalStageTrophies = function(d){return "Félicitations ! Vous avez terminé l'étape finale et gagné "+p(d,"numTrophies",0,"fr",{"one":"un trophée","other":n(d,"numTrophies")+" trophées"})+"."};
+exports.finalStageTrophies = function(d){return "Félicitations ! Tu as terminé l'étape finale et gagné "+p(d,"numTrophies",0,"fr",{"one":"un trophée","other":n(d,"numTrophies")+" trophées"})+"."};
 
 exports.finish = function(d){return "Terminer"};
 
@@ -12710,13 +12710,13 @@ exports.missingBlocksErrorMsg = function(d){return "Essayez un ou plusieurs des 
 
 exports.nextLevel = function(d){return "Félicitations ! Vous avez terminé le Puzzle "+v(d,"puzzleNumber")+"."};
 
-exports.nextLevelTrophies = function(d){return "Félicitations ! Vous avez terminé le Puzzle "+v(d,"puzzleNumber")+" et gagné "+p(d,"numTrophies",0,"fr",{"one":"un trophée","other":n(d,"numTrophies")+" trophées"})+"."};
+exports.nextLevelTrophies = function(d){return "Félicitations ! Tu as terminé le Puzzle "+v(d,"puzzleNumber")+" et gagné "+p(d,"numTrophies",0,"fr",{"one":"un trophée","other":n(d,"numTrophies")+" trophées"})+"."};
 
 exports.nextStage = function(d){return "Félicitations ! Vous avez terminé "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Félicitations ! Vous avez terminé "+v(d,"stageName")+" et gagné "+p(d,"numTrophies",0,"fr",{"one":"un trophée","other":n(d,"numTrophies")+" trophées"})+"."};
+exports.nextStageTrophies = function(d){return "Félicitations ! Tu as terminé "+v(d,"stageName")+" et gagné "+p(d,"numTrophies",0,"fr",{"one":"un trophée","other":n(d,"numTrophies")+" trophées"})+"."};
 
-exports.numBlocksNeeded = function(d){return "Félicitations ! Vous avez terminé le Puzzle "+v(d,"puzzleNumber")+". (Toutefois, vous auriez pu utiliser seulement "+p(d,"numBlocks",0,"fr",{"one":"1 bloc","other":n(d,"numBlocks")+" blocs"})+".)"};
+exports.numBlocksNeeded = function(d){return "Félicitations ! Tu as terminé le Puzzle "+v(d,"puzzleNumber")+". (Toutefois, tu aurais pu utiliser seulement "+p(d,"numBlocks",0,"fr",{"one":"1 bloc","other":n(d,"numBlocks")+" blocs"})+".)"};
 
 exports.numLinesOfCodeWritten = function(d){return "Vous venez d'écrire "+p(d,"numLines",0,"fr",{"one":"1 ligne","other":n(d,"numLines")+" lignes "})+" de code!"};
 

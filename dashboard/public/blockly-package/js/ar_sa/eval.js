@@ -14445,13 +14445,13 @@ exports.emptyFunctionBlocksErrorMsg = function(d){return "قطعة الدالة 
 
 exports.errorEmptyFunctionBlockModal = function(d){return "يجب أن تكون هناك كتل داخل تعريف الدالة الخاصة بك. انقر فوق \"تحرير\" واسحب الكتل داخل الكتلة الخضراء."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "انقر فوق \"تحرير\" للتأكد من عدم وجود أي كتل ناقصة داخل تعريف الدالة الخاص بك ."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "تذكر أن تقوم بإرفاق كتلة لكل عامل الإدخال في الكتلة الخاصة بالدالة في مساحة العمل الخاصة بك."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "لقد قمت بإضافة كتلة معلمة، ولكنك لم تستخدامه في التعريف. تأكد من استخدام العامل الخاص بك عن طريق النقر على \"تحرير\" ثم وضع كتلة العامل داخل الكتلة الخضراء."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "أنشئ عامل للدالة الخاصة بك عن طريق النقر على \"تحرير\" و إضافة العوامل الضرورية. اسحب كتلة العوامل الجديدة في تعريف الدالة الخاص بك."};
 
 exports.errorUnusedFunction = function(d){return "لقد قمت بإنشاء دالة، ولكن لم تستخدمها في مساحة العمل الخاصة بك! انقر على \"المهام/الدوال\" في مربع الأدوات وتأكد من استخدامها في البرنامج الخاص بك."};
 
@@ -14625,7 +14625,7 @@ exports.squareBlockTitle = function(d){return "مربع (حجم، نمط، لو�
 
 exports.starBlockTitle = function(d){return "نجمة (نصف القطر، نمط، لون)"};
 
-exports.radialStarBlockTitle = function(d){return "radial-star (points, inner, outer, style, color)"};
+exports.radialStarBlockTitle = function(d){return "نجم-شعاعي (النقاط والنمط، الداخلي والخارجي، ولون)"};
 
 exports.stringAppendBlockTitle = function(d){return "إلحاق السلسلة (الأولى والثانية)"};
 
