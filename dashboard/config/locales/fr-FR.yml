@@ -36,6 +36,7 @@
   of: de
   more: PLUS
   less: MOINS
+  beta: beta
   try_hoc: 'Lancez-vous dans l''Heure de Code : cliquez ici >> '
   try_k8intro: Essayez notre cours d'introduction à l'informatique pour l'école primaire
     (15-25 heures)
@@ -412,7 +413,7 @@
     heading_elementary: <h2>de 20 heures de cours pour</h2><h1>Élèves du primaire</h1>
     heading_apps: <h2>Amusant pour</h2><h1>Tout le monde</h1>
     heading_legacy: <h2>Nos cours pour</h2><h1>Tous les âges</h1>
-    your_gallery: Gallery
+    your_gallery: Gallerie
   gender:
     male: Masculin
     female: Féminin
@@ -513,7 +514,7 @@
       try_new_tutorial: Essayez notre nouveau tutoriel heure de Code en version bêta
       try_frozen: Artist with Anna and Elsa, from Frozen
     gallery:
-      title: Gallery
+      title: Gallerie
       body: View a gallery of app and artist images created by our users
     frozen:
       title: Frozen
@@ -531,7 +532,7 @@
     more: Plus &rarr;
     caption_by_name_age: par %{name}, âge %{age}
     caption_time_ago: il y a %{time_ago}
-    header: Gallery
+    header: Gallerie
     header_playlab: Labo
     header_artist: Artiste
   landing:

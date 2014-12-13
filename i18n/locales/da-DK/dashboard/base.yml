@@ -30,12 +30,13 @@ da:
   appname: Code.org
   stage: trin
   stage_number: 'Fase %{number}'
-  puzzle: Puslespil
+  puzzle: Opgave
   trophies: trofæer
   courses: kurser
   of: af
   more: MERE
   less: MINDRE
+  beta: beta
   try_hoc: 'Prøv En Times Kodning, klik her >> '
   try_k8intro: Prøv vores grundskole introduktionskursus i programmering (15-25 timer)
   k8intro: Grundskole introduktion til datalogi kursus (15-25 timer)
@@ -414,7 +415,7 @@ da:
       unused: Ubrugte niveauer
   upsell:
     hoc:
-      title: En Time af Kode
+      title: Hour of Code
       body: Prøv grundlæggende kodning. Millioner har allerede gjort det.
     flappy:
       title: Flappy kode
@@ -474,7 +475,7 @@ da:
           title: Grundskole introduktion til datalogi kursus (15-25 timer)
           description: Dette 20-timers kursus introducerer centrale computer videnskabs og programmering begreber. Kurset er designet til brug i folkeskolens klasseværelser, men det er sjovt at lære i alle aldre.
         Hour of Code:
-          title: En Time af Kode
+          title: Hour of Code
           description: ""
         edit-code:
           title: Rediger kode

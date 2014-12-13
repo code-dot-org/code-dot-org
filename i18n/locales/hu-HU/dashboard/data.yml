@@ -280,9 +280,9 @@ hu:
         studio_c2_5: 'Tudsz írni egy olyan programot, hogy azt mondja a polip, hogy "hello", amikor rákattintasz?'
         studio_c2_6: Tudsz írni egy olyan programot, amelyben a pingvint a fel / le / balra / jobbra gombokkal tudod mozgatni, hogy elérje az összes célpontot?
         studio_c2_7: 'A "végtelen ismétlés" blokk lehetővé teszi, hogy folyamatosan fusson a programkód. Csatolnál blokkokat ahhoz, hogy a dinoszaurusz ismétlődően fel és le mozogjon?'
-        studio_c2_8: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c2_9: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
-        studio_c2_10: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
+        studio_c2_8: 'Meg tudod csinálni hogy a pingvin, azt mondja, "Au!" és legyen egy "találat" hang, ha nekiszalad egy dinoszaurusznak? Aztán mozgasd őt a nyilakkal, hogy ez megtörténjen.'
+        studio_c2_9: Ki tudnád egészíteni egy blokkal ami a pontokat számolja, ha a pingvin nekifut a polipnak, és aztán a pont eléréséig a nyilak mozgassák őt?
+        studio_c2_10: Ki tudnád egészíteni egy blokkal ami megváltoztatná a hátteret és a a pingvin sebességét, és aztán a pont eléréséig a nyilak mozgassák őt?
         studio_c2_11: Hozzon létre egy saját történetet! Ha elkészült, kattints a Befejezés gombra, hogy megpróbálhassák a barátaid is a történetedet a telefonjaikon!
         studio_c3_story_1: 'Rá tudod venni a kutyát, hogy azt mondja: "Hello világ"?'
         studio_c3_story_2: Rá tudod bírni először a kutyát, ez után pedig a macskát is, hogy egymás után mondjanak valamit?
@@ -293,9 +293,9 @@ hu:
         studio_c3_game_1: 'Tudsz írni egy olyan programot, hogy azt mondja a polip, hogy "hello", amikor rákattintasz?'
         studio_c3_game_2: Tudsz írni egy olyan programot, amelyben a pingvint a fel / le / balra / jobbra gombokkal tudod mozgatni, hogy elérje az összes célpontot?
         studio_c3_game_3: 'A "végtelen ismétlés" blokk lehetővé teszi, hogy folyamatosan fusson a programkód. Csatolnál blokkokat ahhoz, hogy a dinoszaurusz ismétlődően fel és le mozogjon?'
-        studio_c3_game_4: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c3_game_5: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
-        studio_c3_game_6: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
+        studio_c3_game_4: 'Meg tudod csinálni hogy a pingvin, azt mondja, "Au!" és legyen egy "találat" hang, ha nekiszalad egy dinoszaurusznak? Aztán mozgasd őt a nyilakkal, hogy ez megtörténjen.'
+        studio_c3_game_5: Ki tudnád egészíteni egy blokkal ami a pontokat számolja, ha a pingvin nekifut a polipnak, és aztán a pont eléréséig a nyilak mozgassák őt?
+        studio_c3_game_6: Ki tudnád egészíteni egy blokkal ami megváltoztatná a hátteret és a a pingvin sebességét, és aztán a pont eléréséig a nyilak mozgassák őt?
         studio_c3_game_7: Hozz létre saját játékot! Ha elkészültél, kattints a Befejezés gombra, hogy barátaid is kipróbálhassák a játékodat a telefonjaikon!
         studio_playlab_1: 'Pingvin azt akarja mondani, hogy "hello" - tudsz segíteni neki ebben?'
         studio_playlab_2: 'A Barlanglakó fiú (1 szereplő) és a Barlanglakó lány (2 szereplő) azt szeretnék mondani egymásnak, hogy "hello". Tudnál segíteni nekik, felhasználva kétszer a "mondani" blokkot?'
@@ -303,9 +303,9 @@ hu:
         studio_playlab_4: Segítesz a teniszező fiúnak (az 1 szereplőnek) a teniszező lányhoz (a 2 szereplőhöz) jutni és lejátszani egy hangot, amikor ő odaér?
         studio_playlab_5: 'Tudsz segíteni az Űrrobotnak azt mondani, hogy "Üdvözlet Földlakók", amikor rákattintasz? Ne felejts el kattintást a Futtatás gombra történő kattintás után!'
         studio_playlab_6: Tudsz segíteni a Boszorkánynak odajutni minden egyes tűzgolyóhoz a fel/le/jobbra/balra nyilakkal?
-        studio_playlab_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help the wizard move right and left repeatedly?'
-        studio_playlab_8: Can you add a block to score a point and a block to play a sound when the unicorn runs into the wizard, and then move him with the arrows until you score?
-        studio_playlab_9: Set the background for this alien invasion and help the Spacebot get to the alien faster by changing its speed. Then move him with the arrow keys to get to the Spacebot and alert everyone else
+        studio_playlab_7: 'Az "ismételd örökké" blokkal a kód folyamatosan futtatható. Be tudnál illeszteni blokkokat hogy segíts a varázslónak ismételten jobbra és balra mozogni?'
+        studio_playlab_8: Ki tudnád egészíteni egy blokkal ami a pontokat számolja, és egy blokkal ami hangot ad ha az egyszarvú nekifut egy varázslónak, és aztán a pont eléréséig a nyilak mozgassák őt?
+        studio_playlab_9: 'Állítsd be ennek az idegen inváziónak a hátterét, és segíts az ürrobotnak - a sebességének növelésével - , hogy gyorsabban eljuthasson az idegenekhez. Utána mozgasd a nyíl billentyűkkel hogy eljusson az űrrobothoz, és figyelmeztessen mindenkit'
         studio_playlab_10: Hozz létre saját játékot! Ha elkészültél, kattints a Befejezés gombra, hogy barátaid is kipróbálhassák a játékodat a telefonjaikon!
         studio_full_sandbox: Hozz létre saját játékot! Ha elkészültél, kattints a Befejezés gombra, hogy barátaid is kipróbálhassák a játékodat a telefonjaikon!
         studio_k1_1: 'Rá tudod venni a kutyát, hogy azt mondja: "Hello világ"?'
@@ -380,24 +380,23 @@ hu:
       scrat 20:
         instructions: Tudsz segíteni nekem mindössze 3 blokk hozzáadásával, hogy megoldjak egy sokkal összetettebb labirintust? Ha jól csinálod, utána bármilyen kanyargós úton tudok majd haladni, a hossza nem számít. Siess! Olvad a jég!
       Standalone_Artist_1:
-        instructions: "Welcome to Artist! First off, let's try to make a simple square using the turn right block and move forward block. Each side should be 100 pixels long."
+        instructions: Üdvözöljük a művészeket! Először is próbáljunk meg készíteni egy egyszerű négyzetet a Fordulj jobbra és az Előrelépni blokkok használatával. Minden oldalnak 100 képpont hosszúságúnak kell lennie.
       Standalone_Artist_2:
         instructions: Rajzold le ezt a gyémántot 120 és 60 fokos szögekkel, valamint 150 pixel hosszúságú oldalakkal.
       Standalone_Artist_3:
         instructions: Le tudod rajzolni ezt a hexagont 100 pixeles oldalakkal és 60 fokos fordulatokkal?
       Standalone_Artist_4:
-        instructions: "Now you've got a new block to play with, the loop. This will repeat a set of commands. What happens if you loop these commands 6 times?"
+        instructions: 'Van egy új blokkod amivel játszadozhatsz - ez a ciklus, ami egy előre meghatározott parancssort fog ismételni. Mi történik, ha ezeket a parancsokat 6-szor megismételteted ?'
       Standalone_Artist_5:
         instructions: Hányszor kell megismételned a gyémántot, hogy a virágot lerajzold?
       Standalone_Artist_5.5:
-        instructions: "Notice how we simplified the diamond code by turning it into a loop. You can loop that whole sequence 12 times to draw the flower. Hint: You'll need to turn 30 degrees after your diamond loop so you don't keep drawing over the same diamond."
+        instructions: 'Figyeld meg, mennyire le tudtuk egyszerűsíteni a gyémánt-kódot azáltal, hogy ciklusba szerveztük. Az egész sorozatot 12-szeres ciklusba szervezve rajzolódik ki a virág. Tipp: A gyémánt ciklus után el kell fordulni 30 fokkal azért, hogy ne ugyanarra a gyémántra rajzolj.'
       Standalone_Artist_6:
-        instructions: 'Loop this hexagon code 6 times to create the design. How many degrees will you need to turn each time? Hint: divide the number of degrees in a circle by the number of times you are looping.'
+        instructions: 'Szervezd 6-szoros ciklusba ezt a hatszög kódot az alakzat elkészítéséhez. Hány fokot kell fordulni minden egyes alkalommal? Tipp: A kör központi szögének fokát oszd el a ciklusok számával.'
       Standalone_Artist_7:
-        instructions: 'A function is another programming tool to help you avoid repeating yourself. This function draws a flower, so you can use it any time you want to draw a flower. Use this and the new jump block to draw these flowers. Hint: The flowers are 150 pixels apart'
+        instructions: 'A függvény egy újabb programozási eszköz, hogy elkerülhesd ömagad ismétlését. Ez a függvény egy virágot rajzol, tehát bármikor használhatod ha virágot szeretnél rajzolni. Használd együtt az új "ugrás" blokkal a virágok rajzolásához. Tipp: A virágok 150 képpontra vannak egymástól'
       Standalone_Artist_8:
-        instructions: |-
-          Here's a function called "Draw a shape" that we've programmed to draw hexagons. Run the code to see what it does and then experiment with the function to see what happens. Can you make it draw a pattern of squares, triangles, or octagons?
+        instructions: 'Itt van a "Rajzolj egy alakzatot" függvény amit a hatszögek rajzolásához programoztunk. Futtasd a kódot, hogy lásd mit csinál, és aztán kísérletezz a függvénnyel, hogy lásd mi történik. Meg tudod csinálni hogy négyzeteket, háromszögeket vagy nyolcszögeket rajzoljon?'
       Standalone_Artist_9:
         instructions: Most gyerünk, készíts bármilyen képet, amilyet csak szeretnél! Van még egy üres függvényed is ahhoz, hogy azt készíts, amit csak akarsz!
     video:
@@ -482,9 +481,10 @@ hu:
         C4_variables_artist: 'Változók - művész'
         C4_variables_playlab: 'Változók - Játéklabor'
         C4_for_loops: Számláló ciklusok
-        C4_math_artist: Programming the Artist with Math
+        C4_math_artist: A művész programozása matematikával
         C4_function_edit: Függvények szerkesztése
         C4_function_create: Függvények létrehozása
+        C4_function_parameters: Paraméterezett függvények
         C4_conditionals: Feltételek
         C4_unplugged_algorithms: Algoritmusok tangrammal
         C4_unplugged_madlibs: Mad Libs
@@ -514,19 +514,19 @@ hu:
         turn_elsa: 'Használd a "Fordítsd" blokkot Elsa elfordításához. A legördülő menüben lévő szám határozza meg, hogy Elsa mennyire fordul el'
         replace_questions: 'Használd a legördülő menüt hogy helyettesítsd a "???" egy számmal'
         replace_questions_degree: 'Használd a legördülő menüt hogy helyettesítsd a "???"-t a megfelelő fokszámmal a forduláshoz'
-        repeat_blocks: 'Use the "Repeat" block and wrap it around the blocks in the workspace'
+        repeat_blocks: 'Használd az "Ismételd" blokkot, és kerítsd körbe vele a munkaterületen lévő blokkokat'
         repeat_blocks_1: (1) Használd ezt a blokkot és tedd a munkaterületen levő szürke blokkok köré
         repeat_blocks_2: '(2) Mozgasd az "Ismételd" blokkot ide, és a szürke blokkokat tedd belé'
         snowflake_dropdown: Használd ezt a legördülő menüt különféle hópelyhek létrehozásához!
-        degrees_per_side: Divide 360 by the number of sides to get the size of each angle in degrees.
-        set_sides: 'Use this block to set "sides" to the number needed to complete the puzzle.'
-        set_length: 'Use this block to set "length" to the correct value.'
-        which_equation: Which equation makes each side shorter for shapes with more sides?
+        degrees_per_side: 360-at oszd el az oldalak számával, így megkapod a szögek nagyságát fokban.
+        set_sides: 'Ezzel a blokkal állítsd be az "oldalak" számát arra az értékre, ami a feladvány befejezéséhez kell.'
+        set_length: 'Használd ezt a blokkot a megfelelő "hossz" beállításához.'
+        which_equation: Melyik egyenlet rövidíti le a több oldalú alakzatok mindegyik oldalát?
         get_nectar: 'Használd az új "nektár begyűjtése" blokkot.'
-        actions_category: 'The tool box got a new look! The "Actions" blocks are in here now.'
-        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
+        actions_category: 'Az eszközkészlet új külsőt kapott! Most már itt vannak a "Műveletek" blokkok is.'
+        draw_square_hint: 'Tipp: Használd a négyzet ciklust, amit épp az utolsó feladványban készítettél.'
         edit_function: Kattints ide a függvényed szerkesztéséhez!
-        create_function: 'Click here to open the "Functions" flyout, then click the "Create a Function" button.'
+        create_function: 'Kattints ide, a "Funkciók" felugró menü megnyitásához, majd kattints a "Hozz létre egy funkciót" gombra.'
         house_hint: Rendben van ha kép még nem tűnik háznak. A következő feladványban kijavítjuk ezt.
         edit_draw_square: Használd ezt a gombot a funkció szerkesztéséhez és a ciklus hozzáadásához.
         edit_get_nectar: 'Módosítsd e gomb segítségével a függvényt és változtasd meg az irányt: a méh irányt fog váltani, hogy begyűjtse a nektárt!'

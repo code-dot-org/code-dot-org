@@ -84,17 +84,17 @@ ca:
         Farmer: "L'agricultor"
         Unplug6: Condicionals
         Artist3: "L'artista 3"
-        Unplug7: Escriptura de la cançó
+        Unplug7: Composició de la cançó
         Farmer2: El pagès 2
         Unplug8: Abstracció
         Artist4: "L'artista 4"
-        Unplug9: Programació de Relé
+        Unplug9: Programació en relleus
         Farmer3: El pagès 3
         Unplug10: Internet
         Artist5: "L'artista 5"
         Unplug11: Recapitulació
         MazeEC: El Laberint
-        Bounce: Rebot
+        Bounce: Bota
         Flappy: "L'ocell Flappy"
         Jigsaw: Puzle
         MazeStep: 'Laberint: pas a pas'
@@ -121,11 +121,11 @@ ca:
         parameters: Funcions amb Paràmetres
     level:
       instructions:
-        maze_2_2: 'Em pots ajudar a atrapar aquest porc entremaliat? Apila un conjunt de blocs "avança" i prem "Executa" per ajudar-me a arribar-hi. '
+        maze_2_2: 'Em pots ajudar a atrapar aquest porc entremaliat? Apila un conjunt de blocs "Avança" i prem "Executa" per ajudar-me a arribar-hi. '
         maze_2_1: "Aquest porc està enfadant-me. Ajuda'm a trobar-lo!"
         maze_2_2_5: "Traça el camí i guia'm a l'estúpid porc . Evita el TNT o les plomes volaran!"
         maze_2_3: "Guia'm al dimoni verd! (Ves en compte amb el TNT)"
-        maze_2_4: "Mantén la calma i ajuda'm a trobar el porc dolent. Si no m'ajudes pot ser m'enfadi!"
+        maze_2_4: "Estigues tranquil i ajuda'm a trobar el porc dolent. Si no m'ajudes pot ser que m'enfadi!"
         maze_2_5: "Hi ha un camí on puc tenir el porc ximple utilitzant només 2 blocs. T'ho pots imaginar?"
         maze_2_6: "Intenta fer-me agafar l'intrús verd utilitzant només 3 blocs."
         maze_2_7: |-
@@ -156,7 +156,7 @@ ca:
         turtle_1_9: "Pots averiguar amb quins nombres reemplaçaries els signes d'interrogació per a dibuixar un cercle?"
         turtle_1_10: |-
           Ho has aconseguit! Ara, dibuixa el que vulguis. Algunes idees divertides: un ninot de pals, un floc de neu, o una espiral. També prova el nou bloc "ajust d'amplada". Diverteix-te!
-        turtle_4_1: 'Pots dibuixar un triangle (amb vores de 100 píxels) amb només 3 blocs? Pista: utilitza un bloc "repeat".'
+        turtle_4_1: 'Pots dibuixar un triangle (amb vores de 100 píxels) amb només 3 blocs? Pista: utilitza un bloc "repetir".'
         turtle_4_2: |-
           Afegeix un bloc "gira a la dreta 90 graus" en algun lloc en el centre del programa que ja tens en mig de l'àrea de treball per dibuixar aquests triangles.
         turtle_4_3: 'Ok, aquest és el codi que vas escriure per a dibuixar un únic triangle. Pots afegir un bloc "repeat" i un bloc "turn" per a crear una bonica flor?'
@@ -166,7 +166,7 @@ ca:
         turtle_4_7: 'Aquí està el codi per a dibuixar el quadrat del puzzle anterior. Pots repetir-ho dibuixant 10 quadrats adjacents com si fós una escala? Pista: només necessitaràs 2 blocs més.'
         turtle_4_8: Aquí està la solució del puzzle anterior. Pots afegir només 2 blocs més per a completar el dibuix?
         turtle_4_9: Aquí està la solució del puzzle anterior. Quants de graus tindries que girar per a completar el dibuix? (És probable que necessitis uns quants intents)
-        turtle_4_10: Aquí està la solució del puzzle anterior. Quantes vegades tindries que reptir-ho per a completar el dibuix?
+        turtle_4_10: Aquí hi ha la solució al trencaclosques anterior. Quantes vegades hauríeu de repetir-ho per completar el dibuix?
         turtle_4_11: 'Prova de canviar els nombres en els blocs "girar" i "repetir" per a crear patrons diferents. O, experimenta canviant la resta del codi per a dibuixar el que tu vulguis.'
         maze_karel_1_1: 'Hola, sóc un agricultor. Necessit la teva ajuda per aplanar el camp a la meva granja, així estarà llest per plantar. Mou-me a la pila de terra i utilitza el bloc "eliminar" per treure-la.'
         maze_karel_1_2: |-
@@ -231,7 +231,7 @@ ca:
         maze_karel_debug_if: Ajuda! Soluciona el programa per a que el meu camp estigui completament plà.
         maze_karel_debug_if_else: "Corregeix els errors d'aquest programa per a que pugui omplir els forats i llevar les piles."
         maze_karel_debug_function_1: "Que tindries que canviar d'aquest programa per ajudar-me a llevar totes les piles?"
-        maze_karel_debug_function_2: Pots depurar el programa per mi per a que pugui deixar el meu camp plà?
+        maze_karel_debug_function_2: Podeu corregir el programa per a que pugui deixar el camp pla?
         maze_karel_debug_function_3: 'Edita aquest programa per a que pugui llevar totes les piles del meu camp. '
         turtle_5_1: "Intenta executar aquest programa, i fer canvis per veure què passa. Pots averiguar com funciona? (O borra'l i reemplaça'l amb algo totalment diferent)"
         turtle_5_2: "Intenta executar aquest programa, i fer canvis per veure què passa. Pots averiguar com funciona? (O borra'l i reemplaça'l amb algo totalment diferent)"
@@ -239,7 +239,7 @@ ca:
         turtle_5_4: "Intenta executar aquest programa, i fer canvis per veure què passa. Pots averiguar com funciona? (O borra'l i reemplaça'l amb algo totalment diferent)"
         turtle_5_5: "Intenta executar aquest programa, i fer canvis per veure què passa. Pots averiguar com funciona? (O borra'l i reemplaça'l amb algo totalment diferent)"
         turtle_5_6: "Intenta executar aquest programa, i fer canvis per veure què passa. Pots averiguar com funciona? (O borra'l i reemplaça'l amb algo totalment diferent)"
-        maze_3_1: Necessit arribar a aquell porc! Escriu un parell de vegades move(); per a que pugui recuperar els meus ous.
+        maze_3_1: Necessito arribar a aquell porc! Escriu un parell de vegades move(); per a que pugui recuperar els meus ous.
         maze_3_2: Escriu-me un programa per a que pugui fer el camí fins el porc.
         maze_3_3: "Com arribo al porc? Assegura't que no acabo executat a la caixa de TNT!"
         maze_3_4: Argh! Escriu-me un programa que em porti al voltant de la TNT i al porc.
@@ -347,7 +347,7 @@ ca:
         studio_k1_3: Pots escriure un programa per fer que el gos es mogui cap al gat?
         studio_k1_4: 'Fes que el gos es mogui cap al gat i el gat digui "hola" quan el gos hi arribi.'
         studio_k1_5: Pots afegir un bloc per fer feliç al pop?
-        studio_k1_6: Crea la teva pròpia història! Fes que el gat i el gos es moguin, i que diguin coses.
+        studio_k1_6: Creeu la vostra pròpia història! Féu que el gat i el gos es moguin i que diguin coses.
         maze_wordsearch_k_1: Mou-me per lletrejar la paraula EST
         maze_wordsearch_k_2: Mou-me per lletrejar la paraula SUD
         maze_wordsearch_k_3: Mou-me per lletrejar la paraula OEST
@@ -469,14 +469,14 @@ ca:
         C1_getting_loopy: Fent bucles
         C1_pair_programming: Programació per parelles
         C1_maze_intro_sequencing: 'Introducció a la Seqüenciació  del Laberint'
-        C1_maze_debugging: "Laberint: Correcció d'errors"
+        C1_maze_debugging: 'Laberint: Depuració'
         C1_bee_level_intro: 'Introducció - Nivell Abella'
         C1_artist_intro: "Introducció a l'Artista"
         C1_spelling_bee_intro: Introducció Abella Detrellar
         C1_zuck_repeat_loop: 'Laberint: bucles'
         C1_bee_loops: 'Abella: bucles'
         C1_maze_loops: 'Laberint: bucles'
-        C1_playlab_storytelling: 'Play Lab: Crea una història'
+        C1_playlab_storytelling: 'Play Lab: Creeu una història'
         C1_planting_seed: Plantant una llavor
         C1_building_foundation: Building a Foundation
         C1_going_places_safely: Anant a llocs segurs
@@ -488,11 +488,11 @@ ca:
         C2_bee_loops: 'Abella: bucles'
         C2_bee_debugging: "Abella: Correcció d'errors"
         C2_bee_conditionals: 'Abella: Condicionals'
-        C2_playlab_createstory: 'Play Lab: Crea una història'
+        C2_playlab_createstory: 'Play Lab: Creeu una història'
         C2_graph_paper: Programació de paper quadriculat
         C2_conditionals_with_cards: Condicionals
         C2_binary_bracelets: Polseres binàries
-        C2_relay_programming: Programació de Relé
+        C2_relay_programming: Programació en relleus
         C2_paper_airplanes: Avions de paper
         C2_digital_footprint: Your Digital Footprint
         C3_maze_level_4: 'Laberint: bucles'
@@ -501,11 +501,11 @@ ca:
         C3_bee_functions: 'Abella: funcions'
         C3_bee_conditionals: 'Abella: Condicionals'
         C3_maze_conditionals: 'Laberint: els condicionals'
-        C3_artist_nested_loops: Bucles Anidats
+        C3_artist_nested_loops: Bucles imbricats
         C3_farmer_while: Bucles Mentres
-        C3_bee_nested_loops: Bucles Anidats
+        C3_bee_nested_loops: Bucles imbricats
         C3_bee_debugging: "Abella: Correcció d'errors"
-        C3_bounce: Rebot
+        C3_bounce: Bota
         C3_playlab_create_game: 'Play Lab: Crea un joc'
         C3_computational_thinking: Pensament computacional
         C3_dice_race: Cursa de daus
@@ -516,11 +516,12 @@ ca:
         C4_intro: Introducció
         C4_bee_conditional: 'Abella: Condicionals'
         C4_variables_artist: 'Variables - Artista'
-        C4_variables_playlab: 'Variables - Laboratori de Jocs'
+        C4_variables_playlab: 'Variables - Play Lab'
         C4_for_loops: Per bucles
         C4_math_artist: "Programant l'Artista amb matemàtiques"
         C4_function_edit: Editant Funcions
         C4_function_create: Creant Funcions
+        C4_function_parameters: Funcions amb Paràmetres
         C4_conditionals: Condicionals
         C4_unplugged_algorithms: Algorismes amb Tangrams
         C4_unplugged_madlibs: Llibreries boges
@@ -531,13 +532,13 @@ ca:
         frozen_intro: "Introducció a l'Hora del Codi"
         frozen_loops: Introducció als bucles
         frozen_functions: Introducció a les funcions
-        playlab_intro: Introducció al Laboratori de Jocs
-        playlab_events: Events del Laboratori de Jocs
-        playlab_repeat_forever: 'Repetir per sempre  Laboratori de Jocs'
+        playlab_intro: Introducció a Play Lab
+        playlab_events: Esdeveniments de Play Lab
+        playlab_repeat_forever: Repetir per sempre Play Lab
     callout:
       text:
         drag_blocks: |-
-          Arrossegar un bloc "mou" i enganxa'l sota d'altre bloc
+          Arrossegueu un bloc "mou" i enganxeu-lo sota l'altre bloc
         run: 'Fes clic a "Executa" per provar el teu programa'
         watch_again: Feu clic aquí per veure el vídeo de nou
         gray_block_explanation: Els blocs que són de color gris no es poden esborrar. Pots resoldre el puzle de totes maneres?
@@ -577,16 +578,16 @@ ca:
         frozen_circle_function_in_circle_turn: "No t'oblidis de girar després de crear cada cercle."
         frozen_circle_function_with_parameter_circle: 'Utilitza el bloc "crear un cercle" i canvia la mida.'
         frozen_snowflake_branch: 'Utilitza el bloc "crear una branca de floquet de neu"'
-        frozen_create_square: Uneix més blocs aquí per crear un quadrat
-        playlab_drag_say: 'Arrossega el bloc "digues" aquí i escriu "Hola"'
-        playlab_use_twice: "Utilitza aquest bloc dues vegades i recorda canviar el nombre de l'actor"
+        frozen_create_square: Uniu més blocs aquí per crear un quadrat
+        playlab_drag_say: 'Arrossegueu el bloc "digues" aquí i escriviu "Hola"'
+        playlab_use_twice: "Utilitzeu aquest bloc dues vegades i recordeu canviar el nombre de l'actor"
         playlab_move_girl: 'Utilitza el bloc "mou-te a la dreta" per moure la tennista'
         playlab_play_sound: 'Afegeix el bloc "reprodueix un so" aquí'
         playlab_arrow_keys: Recorda utilitzar això per moure la bruixa després de fer clic a Executar
         playlab_add_move: |-
           Afegeix els blocs "mou" dins d'aquest bloc de repetició
         playlab_add_score: Afegeix els blocs de puntuació aquí
-        playlab_add_blocks: Afegeix els teus blocs aquí
+        playlab_add_blocks: Afegiu els blocs aquí
         set_variable: Arrossega un número bloc aquí per ajustar la teva variable
         place_variable: "Arrossega la teva variable dins d'aquest bloc"
         bee_for_loop: "Arrossega el major nombre de nèctar que vols que l'abella recollir aquí"

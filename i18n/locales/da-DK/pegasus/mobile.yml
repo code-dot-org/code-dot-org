@@ -260,7 +260,7 @@ da-DK:
   dashboard_students_print_page: Udskrive denne side
   dashboard_students_url: Web-adresse
   dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank"> Klik her</a> for vores privatlivs betingelser, der kan deles eller udskrives til dine elever.'
-  dashboard_curriculum_overview: 5. Klasses Curriculum oversigt
+  dashboard_curriculum_overview: Indskoling og mellemtrin (0.-5. klasse)
   dashboard_view_all_lesson_plans: Se alle lektionsplaner
   dashboard_course1: 'Kursus 1:'
   dashboard_course2: 'Kursus 2:'
@@ -501,7 +501,7 @@ da-DK:
   condcards_longdescription: 'Lær om algoritmer og betingelsessætninger i denne "unplugged" aktivitet, ved hjælp af et sæt kort. Eleverne kan løse denne aktivitet i grupper, og har brug for et sæt spillekort pr. hold.'
   lightbotintl_longdescription: Lær grundlæggende programmering logik, startende fra Super-grundlæggende programmering, for aldre 4+, på iOS eller Android (eller webbrowser). Lær at sekvens kommandoer, identificere mønstre, bruge procedurer og udnyt sløjfer!
   codehs_longdescription: 'At give kommandoer til en computer, som er det programmering handler om, er ligesom at give kommandoer til en hund. Lære at kode med Karel hunden &mdash; en sjov, tilgængelige og visuelle Introduktion til programmering, lærer de grundlæggende begreber, som kommandoer og funktioner for nybegyndere. Øvelserne er elevstyrede, men lærere kan tilmelde dig adgang for lærerværktøjer og følge elevernes fremskridt!'
-  codecademy_longdescription: 'KodeAkademiet er en interaktiv, studerende-styrede Introduktion til grundlæggende i Kode Skole gennem JavaScript, der bruges af millioner af studerende rundt om i verden. Vi har forberedt "En times kodning" med tilhørende quizzer, dias og et afsluttet projekt for studerende i slutningen.'
+  codecademy_longdescription: 'Codecademy er en interaktiv Introduktion til grundlæggende programmering med JavaScript, som bruges af millioner af brugere rundt om i verden. Vi har forberedt en "Hour of Code" med tilhørende quizzer, slides og et afsluttet projekt for alle deltagere.'
   codecombat_longdescription: Overvind orger for at lære Python eller JacaScript i dette episke programmeringsspil!
   codemonkey_longdescription: 'CodeMonkey er et online spil, der lærer kodning i et virkeligt programmeringssprog! Eleverne programmere en abe til at fange bananer, mens det bliver lidt mere og mere kompliceret for hvert niveau. De får stjerne-scores for hver opgaveløsning og eleverne kan dele det med et enkelt klik. '
   codeavengers_longdescription: Byg et 2-player 2D top-down spil med JavaScript i 10 korte opgaver. Derefter fortsæt med at lære grundlæggende programmering (variabler og if statement) når du opretter en Quiz, som kan deles med vennerne. Undervejs optjenes point og badges, som du konkurrerer om, for at nå toppen af klassens scoringstavle.
@@ -524,7 +524,7 @@ da-DK:
   projguts_longdescription: 'Denne "unplugged" øvelse hjælper eleverne med, at lære hvordan modellering og simulering fungerer ved, at få grupper af elever som spiller forskellige versioner af sten / saks / saks spillet, og se resultaterne som forskellige modelleringseksperimenter.'
   hourofcode_longdescription: Pladsholder for nye code.org/hoc
   frozen_longdescription: Lad os bruge kode til at udforske isens magi og skønhed sammen med Anna og Elsa. Du kan tegne snefnug og mønstre, mens du skøjter og laver et vinterlandskab, som du derefter kan dele med dine venner!
-  playlab_longdescription: Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!
+  playlab_longdescription: Skab en historie eller lav et spil i Play Lab! Få dyr, pirater, zombier, ninjaer og mange flere figurer til at bevæge sig. Lav lyde, scor point og endda kaste med ildkugler!
   codeorg_beyond_name: Intro til kodning (8. klasse)
   khan_beyond_name: Lær programmering
   tynker_beyond_name: Lær programmering i hjemmet
@@ -678,7 +678,7 @@ da-DK:
   tynker_beyond_longdescription: Tynker gør det sjovt og let at lære programmering. Det gøres visuelt. Børnene byggre spil og mobileapps ved hjælp af blokke med kode. Det fjerner behovet for at kende programmeringsyntakser. Børnene omsætter deres ideer til animerede historier og matematikkunst. Det fremmer progressiv læring. Efterhånden som børn lærer det grundlæggende, introducerer Tynker mere avancerede koncepter, herunder syntaks drevet programmering.
   scratch_beyond_longdescription: 'Med Scratch kan du oprette dine egne interaktive spil, historier, animationer, &mdash; og dele dem med dine venner. Start med at animere dit navn, lav et feriekort, eller et Pong spil.'
   lightbot_beyond_longdescription: Lær grundlæggende programmering logik, startende fra Super-grundlæggende programmering, for aldre 4+, på iOS eller Android (eller webbrowser). Lær at sekvens kommandoer, identificere mønstre, bruge procedurer og udnyt sløjfer!
-  codecademy_beyond_longdescription: 'KodeAkademiet er en interaktiv, studerende-styrede Introduktion til grundlæggende i Kode Skole gennem JavaScript, der bruges af millioner af studerende rundt om i verden. Vi har forberedt "En times kodning" med tilhørende quizzer, dias og et afsluttet projekt for studerende i slutningen.'
+  codecademy_beyond_longdescription: 'Codecademy er en interaktiv Introduktion til grundlæggende programmering med JavaScript, som bruges af millioner af brugere rundt om i verden. Vi har forberedt en "Hour of Code" med tilhørende quizzer, slides og et afsluttet projekt for alle deltagere.'
   kodable_beyond_longdescription: Kodable er et selv-guidet iPad spil, der introducerer børn i alderen 5+ til bases programmering. At have en lærer eller forælder i nærheden er optimalt, men ikke nødvendigt.
   scratchjr_beyond_longdescription: ScratchJr er et begynder programmeringssprog, som gør det muligt for mindre børn, at skabe deres egne interaktive historier og spil. Børn sammensætter de grafiske programmeringsblokke for at få figurerne til at flytte, hoppe, danse og synge
   hopscotch_beyond_longdescription: Elev-selvstyrede tutorials på iPad bruger Hopscotch programmeringssprog. Elever vil skabe spil og apps til deres iPad, på deres egen iPad. Eleverne kan arbejde individuelt eller sammen med venner (op til 3 pr. iPad).

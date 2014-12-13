@@ -36,6 +36,7 @@ hu:
   of: a
   more: TÖBB
   less: KEVESEBB
+  beta: beta
   try_hoc: 'Próbálja ki a Kódolás Óráját, kattintson ide >> '
   try_k8intro: Próbálja ki a K-8 bevezetőnket a Számítógép Tudomány Tanfolyamhoz (15-25 óra)
   k8intro: 'K-8 Bevezető tanfolyam a  számítógép tudományhoz  (15-25 óra)'

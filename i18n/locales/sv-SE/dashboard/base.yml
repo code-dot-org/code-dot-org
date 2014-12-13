@@ -5,7 +5,7 @@ sv:
         blank: krävs
     attributes:
       user:
-        name: Visa namn
+        name: Visat namn
         email: E-post
         username: |
           användarnamn
@@ -38,6 +38,7 @@ sv:
   of: av
   more: MER
   less: MINDRE
+  beta: beta
   try_hoc: 'Prova Hour of Code, klicka här >> '
   try_k8intro: 'Prova vår grundskolekurs: Introduktion till Datavetenskap (15-25 timmar)'
   k8intro: Introduktion till grundskolekurs i datavetenskap (15-25 timmar)
@@ -66,7 +67,7 @@ sv:
     no_signup_message: 'Du kan <a target="_blank" href="http://learn.code.org"> Bläddra bland de olika stadierna och pusslen</a>, men du måste registrera dig för att spara dina framsteg.'
     teacher_educator_guide: Se pedagogguiden
     teacher_pitch: Skapa konto på Code.org som lärare
-    teacher_title: Läraranmälnming
+    teacher_title: Lärare, anmäl här
     student_pitch: Skapa konto på Code.org som elev
     student_title: Skapa konto för elever
     school_name: Skolans namn (valfritt)
@@ -250,7 +251,7 @@ sv:
       stages: 'Nivå(er) att visa:'
       show_past: 'Visa elevaktivitet (%{bullet_html}) i det förflutna:'
       levels_key: Nivåer nyckel
-      perfect: Avklarad, perfekt
+      perfect: Avklarad perfekt
       completed: Avklarat, men med för många block
       tried: Provat, men inte avklarat
       not_tried: Inte provat ännu
@@ -361,7 +362,7 @@ sv:
     powered_by_aws: Drivs av Amazon Web Services
     feedback: Ge feedback
     translate: Hjälp oss översätta till ditt språk
-    support: Stöd
+    support: Hjälp
     support_url: http://support.code.org/
     tos: Villkor
     privacy: Sekretesspolicy
@@ -382,12 +383,12 @@ sv:
   compatability:
     working:
       header: Vi arbetar för stöd till din webbläsare.
-      message: "Code.org använder modern webbteknik. Detta gör webbplatsen snabbare att använda. Din webbläsare stöder inte alla funktioner som krävs, och du kan uppleva problem när du använder denna del av webbplatsen. Hjälp oss genom att <a href='%{report_issue_url}'> rapportera eventuella problem du hittar</a>. Du kan även <a href='%{supported_browsers_url}'> uppgradera din webbläsare till en version som stöds</a>."
+      message: "Code.org använder modern webbteknik vilket gör webbplatsen snabbare att använda. Din webbläsare stöder inte alla funktioner som krävs, och du kan uppleva problem när du använder denna del av webbplatsen. Hjälp oss genom att <a href='%{report_issue_url}'> rapportera eventuella problem du hittar</a>. Du kan även <a href='%{supported_browsers_url}'> uppgradera din webbläsare till en version som stöds</a>."
       hide_this_warning: Dölj denna varning
     upgrade:
       header: Du måste uppgradera din webbläsare.
-      message: "Code.org använder modern webbteknik. Detta gör webbplatsen snabbare att använda. Tyvärr stöder din webbläsare inte alla funktioner som krävs för att köra denna del av webbplatsen. <br/> <br/>Installera en webbläsare som finns med på vår lista över webbläsare som stöds för att fortsätta. Du kan <a href='#'> prova visa sidan</a>, men räkna med att allt inte fungerar."
-      button: Ta mig till listan över webbläsare som stöds
+      message: "Code.org använder modern webbteknik vilket gör webbplatsen snabbare att använda. Tyvärr stöder din webbläsare inte alla funktioner som krävs för att köra denna del av webbplatsen. <br/> <br/>Installera en webbläsare som finns med på vår lista över webbläsare som stöds för att fortsätta. Du kan <a href='#'> prova att visa sidan</a>, men räkna inte med att allt kommer fungera."
+      button: Visa listan över webbläsare som stöds
   slow_loading: 'Det här tar längre tid  än vanligt...'
   try_reloading: Försök ladda sidan igen
   next_stage: Klar! Fortsätt till nästa nivå
@@ -512,10 +513,10 @@ sv:
   zendesk_too_young_message: 'Tyvärr, yngre användare kan inte logga in på vår supportsida. Du kan besöka<a href="http://support.code.org"> support.code.org</a> utan att logga in eller be din förälder eller lärare att kontakta oss.'
   progress:
     not_completed: Ej avklarad
-    completed_too_many_blocks: Avklarad, med för många block
-    completed_perfect: Avklarad, perfekt
+    completed_too_many_blocks: Avklarad med för många block
+    completed_perfect: Avklarad perfekt
     furthest_level_attempted: försökt nå bortersta nivån
   studio:
-    courses_working_on: "Courses you're working on"
-    completed_courses: Completed courses
-    all_courses: All courses
+    courses_working_on: Kurser du påbörjat
+    completed_courses: Avslutade kurser
+    all_courses: Alla kurser

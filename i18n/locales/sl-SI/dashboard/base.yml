@@ -36,6 +36,7 @@ sl:
   of: ' '
   more: VEČ
   less: MANJ
+  beta: beta
   try_hoc: 'Poskusi Ura programiranja, klikni tu >> '
   try_k8intro: Poizkusi naš K-8 tečaj Uvod v računalništvo (15-25 ur)
   k8intro: Uvod v računalništvo (15-25 ur) za osnovno šolo (ZDA)
