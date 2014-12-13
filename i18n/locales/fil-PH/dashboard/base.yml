@@ -36,6 +36,7 @@ fil:
   of: ng
   more: MARAMI
   less: KAUNTI
+  beta: beta
   try_hoc: 'Subukan ang Hour of Code, i-click dito >> '
   try_k8intro: Subukan ang pang K-8 na Kursong Introduksyon sa Computer Science (15-25 oras)
   k8intro: K-8 Intro to Computer Science Course (15-25 oras)

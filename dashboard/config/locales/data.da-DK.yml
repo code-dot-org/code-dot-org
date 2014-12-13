@@ -34,7 +34,7 @@
           desc: Hoppe (beta)
           Bounce: Trin 1
         Builder Levels:
-          desc: Brugeroprettede puslespil (beta)
+          desc: Brugeroprettede opgaver (beta)
           Custom: Trin 1
         Flappy Levels:
           desc: Flappy fuglen
@@ -56,7 +56,7 @@
           Bounce: Trin 1
           Studio: Trin 2
         builder:
-          desc: Brugeroprettede puslespil (beta)
+          desc: Brugeroprettede opgaver (beta)
           Custom: Trin 1
         flappy:
           desc: Flappy fuglen
@@ -149,8 +149,8 @@
         maze_2_13: 'Brug den nye "Hvis"-blok til at lade mig beslutte, hvornår jeg
           skal dreje. Tip: du behøver kun én mere blok, men lær hvordan vi gør, så
           du kan gøre det selv næste gang.'
-        maze_2_14: OK, det her er ligesom det sidste puslespil, men du skal huske
-          hvordan du brugte "Hvis" blokken og "Gentagt" blokken sammen.
+        maze_2_14: OK, det her er ligesom den sidste opgave, men du skal huske hvordan
+          du brugte "hvis"-blokken og "gentag"-blokken sammen.
         maze_2_15: Jeg vil have solsikke! Brug en "Hvis" blok til at få mig til solsikken
           med færrest mulige blokke.
         maze_2_16: OK, lad os gøre at igen for at øve - dette er ikke meget anderledes,
@@ -195,12 +195,12 @@
           som allerede er i arbejdsområdet for at tegne disse trekanter.
         turtle_4_3: OK, her er den kode du skrev for at tegne en enkelt trekant. Kan
           du tilføje en "gentag" og "drej" blok, for at lave en smuk blomst?
-        turtle_4_4: 'Her er den samme kode fra den tidligere gåde, men kun drejende
-          36 grader efter hver trekant. Hvor mange gange skal det gentages? (Tip:
-          efter 360 grader vil tegningen komme fuld cirkel)'
-        turtle_4_5: 'Her er den samme kode fra den tidligere gåde, med drejene gentaget
-          36 gange. Hvor mange grader skal der drejes? (Tip: efter 360 grader kommer
-          tegningen i fuld cirkel)'
+        turtle_4_4: 'Her er den koden fra den foregående opgave, men kun med en drejning
+          på 36 grader efter hver trekant. Hvor mange gange skal koden gentages? (Tip:
+          efter 360 grader er tegningen kommet hele vejen rundt i en cirkel)'
+        turtle_4_5: 'Her er den samme kode fra den foregående opgave, men med drejene
+          gentaget 36 gange. Hvor mange grader skal der drejes? (Tip: efter 360 grader
+          vil tegningen være nået en fuld cirkel rundt)'
         turtle_4_6: Ved kun at bruge 3 blokke, kan du så tegne en firkant med kanter
           af 20 pixels?
         turtle_4_7: 'Her er koden til at tegne firkanten fra sidste gåde. Kan du gentage
@@ -211,8 +211,8 @@
         turtle_4_9: Her er løsningen på den tidligere gåde. Hvor mange grader skal
           du dreje for at fuldføre tegningen? (Du bliver nok nød til at gætte et par
           gange)
-        turtle_4_10: Her er løsningen på den tidligere gåde. Hvor mange gange skal
-          du gentage for at afslutte tegningen?
+        turtle_4_10: Her er løsningen på den foregående opgave. Hvor mange gange skal
+          du gentage for at gøre tegningen færdig?
         turtle_4_11: Prøv at ændre tallene i "drej" og "gentag" blokkene for at lave
           forskellige mønstre. Eller eksperimenter med at ændre resten af koden til
           at tegne lige hvad du vil.
@@ -302,10 +302,10 @@
           af kun et par nye blokke.
         maze_karel_2_10: Flytte mig over marken, og brug disse to funktioner til at
           hjælpe mig med at fjerne alle bunker og fylde alle hullerne op.
-        turtle_3_1: Dette puslespil viser dig hvordan "tegne en firkant" og "tegne
-          en cirkel" funktioner er defineret.  At definere en funktion kører ikke
-          blokkene.  Du er nødt til at trække "tegne en firkant"-blokken ud til faktisk
-          at tegne en firkant.
+        turtle_3_1: Denne opgave lærer dig hvordan funktionerne "tegn et kvadrat"
+          og "tegn en cirkel" er defineret.  At definere en funktion kører ikke blokkene.  Du
+          er nødt til at trække "tegn et kvadrat"-blokken ud på arbejdsområdet, for
+          faktisk at tegne et kvadrat.
         turtle_3_2: Brug funktionen "tegne en firkant" som et eksempel, opret en "tegn
           en trekant"-funktion og brug den.
         turtle_3_3: 'Tegn trekantede hegn omkring kattene og et firkantet hegn omkring
@@ -321,9 +321,9 @@
           til en funktion)'
         turtle_3_7: Tilføj et input kaldet "længde" til "tegne et hus" og byg et stort
           hus til elefanterne (med kanter, der er 150 pixels lange)
-        turtle_3_8: Her er alle blokkene fra den tidligere puslespil.  Ændre funktionen
-          "tegne et hus", så du ender på nederste højre hjørne efter at have tegnet
-          et nyt hus. Brug denne modificerede funktion til at tegne tre huse.
+        turtle_3_8: Her er alle blokkene fra den tidligere opgave.  Lav om på funktionen
+          "tegn et hus", så jeg ender i nederste højre hjørne efter at have tegnet
+          et nyt hus. Brug denne ændrede funktion til at tegne tre huse.
         turtle_3_9: Kan du genoprette funktionen "tegne et hus" uden hjælp? Prøv det,
           og derefter tegn en række huse.
         turtle_3_10: Du har lært en masse! Brug det nu til at tegne noget du synes
@@ -378,11 +378,11 @@
         bounce_3: Nu prøve noget lignende med "når op pil" blokken. Flyt battet for
           at nå målet øverst.
         bounce_4: Denne gang har du har brug for at tilføje fire blokke. Flyt battet
-          til alle fire slut-mål for at fuldføre dette puslespil.
+          til alle fire mål for at løse opgaven.
         bounce_5: Vi vil sende en bold flyvende ned mod pagajen. Vedhæft en blok til
           "når bolden rammer pagajen"-blokken for at sikre at bolden når slut-målet.
-        bounce_6: Nu er slut-målet på toppen. Du skal vedhæfte blokke til begge "når
-          bold rammer"-blokkene for at løse dette puslespil.
+        bounce_6: Nu er målet øverst. Du skal knytte blokke til begge "når bold rammer"-blokkene
+          for at løse denne opgave.
         bounce_7: Tilføj blokke til hver af "når"-blokkene. Ram bolden indtil den
           rammer slut-målet.
         bounce_10: Der er nu et mål på toppen. Vedhæft "score point" og "score modstander-point"-blokke
@@ -565,7 +565,7 @@
         instructions: Hej jeg hedder Elsa af Arendelle. Hjælp mig med at lave en linje.
       frozen perpendicular:
         instructions: Lad os se om vi kan lave to linjer, der er 90 grader i forhold
-          til hinanden. Du skal bruge "Drej" og "Flyt" blokkene.
+          til hinanden. Du skal bruge "drej" og "flyt" blokkene.
       frozen square iterative:
         instructions: Det ser ud som om vi er nået halvvejs med at tegne et kvadrat.
           Lad os sætte 4 linier sammen for at skabe et helt kvadrat.
@@ -663,7 +663,7 @@
       Standalone_Artist_5.5:
         instructions: 'Bemærk hvordan vi forenklede diamantkoden ved at bruge en løkke
           eller "gentag"-blok. Du kan gentage hele sekvensen 12 gange for at tegne
-          blomsten. Tip: Du skal dreje 30 grader efter din diamant løkke, så du ikke
+          blomsten. Tip: Du skal dreje 30 grader efter din diamant-løkke, så du ikke
           bliver ved med at tegne oveni den samme diamant.'
       Standalone_Artist_6:
         instructions: 'Gentag sekskant-koden seks gang for at tegne mønsteret. Hvor
@@ -768,13 +768,14 @@
         C4_math_artist: Programmering af Kunstneren med matematik
         C4_function_edit: Redigering af funktioner
         C4_function_create: Oprettelse af funktioner
+        C4_function_parameters: Funktioner med parametre
         C4_conditionals: Betingelser
-        C4_unplugged_algorithms: Algorithms with Tangrams
+        C4_unplugged_algorithms: Algoritmer med Tangrams
         C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Variables in Envelopes
+        C4_unplugged_variables: Variabler i kuverter
         C4_unplugged_forloops: For Loops
         C4_unplugged_parameters: Sangskrivning med parametre
-        C4_unplugged_binary: Binary
+        C4_unplugged_binary: Binære
         frozen_intro: Hour of Code Intro
         frozen_loops: Introduktion til løkker
         frozen_functions: Introduktion til funktioner
@@ -784,13 +785,12 @@
     callout:
       text:
         drag_blocks: Træk i en "flyt fremad" blok og fastgør den under den anden blok
-        run: Tryk "Kør program" for at prøve dit program
+        run: Tryk "Kør" for at starte dit program
         watch_again: Klik her for at se videoen igen
         gray_block_explanation: Blokke, der er grå kan ikke slettes. Kan du løse gåden
           alligevel?
         show_code_explanation: Klik her for at se koden for programmet, du laver
-        instructions_repeat_explanation: Instruktionerne for hver puslespil gentages
-          her
+        instructions_repeat_explanation: Vejledningen til hver opgave gentages her
         category_explanation: Du har alle de samme gader, men de har nu været arrangeret
           i kategorier
         set_sprite_image: Vedhæft en "Indstil spiller til billede"-blok til "når historien
@@ -799,30 +799,28 @@
         jigsaw_click: Klik på denne blok!
         move_elsa_forward: Træk i en "flyt fremad"-blok og fastgør den under "når
           programmet kører"-blokken for at få Elsa til at bevæge sig fremad
-        turn_elsa: Brug "Turn"-blokken for at Elsa tænder. Numret i drop-down bestemmer
-          hvor meget Elsa drejer
+        turn_elsa: Brug "drej"-blokken for at få Elsa til at dreje. Tallet i drop-down
+          bestemmer hvor mange grader Elsa drejer
         replace_questions: Brug drop-down til at erstatte "???" med et nummer
         replace_questions_degree: Brug drop-down til at erstatte "???" med det korrekte
           antal grad der skal drejes
         repeat_blocks: Brug "Repeat" blokken og lad omslutte blokkene på arbejdsområdet
-        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the
-          workspace
-        repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks
-          inside
+        repeat_blocks_1: (1) Brug denne blok og sæt den rundt om de grå i arbejdsområdet
+        repeat_blocks_2: (2) Flyt gentag blokken hertil, og sæt de grå blokke indeni
         snowflake_dropdown: Brug denne drop-down menu til at oprette forskellige snefnug!
         degrees_per_side: Divider 360 med antallet af sider for, at få størrelsen
           af hver vinkel i grader.
         set_sides: Brug denne blok til at angive "Side" antallet der skal bruge for
           at færdiggøre opgaven.
         set_length: Brug denne blok til at angive "længden" til den rigtige værdi.
-        which_equation: Hvilken ligning gør siderne kortere for figurer med flere
-          sider?  Prøv hver ligning!
+        which_equation: Hvilken ligning gør hver side kortere for figurer med flere
+          sider?
         get_nectar: Brug den nye "få nektar" blok.
         actions_category: Værktøjskassen fik et nyt look! "Handlings" blokke kan nu
           bruges.
         draw_square_hint: 'Tip: Brug firkant loop som du lige har lavet i den sidste
           opgave.'
-        edit_function: Brug denne knap til at redigere funktionen.
+        edit_function: Klik her for at redigere din funktion.
         create_function: Klik her for at åbne "Funktioner", klik derefter på knappen
           "Opret en funktion".
         house_hint: Det er ok, hvis billedet ligner ikke et hus endnu. Vi vil ordne
@@ -836,10 +834,10 @@
         frozen_diamond_repeat: Use the repeat block to create this shape.
         frozen_circle_function_in_circle_turn: Don't forget to turn after creating
           each circle.
-        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
-          and change the size.
+        frozen_circle_function_with_parameter_circle: Brug "lav en cirkel" blokken
+          og skift størrelsen.
         frozen_snowflake_branch: Use the "create a snowflake branch" block
-        frozen_create_square: Attach more blocks here to create a square
+        frozen_create_square: Tilføj flere blokke her for at lave en firkant
         playlab_drag_say: Træk "sig"-blokken herhen og skriv "Hej"
         playlab_use_twice: Brug denne blok to gange og husk at ændre tallet for figuren
         playlab_move_girl: Use the "move right" block to move Tennis Girl

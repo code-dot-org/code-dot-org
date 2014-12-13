@@ -50,11 +50,11 @@ Satu sekolah yang beruntung di ***setiap*** negara bagian U.S. (+ Washington D.C
 3:00 PM PST - [Ashton Kutcher](http://www.youtube.com/watch?v=d1LuhJPJP9s)   
 
 
-**RABU**, 10 Desember   
+**WEDNESDAY**, December 10   
 7:30 AM PST - [Cory Booker](http://www.youtube.com/watch?v=wD0Heuvv87I)   
 10:00 AM PST - [JR Hildebrand](http://www.youtube.com/watch?v=DfhAdnosy58)   
 11:00 AM PST - [Clara Shih](http://www.youtube.com/watch?v=2p7uhb1qulA)   
-12:00 PM PST - [Jessica Alba](http://www.youtube.com/watch?v=Kxm7PK-iS3c)   
+12:00 PM PST - [Jessica Alba](http://youtu.be/m4oEbAQbWCE)   
 
 
 **KAMIS**, 11 Desember   
@@ -91,9 +91,29 @@ Setiap guru yang mengadakan kegiatan Hour of Code untuk pelajar akan menerima 10
 
 [Actua](http://actua.ca/) adalah teratas dalam bidang Ilmu Pengetahuan, Teknologi, Teknik dan Matematika. Setiap tahun Actua mencapai lebih dari 225,000 pemuda di lebih dari 500 masyarakat melalui pemrograman yang menembus berbagai halangan.
 
+**Congratulations to the 2014 winners!**
+
+| School                          | City        | Actua Network Member            |
+| ------------------------------- | ----------- | ------------------------------- |
+| Spencer Middle School           | Victoria    | Science Venture                 |
+| Malcolm Tweddle School          | Edmonton    | DiscoverE                       |
+| Britannia Elementary            | Vancouver   | GEERing Up                      |
+| Captain John Palliser           | Calgary     | Minds in Motion                 |
+| St. Josaphat School             | Regina      | EYES                            |
+| Bishop Roborecki School         | Saskatoon   | SCI-FI                          |
+| Dalhousie Elementary School     | Winnipeg    | WISE Kid-Netic Energy           |
+| Hillfield Strathallan College   | Hamilton    | Venture Engineering and Science |
+| Byron Northview Public School   | London      | Discovery Western               |
+| Stanley Public School           | Toronto     | Science Explorations            |
+| Ottawa Catholic School Board    | Ottawa      | Virtual Ventures                |
+| École Arc-en-Ciel               | Montreal    | Folie Technique                 |
+| Saint Vincent Elementary School | Laval       | Musee Armand Frappier           |
+| Garden Creek School             | Fredericton | Worlds UNBound                  |
+| Armbrae Academy                 | Halifax     | SuperNOVA                       |
+
 ## Anak-anak Code Jeunesse akan membantu Anda di kelas! {#kids_code}
 
-Apakah anda adalah guru yang ingin meperkenalkan pemrograman komputer kepada murid-murid dan ingin bantuan dikelas? Setiap guru yang ingin relawan yang terlatih dalam Pemrograman Komputer untuk mebantu dikelas dapat menghubungi [Kids Code Jeunesse](http://www.kidscodejeunesse.org) dan kami akan berusaha untuk mendapatkan bantuan untuk anda! [Kids Code Jeunesse](http://www.kidscodejeunesse.org) adalah orang-orang berbangsa kanada yang mendedikasikan diri untuk memberikan kesempatan kepada tiap anak untu belajar cara mengkoding. Dan kesempatan bagi guru untuk mempelajari bagaimana mengajar pemrograman komputer di kelas.
+Are you a teacher who wants to introduce computer programming to your students and would like support in the classroom? Any teacher that would like a trained Computer Programming volunteer to assist in the classroom can contact [Kids Code Jeunesse](http://www.kidscodejeunesse.org) and we’ll work on getting you supported! [Kids Code Jeunesse](http://www.kidscodejeunesse.org) is a Canadian not for profit aimed at providing every child with the opportunity to learn to code. And every teacher the opportunity to learn how to teach computer programming in the classroom.
 
 <% end %>
 
@@ -101,13 +121,13 @@ Apakah anda adalah guru yang ingin meperkenalkan pemrograman komputer kepada mur
 
 ## 100 Kelas akan memenangkan satu set robot siap diprogram {#programmable_robots}
 
-[Sphero](http://www.gosphero.com/) adalah aplikasi kontrol robot bola yang merubah cara belajar pelajar. Didukung oleh [Pelajaran SPRK](http://www.gosphero.com/education/), robot bola tersebut meberikan pelajaran menyenangkan dalam pemrograman dalam mempertajam kemampuan matematika dan ilmu pengetahuan. Sphero akan memberikan kepada 100 kelas satu set – yang setiapnya sudah termasuk 5 robot. Setiap kelas (publik atau swasta) dalam AS atau Kanada memenuhi syarat untuk memenangkan hadiah ini.
+[Sphero](http://www.gosphero.com/) is the app-controlled robotic ball changing the way students learn. Powered by [SPRK lessons](http://www.gosphero.com/education/), these round robots give kids a fun crash course in programming while sharpening their skills in math and science. Sphero is giving away 100 classroom sets – each including 5 robots. Any classroom (public or private) within the U.S. or Canada is eligible to win this prize.
 
 <% end %>
 
 ## Pertanyaan lebih lanjut mengenai hadiah? {#more_questions}
 
-Silahkan lihat [Syarat dan Ketentuan](<%= hoc_uri('/prizes-terms') %>) atau kunjungi forum kami untuk melihat [FAQs](http://support.code.org) dan mengajukan pertanyaan.
+Check out [Terms and Conditions](<%= hoc_uri('/prizes-terms') %>) or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
 
 <% if @country == 'us' %>
 
@@ -151,4 +171,4 @@ Untuk memenuhi syarat, sekolah anda harus terdaftar dalam Hour of Code serta men
 
 ## Jika sekolah saya tidak dapat melakukan Hour of Code selama Computer Science Education Week (Desember 8-14), dapatkah saya masih memenuhi syarat untuk hadiah?
 
-Ya, hanya pastikan untuk menyerahkan rencana logistik yang menguraikan bagaimana sekolah anda melakukan kegiatan pada waktunya dan mendaftar untuk Hour of Code sebelum 14 November. <% end %>
+Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 14th. <% end %>

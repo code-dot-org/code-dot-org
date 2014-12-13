@@ -74,8 +74,10 @@ ar-SA:
   participant_educator: المعلم
   participant_engineer: مهندس برمجيات
   participant_other: لا شيء من ما ورد أعلاه
-  print_all: Print all
-  print_ice_art: Print your ice art
+  print_all: طباعة الجميع
+  print_ice_art: |
+    إطبع فن الثلج الخاص بك
+    
   create_art_with_zombie: or make advanced art with zombie
   i_am_a: انا
   never_spam: نحن لن نزعجك
@@ -116,7 +118,7 @@ ar-SA:
   studiobar_frozen_title: ساعة من البرمجة
   studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
   studiobar_donate_title: تبرع
-  studiobar_donate_body: One child learns for each dollar you donate
+  studiobar_donate_body: طفل واحد يتعلم البرمجه مع كل دولار تتبرع به
   contact_form_topic_student: أنا طالب
   contact_form_topic_parent: أنا والد
   contact_form_topic_teacher: أنا مدرس/ معلم

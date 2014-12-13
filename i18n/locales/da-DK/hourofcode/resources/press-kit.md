@@ -17,7 +17,7 @@ Titel: pressemateriale layout: bred nav: resources_nav
 
 ### Step-by-step vejledning:
 
-**1. Plan your event**
+**1. Planlæg din begivenhed**
 
   * Planlæg et fælles kick off arrangement for Hour of Code.
   * Send [ et brev](<%= hoc_uri('/resources/#sample-emails') %>) til forældrene. Bed dem om også at fortælle om Hour of Code.

@@ -12,7 +12,7 @@
   "scaleImageBlockTitle":"مقياس (عامل)",
   "squareBlockTitle":"مربع (حجم، نمط، لون)",
   "starBlockTitle":"نجمة (نصف القطر، نمط، لون)",
-  "radialStarBlockTitle":"radial-star (points, inner, outer, style, color)",
+  "radialStarBlockTitle":"نجم-شعاعي (النقاط والنمط، الداخلي والخارجي، ولون)",
   "stringAppendBlockTitle":"إلحاق السلسلة (الأولى والثانية)",
   "stringLengthBlockTitle":"السلسلة ذات الطول (سلسلة)",
   "textBlockTitle":"نص (سلسلة، الحجم، اللون)",

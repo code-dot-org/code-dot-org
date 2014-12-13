@@ -4,7 +4,7 @@ Naslov: Sat Kodiranja objašnjenje layout: wide nav: resources_nav
 
 * * *
 
-# Sata Kodiranja vodič događaja
+# Vodič događaja Sata kodiranja
 
 Ugostite Sat kodiranja na tokom tjedna Edukacije o računalnoj znanosti (Dec 8-14) kako bi slavili računalnu znanost i potaknuli studente da ga probaju. Bilo tko, bilo gdje može organizirati događaj Sata Programiranja.
 

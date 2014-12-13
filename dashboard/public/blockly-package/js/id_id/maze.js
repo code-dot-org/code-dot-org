@@ -16531,7 +16531,7 @@ exports.errorParamInputUnattached = function(d){return "Jangan lupa untuk memasa
 
 exports.errorUnusedParam = function(d){return "Anda menambahkan blok parameter, tapi tidak digunakan kemudian. Klik \"sunting\" untuk memastikan penggunaan parameter tersebut dan menempatkannya di blok parameter di dalam Blok Hijau."};
 
-exports.errorRequiredParamsMissing = function(d){return "Buatlah sebuah parameter untuk fungsi ini dengan mengeklik \"sunting\" dan menambahkan parameter yang diperlukan. Geser blok parameter baru tersebut ke dalam fungsi ini."};
+exports.errorRequiredParamsMissing = function(d){return "Buatlah sebuah parameter untuk fungsi ini dengan mengklik \"sunting\" dan menambahkan parameter yang diperlukan. Geser blok parameter baru tersebut ke dalam fungsi ini."};
 
 exports.errorUnusedFunction = function(d){return "Anda membuat sebuah fungsi, tetapi tidak digunakan dalam program ini! Klik tombol \"Fungsi\" pada Kotak Perkakas dan pastikan Anda menggunakan fungsi tersebut."};
 
@@ -16698,7 +16698,7 @@ exports.fillTooltip = function(d){return "tempat 1 unit tanah"};
 
 exports.finalLevel = function(d){return "Selamat! Anda telah menyelesaikan teka-teki terakhir."};
 
-exports.flowerEmptyError = function(d){return "Bunga dimana anda berada sekarang tidak memiliki nektar lebih."};
+exports.flowerEmptyError = function(d){return "Bunga dimana anda berada sekarang tidak memiliki madu lebih."};
 
 exports.get = function(d){return "dapatkan"};
 
@@ -16730,31 +16730,31 @@ exports.ifelseFlowerTooltip = function(d){return "Jika ada bunga/sarang lebah di
 
 exports.insufficientHoney = function(d){return "Anda menggunakan semua blok kanan, tetapi anda perlu membuat jumlah madu yang tepat."};
 
-exports.insufficientNectar = function(d){return "Anda menggunakan semua blok kanan, tetapi anda perlu membuat jumlah nektar yang tepat."};
+exports.insufficientNectar = function(d){return "Anda menggunakan semua blok kanan, tetapi anda perlu membuat jumlah madu yang tepat."};
 
 exports.make = function(d){return "membuat"};
 
 exports.moveBackward = function(d){return "bergerak mundur"};
 
-exports.moveEastTooltip = function(d){return "Memindahkan saya ke Timur satu langkah."};
+exports.moveEastTooltip = function(d){return "Pindahkan saya ke Timur satu langkah."};
 
 exports.moveForward = function(d){return "Gerak maju"};
 
 exports.moveForwardTooltip = function(d){return "Gerak maju satu petak."};
 
-exports.moveNorthTooltip = function(d){return "Memindahkan saya ke Utara satu langkah."};
+exports.moveNorthTooltip = function(d){return "Pindahkan saya ke Utara satu langkah."};
 
-exports.moveSouthTooltip = function(d){return "Memindahkan saya ke Selatan satu langkah."};
+exports.moveSouthTooltip = function(d){return "Pindahkan saya ke Selatan satu langkah."};
 
-exports.moveTooltip = function(d){return "Menggerakkan saya maju/mundur satu petak"};
+exports.moveTooltip = function(d){return "Gerakkan saya maju/mundur satu petak"};
 
-exports.moveWestTooltip = function(d){return "Memindahkan saya ke Barat satu langkah."};
+exports.moveWestTooltip = function(d){return "Pindahkan saya ke Barat satu langkah."};
 
-exports.nectar = function(d){return "mendapatkan nektar"};
+exports.nectar = function(d){return "Dapatkan madu"};
 
-exports.nectarRemaining = function(d){return "nektar"};
+exports.nectarRemaining = function(d){return "madu"};
 
-exports.nectarTooltip = function(d){return "Mendapatkan nektar dari bunga"};
+exports.nectarTooltip = function(d){return "Dapatkan madu dari bunga"};
 
 exports.nextLevel = function(d){return "Selamat! Kamu telah menyelesaikan teka-teki ini."};
 
@@ -16766,7 +16766,7 @@ exports.noPathLeft = function(d){return "tidak ada jalur ke kiri"};
 
 exports.noPathRight = function(d){return "tidak ada jalur ke kanan"};
 
-exports.notAtFlowerError = function(d){return "Anda hanya bisa mendapatkan nektar dari bunga."};
+exports.notAtFlowerError = function(d){return "Anda hanya bisa mendapatkan madu dari bunga."};
 
 exports.notAtHoneycombError = function(d){return "Anda hanya dapat membuat madu di sarang lebah."};
 
@@ -16820,7 +16820,7 @@ exports.whileMsg = function(d){return "Selagi"};
 
 exports.whileTooltip = function(d){return "Ulangi aksi sampai tujuan tercapai."};
 
-exports.word = function(d){return "Mencari kata"};
+exports.word = function(d){return "Cari kata"};
 
 exports.yes = function(d){return "Ya"};
 

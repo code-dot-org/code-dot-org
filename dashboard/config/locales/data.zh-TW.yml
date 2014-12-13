@@ -102,7 +102,7 @@
         Webapp: Webapp
         ArtistEC: 藝術家
         TextMatch: Text Match
-        StudioEC: Play Lab
+        StudioEC: 播放實驗室
     trophy:
       name:
         Bronze: 銅牌
@@ -531,6 +531,7 @@
         C4_math_artist: Programming the Artist with Math
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
+        C4_function_parameters: 具有參數的函數
         C4_conditionals: 流程類別
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs

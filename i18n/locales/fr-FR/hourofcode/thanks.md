@@ -26,13 +26,13 @@ Parlez de #HourOfCode à vos amis.
 
 ## 2. Demandez à toute votre école de participer à l'Heure de Code
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](/resources/hoc-one-pager.pdf) to your principal.
+[ Envoyez ce courriel](<%= hoc_uri('/resources#email') %>) ou [ce document](/resources/hoc-one-pager.pdf) à votre directeur ou votre directrice.
 
 <% else %>
 
 ## 2. Demandez à toute votre école de participer à l'Heure de Code
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](/resources/hoc-one-pager.pdf) this handout</a> to your principal.
+[ Envoyez ce courriel](<%= hoc_uri('/resources#email') %>) ou [ce document](/resources/hoc-one-pager.pdf) ce document</a> à votre directeur ou votre directrice.
 
 <% end %>
 

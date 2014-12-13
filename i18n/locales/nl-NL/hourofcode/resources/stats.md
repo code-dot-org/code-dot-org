@@ -10,7 +10,7 @@ title: Flapteksten en nuttige Stats layout: wide nav: resources_nav
 
 ### Breng informatica naar je school. Start met een Uur Code
 
-Computers zijn overal, maar minder scholen doceren informatica dan 10 jaar geleden. Het goede nieuws is, we zijn op weg om dit te veranderen. If you heard about the [Hour of Code](<%= hoc_uri('/') %>) last year, you might know it made history. In een week hebben 15 miljoen leerlingen informatica geprobeerd! The [Hour of Code](<%= hoc_uri('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= hoc_uri('/') %>) to host an Hour of Code this December 8-14 during Computer Science Education Week and help reach 100 million students by the end of the year. Add your school to the map, go to <http://hourofcode.com>
+Computers zijn overal, maar minder scholen doceren informatica dan 10 jaar geleden. Het goede nieuws is, we zijn op weg om dit te veranderen. Als je vorig jaar over het gehoord hebt, dan weet je dat het geschiedenis heeft geschreven. In een week hebben 15 miljoen leerlingen informatica geprobeerd! [Meld je aan](<%= hoc_uri('/') %>Een Uur Code</a> is een één uur durende introductie tot informatica, om aan te tonen dat programmeren niet zo moeilijk is en iedereen de basis kan aanleren. <a href=)om Een Uur Code te organiseren in de week van 8-14 December, de week van de informatica en help ons meer dan 100 miljoen leerlingen te bereiken tegen het einde van dit jaar. Voeg je school toe aan de kaart ,ga naar <http://hourofcode.com></p> 
 
 ## Als Infographic:
 

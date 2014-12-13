@@ -346,10 +346,10 @@
           hogy a kórus - meghívás esetén- minden alkalommal pontosan ugyanúgy ismétlődjön?'
         1: ': Mi a legnagyobb része ennek a dalnak, amit kórusként definiálhat úgy,
           hogy a kórus - meghívás esetén- minden alkalommal pontosan ugyanúgy ismétlődjön?'
-        Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
+        Lou, Lou, skip to my Lou,: Lou, Lou, ugorj az én Lou-mhoz,
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
-          Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip
-          to my Lou, <br/>Skip to my Lou, my darlin.
+          Lou, ugorj az én Lou-mhoz, <br/> Lou, Lou, ugorj az én Lou-mhoz, <br/>Lou,
+          Lou, ugorj az én Lou-mhoz, <br/> Ugorj az én Lou-mhoz, drágám.
         2: '? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
           skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the
           buttermilk, <br/>Shoo, fly, shoo,'
@@ -401,8 +401,8 @@
         Multiple Choice: Feleletválasztós
         /script_assets/k_1_images/artist_images/sq+sq.png, 500: /script_assets/k_1_images/artist_images/sq+sq.png,
           500
-        Which shape do these squares combine to make?: Which shape do these squares
-          combine to make?
+        Which shape do these squares combine to make?: Milyen alakzatot alkotnak ezek
+          a négyzetek?
         /script_assets/k_1_images/artist_images/medium_circle.png: /script_assets/k_1_images/artist_images/medium_circle.png
         /script_assets/k_1_images/artist_images/small_rectangle.png: /script_assets/k_1_images/artist_images/small_rectangle.png
         /script_assets/k_1_images/artist_images/medium_square.png: /script_assets/k_1_images/artist_images/medium_square.png
@@ -470,9 +470,9 @@
       K-1 Digital Footprint Multi 1:
         Multiple Choice: Feleletválasztós
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png
-        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Which
-          animal has the digital footprint that leaves him or her the <strong>most
-          unsafe</strong>?
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Melyik
+          állatnak van olyan digitális lábnyoma, ami a <strong>legnagyobb veszélyben
+          </strong> hagyja őt?
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png
@@ -624,16 +624,17 @@
         /script_assets/msm/Unit%202/exercise_5.png: /script_assets/msm/Unit%202/exercise_5.png
         Pick the Racket code that comes from the circle of evaluation!: Vedd a Racket
           kódot, amelyik a kör közelítéséből származik!
-        (rectangle (10) (2) "solid" "red"): (rectangle (10) (2) "solid" "red")
-        (rectangle 10 2 "solid" "red"): (rectangle 10 2 "solid" "red")
-        (rectangle (+ 8 2) (- 7 5) "solid" "red"): (rectangle (+ 8 2) (- 7 5) "solid"
-          "red")
-        (rectangle (+ 8 2) (- 7 5) solid red): (rectangle (+ 8 2) (- 7 5) solid red)
+        (rectangle (10) (2) "solid" "red"): (téglalap (10) (2) "kitöltött" "piros")
+        (rectangle 10 2 "solid" "red"): (téglalap 10 2 "kitöltött" "piros")
+        (rectangle (+ 8 2) (- 7 5) "solid" "red"): (téglalap (+ 8 2) (-7 5) "kitöltött"
+          "piros")
+        (rectangle (+ 8 2) (- 7 5) solid red): (téglalap (+ 8 2) (-7 5) kitöltött
+          piros)
       test multi image:
-        Maze Multiple Choice Two: Maze Multiple Choice Two
+        Maze Multiple Choice Two: Labirintus Feleletválasztós kéttő
         /script_assets/matches/images/head.jpg,400: /script_assets/matches/images/head.jpg,400
-        This puzzle is all about selecting the correct flowers.: This puzzle is all
-          about selecting the correct flowers.
+        This puzzle is all about selecting the correct flowers.: Ez a feladat a megfelelő
+          virágok kiválasztásáról szól.
         Instructions: Utasítások
         Click the right answer, then submit. And here are some longer instructions just to test things more.  How's that word wrapping?: Kattints
           a helyes válaszra, majd küldd el. És itt van néhány hosszabb utasítás, a

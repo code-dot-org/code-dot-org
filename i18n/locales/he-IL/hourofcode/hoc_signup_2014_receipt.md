@@ -12,17 +12,17 @@ Va multumim pentru inregistrare. Daca aveti nevoie de ajutor sau aveti orice int
 
 <% end %>
 
-# Thanks for signing up to host an Hour of Code!
+# תודה שנרשמת לארח את "שעה של קוד"!
 
 **EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](http://<%= hostname %>/prizes)
 
-## 1. Spread the word
+## 1. הפיצו את השמועה
 
-Tell your friends about the #HourOfCode.
+ספר לחבריך על #HourOfCode.
 
 <% if @country == 'us' %>
 
-## 2. Ask your whole school to offer an Hour of Code
+## 2. לשאול את בית הספר שלך להציע "שעה של קוד" לתלמידים
 
 [Send this email](http://<%= hostname %>/resources#email) or give [this handout](http://<%= hostname %>/files/schools-handout.pdf) to your principal.
 

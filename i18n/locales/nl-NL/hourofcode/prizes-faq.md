@@ -12,7 +12,7 @@ Ja. Uw hele school moet deelnemen om in aanmerking te komen voor de prijs, maar 
 
 ## Moet je hele school deelnemen om een techchat te winnen?
 
-Any classroom (public or private school) is eligible to win this prize. Your whole school need not apply.
+Elke klas (openbare of particuliere school) komt in aanmerking om deze prijs te winnen. Uw hele school moet hier niet voor inschrijven.
 
 ## Kunnen niet openbare scholen het video-gesprek winnen?
 

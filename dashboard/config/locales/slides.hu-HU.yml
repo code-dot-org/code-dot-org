@@ -522,44 +522,45 @@
           és itt készítjük majd el a programunkat.
       4:
         image: notes/playlab_intro_4.png
-        text: To start off, you'll need to link your blocks to the orange "when run"
-          block. You can link multiple blocks together by dragging them out until
-          you see the yellow line, and then they'll snap together.
+        text: Az indításhoz, a blokkjaidat hozzá kell csatolnod a narancssárga "amikor
+          fut" blokkhoz. Több blokkot is összekapcsolhatsz úgy, hogy elhúzod őket
+          a sárga vonalig, és akkor majd összekapcsolódnak.
       5:
         image: notes/playlab_intro_5.png
-        text: In this first puzzle, our actor is a penguin and we'll be making it
-          say "Hello!" by dragging the say block out, linking it to the when run block,
-          and typing in "Hello." We can also make the penguin move by using the move
-          right and move left blocks. Once you have your blocks in place, hit the
-          run button to see what you've programmed.
+        text: Ebben az első feladványban a színészünk egy pingvin, akit ráveszünk
+          arra, hogy mondjon egy "Hello!"-t a "mondd" blokk húzásával, összekapcsolva
+          azt az "amikor fut" blokkal, és beírva azt hogy "Hello." A pingvint, a menj
+          jobbra és a menj balra blokkok használatával is mozgásra bírhatjuk. Miután
+          elhelyezted a blokkokat, nyomd meg a futtatás gombot, hogy lásd mit programoztál.
       6:
         image: notes/playlab_intro_6.png
-        text: Get started and by the end, you'll be able to create your own game with
-          all kinds of players that can interact, turn happy or sad, score points,
-          or throw fireballs, or even vanish each other. It's all up to you and the
-          game you want to make.
+        text: A kezdj hozzá, és a végére majd el tudsz készíteni egy saját játékot
+          mindenféle egymással kölcsönhatásba lépő szereplővel, akik boldoggá vagy
+          szomorúvá válhatnak, pontokat szerezhetnek, tűgolyókat dobhatnak egymásra,
+          vagy akár el is tudják tüntetni egymást. Az egész rajtad múlik és a játékon,
+          amit el szeretnél készíteni.
     playlab_events:
       1:
         image: notes/playlab_events_1.png
-        text: Now, we're going to learn about something that all game programmers
-          use everyday. They're called events. An event tells your program to listen
-          for when something happens. When that thing happens, it performs an action.
+        text: Most mi arról fogunk tanulni, amit nap mint nap minden játékprogramozó
+          használ. Ezt eseménynek nevezzük. Az esemény arra készteti a programodat,
+          hogy figyelje, ha valami történik. Amikor ez az esemény bekövetkezik, akkor
+          a programod végrehajt egy műveletet.
       2:
         image: notes/playlab_events_2.png
-        text: Some examples of events are listening for a mouse click, an arrow button,
-          or a tap on the screen.
+        text: Például eseményeknek tekintjük az egérkattintást, a nyilakat ábrázoló
+          gombok leütését vagy a képernyő megérintését.
       3:
         image: notes/playlab_events_3.png
-        text: Here, we're going to make the space bot greet the earthlings when a
-          player clicks on him. We'll use the "when clicked" block and attach the
-          "say" block to it. When the player clicks on the space bot, everything attached
-          to this "when clicked" event block will be performed. What does your alien
-          say?
+        text: Itt az űrrobotot fogjuk rávenni arra, hogy köszöntse a Földlakókat ha
+          egy játékos rákattint. A "kattintásra" blokkot fogjuk használni, és hozzácsatolni
+          a "mondd" blokkhoz. Ha a játékos rákattint az űrrobotra, minden végre lesz
+          hajtva ami a "kattintásra" esemény blokkhoz csatlakozik.  Mit mond az idegened?
       4:
         image: notes/playlab_events_4.png
-        text: There are also "when arrow" blocks. If you link the "move" blocks to
-          these, you can start to move your actors up, down, left, or right. Step
-          by step, your game is getting more interactive.
+        text: Vannak "amikor nyíl" blokkok is. Ha a "menj" blokkokat hozzárendeled
+          ezekhez, akkor máris tudod mozgatni a szereplőket fel, le, balra, vagy jobbra.
+          A játékod lépésről lépésre egyre interaktívabbá válik.
     playlab_repeat_forever:
       1:
         image: notes/playlab_repeat_forever_1.png
