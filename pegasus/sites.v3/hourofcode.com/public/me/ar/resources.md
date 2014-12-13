@@ -8,9 +8,7 @@ nav: resources_nav
     الموارد
   </h1>
   
-  <div class="col-sm-6 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Sign up your event</button></a>
-  </div>
+  
 </div>
 
 <% if @country == 'ie' %>
@@ -285,5 +283,5 @@ nav: resources_nav
 </p>
 
 <p>
-  <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up your event</button></a>
+  
 </p>

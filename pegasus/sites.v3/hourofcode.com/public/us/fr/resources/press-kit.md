@@ -1,6 +1,6 @@
 
 
-[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
+
 
 ## Comment attirer les médias à votre événement une Heure de Code
 
@@ -56,4 +56,3 @@ Code.org® est un organisme public à but non lucratif dédié à accroître la 
   
 Trouver davantage de ressources et d'exemples de courriels[ ici](<%= hoc_uri('/resources') %>).
 
-<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>
