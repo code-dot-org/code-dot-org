@@ -211,43 +211,43 @@
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: Hei, jeg heter Saloni. Jeg bruker programmering for å løse problemer
-          innenfor helse og medisin. La oss lære om "hvis-ellers"-blokken. Den ser
-          ut som en "hvis"-blokk, men har en ekstra del på slutten som sier "ellers".
+        text: Hei, eg heiter Saloni. Eg nyttar programmering for å løyse helseproblem.
+          Lat oss lære om "viss-elles"-blokka. Ho ser ut som ei "viss"-blokk, men
+          har ein ekstra del på slutten som seier "elles".
       2:
         image: notes/hoc5_2.jpg
-        text: Hvis jeg setter en "fremover"-blokk på plassen der det står "gjøre"
-          og en "snu til venstre" blokk der det står "ellers", betyr det at zombien
-          vil velge mellom to alternativer. Hvis det er en vei fremover, vil den gå
-          dit og ellers (ikke vei fremover) vil den svinge til venstre.
+        text: Viss eg set ei "framover"-blokk på plassen der det står "gjere" og ei
+          "snu til venstre"-blokk der det står "ellers", tyder det at zombien vil
+          velje mellom to alternativ. VISS det er ein veg framover, vil han gå dit,
+          og ELLERS (viss det ikkje er ein veg framover) vil han svinge til venstre.
       3:
         image: notes/hoc5_3.jpg
-        text: Akkurat som med "hvis"-blokken, kan vi sette "hvis-ellers"-blokker inni
-          en "gjenta"-blokk slik at zombien vil fortsette med å flytte og "hvis-ellers"blokken
-          vil fortsette å sjekke om det er på tide å snu.
+        text: Akkurat som "hvis"-blokka, kan vi sette "hvis ellers"-blokker inni "gjenta"-blokkerer
+          slik at zombien held fra med å flytte og "hvis ellers"-blokka kontrollerer
+          om det er mogeleg å snu.
       4:
         image: notes/hoc5_4.jpg
-        text: Nå får du vise zombiene hvor de hører hjemme!
+        text: No får du vise zombiene kvar dei høyrer heime!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
-        text: En "hvis-ellers"-setning er en beslutning mellom to ting. La oss se
-          på hvordan vi kan bruke en "hvis-ellers"-setning med vår venn ekornet Scrat.
+        text: En "hvis ellers"-setning er ei avgjersle mellom to ting. La oss sjå
+          på korleis vi kan bruke en "hvis ellers"-setninga med vår ven ekornet Scrat.
       2:
         image: notes/saloni_ifelse_scrat2.jpg
-        text: Denne blokken ligner på "hvis"-blokken, men det er en ekstra del nederst
-          som sier "ellesrs". Hvis jeg setter en "fremover"-blokk der det står "gjøre"
-          og en "snu venstre"-blokk der det står "ellers", så betyr ekornet Scrat
-          vil gå fremover hvis det er sti foran. Hvis det ikke er sti foran, vil Scrat
-          snu til venstre.
+        text: Denne blokka liknar på "hvis"-blokka, men det er ein ekstra del på botnen
+          som seier "ellers". Dersom eg set ei "framover"-blokk der det står "gjere"
+          og ei "snu venstre"-blokk der det står "elles", betyr det at ekornet Scrat
+          vil gå framover hvis det er ein veg framfor. Hvis det ikkje er ein veg framfor,
+          vil Scrat snu til venstre.
       3:
         image: notes/saloni_ifelse_scrat3.jpg
-        text: Det er ta en beslutning og gjøre én av to handlinger basert på denne
-          avgjørelsen. Og akkurat som "hvis"-blokker, kan du sette "hvis-ellers"-blokker
+        text: Det er å ta ei avgjerd og gjøre ei av to handlingar basert på denne
+          avgjersla. Og akkurat som "hvis"-blokker, kan du sette "hvis-ellers"-blokker
           inni "gjenta"-blokker.
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: Nå la oss hjelpe ekornet Scrat til å få seg en nøtt!
+        text: Nå la oss no hjelp ekornet Scrat til å få ei eikenøtt!
     function:
       1:
         image: notes/stage13_1.jpg
@@ -363,80 +363,79 @@
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
-        text: Hei, jeg heter Lyndsey. Jeg modell, skuespiller og skrive mine egene
-          apper. La oss bruke kode til å utforske isens magi og skjønnhet sammen med
-          Anna og Elsa.
+        text: Hei, namnet mitt er Lyndsey. Eg er modell og skodespelar og eg skriv
+          mine egen appar. La oss bruke kode til å utforske isens venleik og magi
+          saman med Anna og Elsa.
       2:
         image: notes/frozen1_2.jpg
-        text: Du vil skape snøfnugg og mønstre med kunstløpskøyter og lage et magisk
-          vinterlandskap som du kan dele med vennene dine.
+        text: Du skaper snøfnugg og mønster ved å skøyte på isen og lagar eit magisk
+          vinterlandskap som du kan dele med venane dine.
       3:
         image: notes/frozen1_3.jpg
-        text: I den neste timen vil du lære grunnleggende programmering. Tradisjonell
-          programmering er vanligvis i tekst, men vi skal bruke Blockly, som bruker
-          visuelle blokker som du kan dra og slippe for å skrive programmer. Også
-          studenter på universitetet lærer grunnleggende programmering på denne måten.
-          Under overflaten  lager du fortsatt kode.
+        text: I den neste timen vil du lære grunnleggande programmering. Tradisjonell
+          programmering er vanligvis med tekst, men vi skal bruke Blockly, som bruker
+          visuelle blokker som du kan dra og sleppe for å skrive programm. Også studenter
+          på universitetet lærer grunnleggande programmering på denne måten. Bak blokkene
+          lager du likvevel kode.
       4:
         image: notes/frozen1_4.jpg
-        text: Et program er et sett med instruksjoner som forteller en datamaskin
-          hva den skal  gjøre. La oss lage en kode eller et program, som få Elsa til
-          å lage en rett linje. Vi vil senere bruke dette til å lage mer kompliserte
-          mønstre.
+        text: Eit program er et sett med instruksjonar som fortel ei datamaskin kva
+          den skal gjere. La oss skrive kode eller eit program, som vil hjelpe Elsa
+          til å lage ei enkel line. Vi vil bruke dette seinare for å lage meir kompliserte
+          mønster.
       5:
         image: notes/frozen1_5.jpg
-        text: Skjermen din er delt i tre hoveddeler. Til venstre er isflaten der du
-          vil kjøre programmet. Instruksjoner for hvert nivå er skrevet rett under
-          isflaten.
+        text: Skjermen din er delt i tre hovudelar. Til venstre er isflata der du
+          vil køyre programmet. Oppgåvene for kvart nivå er skrive rett under.
       6:
         image: notes/frozen1_6.jpg
-        text: Det midterste området er verktøykassen, og hver av disse blokkene er
-          en handling som Elsa og Anna kan gjøre.
+        text: Det midterste området er verktykassa, og kvar av disse blokkene er ei
+          handling som Elsa og Anna kan gjere.
       7:
         image: notes/frozen1_7.jpg
-        text: Det hvite området til høyre kalles arbeidsområdet, og dette er hvor
-          vi skal lage programmet vårt. For å flytte rundt på isflaten, kan du bruke
-          "Flytt fremover"-blokken.
+        text: Det kvite flata til høyre kallast arbeidsområdet, og dette er her vi
+          skal sette saman programmet vårt. For å flytte rundt på isflata, kan du
+          bruke "Flytt fremover"-blokka.
       8:
         image: notes/frozen1_8.jpg
-        text: Her, sier "flytt fremover"-blokken sier, "flytte frem 100 piksler."
-          Når vi trykker "Kjør", hva vil skje? Elsa flytter frem en bestemt lengde
-          på skjermen, 100 piksler faktisk! Piksler er små firkantede punkter på dataskjermen.
+        text: Her, sier "flytt framover"-blokken, "flytt fram 100 piksler." Når vi
+          trykker "Køyr", kva skjer då? Elsa flytter fram en bestemt lengde på skjermen,
+          100 pikslar faktisk! Piksler er dei minste punkta på dataskjermen.
       9:
         image: notes/frozen1_9.jpg
-        text: Den andre blokken vi har i denne oppgaven sier "snu til høyre med 90
-          grader". Og når vi bruker denne "snu til høyre"-blokken, får det Elsa snu
+        text: Den andre blokka vi har i denne oppgåven sier "snu til høgre med 90
+          grader". Og når vi bruker denne "snu til høyre"-blokka, får det Elsa snu
           en gitt mengde. Du kan prøve ut hvor mye du vil at Elsa skal snu. Vinkelen
-          måles fra retningen foran Elsa. Så dette er en 90 graders sving. Og dette
-          er en 120 graders sving.
+          måles fra retningen foran Elsa. Så dette er ei 90 graders vending. Og dette
+          er ei 120 graders vending.
       10:
         image: notes/frozen1_10.jpg
-        text: Husk på at du kan endre antall piksler og grader ved å klikke på pilene
-          ved siden av dem.
+        text: Husk at du kan endre talet på pikslar og grader ved å klikke på pilene
+          ved sida av.
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
-        text: Hei, jeg Paola! Datamaskiner er flinke til å gjenta handlinger. Du kan
-          telle til 10, 20 eller 100. Men en datamaskin kan telle til en milliard
-          eller billion. Den vil ikke gå lei og det tar bare noen sekunder. Om det
-          er telling, eller tegning, eller noe annet - datamaskiner kan gjenta ting
-          hundrevis eller milliarder av ganger.
+        text: Hei, eg er Paola! Datamaskiner er veldig flinke til å gjenta handlingar.
+          Du kan telje til 10, 20 eller 100. Men ei datamaskin kan telje til ein milliard
+          eller billion. Den vil ikkje gå lei og det tek berre nokre sekund. Om det
+          er teljing, eller tegning, eller noko anna - datamaskiner kan gjenta ting
+          hundrevis eller milliarder av gonger.
       2:
         image: notes/frozen2_2.jpg
-        text: I programmering kaller vi dette en løkke. En løkke er den måten du bruker
-          for å gjenta koden igjen og igjen. I den neste oppgave er målet ditt å hjelpe
-          Anna til å lage et kvadrat med "Gjenta"-blokken.
+        text: I programmering kallar vi dette ei løkke. Ei løkke er korleis du gjentek
+          koden igjen og igjen. Målet med den neste oppgåva er å hjelpe Anna med å
+          lage eit kvadrat med "gjenta"-blokka.
       3:
         image: notes/frozen2_3.jpg
-        text: Alle kodeblokkene du setter inne i "Gjenta"-blokken  vil bli gjentatt
-          i rekkefølge, så mange ganger du ønsker.
+        text: Kodeblokkene som du plasserer inne i "gjenta"-blokken, vil bli gjentatt
+          etter kvarandre, så mange gonger du ynskjer.
       4:
         image: notes/frozen2_4.jpg
-        text: Hvis du vil tegne et kvadrat, kan du bruke "Flytt frem" og "snu til
-          høyre" blokkene 4 ganger. Men det er enklere å fortelle datamaskinen "Flytt
-          frem" og "snu til høyre 90 grader" en gang og deretter fortelle det å gjenta
-          disse to handlingene 4 ganger. For å gjøre det, må du sette "Flytt frem"
-          og "snu til høyre" blokkene inne i en "Gjenta"-blokk.
+        text: For å teikne eit kvadrat, kan du bruke "flytt fram" og "snu til høgre"-blokkene
+          4 gonger. Men det er enklare å be datamaskina "flytt frem" og "snu til høgre
+          90 grader" ein gong og deretter be den om å gjenta desse to handlingane
+          4 gonger. For å gjøre det, må du sette "flytt fram" og "snu til høgre" blokkene
+          inne i ei "gjenta"-blokk.
       5:
         image: notes/frozen2_5.jpg
         text: Husk, du kan endre tallet i blokken "Gjenta" til hva som helst og det

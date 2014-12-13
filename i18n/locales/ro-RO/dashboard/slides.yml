@@ -346,31 +346,29 @@ ro:
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png
-        text: "We're going to create games using Play Lab. Good games have a story, and every story has actors. We'll learn how to make our actors like witches, alinens, and animals speak, move, and interact with each other. By the end of this tutorial, you can build a game from scratch and share it with your friends."
+        text: 'Vom încerca să creeăm jocuri folosind Play Lab. Jocurile bune au o poveste și fiecare poveste are personaje. Vom învăța cum să creeăm personaje cum ar fi: vrăjitoare, extratereștrii și animale. Le vom face să vorbească, să se miște și să interacționeze unele cu altele. La sfărșitul aceste lecții vei putea construi un joc de la zero și să-l prezinți/dai prietenilor tăi.'
       2:
         image: notes/playlab_intro_2.png
-        text: Your screen is split into 3 main parts. On the left is the game space where your program will run. The instructions for each level are written below.
+        text: Ecranul tău este împărțit in 3 zone. În stânga este spațiul de joc unde jocul tău va funcționa. Instrucțiunile pentru fiecare nivel sunt scrise mai jos.
       3:
         image: notes/playlab_intro_3.png
-        text: "The middle area is the toolbox, and each of these blocks is a piece of code. The white space on the right is called the workspace and this is where we'll build our program."
+        text: Zona de mijloc este ocupată de cutia cu instrumente și fiecare bloc reprezintă o secvență de code. Spațiul alb din dreapta se numește spațiu de lucru și aici e locul unde vom construi programul nostru.
       4:
         image: notes/playlab_intro_4.png
-        text: |-
-          To start off, you'll need to link your blocks to the orange "when run" block. You can link multiple blocks together by dragging them out until you see the yellow line, and then they'll snap together.
+        text: 'Pentru a începe, vei avea nevoie să legi blocurile tale la blocul portocaliu "când rulezi". Poți lega mai multe blocuri împreună trăgându-le până când vezi o linie galbenă, iar ele se vor fixa.'
       5:
         image: notes/playlab_intro_5.png
-        text: |-
-          In this first puzzle, our actor is a penguin and we'll be making it say "Hello!" by dragging the say block out, linking it to the when run block, and typing in "Hello." We can also make the penguin move by using the move right and move left blocks. Once you have your blocks in place, hit the run button to see what you've programmed.
+        text: 'În acest prim puzzle, actorul nostru este un pinguin și îl vom face să spună "Salut!" trăgând blocul "spune", legând-ul la blocul "când rulezi" și scriind "Salut!". Putem, de asemenea, să facem pinguinul să se miște folosind blocurile "întoarce la dreapta" și "întoarce la stânga". Când ai pus blocurile la locul lor, apasă pe butonul "rulează" pentru a vedea ce ai programat.'
       6:
         image: notes/playlab_intro_6.png
-        text: "Get started and by the end, you'll be able to create your own game with all kinds of players that can interact, turn happy or sad, score points, or throw fireballs, or even vanish each other. It's all up to you and the game you want to make."
+        text: 'Incepe-ti si la sfarsit , veti fi capabili de a crea propriul joc cu toate tipurile de jucatori ca pot interactiona , sa fie fericiti sau tristi , scorul de puncte sau sa arunce mingi de foc  sau sau chiar ai facea invizbili pe ceilalti . Totul tine de tine si de jocul pe care vrei sa il creezi.'
     playlab_events:
       1:
         image: notes/playlab_events_1.png
-        text: "Now, we're going to learn about something that all game programmers use everyday. They're called events. An event tells your program to listen for when something happens. When that thing happens, it performs an action."
+        text: 'Acum, am de gând să înveţe ceva despre care toţi programatorii de jocuri folosesc  de zi cu zi. Ele sunt numite evenimente. Un eveniment spune programului tău să asculte pentru atunci când ceva se întâmplă. Atunci când acest lucru se întâmplă, acesta efectuează o acţiune.'
       2:
         image: notes/playlab_events_2.png
-        text: Some examples of events are listening for a mouse click, an arrow button, or a tap on the screen.
+        text: Cateva exeple de evenimente sunt de ascultare pentru un clic de mouse, un buton segeata sau un robinet pe ecran.
       3:
         image: notes/playlab_events_3.png
         text: |-
@@ -381,11 +379,10 @@ ro:
     playlab_repeat_forever:
       1:
         image: notes/playlab_repeat_forever_1.png
-        text: 'This is the "repeat forever" block. Anything inside this block will happen forever in the game.'
+        text: 'Acesta este blocul "repetă pentru totdeauna". Orice din interiorul acestui bloc se va întâmpla pentru totdeauna în joc.'
       2:
         image: notes/playlab_repeat_forever_2.png
-        text: |-
-          If we want an actor to do something repeatedly, without the player having to do anything, we'll put those blocks inside the "repeat forever" block.
+        text: 'Dacă vrem ca un actor să facă ceva în mod repetat, fără ca jucătorul să trebuiască să facă ceva, vom pune aceste blocuri în interiorul blocului "repetă pentru totdeauna".'
       3:
         image: notes/playlab_repeat_forever_3.png
         text: In this next puzzle, our goal is to help the wizard patrol the boundaries of the kingdom, left and right continuously. Learning how the repeat commands works, will save you a ton of time later when you build your own game.

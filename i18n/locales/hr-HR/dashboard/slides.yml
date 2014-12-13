@@ -274,7 +274,7 @@ hr:
         text: "If you liked your first hour of code, visit code.org to continue your education into computer science! Once you complete our 20 hour course, you'll have mastered the basics of programming, and can start learning how to write phone apps, robot instructions, games, you name it."
       4:
         image: notes/hoc6_4.jpg
-        text: "Technology is changing everything we do and it doesn't matter if you're young or old: programming is fun, it's creative, and anyone can learn!"
+        text: 'Tehnologija mijenja sve što radimo i nije važno jeste li mladi ili stari: programiranje je zabavno, i kreativno, i svatko ga može naučiti!'
     20_wrapup:
       1:
         image: notes/bird.png
@@ -310,11 +310,11 @@ hr:
         text: 'The other block we have in this puzzle says "turn right by 90 degrees." And when we use this "Turn Right" block, that makes Elsa turn a certain amount. You can play around with how far you want Elsa to turn. The angle is measured from the path ahead of Elsa. So, this is a 90 degree turn. And this is a 120 degree turn.'
       10:
         image: notes/frozen1_10.jpg
-        text: Remember, you can change the number of pixels and degrees by clicking the arrows next to them.
+        text: Zapamtite, možete promijeniti broj piksela i stupnjeva klikom na strelice do njih.
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
-        text: "Hi, I’m Paola! Computers are really good at repeating actions. You can count to 10, 20, or 100. But a computer can count to a billion or a trillion. It won't get bored and it will only take a few seconds. Whether it's counting, or drawing, or anything--computers can repeat things hundreds or even billions of times."
+        text: 'Pozdrav, ja sam Paola! Računala su stvarno dobra u ponavljanju radnji. Vi možete brojati do 10, 20, ili 100. Ali računalo može brojati do bilijun ili trilijun. Neće mu dosaditi i bit će mu potrebno samo nekoliko sekundi. Bilo da se radi o brojanju, ili crtanju, ili bilo čemu - računala mogu ponavljati stvari sto ili čak bilijune puta.'
       2:
         image: notes/frozen2_2.jpg
         text: 'In programming, we call this a loop. A loop is how you repeat your code over and over again. For the next puzzle, your goal is to help Anna create a square with the "Repeat" block.'
@@ -331,7 +331,7 @@ hr:
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: Hi, I’m Chris Bosh. I’m a professional basketball player, and I coded in college.
+        text: Bok, ja sam Chris Bosh. Ja sam profesionalni košarkaš, i kodirao sam na faksu.
       2:
         image: notes/frozen3_2.jpg
         text: One of the most important concepts in computer science is how to define new commands. Most computer languages have only about 100 words or commands. And really, the art and magic is in defining your own new words out of these building blocks.

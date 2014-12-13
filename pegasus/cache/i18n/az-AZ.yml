@@ -284,7 +284,7 @@
   dashboard_students_password: parol
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
-  dashboard_students_completed_levels: Completed Levels
+  dashboard_students_completed_levels: Tamamlanmış mərhələlər
   dashboard_students_total_lines: Lines of Code
   dashboard_students_show_secret: Show secret
   dashboard_students_auto_generated: Auto-generated

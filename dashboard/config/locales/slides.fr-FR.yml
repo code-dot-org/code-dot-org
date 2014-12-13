@@ -227,8 +227,9 @@
       1:
         image: notes/hoc5_1.jpg
         text: Salut, je m'appelle Saloni. J'utilise l'informatique pour aider à résoudre
-          des problèmes en santé et médecine. Apprenons un peu sur le bloc "si sinon".
-          Il ressemble au bloc "si", mais il a une partie à la fin qui dit "sinon".
+          des problèmes en santé et médecine. Apprenons un peu sur le bloc « si sinon
+          ». Il ressemble au bloc « si », mais il a une partie à la fin qui dit «
+          sinon ».
       2:
         image: notes/hoc5_2.jpg
         text: Si je mets un bloc "avancer" à l'endroit qui dit "faire" et un bloc

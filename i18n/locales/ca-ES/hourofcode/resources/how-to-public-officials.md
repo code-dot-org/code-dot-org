@@ -4,7 +4,7 @@ title: How-to guide for public officials layout: wide nav: resources_nav
 
 * * *
 
-## Bring the Hour of Code to your entire community.
+## Porteu l' Hora del Codi al vostre entorn.
 
 ### Get every school participating, every student learning!
 
@@ -26,6 +26,6 @@ title: How-to guide for public officials layout: wide nav: resources_nav
           
         
 
-  7. **Issue a press release.** [Use this sample](<%= hoc_uri('/resources/official-press-release') %>) as a guide.
+  7. **Emetre un comunicat de premsa.** [ Utilitzar aquest exemple](<%= hoc_uri('/resources/official-press-release') %>) com a guia.
 
   8. **Connect locally.** Visit <http://code.org/promote> to learn more about computer science education in your state. Sign the petition there and you’ll get updates from Code.org on their local, state and federal advocacy efforts.

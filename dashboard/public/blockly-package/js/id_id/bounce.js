@@ -12597,7 +12597,7 @@ exports.whenLeftTooltip = function(d){return "Laksanakan tindakan-tindakan di ba
 
 exports.whenPaddleCollided = function(d){return "ketika bola menyentuh kayuh"};
 
-exports.whenPaddleCollidedTooltip = function(d){return "Melaksanakan aksi-aksi di bawah ini ketika bola bertabrakan dengan dayung."};
+exports.whenPaddleCollidedTooltip = function(d){return "Laksanakan aksi-aksi di bawah ini ketika bola bertabrakan dengan dayung."};
 
 exports.whenRight = function(d){return "Ketika anak panah kanan"};
 
@@ -12676,7 +12676,7 @@ exports.errorParamInputUnattached = function(d){return "Jangan lupa untuk memasa
 
 exports.errorUnusedParam = function(d){return "Anda menambahkan blok parameter, tapi tidak digunakan kemudian. Klik \"sunting\" untuk memastikan penggunaan parameter tersebut dan menempatkannya di blok parameter di dalam Blok Hijau."};
 
-exports.errorRequiredParamsMissing = function(d){return "Buatlah sebuah parameter untuk fungsi ini dengan mengeklik \"sunting\" dan menambahkan parameter yang diperlukan. Geser blok parameter baru tersebut ke dalam fungsi ini."};
+exports.errorRequiredParamsMissing = function(d){return "Buatlah sebuah parameter untuk fungsi ini dengan mengklik \"sunting\" dan menambahkan parameter yang diperlukan. Geser blok parameter baru tersebut ke dalam fungsi ini."};
 
 exports.errorUnusedFunction = function(d){return "Anda membuat sebuah fungsi, tetapi tidak digunakan dalam program ini! Klik tombol \"Fungsi\" pada Kotak Perkakas dan pastikan Anda menggunakan fungsi tersebut."};
 

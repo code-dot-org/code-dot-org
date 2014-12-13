@@ -756,6 +756,7 @@
         C4_math_artist: Programmer Kunstnaren med Matte
         C4_function_edit: Redigeringsfunksjonar
         C4_function_create: Lag Funksjonar
+        C4_function_parameters: Funksjoner med parametre
         C4_conditionals: Betingelser
         C4_unplugged_algorithms: Algoritmer med Tangrammer
         C4_unplugged_madlibs: Sprø Bibliotek

@@ -16,16 +16,16 @@
         video: Unplug1
       Unplug2:
         title: Pensament computacional
-        desc: With nothing but paper and markers, students will learn the four steps
-          of computational thinking. After a brief introduction, students should be
-          split into groups where they will have to create directions for other students
-          to draw a specific monster (from a catalog of pre-selected monsters). The
-          entire task must be decomposed, then teams will analyze all monsters in
-          the catalog for patterns, abstract different details from the monsters,
-          then use that information to create an algorithm (directions) for another
-          team to draw a certain monster. Teams will then switch algorithms with another
-          group and draw the monster based on what that algorithm indicates. Is the
-          drawing what the original team intended?
+        desc: Amb res més que paper i rotulador, els alumnes aprendran els 4 passos
+          del pensament computacional. Després d'una breu introducció, els alumnes
+          es dividiran en grups on hauran de crear direccions pels altres alumnes
+          per tal de dibuixar un monstre concret (d'un catàleg de monstres pre-seleccionats).
+          La tasca completa ha de ser descomposta, llavors els grups analitzaran tots
+          els monstres en el catàleg de patrons, abstreure els diferents detalls dels
+          monstres, després utilitzaran la informació per crear algoritmes (direccions)
+          perquè l'altre grup dibuixi un monstre concret. Els grups intercanviaran
+          algoritmes entre ells per dibuixar un monstre basat en el què indiqui l'algoritme.
+          És el dibuix final el que el grup original pretenia crear?
         pdfs:
         - unplug2
         video: Unplug2
@@ -66,9 +66,9 @@
         video: Unplug5
       Unplug6:
         title: Condicions
-        desc: This is a class game.  After introducing the idea of conditionals, if-statements,
-          and loops, the class can practice together using a pre-written program,
-          a deck of cards, and luck of the draw.
+        desc: Això és un joc de classe. Després d'introduir la idea dels condicionals,
+          les declaracions -si i els bucles, el grup-classe pot practicar tot junts
+          utilitzant un programa pre-escrit, un joc de cartes i la sort del sorteig.
         pdfs:
         - unplug6
         video: Unplug6
@@ -97,9 +97,10 @@
         video: Unplug8
       Unplug9:
         title: Programació de Relé
-        desc: This lesson will take an idea from a previous activity (4. Graph Paper
-          Programming) and use those skills to emphasize the importance of completing
-          programs that operate in sequence and frequently checking programs for "bugs".
+        desc: Aquesta unitat pren la idea d'una activitat anterior (4. Programant
+          amb paper gràfic) i l'utilitzarà per remarcar la rellevància de completar
+          els programes que operen en una seqüència i de verificar freqüentment programes
+          pels "errors".
         pdfs:
         - unplug9
         video: Unplug9
@@ -112,28 +113,29 @@
         video: Unplug10
       Unplug11:
         title: Recapitulació
-        desc: The final wrap-up in the first 20-hour series will help the class relive
-          all of their favorite moments, while giving them next steps that they can
-          take on their own if they are interested in continuing their computer science
-          journey.
+        desc: La recapitulació final a la primera sèrie de 20 hores ajudarà la classe
+          a reviure tots els seus moments preferits al mateix temps que els hi proporciona
+          els passos següents que han de prendre si estan interessats a continuar
+          l'odissea informàtica.
         pdfs:
         - unplug11
         video: Unplug11
       UnplugHappyMaps:
         title: Happy Maps
-        desc: Students create simple algorithms (sets of instructions) to move a character
-          through a maze using a single command.
+        desc: Els alumnes creen algoritmes senzills (conjunts d'instruccions) per
+          moure un personatge a través d'un laberint utilitzant tant sols una ordre.
         video: C1_happy_maps_unplugged
       MoveIt:
         title: Move it, Move it
-        desc: Students create simple algorithms (sets of instructions) to move a character
-          through a maze using a single command.
+        desc: Els alumnes creen algoritmes senzills (conjunts d'instruccions) per
+          moure un personatge a través d'un laberint utilitzant tant sols una ordre.
         video: C1_moveitmoveit_unplugged
       PlantASeed:
         title: 'Algoritmes reals: Planta una llavor'
-        desc: This lesson calls out ways we use algorithms in our daily lives, using
-          the act of planting a seed as an example. It also focuses on the bigger
-          picture of computer science and how algorithms play an essential part.
+        desc: Aquesta unitat remarca com utilitzem els algoritmes a la nostra vida
+          diària, utilitzant el fet de plantar una llavor com a exemple. També es
+          centra en un marc més ampli de la informàtica i com els algoritmes hi juguen
+          un rol important.
         video: C1_plantant_llavors
       BuildingAFoundation:
         title: Building a Foundation
@@ -240,7 +242,7 @@
           an algorithm simple there are lots of ways to use it. If you want to make
           sure everyone ends up with the same thing, then your algorithm needs more
           detail.
-        video: C4_unplugged_algorithms
+        video: C4_algoritmes_sense connexió
       EnvelopeVariables:
         title: Envelope Variables
         desc: Variables allow for a lot of freedom in computer science.  This lesson
@@ -275,7 +277,7 @@
           en una àmplia varietat d'opcions binàries. Aquesta unitat porta aquesta
           idea un pas més enllà i il·lustra com un ordinador pot emmagatzemar més
           informació complexa (com ara imatges i colors) en binari, també.
-        video: C4_unplugged_binary
+        video: C4_binari_senseconnexió
       VideoGamesCoordinatePlanes:
         title: Video Games and Coordinate Planes
         desc: Video Games and Coordinate Planes lesson description

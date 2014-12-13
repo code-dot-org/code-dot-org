@@ -99,10 +99,10 @@ id:
         Jigsaw: Teka-teki
         MazeStep: Mode tahapan labirin
         Wordsearch: Carikata
-        Webapp: Aplkasi Web
+        Webapp: Aplikasi Web
         ArtistEC: Artis
         TextMatch: Cocok Teks
-        StudioEC: Play Lab
+        StudioEC: Lab Permainan
     trophy:
       name:
         Bronze: Perunggu
@@ -234,7 +234,7 @@ id:
         bounce_7: 'Tempelkan blok untuk masing-masing blok "Jika". Pantulkan bola sampai mengenai target.'
         bounce_10: 'Ada sebuah target di atas. Tempelkan blok "Skor poin" dan blok "Skor poin lawan" ke blok "Jika bola di target" dan blok "Jika bola meleset dari dayung" untuk membuat permainan. Lihat berapa banyak poin yang Anda bisa dapat, sebelum lawan Anda mendapat dua kali lebih banyak.'
         bounce_11: 'Anda sekarang dapat menempatkan blok-blok kepada blok "ketika permainan dimulai". Anda harus menempelkan blok "luncuran bola baru" lebih dari satu tempat. Lalu cobalah mengubah adegan atau kecepatan kayuh dan bola dan untuk melihat berapa banyak poin yang Anda dapat sebelum lawan Anda mendapatkan poin dua kali lebih banyak.'
-        bounce_12: Butalah game Bounce anda. Anda dapat merubah semua visualisasi dan aturan. Setelah usai klik Selesai untuk memberikannya pada teman anda agar ia mencoba pada ponselnya.
+        bounce_12: Buatlah game Bounce anda sendiri. Anda dapat merubah semua visualisasi dan aturan. Setelah usai klik Selesai untuk memberikannya pada teman anda agar ia mencoba pada ponselnya.
         Custom_builder: 'Tarik blok dari toolbox ke ruang kerja untuk menggambar tingkat yang Anda ingin buat. Tekan "Jalankan Program" ketika Anda selesai.'
         flappy_1: 'Tempatkan satu blok pada blok "Ketika klik", kemudian tekan "Jalankan Program". Klik atau sentuh layar untuk mengerakkan Flappy menuju target.'
         flappy_2: |-
@@ -306,7 +306,7 @@ id:
         studio_playlab_3: Maukah kamu membantu Gadis Pemain Tenis mendapatkan bendera itu?
         studio_playlab_4: Maukah kamu membantu Lelaki Pemain Tenis (aktor 1) berjalan menuju Gadis Pemain Tenis (aktor 2) lalu memainkan suara ketika ia sampai?
         studio_playlab_5: |-
-          Maukah kamu membantu Spacebot mengatakan "Salam, para penduduk bumi" ketika di-klik? Jangan lupa untuk mengeklik Spacebot setelah mengeklik 'Jalankan'
+          Maukah kamu membantu Spacebot mengatakan "Salam, para penduduk bumi" ketika di-klik? Jangan lupa untuk mengklik Spacebot setelah mengklik 'Jalankan'
         studio_playlab_6: Maukah kamu membantu Penyihir untuk bergerak dengan menekan tombol atas/bawah/kanan/kiri untuk mendapatkan semua bola api ajaib itu?
         studio_playlab_7: |
           Blok "ulangi selamanya" memungkinkan kamu menjalankan kode terus-menerus. 
@@ -336,7 +336,7 @@ id:
         maze_wordsearch_k_6: Gerakkan saya ke Timur dan kemudian ke Selatan untuk mengeja kata JUMP
         maze_wordsearch_k_9: Gerakkan saya lurus, kemudian saya akan mengeja kata CODE
         maze_wordsearch_k_13: Gerakkan saya lurus, kemudian saya akan mengeja kata DEBUG
-        maze_wordsearch_k_15: Gerakkan saya lurus, kemudian saya akan mengeja kata Above
+        maze_wordsearch_k_15: Gerakkan saya lurus, kemudian saya akan mengeja kata ABOVE
         maze_wordsearch_k_16: Gerakkan saya lurus, kemudian saya akan mengeja kata BELOW
         maze_wordsearch_k_20: Ini adalah tes! Gerakkan saya lurus, kemudian akan mengeja kata STORY
         webapp_ec_simple: Buatlah aplikasi web anda dengan memakai createHtmlBlock.
@@ -404,7 +404,7 @@ id:
           dengan sudut 120 & 60 derajat, 
           serta sisi sepanjang 150 piksel.
       Standalone_Artist_3:
-        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree turns?
+        instructions: Dapat Anda ambil ini hexagon dengan 100 pixel sisi dan 60 derajat berubah?
       Standalone_Artist_4:
         instructions: "Now you've got a new block to play with, the loop. This will repeat a set of commands. What happens if you loop these commands 6 times?"
       Standalone_Artist_5:
@@ -497,25 +497,26 @@ id:
         C3_crowdsourcing: Sumber kerumunan
         C3_functional_suncatchers: Fungsional pengkap matahari
         C3_songwriting_with_parameters: Parameter penulis lagu
-        C4_intro: Introduction
+        C4_intro: Pendahuluan
         C4_bee_conditional: kondisi lebah
-        C4_variables_artist: 'Variables - Artist'
-        C4_variables_playlab: 'Variables - Play Lab'
+        C4_variables_artist: 'Variabel - artis'
+        C4_variables_playlab: 'Variabel - permainan Lab'
         C4_for_loops: For Loops
-        C4_math_artist: Programming the Artist with Math
-        C4_function_edit: Editing Functions
-        C4_function_create: Creating Functions
+        C4_math_artist: Pemrograman artis dengan matematika
+        C4_function_edit: Fungsi menyunting
+        C4_function_create: Fungsi membuat
+        C4_function_parameters: Fungsi dengan parameter
         C4_conditionals: Kondisi
         C4_unplugged_algorithms: Algorithms with Tangrams
-        C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Variables in Envelopes
+        C4_unplugged_madlibs: Mad libs
+        C4_unplugged_variables: Variabel dalam amplop
         C4_unplugged_forloops: For Loops
         C4_unplugged_parameters: Songwriting with Parameters
-        C4_unplugged_binary: Binary
-        frozen_intro: Hour of Code Intro
-        frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
-        playlab_intro: Introduction to Play Lab
+        C4_unplugged_binary: Biner
+        frozen_intro: Perkenalan Hour of Code
+        frozen_loops: Pengantar loop
+        frozen_functions: Pengenalan Fungsi
+        playlab_intro: Pengantar Lab Permainan
         playlab_events: Play Lab Events
         playlab_repeat_forever: Play Lab Repeat Forever
     callout:

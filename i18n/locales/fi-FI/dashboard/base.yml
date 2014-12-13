@@ -36,6 +36,7 @@ fi:
   of: /
   more: LISÄÄ
   less: VÄHEMMÄN
+  beta: beta
   try_hoc: 'Kokeile Koodaustuntia, napsauta tästä >> '
   try_k8intro: Kokeile ala-asteen johdantoa tietojenkäsittelytieteeseen (15-25 tuntia)
   k8intro: Johdanto tietotekniikkaan -kurssi 5–14-vuotiaille (15–25 tuntia)

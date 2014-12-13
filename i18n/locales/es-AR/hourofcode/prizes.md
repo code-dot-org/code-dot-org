@@ -50,11 +50,11 @@ Una escuela afortunada en ***cada*** estado de los EEUU (+ Washington D.C.) gana
 3:00 PM PST - [Ashton Kutcher](http://www.youtube.com/watch?v=d1LuhJPJP9s)   
 
 
-**Miércoles**, 10 de diciembre   
+**WEDNESDAY**, December 10   
 7:30 AM PST - [Cory Booker](http://www.youtube.com/watch?v=wD0Heuvv87I)   
 10:00 AM PST - [JR Hildebrand](http://www.youtube.com/watch?v=DfhAdnosy58)   
 11:00 AM PST - [Clara Shih](http://www.youtube.com/watch?v=2p7uhb1qulA)   
-12:00 PM PST - [Jessica Alba](http://www.youtube.com/watch?v=Kxm7PK-iS3c)   
+12:00 PM PST - [Jessica Alba](http://youtu.be/m4oEbAQbWCE)   
 
 
 **Jueves**, 11 de diciembre   
@@ -91,9 +91,29 @@ Una escuela afortunada en ***cada*** estado de los EEUU (+ Washington D.C.) gana
 
 [Actua](http://actua.ca/) el el líder en trabajo social de Ciencia, Tecnología, Ingeniería, y Matemáticas. Anualmente Actua alcanza más de 225,000 jóvenes en más de 500 comunidades gracias una programación que derriba barreras.
 
+**Congratulations to the 2014 winners!**
+
+| School                          | City        | Actua Network Member            |
+| ------------------------------- | ----------- | ------------------------------- |
+| Spencer Middle School           | Victoria    | Science Venture                 |
+| Malcolm Tweddle School          | Edmonton    | DiscoverE                       |
+| Britannia Elementary            | Vancouver   | GEERing Up                      |
+| Captain John Palliser           | Calgary     | Minds in Motion                 |
+| St. Josaphat School             | Regina      | EYES                            |
+| Bishop Roborecki School         | Saskatoon   | SCI-FI                          |
+| Dalhousie Elementary School     | Winnipeg    | WISE Kid-Netic Energy           |
+| Hillfield Strathallan College   | Hamilton    | Venture Engineering and Science |
+| Byron Northview Public School   | London      | Discovery Western               |
+| Stanley Public School           | Toronto     | Science Explorations            |
+| Ottawa Catholic School Board    | Ottawa      | Virtual Ventures                |
+| École Arc-en-Ciel               | Montreal    | Folie Technique                 |
+| Saint Vincent Elementary School | Laval       | Musee Armand Frappier           |
+| Garden Creek School             | Fredericton | Worlds UNBound                  |
+| Armbrae Academy                 | Halifax     | SuperNOVA                       |
+
 ## ¡Kids Code Jeunesse le ayudará en el aula! {#kids_code}
 
-¿Eres un profesor que quiere introducir la programación a sus estudiantes y requiere de apoyo en el aula? Cualquier maestro que guste tener a una voluntaria de Programación de Computadoras para asistirle en el aula, puede contactar a [Kid Code Jeunesse](http://www.kidscodejeunesse.org), ¡y buscaremos la manera de proveer soporte! [Kids Code Jeunesse](http://www.kidscodejeunesse.org) es una firma sin fin de lucro Canadiense con el objetivo de proveer a cada niño y niña con una oportunidad para aprender a escribir código. Y a todo maestro, la oportunidad de aprender como enseñar programación de computadoras en el aula.
+Are you a teacher who wants to introduce computer programming to your students and would like support in the classroom? Any teacher that would like a trained Computer Programming volunteer to assist in the classroom can contact [Kids Code Jeunesse](http://www.kidscodejeunesse.org) and we’ll work on getting you supported! [Kids Code Jeunesse](http://www.kidscodejeunesse.org) is a Canadian not for profit aimed at providing every child with the opportunity to learn to code. And every teacher the opportunity to learn how to teach computer programming in the classroom.
 
 <% end %>
 
@@ -101,13 +121,13 @@ Una escuela afortunada en ***cada*** estado de los EEUU (+ Washington D.C.) gana
 
 ## 100 salones de clase podrán ganar un equipo de robots programables {#programmable_robots}
 
-[Sphero](http://www.gosphero.com/) es la bola robótica controlada por una app que está cambiando la forma en que los estudiantes aprenden. Accionado por [lecciones SPRK](http://www.gosphero.com/education/), estos robots redondos les dan a los estudiantes un divertido curso corto en programación al mismo tiempo que les agudizan las habilidades en matemáticas y ciencias. Sphero está regalando 100 juegos para el aula - cada uno incluye 5 robots. Cualquier aula (pública o privada) en los EEUU o Canadá es elegible para ganar éste premio.
+[Sphero](http://www.gosphero.com/) is the app-controlled robotic ball changing the way students learn. Powered by [SPRK lessons](http://www.gosphero.com/education/), these round robots give kids a fun crash course in programming while sharpening their skills in math and science. Sphero is giving away 100 classroom sets – each including 5 robots. Any classroom (public or private) within the U.S. or Canada is eligible to win this prize.
 
 <% end %>
 
 ## ¿Más preguntas sobre los premios? {#more_questions}
 
-Revisa los [Términos y Condiciones](<%= hoc_uri('/prizes-terms') %>) o visita nuestro foro para leer las [Preguntas Frecuentes (FAQs)](http://support.code.org) y hacer tus propias preguntas.
+Check out [Terms and Conditions](<%= hoc_uri('/prizes-terms') %>) or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
 
 <% if @country == 'us' %>
 
@@ -151,4 +171,4 @@ Para calificar, toda tu escuela debe registrarse para la Hora de Programación y
 
 ## Si toda mi escuela no puede participar en la Hora de Programación durante la semana de la educación en ciencias de la computación (8-14 de diciembre), ¿Puedo aún calificar para los premios?
 
-Sí, sólo asegúrate de enviar un plan logístico que muestre cómo toda tu escuela está participando en un periodo de tiempo razonable y regístrate para la Hora de Programación el 14 de noviembre.<% end %>
+Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 14th. <% end %>

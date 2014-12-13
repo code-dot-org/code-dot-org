@@ -66,7 +66,7 @@
   "DELETE_PARAMETER_TITLE": "全てのパラメーター'%1'を削除します。よろしいですか？",
   "DELETE_X_BLOCKS": "ブロック%1を削除",
   "DISABLE_BLOCK": "ブロックを無効にする",
-  "DUPLICATE_BLOCK": "複製",
+  "DUPLICATE_BLOCK": "コピー",
   "ENABLE_BLOCK": "ブロックを有効にする",
   "EXAMPLE": "例",
   "EXAMPLE_DESCRIPTION": "予想される挙動と実際の挙動からなる例を定義してください。",

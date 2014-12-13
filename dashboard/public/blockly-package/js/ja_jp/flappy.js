@@ -12269,7 +12269,7 @@ exports.errorRequiredParamsMissing = function(d){return "Create a parameter for 
 
 exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "\"???\"を何かの値に置きかえてみてください。"};
+exports.errorQuestionMarksInNumberField = function(d){return "\"???\"を何かの値に置きかえてみて。"};
 
 exports.extraTopBlocks = function(d){return "ブロックを外しました。もしかして、「実行時」のブロックにつなげたかったですか？"};
 

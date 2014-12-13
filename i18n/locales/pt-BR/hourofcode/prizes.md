@@ -50,11 +50,11 @@ Dentre as salas de aula participantes, 100 poderão participar de uma sessão de
 3h00 PM PST - [Ashton Kutcher](http://www.youtube.com/watch?v=d1LuhJPJP9s)   
 
 
-**QUARTA-FEIRA**, 10 de dezembro   
-7h30 AM PST - [Cory Booker](http://www.youtube.com/watch?v=wD0Heuvv87I)   
-10h00 AM PST - [JR Hildebrand](http://www.youtube.com/watch?v=DfhAdnosy58)   
-11h00 AM PST - [Clara Shih](http://www.youtube.com/watch?v=2p7uhb1qulA)   
-12h00 PM PST - [Jessica Alba](http://www.youtube.com/watch?v=Kxm7PK-iS3c)   
+**WEDNESDAY**, December 10   
+7:30 AM PST - [Cory Booker](http://www.youtube.com/watch?v=wD0Heuvv87I)   
+10:00 AM PST - [JR Hildebrand](http://www.youtube.com/watch?v=DfhAdnosy58)   
+11:00 AM PST - [Clara Shih](http://www.youtube.com/watch?v=2p7uhb1qulA)   
+12:00 PM PST - [Jessica Alba](http://youtu.be/m4oEbAQbWCE)   
 
 
 **QUINTA-FEIRA**, 11 de dezembro   
@@ -91,9 +91,29 @@ Dentre as escolas do Canadá, as 15 sorteadas ganharão 2 oficinas práticas das
 
 [Actua](http://actua.ca/) é a líder canadense em acesso à Ciência, Tecnologia, Engenharia e Matemática. Todos os anos, a Actua atinge mais de 225 mil jovens de mais de 500 comunidades, por meio de sua programação sem fronteiras.
 
+**Congratulations to the 2014 winners!**
+
+| School                          | City        | Actua Network Member            |
+| ------------------------------- | ----------- | ------------------------------- |
+| Spencer Middle School           | Victoria    | Science Venture                 |
+| Malcolm Tweddle School          | Edmonton    | DiscoverE                       |
+| Britannia Elementary            | Vancouver   | GEERing Up                      |
+| Captain John Palliser           | Calgary     | Minds in Motion                 |
+| St. Josaphat School             | Regina      | EYES                            |
+| Bishop Roborecki School         | Saskatoon   | SCI-FI                          |
+| Dalhousie Elementary School     | Winnipeg    | WISE Kid-Netic Energy           |
+| Hillfield Strathallan College   | Hamilton    | Venture Engineering and Science |
+| Byron Northview Public School   | London      | Discovery Western               |
+| Stanley Public School           | Toronto     | Science Explorations            |
+| Ottawa Catholic School Board    | Ottawa      | Virtual Ventures                |
+| École Arc-en-Ciel               | Montreal    | Folie Technique                 |
+| Saint Vincent Elementary School | Laval       | Musee Armand Frappier           |
+| Garden Creek School             | Fredericton | Worlds UNBound                  |
+| Armbrae Academy                 | Halifax     | SuperNOVA                       |
+
 ## A Kids Code Jeunesse lhe dará suporte na sala de aula! {#kids_code}
 
-Você é professor, deseja apresentar a programação aos seus alunos e gostaria de receber suporte na sala de aula? Todos os professores que desejarem ter um voluntário treinado em programação para auxiliar na sala de aula poderão entrar em contato com a [Kids Code Jeunesse](http://www.kidscodejeunesse.org), e nós trabalharemos para providenciar suporte! [Kids Code Jeunesse](http://www.kidscodejeunesse.org) é uma organização canadense sem fins lucrativos que visa a oferecer a todas as crianças a oportunidade de aprender a programar, e a todos os professores, a oportunidade de saber como ensinar programação em sala de aula.
+Are you a teacher who wants to introduce computer programming to your students and would like support in the classroom? Any teacher that would like a trained Computer Programming volunteer to assist in the classroom can contact [Kids Code Jeunesse](http://www.kidscodejeunesse.org) and we’ll work on getting you supported! [Kids Code Jeunesse](http://www.kidscodejeunesse.org) is a Canadian not for profit aimed at providing every child with the opportunity to learn to code. And every teacher the opportunity to learn how to teach computer programming in the classroom.
 
 <% end %>
 
@@ -101,13 +121,13 @@ Você é professor, deseja apresentar a programação aos seus alunos e gostaria
 
 ## Das salas de aula participantes, 100 ganharão robôs programáveis {#programmable_robots}
 
-[Sphero](http://www.gosphero.com/) é a bola robótica controlada por aplicativo que muda a maneira como os alunos aprendem. Baseados nas [lições do SPRK](http://www.gosphero.com/education/), esses robôs redondinhos dão às crianças um curso superdivertido sobre programação, desenvolvendo, ao mesmo tempo, suas habilidades em matemática e ciências. A Sphero está dando 100 kits para salas de aulas – cada um deles com 5 robôs. Qualquer sala de aula (pública ou privada) dos EUA ou do Canadá pode concorrer a este prêmio.
+[Sphero](http://www.gosphero.com/) is the app-controlled robotic ball changing the way students learn. Powered by [SPRK lessons](http://www.gosphero.com/education/), these round robots give kids a fun crash course in programming while sharpening their skills in math and science. Sphero is giving away 100 classroom sets – each including 5 robots. Any classroom (public or private) within the U.S. or Canada is eligible to win this prize.
 
 <% end %>
 
 ## Mais perguntas sobre os prêmios? {#more_questions}
 
-Consulte os [Termos e Condições](<%= hoc_uri('/prizes-terms') %>) ou visite nosso fórum [Tire suas dúvidas](http://support.code.org) e faça suas perguntas.
+Check out [Terms and Conditions](<%= hoc_uri('/prizes-terms') %>) or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
 
 <% if @country == 'us' %>
 
@@ -131,7 +151,7 @@ Infelizmente não. Devido à logística, não conseguimos oferecer o prêmio de 
 
 ## Por que o prêmio de hardware de US$10.000 só pode ser dado às escolas públicas?
 
-Nós adoraríamos ajudar tanto os professores das escolas públicas, quanto os das escolas particulares. Entretanto, no momento, o problema é a logística. Fizemos uma parceria com a [DonorsChoose.org](http://donorschoose.org) para administrar os prêmios de financiamento para salas de aula, válidos apenas para as escolas públicas de ensinos fundamental e médio dos EUA. De acordo com a DonorsChoose.org, a organização está melhor capacitada para acessar dados precisos e consistentes, disponíveis para escolas públicas.
+Nós adoraríamos ajudar tanto os professores das escolas públicas, quanto os das escolas particulares. Entretanto, no momento, o problema é a logística. Fizemos uma parceria com a [DonorsChoose.org](http://donorschoose.org) para administrar os prêmios de financiamento para salas de aula, válidos apenas para as escolas públicas de ensino fundamental e médio dos EUA. De acordo com a DonorsChoose.org, a organização está melhor capacitada para acessar dados precisos e consistentes, disponíveis para escolas públicas.
 
 ## Eu não estou nos Estados Unidos. Posso concorrer aos prêmios?
 
@@ -151,4 +171,4 @@ Para concorrer, toda a sua escola deve se cadastrar na Hora do Código, além de
 
 ## Se apenas parte da minha escola conseguir fazer a Hora do Código durante a Semana da Educação em Ciência da Computação (de 8 a 14 de dezembro), ainda poderei concorrer aos prêmios?
 
-Sim, só não se esqueça de apresentar um plano de logística que descreva de que maneira toda a sua escola está participando, utilizando um período razoável de tempo, e inscreva-se para a Hora do Código até 14 de novembro.<% end %>
+Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 14th. <% end %>

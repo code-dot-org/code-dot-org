@@ -9,7 +9,7 @@ fr:
         video: Unplug1
       Unplug2:
         title: Algorithmique
-        desc: With nothing but paper and markers, students will learn the four steps of computational thinking. After a brief introduction, students should be split into groups where they will have to create directions for other students to draw a specific monster (from a catalog of pre-selected monsters). The entire task must be decomposed, then teams will analyze all monsters in the catalog for patterns, abstract different details from the monsters, then use that information to create an algorithm (directions) for another team to draw a certain monster. Teams will then switch algorithms with another group and draw the monster based on what that algorithm indicates. Is the drawing what the original team intended?
+        desc: "Seulement munis de papier et de feutres, les étudiants vont apprendre les quatre étapes de la pensée computationnelle. Après une brève introduction, ils seront séparées en groupes pour créer des instructions à partir desquelles d'autres étudiants devront dessiner un monstre précis (extrait d'un catalogue de monstres pré-établis). L'intégralité de cette tâche doit être décomposée, puis les équipes étudieront les monstres du catalogue pour trouver un schéma, s'écarter des détails des différents monstres, puis utiliser ces informations pour créer un algorithme (des instructions) pour qu'une autre équipe dessine un monstre choisi. Les groupes échangeront alors leurs algorithmes entre eux et dessineront le monstre sur les indications de l'algorithme. Le dessin représente-t-il ce que la première équipe avait prévu ?"
         pdfs:
           - unplug2
         video: Unplug2
@@ -98,7 +98,7 @@ fr:
         desc: 'To learn about conditional statements, students play a card game and create rules like "If I draw a red card, I get a point" and "If I draw a black card, you get a point."'
         video: C2_conditionals_with_cards
       BigEvent:
-        title: The Big Event
+        title: Le Grand Evénement
         desc: 'Students are introduced to the programming concept of "events," which are actions that a computer constantly monitors for. The teacher will press buttons on a paper remote and students will react depending on which button is pressed.'
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
@@ -146,7 +146,7 @@ fr:
         desc: Students use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone.
         video: C3_crowdsourcing
       DigitalCitizenship:
-        title: Digital Citizenship
+        title: Citoyenneté numérique
         desc: Students explore the difference between private information and personal information, distinguishing what is safe and unsafe to share online.
       TangramAlgorithms:
         title: Tangram Algorithms
@@ -176,7 +176,7 @@ fr:
         title: Video Games and Coordinate Planes
         desc: Video Games and Coordinate Planes lesson description
       Contracts:
-        title: Contracts
+        title: Contrats
         desc: Contracts unplugged lesson description
       DesignRecipe:
         title: The Design Recipe
