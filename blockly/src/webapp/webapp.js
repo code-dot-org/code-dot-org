@@ -1020,6 +1020,7 @@ Webapp.callCmd = function (cmd) {
     case 'replaceHtmlBlock':
     case 'deleteHtmlBlock':
     case 'createButton':
+    case 'createImage':
     case 'createCanvas':
     case 'canvasDrawLine':
     case 'canvasDrawCircle':
@@ -1031,6 +1032,7 @@ Webapp.callCmd = function (cmd) {
     case 'createTextLabel':
     case 'getText':
     case 'setText':
+    case 'setImageURL':
     case 'setPosition':
     case 'setParent':
     case 'setStyle':
@@ -1062,6 +1064,16 @@ Webapp.createButton = function (opts) {
 
   return Boolean(newButton.appendChild(textNode) &&
                  divWebapp.appendChild(newButton));
+};
+
+Webapp.createImage = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+
+  var newImage = document.createElement("img");
+  newImage.src = opts.src;
+  newImage.id = opts.elementId;
+
+  return Boolean(divWebapp.appendChild(newImage));
 };
 
 Webapp.createCanvas = function (opts) {
@@ -1187,6 +1199,8 @@ Webapp.getText = function (opts) {
   if (divWebapp.contains(element)) {
     if (element.tagName === 'INPUT') {
       return String(element.value);
+    } else if (element.tagName === 'IMG') {
+      return String(element.alt);
     } else {
       return element.innerText;
     }
@@ -1200,9 +1214,22 @@ Webapp.setText = function (opts) {
   if (divWebapp.contains(element)) {
     if (element.tagName === 'INPUT') {
       element.value = opts.text;
+    } else if (element.tagName === 'IMG') {
+      element.alt = opts.text;
     } else {
       element.innerText = opts.text;
     }
+    return true;
+  }
+  return false;
+};
+
+Webapp.setImageURL = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var element = document.getElementById(opts.elementId);
+  if (divWebapp.contains(element) && element.tagName === 'IMG') {
+    element.src = opts.src;
+    return true;
   }
   return false;
 };
