@@ -20645,21 +20645,31 @@ Blockly.SVGHeader.prototype.setPositionSize = function(yOffset, width, height) {
   var thirdTextHeight = this.textElement_.getBBox().height / 3;
   this.textElement_.setAttribute("y", rectangleMiddleY + thirdTextHeight)
 };
+Blockly.SVGHeader.prototype.setText = function(text) {
+  this.textElement_.textContent = text
+};
 Blockly.SVGHeader.prototype.removeSelf = function() {
   goog.dom.removeNode(this.svgGroup_)
 };
 Blockly.ExampleBlockView = function(block, exampleIndex, onCollapseCallback) {
   this.block = block;
-  var exampleNumber = Blockly.ExampleBlockView.START_EXAMPLE_COUNT_AT + exampleIndex;
-  this.header = new Blockly.SVGHeader(block.blockSpace.svgBlockCanvas_, {headerText:"Example " + exampleNumber, onMouseDown:this.toggleCollapse_, onMouseDownContext:this});
+  this.exampleNumber = Blockly.ExampleBlockView.START_EXAMPLE_COUNT_AT + exampleIndex;
+  this.header = new Blockly.SVGHeader(block.blockSpace.svgBlockCanvas_, {headerText:this.textForCurrentState_(), onMouseDown:this.toggleCollapse_, onMouseDownContext:this});
   this.collapsed_ = false;
   this.onCollapseCallback_ = onCollapseCallback
 };
 Blockly.ExampleBlockView.START_EXAMPLE_COUNT_AT = 1;
+Blockly.ExampleBlockView.DOWN_TRIANGLE_CHARACTER = "\u25bc";
+Blockly.ExampleBlockView.RIGHT_TRIANGLE_CHARACTER = "\u25b6";
+Blockly.ExampleBlockView.prototype.textForCurrentState_ = function() {
+  var arrow = this.collapsed_ ? Blockly.ExampleBlockView.RIGHT_TRIANGLE_CHARACTER : Blockly.ExampleBlockView.DOWN_TRIANGLE_CHARACTER;
+  return arrow + " " + Blockly.Msg.EXAMPLE + " " + this.exampleNumber
+};
 Blockly.ExampleBlockView.prototype.toggleCollapse_ = function() {
   this.collapsed_ = !this.collapsed_;
   this.block.setUserVisible(!this.collapsed_);
-  this.onCollapseCallback_()
+  this.onCollapseCallback_();
+  this.header.setText(this.textForCurrentState_())
 };
 Blockly.ExampleBlockView.prototype.placeStartingAt = function(currentX, currentY, width, headerHeight) {
   this.header.setPositionSize(currentY, width, headerHeight);
