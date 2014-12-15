@@ -33,10 +33,12 @@ levels.ec_simple = {
   'sliderSpeed': 0.7,
   'codeFunctions': [
     {'func': 'createButton', 'params': ["'id'", "'text'"] },
+    {'func': 'createImage', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
     {'func': 'createTextInput', 'params': ["'id'", "'text'"] },
     {'func': 'createTextLabel', 'params': ["'id'", "'text'"] },
     {'func': 'getText', 'params': ["'id'"], 'type': 'value' },
     {'func': 'setText', 'params': ["'id'", "'text'"] },
+    {'func': 'setImageURL', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
     {'func': 'setParent', 'params': ["'id'", "'parentId'"] },
     {'func': 'setPosition', 'params': ["'id'", "0", "0", "100", "100"] },
     {'func': 'setStyle', 'params': ["'id'", "'color:red;'"] },
