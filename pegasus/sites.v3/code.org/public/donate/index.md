@@ -19,18 +19,11 @@ require_https: true
 - **Increasing diversity** - encouraging women and students of color, who are sorely underrepresented in computer science.
 - **Raising awareness** - we're making it known: it should be a national imperative to get more students to code.
 
-## Results so far:
+**Our current donors:**
 
-- 42 million students have done the Hour of Code since December 2013.
-- 40,000 teachers began teaching our online course to 1.5 million students
-- 31 districts (including 3 of the top 6) partnered with us to bring computer science to 100+ high schools
-- 14 states changed policies to make computer science  count toward high school graduation requirements.
+Our donors include Microsoft, Google, Ballmer Family Giving, Omidyar Network and more. [See full list](/about/donors)
 
-**Our current donors and partners:**
-
-Amazon, Microsoft, Google, Juniper Networks, Salesforce.com, LinkedIn, JP Morgan Chase & Co. [See full list](/about/donors)
-
-To maintain nonprofit status, we need small donations to add up to 1/3 of our funding. Every dollar counts.
+For our nonprofit status, we need small donations to add up to 1/3 of our funding. Every dollar counts.
 
 <hr/>
 <a id="creditcard"></a>
