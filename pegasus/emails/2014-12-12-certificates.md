@@ -1,7 +1,7 @@
 ---
 from: 'Hadi Partovi (Code.org) <hadi_partovi@code.org>'
 subject: "70 million down, 30 million to go :-)"
-litmus_tracking_id: "a2ibhopt"
+litmus_tracking_id: "e45xmc74"
 ---
 ## 70 million down, 30 million to go
 
@@ -11,9 +11,7 @@ This week, millions of people are learning new skills that can change the rest o
 
 Code with [Angry Birds](https://code.org/hoc) - [with Elsa](https://code.org/frozen) - [with Flappy Bird](https://code.org/flappy)
 
-<% if domestic != 'true' %>
 (Now our tutorials are available in more languages, [try one now](https://code.org/learn/)!)
-<% end %>
 
 ## [Do an Hour of Code](https://code.org/)
 
@@ -29,13 +27,10 @@ I can’t believe our ambitious goal to reach 100M students is in reach. We’re
 Hadi Partovi,<br />#moveForward
 
 
-<% if domestic == 'true' %>
-
 We’ve been deluged by requests about our hat that’s been worn by celebrities and even the president. If you [buy our t-shirts and hats](https://code.org/shop/), wear them with pride.
 
 [![image](https://code.org/images/email/fit-400/swag.png)](https://code.org/shop/)
 
-<% end %>
 
 **P.S.**<br />
 Our crowdfunding campaign has **2 days left**! We’ll use the funds to bring computer science to 25,000 new classrooms by 2016. For each dollar you give, one student will learn. [Please support our work](https://code.org/donate/).
@@ -46,4 +41,3 @@ Our crowdfunding campaign has **2 days left**! We’ll use the funds to bring co
 You’re receiving this email because you've done the Hour of Code at [Code.org](https://code.org/). We’ll send you only a few updates a year on new ways to learn. Don’t like these emails? [Unsubscribe](<%= unsubscribe_link %>).
 
 ![](<%= tracking_pixel %>)
-
