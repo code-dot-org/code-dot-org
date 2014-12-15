@@ -13,7 +13,7 @@ nav: educate_nav
 
 **Invitation to Comment:** 
 
-The lesson plans below are shared as publicly commentable documents.  Some have been used by teachers in classrooms already and you will see their comments in the documents already.
+*What are these comments doing in these documents?* The lesson plans below are shared as publicly comment-able Google documents.  Some have been used by teachers in classrooms already this Fall. You will see some comments in the docs about how these teachers used them, choices they made, questions t some responses from Code.org staff.  You will also some ongoing dialog about the lessons.  Please feel free to add you own comments!  
 
 | Lesson Description| Lesson Plan | Widget |
 | ------------------|:-----------:|:------:|
