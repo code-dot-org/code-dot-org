@@ -75,8 +75,6 @@
   "saveToGallery": "Salvesta galeriisse",
   "savedToGallery": "Galeriisse salvestatud!",
   "shareFailure": "Vabandust, me ei saa seda programmi jagada.",
-  "typeFuncs": "Available functions:%1",
-  "typeHint": "Note that the parentheses and semicolons are required.",
   "workspaceHeader": "Assemble your blocks here: ",
   "workspaceHeaderJavaScript": "Type your JavaScript code here",
   "infinity": "Lõpmatus",
