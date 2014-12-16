@@ -75,8 +75,6 @@
   "saveToGallery": "Guardar en la Galería",
   "savedToGallery": "¡Guardado en la Galería!",
   "shareFailure": "Perdón, no podemos compartir este programa.",
-  "typeFuncs": "Funciones disponibles:%1",
-  "typeHint": "Ten en cuenta que los paréntesis y los punto y coma son necesarios.",
   "workspaceHeader": "Coloca tus bloques aquí:",
   "workspaceHeaderJavaScript": "Escribe tu código JavaScript aquí",
   "infinity": "Infinito",
