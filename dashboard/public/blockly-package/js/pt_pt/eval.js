@@ -14549,15 +14549,15 @@ exports.defaultTwitterText = function(d){return "Check out what I made"};
 
 },{"messageformat":62}],50:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.pt=function(n){return n===1?"one":"other"}
-exports.circleBlockTitle = function(d){return "circle (radius, style, color)"};
+exports.circleBlockTitle = function(d){return "Círculo (raio, estilo, cor)"};
 
-exports.displayBlockTitle = function(d){return "display"};
+exports.displayBlockTitle = function(d){return "Exibir"};
 
-exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, color)"};
+exports.ellipseBlockTitle = function(d){return "Elipse (largura, altura, estilo, cor)"};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"};
+exports.extraTopBlocks = function(d){return "Você tem blocos não acoplados. Você quis dizer para anexar este para o bloco \"display\"?"};
 
-exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
+exports.overlayBlockTitle = function(d){return "Degradê (Topo, Botão)"};
 
 exports.placeImageBlockTitle = function(d){return "place-image (x, y, image)"};
 

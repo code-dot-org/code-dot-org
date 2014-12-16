@@ -49,16 +49,16 @@
         video: Unplug4
       Unplug5:
         title: функции
-        desc: In this lesson, students will make a suncatcher out of string, beads,
-          and a special charm. The students will follow a series of repetitive steps,
-          then be asked to identify certain sets of "skills" that are duplicated several
-          times. Once those skills are defined, they will be called from a main program
-          and the whole beautiful process of creation will be recorded on a single
-          sheet of paper. The final program will be geared toward the entire class,
-          whatever their type of string, beads, and charms. To effectively allow for
-          this, students will need to "abstract out" the details of their specific
-          materials and create vague terms for an individual's supplies.  This use
-          of generic placeholders is a wonderful introduction to variables.
+        desc: В этом уроке студенты сделают Санкатчер из строки, бусы и особый шарм.
+          Студенты будут следовать ряд повторяющихся шагов, а затем предложено определить
+          определенные наборы «навыки», которые повторяются несколько раз. Как только
+          определены те навыки, они будут вызываться из основной программы и весь
+          красивый процесс создания будут записаны на одном листе бумаги. Окончательная
+          программа будет ориентирована на весь класс, независимо от их типа строки,
+          бусы и Амулеты. Чтобы эффективно разрешить это, студенты должны будут «абстрактный»
+          подробности их специфических материалов и создания расплывчатые термины
+          для индивидуума поставок.  Это использование общих рамок представляет собой
+          прекрасный введение переменных.
         pdfs:
         - unplug5
         video: Unplug5
@@ -82,22 +82,17 @@
         video: Unplug7
       Unplug8:
         title: Абстракция
-        desc: This lesson will introduce the concept of Computer Science and explain
-          what a Computer Scientist does.  It will also give students an opportunity
-          to assume the role of a computer scientist.  By the end of the activity,
-          each student will have a take-home reminder of what he or she learned.  You
-          may be tempted to skip teaching young children the complicated vocabulary
-          words that are associated with the lessons that follow, but presenting them
-          in a fun and playful light now is far more productive than waiting for more
-          advanced opportunities.
+        desc: Эта деятельность сочетает в себе ваши студенты повседневной рутины и
+          стиль мышления игра Mad Lib помочь узнать об эффективности абстракции класс.
         pdfs:
         - unplug8
         video: Unplug8
       Unplug9:
         title: Эстафетное программирование
-        desc: This lesson will take an idea from a previous activity (4. Graph Paper
-          Programming) and use those skills to emphasize the importance of completing
-          programs that operate in sequence and frequently checking programs for "bugs".
+        desc: Этот урок будет принимать идею от предыдущей деятельности (4. Диаграммная
+          бумага программирование) и использовать эти навыки, чтобы подчеркнуть важность
+          завершения программ, которые работают в последовательности и часто проверки
+          программы для «ошибок».
         pdfs:
         - unplug9
         video: Unplug9
@@ -134,9 +129,9 @@
         video: C1_planting_seed
       BuildingAFoundation:
         title: Создание основы
-        desc: Students build a structure using only provided supplies. Structures
-          must complete a task (reach a certain height or bear a certain weight),
-          and students discuss the idea of being persistent when things get complicated.
+        desc: Студенты построить структуру, с использованием только при условии поставки.
+          Структуры должен выполнить задачу (достичь определенной высоты или иметь
+          определенный вес), и студенты обсуждают идею быть стойким, когда усложняется.
         video: C1_building_foundation
       GettingLoopy:
         title: Зацикливание
@@ -146,10 +141,10 @@
         video: C1_getting_loopy
       RelayProgramming:
         title: Эстафетное программирование
-        desc: Students run a relay race, where they dash across the yard to write
-          an algorithm based on a "Graph Paper Programming" image. They can only write
-          one instruction at a time and if there's an error somewhere, they have to
-          erase everything back to that point.
+        desc: Студенты запустить эстафета, где они тире через двор написать алгоритм,
+          основанный на образе «Миллиметровка программирования». Они могут писать
+          только одну инструкцию в то время, и если есть где-то ошибка, они должны
+          стереть все обратно к этой точке.
         video: C2_relay_programming
       Conditionals:
         title: Условные команды
@@ -181,9 +176,9 @@
         video: C2_paper_airplanes
       BinaryBracelets:
         title: Двоичные браслеты
-        desc: Students create bracelets as a binary representations of the first letter
-          of their name. Students learn that data can be represented and stored in
-          more than one way.
+        desc: Студенты создают браслеты как двоичное представление первая буква из
+          их названий. Студенты изучают, что данные могут быть представленным и хранятся
+          в более чем одним способом.
         video: C2_binary_bracelets
       DigitalFootprint:
         title: Твой цифровой отпечаток

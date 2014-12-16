@@ -3,14 +3,15 @@
     unplugged:
       Unplug1:
         title: Panimula sa Computer Science
-        desc: This lesson will introduce the concept of Computer Science and explain
-          what a Computer Scientist does.  It will also give students an opportunity
-          to assume the role of a computer scientist.  By the end of the activity,
-          each student will have a take-home reminder of what he or she learned.  You
-          may be tempted to skip teaching young children the vocabulary words that
-          are associated with the lessons that follow, but presenting them in a fun
-          and playful light now is far more productive than waiting for more advanced
-          opportunities.
+        desc: Ipinapakilala ng araling ito ang konsepto ng Computer Science at ipinapaliwanag
+          kung ano ang ginagawa ng Computer scientist. Sa katapusan ng activity na
+          ito, ang mga mag-aaral ay may pagkakataon upang malaman ang papel na ginagampanan
+          ng isang computer scientist. Sa katapusang activity na ito, bawat mag-aaral
+          ay magkakaroon ng isang paalala kung ano ang kanyang natutunan. Maaari kang
+          matukso upang laktawan ang pagtuturo sa mga bata sa bokabularyo ng mga salita
+          na nauugnay sa mga aralin na susunod, ngunit ang pagtatanghal sa mga ito
+          sa isang masaya at mapaglarong paraan ay mas produktibo kaysa sa paghihintay
+          para sa higit pang advanced na mga pagkakataon.
         pdfs:
         - unplug1
         video: Unplug1

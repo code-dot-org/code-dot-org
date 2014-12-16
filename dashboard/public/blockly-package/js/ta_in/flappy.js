@@ -12386,7 +12386,7 @@ exports.doCode = function(d){return "செய்க"};
 
 exports.elseCode = function(d){return "அல்லது"};
 
-exports.endGame = function(d){return "end game"};
+exports.endGame = function(d){return "விளையாட்டை முடிவுசெய்"};
 
 exports.endGameTooltip = function(d){return "Ends the game."};
 
@@ -12468,19 +12468,19 @@ exports.setBackgroundCave = function(d){return "set scene Cave"};
 
 exports.setBackgroundSanta = function(d){return "set scene Santa"};
 
-exports.setBackgroundTooltip = function(d){return "Sets the background image"};
+exports.setBackgroundTooltip = function(d){return "பின்னணி படத்தை அமைக்கஉம்"};
 
-exports.setGapRandom = function(d){return "set a random gap"};
+exports.setGapRandom = function(d){return "ஒரு சீரற்ற இடைவெளி அமைக்கஉம்"};
 
-exports.setGapVerySmall = function(d){return "set a very small gap"};
+exports.setGapVerySmall = function(d){return "ஒரு மிக சிறிய இடைவெளி அமைக்கஉம்"};
 
-exports.setGapSmall = function(d){return "set a small gap"};
+exports.setGapSmall = function(d){return "ஒரு சிறிய இடைவெளி அமைக்கஉம்"};
 
-exports.setGapNormal = function(d){return "set a normal gap"};
+exports.setGapNormal = function(d){return "ஒரு சாதாரண இடைவெளி அமைக்கஉம்"};
 
-exports.setGapLarge = function(d){return "set a large gap"};
+exports.setGapLarge = function(d){return "ஒரு பெரிய இடைவெளி அமைக்கஉம்"};
 
-exports.setGapVeryLarge = function(d){return "set a very large gap"};
+exports.setGapVeryLarge = function(d){return "ஒரு மிக பெரிய இடைவெளி அமைக்கஉம்"};
 
 exports.setGapHeightTooltip = function(d){return "Sets the vertical gap in an obstacle"};
 

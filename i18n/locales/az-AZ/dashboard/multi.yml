@@ -12,7 +12,7 @@ az:
       2-3 artist loops multi 1:
         Artist Loops Multiple Choice: Artist Loops Multiple Choice
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500
-        Which shape is made by this loop?: Which shape is made by this loop?
+        Which shape is made by this loop?: Bu dövrlə hansı fiqur alınır?
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png
@@ -149,7 +149,7 @@ az:
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png
       4-5 artist multi 2:
         Artist Multiple Choice: Artist Multiple Choice
-        Which drawing is symmetric?: Which drawing is symmetric?
+        Which drawing is symmetric?: Hansı rəsm simmetrikdir?
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png

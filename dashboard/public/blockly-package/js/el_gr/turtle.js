@@ -14798,17 +14798,17 @@ exports.emptyBlocksErrorMsg = function(d){return "Το μπλοκ του \"Repea
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Το μπλόκ της συνάρτησης χρειάζεται να έχει άλλα μπλοκ μέσα του για να δουλέψει."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "Πρέπει να εισάγετε κάποια μπλοκ μέσα στον ορισμό της λειτουργίας. Κάντε κλικ στο κουμπί \"Επεξεργασία\" και σύρετε τα μπλοκς μέσα στο πράσινο μπλοκ."};
+exports.errorEmptyFunctionBlockModal = function(d){return "Πρέπει να εισάγετε κάποια μπλοκ μέσα στον ορισμό της συνάρτησης. Κάντε κλικ στο κουμπί \"Επεξεργασία\" και σύρετε τα μπλοκς μέσα στο πράσινο μπλοκ."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Κάντε κλικ στο κουμπί \"Επεξεργασία\" για να βεβαιωθείτε ότι δε λείπει κάποιο μπλοκ μέσα στον ορισμό της λειτουργίας."};
+exports.errorIncompleteBlockInFunction = function(d){return "Κάντε κλικ στο κουμπί \"Επεξεργασία\" για να βεβαιωθείτε ότι δε λείπει κάποιο μπλοκ μέσα στον ορισμό της συνάρτησης."};
 
-exports.errorParamInputUnattached = function(d){return "Θυμηθείτε να ενώσετε ένα μπλοκ σε κάθε παράμετρο εισόδου στο μπλοκ της λειτουργίας στο χώρο εργασίας σας."};
+exports.errorParamInputUnattached = function(d){return "Θυμηθείτε να ενώσετε ένα μπλοκ σε κάθε παράμετρο εισόδου στο μπλοκ της συνάρτησης στο χώρο εργασίας σας."};
 
 exports.errorUnusedParam = function(d){return "Προσθέσατε ένα μπλοκ παραμέτρου, αλλά δεν το χρησιμοποιήσατε στον ορισμό. Για να χρησιμοποιήσετε την παράμετρο, κάντε κλικ στο \"Επεξεργασία\" και τοποθετήστε το μπλοκ παραμέτρου μέσα στο πράσινο μπλοκ."};
 
-exports.errorRequiredParamsMissing = function(d){return "Δημιουργήστε μια παράμετρο για τη λειτουργία σας κάνοντας κλικ στο \"Επεξεργασία\" και προσθέτοντας τις απαραίτητες παραμέτρους. Σύρετε τα νέα μπλοκ παραμέτρων μέσα στον ορισμό της λειτουργίας σας."};
+exports.errorRequiredParamsMissing = function(d){return "Δημιουργήστε μια παράμετρο για τη συνάρτησή σας κάνοντας κλικ στο \"Επεξεργασία\" και προσθέτοντας τις απαραίτητες παραμέτρους. Σύρετε τα νέα μπλοκ παραμέτρων μέσα στον ορισμό της συνάρτησής σας."};
 
-exports.errorUnusedFunction = function(d){return "Δημιουργήσατε μια λειτουργία, αλλά δεν τη χρησιμοποιήσατε στο χώρο εργασίας σας! Κάνε κλικ στο \"Λειτουργίες\" στην εργαλειοθήκη και βεβαιωθείτε ότι τη χρησιμοποιείτε στο πρόγραμμά σας."};
+exports.errorUnusedFunction = function(d){return "Δημιουργήσατε μια συνάρτηση, αλλά δεν τη χρησιμοποιήσατε στο χώρο εργασίας σας! Κάνε κλικ στο \"Συναρτήσεις\" στην εργαλειοθήκη και βεβαιωθείτε ότι τη χρησιμοποιείτε στο πρόγραμμά σας."};
 
 exports.errorQuestionMarksInNumberField = function(d){return "Δοκιμάστε να αντικαταστήσετε τα ερωτηματικά με μια τιμή."};
 
@@ -14882,7 +14882,7 @@ exports.tooFewBlocksMsg = function(d){return "Χρησιμοποιείς όλα 
 
 exports.tooManyBlocksMsg = function(d){return "Αυτό το παζλ μπορεί να λυθεί με  <x id='START_SPAN'/><x id='END_SPAN'/> μπλοκ."};
 
-exports.tooMuchWork = function(d){return "Με ανάγκασες να κάνω πολλή δουλειά! Μπορείς να επαναλάβεις λιγότερες φορές ;"};
+exports.tooMuchWork = function(d){return "Με ανάγκασες να κάνω πολλή δουλειά! Μπορείς με λιγότερες επαναλήψεις;"};
 
 exports.toolboxHeader = function(d){return "μπλοκ"};
 
@@ -14920,7 +14920,7 @@ exports.when = function(d){return "όταν"};
 
 exports.whenRun = function(d){return "όταν εκτελείται"};
 
-exports.tryHOC = function(d){return "Δοκίμαστε την Ώρα του Κώδικα"};
+exports.tryHOC = function(d){return "Δοκίμασε την Ώρα του Κώδικα"};
 
 exports.signup = function(d){return "Κάντε εγγραφή για το εισαγωγικό μάθημα"};
 
@@ -15053,7 +15053,7 @@ exports.moveWestTooltip = function(d){return "Μετακινεί τον καλλ
 
 exports.moveTooltip = function(d){return "Μετακινεί τον καλλιτέχνη μπροστά ή πίσω κατά την καθορισμένη τιμή."};
 
-exports.notBlackColour = function(d){return "Πρέπει να ορίσεις ένα χρώμα διαφορετικό από το μαύρο γι αυτό το παζλ."};
+exports.notBlackColour = function(d){return "Πρέπει να ορίσεις ένα χρώμα διαφορετικό από το μαύρο για αυτό το παζλ."};
 
 exports.numBlocksNeeded = function(d){return "Αυτό το παζλ μπορεί να λυθεί με %1 μπλοκ. Χρησιμοποιήσατε %2."};
 
@@ -15063,7 +15063,7 @@ exports.penTooltip = function(d){return "Ανεβάζει ή κατεβάζει 
 
 exports.penUp = function(d){return "μολύβι επάνω"};
 
-exports.reinfFeedbackMsg = function(d){return "Εδώ είναι το σχέδιό σου! Συνέχισε με αυτό ή πήγαινε στον επόμενο γρίφο."};
+exports.reinfFeedbackMsg = function(d){return "Εδώ είναι το σχέδιό σου! Συνέχισε με αυτό ή πήγαινε στο επόμενο παζλ."};
 
 exports.setColour = function(d){return "όρισε χρώμα"};
 
@@ -15075,7 +15075,7 @@ exports.shareDrawing = function(d){return "Μοιράσου το σχέδιό σ
 
 exports.showMe = function(d){return "Δείξε μου"};
 
-exports.showTurtle = function(d){return "δείξε καλλιτέχνη"};
+exports.showTurtle = function(d){return "εμφάνισε τον καλλιτέχνη"};
 
 exports.sizeParameter = function(d){return "μέγεθος"};
 

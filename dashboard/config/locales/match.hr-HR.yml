@@ -28,7 +28,7 @@
       2-3 bounce match 1:
         Bounce Matching: Bounce Matching
         Matching: Matching
-        Match the events with the actions: Match the events with the actions
+        Match the events with the actions: Spoji događaje i akcije
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png
@@ -42,7 +42,7 @@
       2-3 flappy match 1:
         Flappy Matching One: Flappy Matching One
         Matching: Matching
-        Match the events with the actions: Match the events with the actions
+        Match the events with the actions: Spoji događaje i akcije
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png
@@ -61,7 +61,7 @@
       2-3 Maze Match 2:
         Maze Match: Maze Match
         Match the puzzles to the blocks: Match the puzzles to the blocks
-        Instructions: Instructions
+        Instructions: Upute
         Drag the blocks to match.: Drag the blocks to match.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png
@@ -116,7 +116,7 @@
       4-5 maze match 1:
         Maze Match: Maze Match
         Match the puzzles to the blocks: Match the puzzles to the blocks
-        Instructions: Instructions
+        Instructions: Upute
         Drag the blocks to match.: Drag the blocks to match.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png
@@ -134,7 +134,7 @@
         <h4>2)</h4>: <h4>2)</h4>
         <h4>3)</h4>: <h4>3)</h4>
         <h4>4)</h4>: <h4>4)</h4>
-        <h4>Set Player 1 score to 0</h4>: <h4>Set Player 1 score to 0</h4>
+        <h4>Set Player 1 score to 0</h4>: <h4>Postavi bodove Igrača 1 na 0</h4>
         <h4>Player 1 rolls die</h4>: <h4>Player 1 rolls die</h4>
         <h4>Add Player 1 roll to total score</h4>: <h4>Add Player 1 roll to total
           score</h4>
@@ -166,7 +166,7 @@
         /script_assets/4-5_images/unplugged/suncatchers_1_a2.png: /script_assets/4-5_images/unplugged/suncatchers_1_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a3.png: /script_assets/4-5_images/unplugged/suncatchers_1_a3.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a4.png: /script_assets/4-5_images/unplugged/suncatchers_1_a4.png
-        <h4>STACK</h4>: <h4>STACK</h4>
+        <h4>STACK</h4>: <h4>STOG</h4>
         <h4>STAMP</h4>: <h4>STAMP</h4>
         <h4>STAR</h4>: <h4>STAR</h4>
         <h4>RAMP</h4>: <h4>RAMP</h4>
@@ -177,9 +177,9 @@
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
         /script_assets/k_1_images/artist_images/square_next_ball.png: /script_assets/k_1_images/artist_images/square_next_ball.png
-        <br/><br/>above: <br/><br/>above
-        <br/><br/>below: <br/><br/>below
-        <br/><br/>next to: <br/><br/>next to
+        <br/><br/>above: <br/> <br/>iznad
+        <br/><br/>below: <br/> <br/>ispod
+        <br/><br/>next to: <br/> <br/>pokraj
       K-1 Artist 2 Match 2:
         Matching: Matching
         Match the shapes based on type.: Match the shapes based on type.
@@ -234,7 +234,7 @@
       K-1 Maze Match 1:
         Matching: Matching
         Match the puzzles and blocks: Match the puzzles and blocks
-        Instructions: Instructions
+        Instructions: Upute
         Drag the blocks to match.: Drag the blocks to match.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/k_1_images/maze_images/maze_EN.png: /script_assets/k_1_images/maze_images/maze_EN.png
@@ -275,15 +275,15 @@
         /script_assets/k_1_images/unplugged_images/rightrightup.png: /script_assets/k_1_images/unplugged_images/rightrightup.png
         /script_assets/k_1_images/unplugged_images/rightdown.png: /script_assets/k_1_images/unplugged_images/rightdown.png
       Coordinate Matching:
-        Coordinates of Ninjacat: Coordinates of Ninjacat
+        Coordinates of Ninjacat: Koordinate Ninja Mačka
         Match each character with its correct coordinate!: Match each character with
           its correct coordinate!
         /script_assets/msm/Unit 1/exercise_3_ninjacat.png: /script_assets/msm/Unit
           1/exercise_3_ninjacat.png
-        Cloud: Cloud
-        Ruby: Ruby
-        Dog: Dog
-        Ninjacat: Ninjacat
+        Cloud: Oblak
+        Ruby: Rubin
+        Dog: Pas
+        Ninjacat: Ninja Mačak
         (250, 400): (250, 400)
         (500, 240): (500, 240)
         (480, 100): (480, 100)
@@ -337,14 +337,14 @@
         Here is a contract for a new function. Match each item with the word that describes it.: Here
           is a contract for a new function. Match each item with the word that describes
           it.
-        yearbook-picture: yearbook-picture
+        yearbook-picture: slika iz godišnjaka
         string numer: string numer
-        image: image
-        (yearbook-picture "Sally" 1992): (yearbook-picture "Sally" 1992)
-        function name: function name
-        domain: domain
-        range: range
-        example: example
+        image: slika
+        (yearbook-picture "Sally" 1992): (slika iz godišnjaka "Sally" 1992)
+        function name: naziv funkcije
+        domain: domena
+        range: raspon
+        example: primjer
       Match example to contract:
         Contracts of Functions: Contracts of Functions
         Match each example with the correct contract!: Match each example with the
@@ -365,7 +365,7 @@
         Matching Images Two: Matching Images Two
         Match up all the flowers by colour!: Match up all the flowers by colour!
         /script_assets/matches/images/head.jpg,300: /script_assets/matches/images/head.jpg,300
-        Instructions: Instructions
+        Instructions: Upute
         Drag the images from right to center.: Drag the images from right to center.
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
         /script_assets/matches/images/q1.jpg: /script_assets/matches/images/q1.jpg
@@ -379,11 +379,11 @@
         Matching: Matching
         Some really easy stuff to match.  Drag it around until you get it.: Some really
           easy stuff to match.  Drag it around until you get it.
-        What color is the sky?: What color is the sky?
-        What's in the ocean?: What's in the ocean?
-        What's Brent's last name?: What's Brent's last name?
-        Where is Brendan from?: Where is Brendan from?
+        What color is the sky?: Koje je boje nebo?
+        What's in the ocean?: Što je u oceanu?
+        What's Brent's last name?: Kako se Brent preziva?
+        Where is Brendan from?: Odakle je Brendan?
         blue: plava
-        salt: salt
+        salt: sol
         Van Minnen: Van Minnen
         Sydney: Sydney

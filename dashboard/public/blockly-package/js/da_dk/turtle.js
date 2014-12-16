@@ -15087,9 +15087,9 @@ exports.turnLeft = function(d){return "drej til venstre med"};
 
 exports.turnRight = function(d){return "drej til højre med"};
 
-exports.turnRightTooltip = function(d){return "Drejer kunstneren til højre med en angivet vinkel."};
+exports.turnRightTooltip = function(d){return "Drejer figuren til højre med en angivet vinkel."};
 
-exports.turnTooltip = function(d){return "Drejer kunstneren til venstre eller højre med den angivne vinkels grader."};
+exports.turnTooltip = function(d){return "Drejer figuren  til venstre eller højre med det angivne antal grader."};
 
 exports.turtleVisibilityTooltip = function(d){return "Gør kunstneren synlig eller usynlig."};
 
