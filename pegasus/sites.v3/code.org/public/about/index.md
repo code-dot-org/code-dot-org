@@ -6,22 +6,36 @@ nav: about_nav
 
 Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science. We believe computer science and computer programming should be part of the core curriculum in education, alongside other science, technology, engineering, and mathematics (STEM) courses, such as biology, physics, chemistry and algebra.
 
-**Code.org's work and growth covered by CBS This Morning:**
+[col-50]
 
-<embed src="http://www.cbsnews.com/common/video/cbsnews_player.swf" scale="noscale" salign="lt" type="application/x-shockwave-flash" background="#000000" width="425" height="279" allowFullScreen="true" allowScriptAccess="always" FlashVars="pType=embed&si=254&pid=cGUsG_QQ1U_t&url=http://www.cbsnews.com/videos/cracking-the-code-push-to-teach-computer-science-in-classrooms" />
+**Code.org's work covered by CBS This Morning:**
+
+<embed src="http://www.cbsnews.com/common/video/cbsnews_player.swf" scale="noscale" salign="lt" type="application/x-shockwave-flash" background="#000000" width="375" height="246" allowFullScreen="true" allowScriptAccess="always" FlashVars="pType=embed&si=254&pid=cGUsG_QQ1U_t&url=http://www.cbsnews.com/videos/cracking-the-code-push-to-teach-computer-science-in-classrooms" />
+
+[/col-50]
+
+[col-50]
+
+**President Obama does the Hour of Code:**
+
+<iframe width="375" height="210" src="//www.youtube.com/embed/AI_dayIQWV4" frameborder="0" allowfullscreen></iframe>
+
+<br/><br/><br/>
+
+[/col-50]
 
 ## Our goals and metrics
 
 | Code.org Goal | Accomplishment |
 |------|----------------|
-| Inspire students | 59 million students have tried the [Hour of Code](/learn). |
+| Inspire students | Over 75 million students have tried the [Hour of Code](/learn). |
 | Create fantastic  courses | 99% of teachers recommend the Code.org [intro CS curriculum](http://learn.code.org) |
 | Reach classrooms | Our [intro course](http://studio.code.org) is in 70,000 classrooms, reaching 3M students |
-| Improve diversity in CS | In our online courses, [41% of the students are girls](http://codeorg.tumblr.com/post/98856300118/diversity). In our high school classrooms, [34% are girls, and 60% African American or Hispanic](http://codeorg.tumblr.com/post/98856300118/diversity) |
-| Go global | Our courses are available in 30+ languages, used in all 180+ countries |
+| Improve diversity in CS | In our online courses, [41% of the students are girls](http://codeorg.tumblr.com/post/98856300118/diversity), and 37% are black or Hispanic. In our high school classrooms, [34% are girls, and 60% African American or Hispanic](http://codeorg.tumblr.com/post/98856300118/diversity) |
 | Prep new CS teachers | We've prepared 3,000 new teachers across grades K-12. |
-| Change school district curriculum | [30+ districts](/educate/partner-districts) are adding [CS classes](/educate/curriculum) with us, including all of the largest 3|
+| Change school district curriculum | [60+ districts](/educate/partner-districts) are adding [CS classes](/educate/curriculum) with us, including all the largest 7 in the US|
 | Set up policies to support CS | Policy changed in [16 states](/action) including CA, NY, FL, IL, OH.|
+| Go global | Our courses are available in 30+ languages, used in all 180+ countries. |
 
 <br/>
 <br/>
