@@ -134,8 +134,8 @@
 "hr": "hr-HR"
 "hr-HR":
   english: "Croatian"
-  native: "Hrvatska"
-  debug: true
+  native: "Hrvatski"
+  webfonts: false
 
 "hu": "hu-HU"
 "hu-HU":
