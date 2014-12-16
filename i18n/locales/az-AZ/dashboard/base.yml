@@ -21,7 +21,7 @@ az:
   welcome_back: 'Bir daha xoş gəldiniz, %{name}'
   add_teacher_form:
     code:
-      label: 'Add a teacher:'
+      label: 'Müəllim əlavə edin:'
       placeholder: Section Code (ABCDEF)
     submit: Müəllim əlavə edin
   add_hint_form:
@@ -338,7 +338,7 @@ az:
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Saytı müəllim olaraq istifadə edin
     heading_hoc2014: '<h2>Kod Saatı</h2><h1>Bütün yaşlar üçün</h1>'
-    heading_elementary: '<h2>20-saatlıq kurslar</h2><h1>Başlayanlar (bütün yaşlar) üçün</h1>'
+    heading_elementary: '<h2>20 saatlıq kurslar</h2><h1>Başlayanlar (bütün yaşlar) üçün</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
     heading_legacy: '<h2>Bizim ümumi kursumuz</h2><h1>Bütün yaşlar üçün</h1>'
     your_gallery: Qalereya
@@ -419,13 +419,13 @@ az:
       body: İnformatikanın əsaslarını öyrənməyə cəhd edin. Milyonlarla insan artıq bu fürsətdən istifadə edib.
     flappy:
       title: Flappy Code
-      body: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
+      body: 10 dəqiqədən də az müddətə öz oyununuzu yazmaq istəyrisiniz? Qanadlı Kod dərsliyimizi sınayın!
     20hour:
-      title: Intro Course
-      body: Try our 20-hour Intro to Computer Science course.
+      title: Giriş kursu
+      body: Bizim 20 saatlıq İnformatikaya Giriş kursunu sınaqdan keçirin.
     hoc2014:
       try_new_tutorial: Try our new Hour of Code tutorial in beta
-      try_frozen: Artist with Anna and Elsa, from Frozen
+      try_frozen: '"Buzlu ürək"dən Anna və Elza ilə Rəssam'
     gallery:
       title: Qalereya
       body: İstifadəçilərimizin düzəltdiyi proqram və rəsm işlərinin qalereyasına baxın
@@ -441,14 +441,14 @@ az:
     caption_by_name_age: 'by %{name}, age %{age}'
     caption_time_ago: '%{time_ago} ago'
     header: Qalereya
-    header_playlab: Oyun laboratoriyası
-    header_artist: Artist
+    header_playlab: Oyun labı
+    header_artist: Rəssam
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     prerelease_hoc2014: "This tutorial is in <span class='betatext'>beta</span>.  It is subject to revision as feedback is received and improvements are made."
     feedback: Give Feedback
     report_bug: Report Bug
-    support: Get Help
+    support: Kömək istə
     support_url: //support.code.org
   multi:
     wrong_title: Yanlış cavab
@@ -488,7 +488,7 @@ az:
           description: ""
         flappy:
           title: Flappy Code
-          description: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
+          description: 10 dəqiqədən də az müddətə öz oyununuzu yazmaq istəyrisiniz? Qanadlı Kod dərsliyimizi sınayın!
         jigsaw:
           title: Jigsaw
           description: ""

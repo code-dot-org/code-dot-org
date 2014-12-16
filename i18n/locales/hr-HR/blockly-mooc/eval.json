@@ -7,7 +7,7 @@
   "placeImageBlockTitle":"Ubaci sliku (x, y, slika)",
   "offsetBlockTitle":"pomak (x, y, slika)",
   "rectangleBlockTitle":"pravokutnik (širina, visina, stil, boja)",
-  "reinfFeedbackMsg":"Možete pritisnuti gumb \"Pokušajte ponovo\" kako biste uredili crtež.",
+  "reinfFeedbackMsg":"Možeš pritisnuti gumb \"Pokušaj ponovno\" kako bi uredio svoj crtež.",
   "rotateImageBlockTitle":"rotiraj (stupnjevi, slika)",
   "scaleImageBlockTitle":"razmjera (faktor)",
   "squareBlockTitle":"kvadrat (veličina, stil, boja)",

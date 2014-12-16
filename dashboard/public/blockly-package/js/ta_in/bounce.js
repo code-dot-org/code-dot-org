@@ -12507,7 +12507,7 @@ exports.setBackgroundHardcourt = function(d){return "set hardcourt scene"};
 
 exports.setBackgroundRetro = function(d){return "set retro scene"};
 
-exports.setBackgroundTooltip = function(d){return "Sets the background image"};
+exports.setBackgroundTooltip = function(d){return "பின்னணி படத்தை அமைக்கஉம்"};
 
 exports.setBallRandom = function(d){return "set random ball"};
 

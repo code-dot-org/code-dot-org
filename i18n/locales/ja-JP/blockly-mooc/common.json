@@ -75,8 +75,6 @@
   "saveToGallery":"ギャラリーに保存",
   "savedToGallery":"ギャラリーに保存されました！",
   "shareFailure":"プログラムをシェアできませんでした。",
-  "typeFuncs":"利用可能な機能:%1",
-  "typeHint":"カッコとセミコロンが必要な事に注意してください。",
   "workspaceHeader":"ここでブロックを組み立てよう:",
   "workspaceHeaderJavaScript":"ここにJavascriptのコードを入力してください。",
   "infinity":"無限\n",

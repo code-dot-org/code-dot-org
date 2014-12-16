@@ -12420,13 +12420,13 @@ exports.incrementOpponentScore = function(d){return "dodaj bod protivniku"};
 
 exports.incrementOpponentScoreTooltip = function(d){return "Dodaj jedan protivničkim bodovima."};
 
-exports.incrementPlayerScore = function(d){return "osvoji bod"};
+exports.incrementPlayerScore = function(d){return "dodaj bod"};
 
 exports.incrementPlayerScoreTooltip = function(d){return "Povećava trenutni broj bodova za jedan."};
 
 exports.isWall = function(d){return "jeli ovo zid"};
 
-exports.isWallTooltip = function(d){return "Vraća \"istinito\" Ako je zid ovdje"};
+exports.isWallTooltip = function(d){return "Vraća \"točno\" ako je ovdje zid"};
 
 exports.launchBall = function(d){return "ubaci novu loptu"};
 
@@ -12522,7 +12522,7 @@ exports.setBackgroundRetro = function(d){return "postavi retro scenu"};
 
 exports.setBackgroundTooltip = function(d){return "Postavlja sliku pozadine"};
 
-exports.setBallRandom = function(d){return "postavi bilo koju loptu"};
+exports.setBallRandom = function(d){return "postavi nasumično odabranu loptu"};
 
 exports.setBallHardcourt = function(d){return "postavi tvrdu loptu"};
 
@@ -12530,7 +12530,7 @@ exports.setBallRetro = function(d){return "postavi retro loptu"};
 
 exports.setBallTooltip = function(d){return "Postavlja sliku lopte"};
 
-exports.setBallSpeedRandom = function(d){return "postavi slučajno odabranu brzinu lopte"};
+exports.setBallSpeedRandom = function(d){return "postavi nasumično odabranu brzinu lopte"};
 
 exports.setBallSpeedVerySlow = function(d){return "postavi vrlo malu brzinu lopte"};
 
@@ -12544,7 +12544,7 @@ exports.setBallSpeedVeryFast = function(d){return "postavi vrlo veliku brzinu lo
 
 exports.setBallSpeedTooltip = function(d){return "Postavlja brzinu lopte"};
 
-exports.setPaddleRandom = function(d){return "postavi bilo kakav reket"};
+exports.setPaddleRandom = function(d){return "postavi nasumično odabran reket"};
 
 exports.setPaddleHardcourt = function(d){return "postavi tvrdi reket"};
 
@@ -12552,7 +12552,7 @@ exports.setPaddleRetro = function(d){return "postavi retro reket"};
 
 exports.setPaddleTooltip = function(d){return "Postavlja sliku reketa"};
 
-exports.setPaddleSpeedRandom = function(d){return "postavi slučajno odabranu brzinu reketa"};
+exports.setPaddleSpeedRandom = function(d){return "postavi nasumično odabranu brzinu reketa"};
 
 exports.setPaddleSpeedVerySlow = function(d){return "postavi vrlo sporu brzinu reketa"};
 
@@ -12576,7 +12576,7 @@ exports.turnRight = function(d){return "okreni udesno"};
 
 exports.turnTooltip = function(d){return "Okreće me ulijevo ili udesno za 90 stupnjeva."};
 
-exports.whenBallInGoal = function(d){return "kad je lopta u golu"};
+exports.whenBallInGoal = function(d){return "kada je lopta u golu"};
 
 exports.whenBallInGoalTooltip = function(d){return "Kad lopta uđe u gol, izvršava dolje navedene akcije."};
 
@@ -12596,7 +12596,7 @@ exports.whenLeft = function(d){return "kad lijeva strelica"};
 
 exports.whenLeftTooltip = function(d){return "Izvrši sljedeće akcije kad se pritisne lijeva strelica."};
 
-exports.whenPaddleCollided = function(d){return "kada lopta udari u reket"};
+exports.whenPaddleCollided = function(d){return "kada lopta pogodi reket"};
 
 exports.whenPaddleCollidedTooltip = function(d){return "Kad lopta pogodi reket, izvršava dolje navedene akcije."};
 
@@ -12608,7 +12608,7 @@ exports.whenUp = function(d){return "kad strelica gore"};
 
 exports.whenUpTooltip = function(d){return "Izvrši sljedeće akcije kad se pritisne strelica gore."};
 
-exports.whenWallCollided = function(d){return "kada lopta udari u zid"};
+exports.whenWallCollided = function(d){return "kada lopta pogodi zid"};
 
 exports.whenWallCollidedTooltip = function(d){return "Kad lopta udari u zid, izvršava dolje navedene akcije."};
 
@@ -12678,7 +12678,7 @@ exports.directionWestLetter = function(d){return "Zapad"};
 
 exports.end = function(d){return "kraj"};
 
-exports.emptyBlocksErrorMsg = function(d){return "Da bi blok \"Ponovi\" ili \"Ako\" radio, u njega treba ugraditi druge blokove. Provjeri uklapa li se unutarnji blok pravilno u vanjski blok."};
+exports.emptyBlocksErrorMsg = function(d){return "Da bi blokovi \"Ponovi\" ili \"Ako\" radili, u njih treba ugraditi druge blokove. Provjeri uklapa li se unutarnji blok pravilno u vanjski blok."};
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Funkcijski blok treba unutra imati druge blokove da bi mogao raditi."};
 
@@ -12686,17 +12686,17 @@ exports.errorEmptyFunctionBlockModal = function(d){return "Mora se staviti bloko
 
 exports.errorIncompleteBlockInFunction = function(d){return "Klikni na \"uredi\" da budeš siguran da nijedan blok ne nedostaje unutar tvoje definicije funkcije."};
 
-exports.errorParamInputUnattached = function(d){return "Sjeti se da prikvačiš blok za svaki unos parametara na bloku funkcije na svojoj radnoj površini."};
+exports.errorParamInputUnattached = function(d){return "Sjeti se da prikačiš blok za svaki unos parametara na bloku funkcije na svojoj radnoj površini."};
 
 exports.errorUnusedParam = function(d){return "Dodao si blok parametara, ali ga nisi koristio u definiciji. Pobrini se da koristiš svoj parametar tako da klikneš na \"uredi\" i staviš blok parametara unutar zelenog bloka."};
 
 exports.errorRequiredParamsMissing = function(d){return "Napravi parametar za svoju funkciju tako da klikneš na \"uredi\" i dodaš neophodne parametre. Dovuci nove blokove parametara u svoju definiciju funkcije."};
 
-exports.errorUnusedFunction = function(d){return "Napravio si funkciju, ali je nikad nisi koristio na svojoj radnoj površini! Klikni na \"Funkcije\" u alatima i pobrini se da je iskoristiš u svom programu."};
+exports.errorUnusedFunction = function(d){return "Napravio si funkciju, ali je nikad nisi koristio na svojoj radnoj površini! Klikni na \"Funkcije\" na alatnoj traci i pobrini se da je iskoristiš u svom programu."};
 
 exports.errorQuestionMarksInNumberField = function(d){return "Pokušaj zamijeniti \"???\" s vrijednošću."};
 
-exports.extraTopBlocks = function(d){return "Postoje nespojeni blokovi. Želiš li ih dodati u blok \"pri izvršavanju\"?"};
+exports.extraTopBlocks = function(d){return "Postoje nespojeni blokovi. Želiš li ih dodati u blok \"pri pokretanju\"?"};
 
 exports.finalStage = function(d){return "Čestitamo! Posljednja etapa je završena."};
 
@@ -12742,9 +12742,9 @@ exports.puzzleTitle = function(d){return "Zadatak "+v(d,"puzzle_number")+" od "+
 
 exports.repeat = function(d){return "ponovi"};
 
-exports.resetProgram = function(d){return "Ponovno"};
+exports.resetProgram = function(d){return "Ispočetka"};
 
-exports.runProgram = function(d){return "Kreni"};
+exports.runProgram = function(d){return "Pokreni"};
 
 exports.runTooltip = function(d){return "Pokreće program određen blokovima na radnom prostoru."};
 
@@ -12802,11 +12802,11 @@ exports.watchVideo = function(d){return "Pogledaj filmić"};
 
 exports.when = function(d){return "kada"};
 
-exports.whenRun = function(d){return "pri izvršavanju"};
+exports.whenRun = function(d){return "pri pokretanju"};
 
 exports.tryHOC = function(d){return "Isprobaj Hour of Code"};
 
-exports.signup = function(d){return "Upis na početni tečaj"};
+exports.signup = function(d){return "Registrirajte se na početni tečaj"};
 
 exports.hintHeader = function(d){return "Evo savjeta:"};
 

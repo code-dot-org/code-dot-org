@@ -1,155 +1,155 @@
-hu:
-  site_name: Kódolás Órája
-  language: Magyar
-  front_title: Csatlakozz minden idők legnagyobb tanulmányi eseményéhez 2014. december 8. és 14. között!
-  coming_soon: Hamarosan
-  front_header_banner: Csatlakozz minden idők legnagyobb tanulmányi eseményéhez 2014. december 8. és 14. között!
+"hu":
+  site_name: "Kódolás Órája"
+  language: "Magyar"
+  front_title: "Csatlakozz minden idők legnagyobb tanulmányi eseményéhez 2014. december 8. és 14. között!"
+  coming_soon: "Hamarosan"
+  front_header_banner: "Csatlakozz minden idők legnagyobb tanulmányi eseményéhez 2014. december 8. és 14. között!"
   front_intro_default: 'A Kódolás órája egy több mint 180 országra kiterjedt, diákok tízmillióit elérő globális mozgalom. Bárki bárhol szervezhet Kódolás órája rendezvényt. Az egy órás oktatóanyagok több, mint 30 nyelven érhetők el. Nincs szükség tapasztalatra. <strong>4-től 104 éves korig.</strong>'
   front_intro_default_uk: 'A Kódolás órája egy globális mozgalom amely emberek tízmilliót éri el több mint 180 országban. Bárki szervezhet egy Kódolás órája eseményt. Az első Hour of Code-on több mint 3 millióan voltak az Egyesült Királyságban. Duplázzuk meg decemberben! <strong>Tapasztalat nem szükséges. 4-től 104 éves korig.</strong>'
-  front_watch_video: Nézd meg az új videót
-  header_menu_resources: Segédlet
-  header_menu_faq: GYIK
-  header_menu_prizes: Díjak
-  header_menu_uk_code_org: uk.code.org
+  front_watch_video: "Nézd meg az új videót"
+  header_menu_resources: "Segédlet"
+  header_menu_faq: "GYIK"
+  header_menu_prizes: "Díjak"
+  header_menu_uk_code_org: "uk.code.org"
   company_4-H: 4-H Ifjúság fejlesztés
-  company_asa: Posztgraduális szövetség
-  company_bgca: Boys and Girls Club of America
-  company_bsusa: Boy Scouts of America
-  company_cgcs: Council of the Great City Schools
-  company_gsusa: Girl Scouts of America
-  company_khanacademy: Khan Academy
-  company_mesa: Mathematics Engineering Science Achievement
-  company_napcs: National Alliance of Public Charter Schools
-  company_ngcp: National Girls Collaborative Project
-  company_teachforall: Teach for All
-  company_teachforamerica: Teach for America
-  company_tntp: TNTP
-  prizes_all: Díjak minden szervezőnek
-  prizes_every_organizer: Minden Kódolás órája szervező Dropbox vagy Skype kreditet kap köszönetképpen
-  prizes_technology: Minden amerikai államban (és Washington DC-ben) egy-egy állami iskola 10 ezer dollár értékű műszaki berendezést nyer
+  company_asa: "Posztgraduális szövetség"
+  company_bgca: "Boys and Girls Club of America"
+  company_bsusa: "Boy Scouts of America"
+  company_cgcs: "Council of the Great City Schools"
+  company_gsusa: "Girl Scouts of America"
+  company_khanacademy: "Khan Academy"
+  company_mesa: "Mathematics Engineering Science Achievement"
+  company_napcs: "National Alliance of Public Charter Schools"
+  company_ngcp: "National Girls Collaborative Project"
+  company_teachforall: "Teach for All"
+  company_teachforamerica: "Teach for America"
+  company_tntp: "TNTP"
+  prizes_all: "Díjak minden szervezőnek"
+  prizes_every_organizer: "Minden Kódolás órája szervező Dropbox vagy Skype kreditet kap köszönetképpen"
+  prizes_technology: "Minden amerikai államban (és Washington DC-ben) egy-egy állami iskola 10 ezer dollár értékű műszaki berendezést nyer"
   prizes_tech_chats: '# osztály videó beszélgetést nyer egy nagyon különleges vendéggel'
-  prizes_robots: 100 osztály egy-egy szett programozható robotot nyer
-  prizes_brilliant: Provinciánként vagy területenként egy iskola 2000 dollárt nyer egy Brilliant projekthez
-  prizes_actua: 15 iskola Kanadában kap két STEM workshopot egy Actua taggal
-  prizes_details: Részletek
-  whats_next_header: Mi legyen a következő lépés?
+  prizes_robots: "100 osztály egy-egy szett programozható robotot nyer"
+  prizes_brilliant: "Provinciánként vagy területenként egy iskola 2000 dollárt nyer egy Brilliant projekthez"
+  prizes_actua: "15 iskola Kanadában kap két STEM workshopot egy Actua taggal"
+  prizes_details: "Részletek"
+  whats_next_header: "Mi legyen a következő lépés?"
   whats_next_description: "Küldeni fogunk anyagokat és hasznos tippeket az eseményedhez. Az új 2014-es tananyagok hamarosan elkészülnek, amit bármilyen böngészőn, telefonon lehet majd használni, de lesz anyag számítógép nélküli oktatáshoz is! <a href='http://code.org/learn'>Próbáld ki a jelenlegi tananyagokat</a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Hogyan vezess le egy Kódolás Órája eseményt</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Népszerűsítsd a Kódolás Óráját</a>"
   n_have_learned_an_hoc: '<h1>#</h1><h3> fő vett már részt </h3><h2>Hour of Code</h2> órán'
-  anybody_can_learn: Bárki megtanulhatja.
-  register_now: Regisztrálj most
-  front_join_us_heading: Minden diáknak legyen egy Kódolás Órája.
-  front_join_us_description: Az informatika megismerése alapszükséglet minden diák számára. Segíts hogy legalább 100 millióan hozzájussanak.
-  front_join_us_button: Csatlakozz
-  front_what_is_hoc: Mi a Hour of Code?
-  front_join_us_header: Bárki megtanulhatja az alapokat, és élvezheti csinálni!
-  front_join_us_header_uk: December 8. és 14. között szervezz egy Hour of Code rendezvényt, és mutasd meg hogy bárki játszva megtanulhatja az alapokat!
-  front_join_us_teacher: Tanár vagy?
-  front_join_us_inspire: Inspiráld a diákjaidat
-  front_join_us_inspire_link: egy Kódolás Órával.
-  front_join_us_parent: Szülő vagy?
-  front_join_us_ask_link: Kérd meg a helyi iskola vezetőit
-  front_join_us_ask: hogy tartsanak egy Hour of Code rendezvényt.
-  front_join_us_computer_science: Egyszerűen csak szereted a számítástechnikát?
-  front_join_us_spread: Terjeszd az igét.
-  front_join_us_organize: Vagy szervezz egy Kódolás Óráját Te magad!
-  front_join_us_how_to_run: Itt található a Hour of Code óra megtartásához szükséges információ
-  front_join_us_help_promote: Segíts népszerűsíteni a Hour of Code-ot
-  front_join_us_students: Diákok
-  front_join_us_teachers: Tanárok
-  front_join_us_everyone: Mindenki
-  front_join_us_try: Próbáld ki
-  front_join_us_host: Legyél a házigazda
-  front_join_us_support: Támogasd
-  signup_header: Szervezz egy Kódolás Órája eseményt december 8. és 14. között, és regisztráld be az eseményt itt.
-  signup_name_label: Név
-  signup_email_label: E-mail
-  signup_organization_name_label: Iskola vagy szervezet neve
-  signup_event_type_label: Esemény típusa
-  signup_event_entire_school_label: Az egész iskolám részt vesz
-  signup_event_location_label: Esemény helyszíne (nem kötelező)
-  signup_special_event_flag_label: Emeld ki a különleges eseményem
-  signup_special_event_details_label: Különleges esemény részletei
+  anybody_can_learn: "Bárki megtanulhatja."
+  register_now: "Regisztrálj most"
+  front_join_us_heading: "Minden diáknak legyen egy Kódolás Órája."
+  front_join_us_description: "Az informatika megismerése alapszükséglet minden diák számára. Segíts hogy legalább 100 millióan hozzájussanak."
+  front_join_us_button: "Csatlakozz"
+  front_what_is_hoc: "Mi a Hour of Code?"
+  front_join_us_header: "Bárki megtanulhatja az alapokat, és élvezheti csinálni!"
+  front_join_us_header_uk: "December 8. és 14. között szervezz egy Hour of Code rendezvényt, és mutasd meg hogy bárki játszva megtanulhatja az alapokat!"
+  front_join_us_teacher: "Tanár vagy?"
+  front_join_us_inspire: "Inspiráld a diákjaidat"
+  front_join_us_inspire_link: "egy Kódolás Órával."
+  front_join_us_parent: "Szülő vagy?"
+  front_join_us_ask_link: "Kérd meg a helyi iskola vezetőit"
+  front_join_us_ask: "hogy tartsanak egy Hour of Code rendezvényt."
+  front_join_us_computer_science: "Egyszerűen csak szereted a számítástechnikát?"
+  front_join_us_spread: "Terjeszd az igét."
+  front_join_us_organize: "Vagy szervezz egy Kódolás Óráját Te magad!"
+  front_join_us_how_to_run: "Itt található a Hour of Code óra megtartásához szükséges információ"
+  front_join_us_help_promote: "Segíts népszerűsíteni a Hour of Code-ot"
+  front_join_us_students: "Diákok"
+  front_join_us_teachers: "Tanárok"
+  front_join_us_everyone: "Mindenki"
+  front_join_us_try: "Próbáld ki"
+  front_join_us_host: "Legyél a házigazda"
+  front_join_us_support: "Támogasd"
+  signup_header: "Szervezz egy Kódolás Órája eseményt december 8. és 14. között, és regisztráld be az eseményt itt."
+  signup_name_label: "Név"
+  signup_email_label: "E-mail"
+  signup_organization_name_label: "Iskola vagy szervezet neve"
+  signup_event_type_label: "Esemény típusa"
+  signup_event_entire_school_label: "Az egész iskolám részt vesz"
+  signup_event_location_label: "Esemény helyszíne (nem kötelező)"
+  signup_special_event_flag_label: "Emeld ki a különleges eseményem"
+  signup_special_event_details_label: "Különleges esemény részletei"
   signup_send_posters_flag_label: 'Küldjenek <a href= "/resources#posters">posztert</a> az iskolámnak vagy szervezetemnek'
-  signup_send_posters_address_label: Iskola vagy szervezet címe
-  signup_whole_school_flag_label: Ez az esemény az egész iskolának szól
-  signup_your_event: Feliratkozás az eseményre
-  signup_name_placeholder: Neved
-  signup_email_placeholder: nev@pelda.hu
-  signup_organization_name_placeholder: Például Kossuth Szakközépiskola
+  signup_send_posters_address_label: "Iskola vagy szervezet címe"
+  signup_whole_school_flag_label: "Ez az esemény az egész iskolának szól"
+  signup_your_event: "Feliratkozás az eseményre"
+  signup_name_placeholder: "Neved"
+  signup_email_placeholder: "nev@pelda.hu"
+  signup_organization_name_placeholder: "Például Kossuth Szakközépiskola"
   signup_event_location_placeholder: "Irányítószám és ország vagy teljes cím.\r\n(Ennek a segítségével tudjuk bejelölni a térképen)"
-  signup_special_event_details_placeholder: Írd le, hogy mitől különleges ez az esemény
-  signup_send_posters_address_placeholder: Ez a cím nem jelenik meg a térképen
-  signup_event_type_in_school: Iskolában
-  signup_event_type_out_of_school: Iskolán kívül
-  signup_submit_label: Jelentkezz
-  signup_submit_error_message: Hiba történt. Kérlek ellenőrizd, hogy minden szükséges mezőt megfelelően töltöttél-e ki.
-  signup_thank_you_header: Köszönjük, hogy jelentkeztél egy Kódolás Órája esemény megtartására.
-  signup_thank_you_message: Küldtünk egy megerősítő e-mailt, amiben segítséget kapsz az induláshoz is.
+  signup_special_event_details_placeholder: "Írd le, hogy mitől különleges ez az esemény"
+  signup_send_posters_address_placeholder: "Ez a cím nem jelenik meg a térképen"
+  signup_event_type_in_school: "Iskolában"
+  signup_event_type_out_of_school: "Iskolán kívül"
+  signup_submit_label: "Jelentkezz"
+  signup_submit_error_message: "Hiba történt. Kérlek ellenőrizd, hogy minden szükséges mezőt megfelelően töltöttél-e ki."
+  signup_thank_you_header: "Köszönjük, hogy jelentkeztél egy Kódolás Órája esemény megtartására."
+  signup_thank_you_message: "Küldtünk egy megerősítő e-mailt, amiben segítséget kapsz az induláshoz is."
   map_header: '# Kódolás Órája esemény szerte a nagyvilágban'
   map_header_company: '# cégek szervezésében'
-  map_search_placeholder: Kódolás órája események keresése
-  map_search_search: Keresés
-  map_search_reset: Visszaállít
-  meta_tag_og_title: A kódolás órája elérkezett
+  map_search_placeholder: "Kódolás órája események keresése"
+  map_search_search: "Keresés"
+  map_search_reset: "Visszaállít"
+  meta_tag_og_title: "A kódolás órája elérkezett"
   meta_tag_og_description: |
     A Kódolás Órája egy több mint 30 nyelven zajló, 180+ országban diákok tízmillióit elérő globális mozgalom. 
     4-től 104 éves korig.
-  meta_tag_twitter_title: A kódolás órája elérkezett
+  meta_tag_twitter_title: "A kódolás órája elérkezett"
   meta_tag_twitter_description: |
     A Kódolás Órája egy több mint 30 nyelven zajló, 180+ országban diákok tízmillióit elérő globális mozgalom. 
     4-től 104 éves korig.
   twitter_default_text: 'Én részt veszek az idei #HourOfCode eseményen. És Te? @codeorg'
-  hardware_prizes_form_name_label: Név
-  hardware_prizes_form_name_placeholder: Név
-  hardware_prizes_form_email_label: E-mail
-  hardware_prizes_form_email_placeholder: E-mail
-  hardware_prizes_form_school_name_label: Iskola neve
-  hardware_prizes_form_school_name_placeholder: Iskola neve
-  hardware_prizes_form_school_address_label: Iskola címe
-  hardware_prizes_form_school_address_placeholder: Iskola címe
-  hardware_prizes_form_school_type_label: Iskola típusa
-  hardware_prizes_form_school_type_option_elementary: Alsó tagozat
-  hardware_prizes_form_school_type_option_middle_school: Felső tagozat
-  hardware_prizes_form_school_type_option_high_school: Középiskola
-  hardware_prizes_form_qualifying_school_label: Ez egy K-12-es amerikai állami iskola
-  hardware_prizes_form_number_students_label: Résztvevő diákok száma
-  hardware_prizes_form_number_students_placeholder: Diákok száma
-  hardware_prizes_form_plan_file_label: Töltsd fel a Kódolás Órája logisztikai terved
+  hardware_prizes_form_name_label: "Név"
+  hardware_prizes_form_name_placeholder: "Név"
+  hardware_prizes_form_email_label: "E-mail"
+  hardware_prizes_form_email_placeholder: "E-mail"
+  hardware_prizes_form_school_name_label: "Iskola neve"
+  hardware_prizes_form_school_name_placeholder: "Iskola neve"
+  hardware_prizes_form_school_address_label: "Iskola címe"
+  hardware_prizes_form_school_address_placeholder: "Iskola címe"
+  hardware_prizes_form_school_type_label: "Iskola típusa"
+  hardware_prizes_form_school_type_option_elementary: "Alsó tagozat"
+  hardware_prizes_form_school_type_option_middle_school: "Felső tagozat"
+  hardware_prizes_form_school_type_option_high_school: "Középiskola"
+  hardware_prizes_form_qualifying_school_label: "Ez egy K-12-es amerikai állami iskola"
+  hardware_prizes_form_number_students_label: "Résztvevő diákok száma"
+  hardware_prizes_form_number_students_placeholder: "Diákok száma"
+  hardware_prizes_form_plan_file_label: "Töltsd fel a Kódolás Órája logisztikai terved"
   hardware_prizes_form_plan_file_description: 'Küldj be egy egyszerű tervezetet arról, hogy miként vehetnek majd részt a diákok a Kódolás Órája eseményen. Nézd meg a minta tervet: #PDF# | #Word#'
-  hardware_prizes_form_submit_label: Beküldés
-  hoc_faq_title: GYIK
-  hoc_faq_what_is_hoc_q: Mi a Hour of Code?
+  hardware_prizes_form_submit_label: "Beküldés"
+  hoc_faq_title: "GYIK"
+  hoc_faq_what_is_hoc_q: "Mi a Hour of Code?"
   hoc_faq_what_is_hoc_a: "A Kódolás Órája egy egy órás bevezetés a számítástudomány alapjaiba, célja, hogy eloszlassa a kód homályát, és megmutassa, hogy bárki megtanulhatja az alapokat.  <a href='http://code.org/learn'>Próbáld ki az oktatóanyagokat</a>."
-  hoc_faq_last_year: Próbáld ki az oktatóanyagokat
-  hoc_faq_when_is_hoc_q: Mikor lesz a Kódolás órája?
+  hoc_faq_last_year: "Próbáld ki az oktatóanyagokat"
+  hoc_faq_when_is_hoc_q: "Mikor lesz a Kódolás órája?"
   hoc_faq_when_is_hoc_a: "Bárki bármikor szervezhet Kódolás Órája eseményt, de a központi kampány célja, hogy december 8. és 14. között diákok tízmilliói próbálják ki a Kódolás Óráját, ünnepelve a  <a href='http://csedweek.org'>Számítástechnika Oktatás Hetét</a> (amerikai kezdeményezés). Ez egy konkrét <i>órában</i> van? Nem. A hét során bármikor megtarthatod az eseményt. (Ha nem tudod az adott héten megtartani, akkor tartsd meg egy héttel előtte vagy utána.)"
-  hoc_faq_why_cs_q: Miért számítástechnika?
+  hoc_faq_why_cs_q: "Miért számítástechnika?"
   hoc_faq_why_cs_a: "<i>Minden</i> diáknak meg kellene kapnia a lehetőséget, hogy számítástechnikát tanuljon. Segít a problémamegoldó képesség, a logika és a kreativitás fejlesztésében. A korai kezdéssel a diákok olyan tudáshoz jutnak, ami bármilyen 21. századi karrierpályán biztosítja a siker alapjait. További statisztikák a <a href='http://code.org'>Code.org</a> oldalon."
-  hoc_faq_how_participate_q: Hogyan vehetek részt a Kódolás Órája eseményen?
+  hoc_faq_how_participate_q: "Hogyan vehetek részt a Kódolás Órája eseményen?"
   hoc_faq_how_participate_a: "Jelentkezz <a href='http://hourofcode.org'>itt</a> egy Kódolás Órája esemény szervezésére, és <a href='target-resources-how-to'>kezdd el a tervezést</a>. A Kódolás Óráját megtarthatod az iskolában vagy egy közösségben &mdash; mondjuk szakkörként vagy non-profit tevékenységként a munkahelyeden. Vagy csak próbáld ki december 8-án."
-  hoc_faq_behind_hoc_q: Ki áll a Kódolás Órája mögött?
+  hoc_faq_behind_hoc_q: "Ki áll a Kódolás Órája mögött?"
   hoc_faq_behind_hoc_a: "A Kódolás Órája szervezője a <a href='http://code.org'>Code.org</a>, egy nyilvános (501c3) non-profit szervezet. A Code.org célja, hogy a számítástechnikát több iskolában elérhetővé téve segítsen a használatának terjedésében, miközben növeli a nők és az alulreprezentált kisebbségek részvételét. A Kódolás Órája projekt támogatására egy <a href='http://code.org/about/partners'>példanélküli együttműködés</a> alakult ki olyan résztvevőkkel, mint a Microsoft, az Apple, az Amazon, a Boys and Girls Clubs of America és a College Board."
-  hoc_faq_host_q: Nem tudok semmit a kódolásról. Így is szervezhetek eseményt?
+  hoc_faq_host_q: "Nem tudok semmit a kódolásról. Így is szervezhetek eseményt?"
   hoc_faq_host_a: "Természetesen. A Kódolás Órája tevékenységek önállóan is végezhetők. Mindössze annyi teendőd van, hogy <a href='http://code.org/learn'>kipróbálja az aktuális oktatóanyagokat</a>, kiválasztod a neked tetsző anyagot és kijelölöd az időpontot &mdash; minden mást mi intézünk. Óvodától felfelé minden korra és tudásszintre van megrelelő anyagunk. Kezdj hozzá a tervezésnek az <a href='target-resources-how-to'>útmutató</a> elolvasásával."
-  hoc_faq_need_computers_q: Minden résztvevőnek szüksége lesz számítógépre?
+  hoc_faq_need_computers_q: "Minden résztvevőnek szüksége lesz számítógépre?"
   hoc_faq_need_computers_a: "Nem. Az oktatóanyagok között van olyan, ami számítógépen, telefonon vagy táblagépen működik, de akad olyan is, amihez egyáltalán nincs szükség számítógépre. Csatlakozhatsz bárhonnan bármilyen eszközzel.<p><i>Íme néhány opció:</i><br><ul><li><b>Dolgozzatok párokban.</b>Kutatások azt mutatják, hogy a diákok úgy tanulnak a legjobban, ha <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>párokban programoznak</a>, megosztják a számítógépet és együtt dolgoznak.<li><b>Használj kivetítőt</b> Ha van egy projektorod, amire egy internetre kötött számítógép képét ki tudod vetíteni, akkor a Kódolás Óráját egy egész csoport is együtt tudja csinálni. Nézzétek megy együtt a videókat és felváltva próbálják meg a gyerekek megoldani a problémákat vagy megválaszolni a kérdéseket.<li><b>Tedd el a gépet</b> Olyan anyagokat is kínálunk, amelyekhez egyáltalán nincs szükség számítógépre.</ul>"
   hoc_faq_international_q: 'Lakhelyem <country>. Hogyan vehetek részt nemzetközileg?'
   hoc_faq_international_a: "Bárki, bárhol a világon szervezhet Kódolás Órája eseményt. Tavaly a diákok a világ minden pontjáról csatlakoztak a Kódolás Órája eseményhez. Tudj meg többet erről <a href='target-resources'>itt</a>."
-  hoc_faq_tutorial_q: Hogyan készítsek Kódolás Órája oktatóanyagot?
+  hoc_faq_tutorial_q: "Hogyan készítsek Kódolás Órája oktatóanyagot?"
   hoc_faq_tutorial_a: "Ha szeretnél partner lenni az oktatóanyagok kialakításában, akkor <a href='target-tutorial-guidelines'>nézd meg az útmutatóinkat</a>. Szeretnénk egy sor vonzó lehetőséget kínálni, de az elsődleges cél, hogy a számítástechnikával most ismerkedő diákok és tanárok számára optimalizáljuk a rendszert."
-  hoc_faq_more_questions_q: További kérdéseid vannak?
+  hoc_faq_more_questions_q: "További kérdéseid vannak?"
   hoc_faq_more_questions_a: "Nézz körül a <a href='http://support.code.org'>fórumban</a>, hátha megtalálod a kérdéseire a válaszokat."
-  hoc_faq_scratch_q: A Scratchet használom a Kódolás óráján, de mi van, ha a diákjaimnak iPadjük van, és nem laptopjuk?
+  hoc_faq_scratch_q: "A Scratchet használom a Kódolás óráján, de mi van, ha a diákjaimnak iPadjük van, és nem laptopjuk?"
   hoc_faq_scratch_a: "A Scratch nem fut tableteken. Ha a diákjaid fiatalok, akkor használhatják a ScratchJR iPad alkalmazást (kezdő olvasóknak szánt verzió). A <a href='http://code.org/learn'>Code.org/tanulás</a> címen található oktatóanyagok között találhatsz olyanokat, amelyek működnek iPaden is - például a Code.org, Tynker, Lightbot vagy a CodeSpark."
-  hoc_faq_account_q: Be kell jelentkezniük a diákoknak egy fiókkal?
+  hoc_faq_account_q: "Be kell jelentkezniük a diákoknak egy fiókkal?"
   hoc_faq_account_a: "Nem. Semmiféle feliratkozás vagy bejelentkezés nem szükséges a Kódolás órájának kipróbálásához. A <a href='http://code.org/learn/beyond'>kiegészítő tanfolyamok</a> használatához azonban szükgéses a fiók létrehozása a tanuló előrehaladásának elmentéséhez."
-  hoc_faq_frozen_q: Hol van az Annaval és Elsaval készült oktatóanyag?
+  hoc_faq_frozen_q: "Hol van az Annaval és Elsaval készült oktatóanyag?"
   hoc_faq_frozen_a: "Mostantól a <a href='http://code.org/learn'>Code.org/tanulás</a> oldalon található meg. Reméljük élvezni fogod!"
-  hoc_faq_high_school_q: Mely gyakorlatokat mutassam meg középiskolás diákoknak?
+  hoc_faq_high_school_q: "Mely gyakorlatokat mutassam meg középiskolás diákoknak?"
   hoc_faq_high_school_a: "Kezdésképp minden korosztálynak a <a href='http://code.org/learn'>Code.org/tanulás</a> oldalon található bevezető oktatóanyagokat ajánljuk, mint például az Angry Birds vagy az Anna és Elsa. Egy középiskolás diák ezek egyikével 30 perc alatt végez, ezek után továbbléphet a bonyolultabb JavaScript tanfolyamokra, mint a KhanAcademy vagy a CodeHS."
-  hoc_faq_more_questions_br_q: Outras dúvidas?
+  hoc_faq_more_questions_br_q: "Outras dúvidas?"
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
   hoc_faq_when_is_hoc_uk_a: "The Hour of Code will take place during December 8-14, 2014. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. The Hour of Code in the UK will happen at the same time as in the US where it is timed to celebrate the annual <a href='http://csedweek.org'>Computer Science Education Week.</a>"
@@ -158,47 +158,47 @@ hu:
   hoc_faq_behind_hoc_uk_a: "The Hour of Code is organised by <a href='http://uk.code.org'>Code.org</a>, a public 501c3 non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. An <a href='http://uk.code.org/about/partners'>unprecedented coalition of partners</a> have come together to support the Hour of Code, too &mdash; including Microsoft, Google, Cambridge University Press, Tech City and The Department of Education."
   hoc_faq_host_uk_a: "Of course. Hour of Code activities are self-guided. All you have to do is pick the tutorial you want and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. <a href='http://uk.code.org/learn'>Try our current tutorials</a>."
   stats_hoc_2013_heading: 'Hihetetlen számok a tavalyi Kódolás Órája eseményről. Egyetlen egy hét alatt:'
-  stats_hoc_2013_image_alt: A 2013-as Kódolás Órája statisztikája
-  stats_growth: 15 millió felhasználó elérése a legrövidebb idő alatt.
+  stats_hoc_2013_image_alt: "A 2013-as Kódolás Órája statisztikája"
+  stats_growth: "15 millió felhasználó elérése a legrövidebb idő alatt."
   stats_tumblr: 'Tumblr: 3,5 év'
   stats_facebook: 'Facebook: 3 év'
   stats_twitter: 'Twitter: 2,5 év'
   stats_pinterest: 'Pinterest: 2 év'
   stats_instagram: 'Instagram: 14 hónap'
   stats_hoc: 'A Kódolás Órája: 5 nap'
-  stats_global: Világszinten 15 millió diák tanult a Kódolás Órája keretében.
-  stats_girls_more: Több lány ismerkedett meg a számítástechnikával, mint az elmúlt 70 évben.
-  stats_girls_million: 2013-ban több, mint 10 millió lány
+  stats_global: "Világszinten 15 millió diák tanult a Kódolás Órája keretében."
+  stats_girls_more: "Több lány ismerkedett meg a számítástechnikával, mint az elmúlt 70 évben."
+  stats_girls_million: "2013-ban több, mint 10 millió lány"
   stats_nina: '„Minden egyes napo ugyanazzal az eredménnyel&mdash; 100%-os elkötelezettség.” - Nina Nichols Peery, tanár'
   stats_student: '„Tudtam, hogy ez egy <b>egyszeri</b> lehetőség.” - Mariana Alzate, 5. osztályos'
   stats_michael: '„<b>Soha életemben</b> nem láttam még a diákjaimat ennyire izgatottnak tanulás közben.” - Michael Clark, tanár'
-  resources_how_to: Útmutató tanároknak
-  resources_how_to_events: Esemény útmutatója
-  resources_how_to_districts: Útmutató kerületeknek
-  resources_how_to_officials: Útmutató köztisztviselőknek
-  resources_handouts: Jegyzetek a népszerűsítéshez
-  resources_videos: Videók
-  resources_posters: Poszterek
-  resources_social: Közmédia
-  resources_banners: Bannerek
-  resources_emails: Minta e-mailek
-  resources_stats: Hasznos statisztikák és érdekességek
-  resources_press_kit: Sajtóanyag
-  events_title: Minden Hour of Code esemény
-  events_nav_all: Minden esemény
-  events_nav_whole_schools: Minden iskola
-  events_nav_special: Különleges események
-  events_nav_orgs: Szervezetek
-  events_all_title: Az összes Hour of Code esemény
-  events_whole_school_title: Össziskolai Hour of Code események
-  events_special_title: Speciális Hour of Code rendezvények
-  events_orgs_title: A partner szervezetek által szervezett összes Kódolás Órája esemény
-  event: esemény
-  events: események
-  footer_copyright_message: Copyright 2014 Code.org. Minden jog fenntartva.
-  footer_trademark_message: Hour of Code™ a Code.org bejegyzett védjegye.
-  footer_menu_partners: Partnerek
-  footer_menu_contact: Lépj velünk kapcsolatba
-  footer_menu_support: Támogatás
-  footer_menu_terms: Fetételek
-  footer_menu_privacy: Adatvédelmi irányelvek
+  resources_how_to: "Útmutató tanároknak"
+  resources_how_to_events: "Esemény útmutatója"
+  resources_how_to_districts: "Útmutató kerületeknek"
+  resources_how_to_officials: "Útmutató köztisztviselőknek"
+  resources_handouts: "Jegyzetek a népszerűsítéshez"
+  resources_videos: "Videók"
+  resources_posters: "Poszterek"
+  resources_social: "Közmédia"
+  resources_banners: "Bannerek"
+  resources_emails: "Minta e-mailek"
+  resources_stats: "Hasznos statisztikák és érdekességek"
+  resources_press_kit: "Sajtóanyag"
+  events_title: "Minden Hour of Code esemény"
+  events_nav_all: "Minden esemény"
+  events_nav_whole_schools: "Minden iskola"
+  events_nav_special: "Különleges események"
+  events_nav_orgs: "Szervezetek"
+  events_all_title: "Az összes Hour of Code esemény"
+  events_whole_school_title: "Össziskolai Hour of Code események"
+  events_special_title: "Speciális Hour of Code rendezvények"
+  events_orgs_title: "A partner szervezetek által szervezett összes Kódolás Órája esemény"
+  event: "esemény"
+  events: "események"
+  footer_copyright_message: "Copyright 2014 Code.org. Minden jog fenntartva."
+  footer_trademark_message: "Hour of Code™ a Code.org bejegyzett védjegye."
+  footer_menu_partners: "Partnerek"
+  footer_menu_contact: "Lépj velünk kapcsolatba"
+  footer_menu_support: "Támogatás"
+  footer_menu_terms: "Fetételek"
+  footer_menu_privacy: "Adatvédelmi irányelvek"

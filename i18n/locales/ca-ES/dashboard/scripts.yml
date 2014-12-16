@@ -16,7 +16,7 @@ ca:
           "Maze: Debugging": 'Laberint: Depuració'
           "Artist 1: Intro": 'Artista 1: introducció'
           Artists 2: Artistes 2
-          Spelling Bee: Spelling Bee
+          Spelling Bee: Abella ortogràfica
           Spelling Bee not blockly: Spelling Bee not blockly
           "Bee 1: Intro": 'Abella 1: introducció'
           "Maze 2: Loops": 'Laberint 2: bucles'
@@ -26,10 +26,10 @@ ca:
           Flappy non blockly: Flappy non blockly
           title: Curs 1
           Artist 2: Artista 2
-          Happy Maps: Happy Maps
-          Move it, Move it: Move it, Move it
+          Happy Maps: Mapes feliços
+          Move it, Move it: Mou-te, mou-te
           "Real-life Algorithms: Plant a Seed": 'Algoritmes reals: Planta una llavor'
-          Building a Foundation: Building a Foundation
+          Building a Foundation: Posant les bases
           Getting Loopy: Fent bucles
           The Big Event: El gran esdeveniment
           Going Places Safely: Anant a llocs segurs
@@ -42,13 +42,13 @@ ca:
           "Studio: Create a Story": 'Play Lab: Crea una història'
           "Artist: Loops": 'Artista: bucles'
           description_audience: Edat 4 + (pre-lectors)
-          description_short: Course 1 is designed for early readers.
+          description_short: El curs 1 està dissenyat per a primers lectors.
         course2:
           The Maze: El Laberint
           Suzi: Suzi
           The Artist: "L'artista"
           Artist Debugging: "Artista: Correcció d'errors"
-          Bounce: Bota
+          Bounce: Rebota
           "Studio: Create a Story": 'Play Lab: Crea una història'
           Artist Loops: 'Artista: bucles'
           Bee Conditionals: 'Abella: Condicionals'
@@ -67,7 +67,7 @@ ca:
           Conditionals: Condicionals
           Binary Bracelets: Polseres binàries
           The Big Event: El gran esdeveniment
-          Your Digital Footprint: Your Digital Footprint
+          Your Digital Footprint: La vostra empremta digital
           description: El Curs 2 està dissenyat per a alumnes que saben llegir i no tenen experiència prèvia en programació. En aquest curs els alumnes crearan programes per resoldre problemes i desenvoluparan jocs interactius o històries que poden compartir. Recomanat per educació primària.
           "Maze: Sequence": 'Laberint: seqüència'
           "Artist: Sequence": 'Artista: seqüència'
@@ -80,7 +80,7 @@ ca:
           "Artist: Sequence2": 'Artista: seqüència2'
           "Maze: Sequence2": 'Laberint: seqüència2'
           "Artist: Nested Loops": 'Artista: bucles imbricats'
-          description_audience: 'Ages  6+ (reading required)'
+          description_audience: Edat +6 (es requereix lectura)
           description_short: El Curs 2 està dissenyat per alumnes que saben llegir.
         course3:
           The Maze: El Laberint
@@ -96,17 +96,17 @@ ca:
           Bee Debugging: "Abella: Correcció d'errors"
           Bee Functions: 'Abella: funcions'
           Artist Functions with Params: 'Artista: funcions amb paràmetres'
-          Bounce: Bota
+          Bounce: Rebota
           Maze Conditionals: 'Laberint: els condicionals'
           Artist Functions with Parameters: 'Artista: Funcions amb paràmetres'
           Computational Thinking: Pensament computacional
           Functional Suncatchers: Functional Suncatchers
-          Songwriting Parameters: Songwriting Parameters
+          Songwriting Parameters: Paràmetres de composició musical
           Dice Race: Cursa de daus
           Internet: Internet
           Crowdsourcing: Col·laboració oberta
           Digital Citizenship: Ciutadania digital
-          Farmer - While Loops: 'Farmer - While Loops'
+          Farmer - While Loops: 'Pagesa - bucles mentre'
           description: El Curs 3 està dissenyat per alumnes que ja han fet el Curs 2. Els alumnes aprofundiran en els temes de programació introduïts en els cursos anteriors cap a solucions flexibles i problemes més complexos. Al final del curs, els alumnes creen històries interactives i jocs que poden compartir amb tothom. Recomanat per cicle superior de primària.
           "Studio: Create a Game": 'Play Lab: Creeu un joc'
           Maze: Laberint
@@ -116,7 +116,7 @@ ca:
           "Bee: Conditionals": 'Abella: Condicionals'
           "Maze: Conditionals": 'Laberint: els condicionals'
           "Artist: Nested Loops": 'Artista: bucles imbricats'
-          "Farmer: While Loops": 'Farmer: While Loops'
+          "Farmer: While Loops": 'Pagesa - bucles mentre'
           "Bee: Nested Loops": 'Abella: bucles imbricats'
           "Bee: Debugging": "Abella: Correcció d'errors"
           Maze2: Laberint2
@@ -126,11 +126,11 @@ ca:
           "Bee: Conditionals2": 'Abella: Condicionals2'
           "Maze: Conditionals2": 'Laberint: els condicionals2'
           "Artist: Nested Loops2": 'Artista: bucles imbricats2'
-          "Farmer: While Loops2": 'Farmer: While Loops2'
+          "Farmer: While Loops2": 'Pagesa - bucles mentre2'
           "Bee: Nested Loops2": 'Abella: bucles imbricats2'
           "Bee: Debugging2": "Abella: Correcció d'errors2"
           "Artist: Patterns": 'Artista: patrons'
-          Songwriting: Composició
+          Songwriting: Composició de cançons
           description_audience: Edats 8 + (continuació del Curs 2)
           description_short: El Curs 3 és una continuació del Curs 2.
         msm:
@@ -161,15 +161,15 @@ ca:
           Collision Detection and the Distance Formula: Collision Detection and the Distance Formula
           "Play Lab: Collision Detection": 'Play Lab: Detecció de col·lisió'
           "Unplugged: Ninja Cat and the Coordinate Plane": 'Unplugged: Ninja Cat and the Coordinate Plane'
-          "Eval: Strings and Images": 'Eval: Strings and Images'
+          "Eval: Strings and Images": 'Eval: Cadenes i imatges'
           "Unplugged: Contracts": 'Unplugged: Contracts'
           "Eval: Writing Contracts": 'Eval: Writing Contracts'
-          "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
-          "Eval: Defining Functions": 'Eval: Fast Functions'
+          "Unplugged: The Design Recipe": 'Sense connexió: la recepta de disseny'
+          "Eval: Defining Functions": 'Eval: Funcions ràpides'
           "Eval: Functions": 'Eval: Design Recipe'
           "Unplugged: Booleans": 'Sense connexió: Veritat o fals'
-          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
-          "Eval: Conditionals": 'Eval: Conditionals'
+          "Unplugged: Conditionals and Piecewise Functions": 'Sense connexió: Condicionals i funcions definides a trossos'
+          "Eval: Conditionals": 'Eval: Condicionals'
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
           "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
           "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
@@ -179,7 +179,7 @@ ca:
           "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
           "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Big Game)'
           "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
-          "Eval: Fast Functions": 'Eval: Fast Functions'
+          "Eval: Fast Functions": 'Eval: Funcions ràpides'
           "Play Lab: Design Recipe": 'Play Lab: Design Recipe'
           "Eval: Design Recipe": 'Eval: Design Recipe'
         playlab:
@@ -225,8 +225,8 @@ ca:
           "Unplugged: Tangrams": 'Sense connexió: Tangrams'
           Artist: Artista
           Bee: Abella
-          "Unplugged: Envelope Variables": 'Unplugged: Envelope Variables'
-          "Unplugged: Madlibs": 'Unplugged: Madlibs'
+          "Unplugged: Envelope Variables": 'Sense connexió: Sobres de variables'
+          "Unplugged: Madlibs": 'Sense connexió: Madlibs'
           "Unplugged: For Loop Fun": 'Sense connexió: Diversió amb bucles'
           "Unplugged: Songwriting with Parameters": 'Sense connexió: Composició musical amb paràmetres'
           "Artist: Functions with Parameters": 'Artista: Funcions amb paràmetres'
@@ -244,7 +244,7 @@ ca:
           "Artist: Loops": 'Artista: bucles'
           "Bee: Conditionals": 'Abella: Condicionals'
           "Artist: Nested Loops": 'Artista: bucles imbricats'
-          "Farmer: While Loops": 'Farmer: While Loops'
+          "Farmer: While Loops": 'Pagesa - bucles mentre'
           "Bee: Nested Loops": 'Abella: bucles imbricats'
           "Artist: Functions": 'Artista: Funcions'
           "Bee: Debugging": "Abella: Correcció d'errors"
@@ -256,7 +256,7 @@ ca:
           "Artist: Loops": 'Artista: bucles'
           "Bee: Conditionals": 'Abella: Condicionals'
           "Artist: Nested Loops": 'Artista: bucles imbricats'
-          "Farmer: While Loops": 'Farmer: While Loops'
+          "Farmer: While Loops": 'Pagesa - bucles mentre'
           "Bee: Nested Loops": 'Abella: bucles imbricats'
           "Artist: Functions": 'Artista: Funcions'
           "Bee: Debugging": "Abella: Correcció d'errors"
@@ -268,7 +268,7 @@ ca:
           "Artist: Loops": 'Artista: bucles'
           "Bee: Conditionals": 'Abella: Condicionals'
           "Artist: Nested Loops": 'Artista: bucles imbricats'
-          "Farmer: While Loops": 'Farmer: While Loops'
+          "Farmer: While Loops": 'Pagesa - bucles mentre'
           "Bee: Nested Loops": 'Abella: bucles imbricats'
           "Artist: Functions": 'Artista: Funcions'
           "Bee: Debugging": "Abella: Correcció d'errors"

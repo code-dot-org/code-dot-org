@@ -11109,23 +11109,23 @@ exports.end = function(d){return "پایان"};
 
 exports.emptyBlocksErrorMsg = function(d){return "بلوک های \"تکرار\" (Repeat) یا \"شرطی\" (If)  برای کار کردن، نیاز به بلوکهای دیگری در داخل خود دارند. مطمئن شوید که بلوک داخلی، به درستی درون بلوک اصلی قرار گرفته است."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "بلوک تابع برای به کار افتادن نیاز دارد، که بلوک های دیگری در داخل خود داشته باشد."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "بلوک تابع برای به کار افتادن نیاز به بلوک های دیگری در داخل خود دارد."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "باید بلوک هایی در تعریف تابع تو باشد. روی اصلاح کلیک کن و بلوک هایی را به داخل بلوک سبز بکش."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "روی اصلاح کلیک کن تا مطمئن بشوی هیچ بلوکی را داخل تعریف تابعت کم نگذاشته ایی."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "مطمئن شو که در بلوک تابع در فضای کاری،‌ به هر پارامتر ورودی یک بلوک چسبانده باشی."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "تو یک بلوک پارامتر اضافه کردی اما از آن در تعریف استفاده نکردی. با کلیک کردن اصلاح و قرار دادن بلوک پارامتر داخل بلوک سبز مطمئن شو که از پارامترت استفاده کرده ایی."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "بر روی \"ویرایش\" کلیک کرده و پارامترهای لازم را ایجاد کنید. بلوک های پارامتر جدید را به تابع خود اضافه کنید."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "شما یک تابع ساخته اید، اما هرگز آن را در فضای کاری خود استفاده نکردید! روی \"توابع\" در جعبه ابزار کلیک کنید و از آن در برنامه خود استفاده کنید."};
 
 exports.errorQuestionMarksInNumberField = function(d){return "سعی کنید به جای \"؟؟؟\" یک مقدار قرار دهید ."};
 
-exports.extraTopBlocks = function(d){return "بلوک‌های نچسبیده‌ای هنوز باقی مونده. آیا قصد داری اینها را به بلوک \"هنگام اجرا\" وصل کنی؟"};
+exports.extraTopBlocks = function(d){return "بلوک‌های نچسبیده‌ای هنوز باقی مانده است. آیا قصد دارید اینها را به بلوک \"هنگام اجرا\" وصل کنید؟"};
 
 exports.finalStage = function(d){return "تبریک می‌گوییم! شما مرحله‌ی نهایی را به پایان رساندید."};
 
@@ -11149,7 +11149,7 @@ exports.listVariable = function(d){return "فهرست"};
 
 exports.makeYourOwnFlappy = function(d){return "Flappy Bird خودتان را بسازید"};
 
-exports.missingBlocksErrorMsg = function(d){return "برای حل این معما، یکی یا چند تا از بلوک‌های زیر را بکار ببرید."};
+exports.missingBlocksErrorMsg = function(d){return "برای حل این معما، یک یا چند تا از بلوک‌های زیر را بکار ببرید."};
 
 exports.nextLevel = function(d){return "تبریک ! شما پازل "+v(d,"puzzleNumber")+" را به پایان رساندید."};
 

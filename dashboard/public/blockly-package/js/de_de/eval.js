@@ -14575,7 +14575,7 @@ exports.squareBlockTitle = function(d){return "Quadrat (Größe, Stil, Farbe)"};
 
 exports.starBlockTitle = function(d){return "Stern (Radius, Stil, Farbe)"};
 
-exports.radialStarBlockTitle = function(d){return "radial-star (points, inner, outer, style, color)"};
+exports.radialStarBlockTitle = function(d){return "Radial-Star (Punkte, innere, äußere, Stil, Farbe)"};
 
 exports.stringAppendBlockTitle = function(d){return "String anhängen (erster, zweiter)"};
 

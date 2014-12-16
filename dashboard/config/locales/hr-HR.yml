@@ -10,7 +10,7 @@
         username: Korisničko ime
         password: Lozinka
         password_confirmation: Potvrda lozinke
-        current_password: Trenutna zaporka
+        current_password: Trenutna lozinka
         locale: Jezik
         age: Godine starosti
         gender: Spol
@@ -22,7 +22,7 @@
   add_teacher_form:
     code:
       label: 'Dodajte učitelja:'
-      placeholder: Dio koda (ABCDEF)
+      placeholder: Šifra odjeljenja (ABCDEF)
     submit: Dodaj učitelja
   add_hint_form:
     placeholder: Molimo unesite vaš prijedlog
@@ -53,7 +53,7 @@
     sign_out_of: Koristili ste %{provider} da biste se prijavili. <a href="%{url}">Kliknite
       ovdje</a> da biste se odjavili %{provider}.
     already_signedup: Jesi li već prijavljen?
-    notyet_signedup: Još se nisi pridružio?
+    notyet_signedup: Još se niste pridružili?
     google_oauth2: Google račun
     twitter: Twitter
     facebook: Facebook
@@ -63,8 +63,8 @@
     need_unlock: Nisi primio upute za otključavanje?
   signup_form:
     overview_student: Prijavite se za račun kako biste mogli pratiti svoj napredak.
-      Vaša e-pošta koristi se prvenstveno kako bi vam omogućili prijavu i ponovno
-      dobijanje lozinke. za više informacija pogledajte našu <a href="http://code.org/privacy">Policu
+      Vaša e-pošta koristi se prvenstveno kako bismo vam omogućili prijavu i ponovno
+      dobijanje lozinke. Za više informacija pogledajte naša <a href="http://code.org/privacy">Pravila
       privatnosti</a>.
     overview_teacher: Poučavajte informatiku u svom razredu tako što ćete se prijaviti
       za korisnički račun.<p/>Moći ćete dodati svoje učenike i pratiti njihov napredak.
@@ -87,30 +87,29 @@
     valid_username: Dostupno!
     invalid_username: Korisničko ime mora imati barem 5 znakova
     taken_username: Korisničko ime je već zauzeto
-    valid_password: Valjana lozinka !
+    valid_password: Ispravna lozinka!
     invalid_password: Lozinka mora biti duga najmanje 6 znakova
-    mismatch_password: |
-      Dvije lozinke koje ste unijeli ne podudaraju se
-    student_terms: Slažem se poštivati <a href='http://code.org/tos'> Uvjete korištenja</a>
-      Code.org. Ako sam ispod 13 godina starosti, potvrđujem slanjem ovog obrasca
-      da moj roditelj ili zakonski skrbnik daje dozvolu za korištenje usluga Code.org.
-      <br/>Korisnicima ispod 13 godina starosti, e-mail adrese nisu pohranjene u obliku
-      koji nam omogućuje da ih kontaktiramo.
-    teacher_terms: Slažem se poštivati <a href='http://code.org/tos'> Uvjete korištenja</a>
+    mismatch_password: Dvije lozinke koje ste unijeli ne podudaraju se
+    student_terms: Slažem se poštivati <a href='http://code.org/tos'>uvjete korištenja</a>
+      Code.org. Ako imam manje od 13 godina, potvrđujem slanjem ovog obrasca da moj
+      roditelj ili zakonski skrbnik daje dozvolu za korištenje usluga Code.org. <br/>Korisnicima
+      ispod 13 godina starosti e-mail adrese nisu pohranjene u obliku koji nam omogućuje
+      da ih kontaktiramo.
+    teacher_terms: Pristajem poštivati <a href='http://code.org/tos'>uvjete korištenja</a>
       Code.org.
     additional_information: Trebamo dodatne informacije kako bi nastavili vašu prijavu.
   signin_form:
-    title: Imate već račun? Prijavi se
+    title: Već imate račun? Prijavite se
     login: E-mail ili korisničko ime
     password: Lozinka
     remember: Zapamti me
     submit: Prijava
   signin:
     try_heading: Želite probati kodiranje bez prijave?
-    try_hoc: Isprobaj prvo Sat programiranja
+    try_hoc: Prvo isprobaj Sat programiranja
     try_20hours: Probajte naš 20-satni Uvod u informatiku
   signinsection:
-    welcome: Dobrodošli na %{section_name}
+    welcome: Dobrodošli u %{section_name}
     name: Odaberite svoje ime
     picture: Sada nađite svoju tajnu sliku
     words: Sada unesite vaše tajne riječi
@@ -119,19 +118,19 @@
     reset_form:
       title: Zaboravio si lozinku?
       email: E-mail adresa
-      submit: Pošalji mi upute za poništavanje lozinke
+      submit: Pošalji mi upute za ponovno postavljanje lozinke
     change_form:
-      title: Promijenite svoju lozinku
+      title: Promijeni svoju lozinku
       new_password: Nova lozinka
       confirm_password: Potvrdi novu lozinku
-      submit: Promijeni lozinku
+      submit: Promijeniti lozinku
   welcome_email:
     subject: Pridruži se mom razredu (na Code.org)
-    body: Kliknite na link ispod da se prijavite na informatičke vodiče na Code.org
-      (sa mnom kao vašim "učiteljem"):%{link} vodiči su zabavni, vizualno privlačni,
-      poučavaju osnovnim konceptima informatike koristeći jednostavno, vođeno, iskustvo
-      poput igre. Naučite kodirati uz Bill Gates-a, Mark Zuckerberg,-a Angry Birds
-      i Plants vs Zombies! :-) %{name}
+    body: "Klikni na link ispod da se prijaviš na informatičke tutorijale na Code.org
+      (sa mnom kao vašim \"učiteljem\"):\n%{link} \nTutorijali su zabavni, vizualno
+      privlačni, poučavaju osnovnim informatičkim pojmovima koristeći jednostavno
+      iskustvo poput igre, s puno uputstava. Nauči kodirati dok ti pomažu Bill Gates,
+      Mark Zuckerberg Angry Birds i Plants vs. Zombies! :-) \n%{name}\n"
   follower:
     invite_sent: Pozivnica poslana
     added_teacher: '%{name} dodan kao vaš učitelj'
@@ -142,9 +141,9 @@
       username_in_use: '%{username} se već koristi, izaberite drugo korisničko ime'
       no_teacher: Nije moguće pronaći bilo koga prijavljenog sa '%{teacher_email_or_code}'.
         Molimo zatražite da se prijave ovdje i pokušajte ih ponovo dodati
-      section_not_found: Nije moguće pronaći sekciju s kodom '%{section_code}'.
-      blank_code: Molimo unesite kod sekcije
-      cant_join_own_section: Žao nam je, ne možete se pridružiti svom dijelu.
+      section_not_found: Nije moguće pronaći odjeljenje s kodom '%{section_code}'.
+      blank_code: Molimo unesite šifru odjeljenja
+      cant_join_own_section: Nažalost, ne možete se pridružiti vlastitom odjeljenju.
     mail:
       invite_student:
         subject: Pridruži se razredu kojem je učitelj %{teacher_name} na Code.org!
@@ -198,11 +197,10 @@
       choose_teacher: 'Click on the logo below to claim your prize:'
       earned: Zaslužili ste nagradu! (Samo za američke učenike)
       not_earned_title: Završite tutorijal, zaradite nagrade (samo za američke studente)
-      not_earned: 'Naučite sve informatičke pojmove, prikupite svih %{num_trophies}
-        trofeja i zaradite nagrade u stvarnom svijetu. Možete birati između 10GB slobodnog
-        prostora na Dropboxu, $10 u Skype kreditima ili slobodno preuzimanje igara.
-        Napomena: Ponuda vrijedi samo za američke učenike i vrijedi samo do isteka
-        zaliha.'
+      not_earned: 'Nauči sve informatičke pojmove, prikupi svih %{num_trophies} trofeja
+        i zaradi nagrade u stvarnom svijetu. Možeš birati između 10 GB slobodnog prostora
+        na Dropboxu, $10 u Skype kreditima ili slobodno preuzimanje igara. Napomena:
+        Ponuda vrijedi samo za američke učenike i vrijedi samo do isteka zaliha.'
       teacher:
         earned: 15 ili više učenika sakupilo je svih %{num_trophies} trofeja. Osvojili
           ste nagradu za učitelja! (Samo za američke učitelje)
@@ -264,7 +262,7 @@
       progress: Tvoj napredak
       lines: 'Ukupno linija kôda: %{lines}'
       close: ZATVORI
-      mastery: Koncepti
+      mastery: Pojmovi
       puzzle_map: Faze
       prizes: Prikupi svih %{total_trophies} trofeja i osvoji nagrade!
       prize_earned: Svi %{total_trophies} trofeji su prikupljeni. Nagrada je osvojena!
@@ -279,7 +277,7 @@
       remove: Jeste li sigurni da želite ukloniti ovog učitelja?
     tools: Alati za učitelja
     followers:
-      section: 'Dio:'
+      section: 'Odjeljenje:'
       stages: 'Faze za prikaz:'
       show_past: 'Pokaži dosadašnje aktivnosti učenika (%{bullet_html}):'
       levels_key: Ključ nivoa
@@ -288,7 +286,7 @@
       tried: Pokušano, ali nezavršeno
       not_tried: Još nije pokušano
       activity: Označava učeničke aktivnosti u zadnjih %{hours} %{plural}
-      no_section: Nema dodijeljenog dijela
+      no_section: Nema dodijeljenog odjeljenja
       trophies: Trofeji
     students:
       name: Ime
@@ -299,8 +297,8 @@
       add: Dodavanje učenika
       remove: uklanjanje učenika
       confirm_remove: Jeste li sigurni da želite ukloniti ovog učenika?
-      help_reassign: Da biste podijelili razred u više dijelova, odaberite učenike
-        da im dodijelite novi dio.
+      help_reassign: Da biste podijelili razred u više odjeljenja, odaberite učenike
+        da im dodijelite novo odjeljenje.
       help_register: Umjesto da potrošite puno vremena pojedinačno uvozeći podatke
         o učenicima, možete brzo napraviti svoj razred tako da ih zamolite da se sami
         prijave. Vaši učenici će trebati odabrati korisnička imena i lozinke, ali
@@ -308,24 +306,24 @@
         lozinku, bit ćete u mogućnosti da je resetirate.
       register: Zamolite učenike da se sami registriraju
       vist: Zamolite učenike da posjete
-      section_code: 'i unesite svoju šifru za dio:'
+      section_code: 'i unesite svoju šifru za odjeljenje:'
       first_please: Molim, prvo %{add_section}
       for: Za
       enter: 'unesite:'
     sections:
-      add: Dodavanje dijela
-      manage: Upravljanje dijelovima
-      section: Dio
+      add: Dodavanje odjeljenja
+      manage: Upravljanje odjeljenjima
+      section: Odjeljenje
       students: Učenici
-      section_code: Šifra dijela
-      add_section_code: Dodavanje učeničke šifre dijela
+      section_code: Šifra odjeljenja
+      add_section_code: Dodavanje učeničke šifre odjeljenja
       secret: Tajni način
       grade: Razred
       course: Tečaj
       rename: preimenuj
       edit: uredi
       delete: izbriši
-      confirm_delete: Jeste li sigurni da želite izbrisati ovaj dio?
+      confirm_delete: Jeste li sigurni da želite izbrisati ovo odjeljenje?
       email: Poslati e-poštom
     rollup: Upravljačka ploča napretka
     activity: Nedavna aktivnost razreda
@@ -387,7 +385,7 @@
     20hour_overview: Ovaj 20-satni tečaj objašnjava iosnovne koncepte programiranja
       i nformatike. Tečaj je namijenjen za korištenje u nižim razredima osnovne škole,
       ali je zabavan za učenje bez obzira na dob polaznika.
-    test_videos_help: Testirajte naš novi video player u školi
+    test_videos_help: Isprobajte naš novi video player u školi
     try_beta_courses: Novo! Isprobaj naše beta tečajeve za učenike razredne nastave
     use_as_teacher: Koristite ovo sjedište kao učitelj
     heading_hoc2014: <h2>Sat Kodiranja za</h2><h1>sve uzraste</h1>
@@ -398,7 +396,7 @@
   gender:
     male: Muško
     female: Žensko
-    none: Radije ne bih o tome
+    none: Radije ne bih odgovorio
   user_type:
     student: Učenik
     teacher: Učitelj
@@ -418,7 +416,7 @@
     secure: Sigurna verzija
   reference_area:
     title: Trebate pomoć?
-    subtitle: Pogledajte ove videe i savjete
+    subtitle: Pogledajte ove videozapise i savjete
     teacher: Pogledajte rješenje
     auth_error: Niste ovlašteni vidjeti rješenje.
     submit: Ažuriranje lokacije umjetnika
@@ -513,8 +511,8 @@
     caption_by_name_age: od %{name}, dob %{age}
     caption_time_ago: prije %{time_ago}
     header: Galerija
-    header_playlab: Play Lab
-    header_artist: Artist
+    header_playlab: Laboratorij igara
+    header_artist: Umjetnik
   landing:
     prerelease: Ovaj tečaj je u <span class='betatext'> beta fazi</span>. To znači
       da ovo nije konačna verzija tečaja, te da podliježe izmjenama u skladu s primljenim

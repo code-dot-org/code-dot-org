@@ -282,7 +282,7 @@ ca:
       4-5 Songwriting Multi 1:
         Multiple Choice: Tipus test
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
-        0: '? What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?'
+        0: "? Quin és el fragment més llarg d'aquesta cançó que definiríeu com la tornada de manera que la tornada es repeteixi exactament cada vegada que s'anomena?"
         1: ': What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?'
         Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: 'Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.'

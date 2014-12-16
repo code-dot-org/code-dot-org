@@ -502,7 +502,7 @@
         studio_playlab_1: Mörgæsin vill segja "hæ" - getur þú hjálpað henni?
         studio_playlab_2: Hellisstrákur (leikmaður 1) og Hellisstelpa (leikmaður 2)
           vilja segja "hæ" við hvort annað. Getur þú hjálpað þeim með því að nota
-          "segir" kubbinn tvisvar?
+          "segja" kubbinn tvisvar?
         studio_playlab_3: Getur þú hjálpað Tennisstelpu að ná til flaggsins?
         studio_playlab_4: Getur þú hjálpað Tennisstrák (leikmanni 1) að komast til
           Tennisstelpu (leikmanns 2) og spilað hljóð þegar hann kemst þangað?
@@ -829,7 +829,7 @@
           og breyttu stærðinni.
         frozen_snowflake_branch: Notaðu "búa til grein snjókorns" kubbinn
         frozen_create_square: Bættu við fleiri kubbum hér til að búa til ferning
-        playlab_drag_say: Dragðu "segir" kubbinn hingað og skrifaðu "hæ"
+        playlab_drag_say: Dragðu "segja" kubbinn hingað og skrifaðu "hæ"
         playlab_use_twice: Notaðu þennan kubb tvisvar og mundu að breyta númeri leikmanns
         playlab_move_girl: Notaðu "færa til hægri" kubbinn til að færa Tennisstelpu
         playlab_play_sound: Bættu "spila hljóð" kubbi við hér

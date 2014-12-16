@@ -21577,7 +21577,7 @@ exports.setBackgroundTennis = function(d){return "set tennis background"};
 
 exports.setBackgroundWinter = function(d){return "set winter background"};
 
-exports.setBackgroundTooltip = function(d){return "Sets the background image"};
+exports.setBackgroundTooltip = function(d){return "பின்னணி படத்தை அமைக்கஉம்"};
 
 exports.setEnemySpeed = function(d){return "set enemy speed"};
 

@@ -14423,7 +14423,7 @@ exports.directionWestLetter = function(d){return "Zapad"};
 
 exports.end = function(d){return "kraj"};
 
-exports.emptyBlocksErrorMsg = function(d){return "Da bi blok \"Ponovi\" ili \"Ako\" radio, u njega treba ugraditi druge blokove. Provjeri uklapa li se unutarnji blok pravilno u vanjski blok."};
+exports.emptyBlocksErrorMsg = function(d){return "Da bi blokovi \"Ponovi\" ili \"Ako\" radili, u njih treba ugraditi druge blokove. Provjeri uklapa li se unutarnji blok pravilno u vanjski blok."};
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Funkcijski blok treba unutra imati druge blokove da bi mogao raditi."};
 
@@ -14431,17 +14431,17 @@ exports.errorEmptyFunctionBlockModal = function(d){return "Mora se staviti bloko
 
 exports.errorIncompleteBlockInFunction = function(d){return "Klikni na \"uredi\" da budeš siguran da nijedan blok ne nedostaje unutar tvoje definicije funkcije."};
 
-exports.errorParamInputUnattached = function(d){return "Sjeti se da prikvačiš blok za svaki unos parametara na bloku funkcije na svojoj radnoj površini."};
+exports.errorParamInputUnattached = function(d){return "Sjeti se da prikačiš blok za svaki unos parametara na bloku funkcije na svojoj radnoj površini."};
 
 exports.errorUnusedParam = function(d){return "Dodao si blok parametara, ali ga nisi koristio u definiciji. Pobrini se da koristiš svoj parametar tako da klikneš na \"uredi\" i staviš blok parametara unutar zelenog bloka."};
 
 exports.errorRequiredParamsMissing = function(d){return "Napravi parametar za svoju funkciju tako da klikneš na \"uredi\" i dodaš neophodne parametre. Dovuci nove blokove parametara u svoju definiciju funkcije."};
 
-exports.errorUnusedFunction = function(d){return "Napravio si funkciju, ali je nikad nisi koristio na svojoj radnoj površini! Klikni na \"Funkcije\" u alatima i pobrini se da je iskoristiš u svom programu."};
+exports.errorUnusedFunction = function(d){return "Napravio si funkciju, ali je nikad nisi koristio na svojoj radnoj površini! Klikni na \"Funkcije\" na alatnoj traci i pobrini se da je iskoristiš u svom programu."};
 
 exports.errorQuestionMarksInNumberField = function(d){return "Pokušaj zamijeniti \"???\" s vrijednošću."};
 
-exports.extraTopBlocks = function(d){return "Postoje nespojeni blokovi. Želiš li ih dodati u blok \"pri izvršavanju\"?"};
+exports.extraTopBlocks = function(d){return "Postoje nespojeni blokovi. Želiš li ih dodati u blok \"pri pokretanju\"?"};
 
 exports.finalStage = function(d){return "Čestitamo! Posljednja etapa je završena."};
 
@@ -14487,9 +14487,9 @@ exports.puzzleTitle = function(d){return "Zadatak "+v(d,"puzzle_number")+" od "+
 
 exports.repeat = function(d){return "ponovi"};
 
-exports.resetProgram = function(d){return "Ponovno"};
+exports.resetProgram = function(d){return "Ispočetka"};
 
-exports.runProgram = function(d){return "Kreni"};
+exports.runProgram = function(d){return "Pokreni"};
 
 exports.runTooltip = function(d){return "Pokreće program određen blokovima na radnom prostoru."};
 
@@ -14547,11 +14547,11 @@ exports.watchVideo = function(d){return "Pogledaj filmić"};
 
 exports.when = function(d){return "kada"};
 
-exports.whenRun = function(d){return "pri izvršavanju"};
+exports.whenRun = function(d){return "pri pokretanju"};
 
 exports.tryHOC = function(d){return "Isprobaj Hour of Code"};
 
-exports.signup = function(d){return "Upis na početni tečaj"};
+exports.signup = function(d){return "Registrirajte se na početni tečaj"};
 
 exports.hintHeader = function(d){return "Evo savjeta:"};
 
@@ -14591,7 +14591,7 @@ exports.offsetBlockTitle = function(d){return "pomak (x, y, slika)"};
 
 exports.rectangleBlockTitle = function(d){return "pravokutnik (širina, visina, stil, boja)"};
 
-exports.reinfFeedbackMsg = function(d){return "Možete pritisnuti gumb \"Pokušajte ponovo\" kako biste uredili crtež."};
+exports.reinfFeedbackMsg = function(d){return "Možeš pritisnuti gumb \"Pokušaj ponovno\" kako bi uredio svoj crtež."};
 
 exports.rotateImageBlockTitle = function(d){return "rotiraj (stupnjevi, slika)"};
 

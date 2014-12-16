@@ -14410,25 +14410,25 @@ exports.directionWestLetter = function(d){return "Nyugat"};
 
 exports.end = function(d){return "vége"};
 
-exports.emptyBlocksErrorMsg = function(d){return "Akkor van értelme az \"Ismétel\" vagy a \"Ha\" blokknak, ha van  bennük egy vagy több blokk. Bizonyosodj meg róla, hogy a belső blokk megfelelően illeszkedik a külső blokkhoz."};
+exports.emptyBlocksErrorMsg = function(d){return "Ahhoz hogy az \"Ismételd\" vagy a \"Ha\" blokkok működjenek, más blokkoknak is kell bennük lenni. Győződj meg arról, hogy a belső blokk megfelelően illeszkedik a külső befogadó blokkhoz."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "A függvény blokkon belül más blokknak is szerepelnie kell ahhoz, hogy működjön."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "A függvény blokkon belül lenni kell más blokkoknak is ahhoz, hogy működjön."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "A függvényed leírásában blokkoknak kell szerepelniük. Kattints a \"szerkesztés\" gombra, és húzd bele a blokkokat a zöld blokkba."};
+exports.errorEmptyFunctionBlockModal = function(d){return "A függvénydeklarációdban blokkoknak kell lenni. Kattints a \"szerkesztés\" gombra, és húzd be a blokkokat a zöld blokkba."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Kattints a \"szerkesztés\"-re, hogy pótold az esetlegesen hiányzó blokkokat a függvényed definíciójából."};
+exports.errorIncompleteBlockInFunction = function(d){return "Kattints a \"szerkesztés\"-re, hogy pótold az esetlegesen hiányzó blokkokat a függvénydeklarációdból."};
 
-exports.errorParamInputUnattached = function(d){return "A munkaterületen levő függvények minden bemenő paraméteréhez illessz blokkot."};
+exports.errorParamInputUnattached = function(d){return "Ne felejts a munkaterületen levő függvények minden bemenő paraméteréhez egy blokkot illeszteni."};
 
 exports.errorUnusedParam = function(d){return "Hozzáadtál egy paraméterblokkot, de nem használtad fel azt a deklarálásodban. Győződj meg róla, hogy használod a paraméteredet, rákattintva a \"szerkesztés\"-re  és arról is, hogy bele van-e illesztve a paraméterblokkod a zöld blokkba!"};
 
-exports.errorRequiredParamsMissing = function(d){return "Hozz létre egy paramétert a függvényed számára a \"szerkesztés\"-re kattintva, majd hozzáadva a szükséges paramétereket! Húzd rá az új paraméterblokkokat a függvényed definíciójára!"};
+exports.errorRequiredParamsMissing = function(d){return "Hozz létre egy paramétert a függvényed számára a \"szerkesztés\"-re kattintva, és hozzáadva a szükséges paramétereket! Húzd az új paraméterblokkokat a függvénydeklarációdra!"};
 
 exports.errorUnusedFunction = function(d){return "Létrehoztál egy függvényt, de soha sem használtad fel azt a munkaterületeden! Kattints a \"Függvények\"-re az eszközkészleten, és győződj meg róla, hogy használod a függvényt a programodban."};
 
 exports.errorQuestionMarksInNumberField = function(d){return "Próbálj a \"???\" helyére értéket írni."};
 
-exports.extraTopBlocks = function(d){return "Van különálló blokkod. Vagy csatlakoztasd a \"futtatáskor\" blokkhoz, vagy töröld."};
+exports.extraTopBlocks = function(d){return "Különálló blokkjaid vannak. A \"futtatáskor\" blokkhoz akartad ezeket csatolni?"};
 
 exports.finalStage = function(d){return "Gratulálok! Teljesítetted az utolsó szakaszt."};
 
@@ -14436,7 +14436,7 @@ exports.finalStageTrophies = function(d){return "Gratulálok! Teljesítetted az 
 
 exports.finish = function(d){return "Kész"};
 
-exports.generatedCodeInfo = function(d){return "A blokk alapú programozást még a legjobb egyetemeken (pl. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+") is tanítják. De a felszín alatt az általad összeállított blokkok JavaScriptben, a világ legszélesebb körben használt nyelvén is megjeleníthetők:"};
+exports.generatedCodeInfo = function(d){return "Még a legjobb egyetemeken (pl. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+") is tanítanak blokk alapú programozást, de a felszín alatt az általad összeállított blokkok is megjeleníthetők JavaScriptben, a világ legszélesebb körben használt nyelvén :"};
 
 exports.hashError = function(d){return "Sajnálom, de \"%1\" nem felel meg egyetlen mentett programnak sem."};
 
@@ -14450,7 +14450,7 @@ exports.levelIncompleteError = function(d){return "Minden szükséges blokkot fe
 
 exports.listVariable = function(d){return "lista"};
 
-exports.makeYourOwnFlappy = function(d){return "Készítsd el a saját Flappy játékod"};
+exports.makeYourOwnFlappy = function(d){return "Készíts saját Flappy játékot"};
 
 exports.missingBlocksErrorMsg = function(d){return "Próbáld meg a lenti blokkokat használni, hogy megoldd a rejtvényt."};
 
@@ -14458,9 +14458,9 @@ exports.nextLevel = function(d){return "Gratulálok! Megoldottad a "+v(d,"puzzle
 
 exports.nextLevelTrophies = function(d){return "Gratulálok! Megoldottad a "+v(d,"puzzleNumber")+". feladványt és nyertél "+p(d,"numTrophies",0,"hu",{"one":"egy trófeát","other":n(d,"numTrophies")+" trófeát"})+"."};
 
-exports.nextStage = function(d){return "Gratulálok!  "+v(d,"stageName")+" teljesítve."};
+exports.nextStage = function(d){return "Gratulálok! A(z) "+v(d,"stageName")+". szint teljesítve."};
 
-exports.nextStageTrophies = function(d){return "Gratulálok! Teljesítetted a "+v(d,"stageNumber")+". szakaszát és nyertél "+p(d,"numTrophies",0,"hu",{"one":"egy trófeát","other":n(d,"numTrophies")+" trófeát"})+"."};
+exports.nextStageTrophies = function(d){return "Gratulálok! Teljesítetted a(z) "+v(d,"stageNumber")+". szintet és nyertél "+p(d,"numTrophies",0,"hu",{"one":"egy trófeát","other":n(d,"numTrophies")+" trófeát"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Gratulálok! Megoldottad a "+v(d,"puzzleNumber")+". feladványt. (Habár megoldható csupán "+p(d,"numBlocks",0,"hu",{"one":"1 blokk","other":n(d,"numBlocks")+" blokk"})+" használatával.)"};
 
@@ -14496,7 +14496,7 @@ exports.textVariable = function(d){return "szöveg"};
 
 exports.tooFewBlocksMsg = function(d){return "A megfelelő blokkokat használod, de próbálj meg többet használni belőlük, hogy megoldd a feladványt."};
 
-exports.tooManyBlocksMsg = function(d){return "Ez a feladvány megoldható a <x id='START_SPAN'/><x id='END_SPAN'/> blokkokal."};
+exports.tooManyBlocksMsg = function(d){return "Ez a feladvány megoldható <x id='START_SPAN'/><x id='END_SPAN'/> blokkal."};
 
 exports.tooMuchWork = function(d){return "Sokat dolgoztattál. Megpróbálnád egy kicsit kevesebb ismétléssel?"};
 
@@ -14512,11 +14512,11 @@ exports.hintRequest = function(d){return "Segítség"};
 
 exports.backToPreviousLevel = function(d){return "Vissza az előző szintre"};
 
-exports.saveToGallery = function(d){return "Mentése a galériába"};
+exports.saveToGallery = function(d){return "Mentés a galériába"};
 
-exports.savedToGallery = function(d){return "Elmentve a galériában!"};
+exports.savedToGallery = function(d){return "Elmentve a galériába!"};
 
-exports.shareFailure = function(d){return "Sajnálom, de nem tudtam megosztani ezt a programot."};
+exports.shareFailure = function(d){return "Sajnálom, de nem tudjuk megosztani ezt a programot."};
 
 exports.workspaceHeader = function(d){return "Építsd össze a blokkokat itt: "};
 
@@ -14524,7 +14524,7 @@ exports.workspaceHeaderJavaScript = function(d){return "Ide írd a JavaScript k�
 
 exports.infinity = function(d){return "Végtelen"};
 
-exports.rotateText = function(d){return "Fordítsd el a készüléket."};
+exports.rotateText = function(d){return "Fordítsd el a készüléked."};
 
 exports.orientationLock = function(d){return "Kapcsold ki a tájolási zárat az eszközbeállításokban."};
 
@@ -14536,13 +14536,13 @@ exports.when = function(d){return "amikor"};
 
 exports.whenRun = function(d){return "futtatáskor"};
 
-exports.tryHOC = function(d){return "Próbáld ki a kódolás óráját"};
+exports.tryHOC = function(d){return "Próbáld ki a Kódolás Óráját"};
 
 exports.signup = function(d){return "Regisztrálj a bevezető képzésre"};
 
-exports.hintHeader = function(d){return "Egy tipp:"};
+exports.hintHeader = function(d){return "Itt egy ötlet:"};
 
-exports.genericFeedback = function(d){return "Nem sikerült célba érnem. Kérlek javítsd a hibát."};
+exports.genericFeedback = function(d){return "Nézd meg hogy milyen lett, és próbáld meg kijavítani a programod."};
 
 exports.defaultTwitterText = function(d){return "Nézd meg, mit csináltam"};
 
@@ -14559,15 +14559,15 @@ exports.extraTopBlocks = function(d){return "Vannak különálló blokkok a táb
 
 exports.overlayBlockTitle = function(d){return "borítás (felső, alsó)"};
 
-exports.placeImageBlockTitle = function(d){return "hely-kép (x, y, kép)"};
+exports.placeImageBlockTitle = function(d){return "kép elhelyezése (x, y, kép)"};
 
 exports.offsetBlockTitle = function(d){return "eltolás (x, y, kép)"};
 
 exports.rectangleBlockTitle = function(d){return "téglalap (szélesség, magasság, stílus, szín)"};
 
-exports.reinfFeedbackMsg = function(d){return "Kattints az \"Újrapróbálom\" gombra a rajod szerkesztéséhez."};
+exports.reinfFeedbackMsg = function(d){return "Az \"Újrapróbálom\" gombra kattintva a rajzod szerkeszthető."};
 
-exports.rotateImageBlockTitle = function(d){return "forgatás (kép, fok)"};
+exports.rotateImageBlockTitle = function(d){return "forgatás (fok,kép)"};
 
 exports.scaleImageBlockTitle = function(d){return "skála (mérték)"};
 
@@ -14575,11 +14575,11 @@ exports.squareBlockTitle = function(d){return "négyzet (méret, stílus, szín)
 
 exports.starBlockTitle = function(d){return "csillag (sugár, stílus, szín)"};
 
-exports.radialStarBlockTitle = function(d){return "radiál-star (váltó, belső, külső, a stílus, szín)"};
+exports.radialStarBlockTitle = function(d){return "radiális-csillag (pontok, belső, külső, stílus, szín)"};
 
 exports.stringAppendBlockTitle = function(d){return "szöveg-összefűzés (első, második)"};
 
-exports.stringLengthBlockTitle = function(d){return "szöveg hossza (szöveg)"};
+exports.stringLengthBlockTitle = function(d){return "szöveg hossz (szöveg)"};
 
 exports.textBlockTitle = function(d){return "szöveg (szöveg, méret, szín)"};
 

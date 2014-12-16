@@ -576,12 +576,12 @@
           lorsque l'on clic? N'oublie pas de cliquer après avoir cliqué sur Cours
         studio_playlab_6: Peux tu aider la Sorcière à se déplacer avec les flèches
           haut/bas/droite/gauche pour récupérer toutes les boules de feu magiques?
-        studio_playlab_7: Le bloc « répéter à l'infini » permet d'exécuter du code
-          en continu. Peux-tu assembler les blocs qui vont permettre à ce dinosaure
-          de se déplacer vers le haut et vers le bas sans qu'il s'arrête jamais ?
-        studio_playlab_8: Peux-tu ajouter un bloc qui marque un point lorsque le manchot
-          croise la pieuvre, puis le déplacer avec les flèches jusqu'à ce que tu marques
-          un point ?
+        studio_playlab_7: Le bloc "répéter pour toujours" permet d'exécuter du code
+          en continu. Peux-tu y attacher des blocs pour aider le magicien à se déplacer
+          vers la droite et vers la gauche alternativement ?
+        studio_playlab_8: Peux-tu ajouter un bloc pour ajouter un point au score et
+          un autre pour jouer un son quand la licorne percute le magicien, et  déplace-la
+          à l'aide des flèches jusqu'à marquer à nouveau ?
         studio_playlab_9: Peux-tu ajouter des blocs pour changer l'arrière-plan et
           la vitesse du manchot, puis le déplacer avec les flèches jusqu'à ce que
           tu marques un point ?
@@ -616,11 +616,11 @@
         maze_wordsearch_k_20: C'est un test ! Déplace-moi dans une direction, puis
           une autre, pour épeler le mot HISTOIRE
         webapp_ec_simple: Créer votre appli en ligne grâce à createHtmlBlock.
-        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
-          it in the new "penColour" block.'
-        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
-          a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
-          Have fun!'
+        turtle_ec_1_2: 'Maintenant, dessinez un carré. NOTE: utilisez votre couleur
+          préferrée en la choisissant dans le nouveau block "penColor".'
+        turtle_ec_1_10: 'Bien joué ! Maintenant, dessinez ce que vous voulez. Quelques
+          idées plaisantes: un bonhomme allumette, flocon de neige ou une spirale.
+          Essayez également le nouveau "penWidth" block. Amusez-vous bien !'
         studio_ec_sandbox: Crée ton propre jeu. Quand tu as fini, clic sur Terminer
           pour laisser tes amis essayer ton jeu sur leur téléphone.
     levelbuilder:
@@ -712,43 +712,47 @@
           sinueux, quel que soit sa longueur. Vite ! La glace est en train de fondre
           !
       Standalone_Artist_1:
-        instructions: Welcome to Artist! First off, let's try to make a simple square
-          using the turn right block and move forward block. Each side should be 100
-          pixels long.
+        instructions: Bienvenue à l'artiste ! Tout d'abord, nous allons essayer de
+          faire un simple carré en utilisant le bloc "tourner à droite" et le bloc
+          "avancer". Chaque côté devra être de 100 pixels de long.
       Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel
-          long sides.
+        instructions: Dessine ce diamand avec des angles de 120 et 60 degrés ainsi
+          que des côtés de 150 pixels de long.
       Standalone_Artist_3:
         instructions: Pouvez-vous dessiner cet hexagone avec des côtés de 100 pixels
           et des tournants de 60 degrés?
       Standalone_Artist_4:
-        instructions: Now you've got a new block to play with, the loop. This will
-          repeat a set of commands. What happens if you loop these commands 6 times?
+        instructions: 'Maintenant vous avez un nouveau bloc avec lequel jouer: la
+          boucle. Ceci répétera un ensemble de commandes. Que se passe-t-il si vous
+          répétez en boucle ces commandes 6 fois ?'
       Standalone_Artist_5:
-        instructions: How many times do you need to loop this diamond to draw the
-          flower?
+        instructions: Combien de fois vous faut-il boucler ce diamant pour dessiner
+          la fleur ?
       Standalone_Artist_5.5:
-        instructions: 'Notice how we simplified the diamond code by turning it into
-          a loop. You can loop that whole sequence 12 times to draw the flower. Hint:
-          You''ll need to turn 30 degrees after your diamond loop so you don''t keep
-          drawing over the same diamond.'
+        instructions: 'Remarquez comment nous avons simplifié le code du diamant en
+          le transformant en un boucle. Vous pouvez répéter en boucle la séquence
+          totale 12 fois pour dessiner la fleur. Astuce: Vous devrez tourner de 30
+          degrés après votre boucle diamant afin de ne pas continuer à dessiner sur
+          le même diamant.'
       Standalone_Artist_6:
-        instructions: 'Loop this hexagon code 6 times to create the design. How many
-          degrees will you need to turn each time? Hint: divide the number of degrees
-          in a circle by the number of times you are looping.'
+        instructions: 'Répetez en boucle ce code hexagon 6 fois pour créer le design.
+          De combien de degrés vous faudra-t-il tourner à chaque fois ? Astuce: divisez
+          le nombre de degrés dans un cercle par le nombre de fois que vous bouclez.'
       Standalone_Artist_7:
-        instructions: 'A function is another programming tool to help you avoid repeating
-          yourself. This function draws a flower, so you can use it any time you want
-          to draw a flower. Use this and the new jump block to draw these flowers.
-          Hint: The flowers are 150 pixels apart'
+        instructions: 'Une fonction est un autre outil de programmation qui vous permet
+          d''éviter de vous répéter. Cette fonction dessine une fleur, vous pouvez
+          ainsi l''utiliser quand vous le souhaitez pour dessiner une fleur. Utilisez-là
+          ainsi que le nouveau bloc saut pour dessiner cette fleur. Astuce: Les fleurs
+          sont séparées de 150 pixels'
       Standalone_Artist_8:
-        instructions: Here's a function called "Draw a shape" that we've programmed
-          to draw hexagons. Run the code to see what it does and then experiment with
-          the function to see what happens. Can you make it draw a pattern of squares,
-          triangles, or octagons?
+        instructions: Voici une fonction appelée « Dessiner une forme » que nous avons
+          programmée pour dessiner des hexagones. Exécutez le code pour voir ce qu'il
+          fait et puis essayez avec la fonction pour voir ce qui se passe. Pouvez-vous
+          le faire dessiner un motif de carrés, triangles ou octogones ?
       Standalone_Artist_9:
-        instructions: Now go ahead and make whatever picture you'd like! You've even
-          got an empty function that you can make do whatever you want!
+        instructions: Maintenant, continuez et faites toutes les images dont vous
+          avez envie ! Vous avez même une fonction vide dont vous pouvez faire faire
+          ce que vous voulez !
     video:
       name:
         maze_intro: Intro au Labyrinthe
@@ -777,13 +781,13 @@
         Unplug10: Internet
         Unplug11: Résumé et ouverture
         C1_happy_maps_unplugged: Happy Maps
-        C1_moveitmoveit_unplugged: Move It, Move It
+        C1_moveitmoveit_unplugged: Déplacez le, déplacez le
         C1_bigevent_unplugged: Le Grand Evénement
         C1_getting_loopy: Getting Loopy
         C1_pair_programming: Programmation à deux
-        C1_maze_intro_sequencing: Maze Sequencing Intro
-        C1_maze_debugging: Maze Debugging
-        C1_bee_level_intro: Bee Level - Intro
+        C1_maze_intro_sequencing: Introduction au séquencement du labyrinthe
+        C1_maze_debugging: Debuggage du labyrinthe
+        C1_bee_level_intro: Niveau abeille - Introduction
         C1_artist_intro: Introduction à l'Artiste
         C1_spelling_bee_intro: Spelling Bee Intro
         C1_zuck_repeat_loop: Labyrinthe et boucles
@@ -873,19 +877,19 @@
         replace_questions: Utilise le menu déroulant pour remplacer "???" par un nombre
         replace_questions_degree: Utilise le menu déroulant pour remplacer "???" avec
           le bon nombre de degrés à tourner
-        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
-          workspace
+        repeat_blocks: Utiliser le bloc « Repeat » et enroulez-le autour des blocs
+          dans l'espace de travail
         repeat_blocks_1: (1) Utilise ce bloc et place-le autour des blocs gris dans
           l'espace de travail
         repeat_blocks_2: (2) Fais glisser le bloc «Répéter» ici et place les blocs
           gris à l'intérieur
         snowflake_dropdown: Utilise ce menu déroulant pour créer différents flocons
           de neige !
-        degrees_per_side: Divide 360 by the number of sides to get the size of each
-          angle in degrees.
-        set_sides: Use this block to set "sides" to the number needed to complete
-          the puzzle.
-        set_length: Use this block to set "length" to the correct value.
+        degrees_per_side: Divisez 360 ar le nombre de côtés pour obtenir la taille
+          de chaque angle en degrés.
+        set_sides: Utilisez ce bloc pour définir le nombre de "côtés" nécessaires
+          pour résoudre ce puzzle.
+        set_length: Utilisez ce bloc pour définir la valeur correcte de "longueur".
         which_equation: Which equation makes each side shorter for shapes with more
           sides?  Try each equation!
         get_nectar: Utilisez le bloc "collecter du nectar".
@@ -916,14 +920,16 @@
         playlab_play_sound: Ajoute le bloc « jouer le son »
         playlab_arrow_keys: Souviens-toi d'utiliser ces flèches pour déplacer la sorcière
           après avoir cliqué « Démarrer »
-        playlab_add_move: Add "move" blocks inside this repeat block
+        playlab_add_move: Ajoute des blocs « déplacer » à l'intérieur de ce bloc «
+          répéter à l'infini »
         playlab_add_score: Add score blocks here
-        playlab_add_blocks: Add your blocks here
+        playlab_add_blocks: Ajoute tes blocs ici
         set_variable: Drag a number block here to set your variable
-        place_variable: Drag your variable inside this block
+        place_variable: Fais glisser ta variable à l'intérieur de ce bloc
         bee_for_loop: Drag the largest number of nectar you want the bee to collect
           here
-        place_counter_variable: Drag your counter variable inside this block
+        place_counter_variable: Fais glisser ta variable compteur à l'intérieur de
+          ce bloc
         function_editor_draw_square: This is your function definition. These blocks
           run everytime you use the "draw a square" block
         change_here: Make your change here
@@ -934,16 +940,17 @@
         edit_add_parameter: Click edit to add a parameter in your function
         add_and_drag_parameter: Write in the name of your parameter here, click add,
           and then drag it into your function definition
-        fill_in_actor: Fill in the ??? with numbers that correspond to each actor
-          (1, 2, and 3)
-        repeat: Put blocks inside the loop to repeat commands
-        if_bee_nectar: Use the "if" block to decide if the bee should get nectar
+        fill_in_actor: Remplace les ??? par les nombres qui correspondent à chacun
+          des acteurs (1, 2, et 3)
+        repeat: Mets des blocs à l'intérieur de la boucle pour répéter les commandes
+        if_bee_nectar: Utilise le bloc « Si » pour décider si l'abeille devrait obtenir
+          du nectar
         if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower,
           and makes honey if it's not a flower
-        repeat_full_circle: Enter in the number of times the zombie has to move to
-          make a full circle
+        repeat_full_circle: Entrez le nombre de fois que le zombie doit se déplacer
+          tracer un cercle complet
         place_length_variable: Drag the length variable here to replace the question
           marks
-        arrows_move_actor: Use the arrows to move the actor
-        right_arrow_fireball: Use the right arrow to shoot fireballs
+        arrows_move_actor: Utilise les flèches pour déplacer l'acteur
+        right_arrow_fireball: Utilise la flèche droite pour tirer des boules de feu
         name_function: Écris le now de ta fonction ici

@@ -309,7 +309,7 @@ fr-FR:
   hoc2014_try_new_tutorials: "Essayez notre nouveau tutoriel d'Heure de Code"
   hoc2014_try_new_tutorial: Essayez notre nouveau tutoriel heure de Code en version bêta
   hoc2014_try_scrat: Angry Birds, PvZ, et Scrat
-  hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
+  hoc2014_try_frozen: Artiste avec Anna et Elsa, de La Reine des neiges
   carousel_heading_international: Tutoriel dans votre langue
   carousel_heading_domestic: Tutoriel disponible en anglais
   carousel_heading_beginners: Tutoriels pour débutants
@@ -494,7 +494,8 @@ fr-FR:
   playlab_shortdescription: Programmer une histoire ou un jeu avec le Labo !
   codeorg_longdescription: "Apprenez les concepts de base de l'informatique grâce à la programmation glissée-déposée . Il s'agit d'un didacticiel ludique, autogéré, mettant en vedette les conférences vidéo de Bill Gates, Mark Zuckerberg, Angry Birds et Plants vs Zombies. Apprenez les notions de boucles, d'instructions conditionnelles et des algorithmes de base. Disponible en 34 langues."
   codeintl_longdescription: "Apprenez les concepts de base de l'informatique grâce à la programmation glissée-déposée . Il s'agit d'un didacticiel ludique, autogéré, mettant en vedette les conférences vidéo de Bill Gates, Mark Zuckerberg, Angry Birds et Plants vs Zombies. Apprenez les notions de boucles, d'instructions conditionnelles et des algorithmes de base. Disponible en 34 langues."
-  thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
+  thinkersmithspanish_longdescription: |-
+    En utilisant un "Robot Vocabulaire" prédéfini, les élèves découvriront comment se guider pour exécuter des tâches spécifiques sans en discuter au préalable. Cette leçon apprend aux enfants la relation entre les symboles et les actions, ainsi que l'inestimable capacité du débogage.
   khan_longdescription: 'Apprenez les bases de la programmation JavaScript tout en créant des dessins amusants avec votre code.  Faites-le par vous-même ou bien avec toute votre classe!'
   khanes_longdescription: 'Apprenez les bases de la programmation JavaScript tout en créant des dessins amusants avec votre code.  Faites-le par vous-même ou bien avec toute votre classe!'
   khanpt_longdescription: 'Apprenez les bases de la programmation JavaScript tout en créant des dessins amusants avec votre code.  Faites-le par vous-même ou bien avec toute votre classe!'
