@@ -131,7 +131,11 @@ module ApplicationHelper
     # playlab/studio and artist/turtle can have images
     if level_source.try(:level_source_image).try(:image)
       if level_source.level_source_image.s3?
-        level_source.level_source_image.s3_framed_url
+        if app == Game::ARTIST then
+          level_source.level_source_image.s3_framed_url
+        else
+          level_source.level_source_image.s3_url
+        end
       else
         url_for(controller: "level_sources", action: "generate_image", id: level_source.id, only_path: false)
       end
