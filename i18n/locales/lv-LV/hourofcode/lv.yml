@@ -92,12 +92,12 @@
   signup_thank_you_message: "Mēs jums aizsūtijām apstiprinājuma epastu ar informāciju, lai palīdzētu uzsākt."
   map_header: '#"Programmēšans stunda" pasākumi visā pasaulē'
   map_header_company: '# sabiedrību organizatori'
-  map_search_placeholder: "Search for Hour of Code events"
-  map_search_search: "Search"
-  map_search_reset: "Reset"
-  meta_tag_og_title: "The Hour of Code is here"
+  map_search_placeholder: "Meklēt programmēšanas stundas pasākumus"
+  map_search_search: "Mekēt"
+  map_search_reset: "Atiestatīt"
+  meta_tag_og_title: "Programmēšanas stunda ir klāt"
   meta_tag_og_description: "Programmēšas stunda ir starptautiska kustība, kurā piedalās ap desmit miljonu skolēnu vairāk nekā 180 valstīs un vairāk nekā 30 valodās. Vecums no 4 līdz 104 gadiem."
-  meta_tag_twitter_title: "The Hour of Code is here"
+  meta_tag_twitter_title: "Programmēšanas stunda ir klāt"
   meta_tag_twitter_description: "Programmēšas stunda ir starptautiska kustība, kurā piedalās ap desmit miljonu skolēnu vairāk nekā 180 valstīs un vairāk nekā 30 valodās. Vecums no 4 līdz 104 gadiem."
   twitter_default_text: 'Es esmu šī gada #"Programmēšanas stunda" dalībnieks, vai tu esi? @codeorg'
   hardware_prizes_form_name_label: "Jūsu vārds"

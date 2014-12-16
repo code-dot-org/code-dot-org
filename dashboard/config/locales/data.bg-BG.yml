@@ -785,6 +785,7 @@
         C4_math_artist: Програмиране на художника с математика
         C4_function_edit: Редактиране на функции
         C4_function_create: Създаване на функции
+        C4_function_parameters: Функции с параметри
         C4_conditionals: Условия
         C4_unplugged_algorithms: Алгоритми с Танграм
         C4_unplugged_madlibs: Mad Libs

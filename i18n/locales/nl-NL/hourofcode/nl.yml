@@ -89,12 +89,12 @@
   signup_thank_you_message: "We sturen u een bevestigingse-mail met informatie om u aan de slag te kunnen."
   map_header: '# Uur van Code gebeurtenissen rond de wereld'
   map_header_company: '# door bedijfsorganisatoren'
-  map_search_placeholder: "Search for Hour of Code events"
-  map_search_search: "Search"
-  map_search_reset: "Reset"
-  meta_tag_og_title: "The Hour of Code is here"
+  map_search_placeholder: "Zoek Uur Code events"
+  map_search_search: "Zoek"
+  map_search_reset: "Resetten"
+  meta_tag_og_title: "Het Uur Code is hier"
   meta_tag_og_description: 'Het Uur Code is een wereldwijde beweging die tientallen miljoenen leerlingen wil bereiken in 180+ landen en in meer dan 30 talen. Leeftijd: 4 t/m 104.'
-  meta_tag_twitter_title: "The Hour of Code is here"
+  meta_tag_twitter_title: "Het Uur Code is hier"
   meta_tag_twitter_description: 'Het Uur Code is een wereldwijde beweging die tientallen miljoenen leerlingen wil bereiken in 180+ landen en in meer dan 30 talen. Leeftijd: 4 t/m 104.'
   twitter_default_text: 'Ik neem dit jaar deel aan het #HourOfCode, jij ook? @codeorg'
   hardware_prizes_form_name_label: "Je naam"

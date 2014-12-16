@@ -479,21 +479,22 @@ el:
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Λειτουργικές Ηλιοκυνηγοί
         C3_songwriting_with_parameters: Σύνθεση τραγουδιού Με Παραμέτρους
-        C4_intro: Introduction
+        C4_intro: Εισαγωγή
         C4_bee_conditional: Συνθήκες της Μέλισσας
-        C4_variables_artist: 'Variables - Artist'
+        C4_variables_artist: 'Μεταβλητές - Καλλιτέχνης'
         C4_variables_playlab: 'Variables - Play Lab'
         C4_for_loops: Βρόχοι Για
-        C4_math_artist: Programming the Artist with Math
-        C4_function_edit: Editing Functions
-        C4_function_create: Creating Functions
+        C4_math_artist: Προγραμματίζουμε τον Καλλιτέχνη χρησιμοποιώντας Μαθηματικά
+        C4_function_edit: Επεξεργαζόμαστε Συναρτήσεις
+        C4_function_create: Δημιουργούμε Συναρτήσεις
+        C4_function_parameters: Συναρτήσεις με παραμέτρους
         C4_conditionals: Έλεγχοι
-        C4_unplugged_algorithms: Algorithms with Tangrams
+        C4_unplugged_algorithms: Αλγόριθμοι με Tangrams
         C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Variables in Envelopes
+        C4_unplugged_variables: Μεταβλητές σε φακέλους
         C4_unplugged_forloops: Βρόχοι Για
         C4_unplugged_parameters: Γράφουμε τραγούδια με παραμέτρους
-        C4_unplugged_binary: Binary
+        C4_unplugged_binary: Δυαδικό
         frozen_intro: Εισαγωγή στην Ώρα του Κώδικα
         frozen_loops: Εισαγωγή στους Βρόχους (Επαναλήψεις)
         frozen_functions: Εισαγωγή στις Συναρτήσεις
@@ -557,16 +558,16 @@ el:
         function_editor_draw_square: Αυτός είναι ορισμός της συνάρτηση σου. Αυτά τα μπλοκ ενεργοποιούνται κάθε φορά που χρησιμοποιείς το μπλοκ «Σχεδίασε ένα τετράγωνο»
         change_here: Κάνε την αλλαγή σου εδώ
         write_draw_square_function: Σύρε μπλοκ από την εργαλειοθήκη εδώ που σχεδιάζεις ένα τετράγωνο
-        write_draw_triangle_function: Drag blocks from the toolbox into here that draw a triangle
-        edit_add_parameter: Click edit to add a parameter in your function
-        add_and_drag_parameter: Write in the name of your parameter here, click add, and then drag it into your function definition
-        fill_in_actor: Fill in the ??? with numbers that correspond to each actor (1, 2, and 3)
-        repeat: Put blocks inside the loop to repeat commands
-        if_bee_nectar: 'Use the "if" block to decide if the bee should get nectar'
+        write_draw_triangle_function: Σύρε εδώ πλακίδια από την εργαλειοθήκη για να σχεδιάσεις ένα τρίγωνο
+        edit_add_parameter: 'Πάτα "επεξεργασία" για να προσθέσεις μία μια παράμετρο στην συνάρτή σου'
+        add_and_drag_parameter: 'Γράψε το όνομα παραμέτρου σου εδώ, κάνε κλικ στο κουμπί "Προσθήκη", και στη συνέχεια σύρε το στον ορισμό της συνάρτησης'
+        fill_in_actor: Συμπληρώστε τα ??? με τον κατάλληλο αριθμό για να αντιστοιχεί τον κάθε ηθοποιό (1, 2 και 3)
+        repeat: Βάλτε το μπλοκ μέσα στο βρόχο για να επαναλάβει τις εντολές
+        if_bee_nectar: 'Χρησιμοποιήστε το μπλοκ "εάν" για να αποφασίσετε εάν η μέλισσα πρέπει να πάρει το νέκταρ'
         if_else_bee: |-
           Use the "if/else" block so that the Bee gets nectar from a flower, and makes honey if it's not a flower
-        repeat_full_circle: Enter in the number of times the zombie has to move to make a full circle
-        place_length_variable: Drag the length variable here to replace the question marks
-        arrows_move_actor: Use the arrows to move the actor
-        right_arrow_fireball: Use the right arrow to shoot fireballs
-        name_function: Write the name of your function here
+        repeat_full_circle: Εισάγετε τον αριθμό των φορών που το ζόμπι πρέπει να κινηθεί για να κάνει έναν πλήρη κύκλο
+        place_length_variable: Σύρετε εδώ την μεταβλητή μήκους για να αντικαταστήσει τα ερωτηματικά
+        arrows_move_actor: Χρησιμοποιείστε τα βέλη για να μετακινήσετε τον ηθοποιό
+        right_arrow_fireball: Χρησιμοποιείστε το δεξί βέλος για να ρίξετε μπάλες φωτιάς
+        name_function: Γράψτε εδώ το όνομα της συνάρτησής σας

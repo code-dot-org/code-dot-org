@@ -484,6 +484,7 @@ fi:
         C4_math_artist: Taitelijan ohjelmointi matematiikalla
         C4_function_edit: Funktioiden muokkaus
         C4_function_create: Funktioiden luominen
+        C4_function_parameters: Parametrilliset funktiot
         C4_conditionals: Ehtolausekkeet
         C4_unplugged_algorithms: Tangram-algoritmeja
         C4_unplugged_madlibs: Mad Libs
@@ -520,7 +521,7 @@ fi:
         degrees_per_side: Jaa 360 sivujen määrällä saadaksesi kunkin kulman koko asteissa.
         set_sides: Käytä tätä lohkoa asettaaksesi sivujen lukumäärän tehtävän ratkaisun mukaiseksi.
         set_length: Käytä tätä lohkoa asettaaksesi pituuden oikean arvon.
-        which_equation: Mikä yhtälo saa kunkin sivun lyhyemmäksi muodoille, joilla on monta sivua?
+        which_equation: Mikä yhtälo saa kunkin sivun sitä lyhyemmäksi, mitä enemmän sivuja on?
         get_nectar: 'Käytä uutta "kerää mesi" -lohkoa.'
         actions_category: 'Työkaluilla on uusi ulkoasu! "Toiminnot" -lohkot löytyvät nyt täältä.'
         draw_square_hint: 'Vihje: Käytä nelikulmiosilmukkaa, jonka juuri teit edellisessä tehtävässä.'

@@ -45,6 +45,26 @@ html[dir="RTL"] .farSide {
   bottom: 10px;
   margin-left: 415px; }
 
+div.droplet-palette-group-header {
+  font-family: 'Gotham 4r', sans-serif;
+  font-weight: normal; }
+
+div.droplet-palette-group-header:active {
+  color: black; }
+
+div.droplet-palette-group-header-selected {
+  font-weight: 400;
+  color: black; }
+
+.droplet-palette-group-header.yellow {
+  border-left: 10px solid #e0e053; }
+
+.droplet-palette-group-header-selected.yellow {
+  background-color: #e0e053; }
+
+.droplet-wrapper-div {
+  outline-style: none; }
+
 #show-code-button {
   background-color: #b9bf15;
   border-color: #b9bf15;

@@ -480,15 +480,16 @@ sv:
         C4_variables_playlab: 'Variables - Play Lab'
         C4_for_loops: "'För' loopar"
         C4_math_artist: Programming the Artist with Math
-        C4_function_edit: Editing Functions
-        C4_function_create: Creating Functions
+        C4_function_edit: Redigera funktioner
+        C4_function_create: Skapa funktioner
+        C4_function_parameters: Funktioner med parametrar
         C4_conditionals: Villkor
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variables in Envelopes
         C4_unplugged_forloops: "'För' loopar"
         C4_unplugged_parameters: Låtskrivande Med parametrar
-        C4_unplugged_binary: Binary
+        C4_unplugged_binary: Binära
         frozen_intro: Introduktion Hour of Code
         frozen_loops: Introduktion till loopar
         frozen_functions: Introduktion till funktioner
@@ -560,6 +561,6 @@ sv:
           Use the "if/else" block so that the Bee gets nectar from a flower, and makes honey if it's not a flower
         repeat_full_circle: Enter in the number of times the zombie has to move to make a full circle
         place_length_variable: Drag the length variable here to replace the question marks
-        arrows_move_actor: Use the arrows to move the actor
-        right_arrow_fireball: Use the right arrow to shoot fireballs
-        name_function: Write the name of your function here
+        arrows_move_actor: Använd piltangenterna för att flytta figuren
+        right_arrow_fireball: Använd högerpiltangenten för att skjuta eldklot
+        name_function: Skriv namnet på din funktion här

@@ -4,17 +4,17 @@ title: Hour of Code Event How-To layout: wide nav: resources_nav
 
 * * *
 
-# Hour of Code event guide
+# Kod Saatı tədbiri üçün təlimat
 
 Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
 
-## 1) Prepare for your event
+## 1) Tədbirinizə hazırlaşın
 
   * Determine a venue, date and time
   * Send [a letter](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) to invite your local mayor, congressman, governor, or influential business person to speak.
   * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= hoc_uri('/resources/press-kit') %>) for help.
 
-## 2) During your event
+## 2) Tədbir ərzində
 
   * Kick off your event with one of our [inspirational videos](<%= hoc_uri('/resources#videos') %>).
   * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= hoc_uri('/resources/stats') %>).   

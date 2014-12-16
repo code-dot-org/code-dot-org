@@ -310,8 +310,7 @@
         studio_playlab_5: 你能帮 Spacebot当被点击时 说"问候地球人"单击吗?你点击运行后, 别忘了点击它.
         studio_playlab_6: 你可以帮助女巫使用上/下/左/右方向键来走动到达所有的魔法火球吗?
         studio_playlab_7: '"永远重复"块允许您连续运行代码。您可以附加块来帮助巫師反复向右和左移动吗？'
-        studio_playlab_8: Can you add a block to score a point when the penguin runs
-          into the octopus, and then move him with the arrows until you score?
+        studio_playlab_8: 当独角兽跑进该向导中时，添加一个模块来得分和一个模块播放声音，然后用箭头移动它们直到你得分，好吗？
         studio_playlab_9: Can you add blocks to change the background and the speed
           of the penguin, and then move him with the arrows until you score?
         studio_playlab_10: 创建你自己的游戏。当你完成后时，单击Finish（完成），让朋友在他们手机上试试你的游戏。
@@ -514,6 +513,7 @@
         C4_math_artist: Programming the Artist with Math
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
+        C4_function_parameters: 有参数的函数
         C4_conditionals: 条件语句
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs

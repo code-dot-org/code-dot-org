@@ -9,7 +9,7 @@
         el teu compte en uns minuts.
     failure:
       already_authenticated: Ja has iniciat sessió.
-      inactive: El teu compte encara no s'ha activat.
+      inactive: El vostre compte encara no s'ha activat.
       invalid: Correu electrònic o contrasenya invàlids.
       invalid_token: El testimoni d'autenticació no és vàlid.
       locked: El teu compte està bloquejat.

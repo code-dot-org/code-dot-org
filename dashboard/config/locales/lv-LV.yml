@@ -36,6 +36,7 @@
   of: 'no'
   more: VAIRĀK
   less: MAZĀK
+  beta: beta
   try_hoc: 'Izmēģini "Programmēšanas stundu", spied šeit >> '
   try_k8intro: Izmēģini mūsu K-8 Ievadu Datorzinātņu kursos (15-25 stundas)
   k8intro: K-8 Ievads Datorzinātņu kursos (15-25stundas)

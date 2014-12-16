@@ -18,7 +18,7 @@ fa-AF:
   twentyhours_heading: دوره‌ی مقدماتی علوم کامپیوتر ما را شروع کنید
   twentyhours_text: اولین ساعت کدنویسی را به پایان رساندید؟ علوم کامپیوتر و مفاهیم برنامه نویسی را در درس بعدی، بیشتر یاد بگیرید.
   hoc2014_heading: 'به <a href="http://hourofcode.com">ساعتِ کدنویسی</a> بپیوندید <br/>از 8 تا 14 دسامبر  2014<br/>'
-  hoc2014_students: Students
+  hoc2014_students: دانش آموزان
   hoc2014_try: آن را امتحان کنید
   hoc2014_teachers: معلمان
   hoc2014_host: آن را میزبانی کنید
@@ -216,12 +216,12 @@ fa-AF:
   dashboard_navigation_student: 'دانش آموز: %{student_name}'
   dashboard_sections_new_section: بخش تازه
   dashboard_sections_jumbotron_instruction: ایجاد بخش های جدید و افزودن دانش آموزان به آنها. بخش ها به شما کمک میکنند دانش آموزان را در گروه های کوچکتر سازماندهی کنید تا شما بتوانید پیشرفت آنهای را پیگیری و حساب کاربری آنها را مدیریت نمایید.
-  dashboard_sections_table_section: Section
+  dashboard_sections_table_section: بخش
   dashboard_sections_table_secret: نوع ورود
-  dashboard_sections_table_grade: Grade
-  dashboard_sections_table_course: Course
-  dashboard_sections_table_students: Students
-  dashboard_sections_table_code: Section Code
+  dashboard_sections_table_grade: درجه
+  dashboard_sections_table_course: دوره
+  dashboard_sections_table_students: دانش آموزان
+  dashboard_sections_table_code: بخش کد
   dashboard_sections_name: نام بخش
   dashboard_sections_choose_secret: 'اگر شما می خواهید به دانش آموزان خود حساب کاربری ارائه کنید، یک <b>کلمه</b> یا <b>تصویر</b> سرّی برای آن بخش را انتخاب کنید.'
   dashboard_sections_secret_word: 'یک <b>کلمه</b> به شما اجازه میدهد برای هر دانش آموز یک کلمه سرّی انتخاب نمایید.'
@@ -500,31 +500,31 @@ fa-AF:
   thinkersmith_longdescription: 'با استفاده از "واژگان رباتی" از پیش تعیین شده دانش آموزان خواهند آموخت چگونه برای انجام کارهای مشخص یکدیگر را هدایت کنند بدون این که ابتدا راجع به آن ها بحث کنند. این درس به بچه ها ارتباط بین نماد ها و کار ها را می آموزد، همان طور که مهارت خیلی با ارزش رفع عیب را می آموزد. "دوستان رباتی من" برای فعایت گروهی بهترین عملکرد را دارد و یک کتاب کار آموزگار برای استفاده ی کلاسی دارد.'
   condcards_longdescription: 'درباره ی الگوریتم ها و جملات شرطی در این فعالیت "بدون اتصال" با استفاده از یک دسته کارت بیاموزید. دانش آموزان این فعالیت را در گروه ها انجام می دهند، و به یک دسته کارت در هر گروه نیاز دارند.'
   lightbotintl_longdescription: منطق برنامه نویسی هسته ای را بیاموزید، که از برنامه نویسی فوق ابتدایی، برای سنین بالای 4 سال، روی آی او اس یا اندروید (یا مرورگر وب) شروع می شود. یاد بگیرید چگونه دستورات را بخش بخش کنید، الگو ها را شناسایی کنید، از تابع ها استفاده کنید، و حلقه ها را بهینه کنید!
-  codehs_longdescription: 'Giving commands to a computer, which is what programming is all about, is just like giving commands to a dog. Learn how to code with Karel the Dog&mdash;a fun, accessible, and visual introduction to programming that teaches fundamental concepts like commands and functions to absolute beginners. Tutorial is student-directed but teachers can sign up to access teacher tools and track student success!'
-  codecademy_longdescription: "Codecademy is an interactive, student-guided introduction to the basics of CS through JavaScript that's used by tens of millions of students around the world. We've prepared a no-hassle Hour of Code experience with accompanying quizzes, slides, and a completed project for students at the end."
+  codehs_longdescription: 'دادن دستورات به یک کامپیوتر، که تمام برنامه نویسی درباره ی آن است، درست مانند دستور دادن به یک سگ است. با کارل سگه یاد بگیرید که چگونه کد بنویسید&mdash; یک معرفی جالب، قابل دسترس، و بصری برای برنامه نویسی که مباحث بنیادی مانند دستورات و تابع ها را به افراد کاملا مبتدی آموزش می دهد. آموزش توسط دانش آموزان هدایت می شود اما معلمان می توانند برای دسترسی به ابزار های معلمان ثبت نام کنند و موفقیت دانش آموزان را دنبال کنند!'
+  codecademy_longdescription: 'آکادمی کد نویسی یک معرفی تعاملی، هدایت شده توسط دانش آموز در اصول اولیه ی  CS از طریق جاوا اسکریپت است که توسط ده ها میلیون دانش آموز در سراسر دنیا مورد استفاده قرار میگیرد. ما یک تجربه ی یک ساعت کد نویسی بدون زحمت با امتحانات مرتبط، اسلاید، و در پایان یک پروژه کامل برای دانش آموزان فراهم کرده ایم.'
   codecombat_longdescription: با غول ها بجنگید تا پیتون یا جاوا اسکریپت را در این بازی برنامه نویسی حماسی یاد بگیرید!
-  codemonkey_longdescription: 'CodeMonkey is an online game that teaches coding in a real programming language! Students program a monkey to catch bananas while it gets slightly more complicated on each level. They get star scores on each solution and can share it in a single click. '
-  codeavengers_longdescription: 'Build a 2 player 2D top-down game with JavaScript in 10 short tasks. Then continue learning some basics of programming (variables and if statements) as you create a Quiz to share with friends. Along the way  earn points and badges as you compete to reach the top of the class leaderboard.'
-  processing_longdescription: An introduction to programming in the context of the visual arts using the Processing programming language. Short video lessons introduce coding exercises that lead to designing an interactive drawing program
-  robomind_longdescription: 'Students learn the basics of programming by controlling their own virtual robot. The online course is fully self-contained with short presentations, movies, quizzes and automatic guidance/hints to help with the programming exercises. '
+  codemonkey_longdescription: 'CodeMonkey یک بازی آنلاین است که برنامه نویسی را در یک زبان برنامه نویسی واقعی آموزش می دهد! دانش آموزان یک میمون را برای گرفتن موز برنامه ریزی می کنند که در هر مرحله به صورت جزئی پیچیده تر می شود. آن ها با هر راه حل ستاره امتیاز می گیرند و می توانند با یک کلیک آن را به اشتراک بگذارند. '
+  codeavengers_longdescription: یک بازی دو نفره دو بعدی با زاویه دید از بالا با جاوا اسکریپت در 10 عمل کوتاه بسازید. سپس به آموختن چند اصل برنامه نویسی (متغیر ها و جملات شرطی) ادامه دهید همان طور که یک امتحان برای اشتراک با دوستان می سازید. در طول مسیر همان طور که برای رسیدن به صدر رهبران کلاس رقابت می کنید امتیاز و مدال بدست آورید.
+  processing_longdescription: مقدمه ای بر برنامه نویسی در زمینه ی هنر های بصری با استفاده از زبان برنامه نویسی پردازشی. درس های ویدئویی کوتاه تمرین های کد نویسی را معرفی می کنند که به طراحی یک برنامه نقاشی تعاملی می انجامند
+  robomind_longdescription: 'دانش آموزان اصول اولیه برنامه نویسی را با کنترل کردن ربات مجازی خودشان می آموزند. آموزش آنلاین با ارائه های کوتاه، فیلم ها، امتحانات و هدایت/راهنمایی های اتوماتیک برای کمک در تمرینات برنامه نویسی بسیار کامل است. '
   groklearning_longdescription: 'با استفاده از زبان برنامه نویسی پایتون یک chatbot به نام "الیزا" بسازید تا به عنوان یک روان درمانگر عمل کند. شما به الیزا یاد میدهید چه بگوید و چگونه صحیح صحبت کند. آیا او میتواند دوستان شما را فریب بدهد به اینکه فکر کنند اون یک انسان است و نه یک رایانه؟'
-  quorum_longdescription: This tutorial is accessible for the visually-impaired, and works with screenreaders. Join Mary on a tour as she joins a biology lab as a programmer and learns the Quorum programming language. This tutorial is student-guided with online example activities.
-  codespark_longdescription: 'The Foos is a fun and kid-friendly way to learn about computer programming.  Program cute characters to solve puzzles and bring a virtual world to life.  The game is "word free" so all can play!'
-  kodable_longdescription: Kodable is a self-guided iPad game that introduces kids 5+ to programming basics. Having a teacher or parent nearby is optimal, but not necessary.
-  tynkerapp_longdescription: Learn to program by solving fun coding puzzles. Easily build games and stories using with themed graphics, 10+ game-kits and customizable characters. No Internet connectivity required. You can also access your creations on the web.
-  robomindnl_longdescription: 'Students learn the basics of programming by controlling their own virtual robot. The online course is fully self-contained with short presentations, movies, quizzes and automatic guidance/hints to help with the programming exercises. '
-  flappy_longdescription: Use drag-and-drop programming to make your own Flappy Bird game, and customize it to look different (Flappy Shark, Flappy Santa, whatever). Add the game to your phone in one click.
-  bitsbox_longdescription: "Customize your very own virtual tablet, then code a series of apps to play and share. Simple walkthroughs make it possible for even young kids to program real JavaScript, and the more advanced you are the further you'll go."
-  makegameswithus_longdescription: 'Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!'
-  touchdevelop_longdescription: 'The touch-friendly editor will guide you in creating pixel art, solving the bear puzzle, or making your own jumping bird game. '
-  appinventor_longdescription: Entertaining, quick video tutorials walk you through building three simple apps for your Android phone or tablet. Designed for novices and experts alike, this hour of code will get you ready to start building your own apps before you know it. Imagine sharing your own app creations with your friends! These activities are suitable for individuals and for teachers leading classes.
-  blockly_longdescription: 'Got PCs with slow (or non-existent) internet access? Download the Blockly tutorials that were the precursor of the Code.org tutorials - a single 3MB ZIP file can be loaded onto any computer or used off a memory stick'
-  thinkersmith2_longdescription: Students learn about representing and storing letters in binary, as functions of on and off. At the end, the class gets to encode their own initials to take home with them.
-  kodableunplugged_longdescription: 'Designed for use with plain paper, the fuzzFamily Frenzy is an introduction to programming logic for kids 5 and up. A teacher should explain the game, then students program a partner to complete a simple obstacle course. '
-  projguts_longdescription: 'This "unplugged" activity helps students learn how modeling and simulation works by having a group of students play different versions of the Rock / Paper / Scissors game, and see the results as different modeling experiments.'
+  quorum_longdescription: این آموزش برای افراد با مشکلات بینایی قابل دسترس است، و با صفحه خوان ها کار میکند. با یک تور به مری بپیوندید وقتی که به عنوان برنامه نویس به یک آزمایشکاه زیست شناسی ملحق می شود و زبان برنامه نویسی Quorum را می آموزد. این آموزش هدایت شده توسط دانش آموز با مثال های آنلاین است.
+  codespark_longdescription: 'Foos یک راه جالب و سازگار با کودک برای آموختن درباره ی برنامه نویسی کامپیوتر است. شخصیت های جذاب را برای حل کردن معما ها برنامه ریزی کنید و دنیای مجازی را زنده کنید. بازی "بدون کلمه" است پس همه می توانند بازی کنند!'
+  kodable_longdescription: Kodable یک بازی خود هدایت آی پد است که کودکان بالای 5 سال را با اصول اولیه ی برنامه نویسی آشنا می کند. داشتن پدر یا مادر یا یک معلم در کنار کودک رضایت بخش است، اما ضروری نیست.
+  tynkerapp_longdescription: برنامه نویسی را از طریق حل پازل های بامزه یاد بگیرید. به راحتی بازی و داستان با استفاده از گرافیک های تم دار بسازید، بیش از ۱۰ کیت بازی و شخصیت های قابل تنظیم. به هیچ ارتباط اینترنتی نیاز ندارید. علاوه بر آن شما می توانید به چیز هایی که خلق کرده اید در اینترنت درترسی پیدا کنید.
+  robomindnl_longdescription: 'دانش آموزان اصول اولیه برنامه نویسی را با کنترل کردن ربات مجازی خودشان می آموزند. آموزش آنلاین با ارائه های کوتاه، فیلم ها، امتحانات و هدایت/راهنمایی های اتوماتیک برای کمک در تمرینات برنامه نویسی بسیار کامل است. '
+  flappy_longdescription: با استفاده از برنامه نویسی به طریق کشیدن-و-انداختن بازی پرنده ی بال زن (فلپی برد) مخصوص خود را بسازید. و آن را تنظیم کنید تا قیافه ی دیگری داشته باشد (کوسه ی بال زن، بابانوئل بال زن،‌ یا هر چیز دیگر). بازی را با یک کلیک به گوشی خود انتقال بدهید.
+  bitsbox_longdescription: تبلت مجازی کاملا شخصی خودتان را سفارشی کنید، سپس کد یک سری برنامه برای بازی و به اشتراک گذاری را بنویسید. راهنمایی های ساده برنامه نویسی جاوا اسکریپت حقیقی را حتی برای کودکان امکان پذیر ساخته، و هرچه ماهرتر باشید جلوتر خواهید رفت.
+  makegameswithus_longdescription: 'کد نویسی را با ساختن یک بازی آی فون با زبان برنامه نویسی جدید و مناسب برای مبتدیان سویفت بیاموزید! یک بازی&eacute; اکشن با الهام گرفتن از Pokemon بسازید و کد نویسی کنید تا به هیولایتان حرکات جدید بیاموزید. شماخواهید آموخت چگونه از متغیر ها، تابع ها، و اشیا استفاده کنید تا به هیولایتان کمک کنید برنده شود!'
+  touchdevelop_longdescription: 'ویرایشگر touch-friendly شما را در ایجاد هنر پیکسلی، حل معمای خرس، یا ساختن بازی پرنده ی جهنده ی خودتان هدایت خواهد کرد. '
+  appinventor_longdescription: ویدئو های آموزشی سریع، و سرگرم کننده شما را در مسیر ساخت سه برنامه ی ساده برای تلفن اندروید یا تبلتتان هدایت می کنند. این ساعت کد نویسی، طراحی شده برای مبتدیان و کارشناسان شما را قبل از این که بدانید برای ساختن برنامه های خودتان آماده خواهد کرد. تصور کنید برنامه های ساخته شده توسط خودتان را با دوستانتان به اشتراک بگذارید! این فعالیت ها برای افراد و همچنین معلمانی که کلاس را هدایت می کنند مناسب هستند.
+  blockly_longdescription: 'کامپیوتر هایی با اینترنت کند( یا بدون اینترنت) دارید؟ آموزش های بلوکی که قبل از آموزش های Code.org بودند را دانلود کنید- یک فایل فشرده ی 3 مگابایتی می تواند در هر کامپیوتری بارگذاری شود یا از روی یک حافظه فلش استفاده شود'
+  thinkersmith2_longdescription: دانش آموزان درباره ی نمایش و ذخیره ی حروف در منطق دودویی، با عملکرد روشن و خاموش می آموزند. در پایان، بچه های کلاس می توانند حرف اول اسم و فامیلشان را کد کنند تا با خودشان به خانه ببرند.
+  kodableunplugged_longdescription: 'طراحی شده برای استفاده با کاغذ ساده، دیوانگی fuzzfamily مقدمه ای بر منطق برنامه نویسی برای کودکان 5 سال به بالا است. معلم باید بازی را توضیح دهد، سپس دانش آموزان برنامه یک شریک را می نویسند تا درس یک مانع ساده را کامل کنند. '
+  projguts_longdescription: 'این فعالیت " بدون اتصال" به دانش آموزان کمک می کند با بازی کردن گونه های مختلف سنگ، کاغذ، قیچی، و مشاهده ی نتایج به عنوان تجربه های مدل سازی متفاوت، بیاموزند مدل سازی و شبیه سازی چگونه کار می کند.'
   hourofcode_longdescription: جا نگهدار برای code.org/hoc جدید
   frozen_longdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
-  playlab_longdescription: Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!
+  playlab_longdescription: با Play Lab یک داستان خلق کنید یا یک بازی بسازید! حیوانات، دزدان دریایی، زامبی ها، نینجا ها، و شخصیت های بسیار بیشتری را مجبور به حرکت کنید، صدا بسازید، امتیاز بگیرید، و حتی گلوله های آتشی پرتاب کنید!
   codeorg_beyond_name: 'معرفی علوم کامپیوتر  (کلاس K-8)'
   khan_beyond_name: یادگیری برنامه نویسی کامپیوتر
   tynker_beyond_name: یادگیری برنامه نویسی در خانه
@@ -532,7 +532,7 @@ fa-AF:
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
-  scratchjr_beyond_name: ScratchJR for pre-readers
+  scratchjr_beyond_name: اسکرچ جی آر برای پیش خوانندگان
   hopscotch_beyond_name: 'Hopscotch:  بر روی iPad خودتان برنامه نویسی کنید'
   pocketcode_beyond_name: کد جیبی
   groklearning_beyond_name: یادگیری برنامه نویسی پایتون
@@ -558,7 +558,7 @@ fa-AF:
   codea_beyond_name: Codea
   lego_beyond_name: Mindstorms
   finch_beyond_name: Finch
-  arduino_beyond_name: Arduino with Sparkfun
+  arduino_beyond_name: Arduino با Sparkfun
   processing_beyond_name: برنامه با پردازش
   alice_beyond_name: Alice
   sphero_beyond_name: SPRK
@@ -678,8 +678,8 @@ fa-AF:
   tynker_beyond_longdescription: 'Tynker makes it fun & easy to learn programming. It makes it visual. Kids build games and mobile apps by arranging blocks of code. It removes the need to know programming syntax. Kids transform ideas into animated stories and math art right away. It promotes progressive learning. As kids learn fundamentals, Tynker introduces more advanced concepts including syntax driven programming.'
   scratch_beyond_longdescription: 'با اسکرچ، شما می توانید بازی های تعاملی، داستان ها، انیمیشن های &mdash; خودتان را بسازید و آن ها را با دوستانتان به اشتراک بگذارید. با انیمیشنی کردن نامتان، ساختن یک کارت پستال برای تعطیلات، یا درست کردن یک بازی پینگ پنگ دو بعدی شروع کنید.'
   lightbot_beyond_longdescription: منطق برنامه نویسی هسته ای را بیاموزید، که از برنامه نویسی فوق ابتدایی، برای سنین بالای 4 سال، روی آی او اس یا اندروید (یا مرورگر وب) شروع می شود. یاد بگیرید چگونه دستورات را بخش بخش کنید، الگو ها را شناسایی کنید، از تابع ها استفاده کنید، و حلقه ها را بهینه کنید!
-  codecademy_beyond_longdescription: "Codecademy is an interactive, student-guided introduction to the basics of CS through JavaScript that's used by tens of millions of students around the world. We've prepared a no-hassle Hour of Code experience with accompanying quizzes, slides, and a completed project for students at the end."
-  kodable_beyond_longdescription: Kodable is a self-guided iPad game that introduces kids 5+ to programming basics. Having a teacher or parent nearby is optimal, but not necessary.
+  codecademy_beyond_longdescription: 'آکادمی کد نویسی یک معرفی تعاملی، هدایت شده توسط دانش آموز در اصول اولیه ی  CS از طریق جاوا اسکریپت است که توسط ده ها میلیون دانش آموز در سراسر دنیا مورد استفاده قرار میگیرد. ما یک تجربه ی یک ساعت کد نویسی بدون زحمت با امتحانات مرتبط، اسلاید، و در پایان یک پروژه کامل برای دانش آموزان فراهم کرده ایم.'
+  kodable_beyond_longdescription: Kodable یک بازی خود هدایت آی پد است که کودکان بالای 5 سال را با اصول اولیه ی برنامه نویسی آشنا می کند. داشتن پدر یا مادر یا یک معلم در کنار کودک رضایت بخش است، اما ضروری نیست.
   scratchjr_beyond_longdescription: ScratchJr is an introductory programming language that enables young children to create their own interactive stories and games. Children snap together graphical programming blocks to make characters move, jump, dance, and sing
   hopscotch_beyond_longdescription: Student-guided tutorial on the iPad using the Hopscotch programming language. Students will build games and apps for their iPad on their iPad. Students can work individually or with friends (up to 3 per iPad).
   pocketcode_beyond_longdescription: Create your own game on your smart phone with Pocket Code! Help skydiver Steve to deliver his parcels. You can share it with friends and other users to try!
@@ -687,7 +687,7 @@ fa-AF:
   hacketyhack_beyond_longdescription: "Hackety Hack will teach you the absolute basics of programming from the ground up. No previous programming experience is needed! With Hackety Hack, you'll learn the Ruby programming language. Ruby is used for all kinds of programs, including desktop applications and websites. [Note: Desktop install required]"
   robomind_beyond_longdescription: 'Students learn the basics of programming by controling their own virtual robot. The online course is fully self-contained with short presentations, movies, quizzes and automatic guidance/hints to help with the programming exercises. '
   makegameswithus_beyond_longdescription: "Know some ObjectiveC? Learn to make an iPhone game in an hour! We'll guide you through the process, to code, test, and play your game entirely in the browser and then share it on Facebook for friends to try! No prior iPhone development experience is required. You must understand what variables, methods, and objects are."
-  appinventor_beyond_longdescription: Entertaining, quick video tutorials walk you through building three simple apps for your Android phone or tablet. Designed for novices and experts alike, this hour of code will get you ready to start building your own apps before you know it. Imagine sharing your own app creations with your friends! These activities are suitable for individuals and for teachers leading classes.
+  appinventor_beyond_longdescription: ویدئو های آموزشی سریع، و سرگرم کننده شما را در مسیر ساخت سه برنامه ی ساده برای تلفن اندروید یا تبلتتان هدایت می کنند. این ساعت کد نویسی، طراحی شده برای مبتدیان و کارشناسان شما را قبل از این که بدانید برای ساختن برنامه های خودتان آماده خواهد کرد. تصور کنید برنامه های ساخته شده توسط خودتان را با دوستانتان به اشتراک بگذارید! این فعالیت ها برای افراد و همچنین معلمانی که کلاس را هدایت می کنند مناسب هستند.
   touchdevelop_beyond_longdescription: TouchDevelop lets you create apps on iPad, iPhone, Android, PC, Mac, Windows Phone. Our touch-friendly editor makes coding fun, even on your phone or tablet!
   codehs_beyond_longdescription: 'Learn the basics of programming with Karel the Dog, a fun, accessible and visual introduction to coding, where giving commands to a computer is just like giving commands to a dog. This tutorial is great if led by a teacher, but can also be done independently. [Note: payment is required]'
   udemy_beyond_longdescription: "Whether you've never seen a line of code or you code for a living, Udemy has a course for you, taught by professional instructors. [Note: payment is required]"

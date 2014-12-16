@@ -696,18 +696,6 @@ BlocklyApps.init = function(config) {
 
       if (config.level.startBlocks) {
         BlocklyApps.editor.setValue(config.level.startBlocks);
-      } else {
-        var startText = '// ' + msg.typeHint() + '\n';
-        var codeFunctions = config.level.codeFunctions;
-        // Insert hint text from level codeFunctions into editCode area
-        if (codeFunctions) {
-          var hintText = '';
-          for (var i = 0; i < codeFunctions.length; i++) {
-            hintText += " " + codeFunctions[i].func + "();";
-          }
-          startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
-        }
-        BlocklyApps.editor.setValue(startText);
       }
     });
   }
@@ -1779,7 +1767,7 @@ exports.workspaceCode = function(blockly) {
 exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativeParentObj, maxDepth) {
   var retVal;
   if (typeof maxDepth === "undefined") {
-    maxDepth = 4; // default to 4 levels of depth
+    maxDepth = Infinity; // default to inifinite levels of depth
   }
   if (maxDepth === 0) {
     return interpreter.createPrimitive(undefined);
@@ -1827,11 +1815,11 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
 /**
  * Generate a native function wrapper for use with the JS interpreter.
  */
-exports.makeNativeMemberFunction = function (interpreter, nativeFunc, nativeParentObj) {
+exports.makeNativeMemberFunction = function (interpreter, nativeFunc, nativeParentObj, maxDepth) {
   return function() {
     // Call the native function:
     var nativeRetVal = nativeFunc.apply(nativeParentObj, arguments);
-    return exports.marshalNativeToInterpreter(interpreter, nativeRetVal, null);
+    return exports.marshalNativeToInterpreter(interpreter, nativeRetVal, null, maxDepth);
   };
 };
 
@@ -9183,7 +9171,7 @@ with (locals || {}) { (function(){
   var msg = require('../../locale/sr_sp/common');
   var hideRunButton = locals.hideRunButton || false;
 ; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((26,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');30; };; buf.push('\n');31; // A spot for the server to inject some HTML for help content.
-var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (38,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((44,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((45,  msg.runProgram() )), '</div>\n        <img src="', escape((46,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((49,  msg.resetProgram() )), '</div>\n        <img src="', escape((50,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');52; if (data.controls) { ; buf.push('\n      ', (53,  data.controls ), '\n      ');54; } ; buf.push('\n      ');55; if (data.extraControlRows) { ; buf.push('\n      ', (56,  data.extraControlRows ), '\n      ');57; } ; buf.push('\n    </div>\n\n    ');60; instructions() ; buf.push('\n    ');61; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n');66; if (data.editCode) { ; buf.push('\n  <div id="codeWorkspace">\n');68; } else { ; buf.push('\n  <div id="blockly">\n');70; } ; buf.push('\n  <div id="headers" dir="', escape((71,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((72,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span id="workspace-header-span">', escape((74,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((76,  data.blockCounterClass )), '>\n          ', escape((77,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((80,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((83,  msg.showCodeHeader() )), '</span></div>\n  </div>\n  ');85; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox" contenteditable spellcheck=false></div>\n  ');87; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
+var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (38,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((44,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((45,  msg.runProgram() )), '</div>\n        <img src="', escape((46,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((49,  msg.resetProgram() )), '</div>\n        <img src="', escape((50,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');52; if (data.controls) { ; buf.push('\n      ', (53,  data.controls ), '\n      ');54; } ; buf.push('\n      ');55; if (data.extraControlRows) { ; buf.push('\n      ', (56,  data.extraControlRows ), '\n      ');57; } ; buf.push('\n    </div>\n\n    ');60; instructions() ; buf.push('\n    ');61; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n');66; if (data.editCode) { ; buf.push('\n  <div id="codeWorkspace">\n');68; } else { ; buf.push('\n  <div id="blockly">\n');70; } ; buf.push('\n  <div id="headers" dir="', escape((71,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((72,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span id="workspace-header-span">', escape((74,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((76,  data.blockCounterClass )), '>\n          ', escape((77,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((80,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((83,  msg.showCodeHeader() )), '</span></div>\n  </div>\n  ');85; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox"></div>\n  ');87; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -10931,13 +10919,16 @@ Webapp.execute = function() {
                                           Webapp: api,
                                           console: consoleApi,
                                           JSON: JSONApi,
-                                          Globals: Webapp.Globals } );
-
+                                          Globals: Webapp.Globals });
 
         var getCallbackObj = interpreter.createObject(interpreter.FUNCTION);
+        // Only allow four levels of depth when marshalling the return value
+        // since we will occasionally return DOM Event objects which contain
+        // properties that recurse over and over...
         var wrapper = codegen.makeNativeMemberFunction(interpreter,
                                                        nativeGetCallback,
-                                                       null);
+                                                       null,
+                                                       4);
         interpreter.setProperty(scope,
                                 'getCallback',
                                 interpreter.createNativeFunction(wrapper));
@@ -11756,19 +11747,19 @@ exports.emptyBlocksErrorMsg = function(d){return "Да би блок \"Пона�
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Тело функције треба да се састоји из блокова како би радило."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "Треба да буде блокова унутар твоје дефиниције функције. Кликни \"измени\" и превуци блокове унутар зеленог блока."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "Кликни \"измени\" да би осигурао да немаш недостајућих блокова унутар твоје дефиниције функције."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "Запамти да спојиш неки блок сваком улазном параметру функцијског параметра у твом радном простору."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "Додао си параметарски блок, али га ниси користио у дефиницији. Користи параметар тако што ћеш кликнути \"измени\" и поставити блок параметра унутар зеленог блока."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "Направи параметар за своју функцију кликом на \"измени\" и додадањем неопходних параметара. Превуци нови параметарске блокове у своју дефиницију функције."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "Направио си функцију, али је ниси користио нигде у свом радном простору! Кликни на \"Функције\" у кутији алатки и користи је у свом програму."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "Покушај да замениш \"???\" неком вредношћу."};
 
 exports.extraTopBlocks = function(d){return "Имате незакачене блокове. Да ли сте хтели да их закачите за \"када се извршава\" блок?"};
 
@@ -11830,7 +11821,7 @@ exports.showBlocksHeader = function(d){return "Покажи блокове"};
 
 exports.showGeneratedCode = function(d){return "Покажи код програма"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "текст=?"};
 
 exports.subtitle = function(d){return "графичко окружење за програмирање"};
 
@@ -11859,10 +11850,6 @@ exports.saveToGallery = function(d){return "Сачувај у галерији"}
 exports.savedToGallery = function(d){return "Сачувано у галерији!"};
 
 exports.shareFailure = function(d){return "Извините, не можемо да поделимо овај програм."};
-
-exports.typeFuncs = function(d){return "Доступне функције:%1"};
-
-exports.typeHint = function(d){return "Уочи да су неопходне заграде и тачка-зарези."};
 
 exports.workspaceHeader = function(d){return "Склопи своје блокове овде: "};
 
@@ -11926,13 +11913,13 @@ exports.catVariables = function(d){return "Променљиве"};
 
 exports.continue = function(d){return "Настави"};
 
-exports.createHtmlBlock = function(d){return "create html block"};
+exports.createHtmlBlock = function(d){return "направи хипертекст блок"};
 
-exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
+exports.createHtmlBlockTooltip = function(d){return "Прави блок хипертекста у апликацији."};
 
 exports.finalLevel = function(d){return "Честитамо! Решили сте финалну слагалицу."};
 
-exports.makeYourOwn = function(d){return "Make Your Own App"};
+exports.makeYourOwn = function(d){return "Направи сопствену апликацију"};
 
 exports.nextLevel = function(d){return "Честитамо! Завршили сте слагалицу."};
 
@@ -11940,29 +11927,29 @@ exports.no = function(d){return "не"};
 
 exports.numBlocksNeeded = function(d){return "Ова слагалица може бити решена са %1 блоком."};
 
-exports.pause = function(d){return "Pause"};
+exports.pause = function(d){return "Прелом"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
+exports.reinfFeedbackMsg = function(d){return "Можеш притиснути дугме \"Пробај опет\" да се вратиш на покретање своје апликације."};
 
 exports.repeatForever = function(d){return "repeat forever"};
 
 exports.repeatDo = function(d){return "уради"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
+exports.repeatForeverTooltip = function(d){return "Изврши акције у овом блоку више пута док је апликација покренута."};
 
-exports.shareWebappTwitter = function(d){return "Check out the app I made. I wrote it myself with @codeorg"};
+exports.shareWebappTwitter = function(d){return "Види какву сам апликацију направио. Сам сам је написао са @codeorg"};
 
-exports.shareGame = function(d){return "Share your app:"};
+exports.shareGame = function(d){return "Подели своју апликацију:"};
 
-exports.stepIn = function(d){return "Step in"};
+exports.stepIn = function(d){return "Ускочи"};
 
-exports.stepOver = function(d){return "Step over"};
+exports.stepOver = function(d){return "Прескочи"};
 
-exports.stepOut = function(d){return "Step out"};
+exports.stepOut = function(d){return "Искочи"};
 
-exports.turnBlack = function(d){return "turn black"};
+exports.turnBlack = function(d){return "зацрни"};
 
-exports.turnBlackTooltip = function(d){return "Turns the screen black."};
+exports.turnBlackTooltip = function(d){return "Затамњује екран."};
 
 exports.yes = function(d){return "Да"};
 

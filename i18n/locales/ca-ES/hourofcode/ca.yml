@@ -90,11 +90,11 @@
   map_header: "# Esdeveniments d'Hora de Codi de tot el món"
   map_header_company: '# by company organizers'
   map_search_placeholder: "Search for Hour of Code events"
-  map_search_search: "Search"
+  map_search_search: "Cerca"
   map_search_reset: "Reset"
-  meta_tag_og_title: "The Hour of Code is here"
+  meta_tag_og_title: "L'Hora de Codi és aquí"
   meta_tag_og_description: "L'Hora de Codi és un moviment mundial que arriba a desenes de milions d'estudiants en més de 180 països i més de 30 llengües. Edat 4 a 104."
-  meta_tag_twitter_title: "The Hour of Code is here"
+  meta_tag_twitter_title: "L'Hora de Codi és aquí"
   meta_tag_twitter_description: "L'Hora de Codi és un moviment mundial que arriba a desenes de milions d'estudiants en més de 180 països i més de 30 llengües. Edat 4 a 104."
   twitter_default_text: 'Jo estic participant en aquest any de #HourOfCode, i tu? @codeorg'
   hardware_prizes_form_name_label: "El teu nom"
@@ -167,7 +167,8 @@
   stats_girls_million: "Més de 10 milions de noies en 2013"
   stats_nina: '"Cada dia dona els mateixos resultats &mdash; 100% addictiu."-Nina Nichols Peery, professora'
   stats_student: '"Sabia que era una oportunitat <b>irrepetible</b>."-Mariana Alzate, 5è curs'
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  stats_michael: |-
+    <b>Mai</b> no havia vist els meus alumnes tan entusiasmats amb l'aprenentatge." -Michael Clark, professor
   resources_how_to: "Manual per a professors"
   resources_how_to_events: "Event how-to guide"
   resources_how_to_districts: "How-to guide for districts"

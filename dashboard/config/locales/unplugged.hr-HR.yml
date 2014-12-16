@@ -207,7 +207,7 @@
           string and beads.
         video: C3_functional_suncatchers
       SongwritingParameters:
-        title: Songwriting with Parameters
+        title: Pisanje pjesama s parametrima
         desc: Students use the concept of the chorus in a song to learn about passing
           parameters (which customize a function without having to rewrite the entire
           function).
@@ -288,8 +288,8 @@
         title: Booleans
         desc: Booleans lesson description
       ConditionalsPiecewiseFunctions:
-        title: Conditionals and Piecewise Functions
+        title: Uvjeti i Funkcije po dijelovima
         desc: Conditionals and Piecewise Functions lesson description
       CollisionDetection:
-        title: Collision Detection
+        title: Opažanje sudara
         desc: Collision Detection lesson description

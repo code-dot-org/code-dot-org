@@ -36,6 +36,7 @@
   of: von
   more: MEHR
   less: WENIGER
+  beta: Beta
   try_hoc: Probiere "The Hour of Code" aus, klicke hier >> 
   try_k8intro: Versuche unseren Einführungskurs in die Informatik (15-25 Stunden)
   k8intro: Einführung in die Informatik (15-25 Stunden)
@@ -612,5 +613,5 @@
     furthest_level_attempted: Höchste Ebene versucht
   studio:
     courses_working_on: Courses you're working on
-    completed_courses: Completed courses
-    all_courses: All courses
+    completed_courses: Abgeschlossene Kurse
+    all_courses: Alle Kurse

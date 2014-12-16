@@ -43,13 +43,12 @@ Students will use the Calc app to begin looking at math as a language, and more 
 
 
 ### <a name="Vocab"></a> 1) Vocabulary
-This lesson has six new and important words:<br/>
+This lesson has five new and important words:<br/>
 
 - **Evaluation Block** - a block of code that represents the structure of an expression
 - **Evaluate** - perform the computation in an expression, producing an answer
 - **Expression** - a computation written in the rules of some language (such as arithmetic, code, or an Evaluation Block)
 - **Function** - a mathematical object that takes in some inputs and produces an output
-- **Programming Language** - a set of rules for writing code that a computer can evaluate
 - **Value** - a specific piece of data, like 5 or "hello"
 
 ### <a name="GetStarted"></a> 2) Introduction

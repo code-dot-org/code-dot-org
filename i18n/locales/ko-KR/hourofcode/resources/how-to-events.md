@@ -69,7 +69,7 @@ title: Hour of Code Event How-To layout: wide nav: resources_nav
   </tr>
   
   <td>
-    10:05-10:15 am
+    10:05-11:15 am
   </td>
   
   <td>

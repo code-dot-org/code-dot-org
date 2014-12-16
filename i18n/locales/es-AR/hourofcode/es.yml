@@ -89,12 +89,12 @@
   signup_thank_you_message: "Te enviamos un email de confirmación con la información que le ayudará a comenzar."
   map_header: '# Eventos "Hora del Código" alrededor del mundo'
   map_header_company: '#por los organizadores de la compañía'
-  map_search_placeholder: "Search for Hour of Code events"
-  map_search_search: "Search"
-  map_search_reset: "Reset"
-  meta_tag_og_title: "The Hour of Code is here"
+  map_search_placeholder: "Buscar eventos de la Hora del código"
+  map_search_search: "Buscar"
+  map_search_reset: "Reestablecer"
+  meta_tag_og_title: "La Hora del código está aquí"
   meta_tag_og_description: "La Hora del Código es un movimiento mundial que llega a decenas de millones de estudiantes en más de 180 países y más de 30 idiomas. Edades 4 a 104."
-  meta_tag_twitter_title: "The Hour of Code is here"
+  meta_tag_twitter_title: "La Hora del código está aquí"
   meta_tag_twitter_description: "La Hora del Código es un movimiento mundial que llega a decenas de millones de estudiantes en más de 180 países y más de 30 idiomas. Edades 4 a 104."
   twitter_default_text: 'Yo participo este año en #HoraDeCódigo, ¿Y tú? @codeorg'
   hardware_prizes_form_name_label: "Tu nombre"

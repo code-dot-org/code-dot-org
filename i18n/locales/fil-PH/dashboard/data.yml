@@ -351,23 +351,21 @@ fil:
       frozen line:
         instructions: Kumusta! Ako si Elsa ng Arendelle. Tulungan mo ako gumawa ng isang linya.
       frozen perpendicular:
-        instructions: |-
-          Now let's see if we can create two lines that are at a 90 degree angle to each other. You will need to use the "Turn" block as well as the "Move" block.
+        instructions: 'Ngayon tingnan natin kung maaari na lumikha ng dalawang mga linya na nasa 90 degree na angulo sa bawat isa. Kailanganin mong gamitin ang "Turn" block pati na rin ang "Move" block.'
       frozen square iterative:
-        instructions: "It seems like we're halfway to making a square. Let's put 4 lines together to create a square."
+        instructions: 'Mukhang tayo ay asa  kalahati na sa paggawa ng isang parisukat. Ipagsama natin ang 4 na mga linya upang lumikha ng isang parisukat.'
       frozen square loop:
-        instructions: |-
-          Hi, I'm Anna of Arendelle! Let's make a square with the "Repeat" block, which uses fewer blocks. How many times (???) should the "Repeat" block loop the blocks inside it to make a square?
+        instructions: 'Kumusta, ako si Anna ng Arendelle! Gumawa ng isang parisukat na may "Repeat" block na gumagamit ng mas kaunting mga block. Gaano karaming beses (???) na " Repeat" block ang iikot sa loob ng mga block upang gumawa ng isang parisukat?'
       frozen square loop 3x:
-        instructions: "Let's create three squares, turning after each square. Be sure to turn by 120 degrees before each new square."
+        instructions: Tayo ay gumawa ng tatlong square, naiikot pagkatapos ng bawat square. Siguraduhin na iikot ito ng 120 degrees bago ang bawat square.
       frozen square snowflake:
-        instructions: 'Can you create a snowflake using the "Repeat" block to make a square 10 times, and the "Turn" block to turn 36 degrees between each square?'
+        instructions: 'Maaari kang bang lumikha ng isang snowflake gamit ang "Repeat" block upang gumawa ng isang parisukat ng 10 beses, at ang "Turn" block upang umikot ng 36 degrees sa pagitan ng bawat square?'
       frozen cross:
-        instructions: 'Use the "Repeat" block to create a plus sign. Did you notice Elsa can move forward and backward?'
+        instructions: 'Gamitin ang "Repeat" block upang lumikha ng plus sign. Mapapansin mo ba na si Elsa ay maaaring gumalaw ng pasulong at paatras?'
       frozen cross rotate:
-        instructions: Now try repeating it 10 times. How many degrees do you need to turn between each line?
+        instructions: Ngayon subukang ulitin ito ng 10 beses. Gaano karaming degree ang kailangang mo iikot sa pagitan ng bawat linya?
       frozen cross rotate dense:
-        instructions: "Let's repeat it 90 times! How many times does 90 go into 360? Hint: It's a really small number."
+        instructions: 'Ulitin natin ito ng 90 beses! Gaano karaming beses ang 90 ay  makaabot sa 360? Hint: Ito ay isang maliit na bilang.'
       frozen diamond:
         instructions: "Let's create a parallelogram. It's just like a square but has different angles: 60 and 120 degree angles instead of 90 degree angles."
       frozen diamond mini snowflake:
@@ -386,11 +384,11 @@ fil:
         instructions: |-
           Here's a "Create circle" block that can make circles of different sizes. Can you use this to create a small circle of size 5 and a larger circle of size 10?
       frozen snowflower:
-        instructions: Intricate snow patterns can be created with very simple shapes. Can you make a pattern by repeating 5 circles of size 5 and 5 circles of size 10?
+        instructions: Ang kakaibang mga pattern ng snow ay maaaring malikha gamit ang napaka-simpleng hugis. Maaari kang bang gumawa ng pattern sa paguulit ng 5 circle na size 5 at 5 circle na size 10?
       frozen snowflake branch:
         instructions: 'Try using the "Create a snowflake branch" block to create three branches, which starts to look like a snowflake.'
       frozen snowflake full:
-        instructions: "Now let's repeat it 8 times to make a beautiful snowflake!"
+        instructions: Ngayon ulitin natin ito ng 8 beses upang makagawa ng isang magandang snowflake!
       frozen freeplay:
         instructions: "You've officially become a master artist! Create a winter wonderland."
       scrat 16:
@@ -509,6 +507,7 @@ fil:
         C4_math_artist: Programming the Artist with Math
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
+        C4_function_parameters: Mga function na meron mga parameter
         C4_conditionals: Mga conditional
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs

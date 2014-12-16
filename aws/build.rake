@@ -163,7 +163,7 @@ $websites = build_task('websites', [deploy_dir('rebuild'), BLOCKLY_COMMIT_TASK])
         RakeUtils.rake 'seed:script_cache_to_redis'
       end
 
-      thread_count = 1 + (CDO.app_servers.keys.count / 10)
+      thread_count = 2
       threaded_each CDO.app_servers.keys, thread_count do |name|
         upgrade_frontend name, CDO.app_servers[name]
       end

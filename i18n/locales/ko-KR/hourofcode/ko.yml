@@ -89,12 +89,12 @@
   signup_thank_you_message: "이벤트 시작 관련 도움자료를 보내드리기 위한 확인 메일을 발송하였습니다."
   map_header: '# 전세계적으로 운영되는 Hour of Code 이벤트들'
   map_header_company: '# 개의 회사들이 행사를 조직/운영하고 있습니다.'
-  map_search_placeholder: "Search for Hour of Code events"
-  map_search_search: "Search"
-  map_search_reset: "Reset"
-  meta_tag_og_title: "The Hour of Code is here"
+  map_search_placeholder: "Hour of Code 행사 검색"
+  map_search_search: "검색"
+  map_search_reset: "다시 설정"
+  meta_tag_og_title: "검색된 Hour of Code 행사"
   meta_tag_og_description: "Hour of Code 행사는 전세계적으로 진행되며 180개국 이상에서 30개 이상의 언어로 4세부터 104세까지 수천만 명의 학생들과 함께하려고 합니다."
-  meta_tag_twitter_title: "The Hour of Code is here"
+  meta_tag_twitter_title: "검색된 Hour of Code 행사"
   meta_tag_twitter_description: "Hour of Code 행사는 전세계적으로 진행되며 180개국 이상에서 30개 이상의 언어로 4세부터 104세까지 수천만 명의 학생들과 함께하려고 합니다."
   twitter_default_text: '저는 이번 #HourOfCode 행사에 참여하려고 합니다. 여러분은요? @codeorg'
   hardware_prizes_form_name_label: "이름"

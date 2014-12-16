@@ -189,7 +189,7 @@ sk-SK:
   dashboard_landing_available_title: Dostupné kurzy
   dashboard_landing_available_courses: Tu sú aktuálne dostupné kurzy pre vás a vašich študentov.
   dashboard_landing_loading: Načítavanie...
-  dashboard_action_edit: Edit
+  dashboard_action_edit: Upraviť
   dashboard_action_save: Uložiť
   dashboard_action_save_all: Uložiť všetko
   dashboard_action_cancel: Zrušiť
@@ -511,10 +511,10 @@ sk-SK:
   quorum_longdescription: Toto cvičenie je prístupné aj pre zrakovo postihnutých a pracuje s čítačkou obrazovky. Pripoj sak Márii, ktorá nastupuje do biologického laboratória ako programátorka a učí sa programovací jazyk Quorum. Toto cvičenie si riadi žiak sám a obsahuje online príklady úloh.
   codespark_longdescription: 'Rodinka Foo je zábavná forma výuky programovania. Programuj pekné postavičky, ktoré riešia hlavolamy a prenes virtuálny svet do života. Táto hraje úplne "bez slov", tak si môže zahrať každý!'
   kodable_longdescription: Kodable je hra pre iPad, ktorá deťom od 5 rokov predstaví základy programovania. Prítomnosť učiteľa je vhodná, ale nie je pre túto hru nutná.
-  tynkerapp_longdescription: Learn to program by solving fun coding puzzles. Easily build games and stories using with themed graphics, 10+ game-kits and customizable characters. No Internet connectivity required. You can also access your creations on the web.
+  tynkerapp_longdescription: Naučte sa programovať pri riešení zábavných hádaniek. Ľahko tvorte hry a príbehy používaním grafických motívov, stavebníc a prispôsobiteľných postavičiek. Pripojenie k Internetu nie je nutné. Ku svojim výtvorom sa dostanete aj na webe.
   robomindnl_longdescription: 'Žiaci sa naučia základy programovania riadením vlastného virtuálneho robota. Online kurz je plne sebestačný s krátkymi prezentáciami, filmami, kvízmi a automatickým vedením a tipmi na pomoc pri programovacích cvičeniach. '
-  flappy_longdescription: Use drag-and-drop programming to make your own Flappy Bird game, and customize it to look different (Flappy Shark, Flappy Santa, whatever). Add the game to your phone in one click.
-  bitsbox_longdescription: "Customize your very own virtual tablet, then code a series of apps to play and share. Simple walkthroughs make it possible for even young kids to program real JavaScript, and the more advanced you are the further you'll go."
+  flappy_longdescription: 'Vytvorte vlastnú hru Flappy Bird pomocou drag & drop programovania, ktorú si môžete prispôsobiť nech vypadá inak (Flappy žralok, Flappy Santa, čokoľvek). Hru do telefónu pridáte jedným klikom.'
+  bitsbox_longdescription: Prispôsobte si svoj vlastný virtuálny tablet a potom nakódujte sadu hier na hranie a zdieľanie. Vďaka jednoduchým návodom môžu aj malé deti programovať v reálnom JavaScripte a čím ste pokročilejší, tým ďalej zájdete.
   makegameswithus_longdescription: 'Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!'
   touchdevelop_longdescription: 'Grafický editor na dotykové ovládanie Ťa prevedie vytváraním umeia v pixeloch, riešením medvedích hádaniek a tvorbou vašej vlastnej hry so skákajúcim vtáčikom. '
   appinventor_longdescription: Entertaining, quick video tutorials walk you through building three simple apps for your Android phone or tablet. Designed for novices and experts alike, this hour of code will get you ready to start building your own apps before you know it. Imagine sharing your own app creations with your friends! These activities are suitable for individuals and for teachers leading classes.

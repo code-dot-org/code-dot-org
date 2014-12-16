@@ -28,7 +28,7 @@
           desc: Hodina kódovania
           Maze: Úroveň 1
         Edit Code:
-          desc: Edit Code
+          desc: Upraviť kód (beta)
           MazeEC: Úroveň 1
         2014 Levels:
           desc: 2014 Puzzles (beta)
@@ -46,7 +46,7 @@
           desc: Maze (beta)
           MazeStep: Stage Step
         edit-code:
-          desc: Edit Code (beta)
+          desc: Upraviť kód (beta)
           MazeEC: Úroveň 1
           Webapp: Úroveň 2
           ArtistEC: Úroveň 3
@@ -741,6 +741,7 @@
         C4_math_artist: Programming the Artist with Math
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
+        C4_function_parameters: Functions with Parameters
         C4_conditionals: Conditionals
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs

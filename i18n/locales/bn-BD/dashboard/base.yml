@@ -36,6 +36,7 @@ bn:
   of: এর
   more: বেশি
   less: কম
+  beta: beta
   try_hoc: 'Hour of Code এ আসতে, এখানে ক্লিক করো>>'
   try_k8intro: Try our K-8 Intro to Computer Science Course (15-25 hours)
   k8intro: K-8 Intro to Computer Science Course (15-25 hours)

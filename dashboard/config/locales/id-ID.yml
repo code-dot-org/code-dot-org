@@ -21,7 +21,7 @@
   welcome_back: Selamat datang kembali, %{name}
   add_teacher_form:
     code:
-      label: 'Tambahkan guru:'
+      label: 'Tambahkan seorang guru:'
       placeholder: Kode Bagian (ABCDEF)
     submit: Cantumkan nama guru
   add_hint_form:
@@ -36,6 +36,7 @@
   of: dari
   more: lebih
   less: KURANG
+  beta: Percobaan
   try_hoc: 'Cobalah Jam Kode, klik di sini >> '
   try_k8intro: Cobalah pendahuluan K-8 kami tentang pelajaran ilmu komputer (15-25
     jam)
@@ -525,7 +526,7 @@
     caption_time_ago: '%{time_ago} yang lalu'
     header: Galeri
     header_playlab: Play Lab
-    header_artist: Artist
+    header_artist: Artis
   landing:
     prerelease: Kursus ini dalam <span class='betatext'>beta</span>.  Ini bukan berarti
       sebuah kursus final dan ditujukan untuk revisi saat usulan diterima dan pengembangan

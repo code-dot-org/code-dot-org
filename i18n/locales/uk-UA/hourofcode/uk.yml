@@ -89,12 +89,12 @@
   signup_thank_you_message: "Ми надішлемо лист-підтвердження з додатковою інформацією."
   map_header: "Заходи Години коду по всьому світу"
   map_header_company: '# від організаторів'
-  map_search_placeholder: "Search for Hour of Code events"
-  map_search_search: "Search"
-  map_search_reset: "Reset"
-  meta_tag_og_title: "The Hour of Code is here"
+  map_search_placeholder: "Пошук заходів Години коду"
+  map_search_search: "Пошук"
+  map_search_reset: "Скидання"
+  meta_tag_og_title: "Прийшла Година коду"
   meta_tag_og_description: "Година коду є глобальним рухом, який залучає десятки мільйони учнів із більш як 180 країн, які розмовляють 30 мовами. Для будь-якого віку від 4 до 104."
-  meta_tag_twitter_title: "The Hour of Code is here"
+  meta_tag_twitter_title: "Прийшла Година коду"
   meta_tag_twitter_description: "Година коду є глобальним рухом, який залучає десятки мільйони учнів із більш як 180 країн, які розмовляють 30 мовами. Для будь-якого віку від 4 до 104."
   twitter_default_text: 'Я беру участь в цьогорічній #HourOfCode, а ви? @codeorg'
   hardware_prizes_form_name_label: "Ваше ім'я"

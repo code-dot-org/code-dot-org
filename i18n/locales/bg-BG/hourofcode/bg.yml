@@ -1,6 +1,6 @@
 "bg":
   site_name: "ЧАС на КОДИРАНЕТО"
-  language: "Английски"
+  language: "български"
   front_title: "Присъединете се към най-голямото събитие за обучение в историята, 8-14 декември 2014"
   coming_soon: "Очаквайте скоро"
   front_header_banner: "Присъединете се към най-голямото събитие за обучение в историята, 8-14 декември 2014"
@@ -89,12 +89,12 @@
   signup_thank_you_message: "Ние ще ви изпратим имейл за потвърждение с информация, която да ви помогне да започнете."
   map_header: "Часът на кодирането събития по света"
   map_header_company: '# организатори от компании'
-  map_search_placeholder: "Search for Hour of Code events"
-  map_search_search: "Search"
-  map_search_reset: "Reset"
-  meta_tag_og_title: "The Hour of Code is here"
+  map_search_placeholder: "Търсене на събития"
+  map_search_search: "Търси"
+  map_search_reset: "Изчистване"
+  meta_tag_og_title: "Часът на Кода е тук"
   meta_tag_og_description: "Часът на кодирането е глобално движение, достигащо до десетки милиони ученици от 180+ страни на над 30 езика. Допустима възраст от 4 до 104."
-  meta_tag_twitter_title: "The Hour of Code is here"
+  meta_tag_twitter_title: "Часът на Кода е тук"
   meta_tag_twitter_description: "Часът на кодирането е глобално движение, достигащо до десетки милиони ученици от 180+ страни на над 30 езика. Допустима възраст от 4 до 104."
   twitter_default_text: 'Аз ще участвам тази година в #HourOfCode, а ти? @codeorg'
   hardware_prizes_form_name_label: "Вашето име"

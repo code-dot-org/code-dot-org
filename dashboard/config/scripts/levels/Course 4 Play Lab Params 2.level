@@ -28,7 +28,10 @@
     ],
     "use_contract_editor": "false",
     "coordinate_grid_background": "false",
-    "embed": "false"
+    "embed": "false",
+    "disable_sharing": "false",
+    "maze_data": null,
+    "protaganist_sprite_index": "0"
   }
 }]]></config>
   <blocks>
