@@ -4,9 +4,13 @@ nav: about_nav
 ---
 # Job Openings at Code.org
 
+## K-8 Program Manager##**Job Summary:**
+Code.org is looking for a K-8 Program Manager specializing in Middle School CS to support the goals of Code.org’s Education team through the development of middle school computer science curricula and a related professional development model. Responsibilities of the position include:- Sharing responsibility with the K-8 team for executing on a middle school education vision for the organization that includes integrating CS into Math and Science.- Designing, testing, revising, executing, managing, and evaluating a highly-scalable professional development model for the middle school programs.- Create both online and written middle school curricula; includes coordinating with internal teams (Development Team and Videographer) and third party vendors- Aligning middle school efforts with elementary and high school efforts- Collaborating with Product Team to develop curriculum-specific technology tools - Refining specs with Product Team for teacher dashboard
+- Working with video team to create/integrate educational videos in curriculum- Transition between elementary and middle school programs, as needed- Collaborating with remote Education team members**Qualifications:**The ideal candidate will have a Bachelor’s degree or higher in Education and 2-3 years of recent relevant computer science, mathematics, or science experience in a K-12 school setting. They also will have had experience working with the Math Common Core and Next Generation Science Standards within a curriculum writing and/or professional development capacity. Technology industry experience a plus.Must have strong leadership skills, possess exceptional writing and communications ability in English, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.Interested candidates should email a resume and cover letter, outlining how your skills and experience meet the qualifications of the position, to jobs@code.org. You may also choose to include a LinkedIn or related online profile
 
-## Highschool Program Manager##
+## High School Program Manager##
 **Job Summary:**
+
 Code.org is looking for a High School Program Manager to work with and support the goals of Code.org’s Education team through the development of high school computer science curriculum and related professional development.
 
 Code.org’s Education team designs and develops original computer science curriculum, while also supporting existing curricular projects in partnership with others.  While each Education member takes ownership of large parts of projects, we share work and tasks across projects to make sure all of our projects are aligned under the same philosophical model and contribute to a cohesive K-12 CS pathway.
@@ -22,9 +26,11 @@ Responsibilities of the position include:
 
 The ideal candidate has related experience working with a team to design, develop, write, or implement curricular, educational or software products that have gone to market. 
 
-The candidate should have a Bachelor’s degree or higher in Education and a minimum of two (2) years of recent relevant introductory computer science experience at a secondary level (grades 6-12). Prior curriculum and professional development experience preferred. Must have strong leadership skills, possess exceptional writing and communications ability in English, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must
+The candidate should have a Bachelor’s degree or higher in Education and a minimum of two (2) years of recent relevant introductory computer science experience at a secondary level (grades 6-12). Prior curriculum and professional development experience preferred. Must have strong leadership skills, possess exceptional writing and communications ability in English, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.
 
 Interested candidates should email a resume and cover letter, outlining how your skills and experience meet the qualifications of the position, to jobs@code.org. Please highlight relevant experience in working with a team to design, develop, write, or implement curricular, educational or software products that have gone to market. You may also choose to include a LinkedIn or related online profile.
+
+**Location:** Seattle is preferred, but remote work is possible.
 
 ## Data Scientist##
 
@@ -121,34 +127,6 @@ Must be a self-starter, multi-tasker, excel under pressure, and work independent
 Ability and willingness to travel up to 25% of the time is required.
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-## Operations Program Coordinator (Seattle)
-
-**Job Summary:** 
-
-Code.org is recruiting for an experienced Program Coordinator, an event planning expert, to join our  Operations team. Responsibilities of the position include coordinating event logistics  for teacher workshops on a national basis (dates, location, travel, accommodations, and catering), managing event participant lists, drafting communications to stakeholders, responding to requests for information and distributing materials externally. Full-time, salaried. Responsibilities of the position include:
-
-- Coordinate event logistics (dates, location, travel, accommodations, catering); act as primary logistics point-of-contact
-- Update and manage event participant lists
-- Draft communications to stakeholders; use mark-up to create e-mail communications
-- Utilize customer service system to respond to questions in a timely manner
-- Analyze survey results and report findings to Operations Manager
-- Attend and participate in meetings and record notes/follow-up items, as appropriate
-- Respond to requests for information, distribute materials externally
-- Special projects (perform research, prepare documentation, develop templates, etc.)
-
-**Qualifications:**
-
-- Minimum of 1-2 years of experience as an event planner
-- Demonstrates interest and aptitude for utilizing technology to automate routine functions and has strong administrative and event planning skills
-- Excellent customer service attitude
-- Must be extremely detail-oriented, possess exceptional writing and communications ability in English, and be tech-savvy (computer science background/experience not required)
-- Candidate should be flexible and willing to work in a fast-paced, start-up environment
-- Proficiency in working with Google Docs and Microsoft Office a must
-
-Minimal travel (0-5% of the time) is required.
-
-Email cover letter and resume to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## Operations/Developer (Seattle)
 

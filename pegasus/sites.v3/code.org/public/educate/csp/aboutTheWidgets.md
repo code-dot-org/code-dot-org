@@ -23,20 +23,18 @@ Many of the widgets employed in this curriculum were originally developed at the
 
 ## Usage: Mileage May Vary
 
-1. These widgets were rapidly prototyped (in many cases, poorly) by Baker Franke as a proof of concept to see if they actually helped foster better understanding of CS concepts in the context of a lesson. 
+1. These widgets were rapidly prototyped by Baker Franke as a proof of concept to see if they actually helped foster better understanding of CS concepts in the context of a lesson. 
 
 2. Most of the widgets **do not** contain usage instructions on the page.  You need to read the associated lesson to understand the context of how to use it and what it can and cannot do.
 
 3. In the case of the ***Sending Bits Widgets***...
 
-	3. Students are *actually* posting data to a remote database (Parse.com) the content of which is not montitored, and they and can more or less post any text they like.  Use with caution if you school has policies about such things. 
-	3. At the moment there is a limit on the number of database requests-per-second that the widget can handle.  If you or your students do things to push that limit you won't break anything (permenantly), but data will just stop flowing and you'll end up with a lot of confused students.  It is most likely that a single classroom would hit the limit during **lesson 4** the first time you use the widget.
-	3. Somewhat counter-intuitively the limits on the widget are not related to the amount of data posted or retrived, but the number of times students click "send" or "recv".
+	3. Students are *actually* posting data to a remote database (Parse.com) the content of which is not monitored, and they can more or less post any text they like.  Use with caution if your school has policies about such things. 
+	3. At the moment there is a limit on the number of database requests-per-second that the widget can handle.  If you or your students do things to push that limit you won't break anything (permanently), but data will just stop flowing and you'll end up with a lot of confused students.  It is most likely that a single classroom would hit the limit during **lesson 4** the first time you use the widget.
+	3. Somewhat counter-intuitively the limits on the widget are not related to the amount of data posted or retrieved, but the number of times students click "send" or "recv".
 
 4. If you have questions about usage or would like to give feedback please do so in the [CSP Forum](https://support.code.org/hc/communities/public/topics/200138206-CS-Principles)
 
 Thanks all,
 
-Baker Franke
-Curriculum Development Manager
-Code.org
+Baker Franke, Curriculum Development Manager, Code.org

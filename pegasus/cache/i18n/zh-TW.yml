@@ -214,7 +214,7 @@
   dashboard_navigation_section_lesson_plans: 教案和資源
   dashboard_navigation_section_community: 説明和社區
   dashboard_navigation_section_pd: 專業發展
-  dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
+  dashboard_navigation_section_speakers: 電腦科學 <br/> 特邀演講者
   dashboard_navigation_all_sections: 學生戶口及進度
   dashboard_navigation_view_progress: 查看進度
   dashboard_navigation_add_students: 新增學生
@@ -377,8 +377,8 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: 剪刀、石頭，布
-  hourofcode_name: Placeholder for new code.org/hoc
-  playlab_name: Placeholder for code.org/s/playlab
+  hourofcode_name: 新的 code.org/hoc 的預留位置
+  playlab_name: 播放實驗室
   codeorg_gradelevel: 適合年齡自 4 至104歲
   codeintl_gradelevel: 適合年齡自 4 至104歲
   thinkersmithspanish_gradelevel: Por todos
@@ -429,14 +429,14 @@
   khanfr_platformtext: 當代 Web 瀏覽器
   khanpl_platformtext: 當代 Web 瀏覽器
   tynker_platformtext: 當代 Web 瀏覽器
-  scratch_platformtext: 所有瀏覽器
+  scratch_platformtext: 僅桌面 web 瀏覽器 (而不是平板電腦)
   lightbot_platformtext: 所有瀏覽器和 iOS、 Android系統或遊戲器
   thinkersmith_platformtext: 不插電的
   condcards_platformtext: 非不插電
   lightbotintl_platformtext: iOS，Android系統 （或 web 瀏覽器）
   codehs_platformtext: 現代的瀏覽器。(後續課程需要 $$)
   codecademy_platformtext: 當代 web 瀏覽器。iOS，Android Apps。
-  codecombat_platformtext: 當代 Web 瀏覽器
+  codecombat_platformtext: 現代的瀏覽器。(後續課程需要 $$)
   codemonkey_platformtext: 當代 Web 瀏覽器
   codeavengers_platformtext: 當代 Web 瀏覽器
   processing_platformtext: 當代 Web 瀏覽器
@@ -488,7 +488,7 @@
   tynkerapp_shortdescription: '學習程式設計求解樂趣編碼的難題。 '
   robomindnl_shortdescription: 為虛擬機器器人編寫程式碼
   flappy_shortdescription: 用Flappy鳥、鯊魚或潛艇設計出自己的遊戲
-  bitsbox_shortdescription: 使用真正的 JAVAscript 程式碼設計一系列的App來玩及分享。
+  bitsbox_shortdescription: 編寫一系列的Apps代碼來播放和共用，使用真正的 JavaScript 。
   makegameswithus_shortdescription: 設計一個 iPhone 遊戲 ！學習用程式碼來教你的怪物移動 ！
   touchdevelop_shortdescription: 解謎，建立遊戲，和學習程式碼都在您的手機上完成。
   appinventor_shortdescription: 建立自己的應用程式 ！（只限安卓系統）
@@ -496,9 +496,9 @@
   thinkersmith2_shortdescription: 瞭解電腦如何使用 0 和 1 來表示的資訊
   kodableunplugged_shortdescription: 一個有趣的拔出練習
   projguts_shortdescription: 嘗試建模與模擬使用石頭/布/剪刀
-  hourofcode_shortdescription: Placeholder for new code.org/hoc
+  hourofcode_shortdescription: 新的 code.org/hoc 的預留位置
   frozen_shortdescription: 讓我們使用程式碼加入安娜(Anna)和愛莎(Elsa)一同探索神奇而美麗的冰。
-  playlab_shortdescription: Placeholder for code.org/s/playlab
+  playlab_shortdescription: 創建一個故事或做遊戲玩實驗室！
   codeorg_longdescription: 學習電腦科學與阻力的基本概念，並將程式設計。這是主演視頻講座由比爾 · 蓋茨、 馬克 · 朱克伯格、 憤怒的小鳥和植物大戰僵屍的遊戲一樣，自編自導自演的教程。瞭解重複迴圈、
     條件和基本演算法。在 34 種語言中可用。
   codeintl_longdescription: 學習電腦科學與阻力的基本概念，並將程式設計。這是主演視頻講座由比爾 · 蓋茨、 馬克 · 朱克伯格、 憤怒的小鳥和植物大戰僵屍的遊戲一樣，自編自導自演的教程。瞭解重複迴圈、
@@ -541,7 +541,7 @@
   flappy_longdescription: 使用拖放式的程式語言設計你自己Flappy鳥遊戲，並可自訂它不同的外觀 （Flappy鯊魚、Flappy聖誕老人、或任何角色）。只要按一下，就可將遊戲加到您的手機中。
   bitsbox_longdescription: 自訂您自己的虛擬平板電腦，然後編寫一系列的Apps來使用及分享。讓非常小的孩子透過簡單體驗來使用真正 JAVAscript
     ，成為可能的事，您會達到比您想到還遠。
-  makegameswithus_longdescription: 使用這個全新的、友善初學者的，名為Swift的程式語言建立一個iPhone遊戲以學習程式設計!建立一個神奇寶貝啟發的動作遊戲和編寫程式碼來教你怪物移動。您將學習如何使用變數、
+  makegameswithus_longdescription: 使用這個全新的、容易上手的，名為Swift的程式語言建立一個iPhone遊戲以學習程式設計!建立一個神奇&eacute;寶貝啟發的動作遊戲和編寫程式碼來教你的怪物移動。您將學習如何使用變數、
     方法和物件，來協助你的怪物獲勝 ！
   touchdevelop_longdescription: 觸控式螢幕友好編輯器將引導您創造像素藝術、 解決熊謎題，或者建立你自己的跳躍鳥遊戲。
   appinventor_longdescription: 娛樂、 簡短的影片教案引導您在您的 Android 手機或平板電腦上完成建立三個簡單的APPs程式。它設計給新手和專家，此Hour
@@ -551,11 +551,11 @@
   thinkersmith2_longdescription: 學生以打開和關閉的功能學習如何在二進位檔案中表示和儲存字元。結束時，此課程獲取自己名字的編碼帶回家。
   kodableunplugged_longdescription: 使用普通紙的設計，fuzzFamily Frenzy教導 5 歲以上的孩子的程式設計邏輯。老師應解釋這個遊戲，然後學生作伴來完成一個簡單的障礙課程。
   projguts_longdescription: 這次"不插電"活動由一群學生玩不同版本的剪刀 / 石頭 / 布的遊戲，以協助學生學習如何建模與模擬運作原理，並查看結果作為不同的建模實驗。
-  hourofcode_longdescription: Placeholder for new code.org/hoc
+  hourofcode_longdescription: 新的 code.org/hoc 的預留位置
   frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
     magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
     and make a winter wonderland that you can then share with your friends!
-  playlab_longdescription: Placeholder for code.org/s/playlab
+  playlab_longdescription: 創建一個故事或讓與發揮實驗室的遊戲!使動物，海盜，僵屍，忍者，和更多的角色移動，發出的聲音，得分，和甚至投擲火球!
   codeorg_beyond_name: 介紹電腦科學 (學齡前到8 年級）
   khan_beyond_name: 學習電腦程式設計
   tynker_beyond_name: 在家學習程式設計

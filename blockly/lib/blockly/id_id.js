@@ -3,7 +3,7 @@ goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "sebenarnya";
 Blockly.Msg.ADD = "Tambahkan";
 Blockly.Msg.ADD_COMMENT = "Tambahkan komentar";
-Blockly.Msg.ADD_PARAMETER = "Menambah Parameter";
+Blockly.Msg.ADD_PARAMETER = "Tambahkan Parameter";
 Blockly.Msg.CHANGE_VALUE_TITLE = "Ubah nilai:";
 Blockly.Msg.COLLAPSE_ALL = "Tutup blok";
 Blockly.Msg.COLLAPSE_BLOCK = "Tutup blok";
