@@ -14798,15 +14798,15 @@ exports.emptyBlocksErrorMsg = function(d){return "Le bloc « Répéter » ou �
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Le bloc « Fonction » doit contenir d'autres blocs pour fonctionner."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "Il faut des blocs dans votre définition de fonction. Cliquez sur \"modifier\" puis faites glisser les blocs dans le bloc vert."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "Cliquez sur \"modifier\" pour vous assurer qu'il ne manque pas de blocs dans votre définition de fonction."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "N'oubliez pas de joindre un bloc à l'entrée de chaque paramètre sur le bloc de fonction dans votre espace de travail."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "Vous avez ajouté un bloc de paramètres, mais il n'a pas été utilisé dans la définition. Assurez-vous d'utiliser votre paramètre en cliquant sur « modifier » et de placer le bloc de paramètres dans le bloc vert."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "Créez un paramètre pour votre fonction en cliquant sur « modifier » et en ajoutant les paramètres nécessaires. Faites glisser les nouveaux blocs de paramètres dans votre définition de fonction."};
 
 exports.errorUnusedFunction = function(d){return "Vous avez créé une fonction mais ne l'avez pas ajoutée à votre espace de travail ! Cliquez « Fonctions » dans la boîte à outils et assurez-vous d'utiliser votre fonction dans votre programme."};
 
@@ -14872,7 +14872,7 @@ exports.showBlocksHeader = function(d){return "Afficher les blocs"};
 
 exports.showGeneratedCode = function(d){return "Afficher le code"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "Texte=?"};
 
 exports.subtitle = function(d){return "un environnement visuel de programmation"};
 
@@ -15009,7 +15009,7 @@ exports.drawUpperWave = function(d){return "dessiner une vague haute"};
 
 exports.drawLowerWave = function(d){return "dessiner une petite vague"};
 
-exports.drawStamp = function(d){return "draw stamp"};
+exports.drawStamp = function(d){return "Tamponner"};
 
 exports.heightParameter = function(d){return "hauteur"};
 
@@ -15063,11 +15063,11 @@ exports.penTooltip = function(d){return "Lève ou baisse le crayon, pour dessine
 
 exports.penUp = function(d){return "lever le crayon"};
 
-exports.reinfFeedbackMsg = function(d){return "Est-ce que ceci ressemble à ce que vous voulez ? Vous pouvez appuyer sur le bouton \"Réessayer\" pour voir votre dessin."};
+exports.reinfFeedbackMsg = function(d){return "Voici votre dessin ! Continuez à travailler dessus, ou allez à la prochaine énigme."};
 
 exports.setColour = function(d){return "choisir la couleur"};
 
-exports.setPattern = function(d){return "set pattern"};
+exports.setPattern = function(d){return "Définissez le modèle"};
 
 exports.setWidth = function(d){return "Régler la largeur"};
 

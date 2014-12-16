@@ -12373,7 +12373,7 @@ exports.parseElement = function(text) {
 
 },{}],40:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.hi=function(n){return n===0||n==1?"one":"other"}
-exports.bounceBall = function(d){return "bounce ball"};
+exports.bounceBall = function(d){return "बाउंस बोल"};
 
 exports.bounceBallTooltip = function(d){return "Bounce a ball off of an object."};
 
@@ -12403,19 +12403,19 @@ exports.ifTooltip = function(d){return "If there is a path in the specified dire
 
 exports.ifelseTooltip = function(d){return "If there is a path in the specified direction, then do the first block of actions. Otherwise, do the second block of actions."};
 
-exports.incrementOpponentScore = function(d){return "increment opponent score"};
+exports.incrementOpponentScore = function(d){return "ओपोनेन्ट पोइन्ट स्कोर"};
 
-exports.incrementOpponentScoreTooltip = function(d){return "Add one to the current opponent score."};
+exports.incrementOpponentScoreTooltip = function(d){return "वर्तमान प्रतिद्वंद्वी के स्कोर में एक  जोड़ें।"};
 
-exports.incrementPlayerScore = function(d){return "increment player score"};
+exports.incrementPlayerScore = function(d){return "स्कोर पोइन्ट"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Add one to the current player score."};
+exports.incrementPlayerScoreTooltip = function(d){return "वर्तमान खिलाडी के स्कोर में एक  जोड़ें।"};
 
-exports.isWall = function(d){return "is this a wall"};
+exports.isWall = function(d){return "क्या यह दीवाल है ।"};
 
-exports.isWallTooltip = function(d){return "Returns true if there is a wall here"};
+exports.isWallTooltip = function(d){return "return true अगर वहा दीवार है ।"};
 
-exports.launchBall = function(d){return "launch new ball"};
+exports.launchBall = function(d){return "नई गेंद लोंच करे"};
 
 exports.launchBallTooltip = function(d){return "Launch a ball into play."};
 

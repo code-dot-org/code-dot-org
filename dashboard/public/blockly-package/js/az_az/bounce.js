@@ -12780,7 +12780,7 @@ exports.whenRun = function(d){return "icra etdikdə"};
 
 exports.tryHOC = function(d){return "Kod Saatında özünüzü sınayın"};
 
-exports.signup = function(d){return "Sign up for the intro course"};
+exports.signup = function(d){return "Giriş kursu üçün qeydiyyatdan keçin"};
 
 exports.hintHeader = function(d){return "Here's a tip:"};
 

@@ -16690,9 +16690,9 @@ exports.heightParameter = function(d){return "உயரம்"};
 
 exports.holePresent = function(d){return "அங்கே ஒரு துளை உள்ளது"};
 
-exports.honey = function(d){return "make honey"};
+exports.honey = function(d){return "தேன் செய்க"};
 
-exports.honeyAvailable = function(d){return "honey"};
+exports.honeyAvailable = function(d){return "தேன்"};
 
 exports.honeyTooltip = function(d){return "Make honey from nectar"};
 
