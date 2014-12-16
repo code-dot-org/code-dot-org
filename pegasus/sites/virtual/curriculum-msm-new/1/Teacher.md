@@ -63,10 +63,11 @@ Students discuss the components of their favorite video games, and discover that
 
 
 ### <a name="Vocab"></a> 1) Vocabulary
-This lesson has two new and important words:<br/>
+This lesson has three new and important words:<br/>
 
 - **Apply** - use a given function on some inputs
 - **Arguments** - the inputs to a function; expressions for arguments follow the name of a function
+- **Programming Language** - a set of rules for writing code that a computer can evaluate
 
 ### <a name="GetStarted"></a> 2) Learning a Language
 Welcome to Code.org CS in Algebra! In this course, you’ll be learning a new programming language - a way to tell computers exactly what you want them to do. Just like English, Spanish or French, a programming language has its own vocabulary and grammar that you’ll have to learn. Fortunately, the language you’ll be using here has a lot in common with simple math that you already know!
