@@ -21367,7 +21367,7 @@ exports.hello = function(d){return "hello"};
 
 exports.helloWorld = function(d){return "Hello World!"};
 
-exports.incrementPlayerScore = function(d){return "increment player score"};
+exports.incrementPlayerScore = function(d){return "स्कोर पोइन्ट"};
 
 exports.makeProjectileDisappear = function(d){return "disappear"};
 

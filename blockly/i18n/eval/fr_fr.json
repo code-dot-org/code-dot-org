@@ -5,7 +5,7 @@
   "extraTopBlocks": "Vous avez des blocs libres. Vouliez vous les rattacher au bloc \" affichage\" ?",
   "overlayBlockTitle": "superposition (haut, bas)",
   "placeImageBlockTitle": "place-image (x, y, image)",
-  "offsetBlockTitle": "offset (x, y, image)",
+  "offsetBlockTitle": "decalage(x, y, image)",
   "rectangleBlockTitle": "rectangle (largeur, hauteur, style, couleur)",
   "reinfFeedbackMsg": "Vous pouvez appuyer sur le bouton \"Essayer encore\" pour éditer votre dessin.",
   "rotateImageBlockTitle": "rotation (degrés, image)",

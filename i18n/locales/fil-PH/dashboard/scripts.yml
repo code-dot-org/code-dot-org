@@ -9,7 +9,7 @@ fil:
           Match: Match
           Math Image: Imahe ng Math
           title: Test Course
-          description: Just an internal test course.
+          description: Ito ay isang panloob na test course lamang.
         course1:
           "Jigsaw: Learn to drag and drop": 'Jigsaw: Matuto na mag-drag at mag-drop'
           "Maze: Sequence": 'Maze: Sequence'

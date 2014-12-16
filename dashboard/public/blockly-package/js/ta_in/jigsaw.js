@@ -10887,7 +10887,7 @@ exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to playing your game."};
 
-exports.share = function(d){return "Share"};
+exports.share = function(d){return "பகிர்"};
 
 exports.shareGame = function(d){return "Share your game:"};
 

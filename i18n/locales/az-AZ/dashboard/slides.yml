@@ -307,7 +307,7 @@ az:
         text: "Hi, I’m Paola! Computers are really good at repeating actions. You can count to 10, 20, or 100. But a computer can count to a billion or a trillion. It won't get bored and it will only take a few seconds. Whether it's counting, or drawing, or anything--computers can repeat things hundreds or even billions of times."
       2:
         image: notes/frozen2_2.jpg
-        text: 'In programming, we call this a loop. A loop is how you repeat your code over and over again. For the next puzzle, your goal is to help Anna create a square with the "Repeat" block.'
+        text: 'Proqramlaşdırmada biz buna dövr deyirik. Dövr proqramınızı təkrar-təkrar yenidən icra etməyin yoludur. Növbəti tapmacada tapşırığınız Annanın "təkrar et" bloku ilə kvadrat düzəltməsinə kömək etməkdir.'
       3:
         image: notes/frozen2_3.jpg
         text: 'Any blocks of code you put inside the "Repeat" block will be repeated in sequence, as many times as you want.'

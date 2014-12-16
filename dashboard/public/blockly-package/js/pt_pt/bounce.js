@@ -12373,7 +12373,7 @@ exports.parseElement = function(text) {
 
 },{}],40:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.pt=function(n){return n===1?"one":"other"}
-exports.bounceBall = function(d){return "ressalta a bola"};
+exports.bounceBall = function(d){return "ressaltar bola"};
 
 exports.bounceBallTooltip = function(d){return "Ressaltar a bola num objecto."};
 
@@ -12407,7 +12407,7 @@ exports.incrementOpponentScore = function(d){return "marca o ponto do oponente"}
 
 exports.incrementOpponentScoreTooltip = function(d){return "Adicionar um ponto à pontuação do adversário atual."};
 
-exports.incrementPlayerScore = function(d){return "aumenta um ponto"};
+exports.incrementPlayerScore = function(d){return "Marcar ponto"};
 
 exports.incrementPlayerScoreTooltip = function(d){return "Adiciona um ponto à pontuação atual do jogador."};
 
@@ -12415,9 +12415,9 @@ exports.isWall = function(d){return "Isto é uma parede"};
 
 exports.isWallTooltip = function(d){return "Devolve verdadeiro se houver uma parede aqui"};
 
-exports.launchBall = function(d){return "Lança uma bola nova"};
+exports.launchBall = function(d){return "Lançar nova bola"};
 
-exports.launchBallTooltip = function(d){return "Lança uma bola em jogo."};
+exports.launchBallTooltip = function(d){return "Lançar uma bola no jogo."};
 
 exports.makeYourOwn = function(d){return "Cria o teu Jogo de Lançamento"};
 
@@ -12473,7 +12473,7 @@ exports.playSoundLosePoint = function(d){return "tocar som de ponto perdido"};
 
 exports.playSoundLosePoint2 = function(d){return "tocar som de ponto perdido 2"};
 
-exports.playSoundRetro = function(d){return "tocar som retrô"};
+exports.playSoundRetro = function(d){return "tocar som retro"};
 
 exports.playSoundRubber = function(d){return "tocar som de borracha"};
 
@@ -12501,11 +12501,11 @@ exports.repeatUntilFinish = function(d){return "repete até terminar"};
 
 exports.scoreText = function(d){return "Pontuação: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
 
-exports.setBackgroundRandom = function(d){return "define uma cena aleatória"};
+exports.setBackgroundRandom = function(d){return "definir cena aleatória"};
 
 exports.setBackgroundHardcourt = function(d){return "definir cena de campo de ténis"};
 
-exports.setBackgroundRetro = function(d){return "definir a cena retrô"};
+exports.setBackgroundRetro = function(d){return "definir cena retro"};
 
 exports.setBackgroundTooltip = function(d){return "definir a imagem de fundo"};
 
@@ -12513,47 +12513,47 @@ exports.setBallRandom = function(d){return "definir bola aleatória"};
 
 exports.setBallHardcourt = function(d){return "definir bola de ténis"};
 
-exports.setBallRetro = function(d){return "definir bola retrô"};
+exports.setBallRetro = function(d){return "definir bola retro"};
 
 exports.setBallTooltip = function(d){return "Define a imagem da bola"};
 
-exports.setBallSpeedRandom = function(d){return "definir velocidade da bola aleatória"};
+exports.setBallSpeedRandom = function(d){return "definir velocidade aleatória da bola"};
 
-exports.setBallSpeedVerySlow = function(d){return "define velocidade da bola muito lenta"};
+exports.setBallSpeedVerySlow = function(d){return "Definir velocidade muito lenta da bola"};
 
-exports.setBallSpeedSlow = function(d){return "define velocidade da bola lenta"};
+exports.setBallSpeedSlow = function(d){return "definir velocidade lenta da bola"};
 
 exports.setBallSpeedNormal = function(d){return "define velocidade da bola normal"};
 
-exports.setBallSpeedFast = function(d){return "define velocidade da bola rápida"};
+exports.setBallSpeedFast = function(d){return "definir velocidade rápida da bola"};
 
-exports.setBallSpeedVeryFast = function(d){return "define velocidade da bola muito rápida"};
+exports.setBallSpeedVeryFast = function(d){return "Definir velocidade muito rápida da bola"};
 
-exports.setBallSpeedTooltip = function(d){return "Define a velocidade da bola"};
+exports.setBallSpeedTooltip = function(d){return "Definir a velocidade da bola"};
 
-exports.setPaddleRandom = function(d){return "set random paddle"};
+exports.setPaddleRandom = function(d){return "Definir imagem aleatória da raquete"};
 
-exports.setPaddleHardcourt = function(d){return "set hardcourt paddle"};
+exports.setPaddleHardcourt = function(d){return "definir raquete de ténis"};
 
-exports.setPaddleRetro = function(d){return "set retro paddle"};
+exports.setPaddleRetro = function(d){return "Definir raquete retro"};
 
-exports.setPaddleTooltip = function(d){return "Sets the ball paddle"};
+exports.setPaddleTooltip = function(d){return "Definir imagem da raquete"};
 
-exports.setPaddleSpeedRandom = function(d){return "define velocidade aleatória de remagem"};
+exports.setPaddleSpeedRandom = function(d){return "definir velocidade aleatória da raquete"};
 
-exports.setPaddleSpeedVerySlow = function(d){return "define velocidade muito lenta de remagem"};
+exports.setPaddleSpeedVerySlow = function(d){return "definir velocidade muito lenta da raquete"};
 
-exports.setPaddleSpeedSlow = function(d){return "define velocidade lenta de remagem"};
+exports.setPaddleSpeedSlow = function(d){return "definir velocidade lenta da raquete"};
 
-exports.setPaddleSpeedNormal = function(d){return "define velocidade normal de remagem"};
+exports.setPaddleSpeedNormal = function(d){return "definir velocidade normal da raquete"};
 
-exports.setPaddleSpeedFast = function(d){return "define velocidade rápida de remagem"};
+exports.setPaddleSpeedFast = function(d){return "definir velocidade rápida da raquete"};
 
-exports.setPaddleSpeedVeryFast = function(d){return "define velocidade muito rápida de remagem"};
+exports.setPaddleSpeedVeryFast = function(d){return "definir velocidade muito rápida da raquete"};
 
-exports.setPaddleSpeedTooltip = function(d){return "Define a velocidade da remagem"};
+exports.setPaddleSpeedTooltip = function(d){return "Definir a velocidade da raquete"};
 
-exports.shareBounceTwitter = function(d){return "Check out the Bounce game I made. I wrote it myself with @codeorg"};
+exports.shareBounceTwitter = function(d){return "Vê o jogo Bounce que eu fiz. Fui que o escrevi sozinho com @codeorg"};
 
 exports.shareGame = function(d){return "Partilha o teu jogo:"};
 
@@ -12567,37 +12567,37 @@ exports.whenBallInGoal = function(d){return "when ball in goal"};
 
 exports.whenBallInGoalTooltip = function(d){return "Execute the actions below when a ball enters the goal."};
 
-exports.whenBallMissesPaddle = function(d){return "when ball misses paddle"};
+exports.whenBallMissesPaddle = function(d){return "quando a bola falha a raquete"};
 
-exports.whenBallMissesPaddleTooltip = function(d){return "Execute the actions below when a ball misses the paddle."};
+exports.whenBallMissesPaddleTooltip = function(d){return "Executar as ações abaixo quando a bola falha a raquete."};
 
-exports.whenDown = function(d){return "when Down arrow"};
+exports.whenDown = function(d){return "quando seta para baixo"};
 
-exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
+exports.whenDownTooltip = function(d){return "Executar as ações abaixo quando a seta para baixo é clicada."};
 
 exports.whenGameStarts = function(d){return "quando o jogo começa"};
 
 exports.whenGameStartsTooltip = function(d){return "Executa as ações abaixo quando o jogo começar."};
 
-exports.whenLeft = function(d){return "when Left arrow"};
+exports.whenLeft = function(d){return "quando seta para a esquerda"};
 
-exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
+exports.whenLeftTooltip = function(d){return "Executar as ações abaixo quando a seta para a esquerda é clicada."};
 
-exports.whenPaddleCollided = function(d){return "when ball hits paddle"};
+exports.whenPaddleCollided = function(d){return "quando a bola bate na raquete"};
 
-exports.whenPaddleCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a paddle."};
+exports.whenPaddleCollidedTooltip = function(d){return "Executar as ações abaixo quando uma bola colide com a raquete."};
 
-exports.whenRight = function(d){return "when Right arrow"};
+exports.whenRight = function(d){return "quando seta para a direita"};
 
-exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
+exports.whenRightTooltip = function(d){return "Executar as ações abaixo quando a seta para a direita é clicada."};
 
-exports.whenUp = function(d){return "when Up arrow"};
+exports.whenUp = function(d){return "quando seta para cima"};
 
-exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
+exports.whenUpTooltip = function(d){return "Executar as ações abaixo quando a seta para cima é clicada."};
 
-exports.whenWallCollided = function(d){return "when ball hits wall"};
+exports.whenWallCollided = function(d){return "quando a bola atinge a parede"};
 
-exports.whenWallCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a wall."};
+exports.whenWallCollidedTooltip = function(d){return "Executar as ações abaixo quando a bola colide com a parede."};
 
 exports.whileMsg = function(d){return "enquanto"};
 

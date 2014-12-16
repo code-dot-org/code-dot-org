@@ -97,7 +97,7 @@
   participant_engineer: Ingeniero de software
   participant_other: Ninguna de las anteriores
   print_all: Imprimir todo
-  print_ice_art: Imprimir su obra helada
+  print_ice_art: Imprimir su obra de arte de hielo
   create_art_with_zombie: o hacer arte avanzado con zombie
   i_am_a: Soy un
   never_spam: Nunca te enviaremos spam
@@ -140,7 +140,7 @@
   studiobar_teacher_title: Hecho para los maestros
   studiobar_teacher_body: Presenta Code Studio en tu aula
   studiobar_frozen_title: Hora del código
-  studiobar_frozen_body: Crea un paraíso invernal con Anna y Elsa
+  studiobar_frozen_body: Crea un paisaje invernal con Anna y Elsa
   studiobar_donate_title: Dona
   studiobar_donate_body: Un niño aprende por cada dólar que done
   contact_form_topic_student: Soy un estudiante
@@ -379,7 +379,7 @@
   carousel_heading_international: Tutoriales en tu idioma
   carousel_heading_domestic: Tutoriales disponibles en inglés
   carousel_heading_beginners: Tutoriales para principiantes (en inglés)
-  carousel_heading_javascript: Guías que enseñan JavaScript
+  carousel_heading_javascript: Tutoriales que enseñan JavaScript
   carousel_heading_unplugged: ¿No tienes dispositivo o Internet? Prueba informática
     sin conexión
   carousel_heading_devices: Tutoriales en aplicaciones para teléfonos y tabletas
@@ -439,7 +439,7 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Piedra, papel, tijera
-  hourofcode_name: Reserva de espacio para un nuevo code.org/hoc
+  hourofcode_name: Espacio reservado para un nuevo code.org/hoc
   playlab_name: Laboratorio de Juegos
   codeorg_gradelevel: Edad 4-104
   codeintl_gradelevel: Edad 4-104
@@ -498,7 +498,8 @@
   lightbotintl_platformtext: iOS, Android (o cualquier navegador de la red)
   codehs_platformtext: Navegadores modernos. (Seguir curso requiere $$)
   codecademy_platformtext: Navegadores modernos. iOS, aplicaciones Android
-  codecombat_platformtext: Navegadores web modernos. (Seguir más cursos requiere $$)
+  codecombat_platformtext: Navegadores web modernos. (Curso de continuación requiere
+    $$)
   codemonkey_platformtext: Navegadores modernos
   codeavengers_platformtext: Navegadores modernos
   processing_platformtext: Navegadores modernos
@@ -574,7 +575,7 @@
   kodableunplugged_shortdescription: Un divertido ejercicio "desconectado"
   projguts_shortdescription: Aprende sobre modelado y simulación con piedra, papel,
     o tijeras
-  hourofcode_shortdescription: Reserva de espacio para un nuevo code.org/hoc
+  hourofcode_shortdescription: Espacio reservado para un nuevo code.org/hoc
   frozen_shortdescription: Vamos a usar código para unirnos a Anna y Elsa mientras
     exploran la magia y la belleza del hielo.
   playlab_shortdescription: ¡Crea una historia o haz un juego con Laboratorio de Juegos!
@@ -720,14 +721,14 @@
     aprender cómo funciona el modelado y simulación, haciendo que un grupo de estudiantes
     jueguen distintas versiones del juego piedra, papel y tijeras, y viendo los resultados
     como diferentes experimentos de modelado.
-  hourofcode_longdescription: Reserva de espacio para un nuevo code.org/hoc
+  hourofcode_longdescription: Espacio reservado para un nuevo code.org/hoc
   frozen_longdescription: Vamos a usar código para unirnos a Ana y Elsa mientras exploran
     la magia y la belleza del hielo. Crearás copos de nieve y patrones a medida que
     patinas sobre hielo y harás un paisaje invernal que luego puedes compartir con
     tus amigos!
   playlab_longdescription: ¡Crea una historia o haz un juego con el Laboratorio de
     juegos! ¡Haz que animales, piratas, zombis, ninjas y muchos personajes más se
-    muevan, hagan sonidos, obtengan puntos y hasta lancen bolas de fuego!
+    muevan, hagan sonidos, marquen puntos y hasta lancen bolas de fuego!
   codeorg_beyond_name: Introducción a ciencias de la computación (13 años)
   khan_beyond_name: Aprende programación de computadoras
   tynker_beyond_name: Aprende programación de computadoras en casa

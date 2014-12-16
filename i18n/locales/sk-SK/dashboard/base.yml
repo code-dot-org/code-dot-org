@@ -131,8 +131,8 @@ sk:
       username_not_found: 'Užívateľské meno %{username} nebolo nájdené'
       username_in_use: '%{username} je už obsadené, prosím vyberte si iné'
       no_teacher: 'Nepodarilo sa nájsť žiadne prihlásenie pomocou "%{teacher_email_or_code}". Prosím požiadajte ich, aby sa zaregistrovali tu a následne sa pokúste opakovane pridať'
-      section_not_found: "Could not find a section with code '%{section_code}'."
-      blank_code: Please enter a section code
+      section_not_found: 'Nepodarilo sa nájsť sekciu s kódom "%{section_code}".'
+      blank_code: Zadaj kód sekcie
       cant_join_own_section: "Sorry, you can't join your own section."
     mail:
       invite_student:
@@ -194,18 +194,18 @@ sk:
           earned: '7 or more of the students who collected all %{num_trophies} trophies are girls. You have won a bonus prize! (U.S. teachers only)'
           not_earned: 'If at least 7 of your students who earn all %{num_trophies} trophies are girls, your reward is an additional $250 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits. <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits can only be used by teachers in U.S. public schools.'
   crud:
-    new_model: 'New %{model}'
-    show: Show
-    edit: Edit
-    edit_model: 'Edit %{model}'
-    update: Update
-    destroy: Destroy
-    back: Back
-    confirm: Are you sure?
-    created: '%{model} was successfully created.'
-    updated: '%{model} was successfully updated.'
-    destroyed: '%{model} was successfully deleted.'
-    access_denied: 'You do not have access to this %{model}.'
+    new_model: 'Nový %{model}'
+    show: Ukázať
+    edit: Upraviť
+    edit_model: 'Upraviť %{model}'
+    update: Aktualizovať
+    destroy: Zničiť
+    back: Naspäť
+    confirm: Určite?
+    created: '%{model} bol úspešne vytvorený.'
+    updated: '%{model} bol úspešne aktualizovaný.'
+    destroyed: '%{model} bol úspešne odstránený.'
+    access_denied: 'Nemáš prístup k %{model}.'
   nav:
     header:
       finished_hoc: "I've finished my Hour of Code"

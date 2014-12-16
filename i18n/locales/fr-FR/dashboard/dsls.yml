@@ -81,8 +81,8 @@ fr:
         10 / (2 * (3 + 1)): '10 / (2 * (3 + 1))'
         Type the arithmetic expression here: "Tapez l'expression arithmétique ici"
       text match test:
-        Mathematical Expression Assessment: Mathematical Expression Assessment
-        Type out the arithmetic expression that this circle of evaluation evaluates to: Type out the arithmetic expression that this circle of evaluation evaluates to
+        Mathematical Expression Assessment: "Évaluation de l'Expression mathématique"
+        Type out the arithmetic expression that this circle of evaluation evaluates to: "Tapez l'expression arithmétique que ce cercle d'évaluation évalue à"
         /script_assets/msm/Unit 1/Exercise_5_question_2.png: /script_assets/msm/Unit 1/Exercise_5_question_2.png
         (9-3)+(4*7): '(9-3)+(4*7)'
         (9-3)+4: null

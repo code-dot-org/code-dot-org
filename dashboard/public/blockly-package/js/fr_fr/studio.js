@@ -21166,15 +21166,15 @@ exports.emptyBlocksErrorMsg = function(d){return "Le bloc « Répéter » ou �
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Le bloc « Fonction » doit contenir d'autres blocs pour fonctionner."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "Il faut des blocs dans votre définition de fonction. Cliquez sur \"modifier\" puis faites glisser les blocs dans le bloc vert."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "Cliquez sur \"modifier\" pour vous assurer qu'il ne manque pas de blocs dans votre définition de fonction."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "N'oubliez pas de joindre un bloc à l'entrée de chaque paramètre sur le bloc de fonction dans votre espace de travail."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "Vous avez ajouté un bloc de paramètres, mais il n'a pas été utilisé dans la définition. Assurez-vous d'utiliser votre paramètre en cliquant sur « modifier » et de placer le bloc de paramètres dans le bloc vert."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "Créez un paramètre pour votre fonction en cliquant sur « modifier » et en ajoutant les paramètres nécessaires. Faites glisser les nouveaux blocs de paramètres dans votre définition de fonction."};
 
 exports.errorUnusedFunction = function(d){return "Vous avez créé une fonction mais ne l'avez pas ajoutée à votre espace de travail ! Cliquez « Fonctions » dans la boîte à outils et assurez-vous d'utiliser votre fonction dans votre programme."};
 
@@ -21240,7 +21240,7 @@ exports.showBlocksHeader = function(d){return "Afficher les blocs"};
 
 exports.showGeneratedCode = function(d){return "Afficher le code"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "Texte=?"};
 
 exports.subtitle = function(d){return "un environnement visuel de programmation"};
 
@@ -21303,7 +21303,7 @@ exports.defaultTwitterText = function(d){return "Découvrez ce que j'ai fait"};
 var MessageFormat = require("messageformat");MessageFormat.locale.fr=function(n){return n===0||n==1?"one":"other"}
 exports.actor = function(d){return "acteur"};
 
-exports.alienInvasion = function(d){return "Alien Invasion!"};
+exports.alienInvasion = function(d){return "Invasion extraterrestre !"};
 
 exports.backgroundBlack = function(d){return "noir"};
 
@@ -21529,7 +21529,7 @@ exports.projectileHiro = function(d){return "Hiro"};
 
 exports.projectileBaymax = function(d){return "Baymax"};
 
-exports.projectileRapunzel = function(d){return "Rapunzel"};
+exports.projectileRapunzel = function(d){return "Raiponce"};
 
 exports.reinfFeedbackMsg = function(d){return "Vous pouvez cliquer sur le bouton « Réessayer » pour revenir à votre partie."};
 
@@ -21623,15 +21623,15 @@ exports.setSpriteHidden = function(d){return "une image masquée"};
 
 exports.setSpriteHideK1 = function(d){return "cacher"};
 
-exports.setSpriteAnna = function(d){return "to a Anna image"};
+exports.setSpriteAnna = function(d){return "à une image d'Anna"};
 
-exports.setSpriteElsa = function(d){return "to a Elsa image"};
+exports.setSpriteElsa = function(d){return "à une image d'Elsa"};
 
-exports.setSpriteHiro = function(d){return "to a Hiro image"};
+exports.setSpriteHiro = function(d){return "à une image d'Hiro"};
 
-exports.setSpriteBaymax = function(d){return "to a Baymax image"};
+exports.setSpriteBaymax = function(d){return "à une image de Baymax"};
 
-exports.setSpriteRapunzel = function(d){return "to a Rapunzel image"};
+exports.setSpriteRapunzel = function(d){return "à une image de Raiponce"};
 
 exports.setSpriteKnight = function(d){return "une image de chevalier"};
 
@@ -21713,7 +21713,7 @@ exports.shareGame = function(d){return "Partagez votre histoire :"};
 
 exports.showCoordinates = function(d){return "afficher coordonnées"};
 
-exports.showCoordinatesTooltip = function(d){return "show the protagonist's coordinates on the screen"};
+exports.showCoordinatesTooltip = function(d){return "montrer les coordonnées du protagoniste sur l'écran"};
 
 exports.showTitleScreen = function(d){return "afficher l'écran titre"};
 

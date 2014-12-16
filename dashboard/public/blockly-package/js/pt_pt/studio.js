@@ -21457,7 +21457,7 @@ exports.playSoundLosePoint = function(d){return "tocar som de ponto perdido"};
 
 exports.playSoundLosePoint2 = function(d){return "tocar som de ponto perdido 2"};
 
-exports.playSoundRetro = function(d){return "tocar som retrô"};
+exports.playSoundRetro = function(d){return "tocar som retro"};
 
 exports.playSoundRubber = function(d){return "tocar som de borracha"};
 
@@ -21809,21 +21809,21 @@ exports.whenArrowUp = function(d){return "up arrow"};
 
 exports.whenArrowTooltip = function(d){return "Execute the actions below when the specified arrow key is pressed."};
 
-exports.whenDown = function(d){return "when Down arrow"};
+exports.whenDown = function(d){return "quando seta para baixo"};
 
-exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
+exports.whenDownTooltip = function(d){return "Executar as ações abaixo quando a seta para baixo é clicada."};
 
 exports.whenGameStarts = function(d){return "when game starts"};
 
 exports.whenGameStartsTooltip = function(d){return "Execute the actions below when the game starts."};
 
-exports.whenLeft = function(d){return "when Left arrow"};
+exports.whenLeft = function(d){return "quando seta para a esquerda"};
 
-exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
+exports.whenLeftTooltip = function(d){return "Executar as ações abaixo quando a seta para a esquerda é clicada."};
 
-exports.whenRight = function(d){return "when Right arrow"};
+exports.whenRight = function(d){return "quando seta para a direita"};
 
-exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
+exports.whenRightTooltip = function(d){return "Executar as ações abaixo quando a seta para a direita é clicada."};
 
 exports.whenSpriteClicked = function(d){return "when actor clicked"};
 
@@ -21867,9 +21867,9 @@ exports.whenSpriteCollidedWithRightEdge = function(d){return "touches right edge
 
 exports.whenSpriteCollidedWithTopEdge = function(d){return "touches top edge"};
 
-exports.whenUp = function(d){return "when Up arrow"};
+exports.whenUp = function(d){return "quando seta para cima"};
 
-exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
+exports.whenUpTooltip = function(d){return "Executar as ações abaixo quando a seta para cima é clicada."};
 
 exports.yes = function(d){return "Sim"};
 

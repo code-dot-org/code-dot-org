@@ -21164,29 +21164,29 @@ exports.end = function(d){return "tapos"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Ang \"Repeat\" o \"if\" block ay kailangan ng iba pang mga block sa loob nito upang gumana. Siguraduhin na ang block na asa loob ay nakasukat ng maayos sa loob ng naglalaman na block."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Ang function na block ay kailangang magkaroon ng iba pang mga block sa loob nito upang gumana."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "Dapat meron mga block sa loob ng iyong kahulugan ng function. I-click ang \"i-edit\" at i-drag ang mga block sa loob ng berdeng block."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "I-click ang \"i-edit\" upang tiyakin na wala kang nawawala sa loob ng iyong kahulugan ng function ng anumang mga block."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "Tandaang i-attach ang isang block sa bawat input parameter sa function block sa iyong workspace."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "Nagdagdag ka ng isang block na parameter, ngunit hindi ito ginamit sa definition. Siguraduhin na gamitin ang iyong mga parameter sa pamamagitan ng pag-click sa \"i-edit\" at paglalagay ng parameter block sa loob ng berdeng block."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "Lumikha ng parameter sa pamamagitan ng pag-click sa \"i-edit\" at pagdagdag ng mga kinakailangang parameter. I-drag ang mga bagong block parameter sa iyong kahulugan ng function."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "Lumikha ka ng isang function, ngunit hindi kailanman ginamit ito sa iyong workspace! Mag-click sa \"Mga Functions\" sa toolbox at tiyakin na ginagamit mo ito sa iyong program."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "Subukan ang pagpalit ng \"???\" na may value."};
 
-exports.extraTopBlocks = function(d){return "Meron kang extra na mga block na hindi nakasama sa event block."};
+exports.extraTopBlocks = function(d){return "Mayroon kang hindi isinama na block. Ibig mo bang ilakip ang mga ito sa \"when run\" block?"};
 
 exports.finalStage = function(d){return "Maligayang pagbati! Natapos mo na ang pinakahuling stage."};
 
 exports.finalStageTrophies = function(d){return "Maligayang pagbati! Nakumpleto mo na ang pinakahuling stage at nanalo ng "+p(d,"numTrophies",0,"fil",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Katapusan"};
 
 exports.generatedCodeInfo = function(d){return "Kahit ang mga nangungunang mga unibersidad ay nagtuturo ng block-based na coding (eg, "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ngunit sa ilalim nito, ang mga bloke na iyong binuo ay maaari ring ipakita sa JavaScript, pinaka-tinatanggap na mga wika coding ng mundo:"};
 
@@ -21218,9 +21218,9 @@ exports.numBlocksNeeded = function(d){return "Maligayang bati! Nakumpleto mo ang
 
 exports.numLinesOfCodeWritten = function(d){return "Ikaw ang nagsulat ng "+p(d,"numLines",0,"fil",{"one":"1 line","other":n(d,"numLines")+" lines"})+" ng code!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "i-play"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "I-print"};
 
 exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" ng "+v(d,"stage_total")};
 
@@ -21232,11 +21232,11 @@ exports.runProgram = function(d){return "Patakbuhin"};
 
 exports.runTooltip = function(d){return "Patakbuhin ang program na tinutukoy ng mga block sa workspace."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "Score"};
 
 exports.showCodeHeader = function(d){return "Ipakita ang Code"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Ipakita ang mga Block"};
 
 exports.showGeneratedCode = function(d){return "Ipakita ang Code"};
 
@@ -21260,19 +21260,19 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Kinabuohan: "+p(d,"numL
 
 exports.tryAgain = function(d){return "Subukang muli"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Tingnan ang hint"};
 
 exports.backToPreviousLevel = function(d){return "Bumalik sa nakaraang level"};
 
-exports.saveToGallery = function(d){return "I-save sa iyong gallery"};
+exports.saveToGallery = function(d){return "I-save sa gallery"};
 
-exports.savedToGallery = function(d){return "I-save sa iyong gallery!"};
+exports.savedToGallery = function(d){return "Na-save sa gallery!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Pasesnya, hindi namin pwede ibahagi ang program na ito."};
 
 exports.workspaceHeader = function(d){return "I-assemble ang iyong mga bloke dito: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "I-type ang iyong JavaScript code dito"};
 
 exports.infinity = function(d){return "Walang katapusan"};
 
@@ -21284,9 +21284,9 @@ exports.wantToLearn = function(d){return "Gusto mo matuto mag-code?"};
 
 exports.watchVideo = function(d){return "Panoorin ang Video"};
 
-exports.when = function(d){return "when"};
+exports.when = function(d){return "kelan"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "kapag tumakbo"};
 
 exports.tryHOC = function(d){return "Subukan ang Hour of Code"};
 
@@ -21294,7 +21294,7 @@ exports.signup = function(d){return "Mag-sign up para sa intro ng kurso"};
 
 exports.hintHeader = function(d){return "Narito ang isang tip:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Tingnan kung ano ang nangyari dito, at subukang ayusin ang iyong mga program."};
 
 exports.defaultTwitterText = function(d){return "Check out what I made"};
 
@@ -21315,7 +21315,7 @@ exports.backgroundHardcourt = function(d){return "hardcourt"};
 
 exports.backgroundNight = function(d){return "gabi"};
 
-exports.backgroundUnderwater = function(d){return "underwater"};
+exports.backgroundUnderwater = function(d){return "sa ilalim ng tubig"};
 
 exports.backgroundCity = function(d){return "siyudad"};
 
@@ -21347,9 +21347,9 @@ exports.catText = function(d){return "Text"};
 
 exports.catVariables = function(d){return "Mga variable"};
 
-exports.changeScoreTooltip = function(d){return "Add or remove a point to the score."};
+exports.changeScoreTooltip = function(d){return "Magdagdag o mag-alis ng isang point sa score."};
 
-exports.changeScoreTooltipK1 = function(d){return "Add a point to the score."};
+exports.changeScoreTooltipK1 = function(d){return "Magdagdag ng isang point sa score."};
 
 exports.continue = function(d){return "Magpatuloy"};
 
@@ -21361,33 +21361,33 @@ exports.emotion = function(d){return "mood"};
 
 exports.finalLevel = function(d){return "Maligayang pagbati! Nalutas mo na ang pinakahuling puzzle."};
 
-exports.for = function(d){return "for"};
+exports.for = function(d){return "para sa"};
 
-exports.hello = function(d){return "hello"};
+exports.hello = function(d){return "kumusta"};
 
-exports.helloWorld = function(d){return "Hello World!"};
+exports.helloWorld = function(d){return "Mabuhay!"};
 
 exports.incrementPlayerScore = function(d){return "iskor puntos ng manlalaro"};
 
-exports.makeProjectileDisappear = function(d){return "disappear"};
+exports.makeProjectileDisappear = function(d){return "mawala"};
 
 exports.makeProjectileBounce = function(d){return "bounce"};
 
-exports.makeProjectileBlueFireball = function(d){return "make blue fireball"};
+exports.makeProjectileBlueFireball = function(d){return "gumawa ng blue na fireball"};
 
-exports.makeProjectilePurpleFireball = function(d){return "make purple fireball"};
+exports.makeProjectilePurpleFireball = function(d){return "gumawa ng purple na fireball"};
 
-exports.makeProjectileRedFireball = function(d){return "make red fireball"};
+exports.makeProjectileRedFireball = function(d){return "gumawa ng red na fireball"};
 
-exports.makeProjectileYellowHearts = function(d){return "make yellow hearts"};
+exports.makeProjectileYellowHearts = function(d){return "gumawa ng yellow na mga puso"};
 
-exports.makeProjectilePurpleHearts = function(d){return "make purple hearts"};
+exports.makeProjectilePurpleHearts = function(d){return "gumawa ng purple na mga puso"};
 
-exports.makeProjectileRedHearts = function(d){return "make red hearts"};
+exports.makeProjectileRedHearts = function(d){return "gumawa ng red na mga puso"};
 
-exports.makeProjectileTooltip = function(d){return "Make the projectile that just collided disappear or bounce."};
+exports.makeProjectileTooltip = function(d){return "Gawin ang projectile na bumangga na mawala o mag-bounce."};
 
-exports.makeYourOwn = function(d){return "Gumawa Ng Sarili Mong Kuwento"};
+exports.makeYourOwn = function(d){return "Gumawa ng Iyong Sariling Play Lab App"};
 
 exports.moveDirectionDown = function(d){return "baba"};
 
@@ -21443,7 +21443,7 @@ exports.no = function(d){return "Hindi"};
 
 exports.numBlocksNeeded = function(d){return "Ang puzzle na ito ay maaaring malutas sa %1 na mga block."};
 
-exports.ouchExclamation = function(d){return "Ouch!"};
+exports.ouchExclamation = function(d){return "Aray!"};
 
 exports.playSoundCrunch = function(d){return "magpatugtog ng crunch na tunog"};
 
@@ -21471,11 +21471,11 @@ exports.playSoundWinPoint2 = function(d){return "patugtugin ang win point 2 na t
 
 exports.playSoundWood = function(d){return "patugtugin ang wood sound"};
 
-exports.positionOutTopLeft = function(d){return "to the above top left position"};
+exports.positionOutTopLeft = function(d){return "sa itaas na kaliwang tuktok na posisyon"};
 
-exports.positionOutTopRight = function(d){return "to the above top right position"};
+exports.positionOutTopRight = function(d){return "sa itaas kanang tuktok na posisyon"};
 
-exports.positionTopOutLeft = function(d){return "to the top outside left position"};
+exports.positionTopOutLeft = function(d){return "sa tuktok na kaliwa sa labas na posisyon"};
 
 exports.positionTopLeft = function(d){return "sa kaliwang tuktok na posisyon"};
 
@@ -21483,7 +21483,7 @@ exports.positionTopCenter = function(d){return "sa gitnang tuktok na posisyon"};
 
 exports.positionTopRight = function(d){return "sa kanang tuktok na posisyon"};
 
-exports.positionTopOutRight = function(d){return "to the top outside right position"};
+exports.positionTopOutRight = function(d){return "sa tuktok labas mismo na posisyon"};
 
 exports.positionMiddleLeft = function(d){return "sa gitnang kaliwa na posisyon"};
 
@@ -21491,7 +21491,7 @@ exports.positionMiddleCenter = function(d){return "sa gitnang posisyon"};
 
 exports.positionMiddleRight = function(d){return "sa gitnang kanan na posisyon"};
 
-exports.positionBottomOutLeft = function(d){return "to the bottom outside left position"};
+exports.positionBottomOutLeft = function(d){return "sa ibaba sa labas na kaliwa na posisyon"};
 
 exports.positionBottomLeft = function(d){return "sa kaliwang ibaba na posisyon"};
 
@@ -21499,25 +21499,25 @@ exports.positionBottomCenter = function(d){return "sa kanang ibaba na posisyon"}
 
 exports.positionBottomRight = function(d){return "sa kanang ibaba na posisyon"};
 
-exports.positionBottomOutRight = function(d){return "to the bottom outside right position"};
+exports.positionBottomOutRight = function(d){return "sa ibaba sa labas mismo na posisyon"};
 
-exports.positionOutBottomLeft = function(d){return "to the below bottom left position"};
+exports.positionOutBottomLeft = function(d){return "sa ibaba sa kaliwa na posisyon"};
 
-exports.positionOutBottomRight = function(d){return "to the below bottom right position"};
+exports.positionOutBottomRight = function(d){return "sa ibabang kanan na posisyon"};
 
 exports.positionRandom = function(d){return "sa random na posisyon"};
 
-exports.projectileBlueFireball = function(d){return "blue fireball"};
+exports.projectileBlueFireball = function(d){return "asul na fireball"};
 
-exports.projectilePurpleFireball = function(d){return "purple fireball"};
+exports.projectilePurpleFireball = function(d){return "purple na fireball"};
 
-exports.projectileRedFireball = function(d){return "red fireball"};
+exports.projectileRedFireball = function(d){return "red na fireball"};
 
-exports.projectileYellowHearts = function(d){return "yellow hearts"};
+exports.projectileYellowHearts = function(d){return "dilaw na mga puso"};
 
-exports.projectilePurpleHearts = function(d){return "purple hearts"};
+exports.projectilePurpleHearts = function(d){return "purple na puso"};
 
-exports.projectileRedHearts = function(d){return "red hearts"};
+exports.projectileRedHearts = function(d){return "pulang puso"};
 
 exports.projectileRandom = function(d){return "nang hindi pinipili"};
 
@@ -21541,13 +21541,13 @@ exports.repeatForeverTooltip = function(d){return "Ipatupad ang mga aksyon sa bl
 
 exports.saySprite = function(d){return "sabihin"};
 
-exports.saySpriteN = function(d){return "actor "+v(d,"spriteIndex")+" say"};
+exports.saySpriteN = function(d){return "aktor "+v(d,"spriteIndex")+" sabihin"};
 
 exports.saySpriteTooltip = function(d){return "Magpakita ng speech bubble ng mga nauugnay na teksto mula sa tinukoy na aktor."};
 
 exports.scoreText = function(d){return "Puntos: "+v(d,"playerScore")};
 
-exports.setBackground = function(d){return "set background"};
+exports.setBackground = function(d){return "i-set ang background"};
 
 exports.setBackgroundRandom = function(d){return "i-set ang random na background"};
 
@@ -21563,133 +21563,133 @@ exports.setBackgroundNight = function(d){return "i-set ang gabi na background"};
 
 exports.setBackgroundUnderwater = function(d){return "i-set ang sa ilalim ng dagat na background"};
 
-exports.setBackgroundCity = function(d){return "set city background"};
+exports.setBackgroundCity = function(d){return "i-set ang background na lungsod"};
 
-exports.setBackgroundDesert = function(d){return "set desert background"};
+exports.setBackgroundDesert = function(d){return "i-set ang background na disyerto"};
 
-exports.setBackgroundRainbow = function(d){return "set rainbow background"};
+exports.setBackgroundRainbow = function(d){return "i-set ng background na bahaghari"};
 
-exports.setBackgroundSoccer = function(d){return "set soccer background"};
+exports.setBackgroundSoccer = function(d){return "i-set ang background na soccer"};
 
-exports.setBackgroundSpace = function(d){return "set space background"};
+exports.setBackgroundSpace = function(d){return "i-set ang space na background"};
 
-exports.setBackgroundTennis = function(d){return "set tennis background"};
+exports.setBackgroundTennis = function(d){return "i-set ang background na pang-tennis"};
 
-exports.setBackgroundWinter = function(d){return "set winter background"};
+exports.setBackgroundWinter = function(d){return "i-set ang background na taglamig"};
 
 exports.setBackgroundTooltip = function(d){return "Nilalagay ang imahe ng background"};
 
-exports.setEnemySpeed = function(d){return "set enemy speed"};
+exports.setEnemySpeed = function(d){return "i-set ang bilis ng kaaway"};
 
-exports.setPlayerSpeed = function(d){return "set player speed"};
+exports.setPlayerSpeed = function(d){return "i-set ang bilis ng manlalaro"};
 
 exports.setScoreText = function(d){return "ilagay ang puntos"};
 
-exports.setScoreTextTooltip = function(d){return "Sets the text to be displayed in the score area."};
+exports.setScoreTextTooltip = function(d){return "Sine-set ang teksto upang maipakita sa score area."};
 
-exports.setSpriteEmotionAngry = function(d){return "sa isang galit na damdamin"};
+exports.setSpriteEmotionAngry = function(d){return "sa isang galit na mood"};
 
-exports.setSpriteEmotionHappy = function(d){return "sa isang masaya na damdamin"};
+exports.setSpriteEmotionHappy = function(d){return "sa isang masayang mood"};
 
-exports.setSpriteEmotionNormal = function(d){return "sa isang normal na damdamin"};
+exports.setSpriteEmotionNormal = function(d){return "sa isang normal na mood"};
 
-exports.setSpriteEmotionRandom = function(d){return "sa isang random na damdamin"};
+exports.setSpriteEmotionRandom = function(d){return "sa isang random na mood"};
 
-exports.setSpriteEmotionSad = function(d){return "sa isang malungkot na damdamin"};
+exports.setSpriteEmotionSad = function(d){return "sa isang malungkot na mood"};
 
-exports.setSpriteEmotionTooltip = function(d){return "Itinatakda ang damdamin ng aktor"};
+exports.setSpriteEmotionTooltip = function(d){return "sine-set ang mood ng aktor"};
 
-exports.setSpriteAlien = function(d){return "to an alien image"};
+exports.setSpriteAlien = function(d){return "sa isang alien na larawan"};
 
-exports.setSpriteBat = function(d){return "to a bat image"};
+exports.setSpriteBat = function(d){return "sa isang paniki na larawan"};
 
-exports.setSpriteBird = function(d){return "to a bird image"};
+exports.setSpriteBird = function(d){return "sa isang ibon na larawan"};
 
-exports.setSpriteCat = function(d){return "to a cat image"};
+exports.setSpriteCat = function(d){return "sa isang pusa na larawan"};
 
-exports.setSpriteCaveBoy = function(d){return "to a cave boy image"};
+exports.setSpriteCaveBoy = function(d){return "sa isang batang lalaki sa kuweba na larawan"};
 
-exports.setSpriteCaveGirl = function(d){return "to a cave girl image"};
+exports.setSpriteCaveGirl = function(d){return "sa isang batang babae sa kuweba na larawan"};
 
-exports.setSpriteDinosaur = function(d){return "to a dinosaur image"};
+exports.setSpriteDinosaur = function(d){return "sa isang dinosaur na larawan"};
 
-exports.setSpriteDog = function(d){return "to a dog image"};
+exports.setSpriteDog = function(d){return "sa isang aso na larawan"};
 
-exports.setSpriteDragon = function(d){return "to a dragon image"};
+exports.setSpriteDragon = function(d){return "sa isang dragon na larawan"};
 
-exports.setSpriteGhost = function(d){return "to a ghost image"};
+exports.setSpriteGhost = function(d){return "sa isang ghost na larawan"};
 
 exports.setSpriteHidden = function(d){return "sa isang nakatago na imahe"};
 
-exports.setSpriteHideK1 = function(d){return "hide"};
+exports.setSpriteHideK1 = function(d){return "itago"};
 
-exports.setSpriteAnna = function(d){return "to a Anna image"};
+exports.setSpriteAnna = function(d){return "sa isang Anna na larawan"};
 
-exports.setSpriteElsa = function(d){return "to a Elsa image"};
+exports.setSpriteElsa = function(d){return "sa isang Elsa na larawan"};
 
-exports.setSpriteHiro = function(d){return "to a Hiro image"};
+exports.setSpriteHiro = function(d){return "sa isang Hiro na larawan"};
 
-exports.setSpriteBaymax = function(d){return "to a Baymax image"};
+exports.setSpriteBaymax = function(d){return "sa isang Baymax na larawan"};
 
-exports.setSpriteRapunzel = function(d){return "to a Rapunzel image"};
+exports.setSpriteRapunzel = function(d){return "sa isang Rapunzel na larawan"};
 
-exports.setSpriteKnight = function(d){return "to a knight image"};
+exports.setSpriteKnight = function(d){return "sa isang kabalyero na larawan"};
 
-exports.setSpriteMonster = function(d){return "to a monster image"};
+exports.setSpriteMonster = function(d){return "sa isang halimaw na larawan"};
 
-exports.setSpriteNinja = function(d){return "to a masked ninja image"};
+exports.setSpriteNinja = function(d){return "sa isang may maskara na ninja na larawan"};
 
-exports.setSpriteOctopus = function(d){return "to an octopus image"};
+exports.setSpriteOctopus = function(d){return "sa isang octopus na larawan"};
 
-exports.setSpritePenguin = function(d){return "to a penguin image"};
+exports.setSpritePenguin = function(d){return "sa isang penguin na larawan"};
 
-exports.setSpritePirate = function(d){return "to a pirate image"};
+exports.setSpritePirate = function(d){return "sa isang pirata na larawan"};
 
-exports.setSpritePrincess = function(d){return "to a princess image"};
+exports.setSpritePrincess = function(d){return "sa isang prinsesa na larawan"};
 
 exports.setSpriteRandom = function(d){return "sa isang random na imahe"};
 
-exports.setSpriteRobot = function(d){return "to a robot image"};
+exports.setSpriteRobot = function(d){return "sa isang robot na larawan"};
 
-exports.setSpriteShowK1 = function(d){return "show"};
+exports.setSpriteShowK1 = function(d){return "ipakita"};
 
-exports.setSpriteSpacebot = function(d){return "to a spacebot image"};
+exports.setSpriteSpacebot = function(d){return "sa isang spacebot na larawan"};
 
-exports.setSpriteSoccerGirl = function(d){return "to a soccer girl image"};
+exports.setSpriteSoccerGirl = function(d){return "sa isang soccer girl na larawan"};
 
-exports.setSpriteSoccerBoy = function(d){return "to a soccer boy image"};
+exports.setSpriteSoccerBoy = function(d){return "sa isang soccer boy na larawan"};
 
-exports.setSpriteSquirrel = function(d){return "to a squirrel image"};
+exports.setSpriteSquirrel = function(d){return "sa isang squirrel na larawan"};
 
-exports.setSpriteTennisGirl = function(d){return "to a tennis girl image"};
+exports.setSpriteTennisGirl = function(d){return "sa isang tennis girl na larawan"};
 
-exports.setSpriteTennisBoy = function(d){return "to a tennis boy image"};
+exports.setSpriteTennisBoy = function(d){return "sa isang tennis boy na larawan"};
 
-exports.setSpriteUnicorn = function(d){return "to a unicorn image"};
+exports.setSpriteUnicorn = function(d){return "sa isang unicorn na larawan"};
 
 exports.setSpriteWitch = function(d){return "sa isang witch na imahe"};
 
-exports.setSpriteWizard = function(d){return "to a wizard image"};
+exports.setSpriteWizard = function(d){return "sa isang wizard na larawan"};
 
 exports.setSpritePositionTooltip = function(d){return "Agad na naglilipat ng isang aktor sa tinukoy na lokasyon."};
 
-exports.setSpriteK1Tooltip = function(d){return "Shows or hides the specified actor."};
+exports.setSpriteK1Tooltip = function(d){return "Ipinapakita o itinatago ang mga tinukoy na aktor ."};
 
 exports.setSpriteTooltip = function(d){return "I-set ang imahe ng aktor"};
 
-exports.setSpriteSizeRandom = function(d){return "to a random size"};
+exports.setSpriteSizeRandom = function(d){return "sa isang random na laki"};
 
-exports.setSpriteSizeVerySmall = function(d){return "to a very small size"};
+exports.setSpriteSizeVerySmall = function(d){return "sa isang napakaliit na sukat"};
 
-exports.setSpriteSizeSmall = function(d){return "to a small size"};
+exports.setSpriteSizeSmall = function(d){return "sa isang maliit na sukat"};
 
-exports.setSpriteSizeNormal = function(d){return "to a normal size"};
+exports.setSpriteSizeNormal = function(d){return "sa isang normal na laki"};
 
-exports.setSpriteSizeLarge = function(d){return "to a large size"};
+exports.setSpriteSizeLarge = function(d){return "sa isang malaking sukat"};
 
-exports.setSpriteSizeVeryLarge = function(d){return "to a very large size"};
+exports.setSpriteSizeVeryLarge = function(d){return "sa isang napakalaking sukat"};
 
-exports.setSpriteSizeTooltip = function(d){return "Sets the size of an actor"};
+exports.setSpriteSizeTooltip = function(d){return "Itinatakda ang laki ng isang aktor"};
 
 exports.setSpriteSpeedRandom = function(d){return "sa random na bilis"};
 
@@ -21705,29 +21705,29 @@ exports.setSpriteSpeedVeryFast = function(d){return "sa pinakamabilis"};
 
 exports.setSpriteSpeedTooltip = function(d){return "Sini-set ang bilis ng aktor"};
 
-exports.setSpriteZombie = function(d){return "to a zombie image"};
+exports.setSpriteZombie = function(d){return "sa isang zombie na larawan"};
 
 exports.shareStudioTwitter = function(d){return "Tingnan ang kuwento na ginawa ko. Ako mismo ang nagsulat nito sa @codeorg"};
 
 exports.shareGame = function(d){return "Ibahagi ang iyong kuwento:"};
 
-exports.showCoordinates = function(d){return "show coordinates"};
+exports.showCoordinates = function(d){return "ipakita ang mga coordinate ng"};
 
-exports.showCoordinatesTooltip = function(d){return "show the protagonist's coordinates on the screen"};
+exports.showCoordinatesTooltip = function(d){return "ipakita ang mga coordinate ang kalaban sa screen"};
 
-exports.showTitleScreen = function(d){return "show title screen"};
+exports.showTitleScreen = function(d){return "ipakita ang title screen"};
 
 exports.showTitleScreenTitle = function(d){return "title"};
 
 exports.showTitleScreenText = function(d){return "text"};
 
-exports.showTSDefTitle = function(d){return "type title here"};
+exports.showTSDefTitle = function(d){return "i-type ang title dito"};
 
-exports.showTSDefText = function(d){return "type text here"};
+exports.showTSDefText = function(d){return "i-type ang text dito"};
 
-exports.showTitleScreenTooltip = function(d){return "Show a title screen with the associated title and text."};
+exports.showTitleScreenTooltip = function(d){return "Ipakita ng title screen kasama ang mga kaugnay na pamagat at teksto."};
 
-exports.size = function(d){return "size"};
+exports.size = function(d){return "sukat"};
 
 exports.setSprite = function(d){return "set"};
 
@@ -21739,47 +21739,47 @@ exports.soundGoal1 = function(d){return "goal 1"};
 
 exports.soundGoal2 = function(d){return "goal 2"};
 
-exports.soundHit = function(d){return "hit"};
+exports.soundHit = function(d){return "tamaan"};
 
-exports.soundLosePoint = function(d){return "lose point"};
+exports.soundLosePoint = function(d){return "mawalan ng point"};
 
-exports.soundLosePoint2 = function(d){return "lose point 2"};
+exports.soundLosePoint2 = function(d){return "mawalan ng point 2"};
 
 exports.soundRetro = function(d){return "retro"};
 
-exports.soundRubber = function(d){return "rubber"};
+exports.soundRubber = function(d){return "goma"};
 
 exports.soundSlap = function(d){return "slap"};
 
-exports.soundWinPoint = function(d){return "win point"};
+exports.soundWinPoint = function(d){return "point ng panalo"};
 
-exports.soundWinPoint2 = function(d){return "win point 2"};
+exports.soundWinPoint2 = function(d){return "point ng panalo 2"};
 
-exports.soundWood = function(d){return "wood"};
+exports.soundWood = function(d){return "kahoy"};
 
-exports.speed = function(d){return "speed"};
+exports.speed = function(d){return "bilis"};
 
 exports.stopSprite = function(d){return "hinto"};
 
-exports.stopSpriteN = function(d){return "stop actor "+v(d,"spriteIndex")};
+exports.stopSpriteN = function(d){return "itigil ang aktor  "+v(d,"spriteIndex")};
 
 exports.stopTooltip = function(d){return "Itigil ang ginagawa ng aktor."};
 
-exports.throwSprite = function(d){return "throw"};
+exports.throwSprite = function(d){return "itapon"};
 
-exports.throwSpriteN = function(d){return "actor "+v(d,"spriteIndex")+" throw"};
+exports.throwSpriteN = function(d){return "aktor  "+v(d,"spriteIndex")+" hagis"};
 
-exports.throwTooltip = function(d){return "Throws a projectile from the specified actor."};
+exports.throwTooltip = function(d){return "Itatapon ang isang projectile mula sa tinukoy na aktor ."};
 
-exports.vanish = function(d){return "vanish"};
+exports.vanish = function(d){return "mawala"};
 
-exports.vanishActorN = function(d){return "vanish actor "+v(d,"spriteIndex")};
+exports.vanishActorN = function(d){return "mawala ang aktor  "+v(d,"spriteIndex")};
 
-exports.vanishTooltip = function(d){return "Vanishes the actor."};
+exports.vanishTooltip = function(d){return "Mawawala ang aktor ."};
 
-exports.waitFor = function(d){return "wait for"};
+exports.waitFor = function(d){return "maghintay sa"};
 
-exports.waitSeconds = function(d){return "seconds"};
+exports.waitSeconds = function(d){return "segundo"};
 
 exports.waitForClick = function(d){return "maghintay sa click"};
 
@@ -21795,19 +21795,19 @@ exports.waitFor5Seconds = function(d){return "maghintay ng 5 segundo"};
 
 exports.waitFor10Seconds = function(d){return "maghintay ng 10 segundo"};
 
-exports.waitParamsTooltip = function(d){return "Waits for a specified number of seconds or use zero to wait until a click occurs."};
+exports.waitParamsTooltip = function(d){return "Maghintay sa tinukoy na bilang ng mga segundo o gamitin ang zero upang maghintay hanggang ang isang click ay mangyari."};
 
 exports.waitTooltip = function(d){return "Maghintay ng tinakdang oras o kaya hanggang meron click na maganap."};
 
-exports.whenArrowDown = function(d){return "down arrow"};
+exports.whenArrowDown = function(d){return "pababa na arrow"};
 
-exports.whenArrowLeft = function(d){return "left arrow"};
+exports.whenArrowLeft = function(d){return "kaliwang arrow"};
 
-exports.whenArrowRight = function(d){return "right arrow"};
+exports.whenArrowRight = function(d){return "kanang arrow"};
 
-exports.whenArrowUp = function(d){return "up arrow"};
+exports.whenArrowUp = function(d){return "pataas na arrow"};
 
-exports.whenArrowTooltip = function(d){return "Execute the actions below when the specified arrow key is pressed."};
+exports.whenArrowTooltip = function(d){return "Ipatupad ang mga aksyon sa ibaba kapag ang tinukoy na arrow key ay pinindot."};
 
 exports.whenDown = function(d){return "kapag ang pababang arrow"};
 
@@ -21827,45 +21827,45 @@ exports.whenRightTooltip = function(d){return "Ipatupad ang mga aksyon sa ibaba 
 
 exports.whenSpriteClicked = function(d){return "kapag ang aktor ay na-click"};
 
-exports.whenSpriteClickedN = function(d){return "when actor "+v(d,"spriteIndex")+" clicked"};
+exports.whenSpriteClickedN = function(d){return "kapag ang artista  "+v(d,"spriteIndex")+" na click"};
 
 exports.whenSpriteClickedTooltip = function(d){return "Ipatupad ang mga aksyon sa ibaba kapag ang isang artista ay na-click."};
 
-exports.whenSpriteCollidedN = function(d){return "when actor "+v(d,"spriteIndex")};
+exports.whenSpriteCollidedN = function(d){return "kapag ang artista  "+v(d,"spriteIndex")};
 
 exports.whenSpriteCollidedTooltip = function(d){return "Ipatupad ang mga aksyon sa ibaba kapag ang isang aktor ay hinawakan ang isa pang aktor."};
 
-exports.whenSpriteCollidedWith = function(d){return "touches"};
+exports.whenSpriteCollidedWith = function(d){return "hinahawakan"};
 
-exports.whenSpriteCollidedWithAnyActor = function(d){return "touches any actor"};
+exports.whenSpriteCollidedWithAnyActor = function(d){return "nahawakan kahit sinong aktor"};
 
-exports.whenSpriteCollidedWithAnyEdge = function(d){return "touches any edge"};
+exports.whenSpriteCollidedWithAnyEdge = function(d){return "nahawakan ang anumang gilid"};
 
-exports.whenSpriteCollidedWithAnyProjectile = function(d){return "touches any projectile"};
+exports.whenSpriteCollidedWithAnyProjectile = function(d){return "nahawakan ang anumang projectile"};
 
-exports.whenSpriteCollidedWithAnything = function(d){return "touches anything"};
+exports.whenSpriteCollidedWithAnything = function(d){return "nahawakan ang anumang bagay"};
 
-exports.whenSpriteCollidedWithN = function(d){return "touches actor "+v(d,"spriteIndex")};
+exports.whenSpriteCollidedWithN = function(d){return "nahawakan ang aktor  "+v(d,"spriteIndex")};
 
-exports.whenSpriteCollidedWithBlueFireball = function(d){return "touches blue fireball"};
+exports.whenSpriteCollidedWithBlueFireball = function(d){return "nahawakan ang asul na fireball"};
 
-exports.whenSpriteCollidedWithPurpleFireball = function(d){return "touches purple fireball"};
+exports.whenSpriteCollidedWithPurpleFireball = function(d){return "nahawakan ang purple na fireball"};
 
-exports.whenSpriteCollidedWithRedFireball = function(d){return "touches red fireball"};
+exports.whenSpriteCollidedWithRedFireball = function(d){return "nahawakan ang pula na fireball"};
 
-exports.whenSpriteCollidedWithYellowHearts = function(d){return "touches yellow hearts"};
+exports.whenSpriteCollidedWithYellowHearts = function(d){return "nahawakan ang dilaw na puso"};
 
-exports.whenSpriteCollidedWithPurpleHearts = function(d){return "touches purple hearts"};
+exports.whenSpriteCollidedWithPurpleHearts = function(d){return "nahawakan ang purple na puso"};
 
-exports.whenSpriteCollidedWithRedHearts = function(d){return "touches red hearts"};
+exports.whenSpriteCollidedWithRedHearts = function(d){return "nahawakan ang pulang puso"};
 
-exports.whenSpriteCollidedWithBottomEdge = function(d){return "touches bottom edge"};
+exports.whenSpriteCollidedWithBottomEdge = function(d){return "nahawakan ang ilalim"};
 
-exports.whenSpriteCollidedWithLeftEdge = function(d){return "touches left edge"};
+exports.whenSpriteCollidedWithLeftEdge = function(d){return "nahawakan ang kaliwang ilalim"};
 
-exports.whenSpriteCollidedWithRightEdge = function(d){return "touches right edge"};
+exports.whenSpriteCollidedWithRightEdge = function(d){return "nahawakan ang kanang ilalim"};
 
-exports.whenSpriteCollidedWithTopEdge = function(d){return "touches top edge"};
+exports.whenSpriteCollidedWithTopEdge = function(d){return "nahawakan ang tuktok"};
 
 exports.whenUp = function(d){return "kapag ang pataas na arrow"};
 
