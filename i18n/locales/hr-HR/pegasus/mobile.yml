@@ -16,7 +16,7 @@ hr-HR:
   zipcode: Poštanski broj ili država
   submit: Pošalji
   twentyhours_heading: Isprobajte naš Uvod u Tečaj informatike
-  twentyhours_text: Završili ste svoj prvi Sat Kodiranja? Naučite više o informatici i konceptima programiranja u narednom tečaju.
+  twentyhours_text: Završio si svoj prvi Sat Kodiranja? Nauči više o Informatici i konceptima programiranja u narednom tečaju.
   hoc2014_heading: 'Pridružite se <a href="http://hourofcode.com">Satu Kodiranja</a><br/>8. - 14. prosinca 2014.<br/>'
   hoc2014_students: Učenici
   hoc2014_try: Isprobaj
@@ -63,7 +63,7 @@ hr-HR:
   give_my_hour: 'Daj moj "Hour":'
   girls_team: timu djevojčica
   boys_team: Muski tim
-  tell_the_world: Reci svijetu!
+  tell_the_world: Reci svima!
   thanks_for_voting: Hvala na glasovanju!
   share_on_facebook: Podijeli na Facebook-u
   share_on_twitter: Podijeli na Twitter-u
@@ -84,7 +84,7 @@ hr-HR:
   enter_country: Unesi državu ako živiš izvan Sjedinjenih Američkih Država
   used_infrequent_updates: Samo za rijetka ažuriranja
   privacy_practices_children: Pogledajte naša pravila privatnosti za djecu
-  petition_thankyou: Hvala ti na potpisu za peticiju
+  petition_thankyou: Hvala vam na potpisivanju peticije
   continue_learning_header: 'Nastavi učiti "Više o One Hour"'
   continue_learning_body: Imaš puno mogućnosti. Možeš učiti na internetu, ili kod vlastite škole, ili čak u ljetnom kampu.
   learn_next_level: Prijeđi na sljedeći nivo
@@ -184,9 +184,9 @@ hr-HR:
   dashboard_landing_print_certificates: Ispišite potvrde za učenike koji su završili ovaj tečaj
   dashboard_landing_educator_blog: Pročitajte o novostima i ažuriranjima materijala na našem pedagoškom blogu
   dashboard_landing_smart_hints: Pomozite da dodamo pametne savjete na Code.org tutorijale
-  dashboard_landing_video_player: Testirajte naš novi video player u školi
+  dashboard_landing_video_player: Isprobajte naš novi video player u školi
   dashboard_landing_progress_title: Napredak u glavnom tečaju
-  dashboard_landing_progress_biggest: Ovo je napredak u tvom najvećem dijelu.
+  dashboard_landing_progress_biggest: Ovo je napredak u vašem najvećem odjeljenju.
   dashboard_landing_view_progress: 'Pogledaj napredak za %{biggest_section}'
   dashboard_landing_available_title: Dostupni tečajevi
   dashboard_landing_available_courses: Ovo su tečajevi trenutno dostupni tvojim studentima.
@@ -203,7 +203,7 @@ hr-HR:
   dashboard_action_required: potrebno
   dashboard_navigation_home_page: Učiteljeva Početna stranica
   dashboard_navigation_section_student_progress: Učenički računi i napredak
-  dashboard_navigation_section_teacher_progress: Tvoj napredak u tečaju
+  dashboard_navigation_section_teacher_progress: Napredak u vašem tečaju
   dashboard_navigation_section_lesson_plans: Nastavni planovi i resursi
   dashboard_navigation_section_community: Pomoć i zajedništvo
   dashboard_navigation_section_pd: Profesionalni razvoj
@@ -214,27 +214,27 @@ hr-HR:
   dashboard_navigation_manage_students: Upravljanje učenicima
   dashboard_navigation_lesson_plans_resources: Nastavni planovi i resursi
   dashboard_navigation_view_stats: Prikaz statistike
-  dashboard_navigation_section: 'Dio: %{section_name}'
+  dashboard_navigation_section: 'Odjeljenje: %{section_name}'
   dashboard_navigation_student: 'Učenik: %{student_name}'
-  dashboard_sections_new_section: Novi dio
-  dashboard_sections_jumbotron_instruction: Napravite nove dijelove i dodajte učenike u njih. Dijelovi vam pomažu organizirati učenike u manje grupe tako da možete pratiti njihov napredak i upravljati njihovim računima.
-  dashboard_sections_table_section: Dio
+  dashboard_sections_new_section: Novo odjeljenje
+  dashboard_sections_jumbotron_instruction: Napravite nova odjeljenja i dodajte učenike u njih. Odjeljenja vam pomažu organizirati učenike u manje grupe tako da možete pratiti njihov napredak i upravljati njihovim računima.
+  dashboard_sections_table_section: Odjeljenje
   dashboard_sections_table_secret: Način prijave
   dashboard_sections_table_grade: Razred
   dashboard_sections_table_course: Tečaj
   dashboard_sections_table_students: Učenici
-  dashboard_sections_table_code: Šifra dijela
-  dashboard_sections_name: Ime podgrupe
-  dashboard_sections_choose_secret: 'Ako želite dati račune svojim učenicima, odaberite tajni tip <b>riječi</b> ili <b>slike</b> za taj dio.'
-  dashboard_sections_secret_word: '<b>Riječ</b> ti dopušta da postaviš tajnu riječ za svakog učenika.'
-  dashboard_sections_secret_picture: '<b>Slika</b> ti dopušta da postaviš tajnu sliku za svakog učenika, idealno za mlađe učenike koji još ne koriste tipkovnicu.'
-  dashboard_sections_secret_none: 'Ako želiš da učenici sami upravljaju svojim računima, uključujući i odabir vlastite lozinke, odaberi tajni tip<b>none</b>.'
+  dashboard_sections_table_code: Šifra odjeljenja
+  dashboard_sections_name: Ime odjeljenja
+  dashboard_sections_choose_secret: 'Ako želite napraviti račune za svoje učenike, odaberite tajni tip <b>riječi</b> ili <b>slike</b> za to odjeljenje.'
+  dashboard_sections_secret_word: '<b>Riječ</b> vam dopušta da postavite tajnu riječ za svakog učenika.'
+  dashboard_sections_secret_picture: '<b>Slika</b> vam dopušta da postavite tajnu sliku za svakog učenika, što je idealno za mlađe učenike koji još ne znaju tipkati.'
+  dashboard_sections_secret_none: 'Ako želite da učenici sami upravljaju svojim računima, uključujući i odabir vlastite lozinke, odaberite tajni tip<b>ništa</b>.'
   dashboard_sections_print_secrets: Možeš ispisati list s karticama koje sadrže informacije o računu učenika i podijeliti ih učenicima.
-  dashboard_sections_switch_section: 'Promijeni dio:'
+  dashboard_sections_switch_section: 'Promijeni odjeljenje:'
   dashboard_students_add_student: Dodaj učenika
   dashboard_students_add_students: Dodaj više učenika
   dashboard_students_add_multiple: 'Upiši ili zalijepi imena svojih učenika, jedno ime po retku:'
-  dashboard_students_new_section: 'Napravili ste novi dio! Sad dodajte svoje učenike korištenjem gornjih gumba <b>Dodaj učenika</b> i <b>Dodaj više učenika</b>.'
+  dashboard_students_new_section: 'Napravili ste novo odjeljenje! Sad dodajte svoje učenike korištenjem gornjih gumba <b>Dodaj učenika</b> i <b>Dodaj više učenika</b>.'
   dashboard_students_placeholder_name: Ime učenika
   dashboard_students_name: Ime
   dashboard_students_age: Godine starosti
@@ -251,14 +251,14 @@ hr-HR:
   dashboard_students_auto_generated: Auto-generirani
   dashboard_students_reset_secret: Ponovno postavi tajnu
   dashboard_students_reset_password: Ponovno postavi lozinku
-  dashboard_students_share_section: 'Podijelite stranicu za prijavu na ovaj dio svojim učenicima:'
+  dashboard_students_share_section: 'Podijelite stranicu za prijavu u ovo odjeljenje svojim učenicima:'
   dashboard_students_print_info: Ispiši kartice za studente s informacijama za prijavljivanje.
   dashboard_students_secret_picture: Tajna Slika
-  dashboard_students_reset_picture: 'Možeš ponovno postaviti tajnu sliku učenika bilo kada odabirom <b>Prikaži tajnu</b> i zatim<b>Ponovno postavi tajnu</b>. Stvorenu novu tajnu sliku učenik će moći koristiti nakon prijave.'
+  dashboard_students_reset_picture: 'Možete bilo kada ponovno postaviti učenikovu tajnu sliku odabirom <b>Prikaži tajnu</b>, a zatim <b>Ponovno postavi tajnu</b>. Tako će se stvoriti nova tajna slika za tog učenika, koju će moći koristiti nakon prijave.'
   dashboard_students_secret_word: Tajna Riječ
-  dashboard_students_reset_word: 'Možeš ponovno postaviti učenikove tajne riječi bilo kada odabirom <b>Prikaži tajnu</b> i zatim <b>Ponovno postavi tajnu</b>. Učenik će moći koristiti novi par tajnih riječi nakon prijave. '
-  dashboard_students_join_link: Kažite svojim učenicima da naprave svoje račune i priključe se vašem dijelu na
-  dashboard_students_no_email: 'Ako vaši učenici nemaju adrese elektroničke pošte ili ako vi želite napraviti račune za njih, promijenite način tajnosti ovog dijela u <b>riječ</b> ili <b>sliku</b>.'
+  dashboard_students_reset_word: 'Možete bilo kada ponovno postaviti učenikove tajne riječi odabirom <b>Prikaži tajnu</b>, a zatim <b>Ponovno postavi tajnu</b>. Učenik će moći koristiti novi par tajnih riječi nakon prijave. '
+  dashboard_students_join_link: Kažite svojim učenicima da naprave svoje račune i priključe se vašem odjeljenju na
+  dashboard_students_no_email: 'Ako vaši učenici nemaju adrese elektroničke pošte ili ako vi želite napraviti račune za njih, promijenite način tajnosti ovog odjeljenja u <b>riječ</b> ili <b>sliku</b>.'
   dashboard_students_print_page: Ispiši ovu stranicu
   dashboard_students_url: URL
   dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Klikni ovdje</a> za naš dokument o privatnosti koji možete podijeliti ili ispisati svojim učenicima.'
@@ -267,7 +267,7 @@ hr-HR:
   dashboard_course1: 'Tečaj 1:'
   dashboard_course2: 'Tečaj 2:'
   dashboard_course3: 'Tečaj 3:'
-  dashboard_sequence: Redoslijed
+  dashboard_sequence: Slijed
   dashboard_framework: Okvir
   dashboard_standards: Standardi
   dashboard_implementation_guide: Vodič za implementaciju
@@ -287,7 +287,7 @@ hr-HR:
   stats_hoc_2013_image_alt: Statistika Sata Kodiranja 2013
   dashboard_teacher: Učitelj
   dashboard_student: Učenik
-  dashboard_sections_email_question: Da li svi učenici imaju ispravnu adresu elektroničke pošte?
+  dashboard_sections_email_question: Imaju li svi učenici ispravnu e-mail adresu?
   dashboard_sections_account_creation_question: Tko stvara učeničke račune?
   dashboard_sections_password_question: 'Što učenici koriste kao "lozinku"?'
   dashboard_sections_picture_account_creation: Slika dodijeljena od Code.org
@@ -295,8 +295,8 @@ hr-HR:
   dashboard_sections_sign_in_question: Gdje se učenici prijavljuju?
   dashboard_sections_sign_in_unique: 'Jedinstvena mrežna stranica navedena na kartici "Upravljaj učenicima"'
   dashboard_sections_sign_in_main: 'http://code.org i klikni na "Prijava"'
-  dashboard_sections_password_account_creation: Tekstna zaporka koju je napravio učenik
-  dashboard_sections_login_type_explanation: 'Ova tablica pomoći objašnjava koji od načina prijave <b>slika, riječ ili e-mail</b> želite odabrati za dio.'
+  dashboard_sections_password_account_creation: Tekstna lozinka koju je napravio učenik
+  dashboard_sections_login_type_explanation: 'Ova tablica pomoći objašnjava koji od načina prijave <b>slika, riječ ili e-mail</b> želite odabrati za odjeljenje.'
   dashboard_faq: Često postavljana pitanja
   code_hoc_coming: 'Sat Kodiranja je ovdje - 8. - 14. prosinca!'
   code_sign_up: Prijavite se za sudjelovanje u Tjednu poučavanja informatike
@@ -366,7 +366,7 @@ hr-HR:
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Kamen, škare, papir
   hourofcode_name: Prostor za novi code.org/hoc
-  playlab_name: Play Lab
+  playlab_name: Laboratorij igara
   codeorg_gradelevel: Dob 4-104
   codeintl_gradelevel: Dob 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -486,9 +486,9 @@ hr-HR:
   projguts_shortdescription: Pokušaj oblikovanje i simulaciju uporabom kamen/škare/papir
   hourofcode_shortdescription: Prostor za novi code.org/hoc
   frozen_shortdescription: Hajdemo koristiti kodiranje da se pridružimo Anni i Elsi dok istražuju čaroliju i ljepotu leda.
-  playlab_shortdescription: Create a story or make a game with Play Lab!
-  codeorg_longdescription: Naučite osnovne koncepte informatike pomoću povuci-i-ispusti programiranja. Ovo je igroliki tutorijal kojim sami upravljate, uz video lekcije koje vode Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Naučite programske petlje ponavljanja, uvjete i osnovne algoritme. Dostupno na 34 jezika.
-  codeintl_longdescription: Naučite osnovne koncepte informatike pomoću povuci-i-ispusti programiranja. Ovo je igroliki tutorijal kojim sami upravljate, uz video lekcije koje vode Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Naučite programske petlje ponavljanja, uvjete i osnovne algoritme. Dostupno na 34 jezika.
+  playlab_shortdescription: Napravi priču ili igru pomoću Laboratorija igara!
+  codeorg_longdescription: Nauči osnovne informatičke pojmove pomoću povuci-i-ispusti programiranja. Ovo je igroliki tutorijal kojim sam upravljaš, uz video lekcije koje vode Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Nauči programske petlje ponavljanja, uvjete i osnovne algoritme. Dostupno na 34 jezika.
+  codeintl_longdescription: Nauči osnovne informatičke pojmove pomoću povuci-i-ispusti programiranja. Ovo je igroliki tutorijal kojim sam upravljaš, uz video lekcije koje vode Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Nauči programske petlje ponavljanja, uvjete i osnovne algoritme. Dostupno na 34 jezika.
   thinkersmithspanish_longdescription: 'Korištenjem ugrađenog "Robotskog rječnika" učenici će otkriti kako navoditi jedan drugog ka izvršavanju određene zadaće bez prethodnog dogovaranja. Ova lekcija poučava djecu vezi između simbola i akcije, kao i neprocjenjivo vrijednoj vještini ispravljanja grešaka.'
   khan_longdescription: Nauči osnove programiranja u JavaScriptu dok stvaraš zabavne crteže pomoću svog koda. Napravi to sam ili sa svojim razredom!
   khanes_longdescription: Nauči osnove programiranja u JavaScriptu dok stvaraš zabavne crteže pomoću svog koda. Napravi to sam ili sa svojim razredom!
@@ -526,7 +526,7 @@ hr-HR:
   projguts_longdescription: Ova izvanmrežna aktivnost pomaže učenicima naučiti kako radi modeliranje i simuliranje na način da grupa učenika igra različite verzije igre kamen / škare / papir i opažaju rezultate pokusa za različite modele.
   hourofcode_longdescription: Prostor za novi code.org/hoc
   frozen_longdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
-  playlab_longdescription: Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!
+  playlab_longdescription: Napravi priču ili igru pomoću Laboratorija igara! Napravi da se životinje, gusari, zombiji, ninje i mnogi drugi likovi miču, prave zvukove, skupljaju bodove, pa čak i da bacaju vatrene kugle!
   codeorg_beyond_name: Uvod u informatiku (dob 5-8)
   khan_beyond_name: Nauči programirati računalo
   tynker_beyond_name: Nauči programirati kod kuće
@@ -675,7 +675,7 @@ hr-HR:
   processing_beyond_shortdescription: Nauči Processing jezike
   alice_beyond_shortdescription: Podučavanje programiranja u 3D okruženju
   sphero_beyond_shortdescription: SPRK lekcije daju djeci zabavan brzinski tečaj programiranja robota dok usput poboljšavaju matematičke i znanstvene vještine.
-  codeorg_beyond_longdescription: 'Naučite osnovne koncepte informatike pomoću povuci-i-ispusti programiranja. Tri potpuna tečaja, od kojih se svaki sastoji od 15-20 lekcija od "otkačenih - izvanmrežnih" razrednih aktivnosti izmiješanih s igrolikim tutorijalima kojima sami upravljate, te video lekcijama koje vode Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Naučite programske petlje ponavljanja, uvjete, osnovne algoritme, funkcije i varijable.'
+  codeorg_beyond_longdescription: 'Nauči osnovne informatičke pojmove pomoću povuci-ispusti programiranja. Tri potpuna tečaja, od kojih se svaki sastoji od 15-20 lekcija, od "otkačenih = izvanmrežnih" razrednih aktivnosti izmiješanih s igrolikim tutorijalima kojima sam upravljaš, te video lekcija koje vode Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Nauči programske petlje ponavljanja, uvjete, osnovne algoritme, funkcije i varijable.'
   khan_beyond_longdescription: Nauči osnove programiranja u JavaScriptu dok stvaraš zabavne crteže pomoću svog koda. Napravi to sam ili sa svojim razredom!
   tynker_beyond_longdescription: Tynker čini učenje programiranja zabavnim i jednostavnim. On to pravi vidljivim. Djeca prave igrice i mobilne aplikacije slaganjem blokova kôda. On uklanja nužnost poznavanja programske sintakse. Djeca oblikuju ideje u animirane priče i matematičku umjetnost na licu mjesta. On promovira napredno učenje. Dok djeca uče osnove, Tynker uvodi napredne koncepte uključujući programiranje vođeno sintaksom.
   scratch_beyond_longdescription: 'Koristeći Scratch možeš napraviti svoje vlastite interaktivne igre, priče, animacije &mdash; i i podijeli ih sa svojim rijateljima. Započni animirajući svoje ime, praveći čestitku ili stvarajući ping-pong igru.'
@@ -696,8 +696,8 @@ hr-HR:
   lynda_beyond_longdescription: 'Naučite kako kodirati, kreirati i napraviti mrežne aplikacije, od osnova objektno orijentiranog programiranja u C-u i C++, do kako pisati u Javi. Naši tutorijali za razvojne programere mogu vam pomoći da razvijete i stvorite mobilne aplikacije, radite s PHP i MySQL bazama podataka, počnete raditi sa statističkim procesnim jezikom R i još mnogo toga. [Opaska: potrebno je plaćanje]'
   edx_beyond_longdescription: 'Na Harvard Collegeu je CS50x uvodni kolegij u intelektualne građevine informatike i umjetnosti programiranja za specijaliste i one koji to nisu, sa ili bez prethodnog programerskog iskustva. Teme obuhvaćaju apstrakciju, algoritme, strukture podataka, inkapsulaciju, upravljanje resursima, sigurnost, softversko inžinjerstvo i razvoj mrežnih aplikacija. Jezici uključuju C, PHP i JavaScript uz  SQL, CSS i HTML. Ovaj kolegij na Harvardovom kampusu je drugi po veličini kolegij.'
   coursera_beyond_longdescription: 'CS 101 kolegij sveučilišta Stanford koji vodi Nich Parlante (BESPLATNO!). Tu se osnovnim informatičkim idejama podučavaju ljudi bez ikakvog prethodnog iskustva. Igranje i eksperimentiranje s kratkim komadima kôda dovest će do shvaćanja moći i ograničenja računala. CS 101 također objašnjava pozadinu današnjih računala: što je računalo, što je hardver, što je softver, što je Internet. Nije potrebno nikakvo prethodno iskustvo osim sposobnosti korištenja preglednika.'
-  udacity_beyond_longdescription: U ovom tečaju ćete naučiti ključne informatičke koncepte i naučiti kako napisati vlastiti računalni program u kontekstu izrade internetskog pretraživača. Za ovaj tečaj nije potrebno prethodno znanje programiranja. Početnici su dobrodošli! Na kraju tečaja znat ćete ključne informatičke koncepte i dovoljno programiranja da budete sposobni sami napisati korisne Python programe. Ovaj tečaj će vas pripremiti za prelazak na računalne tečajeve srednjeg stupnja .
-  teachingtree_beyond_longdescription: TeachingTree je otvorena platforma koja svima omogućava organiziranje edukativnog sadržaja. Naš cilj je omogućiti učenicima brz pristup upravo onim videoisječcima koji im trebaju da nauče vlastite koncepte. Ohrabrujemo svakoga da pomogne dodavanjem videa ili tagiranjem koncepata.
+  udacity_beyond_longdescription: U ovom tečaju ćete naučiti ključne informatičke pojmove i naučiti kako napisati vlastiti računalni program u kontekstu izrade internetskog pretraživača. Za ovaj tečaj nije potrebno prethodno znanje programiranja. Početnici su dobrodošli! Na kraju tečaja znat ćete ključne informatičke pojmove i dovoljno programiranja da budete sposobni sami napisati korisne Python programe. Ovaj tečaj će vas pripremiti za prelazak na računalne tečajeve srednjeg stupnja .
+  teachingtree_beyond_longdescription: TeachingTree je otvorena platforma koja svima omogućava organiziranje edukativnog sadržaja. Naš cilj je omogućiti učenicima brz pristup upravo onim videoisječcima koji im trebaju da nauče pojedine pojmove. Ohrabrujemo svakoga da pomogne dodavanjem videa ili tagiranjem pojmova.
   kodu_beyond_longdescription: Kodu omogućuje djeci napraviti igre na PC-u i XBox-u preko jednostavog vizualnog programskog jezika. Kodu možete koristiti da podučavate kreativnosti, rješavanju problema, pričanju priča kao i programiranju. Bilo tko može koristiti Kodu da napravi igru, i mala djeca i odrasli bez vještina dizajniranja ili programiranja. Kodu za PC je dostupan za besplatno preuzimanje. Kodu za XBox je također dostupan u SAD-u na XBox Marketplace-u, na kanalu Indie Games za oko 5 $.
   cargobot_beyond_longdescription: Cargo-Bot je mozgalica u kojoj učiš robota kako da premješta sanduke. Zvuči jednostavno, zar ne? Sastoji se od 36 veoma pametnih zadataka, nezaboravne glazbe i fantastične grafike. Čak možeš snimiti svoja rješenja i dijeliti ih na YouTubeu da bi ih pokazao svojim prijateljima.
   kidsruby_beyond_longdescription: 'Zabavi se i pravi igrice ili hakiraj domaću zadaću koristeći Ruby! Samo reci roditeljima ili učiteljima da učiš programirati u Rubyju... ;-) Besplatno je i radi na bilo kojem računalu. [Napomena: potrebna je instalacija na računalo]'

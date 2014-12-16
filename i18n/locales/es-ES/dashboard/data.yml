@@ -497,9 +497,9 @@ es:
         frozen_intro: Introducción a La Hora del Código
         frozen_loops: Introducción a los bucles
         frozen_functions: Introducción a las Funciones
-        playlab_intro: Introducción al laboratorio de juego
-        playlab_events: Eventos del laboratorio de juego
-        playlab_repeat_forever: Repetir para siempre en el laboratorio de juego
+        playlab_intro: Introducción al laboratorio de juegos
+        playlab_events: Eventos del laboratorio de juegos
+        playlab_repeat_forever: 'Laboratorio de juego: repetir para siempre'
     callout:
       text:
         drag_blocks: 'Arrastra un bloque de "mover" y pégalo debajo del otro bloque'
@@ -547,19 +547,19 @@ es:
         playlab_add_move: 'Añade bloques "mover" dentro de este bloque  repetir'
         playlab_add_score: Agrega bloques de puntuación aquí
         playlab_add_blocks: Añade tus bloques aquí
-        set_variable: Arrastra un número de bloques aquí para definir tu variable.
+        set_variable: Arrastra un bloque número aquí para definir tu variable
         place_variable: Arrastra tu variable dentro de este bloque.
         bee_for_loop: Arrastra la mayor cantidad de néctar que quieres que la abeja recolecte aquí.
         place_counter_variable: Arrastre la variable contador dentro de este bloque
-        function_editor_draw_square: 'Esta es tu función definida. Estos bloques corren cada vez que usas el bloque "dibujar un cuadrado".'
+        function_editor_draw_square: 'Esta es tu definición de función. Estos bloques se ejecutan cada vez que usas el bloque "dibujar un cuadrado"'
         change_here: Haz tu cambio aquí.
         write_draw_square_function: Arrasta bloques de la caja de herramientas aquí que dibujen un cuadrado.
         write_draw_triangle_function: Arrastra bloques desde la caja de herramientas aquí para que dibujen un triángulo
         edit_add_parameter: Haz clic en editar para agregar un parámetro en la función
-        add_and_drag_parameter: Escribe en nombre de su parámetro aquí, haga clic en agregar y luego arrastrarlo en la definición de la función
+        add_and_drag_parameter: Escribe el nombre de su parámetro aquí, haga clic en agregar y luego arrastrarlo en la definición de la función
         fill_in_actor: Rellene el ??? con números que corresponden a cada actor (1, 2 y 3)
         repeat: Ponga bloques dentro del bucle para repetir comandos
-        if_bee_nectar: 'Utilice el bloque "si" para decidir si la abeja debe recibir néctar'
+        if_bee_nectar: 'Utilice el bloque "si" para decidir si la abeja debe obtener el néctar'
         if_else_bee: 'Use el bloque "si/sino" para que la abeja obtenga néctar de una flor, y haga miel si no es una flor'
         repeat_full_circle: Introduce el número de veces que el zombie tiene que moverse para hacer un círculo completo
         place_length_variable: Arrastre aquí la variable longitud para reemplazar los signos de interrogación

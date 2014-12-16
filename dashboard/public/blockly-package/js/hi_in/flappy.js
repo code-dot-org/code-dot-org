@@ -12412,7 +12412,7 @@ exports.flappySpecificFail = function(d){return "Your code looks good - it will 
 
 exports.incrementPlayerScore = function(d){return "increment player score"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Add one to the current player score."};
+exports.incrementPlayerScoreTooltip = function(d){return "वर्तमान खिलाडी के स्कोर में एक  जोड़ें।"};
 
 exports.nextLevel = function(d){return "Congratulations! You have completed this puzzle."};
 

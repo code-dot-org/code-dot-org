@@ -437,9 +437,9 @@
           of times.
       2:
         image: notes/frozen2_2.jpg
-        text: In programming, we call this a loop. A loop is how you repeat your code
-          over and over again. For the next puzzle, your goal is to help Anna create
-          a square with the "Repeat" block.
+        text: Proqramlaşdırmada biz buna dövr deyirik. Dövr proqramınızı təkrar-təkrar
+          yenidən icra etməyin yoludur. Növbəti tapmacada tapşırığınız Annanın "təkrar
+          et" bloku ilə kvadrat düzəltməsinə kömək etməkdir.
       3:
         image: notes/frozen2_3.jpg
         text: Any blocks of code you put inside the "Repeat" block will be repeated

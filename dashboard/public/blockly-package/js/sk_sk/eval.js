@@ -14422,7 +14422,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Bloky \"Opakuj\" alebo \"Ak\" 
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Funkčný blok musí obsahovať ďalšie bloky vo vnútri, aby pracoval správne."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "Musia existovať bloky vo vnútri tvojej definície funkcie. Kliknite na \"upraviť\" a presuňte bloky do vnútra zeleného bloku."};
 
 exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
 
@@ -14496,7 +14496,7 @@ exports.showBlocksHeader = function(d){return "Ukáž Bloky"};
 
 exports.showGeneratedCode = function(d){return "Zobraziť kód"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "reťazec =?"};
 
 exports.subtitle = function(d){return "vizuálne programovacie prostredie"};
 

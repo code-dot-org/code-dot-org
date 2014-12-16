@@ -14796,29 +14796,29 @@ exports.end = function(d){return "tapos"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Ang \"Repeat\" o \"if\" block ay kailangan ng iba pang mga block sa loob nito upang gumana. Siguraduhin na ang block na asa loob ay nakasukat ng maayos sa loob ng naglalaman na block."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Ang function na block ay kailangang magkaroon ng iba pang mga block sa loob nito upang gumana."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "Dapat meron mga block sa loob ng iyong kahulugan ng function. I-click ang \"i-edit\" at i-drag ang mga block sa loob ng berdeng block."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "I-click ang \"i-edit\" upang tiyakin na wala kang nawawala sa loob ng iyong kahulugan ng function ng anumang mga block."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "Tandaang i-attach ang isang block sa bawat input parameter sa function block sa iyong workspace."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "Nagdagdag ka ng isang block na parameter, ngunit hindi ito ginamit sa definition. Siguraduhin na gamitin ang iyong mga parameter sa pamamagitan ng pag-click sa \"i-edit\" at paglalagay ng parameter block sa loob ng berdeng block."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "Lumikha ng parameter sa pamamagitan ng pag-click sa \"i-edit\" at pagdagdag ng mga kinakailangang parameter. I-drag ang mga bagong block parameter sa iyong kahulugan ng function."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "Lumikha ka ng isang function, ngunit hindi kailanman ginamit ito sa iyong workspace! Mag-click sa \"Mga Functions\" sa toolbox at tiyakin na ginagamit mo ito sa iyong program."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "Subukan ang pagpalit ng \"???\" na may value."};
 
-exports.extraTopBlocks = function(d){return "Meron kang extra na mga block na hindi nakasama sa event block."};
+exports.extraTopBlocks = function(d){return "Mayroon kang hindi isinama na block. Ibig mo bang ilakip ang mga ito sa \"when run\" block?"};
 
 exports.finalStage = function(d){return "Maligayang pagbati! Natapos mo na ang pinakahuling stage."};
 
 exports.finalStageTrophies = function(d){return "Maligayang pagbati! Nakumpleto mo na ang pinakahuling stage at nanalo ng "+p(d,"numTrophies",0,"fil",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Katapusan"};
 
 exports.generatedCodeInfo = function(d){return "Kahit ang mga nangungunang mga unibersidad ay nagtuturo ng block-based na coding (eg, "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ngunit sa ilalim nito, ang mga bloke na iyong binuo ay maaari ring ipakita sa JavaScript, pinaka-tinatanggap na mga wika coding ng mundo:"};
 
@@ -14850,9 +14850,9 @@ exports.numBlocksNeeded = function(d){return "Maligayang bati! Nakumpleto mo ang
 
 exports.numLinesOfCodeWritten = function(d){return "Ikaw ang nagsulat ng "+p(d,"numLines",0,"fil",{"one":"1 line","other":n(d,"numLines")+" lines"})+" ng code!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "i-play"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "I-print"};
 
 exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" ng "+v(d,"stage_total")};
 
@@ -14864,11 +14864,11 @@ exports.runProgram = function(d){return "Patakbuhin"};
 
 exports.runTooltip = function(d){return "Patakbuhin ang program na tinutukoy ng mga block sa workspace."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "Score"};
 
 exports.showCodeHeader = function(d){return "Ipakita ang Code"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Ipakita ang mga Block"};
 
 exports.showGeneratedCode = function(d){return "Ipakita ang Code"};
 
@@ -14892,19 +14892,19 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Kinabuohan: "+p(d,"numL
 
 exports.tryAgain = function(d){return "Subukang muli"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Tingnan ang hint"};
 
 exports.backToPreviousLevel = function(d){return "Bumalik sa nakaraang level"};
 
-exports.saveToGallery = function(d){return "I-save sa iyong gallery"};
+exports.saveToGallery = function(d){return "I-save sa gallery"};
 
-exports.savedToGallery = function(d){return "I-save sa iyong gallery!"};
+exports.savedToGallery = function(d){return "Na-save sa gallery!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Pasesnya, hindi namin pwede ibahagi ang program na ito."};
 
 exports.workspaceHeader = function(d){return "I-assemble ang iyong mga bloke dito: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "I-type ang iyong JavaScript code dito"};
 
 exports.infinity = function(d){return "Walang katapusan"};
 
@@ -14916,9 +14916,9 @@ exports.wantToLearn = function(d){return "Gusto mo matuto mag-code?"};
 
 exports.watchVideo = function(d){return "Panoorin ang Video"};
 
-exports.when = function(d){return "when"};
+exports.when = function(d){return "kelan"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "kapag tumakbo"};
 
 exports.tryHOC = function(d){return "Subukan ang Hour of Code"};
 
@@ -14926,7 +14926,7 @@ exports.signup = function(d){return "Mag-sign up para sa intro ng kurso"};
 
 exports.hintHeader = function(d){return "Narito ang isang tip:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Tingnan kung ano ang nangyari dito, at subukang ayusin ang iyong mga program."};
 
 exports.defaultTwitterText = function(d){return "Check out what I made"};
 
@@ -14955,21 +14955,21 @@ exports.colourTooltip = function(d){return "Napalitan ang kulay ng lapis."};
 
 exports.createACircle = function(d){return "gumawa ng bilog"};
 
-exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+exports.createSnowflakeSquare = function(d){return "lumikha ng isang snowflake na uri ng parisukat"};
 
-exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+exports.createSnowflakeParallelogram = function(d){return "lumikha ng isang snowflake na uri ng paralelogram"};
 
-exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+exports.createSnowflakeLine = function(d){return "lumikha ng isang snowflake na uri ng line"};
 
-exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+exports.createSnowflakeSpiral = function(d){return "lumikha ng isang Snowflake na uri ng spiral"};
 
-exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+exports.createSnowflakeFlower = function(d){return "lumikha ng isang snowflake na uri ng bulaklak"};
 
-exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+exports.createSnowflakeFractal = function(d){return "lumikha ng isang snowflake na uri fractal"};
 
-exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+exports.createSnowflakeRandom = function(d){return "lumikha ng isang snowflake na uri ng random"};
 
-exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
+exports.createASnowflakeBranch = function(d){return "lumikha ng isang snowflake branch"};
 
 exports.degrees = function(d){return "degrees"};
 
@@ -14991,7 +14991,7 @@ exports.drawAHouse = function(d){return "gumuhit ng bahay"};
 
 exports.drawAPlanet = function(d){return "gumuhit ng planeta"};
 
-exports.drawARhombus = function(d){return "draw a rhombus"};
+exports.drawARhombus = function(d){return "gumuhit ng rhombus"};
 
 exports.drawARobot = function(d){return "gumuhit ng robot"};
 
@@ -15009,7 +15009,7 @@ exports.drawUpperWave = function(d){return "gumuhit ng upper wave"};
 
 exports.drawLowerWave = function(d){return "gumuhit ng lower wave"};
 
-exports.drawStamp = function(d){return "draw stamp"};
+exports.drawStamp = function(d){return "gumuhit ng stamp"};
 
 exports.heightParameter = function(d){return "taas"};
 
@@ -15021,15 +15021,15 @@ exports.jumpBackward = function(d){return "tumalon paatras sa pamamagitan ng"};
 
 exports.jumpForward = function(d){return "tumalon paabante sa pamamagitan ng"};
 
-exports.jumpTooltip = function(d){return "Moves the artist without leaving any marks."};
+exports.jumpTooltip = function(d){return "Inililipat ang artist nang hindi nagiiwan ng anumang marka."};
 
-exports.jumpEastTooltip = function(d){return "Moves the artist east without leaving any marks."};
+exports.jumpEastTooltip = function(d){return "Inililipat ang artist sa silangan nang hindi nagiiwan ng anumang marka."};
 
-exports.jumpNorthTooltip = function(d){return "Moves the artist north without leaving any marks."};
+exports.jumpNorthTooltip = function(d){return "Inililipat ang artist sa hilaga nang hindi nagiiwan ng anumang marka."};
 
-exports.jumpSouthTooltip = function(d){return "Moves the artist south without leaving any marks."};
+exports.jumpSouthTooltip = function(d){return "Inililipat ang artist sa timog nang hindi nagiiwan ng anumang marka."};
 
-exports.jumpWestTooltip = function(d){return "Moves the artist west without leaving any marks."};
+exports.jumpWestTooltip = function(d){return "Inililipat ang artist sa kanluran nang hindi nagiiwan ng anumang marka."};
 
 exports.lengthFeedback = function(d){return "tama ka maliban sa haba ng pagsulong."};
 
@@ -15039,23 +15039,23 @@ exports.loopVariable = function(d){return "taga pag bilang"};
 
 exports.moveBackward = function(d){return "umatras ng"};
 
-exports.moveEastTooltip = function(d){return "Moves the artist east."};
+exports.moveEastTooltip = function(d){return "Inililipat ang artist sa silangan."};
 
 exports.moveForward = function(d){return "umabante ng"};
 
-exports.moveForwardTooltip = function(d){return "Moves the artist forward."};
+exports.moveForwardTooltip = function(d){return "Inililipat ang artist pasulong."};
 
-exports.moveNorthTooltip = function(d){return "Moves the artist north."};
+exports.moveNorthTooltip = function(d){return "Inililipat ang artist sa hilaga."};
 
-exports.moveSouthTooltip = function(d){return "Moves the artist south."};
+exports.moveSouthTooltip = function(d){return "Inililipat ang artist sa timog."};
 
-exports.moveWestTooltip = function(d){return "Moves the artist west."};
+exports.moveWestTooltip = function(d){return "Inililipat ang artist sa kanluran."};
 
-exports.moveTooltip = function(d){return "Moves the artist forward or backward by the specified amount."};
+exports.moveTooltip = function(d){return "Inililipat ang artist pasulong o paatras sa pamamagitan ng mga tinukoy na halaga."};
 
-exports.notBlackColour = function(d){return "You need to set a color other than black for this puzzle."};
+exports.notBlackColour = function(d){return "Kailangan mong i- set ang kulay maliban sa itim para sa palaisipan ."};
 
-exports.numBlocksNeeded = function(d){return "This puzzle can be solved with %1 blocks.  You used %2."};
+exports.numBlocksNeeded = function(d){return "Ang palaisipan ay maaaring malutas sa %1 block . Gumamit ka ng %2 ."};
 
 exports.penDown = function(d){return "Ibaba ang lapis"};
 
@@ -15063,11 +15063,11 @@ exports.penTooltip = function(d){return "Iangat o ibaba ang lapis, pag mag-uumpi
 
 exports.penUp = function(d){return "Itaas ang lapis"};
 
-exports.reinfFeedbackMsg = function(d){return "Does this look like what you want? You can press the \"Try again\" button to see your drawing."};
+exports.reinfFeedbackMsg = function(d){return "Narito ang iyong mga guhit ! Panatilihin ang paggawa dito o magpatuloy sa susunod na palaisipan ."};
 
 exports.setColour = function(d){return "itakda ang kulay"};
 
-exports.setPattern = function(d){return "set pattern"};
+exports.setPattern = function(d){return "i-set ang pattern"};
 
 exports.setWidth = function(d){return "Itakda ang lapad"};
 
@@ -15077,7 +15077,7 @@ exports.showMe = function(d){return "Ipakita sa akin"};
 
 exports.showTurtle = function(d){return "Ipakita ang tagalikha"};
 
-exports.sizeParameter = function(d){return "size"};
+exports.sizeParameter = function(d){return "sukat"};
 
 exports.step = function(d){return "hakbang"};
 

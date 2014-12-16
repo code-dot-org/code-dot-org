@@ -12405,7 +12405,7 @@ exports.ifelseTooltip = function(d){return "Ha van egy út a megadott irányban,
 
 exports.incrementOpponentScore = function(d){return "pontot szerez az ellenfél"};
 
-exports.incrementOpponentScoreTooltip = function(d){return "Egyet hozzáad az ellenfél pontszámához."};
+exports.incrementOpponentScoreTooltip = function(d){return "Az ellenfél pontszámának növelése eggyel."};
 
 exports.incrementPlayerScore = function(d){return "pontszám"};
 
@@ -12413,13 +12413,13 @@ exports.incrementPlayerScoreTooltip = function(d){return "Adjon egyet az aktuál
 
 exports.isWall = function(d){return "Ez egy fal?"};
 
-exports.isWallTooltip = function(d){return "Igaz értéket ad, ha ott van egy fal"};
+exports.isWallTooltip = function(d){return "Igaz értéket ad, ha itt van fal"};
 
 exports.launchBall = function(d){return "Indíts új labdát"};
 
 exports.launchBallTooltip = function(d){return "Hozd játékba a labdát."};
 
-exports.makeYourOwn = function(d){return "Készítsd el a saját Pattogó Labda játékodat"};
+exports.makeYourOwn = function(d){return "Készíts saját labda pattogtató játékot"};
 
 exports.moveDown = function(d){return "lejjebb"};
 
@@ -12501,23 +12501,23 @@ exports.repeatUntilFinish = function(d){return "befejezésig ismételd"};
 
 exports.scoreText = function(d){return "Pontszám: "+v(d,"playerScore")+": "+v(d,"opponentScore")};
 
-exports.setBackgroundRandom = function(d){return "háttér típusa: random"};
+exports.setBackgroundRandom = function(d){return "Véletlenszerű háttér beállítása"};
 
-exports.setBackgroundHardcourt = function(d){return "háttér típusa: keménypályás"};
+exports.setBackgroundHardcourt = function(d){return "Salakos háttér beállítása"};
 
-exports.setBackgroundRetro = function(d){return "háttér típusa: retró"};
+exports.setBackgroundRetro = function(d){return "Retró háttér beállítása"};
 
 exports.setBackgroundTooltip = function(d){return "Adja meg a háttér képet"};
 
-exports.setBallRandom = function(d){return "labda típusa: random"};
+exports.setBallRandom = function(d){return "Véletlenszerű labda beállítása"};
 
 exports.setBallHardcourt = function(d){return "labda típusa: keménypályás"};
 
-exports.setBallRetro = function(d){return "labda típusa: retró"};
+exports.setBallRetro = function(d){return "Retro labda beállítása"};
 
-exports.setBallTooltip = function(d){return "Labda típusának beállítása"};
+exports.setBallTooltip = function(d){return "Labda képének beállítása"};
 
-exports.setBallSpeedRandom = function(d){return "labda sebessége: random"};
+exports.setBallSpeedRandom = function(d){return "Változó labdasebesség beállítása"};
 
 exports.setBallSpeedVerySlow = function(d){return "Labda sebesség beállítása: Nagyon lassú"};
 
@@ -12553,7 +12553,7 @@ exports.setPaddleSpeedVeryFast = function(d){return "Ütő sebessége: nagyon gy
 
 exports.setPaddleSpeedTooltip = function(d){return "Az ütő sebességét állítja be"};
 
-exports.shareBounceTwitter = function(d){return "Próbáld ki a Bounce játékot, amit én programoztam a code.org weblapján!"};
+exports.shareBounceTwitter = function(d){return "Próbáld ki milyen labda pattogtató játékot készítettem. Magam programoztam a code.org weboladon."};
 
 exports.shareGame = function(d){return "Oszd meg a játékod:"};
 
@@ -12565,15 +12565,15 @@ exports.turnTooltip = function(d){return "Balra vagy jobbra fordít 90 fokkal."}
 
 exports.whenBallInGoal = function(d){return "Ha a labda célba ér"};
 
-exports.whenBallInGoalTooltip = function(d){return "Az alábbi parancsokat hajtja végre akkor, ha a labda a célba ér."};
+exports.whenBallInGoalTooltip = function(d){return "Végrehajtja az alábbi parancsokat, ha a labda a célba ér."};
 
-exports.whenBallMissesPaddle = function(d){return "Amikor a labda nem találja el az ütőt"};
+exports.whenBallMissesPaddle = function(d){return "Ha a labda nem találja el az ütőt"};
 
 exports.whenBallMissesPaddleTooltip = function(d){return "Végrehajtja az alábbi parancsokat, ha a labda nem találja el az ütőt."};
 
 exports.whenDown = function(d){return "Lefele nyílnál"};
 
-exports.whenDownTooltip = function(d){return "Végrehajtja az alábbi parancsokat, ha a lefelé mutató nyíl van lenyomva."};
+exports.whenDownTooltip = function(d){return "Végrehajtja az alábbi parancsokat, ha a lefelé nyíl le van nyomva."};
 
 exports.whenGameStarts = function(d){return "amikor a játék elindul"};
 
@@ -12581,19 +12581,19 @@ exports.whenGameStartsTooltip = function(d){return "Végrehajtja a lenti utasít
 
 exports.whenLeft = function(d){return "balra nyíl esetén"};
 
-exports.whenLeftTooltip = function(d){return "Végrehajtja az alábbi parancsokat, ha a balra mutató nyíl van lenyomva."};
+exports.whenLeftTooltip = function(d){return "Végrehajtja az alábbi parancsokat, ha a balra nyíl le van nyomva."};
 
-exports.whenPaddleCollided = function(d){return "Ha a labda nekimegy az ásónak"};
+exports.whenPaddleCollided = function(d){return "Ha a labda eltalálja az ásót"};
 
-exports.whenPaddleCollidedTooltip = function(d){return "Végrehajtja az alábbi parancsokat, ha a labda nekimegy az ütőnek."};
+exports.whenPaddleCollidedTooltip = function(d){return "Végrehajtja az alábbi parancsokat, ha a labda és az ütő összeütközik."};
 
 exports.whenRight = function(d){return "jobbra nyíl esetén"};
 
-exports.whenRightTooltip = function(d){return "Végrehajtja az alábbi parancsokat, ha a jobbra mutató nyíl van lenyomva."};
+exports.whenRightTooltip = function(d){return "Végrehajtja az alábbi parancsokat, ha a jobbra nyíl le van nyomva."};
 
-exports.whenUp = function(d){return "Ha van felfelé nyíl"};
+exports.whenUp = function(d){return "Ha a felfelé nyíl"};
 
-exports.whenUpTooltip = function(d){return "Végrehajtja az alábbi parancsokat, ha a felfelé mutató nyíl van lenyomva."};
+exports.whenUpTooltip = function(d){return "Végrehajtja az alábbi parancsokat, ha a felfelé nyíl le van nyomva."};
 
 exports.whenWallCollided = function(d){return "Amikor a labda nekimegy a falnak"};
 
@@ -12652,25 +12652,25 @@ exports.directionWestLetter = function(d){return "Nyugat"};
 
 exports.end = function(d){return "vége"};
 
-exports.emptyBlocksErrorMsg = function(d){return "Akkor van értelme az \"Ismétel\" vagy a \"Ha\" blokknak, ha van  bennük egy vagy több blokk. Bizonyosodj meg róla, hogy a belső blokk megfelelően illeszkedik a külső blokkhoz."};
+exports.emptyBlocksErrorMsg = function(d){return "Ahhoz hogy az \"Ismételd\" vagy a \"Ha\" blokkok működjenek, más blokkoknak is kell bennük lenni. Győződj meg arról, hogy a belső blokk megfelelően illeszkedik a külső befogadó blokkhoz."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "A függvény blokkon belül más blokknak is szerepelnie kell ahhoz, hogy működjön."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "A függvény blokkon belül lenni kell más blokkoknak is ahhoz, hogy működjön."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "A függvényed leírásában blokkoknak kell szerepelniük. Kattints a \"szerkesztés\" gombra, és húzd bele a blokkokat a zöld blokkba."};
+exports.errorEmptyFunctionBlockModal = function(d){return "A függvénydeklarációdban blokkoknak kell lenni. Kattints a \"szerkesztés\" gombra, és húzd be a blokkokat a zöld blokkba."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Kattints a \"szerkesztés\"-re, hogy pótold az esetlegesen hiányzó blokkokat a függvényed definíciójából."};
+exports.errorIncompleteBlockInFunction = function(d){return "Kattints a \"szerkesztés\"-re, hogy pótold az esetlegesen hiányzó blokkokat a függvénydeklarációdból."};
 
-exports.errorParamInputUnattached = function(d){return "A munkaterületen levő függvények minden bemenő paraméteréhez illessz blokkot."};
+exports.errorParamInputUnattached = function(d){return "Ne felejts a munkaterületen levő függvények minden bemenő paraméteréhez egy blokkot illeszteni."};
 
 exports.errorUnusedParam = function(d){return "Hozzáadtál egy paraméterblokkot, de nem használtad fel azt a deklarálásodban. Győződj meg róla, hogy használod a paraméteredet, rákattintva a \"szerkesztés\"-re  és arról is, hogy bele van-e illesztve a paraméterblokkod a zöld blokkba!"};
 
-exports.errorRequiredParamsMissing = function(d){return "Hozz létre egy paramétert a függvényed számára a \"szerkesztés\"-re kattintva, majd hozzáadva a szükséges paramétereket! Húzd rá az új paraméterblokkokat a függvényed definíciójára!"};
+exports.errorRequiredParamsMissing = function(d){return "Hozz létre egy paramétert a függvényed számára a \"szerkesztés\"-re kattintva, és hozzáadva a szükséges paramétereket! Húzd az új paraméterblokkokat a függvénydeklarációdra!"};
 
 exports.errorUnusedFunction = function(d){return "Létrehoztál egy függvényt, de soha sem használtad fel azt a munkaterületeden! Kattints a \"Függvények\"-re az eszközkészleten, és győződj meg róla, hogy használod a függvényt a programodban."};
 
 exports.errorQuestionMarksInNumberField = function(d){return "Próbálj a \"???\" helyére értéket írni."};
 
-exports.extraTopBlocks = function(d){return "Van különálló blokkod. Vagy csatlakoztasd a \"futtatáskor\" blokkhoz, vagy töröld."};
+exports.extraTopBlocks = function(d){return "Különálló blokkjaid vannak. A \"futtatáskor\" blokkhoz akartad ezeket csatolni?"};
 
 exports.finalStage = function(d){return "Gratulálok! Teljesítetted az utolsó szakaszt."};
 
@@ -12678,7 +12678,7 @@ exports.finalStageTrophies = function(d){return "Gratulálok! Teljesítetted az 
 
 exports.finish = function(d){return "Kész"};
 
-exports.generatedCodeInfo = function(d){return "A blokk alapú programozást még a legjobb egyetemeken (pl. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+") is tanítják. De a felszín alatt az általad összeállított blokkok JavaScriptben, a világ legszélesebb körben használt nyelvén is megjeleníthetők:"};
+exports.generatedCodeInfo = function(d){return "Még a legjobb egyetemeken (pl. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+") is tanítanak blokk alapú programozást, de a felszín alatt az általad összeállított blokkok is megjeleníthetők JavaScriptben, a világ legszélesebb körben használt nyelvén :"};
 
 exports.hashError = function(d){return "Sajnálom, de \"%1\" nem felel meg egyetlen mentett programnak sem."};
 
@@ -12692,7 +12692,7 @@ exports.levelIncompleteError = function(d){return "Minden szükséges blokkot fe
 
 exports.listVariable = function(d){return "lista"};
 
-exports.makeYourOwnFlappy = function(d){return "Készítsd el a saját Flappy játékod"};
+exports.makeYourOwnFlappy = function(d){return "Készíts saját Flappy játékot"};
 
 exports.missingBlocksErrorMsg = function(d){return "Próbáld meg a lenti blokkokat használni, hogy megoldd a rejtvényt."};
 
@@ -12700,9 +12700,9 @@ exports.nextLevel = function(d){return "Gratulálok! Megoldottad a "+v(d,"puzzle
 
 exports.nextLevelTrophies = function(d){return "Gratulálok! Megoldottad a "+v(d,"puzzleNumber")+". feladványt és nyertél "+p(d,"numTrophies",0,"hu",{"one":"egy trófeát","other":n(d,"numTrophies")+" trófeát"})+"."};
 
-exports.nextStage = function(d){return "Gratulálok!  "+v(d,"stageName")+" teljesítve."};
+exports.nextStage = function(d){return "Gratulálok! A(z) "+v(d,"stageName")+". szint teljesítve."};
 
-exports.nextStageTrophies = function(d){return "Gratulálok! Teljesítetted a "+v(d,"stageNumber")+". szakaszát és nyertél "+p(d,"numTrophies",0,"hu",{"one":"egy trófeát","other":n(d,"numTrophies")+" trófeát"})+"."};
+exports.nextStageTrophies = function(d){return "Gratulálok! Teljesítetted a(z) "+v(d,"stageNumber")+". szintet és nyertél "+p(d,"numTrophies",0,"hu",{"one":"egy trófeát","other":n(d,"numTrophies")+" trófeát"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Gratulálok! Megoldottad a "+v(d,"puzzleNumber")+". feladványt. (Habár megoldható csupán "+p(d,"numBlocks",0,"hu",{"one":"1 blokk","other":n(d,"numBlocks")+" blokk"})+" használatával.)"};
 
@@ -12738,7 +12738,7 @@ exports.textVariable = function(d){return "szöveg"};
 
 exports.tooFewBlocksMsg = function(d){return "A megfelelő blokkokat használod, de próbálj meg többet használni belőlük, hogy megoldd a feladványt."};
 
-exports.tooManyBlocksMsg = function(d){return "Ez a feladvány megoldható a <x id='START_SPAN'/><x id='END_SPAN'/> blokkokal."};
+exports.tooManyBlocksMsg = function(d){return "Ez a feladvány megoldható <x id='START_SPAN'/><x id='END_SPAN'/> blokkal."};
 
 exports.tooMuchWork = function(d){return "Sokat dolgoztattál. Megpróbálnád egy kicsit kevesebb ismétléssel?"};
 
@@ -12754,11 +12754,11 @@ exports.hintRequest = function(d){return "Segítség"};
 
 exports.backToPreviousLevel = function(d){return "Vissza az előző szintre"};
 
-exports.saveToGallery = function(d){return "Mentése a galériába"};
+exports.saveToGallery = function(d){return "Mentés a galériába"};
 
-exports.savedToGallery = function(d){return "Elmentve a galériában!"};
+exports.savedToGallery = function(d){return "Elmentve a galériába!"};
 
-exports.shareFailure = function(d){return "Sajnálom, de nem tudtam megosztani ezt a programot."};
+exports.shareFailure = function(d){return "Sajnálom, de nem tudjuk megosztani ezt a programot."};
 
 exports.workspaceHeader = function(d){return "Építsd össze a blokkokat itt: "};
 
@@ -12766,7 +12766,7 @@ exports.workspaceHeaderJavaScript = function(d){return "Ide írd a JavaScript k�
 
 exports.infinity = function(d){return "Végtelen"};
 
-exports.rotateText = function(d){return "Fordítsd el a készüléket."};
+exports.rotateText = function(d){return "Fordítsd el a készüléked."};
 
 exports.orientationLock = function(d){return "Kapcsold ki a tájolási zárat az eszközbeállításokban."};
 
@@ -12778,13 +12778,13 @@ exports.when = function(d){return "amikor"};
 
 exports.whenRun = function(d){return "futtatáskor"};
 
-exports.tryHOC = function(d){return "Próbáld ki a kódolás óráját"};
+exports.tryHOC = function(d){return "Próbáld ki a Kódolás Óráját"};
 
 exports.signup = function(d){return "Regisztrálj a bevezető képzésre"};
 
-exports.hintHeader = function(d){return "Egy tipp:"};
+exports.hintHeader = function(d){return "Itt egy ötlet:"};
 
-exports.genericFeedback = function(d){return "Nem sikerült célba érnem. Kérlek javítsd a hibát."};
+exports.genericFeedback = function(d){return "Nézd meg hogy milyen lett, és próbáld meg kijavítani a programod."};
 
 exports.defaultTwitterText = function(d){return "Nézd meg, mit csináltam"};
 

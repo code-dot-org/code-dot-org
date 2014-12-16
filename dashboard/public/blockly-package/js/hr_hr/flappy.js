@@ -12254,7 +12254,7 @@ exports.directionWestLetter = function(d){return "Zapad"};
 
 exports.end = function(d){return "kraj"};
 
-exports.emptyBlocksErrorMsg = function(d){return "Da bi blok \"Ponovi\" ili \"Ako\" radio, u njega treba ugraditi druge blokove. Provjeri uklapa li se unutarnji blok pravilno u vanjski blok."};
+exports.emptyBlocksErrorMsg = function(d){return "Da bi blokovi \"Ponovi\" ili \"Ako\" radili, u njih treba ugraditi druge blokove. Provjeri uklapa li se unutarnji blok pravilno u vanjski blok."};
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Funkcijski blok treba unutra imati druge blokove da bi mogao raditi."};
 
@@ -12262,17 +12262,17 @@ exports.errorEmptyFunctionBlockModal = function(d){return "Mora se staviti bloko
 
 exports.errorIncompleteBlockInFunction = function(d){return "Klikni na \"uredi\" da budeš siguran da nijedan blok ne nedostaje unutar tvoje definicije funkcije."};
 
-exports.errorParamInputUnattached = function(d){return "Sjeti se da prikvačiš blok za svaki unos parametara na bloku funkcije na svojoj radnoj površini."};
+exports.errorParamInputUnattached = function(d){return "Sjeti se da prikačiš blok za svaki unos parametara na bloku funkcije na svojoj radnoj površini."};
 
 exports.errorUnusedParam = function(d){return "Dodao si blok parametara, ali ga nisi koristio u definiciji. Pobrini se da koristiš svoj parametar tako da klikneš na \"uredi\" i staviš blok parametara unutar zelenog bloka."};
 
 exports.errorRequiredParamsMissing = function(d){return "Napravi parametar za svoju funkciju tako da klikneš na \"uredi\" i dodaš neophodne parametre. Dovuci nove blokove parametara u svoju definiciju funkcije."};
 
-exports.errorUnusedFunction = function(d){return "Napravio si funkciju, ali je nikad nisi koristio na svojoj radnoj površini! Klikni na \"Funkcije\" u alatima i pobrini se da je iskoristiš u svom programu."};
+exports.errorUnusedFunction = function(d){return "Napravio si funkciju, ali je nikad nisi koristio na svojoj radnoj površini! Klikni na \"Funkcije\" na alatnoj traci i pobrini se da je iskoristiš u svom programu."};
 
 exports.errorQuestionMarksInNumberField = function(d){return "Pokušaj zamijeniti \"???\" s vrijednošću."};
 
-exports.extraTopBlocks = function(d){return "Postoje nespojeni blokovi. Želiš li ih dodati u blok \"pri izvršavanju\"?"};
+exports.extraTopBlocks = function(d){return "Postoje nespojeni blokovi. Želiš li ih dodati u blok \"pri pokretanju\"?"};
 
 exports.finalStage = function(d){return "Čestitamo! Posljednja etapa je završena."};
 
@@ -12318,9 +12318,9 @@ exports.puzzleTitle = function(d){return "Zadatak "+v(d,"puzzle_number")+" od "+
 
 exports.repeat = function(d){return "ponovi"};
 
-exports.resetProgram = function(d){return "Ponovno"};
+exports.resetProgram = function(d){return "Ispočetka"};
 
-exports.runProgram = function(d){return "Kreni"};
+exports.runProgram = function(d){return "Pokreni"};
 
 exports.runTooltip = function(d){return "Pokreće program određen blokovima na radnom prostoru."};
 
@@ -12378,11 +12378,11 @@ exports.watchVideo = function(d){return "Pogledaj filmić"};
 
 exports.when = function(d){return "kada"};
 
-exports.whenRun = function(d){return "pri izvršavanju"};
+exports.whenRun = function(d){return "pri pokretanju"};
 
 exports.tryHOC = function(d){return "Isprobaj Hour of Code"};
 
-exports.signup = function(d){return "Upis na početni tečaj"};
+exports.signup = function(d){return "Registrirajte se na početni tečaj"};
 
 exports.hintHeader = function(d){return "Evo savjeta:"};
 
@@ -12420,7 +12420,7 @@ exports.finalLevel = function(d){return "Čestitamo! Riješen je posljednji zada
 
 exports.flap = function(d){return "mahni krilima"};
 
-exports.flapRandom = function(d){return "mahni krilima nekoliko puta"};
+exports.flapRandom = function(d){return "mahni krilima nasumično jako"};
 
 exports.flapVerySmall = function(d){return "sasvim malo mahni krilima"};
 
@@ -12544,7 +12544,7 @@ exports.setGroundTooltip = function(d){return "Postavlja sliku tla"};
 
 exports.setObstacle = function(d){return "postavi prepreku"};
 
-exports.setObstacleRandom = function(d){return "postavi proizvoljnu prepreku"};
+exports.setObstacleRandom = function(d){return "postavi nasumično odabranu prepreku"};
 
 exports.setObstacleFlappy = function(d){return "postavi prepreku u obliku cijevi"};
 
@@ -12560,37 +12560,37 @@ exports.setObstacleLaser = function(d){return "postavi lasersku prepreku"};
 
 exports.setObstacleTooltip = function(d){return "Postavlja sliku prepreke"};
 
-exports.setPlayer = function(d){return "postavi igrača"};
+exports.setPlayer = function(d){return "postavi izgled lika"};
 
-exports.setPlayerRandom = function(d){return "postavi nasumično odabranog igrača"};
+exports.setPlayerRandom = function(d){return "postavi igrača Nasumično"};
 
-exports.setPlayerFlappy = function(d){return "postavi Žutu Pticu kao igrača"};
+exports.setPlayerFlappy = function(d){return "postavi izgled Žute ptice"};
 
-exports.setPlayerRedBird = function(d){return "postavi Crvenu Pticu kao igrača"};
+exports.setPlayerRedBird = function(d){return "postavi izgled Crvene ptice"};
 
-exports.setPlayerSciFi = function(d){return "postavi svemirski brod kao igrača"};
+exports.setPlayerSciFi = function(d){return "postavi izgled Svemirskog broda"};
 
-exports.setPlayerUnderwater = function(d){return "postavi Ribu kao igrača"};
+exports.setPlayerUnderwater = function(d){return "postavi izgled Ribe"};
 
-exports.setPlayerCave = function(d){return "postavi Šišmiša kao igrača"};
+exports.setPlayerCave = function(d){return "postavi izgled Šišmiša"};
 
-exports.setPlayerSanta = function(d){return "postavi Djeda Mraza kao igrača"};
+exports.setPlayerSanta = function(d){return "postavi izgled Djeda Mraza"};
 
-exports.setPlayerShark = function(d){return "postavi Morskog Psa kao igrača"};
+exports.setPlayerShark = function(d){return "postavi izgled Morskog psa"};
 
-exports.setPlayerEaster = function(d){return "postavi Uskršnjeg Zeca kao igrača"};
+exports.setPlayerEaster = function(d){return "postavi izgled Uskršnjeg zeca"};
 
-exports.setPlayerBatman = function(d){return "postavi Šišmiš-čovjeka kao igrača"};
+exports.setPlayerBatman = function(d){return "postavi izgled Šišmiš-čovjeka"};
 
-exports.setPlayerSubmarine = function(d){return "postavi Podmornicu kao igrača"};
+exports.setPlayerSubmarine = function(d){return "postavi izgled Podmornice"};
 
-exports.setPlayerUnicorn = function(d){return "postavi Jednoroga kao igrača"};
+exports.setPlayerUnicorn = function(d){return "postavi izgled Jednoroga"};
 
-exports.setPlayerFairy = function(d){return "postavi Vilu kao igrača"};
+exports.setPlayerFairy = function(d){return "postavi izgled Vile"};
 
-exports.setPlayerSuperman = function(d){return "postavi Flappymana kao igrača"};
+exports.setPlayerSuperman = function(d){return "postavi izgled Flappymana"};
 
-exports.setPlayerTurkey = function(d){return "postavi Puricu kao igrača"};
+exports.setPlayerTurkey = function(d){return "postavi izgled Purice"};
 
 exports.setPlayerTooltip = function(d){return "Postavlja sliku igrača"};
 
@@ -12646,19 +12646,19 @@ exports.speedVeryFast = function(d){return "postavi veoma veliku brzinu"};
 
 exports.whenClick = function(d){return "na klik"};
 
-exports.whenClickTooltip = function(d){return "Izvršava dolje navedene naredbe kad se dogodi klik."};
+exports.whenClickTooltip = function(d){return "Izvršava dolje navedene akcije kad se dogodi klik."};
 
-exports.whenCollideGround = function(d){return "kada udari o tlo"};
+exports.whenCollideGround = function(d){return "kada padne na tlo"};
 
-exports.whenCollideGroundTooltip = function(d){return "Izvršava dolje navedene naredbe kad Flappy dodirne tlo."};
+exports.whenCollideGroundTooltip = function(d){return "Izvršava dolje navedene akcije kada Flappy dodirne tlo."};
 
 exports.whenCollideObstacle = function(d){return "kada udari u prepreku"};
 
-exports.whenCollideObstacleTooltip = function(d){return "Izvršava dolje navedene naredbe kad Flappy udari u prepreku."};
+exports.whenCollideObstacleTooltip = function(d){return "Izvršava dolje navedene akcije kad Flappy udari u prepreku."};
 
 exports.whenEnterObstacle = function(d){return "kada prođe prepreku"};
 
-exports.whenEnterObstacleTooltip = function(d){return "Izvršava dolje navedene naredbe kad Flappy uđe u prepreku."};
+exports.whenEnterObstacleTooltip = function(d){return "Izvršava dolje navedene akcije kada Flappy uđe u prepreku."};
 
 exports.whenRunButtonClick = function(d){return "na početku igre"};
 

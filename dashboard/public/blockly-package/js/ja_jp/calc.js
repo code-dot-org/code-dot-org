@@ -11050,11 +11050,11 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.ja=function(n){return "other"}
 exports.compute = function(d){return "計算"};
 
-exports.equivalentExpression = function(d){return "同じ式になるよう引数を並べ替えてください。"};
+exports.equivalentExpression = function(d){return "引数を正しく並べてください"};
 
 exports.extraTopBlocks = function(d){return "使っていないブロックがあります。それらを\"計算\"ブロックにつなげるつもりでしたか？"};
 
-exports.goal = function(d){return "目標"};
+exports.goal = function(d){return "ゴール: "};
 
 exports.reinfFeedbackMsg = function(d){return "あなたのストーリーができあがりました！作業をつづけるか、次のパズルに進みましょう。"};
 
