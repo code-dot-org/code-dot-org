@@ -14,8 +14,8 @@ id:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png
       2-3 artist match 1:
-        Artist Matching: Artist Matching
-        Match the shape with the blocks that complete it.: Match the shape with the blocks that complete it.
+        Artist Matching: Mencocokan Artis
+        Match the shape with the blocks that complete it.: Sesuai bentuk dengan blok yang lengkap.
         /script_assets/2-3_images/artist/2-3_artist_match_1_q1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png
@@ -25,7 +25,7 @@ id:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a3.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png
       2-3 bounce match 1:
-        Bounce Matching: Bounce Matching
+        Bounce Matching: 'Pencocokan Bouncing '
         Matching: Mencocokan
         Match the events with the actions: cocokan acara dengan perbuatan
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png
@@ -49,8 +49,8 @@ id:
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png
       2-3 maze match 1:
-        Maze Match One: Maze Match One
-        Match the puzzles to the blocks: Match the puzzles to the blocks
+        Maze Match One: Labirin Pertandingan Satu
+        Match the puzzles to the blocks: Cocokkan teka-teki untuk blok
         /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png
@@ -58,10 +58,10 @@ id:
         /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png
       2-3 Maze Match 2:
-        Maze Match: Maze Match
-        Match the puzzles to the blocks: Match the puzzles to the blocks
-        Instructions: Instructions
-        Drag the blocks to match.: Drag the blocks to match.
+        Maze Match: Pertandingan labirin
+        Match the puzzles to the blocks: Cocokkan teka-teki untuk blok
+        Instructions: instruksi
+        Drag the blocks to match.: Tarik blok untuk mencocokkan.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png
@@ -83,7 +83,7 @@ id:
       2-3 Binary Match 1:
         Matching: Mencocokan
         /script_assets/2-3_images/unplugged/binary_1_q.png, 250: /script_assets/2-3_images/unplugged/binary_1_q.png, 250
-        Use the key to match each code to its letter: Use the key to match each code to its letter
+        Use the key to match each code to its letter: Gunakan kunci untuk mencocokkan masing-masing kode untuk Surat
         <strong>N</strong>: '<strong>N</strong>'
         <strong>O</strong>: '<strong>O</strong>'
         <strong>P</strong>: '<strong>P</strong>'
@@ -94,7 +94,7 @@ id:
         /script_assets/2-3_images/unplugged/binary_1_a4.png: /script_assets/2-3_images/unplugged/binary_1_a4.png
       2-3 Graph Paper Match 1:
         Matching: Mencocokan
-        Match the grid to the program: Match the grid to the program
+        Match the grid to the program: Cocokkan grid untuk program
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
@@ -103,7 +103,7 @@ id:
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
       2-3 Relay Programming Match 1:
         Matching: Mencocokan
-        Match the grid to the program: Match the grid to the program
+        Match the grid to the program: Cocokkan grid untuk program
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
@@ -111,10 +111,10 @@ id:
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
       4-5 maze match 1:
-        Maze Match: Maze Match
-        Match the puzzles to the blocks: Match the puzzles to the blocks
-        Instructions: Instructions
-        Drag the blocks to match.: Drag the blocks to match.
+        Maze Match: Pertandingan labirin
+        Match the puzzles to the blocks: Cocokkan teka-teki untuk blok
+        Instructions: instruksi
+        Drag the blocks to match.: Tarik blok untuk mencocokkan.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png
@@ -124,29 +124,29 @@ id:
         /script_assets/4-5_images/maze/4-5_maze_match_1_a3.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a3.png
       4-5 Algorithms Match 1:
         Matching: Mencocokan
-        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Match the steps in the Dice Race game to the order that they should appear in the algorithm.
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Sesuai langkah-langkah dalam permainan dadu ras dalam urutan dimana mereka harus muncul dalam algoritma.
         <h4>1)</h4>: '<h4>1)</h4>'
         <h4>2)</h4>: '<h4>2)</h4>'
         <h4>3)</h4>: '<h4>3)</h4>'
         <h4>4)</h4>: '<h4>4)</h4>'
-        <h4>Set Player 1 score to 0</h4>: '<h4>Set Player 1 score to 0</h4>'
-        <h4>Player 1 rolls die</h4>: '<h4>Player 1 rolls die</h4>'
-        <h4>Add Player 1 roll to total score</h4>: '<h4>Add Player 1 roll to total score</h4>'
-        <h4>Compare player scores to see who wins</h4>: '<h4>Compare player scores to see who wins</h4>'
+        <h4>Set Player 1 score to 0</h4>: '<h4>Set pemain 1 Skor 0</h4>'
+        <h4>Player 1 rolls die</h4>: '<h4>Pemain 1 menggulung mati</h4>'
+        <h4>Add Player 1 roll to total score</h4>: '<h4>Tambahkan pemain 1 roll untuk total Skor</h4>'
+        <h4>Compare player scores to see who wins</h4>: '<h4>Bandingkan Skor pemain untuk melihat siapa yang menang</h4>'
       4-5 Computational Thinking Match 1:
         Matching: Mencocokan
-        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.
-        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 0</h3>'
-        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 1</h3>'
-        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 6</h3>'
-        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": '<h3>Wheels/side: 3<br/>Windows/side: 2</h3>'
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Masing-masing kendaraan ini telah dibagi menjadi bagian-bagian yang lebih kecil. Cocokkan setiap kendaraan dengan daftar bagiannya.
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": '<h3>Sisi Roda: 2 <br/>Sisi Windows: 0</h3>'
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": '<h3>Sisi Roda: 2 <br/>Sisi Windows: 1</h3>'
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": '<h3>Sisi Roda: 2 <br/>Sisi Windows: 6</h3>'
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": '<h3>Sisi Roda: 3 <br/>Sisi Windows: 2</h3>'
         /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png
       4-5 Suncatchers Match 1:
         Matching: Mencocokan
-        Match each program to the word it makes, using the provided group of skills.: Match each program to the word it makes, using the provided group of skills.
+        Match each program to the word it makes, using the provided group of skills.: Cocokkan setiap program dengan kata yang dibuat, gunakan kelompok keterampilan yang telah disediakan.
         /script_assets/4-5_images/unplugged/suncatchers_1.png: /script_assets/4-5_images/unplugged/suncatchers_1.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a1.png: /script_assets/4-5_images/unplugged/suncatchers_1_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a2.png: /script_assets/4-5_images/unplugged/suncatchers_1_a2.png
@@ -154,20 +154,20 @@ id:
         /script_assets/4-5_images/unplugged/suncatchers_1_a4.png: /script_assets/4-5_images/unplugged/suncatchers_1_a4.png
         <h4>STACK</h4>: '<h4>STACK</h4>'
         <h4>STAMP</h4>: '<h4>STAMP</h4>'
-        <h4>STAR</h4>: '<h4>STAR</h4>'
+        <h4>STAR</h4>: '<h4>Bintang</h4>'
         <h4>RAMP</h4>: '<h4>RAMP</h4>'
       K-1 Artist 2 Match 1:
         Matching: Mencocokan
-        Is the square next to, above, or below the ball?: Is the square next to, above, or below the ball?
+        Is the square next to, above, or below the ball?: Apakah alun-alun terletak disebelah, di atas atau dibawah bola?
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
         /script_assets/k_1_images/artist_images/square_next_ball.png: /script_assets/k_1_images/artist_images/square_next_ball.png
-        <br/><br/>above: '<br/><br/>above'
-        <br/><br/>below: '<br/><br/>below'
-        <br/><br/>next to: '<br/><br/>next to'
+        <br/><br/>above: '<br/> <br/> di atas'
+        <br/><br/>below: '<br/> <br/> di bawah'
+        <br/><br/>next to: '<br/> <br/> di sebelah'
       K-1 Artist 2 Match 2:
         Matching: Mencocokan
-        Match the shapes based on type.: Match the shapes based on type.
+        Match the shapes based on type.: Cocokkan bentuk berdasarkan jenis.
         /script_assets/k_1_images/artist_images/small_circle.png: /script_assets/k_1_images/artist_images/small_circle.png
         /script_assets/k_1_images/artist_images/large_square.png: /script_assets/k_1_images/artist_images/large_square.png
         /script_assets/k_1_images/artist_images/medium_rectangle.png: /script_assets/k_1_images/artist_images/medium_rectangle.png
@@ -178,7 +178,7 @@ id:
         /script_assets/k_1_images/artist_images/large_triangle.png: /script_assets/k_1_images/artist_images/large_triangle.png
       K-1 Artist 2 Match 3:
         Matching: Mencocokan
-        Match the shapes based on type.: Match the shapes based on type.
+        Match the shapes based on type.: Cocokkan bentuk berdasarkan jenis.
         /script_assets/k_1_images/artist_images/large_circle.png: /script_assets/k_1_images/artist_images/large_circle.png
         /script_assets/k_1_images/artist_images/small_square.png: /script_assets/k_1_images/artist_images/small_square.png
         /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
@@ -189,7 +189,7 @@ id:
         /script_assets/k_1_images/artist_images/large_triangle2.png: /script_assets/k_1_images/artist_images/large_triangle2.png
       K-1 Artist Loops Match 1:
         Matching: Mencocokan
-        Match the code to the stairs it draws.: Match the code to the stairs it draws.
+        Match the code to the stairs it draws.: Cocokkan kode dengan tangga.
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png
@@ -198,7 +198,7 @@ id:
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png
       K-1 Bee Loops Match 1:
         Matching: Mencocokan
-        Match the blocks: Match the blocks
+        Match the blocks: Cocokkan blok
         /script_assets/k_1_images/bee_images/r4_gnectar.png: /script_assets/k_1_images/bee_images/r4_gnectar.png
         /script_assets/k_1_images/move_blocks/r3_N.png: /script_assets/k_1_images/move_blocks/r3_N.png
         /script_assets/k_1_images/bee_images/r5_ghoney.png: /script_assets/k_1_images/bee_images/r5_ghoney.png
@@ -209,7 +209,7 @@ id:
         /script_assets/k_1_images/move_blocks/EEEEE.png: /script_assets/k_1_images/move_blocks/EEEEE.png
       K-1 Flappy Match 1:
         Matching: Mencocokan
-        Match the blocks: Match the blocks
+        Match the blocks: Cocokkan blok
         /script_assets/k_1_images/flappy_images/click.png: /script_assets/k_1_images/flappy_images/click.png
         /script_assets/k_1_images/flappy_images/hit_ground.png: /script_assets/k_1_images/flappy_images/hit_ground.png
         /script_assets/k_1_images/flappy_images/pass_obstacle.png: /script_assets/k_1_images/flappy_images/pass_obstacle.png
@@ -218,9 +218,9 @@ id:
         /script_assets/k_1_images/flappy_images/score.png: /script_assets/k_1_images/flappy_images/score.png
       K-1 Maze Match 1:
         Matching: Mencocokan
-        Match the puzzles and blocks: Match the puzzles and blocks
-        Instructions: Instructions
-        Drag the blocks to match.: Drag the blocks to match.
+        Match the puzzles and blocks: Cocokkan teka-teki dengan blok
+        Instructions: instruksi
+        Drag the blocks to match.: Tarik blok untuk mencocokkan.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/k_1_images/maze_images/maze_EN.png: /script_assets/k_1_images/maze_images/maze_EN.png
         /script_assets/k_1_images/maze_images/maze_ENE.png: /script_assets/k_1_images/maze_images/maze_ENE.png
@@ -241,7 +241,7 @@ id:
         /script_assets/k_1_images/unplugged_images/big_event_1_a3.png: /script_assets/k_1_images/unplugged_images/big_event_1_a3.png
       K-1 Happy Maps Match 1:
         Matching: Mencocokan
-        Match the Map to the arrow that gets the Flurb to the treasure: Match the Map to the arrow that gets the Flurb to the treasure
+        Match the Map to the arrow that gets the Flurb to the treasure: Cocokkan peta untuk panah yang menolong Flurb untuk mendapatkan harta
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png
@@ -250,7 +250,7 @@ id:
         /script_assets/k_1_images/unplugged_images/left.png: /script_assets/k_1_images/unplugged_images/left.png
       K-1 Move It Match 1:
         Matching: Mencocokan
-        Match the Map to the algorithm that gets the Flurb to the flowers.: Match the Map to the algorithm that gets the Flurb to the flowers.
+        Match the Map to the algorithm that gets the Flurb to the flowers.: Cocokkan peta dengan algoritma sehingga menolong Flurb mendapatkan bunga.
         /script_assets/k_1_images/unplugged_images/move_it_2_q1.png: /script_assets/k_1_images/unplugged_images/move_it_2_q1.png
         /script_assets/k_1_images/unplugged_images/move_it_2_q2.png: /script_assets/k_1_images/unplugged_images/move_it_2_q2.png
         /script_assets/k_1_images/unplugged_images/move_it_2_q3.png: /script_assets/k_1_images/unplugged_images/move_it_2_q3.png
@@ -258,20 +258,20 @@ id:
         /script_assets/k_1_images/unplugged_images/rightrightup.png: /script_assets/k_1_images/unplugged_images/rightrightup.png
         /script_assets/k_1_images/unplugged_images/rightdown.png: /script_assets/k_1_images/unplugged_images/rightdown.png
       Coordinate Matching:
-        Coordinates of Ninjacat: Coordinates of Ninjacat
-        Match each character with its correct coordinate!: Match each character with its correct coordinate!
+        Coordinates of Ninjacat: Koordinat Kucing Ninja
+        Match each character with its correct coordinate!: Cocokkan setiap karakter dengan koordinat yang benar!
         /script_assets/msm/Unit 1/exercise_3_ninjacat.png: /script_assets/msm/Unit 1/exercise_3_ninjacat.png
-        Cloud: Cloud
+        Cloud: Awan
         Ruby: Ruby
-        Dog: Dog
-        Ninjacat: Ninjacat
+        Dog: Anjing
+        Ninjacat: Kucing Ninja
         (250, 400): (250, 400)
         (500, 240): (500, 240)
         (480, 100): (480, 100)
         (320, 240): (320, 240)
       Match math to circles:
-        Converting Math to Circles of Evaluation: Converting Math to Circles of Evaluation
-        Match each mathematical expression with the correct circle of evaluation!: Match each mathematical expression with the correct circle of evaluation!
+        Converting Math to Circles of Evaluation: Rubahlah Matematika menjadi lingkaran evaluasi
+        Match each mathematical expression with the correct circle of evaluation!: Cocokkan setiap ekspresi matematika dengan lingkaran evaluasi yang benar!
         (2 + 3) * 5 / 2: '(2 + 3) * 5 / 2'
         2 + 3 * (5 / 2): '2 + 3 * (5 / 2)'
         (2 + 3 * 5) / 2: '(2 + 3 * 5) / 2'
@@ -280,10 +280,10 @@ id:
         /script_assets/msm/Unit 1/Exercise_4_question_3.png: /script_assets/msm/Unit 1/Exercise_4_question_3.png
         /script_assets/msm/Unit 1/Exercise_4_question_4.png: /script_assets/msm/Unit 1/Exercise_4_question_4.png
       Match circles to code:
-        Converting Circles to Code: Converting Circles to Code
-        Match each circle of evaluation with the correct code!: Match each circle of evaluation with the correct code!
-        (+ (- (/ 4 7) 9) 3): '(+ (- (/ 4 7) 9) 3)'
-        (+ (- 9 3) (* 4 7)): '(+ (- 9 3) (* 4 7))'
+        Converting Circles to Code: Mengkonversi lingkaran menjadi kode
+        Match each circle of evaluation with the correct code!: Cocokkan setiap lingkaran evaluasi dengan kode yang benar!
+        (+ (- (/ 4 7) 9) 3): (+ (-(/ 4 7) 9) 3)
+        (+ (- 9 3) (* 4 7)): '(+ (-9 3) (* 4 7))'
         (/ (+ 4 7) 3): (/ (+ 4 7) 3)
         (+ 3 (/ 4 7)): (+ 3 (/ 4 7))
         /script_assets/msm/Unit 1/Exercise_5_question_1.png: /script_assets/msm/Unit 1/Exercise_5_question_1.png
@@ -291,47 +291,47 @@ id:
         /script_assets/msm/Unit 1/Exercise_5_question_3.png: /script_assets/msm/Unit 1/Exercise_5_question_3.png
         /script_assets/msm/Unit 1/Exercise_5_question_4.png: /script_assets/msm/Unit 1/Exercise_5_question_4.png
       Match math to code:
-        Converting Math to Code: Converting Math to Code
-        Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!
-        (15 + 3) x (72 - 19): '(15 + 3) x (72 - 19)'
+        Converting Math to Code: Mengkonversi matematika menjadi kode
+        Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: Cocokkan setiap ekspresi matematika dengan kode yang benar. Gunakan lingkaran evaluasi untuk membantu mendapatkan jawaban!
+        (15 + 3) x (72 - 19): (15 + 3) x (72-19)
         3 x 15 + (- 72 19): '3 x 15 + (- 72 19)'
-        72 + 3 - 19 x 15: '72 + 3 - 19 x 15'
-        3 x 15 - 72 + 19: '3 x 15 - 72 + 19'
+        72 + 3 - 19 x 15: 72 + 3-19 x 15
+        3 x 15 - 72 + 19: 3 x 15-72 + 19
         (* (+ 15 3) (- 72 19)): '(* (+ 15 3) (- 72 19))'
         (+ (3 x 15) (- 72 19)): '(+ (3 x 15) (- 72 19))'
-        (- (+ 72 3) (* 19 15)): '(- (+ 72 3) (* 19 15))'
-        (+ (- (* 3 15) 72) 19): '(+ (- (* 3 15) 72) 19)'
+        (- (+ 72 3) (* 19 15)): '(-(+ 72 3) (* 19 15))'
+        (+ (- (* 3 15) 72) 19): '(+ (-(* 3 15) 72) 19)'
       parts of contract:
-        Parts of a Contract: Parts of a Contract
-        Here is a contract for a new function. Match each item with the word that describes it.: Here is a contract for a new function. Match each item with the word that describes it.
-        yearbook-picture: yearbook-picture
-        string numer: string numer
-        image: image
-        (yearbook-picture "Sally" 1992): '(yearbook-picture "Sally" 1992)'
-        function name: function name
+        Parts of a Contract: Bagian dari kontrak
+        Here is a contract for a new function. Match each item with the word that describes it.: Ini adalah kontrak untuk fungsi baru. Cocokkan setiap item dengan kata yang menjelaskannya.
+        yearbook-picture: buku tahunan-gambar
+        string numer: numer string
+        image: gambar
+        (yearbook-picture "Sally" 1992): '(buku tahunan-gambar "Sally" 1992)'
+        function name: nama fungsi
         domain: domain
-        range: range
-        example: example
+        range: Rentang
+        example: contoh
       Match example to contract:
-        Contracts of Functions: Contracts of Functions
-        Match each example with the correct contract!: Match each example with the correct contract!
-        (big-string? "gigantic" 5): '(big-string? "gigantic" 5)'
-        (find-price 4): (find-price 4)
-        (small-star "blue"): '(small-star "blue")'
-        (bigger-string "big" "little"): '(bigger-string "big" "little")'
-        (small-star "solid"): '(small-star "solid")'
-        (find-price "cheese"): '(find-price "cheese")'
-        "big-string: string number -> boolean": 'big-string: string number -> boolean'
-        "find-price: number -> number": 'find-price: number -> number'
-        "small-star: string -> image": 'small-star: string -> image'
-        "bigger-string: string string -> string": 'bigger-string: string string -> string'
-        "find-price: string -> number": 'find-price: string -> number'
+        Contracts of Functions: Kontrak fungsi
+        Match each example with the correct contract!: Cocokkan setiap contoh dengan kontrak yang benar!
+        (big-string? "gigantic" 5): '(string-besar? "raksasa" 5)'
+        (find-price 4): (temukan-harga 4)
+        (small-star "blue"): '(bintang-kecil "biru")'
+        (bigger-string "big" "little"): '(string-besar "besar" "kecil")'
+        (small-star "solid"): '(bintang-kecil "padat")'
+        (find-price "cheese"): '(temukan-harga "keju")'
+        "big-string: string number -> boolean": 'string-besar: string nomor-> boolean'
+        "find-price: number -> number": 'temukan-harga: nomor-> nomor'
+        "small-star: string -> image": 'bintang kecil: string-> gambar'
+        "bigger-string: string string -> string": 'string-besar: string string-> string'
+        "find-price: string -> number": 'temukan-harga: string-> nomor'
       test matching image:
-        Matching Images Two: Matching Images Two
-        Match up all the flowers by colour!: Match up all the flowers by colour!
+        Matching Images Two: Pencocokan gambar dua
+        Match up all the flowers by colour!: Cocokan semua bunga berdasarkan warnanya!
         /script_assets/matches/images/head.jpg,300: /script_assets/matches/images/head.jpg,300
-        Instructions: Instructions
-        Drag the images from right to center.: Drag the images from right to center.
+        Instructions: instruksi
+        Drag the images from right to center.: Seret gambar dari kanan ke pusat.
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
         /script_assets/matches/images/q1.jpg: /script_assets/matches/images/q1.jpg
         /script_assets/matches/images/q2.jpg: /script_assets/matches/images/q2.jpg

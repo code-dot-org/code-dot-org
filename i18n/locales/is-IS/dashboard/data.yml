@@ -296,7 +296,7 @@ is:
         studio_c3_game_6: Getur þú bætt við kubbum til að breyta bakgrunni og hraða mörgæsarinnar og síðan fært hana með örvarlyklunum þar til þú skorar?
         studio_c3_game_7: Búðu til þinn eigin leik. Smelltu á Ljúka þegar hann er tilbúinn svo vinir þínir geti prófað hann á sínum símum.
         studio_playlab_1: 'Mörgæsin vill segja "hæ" - getur þú hjálpað henni?'
-        studio_playlab_2: 'Hellisstrákur (leikmaður 1) og Hellisstelpa (leikmaður 2) vilja segja "hæ" við hvort annað. Getur þú hjálpað þeim með því að nota "segir" kubbinn tvisvar?'
+        studio_playlab_2: 'Hellisstrákur (leikmaður 1) og Hellisstelpa (leikmaður 2) vilja segja "hæ" við hvort annað. Getur þú hjálpað þeim með því að nota "segja" kubbinn tvisvar?'
         studio_playlab_3: Getur þú hjálpað Tennisstelpu að ná til flaggsins?
         studio_playlab_4: Getur þú hjálpað Tennisstrák (leikmanni 1) að komast til Tennisstelpu (leikmanns 2) og spilað hljóð þegar hann kemst þangað?
         studio_playlab_5: 'Getur þú látið Geimróbóta segja "Kveðja til jarðarbúa" þegar smellt er á hann? Ekki gleyma að smella á hann eftir að þú smellir á Keyra'
@@ -535,7 +535,7 @@ is:
         frozen_circle_function_with_parameter_circle: 'Notaðu "búa til hring" kubbinn og breyttu stærðinni.'
         frozen_snowflake_branch: 'Notaðu "búa til grein snjókorns" kubbinn'
         frozen_create_square: Bættu við fleiri kubbum hér til að búa til ferning
-        playlab_drag_say: 'Dragðu "segir" kubbinn hingað og skrifaðu "hæ"'
+        playlab_drag_say: 'Dragðu "segja" kubbinn hingað og skrifaðu "hæ"'
         playlab_use_twice: Notaðu þennan kubb tvisvar og mundu að breyta númeri leikmanns
         playlab_move_girl: 'Notaðu "færa til hægri" kubbinn til að færa Tennisstelpu'
         playlab_play_sound: 'Bættu "spila hljóð" kubbi við hér'

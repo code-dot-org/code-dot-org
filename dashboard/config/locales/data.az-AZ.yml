@@ -102,7 +102,7 @@
         Webapp: Webapp
         ArtistEC: Rəssam
         TextMatch: Text Match
-        StudioEC: Oyun laboratoriyası
+        StudioEC: Oyun labı
     trophy:
       name:
         Bronze: Bürünc
@@ -791,8 +791,8 @@
         show_code_explanation: Hazırladığınız proqramın kodunu görmək üçün buraya
           klikləyin
         instructions_repeat_explanation: Hər tapmaca üçün təlimatlar burada təkrarlanır
-        category_explanation: You have all the same blocks but they've now been arranged
-          in categories
+        category_explanation: İxtiyarınızda olan bloklar eynidir, amma indi onlar
+          kateqoriyalara ayrılıb
         set_sprite_image: Attach a "set actor to image" block to the "when story starts"
           block to enable an actor for this story
         studio_say_text: Type what you want your actor to say within these quotes

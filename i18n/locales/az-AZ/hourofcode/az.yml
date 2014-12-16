@@ -1,154 +1,154 @@
-az:
-  site_name: KOD SAATI
-  language: Azərbaycan dili
-  front_title: Tarixin ən böyük təhsil layihəsinə siz də qoşulun, 8-14 dekabr 2014
-  coming_soon: Tezliklə
-  front_header_banner: Tarix boyu ən böyük öyrənmə olayında siz də iştirak edin, Dek 8-14-2014
+"az":
+  site_name: "KOD SAATI"
+  language: "Azərbaycan dili"
+  front_title: "Tarixin ən böyük təhsil layihəsinə siz də qoşulun, 8-14 dekabr 2014"
+  coming_soon: "Tezliklə"
+  front_header_banner: "Tarix boyu ən böyük öyrənmə olayında siz də iştirak edin, Dek 8-14-2014"
   front_intro_default: 'Kod Saatı 180-dən çox ölkədən milyonlarla tələbənin iştirak etdiyi global bir hərəkatdır. İstənilən yerdə, hər kəs Kod Saatı təşkil edə bilər. Bir saatlıq dərsliklər 30-dan çox dilə tərcümə edilib. Heç bir təcrübəyə ehtiyac yoxdur.  <strong>4 yaşından 104 yaşına qədər.</strong>'
   front_intro_default_uk: 'Kod Saatı 180-dən çox ölkədən on milyonlarla insanın iştirak etdiyi qlobal bir hərəkatdır. Hər kəs Kod Saatı təşkil edə bilər. İlk Kod Saatında Birləşmiş Krallıqdan 3 milyon insan iştirak etdi. Gəlin, dekabrda bu sayı iki qatına çatdıraq! <strong>Heç bir təcrübə tələb olunmur. 4 yaşından 104 yaşına qədər hər kəs üçün.</strong>'
-  front_watch_video: Yeni videoya baxın
-  header_menu_resources: Resurslar
-  header_menu_faq: Tez-tez verilən suallar
-  header_menu_prizes: Hədiyyələr
-  header_menu_uk_code_org: uk.code.org
+  front_watch_video: "Yeni videoya baxın"
+  header_menu_resources: "Resurslar"
+  header_menu_faq: "Tez-tez verilən suallar"
+  header_menu_prizes: "Hədiyyələr"
+  header_menu_uk_code_org: "uk.code.org"
   company_4-H: 4-H Youth Development
-  company_asa: Afterschool Alliance
-  company_bgca: Boys and Girls Club of America
-  company_bsusa: Boy Scouts of America
-  company_cgcs: Council of the Great City Schools
-  company_gsusa: Girl Scouts of America
-  company_khanacademy: Khan Academy
-  company_mesa: Mathematics Engineering Science Achievement
-  company_napcs: National Alliance of Public Charter Schools
-  company_ngcp: National Girls Collaborative Project
-  company_teachforall: Teach for All
-  company_teachforamerica: Teach for America
-  company_tntp: TNTP
-  prizes_all: Hər bir təşkilatçı üçün hədiyyələr
+  company_asa: "Afterschool Alliance"
+  company_bgca: "Boys and Girls Club of America"
+  company_bsusa: "Boy Scouts of America"
+  company_cgcs: "Council of the Great City Schools"
+  company_gsusa: "Girl Scouts of America"
+  company_khanacademy: "Khan Academy"
+  company_mesa: "Mathematics Engineering Science Achievement"
+  company_napcs: "National Alliance of Public Charter Schools"
+  company_ngcp: "National Girls Collaborative Project"
+  company_teachforall: "Teach for All"
+  company_teachforamerica: "Teach for America"
+  company_tntp: "TNTP"
+  prizes_all: "Hər bir təşkilatçı üçün hədiyyələr"
   prizes_every_organizer: 'Kod Saatı təşkil etmiş hər kəs təşəkkür hədiyyəsi olaraq "Dropbox" və ya "Skype" krediti qazanacaq'
   prizes_technology: 'Hər bir ABŞ ştatında (və paytaxt Vaşinqtonda) bir dövlət məktəbi 10&nbsp;000 dollar dəyərində texnologiya qazanacaq'
   prizes_tech_chats: '# sinif xüsusi qonaqlarla video söhbət imkanı qazanacaq'
-  prizes_robots: 100 sinif proqramlaşdırılan robot dəsti udacaq
-  prizes_brilliant: One school in each province and territory will receive $2000 for a Brilliant Project
+  prizes_robots: "100 sinif proqramlaşdırılan robot dəsti udacaq"
+  prizes_brilliant: "One school in each province and territory will receive $2000 for a Brilliant Project"
   prizes_actua: "15 schools across Canada will receive 2 hands-on STEM workshops by one of Actua's members"
-  prizes_details: Detallar
-  whats_next_header: Bəs sonra?
+  prizes_details: "Detallar"
+  whats_next_header: "Bəs sonra?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2014 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Kod Saatını necə təşkil etməli</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Kod Saatını təbliğ edin</a>"
   n_have_learned_an_hoc: '<h1>#</h1><h3>Kod Saatını</h3><h2>təcrübədən keçirdi</h2>'
-  anybody_can_learn: Hər kəs öyrənə bilər.
-  register_now: Qeydiyyatdan keçin
-  front_join_us_heading: Hər bir şagird üçün Kod Saatı.
-  front_join_us_description: İnformatika hər bir şagird üçün təməl bilikdir. Bunu 100 milyonlara çatdırmağımıza kömək edin.
-  front_join_us_button: Bizə qoşulun
-  front_what_is_hoc: Kod Saatı nədir?
-  front_join_us_header: Anyone can learn the basics, and have fun doing it!
-  front_join_us_header_uk: 8-14 dekabr tarixləri istənilən vaxt bir Kod Saatı tədbiri təşkil edin, hər kəsin təməl bilikləri öyrənərək bundan zövq ala biləcəyini nümayiş etdirin!
-  front_join_us_teacher: Müəllimsiniz?
-  front_join_us_inspire: Şagirdləri həvəsləndirin
-  front_join_us_inspire_link: sinifdə bir Kod Saatı keçirməklə.
-  front_join_us_parent: Valideynsiniz?
-  front_join_us_ask_link: Məktəbinizdən xahiş edin ki,
-  front_join_us_ask: Kod Saatı təşkil etsin.
-  front_join_us_computer_science: Sadəcə informatikanı sevirsiniz?
-  front_join_us_spread: Xəbərlərimizi yayın.
-  front_join_us_organize: Və ya özünüz Kod Saatı təşkil edin.
-  front_join_us_how_to_run: Kod Saatını belə təşkil edin
-  front_join_us_help_promote: Kod Saatını təbliğ etməyə kömək edin
-  front_join_us_students: Şagirdlər
-  front_join_us_teachers: Müəllimlər
-  front_join_us_everyone: Hər kəs
-  front_join_us_try: Sınaqdan keçirin
-  front_join_us_host: Təşkil edin
-  front_join_us_support: Dəstək verin
-  signup_header: 8-14 dekabr tarixləri bir Kod Saatı tədbiri təşkil edin və burada qeydiyyatdan keçirin.
-  signup_name_label: Adınız
-  signup_email_label: E-poçt ünvanınız
-  signup_organization_name_label: Məktəb və ya təşkilatın adı
-  signup_event_type_label: Tədbirin növü
-  signup_event_entire_school_label: Mənim bütün məktəbim iştirak edir
-  signup_event_location_label: Tədbirin keçiriləcəyi yer (mühüm deyil)
-  signup_special_event_flag_label: Mənim tədbirimi işıqlandır
-  signup_special_event_details_label: Özəl hadisə detalları
+  anybody_can_learn: "Hər kəs öyrənə bilər."
+  register_now: "Qeydiyyatdan keçin"
+  front_join_us_heading: "Hər bir şagird üçün Kod Saatı."
+  front_join_us_description: "İnformatika hər bir şagird üçün təməl bilikdir. Bunu 100 milyonlara çatdırmağımıza kömək edin."
+  front_join_us_button: "Bizə qoşulun"
+  front_what_is_hoc: "Kod Saatı nədir?"
+  front_join_us_header: "Anyone can learn the basics, and have fun doing it!"
+  front_join_us_header_uk: "8-14 dekabr tarixləri istənilən vaxt bir Kod Saatı tədbiri təşkil edin, hər kəsin təməl bilikləri öyrənərək bundan zövq ala biləcəyini nümayiş etdirin!"
+  front_join_us_teacher: "Müəllimsiniz?"
+  front_join_us_inspire: "Şagirdləri həvəsləndirin"
+  front_join_us_inspire_link: "sinifdə bir Kod Saatı keçirməklə."
+  front_join_us_parent: "Valideynsiniz?"
+  front_join_us_ask_link: "Məktəbinizdən xahiş edin ki,"
+  front_join_us_ask: "Kod Saatı təşkil etsin."
+  front_join_us_computer_science: "Sadəcə informatikanı sevirsiniz?"
+  front_join_us_spread: "Xəbərlərimizi yayın."
+  front_join_us_organize: "Və ya özünüz Kod Saatı təşkil edin."
+  front_join_us_how_to_run: "Kod Saatını belə təşkil edin"
+  front_join_us_help_promote: "Kod Saatını təbliğ etməyə kömək edin"
+  front_join_us_students: "Şagirdlər"
+  front_join_us_teachers: "Müəllimlər"
+  front_join_us_everyone: "Hər kəs"
+  front_join_us_try: "Sınaqdan keçirin"
+  front_join_us_host: "Təşkil edin"
+  front_join_us_support: "Dəstək verin"
+  signup_header: "8-14 dekabr tarixləri bir Kod Saatı tədbiri təşkil edin və burada qeydiyyatdan keçirin."
+  signup_name_label: "Adınız"
+  signup_email_label: "E-poçt ünvanınız"
+  signup_organization_name_label: "Məktəb və ya təşkilatın adı"
+  signup_event_type_label: "Tədbirin növü"
+  signup_event_entire_school_label: "Mənim bütün məktəbim iştirak edir"
+  signup_event_location_label: "Tədbirin keçiriləcəyi yer (mühüm deyil)"
+  signup_special_event_flag_label: "Mənim tədbirimi işıqlandır"
+  signup_special_event_details_label: "Özəl hadisə detalları"
   signup_send_posters_flag_label: 'Mənim məktəbimə və ya təşkilatıma <a href= "/resources#posters">afişa</a> göndərin'
-  signup_send_posters_address_label: Məktəb və ya təşkilatın ünvanı
-  signup_whole_school_flag_label: Bu tədbir bütün məktəb üçündür
-  signup_your_event: Tədbirinizi qeydiyyatdan keçirin
-  signup_name_placeholder: Adınız
-  signup_email_placeholder: you@example.com
-  signup_organization_name_placeholder: Məsələn, Linkoln litseyi
+  signup_send_posters_address_label: "Məktəb və ya təşkilatın ünvanı"
+  signup_whole_school_flag_label: "Bu tədbir bütün məktəb üçündür"
+  signup_your_event: "Tədbirinizi qeydiyyatdan keçirin"
+  signup_name_placeholder: "Adınız"
+  signup_email_placeholder: "you@example.com"
+  signup_organization_name_placeholder: "Məsələn, Linkoln litseyi"
   signup_event_location_placeholder: "Poçt kodu VƏ YA tam ünvan.\r\n(Bunu xəritəyə bir sancaq yerləşdirmək üçün istifadə edəcəyik)"
-  signup_special_event_details_placeholder: Bu xüsusi hadisəni nəyin təşkil etdiyini təsvir edin
-  signup_send_posters_address_placeholder: Bu ünvan bizim xəritədə paylaşdırılmayacaq
-  signup_event_type_in_school: Məktəbdə
-  signup_event_type_out_of_school: Məktəbdən kənar
-  signup_submit_label: Qeydiyyatdan keçin
-  signup_submit_error_message: Səhv baş verdi. Bütün vacib sahələrin düzgün doldurulduğunuzu yoxlayın.
-  signup_thank_you_header: Kod Saatı tədbiri təşkil etmək üçün qeydiyyatdan keçdiyinizə görə təşəkkür edirik.
-  signup_thank_you_message: İşə başlamağa kömək etmək üçün sizə təsdiq məktubu göndərildi.
+  signup_special_event_details_placeholder: "Bu xüsusi hadisəni nəyin təşkil etdiyini təsvir edin"
+  signup_send_posters_address_placeholder: "Bu ünvan bizim xəritədə paylaşdırılmayacaq"
+  signup_event_type_in_school: "Məktəbdə"
+  signup_event_type_out_of_school: "Məktəbdən kənar"
+  signup_submit_label: "Qeydiyyatdan keçin"
+  signup_submit_error_message: "Səhv baş verdi. Bütün vacib sahələrin düzgün doldurulduğunuzu yoxlayın."
+  signup_thank_you_header: "Kod Saatı tədbiri təşkil etmək üçün qeydiyyatdan keçdiyinizə görə təşəkkür edirik."
+  signup_thank_you_message: "İşə başlamağa kömək etmək üçün sizə təsdiq məktubu göndərildi."
   map_header: 'Bütün dünyada # Kod Saatı tədbiri'
   map_header_company: '# şirkətlər tərəfindən'
-  map_search_placeholder: Search for Hour of Code events
-  map_search_search: Search
-  map_search_reset: Reset
-  meta_tag_og_title: The Hour of Code is here
-  meta_tag_og_description: Kod Saatı 180-dən çox ölkədə və 30-dan çox dildə on milyonlarla şagirdi əhatə edən qlobal bir hərəkatdır. 4 yaşlıdan tutmuş 104 yaşlıya qədər.
-  meta_tag_twitter_title: The Hour of Code is here
-  meta_tag_twitter_description: Kod Saatı 180-dən çox ölkədə və 30-dan çox dildə on milyonlarla şagirdi əhatə edən qlobal bir hərəkatdır. 4 yaşlıdan tutmuş 104 yaşlıya qədər.
+  map_search_placeholder: "Search for Hour of Code events"
+  map_search_search: "Search"
+  map_search_reset: "Reset"
+  meta_tag_og_title: "The Hour of Code is here"
+  meta_tag_og_description: "Kod Saatı 180-dən çox ölkədə və 30-dan çox dildə on milyonlarla şagirdi əhatə edən qlobal bir hərəkatdır. 4 yaşlıdan tutmuş 104 yaşlıya qədər."
+  meta_tag_twitter_title: "The Hour of Code is here"
+  meta_tag_twitter_description: "Kod Saatı 180-dən çox ölkədə və 30-dan çox dildə on milyonlarla şagirdi əhatə edən qlobal bir hərəkatdır. 4 yaşlıdan tutmuş 104 yaşlıya qədər."
   twitter_default_text: 'Mən builki #HourOfCode Kod Saatında iştirak edirəm, bəs siz? @codeorg'
-  hardware_prizes_form_name_label: Adınız
-  hardware_prizes_form_name_placeholder: Adınız
-  hardware_prizes_form_email_label: Emailiniz
-  hardware_prizes_form_email_placeholder: Emailiniz
-  hardware_prizes_form_school_name_label: Məktəbin adı
-  hardware_prizes_form_school_name_placeholder: Məktəbin adı
-  hardware_prizes_form_school_address_label: Məktəbin ünvanı
-  hardware_prizes_form_school_address_placeholder: Məktəbin ünvanı
-  hardware_prizes_form_school_type_label: Məktəbin tipi
-  hardware_prizes_form_school_type_option_elementary: İbtidai
-  hardware_prizes_form_school_type_option_middle_school: Orta məktəb
-  hardware_prizes_form_school_type_option_high_school: Tam orta məktəb
-  hardware_prizes_form_qualifying_school_label: Bu ümumtəhsil məktəbidir
-  hardware_prizes_form_number_students_label: İştirak edən şagirdlərin sayı
-  hardware_prizes_form_number_students_placeholder: Şagirdlərin sayı
-  hardware_prizes_form_plan_file_label: Kod Saatı üçün tədbirlər planınızı yükləyin
+  hardware_prizes_form_name_label: "Adınız"
+  hardware_prizes_form_name_placeholder: "Adınız"
+  hardware_prizes_form_email_label: "Emailiniz"
+  hardware_prizes_form_email_placeholder: "Emailiniz"
+  hardware_prizes_form_school_name_label: "Məktəbin adı"
+  hardware_prizes_form_school_name_placeholder: "Məktəbin adı"
+  hardware_prizes_form_school_address_label: "Məktəbin ünvanı"
+  hardware_prizes_form_school_address_placeholder: "Məktəbin ünvanı"
+  hardware_prizes_form_school_type_label: "Məktəbin tipi"
+  hardware_prizes_form_school_type_option_elementary: "İbtidai"
+  hardware_prizes_form_school_type_option_middle_school: "Orta məktəb"
+  hardware_prizes_form_school_type_option_high_school: "Tam orta məktəb"
+  hardware_prizes_form_qualifying_school_label: "Bu ümumtəhsil məktəbidir"
+  hardware_prizes_form_number_students_label: "İştirak edən şagirdlərin sayı"
+  hardware_prizes_form_number_students_placeholder: "Şagirdlərin sayı"
+  hardware_prizes_form_plan_file_label: "Kod Saatı üçün tədbirlər planınızı yükləyin"
   hardware_prizes_form_plan_file_description: 'Məktəbinizdəki hər bir şagirdi Kod Saatına cəlb etmək üçün fəaliyyət planı qurun. Nümunə üçün bura baxa bilərsiniz: #PDF# | #Word#'
-  hardware_prizes_form_submit_label: Göndər
-  hoc_faq_title: Tez-tez verilən suallar
-  hoc_faq_what_is_hoc_q: Kod Saatı nədir?
+  hardware_prizes_form_submit_label: "Göndər"
+  hoc_faq_title: "Tez-tez verilən suallar"
+  hoc_faq_what_is_hoc_q: "Kod Saatı nədir?"
   hoc_faq_what_is_hoc_a: "Kod Saatı proqramlaşdırmanın üzərdindən sehr pərdəsini götürərək, hər kəsin onun əsaslarını öyrənə biləcəyini göstərmək üçün hazırlanmış informatikaya bir saatlıq giriş kursudur. <a href='http://code.org/learn'>Dərslikləri nəzərdən keçirin</a>."
-  hoc_faq_last_year: Dərslikləri sınaqdan keçirin
-  hoc_faq_when_is_hoc_q: Kod Saatı nə vaxtdır?
+  hoc_faq_last_year: "Dərslikləri sınaqdan keçirin"
+  hoc_faq_when_is_hoc_q: "Kod Saatı nə vaxtdır?"
   hoc_faq_when_is_hoc_a: "Hər kəs istənilən vaxt Kod Saatı keçirə bilər, amma bu tədbirin əhmiyyəti on milyonlarla şagirdin Kod Saatında 8-14 Dekabrda, <a href='http://csedweek.org'>İnformatika Təhsili Həftəsi</a> qeyd edilən zaman iştirak etməsidir. Bu bir xüsusi <i>saatdır</i>? Xeyir.  Bu həftə ərzində istədiyiniz vaxt Kod Saatı keçirə bilərsiniz. (Və əgər həmin həftə ərzində alınmırsa, həftədən əvvəl və sonra da ola bilər)."
-  hoc_faq_why_cs_q: Nəyə görə informatika?
+  hoc_faq_why_cs_q: "Nəyə görə informatika?"
   hoc_faq_why_cs_a: "<i>21-ci əsrdə hər bir tələbənin </i> informatikaya yiyələnmək üçün imkanı olmalıdır. İnformatikanın əsaslarını bilmək kreativliyi və problem həll etmək bacarığını inkişaf etdirir.  21-ci əsrdə hər hansı sahədə karyera uğuruna nail olmaq üçün, erkən yaşdan  başlamaq lazımdır. Daha ətraflı: <a href='http://code.org'>Code.org</a>."
-  hoc_faq_how_participate_q: Kod Saatında necə iştirak edə bilərəm?
+  hoc_faq_how_participate_q: "Kod Saatında necə iştirak edə bilərəm?"
   hoc_faq_how_participate_a: "Kod Saatı tədbiri üçün <a href='http://hourofcode.org'>burada</a> qeydiyyatdan keçin və <a href='target-resources-how-to'>tədbiri planlaşdırmağa başlayın</a>. Siz Kod Saatı tədbirini öz məktəbinizdə, olduğunuz hər yerdə, &mdash; məsələn, klubda, ictimai təşkilatda, hətta işdə belə təşkil edə bilərsiniz. Yaxud, 8 Dekbarda sadəcə özünüzü yoxlaya bilərsiniz."
-  hoc_faq_behind_hoc_q: Kod Saatının arxasında kim durur?
+  hoc_faq_behind_hoc_q: "Kod Saatının arxasında kim durur?"
   hoc_faq_behind_hoc_a: |
     Kod Saatı "Code.org" tərəfindən təşkil edilir, <a href='http://code.org'>Code.org</a> informatika təhsilinin əhatə dairəsinin genişləndirilməsi, bu sahədə az təmsil olunan qadınlar və rəngli tələbələrin iştirak sayının artırılmasına xidmət edən ictimai qeyri-kommersiya təşkilatıdır.
     "Microsoft", "Apple", "Amazon", "Boys and Girls Clubs of America" və "the College Board" &mdash; kimi <a href='http://code.org/about/partners'> təşkilatlar</a>bir araya gəldilər və Kod Saatına təstək vermək üçün misilsiz bir birlik yaratdılar.
-  hoc_faq_host_q: Mən kodlaşdırma haqqında heç nə bilmirəm. Mən də tədbir təşkil edə bilərəmmi?
+  hoc_faq_host_q: "Mən kodlaşdırma haqqında heç nə bilmirəm. Mən də tədbir təşkil edə bilərəmmi?"
   hoc_faq_host_a: "Əlbəttə. Kod Saatı tədbirlərini müstəqil planlaşdıra bilərsiniz. Sizə lazım olan <a href='http://code.org/learn'>bizim çalışmaları </a>nəzərdən keçirmək, istədiyiniz birini seçmək, və saatı seçməkdir &mdash; qalan hər şeyi biz təmin edirik. Bizdə hər yaş səviyyəsi və təcrübə dərəcəsi üçün imkan var, uşaq bağçasından başlayaraq hər kəs məşğul ola bilər.  <a href='target-resources-how-to'>İştirakçı bələdçisi</a> ilə tanış olun və öz tədbirinizi planlaşdırmağa başlayın."
-  hoc_faq_need_computers_q: Hər bir iştirakçı üçün kompüter lazımdırmı?
+  hoc_faq_need_computers_q: "Hər bir iştirakçı üçün kompüter lazımdırmı?"
   hoc_faq_need_computers_a: "Xeyir. Bizdə kompüterdə, smartfonda, planşetdə işləyən çalışmalar var, bəzi çalışmalar üçün isə heç kompüterə gərək də yoxdur! Siz olduğunuz yerdə, istənilən şərtlə tədbirə qoşula bilərsiniz. <p><i>Bəzi imkanları təqdim edirik:</i> <br> <ul> <li><b>Cüt-cüt işləyin.</b> Tədqiqatlar göstərir ki, şagirdlər <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>yoldaşlı işləyəndə </a>, kompüteri bölüşəndə, birlikdə çalışanda daha yaxşı nəticə əldə edirlər. Şagirdlərinizi birlikdə işləməyə həvəsləndirin. <li><b>Proyektordan istifadə edin.</b> Əgər sizə proyektor və lövhə, internetə qoşulmuş kompüter varsa, bütün sinif Kod Saatında birlikdə çalışa bilər. Videolara birlikdə baxın, pazzılları birlikdə qurun, suallara birlikdə cavab axtarın. <li><b>Avadanlıqsız da işləmək olar.</b> Bizim elə çalışmalar təqdim edirik ki, onların heç kompüterə ehtiyacı yoxdur. </ul>"
   hoc_faq_international_q: 'I am in <country>. How do I participate internationally?'
   hoc_faq_international_a: "Hər kəs dünyanın istənilən yerində bir Kod Saatı tədbiri təşkil edə bilər. Ötən il şagirdlər dünyanın hər yeriindən Kod Saatı üçün bir araya gəldilər. Daha ətraflı - <a href='target-resources'>burada</a>."
-  hoc_faq_tutorial_q: Mən Kod Saatı üçün çalışmanı necə hazırlaya bilərəm?
+  hoc_faq_tutorial_q: "Mən Kod Saatı üçün çalışmanı necə hazırlaya bilərəm?"
   hoc_faq_tutorial_a: "Əgər siz çalışmaların hazırlanması üçün bizimlə əməkdaşlıq etməkdə maraqlısınızsa, <a href='target-tutorial-guidelines'>  ünvanında yerləşən bələdçi və təlimatlarla tanış olun</a>. Biz müxtəlif çür çalışmaları toplamaq istəyirik, amma əsas məqsədimiz bu təcrübəni informatika sahəsində yeni olan müəllim və şagirdlər üçün ən uyğun hala gətirməkdir."
-  hoc_faq_more_questions_q: Hələ də suallarınız var?
+  hoc_faq_more_questions_q: "Hələ də suallarınız var?"
   hoc_faq_more_questions_a: "<a href='http://support.code.org'>dəstək forumunda</a>suallarınıza cavab axtarın."
-  hoc_faq_scratch_q: I am doing Scratch for Hour of Code, but what if my students have iPads rather than laptops?
+  hoc_faq_scratch_q: "I am doing Scratch for Hour of Code, but what if my students have iPads rather than laptops?"
   hoc_faq_scratch_a: |-
     "Scratch" planşetlərdə işləmir. Əgər şagirdlərinizin yaşı azdırsa, onda "iPad" proqram əlavəsi "ScratchJR"dan (oxumağı yeni öyrənənlər üçün) istifadə edə bilərlər. Əgər <a href='http://code.org/learn'>Code.org/learn</a> ünvanındakı dərsliklərə baxsanız, "iPad"də işləyən digər dərslikləri tapa bilərsiniz - "Code.org"dan, "Tynker", "Lightbot" və ya "CodeSpark" dan.
-  hoc_faq_account_q: Şagirdlərin bir hesabdan istifadə edərək daxil olması lazımdır?
+  hoc_faq_account_q: "Şagirdlərin bir hesabdan istifadə edərək daxil olması lazımdır?"
   hoc_faq_account_a: "Yox. Kod Saatını sınaqdan keçirmək üçün şagirdlərə heç bir qeydiyyat və ya daxil olmaq tələb olunmur. Most of the <a href='http://code.org/learn/beyond'>Növbəti kurslar</a>ın çoxu şagirdlərin nailiyyətlərini yadda saxlamaq üçün bir hesabın açılmasını tələb edir."
-  hoc_faq_frozen_q: Anna və Elza olan dərslik haradadır?
+  hoc_faq_frozen_q: "Anna və Elza olan dərslik haradadır?"
   hoc_faq_frozen_a: "O, indi <a href='http://code.org/learn'>Code.org/learn</a> ünvanında nəşr edilib. Ümid edirik ki, xoşunuza gəlir!"
-  hoc_faq_high_school_q: Which activity should I do with high school students?
+  hoc_faq_high_school_q: "Which activity should I do with high school students?"
   hoc_faq_high_school_a: "Across all ages, we recommend trying one of the beginner tutorials on <a href='http://code.org/learn'>Code.org/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as KhanAcademy or CodeHS."
-  hoc_faq_more_questions_br_q: Outras dúvidas?
+  hoc_faq_more_questions_br_q: "Outras dúvidas?"
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
   hoc_faq_when_is_hoc_uk_a: "The Hour of Code will take place during December 8-14, 2014. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. The Hour of Code in the UK will happen at the same time as in the US where it is timed to celebrate the annual <a href='http://csedweek.org'>Computer Science Education Week.</a>"
@@ -157,47 +157,47 @@ az:
   hoc_faq_behind_hoc_uk_a: "The Hour of Code is organised by <a href='http://uk.code.org'>Code.org</a>, a public 501c3 non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. An <a href='http://uk.code.org/about/partners'>unprecedented coalition of partners</a> have come together to support the Hour of Code, too &mdash; including Microsoft, Google, Cambridge University Press, Tech City and The Department of Education."
   hoc_faq_host_uk_a: "Of course. Hour of Code activities are self-guided. All you have to do is pick the tutorial you want and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. <a href='http://uk.code.org/learn'>Try our current tutorials</a>."
   stats_hoc_2013_heading: 'Ötənilki Kod Saatından inanılmaz statistika. Yalnız bir həftə ərzində:'
-  stats_hoc_2013_image_alt: 2013-cü ildəki Kod Saatına aid statistika
-  stats_growth: İstifadəçi sayını 15 milyona ən tez çatdıran.
+  stats_hoc_2013_image_alt: "2013-cü ildəki Kod Saatına aid statistika"
+  stats_growth: "İstifadəçi sayını 15 milyona ən tez çatdıran."
   stats_tumblr: 'Tumblr: 3,5 il'
   stats_facebook: 'Feysbuk: 3 il'
   stats_twitter: 'Tvitter: 2,5 il'
   stats_pinterest: 'Pinterest: 2 il'
   stats_instagram: 'İnstaqram: 14 ay'
   stats_hoc: 'Kod Saatı: 5 gün'
-  stats_global: 170 ölkədən 15 milyon tələbə Kod Saatında öyrəndi.
-  stats_girls_more: Son 70 ildəkindən daha artıq sayda qız informatika ilə tanış oldu.
-  stats_girls_million: 2013-cü ildə 10 milyondan çox qız
+  stats_global: "170 ölkədən 15 milyon tələbə Kod Saatında öyrəndi."
+  stats_girls_more: "Son 70 ildəkindən daha artıq sayda qız informatika ilə tanış oldu."
+  stats_girls_million: "2013-cü ildə 10 milyondan çox qız"
   stats_nina: '"Hər gün eyni nəticə alındı&mdash; 100%-lik maraq" - Nina Nikols Peri, müəllimə'
   stats_student: '"Məncə, <b>bu həyatda bir dəfə olan</b> şansdır." - Mariana Alzate, 5-ci sinif şagirdi'
   stats_michael: '"Mən öz şagirdlərimi <b>heç vaxt </b> öyrənməyə bu qədər həvəsli görməmişdim" - Maykl Klark, müəllim'
-  resources_how_to: Müəllimlər üçün bələdçi
-  resources_how_to_events: Tədbir keçirmək üçün təlimat
-  resources_how_to_districts: Rayon təhsil şöbələri üçün təlimat
-  resources_how_to_officials: Dövlət məmurları üçün təlimat
-  resources_handouts: Hər tərəfə yayılmaq üçün vərəqələr
-  resources_videos: Videolar
-  resources_posters: Plakatlar
-  resources_social: Sosial
-  resources_banners: Bannerlər
-  resources_emails: E-məktub nümunələri
-  resources_stats: Faydalı statistika və şüarlar
-  resources_press_kit: Mətbuat üçün materiallar
-  events_title: Bütün Kod Saatı tədbirləri
-  events_nav_all: Bütün tədbirlər
-  events_nav_whole_schools: Bütün məktəblər
-  events_nav_special: Xüsusi tədbirlər
-  events_nav_orgs: Təşkilatlar
-  events_all_title: Bütün Kod Saatı tədbirləri
-  events_whole_school_title: Bütün məktəb səviyyəsində Kod Saatı tədbirləri
-  events_special_title: Xüsusi Kod Saatı tədbirləri
-  events_orgs_title: Tərəfdaş təşkilatların təşkil etdiyi bütün Kod Saatı təədbirləri
-  event: tədbir
-  events: tədbirlər
-  footer_copyright_message: Copyright 2014 Code.org. Bütün hüquqları qorunur.
+  resources_how_to: "Müəllimlər üçün bələdçi"
+  resources_how_to_events: "Tədbir keçirmək üçün təlimat"
+  resources_how_to_districts: "Rayon təhsil şöbələri üçün təlimat"
+  resources_how_to_officials: "Dövlət məmurları üçün təlimat"
+  resources_handouts: "Hər tərəfə yayılmaq üçün vərəqələr"
+  resources_videos: "Videolar"
+  resources_posters: "Plakatlar"
+  resources_social: "Sosial"
+  resources_banners: "Bannerlər"
+  resources_emails: "E-məktub nümunələri"
+  resources_stats: "Faydalı statistika və şüarlar"
+  resources_press_kit: "Mətbuat üçün materiallar"
+  events_title: "Bütün Kod Saatı tədbirləri"
+  events_nav_all: "Bütün tədbirlər"
+  events_nav_whole_schools: "Bütün məktəblər"
+  events_nav_special: "Xüsusi tədbirlər"
+  events_nav_orgs: "Təşkilatlar"
+  events_all_title: "Bütün Kod Saatı tədbirləri"
+  events_whole_school_title: "Bütün məktəb səviyyəsində Kod Saatı tədbirləri"
+  events_special_title: "Xüsusi Kod Saatı tədbirləri"
+  events_orgs_title: "Tərəfdaş təşkilatların təşkil etdiyi bütün Kod Saatı təədbirləri"
+  event: "tədbir"
+  events: "tədbirlər"
+  footer_copyright_message: "Copyright 2014 Code.org. Bütün hüquqları qorunur."
   footer_trademark_message: 'Hour of Code™ "Code.org"-a aid ticarət markasıdır.'
-  footer_menu_partners: Tərəfdaşlar
-  footer_menu_contact: Bizimlə əlaqə
-  footer_menu_support: Dəstək
-  footer_menu_terms: Şərtlər
-  footer_menu_privacy: Məxfilik siyasəti
+  footer_menu_partners: "Tərəfdaşlar"
+  footer_menu_contact: "Bizimlə əlaqə"
+  footer_menu_support: "Dəstək"
+  footer_menu_terms: "Şərtlər"
+  footer_menu_privacy: "Məxfilik siyasəti"

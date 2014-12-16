@@ -568,21 +568,22 @@
           til hinanden. Du skal bruge "drej" og "flyt" blokkene.
       frozen square iterative:
         instructions: Det ser ud som om vi er nået halvvejs med at tegne et kvadrat.
-          Lad os sætte 4 linier sammen for at skabe et helt kvadrat.
+          Lad os sætte 4 linier sammen for at tegne et helt kvadrat.
       frozen square loop:
-        instructions: Hej jeg hedder Anna fra Arendelle! Lad os lave et kvadrat med
-          "Gentag" blokke, som bruger færre blokke. Hvor mange gange skal "Gentag"
-          blokken gentage det, der der stå inden i den, for at lave et kvadrat?
+        instructions: Hej jeg hedder Anna fra Arendelle! Lad os bruge færre blokke
+          til at tegne et kvadrat, ved at bruge "gentag"-blokken. Hvor mange gange
+          skal "gentag"-blokken gentage det, der der står inden i den, for at tegne
+          et kvadrat?
       frozen square loop 3x:
-        instructions: Lad os lave tre kvadrater, der drejer efter hinanden. Sørg for
-          at at dreje 120 grader før hvert nye kvadrat.
+        instructions: Lad os lave tre kvadrater, drejet efter hinanden. Sørg for at
+          at dreje 120 grader før hvert nyt kvadrat.
       frozen square snowflake:
-        instructions: Kan du lave et snefnug ved, at benytte "Gentag" blokken til
-          at laver et kvadrat 10 gange, og "Drej" blokken for at dreje 36 grader mellem
-          hvert kvadrat?
+        instructions: Kan du lave et snefnug ved, at benytte "gentag"-blokken til
+          at lave 10 kvadrater, og "drej"-blokken til at dreje 36 grader mellem hvert
+          kvadrat?
       frozen cross:
-        instructions: Brug "Gentag" blokken til at tegne et plustegn. Lagde du mærke
-          til at Elsa kan flytte frem og tilbage?
+        instructions: Brug "gentag"-blokken til at tegne et plus. Læg mærke til at
+          Elsa kan flytte både frem og tilbage?
       frozen cross rotate:
         instructions: Prøv nu at gentage det 10 gange. Hvor mange grader skal du dreje
           mellem hver linje?
@@ -801,7 +802,7 @@
           programmet kører"-blokken for at få Elsa til at bevæge sig fremad
         turn_elsa: Brug "drej"-blokken for at få Elsa til at dreje. Tallet i drop-down
           bestemmer hvor mange grader Elsa drejer
-        replace_questions: Brug drop-down til at erstatte "???" med et nummer
+        replace_questions: Brug drop-down menuen til at erstatte "???" med et tal
         replace_questions_degree: Brug drop-down til at erstatte "???" med det korrekte
           antal grad der skal drejes
         repeat_blocks: Brug "Repeat" blokken og lad omslutte blokkene på arbejdsområdet
@@ -837,7 +838,7 @@
         frozen_circle_function_with_parameter_circle: Brug "lav en cirkel" blokken
           og skift størrelsen.
         frozen_snowflake_branch: Use the "create a snowflake branch" block
-        frozen_create_square: Tilføj flere blokke her for at lave en firkant
+        frozen_create_square: Tilføj flere blokke her for at lave et kvadrat
         playlab_drag_say: Træk "sig"-blokken herhen og skriv "Hej"
         playlab_use_twice: Brug denne blok to gange og husk at ændre tallet for figuren
         playlab_move_girl: Use the "move right" block to move Tennis Girl
