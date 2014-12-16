@@ -79,7 +79,7 @@
   "FUNCTION_NAME_LABEL": "Name your function:",
   "FUNCTION_DESCRIPTION_LABEL": "What is your function supposed to do?",
   "FUNCTION_PARAMETERS_LABEL": "What parameters does your function take?",
-  "FUNCTION_HEADER": "Chức năng",
+  "FUNCTION_HEADER": "Hàm",
   "FUNCTIONAL_CREATE": "New Block",
   "FUNCTIONAL_EDIT": "edit",
   "FUNCTIONAL_NAME_LABEL": "Tên",

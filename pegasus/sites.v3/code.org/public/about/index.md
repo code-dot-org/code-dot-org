@@ -19,8 +19,9 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding participa
 **President Obama does the Hour of Code:**
 
 <iframe width="375" height="210" src="//www.youtube.com/embed/AI_dayIQWV4" frameborder="0" allowfullscreen></iframe>
+Hour of Code has won the support of both [Republicans and Democrats](https://www.youtube.com/watch?v=Vgn_YbSmHnw), and [many celebrities](https://www.youtube.com/watch?v=h5_SsNSaJJI&list=PLzdnOPI1iJNciTeOk1ziB4pIpdPwevgv_)
 
-<br/><br/><br/>
+<br/><br/>
 
 [/col-50]
 
@@ -37,10 +38,11 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding participa
 | Set up policies to support CS | Policy changed in [16 states](/action) including CA, NY, FL, IL, OH.|
 | Go global | Our courses are available in 30+ languages, used in all 180+ countries. |
 
+
 <br/>
 <br/>
 ## More information, history, and philosophy
-Code.org launched in 2013 as a hobby project of co-founders Ali and Hadi Partovi. Our initial work was a [video](https://www.youtube.com/watch?v=nKIu9yen5nc) that became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've worked to build a worldwide effort to help schools teach computer science. 
+Code.org launched in 2013 as a project of co-founders Ali and Hadi Partovi. Our initial work was a [video](https://www.youtube.com/watch?v=nKIu9yen5nc) that became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded to build a full organization supporting a a worldwide movement. Our goal is for computer science to be a fixed part of school curriculum. To support that goal, we are doing work across the education spectrum: designing our own courses or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes. 
 
 Our work builds upon [decades of effort, by countless organizations and individuals](https://docs.google.com/document/d/1rdEUqAkYtKPMD4UeEmpZCAau4_AdIOGbZDqLkePAQrY/pub) who have helped establish, fund, and spread computer science education. We're thankful to benefit from the tireless help of the broader computer science education community.
 
