@@ -1,11 +1,15 @@
 $root: '/blockly/media/webapp/'; //TODO: Parameterize for asset pipeline
 
+div#visualization {
+  height: 600px;
+}
+
 #divWebapp {
   overflow: hidden;
   position: relative;
   z-index: 1;
   width: 400px;
-  height: 400px;
+  height: 600px;
   background-color: white;
 }
 
