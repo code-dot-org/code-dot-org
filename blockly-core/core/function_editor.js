@@ -413,7 +413,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
 };
 
 Blockly.FunctionEditor.prototype.layOutBlockSpaceItems_ = function () {
-  if (!this.functionDefinitionBlock) {
+  if (!this.isOpen() || !this.functionDefinitionBlock) {
     return;
   }
   var currentX = Blockly.RTL ?
