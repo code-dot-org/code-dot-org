@@ -19055,7 +19055,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   Blockly.modalBlockSpaceEditor.svgResize()
 };
 Blockly.FunctionEditor.prototype.layOutBlockSpaceItems_ = function() {
-  if(!this.functionDefinitionBlock) {
+  if(!this.isOpen() || !this.functionDefinitionBlock) {
     return
   }
   var currentX = Blockly.RTL ? Blockly.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE : FRAME_MARGIN_SIDE;
