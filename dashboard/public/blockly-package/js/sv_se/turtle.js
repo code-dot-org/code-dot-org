@@ -3295,6 +3295,7 @@ function hasUnusedParam() {
       // Unused param if there's no parameters_get descendant with the same name
       return !hasMatchingDescendant(userBlock, function(block) {
         return (block.type === 'parameters_get' ||
+            block.type === 'functional_parameters_get' ||
             block.type === 'variables_get') &&
             block.getTitleValue('VAR') === paramName;
       });
@@ -12203,11 +12204,11 @@ var levels = module.exports = {
     toolbox: toolbox(3, 9),
     startBlocks: startBlocks(3, 9),
     requiredBlocks: [
-      [levelBase.define(msg.drawAHouse())],
-      [levelBase.call(msg.drawAHouse())],
-      [levelBase.call(msg.drawASquare())],
-      [levelBase.call(msg.drawATriangle())],
-      [simpleBlock('variables_get_length')]
+      [defineWithArg(msg.drawAHouse(), msg.lengthParameter())],
+      [levelBase.callWithArg(msg.drawASquare(), msg.lengthParameter())],
+      [levelBase.callWithArg(msg.drawATriangle(), msg.lengthParameter())],
+      [simpleBlock('variables_get_length')],
+      [levelBase.callWithArg(msg.drawAHouse(), msg.lengthParameter())]
     ],
     freePlay: false,
     images: [
