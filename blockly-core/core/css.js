@@ -38,6 +38,12 @@ Blockly.Css.Cursor = {
 };
 
 /**
+* Current cursor (cached value).
+* @type string
+*/
+Blockly.Css.currentCursor_ = '';
+
+/**
  * Large stylesheet added by Blockly.Css.inject.
  * @type Element
  * @private
@@ -67,30 +73,48 @@ Blockly.Css.inject = function() {
 
 /**
  * Set the cursor to be displayed when over something draggable.
+ * In most cases, it may be easier to call the setCursor helper on
+ * BlockSpaceEditor than to use this method directly.
  * @param {Blockly.Cursor} cursor Enum.
+ * @param {?SVGElement} opt_svg The blockSpace svg object to also set the cursor on.
  */
-Blockly.Css.setCursor = function(cursor) {
+Blockly.Css.setCursor = function(cursor, opt_svg) {
   if (Blockly.readOnly) {
     return;
   }
 
-  /*
+  if (Blockly.Css.currentCursor_ != cursor) {
+    Blockly.Css.currentCursor_ = cursor;
+
+    /*
     Hotspot coordinates are baked into the CUR file, but they are still
     required in the CSS due to a Chrome bug.
     https://code.google.com/p/chromium/issues/detail?id=1446
-  */
-  if (cursor == Blockly.Css.Cursor.OPEN) {
-    var xy = '8 5';
-  } else {
-    var xy = '7 3';
+    */
+    if (cursor == Blockly.Css.Cursor.OPEN) {
+      var xy = '8 5';
+    } else {
+      var xy = '7 3';
+    }
+    var cursorRuleRHS = 'url(' +
+    Blockly.assetUrl('media/' + cursor + '.cur') +
+    ') ' + xy + ', auto';
+    var rule = '.blocklyDraggable {\ncursor: ' + cursorRuleRHS + ';\n}\n';
+    var ruleIndex = 0;
+    // Guard against empty stylesheet for tests.
+    if (Blockly.Css.styleSheet_ && Blockly.Css.styleSheet_.cssRules.length > ruleIndex) {
+      goog.cssom.replaceCssRule('', rule, Blockly.Css.styleSheet_, ruleIndex);
+    }
   }
-  var rule = '.blocklyDraggable {\n' +
-  ' cursor: url(' + Blockly.assetUrl('media/' + cursor + '.cur') + ')' +
-  ' ' + xy + ', auto;\n}\n';
-  var ruleIndex = 1;
-  // Guard against empty stylesheet for tests.
-  if (Blockly.Css.styleSheet_ && Blockly.Css.styleSheet_.cssRules.length > ruleIndex) {
-    goog.cssom.replaceCssRule('', rule, Blockly.Css.styleSheet_, ruleIndex);
+
+  // Set cursor on the SVG surface as well, so that rapid movements
+  // don't result in cursor changing to an arrow momentarily.
+  if (opt_svg) {
+    if (cursor == Blockly.Css.Cursor.OPEN) {
+      opt_svg.style.cursor = '';
+    } else {
+      opt_svg.style.cursor = cursorRuleRHS;
+    }
   }
 };
 

@@ -27,6 +27,7 @@ goog.provide('Blockly.Flyout');
 
 goog.require('Blockly.Block');
 goog.require('Blockly.Comment');
+goog.require('goog.math.Rect');
 
 
 /**
@@ -568,7 +569,7 @@ Blockly.Flyout.prototype.blockMouseDown_ = function(block) {
     } else {
       // Left-click (or middle click)
       Blockly.removeAllRanges();
-      Blockly.Css.setCursor(Blockly.Css.Cursor.CLOSED);
+      flyout.blockSpace_.blockSpaceEditor.setCursor(Blockly.Css.Cursor.CLOSED);
       // Record the current mouse position.
       Blockly.Flyout.startDragMouseX_ = e.clientX;
       Blockly.Flyout.startDragMouseY_ = e.clientY;
@@ -761,4 +762,21 @@ Blockly.Flyout.prototype.onBlockDropped = function (originBlock) {
  */
 Blockly.Flyout.prototype.setEnabled = function (enabled) {
   this.enabled_ = enabled;
+};
+
+/**
+* Return the deletion rectangle for this flyout.
+* @return {goog.math.Rect} Rectangle in which to delete.
+*/
+Blockly.Flyout.prototype.getRect = function() {
+  // BIG_NUM is offscreen padding so that blocks dragged beyond the shown flyout
+  // area are still deleted.  Must be smaller than Infinity, but larger than
+  // the largest screen size.
+  var BIG_NUM = 10000000;
+  var x = Blockly.getSvgXY_(this.svgGroup_).x;
+  if (!Blockly.RTL) {
+    x -= BIG_NUM;
+  }
+  return new goog.math.Rect(x, -BIG_NUM,
+    BIG_NUM + this.width_, this.height_ + 2 * BIG_NUM);
 };

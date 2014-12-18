@@ -278,10 +278,13 @@ Blockly.Block.terminateDrag_ = function() {
       Blockly.fireUiEvent(window, 'resize');
     }
   }
+  var selectedEditorSvg = null;
   if (selected) {
     selected.blockSpace.fireChangeEvent();
+    selectedEditorSvg = selected.blockSpace.blockSpaceEditor.svg_;
   }
   Blockly.Block.dragMode_ = Blockly.Block.DRAG_MODE_NOT_DRAGGING;
+  Blockly.Css.setCursor(Blockly.Css.Cursor.OPEN, selectedEditorSvg)
 };
 
 /**
@@ -537,7 +540,7 @@ Blockly.Block.prototype.onMouseDown_ = function(e) {
   } else {
     // Left-click (or middle click)
     Blockly.removeAllRanges();
-    Blockly.Css.setCursor(Blockly.Css.Cursor.CLOSED);
+    this.blockSpace.blockSpaceEditor.setCursor(Blockly.Css.Cursor.CLOSED);
     // Look up the current translation and record it.
     var xy = this.getRelativeToSurfaceXY();
     this.startDragX = xy.x;
@@ -583,6 +586,7 @@ Blockly.Block.prototype.onMouseDown_ = function(e) {
  * @private
  */
 Blockly.Block.prototype.onMouseUp_ = function(e) {
+  var thisBlockSpace = this.blockSpace;
   Blockly.BlockSpaceEditor.terminateDrag_();
   if (Blockly.selected && Blockly.highlightedConnection_) {
     // Connect two blocks together.
@@ -598,13 +602,15 @@ Blockly.Block.prototype.onMouseUp_ = function(e) {
       }
       inferiorConnection.sourceBlock_.svg_.connectionUiEffect();
     }
-    if (this.blockSpace.trashcan && this.blockSpace.trashcan.isOpen) {
+    if (thisBlockSpace.trashcan) {
       // Don't throw an object in the trash can if it just got connected.
-      this.blockSpace.trashcan.close();
+      thisBlockSpace.trashcan.close();
     }
-  } else if (this.blockSpace.trashcan && this.blockSpace.trashcan.isOpen) {
-    var trashcan = this.blockSpace.trashcan;
-    goog.Timer.callOnce(trashcan.close, 100, trashcan);
+  } else if (this.blockSpace.isDeleteArea(e)) {
+    var trashcan = thisBlockSpace.trashcan;
+    if (trashcan) {
+      goog.Timer.callOnce(trashcan.close, 100, trashcan);
+    }
     if (Blockly.selected) {
       Blockly.selected.dispose(false, true);
     }
@@ -617,6 +623,7 @@ Blockly.Block.prototype.onMouseUp_ = function(e) {
     Blockly.highlightedConnection_.unhighlight();
     Blockly.highlightedConnection_ = null;
   }
+  thisBlockSpace.blockSpaceEditor.setCursor(Blockly.Css.Cursor.OPEN);
 };
 
 /**
@@ -959,6 +966,7 @@ Blockly.Block.prototype.onMouseMove_ = function(e) {
       this.setParent(null);
       this.setDraggingHandleImmovable_(true, firstImmovableBlockHandler);
       this.moveToFrontOfBlockSpace_();
+      this.blockSpace.recordDeleteAreas();
     }
   }
   if (Blockly.Block.dragMode_ == Blockly.Block.DRAG_MODE_FREELY_DRAGGING) {
@@ -1004,9 +1012,10 @@ Blockly.Block.prototype.onMouseMove_ = function(e) {
       Blockly.highlightedConnection_ = closestConnection;
       Blockly.localConnection_ = localConnection;
     }
-    // Flip the trash can lid if needed.
-    if (this.blockSpace.trashcan && this.isDeletable()) {
-      this.blockSpace.trashcan.onMouseMove(e);
+    // Provide visual indication of whether the block will be
+    // deleted if dropped here.
+    if (this.isDeletable()) {
+      this.blockSpace.isDeleteArea(e);
     }
   }
   // This event has been handled.  No need to bubble up to the document.
