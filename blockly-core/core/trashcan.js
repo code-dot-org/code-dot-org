@@ -25,6 +25,8 @@
 
 goog.provide('Blockly.Trashcan');
 
+goog.require('goog.math.Rect');
+
 
 /**
  * Class for a trash can.
@@ -77,6 +79,14 @@ Blockly.Trashcan.prototype.MARGIN_TOP_ = 15;
  * @private
  */
 Blockly.Trashcan.prototype.MARGIN_SIDE_ = 22;
+
+
+/**
+* Extent of hotspot on all sides beyond the size of the image.
+* @type {number}
+* @private
+*/
+Blockly.Trashcan.prototype.MARGIN_HOTSPOT_ = 25;
 
 /**
  * Current open/close state of the lid.
@@ -203,44 +213,17 @@ Blockly.Trashcan.prototype.setYOffset = function(pixelOffset) {
 };
 
 /**
- * Determines if the mouse is currently over the trash can.
- * Opens/closes the lid and sets the isOpen flag.
- * @param {!Event} e Mouse move event.
- */
-Blockly.Trashcan.prototype.onMouseMove = function(e) {
-  /*
-  An alternative approach would be to use onMouseOver and onMouseOut events.
-  However the selected block will be between the mouse and the trash can,
-  thus these events won't fire.
-  Another approach is to use HTML5's drag & drop API, but it's widely hated.
-  Instead, we'll just have the block's drag_ function call us.
-  */
-  if (!this.svgGroup_) {
-    return;
-  }
-  var mouseXY = Blockly.mouseToSvg(e, this.blockSpace_.blockSpaceEditor.svg_);
-  var trashXY = Blockly.getSvgXY_(this.svgGroup_, this.blockSpace_.blockSpaceEditor.svg_);
-  if (Blockly.ieVersion() && Blockly.ieVersion() <= 10) {
-    // Revert to HTML coordinates since getScreenCTM is broken in IE <= 10.
-    mouseXY = {
-      'x': e.clientX,
-      'y': e.clientY
-    };
-    var trashBB = document.getElementById('trashcan').getBoundingClientRect();
-    trashXY = {
-      'x': trashBB.left,
-      'y': trashBB.top
-    };
-  }
-  var over = ((mouseXY.x + this.radius) > trashXY.x) &&
-             (mouseXY.x < (trashXY.x + this.WIDTH_ + this.radius)) &&
-             ((mouseXY.y + this.radius) > trashXY.y) &&
-             (mouseXY.y < (trashXY.y + this.HEIGHT_ + this.radius));
-  // For bonus points we might want to match the trapezoidal outline.
-  if (this.isOpen != over) {
-    this.setOpen_(over);
-  }
-};
+* Return the deletion rectangle for this trashcan.
+* @return {goog.math.Rect} Rectangle in which to delete.
+*/
+Blockly.Trashcan.prototype.getRect = function() {
+  var trashXY = Blockly.getSvgXY_(this.svgGroup_);
+  return new goog.math.Rect(
+    trashXY.x - this.MARGIN_HOTSPOT_,
+    trashXY.y - this.MARGIN_HOTSPOT_,
+    this.WIDTH_ + 2 * this.MARGIN_HOTSPOT_,
+    this.HEIGHT_ + 2 * this.MARGIN_HOTSPOT_);
+  };
 
 /**
  * Flip the lid open or shut.
@@ -253,8 +236,6 @@ Blockly.Trashcan.prototype.setOpen_ = function(state) {
   }
   this.isOpen = state;
   this.animateLid_();
-  Blockly.Css.setCursor(state ? Blockly.Css.Cursor.DELETE :
-      Blockly.Css.Cursor.CLOSED);
 };
 
 /**

@@ -460,6 +460,14 @@ Blockly.BlockSpaceEditor.prototype.getToolboxWidth = function() {
 };
 
 /**
+* Set the cursor to be displayed when over something draggable.
+* @param {Blockly.Cursor} cursorType Enum.
+*/
+Blockly.BlockSpaceEditor.prototype.setCursor = function(cursorType) {
+  Blockly.Css.setCursor(cursorType, this.svg_);
+}
+
+/**
  * Handle a mouse-down on SVG drawing surface.
  * @param {!Event} e Mouse down event.
  * @private
@@ -501,7 +509,7 @@ Blockly.BlockSpaceEditor.prototype.onMouseDown_ = function(e) {
  * @private
  */
 Blockly.BlockSpaceEditor.prototype.onMouseUp_ = function(e) {
-  Blockly.Css.setCursor(Blockly.Css.Cursor.OPEN);
+  this.setCursor(Blockly.Css.Cursor.OPEN);
   this.blockSpace.dragMode = false;
 };
 
