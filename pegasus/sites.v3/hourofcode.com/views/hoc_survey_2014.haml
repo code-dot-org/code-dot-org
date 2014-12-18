@@ -1,3 +1,10 @@
+%script{type: "text/javascript", src: "/js/sifter.min.js"}
+%script{type: "text/javascript", src: "/js/microplugin.min.js"}
+%script{type: "text/javascript", src: "/js/selectize.min.js"}
+%script{type: "text/javascript", src: "/js/selectize-fast-click.js"}
+%script{type: "text/javascript", src: "/js/hoc-survey-2014.js"}
+%link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
+
 %form{:id=>"hoc-survey-form", role: "form", onsubmit: "event.preventDefault();"}
   #error_message
 
@@ -20,7 +27,7 @@
           %option{value: key}= label
 
   .form-group
-    %label.control-label{for: "teacher-description"} XXX
+    %label.control-label{for: "teacher-description"} Which best describes you?
     %div
       %select#teacher-description.form-control{name: "teacher_description_s", type: "select", required: true}
         %option{value: nil, selected: true}
@@ -28,7 +35,7 @@
           %option{value: label}= label
 
   .form-group
-    %label.control-label{for: "event-location-type"} XXX
+    %label.control-label{for: "event-location-type"} Where was your Hour of Code event?
     %div
       %select#event-location-type.form-control{name: "event_location_type_s", type: "select", required: true}
         %option{value: nil, selected: true}
@@ -36,22 +43,22 @@
           %option{value: label}= label
 
   .form-group
-    %label.control-label{for: "students-number-total"} Number of students
+    %label.control-label{for: "students-number-total"} How many students did you organize the Hour of Code for?
     %div
       %input#students-number-total.form-control{name: "students_number_total_i", placeholder: "", type: "text", required: true}/
 
   .form-group
-    %label.control-label{for: "students-number-girls"} Number of girls
+    %label.control-label{for: "students-number-girls"} How many of the students were girls?
     %div
       %input#students-number-girls.form-control{name: "students_number_girls_i", placeholder: "", type: "text", required: true}/
 
   .form-group
-    %label.control-label{for: "students-number-ethnicity"} Number of ethnicity
+    %label.control-label{for: "students-number-ethnicity"} In total, how many of the students were Hispanic, African American, or Native American?
     %div
       %input#students-number-ethnicity.form-control{name: "students_number_ethnicity_i", placeholder: "", type: "text", required: true}/
 
   .form-group
-    %label.control-label{for: "students-grade-levels"} Grade levels
+    %label.control-label{for: "students-grade-levels"} What grade levels were the students? Check all that apply.
     %div
       %select#students-grade-levels.form-control{name: "students_grade_levels_ss", type: "select", multiple: true, required: true}
         %option{value: nil, selected: true}
@@ -59,7 +66,7 @@
           %option{value: label}= label
 
   .form-group
-    %label.control-label{for: "event-tutorials"} Tutorial
+    %label.control-label{for: "event-tutorials"} Which tutorial did you use? Check all that apply.
     %div
       %select#event-tutorials.form-control{name: "event_tutorials_ss", type: "select", multiple: true, required: true}
         %option{value: nil, selected: true}
@@ -67,7 +74,7 @@
           %option{value: label}= label
 
   .form-group
-    %label.control-label{for: "event-technology"} Technology
+    %label.control-label{for: "event-technology"} What level of technology did you have?
     %div
       %select#event-technology.form-control{name: "event_technology_s", type: "select", required: true}
         %option{value: nil, selected: true}

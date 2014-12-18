@@ -1,7 +1,12 @@
 ---
 title: Hour of Code Organizer Survey
-layout: wide
+nav: blank
+rightbar: blank
 ---
+<!--[if lt IE 9]>
+  <script src='/js/es5-shim.min.js'></script>
+<![endif]-->
+
 # Hour of Code Organizer Survey
 
 Intro text goes here.
