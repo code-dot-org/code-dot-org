@@ -32,7 +32,7 @@ Interested candidates should email a resume and cover letter, outlining how your
 
 **Location:** Seattle is preferred, but remote work is possible.
 
-## Data Scientist##
+## Data Scientist / Quantitative Data Analyst##
 
 **Job Summary:**
 
