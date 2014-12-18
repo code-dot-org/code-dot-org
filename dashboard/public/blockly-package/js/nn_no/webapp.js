@@ -303,8 +303,13 @@ BlocklyApps.LOCALE = 'en_us';
  */
 BlocklyApps.MIN_WIDTH = 900;
 BlocklyApps.MIN_MOBILE_SHARE_WIDTH = 450;
-BlocklyApps.MIN_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
+BlocklyApps.MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 var WORKSPACE_PLAYSPACE_GAP = 15;
+
+/**
+ * Treat mobile devices with screen.width less than the value below as phones.
+ */
+BlocklyApps.MAX_PHONE_WIDTH = 500;
 
 /**
  * If the user presses backspace, stop propagation - this prevents blockly
@@ -417,6 +422,7 @@ BlocklyApps.init = function(config) {
   }
 
   var visualizationColumn = document.getElementById('visualizationColumn');
+  var visualization = document.getElementById('visualization');
 
   // center game screen in embed mode
   if(config.embed) {
@@ -443,7 +449,6 @@ BlocklyApps.init = function(config) {
 
   if (!config.embed && !BlocklyApps.share) {
     // Make the visualization responsive to screen size, except on share page.
-    var visualization = document.getElementById('visualization');
     visualization.className += " responsive";
     visualizationColumn.className += " responsive";
   }
@@ -495,26 +500,31 @@ BlocklyApps.init = function(config) {
     }
     var belowVisualization = document.getElementById('belowVisualization');
     if (belowVisualization) {
-      belowVisualization.style.display = 'block';
-      belowVisualization.style.marginLeft = '0px';
-      if (BlocklyApps.noPadding) {
-        // Shift run and reset buttons off the left edge if we have no padding
-        if (runButton) {
-          runButton.style.marginLeft = '10px';
-        }
-        if (resetButton) {
-          resetButton.style.marginLeft = '10px';
-        }
-        var shareCell = document.getElementById('share-cell') ||
-            document.getElementById('right-button-cell');
-        if (shareCell) {
-          shareCell.style.marginLeft = '10px';
-          shareCell.style.marginRight = '10px';
-        }
-        var softButtons = document.getElementById('soft-buttons');
-        if (softButtons) {
-          softButtons.style.marginLeft = '10px';
-          softButtons.style.marginRight = '10px';
+      if (config.noButtonsBelowOnMobileShare) {
+        belowVisualization.style.display = 'none';
+        visualization.style.marginBottom = '0px';
+      } else {
+        belowVisualization.style.display = 'block';
+        belowVisualization.style.marginLeft = '0px';
+        if (BlocklyApps.noPadding) {
+          // Shift run and reset buttons off the left edge if we have no padding
+          if (runButton) {
+            runButton.style.marginLeft = '10px';
+          }
+          if (resetButton) {
+            resetButton.style.marginLeft = '10px';
+          }
+          var shareCell = document.getElementById('share-cell') ||
+              document.getElementById('right-button-cell');
+          if (shareCell) {
+            shareCell.style.marginLeft = '10px';
+            shareCell.style.marginRight = '10px';
+          }
+          var softButtons = document.getElementById('soft-buttons');
+          if (softButtons) {
+            softButtons.style.marginLeft = '10px';
+            softButtons.style.marginRight = '10px';
+          }
         }
       }
     }
@@ -534,10 +544,11 @@ BlocklyApps.init = function(config) {
       if (BlocklyApps.noPadding) {
         upSale.style.marginLeft = '10px';
       }
-    } else {
+      belowViz.appendChild(upSale);
+    } else if (typeof config.makeYourOwn === 'undefined') {
       upSale.innerHTML = require('./templates/learn.html')();
+      belowViz.appendChild(upSale);
     }
-    belowViz.appendChild(upSale);
   }
 
   // Record time at initialization.
@@ -546,22 +557,27 @@ BlocklyApps.init = function(config) {
   // Fixes viewport for small screens.
   var viewport = document.querySelector('meta[name="viewport"]');
   if (viewport) {
-    var widthDimension;
+    var deviceWidth;
+    var desiredWidth;
     var minWidth;
     if (BlocklyApps.share && dom.isMobile()) {
       // for mobile sharing, don't assume landscape mode, use screen.width
-      widthDimension = screen.width;
+      deviceWidth = desiredWidth = screen.width;
+      if (BlocklyApps.noPadding && screen.width < BlocklyApps.MAX_PHONE_WIDTH) {
+        desiredWidth = Math.min(desiredWidth,
+                                BlocklyApps.MOBILE_NO_PADDING_SHARE_WIDTH);
+      }
       minWidth = BlocklyApps.noPadding ?
-                    BlocklyApps.MIN_MOBILE_NO_PADDING_SHARE_WIDTH :
+                    BlocklyApps.MOBILE_NO_PADDING_SHARE_WIDTH :
                     BlocklyApps.MIN_MOBILE_SHARE_WIDTH;
     }
     else {
       // assume we are in landscape mode, so width is the longer of the two
-      widthDimension = Math.max(screen.width, screen.height);
+      deviceWidth = desiredWidth = Math.max(screen.width, screen.height);
       minWidth = BlocklyApps.MIN_WIDTH;
     }
-    var width = Math.max(minWidth, widthDimension);
-    var scale = widthDimension / width;
+    var width = Math.max(minWidth, desiredWidth);
+    var scale = deviceWidth / width;
     var content = ['width=' + width,
                    'minimal-ui',
                    'initial-scale=' + scale,
@@ -623,7 +639,7 @@ BlocklyApps.init = function(config) {
       var vizCol = document.getElementById('visualizationColumn');
       var width = vizCol.offsetWidth;
       var height = vizCol.offsetHeight;
-      var displayWidth = BlocklyApps.MIN_MOBILE_NO_PADDING_SHARE_WIDTH;
+      var displayWidth = BlocklyApps.MOBILE_NO_PADDING_SHARE_WIDTH;
       var scale = Math.min(width / displayWidth, height / displayWidth);
       var viz = document.getElementById('visualization');
       viz.style['transform-origin'] = 'left top';
@@ -9653,6 +9669,13 @@ exports.createButton = function (blockId, elementId, text) {
                            'text': text });
 };
 
+exports.createImage = function (blockId, elementId, src) {
+  return Webapp.executeCmd(String(blockId),
+                          'createImage',
+                          {'elementId': elementId,
+                           'src': src });
+};
+
 exports.setPosition = function (blockId, elementId, left, top, width, height) {
   return Webapp.executeCmd(String(blockId),
                           'setPosition',
@@ -9742,6 +9765,13 @@ exports.setText = function (blockId, elementId, text) {
                           'setText',
                           {'elementId': elementId,
                            'text': text });
+};
+
+exports.setImageURL = function (blockId, elementId, src) {
+  return Webapp.executeCmd(String(blockId),
+                          'setImageURL',
+                          {'elementId': elementId,
+                           'src': src });
 };
 
 exports.setParent = function (blockId, elementId, parentId) {
@@ -9924,10 +9954,12 @@ levels.ec_simple = {
   'sliderSpeed': 0.7,
   'codeFunctions': [
     {'func': 'createButton', 'params': ["'id'", "'text'"] },
+    {'func': 'createImage', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
     {'func': 'createTextInput', 'params': ["'id'", "'text'"] },
     {'func': 'createTextLabel', 'params': ["'id'", "'text'"] },
     {'func': 'getText', 'params': ["'id'"], 'type': 'value' },
     {'func': 'setText', 'params': ["'id'", "'text'"] },
+    {'func': 'setImageURL', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
     {'func': 'setParent', 'params': ["'id'", "'parentId'"] },
     {'func': 'setPosition', 'params': ["'id'", "0", "0", "100", "100"] },
     {'func': 'setStyle', 'params': ["'id'", "'color:red;'"] },
@@ -9936,9 +9968,9 @@ levels.ec_simple = {
     {'func': 'deleteHtmlBlock', 'params': ["'id'"] },
     {'func': 'attachEventHandler', 'params': ["'id'", "'click'", "function() {\n  \n}"] },
     {'func': 'startWebRequest', 'params': ["'http://api.openweathermap.org/data/2.5/weather?q=London,uk'", "function(status, type, content) {\n  \n}"] },
-    {'func': 'createCanvas', 'category': 'Canvas', 'params': ["'id'", "400", "400"] },
-    {'func': 'canvasDrawLine', 'category': 'Canvas', 'params': ["'id'", "0", "0", "400", "400"] },
-    {'func': 'canvasDrawCircle', 'category': 'Canvas', 'params': ["'id'", "200", "200", "100"] },
+    {'func': 'createCanvas', 'category': 'Canvas', 'params': ["'id'", "400", "600"] },
+    {'func': 'canvasDrawLine', 'category': 'Canvas', 'params': ["'id'", "0", "0", "400", "600"] },
+    {'func': 'canvasDrawCircle', 'category': 'Canvas', 'params': ["'id'", "200", "300", "100"] },
     {'func': 'canvasSetLineWidth', 'category': 'Canvas', 'params': ["'id'", "3"] },
     {'func': 'canvasSetStrokeColor', 'category': 'Canvas', 'params': ["'id'", "'red'"] },
     {'func': 'canvasSetFillColor', 'category': 'Canvas', 'params': ["'id'", "'yellow'"] },
@@ -10141,7 +10173,7 @@ var MAX_INTERPRETER_STEPS_PER_TICK = 200;
 // Default Scalings
 Webapp.scale = {
   'snapRadius': 1,
-  'stepSpeed': 1
+  'stepSpeed': 0
 };
 
 var twitterOptions = {
@@ -10542,14 +10574,11 @@ Webapp.init = function(config) {
 
   config.twitter = twitterOptions;
 
-  // for this app, show make your own button if on share page
-  config.makeYourOwn = config.share;
-
-  config.makeString = webappMsg.makeYourOwn();
-  config.makeUrl = "http://code.org/webapp";
-  config.makeImage = BlocklyApps.assetUrl('media/promo.png');
+  // hide makeYourOwn on the share page
+  config.makeYourOwn = false;
 
   config.varsInGlobals = true;
+  config.noButtonsBelowOnMobileShare = true;
 
   // Webapp.initMinimal();
 
@@ -10607,6 +10636,11 @@ Webapp.init = function(config) {
       dom.addClickTouchEvent(stepOverButton, Webapp.onStepOverButton);
       dom.addClickTouchEvent(stepOutButton, Webapp.onStepOutButton);
     }
+  }
+
+  if (BlocklyApps.share) {
+    // automatically run in share mode:
+    window.setTimeout(BlocklyApps.runButtonClick, 0);
   }
 };
 
@@ -11120,6 +11154,7 @@ Webapp.callCmd = function (cmd) {
     case 'replaceHtmlBlock':
     case 'deleteHtmlBlock':
     case 'createButton':
+    case 'createImage':
     case 'createCanvas':
     case 'canvasDrawLine':
     case 'canvasDrawCircle':
@@ -11131,6 +11166,7 @@ Webapp.callCmd = function (cmd) {
     case 'createTextLabel':
     case 'getText':
     case 'setText':
+    case 'setImageURL':
     case 'setPosition':
     case 'setParent':
     case 'setStyle':
@@ -11164,6 +11200,16 @@ Webapp.createButton = function (opts) {
                  divWebapp.appendChild(newButton));
 };
 
+Webapp.createImage = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+
+  var newImage = document.createElement("img");
+  newImage.src = opts.src;
+  newImage.id = opts.elementId;
+
+  return Boolean(divWebapp.appendChild(newImage));
+};
+
 Webapp.createCanvas = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
 
@@ -11173,7 +11219,7 @@ Webapp.createCanvas = function (opts) {
     newElement.id = opts.elementId;
     // default width/height if params are missing
     var width = opts.width || 400;
-    var height = opts.height || 400;
+    var height = opts.height || 600;
     newElement.width = width * Webapp.canvasScale;
     newElement.height = height * Webapp.canvasScale;
     newElement.style.width = width + 'px';
@@ -11287,6 +11333,8 @@ Webapp.getText = function (opts) {
   if (divWebapp.contains(element)) {
     if (element.tagName === 'INPUT') {
       return String(element.value);
+    } else if (element.tagName === 'IMG') {
+      return String(element.alt);
     } else {
       return element.innerText;
     }
@@ -11300,9 +11348,22 @@ Webapp.setText = function (opts) {
   if (divWebapp.contains(element)) {
     if (element.tagName === 'INPUT') {
       element.value = opts.text;
+    } else if (element.tagName === 'IMG') {
+      element.alt = opts.text;
     } else {
       element.innerText = opts.text;
     }
+    return true;
+  }
+  return false;
+};
+
+Webapp.setImageURL = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var element = document.getElementById(opts.elementId);
+  if (divWebapp.contains(element) && element.tagName === 'IMG') {
+    element.src = opts.src;
+    return true;
   }
   return false;
 };
@@ -11892,8 +11953,6 @@ exports.createHtmlBlock = function(d){return "lag html-blokk"};
 exports.createHtmlBlockTooltip = function(d){return "Lagar ei blokk med HTML i appen."};
 
 exports.finalLevel = function(d){return "Gratulerer! Du har løst den siste oppgaven."};
-
-exports.makeYourOwn = function(d){return "Lag din eigen app"};
 
 exports.nextLevel = function(d){return "Gratulerer! Du har fullført denne utfordringen."};
 

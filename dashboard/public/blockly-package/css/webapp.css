@@ -1,9 +1,12 @@
+div#visualization {
+  height: 600px; }
+
 #divWebapp {
   overflow: hidden;
   position: relative;
   z-index: 1;
   width: 400px;
-  height: 400px;
+  height: 600px;
   background-color: white; }
 
 #divWebapp canvas {
@@ -12,6 +15,9 @@
   top: 0px;
   left: 0px;
   z-index: -1; }
+
+#divWebapp img {
+  opacity: 1; }
 
 #divWebapp div {
   overflow: hidden; }
