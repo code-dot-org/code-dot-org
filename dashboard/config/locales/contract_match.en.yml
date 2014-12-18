@@ -35,7 +35,7 @@ en:
         ? Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.
         : Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.
         wide-rect|Image|height:Number|color:string: wide-rect|Image|height:Number|color:string
-      ' Eval Design Recipe 1.contract':
+      'Eval Design Recipe 1.contract':
         Design Recipe 1 Contract: Design Recipe 1 Contract
         ? Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.
         : Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.
