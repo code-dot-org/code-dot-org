@@ -20,6 +20,7 @@
 
   .form-group
     %label.control-label{for: "teacher-description"} Which best describes you?
+    %span.form-required-field *
     %div
       %select#teacher-description.form-control{name: "teacher_description_s", type: "select", required: true}
         %option{value: nil, selected: true}
@@ -36,18 +37,22 @@
 
   .form-group
     %label.control-label{for: "students-number-total"} For how many students did you organize the Hour of Code?
+    %span.form-required-field *
     %div
       %input#students-number-total.form-control{name: "students_number_total_i", placeholder: "", type: "text", required: true}/
 
   .form-group
     %label.control-label{for: "students-number-girls"} How many of the students were girls (approximately)?
+    %span.form-required-field *
     %div
       %input#students-number-girls.form-control{name: "students_number_girls_i", placeholder: "", type: "text", required: true}/
 
   .form-group
-    %label.control-label{for: "students-number-ethnicity"} In total, how many of the students were Hispanic, African American, or Native American (approximately)?
-    %div
-      %input#students-number-ethnicity.form-control{name: "students_number_ethnicity_i", placeholder: "", type: "text", required: true}/
+    #students-number-ethnicity-wrapper{style: "display: hidden;"}
+      %label.control-label{for: "students-number-ethnicity"} In total, how many of the students were Hispanic, African American, or Native American (approximately)?
+      %span.form-required-field *
+      %div
+        %input#students-number-ethnicity.form-control{name: "students_number_ethnicity_i", placeholder: "", type: "text", required: true}/
 
   .form-group
     %label.control-label{for: "students-grade-levels"} What grade levels were the students? (Choose all that apply)
