@@ -23,8 +23,8 @@
     %div
       %select#event-country.form-control{name: "country_s", type: "select", required: true}
         %option{value: nil, selected: true}
-        -HOC_COUNTRIES.each_pair  do |key,label|
-          %option{value: key}= label
+        -DB[:geography_countries].all().map{|i| i[:name_s]}.sort.each do |country|
+          %option{value: country}= country
 
   .form-group
     %label.control-label{for: "teacher-description"} Which best describes you?
