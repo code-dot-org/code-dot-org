@@ -126,11 +126,24 @@ exports.createCheckbox = function (blockId, elementId, checked) {
                            'checked': checked });
 };
 
-exports.createRadio = function (blockId, elementId, name, checked) {
+exports.createRadio = function (blockId, elementId, checked, name) {
   return Webapp.executeCmd(blockId,
                           'createRadio',
                           {'elementId': elementId,
-                           'name': name,
+                           'checked': checked,
+                           'name': name });
+};
+
+exports.getChecked = function (blockId, elementId) {
+  return Webapp.executeCmd(blockId,
+                          'getChecked',
+                          {'elementId': elementId });
+};
+
+exports.setChecked = function (blockId, elementId, checked) {
+  return Webapp.executeCmd(blockId,
+                          'setChecked',
+                          {'elementId': elementId,
                            'checked': checked });
 };
 

@@ -1017,6 +1017,8 @@ Webapp.callCmd = function (cmd) {
     case 'createRadio':
     case 'getText':
     case 'setText':
+    case 'getChecked':
+    case 'setChecked':
     case 'setImageURL':
     case 'setPosition':
     case 'setParent':
@@ -1231,6 +1233,25 @@ Webapp.setText = function (opts) {
     } else {
       element.innerText = opts.text;
     }
+    return true;
+  }
+  return false;
+};
+
+Webapp.getChecked = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var element = document.getElementById(opts.elementId);
+  if (divWebapp.contains(element) && element.tagName === 'INPUT') {
+    return element.checked;
+  }
+  return false;
+};
+
+Webapp.setChecked = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var element = document.getElementById(opts.elementId);
+  if (divWebapp.contains(element) && element.tagName === 'INPUT') {
+    element.checked = opts.checked;
     return true;
   }
   return false;
