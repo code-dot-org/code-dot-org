@@ -74,6 +74,12 @@ exports.makeTestsFromBuilderRequiredBlocks = function (customRequiredBlocks) {
       case 'procedures_defnoreturn':
       case 'procedures_defreturn':
         requiredBlocksTests.push(testsFromProcedure(childNode));
+        if (childNode.querySelector) {
+          goog.array.forEach(childNode.querySelectorAll(
+              'statement > block, next > block'), function(block) {
+            requiredBlocksTests.push([testFromBlockInsideFunction(block)]);
+          })
+        }
         break;
       default:
         requiredBlocksTests.push([testFromBlock(childNode)]);
@@ -86,7 +92,7 @@ exports.makeTestsFromBuilderRequiredBlocks = function (customRequiredBlocks) {
 /**
  * Given xml for a single block generates a block test
  */
-function testFromBlock (node) {
+function testFromBlock(node) {
   return {
     test: function(userBlock) {
       // Encode userBlock while ignoring child statements
@@ -94,6 +100,29 @@ function testFromBlock (node) {
       return elementsEquivalent(node, userElement);
     },
     blockDisplayXML: xml.serialize(node)
+  };
+}
+
+/**
+ * Given xml for a single block generates a block test for ensuring the block
+ * occurs inside a function definition
+ */
+function testFromBlockInsideFunction(node) {
+  var blockWithoutChildren = node.cloneNode(false);
+  goog.array.forEach(node.childNodes, function(child) {
+    if (/next|statement/i.test(child.tagName)) {
+      return;
+    }
+    blockWithoutChildren.appendChild(child.cloneNode(true));
+  });
+  return {
+    test: function(userBlock) {
+      return hasMatchingAncestor(userBlock, function(parent) {
+        return !!parent.parameterNames_;
+      }) && elementsEquivalent(blockWithoutChildren, Blockly.Xml.blockToDom_(userBlock, true));
+    },
+    blockDisplayXML: xml.serialize(blockWithoutChildren),
+    message: 'Try using the block below inside a function.' // TODO: i18n
   };
 }
 
@@ -147,6 +176,20 @@ function testsFromProcedure(node) {
 }
 
 /**
+ * Returns true if any ancestor (inclusive) of the given node matches the
+ * given filter
+ */
+function hasMatchingAncestor(node, filter) {
+  if (!node) {
+    return false;
+  }
+  if (filter(node)) {
+    return true;
+  }
+  return hasMatchingAncestor(node.parentBlock_, filter);
+}
+
+/**
  * Checks two DOM elements to see whether or not they are equivalent
  * We consider them equivalent if they have the same tagName, attributes,
  * and children
@@ -154,8 +197,11 @@ function testsFromProcedure(node) {
 function elementsEquivalent(expected, given) {
   if (!(expected instanceof Element && given instanceof Element)) {
     // if we expect ???, allow match with anything
-    if (expected instanceof Text && expected.textContent === '???') {
-      return true;
+    if (expected instanceof Text) {
+      var name = expected.parentNode.getAttribute('name');
+      if (expected.textContent === '???' || name === 'VAR') {
+        return true;
+      }
     }
     return expected.isEqualNode(given);
   }
