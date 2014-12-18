@@ -2,9 +2,9 @@ zh:
   data:
     match:
       2-3 artist loops match 1:
-        Artist Loops Matching One: Artist Loops Matching One
-        Matching loops: Matching loops
-        Match the loop to the shape: Match the loop to the shape
+        Artist Loops Matching One: 藝術家循環相配之一
+        Matching loops: 相配的循环
+        Match the loop to the shape: 匹配到循环的形状
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png
@@ -14,8 +14,8 @@ zh:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png
       2-3 artist match 1:
-        Artist Matching: Artist Matching
-        Match the shape with the blocks that complete it.: Match the shape with the blocks that complete it.
+        Artist Matching: 匹配的艺术家
+        Match the shape with the blocks that complete it.: 找到和形状匹配的块组.
         /script_assets/2-3_images/artist/2-3_artist_match_1_q1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png
@@ -25,9 +25,9 @@ zh:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a3.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png
       2-3 bounce match 1:
-        Bounce Matching: Bounce Matching
-        Matching: Matching
-        Match the events with the actions: Match the events with the actions
+        Bounce Matching: 彈跳匹配
+        Matching: 匹配
+        Match the events with the actions: 配合动作和事件
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png
@@ -39,9 +39,9 @@ zh:
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png
       2-3 flappy match 1:
-        Flappy Matching One: Flappy Matching One
-        Matching: Matching
-        Match the events with the actions: Match the events with the actions
+        Flappy Matching One: Flappy匹配之一
+        Matching: 匹配
+        Match the events with the actions: 配合动作和事件
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png
@@ -49,8 +49,8 @@ zh:
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png
       2-3 maze match 1:
-        Maze Match One: Maze Match One
-        Match the puzzles to the blocks: Match the puzzles to the blocks
+        Maze Match One: 迷宫比赛一
+        Match the puzzles to the blocks: 匹配拼圖塊
         /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png
@@ -58,10 +58,10 @@ zh:
         /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png
       2-3 Maze Match 2:
-        Maze Match: Maze Match
-        Match the puzzles to the blocks: Match the puzzles to the blocks
-        Instructions: Instructions
-        Drag the blocks to match.: Drag the blocks to match.
+        Maze Match: 迷宫比赛
+        Match the puzzles to the blocks: 匹配拼圖塊
+        Instructions: 说明
+        Drag the blocks to match.: 拖动块来匹配。
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png
@@ -70,7 +70,7 @@ zh:
         /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_a3.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a3.png
       2-3 Big Event Match 1:
-        Matching: Matching
+        Matching: 匹配
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
@@ -81,9 +81,9 @@ zh:
         /script_assets/k_1_images/unplugged_images/big_event_1_a3.png: /script_assets/k_1_images/unplugged_images/big_event_1_a3.png
         /script_assets/k_1_images/unplugged_images/big_event_1_a4.png: /script_assets/k_1_images/unplugged_images/big_event_1_a4.png
       2-3 Binary Match 1:
-        Matching: Matching
+        Matching: 匹配
         /script_assets/2-3_images/unplugged/binary_1_q.png, 250: /script_assets/2-3_images/unplugged/binary_1_q.png, 250
-        Use the key to match each code to its letter: Use the key to match each code to its letter
+        Use the key to match each code to its letter: 使用关键来匹配每个代码与其字母
         <strong>N</strong>: '<strong>N</strong>'
         <strong>O</strong>: '<strong>O</strong>'
         <strong>P</strong>: '<strong>P</strong>'
@@ -93,8 +93,8 @@ zh:
         /script_assets/2-3_images/unplugged/binary_1_a2.png: /script_assets/2-3_images/unplugged/binary_1_a2.png
         /script_assets/2-3_images/unplugged/binary_1_a4.png: /script_assets/2-3_images/unplugged/binary_1_a4.png
       2-3 Graph Paper Match 1:
-        Matching: Matching
-        Match the grid to the program: Match the grid to the program
+        Matching: 匹配
+        Match the grid to the program: 匹配网格和程序
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
@@ -102,8 +102,8 @@ zh:
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
       2-3 Relay Programming Match 1:
-        Matching: Matching
-        Match the grid to the program: Match the grid to the program
+        Matching: 匹配
+        Match the grid to the program: 匹配网格和程序
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
@@ -111,10 +111,10 @@ zh:
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
       4-5 maze match 1:
-        Maze Match: Maze Match
-        Match the puzzles to the blocks: Match the puzzles to the blocks
-        Instructions: Instructions
-        Drag the blocks to match.: Drag the blocks to match.
+        Maze Match: 迷宫比赛
+        Match the puzzles to the blocks: 匹配拼圖塊
+        Instructions: 说明
+        Drag the blocks to match.: 拖动块来匹配。
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png
@@ -123,51 +123,51 @@ zh:
         /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_a3.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a3.png
       4-5 Algorithms Match 1:
-        Matching: Matching
-        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Match the steps in the Dice Race game to the order that they should appear in the algorithm.
-        <h4>1)</h4>: '<h4>1)</h4>'
+        Matching: 匹配
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: 匹配骰子游戏比赛的步骤及他们在算法中应该出现的顺序.
+        <h4>1)</h4>: '<h4>1）</h4>'
         <h4>2)</h4>: '<h4>2)</h4>'
         <h4>3)</h4>: '<h4>3)</h4>'
         <h4>4)</h4>: '<h4>4)</h4>'
-        <h4>Set Player 1 score to 0</h4>: '<h4>Set Player 1 score to 0</h4>'
-        <h4>Player 1 rolls die</h4>: '<h4>Player 1 rolls die</h4>'
-        <h4>Add Player 1 roll to total score</h4>: '<h4>Add Player 1 roll to total score</h4>'
-        <h4>Compare player scores to see who wins</h4>: '<h4>Compare player scores to see who wins</h4>'
+        <h4>Set Player 1 score to 0</h4>: '<h4>设置玩家 1 评分为 0</h4>'
+        <h4>Player 1 rolls die</h4>: '<h4>玩家 1 滚动骰子</h4>'
+        <h4>Add Player 1 roll to total score</h4>: '<h4>添加玩家 1 摇骰比分到总分</h4>'
+        <h4>Compare player scores to see who wins</h4>: '<h4>比較玩家的分數，看看谁胜谁负</h4>'
       4-5 Computational Thinking Match 1:
-        Matching: Matching
-        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.
-        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 0</h3>'
-        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 1</h3>'
-        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 6</h3>'
-        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": '<h3>Wheels/side: 3<br/>Windows/side: 2</h3>'
+        Matching: 匹配
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: 这些车每辆已被分解成更小的碎片. 匹配每辆车与其分解的列表.
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": '<h3>车轮/侧： 2 <br/>Windows/侧： 0</h3>'
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": '<h3>车轮/侧： 2 <br/>Windows/侧： 1</h3>'
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": '<h3>车轮/侧： 2 <br/>Windows/侧： 6</h3>'
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": '<h3>车轮/侧： 3 <br/>Windows/侧： 2</h3>'
         /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png
       4-5 Suncatchers Match 1:
-        Matching: Matching
-        Match each program to the word it makes, using the provided group of skills.: Match each program to the word it makes, using the provided group of skills.
+        Matching: 匹配
+        Match each program to the word it makes, using the provided group of skills.: 使用所提供的群技能,匹配每個程序和它输出的单词.
         /script_assets/4-5_images/unplugged/suncatchers_1.png: /script_assets/4-5_images/unplugged/suncatchers_1.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a1.png: /script_assets/4-5_images/unplugged/suncatchers_1_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a2.png: /script_assets/4-5_images/unplugged/suncatchers_1_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a3.png: /script_assets/4-5_images/unplugged/suncatchers_1_a3.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a4.png: /script_assets/4-5_images/unplugged/suncatchers_1_a4.png
-        <h4>STACK</h4>: '<h4>STACK</h4>'
-        <h4>STAMP</h4>: '<h4>STAMP</h4>'
-        <h4>STAR</h4>: '<h4>STAR</h4>'
-        <h4>RAMP</h4>: '<h4>RAMP</h4>'
+        <h4>STACK</h4>: '<h4>堆栈</h4>'
+        <h4>STAMP</h4>: '<h4>邮票</h4>'
+        <h4>STAR</h4>: '<h4>星</h4>'
+        <h4>RAMP</h4>: '<h4>匝道</h4>'
       K-1 Artist 2 Match 1:
-        Matching: Matching
-        Is the square next to, above, or below the ball?: Is the square next to, above, or below the ball?
+        Matching: 匹配
+        Is the square next to, above, or below the ball?: 这个方形是在球的旁边, 上方, 或下方?
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
         /script_assets/k_1_images/artist_images/square_next_ball.png: /script_assets/k_1_images/artist_images/square_next_ball.png
-        <br/><br/>above: '<br/><br/>above'
-        <br/><br/>below: '<br/><br/>below'
-        <br/><br/>next to: '<br/><br/>next to'
+        <br/><br/>above: '<br/> <br/> 以上'
+        <br/><br/>below: '<br/> <br/> 下面'
+        <br/><br/>next to: '<br/> <br/> 旁边'
       K-1 Artist 2 Match 2:
-        Matching: Matching
-        Match the shapes based on type.: Match the shapes based on type.
+        Matching: 匹配
+        Match the shapes based on type.: 使用基于类型来匹配形状。
         /script_assets/k_1_images/artist_images/small_circle.png: /script_assets/k_1_images/artist_images/small_circle.png
         /script_assets/k_1_images/artist_images/large_square.png: /script_assets/k_1_images/artist_images/large_square.png
         /script_assets/k_1_images/artist_images/medium_rectangle.png: /script_assets/k_1_images/artist_images/medium_rectangle.png
@@ -177,8 +177,8 @@ zh:
         /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
         /script_assets/k_1_images/artist_images/large_triangle.png: /script_assets/k_1_images/artist_images/large_triangle.png
       K-1 Artist 2 Match 3:
-        Matching: Matching
-        Match the shapes based on type.: Match the shapes based on type.
+        Matching: 匹配
+        Match the shapes based on type.: 使用基于类型来匹配形状。
         /script_assets/k_1_images/artist_images/large_circle.png: /script_assets/k_1_images/artist_images/large_circle.png
         /script_assets/k_1_images/artist_images/small_square.png: /script_assets/k_1_images/artist_images/small_square.png
         /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
@@ -188,8 +188,8 @@ zh:
         /script_assets/k_1_images/artist_images/small_rectangle2.png: /script_assets/k_1_images/artist_images/small_rectangle2.png
         /script_assets/k_1_images/artist_images/large_triangle2.png: /script_assets/k_1_images/artist_images/large_triangle2.png
       K-1 Artist Loops Match 1:
-        Matching: Matching
-        Match the code to the stairs it draws.: Match the code to the stairs it draws.
+        Matching: 匹配
+        Match the code to the stairs it draws.: 匹配代码与它绘制的楼梯。
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png
@@ -197,8 +197,8 @@ zh:
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png
       K-1 Bee Loops Match 1:
-        Matching: Matching
-        Match the blocks: Match the blocks
+        Matching: 匹配
+        Match the blocks: 匹配这些块
         /script_assets/k_1_images/bee_images/r4_gnectar.png: /script_assets/k_1_images/bee_images/r4_gnectar.png
         /script_assets/k_1_images/move_blocks/r3_N.png: /script_assets/k_1_images/move_blocks/r3_N.png
         /script_assets/k_1_images/bee_images/r5_ghoney.png: /script_assets/k_1_images/bee_images/r5_ghoney.png
@@ -208,8 +208,8 @@ zh:
         /script_assets/k_1_images/bee_images/5_ghoney.png: /script_assets/k_1_images/bee_images/5_ghoney.png
         /script_assets/k_1_images/move_blocks/EEEEE.png: /script_assets/k_1_images/move_blocks/EEEEE.png
       K-1 Flappy Match 1:
-        Matching: Matching
-        Match the blocks: Match the blocks
+        Matching: 匹配
+        Match the blocks: 匹配这些块
         /script_assets/k_1_images/flappy_images/click.png: /script_assets/k_1_images/flappy_images/click.png
         /script_assets/k_1_images/flappy_images/hit_ground.png: /script_assets/k_1_images/flappy_images/hit_ground.png
         /script_assets/k_1_images/flappy_images/pass_obstacle.png: /script_assets/k_1_images/flappy_images/pass_obstacle.png
@@ -217,10 +217,10 @@ zh:
         /script_assets/k_1_images/flappy_images/end.png: /script_assets/k_1_images/flappy_images/end.png
         /script_assets/k_1_images/flappy_images/score.png: /script_assets/k_1_images/flappy_images/score.png
       K-1 Maze Match 1:
-        Matching: Matching
-        Match the puzzles and blocks: Match the puzzles and blocks
-        Instructions: Instructions
-        Drag the blocks to match.: Drag the blocks to match.
+        Matching: 匹配
+        Match the puzzles and blocks: 匹配谜题和块
+        Instructions: 说明
+        Drag the blocks to match.: 拖动块来匹配。
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/k_1_images/maze_images/maze_EN.png: /script_assets/k_1_images/maze_images/maze_EN.png
         /script_assets/k_1_images/maze_images/maze_ENE.png: /script_assets/k_1_images/maze_images/maze_ENE.png
@@ -231,7 +231,7 @@ zh:
         /script_assets/k_1_images/move_blocks/WW.png: /script_assets/k_1_images/move_blocks/WW.png
         /script_assets/k_1_images/move_blocks/WSS.png: /script_assets/k_1_images/move_blocks/WSS.png
       K-1 Big Event Match 1:
-        Matching: Matching
+        Matching: 匹配
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
@@ -240,8 +240,8 @@ zh:
         /script_assets/k_1_images/unplugged_images/big_event_1_a2.png: /script_assets/k_1_images/unplugged_images/big_event_1_a2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_a3.png: /script_assets/k_1_images/unplugged_images/big_event_1_a3.png
       K-1 Happy Maps Match 1:
-        Matching: Matching
-        Match the Map to the arrow that gets the Flurb to the treasure: Match the Map to the arrow that gets the Flurb to the treasure
+        Matching: 匹配
+        Match the Map to the arrow that gets the Flurb to the treasure: 匹配地图和箭头让Flurb得到宝藏
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png
@@ -249,8 +249,8 @@ zh:
         /script_assets/k_1_images/unplugged_images/right.png: /script_assets/k_1_images/unplugged_images/right.png
         /script_assets/k_1_images/unplugged_images/left.png: /script_assets/k_1_images/unplugged_images/left.png
       K-1 Move It Match 1:
-        Matching: Matching
-        Match the Map to the algorithm that gets the Flurb to the flowers.: Match the Map to the algorithm that gets the Flurb to the flowers.
+        Matching: 匹配
+        Match the Map to the algorithm that gets the Flurb to the flowers.: 匹配地图和算法让Flurb取到花.
         /script_assets/k_1_images/unplugged_images/move_it_2_q1.png: /script_assets/k_1_images/unplugged_images/move_it_2_q1.png
         /script_assets/k_1_images/unplugged_images/move_it_2_q2.png: /script_assets/k_1_images/unplugged_images/move_it_2_q2.png
         /script_assets/k_1_images/unplugged_images/move_it_2_q3.png: /script_assets/k_1_images/unplugged_images/move_it_2_q3.png
@@ -258,20 +258,20 @@ zh:
         /script_assets/k_1_images/unplugged_images/rightrightup.png: /script_assets/k_1_images/unplugged_images/rightrightup.png
         /script_assets/k_1_images/unplugged_images/rightdown.png: /script_assets/k_1_images/unplugged_images/rightdown.png
       Coordinate Matching:
-        Coordinates of Ninjacat: Coordinates of Ninjacat
-        Match each character with its correct coordinate!: Match each character with its correct coordinate!
+        Coordinates of Ninjacat: Ninjacat 的坐标
+        Match each character with its correct coordinate!: 匹配每一个字符与其正确的坐标！
         /script_assets/msm/Unit 1/exercise_3_ninjacat.png: /script_assets/msm/Unit 1/exercise_3_ninjacat.png
-        Cloud: Cloud
+        Cloud: 云服务
         Ruby: Ruby
-        Dog: Dog
+        Dog: 小狗
         Ninjacat: Ninjacat
         (250, 400): (250, 400)
         (500, 240): (500, 240)
         (480, 100): (480, 100)
         (320, 240): (320, 240)
       Match math to circles:
-        Converting Math to Circles of Evaluation: Converting Math to Circles of Evaluation
-        Match each mathematical expression with the correct circle of evaluation!: Match each mathematical expression with the correct circle of evaluation!
+        Converting Math to Circles of Evaluation: 转换为数学评价圆
+        Match each mathematical expression with the correct circle of evaluation!: 匹配每个数学表达式和其正确的评价圈！
         (2 + 3) * 5 / 2: '(2 + 3) * 5 / 2'
         2 + 3 * (5 / 2): '2 + 3 * (5 / 2)'
         (2 + 3 * 5) / 2: '(2 + 3 * 5) / 2'
@@ -280,8 +280,8 @@ zh:
         /script_assets/msm/Unit 1/Exercise_4_question_3.png: /script_assets/msm/Unit 1/Exercise_4_question_3.png
         /script_assets/msm/Unit 1/Exercise_4_question_4.png: /script_assets/msm/Unit 1/Exercise_4_question_4.png
       Match circles to code:
-        Converting Circles to Code: Converting Circles to Code
-        Match each circle of evaluation with the correct code!: Match each circle of evaluation with the correct code!
+        Converting Circles to Code: 将圆转换为代码
+        Match each circle of evaluation with the correct code!: 匹配每个评价圈与其正确的代码 ！
         (+ (- (/ 4 7) 9) 3): '(+ (- (/ 4 7) 9) 3)'
         (+ (- 9 3) (* 4 7)): '(+ (- 9 3) (* 4 7))'
         (/ (+ 4 7) 3): (/ (+ 4 7) 3)
@@ -291,8 +291,8 @@ zh:
         /script_assets/msm/Unit 1/Exercise_5_question_3.png: /script_assets/msm/Unit 1/Exercise_5_question_3.png
         /script_assets/msm/Unit 1/Exercise_5_question_4.png: /script_assets/msm/Unit 1/Exercise_5_question_4.png
       Match math to code:
-        Converting Math to Code: Converting Math to Code
-        Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!
+        Converting Math to Code: 将数学转换为代码
+        Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: 匹配每个数学表达式与正确的代码。使用评价圈来帮助您得到答案 ！
         (15 + 3) x (72 - 19): '(15 + 3) x (72 - 19)'
         3 x 15 + (- 72 19): '3 x 15 + (- 72 19)'
         72 + 3 - 19 x 15: '72 + 3 - 19 x 15'
@@ -302,36 +302,36 @@ zh:
         (- (+ 72 3) (* 19 15)): '(- (+ 72 3) (* 19 15))'
         (+ (- (* 3 15) 72) 19): '(+ (- (* 3 15) 72) 19)'
       parts of contract:
-        Parts of a Contract: Parts of a Contract
-        Here is a contract for a new function. Match each item with the word that describes it.: Here is a contract for a new function. Match each item with the word that describes it.
-        yearbook-picture: yearbook-picture
-        string numer: string numer
-        image: image
-        (yearbook-picture "Sally" 1992): '(yearbook-picture "Sally" 1992)'
-        function name: function name
-        domain: domain
-        range: range
-        example: example
+        Parts of a Contract: 合同的部分
+        Here is a contract for a new function. Match each item with the word that describes it.: 这里是一个新的函数的合同。匹配每个项目和描述它的词。
+        yearbook-picture: 年鉴图片
+        string numer: 字符串号码
+        image: 图片
+        (yearbook-picture "Sally" 1992): '(年鉴图片"莎莉"1992年)'
+        function name: 函数名称
+        domain: 域
+        range: 范围
+        example: 示例
       Match example to contract:
-        Contracts of Functions: Contracts of Functions
-        Match each example with the correct contract!: Match each example with the correct contract!
-        (big-string? "gigantic" 5): '(big-string? "gigantic" 5)'
-        (find-price 4): (find-price 4)
-        (small-star "blue"): '(small-star "blue")'
-        (bigger-string "big" "little"): '(bigger-string "big" "little")'
-        (small-star "solid"): '(small-star "solid")'
-        (find-price "cheese"): '(find-price "cheese")'
-        "big-string: string number -> boolean": 'big-string: string number -> boolean'
-        "find-price: number -> number": 'find-price: number -> number'
-        "small-star: string -> image": 'small-star: string -> image'
-        "bigger-string: string string -> string": 'bigger-string: string string -> string'
-        "find-price: string -> number": 'find-price: string -> number'
+        Contracts of Functions: 功能合同
+        Match each example with the correct contract!: 配合每个例子与其正确的合同!
+        (big-string? "gigantic" 5): '（大字符串？"硕大无比"5）'
+        (find-price 4): (查找价格 4)
+        (small-star "blue"): '(小星"蓝色")'
+        (bigger-string "big" "little"): '(大字符串"大""小")'
+        (small-star "solid"): '(小星"固体")'
+        (find-price "cheese"): '(查找价格"奶酪")'
+        "big-string: string number -> boolean": '大字符串：串号 -> boolean'
+        "find-price: number -> number": '查找价格：数字-> 数字'
+        "small-star: string -> image": '小星： 字符串-> 图像'
+        "bigger-string: string string -> string": '大字符串： 字符串 字符串 -> 字符串'
+        "find-price: string -> number": '查找价格：字符串 -> 数字'
       test matching image:
-        Matching Images Two: Matching Images Two
-        Match up all the flowers by colour!: Match up all the flowers by colour!
+        Matching Images Two: 匹配图像二
+        Match up all the flowers by colour!: 按颜色来匹配所有的花!
         /script_assets/matches/images/head.jpg,300: /script_assets/matches/images/head.jpg,300
-        Instructions: Instructions
-        Drag the images from right to center.: Drag the images from right to center.
+        Instructions: 说明
+        Drag the images from right to center.: 把图像从右边拖动到中心.
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
         /script_assets/matches/images/q1.jpg: /script_assets/matches/images/q1.jpg
         /script_assets/matches/images/q2.jpg: /script_assets/matches/images/q2.jpg
@@ -341,17 +341,17 @@ zh:
         /script_assets/matches/images/a3.jpg: /script_assets/matches/images/a3.jpg
         /script_assets/matches/images/a4.jpg: /script_assets/matches/images/a4.jpg
       test matching text:
-        Matching: Matching
-        Some really easy stuff to match.  Drag it around until you get it.: 'Some really easy stuff to match.  Drag it around until you get it.'
-        What color is the sky?: What color is the sky?
-        What's in the ocean?: "What's in the ocean?"
-        What's Brent's last name?: "What's Brent's last name?"
-        Where is Brendan from?: Where is Brendan from?
+        Matching: 匹配
+        Some really easy stuff to match.  Drag it around until you get it.: 一些非常容易相匹配的东西. 周围拖动它，直到你找到它.
+        What color is the sky?: 天空是什么颜色的？
+        What's in the ocean?: 海洋中有什么东西?
+        What's Brent's last name?: 布伦特的姓是什么？
+        Where is Brendan from?: 布伦丹来自哪里？
         blue: |
           蓝色
           块输入文本-在使用蓝（从0到100 ）的量时，
           [https://code.google.com/p/blockly/wiki/Colour#Creating_a_colour_from_red,_green,_and_blue_components https://code.google.com/p/blockly/wiki/Colour#Creating_a_colour_from_red,_green,_and_blue_components].
           {{Identical|Blue}}
-        salt: salt
-        Van Minnen: Van Minnen
-        Sydney: Sydney
+        salt: 盐
+        Van Minnen: 范米隆
+        Sydney: 悉尼

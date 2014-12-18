@@ -355,7 +355,7 @@
         (small-star "blue"): (small-star "blue")
         (bigger-string "big" "little"): (bigger-string "big" "little")
         (small-star "solid"): (small-star "solid")
-        (find-price "cheese"): (find-price "cheese")
+        (find-price "cheese"): (trobar-premi "formatge")troba
         'big-string: string number -> boolean': 'big-string: string number -> boolean'
         'find-price: number -> number': 'find-price: number -> number'
         'small-star: string -> image': 'small-star: string -> image'

@@ -36,7 +36,7 @@ Free curriculum from Google that uses online, project-based tutorials for elemen
 Teach computer programming through game design - as a full-time class, an in-class module, or afterschool program.
 
 ### [TEALS](http://www.tealsk12.org/)
-Get mentored and placed into high school classes as a part-time teacher in a team teaching model where the school district is unable to meet their students' computer science needs on its own. 
+For high schools without a computer science instructor, TEALS creates partnerships between tech-industry volunteers and teachers from other disciplines to team-teach computer science and train the teacher.
 
 ### [AP Computer Science - with Amplify](https://users-mooc.amplify.com/)
 This online course (MOOC) is designed for high school students to learn AP Computer Science in an online classroom. The course is free, but additional support to the school offering it costs money.
@@ -50,3 +50,6 @@ Create games on the PC and XBox via a simple visual programming language. Can be
 
 ### [Scratch](http://scratched.media.mit.edu/)
 Programming language that makes it easy to create your own interactive stories, animations, games, music and art - and share your creations on the web. 
+
+### [AgentCubes](http://sgda.cs.colorado.edu/arcade/?q=hour_of_code)
+Imagine a tool that allows you to turn 2D images into 3D shapes. Use AgentCubes online, the world's first 3D web-based programming & modeling tool, to learn to program by creating and sharing exciting 3D games. Rule your world!

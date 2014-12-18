@@ -1,10 +1,10 @@
 fi-FI:
   hello: Hei maailma
   select_language: Valitse kieli
-  computer_science: Tietojenkäsittelytiede
-  computer_science_edweek: Tietojenkäsittelyn koulutusviikko
+  computer_science: Tietotekniikka
+  computer_science_edweek: Tietotekniikan koulutusviikko
   csedweek_dates: 9.–15. joulukuuta 2013
-  csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Kooditunti</a> on tulossa. Kaikki opettajat ja järjestäjät, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">suunnittele koodituntisi</a>'
+  csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Koodaustunti</a> on tulossa. Kaikki opettajat ja järjestäjät, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">suunnittele koodaustuntisi</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Oletko tietotekniikan opettaja? Katso muut CSEdWeek-materiaalit</a>'
   n_have_learned_an_hoc: '<h1>#</h1><h3>on kokeillut</h3><h2>Koodaustuntia</h2>'
   anybody_can_learn: Kuka tahansa voi oppia.
@@ -27,7 +27,7 @@ fi-FI:
   hoc2014_whatishoc: Mikä on koodaustunti?
   twentyhours_trynow: Kokeile nyt
   california_heading: Pyydä kouluasi opettamaan tietojenkäsittelytiedettä
-  california_text: "Kuka tahansa opettaja voi tarjota <a href='http://studio.code.org/'>ilmaisia kursseja</a>.  Mikä tahansa peruskoulu voi <a href='http://code.org/educate/k5'>opettaa tietojenkäsittelytiedettä</a>. Pyydä lukioita <a href='http://code.org/educate/districts'>tekemään yhteistyötä kanssamme."
+  california_text: "Opettajat voivat tarjota <a href='http://studio.code.org/'>ilmaisia kursseja</a>.  Peruskoulut voivat <a href='http://code.org/educate/k5'>opettaa tietojenkäsittelytiedettä</a>. Pyydä lukioita <a href='http://code.org/educate/districts'>tekemään yhteistyötä kanssamme."
   california_button: Lisätietoja
   flappy_heading: Flappy syntymäpäivää, Code.org
   flappy_text: 'Code.org täytti juuri vuoden.<br/><br/> Juhli kanssamme tekemällä oma <b>Flappy</b>-pelisi. Koodaa omat sääntösi ja jaa kavereiden kanssa!'
@@ -41,16 +41,16 @@ fi-FI:
   go: Mene
   thank_you_: Kiitos!
   congratulations: Onneksi olkoon!
-  congratulations_on_completing_hoc: Onnittelut Koodaustunnin suorittamisesta.
-  get_a_certificate_of_achievement: Hanki todistus suorittamisesta
+  congratulations_on_completing_hoc: Onnittelut Koodaustunnin suorittamisesta
+  get_a_certificate_of_achievement: Hanki todistus suorituksesta
   enter_valid_email: Ole hyvä ja syötä toimiva sähköpostiosoite
   get_a_certificate_message: "Me lähetämme sinulle todistuksen ja lisätietoa miten voit  <a href='/learn/beyond'>opiskella lisää Koodaustunnilla oppimasi lisäksi</a>"
-  get_a_certificate_message_after: "Napsauta todistusta ladataksesi tai tulostaaksesi. Jatka sen jälkeen <a href='http://studio.code.org'>muilla kursseilla</a>, tai tarkastele vaihtoehtoja <a href='/learn/beyond'>Mitä voit oppia ensimmäisen tunnin jälkeen</a>."
-  thanks_for_submitting: Kiitos, että lähetit!
+  get_a_certificate_message_after: "Napsauta todistusta ladataksesi tai tulostaaksesi sen. Jatka sen jälkeen <a href='http://studio.code.org'>muilla kursseilla</a>, tai katso vaihtoehtoja <a href='/learn/beyond'>Ensimmäisen tunnin jälkeen</a>."
+  thanks_for_submitting: Kiitos tietojen antamisesta!
   if_you_enjoyed: Jos nautit oppimisesta, pyydä myös kavereitasi kokeilemaan! Haluamme koko maailman oppivan.
   personalize_certificate: Nimikoi todistuksesi
   share_achievement: Jaa saavutuksesi
-  beyond_hour_message: "Jatka <a href='http://studio.code.org'>muilla kursseillamme</a>, tai katso <a href='/learn/beyond'>Mitä voit oppia ensimmäisen tunnin jälkeen</a>."
+  beyond_hour_message: "Jatka <a href='http://studio.code.org'>muilla kursseillamme</a>, tai katso mitä voit oppia <a href='/learn/beyond'>Ensimmäisen tunnin jälkeen</a>."
   leaderboards_for_hoc: Koodaustunnin pistetaulukot.
   support_url: http://support.code.org/
   country: Maa
@@ -65,7 +65,7 @@ fi-FI:
   thanks_for_voting: Kiitos äänestämisestä!
   share_on_facebook: Jaa Facebookissa
   share_on_twitter: Jaa Twitterissä
-  beyond_an_hour: Yli Kooditunnin
+  beyond_an_hour: Koodaustunnin jälkeen
   get_started: Aloita
   i_agree: Hyväksyn
   participant_select: '- Valitse -'
@@ -74,12 +74,15 @@ fi-FI:
   participant_educator: Opettaja
   participant_engineer: Ohjelmistosuunnittelija
   participant_other: Ei mikään edellä mainituista
+  print_all: Tulosta kaikki
+  print_ice_art: Tulosta jäätaiteesi
+  create_art_with_zombie: tai tee edistyneempää taidetta zombien kanssa
   i_am_a: Olen
   never_spam: Me emme koskaan lähetä sinulle roskapostia
   enter_country: Syötä maa, jos olet Yhdysvaltojen ulkopuolella
   used_infrequent_updates: Käytetään ainoastaan harvoin tuleviin päivityksiin
-  privacy_practices_children: Tarkastele lapsiin kohdistuvan yksityisyyden käytäntöjämme
-  petition_thankyou: Kiitos, kun allekirjoitit adressin
+  privacy_practices_children: Lue käytännöistämme lasten yksityisyyden suojaamiseksi
+  petition_thankyou: Kiitos, kun allekirjoitit vetoomuksen
   continue_learning_header: Jatka opiskelua Koodaustunnin jälkeen
   continue_learning_body: Vaihtoehtoja on paljon. Voit opiskella verkossa tai paikallisessa oppilaitoksessa tai kesäleirillä.
   learn_next_level: Jatka seuraavalle tasolle
@@ -103,13 +106,17 @@ fi-FI:
   contact_form_topic_press: 'Lehdistö/media (haastattelu- tai luentopyyntö)'
   studiobar_title: "Tutustu <a href='http://studio.code.org'>Code Studio</a>on"
   studiobar_elementary_title: Alkeiskurssit
-  studiobar_elementary_body: 'Kolme kurssiamme K&#8209;5-ryhmälle'
+  studiobar_elementary_body: Kolme uutta kurssiamme alakoululaisille
   studiobar_hoc_title: Koodaustunti
-  studiobar_hoc_body: Opi koodaamaan Angry Birds -lintujen kanssa
+  studiobar_hoc_body: Opi koodaamaan Angry Birdsien kanssa
   studiobar_flappy_title: Flappy Code
   studiobar_flappy_body: Tee ja jaa oma Flappy-pelisi
   studiobar_teacher_title: Tehty opettajille
   studiobar_teacher_body: Ota Code Studio käyttöön luokassasi
+  studiobar_frozen_title: Koodaustunti
+  studiobar_frozen_body: Luo talven ihmemaa Annan ja Elsan kanssa
+  studiobar_donate_title: Lahjoita
+  studiobar_donate_body: Jokaista lahjoittamaasi dollaria kohden yksi lapsi saa oppia
   contact_form_topic_student: Olen oppilas
   contact_form_topic_parent: Olen vanhempi
   contact_form_topic_teacher: Olen opettaja
@@ -123,12 +130,12 @@ fi-FI:
   contact_form_label_submit: Lähetä viesti
   class_submission_in_school: Koulussa
   class_submission_in_school_daily_programming_course: Päivittäinen ohjelmointikurssi
-  class_submission_in_school_ap_computer_science: Advanced Placement -tietojenkäsittelytiede
-  class_submission_in_school_full_university_cs_curriculum: Täysi tietojenkäsittelyn oppimäärä yliopistossa
+  class_submission_in_school_ap_computer_science: Advanced Placement -tietotekniikka
+  class_submission_in_school_full_university_cs_curriculum: Täysi tietojenkäsittelytieteen oppimäärä yliopistossa
   class_submission_in_school_robotics_club: Robotiikkakerho
   class_submission_in_school_programming_integrated_in_other_classes: Ohjelmointi yhdistettynä muihin oppiaineisiin (matematiikka, tiede, jne.)
-  class_submission_in_school_summer_school_cs_program: Kesäkoulun tietojenkäsittelyn ohjelma
-  class_submission_in_school_exploring_computer_science: Tutustu tietojenkäsittelytieteeseen
+  class_submission_in_school_summer_school_cs_program: Kesäkoulun tietojenkäsittelytieteen ohjelma
+  class_submission_in_school_exploring_computer_science: Tutustu tietotekniikkaan
   class_submission_in_school_other: Muualla koulussa
   class_submission_out_of_school: Koulun ulkopuolella
   class_submission_out_of_school_summer_camp: Kesäleiri
@@ -141,9 +148,9 @@ fi-FI:
   class_submission_online_teacher_resource: Opettajan materiaali verkossa
   class_submission_online_other: Muu verkossa
   class_submission_level_preschool: Esikoulu
-  class_submission_level_elementary: Alkeet
-  class_submission_level_middle_school: peruskoulu / yläaste
-  class_submission_level_high_school: lukio
+  class_submission_level_elementary: Ala-aste
+  class_submission_level_middle_school: Yläaste
+  class_submission_level_high_school: Lukio
   class_submission_level_college: Yliopisto / korkeakoulu
   class_submission_level_vocational: Ammatillinen opetus
   class_submission_languages_other: Muu kieli(kielet)
@@ -167,9 +174,9 @@ fi-FI:
   dashboard_landing_view_as_student: Tarkastele sivustoa oppilaana
   dashboard_landing_students_title: Oppilaasi
   dashboard_landing_students_manage: Tarkastele ja hallinnoi oppilaitasi
-  dashboard_landing_news_title: K-5 opettajan materiaalit (vain englanniksi)
-  dashboard_landing_new_beta: Uutta! Kokeile beta-kurssejamme K-5 oppilaille.
-  dashboard_landing_new_k5courses: Uutta! Kokeile kurssejamme K-5 oppilaille.
+  dashboard_landing_news_title: Ala-asteen opettajan materiaalit (vain englanniksi)
+  dashboard_landing_new_beta: Uutta! Kokeile beta-kurssejamme alakoululaisille.
+  dashboard_landing_new_k5courses: Uutta! Kokeile kurssejamme alakoululaisille.
   dashboard_landing_useful_links: Muita hyödyllisiä linkkejä (vain englanniksi)
   dashboard_landing_office_hours: Kysy henkilökohtaisesti! Vieraile kuukausittaisella videovastaanotolla.
   dashboard_landing_print_certificates: Tulosta sertifikaatit kurssin loppuun suorittaneille oppilaille
@@ -193,6 +200,12 @@ fi-FI:
   dashboard_action_done: Valmis
   dashboard_action_required: vaaditaan
   dashboard_navigation_home_page: Opettajan päänäyttö
+  dashboard_navigation_section_student_progress: Oppilaiden tunnukset ja edistyminen
+  dashboard_navigation_section_teacher_progress: Your Course Progress
+  dashboard_navigation_section_lesson_plans: Tuntisuunnitelmat ja resurssit
+  dashboard_navigation_section_community: Help and Community
+  dashboard_navigation_section_pd: Professional Development
+  dashboard_navigation_section_speakers: 'Computer Science <br/> Guest Speakers'
   dashboard_navigation_all_sections: Oppilaiden tunnukset ja edistyminen
   dashboard_navigation_view_progress: Tarkastele etenemistä
   dashboard_navigation_add_students: Lisää oppilaita
@@ -210,15 +223,15 @@ fi-FI:
   dashboard_sections_table_students: Oppilaat
   dashboard_sections_table_code: Ryhmän tunnus
   dashboard_sections_name: Ryhmän nimi
-  dashboard_sections_choose_secret: 'Jos haluat antaa tunnukset oppilaillesi, valitse salaisuustyypiksi joko <b>sana</b> tai <b>kuva</b> kyseiselle ryhmälle.'
+  dashboard_sections_choose_secret: 'Jos haluat antaa tunnukset oppilaillesi, valitse ryhmän salaisuustyypiksi joko <b>sana</b> tai <b>kuva</b>.'
   dashboard_sections_secret_word: '<b>Sana</b> antaa sinun asettaa salaisen sanan jokaiselle oppilaalle.'
-  dashboard_sections_secret_picture: '<b>Kuva</b> antaa sinun asettaa salaisen kuvan jokaiselle oppilaalle, sopii erityisesti nuoremmille oppilaille jotka eivät osaa vielä kirjoittaa.'
-  dashboard_sections_secret_none: 'Jos haluat oppilaidesi hallinnoivan omia tunnuksiaan mukaanlukien omia salasanojaan, valitse salaisuustyypiksi <b>ei mitään</b>.'
-  dashboard_sections_print_secrets: Voit tulostaa joukon kortteja sisältäen tunnustiedot jaettavaksi oppilaille yksitellen.
-  dashboard_sections_switch_section: 'Vaihda osiota:'
-  dashboard_students_add_student: Lisää opiskelija
+  dashboard_sections_secret_picture: '<b>Kuva</b> antaa sinun asettaa salaisen kuvan jokaiselle oppilaalle, sopii erityisesti nuoremmille oppilaille, jotka eivät osaa vielä kirjoittaa.'
+  dashboard_sections_secret_none: 'Jos haluat oppilaidesi hallinnoivan omia tunnuksiaan, mukaanlukien omia salasanojaan, valitse salaisuustyypiksi <b>ei mitään</b>.'
+  dashboard_sections_print_secrets: Voit tulostaa tunnustiedot sisältävät kortit jaettavaksi kullekin oppilaalle.
+  dashboard_sections_switch_section: 'Vaihda ryhmää:'
+  dashboard_students_add_student: Lisää oppilaita
   dashboard_students_add_students: Lisää useita oppilaita
-  dashboard_students_add_multiple: 'Kirjoita tai liitä oppilaidesi nimet, yksi kullekin riville:'
+  dashboard_students_add_multiple: 'Lisää oppilaidesi nimet, yksi kullekin riville:'
   dashboard_students_new_section: 'Olet luonut uuden ryhmän! Lisää nyt oppilaat käyttäen <b>Lisää oppilas</b> ja <b>Lisää useita oppilaita</b> -painikkeita yllä.'
   dashboard_students_placeholder_name: Opiskelijan nimi
   dashboard_students_name: Nimi
@@ -246,8 +259,8 @@ fi-FI:
   dashboard_students_no_email: 'Jos oppilailla ei ole sähköpostiosoitteita, tai haluat luoda tunnukset heidän puolestaan, vaihda ryhmän salaisuustyypiksi <b>sana</b> tai <b>kuva</b>.'
   dashboard_students_print_page: Tulosta tämä sivu
   dashboard_students_url: Osoite
-  dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Napsauta tästä</a> nähdäksesi yksityisyysasiakirjan oppilaille jaettavaksi tai tulostettavaksi.'
-  dashboard_curriculum_overview: K-5 opetussuunnitelman yleiskatsaus
+  dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Napsauta tästä</a> nähdäksesi tiedot yksityisyyskäytännöistämme. Voit jakaa sen oppilaille tai tulostaa sen.'
+  dashboard_curriculum_overview: Ala-asteen opetussuunnitelman yleiskatsaus
   dashboard_view_all_lesson_plans: Katso kaikkia tuntisuunnitelmia
   dashboard_course1: 'Kurssi 1:'
   dashboard_course2: 'Kurssi 2:'
@@ -259,17 +272,17 @@ fi-FI:
   dashboard_glossary: Sanasto
   dashboard_classroom_strategies: Luokkaopetuksen lähestymistapoja opettajille
   dashboard_debugging: 'Virheen etsintä:'
-  dashboard_puzzle_solving: 'Ongelmanratkaisu:'
+  dashboard_puzzle_solving: 'Tehtävänratkaisu:'
   dashboard_student_worksheet: oppilaan tehtävälista
   dashboard_teacher_worksheet: Opettajan tehtävälista
-  dashboard_grade_k: K
+  dashboard_grade_k: leikkikoulu
   dashboard_grade_other: Muut
   dashboard_login_word: Sana
   dashboard_login_picture: Kuva
   dashboard_login_none: Sähköposti
   dashboard_new_password: uusi salasana
-  stats_hoc_2013_heading: 'Uskomattomia tilastoja viime vuoden Kooditunnista. Vain yhdessä viikossa:'
-  stats_hoc_2013_image_alt: Tilastoja vuoden 2013 Kooditunnista
+  stats_hoc_2013_heading: 'Uskomattomia tilastoja viime vuoden Koodaustunnista. Vain yhdessä viikossa:'
+  stats_hoc_2013_image_alt: Tilastoja vuoden 2013 Koodaustunnista
   dashboard_teacher: Opettaja
   dashboard_student: Oppilas
   dashboard_sections_email_question: Onko kaikilla oppilailla toimivat sähköpostiosoitteet?
@@ -278,23 +291,23 @@ fi-FI:
   dashboard_sections_picture_account_creation: Code.org:n antama kuva
   dashboard_sections_word_account_creation: Code.org:n antama sana
   dashboard_sections_sign_in_question: Missä oppilaat kirjautuvat sisään?
-  dashboard_sections_sign_in_unique: 'Lueteltu yksilöllinen websivu "Hallinnoi oppilaita" -välilehdellä'
+  dashboard_sections_sign_in_unique: '"Hallinnoi oppilaita" -välilehdellä yksilöity verkkosivu'
   dashboard_sections_sign_in_main: 'http://code.org ja Napsauta "Kirjaudu"'
   dashboard_sections_password_account_creation: Oppilaan luoma tekstisalasana
   dashboard_sections_login_type_explanation: 'Tämä taulukko auttaa selittämään minkä kirjautumistavoista, <b>kuva, sana, tai sähköposti</b> haluat valita ryhmään.'
   dashboard_faq: Usein kysyttyjä kysymyksiä
-  code_hoc_coming: Koodaustunti on tulossa – 8.–14. joulukuuta!
+  code_hoc_coming: 'Koodaustunti on täällä - 8.-14. Joulukuuta!'
   code_sign_up: Liity osallistuaksesi tietojenkäsittelytieteen opetusviikon aikana
   learn_more: Lisätietoja
-  hoc2014_try_new_tutorials: Kokeile uusia Koodaustunti tutoriaalejamme
-  hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
+  hoc2014_try_new_tutorials: Kokeile uusia Koodaustunti-oppituntejamme
+  hoc2014_try_new_tutorial: Betatestaa uusia Koodaustunti-kurssejamme
   hoc2014_try_scrat: Angry Birds, PvZ ja Scrat
-  hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
+  hoc2014_try_frozen: Taiteilija Frozenin Annan ja Elsan kanssa
   carousel_heading_international: Oppitunnit omalla kielelläsi
-  carousel_heading_domestic: Tutoriaalit saatavilla englanniksi
-  carousel_heading_beginners: Aloittelijoiden oppaat
-  carousel_heading_javascript: Oppaat, jotka käsittelevät JavaScript kieltä
-  carousel_heading_unplugged: "Ei laitetta tai internetiä? Kokeile 'tietokoneeton tekeminen' tietojenkäsittelytiedettä"
+  carousel_heading_domestic: Oppitunnit englanniksi
+  carousel_heading_beginners: Oppitunnit aloittelijoille
+  carousel_heading_javascript: JavaScriptiä opettavat oppitunnit
+  carousel_heading_unplugged: 'Ei laitetta tai internetiä? Kokeile "tietokoneeton tekeminen"-oppituntejamme'
   carousel_heading_devices: Opasohjelmat puhelimille ja tablettitietokoneille
   carousel_heading_languages: Oppaat muista ohjelmointikielistä
   carousel_heading_apps_games: Tee omia sovelluksia tai pelejä
@@ -303,28 +316,32 @@ fi-FI:
   carousel_heading_robots: Opi ohjelmoimaan robottien kanssa
   carousel_heading_ide: Opettajien keskuudessa suositut alustat
   educator_notes: Opettajan muistiinpanot
-  more_resources_educators: Lisää materiaaleja opettajille
+  more_resources_educators: Lisämateriaalit opettajille
   participants: osallistujat
   teachers_notes: Opettajan muistiinpanot
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: 'Opettajat: Lue tärkeitä huomioita kouluttajille tästä'
   previous: Edellinen
   next: Seuraava
-  older_systems: Tutoriaalit jotka toimivat vanhemmilla järjestelmillä
+  older_systems: Kurssit, jotka toimivat vanhemmilla järjestelmillä
   older_systems_subheading: 'Näiden pitäisi toimia vanhemmilla selaimilla. Päästäksesi kaikkiin oppaisiin, päivitä <a href="http://browsehappy.com/" target="_blank">nykyaikaiseen verkkoselaimeen.</a>'
   mobile_devices: Oppaat mobiililaitteille
   frozen_name: Koodaa Annan ja Elsan kanssa
   codeorg_name: Kirjoita ensimmäinen oma tietokoneohjelmasi
   codeintl_name: Kirjoita ensimmäinen oma tietokoneohjelmasi
   thinkersmithspanish_name: Mis Amigos Roboticos
-  khan_name: Tutustuminen JavaScript kieleen
-  khanes_name: Tutustuminen JavaScript kieleen
+  khan_name: Johdanto JavaScript kieleen
+  khanes_name: Johdanto JavaScript kieleen
+  khanpt_name: Johdanto JavaScript kieleen
+  khanhe_name: Johdanto JavaScript kieleen
+  khanfr_name: Johdanto JavaScript kieleen
+  khanpl_name: Johdanto JavaScript kieleen
   tynker_name: Tee oma peli
   scratch_name: Ala luovaksi koodaten
   lightbot_name: Lightbot
   thinkersmith_name: Robottiystäväni
-  condcards_name: Ehtoja korteilla
+  condcards_name: Ehtolauseet pelikorteilla
   lightbotintl_name: Lightbot
-  codehs_name: Opettele koodaamaan Karel koiran kanssa
+  codehs_name: Opettele koodaamaan Karel-koiran kanssa
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
   codemonkey_name: CodeMonkey
@@ -332,9 +349,9 @@ fi-FI:
   processing_name: Piirrä koodilla
   robomind_name: Ohjelmoi virtuaalirobotti
   groklearning_name: Eliza the Chatterbot Doctor
-  quorum_name: Saavutettava ohjelmointi (näytönlukutuella)
-  codespark_name: Foos (lukutaidottomat tervetulleita)
-  kodable_name: Kodable (lukutaidottomat tervetulleita)
+  quorum_name: Esteetön ohjelmointi (ruudunlukijatuella)
+  codespark_name: Foos (myös lukutaidottomille)
+  kodable_name: Kodable (myös lukutaidottomille)
   tynkerapp_name: 'Tynker - tableteilla'
   robomindnl_name: Ohjelmoi virtuaalirobotti
   flappy_name: Tee Flappy-peli
@@ -346,55 +363,66 @@ fi-FI:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Kivi, sakset, paperi
-  frozen_gradelevel: Ikä 8+
+  hourofcode_name: Placeholder for new code.org/hoc
+  playlab_name: Pelilabra
   codeorg_gradelevel: 4-104-vuotiaille
   codeintl_gradelevel: 4-104-vuotiaille
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Yläaste +
   khanes_gradelevel: Yläaste +
+  khanpt_gradelevel: Yläaste +
+  khanhe_gradelevel: Yläaste +
+  khanfr_gradelevel: Yläaste +
+  khanpl_gradelevel: Yläaste +
   tynker_gradelevel: 5-13-vuotiaille
   scratch_gradelevel: Ikä 8+
   lightbot_gradelevel: Kaikenikäiset
   thinkersmith_gradelevel: Kaikenikäiset
   condcards_gradelevel: 8-12-vuotiaille
   lightbotintl_gradelevel: Kaikenikäiset
-  codehs_gradelevel: lukio
-  codecademy_gradelevel: lukio
+  codehs_gradelevel: Lukio
+  codecademy_gradelevel: Lukio
   codecombat_gradelevel: Yläaste +
   codemonkey_gradelevel: Yläaste +
   codeavengers_gradelevel: Yläaste +
-  processing_gradelevel: lukio
+  processing_gradelevel: Lukio
   robomind_gradelevel: 8-13-vuotiaille
   groklearning_gradelevel: Yläaste +
   quorum_gradelevel: Yläaste +
-  codespark_gradelevel: Alkeet
-  kodable_gradelevel: Alkeet
+  codespark_gradelevel: Ala-aste
+  kodable_gradelevel: Ala-aste
   tynkerapp_gradelevel: 5-13-vuotiaille
   robomindnl_gradelevel: 8-13-vuotiaille
   flappy_gradelevel: 4-104-vuotiaille
-  bitsbox_gradelevel: Alkeet
-  makegameswithus_gradelevel: lukio
-  touchdevelop_gradelevel: lukio
+  bitsbox_gradelevel: Ala-aste
+  makegameswithus_gradelevel: Lukio
+  touchdevelop_gradelevel: Lukio
   appinventor_gradelevel: Yläaste +
   blockly_gradelevel: Kaikenikäiset
   thinkersmith2_gradelevel: Ikä 8+
   kodableunplugged_gradelevel: 8-13-vuotiaille
   projguts_gradelevel: 10-13-vuotiaille
-  frozen_platformtext: Modernit selaimet ja tablettitietokoneet
+  hourofcode_gradelevel: 4-104-vuotiaille
+  frozen_gradelevel: Ikä 8+
+  playlab_gradelevel: 4-104-vuotiaille
   codeorg_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
   codeintl_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
-  thinkersmithspanish_platformtext: Ilman nettiä
+  thinkersmithspanish_platformtext: Tietokoneeton tekeminen
   khan_platformtext: Nykyaikaiset verkkoselaimet
   khanes_platformtext: Nykyaikaiset verkkoselaimet
-  tynker_platformtext: Modern browsers. (Follow-on course requires $$)
-  scratch_platformtext: KAIKKI selaimet
-  lightbot_platformtext: Kaikki selaimet ja iOS, Android tai pelikonsoli
-  thinkersmith_platformtext: Ilman nettiä
-  condcards_platformtext: Ilman nettiä
+  khanpt_platformtext: Nykyaikaiset verkkoselaimet
+  khanhe_platformtext: Nykyaikaiset verkkoselaimet
+  khanfr_platformtext: Nykyaikaiset verkkoselaimet
+  khanpl_platformtext: Nykyaikaiset verkkoselaimet
+  tynker_platformtext: Nykyaikaiset verkkoselaimet
+  scratch_platformtext: Desktop-only web browsers (not tablets)
+  lightbot_platformtext: Kaikki selaimet sekä iOS, Android tai pelikonsoli
+  thinkersmith_platformtext: Tietokoneeton tekeminen
+  condcards_platformtext: Tietokoneeton tekeminen
   lightbotintl_platformtext: iOS, Android (tai selain)
-  codehs_platformtext: 'Modern browsers. (Follow-on course requires  $$)'
-  codecademy_platformtext: Nykyaikaiset vekkoselaimet. iOSY, Android sovellukset
-  codecombat_platformtext: Nykyaikaiset verkkoselaimet
+  codehs_platformtext: Modernit selaimet. (Jatkokurssi vaatii $$)
+  codecademy_platformtext: Nykyaikaiset vekkoselaimet. iOS ja Android sovellukset
+  codecombat_platformtext: Modern web browsers (Follow-on course requires $$)
   codemonkey_platformtext: Nykyaikaiset verkkoselaimet
   codeavengers_platformtext: Nykyaikaiset verkkoselaimet
   processing_platformtext: Nykyaikaiset verkkoselaimet
@@ -411,79 +439,94 @@ fi-FI:
   touchdevelop_platformtext: Nykyaikaiset selaimet, älypuhelimet, kaikki laitteet
   appinventor_platformtext: Modernit selaimet + Android
   blockly_platformtext: Vain nykyaikaiset selaimet
-  thinkersmith2_platformtext: Ilman nettiä
-  kodableunplugged_platformtext: Ilman nettiä
-  projguts_platformtext: Ilman nettiä
-  frozen_shortdescription: Käytetään koodia liittyäksemme Annan ja Elsan matkaan kun he tutkivat jään taikaa ja kauneutta.
-  codeorg_shortdescription: Opi koodaamaan Marku Zuckerbergin ja Vihaisten lintujen kanssa!
-  codeintl_shortdescription: Opi koodaamaan Marku Zuckerbergin ja Vihaisten lintujen kanssa!
+  thinkersmith2_platformtext: Tietokoneeton tekeminen
+  kodableunplugged_platformtext: Tietokoneeton tekeminen
+  projguts_platformtext: Tietokoneeton tekeminen
+  hourofcode_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
+  frozen_platformtext: Modernit selaimet ja tablettitietokoneet
+  playlab_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
+  codeorg_shortdescription: Opi koodaamaan Mark Zuckerbergin ja Angry Birdsin kanssa!
+  codeintl_shortdescription: Opi koodaamaan Mark Zuckerbergin ja Angry Birdsin kanssa!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Opi piirtämään JavaScriptillä
   khanes_shortdescription: Opi piirtämään JavaScriptillä
-  tynker_shortdescription: Opi koodaamaan ratkoen hauskoja pulmia ja rakenna oma mobiilipelisi.
+  khanpt_shortdescription: Opi piirtämään JavaScriptillä
+  khanhe_shortdescription: Opi piirtämään JavaScriptillä
+  khanfr_shortdescription: Opi piirtämään JavaScriptillä
+  khanpl_shortdescription: Opi piirtämään JavaScriptillä
+  tynker_shortdescription: Opi koodaamaan ratkoen hauskoja tehtäviä ja rakenna samalla oma mobiilipelisi.
   scratch_shortdescription: Luo interaktiivisia pelejä, tarinoita ja animaatioita.
-  lightbot_shortdescription: Ohjelmoi Lightbot ratkomaan pulmia käyttäen ohjelmia ja silmukoita!
-  thinkersmith_shortdescription: Tietokoneettoman tekemisen tutoriaali ryhmälle, jolla ei laitteita
+  lightbot_shortdescription: Ohjelmoi Lightbot ratkomaan tehtäviä käyttäen aliohjelmia ja silmukoita!
+  thinkersmith_shortdescription: Tietokoneettoman tekemisen kurssi ryhmälle, jolla ei ole laitteita
   condcards_shortdescription: Opi algoritmeja korttipakan kanssa
   lightbotintl_shortdescription: Koodauskäsitteitä opettava peli
-  codehs_shortdescription: Ala koodaamaan Karek Koiran kanssa, hauska ja visuaalinen johto ohjelmointiin!
+  codehs_shortdescription: Ala koodaamaan Karel-koiran kanssa. Hauska ja visuaalinen johdanto ohjelmointiin!
   codecademy_shortdescription: Opi JavaScript-ohjelmointia selaimessa
-  codecombat_shortdescription: Voita peikot oppiaksesi Pythonia tai JavaScriptia tässä eeppisessä ohjelmointipelissä!
-  codemonkey_shortdescription: Students program a monkey to catch bananas.
+  codecombat_shortdescription: Voita peikot oppiaksesi Pythonia tai JavaScriptia tässä mielettömässä ohjelmointipelissä!
+  codemonkey_shortdescription: Opiskelijat ohjelmoivat apinaa keräämään banaaneita.
   codeavengers_shortdescription: Opi JavaScript-ohjelmointia selaimessa
-  processing_shortdescription: Tunnin tutoriaali Processing-kielestä
+  processing_shortdescription: Tunnin kurssi Processing-kielestä
   robomind_shortdescription: Kirjoita koodia virtuaalirobotille
   groklearning_shortdescription: 'Opeta "Eliza"-keskustelurobotti huijaamaan ystäväsi kuvittelemaan häntä ihmiseksi!'
-  quorum_shortdescription: Liity Maryn seuraan ohjatulla kiertomatkalla kun jän oppii Quorum-ohjelmointikielen.
+  quorum_shortdescription: Liity Maryn seuraan ohjatulle kiertomatkalle, kun hän oppii Quorum-ohjelmointikieltä.
   codespark_shortdescription: Foos on hauska, lapsiystävällinen peli ohjelmoinnin oppimiseen.
-  kodable_shortdescription: Hauska iPad-eli opettamaan ohjelmoinnin käsitteitä
-  tynkerapp_shortdescription: 'Learn to program by solving fun coding puzzles. '
+  kodable_shortdescription: Hauska iPad-peli opettamaan ohjelmoinnin käsitteitä
+  tynkerapp_shortdescription: 'Opi ohjelmoimaan ratkaisemalla hauskoja ohjelmointitehtäviä. '
   robomindnl_shortdescription: Kirjoita koodia virtuaalirobotille
   flappy_shortdescription: 'Tee oma pelisi - Flappy Bird, Shark tai Submarine'
-  bitsbox_shortdescription: Ohjelmoi sarja sovelluksia pelattavaksi ja jaettavaksi, oikeaa JavaScriptiä käyttäen.
+  bitsbox_shortdescription: Code a series of apps to play and share, using real JavaScript.
   makegameswithus_shortdescription: Tee iPhone-peli! Opi opettamaan hirviöllesi uusia liikkeitä koodia kirjoittaen!
-  touchdevelop_shortdescription: 'Solve puzzles, create games, and learn coding all on your phone. '
+  touchdevelop_shortdescription: 'Ratkaise tehtäviä, luo pelejä, ja opi ohjelmointia puhelimellasi. '
   appinventor_shortdescription: Tee oma sovelluksesi! (vain Android)
   blockly_shortdescription: Lataa ZIP-tiedosto oppiaksesi offline-tilassa
   thinkersmith2_shortdescription: Opi kuinka tietokoneet käyttävät 1:iä ja 0:ia tiedon esittämiseen
   kodableunplugged_shortdescription: Hauska tietokoneettoman tekemisen harjoitus
   projguts_shortdescription: Kokeile mallinnusta ja simulointia kivi-sakset-paperi -pelin avulla
-  frozen_longdescription: 'Koodataan Annan ja Elsan kanssa kun he tutkivat jään kauneutta ja taikaa. Tässä pelissä luot lumihiutaleita ja kuvioita kun luistelet sekä  luot taianomaisen lumimaan jonka voit myös jakaa ystäviesi kanssa!'
+  hourofcode_shortdescription: Placeholder for new code.org/hoc
+  frozen_shortdescription: Liitymme Annan ja Elsan matkaan, kun he tutkivat jään taikaa ja kauneutta ohjelmoinnin avulla.
+  playlab_shortdescription: Suunnittele ja luo oma tarina tai peli Pelilabrassa!
   codeorg_longdescription: Opettele tietojenkäsittelytieteen perusteet rakentamalla tietokoneohjelmia palikoista. Tällä pelillisellä itseopiskelukurssilla johdantovideoilla (englanniksi, tekstit suomeksi) esiintyy Bill Gates, Mark Zuckerberg, Angry Birds ja Plants vs. Zombies. Kurssilla käydään läpi toistosilmukat, ehtolauseet ja yksinkertaisia algoritmeja. Tarjolla 34 kielellä.
   codeintl_longdescription: Opettele tietojenkäsittelytieteen perusteet rakentamalla tietokoneohjelmia palikoista. Tällä pelillisellä itseopiskelukurssilla johdantovideoilla (englanniksi, tekstit suomeksi) esiintyy Bill Gates, Mark Zuckerberg, Angry Birds ja Plants vs. Zombies. Kurssilla käydään läpi toistosilmukat, ehtolauseet ja yksinkertaisia algoritmeja. Tarjolla 34 kielellä.
-  thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubriran como guiarse de modo tal de llevar a cabo tareas especificas sin ser estas discutidas previamente. Este segmento ensena a los estudiantes la conexion entre simbolos y acciones asi como la valiosa habilidad de depuracion.'
+  thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
   khan_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
   khanes_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
+  khanpt_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
+  khanhe_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
+  khanfr_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
+  khanpl_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
   tynker_longdescription: Luo omia pelejä ja jaa ne ystäviesi kanssa! Ratkaise hauskoja pulmia ja opi samalla ohjelmoinnin perusteet. Hauskoilla animaatiohahmoilla teet pelistä omanlaisesi. Useita tasoja ja paljon taustoja. Tee pelistä realistisempi fysiikan avulla. Näe koodi joko visuaalisina lohkoina tai JavaScriptinä. Vie pelisi iPadille tai Android-tabletille. Yli tusina hauskoja tehtäviä, joista voit valita!
   scratch_longdescription: 'Scratchin kanssa voit luoda oman interaktiivisen pelin, tarinan tai animaation &mdash; ja voit jakaa ne ystäviesi kanssa. Aloita animoimalla oma nimesi, luomalla syntymäpäiväkortti tai luomalla pong-peli.'
-  lightbot_longdescription: Opasta valobotti sytyttämään kaikki siniset ruudut! Valobotti on ohjelmointia pelimuotona käyttävä pulmapeli, jonka avulla pelaajat oppivat ymmärtämään yksinkertaista koodia. Opi tekemään komentojonoja, kirjoittamaan proseduureja ja käyttämään silmukoita edetäksesi pelissä. Sopii kaiken ikäisille.
+  lightbot_longdescription: Opasta valobotti sytyttämään kaikki siniset ruudut! Valobotti on ohjelmointia pelimuotona käyttävä pulmapeli, jonka avulla pelaajat oppivat ymmärtämään yksinkertaista koodia. Opi tekemään komentojonoja, kirjoittamaan aliohjelmia ja käyttämään silmukoita edetäksesi pelissä. Sopii kaiken ikäisille.
   thinkersmith_longdescription: 'Käyttäen ennaltamäärättyä "robottikielitä", oppilaat selvittävät, miten ohjata toisiaan annettujen tehtävien läpi sopimatta niistä etukäteen. Tämä oppitunti opettaa lapsia yhdistämään symbolit toimintoihin, sekä virheiden paikallistamisen ja korjaamisen kultaisen taidon. "Minun robottiystäväni" sopii parhaiten ryhmätoimintaan ja sisältää opettajan ohjekirjan luokkakäyttöön.'
   condcards_longdescription: 'Opi algoritmeistä ja ehtolausekkeista korttipakan avulla tässä "tietokoneettoman tekemisen" harjoituksessa. Oppilaat tekee tehtävät ryhmissä ja tarvitsevat yhden korttipakan ryhmää kohden.'
   lightbotintl_longdescription: 'Opi ohjelmoinnin peruslogiikka. Sopii 4+-vuotiaille. Tuetut alustat: iOS, Android ja selaimet. Opi tekemään komentojonoja, tunnistamaan hahmoja, käyttämään proseduureja ja hyödyntämään silmukoita!'
-  codehs_longdescription: 'Tietokoneen komentaminen, ja siitähän ohjelmoinnissa on kyse, on kuin antaisi komentoja koiralle. Opi koodaamaan Karel-koiraa &mdash; hauska, helppo ja visuaalinen johdanto ohjelmointiin, joka opettaa peruskäsitteet, kuten komennot ja funktiot vasta-alkajille. Opetusohjelma on suunnattu itseoppimiseen, mutta opettajat voivat kirjautu päästäkseen käsiksi opettajan työkaluihin ja seuratakseen oppilaiden etenemistä!'
-  codecademy_longdescription: Codeacademy on interaktiivinen, oppilaslähtöinen johdanto tietojenkäsittelyn perusteisiin Javascript-kielellä, jota käyttävät miljoonat opiskelijat maailmassa. Olemme valmistelleet selkeän Kooditunti-kokemuksen, jossa on mukana visailuja, kalvoja ja oppilaille valmis projekti lopuksi.
-  codecombat_longdescription: Voita peikot oppiaksesi Pythonia tai JavaScriptia tässä eeppisessä ohjelmointipelissä!
+  codehs_longdescription: 'Tietokoneen komentaminen, ja siitähän ohjelmoinnissa on kyse, on kuin antaisi komentoja koiralle. Opi koodaamaan Karel-koiraa &mdash; hauska, helppo ja visuaalinen johdanto ohjelmointiin, joka opettaa peruskäsitteet, kuten komennot ja funktiot vasta-alkajille. Opetusohjelma on suunnattu itseoppimiseen, mutta opettajat voivat kirjautua päästäkseen käsiksi opettajan työkaluihin ja seuratakseen oppilaiden etenemistä!'
+  codecademy_longdescription: Codeacademy on interaktiivinen, oppilaslähtöinen johdanto tietojenkäsittelyn perusteisiin Javascript-kielellä, jota käyttävät miljoonat opiskelijat maailmassa. Olemme valmistelleet selkeän Koodaustunti-kokemuksen, jossa on mukana visailuja, kalvoja ja oppilaille valmis projekti lopuksi.
+  codecombat_longdescription: Voita peikot oppiaksesi Pythonia tai JavaScriptia tässä mielettömässä ohjelmointipelissä!
   codemonkey_longdescription: 'CodeMonkey on verkkopeli, joka opettaa ohjelmointia oikealla ohjelmointikielellä! Opiskelijat ohjelmoivat apinaa keräämään banaaneja, tehtävien vähitellen vaikeutuessa taso tasolta. Opiskelijat saavat tähtipisteitä jokaisesta ratkaisusta ja he voivat jakaa sen yhdellä napsautuksella. '
-  codeavengers_longdescription: Rakenna kahden pelaajan 2D ylhäältä-alas peli Javascriptillä kymmenessä yksinkertailla tehtävällä. Sitten jatka joidenkin ohjelmoinnin perusasioiden oppimista (muuttujat ja ehto-lausekkeet) samalla kun luot Tietokilpailun, jonka voit jakaa ystäviesi kanssa. Matkan varrella voit ansaita pisteitä ja arvomerkkejä, kun pääset luokan parhaimpien joukkoon.
-  processing_longdescription: 'Johdanto ohjelmointiin kuvataiteiden yhteydessä käyttäen ohjelmointikieltä. Lyhyet video-oppitunnit johdattelevat ohjelmointiharjoituksiin, joiden kautta päästään suunnittelemaan  interaktiivista piirto-ohjelmaa'
+  codeavengers_longdescription: Rakenna kahden pelaajan 2D ylhäältä-alas peli Javascriptillä kymmenellä yksinkertaisella tehtävällä. Sitten jatka joidenkin ohjelmoinnin perusasioiden oppimista (muuttujat ja ehto-lausekkeet) luodessasi tietovisan, jonka voit jakaa ystäviesi kanssa. Matkan varrella voit ansaita pisteitä ja merkkejä pyrkiessäsi luokan parhaimpien joukkoon.
+  processing_longdescription: 'Johdanto ohjelmointiin kuvataiteiden parissa käyttäen Processing-ohjelmointikieltä. Lyhyet video-oppitunnit johdattelevat ohjelmointiharjoituksiin, joiden kautta päästään suunnittelemaan  interaktiivista piirto-ohjelmaa'
   robomind_longdescription: 'Opiskelijat oppivat ohjelmoinnin perusteet ohjaamalla omaa virtuaalista robottiaan. Verkkokurssi sisältää kaiken tarvittavan - lyhyet esittelyt, elokuvat, tietovisat ja automaattiset  opastukset/vinkit, jotka auttavat ohjelmointiharjoitusten kanssa. '
   groklearning_longdescription: |-
-    Käytä Python-ohjelmointikieltä rakentaaksesi keskustelu-'botin' nimeltään "Eliza" joka toimii robottipsykoterapeuttina. Opetat Elizaa puhumaan ja sanomaan oikean asian. Voiko hän huijata ystäväsi luulemaan, että hän on ihminen eikä tietokone?
-  quorum_longdescription: 'Tämä oppitunti on saatavilla näkövammaisille ja toimii näytönlukijaohjelmien kanssa. Tule Maryn kanssa vierailulle, kun Mary tulee biologian laboratorioon ohjelmoijaksi ja oppii Quorum ohjelmointikielen. Oppitunti on oppilaan ohjaama, jossa on esimerkkitehtäviä  verkossa.'
-  codespark_longdescription: 'Foos on hauska ja lapsiystävällinen tapa oppia ohjelmointia. Ohjelmoi söpöjä hahmoja arvoitusten ratkaisemissa ja saa virtuaalinen maailma elämään. Peli on "sanoista vapaa", joten kaikki voivat pelata! '
-  kodable_longdescription: Kodable on itseohjaava iPad-peli, joka johdattelee 5+-vuotiaat lapset ohjelmoinnin perusteisiin. Opettajan tai vanhemman läsnäolo on optimaalista, mutta ei välttämätöntä.
-  tynkerapp_longdescription: Learn to program by solving fun coding puzzles. Easily build games and stories using with themed graphics, 10+ game-kits and customizable characters. No Internet connectivity required. You can also access your creations on the web.
+    Käytä Python-ohjelmointikieltä rakentaaksesi keskustelu-'botin' nimeltä "Eliza" joka toimii robottipsykoterapeuttina. Opetat Elizaa puhumaan ja sanomaan oikean asian. Saatko huijattua ystäväsi luulemaan, että hän onkin ihminen eikä tietokone?
+  quorum_longdescription: Tämä oppitunti on saatavilla näkövammaisille ja toimii näytönlukijaohjelmien kanssa. Tule Maryn kanssa vierailulle, kun Mary tulee biologian laboratorioon ohjelmoijaksi ja oppii Quorum ohjelmointikielen. Oppitunti on oppilaan ohjaama, jossa on esimerkkitehtäviä verkossa.
+  codespark_longdescription: 'Foos on hauska ja lapsiystävällinen tapa oppia ohjelmointia. Ohjelmoi söpöjä hahmoja tehtävien ratkaisemissa ja saa virtuaalinen maailma eloon. Peli on "sanoista vapaa", joten kaikki voivat pelata!'
+  kodable_longdescription: Kodable on itseohjaava iPad-peli, joka johdattelee 5+-vuotiaat lapset ohjelmoinnin perusteisiin. Opettajan tai vanhemman läsnäolo on suotavaa, mutta ei välttämätöntä.
+  tynkerapp_longdescription: Opi ohjelmoimaan ratkaisemalla hauskoja koodaustehtäviä. Rakenna helposti pelejä ja tarinoita käyttäen teemaan sopivia grafiikoja, 10+ pelirakennussettiä ja muokattavissa olevia hahmoja. Ei vaadi verkkoyhteyttä. Pääset luomuksiisi myös verkon välityksellä.
   robomindnl_longdescription: 'Opiskelijat oppivat ohjelmoinnin perusteet ohjaamalla omaa virtuaalista robottiaan. Verkkokurssi sisältää kaiken tarvittavan - lyhyet esittelyt, elokuvat, tietovisat ja automaattiset  opastukset/vinkit, jotka auttavat ohjelmointiharjoitusten kanssa. '
   flappy_longdescription: 'Käytä "vedä ja pudota" ohjelmointia tehdäksesi oman Flappy Bird-pelin ja muokkaa se erilaisen näköiseksi (Flappy Bird, Flappy Santa, tai mitä tahansa). Lisää peli puhelimeesi yhdellä napsautuksella.'
-  bitsbox_longdescription: Muokkaa omaa virtuaalista tablettiasi, sitten ohjelmoi erilaisia sovelluksia joita voit pelata ja jakaa. Yksinkertaiset läpikäyntiohjeet mahdollistavat jopa nuorten lasten ohjelmoinnin oikealla Javascriptillä, ja mitä kehittyneempi olet, sitä pidemmälle pääset.
-  makegameswithus_longdescription: Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pokemon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!
-  touchdevelop_longdescription: 'The touch-friendly editor will guide you in creating pixel art, solving the bear puzzle, or making your own jumping bird game. '
-  appinventor_longdescription: Viihdyttävät ja nopeat video-oppitunnit vievät sinut läpi kolmen yksinkertaisen sovelluksen rakentamisen Android-puhelimellesi tai tabletillesi. Suunniteltuna sekä aloittelijoille että asiantuntijoille, tämä kooditunti valmistelee sinut omien ohjelmien tekemiseen ennen kuin huomaatkaan. Kuvittele jakavasi sovelluksiasi ystävillesi! Nämä tehtävät soveltuvat sekä yksilöille ja opettajille, jotka ohjaavat kursseja.
-  blockly_longdescription: 'Onko sinulle PC:tä joissa on hidas (tai olematon) verkkoyhteys? Lataa Blocky-oppitunnit, jotka edeltivät Code.org:n oppitunteja - yksi 3MB ZIP tiedosto, joka voidaan ladata mille tahansa tietokoneelle tai käyttää muistitikulta'
-  thinkersmith2_longdescription: Oppilaat oppivat esittämään ja tallentamaan merkkejä binäärisinä, funktioina, jotka ovat päällä ja pois. Lopuksi, luokka pääsee muuntamaan omat nimikirjaimensa ja viemään ne kotiinsa mukanaan.
-  kodableunplugged_longdescription: 'Suunniteltuna käytettäväksi paperilla, fuzzFamily Frenzy on johdanto ohjelmointilogiikkaan lapsille iältään 5 tai enemmän. Opettaja selittää pelin, jonka jälkeen oppilaat ohjelmoivat luokkakaverinsa suorittamaan yksinkertaisen esteradan. '
-  projguts_longdescription: Tämä laitteeton harjoitus auttaa opiskelijoita oppimaan kuinka mallinnus ja simulointi toimii, laittaessaan opiskelijaryhmän pelaamaan eri versioita Kivi / Paperi / Sakset pelistä, jonka yhteydessä nähdään erilaisten mallinnuskokeilujen tulokset.
-  codeorg_beyond_name: Johdanto tietojenkäsittelyyn (luokat 1.-8.)
+  bitsbox_longdescription: "Customize your very own virtual tablet, then code a series of apps to play and share. Simple walkthroughs make it possible for even young kids to program real JavaScript, and the more advanced you are the further you'll go."
+  makegameswithus_longdescription: 'Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!'
+  touchdevelop_longdescription: 'Kosketusystävällinen editori opastaa sinua pikselitaiteen luomisessa, karhuarvoituksen ratkaisemisessa ja tekemään oman pelin hyppivästä linnusta. '
+  appinventor_longdescription: Viihdyttävät ja nopeat video-oppitunnit kuljettavat sinut läpi kolmen yksinkertaisen sovelluksen rakentamisen Android-puhelimellesi tai tabletillesi. Suunniteltuna sekä aloittelijoille että asiantuntijoille, tämä kooditunti valmistelee sinut omien ohjelmien tekemiseen ennen kuin huomaatkaan. Kuvittele jakavasi sovelluksiasi ystävillesi! Nämä tehtävät soveltuvat sekä yksilöille ja opettajille, jotka ohjaavat kursseja.
+  blockly_longdescription: 'Onko sinulle PC:tä joissa on hidas (tai olematon) verkkoyhteys? Lataa Blocky-oppitunnit, jotka edeltivät Code.org:n oppitunteja - voit ladata yhden 3MB ZIP tiedoston mille tahansa tietokoneelle tai käyttää sitä muistitikulta'
+  thinkersmith2_longdescription: 'Oppilaat oppivat esittämään ja tallentamaan merkkejä binäärisinä, funktioina, jotka ovat päällä tai  pois. Lopuksi luokka pääsee muuntamaan omat nimikirjaimensa ja viemään ne kotiinsa.'
+  kodableunplugged_longdescription: 'Suunniteltuna käytettäväksi paperilla, fuzzFamily Frenzy on johdanto ohjelmointilogiikkaan lapsille iältään 5 tai enemmän. Opettajan pitäisi selittää peli, jonka jälkeen oppilaat ohjelmoivat luokkakaverinsa suorittamaan yksinkertaisen esteradan. '
+  projguts_longdescription: Tämä tietokoneettoman tekemisen toiminta auttaa opiskelijoita oppimaan kuinka mallinnus ja simulointi toimii, laittaessaan oppilasryhmän pelaamaan eri versioita kivi-sakset-paperi -pelistä, ja näkemään erilaisten mallinnuskokeilujen tulokset.
+  hourofcode_longdescription: Placeholder for new code.org/hoc
+  frozen_longdescription: Koodataan Annan ja Elsan kanssa kun he tutkivat jään kauneutta ja taikaa. Tässä pelissä luot lumihiutaleita ja kuvioita luistellen ja luot taianomaisen lumimaan, jonka voit myös jakaa ystäviesi kanssa!
+  playlab_longdescription: Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!
+  codeorg_beyond_name: Johdanto tietojenkäsittelytieteeseen (luokat 1.-8.)
   khan_beyond_name: Opi tietokoneohjelmointia
   tynker_beyond_name: Opi ohjelmointia kotona
   scratch_beyond_name: Ala luovaksi koodaten
@@ -491,7 +534,7 @@ fi-FI:
   codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
   scratchjr_beyond_name: ScratchJR lukutaidottomille
-  hopscotch_beyond_name: 'Hopscotch: Ohjelmointia iPadillasi'
+  hopscotch_beyond_name: 'Hopscotch: ohjelmointia iPadillasi'
   pocketcode_beyond_name: Taskukoodi
   groklearning_beyond_name: Opi Python-ohjelmointia
   hacketyhack_beyond_name: Opi Rubyä
@@ -499,9 +542,9 @@ fi-FI:
   makegameswithus_beyond_name: Rakenna iPhone-peli selaimessasi!
   appinventor_beyond_name: AppInventor Koodaustunti
   touchdevelop_beyond_name: TouchDevelop
-  codehs_beyond_name: Opettele koodaamaan Karel koiran kanssa
-  udemy_beyond_name: Verkko-ohjelmointikurssit
-  lynda_beyond_name: Verkko-ohjelmointikurssit
+  codehs_beyond_name: Opettele koodaamaan Karel-koiran kanssa
+  udemy_beyond_name: Ohjelmointikurssit verkossa
+  lynda_beyond_name: Ohjelmointikurssit verkossa
   edx_beyond_name: Harvard CS50-kurssit
   coursera_beyond_name: Stanford CS101 -kurssit
   udacity_beyond_name: CS 101
@@ -525,18 +568,18 @@ fi-FI:
   tynker_beyond_gradelevel: 5-13-vuotiaille
   scratch_beyond_gradelevel: Ikä 8+
   lightbot_beyond_gradelevel: Kaikenikäiset
-  codecademy_beyond_gradelevel: lukio
-  kodable_beyond_gradelevel: Alkeet
-  scratchjr_beyond_gradelevel: Alkeet
+  codecademy_beyond_gradelevel: Lukio
+  kodable_beyond_gradelevel: Ala-aste
+  scratchjr_beyond_gradelevel: Ala-aste
   hopscotch_beyond_gradelevel: Yläaste +
   pocketcode_beyond_gradelevel: Yläaste +
   groklearning_beyond_gradelevel: Yläaste +
-  hacketyhack_beyond_gradelevel: lukio
+  hacketyhack_beyond_gradelevel: Lukio
   robomind_beyond_gradelevel: 8-13-vuotiaille
-  makegameswithus_beyond_gradelevel: lukio
+  makegameswithus_beyond_gradelevel: Lukio
   appinventor_beyond_gradelevel: Yläaste +
-  touchdevelop_beyond_gradelevel: lukio
-  codehs_beyond_gradelevel: lukio
+  touchdevelop_beyond_gradelevel: Lukio
+  codehs_beyond_gradelevel: Lukio
   udemy_beyond_gradelevel: Lukio +
   lynda_beyond_gradelevel: Lukio +
   edx_beyond_gradelevel: Yliopisto
@@ -554,7 +597,7 @@ fi-FI:
   lego_beyond_gradelevel: Yläaste +
   finch_beyond_gradelevel: Ikä 8+
   arduino_beyond_gradelevel: Lukio +
-  processing_beyond_gradelevel: lukio
+  processing_beyond_gradelevel: Lukio
   alice_beyond_gradelevel: Yläaste +
   sphero_beyond_gradelevel: Ikä 8+
   codeorg_beyond_platformtext: Nykyaikaiset selaimet, tabletit
@@ -562,7 +605,7 @@ fi-FI:
   tynker_beyond_platformtext: Nykyaikaiset verkkoselaimet (maksullinen)
   scratch_beyond_platformtext: Mikä tahansa selain
   lightbot_beyond_platformtext: iOS, Android (tai selain)
-  codecademy_beyond_platformtext: Nykyaikaiset vekkoselaimet. iOSY, Android sovellukset
+  codecademy_beyond_platformtext: Nykyaikaiset vekkoselaimet. iOS ja Android sovellukset
   kodable_beyond_platformtext: iPad
   scratchjr_beyond_platformtext: iPad
   hopscotch_beyond_platformtext: iPad
@@ -590,17 +633,17 @@ fi-FI:
   codea_beyond_platformtext: iPad
   lego_beyond_platformtext: Robotin osto
   finch_beyond_platformtext: Robotin osto
-  arduino_beyond_platformtext: Selain, sitten osta Kit
+  arduino_beyond_platformtext: Selain, sitten osta aloitussarja
   processing_beyond_platformtext: Nykyaikaiset verkkoselaimet
   alice_beyond_platformtext: Windows tai Mac (asennus vaaditaan)
   sphero_beyond_platformtext: Robotin osto
-  codeorg_beyond_shortdescription: Opi koodaamaan Marku Zuckerbergin ja Vihaisten lintujen kanssa!
+  codeorg_beyond_shortdescription: Opi koodaamaan Mark Zuckerbergin ja Angry Birdsin kanssa!
   khan_beyond_shortdescription: Opi piirtämään JavaScriptillä
-  tynker_beyond_shortdescription: Hauska ja osallistava kurssi lapsille luokilla 4-8
+  tynker_beyond_shortdescription: Hauska ja mukaansatempaava kurssi lapsille luokilla 4-8
   scratch_beyond_shortdescription: Luo interaktiivisia pelejä, tarinoita ja animaatioita.
   lightbot_beyond_shortdescription: Koodauskäsitteitä opettava peli
   codecademy_beyond_shortdescription: Opi JavaScript-ohjelmointia selaimessa
-  kodable_beyond_shortdescription: Hauska iPad-eli opettamaan ohjelmoinnin käsitteitä
+  kodable_beyond_shortdescription: Hauska iPad-peli opettamaan ohjelmoinnin käsitteitä
   scratchjr_beyond_shortdescription: 'Luo vuorovaikutteisia tarinoita ja pelejä käyttäen ScratchJr:ää. '
   hopscotch_beyond_shortdescription: Opi visuaalista ohjelmointia iPadillä
   pocketcode_beyond_shortdescription: Luo peli älypuhelimeesi ja jaa ystävillesi kokeiltavaksi!
@@ -610,61 +653,61 @@ fi-FI:
   makegameswithus_beyond_shortdescription: Opi tekemään iPhone-peli tunnissa
   appinventor_beyond_shortdescription: Tee oma sovelluksesi! (vain Android)
   touchdevelop_beyond_shortdescription: Ohjelmoi mobiilisovelluksia suoraan puhelimeesi, tablettiisi tai kannettavaasi
-  codehs_beyond_shortdescription: Opi Javascript-ohjelmointia hauskassa havainnollisessa ympäristössä
-  udemy_beyond_shortdescription: Kymmenittäin verkko-ohjelmointikursseja
-  lynda_beyond_shortdescription: Kymmenittäin verkko-ohjelmointikursseja
+  codehs_beyond_shortdescription: Opi JavaScript-ohjelmointia hauskassa visuaalisessa ympäristössä
+  udemy_beyond_shortdescription: Kymmenittäin ohjelmointikursseja verkossa
+  lynda_beyond_shortdescription: Kymmenittäin ohjelmointikursseja verkossa
   edx_beyond_shortdescription: Harvardin suosituin kurssi
   coursera_beyond_shortdescription: Aloita CS101-kurssilla
   udacity_beyond_shortdescription: Aloita CS101-kurssilla
   teachingtree_beyond_shortdescription: 'Verkkotietämys: Nopeaa ja Rajoittamatonta'
   kodu_beyond_shortdescription: Suunnittele kolmiulotteinen pelimaailma
   cargobot_beyond_shortdescription: Ohjelmoi robottikäsi iPadillasi
-  kidsruby_beyond_shortdescription: Opi ohjelmoimaan Rubyä käyttäen
-  w3schools_beyond_shortdescription: Opi tekemään websivustoja
-  codeavengers_beyond_shortdescription: Opi koodaamaan pelejä ja websivustoja
-  mozilla_beyond_shortdescription: Luo ja jaa websivuja
-  codecombat_beyond_shortdescription: Pelaa peliä ja opi JavaScriptiä voittaaksesi
+  kidsruby_beyond_shortdescription: Opi ohjelmoimaan Rubyllä
+  w3schools_beyond_shortdescription: Opi tekemään verkkosivustoja
+  codeavengers_beyond_shortdescription: Opi koodaamaan pelejä ja verkkosivustoja
+  mozilla_beyond_shortdescription: Luo ja jaa verkkosivuja
+  codecombat_beyond_shortdescription: Pelaa peliä ja opi JavaScriptiä, niin voit voittaa
   codea_beyond_shortdescription: Tee sovelluksia iPadillasi
   lego_beyond_shortdescription: Rakenna ja ohjelmoi robotti
   finch_beyond_shortdescription: Robotti tietojenkäsittelytieteen opetukseen
-  arduino_beyond_shortdescription: Opi Arduinoa Sparkfun:n Digital Sandbox-ohjelmistossa.
+  arduino_beyond_shortdescription: Opi Arduinoa Sparkfunin Digital Sandbox -ohjelmistossa.
   processing_beyond_shortdescription: Opi Processing-kieliä
   alice_beyond_shortdescription: Opeta ohjelmointia kolmiulotteisessa ympäristössä
-  sphero_beyond_shortdescription: SPRK tunnit antavat lapsille hauskan ensikurssin robottien ohjelmointiin tarkentaen samalla sekä matematiikan ja luonnontieteiden taitoja.
-  codeorg_beyond_longdescription: 'Opi tietojenkäsittelyn peruskäsitteitä "vedä ja pudota" ohjelmoinnilla. 3 täyttä kurssia, jossa jokainen sisältää 15-20 oppituntia, joissa vaihtelee "laitteettomat" luokkahuonetehtävät, sekä pelinomaiset, itseohjatut oppitunnit joiden videoluentojen tähtinä vierailee Bill Gates, Mark Zuckerberg, Angry Birds ja Plants vs. Zombies. Opi toisto-silmukat, ehtolausekkeet, perusalgoritmit, funktiot ja muuttujat.'
+  sphero_beyond_shortdescription: SPRK tunnit antavat lapsille hauskan ensikurssin robottien ohjelmointiin tarkentaen samalla sekä matematiikan että luonnontieteiden taitoja.
+  codeorg_beyond_longdescription: 'Opi tietojenkäsittelytieteen peruskäsitteitä "vedä ja pudota" ohjelmoinnilla. 3 täyttä kurssia, jossa jokainen sisältää 15-20 oppituntia, joissa vaihtelee "tietokoneettomat" luokkahuonetehtävät, sekä pelinomaiset, itseohjatut oppitunnit joiden videoluentojen tähtinä vierailee Bill Gates, Mark Zuckerberg, Angry Birds ja Plants vs. Zombies. Opi toisto-silmukat, ehtolausekkeet, perusalgoritmit, funktiot ja muuttujat.'
   khan_beyond_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
-  tynker_beyond_longdescription: Tynker tekee ohjelmoinnin oppimisesta hauskaa ja helppoa. Se tekee siitä havainnollista. Lapset rakentavat pelejä ja mobiilisovelluksia järjestelmällä koodilohkoja. Se poistaa tarpeen tuntea ohjelmointisyntaksia. Lapset voivat muuntaa ideat animoiduksi tarinoiksi ja matemaattiseksi taiteeksi heti. Se edistää etenevää oppimista. Samalla kun lapset oppivat perusteita, Tynker johdattaa kehittyneempiin konsepteihin, kuten syntaksipohjaiseen ohjelmointiin.
+  tynker_beyond_longdescription: Tynker tekee ohjelmoinnin oppimisesta hauskaa ja helppoa. Se tekee siitä havainnollista. Lapset rakentavat pelejä ja mobiilisovelluksia järjestelmällä koodilohkoja. Ei ole tarvetta tuntea ohjelmointisyntaksia. Lapset voivat muuntaa ideansa animoiduiksi tarinoiksi ja matemaattiseksi taiteeksi heti. Se edistää etenevää oppimista. Samalla kun lapset oppivat perusteita, Tynker johdattaa kehittyneempiin konsepteihin, kuten syntaksipohjaiseen ohjelmointiin.
   scratch_beyond_longdescription: 'Scratchin kanssa voit luoda oman interaktiivisen pelin, tarinan tai animaation &mdash; ja voit jakaa ne ystäviesi kanssa. Aloita animoimalla oma nimesi, luomalla syntymäpäiväkortti tai luomalla pong-peli.'
   lightbot_beyond_longdescription: 'Opi ohjelmoinnin peruslogiikka. Sopii 4+-vuotiaille. Tuetut alustat: iOS, Android ja selaimet. Opi tekemään komentojonoja, tunnistamaan hahmoja, käyttämään proseduureja ja hyödyntämään silmukoita!'
-  codecademy_beyond_longdescription: Codeacademy on interaktiivinen, oppilaslähtöinen johdanto tietojenkäsittelyn perusteisiin Javascript-kielellä, jota käyttävät miljoonat opiskelijat maailmassa. Olemme valmistelleet selkeän Kooditunti-kokemuksen, jossa on mukana visailuja, kalvoja ja oppilaille valmis projekti lopuksi.
-  kodable_beyond_longdescription: Kodable on itseohjaava iPad-peli, joka johdattelee 5+-vuotiaat lapset ohjelmoinnin perusteisiin. Opettajan tai vanhemman läsnäolo on optimaalista, mutta ei välttämätöntä.
+  codecademy_beyond_longdescription: Codeacademy on interaktiivinen, oppilaslähtöinen johdanto tietojenkäsittelyn perusteisiin Javascript-kielellä, jota käyttävät miljoonat opiskelijat maailmassa. Olemme valmistelleet selkeän Koodaustunti-kokemuksen, jossa on mukana visailuja, kalvoja ja oppilaille valmis projekti lopuksi.
+  kodable_beyond_longdescription: Kodable on itseohjaava iPad-peli, joka johdattelee 5+-vuotiaat lapset ohjelmoinnin perusteisiin. Opettajan tai vanhemman läsnäolo on suotavaa, mutta ei välttämätöntä.
   scratchjr_beyond_longdescription: ScratchJr on ohjelmointikieli aloittelijoille, joka mahdollistaa nuorten lasten luoda omia vuorovaikutteisia tarinoita ja pelejä. Lapset liittävät yhteen ohjelmointilohkoja, jotka laittavat hahmot liikkumaan, hyppäämään, tanssimaan ja laulamaan
-  hopscotch_beyond_longdescription: Opiskelijan ohjaama oppitunti iPadillä käyttäen Hopscotch-ohjelmointikieltä. Opiskelijat rakentavat pelejä ja sovelluksia iPadilleen iPadillään. Opiskelijat voivat työskennellä itsenäisesti tai ystäviensä kanssa (korkeintaan 3 per iPad).
+  hopscotch_beyond_longdescription: Opiskelijan ohjaama oppitunti iPadillä käyttäen Hopscotch-ohjelmointikieltä. Opiskelijat rakentavat pelejä ja sovelluksia iPadilleen iPadillään. Opiskelijat voivat työskennellä itsenäisesti tai ystäviensä kanssa (korkeintaan 3 henkilöä yhtä iPadiä kohden).
   pocketcode_beyond_longdescription: Luo oma pelisi älypuhelimellesi Pocket Codella! Auta laskuvarjohyppääjä Steve pakettiensa toimitamisessa. Voit jakaa pelisi ystävillesi ja muille käyttäjille kokeiltavaksi!
-  groklearning_beyond_longdescription: 'Johdantokurssi ohjelmointiin, heille, joilla ei ole yhtään ohjelmointikokemusta, käyttäen Python-ohjelmointikieltä. Meidän ainutlaatuinen yhdistelmä sekä alustavaa sisältöä ja haasteita ohjaa sinut Pythonin ymmärtämisen kautta ohjelmointiin. Olemme opettaneet tämän sisällön eri ikäisille ja taustaisille opiskelijoille  ja olemme varmoja, että kurssi soveltuu myös sinulle.'
-  hacketyhack_beyond_longdescription: 'Hackety Hack opettaa sinulle ohjelmoinnin aivan perusteita alkeista lähtien. Ei tarvita aikaisempaa ohjelmointikokemusta! Hackety Hack:n avulla, opit Ruby ohjelmointikielen. Rubyä käytetään kaikenlaisiin ohjelmiin, sekä työpöytäsovelluksiin että webbisivuihin [Huom: vaatii työpöytäasennuksen]'
-  robomind_beyond_longdescription: 'Opiskelijat oppivat  ohjelmoinnin perusteet kontrolloiden oman virtuaalisen robottinsa. Tämä verkkokurssi sisältää kaiken tarvittavan: lyhyet esitykset, elokuvat, tietovisat ja automaattisen opastuksen/vinkit ohjelmointitehtävien avuksi. '
-  makegameswithus_beyond_longdescription: Osaatko hiukan ObjectiveC:tä? Opi iPhone pelin tekeminen tunnissa! Opastamme sinut prosessin läpi, ohjelmoimaan, testaamaan ja pelaamaan pelisi täysin selaimessa, jonka jälkeen voit jakaa sen Facebookissa ystävillesi kokeiltavaksi! Ei vaadi aikaisempaa kokemusta iPhonelle kehittämisestä. Sinun täytyy ymmärtää mitä ovat muuttujat, metodit ja oliot.
-  appinventor_beyond_longdescription: Viihdyttävät ja nopeat video-oppitunnit vievät sinut läpi kolmen yksinkertaisen sovelluksen rakentamisen Android-puhelimellesi tai tabletillesi. Suunniteltuna sekä aloittelijoille että asiantuntijoille, tämä kooditunti valmistelee sinut omien ohjelmien tekemiseen ennen kuin huomaatkaan. Kuvittele jakavasi sovelluksiasi ystävillesi! Nämä tehtävät soveltuvat sekä yksilöille ja opettajille, jotka ohjaavat kursseja.
+  groklearning_beyond_longdescription: 'Johdantokurssi ohjelmointiin heille, joilla ei ole yhtään ohjelmointikokemusta, käyttäen Python-ohjelmointikieltä. Ainutlaatuinen yhdistelmämme sekä johdantosisältöä että haasteita ohjaa sinut Python-kielen ymmärtämisen kautta itse ohjelmointiin. Olemme opettaneet tämän sisällön eri ikäisille ja taustaisille opiskelijoille  ja olemme varmoja, että kurssi soveltuu myös sinulle.'
+  hacketyhack_beyond_longdescription: 'Hackety Hack opettaa sinulle ohjelmoinnin perusteita aivan alkeista lähtien. Et tarvitse aikaisempaa ohjelmointikokemusta! Hackety Hack opettaa sinulle Ruby-ohjelmointikielen. Rubyä käytetään kaikenlaisiin ohjelmiin työpöytäsovelluksista webbisivuihin [Huom: vaatii työpöytäasennuksen]'
+  robomind_beyond_longdescription: 'Opiskelijat oppivat ohjelmoinnin perusteet kontrolloiden omaa virtuaalista robottiaan. Tämä verkkokurssi sisältää kaiken tarvittavan: lyhyet esitykset, elokuvat, tietovisat ja automaattisen opastuksen/vinkit ohjelmointitehtävien avuksi. '
+  makegameswithus_beyond_longdescription: Osaatko hiukan ObjectiveC:tä? Opi iPhone-pelin tekeminen tunnissa! Opastamme sinut prosessin läpi, ohjelmoimaan, testaamaan ja pelaamaan pelisi täysin selaimessa, jonka jälkeen voit jakaa sen Facebookissa ystävillesi kokeiltavaksi! Ei vaadi aikaisempaa kokemusta iPhonelle kehittämisestä. Sinun täytyy ymmärtää mitä ovat muuttujat, metodit ja oliot.
+  appinventor_beyond_longdescription: Viihdyttävät ja nopeat video-oppitunnit kuljettavat sinut läpi kolmen yksinkertaisen sovelluksen rakentamisen Android-puhelimellesi tai tabletillesi. Suunniteltuna sekä aloittelijoille että asiantuntijoille, tämä kooditunti valmistelee sinut omien ohjelmien tekemiseen ennen kuin huomaatkaan. Kuvittele jakavasi sovelluksiasi ystävillesi! Nämä tehtävät soveltuvat sekä yksilöille ja opettajille, jotka ohjaavat kursseja.
   touchdevelop_beyond_longdescription: TouchDevelop antaa sinun luoda sovelluksia iPad-, Android-, PC-, Mac, Windows Phone-alustoille. Meidän kosketusystävällinen editorimme tekee ohjelmoinnista hauskaa, jopa sinun puhelimellasi tai tabletillasi!
-  codehs_beyond_longdescription: 'Opi ohjelmoinnin perusteet Karel-koiran avulla, hauska, lähestyttävä ja havainnollinen ohjelmoinnin johdanto, jossa ohjeiden antaminen tietokoneelle on kuin komentojen antaminen koiralle. Tämä oppitunti on mahtava opettajan ohjauksessa, mutta voidaan suorittaa itsenäisesti. [Huom.: maksu vaaditaan]'
-  udemy_beyond_longdescription: 'Vaikka et olisi koskaan nähnyt riviäkään koodia, tai jos ohjelmoit elääksesi, Udemyllä on sinulle kursseja, joita ammattilaiset ohjaajat opettajat. [Huom. maksu vaaditaan]'
-  lynda_beyond_longdescription: 'Opi kuinka ohjelmoit, luot ja rakennat websovelluksia, C ja C++ olio-ohjelmointikielten perusteista, aina Javan kirjoittamiseen. Kehittäjille tarkoitetut oppitunnit auttavat sinua kehittämään ja luomaan mobiilisovelluksia, työskentelemään PHP:llä ja MySQL tietokannoilla, aloittamaan tilastollisella ohjelmointikielellä R, ja paljon muuta. [Huom. maksu vaaditaan]'
-  edx_beyond_longdescription: CS50x on Harward Collegen johdanto tietojenkäsittelyn älykkäisiin sovelluksiin ja ohjelmoinnin taiteeseen pääaineopiskelijoille ja muille, joilla joko on tai ei ole aikaisempaa ohjelmointikokemusta. Sisältöihin kuuluvat abstraktiot, algoritmit, tietorakenteet, kapselointi, resurssienhallinta, tietoturva, ohjelmistotuotanto ja webkehitys. Ohjelmointikieliin kuuluvat C, PHP ja JavaScript sekä SQL, CSS ja HTML. CS50x-kurssin kampusversio on Harvardin toiseksi suurin kurssi.
-  coursera_beyond_longdescription: 'Stanfordin CS 101 luokkaa opettaa Nick Parlante (ilmaiseksi!). CS101 opettaa tietojenkäsittelytieteen keskeisimmät ideat yleisölle, jolla ei ole lainkaan etukäteiskokemusta. Pelaa ja kokeile lyhyillä koodiesimerkeillä, joilla tuot ilmi tietokoneiden vahvuudet ja rajoitukset. CS101 luo myös yleisen taustan nykypäivän tietokoneisiin: mikä tietokone on, mikä laitteisto, mikä ohjelmisto ja mkä on internet. Ei vaadita muuta aikaisempaa osaamista kuin kyvykkyys käyttää www-selainta.'
-  udacity_beyond_longdescription: "Tällä kurssilla opit tietojenkäsittelyn avainkäsitteitä ja opit kuinka kirjoitat omia tietokoneohjelmiasi 'webryömijän' kontekstissa. Tälle kurssille ei vaadita aiempaa ohjelmointiosaamista. Aloittelijat ovat tervetulleita! Kurssin lopussa, olet oppinut tietojenkäsittelyn avainkäsitteet ja tarpeeksi ohjelmointia, jonka avulla voit kirjoittaa Python-ohjelmia ongelmien ratkaisemiseksi itsenäisesti. Tämä kurssi valmistelee sinut siirtymään keskitason tietojenkäsittelykursseille."
-  teachingtree_beyond_longdescription: TeachingTree on avoin alusta, joka antaa kenen tahansa organisoida koulutussisältöjä. Tavoitteenamme on antaa opiskelijoille juuri heidän tarvitsema videopätkä, jonka he tarvitsevat yksittäisen käsitteen oppimiseksi. Kaikkia kannustetaan auttamaan joko videoita lisäämällä tai konseptien merkitsemisessä.
-  kodu_beyond_longdescription: 'Kodu auttaa lapsia luomaan pelejä PC ja XBoxille yksinkertaisen visuaalisen ohjelmointikielen avulla. Kodua voidaan käyttää opettamaan luovutta, ongelmanratkaisua, tarinankerrontaa, kuin myös ohjelmointia. Kuka tahansa voi käyttää Kodua pelin tekemiseksi, sekä nuoret lapset että aikuiset ilman suunnittelu- tai ohjelmointitaitoja. Kodu-ohjelmiston on saatavilla PC:lle ilmaiseksi. Kodu Xboxille on saatavilla Yhdysvalloissa XBox Marketplacessa, Indie Games-kanavalta noin 5$ hintaan.'
+  codehs_beyond_longdescription: 'Opi ohjelmoinnin perusteet Karel-koiran avulla, tässä hauskassa, lähestyttävässä ja havainnollisessa  ohjelmoinnin johdannossa, jossa ohjeiden antaminen tietokoneelle on kuin komentojen antaminen koiralle. Tämä oppitunti on mahtava opettajan ohjauksessa, mutta voidaan suorittaa itsenäisesti. [Huom.: maksullinen]'
+  udemy_beyond_longdescription: 'Vaikka et olisi koskaan nähnyt riviäkään koodia, tai vaikka jos ohjelmoit elääksesi, Udemyllä on sinulle kursseja, joita opettavat ammattilaiset ohjaajat. [Huom.: maksullinen]'
+  lynda_beyond_longdescription: 'Opi kuinka ohjelmoit, luot ja rakennat verkkosovelluksia, C ja C++ olio-ohjelmointikielten perusteista, aina Javan kirjoittamiseen. Kehittäjille tarkoitetut oppitunnit auttavat sinua kehittämään ja luomaan mobiilisovelluksia, työskentelemään PHP:llä ja MySQL tietokannoilla, aloittamaan tilastollisella ohjelmointikielellä R, ja paljon muuta. [Huom.: maksullinen]'
+  edx_beyond_longdescription: CS50x on Harward Collegen johdanto tietojenkäsittelytieteen älykkäisiin sovelluksiin ja ohjelmoinnin taiteeseen pääaineopiskelijoille ja muille, joilla joko on tai ei ole aikaisempaa ohjelmointikokemusta. Sisältöihin kuuluvat abstraktiot, algoritmit, tietorakenteet, kapselointi, resurssienhallinta, tietoturva, ohjelmistotuotanto ja verkkokehitys. Ohjelmointikieliin kuuluvat C, PHP ja JavaScript sekä SQL, CSS ja HTML. CS50x-kurssin kampusversio on Harvardin toiseksi suurin kurssi.
+  coursera_beyond_longdescription: 'Stanfordin CS 101 kurssi, opettajana Nick Parlante. Ilmainen. CS 101 opettaa tietojenkäsittelytieteen keskeisimmät käsitteet yleisölle, jolla ei ole lainkaan etukäteiskokemusta aiheesta. Leikimällä lyhyillä koodiesimerkeillä, tuot esiin tietokoneiden vahvuudet ja rajoitukset. CS 101 antaa myös yleisen taustan nykypäivän tietokoneisiin: mikä tietokone on, mitä laitteisto on, mitä ohjelmistot ovat ja mkä on internet. Esitietovaatimuksena vain selaimen käyttö.'
+  udacity_beyond_longdescription: Tällä kurssilla opit tietojenkäsittelytieteen avainkäsitteitä ja opit kuinka kirjoitat omia tietokoneohjelmia. Esimerkkinä käytämme hakurobottia. Kurssille ei vaadita aiempaa ohjelmointiosaamista; aloittelijat ovat tervetulleita! Kurssin lopussa olet oppinut avainkäsitteet ja tarpeeksi ohjelmointia, jotta voit kirjoittaa itsenäisesti erilaisia Python-ohjelmia. Tämä kurssi valmistelee sinut siirtymään keskitason tietojenkäsittelytieteen kursseille.
+  teachingtree_beyond_longdescription: TeachingTree on avoin alusta, joka antaa kenen tahansa organisoida koulutussisältöjä. Tavoitteenamme on antaa opiskelijoille kulloinkin juuri se videopätkä, jonka he tarvitsevat yksittäisen käsitteen oppimiseksi. Kaikkia kannustetaan auttamaan joko videoita lisäämällä tai käsitteiden tunnistamisessa.
+  kodu_beyond_longdescription: 'Kodu auttaa lapsia luomaan pelejä PC:lle ja XBoxille yksinkertaisen visuaalisen ohjelmointikielen avulla. Kodua voidaan käyttää opettamaan luovuutta, ongelmanratkaisua, tarinankerrontaa sekä ohjelmointia. Kuka tahansa voi käyttää Kodua pelin tekemiseksi - sekä lapset että aikuiset, ilman suunnittelu- tai ohjelmointitaitoja. Kodu-ohjelmisto on saatavilla PC:lle ilmaiseksi. Kodu Xboxille on saatavilla Yhdysvalloissa XBox Marketplacessa, Indie Games-kanavalta noin 5$ hintaan.'
   cargobot_beyond_longdescription: Cargo-Bot on älypeli, jossa opetat robottia liikuttamaan laatikoita. Kuulostaa yksinkertaiselta, eikö vain? Pelissä on 36 oivaltavan älykästä peliä, mieleenjäävä musiikki ja upeat retinagrafiikat. Voit jopa tallentaa ratkaisusi ja jakaa ne YouTubessa ystävillesi.
-  kidsruby_beyond_longdescription: 'Pidä hauskaa ja tee pelejä, tai ratkaise kotitehtäväsi Rubyllä! Kerro vain vanhemmillesi tai opettajillesi että opit Ruby ohjelmointia... ;). Ilmainen ja toimii millä tahansa tietokoneella. [Huom. Vaatii työpöytäasennuksen]'
-  w3schools_beyond_longdescription: Opi luomaan verkkosivustoja tietokoneellasi. Opi palvelimen perusteet alle päivässä. Opi tietokantojen lisääminen verkkosivullesi
-  codeavengers_beyond_longdescription: Opi kuinka ohjelmoida pelejä, sovelluksia ja verkkosivustoja. Asiantuntijoiden suunnittelema, jossa on täydellinen vaikeustaso aloittelijoille, helposti ymmärrettävät ohjeet ja upea apu kun tarvitset sitä. HTML, CSS ja Javascript-kurssimme sisältävät ohjelmointihaasteita ja kertauspelejä, jotka tekeävt oppimisen hauskaksi ja tehokkaaksi kaikenikäisille.
-  mozilla_beyond_longdescription: Thimble tekee omien verkkosivujen luomisen ja jakamisen naurettavan yksinkertaiseksi. Kirjoita ja muokkaa HTML:ää ja CSS:ää suoraan selaimessasi, sitten heti esikatsele työtäsi. Isännöi ja jaa valmis projektisi yhdellä napsautuksella. Täydellinen sekä aloittelijoille ja asiantuntijoille.
-  codecombat_beyond_longdescription: Play as a Wizard using code (spells) to control your heroes, navigate mazes, defeat ogres, trick enemies, and rescue allies! Learn JavaScript in this HTML 5 web game for complete beginners.
-  codea_beyond_longdescription: "Codea for iPad lets you create games and simulations &mdash; or just about any visual idea you have. Turn your thoughts into interactive creations that make use of iPad features like Multi-Touch and the accelerometer. We think Codea is the most beautiful code editor you'll use, and it's easy. Codea is designed to let you touch your code. Want to change a number? Just tap and drag it. How about a color, or an image? Tapping will bring up visual editors that let you choose exactly what you want."
-  lego_beyond_longdescription: Create small, customizable and programmable robots using LEGO pieces.
-  finch_beyond_longdescription: "The Finch is a new robot for computer science education. Its design is the result of a four year study at Carnegie Mellon's CREATE lab. The Finch is designed to support an engaging introduction to the art of programming. It has support for over a dozen programming languages and environments, including several environments appropriate for students as young as eight years old. The Finch was designed to allow students to write richly interactive programs."
-  arduino_beyond_longdescription: Arduini on suosittu alusta, jolla taiteilijat ja suunnittelijat voivat työstää oikeita antureita, LEDejä, summereita ja muuta. Sarkfun Virtual Sandbox opettaa sinulle oikeaa Arduino-koodia suoraan omassa selaimessasi.
-  processing_beyond_longdescription: Processing is a programming language, development environment, and online community. Since 2001, Processing has promoted software literacy within the visual arts and visual literacy within technology. Initially created to serve as a software sketchbook and to teach computer programming fundamentals within a visual context, Processing evolved into a development tool for professionals. Today, there are tens of thousands of students, artists, designers, researchers, and hobbyists who use Processing for learning, prototyping, and production.
-  alice_beyond_longdescription: Using an innovative programming environment to support the creation of 3D animations, the Alice Project provides tools and materials for teaching and learning computational thinking, problem solving, and computer programming across a spectrum of ages and grade levels.
+  kidsruby_beyond_longdescription: 'Pidä hauskaa ja tee pelejä, tai ratkaise kotitehtäväsi Rubyllä! Kerro vanhemmillesi tai opettajillesi että opiskelet Ruby ohjelmointia... ;). Ilmainen, ja toimii millä tahansa tietokoneella. [Huom. Vaatii työpöytäasennuksen]'
+  w3schools_beyond_longdescription: Opi luomaan verkkosivustoja. Opi palvelipuolen perusteet alle päivässä. Opi hyödyntämään tietokantoja verkkosivuillasi
+  codeavengers_beyond_longdescription: 'Opi kuinka ohjelmoida pelejä, sovelluksia ja verkkosivustoja. Asiantuntijoiden suunnittelema kurssi, jossa on täydellinen vaikeustaso aloittelijoille, helposti ymmärrettävät ohjeet ja upea apu tarvittaessa. HTML-, CSS- ja Javascript-kurssimme sisältävät ohjelmointihaasteita ja kertauspelejä, jotka tekevät oppimisen hauskaksi ja tehokkaaksi kaikenikäisille.'
+  mozilla_beyond_longdescription: Thimble tekee omien verkkosivujen luomisen ja jakamisen naurettavan yksinkertaiseksi. Kirjoita ja muokkaa HTML:ää ja CSS:ää suoraan selaimessasi ja esikatsele työsi heti. Jaa valmis projektisi yhdellä napsautuksella. Täydellinen sekä aloittelijoille ja asiantuntijoille.
+  codecombat_beyond_longdescription: Pelaa velhona käyttäen koodia (taikoja) sankariesi kontrolloimiseen, navigoi labyrinttejä, voita peikot, huijaa vihollisia ja pelasta liittolaiset! Opi JavaScriptiä tässä aloittelijoille tarkoitetussa HTML 5 verkkopelissä.
+  codea_beyond_longdescription: 'Codea iPadille antaa sinun luoda pelejä ja simulaatioita &mdash; melkein mistä tahansa visuaalisesta ideasta joka sinulla on. Muunna ajatuksesi vuorovaikutteisiksi luomuksiksi jotka hyödyntävät iPadin toimintoja Multi-Touch ja kiihtyvyysmittari. Uskomme että Codea on kaunein käyttämäsi koodieditori ja vielä helppokäyttöinenkin. Codea on suunniteltu jotta voit koskettaa koodiasi. Haluatko vaihtaa numeron? Vain kosketa ja vedä. Entäpä väri tai kuva? Pyyhkäisy  käynnistää visuaalisen editorin, jossa voit valita mitä haluat.'
+  lego_beyond_longdescription: Luo pieniä, muokattavia ja ohjelmoitavia robotteja käyttäen LEGO palikoita.
+  finch_beyond_longdescription: Finch on uusi robotti tietojenkäsittelytieteen opetukseen. Se on Carnegie Mellonin CREATE laboratorion neljän vuoden tutkimuksen tulos. Finch on suunniteltu antamaan innostava johdanto ohjelmoinnin taitoihin. Siinä on tuki yli tusinalle ohjelmointikielelle ja -ympäristölle, sisältäen useita ympäristöjä jotka soveltuvat niinkin nuorille kuin kahdeksan vuotiaille oppilaille. Finch suunniteltiin antamaan opiskelijoille mahdollisuus kirjoittaa rikkaita vuorovaikutteisia ohjelmia.
+  arduino_beyond_longdescription: Arduini on suosittu alusta, jolla taiteilijat ja suunnittelijat voivat käyttää oikeita antureita, LEDejä, summereita ja muita laitteita. Sparkfun Virtual Sandbox opettaa sinulle oikeaa Arduino-koodia suoraan omassa selaimessasi.
+  processing_beyond_longdescription: Processing on ohjelmointikieli, kehitysympäristö ja verkkoyhteisö. Vuodesta 2001 lähtien Processing on kannustanut ohjelmointilukutaitoa kuvaamataiteissa ja visuaalista lukutaitoa teknologiassa. Aluksi se luotiin palvelemaan ohjelmoinnin luonnoskirjana ja opettamaan ohjelmoinnin perusteita visuaalisessa ympäristössä, josta Processing on kehittynyt ammattilaisten kehitystyökaluksi. Nykyään kymmenet tuhannet opiskelijat, suunnittelijat, tutkijat ja harrastajat käyttävät Processingia oppimisessa, prototyypeissä ja tuotannossa.
+  alice_beyond_longdescription: Käyttäen innovatiivista ohjelmointiympäristöä tukemaan 3D-animaatioiden luomista, Alice-projekti tuottaa työkaluja ja materiaaleja laskennalliseen ajattelun opetamiseen ja oppimiseen, ongelmanratkaisuun ja tietokoneohjelmointiin eri ikäisille ja eri luokka-asteille.
   sphero_beyond_longdescription: Robottikurssilla lapset oppivat leikin lomassa ohjelmoimaan. Samalla tulee harjoiteltua myös matematiikan ja luonnontieteiden taitoja.

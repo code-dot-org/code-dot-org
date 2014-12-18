@@ -43,8 +43,8 @@ sv:
           desc: Pussel (beta)
           Jigsaw: Steg 1
         Step Levels:
-          desc: Maze (beta)
-          MazeStep: Stage Step
+          desc: Labyrint (beta)
+          MazeStep: Scen steg
         edit-code:
           desc: Redigera Kod (beta)
           MazeEC: Steg 1
@@ -65,8 +65,8 @@ sv:
           desc: Pussel (beta)
           Jigsaw: Steg 1
         step:
-          desc: Maze (beta)
-          MazeStep: Stage Step
+          desc: Labyrint (beta)
+          MazeStep: Scen steg
         wordsearch:
           desc: Spelling Bee (beta)
           WordSearch: Steg 1
@@ -74,7 +74,7 @@ sv:
       name:
         Unplug1: Introduktion till Datavetenskap
         Maze: Labyrinten
-        Multi: Multiple Choice Stuffs
+        Multi: Flervals grejor
         Unplug2: Uträkningstänkande
         Unplug3: Kalkyleringsprogrammering
         Artist: Konstnären
@@ -97,11 +97,11 @@ sv:
         Bounce: Studsa
         Flappy: Flappy Bird
         Jigsaw: Pussel
-        MazeStep: Maze Step Mode
-        Wordsearch: Wordsearch
+        MazeStep: Labyrint steg-sort
+        Wordsearch: WordSearch
         Webapp: Webapp
         ArtistEC: Konstnären
-        TextMatch: Text Match
+        TextMatch: Textmatchning
         StudioEC: Play Lab
     trophy:
       name:
@@ -121,7 +121,7 @@ sv:
         parameters: Funktioner med parametrar
     level:
       instructions:
-        maze_2_2: 'Can you help me to catch the naughty pig? Stack a couple of "move forward" blocks together and press "Run" to help me get there. '
+        maze_2_2: 'Kan du hjälpa mig att fånga den dumma grisen? Sätt ihop ett par "gå framåt" block och tryck på "Kör" för att hjälpa mig komma dit. '
         maze_2_1: Den här grisen stör mig. Hjälp mig att hitta honom!
         maze_2_2_5: Lägg ut vägen och led mig till den dumma grisen. Undvik TNT:t annars flyger fjädrarna!
         maze_2_3: Led mig till den gröna elakheten! (Se upp för TNT)
@@ -133,7 +133,7 @@ sv:
         maze_2_9: "Ok, försök nu att använda det nya 'upprepa tills' blocket - det kommer att 'upprepa tills' jag når den irriterande grisen."
         maze_2_10: 'Ok, en sista gång för att övning - kan du lösa den här med endast 4 block?'
         maze_2_11: 'Kära person.  Mig zombie. Mig hungrig. Måste... komma... till solros... Kan du få mig dit med bara 5 block?'
-        maze_2_12: Ok, detta är liknande, men lita annorlunda. Kan du göra det på bara 5 block?
+        maze_2_12: Den här är liknande, men lite annorlunda. Kan du klara det med bara 5 block?
         maze_2_13: 'Använda det nya "om"-blocket för att låta mig avgöra när jag ka svänga. Tips: behöver du bara ett block till, men lär dig hur vi satte upp det så du kan göra det på egen hand nästa gång.'
         maze_2_14: 'Ok, detta är precis som det förra pusslet, men du måste komma ihåg hur du använder "Om"-blocket och "Upprepa"-blocket tillsammans.'
         maze_2_15: 'Jag vill ha solros! Använd ett "Om"-block för att få mig dit med minsta antalet block.'
@@ -152,7 +152,7 @@ sv:
         turtle_1_9: Kan du gissa vilket nummer som ska ersätta frågetecknen för att rita en cirkel?
         turtle_1_10: 'Du klarade det! Nu, rita vad du vill. Några roliga idéer: en streckfigur, snöflinga eller spiral. Prova också det nya "Bredd"-blocket. Ha kul!'
         turtle_4_1: 'Kan du rita en triangel (med kanter som är 100 pixlar) med endast 3 block? Tips: Använd ett "Upprepa"-block.'
-        turtle_4_2: 'Add a "turn right by 90 degrees" block somewhere in the middle of the program already out on the workspace to draw these triangles.'
+        turtle_4_2: 'Lägga till ett "sväng höger precis vid 90 grader" block någonstans mitt i programmet som redan finns  på arbetsytan för att rita dessa trianglar.'
         turtle_4_3: "Pk, här är koden du skrev som ritar en ensam triangel. Kan du lägga till ett 'upprepa' -block och ett 'rotera'-block för att skapa en vacker blomma?"
         turtle_4_4: 'Här är samma kod från föregående pussel, men den roterar bara 36 grader efter att ha ritat varje triangel. Hur många gånger behöver det upprepas? (Ledtråd: efter 360 graders rotation blir det en hel cirkel)'
         turtle_4_5: 'Här är samma kod från föregående pussel, men den upprepar rotationen 36 gånger. Hur många grader borde rotationen vara? (Ledtråd: en 360 graders sväng blir en hel cirkel) '
@@ -223,116 +223,109 @@ sv:
         maze_3_2: Skriv ett program till mig som gör att jag kan gå hela vägen till grisen.
         maze_3_3: Hur ska jag komma till grisen? Försäkra dig om att jag inte springer in i lådan med TNT!
         maze_3_4: Argh! Skriv ett program till mig som tar mig runt lådan med TNT och till grisen.
-        bounce_1: 'Attach a block to the "when left arrow" block and press "Run". Move the paddle using the left arrow to reach the finish target.'
-        bounce_2: 'Attach a block to the "when right arrow" and "when left arrow" blocks. Move the paddle to reach both finish targets.'
-        bounce_3: 'Now try something similar with the "when up arrow" block. Move the paddle to the finish target at the top.'
-        bounce_4: This time you need to add four blocks. Move the paddle to all four finish targets to complete this puzzle.
-        bounce_5: |-
-          We're going to send a ball flying down towards the paddle. Attach a block to the "when ball hits paddle" block to ensure the ball reaches the finish target.
-        bounce_6: 'Now the finish target is on the top. You need to attach blocks to both of the "when ball hits" blocks to solve this puzzle.'
-        bounce_7: 'Attach blocks to each of the "when" blocks. Bounce the ball until it hits the finish target.'
-        bounce_10: 'There is a now a goal at the top. Attach the "score point" and "score opponent point" blocks to the "when ball in goal" and "when ball misses paddle" blocks to make a game. See how many points you can score before your opponent scores twice.'
-        bounce_11: 'You can now attach blocks to the "when run" block. You have to attach the new "launch new ball" block in more than one place. Also, try changing the scene or the speed of the paddle and the ball and see how many points you can score before your opponent scores twice.'
-        bounce_12: "Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Finish to let friends try your game on their phones."
-        Custom_builder: 'Drag blocks from the toolbox to the workspace to draw the level you wish to create. Press "Run" when you are ready.'
-        flappy_1: 'Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.'
-        flappy_2: |-
-          Now we've added some ground.  Attach a block to the "when hit the ground" block.  Your code needs to 'END GAME' when Flappy crashes.
-        flappy_3: 'The "when run" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target.'
-        flappy_4: |-
-          Flappy will fly through obstacles unless you write code to make him crash. Attach a block to the "when hit an obstacle" block. Your code needs to 'END GAME' when Flappy crashes into the first set of pipes.
-        flappy_5: |-
-          Let's add a scoreboard, and count points when Flappy makes it past obstacles. Add to the "when pass an obstacle" block, and then score a point by flying Flappy through the first set of pipes.
-        flappy_6: See if you can still score a point after making Flappy flap either a smaller or larger amount.
-        flappy_7: 'Next, try changing the scene by attaching another block to the "when run" block.'
-        flappy_8: You can set visuals anytime, not just when the game starts. Try setting a RANDOM scene when other events happen, for example, when passing an obstacle.
-        flappy_9: To mix things up, when hitting an obstacle or the ground, instead of ending the game try setting the score back to 0.
-        flappy_11: "Create your own Flappy game. You can change all the visuals and all the rules, even the gravity. When you're done, click Finish to let friends try your game on their phones."
-        flappy_k1_1: Play Flappy
-        flappy_k1_2: 'Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.'
-        flappy_k1_3: |-
-          Now we've added some ground.  Attach a block to the "when hit the ground" block.  Your code needs to 'END GAME' when Flappy crashes.
-        flappy_k1_4: 'The "when run" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target.'
-        flappy_k1_5: |-
-          Flappy will fly through obstacles unless you write code to make him crash. Attach a block to the "when hit an obstacle" block. Your code needs to 'END GAME' when Flappy crashes into the first set of pipes.
-        flappy_k1_6: |-
-          Let's add a scoreboard, and count points when Flappy makes it past obstacles. Add to the "when pass an obstacle" block, and then score a point by flying Flappy through the first set of pipes.
-        flappy_k1_7: See if you can score multiple points for making it past an obstacle
-        flappy_k1_8: 'Next, try changing the scene by attaching another block to the "when run" block.'
-        flappy_k1_9: 'Try changing the player by attaching a "set player" block to the "when run" block.'
-        jigsaw_1: Click the block
-        jigsaw_2: Drag the block to the target
-        jigsaw_3: Arrange the blocks to form the image
-        jigsaw_4: Arrange the blocks to form the image
-        jigsaw_5: Arrange the blocks to form the image
-        jigsaw_6: Arrange the blocks to form the image
-        jigsaw_7: Arrange the blocks to form the image
-        jigsaw_8: Arrange the blocks to form the image
-        jigsaw_9: Arrange the blocks to form the image
-        jigsaw_10: Arrange the blocks to form the image
-        jigsaw_11: Arrange the blocks to form the image
-        jigsaw_12: Arrange the blocks to form the image
-        jigsaw_13: Fix the puzzle!
-        mazestep_1: Maze step description here
-        mazestep_2: Maze step description here
-        mazestep_3: Maze step description here
-        mazestep_4: Maze step description here
-        mazestep_5: Maze step description here
-        studio_c2_1: 'Can you make this dog say "hello world"?'
-        studio_c2_2: Can you make the dog say something and then have the cat say something afterwards?
-        studio_c2_3: Can you write a program to make this dog move to the cat?
-        studio_c2_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
-        studio_c2_5: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_c2_6: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
-        studio_c2_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
-        studio_c2_8: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c2_9: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
-        studio_c2_10: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
-        studio_c2_11: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
-        studio_c3_story_1: 'Can you make this dog say "hello world"?'
-        studio_c3_story_2: Can you make the dog say something and then have the cat say something afterwards?
-        studio_c3_story_3: Can you write a program to make this dog move to the cat?
-        studio_c3_story_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
-        studio_c3_story_5: Can you add a block to make the octopus happy?
-        studio_c3_story_6: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
-        studio_c3_game_1: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_c3_game_2: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
-        studio_c3_game_3: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
-        studio_c3_game_4: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c3_game_5: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
-        studio_c3_game_6: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
-        studio_c3_game_7: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
-        studio_playlab_1: 'Penguin wants to say "hello" - can you help him?'
-        studio_playlab_2: 'Cave Boy (actor 1) and Cave Girl (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
-        studio_playlab_3: Can you help Tennis Girl get to the flag?
-        studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor 2) and play a sound when he gets there?
-        studio_playlab_5: 'Can you help the Spacebot say "greetings earthlings" when it is clicked? Don’t forget to click it after you click Run'
-        studio_playlab_6: Can you help the Witch move around using the up/down/right/left arrow keys to get to all the magical fireballs?
-        studio_playlab_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help the wizard move right and left repeatedly?'
-        studio_playlab_8: Can you add a block to score a point and a block to play a sound when the unicorn runs into the wizard, and then move him with the arrows until you score?
-        studio_playlab_9: Set the background for this alien invasion and help the Spacebot get to the alien faster by changing its speed. Then move him with the arrow keys to get to the Spacebot and alert everyone else
-        studio_playlab_10: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
-        studio_full_sandbox: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
-        studio_k1_1: 'Can you make this dog say "hello world"?'
-        studio_k1_2: Can you make the dog say something and then have the cat say something afterwards?
-        studio_k1_3: Can you write a program to make this dog move to the cat?
-        studio_k1_4: 'Make the dog move to the cat and the cat say "hello" when he gets there.'
-        studio_k1_5: Can you add a block to make the octopus happy?
-        studio_k1_6: Create your own story! Move around the cat and dog, and make them say things.
-        maze_wordsearch_k_1: Move me to spell the word EAST
-        maze_wordsearch_k_2: Move me to spell the word SOUTH
-        maze_wordsearch_k_3: Move me to spell the word WEST
-        maze_wordsearch_k_4: Move me to spell the word NORTH
-        maze_wordsearch_k_6: Move me East and then South to spell the word JUMP
-        maze_wordsearch_k_9: Move me one way, then another to spell the word CODE
-        maze_wordsearch_k_13: Move me one way, then another to spell the word DEBUG
-        maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
-        maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
-        maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
-        webapp_ec_simple: Create your web app by using createHtmlBlock.
-        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColor" block.'
-        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "penWidth" block. Have fun!'
-        studio_ec_sandbox: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
+        bounce_1: 'Lägg till ett block till den "när vänster pile" blocket och tryck på "Kör". Flytta paddeln med vänsterpilen för att nå målet.'
+        bounce_2: 'Lägg till ett block till  "när höger pil" och "när vänster pilen" blocken. Flytta paddeln för att nå båda slutmålen.'
+        bounce_3: 'Prova nu något liknande med blocket "när pil upp". Flytta paddeln till slutmålet längst upp.'
+        bounce_4: Den här gången måste du lägga till fyra block. Flytta paddeln för att alla fyra slutmålen för att slutföra detta pussel.
+        bounce_5: 'Vi kommer att skicka en flygande ner mot paddeln. Lägg till ett block till "när bollen träffar paddel" blocket att säkerställa att bollen når slutmålet.'
+        bounce_6: 'Nu är slutmålet längst upp. Du måste koppla block till båda "när bollen träffar" blocken för att lösa detta pussel.'
+        bounce_7: 'Lägg till block till vart och ett av "när" blocken. Studsa bollen tills det träffar slutmålet.'
+        bounce_10: 'Det finns ett nytt mål längst upp.Lägg till "poäng" och "poäng motståndare" blocken till  "när bollen i mål" och "när bollen missar paddel" blocken för att göra ett spel. Se hur många poäng du kan få innan dina motståndare får två poäng.'
+        bounce_11: 'Nu kan du koppla block till  "när kör"block. Du måste lägga till det nya "starta ny boll" blocket på mer än ett ställe. Prova också att ändra scenen eller hastigheten på paddeln och bollen och se hur många poäng du kan få innan din motståndare får två poäng.'
+        bounce_12: Skapa ditt eget Studsa Spel. Du kan ändra alla bilder och regler. När du är klar, klicka på Slutför för att låta dina vänner prova ditt spel på sina telefoner.
+        Custom_builder: 'Dra block från verktygslådan till arbetsytan för att göra den nivå som du vill skapa. Tryck på "Kör" när du är klar.'
+        flappy_1: 'Lägg till ett block på "när klicka" blocket och tryck på "Kör". Klicka eller tappa på skärmen för att flytta Flappy till målet.'
+        flappy_2: 'Nu har vi lagt till lite mark. Lägg till block till  "när slog i marken" blocket.  Koden måste säga "Avsluta spelet" när Flappy kraschar.'
+        flappy_3: '"När kör" blocket gör så att kod körs när spelet startar.  Prova att ändra hastighet på nivån och flaxa till målet.'
+        flappy_4: 'Flappy kommer att flyga genom hindren såvida du inte skriver kod så att han kraschar. Lägg till ett block till "när träffar ett hinder"blocket. Koden måste "Avsluta spelet" när Flappy kraschar in i  den första uppsättningen rör.'
+        flappy_5: 'Låt oss lägga en resultattavla, och räkna poäng när Flappy flyger förbi ett hinder. Lägg till det till blocket "när passerar ett hinder", och ge sedan poäng när Flappy flaxar genom den första uppsättningen rör.'
+        flappy_6: Se om du fortfarande kan få poäng om du låter Flappy flaxa mer eller mindre.
+        flappy_7: 'Prova nu att ändra scenen genom att fästa ett annat block till "när kör"blocket.'
+        flappy_8: "Du kan ange grafik när som helst, inte bara när spelet startar. Prova att ange en 'slumpmässig scen' när andra händelser inträffar, exempelvis när Flappy passerar ett hinder."
+        flappy_9: För att röra till det så prova att inte avsluta spelet när Flappy slår i ett hinder eller i marken, utan sätt tillbaka poängsumman till 0.
+        flappy_11: Skapa ditt eget Flappy spel. Du kan ändra all grafik och alla regler, även gravitationen. När du är klar, klicka på Slutför för att låta vänner prova ditt spel på sina telefoner.
+        flappy_k1_1: Spela Flappy
+        flappy_k1_2: 'Lägg till ett block på "när klicka" blocket och tryck på "Kör". Klicka eller tappa på skärmen för att flytta Flappy till målet.'
+        flappy_k1_3: 'Nu har vi lagt till lite mark. Lägg till block till  "när slog i marken" blocket.  Koden måste säga "Avsluta spelet" när Flappy kraschar.'
+        flappy_k1_4: '"När kör" blocket gör så att kod körs när spelet startar.  Prova att ändra hastighet på nivån och flaxa till målet.'
+        flappy_k1_5: 'Flappy kommer att flyga genom hindren såvida du inte skriver kod så att han kraschar. Lägg till ett block till "när träffar ett hinder"blocket. Koden måste "Avsluta spelet" när Flappy kraschar in i  den första uppsättningen rör.'
+        flappy_k1_6: 'Låt oss lägga en resultattavla, och räkna poäng när Flappy flyger förbi ett hinder. Lägg till det till blocket "när passerar ett hinder", och ge sedan poäng när Flappy flaxar genom den första uppsättningen rör.'
+        flappy_k1_7: Se om du kan få flera poäng för att flaxa förbi ett hinder
+        flappy_k1_8: 'Prova nu att ändra scenen genom att fästa ett annat block till "när kör"blocket.'
+        flappy_k1_9: 'Prova att ändra spelaren genom att lägga till ett "ange spelare" block till "när kör" blocket.'
+        jigsaw_1: Klicka på blocket
+        jigsaw_2: Dra blocket till målet
+        jigsaw_3: Ordna blocken för att bilda bilden
+        jigsaw_4: Ordna blocken för att bilda bilden
+        jigsaw_5: Ordna blocken för att bilda bilden
+        jigsaw_6: Ordna blocken för att bilda bilden
+        jigsaw_7: Ordna blocken för att bilda bilden
+        jigsaw_8: Ordna blocken för att bilda bilden
+        jigsaw_9: Ordna blocken för att bilda bilden
+        jigsaw_10: Ordna blocken för att bilda bilden
+        jigsaw_11: Ordna blocken för att bilda bilden
+        jigsaw_12: Ordna blocken för att bilda bilden
+        jigsaw_13: Fixa pusslet!
+        mazestep_1: Labyrint steg beskrivning här
+        mazestep_2: Labyrint steg beskrivning här
+        mazestep_3: Labyrint steg beskrivning här
+        mazestep_4: Labyrint steg beskrivning här
+        mazestep_5: Labyrint steg beskrivning här
+        studio_c2_1: 'Kan du göra så att hunden säger "hello world"?'
+        studio_c2_2: Kan du göra så att hunden säger något och så att katten säger något efteråt?
+        studio_c2_3: Kan du skriva ett program som gör att hunden flyttar till katten?
+        studio_c2_4: 'Kan du skriva ett program som gör att hunden flyttar till katten och så att katten säger "Hej" när hunden når honom?'
+        studio_c2_5: 'Kan du skriva ett program så att bläckfisken säger "Hej" när den  klickas på?'
+        studio_c2_6: Kan du skriva ett program som gör att denna pingvin flyttar runt med hjälp av upp / ner / vänster/höger pil och träffar alla mål?
+        studio_c2_7: 'Med "Upprepa för alltid" blocket kan du köra kod kontinuerligt. Kan du lägga till block för att flytta denna dinosaurie upp och ner om och om igen?'
+        studio_c2_8: 'Kan du få pingvinen att säga "AJ!" och spela ett "hit" ljud om han kör in i dinosaurien, och så flytta honom med pilarna för att få det att hända?'
+        studio_c2_9: Kan du lägga till ett block för att en poäng när pingvinen kör in i bläckfisken, och sedan flytta honom med pilarna tills du får poäng?
+        studio_c2_10: Kan du lägga till block för att ändra bakgrunden och hastigheten på pingvinen och så flytta honom med pilarna tills du får poäng?
+        studio_c2_11: Skapa din egen berättelse. När du är klar, klicka på Slutför om du vill låta vänner prova din berättelse på sina telefoner.
+        studio_c3_story_1: 'Kan du göra så att hunden säger "hello world"?'
+        studio_c3_story_2: Kan du göra så att hunden säger något och så att katten säger något efteråt?
+        studio_c3_story_3: Kan du skriva ett program som gör att hunden flyttar till katten?
+        studio_c3_story_4: 'Kan du skriva ett program som gör att hunden flyttar till katten och så att katten säger "Hej" när hunden når honom?'
+        studio_c3_story_5: Kan du lägga till ett block för att göra bläckfisken lycklig?
+        studio_c3_story_6: Skapa din egen berättelse. När du är klar, klicka på Slutför om du vill låta vänner prova din berättelse på sina telefoner.
+        studio_c3_game_1: 'Kan du skriva ett program så att bläckfisken säger "Hej" när den  klickas på?'
+        studio_c3_game_2: Kan du skriva ett program som gör att denna pingvin flyttar runt med hjälp av upp / ner / vänster/höger pil och träffar alla mål?
+        studio_c3_game_3: 'Med "Upprepa för alltid" blocket kan du köra kod kontinuerligt. Kan du lägga till block för att flytta denna dinosaurie upp och ner om och om igen?'
+        studio_c3_game_4: 'Kan du få pingvinen att säga "AJ!" och spela ett "hit" ljud om han kör in i dinosaurien, och så flytta honom med pilarna för att få det att hända?'
+        studio_c3_game_5: Kan du lägga till ett block för att en poäng när pingvinen kör in i bläckfisken, och sedan flytta honom med pilarna tills du får poäng?
+        studio_c3_game_6: Kan du lägga till block för att ändra bakgrunden och hastigheten på pingvinen och så flytta honom med pilarna tills du får poäng?
+        studio_c3_game_7: Skapa ditt eget spel. När du är klar, klicka på Slutför för att låta vänner prova ditt spel på sina telefoner.
+        studio_playlab_1: 'Pingvinen vill säga "Hej" - kan du hjälpa honom?'
+        studio_playlab_2: 'Grottpojken (skådespelare 1) och grottflickan (skådespelare 2) vill säga "Hej" till varandra. Kan du hjälpa dem genom att använda blocket "säga" två gånger?'
+        studio_playlab_3: Kan du hjälpa Tennisflickan att komma till flaggan?
+        studio_playlab_4: Kan du hjälpa Tennispojken (skådespelare 1) att komma till Tennisflickan (skådespelare 2) och spela upp ett ljud när han kommer dit?
+        studio_playlab_5: 'Kan du hjälpa Rymdroboten att säga "Var hälsade jordbor" när den blir klickad? Glöm inte att klicka på roboten efter du klickat på kör'
+        studio_playlab_6: Kan du hjälpa häxan att flytta runt med upp/ned/höger/vänster piltangenterna för att komma till alla magiska eldklot?
+        studio_playlab_7: 'Med "Upprepa för alltid" blocket kan du köra kod kontinuerligt. Kan du bifoga block för att hjälpa trollkarlen att flytta sig till höger och till vänster om och om igen?'
+        studio_playlab_8: Kan du lägga till ett block för att få en poäng och ett block för att spela ett ljud när enhörningen kör på trollkarlen, och sedan flytta honom med pilarna tills du får poäng?
+        studio_playlab_9: Ställ in bakgrunden för denna invasion av utomjordingar och hjälp Rymdroboten att komma till utomjordingen snabbare genom att ändra dess hastighet. Flytta honom sedan med piltangenterna för att komma till Rymdroboten och varna alla andra
+        studio_playlab_10: Skapa ditt eget spel. När du är klar, klicka på Slutför för att låta vänner prova ditt spel på sina telefoner.
+        studio_full_sandbox: Skapa ditt eget spel. När du är klar, klicka på Slutför för att låta vänner prova ditt spel på sina telefoner.
+        studio_k1_1: 'Kan du göra så att hunden säger "hello world"?'
+        studio_k1_2: Kan du göra så att hunden säger något och så att katten säger något efteråt?
+        studio_k1_3: Kan du skriva ett program som gör att hunden flyttar till katten?
+        studio_k1_4: 'Gör så att hunden flyttar till katten och så att katten säger "Hej" när han kommer dit.'
+        studio_k1_5: Kan du lägga till ett block för att göra bläckfisken lycklig?
+        studio_k1_6: Skapa din egen berättelse! Flytta runt katten och hunden och få dem att säga saker.
+        maze_wordsearch_k_1: Flytta mig för att stava ordet EAST(öst)
+        maze_wordsearch_k_2: Flytta mig för att stava ordet SOUTH(söder)
+        maze_wordsearch_k_3: Flytta mig för att stava ordet WEST(väst)
+        maze_wordsearch_k_4: Flytta mig för att stava ordet NORTH(nord)
+        maze_wordsearch_k_6: Flytta mig öst och sedan söderut för att stava ordet JUMP(hoppa)
+        maze_wordsearch_k_9: Flytta mig en väg, sedan en annan för att stava ordet CODE(kod)
+        maze_wordsearch_k_13: Flytta mig en väg, sedan en annan för att stava ordet DEBUG(rätta)
+        maze_wordsearch_k_15: Flytta mig en väg, sedan en annan för att stava ordet ABOVE(ovanför)
+        maze_wordsearch_k_16: Flytta mig en väg, sedan en annan för att stava ordet BELOW(nedanför)
+        maze_wordsearch_k_20: Det här är ett test! Flytta mig en väg, sedan en annan för att stava ordet STORY(berättelse)
+        webapp_ec_simple: Skapa din webapp med hjälp av createHtmlBlock.
+        turtle_ec_1_2: 'Nu ska du rita en fyrkant. Obs: Använd din favoritfärg genom att välja det i nya "pennfärg" blocket.'
+        turtle_ec_1_10: 'Du klarade det! Nu ritar du vad du vill. Några roliga idéer: en streckfigur, snöflinga eller spiral. Prova också det nya "pennbredd" blocket. Ha det så kul!'
+        studio_ec_sandbox: Skapa ditt eget spel. När du är klar, klicka på Slutför för att låta vänner prova ditt spel på sina telefoner.
     levelbuilder:
       frozen line:
         instructions: Hej! Jag är Elsa av Arendal. Hjälp mig göra en rak linje.
@@ -363,7 +356,7 @@ sv:
       frozen circle function:
         instructions: 'Använd det nya "skapa en cirkel" blocket för att göra 10 cirklar som överlappar varandra. Glöm inte att hoppa framåt mellan cirklarna.'
       frozen circle function in circle:
-        instructions: Låt oss nu skapa 20 cirklar som överlappar varandra, och svänga18 grader mellan varje cirkel.
+        instructions: Låt oss nu skapa 20 cirklar som överlappar varandra, och svänga 18 grader mellan varje cirkel.
       frozen circle function with parameter:
         instructions: 'Här är ett "skapa en cirkel" block som kan göra cirklar i olika storlekar. Kan du använda det för att skapa en liten cirkel med storlek 5 och en större cirkel med storlek 10?'
       frozen snowflower:
@@ -375,36 +368,35 @@ sv:
       frozen freeplay:
         instructions: Du har blivit en konstnärlig mästare! Skapa ett vinterlandskap och dela med dina vänner.
       scrat 16:
-        instructions: 'Acorn! Acorn! Acorn! Use an "if" block to get me there with the fewest number of blocks.'
+        instructions: 'Ekollon! Ekollon! Ekollon! Använd ett "om" block för att få mig dit med minsta antalet block.'
       scrat 17:
-        instructions: "Ok, let's do that again for practice - this isn't very different, but watch out for the wall!"
+        instructions: 'OK, låt oss göra att igen för att träna - detta inte är så olikt, men se upp för väggen!'
       scrat 18:
-        instructions: 'The "If-else" blocks checks a condition, and then does one thing OR another. To get me to the acorn try to use this new block.'
+        instructions: '"om-annars" blocken kontrollerar ett villkor, och utför sedan en sak eller en annan. För att få mig till ekollonet, försök att använda detta nya block.'
       scrat 19:
         instructions: 'Mer träning med "Om/annars"-blocket, kan du få det rätt på första försöket?'
       scrat 20:
-        instructions: Can you add just 3 blocks to help me solve a more complex maze? If you do it right, I can walk any curvy path no matter the length. Hurry! The ice is melting!
+        instructions: Kan du lägga till bara 3 block för att hjälpa mig att lösa en mer komplex labyrint? Om du gör det rätt, kan jag gå vilken kurvig väg som helst oavsett längd. Skynda! Isen smälter!
       Standalone_Artist_1:
-        instructions: "Welcome to Artist! First off, let's try to make a simple square using the turn right block and move forward block. Each side should be 100 pixels long."
+        instructions: "Välkommen till Artist! Först och främst, låt oss försöka göra en enkel kvadrat med 'sväng höger' block och 'gå framåt' blocket. Varje sida ska vara 100 bildpunkter lång."
       Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel long sides.
+        instructions: Rita denna diamant med 120 och 60 graders vinklar och 150 pixlar långa sidor.
       Standalone_Artist_3:
-        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree turns?
+        instructions: Kan du rita denna hexagon med 100 pixlar långa sidor och 60 graders vinklar?
       Standalone_Artist_4:
-        instructions: "Now you've got a new block to play with, the loop. This will repeat a set of commands. What happens if you loop these commands 6 times?"
+        instructions: Nu har du fått ett nytt block att leka med, slingan(loop). Den upprepar en uppsättning kommandon. Vad händer om du upprepar dessa kommandon 6 gånger?
       Standalone_Artist_5:
-        instructions: How many times do you need to loop this diamond to draw the flower?
+        instructions: Hur många gånger behöver du denna diamant loopa för att rita en blomma?
       Standalone_Artist_5.5:
-        instructions: "Notice how we simplified the diamond code by turning it into a loop. You can loop that whole sequence 12 times to draw the flower. Hint: You'll need to turn 30 degrees after your diamond loop so you don't keep drawing over the same diamond."
+        instructions: 'Lägg märke till hur vi förenklat diamant koden genom att köra den i en loop. Du kan upprepa hela sekvensen 12 gånger för att  rita blomman. Tips: Du måste svänga 30 grader efter din diamant-loop så du inte ritar över samma diamant.'
       Standalone_Artist_6:
-        instructions: 'Loop this hexagon code 6 times to create the design. How many degrees will you need to turn each time? Hint: divide the number of degrees in a circle by the number of times you are looping.'
+        instructions: 'Loopa den här hexagon-koden 6 gånger för att skapa dess utseende. Hur många grader måste du svänga varje gång? Tips: dividera antalet grader i en cirkel med antalet gånger du loopar.'
       Standalone_Artist_7:
-        instructions: 'A function is another programming tool to help you avoid repeating yourself. This function draws a flower, so you can use it any time you want to draw a flower. Use this and the new jump block to draw these flowers. Hint: The flowers are 150 pixels apart'
+        instructions: 'En funktion är ett annat programmerings- verktyg som hjälper dig att undvika att upprepa dig själv. Denna funktion ritar en blomma, så du kan använda den varje gång du vill rita en blomma. Använd detta och det nya hoppa-blocket för att rita dessa blommor. Tips: Blommorna är 150 pixlar från varandra'
       Standalone_Artist_8:
-        instructions: |-
-          Here's a function called "Draw a shape" that we've programmed to draw hexagons. Run the code to see what it does and then experiment with the function to see what happens. Can you make it draw a pattern of squares, triangles, or octagons?
+        instructions: 'Här är en funktion som kallas "Rita en form" som vi har programmerat till att rita hexagoner. Kör koden för att se vad den gör och experimentera med funktionen för att se vad som händer. Kan du göra så att denna funktion ritar ett mönster av kvadrater, trianglar eller oktagoner?'
       Standalone_Artist_9:
-        instructions: "Now go ahead and make whatever picture you'd like! You've even got an empty function that you can make do whatever you want!"
+        instructions: Gå vidare nu och rita vilken bild du vill! Du har även en tom funktion som du kan göra vad du vill med!
     video:
       name:
         maze_intro: Labyrint Introduktion
@@ -421,117 +413,154 @@ sv:
         loop_for: '"Räknar"-block'
         parameters: Funktioner med parametrar
         hoc_wrapup: Sammanfattning för Timmen med Kod
-        Unplug1: What is CS?
+        Unplug1: Vad är CS?
         Unplug2: Uträkningstänkande
         Unplug3: Kalkyleringsprogrammering
         Unplug4: Algoritmer
         Unplug5: Funktioner
         Unplug6: Villkor
-        Unplug7: Songwriting
+        Unplug7: Låtskrivande
         Unplug8: Abstraktion
-        Unplug9: Relay programming
+        Unplug9: Relä programmering
         Unplug10: Internet
         Unplug11: Gör klart
-        C1_happy_maps_unplugged: Happy Maps
-        C1_moveitmoveit_unplugged: Move It, Move It
-        C1_bigevent_unplugged: The Big Event
-        C1_getting_loopy: Getting Loopy
-        C1_pair_programming: Pair Programming
-        C1_maze_intro_sequencing: Maze Sequencing Intro
-        C1_maze_debugging: Maze Debugging
-        C1_bee_level_intro: 'Bee Level - Intro'
+        C1_happy_maps_unplugged: Glada kartor
+        C1_moveitmoveit_unplugged: Flytta det, flytta den
+        C1_bigevent_unplugged: Den stora händelsen
+        C1_getting_loopy: Bli Snurrig
+        C1_pair_programming: 'Par- programmering'
+        C1_maze_intro_sequencing: 'Labyrint- sekvensering Intro'
+        C1_maze_debugging: Labyrint felsökning
+        C1_bee_level_intro: 'Bee nivå - Intro'
         C1_artist_intro: Konstnär Introduktion
         C1_spelling_bee_intro: Spelling Bee Intro
-        C1_zuck_repeat_loop: Maze Loops
-        C1_bee_loops: Bee Loops
-        C1_maze_loops: Maze Loops
-        C1_playlab_storytelling: 'Play Lab - Create a Story'
-        C1_planting_seed: Planting a Seed
-        C1_building_foundation: Building a Foundation
-        C1_going_places_safely: Going Places Safely
+        C1_zuck_repeat_loop: 'Labyrint: slingor'
+        C1_bee_loops: 'Bee: slingor'
+        C1_maze_loops: 'Labyrint: slingor'
+        C1_playlab_storytelling: 'Play Lab - skapa en berättelse'
+        C1_planting_seed: Plantera ett frö
+        C1_building_foundation: Bygga en grund
+        C1_going_places_safely: Tryggt gå till platser
         C2_maze_intro: Labyrint Introduktion
         C2_artist_intro: Konstnär Introduktion
-        C2_zuck_repeat_loop: Maze Loops
-        C2_artist_loops: Artist Loops
-        C2_artist_debugging: Artist Debugging
-        C2_bee_loops: Bee Loops
-        C2_bee_debugging: Bee Debugging
-        C2_bee_conditionals: Bee Conditionals
-        C2_playlab_createstory: 'Play Lab - Create a Story'
+        C2_zuck_repeat_loop: 'Labyrint: slingor'
+        C2_artist_loops: Artist Loopar
+        C2_artist_debugging: Artist Felsökning
+        C2_bee_loops: 'Bee: slingor'
+        C2_bee_debugging: Bee felsökning
+        C2_bee_conditionals: Bee Villkorssatser
+        C2_playlab_createstory: 'Play Lab - skapa en berättelse'
         C2_graph_paper: Kalkyleringsprogrammering
         C2_conditionals_with_cards: Villkor
-        C2_binary_bracelets: Binary Bracelets
+        C2_binary_bracelets: Binära armband
         C2_relay_programming: Relä programmering
-        C2_paper_airplanes: Paper Airplanes
-        C2_digital_footprint: Your Digital Footprint
-        C3_maze_level_4: Maze Loops
+        C2_paper_airplanes: Pappersflygplan
+        C2_digital_footprint: Ditt digitala fotavtryck
+        C3_maze_level_4: 'Labyrint: slingor'
         C3_artist_intro: Konstnär Introduktion
-        C3_artist_functions: Artist Functions
-        C3_bee_functions: Bee Functions
-        C3_bee_conditionals: Bee Conditionals
-        C3_maze_conditionals: Maze Conditionals
-        C3_artist_nested_loops: Nested Loops
-        C3_farmer_while: While Loops
-        C3_bee_nested_loops: Nested Loops
-        C3_bee_debugging: Bee Debugging
+        C3_artist_functions: Artist Funktioner
+        C3_bee_functions: Bee funktioner
+        C3_bee_conditionals: Bee Villkorssatser
+        C3_maze_conditionals: Labyrint villkorssatser
+        C3_artist_nested_loops: Kapslade slingor(loopar)
+        C3_farmer_while: "'Medan' loopar(slingor)"
+        C3_bee_nested_loops: Kapslade slingor(loopar)
+        C3_bee_debugging: Bee felsökning
         C3_bounce: Studsa
-        C3_playlab_create_game: 'Play Lab - Create a Game'
+        C3_playlab_create_game: 'PlayLab - skapa ett spel'
         C3_computational_thinking: Uträkningstänkande
-        C3_dice_race: Dice Race
+        C3_dice_race: Tärningsspelet
         C3_internet: Internet
         C3_crowdsourcing: Crowdsourcing
-        C3_functional_suncatchers: Functional Suncatchers
-        C3_songwriting_with_parameters: Songwriting With Parameters
-        C4_artist_math: Programming the Artist with Math
-        C4_create_functions: Creating Functions
-        C4_edit_functions: Editing Functions
-        C4_for_loops: For Loops
-        C4_variables: Variabler
-        frozen_intro: Hour of Code Intro
-        frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
+        C3_functional_suncatchers: Funktionella Solfångare
+        C3_songwriting_with_parameters: Låtskrivande Med parametrar
+        C4_intro: Introduktion
+        C4_bee_conditional: Bee Villkorssatser
+        C4_variables_artist: 'Variables - Artist'
+        C4_variables_playlab: 'Variables - Play Lab'
+        C4_for_loops: "'För' loopar"
+        C4_math_artist: Programming the Artist with Math
+        C4_function_edit: Redigera funktioner
+        C4_function_create: Skapa funktioner
+        C4_function_parameters: Funktioner med parametrar
+        C4_conditionals: Villkor
+        C4_unplugged_algorithms: Algorithms with Tangrams
+        C4_unplugged_madlibs: Mad Libs
+        C4_unplugged_variables: Variables in Envelopes
+        C4_unplugged_forloops: "'För' loopar"
+        C4_unplugged_parameters: Låtskrivande Med parametrar
+        C4_unplugged_binary: Binära
+        frozen_intro: Introduktion Hour of Code
+        frozen_loops: Introduktion till loopar
+        frozen_functions: Introduktion till funktioner
+        playlab_intro: Introduktion till Play Lab
+        playlab_events: Play Lab Events
+        playlab_repeat_forever: Play Lab Repeat Forever
     callout:
       text:
-        drag_blocks: 'Drag a "move" block and snap it below the other block'
-        run: 'Hit "Run" to try your program'
+        drag_blocks: 'Dra ett "flytta" block och fäst det under det andra blocket'
+        run: 'Klicka på "Kör" för att prova ditt program'
         watch_again: Klicka här för att titta på videon igen
         gray_block_explanation: Block som är grå kan inte tas bort. Kan du lösa pusslet ändå?
         show_code_explanation: Klicka här för att se koden till programmet du gör
         instructions_repeat_explanation: Instruktionerna för varje uppgift upprepas här
         category_explanation: Du har kvar alla block men de har nu ordnats i kategorier
-        set_sprite_image: 'Attach a "set actor to image" block to the "when story starts" block to enable an actor for this story'
-        studio_say_text: Type what you want your actor to say within these quotes
-        jigsaw_click: Click this block!
-        move_elsa_forward: 'Dra ett "flytta framåt" block och fäst det under "när startat" blocket för att få Elsa att gå framåt'
+        set_sprite_image: 'Bifoga en "sätt figur till bild" block till "när berättelsen börjar" blocket för att ange figur/actor i  denna berättelse'
+        studio_say_text: Skriv vad du vill att din figur ska säga inom dessa citat
+        jigsaw_click: Klicka på detta block!
+        move_elsa_forward: 'Dra ett "gå framåt" block och fäst det under "när startat" blocket för att få Elsa att gå framåt'
         turn_elsa: 'Använd "sväng" blocket för att få Elsa att vända sig. Siffran i rullistan bestämmer hur mycket hon svänger'
-        replace_questions: 'Use the drop-down to replace "???" with a number'
-        replace_questions_degree: 'Use the drop-down to replace "???" with the correct degree to turn'
-        repeat_blocks: 'Use the "Repeat" block and wrap it around the blocks in the workspace'
+        replace_questions: 'Använd rullistan för att ersätta "???" med en siffra'
+        replace_questions_degree: 'Använd rullistan för att ersätta "???" med rätt antal grader att svänga'
+        repeat_blocks: 'Använda "Upprepa" blocket, lägg det runt blocken i arbetsytan'
+        repeat_blocks_1: (1) använd detta block och lägga det runt de grå blocken på arbetsytan
+        repeat_blocks_2: '(2) flytta "Upprepa" blocket hit, och placera de grå blocken inuti'
         snowflake_dropdown: Använd den här rullisten för att skapa olika snöflingor!
-        degrees_per_side: Divide 360 by the number of sides to get the size of each angle in degrees.
-        set_sides: 'Use this block to set "sides" to the number needed to complete the puzzle.'
-        set_length: 'Use this block to set "length" to the correct value.'
-        which_equation: 'Which equation makes each side shorter for shapes with more sides?  Try each equation!'
-        get_nectar: 'Use the new "get nectar" block.'
-        actions_category: 'The tool box got a new look! The "Actions" blocks are in here now.'
-        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
-        edit_function: Use this button to edit the function.
-        create_function: 'Click here to open the "Functions" flyout, then click the "Create a Function" button.'
-        house_hint: "It's ok if the picture doesn't look like a house yet. We will fix it in the next puzzle."
-        edit_draw_square: Use this button to edit the function and add the loop.
-        edit_get_nectar: Use this button to edit the function and change the direction the Bee will turn to get the nectar.
-        logic_category: 'Open the "Logic" flyout to find the "if/else" block.'
-        length_parameter: 'Can you update this function so it uses the "length" parameter?'
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: "Don't forget to turn after creating each circle."
-        frozen_circle_function_with_parameter_circle: 'Use the "create a circle" block and change the size.'
-        frozen_snowflake_branch: 'Use the "create a snowflake branch" block'
-        frozen_create_square: Attach more blocks here to create a square
-        playlab_drag_say: 'Drag the "say" block here and type "hello"'
-        playlab_use_twice: Use this block twice and remember to change the actor number
-        playlab_move_girl: 'Use the "move right" block to move Tennis Girl'
-        playlab_play_sound: 'Add "play sound" block here'
-        playlab_arrow_keys: Remember to use these to move the witch after clicking on Run
-        playlab_add_move: 'Add "move" blocks inside this repeat block'
-        playlab_add_score: Add score blocks here
-        playlab_add_blocks: Add your blocks here
+        degrees_per_side: Dela 360 med antalet sidor för att få storleken på varje vinkel i grader.
+        set_sides: "Använd detta block för att det nummer av 'sidor' som behövs för att slutföra pussel."
+        set_length: 'Använda detta block för att ange "längd" till rätt värde.'
+        which_equation: Vilka ekvation gör varje sida kortare för former med flera sidor?
+        get_nectar: 'Använd det nya "få nektar" blocket.'
+        actions_category: 'Verktygslådan fick ett nytt utseende! "Åtgärder" blocken är här nu.'
+        draw_square_hint: 'Tips: Använd kvadrat slingan du just gjort i sista pusslet.'
+        edit_function: Klicka här om du vill redigera din funktion.
+        create_function: 'Klicka här för att öppna  menyn i "Funktioner" , klicka sedan på knappen "Skapa en funktion".'
+        house_hint: Det är ok om bilden inte ser ut som ett hus ännu. Vi kommer att fixa det i nästa pussel.
+        edit_draw_square: Använd den här knappen för att redigera funktionen och lägga till slingan.
+        edit_get_nectar: Använd den här knappen om du vill redigera funktionen och ändra den riktning i vilken biet kommer att vända sig för att få nektar.
+        logic_category: 'Öppna den "Logik" menyn för att hitta "om/annars" blocket.'
+        length_parameter: 'Kan du uppdatera den här funktionen så att den använder parametern "längd"?'
+        frozen_diamond_repeat: Använd upprepa blocket för att skapa den här formen.
+        frozen_circle_function_in_circle_turn: Glöm inte att svänga efter varje cirkel du skapar.
+        frozen_circle_function_with_parameter_circle: 'Använd blocket "skapa en cirkel"  och ändra storleken.'
+        frozen_snowflake_branch: 'Använd blocket "skapa en snöflinge-gren"'
+        frozen_create_square: Lägg till fler block här för att skapa en kvadrat
+        playlab_drag_say: 'Dra blocket "säga" här och skriv "Hej"'
+        playlab_use_twice: Använda detta block två gånger och kom ihåg att ändra figur numret
+        playlab_move_girl: 'Använda "flytta höger" blocket för att flytta tennis-flickan'
+        playlab_play_sound: 'Lägg till "spela ljud" block här'
+        playlab_arrow_keys: Kom ihåg att använda dessa för att flytta häxan efter att ha klickat på kör
+        playlab_add_move: |-
+          Lägg till "flytta" block inuti detta 'upprepa' block
+        playlab_add_score: Lägga till poäng -block här
+        playlab_add_blocks: Lägg till dina block här
+        set_variable: Dra ett antals-block hit för att ange din variabel
+        place_variable: 'Dra din variabel in i  detta block'
+        bee_for_loop: Dra det största antalet nektar du vill biet att ska samla hit
+        place_counter_variable: Dra din räknare-variabel in i detta block
+        function_editor_draw_square: 'Detta är din funktionsdefinition. Dessa block  körs varje gång du använder  blocket "Rita en fyrkant"'
+        change_here: Gör din ändring här
+        write_draw_square_function: 'Dra block från verktygslådan hit för  att rita en fyrkant'
+        write_draw_triangle_function: Drag blocks from the toolbox into here that draw a triangle
+        edit_add_parameter: Click edit to add a parameter in your function
+        add_and_drag_parameter: Write in the name of your parameter here, click add, and then drag it into your function definition
+        fill_in_actor: Fill in the ??? with numbers that correspond to each actor (1, 2, and 3)
+        repeat: Put blocks inside the loop to repeat commands
+        if_bee_nectar: 'Use the "if" block to decide if the bee should get nectar'
+        if_else_bee: |-
+          Use the "if/else" block so that the Bee gets nectar from a flower, and makes honey if it's not a flower
+        repeat_full_circle: Enter in the number of times the zombie has to move to make a full circle
+        place_length_variable: Drag the length variable here to replace the question marks
+        arrows_move_actor: Använd piltangenterna för att flytta figuren
+        right_arrow_fireball: Använd högerpiltangenten för att skjuta eldklot
+        name_function: Skriv namnet på din funktion här

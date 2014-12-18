@@ -3,7 +3,7 @@ pl:
     unplugged:
       Unplug1:
         title: Wprowadzenie do informatyki
-        desc: 'This lesson will introduce the concept of Computer Science and explain what a Computer Scientist does.  It will also give students an opportunity to assume the role of a computer scientist.  By the end of the activity, each student will have a take-home reminder of what he or she learned.  You may be tempted to skip teaching young children the vocabulary words that are associated with the lessons that follow, but presenting them in a fun and playful light now is far more productive than waiting for more advanced opportunities.'
+        desc: Na tej lekcji zostaną wprowadzone pojęcia informatyki i zostanie wyjaśnione, czym zajmuje się informatyk. Będzie to okazją dla uczniów, by wcielili się w rolę informatyka. Po zakończeniu tych zajęć każdy uczeń zabierze ze sobą do domu to, czego się nauczył. Możesz ulec pokusie, by pominąć nauczenia dzieci określeń, pojawiających w czasie lekcji, które są przed nami, prezentując je jednak teraz w sposób zabawny i przyjemny może okazać się bardziej owocne, niż oczekiwanie na bardziej zaawansowaną okazję.
         pdfs:
           - unplug1
         video: Unplug1
@@ -34,7 +34,7 @@ pl:
         video: Unplug5
       Unplug6:
         title: Warunki
-        desc: 'This is a class game.  After introducing the idea of conditionals, if-statements, and loops, the class can practice together using a pre-written program, a deck of cards, and luck of the draw.'
+        desc: Jest to gra dla klasy. Po wprowadzeniu warunków, instrukcji warunkowych if (jeśli) i pętli, klasa może wspólnie ćwiczyć korzystając z wcześniej napisanego programu, talii kart i szczęścia w losowaniu.
         pdfs:
           - unplug6
         video: Unplug6
@@ -46,7 +46,7 @@ pl:
         video: Unplug7
       Unplug8:
         title: Abstrakcja
-        desc: "This activity combines your students' everyday routine and a Mad-Lib style thinking game to help your class learn about the effectiveness of abstraction."
+        desc: Ta aktywność jest połączeniem codziennych rutynowych działań Twoich uczniów z grą polegającą na myśleniu w stylu Mad-Lib, aby pomóc Twojej klasie dowiedzieć się o efektywności (skuteczności) abstrakcji.
         pdfs:
           - unplug8
         video: Unplug8
@@ -58,7 +58,7 @@ pl:
         video: Unplug9
       Unplug10:
         title: Internet
-        desc: In this lesson, students will pretend to flow through the Internet, all the while learning about web addresses, IPs and the DNS.
+        desc: Na tej lekcji uczniowie będą udawać, że płyną przez Internet, cały czas ucząc się o adresach sieciowych, IP i DNS.
         pdfs:
           - unplug10
         video: Unplug10
@@ -69,24 +69,24 @@ pl:
           - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: Happy Maps
-        desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
+        title: Szczęśliwe Mapy (Happy Maps)
+        desc: Uczniowie tworzą proste algorytmy (zestawy instrukcji), by przeprowadzić postać (znak) przez labirynt posługując się pojedynczym poleceniem.
         video: C1_happy_maps_unplugged
       MoveIt:
-        title: Move it, Move it
-        desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
+        title: Przenieś go, Przenieś go
+        desc: Uczniowie tworzą proste algorytmy (zestawy instrukcji), by przeprowadzić postać (znak) przez labirynt posługując się pojedynczym poleceniem.
         video: C1_moveitmoveit_unplugged
       PlantASeed:
-        title: 'Real-life Algorithms: Plant a Seed'
-        desc: This lesson calls out ways we use algorithms in our daily lives, using the act of planting a seed as an example. It also focuses on the bigger picture of computer science and how algorithms play an essential part.
+        title: 'Algorytmy z życia wzięte: sadź nasiona'
+        desc: Ta lekcja przywołuje sposoby stosowania algorytmów w naszym codziennym życiu, posługując się przykładem sadzenia nasion. Koncentruje się również na rozleglejszym obrazie informatyki i zasadniczej roli, jaką odgrywają algorytmy.
         video: C1_planting_seed
       BuildingAFoundation:
-        title: Building a Foundation
+        title: Building a Foundation (Kładąc podwaliny)
         desc: Students build a structure using only provided supplies. Structures must complete a task (reach a certain height or bear a certain weight), and students discuss the idea of being persistent when things get complicated.
         video: C1_building_foundation
       GettingLoopy:
-        title: Getting Loopy
-        desc: This lesson introduces the programming concept of loops (repeated instructions) through a dance activity. Students will learn simple choreography, then be instructed to repeat it.
+        title: Coraz Loopy
+        desc: Ta lekcja wprowadza pętlę (instrukcje powtarzania), jedno z pojęć programowania, z wykorzystaniem tańca. Uczniowie poznają prostą choreografię, a następnie są proszeni o powtórzenie jej.
         video: C1_getting_loopy
       RelayProgramming:
         title: Relay programming
@@ -123,7 +123,7 @@ pl:
         video: C2_digital_footprint
       ComputationalThinking:
         title: Myślenie komputacyjne
-        desc: Students use the steps of computational thinking (decompose, pattern match, abstract, algorithm) to figure out how to play a game that comes with no instructions.
+        desc: Uczniowie wykonują podstawowe kroki myślenia komputacyjnego (dekomponują, dostosowują wzorce, abstrahują, stosują algorytmy), aby odkryć, jak grać w grę, którą otrzymali bez instrukcji.
         video: C3_computational_thinking
       FunctionalSuncatchers:
         title: Functional Suncatchers
@@ -151,24 +151,30 @@ pl:
       TangramAlgorithms:
         title: Tangram Algorithms
         desc: This lesson shows us something important about algorithms. If you keep an algorithm simple there are lots of ways to use it. If you want to make sure everyone ends up with the same thing, then your algorithm needs more detail.
+        video: C4_unplugged_algorithms
       EnvelopeVariables:
         title: Envelope Variables
         desc: 'Variables allow for a lot of freedom in computer science.  This lesson helps to explain what variables are and how we can use them in many different ways. Use this activity before (or in conjunction with) the lesson on abstraction to really hit the idea home.'
+        video: C4_unplugged_variables
       MadGlibs:
         title: Mad Glibs
         desc: 'Abstraction is one of the most important skills for a computer scientist to understand.  This activity will have your students analyzing stories for differences so that they can abstract them away. Those abstracted stories become templates for fun and crazy new ones.'
+        video: C4_unplugged_madlibs
       ForLoopFun:
         title: For Loop Fun
-        desc: We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops with extra structure built right in.
+        desc: Wiemy, że pętle służą do wykonywania tych samych rzeczy w kółko, ale teraz mamy zamiar dowiedzieć się, jak stosować pętle z wbudowanymi w nie dodatkowymi strukturami.
+        video: C4_unplugged_forloops
       SongwritingWithParameters:
-        title: Songwriting With Parameters
+        title: Pisanie Piosenek z parametrami
         desc: 'One of the most magnificent structures in the computer science world is the function.  Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into functions is such a helpful practice.  '
+        video: C4_unplugged_parameters
       BinaryImages:
-        title: Binary Images
+        title: Binarne obrazy (Binary Images)
         desc: 'Though many people think of binary as strictly zeros and ones, our previous courses taught students that information can be represented in a variety of binary options.  This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.'
+        video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
         title: Video Games and Coordinate Planes
-        desc: Video Games and Coordinate Planes lesson description
+        desc: Opis lekcji poświęconej grom wideo i płaszczyznom współrzednych
       Contracts:
         title: Contracts
         desc: Contracts unplugged lesson description

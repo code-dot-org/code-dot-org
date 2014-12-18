@@ -2,17 +2,17 @@
   activerecord:
     errors:
       messages:
-        blank: is required
+        blank: 需要
     attributes:
       user:
-        name: 姓名
+        name: 显示名称
         email: 电子邮件
         username: 用户名
         password: 密码
         password_confirmation: 密码确认：
         current_password: 当前密码：
         locale: 语言：
-        age: Age
+        age: 年龄
         gender: 性别
         edit_header: 编辑用户信息
         error:
@@ -21,21 +21,22 @@
   welcome_back: 欢迎回来，%{name}
   add_teacher_form:
     code:
-      label: 'Add a teacher by section code:'
-      placeholder: Code (ABCDEF)
+      label: '加上老师:'
+      placeholder: 代码节(ABCDEF)
     submit: 添加老师
   add_hint_form:
     placeholder: 请在这里输入您的提示
     submit: 增加提示
   appname: Code.org
   stage: 阶段
-  stage_number: Stage %{number}
+  stage_number: 阶段 %{number}
   puzzle: 谜题
   trophies: 奖杯
   courses: 课程
   of: 的
   more: 更多
   less: 更少
+  beta: 试用版
   try_hoc: 尝试一小时代码，请单击此处 >>
   try_k8intro: 尝试我们的K-8计算机科学入门课程（15-25小时）
   k8intro: K-8计算机科学入门课程（15-25小时）
@@ -47,22 +48,21 @@
   auth:
     sign_in_with: 用%{provider}登录
     signed_in: 登陆成功！
-    signed_out: You have signed out of <a href="%{url}">Code.org</a>.
-    sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
-      to sign out of %{provider}.
+    signed_out: 您已注销 <a href="%{url}"> Code.org</a>。
+    sign_out_of: '%{provider} 用于登录 <a href="%{url}"> 点击这里</a> 来注销 %{provider}.'
     already_signedup: 已经注册了吗？
     notyet_signedup: 还未注册吗？
-    google_oauth2: Google Account
+    google_oauth2: 谷歌帐户
     twitter: 推特
     facebook: 脸谱
-    windowslive: Microsoft Account
+    windowslive: 微软账户
     forgot_password: 忘记了您的密码吗？
     need_confirmation: 没有收到确认的说明吗？
     need_unlock: 没收到解锁指令吗？
   signup_form:
-    overview_student: 注册一个帐户以跟踪您的进度。
-    overview_teacher: |
-      在教室里教计算机科学,注册一个账户。<p/> 你可以跟踪你的学生进步并获得奖励。
+    overview_student: 注册一个帐户来记录你的进度. 您的电子邮件是主要用来让您登录和密码恢复. 欲了解更多信息，请参阅我们的 <a href="http://code.org/privacy">
+      隐私政策</a>.
+    overview_teacher: 通过注册一个帐号来在你的教室教计算机科学. <p/>你将能够添加你的学生，并跟踪其进度.
     no_signup_message: 您可以 <a target="_blank"href="http://learn.code.org"> 浏览各个阶段和谜题</a>，但您将需要注册以保存您的进度。
     teacher_educator_guide: 请参阅教师指南
     teacher_pitch: Code.org 老师注册
@@ -74,8 +74,8 @@
     address_placeholder: 地址、 城市、 州、 邮编
     gender: 性别 （可选）
     birthday: 生日 （可选）
-    age: Age (optional)
-    user_type: Are you a student or teacher?
+    age: 年龄
+    user_type: 你是学生还是老师？
     submit: 登陆
     teacher: 你是老师吗？
     valid_username: 可用 ！
@@ -84,11 +84,10 @@
     valid_password: 有效的密码 ！
     invalid_password: 密码必须至少为 6 个字符
     mismatch_password: 您输入的两个密码不匹配
-    student_terms: 我同意由 Code.org 服务条款的约束。如果我的年龄为13 岁以下，我确认提交此表单我有我的父母或法定监护人的许可，以使用
-      Code.org 服务。
-    teacher_terms: 我同意Code.org 的服务条款。
-    additional_information: We need some additional information to continue signing
-      you up.
+    student_terms: 我同意 Code.org 的<a href='http://code.org/tos'> 服务条款</a> 的约束.如果我未满13岁，我确认提交这份表格，有我的父母或法定监护人的许可使用
+      Code.org 服务。 <br/>对于13岁以下的用户, 电子邮件地址存储的方式使我们不能够与他们联系.
+    teacher_terms: 我同意 Code.org 的<a href='http://code.org/tos'>服务条款</a> 的约束。
+    additional_information: 我们需要一些额外的信息来继续为你注册.
   signin_form:
     title: 已经有账号了？登录
     login: 电子邮件或用户名
@@ -100,10 +99,10 @@
     try_hoc: 先尝试一个 代码一小时
     try_20hours: 请尝试我们 20 小时计算机科学简介课程
   signinsection:
-    welcome: Welcome to %{section_name}
-    name: Choose your name
-    picture: Now find your secret picture
-    words: Now enter your secret words
+    welcome: 欢迎来到 %{section_name}
+    name: 选择你的名字
+    picture: 现在找你秘密图片
+    words: 现在，输入你的秘密单词
     login: 登录
   password:
     reset_form:
@@ -131,9 +130,9 @@
       username_not_found: 找不到用户名 %{用户名}
       username_in_use: '%{用户名} 已经被占用，请选择其他用户名。'
       no_teacher: 找不到用户名 %{teacher_email_or_code}。请让该用户先注册，再次尝试添加。
-      section_not_found: Could not find a section with code '%{section_code}'.
-      blank_code: 请输入代码或你的老师的电子邮件地址
-      cant_join_own_section: Sorry, you can't join your own section.
+      section_not_found: 找不到代码 '%{section_code}' 节.
+      blank_code: 请输入一节代码
+      cant_join_own_section: 对不起，你不能加入你自己的部分.
     mail:
       invite_student:
         subject: 加入 %{teacher_name} 老师的班级吧！
@@ -148,7 +147,7 @@
     title: '奖品兑换: %{name}'
     provider: 提供者
     code: 代码：
-    redeem_header: 'To redeem:'
+    redeem_header: 赎回：
     donorschoose_register: 作为一位老师在 DonorsChoose.org 注册
     donorschoose_project: 发布项目
     donorschoose_how_to: 如何使用您的代码
@@ -167,7 +166,7 @@
       msg: 你确定你希望领取奖品%{prize_name}吗？
       msg_student: 注意：你只能选择一种奖品。
       msg_publicschool: 请确认您是美国公立学校的老师。
-      msg_visit_website: Visit website
+      msg_visit_website: 访问网站
     providers:
       apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
@@ -183,14 +182,13 @@
       choose: 选择奖励：
       choose_teacher: 'Click on the logo below to claim your prize:'
       earned: 你赢得了奖 ！（仅适用于美国学生）
-      not_earned_title: Finish the tutorial, earn rewards (U.S. students only)
+      not_earned_title: 完成本教程，赚取报酬 (仅限美国学生)
       not_earned: 学习所有的计算机科学概念、 收集所有 %{num_trophies} 奖杯，和赚取真实世界的奖品。您可以选择 10 GB 免费的
         Dropbox 空间， 10美元Skype信用 和免费游戏下载。注意： 仅向美国学生提供并且仅仅供应至最后一个。
       teacher:
         earned: 超过15 个学生收集到所有 %{num_trophies} 个奖杯。你获得老师奖 ！（仅限美国教师)
-        not_earned_title: Teach the class, earn up to $1,000 in <a target="_blank"
-          href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
-          only)
+        not_earned_title: 教导这一课程，赚取高达 1,000 美元 <a target="_blank"href="http://DonorsChoose.org">
+          DonorsChoose.org</a> 学分 （仅限美国教师)
         not_earned: 为了奖励第一次计算机科学教师，通过指导一个教室通过K-8介绍课程，您可以赚取最高1,000 美元的<a href="http://DonorsChoose.org">
           DonorsChoose.org</a> 信用。要符合资格，您需要成功地主持一个教室至少15 名学生完成所有K-8介绍课程，所有15个学生（或更多）完成所有的课程并获得所有
           %{num_trophies} 奖杯。如果 7 或更多的赢得所有的奖杯学生是女孩，你的奖金为1000美元 <a target="_blank"href="http://DonorsChoose.org">
@@ -198,9 +196,8 @@
           DonorsChoose.org</a> 学信用。只可由在美国的公立学校教师使用 <a target="_blank"href="http://DonorsChoose.org">
           DonorsChoose.org</a> 信用。
         bonus:
-          not_earned_title: You can still earn an additional $250 in <a target="_blank"
-            href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
-            only)
+          not_earned_title: 您仍然可以赚取额外 250 美元在 <a target="_blank"href="http://DonorsChoose.org">
+            DonorsChoose.org</a> 学分 （仅限美国教师)
           earned: 7 或更多的获得所有 %{num_trophies} 奖杯的学生是女生。你获得了额外的奖励 ！（仅限美国教师)
           not_earned: 如果你的学生赚取所有 %{num_trophies} 奖杯至少 7 是女孩，您的额外奖励是250美元 <a target="_blank"href="http://DonorsChoose.org">
             DonorsChoose.org</a> 信用。只可由在美国的公立学校教师使用 <a target="_blank"href="http://DonorsChoose.org">
@@ -223,8 +220,8 @@
       finished_hoc: 我已经完成了我的Hour of Code项目。
       sign_in_to_save: 登录以保存进度
       free_play:
-        playlab: Make an App
-        artist: Draw Something
+        playlab: 构建一个应用程序
+        artist: 绘画一些东西
     user:
       classroom: 教师主页
       label: 你好%{username}
@@ -234,7 +231,7 @@
       logout: 注销
       signin: 登录
       signup: 登陆
-      already_registered: Already registered?
+      already_registered: 已经注册？
     popup:
       progress: 您的进度
       lines: 代码总行数： %{lines}
@@ -254,38 +251,33 @@
       remove: 你确实要删除这个老师吗?
     tools: 教师工具
     followers:
-      section: 'Section:'
-      stages: 'Stage(s) to display:'
-      show_past: 'Show student activity (%{bullet_html}) in the past:'
-      levels_key: Levels key
-      perfect: Completed, perfect
-      completed: Completed, but using too many blocks
-      tried: Tried, but not completed
-      not_tried: Not tried yet
-      activity: Indicates student activity in the last %{hours} %{plural}
-      no_section: No assigned section
+      section: 第节：
+      stages: 阶段显示：
+      show_past: 显示学生过去的活动 (%{bullet_html}) ：
+      levels_key: 水平的关键
+      perfect: 完成了, 完美
+      completed: 已完成，但使用太多区块
+      tried: 试过，但未完成
+      not_tried: 没有尝试过
+      activity: 显示学生在过去的活动 %{hours} %{plural}
+      no_section: 没有分配的节
       trophies: 奖杯
     students:
       name: 姓名
       username: 用户名
       password: 密码
       manage: 管理学生
-      dashboard: Go to Teacher Dashboard
+      dashboard: 去教师仪表板
       add: 添加学生
-      remove: remove student
-      confirm_remove: Are you sure you want to remove this student?
-      help_reassign: To divide your class into multiple sections, select students
-        to assign to a new section.
-      help_register: Instead of making you spend a lot of time individually importing
-        student data, you can set up your class quickly by asking them to signup.
-        Your students will need to choose usernames and passwords, but they WILL NOT
-        be required to provide an email address. If a student forgets their password,
-        you will be able to reset it for them.
-      register: Ask your students to register themselves
-      vist: Ask your students to visit
-      section_code: 'and enter their section-code:'
-      first_please: First, please %{add_section}
-      for: For
+      remove: 移除学生
+      confirm_remove: 是否确实要移除这个学生?
+      help_reassign: 要将您的教室分为多个节，请选择将学生分配给新的一节.
+      help_register: 不要让你浪费你的时间, 你可以让学生们自己注册. 你的学生需要选择用户名和密码，但他们不需要提供一个电子邮件地址. 如果学生忘记了自己的密码，你就可以重新为他们设置一个.
+      register: 要求学生自行注册
+      vist: 要求你的学生去参观
+      section_code: 并输入他们的部分代码：
+      first_please: 首先，请 %{add_section}
+      for: 为
       enter: 请输入：
     sections:
       add: 添加节点
@@ -325,9 +317,9 @@
     show_more: 显示更多
     classroom_activity: 不用电脑的活动
   home:
-    title: Code Studio
-    all_courses: Overview of Courses 1, 2, and 3
-    lesson_plans: Lesson plans
+    title: 代码工作室
+    all_courses: 1、 2 和 3 的课程概要
+    lesson_plans: 课程计划
     signin_message: 已经注册了吗？%{link}
     student_reg_link: 学生 注册
     teacher_reg_link: 老师 注册
@@ -354,11 +346,11 @@
     test_videos_help: 在你的学校测试我们新的视频播放器
     try_beta_courses: 新增功能！尝试我们为K-5 学生准备的 beta 版课程
     use_as_teacher: 使用本网站作为一名教师
-    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
-    heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
-    heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
-    your_gallery: Gallery
+    heading_hoc2014: <h2>一小时的代码</h2><h1>所有年龄</h1>
+    heading_elementary: <h2>20 小时课程</h2><h1>初学者 （所有年龄）</h1>
+    heading_apps: <h2>为乐趣</h2><h1>每个人</h1>
+    heading_legacy: <h2>我们的一般课程</h2><h1>所有年龄</h1>
+    your_gallery: 画廊
   gender:
     male: 男性
     female: 女性
@@ -369,11 +361,11 @@
   footer:
     help_from_html: 从谷歌、 微软、 Facebook 和 Twitter 工程师帮助创建本教程。
     art_from_html: 愤怒的小鸟 ™ & © 2009年-2013 Rovio 娱乐有限公司版权所有。 <br/>植物与僵尸 ™ & © 2013年电子艺术公司保留所有的权利。
-    powered_by_aws: Powered by Amazon Web Services
+    powered_by_aws: 由亚马逊网络服务
     feedback: 提供反馈
     translate: 帮助我们翻译成你的语言
     support: 支持
-    support_url: http://support.code.org
+    support_url: http://support.code.org/
     tos: 条目
     privacy: 隐私政策
     secure: 安全版本
@@ -383,60 +375,52 @@
     teacher: 请参阅解决方案
     auth_error: 您无权查看该解决方案。
     submit: 更新艺术家的位置
-    direction: 开始方向
+    direction: 开始方向 （以度为单位）
   video:
     tab: 视频。
     notes: 没有视频吗？请看笔记。
-    notes_coming_soon: Notes for this video coming soon.
+    notes_coming_soon: 此视频的备注即将推出。
     autoplay_option: 自动播放视频
     download: 下载视频
   compatability:
     working:
       header: 我们在努力加入对你的浏览器的支持。
-      message: Code.org uses modern web technology. This makes the site faster to
-        use. Your browser doesn't support all the features required, and you may experience
-        issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
-        any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade
-        your browser to a supported version</a>.
-      hide_this_warning: Hide this warning
+      message: Code.org利用现代网络技术. 这使得网站速度更快. 你的浏览器不支持所需的所有功能，使用该网站这一部分时，你可能会遇到问题. 请帮助我们通过<a
+        href=' %{report_issue_url}'> 报告你所发现的任何问题</a>. 你还可以<a href='%{supported_browsers_url}'>
+        升级到浏览器支持的版本</a>.
+      hide_this_warning: 隐藏此警告
     upgrade:
       header: 请升级你的浏览器。
-      message: Code.org uses modern web technology. This makes the site faster to
-        use. Unfortunately your browser doesn't support all the features required
-        to run this part of the site.<br/><br/>Install a browser on our supported
-        browsers list to continue. You can <a href='#'>try viewing the page</a>, but
-        expect functionality to be broken.
-      button: Take me to the list of supported browsers
+      message: Code.org利用现代网络技术. 这使得网站速度更快. 很遗憾，您的浏览器不支持网站这部分所需要的所有功能.   <br/> <br/>在我们支持的浏览器列表，安装浏览器来继续.
+        你可以 <a href='#'> 尝试查看此页</a>，但期望功能不正常.
+      button: 带我去支持浏览器的列表
   slow_loading: 请稍微多等一会...
   try_reloading: 请重新刷新页面
   next_stage: 完成 ！继续下一个阶段
   download_pdf: 开放课程
-  lesson_plan: Lesson Plan
-  view_lesson_plan: View Lesson Plan
+  lesson_plan: 课程计划
+  view_lesson_plan: 查看课程计划
   pdf_download: 下载 PDF
-  download_coming_soon: Downloadable activity coming soon.
-  video_coming_soon: Video Coming Soon!
+  download_coming_soon: 可下载的活动即将推出.
+  video_coming_soon: 视频即将推出！
   share_code:
-    title: 点击运行程序来观看程序的运行情况
+    title: 按此“运行”来看我的程序运行
     bounce_og_title: 看看我的弹球游戏
     flappy_og_title: 看看我的Flappy游戏
-    studio_og_title: Check out my story
-    check_out_what_i_made: Check out what I made
+    studio_og_title: 看看我玩实验室的应用程序
+    check_out_what_i_made: 看看我做了什么
     og_description: 我用 Code.org自己写的代码
-    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
-      the text.
-    address_not_allowed: It looks like there is an address in it. Try changing the
-      text.
-    email_not_allowed: It looks like there is an email in it. Try changing the text.
-    profanity_not_allowed: It looks like there is profanity in it. Try changing the
-      text.
+    phone_number_not_allowed: 看起來它像有个電話號碼在里面. 请尝试更改该文本.
+    address_not_allowed: 看起來它像有个地址在里面. 请尝试更改该文本.
+    email_not_allowed: 看起來它像有一封电子邮件在里面. 请尝试更改该文本.
+    profanity_not_allowed: 看起來它像有个亵渎在里面. 请尝试更改该文本.
   builder:
     created: 您创建了一个新的脚本。
     destroyed: 你毁了一个脚本。
     manage: 建立级别
     view: 查看
     back: 回到脚本
-    success: You successfully edited the blocks.
+    success: 您已成功编辑这些块.
     level:
       create: 创建新的水平
       current: 目前的水平
@@ -452,55 +436,51 @@
       title: 课程简介
       body: 尝试我们 20 小时计算机科学课程简介 。
     hoc2014:
-      try_new_tutorial: Try our new Hour of Code tutorial in beta
-      try_frozen: Artist with Anna and Elsa, from Frozen
+      try_new_tutorial: 试试我们新的beta 版的一小时代码教程
+      try_frozen: 艺术家与冻结的安娜和艾尔莎
     gallery:
-      title: Gallery
-      body: View a gallery of app and artist images created by our users
+      title: 画廊
+      body: 查看由我们用户创建的应用程序和艺术家图片的画廊
     frozen:
-      title: Frozen
+      title: 冻结
   gallery:
-    students_drew_these_with_code: Students drew these with code!
-    students_made_these_with_code: Students made these with code!
-    picture_count: In the past <b>%{days}</b> days, students have drawn <b>%{count}</b>
-      pictures by writing their own computer programs. Click on the pictures to see
-      each program in action.
-    activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
-      apps and pictures by writing their own computer programs. Click on the pictures
-      and screenshots to see each program in action.
-    want_to_make_your_own: Want to make your own?
-    more: More &rarr;
-    caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: '%{time_ago} ago'
-    header: Gallery
-    header_playlab: Play Lab
+    students_drew_these_with_code: 学生使用代码画这些!
+    students_made_these_with_code: 学生使用代码做这些!
+    picture_count: 在过去的 <b>%{days}</b> 天，学生们画了 <b>%{count}</b> 图片通过编写他们自己的计算机程序。点击图片来查看每个程序在做什么。
+    activity_count: 在过去的 <b>%{days}</b> 天中，学生通过编写他们自己的计算机程序完成了 <b>%{count}</b> 的应用程序和图片。单击图片和屏幕截图来查看每个程序在做什么。
+    want_to_make_your_own: 想要做你自己的？
+    more: 更多 &rarr;
+    caption_by_name_age: 通过 %{name}，年龄 %{age}
+    caption_time_ago: '%{time_ago}之前'
+    header: 画廊
+    header_playlab: 播放实验室
     header_artist: Artist
   landing:
-    prerelease: This page is still under development.
-    prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
-      is subject to revision as feedback is received and improvements are made.
-    feedback: Give Feedback
-    report_bug: Report Bug
-    support: Get Help
+    prerelease: 本课程是在 <span class='betatext'> beta 版</span> 中. 这表示它不是最终版本. 当收到 反馈,
+      它会受修订并改善.
+    prerelease_hoc2014: 本教程是在 <span class='betatext'> beta 版</span> 中. 当收到 反馈, 它会受修订并改善.
+    feedback: 提供反馈。
+    report_bug: 报告错误
+    support: 获取帮助
     support_url: //support.code.org
   multi:
-    wrong_title: Incorrect answer
-    wrong_body: The answer you've entered is not correct.  Please try again!
+    wrong_title: 不正确的答案
+    wrong_body: 你已输入的答案不是正确的。请再试一次 ！
     correct_title: 正确。
-    correct_body: That is the correct answer.
+    correct_body: 这是正确的答案。
   match:
-    wrong_title: Incorrect solution
-    wrong_body: The solution you've entered is not correct.  Please try again!
+    wrong_title: 不正确的解决方案
+    wrong_body: 您输入的解决方案不是正确的。请再试一次 ！
     correct_title: 正确。
-    correct_body: That is the correct answer.
+    correct_body: 这是正确的答案。
   text_match:
-    placeholder: Enter your answer here
+    placeholder: 在这里输入你的答案
   dialog:
     ok: 确定
   time:
-    hour: 1 hour
-    day: day
-    week: week
+    hour: 1 小时
+    day: 日
+    week: 周
   data:
     script:
       name:
@@ -534,16 +514,17 @@
   age_interstitial:
     age: 你的年龄
     header: 帐户信息更新
-    message: We're in the process of updating our experience to provide you with even
-      stronger privacy protections. To do this, we need existing users to enter their
-      age here.<br/>As always, code.org will never rent, sell or share this information
-      with any third parties.
+    message: 我们正在更新我们的经验，为您提供更强的隐私保护。要做到这一点，我们需要现有用户在这里输入自己的年龄.<br/>一如往常，code.org
+      将永远不会出租、 出售或与任何第三方共享此信息。
     sign_out: 如果你不想提供你的年龄你可以 <a href="%{url}">签出</a>。
-  zendesk_too_young_message: Sorry, younger users may not sign in to our support site.
-    You may browse <a href="http://support.code.org">support.code.org</a> without
-    signing in or ask your parent or teacher to contact us for you.
+  zendesk_too_young_message: 对不起，年轻的用户不能登录到我们的支持站点。你无需登录能浏览 <a href="http://support.code.org">
+    support.code.org</a> 或询问你的父母或老师为你与我们联系。
   progress:
-    not_completed: not completed
-    completed_too_many_blocks: completed, too many blocks
-    completed_perfect: completed, perfect
-    furthest_level_attempted: furthest level attempted
+    not_completed: 未完成
+    completed_too_many_blocks: 完成，使用太多块
+    completed_perfect: 完成了, 完美
+    furthest_level_attempted: 尝试过最远的水平
+  studio:
+    courses_working_on: 您正在进行的课程
+    completed_courses: 已完成的课程
+    all_courses: 所有的课程

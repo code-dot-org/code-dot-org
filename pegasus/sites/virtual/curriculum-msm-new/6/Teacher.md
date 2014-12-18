@@ -5,7 +5,7 @@ theme: none
 ---
 
 
-<%= partial('curriculum_header', :unittitle=> 'MSM', :lesson=> 6, :unplugged=>false, :title=> 'Calc: Defining Variables',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>(30-60)) %>
+<%= partial('curriculum_header', :unittitle=> 'MSM', :lesson=> 6, :unplugged=>false, :title=> 'Calc: Defining Variables',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>('30-60')) %>
 
 [content]
 
@@ -52,15 +52,17 @@ This lesson has two new and important words:<br/>
 
 ### <a name="GetStarted"></a> 2) Introduction
 
-Suppose we want to make an image with fifty identical, solid red triangles. To do so you'd have to create this Evaluation block fifty times!
-
-(triangle 50 "solid" "red")
+<img src="tri50SolidRed.png" style="float:right; padding-left: 20px; max-width: 50%;"/>
+Suppose we want to make an image with fifty identical, solid red triangles. To do so you'd have to create this Evaluation Block fifty times!
 
 Even worse, if you decided you wanted fifty blue triangles instead, you'd have to go through and change each and every block. There must be a better way!
 
 We can store that red triangle Evaluation Block in a Variable, let's call it "red_triangle." That name "red_triangle" now becomes a shortcut for the blocks inside the variable, and we can use that shortcut over and over in our program. If we decide that we want that red triangle to be 100 pixels instead of 50, we only need to change it in the variable definition!
 
-** If students have used variables in other languages **
+[tip]
+
+# Lesson Tip
+ If students have used variables in other languages
 It's really imporant to note that in functional programming, variables are considered immutable - meaning the value can't be changed during the execuation of a program. Think about it this way: x = x + 1 might make sense in Javascript, but it's impossible in Algebra.
 
 [/together]

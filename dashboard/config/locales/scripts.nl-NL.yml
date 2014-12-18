@@ -47,9 +47,8 @@
           'Bee: Loops': 'Bij: lussen'
           'Studio: Create a Story': 'Speel Lab: Maak een Verhaal'
           'Artist: Loops': 'Kustenaar: lussen'
-          description_audience: Ages 4+ (pre-readers)
-          description_short: Cursus 1 is bedoeld voor jonge lezers. Aanbevolen voor
-            de rangen K-1.
+          description_audience: Leeftijden 4 + (pre lezers)
+          description_short: Cursus 1 is bedoeld voor jonge lezers.
         course2:
           The Maze: Het Doolhof
           Suzi: Suzi
@@ -90,9 +89,8 @@
           'Artist: Sequence2': 'Kunstenaar: volgorde2'
           'Maze: Sequence2': 'Doolhof: Volgorde2'
           'Artist: Nested Loops': 'Kunstenaar: geneste lussen'
-          description_audience: Ages  6+ (reading required)
-          description_short: Cursus 2 is bedoeld voor studenten die kunnen lezen.  Aanbevolen
-            voor de rangen 2-5.
+          description_audience: Leeftijden 6 + (kunnen lezen vereist)
+          description_short: Cursus 2 is bedoeld voor leerlingen die kunnen lezen.
         course3:
           The Maze: Het Doolhof
           'Studio: Create a Story': 'Speel Lab: Maak een Verhaal'
@@ -147,9 +145,8 @@
           'Bee: Debugging2': 'Bij: Foutopsporing2'
           'Artist: Patterns': 'Kunstenaar: Patronen'
           Songwriting: Songwriting
-          description_audience: Ages 8+ (after Course 2)
-          description_short: Cursus 3 is een vervolg op cursus 2.  Aanbevolen voor
-            de rangen 4-5.
+          description_audience: Leeftijden 8 + (na cursus 2)
+          description_short: Cursus 3 is een vervolg op cursus 2.
         msm:
           title: Middelbare School Wiskunde
           description: Particuliere werk in uitvoering voor Middelbare School Wiskunde.
@@ -226,8 +223,8 @@
           title: Een Uur Code
           description: Probeer de grondbeginselen van de informatica met figuren uit
             angry Birds, Plant vs. Zombies en Scrat van Ice Age!
-          description_short: Probeer de grondbeginselen van de informatica met figuren
-            uit angry Birds, Plant vs. Zombies en Scrat van Ice Age!
+          description_short: Probeer de grondbeginselen van de informatica met veel
+            leuke figuren!
         frozen:
           title: Code met Anna en Elsa
           description: laten we code gebruiken om Anna en Elsa te helpen bij het ontdekken
@@ -235,7 +232,7 @@
             te maken terwijl je schaatst en een een mooi winterlandschap maken dat
             je kan delen met je vrienden!
           Artist: Kunstenaar
-          description_short: Vervoeg Anna en Elsa op hun speurtocht naar de magie
+          description_short: Ga met Anna en Elsa mee op hun speurtocht naar de magie
             en schoonheid van ijs door middel van programma-code.
         course4:
           description_short: Leerlingen die les 4 starten moeten eerst lessen 2 en
@@ -272,7 +269,7 @@
           Farmer Binary: Boer Binary
           Maze and Bee: Maze en Bee
           Artist Binary: Kunstenaar Binary
-          description_audience: Ages 10+ (after Course 3)
+          description_audience: Leeftijden 10 + (na cursus 3)
         Course4pre:
           description_short: Een korte samenvatting van concepten voor leerlingen
             die cursus 2 en 3 niet hebben afgewerkt.
@@ -321,3 +318,13 @@
           description: Een selectie van cursus 4 puzzels voor gebruiksvriendelijkheidstesten.
           Variables: Variabelen
           For Loops: For-lussen
+        potus:
+          title: speciale
+          description_short: speciale
+          description: speciale
+          Special: Speciale
+        special:
+          title: speciale
+          description_short: speciale
+          description: speciale
+          Special: Speciale

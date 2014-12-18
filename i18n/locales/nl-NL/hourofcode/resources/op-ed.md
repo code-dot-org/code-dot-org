@@ -1,6 +1,6 @@
 * * *
 
-title: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code layout: wide nav: resources_nav
+titel: Voorbeeld Resolutie die de Informatica Onderwijs Week en Uur Code ondersteunt indeling: breed nav:resources_nav
 
 * * *
 
@@ -9,15 +9,15 @@ title: Sample Op-ed Supportive of Computer Science Education Week and Hour of Co
   
 
 
-Go to http://code.org/promote to find state specific information about computer science.
+Ga naar http://code.org/promote om specifieke informatie te vinden over informatica.
 
-**Title: Computing…Where the Jobs Are**
+**Titel: Informatica...Waar de banen zijn**
 
-**By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]**
+**Door [NAME] en [overweeg samen te schrijven met OPVOEDER, SUPERINTENDENT of BUSINESS leider]**
 
-Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
+Computers zijn overal. Ze zitten in onze zakken. Ze hangen aan onze muren. Ze zitten in onze wagens. Ze zijn een kritiek stukje van onze infrastructuur van elektriciteitsnetten tot verkeerslichten tot de interne werking van onze financiële markten. Elk van deze computers heeft één ding gemeenschappelijk. Ze zijn afhankelijk van software om hen te vertellen wat ze moeten doen.
 
-But who exactly is going to write this software?
+Waar wie precies gaat deze software schrijven?
 
 Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
 
@@ -41,4 +41,4 @@ We need to recruit more computer science teachers and encourage professional dev
 
 According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Who will fill these jobs if our children are not given the opportunity to gain the skills needed?
 
-This week, December 8–15, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit <http://hourofcode.com> to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
+This week, December 8–15, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Iedereen moet leren te programmeren. Bezoek <http://hourofcode.com> om meer te leren en aan de slag te gaan. And support our efforts to bring computer science to more schools in **[STATE]**.

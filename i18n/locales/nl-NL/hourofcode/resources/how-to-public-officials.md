@@ -1,14 +1,14 @@
 * * *
 
-title: How-to guide for public officials layout: wide nav: resources_nav
+Titel: How-to gids voor openbare ambtenaren lay-out: breed nav: resources_nav
 
 * * *
 
-## Bring the Hour of Code to your entire community.
+## Breng het Uur Code naar je ganse gemeenschap.
 
-### Get every school participating, every student learning!
+### Zorg er voor dat iedere school deelneemt en elke leerling leert!
 
-  1. **Recruit local schools and districts.** Use [this email](<%= hoc_uri('/resources#sample-emails') %>) or [this blurb](<%= hoc_uri('/resources/stats') %>) as a starting point, and take a look at this [how-to](<%= hoc_uri('/resources/how-to') %>) for schools and districts. Let them know **every** participating educator will receive a [thank you gift](<%= hoc_uri('/resources/how-to') %>); that **100 classrooms** will win tech chats with **special guest speakers** (participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more); and, in **each state**, one participating school will win **$10,000 in technology**!
+  1. **Werf lokale scholen en districten.**Gebruik[deze email](<%= hoc_uri('/resources#sample-emails') %>)of[dit stukje reclame](<%= hoc_uri('/resources/stats') %>) als startpunt en belijk deze [how-to](<%= hoc_uri('/resources/how-to') %>)gids voor scholen en districten. Let them know **every** participating educator will receive a [thank you gift](<%= hoc_uri('/resources/how-to') %>); that **100 classrooms** will win tech chats with **special guest speakers** (participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more); and, in **each state**, one participating school will win **$10,000 in technology**!
 
   2. **Host an Hour of Code event.** See our [event how-to guide](<%= hoc_uri('/resources/how-to-event') %>) for a sample run of show, media outreach kit and other event-planning resources. Hosting an event is a great way to promote the Hour of Code and increase participation.
 

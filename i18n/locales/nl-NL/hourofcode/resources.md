@@ -8,26 +8,22 @@ title: Materialen layout: wide nav: resources_nav
   <h1 class="col-sm-6">
     Middelen
   </h1>
-  
-  <div class="col-sm-6 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Meld uw evenement aan</button></a>
-  </div>
 </div>
 
 <% if @country == 'ie' %>
 
-## Hosting an Hour of Code in Ireland? [See the how-to guide](<%= hoc_uri('/resources/how-to-ireland') %>)
+## Organiseer de Uur Code in ierland?</h2> 
 
 <% else %>
 
-## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+## Organiseert u een Uur Code? [Kijk naar de how-to gids](<%= hoc_uri('/resources/how-to') %>)
 
 <% end %>
 
 <a id="handouts"></p> 
 
 <h2>
-  Use this handout to spread the word
+  Gebruik deze hand-out om iedereen te informeren
 </h2>
 
 <p>
@@ -35,7 +31,7 @@ title: Materialen layout: wide nav: resources_nav
 </p>
 
 <h2>
-  Give this handout to teachers and schools
+  Geef deze hand-out aan leerkrachten en scholen
 </h2>
 
 <p>
@@ -46,7 +42,7 @@ title: Materialen layout: wide nav: resources_nav
   <a id="videos"></p> 
   
   <h2>
-    Show these videos to inspire students
+    Toon deze video's om leerlingen te inspireren
   </h2>
   
   <div style="float:left; padding:10px">
@@ -64,6 +60,7 @@ title: Materialen layout: wide nav: resources_nav
   </div>
   
   <div style='clear:both'>
+    
   </div>
   
   <div style="float:left; padding:10px">
@@ -81,16 +78,18 @@ title: Materialen layout: wide nav: resources_nav
   </div>
   
   <div style="float:left; padding:10px">
+    
   </div>
   
   <div style='clear:both'>
+    
   </div>
   
   <p>
     <a id="posters"></p> 
     
     <h2>
-      Hang these posters in your school
+      Hang deze posters in je school
     </h2>
     
     <p>
@@ -102,7 +101,7 @@ title: Materialen layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Feature these banners on your website
+      Laat deze banners op uw website zien
     </h2>
     
     <p>
@@ -114,7 +113,7 @@ title: Materialen layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Post these on social media
+      Post dit op sociale media
     </h2>
     
     <p>
@@ -122,7 +121,7 @@ title: Materialen layout: wide nav: resources_nav
     </p>
     
     <p>
-      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/image/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     
     <p>
@@ -130,7 +129,7 @@ title: Materialen layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Send these emails to help promote the Hour of Code
+      Stuur deze e-mails om het Uur Code te promoten
     </h2>
     
     <p>
@@ -138,27 +137,27 @@ title: Materialen layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Ask your school, employer or friends to sign up:
+      Vraag uw school, werkgever of vrienden zich aan te melden:
     </h2>
     
     <p>
-      Computers zijn overal, maar minder scholen doceren informatica dan 10 jaar geleden. Het goede nieuws is, we zijn op weg om dit te veranderen. If you heard about the Hour of Code last year, you might know it made history. In een week hebben 15 miljoen leerlingen informatica geprobeerd!
+      Computers zijn overal, maar minder scholen doceren informatica dan 10 jaar geleden. Het goede nieuws is, we zijn op weg om dit te veranderen. Als je over de Uur Code van vorig jaar hebt gehoord, weet u misschien dat het geschiedenis heeft geschreven. In een week hebben 15 miljoen leerlingen informatica geprobeerd!
     </p>
     
     <p>
-      Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+      Informatica was te vinden op de homepages van Google, MSN, Yahoo! en Disney. President Obama, Shakira en Ashton Kutcher startte het Uur Code met video's. Meer dan 100 partners ondersteunen deze beweging.
     </p>
     
     <p>
-      This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014.
+      Laten we het dit jaar nog groter maken. Ik vraag u om deel te nemen aan het Uur Code 2014. Organiseer een Uur Code evenement tijdens Computer Wetenschap onderwijs Week, van 8 tot 14 December, 2014.
     </p>
     
     <p>
-      Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
+      Deel het doel. Organiseer een evenement. Vraag een lokale school om in te schrijven, of probeer er zelf aan mee te doen -- iedereen kan er op vooruitgaan om de basis te leren.
     </p>
     
     <p>
-      Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com/<%= @country %>
+      Help ons dit jaar 100 miljoen studenten te bereiken voor het eind van het jaar! Start op http://hourofcode.com/<%= @country %>
     </p>
     
     <p>
@@ -166,51 +165,51 @@ title: Materialen layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Invite media to attend your event:
+      Vraag de media uw evenement bij te wonen:
     </h2>
     
     <p>
-      <strong>Subject line:</strong> Local school joins mission to introduce 100m students to computer science
+      <strong>Onderwerp:</strong> Lokale school doet mee in de missie om 100 miljoen studenten te laten kennismaken met informatica
     </p>
     
     <p>
-      Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and minorities are severely underrepresented. Good news is, we’re on our way to change this.
+      Computers zijn overal, maar minder scholen doceren informatica dan 10 jaar geleden. Meisjes en minderheden zijn ernstig ondervertegenwoordigd. Het goede nieuws is, we zijn op weg om dit te veranderen.
     </p>
     
     <p>
-      In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+      Vorig jaar deden in een week 15 miljoen studenten mee en hebben zij geprobeerd wat informatica is! Informatica was te vinden op de homepages van Google, MSN, Yahoo! en Disney. President Obama, Shakira en Ashton Kutcher startte het Uur Code met video's. Meer dan 100 partners ondersteunen deze beweging.
     </p>
     
     <p>
-      Now the Hour of Code movement is aiming for 100 million students.
+      Dit jaar streeft de Uur Code organisatie naar 100 miljoen studenten.
     </p>
     
     <p>
-      That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 8-14.
+      Dat is waarom elk van de [X number] studenten aan[SCHOOL NAME] meedoen op het grootste evenement van het leren van informatica in de geschiedenis: het Uur Code, tijdens 8-14 December.
     </p>
     
     <p>
-      I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
+      Ik nodig je uit om de aftrap bij te wonen en om uw kinderen de activiteit te zien starten op [DATE].
     </p>
     
     <p>
-      The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a statement that today’s generation of students are ready to learn critical skills for 21st century success. Please join us.
+      Het Uur Code, georganiseerd door de non-profitorganisatie Code.org en meer dan 100 anderen, is een demonstratie dat de huidige generatie van studenten bereid zijn om de kritische vaardigheden voor succes in de 21e eeuw te leren. Doe alsjeblieft mee.
     </p>
     
     <p>
-      <strong>Contact:</strong> [YOUR NAME], [TITLE], cell: (212) 555-5555
+      <strong>Contact:</strong> [YOUR NAME], [TITLE], telefoonnummer
     </p>
     
     <p>
-      <strong>When:</strong> [DATE and TIME of your event]
+      <strong>Wanneer:</strong> [Datum en tijd van uw evenement]
     </p>
     
     <p>
-      <strong>Where:</strong> [ADDRESS and DIRECTIONS]
+      <strong>Waar:</strong> [Adres en routebeschrijving]
     </p>
     
     <p>
-      I look forward to being in touch.
+      Ik kijk uit naar onze kennismaking.
     </p>
     
     <p>
@@ -218,39 +217,39 @@ title: Materialen layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Tell parents about your school's event:
+      Vertel ouders over het evenement op je school:
     </h2>
     
     <p>
-      Dear Parents,
+      Beste ouders,
     </p>
     
     <p>
-      We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly hinge on understanding how technology works. But only a tiny fraction of us are learning computer science, and less students are studying it than a decade ago.
+      We leven in een wereld omringd door technologie. En we weten dat, welk vakgebied onze studenten ook kiezen om zich te ontwikkelen, hun vermogen om te slagen zal steeds meer afhangen van hun begrip van hoe technologie werkt. Maar slechts een klein deel van ons leren over de informatica en er zijn nu minder studenten die het studeren dan tien jaar terug.
     </p>
     
     <p>
-      That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
+      Dat is waarom onze hele school meedoet aan het grootste leerevenement in de geschiedenis: het Uur Code, tijdens de Computer Science Education Week (8-14 december). Vorig jaar hebben in een week 15 miljoen leerlingen informatica geprobeerd. Dit jaar willen we wereldwijd 100 miljoen leerlingen bereiken!
     </p>
     
     <p>
-      Our Hour of Code is a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on your social media channels and consider hosting additional Hour of Code events in the community.
+      Ons 'Uur Code' is een statement dat [SCHOOL NAAM] er klaar voor is onze leerlingen belangrijke hedendaagse vaardigheden te leren. Om door te gaan met het brengen van programmeer activiteiten aan je leerlingen willen we het Uur Code event enorm maken. Ik wil u aanmoedigen vrijwilliger te worden, de lokale media in te schakelen, het nieuws op social media te delen en te overwegen meer 'Uur Code'-evenementen te organiseren in de gemeenschap.
     </p>
     
     <p>
-      This is a chance to change the future of education in [TOWN/CITY NAME].
+      Dit is een kans om de toekomst te veranderen in [PLAATSNAAM].
     </p>
     
     <p>
-      See http://hourofcode.com/<%= @country %> for details, and help spread the word.
+      Kijk op http://hourofcode.com/<%= @country %> voor details en help met het verspreiden van het doel.
     </p>
     
     <p>
-      Sincerely,
+      Met vriendelijke groet,
     </p>
     
     <p>
-      Your principal
+      De rector
     </p>
     
     <p>
@@ -258,33 +257,29 @@ title: Materialen layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Invite a local politician to your school's event:
+      Nodig een politicus uit voor het evenement op jouw school:
     </h2>
     
     <p>
-      Dear [Mayor/Governor/Representative/Senator LAST NAME]:
+      Geachte heer/mevrouw [ACHTERNAAM]:
     </p>
     
     <p>
-      Did you know that in today’s economy, computing jobs outnumber students graduating into the field by 3-to-1? And, computer science is foundational for <em>every</em> industry today. Yet 90% of schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
+      Wist u dat in de dagelijkse economie de computerbanen van de afgestudeerden winnen met 3 tegen 1? Bovendien is informatica tegenwoordig van fundamenteel belang voor <em>iedere</em> sector. Toch wordt het op 90% van de scholen niet gegeven. Op [SCHOOLNAAM] proberen we daar verandering in te brengen.
     </p>
     
     <p>
-      That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
+      Dat is waarom onze hele school meedoet aan het grootste leerevenement in de geschiedenis: het Uur Code, tijdens de Computer Science Education Week (8-14 december). Vorig jaar hebben in een week 15 miljoen leerlingen informatica geprobeerd. Dit jaar willen we wereldwijd 100 miljoen leerlingen bereiken!
     </p>
     
     <p>
-      I'm writing to invite you to take part in our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st century skills. We want to ensure that our students are on the forefront of creating technology of the future--not just consuming it.
+      Ik schrijf u om u uit te nodigen om mee te doen in het Uur Code-evenement en een speech te houden op de aftrap. Het vindt plaats op [DATUM, TIJD, PLAATS], en zal laten zien dat [NAAM STAD] er klaar voor is onze leerlingen belangrijke hedendaagse vaardigheden te leren. We willen er zeker van zijn dat onze studenten op de voorgrond staan van de toekomstige technologie en het niet alleen over zich heen laten komen.
     </p>
     
     <p>
-      Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
+      Ik ben te bereiken op [TELEFOONNUMMER EN MAILADRES]. Ik kijk uit naar uw antwoord.
     </p>
     
     <p>
-      Sincerely, [NAME], [TITLE]
-    </p>
-    
-    <p>
-      <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Meld uw evenement aan</button></a>
+      Met vriendelijke groet, [NAME], [TITLE]
     </p>

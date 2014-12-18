@@ -2,101 +2,101 @@
   data:
     text_match:
       Blocks to Bools 1:
-        Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic
-          expression that matches this code
-        /script_assets/msm/unit6/blockstomath1.png: /script_assets/msm/unit6/blockstomath1.png
-        (4+5) > 9: (4+5) > 9
+        Convert Blocks to Math: Převést bloky na matematiku
+        Type out the arithmetic expression that matches this code: Napiš početní výraz,
+          který odpovídá tomuto kódu
+        /script_assets/msm/unit6/blockstomath1.png: /script_assets/msm/unit1/blockstomath1.png
+        (4+5) > 9: (4 + 5) > 9
         Type the arithmetic expression here: Zde napište aritmetický výraz
       Blocks to Bools 2:
-        Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic
-          expression that matches this code
-        /script_assets/msm/unit6/blockstomath2.png: /script_assets/msm/unit6/blockstomath2.png
-        (10 > 11) or (7 <= 9): (10 > 11) or (7 <= 9)
-        (10 > 11) OR (7 <= 9): (10 > 11) OR (7 <= 9)
-        (10 > 11) || (7 <= 9): (10 > 11) || (7 <= 9)
+        Convert Blocks to Math: Převést bloky na matematiku
+        Type out the arithmetic expression that matches this code: Napiš početní výraz,
+          který odpovídá tomuto kódu
+        /script_assets/msm/unit6/blockstomath2.png: /script_assets/msm/unit1/blockstomath1.png
+        (10 > 11) or (7 <= 9): (10 > 11) nebo (7 < = 9)
+        (10 > 11) OR (7 <= 9): (10 > 11) nebo (7 < = 9)
+        (10 > 11) || (7 <= 9): (10 > 11) || (7 < = 9)
         Type the arithmetic expression here: Zde napište aritmetický výraz
       Blocks to Bools 3:
-        Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic
-          expression that matches this code
-        /script_assets/msm/unit6/blockstomath3.png: /script_assets/msm/unit6/blockstomath3.png
-        (5 < 10) and (10 < 15): (5 < 10) and (10 < 15)
-        (5 < 10) AND (10 < 15): (5 < 10) AND (10 < 15)
+        Convert Blocks to Math: Převést bloky na matematiku
+        Type out the arithmetic expression that matches this code: Napiš početní výraz,
+          který odpovídá tomuto kódu
+        /script_assets/msm/unit6/blockstomath3.png: /script_assets/msm/unit1/blockstomath1.png
+        (5 < 10) and (10 < 15): (5 < 10) a (10 < 15)
+        (5 < 10) AND (10 < 15): (5 < 10) A (10 < 15)
         (5 < 10) && (10 < 15): (5 < 10) && (10 < 15)
         Type the arithmetic expression here: Zde napište aritmetický výraz
       Blocks to Bools 4:
-        Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic
-          expression that matches this code
-        /script_assets/msm/unit6/blockstomath4.png: /script_assets/msm/unit6/blockstomath4.png
-        ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): ((1 < x) AND (x < 5)) OR
-          ((8 < x) AND (x < 10))
-        ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): ((1 < x) and (x < 5)) or
-          ((8 < x) and (x < 10))
+        Convert Blocks to Math: Převést bloky na matematiku
+        Type out the arithmetic expression that matches this code: Napiš početní výraz,
+          který odpovídá tomuto kódu
+        /script_assets/msm/unit6/blockstomath4.png: /script_assets/msm/unit1/blockstomath1.png
+        ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): ((1 < x) A (x < 5)) NEBO
+          ((8 < x) A (x < 10))
+        ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): ((1 < x) a (x < 5)) nebo
+          ((8 < x) (x < 10))
         ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): ((1 < x) && (x < 5)) || ((8
           < x) && (x < 10))
         Type the arithmetic expression here: Zde napište aritmetický výraz
       Blocks to Math 1:
-        Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic
-          expression that matches this code
+        Convert Blocks to Math: Převést bloky na matematiku
+        Type out the arithmetic expression that matches this code: Napiš početní výraz,
+          který odpovídá tomuto kódu
         /script_assets/msm/unit1/blockstomath1.png: /script_assets/msm/unit1/blockstomath1.png
         4 + 5: 4 + 5
         Type the arithmetic expression here: Zde napište aritmetický výraz
       Blocks to Math 2:
-        Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic
-          expression that matches this code
-        /script_assets/msm/unit1/blockstomath2.png: /script_assets/msm/unit1/blockstomath2.png
+        Convert Blocks to Math: Převést bloky na matematiku
+        Type out the arithmetic expression that matches this code: Napiš početní výraz,
+          který odpovídá tomuto kódu
+        /script_assets/msm/unit1/blockstomath2.png: /script_assets/msm/unit1/blockstomath1.png
         7 * 6: 7 * 6
         Type the arithmetic expression here: Zde napište aritmetický výraz
       Blocks to Math 3:
-        Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic
-          expression that matches this code
-        /script_assets/msm/unit1/blockstomath3.png: /script_assets/msm/unit1/blockstomath3.png
+        Convert Blocks to Math: Převést bloky na matematiku
+        Type out the arithmetic expression that matches this code: Napiš početní výraz,
+          který odpovídá tomuto kódu
+        /script_assets/msm/unit1/blockstomath3.png: /script_assets/msm/unit1/blockstomath1.png
         (2 * 3) - (1 + 0): (2 * 3) - (1 + 0)
         2 * 3 - (1 + 0): 2 * 3 - (1 + 0)
         Type the arithmetic expression here: Zde napište aritmetický výraz
       Blocks to Math 4:
-        Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic
-          expression that matches this code
-        /script_assets/msm/unit1/blockstomath4.png: /script_assets/msm/unit1/blockstomath4.png
+        Convert Blocks to Math: Převést bloky na matematiku
+        Type out the arithmetic expression that matches this code: Napiš početní výraz,
+          který odpovídá tomuto kódu
+        /script_assets/msm/unit1/blockstomath4.png: /script_assets/msm/unit1/blockstomath1.png
         (5 + 8) - 12: (5 + 8) - 12
-        5 + 8 - 12: 5 + 8 - 12
+        5 + 8 - 12: 5 + 8-12
         Type the arithmetic expression here: Zde napište aritmetický výraz
       Blocks to Math 5:
-        Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic
-          expression that matches this code
-        /script_assets/msm/unit1/blockstomath5.png: /script_assets/msm/unit1/blockstomath5.png
+        Convert Blocks to Math: Převést bloky na matematiku
+        Type out the arithmetic expression that matches this code: Napiš početní výraz,
+          který odpovídá tomuto kódu
+        /script_assets/msm/unit1/blockstomath5.png: /script_assets/msm/unit1/blockstomath1.png
         (-2) * (-6):
         - 2 * -6: -2 * -6
         Type the arithmetic expression here: Zde napište aritmetický výraz
       Blocks to Math 6:
-        Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic
-          expression that matches this code
-        /script_assets/msm/unit1/blockstomath6.png: /script_assets/msm/unit1/blockstomath6.png
-        ((4 - 1) * (-2)) + 12: ((4 - 1) * (-2)) + 12
-        ((4 - 1) * -2) + 12: ((4 - 1) * -2) + 12
+        Convert Blocks to Math: Převést bloky na matematiku
+        Type out the arithmetic expression that matches this code: Napiš početní výraz,
+          který odpovídá tomuto kódu
+        /script_assets/msm/unit1/blockstomath6.png: /script_assets/msm/unit1/blockstomath1.png
+        ((4 - 1) * (-2)) + 12: ((4-1) * (-2)) + 12
+        ((4 - 1) * -2) + 12: ((4-1) * (-2)) + 12
         (4 - 1) * (-2) + 12: (4 - 1) * (-2) + 12
         (4 - 1) * -2 + 12: (4 - 1) * -2 + 12
         Type the arithmetic expression here: Zde napište aritmetický výraz
       Blocks to Math 7:
-        Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic
-          expression that matches this code
-        /script_assets/msm/unit1/blockstomath7.png: /script_assets/msm/unit1/blockstomath7.png
+        Convert Blocks to Math: Převést bloky na matematiku
+        Type out the arithmetic expression that matches this code: Napiš početní výraz,
+          který odpovídá tomuto kódu
+        /script_assets/msm/unit1/blockstomath7.png: /script_assets/msm/unit1/blockstomath1.png
         10 / (2 * (3 + 1)): 10 / (2 * (3 + 1))
         Type the arithmetic expression here: Zde napište aritmetický výraz
       text match test:
-        Mathematical Expression Assessment: Mathematical Expression Assessment
-        Type out the arithmetic expression that this circle of evaluation evaluates to: Type
-          out the arithmetic expression that this circle of evaluation evaluates to
+        Mathematical Expression Assessment: Vyhodnocení matematického výrazu
+        Type out the arithmetic expression that this circle of evaluation evaluates to: Napište
+          aritmetický výraz který bude vyhodnocen stejně jako tento kruh hodnocení
         /script_assets/msm/Unit 1/Exercise_5_question_2.png: /script_assets/msm/Unit
           1/Exercise_5_question_2.png
         (9-3)+(4*7): (9-3)+(4*7)

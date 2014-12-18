@@ -41,8 +41,8 @@ ko:
           "Bee: Loops": '꿀벌: 반복'
           "Studio: Create a Story": 'Play Lab: 스토리 만들기'
           "Artist: Loops": '예술가: 반복'
-          description_audience: Ages 4+ (pre-readers)
-          description_short: Course 1 is designed for early readers.
+          description_audience: 4세 이상(한글 배우기 전)
+          description_short: 과정1은 글을 이제 막 읽기 시작한 아이들을 대상으로 만들어졌습니다.
         course2:
           The Maze: 미로 퍼즐
           Suzi: 수지
@@ -80,8 +80,8 @@ ko:
           "Artist: Sequence2": '예술가: 순차2'
           "Maze: Sequence2": '미로: 순차2'
           "Artist: Nested Loops": '예술가: 중첩반복'
-          description_audience: 'Ages  6+ (reading required)'
-          description_short: Course 2 is designed for students who can read.
+          description_audience: 6세 이상 (읽기 능력 필요)
+          description_short: 과정2는 글을 읽을 수 있는 학생을 대상으로 만들어졌습니다.
         course3:
           The Maze: 미로 퍼즐
           "Studio: Create a Story": 'Play Lab: 스토리 만들기'
@@ -131,8 +131,8 @@ ko:
           "Bee: Debugging2": '꿀벌: 디버깅2'
           "Artist: Patterns": '예술가: 패턴'
           Songwriting: 노래 만들기
-          description_audience: Ages 8+ (after Course 2)
-          description_short: Course 3 is a follow-up to Course 2.
+          description_audience: 8세 이상(과정2를 마친 후)
+          description_short: 과정3은 과정2의 다음 과정입니다.
         msm:
           title: 중학교 수학
           description: 중학교 수학 과정 개인 진도
@@ -201,7 +201,7 @@ ko:
           Maze: Maze
           title: Hour of Code
           description: 컴퓨터과학(정보과학)의 기초를 앵그리버드, Plats vs Zombies, 아이스 에이지의 Scrat과 함께 배워보세요.
-          description_short: Try the basics of computer science with many fun characters!
+          description_short: 여러가지 재밌는 캐릭터와 함께 컴퓨터과학의 기초/개념/원리들을 배워보세요!
         frozen:
           title: 안나, 엘사와 함께하는 코드
           description: 얼음의 마술과 아름다움을 탐구하는 안나, 엘사와 함께 코드를 해보세요. 스케이트를 타는 것 처럼 쉽게 눈 송이와 패턴을 만들어서 겨울왕국을 꾸밀 수 있게 될 것입니다. 그렇게 만든 것들은 친구들에게 자랑하세요!
@@ -235,7 +235,7 @@ ko:
           Farmer Binary: 농부 2진
           Maze and Bee: 미로와 꿀벌
           Artist Binary: 2진 예술가
-          description_audience: Ages 10+ (after Course 3)
+          description_audience: 10세 이상 (과정3을 마친 후)
         Course4pre:
           description_short: 과정2와 과정3을 이미 완료한 학생들을 위한 간단한 개념 확장
           Course 4 Prerequisite: 과정4 준비조건
@@ -281,3 +281,13 @@ ko:
           description: 사용성 테스트를 위한 4가지 수준의 코스 선택
           Variables: 변수
           For Loops: 반복을 위한
+        potus:
+          title: 스페셜
+          description_short: 스페셜
+          description: 스페셜
+          Special: 스페셜
+        special:
+          title: 스페셜
+          description_short: 스페셜
+          description: 스페셜
+          Special: 스페셜

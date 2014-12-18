@@ -134,8 +134,8 @@
 "hr": "hr-HR"
 "hr-HR":
   english: "Croatian"
-  native: "Hrvatska"
-  debug: true
+  native: "Hrvatski"
+  webfonts: false
 
 "hu": "hu-HU"
 "hu-HU":
@@ -191,6 +191,11 @@
   english: "Dutch"
   native: "Nederlands"
 
+"nn": "nn-NO"
+"nn-NO":
+  english: "Norwegian Nynorsk"
+  native: "Nynorsk"
+
 "no": "no-NO"
 "no-NO":
   english: "Norwegian"
@@ -229,8 +234,8 @@
 "sl": "sl-SI"
 "sl-SI":
   english: "Slovenian"
-  native: "slovenski jezik"
-  debug: true
+  native: "Slovenščina"
+  webfonts: false
 
 "sq": "sq-AL"
 "sq-AL":

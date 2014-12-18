@@ -1,21 +1,35 @@
 body {
-  font-family: 'Gotham A', 'Gotham B', sans-serif;
+  font-family: 'Gotham 4r', sans-serif;
+  font-weight: normal;
   background-color: #f2f2f2;
-  font-weight: 400;
+  font-weight: normal;
   margin-top: 0; }
 
 h1 {
-  font-weight: 700;
+  font-family: 'Gotham 7r', sans-serif;
+  font-weight: normal;
   font-size: 140%; }
 
 h2 {
-  font-weight: 500; }
+  font-family: 'Gotham 5r', sans-serif;
+  font-weight: normal; }
 
 a {
   color: #0596ce; }
   a:hover {
     color: #0596ce;
     background: none; }
+
+strong {
+  font-family: 'Gotham 7r', sans-serif;
+  font-weight: normal; }
+
+em {
+  font-family: 'Gotham 4i', sans-serif;
+  font-style: normal; }
+
+strong em, em strong {
+  font-family: 'Gotham 7i', sans-serif; }
 
 .farSide {
   text-align: right; }
@@ -30,6 +44,26 @@ html[dir="RTL"] .farSide {
   position: absolute;
   bottom: 10px;
   margin-left: 415px; }
+
+div.droplet-palette-group-header {
+  font-family: 'Gotham 4r', sans-serif;
+  font-weight: normal; }
+
+div.droplet-palette-group-header:active {
+  color: black; }
+
+div.droplet-palette-group-header-selected {
+  font-weight: 400;
+  color: black; }
+
+.droplet-palette-group-header.yellow {
+  border-left: 10px solid #e0e053; }
+
+.droplet-palette-group-header-selected.yellow {
+  background-color: #e0e053; }
+
+.droplet-wrapper-div {
+  outline-style: none; }
 
 #show-code-button {
   background-color: #b9bf15;
@@ -358,7 +392,8 @@ input[type="radio"] {
   margin: 20px 0px 20px 0px;
   line-height: 28px;
   color: #7e5ba0;
-  font-weight: bold; }
+  font-family: 'Gotham 7r', sans-serif;
+  font-weight: normal; }
 
 #show-code {
   margin-bottom: 5px; }
@@ -482,7 +517,8 @@ input[type="radio"] {
       display: block; } }
 
 .blocklyText, .blocklyMenuText, .blocklyTreeLabel, .blocklyHtmlInput, .blocklyIconMark, .blocklyTooltipText, .goog-menuitem-content {
-  font-family: 'Gotham A', 'Gotham B', sans-serif; }
+  font-family: 'Gotham 4r', sans-serif;
+  font-weight: normal; }
 
 .goog-menu {
   box-shadow: 4px 4px 6px #bbbbbb;
@@ -528,7 +564,8 @@ input[type="radio"] {
     color: #5b6770;
     margin-bottom: 10px; }
     .generated-code-container .generatedCodeMessage a {
-      font-weight: bold;
+      font-family: 'Gotham 7r', sans-serif;
+      font-weight: normal;
       color: #7665a0; }
       .generated-code-container .generatedCodeMessage a:hover {
         text-decoration: underline; }
@@ -574,7 +611,8 @@ input[type="radio"] {
       font-size: 24px;
       line-height: 27px; }
     .modal-content .feedback-callout .hint-header {
-      font-weight: bold; }
+      font-family: 'Gotham 7r', sans-serif;
+      font-weight: normal; }
     .modal-content .feedback-callout .hint-image {
       float: right;
       width: 20%; }
@@ -594,7 +632,8 @@ input[type="radio"] {
   background-color: white; }
 
 .dialog-title {
-  font-weight: bold; }
+  font-family: 'Gotham 7r', sans-serif;
+  font-weight: normal; }
 
 #ok-button {
   background-color: #ffa400;

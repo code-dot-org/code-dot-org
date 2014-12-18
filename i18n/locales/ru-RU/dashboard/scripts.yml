@@ -26,8 +26,8 @@ ru:
           Flappy non blockly: Flappy non blockly
           title: Курс 1
           Artist 2: Художник 2
-          Happy Maps: Happy Maps
-          Move it, Move it: Move it, Move it
+          Happy Maps: Весёлые карты
+          Move it, Move it: Двигайся, двигайся
           "Real-life Algorithms: Plant a Seed": 'Реальные алгоритмы: Посадить семя'
           Building a Foundation: Создание основы
           Getting Loopy: Зацикливание
@@ -41,8 +41,8 @@ ru:
           "Bee: Loops": 'Пчела: Циклы'
           "Studio: Create a Story": 'Лаборатория игр: Создать историю'
           "Artist: Loops": 'Художник: Циклы'
-          description_audience: Ages 4+ (pre-readers)
-          description_short: Course 1 is designed for early readers.
+          description_audience: Возраст 4+ (для начинающих и ещё не умеющих читать)
+          description_short: Курс 1 создан для тех, кто начинает читать.
         course2:
           The Maze: Лабиринт
           Suzi: Сюзи
@@ -80,8 +80,8 @@ ru:
           "Artist: Sequence2": 'Художник: Последовательность2'
           "Maze: Sequence2": 'Лабиринт: Последовательность2'
           "Artist: Nested Loops": 'Художник: Вложенные циклы'
-          description_audience: 'Ages  6+ (reading required)'
-          description_short: Course 2 is designed for students who can read.
+          description_audience: Возраст 6+ (необходимо уметь читать)
+          description_short: Курс 2 создан для учеников, умеющих читать.
         course3:
           The Maze: Лабиринт
           "Studio: Create a Story": 'Лаборатория игр: Создать историю'
@@ -131,7 +131,7 @@ ru:
           "Bee: Debugging2": 'Пчела: Отладка2'
           "Artist: Patterns": 'Художник: Узоры'
           Songwriting: Написание песен
-          description_audience: Ages 8+ (after Course 2)
+          description_audience: Возраст 8+ (для закончивших Курс 2)
           description_short: Course 3 is a follow-up to Course 2.
         msm:
           title: Математика средней школы
@@ -193,18 +193,18 @@ ru:
           Artist: Художник
           description_short: Draw cool pictures and designs with the Artist!
         scrat:
-          title: Scrat
+          title: Скрат
           description_short: Scrat short description.
           description: Scrat long description
           "Maze: Sequence": 'Лабиринт: Последовательность'
         hourofcode:
           Maze: Лабиринт
           title: Hour of Code
-          description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description_short: Try the basics of computer science with many fun characters!
+          description: Постигай азы программирования с персонажами Angry Birds, Plants vs. Zombies, и Скратом из Ледникового периода!
+          description_short: Постигай азы программирования с персонажами Angry Birds, Plants vs. Zombies, и Скратом из Ледникового периода!
         frozen:
-          title: Code with Anna and Elsa
-          description: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
+          title: Программируй с Анной и Эльзой
+          description: Давайте с помощью программирования кода присоединимся к Анне и Эльзе в их исследовании магии и красоты льда. Будем кататься на коньках и рисовать на льду снежинки и узоры, создавать зимнюю страну чудес и делиться этим с друзьями!
           Artist: Художник
           description_short: Давайте использовать код, чтобы присоединиться к Анне и Эльзе, открывающим магию и красоту льда.
         course4:
@@ -281,3 +281,13 @@ ru:
           description: A selection of Course 4 levels for usability testing.
           Variables: Переменные
           For Loops: For Loops
+        potus:
+          title: special
+          description_short: special
+          description: special
+          Special: Special
+        special:
+          title: special
+          description_short: special
+          description: special
+          Special: Special

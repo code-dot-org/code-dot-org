@@ -10,6 +10,11 @@ class ReportsController < ApplicationController
   before_action :set_script
   include LevelSourceHintsHelper
 
+  before_action except: [:user_stats, :header_stats, :students, :prizes, :assume_identity, :assume_identity_form] do
+    render status: :forbidden, text: "Disabled during HOC because it's too slow"
+    return false
+  end
+
   def user_stats
     @user = User.find(params[:user_id])
     authorize! :read, @user

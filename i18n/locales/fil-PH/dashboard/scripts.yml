@@ -3,33 +3,33 @@ fil:
     script:
       name:
         test:
-          "Jigsaw: Learn to drag and drop": 'Jigsaw: Learn to drag and drop'
+          "Jigsaw: Learn to drag and drop": 'Jigsaw: Matuto na mag-drag at mag-drop'
           The Maze: The Maze
           Multi: Multi
           Match: Match
-          Math Image: Math Image
+          Math Image: Imahe ng Math
           title: Test Course
-          description: Just an internal test course.
+          description: Ito ay isang panloob na test course lamang.
         course1:
-          "Jigsaw: Learn to drag and drop": 'Jigsaw: Learn to drag and drop'
+          "Jigsaw: Learn to drag and drop": 'Jigsaw: Matuto na mag-drag at mag-drop'
           "Maze: Sequence": 'Maze: Sequence'
           "Maze: Debugging": 'Maze: Debugging'
           "Artist 1: Intro": 'Artist 1: Intro'
           Artists 2: Artists 2
           Spelling Bee: Spelling Bee
-          Spelling Bee not blockly: Spelling Bee not blockly
+          Spelling Bee not blockly: Spelling Bee hindi blockly
           "Bee 1: Intro": 'Bee 1: Intro'
           "Maze 2: Loops": 'Maze 2: Loops'
           "Bee 2: Loops": 'Bee 2: Loops'
           Multi & Match: 'Multi & Match'
           K-1 Flappy: K-1 Flappy
-          Flappy non blockly: Flappy non blockly
-          title: Course 1
+          Flappy non blockly: Flappy hindi blockly
+          title: Kurso 1
           Artist 2: Artist 2
           Happy Maps: Happy Maps
           Move it, Move it: Move it, Move it
           "Real-life Algorithms: Plant a Seed": 'Real-life Algorithms: Plant a Seed'
-          Building a Foundation: Building a Foundation
+          Building a Foundation: Gumawa ng Foundation
           Getting Loopy: Getting Loopy
           The Big Event: The Big Event
           Going Places Safely: Matiwasay na pagpunta sa mga lugar
@@ -281,3 +281,13 @@ fil:
           description: A selection of Course 4 levels for usability testing.
           Variables: Mga variable
           For Loops: For Loops
+        potus:
+          title: special
+          description_short: special
+          description: special
+          Special: Special
+        special:
+          title: special
+          description_short: special
+          description: special
+          Special: Special

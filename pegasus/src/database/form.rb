@@ -1,6 +1,7 @@
 class Form
   include DataMapper::Resource
   property :id, Serial
+  property :source_id, String, unique_index: true
   property :parent_id, Integer, index:true
   property :secret, String, unique_index: true, required: true
   property :user_id, Integer, index: true

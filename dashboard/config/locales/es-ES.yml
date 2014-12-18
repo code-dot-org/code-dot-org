@@ -36,6 +36,7 @@
   of: de
   more: MÁS
   less: MENOS
+  beta: beta
   try_hoc: 'Prueba la Hora del Código, haz clic aquí >> '
   try_k8intro: Prueba nuestro curso de Introducción a la informática K-8 (15-25 horas)
   k8intro: Curso de Introducción a las Ciencias de la Computación K-8 (15-25 horas)
@@ -403,8 +404,9 @@
     try_beta_courses: ¡Nuevo! Prueba nuestros cursos en beta para estudiantes de 6
       a 11 años K-5
     use_as_teacher: Usa este sitio como un maestro
-    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>Cursos de 20 horas para</h2><h1>alumnos de primaria</h1>
+    heading_hoc2014: <h2>La Hora Del Código Para</h2><h1>Todas Las Edades</h1>
+    heading_elementary: <h2>Cursos de 20 Horas para</h2><h1>Principiantes (todas las
+      edades)</h1>
     heading_apps: <h2>Diversión para</h2><h1>Todos</h1>
     heading_legacy: <h2>Nuestro curso general para</h2><h1>Todas las edades</h1>
     your_gallery: Galeria
@@ -418,8 +420,8 @@
   footer:
     help_from_html: Ingenieros de Google, Microsoft, Facebook y Twitter han ayudado
       a crear este tutorial.
-    art_from_html: Angry Brids&trade;&&copy; 2009-2014 Rovio Entertainment Ltd. Todos
-      los derechos reservados. <br/>Plants vs. Zombies&trade;&&copy; 2014 Electronic
+    art_from_html: Angry Brids&trade;&&copy; 2009-2013 Rovio Entertainment Ltd. Todos
+      los derechos reservados. <br/>Plantas vs. Zombies&trade;&&copy; 2013 Electronic
       Arts Inc. Todos los derechos reservados.
     powered_by_aws: Powered by Amazon Web Services
     feedback: Enviar comentarios
@@ -509,7 +511,7 @@
         computación.
     hoc2014:
       try_new_tutorial: Prueba nuestro nuevo tutorial de la hora del código en beta
-      try_frozen: Anna y Elsa artistas de "Frozen"
+      try_frozen: Artista con Anna y Elsa de "Frozen"
     gallery:
       title: Galeria
       body: Ver una galería de aplicaciones y de imágenes de artistas creadas por
@@ -610,3 +612,7 @@
     completed_too_many_blocks: completado, pero tiene demasiados bloques
     completed_perfect: completado, perfecto
     furthest_level_attempted: Nivel más alto intentado
+  studio:
+    courses_working_on: Cursos en los que estás participando
+    completed_courses: Cursos finalizados
+    all_courses: Todos los cursos

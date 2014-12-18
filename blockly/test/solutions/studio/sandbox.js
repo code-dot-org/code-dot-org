@@ -1,6 +1,7 @@
 var TestResults = require('../../../src/constants.js').TestResults;
 var _ = require('../../../build/js/lodash');
 var Direction = require('../../../src/studio/constants.js').Direction;
+var blockUtils = require('../../../src/block_utils');
 
 /**
  * Runs the given function at the provided tick count
@@ -765,6 +766,39 @@ module.exports = {
         });
         runOnTick (65, function () {
           assert(Studio.playerScore === 3, 'third point for edge collision');
+          Studio.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
+    },
+    {
+      description: 'random background/avatar',
+      xml: '<xml>' +
+        blockUtils.blockWithNext('when_run', {},
+          blockUtils.blockWithNext('studio_setSprite', {
+            SPRITE: 0,
+            VALUE: 'random'
+          },
+          blockUtils.blockOfType('studio_setBackground', {
+            VALUE: 'random'
+          })
+          )
+        ) + '</xml>',
+      runBeforeClick: function (assert) {
+        runOnTick (5, function () {
+          var sprite = document.getElementById('sprite0');
+          var vis = sprite.getAttribute('visibility');
+          assert(sprite.getAttribute('visibility') === 'visible', 'vis: ' + vis);
+          assert(sprite.getAttribute('xlink:href') !== undefined);
+
+          var background = document.getElementById('background');
+          assert(background.getAttribute('xlink:href') !== undefined);
+
+        });
+        runOnTick (6, function () {
           Studio.onPuzzleComplete();
         });
       },

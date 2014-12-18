@@ -36,6 +36,7 @@ sr:
   of: од
   more: ВИШЕ
   less: МАЊЕ
+  beta: beta
   try_hoc: 'Испробајте Hour of Code.Кликните овде >> '
   try_k8intro: Пробај наш К-8 курс Увод у рачунарство (15-25 часова)
   k8intro: К-8 курс Увод у рачунарство (15-25 часова)
@@ -347,7 +348,7 @@ sr:
     none: Желим задржати приватност
   user_type:
     student: студент
-    teacher: Teacher
+    teacher: Учитељ
   footer:
     help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
@@ -508,3 +509,7 @@ sr:
     completed_too_many_blocks: completed, too many blocks
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
+  studio:
+    courses_working_on: "Courses you're working on"
+    completed_courses: Completed courses
+    all_courses: All courses

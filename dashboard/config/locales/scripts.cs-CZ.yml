@@ -3,78 +3,81 @@
     script:
       name:
         test:
-          'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
+          'Jigsaw: Learn to drag and drop': 'Skládačky: Naučte se přetáhnout'
           The Maze: Bludiště
           Multi: Multi
-          Match: Match
-          Math Image: Math Image
-          title: Test Course
-          description: Just an internal test course.
+          Match: Shoda
+          Math Image: Matematický obrázek
+          title: Testovací kurz
+          description: Jen vnitřní testovací kurz.
         course1:
-          'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
-          'Maze: Sequence': 'Maze: Sequence'
-          'Maze: Debugging': 'Maze: Debugging'
-          'Artist 1: Intro': 'Artist 1: Intro'
-          Artists 2: Artists 2
-          Spelling Bee: Spelling Bee
-          Spelling Bee not blockly: Spelling Bee not blockly
-          'Bee 1: Intro': 'Bee 1: Intro'
-          'Maze 2: Loops': 'Maze 2: Loops'
-          'Bee 2: Loops': 'Bee 2: Loops'
-          Multi & Match: Multi & Match
-          K-1 Flappy: K-1 Flappy
-          Flappy non blockly: Flappy non blockly
-          title: Course 1
-          Artist 2: Artist 2
-          Happy Maps: Happy Maps
-          Move it, Move it: Move it, Move it
-          'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
-          Building a Foundation: Building a Foundation
-          Getting Loopy: Getting Loopy
-          The Big Event: The Big Event
-          Going Places Safely: Going Places Safely
-          description: A course for K-1 students who can't yet read.
-          'Bee: Sequence': 'Bee: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
-          'Artist: Shapes': 'Artist: Shapes'
-          'Maze: Loops': 'Maze: Loops'
-          'Bee: Loops': 'Bee: Loops'
-          'Studio: Create a Story': 'Studio: Create a Story'
+          'Jigsaw: Learn to drag and drop': 'Skládačky: Naučte se přetáhnout'
+          'Maze: Sequence': 'Bludiště: sekvence'
+          'Maze: Debugging': 'Bludiště: ladění'
+          'Artist 1: Intro': '1 umělec: Intro'
+          Artists 2: Umělci 2
+          Spelling Bee: Hláskovací soutěž
+          Spelling Bee not blockly: Hláskovací soutěž, ne blockly
+          'Bee 1: Intro': 'Včela 1: Intro'
+          'Maze 2: Loops': 'Bludiště 2: smyčky'
+          'Bee 2: Loops': 'Bee 2: smyčky'
+          Multi & Match: Multi & Shoda
+          K-1 Flappy: K-1 (3-6 let) Flappy
+          Flappy non blockly: Flappy verze bez blockly
+          title: Kurz 1
+          Artist 2: Umělec 2
+          Happy Maps: Šťastné mapy
+          Move it, Move it: Pohyb, pohyb
+          'Real-life Algorithms: Plant a Seed': 'Algoritmy ze života: Zasadit semínko'
+          Building a Foundation: Stavební nadace
+          Getting Loopy: Bláznit
+          The Big Event: Velká událost
+          Going Places Safely: Cestování bezpečně
+          description: Kurz 1 je navržen tak, aby umožnil brzkým čtenářům vytvářet
+            počítačové programy, které mu pomohou se naučit jak spolupracovat s ostatními,
+            rozvinout dovednosti potřebné k řešení problémů  a jak překonávat obtížné
+            úkoly. Na konci tohoto kurzu studenti vytvoří jejich vlastní vlastní hru
+            nebo příběh, který mohou sdílet. Doporučeno pro třídy K-1 (3–6 let).
+          'Bee: Sequence': 'Včela: sekvence'
+          'Artist: Sequence': 'Umělec: sekvence'
+          'Artist: Shapes': 'Umělec: tvary'
+          'Maze: Loops': 'Bludiště: cykly'
+          'Bee: Loops': 'Bee: cykly'
+          'Studio: Create a Story': 'Hravá laboratoř: Vytvoř příběh'
           'Artist: Loops': 'Artist: Loops'
-          description_audience: Ages 4+ (pre-readers)
-          description_short: Course 1 is designed for early readers in the lower elementary
-            grades.
+          description_audience: Stáří 4+ (před čtenáři)
+          description_short: Kurz 1 je určen pro rané čtenáře.
         course2:
           The Maze: Bludiště
           Suzi: Suzi
           The Artist: Umělec
-          Artist Debugging: Artist Debugging
+          Artist Debugging: Umělec ladění
           Bounce: Odraz
-          'Studio: Create a Story': 'Studio: Create a Story'
-          Artist Loops: Artist Loops
-          Bee Conditionals: Bee Conditionals
+          'Studio: Create a Story': 'Hravá laboratoř: Vytvoř příběh'
+          Artist Loops: Umělec cykly
+          Bee Conditionals: Včela podmínky
           Flappy: Flappy
-          title: Course 2
-          Bee Loops: Bee Loops
-          Artist Functions: Artist Functions
-          The Artist Debugging: The Artist Debugging
-          Bee Debugging: Bee Debugging
-          Bee Functions: Bee Functions
-          Maze Loops: Maze Loops
+          title: Kurz 2
+          Bee Loops: 'Bee: cykly'
+          Artist Functions: Umělec funkce
+          The Artist Debugging: Umělec ladění
+          Bee Debugging: Včela ladění
+          Bee Functions: Včela funkce
+          Maze Loops: 'Bludiště: cykly'
           Graph Paper Programming: Programování Na Milimetrovém Papíru
-          'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
-          Getting Loopy: Getting Loopy
-          Relay programming: Relay programming
+          'Real-life Algorithms: Paper Planes': 'Algoritmy ze života: Papírová letadla'
+          Getting Loopy: Bláznit
+          Relay programming: Relay programování
           Conditionals: Podmínky
           Binary Bracelets: Binary Bracelets
-          The Big Event: The Big Event
+          The Big Event: Velká událost
           Your Digital Footprint: Your Digital Footprint
           description: Formerly known as a 2-3 course.
-          'Maze: Sequence': 'Maze: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
-          'Maze: Loops': 'Maze: Loops'
+          'Maze: Sequence': 'Bludiště: sekvence'
+          'Artist: Sequence': 'Umělec: sekvence'
+          'Maze: Loops': 'Bludiště: cykly'
           'Artist: Loops': 'Artist: Loops'
-          'Bee: Loops': 'Bee: Loops'
+          'Bee: Loops': 'Bee: cykly'
           'Bee: Debugging': 'Bee: Debugging'
           'Artist: Debugging': 'Artist: Debugging'
           'Bee: Conditionals': 'Bee: Conditionals'
@@ -86,17 +89,17 @@
             lower and middle elementary grades.
         course3:
           The Maze: Bludiště
-          'Studio: Create a Story': 'Studio: Create a Story'
+          'Studio: Create a Story': 'Hravá laboratoř: Vytvoř příběh'
           The Artist: Umělec
           title: Course 3
-          Artist Functions: Artist Functions
+          Artist Functions: Umělec funkce
           Artist For Loops: Artist For Loops
           Artist Nested Loops: Artist Nested Loops
-          Bee Conditionals: Bee Conditionals
+          Bee Conditionals: Včela podmínky
           Bee Nested Loops: Bee Nested Loops
           Bee Debuggin: Bee Debuggin
-          Bee Debugging: Bee Debugging
-          Bee Functions: Bee Functions
+          Bee Debugging: Včela ladění
+          Bee Functions: Včela funkce
           Artist Functions with Params: Artist Functions with Params
           Bounce: Odraz
           Maze Conditionals: Maze Conditionals
@@ -132,7 +135,7 @@
           'Bee: Nested Loops2': 'Bee: Nested Loops2'
           'Bee: Debugging2': 'Bee: Debugging2'
           'Artist: Patterns': 'Artist: Patterns'
-          Songwriting: Songwriting
+          Songwriting: Skládání písniček
           description_audience: Ages 8+ (after Course 2)
           description_short: Students taking Course 3 should have already taken Course
             2.
@@ -140,16 +143,16 @@
           title: Middle School Math
           description: Private work in progress for Middle School Math.
           Graph Paper Programming: Programování Na Milimetrovém Papíru
-          Assessments: Assessments
-          Unit 1: Unit 1
-          Unit 2: Unit 2
-          Ninja Cat and the Coordinate Plane: Ninja Cat and the Coordinate Plane
-          'Calc: Circles of Evaluation': 'Calc: Circles of Evaluation'
-          'Artist: Strings and Images': 'Artist: Strings and Images'
-          Contracts: Contracts
-          'Artist: Writing Contracts': 'Artist: Writing Contracts'
-          'Calc: Defining Variables': 'Calc: Defining Variables'
-          'Play Lab: Defining Variables': 'Play Lab: Defining Variables'
+          Assessments: Hodnocení
+          Unit 1: Lekce 1
+          Unit 2: Lekce 2
+          Ninja Cat and the Coordinate Plane: Ninja kočka a rovinové souřadnice
+          'Calc: Circles of Evaluation': 'Calc: Kruhy Hodnocení'
+          'Artist: Strings and Images': 'Umělec: Řetězce a obrázky'
+          Contracts: Smlouvy
+          'Artist: Writing Contracts': 'Umělec: Psaní smluv'
+          'Calc: Defining Variables': 'Calc: Definice proměnných'
+          'Play Lab: Defining Variables': 'Hravá laboratoř: Definice proměnných'
           The Design Recipe: The Design Recipe
           'Artist: Defining Functions': 'Artist: Defining Functions'
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
@@ -206,7 +209,7 @@
           title: Scrat
           description_short: Scrat short description.
           description: Scrat long description
-          'Maze: Sequence': 'Maze: Sequence'
+          'Maze: Sequence': 'Bludiště: sekvence'
         hourofcode:
           Maze: Bludiště
           title: Hodina kódu
@@ -261,8 +264,8 @@
           description_short: A brief rampup of concepts for students who have not
             taken Course 2 and 3.
           Course 4 Prerequisite: Course 4 Prerequisite
-          'Maze: Sequence': 'Maze: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
+          'Maze: Sequence': 'Bludiště: sekvence'
+          'Artist: Sequence': 'Umělec: sekvence'
           'Artist: Loops': 'Artist: Loops'
           'Bee: Conditionals': 'Bee: Conditionals'
           'Artist: Nested Loops': 'Artist: Nested Loops'
@@ -274,8 +277,8 @@
           description_short: A brief rampup of concepts for students who have not
             taken Course 2 and 3.
           Course 4 Prerequisite: Course 4 Prerequisite
-          'Maze: Sequence': 'Maze: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
+          'Maze: Sequence': 'Bludiště: sekvence'
+          'Artist: Sequence': 'Umělec: sekvence'
           'Artist: Loops': 'Artist: Loops'
           'Bee: Conditionals': 'Bee: Conditionals'
           'Artist: Nested Loops': 'Artist: Nested Loops'
@@ -287,8 +290,8 @@
           description_short: A brief rampup of concepts for students who have not
             taken Course 2 and 3.
           Course 4 Prerequisite: Course 4 Prerequisite
-          'Maze: Sequence': 'Maze: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
+          'Maze: Sequence': 'Bludiště: sekvence'
+          'Artist: Sequence': 'Umělec: sekvence'
           'Artist: Loops': 'Artist: Loops'
           'Bee: Conditionals': 'Bee: Conditionals'
           'Artist: Nested Loops': 'Artist: Nested Loops'
@@ -305,3 +308,13 @@
           description: A selection of Course 4 levels for usability testing.
           Variables: Proměnné
           For Loops: For Loops
+        potus:
+          title: special
+          description_short: special
+          description: special
+          Special: Special
+        special:
+          title: special
+          description_short: special
+          description: special
+          Special: Special

@@ -316,3 +316,13 @@
           description: A selection of Course 4 levels for usability testing.
           Variables: المتغيرات
           For Loops: For Loops
+        potus:
+          title: special
+          description_short: special
+          description: special
+          Special: Special
+        special:
+          title: special
+          description_short: special
+          description: special
+          Special: Special

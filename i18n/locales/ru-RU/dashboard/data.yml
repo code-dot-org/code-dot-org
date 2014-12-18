@@ -99,7 +99,7 @@ ru:
         Jigsaw: Головоломки
         MazeStep: 'Лабиринт: Пошаговый режим'
         Wordsearch: Wordsearch
-        Webapp: Webapp
+        Webapp: Веб приложение
         ArtistEC: Художник
         TextMatch: Text Match
         StudioEC: Лаборатория игр
@@ -129,8 +129,7 @@ ru:
         maze_2_5: Есть способ добраться до глупой хрюшки, используя только 2 блока. Догадываешься как?
         maze_2_6: Попробуй довести меня до зелёного пришельца, используя только три блока.
         maze_2_7: 'Помоги мне прогнать вредного поросёнка, используя как можно меньше блоков. Попробуй использовать блок "повторить" больше одного раза.'
-        maze_2_8: |-
-          When a block is grey, that means you can't delete it. Solve this puzzle using the "repeat" block that repeats 3 times. Try putting these 3 blocks inside the grey "repeat" block: move, move, turn.
+        maze_2_8: 'Серый цвет блока означает, что такой блок нельзя удалить. Реши головоломку, используя блок "повторить", который повторяет всё 3 раза. Попробуй разместить внутри серого блока "повторить" 3 блока: "двигаться вперёд", "двигаться вперёд", "повернуть".'
         maze_2_9: 'Теперь попробуй новый блок "повторять до" - он будет повторять действия,  пока я  не доберусь до надоедливой свиньи.'
         maze_2_10: 'Сейчас последняя попытка - ты можешь это сделать, используя только 4 блока?'
         maze_2_11: Уважаемый программист. Я зомби. Я голоден. Мне надо ... добраться ... до подсолнечника... Ты можешь отправить меня к нему, используя всего 5 блоков?
@@ -365,11 +364,11 @@ ru:
       frozen snowflower:
         instructions: Замысловатые снежные узоры можно создать с помощью очень простых форм. Сможете сделать шаблон, повторяя 5 кругов размером 5 и 5 кругов размером 10?
       frozen snowflake branch:
-        instructions: 'Попробуй блок "Создать луч снежинки", чтобы создать три луча, из которых почти получается снежинка.'
+        instructions: 'Попробуй блок "Создать снежинку-ветвь", чтобы создать три луча, из которых почти получается снежинка.'
       frozen snowflake full:
         instructions: Теперь повторите 8 раз, чтобы сделать красивую снежинку!
       frozen freeplay:
-        instructions: 'Теперь ты - настоящий художником! Создай зимнюю Страну чудес и поделись с друзьями.'
+        instructions: 'Теперь ты - настоящий художник! Создай зимнюю Страну чудес и поделись с друзьями.'
       scrat 16:
         instructions: 'Жёлудь! Жёлудь! Жёлудь! Используй блок "если", чтобы мне добраться до него с наименьшим количеством блоков.'
       scrat 17:
@@ -428,7 +427,7 @@ ru:
         Unplug9: Эстафетное программирование
         Unplug10: интернет
         Unplug11: Итоги
-        C1_happy_maps_unplugged: Happy Maps
+        C1_happy_maps_unplugged: Весёлые карты
         C1_moveitmoveit_unplugged: Move It, Move It
         C1_bigevent_unplugged: Большое Событие
         C1_getting_loopy: Зацикливание
@@ -478,14 +477,28 @@ ru:
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
-        C4_artist_math: Programming the Artist with Math
-        C4_create_functions: Creating Functions
-        C4_edit_functions: Editing Functions
+        C4_intro: Introduction
+        C4_bee_conditional: 'Пчела: Условные команды'
+        C4_variables_artist: 'Variables - Artist'
+        C4_variables_playlab: 'Variables - Play Lab'
         C4_for_loops: For Loops
-        C4_variables: Переменные
-        frozen_intro: Hour of Code Intro
-        frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
+        C4_math_artist: Programming the Artist with Math
+        C4_function_edit: Editing Functions
+        C4_function_create: Creating Functions
+        C4_function_parameters: Процедуры с параметрами
+        C4_conditionals: Условные команды
+        C4_unplugged_algorithms: Algorithms with Tangrams
+        C4_unplugged_madlibs: Mad Libs
+        C4_unplugged_variables: Variables in Envelopes
+        C4_unplugged_forloops: For Loops
+        C4_unplugged_parameters: Написание песен с параметрами
+        C4_unplugged_binary: Binary
+        frozen_intro: Введение в Час кода
+        frozen_loops: Знакомство с циклами
+        frozen_functions: Знакомство с функциями
+        playlab_intro: Introduction to Play Lab
+        playlab_events: Play Lab Events
+        playlab_repeat_forever: Play Lab Repeat Forever
     callout:
       text:
         drag_blocks: Перетащите блок «переместить» и поставьте его ниже другого блока
@@ -498,31 +511,33 @@ ru:
         set_sprite_image: 'Attach a "set actor to image" block to the "when story starts" block to enable an actor for this story'
         studio_say_text: Type what you want your actor to say within these quotes
         jigsaw_click: Нажмите этот блок!
-        move_elsa_forward: 'Drag a "Move Forward" block and snap it below the "When Run" block to make Elsa move forward'
-        turn_elsa: 'Use the "Turn" block to make Elsa turn. The number in the drop-down determines how much Elsa turns'
-        replace_questions: 'Use the drop-down to replace "???" with a number'
-        replace_questions_degree: 'Use the drop-down to replace "???" with the correct degree to turn'
-        repeat_blocks: 'Use the "Repeat" block and wrap it around the blocks in the workspace'
-        snowflake_dropdown: Use this drop-down to create different snowflakes!
-        degrees_per_side: Divide 360 by the number of sides to get the size of each angle in degrees.
+        move_elsa_forward: 'Возьми блок "двигаться вперёд" и прицепи его к блоку "При запуске", чтобы Эльза пошла вперёд'
+        turn_elsa: 'Используй блок "повернуть", чтобы Эльза повернулась. Число в выпадающем меню определяет, как сильно Эльза повернётся'
+        replace_questions: 'Используй меню, чтобы заменить "???" числом'
+        replace_questions_degree: 'Используй меню, чтобы заменить "???" необходимым градусом поворота'
+        repeat_blocks: 'Используй блок "повторить" и как бы оберни им блоки в рабочем пространстве'
+        repeat_blocks_1: (1) Перемести этот блок в рабочее пространство и положи внутрь серые блоки
+        repeat_blocks_2: '(2) Передвинь сюда блок "повторить" и помести серые блоки ему внутрь'
+        snowflake_dropdown: Используй это меню для создания разных снежинок!
+        degrees_per_side: Раздели 360 на число сторон, чтобы получить значение градуса каждого угла.
         set_sides: 'Use this block to set "sides" to the number needed to complete the puzzle.'
         set_length: 'Use this block to set "length" to the correct value.'
-        which_equation: 'Which equation makes each side shorter for shapes with more sides?  Try each equation!'
+        which_equation: Which equation makes each side shorter for shapes with more sides?
         get_nectar: 'Use the new "get nectar" block.'
         actions_category: 'The tool box got a new look! The "Actions" blocks are in here now.'
         draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
-        edit_function: Use this button to edit the function.
+        edit_function: Click here to edit your function.
         create_function: 'Click here to open the "Functions" flyout, then click the "Create a Function" button.'
         house_hint: "It's ok if the picture doesn't look like a house yet. We will fix it in the next puzzle."
         edit_draw_square: Use this button to edit the function and add the loop.
         edit_get_nectar: Use this button to edit the function and change the direction the Bee will turn to get the nectar.
         logic_category: 'Open the "Logic" flyout to find the "if/else" block.'
         length_parameter: 'Can you update this function so it uses the "length" parameter?'
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: "Don't forget to turn after creating each circle."
-        frozen_circle_function_with_parameter_circle: 'Use the "create a circle" block and change the size.'
-        frozen_snowflake_branch: 'Use the "create a snowflake branch" block'
-        frozen_create_square: Attach more blocks here to create a square
+        frozen_diamond_repeat: 'Используй блок "повторить" для создания этой фигуры.'
+        frozen_circle_function_in_circle_turn: Не забывай поворачивать после создания каждого круга.
+        frozen_circle_function_with_parameter_circle: 'Используй блок "создать круг" и меняй размер.'
+        frozen_snowflake_branch: 'Используй блок "создать снежинку-ветвь"'
+        frozen_create_square: Присоедини больше блоков, чтобы создать квадрат
         playlab_drag_say: 'Drag the "say" block here and type "hello"'
         playlab_use_twice: Use this block twice and remember to change the actor number
         playlab_move_girl: 'Use the "move right" block to move Tennis Girl'
@@ -531,3 +546,23 @@ ru:
         playlab_add_move: 'Add "move" blocks inside this repeat block'
         playlab_add_score: Add score blocks here
         playlab_add_blocks: Add your blocks here
+        set_variable: Drag a number block here to set your variable
+        place_variable: Drag your variable inside this block
+        bee_for_loop: Drag the largest number of nectar you want the bee to collect here
+        place_counter_variable: Drag your counter variable inside this block
+        function_editor_draw_square: 'This is your function definition. These blocks run everytime you use the "draw a square" block'
+        change_here: Make your change here
+        write_draw_square_function: Drag blocks from the toolbox into here that draw a square
+        write_draw_triangle_function: Drag blocks from the toolbox into here that draw a triangle
+        edit_add_parameter: Click edit to add a parameter in your function
+        add_and_drag_parameter: Write in the name of your parameter here, click add, and then drag it into your function definition
+        fill_in_actor: Fill in the ??? with numbers that correspond to each actor (1, 2, and 3)
+        repeat: Put blocks inside the loop to repeat commands
+        if_bee_nectar: 'Use the "if" block to decide if the bee should get nectar'
+        if_else_bee: |-
+          Use the "if/else" block so that the Bee gets nectar from a flower, and makes honey if it's not a flower
+        repeat_full_circle: Enter in the number of times the zombie has to move to make a full circle
+        place_length_variable: Drag the length variable here to replace the question marks
+        arrows_move_actor: Use the arrows to move the actor
+        right_arrow_fireball: Use the right arrow to shoot fireballs
+        name_function: Write the name of your function here

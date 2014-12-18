@@ -7,15 +7,15 @@
             vidd technikát!'
           The Maze: A labirintus
           Multi: Feleletválasztás
-          Match: Match
-          Math Image: Math Image
-          title: Test Course
-          description: Just an internal test course.
+          Match: Párosítás
+          Math Image: Matematikai kép
+          title: Teszttanfolyam
+          description: Csak egy belső teszttanfolyam.
         course1:
           'Jigsaw: Learn to drag and drop': 'Kirakós játék: Tanuljuk, hogy fogd és
             vidd technikát!'
-          'Maze: Sequence': 'Maze: Sequence'
-          'Maze: Debugging': 'Maze: Debugging'
+          'Maze: Sequence': 'Labirintus: sorozat'
+          'Maze: Debugging': 'Labirintus: hibakeresés'
           'Artist 1: Intro': '1. szereplő: Bevezetés'
           Artists 2: Művészek 2
           Spelling Bee: Betüző méh
@@ -23,208 +23,214 @@
           'Bee 1: Intro': 'Méh 1: Bevezetés'
           'Maze 2: Loops': 'Labirintus 2: ciklusok'
           'Bee 2: Loops': 'Méh 2: Ciklusok'
-          Multi & Match: Multi & Match
+          Multi & Match: Feleletválasztás és párosítás
           K-1 Flappy: K-1 Flappy
-          Flappy non blockly: Flappy non blockly
-          title: Első kurzus
+          Flappy non blockly: Flappy blokkok nélkül
+          title: 1. tanfolyam
           Artist 2: Művész 2
-          Happy Maps: Happy Maps
+          Happy Maps: Boldog térképek
           Move it, Move it: Gyerünk, gyerünk!
           'Real-life Algorithms: Plant a Seed': 'Valós algoritmusok: Ültess el egy
             magot!'
-          Building a Foundation: Building a Foundation
-          Getting Loopy: Getting Loopy
-          The Big Event: The Big Event
-          Going Places Safely: Going Places Safely
-          description: Course 1 is designed for early readers in the lower elementary
-            grades.  Create computer programs with loops and events.  By the end of
-            the course, create your very own custom game or story that you can share.
+          Building a Foundation: Az alap megépítése
+          Getting Loopy: Ciklikusság
+          The Big Event: A nagy esemény
+          Going Places Safely: Biztonságos utazás
+          description: Az 1. tanfolyam a olvasással épp hogy csak ismerkedő korosztály
+            számára készült számítógépes programok elkészítése céljából, amely segít
+            számukra megtanulni a másokkal való együttműködést, fejleszteni a problémamegoldó
+            készségeket és legyőzni a nehézségeket. A tanfolyam végére a tanulók létrehoznak
+            egy egyedi saját játékot vagy egy történetet, amit majd meg tudnak osztani.
+            1. osztályosok számára ajánlott.
           'Bee: Sequence': 'Méh: Sorozat'
-          'Artist: Sequence': 'Artist: Sequence'
-          'Artist: Shapes': 'Artist: Shapes'
-          'Maze: Loops': 'Maze: Loops'
+          'Artist: Sequence': 'Művész: sorozat'
+          'Artist: Shapes': 'Művész: alakzatok'
+          'Maze: Loops': 'Labirintus: ciklusok'
           'Bee: Loops': 'Méh: Ciklusok'
-          'Studio: Create a Story': 'Studio: Create a Story'
+          'Studio: Create a Story': 'Játéklabor: hozz létre egy történetet'
           'Artist: Loops': 'Művész: ciklusok'
-          description_audience: Ages 4+ (pre-readers)
-          description_short: Course 1 is designed for early readers in the lower elementary
-            grades.
+          description_audience: 'Korosztály: 4+ (nemolvasók)'
+          description_short: Az 1. tanfolyam a olvasással épp hogy csak ismerkedő
+            korosztály számára készült.
         course2:
           The Maze: A labirintus
           Suzi: Suzi
           The Artist: A művész
-          Artist Debugging: Artist Debugging
+          Artist Debugging: 'Művész: hibakeresés'
           Bounce: Ugrál
-          'Studio: Create a Story': 'Studio: Create a Story'
-          Artist Loops: Artist Loops
+          'Studio: Create a Story': 'Játéklabor: hozz létre egy történetet'
+          Artist Loops: 'Művész: ciklusok'
           Bee Conditionals: Méh Feltételes mód
           Flappy: Flappy
-          title: Második kurzus
+          title: 2. tanfolyam
           Bee Loops: Méh Ciklusok
-          Artist Functions: Artist Functions
-          The Artist Debugging: The Artist Debugging
+          Artist Functions: 'Művész: függvények'
+          The Artist Debugging: 'Művész: hibakeresés'
           Bee Debugging: Méh Hibakeresés
           Bee Functions: Méh Funkciók
-          Maze Loops: Maze Loops
+          Maze Loops: 'Labirintus: ciklusok'
           Graph Paper Programming: Grafikus programozás
-          'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
-          Getting Loopy: Getting Loopy
-          Relay programming: Relay programming
+          'Real-life Algorithms: Paper Planes': 'Hétköznapi algoritmusok: Papírrepülők'
+          Getting Loopy: Ciklikusság
+          Relay programming: Váltó programozás
           Conditionals: Feltételek
-          Binary Bracelets: Binary Bracelets
-          The Big Event: The Big Event
-          Your Digital Footprint: Your Digital Footprint
-          description: Course 2 is designed for students who can read in the lower
-            and middle elementary grades.  Create programs with loops, events, and
-            conditionals.  By the end of the course, create your very own interactive
-            game or story that you can share.
-          'Maze: Sequence': 'Maze: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
-          'Maze: Loops': 'Maze: Loops'
+          Binary Bracelets: Bináris karkötők
+          The Big Event: A nagy esemény
+          Your Digital Footprint: A digitális lábnyomod
+          description: A 2. tanfolyam a már olvasni tudó és előzetes programozási
+            tapasztalattal bíró tanulók számára készült. Ezen a tanfolyamon a tanulók
+            programokat készítenek majd bizonyos problémák megoldására, továbbá interaktív
+            játékokat fognak fejleszteni vagy történetek fognak létrehozni, amelyeket
+            majd megtudnak osztani. 2.-5. osztályosok számára ajánlott.
+          'Maze: Sequence': 'Labirintus: sorozat'
+          'Artist: Sequence': 'Művész: sorozat'
+          'Maze: Loops': 'Labirintus: ciklusok'
           'Artist: Loops': 'Művész: ciklusok'
           'Bee: Loops': 'Méh: Ciklusok'
           'Bee: Debugging': 'Méh: Hibakeresés'
           'Artist: Debugging': 'Művész: hibakeresés'
           'Bee: Conditionals': 'Méh: Feltételes mód'
-          'Artist: Sequence2': 'Artist: Sequence2'
-          'Maze: Sequence2': 'Maze: Sequence2'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
-          description_audience: Ages  6+ (reading required)
-          description_short: Course 2 is designed for students who can read in the
-            lower and middle elementary grades.
+          'Artist: Sequence2': 'Művész: sorozat 2'
+          'Maze: Sequence2': 'Labirintus: sorozat 2'
+          'Artist: Nested Loops': 'Művész: egymásba ágyazott ciklusok'
+          description_audience: 'Korosztály: 6+ (olvasni tudók)'
+          description_short: A 2. tanfolyam a már olvasó korosztály számára készült.
         course3:
           The Maze: A labirintus
-          'Studio: Create a Story': 'Studio: Create a Story'
+          'Studio: Create a Story': 'Játéklabor: hozz létre egy történetet'
           The Artist: A művész
-          title: Harmadik kurzus
-          Artist Functions: Artist Functions
-          Artist For Loops: Artist For Loops
-          Artist Nested Loops: Artist Nested Loops
+          title: 3. tanfolyam
+          Artist Functions: 'Művész: függvények'
+          Artist For Loops: 'Művész: számláló ciklusok'
+          Artist Nested Loops: 'Művész: egymásba ágyazott ciklusok'
           Bee Conditionals: Méh Feltételes mód
           Bee Nested Loops: Méh Beágyazott ciklusok
           Bee Debuggin: Méh Hibakeresés
           Bee Debugging: Méh Hibakeresés
           Bee Functions: Méh Funkciók
-          Artist Functions with Params: Artist Functions with Params
+          Artist Functions with Params: 'Művész: paraméteres függvények'
           Bounce: Ugrál
-          Maze Conditionals: Maze Conditionals
-          Artist Functions with Parameters: Artist Functions with Parameters
+          Maze Conditionals: 'Labirintus: feltételes utasítások'
+          Artist Functions with Parameters: 'Művész: paraméteres függvények'
           Computational Thinking: Számítógépes gondolkodás
-          Functional Suncatchers: Functional Suncatchers
-          Songwriting Parameters: Songwriting Parameters
-          Dice Race: Dice Race
+          Functional Suncatchers: Funkcionális Dekor
+          Songwriting Parameters: Dalszerző-paraméterek
+          Dice Race: Kocka verseny
           Internet: Internet
-          Crowdsourcing: Crowdsourcing
-          Digital Citizenship: Digital Citizenship
-          Farmer - While Loops: Farmer - While Loops
-          description: Students taking Course 3 should have already taken Course 2.  Students
-            create programs with different kinds of loops, events, functions, and
-            conditions.  By the end of the course, create your very own interactive
-            game or story that you can share with anyone.
-          'Studio: Create a Game': 'Studio: Create a Game'
+          Crowdsourcing: Csoportos megoldás
+          Digital Citizenship: Digitális állampolgárság
+          Farmer - While Loops: Farmer - előtesztelő ciklusok
+          description: A 3. tanfolyam azoknak a tanulóknak ajánlott, akik már elvégezték
+            a 2. tanfolyamot. A tanulók mélyebbre hatóan fogják tanulmányozni az előző
+            tanfolyamokban bevezetett programozási fogalmakat az összetettebb problémák
+            rugalmasabb megoldásának érdekében. E tanfolyam végére a tanulók létrehoznak
+            egy interaktív történetet, amit bárkivel megoszthatnak. 4.-5. osztályosok
+            számára ajánlott.
+          'Studio: Create a Game': 'Játéklabor: Hozz létre egy játékot!'
           Maze: Labirintus
           Artist: Művész
-          'Artist: Functions': 'Artist: Functions'
+          'Artist: Functions': 'Művész: függvények'
           'Bee: Functions': 'Méh: Funkciók'
           'Bee: Conditionals': 'Méh: Feltételes mód'
-          'Maze: Conditionals': 'Maze: Conditionals'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
-          'Farmer: While Loops': 'Farmer: While Loops'
+          'Maze: Conditionals': 'Labirintus: feltételes utasítások'
+          'Artist: Nested Loops': 'Művész: egymásba ágyazott ciklusok'
+          'Farmer: While Loops': 'Farmer: előtesztelő ciklusok'
           'Bee: Nested Loops': 'Méh: Beágyazott ciklusok'
           'Bee: Debugging': 'Méh: Hibakeresés'
           Maze2: Labirintus 2
           Artist2: Művész 2
-          'Artist: Functions2': 'Artist: Functions2'
+          'Artist: Functions2': 'Művész: függvények 2'
           'Bee: Functions2': 'Méh: Funkciók2'
           'Bee: Conditionals2': 'Méh: Feltételes mód2'
-          'Maze: Conditionals2': 'Maze: Conditionals2'
-          'Artist: Nested Loops2': 'Artist: Nested Loops2'
-          'Farmer: While Loops2': 'Farmer: While Loops2'
+          'Maze: Conditionals2': 'Labirintus: feltételes utasítások 2'
+          'Artist: Nested Loops2': 'Művész: egymásba ágyazott ciklusok 2'
+          'Farmer: While Loops2': 'Farmer: előtesztelő ciklusok 2'
           'Bee: Nested Loops2': 'Méh: Beágyazott ciklusok2'
           'Bee: Debugging2': 'Méh: Hibakeresés2'
-          'Artist: Patterns': 'Artist: Patterns'
+          'Artist: Patterns': 'Művész: minták'
           Songwriting: Dalszerzés
-          description_audience: Ages 8+ (after Course 2)
-          description_short: Students taking Course 3 should have already taken Course
-            2.
+          description_audience: 'Korosztály: 8+ (a 2. tanfolyam elvégzése után)'
+          description_short: A 3. tanfolyam a 2. tanfolyam folytatása.
         msm:
-          title: Middle School Math
-          description: Private work in progress for Middle School Math.
+          title: Középiskolai matematika
+          description: Önállómunka zajlik középiskolai matematikából.
           Graph Paper Programming: Grafikus programozás
-          Assessments: Assessments
-          Unit 1: Unit 1
-          Unit 2: Unit 2
-          Ninja Cat and the Coordinate Plane: Ninja Cat and the Coordinate Plane
-          'Calc: Circles of Evaluation': 'Calc: Circles of Evaluation'
-          'Artist: Strings and Images': 'Artist: Strings and Images'
-          Contracts: Contracts
-          'Artist: Writing Contracts': 'Artist: Writing Contracts'
-          'Calc: Defining Variables': 'Calc: Defining Variables'
-          'Play Lab: Defining Variables': 'Play Lab: Defining Variables'
-          The Design Recipe: The Design Recipe
-          'Artist: Defining Functions': 'Artist: Defining Functions'
-          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
-          'Artist: Functions': 'Artist: Functions'
-          'Play Lab: Animation': 'Play Lab: Animation'
+          Assessments: Felmérők
+          Unit 1: 1. rész
+          Unit 2: 2. rész
+          Ninja Cat and the Coordinate Plane: Ninja-macska és a koordináta sík
+          'Calc: Circles of Evaluation': 'Számológép: Kiértékelő körök'
+          'Artist: Strings and Images': 'Művész: szöveg és a képek'
+          Contracts: Szerződések
+          'Artist: Writing Contracts': 'Előadó: Szerződések írása'
+          'Calc: Defining Variables': 'Számológép: Változók deklarációja'
+          'Play Lab: Defining Variables': 'Játéklabor: Változók deklarálása'
+          The Design Recipe: A dizájn receptje
+          'Artist: Defining Functions': 'Művész: függvénydeklaráció'
+          'Play Lab: Defining Functions': 'Játéklabor: a dizájn receptje'
+          'Artist: Functions': 'Művész: függvények'
+          'Play Lab: Animation': 'Játéklabor: animáció'
           Booleans: Logikai adattípus
-          'Play Lab: Booleans': 'Play Lab: Booleans'
-          'Calc: Boolean Operators': 'Calc: Boolean Operators'
-          'Play Lab: Boolean Operators': 'Play Lab: Boolean Operators'
-          Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
-          'Artist: Conditionals': 'Artist: Conditionals'
-          Collision Detection and the Distance Formula: Collision Detection and the
-            Distance Formula
-          'Play Lab: Collision Detection': 'Play Lab: Collision Detection'
-          'Unplugged: Ninja Cat and the Coordinate Plane': 'Unplugged: Ninja Cat and
-            the Coordinate Plane'
-          'Eval: Strings and Images': 'Eval: Strings and Images'
-          'Unplugged: Contracts': 'Unplugged: Contracts'
-          'Eval: Writing Contracts': 'Eval: Writing Contracts'
-          'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
-          'Eval: Defining Functions': 'Eval: Fast Functions'
-          'Eval: Functions': 'Eval: Design Recipe'
-          'Unplugged: Booleans': 'Unplugged: Booleans'
-          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
-            and Piecewise Functions'
-          'Eval: Conditionals': 'Eval: Conditionals'
-          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
-            Detection and the Distance Formula'
-          'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
-          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
-            and Coordinate Planes'
-          'Eval: Boolean Operators': 'Eval: Boolean Operators'
-          Blocks to Math: Blocks to Math
-          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Defining Variables
-            (Big Game)'
-          'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
-          'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
-          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
-            (Big Game)'
-          'Eval: Fast Functions': 'Eval: Fast Functions'
-          'Play Lab: Design Recipe': 'Play Lab: Design Recipe'
-          'Eval: Design Recipe': 'Eval: Design Recipe'
+          'Play Lab: Booleans': 'Játéklabor: a logikai típus'
+          'Calc: Boolean Operators': 'Számológép: Logikai műveletek'
+          'Play Lab: Boolean Operators': 'Játéklabor: Logikai műveletek'
+          Conditionals and Piecewise Functions: Feltételes utasítások és összetett
+            függvények
+          'Artist: Conditionals': 'Művész: feltételes utasítások'
+          Collision Detection and the Distance Formula: Ütközés észlelése és a távolság
+            képlete
+          'Play Lab: Collision Detection': 'Játéklabor: Ütközés észlelése'
+          'Unplugged: Ninja Cat and the Coordinate Plane': 'Gép nélküli feladatok:
+            Ninja-macska és koordináta sík'
+          'Eval: Strings and Images': 'Kiértékelés: Szöveges típus és a képek'
+          'Unplugged: Contracts': 'Számítógép nélkül: Szerződések'
+          'Eval: Writing Contracts': 'Kiértékelés: Szerződések írása'
+          'Unplugged: The Design Recipe': 'Gép nélküli feladatok: a dizájn receptje'
+          'Eval: Defining Functions': 'Kiértékelés: Gyors függvények'
+          'Eval: Functions': 'Kiértékelés: A recept dizájnja'
+          'Unplugged: Booleans': 'Gép nélküli feladatok: logikai változók'
+          'Unplugged: Conditionals and Piecewise Functions': 'Gép nélküli feladatok:
+            Feltételes utasítások és összetett függvények'
+          'Eval: Conditionals': 'Kiértékelés: feltételes utasítások'
+          'Unplugged: Collision Detection and the Distance Formula': 'Gép nélküli
+            feladatok: Ütközés észlelése és a távolság képlete'
+          'Calc: Evaluation Blocks': 'Számológép: Kiértékelési blokkok'
+          'Unplugged: Video Games and Coordinate Planes': 'Gép nélküli feladatok:
+            videojátékok és a koordináta síkok'
+          'Eval: Boolean Operators': 'Kiértékelés: Logikai műveletek'
+          Blocks to Math: Matematikai blokkok
+          'Play Lab: Defining Variables (Big Game)': 'Játéklabor: változók deklarálása
+            (A Nagy Játék)'
+          'Play Lab: Animation (Big Game)': 'Játéklabor: Animáció (A Nagy Játék)'
+          'Play Lab: Boolean (Big Game)': 'Játéklabor: logikai változók (A Nagy Játék)'
+          'Play Lab: Collision Detection (Big Game)': 'Játéklabor: az ütközés észlelése
+            (A Nagy Játék)'
+          'Eval: Fast Functions': 'Kiértékelés: Gyors függvények'
+          'Play Lab: Design Recipe': 'Játéklabor: a dizájn receptje'
+          'Eval: Design Recipe': 'Kiértékelés: A recept dizájnja'
         playlab:
           title: Játéklabor
-          description: Create a story or make a game with Play Lab!
+          description: Hozz létre egy történetet vagy készíts egy játékok a Játéklaborral!
           Play Lab: Játéklabor
-          description_short: Create a story or make a game with Play Lab!
+          description_short: Hozz létre egy történetet vagy készíts egy játékok a
+            Játéklaborral!
         artist:
           title: Művész
-          description: Draw cool pictures and designs with the Artist!
+          description: Rajzolj menő rajzokat és dizájnokat a Művész segítségével!
           Artist: Művész
-          description_short: Draw cool pictures and designs with the Artist!
+          description_short: Rajzolj menő rajzokat és dizájnokat a Művész segítségével!
         scrat:
-          title: Scrat
-          description_short: Scrat short description.
-          description: Scrat long description
-          'Maze: Sequence': 'Maze: Sequence'
+          title: Motkány
+          description_short: Motkány. Rövid leírás.
+          description: Motkány. Hosszú leírás
+          'Maze: Sequence': 'Labirintus: sorozat'
         hourofcode:
           Maze: Labirintus
           title: A kódolás órája
-          description: Try the basics of computer science with characters from Angry
-            Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description_short: Try the basics of computer science with characters from
-            Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          description: Ismerd meg a számítógép-tudomány alapjait közösen a Dühös Madarak,
+            a Növények kontra Zombik karaktereivel és a Motkányal a Jégkorszakból!
+          description_short: Ismerd meg a számítógép-tudomány alapjait közösen a sok
+            szórakoztató karakterrel!
         frozen:
           title: Kódolás Annával és Elsával
           description: Használjuk a programozást, hogy csatlakozzunk Annához és Elsához,
@@ -235,84 +241,96 @@
           description_short: Használj kódot, és csatlakozz Annához és Elsához, akik
             felfedezik a jég varázslatos és szépséges világát.
         course4:
-          description_short: Students taking Course 4 should have already taken Courses
-            2 and 3.
-          description: Course 4 is designed for students who have taken Course 2 and
-            3. Students will delve deeper into programming topics introduced in previous
-            courses to flexible solutions to more complex problems. By the end of
-            this course, students create interactive stories and games they can share
-            with anyone. Recommended for grades 4-8.
+          description_short: A 4. tanfolyam azoknak a tanulóknak ajánlott, akik már
+            befejezték a 2. és a 3. tanfolyamot.
+          description: A 4. tanfolyam azoknak a tanulóknak ajánlott, akik már elvégezték
+            a 2. és a 3. tanfolyamot. A tanulók mélyebbre hatóan fogják tanulmányozni
+            az előző tanfolyamokban bevezetett programozási fogalmakat az összetettebb
+            problémák rugalmasabb megoldásának érdekében. E tanfolyam végére a tanulók
+            interaktív történeteteket és játékokat hoznak létre, amit bárkivel megoszthatnak.
+            4.-8. osztályosok számára ajánlott.
           'Artist: Variables': 'Művész: változók'
           'Bee: For Loops': 'Bee: For ciklusok'
-          title: Negyedik kurzus
+          title: 4. tanfolyam
           'Algorithms: Tangrams': 'Algoritmusok: Tangram'
           Variables: Változók
           'Play Lab: Variables': 'Játéklabor: változók'
           'Play Lab: Functions with Parameters': 'Játéklabor: Függvények paraméterrel'
           'Bee: Functions with Parameters': 'Méh: Függvények paraméterekkel'
-          'Artist: For Loops': 'Artist: For Loops'
-          'Play Lab: For Loops': 'Play Lab: For Loops'
-          'Artist: Functions': 'Artist: Functions'
-          'Artist: Functions with Paraqmeters': 'Artist: Functions with Paraqmeters'
-          'Unplugged: Tangrams': 'Unplugged: Tangrams'
+          'Artist: For Loops': 'Művész: számláló ciklusok'
+          'Play Lab: For Loops': 'Játéklabor: számláló ciklusok'
+          'Artist: Functions': 'Művész: függvények'
+          'Artist: Functions with Paraqmeters': 'Művész: paraméteres függvények'
+          'Unplugged: Tangrams': 'Gép nélküli feladatok: Tangram'
           Artist: Művész
           Bee: Méh
-          'Unplugged: Envelope Variables': 'Unplugged: Envelope Variables'
-          'Unplugged: Madlibs': 'Unplugged: Madlibs'
-          'Unplugged: For Loop Fun': 'Unplugged: For Loop Fun'
-          'Unplugged: Songwriting with Parameters': 'Unplugged: Songwriting with Parameters'
-          'Artist: Functions with Parameters': 'Artist: Functions with Parameters'
-          'Unplugged: Binary': 'Unplugged: Binary'
+          'Unplugged: Envelope Variables': 'Gép nélküli feladatok: Űrlap változók'
+          'Unplugged: Madlibs': 'Gép nélküli feladatok: Madlibs'
+          'Unplugged: For Loop Fun': 'Gép nélküli feladatok: Számlálóciklusos móka'
+          'Unplugged: Songwriting with Parameters': 'Gép nélküli feladatok: Dalszerzés
+            paraméterekkel'
+          'Artist: Functions with Parameters': 'Művész: paraméteres függvények'
+          'Unplugged: Binary': 'Gép nélküli feladatok: kettes számrendszer'
           Bee Binary: Méh Bináris
-          Farmer Binary: Farmer Binary
-          Maze and Bee: Maze and Bee
-          Artist Binary: Artist Binary
-          description_audience: Ages 10+ (after Course 3)
+          Farmer Binary: 'Farmer: a kettes számrendszer'
+          Maze and Bee: Labirintus és a méh
+          Artist Binary: 'Művész: a kettes számrendszer'
+          description_audience: 'Korosztály: 10+ (a 3. tanfolyam elvégzése után)'
         Course4pre:
-          description_short: A brief rampup of concepts for students who have not
-            taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
-          'Maze: Sequence': 'Maze: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
+          description_short: A fogalmak egy rövid összefoglalása azon tanulók számára,
+            akik nem vettek részt a 2. és 3. tanfolyamon.
+          Course 4 Prerequisite: A 4. tanfolyam előfeltétel
+          'Maze: Sequence': 'Labirintus: sorozat'
+          'Artist: Sequence': 'Művész: sorozat'
           'Artist: Loops': 'Művész: ciklusok'
           'Bee: Conditionals': 'Méh: Feltételes mód'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
-          'Farmer: While Loops': 'Farmer: While Loops'
+          'Artist: Nested Loops': 'Művész: egymásba ágyazott ciklusok'
+          'Farmer: While Loops': 'Farmer: előtesztelő ciklusok'
           'Bee: Nested Loops': 'Méh: Beágyazott ciklusok'
-          'Artist: Functions': 'Artist: Functions'
+          'Artist: Functions': 'Művész: függvények'
           'Bee: Debugging': 'Méh: Hibakeresés'
         course4pre:
-          description_short: A brief rampup of concepts for students who have not
-            taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
-          'Maze: Sequence': 'Maze: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
+          description_short: A fogalmak egy rövid összefoglalása azon tanulók számára,
+            akik nem vettek részt a 2. és 3. tanfolyamon.
+          Course 4 Prerequisite: A 4. tanfolyam előfeltétel
+          'Maze: Sequence': 'Labirintus: sorozat'
+          'Artist: Sequence': 'Művész: sorozat'
           'Artist: Loops': 'Művész: ciklusok'
           'Bee: Conditionals': 'Méh: Feltételes mód'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
-          'Farmer: While Loops': 'Farmer: While Loops'
+          'Artist: Nested Loops': 'Művész: egymásba ágyazott ciklusok'
+          'Farmer: While Loops': 'Farmer: előtesztelő ciklusok'
           'Bee: Nested Loops': 'Méh: Beágyazott ciklusok'
-          'Artist: Functions': 'Artist: Functions'
+          'Artist: Functions': 'Művész: függvények'
           'Bee: Debugging': 'Méh: Hibakeresés'
         Course4pre (Case Conflict):
-          description_short: A brief rampup of concepts for students who have not
-            taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
-          'Maze: Sequence': 'Maze: Sequence'
-          'Artist: Sequence': 'Artist: Sequence'
+          description_short: A fogalmak egy rövid összefoglalása azon tanulók számára,
+            akik nem vettek részt a 2. és 3. tanfolyamon.
+          Course 4 Prerequisite: A 4. tanfolyam előfeltétel
+          'Maze: Sequence': 'Labirintus: sorozat'
+          'Artist: Sequence': 'Művész: sorozat'
           'Artist: Loops': 'Művész: ciklusok'
           'Bee: Conditionals': 'Méh: Feltételes mód'
-          'Artist: Nested Loops': 'Artist: Nested Loops'
-          'Farmer: While Loops': 'Farmer: While Loops'
+          'Artist: Nested Loops': 'Művész: egymásba ágyazott ciklusok'
+          'Farmer: While Loops': 'Farmer: előtesztelő ciklusok'
           'Bee: Nested Loops': 'Méh: Beágyazott ciklusok'
-          'Artist: Functions': 'Artist: Functions'
+          'Artist: Functions': 'Művész: függvények'
           'Bee: Debugging': 'Méh: Hibakeresés'
         usability:
           Intro: Bevezető
-          Variables and For Loops: Variables and For Loops
-          Functions and Functions with Parameters: Functions and Functions with Parameters
-          title: Usability Testing
+          Variables and For Loops: Változók és számláló ciklusok
+          Functions and Functions with Parameters: Függvények és paraméteres függvények
+          title: Használhatóság tesztelése
           description_short: ''
-          description: A selection of Course 4 levels for usability testing.
+          description: Válogatás a 4. tanfolyam szakaszaiból a használhatósági teszthez.
           Variables: Változók
-          For Loops: For Loops
+          For Loops: Számláló ciklusok
+        potus:
+          title: különleges
+          description_short: különleges
+          description: különleges
+          Special: Különleges
+        special:
+          title: különleges
+          description_short: különleges
+          description: különleges
+          Special: Különleges

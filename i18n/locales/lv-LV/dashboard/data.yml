@@ -298,15 +298,15 @@ lv:
         studio_c3_game_5: Vai vari pievienot programmas bloku, lai pieskaitītu punktu, kad pingvīns ieskrien astoņkājī un tad pārvietot viņu ar bultiņām lai gūtu punktu?
         studio_c3_game_6: Vai tu vari pievienot programmas blokus, lai izmainītu fona attēlu un pingvīna ātrumu, un tad pārvietot viņu ar bultiņām līdz tu gūsti punktu?
         studio_c3_game_7: 'Izveido savu spēli. Kad gatavs, spied "Pabeigts" aicini draugus to spēlēt.'
-        studio_playlab_1: 'Penguin wants to say "hello" - can you help him?'
-        studio_playlab_2: 'Cave Boy (actor 1) and Cave Girl (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
-        studio_playlab_3: Can you help Tennis Girl get to the flag?
-        studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor 2) and play a sound when he gets there?
-        studio_playlab_5: 'Can you help the Spacebot say "greetings earthlings" when it is clicked? Don’t forget to click it after you click Run'
-        studio_playlab_6: Can you help the Witch move around using the up/down/right/left arrow keys to get to all the magical fireballs?
-        studio_playlab_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help the wizard move right and left repeatedly?'
-        studio_playlab_8: Can you add a block to score a point and a block to play a sound when the unicorn runs into the wizard, and then move him with the arrows until you score?
-        studio_playlab_9: Set the background for this alien invasion and help the Spacebot get to the alien faster by changing its speed. Then move him with the arrow keys to get to the Spacebot and alert everyone else
+        studio_playlab_1: 'Pingvīns grib pateikt "sveiki" - vari palīdzēt?'
+        studio_playlab_2: 'Alu zēns (1. tēls) un alu meitene (2. tēls) grieb viens otram patikt "sveiki". Vai vari palīdzēt, izmantojot "teikt" bloku divas reizes?'
+        studio_playlab_3: Vari palīdzēt tenisa meitenei dabūt karogu?
+        studio_playlab_4: Vari palīdzēt tenisa meitenei (1. tēls) tikt pie tenisa zēna (2. tēls) un atskaņot skaņu, kad viņi satiekas?
+        studio_playlab_5: 'Vai vari likt Specabotam teikt "sveiki, Zemes iedzīvotāji", kad uz viņa noklikšķina? Neaizmirsti klikšķi pēc "Palaist" nospiešanas'
+        studio_playlab_6: Vai vari palīdzēt raganai pārvietotes izmantojot klaviatūras bultiņas, lai viņa salasa visas burvju ugunsbumbas?
+        studio_playlab_7: 'Bloks "nepārtraukti atkārtot" atļauj izpildīt kodu visu laiku. Vai vari savienot blokus, lai palīdzētu burvim kustēties pa labi un pa kreisi visu laiku?'
+        studio_playlab_8: Vai vari pievienot bloku, kas pieskaita punktu un atskaņo skaņu, kad vienradzis ieskrien burvī un tad pārvietot to ar bultām, kamēr saņem punktu?
+        studio_playlab_9: Uzstādi fona attēlu citplanētiešu iebrukumam un palīdzi Spacebotam noķert visus citplanētiešus, mainot viņa ātrumu. Tad pārvieto viņu ar bultam, lai tiktu pie Spacebota un brīdināt visus citus.
         studio_playlab_10: 'Izveido savu spēli. Kad gatavs, spied "Pabeigts" aicini draugus to spēlēt.'
         studio_full_sandbox: 'Izveido savu spēli. Kad gatavs, spied "Pabeigts" aicini draugus to spēlēt.'
         studio_k1_1: 'Vai vari likt šim sunim pateikt "Sveika pasaule"?'
@@ -381,26 +381,25 @@ lv:
       scrat 20:
         instructions: Vai vari pievienot tikai 3 blokus, lai palīdzētu man iziet sarežģītāku labirintu? Ja izdarīsi to pareizi, es varēšu iziet jebkuru apļveida ceļu, neskatoties uz garumu. Pasteidzies! Ledus kūst!
       Standalone_Artist_1:
-        instructions: "Welcome to Artist! First off, let's try to make a simple square using the turn right block and move forward block. Each side should be 100 pixels long."
+        instructions: 'Sveiks Mākslinieka kursā! Pirmkārt, mēģini izveidot vienkāršu kvadrātu ar blokiem "pagriezies pa labi" un "ej uz priekšu". Katrai malai jābūt 100 pikseļus garai.'
       Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel long sides.
+        instructions: Uzzīmē šo dimantu ar 120 un 60 grādu leņķiem un 150 pikseļu garām malām.
       Standalone_Artist_3:
-        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree turns?
+        instructions: Vari uzzīmēt šo sešstūri ar 100 pikseļu malām un 60 grādu leņķiem?
       Standalone_Artist_4:
-        instructions: "Now you've got a new block to play with, the loop. This will repeat a set of commands. What happens if you loop these commands 6 times?"
+        instructions: 'Nu tev ir jauns bloks, ko izmantot - cikls. Tas atkārtot tevis izvēlētas komandas. Kas notiks, ja ieliksi savas 6 komandas ciklā?'
       Standalone_Artist_5:
-        instructions: How many times do you need to loop this diamond to draw the flower?
+        instructions: Cik reizes jāieliek ciklā dimants, lai uzzīmētu puķi?
       Standalone_Artist_5.5:
-        instructions: "Notice how we simplified the diamond code by turning it into a loop. You can loop that whole sequence 12 times to draw the flower. Hint: You'll need to turn 30 degrees after your diamond loop so you don't keep drawing over the same diamond."
+        instructions: 'Ievēro, ka vienkāršojām dimanta kodu, ieliekot to ciklā. Tu vari ielikt šīs darbības ciklā 12 reizes, lai uzzīmētu puķi. Padoms: Tev jāpagriežas par 30 grādiem pēc dimanta cikla, lai nepārzīmētu to pašu dimantu.'
       Standalone_Artist_6:
-        instructions: 'Loop this hexagon code 6 times to create the design. How many degrees will you need to turn each time? Hint: divide the number of degrees in a circle by the number of times you are looping.'
+        instructions: 'Ieliec ciklā sešstūra kodu 6 reizes, lai kaut ko uzzīmētu. Par cik grādiem būs jāpagriežas pēc katra sešstūra? Padoms: izdali grādus aplī ar cikla reižu skaitu.'
       Standalone_Artist_7:
-        instructions: 'A function is another programming tool to help you avoid repeating yourself. This function draws a flower, so you can use it any time you want to draw a flower. Use this and the new jump block to draw these flowers. Hint: The flowers are 150 pixels apart'
+        instructions: 'Funkcija ir programmētāja rīks, kas palīdz izvairīties no pašam sevis atkārtošanas. Šī funkcija zīmē puķi, un tu to vari izmantot tik reizes, cik gribi, lai zīmētu puķes. Izmanto šo un jauno bloku "lekt", lai zīmētu šīs puķes. Padoms: ziedi ir 150 pikseļus lieli.'
       Standalone_Artist_8:
-        instructions: |-
-          Here's a function called "Draw a shape" that we've programmed to draw hexagons. Run the code to see what it does and then experiment with the function to see what happens. Can you make it draw a pattern of squares, triangles, or octagons?
+        instructions: 'Ir dota funkcija "Zīmē figūru", kuru izveidojām, lai zīmētu sešstūrus. Izpildi kodu, lai redzētu, ko tā dara un tad eksperimentē ar funkciju un novērtē rezultātu. Vai tai likt zīmēt rakstus no kvadrātiem, trīsstūriem vai astoņstūriem?'
       Standalone_Artist_9:
-        instructions: "Now go ahead and make whatever picture you'd like! You've even got an empty function that you can make do whatever you want!"
+        instructions: Nu nu uzzīmē tādu attēlu, kādu gribi. Tev dota tukša funkcija, kurā vari likt iekšā ko vien vēlies!
     video:
       name:
         maze_intro: Labirinta ievads
@@ -478,14 +477,28 @@ lv:
         C3_crowdsourcing: Pūļa ieguve
         C3_functional_suncatchers: funkcionālie saulķērāji
         C3_songwriting_with_parameters: Dziesmu rakstīšana ar parametriem
-        C4_artist_math: Programming the Artist with Math
-        C4_create_functions: Creating Functions
-        C4_edit_functions: Editing Functions
+        C4_intro: Ievads
+        C4_bee_conditional: Bites nosacījumi
+        C4_variables_artist: 'Mainīgie - mākslinieks'
+        C4_variables_playlab: 'Mainīgie - spēļu laboratorija'
         C4_for_loops: '"par" cikli'
-        C4_variables: Mainīgie
-        frozen_intro: Hour of Code Intro
-        frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
+        C4_math_artist: Programmē mākslinieku ar matemātiku
+        C4_function_edit: Funkciju labošana
+        C4_function_create: Funkciju veidošana
+        C4_function_parameters: Funkcijas ar parametriem
+        C4_conditionals: Sazarojumi
+        C4_unplugged_algorithms: Algoritmi ar figūrām
+        C4_unplugged_madlibs: Trakie teksti
+        C4_unplugged_variables: Mainīgie aploksnēs
+        C4_unplugged_forloops: '"par" cikli'
+        C4_unplugged_parameters: Dziesmu rakstīšana ar Parametriem
+        C4_unplugged_binary: Binārie
+        frozen_intro: Programmēšanas stundas ievads
+        frozen_loops: Iepazīšanās ar cikliem
+        frozen_functions: Ievads funkcijās
+        playlab_intro: Ievads spēļu laboratorijā
+        playlab_events: Spēļu laboratorijas notikumi
+        playlab_repeat_forever: Spēļu laboratorija, mūžīgie cikli
     callout:
       text:
         drag_blocks: 'Pārvieto "pārvietot" bloku un pielipini zem cita bloka'
@@ -503,31 +516,52 @@ lv:
         replace_questions: 'Izmanto izkrītošo izvēlni, lai aizstātu "???" ar skaitli'
         replace_questions_degree: 'Izmanto izkrītošo izvēlni, lai aizstātu "???" ar grādiem, par cik jāpagriežas'
         repeat_blocks: 'Izmanto bloku "atkārtot" un ietver tajā visus blokus uz darbagalda'
+        repeat_blocks_1: (1) Izmanto šo bloku un apliec to ap pelēkajiem blokiem darba vietā
+        repeat_blocks_2: '(2) Pārvieto bloku "atkārtot" bloku uz šejieni un ievieto iekšā pelēkos blokus'
         snowflake_dropdown: Izmanto šo izvēlni, lai veidotu dažādas sniegpārslas!
         degrees_per_side: Izdali 360 ar malu skaitu, lai iegūtu katra leņķa lielumu grādos.
         set_sides: 'Izmanto šo bloku, lai iestatītu " malas"  uz vajadzīgo skaitli, lai pabeigt uzdevumu.'
         set_length: 'Izmanto šo bloku, lai iestatītu "garums" pareizajā vērtībā.'
-        which_equation: Kurš vienādojums figūrām ar vairāk malām padara katru malu īsāku? Izmēģini katru!
+        which_equation: Kura vienādība padara katru pusi īsāku figūrām var vairāk malām?
         get_nectar: 'Izmanto jauno "savākt nektāru" bloku.'
         actions_category: 'Rīku josla ir ieguvusi jaunu dizainu! Tagad tajā ir "Darbības" bloki.'
         draw_square_hint: 'Padoms: Izmanto iepriekšējā uzdevumā izveidoto kvadrāta ciklu.'
-        edit_function: Izmanto šo pogu, lai rediģētu funkciju.
+        edit_function: Klikšķi te, lai rediģētu savu funkciju.
         create_function: 'Spied šeit, lau atvērtu Funkciju paneli, tad nospied "Izveidot funkciju" pogu.'
         house_hint: Tas nekas, ja bildes pagaidām neizskatās pēc mājas. Mēs to labosim nākamajā uzdevumā.
         edit_draw_square: Izmanto šo pogu, lai labotu funkciju un pievienotu ciklu.
         edit_get_nectar: Izmanto šo pogu, lai rediģētu funkciju un mainītu virzienu, kurā bite griezīsies, lai savāktu nektāru.
         logic_category: 'Atver paneli "Loģika", lai atrastu "if/else" bloku.'
         length_parameter: 'Vai vari pārveidot šo funkciju tā, lai tā izmantotu "garums" parametru?'
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: "Don't forget to turn after creating each circle."
-        frozen_circle_function_with_parameter_circle: 'Use the "create a circle" block and change the size.'
-        frozen_snowflake_branch: 'Use the "create a snowflake branch" block'
-        frozen_create_square: Attach more blocks here to create a square
-        playlab_drag_say: 'Drag the "say" block here and type "hello"'
-        playlab_use_twice: Use this block twice and remember to change the actor number
-        playlab_move_girl: 'Use the "move right" block to move Tennis Girl'
-        playlab_play_sound: 'Add "play sound" block here'
-        playlab_arrow_keys: Remember to use these to move the witch after clicking on Run
-        playlab_add_move: 'Add "move" blocks inside this repeat block'
-        playlab_add_score: Add score blocks here
-        playlab_add_blocks: Add your blocks here
+        frozen_diamond_repeat: Izmato atkārtošanās bloku, lai izveidotu šo figūru.
+        frozen_circle_function_in_circle_turn: Neaizmirsti pagriezties pēc katra apļa uzzīmēšanas.
+        frozen_circle_function_with_parameter_circle: 'Izmanto bloku "zīmē apli" un maini izmēru.'
+        frozen_snowflake_branch: 'Izmanto bloku "zīmēt sniegpārsliņas zaru"'
+        frozen_create_square: Savieno vairākus blokus, lai uzzīmētu kvadrātu
+        playlab_drag_say: 'Nomet "teikt" bloku un saki "sveiki"'
+        playlab_use_twice: Izmanto šo bloku divas reizes un neaizmirsto nomainīt tēla numuru
+        playlab_move_girl: 'Izmanto bloku "pa labi", lai pārvietotu tenisa meiteni'
+        playlab_play_sound: 'Pievieno "atskaņot skaņu" bloku'
+        playlab_arrow_keys: 'Neaizmirsti to izmantot, lai kustinātu raganu pēc "Palaist" nospiešanas'
+        playlab_add_move: 'Atkārtošanas blokā pievieno blokus "pārvietot"'
+        playlab_add_score: Pievieno šeit punktu blokus
+        playlab_add_blocks: Šeit pievieno savus blokus
+        set_variable: Velc skaitļu bloku te, lai noteiktu mainīgo
+        place_variable: Ievelc mainīgo šajā blokā
+        bee_for_loop: Velc lielāko nektāra vērtību, kādu gribi savākt.
+        place_counter_variable: Ievelc savu skaitītāju šajā blokā.
+        function_editor_draw_square: 'Šādi definē funkciju. Šis bloks tiek palaists katru reizi, kad izmanto bloku "zīmēt kvadrātu"'
+        change_here: Veic izmaiņas te
+        write_draw_square_function: Velc blokus no rīkujoslas šeit, lai uzzīmētu kvadrātu
+        write_draw_triangle_function: Velc blokus no rīkujoslas šeit, lai uzzīmētu trīsstūri
+        edit_add_parameter: Klikšķini labot, lai pievienotu savai funkcijai parametru
+        add_and_drag_parameter: Ieraksti parametra vārdu te, klikšķini pievienot un tad velc to savā definētajā funkcijā.
+        fill_in_actor: Aizpildi ??? ar skatli, kas atbilst katram tēlam (1, 2 un 3)
+        repeat: Velc blokus iekšā ciklā, lai atkārtotu komandas
+        if_bee_nectar: 'Izmanto "Ja" bloku, lai izlemtu, vai bitei jāiegūst nektārs'
+        if_else_bee: 'Izmanto "Ja/tad" bloku, lai bites iegūtu nektāru no zieda vai, ja tas nav zieds, ražotu medu'
+        repeat_full_circle: Ievadi skaitli, cik reižu zombijam jāpakustas, lai izveidotu pilnu apli
+        place_length_variable: Velc garuma mainīgo te, lai aizstātu jautājuma zīmes
+        arrows_move_actor: Izmato bultas, lai pārvietotu tēlu
+        right_arrow_fireball: Izmanto labo bultu, lai sašautu ugunsbumbas
+        name_function: Raksti te savas funkcijas nosaukumu

@@ -303,8 +303,13 @@ BlocklyApps.LOCALE = 'en_us';
  */
 BlocklyApps.MIN_WIDTH = 900;
 BlocklyApps.MIN_MOBILE_SHARE_WIDTH = 450;
-BlocklyApps.MIN_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
+BlocklyApps.MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 var WORKSPACE_PLAYSPACE_GAP = 15;
+
+/**
+ * Treat mobile devices with screen.width less than the value below as phones.
+ */
+BlocklyApps.MAX_PHONE_WIDTH = 500;
 
 /**
  * If the user presses backspace, stop propagation - this prevents blockly
@@ -417,6 +422,7 @@ BlocklyApps.init = function(config) {
   }
 
   var visualizationColumn = document.getElementById('visualizationColumn');
+  var visualization = document.getElementById('visualization');
 
   // center game screen in embed mode
   if(config.embed) {
@@ -443,7 +449,6 @@ BlocklyApps.init = function(config) {
 
   if (!config.embed && !BlocklyApps.share) {
     // Make the visualization responsive to screen size, except on share page.
-    var visualization = document.getElementById('visualization');
     visualization.className += " responsive";
     visualizationColumn.className += " responsive";
   }
@@ -495,26 +500,31 @@ BlocklyApps.init = function(config) {
     }
     var belowVisualization = document.getElementById('belowVisualization');
     if (belowVisualization) {
-      belowVisualization.style.display = 'block';
-      belowVisualization.style.marginLeft = '0px';
-      if (BlocklyApps.noPadding) {
-        // Shift run and reset buttons off the left edge if we have no padding
-        if (runButton) {
-          runButton.style.marginLeft = '10px';
-        }
-        if (resetButton) {
-          resetButton.style.marginLeft = '10px';
-        }
-        var shareCell = document.getElementById('share-cell') ||
-            document.getElementById('right-button-cell');
-        if (shareCell) {
-          shareCell.style.marginLeft = '10px';
-          shareCell.style.marginRight = '10px';
-        }
-        var softButtons = document.getElementById('soft-buttons');
-        if (softButtons) {
-          softButtons.style.marginLeft = '10px';
-          softButtons.style.marginRight = '10px';
+      if (config.noButtonsBelowOnMobileShare) {
+        belowVisualization.style.display = 'none';
+        visualization.style.marginBottom = '0px';
+      } else {
+        belowVisualization.style.display = 'block';
+        belowVisualization.style.marginLeft = '0px';
+        if (BlocklyApps.noPadding) {
+          // Shift run and reset buttons off the left edge if we have no padding
+          if (runButton) {
+            runButton.style.marginLeft = '10px';
+          }
+          if (resetButton) {
+            resetButton.style.marginLeft = '10px';
+          }
+          var shareCell = document.getElementById('share-cell') ||
+              document.getElementById('right-button-cell');
+          if (shareCell) {
+            shareCell.style.marginLeft = '10px';
+            shareCell.style.marginRight = '10px';
+          }
+          var softButtons = document.getElementById('soft-buttons');
+          if (softButtons) {
+            softButtons.style.marginLeft = '10px';
+            softButtons.style.marginRight = '10px';
+          }
         }
       }
     }
@@ -534,10 +544,11 @@ BlocklyApps.init = function(config) {
       if (BlocklyApps.noPadding) {
         upSale.style.marginLeft = '10px';
       }
-    } else {
+      belowViz.appendChild(upSale);
+    } else if (typeof config.makeYourOwn === 'undefined') {
       upSale.innerHTML = require('./templates/learn.html')();
+      belowViz.appendChild(upSale);
     }
-    belowViz.appendChild(upSale);
   }
 
   // Record time at initialization.
@@ -546,22 +557,27 @@ BlocklyApps.init = function(config) {
   // Fixes viewport for small screens.
   var viewport = document.querySelector('meta[name="viewport"]');
   if (viewport) {
-    var widthDimension;
+    var deviceWidth;
+    var desiredWidth;
     var minWidth;
     if (BlocklyApps.share && dom.isMobile()) {
       // for mobile sharing, don't assume landscape mode, use screen.width
-      widthDimension = screen.width;
+      deviceWidth = desiredWidth = screen.width;
+      if (BlocklyApps.noPadding && screen.width < BlocklyApps.MAX_PHONE_WIDTH) {
+        desiredWidth = Math.min(desiredWidth,
+                                BlocklyApps.MOBILE_NO_PADDING_SHARE_WIDTH);
+      }
       minWidth = BlocklyApps.noPadding ?
-                    BlocklyApps.MIN_MOBILE_NO_PADDING_SHARE_WIDTH :
+                    BlocklyApps.MOBILE_NO_PADDING_SHARE_WIDTH :
                     BlocklyApps.MIN_MOBILE_SHARE_WIDTH;
     }
     else {
       // assume we are in landscape mode, so width is the longer of the two
-      widthDimension = Math.max(screen.width, screen.height);
+      deviceWidth = desiredWidth = Math.max(screen.width, screen.height);
       minWidth = BlocklyApps.MIN_WIDTH;
     }
-    var width = Math.max(minWidth, widthDimension);
-    var scale = widthDimension / width;
+    var width = Math.max(minWidth, desiredWidth);
+    var scale = deviceWidth / width;
     var content = ['width=' + width,
                    'minimal-ui',
                    'initial-scale=' + scale,
@@ -623,7 +639,7 @@ BlocklyApps.init = function(config) {
       var vizCol = document.getElementById('visualizationColumn');
       var width = vizCol.offsetWidth;
       var height = vizCol.offsetHeight;
-      var displayWidth = BlocklyApps.MIN_MOBILE_NO_PADDING_SHARE_WIDTH;
+      var displayWidth = BlocklyApps.MOBILE_NO_PADDING_SHARE_WIDTH;
       var scale = Math.min(width / displayWidth, height / displayWidth);
       var viz = document.getElementById('visualization');
       viz.style['transform-origin'] = 'left top';
@@ -696,18 +712,6 @@ BlocklyApps.init = function(config) {
 
       if (config.level.startBlocks) {
         BlocklyApps.editor.setValue(config.level.startBlocks);
-      } else {
-        var startText = '// ' + msg.typeHint() + '\n';
-        var codeFunctions = config.level.codeFunctions;
-        // Insert hint text from level codeFunctions into editCode area
-        if (codeFunctions) {
-          var hintText = '';
-          for (var i = 0; i < codeFunctions.length; i++) {
-            hintText += " " + codeFunctions[i].func + "();";
-          }
-          startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
-        }
-        BlocklyApps.editor.setValue(startText);
       }
     });
   }
@@ -5872,7 +5876,7 @@ exports.workspaceCode = function(blockly) {
 exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativeParentObj, maxDepth) {
   var retVal;
   if (typeof maxDepth === "undefined") {
-    maxDepth = 4; // default to 4 levels of depth
+    maxDepth = Infinity; // default to inifinite levels of depth
   }
   if (maxDepth === 0) {
     return interpreter.createPrimitive(undefined);
@@ -5920,11 +5924,11 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
 /**
  * Generate a native function wrapper for use with the JS interpreter.
  */
-exports.makeNativeMemberFunction = function (interpreter, nativeFunc, nativeParentObj) {
+exports.makeNativeMemberFunction = function (interpreter, nativeFunc, nativeParentObj, maxDepth) {
   return function() {
     // Call the native function:
     var nativeRetVal = nativeFunc.apply(nativeParentObj, arguments);
-    return exports.marshalNativeToInterpreter(interpreter, nativeRetVal, null);
+    return exports.marshalNativeToInterpreter(interpreter, nativeRetVal, null, maxDepth);
   };
 };
 
@@ -6822,7 +6826,7 @@ exports.createSharingDiv = function(options) {
   if (sharingShapeways) {
     dom.addClickTouchEvent(sharingShapeways, function() {
       $('#send-to-phone').hide();
-      $('#shapeways-message').toggle();
+      $('#shapeways-message').show();
     });
   }
 
@@ -15003,9 +15007,11 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       this.setHSV(312, 0.32, 0.62);
+      this.VALUES = [];
 
       var dropdown;
       if (isK1) {
+        this.VALUES = skin.backgroundChoicesK1;
         dropdown = new blockly.FieldImageDropdown(
                                   skin.backgroundChoicesK1,
                                   skin.dropdownThumbnailWidth,
@@ -15014,6 +15020,7 @@ exports.install = function(blockly, blockInstallOptions) {
           .appendTitle(msg.setBackground())
           .appendTitle(dropdown, 'VALUE');
       } else {
+        this.VALUES = skin.backgroundChoices;
         dropdown = new blockly.FieldDropdown(skin.backgroundChoices);
         this.appendDummyInput().appendTitle(dropdown, 'VALUE');
       }
@@ -15129,6 +15136,7 @@ exports.install = function(blockly, blockInstallOptions) {
     blockly.Blocks.studio_setSprite = {
       helpUrl: '',
       init: function() {
+        this.VALUES = skin.spriteChoices;
         var dropdown = new blockly.FieldDropdown(skin.spriteChoices);
         // default to first item after random/hidden
         dropdown.setValue(skin.spriteChoices[2][1]);
@@ -20692,7 +20700,7 @@ with (locals || {}) { (function(){
   var msg = require('../../locale/pl_pl/common');
   var hideRunButton = locals.hideRunButton || false;
 ; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((26,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');30; };; buf.push('\n');31; // A spot for the server to inject some HTML for help content.
-var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (38,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((44,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((45,  msg.runProgram() )), '</div>\n        <img src="', escape((46,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((49,  msg.resetProgram() )), '</div>\n        <img src="', escape((50,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');52; if (data.controls) { ; buf.push('\n      ', (53,  data.controls ), '\n      ');54; } ; buf.push('\n      ');55; if (data.extraControlRows) { ; buf.push('\n      ', (56,  data.extraControlRows ), '\n      ');57; } ; buf.push('\n    </div>\n\n    ');60; instructions() ; buf.push('\n    ');61; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n');66; if (data.editCode) { ; buf.push('\n  <div id="codeWorkspace">\n');68; } else { ; buf.push('\n  <div id="blockly">\n');70; } ; buf.push('\n  <div id="headers" dir="', escape((71,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((72,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span id="workspace-header-span">', escape((74,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((76,  data.blockCounterClass )), '>\n          ', escape((77,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((80,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((83,  msg.showCodeHeader() )), '</span></div>\n  </div>\n  ');85; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox" contenteditable spellcheck=false></div>\n  ');87; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
+var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (38,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((44,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((45,  msg.runProgram() )), '</div>\n        <img src="', escape((46,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((49,  msg.resetProgram() )), '</div>\n        <img src="', escape((50,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');52; if (data.controls) { ; buf.push('\n      ', (53,  data.controls ), '\n      ');54; } ; buf.push('\n      ');55; if (data.extraControlRows) { ; buf.push('\n      ', (56,  data.extraControlRows ), '\n      ');57; } ; buf.push('\n    </div>\n\n    ');60; instructions() ; buf.push('\n    ');61; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n');66; if (data.editCode) { ; buf.push('\n  <div id="codeWorkspace">\n');68; } else { ; buf.push('\n  <div id="blockly">\n');70; } ; buf.push('\n  <div id="headers" dir="', escape((71,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((72,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span id="workspace-header-span">', escape((74,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((76,  data.blockCounterClass )), '>\n          ', escape((77,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((80,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((83,  msg.showCodeHeader() )), '</span></div>\n  </div>\n  ');85; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox"></div>\n  ');87; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -20756,7 +20764,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/pl_pl/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n  <div class="social-buttons">\n  ');10; if (!options.onMainPage) { ; buf.push('\n    <button id="print-button">\n      ', escape((12,  msg.print() )), '\n    </button>\n  ');14; } ; buf.push('\n');15; if (options.alreadySaved) { ; buf.push('\n  <button class="saved-to-gallery" disabled>\n    ', escape((17,  msg.savedToGallery() )), '\n  </button>\n');19; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((21,  msg.saveToGallery() )), '\n  </button>\n');23; } ; buf.push('\n  </div>\n\n');26; if (options.response && options.response.level_source) { ; buf.push('\n  ');27; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((28,  options.appStrings.sharingText )), '</div>\n  ');29; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((32,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');36; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((36,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((37,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');39; }; buf.push('\n    ');40; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((40,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((41,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');43; }; buf.push('    ');43; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((44,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');46; }; buf.push('    ');46; if (options.level.shapewaysUrl && !options.onMainPage && options.sendToPhone) {; buf.push('      <a id="sharing-shapeways" href="" onClick="return false;">\n        <img src=\'', escape((47,  BlocklyApps.assetUrl("media/shapeways_purple.png") )), '\' />\n      </a>\n    ');49; }; buf.push('  </div>\n');50; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n');58; if (options.response && options.response.level_source && options.level.shapewaysUrl) {; buf.push('  <div id="shapeways-message" class="sharing" style="display: none">\n    <div id="shapeways-message-body">You\'ll be redirected to Shapeways.com to order and purchase a 3D print.</div>\n    <button id="shapeways-print-go-button" onclick="location.href=\'', escape((60,  options.level.shapewaysUrl )), '\'">Go to Shapeways</button>\n    <div id="shapeways-message-body-disclaimer">Students under 13 years need a parent or guardian to do 3D printing.</div>\n  </div>\n');63; }; buf.push(''); })();
+ buf.push('');1; var msg = require('../../locale/pl_pl/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n  <div class="social-buttons">\n  ');10; if (!options.onMainPage) { ; buf.push('\n    <button id="print-button">\n      ', escape((12,  msg.print() )), '\n    </button>\n  ');14; } ; buf.push('\n');15; if (options.alreadySaved) { ; buf.push('\n  <button class="saved-to-gallery" disabled>\n    ', escape((17,  msg.savedToGallery() )), '\n  </button>\n');19; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((21,  msg.saveToGallery() )), '\n  </button>\n');23; } ; buf.push('\n  </div>\n\n');26; if (options.response && options.response.level_source) { ; buf.push('\n  ');27; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((28,  options.appStrings.sharingText )), '</div>\n  ');29; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((32,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');36; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((36,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((37,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');39; }; buf.push('\n    ');40; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((40,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((41,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');43; }; buf.push('    ');43; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((44,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');46; }; buf.push('    ');46; if (options.level.shapewaysUrl && !options.onMainPage && options.sendToPhone) {; buf.push('      <a id="sharing-shapeways" href="" onClick="return false;">\n        <img src=\'', escape((47,  BlocklyApps.assetUrl("media/shapeways_purple.png") )), '\' />\n      </a>\n    ');49; }; buf.push('  </div>\n');50; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n');58; if (options.response && options.response.level_source && options.level.shapewaysUrl) {; buf.push('  <div id="shapeways-message" class="sharing" style="display: none">\n    <div id="shapeways-message-body">You\'ll be redirected to Shapeways.com to order and purchase a 3D print.</div>\n    <button id="shapeways-print-go-button" onclick="window.open(\'', escape((60,  options.level.shapewaysUrl )), '\', \'_blank\')">Go to Shapeways</button>\n    <div id="shapeways-message-body-disclaimer">Students under 13 years need a parent or guardian to do 3D printing.</div>\n  </div>\n');63; }; buf.push(''); })();
 } 
 return buf.join('');
 };
@@ -21226,23 +21234,23 @@ exports.directionWestLetter = function(d){return "W (Zachód)"};
 
 exports.end = function(d){return "koniec"};
 
-exports.emptyBlocksErrorMsg = function(d){return "Blok powtórz lub blok jeśli muszą zawierać inne bloki, by poprawnie działać. Upewnij się, czy wewnętrzny blok pasuje do zewnętrznego."};
+exports.emptyBlocksErrorMsg = function(d){return "Blok \"powtarzaj\" lub blok \"jeśli\" muszą zawierać inne bloki, by poprawnie działać. Upewnij się, czy wewnętrzny blok pasuje do zewnętrznego."};
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Blok funkcji musi zawierać inne bloki, by działał."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "Wewnątrz definicji Twojej funkcji powinny znajdować się bloki. Kliknij przycisk Edytuj i przeciągnij bloki do wnętrza zielonego bloku."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "Kliknij przycisk Edytuj, aby upewnić się, że wewnątrz definicji Twojej funkcji nie brakuje żadnego bloku."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "Pamiętaj, aby dołączyć blok do każdego parametru wejścia w bloku funkcji w Twoim obszarze roboczym."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "Dodałeś blok parametru, ale nie użyłeś go w definicji. Upewnij się, że używasz swojego parametru klikając na przycisk Editi i umieszczając blok parametru wewnątrz bloku zielonego."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "Utwórz parametr dla swojej funkcji klikając na przycisk Edytuj i dodając niezbędne parametry. Przeciągnij nowe bloki parametrów do definicji swojej funkcji."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "Utworzyłeś funkcję, ale nigdy nie użyłeś jej w swoim obszarze roboczym! W przyborniku kliknij na Funkcje i upewnij się, że używasz ich w swoim programie."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "Spróbuj zastąpić ??? wartością."};
 
 exports.extraTopBlocks = function(d){return "Masz niezałączone bloki. Czy chcesz je załączyć do bloku \"po uruchomieniu\"?"};
 
@@ -21288,7 +21296,7 @@ exports.print = function(d){return "Drukuj"};
 
 exports.puzzleTitle = function(d){return "Łamigłówka "+v(d,"puzzle_number")+" z "+v(d,"stage_total")};
 
-exports.repeat = function(d){return "powtórz"};
+exports.repeat = function(d){return "powtarzaj"};
 
 exports.resetProgram = function(d){return "Zresetuj"};
 
@@ -21304,7 +21312,7 @@ exports.showBlocksHeader = function(d){return "Pokaż Bloki"};
 
 exports.showGeneratedCode = function(d){return "Pokaż kod"};
 
-exports.stringEquals = function(d){return "string=?"};
+exports.stringEquals = function(d){return "łańcuch=?"};
 
 exports.subtitle = function(d){return "środowisko wizualnego programowania"};
 
@@ -21333,10 +21341,6 @@ exports.saveToGallery = function(d){return "Zapisz w galerii"};
 exports.savedToGallery = function(d){return "Zapisane w galerii!"};
 
 exports.shareFailure = function(d){return "Przepraszamy, ale nie możemy udostępnić tego programu."};
-
-exports.typeFuncs = function(d){return "Dostępne funkcje:%1"};
-
-exports.typeHint = function(d){return "Zauważ, że nawiasy i średniki są wymagane."};
 
 exports.workspaceHeader = function(d){return "Połącz swoje bloki tutaj: "};
 
@@ -21383,9 +21387,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.pl = function 
   }
   return 'other';
 };
-exports.actor = function(d){return "actor"};
+exports.actor = function(d){return "postać"};
 
-exports.alienInvasion = function(d){return "Alien Invasion!"};
+exports.alienInvasion = function(d){return "Inwazja obcych!"};
 
 exports.backgroundBlack = function(d){return "czarny"};
 
@@ -21425,9 +21429,9 @@ exports.catMath = function(d){return "Matematyka"};
 
 exports.catProcedures = function(d){return "Funkcje"};
 
-exports.catText = function(d){return "Tekstowe"};
+exports.catText = function(d){return "Tekst"};
 
-exports.catVariables = function(d){return "zmienne"};
+exports.catVariables = function(d){return "Zmienne"};
 
 exports.changeScoreTooltip = function(d){return "Dodaj lub usuń punkt do/z wyniku."};
 
@@ -21437,7 +21441,7 @@ exports.continue = function(d){return "Kontynuuj"};
 
 exports.decrementPlayerScore = function(d){return "usuń punkt"};
 
-exports.defaultSayText = function(d){return "wprowadź tutaj"};
+exports.defaultSayText = function(d){return "pisz tutaj"};
 
 exports.emotion = function(d){return "nastrój"};
 
@@ -21469,7 +21473,7 @@ exports.makeProjectileRedHearts = function(d){return "utwórz czerwone serca"};
 
 exports.makeProjectileTooltip = function(d){return "Spraw by pocisk, który właśnie się zderzył, zniknął lub odbił się."};
 
-exports.makeYourOwn = function(d){return "Stwórz swoją własną Play Lab App"};
+exports.makeYourOwn = function(d){return "Utwórz swoją własną aplikację Play Lab"};
 
 exports.moveDirectionDown = function(d){return "dół"};
 
@@ -21493,9 +21497,9 @@ exports.moveDistance400 = function(d){return "400 pikseli"};
 
 exports.moveDistancePixels = function(d){return "piksele"};
 
-exports.moveDistanceRandom = function(d){return "losowy piksel"};
+exports.moveDistanceRandom = function(d){return "losowe piksele"};
 
-exports.moveDistanceTooltip = function(d){return "Przesuń aktora o określoną odległość w zadanym kierunku."};
+exports.moveDistanceTooltip = function(d){return "Przesuń postać o określoną odległość w zadanym kierunku."};
 
 exports.moveSprite = function(d){return "przesuń"};
 
@@ -21503,21 +21507,21 @@ exports.moveSpriteN = function(d){return "przenieś postać "+v(d,"spriteIndex")
 
 exports.moveDown = function(d){return "przesuń w dół"};
 
-exports.moveDownTooltip = function(d){return "Przesuń aktora w dół."};
+exports.moveDownTooltip = function(d){return "Przesuń postać w dół."};
 
 exports.moveLeft = function(d){return "przesuń w lewo"};
 
-exports.moveLeftTooltip = function(d){return "Przesuń aktora w lewo."};
+exports.moveLeftTooltip = function(d){return "Przesuń postać w lewo."};
 
 exports.moveRight = function(d){return "przesuń w prawo"};
 
-exports.moveRightTooltip = function(d){return "Przesuń aktora w prawo."};
+exports.moveRightTooltip = function(d){return "Przesuń postać w prawo."};
 
 exports.moveUp = function(d){return "przesuń w górę"};
 
-exports.moveUpTooltip = function(d){return "Przesuń aktora w górę."};
+exports.moveUpTooltip = function(d){return "Przesuń postać w górę."};
 
-exports.moveTooltip = function(d){return "Przesuń aktora."};
+exports.moveTooltip = function(d){return "Przesuń postać."};
 
 exports.nextLevel = function(d){return "Gratulacje! Ukończyłeś tę łamigłówkę."};
 
@@ -21535,9 +21539,9 @@ exports.playSoundGoal2 = function(d){return "odtwórz dźwięk gola nr 2"};
 
 exports.playSoundHit = function(d){return "odtwórz dźwięk trafienia"};
 
-exports.playSoundLosePoint = function(d){return "zagraj dzwięk utraty punktu"};
+exports.playSoundLosePoint = function(d){return "zagraj dźwięk utraty punktu"};
 
-exports.playSoundLosePoint2 = function(d){return "zagraj dzwięk utraty punktu nr 2"};
+exports.playSoundLosePoint2 = function(d){return "zagraj dźwięk utraty punktu nr 2"};
 
 exports.playSoundRetro = function(d){return "zagraj dźwięk retro"};
 
@@ -21547,53 +21551,53 @@ exports.playSoundSlap = function(d){return "zagraj dźwięk klaśnięcia"};
 
 exports.playSoundTooltip = function(d){return "Odtwórz wybrany dźwięk."};
 
-exports.playSoundWinPoint = function(d){return "zagraj dźwięk zdybycia punktu nr 1"};
+exports.playSoundWinPoint = function(d){return "zagraj dźwięk zdobycia punktu"};
 
-exports.playSoundWinPoint2 = function(d){return "zagraj dźwięk zdybycia punktu nr 2"};
+exports.playSoundWinPoint2 = function(d){return "zagraj dźwięk zdobycia punktu nr 2"};
 
 exports.playSoundWood = function(d){return "zagraj dźwięk drewna"};
 
-exports.positionOutTopLeft = function(d){return "do górnego lewego położenia"};
+exports.positionOutTopLeft = function(d){return "do powyżej górnej pozycji z lewej"};
 
-exports.positionOutTopRight = function(d){return "do górnego prawego położenia"};
+exports.positionOutTopRight = function(d){return "do powyżej górnej pozycji z prawej"};
 
-exports.positionTopOutLeft = function(d){return "do góry poza lewą pozycję"};
+exports.positionTopOutLeft = function(d){return "do górnej zewnętrznej pozycji z lewej "};
 
-exports.positionTopLeft = function(d){return "do górnej lewej pozycji"};
+exports.positionTopLeft = function(d){return "do górnej pozycji z lewej"};
 
-exports.positionTopCenter = function(d){return "do górnej środkowej pozycji"};
+exports.positionTopCenter = function(d){return "do górnej pozycji z centrum"};
 
-exports.positionTopRight = function(d){return "do górnej prawej pozycji"};
+exports.positionTopRight = function(d){return "do górnej pozycji z prawej"};
 
-exports.positionTopOutRight = function(d){return "do góry poza właściwą pozycję"};
+exports.positionTopOutRight = function(d){return "do górnej pozycji na zewnątrz z prawej"};
 
 exports.positionMiddleLeft = function(d){return "do środkowej pozycji z lewej"};
 
-exports.positionMiddleCenter = function(d){return "na środkową pozycję"};
+exports.positionMiddleCenter = function(d){return "do środkowej pozycji w centrum"};
 
-exports.positionMiddleRight = function(d){return "na środkową pozycję z prawej"};
+exports.positionMiddleRight = function(d){return "do środkowej pozycji po prawej"};
 
-exports.positionBottomOutLeft = function(d){return "na dół poza lewą pozycję"};
+exports.positionBottomOutLeft = function(d){return "do dolnej pozycji na zewnątrz z lewej"};
 
-exports.positionBottomLeft = function(d){return "na środkową dolną pozycję z lewej"};
+exports.positionBottomLeft = function(d){return "do dolnej pozycji z lewej"};
 
-exports.positionBottomCenter = function(d){return "na środkową pozycję na dole"};
+exports.positionBottomCenter = function(d){return "do dolnej pozycji w centrum"};
 
-exports.positionBottomRight = function(d){return "na dolną pozycję z prawej"};
+exports.positionBottomRight = function(d){return "do dolnej pozycji z prawej"};
 
-exports.positionBottomOutRight = function(d){return "na dół poza właściwą pozycję"};
+exports.positionBottomOutRight = function(d){return "do dolnej pozycji na zewnątrz z prawej"};
 
-exports.positionOutBottomLeft = function(d){return "to the below bottom left position"};
+exports.positionOutBottomLeft = function(d){return "do poniżej dolnej pozycji z lewej"};
 
-exports.positionOutBottomRight = function(d){return "to the below bottom right position"};
+exports.positionOutBottomRight = function(d){return "do poniżej dolnej pozycji z prawej"};
 
-exports.positionRandom = function(d){return "na losową pozycję"};
+exports.positionRandom = function(d){return "do losowej pozycji"};
 
 exports.projectileBlueFireball = function(d){return "niebieska kula ognia"};
 
 exports.projectilePurpleFireball = function(d){return "purpurowa kula ognia"};
 
-exports.projectileRedFireball = function(d){return "czerwona ognista kula"};
+exports.projectileRedFireball = function(d){return "czerwona kula ognista"};
 
 exports.projectileYellowHearts = function(d){return "zółte serca"};
 
@@ -21611,25 +21615,25 @@ exports.projectileHiro = function(d){return "Hiro"};
 
 exports.projectileBaymax = function(d){return "Baymax"};
 
-exports.projectileRapunzel = function(d){return "Roszpunka"};
+exports.projectileRapunzel = function(d){return "Roszpunka (Rapunzel)"};
 
-exports.reinfFeedbackMsg = function(d){return "Możesz nacisnąć przycisk \"Spróbuj ponownie\", aby powrócić do swojej opowieści."};
+exports.reinfFeedbackMsg = function(d){return "Możesz nacisnąć przycisk Spróbuj ponownie, aby powrócić do swojej opowieści."};
 
 exports.repeatForever = function(d){return "powtarzaj w nieskończoność"};
 
 exports.repeatDo = function(d){return "wykonaj"};
 
-exports.repeatForeverTooltip = function(d){return "Wykonuj akcje w tym bloku bez przerwy dopóki trwa opowiadanie."};
+exports.repeatForeverTooltip = function(d){return "Wykonuj akcje w tym bloku bez przerwy, dopóki trwa opowieść."};
 
 exports.saySprite = function(d){return "powiedz"};
 
-exports.saySpriteN = function(d){return "aktor "+v(d,"spriteIndex")+" mówi"};
+exports.saySpriteN = function(d){return "postać "+v(d,"spriteIndex")+" mówi"};
 
-exports.saySpriteTooltip = function(d){return "Wyświetl dymek z wiadomością skojarzoną z postacią."};
+exports.saySpriteTooltip = function(d){return "Wyświetl dymek z odpowiednim tekstem od określonej postaci."};
 
 exports.scoreText = function(d){return "Wynik: "+v(d,"playerScore")};
 
-exports.setBackground = function(d){return "zestaw tło"};
+exports.setBackground = function(d){return "ustaw tło"};
 
 exports.setBackgroundRandom = function(d){return "ustaw losowe tło"};
 
@@ -21641,7 +21645,7 @@ exports.setBackgroundCloudy = function(d){return "ustaw pochmurne tło"};
 
 exports.setBackgroundHardcourt = function(d){return "ustaw tło boiska do tenisa"};
 
-exports.setBackgroundNight = function(d){return "utaw nocne tło"};
+exports.setBackgroundNight = function(d){return "ustaw nocne tło"};
 
 exports.setBackgroundUnderwater = function(d){return "ustaw tło podwodne"};
 
@@ -21681,89 +21685,89 @@ exports.setSpriteEmotionSad = function(d){return "na smutny nastrój"};
 
 exports.setSpriteEmotionTooltip = function(d){return "Ustawia nastój postaci"};
 
-exports.setSpriteAlien = function(d){return "do obrazu obcego"};
+exports.setSpriteAlien = function(d){return "do obcego obrazka"};
 
-exports.setSpriteBat = function(d){return "do obrazu nietoperza"};
+exports.setSpriteBat = function(d){return "do obrazka nietoperza"};
 
-exports.setSpriteBird = function(d){return "do obrazu ptaka"};
+exports.setSpriteBird = function(d){return "do obrazka ptaka"};
 
-exports.setSpriteCat = function(d){return "do obrazu kota"};
+exports.setSpriteCat = function(d){return "do obrazka kota"};
 
-exports.setSpriteCaveBoy = function(d){return "na obrazek chłopca z jaskini"};
+exports.setSpriteCaveBoy = function(d){return "do obrazka chłopca z jaskini"};
 
-exports.setSpriteCaveGirl = function(d){return "na obrazek dziewczynki z jaskini"};
+exports.setSpriteCaveGirl = function(d){return "do obrazka dziewczynki z jaskini"};
 
-exports.setSpriteDinosaur = function(d){return "do obrazu dinozaura"};
+exports.setSpriteDinosaur = function(d){return "do obrazka dinozaura"};
 
-exports.setSpriteDog = function(d){return "do obrazu psa"};
+exports.setSpriteDog = function(d){return "do obrazka psa"};
 
-exports.setSpriteDragon = function(d){return "do obrazu smoka"};
+exports.setSpriteDragon = function(d){return "do obrazka smoka"};
 
-exports.setSpriteGhost = function(d){return "do obrazu ducha"};
+exports.setSpriteGhost = function(d){return "do obrazka ducha"};
 
-exports.setSpriteHidden = function(d){return "na ukryty obrazek"};
+exports.setSpriteHidden = function(d){return "do ukrytego obrazka"};
 
 exports.setSpriteHideK1 = function(d){return "ukryj"};
 
-exports.setSpriteAnna = function(d){return "na obrazek Anny"};
+exports.setSpriteAnna = function(d){return "do obrazka Anny"};
 
-exports.setSpriteElsa = function(d){return "na obrazek Elsy"};
+exports.setSpriteElsa = function(d){return "do obrazka Elsy"};
 
-exports.setSpriteHiro = function(d){return "na obrazek Hira"};
+exports.setSpriteHiro = function(d){return "do obrazka Hira"};
 
-exports.setSpriteBaymax = function(d){return "na obrazek Baymaxa"};
+exports.setSpriteBaymax = function(d){return "do obrazka Baymaxa"};
 
 exports.setSpriteRapunzel = function(d){return "do obrazka z Roszpunką"};
 
-exports.setSpriteKnight = function(d){return "do obrazu rycerza"};
+exports.setSpriteKnight = function(d){return "do obrazka rycerza"};
 
-exports.setSpriteMonster = function(d){return "do obrazu potwora"};
+exports.setSpriteMonster = function(d){return "do obrazka potwora"};
 
-exports.setSpriteNinja = function(d){return "do obrazu zamaskowanego ninja"};
+exports.setSpriteNinja = function(d){return "do obrazka zamaskowanego ninja"};
 
-exports.setSpriteOctopus = function(d){return "do obrazka z ośmiornicą"};
+exports.setSpriteOctopus = function(d){return "do obrazka ośmiornicy"};
 
-exports.setSpritePenguin = function(d){return "do obrazka z pingwinem"};
+exports.setSpritePenguin = function(d){return "do obrazka pingwina"};
 
-exports.setSpritePirate = function(d){return "do obrazka z piratem"};
+exports.setSpritePirate = function(d){return "do obrazka pirata"};
 
-exports.setSpritePrincess = function(d){return "do obrazka z księżniczką"};
+exports.setSpritePrincess = function(d){return "do obrazka księżniczki"};
 
-exports.setSpriteRandom = function(d){return "na losowy obrazek"};
+exports.setSpriteRandom = function(d){return "do losowego obrazka"};
 
-exports.setSpriteRobot = function(d){return "to a robot image"};
+exports.setSpriteRobot = function(d){return "do obrazka robota"};
 
 exports.setSpriteShowK1 = function(d){return "pokaż"};
 
-exports.setSpriteSpacebot = function(d){return "to a spacebot image"};
+exports.setSpriteSpacebot = function(d){return "do obrazka spacebota"};
 
-exports.setSpriteSoccerGirl = function(d){return "to a soccer girl image"};
+exports.setSpriteSoccerGirl = function(d){return "do obrazka piłkarki"};
 
-exports.setSpriteSoccerBoy = function(d){return "to a soccer boy image"};
+exports.setSpriteSoccerBoy = function(d){return "do obrazu piłkarza"};
 
-exports.setSpriteSquirrel = function(d){return "to a squirrel image"};
+exports.setSpriteSquirrel = function(d){return "do obrazka wiewiórki"};
 
-exports.setSpriteTennisGirl = function(d){return "to a tennis girl image"};
+exports.setSpriteTennisGirl = function(d){return "do obrazka tenisistki"};
 
-exports.setSpriteTennisBoy = function(d){return "to a tennis boy image"};
+exports.setSpriteTennisBoy = function(d){return "do obrazka tenisisty"};
 
-exports.setSpriteUnicorn = function(d){return "to a unicorn image"};
+exports.setSpriteUnicorn = function(d){return "do obrazka jednorożca"};
 
-exports.setSpriteWitch = function(d){return "do obrazu czarownicy"};
+exports.setSpriteWitch = function(d){return "do obrazka czarownicy"};
 
-exports.setSpriteWizard = function(d){return "to a wizard image"};
+exports.setSpriteWizard = function(d){return "do obrazka kreatora"};
 
-exports.setSpritePositionTooltip = function(d){return "Natychmiast przenosi aktora do określonej lokalizacji."};
+exports.setSpritePositionTooltip = function(d){return "Natychmiast przenosi postać do określonej lokalizacji."};
 
-exports.setSpriteK1Tooltip = function(d){return "Pokazuje lub ukrywa określonego aktora."};
+exports.setSpriteK1Tooltip = function(d){return "Pokazuje lub ukrywa określoną postać ."};
 
-exports.setSpriteTooltip = function(d){return "Ustawia obraz aktora"};
+exports.setSpriteTooltip = function(d){return "Ustawia obrazek postaci"};
 
 exports.setSpriteSizeRandom = function(d){return "do losowego rozmiaru"};
 
-exports.setSpriteSizeVerySmall = function(d){return "to a very small size"};
+exports.setSpriteSizeVerySmall = function(d){return "do bardzo małego rozmiaru"};
 
-exports.setSpriteSizeSmall = function(d){return "to a small size"};
+exports.setSpriteSizeSmall = function(d){return "do małego rozmiaru"};
 
 exports.setSpriteSizeNormal = function(d){return "do normalnego rozmiaru"};
 
@@ -21771,7 +21775,7 @@ exports.setSpriteSizeLarge = function(d){return "do dużego rozmiaru"};
 
 exports.setSpriteSizeVeryLarge = function(d){return "do bardzo dużego rozmiaru"};
 
-exports.setSpriteSizeTooltip = function(d){return "Ustawia rozmiar aktora"};
+exports.setSpriteSizeTooltip = function(d){return "Ustawia rozmiar postaci"};
 
 exports.setSpriteSpeedRandom = function(d){return "na losową prędkość"};
 
@@ -21785,13 +21789,13 @@ exports.setSpriteSpeedFast = function(d){return "na szybką prędkość"};
 
 exports.setSpriteSpeedVeryFast = function(d){return "na bardzo szybką prędkość"};
 
-exports.setSpriteSpeedTooltip = function(d){return "ustawia prędkość aktora"};
+exports.setSpriteSpeedTooltip = function(d){return "Ustawia prędkość postaci"};
 
 exports.setSpriteZombie = function(d){return "do obrazka z zombie"};
 
-exports.shareStudioTwitter = function(d){return "Zapoznaj się z opowieścią którą zrobiłem. Stworzyłem ją sam z @codeorg"};
+exports.shareStudioTwitter = function(d){return "Zapoznaj się z opowieścią, którą wykonałem. Utworzyłem ją sam z @codeorg"};
 
-exports.shareGame = function(d){return "Udopstępnij swoją opowieść:"};
+exports.shareGame = function(d){return "Udostępnij swoją opowieść:"};
 
 exports.showCoordinates = function(d){return "pokaż współrzędne"};
 
@@ -21799,29 +21803,29 @@ exports.showCoordinatesTooltip = function(d){return "pokaż współrzędne bohat
 
 exports.showTitleScreen = function(d){return "wyświetl ekran tytułowy"};
 
-exports.showTitleScreenTitle = function(d){return "Tytuł"};
+exports.showTitleScreenTitle = function(d){return "tytuł"};
 
-exports.showTitleScreenText = function(d){return "Tekst"};
+exports.showTitleScreenText = function(d){return "tekst"};
 
 exports.showTSDefTitle = function(d){return "wpisz tutaj tytuł"};
 
-exports.showTSDefText = function(d){return "wpisz tutaj tutaj"};
+exports.showTSDefText = function(d){return "wpisz tutaj tekst"};
 
-exports.showTitleScreenTooltip = function(d){return "Wyświetl tytułowy ekran i związane z nim tytuł i tekst."};
+exports.showTitleScreenTooltip = function(d){return "Wyświetl tytułowy ekran i związany z nim tytuł i tekst."};
 
 exports.size = function(d){return "rozmiar"};
 
 exports.setSprite = function(d){return "przypisz"};
 
-exports.setSpriteN = function(d){return "ustaw aktora "+v(d,"spriteIndex")};
+exports.setSpriteN = function(d){return "ustaw postać "+v(d,"spriteIndex")};
 
 exports.soundCrunch = function(d){return "chrzęst"};
 
-exports.soundGoal1 = function(d){return "cel 1"};
+exports.soundGoal1 = function(d){return "cel (gol) 1"};
 
-exports.soundGoal2 = function(d){return "Cel 2"};
+exports.soundGoal2 = function(d){return "cel (gol) 2"};
 
-exports.soundHit = function(d){return "hit"};
+exports.soundHit = function(d){return "trafienie (hit)"};
 
 exports.soundLosePoint = function(d){return "stracić punkt"};
 
@@ -21829,13 +21833,13 @@ exports.soundLosePoint2 = function(d){return "stracić punkt 2"};
 
 exports.soundRetro = function(d){return "retro"};
 
-exports.soundRubber = function(d){return "gumowe"};
+exports.soundRubber = function(d){return "guma"};
 
 exports.soundSlap = function(d){return "policzek"};
 
-exports.soundWinPoint = function(d){return "wygrać punkt"};
+exports.soundWinPoint = function(d){return "wygraj punkt"};
 
-exports.soundWinPoint2 = function(d){return "wygrać punkt 2"};
+exports.soundWinPoint2 = function(d){return "wygraj punkt 2"};
 
 exports.soundWood = function(d){return "drewno"};
 
@@ -21843,19 +21847,19 @@ exports.speed = function(d){return "prędkość"};
 
 exports.stopSprite = function(d){return "zatrzymaj"};
 
-exports.stopSpriteN = function(d){return "Zatrzymaj krasnoludka "+v(d,"spriteIndex")};
+exports.stopSpriteN = function(d){return "zatrzymaj postać "+v(d,"spriteIndex")};
 
-exports.stopTooltip = function(d){return "zatrzymaj ruch aktora."};
+exports.stopTooltip = function(d){return "Zatrzymuje ruch postaci."};
 
 exports.throwSprite = function(d){return "rzuć"};
 
-exports.throwSpriteN = function(d){return "rzut "+v(d,"spriteIndex")+" aktora"};
+exports.throwSpriteN = function(d){return "rzut "+v(d,"spriteIndex")+" postaci"};
 
-exports.throwTooltip = function(d){return "Throws a projectile from the specified actor."};
+exports.throwTooltip = function(d){return "Wyrzuca pocisk z określonej postaci."};
 
-exports.vanish = function(d){return "vanish"};
+exports.vanish = function(d){return "znika"};
 
-exports.vanishActorN = function(d){return "vanish actor "+v(d,"spriteIndex")};
+exports.vanishActorN = function(d){return "znika postać "+v(d,"spriteIndex")};
 
 exports.vanishTooltip = function(d){return "Wymazuje postać."};
 
@@ -21863,61 +21867,61 @@ exports.waitFor = function(d){return "czekaj przez"};
 
 exports.waitSeconds = function(d){return "sekundy"};
 
-exports.waitForClick = function(d){return "poczekaj na kliknięcie"};
+exports.waitForClick = function(d){return "czekaj na kliknięcie"};
 
 exports.waitForRandom = function(d){return "poczekaj na losowe"};
 
 exports.waitForHalfSecond = function(d){return "czekaj pół sekundy"};
 
-exports.waitFor1Second = function(d){return "czekaj sekundę"};
+exports.waitFor1Second = function(d){return "poczekaj sekundę"};
 
-exports.waitFor2Seconds = function(d){return "czekaj 2 sekundy"};
+exports.waitFor2Seconds = function(d){return "poczekaj 2 sekundy"};
 
-exports.waitFor5Seconds = function(d){return "czekaj 5 sekund"};
+exports.waitFor5Seconds = function(d){return "poczekaj 5 sekund"};
 
-exports.waitFor10Seconds = function(d){return "czekaj 10 sekund"};
+exports.waitFor10Seconds = function(d){return "poczekaj 10 sekund"};
 
 exports.waitParamsTooltip = function(d){return "Czeka określoną liczbę sekund lub stosuje zero, czekając aż nastąpi kliknięcie."};
 
 exports.waitTooltip = function(d){return "Czeka przez określony czas lub do momentu kliknięcia."};
 
-exports.whenArrowDown = function(d){return "Strzałka w dół"};
+exports.whenArrowDown = function(d){return "strzałka w dół"};
 
-exports.whenArrowLeft = function(d){return "Strzałka w lewo"};
+exports.whenArrowLeft = function(d){return "strzałka w lewo"};
 
-exports.whenArrowRight = function(d){return "Strzałka w prawo"};
+exports.whenArrowRight = function(d){return "strzałka w prawo"};
 
-exports.whenArrowUp = function(d){return "Strzałka w górę"};
+exports.whenArrowUp = function(d){return "strzałka w górę"};
 
 exports.whenArrowTooltip = function(d){return "Wykonaj akcje poniżej, gdy naciśnięty zostaje określony klawisz ze strzałką."};
 
 exports.whenDown = function(d){return "kiedy strzałka w dół"};
 
-exports.whenDownTooltip = function(d){return "Wykonaj poniższe czynności, gdy wciśnięty jest klawisz strzałki w dół."};
+exports.whenDownTooltip = function(d){return "Wykonaj poniższe czynności, gdy naciśnięty zostaje klawisz strzałki w dół."};
 
-exports.whenGameStarts = function(d){return "gdy opowieść się zacznie"};
+exports.whenGameStarts = function(d){return "gdy opowieść się zaczyna"};
 
 exports.whenGameStartsTooltip = function(d){return "Wykonaj poniższe czynności, wraz z rozpoczęciem opowieści."};
 
 exports.whenLeft = function(d){return "kiedy strzałka w lewo"};
 
-exports.whenLeftTooltip = function(d){return "Wykonaj poniższe czynności, gdy wciśnięty jest klawisz strzałki w lewo."};
+exports.whenLeftTooltip = function(d){return "Wykonaj poniższe czynności, gdy naciśnięty zostaje klawisz strzałki w lewo."};
 
 exports.whenRight = function(d){return "kiedy strzałka w prawo"};
 
-exports.whenRightTooltip = function(d){return "Wykonaj poniższe czynności, gdy wciśnięty jest klawisz strzałki w prawo."};
+exports.whenRightTooltip = function(d){return "Wykonaj poniższe czynności, gdy naciśnięty zostaje klawisz strzałki w prawo."};
 
-exports.whenSpriteClicked = function(d){return "po kliknięciu aktora"};
+exports.whenSpriteClicked = function(d){return "gdy postać kliknie"};
 
-exports.whenSpriteClickedN = function(d){return "when actor "+v(d,"spriteIndex")+" clicked"};
+exports.whenSpriteClickedN = function(d){return "gdy postać "+v(d,"spriteIndex")+" kliknie"};
 
-exports.whenSpriteClickedTooltip = function(d){return "Wykonaj czynności poniżej po kliknięciu na aktora."};
+exports.whenSpriteClickedTooltip = function(d){return "Wykonaj czynności poniżej po kliknięciu na postaci."};
 
-exports.whenSpriteCollidedN = function(d){return "when actor "+v(d,"spriteIndex")};
+exports.whenSpriteCollidedN = function(d){return "kiedy postać "+v(d,"spriteIndex")};
 
-exports.whenSpriteCollidedTooltip = function(d){return "Gdy aktor dotknie innego aktora, wykonaj poniższą akcję."};
+exports.whenSpriteCollidedTooltip = function(d){return "Wykonaj poniższe akcje, gdy postać dotknie inną postać."};
 
-exports.whenSpriteCollidedWith = function(d){return "touches"};
+exports.whenSpriteCollidedWith = function(d){return "dotyka"};
 
 exports.whenSpriteCollidedWithAnyActor = function(d){return "dotyka kogoś innego"};
 
@@ -21927,7 +21931,7 @@ exports.whenSpriteCollidedWithAnyProjectile = function(d){return "dotyka jakiego
 
 exports.whenSpriteCollidedWithAnything = function(d){return "dotyka czegoś"};
 
-exports.whenSpriteCollidedWithN = function(d){return "dotyka krasnoludka "+v(d,"spriteIndex")};
+exports.whenSpriteCollidedWithN = function(d){return "dotyka postaci "+v(d,"spriteIndex")};
 
 exports.whenSpriteCollidedWithBlueFireball = function(d){return "dotyka niebieskiej kuli ognia"};
 
@@ -21951,7 +21955,7 @@ exports.whenSpriteCollidedWithTopEdge = function(d){return "dotyka górnej kraw�
 
 exports.whenUp = function(d){return "kiedy strzałka w górę"};
 
-exports.whenUpTooltip = function(d){return "Wykonaj poniższe czynności, gdy wciśnięty jest klawisz strzałki w górę."};
+exports.whenUpTooltip = function(d){return "Wykonaj poniższe czynności, gdy naciśnięty zostaje klawisz strzałki w górę."};
 
 exports.yes = function(d){return "Tak"};
 

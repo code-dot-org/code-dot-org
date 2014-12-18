@@ -298,13 +298,13 @@ it:
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
       Coordinates Multi 1:
-        Video game Coordinates: Video game Coordinates
-        Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        Which answer best describes the unicorn's movement?: "Which answer best describes the unicorn's movement?"
-        The unicorn moves across the screen: The unicorn moves across the screen
-        The unicorn's y value changes: "The unicorn's y value changes"
-        The unicorn moves to the left: The unicorn moves to the left
-        The unicorn's x value changes: "The unicorn's x value changes"
+        Video game Coordinates: Coordinate del Videogioco
+        Ninjacat Demo Embed.level: Livello della versione demo del Gatto Ninja
+        Which answer best describes the unicorn's movement?: "Qual è la risposta che descrive meglio il movimento dell'unicorno?"
+        The unicorn moves across the screen: "L'unicorno si muove sullo schermo"
+        The unicorn's y value changes: "Il valore y dell'unicorno cambia"
+        The unicorn moves to the left: "L'unicorno si muove verso sinistra"
+        The unicorn's x value changes: "Il valore x dell'unicorno cambia"
       K-1 Artist 1 Multi 1:
         Multiple Choice: 'Artista: Risposte Multiple 1'
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500

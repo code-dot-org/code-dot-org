@@ -1,118 +1,118 @@
 * * *
 
-title: Hour of Code Event How-To layout: wide nav: resources_nav
+Заглавие: Часът на кодирането събитие Как да оформление: широка nav: resources_nav
 
 * * *
 
-# Hour of Code event guide
+# Часът на кодирането ръководство
 
-Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
+Организирайте Часът на кодирането по време на CSEW (Dec 8-14) за да отпразнуваме заедно компютърните науки и да вдъхновим повече ученици да ги опитат. Всеки, навсякъде, където може, нека организира Часът на кодирането събитие.
 
-## 1) Prepare for your event
+## 1) подготовка за вашето събитие
 
-  * Determine a venue, date and time
-  * Send [a letter](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) to invite your local mayor, congressman, governor, or influential business person to speak.
-  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= hoc_uri('/resources/press-kit') %>) for help.
+  * Определяне на място, дата и час
+  * Изпратете [ писмо](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>)за да поканите вашия местен кмет, народен представител, управител или влиятелни бизнесмени да говорят на откриването.
+  * Поканете медии/преса. т.е. местни новинарски станции, вестник, интересуващи се от образование/технологии блогъри. Вижте нашите [изявления за пресата](<%= hoc_uri('/resources/press-kit') %>) за помощ.
 
-## 2) During your event
+## 2) по време на вашето събитие
 
-  * Kick off your event with one of our [inspirational videos](<%= hoc_uri('/resources#videos') %>).
-  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= hoc_uri('/resources/stats') %>).   
+  * Започнете вашето събитие с един от нашите[ вдъхновяващи видео клипове](<%= hoc_uri('/resources#videos') %>).
+  * Представете значението на компютърните науки, използвайки тези [статистика и инфографика](<%= hoc_uri('/resources/stats') %>).   
       
     
-  * Other event ideas: 
-      * Invite a local industry leader to discuss his or her work involving computer science
-      * Invite a local politician and have students teach him or her how to code
-      * Watch one of the Q&A sessions with an Hour of Code ambassador. They will all be recorded and on Code.org’s YouTube page. This year’s participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more!
-      * Have a group of students demonstrate an unplugged activity
-      * Have a group of students teach the principal or a group of teachers how to code
-      * If your school already teaches computer science, have students demo projects
+  * Други идеи за събитието: 
+      * Поканете местния индустриялен лидер да обсъди неговата или нейната работа, включваща компютърни науки
+      * Поканете местен политик и нека учениците го/я научат как да програмира код
+      * Гледайте една от Q & сесиите с Часът на кодирането посланик. Те ще бъдат записани и в Code.org на YouTube страницата. Тази година участниците включват Бил Гейтс, Шерил Сандберг, Аштън Къчър и др.!
+      * Нека една група от учениците демонстрират ънплъгд дейност
+      * Нека група от ученици да обучат директорът или група от учители как да кодират
+      * Ако във вашето училище вече се изучават компютърни науки, нека учениците демонстрират проектите си
 
-## 3) Share how it went
+## 3) споделете как е минало
 
-  * Share pictures of your event on Facebook and Twitter. 
-  * Use the hashtag **#HourofCode**
+  * Споделяйте снимки на вашето събитие във Facebook и Twitter. 
+  * Използвайте hashtag **#HourofCode**
 
-## Example Event Plan
+## План за примерно събитие
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**Събитие:** Седмица на компютърните науки в образованието в Училище Старт на събранието
 
-**Date:** Dec 8th (start of Computer Science Education Week)
+**Дата:** 8-ми декември (началото на компютърни науки образованието седмица)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Време:** По време на учебния ден. Средата на сутринта е за предпочитане за събитието. Около 1 час.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
+**Местоположение:** Училище заседателна зала (театър, фитнес зала, кафене)   
   
 
 
-## Run of Show
+## Старт на шоуто
 
 <table>
   <tr>
     <th style="width:200px">
-      Time
+      Време
     </th>
     
     <th style="width:800px">
-      Action
+      Изпълнение
     </th>
   </tr>
   
   <tr>
     <td>
-      10:00-10:05 am
+      10:00-10:05 сутринта
     </td>
     
     <td>
-      Open with one of our <a href="http://hourofcode.com/us/resources#videos">inspirational videos</a>
+      Стартирайте с едно от нашите <a href="http://hourofcode.com/us/resources#videos"> вдъхновяващи видеа</a>
     </td>
   </tr>
   
   <td>
-    10:05-11:15 am
+    10:05-11:15 сутринта
   </td>
   
   <td>
-    Principal gives an intro overviewing the importance of computer science. Use these <a href="/resources/stats">stats and infographics</a>.
+    Директорът обяснява значението на компютърните науки. Използвайте тази <a href="/resources/stats"> статистика и инфографика</a>.
   </td></tr> 
   
   <td>
-    11:15-11:17 am
+    10:15-10:17 сутринта
   </td>
   
   <td>
-    Open with one of our <a href="http://hourofcode.com/us/resources#videos">inspirational videos</a>
+    Стартирайте с едно от нашите <a href="http://hourofcode.com/us/resources#videos"> вдъхновяващи видеа</a>
   </td></tr> 
   
   <td>
-    11:17-11:30 am
+    10:17-10:30 сутринта
   </td>
   
   <td>
-    Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives.
+    Специален гост ще говори за себе си и как технологиите и компютърните науки играят важна роля в ежедневния му живот.
   </td></tr> 
   
   <td>
-    11:30-11:40 am
+    10:30-10:40 сутринта
   </td>
   
   <td>
-    Students do an Hour of Code demo for the school. Fun twist- have them teach the principal, politician or other students.
+    Учениците правят часът на кодирането в училище. Забавен обрат-накарайте ги да научат директора, политика или други ученици.
   </td></tr> 
   
   <td>
-    11:40-12:00 pm
+    10:40-11:00 ч
   </td>
   
   <td>
-    Students demo an unplugged activity and how computer science can be taught without using computers.
+    Учениците демонстрират ънплъгд дейност и как може да се преподават компютърни науки без използване на компютри.
   </td></tr> 
   
   <td>
-    12:00-12:05 pm
+    11:00-11:05 часа
   </td>
   
   <td>
-    Teacher who help bring the school-wide event gives closing remarks.
+    Учителят, който организира събитието в училище дава заключителни бележки.
   </td>
 </table>

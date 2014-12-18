@@ -36,6 +36,7 @@
   of: з
   more: БІЛЬШЕ
   less: МЕНШЕ
+  beta: бета-версія
   try_hoc: 'Спробуйте Годину коду, натисніть тут >> '
   try_k8intro: Спробуйте наш вступний курс інформатики для 5-8 класів (15-25 годин)
   k8intro: Вступ в курс інформатики для 5-8 класів (15-25 годин)
@@ -100,7 +101,7 @@
     login: Електронної пошти або ім'я користувача
     password: Пароль
     remember: Запам'ятати мене
-    submit: Реєстрація
+    submit: Вхід
   signin:
     try_heading: Хочете спробувати програмування без реєстрації?
     try_hoc: Спочатку спробуйте одну Годину Коду
@@ -110,7 +111,7 @@
     name: Оберіть своє ім'я
     picture: Тепер знайдіть свою таємну картинку
     words: Тепер введіть свої таємні слова
-    login: Реєстрація
+    login: Вхід
   password:
     reset_form:
       title: Забули пароль?
@@ -258,7 +259,7 @@
       settings: Мій профіль
       prizes: Призи
       logout: Вийти
-      signin: Реєстрація
+      signin: Вхід
       signup: Зареєструватися
       already_registered: Вже зареєстровані?
     popup:
@@ -390,8 +391,8 @@
     test_videos_help: Випробуйте наш новий відео-плеєр у своїй школі
     try_beta_courses: Новинка! Спробуйте наші бета-курси для учнів 1-5 класів
     use_as_teacher: Використовуйте цей сайт як вчитель
-    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>20-годинні курси для</h2><h1>початкових класів</h1>
+    heading_hoc2014: <h2>Година коду</h2><h1>для будь-якого віку</h1>
+    heading_elementary: <h2>20-годинні курси</h2><h1>для початківців</h1>
     heading_apps: <h2>Цікавинки</h2><h1>для усіх</h1>
     heading_legacy: <h2>Загальний курс</h2><h1>для будь-якого віку</h1>
     your_gallery: Галерея
@@ -407,8 +408,8 @@
       цей підручник.
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
       Всі права захищені.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
-      Arts Inc.  Всі права захищені.
-    powered_by_aws: Powered by Amazon Web Services
+      Arts Inc. Всі права захищені.
+    powered_by_aws: На потужностях Amazon Web Services
     feedback: Надати відгук
     translate: Допоможіть нам перекласти вашою мовою
     support: Підтримка
@@ -494,7 +495,7 @@
       title: Галерея
       body: Переглянути галерею програм та художніх зображень, створених нашими користувачами
     frozen:
-      title: Frozen
+      title: Крижане серце
   gallery:
     students_drew_these_with_code: Ці малюнки запрограмували учні!
     students_made_these_with_code: Це запрограмували учні!
@@ -590,3 +591,7 @@
     completed_too_many_blocks: завершено, забагато блоків
     completed_perfect: виконано, ідеально
     furthest_level_attempted: останній відкритий рівень
+  studio:
+    courses_working_on: Відкриті курси
+    completed_courses: Завершені курси
+    all_courses: Всі курси

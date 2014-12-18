@@ -16,6 +16,8 @@ module StagesHelper
         title += data_t_suffix('script.name', script.name, stage.name)
         return title.html_safe
       end
+    elsif script.name == Script::SPECIAL_NAME
+      title = ''
     else # script only has one stage/game, use the script name
       data_t_suffix('script.name', script.name, "title")
     end

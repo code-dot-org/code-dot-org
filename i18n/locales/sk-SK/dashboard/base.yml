@@ -21,21 +21,22 @@ sk:
   welcome_back: 'Vitajte späť, %{name}'
   add_teacher_form:
     code:
-      label: 'Add a teacher:'
-      placeholder: Section Code (ABCDEF)
+      label: 'Pridať učiteľa:'
+      placeholder: Kód sekcie (ABCDEF)
     submit: Pridať učiteľa
   add_hint_form:
     placeholder: Prosím zadajte Váš tip sem
     submit: Pridať tip
   appname: Code.org
   stage: Etapa
-  stage_number: 'Stage %{number}'
+  stage_number: 'Fáza %{number}'
   puzzle: Úloha
   trophies: Trofeje
   courses: Kurzy
   of: z
   more: VIAC
   less: MENEJ
+  beta: beta
   try_hoc: 'Vyskúšaj si Hodinu Kódovania tu >> '
   try_k8intro: Vyskúšaj si náš K-8 Úvod do Kurzu Počítačovej Vedy (15-25 hodín)
   k8intro: K-8 Úvod do Kurzu Počítačovej Vedy (15-25 hours)
@@ -60,78 +61,78 @@ sk:
     need_unlock: Neprišli ti pokyny na odomknutie?
   signup_form:
     overview_student: 'Vytvor si účet a sleduj ako postupuješ. Tvoj email sa používa hlavne na prihlásenie a na získanie zabudnutého hesla. Viac informácií nájdeš na našej stránke zásad <a href="http://code.org/privacy">Ochrany súkromia</a>.'
-    overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
-    no_signup_message: 'You can <a target="_blank" href="http://learn.code.org">browse the various stages and puzzles</a>, but you will need to sign up to save your progress.'
+    overview_teacher: 'Výučujte informatiku vo vašej triede.<p/> Po prihlásení na účet budete mať možnosť pridávať svojich študentov a sledovať ich pokrok.'
+    no_signup_message: 'Môžete <a target="_blank" href="http://learn.code.org">prehliadať rôzne úrovne a hádanky</a>, ale pre uloženie Vášho postupu je nutné prihlásenie.'
     teacher_educator_guide: Pozrieť príručku učiteľa
-    teacher_pitch: Teacher sign up for Code.org
-    teacher_title: Teacher sign up
-    student_pitch: Student sign up for Code.org
-    student_title: Student sign up
-    school_name: School Name (optional)
-    school_address: School Address (optional)
-    address_placeholder: address, city, state, zip
-    gender: Gender (optional)
-    birthday: Birthday (optional)
+    teacher_pitch: Prihlásiť sa do Code.org ako učiteľ
+    teacher_title: Prihlásiť sa ako učiteľ
+    student_pitch: Prihlásiť sa do Code.org ako študent/žiak
+    student_title: Prihlásiť sa ako študent/žiak
+    school_name: Názov školy (voliteľné)
+    school_address: Adresa školy (voliteľné)
+    address_placeholder: adresa, mesto, štát, PSČ
+    gender: Pohlavie (voliteľné)
+    birthday: Narodený (voliteľné)
     age: Vek
-    user_type: Are you a student or teacher?
+    user_type: Ste študent/žiak alebo učiteľ?
     submit: Sign up
-    teacher: Are you a teacher?
-    valid_username: Available!
-    invalid_username: Username must be at least 5 characters
-    taken_username: Username is already taken
-    valid_password: Valid password!
-    invalid_password: Password must be at least 6 characters
-    mismatch_password: The two passwords you entered do not match
-    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/>For users under 13, email addresses are not stored in a form that allows us to contact them."
-    teacher_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>."
-    additional_information: We need some additional information to continue signing you up.
+    teacher: Ste učiteľ?
+    valid_username: Dostupné!
+    invalid_username: Užívateľské meno musí obsahovať aspoň 5 znakov
+    taken_username: Užívateľské meno je už obsadené
+    valid_password: Platné heslo!
+    invalid_password: Heslo musí obsahovať aspoň 6 znakov
+    mismatch_password: Zadané dve heslá sa nezhodujú
+    student_terms: "Záväzne súhlasím s podmienkami služby <a href='http://code.org/tos'>Code.org</a>. Keď mám vek pod 13 rokov, odoslaním tohoto formulára zároveň potvrdzujem že mám oprávnenie od mojich rodičov alebo zákonného zástupcu na používanie služby Code.org. <br/>Pre používateľov mladších ako 13 rokov nie sú e-mailové adresy uložené vo forme, ktorá umožnuje ich kontaktovanie."
+    teacher_terms: "Záväzne súhlasím s podmienkami služby <a href='http://code.org/tos'>Code.org</a>."
+    additional_information: Potrebujeme niektoré ďalšie informácie pre pokračovanie vášho prihlásenia/registrácie.
   signin_form:
-    title: Have an account already? Sign in
-    login: Email or username
+    title: Máte už vytvorený účet? Prihláste sa
+    login: E-mail alebo užívateľské meno
     password: Heslo
-    remember: Remember me
+    remember: Pamätaj si moje prihlásenie
     submit: Sign in
   signin:
-    try_heading: Want to try coding without signing up?
-    try_hoc: Try one Hour of Code first
-    try_20hours: Try our 20 hour Intro to Computer Science
+    try_heading: Chcete skúsiť kódovanie bez prihlásenia?
+    try_hoc: Skúste najprv jednu Hodinu kódovania
+    try_20hours: Skúste náš 20 hodinový Úvod do počítačových vied
   signinsection:
-    welcome: 'Welcome to %{section_name}'
-    name: Choose your name
-    picture: Now find your secret picture
-    words: Now enter your secret words
+    welcome: 'Vitajte v %{section_name}'
+    name: Vyberte vaše meno
+    picture: Teraz nájdite váš tajný obrázok
+    words: Teraz zadajte vaše tajné slová
     login: Sign in
   password:
     reset_form:
       title: Zabudli ste heslo?
-      email: Email address
-      submit: Send me reset password instructions
+      email: E-mailová adresa
+      submit: Pošlite mi pokyny na obnovenie hesla
     change_form:
-      title: Change your password
-      new_password: New password
-      confirm_password: Confirm new password
-      submit: Change my password
+      title: Zmeňte vaše heslo
+      new_password: Nové heslo
+      confirm_password: Potvrdiť nové heslo
+      submit: Zmeniť moje heslo
   welcome_email:
-    subject: Join my class (on Code.org)
+    subject: Pripojte sa k mojej triede (na Code.org)
     body: |
-      Click the link below to sign up for computer science tutorials on Code.org (with me as your "teacher"):
+      Kliknite na preklik nižšie pre prihlásenie na kurzy počítačovej vedy na Code.org (so mnou ako vaším "učiteľom"):
       
       %{link}
       
-      The tutorials are fun, visually engaging, and teach the basic concepts of computer science using a simple, guided, game-like experience. Learn to code from Bill Gates, Mark Zuckerberg, Angry Birds, and Plants vs. Zombies! :-)
+      Kurzy sú zábavné, vizuálne pútavé a naučia základné pojmy počítačovej vedy pomocou jednoduchého, usmerňovaného, hre podobného zážitku. Bill Gates, Mark Zuckerberg, Angry Birds a Plants vs. Zombies, naučte sa s nimi kódovať!  :-)
       
       %{name}
   follower:
-    invite_sent: Invite sent
-    added_teacher: '%{name} added as your teacher'
-    registered: "You've registered for %{section_name}."
+    invite_sent: Pozvanie odoslané
+    added_teacher: '%{name} pridaný ako váš učiteľ'
+    registered: 'Zaregistrovali ste sa na %{section_name}.'
     error:
-      signed_in: Please signout before proceeding
-      username_not_found: 'Username %{username} not found'
-      username_in_use: '%{username} is already taken, please pick another'
-      no_teacher: "Could not find anyone signed in with '%{teacher_email_or_code}'. Please ask them to sign up here and then try adding them again"
-      section_not_found: "Could not find a section with code '%{section_code}'."
-      blank_code: Please enter a section code
+      signed_in: Odhláste sa prosím pred pokračovaním
+      username_not_found: 'Užívateľské meno %{username} nebolo nájdené'
+      username_in_use: '%{username} je už obsadené, prosím vyberte si iné'
+      no_teacher: 'Nepodarilo sa nájsť žiadne prihlásenie pomocou "%{teacher_email_or_code}". Prosím požiadajte ich, aby sa zaregistrovali tu a následne sa pokúste opakovane pridať'
+      section_not_found: 'Nepodarilo sa nájsť sekciu s kódom "%{section_code}".'
+      blank_code: Zadaj kód sekcie
       cant_join_own_section: "Sorry, you can't join your own section."
     mail:
       invite_student:
@@ -193,18 +194,18 @@ sk:
           earned: '7 or more of the students who collected all %{num_trophies} trophies are girls. You have won a bonus prize! (U.S. teachers only)'
           not_earned: 'If at least 7 of your students who earn all %{num_trophies} trophies are girls, your reward is an additional $250 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits. <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits can only be used by teachers in U.S. public schools.'
   crud:
-    new_model: 'New %{model}'
-    show: Show
-    edit: Edit
-    edit_model: 'Edit %{model}'
-    update: Update
-    destroy: Destroy
-    back: Back
-    confirm: Are you sure?
-    created: '%{model} was successfully created.'
-    updated: '%{model} was successfully updated.'
-    destroyed: '%{model} was successfully deleted.'
-    access_denied: 'You do not have access to this %{model}.'
+    new_model: 'Nový %{model}'
+    show: Ukázať
+    edit: Upraviť
+    edit_model: 'Upraviť %{model}'
+    update: Aktualizovať
+    destroy: Zničiť
+    back: Naspäť
+    confirm: Určite?
+    created: '%{model} bol úspešne vytvorený.'
+    updated: '%{model} bol úspešne aktualizovaný.'
+    destroyed: '%{model} bol úspešne odstránený.'
+    access_denied: 'Nemáš prístup k %{model}.'
   nav:
     header:
       finished_hoc: "I've finished my Hour of Code"
@@ -509,3 +510,7 @@ sk:
     completed_too_many_blocks: completed, too many blocks
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
+  studio:
+    courses_working_on: "Courses you're working on"
+    completed_courses: Completed courses
+    all_courses: All courses

@@ -36,6 +36,7 @@ is:
   of: af
   more: MEIRA
   less: MINNA
+  beta: beta
   try_hoc: 'Prófaðu Klukkustund kóðunar, smelltu hér >> '
   try_k8intro: 'Prófaðu Inngang að tölvunarfræði fyrir 13 - 14 ára (11-25 klst.)'
   k8intro: 'Inngangur að tölvunarfræði fyrir 13 - 14 ára (15-25 klst.)'
@@ -336,8 +337,8 @@ is:
     test_videos_help: Prófaðu nýja myndbandaspilarann okkar í skólanum þínum
     try_beta_courses: 'Nýtt! Prófaðu beta námskeiðin okkar fyrir 10 - 11 ára nemendur'
     use_as_teacher: Nota þennan vef sem kennari
-    heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
-    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
+    heading_hoc2014: '<h2>Klukkustund kóðunar fyrir</h2><h1>alla aldurshópa</h1>'
+    heading_elementary: '<h2>20 stunda námskeið fyrir</h2><h1>byrjendur (á öllum aldri)</h1>'
     heading_apps: '<h2>Skemmtun fyrir</h2><h1>alla</h1>'
     heading_legacy: '<h2>Almenna námskeiðið okkar fyrir</h2><h1>alla aldurshópa</h1>'
     your_gallery: Safn
@@ -350,8 +351,8 @@ is:
     teacher: Kennari
   footer:
     help_from_html: Tæknifólk hjá Google, Microsoft, Facebook og Twitter aðstoðuðu við gerð þessa kennsluefnis.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
-    powered_by_aws: Powered by Amazon Web Services
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Öll réttindi áskilin.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Öll réttindi áskilin.'
+    powered_by_aws: Knúið af Amazon Web Services
     feedback: Gefðu endurgjöf
     translate: Hjálpaðu okkur að þýða yfir á þitt tungumál
     support: Aðstoð
@@ -508,3 +509,7 @@ is:
     completed_too_many_blocks: lokið, of margir kubbar
     completed_perfect: lokið, fullkomið
     furthest_level_attempted: hæsti unninn áfangi
+  studio:
+    courses_working_on: Námskeið sem þú ert að fást við
+    completed_courses: Námskeið sem þú hefur lokið
+    all_courses: Öll námskeið

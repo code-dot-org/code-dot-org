@@ -41,8 +41,8 @@ nl:
           "Bee: Loops": 'Bij: lussen'
           "Studio: Create a Story": 'Speel Lab: Maak een Verhaal'
           "Artist: Loops": 'Kustenaar: lussen'
-          description_audience: Ages 4+ (pre-readers)
-          description_short: Course 1 is designed for early readers.
+          description_audience: Leeftijden 4 + (pre lezers)
+          description_short: Cursus 1 is bedoeld voor jonge lezers.
         course2:
           The Maze: Het Doolhof
           Suzi: Suzi
@@ -80,8 +80,8 @@ nl:
           "Artist: Sequence2": 'Kunstenaar: volgorde2'
           "Maze: Sequence2": 'Doolhof: Volgorde2'
           "Artist: Nested Loops": 'Kunstenaar: geneste lussen'
-          description_audience: 'Ages  6+ (reading required)'
-          description_short: Course 2 is designed for students who can read.
+          description_audience: Leeftijden 6 + (kunnen lezen vereist)
+          description_short: Cursus 2 is bedoeld voor leerlingen die kunnen lezen.
         course3:
           The Maze: Het Doolhof
           "Studio: Create a Story": 'Speel Lab: Maak een Verhaal'
@@ -131,8 +131,8 @@ nl:
           "Bee: Debugging2": 'Bij: Foutopsporing2'
           "Artist: Patterns": 'Kunstenaar: Patronen'
           Songwriting: Songwriting
-          description_audience: Ages 8+ (after Course 2)
-          description_short: Course 3 is a follow-up to Course 2.
+          description_audience: Leeftijden 8 + (na cursus 2)
+          description_short: Cursus 3 is een vervolg op cursus 2.
         msm:
           title: Middelbare School Wiskunde
           description: Particuliere werk in uitvoering voor Middelbare School Wiskunde.
@@ -201,12 +201,12 @@ nl:
           Maze: Doolhof
           title: Een Uur Code
           description: Probeer de grondbeginselen van de informatica met figuren uit angry Birds, Plant vs. Zombies en Scrat van Ice Age!
-          description_short: Try the basics of computer science with many fun characters!
+          description_short: Probeer de grondbeginselen van de informatica met veel leuke figuren!
         frozen:
           title: Code met Anna en Elsa
           description: laten we code gebruiken om Anna en Elsa te helpen bij het ontdekken van de magie en schoonheid van ijs. Je zal leren sneeuwvlokken en patronen te maken terwijl je schaatst en een een mooi winterlandschap maken dat je kan delen met je vrienden!
           Artist: Kunstenaar
-          description_short: Vervoeg Anna en Elsa op hun speurtocht naar de magie en schoonheid van ijs door middel van programma-code.
+          description_short: Ga met Anna en Elsa mee op hun speurtocht naar de magie en schoonheid van ijs door middel van programma-code.
         course4:
           description_short: Leerlingen die les 4 starten moeten eerst lessen 2 en 3 doorlopen hebben.
           description: Les 4 is ontwikkeld voor leerlingen die lessen 2 en 3 hebben gevolgd. Leerlingen zullen dieper ingaan op de programmeeronderwerpen die zijn geïntroduceerd in de vorige cursussen om flexibelere oplossingen voor complexere problemen te vinden. Aan het eind van deze cursus maken studenten interactieve verhalen en spellen, die ze met iedereen kunnen delen.
@@ -235,7 +235,7 @@ nl:
           Farmer Binary: Boer Binary
           Maze and Bee: Maze en Bee
           Artist Binary: Kunstenaar Binary
-          description_audience: Ages 10+ (after Course 3)
+          description_audience: Leeftijden 10 + (na cursus 3)
         Course4pre:
           description_short: Een korte samenvatting van concepten voor leerlingen die cursus 2 en 3 niet hebben afgewerkt.
           Course 4 Prerequisite: Vereisten voor cursus 4
@@ -281,3 +281,13 @@ nl:
           description: Een selectie van cursus 4 puzzels voor gebruiksvriendelijkheidstesten.
           Variables: Variabelen
           For Loops: For-lussen
+        potus:
+          title: speciale
+          description_short: speciale
+          description: speciale
+          Special: Speciale
+        special:
+          title: speciale
+          description_short: speciale
+          description: speciale
+          Special: Speciale

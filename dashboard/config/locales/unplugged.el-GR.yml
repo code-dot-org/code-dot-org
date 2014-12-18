@@ -3,72 +3,77 @@
     unplugged:
       Unplug1:
         title: Εισαγωγή στην Επιστήμη των Υπολογιστών
-        desc: This lesson will introduce the concept of Computer Science and explain
-          what a Computer Scientist does.  It will also give students an opportunity
-          to assume the role of a computer scientist.  By the end of the activity,
-          each student will have a take-home reminder of what he or she learned.  You
-          may be tempted to skip teaching young children the vocabulary words that
-          are associated with the lessons that follow, but presenting them in a fun
-          and playful light now is far more productive than waiting for more advanced
-          opportunities.
+        desc: Αυτό το μάθημα είναι μια εισαγωγή στην έννοια της Επιστήμης των Υπολογιστών
+          και εξηγεί τι κάνει ο σχετικός επιστήμονας. Επίσης, δίνει στους μαθητές
+          την ευκαιρία να παίξουν τον αντίστοιχο ρόλο. Μετά το τέλος της δραστηριότητας,
+          κάθε μαθητής θα πάρει σπίτι ένα αναμνηστικό του τι έμαθε. Ίσως μπείτε στον
+          πειρασμό να αποφύγετε να διδάξετε στα μικρά παιδιά το λεξιλόγιο που έχει
+          σχέση με τα επόμενα μαθήματα, αλλά αν το παρουσιάσετε με ευχάριστο και παιγνιώδη
+          τρόπο, αυτό θα είναι πολύ πιο παραγωγικό από το να περιμένετε πιο προηγμένες
+          ευκαιρίες.
         pdfs:
         - unplug1
         video: Unplug1
       Unplug2:
         title: Αλγοριθμική Σκέψη
-        desc: With nothing but paper and markers, students will learn the four steps
-          of computational thinking. After a brief introduction, students should be
-          split into groups where they will have to create directions for other students
-          to draw a specific monster (from a catalog of pre-selected monsters). The
-          entire task must be decomposed, then teams will analyze all monsters in
-          the catalog for patterns, abstract different details from the monsters,
-          then use that information to create an algorithm (directions) for another
-          team to draw a certain monster. Teams will then switch algorithms with another
-          group and draw the monster based on what that algorithm indicates. Is the
-          drawing what the original team intended?
+        desc: Με μόνο εφόδιο χαρτί και μολύβι, οι μαθητές θα μάθουν τα τέσσερα βήματα
+          της υπολογιστικής σκέψης. Μετά από μια σύντομη εισαγωγή, οι μαθητές θα πρέπει
+          να χωριστούν σε ομάδες στις οποίες θα δημιουργήσουν οδηγίες για τους άλλους
+          μαθητές έτσι ώστε να σχεδιάσουν ένα συγκεκριμένο τερατάκι (από μια λίστα
+          με προεπιλεγμένα τερατάκια). Ολόκληρη η διαδικασία πρέπει να χωριστεί σε
+          τμήματα και μετά οι ομάδες θα αναλύσουν τα μοτίβα για όλα τα τερατάκια της
+          λίστας, θα βρουν τις διαφορετικές λεπτομέρειες, και μετά με τις πληροφορίες
+          αυτές θα δημιουργήσουν έναν αλγόριθμο (οδηγίες) ώστε μια άλλη ομάδα να σχεδιάσει
+          ένα συγκεκριμένο τερατάκι. Μετά οι ομάδες θα ανταλλάξουν αλγορίθμους μεταξύ
+          τους και θα σχεδιάσουν το τερατάκι βάσει του νέου αλγορίθμου. Είναι το σχέδιο
+          αυτό που είχε στο νου της η αρχική ομάδα;
         pdfs:
         - unplug2
         video: Unplug2
       Unplug3:
         title: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
-        desc: By programming one another to draw pictures, students will begin to
-          understand what programming is really about. The class will begin by students
-          instructing each other to color squares in on graph paper in an effort to
-          reproduce an existing picture.  If there's time, the lesson can conclude
-          with images that the students create themselves.
+        desc: Προγραμματίζοντας οι μαθητές ο ένας τον άλλον για να σχεδιάσουν εικόνες,
+          θα αρχίσουν κα καταλαβαίνουν τι σημαίνει προγραμματισμός. Το μάθημα θα ξεκινήσει
+          με τους μαθητές να δίνουν οδηγίες ο ένας στον άλλον για να χρωματίσουν τετράγωνα
+          σε χαρτί μιλιμετρέ προκειμένου να αναπαραχθεί μια υπάρχουσα εικόνα. Αν υπάρχει
+          χρόνος, το μάθημα θα ολοκληρωθεί με εικόνες που θα δημιουργήσουν οι ίδιοι
+          οι μαθητές.
         pdfs:
         - unplug3
         video: Unplug3
       Unplug4:
         title: Αλγόριθμοι
-        desc: This lesson covers algorithms.  Using tangram shapes and graph paper,
-          the first exercise will show how important it is to make each instruction
-          as clear and unambiguous as possible.  Afterward, the class will explore
-          how many ways you can fold paper into a rectangle, noting how some methods
-          can take more or fewer folds than others.
+        desc: Αυτό το μάθημα καλύπτει τους αλγορίθμους. Με σχήματα τάνγκραμ και χαρτί
+          με τετραγωνάκια, η πρώτη άσκηση θα δείξει πόσο σημαντικό είναι να είναι
+          οι οδηγίες όσο γίνεται πιο ξεκάθαρες και σαφείς. Μετά η τάξη θα εξερευνήσει
+          με πόσους τρόπους μπορείς να διπλώσεις το χαρτί σε ορθογώνιο, παρατηρώντας
+          ότι μερικές μέθοδοι χρειάζονται λιγότερα διπλώματα από άλλες.
         pdfs:
         - unplug4
         video: Unplug4
       Unplug5:
         title: Συναρτήσεις
-        desc: In this lesson, students will make a suncatcher out of string, beads,
-          and a special charm. The students will follow a series of repetitive steps,
-          then be asked to identify certain sets of "skills" that are duplicated several
-          times. Once those skills are defined, they will be called from a main program
-          and the whole beautiful process of creation will be recorded on a single
-          sheet of paper. The final program will be geared toward the entire class,
-          whatever their type of string, beads, and charms. To effectively allow for
-          this, students will need to "abstract out" the details of their specific
-          materials and create vague terms for an individual's supplies.  This use
-          of generic placeholders is a wonderful introduction to variables.
+        desc: Στο μάθημα αυτό, οι μαθητές θα μάθουν να φτιάχνουν ηλιοπαγίδα (κατασκευή
+          που αιχμαλωτίζει το φως του ήλιου) με σχοινί, χάντρες και ένα ειδικό φυλαχτό.
+          Οι μαθητές θα ακολουθήσουν μια σειρά από επαναλαμβανόμενα βήματα και θα
+          τους ζητηθεί να εντοπίσουν ορισμένες ομάδες από "ικανότητες" που επαναλαμβάνονται
+          συχνά. Μόλις εντοπιστούν οι ικανότητες αυτές, θα τις καλέσουμε από ένα κύριο
+          πρόγραμμα και όλα αυτή η όμορφη διαδικασία δημιουργίας θα αποτυπωθεί σε
+          ένα και μόνο φύλλο χαρτιού. Το τελικό πρόγραμμα θα απευθύνεται σε ολόκληρη
+          την τάξη, ανεξάρτητα από το σχοινί, τις χάντρες και το φυλακτό τους. Για
+          να γίνει αυτό, οι μαθητές θα πρέπει να βγάλουν τις λεπτομέρειες των συγκεκριμένων
+          υλικών τους και να φτιάξουν γενικούς ασαφείς όρους για τις προμήθειες κάθε
+          ατόμου. Αυτή η χρήση γενικών "συμβόλων κράτησης θέσης" αποτελεί μια εξαιρετική
+          εισαγωγή στις μεταβλητές.
         pdfs:
         - unplug5
         video: Unplug5
       Unplug6:
         title: Συνθήκες
-        desc: This is a class game.  After introducing the idea of conditionals, if-statements,
-          and loops, the class can practice together using a pre-written program,
-          a deck of cards, and luck of the draw.
+        desc: Αυτό είναι παιχνίδι για την τάξη. Αφού εισαχθεί η ιδέα των συνθηκών,
+          τον προτέσεων if και των βρόχων, η τάξη μπορεί να εξασκηθεί ομαδικά χρησιμοποιώντας
+          ένα πρόγραμμα γραμμένο από πριν, ένα σετ τράπουλες και τραβώντας τυχαίο
+          χαρτί.
         pdfs:
         - unplug6
         video: Unplug6
@@ -85,14 +90,9 @@
         video: Unplug7
       Unplug8:
         title: Αφαίρεση
-        desc: Με αυτό το μάθημα θα εισαχθεί η έννοια της επιστήμης των υπολογιστών
-          και θα εξηγήσει τι κάνει ένας επιστήμονας πληροφορικής.  Αυτό επίσης θα
-          δώσει στους μαθητές την ευκαιρία να αναλάβουν το ρόλο ενός επιστήμονα πληροφορικής.  Μέχρι
-          το τέλος της δραστηριότητας, κάθε μαθητής θα έχει μια υπενθύμιση για ό,τι
-          αυτός ή αυτή έχει μάθει. Μπορεί να δελεαστείτε να παραλείψετε τη διδασκαλία
-          σε μικρά παιδιά λόγω του πολύπλοκου λεξιλογίου που σχετίζεται με τα μαθήματα
-          που ακολουθούν, αλλά η παρουσίασή τους με διασκεδαστικό και παιχνιδιάρικο
-          τρόπο τώρα, είναι πολύ πιο παραγωγική από πιο προχωρημένες δυνατότητες.
+        desc: Αυτή η δραστηριότητα συνδυάζει την καθημερινή ρουτίνα των μαθητών σας
+          και ένα παιχνίδι σκάψης τύπου Mad-lib για να μάθει η τάξη σας πόσο αποτελεσματική
+          είναι η αφηρημένη σκέψη.
         pdfs:
         - unplug8
         video: Unplug8
@@ -123,171 +123,188 @@
         - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: Happy Maps
-        desc: Students create simple algorithms (sets of instructions) to move a character
-          through a maze using a single command.
+        title: Χαρούμενοι Χάρτες
+        desc: Οι μαθητές δημιουργούν απλούς αλγορίθμους (σύνολα εντολών) για να μετακινήσουν
+          έναν ήρωα σε ένα λαβύρινθο χρησιμοποιώντας μια απλή εντολή.
         video: C1_happy_maps_unplugged
       MoveIt:
-        title: Move it, Move it
-        desc: Students create simple algorithms (sets of instructions) to move a character
-          through a maze using a single command.
+        title: Κούνισέ το, Κούνισέ το
+        desc: Οι μαθητές δημιουργούν απλούς αλγορίθμους (σύνολα εντολών) για να μετακινήσουν
+          έναν ήρωα σε ένα λαβύρινθο χρησιμοποιώντας μια απλή εντολή.
         video: C1_moveitmoveit_unplugged
       PlantASeed:
-        title: 'Real-life Algorithms: Plant a Seed'
-        desc: This lesson calls out ways we use algorithms in our daily lives, using
-          the act of planting a seed as an example. It also focuses on the bigger
-          picture of computer science and how algorithms play an essential part.
+        title: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
+        desc: Αυτό το μάθημα αναφέρει τους τρόπους που χρησιμοποιούνται οι αλγόριθμοι
+          στην καθημερινή μας ζωή, παίρνοντας ως παράδειγμα το φύτεμα ενός σπόρου.
+          Επίσης εστιάζει στη μεγαλύτερη εικόνα της επιστήμης των υπολογιστών και
+          στον σημαντικό ρόλο που παίζουν οι αλγόριθμοι.
         video: C1_planting_seed
       BuildingAFoundation:
-        title: Building a Foundation
-        desc: Students build a structure using only provided supplies. Structures
-          must complete a task (reach a certain height or bear a certain weight),
-          and students discuss the idea of being persistent when things get complicated.
+        title: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
+        desc: Οι μαθητές χτίζουν μια κατασκευή μόνο με τις παρεχόμενες προμήθειες.
+          Οι κατασκευές πρέπει να επιτύχουν ένα σκοπό (να φτάσουν ένα συγκεκριμένο
+          ύψος ή να αντέξουν ένα συγκεκριμένο βάρος) και οι μαθητές συζητούν την ιδέα
+          του να επιμένεις όταν τα πράγματα περιπλέκονται.
         video: C1_building_foundation
       GettingLoopy:
-        title: Getting Loopy
-        desc: This lesson introduces the programming concept of loops (repeated instructions)
-          through a dance activity. Students will learn simple choreography, then
-          be instructed to repeat it.
+        title: Παίρνοντας Επαναληπτικά
+        desc: Αυτό το μάθημα εισάγει την προγραμματιστιμή έννοια των βρόχων (επαναλαμβανόμενων
+          οδηγιών) μέσω μιας δραστηριότητας χορού. Οι μαθητές θα μάθουν μια απλή χορογραφία
+          και θα τους ζητηθεί να την επαναλάβουν.
         video: C1_getting_loopy
       RelayProgramming:
-        title: Relay programming
-        desc: Students run a relay race, where they dash across the yard to write
-          an algorithm based on a "Graph Paper Programming" image. They can only write
-          one instruction at a time and if there's an error somewhere, they have to
-          erase everything back to that point.
+        title: Προγραμματισμός με αναμετάδοση
+        desc: Οι μαθητές τρέχουν μια σκυταλοδρομία από τη μία έως την άλλη άκρη της
+          αυλής για να γράψουν έναν αλγόριθμο που θα βασίζεται σε μια εικόνα "προγραμμαιτισμού
+          σε μιλιμετρέ χαρτί". Μπορούν να γράψουν μία μόνο οδηγία τη φορά και αν υπάρχει
+          κάπου λάθος θα πρέπει να σβήσουν τα πάντα μέχρι αυτό το σημείο.
         video: C2_relay_programming
       Conditionals:
         title: Έλεγχοι
-        desc: To learn about conditional statements, students play a card game and
-          create rules like "If I draw a red card, I get a point" and "If I draw a
-          black card, you get a point."
+        desc: Για να μάθουν τις προτάσεις υπό συνθήκη, οι μαθητές παίζουν ένα παιχνίδι
+          με τράπουλα και δημιουργούν προτάσεις του τύπου "Αν τραβήξω κόκκινο χρώμα,
+          παίρνω έναν πόντο" και "αν τραβήξω μαύρο χρώμα, παίρνεις εσύ έναν πόντο".
         video: C2_conditionals_with_cards
       BigEvent:
-        title: The Big Event
-        desc: Students are introduced to the programming concept of "events," which
-          are actions that a computer constantly monitors for. The teacher will press
-          buttons on a paper remote and students will react depending on which button
-          is pressed.
+        title: Το Μεγάλο Γεγονός
+        desc: Οι μαθητές εισάγονται στην προγραμματιστική έννοια των "συμβάντων",
+          δηλαδή των ενεργειών τις οποίες διαρκώς παρακολουθεί ο υπολογιστής. Ο δάσκαλος
+          θα πατά κουμπιά σε ένα χάρτινο τηλεκοντρόλ και οι μαθητές θα αντιδρούν ανάλογα
+          με το ποιο κουμπί πατήθηκε.
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
-        title: Going Places Safely
-        desc: The Internet is a powerful, but sometimes dangerous place. Teachers
-          introduce how to stay safe while navigating the Internet.
+        title: Πηγαίνοντας σε Μέρη με Ασφάλεια
+        desc: Το διαδίκτυο (internet) είναι ένα δυνατό, αλλά ορισμένες φορές επικίνδυνο,
+          περιβάλλον. Οι δάσκαλοι εισάγουν την έννοια της ασφάλειας κατά τη διάρκεια
+          της περιήγησης στο διαδίκτυο.
         video: C1_going_places_safely
       GraphPaperProgramming:
         title: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
-        desc: Students write an algorithm (a set of instructions) using a set of predefined
-          commands to direct their classmates to reproduce a drawing.
+        desc: Οι μαθητές γράφουν έναν αλγόριθμο (ένα σύνολο οδηγιών) χρησιμοποιώντας
+          ένα σύνολο προκαθορισμένων εντολών για να κατευθύνουν τους συμμαθητές τους
+          να αναπαραγάγουν μια ζωγραφιά.
         video: C2_graph_paper
       PaperPlanes:
-        title: 'Real-life Algorithms: Paper Planes'
-        desc: This lesson calls out ways we use algorithms in our daily lives, specifically
-          making paper airplanes. This lesson also focuses on the bigger picture of
-          computer science and how algorithms play an essential part.
+        title: 'Αλγόριθμοι Πραγματικής ζωής: Χάρτινα Αεροπλανάκια'
+        desc: Αυτό το μάθημα αναφέρει πώς χρησιμοποιούμε αλγορίθμους στην καθημερινή
+          μας ζωή και συγκεκριμένα όταν φτιάχνουμε σαΐτες. Αυτό το μάθημα εστιάζει
+          στη μεγαλύτερη εικόνα της επιστήμης των υπολογιστών και στον σημαντικό ρόλο
+          που παίζουν οι αλγόριθμοι.
         video: C2_paper_airplanes
       BinaryBracelets:
-        title: Binary Bracelets
-        desc: Students create bracelets as a binary representations of the first letter
-          of their name. Students learn that data can be represented and stored in
-          more than one way.
+        title: Δυαδικά Βραχιόλια
+        desc: Οι μαθητές φτιάχνουν βραχιόλια ως δυαδικές αναπαραστάσεις του πρώτου
+          γράμματος του ονόματός τους. Οι μαθητές μαθαίνουν ότι τα δεδομένα μπορούν
+          να αναπαρασταθούν και να αποθηκευτούν με περισσότερους από έναν τρόπους.
         video: C2_binary_bracelets
       DigitalFootprint:
-        title: Your Digital Footprint
-        desc: Teachers introduce to students the idea that putting information about
-          themselves online creates a digital footprint or "trail" that has consequences.
+        title: Το Ψηφιακό σου Αποτύπωμα
+        desc: Οι δάσκαλοι εισάγουν τους μαθητές στην ιδέα ότι αν βάζουν στο διαδίκτυο
+          πληροφορίες για τον εαυτό τους δημιουργείται ένα ψηφιακό αποτύπωμα ή μονοπάτι
+          που έχει και τις συνέπειές του.
         video: C2_digital_footprint
       ComputationalThinking:
         title: Αλγοριθμική Σκέψη
-        desc: Students use the steps of computational thinking (decompose, pattern
-          match, abstract, algorithm) to figure out how to play a game that comes
-          with no instructions.
+        desc: Οι μαθητές χρησιμοποιούν τα βήματα της υπολογιστικής σκέψης (αποσύνθεση,
+          εντοπισμός μοτίβων, αφαίρεση, αλγόριθμος) για να δουν πώς παίζεται ένα παιχνίδι
+          που δεν συνοδεύεται από οδηγίες.
         video: C3_computational_thinking
       FunctionalSuncatchers:
-        title: Functional Suncatchers
-        desc: Students create an algorithm with variables and functions (pieces of
-          code that you want to use over and over again) to create suncatchers using
-          string and beads.
+        title: Λειτουργικές Ηλιοκυνηγοί
+        desc: Οι μαθητές δημιουργούν ένα αλγόριθμο με μεταβλητές και συναρτήσεις (τμήματα
+          κώδικα που μπορούμε να ξαναχρησιμοποιήσουμε) για να φτιάξουν ηλιοπαγίδες
+          με σχοινί και χάντρες.
         video: C3_functional_suncatchers
       SongwritingParameters:
-        title: Songwriting with Parameters
-        desc: Students use the concept of the chorus in a song to learn about passing
-          parameters (which customize a function without having to rewrite the entire
-          function).
+        title: Γράφουμε τραγούδια με παραμέτρους
+        desc: Οι μαθητές χρησιμοποιούν την έννοια του ρεφρέν ενός τραγουδιού για να
+          μάθουν πώς περνάμε τις παραμέτρους (οι οποίες προσαρμόζουν μια συνάρτηση
+          χωρίς να χρειάζεται να την ξαναγράψουμε ολόκληρη).
         video: C3_songwriting_with_parameters
       DiceRace:
-        title: 'Real life algorithms: Dice Race'
-        desc: This lesson calls out ways we use algorithms in our daily lives. As
-          part of that, students will identify and write down the algorithm for a
-          dice race game.
+        title: 'Αλγόριθμοι στην πραγματικότητα: Αγώνας ζαριών'
+        desc: Αυτό το μήθμα εξηγεί πώς χρησιμοποιούμε αλγορίθμους στην καθημερινή
+          μας ζωή. Σαν παράδειγμα, οι μαθητές εντοπίζουν και καταγράφουν τον αλγόριθμο
+          ενός αγώνα ζαριών.
         video: C3_dice_race
       Internet:
         title: Διαδίκτυο
-        desc: Students send messages representing various Internet transmission methods
-          using pieces of paper.
+        desc: Οι μαθητές στέλνουν μηνύματα που αναπαριστούν διάφορες μεθόδους μετάδοσης
+          στο διαδίκτυο χρησιμοποιώντας κομμάτια από χαρτί.
         video: C3_internet
       Crowdsourcing:
         title: Crowdsourcing
-        desc: Student use crowdsourcing, a problem-solving technique common in computer
-          science, to complete a task together as a classroom more efficiently than
-          if a student attempted it alone.
+        desc: Οι μαθητές χρησιμοποιούν τη μέθοδο crowdsourcing, μια τεχνική επίλυσης
+          προβλημάτων που συνηθίζεται στην επιστήμη των υπολογιστών, όπου μια εργασία
+          ολοκληρώνεται ομαδικά καλύτερα από το αν κάποιος την προσπαθεί μόνος του.
         video: C3_crowdsourcing
       DigitalCitizenship:
-        title: Digital Citizenship
-        desc: Students explore the difference between private information and personal
-          information, distinguishing what is safe and unsafe to share online.
+        title: Ψηφιακή υπηκοότητα
+        desc: Οι μαθητές εξερευνούν τη διαφορά ανάμεσα στις εμπιστευτικές και τις
+          προσωπικές πληροφορίες και μαθαίνουν τι είναι ή δεν είναι ασφαλές να μοιράζονται
+          online.
       TangramAlgorithms:
-        title: Tangram Algorithms
-        desc: This lesson shows us something important about algorithms. If you keep
-          an algorithm simple there are lots of ways to use it. If you want to make
-          sure everyone ends up with the same thing, then your algorithm needs more
-          detail.
+        title: Αλγόριθμοι τάνγκραμ
+        desc: Αυτό το μάθημα μας δείχνει κάτι σημαντικό για τους λαγορίθμους. Αν διατηρείτε
+          τον αλγόριθμο απλό, υπάρχουν πολλοί τρόποι να τον χρησιμοποιήσετε. Αν θέλετε
+          καθένας να καταλήξει στο ίδιο αποτέλεσμα, πρέπει ο αλγόριθμός σας να είναι
+          πιο λεπτομερής.
+        video: C4_unplugged_algorithms
       EnvelopeVariables:
-        title: Envelope Variables
-        desc: Variables allow for a lot of freedom in computer science.  This lesson
-          helps to explain what variables are and how we can use them in many different
-          ways. Use this activity before (or in conjunction with) the lesson on abstraction
-          to really hit the idea home.
+        title: Μεταβλητές
+        desc: Οι μεταβλητές επιτρέπουν μεγάλη ελευθερία στην επιστήμη των υπολογιστών.
+          Αυτό το μάθημα βοηθά να εξηγηθεί τι είναι οι μεταβλητές και πώς μπορούμε
+          να τις χρησιμοποιήσουμε με πολλούς και διαφορετικούς τρόπους. Χρησιμοποιήστε
+          αυτή τη δραστηριότητα πριν (ή σε συνδυασμό με) το μάθημα για την αφαιρετική
+          σκέψη ώστε να υπάρξει πλήρης κατανόηση.
+        video: C4_unplugged_variables
       MadGlibs:
         title: Mad Glibs
-        desc: Abstraction is one of the most important skills for a computer scientist
-          to understand.  This activity will have your students analyzing stories
-          for differences so that they can abstract them away. Those abstracted stories
-          become templates for fun and crazy new ones.
+        desc: Η αφαιρετική σκέψη είναι μια από τις σημαντικότερες ικανότητες για κάποιον
+          που ασχολείται με την επιστήμη των υπολογιστών. Αυτή η δραστηριότητα επιτρέπει
+          στους μαθητές σας να αναλύουν ιστορίες και να βρίσκουν τις διαφορές ώστε
+          να τις αφαιρέσουν μέσω αφαιρετικής σκέψης. Στη συνέχεια οι ιστορίες γίνονται
+          πρότυπα για νέες τρελές και διασκεδαστικές ιστορίες.
+        video: C4_unplugged_madlibs
       ForLoopFun:
         title: Διασκέδαση με το Βρόχο Για
         desc: Γνωρίζουμε ότι οι βρόχοι μας επιτρέπουν να κάνουμε πράγματα ξανά και
           ξανά, αλλά τώρα θα μάθουμε πως να χρησιμοποιούμε τους βρόχουμε με ενσωματωμένη
           επιπλέον δομή.
+        video: C4_unplugged_forloops
       SongwritingWithParameters:
         title: Σύνθεση τραγουδιού Με Παραμέτρους
-        desc: 'One of the most magnificent structures in the computer science world
-          is the function.  Functions (sometimes called procedures) are mini programs
-          that you can use over and over inside of your bigger program. This lesson
-          will help students intuitively understand why combining chunks of code into
-          functions is such a helpful practice.  '
+        desc: 'Μια από τις πιο μεγαλειώδεις δομές στον κόσμο της επιστήμης υπολογιστών
+          είναι η συνάρτηση. Οι συναρτήσεις (που λέγονται και διαδικασίες) είναι μίνι
+          προγράμματα τα οποία μπορείτε να χρησιμοποιείτε ξανά και ξανά μέσα στο μεγαλύτερο
+          πρόγραμμά σας. Αυτό το μάθημα θα δείξει στους μαθητές να κατανοήσουν διαισθητικά
+          γιατί ο συνδυασμός κομματιών κώδικα σε συναρτήσεις είναι μια τόσο χρήσιμη
+          πρακτική.  '
+        video: C4_unplugged_parameters
       BinaryImages:
         title: Δυαδικές Εικόνες
-        desc: Though many people think of binary as strictly zeros and ones, our previous
-          courses taught students that information can be represented in a variety
-          of binary options.  This lesson takes that concept one step further as it
-          illustrates how a computer can store even more complex information (such
-          as images and colors) in binary, as well.
+        desc: Αν και πολλοί πιστεύουν ότι δυαδικό σημαίνει μια σειρά μηδενικών και
+          μονάδων, τα προηγούμενα μαθήματά μας έδειξαν στους μαθητές ότι οι πληροφορίες
+          μπορούν να αναπαρίστανται με μια ποικιλία δυαδικών επιλογών. Αυτό το μάθημα
+          επεκτείνει την έννοια αυτή ακόμα περισσότερο, δείχνοντας πώς ο υπολογιστής
+          μπορεί να αποθηκεύει σε δυαδική μορφή ακόμα πιο πολύπλοκες πληροφορίες (όπως
+          εικόνες και χρώματα).
+        video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
-        title: Video Games and Coordinate Planes
-        desc: Video Games and Coordinate Planes lesson description
+        title: Βιντεοπαιχνίδια και επίπεδα συντονισμού
+        desc: Βιντεοπαιχνίδια και επίπεδα συντονισμού - περιγραφή μαθήματος
       Contracts:
-        title: Contracts
-        desc: Contracts unplugged lesson description
+        title: Συμβόλαια
+        desc: Contracts unplugged - περιγραφή μαθήματος
       DesignRecipe:
-        title: The Design Recipe
-        desc: Design Recipe lesson description
+        title: Η Συνταγή του Σχεδιασμού
+        desc: Συνταγή σχεδιασμού - περιγραφή μαθήματος
       Booleans:
-        title: Booleans
+        title: Δυαδικοί
         desc: Περιγραφή μαθήματος Δυαδικών Τιμών
       ConditionalsPiecewiseFunctions:
-        title: Conditionals and Piecewise Functions
-        desc: Conditionals and Piecewise Functions lesson description
+        title: Συνθήκες και Συναρτήσεις Piecewise
+        desc: Συνθήκες και συναρτήσεις - περιγραφή μαθήματος
       CollisionDetection:
         title: Ανίχνευση Σύγκρουσης
         desc: Περιγραφή μαθήματος Ανίχνευσης Σύγκρουσης

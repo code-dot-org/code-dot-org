@@ -295,15 +295,15 @@ ko:
         studio_c3_game_5: 펭귄이 문어에 닿으면 점수가 올라가게 만든 후 방향키를 눌러 움직여 보세요.
         studio_c3_game_6: 화면의 배경과 펭귄의 이동 스피드를 바꾼 후 방향키를 눌러 움직여 보세요.
         studio_c3_game_7: 자신만의 게임을 만들어보세요. 만들기가 완료되면 마치기를 눌러 친구들의 스마트폰에서 해볼 수 있도록 할 수 있습니다.
-        studio_playlab_1: 'Penguin wants to say "hello" - can you help him?'
-        studio_playlab_2: 'Cave Boy (actor 1) and Cave Girl (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
-        studio_playlab_3: Can you help Tennis Girl get to the flag?
-        studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor 2) and play a sound when he gets there?
-        studio_playlab_5: 'Can you help the Spacebot say "greetings earthlings" when it is clicked? Don’t forget to click it after you click Run'
-        studio_playlab_6: Can you help the Witch move around using the up/down/right/left arrow keys to get to all the magical fireballs?
-        studio_playlab_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help the wizard move right and left repeatedly?'
-        studio_playlab_8: Can you add a block to score a point and a block to play a sound when the unicorn runs into the wizard, and then move him with the arrows until you score?
-        studio_playlab_9: Set the background for this alien invasion and help the Spacebot get to the alien faster by changing its speed. Then move him with the arrow keys to get to the Spacebot and alert everyone else
+        studio_playlab_1: '펭귄이 "hello"라고 말하고 싶어하네요. 여러분이 도와주겠어요?'
+        studio_playlab_2: '원시 소년(캐릭터1) 와 원시 소녀(캐릭터2)가 서로 "hello"라고 인사하도록 할 수 있을까요? "말하기" 블럭을 이용해서 도와주세요.'
+        studio_playlab_3: 테니스 소녀가 깃발까지 갈 수 있게 도와주겠어요?
+        studio_playlab_4: 테니스 소년(캐릭터1)이 테니스 소녀(캐릭터2)에게 가서 닿으면 어떤 소리가 나도록 도와주세요.
+        studio_playlab_5: '우주 소년을 클릭하면 "greetings earhlings"라고 말할 수 있도록 해주실 수 있으세요? 프로그램을 실행시킨 후에 클릭하는 것을 잊지 마세요.'
+        studio_playlab_6: 마녀 캐릭터를 위/아래/왼쪽/오른쪽의 방향키를 이용해서 이리저리 움직이면서 마술 파이어볼들로 이동하도록 도와주실 수 있으세요?
+        studio_playlab_7: '"무한 반복(repeat forever)") 블럭은 어떤 코드들을 계속해서 무한히 반복해서 실행하도록 할 수 있습니다. 마법사 캐릭터가 왼쪽 오른쪽으로 계속 반복해서 움직일 수 있도록 블럭들을 붙여주세요.'
+        studio_playlab_8: 방향키를 이용해서 유니콘을 움직이고, 유니콘이 마법사에게 닿으면 점수가 올라가고 소리가 나도록 도와주세요.
+        studio_playlab_9: 외계인 침략 배경으로 바꾼 다음에, 우주로봇의 이동 속도를 더 빠르게 변화시켜서 외계인 캐릭터로 이동할 수 있도록 도와주세요. 그리고, 우주로봇이 외계인 캐릭터에 닿으면 모두에게 경고를 할 수 있게 해주세요.
         studio_playlab_10: 자신만의 게임을 만들어보세요. 만들기가 완료되면 마치기를 눌러 친구들의 스마트폰에서 해볼 수 있도록 할 수 있습니다.
         studio_full_sandbox: 자신만의 게임을 만들어보세요. 만들기가 완료되면 마치기를 눌러 친구들의 스마트폰에서 해볼 수 있도록 할 수 있습니다.
         studio_k1_1: '강아지가 "hello world"라고 말하도록 할 수 있을까요?'
@@ -378,26 +378,25 @@ ko:
       scrat 20:
         instructions: 좀 더 복잡한 미로를 해결할 수 있도록 3개의 블럭만 더 더해줄 수 있나요? 그렇게 해준다면, 길이가 얼마나 길던지 상관없이 꺽인 길에서 회전할 수 있게 됩니다. 빨리 빨리요! 얼음이 녹고 있어요!
       Standalone_Artist_1:
-        instructions: "Welcome to Artist! First off, let's try to make a simple square using the turn right block and move forward block. Each side should be 100 pixels long."
+        instructions: 예술가 퍼즐에 오신 것을 환영합니다. 처음으로 오른쪽으로 이동 블럭과 앞으로 이동 블럭을 이용해서 간단한 사각형을 만들어 보겠습니다. 각 면의 길이는 정확히 100 픽셀이 되어야 합니다.
       Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel long sides.
+        instructions: 120도, 60도의 각과 150 픽셀 만큼의 길이로 이 다이아몬드를 그려보세요.
       Standalone_Artist_3:
-        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree turns?
+        instructions: 100 픽셀 길이와 60도 회전으로 이 육각형을 그려 줄 수 있나요?
       Standalone_Artist_4:
-        instructions: "Now you've got a new block to play with, the loop. This will repeat a set of commands. What happens if you loop these commands 6 times?"
+        instructions: 이제 반복(loop) 이라는 새로운 블럭을 이용할 수 있습니다. 이 블럭은 원하는 명령어들을 반복시켜줄 것입니다. 이 명령어들을 6번 반복하면 어떻게 될까요?
       Standalone_Artist_5:
-        instructions: How many times do you need to loop this diamond to draw the flower?
+        instructions: 이 다이아몬드 모양을 이용해서 꽃을 그리려면 반복(loop)을 몇 번 시켜야 할까요?
       Standalone_Artist_5.5:
-        instructions: "Notice how we simplified the diamond code by turning it into a loop. You can loop that whole sequence 12 times to draw the flower. Hint: You'll need to turn 30 degrees after your diamond loop so you don't keep drawing over the same diamond."
+        instructions: '다이아몬드 모양을 반복 블럭 안에 넣어서 회전시키면서 아주 쉽게 코드를 만드는 방법을 잘 보세요. 순서대로 실행시켜야하는 명령어들을 12번 반복시킬 수 있습니다. 힌트: 다이아몬드 반복(loop)를 30도만큼 회전시키면 됩니다. 다이아몬드를 또 그릴 필요가 없습니다.'
       Standalone_Artist_6:
-        instructions: 'Loop this hexagon code 6 times to create the design. How many degrees will you need to turn each time? Hint: divide the number of degrees in a circle by the number of times you are looping.'
+        instructions: '이 6각형 코드를 반복적으로 이용해서 디자인 해보세요. 한 번 실행할 때마다 몇 도를 회전시켜야 할까요? 힌트: 원의 각도를 반복시키려고 하는 횟수로 나누면 됩니다.'
       Standalone_Artist_7:
-        instructions: 'A function is another programming tool to help you avoid repeating yourself. This function draws a flower, so you can use it any time you want to draw a flower. Use this and the new jump block to draw these flowers. Hint: The flowers are 150 pixels apart'
+        instructions: '함수는 한번 만들어둔 것을 다시 사용하는 프로그래밍 방법입니다. 이 함수는 꽃을 그려주는데, 이 함수를 이용하면 원하는 만큼의 꽃을 편리하게 그릴 수 있습니다. 이 함수와 점프 블럭을 이용해서 이 꽃들을 그려주세요. 힌트: 꽃들은 150 픽셀만큼 떨어져 있습니다.'
       Standalone_Artist_8:
-        instructions: |-
-          Here's a function called "Draw a shape" that we've programmed to draw hexagons. Run the code to see what it does and then experiment with the function to see what happens. Can you make it draw a pattern of squares, triangles, or octagons?
+        instructions: '"모양 그리기" 라는 이름의 6각형 그리기 함수 블럭이 있습니다. 일단 먼저 코드를 실행시켜 어떻게 실행되는지 살펴보고, 실험해 보세요. 사각형, 삼각형, 8각형을 그릴 수 있겠어요?'
       Standalone_Artist_9:
-        instructions: "Now go ahead and make whatever picture you'd like! You've even got an empty function that you can make do whatever you want!"
+        instructions: 자 이제 계속해서, 원하는 그림을 마음껏 그려보세요! 원하는 것이 어떤 것이든지, 빈 함수를 이용해 마음대로 만들고 사용할 수 있습니다.
     video:
       name:
         maze_intro: 미로 퍼즐 소개
@@ -475,14 +474,28 @@ ko:
         C3_crowdsourcing: 클라우드소싱
         C3_functional_suncatchers: 기능성 색유리
         C3_songwriting_with_parameters: 매개변수를 사용한 음악 작곡
-        C4_artist_math: Programming the Artist with Math
-        C4_create_functions: Creating Functions
-        C4_edit_functions: Editing Functions
+        C4_intro: 소개
+        C4_bee_conditional: 꿀벌 조건선택
+        C4_variables_artist: '변수 - 예술가'
+        C4_variables_playlab: '변수 - 플레이 랩'
         C4_for_loops: 반복을 위한
-        C4_variables: 변수
-        frozen_intro: Hour of Code Intro
-        frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
+        C4_math_artist: 수학 예술가 프로그래밍
+        C4_function_edit: 함수 수정하기
+        C4_function_create: 함수 만들기
+        C4_function_parameters: 함수(값 전달)
+        C4_conditionals: 조건
+        C4_unplugged_algorithms: 탱그램 알고리즘
+        C4_unplugged_madlibs: 매드 립스(Mad Libs)
+        C4_unplugged_variables: 변수들 싸기(함께 넣기)
+        C4_unplugged_forloops: 반복을 위한
+        C4_unplugged_parameters: 매개변수를 사용하는 음악 작곡
+        C4_unplugged_binary: 2진
+        frozen_intro: Hour of Code 소개
+        frozen_loops: 반복(Loop) 소개
+        frozen_functions: 함수(Function) 소개
+        playlab_intro: 플레이 랩 소개
+        playlab_events: 플레이 랩 이벤트
+        playlab_repeat_forever: 플레이 랩 무한 반복
     callout:
       text:
         drag_blocks: '"움직이기" 블럭을 끌어다가 다른 블럭의 아래에 탁 붙여보세요.'
@@ -500,31 +513,52 @@ ko:
         replace_questions: '"???" 부분에 수를 입력하면 됩니다.'
         replace_questions_degree: '"???" 부분에 정확한 각도를 입력해 보세요.'
         repeat_blocks: '"반복" 블럭의 안에 다른 블럭들을 넣어보세요.'
+        repeat_blocks_1: (1) 이 블럭을 회색 블럭들에 사용하세요.
+        repeat_blocks_2: '(2) "반복(Repeat)" 블럭을 여기에 이동시킨 후, 회색 블럭들의 안에 넣어주세요.'
         snowflake_dropdown: 다른 모양의 눈송이를 만들기 위해서 사용해 보세요.
         degrees_per_side: 각각의 회전 각도를 얻어내기 위해, 면의 개수를 360으로 나누세요.
         set_sides: 퍼즐을 해결하기 위해 필요한 면의 수를 설정하기 위해 이 블럭을 사용하세요.
         set_length: '정확한 값으로 "길이"를 설정하기 위해 이 블럭을 사용하세요.'
-        which_equation: 어떤 식이 각 모양에 대한 면들을 더 작게 만들 수 있을까요? 각각의 식을 실험해 보세요.
+        which_equation: 어떤 식이 더 많은 면들에 대해서, 각 면의 길이를 더 적게 줄일 수 있을까요?
         get_nectar: '새로운 "꽃꿀 얻기" 블럭을 사용하세요.'
         actions_category: '도구 상자가 새로운 모습으로 바뀌었습니다! 이제 "실행" 블럭들을 사용할 수 있습니다.'
         draw_square_hint: '힌트: 바로 전 퍼즐에서 사용했던 사각형 반복을 사용하세요.'
-        edit_function: 함수를 수정하기 위해 이 버튼을 사용하세요.
+        edit_function: 함수를 수정하기 위해서 여기를 클릭하세요.
         create_function: '"함수" 메뉴를 열어 함수를 만들기 위해, 여기를 누르세요. 그 다음에 "함수 만들기" 버튼을 누르세요. '
         house_hint: 그림이 집처럼 보이지 않아도 괜찮습니다. 다음 퍼즐에서 해결할 것입니다.
         edit_draw_square: 함수를 수정해 반복 실행을 추가하기 위해 이 버튼을 사용하세요.
         edit_get_nectar: 이 버튼을 사용해 함수를 수정해서, 꿀벌이 꽃꿀 방향으로 회전할 수 있도록 하세요.
         logic_category: '"논리" 메뉴를 열어 "만약/아니면" 블럭을 찾아보세요.'
         length_parameter: '이 함수를 수정해서 "길이"를 매개변수로 사용할 수 있도록 해 보세요.'
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: "Don't forget to turn after creating each circle."
-        frozen_circle_function_with_parameter_circle: 'Use the "create a circle" block and change the size.'
-        frozen_snowflake_branch: 'Use the "create a snowflake branch" block'
-        frozen_create_square: Attach more blocks here to create a square
-        playlab_drag_say: 'Drag the "say" block here and type "hello"'
-        playlab_use_twice: Use this block twice and remember to change the actor number
-        playlab_move_girl: 'Use the "move right" block to move Tennis Girl'
-        playlab_play_sound: 'Add "play sound" block here'
-        playlab_arrow_keys: Remember to use these to move the witch after clicking on Run
-        playlab_add_move: 'Add "move" blocks inside this repeat block'
-        playlab_add_score: Add score blocks here
-        playlab_add_blocks: Add your blocks here
+        frozen_diamond_repeat: 반복 블럭을 사용해 이 모양을 만들어보세요.
+        frozen_circle_function_in_circle_turn: 각각의 원을 만들고 난 후에, 회전해야하는 것을 잊지마세요.
+        frozen_circle_function_with_parameter_circle: '"원 만들기" 블럭을 사용하고 그 크기를 바꾸세요.'
+        frozen_snowflake_branch: '"가지치기 눈송이 만들기(create a snowflake branch)" 블럭을 사용하세요.'
+        frozen_create_square: 사각형을 만들기 위해서 여기에 블럭들을 더 붙여주세요.
+        playlab_drag_say: '"말하기" 블럭을 드래그 한 후 "hello"이라고 입력해주세요.'
+        playlab_use_twice: 이 블럭을 두 번 사용하세요. 그리고 캐릭터(actor) 번호를 바꿔주세요.
+        playlab_move_girl: '테니스 소녀를 오른쪽으로 이동시키기 위해서 "오른쪽으로 이동" 블럭을 사용하세요.'
+        playlab_play_sound: '"소리 재생" 블럭을 여기에 추가하세요'
+        playlab_arrow_keys: 마녀를 클릭했을 때 움직이도록 하기위해서 이 블럭들을 사용해야 합니다.
+        playlab_add_move: '이 반복 블럭 안에 "이동" 블럭들을 추가하세요.'
+        playlab_add_score: 여기에 점수 블럭들을 추가하세요
+        playlab_add_blocks: 여기에 블럭들을 추가하세요.
+        set_variable: 변수에 값을 바꾸기 위해 수 블럭을 드래그해서 가져오세요.
+        place_variable: 이 블럭의 안쪽에 변수 블럭을 드래그 하세요.
+        bee_for_loop: 꿀벌이 모으도록 하려는 가장 큰 꽃꿀의 수를 여기에 드래그 하세요.
+        place_counter_variable: 이 블럭의 안에 수를 세기 위한 카운터 블럭을 드래그 하세요.
+        function_editor_draw_square: '이것이 여러분이 만든 함수의 정의입니다. 이 블럭들은 "사각형 그리기" 블럭을 사용할 때마다 실행됩니다.'
+        change_here: 여기서 바꾸세요.
+        write_draw_square_function: 도구 상자에 있는 블럭들을 여기로 드래그해서 사각형을 그려보세요.
+        write_draw_triangle_function: 도구 상자에서 블럭들을 드래그해서 여기에 집어 넣어 사각형을 그려보세요.
+        edit_add_parameter: 함수에 매개 변수를 추가하기 위해서 편집(edit)을 누르세요.
+        add_and_drag_parameter: 만든 매개 변수의 이름을 여기에 작성하고, 추가하기를 누른 다음, 여러분이 만든 함수 정의 안에 드래그해 넣으세요.
+        fill_in_actor: '??? 부분을 각 캐릭터(1, 2, 3)에 맞는 수로 채우세요.'
+        repeat: 루프(loop) 안에 블럭을 넣어 반복하도록 하세요.
+        if_bee_nectar: '"만약(if)" 블럭을 사용해 꽃꿀을 집어야 하는지 판단하도록 하세요.'
+        if_else_bee: '"만약(if)/그렇지 않으면(else)" 블럭을 사용해서 꿀벌이 꽃에 꽃꿀이 있으면 집고, 아니면 꿀을 만들도록 해 보세요.'
+        repeat_full_circle: 원을 만들기 위해서 좀비가 움직여야하는 횟수를 입력하세요.
+        place_length_variable: 여기에 길이(length) 변수를 드래그해서 물음표 표시를 바꾸세요.
+        arrows_move_actor: 캐릭터를 움직이기 위해 방향키를 사용하세요.
+        right_arrow_fireball: 파이어볼을 쏘기 위해 오른쪽 방향키를 사용하세요.
+        name_function: 함수의 이름을 여기에 작성하세요.

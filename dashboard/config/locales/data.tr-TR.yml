@@ -147,8 +147,8 @@
         maze_2_12: Tamam, Bu benzer ama biraz farklı. Bunu sadece 5 blok ile yapabilir
           misin?
         maze_2_13: 'Ne zaman döneceğime karar vermem için yeni "eğer" bloğunu kullan.
-          İpucu: Sadece bir bloğa daha ihtiyacın var. Ancak bunu nasıl kurduğumuzu
-          öğrenki bir dahakine kullanabil.'
+          İpucu: Sadece bir bloğa daha ihtiyacın var ama bunu nasıl kurduğumuzu öğren
+          ki bir dahaki sefer kullanabilesin.'
         maze_2_14: Tamam, bu sadece son bulmaca gibi ama "Eğer" bloğu ile "Tekrarla"
           bloğunu nasıl birlikte kullandığını hatırlaman gerekiyor.
         maze_2_15: Ayçiçeğini istiyorum! Sadece bir "Eğer" bloğu kullanarak, en az
@@ -501,19 +501,18 @@
           pengueni etrafta hareket ettiren  blokları ekleyebilir misin?
         studio_c3_game_7: Kendi oyununuzu yaratın. Bitirdiğinizde, Son'u tıklayın
           ve arkadaşlarınıza kendi telefonlarında oyununuzu denetin.
-        studio_playlab_1: Köpeğin "Merhaba Dünya" demesini sağlayabilir misin?
-        studio_playlab_2: Önce köpeğin bir şeyler söylemesini sonra da kedinin bir
-          şeyler söylemesini sağlayabilir misin?
-        studio_playlab_3: Köpeği, kediye doğru hareket ettiren bir program yazabilir
+        studio_playlab_1: Penguen "Merhaba" demek istiyor - ona yardımcı olabilir
           misin?
-        studio_playlab_4: Köpeği kediye doğru hareket ettirin, sonra köpek kedinin
-          yanına geldiğinde kedinin "Merhaba" demesini sağlayan programı yazabilir
-          misin?
-        studio_playlab_5: Ahtapotun tıklandığında "merhaba" demesini sağlayan program
-          yazabilir misin?
-        studio_playlab_6: Yukarı / Aşağı / Sol / Sağ tuşlarını kullanarak pengueni
-          etrafta hareket ettirip bütün bayraklara dokunmasını sağlayan programı yazabilir
-          misin?
+        studio_playlab_2: Mağara adamı ( karakter 1) ve mağara kadını (karakter 2)
+          birbirlerine "merhaba" demek istiyorlar. "Söyle" bloğunu iki kez kullanarak
+          onlara yardım edebilir misin?
+        studio_playlab_3: Tenis kızının bayrağı almasına yardım edebilir misin?
+        studio_playlab_4: Tenis çocuğun ( karakter 1), tenis kızının (karakter 2)
+          yanına gitmesine ve gittiğinde bir ses çıkarmasına yardım edebilir misin?
+        studio_playlab_5: Uzay botunun tıklandığında "Selamlar insanoğlu" demesine
+          yardım edebilir misin? Çalıştır'a tıkladıktan sonra üzerine tıklamayı unutma
+        studio_playlab_6: Yukarı/aşağı/sağ/sol ok tuşlarını kullanarak cadının etrafta
+          dolaşıp bütün büyülü ateştoplarını toplamasına yardım edebilir misin?
         studio_playlab_7: '"Sonsuza kadar tekrarla" bloğu kodunuzun sürekli çalışmasına
           imkan sağlar.  Dinozorun  yukarı ve aşağı sürekli olarak hareket etmesini
           sağlayan blokları ekleyebilir misin?'
@@ -580,8 +579,8 @@
         instructions: Her bir karenin dönümünden sonra üç kare oluşturalım. Her yeni
           kareden önce, 120 derece çevirmek için emin olun.
       frozen square snowflake:
-        instructions: 10 kez "Tekrarlayan" blok ve her kare arasında 36 derecece dönen
-          bir "dönüm" blok kullanarak bir kar tanesi oluşturabilir misiniz?
+        instructions: '"Tekrar" bloğunu 10 tane kare oluşturmak için kullanıp her
+          kareden sonra 36 derece dönerek bir kar tanesi oluşturabilir misiniz?'
       frozen cross:
         instructions: '"Tekrarlayan" blok kullanarak bir artı işareti oluşturunuz.
           Elsa''nın ileri ve geri hareket edebildini farkettiniz mi?'
@@ -757,14 +756,28 @@
         C3_crowdsourcing: Kalabalık Kaynaklandırma 'Crowdsourcing'
         C3_functional_suncatchers: Fonksiyonel Güneş Avcıları
         C3_songwriting_with_parameters: Değiştirgenlerle Şarkı Yazma
-        C4_artist_math: Programming the Artist with Math
-        C4_create_functions: Creating Functions
-        C4_edit_functions: Editing Functions
+        C4_intro: Giriş
+        C4_bee_conditional: Arı Koşullandırmaları
+        C4_variables_artist: Değişkenler - Sanatçı
+        C4_variables_playlab: Değişkenler - Oyun laboratuarı
         C4_for_loops: For Loops
-        C4_variables: Değişkenler
-        frozen_intro: Hour of Code Intro
-        frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
+        C4_math_artist: Matematik ile Sanatçı'yı programla
+        C4_function_edit: Düzenleme fonksiyonları
+        C4_function_create: Oluşturma Fonksiyonları
+        C4_function_parameters: Fonksiyon parametreleri
+        C4_conditionals: Koşullar
+        C4_unplugged_algorithms: Tangramlar ile algoritmalar
+        C4_unplugged_madlibs: Mad Libs
+        C4_unplugged_variables: Variables in Envelopes
+        C4_unplugged_forloops: For Loops
+        C4_unplugged_parameters: Parametrelerle Şarkı Yazmak
+        C4_unplugged_binary: İkili
+        frozen_intro: Kodlama Saati Giriş
+        frozen_loops: Döngülere Giriş
+        frozen_functions: Fonksiyonlara Giriş
+        playlab_intro: Oyun laboratuarı için giriş
+        playlab_events: Play Lab Events
+        playlab_repeat_forever: Play Lab Repeat Forever
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'
@@ -792,6 +805,9 @@
           seçin
         repeat_blocks: '"Tekrarla" bloğunu kullanarak çalışma alanındaki blokların
           etrafında döndürün'
+        repeat_blocks_1: (1) Bu bloğu kullan ve çalışma alanındaki gri blokların etrafına
+          koy
+        repeat_blocks_2: (2) "Tekrarla" bloğunu buraya taşı ve gri bloklar içine yerleştir
         snowflake_dropdown: Bu açılan menüyü kullanarak farklı kar taneleri yaratın!
         degrees_per_side: 360'ı kenar sayısına bölerek her açının derecesini bulun.
         set_sides: Use this block to set "sides" to the number needed to complete
@@ -823,9 +839,36 @@
         playlab_drag_say: Drag the "say" block here and type "hello"
         playlab_use_twice: Use this block twice and remember to change the actor number
         playlab_move_girl: Use the "move right" block to move Tennis Girl
-        playlab_play_sound: Add "play sound" block here
+        playlab_play_sound: '"Sesi çal" bloğunu buraya ekle'
         playlab_arrow_keys: Remember to use these to move the witch after clicking
           on Run
-        playlab_add_move: Add "move" blocks inside this repeat block
-        playlab_add_score: Add score blocks here
-        playlab_add_blocks: Add your blocks here
+        playlab_add_move: '"Hareket et" bloğunu tekrarla bloğunun içine ekle'
+        playlab_add_score: Skor bloklarını buraya ekle
+        playlab_add_blocks: Bloklarını buraya ekle
+        set_variable: Değişkenini atamak için bir sayı bloğunu buraya sürükle
+        place_variable: Değişkenini bloğun içine sürükle
+        bee_for_loop: Drag the largest number of nectar you want the bee to collect
+          here
+        place_counter_variable: Drag your counter variable inside this block
+        function_editor_draw_square: This is your function definition. These blocks
+          run everytime you use the "draw a square" block
+        change_here: Değişikliği burada yap
+        write_draw_square_function: Kare çizmek için blokları araç kutusundan buraya
+          sürükle
+        write_draw_triangle_function: Üçgen çizmek için blokları araç kutusundan buraya
+          sürükle
+        edit_add_parameter: Fonksiyonuna parametre eklemek için düzenle'ye tıkla
+        add_and_drag_parameter: Write in the name of your parameter here, click add,
+          and then drag it into your function definition
+        fill_in_actor: Fill in the ??? with numbers that correspond to each actor
+          (1, 2, and 3)
+        repeat: Put blocks inside the loop to repeat commands
+        if_bee_nectar: Use the "if" block to decide if the bee should get nectar
+        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower,
+          and makes honey if it's not a flower
+        repeat_full_circle: Enter in the number of times the zombie has to move to
+          make a full circle
+        place_length_variable: Soru işaretlerinin yerine uzunluk değişkenini sürükle
+        arrows_move_actor: Karakteri hareket ettirmek için okları kullan
+        right_arrow_fireball: Ateştoplarını fırlatmak için sağ ok tuşunu kullan
+        name_function: Fonksiyonunun ismini buraya yaz

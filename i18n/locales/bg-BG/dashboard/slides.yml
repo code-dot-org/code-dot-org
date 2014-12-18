@@ -3,7 +3,7 @@ bg:
     maze_intro:
       1:
         image: notes/hoc1_1.jpg
-        text: Добре дошли в първия си час по кодиране! Нека да се потопим направо в първото ви предизвикателство.
+        text: Добре дошли в първия си час по програмиране! Нека да се потопим направо в първото си предизвикателство.
       2:
         image: notes/hoc1_2.jpg
         text: 'Ние ще  използваме Blockly. Това е визуален език за програмиране, където трябва само да плъзнете и пуснете блоковете за да напишете код.'
@@ -33,7 +33,7 @@ bg:
         text: 'Всеки блок е една инструкция. Ако плъзнете "продължи напред" блок във вашата работна област и натиснете "Старт", птицата ще се премести едно квадратче  напред в лабиринта.'
       11:
         image: notes/hoc1_11.jpg
-        text: To do more than one action, you can drag many blocks to your workspace and attach them together. The bird will do the commands from top to bottom.
+        text: За да направите повече от едно действие, можете да плъзнете много блокове във вашата работна област и да ги прикрепите заедно. Птицата ще извърши командите отгоре надолу.
       12:
         image: notes/hoc1_12.jpg
         text: 'Ако стартирате програмата и искате да поправите кода си за да опитате отново, натиснете бутона "Начално състояние".'
@@ -160,34 +160,29 @@ bg:
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: |-
-          Hi, my name is Saloni. I use computer science to help solve problems in health and medicine. Let's learn about the "if else" block. It looks like the "if" block, but it has an extra part at the end that says "else".
+        text: 'Здравейте моето име е Салони. Използвам компютърни науки, за да помогна за решаването на проблемите в здравеопазването и медицината. Нека да сe научим  да използваме "ако иначе" блока. Той изглежда като блокът "Ако", но има допълнителна част в края, която казва "иначе".'
       2:
         image: notes/hoc5_2.jpg
-        text: |-
-          If I put a "move forward" block in the spot where it says "do" and a "turn left" block where it says "else" that means that the zombie will choose between 2 options. IF there is a path ahead, the zombie will move forward, and OTHERWISE (there isn't a path ahead), the zombie will turn left.
+        text: 'Ако сложим блок за предвижване в мястото, където пише "ако"  и "завърти наляво" блок където пише "друго" това означава, че зомбито ще избира между две опции. Ако има път напред, зомбито ще се движи напред, или (ако липса такава възможност)- зомбито ще завие наляво.'
       3:
         image: notes/hoc5_3.jpg
-        text: |-
-          Just like the "if" block, we can put "if else" blocks inside a "repeat" blocks so that the zombie keeps moving and the "if else" block will keep checking if there's somewhere to turn.
+        text: 'Точно като при "Ако" блока, можем да сложим "ако иначе" блокира вътре в блокове за повторение, така че зомбито ще продължава да се движи и "ако иначе" блокът ще прави проверка, ако има някъде да се завие.'
       4:
         image: notes/hoc5_4.jpg
-        text: Now, get those zombies where they belong!
+        text: Сега, преведете зомбитата до местата, където те трябва да стигнат!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
-        text: "An if-else statement is a decision between two things. Let's see how we can use an if-else statement with our buddy Scrat the squirrel."
+        text: '"Ако иначе" твърдението е решение между две неща. Нека видим как можем да използваме "ако иначе" с нашия приятел Scrat катерицата.'
       2:
         image: notes/saloni_ifelse_scrat2.jpg
-        text: |-
-          This block looks the same as the "if" block, but there's an extra part at the bottom that says "else". If I put a "move forward" block where it says "do" and a "turn left" block where it says "else", that means Scrat the squirrel will move forward if there's a path ahead. If there's not a path ahead, Scrat will turn left.
+        text: 'Този блок изглежда по същия начин като "Ако" блока, но е добавена допълнителна част накрая, която казва "иначе". Ако поставите блок за движение, където се казва "ако" и блок за завиване наляво, където се казва "иначе", това означава, че Scrat катерицата ще се движи напред ако е има път напред. Ако няма път напред, Scrat ще завие наляво.'
       3:
         image: notes/saloni_ifelse_scrat3.jpg
-        text: |-
-          It's making a decision and doing one of the two actions based on that decision. And just like "if" blocks, you can put "if-else" blocks inside "repeat" blocks.
+        text: 'Това е вземане на решение за правене на едно от двете действия въз основа на това решение. И точно като "Ако" блоковете, можете да поставите "Ако иначе" блоковете в  блокове за повторение.'
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: "Now let's help Scrat the squirrel get that acorn!"
+        text: Сега, нека да помогнем на Scrat катерицата да вземе жълъда!
     function:
       1:
         image: notes/stage13_1.jpg
@@ -272,82 +267,121 @@ bg:
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
-        text: "Hi, my name is Lyndsey. I model, act, and write my own apps. Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
+        text: Здравейте моето име е Линдзи. Модел съм, създавам и пиша мои собствени приложения. Нека да използваме кода, за да се присъединим към Анна и Елза, докато те опознават магията и красотата на леда.
       2:
         image: notes/frozen1_2.jpg
-        text: "You'll create snowflakes and patterns as you ice skate and make a winter wonderland that you can then share with your friends."
+        text: Вие ще създадете снежинки и десени от следите на зимните кънки и ще направите зимна приказка, която след това можете да споделите с приятелите си.
       3:
         image: notes/frozen1_3.jpg
-        text: "In the next hour, you're going to learn the basics of how to code. Traditional programming is usually in text, but we'll use Blockly, which uses visual blocks that you can drag and drop to write programs. This is how even university students learn the basics. Under the hood, you're still creating code."
+        text: В следващия час ще се научите на основите на кодирането. Традиционното програмиране обикновено е текстово, но ние ще използваме Blockly, който използва визуални блокове, които можете да плъзнете и пуснете, за да пишете програми. Така дори студентите изучават основите. Под капака, Вие все още създавате код.
       4:
         image: notes/frozen1_4.jpg
-        text: "A program is a set of instructions that tells a computer what to do. Let's build a code, or a program, that will help Elsa create a simple line. We will use this later to create more complex patterns."
+        text: Програмата е набор от инструкции, които казват на компютъра какво да прави. Нека построим код, или програма, която ще помогне на Елза да създаде проста линия или отсечка. Ще използваме това по-късно, за да създадем по-сложни модели.
       5:
         image: notes/frozen1_5.jpg
-        text: "Your screen is split into three main parts. On the left, is the ice surface where you'll run your program. The instructions for each level are written right below the surface."
+        text: Екрана е разделен на три основни части. В ляво е повърхността на леда, където ще изпълнявате вашата програма. Инструкциите за всяко ниво са написани точно под повърхността.
       6:
         image: notes/frozen1_6.jpg
-        text: This middle area is the toolbox, and each of these blocks is an action that Elsa and Anna can do.
+        text: Тази средна област е кутията с инструменти, и всеки от тези блокове е действие, което Елза и Анна могат да извършат.
       7:
         image: notes/frozen1_7.jpg
-        text: |-
-          The white space on the right is called the workspace, and this is where we'll build our program. To move around the ice surface, you'll use the "Move Forward" block.
+        text: Празно пространство вдясно се нарича работната област, и това е мястото, където ние ще изградим нашата програма. За да се местите по повърхността на леда, ще използвате блок за преметване.
       8:
         image: notes/frozen1_8.jpg
-        text: 'Here, the "Move Forward" block says, "move forward by 100 pixels." When we press "Run", what happens? Elsa moves forward a certain amount on the screen, 100 pixels in fact! Pixels are basically very tiny squares on your computer screen.'
+        text: 'Тук, блокът за преместване казва, "премества напред със 100 пиксела." Когато натиснете "Старт", какво се случва? Елза се придвижва напред на екрана, точно 100 пиксела в действителност! Пикселите са много малки квадратчета на екрана на компютъра.'
       9:
         image: notes/frozen1_9.jpg
-        text: 'The other block we have in this puzzle says "turn right by 90 degrees." And when we use this "Turn Right" block, that makes Elsa turn a certain amount. You can play around with how far you want Elsa to turn. The angle is measured from the path ahead of Elsa. So, this is a 90 degree turn. And this is a 120 degree turn.'
+        text: 'Друг блок, който имаме в този пъзел казва "завърти надясно на 90 градуса." И когато ние използваме този блок, караме Елза да се завърта на определени градуси. Можете да опитате блока и да  завъртите Елза на колкото искате градуси. Ъгълът се измерва от пътя пред Elsa. Така че това е завой на 90 градуса. И това е завой на 120 градуса.'
       10:
         image: notes/frozen1_10.jpg
-        text: Remember, you can change the number of pixels and degrees by clicking the arrows next to them.
+        text: Не забравяйте, че можете да промените броя на пикселите и градусите чрез натискане на стрелките до тях.
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
-        text: "Hi, I’m Paola! Computers are really good at repeating actions. You can count to 10, 20, or 100. But a computer can count to a billion or a trillion. It won't get bored and it will only take a few seconds. Whether it's counting, or drawing, or anything--computers can repeat things hundreds or even billions of times."
+        text: Здравейте аз съм Паола! Компютрите са наистина добри в повтарянето на действия. Можете да броите от 10, 20 или 100. Но един компютър може да брои до един милиард или трилиони. Той няма да се отегчи и ще му отнеме само няколко секунди. Дали това е броене, или чертеж, или нещо подобно--компютрите могат да повтарят неща стотици или дори милиарди пъти.
       2:
         image: notes/frozen2_2.jpg
-        text: 'In programming, we call this a loop. A loop is how you repeat your code over and over again. For the next puzzle, your goal is to help Anna create a square with the "Repeat" block.'
+        text: В програмирането, ние наричаме това цикъл. Цикъл е, когато се повтаря код отново и отново. За следващия пъзел целта ви е да помогнете на Анна да създаде квадрат с блок за повторение.
       3:
         image: notes/frozen2_3.jpg
-        text: 'Any blocks of code you put inside the "Repeat" block will be repeated in sequence, as many times as you want.'
+        text: Всички блокове с код, които поставяте вътре в блока за повторение, ще се повтарят последователно, толкова пъти, колкото искате.
       4:
         image: notes/frozen2_4.jpg
-        text: 'To draw a square, you can use the "Move Forward" and "Turn Right" block 4 times. But the easier way is to tell the computer to "Move Forward" and "Turn Right by 90 degrees" once, and then tell it to repeat this pair of actions 4 times. To do that, you need to put the "Move Forward" and "Turn Right" block inside a "Repeat" block.'
+        text: 'За да нарисувате квадрат, можете да използвате "премества напред" и "завърта надясно" блок 4 пъти. Но по-лесен начин е да кажете на компютъра да "премества напред" и "завърта надясно на 90 градуса" веднъж и след това той да повтаря тази двойка действия 4 пъти. За да направите това, трябва да поставите двойката действия в блок за повторение.'
       5:
         image: notes/frozen2_5.jpg
-        text: |-
-          Remember, you can change the number in the "Repeat" block to anything, and it will repeat what's inside the block that many times.
+        text: 'Не забравяйте, че можете да промените номера в "Повтори" блока  и той ще  повтаря това, което е вътре в него много пъти.'
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: Hi, I’m Chris Bosh. I’m a professional basketball player, and I coded in college.
+        text: Здравейте аз съм Крис Бош. Аз съм професионален баскетболист, и се учех да кодирам в колежа.
       2:
         image: notes/frozen3_2.jpg
-        text: One of the most important concepts in computer science is how to define new commands. Most computer languages have only about 100 words or commands. And really, the art and magic is in defining your own new words out of these building blocks.
+        text: Едно от най-важните понятия по компютърни науки е как да се дефинират нови команди. Повечето компютърни езици имат само около 100 думи или команди. И наистина, изкуството и магията е в определянето на собствени нови думи, създадени на основата на тези градивни блокове.
       3:
         image: notes/frozen3_3.jpg
-        text: "Once you've taught a computer how to do an action once using this sequence of commands, you can make up your own name for that action so it's easy to repeat it later. When you define your own command and give it a name, that's called a function."
+        text: След като сте научили компютъра как да направи едно действие, с помощта на тази последователност от команди, можете да дадете собствено име за това действие, така че е лесно да го повторите по-късно. Когато дефинирате своя собствена команда и й давате име, вие създавате функция.
       4:
         image: notes/frozen3_4.jpg
-        text: "Hi, I’m Jess. When programming with blocks, you would use functions if there are a set of actions you would like to use lots of times. For example, you've written code to create a square."
+        text: Здравейте аз съм Джес. При програмирането с блокове, трябва да използвате функции за набор от действия, които искате да използвате много пъти. Например ако сте написали код, за да създадете квадрат.
       5:
         image: notes/frozen3_5.jpg
-        text: 'You can define this as a function called "create a square." '
+        text: 'Можете да дефинирате това като функция, наречена "чертае квадрат." '
       6:
         image: notes/frozen3_6.jpg
-        text: Now you have a new block that you can use multiple times to create multiple squares.
+        text: Сега имате нов блок, който можете да използвате няколко пъти за да създадете няколко квадратчета.
       7:
         image: notes/frozen3_7.jpg
-        text: A lot of simple shapes can be used to create more complex patterns. In the next puzzle, the code you recently wrote to make a circle is available to you as a new function that can make circles of different sizes. Can you use it to help Elsa create intricate and beautiful patterns in the snow?
+        text: 'Много от простите форми може да се използват за създаване на по-сложни модели. В следващия пъзел кода, който наскоро написахме да  направи един кръг е достъпен за вас като нова функция, която може да направи кръгове с различни размери. Можете ли да използвате това, за да помогнете на Елза да създаде сложен и красив модел в снега?'
     C3_playlab_create_game:
       1:
         image: notes/playlab_1.png
-        text: "So far you've been making an animation or a story that does the exact same thing every time you run it. Now you can make an interactive game that you can actually play."
+        text: Досега сте създавали анимация или история, която прави точно същото нещо всеки път, когато го стартирате. Сега можете да направите една интерактивна игра, която да играете.
       2:
         image: notes/playlab_2.png
-        text: |-
-          There's the "when arrow" block and the "move actor" block. You can put these blocks together to move the actors around with the arrow keys.
+        text: 'Там е "когато стрелка" блок и блок "премести актьор". Можете да поставите тези блокове заедно, за да движите актьорите с клавишите със стрелки.'
       3:
         image: notes/playlab_3.png
-        text: And there are some blocks that do stuff when actors collide or are clicked. Check them out and have fun!
+        text: И има някои блокове, които правят неща, когато участниците се сблъскат или е кликнато върху им. Проверете ги и се забавлявайте!
+    playlab_intro:
+      1:
+        image: notes/playlab_intro_1.png
+        text: Ние ще създаваме игри като използваме Игрална Лаборатория. Добрите игри имат история, а всяка история си има герои. Ще се научим как да караме нашите герои като вещици, извънземни и животни да говорят, да се движат и да комуникират едни с други. До края на този урок, ще можеш да създаваш игра от подръчни средства и ще я споделяш със твоите приятели.
+      2:
+        image: notes/playlab_intro_2.png
+        text: Екрана е разделен на 3 основни части. Вляво е игралното поле, където вашата програма ще се изпълни. Инструкции за всяко ниво са дадени под него.
+      3:
+        image: notes/playlab_intro_3.png
+        text: Средната зона е кутията с инструменти, и всеки от тези блокове е част от код. Празното пространство вдясно се нарича работната област и това е мястото, където ние ще изградим нашата програма.
+      4:
+        image: notes/playlab_intro_4.png
+        text: 'За да започнете, трябва да свържете вашите блокове с оранжевия "при стартиране" блок. Можете да свържете множество блокове заедно, като ги плъзнете докато виждате жълта линия, и след това те ще се съединят заедно.'
+      5:
+        image: notes/playlab_intro_5.png
+        text: 'В този първи пъзел, нашият актьор е пингвин и ние ще го накараме да казва "Здравей!" като плъзнем "казва" блок, и го свържем към "при стартиране"  блока. Ще напишем в него "Здравей." Ние можем да движим пингвина с помощта на блоковете за движение. След като сте поставили блоковете на място, натиснете бутона Старт, за да видите какво сте програмирали.'
+      6:
+        image: notes/playlab_intro_6.png
+        text: Започнете и до края, ще можете да създадете своя собствена игра с всички видове герои, които могат да си взаимодействат, щастливи или тъжни, да печелят точки, или да хвърлят огнени топки, или дори да изчезват от полето. Това е всичко е за вас и играта, която искате да направите.
+    playlab_events:
+      1:
+        image: notes/playlab_events_1.png
+        text: 'Сега ние ще учим за неща,  които всички  програмисти на игри използват всеки ден. Те се наричат събития. Събитието казва на програмата ви да слуша  когато нещо се случва. Когато това нещо се случи, тя извършва действие.'
+      2:
+        image: notes/playlab_events_2.png
+        text: Някои примери на събития слушат за щракване с мишката, бутон със стрелка или натискане на екрана.
+      3:
+        image: notes/playlab_events_3.png
+        text: 'Тук ние ще да се накараме космическия робот да каже "Поздрави, земляни!", когато играчът кликне върху него. Ние ще използваме "когато е кликнато върху" блок и "казва" блока, които ще прикрепим към "при стартиране" блока. Когато играчът кликне върху робота, всичко, прикрепено към "когато е кликнато върху" събитийния блок ще се извърши. Какво ли би казало вашето извънземно?'
+      4:
+        image: notes/playlab_events_4.png
+        text: 'Има и "когато стрелка" блокове. Ако свържете блокове "премести" с тях, можете да движите актьорите нагоре, надолу, наляво, или надясно. Стъпка по стъпка играта става по-интерактивна.'
+    playlab_repeat_forever:
+      1:
+        image: notes/playlab_repeat_forever_1.png
+        text: 'Това е "повтаря завинаги" блокът. Ако поставите друг блок вътре в него, той ще се повтаря завинаги в играта.'
+      2:
+        image: notes/playlab_repeat_forever_2.png
+        text: 'Ако искаме актьора да  направи нещо няколко пъти, се налага да поставим тези блокове вътре в блока, "повтаря завинаги".'
+      3:
+        image: notes/playlab_repeat_forever_3.png
+        text: 'В този пъзел нашата цел е да помогнем на магьосника да патрулира по границите на кралството, наляво и надясно. Научете как  работят командите за повторение, това ще ви спести един тон време по-късно, когато създавате своя собствена игра.'

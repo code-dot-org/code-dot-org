@@ -1,6 +1,6 @@
 * * *
 
-title: How-to Guide for Organisations layout: wide nav: resources_nav
+title: Pamācība organizācijām layout: wide nav: resources_nav
 
 * * *
 
@@ -16,7 +16,7 @@ Code.org sazināsies ar organizatoriem pēc Programmēšanas dzīves (dec. 8-14)
 
 <% if @country == 'us' %>
 
-## Video čats ar vies-runātāju:
+## Video chat with a guest speaker:
 
 Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 14, 2014. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
 

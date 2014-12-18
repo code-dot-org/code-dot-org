@@ -44,8 +44,9 @@
           fram i labyrinten.
       11:
         image: notes/hoc1_11.jpg
-        text: 'För att göra mer än en handling: dra mer än ett block till arbetsytan
-          och sätta ihop dem. Då kommer fågeln göra uppgifterna från toppen till botten.'
+        text: För att utföra mer än en åtgärd kan du dra många block till din arbetsyta
+          och sätta ihop dem tillsammans. Fågeln kommer att utföra kommandona från
+          toppen till botten.
       12:
         image: notes/hoc1_12.jpg
         text: Om du kör ett program men vill fixa det och försöka igen, tryck på knappen
@@ -61,7 +62,7 @@
       2:
         image: notes/stage5_2.jpg
         text: I dessa pussel, kommer du vara en konstnär som ritar en linje bakom
-          sig varän hen går.
+          dig där du går.
       3:
         image: notes/stage5_3.jpg
         text: Detta block säger "gå framåt 100 pixlar." Pixlar är riktigt små prickar
@@ -226,32 +227,32 @@
           zombien svänga vänster.
       3:
         image: notes/hoc5_3.jpg
-        text: Precis som med "om"-block kan vi sätta in "om/annars"-block inuti ett
-          "upprepa"-block så att zombien fortsätter gå samtidigt som "om/annars"-blocket
-          kollar om det går att svänga.
+        text: Precis som "om" blocket, kan vi sätta "om-annars" block inuti ett "repetera"
+          block så att zombien fortsätter gå och "om-annars" blocket kommer att kolla
+          om det finns någonstans att svänga.
       4:
         image: notes/hoc5_4.jpg
-        text: Nu, få de här zombien dit de hör hemma!
+        text: Nu, få de här zombisarna dit de hör hemma!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
-        text: An if-else statement is a decision between two things. Let's see how
-          we can use an if-else statement with our buddy Scrat the squirrel.
+        text: En om-annars-sats är ett beslut mellan två saker. Låt oss se hur vi
+          kan använda en om-annars-sats med vår kompis Scrat Ekorren.
       2:
         image: notes/saloni_ifelse_scrat2.jpg
-        text: This block looks the same as the "if" block, but there's an extra part
-          at the bottom that says "else". If I put a "move forward" block where it
-          says "do" and a "turn left" block where it says "else", that means Scrat
-          the squirrel will move forward if there's a path ahead. If there's not a
-          path ahead, Scrat will turn left.
+        text: Detta block ser likadan ut som blocket "om", men det finns en extra
+          del längst ner som säger "annars". Om jag sätter ett "gå framåt" block där
+          det står "gör" och ett "sväng vänster"  blockdär det står "annars", betyder
+          det att Scrat ekorren går framåt om det finns en väg framåt. Om det inte
+          finns en väg framåt, kommer Scrat svänga vänster.
       3:
         image: notes/saloni_ifelse_scrat3.jpg
-        text: It's making a decision and doing one of the two actions based on that
-          decision. And just like "if" blocks, you can put "if-else" blocks inside
-          "repeat" blocks.
+        text: Den fattar beslut och utför något av de två åtgärder som baseras på
+          beslutet. Och precis som med "om" block, kan du sätta "om-annars" block
+          inuti "Upprepa" block.
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: Now let's help Scrat the squirrel get that acorn!
+        text: Låt oss hjälpa ekorren Scrat att få tag på ekollonet!
     function:
       1:
         image: notes/stage13_1.jpg
@@ -371,128 +372,200 @@
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
-        text: Hi, my name is Lyndsey. I model, act, and write my own apps. Let's use
-          code to join Anna and Elsa as they explore the magic and beauty of ice.
+        text: Hej, är mitt namn Lyndsey. Jag designar, programmerar och skriver min
+          egen appar. Låt oss använda kod för att följa med Anna och Elsa när de utforskar
+          magin och skönheten med is.
       2:
         image: notes/frozen1_2.jpg
-        text: You'll create snowflakes and patterns as you ice skate and make a winter
-          wonderland that you can then share with your friends.
+        text: Du kommer att skapa snöflingor och mönster när du åker skridskor och
+          gör ett vinterlandskap som du sedan kan dela med dina vänner.
       3:
         image: notes/frozen1_3.jpg
-        text: In the next hour, you're going to learn the basics of how to code. Traditional
-          programming is usually in text, but we'll use Blockly, which uses visual
-          blocks that you can drag and drop to write programs. This is how even university
-          students learn the basics. Under the hood, you're still creating code.
+        text: Under nästa timme kommer du att lära sig grunderna i hur man kodar.
+          Traditionell programmering är oftast i text, men vi kommer att använda Blockly,
+          som använder block som du kan dra och släppa för att skriva program. Detta
+          är även hur universitets studenter lära sig grunderna. Under blocken skapas
+          fortfarande kod.
       4:
         image: notes/frozen1_4.jpg
-        text: A program is a set of instructions that tells a computer what to do.
-          Let's build a code, or a program, that will help Elsa create a simple line.
-          We will use this later to create more complex patterns.
+        text: Ett program är en uppsättning instruktioner som talar om för en dator
+          vad den ska göra. Låt oss bygga en kod eller ett program, som hjälper Elsa
+          skapa en enkel linje. Vi kommer att använda detta senare för att skapa mer
+          komplexa mönster.
       5:
         image: notes/frozen1_5.jpg
-        text: Your screen is split into three main parts. On the left, is the ice
-          surface where you'll run your program. The instructions for each level are
-          written right below the surface.
+        text: Skärmen delas in i tre delar. Till vänster, är isytan där du ska köra
+          ditt program. Instruktionerna för varje nivå är skrivna under isytan.
       6:
         image: notes/frozen1_6.jpg
-        text: This middle area is the toolbox, and each of these blocks is an action
-          that Elsa and Anna can do.
+        text: Mellersta området är verktygslådan, och vart och ett av dessa block
+          är en åtgärd som Elsa och Anna kan utföra.
       7:
         image: notes/frozen1_7.jpg
-        text: The white space on the right is called the workspace, and this is where
-          we'll build our program. To move around the ice surface, you'll use the
-          "Move Forward" block.
+        text: Det vita utrymmet till höger kallas arbetsytan, och det är där vi ska
+          bygga våra program. Om du vill flytta runt på isytan, ska du använda blocket
+          "gå framåt".
       8:
         image: notes/frozen1_8.jpg
-        text: Here, the "Move Forward" block says, "move forward by 100 pixels." When
-          we press "Run", what happens? Elsa moves forward a certain amount on the
-          screen, 100 pixels in fact! Pixels are basically very tiny squares on your
-          computer screen.
+        text: Här säger 'gå framåt'-blocket, "gå framåt 100 pixlar." När vi trycker
+          på "Kör", vad händer? Elsa flyttar fram en viss bit på skärmen, 100 pixlar
+          faktiskt! Pixlar är i grunden mycket små rutor på skärmen.
       9:
         image: notes/frozen1_9.jpg
-        text: The other block we have in this puzzle says "turn right by 90 degrees."
-          And when we use this "Turn Right" block, that makes Elsa turn a certain
-          amount. You can play around with how far you want Elsa to turn. The angle
-          is measured from the path ahead of Elsa. So, this is a 90 degree turn. And
-          this is a 120 degree turn.
+        text: Det andra blocket som vi har i detta pussel säger "sväng höger med 90
+          grader." Och när vi använder detta "sväng höger" block, svänger Elsa åt
+          höger. Du kan leka med hur långt du vill att Elsa ska vända. Vinkeln mäts
+          från vägen framför Elsa. Så detta är en 90 graders sväng. Och detta är en
+          120 graders sväng.
       10:
         image: notes/frozen1_10.jpg
-        text: Remember, you can change the number of pixels and degrees by clicking
-          the arrows next to them.
+        text: Kom ihåg att du kan ändra antalet pixlar och grader genom att klicka
+          på pilarna bredvid dem.
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
-        text: Hi, I’m Paola! Computers are really good at repeating actions. You can
-          count to 10, 20, or 100. But a computer can count to a billion or a trillion.
-          It won't get bored and it will only take a few seconds. Whether it's counting,
-          or drawing, or anything--computers can repeat things hundreds or even billions
-          of times.
+        text: Hej, är jag Paola! Datorer är riktigt bra på att upprepa åtgärder. Du
+          kan räkna till 10, 20 eller 100. Men en dator kan räkna till en miljard
+          eller en biljon. Den kommer inte bli uttråkad och det tar bara några sekunder.
+          Om det är att räkna, eller att rita, eller vad som helst--datorer kan upprepa
+          saker hundratals eller till och med miljarder gånger.
       2:
         image: notes/frozen2_2.jpg
-        text: In programming, we call this a loop. A loop is how you repeat your code
-          over and over again. For the next puzzle, your goal is to help Anna create
-          a square with the "Repeat" block.
+        text: I programmering kallar vi detta en loop. En loop eller slinga upprepar
+          din kod om och om igen. För nästa pussel är ditt mål att hjälpa Anna skapa
+          en kvadrat med "Upprepa" blocket.
       3:
         image: notes/frozen2_3.jpg
-        text: Any blocks of code you put inside the "Repeat" block will be repeated
-          in sequence, as many times as you want.
+        text: Varje kodblock du sätter inne i "Upprepa" blocket kommer att upprepas
+          i sekvens, så många gånger du vill.
       4:
         image: notes/frozen2_4.jpg
-        text: To draw a square, you can use the "Move Forward" and "Turn Right" block
-          4 times. But the easier way is to tell the computer to "Move Forward" and
-          "Turn Right by 90 degrees" once, and then tell it to repeat this pair of
-          actions 4 times. To do that, you need to put the "Move Forward" and "Turn
-          Right" block inside a "Repeat" block.
+        text: Om du vill rita en kvadrat, kan du använda "gå framåt" och "Sväng höger"
+          blocket 4 gånger. Men det lättaste är att tala om för datorn att "gå framåt"
+          och "sväng höger med 90 grader" en gång, och sedan tala om att datorn ska  upprepa
+          detta par åtgärder 4 gånger. För att göra det, måste du sätta "gå framåt"
+          och "sväng höger" blocken inuti ett "Upprepa" block.
       5:
         image: notes/frozen2_5.jpg
-        text: Remember, you can change the number in the "Repeat" block to anything,
-          and it will repeat what's inside the block that many times.
+        text: Kom ihåg, att du kan ändra siffran i blocket "Upprepa" till en annan,
+          och det kommer att upprepa vad som finns inuti blocket så många gånger.
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: Hi, I’m Chris Bosh. I’m a professional basketball player, and I coded
-          in college.
+        text: Hej, är jag Chris Bosh. Jag är en basketspelare och jag kodat i college.
       2:
         image: notes/frozen3_2.jpg
-        text: One of the most important concepts in computer science is how to define
-          new commands. Most computer languages have only about 100 words or commands.
-          And really, the art and magic is in defining your own new words out of these
-          building blocks.
+        text: En av de viktigaste begreppen inom datavetenskap är att definiera nya
+          kommandon. De flesta datorspråk har endast omkring 100 ord eller kommandon.
+          Och verkligen, konsten och magin är att definiera sina egna nya ord ur dessa
+          byggstenar.
       3:
         image: notes/frozen3_3.jpg
-        text: Once you've taught a computer how to do an action once using this sequence
-          of commands, you can make up your own name for that action so it's easy
-          to repeat it later. When you define your own command and give it a name,
-          that's called a function.
+        text: När du har lärt en dator hur den kan göra en åtgärd en gång med en viss
+          följd av kommandon, kan du hitta på ditt eget namn för åtgärden så att det
+          är lätt att upprepa den senare. När du definierar ditt eget kommando och
+          ger det ett namn, kallas det en funktion.
       4:
         image: notes/frozen3_4.jpg
-        text: Hi, I’m Jess. When programming with blocks, you would use functions
-          if there are a set of actions you would like to use lots of times. For example,
-          you've written code to create a square.
+        text: Hej, är jag Jess. När du programmerar med block använder du funktioner
+          om där finns en samling åtgärder du vill använda flera gånger. Du har till
+          exempel skrivit kod för att skapa en kvadrat.
       5:
         image: notes/frozen3_5.jpg
-        text: 'You can define this as a function called "create a square." '
+        text: Du kan definiera detta som en funktion kallad "skapa en fyrkant."
       6:
         image: notes/frozen3_6.jpg
-        text: Now you have a new block that you can use multiple times to create multiple
-          squares.
+        text: Nu har du ett nytt block som du kan använda flera gånger för att skapa
+          flera fyrkanter.
       7:
         image: notes/frozen3_7.jpg
-        text: A lot of simple shapes can be used to create more complex patterns.
-          In the next puzzle, the code you recently wrote to make a circle is available
-          to you as a new function that can make circles of different sizes. Can you
-          use it to help Elsa create intricate and beautiful patterns in the snow?
+        text: En hel del enkla former kan användas för att skapa mer komplexa mönster.
+          I nästa pussel är koden du skrev nyligen för att göra en cirkel tillgänglig
+          för dig som en ny funktion som kan göra cirklar i olika storlekar. Kan du
+          använda den för att låta Elsa skapa intrikata och vackra mönster i snön?
     C3_playlab_create_game:
       1:
         image: notes/playlab_1.png
-        text: So far you've been making an animation or a story that does the exact
-          same thing every time you run it. Now you can make an interactive game that
-          you can actually play.
+        text: Du har hittills gjort en animation eller en berättelse som gör exakt
+          samma sak varje gång du kör den. Nu kan du göra ett interaktivt spel som
+          du faktiskt kan spela.
       2:
         image: notes/playlab_2.png
-        text: There's the "when arrow" block and the "move actor" block. You can put
-          these blocks together to move the actors around with the arrow keys.
+        text: Där finns "när pilen" block och "flytta figur" block. Du kan sätta dessa
+          block tillsammans för att flytta figurerna runt med piltangenterna.
       3:
         image: notes/playlab_3.png
-        text: And there are some blocks that do stuff when actors collide or are clicked.
-          Check them out and have fun!
+        text: Och det finns vissa block som gör saker när figurerna kolliderar eller
+          klickas på. Testa dem och ha kul!
+    playlab_intro:
+      1:
+        image: notes/playlab_intro_1.png
+        text: We're going to create games using Play Lab. Good games have a story,
+          and every story has actors. We'll learn how to make our actors like witches,
+          alinens, and animals speak, move, and interact with each other. By the end
+          of this tutorial, you can build a game from scratch and share it with your
+          friends.
+      2:
+        image: notes/playlab_intro_2.png
+        text: Your screen is split into 3 main parts. On the left is the game space
+          where your program will run. The instructions for each level are written
+          below.
+      3:
+        image: notes/playlab_intro_3.png
+        text: The middle area is the toolbox, and each of these blocks is a piece
+          of code. The white space on the right is called the workspace and this is
+          where we'll build our program.
+      4:
+        image: notes/playlab_intro_4.png
+        text: To start off, you'll need to link your blocks to the orange "when run"
+          block. You can link multiple blocks together by dragging them out until
+          you see the yellow line, and then they'll snap together.
+      5:
+        image: notes/playlab_intro_5.png
+        text: In this first puzzle, our actor is a penguin and we'll be making it
+          say "Hello!" by dragging the say block out, linking it to the when run block,
+          and typing in "Hello." We can also make the penguin move by using the move
+          right and move left blocks. Once you have your blocks in place, hit the
+          run button to see what you've programmed.
+      6:
+        image: notes/playlab_intro_6.png
+        text: Get started and by the end, you'll be able to create your own game with
+          all kinds of players that can interact, turn happy or sad, score points,
+          or throw fireballs, or even vanish each other. It's all up to you and the
+          game you want to make.
+    playlab_events:
+      1:
+        image: notes/playlab_events_1.png
+        text: Now, we're going to learn about something that all game programmers
+          use everyday. They're called events. An event tells your program to listen
+          for when something happens. When that thing happens, it performs an action.
+      2:
+        image: notes/playlab_events_2.png
+        text: Some examples of events are listening for a mouse click, an arrow button,
+          or a tap on the screen.
+      3:
+        image: notes/playlab_events_3.png
+        text: Here, we're going to make the space bot greet the earthlings when a
+          player clicks on him. We'll use the "when clicked" block and attach the
+          "say" block to it. When the player clicks on the space bot, everything attached
+          to this "when clicked" event block will be performed. What does your alien
+          say?
+      4:
+        image: notes/playlab_events_4.png
+        text: There are also "when arrow" blocks. If you link the "move" blocks to
+          these, you can start to move your actors up, down, left, or right. Step
+          by step, your game is getting more interactive.
+    playlab_repeat_forever:
+      1:
+        image: notes/playlab_repeat_forever_1.png
+        text: This is the "repeat forever" block. Anything inside this block will
+          happen forever in the game.
+      2:
+        image: notes/playlab_repeat_forever_2.png
+        text: If we want an actor to do something repeatedly, without the player having
+          to do anything, we'll put those blocks inside the "repeat forever" block.
+      3:
+        image: notes/playlab_repeat_forever_3.png
+        text: In this next puzzle, our goal is to help the wizard patrol the boundaries
+          of the kingdom, left and right continuously. Learning how the repeat commands
+          works, will save you a ton of time later when you build your own game.

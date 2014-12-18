@@ -74,7 +74,7 @@
   thanks_for_voting: 感謝您的投票 ！
   share_on_facebook: 在 Facebook 上分享
   share_on_twitter: 在 Twitter 上分享
-  beyond_an_hour: 超越編程一小時
+  beyond_an_hour: 一個小時的代碼的進階
   get_started: 開始
   i_agree: 我同意
   participant_select: -請選擇-
@@ -83,6 +83,9 @@
   participant_educator: 教育人員
   participant_engineer: 軟體工程師
   participant_other: 以上皆非
+  print_all: 全部列印
+  print_ice_art: 列印您的冰藝術作品
+  create_art_with_zombie: 或用僵屍製作進一部的藝術作品
   i_am_a: 我是
   never_spam: 我們永遠不會發送垃圾郵件
   enter_country: 如果在美國以外，輸入您的國家
@@ -119,6 +122,10 @@
   studiobar_flappy_body: 製作和分享你自己的Flappy遊戲
   studiobar_teacher_title: 為導師們製造
   studiobar_teacher_body: 在您的課室裡介紹編程工作室
+  studiobar_frozen_title: 一小時的程式設計課程
+  studiobar_frozen_body: 與安娜和埃爾莎創建一個冬季仙境
+  studiobar_donate_title: 捐贈
+  studiobar_donate_body: 一個孩子學習為你捐的每一分錢
   contact_form_topic_student: 我是位學生
   contact_form_topic_parent: 我是位家長
   contact_form_topic_teacher: 我是個老師/教育家
@@ -202,6 +209,12 @@
   dashboard_action_done: 完成
   dashboard_action_required: 必須的
   dashboard_navigation_home_page: 教師主頁
+  dashboard_navigation_section_student_progress: 學生戶口及進度
+  dashboard_navigation_section_teacher_progress: 您的課程進度
+  dashboard_navigation_section_lesson_plans: 教案和資源
+  dashboard_navigation_section_community: 説明和社區
+  dashboard_navigation_section_pd: 專業發展
+  dashboard_navigation_section_speakers: 電腦科學 <br/> 特邀演講者
   dashboard_navigation_all_sections: 學生戶口及進度
   dashboard_navigation_view_progress: 查看進度
   dashboard_navigation_add_students: 新增學生
@@ -296,7 +309,7 @@
   dashboard_sections_password_account_creation: 學生建立的文字密碼
   dashboard_sections_login_type_explanation: 本表協助説明您可以選擇的課程區段登入類型，<b>通關圖片、 通關密語或電子郵件</b>。
   dashboard_faq: 常見問題集
-  code_hoc_coming: Hour of Code活動將於12 月 8-14日登場 ！
+  code_hoc_coming: 代碼小時就在這裡 — — 12 月 8-14 ！
   code_sign_up: 註冊參與電腦科學教育週
   learn_more: 瞭解更多資訊
   hoc2014_try_new_tutorials: 試試我們新的Hour of Code活動教案
@@ -306,7 +319,7 @@
   carousel_heading_international: 使用你語言的教程
   carousel_heading_domestic: 可用的在英語教程
   carousel_heading_beginners: 適合初學者的教程
-  carousel_heading_javascript: 教 JAVAscript 的教案
+  carousel_heading_javascript: 教 JAVAscript 的自學教案
   carousel_heading_unplugged: 沒有設備或網際網路嗎？試試 '不插電'的電腦科學
   carousel_heading_devices: 手機和平板電腦的自學APPs
   carousel_heading_languages: 其他程式設計語言的自學教案
@@ -319,7 +332,7 @@
   more_resources_educators: 給教師和教育工作者的更多資源
   participants: 參與者
   teachers_notes: 老師的重要提示
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: 教師： 閱讀重要教育家筆記在這裡
   previous: 上一項
   next: 下一項
   older_systems: 用於舊系統的自學教案
@@ -332,6 +345,10 @@
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: JavaScript 簡介
   khanes_name: JavaScript 簡介
+  khanpt_name: JavaScript 簡介
+  khanhe_name: JavaScript 簡介
+  khanfr_name: JavaScript 簡介
+  khanpl_name: JavaScript 簡介
   tynker_name: 建立你自己的遊戲
   scratch_name: 用程式設計發揮創意
   lightbot_name: Lightbot
@@ -360,12 +377,17 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: 剪刀、石頭，布
-  frozen_gradelevel: 適合年齡８歲以上
+  hourofcode_name: 新的 code.org/hoc 的預留位置
+  playlab_name: 播放實驗室
   codeorg_gradelevel: 適合年齡自 4 至104歲
   codeintl_gradelevel: 適合年齡自 4 至104歲
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: 中學以上
   khanes_gradelevel: 中學以上
+  khanpt_gradelevel: 中學以上
+  khanhe_gradelevel: 中學以上
+  khanfr_gradelevel: 中學以上
+  khanpl_gradelevel: 中學以上
   tynker_gradelevel: 適合年齡自 5至13歲
   scratch_gradelevel: 適合年齡８歲以上
   lightbot_gradelevel: 適合所有年齢
@@ -394,21 +416,27 @@
   thinkersmith2_gradelevel: 適合年齡８歲以上
   kodableunplugged_gradelevel: 適合年齡自 8至13歲
   projguts_gradelevel: 10-13 歲
-  frozen_platformtext: 當代瀏覽器 + 平板電腦
+  hourofcode_gradelevel: 適合年齡自 4 至104歲
+  frozen_gradelevel: 適合年齡８歲以上
+  playlab_gradelevel: 適合年齡自 4 至104歲
   codeorg_platformtext: 當代的瀏覽器、 智慧型手機、 平板電腦
   codeintl_platformtext: 當代的瀏覽器、 智慧型手機、 平板電腦
   thinkersmithspanish_platformtext: 不插電的
   khan_platformtext: 當代 Web 瀏覽器
   khanes_platformtext: 當代 Web 瀏覽器
-  tynker_platformtext: Modern web browsers
-  scratch_platformtext: 所有瀏覽器
+  khanpt_platformtext: 當代 Web 瀏覽器
+  khanhe_platformtext: 當代 Web 瀏覽器
+  khanfr_platformtext: 當代 Web 瀏覽器
+  khanpl_platformtext: 當代 Web 瀏覽器
+  tynker_platformtext: 當代 Web 瀏覽器
+  scratch_platformtext: 僅桌面 web 瀏覽器 (而不是平板電腦)
   lightbot_platformtext: 所有瀏覽器和 iOS、 Android系統或遊戲器
   thinkersmith_platformtext: 不插電的
   condcards_platformtext: 非不插電
   lightbotintl_platformtext: iOS，Android系統 （或 web 瀏覽器）
-  codehs_platformtext: Modern browsers
+  codehs_platformtext: 現代的瀏覽器。(後續課程需要 $$)
   codecademy_platformtext: 當代 web 瀏覽器。iOS，Android Apps。
-  codecombat_platformtext: 當代 Web 瀏覽器
+  codecombat_platformtext: 現代的瀏覽器。(後續課程需要 $$)
   codemonkey_platformtext: 當代 Web 瀏覽器
   codeavengers_platformtext: 當代 Web 瀏覽器
   processing_platformtext: 當代 Web 瀏覽器
@@ -428,12 +456,18 @@
   thinkersmith2_platformtext: 不插電的
   kodableunplugged_platformtext: 不插電的
   projguts_platformtext: 不插電的
-  frozen_shortdescription: 讓我們使用程式碼加入安娜(Anna)和愛莎(Elsa)一同探索神奇而美麗的冰。
+  hourofcode_platformtext: 當代的瀏覽器、 智慧型手機、 平板電腦
+  frozen_platformtext: 當代瀏覽器 + 平板電腦
+  playlab_platformtext: 當代的瀏覽器、 智慧型手機、 平板電腦
   codeorg_shortdescription: 與Facebook創辦人馬克 · 佐伯克及憤怒的小鳥一起學習程式碼 ！
   codeintl_shortdescription: 與Facebook創辦人馬克 · 佐伯克及憤怒的小鳥一起學習程式碼 ！
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: 用 JavaScript 語言學習繪圖
   khanes_shortdescription: 用 JavaScript 語言學習繪圖
+  khanpt_shortdescription: 用 JavaScript 語言學習繪圖
+  khanhe_shortdescription: 用 JavaScript 語言學習繪圖
+  khanfr_shortdescription: 用 JavaScript 語言學習繪圖
+  khanpl_shortdescription: 用 JavaScript 語言學習繪圖
   tynker_shortdescription: 透過有趣的拼圖學習程式碼，以及建立您自己的手機遊戲。
   scratch_shortdescription: 建立互動遊戲、 故事和動畫。
   lightbot_shortdescription: ' 用Lightbot的程序和迴圈程式來解謎題 ！'
@@ -443,8 +477,7 @@
   codehs_shortdescription: 與Karel狗開始程式設計，一個有趣的視覺化程式設計介紹 ！
   codecademy_shortdescription: 在 web 瀏覽器中學習 JavaScript 程式設計。
   codecombat_shortdescription: 在這個史詩般的電腦遊戲中，打敗食人魔並學會 Python 或 JavaScript 程式語言！
-  codemonkey_shortdescription: Students program a monkey to catch bananas while it
-    gets slightly more complicated on each level.
+  codemonkey_shortdescription: 學生節目一隻猴子趕上香蕉。
   codeavengers_shortdescription: 在 web 瀏覽器中學習 JavaScript 程式設計。
   processing_shortdescription: 語言處理器的一小時自學教案
   robomind_shortdescription: 為虛擬機器器人編寫程式碼
@@ -452,33 +485,32 @@
   quorum_shortdescription: 與瑪麗(Mary)在導覽旅遊中一起學習Quorum程式語言。
   codespark_shortdescription: Foos是一個有趣而適合孩子的遊戲，用以學習程式設計。
   kodable_shortdescription: 一個教授電腦程式設計概念的有趣 iPad 的遊戲
-  tynkerapp_shortdescription: Learn to code by solving fun puzzles and build your
-    own mobile games.
+  tynkerapp_shortdescription: '學習程式設計求解樂趣編碼的難題。 '
   robomindnl_shortdescription: 為虛擬機器器人編寫程式碼
   flappy_shortdescription: 用Flappy鳥、鯊魚或潛艇設計出自己的遊戲
-  bitsbox_shortdescription: 使用真正的 JAVAscript 程式碼設計一系列的App來玩及分享。
+  bitsbox_shortdescription: 編寫一系列的Apps代碼來播放和共用，使用真正的 JavaScript 。
   makegameswithus_shortdescription: 設計一個 iPhone 遊戲 ！學習用程式碼來教你的怪物移動 ！
-  touchdevelop_shortdescription: Code mobile apps directly on your phone, tablet or
-    laptop
+  touchdevelop_shortdescription: 解謎，建立遊戲，和學習程式碼都在您的手機上完成。
   appinventor_shortdescription: 建立自己的應用程式 ！（只限安卓系統）
   blockly_shortdescription: 下載 ZIP 檔，以瞭解離線
   thinkersmith2_shortdescription: 瞭解電腦如何使用 0 和 1 來表示的資訊
   kodableunplugged_shortdescription: 一個有趣的拔出練習
   projguts_shortdescription: 嘗試建模與模擬使用石頭/布/剪刀
-  frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
-    magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
-    and make a winter wonderland that you can then share with your friends!
+  hourofcode_shortdescription: 新的 code.org/hoc 的預留位置
+  frozen_shortdescription: 讓我們使用程式碼加入安娜(Anna)和愛莎(Elsa)一同探索神奇而美麗的冰。
+  playlab_shortdescription: 創建一個故事或做遊戲玩實驗室！
   codeorg_longdescription: 學習電腦科學與阻力的基本概念，並將程式設計。這是主演視頻講座由比爾 · 蓋茨、 馬克 · 朱克伯格、 憤怒的小鳥和植物大戰僵屍的遊戲一樣，自編自導自演的教程。瞭解重複迴圈、
     條件和基本演算法。在 34 種語言中可用。
   codeintl_longdescription: 學習電腦科學與阻力的基本概念，並將程式設計。這是主演視頻講座由比爾 · 蓋茨、 馬克 · 朱克伯格、 憤怒的小鳥和植物大戰僵屍的遊戲一樣，自編自導自演的教程。瞭解重複迴圈、
     條件和基本演算法。在 34 種語言中可用。
-  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
+  thinkersmithspanish_longdescription: 使用預先定義的"機器人字彙(Robot Vocabulary)" 學生將可不必先討論，即能理解如何引導彼此去完成特定的任務。此課程教導孩子建立符號及動作的連結、及非常具有價值的除錯技能。"我的機器人朋友(My
+    Robotic Friends)" 以群組方式活動最佳，其包含教師手冊給班級使用。
   khan_longdescription: 學習同時創造樂趣的 JavaScript 程式設計的基礎知識與您的代碼的圖紙。做你自己或你的類 ！
   khanes_longdescription: 學習同時創造樂趣的 JavaScript 程式設計的基礎知識與您的代碼的圖紙。做你自己或你的類 ！
+  khanpt_longdescription: 學習同時創造樂趣的 JavaScript 程式設計的基礎知識與您的代碼的圖紙。做你自己或你的類 ！
+  khanhe_longdescription: 學習同時創造樂趣的 JavaScript 程式設計的基礎知識與您的代碼的圖紙。做你自己或你的類 ！
+  khanfr_longdescription: 學習同時創造樂趣的 JavaScript 程式設計的基礎知識與您的代碼的圖紙。做你自己或你的類 ！
+  khanpl_longdescription: 學習同時創造樂趣的 JavaScript 程式設計的基礎知識與您的代碼的圖紙。做你自己或你的類 ！
   tynker_longdescription: 建立你自己的遊戲，與朋友分享 ！解決有趣的編碼拼圖和學習程式設計的概念，在每個級別。用動畫人物，多層次、 豐富的道具個人化遊戲。讓您的遊戲的現實使用物理。看到作為視覺塊或
     JavaScript 的代碼。把你的遊戲流通在 Ipad 和 Android 平板電腦。十幾個有趣的活動可供選擇 ！
   scratch_longdescription: 從頭開始，您可以創建您自己的互動遊戲、 故事、 動畫 &mdash; 和它們分享給你的朋友。開始通過動畫你的名字、
@@ -503,22 +535,15 @@
   codespark_longdescription: Foos是一個有趣的，以友好孩子的方式來學習電腦程式設計。設計可愛的人物來解決難題，並為生活帶來一個虛擬的世界。這場比賽是"不需言語的"，所以任何人都可以玩
     ！
   kodable_longdescription: Kodable 是一個自我引導的 iPad 遊戲，為 5 歲以上的 孩子介紹程式設計的基礎知識。最好有老師或家長的陪伴，但不是必需的。
-  tynkerapp_longdescription: Build your own games and share with friends! Solve fun
-    coding puzzles and learn programming concepts in each level. Personalize games
-    with animated characters, multiple levels and rich props. Lots of fun activities
-    to choose from!
+  tynkerapp_longdescription: 透過解決有趣的迷題學習程式設計。使用主題的圖形輕鬆地建構遊戲和故事，10 個以上的遊戲包和可自訂化的角色。不需連接網際網路。您也可以在
+    web 上取得您的創作。
   robomindnl_longdescription: 學生透過控制他們自己的虛擬機器器人學習程式設計的基礎知識。線上課程完整包含了簡短的簡報、 影片、 測驗與自動指導/提示來協助程式設計練習。
   flappy_longdescription: 使用拖放式的程式語言設計你自己Flappy鳥遊戲，並可自訂它不同的外觀 （Flappy鯊魚、Flappy聖誕老人、或任何角色）。只要按一下，就可將遊戲加到您的手機中。
   bitsbox_longdescription: 自訂您自己的虛擬平板電腦，然後編寫一系列的Apps來使用及分享。讓非常小的孩子透過簡單體驗來使用真正 JAVAscript
     ，成為可能的事，您會達到比您想到還遠。
-  makegameswithus_longdescription: Know some programming already? Learn to make an
-    iPhone game in an hour! We'll guide you through the process, to code, test, and
-    play your game entirely in the browser and then share it on Facebook for friends
-    to try! No prior iPhone development experience is required. You must understand
-    what variables, methods, and objects are.
-  touchdevelop_longdescription: Crazy drawings, flying monsters, swirling flowers...
-    create your apps on your device with TouchDevelop, a friendly mobile app creation
-    environment. Runs on iPhone, iPad, Android, Windows, Windows Phone, Linux, Mac.
+  makegameswithus_longdescription: 使用這個全新的、容易上手的，名為Swift的程式語言建立一個iPhone遊戲以學習程式設計!建立一個神奇&eacute;寶貝啟發的動作遊戲和編寫程式碼來教你的怪物移動。您將學習如何使用變數、
+    方法和物件，來協助你的怪物獲勝 ！
+  touchdevelop_longdescription: 觸控式螢幕友好編輯器將引導您創造像素藝術、 解決熊謎題，或者建立你自己的跳躍鳥遊戲。
   appinventor_longdescription: 娛樂、 簡短的影片教案引導您在您的 Android 手機或平板電腦上完成建立三個簡單的APPs程式。它設計給新手和專家，此Hour
     of Code活動讓你開始建構自己的Apps，在你瞭解它之前。想像一下與朋友分享您自己創造的應用程式 ！這些活動適合個人自學和教師帶領的班級課程。
   blockly_longdescription: 您有網際網路連線很慢（或根本不存在）的電腦嗎？下載 Blockly 的自學教案 ，Code.org 教案的前輩元老
@@ -526,6 +551,11 @@
   thinkersmith2_longdescription: 學生以打開和關閉的功能學習如何在二進位檔案中表示和儲存字元。結束時，此課程獲取自己名字的編碼帶回家。
   kodableunplugged_longdescription: 使用普通紙的設計，fuzzFamily Frenzy教導 5 歲以上的孩子的程式設計邏輯。老師應解釋這個遊戲，然後學生作伴來完成一個簡單的障礙課程。
   projguts_longdescription: 這次"不插電"活動由一群學生玩不同版本的剪刀 / 石頭 / 布的遊戲，以協助學生學習如何建模與模擬運作原理，並查看結果作為不同的建模實驗。
+  hourofcode_longdescription: 新的 code.org/hoc 的預留位置
+  frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
+    magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
+    and make a winter wonderland that you can then share with your friends!
+  playlab_longdescription: 創建一個故事或讓與發揮實驗室的遊戲!使動物，海盜，僵屍，忍者，和更多的角色移動，發出的聲音，得分，和甚至投擲火球!
   codeorg_beyond_name: 介紹電腦科學 (學齡前到8 年級）
   khan_beyond_name: 學習電腦程式設計
   tynker_beyond_name: 在家學習程式設計
@@ -707,94 +737,40 @@
   codehs_beyond_longdescription: 學習通過Karel程式設計的基礎知識狗，編碼，給一台電腦的命令在哪裡就像給一隻狗的命令有趣、 無障礙和視覺上的簡介。本教程是偉大的如果由一名教師，但是也可以獨立完成。[注：
     付款是必需]
   udemy_beyond_longdescription: 是否你從未見過一行代碼或你代碼的人，Udemy 將對你的專業導師授課的課程。[注： 付款是必需]
-  lynda_beyond_longdescription: 'Learn how to code, create, and build web applications,
-    from the foundations of object-oriented programming in C and C++, to how to write
-    Java. Our developer tutorials can help you learn to develop and create mobile
-    apps, work with PHP and MySQL databases, get started with the statistical processing
-    language R, and much more. [Note: payment is required]'
-  edx_beyond_longdescription: CS50x is Harvard College's introduction to the intellectual
-    enterprises of computer science and the art of programming for majors and non-majors
-    alike, with or without prior programming experience. Topics include abstraction,
-    algorithms, data structures, encapsulation, resource management, security, software
-    engineering, and web development. Languages include C, PHP, and JavaScript plus
-    SQL, CSS, and HTML. The on-campus version of CS50x is Harvard's second-largest
-    course.
-  coursera_beyond_longdescription: 'Stanford''s CS 101 class taught by Nick Parlante
-    (FREE!). CS101 teaches the essential ideas of Computer Science for a zero-prior-experience
-    audience. Play and experiment with short bits of code to bring to life to the
-    power and limitations of computers. CS101 also provides a general background on
-    computers today: what is a computer, what is hardware, what is software, what
-    is the internet. No previous experience is required other than the ability to
-    use a web browser.'
-  udacity_beyond_longdescription: In this course you will learn key concepts in computer
-    science and learn how to write your own computer programs in the context of building
-    a web crawler. There is no prior programming knowledge needed for this course.
-    Beginners are welcome! At the end of this course, you will have learned key concepts
-    in computer science and enough programming to be able to write Python programs
-    to solve problems on your own. This course will prepare you to move on to intermediate-level
-    computing courses.
-  teachingtree_beyond_longdescription: TeachingTree is an open platform that lets
-    anybody organize educational content. Our goal is for students to quickly access
-    the exact clips they need in order to learn individual concepts. Everyone is encouraged
-    to help by adding videos or tagging concepts.
-  kodu_beyond_longdescription: Kodu lets kids create games on the PC and XBox via
-    a simple visual programming language. Kodu can be used to teach creativity, problem
-    solving, storytelling, as well as programming. Anyone can use Kodu to make a game,
-    young children as well as adults with no design or programming skills. Kodu for
-    the PC is available to download for free. Kodu for the XBox is also available
-    in the USA on the XBox Marketplace, in the Indie Games channel for about $5.
-  cargobot_beyond_longdescription: Cargo-Bot is a puzzle game where you teach a robot
-    how to move crates. Sounds simple, right? It features 36 fiendishly clever puzzles,
-    haunting music and stunning retina graphics. You can even record your solutions
-    and share them on YouTube to show your friends.
-  kidsruby_beyond_longdescription: 'Have fun and make games, or hack your homework
-    using Ruby! Just tell your parents or teachers you''re learning Ruby programming...
-    ;). Free and works on any computer. [Note: Desktop install required]'
-  w3schools_beyond_longdescription: Learn to create websites on your own computer.
-    Learn the server basics in less than a day. Learn to add databases to your website
-  codeavengers_beyond_longdescription: Learn how to program games, apps and websites.
-    Designed by experts with perfect level of difficulty for beginners, easy to understand
-    instructions and great help when you need it. Our HTML, CSS and JavaScript courses
-    include code challenges and revision games that make learning fun and effective
-    for all ages.
-  mozilla_beyond_longdescription: Thimble makes it ridiculously simple to create and
-    share your own web pages. Write and edit HTML and CSS right in your browser, then
-    instantly preview your work. Host and share your finished projects with a single
-    click. Perfect for beginners and experts alike.
-  codecombat_beyond_longdescription: Play as a Wizard using code (spells) to control
-    your heroes, navigate mazes, defeat ogres, trick enemies, and rescue allies! Learn
-    JavaScript in this HTML 5 web game for complete beginners.
-  codea_beyond_longdescription: Codea for iPad lets you create games and simulations&mdash;or
-    just about any visual idea you have. Turn your thoughts into interactive creations
-    that make use of iPad features like Multi-Touch and the accelerometer. We think
-    Codea is the most beautiful code editor you'll use, and it's easy. Codea is designed
-    to let you touch your code. Want to change a number? Just tap and drag it. How
-    about a color, or an image? Tapping will bring up visual editors that let you
-    choose exactly what you want.
-  lego_beyond_longdescription: Create small, customizable and programmable robots
-    using LEGO pieces.
-  finch_beyond_longdescription: The Finch is a new robot for computer science education.
-    Its design is the result of a four year study at Carnegie Mellon's CREATE lab.
-    The Finch is designed to support an engaging introduction to the art of programming.
-    It has support for over a dozen programming languages and environments, including
-    several environments appropriate for students as young as eight years old. The
-    Finch was designed to allow students to write richly interactive programs.
-  arduino_beyond_longdescription: Arduino is an open-source electronics prototyping
-    platform based on flexible, easy-to-use hardware and software. It's intended for
-    artists, designers, hobbyists, and anyone interested in creating interactive objects
-    or environments.
-  processing_beyond_longdescription: Processing is a programming language, development
-    environment, and online community. Since 2001, Processing has promoted software
-    literacy within the visual arts and visual literacy within technology. Initially
-    created to serve as a software sketchbook and to teach computer programming fundamentals
-    within a visual context, Processing evolved into a development tool for professionals.
-    Today, there are tens of thousands of students, artists, designers, researchers,
-    and hobbyists who use Processing for learning, prototyping, and production.
-  alice_beyond_longdescription: Using an innovative programming environment to support
-    the creation of 3D animations, the Alice Project provides tools and materials
-    for teaching and learning computational thinking, problem solving, and computer
-    programming across a spectrum of ages and grade levels.
-  sphero_beyond_longdescription: Schools, Parents, Robots & Kids. We created the SPRK
-    program because we believe play is a powerful teacher. Whether you're an educator
-    or a parent, SPRK lessons give kids a fun crash course in programming robots while
-    sharpening their skills in math and science.
+  lynda_beyond_longdescription: 瞭解如何編寫程式碼、 建立和建構 web 應用程式，從 C 和 c + + 物件導向程式語言的基礎到如何編寫
+    JAVA。我們的開發人員教案可以協助你學習開發和建立行動APPs，使用 PHP 和 MySQL 資料庫，從統計處理語言 R 開始和更多。[注意： 必需付費]
+  edx_beyond_longdescription: CS50x 是哈佛大學針對主修和非主修學生介紹電腦科學和程式藝術的課程，不論有或沒有程式設計經驗。主題包括抽象化、
+    演算法、 資料結構、 封裝、 資源管理、 安全、 軟體工程和網頁程式開發。程式語言包括 C、 PHP 和 JavaScript 加上 SQL、 CSS 和
+    HTML。關於校園版本的 CS50x 是哈佛大學的第二大的課程。
+  coursera_beyond_longdescription: 史丹佛大學尼克 • 帕蘭蒂(Nick Parlante)講授的的 CS 101 課堂 （免費）
+    ！。CS101 為沒有任何基礎經驗的聽眾教授電腦科學的基礎概念。玩及體驗簡短的程式碼讓學生體會電腦的能量與限制。CS101 還提供了今日電腦的一般背景概念：
+    什麼是電腦，什麼是硬體、軟體，什麼是互聯網。不需要經驗，僅需使用 web 瀏覽器的能力。
+  udacity_beyond_longdescription: 在此課程中你將學習在電腦科學中的關鍵概念，並學習如何在建設網路編目程式的上下文中編寫您自己的電腦程式。沒有事先的程式設計知識，需要對這門課程。初學者，歡迎
+    ！在本課程結束，你將會學習電腦科學和足夠的程式設計必須能夠編寫 Python 程式，以解決自己的問題中的關鍵概念。本課程將為你繼續前進到中級電腦課程。
+  teachingtree_beyond_longdescription: TeachingTree 是一個開放的平臺，可以讓組織教育的內容。我們的目標是讓學生可以快速訪問他們所需學習個體概念的確切剪輯。每個人都被鼓勵説明通過添加視頻或標記的概念。
+  kodu_beyond_longdescription: Kodu 讓孩子們通過一種簡單的視覺化程式設計語言在 PC 和 XBox 上創建遊戲。Kodu 可以用來教創造力，問題解決，講故事，以及程式設計。任何人都可以使用
+    Kodu創建遊戲， 年輕的兒童與成年人一樣，沒有設計或程式設計技能的。在 pc 上運行 Kodu 是可供免費下載。Kodu xbox 平臺也是在美國在 XBox
+    的市場中，大約 5 美元的獨立遊戲通道中可用的。
+  cargobot_beyond_longdescription: 貨物 Bot 是一款益智遊戲在哪裡你教會機器人如何移動板條箱。聽起來很簡單，對嗎？其特點是 36
+    極其巧妙的謎題，縈繞的音樂和令人驚歎的視網膜圖形。你甚至可以記錄您的解決方案，並分享他們在 youtube 上展示你的朋友。
+  kidsruby_beyond_longdescription: 有樂趣和製作遊戲或駭客使用 Ruby 的功課 ！只是告訴你的父母或老師，你在學習 Ruby 程式設計...;)。自由和在任何電腦上工作。[注意：
+    桌面安裝所需]
+  w3schools_beyond_longdescription: 學習如何在您自己的電腦上創建網站。在不到一天學習伺服器基礎。瞭解如何將資料庫添加到您的網站
+  codeavengers_beyond_longdescription: 學習如何程式設計遊戲、 應用程式和網站。由對新手而言完美的難度級別的專家設計，容易理解指令和很大的説明，當你需要它。我們
+    HTML、 CSS 和 JavaScript 的課程包括代碼挑戰和使所有年齡段的學習樂趣和有效的修改遊戲。
+  mozilla_beyond_longdescription: 頂針使可笑的簡單地創建和共用您自己的 web 頁面。編寫和編輯 HTML 和 CSS 的權利在您的瀏覽器，然後即時預覽您的工作。主機和一個單一的點擊分享您已完成的專案。適合初學者和專家的一致好評。
+  codecombat_beyond_longdescription: 扮演一個嚮導使用代碼 (咒語) 來控制你的英雄，迷宮，打敗食人魔，欺騙敵人，和救援盟友 ！在此
+    HTML 5 web 遊戲為初學者學習 JavaScript。
+  codea_beyond_longdescription: Codea for iPad 讓你把你的構想變成遊戲和模擬程式 &mdash; 。利用iPad 的獨特功能如多點觸控和加速度計將你的想法變成的互動
+    的創作。我們認為Codea是一個很容易用很漂亮的程式編輯器。Codea讓你接觸你的程式。想要更改其中一個號碼？只需點擊並拖動它。如何更改一種顏色或者圖像？輕輕觸碰啟動視覺編輯器，讓你選擇你想要的。
+  lego_beyond_longdescription: 利用樂高塊創造小、 可自訂和可編程的機器人。
+  finch_beyond_longdescription: 芬奇(The Finch) 是一種用於計算機科學教育種的全新機器人。它是卡耐基梅隆大學創建實驗室進行四年研究的成果。芬奇的設計旨在利用吸引的方式介紹編程的藝術。它支援十多種不同和程式設計語言和開發環境，包括幾種適合八歲的學生使用的開發環境。芬奇的設計目的
+    是為了讓學生編寫豐富互動程式。
+  arduino_beyond_longdescription: Arduino 是一個流行的平台讓演出者和設計師與真實的感應器、 光二極管、 蜂鳴器 一起工作。Sparkfun
+    虛擬沙箱將教你利用 Arduino 在瀏覽器上編碼。
+  processing_beyond_longdescription: Processing 是程式設計語言，開發環境和線上社區。自2001 年以來，Processing
+    促進了軟體文化在視覺藝術和科學上的視覺設計導論。Processing 最初主要作為軟件速寫和教授視覺範疇上的基礎電腦程式設計，往後演變成了一個專業人員的開發工具。今天，有成千上萬的學生、
+    演出者、 設計師、 研究人員和愛好者用Processing 於學習、 開發樣板和生產產品。
+  alice_beyond_longdescription: 愛麗絲計劃利用一種創新的程式設計環境支援3D 動畫創作 ，及提供跨年齡和年級的教學工具和教材來訓練學生的計算思維、
+    解決問題技巧和電腦程式設計。
+  sphero_beyond_longdescription: 無論你是一位教育家或父母， SPRK 給孩子一個有趣速成的機器人程式設計課程，並同時磨練孩子的數學和科學的技能。

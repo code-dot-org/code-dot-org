@@ -36,6 +36,7 @@
   of: iš
   more: DAUGIAU
   less: MAŽIAU
+  beta: beta
   try_hoc: 'Išmėgink „Programavimo valandą“, spausk čia >> '
   try_k8intro: Išmėginkite mūsų programavimo įvado kursą (15-25 valandos)
   k8intro: Programavimo įvado kursas (15-25 valandos)
@@ -574,3 +575,7 @@
     completed_too_many_blocks: baigtas, panaudota per daug blokų
     completed_perfect: puikiai išspręsta
     furthest_level_attempted: išmėgintas aukščiausias lygis
+  studio:
+    courses_working_on: Courses you're working on
+    completed_courses: Completed courses
+    all_courses: All courses

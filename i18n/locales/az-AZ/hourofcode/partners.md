@@ -16,13 +16,13 @@ title: Tərəfdaşlar
 
 * * *
 
-# International Partners
+# Beynəlxalq tərəfdaşlar
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 * * *
 
-# Tutorial Partners
+# Dərslik tərəfdaşları
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 

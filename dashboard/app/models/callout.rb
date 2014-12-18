@@ -1,6 +1,6 @@
 class Callout < ActiveRecord::Base
   include Seeded
-  belongs_to :script_level
+  belongs_to :script_level, inverse_of: :callouts
   
   CSV_HEADERS = 
   {

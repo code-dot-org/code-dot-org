@@ -4,9 +4,9 @@ layout: wide
 
 * * *
 
-# Tutorial guidelines for the Hour of Code and Computer Science Education Week
+# คู่มือสอนสำหรับสัปดาห์ของชั่วโมงเขียนโปรแกรม และ วิทยาการคอมพิวเตอร์
 
-**The deadline to submit a tutorial for Hour of Code 2014 has passed. You may still submit an entry and we will try to review it if time allows.**
+**กำหนดเวลาการลงทะเบียนสอนชั่วโมงเขียนโปรแกรมปี 2014 ได้เลยมาแล้ว. คุณอาจยังลงทะเบียนเข้ามาได้ และ ทางเราจะพยายามพิจารณาถ้าหากยังทันเวลา.**
 
 Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
 

@@ -36,6 +36,7 @@
   of: 的
   more: 更多
   less: 更少
+  beta: 試用版
   try_hoc: 試試看一小時的程式設計課程，請按一下這裡 >>
   try_k8intro: 或試試我們提供給 K-8 的電腦科學簡介課程 (15-25 小時)
   k8intro: 'K 8 簡介電腦科學課程 （15-25 小時） '
@@ -59,7 +60,8 @@
     need_confirmation: 沒有收到確認說明嗎？
     need_unlock: 沒有收到解鎖說明嗎？
   signup_form:
-    overview_student: Sign up for an account to track your progress.
+    overview_student: 報名參加一個帳戶來跟蹤您的進度。您的電子郵件是主要用來讓您登錄和密碼恢復。更多的資訊，請參閱我們的 <a href="HTTP://code.org/privacy">
+      隱私政策</a>。
     overview_teacher: 通過註冊帳號開始在您的教室裡教資訊科學。 <p/>您將能夠將學生加入，並追蹤他們的學習進度。
     no_signup_message: 您可以從 <a target="_blank"href="HTTP://learn.code.org"> 瀏覽各個階段和關卡</a>，但您需要註冊一個帳號來保存您的進度。
     teacher_educator_guide: 請參閱教育者指南
@@ -82,9 +84,9 @@
     valid_password: 有效的密碼 ！
     invalid_password: 密碼必須要 6 個字元以上
     mismatch_password: 您輸入的兩次密碼不一樣
-    student_terms: 我同意遵守Code.org的服務條款。如果我的年齡小於13歲，當我按下確認鈕送出此表單的同時，表示我已經取得父母或法定監護人的允許來使用
-      Code.org 的服務。
-    teacher_terms: 我同意接受 Code.org服務條款的約束。
+    student_terms: 我同意 Code.org <a href='HTTP://code.org/tos'> 的服務條款</a> 的約束。如果我年齡是
+      13 歲以下的，我通過提交這份表格確認，我有我的父母或法定監護人的許可，使用 Code.org 服務。 <br/>對於使用者 13歲以下，電子郵件地址不存儲在一個允許我們與他們聯繫的表單，。
+    teacher_terms: 我同意 Code.org <a href='HTTP://code.org/tos'> 的服務條款</a> 的約束。
     additional_information: 我們還需要一些其他資訊來完成你的註冊
   signin_form:
     title: 你已經有一個帳號了嗎？請登入
@@ -183,14 +185,13 @@
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
       earned: 你贏得了獎品！（僅適用於美國學生）
-      not_earned_title: Finish the tutorial, earn rewards (U.S. students only)
+      not_earned_title: 完成本教程，賺取報酬 (僅適用于美國學生)
       not_earned: 學習所有的電腦科學概念，並收集完所有 %{num_trophies}個獎盃，就能獲得真實世界的獎品。您可以選擇 10 GB 的
         Dropbox 空間，10美元的Skype儲值或是免費遊戲下載。注意：獎項僅適用於美國學生，並僅有在獎品供應持續的情況下適用。
       teacher:
         earned: 15 個以上的學生已經收集完所有 %{num_trophies} 個獎盃。您贏得了教師獎章！(僅限美國教師)
-        not_earned_title: Teach the class, earn up to $1,000 in <a target="_blank"
-          href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
-          only)
+        not_earned_title: 該課程的教學，賺取高達 1,000 美元 <a target="_blank"href="HTTP://DonorsChoose.org">
+          DonorsChoose.org</a> 學分 (僅限美國教師)
         not_earned: |
           為了獎勵第一次參與電腦科學課程的教師，透過指導一整個班級進行K-8的入門課程，您將有機會贏取由<a href="http://DonorsChoose.org">DonorsChoose.org</a>所提供高達$1000美元的儲值。符合資格的門檻為，你必需指導班上超過15名學生完成K-8的入門課程，所有參加學生必需完成所有課程並獲取所有 %{num_trophies}個獎盃。如果有超過7個女學生獲得所有獎盃，獎勵為$1000美元<a href="http://DonorsChoose.org">DonorsChoose.org</a>儲值。其它情況獎勵為為$750美元<a href="http://DonorsChoose.org">DonorsChoose.org</a>儲值。<a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>儲值僅限美國公立學校教師使用。
         bonus:
@@ -277,10 +278,10 @@
         be required to provide an email address. If a student forgets their password,
         you will be able to reset it for them.
       register: Ask your students to register themselves
-      vist: Ask your students to visit
+      vist: 要求你的學生去參觀
       section_code: '並輸入他們的班級代碼:'
       first_please: 首先，請 %{add_section}
-      for: For
+      for: 為
       enter: 'enter:'
     sections:
       add: 增加班級
@@ -321,7 +322,7 @@
     show_more: 顯示更多
     classroom_activity: 不用電腦的活動
   home:
-    title: Code Studio
+    title: 程式工作室
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: 課程計畫
     signin_message: 已經註冊了? %{link}
@@ -457,9 +458,9 @@
       title: Gallery
       body: View a gallery of app and artist images created by our users
     frozen:
-      title: Frozen
+      title: 冰雪奇緣
   gallery:
-    students_drew_these_with_code: Students drew these with code!
+    students_drew_these_with_code: 學生用程式畫出這些圖案 ！
     students_made_these_with_code: Students made these with code!
     picture_count: In the past <b>%{days}</b> days, students have drawn <b>%{count}</b>
       pictures by writing their own computer programs. Click on the pictures to see
@@ -472,7 +473,7 @@
     caption_by_name_age: '%{name}, %{age} 歲'
     caption_time_ago: '%{time_ago} 前'
     header: Gallery
-    header_playlab: Play Lab
+    header_playlab: 播放實驗室
     header_artist: 畫家
   landing:
     prerelease: This page is still under development.
@@ -516,7 +517,7 @@
           title: 事件類別
           description: ''
         builder:
-          title: Builder
+          title: 生成器
           description: ''
         flappy:
           title: Flappy遊戲設計
@@ -547,3 +548,7 @@
     completed_too_many_blocks: 完成，但使用過多積木
     completed_perfect: 完美完成
     furthest_level_attempted: furthest level attempted
+  studio:
+    courses_working_on: Courses you're working on
+    completed_courses: Completed courses
+    all_courses: All courses

@@ -8,10 +8,6 @@ títol: Recursos maquetació: àmplia nav: recursos_nav
   <h1 class="col-sm-6">
     Recursos
   </h1>
-  
-  <div class="col-sm-6 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Sign up your event</button></a>
-  </div>
 </div>
 
 <% if @country == 'ie' %>
@@ -122,7 +118,7 @@ títol: Recursos maquetació: àmplia nav: recursos_nav
     </p>
     
     <p>
-      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/image/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     
     <p>
@@ -166,51 +162,51 @@ títol: Recursos maquetació: àmplia nav: recursos_nav
     </p>
     
     <h2>
-      Invite media to attend your event:
+      Convida als mitjans de comunicació a assistir al teu esdeveniment:
     </h2>
     
     <p>
-      <strong>Subject line:</strong> Local school joins mission to introduce 100m students to computer science
+      <strong>Línia d'assumpte:</strong> L'escola local s'uneix a la missió d'introduir 100m estudiants a la informàtica
     </p>
     
     <p>
-      Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and minorities are severely underrepresented. Good news is, we’re on our way to change this.
+      Els ordinadors són a pertot arreu, però menys escoles ensenyen informàtica que 10 anys enrere. Les nenes i les minories són severament subrepresentades. La bona notícia és, estem en el camí de canviar-ho.
     </p>
     
     <p>
-      In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+      L'any passat, 15 milions d'estudiants van provar la Informàtica en una setmana! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
     </p>
     
     <p>
-      Now the Hour of Code movement is aiming for 100 million students.
+      Ara el moviment l'Hora del Codi aspira a 100 milions d'estudiants.
     </p>
     
     <p>
-      That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 8-14.
+      És per això que cadascun dels [nombre X] estudiants de [nom de l'escola] s'estan unint al esdeveniment d'aprenentatge més gran de la història: L'Hora de Codi, durant desembre 8-14.
     </p>
     
     <p>
-      I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
+      Us convidem a assistir al acte inaugural i veure els nens començar l'activitat el [DATA].
     </p>
     
     <p>
-      The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a statement that today’s generation of students are ready to learn critical skills for 21st century success. Please join us.
+      L'Hora del Codi, organitzat per l'associació sense ànim de lucre Code.org i més de 100 d'altres, és una declaració de que la generació actual d'estudiants estan preparats per aprendre les habilitats crítiques per l'èxit al segle XXI. Si us plau, uneix-te.
     </p>
     
     <p>
-      <strong>Contact:</strong> [YOUR NAME], [TITLE], cell: (212) 555-5555
+      <strong>Contacte:</strong> [EL TEU NOM], [CÀRREC], mòbil: 212-555-5555
     </p>
     
     <p>
-      <strong>When:</strong> [DATE and TIME of your event]
+      <strong>Quan:</strong> [Data i hora del teu esdeveniment]
     </p>
     
     <p>
-      <strong>Where:</strong> [ADDRESS and DIRECTIONS]
+      <strong>On:</strong> [Adreces i indicacions]
     </p>
     
     <p>
-      I look forward to being in touch.
+      Espero que estem en contacte.
     </p>
     
     <p>
@@ -218,39 +214,39 @@ títol: Recursos maquetació: àmplia nav: recursos_nav
     </p>
     
     <h2>
-      Tell parents about your school's event:
+      Digues als pares sobre l'esdeveniment de la vostra escola:
     </h2>
     
     <p>
-      Dear Parents,
+      Benvolguts pares,
     </p>
     
     <p>
-      We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly hinge on understanding how technology works. But only a tiny fraction of us are learning computer science, and less students are studying it than a decade ago.
+      Vivim en un món envoltat de tecnologia. I sabem que qualsevol que sigui el camp que els alumnes escullin per entrar en l'edat adulta, la seva capacitat per tenir èxit cada vegada més dependrà de la comprensió de tinguin sobre com funciona la tecnologia. Però només una petita part de nosaltres estem aprenent Ciències de la Computació, i ara hi ha menys estudiants que fa una dècada.
     </p>
     
     <p>
-      That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
+      És per això que la nostra escola sencera s'uneix a l'esdeveniment d'aprenentatge més gran de la història: L'Hora del Codi, durant la setmana de les Ciències Informàtiques a l'Educació (Desembre 8-14). L'any passat, 15 milions d'estudiants provaren la informàtica en una setmana. Aquest any, estem reunint estudiants d'arreu del món per arribar a 100 milions d'estudiants!
     </p>
     
     <p>
-      Our Hour of Code is a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on your social media channels and consider hosting additional Hour of Code events in the community.
+      La nostre Hora del Codi és una declaració de que [nom de l'escola] està disposada a ensenyar aquestes habilitats fonamentals del segle XXI. Per continuar oferint activitats de programació als vostres estudiants, volem fer molt gran el nostre event de l'Hora del Codi. T'animo a ser voluntari, arribar als mitjans de comunicació locals, compartir les notícies en les teves xarxes social i considerar col·laborar en altres esdeveniments de l'Hora del Codi a la teva comunitat.
     </p>
     
     <p>
-      This is a chance to change the future of education in [TOWN/CITY NAME].
+      Aquesta és una oportunitat per canviar el futur de l'educació a [NOM CIUTAT/POBLE].
     </p>
     
     <p>
-      See http://hourofcode.com/<%= @country %> for details, and help spread the word.
+      Mira http://hourofcode.com/es/ca per a més detalls, i ajuda a córrer la veu.
     </p>
     
     <p>
-      Sincerely,
+      Atentament,
     </p>
     
     <p>
-      Your principal
+      El teu director
     </p>
     
     <p>
@@ -270,7 +266,7 @@ títol: Recursos maquetació: àmplia nav: recursos_nav
     </p>
     
     <p>
-      That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
+      És per això que la nostra escola sencera s'uneix a l'esdeveniment d'aprenentatge més gran de la història: L'Hora del Codi, durant la setmana de les Ciències Informàtiques a l'Educació (Desembre 8-14). L'any passat, 15 milions d'estudiants provaren la informàtica en una setmana. Aquest any, estem reunint estudiants d'arreu del món per arribar a 100 milions d'estudiants!
     </p>
     
     <p>
@@ -283,8 +279,4 @@ títol: Recursos maquetació: àmplia nav: recursos_nav
     
     <p>
       Sincerely, [NAME], [TITLE]
-    </p>
-    
-    <p>
-      <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up your event</button></a>
     </p>

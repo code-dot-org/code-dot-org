@@ -36,6 +36,7 @@
   of: из
   more: ЕЩЁ
   less: СВЕРНУТЬ
+  beta: beta
   try_hoc: Для участия в "Часе кода" нажми здесь >> 
   try_k8intro: Попробуйте наш курс "Введение в информатику" (15-25 часов)
   k8intro: Курс "Введение в информатику" (15-25 часов)
@@ -291,13 +292,13 @@
       add: Пригласить учеников
       remove: удалить ученика
       confirm_remove: Вы уверены, что хотите удалить этого ученика?
-      help_reassign: To divide your class into multiple sections, select students
-        to assign to a new section.
-      help_register: Instead of making you spend a lot of time individually importing
-        student data, you can set up your class quickly by asking them to signup.
-        Your students will need to choose usernames and passwords, but they WILL NOT
-        be required to provide an email address. If a student forgets their password,
-        you will be able to reset it for them.
+      help_reassign: Чтобы разделить класс на несколько групп выберите студентов и
+        привяжите их к новой группе.
+      help_register: Вместо того, чтобы терять время на добавление данных о своих
+        студентах, Вы можете быстро получить информацию о своих учениках попросив
+        их зарегистрироваться на сайте. Вашим студентам потребуется выбрать имя пользователя
+        и пароль, но им НЕ НУЖНО предоставлять адрес электронной почты. Если студент
+        забудет свой пароль, Вы будете иметь возможность сбросить пароль за него.
       register: Попросите ваших учеников зарегистрироваться самостоятельно
       vist: Предложите Вашим ученикам посетить
       section_code: 'and enter their section-code:'
@@ -487,12 +488,12 @@
       body: Попробуйте наш 20-часовой курс Введение в информатику.
     hoc2014:
       try_new_tutorial: Try our new Hour of Code tutorial in beta
-      try_frozen: Artist with Anna and Elsa, from Frozen
+      try_frozen: Рисуй вместе с Анной и Эльзой из "Холодного сердца"
     gallery:
       title: Галерея
       body: View a gallery of app and artist images created by our users
     frozen:
-      title: Frozen
+      title: '"Холодное сердце"'
   gallery:
     students_drew_these_with_code: Ученики нарисовали это с помощью кода!
     students_made_these_with_code: Сделано учениками с помощью кода!
@@ -580,11 +581,16 @@
       с третьими сторонами.
     sign_out: Если Вы не хотите предоставлять ваш возраст, Вы можете <a href="%{url}">
       выйти</a>.
-  zendesk_too_young_message: Sorry, younger users may not sign in to our support site.
-    You may browse <a href="http://support.code.org">support.code.org</a> without
-    signing in or ask your parent or teacher to contact us for you.
+  zendesk_too_young_message: Извини, но пользователи твоего возраста не могут авторизоваться
+    на нашем сайте технической поддержки. Ты можешь зайти на страницу <a href="http://support.code.org">support.code.org</a>
+    без авторизации или попросить своих родителей или учителя связаться с нами за
+    тебя.
   progress:
     not_completed: not completed
     completed_too_many_blocks: completed, too many blocks
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
+  studio:
+    courses_working_on: Courses you're working on
+    completed_courses: Completed courses
+    all_courses: All courses

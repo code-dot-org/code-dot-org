@@ -28,21 +28,22 @@ et:
     placeholder: Palun sisesta siia oma vihje
     submit: Lisa vihje
   appname: Code.org
-  stage: Stage
-  stage_number: 'Stage %{number}'
+  stage: Tase
+  stage_number: 'Tase %{number}'
   puzzle: Mõistatus
-  trophies: Trophies
+  trophies: Trofeed
   courses: Kursused
   of: of
   more: NÄITA ROHKEM
   less: NÄITA VÄHEM
+  beta: beta
   try_hoc: 'Proovi Koodi Tundi, kliki siia >> '
   try_k8intro: Try our K-8 Intro to Computer Science Course (15-25 hours)
   k8intro: K-8 Intro to Computer Science Course (15-25 hours)
   already_started: 'Already started? Resume here >> '
   demos: 'Admin: All Demos'
   continue: Jätka
-  prize: prize
+  prize: auhind
   more_info: Rohkem infot
   auth:
     sign_in_with: 'Sign in with %{provider}'
@@ -50,7 +51,7 @@ et:
     signed_out: 'You have signed out of <a href="%{url}">Code.org</a>.'
     sign_out_of: 'You used %{provider} to sign in. <a href="%{url}">Click here</a> to sign out of %{provider}.'
     already_signedup: Already signed up?
-    notyet_signedup: "Haven't joined yet?"
+    notyet_signedup: Pole veel liitunud?
     google_oauth2: Google Account
     twitter: Twitter
     facebook: Facebook
@@ -93,7 +94,7 @@ et:
     submit: Logi sisse
   signin:
     try_heading: Want to try coding without signing up?
-    try_hoc: Try one Hour of Code first
+    try_hoc: Proovi enne Tunni Koodi
     try_20hours: Try our 20 hour Intro to Computer Science
   signinsection:
     welcome: 'Welcome to %{section_name}'
@@ -251,7 +252,7 @@ et:
       not_tried: Not tried yet
       activity: 'Indicates student activity in the last %{hours} %{plural}'
       no_section: No assigned section
-      trophies: Trophies
+      trophies: Trofeed
     students:
       name: Nimi
       username: Kasutajanimi
@@ -509,3 +510,7 @@ et:
     completed_too_many_blocks: completed, too many blocks
     completed_perfect: tehtud, suurepärane
     furthest_level_attempted: furthest level attempted
+  studio:
+    courses_working_on: "Courses you're working on"
+    completed_courses: Completed courses
+    all_courses: All courses

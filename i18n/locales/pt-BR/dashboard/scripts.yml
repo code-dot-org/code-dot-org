@@ -41,8 +41,8 @@ pt-BR:
           "Bee: Loops": 'Abelha: Laços'
           "Studio: Create a Story": 'Laboratório: Crie uma história'
           "Artist: Loops": 'Artista: Laços'
-          description_audience: Ages 4+ (pre-readers)
-          description_short: Course 1 is designed for early readers.
+          description_audience: A partir de 4 anos (para crianças que ainda não leem)
+          description_short: O Curso 1 é destinado às crianças que estão aprendendo a ler.
         course2:
           The Maze: O Labirinto
           Suzi: Suzi
@@ -80,8 +80,8 @@ pt-BR:
           "Artist: Sequence2": 'Artista: Sequência 2'
           "Maze: Sequence2": 'Labirinto: Sequência 2'
           "Artist: Nested Loops": 'Artista: Laços Aninhados'
-          description_audience: 'Ages  6+ (reading required)'
-          description_short: Course 2 is designed for students who can read.
+          description_audience: A partir de 6 anos (as crianças já devem saber ler)
+          description_short: O Curso 2 é destinado aos alunos que já sabem ler.
         course3:
           The Maze: O Labirinto
           "Studio: Create a Story": 'Laboratório: Crie uma história'
@@ -131,8 +131,8 @@ pt-BR:
           "Bee: Debugging2": 'Abelha: Depuração2'
           "Artist: Patterns": 'Artista: padrões'
           Songwriting: Composição
-          description_audience: Ages 8+ (after Course 2)
-          description_short: Course 3 is a follow-up to Course 2.
+          description_audience: A partir de 8 anos (após o Curso 2)
+          description_short: O Curso 3 é uma continuação do Curso 2.
         msm:
           title: Matemática para o ensino médio
           description: Trabalho privado em andamento para matemática do ensino médio.
@@ -201,7 +201,7 @@ pt-BR:
           Maze: Labirinto
           title: Hora do Código
           description: Conheça os conceitos básicos da ciência da computação com os personagens do Angry Birds, Plants vs. Zombies e com o Scrat, da Era do Gelo!
-          description_short: Try the basics of computer science with many fun characters!
+          description_short: Conheça os conceitos básicos da ciência da computação com a ajuda de vários personagens divertidos!
         frozen:
           title: Programação com Anna e Elsa
           description: Vamos usar programação para explorar a magia e a beleza do gelo junto com Anna e Elsa. Você vai criar flocos de neve e padrões enquanto patina no gelo e cria um país das maravilhas congelante que pode compartilhar com seus amigos!
@@ -235,7 +235,7 @@ pt-BR:
           Farmer Binary: 'Fazendeira: binário'
           Maze and Bee: Labirinto e abelha
           Artist Binary: 'Artista: binário'
-          description_audience: Ages 10+ (after Course 3)
+          description_audience: A partir de 10 anos (após o Curso 3)
         Course4pre:
           description_short: Uma breve revisão dos conceitos para os alunos que não fizeram os Cursos 2 e 3.
           Course 4 Prerequisite: Pré-requisitos para o Curso 4
@@ -281,3 +281,13 @@ pt-BR:
           description: Uma seleção de níveis do Curso 4 para o teste de usabilidade.
           Variables: Variáveis
           For Loops: Laços for
+        potus:
+          title: especial
+          description_short: especial
+          description: especial
+          Special: Especial
+        special:
+          title: especial
+          description_short: especial
+          description: especial
+          Special: Especial

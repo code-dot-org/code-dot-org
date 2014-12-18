@@ -12,76 +12,76 @@ fr:
           description: Just an internal test course.
         course1:
           "Jigsaw: Learn to drag and drop": 'Puzzle : Apprendre à faire un glisser-déposer'
-          "Maze: Sequence": 'Maze: Sequence'
-          "Maze: Debugging": 'Le Labyrinthe : débogage'
+          "Maze: Sequence": 'Labyrinthe : Parcours'
+          "Maze: Debugging": 'Labyrinthe : Le débogage'
           "Artist 1: Intro": 'Artiste 1: Intro'
           Artists 2: Artistes 2
           Spelling Bee: Spelling Bee
           Spelling Bee not blockly: Spelling Bee not blockly
           "Bee 1: Intro": 'Abeille 1: Intro'
-          "Maze 2: Loops": 'Labyrinthe 2 : boucles'
+          "Maze 2: Loops": 'Labyrinthe 2 : Les boucles'
           "Bee 2: Loops": 'Abeille 2: boucles'
           Multi & Match: 'Multi & Match'
           K-1 Flappy: K-1 Flappy
           Flappy non blockly: Flappy non blockly
-          title: Course 1
+          title: Cours 1
           Artist 2: "L'Artiste 2"
           Happy Maps: Happy Maps
           Move it, Move it: Move it, Move it
-          "Real-life Algorithms: Plant a Seed": 'Real-life Algorithms: Plant a Seed'
+          "Real-life Algorithms: Plant a Seed": 'Les algorithmes : Planter une graine'
           Building a Foundation: Building a Foundation
           Getting Loopy: Getting Loopy
-          The Big Event: The Big Event
+          The Big Event: Le Grand Evénement
           Going Places Safely: Going Places Safely
           description: Course 1 is designed to allow early readers to create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.
           "Bee: Sequence": 'Bee: Sequence'
           "Artist: Sequence": 'Artist: Sequence'
           "Artist: Shapes": "L'Artiste : les Formes"
-          "Maze: Loops": 'Maze: Loops'
-          "Bee: Loops": 'Bee: Loops'
+          "Maze: Loops": 'Labyrinthe : les boucles'
+          "Bee: Loops": 'Abeille : Les boucles'
           "Studio: Create a Story": 'Labo: Créer une histoire'
-          "Artist: Loops": 'Artist: Loops'
-          description_audience: Ages 4+ (pre-readers)
-          description_short: Course 1 is designed for early readers.
+          "Artist: Loops": 'Artiste : Les boucles'
+          description_audience: 4 ans et plus
+          description_short: "Le cours 1 s'adresse aux élèves qui commencent à lire."
         course2:
           The Maze: Le labyrinthe
           Suzi: Suzi
           The Artist: "L'Artiste"
-          Artist Debugging: Artist Debugging
+          Artist Debugging: Artiste et le débogage
           Bounce: Rebond
           "Studio: Create a Story": 'Labo: Créer une histoire'
-          Artist Loops: Artist Loops
+          Artist Loops: Artiste et boucles
           Bee Conditionals: Abeilles et instructions conditionnelles
           Flappy: Flappy
           title: Cours 2
           Bee Loops: Abeilles et boucles
           Artist Functions: 'Artiste : les fonctions'
-          The Artist Debugging: The Artist Debugging
-          Bee Debugging: Abeilles et debugging
+          The Artist Debugging: Artiste et le débogage
+          Bee Debugging: Abeilles et débogage
           Bee Functions: Abeilles et fonctions
           Maze Loops: Labyrinthe et boucles
           Graph Paper Programming: Programmation sur papier quadrillé
-          "Real-life Algorithms: Paper Planes": 'Real-life Algorithms: Paper Planes'
+          "Real-life Algorithms: Paper Planes": 'Les algorithmes : Les avions en papier'
           Getting Loopy: Getting Loopy
-          Relay programming: Relay programming
+          Relay programming: Les relais
           Conditionals: Instructions conditionnelles
-          Binary Bracelets: Binary Bracelets
-          The Big Event: The Big Event
-          Your Digital Footprint: Your Digital Footprint
+          Binary Bracelets: Les bracelets binaires
+          The Big Event: Le Grand Evénement
+          Your Digital Footprint: Votre empreinte numérique
           description: "Le cours 2 s'adresse aux élèves qui savent lire et n'ont aucune expérience en programmation. Dans ce cours les élèves créeront des programmes pour résoudre des problèmes et de développer des jeux interactifs qu'ils pourront partager. Recommandé pour les CE1-CM2."
-          "Maze: Sequence": 'Maze: Sequence'
+          "Maze: Sequence": 'Labyrinthe : Parcours'
           "Artist: Sequence": 'Artist: Sequence'
-          "Maze: Loops": 'Maze: Loops'
-          "Artist: Loops": 'Artist: Loops'
-          "Bee: Loops": 'Bee: Loops'
-          "Bee: Debugging": 'Abeilles : le debugging'
-          "Artist: Debugging": 'Artist: Debugging'
+          "Maze: Loops": 'Labyrinthe : les boucles'
+          "Artist: Loops": 'Artiste : Les boucles'
+          "Bee: Loops": 'Abeille : Les boucles'
+          "Bee: Debugging": 'Abeilles : Le débogage'
+          "Artist: Debugging": 'Artiste : Le débogage'
           "Bee: Conditionals": 'Abeille : les instructions conditionnelles'
           "Artist: Sequence2": 'Artiste : Séquence2'
-          "Maze: Sequence2": 'Labyrinthe : Séquence2'
+          "Maze: Sequence2": 'Labyrinthe : Parcours2'
           "Artist: Nested Loops": 'Artiste : les boucles imbriquées'
-          description_audience: 'Ages  6+ (reading required)'
-          description_short: Course 2 is designed for students who can read.
+          description_audience: 6 ans et + (lecture indispensable)
+          description_short: "Cours 2 s'adresse aux élèves qui savent lire."
         course3:
           The Maze: Le labyrinthe
           "Studio: Create a Story": 'Labo: Créer une histoire'
@@ -92,7 +92,7 @@ fr:
           Artist Nested Loops: 'Artiste : boucles imbriquées'
           Bee Conditionals: Abeilles et instructions conditionnelles
           Bee Nested Loops: 'Abeille : boucles imbriquées'
-          Bee Debuggin: 'Abeilles : debugging'
+          Bee Debuggin: Abeilles et le débogage
           Bee Debugging: Abeilles et debugging
           Bee Functions: Abeilles et fonctions
           Artist Functions with Params: 'Artiste : fonctions avec paramètres'
@@ -105,7 +105,7 @@ fr:
           Dice Race: Dice Race
           Internet: Internet
           Crowdsourcing: Financement participatif
-          Digital Citizenship: Digital Citizenship
+          Digital Citizenship: Citoyenneté numérique
           Farmer - While Loops: 'Fermier - les boucles "tant que"'
           description: "Le cours 3 s'adresse aux élèves qui ont suivi le cours 2. Les élèves vont approfondir les concepts de programmation vus dans les cours précédents pour résoudre des problèmes plus complexes. A la fin de ce cours, les élèves pourront créer des histoires interactives et des jeux qu'ils pourront partager avec leurs amis. Recommandé pour les CM1-CM2."
           "Studio: Create a Game": 'Laboratoire : Créer un jeu'
@@ -128,22 +128,22 @@ fr:
           "Artist: Nested Loops2": 'Artiste : les boucles imbriquées 2'
           "Farmer: While Loops2": 'Fermier : les boucles "tant que" 2'
           "Bee: Nested Loops2": 'Abeille : les boucles imbriquées 2'
-          "Bee: Debugging2": 'Bee: Debugging2'
+          "Bee: Debugging2": 'Abeilles : Le débogage 2'
           "Artist: Patterns": 'Artist: Patterns'
           Songwriting: Écriture de chansons
-          description_audience: Ages 8+ (after Course 2)
+          description_audience: 8 ans et + (après le cours 2)
           description_short: Course 3 is a follow-up to Course 2.
         msm:
           title: Middle School Math
           description: Private work in progress for Middle School Math.
           Graph Paper Programming: Programmation sur papier quadrillé
-          Assessments: Assessments
-          Unit 1: Unit 1
-          Unit 2: Unit 2
+          Assessments: Évaluations
+          Unit 1: Unité 1
+          Unit 2: Unité 2
           Ninja Cat and the Coordinate Plane: Ninja Cat and the Coordinate Plane
           "Calc: Circles of Evaluation": 'Calc: Circles of Evaluation'
           "Artist: Strings and Images": 'Artist: Strings and Images'
-          Contracts: Contracts
+          Contracts: Contrats
           "Artist: Writing Contracts": 'Artist: Writing Contracts'
           "Calc: Defining Variables": 'Calc: Defining Variables'
           "Play Lab: Defining Variables": 'Play Lab: Defining Variables'
@@ -196,35 +196,35 @@ fr:
           title: Scrat
           description_short: Scrat short description.
           description: Scrat long description
-          "Maze: Sequence": 'Maze: Sequence'
+          "Maze: Sequence": 'Labyrinthe : Parcours'
         hourofcode:
           Maze: Labyrinthe
           title: Heure de Code
-          description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description_short: Try the basics of computer science with many fun characters!
+          description: "Apprenez à programmer avec les personnages d'Angry Birds, de Plantes contre Zombies et Scrat de l'age de glace!"
+          description_short: Apprenez à programmer avec des personnages rigolos!
         frozen:
-          title: Code with Anna and Elsa
-          description: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
+          title: Code avec Anna et Elsa
+          description: Utilisons le code pour rejoindre Anna et Elsa dans leur exploration de la magie et de la beauté de la glace. Tu vas créer des flocons de neige et des motifs en patinant sur la glace et faire un pays des merveilles hivernal que tu pourras partager avec tes amis !
           Artist: Artiste
-          description_short: "Nous allons utiliser le code pour rejoindre Anna et Elsa alors qu'elles explorent la magie et la beauté de la glace."
+          description_short: Aidons Anna et Elsa à explorer la magie et la beauté de la glace.
         course4:
           description_short: Students taking Course 4 should have already taken Courses 2 and 3.
           description: Course 4 is designed for students who have taken Course 2 and 3. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.
           "Artist: Variables": 'Artist: Variables'
-          "Bee: For Loops": 'Bee: For Loops'
-          title: Course 4
+          "Bee: For Loops": 'Abeille : Les boucles pour'
+          title: Cours 4
           "Algorithms: Tangrams": 'Algorithms: Tangrams'
           Variables: Variables
-          "Play Lab: Variables": 'Play Lab: Variables'
-          "Play Lab: Functions with Parameters": 'Play Lab: Functions with Parameters'
+          "Play Lab: Variables": 'Labo : Variables'
+          "Play Lab: Functions with Parameters": 'Labo : Fonctions avec paramètres'
           "Bee: Functions with Parameters": 'Bee: Functions with Parameters'
-          "Artist: For Loops": 'Artist: For Loops'
-          "Play Lab: For Loops": 'Play Lab: For Loops'
+          "Artist: For Loops": 'Artiste : Les boucles pour'
+          "Play Lab: For Loops": 'Labo : Pour les boucles'
           "Artist: Functions": 'Artiste : les fonctions'
           "Artist: Functions with Paraqmeters": 'Artist: Functions with Paraqmeters'
           "Unplugged: Tangrams": 'Unplugged: Tangrams'
           Artist: Artiste
-          Bee: Bee
+          Bee: Abeille
           "Unplugged: Envelope Variables": 'Unplugged: Envelope Variables'
           "Unplugged: Madlibs": 'Unplugged: Madlibs'
           "Unplugged: For Loop Fun": 'Unplugged: For Loop Fun'
@@ -235,49 +235,59 @@ fr:
           Farmer Binary: Farmer Binary
           Maze and Bee: Maze and Bee
           Artist Binary: Artist Binary
-          description_audience: Ages 10+ (after Course 3)
+          description_audience: 10 ans et + (après le Cours 3)
         Course4pre:
           description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
           Course 4 Prerequisite: Course 4 Prerequisite
-          "Maze: Sequence": 'Maze: Sequence'
+          "Maze: Sequence": 'Labyrinthe : Parcours'
           "Artist: Sequence": 'Artist: Sequence'
-          "Artist: Loops": 'Artist: Loops'
+          "Artist: Loops": 'Artiste : Les boucles'
           "Bee: Conditionals": 'Abeille : les instructions conditionnelles'
           "Artist: Nested Loops": 'Artiste : les boucles imbriquées'
           "Farmer: While Loops": 'Fermier : les boucles "tant que"'
           "Bee: Nested Loops": 'Abeille : les boucles imbriquées'
           "Artist: Functions": 'Artiste : les fonctions'
-          "Bee: Debugging": 'Abeilles : le debugging'
+          "Bee: Debugging": 'Abeilles : Le débogage'
         course4pre:
           description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
           Course 4 Prerequisite: Course 4 Prerequisite
-          "Maze: Sequence": 'Maze: Sequence'
+          "Maze: Sequence": 'Labyrinthe : Parcours'
           "Artist: Sequence": 'Artist: Sequence'
-          "Artist: Loops": 'Artist: Loops'
+          "Artist: Loops": 'Artiste : Les boucles'
           "Bee: Conditionals": 'Abeille : les instructions conditionnelles'
           "Artist: Nested Loops": 'Artiste : les boucles imbriquées'
           "Farmer: While Loops": 'Fermier : les boucles "tant que"'
           "Bee: Nested Loops": 'Abeille : les boucles imbriquées'
           "Artist: Functions": 'Artiste : les fonctions'
-          "Bee: Debugging": 'Abeilles : le debugging'
+          "Bee: Debugging": 'Abeilles : Le débogage'
         Course4pre (Case Conflict):
           description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
           Course 4 Prerequisite: Course 4 Prerequisite
-          "Maze: Sequence": 'Maze: Sequence'
+          "Maze: Sequence": 'Labyrinthe : Parcours'
           "Artist: Sequence": 'Artist: Sequence'
-          "Artist: Loops": 'Artist: Loops'
+          "Artist: Loops": 'Artiste : Les boucles'
           "Bee: Conditionals": 'Abeille : les instructions conditionnelles'
           "Artist: Nested Loops": 'Artiste : les boucles imbriquées'
           "Farmer: While Loops": 'Fermier : les boucles "tant que"'
           "Bee: Nested Loops": 'Abeille : les boucles imbriquées'
           "Artist: Functions": 'Artiste : les fonctions'
-          "Bee: Debugging": 'Abeilles : le debugging'
+          "Bee: Debugging": 'Abeilles : Le débogage'
         usability:
           Intro: Intro
           Variables and For Loops: Variables and For Loops
-          Functions and Functions with Parameters: Functions and Functions with Parameters
+          Functions and Functions with Parameters: Fonctions et fonctions avec paramètres
           title: Usability Testing
           description_short: ""
           description: A selection of Course 4 levels for usability testing.
           Variables: Variables
           For Loops: For Loops
+        potus:
+          title: special
+          description_short: special
+          description: special
+          Special: Special
+        special:
+          title: special
+          description_short: special
+          description: special
+          Special: Special

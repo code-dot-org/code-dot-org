@@ -36,6 +36,7 @@ el:
   of: του
   more: ΠΕΡΙΣΣΟΤΕΡΑ
   less: ΛΙΓΟΤΕΡΑ
+  beta: beta
   try_hoc: 'Δοκίμασε την Ώρα του Κώδικα, κάνε κλικ εδώ >> '
   try_k8intro: Δοκιμάστε το εισαγωγικό μάθημα K-8, στο Μάθημα της Επιστήμης Υπολογιστών (15-25 ώρες)
   k8intro: Εισαγωγή Κ-8 στο Μάθημα της Επιστήμης Υπολογιστών (15-25 ώρες)
@@ -337,8 +338,8 @@ el:
     test_videos_help: 'Δοκιμάστε το νέο πρόγραμμα αναπαραγωγής βίντεο  στο σχολείο σας'
     try_beta_courses: 'Νέο! Δοκιμάστε τα δοκιμαστικά  μαθήματα για φοιτητές K-5'
     use_as_teacher: 'Χρησιμοποιήστε αυτό τον ιστότοπο  ως δάσκαλος'
-    heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
-    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
+    heading_hoc2014: '<h2>Η Ώρα του Κώδικα για</h2><h1>κάθε ηλικία</h1>'
+    heading_elementary: '<h2>Μαθήματα 20 ωρών για</h2><h1>Αρχάριους (κάθε ηλικίας)</h1>'
     heading_apps: '<h2>Διασκέδαση για</h2><h1>όλους</h1>'
     heading_legacy: '<h2>Το γενικό μάθημα για </h2><h1>όλες τις ηλικίες</h1>'
     your_gallery: Συλλογή φωτογραφιών
@@ -351,8 +352,8 @@ el:
     teacher: Καθηγητής
   footer:
     help_from_html: Μηχανικοί από τη Google, Microsoft, Facebook και Twitter βοήθησαν να δημιουργήσουμε αυτό το σεμινάριο.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
-    powered_by_aws: Powered by Amazon Web Services
+    art_from_html: 'Angry Birds ™ & © 2009-2013 Rovio Entertainment Ltd. Με την επιφύλαξη παντός δικαιώματος.<br/> Plants vs. Zombies ™ & © 2013 Electronic Arts&trade; S.A. Με την επιφύλαξη παντός δικαιώματος.'
+    powered_by_aws: Με την υποστήριξη των Amazon Web Services
     feedback: Πες τη γνώμη σου
     translate: Βοηθήστε μας να μεταφράσουμε στη γλώσσα σας
     support: Υποστήριξη
@@ -430,7 +431,7 @@ el:
       title: Συλλογή φωτογραφιών
       body: 'Δείτε μια συλλογή απο εφαρμογές  και εικόνες καλλιτεχνών που δημιουργούνται από τους χρήστες μας'
     frozen:
-      title: Frozen
+      title: Ψυχρά κι ανάποδα
   gallery:
     students_drew_these_with_code: Οι μαθητές τα σχεδίασαν αυτά με κώδικα!
     students_made_these_with_code: Οι μαθητές τα δημιούργησαν αυτά με κώδικα!
@@ -441,8 +442,8 @@ el:
     caption_by_name_age: 'από %{name}, ηλικία %{age}'
     caption_time_ago: '%{time_ago} πριν'
     header: Συλλογή φωτογραφιών
-    header_playlab: Play Lab
-    header_artist: Artist
+    header_playlab: Εργαστήριο Παιχνιδιού
+    header_artist: Καλλιτέχνης
   landing:
     prerelease: "Αυτό το μάθημα είναι σε έκδοση <span class='betatext'>βήτα (beta)</span>. Αυτό σημαίνει πως δεν είναι η τελική έκδοση του μαθήματος και υπόκειται σε αναθεώρηση καθώς λαμβάνεται ανατροφοδότηση και γίνονται βελτιώσεις."
     prerelease_hoc2014: "Αυτές οι οδηγίες είναι σε έκδοση <span class='betatext'>βήτα (beta)</span>. Αυτό σημαίνει ότι υπόκεινται σε αναθεώρηση καθώς λαμβάνεται ανατροφοδότηση και γίνονται βελτιώσεις."
@@ -509,3 +510,7 @@ el:
     completed_too_many_blocks: ολοκληρώθηκε, πάρα πολλά μπλοκ
     completed_perfect: ολοκληρώθηκε, τέλειο
     furthest_level_attempted: τελευταίο επίπεδο επιχειρήθηκε
+  studio:
+    courses_working_on: Μαθήματα τα οποία παρακολουθείτε
+    completed_courses: Μαθήματα που ολοκληρώσατε
+    all_courses: Όλα τα μαθήματα

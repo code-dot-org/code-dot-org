@@ -36,6 +36,7 @@
   of: a
   more: TÖBB
   less: KEVESEBB
+  beta: béta
   try_hoc: 'Próbálja ki a Kódolás Óráját, kattintson ide >> '
   try_k8intro: Próbálja ki a K-8 bevezetőnket a Számítógép Tudomány Tanfolyamhoz (15-25
     óra)
@@ -391,8 +392,8 @@
     test_videos_help: Teszteld az új videó lejátszót az iskolában
     try_beta_courses: ÚJ! Próbáld ki a béta kurzusokat elsős diákoknak
     use_as_teacher: használd ezt az oldalt tanárként
-    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2> 20 órás kurzusok </h2><h1>alsósoknak</h1>
+    heading_hoc2014: <h2>A Kódolás Órája</h2><h1>Minden korosztály számára</h1>
+    heading_elementary: <h2>20 órás tanfolyamok</h2><h1>Kezdőknek (minden korosztály)</h1>
     heading_apps: <h2>Vidámság </h2><h1>Mindenkinek</h1>
     heading_legacy: <h2>Általános kurzus </h2><h1>Minden Korosztálynak</h1>
     your_gallery: Galéria
@@ -406,11 +407,10 @@
   footer:
     help_from_html: A Google, Microsoft, Facebook és Twitter mérnökei segítettek létrehozni
       ezt a bemutatót.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 <a href="http://www.rovio.com">Rovio
-      Entertainment Ltd</a>. All Rights Reserved.<br/> Plants vs. Zombies&trade; &
-      &copy; 2013 <a href="http://www.ea.com">Electronic Arts Inc.</a>. All Rights
-      Reserved.
-    powered_by_aws: Powered by Amazon Web Services
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
+      Minden jog fenntartva.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
+      Arts Inc. Minden jog fenntartva.
+    powered_by_aws: Az Amazon Web Services működteti
     feedback: Visszajelzés küldése
     translate: Segítsen lefordítani az oldalt az anyanyelvére
     support: Segítség
@@ -492,7 +492,7 @@
       body: Szeretnéd megírni a saját játékodat kevesebb, mint 10 perc alatt? Próbáld
         ki a Flappy kód oktatót.
     20hour:
-      title: Bevezető kurzus
+      title: Bevezető tanfolyam
       body: Próbáld ki a 20 órás, bevezetés a számítógép-tudományba óránkat.
     hoc2014:
       try_new_tutorial: Próbáld ki az új Hour of Code oktató anyagunk béta változatát
@@ -501,7 +501,7 @@
       title: Galéria
       body: Nézd meg a felhasználóink által készített alkalmazás és művész kép galériát
     frozen:
-      title: Frozen
+      title: Jégvarázs
   gallery:
     students_drew_these_with_code: Diákok rajzolták ezeket a kódot.
     students_made_these_with_code: Ezeket diákok készítették kódolással!
@@ -599,3 +599,7 @@
     completed_too_many_blocks: elkészült, túl sok a blokk
     completed_perfect: elkészült, tökéletes
     furthest_level_attempted: a legmagasabb szint megpróbálva
+  studio:
+    courses_working_on: Tanfolyamok amelyeken dolgozol
+    completed_courses: Teljesített tanfolyamok
+    all_courses: Minden tanfolyam

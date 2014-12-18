@@ -65,7 +65,7 @@ ko-KR:
   thanks_for_voting: 투표해 주셔서 감사합니다!
   share_on_facebook: Facebook 에 공유하기
   share_on_twitter: Twitter 에 공유하기
-  beyond_an_hour: 'Hour of Code를 넘어서 >'
+  beyond_an_hour: Hour of Code를 넘어서
   get_started: '시작:'
   i_agree: 동의합니다
   participant_select: '- 선택 -'
@@ -74,6 +74,9 @@ ko-KR:
   participant_educator: 교사입니다.
   participant_engineer: 소프트웨어 엔지니어입니다.
   participant_other: 아무것도 해당되지 않습니다.
+  print_all: 모두 인쇄
+  print_ice_art: 내가 만든 얼음 아트 인쇄하기
+  create_art_with_zombie: 또는 좀비로 더 복잡한 것 만들기
   i_am_a: 저는
   never_spam: 스팸 메일을 보내지 않습니다
   enter_country: 미국이 아닌 경우 국가명 입력
@@ -110,6 +113,10 @@ ko-KR:
   studiobar_flappy_body: 자신만의 플래피 게임을 만들고 공유하세요.
   studiobar_teacher_title: 선생님용
   studiobar_teacher_body: 학급에 Code Studio 소개하기
+  studiobar_frozen_title: Hour of Code
+  studiobar_frozen_body: 안나, 엘사와 함께 겨울왕국을 만들어보세요.
+  studiobar_donate_title: 기부하기
+  studiobar_donate_body: 여러분이 기부할 때 마다 더 많은 학생들이 배울 수 있습니다.
   contact_form_topic_student: 학생입니다.
   contact_form_topic_parent: 부모입니다.
   contact_form_topic_teacher: 교사/교육자입니다.
@@ -193,6 +200,12 @@ ko-KR:
   dashboard_action_done: 완료
   dashboard_action_required: 필수 항목
   dashboard_navigation_home_page: 교사 홈페이지
+  dashboard_navigation_section_student_progress: 학생 계정 및 진도
+  dashboard_navigation_section_teacher_progress: 나의 학습 진도
+  dashboard_navigation_section_lesson_plans: 수업 계획 및 자료
+  dashboard_navigation_section_community: 도움말 및 커뮤니티
+  dashboard_navigation_section_pd: 고급 교육 및 개발
+  dashboard_navigation_section_speakers: '컴퓨터과학(정보과학) <br/> 특별 초청 연사들'
   dashboard_navigation_all_sections: 학생 계정 및 진도
   dashboard_navigation_view_progress: 진도 보기
   dashboard_navigation_add_students: 학생 추가
@@ -283,7 +296,7 @@ ko-KR:
   dashboard_sections_password_account_creation: 학생이 만든 텍스트 암호
   dashboard_sections_login_type_explanation: '이 표는 로그인 유형, <b>그림, 문자, 이메일</b> 등에 대한 내용입니다. 수업에 필요한 경우 선택적으로 사용할 수 있습니다.'
   dashboard_faq: 자주 묻는 질문
-  code_hoc_coming: 'Hour of Code가 곧(12.08 - 14) 시작됩니다!'
+  code_hoc_coming: 'Hour of Code 가 여기있습니다. - 12월8일-14일!'
   code_sign_up: CS Education Week 기간 동안의 활동을 신청하세요.
   learn_more: 더 알아보기
   hoc2014_try_new_tutorials: 새로운 Hour of Code 튜토리얼을 경험해 보세요.
@@ -306,7 +319,7 @@ ko-KR:
   more_resources_educators: 선생님들과 교육자를 위한 더 많은 자료들
   participants: 참여자
   teachers_notes: 선생님 참고사항들
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: '선생님들: 교육자들을 위한 중요한 안내사항들을 살펴보세요.'
   previous: 이전
   next: 다음
   older_systems: 저사양 시스템용 튜토리얼들
@@ -318,6 +331,10 @@ ko-KR:
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: JavaScript 소개
   khanes_name: JavaScript 소개
+  khanpt_name: JavaScript 소개
+  khanhe_name: JavaScript 소개
+  khanfr_name: JavaScript 소개
+  khanpl_name: JavaScript 소개
   tynker_name: 게임 만들기
   scratch_name: 코딩으로 창의력을 키우세요
   lightbot_name: 라이트봇
@@ -346,12 +363,17 @@ ko-KR:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: 가위, 바위, 보
-  frozen_gradelevel: 나이 8세이상
+  hourofcode_name: 새로운 code.org/hoc
+  playlab_name: Play Lab
   codeorg_gradelevel: 나이 4세-104세
   codeintl_gradelevel: 나이 4세-104세
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: 중학교 이상
   khanes_gradelevel: 중학교 이상
+  khanpt_gradelevel: 중학교 이상
+  khanhe_gradelevel: 중학교 이상
+  khanfr_gradelevel: 중학교 이상
+  khanpl_gradelevel: 중학교 이상
   tynker_gradelevel: 나이 5세-13세
   scratch_gradelevel: 나이 8세이상
   lightbot_gradelevel: 모든 연령
@@ -380,21 +402,27 @@ ko-KR:
   thinkersmith2_gradelevel: 나이 8세이상
   kodableunplugged_gradelevel: 나이 8세-13세
   projguts_gradelevel: 나이 10세-13세
-  frozen_platformtext: 최신 웹 브라우져 + 태블릿
+  hourofcode_gradelevel: 나이 4세-104세
+  frozen_gradelevel: 나이 8세이상
+  playlab_gradelevel: 나이 4세-104세
   codeorg_platformtext: 최신 웹브라우저, 스마트폰, 태블릿
   codeintl_platformtext: 최신 웹브라우저, 스마트폰, 태블릿
   thinkersmithspanish_platformtext: 언플러그드
   khan_platformtext: 최신 웹 브라우져
   khanes_platformtext: 최신 웹 브라우져
-  tynker_platformtext: Modern browsers. (Follow-on course requires $$)
-  scratch_platformtext: 모든 웹브라우저
+  khanpt_platformtext: 최신 웹 브라우져
+  khanhe_platformtext: 최신 웹 브라우져
+  khanfr_platformtext: 최신 웹 브라우져
+  khanpl_platformtext: 최신 웹 브라우져
+  tynker_platformtext: 최신 웹 브라우져
+  scratch_platformtext: 데스크탑 웹 브라우저 전용(태블릿 지원 안 됨)
   lightbot_platformtext: 모든 웹브라우저, iOS, 안드로이드, 콘솔 게임기
   thinkersmith_platformtext: 언플러그드
   condcards_platformtext: 언플러그드
   lightbotintl_platformtext: iOS, 안드로이드(또는 웹 브라우져)
-  codehs_platformtext: 'Modern browsers. (Follow-on course requires  $$)'
+  codehs_platformtext: 최신 웹 브라우저들. (이후 과정들에는 $$ 가 필요합니다.)
   codecademy_platformtext: 최신 웹 브라우져. iOS, 안드로이드 앱
-  codecombat_platformtext: 최신 웹 브라우져
+  codecombat_platformtext: 최신 웹 브라우저들. (이후 과정들에는 $$ 가 필요합니다.)
   codemonkey_platformtext: 최신 웹 브라우져
   codeavengers_platformtext: 최신 웹 브라우져
   processing_platformtext: 최신 웹 브라우져
@@ -414,12 +442,18 @@ ko-KR:
   thinkersmith2_platformtext: 언플러그드
   kodableunplugged_platformtext: 언플러그드
   projguts_platformtext: 언플러그드
-  frozen_shortdescription: 얼음의 마술과 아름다움을 탐구하는 안나, 엘사와 함께 코드를 사용하세요.
+  hourofcode_platformtext: 최신 웹브라우저, 스마트폰, 태블릿
+  frozen_platformtext: 최신 웹 브라우져 + 태블릿
+  playlab_platformtext: 최신 웹브라우저, 스마트폰, 태블릿
   codeorg_shortdescription: 마크 주커버그, 앵그리버드와 함께 코드 배우기
   codeintl_shortdescription: 마크 주커버그, 앵그리버드와 함께 코드 배우기
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: JavaScript로 그림 그리기
   khanes_shortdescription: JavaScript로 그림 그리기
+  khanpt_shortdescription: JavaScript로 그림 그리기
+  khanhe_shortdescription: JavaScript로 그림 그리기
+  khanfr_shortdescription: JavaScript로 그림 그리기
+  khanpl_shortdescription: JavaScript로 그림 그리기
   tynker_shortdescription: 재미있는 퍼즐을 풀고, 자신만의 모바일 게임을 만듦으로서 코드 배우기
   scratch_shortdescription: 인터랙티브 게임, 이야기, 애니메이션을 만들어 보세요
   lightbot_shortdescription: 프로시져(함수)와 반복을 이용해 퍼즐을 해결하는 로봇 프로그래밍 하기!
@@ -429,7 +463,7 @@ ko-KR:
   codehs_shortdescription: 카렐과 강아지와 함께 재미있는 비주얼 프로그래밍 시작하기!
   codecademy_shortdescription: 웹 브라우져에서 동작하는 자바스크립트 프로그래밍 배우기
   codecombat_shortdescription: 이 이야기 진행식 게임 프로그래밍을 통해 괴물을 물리치는 파이썬(Python)이나 자바스크립트(JavaScript) 배우기!
-  codemonkey_shortdescription: Students program a monkey to catch bananas.
+  codemonkey_shortdescription: 학생들은 원숭이가 바나나들을 잡도록하는 프로그래밍을 하게 됩니다.
   codeavengers_shortdescription: 웹 브라우져에서 동작하는 자바스크립트 프로그래밍 배우기
   processing_shortdescription: 한 시간짜리 프로세싱(Processing) 언어 튜토리얼
   robomind_shortdescription: 가상 로봇을 위한 코드 작성하기
@@ -437,23 +471,29 @@ ko-KR:
   quorum_shortdescription: 가이드 투어를 통해 Quorum 프로그래밍 언어를 배우고 있는 마리와 함께 하세요.
   codespark_shortdescription: Foos 는 프로그래밍에 대해서 배울 수 있는 재미있는 아이들 용 게임입니다.
   kodable_shortdescription: 컴퓨터 프로그래밍 개념들을 가르칠 수 있는 재미있는 아이패드 게임
-  tynkerapp_shortdescription: 'Learn to program by solving fun coding puzzles. '
+  tynkerapp_shortdescription: '재미있는 코딩 퍼즐들을 풀어가면서 프로그램을 배워보세요. '
   robomindnl_shortdescription: 가상 로봇을 위한 코드 작성하기
   flappy_shortdescription: '게임을 직접 만들어보세요 - 플래피 버드, 샤크, 잠수함'
-  bitsbox_shortdescription: 진짜 자바스크립트를 이용한 앱들을 코딩해 보고 공유해 보세요.
+  bitsbox_shortdescription: 실제 자바스크립트(JavaScript)를 사용한 앱 개발 및 공유 과정을 배워보세요.
   makegameswithus_shortdescription: 아이폰 게임을 만들어보세요! 여러분의 몬스터를 가르쳐 움직이는 코드를 만들어 보면서 배워보세요.
-  touchdevelop_shortdescription: 'Solve puzzles, create games, and learn coding all on your phone. '
+  touchdevelop_shortdescription: '스마트폰에서 퍼즐을 풀고, 게임을 만들고, 코딩에 대한 모든 것을 배워보세요. '
   appinventor_shortdescription: 앱을 직접 만들어보세요!(안드로이드 만 가능)
   blockly_shortdescription: 오프라인에서도 배울 수 있도록 압축(ZIP) 파일을 다운로드 하세요.
   thinkersmith2_shortdescription: 정보를 표현하기 위해 컴퓨터에서 사용하는 1/0 들의 표현을 배워보세요.
   kodableunplugged_shortdescription: 재미있는 컴퓨터과학 언플러그드 활동 예시들
   projguts_shortdescription: 가위/바위/보 를 이용해 모델링과 시뮬레이션을 경험해 보세요.
-  frozen_longdescription: 얼음의 마술과 아름다움을 탐구하는 안나, 엘사와 함께 코드를 해보세요. 스케이트를 타는 것 처럼 쉽게 눈 송이와 패턴을 만들어서 겨울왕국을 꾸밀 수 있게 될 것입니다. 그렇게 만든 것들은 친구들에게 자랑하세요!
+  hourofcode_shortdescription: 새로운 code.org/hoc
+  frozen_shortdescription: 얼음의 마술과 아름다움을 탐구하는 안나, 엘사와 함께 코드를 사용하세요.
+  playlab_shortdescription: Play Lab을 이용해 스토리나 게임을 만드세요!
   codeorg_longdescription: 드래그 앤 드롭 프로그래밍 으로 컴퓨터과학(정보과학)의 기초 개념들을 배워보세요. 마치 게임과 비슷하면서도, 빌게이츠, 마크주커버그, 앵그리버드, 식물과 좀비 등이 나오는 동영상을 보면서 스스로 튜토리얼을 따라가며 배울 수 있습니다. 반복 실행, 조건/선택 실행, 기초 알고리즘과 같은 것들을 배워보세요. 34개의 다양한 언어들로 가능합니다.
   codeintl_longdescription: 드래그 앤 드롭 프로그래밍 으로 컴퓨터과학(정보과학)의 기초 개념들을 배워보세요. 마치 게임과 비슷하면서도, 빌게이츠, 마크주커버그, 앵그리버드, 식물과 좀비 등이 나오는 동영상을 보면서 스스로 튜토리얼을 따라가며 배울 수 있습니다. 반복 실행, 조건/선택 실행, 기초 알고리즘과 같은 것들을 배워보세요. 34개의 다양한 언어들로 가능합니다.
-  thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubriran como guiarse de modo tal de llevar a cabo tareas especificas sin ser estas discutidas previamente. Este segmento ensena a los estudiantes la conexion entre simbolos y acciones asi como la valiosa habilidad de depuracion.'
+  thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
   khan_longdescription: 여러분이 직접 코드를 만들어 그림을 그리면서 자바스크립트(JavaScript) 프로그래밍의 기초들을 배워보세요. 혼자 해봐도 되고 수업에서 해봐도 됩니다!
   khanes_longdescription: 여러분이 직접 코드를 만들어 그림을 그리면서 자바스크립트(JavaScript) 프로그래밍의 기초들을 배워보세요. 혼자 해봐도 되고 수업에서 해봐도 됩니다!
+  khanpt_longdescription: 여러분이 직접 코드를 만들어 그림을 그리면서 자바스크립트(JavaScript) 프로그래밍의 기초들을 배워보세요. 혼자 해봐도 되고 수업에서 해봐도 됩니다!
+  khanhe_longdescription: 여러분이 직접 코드를 만들어 그림을 그리면서 자바스크립트(JavaScript) 프로그래밍의 기초들을 배워보세요. 혼자 해봐도 되고 수업에서 해봐도 됩니다!
+  khanfr_longdescription: 여러분이 직접 코드를 만들어 그림을 그리면서 자바스크립트(JavaScript) 프로그래밍의 기초들을 배워보세요. 혼자 해봐도 되고 수업에서 해봐도 됩니다!
+  khanpl_longdescription: 여러분이 직접 코드를 만들어 그림을 그리면서 자바스크립트(JavaScript) 프로그래밍의 기초들을 배워보세요. 혼자 해봐도 되고 수업에서 해봐도 됩니다!
   tynker_longdescription: 직접 게임을 만들고 친구들에게 자랑해보세요! 재미있는 단계별 코딩 퍼즐을 풀면서 프로그래밍의 개념들을 배워보세요. 애니메이션으로 움직이는 캐릭터들을 마음대로 만들고, 다양한 레벨과 막대기들을 만들어 보세요. 물리적인 내용들을 활용해 게임을 현실감 있게 만들어보세요. 블럭 명령어나 자바스크립트로 만들어진 실제 코드들을 살펴보세요. 그렇게 만든 게임을 아이패드나 안드로이드 태블릿에서 실행시켜보세요. 수 십여개의 재미있는 활동들에서 골라서 해보세요!
   scratch_longdescription: '스크래치(Scratch)를 이용해 인터랙티브 게임, 이야기, 애니메이션 등을 직접 만들어보세요. &mdash; 그리고 친구들에게 자랑해 보세요. 이름을 움직이게 애니메이션한다거나, 크리스마스카드를 만들거나, 간단한 게임을 만들어보면서 시작할 수 있습니다.'
   lightbot_longdescription: 파랑색 판들에 불을 키는 라이트봇(Lightbot)을 프로그래밍하면서 실제적인 코딩의 기초를 배우는 프로그래밍 퍼즐 게임을 해볼 수 있습니다. 순차적 명령실행, 함수(프로시져) 만들기, 반복 실행 만들기 등을 통해 각 단계들을 해결해 나가면 됩니다. 모든 연령대에 대해서 가능합니다.
@@ -471,17 +511,20 @@ ko-KR:
   quorum_longdescription: 이 튜토리얼은 시각 장애인을 고려하여 만들어졌으며, 화면 읽기 도구와 함께 동작합니다. 여행 중인 마리를 생물학 연구실에 프로그래머로 참여하도록 하여 Quorum 프로그래밍 언어를 배울 수 있도록 해보세요. 이 튜토리얼은 온라인 예시 활동들과 함께 혼자 힘으로도 충분히 할 수 있습니다.
   codespark_longdescription: '푸스(Foos)는 아이들에게 친근하면서도 재미있는 방법으로 컴퓨터 프로그래밍에 대해 배울 수 있도록 해줍니다. 귀여운 캐릭터를 프로그램하여 퍼즐을 풀고 가상의 세계를 실제 세상으로 가져와 보세요. 이 게임은 "무료" 이기 때문에 누구나 해볼 수 있습니다.'
   kodable_longdescription: 코더블(Kodable)은 자기 주도적인 아이패드 게임으로 5세 이상의 아이들에게 프로그래밍 기초들을 소개합니다. 선생님이나 부모님과도 함께 할 수 있습니다.
-  tynkerapp_longdescription: Learn to program by solving fun coding puzzles. Easily build games and stories using with themed graphics, 10+ game-kits and customizable characters. No Internet connectivity required. You can also access your creations on the web.
+  tynkerapp_longdescription: 재미있는 코딩 퍼즐들을 해결해 가면서 프로그래밍을 배워보세요. 테마 그래픽, 10개 이상의 게임키트와 수정가능한 캐릭터들을 이용해 게임과 이야기들을 아주 쉽게 만들 수 있습니다. 인터넷 연결이 반드시 필요하지는 않습니다. 자신이 만든 것을 웹에서도 확인할 수 있습니다.
   robomindnl_longdescription: 학생들은 자신의 가상 로봇을 제어함으로서 프로그래밍의 기초를 배울 수 있습니다. 온라인 과정은 간단한 프레젠테이션 자료, 동영상, 퀴즈와 프로그래밍 경험을 돕기 위한 자동응답식 가이드/힌트들을 통해 혼자 힘으로도 충분히 배울 수 있습니다.
   flappy_longdescription: 드래그 앤 드롭 프로그래밍으로 플래피 버드 게임을 직접 만들고, 다른 모양(플래피 샤크, 플래피 산타 등등)으로 변형해 보세요. 한 번의 클릭으로 아이폰에 게임으로 추가할 수 있습니다.
   bitsbox_longdescription: 자신의 가상 태블릿을 설정한 후, 실행할 수 있는 앱을 만들고 공유해 보세요. 간단한 과정을 통해 실제 자바스크립트(Javascript) 언어를 이용해 어린 아이들도 만들 수 있습니다. 그리고 더 자세히 배울 수 있는 경험을 얻어보세요.
-  makegameswithus_longdescription: Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pokemon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!
-  touchdevelop_longdescription: 'The touch-friendly editor will guide you in creating pixel art, solving the bear puzzle, or making your own jumping bird game. '
+  makegameswithus_longdescription: 스위프트(Swift)라는 시작하기 쉬운 새로운 언어를 이용해 아이폰 게임을 만들면서 코드를 배워 보세요. 포켓몬 게임과 비슷한 액션 게임을 만들어서 자신의 몬스터가 새로운 동작을 할 수 있도록 가르쳐보세요. 자신의 몬스터가 승리할 수 있도록 도와주면서 변수, 매소드, 객체 등에 대해 배울 수 있습니다.
+  touchdevelop_longdescription: 화면 터치 기반의 코드 편집기를 통해, 픽셀 아트, 퍼즐 풀기, 새 날리기 게임 등을 만드는 방법들에 대해서 가이드 받게 됩니다.
   appinventor_longdescription: 엔터테인먼트, 퀵 비디오 튜토리얼을 통해 여러분의 안드로이드폰이나 태블릿을 위한 3가지 간단한 앱을 만들어 보세요. 처음하는 사람들도 전문가들처럼 만들 수 있도록 설계되었으며, 이 hour of code 활동은 자기도 모르게 직접 앱을 만드는 방법을 알게 됩니다. 친구들에게 자기가 만든 앱을 나눠주는 것을 생각해보세요! 이 활동들은 개인활동 또는 선생님 지도에 따라 학급별로도 가능합니다.
   blockly_longdescription: '인터넷 접속이 느린(혹은 인터넷에 연결할 수 없거나) 컴퓨터들만 있다고요? 블러클리(Blockly) 튜토리얼을 다운로드 받으세요. 블러클리는 code.org 튜토리얼의 초기버전이라고 할 수 있습니다. - 3MB 의 적은 압축(ZIP) 파일을 다운로드 받으면 컴퓨터나 메모리스틱에 넣어 가지고 다닐 수 있습니다.'
   thinkersmith2_longdescription: 학생들은 문자들을 켜짐(on)과 꺼짐(offf) 으로 표현할 수 있는, 2진수 형태으로 표현하고 저장하는 방법에 대해 배울 수 있습니다. 수업을 마칠 때 쯤이면 학생들은 자기 이니셜을 코드화해서 집에 가져갈 수 있게 될 것입니다.
   kodableunplugged_longdescription: 백지 종이를 사용해 설계하는, 퍼즈패밀리 프랜지(fuzzFamily Frenzy)는 5세 이상의 아이들을 위한 프로그래밍 로직 소개 과정입니다. 선생님이 게임에 대해서 설명해 주면, 학생들은 간단한 장애물 코스를 해결하기 위해 짝 학생을 프로그램하게 됩니다.
   projguts_longdescription: 이 언플러그드 활동은 학생들에게 서로 다른 버전의 가위/바위/보 게임을 수행함으로서 모델링과 시뮬레이션 작업이 이루어지는 방법을 배우게 되며, 서로 다른 모델링 실험의 결과를 살펴볼 수 있게 됩니다.
+  hourofcode_longdescription: 새로운 code.org/hoc
+  frozen_longdescription: 얼음의 마술과 아름다움을 탐구하는 안나, 엘사와 함께 코드를 해보세요. 스케이트를 타는 것 처럼 쉽게 눈 송이와 패턴을 만들어서 겨울왕국을 꾸밀 수 있게 될 것입니다. 그렇게 만든 것들은 친구들에게 자랑하세요!
+  playlab_longdescription: 플레이 랩으로 이야기나 게임을 만들어보세요! 동물, 해적, 좀비, 닌자 등 여러 가지 캐릭터들을 움직이고, 소리내고, 점수를 올리고, 파이어볼을 쏘는 등의 움직임들이 가능합니다.
   codeorg_beyond_name: 컴퓨터과학(정보과학) 소개 코스(유치원-중2)
   khan_beyond_name: 컴퓨터 프로그래밍 배우기
   tynker_beyond_name: 집에서 프로그래밍 배우기

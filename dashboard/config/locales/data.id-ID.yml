@@ -100,10 +100,10 @@
         Jigsaw: Teka-teki
         MazeStep: Mode tahapan labirin
         Wordsearch: Carikata
-        Webapp: Aplkasi Web
+        Webapp: Aplikasi Web
         ArtistEC: Artis
         TextMatch: Cocok Teks
-        StudioEC: Play Lab
+        StudioEC: Lab Permainan
     trophy:
       name:
         Bronze: Perunggu
@@ -408,7 +408,7 @@
           tempat. Lalu cobalah mengubah adegan atau kecepatan kayuh dan bola dan untuk
           melihat berapa banyak poin yang Anda dapat sebelum lawan Anda mendapatkan
           poin dua kali lebih banyak.
-        bounce_12: Butalah game Bounce anda. Anda dapat merubah semua visualisasi
+        bounce_12: Buatlah game Bounce anda sendiri. Anda dapat merubah semua visualisasi
           dan aturan. Setelah usai klik Selesai untuk memberikannya pada teman anda
           agar ia mencoba pada ponselnya.
         Custom_builder: Tarik blok dari toolbox ke ruang kerja untuk menggambar tingkat
@@ -531,26 +531,29 @@
           sampai mendapatkan poin?
         studio_c3_game_7: Buat permainan Anda sendiri. Setelah selesai, klik Selesai
           untuk membiarkan teman-teman mencoba permainan Anda pada ponsel mereka.
-        studio_playlab_1: Dapatkah anda membuat anjing ini mengatakan "Halo dunia"?
-        studio_playlab_2: Bisakah Anda membuat anjing itu mengatakan sesuatu, kemudian
-          membuat kucing itu mengatakan sesuatu?
-        studio_playlab_3: Dapatkah anda menulis program untuk membuat anjing ini bergerak
-          menuju kucing?
-        studio_playlab_4: Dapatkah anda menulis program untuk membuat anjing menuju
-          kucing dan membuat kucing mengatakan "halo" ketika anjing mencapainya?
-        studio_playlab_5: Bisakah kamu menuliskan program untuk membuat si gurita
-          mengatakan "halo" saat diklik?
-        studio_playlab_6: Dapatkah anda menulis program untuk membuat penguin bergerak
-          menggunakan tombol atas / bawah / kiri / kanan untuk memukul semua sasaran?
-        studio_playlab_7: Blok "Ulangi selamanya" memungkinkan Anda untuk menjalankan
-          kode terus-menerus. Dapatkah anda menempatkan blok-blok untuk memindahkan
-          dinosaurus ini naik dan turun berulang kali?
-        studio_playlab_8: Bisakah kamu menambahkan sebuah balok untuk mendapatkan
-          1 poin saat si penguin tertabrak gurita, lalu menggerakan ia dengan panah-panahnya
-          sampai kamu mendapatkan poin?
-        studio_playlab_9: Bisakah kamu menambahkan blok-blok untuk mengubah latar
-          belakang dan kecepatan si penguin, lalu menggerakan ia dengan panah-panah
-          sampai mendapatkan poin?
+        studio_playlab_1: Penguin ingin mengatakan "Halo" - Maukah kamu membantunya?
+        studio_playlab_2: Lelaki Gua (aktor 1) dan Gadis Gua (aktor 2) ingin mengatakan
+          'halo' satu sama lain. Maukah kamu membantunya dengan menggunakan blok 'bicara'
+          sebanyak dua kali?
+        studio_playlab_3: Maukah kamu membantu Gadis Pemain Tenis mendapatkan bendera
+          itu?
+        studio_playlab_4: Maukah kamu membantu Lelaki Pemain Tenis (aktor 1) berjalan
+          menuju Gadis Pemain Tenis (aktor 2) lalu memainkan suara ketika ia sampai?
+        studio_playlab_5: Maukah kamu membantu Spacebot mengatakan "Salam, para penduduk
+          bumi" ketika di-klik? Jangan lupa untuk mengklik Spacebot setelah mengklik
+          'Jalankan'
+        studio_playlab_6: Maukah kamu membantu Penyihir untuk bergerak dengan menekan
+          tombol atas/bawah/kanan/kiri untuk mendapatkan semua bola api ajaib itu?
+        studio_playlab_7: "Blok \"ulangi selamanya\" memungkinkan kamu menjalankan
+          kode terus-menerus. \nMaukah kamu memasangkan blok padanya untuk menolong
+          Penyihir bergerak ke kanan dan ke kiri berulang-ulang?\n"
+        studio_playlab_8: "Maukah kamu \nmenambahkan satu buah blok untuk mencetak
+          skor & \nsatu buah blok untuk memainkan suara \nketika 'Unicorn' itu berlari
+          ke arah Penyihir itu, \nlalu membuat Penyihir bergerak sampai mendapatkan
+          skor?\n"
+        studio_playlab_9: "Atur gambar latar untuk adegan penyerangan alien ini \ndan
+          bantu Spacebot bergerak cepat menuju Alien dengan mengganti kecepatannya.\nLalu
+          gerakkan ia dengan tombol arah menuju Spacebot, lalu serukan pada yang lain\n"
         studio_playlab_10: Buat permainan Anda sendiri. Setelah selesai, klik Selesai
           untuk membiarkan teman-teman mencoba permainan Anda pada ponsel mereka.
         studio_full_sandbox: Buat permainan Anda sendiri. Setelah selesai, klik Selesai
@@ -577,7 +580,7 @@
         maze_wordsearch_k_13: Gerakkan saya lurus, kemudian saya akan mengeja kata
           DEBUG
         maze_wordsearch_k_15: Gerakkan saya lurus, kemudian saya akan mengeja kata
-          Above
+          ABOVE
         maze_wordsearch_k_16: Gerakkan saya lurus, kemudian saya akan mengeja kata
           BELOW
         maze_wordsearch_k_20: Ini adalah tes! Gerakkan saya lurus, kemudian akan mengeja
@@ -675,26 +678,28 @@
           labirin yang lebih rumit? Kalau kamu melakukannya dengan benar, aku bisa
           berjalan di jalan yang melengkung berapapun panjangnya. Cepat! Esnya meleleh!
       Standalone_Artist_1:
-        instructions: Welcome to Artist! First off, let's try to make a simple square
-          using the turn right block and move forward block. Each side should be 100
-          pixels long.
+        instructions: |
+          Selamat datang, Seniman!
+          Pertama-tama, marilah kita mencoba membuat kotak sederhana dengan menggunakan blok 'belok kanan' dan blok 'maju'. Tiap sisinya harus sebesar 100 piksel.
       Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel
-          long sides.
+        instructions: "Gambarlah berlian ini \ndengan sudut 120 & 60 derajat, \nserta
+          sisi sepanjang 150 piksel.\n"
       Standalone_Artist_3:
-        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree
-          turns?
+        instructions: Dapat Anda ambil ini hexagon dengan 100 pixel sisi dan 60 derajat
+          berubah?
       Standalone_Artist_4:
-        instructions: Now you've got a new block to play with, the loop. This will
-          repeat a set of commands. What happens if you loop these commands 6 times?
+        instructions: Sekarang Anda sudah mendapatkan blok baru, loop, untuk dipakai.
+          Blok ini akan mengulangi seperangkat perintah. Apa yang terjadi jika Anda
+          loop (ulang) perintah ini sebanyak 6 kali?
       Standalone_Artist_5:
-        instructions: How many times do you need to loop this diamond to draw the
-          flower?
+        instructions: Berapa banyak kali Anda perlu loop (mengulangi) berlian untuk
+          menggambar bunga?
       Standalone_Artist_5.5:
-        instructions: 'Notice how we simplified the diamond code by turning it into
-          a loop. You can loop that whole sequence 12 times to draw the flower. Hint:
-          You''ll need to turn 30 degrees after your diamond loop so you don''t keep
-          drawing over the same diamond.'
+        instructions: 'Perhatikan bagaimana kami disederhanakan kode berlian dengan
+          mengubahnya menjadi sebuah loop. Anda dapat mengulang (loop) seluruh urutan
+          12 kali untuk menggambar bunga. Petunjuk: Anda akan perlu untuk mengeser
+          30 derajat setelah berlian Anda ulangi (loop) sehingga Anda tidak perlu
+          menggambar atas berlian sama.'
       Standalone_Artist_6:
         instructions: 'Loop this hexagon code 6 times to create the design. How many
           degrees will you need to turn each time? Hint: divide the number of degrees
@@ -742,7 +747,7 @@
         C1_happy_maps_unplugged: Pemetaan bahagia
         C1_moveitmoveit_unplugged: Gerakkan itu, Gerakkan itu
         C1_bigevent_unplugged: Acara besar
-        C1_getting_loopy: Getting Loopy
+        C1_getting_loopy: Dapat berulang-ulang
         C1_pair_programming: Pemrograman berpasangan
         C1_maze_intro_sequencing: Introduksi Sekuensi Labirin
         C1_maze_debugging: Labirin Debugging
@@ -755,14 +760,14 @@
         C1_playlab_storytelling: Mainkan Lab - Buat sebuah Cerita
         C1_planting_seed: Penanaman benih
         C1_building_foundation: Membangun dasar
-        C1_going_places_safely: Going Places Safely
+        C1_going_places_safely: Pergi ke tempat dengan aman
         C2_maze_intro: Apa itu Labirin?
         C2_artist_intro: Introduksi Artis
         C2_zuck_repeat_loop: Pengulangan labirin
         C2_artist_loops: Perulangan Artis
-        C2_artist_debugging: Artist Debugging
+        C2_artist_debugging: Debuging Artis
         C2_bee_loops: Pengulangan lebah
-        C2_bee_debugging: Bee Debugging
+        C2_bee_debugging: Debuging Lebah
         C2_bee_conditionals: kondisi lebah
         C2_playlab_createstory: Mainkan Lab - Buat sebuah Cerita
         C2_graph_paper: Pemrograman grafis diatas kertas
@@ -770,7 +775,7 @@
         C2_binary_bracelets: Gelang biner
         C2_relay_programming: Pemrograman relay
         C2_paper_airplanes: Pesawat kertas
-        C2_digital_footprint: Your Digital Footprint
+        C2_digital_footprint: Digital Footprint Kamu
         C3_maze_level_4: Pengulangan labirin
         C3_artist_intro: Introduksi Artis
         C3_artist_functions: Fungsi Artis
@@ -789,14 +794,28 @@
         C3_crowdsourcing: Sumber kerumunan
         C3_functional_suncatchers: Fungsional pengkap matahari
         C3_songwriting_with_parameters: Parameter penulis lagu
-        C4_artist_math: Programming the Artist with Math
-        C4_create_functions: Creating Functions
-        C4_edit_functions: Editing Functions
-        C4_for_loops: For Loops
-        C4_variables: Variabel
-        frozen_intro: Hour of Code Intro
-        frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
+        C4_intro: Pendahuluan
+        C4_bee_conditional: kondisi lebah
+        C4_variables_artist: Variabel - artis
+        C4_variables_playlab: Variabel - permainan Lab
+        C4_for_loops: Untuk Pengulangan
+        C4_math_artist: Pemrograman artis dengan matematika
+        C4_function_edit: Fungsi menyunting
+        C4_function_create: Fungsi membuat
+        C4_function_parameters: Fungsi dengan parameter
+        C4_conditionals: Kondisi
+        C4_unplugged_algorithms: Algoritma dengan Tangrams
+        C4_unplugged_madlibs: Mad libs
+        C4_unplugged_variables: Variabel dalam amplop
+        C4_unplugged_forloops: Untuk Pengulangan
+        C4_unplugged_parameters: Songwriting with Parameters
+        C4_unplugged_binary: Biner
+        frozen_intro: Perkenalan Hour of Code
+        frozen_loops: Pengantar loop
+        frozen_functions: Pengenalan Fungsi
+        playlab_intro: Pengantar Lab Permainan
+        playlab_events: 'Lab Permainan Event '
+        playlab_repeat_forever: Lab Permainan Ulangi Selamanya
     callout:
       text:
         drag_blocks: Tarik blok "gerak" dan letakkan di bawah blok lain
@@ -824,19 +843,25 @@
           degree to turn
         repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
           workspace
+        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the
+          workspace
+        repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks
+          inside
         snowflake_dropdown: Use this drop-down to create different snowflakes!
         degrees_per_side: Divide 360 by the number of sides to get the size of each
           angle in degrees.
-        set_sides: Use this block to set "sides" to the number needed to complete
-          the puzzle.
-        set_length: Use this block to set "length" to the correct value.
+        set_sides: Gunakan blok ini untuk menetapkan "sisi" jumlah yang diperlukan
+          untuk menyelesaikan teka-teki.
+        set_length: Gunakan blok ini untuk menetapkan "panjang" dengan nilai yang
+          benar.
         which_equation: Which equation makes each side shorter for shapes with more
           sides?  Try each equation!
-        get_nectar: Use the new "get nectar" block.
+        get_nectar: Gunakan blok baru "dapatkan nektar".
         actions_category: The tool box got a new look! The "Actions" blocks are in
           here now.
-        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
-        edit_function: Use this button to edit the function.
+        draw_square_hint: 'Petunjuk: Menggunakan loop persegi yang baru saja Anda
+          buat dalam teka-teki terakhir.'
+        edit_function: Klik di sini untuk mengedit fungsi Anda.
         create_function: Click here to open the "Functions" flyout, then click the
           "Create a Function" button.
         house_hint: It's ok if the picture doesn't look like a house yet. We will
@@ -856,9 +881,36 @@
         playlab_drag_say: Drag the "say" block here and type "hello"
         playlab_use_twice: Use this block twice and remember to change the actor number
         playlab_move_girl: Use the "move right" block to move Tennis Girl
-        playlab_play_sound: Add "play sound" block here
+        playlab_play_sound: Tambahkan "putar suara" blok di sini
         playlab_arrow_keys: Remember to use these to move the witch after clicking
           on Run
-        playlab_add_move: Add "move" blocks inside this repeat block
-        playlab_add_score: Add score blocks here
-        playlab_add_blocks: Add your blocks here
+        playlab_add_move: Tambahkan blok "gerak" dalam blok berulang (repeat) ini
+        playlab_add_score: Tambahkan Skor blok di sini
+        playlab_add_blocks: Tambahkan blok anda disini
+        set_variable: Tarik nomor blok di sini untuk menetapkan variabel Anda
+        place_variable: Tarik Anda variabel di dalam blok ini
+        bee_for_loop: Tarik jumlah terbesar nektar lebah yang Anda inginkan disini
+        place_counter_variable: Tarik variabel counter di dalam blok ini
+        function_editor_draw_square: This is your function definition. These blocks
+          run everytime you use the "draw a square" block
+        change_here: Buat perubahan Anda di sini
+        write_draw_square_function: Tarik blok dari toolbox ke sini untuk menggambar
+          persegi
+        write_draw_triangle_function: Drag blocks from the toolbox into here that
+          draw a triangle
+        edit_add_parameter: Click edit to add a parameter in your function
+        add_and_drag_parameter: Write in the name of your parameter here, click add,
+          and then drag it into your function definition
+        fill_in_actor: Fill in the ??? with numbers that correspond to each actor
+          (1, 2, and 3)
+        repeat: Put blocks inside the loop to repeat commands
+        if_bee_nectar: Use the "if" block to decide if the bee should get nectar
+        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower,
+          and makes honey if it's not a flower
+        repeat_full_circle: Enter in the number of times the zombie has to move to
+          make a full circle
+        place_length_variable: Drag the length variable here to replace the question
+          marks
+        arrows_move_actor: Gunakan panah untuk memindahkan aktor
+        right_arrow_fireball: Gunakan panah kanan untuk menembak bola api
+        name_function: Menulis nama fungsi Anda di sini

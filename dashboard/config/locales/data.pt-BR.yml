@@ -523,27 +523,29 @@
           a velocidade do pinguim, e então movê-lo com as setas até que você pontue?
         studio_c3_game_7: Crie seu próprio jogo. Quando terminar, clique em Concluir
           para deixar que seus amigos experimentem seu jogo em seus celulares.
-        studio_playlab_1: Você consegue fazer esse cachorro dizer "Olá, mundo"?
-        studio_playlab_2: Você pode fazer o cachorro dizer alguma coisa e, depois,
-          fazer o gato dizer alguma coisa?
-        studio_playlab_3: Você consegue desenvolver um programa para fazer este cachorro
-          se mover em direção ao gato?
-        studio_playlab_4: Você consegue desenvolver um programa que faça com que o
-          cachorro se mova em direção ao gato e que faça com que o gato diga "Olá"
-          quando o cachorro o alcançar?
-        studio_playlab_5: Você pode escrever um programa para fazer o polvo dizer
-          "olá" quando clicarem nele?
-        studio_playlab_6: Você pode desenvolver um programa que faça o pinguim se
-          mover usando as teclas com as setas para cima / para baixo / à esquerda
-          / à direita, para atingir todos os alvos?
-        studio_playlab_7: O bloco "repita infinitamente" possibilita a execução contínua
-          do programa. Você pode anexar blocos para mover esse dinossauro para cima
-          e para baixo repetidamente?
-        studio_playlab_8: Você pode adicionar um bloco que some um ponto quando o
-          pinguim se encontra com o polvo, e então movê-lo até que você consiga o
-          ponto?
-        studio_playlab_9: Você pode adicionar blocos para mudar o plano de fundo e
-          a velocidade do pinguim, e então movê-lo com as setas até que você pontue?
+        studio_playlab_1: O pinguim quer dizer "olá", você consegue ajudá-lo?
+        studio_playlab_2: O menino da caverna (personagem 1) e a menina da caverna
+          (personagem 2) querem dizer "olá" um para o outro. Você pode ajudá-los usando
+          o bloco "diga" duas vezes?
+        studio_playlab_3: Você pode ajudar a tenista a alcançar a bandeira?
+        studio_playlab_4: Você pode ajudar o tenista (personagem 1) a alcançar a tenista
+          (personagem 2) e emitir um som ao conseguir?
+        studio_playlab_5: Você pode ajudar o robô espacial a dizer "saudações, terráqueos"
+          quando clicarem nele? Não se esqueça de clicar nele depois de clicar em
+          Executar
+        studio_playlab_6: Você pode ajudar a bruxa a se movimentar usando as teclas
+          de direção para cima/baixo/direita/esquerda, para alcançar todas as bolas
+          de fogo mágicas?
+        studio_playlab_7: O bloco "repita infinitamente" permite que você execute
+          o código de forma contínua. Você consegue conectar blocos a ele para ajudar
+          o mago a se mover para a direita e para esquerda repetidamente?
+        studio_playlab_8: Você pode adicionar um bloco para marcar um ponto e um bloco
+          para emitir um som quando o unicórnio corre em direção ao mago e, depois,
+          movê-lo com as teclas de direção até marcar um ponto?
+        studio_playlab_9: Defina o plano de fundo para esta invasão alienígena e ajude
+          o robô espacial a alcançar o alienígena mais rapidamente, mudando sua velocidade.
+          Depois, mova-o com as teclas de direção para alcançar o robô espacial e
+          alertar a todos
         studio_playlab_10: Crie seu próprio jogo. Quando terminar, clique em Concluir
           para deixar que seus amigos experimentem seu jogo em seus celulares.
         studio_full_sandbox: Crie seu próprio jogo. Quando terminar, clique em Concluir
@@ -669,43 +671,45 @@
           caminho cheio de curvas, não importa o comprimento. Rápido! O gelo está
           derretendo!
       Standalone_Artist_1:
-        instructions: Welcome to Artist! First off, let's try to make a simple square
-          using the turn right block and move forward block. Each side should be 100
-          pixels long.
+        instructions: Bem-vindo ao Artista! Primeiro, vamos tentar fazer um quadrado
+          simples usando o bloco "vire à direita" e "avance". Cada lado deve medir
+          100 pixels.
       Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel
-          long sides.
+        instructions: Desenhe este diamante com ângulos de 120 e 60 graus, e com lados
+          de 150 pixels de comprimento.
       Standalone_Artist_3:
-        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree
-          turns?
+        instructions: Você pode desenhar este hexágono com lados que meçam 100 pixels
+          e ângulos que meçam 60 graus?
       Standalone_Artist_4:
-        instructions: Now you've got a new block to play with, the loop. This will
-          repeat a set of commands. What happens if you loop these commands 6 times?
+        instructions: Agora você pode brincar com um novo bloco, o laço. Ele repetirá
+          um conjunto de comandos. O que acontecerá se você fizer seis iterações desses
+          comandos?
       Standalone_Artist_5:
-        instructions: How many times do you need to loop this diamond to draw the
-          flower?
+        instructions: Quantas vezes você precisar iterar este diamante para desenhar
+          a flor?
       Standalone_Artist_5.5:
-        instructions: 'Notice how we simplified the diamond code by turning it into
-          a loop. You can loop that whole sequence 12 times to draw the flower. Hint:
-          You''ll need to turn 30 degrees after your diamond loop so you don''t keep
-          drawing over the same diamond.'
+        instructions: 'Observe como simplificamos o código do diamante, transformando-o
+          em um laço. Você pode fazer 12 iterações de toda a sequência para desenhar
+          a flor. Dica: você terá que virar 30 graus depois de iterar seu diamante
+          para não continuar desenhando o mesmo diamante todas as vezes.'
       Standalone_Artist_6:
-        instructions: 'Loop this hexagon code 6 times to create the design. How many
-          degrees will you need to turn each time? Hint: divide the number of degrees
-          in a circle by the number of times you are looping.'
+        instructions: 'Faça 6 iterações do código deste hexágono para criar o desenho.
+          Quantos graus você terá que virar de cada vez? Dica: divida o número de
+          graus de um círculo pelo número de iterações que fizer.'
       Standalone_Artist_7:
-        instructions: 'A function is another programming tool to help you avoid repeating
-          yourself. This function draws a flower, so you can use it any time you want
-          to draw a flower. Use this and the new jump block to draw these flowers.
-          Hint: The flowers are 150 pixels apart'
+        instructions: 'Uma função é mais uma ferramenta de programação para que você
+          não tenha que repetir as mesmas ações. Esta função desenha uma flor, assim,
+          você pode usá-la sempre que quiser fazer esse desenho. Use-a juntamente
+          com o novo bloco "pule" para desenhar essas flores. Dica: as flores são
+          separadas por 150 pixels'
       Standalone_Artist_8:
-        instructions: Here's a function called "Draw a shape" that we've programmed
-          to draw hexagons. Run the code to see what it does and then experiment with
-          the function to see what happens. Can you make it draw a pattern of squares,
-          triangles, or octagons?
+        instructions: Esta é uma função chamada "Desenhe uma forma", que programamos
+          para desenhar hexágonos. Execute o código para ver o que ele faz e, em seguida,
+          tente usá-lo com a função para ver o que acontece. Você consegue fazer com
+          que ela desenhe um padrão de quadrados, triângulos ou octógonos?
       Standalone_Artist_9:
-        instructions: Now go ahead and make whatever picture you'd like! You've even
-          got an empty function that you can make do whatever you want!
+        instructions: Agora vá em frente e faça a imagem que mais gostar! Você tem
+          até uma função vazia para usar para fazer o que quiser!
     video:
       name:
         maze_intro: Introdução ao Labirinto
@@ -783,14 +787,28 @@
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Caça-sóis funcionais
         C3_songwriting_with_parameters: Escrevendo uma canção com parâmetros
-        C4_artist_math: Programming the Artist with Math
-        C4_create_functions: Creating Functions
-        C4_edit_functions: Editing Functions
+        C4_intro: Introdução
+        C4_bee_conditional: Condicionais da abelha
+        C4_variables_artist: Variáveis - Artista
+        C4_variables_playlab: Variáveis - Laboratório
         C4_for_loops: Laços for
-        C4_variables: Variáveis
+        C4_math_artist: Programação do Artista com matemática
+        C4_function_edit: Editando funções
+        C4_function_create: Criando funções
+        C4_function_parameters: Funções com Parâmetros
+        C4_conditionals: Condições
+        C4_unplugged_algorithms: Algoritmos com tangrams
+        C4_unplugged_madlibs: Mad Libs
+        C4_unplugged_variables: Variáveis em envelopes
+        C4_unplugged_forloops: Laços for
+        C4_unplugged_parameters: Composição de música com parâmetros
+        C4_unplugged_binary: Binário
         frozen_intro: Introdução à Hora de Código
         frozen_loops: Introdução aos Laços
         frozen_functions: Introdução às Funções
+        playlab_intro: Introdução ao Laboratório
+        playlab_events: Eventos do Laboratório
+        playlab_repeat_forever: 'Laboratório: repetir infinitamente'
     callout:
       text:
         drag_blocks: Arraste um bloco "avance" e o encaixe embaixo do outro bloco
@@ -817,6 +835,10 @@
         replace_questions_degree: Use o menu suspenso para substituir "???" pelo grau
           correto para virar
         repeat_blocks: Use o bloco "Repita" e conecte-o aos blocos na área de trabalho
+        repeat_blocks_1: (1) Use este bloco e coloque-o em torno dos blocos cinza
+          na área de trabalho
+        repeat_blocks_2: (2) Traga o bloco "repita" aqui e coloque os blocos cinza
+          dentro dele
         snowflake_dropdown: Use este menu suspenso para criar diferentes flocos de
           neve!
         degrees_per_side: Divida 360 pelo número de lados para obter o tamanho de
@@ -824,13 +846,13 @@
         set_sides: Use este bloco para definir "lados" com o número necessário para
           completar o desafio.
         set_length: Use este bloco para definir "comprimento" com o valor correto.
-        which_equation: Qual equação faz com que cada lado seja mais curto para formas
-          com mais lados? Experimente todas as equações!
+        which_equation: Qual equação torna cada lado mais curto nas formas com maior
+          número de lados?
         get_nectar: Use o novo bloco "obtenha néctar".
         actions_category: A caixa de ferramentas tem um novo visual! Os blocos de
           "Ação" estão aqui agora.
         draw_square_hint: 'Dica: Use o laço do quadrado que você fez no último desafio.'
-        edit_function: Use este botão para editar a função.
+        edit_function: Clique aqui para editar sua função.
         create_function: Clique aqui para abrir o submenu "Funções", e então clique
           no botão "Criar uma função".
         house_hint: Tudo bem se a imagem ainda não se parece com uma casa. Vamos arrumar
@@ -841,19 +863,48 @@
         logic_category: Abra o submenu "Lógica" para encontrar o bloco "se/senão".
         length_parameter: Você pode atualizar esta função para que ela use o parâmetro
           "comprimento"?
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
-          each circle.
-        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
-          and change the size.
-        frozen_snowflake_branch: Use the "create a snowflake branch" block
-        frozen_create_square: Attach more blocks here to create a square
-        playlab_drag_say: Drag the "say" block here and type "hello"
-        playlab_use_twice: Use this block twice and remember to change the actor number
-        playlab_move_girl: Use the "move right" block to move Tennis Girl
-        playlab_play_sound: Add "play sound" block here
-        playlab_arrow_keys: Remember to use these to move the witch after clicking
-          on Run
-        playlab_add_move: Add "move" blocks inside this repeat block
-        playlab_add_score: Add score blocks here
-        playlab_add_blocks: Add your blocks here
+        frozen_diamond_repeat: Use o bloco "repita" para criar esta forma.
+        frozen_circle_function_in_circle_turn: Não se esqueça de virar depois de criar
+          cada círculo.
+        frozen_circle_function_with_parameter_circle: Use o bloco "crie um círculo"
+          e mude o tamanho.
+        frozen_snowflake_branch: Use o bloco "crie uma parte do floco de neve"
+        frozen_create_square: Conecte mais blocos aqui para criar um quadrado
+        playlab_drag_say: Arraste o bloco "diga" aqui e digite "olá"
+        playlab_use_twice: Use este bloco duas vezes e lembre-se de mudar o número
+          do personagem
+        playlab_move_girl: Use o bloco "mova à direita" para mover a tenista
+        playlab_play_sound: Adicione o bloco "reproduza som" aqui
+        playlab_arrow_keys: Lembre-se de usá-los para mover a bruxa depois de clicar
+          em Executar
+        playlab_add_move: Adicione blocos "mova" dentro deste bloco "repita"
+        playlab_add_score: Adicione blocos de pontuação aqui
+        playlab_add_blocks: Adicione seus blocos aqui
+        set_variable: Arraste um bloco de número aqui para definir sua variável
+        place_variable: Arraste sua variável para dentro deste bloco
+        bee_for_loop: Arraste o maior número de néctar que você quer a abelha colete
+          aqui
+        place_counter_variable: Arraste sua variável contador para dentro deste bloco
+        function_editor_draw_square: Esta é sua definição de função. Esses blocos
+          são executados sempre que você usar o bloco "desenhe um quadrado"
+        change_here: Faça sua alteração aqui
+        write_draw_square_function: Arraste os blocos da caixa de ferramentas que
+          desenham um quadrado aqui
+        write_draw_triangle_function: Arraste os blocos da caixa de ferramentas que
+          desenham um triângulo aqui
+        edit_add_parameter: Clique em editar para adicionar um parâmetro em sua função
+        add_and_drag_parameter: Escreva o nome do seu parâmetro aqui, clique em adicionar
+          e, em seguida, arraste-o para sua definição de função
+        fill_in_actor: Substitua ??? pelos números que correspondem a cada ator (1,
+          2 e 3)
+        repeat: Coloque os blocos dentro do laço para repetir os comandos
+        if_bee_nectar: Use o bloco "se" para decidir se a abelha deve coletar o néctar
+        if_else_bee: Use o bloco "se-senão" para que a abelha colete o néctar de uma
+          flor, e faça mel se não for uma flor
+        repeat_full_circle: Insira o número de vezes que o zumbi deve se mover para
+          fazer um círculo completo
+        place_length_variable: Arraste a variável de comprimento aqui para substituir
+          os pontos de interrogação
+        arrows_move_actor: Use as setas para mover o personagem
+        right_arrow_fireball: Use a seta para a direita para atirar bolas de fogo
+        name_function: Escreva o nome da sua função aqui

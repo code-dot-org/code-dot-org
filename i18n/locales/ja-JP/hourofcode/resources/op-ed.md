@@ -4,32 +4,32 @@ title: Sample Op-ed Supportive of Computer Science Education Week and Hour of Co
 
 * * *
 
-### Below is a sample op-ed supportive of Computer Science Education Week and its goals that could be used by state, local legislators, business leaders etc.
+### 以下はコンピューターサイエンス週間の支援のための論説例です。州議員、国会議員、ビジネスリーダーの方々に利用してもらうことを意図しています。
 
   
 
 
-Go to http://code.org/promote to find state specific information about computer science.
+コンピューターサイエンスに関する州固有の情報に関してはhttp://code.org/promote をご覧ください。
 
-**Title: Computing…Where the Jobs Are**
+**Title: コンピューティング…仕事のありか**
 
-**By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]**
+**[NAME]　 [教育者、管理者、ビジネスリーダーとの共著も検討してください]**
 
-Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
+コンピューターはあらゆるところに存在しています。 ポケットの中、 壁にもぶら下がっていますし、 車の中にもあります。 電力グリッドをはじめ、信号機、金融市場での作業と、我々のインフラに欠かせないものとなっています。 これらのコンピューターには共通点が１つあります。 何をするのかソフトウェアが制御しているということです。
 
-But who exactly is going to write this software?
+では、このソフトウェアは誰が書いているのでしょうか？
 
-Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
+テクノロジーによって我々の世界がすごいスピードで変化していることを考えると、幼稚園から高校生まで数多くの生徒がコンピューターサイエンスを学んでいると思うかもしれません。 残念ながらそうではありません。 実際には、コンピューターサイエンスを学んでいる生徒はほとんどいません。教えている学校もほとんどありません。10年前より減っているのです。
 
-At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for a lack of enough individuals with the right skill sets.
+スキルの高いプログラマーへの需要はかつてないほど高まっています。コンピューター科学者は不足しています。 失業率が高い今日の状況ですが、沢山の仕事で**[INSERT STATE/CITY]**人が不足しています。適切なスキルセットを持った人材が不足しているからです。
 
-Why is this? And how can we address it?
+なぜでしょう？どうしたら解決できるでしょうか？
 
-The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
+問題は中学、高校にあるようです。 10校中9校はコンピュータープログラミングのクラスを設けていません。 昨年度、**[SCHOOL DISTRICT]**, たった **[NUMBER]** 人の生徒しか、大学レベルのコンピューターサイエンスの試験を受けませんでした。私たちの州ではたった、**[%]**の生徒しか受験しなかったのです。 私たちは、高給で重要なキャリアを追い求めるよう、生徒を励ましたり、サポートしたりしなかったのです。
 
-Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
+ほとんどすべてのコンピューターの革新はこの国で発明されました。しかし、今対処しないと、リーダーシップを失うというリスクにさらされています。
 
-We need to make some changes.
+状況を変える必要があるのです。
 
 **[OPTIONAL FOR STATES WHERE THIS APPLIES]**
 

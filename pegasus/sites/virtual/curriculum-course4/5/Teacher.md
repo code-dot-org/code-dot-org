@@ -160,7 +160,7 @@ Use these activities to enhance student learning. They can be used as outside of
   - Have the students fold two pieces of paper in half three times and re-open them to lay them flat.<br/>  
   - On one of those pieces, have them make a drawing where they leave one of the resulting rectangles blank.
   - Have them cut the other folded piece along the creases to wind up with eight rectangle shapes.
-      - Encourage the students to make different drawings on all eight rectangles that belivably complete their original drawing.
+      - Encourage the students to make different drawings on all eight rectangles that believably complete their original drawing.
 - Be sure to allow students time to share.
 
 ### Prep for Songwriting with Parameters
@@ -194,4 +194,4 @@ Use these activities to enhance student learning. They can be used as outside of
 [/content]
 
 
-<link rel="stylesheet" type="text/css" href="morestyle.css"/>
+<link rel="stylesheet" type="text/css" href="../docs/morestyle.css"/>

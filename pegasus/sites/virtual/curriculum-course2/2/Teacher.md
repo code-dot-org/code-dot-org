@@ -57,6 +57,7 @@ In this lesson, students will relate the concept of algorithms back to everyday 
 - Glue
 
 ### For the Teacher
+- [Lesson Video](http://youtu.be/EEwe28TF1VE?list=PL2DhNKNdmOtobJjiTYvpBDZ0xzhXRj11N)
 - Teacher Lesson Guide
 - [Real-Life Algorithms Worksheet](Activity2-RealLifeAlgorithms.pdf): Paper Airplanes
 - Print Assessment Worksheet: [Daily Algorithms](Assessment2-EverydayAlgorithms.pdf) for each student

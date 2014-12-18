@@ -36,6 +36,7 @@
   of: ของ
   more: เพิ่มเติม
   less: น้อย
+  beta: beta
   try_hoc: ลอง "ชั่วโมงแห่งการโค้ด" คลิกที่นี่ >>
   try_k8intro: ทดลอง K-8 ของพวกเราเพื่อเริ่มต้นศึกษาคอมพิวเตอร์  (15-25 ชั่วโมง)
   k8intro: K-8 เพื่อเริ่มต้นกับวิชาวิทยาศาสตร์คอมพิวเตอร์(15-25 ชั่วโมง)
@@ -245,7 +246,7 @@
         playlab: Make an App
         artist: Draw Something
     user:
-      classroom: นักเรียนของฉัน
+      classroom: หน้าแรกของคุณครู
       label: Hi %{username}
       stats: My progress
       settings: My account
@@ -395,7 +396,7 @@
     none: Prefer not to answer
   user_type:
     student: นักเรียน
-    teacher: Teacher
+    teacher: ครู
   footer:
     help_from_html: Engineers from <a href="http://www.google.com">Google</a>, <a
       href="http://www.microsoft.com">Microsoft</a>, <a href="http://www.facebook.com">Facebook</a>,
@@ -587,3 +588,7 @@
     completed_too_many_blocks: completed, too many blocks
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
+  studio:
+    courses_working_on: Courses you're working on
+    completed_courses: Completed courses
+    all_courses: All courses

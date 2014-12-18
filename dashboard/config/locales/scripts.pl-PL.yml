@@ -9,7 +9,7 @@
           Multi: Multi
           Match: Dopasuj
           Math Image: Math Image
-          title: Test Course
+          title: Kurs testowy
           description: Just an internal test course.
         course1:
           'Jigsaw: Learn to drag and drop': 'Układanka: poznaj metodę "przeciągnij
@@ -22,7 +22,7 @@
           Spelling Bee not blockly: Spelling Bee not blockly
           'Bee 1: Intro': 'Bee 1: Intro'
           'Maze 2: Loops': 'Maze 2: Loops'
-          'Bee 2: Loops': 'Bee 2: Loops'
+          'Bee 2: Loops': 'Bee 2: Pętle'
           Multi & Match: Multi & Match
           K-1 Flappy: K-1 Flappy
           Flappy non blockly: Flappy non blockly
@@ -142,7 +142,7 @@
           'Bee: Nested Loops2': 'Bee: Nested Loops2'
           'Bee: Debugging2': 'Bee: Debugging2'
           'Artist: Patterns': 'Artist: Patterns'
-          Songwriting: Songwriting
+          Songwriting: Pisanie piosenek
           description_audience: Ages 8+ (after Course 2)
           description_short: Students taking Course 3 should have already taken Course
             2.
@@ -315,3 +315,13 @@
           description: A selection of Course 4 levels for usability testing.
           Variables: Zmienne
           For Loops: For Loops
+        potus:
+          title: special
+          description_short: special
+          description: special
+          Special: Special
+        special:
+          title: special
+          description_short: special
+          description: special
+          Special: Special

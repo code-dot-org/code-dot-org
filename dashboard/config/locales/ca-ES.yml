@@ -36,6 +36,7 @@
   of: de
   more: MÉS
   less: MENYS
+  beta: beta
   try_hoc: 'Prova l''Hora de Codi, fes clic aquí >> '
   try_k8intro: O proveu el nostre curs d'introducció a la Informàtica per a ESO (15-25
     hores)
@@ -185,8 +186,8 @@
       'yes': Sí
       msg: Esteu segur que voleu reclamar el Premi %{prize_name}?
       msg_student: 'Nota: Només podeu triar un tipus de premi.'
-      msg_publicschool: Si us plau, confirma que ets un mestre d'una escola pública
-        dels Estats Units.
+      msg_publicschool: Confirmeu que sou un mestre d'una escola pública dels Estats
+        Units.
       msg_visit_website: Visita el lloc
     providers:
       apple_itunes: Targeta de regal iTunes de 10$
@@ -203,8 +204,8 @@
       choose: 'Tria un premi:'
       choose_teacher: 'Fes clic al logo de sota per a reclamar el teu premi:'
       earned: Has guanyat un premi! (només estudiants EUA)
-      not_earned_title: Acaba la classe i guanya premis (només estudiants dels Estats
-        Units)
+      not_earned_title: Acabeu el tutorial i guanyeu premis (només estudiants dels
+        Estats Units)
       not_earned: |
         Aprèn tots els conceptes d'informàtic, recull tots els %{num_trophies} trofeus, i guanya premis reals. Pots escollir entre targetes de regal de 10$ de iTunes, 10GB d'espai gratuït al Dropbox, 10$ en crèdits d'Skype i descàrregues gratuïtes de jocs.
         NOTA: Oferta vàlida només als estudiants dels EUA i fins l'esgotament d'existències.
@@ -399,8 +400,9 @@
     test_videos_help: Prova el nostre nou reproductor de vídeo a la teva escola
     try_beta_courses: Nou! Prova els nostres cursos beta per alumnes de infantil
     use_as_teacher: Utilitza aquest lloc com a mestre
-    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
+    heading_hoc2014: <h2>L'Hora de Codi per a</h2><h1>Totes les edats</h1>
+    heading_elementary: <h2>Cursos de 20 hores per a</h2><h1>Principiants (totes les
+      edats)</h1>
     heading_apps: <h2>Diversió per a</h2><h1>Tothom</h1>
     heading_legacy: <h2>El nostre curs general per a</h2><h1>Totes les edats</h1>
     your_gallery: Galeria
@@ -414,16 +416,15 @@
   footer:
     help_from_html: Enginyers de Google, Microsoft, Facebook i Twitter i han ajudat
       a crear aquesta classe.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 <a href="http://www.rovio.com">Rovio
-      Entertainment Ltd</a>. Tots els drets reservats.<br/> Plants vs. Zombies&trade;
-      & &copy; 2013 <a href="http://www.ea.com">Electronic Arts Inc.</a>. Tots els
-      drets reservats.
-    powered_by_aws: Powered by Amazon Web Services
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
+      Tots els drets reservats.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
+      Arts Inc. Tots els drets reservats.
+    powered_by_aws: Desenvolupat per Amazon Web Services
     feedback: Digues la teva
     translate: Ajuda'ns a traduir al teu idioma
     support: Suport
     support_url: http://support.code.org
-    tos: Condicions
+    tos: Condicions d'ús
     privacy: Política de Privacitat
     secure: Versió segura
   reference_area:
@@ -535,7 +536,7 @@
     prerelease_hoc2014: Aquest tutorial està en <span class='betatext'> beta</span>.  És
       subjecte a revisió a mida que es reben comentaris i es fan millores.
     feedback: Digues la teva
-    report_bug: Informar d'errors
+    report_bug: Informeu d'errors
     support: Obtenir ajuda
     support_url: support.code.org
   multi:
@@ -583,7 +584,7 @@
           description: Vols 'escriure el teu propi joc en menys de 10 minuts? Prova
             el nostre tutorial Codi Flappy!
         jigsaw:
-          title: Puzle
+          title: Puzzle
           description: ''
         step:
           title: pas
@@ -608,3 +609,7 @@
     completed_too_many_blocks: completat, massa blocs
     completed_perfect: completat, perfecte
     furthest_level_attempted: nivell més alt intentat
+  studio:
+    courses_working_on: Cursos en els que estàs treballant
+    completed_courses: Cursos completats
+    all_courses: Tots els cursos

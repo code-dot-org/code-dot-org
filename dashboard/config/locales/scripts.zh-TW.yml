@@ -201,10 +201,10 @@
           'Play Lab: Design Recipe': 'Play Lab: Design Recipe'
           'Eval: Design Recipe': 'Eval: Design Recipe'
         playlab:
-          title: Play Lab
-          description: Create a story or make a game with Play Lab!
-          Play Lab: Play Lab
-          description_short: Create a story or make a game with Play Lab!
+          title: 播放實驗室
+          description: 創建一個故事或做遊戲玩實驗室！
+          Play Lab: 播放實驗室
+          description_short: 創建一個故事或做遊戲玩實驗室！
         artist:
           title: 畫家
           description: Draw cool pictures and designs with the Artist!
@@ -218,10 +218,8 @@
         hourofcode:
           Maze: Maze
           title: 一小時的程式設計課程
-          description: Try the basics of computer science with characters from Angry
-            Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description_short: Try the basics of computer science with characters from
-            Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          description: 嘗試計算機科學的基礎知識與憤怒的小鳥人物，植物大戰殭屍，和Scrat從冰河時代！
+          description_short: 嘗試計算機科學的基礎知識與許多好玩的人物！
         frozen:
           title: 冰雪奇緣
           description: Join the Royal Sisters of Arendelle, Anna and Elsa, as they
@@ -312,3 +310,13 @@
           description: A selection of Course 4 levels for usability testing.
           Variables: 變數類別
           For Loops: For Loops
+        potus:
+          title: special
+          description_short: special
+          description: special
+          Special: Special
+        special:
+          title: special
+          description_short: special
+          description: special
+          Special: Special

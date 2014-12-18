@@ -37,8 +37,8 @@
           실행"을 누르면, 앵그리버드가 한 칸 앞으로 이동합니다.
       11:
         image: notes/hoc1_11.jpg
-        text: 동작을 여러 번 실행시키기 위해서는, 여러 개의 블럭을 가져다 놓고, 모양을 맞추어 붙이면 됩니다. 앵그리버드는 위에서 아래로
-          블럭을 따라가며, 순서대로 명령을 실행합니다.
+        text: 하나 이상의 동작을 실행하기 위해서, 여러 개의 블럭들을 프로그래밍 작업공간에 드래그해 넣고 서로 붙이면 됩니다. 플래피
+          버드를 동작시키는 명령어들은 위에서 아래로 순서대로 실행될 것입니다.
       12:
         image: notes/hoc1_12.jpg
         text: 프로그램을 실행시켜 본 후, 수정하거나 다시 실행 하고 싶으면, "처음 상태로" 버튼을 누르면 됩니다.
@@ -185,40 +185,37 @@
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: 안녕하세요? 저는 살로니 에요. 저는 건강/의료 분야에서 컴퓨터과학(정보과학)에서 배운 것들을 활용했어요. "만약.. 아니면"
-          블럭을 어떻게 사용할 수 있는지 살펴보도록 하죠. "만약" 블럭과 비슷하지만, "아니면" 부분이 더 있어요.
+        text: 안녕하세요? 저는 살로니 에요. 저는 건강/신약개발 분야에서 컴퓨터과학(정보과학)에서 배운 것들을 활용했어요. "만약..
+          아니면" 블럭을 어떻게 사용할 수 있는지 살펴보도록 하죠. "만약" 블럭과 비슷하지만, "아니면" 부분이 더 있어요.
       2:
         image: notes/hoc5_2.jpg
-        text: '"실행" 부분에 "전진" 블럭을 넣고, "왼쪽으로 돌기" 블럭을 "아니면"이라고 쓰여진 부분에 넣으면, 좀비는 2가지 경우
-          중에서 하나 만 선택하게 되요. 만약 앞에 길이 있으면, "앞으로 이동"하고, 아니면(즉, 앞에 길이 없으면), "왼쪽으로 돌기"를
-          하게 되요.'
+        text: '"실행" 부분에 "앞으로 이동" 블럭을 넣고, "왼쪽으로 회전" 블럭을 "아니면"이라고 쓰여진 부분에 넣으면, 좀비는 2가지
+          경우 중에서 하나 만 선택하게 되요. 만약 앞에 길이 있으면, "앞으로 이동"하고, 아니면(즉, 앞에 길이 없으면), "왼쪽으로
+          회전"을 하게 되요.'
       3:
         image: notes/hoc5_3.jpg
-        text: '"만약" 블럭하고 비슷하게 생긴, "만약... 아니면" 블럭들을 "반복(횟수)" 블럭 안에 넣으면, "만약... 아니면"
-          블럭을 이용해서, 앞으로 이동 해야하는지? 왼쪽으로 돌기를 해야하는지? 를 판단해 계속 움직이게 되는 거에요.'
+        text: '"만약" 블럭과 똑같이, "만약~아니면" 블럭 안에 "반복" 블럭들을 넣어 좀비를 이동시킬 수 있습니다. "만약-아니면"
+          블럭을 이용해 회전할 곳인지 아닌지 계속 확인하게 됩니다.'
       4:
         image: notes/hoc5_4.jpg
-        text: 자, 이제 좀비들에게 가봅시다!
+        text: 자 이제, 좀비들에게 가봅시다!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
-        text: An if-else statement is a decision between two things. Let's see how
-          we can use an if-else statement with our buddy Scrat the squirrel.
+        text: 하나의 만약-아니면(if-else) 조건/선택실행문은 2가지 중 하나를 반드시 선택/실행하게 됩니다. 자 이제 우리 친구
+          다람쥐 스크랫(scrat)과 함께 만약-아니면 조건/선택실행문을 어떻게 사용하는지 알아봅시다.
       2:
         image: notes/saloni_ifelse_scrat2.jpg
-        text: This block looks the same as the "if" block, but there's an extra part
-          at the bottom that says "else". If I put a "move forward" block where it
-          says "do" and a "turn left" block where it says "else", that means Scrat
-          the squirrel will move forward if there's a path ahead. If there's not a
-          path ahead, Scrat will turn left.
+        text: 이 블럭은 "만약" 블럭과 같은 것처럼 보이지만, 그 아래에 "그렇지 않으면" 부분이 더 있습니다. "실행"이라고 쓰여있는
+          부분에 "앞으로 이동" 블럭을 넣고, "그렇지 않으면" 부분에 "오른쪽으로 회전" 블럭을 넣으면, 다람쥐 스크랫은 앞쪽에 길이 있으면
+          앞으로 이동하라는 것을 의미합니다. 앞쪽에 길이 없으면, 스크랫은 오른쪽으로 회전 할 것입니다.
       3:
         image: notes/saloni_ifelse_scrat3.jpg
-        text: It's making a decision and doing one of the two actions based on that
-          decision. And just like "if" blocks, you can put "if-else" blocks inside
-          "repeat" blocks.
+        text: 조건/선택에 따라 2가지 동작 중 반드시 하나를 결정합니다. 그리고 "만약" 블럭과 거의 똑같습니다, "만약-아니면(if-else)"
+          블럭안에서 "반복(repeat)" 블럭들을 사용할 수 있습니다.
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: Now let's help Scrat the squirrel get that acorn!
+        text: 이제 다람쥐 스크랫이 도토리를 잡을 수 있게 도와주세요!
     function:
       1:
         image: notes/stage13_1.jpg
@@ -323,128 +320,160 @@
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
-        text: Hi, my name is Lyndsey. I model, act, and write my own apps. Let's use
-          code to join Anna and Elsa as they explore the magic and beauty of ice.
+        text: 안녕하세요, 제 이름은 린지입니다. 저는 모델이고, 연극도하고, 앱들을 직접만들고 있습니다. 얼음의 마술과 아름다움을 탐구하는
+          안나, 엘사와 함께 코드를 배워보세요.
       2:
         image: notes/frozen1_2.jpg
-        text: You'll create snowflakes and patterns as you ice skate and make a winter
-          wonderland that you can then share with your friends.
+        text: 스케이트를 타면서 눈송이들과 패턴을 만들고, 겨울왕국을 만들어서 친구들에게 보여주세요.
       3:
         image: notes/frozen1_3.jpg
-        text: In the next hour, you're going to learn the basics of how to code. Traditional
-          programming is usually in text, but we'll use Blockly, which uses visual
-          blocks that you can drag and drop to write programs. This is how even university
-          students learn the basics. Under the hood, you're still creating code.
+        text: 이제부터, 코드를 만들어낼 수 있는 기초/개념/원리들을 배우게 될 것입니다. 일반적인 프로그래밍은 텍스트(문자들)를 사용하지만,
+          여기서는 비주얼 블럭들로 프로그래밍하는 블러클리(Blockly)를 이용해 블럭들을 드래그 앤 드롭해서 프로그램을 만들 수 있습니다.
+          때때로 처음 배우는 대학생들도 해보는 방법입니다. 하지만, 여러분들도 똑같이 코드를 만들고 있는 것입니다.
       4:
         image: notes/frozen1_4.jpg
-        text: A program is a set of instructions that tells a computer what to do.
-          Let's build a code, or a program, that will help Elsa create a simple line.
-          We will use this later to create more complex patterns.
+        text: 하나의 프로그램은 컴퓨터가 실행해야 할 작업들을 알려주는 명령어들의 집합에 불과합니다. 자 이제, 엘사가 간단한 선을 그리도록
+          하는 코드, 프로그램을 만들어 봅시다. 이 간단한 방법을 이용해서 나중에 보다 복잡한 패턴들을 만들어낼 수 있게 될 것입니다.
       5:
         image: notes/frozen1_5.jpg
-        text: Your screen is split into three main parts. On the left, is the ice
-          surface where you'll run your program. The instructions for each level are
-          written right below the surface.
+        text: 화면은 3개의 부분으로 나뉘어져 있습니다. 왼쪽 부분은 프로그램을 실행시키고 그 결과를 확인하는 얼음판입니다. 각 단계에서
+          해결해야하는 목표들은 그 아래에 적혀있습니다.
       6:
         image: notes/frozen1_6.jpg
-        text: This middle area is the toolbox, and each of these blocks is an action
-          that Elsa and Anna can do.
+        text: 가운데 영역은 도구상자이고, 각각의 블럭들은 엘사와 안나가 실행할 수 있는 동작들을 나타냅니다.
       7:
         image: notes/frozen1_7.jpg
-        text: The white space on the right is called the workspace, and this is where
-          we'll build our program. To move around the ice surface, you'll use the
-          "Move Forward" block.
+        text: 오른쪽의 아무것도 없는 흰 공간은 작업공간(workspace)이라고 부르고, 그 곳에서 프로그램의 코드를 만들게 될 것입니다.
+          얼음판에서 이리 저리 움직이기 위해, "앞으로 이동"블럭을 사용하게 될 것입니다.
       8:
         image: notes/frozen1_8.jpg
-        text: Here, the "Move Forward" block says, "move forward by 100 pixels." When
-          we press "Run", what happens? Elsa moves forward a certain amount on the
-          screen, 100 pixels in fact! Pixels are basically very tiny squares on your
-          computer screen.
+        text: 여기 "앞으로 이동" 블럭의 의미는 "앞으로 100 픽셀만큼 이동해라" 입니다. "실행하기"를 누르면 어떤 일이 일어날까요?
+          화면에서 엘사가 어느 정도 만큼 앞으로 움직일 것입니다. 정확히 100 픽셀만큼 움직입니다! 픽셀은 기본적으로 컴퓨터 화면의 그림을
+          만들어내는 아주 작은 단위의 사각형을 의미합니다.
       9:
         image: notes/frozen1_9.jpg
-        text: The other block we have in this puzzle says "turn right by 90 degrees."
-          And when we use this "Turn Right" block, that makes Elsa turn a certain
-          amount. You can play around with how far you want Elsa to turn. The angle
-          is measured from the path ahead of Elsa. So, this is a 90 degree turn. And
-          this is a 120 degree turn.
+        text: 이 퍼즐에서 주어진 다른 블럭은 "오른쪽으로 90도 만큼 회전하라"라는 것을 의미합니다. "오른쪽으로 회전" 블럭을 사용하면
+          엘사가 오른쪽으로 어느 정도 회전합니다. 원하는 만큼 엘사가 회전하도록 할 수 있습니다. 회전할 각도는 엘사가 바라보고 있는 앞을
+          기준으로 측정됩니다. 따라서 이것은 90도 회전하는 것이고, 이것은 120도 만큼 회전하는 것입니다.
       10:
         image: notes/frozen1_10.jpg
-        text: Remember, you can change the number of pixels and degrees by clicking
-          the arrows next to them.
+        text: 각 블럭에서 아래쪽 화살표 부분을 클릭하면 원하는 픽셀만큼의 거리나, 회전할 각도의 값을 바꿀 수 있습니다.
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
-        text: Hi, I’m Paola! Computers are really good at repeating actions. You can
-          count to 10, 20, or 100. But a computer can count to a billion or a trillion.
-          It won't get bored and it will only take a few seconds. Whether it's counting,
-          or drawing, or anything--computers can repeat things hundreds or even billions
-          of times.
+        text: 안녕하세요! 저는 파올라라고 합니다! 컴퓨터들은 반복적인 작업을 진짜 아주 잘 합니다. 여러분들은 10, 20, 100까지
+          셀수 있습니다. 하지만 컴퓨터는 10억?, 1조 까지도 셀 수 있습니다. 컴퓨터는 전혀 지루해 하지도 않으면서 몇 초만에 다 셀
+          수 있습니다. 수를 세던, 그림을 그리던, 다른 어떤 것들을 하던지--컴퓨터들은 수백번~ 수십억번까지 반복해서 할 수 있습니다.
       2:
         image: notes/frozen2_2.jpg
-        text: In programming, we call this a loop. A loop is how you repeat your code
-          over and over again. For the next puzzle, your goal is to help Anna create
-          a square with the "Repeat" block.
+        text: 이러한 것을 프로그래밍에서 루프(loop)라고 합니다. 루프를 이용하면 원하는 코드를 계속, 계속 반복해서 실행할 수 있습니다.
+          다음 퍼즐에서, 여러분의 목표는 "반복(Repeat)" 블럭을 이용해서 안나가 사각형을 그릴 수 있도록 도와주는 것입니다.
       3:
         image: notes/frozen2_3.jpg
-        text: Any blocks of code you put inside the "Repeat" block will be repeated
-          in sequence, as many times as you want.
+        text: '"반복(Repeat)" 블럭 안에 넣는 블럭들은 순서대로 실행되면서, 원하는 만큼 반복적으로 실행될 것입니다.'
       4:
         image: notes/frozen2_4.jpg
-        text: To draw a square, you can use the "Move Forward" and "Turn Right" block
-          4 times. But the easier way is to tell the computer to "Move Forward" and
-          "Turn Right by 90 degrees" once, and then tell it to repeat this pair of
-          actions 4 times. To do that, you need to put the "Move Forward" and "Turn
-          Right" block inside a "Repeat" block.
+        text: 사각형을 그리기 위해서, "앞으로 이동" 블럭과 "오른쪽으로 회전" 블럭을 4번 사용할 수 있습니다. 하지만, 컴퓨터에게
+          "앞으로 이동", "오른쪽으로 90도 회전"을 한 번 실행시켰다면, 똑같은 방법을 4번 반복하라고 하면 매우 편리합니다. 그렇게
+          하기 위해, "앞으로 이동"블럭과 "오른쪽으로 회전" 블럭을 "반복(Repeat)" 블럭 안에 넣으면 됩니다.
       5:
         image: notes/frozen2_5.jpg
-        text: Remember, you can change the number in the "Repeat" block to anything,
-          and it will repeat what's inside the block that many times.
+        text: '"반복(Repeat)" 블럭안에 반복되어야 할 수를 마음대로 넣을 수 있습니다. 넣은 수만큼 반복해서 실행할 것입니다.'
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: Hi, I’m Chris Bosh. I’m a professional basketball player, and I coded
-          in college.
+        text: 안녕하세요. 저는 크리스 보쉬(Crish Bosh) 입니다.  저는 프로 농구 선수이면서, 대학에서 코딩을 하고 있습니다.
       2:
         image: notes/frozen3_2.jpg
-        text: One of the most important concepts in computer science is how to define
-          new commands. Most computer languages have only about 100 words or commands.
-          And really, the art and magic is in defining your own new words out of these
-          building blocks.
+        text: 컴퓨터과학(정보과학)에서 가장 중요한 기초/개념/원리들 중 하나는 새로운 명령어들을 정의해서 만들어내는 것입니다. 대부분의
+          컴퓨터 프로그래밍언어는 기껏해야 100 단어 보다 작은 명령어들만으로 구성되어있습니다. 그리고 실제로 예술적이면서도 마법같은 것은
+          이러한 블럭들을 이용해, 자신이 원하는 새로운 블럭을 만들어낼 수 있다는 것입니다.
       3:
         image: notes/frozen3_3.jpg
-        text: Once you've taught a computer how to do an action once using this sequence
-          of commands, you can make up your own name for that action so it's easy
-          to repeat it later. When you define your own command and give it a name,
-          that's called a function.
+        text: 일단, 한 번만 컴퓨터가 실행해야할 명령들을 컴퓨터에게 알려주었다면, 그러한 명령들을 묶어 새로운 이름을 붙일 수 있고,
+          그렇게하면 나중에 매우 쉽게 반복시킬 수 있게 됩니다. 명령들을 조합하고 거기에 원하는 이름을 붙이면, 그것을 바로 함수(function)라고
+          합니다.
       4:
         image: notes/frozen3_4.jpg
-        text: Hi, I’m Jess. When programming with blocks, you would use functions
-          if there are a set of actions you would like to use lots of times. For example,
-          you've written code to create a square.
+        text: 안녕하세요, 저는 제스입니다. 블럭을 사용해 프로그래밍을 할 때 어떤 동작들을 여러 번 반복해야 한다면 함수를 사용해 볼
+          수 있습니다. 예를 들어, 앞에서 만들었던 사각형을 그리는 코드를 생각해보세요.
       5:
         image: notes/frozen3_5.jpg
-        text: 'You can define this as a function called "create a square." '
+        text: '이 코드는 "사각형 그리기"라는 함수로 정의할 수 있습니다. '
       6:
         image: notes/frozen3_6.jpg
-        text: Now you have a new block that you can use multiple times to create multiple
-          squares.
+        text: 이제, 여러개의 사각형을 만들기 위해, 여러번 사용할 수 있는 새로운 블럭이 만들어졌습니다.
       7:
         image: notes/frozen3_7.jpg
-        text: A lot of simple shapes can be used to create more complex patterns.
-          In the next puzzle, the code you recently wrote to make a circle is available
-          to you as a new function that can make circles of different sizes. Can you
-          use it to help Elsa create intricate and beautiful patterns in the snow?
+        text: 여러 가지의 많은 단순한 모양들은 보다 복잡한 패턴들을 만들어내는데 사용될 수 있습니다. 다음 퍼즐들에서는 바로 전에 원을
+          만들기 위해 작성했던 코드를 새로운 함수로 정의하고, 그 함수를 이용해서 서로 다른 크기의 원들을 만들 수 있게 됩니다. 그 함수를
+          이용해서 복잡하고 아름다운 패턴의 눈을 만들어낼 수 있도록 엘사를 도와주세요.
     C3_playlab_create_game:
       1:
         image: notes/playlab_1.png
-        text: So far you've been making an animation or a story that does the exact
-          same thing every time you run it. Now you can make an interactive game that
-          you can actually play.
+        text: 지금까지 여러분들은 애니메이션이나 이야기들을 만들어보았습니다. 그리고 여러분들이 실행시켜보는 다른 모든 것들과 똑같은 것이었습니다.
+          이제는 여러분들이 실제로 플레이할 수 있는 인터랙티브 게임을 만들 수 있습니다.
       2:
         image: notes/playlab_2.png
-        text: There's the "when arrow" block and the "move actor" block. You can put
-          these blocks together to move the actors around with the arrow keys.
+        text: '"방향키" 블럭과 "움직이기" 블럭이 있습니다. 이 블럭들을 이용해서 방향키로 캐릭터들을 이리 저리 이동시킬 수 있습니다.'
       3:
         image: notes/playlab_3.png
-        text: And there are some blocks that do stuff when actors collide or are clicked.
-          Check them out and have fun!
+        text: 캐릭터들이 닿거나, 캐릭터들을 클릭했을 때 어떤 동작들을 시킬 수 있는 블럭들이 있습니다. 그 블럭들을 살펴보고 재미있게
+          이용해 보세요!
+    playlab_intro:
+      1:
+        image: notes/playlab_intro_1.png
+        text: 이제 플레이 랩을 이용해 게임을 만들어보려고 합니다. 좋은 게임은 이야기가 있고, 모든 이야기들에는 주인공 캐릭터들이 있습니다.
+          이제 캐릭터들을 마녀, 외계인, 동물들로 설정하고 말하고, 움직이고 서로 서로 같이 이야기/반응하게 할 수 있습니다. 이 튜토리얼을
+          마칠 때 쯤이면 여러분들은 처음부터 시작해서 게임을 만들고 친구들에게 공유할 수 있게 될 것입니다.
+      2:
+        image: notes/playlab_intro_2.png
+        text: 화면은 3개의 부분으로 구분해 볼 수 있습니다. 왼쪽의 공간은 프로그램이 실행되는 공간입니다. 각 단계에서 해결해야할 목표들은
+          그 아래에 작성되어있습니다.
+      3:
+        image: notes/playlab_intro_3.png
+        text: 가운데 공간은 도구 상자이며, 이 블럭들은 각각 어떤 코드 조각을 의미합니다. 오른쪽의 흰색 빈 공간은 작업공간(workspace)이라고
+          부르는 곳으로 그곳에서 프로그램을 만들게 됩니다.
+      4:
+        image: notes/playlab_intro_4.png
+        text: 처음 시작하기 위해서, 사용할 블럭들을 "실행하면" 이라는 주황색 블럭에 붙이면 됩니다. 필요한 여러개의 블럭들을 함께 사용하려면
+          드래그해서 노란색 줄이 보일 때까지 끌여당긴 후 붙이면 됩니다.
+      5:
+        image: notes/playlab_intro_5.png
+        text: 이 첫번째 퍼즐에서, 캐릭터는 펭귄이고 말하기(say) 블럭을 이용해 "Hello!"라고 말하도록 만들것입니다. 실행하면
+          블럭에 붙인 후 "Hello"라고 입력하면 됩니다. 그리고 오른쪽으로 이동, 왼쪽으로 이동 블럭을 이용해 펭귄을 움직이도록 할 수도
+          있습니다. 블럭을 붙여본 후에 실행하기 버튼을 눌러 어떻게 실행되는지 살펴보세요.
+      6:
+        image: notes/playlab_intro_6.png
+        text: 시작하고나서 마지막 쯤에는, 여러분이 직접 여러가지 캐릭터들을 이용해 게임을 만들고, 표정을 바꾸게하고, 점수를 올리거나
+          서로 파이어볼을 쏘거나 사라지게 할 수 있습니다. 게임을 어떻게 만들지는 여러분의 생각에 달려있습니다. 자유롭게 만들어보세요.
+    playlab_events:
+      1:
+        image: notes/playlab_events_1.png
+        text: 이제, 모든 게임 프로그래머들이 매일 매일 사용하는 것들을 배워보도록 하겠습니다. 이벤트라고 합니다. 하나의 이벤트는 어떤
+          일이 일어났는지 여러분이 만든 프로그램에게 알려줄 수 있습니다. 따라서, 어떤 일(이벤트)가 일어났을 때 어떤 동작을 실행하게 할
+          수 있는 것입니다.
+      2:
+        image: notes/playlab_events_2.png
+        text: 여러 가지 이벤트들 중 몇가지 예시는, 마우스 클릭, 방향 버튼, 화면 터치 등 입니다.
+      3:
+        image: notes/playlab_events_3.png
+        text: 이제, 캐릭터를 클릭했을 때 지구인들에게 인사하는 우주 로봇을 만들어보도록 하겠습니다. "클릭하면"이라는 블럭을 이용하고
+          "말하기"블럭을 붙이면 됩니다. 플레이어가 우주 로봇을 클릭하면, "클릭하면" 블럭에 붙어있는 모든 것들이 순서대로 실행될 것입니다.
+          여러분의 외계인 캐릭터가 어떻게 동작할까요?
+      4:
+        image: notes/playlab_events_4.png
+        text: '"방향키 누름"블럭이 있습니다. 이 블럭들에 "이동하기" 블럭을 붙이면 방향키를 눌렀을 때, 위로, 아래로, 왼쪽으로,
+          오른쪽으로 이동시킬 수 있습니다. 한 단계씩 여러분이 만든 게임이 더 인터랙티브하게 변화해 갈 것입니다.'
+    playlab_repeat_forever:
+      1:
+        image: notes/playlab_repeat_forever_1.png
+        text: 이번에는 "무한 반복"블럭입니다. 이 블럭의 안에 넣은 블럭들은 게임이 실행되는 동안 계속해서 무한히 실행될 것입니다.
+      2:
+        image: notes/playlab_repeat_forever_2.png
+        text: 만약에 캐릭터를 어떤 동작에 대해서 반복적으로 실행하게 하려면, 반복시킬 블럭들을 "무한 반복" 블럭 안에 넣으면 됩니다.
+      3:
+        image: notes/playlab_repeat_forever_3.png
+        text: 이 퍼즐에서, 우리의 목표는 마법사 캐릭터가 왕국의 경계를 순찰하도록 하는 것입니다. 왼쪽에서 오른쪽으로 계속 반복해서 움직이도록
+          하는 것입니다. 반복 실행 명령어를 배우고 이용하면, 여러분이 만든 게임에서 일일이 모두 반복적으로 작성할 필요가 없이, 한 번만
+          작성한 후에 계속해서 여러번 사용할 수 있게 되는 것입니다.

@@ -21,7 +21,7 @@
   welcome_back: Selamat datang kembali, %{name}
   add_teacher_form:
     code:
-      label: 'Tambahkan guru:'
+      label: 'Tambahkan seorang guru:'
       placeholder: Kode Bagian (ABCDEF)
     submit: Cantumkan nama guru
   add_hint_form:
@@ -36,6 +36,7 @@
   of: dari
   more: lebih
   less: KURANG
+  beta: Percobaan
   try_hoc: 'Cobalah Jam Kode, klik di sini >> '
   try_k8intro: Cobalah pendahuluan K-8 kami tentang pelajaran ilmu komputer (15-25
     jam)
@@ -403,8 +404,8 @@
     test_videos_help: Coba pemutar video baru kami di sekolah anda
     try_beta_courses: Baru! Cobalah kelas percobaan kami untuk siswa K-5
     use_as_teacher: Gunakan situs ini sebagai seorang guru
-    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>20 jam kursus untuk</h2><h1>Pelajar Sekolah Dasar</h1>
+    heading_hoc2014: <h2>The Hour of Code untuk</h2><h1>Segala Usia</h1>
+    heading_elementary: <h2>20 jam kursus untuk</h2><h1>Pemula (segala usia)</h1>
     heading_apps: <h2>Menyenagkan bagi</h2><h1>Semua orang</h1>
     heading_legacy: <h2>Kursus umum kami untuk</h2><h1>Semua Umur</h1>
     your_gallery: Galeri
@@ -418,10 +419,10 @@
   footer:
     help_from_html: Tim teknis dari  Google, Microsoft, Facebook, dan Twitter yang
       membantu membuat tutorial ini.
-    art_from_html: Angry Birds ™ & © 2009-2014 adalah hak cipta dan hak milik <a href="http://www.rovio.com">Rovio
-      Entertainment Ltd</a>. <br/> Tanaman vs Zombies ™ & © 2013 adalah hak cipta
-      dan hak milik <a href="http://www.ea.com"> Electronic Arts Inc.</a>
-    powered_by_aws: Powered by Amazon Web Services
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
+      Hak Cipta Dilindungi.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
+      Arts Inc. Hak Cipta Dilindungi.
+    powered_by_aws: Didukung oleh Amazon Web Services
     feedback: Berikan pendapat
     translate: Bantu menterjemahkan ke bahasa anda
     support: Dukungan
@@ -525,7 +526,7 @@
     caption_time_ago: '%{time_ago} yang lalu'
     header: Galeri
     header_playlab: Play Lab
-    header_artist: Artist
+    header_artist: Artis
   landing:
     prerelease: Kursus ini dalam <span class='betatext'>beta</span>.  Ini bukan berarti
       sebuah kursus final dan ditujukan untuk revisi saat usulan diterima dan pengembangan
@@ -606,3 +607,7 @@
     completed_too_many_blocks: selesai, terlalu banyak blok
     completed_perfect: selesai, sempurna
     furthest_level_attempted: tingkat terjauh yang dicoba
+  studio:
+    courses_working_on: Kursus yang sedang Anda kerjakan
+    completed_courses: Kursus yang telah diselesaikan
+    all_courses: Semua kursus

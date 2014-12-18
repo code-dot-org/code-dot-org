@@ -36,6 +36,7 @@
   of: នៃ
   more: បង្ហាញ​ច្រើន
   less: បង្ហាញ​តិច
+  beta: beta
   try_hoc: 'សាក​ល្បង "ពេល​វេលា​នៃ​កូដ" ដោយ​ចុច​ទីនេះ >> '
   try_k8intro: Try our K-8 Intro to Computer Science Course (15-25 hours)
   k8intro: K-8 Intro to Computer Science Course (15-25 hours)
@@ -590,3 +591,7 @@
     completed_too_many_blocks: completed, too many blocks
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
+  studio:
+    courses_working_on: Courses you're working on
+    completed_courses: Completed courses
+    all_courses: All courses

@@ -44,9 +44,8 @@
           vietu uz priekšu labirintā.
       11:
         image: notes/hoc1_11.jpg
-        text: Lai izpildītu vairāk kā vienu darbību, tu vari savā darbvirsmā ievilkt
-          vairākus klucīšus un tos savienot. Putns izpildīs komandas no augšas uz
-          leju.
+        text: Lai veiktu vairāk kā vienu darbību, vari darba vietā ievilkt vairākus
+          blokus un tos savienot. Putns izpildīs komandas secībā no augšas uz leju.
       12:
         image: notes/hoc1_12.jpg
         text: Ja esi sācis programmu un vēlies to izlabot un mēģināt vēlreiz, nospied
@@ -224,38 +223,37 @@
           Tas ir īdzīgs blokam "ja", taču tam ir beigās ir daļa "citādāk".
       2:
         image: notes/hoc5_2.jpg
-        text: If I put a "move forward" block in the spot where it says "do" and a
-          "turn left" block where it says "else" that means that the zombie will choose
-          between 2 options. IF there is a path ahead, the zombie will move forward,
-          and OTHERWISE (there isn't a path ahead), the zombie will turn left.
+        text: Ja es ielikšu "iet uz priekšu" bloku vietā, kur teikts "darīt" un "pagriezties
+          pa kreisi" bloku vietā, kur teikts "citādi", nozīmēs, ka zimbijs izvēlēsies
+          no divām iespējām. Ja priekšā būs ceļš, viņš ie taisni pa to, ja ceļa nebūš
+          - pagriezīsies pa kreisi.
       3:
         image: notes/hoc5_3.jpg
-        text: Just like the "if" block, we can put "if else" blocks inside a "repeat"
-          blocks so that the zombie keeps moving and the "if else" block will keep
-          checking if there's somewhere to turn.
+        text: Gluži kā "ja" bloku, mēs arī "ja tad" bloku varam likt iekšā "atkārtot"
+          blokos un zombijs turpinās kustēties, un "ja tad" bloks palīdzēs viņam pārbaudīt,
+          kad pagriezties.
       4:
         image: notes/hoc5_4.jpg
-        text: Parādi zombijiem, kur ir viņu īstā vieta!
+        text: Tagad parādi zombijiem, kur tiem ir vieta!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
-        text: An if-else statement is a decision between two things. Let's see how
-          we can use an if-else statement with our buddy Scrat the squirrel.
+        text: Ja-tad nosacījums ir izvēle starp divām darbībām. Paskatīsimies, kā
+          izmantot ja-tad nosacījumu ar vāveri Skretu.
       2:
         image: notes/saloni_ifelse_scrat2.jpg
-        text: This block looks the same as the "if" block, but there's an extra part
-          at the bottom that says "else". If I put a "move forward" block where it
-          says "do" and a "turn left" block where it says "else", that means Scrat
-          the squirrel will move forward if there's a path ahead. If there's not a
-          path ahead, Scrat will turn left.
+        text: Šis bloks izskatās līdzīgs "ja" blokam, bet tam ir papildus daļa apakšā
+          "citādi". Ja ieliksim "ej uz priekšu" bloku, kur teikts "dari" un "pagriezies
+          pa kreisi" bloku, kur teikts "citādi", vāvere Skrets ies taisni, ja būs
+          ceļš pa ko iet uz priekšu, ja nē, tad vāvere nogriezīsies pa kreisi.
       3:
         image: notes/saloni_ifelse_scrat3.jpg
-        text: It's making a decision and doing one of the two actions based on that
-          decision. And just like "if" blocks, you can put "if-else" blocks inside
-          "repeat" blocks.
+        text: Tā ir lēmuma pieņemšana un atkarībā no nolemtā, tiek darīta viena vai
+          otra darbība. Un tāpat kā "ja" blokus, tu vari likt "ja-tad" blokus iekš
+          "atkārtot" blokiem.
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: Now let's help Scrat the squirrel get that acorn!
+        text: Palīdzi vāverei Skretam dabūt zīli!
     function:
       1:
         image: notes/stage13_1.jpg
@@ -370,128 +368,194 @@
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
-        text: Hi, my name is Lyndsey. I model, act, and write my own apps. Let's use
-          code to join Anna and Elsa as they explore the magic and beauty of ice.
+        text: Sveiki, mani sauc Lindsija. Es projektēju, darbinu un veidoju savas
+          programmas. Izmantosim kodu, lai pievienotos Annai un Elzai atklājot ledus
+          skaistumu un burvību.
       2:
         image: notes/frozen1_2.jpg
-        text: You'll create snowflakes and patterns as you ice skate and make a winter
-          wonderland that you can then share with your friends.
+        text: Tu slidojot izveidosi rakstus un sniegpārslas, tā veidojot ziemas brīnumzemi,
+          ar kuru pēc tam varēsi dalīties ar draugiem.
       3:
         image: notes/frozen1_3.jpg
-        text: In the next hour, you're going to learn the basics of how to code. Traditional
-          programming is usually in text, but we'll use Blockly, which uses visual
-          blocks that you can drag and drop to write programs. This is how even university
-          students learn the basics. Under the hood, you're still creating code.
+        text: Tuvākās stundas laikā tu apgūsi programmēšanas pamatus. Ierasti programmēšana
+          no tiek teksta veidā, bet mēs izmantosim Blockly, kas izmanto vizuālus blokus,
+          kurus savienojot kā puzles gabaliņus veidosies programma. Tā  pamatus mācās
+          arī augstskolās. Īstenībā jūs arī tā radiet kodu.
       4:
         image: notes/frozen1_4.jpg
-        text: A program is a set of instructions that tells a computer what to do.
-          Let's build a code, or a program, that will help Elsa create a simple line.
-          We will use this later to create more complex patterns.
+        text: Programma ir instrukciju kopa, kas liek datoram kaut ko darīt. Izveidosim
+          kodu jeb brogrammu, kas palīdzēs Elzai novilkt vienu līniju. Mēs to izmantosim
+          arī vēlāk, lai veidotu sarežģītākus rakstus.
       5:
         image: notes/frozen1_5.jpg
-        text: Your screen is split into three main parts. On the left, is the ice
-          surface where you'll run your program. The instructions for each level are
-          written right below the surface.
+        text: Tavs ekrāns ir sadalīts trīs galvenajās daļās. Pa kreisi ir ledus, kur
+          redzēsi savu programmu strādājot. Pamācības katram līmenim ir rakstītas
+          tieši zem šī ledus attēla.
       6:
         image: notes/frozen1_6.jpg
-        text: This middle area is the toolbox, and each of these blocks is an action
-          that Elsa and Anna can do.
+        text: Vidējā laukumā ir rīku josla, un katrs no šiem blokiem ir darbība, ko
+          Elza un Anna var izpildīt.
       7:
         image: notes/frozen1_7.jpg
-        text: The white space on the right is called the workspace, and this is where
-          we'll build our program. To move around the ice surface, you'll use the
-          "Move Forward" block.
+        text: Baltais laukums labajā pusē ir darba virsma, un te tu veidosi savu programmu.
+          Lai pakustētos pa ledu, izmanto "iet uz priekšu" bloku.
       8:
         image: notes/frozen1_8.jpg
-        text: Here, the "Move Forward" block says, "move forward by 100 pixels." When
-          we press "Run", what happens? Elsa moves forward a certain amount on the
-          screen, 100 pixels in fact! Pixels are basically very tiny squares on your
-          computer screen.
+        text: '"Ej uz priekšu" bloks saka, "paej uz priekšu par 100 pikseļiem". Kas
+          notiek, kad nospiežam "Palaist"? Elza iet uz priekšu noteiktu daudzumu,
+          100 pikseļus. Pikseļi ir mazi kvadrātiņi mūsu datora ekrānā.'
       9:
         image: notes/frozen1_9.jpg
-        text: The other block we have in this puzzle says "turn right by 90 degrees."
-          And when we use this "Turn Right" block, that makes Elsa turn a certain
-          amount. You can play around with how far you want Elsa to turn. The angle
-          is measured from the path ahead of Elsa. So, this is a 90 degree turn. And
-          this is a 120 degree turn.
+        text: Cits bloks šajā puzlē saka "pagriezies pa labi par 90 grādiem". Mēs
+          izmantosim šo "pa labi" bloku, lai liktu Elzai pagriezties par noteiktu
+          daudzumu. Izmēģini, cik ļoti tu viņai vari likt pagriezties. Leņķis tiek
+          mērīts no virziena, kādā elza iet. Šis ir 90 grādu pagrieziens, toties šis
+          - 120 grādu.
       10:
         image: notes/frozen1_10.jpg
-        text: Remember, you can change the number of pixels and degrees by clicking
-          the arrows next to them.
+        text: Atceries, ka vari mainīt pikseļu un grādu daudzumu, klikšķinot uz bultām
+          blakus tiem.
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
-        text: Hi, I’m Paola! Computers are really good at repeating actions. You can
-          count to 10, 20, or 100. But a computer can count to a billion or a trillion.
-          It won't get bored and it will only take a few seconds. Whether it's counting,
-          or drawing, or anything--computers can repeat things hundreds or even billions
-          of times.
+        text: Sveiki, esmu Paola! Datori ir lieliski, lai atkārtotu darbības. Tu vari
+          izskaitīt līdz 10, 20 vai 100. Bet dators var izskaitīt līdz miljonam vai
+          miljardam. Viņam neapniks un arī aizņems ļoti maz laika. Nav svarīgi vai
+          skaitīt, zīmēt vai vēl ko citu - datori var atkārtot darbības simtiem un
+          miljoniem reižu.
       2:
         image: notes/frozen2_2.jpg
-        text: In programming, we call this a loop. A loop is how you repeat your code
-          over and over again. For the next puzzle, your goal is to help Anna create
-          a square with the "Repeat" block.
+        text: Programmēšanā to sauc par ciklu. Cikls atkārto programmas kodu vēl un
+          vēl. Nākamajā puzlē tavs mērķis ir palīdzēt Annai izveidot kvadrātu ar "Atkārtot"
+          bloku.
       3:
         image: notes/frozen2_3.jpg
-        text: Any blocks of code you put inside the "Repeat" block will be repeated
-          in sequence, as many times as you want.
+        text: Ikviens bloks, ko ieliksi iekš "Atkārtot", tiks secībā izpildīts, tik
+          reizes, cik vien gribi.
       4:
         image: notes/frozen2_4.jpg
-        text: To draw a square, you can use the "Move Forward" and "Turn Right" block
-          4 times. But the easier way is to tell the computer to "Move Forward" and
-          "Turn Right by 90 degrees" once, and then tell it to repeat this pair of
-          actions 4 times. To do that, you need to put the "Move Forward" and "Turn
-          Right" block inside a "Repeat" block.
+        text: Lai uzzīmētu kvadrātu, vari izmantot "Ej uz priekšu" un "Pagriezies
+          pa labi" 4 reizes. Bet datoram vienkāršāk ir izpildīt darbību "Ej uz priekšu"
+          un "Pagriezies pa labi par 90 grādiem" vienreiz un tad atkārtot šīs darbības
+          4 reizes. Lai to izdarītu, ievieto "Ej uz priekšu" un "Pagriezies pa labi"
+          bloku iekš "Atkārtot".
       5:
         image: notes/frozen2_5.jpg
-        text: Remember, you can change the number in the "Repeat" block to anything,
-          and it will repeat what's inside the block that many times.
+        text: Atceries, tu vari mainīt skaitli "Atkārtot" blokā uz jebkādu, un tad
+          tas tieši tik reizes atkārtos šajā blokā iekļauto.
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: Hi, I’m Chris Bosh. I’m a professional basketball player, and I coded
-          in college.
+        text: Sveiki, esmu Kriss Bošs. Esmu profesionāls basketbolists un esmu programmējis
+          koledžā.
       2:
         image: notes/frozen3_2.jpg
-        text: One of the most important concepts in computer science is how to define
-          new commands. Most computer languages have only about 100 words or commands.
-          And really, the art and magic is in defining your own new words out of these
-          building blocks.
+        text: Viens no svarīgākajiem jēdzieniem programmēšana ir jaunu komandu veidošana.
+          Lielākā daļa programmēšanas valodu satur ap 100 komandām. Un tā patiesi
+          ir māksla un burvestība prast izdomāt savas komandas, izmantojot jau dotās.
       3:
         image: notes/frozen3_3.jpg
-        text: Once you've taught a computer how to do an action once using this sequence
-          of commands, you can make up your own name for that action so it's easy
-          to repeat it later. When you define your own command and give it a name,
-          that's called a function.
+        text: Kad esi licis datoram veikt kādu darbību ar vairākām komandām, vari
+          šīm komandām dot savu nosaukumu, lai tās vēlāk būtu vienkāršāk atkārtot.
+          Šādi izveidotu komandu kopumu ar savu nosaukumu sauc par funkciju.
       4:
         image: notes/frozen3_4.jpg
-        text: Hi, I’m Jess. When programming with blocks, you would use functions
-          if there are a set of actions you would like to use lots of times. For example,
-          you've written code to create a square.
+        text: Sveiki, esmu Džess. Programmējot ar blokiem, vari izmantot funkcijas,
+          lai kādas darbības atkārtotu vairākas reizes. Piemēram, kad esi sastādījis
+          kodu kvadrāta zīmēšanai.
       5:
         image: notes/frozen3_5.jpg
-        text: 'You can define this as a function called "create a square." '
+        text: Tu to vari nodefinēt kā funkciju un nosaukt "veidot kvadrātu".
       6:
         image: notes/frozen3_6.jpg
-        text: Now you have a new block that you can use multiple times to create multiple
-          squares.
+        text: Tagad vari izmantot jauno bloku vairākas reizes, lai veidotu daudz kvadrātus.
       7:
         image: notes/frozen3_7.jpg
-        text: A lot of simple shapes can be used to create more complex patterns.
-          In the next puzzle, the code you recently wrote to make a circle is available
-          to you as a new function that can make circles of different sizes. Can you
-          use it to help Elsa create intricate and beautiful patterns in the snow?
+        text: Vienkāršās figūras varam izmantot, lai veidotu sarežģītākus rakstus.
+          Nākamajā puzlē kods, ko rakstīji, lai zīmētu apļus, ir pieejams kā jauna
+          funkcija, kas apļus var veidot dažādos izmēros. Vai vari to izmantot, lai
+          palīdzētu Elzai skaistus rakstus sniegā?
     C3_playlab_create_game:
       1:
         image: notes/playlab_1.png
-        text: So far you've been making an animation or a story that does the exact
-          same thing every time you run it. Now you can make an interactive game that
-          you can actually play.
+        text: Līdz šim tu veidoji animācijas vai stāstus, kas dara vienu un to pašu
+          katru reizi, kad to palaiž. Nu tu varēsi veidot interaktīvas spēles, kuras
+          tiešām var spēlēt.
       2:
         image: notes/playlab_2.png
-        text: There's the "when arrow" block and the "move actor" block. You can put
-          these blocks together to move the actors around with the arrow keys.
+        text: Ir pieejams "kad bultiņa" bloks un "pārvietot tēlu" bloks. Savienojot
+          šos blokus varēsi pārvietot tēlu ar klaviatūras bultiņām.
       3:
         image: notes/playlab_3.png
-        text: And there are some blocks that do stuff when actors collide or are clicked.
-          Check them out and have fun!
+        text: Un vēl ir pieejami bloki, kas veic kādas darbības, ja tēli satiekas
+          vai uz tiem klikšķina. Izmēģini un priecājies!
+    playlab_intro:
+      1:
+        image: notes/playlab_intro_1.png
+        text: Spēļu laboratorijā mēs veidosim spēles. Labai spēlei ir stāsts, un katrā
+          stāstā ir savi tēli. Iemācīsimies kā mūsu tēliem raganai, citplanētiešiem
+          un dzīvniekiem runāt, pārvietoties un reaģēt citam ar citu. Pamācības beigās
+          varēsi veidot spēli no pašiem pamatiem un dalīties ar to ar draugiem.
+      2:
+        image: notes/playlab_intro_2.png
+        text: Tavs ekrāns ir sadalīts trīs galvenajās daļās. Kreisajā pusē ir spēles
+          laukums, kur programma izpildīsies. Pamācība katram līmenim ir rakstīta
+          zem laukuma.
+      3:
+        image: notes/playlab_intro_3.png
+        text: Vidējā daļa ir rīku josla, un katrs no šiem blokiem ir koda fragments.
+          Baltais laukums labajā pusē ir darba virsmā - tajā mēs veidosiem programmu.
+      4:
+        image: notes/playlab_intro_4.png
+        text: Lai sāktu, tev nepieciešam savienot tavus blokus ar oranžo "kad palaists"
+          bloku. Tu vari savienot vairākus blokus kopā, tuvinot tos, kamēr ieraugi
+          dzeltenu līniju un tad bloki saķersies kopā.
+      5:
+        image: notes/playlab_intro_5.png
+        text: Pirmajā puzlē mūsu tēls ir pingvīns un mēs liksim viņam teikt "Sveiki!",
+          izvelkot ārā "teikt" bliku, savienojot to ar ar "kad palaists" bloku, un
+          ierakstot "Sveiki!". Varam pingvīnam arī likt kustēties, izmantojot "pārvietot
+          pa labi" un "pārvietot pa kreisi" blokus. Kad bloki salikti pa vietām, spied
+          pogu "Palaist" un skaties, ko esi uzprogrammējis.
+      6:
+        image: notes/playlab_intro_6.png
+        text: Sāc darīt un beigās varēsi izveidot savu spēli ar dažādiem tēliem, kuri
+          viens uz otru reaģē, var priecāties vai bēdāties, skaitīt punktus vai ķert
+          ugunsbumbas vai pat likt cits citam izzust. Viss tavās rokas un iztēlē,
+          kādu spēli vēlies veidot.
+    playlab_events:
+      1:
+        image: notes/playlab_events_1.png
+        text: Tagad iemācīsimies ko tādu, ko visi spēļu programmētāji izmanto ikdienā.
+          Tie ir notikumi. Notikumi liek programmai pamanīt, kad notiek kāda darbība.
+          Kad šī darbība notiek, izpildās daļa programmas.
+      2:
+        image: notes/playlab_events_2.png
+        text: 'Daži notikumi piemēri: gaidīt peles klikšķi, klavietūras bultiņas piespiešanu
+          vai pieskārienu ekrānam.'
+      3:
+        image: notes/playlab_events_3.png
+        text: Tagad izdarīsim lai kosmosa robotiņš, ja uz viņa uzklikšķināts ar peli,
+          sasveicinās ar zemes iedzīvotājiem. Izmantosim bloku "kad noklikšķināts"
+          un savienosim ar "teik" bloku. Kad spēlētājs noklikšķinās uz robotiņa, tiks
+          izpildītas visas darbības, kas pievienotas pie "kad noklišķināts bloka.
+          Ko tavs citplanētietis teiks?
+      4:
+        image: notes/playlab_events_4.png
+        text: Ir pieejami "kad bulta" bloku. Ja savienosi "pārvietot" blokus ar šiem,
+          varēsi kustināt savus tēlus uz augšu, leju, pa labi un kreisi. Soli pa solim
+          tava spēle kļūst interaktīvāka.
+    playlab_repeat_forever:
+      1:
+        image: notes/playlab_repeat_forever_1.png
+        text: Šis ir "atkārtot nepārtraukti" bloks. Jebkas, kas tajā būš iekšā, atkārtosies
+          visas spēles laiku.
+      2:
+        image: notes/playlab_repeat_forever_2.png
+        text: Ja vēlamies, lai tēls kaut ko nemitīgi atkārto bez spēlētāja iejaukšanās,
+          šo darbību blokus ievietosim iekš "atkārtot nepārtraukti" bloka.
+      3:
+        image: notes/playlab_repeat_forever_3.png
+        text: Šajā puzlē mūsu mērķis ir palīdzēt burvim visu laiku no labās puses
+          uz kreiso kontrolēt karalistes robežas. Iemācies kā atkārtot komandas, tā
+          ietaupīsi daudz laika, kad veidosi savu spēli.

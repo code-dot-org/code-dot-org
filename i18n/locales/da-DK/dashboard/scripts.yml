@@ -33,7 +33,7 @@ da:
           Getting Loopy: Blive Svimmel
           The Big Event: Den store begivenhed
           Going Places Safely: Gå til sikre steder
-          description: Kursus 1 er designet til at tillade tidlig læsere til at skabe IT-programmer, der vil hjælpe dem med at lære at samarbejde med andre, udvikle problemløsninger, færdigheder og fortsætte gennem vanskelige opgaver. Ved slutningen af dette kursus opretter den studerende deres helt egen brugerdefinerede spil eller historien, som kan deles. Anbefales til 1. klasses elever.
+          description: Kursus 1 er designet til at give tidlige læsere mulighed for at lave programmer, som vil hjælpe dem med at lære at samarbejde med andre, løse problemer, og fortsætte gennem selv vanskelige opgaver. Ved slutningen af dette kursus opretter eleven sit helt eget spil eller historie, som kan deles med andre. Anbefales til 1. klasses elever.
           "Bee: Sequence": 'Bi: Sekvens'
           "Artist: Sequence": 'Kunstner: Sekvens'
           "Artist: Shapes": 'Kunstner: Figurer'
@@ -41,8 +41,8 @@ da:
           "Bee: Loops": 'Bi: Sløjfer'
           "Studio: Create a Story": 'Spil Lab - Opret en historie'
           "Artist: Loops": 'Kunstner: Sløjfer'
-          description_audience: Ages 4+ (pre-readers)
-          description_short: Course 1 is designed for early readers.
+          description_audience: Fra 4 år (ikke-læsere)
+          description_short: Kursus 1 er designet til tidlige læsere.
         course2:
           The Maze: Labyrinten
           Suzi: Suzi
@@ -80,8 +80,8 @@ da:
           "Artist: Sequence2": 'Kunstner: Sekvens 2'
           "Maze: Sequence2": 'Labyrint: Sekvens 2'
           "Artist: Nested Loops": 'Kunstner: Indlejrede løkker'
-          description_audience: 'Ages  6+ (reading required)'
-          description_short: Course 2 is designed for students who can read.
+          description_audience: Fra 6 år (læsning nødvendigt)
+          description_short: Kursus 2 er designet til elever, der kan læse.
         course3:
           The Maze: Labyrinten
           "Studio: Create a Story": 'Spil Lab - Opret en historie'
@@ -108,7 +108,7 @@ da:
           Digital Citizenship: Digital statsborgerskab
           Farmer - While Loops: 'Landmand - Når sløjfer'
           description: Kursus 3 er udviklet til studerende, der har taget kursus 2. Studerende vil dykke dybere ned i programmering emner introduceret i tidligere kurser til fleksible løsninger til mere komplekse problemer. Ved slutningen af dette kursus oprette studerende interaktive historier og spil de kan dele med nogen. Anbefales til 4. -5. klasses elever.
-          "Studio: Create a Game": 'Spille Lab: Oprette et spil'
+          "Studio: Create a Game": 'Play Lab: Opret et spil'
           Maze: Labyrint
           Artist: Kunstner
           "Artist: Functions": 'Kunstner: Funktioner'
@@ -131,8 +131,8 @@ da:
           "Bee: Debugging2": 'Bi: Fejlfinding 2'
           "Artist: Patterns": 'Kunstner: Mønstre'
           Songwriting: Sangskrivning
-          description_audience: Ages 8+ (after Course 2)
-          description_short: Course 3 is a follow-up to Course 2.
+          description_audience: Fra 8 år (efter kursus 2)
+          description_short: Kursus 3 bygger videre på kursus 2.
         msm:
           title: Efterskole matematik
           description: Privat arbejde i gang for efterskole matematik.
@@ -146,20 +146,20 @@ da:
           Contracts: Kontrakter
           "Artist: Writing Contracts": 'Kunstner: Skrive kontrakter'
           "Calc: Defining Variables": 'Calc: Definere variabler'
-          "Play Lab: Defining Variables": 'Spille Lab: Definere variabler'
+          "Play Lab: Defining Variables": 'Play Lab: Definer variable'
           The Design Recipe: Design opskrift
           "Artist: Defining Functions": 'Kunstner: Definere funktioner'
-          "Play Lab: Defining Functions": 'Spille Lab: Design opskrift'
+          "Play Lab: Defining Functions": 'Play Lab: Design opskrift'
           "Artist: Functions": 'Kunstner: Funktioner'
-          "Play Lab: Animation": 'Spille Lab: Animation'
+          "Play Lab: Animation": 'Play Lab: Animation'
           Booleans: Booleans
-          "Play Lab: Booleans": 'Spille Lab: Booleans'
+          "Play Lab: Booleans": 'Play Lab: Boolske operatorer'
           "Calc: Boolean Operators": 'Calc: Boolean Operatorer'
-          "Play Lab: Boolean Operators": 'Spille Lab: Boolean operatorer'
+          "Play Lab: Boolean Operators": 'Play Lab: Boolske operatorer'
           Conditionals and Piecewise Functions: Konditioner og stykvise funktioner
           "Artist: Conditionals": 'Kunstner: Conditionals'
           Collision Detection and the Distance Formula: Kollisions detektion og afstands formlen
-          "Play Lab: Collision Detection": 'Spille Lab: Sammenstød afsløring'
+          "Play Lab: Collision Detection": 'Play Lab: Sammenstød'
           "Unplugged: Ninja Cat and the Coordinate Plane": 'Unplugged: Ninja Cat og the Coordinate Plane'
           "Eval: Strings and Images": 'Eval: Strings og Images'
           "Unplugged: Contracts": 'Unplugged: kontrakter'
@@ -175,18 +175,18 @@ da:
           "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games og Coordinate Planes'
           "Eval: Boolean Operators": 'Eval: Boolean Operators'
           Blocks to Math: Blokke til matematik
-          "Play Lab: Defining Variables (Big Game)": 'Spille Lab: Definere variabler (Big Game)'
-          "Play Lab: Animation (Big Game)": 'Spille Lab: Animation (Big Game)'
+          "Play Lab: Defining Variables (Big Game)": 'Play Lab: Definere variabler (Big Game)'
+          "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
           "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Big Game)'
           "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
           "Eval: Fast Functions": 'Eval: Hurtige funktioner'
-          "Play Lab: Design Recipe": 'Spille Lab: Design opskrift'
+          "Play Lab: Design Recipe": 'Play Lab: Design opskrift'
           "Eval: Design Recipe": 'Eval: Design opskrift'
         playlab:
-          title: Spille Lab
-          description: Oprette en historie eller lav et spil med Play Lab!
+          title: Play Lab
+          description: Opret en historie eller lav et spil med Play Lab!
           Play Lab: Spille Lab
-          description_short: Oprette en historie eller lav et spil med Play Lab!
+          description_short: Opret en historie eller lav et spil med Play Lab!
         artist:
           title: Kunstner
           description: Tegn seje billeder og designs med spilleren!
@@ -199,11 +199,11 @@ da:
           "Maze: Sequence": 'Labyrint: Sekvens'
         hourofcode:
           Maze: Labyrint
-          title: En Time af Kode
+          title: Hour of Code
           description: Prøv grundlæggende programmering med firgurer fra Angry Birds, Plants vs. Zombies og Scrat fra Ice Age!
-          description_short: Try the basics of computer science with many fun characters!
+          description_short: Prøv grundlæggende programmering med masser af sjove figurer!
         frozen:
-          title: Kode med Anna og Elsa
+          title: Kod med Anna og Elsa
           description: Lad os bruge kode til at udforske isens magi og skønhed sammen med Anna og Elsa. Du kan tegne snefnug og mønstre, mens du skøjter og laver et vinterlandskab, som du derefter kan dele med dine venner!
           Artist: Kunstner
           description_short: Lad os bruge noget kode for at slutte os til Anna og Elsa, når de går på opdagelse i magien og isens skønhed.
@@ -215,11 +215,11 @@ da:
           title: Kursus 4
           "Algorithms: Tangrams": 'Algoritmer: Tangrams'
           Variables: Variabler
-          "Play Lab: Variables": 'Spille Lab: Variabler'
-          "Play Lab: Functions with Parameters": 'Spille Lab: Funktioner med parametre'
+          "Play Lab: Variables": 'Play Lab: Variable'
+          "Play Lab: Functions with Parameters": 'Play Lab: Funktioner med parametre'
           "Bee: Functions with Parameters": 'Bee: Funktioner med parametre'
           "Artist: For Loops": Kunstner For loops/sløjfer
-          "Play Lab: For Loops": 'Spille Lab: Til sløjfer'
+          "Play Lab: For Loops": 'Play Lab: For løkker'
           "Artist: Functions": 'Kunstner: Funktioner'
           "Artist: Functions with Paraqmeters": 'Kunstner: funktioner med parametre'
           "Unplugged: Tangrams": 'Unplugged: Tangrammer'
@@ -235,7 +235,7 @@ da:
           Farmer Binary: Landmand binære
           Maze and Bee: Labyrint og bi
           Artist Binary: Kunstner binære
-          description_audience: Ages 10+ (after Course 3)
+          description_audience: Fra 10 år (efter kursus 3)
         Course4pre:
           description_short: En kort opsamling af koncepter for elever, der ikke har taget kursus 2 og 3.
           Course 4 Prerequisite: Kursus 4 forudsætninger
@@ -281,3 +281,13 @@ da:
           description: Et udvalg af øvelser med 4 niveauer til brugervenlighedstest.
           Variables: Variabler
           For Loops: For Loops
+        potus:
+          title: speciel
+          description_short: speciel
+          description: speciel
+          Special: Speciel
+        special:
+          title: speciel
+          description_short: speciel
+          description: speciel
+          Special: Speciel

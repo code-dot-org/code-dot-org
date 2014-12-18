@@ -4,18 +4,14 @@ title: Blurbs and Stats layout: wide nav: resources_nav
 
 * * *
 
-[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
-
 # Presentasjon og nyttig statistikk
 
 ## Use this short blurb in newsletters
 
 ### Ta informatikk til skolen din. Start med kodetimen. 
 
-Datamaskiner er overalt, men færre skoler underviser i informatikk nå enn for 10 år siden. Good news is, we’re on our way to change this. Hvis du har hørt om [Kodetimen](<%= hoc_uri('/') %>) det siste året, vet du kanskje at det har skapt historie. In one week, 15 million students tried computer science! [Kodetimen](<%= hoc_uri('/') %>) er en times innføring i informatikk, designet for å avmystifisere koding, og vise at hvem som helst kan lære det grunnleggende. [Registrere deg](<%= hoc_uri('/') %>) for å være vert for Kodetimen i tiden fra 8 til 14 desember i Computer Science Education Week og bidra til å nå 100 millioner studenter innen utgangen av året. Add your school to the map, go to <http://hourofcode.com>
+Datamaskiner er overalt, men færre skoler underviser i informatikk nå enn for 10 år siden. Good news is, we’re on our way to change this. If you heard about the [Hour of Code](<%= hoc_uri('/') %>) last year, you might know it made history. In one week, 15 million students tried computer science! The [Hour of Code](<%= hoc_uri('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= hoc_uri('/') %>) to host an Hour of Code this December 8-14 during Computer Science Education Week and help reach 100 million students by the end of the year. Add your school to the map, go to <http://hourofcode.com>
 
 ## Infographic version:
 
 ![bilde](http://code.org/images/fit-8000/Code.org_infographic.png)
-
-<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

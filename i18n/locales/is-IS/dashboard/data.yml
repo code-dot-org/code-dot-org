@@ -295,15 +295,15 @@ is:
         studio_c3_game_5: Getur þú bætt við kubbi til að skora stig þegar mörgæsin rekst á kolkrabbann og síðan fært hana með örvarlyklunum þar til þú skorar?
         studio_c3_game_6: Getur þú bætt við kubbum til að breyta bakgrunni og hraða mörgæsarinnar og síðan fært hana með örvarlyklunum þar til þú skorar?
         studio_c3_game_7: Búðu til þinn eigin leik. Smelltu á Ljúka þegar hann er tilbúinn svo vinir þínir geti prófað hann á sínum símum.
-        studio_playlab_1: 'Penguin wants to say "hello" - can you help him?'
-        studio_playlab_2: 'Cave Boy (actor 1) and Cave Girl (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
-        studio_playlab_3: Can you help Tennis Girl get to the flag?
-        studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor 2) and play a sound when he gets there?
-        studio_playlab_5: 'Can you help the Spacebot say "greetings earthlings" when it is clicked? Don’t forget to click it after you click Run'
-        studio_playlab_6: Can you help the Witch move around using the up/down/right/left arrow keys to get to all the magical fireballs?
-        studio_playlab_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help the wizard move right and left repeatedly?'
-        studio_playlab_8: Can you add a block to score a point and a block to play a sound when the unicorn runs into the wizard, and then move him with the arrows until you score?
-        studio_playlab_9: Set the background for this alien invasion and help the Spacebot get to the alien faster by changing its speed. Then move him with the arrow keys to get to the Spacebot and alert everyone else
+        studio_playlab_1: 'Mörgæsin vill segja "hæ" - getur þú hjálpað henni?'
+        studio_playlab_2: 'Hellisstrákur (leikmaður 1) og Hellisstelpa (leikmaður 2) vilja segja "hæ" við hvort annað. Getur þú hjálpað þeim með því að nota "segja" kubbinn tvisvar?'
+        studio_playlab_3: Getur þú hjálpað Tennisstelpu að ná til flaggsins?
+        studio_playlab_4: Getur þú hjálpað Tennisstrák (leikmanni 1) að komast til Tennisstelpu (leikmanns 2) og spilað hljóð þegar hann kemst þangað?
+        studio_playlab_5: 'Getur þú látið Geimróbóta segja "Kveðja til jarðarbúa" þegar smellt er á hann? Ekki gleyma að smella á hann eftir að þú smellir á Keyra'
+        studio_playlab_6: Getur þú látið Nornina hreyfast og ná öllum eldhnöttunum með því að nota upp/niður/hægri/vinstri örvarlyklana?
+        studio_playlab_7: '"Endurtaka endalaust" kubburinn lætur kóða keyra án enda. Getur þú sett kubba í hann til að láta vitkann hreyfast stöðugt til hægri og vinstri?'
+        studio_playlab_8: 'Getur þú bætt við kubbum til að skora stig og  spila hljóð þegar einhyrningurinn rekst á vitkann, og síðan fært hann með örvarlyklunum þar til þú skorar?'
+        studio_playlab_9: Settu bakgrunn fyrir innrás geimvera og auktu hraða Geimróbóta svo hann komist fljótar til geimverunnar. Færðu hann svo með örvarlyklunum til geimverunnar svo hann geti varað alla við innrásinni
         studio_playlab_10: Búðu til þinn eigin leik. Smelltu á Ljúka þegar hann er tilbúinn svo vinir þínir geti prófað hann á sínum símum.
         studio_full_sandbox: Búðu til þinn eigin leik. Smelltu á Ljúka þegar hann er tilbúinn svo vinir þínir geti prófað hann á sínum símum.
         studio_k1_1: 'Getur þú látið hundinn segja "Halló heimur"?'
@@ -378,26 +378,25 @@ is:
       scrat 20:
         instructions: Geturðu bætt við aðeins 3 kubbum til að hjálpa mér að rata flóknari slóð? Ef þú gerir það rétt, get ég farið hvaða slóð sem er sama hversu löng. Flýttu þér! Ísinn er að bráðna!
       Standalone_Artist_1:
-        instructions: "Welcome to Artist! First off, let's try to make a simple square using the turn right block and move forward block. Each side should be 100 pixels long."
+        instructions: Hér er listamaðurinn! Byrjaðu á að búa til einfaldan ferning með snúa til hægri og færa áfram kubbunum. Hver hlið á að vera 100 dílar á lengd.
       Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel long sides.
+        instructions: Teiknaðu þennan tígul með 120 og 60 gráðu hornum og 150 díla langar hliðar.
       Standalone_Artist_3:
-        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree turns?
+        instructions: Getur þú teiknað þennan sexhyrning með 100 díla hliðum og 60 gráðu beygjum?
       Standalone_Artist_4:
-        instructions: "Now you've got a new block to play with, the loop. This will repeat a set of commands. What happens if you loop these commands 6 times?"
+        instructions: Nú hefurðu fengið nýjan kubb til að leika með sem er lykkjan. Hún endurtekur skipanir. Hvað gerist ef þú endurtekur þessar skipanir 6 sinnum?
       Standalone_Artist_5:
-        instructions: How many times do you need to loop this diamond to draw the flower?
+        instructions: Hversu oft þarftu að endurtaka þennan tígul til að teikna blómið?
       Standalone_Artist_5.5:
-        instructions: "Notice how we simplified the diamond code by turning it into a loop. You can loop that whole sequence 12 times to draw the flower. Hint: You'll need to turn 30 degrees after your diamond loop so you don't keep drawing over the same diamond."
+        instructions: 'Taktu eftir hvernig við einfölduðum kóðann fyrir tígulinn með því að nota lykkju. Þú getur endurtekið lykkjuna 12 sinnum til að teikna blómið. Vísbending: Eftir lykkjuna sem gerir tígulinn þarf að snúa um 30 gráður svo þú teiknir ekki ofan í sama tígulinn.'
       Standalone_Artist_6:
-        instructions: 'Loop this hexagon code 6 times to create the design. How many degrees will you need to turn each time? Hint: divide the number of degrees in a circle by the number of times you are looping.'
+        instructions: 'Settu þennan kóða fyrir sexhyrning í lykkju og endurtaktu 6 sinnum. Um hve margar gráður þarf að snúa í hvert sinn? Vísbending: deildu fjölda gráða í hring með fjölda endurtekninga.'
       Standalone_Artist_7:
-        instructions: 'A function is another programming tool to help you avoid repeating yourself. This function draws a flower, so you can use it any time you want to draw a flower. Use this and the new jump block to draw these flowers. Hint: The flowers are 150 pixels apart'
+        instructions: 'Fall er annað verkfæri sem forritarar hafa til að þurfa ekki að endurtaka sig. Þetta fall teiknar blóm, svo þú getur notað það hvenær sem þú vilt teikna blóm. Notaðu það og nýja hopp kubbinn til að teikna þessi blóm. Vísbending: Það eru 150 dílar á milli blómanna'
       Standalone_Artist_8:
-        instructions: |-
-          Here's a function called "Draw a shape" that we've programmed to draw hexagons. Run the code to see what it does and then experiment with the function to see what happens. Can you make it draw a pattern of squares, triangles, or octagons?
+        instructions: 'Hér er fall sem heitir "teikna form" sem við höfum forritað til að teikna sexhyrninga. Keyrðu kóðann til að sjá hvað það gerir og gerðu svo tilraunir með fallið til að sjá hvað gerist. Getur þú látið það teikna mynstur úr ferningum, þríhyrningum eða átthyrningum?'
       Standalone_Artist_9:
-        instructions: "Now go ahead and make whatever picture you'd like! You've even got an empty function that you can make do whatever you want!"
+        instructions: Haltu nú áfram og teiknaðu þína eigin hugmynd! Þú ert meira að segja með tómt fall sem þú getur látið gera hvað sem er!
     video:
       name:
         maze_intro: Kynning á Völundarhúsi
@@ -475,14 +474,28 @@ is:
         C3_crowdsourcing: Hópvistun
         C3_functional_suncatchers: Sólarskraut með föllum
         C3_songwriting_with_parameters: Lagasmíð með stikum
-        C4_artist_math: Programming the Artist with Math
-        C4_create_functions: Creating Functions
-        C4_edit_functions: Editing Functions
+        C4_intro: Kynning
+        C4_bee_conditional: Skilyrði býflugu
+        C4_variables_artist: 'Breytur - Listamaður'
+        C4_variables_playlab: 'Breytur - Leikjasmiðja'
         C4_for_loops: Frá lykkjur
-        C4_variables: Breytur
-        frozen_intro: Hour of Code Intro
-        frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
+        C4_math_artist: Forritun listamanns með stærðfræði
+        C4_function_edit: Breyting falla
+        C4_function_create: Gerð falla
+        C4_function_parameters: Föll með stikum
+        C4_conditionals: Skilyrði
+        C4_unplugged_algorithms: Algrím með tangram
+        C4_unplugged_madlibs: Eyðufyllingarleikur
+        C4_unplugged_variables: Breytur í umslögum
+        C4_unplugged_forloops: Frá lykkjur
+        C4_unplugged_parameters: Lagasmíð með stikum
+        C4_unplugged_binary: Tvíundir
+        frozen_intro: Kynning á Klukkustund kóðunar
+        frozen_loops: Kynning á lykkjum
+        frozen_functions: Kynning á föllum
+        playlab_intro: Kynning á Leikjasmiðju
+        playlab_events: Leikjasmiðja, atvik
+        playlab_repeat_forever: Leikjasmiðja, endurtaka endalaust
     callout:
       text:
         drag_blocks: 'Dragðu "færa" kubb og festu hann neðan í hinn kubbinn'
@@ -500,31 +513,52 @@ is:
         replace_questions: 'Notaðu fellilistann til að skipta "???" út fyrir tölu'
         replace_questions_degree: 'Notaðu fellilistann til að skipta "???" út fyrir þá gráðu sem á að snúa'
         repeat_blocks: 'Notaðu "endurtaka" kubbinn og settu hann utan um kubbana á vinnusvæðinu'
+        repeat_blocks_1: (1) Notaðu þennan kubb og settu hann utan um gráu kubbana á vinnusvæðinu
+        repeat_blocks_2: '(2) Færðu "endurtaka" kubbinn hingað og settu gráu kubbana innan í'
         snowflake_dropdown: Notaðu þennan fellilista til að búa til mismunandi snjókorn!
         degrees_per_side: Deildu 360 með fjölda hliða til að fá stærð hvers horns í gráðum.
         set_sides: 'Notaðu þennan kubb til að setja töluna fyrir "hliðar" sem vantar til að ljúka þrautinni.'
         set_length: 'Notaðu þennan kubb til að stilla "lengd" á rétt gildi.'
-        which_equation: Hvaða jafna gerir hverja hlið styttri eftir því sem formin hafa fleiri hliðar? Prófaðu allar jöfnurnar!
+        which_equation: Hvaða jafna gerir hverja hlið styttri á formum með fleiri hliðar?
         get_nectar: 'Notaðu nýja "sækja blómasafa" kubbinn.'
         actions_category: 'Verkfærakassinn er með nýtt útlit! Kubbarnir "Aðgerðir" hafa nú bæst við.'
         draw_square_hint: 'Vísbending: Notaðu ferningslykkjuna sem þú bjóst til í síðustu þraut.'
-        edit_function: Notaðu þennan hnapp til að breyta fallinu.
+        edit_function: Smelltu hér til að breyta fallinu þínu.
         create_function: 'Smelltu hér til að opna hliðargluggann "Föll" og smelltu svo á "Búa til fall" hnappinn.'
         house_hint: Það er í lagi þó myndin sé enn ekkert lík húsi. Við munum laga það í næstu þraut.
         edit_draw_square: Notaðu þennan hnapp til að breyta fallinu og bæta lykkjunni við.
         edit_get_nectar: Notaðu þennan hnapp til að breyta fallinu og breyta í hvaða átt býflugan mun snúa til að sækja blómasafann.
         logic_category: 'Opnaðu "Rökvísi" hliðargluggann til að finna "ef/annars" kubbinn.'
         length_parameter: 'Getur þú uppfært þetta fall svo það noti stikann "lengd"?'
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: "Don't forget to turn after creating each circle."
-        frozen_circle_function_with_parameter_circle: 'Use the "create a circle" block and change the size.'
-        frozen_snowflake_branch: 'Use the "create a snowflake branch" block'
-        frozen_create_square: Attach more blocks here to create a square
-        playlab_drag_say: 'Drag the "say" block here and type "hello"'
-        playlab_use_twice: Use this block twice and remember to change the actor number
-        playlab_move_girl: 'Use the "move right" block to move Tennis Girl'
-        playlab_play_sound: 'Add "play sound" block here'
-        playlab_arrow_keys: Remember to use these to move the witch after clicking on Run
-        playlab_add_move: 'Add "move" blocks inside this repeat block'
-        playlab_add_score: Add score blocks here
-        playlab_add_blocks: Add your blocks here
+        frozen_diamond_repeat: Notaðu endurtaka kubbinn til að gera þetta form.
+        frozen_circle_function_in_circle_turn: Ekki gleyma að snúa eftir hvern hring.
+        frozen_circle_function_with_parameter_circle: 'Notaðu "búa til hring" kubbinn og breyttu stærðinni.'
+        frozen_snowflake_branch: 'Notaðu "búa til grein snjókorns" kubbinn'
+        frozen_create_square: Bættu við fleiri kubbum hér til að búa til ferning
+        playlab_drag_say: 'Dragðu "segja" kubbinn hingað og skrifaðu "hæ"'
+        playlab_use_twice: Notaðu þennan kubb tvisvar og mundu að breyta númeri leikmanns
+        playlab_move_girl: 'Notaðu "færa til hægri" kubbinn til að færa Tennisstelpu'
+        playlab_play_sound: 'Bættu "spila hljóð" kubbi við hér'
+        playlab_arrow_keys: Mundu að nota þá til að færa nornina eftir að þú smellir á Keyra
+        playlab_add_move: 'Bættu "færa" kubbum inn í þennan endurtaka kubb'
+        playlab_add_score: Bættu skorkubbum við hér
+        playlab_add_blocks: Bættu kubbunum við hér
+        set_variable: Dragðu talnakubb hingað til að gefa breytunni þinni gildi
+        place_variable: Dragðu breytuna þína inn í þennan kubb
+        bee_for_loop: Dragðu hingað stærstu töluna fyrir blómasafa sem þú vilt að býflugan safni
+        place_counter_variable: Dragðu teljarabreytuna inn í þennan kubb
+        function_editor_draw_square: 'Þetta er skilgreiningin þín fyrir fall. Þessir kubbar keyra í hvert skipti sem þú notar "teikna ferning" kubbinn'
+        change_here: Gerðu breytinguna hér
+        write_draw_square_function: Dragðu hingað kubba úr verkfærunum svo þeir teikni ferning
+        write_draw_triangle_function: Dragðu kubba úr verkfærakassanum í þetta til að teikna þríhyrning
+        edit_add_parameter: Smelltu á breyta til að bæta stika við fallið þitt
+        add_and_drag_parameter: Skrifaðu heiti stikans hér, smelltu svo á bæta við og dragðu hann síðan inn í skilgreininguna á fallinu þínu
+        fill_in_actor: Skiptu ??? út fyrir tölur sem samsvara hverri persónu (1, 2 og 3)
+        repeat: Settu kubba inn í lykkjuna til að endurtaka skipanir
+        if_bee_nectar: 'Notaðu "ef" kubbinn til að ákveða hvort býflugan á að sækja blómasafa eða ekki'
+        if_else_bee: 'Notaðu "ef/annars" kubbinn svo að býflugan sæki blómasafa úr blómi, en búi til hunang ef það er ekki blóm'
+        repeat_full_circle: Skrifaðu töluna fyrir hversu oft uppvakningurinn á að hreyfast til að búa til heilan hring
+        place_length_variable: Dragðu lengdarbreytuna hingað í staðinn fyrir spurningarmerkin
+        arrows_move_actor: Notaðu örvarlyklana til að færa persónuna
+        right_arrow_fireball: Notaðu hægri örvarlykilinn til að skjóta eldhnöttum
+        name_function: Skrifaðu heiti fallsins þíns hér
