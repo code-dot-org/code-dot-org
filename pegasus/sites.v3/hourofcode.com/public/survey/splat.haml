@@ -62,8 +62,9 @@ rightbar: blank
 
   .form-group
     #students-number-ethnicity-wrapper{style: "display: none;"}
-      %label.control-label{for: "students-number-ethnicity"} In total, how many of the students were Hispanic, African American, or Native American (approximately)?
-      %span.form-required-field *
+      %label.control-label{for: "students-number-ethnicity"}
+        In total, how many of the students were Hispanic, African American, or Native American (approximately)?
+        %span.form-required-field *
       %div
         %input#students-number-ethnicity.form-control{name: "students_number_ethnicity_i", placeholder: "", type: "text", required: true}/
 
@@ -143,6 +144,12 @@ rightbar: blank
         %em{style: 'font-weight: normal;'} Other method
       %div
         %input#tacher-how-heard-other.form-control{name: "teacher_how_heard_other_s", placeholder: "", type: "text"}/
+
+  .form-group
+    #teacher-district-wrapper{style: "display: none;"}
+      %label.control-label{for: "teacher-district"} What school district do you teach in?
+      %div
+        %input#teacher-district.form-control{name: "teacher_district_s", placeholder: "", type: "text"}/
 
   %input{name:'code_s', type:'hidden', value:code}
 
