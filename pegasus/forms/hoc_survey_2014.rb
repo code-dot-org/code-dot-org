@@ -6,12 +6,16 @@ class HocSurvey2014
     result[:email_s] = Poste.decrypt(data[:code_s])
     puts result[:email_s]
 
-    result[:event_country_s] = enum(data[:event_country_s].to_s.strip.downcase, HOC_COUNTRIES.keys)
+    result[:event_country_s] = required stripped data[:event_country_s]
     result[:teacher_description_s] = required stripped data[:teacher_description_s]
     result[:event_location_type_s] = stripped data[:event_location_type_s]
     result[:students_number_total_i] = required stripped data[:students_number_total_i]
     result[:students_number_girls_i] = required stripped data[:students_number_girls_i]
-    result[:students_number_ethnicity_i] = required stripped data[:students_number_ethnicity_i]
+
+    if result[:event_country_s].class != FieldError && result[:event_country_s] == 'United States'
+      result[:students_number_ethnicity_i] = required stripped data[:students_number_ethnicity_i]
+    end
+
     result[:students_grade_levels_ss] = stripped data[:students_grade_levels_ss]
     result[:event_tutorials_ss] = stripped data[:event_tutorials_ss]
     result[:event_technology_ss] = stripped data[:event_technology_ss]

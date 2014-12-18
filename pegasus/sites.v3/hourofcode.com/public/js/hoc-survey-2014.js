@@ -5,6 +5,15 @@ $(document).ready(function() {
     plugins: ['fast_click']
   });
 
+  $('#event_country').change(function() {
+    if ($(this).val() == 'United States') {
+      $('#students-number-ethnicity-wrapper').show();
+    } else {
+      $('#students-number-ethnicity').val('');
+      $('#students-number-ethnicity-wrapper').hide();
+    }
+  }).triggerHandler('change');
+
   $('#teacher-how-heard').change(function() {
     if ($.inArray('Other', $(this).val()) > -1) {
       $('#teacher-how-heard-other-wrapper').show();
@@ -13,6 +22,10 @@ $(document).ready(function() {
       $('#teacher-how-heard-other-wrapper').hide();
     }
   }).triggerHandler('change');
+
+  $( "#hoc-survey-form" ).submit(function( event ) {
+    surveyFormSubmit();
+  });
 });
 
 function surveyFormComplete(data)
@@ -40,7 +53,7 @@ function surveyFormError(data)
   $("#btn-submit").removeClass("button_disabled").addClass("button_enabled");
 }
 
-function signupFormSubmit()
+function surveyFormSubmit()
 {
   $("#signup_submit").attr('disabled','disabled');
 
