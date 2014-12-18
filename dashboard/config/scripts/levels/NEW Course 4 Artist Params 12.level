@@ -61,7 +61,7 @@
                   </value>
                   <next>
                     <block type="draw_turn" inline="true" uservisible="false">
-                      <title name="DIR">turnLeft</title>
+                      <title name="DIR">turnRight</title>
                       <value name="VALUE">
                         <block type="math_arithmetic" inline="true" uservisible="false">
                           <title name="OP">DIVIDE</title>
@@ -122,15 +122,6 @@
             </value>
           </block>
         </category>
-        <category name="Loops">
-          <block type="controls_repeat_ext" inline="true">
-            <value name="TIMES">
-              <block type="math_number">
-                <title name="NUM">???</title>
-              </block>
-            </value>
-          </block>
-        </category>
         <category name="Math">
           <block type="math_number">
             <title name="NUM">0</title>
@@ -145,14 +136,6 @@
               <arg name="length"/>
               <arg name="sides"/>
             </mutation>
-          </block>
-        </category>
-        <category name="Variable">
-          <block type="variables_get">
-            <title name="VAR">sides</title>
-          </block>
-          <block type="variables_get">
-            <title name="VAR">length</title>
           </block>
           <block type="procedures_defnoreturn" uservisible="false">
             <mutation>
@@ -178,7 +161,7 @@
                     </value>
                     <next>
                       <block type="draw_turn" inline="true" uservisible="false">
-                        <title name="DIR">turnLeft</title>
+                        <title name="DIR">turnRight</title>
                         <value name="VALUE">
                           <block type="math_arithmetic" inline="true" uservisible="false">
                             <title name="OP">DIVIDE</title>

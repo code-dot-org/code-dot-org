@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Use a for loop to draw these squares. They start at 50 pixels long, the largest is 300 pixels long, and each square is 25 pixels larger than the last. I have given you almost all the code you will need your missing one block, which one is it?",
+    "instructions": "Use a for loop to draw these squares. They start at 50 pixels long, the largest is 300 pixels long, and each square is 25 pixels larger than the last. I have given you almost all the code you will need - you're missing one block, which one is it?",
     "x": "50",
     "y": "350",
     "start_direction": "90",

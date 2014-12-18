@@ -17,7 +17,7 @@
   "numBlocksNeeded": "Bu  tapmaca %1 blokla həll oluna bilər.",
   "pause": "Pause",
   "reinfFeedbackMsg": "You can press the \"Try again\" button to go back to running your app.",
-  "repeatForever": "repeat forever",
+  "repeatForever": "təkrar et sonsuz",
   "repeatDo": "et",
   "repeatForeverTooltip": "Execute the actions in this block repeatedly while the app is running.",
   "shareWebappTwitter": "Düzəltdiyim proqrama nəzər yetirin. Onu @codeorg ilə özüm yazmışam",
@@ -25,7 +25,7 @@
   "stepIn": "Step in",
   "stepOver": "Step over",
   "stepOut": "Step out",
-  "turnBlack": "turn black",
+  "turnBlack": "qaralt",
   "turnBlackTooltip": "Ekranı qaraldır.",
   "yes": "Bəli"
 }

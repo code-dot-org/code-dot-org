@@ -59,7 +59,7 @@
   thank_you_: Благодарим Ви!
   congratulations: Поздравления!
   congratulations_on_completing_hoc: Поздравления за завършване на предизвикателството
-    Един Час Кодиране.
+    Един Час Кодиране
   get_a_certificate_of_achievement: Получете сертификат за постижение
   enter_valid_email: Моля, въведете валиден имейл адрес
   get_a_certificate_message: Ние ще ви изпратим сертификат и информация за това как
@@ -90,7 +90,7 @@
   thanks_for_voting: Благодарим за гласуването!
   share_on_facebook: Споделяне във Facebook
   share_on_twitter: Споделяне в Twitter
-  beyond_an_hour: След Часът на кодирането >
+  beyond_an_hour: 'След Часът на кодирането '
   get_started: Старт
   i_agree: Приемам
   participant_select: -Изберете-
@@ -99,6 +99,9 @@
   participant_educator: Преподавател
   participant_engineer: Софтуерен инженер
   participant_other: Никое от горните
+  print_all: Печат на всички
+  print_ice_art: Отпечатай своето ледено изкуство
+  create_art_with_zombie: или допълни уменията си в изкуството със зомбито
   i_am_a: Аз съм
   never_spam: Ние никога няма да ви изпратим спам
   enter_country: Въведете страна, ако се намирате извън САЩ
@@ -137,6 +140,10 @@
   studiobar_flappy_body: Направете и споделете своя собствена Flappy игра
   studiobar_teacher_title: За учители
   studiobar_teacher_body: Представете Code Studio в класната си стая
+  studiobar_frozen_title: Час на Кодирането
+  studiobar_frozen_body: Създаване на зимна приказка с Анна и Елза
+  studiobar_donate_title: Дарения
+  studiobar_donate_body: Едно дете учи за всеки долар, който си дарил
   contact_form_topic_student: Аз съм ученик
   contact_form_topic_parent: Аз съм родител
   contact_form_topic_teacher: Аз съм учител/обучител
@@ -231,6 +238,12 @@
   dashboard_action_done: Готово
   dashboard_action_required: изисква
   dashboard_navigation_home_page: Начална страница на учителя
+  dashboard_navigation_section_student_progress: Ученически акаунти и прогрес
+  dashboard_navigation_section_teacher_progress: Прогреса ви в курса
+  dashboard_navigation_section_lesson_plans: Учебни планове и ресурси
+  dashboard_navigation_section_community: Помощ и Общност
+  dashboard_navigation_section_pd: Професионално развитие
+  dashboard_navigation_section_speakers: Компютърни науки <br/> гости говорители
   dashboard_navigation_all_sections: Ученически акаунти и прогрес
   dashboard_navigation_view_progress: Преглед на напредъка
   dashboard_navigation_add_students: Добавяне на ученици
@@ -347,7 +360,7 @@
     от тези типове вход- <b>картина, дума или електронна поща</b>, вие ще  изберете
     за вход в раздела.
   dashboard_faq: Често задавани въпроси
-  code_hoc_coming: Часът на кодирането идва - декември 8-14!
+  code_hoc_coming: Часът на кодирането е тук - декември 8-14!
   code_sign_up: Регистрирайте се за участие по време на CS седмицата на образованието
   learn_more: Научете повече
   hoc2014_try_new_tutorials: Опитайте нашите нови уроци за Часа на кодирането
@@ -355,7 +368,7 @@
   hoc2014_try_scrat: Angry Birds, PvZ и Scrat
   hoc2014_try_frozen: Рисувай с Анна и Елза, от Frozen
   carousel_heading_international: Уроци на вашия език
-  carousel_heading_domestic: Уроците са на английски
+  carousel_heading_domestic: Уроци на английски
   carousel_heading_beginners: Уроци за начинаещи
   carousel_heading_javascript: Уроци, които преподават Javascript
   carousel_heading_unplugged: Нямате устройство или интернет? Опитайте "ънплъгд" уроците
@@ -371,7 +384,7 @@
   more_resources_educators: Повече ресурси за учители и възпитатели
   participants: участници
   teachers_notes: Указания за учители
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: 'Учители: Прочетете важни бележки тук'
   previous: Назад
   next: Напред
   older_systems: Уроци, които работят на по-стари системи
@@ -385,6 +398,10 @@
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Въведение в JavaScript
   khanes_name: Въведение в JavaScript
+  khanpt_name: Въведение в JavaScript
+  khanhe_name: Въведение в JavaScript
+  khanfr_name: Въведение в JavaScript
+  khanpl_name: Въведение в JavaScript
   tynker_name: Създайте своя собствена игра
   scratch_name: Развихрете се с кодиране
   lightbot_name: Lightbot
@@ -413,12 +430,17 @@
   thinkersmith2_name: Двоични Baubles (гривни)
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Камък, хартия, ножица
-  frozen_gradelevel: Възраст 8 +
+  hourofcode_name: Хранилище за нови code.org/hoc
+  playlab_name: Театрална лаборатория
   codeorg_gradelevel: Възраст 4-104
   codeintl_gradelevel: Възраст 4-104
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Средно училище +
   khanes_gradelevel: Средно училище +
+  khanpt_gradelevel: Средно училище +
+  khanhe_gradelevel: Средно училище +
+  khanfr_gradelevel: Средно училище +
+  khanpl_gradelevel: Средно училище +
   tynker_gradelevel: Възраст 5-13
   scratch_gradelevel: Възраст 8 +
   lightbot_gradelevel: Всички възрасти
@@ -447,21 +469,27 @@
   thinkersmith2_gradelevel: Възраст 8 +
   kodableunplugged_gradelevel: Възраст 8-13
   projguts_gradelevel: Възраст 10-13
-  frozen_platformtext: Съвременни браузъри + таблети
+  hourofcode_gradelevel: Възраст 4-104
+  frozen_gradelevel: Възраст 8 +
+  playlab_gradelevel: Възраст 4-104
   codeorg_platformtext: Съвременни браузъри, смартфони, таблети
   codeintl_platformtext: Съвременни браузъри, смартфони, таблети
   thinkersmithspanish_platformtext: Ънплъгд
   khan_platformtext: Съвременни уеб браузъри
   khanes_platformtext: Съвременни уеб браузъри
+  khanpt_platformtext: Съвременни уеб браузъри
+  khanhe_platformtext: Съвременни уеб браузъри
+  khanfr_platformtext: Съвременни уеб браузъри
+  khanpl_platformtext: Съвременни уеб браузъри
   tynker_platformtext: Съвременни уеб браузъри
-  scratch_platformtext: ВСИЧКИ браузъри
+  scratch_platformtext: Само за десктоп браузъри (не таблети)
   lightbot_platformtext: ВСИЧКИ браузъри и iOS, Android или игрална конзола
   thinkersmith_platformtext: Ънплъгд
   condcards_platformtext: Ънплъгд
   lightbotintl_platformtext: iOS, Android (или уеб браузър)
-  codehs_platformtext: Съвременни браузъри
+  codehs_platformtext: Съвременни браузъри. (Започването на курса изисква $$)
   codecademy_platformtext: Съвременни уеб браузъри. iOS, Android приложения
-  codecombat_platformtext: Съвременни уеб браузъри
+  codecombat_platformtext: Съвременни браузъри. (Започването на курса изисква $$)
   codemonkey_platformtext: Съвременни уеб браузъри
   codeavengers_platformtext: Съвременни уеб браузъри
   processing_platformtext: Съвременни уеб браузъри
@@ -482,13 +510,18 @@
   thinkersmith2_platformtext: Ънплъгд
   kodableunplugged_platformtext: Ънплъгд
   projguts_platformtext: Ънплъгд
-  frozen_shortdescription: Нека да използваме кода за да се присъединим към Анна и
-    Елза, и заедно с тях опознаем  магията и красотата на леда.
+  hourofcode_platformtext: Съвременни браузъри, смартфони, таблети
+  frozen_platformtext: Съвременни браузъри + таблети
+  playlab_platformtext: Съвременни браузъри, смартфони, таблети
   codeorg_shortdescription: Научете се да кодирате с Марк Зукерберг и Angry Birds!
   codeintl_shortdescription: Научете се да кодирате с Марк Зукерберг и Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Научете се да рисувате в JavaScript
   khanes_shortdescription: Научете се да рисувате в JavaScript
+  khanpt_shortdescription: Научете се да рисувате в JavaScript
+  khanhe_shortdescription: Научете се да рисувате в JavaScript
+  khanfr_shortdescription: Научете се да рисувате в JavaScript
+  khanpl_shortdescription: Научете се да рисувате в JavaScript
   tynker_shortdescription: Научете се да кодирате чрез решаване на забавни пъзели
     и изградете свои собствени мобилни игри.
   scratch_shortdescription: Създайте интерактивни игри, истории и анимации.
@@ -502,8 +535,8 @@
   codecademy_shortdescription: Научете да програмирате с JavaScript в уеб браузър
   codecombat_shortdescription: Победете оргитата, за да научите JavaScript или Python,
     чрез тази епична игра за програмиране!
-  codemonkey_shortdescription: Учениците ще програмират маймунката да си улови банани,
-    и това ще става все  по-сложно на всяко следващо ниво.
+  codemonkey_shortdescription: Учениците създават програма за маймуната, за да си
+    вземе банани.
   codeavengers_shortdescription: Научете да програмирате с JavaScript в уеб браузър
   processing_shortdescription: Едночасов урок на езика Processing
   robomind_shortdescription: Писане на код за виртуален робот
@@ -515,17 +548,16 @@
     на програмирането.
   kodable_shortdescription: Забавна игра на iPad за преподаване на понятия от компютърното
     програмиране
-  tynkerapp_shortdescription: Научете се да кодирате чрез решаване на забавни пъзели
-    и изградете свои собствени мобилни игри.
+  tynkerapp_shortdescription: 'Научете се да програмирате чрез решаване на забавни
+    пъзели за кодиране. '
   robomindnl_shortdescription: Писане на код за виртуален робот
   flappy_shortdescription: Направете своя собствена игра - Flappy Bird, Shark или
     Submarine
-  bitsbox_shortdescription: Кодирайте серия от приложения за игра и споделяне, използвайки
-    real Javascript.
+  bitsbox_shortdescription: Кодирай серия от приложения за игра и сподели, използвайки  JavaScript.
   makegameswithus_shortdescription: Направете iPhone игра! Научете се да пишете код,
     за да научите чудовището си да се движи!
-  touchdevelop_shortdescription: Създавайте мобилни приложения директно на вашия телефон,
-    таблет или лаптоп
+  touchdevelop_shortdescription: 'Решавайте пъзели, създавайте игри и се научете да
+    кодирате на вашия телефон. '
   appinventor_shortdescription: Направете свое приложение! (Само за Android)
   blockly_shortdescription: Изтеглете ZIP файла за да програмирате офлайн
   thinkersmith2_shortdescription: Научете как компютрите използват единици и нули
@@ -533,10 +565,10 @@
   kodableunplugged_shortdescription: Забавно упражнение без компютър
   projguts_shortdescription: Опитайте моделиране и симулация, използвайки камък/ножица/хартия
     /
-  frozen_longdescription: Нека да използваме кода, за да се присъединим към Анна и
-    Елза, докато те опознават магията и красотата на леда. Вие ще създадете снежинки
-    и модели в градината на своята зимна приказка, която след това можете да споделите
-    с приятелите си!
+  hourofcode_shortdescription: Хранилище за нови code.org/hoc
+  frozen_shortdescription: Нека да използваме кода за да се присъединим към Анна и
+    Елза, и заедно с тях опознаем  магията и красотата на леда.
+  playlab_shortdescription: Създайте история или направете игра с Театрална лаборатория!
   codeorg_longdescription: Научете основните понятия на компютърните науки с drag
     and drop програмиране. Това е като игра, самонасочващи уроци с  видео лекции от
     Бил Гейтс, Марк Зукерберг, Angry Birds и Plants vs. Zombies. Научете за повторения-цикли,
@@ -545,14 +577,21 @@
     and drop програмиране. Това е като игра, самонасочващи уроци с  видео лекции от
     Бил Гейтс, Марк Зукерберг, Angry Birds и Plants vs. Zombies. Научете за повторения-цикли,
     условия и основни алгоритми. Наличен на 34 езика.
-  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
+  thinkersmithspanish_longdescription: С помощта на предварително  определен "Речник
+    на робота", учениците ще се ръководят по такъв начин, че да изпълнят конкретни
+    задачи, които не са  обсъдени по-рано. Този сегмент учи учениците за връзката
+    между символи и действия, както и ценното умение на отстраняване на грешки.
   khan_longdescription: Научете основите на програмирането с JavaScript докато създавате
     забавни рисунки с вашия код. Направете го сами или с класа си!
   khanes_longdescription: Научете основите на програмирането с JavaScript докато създавате
+    забавни рисунки с вашия код. Направете го сами или с класа си!
+  khanpt_longdescription: Научете основите на програмирането с JavaScript докато създавате
+    забавни рисунки с вашия код. Направете го сами или с класа си!
+  khanhe_longdescription: Научете основите на програмирането с JavaScript докато създавате
+    забавни рисунки с вашия код. Направете го сами или с класа си!
+  khanfr_longdescription: Научете основите на програмирането с JavaScript докато създавате
+    забавни рисунки с вашия код. Направете го сами или с класа си!
+  khanpl_longdescription: Научете основите на програмирането с JavaScript докато създавате
     забавни рисунки с вашия код. Направете го сами или с класа си!
   tynker_longdescription: Изградете свои собствени игри  и ги споделете с приятели!
     Решете забавни пъзели за кодиране и научете понятия от програмирането на всяко
@@ -623,10 +662,10 @@
   kodable_longdescription: Kodable е самонасочваща iPad игра, която въвежда децата
     на 5 + в основите на програмирането. Наличието на учител или родител е желателно,
     но не задължително.
-  tynkerapp_longdescription: Изгради своя собствена игра и я сподели с приятели! Решавайте
-    забавни пъзели за кодиране и научете понятия от програмирането във всяко ниво.
-    Персонализирайте игрите с анимационни герои, няколко нива и богати галерии с добавки.
-    Много забавни дейности, от които да избирате!
+  tynkerapp_longdescription: Научете се да програмирате чрез решаване на забавни пъзели
+    за кодиране. Лесно изграждане на игри и истории чрез използване с тематични графики,
+    10 + игри – комплекти и адаптивни знаци. Не се изисква Интернет връзка. Можете
+    също да достъпите до вашите творения в Интернет.
   robomindnl_longdescription: 'Учениците изучават основите на програмирането чрез
     контролиране на техните собствени виртуални роботи. Онлайн курсът е напълно самостоятелен
     и придружен от кратки презентации, филми, викторини и съвети, за да ви помогнем
@@ -634,19 +673,18 @@
   flappy_longdescription: Използвайте drag-and-drop програмиране за да направите своя  Flappy  Bird
     игра и я персонализирайте (Flappy акула, Flappy Санта и др.). Добавете играта
     на телефона си с едно щракване.
-  bitsbox_longdescription: Персонализирайте вашия собствен виртуален таблет, след
-    което създайте серия от приложения за игра и споделяне. Опростеният пътеводител
-    прави възможно дори за малки деца да програмират на real Javascript, а по-напредналите
+  bitsbox_longdescription: Персонализирайте ваш собствен виртуален таблет, след което
+    създайте серия от приложения за игра и споделяне. Опростеният пътеводител прави
+    възможно дори за малки деца да програмират на real Javascript, а по-напредналите
     да продължат напред.
   makegameswithus_longdescription: Научете се да кодирате като направите iPhone игра,
     използвайки чисто нов и предназначен за начинаещи приятелски език за програмиране
     наречен Swift! Създавайте  Пок&eacute;емон вдъхновена екшън игра и чрез писане
     на код, да научите вашето чудовище на нови движения. Ще научите как да използвате
     променливи, методи и обекти, за да помогнете да спечели чудовището ви!
-  touchdevelop_longdescription: Луди чертежи, летящи чудовища, въртящи се цветя...
-    създаване на програми на вашето устройство с TouchDevelop, среда за създаване
-    на мобилни приложения. Работи на iPhone, iPad, Android, Windows, Windows Phone,
-    Линукс, Мак.
+  touchdevelop_longdescription: 'Насочения към тъч устройства редактор ще ви помогне
+    в създаването на пиксел изкуство, решаването на мечи пъзел или в правенето на
+    своя jumping bird" игра. '
   appinventor_longdescription: Забавни, бързи видео уроци ще ви преведат през изграждането
     на три прости приложения за вашия андроид телефон или таблет. Предназначен за
     начинаещи и за експерти. В този Час на кодирането ще се научите да изграждате
@@ -666,6 +704,14 @@
     как да създават модели и как работи симулацията, чрез игра на група от ученици
     на различни версии на камък / хартия / ножици, те ще виждат резултатите като различно
     моделиране на експерименти.
+  hourofcode_longdescription: Хранилище за нови code.org/hoc
+  frozen_longdescription: Нека да използваме кода, за да се присъединим към Анна и
+    Елза, докато те опознават магията и красотата на леда. Вие ще създадете снежинки
+    и модели в градината на своята зимна приказка, която след това можете да споделите
+    с приятелите си!
+  playlab_longdescription: Създайте история или направете игра с Театрална лаборатория!
+    Направете животни, пирати, зомбита, нинджи и други да се  движат, да говорят,
+    давайте им точки, дори направете така, че да хвърлят огнени топки!
   codeorg_beyond_name: Въведение в компютърните науки (клас K-8)
   khan_beyond_name: Научете се да програмирате на компютър
   tynker_beyond_name: Научете програмиране у дома

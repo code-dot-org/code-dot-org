@@ -98,6 +98,9 @@
   participant_educator: Педагог
   participant_engineer: Программист
   participant_other: Ни один из вышеперечисленных
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Я
   never_spam: Мы никогда не пришлём Вам спам
   enter_country: Введите страну, если Вы не в  США
@@ -136,6 +139,10 @@
   studiobar_flappy_body: Создай и поделись своей игрой Flappy
   studiobar_teacher_title: Сделано для учителей
   studiobar_teacher_body: Познакомьте Ваш класс со Студией Кода
+  studiobar_frozen_title: Hour of Code
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Я ученик
   contact_form_topic_parent: Я родитель
   contact_form_topic_teacher: Я преподаватель/воспитатель
@@ -231,6 +238,12 @@
   dashboard_action_done: Готово
   dashboard_action_required: необходимо
   dashboard_navigation_home_page: Домашняя страница преподавателя
+  dashboard_navigation_section_student_progress: Учетные записи и прогресс студента
+  dashboard_navigation_section_teacher_progress: Your Course Progress
+  dashboard_navigation_section_lesson_plans: Планы уроков и ресурсы
+  dashboard_navigation_section_community: Help and Community
+  dashboard_navigation_section_pd: Professional Development
+  dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
   dashboard_navigation_all_sections: Учетные записи и прогресс студента
   dashboard_navigation_view_progress: Просмотр хода выполнения
   dashboard_navigation_add_students: Добавить Учеников
@@ -354,7 +367,7 @@
   hoc2014_try_new_tutorials: Попробуйте наши новые учебные материалы для Часа Кода
   hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
   hoc2014_try_scrat: Angry Birds, PvZ, и Scrat
-  hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
+  hoc2014_try_frozen: Рисуй вместе с Анной и Эльзой из "Холодного сердца"
   carousel_heading_international: Обучающее руководство на Вашем языке
   carousel_heading_domestic: Учебные материалы доступны на английском языке
   carousel_heading_beginners: Учебники для начинающих
@@ -371,7 +384,7 @@
   more_resources_educators: Больше ресурсов для учителей и преподавателей
   participants: участники
   teachers_notes: Заметки учителя
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: 'Учителям: ознакомьтесь с важными заметками для педагогов здесь'
   previous: Назад
   next: Далее
   older_systems: Уроки доступные на более старых системах
@@ -379,12 +392,16 @@
     доступа ко всем урокам, установите <a href="http://browsehappy.com/" target="_blank">браузер
     новой версии.</a>
   mobile_devices: Учебники для мобильных устройств
-  frozen_name: Code with Anna and Elsa
+  frozen_name: Программируй с Анной и Эльзой
   codeorg_name: Написать первую компьютерную программу
   codeintl_name: Написать первую компьютерную программу
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Введение в JavaScript
   khanes_name: Введение в JavaScript
+  khanpt_name: Введение в JavaScript
+  khanhe_name: Введение в JavaScript
+  khanfr_name: Введение в JavaScript
+  khanpl_name: Введение в JavaScript
   tynker_name: Создайте свою собственную игру
   scratch_name: Проявите творчество занимаясь программированием
   lightbot_name: Lightbot
@@ -413,12 +430,17 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Камень, ножницы, бумага
-  frozen_gradelevel: Возраст 8 +
+  hourofcode_name: Placeholder for new code.org/hoc
+  playlab_name: Лаборатория игр
   codeorg_gradelevel: Возраст 4-104
   codeintl_gradelevel: Возраст 4-104
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Средняя школа +
   khanes_gradelevel: Средняя школа +
+  khanpt_gradelevel: Средняя школа +
+  khanhe_gradelevel: Средняя школа +
+  khanfr_gradelevel: Средняя школа +
+  khanpl_gradelevel: Средняя школа +
   tynker_gradelevel: Возраст 5-13
   scratch_gradelevel: Возраст 8 +
   lightbot_gradelevel: Для любого возраста
@@ -447,19 +469,26 @@
   thinkersmith2_gradelevel: Возраст 8 +
   kodableunplugged_gradelevel: Возраст 8-13
   projguts_gradelevel: Возраст 10-13
-  frozen_platformtext: Современные браузеры + планшеты
+  hourofcode_gradelevel: Возраст 4-104
+  frozen_gradelevel: Возраст 8 +
+  playlab_gradelevel: Возраст 4-104
   codeorg_platformtext: Современные браузеры, смартфоны, планшеты
   codeintl_platformtext: Современные браузеры, смартфоны, планшеты
   thinkersmithspanish_platformtext: Офф-лайн
   khan_platformtext: Современные веб-браузеры
   khanes_platformtext: Современные веб-браузеры
-  tynker_platformtext: Modern web browsers
+  khanpt_platformtext: Современные веб-браузеры
+  khanhe_platformtext: Современные веб-браузеры
+  khanfr_platformtext: Современные веб-браузеры
+  khanpl_platformtext: Современные веб-браузеры
+  tynker_platformtext: Современные веб-браузеры
   scratch_platformtext: ВСЕ браузеры
   lightbot_platformtext: ВСЕ браузеры и iOS, Android или Игровые Консоли
   thinkersmith_platformtext: Офф-лайн
   condcards_platformtext: Офф-лайн
   lightbotintl_platformtext: Операционные системы iOS и Android (или веб-браузер)
-  codehs_platformtext: Modern browsers
+  codehs_platformtext: Современные браузеры. (Для прохождения более углубленного курса
+    требуется $$)
   codecademy_platformtext: Современные веб-браузеры. Приложения для операционных систем
     iOS и Android
   codecombat_platformtext: Современные веб-браузеры
@@ -482,14 +511,19 @@
   thinkersmith2_platformtext: Офф-лайн
   kodableunplugged_platformtext: Офф-лайн
   projguts_platformtext: Офф-лайн
-  frozen_shortdescription: Давайте использовать код, чтобы присоединиться к Анне и
-    Эльзе, открывающим магию и красоту льда.
+  hourofcode_platformtext: Современные браузеры, смартфоны, планшеты
+  frozen_platformtext: Современные браузеры + планшеты
+  playlab_platformtext: Современные браузеры, смартфоны, планшеты
   codeorg_shortdescription: Учитесь программировать с Марком Цукербергом и Angry Birds!
   codeintl_shortdescription: Учитесь программировать с Марком Цукербергом и Angry
     Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Учитесь рисовать в JavaScript
   khanes_shortdescription: Учитесь рисовать в JavaScript
+  khanpt_shortdescription: Учитесь рисовать в JavaScript
+  khanhe_shortdescription: Учитесь рисовать в JavaScript
+  khanfr_shortdescription: Учитесь рисовать в JavaScript
+  khanpl_shortdescription: Учитесь рисовать в JavaScript
   tynker_shortdescription: Учитесь программировать решая веселые загадки, и создайте
     свою собственную игру для мобильных устройств.
   scratch_shortdescription: Создавайте интерактивные игры, рассказы и анимации.
@@ -503,8 +537,8 @@
   codecademy_shortdescription: Изучайте программирование в JavaScript, в веб-браузере
   codecombat_shortdescription: Победите огров, чтобы изучить Python или JavaScript
     в этой эпичной игре!
-  codemonkey_shortdescription: Students program a monkey to catch bananas while it
-    gets slightly more complicated on each level.
+  codemonkey_shortdescription: Ученики запрограммируют обезьянку, чтобы она ловила
+    бананы.
   codeavengers_shortdescription: Изучайте программирование в JavaScript, в веб-браузере
   processing_shortdescription: Часовой урок о языках обработки
   robomind_shortdescription: Напишите код для виртуального робота
@@ -515,8 +549,7 @@
   codespark_shortdescription: The Foos - это веселя игра, подходящая для детей, чтобы
     помочь узнать им о программировании.
   kodable_shortdescription: Весёлые игры для iPad для обучения основам программирования
-  tynkerapp_shortdescription: Learn to code by solving fun puzzles and build your
-    own mobile games.
+  tynkerapp_shortdescription: 'Научись программировать, разгадывая веселые головоломки. '
   robomindnl_shortdescription: Напишите код для виртуального робота
   flappy_shortdescription: Создайте свою игру - Птица, котора машет крыльями, Акула,
     или Подводная Лодка
@@ -524,8 +557,8 @@
     настоящего Javascript.
   makegameswithus_shortdescription: Сделайте игру для iPhone! Учитесь, написав код
     для новых движений вашего монстра!
-  touchdevelop_shortdescription: Code mobile apps directly on your phone, tablet or
-    laptop
+  touchdevelop_shortdescription: 'Разгадывай головоломки, создавай игры и учись программировать,
+    и все это - на мобильном телефоне. '
   appinventor_shortdescription: Сделайте своё собственное приложение! (Только для
     Android)
   blockly_shortdescription: Скачать ZIP-файл, чтобы учиться в режиме offline
@@ -534,9 +567,10 @@
   kodableunplugged_shortdescription: Весёлые упражнения без компьютера
   projguts_shortdescription: Испытайте моделирование с помощью игры "Камень - ножницы
     - бумага"
-  frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
-    magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
-    and make a winter wonderland that you can then share with your friends!
+  hourofcode_shortdescription: Placeholder for new code.org/hoc
+  frozen_shortdescription: Давайте использовать код, чтобы присоединиться к Анне и
+    Эльзе, открывающим магию и красоту льда.
+  playlab_shortdescription: Создай историю или игру с Лабораторией игр!
   codeorg_longdescription: Изучайте основные понятия информатики с помощью drag-and-drop
     программирования. Это похожий на игру самоучитель с видеолекциями Билла Гейтса,
     Марка Цукерберга, Angry Birds и Plants vs. Zombies. Изучите циклы, условные операторы
@@ -545,14 +579,23 @@
     программирования. Это похожий на игру самоучитель с видеолекциями Билла Гейтса,
     Марка Цукерберга, Angry Birds и Plants vs. Zombies. Изучите циклы, условные операторы
     и основные алгоритмы. Доступен на 34 языках.
-  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
+  thinkersmithspanish_longdescription: С помощью имеющегося "Словаря для роботов"
+    учащиеся попробуют, направляя друг друга, выполнить определенные задачи, при этом
+    не обсуждая их предварительно. Этот урок покажет детям связь между символами и
+    действиями, а также научит их незаменимому навыку поиска и исправления ошибок
+    в программе. "Мои друзья-роботы" лучше всего подходит в качестве группового задания
+    и включает в себя учебное пособие для преподователей для использования в классах.
   khan_longdescription: Изучите основы программирования на JavaScript при создании
     смешных рисунков с вашим кодом. Изучайте самостоятельно или вместе с одноклассниками!
   khanes_longdescription: Изучите основы программирования на JavaScript при создании
+    смешных рисунков с вашим кодом. Изучайте самостоятельно или вместе с одноклассниками!
+  khanpt_longdescription: Изучите основы программирования на JavaScript при создании
+    смешных рисунков с вашим кодом. Изучайте самостоятельно или вместе с одноклассниками!
+  khanhe_longdescription: Изучите основы программирования на JavaScript при создании
+    смешных рисунков с вашим кодом. Изучайте самостоятельно или вместе с одноклассниками!
+  khanfr_longdescription: Изучите основы программирования на JavaScript при создании
+    смешных рисунков с вашим кодом. Изучайте самостоятельно или вместе с одноклассниками!
+  khanpl_longdescription: Изучите основы программирования на JavaScript при создании
     смешных рисунков с вашим кодом. Изучайте самостоятельно или вместе с одноклассниками!
   tynker_longdescription: Создайте свои игры и поделитесь ими с друзьями! Отгадывайте
     веселые загадки и учитесь информатике на каждом уровне. Сделайте свою игру уникальной
@@ -642,11 +685,10 @@
     of apps to play and share. Simple walkthroughs make it possible for even young
     kids to program real Javascript, and the more advanced you are the further you'll
     go.
-  makegameswithus_longdescription: Know some programming already? Learn to make an
-    iPhone game in an hour! We'll guide you through the process, to code, test, and
-    play your game entirely in the browser and then share it on Facebook for friends
-    to try! No prior iPhone development experience is required. You must understand
-    what variables, methods, and objects are.
+  makegameswithus_longdescription: Learn to code by making an iPhone game using a
+    brand new and beginner-friendly programming language called Swift! Create a Pokemon-inspired
+    action game and write code to teach your monster new moves. You will learn how
+    to use variables, methods, and objects to help your monster win!
   touchdevelop_longdescription: Crazy drawings, flying monsters, swirling flowers...
     create your apps on your device with TouchDevelop, a friendly mobile app creation
     environment. Runs on iPhone, iPad, Android, Windows, Windows Phone, Linux, Mac.
@@ -669,6 +711,14 @@
   projguts_longdescription: This "unplugged" activity helps students learn how modeling
     and simulation works by having a group of students play different versions of
     the Rock / Paper / Scissors game, and see the results as different modeling experiments.
+  hourofcode_longdescription: Placeholder for new code.org/hoc
+  frozen_longdescription: Давайте с помощью программирования кода присоединимся к
+    Анне и Эльзе в их исследовании магии и красоты льда. Будем кататься на коньках
+    и рисовать на льду снежинки и узоры, создавать зимнюю страну чудес и делиться
+    этим с друзьями!
+  playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
+    pirates, zombies, ninjas, and many more characters move, make sounds, score points,
+    and even throw fireballs!
   codeorg_beyond_name: Intro Computer Science (grades K-8)
   khan_beyond_name: Обучайтесь компьютерному программированию
   tynker_beyond_name: Обучайтесь программированию у себя дома

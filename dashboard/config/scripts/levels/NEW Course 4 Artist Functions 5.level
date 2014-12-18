@@ -21,7 +21,7 @@
     "y": "250",
     "slider_speed": ".5",
     "disable_sharing": "false",
-    "video_key": "C4_edit_functions",
+    "video_key": "C4_function_edit",
     "callout_json": "[\r\n  {\"localization_key\": \"edit_function\", \"element_id\": \"#edit_function_qtip > .blocklyIconGroup\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}}\r\n  },\r\n  {\"on\": \"function_editor_opened\", \"localization_key\": \"function_editor_draw_square\", \"element_id\": \"#function_editor_draw_square_qtip\",\r\n   \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}}\r\n  }\r\n]"
   }
 }]]></config>
@@ -72,6 +72,9 @@
         </block>
       </xml>
     </start_blocks>
+    <toolbox_blocks>
+      <xml/>
+    </toolbox_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

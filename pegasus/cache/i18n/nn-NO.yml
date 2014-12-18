@@ -54,7 +54,7 @@
   go: Gå
   thank_you_: Takk!
   congratulations: Gratulerer!
-  congratulations_on_completing_hoc: Gratulerer med å fullføre en kodetime.
+  congratulations_on_completing_hoc: Gratulerer med å ha fullført Kodetimen
   get_a_certificate_of_achievement: Hent et diplom for din prestasjon
   enter_valid_email: Vennligst skriv inn en gyldig e-postadresse
   get_a_certificate_message: Vi sender deg et sertifikat og informasjon om hvordan
@@ -84,7 +84,7 @@
   thanks_for_voting: Takk for at du stemte!
   share_on_facebook: Del via Facebook
   share_on_twitter: Del via Twitter
-  beyond_an_hour: Etter Kodetimen >
+  beyond_an_hour: Etter Kodetimen
   get_started: Start
   i_agree: Jeg samtykker
   participant_select: '- Velg -'
@@ -93,6 +93,9 @@
   participant_educator: Lærer
   participant_engineer: programmerer
   participant_other: Ingen av de over
+  print_all: Skriv ut alt
+  print_ice_art: Skriv ut iskunsten din
+  create_art_with_zombie: eller lag avansert kunst med zombie
   i_am_a: Jeg er en
   never_spam: Vi vil aldri sende deg spam
   enter_country: Angi landet hvis det er utenfor USA
@@ -131,6 +134,10 @@
   studiobar_flappy_body: Lag og del ditt eige Flappy-spel
   studiobar_teacher_title: Laga for lærerar
   studiobar_teacher_body: Innfør Kode Studio i klasserommet
+  studiobar_frozen_title: Hour of Code (kodetimen)
+  studiobar_frozen_body: Lag eit vinterlandskap med Anna og Elsa
+  studiobar_donate_title: Donèr
+  studiobar_donate_body: Eit barn lærer for hver dollar du donerer
   contact_form_topic_student: Eg er ein elev
   contact_form_topic_parent: Eg er ein forelder
   contact_form_topic_teacher: Eg er ein lærar
@@ -225,6 +232,12 @@
   dashboard_action_done: Ferdig
   dashboard_action_required: obligatorisk
   dashboard_navigation_home_page: Lærar heimeside
+  dashboard_navigation_section_student_progress: Elevkontoar og framgang
+  dashboard_navigation_section_teacher_progress: Din gjennomføring av kurs
+  dashboard_navigation_section_lesson_plans: Leksjonsplanar og ressursar
+  dashboard_navigation_section_community: Hjelp og brukergruppe
+  dashboard_navigation_section_pd: Profesjonell utvikling
+  dashboard_navigation_section_speakers: Informatikk <br/> Gjesteforelesere
   dashboard_navigation_all_sections: Elevkontoar og framgang
   dashboard_navigation_view_progress: Vis framdrift
   dashboard_navigation_add_students: Legg til elevar
@@ -336,7 +349,7 @@
     kva av disse innloggingsalternativa, <b>bilde, ord, eller e-post</b>, du vil velge
     for ein seksjon.
   dashboard_faq: Ofte stilte spørsmål
-  code_hoc_coming: Kodetimen nærmar seg – 8. – 14. desember!
+  code_hoc_coming: Kodetimen er her - 8.- 14. desember!
   code_sign_up: Registrer deg for å delta i Kodeveka (CS Education Week)
   learn_more: Lær meir
   hoc2014_try_new_tutorials: Prøv våre nye Kodetime-leksjonar
@@ -346,7 +359,7 @@
   carousel_heading_international: Gjennomganger på norsk
   carousel_heading_domestic: Leksjonar tilgjengeleg på engelsk
   carousel_heading_beginners: Leksjonar for nybegynnarar
-  carousel_heading_javascript: Leksjonar som lærer deg Javascript
+  carousel_heading_javascript: Leksjonar som lærer deg JavaScript
   carousel_heading_unplugged: Ingen "dings" eller Internett? Prøv "fråkopla" koding
   carousel_heading_devices: Leksjons-app'ar for telefonar og nettbrett
   carousel_heading_languages: Leksjonar i andre programmeringsspråk
@@ -359,7 +372,7 @@
   more_resources_educators: Fleire ressursar for lærarar og utdannarar
   participants: deltakarar
   teachers_notes: Læraren sine notat
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: 'Lærere: Les viktige pedagog-notater her'
   previous: Førre
   next: Neste
   older_systems: Leksjonar som fungerer på eldre system
@@ -373,6 +386,10 @@
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Ein introduksjon til JavaScript
   khanes_name: Ein introduksjon til JavaScript
+  khanpt_name: Ein introduksjon til JavaScript
+  khanhe_name: Ein introduksjon til JavaScript
+  khanfr_name: Ein introduksjon til JavaScript
+  khanpl_name: Ein introduksjon til JavaScript
   tynker_name: Lag ditt eige spel
   scratch_name: Bli kreativ med koding
   lightbot_name: Lightbot
@@ -401,12 +418,17 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Stein, saks, papir
-  frozen_gradelevel: Alderen 8+
+  hourofcode_name: Plassholder for ny code.org/hoc
+  playlab_name: Spel-lab
   codeorg_gradelevel: Frå 4 - 104 år
   codeintl_gradelevel: Frå 4 - 104 år
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Mellomtrinnet
   khanes_gradelevel: Mellomtrinnet
+  khanpt_gradelevel: Mellomtrinnet
+  khanhe_gradelevel: Mellomtrinnet
+  khanfr_gradelevel: Mellomtrinnet
+  khanpl_gradelevel: Mellomtrinnet
   tynker_gradelevel: Alder 5 til 13
   scratch_gradelevel: Alderen 8+
   lightbot_gradelevel: Alle aldre
@@ -435,21 +457,27 @@
   thinkersmith2_gradelevel: Alderen 8+
   kodableunplugged_gradelevel: Alderen 8-13
   projguts_gradelevel: Alder 10–13
-  frozen_platformtext: Moderne nettlesarar + nettbrett
+  hourofcode_gradelevel: Frå 4 - 104 år
+  frozen_gradelevel: Alderen 8+
+  playlab_gradelevel: Frå 4 - 104 år
   codeorg_platformtext: Moderne nettlesarar, smarttelefonar, tablet-pc'ar
   codeintl_platformtext: Moderne nettlesarar, smarttelefonar, tablet-pc'ar
   thinkersmithspanish_platformtext: Straumlaust
   khan_platformtext: Moderne nettlesarar
   khanes_platformtext: Moderne nettlesarar
-  tynker_platformtext: Moderne nettlesere
-  scratch_platformtext: ALLE nettlesarar
+  khanpt_platformtext: Moderne nettlesarar
+  khanhe_platformtext: Moderne nettlesarar
+  khanfr_platformtext: Moderne nettlesarar
+  khanpl_platformtext: Moderne nettlesarar
+  tynker_platformtext: Moderne nettlesarar
+  scratch_platformtext: Bare for PCer med nettleser (ikke nettbrett)
   lightbot_platformtext: ALLE nettlesarar og iOS, Android eller spelkonsoll
   thinkersmith_platformtext: Straumlaust
   condcards_platformtext: Struamlaust
   lightbotintl_platformtext: iOS, Android (eller nettlesar)
-  codehs_platformtext: Moderne nettlesere
+  codehs_platformtext: Moderne nettlesere. (Oppfølgingskurs krev $$)
   codecademy_platformtext: Moderne nettlesarar. iOS, Android app'ar
-  codecombat_platformtext: Moderne nettlesarar
+  codecombat_platformtext: Moderne nettlesere. (Videre leksjoner krever betaling)
   codemonkey_platformtext: Moderne nettlesarar
   codeavengers_platformtext: Moderne nettlesarar
   processing_platformtext: Moderne nettlesarar
@@ -470,13 +498,18 @@
   thinkersmith2_platformtext: Straumlaust
   kodableunplugged_platformtext: Straumlaust
   projguts_platformtext: Straumlaust
-  frozen_shortdescription: La oss bruke kode for å bli med Anna og Elsa som utforskar
-    den magiske og vakre isen.
+  hourofcode_platformtext: Moderne nettlesarar, smarttelefonar, tablet-pc'ar
+  frozen_platformtext: Moderne nettlesarar + nettbrett
+  playlab_platformtext: Moderne nettlesarar, smarttelefonar, tablet-pc'ar
   codeorg_shortdescription: Lær å kode med Mark Zuckerberg og Angry Birds!
   codeintl_shortdescription: Lær å kode med Mark Zuckerberg og Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Lær å teikne i JavaScript
   khanes_shortdescription: Lær å teikne i JavaScript
+  khanpt_shortdescription: Lær å teikne i JavaScript
+  khanhe_shortdescription: Lær å teikne i JavaScript
+  khanfr_shortdescription: Lær å teikne i JavaScript
+  khanpl_shortdescription: Lær å teikne i JavaScript
   tynker_shortdescription: Lær å kode ved å løyse morsomme gåter og bygg dine eigne
     mobil-spel.
   scratch_shortdescription: Skap interaktive spel, historier og animasjonar.
@@ -490,8 +523,7 @@
   codecademy_shortdescription: Lær JavaScript-programmering, i ein nettlesar
   codecombat_shortdescription: Kjemp med monster for å lære Python eller JavaScript
     i dette episke programmeringsspelet!
-  codemonkey_shortdescription: Students program a monkey to catch bananas while it
-    gets slightly more complicated on each level.
+  codemonkey_shortdescription: Studenter programmerere ei ape til å fange bananar.
   codeavengers_shortdescription: Lær JavaScript-programmering, i ein nettlesar
   processing_shortdescription: Leksjonar på ein time i programmeringsspråk
   robomind_shortdescription: Skriv kode for ein virtuell robot
@@ -503,15 +535,14 @@
     om programmering.
   kodable_shortdescription: Eit artig iPad-spel for å lære konsepta i programmering
     av datamaskiner
-  tynkerapp_shortdescription: Lær å kode ved å løse morsomme problemer og bygg dine
-    egne mobilspill.
+  tynkerapp_shortdescription: 'Lær å programmere ved å løse morsomme kode-oppgaver. '
   robomindnl_shortdescription: Skriv kode for ein virtuell robot
   flappy_shortdescription: Lag ditt eige spel - Flappy Bird, hai eller ubåt
-  bitsbox_shortdescription: Kod ulike appar for å spele og dele ved å bruke ekte Javascript.
+  bitsbox_shortdescription: Kode en rekke apper med ekte JavaScript som du både kan
+    spille og dele.
   makegameswithus_shortdescription: Lag eit iPhone-spel! Lær ved å skrive kode for
     å lære monsteret ditt nye rørsler!
-  touchdevelop_shortdescription: Lag mobilprogrammer direkte på din telefonen, nettbrett
-    eller bærbare datamaskin
+  touchdevelop_shortdescription: 'Løs gåter, lag spill og lær koding på telefonen. '
   appinventor_shortdescription: Lag din eigen app! (Berre for Android)
   blockly_shortdescription: Last ned ei ZIP-fil for å lære utan å vere tilkopla Internett
   thinkersmith2_shortdescription: Lær korleis datamaskinar brukar 1-arar og 0-ar for
@@ -519,9 +550,10 @@
   kodableunplugged_shortdescription: Ei morsom fråkopla øving
   projguts_shortdescription: Prøv modellering og simulering ved å bruke stein, saks
     og papir
-  frozen_longdescription: La oss bruke kode og bli med Anna og Elsa når dei utforskar
-    magien og skjønnheita med is. Du vil lage snøfnugg og mønster med kunstløp skøyter
-    og skaper eit magisk vinterlandskap som du kan dele med venane dine!
+  hourofcode_shortdescription: Plassholder for ny code.org/hoc
+  frozen_shortdescription: La oss bruke kode for å bli med Anna og Elsa som utforskar
+    den magiske og vakre isen.
+  playlab_shortdescription: Lag ein historie eller eit spel med Spel-lab!
   codeorg_longdescription: Lær dei grunnlegjande konsepta for datavitksap med drag-og-slepp-programmering.
     Dette er ei spel-liknande, sjølvstyrt øving med videoforedrag av Bill Gates, Mark
     Zuckerberg, Angry Birds og Plantar mot Zombiar. Lær løkker, vilkår og grunnleggjande
@@ -530,15 +562,26 @@
     Dette er ei spel-liknande, sjølvstyrt øving med videoforedrag av Bill Gates, Mark
     Zuckerberg, Angry Birds og Plantar mot Zombiar. Lær løkker, vilkår og grunnleggjande
     algoritmer. Tilgjengeleg på 34 språk.
-  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
+  thinkersmithspanish_longdescription: Ved å bruke et forhåndsdefinert "Robot-språk"
+    vil finne ut hvordan de kan instruere hverandere til å utføre bestemte oppgaver
+    uten å diskutere dem først. Denne leksjonen lærer barn sammenhengen mellom symboler
+    og handlinger, i tillegg til uvurderlige ferdigheter i å finne feil.
   khan_longdescription: Lær JavaScript-programmering frå grunnen av medan du lagar
     artige tekningar ved hjelp av kode. Gjer det for deg sjølv eller saman med klassa
     di!
   khanes_longdescription: Lær JavaScript-programmering frå grunnen av medan du lagar
+    artige tekningar ved hjelp av kode. Gjer det for deg sjølv eller saman med klassa
+    di!
+  khanpt_longdescription: Lær JavaScript-programmering frå grunnen av medan du lagar
+    artige tekningar ved hjelp av kode. Gjer det for deg sjølv eller saman med klassa
+    di!
+  khanhe_longdescription: Lær JavaScript-programmering frå grunnen av medan du lagar
+    artige tekningar ved hjelp av kode. Gjer det for deg sjølv eller saman med klassa
+    di!
+  khanfr_longdescription: Lær JavaScript-programmering frå grunnen av medan du lagar
+    artige tekningar ved hjelp av kode. Gjer det for deg sjølv eller saman med klassa
+    di!
+  khanpl_longdescription: Lær JavaScript-programmering frå grunnen av medan du lagar
     artige tekningar ved hjelp av kode. Gjer det for deg sjølv eller saman med klassa
     di!
   tynker_longdescription: Bygg dine eigne spel og del med vener! Løys artige kodeoppgåver
@@ -609,28 +652,27 @@
   kodable_longdescription: Kodable er eit sjølvstyrt iPad-spel som introduserer barn
     frå 5 år og oppover for grunnleggjande programmering. Å ha ein lærar eller føresett
     i nærleiken er optimalt, men ikkje nødvendig.
-  tynkerapp_longdescription: Build your own games and share with friends! Solve fun
-    coding puzzles and learn programming concepts in each level. Personalize games
-    with animated characters, multiple levels and rich props. Lots of fun activities
-    to choose from!
+  tynkerapp_longdescription: Lær å programmere ved å løse morsomme kode-oppgaver.
+    Lettbygde spill og historier med tema-grafikk, 10 + spill-kit og tilpasselige
+    tegn. Ingen Internett-tilkobling kreves. Du kan også få tilgang til dine kreasjoner
+    på nettet.
   robomindnl_longdescription: 'Elevene lærer grunnleggjande programmering ved å styre
     sin eigen virtuelle robot. Det nettbaserte kurset er komplett med korte presentasjonar,
     filmar, oppgåver og automatisk veiledning/tips for hjelp med programmeringsøvingane. '
   flappy_longdescription: Bruk dra-og-slepp i programmeringen for å lage ditt eget
     Flappy Bird-spel, og tilpass det til å sjå ulikt ut (Flappy Hai, Flappy Julenisse,
     kva som helst). Legg spelet inn på telefonen din med eit klikk.
-  bitsbox_longdescription: Tilpass ditt eige virtuelle nettbrett, for deretter å kode
-    ei rekkje appear for å spille og dele. Enkle eksempel gjer det mogeleg for sjølv
-    små barn å programmere skikkeleg Javascript. Til flinkare du er, jo lenger vil
-    du kome.
+  bitsbox_longdescription: Tilpass ditt eget virtuelle nettbrett, for deretter å kode
+    en rekke apper som både kan  spilles og deles. Enkle leksjoner gjør det enkelt
+    for selv små barn å programmere skikkelig Javascript. Jo mer avansert du er, jo
+    lenger vil du komme.
   makegameswithus_longdescription: Lær å kode ved å lage et iPhone-spill gjennom å
     bruke et splitter nytt og brukervennlig programmeringsspråk kalt Swift! Lag et
     Pok&eacute;mon-inspirert action-spill og skriv kode for å lære monsteret ditt
-    nye bevegelser. Du kommer til å lære hvordan å bruke variabler, metoder og objekter
-    for å hjelpe monsteret ditt til å vinne!
-  touchdevelop_longdescription: Crazy drawings, flying monsters, swirling flowers...
-    create your apps on your device with TouchDevelop, a friendly mobile app creation
-    environment. Runs on iPhone, iPad, Android, Windows, Windows Phone, Linux, Mac.
+    nye bevegelser. Du kommer til å lære og bruke variabler, metoder og objekter for
+    å hjelpe monsteret ditt til å vinne!
+  touchdevelop_longdescription: 'Touch-vennlig redigeringsverktøy vil hjelpe deg med
+    å lage pixel-kunst, løse bjørne-oppgaven eller bygge ditt eget hoppende fugl-spill. '
   appinventor_longdescription: Underhaldande og korte opplæringsvideoar viser deg
     korleis du lagar tre enkle program for Android-telefonen eller nettbrettet ditt.
     Denne Kodetimen, som er laga både for novicer og ekspertar, gjør deg i stand til
@@ -651,6 +693,11 @@
   projguts_longdescription: Denne "analoge" aktiviteten hjelper elevar å lære korleis
     modellering og simulering fungerer, ved at ei gruppe elevar spelar ulike versjonar
     av stein/saks/papir, og ser resultata som forskjellige modelleringseksperiment.
+  hourofcode_longdescription: Plassholder for ny code.org/hoc
+  frozen_longdescription: La oss bruke kode og bli med Anna og Elsa når dei utforskar
+    magien og skjønnheita med is. Du vil lage snøfnugg og mønster med kunstløp skøyter
+    og skaper eit magisk vinterlandskap som du kan dele med venane dine!
+  playlab_longdescription: Placeholder for code.org/s/playlab
   codeorg_beyond_name: Introduksjon til koding (1. - 8. trinn)
   khan_beyond_name: Lær programmering
   tynker_beyond_name: Lær programmering heime

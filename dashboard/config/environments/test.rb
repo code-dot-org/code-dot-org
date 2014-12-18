@@ -40,4 +40,11 @@ Dashboard::Application.configure do
 
   # Whether or not to display pretty blockly.
   config.pretty_blockly = false
+
+  # disable this for test by default, it won't make much sense if we keep wiping the db
+  CDO.disable_s3_image_uploads = true
+
+  # see stack traces around sql queries in the log
+  # off by default because it slows things down
+#  ActiveRecordQueryTrace.enabled = true
 end

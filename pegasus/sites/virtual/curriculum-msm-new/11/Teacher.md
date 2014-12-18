@@ -5,7 +5,7 @@ theme: none
 ---
 
 
-<%= partial('curriculum_header', :unittitle=> 'MSM', :lesson=> 11, :unplugged=>false, :title=> 'Eval: Design Recipe',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>(30-60)) %>
+<%= partial('curriculum_header', :unittitle=> 'MSM', :lesson=> 11, :unplugged=>false, :title=> 'Eval: Design Recipe',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>('30-60')) %>
 
 [content]
 
@@ -13,8 +13,7 @@ theme: none
 
 ## Lesson Overview
 
-Moving on from the simple functions students created in Eval, they will use the Design Recipe.
-
+Use the Design Recipe to write functions that produce images.
 [summary]
 
 ## Teaching Summary
@@ -45,7 +44,6 @@ Moving on from the simple functions students created in Eval, they will use the 
 
 ### <a name="GetStarted"></a> 1) Introduction
 
-Why the Design Recipe
 
 [/together]
 

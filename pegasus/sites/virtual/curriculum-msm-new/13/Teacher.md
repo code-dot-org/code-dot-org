@@ -5,7 +5,7 @@ theme: none
 ---
 
 
-<%= partial('curriculum_header', :unplugged=>true, :title=> 'Booleans',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>25) %>
+<%= partial('curriculum_header', :unplugged=>true, :title=> 'Booleans',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>('30-60')) %>
 
 [content]
 
@@ -40,6 +40,10 @@ Booleans are the fourth and final data type that students will learn about in th
 [together]
 
 # Teaching Guide
+
+### Student Materials
+- 3x5 cards, pens or pencils
+
 [/together]
 
 [together]
@@ -61,13 +65,14 @@ What datatypes have you seen so far?
 - What are some expressions that evaluate to a Number?
 - How about the other datatypes?
 
-What would each of the following expressions evaluate to? (If you’re not sure, you can type it in and try it out!)
-(+ 1 4)
-(/ 4 2)
-(circle 10 "solid" "blue")
-(< 3 4)
+What would each of the following expressions evaluate to?
 
-The last expression, (< 3 4), uses a new function that compares Numbers, returning true if 3 is less than 4. What do you think it would return if the numbers were swapped?
+![](oneplusfour.png)
+![](fourdivtwo.png)
+![](circleten.png)
+![](threelessthanfour.png)
+
+The last expression, (3 < 4), uses a new function that compares Numbers, returning true if 3 is less than 4. What do you think it would return if the numbers were swapped?
 
 The function < tests if one number is less than another. Can you think of some other tests?
 
@@ -82,12 +87,6 @@ Functions like <, > and = all consume two Numbers as their Domain, and produce a
 
 ## Activities:
 ### <a name="Activity1"></a> 3) Booleans are Cooleans
-
-**This really needs an unpluggedy activity**
-
-_Stolen from http://coweb.cc.gatech.edu/ice-gt/1345_
-
-Materials: 3x5 cards, pens or pencils.
 
 Give each student a card and have them answer the following questions on it (feel free to add some of your own)
 

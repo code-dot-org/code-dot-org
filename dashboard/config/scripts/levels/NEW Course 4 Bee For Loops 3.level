@@ -21,9 +21,9 @@
     "instructions": "Ah, the for loop makes this much easier! All the code you need is there, take a look at how it is put together then click \"Run\" to see how it works. ",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "maze_data": null,
     "callout_json": "[\r\n  {\"localization_key\": \"run\", \"element_id\": \"#runButton\"}\r\n]",
-    "video_key": "C4_for_loops"
+    "video_key": "C4_for_loops",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
@@ -53,7 +53,7 @@
                   <next>
                     <block type="controls_repeat_ext" inline="true" deletable="false">
                       <value name="TIMES">
-                        <block type="variables_get" deletable="false">
+                        <block type="variables_get">
                           <title name="VAR">counter</title>
                         </block>
                       </value>

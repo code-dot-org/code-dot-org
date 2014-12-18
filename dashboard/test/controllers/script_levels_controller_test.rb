@@ -273,24 +273,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     sign_out(@admin)
 
-    stage = create :stage, script: Script.find_by_name('course1')
-    level = create :unplugged, name: 'NewUnplugged', type: 'Unplugged'
-    @script_level = create(:script_level, stage: stage, script: stage.script, level: level)
+    script_level = Script.find_by_name('course1').script_levels.first
 
-    get :show, script_id: @script_level.script, stage_id: stage.position, id: @script_level.position
+    get :show, script_id: script_level.script, stage_id: script_level.stage.position, id: script_level.position
 
     assert_response :success
 
-    assert_select 'div.unplugged > h2', 'Test title'
-    assert_select 'div.unplugged > p', 'Test description'
+    assert_select 'div.unplugged > h2', 'Happy Maps'
+    assert_select 'div.unplugged > p', 'Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.'
     assert_select '.pdf-button', 2
 
-    unplugged_curriculum_path_start = "curriculum/#{stage.script.name}/#{stage.position}"
+    unplugged_curriculum_path_start = "curriculum/#{script_level.script.name}/#{script_level.stage.position}"
     assert_select '.pdf-button' do
       assert_select "[href=?]", /.*#{unplugged_curriculum_path_start}.*/
     end
 
-    assert_equal @script_level, assigns(:script_level)
+    assert_equal script_level, assigns(:script_level)
   end
 
   test "show redirects to canonical url for custom scripts" do
@@ -341,11 +339,16 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "should select only callouts for current script level" do
     @controller.expects :slog
 
-    callout1 = create(:callout, script_level: @script_level)
-    callout2 = create(:callout, script_level: @script_level)
+    script = create(:script)
+    level = create(:level, :blockly, user_id: nil)
+    stage = create(:stage, script: script)
+    script_level = create(:script_level, script: script, level: level, stage: stage)
+
+    callout1 = create(:callout, script_level: script_level)
+    callout2 = create(:callout, script_level: script_level)
     irrelevant_callout = create(:callout)
 
-    get :show, script_id: @script.id, id: @script_level.id
+    get :show, script_id: script.name, stage_id: stage.position, id: script_level.position
 
     assert(assigns(:callouts_to_show).include?(callout1))
     assert(assigns(:callouts_to_show).include?(callout2))
@@ -355,8 +358,15 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "should localize callouts" do
     @controller.expects :slog
 
-    create(:callout, script_level: @script_level, localization_key: 'run')
-    get :show, script_id: @script.id, id: @script_level.id
+    script = create(:script)
+    level = create(:level, :blockly, user_id: nil)
+    stage = create(:stage, script: script)
+    script_level = create(:script_level, script: script, level: level, stage: stage)
+
+    create(:callout, script_level: script_level, localization_key: 'run')
+
+    get :show, script_id: script.name, stage_id: stage.position, id: script_level.position
+
     assert assigns(:callouts).find{|c| c['localized_text'] == 'Hit "Run" to try your program'}
   end
 
@@ -368,7 +378,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     stage = create(:stage, script: script)
     script_level = create(:script_level, script: script, level: level, stage: stage)
 
-    get :show, script_id: script.name, stage_id: stage, id: script_level.position
+    get :show, script_id: script.name, stage_id: stage.position, id: script_level.position
 
     assert_equal script_level, assigns(:script_level)
 
@@ -378,8 +388,15 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "with callout defined should define callout JS" do
     @controller.expects :slog
 
-    create(:callout, script_level: @script_level)
-    get :show, script_id: @script.id, id: @script_level.id
+    script = create(:script)
+    level = create(:level, :blockly, user_id: nil)
+    stage = create(:stage, script: script)
+    script_level = create(:script_level, script: script, level: level, stage: stage)
+
+    create(:callout, script_level: script_level)
+
+    get :show, script_id: script.name, stage_id: stage.position, id: script_level.position
+
     assert(@response.body.include?('Drag a \"move\" block and snap it below the other block'))
   end
 
@@ -388,7 +405,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     level = Level.where(level_num: "3_8").first
     script_level = ScriptLevel.where(level_id: level.id).first
     level_source = LevelSource.find_identical_or_create(level, blocks)
-    Activity.create!(user: @admin, level: level, lines: "1", attempt: "1", test_result: "100", time: "1000", level_source: level_source)
+    Activity.create!(user: @admin, level: level, lines: "1", attempt: "1", test_result: "100", time: "1000", level_source_id: level_source.id)
     next_script_level = ScriptLevel.where(level: Level.where(level_num: "3_9").first).first
     get :show, script_id: script_level.script.id, id: next_script_level.id
     assert_equal blocks, assigns["start_blocks"]

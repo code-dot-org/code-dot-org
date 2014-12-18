@@ -2,7 +2,7 @@
 title: XX Hour of Code Resources
 nav: about_nav
 social:
-  'og:title' : 'The %{XX} Hour of Code is coming'
+  'og:title' : 'The %{XX} Hour of Code is here'
   'og:description' : "For every %{XX} student and classroom: learn how fun coding is in just one hour %{Dates}."
   'og:image' : ""
   'og:image:width' : ""

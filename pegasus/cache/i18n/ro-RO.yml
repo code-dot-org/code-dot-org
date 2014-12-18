@@ -58,7 +58,7 @@
   go: Du-te
   thank_you_: Mulţumesc!
   congratulations: Felicitări!
-  congratulations_on_completing_hoc: Felicitări pentru finalizarea unei Ore de Cod.
+  congratulations_on_completing_hoc: Felicitări pentru finalizarea unei Ore de Cod
   get_a_certificate_of_achievement: Obţine un certificat de realizare
   enter_valid_email: Te rugăm să introduci o adresă de email validă
   get_a_certificate_message: Îți vom trimite un certificat şi informaţii despre cum
@@ -89,7 +89,7 @@
   thanks_for_voting: Mulțumesc pentru vot!
   share_on_facebook: Distribuie pe Facebook
   share_on_twitter: Distribuie pe Twitter
-  beyond_an_hour: Dincolo de o Oră de Cod >
+  beyond_an_hour: 'Dincolo de o Oră de Cod '
   get_started: Începe
   i_agree: Sunt de acord
   participant_select: -Selectează-
@@ -98,6 +98,9 @@
   participant_educator: Educator
   participant_engineer: Inginer de software
   participant_other: Niciuna din cele de mai sus
+  print_all: Imprimaţi toate
+  print_ice_art: Imprimă arta ta de gheaţă
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Sunt un/o
   never_spam: Noi nu îți vom trimite niciodată spam
   enter_country: Introdu ţara dacă te afli în afara Statelor Unite
@@ -136,6 +139,10 @@
   studiobar_flappy_body: Creează şi împărtăşeşte propriul tău joc Flappy
   studiobar_teacher_title: Create pentru profesori
   studiobar_teacher_body: Prezentați-i clasei dvs. Code Studio
+  studiobar_frozen_title: Oră de Cod
+  studiobar_frozen_body: Crează un paradis de iarnă cu Anna şi Elsa
+  studiobar_donate_title: Donează
+  studiobar_donate_body: Un copil învaţă pentru fiecare dolar donat
   contact_form_topic_student: Sunt student
   contact_form_topic_parent: Sunt părinte
   contact_form_topic_teacher: Sunt profesor/educator
@@ -235,6 +242,12 @@
   dashboard_action_done: Gata
   dashboard_action_required: necesar
   dashboard_navigation_home_page: Pagina de pornire a profesorului
+  dashboard_navigation_section_student_progress: Conturile elevilor şi progresul lor
+  dashboard_navigation_section_teacher_progress: Progresul tău la curs
+  dashboard_navigation_section_lesson_plans: Planuri de lecţie şi resurse
+  dashboard_navigation_section_community: Ajutor şi comunitate
+  dashboard_navigation_section_pd: Dezvoltare profesională
+  dashboard_navigation_section_speakers: Informatică <br/> invitaţi
   dashboard_navigation_all_sections: Conturile elevilor şi progresul lor
   dashboard_navigation_view_progress: Vedeți progresele
   dashboard_navigation_add_students: Adăugați elevi
@@ -355,7 +368,7 @@
     de conectare, <b>imagine, cuvant, sau e-mail</b>, ca să știți pe care veţi dori
     să-l alegeţi pentru o secţiune.
   dashboard_faq: Întrebări frecvente
-  code_hoc_coming: Vine Ora de cod - 8-14 decembrie !
+  code_hoc_coming: 'Ora de cod este aici: 8-14 decembrie!'
   code_sign_up: Înscrieţi-vă pentru a participa în timpul CS Education Week (”Săptămâna
     Informaticii în Educaţie”)
   learn_more: Află mai mult
@@ -367,7 +380,7 @@
   carousel_heading_international: Tutoriale în limba ta
   carousel_heading_domestic: Tutoriale disponibile în engleză
   carousel_heading_beginners: Tutoriale pentru începători
-  carousel_heading_javascript: Tutoriale care predau JavaScript
+  carousel_heading_javascript: Tutoriale pentru JavaScript
   carousel_heading_unplugged: Nu ai device sau internet? Încearca tehnologia computerelor
     'deconectate'
   carousel_heading_devices: Aplicații-tutorial pentru orice device
@@ -381,7 +394,7 @@
   more_resources_educators: Mai multe resurse pentru profesori și educatori
   participants: participanți
   teachers_notes: Notițele profesorului
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: 'Profesori: Citiţi notele importante pentru educator aici'
   previous: Anterior
   next: Următorul
   older_systems: Tutoriale care funcționează pe sisteme mai vechi
@@ -395,6 +408,10 @@
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: O introducere în JavaScript
   khanes_name: O introducere în JavaScript
+  khanpt_name: O introducere în JavaScript
+  khanhe_name: O introducere în JavaScript
+  khanfr_name: O introducere în JavaScript
+  khanpl_name: O introducere în JavaScript
   tynker_name: Costruiește propriul tău joc
   scratch_name: Fiți creativi cu codarea
   lightbot_name: Lightbot
@@ -423,12 +440,17 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Piatră, hârtie, foarfece
-  frozen_gradelevel: Vârstă 8+
+  hourofcode_name: Substituent pentru noul code.org/hoc
+  playlab_name: Laborator de Joacă
   codeorg_gradelevel: Vârste între 4-104 ani
   codeintl_gradelevel: Vârste între 4-104 ani
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Gimnaziu
   khanes_gradelevel: Gimnaziu
+  khanpt_gradelevel: Gimnaziu
+  khanhe_gradelevel: Gimnaziu
+  khanfr_gradelevel: Gimnaziu
+  khanpl_gradelevel: Gimnaziu
   tynker_gradelevel: Vârste între 5-13 ani
   scratch_gradelevel: Vârstă 8+
   lightbot_gradelevel: Toate vârstele
@@ -457,21 +479,27 @@
   thinkersmith2_gradelevel: Vârstă 8+
   kodableunplugged_gradelevel: Vârste între 8-13 ani
   projguts_gradelevel: Vârstele 10-13
-  frozen_platformtext: Browsere web moderne, tablete
+  hourofcode_gradelevel: Vârste între 4-104 ani
+  frozen_gradelevel: Vârstă 8+
+  playlab_gradelevel: Vârste între 4-104 ani
   codeorg_platformtext: Browsere web moderne, smartphone-uri, tablete
   codeintl_platformtext: Browsere web moderne, smartphone-uri, tablete
   thinkersmithspanish_platformtext: Unplugged
   khan_platformtext: Browsere web moderne
   khanes_platformtext: Browsere web moderne
+  khanpt_platformtext: Browsere web moderne
+  khanhe_platformtext: Browsere web moderne
+  khanfr_platformtext: Browsere web moderne
+  khanpl_platformtext: Browsere web moderne
   tynker_platformtext: Browsere web moderne
-  scratch_platformtext: TOATE browserele
+  scratch_platformtext: Browsere numai pentru desktop (nu tablete)
   lightbot_platformtext: TOATE browserele şi iOS, Android sau consolă de jocuri
   thinkersmith_platformtext: Unplugged
   condcards_platformtext: Unuplugged (fără calculator)
   lightbotintl_platformtext: iOS, Android (sau browser web)
-  codehs_platformtext: Browsere web moderne
+  codehs_platformtext: Browsere moderne. (Continuare curs necesită $$)
   codecademy_platformtext: Browsere web moderne, iOS, Aplicații Android
-  codecombat_platformtext: Browsere web moderne
+  codecombat_platformtext: Browsere moderne. (Continuarea cursului necesită $$)
   codemonkey_platformtext: Browsere web moderne
   codeavengers_platformtext: Browsere web moderne
   processing_platformtext: Browsere web moderne
@@ -491,13 +519,18 @@
   thinkersmith2_platformtext: Unplugged
   kodableunplugged_platformtext: Unplugged
   projguts_platformtext: Unplugged
-  frozen_shortdescription: Să folosim cod pentru a ne alătura Annei şi Elsei în explorarea
-    magiei şi frumuseţii de gheaţă.
+  hourofcode_platformtext: Browsere web moderne, smartphone-uri, tablete
+  frozen_platformtext: Browsere web moderne, tablete
+  playlab_platformtext: Browsere web moderne, smartphone-uri, tablete
   codeorg_shortdescription: Învață să programezi cu Mark Zuckerberg si Angry Birds!
   codeintl_shortdescription: Învață să programezi cu Mark Zuckerberg si Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Învață sa desenezi în JavaScript
   khanes_shortdescription: Învață sa desenezi în JavaScript
+  khanpt_shortdescription: Învață sa desenezi în JavaScript
+  khanhe_shortdescription: Învață sa desenezi în JavaScript
+  khanfr_shortdescription: Învață sa desenezi în JavaScript
+  khanpl_shortdescription: Învață sa desenezi în JavaScript
   tynker_shortdescription: Invață să codezi rezolvând puzzle-uri distractive și creându-ți
     propriile jocuri pe mobil.
   scratch_shortdescription: Creează jocuri interactive, povestiri şi animaţii.
@@ -511,8 +544,7 @@
   codecademy_shortdescription: Învață programare JavaScript într-un browser web
   codecombat_shortdescription: Învinge căpcăuni pentru a învăţa Python sau JavaScript
     în acest joc epic de programare!
-  codemonkey_shortdescription: Students program a monkey to catch bananas while it
-    gets slightly more complicated on each level.
+  codemonkey_shortdescription: Program pentru elevii - o maimuță prinde bananele.
   codeavengers_shortdescription: Învață programare JavaScript într-un browser web
   processing_shortdescription: Un tutorial de o oră pentru programare Processing
   robomind_shortdescription: Programează pentru un robot virtual
@@ -524,25 +556,26 @@
     îi învaţă despre programare.
   kodable_shortdescription: Un joc distractiv pentru iPad, pentru învățarea conceptelor
     de bază în programare
-  tynkerapp_shortdescription: Learn to code by solving fun puzzles and build your
-    own mobile games.
+  tynkerapp_shortdescription: 'Înveți distractiv să programezi rezolvând puzzle-uri
+    de codificare. '
   robomindnl_shortdescription: Programează pentru un robot virtual
   flappy_shortdescription: Creează-ți propriul joc - Flappy Bird, shark sau Submarine
   bitsbox_shortdescription: Codează o serie de aplicații pentru a juca partaja, folosind
     Javascript.
   makegameswithus_shortdescription: Fă un joc pentru iPhone! Studiază scriind cod
     ca să îți înveți monstrul să facă noi mișcări!
-  touchdevelop_shortdescription: Programează aplicații de mobil direct de pe telefon,
-    tabletă sau laptop
+  touchdevelop_shortdescription: 'Rezolva puzzle-uri, crează jocuri, şi învaţă să
+    codezi, toate pe telefonul tău. '
   appinventor_shortdescription: Construiește-ți propria aplicație! (Doar pentru Android)
   blockly_shortdescription: Descarcă arhiva ZIP ca să înveți offline
   thinkersmith2_shortdescription: Învață cum folosesc computerele 1 și 0 pentru a
     reprezenta informația
   kodableunplugged_shortdescription: Un exercițiu distractiv, unplugged
   projguts_shortdescription: Încercaţi modelare şi simulare folosind piatră/hârtie/foarfece
-  frozen_longdescription: Să folosim cod pentru a ne alătura Annei şi Elsei care explorează
-    magia şi frumuseţea de gheaţă. Veţi crea fulgi de zăpadă şi modele ca la patinaj
-    şi veți face un paradis de iarnă, pe care apoi veți putea să-l partajați cu prietenii!
+  hourofcode_shortdescription: Substituent pentru noul code.org/hoc
+  frozen_shortdescription: Să folosim cod pentru a ne alătura Annei şi Elsei în explorarea
+    magiei şi frumuseţii de gheaţă.
+  playlab_shortdescription: Creează o poveste sau fă un joc cu Laboratorul de Joacă!
   codeorg_longdescription: Învață conceptele de bază ale programării cu o metodă simplă,
     distractivă, drag&drop. Este un tutorial ca un joc, simplu de realizat ce conține
     clipuri video cu Bil Gates, Mark Zukerberg Angry Birds and Plants vs. Zombies.
@@ -552,14 +585,21 @@
     ce conține clipuri video cu Bil Gates, Mark Zukerberg Angry Birds and Plants vs.
     Zombies. Învață algoritmi de bază, repeat-loops, conditionals. Disponibil în 34
     de limbi.
-  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
+  thinkersmithspanish_longdescription: Folosind un "Dicționar pentru roboți" predefinit
+    studenții își vor da seama cum să se ghideze reciproc pentru a realiza sarcini
+    specifice fără a le discuta în prealabil. Această lecție învață copiii conexiunea
+    dintre simboluri și acțiuni, ca și abilitatea neprețuită de depanare.
   khan_longdescription: Învață bazele programării JavaScript, în timp ce desenezi
     programând. Fă asta singur sau alături de clasă.
   khanes_longdescription: Învață bazele programării JavaScript, în timp ce desenezi
+    programând. Fă asta singur sau alături de clasă.
+  khanpt_longdescription: Învață bazele programării JavaScript, în timp ce desenezi
+    programând. Fă asta singur sau alături de clasă.
+  khanhe_longdescription: Învață bazele programării JavaScript, în timp ce desenezi
+    programând. Fă asta singur sau alături de clasă.
+  khanfr_longdescription: Învață bazele programării JavaScript, în timp ce desenezi
+    programând. Fă asta singur sau alături de clasă.
+  khanpl_longdescription: Învață bazele programării JavaScript, în timp ce desenezi
     programând. Fă asta singur sau alături de clasă.
   tynker_longdescription: Creați-vă propriile jocuri și partajati-le cu prietenii!
     Rezolvați puzzle-uri distractive de cod și învățați conceptele programării pe
@@ -633,10 +673,10 @@
   kodable_longdescription: Kodable este un joc pentru iPad intuitiv, ce introduce
     copiii de peste 5 ani în bazele programarii. A avea un parinte sau profesor în
     preajma este optim dar nu neaparat necesar.
-  tynkerapp_longdescription: Build your own games and share with friends! Solve fun
-    coding puzzles and learn programming concepts in each level. Personalize games
-    with animated characters, multiple levels and rich props. Lots of fun activities
-    to choose from!
+  tynkerapp_longdescription: Învață să programezi prin rezolvarea de puzzle-uri amuzante
+    de codare. Construiește cu ușurință jocuri și povești cu grafică tematică, kituri
+    de jocuri pentru 10+ și caractere personalizabile. Nu e necesară conexiune la
+    Internet. Poți de asemenea să îți accesezi creațiile pe web.
   robomindnl_longdescription: Elevii învață bazele programării controlând robotul
     lor virtual. Cursul online conține prezentări scurte, filme, teste si recomandări
     automate/ indicii, pentru a ajuta la rezolvarea exercițiilor de programare.
@@ -647,15 +687,13 @@
     o serie de aplicații pentru a juca și partaja. O simplă plimbare face posibil
     ca și cei mai mici copii să programeze JavaScript și cu cât sunteți mai avansați
     cu atât mai departe veți ajunge.
-  makegameswithus_longdescription: Știi ceva programare deja? Învață să construiești
-    un joc pentru iPhone într-o oră. Noi te ghidăm în acest timp să programezi, să
-    testezi, și să joci jocul tău utilizănd un browser, ca mai apoi să îl distribui
-    și prietenilor de pe Facebook sa îl încerce. Nu este necesară experiență anterioară,
-    trebuie doar să întelegi ce reprezintă variabilele, metodele și obiectele.
-  touchdevelop_longdescription: 'Desene ciudate, monștri zburători, Crazy drawings,
-    flying monsters, flori cățărătoare… creează-ți propriile aplicații pe device-ul
-    tău cu TouchDevelop, un mediu prietenos de programare a aplicațiilor. Merge pe
-    iPhone, iPad, Android, Windows, Windows Phone, Linux, Mac. '
+  makegameswithus_longdescription: Învățați să codați făcând un joc iPhone cu ajutorul
+    lui Swift - un limbaj de programare foarte nou și prietenos cu începătorii! Creați
+    un joc de acțiune  inspirat de Pokemon și scrieți cod pentru a vă învăța monstrulețul
+    noi mișcări. Veți învăța cum să folosiți variabile, metode și obiecte pentru a
+    vă ajuta monstrulețul să câștige!
+  touchdevelop_longdescription: 'Editorul touch-friendly vă va ghida în crearea de
+    artă pixel, rezolvarea puzzle urs sau a face propriul joc cu pasăre săritoare. '
   appinventor_longdescription: Clipuri video interactive te ajută să creezi 3 aplicații
     simple pentru tableta sau telefonul tău Android. Create pentru începători și avansați
     deopotrivă, aceasta oră de programare te va ajuta să creezi propriile tale aplicații
@@ -677,6 +715,13 @@
     modelarea și simularea prin jucarea unor versiuni diferite ale jocului Piatră/Hârtie/Foarfecă
     de către un grup de elevi și evidențierea rezultatelor ca experimente diferite
     de modelare.
+  hourofcode_longdescription: Substituent pentru noul code.org/hoc
+  frozen_longdescription: Să folosim cod pentru a ne alătura Annei şi Elsei care explorează
+    magia şi frumuseţea de gheaţă. Veţi crea fulgi de zăpadă şi modele ca la patinaj
+    şi veți face un paradis de iarnă, pe care apoi veți putea să-l partajați cu prietenii!
+  playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
+    pirates, zombies, ninjas, and many more characters move, make sounds, score points,
+    and even throw fireballs!
   codeorg_beyond_name: Introducere K-8 în Tehnologia Computerelor
   khan_beyond_name: Învață programare
   tynker_beyond_name: Învață programare acasă

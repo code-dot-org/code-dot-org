@@ -56,6 +56,7 @@ Loops are a handy way of describing actions that repeat a certain numbers of tim
 - Pens/Pencils/Markers
 
 ### For the Teacher
+- [Lesson Video](http://youtu.be/Vo2woYRRogA?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G)
 - Teacher Lesson Guide
 - Print one [Getting Loopy Activity Worksheet](/curriculum/course1/12/Activity12-GettingLoopy.pdf) for the class
 - Print Assessment Worksheet: [Getting Loopy Assessment](/curriculum/course1/12/Assessment12-GettingLoopy.pdf) for each student

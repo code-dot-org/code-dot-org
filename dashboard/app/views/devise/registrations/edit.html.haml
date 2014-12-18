@@ -33,7 +33,7 @@
       = f.object.username
   %div
     = f.label :password
-    %i= t('user.new_password_hint')
+    %em= t('user.new_password_hint')
     %br/
     = f.password_field :password, :autocomplete => "off"
   %div
@@ -42,7 +42,7 @@
   - if f.object.encrypted_password.present?
     %div
       = f.label :current_password
-      %i= t('user.current_password_hint')
+      %em= t('user.current_password_hint')
       %br/
       = f.password_field :current_password
   .field

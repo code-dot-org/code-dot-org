@@ -21,17 +21,17 @@
   email: E-poçt
   zipcode: Ölkə və ya poçt indeksi
   submit: Göndər
-  twentyhours_heading: Try our Intro to Computer Science Course
+  twentyhours_heading: Bizim İnformatika Giriş kursumuzu sınaqdan keçirin
   twentyhours_text: Finished your first Hour of Code? Learn more core computer science
     and programming concepts in this follow-up course.
   hoc2014_heading: <a href="http://hourofcode.com">Kod Saatı</a>na qoşulun<br/>8 -
     14 dekabr, 2014<br/>
   hoc2014_students: Şagirdlər
-  hoc2014_try: Try it
+  hoc2014_try: Sınaqdan keçirin
   hoc2014_teachers: Müəllimlər
-  hoc2014_host: Host it
+  hoc2014_host: Təşkil edin
   hoc2014_everyone: Hamı
-  hoc2014_support: Support it
+  hoc2014_support: Dəstək verin
   hoc2014_whatishoc: Kod Saatı nədir?
   twentyhours_trynow: Elə indi sınaqdan keçirin
   california_heading: İnformatikanı tədris etməyi məktəbinizdən xahiş edin
@@ -95,6 +95,9 @@
   participant_educator: Təhsil işçisi
   participant_engineer: Proqramçı-mühəndis
   participant_other: Yuxarıdakılardan heç biri
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: 'Mən kiməm:'
   never_spam: Sizə heç vaxt spam göndərmərik
   enter_country: ABŞ-dan kənardasınızsa, ölkənizi daxil edin
@@ -133,6 +136,10 @@
   studiobar_flappy_body: Make and share your own Flappy game
   studiobar_teacher_title: Teacher dashboard
   studiobar_teacher_body: 'For teachers: view your students'' progress'
+  studiobar_frozen_title: Kod Saatı
+  studiobar_frozen_body: Anna və Elza ilə bir qış möcüzəsi yaradın
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Mən şagirdəm
   contact_form_topic_parent: Mən valideynəm
   contact_form_topic_teacher: Mən müəllim/təlimçiyəm
@@ -224,6 +231,12 @@
   dashboard_action_done: Done
   dashboard_action_required: required
   dashboard_navigation_home_page: Teacher home page
+  dashboard_navigation_section_student_progress: Student Accounts and Progress
+  dashboard_navigation_section_teacher_progress: Your Course Progress
+  dashboard_navigation_section_lesson_plans: Lesson Plans and Resources
+  dashboard_navigation_section_community: Help and Community
+  dashboard_navigation_section_pd: Professional Development
+  dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
   dashboard_navigation_all_sections: All sections
   dashboard_navigation_view_progress: View Progress
   dashboard_navigation_add_students: Add Students
@@ -271,7 +284,7 @@
   dashboard_students_password: parol
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
-  dashboard_students_completed_levels: Completed Levels
+  dashboard_students_completed_levels: Tamamlanmış mərhələlər
   dashboard_students_total_lines: Lines of Code
   dashboard_students_show_secret: Show secret
   dashboard_students_auto_generated: Auto-generated
@@ -299,8 +312,8 @@
     here</a> for our privacy document that can be shared or printed for your students.
   dashboard_curriculum_overview: K-5 Curriculum Overview
   dashboard_view_all_lesson_plans: View all lesson plans
-  dashboard_course1: 'Course 1:'
-  dashboard_course2: 'Course 2:'
+  dashboard_course1: 'Kurs 1:'
+  dashboard_course2: 'Kurs 2:'
   dashboard_course3: 'Course 3:'
   dashboard_sequence: Ardıcıllıq
   dashboard_framework: Framework
@@ -341,7 +354,7 @@
   hoc2014_try_new_tutorials: Try our new Hour of Code tutorials
   hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
   hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
-  hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
+  hoc2014_try_frozen: '"Buzlu ürək"dən Anna və Elza ilə Rəssam'
   carousel_heading_international: Sizin dilinizdə olan dərsliklər
   carousel_heading_domestic: Tutorials available in English
   carousel_heading_beginners: Tutorials for Beginners
@@ -351,7 +364,7 @@
   carousel_heading_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Make your own apps or games
   carousel_heading_university: University courses online
-  carousel_heading_webpages: Learn to make web pages
+  carousel_heading_webpages: Veb səhifələr düzəltməyi öyrənin
   carousel_heading_robots: Learn to program with robots
   carousel_heading_ide: Platforms popular among teachers
   educator_notes: Educator Notes
@@ -366,12 +379,16 @@
     tutorials, upgrade to a <a href="http://browsehappy.com/" target="_blank">modern
     Web browser.</a>
   mobile_devices: Tutorials for mobile devices
-  frozen_name: Code with Anna and Elsa
+  frozen_name: Anna və Elza ilə proqramlaşdır
   codeorg_name: İlk kompüter proqramınızı yazın
   codeintl_name: İlk kompüter proqramınızı yazın
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: An introduction to JavaScript
   khanes_name: An introduction to JavaScript
+  khanpt_name: An introduction to JavaScript
+  khanhe_name: An introduction to JavaScript
+  khanfr_name: An introduction to JavaScript
+  khanpl_name: An introduction to JavaScript
   tynker_name: Build your own game
   scratch_name: Create a holiday card
   lightbot_name: Lightbot
@@ -400,17 +417,22 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Rock, Paper, Scissors
-  frozen_gradelevel: Ages 8+
-  codeorg_gradelevel: Ages 4-104
-  codeintl_gradelevel: Ages 4-104
+  hourofcode_name: Placeholder for new code.org/hoc
+  playlab_name: Oyun labı
+  codeorg_gradelevel: 4-104 yaş
+  codeintl_gradelevel: 4-104 yaş
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Middle school +
   khanes_gradelevel: Middle school +
-  tynker_gradelevel: Ages 5-13
-  scratch_gradelevel: Ages 8+
+  khanpt_gradelevel: Middle school +
+  khanhe_gradelevel: Middle school +
+  khanfr_gradelevel: Middle school +
+  khanpl_gradelevel: Middle school +
+  tynker_gradelevel: 5-13 yaş
+  scratch_gradelevel: 8+ yaş
   lightbot_gradelevel: Bütün yaşlar
   thinkersmith_gradelevel: Bütün yaşlar
-  condcards_gradelevel: Ages 8-12
+  condcards_gradelevel: 8-12 yaş
   lightbotintl_gradelevel: Bütün yaşlar
   codehs_gradelevel: High school
   codecademy_gradelevel: High school
@@ -418,29 +440,35 @@
   codemonkey_gradelevel: Middle school +
   codeavengers_gradelevel: Middle school +
   processing_gradelevel: High school
-  robomind_gradelevel: Ages 8-13
+  robomind_gradelevel: 8-13 yaş
   groklearning_gradelevel: Middle school +
   quorum_gradelevel: Middle school +
   codespark_gradelevel: Elementary
   kodable_gradelevel: Elementary
-  tynkerapp_gradelevel: Ages 5-13
-  robomindnl_gradelevel: Ages 8-13
-  flappy_gradelevel: Ages 4-104
+  tynkerapp_gradelevel: 5-13 yaş
+  robomindnl_gradelevel: 8-13 yaş
+  flappy_gradelevel: 4-104 yaş
   bitsbox_gradelevel: Elementary
   makegameswithus_gradelevel: High school
   touchdevelop_gradelevel: High school
   appinventor_gradelevel: Middle school +
   blockly_gradelevel: Bütün yaşlar
-  thinkersmith2_gradelevel: Ages 8+
-  kodableunplugged_gradelevel: Ages 8-13
-  projguts_gradelevel: Ages 10-13
-  frozen_platformtext: Modern browsers + tablets
+  thinkersmith2_gradelevel: 8+ yaş
+  kodableunplugged_gradelevel: 8-13 yaş
+  projguts_gradelevel: 10-13 yaş
+  hourofcode_gradelevel: 4-104 yaş
+  frozen_gradelevel: 8+ yaş
+  playlab_gradelevel: 4-104 yaş
   codeorg_platformtext: Modern browsers, smartphones, tablets
   codeintl_platformtext: Modern browsers, smartphones, tablets
   thinkersmithspanish_platformtext: Unplugged
   khan_platformtext: Modern Web browsers
   khanes_platformtext: Modern Web browsers
-  tynker_platformtext: Modern web browsers
+  khanpt_platformtext: Modern web browsers
+  khanhe_platformtext: Modern web browsers
+  khanfr_platformtext: Modern web browsers
+  khanpl_platformtext: Modern web browsers
+  tynker_platformtext: Modern browsers. (Follow-on course requires $$)
   scratch_platformtext: ALL browsers
   lightbot_platformtext: ALL browsers and iOS, Android, or Game Console
   thinkersmith_platformtext: Unplugged
@@ -468,13 +496,18 @@
   thinkersmith2_platformtext: Unplugged
   kodableunplugged_platformtext: Unplugged
   projguts_platformtext: Unplugged
-  frozen_shortdescription: Let's use code to join Anna and Elsa as they explore the
-    magic and beauty of ice.
+  hourofcode_platformtext: Modern browsers, smartphones, tablets
+  frozen_platformtext: Modern browsers + tablets
+  playlab_platformtext: Modern browsers, smartphones, tablets
   codeorg_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
   codeintl_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Learn to draw in JavaScript
   khanes_shortdescription: Learn to draw in JavaScript
+  khanpt_shortdescription: Learn to draw in JavaScript
+  khanhe_shortdescription: Learn to draw in JavaScript
+  khanfr_shortdescription: Learn to draw in JavaScript
+  khanpl_shortdescription: Learn to draw in JavaScript
   tynker_shortdescription: Learn the basics of programming in a fun, visual environment
   scratch_shortdescription: Create an interactive card
   lightbot_shortdescription: A game to teach coding concepts
@@ -487,7 +520,7 @@
   codemonkey_shortdescription: Students program a monkey to catch bananas while it
     gets slightly more complicated on each level.
   codeavengers_shortdescription: Learn JavaScript programming, in a web-browser
-  processing_shortdescription: A one hour tutorial in the Processing languages
+  processing_shortdescription: Verilənlərin emalı dilləri üzrə bir saatlıq dərslik
   robomind_shortdescription: Write code for a virtual robot
   groklearning_shortdescription: Basic intro to python programming
   quorum_shortdescription: Join Mary on a guided tour as she learns the Quorum programming
@@ -508,25 +541,33 @@
   thinkersmith2_shortdescription: Learn how computers use 1s and 0s to represent information
   kodableunplugged_shortdescription: A fun unplugged exercise
   projguts_shortdescription: Try modeling and simulation using rock/paper/scissors
-  frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
-    magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
-    and make a winter wonderland that you can then share with your friends!
-  codeorg_longdescription: Learn the basic concepts of Computer Science with drag
-    and drop programming. This is a game-like, self-directed tutorial starring video
-    lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
-    repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
-  codeintl_longdescription: Learn the basic concepts of Computer Science with drag
-    and drop programming. This is a game-like, self-directed tutorial starring video
-    lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
-    repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
+  hourofcode_shortdescription: Placeholder for new code.org/hoc
+  frozen_shortdescription: Gəlin, buzun sehrini və gözəlliyini kəşf edən Anna və Elzaya
+    qoşulmaq üçün proqramlaşdırmadan istifadə edək.
+  playlab_shortdescription: Oyun laboratoriyası ilə bir əhvalat və ya oyun düzəldin!
+  codeorg_longdescription: İnfromatikanın təməl anlayışlarını sürüklə-burax tipli
+    proqramlaşdırma ilə öyrənin. Bu oyuna bənzər dərslikdə Bill Qeyts və Mark Tsukerberqin
+    video mühazirələri, "Angry Birds" və "Plants vs. Zombies" yer alır. "Təkrar et"
+    dövrləri, şərti ifadələr və sadə alqoritmləri öyrənin. 34 dildə təqdim olunur.
+  codeintl_longdescription: İnfromatikanın təməl anlayışlarını sürüklə-burax tipli
+    proqramlaşdırma ilə öyrənin. Bu oyuna bənzər dərslikdə Bill Qeyts və Mark Tsukerberqin
+    video mühazirələri, "Angry Birds" və "Plants vs. Zombies" yer alır. "Təkrar et"
+    dövrləri, şərti ifadələr və sadə alqoritmləri öyrənin. 34 dildə təqdim olunur.
   thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
+    los estudiantes descubriran como guiarse de modo tal de llevar a cabo tareas especificas
+    sin ser estas discutidas previamente. Este segmento ensena a los estudiantes la
+    conexion entre simbolos y acciones asi como la valiosa habilidad de depuracion.
   khan_longdescription: Learn the basics of JavaScript programming while creating
     fun drawings with your code. Do it on your own or with your class!
   khanes_longdescription: Learn the basics of JavaScript programming while creating
+    fun drawings with your code. Do it on your own or with your class!
+  khanpt_longdescription: Learn the basics of JavaScript programming while creating
+    fun drawings with your code. Do it on your own or with your class!
+  khanhe_longdescription: Learn the basics of JavaScript programming while creating
+    fun drawings with your code. Do it on your own or with your class!
+  khanfr_longdescription: Learn the basics of JavaScript programming while creating
+    fun drawings with your code. Do it on your own or with your class!
+  khanpl_longdescription: Learn the basics of JavaScript programming while creating
     fun drawings with your code. Do it on your own or with your class!
   tynker_longdescription: A collection of 8 fun activities for children of all ages
     to try programming. Solve a series of simple puzzles to help Pixel the puppy reach
@@ -606,11 +647,10 @@
     of apps to play and share. Simple walkthroughs make it possible for even young
     kids to program real Javascript, and the more advanced you are the further you'll
     go.
-  makegameswithus_longdescription: Know some programming already? Learn to make an
-    iPhone game in an hour! We'll guide you through the process, to code, test, and
-    play your game entirely in the browser and then share it on Facebook for friends
-    to try! No prior iPhone development experience is required. You must understand
-    what variables, methods, and objects are.
+  makegameswithus_longdescription: Learn to code by making an iPhone game using a
+    brand new and beginner-friendly programming language called Swift! Create a Pokemon-inspired
+    action game and write code to teach your monster new moves. You will learn how
+    to use variables, methods, and objects to help your monster win!
   touchdevelop_longdescription: Crazy drawings, flying monsters, swirling flowers...
     create your apps on your device with TouchDevelop, a friendly mobile app creation
     environment. Runs on iPhone, iPad, Android, Windows, Windows Phone, Linux, Mac.
@@ -633,6 +673,14 @@
   projguts_longdescription: This "unplugged" activity helps students learn how modeling
     and simulation works by having a group of students play different versions of
     the Rock / Paper / Scissors game, and see the results as different modeling experiments.
+  hourofcode_longdescription: Placeholder for new code.org/hoc
+  frozen_longdescription: Gəlin, buzun sehrini və gözəlliyini kəşf edən Anna və Elzaya
+    qoşulmaq üçün proqramlaşdırmadan istifadə edək. Buz üzərində sürüşərək siz qar
+    dənəcikləri və naxışlar düzəldəcək, sonradan dostlarınızla bölüşə biləcəyiniz
+    bir qış möcüzəsi quracaqsınız!
+  playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
+    pirates, zombies, ninjas, and many more characters move, make sounds, score points,
+    and even throw fireballs!
   codeorg_beyond_name: Intro Computer Science (grades K-8)
   khan_beyond_name: Learn computer programming
   tynker_beyond_name: Learn programming at home
@@ -670,10 +718,10 @@
   processing_beyond_name: Program with Processing
   alice_beyond_name: Alice
   sphero_beyond_name: SPRK
-  codeorg_beyond_gradelevel: Ages 4-104
+  codeorg_beyond_gradelevel: 4-104 yaş
   khan_beyond_gradelevel: Middle school +
-  tynker_beyond_gradelevel: Ages 5-13
-  scratch_beyond_gradelevel: Ages 8+
+  tynker_beyond_gradelevel: 5-13 yaş
+  scratch_beyond_gradelevel: 8+ yaş
   lightbot_beyond_gradelevel: Bütün yaşlar
   codecademy_beyond_gradelevel: High school
   kodable_beyond_gradelevel: Elementary
@@ -682,7 +730,7 @@
   pocketcode_beyond_gradelevel: Middle school +
   groklearning_beyond_gradelevel: Middle school +
   hacketyhack_beyond_gradelevel: High school
-  robomind_beyond_gradelevel: Ages 8-13
+  robomind_beyond_gradelevel: 8-13 yaş
   makegameswithus_beyond_gradelevel: High school
   appinventor_beyond_gradelevel: Middle school +
   touchdevelop_beyond_gradelevel: High school
@@ -693,20 +741,20 @@
   coursera_beyond_gradelevel: University
   udacity_beyond_gradelevel: University
   teachingtree_beyond_gradelevel: University
-  kodu_beyond_gradelevel: Ages 8+
-  cargobot_beyond_gradelevel: Ages 8+
-  kidsruby_beyond_gradelevel: Ages 12+
-  w3schools_beyond_gradelevel: Ages 12+
+  kodu_beyond_gradelevel: 8+ yaş
+  cargobot_beyond_gradelevel: 8+ yaş
+  kidsruby_beyond_gradelevel: 12+ yaş
+  w3schools_beyond_gradelevel: 12+ yaş
   codeavengers_beyond_gradelevel: Middle school +
-  mozilla_beyond_gradelevel: Ages 12+
+  mozilla_beyond_gradelevel: 12+ yaş
   codecombat_beyond_gradelevel: Middle school +
   codea_beyond_gradelevel: High school +
   lego_beyond_gradelevel: Middle school +
-  finch_beyond_gradelevel: Ages 8+
+  finch_beyond_gradelevel: 8+ yaş
   arduino_beyond_gradelevel: High school +
   processing_beyond_gradelevel: High school
   alice_beyond_gradelevel: Middle school +
-  sphero_beyond_gradelevel: Ages 8+
+  sphero_beyond_gradelevel: 8+ yaş
   codeorg_beyond_platformtext: Modern browsers, tablets
   khan_beyond_platformtext: Modern Web browsers
   tynker_beyond_platformtext: Modern web browsers
