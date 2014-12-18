@@ -41,6 +41,10 @@ var TestResults = require('../constants').TestResults;
 var level;
 var skin;
 
+// todo - better approach for reserved name?
+// use zzz for sorting purposes (which is also hacky)
+var COMPUTE_NAME = 'zzz_compute';
+
 BlocklyApps.CHECK_FOR_EMPTY_BLOCKS = false;
 BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
@@ -48,8 +52,8 @@ var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
 
 var appState = {
-  targetEquations: null,
-  userEquations: null,
+  targetExpressions: null,
+  userExpressions: null,
   animating: false,
   response: null,
   message: null,
@@ -125,16 +129,18 @@ Calc.init = function(config) {
       solutionBlocks = blockUtils.forceInsertTopBlock(level.solutionBlocks,
         config.forceInsertTopBlock);
     }
-    var target = getEquationListFromBlockXml(solutionBlocks);
-    // todo - consolidate with similar logic in maze.execute?
-    if (target) {
-      appState.targetEquations = target;
-      // todo - order equations
-      target.forEach(function (equation, index) {
-        var tokenList = equation.expression.getTokenListDiff(equation.expression);
-        addTokenList('answerExpression', tokenList, index, undefined, equation.name);
-      });
-    }
+
+    generateTargetExpressions(solutionBlocks);
+
+    // todo - shareable code here?
+    _.keys(appState.targetExpressions).sort().forEach(function (name, index) {
+      var expression = appState.targetExpressions[name];
+      var tokenList = expression.getTokenListDiff(expression);
+      if (name === COMPUTE_NAME) {
+        name = null;
+      }
+      addTokenList('answerExpression', tokenList, index, undefined, name);
+    });
 
     // Adjust visualizationColumn width.
     var visualizationColumn = document.getElementById('visualizationColumn');
@@ -197,80 +203,37 @@ function evalCode (code) {
   }
 }
 
-/**
-* Generates an ExpressionNode from the blocks in the workspace. If blockXml
-* is provided, temporarily sticks those blocks into the workspace to generate
-* the ExpressionNode, then deletes blocks.
-*/
-function getEquationListFromBlockXml(blockXml) {
+// todo - comment new functions
+function generateExpressionsFromTopBlocks() {
+  var obj = {};
+
+  var topBlocks = Blockly.mainBlockSpace.getTopBlocks();
+  var equationList = topBlocks.forEach(function (block) {
+    var equation = getEquationFromBlock(block);
+    obj[equation.name || COMPUTE_NAME] = equation.expression;
+  });
+  return obj;
+}
+
+function generateTargetExpressions(blockXml) {
   if (blockXml) {
     if (Blockly.mainBlockSpace.getTopBlocks().length !== 0) {
-      throw new Error("getEquationFromBlockXml shouldn't be called with blocks if " +
-      "we already have blocks in the workspace");
+      throw new Error("generateTargetExpression shouldn't be called with blocks" +
+        "if we already have blocks in the workspace");
     }
     // Temporarily put the blocks into the workspace so that we can generate code
     BlocklyApps.loadBlocks(blockXml);
   }
 
-  var computeBlock = null;
-  var topBlocks = Blockly.mainBlockSpace.getTopBlocks();
-  var equationList = topBlocks.map(function (b) {
-    return getEquationFromBlock(b);
-  });
-  equationList = _.sortBy(equationList, function (item) {
-    // sort so that null (our expression that isnt a function or variable is
-    // last
-    return item.name || 'zzzzzz';
-  });
+  appState.targetExpressions = generateExpressionsFromTopBlocks();
 
-  if (blockXml) {
-    // Remove the blocks
-    Blockly.mainBlockSpace.getTopBlocks().forEach(function (b) { b.dispose(); });
-  }
-
-  return equationList;
+  Blockly.mainBlockSpace.getTopBlocks().forEach(function (block) {
+    block.dispose();
+  });
 }
 
-/**
- * Generates an ExpressionNode from the blocks in the workspace. If blockXml
- * is provided, temporarily sticks those blocks into the workspace to generate
- * the ExpressionNode, then deletes blocks.
- */
-function getEquationFromBlockXml(blockXml) {
-  if (blockXml) {
-    if (Blockly.mainBlockSpace.getTopBlocks().length !== 0) {
-      throw new Error("getEquationFromBlockXml shouldn't be called with blocks if " +
-        "we already have blocks in the workspace");
-    }
-    // Temporarily put the blocks into the workspace so that we can generate code
-    BlocklyApps.loadBlocks(blockXml);
-  }
-
-  var computeBlock = null;
-  var topBlocks = Blockly.mainBlockSpace.getTopBlocks();
-  for (var i = 0; i < topBlocks.length; i++) {
-    if (topBlocks[i].type === 'functional_compute') {
-      computeBlock = topBlocks[i];
-    }
-  }
-  if (!computeBlock) {
-    throw new Error('No top level compute block');
-  }
-  var object = getEquationFromBlock(computeBlock);
-
-  if (blockXml) {
-    // Remove the blocks
-    Blockly.mainBlockSpace.getTopBlocks().forEach(function (b) { b.dispose(); });
-  }
-
-  return object;
-}
 
 // todo - unit test
-function getExpressionFromBlock(block) {
-  return getEquationFromBlock(block).expression;
-}
-
 function getEquationFromBlock(block) {
   if (!block) {
     return null;
@@ -278,17 +241,28 @@ function getEquationFromBlock(block) {
   // todo - does this logic belong on blocks instead?
   switch (block.type) {
     case 'functional_compute':
-      return getEquationFromBlock(block.getChildren()[0]);
+      var child = block.getChildren()[0];
+      if (!child) {
+        return new ExpressionNode(0);
+      }
+      return getEquationFromBlock(child);
     case 'functional_plus':
     case 'functional_minus':
     case 'functional_times':
     case 'functional_dividedby':
       var operation = block.getTitles()[0].getValue();
-      var left = getExpressionFromBlock(block.getInputTargetBlock('ARG1'));
-      var right = getExpressionFromBlock(block.getInputTargetBlock('ARG2'));
+      // todo - these run into trouble if empty
+      var args = ['ARG1', 'ARG2'].map(function(blockName) {
+        var argBlock = block.getInputTargetBlock(blockName);
+        if (!argBlock) {
+          return 0;
+        }
+        return getEquationFromBlock(argBlock).expression;
+      });
+
       return {
         name: null,
-        expression: new ExpressionNode(operation, [left, right], block.id)
+        expression: new ExpressionNode(operation, args, block.id)
       };
     case 'functional_math_number':
     case 'functional_math_number_dropdown':
@@ -303,21 +277,19 @@ function getEquationFromBlock(block) {
     case 'functional_call':
       var name = block.getCallName();
       var def = Blockly.Procedures.getDefinition(name, Blockly.mainBlockSpace);
-      if (def.isVariable()) {
-        return {
-          name: null,
-          expression: new ExpressionNode(name)
-        };
-      } else {
-        throw new Error('NYI');
+      if (!def.isVariable()) {
+        throw new Error('not expected');
       }
+      return {
+        name: null,
+        expression: new ExpressionNode(name)
+      };
 
     case 'functional_definition':
-      var name = block.getTitleValue('NAME');
       if (block.isVariable()) {
         return {
-          name: name,
-          expression: getExpressionFromBlock(block.getChildren()[0])
+          name: block.getTitleValue('NAME'),
+          expression: getEquationFromBlock(block.getChildren()[0]).expression
         };
       }
       throw new Error('not sure if this works yet');
@@ -329,23 +301,14 @@ function getEquationFromBlock(block) {
 }
 
 /**
- * Execute the user's code.  Heaven help us...
+ * Execute the user's code.
  */
 Calc.execute = function() {
   appState.result = BlocklyApps.ResultType.UNSET;
   appState.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
   appState.message = undefined;
 
-  // todo - handle functions
-  var topBlocks = Blockly.mainBlockSpace.getTopBlocks();
-  appState.userEquations = topBlocks.map(function (block) {
-    return getEquationFromBlock(block);
-  });
-  appState.userEquations = _.sortBy(appState.userEquations, function (item) {
-    // sort so that null (our expression that isnt a function or variable is
-    // last
-    return item.name || 'zzzzzzzz';
-  });
+  appState.userExpressions = generateExpressionsFromTopBlocks();
 
   // todo - get this all right
   appState.result = false;
@@ -389,18 +352,21 @@ Calc.execute = function() {
   BlocklyApps.report(reportData);
 
   // todo - validate what happens if we have a function and empty compute
-  var hasVariablesOrFunctions = appState.userEquations.length > 1;
+  var hasVariablesOrFunctions = _.keys(appState.userExpressions).length > 1;
   appState.animating = true;
   if (appState.result && !hasVariablesOrFunctions) {
     Calc.step();
-  } else if (appState.result && hasVariablesOrFunctions) {
-    throw new Error('NYI');
   } else {
-    // todo - dont show diffs to start
+    // todo - show diffs
     clearSvgExpression('userExpression');
-    appState.userEquations.forEach(function (equation, index) {
-      var tokenList = equation.expression.getTokenListDiff(equation.expression);
-      addTokenList('userExpression', tokenList, index, 'errorToken', equation.name);
+    _.keys(appState.userExpressions).sort().forEach(function (name, index) {
+      var expression = appState.userExpressions[name];
+      var expected = appState.targetExpressions[name] || expression;
+      var tokenList = expression.getTokenListDiff(expected);
+      if (name === COMPUTE_NAME) {
+        name = null;
+      }
+      addTokenList('userExpression', tokenList, index, 'errorToken', name);
     });
     window.setTimeout(function () {
       stopAnimatingAndDisplayFeedback();
@@ -516,7 +482,7 @@ function addTokenList(parentId, tokenList, depth, markClass, name) {
 }
 
 function addText(parent, str, xPos, className) {
-  var str, text, textLength;
+  var text, textLength;
   text = document.createElementNS(Blockly.SVG_NS, 'text');
   // getComputedTextLength doesn't respect trailing spaces, so we replace them
   // with _, calculate our size, then return to the version with spaces.
