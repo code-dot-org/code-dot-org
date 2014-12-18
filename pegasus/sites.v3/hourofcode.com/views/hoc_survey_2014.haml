@@ -1,0 +1,75 @@
+%form{:id=>"hoc-survey-form", role: "form", onsubmit: "event.preventDefault();"}
+  #error_message
+
+  .form-group
+    %label.control-label{for: "teacher-name"} Your name
+    %div
+      %input#tacher-name.form-control{name: "teacher_name_s", placeholder: "", type: "text", required: true}/
+
+  .form-group
+    %label.control-label{for: "email"} Email address
+    %div
+      %input#email.form-control{name: "email_s", placeholder: "", type: "text", required: true}/
+
+  .form-group
+    %label.control-label{for: "event_country"} Country
+    %div
+      %select#event-country.form-control{name: "country_s", type: "select", required: true}
+        %option{value: nil, selected: true}
+        -HOC_COUNTRIES.each_pair  do |key,label|
+          %option{value: key}= label
+
+  .form-group
+    %label.control-label{for: "teacher-description"} XXX
+    %div
+      %select#teacher-description.form-control{name: "teacher_description_s", type: "select", required: true}
+        %option{value: nil, selected: true}
+        -HocSurvey2014.teacher_descriptions.each  do |label|
+          %option{value: label}= label
+
+  .form-group
+    %label.control-label{for: "event-location-type"} XXX
+    %div
+      %select#event-location-type.form-control{name: "event_location_type_s", type: "select", required: true}
+        %option{value: nil, selected: true}
+        -HocSurvey2014.event_location_types.each  do |label|
+          %option{value: label}= label
+
+  .form-group
+    %label.control-label{for: "students-number-total"} Number of students
+    %div
+      %input#students-number-total.form-control{name: "students_number_total_i", placeholder: "", type: "text", required: true}/
+
+  .form-group
+    %label.control-label{for: "students-number-girls"} Number of girls
+    %div
+      %input#students-number-girls.form-control{name: "students_number_girls_i", placeholder: "", type: "text", required: true}/
+
+  .form-group
+    %label.control-label{for: "students-number-ethnicity"} Number of ethnicity
+    %div
+      %input#students-number-ethnicity.form-control{name: "students_number_ethnicity_i", placeholder: "", type: "text", required: true}/
+
+  .form-group
+    %label.control-label{for: "students-grade-levels"} Grade levels
+    %div
+      %select#students-grade-levels.form-control{name: "students_grade_levels_ss", type: "select", multiple: true, required: true}
+        %option{value: nil, selected: true}
+        -HocSurvey2014.students_grade_levels.each  do |label|
+          %option{value: label}= label
+
+  .form-group
+    %label.control-label{for: "event-tutorials"} Tutorial
+    %div
+      %select#event-tutorials.form-control{name: "event_tutorials_ss", type: "select", multiple: true, required: true}
+        %option{value: nil, selected: true}
+        -HocSurvey2014.event_tutorials.each  do |label|
+          %option{value: label}= label
+
+  .form-group
+    %label.control-label{for: "event-technology"} Technology
+    %div
+      %select#event-technology.form-control{name: "event_technology_s", type: "select", required: true}
+        %option{value: nil, selected: true}
+        -HocSurvey2014.event_technologies.each  do |label|
+          %option{value: label}= label
