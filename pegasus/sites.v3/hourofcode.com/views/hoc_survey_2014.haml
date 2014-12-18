@@ -1,3 +1,5 @@
+-code = File.basename(request.path_info)
+
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
 %script{type: "text/javascript", src: "/js/selectize.min.js"}
@@ -121,6 +123,8 @@
         %em{style: 'font-weight: normal;'} Other method
       %div
         %input#tacher-how-heard-other.form-control{name: "teacher_how_heard_other_s", placeholder: "", type: "text"}/
+
+  %input{name:'code_s', type:'hidden', value:code}
 
   .form-group.submit-btn
     %button#btn-submit.btn.btn-default{type: "submit"} Submit
