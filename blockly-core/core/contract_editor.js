@@ -16,6 +16,17 @@ goog.require('goog.ui.Separator');
 goog.require('goog.ui.decorate');
 goog.require('goog.ui.Component.EventType');
 goog.require('goog.events');
+goog.require('goog.color');
+
+Blockly.ContractEditorDropdownMenuRenderer = function() {
+  Blockly.ContractEditorDropdownMenuRenderer.superClass_.constructor.call(this);
+};
+goog.inherits(Blockly.ContractEditorDropdownMenuRenderer, goog.ui.MenuRenderer);
+goog.addSingletonGetter(Blockly.ContractEditorDropdownMenuRenderer);
+
+Blockly.ContractEditorDropdownMenuRenderer.prototype.getCssClass = function() {
+  return 'goog-menu colored-type-dropdown';
+};
 
 /**
  * A horizontal SVG bar with rectangular background and text
@@ -27,9 +38,12 @@ Blockly.SVGHeader = function(parent, opt_options) {
   opt_options = opt_options || {};
   this.padding = { left: 10 };
   var extraStyle = opt_options.onMouseDown ? '' : 'pointer-events: none;';
-  this.svgGroup_ = Blockly.createSvgElement('g', {style: extraStyle}, parent, {belowExisting: true});
-  this.grayRectangleElement_ = Blockly.createSvgElement('rect', { 'fill': '#dddddd', 'style': extraStyle }, this.svgGroup_);
-  this.textElement_ = Blockly.createSvgElement('text', { 'class': 'blackBlocklyText', 'style': extraStyle }, this.svgGroup_);
+  this.svgGroup_ = Blockly.createSvgElement('g',
+    {style: extraStyle}, parent, {belowExisting: true});
+  this.grayRectangleElement_ = Blockly.createSvgElement('rect',
+    { 'fill': '#dddddd', 'style': extraStyle }, this.svgGroup_);
+  this.textElement_ = Blockly.createSvgElement('text',
+    { 'class': 'blackBlocklyText', 'style': extraStyle }, this.svgGroup_);
   if (opt_options.headerText) {
     this.textElement_.textContent = opt_options.headerText;
   }
@@ -147,6 +161,7 @@ Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME = 'ACTUAL';
 Blockly.ContractEditor.MARGIN_BELOW_EXAMPLES = 50; // in px
 
 Blockly.ContractEditor.typesToColors = {
+  // in HSV
   'none': [0, 0, 0.6],
   'Number': [192, 1.00, 0.99], // 00ccff
   'string': [180, 1.00, 0.60], // 0099999
@@ -348,13 +363,7 @@ Blockly.ContractEditor.prototype.addParamsFromProcedure_ = function() {
   }
 };
 Blockly.ContractEditor.prototype.initializeOutputTypeDropdown_ = function() {
-  this.outputTypeSelector = new goog.ui.Select(null, null,
-    goog.ui.FlatMenuButtonRenderer.getInstance());
-
-  goog.object.forEach(Blockly.ContractEditor.typesToColors, function(value, key) {
-    this.outputTypeSelector.addItem(new goog.ui.MenuItem(key));
-  }, this);
-  this.outputTypeSelector.setDefaultCaption(Blockly.Msg.FUNCTIONAL_TYPE_LABEL);
+  this.outputTypeSelector = this.createTypeDropdown_();
 
   goog.events.listen(this.outputTypeSelector, goog.ui.Component.EventType.CHANGE,
     goog.bind(this.outputTypeDropdownChange, this));
@@ -368,13 +377,35 @@ Blockly.ContractEditor.prototype.outputTypeDropdownChange = function(comboBoxEve
 };
 
 Blockly.ContractEditor.prototype.initializeInputTypeDropdown_ = function() {
-  this.inputTypeSelector = new goog.ui.Select(null, null,
-    goog.ui.FlatMenuButtonRenderer.getInstance());
-
-  goog.object.forEach(Blockly.ContractEditor.typesToColors, function(value, key) {
-    this.inputTypeSelector.addItem(new goog.ui.MenuItem(key));
-  }, this);
-  this.inputTypeSelector.setDefaultCaption(Blockly.Msg.FUNCTIONAL_TYPE_LABEL);
-
+  this.inputTypeSelector = this.createTypeDropdown_();
   this.inputTypeSelector.render(goog.dom.getElement('paramTypeDropdown'));
+};
+
+/**
+ * @returns {goog.ui.Select} new dropdown
+ * @private
+ */
+Blockly.ContractEditor.prototype.createTypeDropdown_ = function() {
+  var newTypeDropdown = new goog.ui.Select(null, null,
+    goog.ui.FlatMenuButtonRenderer.getInstance(),
+    null,
+    Blockly.ContractEditorDropdownMenuRenderer.getInstance());
+  goog.object.forEach(Blockly.ContractEditor.typesToColors, function(color, key) {
+    var menuItem = new goog.ui.MenuItem(key);
+    newTypeDropdown.addItem(menuItem);
+    this.setMenuItemColor_(menuItem, color);
+  }, this);
+  newTypeDropdown.setDefaultCaption(Blockly.Msg.FUNCTIONAL_TYPE_LABEL);
+  return newTypeDropdown;
+};
+
+/**
+ * @param {!goog.ui.MenuItem} menuItem
+ * @param {!Array.<Number>} hsvColor
+ * @private
+ */
+Blockly.ContractEditor.prototype.setMenuItemColor_ = function(menuItem, hsvColor) {
+  var menuItemElement = menuItem.getElement();
+  menuItemElement.style.background =
+    goog.color.hsvToHex(hsvColor[0], hsvColor[1], hsvColor[2] * 255);
 };
