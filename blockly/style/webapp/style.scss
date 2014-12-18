@@ -4,6 +4,31 @@ div#visualization {
   height: 600px;
 }
 
+/* Shrink the visualization area on small displays. */
+@media screen and (min-width: 1101px) and (max-width: 1150px) {
+  div#visualization.responsive {
+    max-height: 525px;
+  }
+}
+
+@media screen and (min-width: 1051px) and (max-width: 1100px) {
+  div#visualization.responsive {
+    max-height: 450px;
+  }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1050px) {
+  div#visualization.responsive {
+    max-height: 375px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  div#visualization.responsive {
+    max-height: 300px;
+  }
+}
+
 #divWebapp {
   overflow: hidden;
   position: relative;
@@ -11,6 +36,12 @@ div#visualization {
   width: 400px;
   height: 600px;
   background-color: white;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 #divWebapp canvas {
