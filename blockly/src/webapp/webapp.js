@@ -41,7 +41,7 @@ var MAX_INTERPRETER_STEPS_PER_TICK = 200;
 // Default Scalings
 Webapp.scale = {
   'snapRadius': 1,
-  'stepSpeed': 1
+  'stepSpeed': 0
 };
 
 var twitterOptions = {
