@@ -74,12 +74,11 @@ exports.makeTestsFromBuilderRequiredBlocks = function (customRequiredBlocks) {
       case 'procedures_defnoreturn':
       case 'procedures_defreturn':
         requiredBlocksTests.push(testsFromProcedure(childNode));
-        if (childNode.querySelector) {
-          goog.array.forEach(childNode.querySelectorAll(
-              'statement > block, next > block'), function(block) {
+        goog.array.forEach(childNode.getElementsByTagName('block'), function(block) {
+          if (block.parentNode && /next|statement/i.test(block.parentNode.tagName)) {
             requiredBlocksTests.push([testFromBlockInsideFunction(block)]);
-          })
-        }
+          }
+        });
         break;
       default:
         requiredBlocksTests.push([testFromBlock(childNode)]);
