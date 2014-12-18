@@ -93,6 +93,7 @@ rightbar: blank
 
   .form-group
     %label.control-label{for: "event-experience"} Overall, how would you rate your Hour of Code experience?
+    %span.form-required-field *
     %div
       %select#event-experience.form-control{name: "event_experience_s", type: "select", required: true}
         %option{value: nil, selected: true}
@@ -130,6 +131,7 @@ rightbar: blank
 
   .form-group
     %label.control-label{for: "teacher-how-heard"} How did you hear about the Hour of Code? (Choose all that apply)
+    %span.form-required-field *
     %div
       %select#teacher-how-heard.form-control{name: "teacher_how_heard_ss", type: "select", multiple: true, required: true}
         %option{value: nil, selected: true}
