@@ -127,7 +127,7 @@ social:
     %h1.mobile-center
       =I18n.t :studiobar_title
     #body.mobile-pad-left64
-      - studiobar_items = [ {id: "elementary", url: "http://#{canonical_hostname('studio.code.org')}"}, {id: "frozen", url: "http://studio.code.org/s/frozen/reset"}, {id: "teacher", url: "/educate/k5"}, {id: "donate", url: "/donate"}]
+      - studiobar_items = [ {id: "elementary", url: "http://#{canonical_hostname('studio.code.org')}"}, {id: "frozen", url: "http://studio.code.org/s/frozen/reset"}, {id: "teacher", url: "/educate/k5"}, {id: "shop", url: "/shop"}]
       - studiobar_items.each_with_index do |item, index|
         - if index < studiobar_items.length-1
           - other_style = "margin-right: 26px"
