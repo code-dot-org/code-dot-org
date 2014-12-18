@@ -2,9 +2,11 @@ class HocSurvey2014
   
   def self.normalize(data)
     result = {}
+    
+    decrypted_email = Poste.decrypt(data[:code_s])
+    result[:email_s] = required enum(data[:email_s].to_.strip.downcase, [decrypted_email])
 
     result[:name_s] = required stripped data[:name_s]
-    result[:email_s] = required stripped data[:email_s]
     result[:country_s] = enum(data[:country_s].to_s.strip.downcase, HOC_COUNTRIES.keys)
     result[:user_description_s] = required stripped data[:user_description_s]
     result[:event_location_type_s] = stripped data[:event_location_type_s]
@@ -24,12 +26,12 @@ class HocSurvey2014
     result
   end
 
-  def self.claim_prize_code(type, user_id, params={})
+  def self.claim_prize_code(type, email, params={})
     ip_address = params[:ip_address] || request.ip
   
     begin
       rows_updated = DB[:hoc_survey_prizes].where(claimant:nil, type:type).limit(1).update(
-        claimant:user_id,
+        claimant:email,
         claimed_at:DateTime.now,
         claimed_ip:ip_address,
       )
@@ -40,7 +42,7 @@ class HocSurvey2014
       raise
     end
 
-    DB[:hoc_survey_prizes].where(claimant:user_id).first
+    DB[:hoc_survey_prizes].where(claimant:email).first
   end
 
 end
