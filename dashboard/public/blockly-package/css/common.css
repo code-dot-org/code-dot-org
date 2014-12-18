@@ -62,6 +62,12 @@ div.droplet-palette-group-header-selected {
 .droplet-palette-group-header-selected.yellow {
   background-color: #e0e053; }
 
+.droplet-palette-group-header.red {
+  border-left: 10px solid #fa8a8c; }
+
+.droplet-palette-group-header-selected.red {
+  background-color: #fa8a8c; }
+
 .droplet-wrapper-div {
   outline-style: none; }
 
