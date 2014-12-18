@@ -5,7 +5,7 @@ $(document).ready(function() {
     plugins: ['fast_click']
   });
 
-  $('#event_country').change(function() {
+  $('#event-country').change(function() {
     if ($(this).val() == 'United States') {
       $('#students-number-ethnicity-wrapper').show();
     } else {
@@ -22,6 +22,16 @@ $(document).ready(function() {
       $('#teacher-how-heard-other-wrapper').hide();
     }
   }).triggerHandler('change');
+
+  $('#event-country, #event-location-type').change(function() {
+    if ($('#event-country').val() == 'United States' && $('#event-location-type' == 'Public school')) {
+      $('#teacher-district-wrapper').show();
+    } else {
+      $('#teacher-district').val('');
+      $('#teacher-district-wrapper').hide();
+    }
+  }).triggerHandler('change');
+
 
   $( "#hoc-survey-form" ).submit(function( event ) {
     surveyFormSubmit();
