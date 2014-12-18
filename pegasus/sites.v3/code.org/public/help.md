@@ -8,14 +8,13 @@ Millions of people of all ages have learned an [Hour of Code](http://hourofcode.
 
 [<button>Join us</button>](http://code.org/learn)
 
-## Make a generous donation - before December 14!
-[Donate to our crowdfunding campaign](/donate). To teach 100 million children, we need your support. We just launched what could be the [largest education crowdfunding campaign](/donate) in history. Every dollar will be matched by major Code.org [donors](/about/donors), doubling your impact. 
-
+## Make a generous donation
+We're working to give *every* student the opportunity to learn computer science — online and in schools where we’ll establish permanent courses and train teachers. One child learns for every dollar you donate.
 
 [<button>Please consider a donation</button>](/donate)
 
 ## Ask your school to teach computer science
-Encourage local elementary schools to teach our [K-5 curriculum](/k5) or recruit teachers to attend a [one-day workshop](/professional-development-workshops)- at no cost. Or [partner with Code.org](/educate/districts) to bring permanent courses into middle and high schools.
+Encourage local elementary schools to teach our [elementary curriculum](/k5) or recruit teachers to attend a [one-day workshop](/professional-development-workshops)- at no cost. Or [partner with Code.org](/educate/districts) to bring permanent courses into middle and high schools.
  
 [<button>See Options</button>](/educate)
 
