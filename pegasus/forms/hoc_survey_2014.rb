@@ -21,7 +21,11 @@ class HocSurvey2014
     result[:event_annual_s] = stripped data[:event_annual_s]
     result[:teacher_plan_teach_cs_s] = stripped data[:teacher_plan_teach_cs]
     result[:teacher_first_year_s] = stripped data[:teacher_first_year_s]
-    result[:teacher_how_heard_s] = stripped data[:teacher_how_heard_s]
+    result[:teacher_how_heard_ss] = stripped data[:teacher_how_heard_ss]
+
+    if result[:teacher_how_heard_ss].class != FieldError && result[:teacher_how_heard_ss].include?('Other')
+      result[:teacher_how_heard_other_s] = required stripped data[:teacher_how_heard_other_s]
+    end
 
     result
   end
@@ -114,6 +118,30 @@ class HocSurvey2014
       'Pair programming, sharing a device',
       'In a large group (with a shared screen)',
       'Unplugged only',
+    ]
+  end
+
+  def self.event_experiences()
+    [
+      'Great',
+      'Good',
+      'OK',
+      'Bad',
+      'Terrible',
+    ]
+  end
+
+  def self.teacher_how_heards()
+    [
+      'I read about it in the news or on TV',
+      'Email from Code.org',
+      'Other teachers in my school',
+      'My principal',
+      'From the state superintendent (US) or ministry of education (outside US)',
+      'From KhanAcademy',
+      'From DonorsChoose.org',
+      'From Teach For America',
+      'Other',
     ]
   end
 
