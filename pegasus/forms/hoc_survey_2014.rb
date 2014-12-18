@@ -6,7 +6,6 @@ class HocSurvey2014
     decrypted_email = Poste.decrypt(data[:code_s])
     result[:email_s] = required enum(data[:email_s].to_.strip.downcase, [decrypted_email])
 
-    result[:teacher_name_s] = required stripped data[:name_s]
     result[:event_country_s] = enum(data[:event_country_s].to_s.strip.downcase, HOC_COUNTRIES.keys)
     result[:teacher_description_s] = required stripped data[:teacher_description_s]
     result[:event_location_type_s] = stripped data[:event_location_type_s]
