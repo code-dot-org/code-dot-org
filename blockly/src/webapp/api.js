@@ -33,6 +33,13 @@ exports.createButton = function (blockId, elementId, text) {
                            'text': text });
 };
 
+exports.createImage = function (blockId, elementId, src) {
+  return Webapp.executeCmd(String(blockId),
+                          'createImage',
+                          {'elementId': elementId,
+                           'src': src });
+};
+
 exports.setPosition = function (blockId, elementId, left, top, width, height) {
   return Webapp.executeCmd(String(blockId),
                           'setPosition',
@@ -122,6 +129,13 @@ exports.setText = function (blockId, elementId, text) {
                           'setText',
                           {'elementId': elementId,
                            'text': text });
+};
+
+exports.setImageURL = function (blockId, elementId, src) {
+  return Webapp.executeCmd(String(blockId),
+                          'setImageURL',
+                          {'elementId': elementId,
+                           'src': src });
 };
 
 exports.setParent = function (blockId, elementId, parentId) {
