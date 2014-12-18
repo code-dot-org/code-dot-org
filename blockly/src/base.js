@@ -179,6 +179,7 @@ BlocklyApps.init = function(config) {
   }
 
   var visualizationColumn = document.getElementById('visualizationColumn');
+  var visualization = document.getElementById('visualization');
 
   // center game screen in embed mode
   if(config.embed) {
@@ -205,7 +206,6 @@ BlocklyApps.init = function(config) {
 
   if (!config.embed && !BlocklyApps.share) {
     // Make the visualization responsive to screen size, except on share page.
-    var visualization = document.getElementById('visualization');
     visualization.className += " responsive";
     visualizationColumn.className += " responsive";
   }
@@ -257,26 +257,31 @@ BlocklyApps.init = function(config) {
     }
     var belowVisualization = document.getElementById('belowVisualization');
     if (belowVisualization) {
-      belowVisualization.style.display = 'block';
-      belowVisualization.style.marginLeft = '0px';
-      if (BlocklyApps.noPadding) {
-        // Shift run and reset buttons off the left edge if we have no padding
-        if (runButton) {
-          runButton.style.marginLeft = '10px';
-        }
-        if (resetButton) {
-          resetButton.style.marginLeft = '10px';
-        }
-        var shareCell = document.getElementById('share-cell') ||
-            document.getElementById('right-button-cell');
-        if (shareCell) {
-          shareCell.style.marginLeft = '10px';
-          shareCell.style.marginRight = '10px';
-        }
-        var softButtons = document.getElementById('soft-buttons');
-        if (softButtons) {
-          softButtons.style.marginLeft = '10px';
-          softButtons.style.marginRight = '10px';
+      if (config.noButtonsBelowOnMobileShare) {
+        belowVisualization.style.display = 'none';
+        visualization.style.marginBottom = '0px';
+      } else {
+        belowVisualization.style.display = 'block';
+        belowVisualization.style.marginLeft = '0px';
+        if (BlocklyApps.noPadding) {
+          // Shift run and reset buttons off the left edge if we have no padding
+          if (runButton) {
+            runButton.style.marginLeft = '10px';
+          }
+          if (resetButton) {
+            resetButton.style.marginLeft = '10px';
+          }
+          var shareCell = document.getElementById('share-cell') ||
+              document.getElementById('right-button-cell');
+          if (shareCell) {
+            shareCell.style.marginLeft = '10px';
+            shareCell.style.marginRight = '10px';
+          }
+          var softButtons = document.getElementById('soft-buttons');
+          if (softButtons) {
+            softButtons.style.marginLeft = '10px';
+            softButtons.style.marginRight = '10px';
+          }
         }
       }
     }
@@ -296,10 +301,11 @@ BlocklyApps.init = function(config) {
       if (BlocklyApps.noPadding) {
         upSale.style.marginLeft = '10px';
       }
-    } else {
+      belowViz.appendChild(upSale);
+    } else if (typeof config.makeYourOwn === 'undefined') {
       upSale.innerHTML = require('./templates/learn.html')();
+      belowViz.appendChild(upSale);
     }
-    belowViz.appendChild(upSale);
   }
 
   // Record time at initialization.

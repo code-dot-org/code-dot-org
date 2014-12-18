@@ -442,14 +442,11 @@ Webapp.init = function(config) {
 
   config.twitter = twitterOptions;
 
-  // for this app, show make your own button if on share page
-  config.makeYourOwn = config.share;
-
-  config.makeString = webappMsg.makeYourOwn();
-  config.makeUrl = "http://code.org/webapp";
-  config.makeImage = BlocklyApps.assetUrl('media/promo.png');
+  // hide makeYourOwn on the share page
+  config.makeYourOwn = false;
 
   config.varsInGlobals = true;
+  config.noButtonsBelowOnMobileShare = true;
 
   // Webapp.initMinimal();
 
@@ -507,6 +504,11 @@ Webapp.init = function(config) {
       dom.addClickTouchEvent(stepOverButton, Webapp.onStepOverButton);
       dom.addClickTouchEvent(stepOutButton, Webapp.onStepOutButton);
     }
+  }
+
+  if (BlocklyApps.share) {
+    // automatically run in share mode:
+    window.setTimeout(BlocklyApps.runButtonClick, 0);
   }
 };
 
