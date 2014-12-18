@@ -119,6 +119,10 @@ exports.marshalInterpreterToNative = function (interpreterVar) {
       nativeObject[prop] = marshalInterpreterToNative(interpreterVar.properties[prop]);
     }
     return nativeObject;
+  } else {
+    // Just return the interpreter object if we can't convert it. This is needed
+    // for passing interpreter callback functions into native.
+    return interpreterVar;
   }
 };
 
