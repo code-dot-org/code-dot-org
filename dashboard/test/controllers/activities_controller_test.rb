@@ -333,7 +333,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal @script_level.script, user_script.script
     assert_equal @user, user_script.user
     assert_equal script_start_date.to_i, user_script.started_at.to_i
-#    assert user_script.started_at != user_script.last_progress_at # I turned off updates 
+    assert user_script.started_at != user_script.last_progress_at
     assert user_script.assigned_at.nil?
     assert user_script.completed_at.nil?
   end
