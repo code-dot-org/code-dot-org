@@ -313,6 +313,7 @@ en:
           description: A selection of Course 4 levels for usability testing.
           Variables: Variables
           For Loops: For Loops
+          Binary: Binary
         potus:
           title: special
           description_short: special
@@ -335,3 +336,10 @@ en:
           Booleans: Booleans
           Conditionals: Conditionals
           Free Play: Free Play
+        algebra:
+          title: Computer Science in Algebra
+          description: Learn Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
+            and Coordinate Planes'
+          'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
+          'Eval: Strings and Images': 'Eval: Strings and Images'
