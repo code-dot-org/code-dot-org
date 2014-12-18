@@ -3,10 +3,9 @@ class HocSurvey2014
   def self.normalize(data)
     result = {}
 
-    decrypted_email = Poste.decrypt(data[:code_s])
-    result[:email_s] = required enum(data[:email_s].to_.strip.downcase, [decrypted_email])
+    result[:email_s] = Poste.decrypt(data[:code_s])
+    puts result[:email_s]
 
-    result[:teacher_name_s] = required stripped data[:name_s]
     result[:event_country_s] = enum(data[:event_country_s].to_s.strip.downcase, HOC_COUNTRIES.keys)
     result[:teacher_description_s] = required stripped data[:teacher_description_s]
     result[:event_location_type_s] = stripped data[:event_location_type_s]
