@@ -21,31 +21,39 @@
     <toolbox_blocks>
       <xml>
         <category name="Number">
-          <block type="functional_plus"/>
-          <block type="functional_minus"/>
-          <block type="functional_times"/>
-          <block type="functional_dividedby"/>
-          <block type="functional_math_number"/>
+          <block type="functional_plus" inline="false"/>
+          <block type="functional_minus" inline="false"/>
+          <block type="functional_times" inline="false"/>
+          <block type="functional_dividedby" inline="false"/>
+          <block type="functional_math_number">
+            <title name="NUM">0</title>
+          </block>
         </category>
         <category name="String">
-          <block type="functional_string"/>
-          <block type="functional_style"/>
-          <block type="string_append"/>
-          <block type="string_length"/>
+          <block type="functional_string">
+            <title name="VAL"/>
+          </block>
+          <block type="functional_style">
+            <title name="VAL">solid</title>
+          </block>
+          <block type="string_append" inline="false"/>
+          <block type="string_length" inline="false"/>
         </category>
         <category name="Image">
-          <block type="functional_circle"/>
-          <block type="functional_triangle"/>
-          <block type="functional_square"/>
-          <block type="functional_rectangle"/>
-          <block type="functional_ellipse"/>
-          <block type="functional_star"/>
-          <block type="place_image"/>
-          <block type="overlay"/>
-          <block type="underlay"/>
-          <block type="rotate"/>
-          <block type="scale"/>
-          <block type="functional_text"/>
+          <block type="functional_circle" inline="false"/>
+          <block type="functional_triangle" inline="false"/>
+          <block type="functional_square" inline="false"/>
+          <block type="functional_rectangle" inline="false"/>
+          <block type="functional_ellipse" inline="false"/>
+          <block type="functional_star" inline="false"/>
+          <block type="functional_radial_star" inline="false"/>
+          <block type="functional_polygon" inline="false"/>
+          <block type="place_image" inline="false"/>
+          <block type="overlay" inline="false"/>
+          <block type="underlay" inline="false"/>
+          <block type="rotate" inline="false"/>
+          <block type="scale" inline="false"/>
+          <block type="functional_text" inline="false"/>
         </category>
       </xml>
     </toolbox_blocks>
