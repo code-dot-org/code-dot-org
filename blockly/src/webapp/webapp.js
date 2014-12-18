@@ -41,7 +41,7 @@ var MAX_INTERPRETER_STEPS_PER_TICK = 200;
 // Default Scalings
 Webapp.scale = {
   'snapRadius': 1,
-  'stepSpeed': 1
+  'stepSpeed': 0
 };
 
 var twitterOptions = {
@@ -442,14 +442,11 @@ Webapp.init = function(config) {
 
   config.twitter = twitterOptions;
 
-  // for this app, show make your own button if on share page
-  config.makeYourOwn = config.share;
-
-  config.makeString = webappMsg.makeYourOwn();
-  config.makeUrl = "http://code.org/webapp";
-  config.makeImage = BlocklyApps.assetUrl('media/promo.png');
+  // hide makeYourOwn on the share page
+  config.makeYourOwn = false;
 
   config.varsInGlobals = true;
+  config.noButtonsBelowOnMobileShare = true;
 
   // Webapp.initMinimal();
 
@@ -507,6 +504,11 @@ Webapp.init = function(config) {
       dom.addClickTouchEvent(stepOverButton, Webapp.onStepOverButton);
       dom.addClickTouchEvent(stepOutButton, Webapp.onStepOutButton);
     }
+  }
+
+  if (BlocklyApps.share) {
+    // automatically run in share mode:
+    window.setTimeout(BlocklyApps.runButtonClick, 0);
   }
 };
 
@@ -1020,6 +1022,7 @@ Webapp.callCmd = function (cmd) {
     case 'replaceHtmlBlock':
     case 'deleteHtmlBlock':
     case 'createButton':
+    case 'createImage':
     case 'createCanvas':
     case 'canvasDrawLine':
     case 'canvasDrawCircle':
@@ -1031,6 +1034,7 @@ Webapp.callCmd = function (cmd) {
     case 'createTextLabel':
     case 'getText':
     case 'setText':
+    case 'setImageURL':
     case 'setPosition':
     case 'setParent':
     case 'setStyle':
@@ -1064,6 +1068,16 @@ Webapp.createButton = function (opts) {
                  divWebapp.appendChild(newButton));
 };
 
+Webapp.createImage = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+
+  var newImage = document.createElement("img");
+  newImage.src = opts.src;
+  newImage.id = opts.elementId;
+
+  return Boolean(divWebapp.appendChild(newImage));
+};
+
 Webapp.createCanvas = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
 
@@ -1073,7 +1087,7 @@ Webapp.createCanvas = function (opts) {
     newElement.id = opts.elementId;
     // default width/height if params are missing
     var width = opts.width || 400;
-    var height = opts.height || 400;
+    var height = opts.height || 600;
     newElement.width = width * Webapp.canvasScale;
     newElement.height = height * Webapp.canvasScale;
     newElement.style.width = width + 'px';
@@ -1187,6 +1201,8 @@ Webapp.getText = function (opts) {
   if (divWebapp.contains(element)) {
     if (element.tagName === 'INPUT') {
       return String(element.value);
+    } else if (element.tagName === 'IMG') {
+      return String(element.alt);
     } else {
       return element.innerText;
     }
@@ -1200,9 +1216,22 @@ Webapp.setText = function (opts) {
   if (divWebapp.contains(element)) {
     if (element.tagName === 'INPUT') {
       element.value = opts.text;
+    } else if (element.tagName === 'IMG') {
+      element.alt = opts.text;
     } else {
       element.innerText = opts.text;
     }
+    return true;
+  }
+  return false;
+};
+
+Webapp.setImageURL = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var element = document.getElementById(opts.elementId);
+  if (divWebapp.contains(element) && element.tagName === 'IMG') {
+    element.src = opts.src;
+    return true;
   }
   return false;
 };
