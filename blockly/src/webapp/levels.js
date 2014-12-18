@@ -32,21 +32,23 @@ levels.ec_simple = {
   'editCode': true,
   'sliderSpeed': 0.7,
   'codeFunctions': [
-    {'func': 'createButton', 'params': ["'id'", "'text'"] },
-    {'func': 'createImage', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
-    {'func': 'createTextInput', 'params': ["'id'", "'text'"] },
-    {'func': 'createTextLabel', 'params': ["'id'", "'text'"] },
-    {'func': 'getText', 'params': ["'id'"], 'type': 'value' },
-    {'func': 'setText', 'params': ["'id'", "'text'"] },
-    {'func': 'setImageURL', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
-    {'func': 'setParent', 'params': ["'id'", "'parentId'"] },
-    {'func': 'setPosition', 'params': ["'id'", "0", "0", "100", "100"] },
-    {'func': 'setStyle', 'params': ["'id'", "'color:red;'"] },
-    {'func': 'createHtmlBlock', 'params': ["'id'", "'html'"] },
-    {'func': 'replaceHtmlBlock', 'params': ["'id'", "'html'"] },
-    {'func': 'deleteHtmlBlock', 'params': ["'id'"] },
-    {'func': 'attachEventHandler', 'params': ["'id'", "'click'", "function() {\n  \n}"] },
-    {'func': 'startWebRequest', 'params': ["'http://api.openweathermap.org/data/2.5/weather?q=London,uk'", "function(status, type, content) {\n  \n}"] },
+    {'func': 'attachEventHandler', 'category': 'General', 'params': ["'id'", "'click'", "function() {\n  \n}"] },
+    {'func': 'startWebRequest', 'category': 'General', 'params': ["'http://api.openweathermap.org/data/2.5/weather?q=London,uk'", "function(status, type, content) {\n  \n}"] },
+    {'func': 'createHtmlBlock', 'category': 'General', 'params': ["'id'", "'html'"] },
+    {'func': 'replaceHtmlBlock', 'category': 'General', 'params': ["'id'", "'html'"] },
+    {'func': 'deleteHtmlBlock', 'category': 'General', 'params': ["'id'"] },
+    {'func': 'setParent', 'category': 'General', 'params': ["'id'", "'parentId'"] },
+    {'func': 'setPosition', 'category': 'General', 'params': ["'id'", "0", "0", "100", "100"] },
+    {'func': 'setStyle', 'category': 'General', 'params': ["'id'", "'color:red;'"] },
+    {'func': 'createButton', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
+    {'func': 'createTextInput', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
+    {'func': 'createTextLabel', 'category': 'UI Controls', 'params': ["'id'", "'text'", "'forId'"] },
+    {'func': 'createCheckbox', 'category': 'UI Controls', 'params': ["'id'", "false"] },
+    {'func': 'createRadio', 'category': 'UI Controls', 'params': ["'id'", "'group'", "false"] },
+    {'func': 'getText', 'category': 'UI Controls', 'params': ["'id'"], 'type': 'value' },
+    {'func': 'setText', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
+    {'func': 'createImage', 'category': 'UI Controls', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
+    {'func': 'setImageURL', 'category': 'UI Controls', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
     {'func': 'createCanvas', 'category': 'Canvas', 'params': ["'id'", "400", "600"] },
     {'func': 'canvasDrawLine', 'category': 'Canvas', 'params': ["'id'", "0", "0", "400", "600"] },
     {'func': 'canvasDrawCircle', 'category': 'Canvas', 'params': ["'id'", "200", "300", "100"] },
@@ -56,12 +58,16 @@ levels.ec_simple = {
     {'func': 'canvasClear', 'category': 'Canvas', 'params': ["'id'"] },
   ],
   'categoryInfo': {
-    'Canvas': {
-      'color': 'yellow',
+    'General': {
+      'color': 'blue',
       'blocks': []
     },
-    'Actions': {
-      'color': 'blue',
+    'UI Controls': {
+      'color': 'red',
+      'blocks': []
+    },
+    'Canvas': {
+      'color': 'yellow',
       'blocks': []
     },
   },

@@ -701,31 +701,12 @@ var nativeGetCallback = function () {
   return Webapp.eventQueue.shift();
 };
 
-function marshalInterpreterToNative(interpreterVar) {
-  if (interpreterVar.isPrimitive) {
-    return interpreterVar.data;
-  } else if (Webapp.interpreter.isa(interpreterVar, Webapp.interpreter.ARRAY)) {
-    var nativeArray = [];
-    nativeArray.length = interpreterVar.length;
-    for (var i = 0; i < nativeArray.length; i++) {
-      nativeArray[i] = marshalInterpreterToNative(interpreterVar.properties[i]);
-    }
-    return nativeArray;
-  } else if (Webapp.interpreter.isa(interpreterVar, Webapp.interpreter.OBJECT)) {
-    var nativeObject = {};
-    for (var prop in interpreterVar.properties) {
-      nativeObject[prop] = marshalInterpreterToNative(interpreterVar.properties[prop]);
-    }
-    return nativeObject;
-  }
-}
-
 var consoleApi = {};
 
 consoleApi.log = function() {
   var nativeArgs = [];
   for (var i = 0; i < arguments.length; i++) {
-    nativeArgs[i] = marshalInterpreterToNative(arguments[i]);
+    nativeArgs[i] = codegen.marshalInterpreterToNative(arguments[i]);
   }
   var output = '';
   var firstArg = nativeArgs[0];
@@ -1032,6 +1013,8 @@ Webapp.callCmd = function (cmd) {
     case 'canvasClear':
     case 'createTextInput':
     case 'createTextLabel':
+    case 'createCheckbox':
+    case 'createRadio':
     case 'getText':
     case 'setText':
     case 'setImageURL':
@@ -1190,9 +1173,36 @@ Webapp.createTextLabel = function (opts) {
   var newLabel = document.createElement("label");
   var textNode = document.createTextNode(opts.text);
   newLabel.id = opts.elementId;
+  var forElement = document.getElementById(opts.forId);
+  if (forElement && divWebapp.contains(forElement)) {
+    newLabel.setAttribute('for', opts.forId);
+  }
 
   return Boolean(newLabel.appendChild(textNode) &&
                  divWebapp.appendChild(newLabel));
+};
+
+Webapp.createCheckbox = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+
+  var newCheckbox = document.createElement("input");
+  newCheckbox.setAttribute("type", "checkbox");
+  newCheckbox.checked = opts.checked;
+  newCheckbox.id = opts.elementId;
+
+  return Boolean(divWebapp.appendChild(newCheckbox));
+};
+
+Webapp.createRadio = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+
+  var newRadio = document.createElement("input");
+  newRadio.setAttribute("type", "radio");
+  newRadio.name = opts.name;
+  newRadio.checked = opts.checked;
+  newRadio.id = opts.elementId;
+
+  return Boolean(divWebapp.appendChild(newRadio));
 };
 
 Webapp.getText = function (opts) {
