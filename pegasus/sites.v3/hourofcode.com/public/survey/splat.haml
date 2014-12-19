@@ -21,6 +21,10 @@ rightbar: blank
 %form{:id=>"hoc-survey-form", role: "form", onsubmit: "event.preventDefault();"}
   :markdown
     Intro text goes here.
+  %p
+    Fields marked with
+    %span.form-required-field *
+    are required.
 
   #error-message
 
