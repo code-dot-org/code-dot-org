@@ -9815,6 +9815,14 @@ exports.setChecked = function (blockId, elementId, checked) {
                            'checked': checked });
 };
 
+exports.createDropdown = function (blockId, elementId) {
+  var optionsArray = Array.prototype.slice.call(arguments, 2);
+  return Webapp.executeCmd(blockId,
+                          'createDropdown',
+                          {'elementId': elementId,
+                           'optionsArray': optionsArray });
+};
+
 exports.getText = function (blockId, elementId) {
   return Webapp.executeCmd(blockId,
                           'getText',
@@ -10025,6 +10033,7 @@ levels.ec_simple = {
     {'func': 'createButton', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
     {'func': 'createTextInput', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
     {'func': 'createTextLabel', 'category': 'UI Controls', 'params': ["'id'", "'text'", "'forId'"] },
+    {'func': 'createDropdown', 'category': 'UI Controls', 'params': ["'id'", "'option1'", "'etc'"] },
     {'func': 'getText', 'category': 'UI Controls', 'params': ["'id'"], 'type': 'value' },
     {'func': 'setText', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
     {'func': 'createCheckbox', 'category': 'UI Controls', 'params': ["'id'", "false"] },
@@ -11216,6 +11225,7 @@ Webapp.callCmd = function (cmd) {
     case 'createTextLabel':
     case 'createCheckbox':
     case 'createRadio':
+    case 'createDropdown':
     case 'getText':
     case 'setText':
     case 'getChecked':
@@ -11408,11 +11418,28 @@ Webapp.createRadio = function (opts) {
   return Boolean(divWebapp.appendChild(newRadio));
 };
 
+Webapp.createDropdown = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+
+  var newSelect = document.createElement("select");
+
+  if (opts.optionsArray) {
+    for (var i = 0; i < opts.optionsArray.length; i++) {
+      var option = document.createElement("option");
+      option.text = opts.optionsArray[i];
+      newSelect.add(option);
+    }
+  }
+  newSelect.id = opts.elementId;
+
+  return Boolean(divWebapp.appendChild(newSelect));
+};
+
 Webapp.getText = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
   var element = document.getElementById(opts.elementId);
   if (divWebapp.contains(element)) {
-    if (element.tagName === 'INPUT') {
+    if (element.tagName === 'INPUT' || element.tagName === 'SELECT') {
       return String(element.value);
     } else if (element.tagName === 'IMG') {
       return String(element.alt);
@@ -11427,7 +11454,7 @@ Webapp.setText = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
   var element = document.getElementById(opts.elementId);
   if (divWebapp.contains(element)) {
-    if (element.tagName === 'INPUT') {
+    if (element.tagName === 'INPUT' || element.tagName === 'SELECT') {
       element.value = opts.text;
     } else if (element.tagName === 'IMG') {
       element.alt = opts.text;
