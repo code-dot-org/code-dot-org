@@ -103,18 +103,30 @@ Blockly.Css.setCursor = function(cursor, opt_svg) {
     var ruleIndex = 0;
     // Guard against empty stylesheet for tests.
     if (Blockly.Css.styleSheet_ && Blockly.Css.styleSheet_.cssRules.length > ruleIndex) {
+      // There are potentially hundreds of draggable objects.  Changing their style
+      // properties individually is too slow, so change the CSS rule instead.
       goog.cssom.replaceCssRule('', rule, Blockly.Css.styleSheet_, ruleIndex);
     }
+  }
+
+  var setCursorOnBackgroundElement = function(element) {
+    if (cursor == Blockly.Css.Cursor.OPEN) {
+      element.style.cursor = '';
+    } else {
+      element.style.cursor = cursorRuleRHS;
+    }
+  };
+
+  // There is probably only one toolbox, so just change its style property.
+  var toolboxen = document.getElementsByClassName('blocklyToolboxDiv');
+  for (var i = 0, toolbox; toolbox = toolboxen[i]; i++) {
+    setCursorOnBackgroundElement(toolbox);
   }
 
   // Set cursor on the SVG surface as well, so that rapid movements
   // don't result in cursor changing to an arrow momentarily.
   if (opt_svg) {
-    if (cursor == Blockly.Css.Cursor.OPEN) {
-      opt_svg.style.cursor = '';
-    } else {
-      opt_svg.style.cursor = cursorRuleRHS;
-    }
+    setCursorOnBackgroundElement(opt_svg);
   }
 };
 

@@ -30,6 +30,7 @@ goog.provide('Blockly.BlockSpace');
 goog.require('Blockly.ScrollbarPair');
 goog.require('Blockly.Trashcan');
 goog.require('Blockly.Xml');
+goog.require('goog.array');
 goog.require('goog.math.Coordinate');
 
 
@@ -496,17 +497,22 @@ Blockly.BlockSpace.prototype.remainingCapacity = function() {
 * Make a list of all the delete areas for this blockSpace.
 */
 Blockly.BlockSpace.prototype.recordDeleteAreas = function() {
+  this.deleteAreas_ = [];
+
   if (this.trashcan) {
+    goog.array.extend(this.deleteAreas_, this.trashcan.getRect());
     this.deleteAreaTrash_ = this.trashcan.getRect();
   } else {
     this.deleteAreaTrash_ = null;
   }
+
   if (this.flyout_) {
-    this.deleteAreaToolbox_ = this.flyout_.getRect();
-  } else if (this.toolbox_) {
-    this.deleteAreaToolbox_ = this.toolbox_.getRect();
-  } else {
-    this.deleteAreaToolbox_ = null;
+    goog.array.extend(this.deleteAreas_, this.flyout_.getRect());
+  }
+
+  if (this.blockSpaceEditor) {
+    goog.array.extend(this.deleteAreas_,
+        this.blockSpaceEditor.getDeleteAreas());
   }
 };
 
@@ -517,23 +523,27 @@ Blockly.BlockSpace.prototype.recordDeleteAreas = function() {
 * @return {boolean} True if event is in a delete area.
 */
 Blockly.BlockSpace.prototype.isDeleteArea = function(e) {
-  var isDelete = false;
   var mouseXY = Blockly.mouseToSvg(e);
   var xy = new goog.math.Coordinate(mouseXY.x, mouseXY.y);
+
+  // Update trash can visual state
+  // Might be nice to do this side-effect elsewhere.
   if (this.deleteAreaTrash_) {
     if (this.deleteAreaTrash_.contains(xy)) {
       this.trashcan.setOpen_(true);
+    } else {
+      this.trashcan.setOpen_(false);
+    }
+  }
+
+  // Check against all delete areas
+  for (var i = 0, area; area = this.deleteAreas_[i]; i++) {
+    if (area.contains(xy)) {
       this.blockSpaceEditor.setCursor(Blockly.Css.Cursor.DELETE);
       return true;
     }
-    this.trashcan.setOpen_(false);
   }
-  if (this.deleteAreaToolbox_) {
-    if (this.deleteAreaToolbox_.contains(xy)) {
-      this.blockSpaceEditor.setCursor(Blockly.Css.Cursor.DELETE);
-      return true;
-    }
-  }
+
   this.blockSpaceEditor.setCursor(Blockly.Css.Cursor.CLOSED);
   return false;
 };
