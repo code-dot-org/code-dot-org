@@ -24,7 +24,8 @@ rightbar: blank
   #error_message
 
   .form-group
-    %label.control-label{for: "event_country"} Country (optional)
+    %label.control-label{for: "event_country"} Country
+    %span.form-required-field *
     %div
       %select#event-country.form-control{name: "country_s", type: "select", required: true}
         %option{value: nil, selected: true}
@@ -43,7 +44,8 @@ rightbar: blank
           %option{value: label}= label
 
   .form-group
-    %label.control-label{for: "event-location-type"} Where was your Hour of Code event? (optional)
+    %label.control-label{for: "event-location-type"} Where was your Hour of Code event?
+    %span.form-required-field *
     %div
       %select#event-location-type.form-control{name: "event_location_type_s", type: "select", required: true}
         %option{value: nil, selected: true}
@@ -71,7 +73,8 @@ rightbar: blank
         %input#students-number-ethnicity.form-control{name: "students_number_ethnicity_i", placeholder: "", type: "text", required: true}/
 
   .form-group
-    %label.control-label{for: "students-grade-levels"} What grade levels were the students? (Choose all that apply; optional)
+    %label.control-label{for: "students-grade-levels"} What grade levels were the students? (Choose all that apply)
+    %span.form-required-field *
     %div
       %select#students-grade-levels.form-control{name: "students_grade_levels_ss", type: "select", multiple: true, required: true}
         %option{value: nil, selected: true}
@@ -79,7 +82,8 @@ rightbar: blank
           %option{value: label}= label
 
   .form-group
-    %label.control-label{for: "event-tutorials"} Which tutorial did you use? (Choose all that apply; optional)
+    %label.control-label{for: "event-tutorials"} Which tutorial did you use? (Choose all that apply)
+    %span.form-required-field *
     %div
       %select#event-tutorials.form-control{name: "event_tutorials_ss", type: "select", multiple: true, required: true}
         %option{value: nil, selected: true}
@@ -87,7 +91,8 @@ rightbar: blank
           %option{value: label}= label
 
   .form-group
-    %label.control-label{for: "event-technology"} What level of technology did you have? (optional)
+    %label.control-label{for: "event-technology"} What level of technology did you have?
+    %span.form-required-field *
     %div
       %select#event-technology.form-control{name: "event_technology_s", type: "select"}
         %option{value: nil, selected: true}
@@ -109,7 +114,8 @@ rightbar: blank
       %textarea#hoc-event-improvement.form-control{name: "event_improvement_s", placeholder: "", style: "height: 8em;"}
 
   .form-group
-    %label.control-label{for: "event-annual"} Do you think the Hour of Code should be an annual event? (optional)
+    %label.control-label{for: "event-annual"} Do you think the Hour of Code should be an annual event?
+    %span.form-required-field *
     .radio-row
       %label{class: "radio-inline"}
         %input{type: "radio", id: "event-annual-yes", name: "event_annual_s", required: true, value: "Yes"} Yes
@@ -154,7 +160,7 @@ rightbar: blank
         %input#teacher-district.form-control{name: "teacher_district_s", placeholder: "", type: "text"}/
 
   .form-group
-    %label.control-label{for: "prize-choice"} What prize would you like? (optional)
+    %label.control-label{for: "prize-choice"} What prize would you like to receive? (optional)
     .radio-row
       %label{class: "radio-inline"}
         %input{type: "radio", id: "prize-choice-dropbox", name: "prize_choice_s", value: "Dropbox"} 10 GB of Dropbox space

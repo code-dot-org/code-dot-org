@@ -8,7 +8,7 @@ class HocSurvey2014
 
     result[:event_country_s] = required stripped data[:event_country_s]
     result[:teacher_description_s] = required stripped data[:teacher_description_s]
-    result[:event_location_type_s] = stripped data[:event_location_type_s]
+    result[:event_location_type_s] = required stripped data[:event_location_type_s]
     result[:students_number_total_i] = required stripped data[:students_number_total_i]
     result[:students_number_girls_i] = required stripped data[:students_number_girls_i]
 
@@ -16,15 +16,15 @@ class HocSurvey2014
       result[:students_number_ethnicity_i] = required stripped data[:students_number_ethnicity_i]
     end
 
-    result[:students_grade_levels_ss] = stripped data[:students_grade_levels_ss]
-    result[:event_tutorials_ss] = stripped data[:event_tutorials_ss]
-    result[:event_technology_ss] = stripped data[:event_technology_ss]
+    result[:students_grade_levels_ss] = required stripped data[:students_grade_levels_ss]
+    result[:event_tutorials_ss] = required stripped data[:event_tutorials_ss]
+    result[:event_technology_ss] = required stripped data[:event_technology_ss]
     result[:event_experience_s] = required stripped data[:event_experience_s]
     result[:event_improvement_s] = stripped data[:event_improvement_s]
-    result[:event_annual_s] = stripped data[:event_annual_s]
+    result[:event_annual_s] = required stripped data[:event_annual_s]
     result[:teacher_plan_teach_cs_s] = stripped data[:teacher_plan_teach_cs]
     result[:teacher_first_year_s] = stripped data[:teacher_first_year_s]
-    result[:teacher_how_heard_ss] = stripped data[:teacher_how_heard_ss]
+    result[:teacher_how_heard_ss] = required stripped data[:teacher_how_heard_ss]
 
     if result[:teacher_how_heard_ss].class != FieldError && result[:teacher_how_heard_ss].include?('Other')
       result[:teacher_how_heard_other_s] = required stripped data[:teacher_how_heard_other_s]
