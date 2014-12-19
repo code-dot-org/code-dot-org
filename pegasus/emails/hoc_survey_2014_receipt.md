@@ -2,24 +2,18 @@
 from: 'Hadi Partovi (Code.org) <hadi_partovi@code.org>'
 subject: "Your gift code"
 ---
-<%
-  prize_choice_s = 'Skype'
-  prize_code_s = '1234'
-  country_s = 'canada'
-  grade_s = '7th'
-  event_location_s = 'private'
-  organizer_type_s = 'volunteer'
-  plan_to_teach_follow_on_course_s = 'no'
-%>
-
 ## Thank you! Use this code to redeem your gift:
 
 - Gift Type: <%= prize_choice_s %>
 - Gift Code: `<%= prize_code_s %>`
 
+<% if prize_choice_s == "Dropbox" %>
+Note: Dropbox space expires 1 year after it's applied to your account. Limit one redemption per organizer.
+<% end %>
+
 ## If you enjoyed the Hour of Code, consider going beyond
 
-<% if country_s == 'us'  && ['pre-K','1st','2nd','3rd','4th','5th','6th'].include?(grade_s) %>
+<% if event_country_s == 'United States' && ((['Pre-kindergarten','Kindergarten','1st','2nd','3rd','4th','5th','6th'] & students_grade_levels_ss).first) %>
 
 Our learning platform Code Studio offers [multiple 20-lesson courses for elementary grades](https://code.org/k5).  We offer high-quality one day weekend-workshops with computer science experts to help you get started. [Find a workshop near you](https://code.org/k5). 
 
@@ -29,14 +23,14 @@ Across all grade levels, find [student-guided learning options](https://code.org
 
 <% end %>
 
-<% if ['public','charter','private','religious','after school'].include?(event_location_s) %>
+<% if ['Public school','Public charter school','Private school','Parochial/Religious school','After school'].include?(event_location_type_s) %>
 
 ## Ask us to visit your school
 While we get asked often, we’re usually not able to speak at school assemblies, but we'd love to help *when* we can. If you’re interested in hosting a Code.org ambassador, [let us know here](http://code.org/visit) and we’ll reach out if a visit becomes possible.
 
 <% end %>
 
-<% if organizer_type_s == 'computer science teacher' || plan_to_teach_follow_on_course_s == 'yes' %>
+<% if teacher_description_s == 'Computer Science teacher' || teacher_plan_teach_cs_s == 'Yes' %>
 
 ## Add your classroom to the Code.org map
 
@@ -47,8 +41,8 @@ Step 2) If it’s not, please [add it by submitting information on your class](h
 
 <% end %>
 
-<% if country_s != 'us' %>
-## Want to get more involved in <%= country_s ? country_s : 'your country' %>?
+<% if event_country_s != 'United States' %>
+## Want to get more involved in <%= event_country_s ? event_country_s : 'your country' %>?
 [Join our international mailing list](https://docs.google.com/forms/d/1qYJFBjXRRiCchqtYunTUy7qyYwNHpUIZKAxh1T-bGL8/viewform) to be updated by our international partners, and find out how you can promote computer science education near you.
 <% end %>
 
