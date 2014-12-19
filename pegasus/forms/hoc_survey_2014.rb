@@ -27,7 +27,7 @@ class HocSurvey2014
     result[:teacher_how_heard_ss] = required stripped data[:teacher_how_heard_ss]
 
     if result[:teacher_how_heard_ss].class != FieldError && result[:teacher_how_heard_ss].include?('Other')
-      result[:teacher_how_heard_other_s] = required stripped data[:teacher_how_heard_other_s]
+      result[:teacher_how_heard_other_s] = stripped data[:teacher_how_heard_other_s]
     end
 
     if result[:event_country_s].class != FieldError && result[:event_country_s] == 'United States' && result[:event_location_type_s].class != FieldError && result[:event_location_type_s] == 'Public school'

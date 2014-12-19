@@ -27,7 +27,7 @@ rightbar: blank
     %label.control-label{for: "event_country"} Country
     %span.form-required-field *
     %div
-      %select#event-country.form-control{name: "country_s", type: "select", required: true}
+      %select#event-country.form-control{name: "event_country_s", type: "select", required: true}
         %option{value: nil, selected: true}
         %option{value: "United States"} United States
         -DB[:geography_countries].all().map{|i| i[:name_s]}.sort.each do |country|
@@ -94,7 +94,7 @@ rightbar: blank
     %label.control-label{for: "event-technology"} What level of technology did you have?
     %span.form-required-field *
     %div
-      %select#event-technology.form-control{name: "event_technology_s", type: "select"}
+      %select#event-technology.form-control{name: "event_technology_ss", type: "select"}
         %option{value: nil, selected: true}
         -HocSurvey2014.event_technologies.each  do |label|
           %option{value: label}= label
