@@ -152,6 +152,14 @@ rightbar: blank
       %div
         %input#teacher-district.form-control{name: "teacher_district_s", placeholder: "", type: "text"}/
 
+  .form-group
+    %label.control-label{for: "prize-choice"} What prize would you like? (optional)
+    .radio-row
+      %label{class: "radio-inline"}
+        %input{type: "radio", id: "prize-choice-dropbox", name: "prize_choice_s", value: "Dropbox"} 10 GB of Dropbox space
+      %label{class: "radio-inline"}
+        %input{type: "radio", id: "prize-choice-skype", name: "prize_choice_s", value: "Skype"} $10 of Skype credit
+
   %input{name:'code_s', type:'hidden', value:code}
 
   .form-group.submit-btn

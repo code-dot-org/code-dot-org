@@ -34,6 +34,8 @@ class HocSurvey2014
       result[:teacher_district_s] = stripped data[:teacher_district_s]
     end
 
+    result[:prize_choice_s] = data[:prize_choice_s]
+
     result
   end
 
