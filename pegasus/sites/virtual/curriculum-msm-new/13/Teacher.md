@@ -41,7 +41,12 @@ Booleans are the fourth and final data type that students will learn about in th
 
 # Teaching Guide
 
-### Student Materials
+## Materials, Resources and Prep
+
+### For the Teacher
+- [Lesson Slide Deck](https://docs.google.com/a/code.org/presentation/d/1pKZEo764Rrr39fVnOJkjSFRRbqA_cq_vTCxP0dpbAy4/)
+
+### For the Students
 - 3x5 cards, pens or pencils
 
 [/together]
@@ -58,7 +63,7 @@ This lesson has one new and important word:<br/>
 
 ### <a name="GetStarted"></a> 2) Booleans - True or False?
 
-What types of data have we used in Evaluation Blocks so far?
+What types of data have we used in our programs so far?
 
 - Can you think of Number values?
 - String values? Image values?
@@ -69,6 +74,7 @@ What would each of the following expressions evaluate to?
 
 <img src="oneplusfour.png" style="max-width: 100%"/><br/>
 <img src="fourdivtwo.png" style="max-width: 100%"/><br/>
+<img src="string-append.png" style="max-width: 100%"/><br/>
 <img src="circleten.png" style="max-width: 100%"/><br/>
 <img src="threelessthanfour.png" style="max-width: 100%"/>
 
