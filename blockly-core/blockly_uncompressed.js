@@ -5856,6 +5856,7 @@ goog.provide("Blockly.BlockSpace");
 goog.require("Blockly.ScrollbarPair");
 goog.require("Blockly.Trashcan");
 goog.require("Blockly.Xml");
+goog.require("goog.array");
 goog.require("goog.math.Coordinate");
 Blockly.BlockSpace = function(blockSpaceEditor, getMetrics, setMetrics) {
   this.blockSpaceEditor = blockSpaceEditor;
@@ -6116,35 +6117,32 @@ Blockly.BlockSpace.prototype.remainingCapacity = function() {
   return this.maxBlocks - this.getAllBlocks().length
 };
 Blockly.BlockSpace.prototype.recordDeleteAreas = function() {
+  this.deleteAreas_ = [];
   if(this.trashcan) {
+    goog.array.extend(this.deleteAreas_, this.trashcan.getRect());
     this.deleteAreaTrash_ = this.trashcan.getRect()
   }else {
     this.deleteAreaTrash_ = null
   }
   if(this.flyout_) {
-    this.deleteAreaToolbox_ = this.flyout_.getRect()
-  }else {
-    if(this.toolbox_) {
-      this.deleteAreaToolbox_ = this.toolbox_.getRect()
-    }else {
-      this.deleteAreaToolbox_ = null
-    }
+    goog.array.extend(this.deleteAreas_, this.flyout_.getRect())
+  }
+  if(this.blockSpaceEditor) {
+    goog.array.extend(this.deleteAreas_, this.blockSpaceEditor.getDeleteAreas())
   }
 };
 Blockly.BlockSpace.prototype.isDeleteArea = function(e) {
-  var isDelete = false;
   var mouseXY = Blockly.mouseToSvg(e);
   var xy = new goog.math.Coordinate(mouseXY.x, mouseXY.y);
   if(this.deleteAreaTrash_) {
     if(this.deleteAreaTrash_.contains(xy)) {
-      this.trashcan.setOpen_(true);
-      this.blockSpaceEditor.setCursor(Blockly.Css.Cursor.DELETE);
-      return true
+      this.trashcan.setOpen_(true)
+    }else {
+      this.trashcan.setOpen_(false)
     }
-    this.trashcan.setOpen_(false)
   }
-  if(this.deleteAreaToolbox_) {
-    if(this.deleteAreaToolbox_.contains(xy)) {
+  for(var i = 0, area;area = this.deleteAreas_[i];i++) {
+    if(area.contains(xy)) {
       this.blockSpaceEditor.setCursor(Blockly.Css.Cursor.DELETE);
       return true
     }
@@ -18094,6 +18092,7 @@ goog.require("goog.events.BrowserFeature");
 goog.require("goog.style");
 goog.require("goog.ui.tree.TreeControl");
 goog.require("goog.ui.tree.TreeNode");
+goog.require("goog.math.Rect");
 Blockly.Toolbox = function(blockSpaceEditor) {
   this.blockSpaceEditor_ = blockSpaceEditor;
   this.createDom(this.blockSpaceEditor_.svg_)
@@ -18180,6 +18179,16 @@ Blockly.Toolbox.prototype.populate_ = function() {
 };
 Blockly.Toolbox.prototype.clearSelection = function() {
   this.tree_.setSelectedItem(null)
+};
+Blockly.Toolbox.prototype.getRect = function() {
+  var BIG_NUM = 1E7;
+  if(Blockly.RTL) {
+    var svgSize = Blockly.svgSize();
+    var x = svgSize.width - this.width
+  }else {
+    var x = -BIG_NUM
+  }
+  return new goog.math.Rect(x, -BIG_NUM, BIG_NUM + this.width, 2 * BIG_NUM)
 };
 Blockly.Toolbox.TreeControl = function(toolbox, html, opt_config, opt_domHelper) {
   goog.ui.tree.TreeControl.call(this, html, opt_config, opt_domHelper);
@@ -22686,6 +22695,7 @@ Blockly.CodeGenerator.prototype.addReservedWords = function(words) {
 };
 goog.provide("Blockly.BlockSpaceEditor");
 goog.require("Blockly.BlockSpace");
+goog.require("goog.array");
 Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics) {
   if(opt_getMetrics) {
     this.getBlockSpaceMetrics_ = opt_getMetrics
@@ -22765,6 +22775,16 @@ Blockly.BlockSpaceEditor.prototype.addFlyout_ = function() {
   flyout.autoClose = false;
   goog.dom.insertSiblingBefore(flyoutSvg, this.blockSpace.svgGroup_);
   this.addChangeListener(this.flyoutBumpOrDeleteOutOfBoundsBlocks_)
+};
+Blockly.BlockSpaceEditor.prototype.getDeleteAreas = function() {
+  var deleteAreas = [];
+  if(this.flyout_) {
+    goog.array.extend(deleteAreas, this.flyout_.getRect())
+  }
+  if(this.toolbox) {
+    goog.array.extend(deleteAreas, this.toolbox.getRect())
+  }
+  return deleteAreas
 };
 Blockly.BlockSpaceEditor.prototype.flyoutBumpOrDeleteOutOfBoundsBlocks_ = function() {
   if(Blockly.Block.isDragging()) {
@@ -23320,12 +23340,19 @@ Blockly.Css.setCursor = function(cursor, opt_svg) {
       goog.cssom.replaceCssRule("", rule, Blockly.Css.styleSheet_, ruleIndex)
     }
   }
-  if(opt_svg) {
+  var setCursorOnBackgroundElement = function(element) {
     if(cursor == Blockly.Css.Cursor.OPEN) {
-      opt_svg.style.cursor = ""
+      element.style.cursor = ""
     }else {
-      opt_svg.style.cursor = cursorRuleRHS
+      element.style.cursor = cursorRuleRHS
     }
+  };
+  var toolboxen = document.getElementsByClassName("blocklyToolboxDiv");
+  for(var i = 0, toolbox;toolbox = toolboxen[i];i++) {
+    setCursorOnBackgroundElement(toolbox)
+  }
+  if(opt_svg) {
+    setCursorOnBackgroundElement(opt_svg)
   }
 };
 Blockly.Css.CONTENT = [".blocklyDraggable {", "}", "#blockly {", "  border: 1px solid #ddd;", "}", "#blockly .userHidden {", "  display: none;", "}", "#blockly.readonly .userHidden {", "  display: inline;", "}", "#blockly.readonly {", "  border: 0;", "}", "#blockly.edit .userHidden {", "  display: inline;", "  fill-opacity: 0.5;", "}", "#blockly.edit .userHidden .blocklyPath {", "  fill-opacity: 0.5;", "}", "#blockly.edit .userHidden .blocklyPathDark, #blockly.edit .userHidden .blocklyPathLight {", 
