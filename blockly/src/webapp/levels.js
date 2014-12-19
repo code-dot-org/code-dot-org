@@ -43,6 +43,7 @@ levels.ec_simple = {
     {'func': 'createButton', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
     {'func': 'createTextInput', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
     {'func': 'createTextLabel', 'category': 'UI Controls', 'params': ["'id'", "'text'", "'forId'"] },
+    {'func': 'createDropdown', 'category': 'UI Controls', 'params': ["'id'", "'option1'", "'etc'"] },
     {'func': 'getText', 'category': 'UI Controls', 'params': ["'id'"], 'type': 'value' },
     {'func': 'setText', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
     {'func': 'createCheckbox', 'category': 'UI Controls', 'params': ["'id'", "false"] },
