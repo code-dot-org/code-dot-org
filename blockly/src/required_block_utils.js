@@ -116,9 +116,11 @@ function testFromBlockInsideFunction(node) {
   });
   return {
     test: function(userBlock) {
+      // Match blocks inside a function definition
       return hasMatchingAncestor(userBlock, function(parent) {
         return !!parent.parameterNames_;
-      }) && elementsEquivalent(blockWithoutChildren, Blockly.Xml.blockToDom_(userBlock, true));
+      }) && elementsEquivalent(blockWithoutChildren,
+          Blockly.Xml.blockToDom_(userBlock, true));
     },
     blockDisplayXML: xml.serialize(blockWithoutChildren),
     message: 'Try using the block below inside a function.' // TODO: i18n
@@ -195,7 +197,9 @@ function hasMatchingAncestor(node, filter) {
  */
 function elementsEquivalent(expected, given) {
   if (!(expected instanceof Element && given instanceof Element)) {
-    // if we expect ???, allow match with anything
+    // If we expect ???, allow match with anything. Allow variable names to
+    // match any string since the student may not name vars the same (especially
+    // in other languages).
     if (expected instanceof Text) {
       var name = expected.parentNode.getAttribute('name');
       if (expected.textContent === '???' || name === 'VAR') {
