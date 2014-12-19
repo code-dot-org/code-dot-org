@@ -31,6 +31,7 @@ rightbar: blank
         %option{value: "United States"} United States
         -DB[:geography_countries].all().map{|i| i[:name_s]}.sort.each do |country|
           %option{value: country}= country unless country == 'United States'
+        %option{value: "Other"} Other
 
   .form-group
     %label.control-label{for: "teacher-description"} Which best describes you?
