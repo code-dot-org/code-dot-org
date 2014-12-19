@@ -69,6 +69,8 @@ MOOC_DEV=1 grunt build
 * `MOOC_DEV=1` builds a 'debug' version with more readable javascript
 * `grunt rebuild` does a `clean` before a `build`
 
+See also: [Full build with blockly-core](#full-build-with-blockly-core-changes)
+
 #### Running with live-reload server
 
 ```
@@ -76,9 +78,10 @@ grunt dev
 open http://localhost:8000
 ```
 
-This will serve a few sample blockly apps at [http://localhost:8000](http://localhost:8000).
-
-Note: this does not update asset files. For that, use a full `grunt build`.
+This will serve a few sample blockly apps at [http://localhost:8000](http://localhost:8000) and live-reload changes to blockly.  Caveats:
+* This does not update asset files. For that, use a full `grunt build`.
+* The live-reload server does not pick up changes to blockly-core.  For that, see [Full build with blockly-core](#full-build-with-blockly-core-changes).
+* If you get `Error: EMFILE, too many open files` while running the live-reload server (common on OSX) try increasing the OS open file limit by running `ulimit -n 1024` (and adding it to your `.bashrc`).
 
 ##### Rebuild only a single app
 
@@ -152,7 +155,7 @@ all available locales, specify `MOOC_LOCALIZE=1` in your environment when runnin
 MOOC_LOCALIZE=1 grunt rebuild
 ```
 
-Note: if you're running the `grunt dev` live-reload server and get the error `too many open files` after a localization build, try increasing the OS open file limit by running `ulimit -n 1024` (and adding it to your `.bashrc`).
+Note: Using the live-reload server with localization builds is prone to the `Error: EMFILE, too many open files` problem.  See the `ulimit` fix [under the live-reload server heading](#running-with-live-reload-server).
 
 #### Forwarding new strings on to CrowdIn
 
