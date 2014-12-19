@@ -17,7 +17,7 @@
     "impressive": "false",
     "x": "200",
     "y": "200",
-    "instructions": "Can you figure out how to draw this shape? Edit the function to include a \"sides\" parameter.",
+    "instructions": "Can you figure out how to draw this shape? Edit the function to use the \"sides\" parameter.",
     "use_contract_editor": "false",
     "embed": "false",
     "disable_sharing": "false"

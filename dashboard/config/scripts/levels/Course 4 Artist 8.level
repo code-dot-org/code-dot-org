@@ -13,13 +13,15 @@
     "y": "100",
     "free_play": "false",
     "start_direction": "90",
-    "ideal": "7",
+    "ideal": "9",
     "slider_speed": "0.7",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "impressive": "false",
-    "use_contract_editor": "false"
+    "use_contract_editor": "false",
+    "embed": "false",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
@@ -27,28 +29,35 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat" deletable="false" editable="false">
-              <title name="TIMES">3</title>
-              <statement name="DO">
-                <block type="draw_move_by_constant" deletable="false" editable="false">
-                  <title name="DIR">moveForward</title>
-                  <title name="VALUE">50</title>
-                  <next>
-                    <block type="draw_turn_by_constant" deletable="false" editable="false">
-                      <title name="DIR">turnLeft</title>
-                      <title name="VALUE">120</title>
-                    </block>
-                  </next>
-                </block>
-              </statement>
+            <block type="draw_colour" inline="true" id="draw-color" deletable="false">
+              <value name="COLOUR" deletable="false">
+                <block type="colour_random" deletable="false"/>
+              </value>
               <next>
-                <block type="draw_move_by_constant" deletable="false" editable="false">
-                  <title name="DIR">moveForward</title>
-                  <title name="VALUE">50</title>
+                <block type="controls_repeat" deletable="false" editable="false">
+                  <title name="TIMES">3</title>
+                  <statement name="DO">
+                    <block type="draw_move_by_constant" deletable="false" editable="false">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">50</title>
+                      <next>
+                        <block type="draw_turn_by_constant" deletable="false" editable="false">
+                          <title name="DIR">turnLeft</title>
+                          <title name="VALUE">120</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
                   <next>
-                    <block type="draw_turn_by_constant" deletable="false" editable="false">
-                      <title name="DIR">turnRight</title>
-                      <title name="VALUE">30</title>
+                    <block type="draw_move_by_constant" deletable="false" editable="false">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">50</title>
+                      <next>
+                        <block type="draw_turn_by_constant" deletable="false" editable="false">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE">30</title>
+                        </block>
+                      </next>
                     </block>
                   </next>
                 </block>
