@@ -175,7 +175,7 @@ class HocSurvey2014
       raise
     end
 
-    DB[:hoc_survey_prizes].where(claimant:email).first
+    DB[:hoc_survey_prizes].where(claimant:email).first[:value]
   end
 
 end
