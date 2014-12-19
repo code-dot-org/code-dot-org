@@ -24,6 +24,7 @@
 
 goog.provide('Blockly.BlockSpaceEditor');
 goog.require('Blockly.BlockSpace');
+goog.require('goog.array');
 
 /**
  * Class for a top-level block editing blockSpace.
@@ -235,6 +236,25 @@ Blockly.BlockSpaceEditor.prototype.addFlyout_ = function() {
   goog.dom.insertSiblingBefore(flyoutSvg, this.blockSpace.svgGroup_);
 
   this.addChangeListener(this.flyoutBumpOrDeleteOutOfBoundsBlocks_);
+};
+
+/**
+ * Gather and return a list of delete rectangles related to this editor.
+ * @public
+ * @return {Array.<Rect>} A list of delete area rectangles.
+ */
+Blockly.BlockSpaceEditor.prototype.getDeleteAreas = function() {
+  var deleteAreas = [];
+
+  if (this.flyout_) {
+    goog.array.extend(deleteAreas, this.flyout_.getRect());
+  }
+
+  if (this.toolbox) {
+    goog.array.extend(deleteAreas, this.toolbox.getRect());
+  }
+
+  return deleteAreas;
 };
 
 /**
