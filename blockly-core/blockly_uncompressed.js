@@ -14386,30 +14386,30 @@ Blockly.Block.prototype.onMouseDown_ = function(e) {
 Blockly.Block.prototype.onMouseUp_ = function(e) {
   var thisBlockSpace = this.blockSpace;
   Blockly.BlockSpaceEditor.terminateDrag_();
-  if(Blockly.selected && Blockly.highlightedConnection_) {
-    Blockly.localConnection_.connect(Blockly.highlightedConnection_);
-    if(this.svg_) {
-      var inferiorConnection;
-      if(Blockly.localConnection_.isSuperior()) {
-        inferiorConnection = Blockly.highlightedConnection_
-      }else {
-        inferiorConnection = Blockly.localConnection_
+  if(Blockly.selected) {
+    if(Blockly.highlightedConnection_) {
+      Blockly.localConnection_.connect(Blockly.highlightedConnection_);
+      if(this.svg_) {
+        var inferiorConnection;
+        if(Blockly.localConnection_.isSuperior()) {
+          inferiorConnection = Blockly.highlightedConnection_
+        }else {
+          inferiorConnection = Blockly.localConnection_
+        }
+        inferiorConnection.sourceBlock_.svg_.connectionUiEffect()
       }
-      inferiorConnection.sourceBlock_.svg_.connectionUiEffect()
-    }
-    if(thisBlockSpace.trashcan) {
-      thisBlockSpace.trashcan.close()
-    }
-  }else {
-    if(this.blockSpace.isDeleteArea(e)) {
-      var trashcan = thisBlockSpace.trashcan;
-      if(trashcan) {
-        goog.Timer.callOnce(trashcan.close, 100, trashcan)
+      if(thisBlockSpace.trashcan) {
+        thisBlockSpace.trashcan.close()
       }
-      if(Blockly.selected) {
-        Blockly.selected.dispose(false, true)
+    }else {
+      if(Blockly.selected.isDeletable() && thisBlockSpace.isDeleteArea(e)) {
+        var trashcan = thisBlockSpace.trashcan;
+        if(trashcan) {
+          goog.Timer.callOnce(trashcan.close, 100, trashcan)
+        }
+        Blockly.selected.dispose(false, true);
+        Blockly.fireUiEvent(window, "resize")
       }
-      Blockly.fireUiEvent(window, "resize")
     }
   }
   if(Blockly.highlightedConnection_) {
