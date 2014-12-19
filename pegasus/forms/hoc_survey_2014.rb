@@ -40,12 +40,12 @@ class HocSurvey2014
   end
   
   def self.process(data)
-    data[:prize_code_s] = claim_prize_code(data[:prize_choice_s], data[:email_s]);
+    data['prize_code_s'] = claim_prize_code(data['prize_choice_s'], data['email_s']);
     data
   end
   
   def self.receipt()
-    '2014-12-18-post-survey'
+    'hoc_survey_2014_receipt'
   end
 
   def self.teacher_descriptions()
