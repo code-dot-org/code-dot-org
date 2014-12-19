@@ -34,7 +34,7 @@ class HocSurvey2014
       result[:teacher_district_s] = stripped data[:teacher_district_s]
     end
 
-    result[:prize_choice_s] = required enum(data[:prize_choice_s].to_s.strip.downcase, ['dropbox', 'skype'])
+    result[:prize_choice_s] = required enum(data[:prize_choice_s].to_s.strip.downcase, ['dropbox', 'skype', 'none'])
 
     result
   end
