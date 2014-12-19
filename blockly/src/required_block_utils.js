@@ -123,7 +123,7 @@ function testFromBlockInsideFunction(node) {
           Blockly.Xml.blockToDom_(userBlock, true));
     },
     blockDisplayXML: xml.serialize(blockWithoutChildren),
-    message: 'Try using the block below inside a function.' // TODO: i18n
+    message: msg.errorMissingBlocksInFunction()
   };
 }
 
