@@ -165,7 +165,9 @@ class HocSurvey2014
 
   def self.claim_prize_code(type, email, params={})
     ip_address = params[:ip_address] || '127.0.0.1'
+
     type = type.downcase
+    return 'None' if type == 'none'
   
     begin
       rows_updated = DB[:hoc_survey_prizes].where(claimant:nil, type:type).limit(1).update(
