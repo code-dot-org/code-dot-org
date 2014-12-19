@@ -19,7 +19,8 @@
     "x": "150",
     "y": "225",
     "impressive": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "slider_speed": ".6"
   }
 }]]></config>
   <blocks>

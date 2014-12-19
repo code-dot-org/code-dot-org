@@ -210,7 +210,7 @@
     </required_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" movable="false" deletable="false">
+        <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat_ext" inline="true">
               <value name="TIMES">

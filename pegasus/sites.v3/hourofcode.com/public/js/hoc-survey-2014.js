@@ -5,6 +5,15 @@ $(document).ready(function() {
     plugins: ['fast_click']
   });
 
+  $('#event-country').change(function() {
+    if ($(this).val() == 'United States') {
+      $('#students-number-ethnicity-wrapper').show();
+    } else {
+      $('#students-number-ethnicity').val('');
+      $('#students-number-ethnicity-wrapper').hide();
+    }
+  }).triggerHandler('change');
+
   $('#teacher-how-heard').change(function() {
     if ($.inArray('Other', $(this).val()) > -1) {
       $('#teacher-how-heard-other-wrapper').show();
@@ -13,10 +22,26 @@ $(document).ready(function() {
       $('#teacher-how-heard-other-wrapper').hide();
     }
   }).triggerHandler('change');
+
+  $('#event-country, #event-location-type').change(function() {
+    if ($('#event-country').val() == 'United States' && $('#event-location-type' == 'Public school')) {
+      $('#teacher-district-wrapper').show();
+    } else {
+      $('#teacher-district').val('');
+      $('#teacher-district-wrapper').hide();
+    }
+  }).triggerHandler('change');
+
+
+  $( "#hoc-survey-form" ).submit(function( event ) {
+    surveyFormSubmit();
+  });
 });
 
 function surveyFormComplete(data)
 {
+  $('#hoc-survey-form').hide();
+  $('#thanks').show();
 }
 
 function surveyFormError(data)
@@ -28,7 +53,7 @@ function surveyFormError(data)
 
   for (i = 0; i < errors_count; ++i) {
     error_id = '#' + errors[i].replace(/_/g, '-');
-    error_id = error_id.replace(/-[sb]s?$/, '');
+    error_id = error_id.replace(/-[sbi]s?$/, '');
     $(error_id).parents('.form-group').addClass('has-error');
   }
 
@@ -40,7 +65,7 @@ function surveyFormError(data)
   $("#btn-submit").removeClass("button_disabled").addClass("button_enabled");
 }
 
-function signupFormSubmit()
+function surveyFormSubmit()
 {
   $("#signup_submit").attr('disabled','disabled');
 
