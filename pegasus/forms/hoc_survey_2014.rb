@@ -34,7 +34,7 @@ class HocSurvey2014
       result[:teacher_district_s] = stripped data[:teacher_district_s]
     end
 
-    result[:prize_choice_s] = required enum(data[:prize_choice_s].to_s.strip.downcase, ['dropbox', 'skype'])
+    result[:prize_choice_s] = required enum(data[:prize_choice_s].to_s.strip, ['Dropbox', 'Skype'])
 
     result
   end
@@ -42,6 +42,10 @@ class HocSurvey2014
   def self.process(data)
     data[:prize_code_s] = claim_prize_code(data[:prize_choice_s], data[:email_s]);
     data
+  end
+  
+  def self.receipt()
+    '2014-12-18-post-survey'
   end
 
   def self.teacher_descriptions()
@@ -161,6 +165,7 @@ class HocSurvey2014
 
   def self.claim_prize_code(type, email, params={})
     ip_address = params[:ip_address] || '127.0.0.1'
+    type = type.downcase
   
     begin
       rows_updated = DB[:hoc_survey_prizes].where(claimant:nil, type:type).limit(1).update(
