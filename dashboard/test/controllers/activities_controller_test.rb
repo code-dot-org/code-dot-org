@@ -26,21 +26,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     @milestone_params = {user_id: @user, script_level_id: @script_level, lines: 20, attempt: '1', result: 'true', testResult: '100', time: '1000', app: 'test', program: '<hey>'}
   end
 
-  def expect_s3_upload
-    CDO.disable_s3_image_uploads = false
-    AWS::S3.expects(:upload_to_bucket).returns(true).twice
-  end
-
-  def expect_s3_upload_failure
-    CDO.disable_s3_image_uploads = false
-    AWS::S3.expects(:upload_to_bucket).returns(nil)
-  end
-
-  def expect_no_s3_upload
-    CDO.disable_s3_image_uploads = false
-    AWS::S3.expects(:upload_to_bucket).never
-  end
-
   # Ignore any additional keys in 'actual' not found in 'expected'.
   # This allows additional keys to be added to the controller response
   # without having to update all existing test contracts.
