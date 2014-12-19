@@ -51,7 +51,7 @@ function surveyFormError(data)
 
   for (i = 0; i < errors_count; ++i) {
     error_id = '#' + errors[i].replace(/_/g, '-');
-    error_id = error_id.replace(/-[sb]s?$/, '');
+    error_id = error_id.replace(/-[sbi]s?$/, '');
     $(error_id).parents('.form-group').addClass('has-error');
   }
 
