@@ -1015,6 +1015,7 @@ Webapp.callCmd = function (cmd) {
     case 'createTextLabel':
     case 'createCheckbox':
     case 'createRadio':
+    case 'createDropdown':
     case 'getText':
     case 'setText':
     case 'getChecked':
@@ -1207,11 +1208,28 @@ Webapp.createRadio = function (opts) {
   return Boolean(divWebapp.appendChild(newRadio));
 };
 
+Webapp.createDropdown = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+
+  var newSelect = document.createElement("select");
+
+  if (opts.optionsArray) {
+    for (var i = 0; i < opts.optionsArray.length; i++) {
+      var option = document.createElement("option");
+      option.text = opts.optionsArray[i];
+      newSelect.add(option);
+    }
+  }
+  newSelect.id = opts.elementId;
+
+  return Boolean(divWebapp.appendChild(newSelect));
+};
+
 Webapp.getText = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
   var element = document.getElementById(opts.elementId);
   if (divWebapp.contains(element)) {
-    if (element.tagName === 'INPUT') {
+    if (element.tagName === 'INPUT' || element.tagName === 'SELECT') {
       return String(element.value);
     } else if (element.tagName === 'IMG') {
       return String(element.alt);
@@ -1226,7 +1244,7 @@ Webapp.setText = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
   var element = document.getElementById(opts.elementId);
   if (divWebapp.contains(element)) {
-    if (element.tagName === 'INPUT') {
+    if (element.tagName === 'INPUT' || element.tagName === 'SELECT') {
       element.value = opts.text;
     } else if (element.tagName === 'IMG') {
       element.alt = opts.text;

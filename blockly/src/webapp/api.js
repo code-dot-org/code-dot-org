@@ -147,6 +147,14 @@ exports.setChecked = function (blockId, elementId, checked) {
                            'checked': checked });
 };
 
+exports.createDropdown = function (blockId, elementId) {
+  var optionsArray = Array.prototype.slice.call(arguments, 2);
+  return Webapp.executeCmd(blockId,
+                          'createDropdown',
+                          {'elementId': elementId,
+                           'optionsArray': optionsArray });
+};
+
 exports.getText = function (blockId, elementId) {
   return Webapp.executeCmd(blockId,
                           'getText',
