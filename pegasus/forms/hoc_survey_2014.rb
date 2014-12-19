@@ -71,7 +71,7 @@ class HocSurvey2014
       'Public school',
       'Public charter school',
       'Private school',
-      'Parochial/Religious school ',
+      'Parochial/Religious school',
       'After school',
       'Camp or club',
       'Home',
