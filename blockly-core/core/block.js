@@ -606,14 +606,16 @@ Blockly.Block.prototype.onMouseUp_ = function(e) {
       // Don't throw an object in the trash can if it just got connected.
       thisBlockSpace.trashcan.close();
     }
-  } else if (this.blockSpace.isDeleteArea(e)) {
+  } else if (Blockly.selected &&
+             Blockly.selected.isDeletable() &&
+             thisBlockSpace.isDeleteArea(e)) {
+    // The ordering of the statement above is important because isDeleteArea()
+    // has a side effect of opening the trash can.
     var trashcan = thisBlockSpace.trashcan;
     if (trashcan) {
       goog.Timer.callOnce(trashcan.close, 100, trashcan);
     }
-    if (Blockly.selected) {
-      Blockly.selected.dispose(false, true);
-    }
+    Blockly.selected.dispose(false, true);
     // Dropping a block on the trash can will usually cause the blockSpace to
     // resize to contain the newly positioned block.  Force a second resize now
     // that the block has been deleted.
