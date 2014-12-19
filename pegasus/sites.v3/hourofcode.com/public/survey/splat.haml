@@ -24,7 +24,7 @@ rightbar: blank
   #error_message
 
   .form-group
-    %label.control-label{for: "event_country"} Country
+    %label.control-label{for: "event_country"} Country (optional)
     %div
       %select#event-country.form-control{name: "country_s", type: "select", required: true}
         %option{value: nil, selected: true}
@@ -41,7 +41,7 @@ rightbar: blank
           %option{value: label}= label
 
   .form-group
-    %label.control-label{for: "event-location-type"} Where was your Hour of Code event?
+    %label.control-label{for: "event-location-type"} Where was your Hour of Code event? (optional)
     %div
       %select#event-location-type.form-control{name: "event_location_type_s", type: "select", required: true}
         %option{value: nil, selected: true}
@@ -69,7 +69,7 @@ rightbar: blank
         %input#students-number-ethnicity.form-control{name: "students_number_ethnicity_i", placeholder: "", type: "text", required: true}/
 
   .form-group
-    %label.control-label{for: "students-grade-levels"} What grade levels were the students? (Choose all that apply)
+    %label.control-label{for: "students-grade-levels"} What grade levels were the students? (Choose all that apply; optional)
     %div
       %select#students-grade-levels.form-control{name: "students_grade_levels_ss", type: "select", multiple: true, required: true}
         %option{value: nil, selected: true}
@@ -77,7 +77,7 @@ rightbar: blank
           %option{value: label}= label
 
   .form-group
-    %label.control-label{for: "event-tutorials"} Which tutorial did you use? (Choose all that apply)
+    %label.control-label{for: "event-tutorials"} Which tutorial did you use? (Choose all that apply; optional)
     %div
       %select#event-tutorials.form-control{name: "event_tutorials_ss", type: "select", multiple: true, required: true}
         %option{value: nil, selected: true}
@@ -85,9 +85,9 @@ rightbar: blank
           %option{value: label}= label
 
   .form-group
-    %label.control-label{for: "event-technology"} What level of technology did you have?
+    %label.control-label{for: "event-technology"} What level of technology did you have? (optional)
     %div
-      %select#event-technology.form-control{name: "event_technology_s", type: "select", required: true}
+      %select#event-technology.form-control{name: "event_technology_s", type: "select"}
         %option{value: nil, selected: true}
         -HocSurvey2014.event_technologies.each  do |label|
           %option{value: label}= label
@@ -102,12 +102,12 @@ rightbar: blank
           %option{value: label}= label
 
   .form-group
-    %label.control-label{for: "hoc-event-improvement"} How do you think we could improve the Hour of Code?
+    %label.control-label{for: "hoc-event-improvement"} How do you think we could improve the Hour of Code? (optional)
     %div
       %textarea#hoc-event-improvement.form-control{name: "event_improvement_s", placeholder: "", style: "height: 8em;"}
 
   .form-group
-    %label.control-label{for: "event-annual"} Do you think the Hour of Code should be an annual event?
+    %label.control-label{for: "event-annual"} Do you think the Hour of Code should be an annual event? (optional)
     .radio-row
       %label{class: "radio-inline"}
         %input{type: "radio", id: "event-annual-yes", name: "event_annual_s", required: true, value: "Yes"} Yes
@@ -115,7 +115,7 @@ rightbar: blank
         %input{type: "radio", id: "event-annual-no", name: "event_annual_s", required: true, value: "No"} No
 
   .form-group
-    %label.control-label{for: "teacher-plan-teach-cs"} Do you plan to teach a longer computer science or coding course in your classroom?
+    %label.control-label{for: "teacher-plan-teach-cs"} Do you plan to teach a longer computer science or coding course in your classroom? (optional)
     .radio-row
       %label{class: "radio-inline"}
         %input{type: "radio", id: "teacher-plan-teach-cs-yes", name: "teacher_plan_teach_cs_s", required: true, value: "Yes"} Yes
@@ -123,7 +123,7 @@ rightbar: blank
         %input{type: "radio", id: "teacher-plan-teach-cs-no", name: "teacher_plan_teach_cs_s", required: true, value: "No"} No
 
   .form-group
-    %label.control-label{for: "teacher-first-year"} Will this be your first year teaching computer science?
+    %label.control-label{for: "teacher-first-year"} Will this be your first year teaching computer science? (optional)
     .radio-row
       %label{class: "radio-inline"}
         %input{type: "radio", id: "teacher-first-year-yes", name: "teacher_first_year_s", required: true, value: "Yes"} Yes
@@ -147,7 +147,7 @@ rightbar: blank
 
   .form-group
     #teacher-district-wrapper{style: "display: none;"}
-      %label.control-label{for: "teacher-district"} What school district do you teach in?
+      %label.control-label{for: "teacher-district"} What school district do you teach in? (optional)
       %div
         %input#teacher-district.form-control{name: "teacher_district_s", placeholder: "", type: "text"}/
 
