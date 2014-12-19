@@ -17,6 +17,13 @@ subject: "Your gift code"
 - Gift Type: <%= prize_choice_s %>
 - Gift Code: `<%= prize_code_s %>`
 
+<% if prize_choice_s == "Dropbox" %>
+
+Note: Dropbox space expires 1 year after it's applied to your account. Limit one redemption per organizer.
+
+<% end %>
+
+
 ## If you enjoyed the Hour of Code, consider going beyond
 
 <% if country_s == 'us'  && ['pre-K','1st','2nd','3rd','4th','5th','6th'].include?(grade_s) %>
