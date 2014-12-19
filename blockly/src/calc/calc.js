@@ -131,16 +131,15 @@ Calc.init = function(config) {
         config.forceInsertTopBlock);
     }
 
-    generateTargetExpressions(solutionBlocks);
+    appState.targetExpressions = generateExpressionsFromBlockXml(solutionBlocks);
 
-    // todo - shareable code here?
     _.keys(appState.targetExpressions).sort().forEach(function (name, index) {
       var expression = appState.targetExpressions[name];
-      var tokenList = expression.getTokenListDiff(expression);
+      var tokenList = expression.getTokenList(false);
       if (name === COMPUTE_NAME) {
         name = null;
       }
-      addTokenList('answerExpression', tokenList, index, undefined, name);
+      displayEquation('answerExpression', name, tokenList, index);
     });
 
     // Adjust visualizationColumn width.
@@ -205,7 +204,11 @@ function evalCode (code) {
   }
 }
 
-// todo - comment new functions
+/**
+ * Generate a set of expressions from the blocks currently in the workspace.
+ * Returns an object in which keys are expression names (or COMPUT_NAME for
+ * the base expression), and values are the expressions
+ */
 function generateExpressionsFromTopBlocks() {
   var obj = {};
 
@@ -217,7 +220,12 @@ function generateExpressionsFromTopBlocks() {
   return obj;
 }
 
-function generateTargetExpressions(blockXml) {
+/**
+ * Given some xml, generates a set of expressions by loading the xml into the
+ * workspace and calling generateExpressionsFromTopBlocks. Fails if there are
+ * already blocks in the workspace.
+ */
+function generateExpressionsFromBlockXml(blockXml) {
   if (blockXml) {
     if (Blockly.mainBlockSpace.getTopBlocks().length !== 0) {
       throw new Error("generateTargetExpression shouldn't be called with blocks" +
@@ -227,27 +235,28 @@ function generateTargetExpressions(blockXml) {
     BlocklyApps.loadBlocks(blockXml);
   }
 
-  appState.targetExpressions = generateExpressionsFromTopBlocks();
+  var obj = generateExpressionsFromTopBlocks();
 
   Blockly.mainBlockSpace.getTopBlocks().forEach(function (block) {
     block.dispose();
   });
+
+  return obj;
 }
 
-
-// todo - unit test
+// todo (brent) : would this logic be better placed inside the blocks?
+// todo (brent) : could use some unit tests
 function getEquationFromBlock(block) {
   if (!block) {
     return null;
   }
-  // todo - does this logic belong on blocks instead?
+  var firstChild = block.getChildren()[0];
   switch (block.type) {
     case 'functional_compute':
-      var child = block.getChildren()[0];
-      if (!child) {
+      if (!firstChild) {
         return new ExpressionNode(0);
       }
-      return getEquationFromBlock(child);
+      return getEquationFromBlock(firstChild);
     case 'functional_plus':
     case 'functional_minus':
     case 'functional_times':
@@ -290,7 +299,8 @@ function getEquationFromBlock(block) {
       if (block.isVariable()) {
         return {
           name: block.getTitleValue('NAME'),
-          expression: getEquationFromBlock(block.getChildren()[0]).expression
+          expression: firstChild ? getEquationFromBlock(firstChild).expression :
+            new ExpressionNode(0)
         };
       }
       throw new Error('not sure if this works yet');
@@ -319,13 +329,12 @@ Calc.execute = function() {
     }
   });
 
-  // todo - validate what happens if we have a function and empty compute
   var hasVariablesOrFunctions = _.keys(appState.userExpressions).length > 1;
   if (level.freePlay) {
     appState.result = true;
     appState.testResults = BlocklyApps.TestResults.FREE_PLAY;
   } else {
-    // todo - single place where we get single target/user
+    // todo -  should we have single place where we get single target/user?
     var user = appState.userExpressions[COMPUTE_NAME];
     var target = appState.targetExpressions[COMPUTE_NAME];
 
@@ -367,7 +376,7 @@ Calc.execute = function() {
       if (name === COMPUTE_NAME) {
         name = null;
       }
-      addTokenList('userExpression', tokenList, index, 'errorToken', name);
+      displayEquation('userExpression', name, tokenList, index, 'errorToken');
     });
     timeoutList.setTimeout(function () {
       stopAnimatingAndDisplayFeedback();
@@ -441,7 +450,7 @@ function animateUserExpression (numSteps) {
     } else {
       tokenList = current.getTokenList(false);
     }
-    addTokenList('userExpression', tokenList, currentDepth, 'markedToken');
+    displayEquation('userExpression', null, tokenList, currentDepth, 'markedToken');
     previous = current.clone();
     if (current.collapse()) {
       currentDepth++;
@@ -457,8 +466,15 @@ function animateUserExpression (numSteps) {
   return finished;
 }
 
-// todo - cleanup argument order
-function addTokenList(parentId, tokenList, depth, markClass, name) {
+/**
+ * Append a tokenList to the given parent element
+ * @param {string} parentId Id of parent element
+ * @param {string} name Name of the function/variable. Null if base expression.
+ * @param {Array<Object>} tokenList A list of tokens, representing the expression
+ * @param {number} line How many lines deep into parent to display
+ * @param {string} markClass Css class to use for 'marked' tokens.
+ */
+function displayEquation(parentId, name, tokenList, line, markClass) {
   var parent = document.getElementById(parentId);
 
   var g = document.createElementNS(Blockly.SVG_NS, 'g');
@@ -468,10 +484,6 @@ function addTokenList(parentId, tokenList, depth, markClass, name) {
   if (name) {
     len = addText(g, (name + ' = '), xPos, null);
     xPos += len;
-    // todo - share code with loop?
-    // text = document.createElementNS(Blockly.SVG_NS, 'text');
-    // text.textContent = name + ' = ';
-    // g.appendChild(text);
   }
 
   for (var i = 0; i < tokenList.length; i++) {
@@ -481,10 +493,13 @@ function addTokenList(parentId, tokenList, depth, markClass, name) {
 
   // todo (brent): handle case where expression is longer than width
   var xPadding = (CANVAS_WIDTH - g.getBoundingClientRect().width) / 2;
-  var yPos = (depth * 20);
+  var yPos = (line * 20);
   g.setAttribute('transform', 'translate(' + xPadding + ', ' + yPos + ')');
 }
 
+/**
+ * Add some text to parent element at given xPos with css class className
+ */
 function addText(parent, str, xPos, className) {
   var text, textLength;
   text = document.createElementNS(Blockly.SVG_NS, 'text');
