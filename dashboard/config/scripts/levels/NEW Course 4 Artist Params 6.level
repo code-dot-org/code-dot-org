@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you draw these shapes by filling in the \"???\" The square and triangle are 100 pixels in size while the hexagon is 75 pixels in size. ",
+    "instructions": "Fill in the \"length\" parameter to you draw these shapes by filling in the \"???\" The square and triangle are 100 pixels in size while the hexagon is 75 pixels in size. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",
