@@ -40,6 +40,8 @@ $(document).ready(function() {
 
 function surveyFormComplete(data)
 {
+  $('#hoc-survey-form').hide();
+  $('#thanks').show();
 }
 
 function surveyFormError(data)
