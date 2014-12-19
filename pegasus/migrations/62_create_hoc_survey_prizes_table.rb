@@ -12,6 +12,6 @@ Sequel.migration do
   end
 
   down do
-    drop_table(:hoc_survey_prizes)
+    drop_table? :hoc_survey_prizes
   end
 end

@@ -560,14 +560,14 @@ SQL
 
       update = {}
       update[:started_at] = time_now unless user_script.started_at
-      update[:last_progress_at] = time_now unless user_script.last_progress_at
+      update[:last_progress_at] = time_now 
 
       if !user_script.completed_at && user_script.check_completed?
         update[:completed_at] = time_now
       end
 
       # update_all bypasses validations/transactions/etc
-      UserScript.where(id: user_script.id).update_all(update) unless update.empty?
+      UserScript.where(id: user_script.id).update_all(update)
     end
   end
 
