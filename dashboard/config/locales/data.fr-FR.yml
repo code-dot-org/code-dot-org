@@ -88,7 +88,7 @@
         Farmer2: Le Fermier 2
         Unplug8: Abstraction
         Artist4: L'Artiste 4
-        Unplug9: Relayer la programmation
+        Unplug9: Les relais
         Farmer3: Le Fermier 3
         Unplug10: La Toile
         Artist5: L'Artiste 5
@@ -122,9 +122,9 @@
     level:
       instructions:
         maze_2_2: 'Peux-tu m''aider à attraper le vilain cochon ? Assemble deux blocs
-          « avancer » et clique sur « Démarrer » pour m''aider à y arriver. '
+          « avancer plus » et clique sur « Démarrer » pour m''aider à y arriver. '
         maze_2_1: Ce cochon me hérisse les plumes. Aide-moi à l'atteindre !
-        maze_2_2_5: Trace le chemin et amène-moi à ce stupide cochon. Évite les explosifs
+        maze_2_2_5: Trouve un chemin et amène-moi à ce stupide cochon. Évite les explosifs
           ou les plumes vont voler !
         maze_2_3: Guide-moi jusqu'à cette maudite créature verte ! (Fais attention
           aux explosifs…)
@@ -141,7 +141,7 @@
           blocs : avancer, avancer, tourner.'
         maze_2_9: 'OK, essaie le nouveau bloc « répéter jusqu''à » : il se répétera
           jusqu''à ce que j''atteigne l''ennuyeux cochon.'
-        maze_2_10: OK, une dernière fois pour s'entraîner. Peux-tu résoudre celui-ci
+        maze_2_10: OK, une dernière fois pour s'entraîner. Peux-tu résoudre ce puzzle
           à l'aide de seulement 4 blocs ?
         maze_2_11: Chère personne. Moi zombie. Moi faim. Doit… attraper… tournesol…
           Peux-tu m'y amener avec seulement 5 blocs ?
@@ -151,10 +151,11 @@
           pour tourner. Remarque : tu n''as qu''un bloc à ajouter, mais regarde bien
           comment les blocs sont disposés afin que tu puisses les remettre en place
           tout seul la prochaine fois.'
-        maze_2_14: OK, c'est la même chose que tout à l'heure, mais tu dois te rappeler
-          comment tu as utilisé le bloc « si » et le bloc « répéter » ensemble.
+        maze_2_14: OK, c'est la même chose que le puzzle précédent, mais tu dois te
+          rappeler de comment tu as utilisé le bloc « si » et le bloc « répéter »
+          ensemble.
         maze_2_15: Moi vouloir tournesol ! Utilise un bloc « si » pour m'y envoyer
-          avec le plus petit nombre de blocs.
+          avec le moins de blocs.
         maze_2_16: OK, nous allons le refaire encore une fois pour nous entraîner.
           Ce n'est pas très différent, mais attention aux plantes carnivores !
         maze_2_17: Les blocs « si-sinon » testent une condition et exécutent le premier
@@ -561,36 +562,33 @@
         studio_c3_game_6: Peux-tu ajouter des blocs pour changer l'arrière-plan et
           la vitesse du manchot, puis le déplacer avec les flèches jusqu'à ce que
           tu marques un point ?
-        studio_c3_game_7: Créer votre propre jeu. Lorsque vous avez terminé, cliquez
-          sur Terminer pour permettre à vos amis de jouer à votre histoire sur leur
-          téléphone.
-        studio_playlab_1: Peux-tu faire dire « Bonjour » à ce chien ?
-        studio_playlab_2: Peux-tu faire dire quelque chose au chien puis faire parler
-          le chat juste après ?
-        studio_playlab_3: Peux-tu écrire un programme pour que ce chien se déplace
-          jusqu'au chat?
-        studio_playlab_4: Peux-tu écrire un programme qui déplace le chien jusqu'au
-          chat, et qui fait dire « Bonjour » au chat lorsque le chien l'atteint ?
-        studio_playlab_5: Peux-tu écrire un programme pour faire dire « Bonjour »
-          à la pieuvre lorsque l'on clique dessus ?
-        studio_playlab_6: Peux-tu écrire un programme qui déplace ce manchot sur chacun
-          des drapeaux d'arrivée, en utilisant les touches fléchées du clavier haut
-          ↑, bas ↓, gauche ← et droite → ?
-        studio_playlab_7: Le bloc « répéter à l'infini » permet d'exécuter du code
-          en continu. Peux-tu assembler les blocs qui vont permettre à ce dinosaure
-          de se déplacer vers le haut et vers le bas sans qu'il s'arrête jamais ?
-        studio_playlab_8: Peux-tu ajouter un bloc qui marque un point lorsque le manchot
-          croise la pieuvre, puis le déplacer avec les flèches jusqu'à ce que tu marques
-          un point ?
+        studio_c3_game_7: Crée ton propre jeu. Quand tu as fini, clic sur Terminer
+          pour laisser tes amis essayer ton jeu sur leur téléphone.
+        studio_playlab_1: Pingouin souhaite te dire "bonjour" - peux tu l'aider?
+        studio_playlab_2: L'Homme des cavernes (acteur 1)  and la Femme des cavernes
+          (acteur 2) aimeraient se dire "bonjour". Peux tu les aider en utilisant
+          le bloc "dit" deux fois?
+        studio_playlab_3: Peux-tu aider Mademoiselle Tennis à rejoindre le drapeau
+          ?
+        studio_playlab_4: Peux-tu aider Monsieur Tennis (acteur 1) à rejoindre Mademoiselle
+          Tennis (acteur 2) et à jouer un son lorsqu'il y arrive ?
+        studio_playlab_5: Peux tu aider le Robot spatial à dire "salutations terriens"
+          lorsque l'on clic? N'oublie pas de cliquer après avoir cliqué sur Cours
+        studio_playlab_6: Peux tu aider la Sorcière à se déplacer avec les flèches
+          haut/bas/droite/gauche pour récupérer toutes les boules de feu magiques?
+        studio_playlab_7: Le bloc "répéter pour toujours" permet d'exécuter du code
+          en continu. Peux-tu y attacher des blocs pour aider le magicien à se déplacer
+          vers la droite et vers la gauche alternativement ?
+        studio_playlab_8: Peux-tu ajouter un bloc pour ajouter un point au score et
+          un autre pour jouer un son quand la licorne percute le magicien, et  déplace-la
+          à l'aide des flèches jusqu'à marquer à nouveau ?
         studio_playlab_9: Peux-tu ajouter des blocs pour changer l'arrière-plan et
           la vitesse du manchot, puis le déplacer avec les flèches jusqu'à ce que
           tu marques un point ?
-        studio_playlab_10: Créer votre propre jeu. Lorsque vous avez terminé, cliquez
-          sur Terminer pour permettre à vos amis de jouer à votre histoire sur leur
-          téléphone.
-        studio_full_sandbox: Créer votre propre jeu. Lorsque vous avez terminé, cliquez
-          sur Terminer pour permettre à vos amis de jouer à votre histoire sur leur
-          téléphone.
+        studio_playlab_10: Crée ton propre jeu. Quand tu as fini, clic sur Terminer
+          pour laisser tes amis essayer ton jeu sur leur téléphone.
+        studio_full_sandbox: Crée ton propre jeu. Quand tu as fini, clic sur Terminer
+          pour laisser tes amis essayer ton jeu sur leur téléphone.
         studio_k1_1: Peux-tu faire dire « Bonjour » à ce chien ?
         studio_k1_2: Peux-tu faire dire quelque chose au chien puis faire parler le
           chat juste après ?
@@ -618,133 +616,143 @@
         maze_wordsearch_k_20: C'est un test ! Déplace-moi dans une direction, puis
           une autre, pour épeler le mot HISTOIRE
         webapp_ec_simple: Créer votre appli en ligne grâce à createHtmlBlock.
-        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
-          it in the new "penColour" block.'
-        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
-          a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
-          Have fun!'
-        studio_ec_sandbox: Create your own game. When you're done, click Finish to
-          let friends try your game on their phones.
+        turtle_ec_1_2: 'Maintenant, dessinez un carré. NOTE: utilisez votre couleur
+          préferrée en la choisissant dans le nouveau block "penColor".'
+        turtle_ec_1_10: 'Bien joué ! Maintenant, dessinez ce que vous voulez. Quelques
+          idées plaisantes: un bonhomme allumette, flocon de neige ou une spirale.
+          Essayez également le nouveau "penWidth" block. Amusez-vous bien !'
+        studio_ec_sandbox: Crée ton propre jeu. Quand tu as fini, clic sur Terminer
+          pour laisser tes amis essayer ton jeu sur leur téléphone.
     levelbuilder:
       frozen line:
-        instructions: Bonjour ! Je suis Elsa d'Arendelle. Aider moi à créer une ligne.
+        instructions: Salut ! Je suis Elsa de Arendelle. Aide moi à créer une ligne.
       frozen perpendicular:
         instructions: Maintenant, voyons si nous pouvons créer deux lignes qui sont
-          à un angle de 90 degrés entre elles. Vous aurez besoin d'utiliser le bloc
-          « Tourner » ainsi que le bloc « Déplacer ».
+          à un angle de 90 degrés entre elles. Tu auras besoin d'utiliser le bloc
+          « Tourner » ainsi que le bloc « Avancer/Reculer ».
       frozen square iterative:
-        instructions: Il semble que nous sommes à mi-chemin pour faire un carré. Nous
+        instructions: Il semble que nous soyons à mi-chemin pour faire un carré. Nous
           allons mettre 4 lignes ensemble pour créer un carré.
       frozen square loop:
         instructions: Salut, je suis Anna de Arendelle ! Faisons un carré avec le
           bloc « Répéter », qui utilise moins de blocs. Combien de fois (???) le bloc
-          « Répéter » devrait boucler les blocs à l'intérieur pour faire un carré
-          ?
+          « Répéter » devrait répéter les blocs qu'il a à l'intérieur pour faire un
+          carré ?
       frozen square loop 3x:
-        instructions: Créons trois carrés, en tournant après chaque carré. N'oubliez
-          pas de tourner de 120 degrés avant chaque nouveau carré.
+        instructions: Créons trois carrés, en tournant après chaque carré. Fais en
+          sorte de tourner de 120 degrés avant chaque nouveau carré.
       frozen square snowflake:
-        instructions: Pouvez-vous créer un flocon de neige en utilisant le bloc «
-          Répéter » pour faire 10 fois un carré et le bloc « Tourner » pour tourner
-          de 36 degrés entre chaque carré ?
+        instructions: Peux-tu créer un flocon de neige en utilisant le bloc « Répéter
+          » pour faire 10 fois un carré et le bloc « Tourner » pour tourner de 36
+          degrés entre chaque carré ?
       frozen cross:
-        instructions: Use the "Repeat" block to create a plus sign. Did you notice
-          Elsa can move forward and backward?
+        instructions: Utilise le bloc « Répéter » pour créer un signe plus. As-tu
+          remarqué qu'Elsa peut avancer et reculer ?
       frozen cross rotate:
-        instructions: Now try repeating it 10 times. How many degrees do you need
-          to turn between each line?
+        instructions: Maintenant, essaye de le répéter 10 fois. De combien de degrés
+          dois-tu tourner entre chaque ligne ?
       frozen cross rotate dense:
-        instructions: 'Let''s repeat it 90 times! How many times does 90 go into 360?
-          Hint: It''s a really small number.'
+        instructions: 'Nous allons le répéter 90 fois ! Combien de fois 90 va-t-il
+          dans 360 ? Indice : C''est un très petit nombre.'
       frozen diamond:
-        instructions: 'Let''s create a parallelogram. It''s just like a square but
-          has different angles: 60 and 120 degree angles instead of 90 degree angles.'
+        instructions: 'Nous allons créer un parallélogramme. C''est comme un carré
+          mais avec des anges différents : les angles sont de 60 et 120 degrés au
+          lieu de 90 degrés.'
       frozen diamond mini snowflake:
-        instructions: Did you know every snowflake is a different shape? Let's create
-          a new snowflake by using the "Repeat" block to repeat a parallelogram 4
-          times, turning right by 90 degrees between each parallelogram.
+        instructions: Savais-tu que chaque flocon de neige a une forme différente
+          ? Créons un nouveau flocon de neige en utilisant le bloc « Répéter » pour
+          répéter un parallélogramme 4 fois, en tournant à droite de 90 degrés entre
+          chaque parallélogramme.
       frozen diamond snowflake:
-        instructions: Now, let's create a new snowflake by using the repeat block
-          to repeat a parallelogram 10 times, turning right by 36 degrees between
-          each one.
+        instructions: Maintenant, créons un nouveau flocon de neige en utilisant le
+          bloc « Répéter » pour répéter un parallélogramme 10 fois, en tournant à
+          droite de 36 degrés entre chaque.
       frozen circle:
-        instructions: A circle is a special shape. Can you figure out what number
-          to replace the question marks with to draw a circle?
+        instructions: Un cercle est une forme spéciale. Sauras-tu deviner quel nombre
+          devrait remplacer les points d'interrogation pour pouvoir dessiner un cercle
+          ?
       frozen circle function:
-        instructions: Use the new "Create a circle" block to create 10 overlapping
-          circles. Don't forget to jump forward between circles.
+        instructions: Utilise le nouveau bloc « Créer un cercle » pour créer 10 cercles
+          superposés. N'oublie pas de sauter en avant entre les cercles.
       frozen circle function in circle:
-        instructions: Now let's create 20 overlapping circles, turning 18 degrees
-          between each circle.
+        instructions: Maintenant nous allons créer 20 cercles superposés, en tournant
+          de 18 degrés entre chaque cercle.
       frozen circle function with parameter:
-        instructions: Here's a "Create circle" block that can make circles of different
-          sizes. Can you use this to create a small circle of size 5 and a larger
-          circle of size 10?
+        instructions: Voici un bloc « Créer un cercle » qui peut faire des cercles
+          de différentes tailles. Peux-tu l'utiliser pour créer un petit cercle de
+          taille 5 et un plus grand cercle de taille 10 ?
       frozen snowflower:
-        instructions: Intricate snow patterns can be created with very simple shapes.
-          Can you make a pattern by repeating 5 circles of size 5 and 5 circles of
-          size 10?
+        instructions: À partir de formes simples, on peut créer des motifs complexes
+          dans la neige. Peux-tu faire un motif en répétant 5 cercles de taille 5
+          et 5 cercles de taille 10 ?
       frozen snowflake branch:
-        instructions: Try using the "Create a snowflake branch" block to create three
-          branches, which starts to look like a snowflake.
+        instructions: Essaye d'utiliser le bloc « créer une branche de flocon » pour
+          créer trois branches. Cela commence à ressembler à un flocon de neige.
       frozen snowflake full:
-        instructions: Now let's repeat it 8 times to make a beautiful snowflake!
+        instructions: Maintenant nous allons le répéter 8 fois pour faire un beau
+          flocon de neige !
       frozen freeplay:
-        instructions: You've officially become a master artist! Create a winter wonderland.
+        instructions: Tu es devenu officiellement un maître dans l'art ! Crée un pays
+          des merveilles hivernal.
       scrat 16:
-        instructions: Acorn! Acorn! Acorn! Use an "if" block to get me there with
-          the fewest number of blocks.
+        instructions: Un gland ! Un gland ! Un gland ! Utilise un bloc « Si » pour
+          m'y conduire avec le plus petit nombre de blocs.
       scrat 17:
-        instructions: Ok, let's do that again for practice - this isn't very different,
-          but watch out for the wall!
+        instructions: Ok, recommençons pour s'entraîner ! Ce n'est pas très différent,
+          mais attention à ne pas tomber dans l'eau !
       scrat 18:
-        instructions: The "If-else" blocks checks a condition, and then does one thing
-          OR another. To get me to the acorn try to use this new block.
+        instructions: Le bloc « Si-Sinon » teste une condition, puis fait une chose
+          OU une autre. Pour me conduire au gland, essaye d'utiliser ce nouveau bloc.
       scrat 19:
         instructions: Encore un exercice avec le bloc « si-sinon ». Peux-tu y arriver
           dès le premier essai ?
       scrat 20:
-        instructions: Can you add just 3 blocks to help me solve a more complex maze?
-          If you do it right, I can walk any curvy path no matter the length. Hurry!
-          The ice is melting!
+        instructions: Peux-tu m'aider à résoudre un labyrinthe plus complexe en ajoutant
+          seulement 3 blocs ? Si tu le fais bien, je peux suivre n'importe quel chemin
+          sinueux, quel que soit sa longueur. Vite ! La glace est en train de fondre
+          !
       Standalone_Artist_1:
-        instructions: Welcome to Artist! First off, let's try to make a simple square
-          using the turn right block and move forward block. Each side should be 100
-          pixels long.
+        instructions: Bienvenue à l'artiste ! Tout d'abord, nous allons essayer de
+          faire un simple carré en utilisant le bloc "tourner à droite" et le bloc
+          "avancer". Chaque côté devra être de 100 pixels de long.
       Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel
-          long sides.
+        instructions: Dessine ce diamand avec des angles de 120 et 60 degrés ainsi
+          que des côtés de 150 pixels de long.
       Standalone_Artist_3:
-        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree
-          turns?
+        instructions: Pouvez-vous dessiner cet hexagone avec des côtés de 100 pixels
+          et des tournants de 60 degrés?
       Standalone_Artist_4:
-        instructions: Now you've got a new block to play with, the loop. This will
-          repeat a set of commands. What happens if you loop these commands 6 times?
+        instructions: 'Maintenant vous avez un nouveau bloc avec lequel jouer: la
+          boucle. Ceci répétera un ensemble de commandes. Que se passe-t-il si vous
+          répétez en boucle ces commandes 6 fois ?'
       Standalone_Artist_5:
-        instructions: How many times do you need to loop this diamond to draw the
-          flower?
+        instructions: Combien de fois vous faut-il boucler ce diamant pour dessiner
+          la fleur ?
       Standalone_Artist_5.5:
-        instructions: 'Notice how we simplified the diamond code by turning it into
-          a loop. You can loop that whole sequence 12 times to draw the flower. Hint:
-          You''ll need to turn 30 degrees after your diamond loop so you don''t keep
-          drawing over the same diamond.'
+        instructions: 'Remarquez comment nous avons simplifié le code du diamant en
+          le transformant en un boucle. Vous pouvez répéter en boucle la séquence
+          totale 12 fois pour dessiner la fleur. Astuce: Vous devrez tourner de 30
+          degrés après votre boucle diamant afin de ne pas continuer à dessiner sur
+          le même diamant.'
       Standalone_Artist_6:
-        instructions: 'Loop this hexagon code 6 times to create the design. How many
-          degrees will you need to turn each time? Hint: divide the number of degrees
-          in a circle by the number of times you are looping.'
+        instructions: 'Répetez en boucle ce code hexagon 6 fois pour créer le design.
+          De combien de degrés vous faudra-t-il tourner à chaque fois ? Astuce: divisez
+          le nombre de degrés dans un cercle par le nombre de fois que vous bouclez.'
       Standalone_Artist_7:
-        instructions: 'A function is another programming tool to help you avoid repeating
-          yourself. This function draws a flower, so you can use it any time you want
-          to draw a flower. Use this and the new jump block to draw these flowers.
-          Hint: The flowers are 150 pixels apart'
+        instructions: 'Une fonction est un autre outil de programmation qui vous permet
+          d''éviter de vous répéter. Cette fonction dessine une fleur, vous pouvez
+          ainsi l''utiliser quand vous le souhaitez pour dessiner une fleur. Utilisez-là
+          ainsi que le nouveau bloc saut pour dessiner cette fleur. Astuce: Les fleurs
+          sont séparées de 150 pixels'
       Standalone_Artist_8:
-        instructions: Here's a function called "Draw a shape" that we've programmed
-          to draw hexagons. Run the code to see what it does and then experiment with
-          the function to see what happens. Can you make it draw a pattern of squares,
-          triangles, or octagons?
+        instructions: Voici une fonction appelée « Dessiner une forme » que nous avons
+          programmée pour dessiner des hexagones. Exécutez le code pour voir ce qu'il
+          fait et puis essayez avec la fonction pour voir ce qui se passe. Pouvez-vous
+          le faire dessiner un motif de carrés, triangles ou octogones ?
       Standalone_Artist_9:
-        instructions: Now go ahead and make whatever picture you'd like! You've even
-          got an empty function that you can make do whatever you want!
+        instructions: Maintenant, continuez et faites toutes les images dont vous
+          avez envie ! Vous avez même une fonction vide dont vous pouvez faire faire
+          ce que vous voulez !
     video:
       name:
         maze_intro: Intro au Labyrinthe
@@ -769,17 +777,17 @@
         Unplug6: Instructions conditionnelles
         Unplug7: Écriture de chansons
         Unplug8: Abstraction
-        Unplug9: Relay programming
+        Unplug9: Les relais
         Unplug10: Internet
         Unplug11: Résumé et ouverture
         C1_happy_maps_unplugged: Happy Maps
-        C1_moveitmoveit_unplugged: Move It, Move It
+        C1_moveitmoveit_unplugged: Déplacez le, déplacez le
         C1_bigevent_unplugged: Le Grand Evénement
         C1_getting_loopy: Getting Loopy
         C1_pair_programming: Programmation à deux
-        C1_maze_intro_sequencing: Maze Sequencing Intro
-        C1_maze_debugging: Maze Debugging
-        C1_bee_level_intro: Bee Level - Intro
+        C1_maze_intro_sequencing: Introduction au séquencement du labyrinthe
+        C1_maze_debugging: Debuggage du labyrinthe
+        C1_bee_level_intro: Niveau abeille - Introduction
         C1_artist_intro: Introduction à l'Artiste
         C1_spelling_bee_intro: Spelling Bee Intro
         C1_zuck_repeat_loop: Labyrinthe et boucles
@@ -793,17 +801,17 @@
         C2_artist_intro: Introduction à l'Artiste
         C2_zuck_repeat_loop: Labyrinthe et boucles
         C2_artist_loops: Boucles d'artiste
-        C2_artist_debugging: Artist Debugging
+        C2_artist_debugging: Artiste et le débogage
         C2_bee_loops: Abeilles et boucles
-        C2_bee_debugging: Abeilles et debugging
+        C2_bee_debugging: Abeilles et débogage
         C2_bee_conditionals: Abeilles et instructions conditionnelles
         C2_playlab_createstory: Jouer au Labo - Créer une Histoire
         C2_graph_paper: Programmation sur papier quadrillé
         C2_conditionals_with_cards: Instructions conditionnelles
         C2_binary_bracelets: Bracelets binaires
-        C2_relay_programming: Relayer la programmation
+        C2_relay_programming: Les relais
         C2_paper_airplanes: Avions en papier
-        C2_digital_footprint: Your Digital Footprint
+        C2_digital_footprint: Votre empreinte numérique
         C3_maze_level_4: Labyrinthe et boucles
         C3_artist_intro: Introduction à l'Artiste
         C3_artist_functions: 'Artiste : les fonctions'
@@ -822,17 +830,31 @@
         C3_crowdsourcing: Financement participatif
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Composition de chansons avec réglages
-        C4_artist_math: Programming the Artist with Math
-        C4_create_functions: Creating Functions
-        C4_edit_functions: Editing Functions
+        C4_intro: Introduction
+        C4_bee_conditional: Abeilles et instructions conditionnelles
+        C4_variables_artist: 'Artiste : variables'
+        C4_variables_playlab: Variables - Labo
         C4_for_loops: For Loops
-        C4_variables: Variables
-        frozen_intro: Hour of Code Intro
-        frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
+        C4_math_artist: Programmation de l'Artiste avec des maths
+        C4_function_edit: Edition de fonctions
+        C4_function_create: Création de fonctions
+        C4_function_parameters: Fonctions avec Paramètres
+        C4_conditionals: Instructions conditionnelles
+        C4_unplugged_algorithms: Algorithmes avec des Tangrams
+        C4_unplugged_madlibs: Mad Libs
+        C4_unplugged_variables: Variables in Envelopes
+        C4_unplugged_forloops: For Loops
+        C4_unplugged_parameters: Songwriting with Parameters
+        C4_unplugged_binary: Binaire
+        frozen_intro: Intro à l'Heure de Code
+        frozen_loops: Introduction aux boucles
+        frozen_functions: Introduction aux fonctions
+        playlab_intro: Introduction au Labo
+        playlab_events: Play Lab Events
+        playlab_repeat_forever: Play Lab Repeat Forever
     callout:
       text:
-        drag_blocks: Attrape un bloc « avancer » et attache-le sous l'autre bloc
+        drag_blocks: Attrape un bloc « avancer plus » et attache-le sous l'autre bloc
         run: Clique sur « Démarrer » pour essayer ton programme
         watch_again: Clique ici pour revoir la vidéo
         gray_block_explanation: Les blocs gris ne peuvent pas être supprimés. Peux-tu
@@ -848,28 +870,33 @@
         studio_say_text: Entrez ce que vous souhaitez que votre personnage dise dans
           ces guillemets
         jigsaw_click: Clique sur ce bloc !
-        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
-          Run" block to make Elsa move forward
-        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
-          determines how much Elsa turns
-        replace_questions: Use the drop-down to replace "???" with a number
-        replace_questions_degree: Use the drop-down to replace "???" with the correct
-          degree to turn
-        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
-          workspace
-        snowflake_dropdown: Use this drop-down to create different snowflakes!
-        degrees_per_side: Divide 360 by the number of sides to get the size of each
-          angle in degrees.
-        set_sides: Use this block to set "sides" to the number needed to complete
-          the puzzle.
-        set_length: Use this block to set "length" to the correct value.
+        move_elsa_forward: Faites glisser un bloc « Avancer » et attachez le sous
+          la bloc «Lors du lancement» pour faire avancer Elsa
+        turn_elsa: Utilise le bloc « Tourner » pour faire tourner Elsa. Le nombre
+          dans le menu déroulant détermine de combien de degrés Elsa tournera
+        replace_questions: Utilise le menu déroulant pour remplacer "???" par un nombre
+        replace_questions_degree: Utilise le menu déroulant pour remplacer "???" avec
+          le bon nombre de degrés à tourner
+        repeat_blocks: Utiliser le bloc « Repeat » et enroulez-le autour des blocs
+          dans l'espace de travail
+        repeat_blocks_1: (1) Utilise ce bloc et place-le autour des blocs gris dans
+          l'espace de travail
+        repeat_blocks_2: (2) Fais glisser le bloc «Répéter» ici et place les blocs
+          gris à l'intérieur
+        snowflake_dropdown: Utilise ce menu déroulant pour créer différents flocons
+          de neige !
+        degrees_per_side: Divisez 360 ar le nombre de côtés pour obtenir la taille
+          de chaque angle en degrés.
+        set_sides: Utilisez ce bloc pour définir le nombre de "côtés" nécessaires
+          pour résoudre ce puzzle.
+        set_length: Utilisez ce bloc pour définir la valeur correcte de "longueur".
         which_equation: Which equation makes each side shorter for shapes with more
           sides?  Try each equation!
-        get_nectar: Use the new "get nectar" block.
+        get_nectar: Utilisez le bloc "collecter du nectar".
         actions_category: The tool box got a new look! The "Actions" blocks are in
           here now.
         draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
-        edit_function: Use this button to edit the function.
+        edit_function: Cliquez ici pour modifier votre fonction.
         create_function: Click here to open the "Functions" flyout, then click the
           "Create a Function" button.
         house_hint: It's ok if the picture doesn't look like a house yet. We will
@@ -879,19 +906,51 @@
           the Bee will turn to get the nectar.
         logic_category: Open the "Logic" flyout to find the "if/else" block.
         length_parameter: Can you update this function so it uses the "length" parameter?
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
-          each circle.
-        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
-          and change the size.
-        frozen_snowflake_branch: Use the "create a snowflake branch" block
-        frozen_create_square: Attach more blocks here to create a square
-        playlab_drag_say: Drag the "say" block here and type "hello"
+        frozen_diamond_repeat: Utilise le bloc «Répéter» pour créer cette forme.
+        frozen_circle_function_in_circle_turn: N'oublie pas de tourner après avoir
+          créé chaque cercle.
+        frozen_circle_function_with_parameter_circle: Utilise le bloc « Créer un cercle
+          » et change la taille.
+        frozen_snowflake_branch: Utilise le bloc « créer une branche de flocon »
+        frozen_create_square: Accroche plus de blocs ici pour créer un carré
+        playlab_drag_say: Fais glisser le bloc « dire » ici et tape « Bonjour »
         playlab_use_twice: Use this block twice and remember to change the actor number
-        playlab_move_girl: Use the "move right" block to move Tennis Girl
-        playlab_play_sound: Add "play sound" block here
-        playlab_arrow_keys: Remember to use these to move the witch after clicking
-          on Run
-        playlab_add_move: Add "move" blocks inside this repeat block
+        playlab_move_girl: Utilise le bloc « déplacer vers la droite » pour déplacer
+          Mademoiselle Tennis
+        playlab_play_sound: Ajoute le bloc « jouer le son »
+        playlab_arrow_keys: Souviens-toi d'utiliser ces flèches pour déplacer la sorcière
+          après avoir cliqué « Démarrer »
+        playlab_add_move: Ajoute des blocs « déplacer » à l'intérieur de ce bloc «
+          répéter à l'infini »
         playlab_add_score: Add score blocks here
-        playlab_add_blocks: Add your blocks here
+        playlab_add_blocks: Ajoute tes blocs ici
+        set_variable: Drag a number block here to set your variable
+        place_variable: Fais glisser ta variable à l'intérieur de ce bloc
+        bee_for_loop: Drag the largest number of nectar you want the bee to collect
+          here
+        place_counter_variable: Fais glisser ta variable compteur à l'intérieur de
+          ce bloc
+        function_editor_draw_square: This is your function definition. These blocks
+          run everytime you use the "draw a square" block
+        change_here: Make your change here
+        write_draw_square_function: Drag blocks from the toolbox into here that draw
+          a square
+        write_draw_triangle_function: Drag blocks from the toolbox into here that
+          draw a triangle
+        edit_add_parameter: Click edit to add a parameter in your function
+        add_and_drag_parameter: Write in the name of your parameter here, click add,
+          and then drag it into your function definition
+        fill_in_actor: Remplace les ??? par les nombres qui correspondent à chacun
+          des acteurs (1, 2, et 3)
+        repeat: Mets des blocs à l'intérieur de la boucle pour répéter les commandes
+        if_bee_nectar: Utilise le bloc « Si » pour décider si l'abeille devrait obtenir
+          du nectar
+        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower,
+          and makes honey if it's not a flower
+        repeat_full_circle: Entrez le nombre de fois que le zombie doit se déplacer
+          tracer un cercle complet
+        place_length_variable: Drag the length variable here to replace the question
+          marks
+        arrows_move_actor: Utilise les flèches pour déplacer l'acteur
+        right_arrow_fireball: Utilise la flèche droite pour tirer des boules de feu
+        name_function: Écris le now de ta fonction ici

@@ -16,23 +16,30 @@ module Poste
   def self.emails_dir(*paths)
     pegasus_dir 'emails', *paths
   end
-
-  def self.decrypt_id(encrypted)
+  
+  def self.decrypt(encrypted)
     decrypter = OpenSSL::Cipher::Cipher.new 'AES-128-CBC'
     decrypter.decrypt
     decrypter.pkcs5_keyivgen(CDO.poste_secret, '8 octets')
     plain = decrypter.update Base64::urlsafe_decode64(encrypted)
     plain << decrypter.final
-    return(plain.to_i)
   end
 
-  def self.encrypt_id(id)
+  def self.decrypt_id(encrypted)
+    return decrypt(encrypted).to_i
+  end
+  
+  def self.encrypt(plain)
     encrypter = OpenSSL::Cipher::Cipher.new('AES-128-CBC')
     encrypter.encrypt
     encrypter.pkcs5_keyivgen(CDO.poste_secret, '8 octets')
-    encrypted = encrypter.update(id.to_s)
+    encrypted = encrypter.update(plain.to_s)
     encrypted << encrypter.final
     Base64::urlsafe_encode64(encrypted)
+  end
+
+  def self.encrypt_id(id)
+    encrypt(id)
   end
   
   def self.resolve_template(name)

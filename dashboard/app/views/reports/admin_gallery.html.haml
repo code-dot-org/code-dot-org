@@ -4,7 +4,7 @@
   %div.gallery_activity
     - activity = gallery_activity.activity
     - level_source = activity.level_source
-    = link_to image_tag(original_image_level_source_path(level_source)), level_source
+    = link_to image_tag(original_image_url(level_source)), level_source
     %div.caption
       by
       = activity.user.name

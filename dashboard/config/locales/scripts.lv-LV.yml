@@ -46,9 +46,8 @@
           'Bee: Loops': 'Bite: Cikli'
           'Studio: Create a Story': 'Spēļu laboratorija: izvedot stāstu'
           'Artist: Loops': 'Mākslinieks: cikli'
-          description_audience: Ages 4+ (pre-readers)
-          description_short: Kurss 1 ir radīts jaunākiem lasītājiem. Ieteicams klasēm
-            K-1.
+          description_audience: No 4 gadiem (nav jālasa)
+          description_short: 1. kurss piemērots ar nelielu lasītprasmi.
         course2:
           The Maze: Labirints
           Suzi: Suzi
@@ -89,14 +88,13 @@
           'Artist: Sequence2': 'Māsklinieks: secība 2'
           'Maze: Sequence2': 'Labirints: secība 2'
           'Artist: Nested Loops': 'Mākslinieks: Cikls ciklā'
-          description_audience: Ages  6+ (reading required)
-          description_short: 2. kurss ir veidots skolēniem, kas prot lasīt. Iteicams
-            no 2- 5. klasei.
+          description_audience: No 6 gadiem (jāprot lasīt)
+          description_short: 2. kurss paredzēts skolēniem, kuri prot lasīt.
         course3:
           The Maze: Labirints
           'Studio: Create a Story': 'Spēļu laboratorija: izvedot stāstu'
           The Artist: Mākslinieks
-          title: 3. kurss
+          title: Kurss 3
           Artist Functions: Mākslinieks funkcijas
           Artist For Loops: Māsklinieks cikliem
           Artist Nested Loops: Mākslinieks Cikls ciklā
@@ -145,9 +143,8 @@
           'Bee: Debugging2': Bites atkļūdošana 2
           'Artist: Patterns': 'Mākslinieks: raksti'
           Songwriting: Dziesmu rakstīšana
-          description_audience: Ages 8+ (after Course 2)
-          description_short: 3. kurss ir 2. kursa turpinājums. ieteicams no 4.-5.
-            klasei.
+          description_audience: Vecumā no 8 gadiem (pēc 2. kursa)
+          description_short: 3. kurss seko 2. kursam.
         msm:
           title: Vidusskolas matemātika
           description: Notiek privātie darbi pamatskolas matemātikai.
@@ -226,8 +223,7 @@
           title: Programmēšanas stunda
           description: Mēģiniet datorzinātņu pamatus ar tēliem no dusmīgajiem putniem,
             augiem pret zombijiem un Skretu no Ledus laikmeta!
-          description_short: Mēģiniet datorzinātņu pamatus ar tēliem no dusmīgajiem
-            putniem, augi pret zombijiem un Skretu no Ledus laikmeta!
+          description_short: Izmēģini datrzinību pamatus ar daudz jaukiem tēliem!
         frozen:
           title: Programmē ar Annu un Elzu
           description: Izmantosim kodu, lai piebiedrotos Annai un Elzai pētīt ledus
@@ -246,7 +242,7 @@
             Ieteicams no 4.-5. klasei.
           'Artist: Variables': 'Izpildītājs: Mainīgie'
           'Bee: For Loops': 'Bite: Cikls ar skaitītāju'
-          title: 4. kurss
+          title: Kurss 4
           'Algorithms: Tangrams': 'Algoritmi: Tangrams'
           Variables: Mainīgie
           'Play Lab: Variables': 'Spēles laboratorija: Mainīgie'
@@ -271,7 +267,7 @@
           Farmer Binary: 'Fermeris: binārs'
           Maze and Bee: Labirints un Bite
           Artist Binary: 'Mākslinieks: Binārais'
-          description_audience: Ages 10+ (after Course 3)
+          description_audience: Vecumā no 10 gadiem (pēc 3. kursa)
         Course4pre:
           description_short: Īss jēdzienu kopsavilkums skolēniem, kas nav pildījuši
             2. un 3. kursu.
@@ -320,3 +316,13 @@
           description: Atlasīti 4. kuras līmeņi lietošanas testēšanai.
           Variables: Mainīgie
           For Loops: '"par" cikli'
+        potus:
+          title: īpaša
+          description_short: īpaša
+          description: īpaša
+          Special: īpaša
+        special:
+          title: īpaša
+          description_short: īpaša
+          description: īpaša
+          Special: īpaša

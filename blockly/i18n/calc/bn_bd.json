@@ -1,8 +1,8 @@
 {
-  "compute": "compute",
+  "compute": "গণনা",
   "equivalentExpression": "ঠিক একই অভিব্যক্তি পেতে আপনার কথাবার্তা রেকর্ড করতে চেষ্টা করুন ।",
-  "extraTopBlocks": "তোমার অসংযুক্ত block আছে । তুমি  \"compute\" block এ যুক্ত করতে বুঝিয়েছিলে কি ?",
-  "goal": "Goal:",
-  "reinfFeedbackMsg": "এটি তোমার কাহিনী নয় ! এতে কাজ করা চালিয়ে যাও, কিংবা পরের puzzleএ চলে যাও !",
+  "extraTopBlocks": "তোমার অসংযুক্ত block আছে । তুমি  \"compute\" block এ যুক্ত করতে চেয়েছিলে কি ?",
+  "goal": "লক্ষ্য:",
+  "reinfFeedbackMsg": "এটি তোমার কাহিনী ! এতে কাজ করা চালিয়ে যাও, কিংবা পরের puzzleএ চলে যাও !",
   "yourExpression": "তোমার অভিব্যাক্তি:"
 }

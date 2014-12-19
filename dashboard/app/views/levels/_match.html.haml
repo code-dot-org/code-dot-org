@@ -47,7 +47,7 @@
         - data['questions'].each_with_index do |question, index|
           %li.correctmark{style: "height: #{height}px"}
             .xmark{style: "display: none", id: "xmark_#{index}"}
-              %b X
+              %strong X
 
     .column
       %ul#answers.draggablecolumn

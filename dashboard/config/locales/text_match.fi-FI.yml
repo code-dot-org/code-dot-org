@@ -83,17 +83,17 @@
         Type out the arithmetic expression that matches this code: Kirjoita laskentakaava
           joka vastaa tätä koodia
         /script_assets/msm/unit6/blockstomath2.png: /script_assets/msm/unit6/blockstomath2.png
-        (10 > 11) or (7 <= 9): (10 > 11) or (7 <= 9)
+        (10 > 11) or (7 <= 9): (10 > 11) tai (7 <= 9)
         (10 > 11) || (7 <= 9): (10 > 11) || (7 <= 9)
         Type the arithmetic expression here: Kirjoita aritmeettinen lauseke tähän
-        (10 > 11) OR (7 <= 9): (10 > 11) OR (7 <= 9)
+        (10 > 11) OR (7 <= 9): (10 > 11) TAI (7 <= 9)
       Blocks to Bools 3:
         Convert Blocks to Math: Muuta lohkot matematiikaksi
         Type out the arithmetic expression that matches this code: Kirjoita laskentakaava
           joka vastaa tätä koodia
         /script_assets/msm/unit6/blockstomath3.png: /script_assets/msm/unit6/blockstomath3.png
-        (5 < 10) and (10 < 15): (5 < 10) and (10 < 15)
-        (5 < 10) AND (10 < 15): (5 < 10) AND (10 < 15)
+        (5 < 10) and (10 < 15): (5 < 10) tai (10 < 15)
+        (5 < 10) AND (10 < 15): (5 < 10) JA (10 < 15)
         (5 < 10) && (10 < 15): (5 < 10) && (10 < 15)
         Type the arithmetic expression here: Kirjoita aritmeettinen lauseke tähän
       Blocks to Bools 4:
@@ -101,10 +101,10 @@
         Type out the arithmetic expression that matches this code: Kirjoita laskentakaava
           joka vastaa tätä koodia
         /script_assets/msm/unit6/blockstomath4.png: /script_assets/msm/unit6/blockstomath4.png
-        ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): ((1 < x) AND (x < 5)) OR
-          ((8 < x) AND (x < 10))
-        ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): ((1 < x) and (x < 5)) or
-          ((8 < x) and (x < 10))
+        ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): ((1 < x) JA (x < 5)) TAI
+          ((8 < x) JA (x < 10))
+        ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): ((1 < x) ja (x < 5)) tai
+          ((8 < x) ja (x < 10))
         ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): ((1 < x) && (x < 5)) || ((8
           < x) && (x < 10))
         Type the arithmetic expression here: Kirjoita aritmeettinen lauseke tähän

@@ -45,9 +45,8 @@
           'Bee: Loops': 'Bier: Løkker'
           'Studio: Create a Story': 'Spel-lab: Lag ei historie'
           'Artist: Loops': 'Kunstnar: Løkker'
-          description_audience: Ages 4+ (pre-readers)
-          description_short: Kurs 1 er laga for tidlege lesarar. Tilrådd for elevar
-            i 1. klasse.
+          description_audience: Frå 4+ år (kan ikkje lese)
+          description_short: Kurs 1 er meint for tidlige lesarar.
         course2:
           The Maze: Labyrinten
           Suzi: Suzi
@@ -88,9 +87,8 @@
           'Artist: Sequence2': 'Kunstnar: Sekvens2'
           'Maze: Sequence2': 'Labyrint: Sekvens2'
           'Artist: Nested Loops': 'Kunstnar: Løkker inni løkker'
-          description_audience: Ages  6+ (reading required)
-          description_short: Kurs 2 er laga for studentar som kan lese.  Tilrådd for
-            2.-5. klasse.
+          description_audience: Frå 6+ år (må kunne lese)
+          description_short: Kurs to er laga for elever som kan lese.
         course3:
           The Maze: Labyrinten
           'Studio: Create a Story': 'Spel-lab: Lag ei historie'
@@ -144,9 +142,8 @@
           'Bee: Debugging2': 'Bier: Feilsøking2'
           'Artist: Patterns': 'Artist: Mønster'
           Songwriting: Låtskriving
-          description_audience: Ages 8+ (after Course 2)
-          description_short: Kurs 3 er ein oppfølgar ar kurs 2.  Tilrådd for 4.-5.
-            klasse.
+          description_audience: Frå 8+ år (etter Kurs 2)
+          description_short: Kurs 3 er fortsettinga av Kurs 2.
         msm:
           title: Matematikk for ungdomsskulen
           description: Privat arbeid på gang med ungdomsskule-matematikk.
@@ -223,8 +220,7 @@
           title: Hour of Code (kodetimen)
           description: Prøv grunnleggjande programmering med figurane frå Angry Birds,
             planter mot zombiar og Scrat frå Istid!
-          description_short: Try the basics of computer science with characters from
-            Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          description_short: Prøv grunnleggande programmering med mange morsomme figurar!
         frozen:
           title: Koding med Anna og Elsa
           description: La oss bruke kode og bli med Anna og Elsa når dei utforskar
@@ -267,7 +263,7 @@
           Farmer Binary: Bonde binær
           Maze and Bee: Labyrint og bier
           Artist Binary: Kunstnar binær
-          description_audience: Ages 10+ (after Course 3)
+          description_audience: Frå 10+ år (etter Kurs 3)
         Course4pre:
           description_short: Ei kort oppsummering av konsept for elevar som ikkje
             har tatt kurs 2 og 3.
@@ -316,3 +312,13 @@
           description: Eit utval av tema om brukbarheitstesting frå kurs 4.
           Variables: Variabler
           For Loops: For-løkker
+        potus:
+          title: spesielle
+          description_short: spesielle
+          description: spesielle
+          Special: Spesielle
+        special:
+          title: spesielle
+          description_short: spesielle
+          description: spesielle
+          Special: Spesielle

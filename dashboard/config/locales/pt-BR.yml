@@ -36,6 +36,7 @@
   of: de
   more: MAIS
   less: MENOS
+  beta: beta
   try_hoc: 'Experimente a Hora do Código, clique aqui >> '
   try_k8intro: Experimente nossa introdução do curso de Ciência da Computação (15-25
     horas) para o Ensino Fundamental
@@ -401,8 +402,8 @@
     try_beta_courses: Novo! Conheça nossos cursos experimentais para alunos do pré
       ao 5º ano
     use_as_teacher: Use este site como um professor
-    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>Cursos de 20 horas para</h2><h1>alunos do ensino fundamental</h1>
+    heading_hoc2014: <h2>A Hora do Código para</h2><h1>Todas as idades</h1>
+    heading_elementary: <h2>Cursos de 20 horas para</h2><h1>Iniciantes (todas as idades)</h1>
     heading_apps: <h2>Diversão para</h2><h1>todos</h1>
     heading_legacy: <h2>Nosso curso geral para</h2><h1>todas as idades</h1>
     your_gallery: Galeria
@@ -609,3 +610,7 @@
     completed_too_many_blocks: concluído, muitos blocos
     completed_perfect: concluído, perfeito
     furthest_level_attempted: tentativa para o nível mais avançado
+  studio:
+    courses_working_on: Cursos que você está fazendo
+    completed_courses: Cursos concluídos
+    all_courses: Todos os cursos

@@ -36,6 +36,7 @@
   of: ' '
   more: VEČ
   less: MANJ
+  beta: beta
   try_hoc: 'Poskusi Ura programiranja, klikni tu >> '
   try_k8intro: Poizkusi naš K-8 tečaj Uvod v računalništvo (15-25 ur)
   k8intro: Uvod v računalništvo (15-25 ur) za osnovno šolo (ZDA)
@@ -384,8 +385,8 @@
     try_beta_courses: Novo! Poskusite naše beta tečaje za učence prvih dveh triad
       na ameriških šolah
     use_as_teacher: Uporabi to stran kot učitelj
-    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
+    heading_hoc2014: <h2>Ura kodiranja za</h2><h1>vse starosti</h1>
+    heading_elementary: <h2>20 urni tečaji za</h2><h1>začetnike (vseh starosti)</h1>
     heading_apps: <h2>Zabavno učenje za</h2><h1>vsakogar</h1>
     heading_legacy: <h2>Naš tečaj za</h2><h1>vse starosti</h1>
     your_gallery: Galerija
@@ -399,11 +400,10 @@
   footer:
     help_from_html: Inženirji iz podjetij Google, Microsoft, Facebook in Twitter so
       nam pomagali ustvariti ta priročnik.
-    art_from_html: Angry Birds&trade; & &copy; 2009-2014 <a href="http://www.rovio.com">
-      Rovio Entertainment Ltd</a>. Vse pravice pridržane. <br/> Plants vs Zombies&trade;
-      & &copy; 2013 <a href="http://www.ea.com"> Electronic Arts Inc</a>. Vse pravice
-      pridržane.
-    powered_by_aws: Powered by Amazon Web Services
+    art_from_html: Angry Birds&trade; & &copy; 2009-2013 Rovio Entertainment Ltd.
+      Vse pravice pridržane.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
+      Arts Inc. Vse pravice pridržane.
+    powered_by_aws: Podprto s strani Amazon Web Services
     feedback: Povratne informacije
     translate: Pomagajte nam prevesti v vaš jezik
     support: Podpora
@@ -493,7 +493,7 @@
       body: Poglej si galerijo slik iz igric in aplikacij, ki so jih ustvarili naši
         uporabniki
     frozen:
-      title: Frozen
+      title: Zmrznjenka (Frozen)
   gallery:
     students_drew_these_with_code: Učenci so to narisali s svojimi programi!
     students_made_these_with_code: Učenci so to ustvarili s svojimi programi!
@@ -585,3 +585,7 @@
     completed_too_many_blocks: dokončano, imate preveč blokov
     completed_perfect: dokončano, odlično
     furthest_level_attempted: poskusili ste najvišji nivo
+  studio:
+    courses_working_on: Tečaji, ki jih še nisi dokončal/a
+    completed_courses: Tečaji, ki si jih dokončal/a
+    all_courses: Vsi tečaji

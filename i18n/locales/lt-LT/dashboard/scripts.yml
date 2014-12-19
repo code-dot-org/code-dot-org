@@ -7,7 +7,7 @@ lt:
           The Maze: Labirintas
           Multi: Variantai
           Match: Sujungimas
-          Math Image: Math Image
+          Math Image: Matematinis vaizdas
           title: Bandomasis etapas
           description: Tai tik vidinis bandomasis etapas.
         course1:
@@ -48,7 +48,7 @@ lt:
           Suzi: Suzi
           The Artist: Menininkas
           Artist Debugging: 'Menininkas: klaidų ieškojimas'
-          Bounce: Bounce
+          Bounce: Tenisas
           "Studio: Create a Story": 'Žaidimų laboratorija: sukurk istoriją'
           Artist Loops: 'Menininkas: kartojimas'
           Bee Conditionals: 'Bitė: sąlyginiai sakiniai'
@@ -80,7 +80,7 @@ lt:
           "Artist: Sequence2": 'Menininkas: seka2'
           "Maze: Sequence2": 'Labirintas: seka2'
           "Artist: Nested Loops": 'Menininkas: kartojimas kartojime'
-          description_audience: 'Ages  6+ (reading required)'
+          description_audience: Nuo 6 metų (reikia mokėti skaityti)
           description_short: Course 2 is designed for students who can read.
         course3:
           The Maze: Labirintas
@@ -177,8 +177,8 @@ lt:
           Blocks to Math: Blocks to Math
           "Play Lab: Defining Variables (Big Game)": 'Play Lab: Defining Variables (Big Game)'
           "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
-          "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Big Game)'
-          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
+          "Play Lab: Boolean (Big Game)": 'Žaidimų laboratorija: Logika (Big Game)'
+          "Play Lab: Collision Detection (Big Game)": 'Žaidimų laboratorija: Susidūrimo nustatymas (Big Game)'
           "Eval: Fast Functions": 'Eval: Fast Functions'
           "Play Lab: Design Recipe": 'Play Lab: Design Recipe'
           "Eval: Design Recipe": 'Eval: Design Recipe'
@@ -281,3 +281,13 @@ lt:
           description: A selection of Course 4 levels for usability testing.
           Variables: Kintamieji
           For Loops: For Loops
+        potus:
+          title: special
+          description_short: special
+          description: special
+          Special: Special
+        special:
+          title: special
+          description_short: special
+          description: special
+          Special: Special

@@ -149,26 +149,32 @@ de:
       TangramAlgorithms:
         title: Tangram-Algorithmen
         desc: Diese LEktion zeigt uns etwas wichtiges über Algorithmen. Wenn du einen ALgorithmus einfach hälst sind da viele wege ihn zu benutzen. Wenn du aber willst das jeder am Ende das Gleiche hat muss dein Algorithmus viele Details haben.
+        video: C4_unplugged_algorithms
       EnvelopeVariables:
         title: Umschlag-Variablen
         desc: 'Variablen lassen viel Freiheit in der Informatik.  Diese Lektion hilft zu erklären, was Variablen sind und wie wir sie in vielfältiger Weise nutzen können. Verwenden Sie diese Aufgabe vor (oder in Verbindung mit) der Lektion über Abstraktion, um die Idee zu hause entwickeln zulassen.'
+        video: C4_unplugged_variables
       MadGlibs:
         title: Sauer Glibs
         desc: 'Abstraktion ist eine der wichtigsten Fähigkeiten für einen Informatiker zum verstehen.  Diese Aufgabe lässt ihre Schüler in geschichten nachUnterschieden suchen, um diese abziehen können. Die reduzierte GEschichte wird Vorlage für lustige und verrückte neue Geschichten.'
+        video: C4_unplugged_madlibs
       ForLoopFun:
         title: Für Schleifen Spaß
         desc: Wir wissen das Schleifen es uns erlauben Dinge wieder und wieder zu tun, aber jetzt werden wir lernen wie wir Schleifen benutzen mit extra struktur integriert.
+        video: C4_unplugged_forloops
       SongwritingWithParameters:
         title: Komponieren mit Parametern
         desc: 'Eines der prächtigsten Bauten in der Computerwelt Wissenschaft ist die Funktion.  Funktionen (auch Verfahren genannt) sind Mini-Programme, die Sie innerhalb Ihrer größeren Programms immer und immer wieder verwenden können. Diese Lektion hilft Schülern intuitiv zu verstehen, warum eine solche hilfreiche Praxis ist Stücke von Code in Funktionen zu kombinieren.  '
+        video: C4_unplugged_parameters
       BinaryImages:
         title: Binärbilder
         desc: 'Obwohl viele Leute über Binary als streng Nullen und Einsen denken, Lehrveranstaltungen unserer früheren Schülern, dass Informationen in einer Vielzahl von binären Optionen dargestellt werden kann.  In dieser Lektion findet dieses Konzept noch einen Schritt weiter, wie es veranschaulicht, wie ein Computer noch komplexeren Informationen (z. B. Bilder und Farben) gespeichert werden kann in Binär, sowie.'
+        video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
         title: Videospiele und Koordination von Flugzeugen
         desc: Beschreibung der Lektion zu Videospielen und der Koordination von Flugzeugen
       Contracts:
-        title: Contracts
+        title: Verträge
         desc: 'Beschreibung der Lektion zu "Contracts unplugged"'
       DesignRecipe:
         title: The Design Recipe

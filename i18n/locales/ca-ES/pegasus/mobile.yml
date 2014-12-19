@@ -43,15 +43,15 @@ ca-ES:
   go: Anar
   thank_you_: Gràcies!
   congratulations: Felicitats!
-  congratulations_on_completing_hoc: Felicitats per completar una Hora de Codi.
-  get_a_certificate_of_achievement: "Aconsegueix el certificat d'assoliment"
+  congratulations_on_completing_hoc: Felicitats per completar una Hora de Codi
+  get_a_certificate_of_achievement: "Aconseguiu el certificat d'assoliment"
   enter_valid_email: Per favor, introdueïx una adreça de correu electrònic vàlida
   get_a_certificate_message: "T'enviarem un certificat i informació sobre com  <a href='/learn/beyond'>Aprendre més enllà d'una hora</a>"
   get_a_certificate_message_after: "Fes clic al certificat per descarregar-te'l o imprimir-lo. Ara, continua amb els nostres<a href='http://studio.code.org'>altres cursos</a>, o busca més opcions per<a href='/learn/beyond'>Aprendre més enllà d'una Hora</a>."
   thanks_for_submitting: Gràcies per enviar!
   if_you_enjoyed: Si has gaudit aprenent, demana als teus amics que ho intentin també. Volem que tot el món aprengui.
   personalize_certificate: Personalitza el teu certificat
-  share_achievement: Comparteix el teu assoliment
+  share_achievement: Compartiu el vostre assoliment
   beyond_hour_message: "Segueix endavant amb <a href='http://studio.code.org'> altres cursos</a> nostres o mira més opcions per <a href='/learn/beyond'> aprendre més enllà d'una hora</a>."
   leaderboards_for_hoc: "Classificacions per a l'Hora del Codi."
   support_url: http://support.code.org
@@ -67,7 +67,7 @@ ca-ES:
   thanks_for_voting: Gràcies per votar!
   share_on_facebook: Comparteix a Facebook
   share_on_twitter: Comparteix a Twitter
-  beyond_an_hour: "Més enllà de l'Hora del Codi >"
+  beyond_an_hour: "Més enllà d'una Hora del Codi"
   get_started: Inici
   i_agree: Accepto
   participant_select: Selecciona
@@ -76,6 +76,9 @@ ca-ES:
   participant_educator: Educador
   participant_engineer: Enginyer de software
   participant_other: Cap dels anteriors
+  print_all: Imprimimiu-ho tot
+  print_ice_art: Imprimiu el vostre art de gel
+  create_art_with_zombie: o féu art avançat amb un zombi
   i_am_a: Jo sóc un
   never_spam: "Nosaltres mai t'enviarem spam"
   enter_country: Introdueix el país si estàs fora dels Estats Units
@@ -112,6 +115,10 @@ ca-ES:
   studiobar_flappy_body: Fes i comparteix el teu propi joc Flappy
   studiobar_teacher_title: Fet per a professors
   studiobar_teacher_body: Introdueix el Code Studio a la teva classe
+  studiobar_frozen_title: Hora del codi
+  studiobar_frozen_body: "Creeu un món fantàstic d'hivern amb l'Anna i l'Elsa"
+  studiobar_donate_title: Fes una donació
+  studiobar_donate_body: Un infant aprèn per cada dòlar que dongui
   contact_form_topic_student: Sóc estudiant
   contact_form_topic_parent: Sóc pare o mare
   contact_form_topic_teacher: Sóc professor/educador
@@ -195,6 +202,12 @@ ca-ES:
   dashboard_action_done: Fet
   dashboard_action_required: obligatori
   dashboard_navigation_home_page: "Pàgina d'inici de mestre"
+  dashboard_navigation_section_student_progress: Comptes i progrés dels alumnes
+  dashboard_navigation_section_teacher_progress: El progrés del curs
+  dashboard_navigation_section_lesson_plans: Plans docents i recursos
+  dashboard_navigation_section_community: Ajuda i Comunitat
+  dashboard_navigation_section_pd: Desenvolupament professional
+  dashboard_navigation_section_speakers: 'Informàtica <br/> Oradors convidats'
   dashboard_navigation_all_sections: Comptes i progrés dels alumnes
   dashboard_navigation_view_progress: Veure el progrés
   dashboard_navigation_add_students: Afegeix estudiants
@@ -219,7 +232,7 @@ ca-ES:
   dashboard_sections_print_secrets: Pots imprimir un full de targetes on hi ha la informació del compte per repartir als teus alumnes individualment.
   dashboard_sections_switch_section: 'Canvia de secció:'
   dashboard_students_add_student: Afegeix alumne
-  dashboard_students_add_students: Afegeix múltiples alumnes
+  dashboard_students_add_students: Afegiu múltiples alumnes
   dashboard_students_add_multiple: 'Escriu o enganxa els noms dels teus alumnes, un per línia:'
   dashboard_students_new_section: 'Has creat una secció nova! Ara afegeix els teus alumnes utilitzant els botons de <b>Afegeix alumne</b>i<b>Afegeix múltiples alumnes</b>.'
   dashboard_students_placeholder_name: "Nom de l'alumne"
@@ -286,7 +299,7 @@ ca-ES:
   dashboard_sections_password_account_creation: Contrasenya de text creat per alumne
   dashboard_sections_login_type_explanation: "Aquesta taula t'explica quin d'aquests tipus d'inici de sessió,<b>imatge, paraula o correu electrònic</b>, vols triar per a la secció."
   dashboard_faq: Preguntes freqüents
-  code_hoc_coming: "L'hora de codi s'acosta - 8-14 de desembre!"
+  code_hoc_coming: "L'hora del Codi és aquí - 8-14 de desembre!"
   code_sign_up: "Inscriure's a participar durant la setmana de l'educació CS"
   learn_more: Més informació
   hoc2014_try_new_tutorials: "Prova els nous tutorial de l'Hora del Codi"
@@ -309,7 +322,7 @@ ca-ES:
   more_resources_educators: Més recursos per a mestres i educadors
   participants: Participants
   teachers_notes: Notes del professor
-  teachers_notes_hoc: 'Teachers: Read important educator notes here'
+  teachers_notes_hoc: 'Professors: Llegiu les notes importants per als educadors aquí'
   previous: Anterior
   next: Següent
   older_systems: Tutorials que funcionen en sistemes més vells
@@ -322,6 +335,10 @@ ca-ES:
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Una introducció a JavaScript
   khanes_name: Una introducció a JavaScript
+  khanpt_name: Una introducció a JavaScript
+  khanhe_name: Una introducció a JavaScript
+  khanfr_name: Una introducció a JavaScript
+  khanpl_name: Una introducció a JavaScript
   tynker_name: Construeix el teu propi joc
   scratch_name: Sigueu creatius amb la programació
   lightbot_name: Lightbot
@@ -350,12 +367,17 @@ ca-ES:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Pedra, Paper, tisora
-  frozen_gradelevel: Edat 8 +
+  hourofcode_name: Contenidor per al nou code.org/hoc
+  playlab_name: Play Lab
   codeorg_gradelevel: Edat 4-104
   codeintl_gradelevel: Edat 4-104
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: ESO +
   khanes_gradelevel: ESO +
+  khanpt_gradelevel: ESO +
+  khanhe_gradelevel: ESO +
+  khanfr_gradelevel: ESO +
+  khanpl_gradelevel: ESO +
   tynker_gradelevel: Edats 5-13
   scratch_gradelevel: Edat 8 +
   lightbot_gradelevel: Totes les edats
@@ -384,21 +406,27 @@ ca-ES:
   thinkersmith2_gradelevel: Edat 8 +
   kodableunplugged_gradelevel: Edats 8-13
   projguts_gradelevel: Edats de 10-13
-  frozen_platformtext: Navegadors moderns + tablets
+  hourofcode_gradelevel: Edat 4-104
+  frozen_gradelevel: Edat 8 +
+  playlab_gradelevel: Edat 4-104
   codeorg_platformtext: Navegadors moderns, mòbils i tablets
   codeintl_platformtext: Navegadors moderns, mòbils i tablets
   thinkersmithspanish_platformtext: Sense connexió
   khan_platformtext: Navegadors moderns
   khanes_platformtext: Navegadors moderns
-  tynker_platformtext: Modern browsers. (Follow-on course requires $$)
-  scratch_platformtext: Tots els navegadors
+  khanpt_platformtext: Navegadors moderns
+  khanhe_platformtext: Navegadors moderns
+  khanfr_platformtext: Navegadors moderns
+  khanpl_platformtext: Navegadors moderns
+  tynker_platformtext: Navegadors moderns
+  scratch_platformtext: Navegadors web només en versió per a escriptori (tablets no disponible)
   lightbot_platformtext: Tots els navegadors i iOS, Android o consola de joc
   thinkersmith_platformtext: Sense connexió
   condcards_platformtext: Sense connexió
   lightbotintl_platformtext: iOS, Android (o navegador web)
-  codehs_platformtext: 'Modern browsers. (Follow-on course requires  $$)'
+  codehs_platformtext: Navegadors moderns. (El seguiment del curs requereix $$)
   codecademy_platformtext: Navegadors web moderns. iOS, Android apps
-  codecombat_platformtext: Navegadors moderns
+  codecombat_platformtext: Navegadors moderns (el seguiment del curs requereix $$)
   codemonkey_platformtext: Navegadors moderns
   codeavengers_platformtext: Navegadors moderns
   processing_platformtext: Navegadors moderns
@@ -418,12 +446,18 @@ ca-ES:
   thinkersmith2_platformtext: Sense connexió
   kodableunplugged_platformtext: Sense connexió
   projguts_platformtext: Sense connexió
-  frozen_shortdescription: "Anem a utilitzar el codi per unir l'Anna i l'Elsa mentre exploren la màgia i la bellesa del gel."
+  hourofcode_platformtext: Navegadors moderns, mòbils i tablets
+  frozen_platformtext: Navegadors moderns + tablets
+  playlab_platformtext: Navegadors moderns, mòbils i tablets
   codeorg_shortdescription: Aprèn a programar amb Mark Zuckerberg i Angry Birds!
   codeintl_shortdescription: Aprèn a programar amb Mark Zuckerberg i Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
-  khan_shortdescription: Aprèn a dibuixar en JavaScript
-  khanes_shortdescription: Aprèn a dibuixar en JavaScript
+  khan_shortdescription: Apreneu a dibuixar en JavaScript
+  khanes_shortdescription: Apreneu a dibuixar en JavaScript
+  khanpt_shortdescription: Apreneu a dibuixar en JavaScript
+  khanhe_shortdescription: Apreneu a dibuixar en JavaScript
+  khanfr_shortdescription: Apreneu a dibuixar en JavaScript
+  khanpl_shortdescription: Apreneu a dibuixar en JavaScript
   tynker_shortdescription: Aprèn a programar resolent divertits trencaclosques i construint els teus propis jocs per mòbils.
   scratch_shortdescription: Crea jocs interactius, històries i animacions.
   lightbot_shortdescription: Programa el Lightbot per resoldre trencaclosques utilitzant procediments i bucles!
@@ -433,7 +467,7 @@ ca-ES:
   codehs_shortdescription: Comença a programar amb Karel el gos, una divertida i visual introducció a la programació!
   codecademy_shortdescription: Aprèn programació amb JavaScript, en un navegador web
   codecombat_shortdescription: Derrota els ogres per aprendre Python o JavaScript en aquest èpic joc de programació!
-  codemonkey_shortdescription: Students program a monkey to catch bananas.
+  codemonkey_shortdescription: "Els estudiants han de programar un mico que ha d'agafar plàtans."
   codeavengers_shortdescription: Aprèn programació amb JavaScript, en un navegador web
   processing_shortdescription: "Un tutorial d'una hora en llenguatge de programació"
   robomind_shortdescription: Programa per a un robot virtual
@@ -441,23 +475,29 @@ ca-ES:
   quorum_shortdescription: Uneix-te a Mary en una visita guiada mentre ella aprèn el llenguatge de programació Quorum.
   codespark_shortdescription: El Foos és un joc divertit, per aprendre programació, amigable pels petits.
   kodable_shortdescription: Un divertit joc per a iPad per ensenyar conceptes de programació informàtica
-  tynkerapp_shortdescription: 'Learn to program by solving fun coding puzzles. '
+  tynkerapp_shortdescription: 'Aprèn a programar mitjançant la resolució de divertits trencaclosques amb programació. '
   robomindnl_shortdescription: Programa per a un robot virtual
   flappy_shortdescription: 'Fes el teu propi joc - ocell Flappy, tauró o submarí'
-  bitsbox_shortdescription: Programa una sèrie de apps per jugar i compartir, utilitzant Javascript real.
+  bitsbox_shortdescription: "Programa una sèrie d'apps per jugar i compartir, utilitzant real JavaScript."
   makegameswithus_shortdescription: Fes un joc per a iPhone! Aprèn programant per ensenyar als teus monstres nous moviments!
-  touchdevelop_shortdescription: 'Solve puzzles, create games, and learn coding all on your phone. '
+  touchdevelop_shortdescription: 'Resol puzzles, crea jocs i aprèn programació tot al teu telèfon. '
   appinventor_shortdescription: Fes la teva pròpia app! (només Android)
   blockly_shortdescription: "Descarrega't un arxiu comprimit ZIP per aprendre fora de línia"
   thinkersmith2_shortdescription: Aprèn com els ordinadors utilitzen 1s i 0s per representar informació
   kodableunplugged_shortdescription: Un divertit exercici sense connexió
   projguts_shortdescription: Prova modelatge i simulació utilitzant pedra-paper-estisores
-  frozen_longdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
+  hourofcode_shortdescription: Contenidor per al nou code.org/hoc
+  frozen_shortdescription: "Anem a utilitzar el codi per unir l'Anna i l'Elsa mentre exploren la màgia i la bellesa del gel."
+  playlab_shortdescription: Crea una història o fes una partida amb Play Lab!
   codeorg_longdescription: Aprèn els conceptes bàsics de la Informàtica mitjançant la programació arrossega i deixa anar. Aquest és un tutorial amb vídeo conferencies protagonitzades per Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Aprèn bucles, condicionals i algorismes bàsics. Disponible en 34 idiomes.
   codeintl_longdescription: Aprèn els conceptes bàsics de la Informàtica mitjançant la programació arrossega i deixa anar. Aquest és un tutorial amb vídeo conferencies protagonitzades per Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Aprèn bucles, condicionals i algorismes bàsics. Disponible en 34 idiomes.
-  thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubriran como guiarse de modo tal de llevar a cabo tareas especificas sin ser estas discutidas previamente. Este segmento ensena a los estudiantes la conexion entre simbolos y acciones asi como la valiosa habilidad de depuracion.'
+  thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
   khan_longdescription: Aprendre els conceptes bàsics de programació amb JavaScript mentre crees divertits dibuixos amb el teu codi. Fer-ho pel teu compte o amb la teva classe!
   khanes_longdescription: Aprendre els conceptes bàsics de programació amb JavaScript mentre crees divertits dibuixos amb el teu codi. Fer-ho pel teu compte o amb la teva classe!
+  khanpt_longdescription: Aprendre els conceptes bàsics de programació amb JavaScript mentre crees divertits dibuixos amb el teu codi. Fer-ho pel teu compte o amb la teva classe!
+  khanhe_longdescription: Aprendre els conceptes bàsics de programació amb JavaScript mentre crees divertits dibuixos amb el teu codi. Fer-ho pel teu compte o amb la teva classe!
+  khanfr_longdescription: Aprendre els conceptes bàsics de programació amb JavaScript mentre crees divertits dibuixos amb el teu codi. Fer-ho pel teu compte o amb la teva classe!
+  khanpl_longdescription: Aprendre els conceptes bàsics de programació amb JavaScript mentre crees divertits dibuixos amb el teu codi. Fer-ho pel teu compte o amb la teva classe!
   tynker_longdescription: "Construeix el teus propis jocs i comparteix-los amb els amics! Resol divertits puzles i aprèn conceptes de programació a cada nivell. Personalitza els jocs amb personatges animats, múltiples nivells i molts accessoris. Fes el teu joc amb física realista. Mira el codi com blocs visuals o JavaScript. Porta els teus jocs mòbils a iPads i tauletes Android. Més d'una dotzena d'activitats divertides per triar!"
   scratch_longdescription: 'Amb Scratch, pots crear els teus  propis jocs interactius, històries, animacions &mdash; i compartir-los amb els teus amics. Comença per animar el teu nom, creant una targeta de festa o fent el joc Pong.'
   lightbot_longdescription: Guia el Lightbot per il·luminar totes les teules blaves! Lightbot és un joc de trencaclosques que utilitza mecàniques de programació per fer que els jugadors aprenguin de forma pràctica la programació. Aprèn a seqüenciar instruccions, escriure procediments, i utilitzar bucles per resoldre els nivells. Ideal per a totes les edats.
@@ -476,18 +516,21 @@ ca-ES:
   quorum_longdescription: "Aquesta guia és accessible per a discapacitats i funciona amb lectors de pantalla. Uneix-te a Mary en una gira mentre ella s'uneix a un laboratori de Biologia com a programadora i aprèn el llenguatge de programació Quorum. Aquest tutorial és per alumne autònoms amb activitats d'exemple en línia."
   codespark_longdescription: 'El Foos és una manera divertida per aprendre programació informàtica de manera amigable pels nens.  Programa bufons caràcters per resoldre puzles i dona vida a un món virtual.  El joc és "lliure de paraules", així que tothom pot jugar!'
   kodable_longdescription: "Kodable és un joc d'iPad autoguiats que introdueix els nens de mes de 5 anys els conceptes bàsics de la programació. Tenir un professor o un pare a prop és recomanable, però no necessari."
-  tynkerapp_longdescription: Learn to program by solving fun coding puzzles. Easily build games and stories using with themed graphics, 10+ game-kits and customizable characters. No Internet connectivity required. You can also access your creations on the web.
+  tynkerapp_longdescription: Aprèn a programar mitjançant la resolució de divertits trencaclosques amb programació. Construeix jocs i contes fàcilment amb gràfics temàtics, més de 10 kits de jocs i personatges personalitzables. No cal connexió a Internet. També podràs accedir a les teves creacions a la web.
   robomindnl_longdescription: 'Els alumnes aprenen els fonaments de la programació controlant el seu propi robot virtual. Curs en línia totalment autònom amb presentacions breus, vídeos, qüestionaris i pistes automàtiques per ajudar amb els exercicis de programació. '
   flappy_longdescription: "Usa programació d'arrossegar i deixar anar per fer el teu propi joc Flappy, i personalitza'l per semblar diferent (Flappy tauró, Flappy Para Noel, el que sigui). Afegeix el joc al teu telèfon en un sol clic."
-  bitsbox_longdescription: "Personalitza la teva propia tauleta virtual, llavors programa una sèrie d'aplicacions per jugar i compartir. Tutorials simples fan possible fins i tot per als nens mes petits programar en Javascript real i a  més avancin més lluny arribaran."
-  makegameswithus_longdescription: Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pokemon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!
-  touchdevelop_longdescription: 'The touch-friendly editor will guide you in creating pixel art, solving the bear puzzle, or making your own jumping bird game. '
+  bitsbox_longdescription: "Personalitzeu la vostra tauleta virtual, després programeu una sèrie d'aplicacions per jugar i compartir. Tutorials simples fan possible fins i tot per als nens mes petits de programar en Javascript i  com més sàpiguen més lluny arribaran."
+  makegameswithus_longdescription: "Apreneu a programar fent un joc per a iPhone utilitzant un nou i agradable llenguatge de programació anomenat Swift! Creeu un joc d'acció inspirat en Pok&eacute; i programeuper ensenyar al monstre nous moviments. Aprendreu com utilitzar variables, mètodes i objectes per ajudar al monstre a guanyar!"
+  touchdevelop_longdescription: "L'editor tàctil et guiarà en la creació d'art digital, resolent el trencaclosques de l'ós o fent el teu propi joc d'Angry birds. "
   appinventor_longdescription: Divertits, ràpids tutorials en vídeo et guiaran a través de la construcció de tres simples apps per al teu mòbil Android o tablet. Dissenyat per principiants i experts per igual, aquesta Hora del codi et tindrà llest per començar a construir el teu propi apps abans que ho sàpigues. Imagina compartir les teves pròpies creacions app amb els teus amics! Aquestes activitats són adequades per a particulars i per a professors.
   blockly_longdescription: 'Teniu PC amb connexió a internet lenta (o inexistent)? Descarregar les classes Blockly que van ser precursores de les classes Code.org - És un únic fitxer ZIP de 3Mb que pot ser descarregat en qualsevol ordinador o fer-lo anar des de un llapis de memòria'
   thinkersmith2_longdescription: "Els alumnes aprenen a representar i guardar lletres en binari, així com les funcions d'encendre i apagar. Al final, la classe codifica les seves pròpies inicials per dur-les a casa."
   kodableunplugged_longdescription: "Dissenyat per usar amb paper simple, la fuzzFamily Frenzy és una introducció a la programació lògica per a nens de 5 anys cap amunt. Un mestre hauria d'explicar el joc, llavors els alumnes programen amb un company per completar una simple cursa d'obstacles. "
   projguts_longdescription: |-
     Aquesta activitat "sense connexió" ajuda als alumnes a aprendre com modelar i simular treballs fent que un grup d'alumnes jugui a diferents versions del joc Pedra / Paper / Tisores, i veient els resultats com a experiments de diferent modelatge.
+  hourofcode_longdescription: Contenidor per al nou code.org/hoc
+  frozen_longdescription: "Programeu per unir-vos amb l' Anna i l' Elsa mentre exploren la màgia i la bellesa del gel. Creareu flocs de neu i patrons com patinatge sobre gel i la creació d'un món fantàstic d'hivern que podeu compartir amb els amics!"
+  playlab_longdescription: Crea una història o fes un joc amb Play Lab! Fes que animals, pirates, zombies, ninjes i molts més personatges es moguin, facin sons, puntuacions i fins i tot llançar boles de foc!
   codeorg_beyond_name: Introducció a la programació (ESO)
   khan_beyond_name: Aprèn programació informàtica
   tynker_beyond_name: Aprendre programació des de casa
@@ -600,7 +643,7 @@ ca-ES:
   alice_beyond_platformtext: Windows o Mac (requereix instal·lació)
   sphero_beyond_platformtext: Compra robot
   codeorg_beyond_shortdescription: Aprèn a programar amb Mark Zuckerberg i Angry Birds!
-  khan_beyond_shortdescription: Aprèn a dibuixar en JavaScript
+  khan_beyond_shortdescription: Apreneu a dibuixar en JavaScript
   tynker_beyond_shortdescription: Un divertit i engrescador curs per a nens de 4-8
   scratch_beyond_shortdescription: Crea jocs interactius, històries i animacions.
   lightbot_beyond_shortdescription: Un joc per ensenyar conceptes de programació

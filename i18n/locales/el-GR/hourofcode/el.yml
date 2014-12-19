@@ -5,7 +5,7 @@
   coming_soon: "Προσεχώς"
   front_header_banner: 'Λάβετε μέρος στην μεγαλύτερη  στην ιστορία εκδήλωση για την μάθηση, 8-14 Δεκεμβρίου, 2014'
   front_intro_default: 'H ώρα του κώδικα είναι ένα παγκόσμιο κίνημα που φθάνει σε  δεκάδες εκατομμύρια μαθητές σε 180+ χώρες. Οποιοσδήποτε, οπουδήποτε μπορεί να οργανώσει μια εκδήλωση για την Ώρα του Κώδικα. Ωριαία μαθήματα είναι διαθέσιμα σε πάνω από 30 γλώσσες. Δεν χρειάζεται καμία εμπειρία. <strong>Για ηλικίες από 4 έως 104.</strong>'
-  front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of people in 180+ countries. Anyone can organize an Hour of Code event. Over 3M people did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
+  front_intro_default_uk: 'Η Ώρα του Κώδικα είναι ένα παγκόσμιο κίνημα που φθάνει σε δεκάδες εκατομμύρια μαθητές σε 180 + χώρες. Ο καθένας μπορεί να οργανώσει μια εκδήλωση Ώρα του κώδικα. Πάνω από 3 εκατομμύρια μαθητές συμμετείχαν στην πρώτη Ώρα του Κώδικα στο Ηνωμένο Βασίλειο. Ας διπλασιάσουμε αυτό το νούμερο τον Δεκέμβριο! <strong>Δεν χρειάζεται προηγούμενη εμπειρία. Για ηλικίες από 4 έως 104.</strong>'
   front_watch_video: "Δες το νέο βίντεο"
   header_menu_resources: "Πόροι"
   header_menu_faq: "Συχνές Ερωτήσεις"
@@ -27,15 +27,15 @@
   prizes_all: "Βραβεία για κάθε διοργανωτή"
   prizes_every_organizer: "Κάθε διοργανωτής μιας Ώρας Κώδικα θα λάβει μονάδες για το Dropbox ή το Skype ως ένα ευχαριστώ"
   prizes_technology: 'Ένα δημόσιο σχολείο, σε κάθε πολιτεία των ΗΠΑ (& Washington DC) θα κερδίσει προϊόντα τεχνολογίας αξίας $10.000'
-  prizes_tech_chats: '# classrooms will win video chats with very special guests'
-  prizes_robots: "100 classrooms will win a set of programmable robots"
-  prizes_brilliant: "One school in each province and territory will receive $2000 for a Brilliant Project"
-  prizes_actua: "15 schools across Canada will receive 2 hands-on STEM workshops by one of Actua's members"
+  prizes_tech_chats: '# τάξεις θα κερδίσουν συνομιλίες μέσω βίντεο με πολύ ξεχωριστούς καλεσμένους'
+  prizes_robots: "100 τάξεις θα κερδίσουν ένα σετ από προγραμματιζόμενα ρομπότ"
+  prizes_brilliant: "Ένα σχολείο σε κάθε επαρχία και επικράτεια θα λάβει $2000 για ένα Σπουδαίο Πρότζεκτ"
+  prizes_actua: "15 σχολεία σε όλο τον Καναδά θα λάβουν δυο εργαστήρια STEM από ένα από τα μέλη της Actua"
   prizes_details: "Λεπτομέρειες"
-  whats_next_header: "What's Next?"
-  whats_next_description: "We'll send you materials and helpful tips for your event. New 2014 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
-  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>How to run an Hour of Code</a>"
-  whats_next_promote: "<a href='http://hourofcode.com/resources'>Promote the Hour of Code</a>"
+  whats_next_header: "Τι θα ακολουθήσει;"
+  whats_next_description: "Θα σας στείλουμε υλικά και χρήσιμες συμβουλές για την εκδήλωσή σας. Νέα σεμινάρια μέσα στο 2014 θα είναι σύντομα διαθέσιμα για οποιαδήποτε μηχανή αναζήτησης, smartphone- ή ακόμα και χωρίς υπολογιστή! <a href='http://code.org/learn'> Δοκιμάστε τα τρέχοντα σεμινάρια</a>"
+  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'> Πώς να διοργανώσετε μια Ώρα του κώδικα</a>"
+  whats_next_promote: "<a href='http://hourofcode.com/resources'> Προωθήστε την Ώρα του κώδικα</a>"
   n_have_learned_an_hoc: '<h1>#</h1><h3>έχει δοκιμάσει μια </h3><h2>Ώρα του κώδικα</h2>'
   anybody_can_learn: "Όλοι μπορούν να μάθουν."
   register_now: "Εγγραφείτε τώρα"
@@ -43,16 +43,16 @@
   front_join_us_description: "H επιστήμη υπολογιστών είναι θεμέλιο για κάθε μαθητή. Βοηθήστε μας να το εισαγάγουμε σε 100 εκατομμύρια."
   front_join_us_button: "Ελάτε μαζί μας"
   front_what_is_hoc: 'Τι είναι η  Ώρα του Κώδικα;'
-  front_join_us_header: "Anyone can learn the basics, and have fun doing it!"
+  front_join_us_header: "Ο καθένας μπορεί να μάθε τα βασικά και να διασκεδάσει κάνοντας το!"
   front_join_us_header_uk: "Οποιαδήποτε στιγμή κατά τη διάρκεια εβδομάδας , 8-14 Δεκεμβρίου , φιλοξένησε μια εκδήλωση για την Ώρα του Κώδικα για να δείξεις ότι οποιοσδήποτε μπορεί να μάθει τα βασικά, διασκεδάζοντας!"
   front_join_us_teacher: "Είσαι Εκπαιδευτικός;"
-  front_join_us_inspire: "Inspire students with"
-  front_join_us_inspire_link: "an Hour of Code in the classroom."
+  front_join_us_inspire: "Εμπνεύστε τους μαθητές με"
+  front_join_us_inspire_link: "μια Ώρα του κώδικα στην τάξη."
   front_join_us_parent: "Είσαι γονέας;"
   front_join_us_ask_link: 'Ζητήστε από  το τοπικό σχολείο'
   front_join_us_ask: "να φιλοξενήσει μια Ώρα του Κώδικα."
   front_join_us_computer_science: "Αγαπάς απλά την επιστήμη των υπολογιστών;"
-  front_join_us_spread: "Spread the word."
+  front_join_us_spread: "Διάδωσέ το."
   front_join_us_organize: "Η οργάνωσε εσύ μια εκδήλωση για την Ώρα του Κώδικα."
   front_join_us_how_to_run: "Ορίστε κάποιες οδηγίες για το πώς να «τρέξεις» μια Ώρα του Κώδικα"
   front_join_us_help_promote: "Βοήθησε στην προώθηση της Ώρας του Κώδικα"
@@ -62,7 +62,7 @@
   front_join_us_try: "Δοκιμάστε το"
   front_join_us_host: "Φιλοξένησέ το"
   front_join_us_support: "Υποστήριξέ το"
-  signup_header: 'Organize an Hour of Code event during Dec 8 - 14, and register it here.'
+  signup_header: 'Οργανώσετε μια εκδήλωση Ώρας του Κώδικα από 8 - 14  Δεκ 8, και καταχωρήστε την εδώ.'
   signup_name_label: "Το όνομά σου"
   signup_email_label: "Το email σας"
   signup_organization_name_label: "Όνομα σχολείου ή του οργανισμού"
@@ -74,7 +74,7 @@
   signup_send_posters_flag_label: 'Στείλτε <a href= "/resources#posters"> αφίσες</a> στο σχολείο μου ή στον οργανισμό μου'
   signup_send_posters_address_label: "Διεύθυνση του σχολείου ή του οργανισμού"
   signup_whole_school_flag_label: "Αυτή η εκδήλωση είναι για ένα ολόκληρο σχολείο"
-  signup_your_event: "Sign up your event"
+  signup_your_event: "Κάντε Εγγραφή της εκδήλωσης σας"
   signup_name_placeholder: "Το όνομα σας"
   signup_email_placeholder: "you@example.com"
   signup_organization_name_placeholder: "Για παράδειγμα, Γυμνάσιο του Λίνκολν"
@@ -88,10 +88,13 @@
   signup_thank_you_header: "Σας ευχαριστούμε που εγγραφήκατε για να φιλοξενήσετε μια εκδήλωση για την Ώρα του Κώδικα."
   signup_thank_you_message: "Σας στέλνουμε ένα email επιβεβαίωσης με πληροφορίες που θα σας βοηθήσουν να ξεκινήσετε."
   map_header: '#Εκδηλώσεις για την Ώρα του Κώδικα  σε όλο τον κόσμο'
-  map_header_company: '# by company organizers'
-  meta_tag_og_title: "Η Ώρα του Κώδικα πλησιάζει"
+  map_header_company: '# από τισ διοργανώτριες εταιρίες'
+  map_search_placeholder: "Search for Hour of Code events"
+  map_search_search: "Search"
+  map_search_reset: "Reset"
+  meta_tag_og_title: "The Hour of Code is here"
   meta_tag_og_description: "Η Ώρα του Κώδικα είναι ένα παγκόσμιο κίνημα που φτάνει σε δεκάδες εκατομμύρια μαθητές σε 200 χώρες και σε πάνω από 30 γλώσσες. Για ηλικίες 4 έως 104."
-  meta_tag_twitter_title: "Η Ώρα του Κώδικα πλησιάζει"
+  meta_tag_twitter_title: "The Hour of Code is here"
   meta_tag_twitter_description: "Η Ώρα του Κώδικα είναι ένα παγκόσμιο κίνημα που φτάνει σε δεκάδες εκατομμύρια μαθητές σε 200 χώρες και σε πάνω από 30 γλώσσες. Για ηλικίες 4 έως 104."
   twitter_default_text: 'Συμμετέχω στη φετινή #HourOfCode, εσύ; @codeorg'
   hardware_prizes_form_name_label: "Το όνομά σου"
@@ -114,8 +117,8 @@
   hardware_prizes_form_submit_label: "Υποβολή"
   hoc_faq_title: "Συχνές ερωτήσεις"
   hoc_faq_what_is_hoc_q: 'Τι είναι η  Ώρα του Κώδικα;'
-  hoc_faq_what_is_hoc_a: "Η Ώρα του Κώδικα είναι μια εισαγωγή στην επιστήμη των υπολογιστών διάρκειας μιας ώρας , σχεδιασμένη να απομυθοποιήσει τον κώδικα και να δείξει ότι οποιοσδήποτε μπορεί να μάθει τα βασικά. <a href='http://code.org/learn'>Ελέγξτε τα μαθήματα</a>, και κοιτάξτε για τα νέα που θα βγουν για την Ώρα του Κώδικα 2014."
-  hoc_faq_last_year: "Δοκίμασε τους περσινούς εκπαιδευτικούς οδηγούς"
+  hoc_faq_what_is_hoc_a: "Στην ώρα του κώδικα είναι μια ωριαία εισαγωγή στην επιστήμη των υπολογιστών, σχεδιασμένο να απομυθοποιήσει κώδικα και να δείξει ότι μπορεί να μάθει τα βασικά. <a href='http://code.org/learn'> Ρίξτε μια ματιά στα έτοιμα μαθήματα</a>."
+  hoc_faq_last_year: "Δοκιμάστε τα μαθήματα"
   hoc_faq_when_is_hoc_q: "Πότε είναι η Ώρα του Κώδικα;"
   hoc_faq_when_is_hoc_a: "Οποιοσδήποτε μπορεί να φιλοξενήσει μια ώρα του κώδικα ανά πάσα στιγμή, αλλά ο στόχος βασικής εκστρατείας  είναι δέκα εκατομμύρια μαθητές να δοκιμάσουν μια Ώρα του Κώδικα κατά τη διάρκεια της εβδομάδας 8-14 Δεκεμβρίου, 2014, για τον εορτασμό της <a href='http://csedweek.org'> Εκπαιδευτικής Εβδομάδας της Επιστήμης των Υπολογιστών</a>. Πρόκειται για μία συγκεκριμένη <i>ώρα</i>; Όχι. Μπορείς να κάνεις την Ώρα του Κώδικα οποτεδήποτε κατά τη διάρκεια αυτής της εβδομάδας. (Και αν δεν μπορείς να το κάνεις κατά τη διάρκεια αυτής της εβδομάδας, κάνε την εβδομάδα πριν ή μετά)."
   hoc_faq_why_cs_q: "Γιατί επιστήμη των υπολογιστών;"
@@ -128,12 +131,20 @@
   hoc_faq_host_a: "Βεβαίως, οι δραστηριότητες της Ώρας του Κώδικα είναι αυτο-κατευθυνόμενες. Το μόνο που έχεις να κάνεις είναι  <a href='http://code.org/learn'> να δοκιμάσεις τα τρέχοντα σεμινάριά μας </a>, να διαλέξεις το σεμινάριο που θέλεις και να βρεις μια ώρα  &mdash; εμείς φροντίζουμε για τα υπόλοιπα. Επίσης υπάρχουν επιλογές για κάθε ηλικία και επίπεδο εμπειρίας, ξεκινώντας από το νηπιαγωγείο. Άρχισε να σχεδιάζεις την εκδήλωσή σου διαβάζοντας τον  <a href='target-resources-how-to'> Πώς το κάνω οδηγό μας </a>."
   hoc_faq_need_computers_q: "Χρειάζονται υπολογιστές για κάθε συμμετέχοντα;"
   hoc_faq_need_computers_a: "Όχι. Έχουμε μαθήματα για την Ώρα του Κώδικα που λειτουργούν σε υπολογιστές, smartphones, tablets, και μερικά που δεν απαιτούν καθόλου υπολογιστή ! Μπορείτε να συμμετάσχετε όπου κι αν βρίσκεστε, με ό, τι έχετε. <p><i>Εδώ είναι μερικές επιλογές:</i> <br><ul><li><b>Δουλέψτε σε ομάδες των δύο.</b> Η έρευνα δείχνει ότι οι μαθητές μαθαίνουν καλύτερα όταν <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>προγραμματίζουν σε ομάδες των δύο</a>, ενώ μοιράζονται κάποιον υπολογιστή και συνεργάζονται. Προτρέψτε τους μαθητές σας να δουλέψουν ανά δύο. <li><b>Use a projected screen.</b> If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions. <li><b>Go unplugged.</b> We offer tutorials that require no computer at all. </ul>"
-  hoc_faq_international_q: 'I am in <country>. How do I participate internationally?'
-  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='target-resources'>here</a>."
+  hoc_faq_international_q: 'Μένω στην  <country>.  Πως μπορώ να συμμετέχω διεθνώς;'
+  hoc_faq_international_a: "Ο καθένας μπορεί να διοργανώσει μια εκδήλωση Ώρας του Κώδικα, οπουδήποτε στον κόσμο. Πέρυσι, οι φοιτητές παγκοσμίως ενώθηκαν για την Ώρα του Κώδικα. Μάθετε περισσότερα <a href='target-resources'> εδώ</a>."
   hoc_faq_tutorial_q: "Πώς μπορώ να δημιουργήσω ένα μάθημα για την Ώρα του Κώδικα;"
-  hoc_faq_tutorial_a: "If you're interested in becoming a tutorial partner, <a href='target-tutorial-guidelines'>see our guidelines and instructions</a>. We'd like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science."
+  hoc_faq_tutorial_a: "Εάν ενδιαφέρεστε να γίνετε συνεργάτης σε μια δραστηριότητα, <a href='targetHOC'>δείτε τις οδηγίες </a>. Θα θέλαμε να φιλοξενίσουμε διάφορες ελκυστικές επιλογές, αλλά ο πρωταρχικός στόχος είναι η βελτιστοποίηση της εμπειρίας μαθητών και καθηγητών που είναι καινούργιοι στην επιστήμη των υπολογιστών."
   hoc_faq_more_questions_q: "Έχετε ακόμα ερωτήσεις;"
   hoc_faq_more_questions_a: "Προσπαθείστε να βρείτε μια απάντηση στο <a href='http://support.code.org'>φόρουμ υποστήριξης</a>."
+  hoc_faq_scratch_q: "Θέλω να διδάξω Scratch για την Ώρα του Κώδικα, αλλά τι μπορώ να κάνω εάν οι μαθητές μου έχουν iPads αντί για φορητούς υπολογιστές;"
+  hoc_faq_scratch_a: "Το Scratch δεν μπορεί να εγκατασταθεί σε tablets. Εάν οι μαθητές σας είναι μικρής ηλικίας, μπορούν να χρησιμοποιήσουν την εφαρμογή ScratchJR iPad app (για μικρές ηλικίες). Εάν κοιτάξετε τα μαθήματα στο <a href='http://code.org/learn'>Code.org/learn</a>, μπορείτε να βρείτε κι άλλα μαθήματα που δουλεύουν σε  iPads - από το Code.org, Tynker, Lightbot, or CodeSpark."
+  hoc_faq_account_q: "Είναι υποχρεωτικό οι μαθητές να συνδεθούν χρησιμοποιώντας έναν λογαριασμό;"
+  hoc_faq_account_a: "Οχι. Απολύτως καμία εγγραφή ή σύνδεση με λογαριασμό κανενός είδους δεν απαιτείται για τους μαθητές προκειμένου να δοκιμάσουν την Ώρα του Κώδικα.  Οι περισσότερες <a href='http://code.org/learn/beyond'> παρακολουθήσεις της επίδοσης των μαθημάτων</a> απαιτούν τη δημιουργία ενός λογαριασμού προκειμένου να κρατείται εκεί η πρόοδος του μαθητή."
+  hoc_faq_frozen_q: "Πού είναι το μάθημα με την Άννα και την Έλσα;"
+  hoc_faq_frozen_a: "Είναι πλέον δημοσιευμένο στο  <a href='http://code.org/learn'> Code.org/learn</a>. Ελπίζουμε να το απολαύσετε!"
+  hoc_faq_high_school_q: "Ποια δραστηριότητα πρέπει να κάνω με μαθητές λυκείου;"
+  hoc_faq_high_school_a: "Για όλες τις ηλικίες, εμείς προτείνουμε να δοκιμάσετε ένα από τα μαθήματα αρχαρίων  <a href='http://code.org/learn'> Code.org/learn</a> για να ξεκινήσετε, όπως το μάθημα με τα Angry Birds ή το μάθημα με την Άννα και την Έλσα. Ένας  μαθητής λυκείου πρέπει να είναι σε θέση να τελειώσει ένα από αυτά τα μαθήματα σε 30 λεπτά και στη συνέχεια μπορεί να δοκιμάσει ένα πιο προχωρημένο εισαγωγικό μάθημα σε JavaScript, όπως αυτά που προσφέρονται από την KhanAcademy ή  την CodeHS."
   hoc_faq_more_questions_br_q: "Outras dúvidas?"
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "Η Ώρα του Κώδικα είναι μια εισαγωγή στην επιστήμη των υπολογιστών διάρκειας μιας ώρας , σχεδιασμένη να απομυθοποιήσει τον κώδικα και να δείξει ότι οποιοσδήποτε μπορεί να μάθει τα βασικά. <a href='http://code.org/learn'>Ελέγξτε τα μαθήματα</a>, και κοιτάξτε για τα νέα που θα βγουν για την Ώρα του Κώδικα 2014."
@@ -156,28 +167,28 @@
   stats_girls_million: "Πάνω από 10 εκατομμύρια κορίτσια το 2013"
   stats_nina: '"Κάθε μέρα είχαμε τα ίδια αποτελεέσματα &mdash; 100%  συμμετοχή" - Nina Nichols Peery, Εκπαιδευτικός'
   stats_student: 'Ήξερα ότι αυτή ήταν μια <b>ευκαιρία ζωής</b> - Mariana Alzate, Ε Δημοτικού'
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  stats_michael: '«Δεν είχα ξαναδεί μαθητές μου <b>τόσο ενθουσιώδεις</b> με τη μάθηση» - Michael Clark, Δάσκαλος'
   resources_how_to: 'Πώς να- Οδηγός για καθηγητές'
-  resources_how_to_events: "Event how-to guide"
-  resources_how_to_districts: "How-to guide for districts"
-  resources_how_to_officials: "How-to guide for public officials"
+  resources_how_to_events: "Οδηγός Διοργάνωσης Εκδήλωσης"
+  resources_how_to_districts: "Οδηγίες για περιφέρειες"
+  resources_how_to_officials: "Οδηγίες για δημόσιους αξιωματούχους"
   resources_handouts: "Φυλλάδια για την εξάπλωση της ιδέας"
   resources_videos: "Βίντεος"
   resources_posters: "Αφίσες"
   resources_social: "Κοινωνικά Δίκτυα"
   resources_banners: "Πανό"
   resources_emails: "Δείγμα μηνυμάτων ηλεκτρονικού ταχυδρομείου"
-  resources_stats: "Useful stats and blurbs"
+  resources_stats: "Χρήσιμα στατιστικά και τις περιλήψεις"
   resources_press_kit: "Υλικό για τα ΜΜΕ"
   events_title: "Όλες οι Εκδηλώσεις της Ώρας του Κώδικα"
   events_nav_all: "Όλες οι εκδηλώσεις"
   events_nav_whole_schools: "Ολόκληρα σχολεία"
   events_nav_special: "Ειδικές εκδηλώσεις"
-  events_nav_orgs: "Organizations"
+  events_nav_orgs: "Οργανισμοί"
   events_all_title: "Όλες οι εκδηλώσεις της Ώρας του Κώδικα"
   events_whole_school_title: "Εκδηλώσεις ολόκληρου σχολείου για την Ώρα του Κώδικα"
   events_special_title: "Ειδικές εκδηλώσεις για την Ώρα του Κώδικα"
-  events_orgs_title: "All Hour of Code events organized by Partner Organizations"
+  events_orgs_title: "Όλες οι εκδηλώσεις Ώρας του Κώδικα που έχουν διοργανώσει οι Συνεργαζόμενοι Οργανισμοί"
   event: "εκδήλωση"
   events: "εκδηλώσεις"
   footer_copyright_message: "Πνευματικά δικαιώματα Code.org 2014. Όλα τα δικαιώματα είναι κατοχυρωμένα."

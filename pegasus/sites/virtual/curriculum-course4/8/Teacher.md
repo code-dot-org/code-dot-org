@@ -36,7 +36,7 @@ We know that loops allow us to do things over and over again, but now we’re go
 6) [Vocab-Shmocab](#Shmocab)
 
 ### **Assessment** - 5  minutes 
-7) [Condtionals with Cards Assessment](#Assessment)
+7) [Conditionals with Cards Assessment](#Assessment)
 
 [/summary]
 
@@ -244,4 +244,4 @@ Use these activities to enhance student learning. They can be used as outside of
 
 [/content]
 
-<link rel="stylesheet" type="text/css" href="morestyle.css"/>
+<link rel="stylesheet" type="text/css" href="../docs/morestyle.css"/>

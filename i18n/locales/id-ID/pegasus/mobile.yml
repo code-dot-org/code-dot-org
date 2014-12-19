@@ -41,7 +41,7 @@ id-ID:
   go: Gerak
   thank_you_: Terima kasih!
   congratulations: Selamat!
-  congratulations_on_completing_hoc: Selamat atas menyelesaikan 1 jam kode.
+  congratulations_on_completing_hoc: Selamat atas penyelesaian satu jam dari kode
   get_a_certificate_of_achievement: Ambil sertifikat prestasi
   enter_valid_email: Masukkan alamat email yang valid
   get_a_certificate_message: "Kami akan kirimkan sertifikat dan informasi tentang cara untuk <a href='/learn/beyond'> belajar lebih dari satu jam</a>"
@@ -65,7 +65,7 @@ id-ID:
   thanks_for_voting: Terima kasih untuk memilih!
   share_on_facebook: Berbagi melalui Facebook
   share_on_twitter: Berbagi melalui Twitter
-  beyond_an_hour: 'Di luar Hour of Code>'
+  beyond_an_hour: Setelah Satu Jam Kode
   get_started: Mulai
   i_agree: Saya setuju
   participant_select: -Pilih-
@@ -74,6 +74,9 @@ id-ID:
   participant_educator: Guru
   participant_engineer: Programmer
   participant_other: Tidak satupun diatas
+  print_all: Print semua
+  print_ice_art: 'Print kerajinan tanganmu '
+  create_art_with_zombie: atau buat seni yang lebih canggih dengan zombie
   i_am_a: Saya seorang
   never_spam: 'Kami tidak akan pernah mengirim anda spam '
   enter_country: Berikan negara jika anda berdomisili di luar Amerika Serikat
@@ -110,6 +113,10 @@ id-ID:
   studiobar_flappy_body: Buatlah dan bagikanlah permainan Flappy bikinan kamu sendiri
   studiobar_teacher_title: DIbuat untuk guru
   studiobar_teacher_body: Perkenalkan Code Studio di kelasmu
+  studiobar_frozen_title: Jam kode
+  studiobar_frozen_body: Buat wonderland musim dingin dengan Anna dan Elsa
+  studiobar_donate_title: Donasi
+  studiobar_donate_body: Satu anak belajar untuk setiap US dollar yang Anda sumbangkan
   contact_form_topic_student: Saya seorang siswa
   contact_form_topic_parent: Saya orang tua
   contact_form_topic_teacher: Saya seorang guru
@@ -193,6 +200,12 @@ id-ID:
   dashboard_action_done: Selesai
   dashboard_action_required: diperlukan
   dashboard_navigation_home_page: Beranda guru
+  dashboard_navigation_section_student_progress: Akun dan perkembangan siswa
+  dashboard_navigation_section_teacher_progress: Kemajuan studi Anda
+  dashboard_navigation_section_lesson_plans: Rencana pelajaran dan sumber daya
+  dashboard_navigation_section_community: Bantuan dan komunitas
+  dashboard_navigation_section_pd: Pengembangan profesional
+  dashboard_navigation_section_speakers: 'Ilmu Komputer <br/> Pembicara Tamu'
   dashboard_navigation_all_sections: Akun dan perkembangan siswa
   dashboard_navigation_view_progress: Lihat perkembangan
   dashboard_navigation_add_students: Tambahkan murid
@@ -211,63 +224,63 @@ id-ID:
   dashboard_sections_table_code: Kode Sesi
   dashboard_sections_name: Nama kelompok
   dashboard_sections_choose_secret: 'Jika Anda ingin memberikan akun kepada murid Anda, pilih <b>kata</b> atau <b>gambar</b> rahasia untuk bagian tersebut.'
-  dashboard_sections_secret_word: 'A <b>word</b> allows you to set a secret word for each student.'
-  dashboard_sections_secret_picture: "A <b>picture</b> allows you to set a secret picture for each student, ideal for younger students who can't yet type."
-  dashboard_sections_secret_none: 'If you would like your students to manage their own accounts, including choosing their own passwords, choose a secret type of <b>none</b>.'
-  dashboard_sections_print_secrets: You may then print a sheet of cards containing account information to be distributed to your students individually.
-  dashboard_sections_switch_section: 'Switch section:'
-  dashboard_students_add_student: Add student
-  dashboard_students_add_students: Add multiple students
-  dashboard_students_add_multiple: 'Type or paste the names of your students, one per line:'
-  dashboard_students_new_section: "You've created a new section! Now add your students using the <b>Add student</b> and <b>Add multiple students</b> buttons above."
-  dashboard_students_placeholder_name: Student Name
+  dashboard_sections_secret_word: '<b>Kata</b> memungkinkan Anda untuk menetapkan kata rahasia yang berbeda untuk setiap siswa.'
+  dashboard_sections_secret_picture: '<b>Gambar</b> yang memungkinkan Anda untuk menetapkan gambar rahasia untuk setiap siswa, ideal untuk siswa yang lebih muda yang belum bisa mengetik.'
+  dashboard_sections_secret_none: 'Jika Anda ingin siswa Anda untuk mengelola akun mereka sendiri, termasuk memilih kata sandi mereka sendiri, maka pilihlah tipe kata sandi <b>kosong</b>.'
+  dashboard_sections_print_secrets: Anda kemudian dapat memprint kartu yang berisi informasi akun untuk dibagikan kepada masing-masing siswa-siswi.
+  dashboard_sections_switch_section: 'Beralih bagian:'
+  dashboard_students_add_student: Tambahkan siswa
+  dashboard_students_add_students: Tambahkan beberapa siswa
+  dashboard_students_add_multiple: 'Ketik atau sisipkan nama siswa Anda, satu siswa setiap baris:'
+  dashboard_students_new_section: 'Anda telah membuat bagian yang baru! Sekarang tambahkan siswa Anda menggunakan tombol <b>Tambahkan siswa</b> dan <b>Tambahkan beberapa siswa</b> di atas.'
+  dashboard_students_placeholder_name: Nama siswa
   dashboard_students_name: Nama
   dashboard_students_age: Umur
   dashboard_students_gender: Jenis kelamin
   dashboard_students_male: Laki-laki
   dashboard_students_female: Wanita
-  dashboard_students_secret: Secret
+  dashboard_students_secret: Rahasia
   dashboard_students_password: kata sandi
-  dashboard_students_username: 'Username: %{student_username}'
+  dashboard_students_username: 'Nama pengguna: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
-  dashboard_students_completed_levels: Completed Levels
-  dashboard_students_total_lines: Lines of Code
-  dashboard_students_show_secret: Show secret
-  dashboard_students_auto_generated: Auto-generated
-  dashboard_students_reset_secret: Reset secret
-  dashboard_students_reset_password: Reset password
-  dashboard_students_share_section: "Share this section's sign in page with your students:"
+  dashboard_students_completed_levels: Tingkat yang telah selesai
+  dashboard_students_total_lines: Baris kode
+  dashboard_students_show_secret: Tampilkan rahasia
+  dashboard_students_auto_generated: Hasilkan secara otomatis
+  dashboard_students_reset_secret: Reset rahasia
+  dashboard_students_reset_password: Reset kata sandi
+  dashboard_students_share_section: 'Berbagi halaman masuk ini dengan siswa Anda:'
   dashboard_students_print_info: "Print out cards with your students' login information."
-  dashboard_students_secret_picture: Secret Picture
+  dashboard_students_secret_picture: Gambar rahasia
   dashboard_students_reset_picture: "You may reset a student's secret picture at any time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new secret picture will be generated for that student to use when they sign in."
-  dashboard_students_secret_word: Secret Word
+  dashboard_students_secret_word: Kata sandi
   dashboard_students_reset_word: "You may reset a student's secret words at any time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new pair of secret words will be generated for that student to use when they sign in. "
   dashboard_students_join_link: Tell your students to create their own accounts and join your section at
   dashboard_students_no_email: "If your students do not have email addresses, or you would like to create accounts for them, change this section's secret type to <b>word</b> or <b>picture</b>."
-  dashboard_students_print_page: Print this page
+  dashboard_students_print_page: Print halaman ini
   dashboard_students_url: URL
   dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Click here</a> for our privacy document that can be shared or printed for your students.'
   dashboard_curriculum_overview: K-5 Curriculum Overview
-  dashboard_view_all_lesson_plans: View all lesson plans
-  dashboard_course1: 'Course 1:'
-  dashboard_course2: 'Course 2:'
-  dashboard_course3: 'Course 3:'
+  dashboard_view_all_lesson_plans: Lihat semua rencana pelajaran
+  dashboard_course1: 'Kursus 1:'
+  dashboard_course2: 'Kursus 2:'
+  dashboard_course3: 'Kursus 3:'
   dashboard_sequence: Urutan (Sequence)
-  dashboard_framework: Framework
-  dashboard_standards: Standards
-  dashboard_implementation_guide: Implementation Guide
-  dashboard_glossary: Glossary
-  dashboard_classroom_strategies: Classroom strategies for teachers
-  dashboard_debugging: 'Debugging:'
-  dashboard_puzzle_solving: 'Puzzle-solving:'
-  dashboard_student_worksheet: student worksheet
-  dashboard_teacher_worksheet: teacher worksheet
+  dashboard_framework: Kerangka kerja
+  dashboard_standards: Standar
+  dashboard_implementation_guide: Panduan pelaksanaan
+  dashboard_glossary: Daftar istilah
+  dashboard_classroom_strategies: Strategi ruang kelas untuk para guru
+  dashboard_debugging: 'Debug:'
+  dashboard_puzzle_solving: 'Memecahkan teka-teki:'
+  dashboard_student_worksheet: lembar kerja siswa
+  dashboard_teacher_worksheet: lembar kerja guru
   dashboard_grade_k: K
   dashboard_grade_other: Lain
-  dashboard_login_word: Word
-  dashboard_login_picture: Picture
+  dashboard_login_word: Kata
+  dashboard_login_picture: Gambar
   dashboard_login_none: email
-  dashboard_new_password: new password
+  dashboard_new_password: Kata sandi baru
   stats_hoc_2013_heading: "Incredible stats from last year's Hour of Code. In one week alone:"
   stats_hoc_2013_image_alt: Statistik Hour of Code tahun 2013
   dashboard_teacher: Guru
@@ -283,7 +296,7 @@ id-ID:
   dashboard_sections_password_account_creation: Teks kata sandi yang dibuat murid
   dashboard_sections_login_type_explanation: 'Tabel ini membantu menjelaskan jenis-jenis login manakah, <b>gambar, kata, atau surat elektronik</b>, yang akan Anda pilih untuk satu bagian.'
   dashboard_faq: Pertanyaan yang Sering Diajukan
-  code_hoc_coming: 'The Hour of Code akan datang - 8-14 Desember!'
+  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
   code_sign_up: Daftarlah untuk ikut serta dalam Pekan Edukasi Ilmu Komputer
   learn_more: Pelajari lebih banyak
   hoc2014_try_new_tutorials: Cobalah pedoman Hour of Code terbaru kami
@@ -293,7 +306,7 @@ id-ID:
   carousel_heading_international: Tutorial dalam bahasa Anda
   carousel_heading_domestic: Pedoman tersedia dalam Bahasa Inggris
   carousel_heading_beginners: Pedoman untuk pemula
-  carousel_heading_javascript: Pedoman yang mengajarkan Javascript
+  carousel_heading_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: Tidak ada perangkat atau internet? Coba ilmu komputer luring (offline)
   carousel_heading_devices: Aplikasi pedoman untuk ponsel dan tablet
   carousel_heading_languages: Pedoman dalam bahasa pemrograman lain
@@ -312,12 +325,16 @@ id-ID:
   older_systems: Pedoman yang bekerja pada sistem lama
   older_systems_subheading: 'Ini seharusnya bekerja pada perambah web versi lama. Untuk mengakses semua pedoman, perbarahui ke a <a href="http://browsehappy.com/" target="_blank">perambah web versi terbaru.</a>'
   mobile_devices: Pedoman untuk ponsel
-  frozen_name: Code with Anna and Elsa
+  frozen_name: Koding dengan Anna dan Elsa
   codeorg_name: Tulis program komputer pertama anda
   codeintl_name: Tulis program komputer pertama anda
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Pengenalan JavaScript
   khanes_name: Pengenalan JavaScript
+  khanpt_name: Pengenalan JavaScript
+  khanhe_name: Pengenalan JavaScript
+  khanfr_name: Pengenalan JavaScript
+  khanpl_name: Pengenalan JavaScript
   tynker_name: Buatlah mainan Anda sendiri
   scratch_name: Jadilah kreatif dengan menulis kode
   lightbot_name: Lightbot
@@ -337,124 +354,146 @@ id-ID:
   kodable_name: Kodable (pre-readers welcome)
   tynkerapp_name: 'Tynker - on tablets'
   robomindnl_name: Bikinlah program robot maya
-  flappy_name: Make a Flappy game
-  bitsbox_name: 'Bitsbox - make a game'
-  makegameswithus_name: Build an iPhone game in your browser!
+  flappy_name: Membuat permainan Flappy
+  bitsbox_name: 'Bitsbox - buatlah permainan'
+  makegameswithus_name: Membangunlah permainan untuk iPhone menggunakan browser Anda!
   touchdevelop_name: TouchDevelop
-  appinventor_name: AppInventor Hour of Code
+  appinventor_name: AppInventor satu jam kode
   blockly_name: Blockly
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
-  projguts_name: Rock, Paper, Scissors
-  frozen_gradelevel: Ages 8+
-  codeorg_gradelevel: Ages 4-104
-  codeintl_gradelevel: Ages 4-104
+  projguts_name: Batu, kertas, gunting
+  hourofcode_name: Pengganti untuk code.org/hoc yang baru
+  playlab_name: Play Lab
+  codeorg_gradelevel: Usia 4-104
+  codeintl_gradelevel: Usia 4-104
   thinkersmithspanish_gradelevel: Por todos
-  khan_gradelevel: Middle school +
-  khanes_gradelevel: Middle school +
-  tynker_gradelevel: Ages 5-13
-  scratch_gradelevel: Ages 8+
+  khan_gradelevel: Sekolah menengah
+  khanes_gradelevel: Sekolah menengah
+  khanpt_gradelevel: Sekolah menengah
+  khanhe_gradelevel: Sekolah menengah
+  khanfr_gradelevel: Sekolah menengah
+  khanpl_gradelevel: Sekolah menengah
+  tynker_gradelevel: Usia 5-13
+  scratch_gradelevel: Usia 8 +
   lightbot_gradelevel: Segala usia
   thinkersmith_gradelevel: Segala usia
-  condcards_gradelevel: Ages 8-12
+  condcards_gradelevel: Usia 8-12
   lightbotintl_gradelevel: Segala usia
   codehs_gradelevel: Sekolah Menengah Umum
   codecademy_gradelevel: Sekolah Menengah Umum
-  codecombat_gradelevel: Middle school +
-  codemonkey_gradelevel: Middle school +
-  codeavengers_gradelevel: Middle school +
+  codecombat_gradelevel: Sekolah menengah
+  codemonkey_gradelevel: Sekolah menengah
+  codeavengers_gradelevel: Sekolah menengah
   processing_gradelevel: Sekolah Menengah Umum
-  robomind_gradelevel: Ages 8-13
-  groklearning_gradelevel: Middle school +
-  quorum_gradelevel: Middle school +
+  robomind_gradelevel: Usia 8-13
+  groklearning_gradelevel: Sekolah menengah
+  quorum_gradelevel: Sekolah menengah
   codespark_gradelevel: Sekolah Dasar
   kodable_gradelevel: Sekolah Dasar
-  tynkerapp_gradelevel: Ages 5-13
-  robomindnl_gradelevel: Ages 8-13
-  flappy_gradelevel: Ages 4-104
+  tynkerapp_gradelevel: Usia 5-13
+  robomindnl_gradelevel: Usia 8-13
+  flappy_gradelevel: Usia 4-104
   bitsbox_gradelevel: Sekolah Dasar
   makegameswithus_gradelevel: Sekolah Menengah Umum
   touchdevelop_gradelevel: Sekolah Menengah Umum
-  appinventor_gradelevel: Middle school +
+  appinventor_gradelevel: Sekolah menengah
   blockly_gradelevel: Segala usia
-  thinkersmith2_gradelevel: Ages 8+
-  kodableunplugged_gradelevel: Ages 8-13
-  projguts_gradelevel: Ages 10-13
-  frozen_platformtext: Modern browsers + tablets
-  codeorg_platformtext: Modern browsers, smartphones, tablets
-  codeintl_platformtext: Modern browsers, smartphones, tablets
+  thinkersmith2_gradelevel: Usia 8 +
+  kodableunplugged_gradelevel: Usia 8-13
+  projguts_gradelevel: Usia 10-13
+  hourofcode_gradelevel: Usia 4-104
+  frozen_gradelevel: Usia 8 +
+  playlab_gradelevel: Usia 4-104
+  codeorg_platformtext: Browser modern, smartphone, tablet
+  codeintl_platformtext: Browser modern, smartphone, tablet
   thinkersmithspanish_platformtext: Unplugged
-  khan_platformtext: Modern web browsers
-  khanes_platformtext: Modern web browsers
-  tynker_platformtext: Modern browsers. (Follow-on course requires $$)
-  scratch_platformtext: ALL browsers
-  lightbot_platformtext: ALL browsers and iOS, Android, or Game Console
+  khan_platformtext: Web browser modern
+  khanes_platformtext: Web browser modern
+  khanpt_platformtext: Web browser modern
+  khanhe_platformtext: Web browser modern
+  khanfr_platformtext: Web browser modern
+  khanpl_platformtext: Web browser modern
+  tynker_platformtext: Web browser modern
+  scratch_platformtext: Desktop-only web browsers (not tablets)
+  lightbot_platformtext: Semua browser dan iOS, Android, atau konsol permainan
   thinkersmith_platformtext: Unplugged
   condcards_platformtext: Unuplugged
-  lightbotintl_platformtext: iOS, Android (or web browser)
+  lightbotintl_platformtext: iOS, Android (atau web browser)
   codehs_platformtext: 'Modern browsers. (Follow-on course requires  $$)'
-  codecademy_platformtext: Modern web browsers. iOS, Android apps
-  codecombat_platformtext: Modern web browsers
-  codemonkey_platformtext: Modern web browsers
-  codeavengers_platformtext: Modern web browsers
-  processing_platformtext: Modern web browsers
-  robomind_platformtext: Modern web browsers, Mobile web
-  groklearning_platformtext: Modern web browsers
+  codecademy_platformtext: Web browser modern. iOS, Android apps
+  codecombat_platformtext: Modern web browsers (Follow-on course requires $$)
+  codemonkey_platformtext: Web browser modern
+  codeavengers_platformtext: Web browser modern
+  processing_platformtext: Web browser modern
+  robomind_platformtext: Web browser modern, Mobile web
+  groklearning_platformtext: Web browser modern
   quorum_platformtext: Modern web browsers. Screen-readers supported
-  codespark_platformtext: iOS, Android (or web browser)
+  codespark_platformtext: iOS, Android (atau web browser)
   kodable_platformtext: iPad
-  tynkerapp_platformtext: iPad, Android tablets
-  robomindnl_platformtext: Modern web browsers, Mobile web
-  flappy_platformtext: Modern browsers, smartphones, tablets
-  bitsbox_platformtext: Modern web browsers
-  makegameswithus_platformtext: Modern Web browsers
-  touchdevelop_platformtext: Modern browsers, smartphones, all devices
-  appinventor_platformtext: Modern browsers + Android
-  blockly_platformtext: Modern browsers only
+  tynkerapp_platformtext: iPad, tablet Android
+  robomindnl_platformtext: Web browser modern, Mobile web
+  flappy_platformtext: Browser modern, smartphone, tablet
+  bitsbox_platformtext: Web browser modern
+  makegameswithus_platformtext: Browser Web modern
+  touchdevelop_platformtext: Browser modern, smartphone, semua perangkat
+  appinventor_platformtext: Browser modern + Android
+  blockly_platformtext: Hanya browser modern
   thinkersmith2_platformtext: Unplugged
   kodableunplugged_platformtext: Unplugged
   projguts_platformtext: Unplugged
-  frozen_shortdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
+  hourofcode_platformtext: Browser modern, smartphone, tablet
+  frozen_platformtext: Browser modern + tablet
+  playlab_platformtext: Browser modern, smartphone, tablet
   codeorg_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
   codeintl_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
-  khan_shortdescription: Learn to draw in JavaScript
-  khanes_shortdescription: Learn to draw in JavaScript
+  khan_shortdescription: Belajar menggambar menggunakan JavaScript
+  khanes_shortdescription: Belajar menggambar menggunakan JavaScript
+  khanpt_shortdescription: Belajar menggambar menggunakan JavaScript
+  khanhe_shortdescription: Belajar menggambar menggunakan JavaScript
+  khanfr_shortdescription: Belajar menggambar menggunakan JavaScript
+  khanpl_shortdescription: Belajar menggambar menggunakan JavaScript
   tynker_shortdescription: Learn to code by solving fun puzzles and build your own mobile games.
   scratch_shortdescription: Create interactive games, stories, and animations.
   lightbot_shortdescription: Program Lightbot to solve puzzles using procedures and loops!
   thinkersmith_shortdescription: Unplugged tutorial for a group with no devices
-  condcards_shortdescription: Learn algorithms with a deck of cards
-  lightbotintl_shortdescription: A game to teach coding concepts
+  condcards_shortdescription: Belajar algoritma menggunakan kartu-kartu
+  lightbotintl_shortdescription: Sebuah permainan untuk mengajar konsep mengkode
   codehs_shortdescription: Start coding with Karel the Dog, a fun and visual intro to programming!
-  codecademy_shortdescription: Learn JavaScript programming, in a web-browser
+  codecademy_shortdescription: Belajar pemrograman JavaScript, di web browser
   codecombat_shortdescription: Defeat ogres to learn Python or JavaScript in this epic programming game!
   codemonkey_shortdescription: Students program a monkey to catch bananas.
-  codeavengers_shortdescription: Learn JavaScript programming, in a web-browser
+  codeavengers_shortdescription: Belajar pemrograman JavaScript, di web browser
   processing_shortdescription: A one hour tutorial in the Processing languages
-  robomind_shortdescription: Write code for a virtual robot
-  groklearning_shortdescription: |-
-    Teach "Eliza" the chatbot to fool your friends into thinking she's human!
-  quorum_shortdescription: Join Mary on a guided tour as she learns the Quorum programming language.
-  codespark_shortdescription: The Foos is a fun, kid-friendly game to learn about programming.
+  robomind_shortdescription: Menulis kode untuk virtual robot
+  groklearning_shortdescription: 'Ajarkan chatbot "Eliza" untuk menipu teman-teman Anda berpikir bahwa dia manusia!'
+  quorum_shortdescription: Bergabunglah dengan Mary dalam tur saat dia belajar bahasa pemrograman Quorum.
+  codespark_shortdescription: Foos adalah permainan yang menyenangkan untuk anak-anak belajar tentang pemrograman.
   kodable_shortdescription: A fun iPad game to teach computer programming concepts
   tynkerapp_shortdescription: 'Learn to program by solving fun coding puzzles. '
-  robomindnl_shortdescription: Write code for a virtual robot
+  robomindnl_shortdescription: Menulis kode untuk virtual robot
   flappy_shortdescription: 'Make your own game - Flappy Bird, Shark, or Submarine'
-  bitsbox_shortdescription: Code a series of apps to play and share, using real Javascript.
+  bitsbox_shortdescription: Code a series of apps to play and share, using real JavaScript.
   makegameswithus_shortdescription: Make an iPhone game! Learn by writing code to teach your monster new moves!
   touchdevelop_shortdescription: 'Solve puzzles, create games, and learn coding all on your phone. '
-  appinventor_shortdescription: Make your own app! (Android-only)
+  appinventor_shortdescription: Membuat aplikasi Anda sendiri! (hanya untuk Android)
   blockly_shortdescription: Unduh file ZIP untuk belajar secara luring
   thinkersmith2_shortdescription: Pelajari cara komputer menggunakan angka-angka 1 dan 0 untuk mewakili informasi
   kodableunplugged_shortdescription: Latihan luring yang menyenangkan
   projguts_shortdescription: Coba pemodelan dan simulasi menggunakan batu/kertas/gunting
-  frozen_longdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
+  hourofcode_shortdescription: Pengganti untuk code.org/hoc yang baru
+  frozen_shortdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
+  playlab_shortdescription: Create a story or make a game with Play Lab!
   codeorg_longdescription: Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
   codeintl_longdescription: Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
-  thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubriran como guiarse de modo tal de llevar a cabo tareas especificas sin ser estas discutidas previamente. Este segmento ensena a los estudiantes la conexion entre simbolos y acciones asi como la valiosa habilidad de depuracion.'
-  khan_longdescription: Learn the basics of JavaScript programming while creating fun drawings with your code. Do it on your own or with your class!
-  khanes_longdescription: Learn the basics of JavaScript programming while creating fun drawings with your code. Do it on your own or with your class!
+  thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
+  khan_longdescription: Pelajari dasar-dasar pemrograman JavaScript sekaligus menciptakan menyenangkan gambar dengan kode Anda. Lakukannya sendiri atau dengan kelas Anda!
+  khanes_longdescription: Pelajari dasar-dasar pemrograman JavaScript sekaligus menciptakan menyenangkan gambar dengan kode Anda. Lakukannya sendiri atau dengan kelas Anda!
+  khanpt_longdescription: Pelajari dasar-dasar pemrograman JavaScript sekaligus menciptakan menyenangkan gambar dengan kode Anda. Lakukannya sendiri atau dengan kelas Anda!
+  khanhe_longdescription: Pelajari dasar-dasar pemrograman JavaScript sekaligus menciptakan menyenangkan gambar dengan kode Anda. Lakukannya sendiri atau dengan kelas Anda!
+  khanfr_longdescription: Pelajari dasar-dasar pemrograman JavaScript sekaligus menciptakan menyenangkan gambar dengan kode Anda. Lakukannya sendiri atau dengan kelas Anda!
+  khanpl_longdescription: Pelajari dasar-dasar pemrograman JavaScript sekaligus menciptakan menyenangkan gambar dengan kode Anda. Lakukannya sendiri atau dengan kelas Anda!
   tynker_longdescription: Build your own games and share with friends! Solve fun coding puzzles and learn programming concepts in each level. Personalize games with animated characters, multiple levels and rich props. Make your games realistic using physics. See the code as visual blocks or JavaScript. Take your games mobile on iPads and Android tablets. Over a dozen fun activities to choose from!
   scratch_longdescription: 'With Scratch, you can create your own interactive games, stories, animations &mdash; and share them with your friends. Get started by animating your name, creating a holiday card, or making a pong game.'
   lightbot_longdescription: Guide Lightbot to light up all the blue tiles! Lightbot is a puzzle game that uses programming game mechanics to let players gain a practical understanding of basic coding. Learn to sequence instructions, write procedures, and utilize loops to solve levels. Ideal for all ages.
@@ -476,14 +515,17 @@ id-ID:
   tynkerapp_longdescription: Learn to program by solving fun coding puzzles. Easily build games and stories using with themed graphics, 10+ game-kits and customizable characters. No Internet connectivity required. You can also access your creations on the web.
   robomindnl_longdescription: 'Students learn the basics of programming by controlling their own virtual robot. The online course is fully self-contained with short presentations, movies, quizzes and automatic guidance/hints to help with the programming exercises. '
   flappy_longdescription: Use drag-and-drop programming to make your own Flappy Bird game, and customize it to look different (Flappy Shark, Flappy Santa, whatever). Add the game to your phone in one click.
-  bitsbox_longdescription: "Customize your very own virtual tablet, then code a series of apps to play and share. Simple walkthroughs make it possible for even young kids to program real Javascript, and the more advanced you are the further you'll go."
-  makegameswithus_longdescription: Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pokemon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!
+  bitsbox_longdescription: "Customize your very own virtual tablet, then code a series of apps to play and share. Simple walkthroughs make it possible for even young kids to program real JavaScript, and the more advanced you are the further you'll go."
+  makegameswithus_longdescription: 'Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!'
   touchdevelop_longdescription: 'The touch-friendly editor will guide you in creating pixel art, solving the bear puzzle, or making your own jumping bird game. '
   appinventor_longdescription: Entertaining, quick video tutorials walk you through building three simple apps for your Android phone or tablet. Designed for novices and experts alike, this hour of code will get you ready to start building your own apps before you know it. Imagine sharing your own app creations with your friends! These activities are suitable for individuals and for teachers leading classes.
   blockly_longdescription: 'Got PCs with slow (or non-existent) internet access? Download the Blockly tutorials that were the precursor of the Code.org tutorials - a single 3MB ZIP file can be loaded onto any computer or used off a memory stick'
   thinkersmith2_longdescription: Students learn about representing and storing letters in binary, as functions of on and off. At the end, the class gets to encode their own initials to take home with them.
   kodableunplugged_longdescription: 'Designed for use with plain paper, the fuzzFamily Frenzy is an introduction to programming logic for kids 5 and up. A teacher should explain the game, then students program a partner to complete a simple obstacle course. '
   projguts_longdescription: 'This "unplugged" activity helps students learn how modeling and simulation works by having a group of students play different versions of the Rock / Paper / Scissors game, and see the results as different modeling experiments.'
+  hourofcode_longdescription: Pengganti untuk code.org/hoc yang baru
+  frozen_longdescription: Mari gunakan kode untuk bergabung dengan Anna dan Elsa seperti mereka menjelajahi keajaiban dan keindahan es. Kamu akan membuat kepingan salju dan pola seperti kamu berselancar ski dan membuat musim dingin dunia impian yang yang kemudian dapat kamu bagi dengan teman-teman mu!
+  playlab_longdescription: Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!
   codeorg_beyond_name: Intro Computer Science (grades K-8)
   khan_beyond_name: Learn computer programming
   tynker_beyond_name: Learn programming at home
@@ -493,123 +535,123 @@ id-ID:
   kodable_beyond_name: Kodable
   scratchjr_beyond_name: ScratchJR for pre-readers
   hopscotch_beyond_name: 'Hopscotch: Programming On Your iPad'
-  pocketcode_beyond_name: Pocket Code
-  groklearning_beyond_name: Learn Python programming
-  hacketyhack_beyond_name: Learn Ruby
+  pocketcode_beyond_name: Saku kode
+  groklearning_beyond_name: Belajar pemrograman Python
+  hacketyhack_beyond_name: Belajar Ruby
   robomind_beyond_name: Bikinlah program robot maya
-  makegameswithus_beyond_name: Build an iPhone game in your browser!
-  appinventor_beyond_name: AppInventor Hour of Code
+  makegameswithus_beyond_name: Membangunlah permainan untuk iPhone menggunakan browser Anda!
+  appinventor_beyond_name: AppInventor satu jam kode
   touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: Belajar menulis kode bersama Karel si anjing
-  udemy_beyond_name: Online Programming Courses
-  lynda_beyond_name: Online Programming Courses
-  edx_beyond_name: Harvard CS50 class
-  coursera_beyond_name: Stanford CS 101 class
+  udemy_beyond_name: Pemrograman kursus online
+  lynda_beyond_name: Pemrograman kursus online
+  edx_beyond_name: Harvard kelas CS50
+  coursera_beyond_name: Stanford kelas CS 101
   udacity_beyond_name: CS 101
-  teachingtree_beyond_name: University courses online
+  teachingtree_beyond_name: Kursus universitas online
   kodu_beyond_name: Kodu
   cargobot_beyond_name: Cargobot
   kidsruby_beyond_name: KidsRuby
-  w3schools_beyond_name: Learn HTML
-  codeavengers_beyond_name: Learn to Code Websites
+  w3schools_beyond_name: Belajar HTML
+  codeavengers_beyond_name: Belajar kode Website
   mozilla_beyond_name: Webmaker
   codecombat_beyond_name: CodeCombat
   codea_beyond_name: Codea
   lego_beyond_name: Mindstorms
   finch_beyond_name: Finch
-  arduino_beyond_name: Arduino with Sparkfun
-  processing_beyond_name: Program with Processing
+  arduino_beyond_name: Arduino dengan Sparkfun
+  processing_beyond_name: Program dengan pengolahan
   alice_beyond_name: Alice
   sphero_beyond_name: SPRK
-  codeorg_beyond_gradelevel: Ages 4-104
-  khan_beyond_gradelevel: Middle school +
-  tynker_beyond_gradelevel: Ages 5-13
-  scratch_beyond_gradelevel: Ages 8+
+  codeorg_beyond_gradelevel: Usia 4-104
+  khan_beyond_gradelevel: Sekolah menengah
+  tynker_beyond_gradelevel: Usia 5-13
+  scratch_beyond_gradelevel: Usia 8 +
   lightbot_beyond_gradelevel: Segala usia
   codecademy_beyond_gradelevel: Sekolah Menengah Umum
   kodable_beyond_gradelevel: Sekolah Dasar
   scratchjr_beyond_gradelevel: Sekolah Dasar
-  hopscotch_beyond_gradelevel: Middle school +
-  pocketcode_beyond_gradelevel: Middle school +
-  groklearning_beyond_gradelevel: Middle school +
+  hopscotch_beyond_gradelevel: Sekolah menengah
+  pocketcode_beyond_gradelevel: Sekolah menengah
+  groklearning_beyond_gradelevel: Sekolah menengah
   hacketyhack_beyond_gradelevel: Sekolah Menengah Umum
-  robomind_beyond_gradelevel: Ages 8-13
+  robomind_beyond_gradelevel: Usia 8-13
   makegameswithus_beyond_gradelevel: Sekolah Menengah Umum
-  appinventor_beyond_gradelevel: Middle school +
+  appinventor_beyond_gradelevel: Sekolah menengah
   touchdevelop_beyond_gradelevel: Sekolah Menengah Umum
   codehs_beyond_gradelevel: Sekolah Menengah Umum
-  udemy_beyond_gradelevel: High school +
-  lynda_beyond_gradelevel: High school +
-  edx_beyond_gradelevel: University
-  coursera_beyond_gradelevel: University
-  udacity_beyond_gradelevel: University
-  teachingtree_beyond_gradelevel: University
-  kodu_beyond_gradelevel: Ages 8+
-  cargobot_beyond_gradelevel: Ages 8+
-  kidsruby_beyond_gradelevel: Ages 12+
-  w3schools_beyond_gradelevel: Ages 12+
-  codeavengers_beyond_gradelevel: Middle school +
-  mozilla_beyond_gradelevel: Ages 12+
-  codecombat_beyond_gradelevel: Middle school +
-  codea_beyond_gradelevel: High school +
-  lego_beyond_gradelevel: Middle school +
-  finch_beyond_gradelevel: Ages 8+
-  arduino_beyond_gradelevel: High school +
+  udemy_beyond_gradelevel: Sekolah menengah atas +
+  lynda_beyond_gradelevel: Sekolah menengah atas +
+  edx_beyond_gradelevel: Universitas
+  coursera_beyond_gradelevel: Universitas
+  udacity_beyond_gradelevel: Universitas
+  teachingtree_beyond_gradelevel: Universitas
+  kodu_beyond_gradelevel: Usia 8 +
+  cargobot_beyond_gradelevel: Usia 8 +
+  kidsruby_beyond_gradelevel: Usia 12 +
+  w3schools_beyond_gradelevel: Usia 12 +
+  codeavengers_beyond_gradelevel: Sekolah menengah
+  mozilla_beyond_gradelevel: Usia 12 +
+  codecombat_beyond_gradelevel: Sekolah menengah
+  codea_beyond_gradelevel: Sekolah menengah atas +
+  lego_beyond_gradelevel: Sekolah menengah
+  finch_beyond_gradelevel: Usia 8 +
+  arduino_beyond_gradelevel: Sekolah menengah atas +
   processing_beyond_gradelevel: Sekolah Menengah Umum
-  alice_beyond_gradelevel: Middle school +
-  sphero_beyond_gradelevel: Ages 8+
-  codeorg_beyond_platformtext: Modern browsers, tablets
-  khan_beyond_platformtext: Modern Web browsers
-  tynker_beyond_platformtext: Modern web browsers ($$ required)
-  scratch_beyond_platformtext: Any browser
-  lightbot_beyond_platformtext: iOS, Android (or web browser)
-  codecademy_beyond_platformtext: Modern web browsers. iOS, Android apps
+  alice_beyond_gradelevel: Sekolah menengah
+  sphero_beyond_gradelevel: Usia 8 +
+  codeorg_beyond_platformtext: Browser modern, tablet
+  khan_beyond_platformtext: Browser Web modern
+  tynker_beyond_platformtext: Web browser modern ($$ diperlukan)
+  scratch_beyond_platformtext: Browser
+  lightbot_beyond_platformtext: iOS, Android (atau web browser)
+  codecademy_beyond_platformtext: Web browser modern. iOS, Android apps
   kodable_beyond_platformtext: iPad
   scratchjr_beyond_platformtext: iPad
   hopscotch_beyond_platformtext: iPad
-  pocketcode_beyond_platformtext: Mobile App
-  groklearning_beyond_platformtext: Modern web browsers
-  hacketyhack_beyond_platformtext: Desktop install
-  robomind_beyond_platformtext: Modern web browsers, Mobile web
-  makegameswithus_beyond_platformtext: Modern Web browsers
-  appinventor_beyond_platformtext: Modern browser + Android
-  touchdevelop_beyond_platformtext: Modern browsers, smartphones, all devices
-  codehs_beyond_platformtext: Modern browsers ($$ required)
-  udemy_beyond_platformtext: Web based
-  lynda_beyond_platformtext: Web based ($$ required)
-  edx_beyond_platformtext: Modern browsers
-  coursera_beyond_platformtext: Modern browsers
-  udacity_beyond_platformtext: Modern browsers
-  teachingtree_beyond_platformtext: Web based
+  pocketcode_beyond_platformtext: Aplikasi mobile
+  groklearning_beyond_platformtext: Web browser modern
+  hacketyhack_beyond_platformtext: Instalasi desktop
+  robomind_beyond_platformtext: Web browser modern, Mobile web
+  makegameswithus_beyond_platformtext: Browser Web modern
+  appinventor_beyond_platformtext: Browser modern + Android
+  touchdevelop_beyond_platformtext: Browser modern, smartphone, semua perangkat
+  codehs_beyond_platformtext: Browser modern ($$ diperlukan)
+  udemy_beyond_platformtext: Berbasis web
+  lynda_beyond_platformtext: Berbasis web ($$ diperlukan)
+  edx_beyond_platformtext: Browser modern
+  coursera_beyond_platformtext: Browser modern
+  udacity_beyond_platformtext: Browser modern
+  teachingtree_beyond_platformtext: Berbasis web
   kodu_beyond_platformtext: Windows, xBox
   cargobot_beyond_platformtext: iPad
-  kidsruby_beyond_platformtext: Desktop install
-  w3schools_beyond_platformtext: Modern Web browsers
-  codeavengers_beyond_platformtext: Modern Web browsers
-  mozilla_beyond_platformtext: Modern Web browsers
+  kidsruby_beyond_platformtext: Instalasi desktop
+  w3schools_beyond_platformtext: Browser Web modern
+  codeavengers_beyond_platformtext: Browser Web modern
+  mozilla_beyond_platformtext: Browser Web modern
   codecombat_beyond_platformtext: Web based (Firefox, Chrome, Safari, IE9+)
   codea_beyond_platformtext: iPad
-  lego_beyond_platformtext: Robot purchase
-  finch_beyond_platformtext: Robot purchase
-  arduino_beyond_platformtext: Web browser, then Kit purchase
-  processing_beyond_platformtext: Modern web browsers
-  alice_beyond_platformtext: Windows or Mac (install required)
-  sphero_beyond_platformtext: Robot purchase
+  lego_beyond_platformtext: Pembelian robot
+  finch_beyond_platformtext: Pembelian robot
+  arduino_beyond_platformtext: Web browser, lalu pembelian Kit
+  processing_beyond_platformtext: Web browser modern
+  alice_beyond_platformtext: Windows atau Mac (Instal diperlukan)
+  sphero_beyond_platformtext: Pembelian robot
   codeorg_beyond_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
-  khan_beyond_shortdescription: Learn to draw in JavaScript
-  tynker_beyond_shortdescription: A fun and engaging course for children in grades 4-8
+  khan_beyond_shortdescription: Belajar menggambar menggunakan JavaScript
+  tynker_beyond_shortdescription: Kursus yang menyenangkan dan menarik untuk anak-anak kelas 4-8
   scratch_beyond_shortdescription: Create interactive games, stories, and animations.
-  lightbot_beyond_shortdescription: A game to teach coding concepts
-  codecademy_beyond_shortdescription: Learn JavaScript programming, in a web-browser
+  lightbot_beyond_shortdescription: Sebuah permainan untuk mengajar konsep mengkode
+  codecademy_beyond_shortdescription: Belajar pemrograman JavaScript, di web browser
   kodable_beyond_shortdescription: A fun iPad game to teach computer programming concepts
-  scratchjr_beyond_shortdescription: 'Create interactive stories and games using ScratchJr. '
-  hopscotch_beyond_shortdescription: Learn visual programming on an iPad
-  pocketcode_beyond_shortdescription: Create a game on your smartphone and share with friends to try!
-  groklearning_beyond_shortdescription: Basic intro to python programming
-  hacketyhack_beyond_shortdescription: Learn Ruby from the ground up
-  robomind_beyond_shortdescription: Write code for a virtual robot
+  scratchjr_beyond_shortdescription: 'Membuat cerita interaktif dan game menggunakan ScratchJr. '
+  hopscotch_beyond_shortdescription: Belajar pemrograman visual pada iPad
+  pocketcode_beyond_shortdescription: Buat permainan pada smartphone dan kemudian membagi dengan teman-teman untuk mencobanya!
+  groklearning_beyond_shortdescription: Intro dasar pemrograman python
+  hacketyhack_beyond_shortdescription: Belajar Ruby dari tingkat dasar
+  robomind_beyond_shortdescription: Menulis kode untuk virtual robot
   makegameswithus_beyond_shortdescription: Learn to make an iPhone game in an hour
-  appinventor_beyond_shortdescription: Make your own app! (Android-only)
+  appinventor_beyond_shortdescription: Membuat aplikasi Anda sendiri! (hanya untuk Android)
   touchdevelop_beyond_shortdescription: Code mobile apps directly on your phone, tablet or laptop
   codehs_beyond_shortdescription: Learn JavaScript programming with a fun visual environment
   udemy_beyond_shortdescription: Dozens of online programming courses
@@ -633,7 +675,7 @@ id-ID:
   alice_beyond_shortdescription: Teach programming in a 3D environment
   sphero_beyond_shortdescription: SPRK lessons give kids a fun crash course in programming robots while sharpening skills in math and science.
   codeorg_beyond_longdescription: 'Learn the basic concepts of Computer Science with drag and drop programming. 3 full courses, each consists of 15-20 lessons that blend "unplugged" classroom activities interspersed with game-like, self-directed tutorials starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, basic algorithms, functions, and variables.'
-  khan_beyond_longdescription: Learn the basics of JavaScript programming while creating fun drawings with your code. Do it on your own or with your class!
+  khan_beyond_longdescription: Pelajari dasar-dasar pemrograman JavaScript sekaligus menciptakan menyenangkan gambar dengan kode Anda. Lakukannya sendiri atau dengan kelas Anda!
   tynker_beyond_longdescription: 'Tynker makes it fun & easy to learn programming. It makes it visual. Kids build games and mobile apps by arranging blocks of code. It removes the need to know programming syntax. Kids transform ideas into animated stories and math art right away. It promotes progressive learning. As kids learn fundamentals, Tynker introduces more advanced concepts including syntax driven programming.'
   scratch_beyond_longdescription: 'With Scratch, you can create your own interactive games, stories, animations &mdash; and share them with your friends. Get started by animating your name, creating a holiday card, or making a pong game.'
   lightbot_beyond_longdescription: Learn core programming logic, starting from super-basic programming, for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence commands, identify patterns, use procedures, and utilize loops!

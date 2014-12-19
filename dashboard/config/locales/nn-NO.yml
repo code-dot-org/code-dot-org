@@ -36,6 +36,7 @@
   of: av
   more: MER
   less: MINDRE
+  beta: beta
   try_hoc: 'Prøv Hour of Code (kodetimen), klikk her >> '
   try_k8intro: Eller prøv vår barneskuleintroduksjon til informatikkurs (15-25 timar)
   k8intro: Barneskuleintroduksjon til informatikkurs (15-25 timar)
@@ -386,8 +387,8 @@
     test_videos_help: Prøv den nye videospelaren på skulen din
     try_beta_courses: Nyheit! Prøv betaversjonar av kursa våre for elevar på barnetrinnet
     use_as_teacher: Bruk denne nettsida som lærar
-    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>20 timars kurs for</h2><h1>barnetrinnet</h1>
+    heading_hoc2014: <h2>Kodetimen for</h2><h1>Alle Aldre</h1>
+    heading_elementary: <h2>20-timers kurs for</h2><h1>nybyrjarar (alle aldre)</h1>
     heading_apps: <h2>Moro for</h2><h1>Alle</h1>
     heading_legacy: <h2>Våre generelle kurs for</h2><h1>Alle aldrar</h1>
     your_gallery: Galleri
@@ -401,10 +402,10 @@
   footer:
     help_from_html: Ingeniørar frå Google, Microsoft, Facebook og Twitter hjelpte
       til med å lage denne guiden.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
-      Alle rettar reserverte.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
-      Arts Inc. Alle rettar reserverte.
-    powered_by_aws: Powered by Amazon Web Services
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
+      Alle rettigheter reservert.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
+      Arts Inc. Alle rettigheter reservert.
+    powered_by_aws: Drive av Amazon Web Services
     feedback: Gi tilbakemelding
     translate: Hjelpe oss med å oversette til ditt språk
     support: Brukarstøtte
@@ -492,9 +493,9 @@
       try_frozen: Skap kunst med Anna og Elsa frå Frost
     gallery:
       title: Galleri
-      body: View a gallery of app and artist images created by our users
+      body: Sjå eit galleri av app- og artist-bilder laga av brukarane våre
     frozen:
-      title: Frozen
+      title: Frost
   gallery:
     students_drew_these_with_code: Elevar teikna desse ved å kode!
     students_made_these_with_code: Elever laga desse ved å kode!
@@ -515,8 +516,8 @@
     prerelease: Dette kurset er i <span class='betatext'> beta</span>.  Det tyder
       at det ikkje er den endelege versjonen av kurset, men at det blir endra når
       vi får tilbakemeldingar og forbedtringar har blitt laga.
-    prerelease_hoc2014: Denne veiledningen er i <span class='betatext'> beta</span>.  Den
-      vil kunne endres ettersom vi mottar tilbakemeldinger og gjør forbedringer.
+    prerelease_hoc2014: Denne leksjonen er i <span class='betatext'> beta</span>.  Den
+      vil kunne bli endres etter kvart som vi mottek tilbakemeldingar og gjer forbetringar.
     feedback: Gi tilbakemelding
     report_bug: Rapporter feil
     support: Få hjelp
@@ -570,7 +571,7 @@
           title: Trinn
           description: ''
         sample_level_builder:
-          title: Eksempelkode for nivå
+          title: Nivåbygge eksempel
           description: ''
   age_interstitial:
     age: Din alder
@@ -578,12 +579,17 @@
     message: Vi er i ferd med å oppdatere våre erfaringer for å gi deg enda sterkere
       personvern. Derfor må eksisterende brukere skriver inn sin alder her. <br/>Code.org
       vil aldri leie ut, selge eller dele denne informasjonen med noen andre.
-    sign_out: Hvis du ikke ønsker å oppgi din alder, kan du <a href="%{url}"> avslutte</a>.
-  zendesk_too_young_message: Beklager, yngre brukere kan ikke logge på nettstedet
+    sign_out: Dersom du ikkje ynskjer å oppgi din alder, kan du <a href="%{url}">
+      avslutte</a>.
+  zendesk_too_young_message: Beklager, yngre brukarar kan ikkje logge inn på nettstaden
     for kundestøtte. Du kan bla gjennom <a href="http://support.code.org"> support.code.org</a>
-    uten å logge på eller be en forelder eller lærer å kontakte oss for deg.
+    uten å logge på eller be ein forelder eller lærer om å kontakte oss for deg.
   progress:
     not_completed: ikkje fullført
     completed_too_many_blocks: fullført, for mange blokker
     completed_perfect: Perfekt fullført
-    furthest_level_attempted: fremste nivå forsøkt
+    furthest_level_attempted: høyeste nivå forsøkt
+  studio:
+    courses_working_on: Kurs du arbeider med
+    completed_courses: Ferdige kurs
+    all_courses: Alle kurs

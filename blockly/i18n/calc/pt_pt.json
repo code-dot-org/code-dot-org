@@ -1,6 +1,6 @@
 {
-  "compute": "compute",
-  "equivalentExpression": "Try reordering your arguments to get exactly the same expression.",
+  "compute": "calcular",
+  "equivalentExpression": "Tente reordenar os seus argumentos para obter exatamente a mesma expressão.",
   "extraTopBlocks": "You have unattached blocks. Did you mean to attach these to the \"compute\" block?",
   "goal": "Goal:",
   "reinfFeedbackMsg": "Parece o que queres? Podes premir o botão \"Tentar novamente\" para ver o teu desenho.",

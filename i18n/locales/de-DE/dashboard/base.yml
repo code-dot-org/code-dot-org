@@ -36,6 +36,7 @@ de:
   of: von
   more: MEHR
   less: WENIGER
+  beta: Beta
   try_hoc: 'Probiere "The Hour of Code" aus, klicke hier >> '
   try_k8intro: Versuche unseren Einführungskurs in die Informatik (15-25 Stunden)
   k8intro: Einführung in die Informatik (15-25 Stunden)
@@ -339,8 +340,8 @@ de:
     test_videos_help: Testen Sie unseren neuen Video-Player an Ihrer Schule
     try_beta_courses: Neu! Probieren Sie unsere Beta-Kurse für Schüler der Schulstufen 1-6
     use_as_teacher: Verwende diese Seite als Lehrer
-    heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
-    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
+    heading_hoc2014: '<h2>Die Hour of Code für</h2><h1>jedes Alter</h1>'
+    heading_elementary: '<h2>20 Stunden Kurse für</h2><h1>Beginner (allen Alters)</h1>'
     heading_apps: '<h2>Spass für</h2><h1>Alle</h1>'
     heading_legacy: '<h2>Unser allgemeiner Kurs für</h2><h1>Alle Altersstufen</h1>'
     your_gallery: Gallerie
@@ -353,8 +354,8 @@ de:
     teacher: Lehrer
   footer:
     help_from_html: Ingenieure von Google, Microsoft, Facebook und Twitter haben dazu beigetragen, dieses Tutorial zu erstellen.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
-    powered_by_aws: Powered by Amazon Web Services
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Alle Rechte vorbehalten.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Alle Rechte vorbehalten.'
+    powered_by_aws: Betrieben von Amazon Web Services
     feedback: Feedback geben
     translate: Helfen Sie uns in Ihre Sprache zu übersetzen
     support: Unterstützung
@@ -432,7 +433,7 @@ de:
       title: Gallerie
       body: Sieh dir eine Ausstellung von Anwendungen und Künstlerbildern an, die von unseren Nutzern erstellt wurden
     frozen:
-      title: Frozen
+      title: Gefroren
   gallery:
     students_drew_these_with_code: Schüler haben folgendes mit Code gezeichnet!
     students_made_these_with_code: Schüler haben diesen Code gemacht!
@@ -511,3 +512,7 @@ de:
     completed_too_many_blocks: abgeschlossen, zu viele Blöcke
     completed_perfect: Abgeschlossen, perfekt
     furthest_level_attempted: Höchste Ebene versucht
+  studio:
+    courses_working_on: "Courses you're working on"
+    completed_courses: Abgeschlossene Kurse
+    all_courses: Alle Kurse

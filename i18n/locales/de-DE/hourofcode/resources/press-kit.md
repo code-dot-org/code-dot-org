@@ -4,11 +4,9 @@ title: Press Kit layout: wide nav: resources_nav
 
 * * *
 
-[<button style="float: right; margin-top: 50px">Melde Deine Veranstaltung an</button>](/#join)
-
 ## Wie Du Medien auf Deine Hour of Code Veranstaltung aufmerksam machst
 
-*Zu allen Presse- und Medienanfragen, kontaktieren Sie bitte <press@code.org>*
+*For all press and media inquiries, contact <press@code.org>*
 
 ### Key Tips
 
@@ -19,7 +17,7 @@ title: Press Kit layout: wide nav: resources_nav
 
 ### Schritt-für-Schritt-Anleitung:
 
-**1. Plane Deine Veranstaltung**
+**1. Plan your event**
 
   * Plan an assembly to kick off the Hour of Code.
   * Send [a letter](<%= hoc_uri('/resources/#sample-emails') %>) to parents. Ask them to spread the word.
@@ -41,7 +39,7 @@ The best way to reach out is by email. It should be short and communicate: why s
 
 *Why is your school doing an Hour of Code?*
 
-While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. Dieses Ereignis ist eine Chance für uns alle zu sehen, worum es in der Informatik geht.
+While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
 
 We hope it’ll spark interest in students to keep learning. Research also shows that kids pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages.
 
@@ -59,5 +57,3 @@ Code.org® is a 501c3 public non-profit dedicated to expanding participation in 
 
   
 Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).
-
-<a style="display: block" href="/#join"><button style="float: right;">Melde Deine Veranstaltung an</button></a>

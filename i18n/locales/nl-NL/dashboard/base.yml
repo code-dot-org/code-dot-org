@@ -36,6 +36,7 @@ nl:
   of: van
   more: MEER
   less: MINDER
+  beta: beta
   try_hoc: 'Probeer the Hour of Code, klik hier >> '
   try_k8intro: Probeer onze informatica-introductiecursus voor basisschoolleerlingen (15-25 uur)
   k8intro: Informatica-introductiecursus voor basisschoolleerlingen (15-25 uur)
@@ -336,8 +337,8 @@ nl:
     test_videos_help: Test de nieuwe video-speler op uw school
     try_beta_courses: Nieuw! Probeer cursussen die nog in ontwikkeling zijn voor basisschoolleerlingen
     use_as_teacher: Gebruik de site als leerkracht
-    heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
-    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
+    heading_hoc2014: '<h2>Uur Code voor</h2><h1>Alle leeftijden</h1>'
+    heading_elementary: '<h2>20 uur cursussen voor</h2><h1>Beginners (alle leeftijden)</h1>'
     heading_apps: '<h2>Leuk voor</h2><h1>Iedereen</h1>'
     heading_legacy: '<h2>Onze algemene cursus voor</h2><h1>Alle Leeftijden</h1>'
     your_gallery: Galerij
@@ -350,8 +351,8 @@ nl:
     teacher: Leraar
   footer:
     help_from_html: Werknemers van Google, Microsoft, Facebook en Twitter hebben geholpen bij het samenstellen van deze opdracht.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
-    powered_by_aws: Powered by Amazon Web Services
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. All Rights Reserved.'
+    powered_by_aws: Aangedreven door Amazon webservices
     feedback: Geef feedback
     translate: Help ons om te vertalen naar uw taal
     support: Ondersteuning
@@ -509,3 +510,7 @@ nl:
     completed_too_many_blocks: voltooid, teveel blokken
     completed_perfect: voltooid, perfect
     furthest_level_attempted: verste niveau geprobeerd
+  studio:
+    courses_working_on: Cursussen die u bezig bent
+    completed_courses: Voltooide cursussen
+    all_courses: Alle cursussen

@@ -75,8 +75,6 @@
   "saveToGallery":"Save to gallery",
   "savedToGallery":"Saved in gallery!",
   "shareFailure":"Sorry, we can't share this program.",
-  "typeFuncs":"จำนวนฟังก์ชันที่ใช้ได้: %1",
-  "typeHint":"หมายเหตุวงเล็บและเครื่องหมายอัฒภาคจำเป็นต้องใช้.",
   "workspaceHeader":"รวบรวมบล็อกของคุณที่นี่: ",
   "workspaceHeaderJavaScript":"Type your JavaScript code here",
   "infinity":"ไม่จำกัด",

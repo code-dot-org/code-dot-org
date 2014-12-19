@@ -36,6 +36,7 @@ it:
   of: di
   more: DI PIÙ
   less: DI MENO
+  beta: beta
   try_hoc: "Prova l'Ora del Codice, clicca qui >> "
   try_k8intro: Prova il nostro corso introduttivo di informatica per scuole elementari e medie inferiori (in 20 lezioni)
   k8intro: Corso introduttivo di informatica per scuole elementari e medie inferiori (in 20 lezioni)
@@ -338,8 +339,8 @@ it:
     test_videos_help: 'Prova nella tua scuola  il nostro nuovo visualizzatore di video'
     try_beta_courses: Novità! Prova i nostri corsi specifici per studenti delle scuole elementari (in versione provvisoria)
     use_as_teacher: Guarda questo sito come insegnante
-    heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
-    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
+    heading_hoc2014: "<h2>L'Ora del Codice</h2><h1>per tutte le età</h1>"
+    heading_elementary: '<h2>Corsi di 20 ore</h2><h1>per principianti (di tutte le età)</h1>'
     heading_apps: '<h2>Divertimento per</h2><h1>tutti</h1>'
     heading_legacy: '<h2>Il nostro Corso Introduttivo per </h2><h1>utenti di tutte le età</h1>'
     your_gallery: La tua collezione
@@ -352,8 +353,8 @@ it:
     teacher: Insegnante
   footer:
     help_from_html: Gli ingegneri di Google, Microsoft, Facebook e Twitter hanno contribuito a creare questo corso.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
-    powered_by_aws: Powered by Amazon Web Services
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Tutti i Diritti Riservati.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Tutti i Diritti Riservati.'
+    powered_by_aws: Eseguito su Amazon Web Services
     feedback: Facci sapere che ne pensi
     translate: Aiutaci a tradurre nella tua lingua
     support: Supporto
@@ -397,7 +398,7 @@ it:
     bounce_og_title: Prova la mia versione del gioco Rimbalzo
     flappy_og_title: Prova la mia versione del gioco Flappy
     studio_og_title: Prova la mia versione del Gioco da Laboratorio
-    check_out_what_i_made: Verifica che cosa ho fatto
+    check_out_what_i_made: Guarda cosa ho fatto
     og_description: Ho scritto il codice per conto mio con Code.org
     phone_number_not_allowed: Sembra che ci sia un numero di telefono nel codice. Prova a cambiare il testo.
     address_not_allowed: Sembra che ci sia un indirizzo nel codice. Prova a cambiare il testo.
@@ -425,11 +426,11 @@ it:
       title: Corso Introduttivo
       body: Prova il nostro corso introduttivo di informatica in 20 lezioni.
     hoc2014:
-      try_new_tutorial: "Prova il nuovo tutorial dell'Ora del Codice in versione beta"
+      try_new_tutorial: "Prova la nuova lezione dell'Ora del Codice in versione provvisoria"
       try_frozen: Artista con Anna ed Elsa, da Frozen
     gallery:
       title: La tua collezione
-      body: Guarda una galleria di app e immagini artistiche create dai nostri utenti
+      body: Guarda una collezione di app e immagini artistiche create dai nostri utenti
     frozen:
       title: Frozen
   gallery:
@@ -445,8 +446,8 @@ it:
     header_playlab: Laboratorio
     header_artist: Artista
   landing:
-    prerelease: "Questo corso è in <span class='betatext'>versione provvisoria</span>.  Significa che non è la versione finale ed è soggetto a revisioni man mano che arriveranno osservazioni e saranno fatti miglioramenti."
-    prerelease_hoc2014: "Questo tutorial è in <span class='betatext'>versione beta</span>. È soggetto a revisione quando si ricevono feedback in modo da migliorarlo."
+    prerelease: "Questo corso è in <span class='betatext'>versione provvisoria</span>.  Significa che non è la versione finale ed è soggetto a revisioni man mano che arrivano osservazioni e vengono fatti miglioramenti."
+    prerelease_hoc2014: "Questa lezione è in <span class='betatext'>versione provvisoria</span>. È soggetta a revisione man mano che arrivano osservazioni in modo da migliorarla."
     feedback: Dicci che ne pensi
     report_bug: Segnala un errore
     support: Ottieni aiuto
@@ -510,3 +511,7 @@ it:
     completed_too_many_blocks: completato, ma usando troppi blocchi
     completed_perfect: completato in modo perfetto
     furthest_level_attempted: livello più avanzato che è stato provato
+  studio:
+    courses_working_on: Corsi su cui stai lavorando
+    completed_courses: Corsi completati
+    all_courses: Tutti i corsi

@@ -34,7 +34,7 @@ This is a review of loops and nested loops. Students will use the traditional ar
 ## Lesson Objectives 
 ### Students will:
 
-- Create programs that utilize repitition to create gorgeous designs
+- Create programs that utilize repetition to create gorgeous designs
 - Use trial and error to recreate detailed designs in proper scale
 - Divide the number of degrees in a circle into even segments
 - Calculate the angles in equilateral and 30 60 90 triangles

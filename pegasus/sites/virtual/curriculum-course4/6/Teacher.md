@@ -34,7 +34,7 @@ In this lesson, students will explore the creation of repetitive designs using v
 ## Lesson Objectives 
 ### Students will:
 
-- Create programs that utilize repitition to create gorgeous designs
+- Create programs that utilize repetition to create gorgeous designs
 - Use trial and error to recreate detailed designs in proper scale
 - Calculate angles by dividing 360 by the number of sides in a polygon
 - Decompose a shape into its smallest repeatable sequence
@@ -68,7 +68,7 @@ Next, review with students the basic artist navigation, particularly:
 ## Activity
 ### <a name="Activity"></a> [Maze](http://learn.code.org/s/course4/stage/6/puzzle/1)
 
-This lesson explores the use of variables as a way to quickly change many values at one time. Not only will the students be dealing with the looping of designs and repetition of angles, they'll also be doing math on variables.  It can be helpful for them to have paper and pencil to figure out values as they go. Also, let them know ahead of time that there will likely be some puzzles that confuse or frustrate them. This is normal, and expected.  Students should prepare themselves for persistence and perserverance.
+This lesson explores the use of variables as a way to quickly change many values at one time. Not only will the students be dealing with the looping of designs and repetition of angles, they'll also be doing math on variables.  It can be helpful for them to have paper and pencil to figure out values as they go. Also, let them know ahead of time that there will likely be some puzzles that confuse or frustrate them. This is normal, and expected.  Students should prepare themselves for persistence and perseverance.
 
 
 [/together]

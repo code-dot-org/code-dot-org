@@ -83,8 +83,7 @@ module LevelsHelper
         end
       end
     else
-      available_callouts = Callout.where(script_level_id: @script_level)
-        .select(:id, :element_id, :qtip_config, :localization_key)
+      available_callouts = @script_level.callouts if @script_level
     end
     @callouts_to_show = available_callouts
       .reject { |c| !always_show && session[:callouts_seen].include?(c.localization_key) }

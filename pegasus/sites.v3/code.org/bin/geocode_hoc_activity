@@ -2,7 +2,7 @@
 require_relative '../../../src/env'
 require src_dir 'database'
 
-BATCH_SIZE = 1000
+BATCH_SIZE = 4000
 THREAD_COUNT = 2
 
 def main()

@@ -6,11 +6,11 @@ layout: wide
 
 # Mga alituntunin at gabay para sa Hour of Code at Computer Science Education Week
 
-**The deadline to submit a tutorial for Hour of Code 2014 has passed. You may still submit an entry and we will try to review it if time allows.**
+**Ang deadline upang isumite ang isang tutorial para sa Hour of Code 2014 ay lumipas na. Maaari ka pa ring magsumite ng entry at susubukan naming suriin ito kung meron pang oras.**
 
-Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
+Ang Code.org ay magho-host ng iba't-ibang Hour of Code na mga aktibidad sa Code.org, Hour of Code, at (mga) website ng CSEdWeek. Ang kasalukuyang listahan ay nasa [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
 
-We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
+Nais naming mag-host ng mga aktibidad na makakapag-enganyo sa iba na sumali, ang aming layunin ay upang matulungan ng husto ang mga estudyante at mga guro na nagsisimula pa lamang matuto ng computer science. Maaming gamiting ang document na ito bilang gabay sa pagbubuo ng mga masasayang aktibidad para sa mga sasali na hindi pa nakakapag-code, nakakagawa ng program sa computer at wala pa masyadong alam sa computer science.
 
 <a id="top"></a>
 
@@ -29,9 +29,9 @@ We’d like to host a variety of engaging options, but the primary goal is to op
 
 ## Paano titignan ang mga pagsali na gagawin
 
-A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators.
+Isang committee ng mga guro ng computer science ang huhusga base sa mga alituntunin isinaad, kasama na ang mga resulta ng survey mula sa iba pang grupo ng mga educator.
 
-**Tutorials will be listed higher if they are:**
+**Ang mga tutorial ay ililista ng mas mataas kung ito ay:**
 
   * mataas ang kalidad
   * kayang gawin mag-isa, hindi na kailangan ng iba pang tulong
@@ -42,7 +42,7 @@ A committee of computer science educators will rank submissions based on qualita
   * iniinganyong sumali ang lahat ng grupo (lalo na kung hindi pa sila maalam sa computer)
   * hindi nakatutok sa HTML+CSS codes - (ang layunin ay para sa computer science at hindi lamang para sa HTML codes)
 
-**Tutorials will be listed lower if they are:**
+**Ang mga tutorial ay ililista ng mas mababa kung ito ay:**
 
   * mababa ang kalidad
   * hindi para sa mga baguhan bagkus kailangang may alam ka na para makagamit
@@ -51,7 +51,7 @@ A committee of computer science educators will rank submissions based on qualita
   * hindi para sa lahat ng kasarian (halimbawa: mas panlalaki ang gamit)
   * may layuning pabilhin ka o pagbayarin upang magamit
 
-**Tutorials will NOT be listed if they:**
+**Ang mga tutorial ay HINDI ililista kung ito ay:**
 
   * kailangan ang laging paggabay ng guro at marami rin ang kailangang paghandaan (halimbawa: hindi kaya gawin ng mag-isa)
   * hindi laan para sa isang oras na gawain
@@ -61,13 +61,13 @@ A committee of computer science educators will rank submissions based on qualita
   * nakafocus lang sa HTML at CSS design
   * ipinasa ng lagpas na sa deadline o kaya ay hindi kumpleto ang impormasyon (tignan ang ibaba para sa mga paalala)
 
-Ultimately, the goal of the Hour of Code campaign is to broaden participation in computer science by students and teachers, and to help show that computer science is accessible to all, and “easier than you think.” In many ways, this goal is better achieved by giving students and teachers fewer and simpler choices, with a focus on the highest quality options for a first-time user.
+Higit sa lahat, ang gusto ng Hour of Code ay mas marami pa ang mga estudyante at guro na sumali at gumamit ng computer science. Ito rin ay paraan para ipakita na ang computer science ay para sa lahat at "hindi pala ganon kahirap" ang reaksyon ng mga sasali. Upang mangyari ito, kailangang bigyan ng pagkakataon ang mga estudyante at mga guro na gamitin ito sa pinaka-simpleng paraan habang mas ginagawang simple pero mataas ang kalidad ng paggamit lalo na sa mga bagong sasali.
 
-Note also, that the 2013 CSEdWeek was a fantastic success as measured by the responses from teachers and students - 20M participants from Dec 9 - 23, and 97% said they enjoyed it and want to repeat the campaign!!
+Isa pang paalala, ang 2013 CSEdWeek ay naging matagumpay base sa ipinadalang feedback ng mga guro at estudyante - 20 milyong sumali simula Disyembre 9 hanggang 23 at 97% ang nagsabing nagustuhan nila at gusto nilang ulitin ang campaign!!
 
-As a result, the existing listings are certainly “good enough,” and the driving reason to add tutorials to the Hour of Code listings isn’t to broaden the choices, but to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2014 campaign.
+Dahil dito, ang listahan ngayon ay sigurong "okay na", at ang naghihimok na dagdagan pa ang mga pagtuturo tungkol sa Hour of Code ay hindi para mas marami pa ang pagpilian kundi para maitaas ang kalidad (or para naman mabago) para sa mga estudyante, or para hindi lamang Ingles ang salita kundi mapaabot din ito sa iba pang mga salita dahil na rin sa mas malawak na sakot ng 2014 campaign.
 
-[**Back to the top**](#top)
+[**Bumalik sa itaas**](#top)
 
 <a id="guidelines"></a>
 
@@ -84,15 +84,15 @@ As a result, the existing listings are certainly “good enough,” and the driv
       * **Pwedeng rin naman pero hindi naman kailangan kung:** parang app, o kaya ay parang naglalaro lang ang experience.
   * **Format:** Pwedeng gawin mag-isa at pwede ring gabayan ng guro. Kailangang may susundan ang mga estudyante at hindi lang upang matapos ang isang oras na aktibidad. Mas maganda kung ang mga instruction at pagtuturo ay magagamitan ng programming platform, para hindi na kailangan pang pagpalitin ang platform at ang mga instruction.
 
-[**Back to the top**](#top)
+[**Bumalik sa itaas**](#top)
 
 <a id="submit"></a>
 
 ## Paano sumali (Kailangang ipasa bago mag 10/2/2014)
 
-Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) and follow the steps to submit your tutorial.
+Bumisita sa [Hour of Code Activity Submission page](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) at sundan ang mga paraan para maipasa ang iyong pagtuturo.
 
-**What you’ll need:**
+**Ano ang iyong kakailanganin:**
 
   * Ang iyong pangalan, logo (jpg, png, etc.)
   * URL ng screenshot o di kaya ay imahe para ipalaganap ang iyong HoC activity. Ang imahe/screenshots ay dapat may saktong sukat na 446 x 335 resolution. Kung hindi malalagyan ng imahe, maaring kami na lang ang kumuha ng screenshot O KAYA ay hindi ito isali sa listahan ng sumali.
@@ -140,7 +140,7 @@ Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code
       * For offline activities 
           * Number of downloads of paper version of activity (if applicable)
 
-[**Back to the top**](#top)
+[**Bumalik sa itaas**](#top)
 
 <a id="design"></a>
 
@@ -181,7 +181,7 @@ Benefits of Pair Programming:
   * Show that coding is not a solo activity, but one involving social interaction
   * Not all classrooms or labs have enough computers for a 1:1 experience
 
-[**Back to the top**](#top)
+[**Bumalik sa itaas**](#top)
 
 <a id="tm"></a>
 
@@ -199,7 +199,7 @@ One piece of this is to protect the trademark "Hour of Code" to prevent confusio
 
   4. No use of "Hour of Code" in app names
 
-[**Back to the top**](#top)
+[**Bumalik sa itaas**](#top)
 
 <a id="pixel"></a>
 
@@ -213,13 +213,13 @@ If your tutorial is approved and included on the final tutorial page, Code.org w
 
 ***NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)***
 
-**Example tracking pixels for AppInventor:**
+**Example ng mga tracking pixel para sa Appinventor:**
 
 IMG SRC="http://code.org/api/hour/begin_appinventor.png/"
 
 IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
 
-[**Back to the top**](#top)
+[**Bumalik sa itaas**](#top)
 
 <a id="promote"></a>
 
@@ -233,12 +233,12 @@ We are asking everyone to promote their own 1-hour tutorial to your users. Pleas
   * Host a local event or ask your employees to host an event at local schools or community groups.
   * See our resource kit for further information (coming soon).
 
-[**Back to the top**](#top)
+[**Bumalik sa itaas**](#top)
 
 <a id="disabilities"></a>
 
-## A special note for students with disabilities
+## Isang espesyal na paalala para sa mga mag-aaral na may mga kapansanan
 
 If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. We have not yet received such a tutorial, and would be eager to include one as an option for these students.
 
-[**Back to the top**](#top)
+[**Bumalik sa itaas**](#top)

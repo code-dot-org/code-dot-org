@@ -5,14 +5,14 @@ hr:
       send_instructions: Za par minuta ćeš primiti e-mail s uputama kako da potvrdiš svoj korisnički račun.
       send_paranoid_instructions: Ako tvoja e-mail adresa postoji u našoj bazi, za par minuta ćeš primiti e-mail s uputama kako da potvrdiš svoj korisnički račun.
     failure:
-      already_authenticated: Već si prijavljen.
+      already_authenticated: Već ste prijavljeni.
       inactive: Tvoj korisnički račun još nije aktiviran.
       invalid: Neispavan e-mail ili lozinka.
       invalid_token: Neispravan token.
       locked: Tvoj korisnički račun je zaključan.
       not_found_in_database: Neispavan e-mail ili lozinka.
-      timeout: Vrijeme prijave je isteklo. Za nastavak je potrebno da se ponovno prijaviš.
-      unauthenticated: Za nastavak je potrebno da se registriraš ili prijaviš.
+      timeout: Vrijeme prijave je isteklo. Za nastavak je potrebno ponovno prijavljivanje.
+      unauthenticated: Za nastavak je potrebno da se registrirate ili prijavite.
       unconfirmed: Za nastavak je potrebno da potvrdiš svoj korisnički račun.
     mailer:
       confirmation_instructions:

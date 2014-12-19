@@ -532,22 +532,29 @@
         studio_c3_game_7: Creați-vă propriul joc. Când aţi terminat, faceţi clic pe
           Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele
           lor.
-        studio_playlab_1: Poți face acest câine să spună "Bună ziua lume"?
-        studio_playlab_2: Puteţi face cainele sa spuna ceva şi apoi dupa aceea pisica
-          sa continue sa spuna altceva?
-        studio_playlab_3: Can you write a program to make this dog move to the cat?
-        studio_playlab_4: Poți scrie un program care să îl facă pe câine să meargă
-          către pisică, iar atunci când o ajunge, aceasta să spună "Bună"?
-        studio_playlab_5: Can you write a program to make the octopus say "hello"
-          when it is clicked?
-        studio_playlab_6: Can you write a program to make this penguin move around
-          using the up / down / left /right keys to hit all of the targets?
-        studio_playlab_7: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_playlab_8: Can you add a block to score a point when the penguin runs
-          into the octopus, and then move him with the arrows until you score?
-        studio_playlab_9: Can you add blocks to change the background and the speed
-          of the penguin, and then move him with the arrows until you score?
+        studio_playlab_1: Pinguinul vrea să spună "Bună ziua" - îl puteți ajuta?
+        studio_playlab_2: Băiatul din peşteră (actor 1) şi Fata din peşteră (actor
+          2) ar dori să-și spună "hello". Îi puteți ajuta folosind blocul "spune"
+          de două ori?
+        studio_playlab_3: O puteți ajuta pe tenismenă să ajungă la pavilion?
+        studio_playlab_4: Îl puteți ajuta pe băiatul tenisman (actor 1) să ajungă
+          la fata de tenis (actor 2) și să lansați un sunet când ajunge acolo?
+        studio_playlab_5: Îl puteți ajuta pe robotul spatial să spună "Salutări pamantenilor"
+          când se dă clic pe el? Nu uitaţi să daţi clic pe el după ce daţi clic pe
+          Rulare
+        studio_playlab_6: O puteți ajuta pe Vrăjitoare să se miște împrejur folosind
+          tastele săgeți sus/jos/dreapta/stânga pentru a prinde toate mingile de foc
+          magice?
+        studio_playlab_7: Blocul "repetă pentru totdeauna" vă permite să rulaţi cod
+          continuu. Puteți ataşa blocuri pentru a ajuta Expertul să se miște la dreapta
+          şi la stânga în mod repetat?
+        studio_playlab_8: Puteţi adăuga un bloc pentru a marca un punct și un bloc
+          pentru a reda un sunet când unicornul îl lovește pe expert şi apoi să îl
+          mutaţi cu săgeţile până când marcați?
+        studio_playlab_9: Setați fundalul pentru această invazie extraterestră şi
+          ajutați-l pe Spacebot să ajungă mai repede la extraterestru, prin schimbarea
+          vitezei sale. Apoi, mutaţi-l cu tastele săgeată să ajungă la Spacebot şi  să-i
+          alerteze pe toți ceilalți
         studio_playlab_10: Creați-vă propriul joc. Când aţi terminat, faceţi clic
           pe Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele
           lor.
@@ -675,43 +682,46 @@
           un labirint mai complex? Dacă o faceți bine, voi putea să merg pe orice
           traseu curbat, indiferent de lungime. Uraaa! Gheața se topește!
       Standalone_Artist_1:
-        instructions: Welcome to Artist! First off, let's try to make a simple square
-          using the turn right block and move forward block. Each side should be 100
-          pixels long.
+        instructions: Bine ați venit la Artist! În primul rând, să încercăm să facem
+          un pătrat simplu folosind blocul rotește la dreapta şi blocul Mutare înainte.
+          Fiecare latură ar trebui să aibă lungimea de 100 pixeli.
       Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel
-          long sides.
+        instructions: Desenaţi acest diamant cu unghiuri de 120 şi 60 de grade şi
+          laturile de lungimi 150 pixeli.
       Standalone_Artist_3:
-        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree
-          turns?
+        instructions: Puteţi desena acest hexagon cu laturi de 100 pixeli şi rotiri
+          de 60 grade?
       Standalone_Artist_4:
-        instructions: Now you've got a new block to play with, the loop. This will
-          repeat a set of commands. What happens if you loop these commands 6 times?
+        instructions: Acum ați obținut un bloc nou cu care să vă jucați într-o repetiție.
+          Acesta va repeta un set de comenzi. Ce se întâmplă dacă repetați aceste
+          comenzi de 6 ori?
       Standalone_Artist_5:
-        instructions: How many times do you need to loop this diamond to draw the
-          flower?
+        instructions: De câte ori aveți nevoie să repetați acest diamant pentru a
+          desena floarea?
       Standalone_Artist_5.5:
-        instructions: 'Notice how we simplified the diamond code by turning it into
-          a loop. You can loop that whole sequence 12 times to draw the flower. Hint:
-          You''ll need to turn 30 degrees after your diamond loop so you don''t keep
-          drawing over the same diamond.'
+        instructions: 'Observaţi cum am simplificat codul diamantului transformându-l
+          într-o repetiție. Puteți să repetați întreaga secvență de 12 ori pentru
+          a desena floarea. Sugestie: Veţi avea nevoie să rotiți cu 30 de grade, după
+          repetiția diamantului dvs. astfel încât vă nu desenați tot peste acelaşi
+          diamant.'
       Standalone_Artist_6:
-        instructions: 'Loop this hexagon code 6 times to create the design. How many
-          degrees will you need to turn each time? Hint: divide the number of degrees
-          in a circle by the number of times you are looping.'
+        instructions: 'Buclează acest cod hexagon de 6 ori pentru a crea designul.
+          Cu câte grade va trebui să rotești de fiecare dată? Indiciu: împarte numărul
+          de grade într-un cerc la numărul de câte ori buclezi.'
       Standalone_Artist_7:
-        instructions: 'A function is another programming tool to help you avoid repeating
-          yourself. This function draws a flower, so you can use it any time you want
-          to draw a flower. Use this and the new jump block to draw these flowers.
-          Hint: The flowers are 150 pixels apart'
+        instructions: 'O funcţie este un alt instrument de programare care a vă ajută
+          să evitați repetarea. Această funcţie desenează o floare, astfel încât o
+          puteţi folosi oricând vrei să desenați o floare. Utilizaţi această funcție
+          şi bloc nou "Salt" pentru a să desena mai multe flori. Sugestie: Florile
+          sunt de aproximativ 150 pixeli'
       Standalone_Artist_8:
-        instructions: Here's a function called "Draw a shape" that we've programmed
-          to draw hexagons. Run the code to see what it does and then experiment with
-          the function to see what happens. Can you make it draw a pattern of squares,
-          triangles, or octagons?
+        instructions: Aici este o funcţie numită "Desenează o forma", pe care noi
+          am programat-o să elaboreze hexagoane. Rulează codul pentru a vedea ce face
+          şi apoi experimentează utilizând funcția pentru a vedea ce se întâmplă.
+          Poţi să se elaboreze un model de pătrate, triunghiuri sau octagoane?
       Standalone_Artist_9:
-        instructions: Now go ahead and make whatever picture you'd like! You've even
-          got an empty function that you can make do whatever you want!
+        instructions: Acum mergeţi mai departe şi creați orice imagine doriţi! Ai
+          chiar şi o funcţie de gol cu care poți face ce vrei!
     video:
       name:
         maze_intro: Intro Labirint
@@ -789,14 +799,28 @@
         C3_crowdsourcing: Obţinând Informaţii/Critici
         C3_functional_suncatchers: Prinzători ai Soarelui Funcţionali
         C3_songwriting_with_parameters: Compozitie cu parametri
-        C4_artist_math: Programming the Artist with Math
-        C4_create_functions: Creating Functions
-        C4_edit_functions: Editing Functions
+        C4_intro: Introducere
+        C4_bee_conditional: Condiţii de Ortografie
+        C4_variables_artist: Variabile - Artist
+        C4_variables_playlab: Variabile - Joc Laborator
         C4_for_loops: Repetiții Pentru
-        C4_variables: Variabile
-        frozen_intro: Hour of Code Intro
-        frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
+        C4_math_artist: Programarea Artistului cu matematică
+        C4_function_edit: Editare de funcții
+        C4_function_create: Crearea de funcții
+        C4_function_parameters: Funcții cu Parametrii
+        C4_conditionals: Condiţionale
+        C4_unplugged_algorithms: Algorithms with Tangrams
+        C4_unplugged_madlibs: Mad Libs
+        C4_unplugged_variables: Variabile în plicuri
+        C4_unplugged_forloops: Repetiții Pentru
+        C4_unplugged_parameters: Compoziții muzicale cu parametri
+        C4_unplugged_binary: Binar
+        frozen_intro: Introducere în Ora de cod
+        frozen_loops: Introducere în Bucle
+        frozen_functions: Introducere în Funcții
+        playlab_intro: Introducere in Play Lab
+        playlab_events: Play Lab Events
+        playlab_repeat_forever: Play Lab Repeat Forever
     callout:
       text:
         drag_blocks: Trage un bloc "mutare" şi fixează-l sub alt bloc
@@ -824,6 +848,10 @@
           cu măsura corectă în grade pentru întoarcere
         repeat_blocks: Utilizaţi blocul "Repetă" şi aduceți-l lângă blocurile din
           spațiul de lucru
+        repeat_blocks_1: (1) Folosește acest bloc și pune-l în jurul blocurilor gri
+          în spațiul de lucru
+        repeat_blocks_2: (2) Mută blocul ”Repetă” aici, și plasează blocurile gri
+          în interior
         snowflake_dropdown: Utilizaţi acest meniu derulant pentru a crea diferiți
           fulgi de zăpadă!
         degrees_per_side: Împărțiți 360 la numărul de laturi pentru a obține mărimea
@@ -831,14 +859,14 @@
         set_sides: Utilizaţi acest bloc ca să setați "laturi" la numărul necesar pentru
           a finaliza puzzle-ul.
         set_length: Utilizaţi acest bloc pentru a seta "lungime" la valoarea corectă.
-        which_equation: Care ecuație face mai mică fiecare latură pentru a forma mai
-          multe laturi? Încercați fiecare ecuație!
+        which_equation: Ce ecuația face fiecare latură mai scurtă pentru forme cu
+          mai multe laturi?
         get_nectar: Utilizaţi noul bloc "obţine nectar".
         actions_category: Caseta de instrumente are acum un nou aspect! Blocurile
           "Acţiuni" sunt aici acum.
         draw_square_hint: 'Sugestie: Utilizaţi exact repetiția pe care tocmai aţi
           făcut-o în ultimul puzzle.'
-        edit_function: Utilizaţi acest buton pentru a edita funcţia.
+        edit_function: Click aici pentru a edita funcţia dumneavoastră.
         create_function: Click aici pentru a deschide bara de instrumente "Funcţii",
           apoi faceţi clic pe butonul "Creează o funcţie".
         house_hint: Este ok, chiar dacă imaginea nu arată ca o casă încă. O vom repara
@@ -851,19 +879,51 @@
           "dacă/altfel".
         length_parameter: Puteţi actualiza această funcţie, astfel încât ea să folosească
           parametrul "lungime"?
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
-          each circle.
-        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
-          and change the size.
-        frozen_snowflake_branch: Use the "create a snowflake branch" block
-        frozen_create_square: Attach more blocks here to create a square
-        playlab_drag_say: Drag the "say" block here and type "hello"
-        playlab_use_twice: Use this block twice and remember to change the actor number
-        playlab_move_girl: Use the "move right" block to move Tennis Girl
-        playlab_play_sound: Add "play sound" block here
-        playlab_arrow_keys: Remember to use these to move the witch after clicking
-          on Run
-        playlab_add_move: Add "move" blocks inside this repeat block
-        playlab_add_score: Add score blocks here
-        playlab_add_blocks: Add your blocks here
+        frozen_diamond_repeat: Utilizaţi blocul se repetă pentru a crea această formă.
+        frozen_circle_function_in_circle_turn: Nu uita să rotești după crearea fiecărui
+          cerc.
+        frozen_circle_function_with_parameter_circle: Utilizaţi blocul "crează un
+          cerc" şi modificaţi dimensiunea.
+        frozen_snowflake_branch: Utilizaţi blocul "creaţi o ramură de fulg de Nea"
+        frozen_create_square: Ataşează aici mai multe blocuri pentru a crea un pătrat
+        playlab_drag_say: Trageți blocul "spun" aici şi tastaţi "Bună ziua"
+        playlab_use_twice: Folosește acest bloc de două ori și ține minte să schimbi
+          numărul actorului
+        playlab_move_girl: Folosește blocul ”mută la dreapta” pentru a muta Fata Tenis
+        playlab_play_sound: Adăugaţi blocul "sunet joc" aici
+        playlab_arrow_keys: Amintiți-vă să utilizați acestea pentru a muta vrăjitoarea
+          după ce faceți click pe Rulează
+        playlab_add_move: Adaugă  blocuri "mută" în interiorul acestui bloc se repetă
+        playlab_add_score: Adăugaţi block-uri pentru scor aici
+        playlab_add_blocks: Adaugă blocurile tale aici
+        set_variable: Trage numărul tău aici pentru a da o valoare variabilei
+        place_variable: Trage variabila ta în interiorul acestui block
+        bee_for_loop: Trage cel mai mare număr de nectar pe care îl doriți ca albina
+          să îl colecteze aici
+        place_counter_variable: Trageți variabila contor înăuntrul acestui block
+        function_editor_draw_square: ' Acesta este definiția funcției dumneavoastră.
+          Aceste blocuri rulează în tot timpul în care dumneavoastră utilizați blocul
+          "desenează un pătrat". '
+        change_here: Face modificarea aici
+        write_draw_square_function: Trageți blocuri din caseta de instrumente în aici
+          pentru a desena un pătrat
+        write_draw_triangle_function: Drag blocks from the toolbox into here that
+          draw a triangle
+        edit_add_parameter: Clic editare pentru a adăuga un parametru în funcția ta
+        add_and_drag_parameter: Scrie numele parametrului tău aici, fă click pe "adaugă",
+          iar apoi trage-l în definiția funcției tale
+        fill_in_actor: Completează ??? cu numere care corespund fiecărui actor (1,
+          2 și 3)
+        repeat: Pune blocuri în interiorul buclei pentru a repeta comenzi
+        if_bee_nectar: Folosește blocul "dacă" pentru a decide dacă albina ar trebui
+          să ia nectarul
+        if_else_bee: Utilizaţi blocul "dacă/altfel", astfel încât albina ia nectar
+          de la o floare şi face miere dacă aceasta nu este o floare
+        repeat_full_circle: Introdu numărul necesar de mișcări ale zombie-ului astfel
+          încât acesta să facă un cerc complet
+        place_length_variable: Drag the length variable here to replace the question
+          marks
+        arrows_move_actor: Utilizează săgețile pentru a muta actorul
+        right_arrow_fireball: Utilizează săgeata dreapta pentru a trage mingiile de
+          foc
+        name_function: Scrie numele funcției aici

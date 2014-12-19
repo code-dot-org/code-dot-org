@@ -44,8 +44,8 @@
           desc: 拼图 (测试版)
           Jigsaw: 第一阶段
         Step Levels:
-          desc: Maze (beta)
-          MazeStep: Stage Step
+          desc: 迷宫 (测试版)
+          MazeStep: 阶段一步
         edit-code:
           desc: |
             编辑代码 (测试版)
@@ -67,16 +67,16 @@
           desc: 拼图 (测试版)
           Jigsaw: 第一阶段
         step:
-          desc: Maze (beta)
-          MazeStep: Stage Step
+          desc: 迷宫 (测试版)
+          MazeStep: 阶段一步
         wordsearch:
-          desc: Spelling Bee (beta)
+          desc: 拼字比赛 (测试版)
           WordSearch: 第一阶段
     game:
       name:
         Unplug1: 计算机科学导论
         Maze: 迷宫
-        Multi: Multiple Choice Stuffs
+        Multi: 选择题的东西
         Unplug2: 计算性思维
         Unplug3: 方格纸编程
         Artist: 艺术家
@@ -99,12 +99,12 @@
         Bounce: 跳
         Flappy: Flappy Bird
         Jigsaw: 拼图
-        MazeStep: Maze Step Mode
-        Wordsearch: Wordsearch
-        Webapp: Webapp
+        MazeStep: 迷宫步模式
+        Wordsearch: 字谜
+        Webapp: Web 应用程序
         ArtistEC: 艺术家
-        TextMatch: Text Match
-        StudioEC: Play Lab
+        TextMatch: 文本匹配
+        StudioEC: 播放实验室
     trophy:
       name:
         Bronze: 铜色
@@ -131,8 +131,8 @@
         maze_2_5: 有一种方法可以只用两个块就抓到这只笨猪。你能想出来它是什么么？
         maze_2_6: 只用3个块，帮我抓住那只绿色的人侵者！
         maze_2_7: 用尽量少得快帮我驱逐这只坏猪。试试看使用“重复多次”块。
-        maze_2_8: 当块是灰色的时这意味着您不能将其删除或更改它。请尝试并解决这一难题使用的"重复"的块的重复 3 次。试着把这些在灰色的"重复"块中的
-          3 块： 移动、 移动、 打开。
+        maze_2_8: 当一个块是灰色的，这表示你不能删除它。解决这个难题，使用"重复"块，重复 3 次。试着把这3个区块放在灰色的"重复"块中： 移动、
+          移动、 转。
         maze_2_9: 好的，试试看新的“重复直到”块，它会一直重复直到我抓到那只讨人厌的猪。
         maze_2_10: 好了，最后一次的联系 —— 你可以只用 4 块块来解决这个问题吗？
         maze_2_11: 亲爱的人类。我是一只僵尸。我饿了。我必须......得到向日葵......你可以用5块块让我到达那里吗？
@@ -229,7 +229,7 @@
         maze_3_2: 给我写一个程序，让我能够到达那只猪。
         maze_3_3: 我怎样才能抓住那只猪？小心别让我撞上TNT炸弹！
         maze_3_4: 写个程序，让我绕过那些TNT炸药，抓住那只猪。
-        bounce_1: 附加一个块到"当左箭头"块，然后按"运行程序"。使用向左的箭头移动球拍到达结束目标。
+        bounce_1: 附加块在“左箭头时”块上，然后按“运行”。使用左箭头来移动挡板来到达终点目标。
         bounce_2: 附加一个块到"当左箭头"块和“当右键头”块，然后按"运行程序"。移动球拍到达两个结束目标。
         bounce_3: 现在，尝试类似的做法同"当上箭头"块。移动球拍到顶部目标。
         bounce_4: 这次你需要添加四个块。移动到所有四个球拍完成目标，以完成这个谜题。
@@ -237,34 +237,30 @@
         bounce_6: 现在完成的目标是在顶上。您需要将块附加到两个"当球命中"块以解决这一难题。
         bounce_7: 将块附加到每个"当"块。跳起球，直到它击中完成目标。
         bounce_10: 现在有一个目标在顶部。附加上"得分点"和"分数对手点"块"当球在目标中"和"当球未命中桨"块去做一场游戏。看看你可以获得多少分，在你对手得分两次之前。
-        bounce_11: 您现在可以到"游戏启动时"块附加块。您必须附加在多个位置中的新的"启动新球"块。此外，试着改变现场或球拍和球的速度和看看多少分，你就可以得分前您对手的成绩两次。
-        bounce_12: 创建您自己的弹跳游戏。您可以更改所有的视觉效果和规则。当你完成，单击共享，让朋友试试你在手机上的游戏。
-        Custom_builder: 将块从工具箱中拖动到工作区中绘制您想要创建的水平。当您准备好时，按下"运行程序"。
-        flappy_1: 将一个块附加到"单击时"块中，然后按下"运行程序"。单击或点击屏幕移动 Flappy到目标。
+        bounce_11: 现在，你可以在"运行时"的块附加块. 你必须附加新的"启动新球"块在多个​​位置中. 此外，试着改变场景或球拍和球的速度，看看在你对手得两次分数之前你能得多少分.
+        bounce_12: 創建你自己的彈跳遊戲。你可以改變所有的可視效果和規則。當你完成後，單擊Finish（完成）以讓朋友在他們的手機上試試你的手機遊戲。
+        Custom_builder: 将块从工具箱中拖动到工作区来绘制你想创建的水平。当你准备好时, 按"运行"。
+        flappy_1: 将一块附加到"单击时"块中，然后按"运行"。单击或点击屏幕去移动Flappy到目标.
         flappy_2: 现在我们已经添加了一些地面。将一个块附加到"撞到地面时"块。Flappy 撞了时，您的代码需要 ' 结束游戏 '。
-        flappy_3: '"当游戏启动"块允许您的游戏启动时运行代码。尝试设置速度级别并扑向目标吧。'
+        flappy_3: “运行时”块允许你在游戏开始时运行你的代码. 尝试设置水平速度和扑向目标。
         flappy_4: Flappy将会穿越障碍，除非你编写代码使他崩溃。将一个块附加到"命中障碍时"块。当Flappy 撞上到第一组管道时，您的代码需要
           ' 结束游戏 '。
         flappy_5: 让我们添加一个记分牌。当 Flappy 穿过障碍计分数。将添加到"当通过障碍"块，然后得分当 Flappy 通过第一套管道。
         flappy_6: 看看是否你仍然能得分，在使得 Flappy 飞得距离更小或更大之后。
-        flappy_7: 接下来，请尝试更改场景通过将另一个块附加到"游戏启动时"块。
+        flappy_7: 接下来, 请尝试将另一个块附加到"运行时"块来更改现场.
         flappy_8: 不只是在游戏开始时，您可以随时设置的视觉效果。请尝试在其他事件发生时设置一个随机场景，例如，在通过障碍时。
         flappy_9: 去搀混它们，当击中障碍或者掉到地上，不只是结束游戏，尝试设置分数为0。
-        flappy_11: 创建您自己Flappy游戏。您可以更改所有的视觉效果和所有的规则，甚至重力。当你完成，单击共享，让朋友在手机上试试你的游戏吧。
-        flappy_k1_1: Play Flappy
-        flappy_k1_2: Attach a block to the "when click" block, then press "Run". Click
-          or tap the screen to move Flappy to the target.
+        flappy_11: 创建你自己的Flappy游戏。你可以改变所有的有视效果，所有的规则，甚至重力。当你完成后，单击Finish（完成），让朋友在他们手机上试试你的手机游戏。
+        flappy_k1_1: 玩Flappy游戏
+        flappy_k1_2: 将一块附加到"单击时"块中，然后按"运行"。单击或点击屏幕去移动Flappy到目标.
         flappy_k1_3: 现在我们已经添加了一些地面。将一个块附加到"撞到地面时"块。Flappy 撞了时，您的代码需要 ' 结束游戏 '。
-        flappy_k1_4: The "when run" block allows you to run code when your game starts.  Try
-          setting the level speed and flapping to the target.
+        flappy_k1_4: “运行时”块允许你在游戏开始时运行你的代码. 尝试设置水平速度和扑向目标。
         flappy_k1_5: Flappy将会穿越障碍，除非你编写代码使他崩溃。将一个块附加到"命中障碍时"块。当Flappy 撞上到第一组管道时，您的代码需要
           ' 结束游戏 '。
         flappy_k1_6: 让我们添加一个记分牌。当 Flappy 穿过障碍计分数。将添加到"当通过障碍"块，然后得分当 Flappy 通过第一套管道。
-        flappy_k1_7: See if you can score multiple points for making it past an obstacle
-        flappy_k1_8: Next, try changing the scene by attaching another block to the
-          "when run" block.
-        flappy_k1_9: Try changing the player by attaching a "set player" block to
-          the "when run" block.
+        flappy_k1_7: 看看你能不能超越障碍来得多分点
+        flappy_k1_8: 接下来, 请尝试将另一个块附加到"运行时"块来更改现场.
+        flappy_k1_9: 试图附加一个“设置玩家”块到“运行时”块上来更改玩家.
         jigsaw_1: 单击块
         jigsaw_2: 将块拖到目标
         jigsaw_3: 排列块以形成图像
@@ -277,95 +273,63 @@
         jigsaw_10: 排列块以形成图像
         jigsaw_11: 排列块以形成图像
         jigsaw_12: 排列块以形成图像
-        jigsaw_13: Fix the puzzle!
-        mazestep_1: Maze step description here
-        mazestep_2: Maze step description here
-        mazestep_3: Maze step description here
-        mazestep_4: Maze step description here
-        mazestep_5: Maze step description here
-        studio_c2_1: Can you make this dog say "hello world"?
-        studio_c2_2: Can you make the dog say something and then have the cat say
-          something afterwards?
-        studio_c2_3: Can you write a program to make this dog move to the cat?
-        studio_c2_4: Can you write a program that makes the dog move to the cat, and
-          have the cat say "hello" when the dog reaches him?
-        studio_c2_5: Can you write a program to make the octopus say "hello" when
-          it is clicked?
-        studio_c2_6: Can you write a program to make this penguin move around using
-          the up / down / left /right keys to hit all of the targets?
-        studio_c2_7: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_c2_8: Can you have the penguin say "Ouch!" and play a "hit" sound if
-          he runs into the dinosaur, and then move him with the arrows to make that
-          happen?
-        studio_c2_9: Can you add a block to score a point when the penguin runs into
-          the octopus, and then move him with the arrows until you score?
-        studio_c2_10: Can you add blocks to change the background and the speed of
-          the penguin, and then move him with the arrows until you score?
-        studio_c2_11: Create your own story. When you're done, click Finish to let
-          friends try your story on their phones.
-        studio_c3_story_1: Can you make this dog say "hello world"?
-        studio_c3_story_2: Can you make the dog say something and then have the cat
-          say something afterwards?
-        studio_c3_story_3: Can you write a program to make this dog move to the cat?
-        studio_c3_story_4: Can you write a program that makes the dog move to the
-          cat, and have the cat say "hello" when the dog reaches him?
-        studio_c3_story_5: Can you add a block to make the octopus happy?
-        studio_c3_story_6: Create your own story. When you're done, click Finish to
-          let friends try your story on their phones.
-        studio_c3_game_1: Can you write a program to make the octopus say "hello"
-          when it is clicked?
-        studio_c3_game_2: Can you write a program to make this penguin move around
-          using the up / down / left /right keys to hit all of the targets?
-        studio_c3_game_3: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_c3_game_4: Can you have the penguin say "Ouch!" and play a "hit" sound
-          if he runs into the dinosaur, and then move him with the arrows to make
-          that happen?
-        studio_c3_game_5: Can you add a block to score a point when the penguin runs
-          into the octopus, and then move him with the arrows until you score?
-        studio_c3_game_6: Can you add blocks to change the background and the speed
-          of the penguin, and then move him with the arrows until you score?
-        studio_c3_game_7: Create your own game. When you're done, click Finish to
-          let friends try your story on their phones.
-        studio_playlab_1: Can you make this dog say "hello world"?
-        studio_playlab_2: Can you make the dog say something and then have the cat
-          say something afterwards?
-        studio_playlab_3: Can you write a program to make this dog move to the cat?
-        studio_playlab_4: Can you write a program that makes the dog move to the cat,
-          and have the cat say "hello" when the dog reaches him?
-        studio_playlab_5: Can you write a program to make the octopus say "hello"
-          when it is clicked?
-        studio_playlab_6: Can you write a program to make this penguin move around
-          using the up / down / left /right keys to hit all of the targets?
-        studio_playlab_7: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_playlab_8: Can you add a block to score a point when the penguin runs
-          into the octopus, and then move him with the arrows until you score?
+        jigsaw_13: 解决这一难题 ！
+        mazestep_1: 迷宫步骤说明在这里
+        mazestep_2: 迷宫步骤说明在这里
+        mazestep_3: 迷宫步骤说明在这里
+        mazestep_4: 迷宫步骤说明在这里
+        mazestep_5: 迷宫步骤说明在这里
+        studio_c2_1: 你可以让这个狗说"你好世界"吗？
+        studio_c2_2: 你可以让狗说些什么，然后让猫说些什么吗？
+        studio_c2_3: 你可以写一个程序来将这只狗移动到那只猫处吗？
+        studio_c2_4: 你可以写一个程序来将这只狗移动到那只猫处, 当狗到达时, 让猫对他说“你好”?
+        studio_c2_5: 你可以写一个程序来使章鱼说“你好”, 当它被点击时？
+        studio_c2_6: 你可以写一个程序，用上/下/左/右按键使这个企鹅走动去打的所有目标吗？
+        studio_c2_7: '"永远重复"块允许您连续运行代码。您可以附加块来使这只恐龙反复向上向下移动吗？'
+        studio_c2_8: '你可以令企鹅说: "哎哟!" 并播放“打”声音，如果他碰到恐龙时，然后将企鹅按照箭头移动使其发生.'
+        studio_c2_9: 你可以添加一个模块, 当企鹅碰到章鱼时得一分点，然​​后将企鹅按照箭头移动，直到你获得分数?
+        studio_c2_10: 你可以添加模块, 以更改背景和企鹅的速度，然​​后将企鹅按照箭头移动，直到你获得分数?
+        studio_c2_11: 创建你自己的故事。当你完成后，单击Finish（完成），让朋友在他们手机上试试你的故事.
+        studio_c3_story_1: 你可以让这个狗说"你好世界"吗？
+        studio_c3_story_2: 你可以让狗说些什么，然后让猫说些什么吗？
+        studio_c3_story_3: 你可以写一个程序来将这只狗移动到那只猫处吗？
+        studio_c3_story_4: 你可以写一个程序来将这只狗移动到那只猫处, 当狗到达时, 让猫对他说“你好”?
+        studio_c3_story_5: 你可以添加一个模块，使八达通快乐吗？
+        studio_c3_story_6: 创建你自己的故事。当你完成后，单击Finish（完成），让朋友在他们手机上试试你的故事.
+        studio_c3_game_1: 你可以写一个程序来使章鱼说“你好”, 当它被点击时？
+        studio_c3_game_2: 你可以写一个程序，用上/下/左/右按键使这个企鹅走动去打的所有目标吗？
+        studio_c3_game_3: '"永远重复"块允许您连续运行代码。您可以附加块来使这只恐龙反复向上向下移动吗？'
+        studio_c3_game_4: '你可以令企鹅说: "哎哟!" 并播放“打”声音，如果他碰到恐龙时，然后将企鹅按照箭头移动使其发生.'
+        studio_c3_game_5: 你可以添加一个模块, 当企鹅碰到章鱼时得一分点，然​​后将企鹅按照箭头移动，直到你获得分数?
+        studio_c3_game_6: 你可以添加模块, 以更改背景和企鹅的速度，然​​后将企鹅按照箭头移动，直到你获得分数?
+        studio_c3_game_7: 创建你自己的游戏。当你完成后时，单击Finish（完成），让朋友在他们手机上试试你的游戏。
+        studio_playlab_1: 企鹅想要说"你好"— — 你能帮助他吗？
+        studio_playlab_2: 洞穴男孩 （演员 1） 和洞穴女孩 （演员 2） 想向对方说"你好"。你能帮助他们通过使用"说"块两次吗？
+        studio_playlab_3: 你能帮网球女孩到达旗子标志吗？
+        studio_playlab_4: 你能帮网球男孩 (演员 1) 到达网球女孩 （演员 2）那里 和当他到达时播放一个声音吗？
+        studio_playlab_5: 你能帮 Spacebot当被点击时 说"问候地球人"单击吗?你点击运行后, 别忘了点击它.
+        studio_playlab_6: 你可以帮助女巫使用上/下/左/右方向键来走动到达所有的魔法火球吗?
+        studio_playlab_7: '"永远重复"块允许您连续运行代码。您可以附加块来帮助巫師反复向右和左移动吗？'
+        studio_playlab_8: 当独角兽跑进该向导中时，添加一个模块来得分和一个模块播放声音，然后用箭头移动它们直到你得分，好吗？
         studio_playlab_9: Can you add blocks to change the background and the speed
           of the penguin, and then move him with the arrows until you score?
-        studio_playlab_10: Create your own game. When you're done, click Finish to
-          let friends try your story on their phones.
-        studio_full_sandbox: Create your own game. When you're done, click Finish
-          to let friends try your story on their phones.
-        studio_k1_1: Can you make this dog say "hello world"?
-        studio_k1_2: Can you make the dog say something and then have the cat say
-          something afterwards?
-        studio_k1_3: Can you write a program to make this dog move to the target?
-        studio_k1_4: Make the dog move to the cat and the cat say "hello" when he
-          gets there.
-        studio_k1_5: Can you add a block to make the octopus happy?
-        studio_k1_6: Can you write a program to make this penguin move around using
-          the up / down / left /right keys to hit all of the targets?
-        maze_wordsearch_k_1: Move me to spell the word EAST
-        maze_wordsearch_k_2: Move me to spell the word SOUTH
-        maze_wordsearch_k_3: Move me to spell the word WEST
-        maze_wordsearch_k_4: Move me to spell the word NORTH
-        maze_wordsearch_k_6: Move me East and then South to spell the word JUMP
-        maze_wordsearch_k_9: Move me one way, then another to spell the word CODE
-        maze_wordsearch_k_13: Move me one way, then another to spell the word DEBUG
-        maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
-        maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
+        studio_playlab_10: 创建你自己的游戏。当你完成后时，单击Finish（完成），让朋友在他们手机上试试你的游戏。
+        studio_full_sandbox: 创建你自己的游戏。当你完成后时，单击Finish（完成），让朋友在他们手机上试试你的游戏。
+        studio_k1_1: 你可以让这个狗说"你好世界"吗？
+        studio_k1_2: 你可以让狗说些什么，然后让猫说些什么吗？
+        studio_k1_3: 你可以写一个程序来将这只狗移动到那只猫处吗？
+        studio_k1_4: 把狗移动到貓那处, 當他到达时让猫说"你好".
+        studio_k1_5: 你可以添加一个模块，使八达通快乐吗？
+        studio_k1_6: 创建你自己的故事 ！左右移动猫和狗，让他们说东西。
+        maze_wordsearch_k_1: 移动我拼写单词EAST
+        maze_wordsearch_k_2: 移动我拼写单词SOUTH
+        maze_wordsearch_k_3: 移动我拼写单词WEST
+        maze_wordsearch_k_4: 移动我拼写单词NORTH
+        maze_wordsearch_k_6: 把我向東 然后向南移动来拼寫單詞JUMP
+        maze_wordsearch_k_9: 把我向这边 然后向另一边移动来拼寫單詞CODE
+        maze_wordsearch_k_13: 把我向这边 然后向另一边移动来拼寫單詞DEBUG
+        maze_wordsearch_k_15: 把我向这边 然后向另一边移动来拼寫單詞ABOVE
+        maze_wordsearch_k_16: 把我向这边 然后向另一边移动来拼寫單詞BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell
           the word STORY
         webapp_ec_simple: Create your web app by using createHtmlBlock.
@@ -374,11 +338,10 @@
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
           a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
           Have fun!'
-        studio_ec_sandbox: Create your own game. When you're done, click Finish to
-          let friends try your game on their phones.
+        studio_ec_sandbox: 创建你自己的游戏。当你完成后时，单击Finish（完成），让朋友在他们手机上试试你的游戏。
     levelbuilder:
       frozen line:
-        instructions: 您好！我是艾伦代尔的艾莎公主。请您帮我画一条直线。
+        instructions: 你好！我是艾伦代尔的艾莎公主。请你帮我画一条直线。
       frozen perpendicular:
         instructions: 现在让我们看看我们是否可以画两条直线，前提是彼此必须存着90度角的相位关系。您将需要使用“转向”块和“移动”块。
       frozen square iterative:
@@ -392,61 +355,41 @@
       frozen cross:
         instructions: 利用“重复”块来绘制一个十字（加）号。您注意到艾莎可以向前和向后移动吗？
       frozen cross rotate:
-        instructions: Now try repeating it 10 times. How many degrees do you need
-          to turn between each line?
+        instructions: 现在请尝试重复 10 次。每个行之间你需要转多少度？
       frozen cross rotate dense:
-        instructions: 'Let''s repeat it 90 times! How many times does 90 go into 360?
-          Hint: It''s a really small number.'
+        instructions: 让我们重复90次！ 90进入360是多少次？提示：这是一个非常小的数目。
       frozen diamond:
-        instructions: 'Let''s create a parallelogram. It''s just like a square but
-          has different angles: 60 and 120 degree angles instead of 90 degree angles.'
+        instructions: 让我们创建一个平行四边形。它就像一个方形，但有不同的角度：60和120度角，而不是90度角。
       frozen diamond mini snowflake:
-        instructions: Did you know every snowflake is a different shape? Let's create
-          a new snowflake by using the "Repeat" block to repeat a parallelogram 4
-          times, turning right by 90 degrees between each parallelogram.
+        instructions: 你知道每个雪花是一个不同的形嗎? 让我们创建一个新的雪花, 使用“重复”块来重复一个平行四边形4次，把每一个平行四边形之间转右90度.
       frozen diamond snowflake:
-        instructions: Now, let's create a new snowflake by using the repeat block
-          to repeat a parallelogram 10 times, turning right by 36 degrees between
-          each one.
+        instructions: 現在，让我们创建一个新的雪花, 使用“重复”块来重复一个平行四边形10次，把每一个平行四边形之间转右36度
       frozen circle:
-        instructions: A circle is a special shape. Can you figure out what number
-          to replace the question marks with to draw a circle?
+        instructions: 圆形是一种特殊的形. 你可以计算出什么号码能取代问号来画圆形吗?
       frozen circle function:
-        instructions: Use the new "Create a circle" block to create 10 overlapping
-          circles. Don't forget to jump forward between circles.
+        instructions: 使用新的“创建圈子”功能块来创建10个交叠的圆圈. 不要忘了在每个圆圈之间跳跃前进.
       frozen circle function in circle:
-        instructions: Now let's create 20 overlapping circles, turning 18 degrees
-          between each circle.
+        instructions: 现在让我们创建20个交叠的圆圈，在每圆圈之间转18度。
       frozen circle function with parameter:
-        instructions: Here's a "Create circle" block that can make circles of different
-          sizes. Can you use this to create a small circle of size 5 and a larger
-          circle of size 10?
+        instructions: 这里有一个“创建圈子”块，可以做不同大小的圆圈.  你可以用它来创建一个5号码的小圆圈和10号码的大圆圈吗?
       frozen snowflower:
-        instructions: Intricate snow patterns can be created with very simple shapes.
-          Can you make a pattern by repeating 5 circles of size 5 and 5 circles of
-          size 10?
+        instructions: 错综复杂的雪模式可以用非常简单的形状来创建。 你可用重复5个5号码的圈和5个10号码的圈来做一个模式吗?
       frozen snowflake branch:
-        instructions: Try using the "Create a snowflake branch" block to create three
-          branches, which starts to look like a snowflake.
+        instructions: 尝试使用“创建雪花分支”块创建三个分支，看起来它开始像一片雪花。
       frozen snowflake full:
-        instructions: Now let's repeat it 8 times to make a beautiful snowflake!
+        instructions: 现在，让我们重复8次，做一个漂亮的雪花!
       frozen freeplay:
-        instructions: You've officially become a master artist! Create a winter wonderland.
+        instructions: 你已经正式成为艺术大师！创建一个冬季仙境.
       scrat 16:
-        instructions: Acorn! Acorn! Acorn! Use an "if" block to get me there with
-          the fewest number of blocks.
+        instructions: 橡果！橡果！橡果！使用“如果”块让我用最少块数到达那里.
       scrat 17:
-        instructions: Ok, let's do that again for practice - this isn't very different,
-          but watch out for the wall!
+        instructions: 好，接下来让我们再练习一次 - 这不会非常不一样，但要当心那堵墙！
       scrat 18:
-        instructions: The "If-else" blocks checks a condition, and then does one thing
-          OR another. To get me to the acorn try to use this new block.
+        instructions: '"If-else"块会检查一个条件，然后做一件事或另一件。为了帮助拿到我的橡子，试试这个新的块。'
       scrat 19:
         instructions: 让我们来再联系一次使用“如果 - 其他”块，你能一次就让我达成目的么？
       scrat 20:
-        instructions: Can you add just 3 blocks to help me solve a more complex maze?
-          If you do it right, I can walk any curvy path no matter the length. Hurry!
-          The ice is melting!
+        instructions: 你可以只添加3块就帮我解答一个更复杂的迷宫吗？如果你做对了，我可以走任何长度和任意弯曲的路径。加油！冰正在融化 ！
       Standalone_Artist_1:
         instructions: Welcome to Artist! First off, let's try to make a simple square
           using the turn right block and move forward block. Each side should be 100
@@ -562,14 +505,28 @@
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
-        C4_artist_math: Programming the Artist with Math
-        C4_create_functions: Creating Functions
-        C4_edit_functions: Editing Functions
+        C4_intro: Introduction
+        C4_bee_conditional: Bee Conditionals
+        C4_variables_artist: Variables - Artist
+        C4_variables_playlab: Variables - Play Lab
         C4_for_loops: For Loops
-        C4_variables: 变量
+        C4_math_artist: Programming the Artist with Math
+        C4_function_edit: Editing Functions
+        C4_function_create: Creating Functions
+        C4_function_parameters: 有参数的函数
+        C4_conditionals: 条件语句
+        C4_unplugged_algorithms: Algorithms with Tangrams
+        C4_unplugged_madlibs: Mad Libs
+        C4_unplugged_variables: Variables in Envelopes
+        C4_unplugged_forloops: For Loops
+        C4_unplugged_parameters: Songwriting with Parameters
+        C4_unplugged_binary: Binary
         frozen_intro: Hour of Code Intro
         frozen_loops: Introduction to Loops
         frozen_functions: Introduction to Functions
+        playlab_intro: Introduction to Play Lab
+        playlab_events: Play Lab Events
+        playlab_repeat_forever: Play Lab Repeat Forever
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块和捕捉低于它的其他块
@@ -582,7 +539,7 @@
         set_sprite_image: Attach a "set actor to image" block to the "when story starts"
           block to enable an actor for this story
         studio_say_text: Type what you want your actor to say within these quotes
-        jigsaw_click: Click this block!
+        jigsaw_click: 单击此块 ！
         move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
           Run" block to make Elsa move forward
         turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
@@ -592,6 +549,10 @@
           degree to turn
         repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
           workspace
+        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the
+          workspace
+        repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks
+          inside
         snowflake_dropdown: Use this drop-down to create different snowflakes!
         degrees_per_side: Divide 360 by the number of sides to get the size of each
           angle in degrees.
@@ -600,11 +561,11 @@
         set_length: Use this block to set "length" to the correct value.
         which_equation: Which equation makes each side shorter for shapes with more
           sides?  Try each equation!
-        get_nectar: Use the new "get nectar" block.
+        get_nectar: 使用新的"得到花蜜"块。
         actions_category: The tool box got a new look! The "Actions" blocks are in
           here now.
         draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
-        edit_function: Use this button to edit the function.
+        edit_function: 单击此处来编辑您的函数。
         create_function: Click here to open the "Functions" flyout, then click the
           "Create a Function" button.
         house_hint: It's ok if the picture doesn't look like a house yet. We will
@@ -624,9 +585,37 @@
         playlab_drag_say: Drag the "say" block here and type "hello"
         playlab_use_twice: Use this block twice and remember to change the actor number
         playlab_move_girl: Use the "move right" block to move Tennis Girl
-        playlab_play_sound: Add "play sound" block here
+        playlab_play_sound: 添加"播放声音"的块
         playlab_arrow_keys: Remember to use these to move the witch after clicking
           on Run
         playlab_add_move: Add "move" blocks inside this repeat block
-        playlab_add_score: Add score blocks here
-        playlab_add_blocks: Add your blocks here
+        playlab_add_score: 添加分数块在这里
+        playlab_add_blocks: 添加您的块在这里
+        set_variable: Drag a number block here to set your variable
+        place_variable: Drag your variable inside this block
+        bee_for_loop: Drag the largest number of nectar you want the bee to collect
+          here
+        place_counter_variable: Drag your counter variable inside this block
+        function_editor_draw_square: This is your function definition. These blocks
+          run everytime you use the "draw a square" block
+        change_here: 在这里更改
+        write_draw_square_function: Drag blocks from the toolbox into here that draw
+          a square
+        write_draw_triangle_function: Drag blocks from the toolbox into here that
+          draw a triangle
+        edit_add_parameter: Click edit to add a parameter in your function
+        add_and_drag_parameter: Write in the name of your parameter here, click add,
+          and then drag it into your function definition
+        fill_in_actor: Fill in the ??? with numbers that correspond to each actor
+          (1, 2, and 3)
+        repeat: Put blocks inside the loop to repeat commands
+        if_bee_nectar: Use the "if" block to decide if the bee should get nectar
+        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower,
+          and makes honey if it's not a flower
+        repeat_full_circle: Enter in the number of times the zombie has to move to
+          make a full circle
+        place_length_variable: Drag the length variable here to replace the question
+          marks
+        arrows_move_actor: Use the arrows to move the actor
+        right_arrow_fireball: Use the right arrow to shoot fireballs
+        name_function: Write the name of your function here

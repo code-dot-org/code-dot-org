@@ -36,6 +36,7 @@
   of: на
   more: ПОВЕЧЕ
   less: ПО-МАЛКО
+  beta: бета
   try_hoc: 'Опитайте "Часът на Кодирането", натиснете тук >> '
   try_k8intro: Или опитайте нашите начални встъпителни курсове по компютърни науки
     (15-25 часа)
@@ -392,8 +393,8 @@
     test_videos_help: Тествайте нашият нов видео плейър във вашето училище
     try_beta_courses: Ново! Опитайте нашите бета курсове за K-5 ученици
     use_as_teacher: Използвайте този сайт като учител
-    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>20 часа курсове за</h2><h1>Учениците в началното училище</h1>
+    heading_hoc2014: <h2>Часът на кодирането за</h2><h1>Всички възрасти</h1>
+    heading_elementary: <h2>20 часа курсове за</h2><h1>Начинаещи (всички възрасти)</h1>
     heading_apps: <h2>Забавление за</h2><h1>Всеки</h1>
     heading_legacy: <h2>Нашият общ курс за</h2><h1>Всички възрасти</h1>
     your_gallery: Галерия
@@ -407,10 +408,10 @@
   footer:
     help_from_html: Инженери от Google, Microsoft, Facebook и Twitter помогнаха за
       създаването на този урок.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
-      Всички права запазени. <br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
+      Всички права запазени. <br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
       Arts Inc. Всички права запазени.
-    powered_by_aws: Powered by Amazon Web Services
+    powered_by_aws: Създадено с Amazon Web Services
     feedback: Обратна връзка
     translate: Помогнете ни да преведем на вашия език
     support: Поддръжка
@@ -599,3 +600,7 @@
     completed_too_many_blocks: завършено, но с повече блокове
     completed_perfect: завършено, перфектно
     furthest_level_attempted: последното пробвано ниво
+  studio:
+    courses_working_on: Курсове, върху който работите
+    completed_courses: Завършени курсове
+    all_courses: Всички курсове

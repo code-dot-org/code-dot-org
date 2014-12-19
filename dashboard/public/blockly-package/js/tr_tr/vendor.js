@@ -1013,12 +1013,12 @@ Blockly.FunctionEditor.prototype.ensureCreated_=function(){this.isCreated()||thi
 Blockly.FunctionEditor.prototype.hideAndRestoreBlocks_=function(){goog.style.showElement(this.container_,!1);goog.style.showElement(this.modalBackground_,!1);this.moveToMainBlockSpace_(this.functionDefinitionBlock);this.functionDefinitionBlock=null;goog.dom.getElement("functionNameText").value="";goog.dom.getElement("functionDescriptionText").value="";goog.dom.getElement("paramAddText")&&(goog.dom.getElement("paramAddText").value="");Blockly.focusedBlockSpace=Blockly.mainBlockSpace;Blockly.fireUiEvent(window,
 "function_editor_closed")};Blockly.FunctionEditor.prototype.moveToMainBlockSpace_=function(a){a.setUserVisible(!1);a.setMovable(!0);var b=Blockly.Xml.blockToDom_(a);a.dispose(!1,!1,!0);Blockly.Xml.domToBlock_(Blockly.mainBlockSpace,b)};
 Blockly.FunctionEditor.prototype.moveToModalBlockSpace_=function(a){a.setUserVisible(!0);var b=Blockly.Xml.blockToDom_(a);a.dispose(!1,!1,!0);a=Blockly.Xml.domToBlock_(Blockly.modalBlockSpace,b);a.moveTo(Blockly.RTL?Blockly.modalBlockSpace.getMetrics().viewWidth-FRAME_MARGIN_SIDE:FRAME_MARGIN_SIDE,FRAME_MARGIN_TOP);a.setMovable(!1);return a};
-Blockly.FunctionEditor.prototype.create_=function(){function a(a){this.functionDefinitionBlock.setTitleValue(a.target.value,"NAME")}function b(a){this.functionDefinitionBlock.description_=a.target.value}if(this.created_)throw"Attempting to re-create already created Function Editor";this.container_=document.createElement("div");this.container_.setAttribute("id","modalContainer");goog.dom.getElement("blockly").appendChild(this.container_);var c=this;Blockly.modalBlockSpaceEditor=new Blockly.BlockSpaceEditor(this.container_,
-function(){var a=Blockly.mainBlockSpace.getMetrics(),b=c.contractDiv_?c.contractDiv_.getBoundingClientRect().height:0,f=FRAME_MARGIN_TOP+Blockly.Bubble.BORDER_WIDTH+FRAME_HEADER_HEIGHT;a.absoluteLeft+=FRAME_MARGIN_SIDE+Blockly.Bubble.BORDER_WIDTH+1;a.absoluteTop+=f+b;a.viewWidth-=2*(FRAME_MARGIN_SIDE+Blockly.Bubble.BORDER_WIDTH);a.viewHeight-=FRAME_MARGIN_TOP+Blockly.Bubble.BORDER_WIDTH+f;return a});Blockly.modalBlockSpace=Blockly.modalBlockSpaceEditor.blockSpace;Blockly.modalBlockSpace.customFlyoutMetrics_=
-Blockly.mainBlockSpace.getMetrics;Blockly.modalBlockSpaceEditor.addChangeListener(Blockly.mainBlockSpace.fireChangeEvent);this.modalBackground_=Blockly.createSvgElement("g",{"class":"modalBackground"});Blockly.mainBlockSpaceEditor.appendSVGChild(this.modalBackground_);this.addCloseButton_();this.createContractDom_();Blockly.bindEvent_(goog.dom.getElement("modalContainer"),"mousedown",null,function(a){a.target===a.currentTarget&&(Blockly.modalBlockSpaceEditor.hideChaff(),Blockly.selected&&Blockly.selected.unselect())});
-Blockly.bindEvent_(goog.dom.getElement("modalEditorClose"),"mousedown",this,this.hideIfOpen);Blockly.bindEvent_(goog.dom.getElement("functionNameText"),"input",this,a);Blockly.bindEvent_(goog.dom.getElement("functionNameText"),"keydown",this,a);Blockly.bindEvent_(this.contractDiv_,"mousedown",null,function(){Blockly.selected&&Blockly.selected.unselect()});Blockly.bindEvent_(goog.dom.getElement("functionDescriptionText"),"input",this,b);Blockly.bindEvent_(goog.dom.getElement("functionDescriptionText"),
-"keydown",this,b);this.setupParametersToolbox_();this.addEditorFrame_();this.position_();this.onResizeWrapper_=Blockly.bindEvent_(window,goog.events.EventType.RESIZE,this,this.position_);Blockly.modalBlockSpaceEditor.svgResize()};
-Blockly.FunctionEditor.prototype.layOutBlockSpaceItems_=function(){if(this.functionDefinitionBlock){var a=Blockly.RTL?Blockly.modalBlockSpace.getMetrics().viewWidth-FRAME_MARGIN_SIDE:FRAME_MARGIN_SIDE,b;b=0+this.flyout_.getHeight();this.flyout_.customYOffset=b;this.flyout_.position_();b+=FRAME_MARGIN_TOP;this.functionDefinitionBlock.moveTo(a,b)}};
+Blockly.FunctionEditor.prototype.create_=function(){function a(a){this.functionDefinitionBlock.setTitleValue(a.target.value,"NAME")}function b(a){this.functionDefinitionBlock.description_=a.target.value}if(this.created_)throw"Attempting to re-create already created Function Editor";this.container_=document.createElement("div");this.container_.setAttribute("id","modalContainer");goog.dom.getElement("blockly").appendChild(this.container_);Blockly.modalBlockSpaceEditor=new Blockly.BlockSpaceEditor(this.container_,
+goog.bind(this.calculateMetrics_,this));Blockly.modalBlockSpace=Blockly.modalBlockSpaceEditor.blockSpace;Blockly.modalBlockSpace.customFlyoutMetrics_=Blockly.mainBlockSpace.getMetrics;Blockly.modalBlockSpaceEditor.addChangeListener(Blockly.mainBlockSpace.fireChangeEvent);this.modalBackground_=Blockly.createSvgElement("g",{"class":"modalBackground"});Blockly.mainBlockSpaceEditor.appendSVGChild(this.modalBackground_);this.addCloseButton_();this.createContractDom_();Blockly.bindEvent_(goog.dom.getElement("modalContainer"),
+"mousedown",null,function(a){a.target===a.currentTarget&&(Blockly.modalBlockSpaceEditor.hideChaff(),Blockly.selected&&Blockly.selected.unselect())});Blockly.bindEvent_(goog.dom.getElement("modalEditorClose"),"mousedown",this,this.hideIfOpen);Blockly.bindEvent_(goog.dom.getElement("functionNameText"),"input",this,a);Blockly.bindEvent_(goog.dom.getElement("functionNameText"),"keydown",this,a);Blockly.bindEvent_(this.contractDiv_,"mousedown",null,function(){Blockly.selected&&Blockly.selected.unselect()});
+Blockly.bindEvent_(goog.dom.getElement("functionDescriptionText"),"input",this,b);Blockly.bindEvent_(goog.dom.getElement("functionDescriptionText"),"keydown",this,b);this.setupParametersToolbox_();this.addEditorFrame_();this.position_();this.onResizeWrapper_=Blockly.bindEvent_(window,goog.events.EventType.RESIZE,this,this.position_);Blockly.modalBlockSpaceEditor.svgResize()};
+Blockly.FunctionEditor.prototype.calculateMetrics_=function(){var a=Blockly.mainBlockSpace.getMetrics(),b=this.contractDiv_?this.contractDiv_.getBoundingClientRect().height:0,c=FRAME_MARGIN_TOP+Blockly.Bubble.BORDER_WIDTH+FRAME_HEADER_HEIGHT;a.absoluteLeft+=FRAME_MARGIN_SIDE+Blockly.Bubble.BORDER_WIDTH+1;a.absoluteTop+=c+b;a.viewWidth-=2*(FRAME_MARGIN_SIDE+Blockly.Bubble.BORDER_WIDTH);a.viewHeight-=FRAME_MARGIN_TOP+Blockly.Bubble.BORDER_WIDTH+c;return a};
+Blockly.FunctionEditor.prototype.layOutBlockSpaceItems_=function(){if(this.functionDefinitionBlock&&this.isOpen()){var a=Blockly.RTL?Blockly.modalBlockSpace.getMetrics().viewWidth-FRAME_MARGIN_SIDE:FRAME_MARGIN_SIDE,b;b=0+this.flyout_.getHeight();this.flyout_.customYOffset=b;this.flyout_.position_();Blockly.modalBlockSpace.trashcan.setYOffset(b);Blockly.modalBlockSpace.trashcan.position_();b+=FRAME_MARGIN_TOP;this.functionDefinitionBlock.moveTo(a,b)}};
 Blockly.FunctionEditor.prototype.addCloseButton_=function(){this.closeButton_=Blockly.createSvgElement("g",{id:"modalEditorClose",filter:"url(#blocklyTrashcanShadowFilter)"});var a=Blockly.createSvgElement("rect",{rx:12,ry:12,fill:"#7665a0",stroke:"white","stroke-width":"2.5"},this.closeButton_),b=Blockly.createSvgElement("text",{x:7,y:7,"class":"blocklyText"},this.closeButton_);b.textContent=Blockly.Msg.SAVE_AND_CLOSE;Blockly.modalBlockSpaceEditor.appendSVGChild(this.closeButton_);b=b.getBoundingClientRect();
 a.setAttribute("width",b.width+14);a.setAttribute("height",b.height+7);a.setAttribute("y",-b.height+7-1)};Blockly.FunctionEditor.prototype.setupParametersToolbox_=function(){this.flyout_=new Blockly.HorizontalFlyout(Blockly.modalBlockSpaceEditor);var a=this.flyout_.createDom();Blockly.modalBlockSpace.svgGroup_.insertBefore(a,Blockly.modalBlockSpace.svgBlockCanvas_);this.flyout_.init(Blockly.modalBlockSpace,!1);this.bindToolboxHandlers_()};
 Blockly.FunctionEditor.prototype.addEditorFrame_=function(){var a=Blockly.hasCategories?goog.dom.getElementByClass("blocklyToolboxDiv").getBoundingClientRect().width:goog.dom.getElementByClass("blocklyFlyoutBackground").getBoundingClientRect().width;this.frameBase_=Blockly.createSvgElement("rect",{x:a+FRAME_MARGIN_SIDE,y:0+FRAME_MARGIN_TOP,fill:"hsl(94, 73%, 35%)",rx:Blockly.Bubble.BORDER_WIDTH,ry:Blockly.Bubble.BORDER_WIDTH},this.modalBackground_);this.frameInner_=Blockly.createSvgElement("rect",
@@ -1118,11 +1118,13 @@ goog.ui.FlatMenuButtonRenderer.prototype.createDom=function(a){var b=this.getCla
 goog.ui.FlatMenuButtonRenderer.prototype.decorate=function(a,b){var c=goog.dom.getElementsByTagNameAndClass("*",goog.ui.MenuRenderer.CSS_CLASS,b)[0];if(c){goog.style.setElementShown(c,!1);a.getDomHelper().getDocument().body.appendChild(c);var d=new goog.ui.Menu;d.decorate(c);a.setMenu(d)}goog.dom.getElementsByTagNameAndClass("*",this.getCssClass()+"-caption",b)[0]||b.appendChild(this.createCaption(b.childNodes,a.getDomHelper()));goog.dom.getElementsByTagNameAndClass("*",this.getCssClass()+"-dropdown",
 b)[0]||b.appendChild(this.createDropdown(a.getDomHelper()));return goog.ui.FlatMenuButtonRenderer.superClass_.decorate.call(this,a,b)};goog.ui.FlatMenuButtonRenderer.prototype.createCaption=function(a,b){return b.createDom("div",goog.ui.INLINE_BLOCK_CLASSNAME+" "+(this.getCssClass()+"-caption"),a)};goog.ui.FlatMenuButtonRenderer.prototype.createDropdown=function(a){return a.createDom("div",{"class":goog.ui.INLINE_BLOCK_CLASSNAME+" "+(this.getCssClass()+"-dropdown"),"aria-hidden":!0},"\u00a0")};
 goog.ui.FlatMenuButtonRenderer.prototype.getCssClass=function(){return goog.ui.FlatMenuButtonRenderer.CSS_CLASS};goog.ui.registry.setDecoratorByClassName(goog.ui.FlatMenuButtonRenderer.CSS_CLASS,function(){return new goog.ui.MenuButton(null,null,goog.ui.FlatMenuButtonRenderer.getInstance())});Blockly.SVGHeader=function(a,b){b=b||{};this.padding={left:10};var c=b.onMouseDown?"":"pointer-events: none;";this.svgGroup_=Blockly.createSvgElement("g",{style:c},a,{belowExisting:!0});this.grayRectangleElement_=Blockly.createSvgElement("rect",{fill:"#dddddd",style:c},this.svgGroup_);this.textElement_=Blockly.createSvgElement("text",{"class":"blackBlocklyText",style:c},this.svgGroup_);b.headerText&&(this.textElement_.textContent=b.headerText);b.onMouseDown&&Blockly.bindEvent_(this.svgGroup_,"mousedown",
-b.onMouseDownContext,b.onMouseDown)};Blockly.SVGHeader.prototype.setPositionSize=function(a,b,c){this.svgGroup_.setAttribute("transform","translate(0,"+a+")");this.grayRectangleElement_.setAttribute("width",b);this.grayRectangleElement_.setAttribute("height",c);this.textElement_.setAttribute("x",this.padding.left);a=c/2;b=this.textElement_.getBBox().height/3;this.textElement_.setAttribute("y",a+b)};Blockly.SVGHeader.prototype.removeSelf=function(){goog.dom.removeNode(this.svgGroup_)};
-Blockly.ExampleBlockView=function(a,b,c){this.block=a;this.header=new Blockly.SVGHeader(a.blockSpace.svgBlockCanvas_,{headerText:"Example "+(Blockly.ExampleBlockView.START_EXAMPLE_COUNT_AT+b),onMouseDown:this.toggleCollapse_,onMouseDownContext:this});this.collapsed_=!1;this.onCollapseCallback_=c};Blockly.ExampleBlockView.START_EXAMPLE_COUNT_AT=1;Blockly.ExampleBlockView.prototype.toggleCollapse_=function(){this.collapsed_=!this.collapsed_;this.block.setUserVisible(!this.collapsed_);this.onCollapseCallback_()};
-Blockly.ExampleBlockView.prototype.placeStartingAt=function(a,b,c,d){this.header.setPositionSize(b,c,d);b+=d;if(this.collapsed_)return b;b+=FRAME_MARGIN_TOP;this.block.moveTo(a,b);b+=this.block.getHeightWidth().height;return b+=FRAME_MARGIN_TOP};Blockly.ContractEditor=function(){Blockly.ContractEditor.superClass_.constructor.call(this);this.outputTypeSelector=this.inputTypeSelector=null;this.exampleBlockViews_=[];this.functionDefinitionHeader_=null};goog.inherits(Blockly.ContractEditor,Blockly.FunctionEditor);
-Blockly.ContractEditor.EXAMPLE_BLOCK_TYPE="functional_example";Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME="ACTUAL";Blockly.ContractEditor.MARGIN_BELOW_EXAMPLES=50;Blockly.ContractEditor.typesToColors={none:[0,0,0.6],Number:[192,1,0.99],string:[180,1,0.6],image:[285,1,0.8],"boolean":[90,1,0.4]};Blockly.ContractEditor.prototype.definitionBlockType="functional_definition";Blockly.ContractEditor.prototype.parameterBlockType="functional_parameters_get";
-Blockly.ContractEditor.prototype.create_=function(){Blockly.ContractEditor.superClass_.create_.call(this)};Blockly.ContractEditor.prototype.hideAndRestoreBlocks_=function(){Blockly.ContractEditor.superClass_.hideAndRestoreBlocks_.call(this);this.exampleBlockViews_.forEach(function(a){this.moveToMainBlockSpace_(a.block);a.header.removeSelf()},this);this.functionDefinitionHeader_.removeSelf();goog.array.clear(this.exampleBlockViews_)};
+b.onMouseDownContext,b.onMouseDown)};Blockly.SVGHeader.prototype.setPositionSize=function(a,b,c){this.svgGroup_.setAttribute("transform","translate(0,"+a+")");this.grayRectangleElement_.setAttribute("width",b);this.grayRectangleElement_.setAttribute("height",c);this.textElement_.setAttribute("x",this.padding.left);a=c/2;b=this.textElement_.getBBox().height/3;this.textElement_.setAttribute("y",a+b)};Blockly.SVGHeader.prototype.setText=function(a){this.textElement_.textContent=a};
+Blockly.SVGHeader.prototype.removeSelf=function(){goog.dom.removeNode(this.svgGroup_)};Blockly.ExampleBlockView=function(a,b,c){this.block=a;this.exampleNumber=Blockly.ExampleBlockView.START_EXAMPLE_COUNT_AT+b;this.header=new Blockly.SVGHeader(a.blockSpace.svgBlockCanvas_,{headerText:this.textForCurrentState_(),onMouseDown:this.toggleCollapse_,onMouseDownContext:this});this.collapsed_=!1;this.onCollapseCallback_=c};Blockly.ExampleBlockView.START_EXAMPLE_COUNT_AT=1;
+Blockly.ExampleBlockView.DOWN_TRIANGLE_CHARACTER="\u25bc";Blockly.ExampleBlockView.RIGHT_TRIANGLE_CHARACTER="\u25b6";Blockly.ExampleBlockView.prototype.textForCurrentState_=function(){return(this.collapsed_?Blockly.ExampleBlockView.RIGHT_TRIANGLE_CHARACTER:Blockly.ExampleBlockView.DOWN_TRIANGLE_CHARACTER)+" "+Blockly.Msg.EXAMPLE+" "+this.exampleNumber};
+Blockly.ExampleBlockView.prototype.toggleCollapse_=function(){this.collapsed_=!this.collapsed_;this.block.setUserVisible(!this.collapsed_);this.onCollapseCallback_();this.header.setText(this.textForCurrentState_())};Blockly.ExampleBlockView.prototype.placeStartingAt=function(a,b,c,d){this.header.setPositionSize(b,c,d);b+=d;if(this.collapsed_)return b;b+=FRAME_MARGIN_TOP;this.block.moveTo(a,b);b+=this.block.getHeightWidth().height;return b+=FRAME_MARGIN_TOP};
+Blockly.ContractEditor=function(){Blockly.ContractEditor.superClass_.constructor.call(this);this.outputTypeSelector=this.inputTypeSelector=null;this.exampleBlockViews_=[];this.functionDefinitionHeader_=null};goog.inherits(Blockly.ContractEditor,Blockly.FunctionEditor);Blockly.ContractEditor.EXAMPLE_BLOCK_TYPE="functional_example";Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME="ACTUAL";Blockly.ContractEditor.MARGIN_BELOW_EXAMPLES=50;
+Blockly.ContractEditor.typesToColors={none:[0,0,0.6],Number:[192,1,0.99],string:[180,1,0.6],image:[285,1,0.8],"boolean":[90,1,0.4]};Blockly.ContractEditor.prototype.definitionBlockType="functional_definition";Blockly.ContractEditor.prototype.parameterBlockType="functional_parameters_get";Blockly.ContractEditor.prototype.create_=function(){Blockly.ContractEditor.superClass_.create_.call(this)};
+Blockly.ContractEditor.prototype.hideAndRestoreBlocks_=function(){Blockly.ContractEditor.superClass_.hideAndRestoreBlocks_.call(this);this.exampleBlockViews_.forEach(function(a){this.moveToMainBlockSpace_(a.block);a.header.removeSelf()},this);this.functionDefinitionHeader_.removeSelf();goog.array.clear(this.exampleBlockViews_)};
 Blockly.ContractEditor.prototype.openAndEditFunction=function(a){Blockly.ContractEditor.superClass_.openAndEditFunction.call(this,a);Blockly.mainBlockSpace.findFunctionExamples(a).forEach(function(a,c){var d=new Blockly.ExampleBlockView(this.moveToModalBlockSpace_(a),c,goog.bind(this.position_,this));this.exampleBlockViews_.push(d)},this);this.createDefinitionHeader_();this.position_()};
 Blockly.ContractEditor.prototype.openWithNewFunction=function(a){this.ensureCreated_();var b=Blockly.Xml.domToBlock_(Blockly.mainBlockSpace,Blockly.createSvgElement("block",{type:this.definitionBlockType}));a&&a(b);for(a=0;a<Blockly.defaultNumExampleBlocks;a++)this.createExampleBlock_(b);this.openAndEditFunction(b.getTitleValue("NAME"))};
 Blockly.ContractEditor.prototype.createDefinitionHeader_=function(){this.functionDefinitionHeader_=new Blockly.SVGHeader(Blockly.modalBlockSpace.svgBlockCanvas_,{headerText:Blockly.Msg.DEFINE_HEADER_DEFINITION})};
@@ -1580,7 +1582,7 @@ goog.require('Blockly.Msg');
 Blockly.Msg.ACTUAL = "Güncel";
 Blockly.Msg.ADD = "Ekle";
 Blockly.Msg.ADD_COMMENT = "Yorum Ekle";
-Blockly.Msg.ADD_PARAMETER = "Parametre ekle";
+Blockly.Msg.ADD_PARAMETER = "Değer ekle";
 Blockly.Msg.CHANGE_VALUE_TITLE = "Değeri değiştir:";
 Blockly.Msg.COLLAPSE_ALL = "Blokları Daralt";
 Blockly.Msg.COLLAPSE_BLOCK = "Blok'u Daralt";
@@ -1589,9 +1591,9 @@ Blockly.Msg.COLOUR_BLEND_COLOUR2 = "Renk 2";
 Blockly.Msg.COLOUR_BLEND_HELPURL = "http://meyerweb.com/eric/tools/color-blend/";
 Blockly.Msg.COLOUR_BLEND_RATIO = "oran";
 Blockly.Msg.COLOUR_BLEND_TITLE = "karışım";
-Blockly.Msg.COLOUR_BLEND_TOOLTIP = "Belirli bir oranda verilen 2 rengi karşılaştırır (0.0 - 1.0).";
+Blockly.Msg.COLOUR_BLEND_TOOLTIP = "Belirli bir oranda verilen iki rengi karşılaştırır (0.0 - 1.0).";
 Blockly.Msg.COLOUR_PICKER_HELPURL = "http://en.wikipedia.org/wiki/Color";
-Blockly.Msg.COLOUR_PICKER_TOOLTIP = "Paletten bir seçiniz.";
+Blockly.Msg.COLOUR_PICKER_TOOLTIP = "Paletten bir renk seçiniz.";
 Blockly.Msg.COLOUR_RANDOM_HELPURL = "http://randomcolour.com";
 Blockly.Msg.COLOUR_RANDOM_TITLE = "rastgele renk";
 Blockly.Msg.COLOUR_RANDOM_TOOLTIP = "Rastgele bir renk seçiniz.";
@@ -1611,7 +1613,7 @@ Blockly.Msg.CONTROLS_FOREACH_HELPURL = "https://code.google.com/p/blockly/wiki/L
 Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST = "Listede";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "Listedeki her bir";
-Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "Listedeki her öğeyi  '%1' değişkenine ver ve olayları gerçekleştir.";
+Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "Listedeki her öğeyi  '%1' değişkenine ver ve komutu yerine getir.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#count_with";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "%1 den %2 ye, her adımda %3 değişim";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "Şununla say:";
@@ -1640,8 +1642,8 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "Bir değer yanlış ise olaylar
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "Bir değer doğru ise olayları gerçekleştirir.";
 Blockly.Msg.DEFINE_FUNCTION_DEFINE = "Tanımla";
 Blockly.Msg.DELETE_BLOCK = "Bloğu Sil";
-Blockly.Msg.DELETE_PARAMETER = "Değeri sil...";
-Blockly.Msg.DELETE_PARAMETER_TITLE = "Bu tüm '%1' parametre kopyalarını siler. Emin misiniz?";
+Blockly.Msg.DELETE_PARAMETER = "Değer sil...";
+Blockly.Msg.DELETE_PARAMETER_TITLE = "Bu komut, tüm '%1' değeleri siler. Emin misiniz?";
 Blockly.Msg.DELETE_X_BLOCKS = "%1 Bloğu Sil";
 Blockly.Msg.DISABLE_BLOCK = "Bloğu Devre Dışı Bırak";
 Blockly.Msg.DUPLICATE_BLOCK = "Çoğalt";
@@ -1661,24 +1663,24 @@ Blockly.Msg.FUNCTION_HEADER = "Fonksiyon";
 Blockly.Msg.FUNCTIONAL_CREATE = "Yeni blok";
 Blockly.Msg.FUNCTIONAL_EDIT = "düzenle";
 Blockly.Msg.FUNCTIONAL_NAME_LABEL = "İsim";
-Blockly.Msg.FUNCTIONAL_TYPE_LABEL = "Tip seç...";
+Blockly.Msg.FUNCTIONAL_TYPE_LABEL = "Türü seç...";
 Blockly.Msg.FUNCTIONAL_DESCRIPTION_LABEL = "Tanım";
 Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL = "Alan";
 Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP = "Fonksiyonel yöntemi tanımlayın";
 Blockly.Msg.FUNCTIONAL_RANGE_LABEL = "Aralık";
-Blockly.Msg.FUNCTIONAL_VARIABLE_CREATE = "Bir değişken olarak";
+Blockly.Msg.FUNCTIONAL_VARIABLE_CREATE = "Değişken yarat";
 Blockly.Msg.FUNCTIONAL_VARIABLE_HEADER = "Değişken";
-Blockly.Msg.FUNCTIONAL_VARIABLE_TYPE = "Tip";
+Blockly.Msg.FUNCTIONAL_VARIABLE_TYPE = "Tür";
 Blockly.Msg.HELP = "Yardım";
 Blockly.Msg.INLINE_INPUTS = "Satır içi girdi";
 Blockly.Msg.LISTS_CREATE_EMPTY_HELPURL = "http://en.wikipedia.org/wiki/Linked_list#Empty_lists";
 Blockly.Msg.LISTS_CREATE_EMPTY_TITLE = "boş liste oluştur";
 Blockly.Msg.LISTS_CREATE_EMPTY_TOOLTIP = "Veri kaydı içermeyen, uzunluğu 0 olan bir liste verir";
 Blockly.Msg.LISTS_CREATE_WITH_CONTAINER_TITLE_ADD = "liste";
-Blockly.Msg.LISTS_CREATE_WITH_CONTAINER_TOOLTIP = "Bu liste bloğunu yeniden yapılandırmak için bölüm ekle, kaldır veya yeniden çağır.";
+Blockly.Msg.LISTS_CREATE_WITH_CONTAINER_TOOLTIP = "Bu liste bloğunu yeniden yapılandırmak için bölüm ekle, kaldır veya yeniden sırala.";
 Blockly.Msg.LISTS_CREATE_WITH_INPUT_WITH = "Şunlarla liste oluştur:";
 Blockly.Msg.LISTS_CREATE_WITH_ITEM_TOOLTIP = "Listeye bir nesne ekle.";
-Blockly.Msg.LISTS_CREATE_WITH_TOOLTIP = "Herhangi sayıda nesne içeren bir liste oluştur.";
+Blockly.Msg.LISTS_CREATE_WITH_TOOLTIP = "Herhangi bir sayıda nesne içeren liste oluştur.";
 Blockly.Msg.LISTS_GET_INDEX_FIRST = "ilk";
 Blockly.Msg.LISTS_GET_INDEX_FROM_END = "sondan #";
 Blockly.Msg.LISTS_GET_INDEX_FROM_START = "#";
@@ -1693,13 +1695,13 @@ Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_FROM_END = "Listede belirtilen pozisyond
 Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_FROM_START = "Listede belirtilen pozisyondaki öğeyi verir.#1 ilk öğedir.";
 Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_LAST = "Listedeki son öğeyi verir.";
 Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_RANDOM = "Listeden rastgele bir öğe verir.";
-Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_REMOVE_FIRST = "Kaldırır ve listedeki ilk ögeyi döndürür.";
-Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_REMOVE_FROM_END = "Kaldırır ve listede belirtilen konumdaki bir ögeyi döndürür.  #1 son ögedir.";
-Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_REMOVE_FROM_START = "Kaldırır ve listede belirtilen konumdaki bir ögeyi döndürür.  #1  ilk ögedir.";
-Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_REMOVE_LAST = "Kaldırır ve listedeki son ögeyi döndürür.";
+Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_REMOVE_FIRST = "Kaldırır ve ilk öğeyi listeye dönüştürür.";
+Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_REMOVE_FROM_END = "Belirtilen konumdaki öğeyi kaldırır ve listeye dönüştürür #1 son öğedir.";
+Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_REMOVE_FROM_START = "Belirtilen konumdaki öğeyi kaldırır ve listeye dönüştürür.  #1 ilk ögedir.";
+Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_REMOVE_LAST = "Son öğeyi kaldırır ve listeye dönüştürür.";
 Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_REMOVE_RANDOM = "Kaldırır ve listedeki rastgele bir öğeyi verir.";
 Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_REMOVE_FIRST = "Listedeki ilk nesneyi kaldırır.";
-Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_REMOVE_FROM_END = "Liste içerisinde , tanımlanan pozisyondaki bir ögeyi kaldırır . #1 son ögedir .";
+Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_REMOVE_FROM_END = "Liste içinde belirtilen yerdeki nesneyi kaldırır. #1 son ögedir .";
 Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_REMOVE_FROM_START = "Bir liste içerisinde , tanımlanan pozisyondaki ögeyi kaldırır. #1 ilk ögedir.";
 Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_REMOVE_LAST = "Listedeki son nesneyi kaldırır.";
 Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_REMOVE_RANDOM = "Listedeki rastgele bir nesneyi kaldırır.";
@@ -1714,7 +1716,7 @@ Blockly.Msg.LISTS_GET_SUBLIST_TAIL = "";
 Blockly.Msg.LISTS_GET_SUBLIST_TOOLTIP = "Listenin belirli bir kısmının kopyasını yaratır.";
 Blockly.Msg.LISTS_INDEX_OF_FIRST = "Öğenin ilk varolduğu yeri bul ";
 Blockly.Msg.LISTS_INDEX_OF_HELPURL = "https://code.google.com/p/blockly/wiki/Lists#Getting_Items_from_a_List  Bir listeden öğe almak ";
-Blockly.Msg.LISTS_INDEX_OF_LAST = "Öğenin son varolduğu yeri bul ";
+Blockly.Msg.LISTS_INDEX_OF_LAST = "Öğenin son bulunduğu yeri bul";
 Blockly.Msg.LISTS_INDEX_OF_TOOLTIP = "Öğenin  listede ,  ilk ve son görüldüğü dizinleri döndürür . Öğe bulunmassa , 0 döndürür .";
 Blockly.Msg.LISTS_INLIST = "için";
 Blockly.Msg.LISTS_IS_EMPTY_HELPURL = "https://code.google.com/p/blockly/wiki/Lists#is_empty Boş Listeler";

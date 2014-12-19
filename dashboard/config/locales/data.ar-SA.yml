@@ -438,9 +438,9 @@
           ؟
         studio_c2_6: هل يمكنك كتابة برنامج لجعل البطريق يتنقل باستخدام المفاتيح أعلى
           / أسفل / يسار / يمين  لإصابة جميع الأهداف ؟
-        studio_c2_7: قطعة "تكرار إلى الأبد" تسمح لك بتشغيل التعليمات البرمجية بشكل
-          مستمر . هل تستطيع إرفاق القطع لجعل هذا الديناصور يتحرك أعلى و أسفل مراراً
-          و تكراراً ؟
+        studio_c2_7: قطعة "كرّر باستمرار" تسمح لك بتشغيل التعليمات البرمجية بشكل مستمر
+          . هل تستطيع إرفاق القطع لجعل هذا الديناصور يتحرك أعلى و أسفل مراراً و تكراراً
+          ؟
         studio_c2_8: هل يمكنك جعل البطريق يقول "أوتش" و تشغيل صوت "ضرب" عندما يصطدم
           بالديناصور , و ثم القيام بتحريكه باستخدام الأسهم لجعل هذا يحدث ؟
         studio_c2_9: هل يمكنك إضافة قطعة لتسجيل نقطة عندما يصطدم البطريق بالأخطبوط
@@ -473,23 +473,25 @@
           القيام بتحريكه بالأسهم حتى تسجل نقاطاً ؟
         studio_c3_game_7: إنشاء الخاصة بك اللعبة. عند الانتهاء من ذلك، انقر فوق "إنهاء"
           للسماح للأصدقاء تجربة اللعبة الخاصة بك على الهواتف الخاصة بهم.
-        studio_playlab_1: يمكنك جعل هذا الكلب يقول "مرحبا العالم"؟
-        studio_playlab_2: هل تستطيع جعل الكلب يقول شيئاً ثم جعل القط يقول شيئاً بعد
-          ذلك ؟?
-        studio_playlab_3: هل يمكنك كتابة برنامج لجعل هذا الكلب يتحرك إلى القط ؟
-        studio_playlab_4: يمكن كتابة برنامج الذي يجعل الكلب التحرك إلى القط، والقط
-          يقول "مرحبا" عندما يصل الكلب له؟
-        studio_playlab_5: هل يمكنك كتابة برنامج لجعل الأخطبوط يقول "مرحبا" عند النقر
-          فوقه ؟
-        studio_playlab_6: هل يمكنك كتابة برنامج لجعل البطريق يتنقل باستخدام المفاتيح
-          أعلى / أسفل / يسار / يمين  لإصابة جميع الأهداف ؟
-        studio_playlab_7: قطعة "تكرار إلى الأبد" تسمح لك بتشغيل التعليمات البرمجية
-          بشكل مستمر . هل تستطيع إرفاق القطع لجعل هذا الديناصور يتحرك أعلى و أسفل
-          مراراً و تكراراً ؟
-        studio_playlab_8: هل يمكنك إضافة قطعة لتسجيل نقطة عندما يصطدم البطريق بالأخطبوط
-          , ومن ثم القيام بتحريكه بالأسهم حتى تسجل ؟
-        studio_playlab_9: هل يمكنك إضافة قطع لتغيير الخلفية و سرعة البطريق , ومن ثم
-          القيام بتحريكه بالأسهم حتى تسجل ؟
+        studio_playlab_1: البطريق يريد أن يقول "مرحبا"- هل يمكنك مساعدته؟
+        studio_playlab_2: طفل الكهوف (الشخصية 1) و بنت الكهوف (الشخصية 2) يودون أن
+          يبادلو التحية "مرحبا" إلى بعضهم البعض. هل يمكنك مساعدتهم باستخدام القطعة
+          "تقول" مرتين؟
+        studio_playlab_3: هل يمكنك مساعدة "لاعبة التنس" الوصول إلى العلم؟
+        studio_playlab_4: هل يمكنك مساعدة "لاعب التنس" (الشخصية 1) الوصول إلى "لاعبة
+          التنس" (الشخصية 2) وإصدار صوت عندما يصلها؟
+        studio_playlab_5: هل يمكنك أن تساعد كائن الفضاء أن يقول "تحياتي يا أبناء الأرض"
+          عندما يتم النقر عليه؟ لا تنسى أن تنقر عليه بعد أن تقوم بالنقر على زر التشغيل
+        studio_playlab_6: يمكن أن تساعد هذه الساحرة التحرك في جميع الإتجاهات باستخدام
+          المفاتيح سهم لأعلى/أسفل/يمين/يسار للحصول على جميع الكرات النارية السحرية؟
+        studio_playlab_7: القطعة "كرر باستمرار" تسمح لك بتشغيل التعليمات البرمجية
+          بشكل مستمر. هل يمكنك إضافة قطع داخل تلك القطعة لمساعدة الساحر التحرك يميناً
+          ويساراً مرارا وتكرارا؟
+        studio_playlab_8: هل يمكنك إضافة قطعة برمجية لحساب النقاط  و قطعة أخرى لتشغيل
+          صوت عندما يلمس وحيد القرن الساحر، ومن ثم ينقله بالأسهم حتى يتحصل على النقاط؟
+        studio_playlab_9: عين خلفية للغوز الخاص بالكائنات الفضائية، و ساعد سبايسبوت
+          الحصول على الكائن الفضائي أسرع عن طريق تغيير سرعته. ثم حركه عن طريق مفاتيح
+          الأسهم للحصول على الكائن الفضائي وتنبيه الجميع
         studio_playlab_10: إنشاء الخاصة بك اللعبة. عند الانتهاء من ذلك، انقر فوق "إنهاء"
           للسماح للأصدقاء تجربة اللعبة الخاصة بك على الهواتف الخاصة بهم.
         studio_full_sandbox: إنشاء الخاصة بك اللعبة. عند الانتهاء من ذلك، انقر فوق
@@ -550,7 +552,7 @@
         instructions: 'دعنا نكررذلك 90 مرة! كم من مرة يوجد العدد 90 في 360؟ اشارة:
           هذا العدد صغير.'
       frozen diamond:
-        instructions: 'لنقم بإنشاء متوازي أضلاع. أنه مجرد شكل مثل المربع و لكن بزوايا
+        instructions: 'لنقم بإنشاء متوازي أضلاع. إنه مجرّد شكل مثل المربع و لكن بزوايا
           مختلفة: قيس الزوايا 60 و 120 درجة بدلاً من زوايا 90 درجة.'
       frozen diamond mini snowflake:
         instructions: هل تعلم أنّ كل رقاقة الثلج  لها شكل مختلف؟ لنقم بإنشاء رقاقة
@@ -572,7 +574,7 @@
           يمكنك استخدام هذا لإنشاء دائرة صغيرة من حجم 5 ودائرة أكبر من حجم 10؟
       frozen snowflower:
         instructions: يمكن إنشاء اشكال معقدة من الثلوج باستخدام أشكال بسيطة جداً.
-          يمكنك إنشاء شكل بتكرار 5 دوائر من الحجم 5 و 5 دوائر من حجم 10؟
+          هل يمكنك إنشاء شكل بتكرار 5 دوائر من الحجم 5 و 5 دوائر من حجم 10؟
       frozen snowflake branch:
         instructions: حاول استخدام قطعة "إنشاء فرع رقاقة الثلج" لإنشاء ثلاثة فروع،
           التي تبدأ لتبدو وكأنها ندفة الثلج.
@@ -709,18 +711,32 @@
         C3_crowdsourcing: التعهيد الجماعي
         C3_functional_suncatchers: سونكاتشيرس الوظيفية
         C3_songwriting_with_parameters: تأليف الأغاني مع المعلمات
-        C4_artist_math: Programming the Artist with Math
-        C4_create_functions: Creating Functions
-        C4_edit_functions: Editing Functions
+        C4_intro: مقدمة
+        C4_bee_conditional: النحل الشرطية
+        C4_variables_artist: المتغيرات-الفنان
+        C4_variables_playlab: Variables - Play Lab
         C4_for_loops: For Loops
-        C4_variables: المتغيرات
-        frozen_intro: Hour of Code Intro
-        frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
+        C4_math_artist: برمجة الفنان مع الرياضيات
+        C4_function_edit: تغيير الدوال
+        C4_function_create: إضافة الدوال
+        C4_function_parameters: الدوال والمعاملات
+        C4_conditionals: الجمل الشرطية
+        C4_unplugged_algorithms: خوارزميات مع Tangrams
+        C4_unplugged_madlibs: Mad Libs
+        C4_unplugged_variables: المتغيرات في مغلفات
+        C4_unplugged_forloops: For Loops
+        C4_unplugged_parameters: Songwriting with Parameters
+        C4_unplugged_binary: ثنائي
+        frozen_intro: تفديم ساعة البرمجة
+        frozen_loops: مقدمة للحلقات
+        frozen_functions: تقديم للدوال
+        playlab_intro: مقدمة لمختبر Play اللعب
+        playlab_events: أحداث مختبر اللعب
+        playlab_repeat_forever: تشغيل مختبر تكرار
     callout:
       text:
         drag_blocks: اسحب كتلة "التحرك" وثبتها تحت كتلة أخرى
-        run: اضرب "تشغيل" لمحاولة البرنامج الخاص بك
+        run: انقر على "تشغيل" لتجرّب برنامجك
         watch_again: انقر هنا لمشاهدة الفيديو مرة أخرى
         gray_block_explanation: القطع باللون الرمادي لا يمكن حذفها . حل يمكنك حل اللغز
           بأي حال ؟
@@ -732,14 +748,18 @@
           لتمكين عنصر فاعل لهذه القصة
         studio_say_text: اكتب ما تريد الممثل الخاص بك أن أقول داخل هذه الأقوال
         jigsaw_click: انقر فوق هذه الكتلة!
-        move_elsa_forward: اسحب كتلة "المضي قدما" وأنها المفاجئة أدناه كتلة "عند تشغيل"
-          جعل اخر للمضي قدما
-        turn_elsa: استخدام كتلة "تشغيل" جعل إلسا بدوره. يحدد العدد في القائمة المنسدلة
-          كم يتحول إلسا
-        replace_questions: استخدم القائمة المنسدلة لتحل محل "؟؟؟" مع عدد
-        replace_questions_degree: استخدم القائمة المنسدلة لتحل محل "؟؟؟" مع درجة الصحيح
-          لتشغيل
-        repeat_blocks: استخدام كتلة "تكرار" والتفاف حولها الكتل في مساحة العمل
+        move_elsa_forward: إسحب الكتلة "تقدم إلى الأمام"  و ركّبها تحت القطعة "عند
+          التّشغيل" لجعل إلزا تتقدم إلى الأمام
+        turn_elsa: إستخدم القطعة البرمجية "اتجه" لجعل إلسا تدور.العدد الموجود في القائمة
+          يحدد الزاوية التي ستستديرها
+        replace_questions: إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد
+        replace_questions_degree: إستخدم القائمة لتغيير العلامات "؟؟؟" بالدرجة الصحيحة
+          للاستدارة
+        repeat_blocks: إستخدم كتلة "كرر" و لفّ حولها القطع في مساحة العمل
+        repeat_blocks_1: (1) استخدام هذه الكتلة لوضعها حول الكتل الرمادية في مساحة
+          العمل
+        repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks
+          inside
         snowflake_dropdown: استخدم هذه القائمة المنسدلة لإنشاء مختلفة من الثلج!
         degrees_per_side: قسمة 360 على عدد الجانبين للحصول على حجم كل زاوية في درجات.
         set_sides: تستخدم هذه الكتلة لتعيين "الجانبين" إلى العدد المطلوب لإكمال اللغز.
@@ -759,15 +779,14 @@
           إلى الحصول على الرحيق.
         logic_category: افتح القائمة المنبثقة "المنطق" العثور على كتلة "إذا/آخر".
         length_parameter: يمكن أن تقوم بتحديث هذه الوظيفة حيث أنه يستخدم المعلمة "طول"؟
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
-          each circle.
-        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
-          and change the size.
-        frozen_snowflake_branch: Use the "create a snowflake branch" block
-        frozen_create_square: Attach more blocks here to create a square
+        frozen_diamond_repeat: إستخدم القطعة "كرر" لإنشاء هذا الشكل.
+        frozen_circle_function_in_circle_turn: لا تنسى أن تستدير بعد إنشاء كل دائرة.
+        frozen_circle_function_with_parameter_circle: إستخدم القطعة "إنشاء دائرة"
+          و غيّر الحجم.
+        frozen_snowflake_branch: إستخدم قطعة "إنشاء فرع رقاقة الثلج"
+        frozen_create_square: ركّب المزيد من القطع لإنشاء دائرة
         playlab_drag_say: Drag the "say" block here and type "hello"
-        playlab_use_twice: Use this block twice and remember to change the actor number
+        playlab_use_twice: إستخدم هذه القطعة مرتين، وتذكر تغيير عدد الشخصيات
         playlab_move_girl: Use the "move right" block to move Tennis Girl
         playlab_play_sound: Add "play sound" block here
         playlab_arrow_keys: Remember to use these to move the witch after clicking
@@ -775,3 +794,31 @@
         playlab_add_move: Add "move" blocks inside this repeat block
         playlab_add_score: Add score blocks here
         playlab_add_blocks: Add your blocks here
+        set_variable: Drag a number block here to set your variable
+        place_variable: Drag your variable inside this block
+        bee_for_loop: Drag the largest number of nectar you want the bee to collect
+          here
+        place_counter_variable: Drag your counter variable inside this block
+        function_editor_draw_square: This is your function definition. These blocks
+          run everytime you use the "draw a square" block
+        change_here: Make your change here
+        write_draw_square_function: Drag blocks from the toolbox into here that draw
+          a square
+        write_draw_triangle_function: Drag blocks from the toolbox into here that
+          draw a triangle
+        edit_add_parameter: Click edit to add a parameter in your function
+        add_and_drag_parameter: Write in the name of your parameter here, click add,
+          and then drag it into your function definition
+        fill_in_actor: Fill in the ??? with numbers that correspond to each actor
+          (1, 2, and 3)
+        repeat: Put blocks inside the loop to repeat commands
+        if_bee_nectar: Use the "if" block to decide if the bee should get nectar
+        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower,
+          and makes honey if it's not a flower
+        repeat_full_circle: Enter in the number of times the zombie has to move to
+          make a full circle
+        place_length_variable: Drag the length variable here to replace the question
+          marks
+        arrows_move_actor: Use the arrows to move the actor
+        right_arrow_fireball: Use the right arrow to shoot fireballs
+        name_function: Write the name of your function here

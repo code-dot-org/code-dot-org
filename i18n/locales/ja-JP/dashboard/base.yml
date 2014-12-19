@@ -2,7 +2,7 @@ ja:
   activerecord:
     errors:
       messages:
-        blank: が必要です。
+        blank: が必要です
     attributes:
       user:
         name: 表示名
@@ -14,10 +14,10 @@ ja:
         locale: 言語
         age: 年齢
         gender: 性別
-        edit_header: アカウントの詳細を編集
+        edit_header: アカウント詳細を編集する
         error:
-          future: 過去の日付にしてください。
-  hello: ハローワールド
+          future: 現在までの日付にする
+  hello: 世界の皆さん、こんにちは
   welcome_back: 'Welcome Back, %{name}'
   add_teacher_form:
     code:
@@ -25,8 +25,8 @@ ja:
       placeholder: Section Code (ABCDEF)
     submit: 先生を追加
   add_hint_form:
-    placeholder: ここにあなたのヒントを入力してください。
-    submit: ヒントを追加します。
+    placeholder: ここにあなたのヒントを入力してください
+    submit: ヒントを追加する
   appname: Code.org
   stage: ステージ
   stage_number: 'ステージ %{number}'
@@ -36,51 +36,52 @@ ja:
   of: の
   more: 詳細
   less: 隠す
-  try_hoc: 'ここをクリックしてコードの時間を試してください >>'
-  try_k8intro: コンピューター科学コース （15-25 時間） の入門編を試してください。
-  k8intro: コンピューター科学コース （15-25 時間）の入門編
-  already_started: '既に開始しましたか？ここで再開してください >>'
+  beta: beta
+  try_hoc: 'ここをクリックしてHour of Codeを試す >>'
+  try_k8intro: コンピュータサイエンスコース （15-25 時間）の入門編
+  k8intro: コンピュータサイエンスコース （15-25 時間）の入門編
+  already_started: 'すでに開始しましたか？ここで再開する >>'
   demos: 管理者： 全部のデモ
   continue: 次へ
-  prize: 賞を受賞
-  more_info: 情報をもっと見る
+  prize: 受賞
+  more_info: もっと見る
   auth:
-    sign_in_with: '%{provider} を使用してサインインします。'
+    sign_in_with: '%{provider} を使用してサインインする'
     signed_in: サインイン！
-    signed_out: '<a href="%{url}"> Code.org</a> からサインアウトしました。'
-    sign_out_of: '%{provider}を使ってサインインしたので、 <a href="%{url}"> ここをクリックして</a> %{provider}からサインアウトしてください。'
-    already_signedup: もう入会しましたか？
+    signed_out: '<a href="%{url}"> Code.org</a> からサインアウトしました'
+    sign_out_of: '%{provider}を使ってサインインしたので、 <a href="%{url}"> ここをクリックして</a> %{provider}からサインアウトする'
+    already_signedup: もうサインアップしましたか？
     notyet_signedup: まだサインアップしていないですか？
     google_oauth2: Google アカウント
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft アカウント
     forgot_password: パスワードをお忘れですか？
-    need_confirmation: 確認イーメイルが来ませんでしたか？
-    need_unlock: ロック解除用のメールは届きましたか？
+    need_confirmation: 確認Eメールが届かない
+    need_unlock: ロック解除用のEメールが届いていない
   signup_form:
     overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
     overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
-    no_signup_message: '<a target="_blank"href="http://learn.code.org"> いろいろなステージとパズルを見られます。</a>しかし、あなたの進捗状況を保存するために入会する必要があります。'
-    teacher_educator_guide: 教育者のガイドを参照してください。
-    teacher_pitch: 教師としてCode.orgに登録
-    teacher_title: 教師入会
-    student_pitch: 生徒としてCode.orgに登録
-    student_title: 生徒のサインアップ（登録）
-    school_name: 学校名 (省略可能)
-    school_address: 学校の住所（オプションです）
+    no_signup_message: '<a target="_blank"href="http://learn.code.org"> いろいろなステージとパズルを見られます。</a>あなたの進捗状況を保存するためにはサインアップしてください'
+    teacher_educator_guide: 教育者のガイドを参照する
+    teacher_pitch: 先生としてCode.orgに登録する
+    teacher_title: 先生としてサインアップする
+    student_pitch: 生徒としてCode.orgにサインアップする
+    student_title: 生徒のサインアップ
+    school_name: 学校名 （オプション）
+    school_address: 学校の住所（オプション）
     address_placeholder: 住所、市、県、郵便番号
-    gender: 性別 （オプションです）
-    birthday: 誕生日 (optionalです)
+    gender: 性別 （オプション）
+    birthday: 誕生日 (オプション)
     age: 年齢
-    user_type: あなたは教師ですか？生徒ですか？
+    user_type: あなたは先生ですか？生徒ですか？
     submit: 入会
-    teacher: あなたは教師ですか？
+    teacher: あなたは先生ですか？
     valid_username: 利用可能 ！
     invalid_username: ユーザー名は 5 文字以上である必要があります。
-    taken_username: ユーザー名は既に使用されています。
+    taken_username: ユーザー名は既に使用されています
     valid_password: 有効なパスワード ！
-    invalid_password: 'パスワードを%d文字以上で入力してください'
+    invalid_password: 'パスワードを%d文字以上で入力'
     mismatch_password: 入力した 2 つのパスワードが一致しません
     student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/>For users under 13, email addresses are not stored in a form that allows us to contact them."
     teacher_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>."
@@ -89,83 +90,83 @@ ja:
     title: すでにアカウントをお持ちですか？サインイン
     login: メールまたはユーザー名
     password: パスワード
-    remember: ログインを覚えてください。
+    remember: ログイン情報を保存する
     submit: ログイン
   signin:
     try_heading: 登録せずにコーディングに挑戦してみたいですか？
-    try_hoc: 最初に 1 時間分のコード学習を試す
-    try_20hours: 20 時間分のコンピュータ科学入門編を試してください。
+    try_hoc: 最初に 1 時間分のHour of Codeを試す
+    try_20hours: 20 時間分のコンピュータサイエンス入門編を試す
   signinsection:
     welcome: '%{section_name} へようこそ！'
-    name: 名前を選んでください。
+    name: 名前を選ぶ
     picture: Now find your secret picture
     words: Now enter your secret words
     login: ログイン
   password:
     reset_form:
       title: パスワードをお忘れですか？
-      email: イーメイルアドレス
+      email: Eメールアドレス
       submit: パスワードリセット手順の送信
     change_form:
-      title: パスワードを変更します。
+      title: パスワードを変更
       new_password: 新しいパスワード
-      confirm_password: 新しいパスワードを確認します。
-      submit: パスワードを変更します。
+      confirm_password: 新しいパスワードを確認
+      submit: パスワードを変更
   welcome_email:
-    subject: 私のクラス (Code.org) に参加します。
+    subject: 私のクラス (Code.org) に参加
     body: |
-      どうぞ下のリンクを使ってコンピュータ科学のチュートリアルにサインアップしてくださいい（Code.org から、私とあなたの「先生」として） 。
+      下のリンクを使ってコンピュータサイエンスのチュートリアルにサインアップしてください（Code.org から、私とあなたの「先生」として） 。
       
       %{link}
       
-      チュートリアルは、視覚的に魅力的な楽しい、シンプル、ガイド付きのゲームのような経験を使用してコンピュータ ・ サイエンスの基本的な概念を習います。ビル ・ ゲイツ氏、Mark Zuckerbergさん、アングリーバード、地球　ｖｓ。ゾンビからコードを学ぼう ！:-)
+      チュートリアルは、見た目にも楽しい、シンプル、ガイド付きのゲームのような経験を使用してコンピュータサイエンスの基本的な概念を学びます。ビル ・ ゲイツ氏、マーク・ザッカーバーグ氏、アングリーバード、Plants vs. Zombiesからコードを学ぼう ！:-)
       
       %{name}
   follower:
-    invite_sent: 招待状を送りました
+    invite_sent: 招待状を送信しました
     added_teacher: '%{name} あなたの先生として追加'
-    registered: ' %{section_name}を登録しました。'
+    registered: ' %{section_name}を登録'
     error:
       signed_in: 続行する前にサインアウトしてください
       username_not_found: 'ユーザー名 %{username} が見つかりません'
-      username_in_use: '%{username} は既に取られています、別を選択してください。'
-      no_teacher: "'%{teacher_email_or_code}'を使用してサインインした人を見つけられませんでした。ここで入会をしてもらって、もう一度追加してください。"
-      section_not_found: "'%{section_code}' というセクションはありません。"
-      blank_code: セクションのコードを入力してください。
+      username_in_use: '%{username} は既に取られています、別を選択してください'
+      no_teacher: "'%{teacher_email_or_code}'を使用してサインインした人を見つけられませんでした。ここでサインアップして、もう一度追加してください"
+      section_not_found: "'%{section_code}' というセクションはありません"
+      blank_code: セクションのコードを入力してください
       cant_join_own_section: "Sorry, you can't join your own section."
     mail:
       invite_student:
         subject: '%{teacher_name} のクラスを Code.org で参加 ！%{teacher_name}'
       student_disassociated:
-        subject: 'Code.org の通知: % {student_name} は、もはやあなたの学生として関連付けられていません。'
+        subject: 'あなたはCode.org の通知: %{student_name} で、学生として関連付けられていません'
       teacher_disassociated:
-        subject: 'Code.org の通知: % {teacher_name} は、もはやあなたの先生として関連付けられていません。'
+        subject: 'あなたは、Code.org の通知: %{teacher_name} で、先生として関連付けられていません'
   reports:
     error:
-      access_denied: この人の統計情報へのアクセス権を持っていません。
+      access_denied: 統計情報へのアクセス権がありません
   redeem_prizes:
     title: '交換賞品： %{name}'
-    provider: 'プロバイダー:'
+    provider: 'プロバイダ:'
     code: 'コード:'
     redeem_header: 'To redeem:'
     donorschoose_register: DonorsChoose.orgに教師として登録
     donorschoose_project: Post a project
     donorschoose_how_to: あなたのコードを使用する方法
-    success: あなたの賞金は獲得できました。下のコードを参照してください。
-    error: あなたの賞金は償還できませんでした、もう一度やり直してください。
-    error_us_only: 賞金提供をされるのは米国内のユーザーのみに限られています。
+    success: あなたの賞金は獲得できました。下のコードを参照する
+    error: あなたの賞金は償還できませんでした、もう一度やり直す
+    error_us_only: 賞金提供をされるのは米国内のユーザーのみに限られています
     error_not_earned: あなたはまだこの賞を獲得していません。
-    error_already_redeemed: あなたの賞金は既に換金されています。
-    no_prizes_available: 申し訳ありませんが、ただ今賞品がありません。
+    error_already_redeemed: あなたの賞金は既に換金されています
+    no_prizes_available: 申し訳ありませんが、ただ今賞品がありません
     teacher_info_required: 先生の賞品は学校の名前と住所の情報が必要です。
-    teacher_email_required: 先生の賞品には、確認済みのメール アドレスが必要です
+    teacher_email_required: 先生の賞品には、確認済みのEメール アドレスが必要です
     confirm:
       title: 確認してください
       "no": いいえ
       "yes": はい
-      msg: '%{prize_name} 賞金を本当に請求するもよろしいですか。'
-      msg_student: '注: 賞品わ、 1 つの種類のみを選択できます。'
-      msg_publicschool: 米国公立学校の教師であることを確証してください。
+      msg: '%{prize_name} 賞金を本当に請求してもいいですか？'
+      msg_student: '注: 賞品は、 1 つの種類のみを選択できます'
+      msg_publicschool: 米国公立学校の教師であることを証明してください
       msg_visit_website: Visit website
     providers:
       apple_itunes: $10 iTunes Gift Card
@@ -179,43 +180,43 @@ ja:
       ea_pvz: Plants vs. Zombies (PC game download)
       skype: $10 Skype credit
     msg:
-      choose: 賞品を選択します。
+      choose: 賞品を選択
       choose_teacher: 'Click on the logo below to claim your prize:'
       earned: 賞を獲得しました！(米国の学生のみ）
-      not_earned_title: チュートリアルを終了して賞品を貰いましょう(米国の学生のみ)
-      not_earned: 'コンピューターサイエンスの概念を全て学び、 %{num_trophies}トロフィーと実際の商品を獲得します。10 ドル分の iTunes ギフトカード、10 GB の無料の Dropbox のストレージ、 10 ドル分のSkipeクレジットそしてゲームの無料ダウンロードから選択できます。注：米国内の生徒のみ対象となります。また商品はなくなり次第終了いたします。 '
+      not_earned_title: チュートリアルを終了し、賞品を貰いましょう(米国の学生のみ)
+      not_earned: 'コンピュータサイエンスの概念を全て学び、 %{num_trophies}トロフィーと実際の商品を獲得します。10 ドル分の iTunes ギフトカード、10 GB の無料の Dropbox のストレージ、 10 ドル分のSkipeクレジットそしてゲームの無料ダウンロードから選択できます。注：米国内の生徒のみ対象となります。商品はなくなり次第終了いたします'
       teacher:
         earned: '15人 以上の学生が % {num_trophies} 個すべてのトロフィーを獲得しました。教師賞を授与します！（米国の教師のみ）'
         not_earned_title: 'Teach the class, earn up to $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'
-        not_earned: '初めてコンピュータ サイエンスを経験する教師への報酬です、最大$1,000まで獲得できます。 <a href="http://DonorsChoose.org">DonorsChoose.org</a> K 8 イントロ コースを通して教室を案内するため <a href="http://DonorsChoose.org"> 支援チャリティー</a> クレジット最大 $1,000 を得ることができます。対象は、正常にすべての 15 の学生 （またはそれ以上） のすべてのチュートリアルを完了して、すべての % {num_trophies} トロフィーを獲得と K 8 イントロ コース全体を通じて、少なくとも 15 人の学生の教室をホストしている必要があります。7 人もしくはそれ以上の生徒のすべてがトロフィーを獲得し、さらにそれがた女子学生だった場合、あなたの報酬は $1,000 <a target="_blank"href="http://DonorsChoose.org"> 支援チャリティー</a> クレジットです。それ以外の場合は、あなたの報酬は <a target="_blank"href="http://DonorsChoose.org"> 支援チャリティー</a> クレジットで 750 ドルです。<a target="_blank"href="http://DonorsChoose.org"> 支援チャリティー</a> クレジットは、米国の公立学校の教師によってのみ使用できます。'
+        not_earned: '初めてコンピュータサイエンスを経験する教師への報酬です、最大$1,000まで獲得できます。 <a href="http://DonorsChoose.org">DonorsChoose.org</a> K 8 イントロ コースを通して教室をガイドするため <a href="http://DonorsChoose.org"> 支援チャリティー</a> クレジット最大 $1,000 を得ることができます。対象は、正常にすべての 15 の学生 （またはそれ以上） のすべてのチュートリアルを完了、すべての  %{num_trophies} トロフィーを獲得と K 8 イントロ コース全体を通じて、少なくとも 15 人の学生の教室をホストしている必要があります。7 人もしくはそれ以上の生徒のすべてがトロフィーを獲得し、さらにそれがた女子学生だった場合、あなたの報酬は $1,000 <a target="_blank"href="http://DonorsChoose.org"> 支援チャリティー</a> クレジットです。それ以外の場合は、あなたの報酬は <a target="_blank"href="http://DonorsChoose.org"> 支援チャリティー</a> クレジットで 750 ドルです。<a target="_blank"href="http://DonorsChoose.org"> 支援チャリティー</a> クレジットは、米国の公立学校の教師によってのみ使用できます。'
         bonus:
           not_earned_title: 'You can still earn an additional $250 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'
-          earned: '%{num_trophies} のトロフィーをすべての収集した学生わ７人以上女学生でしたので、 教師賞品を獲得しました ！（米国の教師のみ）'
+          earned: '%{num_trophies} のトロフィーをすべての収集した学生は７人以上女学生でした。教師賞品を獲得しました ！（米国の教師のみ）'
           not_earned: '% {Num_trophies} のすべてのトロフィーを獲得したあなたの学生の少なくとも 7 が場合女の子は、あなたの報酬は追加 $250 <a target="_blank"href="http://DonorsChoose.org"> 支援チャリティー</a> クレジット。<a target="_blank"href="http://DonorsChoose.org"> 支援チャリティー</a> クレジットは、米国の公立学校の教師によってのみ使用できます。'
   crud:
     new_model: '新しい%{model}'
     show: 表示
     edit: 編集
-    edit_model: '%{model} を編集します。'
+    edit_model: '%{model} を編集'
     update: 更新のプログラム
-    destroy: 破壊します。
+    destroy: 破壊
     back: 戻る
-    confirm: 確かですか。
-    created: '%{model} はエラーなく、作成されました。'
-    updated: '%{model} はエラーなく更新しました。'
-    destroyed: '%{model}は正常に削除されました。'
-    access_denied: 'この %{model} へのアクセスを必要はありません。'
+    confirm: 間違いありませんか？
+    created: '%{model} はエラーなく、作成されました'
+    updated: '%{model} はエラーなく更新しました'
+    destroyed: '%{model}は正常に削除されました'
+    access_denied: 'この %{model} へのアクセスは不要です'
   nav:
     header:
-      finished_hoc: コーディングの時間を終わる
-      sign_in_to_save: プログレスを保存するためにはサインインをしてください。
+      finished_hoc: Hour of Codeを終了
+      sign_in_to_save: 進捗状況を保存するためにサインインする
       free_play:
-        playlab: アプリを作る
-        artist: なにか絵を描く
+        playlab: アプリケーションをを作る
+        artist: 何かの絵を描く
     user:
       classroom: 先生用ホームページ
       label: 'こんにちは  %{username}'
-      stats: 私のプログレス
+      stats: 私の進捗状況
       settings: 私のアカウント
       prizes: 賞品
       logout: サインアウト
@@ -229,7 +230,7 @@ ja:
       mastery: アイデア
       puzzle_map: ステージ
       prizes: '%{total_trophies}　トロフィーをあつめて、賞品を獲得しよう ！'
-      prize_earned: 'すべての%{total_trophies}トロフィーを集めました。賞をもらった！'
+      prize_earned: 'すべての%{total_trophies}トロフィーを集めました。賞を獲得！'
       prize_us_only: (米国の学生のみ）
       prizes_link: 情報をもっと見る
   teacher:
@@ -239,14 +240,14 @@ ja:
     remove: （先生を削除します)
     confirm:
       remove: この教師を削除してもよろしいですか。
-    tools: 教師のツール
+    tools: 先生向けのツール
     followers:
       section: 'Section:'
       stages: 'Stage(s) to display:'
       show_past: 'Show student activity (%{bullet_html}) in the past:'
       levels_key: Levels key
       perfect: Completed, perfect
-      completed: 完了ですが、ブロックをつかいすぎです。
+      completed: 完了しましたが、ブロックを使いすぎです
       tried: Tried, but not completed
       not_tried: Not tried yet
       activity: 'Indicates student activity in the last %{hours} %{plural}'
@@ -256,7 +257,7 @@ ja:
       name: 名前
       username: ユーザー名
       password: パスワード
-      manage: 学生の管理。
+      manage: 生徒の管理
       dashboard: Go to Teacher Dashboard
       add: 生徒を追加する
       remove: remove student
@@ -284,14 +285,14 @@ ja:
       delete: delete
       confirm_delete: Are you sure you want to delete this section?
       email: Send in email
-    rollup: プログレスダッシュ ボード
+    rollup: 進捗状況のダッシュ ボード
     activity: 最近のクラスの活動
     user_not_found: 教師、又は、生徒は見つかりませんでした
-    cant_remove_student_no_email: '% {student_name} が電子メール アドレスを登録していないために、あなたの学生として % {student_name} を削除できません。'
-    cant_remove_teacher_no_email: '電子メール アドレスが登録されていないため、教師として % {teacher_name} を削除できません。'
-    student_teacher_disassociated: '% {teacher_name} が % {student_name} の教師として削除されています。'
+    cant_remove_student_no_email: '%{student_name} がEメール アドレスを登録していないために、あなたの学生として  %{student_name} を削除できません。'
+    cant_remove_teacher_no_email: 'Eメール アドレスが登録されていないため、教師として%{teacher_name}を削除できません'
+    student_teacher_disassociated: '%{teacher_name} が  %{student_name}の教師として削除されています'
   user:
-    email_confirm_needed: 電子メール アドレスが確認されていません。
+    email_confirm_needed: Eメール アドレスが確認されていません
     email_resend_confirm: 確認手順の再送信
     new_password_hint: （変更したくない場合は空白のままにしてください）
     current_password_hint: (変更を確認するためにあなたの現在のパスワードが必要です)
@@ -300,36 +301,36 @@ ja:
       hint: 不満足ですか？
       button: アカウントをキャンセルします。
   user_level:
-    completed: 実行完了
-    tried: しようとしました。
+    completed: 完了
+    tried: 試してみました
   user_stats:
     recent_activity: 最近の活動
     show_more: もっと見る
     classroom_activity: Unplugged Activity
   home:
     title: Code Studio
-    all_courses: コース1,2,3の概要
+    all_courses: コース1、2、3の概要
     lesson_plans: Lesson plans
     signin_message: '既に登録されていますか？% {リンク}'
-    student_reg_link: 学生は、サインアップ（登録）
-    teacher_reg_link: 教師は、サインアップ（登録）
+    student_reg_link: 学生のサインアップ
+    teacher_reg_link: 教師のサインアップ（登録）
     signin_directions: 'Use an account to track progress.<br/> Teachers, track your entire class.'
-    teacher_dashboard: プログレス状況わ、ダッシュ ボードを参照してください。
-    teacher_student_count_one: 'あなたには %{count} 人の生徒がいます。'
-    teacher_student_count: 'あなたには %{count} 人の生徒がいます。'
-    teacher_averages: '平均であなたの学生わ %{trophy_max}のうち%{trophy_average}　"コンセプト習得"のトロフィーを獲得しています。'
-    teacher_print_certificates: このコースを終了した生徒の証明書を印刷します。
-    teacher_read_blog: ニュースと更新（教師用ブログ）を読みます
+    teacher_dashboard: 進捗状況をダッシュ ボードで参照する
+    teacher_student_count_one: 'あなたには %{count} 人の生徒がいます'
+    teacher_student_count: 'あなたには %{count} 人の生徒がいます'
+    teacher_averages: '平均であなたの学生は %{trophy_max}のうち%{trophy_average}　"コンセプト習得"のトロフィーを獲得しています'
+    teacher_print_certificates: このコースを終了した生徒の証明書を印刷する
+    teacher_read_blog: ニュースと更新（教師用ブログ）を読む
     classroom: あなたの教室
-    student_progress: 学習の進行状況
-    student_stats: '%{trophy_max}このうち%{trophy_count} の"コンセプト"習得のトロフィーを獲得しました。'
-    student_left_off: 中断したところから。
-    student_finished: 'すべてのチュートリアルを完了したら、別のクラス % {online_link} または % {local_school_link}を選んでください。'
-    local_school: 地元の学校
+    student_progress: 進捗状況
+    student_stats: '%{trophy_max}このうち%{trophy_count} の"コンセプト"習得のトロフィーを獲得しました'
+    student_left_off: 再開する
+    student_finished: 'すべてのチュートリアルを完了したら、 別のクラス %{online_link} または %{local_school_link} を選んでください'
+    local_school: 近隣の学校
     online: オンライン
     see_details: 詳細はこちら
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to $1,000 in classroom rewards.'
-    tryfirst: または、最初に試してみて、後でサインアップ（登録）することができます。
+    tryfirst: または、まずは最初に試して、後でサインアップできます
     trynow: 今すぐ試す
     add_hint_help: Please help us to add smart hints to Code.org tutorials
     20hour_overview: この20時間コースではコンピューターサイエンスの核となる部分やプログラミングの概念について紹介します。このコースは等級K-8用の授業に使われることを考慮して設計されました。しかし、ご安心ください全年齢を対象としており、楽しくプログラミングを学ぶことができます。
@@ -338,22 +339,22 @@ ja:
     use_as_teacher: Use this site as a teacher
     heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
     heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
-    heading_apps: '<h2>お楽しみ</h2><h1>誰でも</h1>'
+    heading_apps: '<h2>お楽しみ</h2><h1>みんなの</h1>'
     heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
     your_gallery: Gallery
   gender:
     male: 男性
     female: 女性
-    none: 答えたくないです。
+    none: 答えたくない
   user_type:
     student: 生徒
     teacher: 先生
   footer:
-    help_from_html: このチュートリアルを作るにあたって、Google・Microsoft・Facebook・Twitterのエンジニアがサポートしました。
+    help_from_html: このチュートリアルを作るのに、Google・Microsoft・Facebook・Twitterのエンジニアがサポートした
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
     powered_by_aws: Powered by Amazon Web Services
-    feedback: フィードバックを提供します。
-    translate: あなたの言語に翻訳をお手伝い
+    feedback: フィードバックする
+    translate: あなたの言語の翻訳にご協力ください
     support: Support
     support_url: http://support.code.org
     tos: 利用規約
@@ -362,28 +363,28 @@ ja:
   reference_area:
     title: 助けが必要ですか？
     subtitle: ビデオやヒントを見る
-    teacher: 解答を参照してください。
-    auth_error: 解答を見る権限がありません。
+    teacher: 解答を参照する
+    auth_error: 解答を見る権限がありません
     submit: Update Artist Location
     direction: Start Direction (in degrees)
   video:
     tab: 動画
     notes: 動画の代わりにノートを見る
-    notes_coming_soon: このビデオのノートがもうすぐ公開されます。
+    notes_coming_soon: このビデオのノートがもうすぐ公開されます
     autoplay_option: 動画の自動再生
     download: ビデオのダウンロード
   compatability:
     working:
       header: お使いのブラウザーのサポートに取り組みちゅうです。
       message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
-      hide_this_warning: この警告を非表示にします。
+      hide_this_warning: この警告を非表示
     upgrade:
       header: お使いのブラウザーをアップグレードしてください。
       message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
       button: サポートされているブラウザの一覧を見る
   slow_loading: 通常よりも長くかかっている...
-  try_reloading: ページを再読み込みしてみてください。
-  next_stage: 完成 ！次のステージに続きます。
+  try_reloading: ページを再読み込みする
+  next_stage: 完成 ！次のステージへ
   download_pdf: オープン レッスン ・ プラン
   lesson_plan: Lesson Plan
   view_lesson_plan: レッスン・プランを見る
@@ -391,37 +392,37 @@ ja:
   download_coming_soon: Downloadable activity coming soon.
   video_coming_soon: Video Coming Soon!
   share_code:
-    title: 「実行」をクリックして私のプログラムが動くところを見てください。
+    title: 「実行」をクリックして私のプログラムが動くところを見てください
     bounce_og_title: Check out my Bounce Game
     flappy_og_title: わたしのFlappyゲームをみてください！
     studio_og_title: Check out my Play Lab App
     check_out_what_i_made: Check out what I made
-    og_description: Code.org でコード（プログラム）を書きました。
+    og_description: Code.org でコード（プログラム）を書きました
     phone_number_not_allowed: It looks like there is a phone number in it. Try changing the text.
     address_not_allowed: It looks like there is an address in it. Try changing the text.
     email_not_allowed: It looks like there is an email in it. Try changing the text.
     profanity_not_allowed: It looks like there is profanity in it. Try changing the text.
   builder:
-    created: 新しいスクリプトを作成しました。
-    destroyed: スクリプトを破棄しました。
+    created: 新しいスクリプトを作成しました
+    destroyed: スクリプトを破棄しました
     manage: Build Levels
     view: 表示
     back: スクリプトに戻る
     success: You successfully edited the blocks.
     level:
-      create: 新しいレベルを作成します。
+      create: 新しいレベルを作成
       current: 現在のレベル
       unused: 未使用のレベル
   upsell:
     hoc:
-      title: コードの時間(Hour of code)
-      body: コンピューター・サイエンスの基本に挑戦してみてください。もう何百万人も挑戦した人がいます。
+      title: Hour of Code（Codeを学ぶ時間）
+      body: コンピュータサイエンスの基本に挑戦してみてください。もう何百万人も挑戦した人がいます
     flappy:
       title: Flappy Code
-      body: 10分もしないうちにじぶんだけのゲームを作ってみませんか？Flappy Codeをやってみてください。
+      body: 10分以内で自分だけのゲームを作ってみませんか？Flappy Codeを試す
     20hour:
       title: 入門コース
-      body: コンピューター科学コースの入門編（20時間）に挑戦してみてください。
+      body: コンピュータサイエンスコースの入門編（20時間）に挑戦する
     hoc2014:
       try_new_tutorial: Try our new Hour of Code tutorial in beta
       try_frozen: Artist with Anna and Elsa, from Frozen
@@ -487,7 +488,7 @@ ja:
           description: ""
         flappy:
           title: Flappy Code
-          description: 10分もしないうちにじぶんだけのゲームを作ってみませんか？Flappy Codeをやってみてください。
+          description: 10分以内で自分だけのゲームを作ってみませんか？Flappy Codeを試す
         jigsaw:
           title: ジグソーパズル
           description: ""
@@ -508,3 +509,7 @@ ja:
     completed_too_many_blocks: completed, too many blocks
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
+  studio:
+    courses_working_on: "Courses you're working on"
+    completed_courses: Completed courses
+    all_courses: All courses

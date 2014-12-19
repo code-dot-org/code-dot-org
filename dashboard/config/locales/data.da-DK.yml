@@ -34,7 +34,7 @@
           desc: Hoppe (beta)
           Bounce: Trin 1
         Builder Levels:
-          desc: Brugeroprettede puslespil (beta)
+          desc: Brugeroprettede opgaver (beta)
           Custom: Trin 1
         Flappy Levels:
           desc: Flappy fuglen
@@ -56,7 +56,7 @@
           Bounce: Trin 1
           Studio: Trin 2
         builder:
-          desc: Brugeroprettede puslespil (beta)
+          desc: Brugeroprettede opgaver (beta)
           Custom: Trin 1
         flappy:
           desc: Flappy fuglen
@@ -149,8 +149,8 @@
         maze_2_13: 'Brug den nye "Hvis"-blok til at lade mig beslutte, hvornår jeg
           skal dreje. Tip: du behøver kun én mere blok, men lær hvordan vi gør, så
           du kan gøre det selv næste gang.'
-        maze_2_14: OK, det her er ligesom det sidste puslespil, men du skal huske
-          hvordan du brugte "Hvis" blokken og "Gentagt" blokken sammen.
+        maze_2_14: OK, det her er ligesom den sidste opgave, men du skal huske hvordan
+          du brugte "hvis"-blokken og "gentag"-blokken sammen.
         maze_2_15: Jeg vil have solsikke! Brug en "Hvis" blok til at få mig til solsikken
           med færrest mulige blokke.
         maze_2_16: OK, lad os gøre at igen for at øve - dette er ikke meget anderledes,
@@ -195,12 +195,12 @@
           som allerede er i arbejdsområdet for at tegne disse trekanter.
         turtle_4_3: OK, her er den kode du skrev for at tegne en enkelt trekant. Kan
           du tilføje en "gentag" og "drej" blok, for at lave en smuk blomst?
-        turtle_4_4: 'Her er den samme kode fra den tidligere gåde, men kun drejende
-          36 grader efter hver trekant. Hvor mange gange skal det gentages? (Tip:
-          efter 360 grader vil tegningen komme fuld cirkel)'
-        turtle_4_5: 'Her er den samme kode fra den tidligere gåde, med drejene gentaget
-          36 gange. Hvor mange grader skal der drejes? (Tip: efter 360 grader kommer
-          tegningen i fuld cirkel)'
+        turtle_4_4: 'Her er den koden fra den foregående opgave, men kun med en drejning
+          på 36 grader efter hver trekant. Hvor mange gange skal koden gentages? (Tip:
+          efter 360 grader er tegningen kommet hele vejen rundt i en cirkel)'
+        turtle_4_5: 'Her er den samme kode fra den foregående opgave, men med drejene
+          gentaget 36 gange. Hvor mange grader skal der drejes? (Tip: efter 360 grader
+          vil tegningen være nået en fuld cirkel rundt)'
         turtle_4_6: Ved kun at bruge 3 blokke, kan du så tegne en firkant med kanter
           af 20 pixels?
         turtle_4_7: 'Her er koden til at tegne firkanten fra sidste gåde. Kan du gentage
@@ -211,8 +211,8 @@
         turtle_4_9: Her er løsningen på den tidligere gåde. Hvor mange grader skal
           du dreje for at fuldføre tegningen? (Du bliver nok nød til at gætte et par
           gange)
-        turtle_4_10: Her er løsningen på den tidligere gåde. Hvor mange gange skal
-          du gentage for at afslutte tegningen?
+        turtle_4_10: Her er løsningen på den foregående opgave. Hvor mange gange skal
+          du gentage for at gøre tegningen færdig?
         turtle_4_11: Prøv at ændre tallene i "drej" og "gentag" blokkene for at lave
           forskellige mønstre. Eller eksperimenter med at ændre resten af koden til
           at tegne lige hvad du vil.
@@ -302,10 +302,10 @@
           af kun et par nye blokke.
         maze_karel_2_10: Flytte mig over marken, og brug disse to funktioner til at
           hjælpe mig med at fjerne alle bunker og fylde alle hullerne op.
-        turtle_3_1: Dette puslespil viser dig hvordan "tegne en firkant" og "tegne
-          en cirkel" funktioner er defineret.  At definere en funktion kører ikke
-          blokkene.  Du er nødt til at trække "tegne en firkant"-blokken ud til faktisk
-          at tegne en firkant.
+        turtle_3_1: Denne opgave lærer dig hvordan funktionerne "tegn et kvadrat"
+          og "tegn en cirkel" er defineret.  At definere en funktion kører ikke blokkene.  Du
+          er nødt til at trække "tegn et kvadrat"-blokken ud på arbejdsområdet, for
+          faktisk at tegne et kvadrat.
         turtle_3_2: Brug funktionen "tegne en firkant" som et eksempel, opret en "tegn
           en trekant"-funktion og brug den.
         turtle_3_3: 'Tegn trekantede hegn omkring kattene og et firkantet hegn omkring
@@ -321,9 +321,9 @@
           til en funktion)'
         turtle_3_7: Tilføj et input kaldet "længde" til "tegne et hus" og byg et stort
           hus til elefanterne (med kanter, der er 150 pixels lange)
-        turtle_3_8: Her er alle blokkene fra den tidligere puslespil.  Ændre funktionen
-          "tegne et hus", så du ender på nederste højre hjørne efter at have tegnet
-          et nyt hus. Brug denne modificerede funktion til at tegne tre huse.
+        turtle_3_8: Her er alle blokkene fra den tidligere opgave.  Lav om på funktionen
+          "tegn et hus", så jeg ender i nederste højre hjørne efter at have tegnet
+          et nyt hus. Brug denne ændrede funktion til at tegne tre huse.
         turtle_3_9: Kan du genoprette funktionen "tegne et hus" uden hjælp? Prøv det,
           og derefter tegn en række huse.
         turtle_3_10: Du har lært en masse! Brug det nu til at tegne noget du synes
@@ -378,11 +378,11 @@
         bounce_3: Nu prøve noget lignende med "når op pil" blokken. Flyt battet for
           at nå målet øverst.
         bounce_4: Denne gang har du har brug for at tilføje fire blokke. Flyt battet
-          til alle fire slut-mål for at fuldføre dette puslespil.
+          til alle fire mål for at løse opgaven.
         bounce_5: Vi vil sende en bold flyvende ned mod pagajen. Vedhæft en blok til
           "når bolden rammer pagajen"-blokken for at sikre at bolden når slut-målet.
-        bounce_6: Nu er slut-målet på toppen. Du skal vedhæfte blokke til begge "når
-          bold rammer"-blokkene for at løse dette puslespil.
+        bounce_6: Nu er målet øverst. Du skal knytte blokke til begge "når bold rammer"-blokkene
+          for at løse denne opgave.
         bounce_7: Tilføj blokke til hver af "når"-blokkene. Ram bolden indtil den
           rammer slut-målet.
         bounce_10: Der er nu et mål på toppen. Vedhæft "score point" og "score modstander-point"-blokke
@@ -507,24 +507,26 @@
           af pingvinen, og derefter flytte ham med pilene indtil du scorer?
         studio_c3_game_7: Oprette dit eget spil. Når du er færdig, skal du klikke
           på Udfør for at lade venner prøve dit spil på deres mobiler.
-        studio_playlab_1: Kan du få denne hund sige "Hej verden!"?
-        studio_playlab_2: Kan du få hunden til at sige noget, og derefter få katten
-          sige noget bagefter?
-        studio_playlab_3: Kan du skrive et program til at få hunden flyttet over til
-          katten?
-        studio_playlab_4: Kan du skrive et program, der får hunden flyttet til katten,
-          og få katten sige "Hej" Når hunden når ham?
-        studio_playlab_5: Kan du skrive et program til at få blæksprutten til at sige
-          "Hej" når det klikkes på den?
-        studio_playlab_6: Kan du skrive et program til at få denne pingvin til at
-          flytte rundt med tasterne op / ned / venstre / højre og ramme alle mål?
-        studio_playlab_7: '"Gentag for evigt" blokken tillader dig at køre koden for
-          altid. Kan du sætte blokke for at flytte denne dinosaur op og ned flere
-          gange?'
-        studio_playlab_8: Kan du tilføje en blok for at score et point når pingvin
-          løber ind i blæksprutten, og derefter flytte ham med pilene indtil du scorer?
-        studio_playlab_9: Kan du tilføje blokke til at ændre baggrunden og hastigheden
-          af pingvinen, og derefter flytte ham med pilene indtil du scorer?
+        studio_playlab_1: Pingvinen vil gerne sige "Hej" - kan du hjælpe den?
+        studio_playlab_2: Huledrengen (figur 1) og Hulepigen (figur 2) vil gerne sige
+          "hej" til hinanden. Kan du hjælpe dem ved at bruge "sig"-blokken to gange?
+        studio_playlab_3: Kan du hjælpe Tennis-pigen med at komme hen til flaget?
+        studio_playlab_4: Kan du hjælpe Tennis-drengen (figur1) med at komme hen til
+          Tennis-pigen (figur2) og afspille en lyd, når han er kommet derhen?
+        studio_playlab_5: Kan du hjælpe Rumrobotten med at sige "Vær hilset, jordboere"
+          når man klikker på den? Glem ikke at klikke på den, efter du har valgt "Kør"
+        studio_playlab_6: Kan du hjælpe Heksen med at flytte rundt med piletasterne
+          (op/ned/højre/venstre) så hun får fat i alle de magiske ildkugler?
+        studio_playlab_7: '"for evigt"-blokken kan du bruge til kode som skal køre
+          hele tiden. Kan du knytte blokke til den, som får Troldmanden til at bevæge
+          sig fra venstre til højre igen og igen?'
+        studio_playlab_8: Kan du tilføje en blok for at score et point, og en blok
+          som afspiller en lyd når Enhjørningen løber ind i Troldmanden, og så flytte
+          ham med piletasterne til du får et point?
+        studio_playlab_9: Sæt baggrunden for denne invasion af rumvæsener, og hjælp
+          Rumrobotten med at komme hurtigere hen til rumvæsenerne ved at ændre hans
+          hastighed. Flyt ham så med piletasterne for at komme hen til Rumrobotten
+          og advare alle andre
         studio_playlab_10: Oprette dit eget spil. Når du er færdig, skal du klikke
           på Udfør for at lade venner prøve dit spil på deres mobiler.
         studio_full_sandbox: Oprette dit eget spil. Når du er færdig, skal du klikke
@@ -563,24 +565,25 @@
         instructions: Hej jeg hedder Elsa af Arendelle. Hjælp mig med at lave en linje.
       frozen perpendicular:
         instructions: Lad os se om vi kan lave to linjer, der er 90 grader i forhold
-          til hinanden. Du skal bruge "Drej" og "Flyt" blokkene.
+          til hinanden. Du skal bruge "drej" og "flyt" blokkene.
       frozen square iterative:
         instructions: Det ser ud som om vi er nået halvvejs med at tegne et kvadrat.
-          Lad os sætte 4 linier sammen for at skabe et helt kvadrat.
+          Lad os sætte 4 linier sammen for at tegne et helt kvadrat.
       frozen square loop:
-        instructions: Hej jeg hedder Anna fra Arendelle! Lad os lave et kvadrat med
-          "Gentag" blokke, som bruger færre blokke. Hvor mange gange skal "Gentag"
-          blokken gentage det, der der stå inden i den, for at lave et kvadrat?
+        instructions: Hej jeg hedder Anna fra Arendelle! Lad os bruge færre blokke
+          til at tegne et kvadrat, ved at bruge "gentag"-blokken. Hvor mange gange
+          skal "gentag"-blokken gentage det, der der står inden i den, for at tegne
+          et kvadrat?
       frozen square loop 3x:
-        instructions: Lad os lave tre kvadrater, der drejer efter hinanden. Sørg for
-          at at dreje 120 grader før hvert nye kvadrat.
+        instructions: Lad os lave tre kvadrater, drejet efter hinanden. Sørg for at
+          at dreje 120 grader før hvert nyt kvadrat.
       frozen square snowflake:
-        instructions: Kan du lave et snefnug ved, at benytte "Gentag" blokken til
-          at laver et kvadrat 10 gange, og "Drej" blokken for at dreje 36 grader mellem
-          hvert kvadrat?
+        instructions: Kan du lave et snefnug ved, at benytte "gentag"-blokken til
+          at lave 10 kvadrater, og "drej"-blokken til at dreje 36 grader mellem hvert
+          kvadrat?
       frozen cross:
-        instructions: Brug "Gentag" blokken til at tegne et plustegn. Lagde du mærke
-          til at Elsa kan flytte frem og tilbage?
+        instructions: Brug "gentag"-blokken til at tegne et plus. Læg mærke til at
+          Elsa kan flytte både frem og tilbage?
       frozen cross rotate:
         instructions: Prøv nu at gentage det 10 gange. Hvor mange grader skal du dreje
           mellem hver linje?
@@ -642,43 +645,45 @@
           løse en mere kompleks labyrint? Hvis du gør det rigtigt, kan jeg gå nogen
           snoede veje uanset længden. Skynd dig! Isen smelter!
       Standalone_Artist_1:
-        instructions: Welcome to Artist! First off, let's try to make a simple square
-          using the turn right block and move forward block. Each side should be 100
-          pixels long.
+        instructions: Velkommen til Artist! Lad os starte med at lave en enkel firkant
+          ved at bruge "drej til højre"-blokken og "flyt fremad"-blokken. Hver side
+          skal være 100 pixel lang.
       Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel
-          long sides.
+        instructions: Tegn denne diamant med 120 og 60 graders vinkler og 150 pixel
+          lange sider.
       Standalone_Artist_3:
-        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree
-          turns?
+        instructions: Kan du tegne denne sekskant med 100 pixel lange sider og 60
+          graders drejninger?
       Standalone_Artist_4:
-        instructions: Now you've got a new block to play with, the loop. This will
-          repeat a set of commands. What happens if you loop these commands 6 times?
+        instructions: Nu har du fået en ny blok at lege med, "gentag". Den vil gentage
+          et sæt af kommandoer. Hvad sker der hvis du "gentag"-er disse kommandoer
+          6 gange?
       Standalone_Artist_5:
-        instructions: How many times do you need to loop this diamond to draw the
-          flower?
+        instructions: Hvor mange gange skal du gentage denne diamant for at tegne
+          blomsten?
       Standalone_Artist_5.5:
-        instructions: 'Notice how we simplified the diamond code by turning it into
-          a loop. You can loop that whole sequence 12 times to draw the flower. Hint:
-          You''ll need to turn 30 degrees after your diamond loop so you don''t keep
-          drawing over the same diamond.'
+        instructions: 'Bemærk hvordan vi forenklede diamantkoden ved at bruge en løkke
+          eller "gentag"-blok. Du kan gentage hele sekvensen 12 gange for at tegne
+          blomsten. Tip: Du skal dreje 30 grader efter din diamant-løkke, så du ikke
+          bliver ved med at tegne oveni den samme diamant.'
       Standalone_Artist_6:
-        instructions: 'Loop this hexagon code 6 times to create the design. How many
-          degrees will you need to turn each time? Hint: divide the number of degrees
-          in a circle by the number of times you are looping.'
+        instructions: 'Gentag sekskant-koden seks gang for at tegne mønsteret. Hvor
+          mange grader skal du mon dreje hver gang? Tip: del antallet af grader i
+          en cirkel med det antal gentagelser du udfører.'
       Standalone_Artist_7:
-        instructions: 'A function is another programming tool to help you avoid repeating
-          yourself. This function draws a flower, so you can use it any time you want
-          to draw a flower. Use this and the new jump block to draw these flowers.
-          Hint: The flowers are 150 pixels apart'
+        instructions: 'En funktion er et andet programmeringsværktøj, som kan hjælpe
+          dig med at undgå at gentage dig selv. Denne funktion tegner en blomst, så
+          du kan bruge den hver gang du vil tegne en blomst. Brug denne blok og den
+          nye "hop"-blok til at tegne disse blomster. Tip: Blomsterne er 150 pixels
+          fra hinanden'
       Standalone_Artist_8:
-        instructions: Here's a function called "Draw a shape" that we've programmed
-          to draw hexagons. Run the code to see what it does and then experiment with
-          the function to see what happens. Can you make it draw a pattern of squares,
-          triangles, or octagons?
+        instructions: Her er en funktion kaldet "tegn en figur" som vi har programmeret
+          til at tegne sekskanter. Kør koden for at se, hvad den gør og eksperimenter
+          derefter med funktionen, for at se hvad der sker. Kan du tegne et mønster
+          af kvadrater, trekanter eller ottekanter?
       Standalone_Artist_9:
-        instructions: Now go ahead and make whatever picture you'd like! You've even
-          got an empty function that you can make do whatever you want!
+        instructions: Lav nu præcis det billede du selv har lyst til! Du har endda
+          en tom funktion, som du kan få til at gøre lige hvad du vil!
     video:
       name:
         maze_intro: Labyrint Intro
@@ -749,59 +754,74 @@
         C3_bee_nested_loops: Indlejret Løkker
         C3_bee_debugging: Bi fejlfinding
         C3_bounce: Hoppe
-        C3_playlab_create_game: Spille Lab - Oprette et spil
+        C3_playlab_create_game: Play Lab - Oprette et spil
         C3_computational_thinking: Data-Tænkning
         C3_dice_race: Terning Race
         C3_internet: Internet
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Funktionelle solfangere
         C3_songwriting_with_parameters: Sangskrivning med parametre
-        C4_artist_math: Programming the Artist with Math
-        C4_create_functions: Creating Functions
-        C4_edit_functions: Editing Functions
+        C4_intro: Introduktion
+        C4_bee_conditional: Bi betingelser
+        C4_variables_artist: Variable - Kunstner
+        C4_variables_playlab: Variable - Play Lab
         C4_for_loops: For Loops
-        C4_variables: Variabler
+        C4_math_artist: Programmering af Kunstneren med matematik
+        C4_function_edit: Redigering af funktioner
+        C4_function_create: Oprettelse af funktioner
+        C4_function_parameters: Funktioner med parametre
+        C4_conditionals: Betingelser
+        C4_unplugged_algorithms: Algoritmer med Tangrams
+        C4_unplugged_madlibs: Mad Libs
+        C4_unplugged_variables: Variabler i kuverter
+        C4_unplugged_forloops: For Loops
+        C4_unplugged_parameters: Sangskrivning med parametre
+        C4_unplugged_binary: Binære
         frozen_intro: Hour of Code Intro
-        frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
+        frozen_loops: Introduktion til løkker
+        frozen_functions: Introduktion til funktioner
+        playlab_intro: Introduktion til Play Lab
+        playlab_events: Play Lab begivenheder
+        playlab_repeat_forever: Play Lab gentag for evigt
     callout:
       text:
         drag_blocks: Træk i en "flyt fremad" blok og fastgør den under den anden blok
-        run: Tryk "Kør program" for at prøve dit program
+        run: Tryk "Kør" for at starte dit program
         watch_again: Klik her for at se videoen igen
         gray_block_explanation: Blokke, der er grå kan ikke slettes. Kan du løse gåden
           alligevel?
         show_code_explanation: Klik her for at se koden for programmet, du laver
-        instructions_repeat_explanation: Instruktionerne for hver puslespil gentages
-          her
+        instructions_repeat_explanation: Vejledningen til hver opgave gentages her
         category_explanation: Du har alle de samme gader, men de har nu været arrangeret
           i kategorier
         set_sprite_image: Vedhæft en "Indstil spiller til billede"-blok til "når historien
           starter"-blokken for at aktivere en spiller for denne historie
         studio_say_text: Skriv hvad du vil have din spiller til at sige i dette citat
         jigsaw_click: Klik på denne blok!
-        move_elsa_forward: Træk en "Flyt fremad" blok og fastgøre den under "Når køre"
-          blokken for at bevæge Elsa fremad
-        turn_elsa: Brug "Turn"-blokken for at Elsa tænder. Numret i drop-down bestemmer
-          hvor meget Elsa drejer
-        replace_questions: Brug drop-down til at erstatte "???" med et nummer
+        move_elsa_forward: Træk i en "flyt fremad"-blok og fastgør den under "når
+          programmet kører"-blokken for at få Elsa til at bevæge sig fremad
+        turn_elsa: Brug "drej"-blokken for at få Elsa til at dreje. Tallet i drop-down
+          bestemmer hvor mange grader Elsa drejer
+        replace_questions: Brug drop-down menuen til at erstatte "???" med et tal
         replace_questions_degree: Brug drop-down til at erstatte "???" med det korrekte
           antal grad der skal drejes
         repeat_blocks: Brug "Repeat" blokken og lad omslutte blokkene på arbejdsområdet
+        repeat_blocks_1: (1) Brug denne blok og sæt den rundt om de grå i arbejdsområdet
+        repeat_blocks_2: (2) Flyt gentag blokken hertil, og sæt de grå blokke indeni
         snowflake_dropdown: Brug denne drop-down menu til at oprette forskellige snefnug!
         degrees_per_side: Divider 360 med antallet af sider for, at få størrelsen
           af hver vinkel i grader.
         set_sides: Brug denne blok til at angive "Side" antallet der skal bruge for
           at færdiggøre opgaven.
         set_length: Brug denne blok til at angive "længden" til den rigtige værdi.
-        which_equation: Hvilken ligning gør siderne kortere for figurer med flere
-          sider?  Prøv hver ligning!
+        which_equation: Hvilken ligning gør hver side kortere for figurer med flere
+          sider?
         get_nectar: Brug den nye "få nektar" blok.
         actions_category: Værktøjskassen fik et nyt look! "Handlings" blokke kan nu
           bruges.
         draw_square_hint: 'Tip: Brug firkant loop som du lige har lavet i den sidste
           opgave.'
-        edit_function: Brug denne knap til at redigere funktionen.
+        edit_function: Klik her for at redigere din funktion.
         create_function: Klik her for at åbne "Funktioner", klik derefter på knappen
           "Opret en funktion".
         house_hint: Det er ok, hvis billedet ligner ikke et hus endnu. Vi vil ordne
@@ -815,16 +835,44 @@
         frozen_diamond_repeat: Use the repeat block to create this shape.
         frozen_circle_function_in_circle_turn: Don't forget to turn after creating
           each circle.
-        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
-          and change the size.
+        frozen_circle_function_with_parameter_circle: Brug "lav en cirkel" blokken
+          og skift størrelsen.
         frozen_snowflake_branch: Use the "create a snowflake branch" block
-        frozen_create_square: Attach more blocks here to create a square
-        playlab_drag_say: Drag the "say" block here and type "hello"
-        playlab_use_twice: Use this block twice and remember to change the actor number
+        frozen_create_square: Tilføj flere blokke her for at lave et kvadrat
+        playlab_drag_say: Træk "sig"-blokken herhen og skriv "Hej"
+        playlab_use_twice: Brug denne blok to gange og husk at ændre tallet for figuren
         playlab_move_girl: Use the "move right" block to move Tennis Girl
-        playlab_play_sound: Add "play sound" block here
-        playlab_arrow_keys: Remember to use these to move the witch after clicking
-          on Run
-        playlab_add_move: Add "move" blocks inside this repeat block
-        playlab_add_score: Add score blocks here
-        playlab_add_blocks: Add your blocks here
+        playlab_play_sound: Tilføj "afspil lyd"-blok her
+        playlab_arrow_keys: Husk at bruge disse til at flytte heksen efter du klikker
+          på Kør
+        playlab_add_move: Tilføj "flyt"-blokke indeni denne gentag-blok
+        playlab_add_score: Tilføj score blokke her
+        playlab_add_blocks: Tilføj dine blokke her
+        set_variable: Træk en tal-blok hertil for at indstille variablen
+        place_variable: Træk din variabel ind i denne blok
+        bee_for_loop: Træk det største antal nektar du vil have bien til at indsamle
+          hertil
+        place_counter_variable: Træk din tælle-variabel ind i denne blok
+        function_editor_draw_square: Dette er definitionen af din funktion. Disse
+          blokke kører hver gang du bruger"tegn et kvadrat"-blokken
+        change_here: Lav dine ændringer her
+        write_draw_square_function: Træk blokke fra værktøjskassen som tegner et kvadrat
+          hertil
+        write_draw_triangle_function: Drag blocks from the toolbox into here that
+          draw a triangle
+        edit_add_parameter: Click edit to add a parameter in your function
+        add_and_drag_parameter: Write in the name of your parameter here, click add,
+          and then drag it into your function definition
+        fill_in_actor: Fill in the ??? with numbers that correspond to each actor
+          (1, 2, and 3)
+        repeat: Put blocks inside the loop to repeat commands
+        if_bee_nectar: Use the "if" block to decide if the bee should get nectar
+        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower,
+          and makes honey if it's not a flower
+        repeat_full_circle: Enter in the number of times the zombie has to move to
+          make a full circle
+        place_length_variable: Drag the length variable here to replace the question
+          marks
+        arrows_move_actor: Brug pilene til at flytte figuren
+        right_arrow_fireball: Brug højre pil til at skyde ildkugler
+        name_function: Skriv navnet på din funktion her

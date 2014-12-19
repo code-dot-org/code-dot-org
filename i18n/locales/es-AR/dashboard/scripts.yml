@@ -41,8 +41,8 @@ es-AR:
           "Bee: Loops": 'Abeja: Bucle'
           "Studio: Create a Story": 'Laboratorio de Juego: Crea un Historia'
           "Artist: Loops": Bucles
-          description_audience: Ages 4+ (pre-readers)
-          description_short: Course 1 is designed for early readers.
+          description_audience: Edades 4+ (pre lectores)
+          description_short: El Curso 1 está diseñado para lectores tempranos.
         course2:
           The Maze: El laberinto
           Suzi: Suzi
@@ -80,8 +80,8 @@ es-AR:
           "Artist: Sequence2": 'Artista: Secuencia2'
           "Maze: Sequence2": 'Laberinto: Secuencia2'
           "Artist: Nested Loops": 'Artista: Bucles Anidados'
-          description_audience: 'Ages  6+ (reading required)'
-          description_short: Course 2 is designed for students who can read.
+          description_audience: Edades 6 + (habilidad de lectura requerida)
+          description_short: El Curso 2 está diseñado para estudiantes que pueden leer.
         course3:
           The Maze: El laberinto
           "Studio: Create a Story": 'Laboratorio de Juego: Crea un Historia'
@@ -131,8 +131,8 @@ es-AR:
           "Bee: Debugging2": 'Abeja: Depuración2'
           "Artist: Patterns": 'Artista: Patrones'
           Songwriting: Composición Musical
-          description_audience: Ages 8+ (after Course 2)
-          description_short: Course 3 is a follow-up to Course 2.
+          description_audience: Desde los 8 años (después del Curso 2)
+          description_short: El Curso 3 es una continuación del Curso 2.
         msm:
           title: Matemáticas de Secundaria
           description: Trabajo privado en progreso para Matemáticas de Secundaria.
@@ -164,11 +164,11 @@ es-AR:
           "Eval: Strings and Images": 'Eval: Cadenas e imágenes'
           "Unplugged: Contracts": 'Desconectado: contratos'
           "Eval: Writing Contracts": 'Eval: Redacción de contratos'
-          "Unplugged: The Design Recipe": 'Desenchufado: La receta de diseño'
+          "Unplugged: The Design Recipe": 'Desconectado: La receta de diseño'
           "Eval: Defining Functions": 'Eval: Funciones rápidas'
           "Eval: Functions": 'Eval: Receta de diseño'
           "Unplugged: Booleans": 'Desconectado: Booleanos'
-          "Unplugged: Conditionals and Piecewise Functions": 'Desconectado: Condicionales y funciones por trozos'
+          "Unplugged: Conditionals and Piecewise Functions": 'Desconectado: Condicionales y funciones por partes'
           "Eval: Conditionals": 'Eval: condicionales'
           "Unplugged: Collision Detection and the Distance Formula": 'Desconectado: Detección de colisiones y la fórmula de distancia'
           "Calc: Evaluation Blocks": 'Calc: Bloques de evaluación'
@@ -200,11 +200,11 @@ es-AR:
         hourofcode:
           Maze: Laberinto
           title: Hora del código
-          description: ¡Prueba los fundamentos de la informática con los personajes de Angry Birds, Plants vs Zombies y Scrat de La Era del Hielo!
-          description_short: Try the basics of computer science with many fun characters!
+          description: ¡Prueba los fundamentos de la informática con los personajes de Angry Birds, Plantas vs Zombies y Scrat de La Era del Hielo!
+          description_short: ¡Prueba los fundamentos de la informática con muchos personajes divertidos!
         frozen:
           title: Programa con Ana y Elsa
-          description: Vamos a usar código unirnos a Ana y Elsa mientras exploran la magia y la belleza del hielo. Crearás copos de nieve y patrones a medida que patinas sobre hielo y harás un paraíso invernal que luego puedes compartir con tus amigos!
+          description: Vamos a usar código para unirnos a Ana y Elsa mientras exploran la magia y la belleza del hielo. Crearás copos de nieve y patrones a medida que patinas sobre hielo y harás un paisaje invernal que luego puedes compartir con tus amigos!
           Artist: Artista
           description_short: Vamos a usar código para unirnos a Anna y Elsa mientras exploran la magia y la belleza del hielo.
         course4:
@@ -218,8 +218,8 @@ es-AR:
           "Play Lab: Variables": 'Laboratorio de juegos: Variables'
           "Play Lab: Functions with Parameters": 'Laboratorio de juegos: Funciones con parámetros'
           "Bee: Functions with Parameters": 'Abeja: Funciones con parámetros'
-          "Artist: For Loops": 'Artista: Bucles For'
-          "Play Lab: For Loops": 'Laboratorio de Juegos: Bucles For'
+          "Artist: For Loops": 'Artista: Bucles Para'
+          "Play Lab: For Loops": 'Laboratorio de Juegos: Bucles Para'
           "Artist: Functions": 'Artista: Funciones'
           "Artist: Functions with Paraqmeters": 'Artista: Funciones con Parámetros'
           "Unplugged: Tangrams": 'Desconectado: Tangrams'
@@ -227,15 +227,15 @@ es-AR:
           Bee: Abeja
           "Unplugged: Envelope Variables": 'Desconectado: Variables de Sobre'
           "Unplugged: Madlibs": 'Desconectado: Madlibs'
-          "Unplugged: For Loop Fun": 'Desenchufado: Cadenas para Diversión'
-          "Unplugged: Songwriting with Parameters": 'Desconectado: Composición con parámetros'
+          "Unplugged: For Loop Fun": 'Desconectado: Bucles Para divertidos'
+          "Unplugged: Songwriting with Parameters": 'Desconectado: Composición de canciones con parámetros'
           "Artist: Functions with Parameters": 'Artista: Funciones con Parámetros'
           "Unplugged: Binary": 'Desconectado: binario'
-          Bee Binary: Abeja binario
+          Bee Binary: Abeja binaria
           Farmer Binary: Granjero binario
           Maze and Bee: Laberinto y la abeja
           Artist Binary: Artista binario
-          description_audience: Ages 10+ (after Course 3)
+          description_audience: Edades 10+ (después del Curso 3)
         Course4pre:
           description_short: Un breve resumen de conceptos para los estudiantes que no han tomado los cursos 2 y 3.
           Course 4 Prerequisite: Prerequisito del Curso 4
@@ -274,10 +274,20 @@ es-AR:
           "Bee: Debugging": 'Abeja: Depuración'
         usability:
           Intro: Intro
-          Variables and For Loops: Variables y bucles For
+          Variables and For Loops: Variables y bucles Para
           Functions and Functions with Parameters: Funciones y funciones con parámetros
           title: Pruebas de usabilidad
           description_short: ""
           description: Una selección de los niveles del Curso 4 para pruebas de usabilidad.
           Variables: Variables
           For Loops: Bucles Para
+        potus:
+          title: especial
+          description_short: especial
+          description: especial
+          Special: Especial
+        special:
+          title: especial
+          description_short: especial
+          description: especial
+          Special: Especial

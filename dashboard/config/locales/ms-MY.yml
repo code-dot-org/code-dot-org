@@ -36,6 +36,7 @@
   of: dari
   more: LAGI
   less: KURANG
+  beta: beta
   try_hoc: 'Cuba Kod Sejam, klik di sini >> '
   try_k8intro: Cuba pengenalan K-8 kami untuk kursus Sains Komputer (15-25 jam)
   k8intro: Pengenalan K-8 untuk kursus Sains Komputer (15-25 jam)
@@ -591,3 +592,7 @@
     completed_too_many_blocks: completed, too many blocks
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
+  studio:
+    courses_working_on: Courses you're working on
+    completed_courses: Completed courses
+    all_courses: All courses

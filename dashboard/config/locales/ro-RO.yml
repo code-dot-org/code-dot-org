@@ -36,6 +36,7 @@
   of: de
   more: MAI MULT
   less: MAI PUŢIN
+  beta: beta
   try_hoc: 'Încearcă Ora de Cod, faceți clic aici >> '
   try_k8intro: Încearcă Cursul nostru K-8 de introducere în Informatică (15-25 ore)
   k8intro: Cursul Introducere K-8 in Programare (15-25 ore)
@@ -401,8 +402,8 @@
     test_videos_help: Încearcă noul nostru video player la şcoala ta
     try_beta_courses: Nou! Încearcă cursele noastre beta pentru elevi K-5
     use_as_teacher: Foloseşte acest site drept profesor
-    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>curse de 20 de ore pentru</h2><h1>Elevi Primari</h1>
+    heading_hoc2014: <h2>Ora de programare pentru</h2><h1>toate vârstele</h1>
+    heading_elementary: <h2>cursuri de 20 ore pentru</h2><h1>începători(toate vârstele)</h1>
     heading_apps: <h2>Distracţie pentru</h2><h1>Toată lumea</h1>
     heading_legacy: <h2>Cursul nostru general pentru</h2><h1>Toate vârstele</h1>
     your_gallery: Galerie
@@ -414,12 +415,12 @@
     student: elev
     teacher: Profesor
   footer:
-    help_from_html: Ingineri de la Google, Microsoft, Facebook şi Twitter au ajutat
+    help_from_html: Inginerii de la Google, Microsoft, Facebook şi Twitter au ajutat
       la creearea acestui tutorial.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
-      Toate Drepturile Rezervate.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
+      Toate Drepturile Rezervate.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
       Arts Inc. Toate Drepturile Rezervate.
-    powered_by_aws: Powered by Amazon Web Services
+    powered_by_aws: Susținut de Amazon Web Services
     feedback: Oferă feedback
     translate: Ajută-ne să  traducem în limba ta
     support: Suport
@@ -607,3 +608,7 @@
     completed_too_many_blocks: finalizat, prea multe blocuri
     completed_perfect: finalizat, perfect
     furthest_level_attempted: cel mai îndepărtat nivel încercat
+  studio:
+    courses_working_on: Cursurile la care lucrați
+    completed_courses: Curs terminat
+    all_courses: Toate cursurile

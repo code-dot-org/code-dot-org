@@ -41,8 +41,8 @@ nn:
           "Bee: Loops": 'Bier: Løkker'
           "Studio: Create a Story": 'Spel-lab: Lag ei historie'
           "Artist: Loops": 'Kunstnar: Løkker'
-          description_audience: Ages 4+ (pre-readers)
-          description_short: Course 1 is designed for early readers.
+          description_audience: Frå 4+ år (kan ikkje lese)
+          description_short: Kurs 1 er meint for tidlige lesarar.
         course2:
           The Maze: Labyrinten
           Suzi: Suzi
@@ -80,8 +80,8 @@ nn:
           "Artist: Sequence2": 'Kunstnar: Sekvens2'
           "Maze: Sequence2": 'Labyrint: Sekvens2'
           "Artist: Nested Loops": 'Kunstnar: Løkker inni løkker'
-          description_audience: 'Ages  6+ (reading required)'
-          description_short: Course 2 is designed for students who can read.
+          description_audience: Frå 6+ år (må kunne lese)
+          description_short: Kurs to er laga for elever som kan lese.
         course3:
           The Maze: Labyrinten
           "Studio: Create a Story": 'Spel-lab: Lag ei historie'
@@ -131,8 +131,8 @@ nn:
           "Bee: Debugging2": 'Bier: Feilsøking2'
           "Artist: Patterns": 'Artist: Mønster'
           Songwriting: Låtskriving
-          description_audience: Ages 8+ (after Course 2)
-          description_short: Course 3 is a follow-up to Course 2.
+          description_audience: Frå 8+ år (etter Kurs 2)
+          description_short: Kurs 3 er fortsettinga av Kurs 2.
         msm:
           title: Matematikk for ungdomsskulen
           description: Privat arbeid på gang med ungdomsskule-matematikk.
@@ -201,7 +201,7 @@ nn:
           Maze: Labyrint
           title: Hour of Code (kodetimen)
           description: Prøv grunnleggjande programmering med figurane frå Angry Birds, planter mot zombiar og Scrat frå Istid!
-          description_short: Try the basics of computer science with many fun characters!
+          description_short: Prøv grunnleggande programmering med mange morsomme figurar!
         frozen:
           title: Koding med Anna og Elsa
           description: La oss bruke kode og bli med Anna og Elsa når dei utforskar magien og skjønnheita med is. Du vil lage snøfnugg og mønster med kunstløp skøyter og skaper eit magisk vinterlandskap som du kan dele med venane dine!
@@ -235,7 +235,7 @@ nn:
           Farmer Binary: Bonde binær
           Maze and Bee: Labyrint og bier
           Artist Binary: Kunstnar binær
-          description_audience: Ages 10+ (after Course 3)
+          description_audience: Frå 10+ år (etter Kurs 3)
         Course4pre:
           description_short: Ei kort oppsummering av konsept for elevar som ikkje har tatt kurs 2 og 3.
           Course 4 Prerequisite: Kurs 4 forkunnskapar
@@ -281,3 +281,13 @@ nn:
           description: Eit utval av tema om brukbarheitstesting frå kurs 4.
           Variables: Variabler
           For Loops: For-løkker
+        potus:
+          title: spesielle
+          description_short: spesielle
+          description: spesielle
+          Special: Spesielle
+        special:
+          title: spesielle
+          description_short: spesielle
+          description: spesielle
+          Special: Spesielle

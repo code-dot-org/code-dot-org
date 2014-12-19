@@ -94,7 +94,7 @@ lt:
         Artist5: Menininkas 5
         Unplug11: Apibendrinimas
         MazeEC: Labirintas
-        Bounce: Bounce
+        Bounce: Tenisas
         Flappy: Flappy Bird
         Jigsaw: Dėlionės
         MazeStep: Labirintas Žingsnio režimu
@@ -142,7 +142,7 @@ lt:
         maze_2_18: Dar viena užduotis su „Jei-priešingu atveju“ blokeliu. Ar sugebėsi ją atlikti iš pirmo karto?
         maze_2_19: Jeigu sugebėsi sudėti tik 3 blokelius tinkamai, aš galėsiu eiti vingiuotu taku, visiškai nesvarbu, koks yra jo ilgis.
         turtle_1_1: Labas, aš esu menininkas. Tu gali sudėlioti kodą, kad nupieščiau beveik bet ką. Panaudok porą blokelių, kad aš nupieščiau tai, kas yra pavaizduota pilkomis linijomis.
-        turtle_1_2: 'O dabar nubrėžk kvadratą. PASTABA: gali pasirinkti pieštuko spalvą naujame blokelyje „nustatyk spalvą“.'
+        turtle_1_2: 'O dabar nubrėžk kvadratą. PASTABA: gali pasirinkti pieštuko spalvą naujame blokelyje „spalva = ...“.'
         turtle_1_3: Šį kartą nubraižyk kvadratą panaudodamas tik 3 blokelius.
         turtle_1_4: 'Nubrėžk trikampį, kurio visos kraštinės yra skirtingų spalvų, panaudodamas blokelį „atsitiktinė spalva“. Jis kiekvieną kartą parenka vis kitą spalvą. Sufleris: turėsi nuspręsti, kiek laipsnių reikia pasisukti – spustelk ant skaičiaus ir jį pakeisk.'
         turtle_1_5: Nubrėžk trikampį, o po to kvadratą, kad gautum voką.
@@ -227,15 +227,15 @@ lt:
         maze_3_2: Parašyk programą, kad pasiekčiau kiaulę.
         maze_3_3: Kaip man pasiekti kiaulę? Saugokis, kad nepaliesčiau TNT dėžės!
         maze_3_4: Oi! Parašyk programą, kuri mane privers apibėgti aplinkui TNT dėžę ir pasiekti kiaulę.
-        bounce_1: Pridėk blokelį prie blokelio „kai rodyklė kairėn“ ir nuspausk „Paleisti“. Judink irklą spausdamas kairę rodyklę klaviatūroje, kad pasiektum tikslą.
-        bounce_2: Pridėk blokelį prie blokelio „kai rodyklė dešinėn“ ir nuspausk „Paleisti“. Judink irklą, kad pasiektum abu taikinius.
-        bounce_3: Dabar pabandyk atlikti kažką panašaus su blokeliu „kai rodyklė aukštyn“. Judink irklą iki taikinio viršuje.
-        bounce_4: Šį kartą reikia pridėti keturis blokelius. Pajudink irklą į keturis taškus, kad išspręstum šią užduotį.
-        bounce_5: Link irklo pradės skristi kamuolys. Pridėk bloką prie bloko „kai kamuolys paliečia irklą“, kad kamuolys pasiektų finišą.
+        bounce_1: 'Prijunk blokelį prie  „kai ... rodyklė kairėn“ ir paleisk programą. Kad pasiektum tikslą, judink raketę su rodykle.'
+        bounce_2: 'Prijunk blokelį prie  „kai ... rodyklė dešinėn“ ir „kai ... kairėn“ . Judink raketę, kad pasiektum abu  taikinius.'
+        bounce_3: Dabar pabandyk atlikti kažką panašaus su blokeliu „kai ... rodyklė aukštyn“. Judink raketę iki taikinio viršuje.
+        bounce_4: Šį kartą reikia pridėti keturis blokelius. Nuvesk raketę į keturis taškus, kad išspręstum šią užduotį.
+        bounce_5: Link raketės pradės skristi kamuolys. Pridėk reikiamą komandą prie bloko „kai kamuolys paliečia raketę“, kad kamuolys pasiektų finišą.
         bounce_6: Dabar finišas yra viršuje. Tau reikia prijungti blokelius prie dviejų „kai kamuolys atsitrenkia“ blokelių, kad išspręstum šią užduotį.
         bounce_7: Prikabink blokelius prie kiekvieno „kai“ blokelio. Kamuolis tol turi judėti, kol palies finišą.
-        bounce_10: Dabar viršuje yra tikslas. Pridėk „pelnyti tašką“ ir „pelnyti tašką priešininkui“ blokelius prie „kai kamuolys yra įvartyje“ ir „kai kamuolys nepataiko į irklą“ blokelius, kad sukurtum žaidimą. Pažiūrėk, kiek taškų surinksi per tą patį laiką, kai priešininkas surinks taškų dvigubai daugiau.
-        bounce_11: Dabar gali prikabinti blokelius prie blokelio „paleidus“. Tau reikia prijungti naują blokelį „paleisk naują kamuolį“ daugiau nei vienoje vietoje. Taip pat pamėgink pakeisti scenos foną ar irklo greitį ir pažiūrėk, kiek taškų sugebėsi surinkti per tą patį laiką, kai tavo varžovas surinks dukart daugiau taškų.
+        bounce_10: 'Dabar viršuje yra taikinys. Pridėk „pelnyti tašką“ ir „pelnyti tašką priešininkui“  komandas  prie „kai kamuolys pataiko į tikslą“ ir „kai kamuolys nepataiko į raketę“, kad sukurtum žaidimą. Išbandyk, kiek taškų surinksi, kol "priešininkas" surinks dvigubai daugiau.'
+        bounce_11: Tau reikia prijungti naują blokelį „paleisk naują kamuolį“ daugiau nei vienoje vietoje. Taip pat pamėgink pakeisti scenos foną ar raketės greitį . Išbandyk, kiek taškų sugebėsi surinkti, kol priešininkas jų gaus dvigubai daugiau.
         bounce_12: 'Sukurk savo "Pong" žaidimą. Tu gali pakeisti išvaizdą bei taisykles. Kai pabaigsi, spustelk "Finišas", ir draugai galės išbandyti jį savo telefonuose (ar pan.).'
         Custom_builder: Nutempk blokelius ir įrankinės į darbo lauką, kad galėtum nupiešti lygį, kurį nori sukurti. Nuspausk „Paleisti“ kai užbaigsi.
         flappy_1: Pridėk reikiamą blokelį prie blokelio „kai nuspausta“, o tada nuspausk „Paleisti“. Spustelk pelės klavišą arba ekraną, kad Flappy skristų į tikslą.
@@ -304,7 +304,7 @@ lt:
         studio_playlab_3: Can you help Tennis Girl get to the flag?
         studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor 2) and play a sound when he gets there?
         studio_playlab_5: 'Can you help the Spacebot say "greetings earthlings" when it is clicked? Don’t forget to click it after you click Run'
-        studio_playlab_6: Can you help the Witch move around using the up/down/right/left arrow keys to get to all the magical fireballs?
+        studio_playlab_6: Raganiukei reikia surinkti visus magiškus ugnies kamuolius. Ar gali jai padėti judėti, naudojant rodyklių mygtukus?
         studio_playlab_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help the wizard move right and left repeatedly?'
         studio_playlab_8: Can you add a block to score a point and a block to play a sound when the unicorn runs into the wizard, and then move him with the arrows until you score?
         studio_playlab_9: Set the background for this alien invasion and help the Spacebot get to the alien faster by changing its speed. Then move him with the arrow keys to get to the Spacebot and alert everyone else
@@ -416,7 +416,7 @@ lt:
         function: Komandų kūrimas
         loop_while: „Kol“ blokelis
         loop_for: Blokelis-skaitiklis
-        parameters: Komandų parametrai (gaunama informacija)
+        parameters: Komandoms perduodami duomenys
         hoc_wrapup: „Programavimo valandos“ apibendrinimas
         Unplug1: Kas yra CS?
         Unplug2: Skaičiuojamasis mąstymas
@@ -479,14 +479,28 @@ lt:
         C3_crowdsourcing: Komandinis programavimas
         C3_functional_suncatchers: Sekų suvokimas
         C3_songwriting_with_parameters: Dainų rašymas su parametrais
-        C4_artist_math: Programming the Artist with Math
-        C4_create_functions: Creating Functions
-        C4_edit_functions: Editing Functions
+        C4_intro: Introduction
+        C4_bee_conditional: 'Bitė: sąlyginiai sakiniai'
+        C4_variables_artist: 'Variables - Artist'
+        C4_variables_playlab: 'Variables - Play Lab'
         C4_for_loops: For Loops
-        C4_variables: Kintamieji
+        C4_math_artist: Programming the Artist with Math
+        C4_function_edit: Editing Functions
+        C4_function_create: Creating Functions
+        C4_function_parameters: Komandoms perduodami duomenys
+        C4_conditionals: Sąlyginiai sakiniai
+        C4_unplugged_algorithms: Algorithms with Tangrams
+        C4_unplugged_madlibs: Mad Libs
+        C4_unplugged_variables: Variables in Envelopes
+        C4_unplugged_forloops: For Loops
+        C4_unplugged_parameters: Dainų rašymas su parametrais
+        C4_unplugged_binary: Binary
         frozen_intro: Hour of Code Intro
         frozen_loops: Introduction to Loops
         frozen_functions: Introduction to Functions
+        playlab_intro: Introduction to Play Lab
+        playlab_events: Play Lab Events
+        playlab_repeat_forever: Play Lab Repeat Forever
     callout:
       text:
         drag_blocks: Nutempk blokelį „ženk į priekį“ ir sujunk jį su kitu tokiu pat blokeliu
@@ -497,22 +511,24 @@ lt:
         instructions_repeat_explanation: Kiekvienos užduoties instrukcija yra parašyta čia
         category_explanation: Yra pateikti tie patys blokeliai, tačiau jie dabar yra surūšiuoti pagal kategorijas
         set_sprite_image: 'Prijunk "veikėjas = " prie bloko "kai istorija prasideda", kad jis dalyvautų šioje istorijoje.'
-        studio_say_text: Įvesk tai, ką nori, kad pasakytų tavo veikėjas
+        studio_say_text: Įvesk, ką tavo veikėjas turės pasakyti
         jigsaw_click: Nuspausk ant šio blokelio!
-        move_elsa_forward: 'Drag a "Move Forward" block and snap it below the "When Run" block to make Elsa move forward'
+        move_elsa_forward: 'Prijunk blokelį „ženk į priekį“  prie blokelio  "paleidus". '
         turn_elsa: 'Use the "Turn" block to make Elsa turn. The number in the drop-down determines how much Elsa turns'
         replace_questions: 'Use the drop-down to replace "???" with a number'
         replace_questions_degree: 'Use the drop-down to replace "???" with the correct degree to turn'
         repeat_blocks: Naudok kartojimo blokelį – į jį reikia įdėti kitus blokelius
+        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the workspace
+        repeat_blocks_2: '(2) Move the "Repeat" block here, and place the gray blocks inside'
         snowflake_dropdown: Panaudok šį išsiskleidžiantį sąrašą, kad sukurtum įvairesnių snaigių!
         degrees_per_side: Divide 360 by the number of sides to get the size of each angle in degrees.
         set_sides: 'Use this block to set "sides" to the number needed to complete the puzzle.'
         set_length: 'Use this block to set "length" to the correct value.'
-        which_equation: 'Which equation makes each side shorter for shapes with more sides?  Try each equation!'
+        which_equation: Which equation makes each side shorter for shapes with more sides?
         get_nectar: 'Use the new "get nectar" block.'
         actions_category: 'The tool box got a new look! The "Actions" blocks are in here now.'
         draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
-        edit_function: Use this button to edit the function.
+        edit_function: Click here to edit your function.
         create_function: 'Click here to open the "Functions" flyout, then click the "Create a Function" button.'
         house_hint: "It's ok if the picture doesn't look like a house yet. We will fix it in the next puzzle."
         edit_draw_square: Use this button to edit the function and add the loop.
@@ -532,3 +548,23 @@ lt:
         playlab_add_move: 'Add "move" blocks inside this repeat block'
         playlab_add_score: Add score blocks here
         playlab_add_blocks: Add your blocks here
+        set_variable: Drag a number block here to set your variable
+        place_variable: Drag your variable inside this block
+        bee_for_loop: Drag the largest number of nectar you want the bee to collect here
+        place_counter_variable: Drag your counter variable inside this block
+        function_editor_draw_square: 'This is your function definition. These blocks run everytime you use the "draw a square" block'
+        change_here: Make your change here
+        write_draw_square_function: Drag blocks from the toolbox into here that draw a square
+        write_draw_triangle_function: Drag blocks from the toolbox into here that draw a triangle
+        edit_add_parameter: Click edit to add a parameter in your function
+        add_and_drag_parameter: Write in the name of your parameter here, click add, and then drag it into your function definition
+        fill_in_actor: Fill in the ??? with numbers that correspond to each actor (1, 2, and 3)
+        repeat: Put blocks inside the loop to repeat commands
+        if_bee_nectar: 'Use the "if" block to decide if the bee should get nectar'
+        if_else_bee: |-
+          Use the "if/else" block so that the Bee gets nectar from a flower, and makes honey if it's not a flower
+        repeat_full_circle: Enter in the number of times the zombie has to move to make a full circle
+        place_length_variable: Drag the length variable here to replace the question marks
+        arrows_move_actor: Use the arrows to move the actor
+        right_arrow_fireball: Use the right arrow to shoot fireballs
+        name_function: Write the name of your function here

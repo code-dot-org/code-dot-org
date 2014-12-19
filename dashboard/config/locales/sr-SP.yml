@@ -36,6 +36,7 @@
   of: од
   more: ВИШЕ
   less: МАЊЕ
+  beta: beta
   try_hoc: 'Испробајте Hour of Code.Кликните овде >> '
   try_k8intro: Пробај наш К-8 курс Увод у рачунарство (15-25 часова)
   k8intro: К-8 курс Увод у рачунарство (15-25 часова)
@@ -397,7 +398,7 @@
     none: Желим задржати приватност
   user_type:
     student: студент
-    teacher: Teacher
+    teacher: Учитељ
   footer:
     help_from_html: Инженјери са <a href="http://www.google.com">Google</a>, <a href="http://www.microsoft.com">Microsoft</a>,
       <a href="http://www.facebook.com">Facebook</a>, и <a href="http://www.twitter.com">Twitter</a>
@@ -589,3 +590,7 @@
     completed_too_many_blocks: completed, too many blocks
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
+  studio:
+    courses_working_on: Courses you're working on
+    completed_courses: Completed courses
+    all_courses: All courses

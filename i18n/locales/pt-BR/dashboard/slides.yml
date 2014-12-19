@@ -1,4 +1,4 @@
-pt:
+pt-BR:
   slides:
     maze_intro:
       1:
@@ -33,7 +33,7 @@ pt:
         text: 'Cada bloco é uma instrução. Se você arrastar um bloco "avance" para a sua área de trabalho e clicar em "Executar Programa", o pássaro se move um espaço à frente no labirinto.'
       11:
         image: notes/hoc1_11.jpg
-        text: To do more than one action, you can drag many blocks to your workspace and attach them together. The bird will do the commands from top to bottom.
+        text: Para fazer mais do que uma ação, você pode arrastar vários blocos para sua área de trabalho e conectá-los uns aos outros. O passarinho obedecerá os comandos de cima para baixo.
       12:
         image: notes/hoc1_12.jpg
         text: 'Se você executar um programa e quiser corrigi-lo, clique em "Recomeçar".'
@@ -160,34 +160,29 @@ pt:
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: |-
-          Hi, my name is Saloni. I use computer science to help solve problems in health and medicine. Let's learn about the "if else" block. It looks like the "if" block, but it has an extra part at the end that says "else".
+        text: 'Olá, meu nome é Saloni. A ciência da computação me ajuda a resolver problemas das áreas da saúde e medicina. Vamos aprender sobre o bloco "se-senão". Ele parece o bloco "se", mas com uma parte extra no final que diz "senão".'
       2:
         image: notes/hoc5_2.jpg
-        text: |-
-          If I put a "move forward" block in the spot where it says "do" and a "turn left" block where it says "else" that means that the zombie will choose between 2 options. IF there is a path ahead, the zombie will move forward, and OTHERWISE (there isn't a path ahead), the zombie will turn left.
+        text: 'Se eu colocar um bloco "avance" na instrução "faça", e um bloco "vire à esquerda" na instrução "senão", significa que o zumbi vai escolher entre 2 opções. SE existir um caminho à frente, o zumbi vai avançar e, CASO CONTRÁRIO (não há um caminho em frente), o zumbi vai virar à esquerda.'
       3:
         image: notes/hoc5_3.jpg
-        text: |-
-          Just like the "if" block, we can put "if else" blocks inside a "repeat" blocks so that the zombie keeps moving and the "if else" block will keep checking if there's somewhere to turn.
+        text: 'Assim como o bloco "se", nós podemos colocar blocos "se-senão" dentro de blocos "repita", assim o zumbi continuará se movendo, e o bloco "se-senão" continuará verificando se é possível virar para algum lugar.'
       4:
         image: notes/hoc5_4.jpg
-        text: Now, get those zombies where they belong!
+        text: Agora, coloque os zumbis em seus devidos lugares!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
-        text: "An if-else statement is a decision between two things. Let's see how we can use an if-else statement with our buddy Scrat the squirrel."
+        text: Um comando se-senão é uma decisão entre duas opções. Vamos ver como podemos usar um comando se-senão com nosso amigo Scrat, o esquilo.
       2:
         image: notes/saloni_ifelse_scrat2.jpg
-        text: |-
-          This block looks the same as the "if" block, but there's an extra part at the bottom that says "else". If I put a "move forward" block where it says "do" and a "turn left" block where it says "else", that means Scrat the squirrel will move forward if there's a path ahead. If there's not a path ahead, Scrat will turn left.
+        text: 'Este bloco parece igual ao bloco "se", mas há uma parte extra no final que diz "senão". Se eu colocar um bloco "avance" na instrução "faça", e um bloco "vire à esquerda" na instrução "senão", significa que o esquilo Scrat vai avançar se houver um caminho à frente. Se não houver caminho à frente, o Scrat vai virar à esquerda.'
       3:
         image: notes/saloni_ifelse_scrat3.jpg
-        text: |-
-          It's making a decision and doing one of the two actions based on that decision. And just like "if" blocks, you can put "if-else" blocks inside "repeat" blocks.
+        text: 'Significa tomar uma decisão e fazer uma das duas ações com base nessa decisão. E, assim como os blocos "se", você pode colocar blocos "se-senão" dentro de blocos "repita".'
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: "Now let's help Scrat the squirrel get that acorn!"
+        text: Agora vamos ajudar Scrat, o esquilo, a pegar essa bolota!
     function:
       1:
         image: notes/stage13_1.jpg
@@ -272,82 +267,121 @@ pt:
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
-        text: "Hi, my name is Lyndsey. I model, act, and write my own apps. Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
+        text: Olá, meu nome é Lyndsey. Eu sou modelo, atriz e também escrevo meus próprios aplicativos. Vamos usar a programação para explorar a magia e a beleza do gelo com Anna e Elsa.
       2:
         image: notes/frozen1_2.jpg
-        text: "You'll create snowflakes and patterns as you ice skate and make a winter wonderland that you can then share with your friends."
+        text: Você vai criar flocos de neve e padrões enquanto esquia, e um país das maravilhas congelante para compartilhar com seus amigos.
       3:
         image: notes/frozen1_3.jpg
-        text: "In the next hour, you're going to learn the basics of how to code. Traditional programming is usually in text, but we'll use Blockly, which uses visual blocks that you can drag and drop to write programs. This is how even university students learn the basics. Under the hood, you're still creating code."
+        text: Na próxima hora, você vai aprender os conceitos básicos da programação. A programação tradicional é escrita, mas nós usaremos Blockly, blocos visuais que você pode arrastar e soltar para escrever programas. Também é assim que estudantes universitários aprendem o básico. E por trás desses blocos, você está criando códigos.
       4:
         image: notes/frozen1_4.jpg
-        text: "A program is a set of instructions that tells a computer what to do. Let's build a code, or a program, that will help Elsa create a simple line. We will use this later to create more complex patterns."
+        text: Um programa é um conjunto de instruções que diz a um computador o que ele deve fazer. Vamos construir um código, ou programa, que ajudará Elsa a criar uma reta simples. Mais adiante, nós vamos usar isso para criar padrões mais complexos.
       5:
         image: notes/frozen1_5.jpg
-        text: "Your screen is split into three main parts. On the left, is the ice surface where you'll run your program. The instructions for each level are written right below the surface."
+        text: Sua tela é dividida em três partes principais. À esquerda você tem a superfície de gelo onde vai executar seu programa. As instruções de cada nível estão escritas logo abaixo da superfície.
       6:
         image: notes/frozen1_6.jpg
-        text: This middle area is the toolbox, and each of these blocks is an action that Elsa and Anna can do.
+        text: A parte do meio é onde fica a caixa de ferramentas, e cada um desses blocos representa uma ação que pode ser realizada por Elsa e Anna.
       7:
         image: notes/frozen1_7.jpg
-        text: |-
-          The white space on the right is called the workspace, and this is where we'll build our program. To move around the ice surface, you'll use the "Move Forward" block.
+        text: 'O espaço em branco à direita é chamado de área de trabalho, e é onde vamos criar nosso programa. Para se mover pela superfície de gelo, você usará o bloco "avance".'
       8:
         image: notes/frozen1_8.jpg
-        text: 'Here, the "Move Forward" block says, "move forward by 100 pixels." When we press "Run", what happens? Elsa moves forward a certain amount on the screen, 100 pixels in fact! Pixels are basically very tiny squares on your computer screen.'
+        text: 'Aqui, o bloco "avance" diz: "avance por 100 pixels". Quando clicamos em "Executar", o que acontece? Elsa se move por uma certa distância na tela, 100 pixels, na verdade! Os pixels são, basicamente, minúsculos quadrados na tela do seu computador.'
       9:
         image: notes/frozen1_9.jpg
-        text: 'The other block we have in this puzzle says "turn right by 90 degrees." And when we use this "Turn Right" block, that makes Elsa turn a certain amount. You can play around with how far you want Elsa to turn. The angle is measured from the path ahead of Elsa. So, this is a 90 degree turn. And this is a 120 degree turn.'
+        text: 'O outro bloco que temos neste desafio diz "vire à direita 90 graus". Quando usamos o bloco "vire à direita", Elsa faz uma determinada curva. Você pode brincar com o quanto deseja que Elsa vire. O ângulo é medido a partir do caminho à frente de Elsa. Então, este é um giro de 90 graus. E este é um giro de 120 graus.'
       10:
         image: notes/frozen1_10.jpg
-        text: Remember, you can change the number of pixels and degrees by clicking the arrows next to them.
+        text: Lembre-se de que é possível mudar o número de pixels e graus, clicando nas setas ao lado deles.
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
-        text: "Hi, I’m Paola! Computers are really good at repeating actions. You can count to 10, 20, or 100. But a computer can count to a billion or a trillion. It won't get bored and it will only take a few seconds. Whether it's counting, or drawing, or anything--computers can repeat things hundreds or even billions of times."
+        text: Olá, eu sou a Paola! Os computadores são realmente muito bons em repetir ações. Você pode contar até 10, 20 ou até 100, mas um computador pode contar até um bilhão ou um trilhão sem se cansar, e ele só levará alguns segundos. Seja contar, desenhar ou qualquer outra atividade, os computadores podem repetir ações centenas ou até bilhões de vezes.
       2:
         image: notes/frozen2_2.jpg
-        text: 'In programming, we call this a loop. A loop is how you repeat your code over and over again. For the next puzzle, your goal is to help Anna create a square with the "Repeat" block.'
+        text: 'Na programação, podemos chamar isso de laço. Um laço é o modo como você repete seu código diversas vezes. No próximo desafio, sua meta é ajudar Anna a criar um quadrado com o bloco "repita".'
       3:
         image: notes/frozen2_3.jpg
-        text: 'Any blocks of code you put inside the "Repeat" block will be repeated in sequence, as many times as you want.'
+        text: 'Todos os blocos de código que colocar dentro do bloco "repita" serão repetidos em sequência, quantas vezes você quiser.'
       4:
         image: notes/frozen2_4.jpg
-        text: 'To draw a square, you can use the "Move Forward" and "Turn Right" block 4 times. But the easier way is to tell the computer to "Move Forward" and "Turn Right by 90 degrees" once, and then tell it to repeat this pair of actions 4 times. To do that, you need to put the "Move Forward" and "Turn Right" block inside a "Repeat" block.'
+        text: 'Para desenhar um quadrado, você pode usar os blocos "avance" e "vire à direita" quatro vezes. Mas o modo mais fácil de fazer isso é dizer ao computador "avance" e "vire à direita 90 graus" uma vez e, depois, fazer ele repetir este par de ações quatro vezes. Para isso, você precisa colocar os blocos "avance" e "vire à direita" dentro de um bloco "repita".'
       5:
         image: notes/frozen2_5.jpg
-        text: |-
-          Remember, you can change the number in the "Repeat" block to anything, and it will repeat what's inside the block that many times.
+        text: 'Lembre-se de que é possível mudar o valor no bloco "repita" para qualquer número, e ele repetirá o que está dentro do bloco de acordo com o número que você escolher.'
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: Hi, I’m Chris Bosh. I’m a professional basketball player, and I coded in college.
+        text: Olá, eu sou Chris Bosh. Sou jogador de basquete profissional, e já programei quando estava na faculdade.
       2:
         image: notes/frozen3_2.jpg
-        text: One of the most important concepts in computer science is how to define new commands. Most computer languages have only about 100 words or commands. And really, the art and magic is in defining your own new words out of these building blocks.
+        text: Um dos conceitos mais importantes da ciência da computação é como definir novos comandos. A maioria das linguagens de computador tem apenas 100 palavras ou comandos. A arte e a magia estão, então, em definir suas próprias palavras novas a partir do básico.
       3:
         image: notes/frozen3_3.jpg
-        text: "Once you've taught a computer how to do an action once using this sequence of commands, you can make up your own name for that action so it's easy to repeat it later. When you define your own command and give it a name, that's called a function."
+        text: Depois de ensinar a um computador como fazer uma ação uma vez usando esta sequência de comandos, você pode criar o nome que quiser para essa ação, assim será mais fácil repeti-la depois. Ao definir e nomear seu próprio comando, você estará criando uma função.
       4:
         image: notes/frozen3_4.jpg
-        text: "Hi, I’m Jess. When programming with blocks, you would use functions if there are a set of actions you would like to use lots of times. For example, you've written code to create a square."
+        text: Olá, eu sou Jess. Na programação com blocos, use funções quando houver um conjunto de ações que você quer repetir várias vezes. Por exemplo, você escreveu um código para criar um quadrado.
       5:
         image: notes/frozen3_5.jpg
-        text: 'You can define this as a function called "create a square." '
+        text: 'Você pode definir isso como uma função chamada "crie um quadrado". '
       6:
         image: notes/frozen3_6.jpg
-        text: Now you have a new block that you can use multiple times to create multiple squares.
+        text: Agora você tem um novo bloco que pode ser usado várias vezes para criar diversos quadrados.
       7:
         image: notes/frozen3_7.jpg
-        text: A lot of simple shapes can be used to create more complex patterns. In the next puzzle, the code you recently wrote to make a circle is available to you as a new function that can make circles of different sizes. Can you use it to help Elsa create intricate and beautiful patterns in the snow?
+        text: Inúmeras formas simples podem ser usadas para criar padrões mais complexos. No próximo desafio, o código que você acabou de escrever para fazer um círculo estará disponível como uma nova função que pode fazer círculos de diferentes tamanhos. Você pode usá-la para ajudar Elsa a criar padrões belos e intrincados na neve?
     C3_playlab_create_game:
       1:
         image: notes/playlab_1.png
-        text: "So far you've been making an animation or a story that does the exact same thing every time you run it. Now you can make an interactive game that you can actually play."
+        text: Até agora, você fez animações ou histórias que fazem exatamente as mesmas coisas quando você as executa. Agora, você pode fazer um jogo interativo e jogá-lo de verdade.
       2:
         image: notes/playlab_2.png
-        text: |-
-          There's the "when arrow" block and the "move actor" block. You can put these blocks together to move the actors around with the arrow keys.
+        text: 'Há os blocos "quando a seta estiver pressionada" e "mova o personagem". Você pode usar esses blocos juntos para mover os personagens usando as teclas de direção.'
       3:
         image: notes/playlab_3.png
-        text: And there are some blocks that do stuff when actors collide or are clicked. Check them out and have fun!
+        text: E há alguns blocos que fazem outras ações quando os personagens trombam ou são clicados. Dê uma olhada e divirta-se!
+    playlab_intro:
+      1:
+        image: notes/playlab_intro_1.png
+        text: Nós vamos criar jogos usando o Laboratório. Os bons jogos têm histórias, e toda história tem personagens. Nós vamos aprender como criar nossos personagens, como bruxas, alienígenas e animais que falam, andam e interagem uns com os outros. Ao final deste tutorial, você poderá criar um jogo a partir do zero e compartilhá-lo com seus amigos.
+      2:
+        image: notes/playlab_intro_2.png
+        text: Sua tela está dividida em três partes principais. À esquerda está o espaço do jogo, onde seu programa será executado. As instruções para cada nível estão escritas abaixo.
+      3:
+        image: notes/playlab_intro_3.png
+        text: A parte do meio é onde fica a caixa de ferramentas, e cada um desses blocos representa uma parte do código. O espaço em branco à direita é chamado de área de trabalho e é onde criaremos nosso programa.
+      4:
+        image: notes/playlab_intro_4.png
+        text: 'Para começar, você terá que conectar seus blocos ao bloco laranja "quando executar". É possível conectar diversos blocos uns aos outros, arrastando-os até ver a linha amarela e, então, eles se encaixam.'
+      5:
+        image: notes/playlab_intro_5.png
+        text: 'Neste primeiro desafio, nosso personagem é um pinguim, e nós o faremos dizer "Olá!", arrastando o bloco "diga", conectando-o ao bloco "quando executar" e digitando "Olá". Nós também podemos fazer com que o pinguim se mova usando os blocos "mova à direita" e "mova à esquerda". Depois que seus blocos estiverem no lugar certo, aperte o botão "executar" para ver o que você programou.'
+      6:
+        image: notes/playlab_intro_6.png
+        text: Comece agora mesmo! Ao final, você conseguirá criar seu próprio jogo, com todos os tipos de jogadores que poderão interagir, ficar felizes ou tristes, marcar pontos ou lançar bolas de fogo, ou até mesmo fazer desaparecer uns aos outros. Depende da sua imaginação e do jogo que você quer criar.
+    playlab_events:
+      1:
+        image: notes/playlab_events_1.png
+        text: 'Agora, vamos aprender um pouco sobre algo que os programadores de jogos usam todos os dias: os eventos. Um evento diz ao seu programa que ele deve ouvir quando algo acontece. Quando tal coisa acontece, ele realiza uma ação.'
+      2:
+        image: notes/playlab_events_2.png
+        text: 'Alguns exemplos de eventos são: ouvir o clique de mouse, pressionar uma tecla de direção ou tocar a tela.'
+      3:
+        image: notes/playlab_events_3.png
+        text: 'Agora, vamos fazer o robô espacial cumprimentar os terráqueos quando um jogador clicar nele. Nós usaremos o bloco "quando clicado" e conectaremos o bloco "diga" a ele. Quando o jogador clicar no robô espacial, tudo que estiver conectado ao bloco de evento "quando clicado" será realizado. O que seu alienígena diz?'
+      4:
+        image: notes/playlab_events_4.png
+        text: 'Há também os blocos "quando a seta estiver pressionada". Se você conectar os blocos "mova" a eles, será possível começar a mover seus personagens para cima, para baixo, para esquerda e para a direita. Pouco a pouco, seu jogo está ficando cada vez mais interativo.'
+    playlab_repeat_forever:
+      1:
+        image: notes/playlab_repeat_forever_1.png
+        text: 'Este é o bloco "repita infinitamente". Tudo que estiver contido neste bloco acontecerá repetidamente no jogo.'
+      2:
+        image: notes/playlab_repeat_forever_2.png
+        text: 'Se quisermos que um personagem faça algo repetidamente, sem nenhuma ação do jogador, colocaremos esses blocos dentro do bloco "repita infinitamente".'
+      3:
+        image: notes/playlab_repeat_forever_3.png
+        text: Neste desafio, nosso objetivo é ajudar o mago a proteger as fronteiras do reino, andando da esquerda para a direita e vice-versa, continuamente. Aprender como repetir ações de comandos vai economizar muito do seu tempo no futuro, quando você for criar seu próprio jogo.

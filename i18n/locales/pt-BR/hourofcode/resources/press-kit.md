@@ -1,10 +1,8 @@
 * * *
 
-title: Press Kit layout: wide nav: resources_nav
+title: kit para divulgação na mídia layout: wide nav: resources_nav
 
 * * *
-
-[<button style="float: right; margin-top: 50px">Registre seu evento</button>](/#join)
 
 ## Como atrair a mídia para seu evento da Hora do código
 
@@ -31,11 +29,11 @@ title: Press Kit layout: wide nav: resources_nav
 
 Pense em um jornal, blog, emissora de TV ou de rádio locais.
 
-Procure informações de contato de jornalistas na Internet. Se não conseguir encontrá-las, ligue para a edição e pergunte ou envie um e-mail para um endereço geral do tipo dicas@NOMEDAEDIÇÃO.com e peça que sua mensagem seja direcionada para o jornalista correto.
+Procure na Internet informações de contato de jornalistas. Se não conseguir encontrá-las, ligue para a edição e pergunte ou envie um e-mail para um endereço geral do tipo dicas@NOMEDAEDIÇÃO.com e peça que sua mensagem seja direcionada para o jornalista correto.
 
 **3. Entre em contato com a mídia local**
 
-A melhor maneira de realizar este contato é por e-mail. Ele deve ser breve e objetivo: por que outras pessoas devem se interessar por este evento? Inclua informações de contato (entre elas, o número de um telefone celular) de quem estará no local do evento. **Veja um [exemplo de abordagem à mídia](<%= hoc_uri('/resources#sample-emails') %>):**
+A melhor maneira de realizar este contato é por e-mail. Ele deve ser breve e objetivo: por que outras pessoas devem se interessar por este evento? Inclua as informações de contato (entre elas, o número de um telefone celular) de quem estará no local do evento. **Veja um [exemplo de abordagem à mídia](<%= hoc_uri('/resources#sample-emails') %>):**
 
 **4. Prepare-se para receber perguntas sobre o evento da sua escola. Veja os exemplos a seguir:**
 
@@ -43,7 +41,7 @@ A melhor maneira de realizar este contato é por e-mail. Ele deve ser breve e ob
 
 Embora todos nós saibamos a importância de os alunos aprenderem como navegar neste mundo cheio de tecnologia em que vivemos, muitos professores não têm experiência em ciência da computação e não sabem por onde começar. Este evento é uma oportunidade para que todos nós vejamos do que a ciência da computação é capaz.
 
-Esperamos que isso desperte o interesse dos alunos em continuar aprendendo. Algumas pesquisas também mostram que as crianças entendem conceitos de programação antes de aprenderem a ler e a escrever. Na verdade, o cérebro delas é mais receptivo às linguagens computacionais nessas idades, assim como acontece com os idiomas estrangeiros.
+Esperamos que isso desperte o interesse dos alunos para continuar aprendendo. Algumas pesquisas também mostram que as crianças entendem conceitos de programação antes de aprenderem a ler e a escrever. Na verdade, o cérebro delas é mais receptivo às linguagens computacionais nessas idades, assim como acontece com os idiomas estrangeiros.
 
 *Por que isso é importante?*
 
@@ -55,9 +53,7 @@ Na China, todos os alunos estudam a ciência da computação para concluir o ens
 
 **Sobre a Code.org**
 
-A Code.org® é uma instituição pública sem fins lucrativos dedicada a promover o estudo da ciência da computação e garantir que ela chegue também à minorias sociais, empoderando, por exemplo, mulheres e negros à participação nesta área. Sua visão é de que todos os alunos, de todas as escolas, devem ter a oportunidade de aprender a programar. Depois de seu lançamento, em 2013, a Code.org organizou a campanha Hora do Código — que apresentou a ciência da computação a milhões de alunos — em parceria com mais de 30 distritos escolares de todo o território nacional, e lançou o Code Studio, uma plataforma de ensino on-line de código aberto para todas as idades. Para obter mais informações, visite: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
+A Code.org® é uma organização pública sem fins lucrativos dedicada a promover a ciência da computação e a aumentar a participação de representantes das minorias sociais, como as mulheres e os alunos negros. Sua visão é de que todos os alunos, de todas as escolas, devem ter a oportunidade de aprender a programar. Depois de seu lançamento, em 2013, a Code.org organizou a campanha Hora do Código — que apresentou a ciência da computação a milhões de alunos — em parceria com mais de 30 distritos escolares de todo o território nacional, e lançou o Code Studio, uma plataforma de ensino on-line de código aberto para todas as idades. Para obter mais informações, visite: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
-Encontre mais recursos e exemplos de e-mails [aqui](<%= hoc_uri('/resources') %>).
-
-<a style="display: block" href="/#join"><button style="float: right;">Registre seu evento</button></a>
+Encontre mais recursos e exemplos de e-mail [aqui](<%= hoc_uri('/resources') %>).

@@ -1,4 +1,4 @@
-pt:
+pt-BR:
   activerecord:
     errors:
       messages:
@@ -36,6 +36,7 @@ pt:
   of: de
   more: MAIS
   less: MENOS
+  beta: beta
   try_hoc: 'Experimente a Hora do Código, clique aqui >> '
   try_k8intro: Experimente nossa introdução do curso de Ciência da Computação (15-25 horas) para o Ensino Fundamental
   k8intro: Introdução ao Curso de Ciência da Computação (15-25 horas) para estudantes do ensino fundamental
@@ -336,8 +337,8 @@ pt:
     test_videos_help: Teste nosso novo player de vídeo na sua escola
     try_beta_courses: Novo! Conheça nossos cursos experimentais para alunos do pré ao 5º ano
     use_as_teacher: Use este site como um professor
-    heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
-    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
+    heading_hoc2014: '<h2>A Hora do Código para</h2><h1>Todas as idades</h1>'
+    heading_elementary: '<h2>Cursos de 20 horas para</h2><h1>Iniciantes (todas as idades)</h1>'
     heading_apps: '<h2>Diversão para</h2><h1>todos</h1>'
     heading_legacy: '<h2>Nosso curso geral para</h2><h1>todas as idades</h1>'
     your_gallery: Galeria
@@ -350,7 +351,7 @@ pt:
     teacher: Professor
   footer:
     help_from_html: Engenheiros da Google, Microsoft, Facebook e Twitter ajudaram a criar este tutorial.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Todos os direitos reservados.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Todos os direitos reservados.'
     powered_by_aws: Powered by Amazon Web Services
     feedback: Fornecer feedback
     translate: Ajude-nos a traduzir para o seu idioma
@@ -508,3 +509,7 @@ pt:
     completed_too_many_blocks: concluído, muitos blocos
     completed_perfect: concluído, perfeito
     furthest_level_attempted: tentativa para o nível mais avançado
+  studio:
+    courses_working_on: Cursos que você está fazendo
+    completed_courses: Cursos concluídos
+    all_courses: Todos os cursos

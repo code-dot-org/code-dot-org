@@ -1,8 +1,8 @@
 {
   "compute":"verwerk",
-  "equivalentExpression":"Probeer je argumenten in een andere volgorde te plaatsen om precies dezelfde expressie te krijgen.",
-  "extraTopBlocks":"Je hebt blokken die niet gekoppeld zijn. Was het je bedoeling om deze aan het \"verwerk\"-blok te koppelen?",
+  "equivalentExpression":"Probeer jouw argumenten in een andere volgorde te plaatsen om precies dezelfde expressie te krijgen.",
+  "extraTopBlocks":"Je hebt blokken die niet gekoppeld zijn. Was het jouw bedoeling om deze aan het \"verwerk\"-blok te koppelen?",
   "goal":"Doel:",
   "reinfFeedbackMsg":"Hier is jouw verhaal! Werk er verder aan of ga verder met de volgende puzzel!",
-  "yourExpression":"Je expressie:"
+  "yourExpression":"Jouw expressie:"
 }

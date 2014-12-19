@@ -4,44 +4,44 @@
 
 * * *
 
-# Prizes - FAQs
+# Βραβεία - Συχνές Ερωτήσεις
 
-## Does your whole school have to enter to win the $10,000 in hardware?
+## Πρέπει να συμμετάσχει όλο το σχολείο για να κερδίσει 10,000$ σε τεχνολογικό εξοπλισμό;
 
 Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](<%= hoc_uri('/prizes') %>).
 
-## Does your whole school have to enter to win a the tech chat?
+## Πρέπει να συμμετάσχει όλο το σχολείο σας για να κερδίσει ένα chat τεχνολογίας;
 
 Any classroom (public or private school) is eligible to win this prize. Your whole school need not apply.
 
-## Can non-public schools win the video chat prize?
+## Μπορεί ένα ιδιωτικό σχολείο να κερδίσει μια βίντεο - διάσκεψη;
 
 Yes! Private and independent schools are eligible along with public schools to win the video chat prizes.
 
-## Can non-US schools win the video chat prize?
+## Μπορεί ένα σχολείο εκτός ΗΠΑ να κερδίσει μια βιντεο-διάσκεψη;
 
 No, unfortunately, because of logistics we are unable to offer the video chat prize to schools outside of the U.S. and Canada. All international organizers **are** eligible to receive Dropbox space or Skype credit.
 
-## Why is the $10,000 hardware prize only available to public schools?
+## Γιατί το βραβείο εξοπλισμού αξίας 10,000$ είναι διαθέσιο μόνο για τα δημόσια σχολεία;
 
 We would love to help teachers in public and private schools alike, but at this time, it comes down to logistics. We have partnered with [DonorsChoose.org](http://donorschoose.org) to administer classroom funding prizes, which only works with public, US K-12 schools. According to DonorsChoose.org, the organization is better able to access consistent and accurate data that's available for public schools.
 
-## I’m outside the United States. Can I qualify for prizes?
+## Είμαι εκτός των Ηνωμένων Πολιτειών. Έχω τις προϋποθέσεις να κερδίσω τα βραβεία;
 
 Due to a small full-time staff, Code.org is unable to handle the logistics of administering international prizes. Because of this people outside the US are unable to qualify for prizes.
 
-## When is the deadline to apply for the hardware prize?
+## Πότε είναι η προθεσμία για την υποβολή αίτησης για το βραβείο εξοπλισμού;
 
 To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
 
-## When is the deadline to be eligible to win a tech chat?
+## Πότε είναι η προθεσμία για να μπορεί κανείς να διεκδικήσει μια βίντεο - συνομιλία τεχνολογίας;
 
 To qualify, you must register your classroom for the Hour of Code by November 14, 2014. Classrooms will win a video chat with a celebrity. Code.org will select and notify winners via email by December 1, 2014.
 
-## When will I be notified if my school or classroom wins a prize?
+## Πότε θα ειδοποιηθώ αν το σχολείο ή η τάξη μου κερδίσει ένα βραβείο;
 
 To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. Code.org will select and notify winners via email by December 1, 2014.
 
-## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 8-14), can I still qualify for prizes?
+## Αν όλο το σχολείο μου δεν μπορεί να κάνει στην Ώρα του Κώδικα κατά τη διάρκεια της Εβδομάδας Εκπαίδευσης Επιστήμης Υπολογιστών (8-14 Δεκεμβρίου), μπορώ ακόμα να διεκδικήσω τα βραβεία;
 
-Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 14th.
+Ναι, αρκεί να υποβάλεις ένα σχέδιο διαχείρισης που περιγράφει πως όλο το σχολείο συμμετέχει για ένα εύλογο χρονικό διάστημα και να εγγραφείς στην Ώρα του Κώδικα ως τις 14 Νοεμβρίου.

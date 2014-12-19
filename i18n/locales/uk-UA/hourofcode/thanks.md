@@ -2,9 +2,9 @@
 
 title: Дякуємо за реєстрацію заходу Години коду! layout: wide
 
-social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/rH7AjDMz_dc"
+social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/code-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/rH7AjDMz_dc"
 
-"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>" "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>" "twitter:image:src": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "twitter:player": 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0' "twitter:player:width": 1920 "twitter:player:height": 1080
+"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>" "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>" "twitter:image:src": "http://<%=request.host%>/images/code-video-thumbnail.jpg" "twitter:player": 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0' "twitter:player:width": 1920 "twitter:player:height": 1080
 
 * * *
 
@@ -26,30 +26,30 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 ## 2. Запропонуйте взяти участь у Годині коду всій школі
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](/resources/hoc-one-pager.pdf) to your principal.
+[Надішліть цього листа](<%= hoc_uri('/resources#email') %>) або [цей буклет](/resources/hoc-one-pager.pdf) своєму директору.
 
 <% else %>
 
 ## 2. Запропонуйте взяти участь у Годині коду всій школі
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](/resources/hoc-one-pager.pdf) this handout</a> to your principal.
+[Надішліть цього листа](<%= hoc_uri('/resources#email') %>) або передайте [цей ](/resources/hoc-one-pager.pdf) буклет</a> своєму директору.
 
 <% end %>
 
 ## 3. Зробіть пожертву
 
-[Donate to our crowdfunding campaign.](http://<%= codeorg_url() %>/donate) To teach 100 million children, we need your support. We just launched the [largest education crowdfunding campaign](http://<%= codeorg_url() %>/donate) in history. *Every* dollar will be matched [donors](http://<%= codeorg_url() %>/about/donors), doubling your impact.
+[Зробіть внесок у нашу краудфандингову кампанію.](http://<%= codeorg_url() %>/donate) Щоб навчити 100 мільйонів учнів, нам потрібна підтримка. Ми запустили [найбільшу краудсорсингову кампанію](http://<%= codeorg_url() %>/donate) в історії. *Кожен* долар пожертв подвоять [спонсори](http://<%= codeorg_url() %>/about/donors), збільшуючи ваш внесок.
 
 ## 4. Попросіть про участь свою адміністрацію
 
-[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf).
+[Надішліть цього листа](<%= hoc_uri('/resources#email') %>) своєму керівникові чи директору. Або [передайте їм буклет](http://hourofcode.com/resources/hoc-one-pager.pdf).
 
 ## 5. Сприяйте Годині коду у свій спільноті
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+Залучайте місцеву спільноту - клуб пластунів, церкву, університет, ветеранський клуб чи профспілку. Або проведіть вечірку Години коду для своїх сусідів.
 
 ## 6. Зверніться до місцевих депутатів по підтримку Години коду
 
-[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Надішліть цього листа](<%= hoc_uri('/resources#politicians') %>) міському голові, місцевій або шкільній раді. Або [передайте буклет](http://hourofcode.com/resources/hoc-one-pager.pdf) та запросіть відвідати школу.
 
 <%= view 'popup_window.js' %>

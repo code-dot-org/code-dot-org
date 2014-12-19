@@ -2,17 +2,17 @@
   activerecord:
     errors:
       messages:
-        blank: is required
+        blank: ay kailangan
     attributes:
       user:
-        name: Pangalan
+        name: Ipapakita na Pangalan
         email: Email
         username: Username
         password: Password
         password_confirmation: Kumpirmahin ang password
         current_password: Kasalukuyang Password
         locale: Lengwahe
-        age: Age
+        age: Edad
         gender: Kasarian
         edit_header: Palitan ang Account Details
         error:
@@ -21,7 +21,7 @@
   welcome_back: Maligayang pagbabalik, %{name}
   add_teacher_form:
     code:
-      label: 'Add a teacher by section code:'
+      label: 'Magdagdag ng guro:'
       placeholder: Code (ABCDEF)
     submit: Magdagdag ng guro
   add_hint_form:
@@ -36,6 +36,7 @@
   of: ng
   more: MARAMI
   less: KAUNTI
+  beta: beta
   try_hoc: Subukan ang Hour of Code, i-click dito >> 
   try_k8intro: Subukan ang pang K-8 na Kursong Introduksyon sa Computer Science (15-25
     oras)
@@ -79,7 +80,7 @@
     address_placeholder: Address, Cuidad, Probinsya, Zip Code
     gender: Kasarian (optional)
     birthday: Kaarawan (optional)
-    age: Edad (Opsyunal)
+    age: Edad
     user_type: Are you a student or teacher?
     submit: Sign up
     teacher: Ikaw ba ay isang guro?
@@ -97,7 +98,7 @@
     additional_information: We need some additional information to continue signing
       you up.
   signin_form:
-    title: Sign in
+    title: May account ka na? Sign in
     login: Email o username
     password: Password
     remember: Remember me
@@ -251,7 +252,7 @@
         playlab: Make an App
         artist: Draw Something
     user:
-      classroom: My students
+      classroom: Home Page ng Teacher
       label: Hi %{username}
       stats: My progress
       settings: My account
@@ -283,11 +284,12 @@
       stages: 'Stage(s) to display:'
       show_past: 'Show student activity (%{bullet_html}) in the past:'
       levels_key: Levels key
-      perfect: Completed, perfect
-      completed: Completed, but using too many blocks
-      tried: Tried, but not completed
-      not_tried: Not tried yet
-      activity: Indicates student activity in the last %{hours} %{plural}
+      perfect: Nakumpleto, perpekto
+      completed: Nakumpleto, ngunit ang paggamit ng masyadong maraming mga bloke.
+      tried: Sinubukang, ngunit hindi nakumpleto.
+      not_tried: Hindi pa sinubukan
+      activity: Ay nagpapahiwatig ng aktibidad ng mag-aaral sa nakaraang %{hours}
+        %{plural}
       no_section: No assigned section
       trophies: Tropeo
     students:
@@ -425,29 +427,32 @@
     teacher: See the solution
     auth_error: You are not authorized to see the solution.
     submit: Update Artist Location
-    direction: Start Direction
+    direction: Simula Direksyon (sa grado)
   video:
     tab: Video.
-    notes: No video? Show notes.
-    notes_coming_soon: Notes for this video coming soon.
-    autoplay_option: Autoplay videos
-    download: Download Video
+    notes: Walang video? Ipakita ang mga tala.
+    notes_coming_soon: Tala para sa lalong madaling panahon darating ang video na
+      ito.
+    autoplay_option: I-Autoplay ang mga videos
+    download: I-download ang video
   compatability:
     working:
-      header: We are working on support for your browser.
-      message: Code.org uses modern web technology. This makes the site faster to
-        use. Your browser doesn't support all the features required, and you may experience
-        issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
-        any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade
-        your browser to a supported version</a>.
-      hide_this_warning: Hide this warning
+      header: Nagsusumikap kami sa suporta para sa iyong browser.
+      message: Code.org ay gumagamit ng modernong teknolohiya sa web . Ginagawa nitong
+        mas mabilis ang site gamitin. Hindi sinusuportahan ng iyong browser ang lahat
+        ng mga tampok na kailangan, at maaari kang makaranas ng mga isyu habang ginagamit
+        ang bahaging ito ng site. Mangyaring tulungan kami sa pamamagitan ng <a href='%{report_issue_url}'>
+        pag-uulat ng anumang mga isyu mo ang </a>. Maaari mo ring <a href='%{supported_browsers_url}'>
+        -upgrade ang iyong browser sa isang suportadong bersyon </a>.
+      hide_this_warning: Itago ang babalang ito
     upgrade:
-      header: Please upgrade your browser.
-      message: Code.org uses modern web technology. This makes the site faster to
-        use. Unfortunately your browser doesn't support all the features required
-        to run this part of the site.<br/><br/>Install a browser on our supported
-        browsers list to continue. You can <a href='#'>try viewing the page</a>, but
-        expect functionality to be broken.
+      header: Paki-upgrade ang iyong browser.
+      message: Code.org ay gumagamit ng modernong teknolohiya sa web . Ginagawa nitong
+        mas mabilis ang site gamitin. Sa kasamaang palad ang iyong browser ay hindi
+        sumusuporta sa lahat ng mga tampok na kinakailangan upang patakbuhin ang bahagi
+        ng site. <br/> <br/> I-install ang isang browser sa aming mga suportadong
+        browser ilista upang magpatuloy. Maaari mong <a href='#'> subukang tingnan
+        ang </a>, ngunit asahan ang pag-andar ay sira.
       button: Take me to the list of supported browsers
   slow_loading: This is taking longer than usual...
   try_reloading: Try reloading the page
@@ -464,7 +469,7 @@
     flappy_og_title: Check out my Flappy Game
     studio_og_title: Check out my story
     check_out_what_i_made: Check out what I made
-    og_description: I wrote the code myself with Code.org
+    og_description: Sinulat ko ang aking sariling code sa Code.org
     phone_number_not_allowed: It looks like there is a phone number in it. Try changing
       the text.
     address_not_allowed: It looks like there is an address in it. Try changing the
@@ -495,7 +500,7 @@
       title: Intro Course
       body: Try our 20-hour Intro to Computer Science course.
     hoc2014:
-      try_new_tutorial: Try our new Hour of Code tutorial in beta
+      try_new_tutorial: Subukan ang aming bagong Oras ng Code tutorial nasa beta
       try_frozen: Artist with Anna and Elsa, from Frozen
     gallery:
       title: Gallery
@@ -528,14 +533,14 @@
     support_url: //support.code.org
   multi:
     wrong_title: Incorrect answer
-    wrong_body: The answer you've entered is not correct.  Please try again!
-    correct_title: Correct
-    correct_body: That is the correct answer.
+    wrong_body: Ang sagot na iyong ipinasok ay hindi tama. Pakisubukang uli!
+    correct_title: Tama
+    correct_body: Iyon ay ang tamang sagot.
   match:
     wrong_title: Incorrect solution
     wrong_body: The solution you've entered is not correct.  Please try again!
-    correct_title: Correct
-    correct_body: That is the correct answer.
+    correct_title: Tama
+    correct_body: Iyon ay ang tamang sagot.
   text_match:
     placeholder: Enter your answer here
   dialog:
@@ -595,3 +600,7 @@
     completed_too_many_blocks: completed, too many blocks
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
+  studio:
+    courses_working_on: Courses you're working on
+    completed_courses: Completed courses
+    all_courses: All courses

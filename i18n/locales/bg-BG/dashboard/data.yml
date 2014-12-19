@@ -295,15 +295,15 @@ bg:
         studio_c3_game_5: Можете ли да добавите блок за точка, когато пингвинът достигне октопода? Изпробвайте направеното със стрелките.
         studio_c3_game_6: Можете ли да добавите блок за промяна на сцената и блок за промяна скоростта на пингвина? Проверете дали действа това като местите пингвина със стрелките.
         studio_c3_game_7: Създайте своя собствена игра. Когато сте готови, щракнете върху Финал, за да споделите с приятелите си играта за телефон.
-        studio_playlab_1: 'Penguin wants to say "hello" - can you help him?'
-        studio_playlab_2: 'Cave Boy (actor 1) and Cave Girl (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
-        studio_playlab_3: Can you help Tennis Girl get to the flag?
-        studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor 2) and play a sound when he gets there?
-        studio_playlab_5: 'Can you help the Spacebot say "greetings earthlings" when it is clicked? Don’t forget to click it after you click Run'
-        studio_playlab_6: Can you help the Witch move around using the up/down/right/left arrow keys to get to all the magical fireballs?
-        studio_playlab_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help the wizard move right and left repeatedly?'
-        studio_playlab_8: Can you add a block to score a point and a block to play a sound when the unicorn runs into the wizard, and then move him with the arrows until you score?
-        studio_playlab_9: Set the background for this alien invasion and help the Spacebot get to the alien faster by changing its speed. Then move him with the arrow keys to get to the Spacebot and alert everyone else
+        studio_playlab_1: 'Пингвинът иска да каже "Здравей" - може ли да му помогнете?'
+        studio_playlab_2: 'Пещерното момче (актьор 1) и пещерното момиче (актьор 2) биха искали да си кажат "здрасти" един на друг. Можете ли да им помогнете като поставите 2 блока за диалог?'
+        studio_playlab_3: Може ли да помогнете на тенис момичето да вземе знамето?
+        studio_playlab_4: Можете ли да помогнете на тенис момчето (актьор 1) да стигне до тенис момичето (актьор 2) и да се възпроизвеждане звук, когато това се случи?
+        studio_playlab_5: 'Можете ли да помогнете на космическия робот да каже "Поздрави, земляни!" когато е кликнато върху му? Не забравяйте да щракнете върху него, след като натиснете Старт'
+        studio_playlab_6: Можете ли да помогнете на вещицата, като я движите с помощта на нагоре/надолу/наляво/надясно клавишите със стрелки, за да стигне до всички магически огнени топки?
+        studio_playlab_7: Блокът повторение завинаги ви позволява да стартирате даден код непрекъснато. Можете ли да прикачите блокове към него, за да помогнете на магьосника да се движи надясно и наляво?
+        studio_playlab_8: Можете ли да добавите един блок, който да отчита точките и блок за издаване на звук, когато Еднорогът връхлита върху магьосника? Преместете го със стрелките докато се отчете резултат.
+        studio_playlab_9: 'Задайте на фон за тази извънземна инвазия и помогнете на космическия робот да стигне до извънземния по-бързо чрез промяна на неговата скорост. След това го преместeте  със стрелките, за да предупреди останалите'
         studio_playlab_10: Създайте своя собствена игра. Когато сте готови, щракнете върху Финал, за да споделите с приятелите си играта за телефон.
         studio_full_sandbox: Създайте своя собствена игра. Когато сте готови, щракнете върху Финал, за да споделите с приятелите си играта за телефон.
         studio_k1_1: 'Можете ли да накарате това куче да казва "Здравей, свят"?'
@@ -378,26 +378,25 @@ bg:
       scrat 20:
         instructions: 'Можете ли да добавите само  3 блока за да ми помогнете да реша този по-сложен лабиринт? Ако го направите, аз ще мога да ходя по всеки път независимо от дължината и завоите. Побързайте! Ледът се топи!'
       Standalone_Artist_1:
-        instructions: "Welcome to Artist! First off, let's try to make a simple square using the turn right block and move forward block. Each side should be 100 pixels long."
+        instructions: Добре дошли при Художника! Първо, нека се опитаме да направим прост квадрат с помощта на блок за завъртане надясно и блок за преместване напред. Всяка страна трябва да бъде дълга 100 пиксела.
       Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel long sides.
+        instructions: Начертайте този диамант с 120 и 60 градуса ъгли и 150 пиксела дълги страни.
       Standalone_Artist_3:
-        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree turns?
+        instructions: Можете ли да начертаете този шестоъгълник със 100 пиксела страни и 60 градуса ъгли?
       Standalone_Artist_4:
-        instructions: "Now you've got a new block to play with, the loop. This will repeat a set of commands. What happens if you loop these commands 6 times?"
+        instructions: 'Сега имате нов блок за игра, цикълът. Той ще  повтаря набор от команди. Какво става ако повторите тези команди 6 пъти?'
       Standalone_Artist_5:
-        instructions: How many times do you need to loop this diamond to draw the flower?
+        instructions: Колко пъти трябва да се повтори този диамант, за да нарисувате цвете?
       Standalone_Artist_5.5:
-        instructions: "Notice how we simplified the diamond code by turning it into a loop. You can loop that whole sequence 12 times to draw the flower. Hint: You'll need to turn 30 degrees after your diamond loop so you don't keep drawing over the same diamond."
+        instructions: 'Забележете как ние опростихме кода на диаманта, като го превърнахме в една линия. Можете да повторите линията 12 пъти, за да нарисувате цвете. Съвет: Трябва да се завъртате на 30 градуса след всеки диамант. Така няма да чертаете върху готовия диамант.'
       Standalone_Artist_6:
-        instructions: 'Loop this hexagon code 6 times to create the design. How many degrees will you need to turn each time? Hint: divide the number of degrees in a circle by the number of times you are looping.'
+        instructions: 'Повторете кода на този шестоъгълник  6 пъти за да създадете дизайн. На колко градуса ще трябва да се завъртате всеки път? Съвет: разделете броя на градусите в кръга на броя на повторенията.'
       Standalone_Artist_7:
-        instructions: 'A function is another programming tool to help you avoid repeating yourself. This function draws a flower, so you can use it any time you want to draw a flower. Use this and the new jump block to draw these flowers. Hint: The flowers are 150 pixels apart'
+        instructions: 'Функцията е друг програмен инструмент, който ви помага да избегнете повторното писане на един и същи код. С тази функция правим цвете, така че да го използвате всеки път, когато искате да нарисувате цвете. Използвайте това и новият скок блок, за да нарисувате тези цветя. Съвет: Цветята са отдалечени на 150 пиксела едно от друго'
       Standalone_Artist_8:
-        instructions: |-
-          Here's a function called "Draw a shape" that we've programmed to draw hexagons. Run the code to see what it does and then experiment with the function to see what happens. Can you make it draw a pattern of squares, triangles, or octagons?
+        instructions: 'Това е функция, наречена "начертай фигура", която ние сме програмирани да нарисувате шестоъгълници. Стартирайте кода, за да видите какво прави той и след това експериментирайте с функцията за да видите промените. Можете ли да я накарате да чертае модел на квадрати, триъгълници или осмоъгълници?'
       Standalone_Artist_9:
-        instructions: "Now go ahead and make whatever picture you'd like! You've even got an empty function that you can make do whatever you want!"
+        instructions: Сега вървете напред и направете каквато картина искате! Дори имате празна функция, с която можете да правите каквото си искате!
     video:
       name:
         maze_intro: 'Лабиринт - въведение'
@@ -475,14 +474,28 @@ bg:
         C3_crowdsourcing: Съвместен код
         C3_functional_suncatchers: Функционални ловци на слънце
         C3_songwriting_with_parameters: Композиране на песен с параметри
-        C4_artist_math: Programming the Artist with Math
-        C4_create_functions: Creating Functions
-        C4_edit_functions: Editing Functions
+        C4_intro: Въведение
+        C4_bee_conditional: 'Пчела - условия'
+        C4_variables_artist: 'Променливи - художник'
+        C4_variables_playlab: 'Променливи - Игрална лаборатория'
         C4_for_loops: За циклите
-        C4_variables: Променливи
-        frozen_intro: Hour of Code Intro
-        frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
+        C4_math_artist: Програмиране на художника с математика
+        C4_function_edit: Редактиране на функции
+        C4_function_create: Създаване на функции
+        C4_function_parameters: Функции с параметри
+        C4_conditionals: Условия
+        C4_unplugged_algorithms: Алгоритми с Танграм
+        C4_unplugged_madlibs: Mad Libs
+        C4_unplugged_variables: Променливи в пликове
+        C4_unplugged_forloops: За циклите
+        C4_unplugged_parameters: Композиране на песен с параметри
+        C4_unplugged_binary: Двоичен код
+        frozen_intro: Въведение в Часът на кодирането
+        frozen_loops: Въведение в циклите
+        frozen_functions: Въвеждане във функциите
+        playlab_intro: Въведение в игрална лаборатория
+        playlab_events: Игрална Лабораторията събития
+        playlab_repeat_forever: Игрална Лаборатория повторение завинаги
     callout:
       text:
         drag_blocks: Плъзнете блока за преместване и го поставете под другия блок
@@ -500,31 +513,52 @@ bg:
         replace_questions: 'Използвайте падащото меню, за да замените "???" с номер'
         replace_questions_degree: 'Използвайте падащото меню, за да замените "???" с правилната степен на завъртане'
         repeat_blocks: Използвайте блок за повторение и поставете в него блоковете от работната област
+        repeat_blocks_1: (1) използвайте този блог и го сложете около сивите блокове в работната област
+        repeat_blocks_2: (2) преместете блокът за повторение тук и поставете сивите блокове вътре
         snowflake_dropdown: Използвайте това падащо меню, за да създадете различни снежинки!
         degrees_per_side: Разделете 360 на броя на страните, за да получите размера на всеки ъгъл в градуси.
         set_sides: Използвайте този блок за да зададете броя на страните, необходим за завършване на пъзела.
         set_length: 'Използвайте това поле, за да зададете правилната стойност на "дължина".'
-        which_equation: 'Кое уравнение скъсява страната при фигури с повече страни?  Опитайте всяко уравнение!'
+        which_equation: Кои уравнение скъсява страните за фигури с повече страни?
         get_nectar: 'Използвайте новия "вземи нектар" блок.'
         actions_category: 'Кутията за инструменти има нов облик! Блоковете за "действия"  са тук сега.'
         draw_square_hint: 'Съвет: Използвайте цикъла за квадрата, който направихте в последната загадка.'
-        edit_function: Използвайте този бутон, за да редактирате функцията.
+        edit_function: Щракнете тук, за да редактирате функцията си.
         create_function: 'Щракнете тук, за да отворите менюто "Функции", а след това щракнете върху бутона "Създаване на функция".'
         house_hint: Това е добре, ако изображението не изглежда като къща все още. Ние ще го поправим в следващия пъзел.
         edit_draw_square: Използвайте този бутон, за да редактирате функцията и да добавите контур.
         edit_get_nectar: Използвайте този бутон, за да редактирате функцията и да промените посоката на Пчелата за да се обърне и да вземе нектар.
         logic_category: 'Отворете менюто "Логика" за да намерите "Ако/иначе" блока.'
         length_parameter: 'Можете ли да актуализирате тази функция, така че в нея да се използва параметъра "дължина"?'
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: "Don't forget to turn after creating each circle."
-        frozen_circle_function_with_parameter_circle: 'Use the "create a circle" block and change the size.'
-        frozen_snowflake_branch: 'Use the "create a snowflake branch" block'
-        frozen_create_square: Attach more blocks here to create a square
-        playlab_drag_say: 'Drag the "say" block here and type "hello"'
-        playlab_use_twice: Use this block twice and remember to change the actor number
-        playlab_move_girl: 'Use the "move right" block to move Tennis Girl'
-        playlab_play_sound: 'Add "play sound" block here'
-        playlab_arrow_keys: Remember to use these to move the witch after clicking on Run
-        playlab_add_move: 'Add "move" blocks inside this repeat block'
-        playlab_add_score: Add score blocks here
-        playlab_add_blocks: Add your blocks here
+        frozen_diamond_repeat: Използвайте блок за повторение, за да създадете тази форма.
+        frozen_circle_function_in_circle_turn: Не забравяйте да се завъртите след създаването на всеки кръг.
+        frozen_circle_function_with_parameter_circle: 'Използвайте "създайте кръг" блок и променете размера.'
+        frozen_snowflake_branch: 'Използвайте блок "създаване клонче на снежинка" '
+        frozen_create_square: Закачете повече блокове тук за да създадете квадрат
+        playlab_drag_say: 'Плъзнете "казва" блока тук и напишете "Здравей"'
+        playlab_use_twice: Използвайте този блок два пъти и не забравяйте да промените номера на актьора
+        playlab_move_girl: 'Използвайте "премести надясно" блок, за да преместите тенис момичето'
+        playlab_play_sound: 'Добави "възпроизвежда звук" блок тук'
+        playlab_arrow_keys: Не забравяйте да се използвате това, за да преместите Вещицата след щракване на Старт
+        playlab_add_move: Добави блокове за преместване вътре в този блок за повторение
+        playlab_add_score: Добавяне на блокове за резултат тук
+        playlab_add_blocks: Добавете вашите блокове тук
+        set_variable: Плъзнете числов блок тук, за да зададете вашата променлива
+        place_variable: Плъзнете вашата променлива вътре в този блок
+        bee_for_loop: Плъзнете най-големият брой нектар, който искате пчелата да събере, тук
+        place_counter_variable: Плъзнете вашия числова променлива вътре в този блок
+        function_editor_draw_square: 'Това е вашата дефиниция на функция. Тези блокове стартират по всяко време, когато използвате "начертай квадрат" блок'
+        change_here: Направете вашите промени тук
+        write_draw_square_function: 'Плъзнете блокове от кутията с инструменти  тук, за да нарисувате квадрат'
+        write_draw_triangle_function: 'Плъзнете блокове от кутията с инструменти  тук така, че да  нарисувате триъгълник'
+        edit_add_parameter: Щракнете върху Редактиране, за да добавите даден параметър във функцията
+        add_and_drag_parameter: Напишете името на параметъра тук, щракнете върху Добави а след това го плъзнете в вашата дефиниция на функция
+        fill_in_actor: Попълнете в полето с ??? числа, които отговарят на всеки актьор (1, 2 и 3)
+        repeat: Поставете блокове в тялото на цикъла да се повтаря команди
+        if_bee_nectar: 'Използвайте "Ако" блок, за да реши, ако пчелата трябва да вземе нектар'
+        if_else_bee: 'Използвайте "Ако/иначе" блок, така че пчелата да вземе нектар от цвете, и да прави мед, ако тя не е върху цвете'
+        repeat_full_circle: Въведете броя пъти, които са необходими на зомбито за да направи пълен кръг
+        place_length_variable: 'Плъзнете  променливата за дължина тук, за да замени въпросителните знаци'
+        arrows_move_actor: Използвайте стрелките за да движите актьора
+        right_arrow_fireball: Използвайте дясната стрелка за да стреляте с огнени топки
+        name_function: Напишете името на функцията си тук

@@ -36,6 +36,7 @@
   of: 'no'
   more: VAIRĀK
   less: MAZĀK
+  beta: beta
   try_hoc: 'Izmēģini "Programmēšanas stundu", spied šeit >> '
   try_k8intro: Izmēģini mūsu K-8 Ievadu Datorzinātņu kursos (15-25 stundas)
   k8intro: K-8 Ievads Datorzinātņu kursos (15-25stundas)
@@ -382,8 +383,8 @@
     test_videos_help: Izmēģinat mūsu jauno video atskaņotāju savā skolā
     try_beta_courses: Jaunums! Izmēģinat mūsu BETA kursus K-5 (sākumskolas) skolēniem
     use_as_teacher: Izmantojiet šo vietni, kā skolotājs
-    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>20 stundu kursi</h2><h1>Pamatskolas skolēniem</h1>
+    heading_hoc2014: <h2>Programmēšanas stunda</h2><h1>visiem vecumiem</h1>
+    heading_elementary: <h2>20 stundu kurss</h2><h1>visu vecumu iesācējiem</h1>
     heading_apps: <h2>Izklaide </h2><h1>visiem</h1>
     heading_legacy: <h2>Mūsu galvenais kurss ir </h2><h1>visiem vecumiem</h1>
     your_gallery: Galerija
@@ -397,10 +398,10 @@
   footer:
     help_from_html: Inžinieri no Google, Microsoft, Facebook un Twitter palīzēja radīt
       šo pamācību.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
-      Visas tiesības paturēt.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
-      Arts Inc. Visas tiesības paturēt.
-    powered_by_aws: Powered by Amazon Web Services
+    art_from_html: Angry Birds&trade;&copy;2009. - 2014. Rovio Entertainment Ltd.
+      Visas tiesības rezervētas.<br/> Plants vs.  Zombies&trade; & &copy; 2014 Electronic
+      Arts Inc. Visas tiesības rezervētas.
+    powered_by_aws: Nodrošina Amazon Web Services
     feedback: nodrošināt atsauksmes
     translate: Palīdzi mums tulkot savā valodā
     support: Atbalsts
@@ -489,7 +490,7 @@
       title: Galerija
       body: Apskati lietotnes un mākslinieciskos zīmējumus, ko veidojuši citi lietotāji
     frozen:
-      title: Frozen
+      title: Ledus sirds
   gallery:
     students_drew_these_with_code: Skolnieki uzzīmēja šos ar kodu!
     students_made_these_with_code: Skolēni izveidoja šos ar kodu!
@@ -584,3 +585,7 @@
     completed_too_many_blocks: Pabeigts, pārāk daudz bloki
     completed_perfect: pabeigts, ideāli
     furthest_level_attempted: tālākais līmenis mēģināts
+  studio:
+    courses_working_on: Kursi, pie kuriem tu strādā
+    completed_courses: Pabeigtie kursi
+    all_courses: Visi kursi

@@ -34,7 +34,7 @@ pl:
           desc: Bounce (beta)
           Bounce: Etap 1
         Builder Levels:
-          desc: Puzzle stworzone przez użytkowników (beta)
+          desc: Puzzle utworzone przez użytkowników (beta)
           Custom: Etap 1
         Flappy Levels:
           desc: Flappy Bird
@@ -44,7 +44,7 @@ pl:
           Jigsaw: Etap 1
         Step Levels:
           desc: Labirynt (beta)
-          MazeStep: Stage Step
+          MazeStep: Krok Etapu
         edit-code:
           desc: Edytuj kod (beta)
           MazeEC: Etap 1
@@ -66,15 +66,15 @@ pl:
           Jigsaw: Etap 1
         step:
           desc: Labirynt (beta)
-          MazeStep: Stage Step
+          MazeStep: Krok Etapu
         wordsearch:
-          desc: Spelling Bee (beta)
+          desc: Wymowa Bee (beta)
           WordSearch: Etap 1
     game:
       name:
         Unplug1: Wprowadzenie do informatyki
         Maze: Labirynt
-        Multi: Multiple Choice Stuffs
+        Multi: Wieloraki Wybór Rzeczy
         Unplug2: Myślenie komputacyjne
         Unplug3: Programowanie na papierze milimetrowym
         Artist: Artysta
@@ -97,12 +97,12 @@ pl:
         Bounce: Odbicie
         Flappy: Flappy Bird
         Jigsaw: Układanka
-        MazeStep: Maze Step Mode
-        Wordsearch: Wordsearch
-        Webapp: Webapp
-        ArtistEC: Artysta
-        TextMatch: Text Match
-        StudioEC: Play Lab
+        MazeStep: Tryb Kroczenia po Labiryncie
+        Wordsearch: WordSearch (Poszukiwanie słów)
+        Webapp: Webapp (aplikacje sieciowe)
+        ArtistEC: Artysta/Postać
+        TextMatch: Dopasowanie tekstu
+        StudioEC: Lab Gier
     trophy:
       name:
         Bronze: Brąz
@@ -114,7 +114,7 @@ pl:
         if: Blok jeśli
         if_else: blok jeśli-w przeciwnym razie
         loop_times: Blok powtórz razy
-        loop_until: Blok powtórz aż
+        loop_until: Blok powtarzaj aż
         loop_while: Blok dopóki
         loop_for: Blok licznika
         function: Funkcje
@@ -129,8 +129,7 @@ pl:
         maze_2_5: Istnieje sposób, abym dostał się do zielonej świnki przy użyciu zaledwie 2 bloków. Czy potrafisz to zrobić?
         maze_2_6: Spróbuj doprowadzić mnie do tego zielonego intruza używając tylko trzech bloków.
         maze_2_7: Pomóż mi pozbyć się tej złej świnki przy użyciu jak najmniejszej liczby bloków. Spróbuj za pomocą więcej niż jednego bloku powtórz razy.
-        maze_2_8: |-
-          When a block is grey, that means you can't delete it. Solve this puzzle using the "repeat" block that repeats 3 times. Try putting these 3 blocks inside the grey "repeat" block: move, move, turn.
+        maze_2_8: 'Gdy blok jest szary, oznacza to, że nie można go usunąć. Rozwiąż tę łamigłówkę za pomocą bloku "powtórz", który powtarza 3 razy. Postaraj się umieścić w tym szarym bloku "powtórz" 3 bloki: przesuń, przesuń, skręć.'
         maze_2_9: 'OK, spróbuj użyć nowego bloku powtórz aż - będzie powtarzał, aż dorwę irytującą świnkę.'
         maze_2_10: 'OK, ostatni raz na próbę - czy potrafisz rozwiązać tę łamigłówkę używając jedynie 4 bloków?'
         maze_2_11: Droga osobo. Ja zombie. Ja głodny. Muszę... dostać się... do słonecznika... Czy potrafisz mnie tam przeprowadzić używając zaledwie 5 bloków?
@@ -231,94 +230,90 @@ pl:
         bounce_5: 'Mamy zamiar skierować piłkę lecącą w dół w kierunku paletki. Dołącz blok do bloku "kiedy piłka uderza paletkę", aby upewnić się, że piłka osiąga ostateczny cel.'
         bounce_6: 'Teraz ostateczny cel jest na górze. Musisz dołączyć bloki do obu bloków "kiedy piłka uderza", aby rozwiązać tę łamigłówkę.'
         bounce_7: 'Dołącz bloki do każdego z bloków "gdy". Odbijaj piłeczkę, aż osiągnie ostateczny cel.'
-        bounce_10: 'There is a now a goal at the top. Attach the "score point" and "score opponent point" blocks to the "when ball in goal" and "when ball misses paddle" blocks to make a game. See how many points you can score before your opponent scores twice.'
-        bounce_11: 'You can now attach blocks to the "when run" block. You have to attach the new "launch new ball" block in more than one place. Also, try changing the scene or the speed of the paddle and the ball and see how many points you can score before your opponent scores twice.'
-        bounce_12: "Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Finish to let friends try your game on their phones."
-        Custom_builder: 'Drag blocks from the toolbox to the workspace to draw the level you wish to create. Press "Run" when you are ready.'
-        flappy_1: 'Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.'
-        flappy_2: |-
-          Now we've added some ground.  Attach a block to the "when hit the ground" block.  Your code needs to 'END GAME' when Flappy crashes.
-        flappy_3: 'The "when run" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target.'
-        flappy_4: |-
-          Flappy will fly through obstacles unless you write code to make him crash. Attach a block to the "when hit an obstacle" block. Your code needs to 'END GAME' when Flappy crashes into the first set of pipes.
-        flappy_5: |-
-          Let's add a scoreboard, and count points when Flappy makes it past obstacles. Add to the "when pass an obstacle" block, and then score a point by flying Flappy through the first set of pipes.
-        flappy_6: See if you can still score a point after making Flappy flap either a smaller or larger amount.
-        flappy_7: 'Next, try changing the scene by attaching another block to the "when run" block.'
-        flappy_8: You can set visuals anytime, not just when the game starts. Try setting a RANDOM scene when other events happen, for example, when passing an obstacle.
-        flappy_9: To mix things up, when hitting an obstacle or the ground, instead of ending the game try setting the score back to 0.
-        flappy_11: "Create your own Flappy game. You can change all the visuals and all the rules, even the gravity. When you're done, click Finish to let friends try your game on their phones."
-        flappy_k1_1: Play Flappy
-        flappy_k1_2: 'Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.'
-        flappy_k1_3: |-
-          Now we've added some ground.  Attach a block to the "when hit the ground" block.  Your code needs to 'END GAME' when Flappy crashes.
-        flappy_k1_4: 'The "when run" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target.'
-        flappy_k1_5: |-
-          Flappy will fly through obstacles unless you write code to make him crash. Attach a block to the "when hit an obstacle" block. Your code needs to 'END GAME' when Flappy crashes into the first set of pipes.
-        flappy_k1_6: |-
-          Let's add a scoreboard, and count points when Flappy makes it past obstacles. Add to the "when pass an obstacle" block, and then score a point by flying Flappy through the first set of pipes.
-        flappy_k1_7: See if you can score multiple points for making it past an obstacle
-        flappy_k1_8: 'Next, try changing the scene by attaching another block to the "when run" block.'
-        flappy_k1_9: 'Try changing the player by attaching a "set player" block to the "when run" block.'
-        jigsaw_1: Click the block
-        jigsaw_2: Drag the block to the target
-        jigsaw_3: Arrange the blocks to form the image
-        jigsaw_4: Arrange the blocks to form the image
-        jigsaw_5: Arrange the blocks to form the image
-        jigsaw_6: Arrange the blocks to form the image
-        jigsaw_7: Arrange the blocks to form the image
-        jigsaw_8: Arrange the blocks to form the image
-        jigsaw_9: Arrange the blocks to form the image
-        jigsaw_10: Arrange the blocks to form the image
-        jigsaw_11: Arrange the blocks to form the image
-        jigsaw_12: Arrange the blocks to form the image
-        jigsaw_13: Fix the puzzle!
-        mazestep_1: Maze step description here
-        mazestep_2: Maze step description here
-        mazestep_3: Maze step description here
-        mazestep_4: Maze step description here
-        mazestep_5: Maze step description here
-        studio_c2_1: 'Can you make this dog say "hello world"?'
-        studio_c2_2: Can you make the dog say something and then have the cat say something afterwards?
-        studio_c2_3: Can you write a program to make this dog move to the cat?
-        studio_c2_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
-        studio_c2_5: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_c2_6: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
-        studio_c2_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
-        studio_c2_8: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c2_9: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
-        studio_c2_10: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
-        studio_c2_11: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
-        studio_c3_story_1: 'Can you make this dog say "hello world"?'
-        studio_c3_story_2: Can you make the dog say something and then have the cat say something afterwards?
-        studio_c3_story_3: Can you write a program to make this dog move to the cat?
-        studio_c3_story_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
-        studio_c3_story_5: Can you add a block to make the octopus happy?
-        studio_c3_story_6: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
-        studio_c3_game_1: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_c3_game_2: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
-        studio_c3_game_3: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
-        studio_c3_game_4: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c3_game_5: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
-        studio_c3_game_6: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
-        studio_c3_game_7: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
-        studio_playlab_1: 'Penguin wants to say "hello" - can you help him?'
-        studio_playlab_2: 'Cave Boy (actor 1) and Cave Girl (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
-        studio_playlab_3: Can you help Tennis Girl get to the flag?
-        studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor 2) and play a sound when he gets there?
-        studio_playlab_5: 'Can you help the Spacebot say "greetings earthlings" when it is clicked? Don’t forget to click it after you click Run'
-        studio_playlab_6: Can you help the Witch move around using the up/down/right/left arrow keys to get to all the magical fireballs?
-        studio_playlab_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help the wizard move right and left repeatedly?'
-        studio_playlab_8: Can you add a block to score a point and a block to play a sound when the unicorn runs into the wizard, and then move him with the arrows until you score?
-        studio_playlab_9: Set the background for this alien invasion and help the Spacebot get to the alien faster by changing its speed. Then move him with the arrow keys to get to the Spacebot and alert everyone else
-        studio_playlab_10: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
-        studio_full_sandbox: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
-        studio_k1_1: 'Can you make this dog say "hello world"?'
-        studio_k1_2: Can you make the dog say something and then have the cat say something afterwards?
-        studio_k1_3: Can you write a program to make this dog move to the cat?
-        studio_k1_4: 'Make the dog move to the cat and the cat say "hello" when he gets there.'
-        studio_k1_5: Can you add a block to make the octopus happy?
-        studio_k1_6: Create your own story! Move around the cat and dog, and make them say things.
+        bounce_10: 'Cel teraz jest u góry. Dołącz bloki "punkt wyniku" i "punkt wyniku przeciwnika" do bloków "kiedy piłka jest w bramce" i "kiedy piłka mija rakietkę", aby utworzyć grę. Zobacz, ile punktów zdobędziesz, zanim Twój przeciwnik zdobędzie dwa punkty.'
+        bounce_11: 'Możesz teraz dołączyć bloki do bloku "gdy w grze". Musisz dołączyć nowy blok "wypuść nową piłkę" w więcej niż w jednym miejscu. Również, spróbuj zmienić scenerię lub szybkość rakietki oraz piłki i zobacz, ile punktów zdobędziesz, zanim Twój przeciwnik zdobędzie dwa punkty.'
+        bounce_12: Utwórz własną grę Odbijanie. Możesz zmienić wszystkie efekty wizualne i zasady. Kiedy skończysz, kliknij przycisk Zakończ, aby Twoi znajomi mogli zagrać na swoich telefonach.
+        Custom_builder: 'Przeciągnij bloki z przybornika do obszaru roboczego, aby narysować poziom, który chcesz utworzyć. Naciśnij przycisk "Uruchom", gdy jesteś gotowy.'
+        flappy_1: |-
+          Dołącz blok do bloku "po kliknięciu", a następnie naciśnij przycisk "Uruchom". Kliknij lub dotknij ekranu, aby przesunąć Flappy'ego do miejsca docelowego.
+        flappy_2: 'Teraz dodaliśmy podłoże. Dołącz blok do bloku "kiedy spadnie na ziemię".  Twój kod powinien kończyć grę, gdy Flappy rozbija się.'
+        flappy_3: 'Blok "po uruchomieniu" pozwala uruchomić kod po uruchomieniu gry. Spróbuj ustawić poziom prędkości i pofrunąć do miejsca docelowego.'
+        flappy_4: 'Flappy poleci przez przeszkody chyba, że napiszesz kod, który spowoduje, że się rozbije. Dołącz blok do bloku "kiedy uderzy w przeszkodę". Twój kod powinien kończyć grę, gdy Flappy rozbija się na pierwszym zestawie rur.'
+        flappy_5: 'Dodajmy tablicę wyników i liczmy punkty, gdy Flappy mija przeszkody. Dodaj blok do bloku "kiedy minie przeszkodę", a następnie zdobądź punkt przelatując Flappym przez pierwsz zestaw rur.'
+        flappy_6: Zobacz, czy potrafisz zdobywać punkty, gdy Flappy fruwa na małą lub dużą wysokość.
+        flappy_7: 'Następnie, spróbuj zmienić scenę dołączając inny blok do bloku "po uruchomieniu".'
+        flappy_8: 'Efekty wizualne możesz ustawić w dowolnym momencie, nie tylko, gdy gra się zaczyna.  Spróbuj ustawić losową scenę, gdy dzieje się coś innego, na przykład, gdy Flappy mija przeszkodę.'
+        flappy_9: Można mieszać różne polecenia, po uderzeniu w przeszkodę lub w ziemię, zamiast kończyć grę, spróbujmy ustawić wynik z powrotem na 0.
+        flappy_11: "Utwórz swoją własną grę Flappy'ego. Możesz zmienić wszystkie efekty wizualne i wszystkie zasady, nawet przyciąganie. Kiedy skończysz, kliknij przycisk Zakończ, aby swoim znajomym udostępnić grę na telefony."
+        flappy_k1_1: Zagraj z Flappym
+        flappy_k1_2: |-
+          Dołącz blok do bloku "po kliknięciu", a następnie naciśnij przycisk "Uruchom". Kliknij lub dotknij ekranu, aby przesunąć Flappy'ego do miejsca docelowego.
+        flappy_k1_3: 'Teraz dodaliśmy podłoże. Dołącz blok do bloku "kiedy spadnie na ziemię".  Twój kod powinien kończyć grę, gdy Flappy rozbija się.'
+        flappy_k1_4: 'Blok "po uruchomieniu" pozwala uruchomić kod po uruchomieniu gry. Spróbuj ustawić poziom prędkości i pofrunąć do miejsca docelowego.'
+        flappy_k1_5: 'Flappy poleci przez przeszkody chyba, że napiszesz kod, który spowoduje, że się rozbije. Dołącz blok do bloku "kiedy uderzy w przeszkodę". Twój kod powinien kończyć grę, gdy Flappy rozbija się na pierwszym zestawie rur.'
+        flappy_k1_6: 'Dodajmy tablicę wyników i liczmy punkty, gdy Flappy mija przeszkody. Dodaj blok do bloku "kiedy minie przeszkodę", a następnie zdobądź punkt przelatując Flappym przez pierwszy zestaw rur.'
+        flappy_k1_7: Zobacz, czy możesz zdobyć wiele punktów przechodząc kilka przeszkód
+        flappy_k1_8: 'Następnie, spróbuj zmienić scenę dołączając inny blok do bloku "po uruchomieniu".'
+        flappy_k1_9: 'Spróbuj zmienić gracza dołączając blok "ustaw gracza" do bloku "po uruchomieniu".'
+        jigsaw_1: Kliknij blok
+        jigsaw_2: Przeciągnij blok do miejsce docelowego
+        jigsaw_3: Ułóż bloki, by utworzyć obrazek
+        jigsaw_4: Ułóż bloki, by utworzyć obrazek
+        jigsaw_5: Ułóż bloki, by utworzyć obrazek
+        jigsaw_6: Ułóż bloki, by utworzyć obrazek
+        jigsaw_7: Ułóż bloki, by utworzyć obrazek
+        jigsaw_8: Ułóż bloki, by utworzyć obrazek
+        jigsaw_9: Ułóż bloki, by utworzyć obrazek
+        jigsaw_10: Ułóż bloki, by utworzyć obrazek
+        jigsaw_11: Ułóż bloki, by utworzyć obrazek
+        jigsaw_12: Ułóż bloki, by utworzyć obrazek
+        jigsaw_13: Rozwiązać zagadkę!
+        mazestep_1: Opis kroku w labiryncie jest tutaj
+        mazestep_2: Opis kroku w labiryncie jest tutaj
+        mazestep_3: Opis kroku w labiryncie jest tutaj
+        mazestep_4: Opis kroku w labiryncie jest tutaj
+        mazestep_5: Opis kroku w labiryncie jest tutaj
+        studio_c2_1: 'Czy mógłbyś spowodować, by ten pies powiedział "hello world"?'
+        studio_c2_2: Czy mógłbyś spowodować, by ten pies coś powiedział, a następnie by kot coś powiedział po nim?
+        studio_c2_3: Czy mógłbyś napisać program, który spowoduje, że ten pies przesunie się do kota?
+        studio_c2_4: 'Czy mógłbyś napisać program, który sprawia, że pies porusza się w kierunku kota i powoduje, że kot mówi "hello", gdy pies dochodzi do niego?'
+        studio_c2_5: 'Czy mógłbyś napisać program, który powoduje, że ośmiornica mówi "hello", po kliknięciu na niej?'
+        studio_c2_6: Czy mógłbyś napisać program, który powoduje, że pingwin porusza się za pomocą przycisków w górę / w dół / w lewo/w prawo, by uderzyć we wszystkie cele?
+        studio_c2_7: 'Blok "powtarzaj zawsze" umożliwia wykonywanie kodu bez przerwy. Czy mógłbyś dołączyć bloki powodujące, że ten dinozaur porusza się w górę i w dół w nieskończoność?'
+        studio_c2_8: 'Czy mógłbyś spowodować, że Pingwin mówi "Och!" i gra dźwięk "hit", gdy wpadnie na dinozaura, a następnie przenieś go za pomocą strzałek, aby się to stało?'
+        studio_c2_9: Czy mógłbyś dodać blok, aby liczyć punkty, gdy pingwin wpada na ośmiornicę, a następnie przenosić go za pomocą strzałek, aż zdobędziesz punkt?
+        studio_c2_10: Czy mógłbyś dodać bloki do zmiany tło i prędkość pingwina, a następnie poruszać nim za pomocą klawiszy ze strzałkami, aż osiągniesz wynik?
+        studio_c2_11: Utwórz własną opowieść. Kiedy skończysz, kliknij przycisk Zakończ, aby umożliwić znajomym wypróbowanie Twojej opowieści na swoich telefonach.
+        studio_c3_story_1: 'Czy mógłbyś spowodować, by ten pies powiedział "hello world"?'
+        studio_c3_story_2: Czy mógłbyś spowodować, by pies coś powiedział, a następnie by kot, coś powiedział?
+        studio_c3_story_3: Czy mógłbyś napisać program, który spowoduje, że ten pies przesunie się do kota?
+        studio_c3_story_4: 'Czy mógłbyś napisać program, który sprawia, że pies porusza się w kierunku kota i powoduje, że kot mówi "hello", gdy pies dochodzi do niego?'
+        studio_c3_story_5: Czy mógłbyś dodać blok powodujący, że ośmiornica poczuje się szczęśliwie?
+        studio_c3_story_6: Utwórz własną opowieść. Kiedy skończysz, kliknij przycisk Zakończ, aby umożliwić znajomym wypróbowanie Twojej opowieści na swoich telefonach.
+        studio_c3_game_1: 'Czy mógłbyś napisać program, który powoduje, że ośmiornica mówi "hello", po kliknięciu na niej?'
+        studio_c3_game_2: Czy mógłbyś napisać program, który powoduje, że pingwin porusza się za pomocą przycisków w górę /w dół /w lewo/w prawo, by uderzyć we wszystkie cele?
+        studio_c3_game_3: 'Blok "powtarzaj zawsze" umożliwia wykonywanie kodu bez przerwy. Czy mógłbyś dołączyć bloki powodujące, że ten dinozaur porusza się w górę i w dół w nieskończoność?'
+        studio_c3_game_4: 'Czy mógłbyś spowodować, że Pingwin mówi "Och!" i gra dźwięk "hit", gdy wpadnie na dinozaura, następnie przenieś go za pomocą strzałek, aby się to stało?'
+        studio_c3_game_5: Czy mógłbyś dodać blok, aby liczyć punkty, gdy pingwin wpada na ośmiornicę, a następnie przenosić go za pomocą strzałek, aż zdobędziesz punkt?
+        studio_c3_game_6: Czy mógłbyś dodać bloki do zmiany tła i prędkości pingwina, a następnie poruszać nim za pomocą klawiszy ze strzałkami, aż osiągniesz wynik?
+        studio_c3_game_7: Utwórz własną grę. Kiedy skończysz, kliknij przycisk Zakończ, aby umożliwić znajomym wypróbowanie gry na swoich telefonach.
+        studio_playlab_1: 'Pingwin chce powiedzieć "hello" - czy możesz mu pomóc?'
+        studio_playlab_2: 'Chłopiec z jaskini (aktor 1) i dziewczyna z jaskini (aktor 2) chcieliby powiedzieć "hello" do siebie. Czy mógłbyś im pomóc wykorzystując dwa razy blok "powiedz"?'
+        studio_playlab_3: Czy mógłbyś pomóc tenisistce dostać się do flagi?
+        studio_playlab_4: Czy mógłbyś pomóc tenisiście (aktor 1) dotrzeć do tenisistki (aktor 2) i odtworzyć dźwięk, gdy tam dotrze?
+        studio_playlab_5: 'Czy mógłbyś pomóc Spacebot powiedzieć "greetings earthlings" (pozdrowienia dla Ziemian) po kliknięciu na nim? Nie zapomnij kliknąć na nim, po kliknięciu przycisku Uruchom'
+        studio_playlab_6: Czy mógłbyś pomóc czarownicy (Witch) poruszać za pomocą klawiszy strzałek w górę/w dół/w prawo/w lewo, aby dostać wszystkie magiczne kule ogniste?
+        studio_playlab_7: 'Blok "powtarzaj zawsze" umożliwia wykonywanie kodu bez przerwy. Czy mógłbyś dołączyć do niego bloki powodujące, że  kreatora porusza się w górę i w dół bez przerwy?'
+        studio_playlab_8: Czy mógłbyś dodać blok zdobycia punktu i blok do odtwarzania dźwięku, gdy jednorożec wpada na Kreatora, następnie przenoś go za pomocą strzałek aż zdobędziesz punkt?
+        studio_playlab_9: Ustaw tło dla tej inwazji obcych i pomóż Spacebot dotrzeć do obcych szybciej zmieniając jego prędkość. Następnie przenoś go za pomocą klawiszy strzałek, aby dostać się do Spacebot i zaalarmować wszystkich pozostałych
+        studio_playlab_10: Utwórz własną grę. Kiedy skończysz, kliknij przycisk Zakończ, aby umożliwić znajomym wypróbowanie gry na swoich telefonach.
+        studio_full_sandbox: Utwórz własną grę. Kiedy skończysz, kliknij przycisk Zakończ, aby umożliwić znajomym wypróbowanie gry na swoich telefonach.
+        studio_k1_1: 'Czy mógłbyś spowodować, aby ten pies powiedział "hello world"?'
+        studio_k1_2: Czy mógłbyś spowodować, aby ten pies coś powiedzieć, a następnie, by kot coś powiedział po nim?
+        studio_k1_3: Czy mógłbyś napisać program, który spowoduje, że ten pies przesunie się do kota?
+        studio_k1_4: 'Spowoduj, że pies przesuwa się w kierunku kota i kot mówi "hello", gdy dociera do niego pies.'
+        studio_k1_5: Czy mógłbyś dodać blok powodujący, że ośmiornica poczuje się szczęśliwa?
+        studio_k1_6: Utwórz własną historię! Przesuwaj dookoła kota i psa i powoduj, że coś mówią.
         maze_wordsearch_k_1: Move me to spell the word EAST
         maze_wordsearch_k_2: Move me to spell the word SOUTH
         maze_wordsearch_k_3: Move me to spell the word WEST
@@ -328,11 +323,11 @@ pl:
         maze_wordsearch_k_13: Move me one way, then another to spell the word DEBUG
         maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
-        maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
-        webapp_ec_simple: Create your web app by using createHtmlBlock.
-        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColor" block.'
-        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "penWidth" block. Have fun!'
-        studio_ec_sandbox: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
+        maze_wordsearch_k_20: To jest test! Przenieś mnie w jedną stronę, a później w drugą by wypowiedzieć słowo STORY
+        webapp_ec_simple: Utwórz swoją aplikację sieciową przy użyciu createHtmlBlock.
+        turtle_ec_1_2: 'Teraz narysuj kwadrat. Uwaga: użyj ulubionego koloru, wybierając go w nowym bloku "kolor pisaka".'
+        turtle_ec_1_10: 'Wykonałeś to! Teraz narysuj cokolwiek. Niektóre zabawne pomysły: pałka, śnieżynka lub spirala. Wypróbuj również nowy blok "ustaw grubość pisaka". Baw się dobrze!'
+        studio_ec_sandbox: Utwórz własną grę. Kiedy skończysz, kliknij przycisk Zakończ, aby umożliwić znajomym wypróbowanie gry na swoich telefonach.
     levelbuilder:
       frozen line:
         instructions: Hi! jestem Elsa z Arendelle. Proszę pomóż mi utworzyć pojedynczą linię.
@@ -385,34 +380,33 @@ pl:
       scrat 20:
         instructions: Czy możesz dodać tylko 3 bloki, aby pomóc mi rozwiązać bardziej skomplikowany labirynt? Jeśli zrobisz to dobrze, to mogę przejść każdą krętą drogę bez względu na jej długość. Pospiesz się! Lód się topi!
       Standalone_Artist_1:
-        instructions: "Welcome to Artist! First off, let's try to make a simple square using the turn right block and move forward block. Each side should be 100 pixels long."
+        instructions: 'Zapraszamy do Artysty! Najpierw, spróbujmy wykonać kwadrat używając bloków "obróć w prawo" i "przesuń do przodu". Każdy bok powinien mieć długość 100 pikseli.'
       Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel long sides.
+        instructions: Narysuj ten diament z kontami 120 i 60 stopni i długościami boków 150 pikseli.
       Standalone_Artist_3:
-        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree turns?
+        instructions: Czy potrafisz narysować ten sześciokąt z bokami 100 pikseli i obrotami 60 stopni?
       Standalone_Artist_4:
-        instructions: "Now you've got a new block to play with, the loop. This will repeat a set of commands. What happens if you loop these commands 6 times?"
+        instructions: Teraz masz do dyspozycji nowy blok, pętlę. Będzie powtarzał zestaw poleceń. Co się stanie, jeśli te polecenia zostaną wykonane w pętli 6 razy?
       Standalone_Artist_5:
-        instructions: How many times do you need to loop this diamond to draw the flower?
+        instructions: Ile razy musisz powtórzyć ten diament, by narysować kwiat?
       Standalone_Artist_5.5:
-        instructions: "Notice how we simplified the diamond code by turning it into a loop. You can loop that whole sequence 12 times to draw the flower. Hint: You'll need to turn 30 degrees after your diamond loop so you don't keep drawing over the same diamond."
+        instructions: 'Zwróć uwagę, jak uprościliśmy kod diamentu wykorzystując pętlę. Możesz teraz powtórzyć całę tę sekwencję 12 razy, aby narysować kwiat. Wskazówka: Musisz wykonać obrót o 30 stopni po każdym diamencie, by nie rysować cały czas tego samego diamentu.'
       Standalone_Artist_6:
-        instructions: 'Loop this hexagon code 6 times to create the design. How many degrees will you need to turn each time? Hint: divide the number of degrees in a circle by the number of times you are looping.'
+        instructions: 'Wykonaj ten sześciokąt w pętli 6 razy, aby utworzyć wzór. O ile stopni będzie trzeba wykonać obrót za każdym razem? Wskazówka: podzielić liczbę stopni w okręgu przez ile razy jest wykonywana pętla.'
       Standalone_Artist_7:
-        instructions: 'A function is another programming tool to help you avoid repeating yourself. This function draws a flower, so you can use it any time you want to draw a flower. Use this and the new jump block to draw these flowers. Hint: The flowers are 150 pixels apart'
+        instructions: 'Funkcja jest kolejnym narzędziem programowania, które pomaga unikać powtarzania się. Ta funkcja rysuje kwiat, możesz więc użyć jej za każdym razem, gdy chcesz narysować kwiat. Użyj funkcji i nowego bloku skoku, by narysować te kwiaty. Wskazówka: Kwiaty są oddalone od siebie o 150 pikseli'
       Standalone_Artist_8:
-        instructions: |-
-          Here's a function called "Draw a shape" that we've programmed to draw hexagons. Run the code to see what it does and then experiment with the function to see what happens. Can you make it draw a pattern of squares, triangles, or octagons?
+        instructions: 'Tutaj jest funkcja o nazwie "Rysuj kształt", którą zaprogramowaliśmy, by rysować sześciokąty. Uruchom kod, aby zobaczyć, co robi, a następnie eksperymentuj z tą funkcją, aby zobaczyć co się dzieje. Czy mógłbyś spowodować, by rysowała wzory złożone z kwadratów, trójkątów lub ośmiokątów?'
       Standalone_Artist_9:
-        instructions: "Now go ahead and make whatever picture you'd like! You've even got an empty function that you can make do whatever you want!"
+        instructions: Teraz idź dalej i twórz obrazki, jakie chcesz! Masz nawet pustą funkcja, którą możesz wykorzystać, by robiła, co chcesz!
     video:
       name:
         maze_intro: 'Labirynt - wprowadzenie'
         artist_intro: 'Artysta - wprowadzenie'
         farmer_intro: 'Rolnik - wprowadzenie'
-        flappy_intro: Flappy Intro
+        flappy_intro: Wprowadzenie do Flappy
         loop_times: Blok powtórz razy
-        loop_until: Blok powtórz aż
+        loop_until: Blok powtarzaj aż
         if: Blok jeśli
         if_else: Blok jeśli-w przeciwnym razie
         if_else_scrat: Blok jeśli-w przeciwnym razie
@@ -421,22 +415,22 @@ pl:
         loop_for: Blok licznika
         parameters: Funkcje z parametrami
         hoc_wrapup: Wrapup Godziny Kodowania (Hour of Code)
-        Unplug1: What is CS?
+        Unplug1: Co to jest CS (informatyka)?
         Unplug2: Myślenie komputacyjne
         Unplug3: Programowanie na papierze milimetrowym
         Unplug4: Algorytmy
         Unplug5: Funkcje
         Unplug6: Warunkowe
-        Unplug7: Songwriting
+        Unplug7: Pisanie piosenek
         Unplug8: Abstrakcja
-        Unplug9: Relay programming
+        Unplug9: Programowanie przekaźnika
         Unplug10: Internet
         Unplug11: Podsumowanie
-        C1_happy_maps_unplugged: Happy Maps
-        C1_moveitmoveit_unplugged: Move It, Move It
-        C1_bigevent_unplugged: The Big Event
-        C1_getting_loopy: Getting Loopy
-        C1_pair_programming: Pair Programming
+        C1_happy_maps_unplugged: Szczęśliwe Mapy (Happy Maps)
+        C1_moveitmoveit_unplugged: Przenieść go, przenieść go
+        C1_bigevent_unplugged: Wielkie wydarzenie
+        C1_getting_loopy: Dostać Loopy
+        C1_pair_programming: Programowanie w parach
         C1_maze_intro_sequencing: Maze Sequencing Intro
         C1_maze_debugging: Maze Debugging
         C1_bee_level_intro: 'Bee Level - Intro'
@@ -445,8 +439,8 @@ pl:
         C1_zuck_repeat_loop: Maze Loops
         C1_bee_loops: Bee Loops
         C1_maze_loops: Maze Loops
-        C1_playlab_storytelling: 'Play Lab - Create a Story'
-        C1_planting_seed: Planting a Seed
+        C1_playlab_storytelling: 'Play Lab - Utwórz opowieść'
+        C1_planting_seed: Zasadzenie nasiona
         C1_building_foundation: Building a Foundation
         C1_going_places_safely: Going Places Safely
         C2_maze_intro: 'Labirynt - wprowadzenie'
@@ -457,65 +451,81 @@ pl:
         C2_bee_loops: Bee Loops
         C2_bee_debugging: Bee Debugging
         C2_bee_conditionals: Bee Conditionals
-        C2_playlab_createstory: 'Play Lab - Create a Story'
+        C2_playlab_createstory: 'Play Lab - Utwórz opowieść'
         C2_graph_paper: Programowanie na papierze milimetrowym
         C2_conditionals_with_cards: Warunkowe
         C2_binary_bracelets: Binary Bracelets
         C2_relay_programming: Programowanie przekaźnika
-        C2_paper_airplanes: Paper Airplanes
+        C2_paper_airplanes: Samoloty z papieru
         C2_digital_footprint: Twój cyfrowy ślad
-        C3_maze_level_4: Maze Loops
+        C3_maze_level_4: Pętle w labiryncie
         C3_artist_intro: 'Artysta - wprowadzenie'
-        C3_artist_functions: Artist Functions
-        C3_bee_functions: Bee Functions
+        C3_artist_functions: Funkcje Artysty
+        C3_bee_functions: Funkcje Pszczoły
         C3_bee_conditionals: Bee Conditionals
         C3_maze_conditionals: Maze Conditionals
-        C3_artist_nested_loops: Nested Loops
-        C3_farmer_while: While Loops
-        C3_bee_nested_loops: Nested Loops
-        C3_bee_debugging: Bee Debugging
+        C3_artist_nested_loops: 'Zagnieżdżające się  pętle'
+        C3_farmer_while: Pętle Dopóki (While)
+        C3_bee_nested_loops: 'Zagnieżdżające się  pętle'
+        C3_bee_debugging: Debugowanie Pszczoły
         C3_bounce: Odbicie
-        C3_playlab_create_game: 'Play Lab - Create a Game'
+        C3_playlab_create_game: 'Play Lab - Utwórz grę'
         C3_computational_thinking: Myślenie komputacyjne
-        C3_dice_race: Dice Race
+        C3_dice_race: Wyścig w kości
         C3_internet: Internet
         C3_crowdsourcing: Crowdsourcing
-        C3_functional_suncatchers: Functional Suncatchers
-        C3_songwriting_with_parameters: Songwriting With Parameters
-        C4_artist_math: Programming the Artist with Math
-        C4_create_functions: Creating Functions
-        C4_edit_functions: Editing Functions
-        C4_for_loops: For Loops
-        C4_variables: Zmienne
-        frozen_intro: Hour of Code Intro
-        frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
+        C3_functional_suncatchers: Funkcjonalne Suncatchers
+        C3_songwriting_with_parameters: Pisanie Piosenek z parametrami
+        C4_intro: Wstęp
+        C4_bee_conditional: Bee Conditionals
+        C4_variables_artist: 'Zmienne - Artysta'
+        C4_variables_playlab: 'Zmienne - Play Lab'
+        C4_for_loops: Pętle dla (for)
+        C4_math_artist: Programowanie Artysty z pomocą matematyki
+        C4_function_edit: Edytowanie Funkcji
+        C4_function_create: Tworzenie Funkcji
+        C4_function_parameters: Funkcje z parametrami
+        C4_conditionals: Warunkowe
+        C4_unplugged_algorithms: Algorytmy z Tangramami
+        C4_unplugged_madlibs: Mad Libs
+        C4_unplugged_variables: Zmienne w Kopertach
+        C4_unplugged_forloops: Pętle dla (for)
+        C4_unplugged_parameters: Songwriting with Parameters
+        C4_unplugged_binary: Binarny
+        frozen_intro: Wprowadzenie do Godziny Kodowania (Hour of Code)
+        frozen_loops: Wprowadzenie do Pętli
+        frozen_functions: Wprowadzenie do Funkcji
+        playlab_intro: Wprowadzenie do Play Lab
+        playlab_events: Zdarzenia Play Gry Lab
+        playlab_repeat_forever: Play Lab Repeat Forever
     callout:
       text:
         drag_blocks: 'Drag a "move" block and snap it below the other block'
-        run: 'Hit "Run" to try your program'
+        run: 'Kliknij na "Uruchom", aby uruchomić program'
         watch_again: Kliknij tutaj, aby obejrzeć film ponownie
-        gray_block_explanation: "Blocks that are grey can't be deleted. Can you solve the puzzle anyway?"
+        gray_block_explanation: Nie można usunąć bloków, które są szare. Czy mógłbyś jakkolwiek rozwiązać tę łamigłówkę?
         show_code_explanation: Kliknij tutaj, aby zobaczyć kod programu, który tworzysz
-        instructions_repeat_explanation: The instructions for each puzzle are repeated here
-        category_explanation: "You have all the same blocks but they've now been arranged in categories"
+        instructions_repeat_explanation: Instrukcje dla każdej łamigłówki są powtarzane tutaj
+        category_explanation: Masz te same bloki, ale teraz są one ułożone w kategorie
         set_sprite_image: 'Attach a "set actor to image" block to the "when story starts" block to enable an actor for this story'
         studio_say_text: Type what you want your actor to say within these quotes
         jigsaw_click: Kliknij ten blok!
         move_elsa_forward: 'Drag a "Move Forward" block and snap it below the "When Run" block to make Elsa move forward'
         turn_elsa: 'Use the "Turn" block to make Elsa turn. The number in the drop-down determines how much Elsa turns'
-        replace_questions: 'Use the drop-down to replace "???" with a number'
-        replace_questions_degree: 'Use the drop-down to replace "???" with the correct degree to turn'
+        replace_questions: 'Użyj rozwijanego menu, aby zastąpić "???" przez liczbę'
+        replace_questions_degree: 'Użyj rozwijanego menu, aby zastąpić "???" przez prawidłową liczbę stopni obrotu'
         repeat_blocks: 'Use the "Repeat" block and wrap it around the blocks in the workspace'
+        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the workspace
+        repeat_blocks_2: '(2) Move the "Repeat" block here, and place the gray blocks inside'
         snowflake_dropdown: Use this drop-down to create different snowflakes!
         degrees_per_side: Divide 360 by the number of sides to get the size of each angle in degrees.
         set_sides: 'Use this block to set "sides" to the number needed to complete the puzzle.'
         set_length: 'Use this block to set "length" to the correct value.'
-        which_equation: 'Which equation makes each side shorter for shapes with more sides?  Try each equation!'
+        which_equation: Which equation makes each side shorter for shapes with more sides?
         get_nectar: 'Use the new "get nectar" block.'
         actions_category: 'The tool box got a new look! The "Actions" blocks are in here now.'
         draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
-        edit_function: Use this button to edit the function.
+        edit_function: Kliknij tutaj, aby edytować swoją funkcję.
         create_function: 'Click here to open the "Functions" flyout, then click the "Create a Function" button.'
         house_hint: "It's ok if the picture doesn't look like a house yet. We will fix it in the next puzzle."
         edit_draw_square: Use this button to edit the function and add the loop.
@@ -535,3 +545,23 @@ pl:
         playlab_add_move: 'Add "move" blocks inside this repeat block'
         playlab_add_score: Add score blocks here
         playlab_add_blocks: Add your blocks here
+        set_variable: Drag a number block here to set your variable
+        place_variable: Drag your variable inside this block
+        bee_for_loop: Drag the largest number of nectar you want the bee to collect here
+        place_counter_variable: Drag your counter variable inside this block
+        function_editor_draw_square: 'This is your function definition. These blocks run everytime you use the "draw a square" block'
+        change_here: Popraw tutaj
+        write_draw_square_function: Przeciągnij tutaj bloki z przybornika, które narysują kwadrat
+        write_draw_triangle_function: Drag blocks from the toolbox into here that draw a triangle
+        edit_add_parameter: Click edit to add a parameter in your function
+        add_and_drag_parameter: Write in the name of your parameter here, click add, and then drag it into your function definition
+        fill_in_actor: Fill in the ??? with numbers that correspond to each actor (1, 2, and 3)
+        repeat: Put blocks inside the loop to repeat commands
+        if_bee_nectar: 'Use the "if" block to decide if the bee should get nectar'
+        if_else_bee: |-
+          Use the "if/else" block so that the Bee gets nectar from a flower, and makes honey if it's not a flower
+        repeat_full_circle: Enter in the number of times the zombie has to move to make a full circle
+        place_length_variable: Drag the length variable here to replace the question marks
+        arrows_move_actor: Use the arrows to move the actor
+        right_arrow_fireball: Use the right arrow to shoot fireballs
+        name_function: Write the name of your function here

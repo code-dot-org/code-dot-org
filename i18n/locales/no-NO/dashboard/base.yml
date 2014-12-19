@@ -36,6 +36,7 @@
   of: av
   more: MER
   less: MINDRE
+  beta: beta
   try_hoc: 'Prøv Hour of Code (kodetimen), klikk her >> '
   try_k8intro: Prøv vårt introduksjonskurs i informatikk for elever opp til 8. klasse (15-25 timer)
   k8intro: Introduksjonskurs i informatikk for elever opp til 8. klasse (15-25 timer)
@@ -336,8 +337,8 @@
     test_videos_help: Test vår nye videospiller på skolen din
     try_beta_courses: Nyhet! Prøv våre betakurs for barneskoleelever
     use_as_teacher: Bruk denne nettsiden som lærer
-    heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
-    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
+    heading_hoc2014: '<h2>Kodetimen for</h2><h1>Alle aldre</h1>'
+    heading_elementary: '<h2>20-timers kurs for</h2><h1>Nybegynnere (alle aldre)</h1>'
     heading_apps: '<h2>Moro for</h2><h1>Alle</h1>'
     heading_legacy: '<h2>Våre generelle kurs for</h2><h1>Alle aldre</h1>'
     your_gallery: Galleri
@@ -350,8 +351,8 @@
     teacher: Lærer
   footer:
     help_from_html: Teknikere fra Google, Microsoft, Facebook og Twitter bidro til å lage denne guiden.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
-    powered_by_aws: Powered by Amazon Web Services
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Alle rettigheter reservert.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Alle rettigheter reservert.'
+    powered_by_aws: Drevet av Amazon Web Services
     feedback: Gi tilbakemelding
     translate: Hjelpe oss med å oversette til ditt språk
     support: Brukerstøtte
@@ -427,9 +428,9 @@
       try_frozen: Kunstner med Anna og Elsa fra Frost
     gallery:
       title: Galleri
-      body: View a gallery of app and artist images created by our users
+      body: 'Se et galleri av app- og artist-bilder laget av våre brukere'
     frozen:
-      title: Frozen
+      title: Frost
   gallery:
     students_drew_these_with_code: Elever tegnet disse ved å kode.
     students_made_these_with_code: Elever laget disse ved å kode.
@@ -440,8 +441,8 @@
     caption_by_name_age: 'av %{name}, %{age} år'
     caption_time_ago: '%{time_ago} siden'
     header: Galleri
-    header_playlab: Play Lab
-    header_artist: Artist
+    header_playlab: Spill-Lab
+    header_artist: Kunstner
   landing:
     prerelease: "Dette kurset er i <span class='betatext'> beta</span>.  Det betyr at det ikke er den endelige versjonen av kurset, men at det blir endret når vi får tilbakemeldinger og forbedringer er laget."
     prerelease_hoc2014: "Denne veiledningen er i <span class='betatext'> beta</span>.  Den vil kunne endres ettersom vi mottar tilbakemeldinger og gjør forbedringer."
@@ -508,3 +509,7 @@
     completed_too_many_blocks: fullført, for mange blokker
     completed_perfect: Perfekt fulført
     furthest_level_attempted: fremste nivå forsøkt
+  studio:
+    courses_working_on: "Courses you're working on"
+    completed_courses: Completed courses
+    all_courses: All courses

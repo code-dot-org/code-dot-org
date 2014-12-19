@@ -547,72 +547,75 @@
           یک مربع بکشیم که از بلوک های کمتری استفاده کنیم . چند بار (؟؟؟) باید بلوک
           داخل بلوک تکرار را ، تکرار کنیم تا یک مربع ساخته شود ؟
       frozen square loop 3x:
-        instructions: Let's create three squares, turning after each square. Be sure
-          to turn by 120 degrees before each new square.
+        instructions: 'حالا بیایید سه تا مربع بسازیم که هر کدام نسبت به دیگری می چرخد
+          . مطمئن بشید که هر مربع 120 درجه نسبت به مربع جدید می چرخد . '
       frozen square snowflake:
-        instructions: Can you create a snowflake using the "Repeat" block to make
-          a square 10 times, and the "Turn" block to turn 36 degrees between each
-          square?
+        instructions: 'می تونید یک دونه برف با استفاده از بلوک تکرار و چرخاندن ده
+          مربع و استفاده از بلوک چرخش 36 درجه بین هر مربع ، بسازید ؟ '
       frozen cross:
-        instructions: Use the "Repeat" block to create a plus sign. Did you notice
-          Elsa can move forward and backward?
+        instructions: 'از بلوک تکرار برای ساختن علامت بعلاوه استفاده کنید .آیا می
+          دونید که السا می تواند به جلو و عقب حرکت کند ؟  '
       frozen cross rotate:
-        instructions: Now try repeating it 10 times. How many degrees do you need
-          to turn between each line?
+        instructions: 'حالا 10 بار تکرارش کنید . بین هر خط چند درجه چرخش وجود دارد
+          ؟ '
       frozen cross rotate dense:
-        instructions: 'Let''s repeat it 90 times! How many times does 90 go into 360?
-          Hint: It''s a really small number.'
+        instructions: 'حالا بیایید 90 بار تکرارش کنیم ! چند درجه بین 90 خط چرخش وجود
+          دارد تا به 360 درجه برسد ؟ راهنمایی : عدد واقعا کوچکی هست .'
       frozen diamond:
-        instructions: 'Let''s create a parallelogram. It''s just like a square but
-          has different angles: 60 and 120 degree angles instead of 90 degree angles.'
+        instructions: 'بیایید یک متوازی الاضلاع بسازیم . خیلی شبیه مربع هست فقط زاویه
+          هایش با مربع فرق دارند : 60 و 120 درجه به جای 90 درجه '
       frozen diamond mini snowflake:
-        instructions: Did you know every snowflake is a different shape? Let's create
-          a new snowflake by using the "Repeat" block to repeat a parallelogram 4
-          times, turning right by 90 degrees between each parallelogram.
+        instructions: 'آیا می دانید هر دانه ی برف شکل متفاوتی دارد ؟ حالا بیایید با
+          استفاده از بلوک تکرار و 4 بار تکرار کردن شکل متوازی الاضلاع و چرخش 90 درجه
+          به سمت راست بین هر متوازی الاضلاع، یک دانه ی برف جدید بسازیم . '
       frozen diamond snowflake:
-        instructions: Now, let's create a new snowflake by using the repeat block
-          to repeat a parallelogram 10 times, turning right by 36 degrees between
-          each one.
+        instructions: حالا بیایید با استفاده از بلوک تکرار و 10 بار تکرار کردن متوازی
+          الاضلاع و چرخش 36 درجه بین هر متوازی الاضلاع ، یک دانه ی برف جدید بسازیم
+          .
       frozen circle:
-        instructions: A circle is a special shape. Can you figure out what number
-          to replace the question marks with to draw a circle?
+        instructions: دایره یک شکل خاص است . می توانید کشف کنید چه عددی را باید به
+          جای علامت سوال ها بگزاریم تا یک دایره رسم شود؟
       frozen circle function:
-        instructions: Use the new "Create a circle" block to create 10 overlapping
-          circles. Don't forget to jump forward between circles.
+        instructions: از بلوک جدید " دایره بکش " برای کشیدن 10 دایره ی روی هم افتاده
+          استفاده کن . فراموش نکن که از بلوک به "جلو بپر" بین دایره ها استفاده کنی
+          .
       frozen circle function in circle:
-        instructions: Now let's create 20 overlapping circles, turning 18 degrees
-          between each circle.
+        instructions: 'حالا بیایید 20 دایره ی روی هم با استفاده از چرخش 18 درجه بین
+          دایره ها ایجاد کنیم . '
       frozen circle function with parameter:
-        instructions: Here's a "Create circle" block that can make circles of different
-          sizes. Can you use this to create a small circle of size 5 and a larger
-          circle of size 10?
+        instructions: اینجا بلوک "دایره بکش " وجود دارد که می تواند دایره هایی با
+          اندازه ها متفاوت رسم کند . می توانی از آن برای رسم دایره ی کوچک با اندازه
+          ی 5 و دایره ی بزرگ با اندازه ی 10 استفاده کنی ؟
       frozen snowflower:
-        instructions: Intricate snow patterns can be created with very simple shapes.
-          Can you make a pattern by repeating 5 circles of size 5 and 5 circles of
-          size 10?
+        instructions: دانه برف های پیچیده را می توان با استفاده از اشکال شاده ایجاد
+          کرد . آیا می توانید این الگو را با استفاده از 5 دایره ی اندازه ی 5 و 5 دایره
+          ی اندازه ی 10 ایجاد کنید ؟
       frozen snowflake branch:
-        instructions: Try using the "Create a snowflake branch" block to create three
-          branches, which starts to look like a snowflake.
+        instructions: 'از بلوک " create a snowflake branch" (یک شاخه از دانه برف را
+          بکش ) برای ایجاد سه شاخه از دانه برف استفاده کن که به یک دانه ی برف شبیه
+          می شود . '
       frozen snowflake full:
-        instructions: Now let's repeat it 8 times to make a beautiful snowflake!
+        instructions: حالا بیایید برای ساختن یک دانه ی برف زیبا ، از آن 8 بار استفاده
+          کنیم !
       frozen freeplay:
-        instructions: You've officially become a master artist! Create a winter wonderland.
+        instructions: شما رسما یک هنرمند چیره دست شده اید ! یک سرزمین جادویی برفی
+          بسازید .
       scrat 16:
-        instructions: Acorn! Acorn! Acorn! Use an "if" block to get me there with
-          the fewest number of blocks.
+        instructions: بلوط ! بلوط ! بلوط ! از بلوک "if" ، برای استفاده از تعداد کمتری
+          بلوک ، استفاده کنید .
       scrat 17:
-        instructions: Ok, let's do that again for practice - this isn't very different,
-          but watch out for the wall!
+        instructions: خوب، اجازه دهید که دوباره برای تمرین--این بسیار متفاوت نیست،
+          اما سازمان دیده بان را برای دیوار!
       scrat 18:
-        instructions: The "If-else" blocks checks a condition, and then does one thing
-          OR another. To get me to the acorn try to use this new block.
+        instructions: بلوک "اگر دیگری" شرط را بررسی کرده و سپس یک چیز را نمی کند و
+          یا یکی دیگر. من بلوط سعی کنید برای استفاده از این بلوک های جدید.
       scrat 19:
         instructions: یک تمرین بیشتر با بلوک "if-else"، آیا می توانید با سعی خود جواب
           درست بدهی؟
       scrat 20:
-        instructions: Can you add just 3 blocks to help me solve a more complex maze?
-          If you do it right, I can walk any curvy path no matter the length. Hurry!
-          The ice is melting!
+        instructions: شما فقط 3 بلوک برای کمک به من حل ماز پیچیده تر اضافه کنم؟ اگر
+          شما آن را درست انجام دهید، می توانم هر مسیر منحنی هر طول راه رفتن. عجله
+          کن! قادر به ذوب یخ است!
       Standalone_Artist_1:
         instructions: Welcome to Artist! First off, let's try to make a simple square
           using the turn right block and move forward block. Each side should be 100
@@ -728,14 +731,28 @@
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
-        C4_artist_math: Programming the Artist with Math
-        C4_create_functions: Creating Functions
-        C4_edit_functions: Editing Functions
+        C4_intro: Introduction
+        C4_bee_conditional: شرطها زنبور عسل
+        C4_variables_artist: Variables - Artist
+        C4_variables_playlab: Variables - Play Lab
         C4_for_loops: برای حلقه
-        C4_variables: متغیرها
+        C4_math_artist: Programming the Artist with Math
+        C4_function_edit: Editing Functions
+        C4_function_create: Creating Functions
+        C4_function_parameters: معادله با پارامترها
+        C4_conditionals: مشروط
+        C4_unplugged_algorithms: Algorithms with Tangrams
+        C4_unplugged_madlibs: Mad Libs
+        C4_unplugged_variables: Variables in Envelopes
+        C4_unplugged_forloops: برای حلقه
+        C4_unplugged_parameters: Songwriting with Parameters
+        C4_unplugged_binary: Binary
         frozen_intro: Hour of Code Intro
         frozen_loops: Introduction to Loops
         frozen_functions: Introduction to Functions
+        playlab_intro: Introduction to Play Lab
+        playlab_events: Play Lab Events
+        playlab_repeat_forever: Play Lab Repeat Forever
     callout:
       text:
         drag_blocks: یک بلوک "حرکت" را بکش و آن را زیر بلوک دیگری بچسبان
@@ -761,6 +778,10 @@
           degree to turn
         repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
           workspace
+        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the
+          workspace
+        repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks
+          inside
         snowflake_dropdown: Use this drop-down to create different snowflakes!
         degrees_per_side: Divide 360 by the number of sides to get the size of each
           angle in degrees.
@@ -799,3 +820,31 @@
         playlab_add_move: Add "move" blocks inside this repeat block
         playlab_add_score: Add score blocks here
         playlab_add_blocks: Add your blocks here
+        set_variable: Drag a number block here to set your variable
+        place_variable: Drag your variable inside this block
+        bee_for_loop: Drag the largest number of nectar you want the bee to collect
+          here
+        place_counter_variable: Drag your counter variable inside this block
+        function_editor_draw_square: This is your function definition. These blocks
+          run everytime you use the "draw a square" block
+        change_here: Make your change here
+        write_draw_square_function: Drag blocks from the toolbox into here that draw
+          a square
+        write_draw_triangle_function: Drag blocks from the toolbox into here that
+          draw a triangle
+        edit_add_parameter: Click edit to add a parameter in your function
+        add_and_drag_parameter: Write in the name of your parameter here, click add,
+          and then drag it into your function definition
+        fill_in_actor: Fill in the ??? with numbers that correspond to each actor
+          (1, 2, and 3)
+        repeat: Put blocks inside the loop to repeat commands
+        if_bee_nectar: Use the "if" block to decide if the bee should get nectar
+        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower,
+          and makes honey if it's not a flower
+        repeat_full_circle: Enter in the number of times the zombie has to move to
+          make a full circle
+        place_length_variable: Drag the length variable here to replace the question
+          marks
+        arrows_move_actor: Use the arrows to move the actor
+        right_arrow_fireball: Use the right arrow to shoot fireballs
+        name_function: Write the name of your function here

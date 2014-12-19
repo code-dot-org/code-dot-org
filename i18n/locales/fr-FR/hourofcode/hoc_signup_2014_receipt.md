@@ -6,6 +6,12 @@ from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;
 
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
 
+<% if @country == 'ro' %>
+
+Va multumim pentru inregistrare. Daca aveti nevoie de ajutor sau aveti orice intrebare contactati Echipa Hour of Code Romania la adresa: hoc@adfaber.org.
+
+<% end %>
+
 # Merci de vous inscrire pour organiser une Heure de Code!
 
 **CHAQUE** organisateur d'une Heure de Code recevra 10GB de stockage sur Dropbox ou 10$ de crédit Skype en guise de remerciement. [Détails](http://<%= hostname %>/prizes)
@@ -18,30 +24,22 @@ Parlez de #HourOfCode à vos amis.
 
 ## 2. Demandez à toute votre école de participer à l'Heure de Code
 
-[Send this email](http://<%= hostname %>/resources#email) or give [this handout](http://<%= hostname %>/files/schools-handout.pdf) to your principal.
+[Envoyez cet email](http://<%= hostname %>/resources#email) ou transmettez [ce document](http://<%= hostname %>/files/schools-handout.pdf) à votre principal.
 
 <% end %>
 
-## 3. Ask your employer to get involved
+## 3. Demandez à votre employeur de s'impliquer
 
-[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf).
+[Envoyez cet e-mail](http://<%= hostname %>/resources#email) à votre supérieur ou PDG. Ou transmettez-leur [ce document](http://<%= hostname %>/resources/hoc-one-pager.pdf).
 
-## 4. Promote Hour of Code within your community
+## 4. Promouvez l'Heure du Code dans votre communauté
 
 Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
 
-## 5. Ask a local elected official to support the Hour of Code
+## 5. Demandez à un élu local de soutenir l'Heure de Code
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
-
-<% if @country == 'ro' %>
-
-Multumim ca ne-ai anuntat despre evenimentul tau! Anunta-ne daca doresti informatii suplimentare sau daca ai intrebari. Hai sa facem istorie impreuna!
-
-Echipa Hour of Code Romania hoc@adfaber.org
-
-<% end %>
+[ Envoyez cet e-mail](http://<%= hostname %>/ ressources #politicians) à votre maire, Conseil municipal ou Commission scolaire. Ou donnez-leur [ce document](http://<%= hostname %>/resources/hoc-one-pager.pdf) et invitez-les à visiter votre école.
 
 * * *
 
-Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](%= unsubscribe_link %).
+Code.org est un organisme sans but lucratif (501c3 aux États-Unis). Notre adresse est le 1301, 5e avenue, suite 1225, Seattle, WA, 98101. Vous n'aimez pas ces courriels? [Se désabonner](%= unsubscribe_link %).

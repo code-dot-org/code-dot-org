@@ -1,8 +1,8 @@
 {
-  "compute":"compute",
-  "equivalentExpression":"Try reordering your arguments to get exactly the same expression.",
-  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"compute\" block?",
-  "goal":"Goal:",
-  "reinfFeedbackMsg":"Here is your story! Continue working on it, or move on to the next puzzle!",
-  "yourExpression":"Your expression:"
+  "compute":"hitung",
+  "equivalentExpression":"Cobalah tata ulang argumen Anda untuk mendapatkan ekspresi yang sama persis.",
+  "extraTopBlocks":"Terdapat blok yang tidak terpasang. Apa maksud Anda ialah memasangnya pada blok \"hitung\"?",
+  "goal":"Tujuan:",
+  "reinfFeedbackMsg":"Inilah ceritamu! Lanjutkanlah, atau beralih ke teka-teki berikutnya!",
+  "yourExpression":"Ekspresimu:"
 }

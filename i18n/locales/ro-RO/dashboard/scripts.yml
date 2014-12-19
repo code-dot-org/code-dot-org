@@ -18,7 +18,7 @@ ro:
           Artists 2: Artiştii 2
           Spelling Bee: Test de Ortografie
           Spelling Bee not blockly: Test de Ortografie fără Blockly
-          "Bee 1: Intro": 'Ortografie 1: Introducere'
+          "Bee 1: Intro": 'albinaa 1: Introducere'
           "Maze 2: Loops": 'Labirint 2: Bucle'
           "Bee 2: Loops": 'Ortografie 2: Bucle'
           Multi & Match: 'Multiplică & Potriveşte'
@@ -41,8 +41,8 @@ ro:
           "Bee: Loops": 'Ortografie: Bucle'
           "Studio: Create a Story": 'Laboratorul de Joacă: Creează o Poveste'
           "Artist: Loops": 'Artist: Bucle'
-          description_audience: Ages 4+ (pre-readers)
-          description_short: Course 1 is designed for early readers.
+          description_audience: Vârstele 4 + (pre-cititori)
+          description_short: Curs 1 este proiectat pentru cititori timpurii
         course2:
           The Maze: Labirintul
           Suzi: Suzi
@@ -80,8 +80,8 @@ ro:
           "Artist: Sequence2": 'Artist: Secvenţă2'
           "Maze: Sequence2": 'Labirint: Secvenţă2'
           "Artist: Nested Loops": 'Artist: Bucle Adunate'
-          description_audience: 'Ages  6+ (reading required)'
-          description_short: Course 2 is designed for students who can read.
+          description_audience: Vârstele 6 + (lectură necesare)
+          description_short: Curs 2 este conceput pentru elevii care pot citi
         course3:
           The Maze: Labirintul
           "Studio: Create a Story": 'Laboratorul de Joacă: Creează o Poveste'
@@ -131,8 +131,8 @@ ro:
           "Bee: Debugging2": 'Ortografie: Depanare2'
           "Artist: Patterns": 'Artist: Modele'
           Songwriting: Compunând Cântece
-          description_audience: Ages 8+ (after Course 2)
-          description_short: Course 3 is a follow-up to Course 2.
+          description_audience: Vârstele 8 + (după cursul 2)
+          description_short: Curs 3 este un follow-up (urmare) la curs 2.
         msm:
           title: Matematică de Şcoală Mijlocie
           description: Lucrare în progres pentru Matematică de Şcoală Mijlocie.
@@ -201,7 +201,7 @@ ro:
           Maze: Labirint
           title: Oră de Cod
           description: Încercaţi bazele informaticii cu personaje din Angry Birds, Plants vs Zombies şi Scrat din Ice Age!
-          description_short: Try the basics of computer science with many fun characters!
+          description_short: Încercați elemente de bază în informatică cu multe personaje amuzante!
         frozen:
           title: Codați cu Anna și Elsa
           description: Să folosim cod pentru a ne alătura Annei şi Elsei care explorează magia şi frumuseţea de gheaţă. Veţi crea fulgi de zăpadă şi modele ca la patinaj şi veți face un paradis de iarnă, pe care apoi veți putea să-l partajați cu prietenii!
@@ -235,7 +235,7 @@ ro:
           Farmer Binary: Binar cu fermier
           Maze and Bee: Labirint şi albină
           Artist Binary: Binar cu artist
-          description_audience: Ages 10+ (after Course 3)
+          description_audience: Vârstele 10 + (după curs 3)
         Course4pre:
           description_short: O scurtă prezentare a conceptelor pentru elevii care nu au parcurs cursurile 2 și 3.
           Course 4 Prerequisite: Curs 4 Condiţii prealabile
@@ -281,3 +281,13 @@ ro:
           description: O selecție din nivelurile cursului 4 pentru testarea utlizării.
           Variables: Variabile
           For Loops: Repetiții Pentru
+        potus:
+          title: speciale
+          description_short: speciale
+          description: speciale
+          Special: Speciale
+        special:
+          title: speciale
+          description_short: speciale
+          description: speciale
+          Special: Speciale

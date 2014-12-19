@@ -1,6 +1,6 @@
 {
   "actor":"aktieris",
-  "alienInvasion":"Alien Invasion!",
+  "alienInvasion":"Citplanētiešu uzbrukums!",
   "backgroundBlack":"melns",
   "backgroundCave":"ala",
   "backgroundCloudy":"mākoņains",
@@ -53,7 +53,7 @@
   "moveDistance100":"100 pikseļi",
   "moveDistance200":"200 pikseļi",
   "moveDistance400":"400 pikseļi",
-  "moveDistancePixels":"punktus",
+  "moveDistancePixels":"punktiem",
   "moveDistanceRandom":"nejauši izvēlēti pikseļi",
   "moveDistanceTooltip":"Pārvietot aktieri noteiktā attālumā, norādītajā virzienā.",
   "moveSprite":"pārvietot",

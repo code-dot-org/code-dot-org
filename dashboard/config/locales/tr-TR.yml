@@ -36,6 +36,7 @@
   of: /
   more: DAHA FAZLA
   less: DAHA AZ
+  beta: beta
   try_hoc: 'Kod Saati''ni denemek için buraya tıklayın >> '
   try_k8intro: İlköğretim okullarına yönelik Bilgisayar Bilimlerine Giriş dersimizi
     deneyin (15-25 saat)
@@ -386,8 +387,9 @@
     test_videos_help: Okulunuzda yeni video oynatıcımızı deneyin
     try_beta_courses: Yeni! K-5 öğrencileri için beta kurslarımızı deneyin
     use_as_teacher: Siteyi öğretmen profiliyle kullan
-    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h1>İlkögretim öğrenciliri</h1> için <h2>20 saatlik kurslar</h2>
+    heading_hoc2014: <h2>Hour of Code </h2><h1> her yaş için</h1>
+    heading_elementary: <h2>20 saat ders</h2><h1> yeni başlayanlar (bütün yaşlar)
+      için </h1>
     heading_apps: <h1>Herkes</h1> için <h2>eğlence</h2>
     heading_legacy: <h1>Tüm yaş</h1> grupları için <h2>genel kurslarımız</h2>
     your_gallery: Galeri
@@ -401,10 +403,10 @@
   footer:
     help_from_html: Bu eğitici Google, Microsoft, Facebook, ve Twitter 'dan mühendislerin
       yardımıyla oluşturuldu.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
-      Tüm hakları saklıdır.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
+      Tüm hakları saklıdır.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
       Arts Inc. Tüm hakları saklıdır.
-    powered_by_aws: Powered by Amazon Web Services
+    powered_by_aws: Amazon Web Services tarafından desteklenmektedir
     feedback: Geri besleme sağla
     translate: Kendi dilinize çevirmemiz için bize yardım edin
     support: Destek
@@ -495,7 +497,7 @@
       body: Uygulamanın galerisine veya kullanıcılarımız tarafından oluşturulmuş sanatçı
         görsellerine göz atın
     frozen:
-      title: Frozen
+      title: Donmuş
   gallery:
     students_drew_these_with_code: Öğrenciler kod ile bunu çizdiler!
     students_made_these_with_code: Öğrenciler bunları kod ile yaptı!
@@ -589,3 +591,7 @@
     completed_too_many_blocks: tamamlanmadı, fazla blok var
     completed_perfect: tamamlandı, harika
     furthest_level_attempted: denenen en yüksek seviye
+  studio:
+    courses_working_on: Courses you're working on
+    completed_courses: Completed courses
+    all_courses: All courses

@@ -102,7 +102,7 @@
         Webapp: Εφαρμογή για Internet
         ArtistEC: Ο Καλλιτέχνης
         TextMatch: Ταίριασμα Κειμένου
-        StudioEC: Play Lab
+        StudioEC: Εργαστήριο Παιχνιδιού
     trophy:
       name:
         Bronze: Χάλκινο
@@ -561,22 +561,30 @@
           να σκοράρεις;
         studio_c3_game_7: Δημιούργησε το δικό σου παιχνίδι. Όταν το κάνεις, πάτα "Τέλος"
           κι άσε τους φίλους σου να δοκιμάσουν το παιχνίδι στα κινητά τους.
-        studio_playlab_1: Can you make this dog say "hello world"?
-        studio_playlab_2: Can you make the dog say something and then have the cat
-          say something afterwards?
-        studio_playlab_3: Can you write a program to make this dog move to the cat?
-        studio_playlab_4: Can you write a program that makes the dog move to the cat,
-          and have the cat say "hello" when the dog reaches him?
-        studio_playlab_5: Can you write a program to make the octopus say "hello"
-          when it is clicked?
-        studio_playlab_6: Can you write a program to make this penguin move around
-          using the up / down / left /right keys to hit all of the targets?
-        studio_playlab_7: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_playlab_8: Can you add a block to score a point when the penguin runs
-          into the octopus, and then move him with the arrows until you score?
-        studio_playlab_9: Can you add blocks to change the background and the speed
-          of the penguin, and then move him with the arrows until you score?
+        studio_playlab_1: Ο πιγκουίνος θέλει να πει "γεια" - μπορείς να τον βοηθήσεις;
+        studio_playlab_2: Το αγόρι των σπηλαίων (ηθοποιός 1) και το κορίτσι των σπηλαίων
+          (ηθοποιός 2) θέλουν να πουν "γεια" ο ένας στον άλλον. Μπορείς να τους βοηθήσεις
+          να το κάνουν; Χρησιμοποίησε δύο φορές το μπλοκ "πες".
+        studio_playlab_3: Μπορείς να βοθήσεις το κορίτσι του τένις να φτάσει στη σημαία;
+        studio_playlab_4: Μπορείς να βοηθήσεις το αγόρι του τένις (ηθοποιός 1) να
+          φτάσει στο κορίτσι του τένις (ηθοποιός 2) και να ακουστεί ένας ήχος όταν
+          φτάσει;
+        studio_playlab_5: Μπορείς να βοηθήσεις το διαστημικό ρομπότ Spacebot να πει
+          "γεια σας γήινοι" όταν κάνεις κλικ πάνω του; Μην ξεχάσεις να του κάνεις
+          κλικ αφού κάνεις κλικ στο Εκτέλεση.
+        studio_playlab_6: Μπορείς να βοηθήσεις τη Μάγισσα να μετακινηθεί με τα βελάκια
+          πάνω/κάτω/δεξιά/αριστερά ώστε να φτάσει σε όλες τις μαγικές μπάλες φωτιάς;
+        studio_playlab_7: Η εντολή "επανάλαβε για πάντα" επιτρέπει να εκτελείς κώδικα
+          συνεχώς. Μπορείς να της κολλήσεις και άλλα μπλοκ ώστε να βοηθήσεις το μάγο
+          να κινείται διαρκώς δεξιά και αριστερά;
+        studio_playlab_8: Μπορείς να προσθέσεις ένα μπλοκ ώστε να σκοράρεται ένας
+          πόντος και ένα μπλοκ ώστε να ακούγεται ένας ήχος όταν ο μονόκερος πέσει
+          πάνω στο μάγο, και μετά να τον μετακινείς με τα βελάκια μέχρι να σκοράρεις
+          πόντο;
+        studio_playlab_9: Φτιάξτε το φόντο για αυτή την εισβολή εξωγήινων και βοηθήστε
+          το διαστημικό ρομπότ Spacebot να φτάσει γρηγορότερα στον εξωγήινο αλλάζοντας
+          την ταχύτητά του. Μετά, μετακινήστε τον με τα βελάκια για να φτάσετε στο
+          Spacebot και να ειδοποιήσετε όλους τους άλλους
         studio_playlab_10: Δημιούργησε το δικό σου παιχνίδι. Όταν το κάνεις, πάτα
           "Τέλος" κι άσε τους φίλους σου να δοκιμάσουν το παιχνίδι στα κινητά τους.
         studio_full_sandbox: Δημιούργησε το δικό σου παιχνίδι. Όταν το κάνεις, πάτα
@@ -617,75 +625,75 @@
           "Τέλος" κι άσε τους φίλους σου να δοκιμάσουν το παιχνίδι στα κινητά τους.
     levelbuilder:
       frozen line:
-        instructions: Γεια σου! Είμαι για Έλσα του Arendelle. Βοηθησέμε να δημιουργήσω
+        instructions: Γεια σου! Είμαι η Έλσα του Arendelle. Βοήθησέ με να δημιουργήσω
           μια  γραμμή.
       frozen perpendicular:
         instructions: Τώρα ας δούμε αν μπορούμε να δημιουργήσουμε δύο γραμμές που
           βρίσκονται σε γωνία 90 μοιρών μεταξύ τους. Θα πρέπει να χρησιμοποιήσετε
           το μπλοκ "Στροφή", καθώς και το μπλοκ της "Κίνησης".
       frozen square iterative:
-        instructions: Φαίνεται σαν να είμαστε στα μισά του δρόμου για να κάνεουμε
-          ένα τετράγωνο. Ας βάλουμε 4 γραμμές μαζί για να δημιουργήσουμε ένα τετράγωνο.
+        instructions: Φαίνεται σαν να είμαστε στα μισά του δρόμου για να κάνουμε ένα
+          τετράγωνο. Ας βάλουμε 4 γραμμές μαζί για να δημιουργήσουμε ένα τετράγωνο.
       frozen square loop:
         instructions: Γεια σου, είμαι η Άννα της Arendelle! Ας κάνουμε ένα τετράγωνο
-          με το μπλοκ «Επανάληψης», η οποία χρησιμοποιεί λιγότερα μπλοκ. Πόσες φορές
-          (?) θα πρέπει το μπλοκ βρόγχου  "Επανάληψη"  το μπλοκ μέσα σ ' αυτήν να
-          κάνει ένα τετράγωνο;
+          με το μπλοκ «Επανάληψη", η οποία χρησιμοποιεί λιγότερα μπλοκ. Πόσες φορές
+          (?) θα πρέπει το μπλοκ βρόχου "Επανάληψη"  να επαναλάβει τα μπλοκ μέσα σ
+          ' αυτήν για να κάνει ένα τετράγωνο;
       frozen square loop 3x:
-        instructions: Ας δημιουργήσουμε τρία τετράγωνα ,  στρίβοντας  μετά από κάθε
-          τετράγωνο. Βεβαιωθείτε  να στρίψετε 120 μοίρες πριν από κάθε νέα τετράγωνο.
+        instructions: Ας δημιουργήσουμε τρία τετράγωνα,  στρίβοντας  μετά από κάθε
+          τετράγωνο. Βεβαιωθείτε  ότι στρίβετε 120 μοίρες πριν από κάθε νέο τετράγωνο.
       frozen square snowflake:
         instructions: Μπορείτε να δημιουργήσετε μια νιφάδα χιονιού χρησιμοποιώντας
-          το μπλοκ «Επανάληψης», να κάνει ένα τετράγωνο 10 φορές, και το μπλοκ "Στροφή"
-          για να περιστρέψετε 36 μοίρες μεταξύ τους κάθε τετράγωνο;
+          το μπλοκ «Επανάληψη» για να σχεδιαστεί ένα τετράγωνο 10 φορές, και μετά
+          το μπλοκ "Στροφή" για να στρίψετε 36 μοίρες από το ένα τετράγωνο στο άλλο;
       frozen cross:
-        instructions: Χρησιμοποιήσετε το μπλοκ «Επανάληψης», για να δημιουργήσετε
-          ένα σύμβολο συν. Πρόσεξες  ότι η Elsa μπορεί να κινηθεί προς τα εμπρός και
-          προς τα πίσω;
+        instructions: Χρησιμοποιήσετε το μπλοκ «Επανάληψη», για να δημιουργήσετε ένα
+          σύμβολο συν. Πρόσεξες  ότι η Elsa μπορεί να κινηθεί προς τα εμπρός και προς
+          τα πίσω;
       frozen cross rotate:
-        instructions: Τώρα προσπαθήστε να το  επαναλάβετε αυτό 10 φορές. Πόσες μοίρες
+        instructions: Τώρα προσπαθήστε να το επαναλάβετε αυτό 10 φορές. Πόσες μοίρες
           χρειάζεται να στρίψεις  μεταξύ κάθε γραμμής;
       frozen cross rotate dense:
         instructions: 'Ας το επαναλάβουμε αυτό 90 φορές! Πόσες φορές χωράει το  90
           στο  360; Υπόδειξη: Είναι ένας πραγματικά μικρός αριθμός.'
       frozen diamond:
         instructions: 'Ας δημιουργήσουμε ένα παραλληλόγραμμο. Αυτό είναι σαν ένα τετράγωνο
-          αλλά έχει διαφορετικές  γωνίες: 60 και 120 μοιρών γωνίες αντί για γωνία
+          αλλά έχει διαφορετικές  γωνίες: γωνίες 60 και 120 μοιρών αντί για γωνίες
           90 μοιρών.'
       frozen diamond mini snowflake:
         instructions: Γνωρίζατε ότι κάθε νιφάδα χιονιού είναι ένα διαφορετικό σχήμα;
-          Ας δημιουργήσουμε μια νέα νιφάδα χιονιού χρησιμοποιώντας το μπλοκ «Επανάληψης»,
+          Ας δημιουργήσουμε μια νέα νιφάδα χιονιού χρησιμοποιώντας το μπλοκ «Επανάληψη»,
           για να  επαναλάβουμε ένα παραλληλόγραμμο 4 φορές, στρίβοντας  δεξιά κατά
           90 μοίρες μεταξύ κάθε παραλληλόγραμμου.
       frozen diamond snowflake:
         instructions: Τώρα, ας δημιουργήσουμε μια νέα νιφάδα χιονιού χρησιμοποιώντας
-          το επαναλάβετε μπλοκ για να επαναλάβετε ένα παραλληλόγραμμο 10 φορές, στρίβοντας
-          δεξιά  36 μοίρες ανάμεσα στο κάθε ένα .
+          το μπλοκ "Επανάληψη" για να επαναλάβετε ένα παραλληλόγραμμο 10 φορές, στρίβοντας
+          δεξιά 36 μοίρες ανάμεσα στο κάθε ένα.
       frozen circle:
         instructions: Ένας κύκλος είναι ένα ειδικό σχήμα. Μπορείτε να υπολογίσετε
           με τι αριθμό χρειάζεται  να αντικαταστήσετε τα ερωτηματικά για να σχεδιάσετε
           έναν κύκλο;
       frozen circle function:
-        instructions: Χρησιμοποιήστε την εντολή  νέο «δημιούργησε ένα κύκλο» μπλοκ
-          για να δημιουργήσετε 10 κύκλους που επικαλύπτονται. Μην ξεχάσετε να μεταβείτε
-          προς τα εμπρός μεταξύ των κύκλων.
+        instructions: Χρησιμοποιήστε το νέο μπλοκ «δημιούργησε ένα κύκλο» για να δημιουργήσετε
+          10 κύκλους που επικαλύπτονται. Μην ξεχάσετε να κάνετε άλμα προς τα εμπρός
+          μεταξύ των κύκλων.
       frozen circle function in circle:
         instructions: Τώρα ας δημιουργήσουμε 20 κύκλους που επικαλύπτονται, στρίβοντας
           18 μοίρες  μεταξύ κάθε κύκλου.
       frozen circle function with parameter:
         instructions: Εδώ είναι ένα μπλοκ "Δημιουργία κύκλου" που μπορεί να κάνει
           κύκλους διαφορετικών μεγεθών. Μπορείτε να χρησιμοποιήσετε αυτό για να δημιουργήσετε
-          ένα μικρό κύκλο μεγέθους 5 και ένας μεγαλύτερος κύκλος μεγέθους 10;
+          ένα μικρό κύκλο μεγέθους 5 και ένα μεγαλύτερο κύκλο μεγέθους 10;
       frozen snowflower:
         instructions: Περίπλοκα μοτίβα χιονιού μπορούν να δημιουργηθούν με πολύ απλά
           σχήματα. Μπορείτε να κάνετε ένα μοτίβο επαναλαμβάνοντας 5 κύκλους  μεγέθους
           5 και 5 κύκλους μεγέθους 10;
       frozen snowflake branch:
-        instructions: Δοκιμάστε να χρησιμοποιήσετε το "Δημιουργία κλάδου νιφάδα χιονιού"
-          μπλοκ για  να δημιουργήσετε τρία κλαδιά, που θα αρχίζει να μοιάζει με μια
-          νιφάδα χιονιού.
+        instructions: Δοκιμάστε να χρησιμοποιήσετε το μπλοκ "Δημιουργία κλάδου νιφάδα
+          χιονιού" για  να δημιουργήσετε τρία κλαδιά, που θα αρχίζει να μοιάζει με
+          μια νιφάδα χιονιού.
       frozen snowflake full:
-        instructions: Τώρα ας το επαναλάβουμε αυτό 8 φορές για  να κάνει μια όμορφη
+        instructions: Τώρα ας το επαναλάβουμε αυτό 8 φορές για να γίνει μια όμορφη
           νιφάδα χιονιού!
       frozen freeplay:
         instructions: Έχετε γίνει επίσημα ένα master καλλιτέχνης! Δημιουργήστε μια
@@ -704,48 +712,49 @@
         instructions: Μια ακόμη άσκηση για το πλακίδιο "Εάν-Αλλιώς", μπορείς να τα
           καταφέρεις με την πρώτη προσπάθεια;
       scrat 20:
-        instructions: Μπορείτε να προσθέσετε μόνο 3 μπλοκ μακριά για να με βοηθήσεις
-          να λύσω ένα πιο πολύπλοκο λαβύρινθο; Αν το κάνεις σωστά, μπορώ να περπατήσω
-          οποιαδήποτε καμπυλωτή διαδρομή δεν έχει σημασία το μήκος. Βιάσου! Οι πάγοι
-          λιώνουν!
+        instructions: Μπορείς να προσθέσεις μόνο 3 μπλοκ για να με βοηθήσεις να λύσω
+          ένα πιο πολύπλοκο λαβύρινθο; Αν το κάνεις σωστά, μπορώ να περπατήσω σε οποιαδήποτε
+          καμπυλωτή διαδρομή, άσχετα από το μήκος της. Βιάσου! Οι πάγοι λιώνουν!
       Standalone_Artist_1:
-        instructions: Welcome to Artist! First off, let's try to make a simple square
-          using the turn right block and move forward block. Each side should be 100
-          pixels long.
+        instructions: Καλωσορίσατε στον Καλλιτέχνη! Αρχικά, ας φτιάξουμε ένα απλό
+          τετράγωνο με το μπλοκ "στρίψε δεξιά" και το μπλοκ "προχώρησε μπροστά". Κάθε
+          πλευρά πρέπει να έχει μήκος 100 pixel.
       Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel
-          long sides.
+        instructions: Σχεδιάστε αυτόν το ρόμβο με γωνίες 120 και 60 μοιρών και πλευρές
+          μήκους 150 pixel.
       Standalone_Artist_3:
-        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree
-          turns?
+        instructions: Μπορείτε να σχεδιάσετε αυτό το εξάγωνο με πλευρές μήκους 100
+          pixel στρίβοντας κατά 60 μοίρες;
       Standalone_Artist_4:
-        instructions: Now you've got a new block to play with, the loop. This will
-          repeat a set of commands. What happens if you loop these commands 6 times?
+        instructions: Τώρα μπορείτε να παίξετε και με ένα νέο μπλοκ, την επανάληψη
+          (βρόχο). Αυτό το μπλοκ επαναλαμβάνει ένα σύνολο εντολών. Τι θα γίνει αν
+          επαναλάβετε αυτές τις εντολές 6 φορές;
       Standalone_Artist_5:
-        instructions: How many times do you need to loop this diamond to draw the
-          flower?
+        instructions: Πόσες φορές πρέπει να επαναλάβετε το ρόμβο για να σχεδιάσετε
+          το λουλούδι;
       Standalone_Artist_5.5:
-        instructions: 'Notice how we simplified the diamond code by turning it into
-          a loop. You can loop that whole sequence 12 times to draw the flower. Hint:
-          You''ll need to turn 30 degrees after your diamond loop so you don''t keep
-          drawing over the same diamond.'
+        instructions: 'Δείτε πόσο απλοποιήσαμε τον κώδικα του ρόμβου με την "Επανάληψη".
+          Μπορείτε να επαναλάβετε όλη την ακολουθία εντολών 12 φορές για να σχεδιάσετε
+          το λουλούδι. Συμβουλή: Πρέπει να στρίβετε 30 μοίρες μετά το βρόχο του ρόμβου,
+          ώστε να μην σχεδιάζετε συνεχώς τον ίδιο ρόμβο.'
       Standalone_Artist_6:
-        instructions: 'Loop this hexagon code 6 times to create the design. How many
-          degrees will you need to turn each time? Hint: divide the number of degrees
-          in a circle by the number of times you are looping.'
+        instructions: 'Επαναλάβετε αυτόν τον κώδικα εξαγώνου 6 φορές για να δημιουργήσετε
+          το σχέδιο. Πόσες μοίρες πρέπει να στρίβετε κάθε φορά; Συμβουλή: Να διαιρέσετε
+          τις μοίρες του κύκλου με το πόσες φορές κάνετε την επανάληψη.'
       Standalone_Artist_7:
-        instructions: 'A function is another programming tool to help you avoid repeating
-          yourself. This function draws a flower, so you can use it any time you want
-          to draw a flower. Use this and the new jump block to draw these flowers.
-          Hint: The flowers are 150 pixels apart'
+        instructions: 'Η συνάρτηση είναι ένα ακόμα προγραμματιστικό εργαλείο που σας
+          βοηθά να αποφύγετε να γράφετε τα ίδια πράγματα. Αυτή η συνάρτηση σχεδιάζει
+          ένα λουλούδι, οπότε μπορείτε να τη χρησιμοποιείτε κάθε φορά που θέλετε να
+          σχεδιάσετε ένα λουλούδι. Με αυτήν και με το νέο μπλοκ "άλμα" σχεδιάστε αυτά
+          τα λουλούδια. Συμβουλή: Η απόσταση μεταξύ των λουλουδιών είναι 150 pixel'
       Standalone_Artist_8:
-        instructions: Here's a function called "Draw a shape" that we've programmed
-          to draw hexagons. Run the code to see what it does and then experiment with
-          the function to see what happens. Can you make it draw a pattern of squares,
-          triangles, or octagons?
+        instructions: Ορίστε μια συνάρτηση "Σχεδίασε ένα σχήμα" την οποία προγραμματίσαμε
+          για να σχεδιάσουμε εξάγωνα. Εκτελέστε τον κώδικα για να δείτε τι κάνει και
+          μετά πειραματιστείτε με τη συνάρτηση για να δείτε τι γίνεται. Μπορείτε να
+          την κάνετε να σχεδιάσει ένα μοτίβο με τετράγωνα, τρίγωνα ή οκτάγωνα;
       Standalone_Artist_9:
-        instructions: Now go ahead and make whatever picture you'd like! You've even
-          got an empty function that you can make do whatever you want!
+        instructions: Τώρα μπορείτε να φτιάξετε όποια εικόνα σας αρέσει! Έχετε και
+          μια άδεια συνάρτηση την οποία μπορείτε να βάλετε να κάνει ό,τι θέλετε!
     video:
       name:
         maze_intro: Πρόλογος λαβυρίνθου
@@ -770,67 +779,81 @@
         Unplug6: Έλεγχοι
         Unplug7: Σύνθεση τραγουδιού
         Unplug8: Αφαίρεση
-        Unplug9: Relay programming
+        Unplug9: Προγραμματισμός με αναμετάδοση
         Unplug10: Διαδίκτυο
         Unplug11: συνοψίζω
-        C1_happy_maps_unplugged: Happy Maps
+        C1_happy_maps_unplugged: Χαρούμενοι Χάρτες
         C1_moveitmoveit_unplugged: Μετακίνησέ το, Μετακίνησέ το
-        C1_bigevent_unplugged: The Big Event
-        C1_getting_loopy: Getting Loopy
+        C1_bigevent_unplugged: Το Μεγάλο Γεγονός
+        C1_getting_loopy: Παίρνοντας Επαναληπτικά
         C1_pair_programming: Προγραμματισμός κατά ζεύγη
         C1_maze_intro_sequencing: Αλληλουχία Λαβυρίνθου - Εισαγωγικά
         C1_maze_debugging: Εκσφαλμάτωση Λαβυρίνθου
         C1_bee_level_intro: Επίπεδο Μέλισσας - Εισαγωγικά
         C1_artist_intro: Πρόλογος καλλιτέχνη
         C1_spelling_bee_intro: Ορθογραφία Μέλισσας - Εισαγωγικά
-        C1_zuck_repeat_loop: Maze Loops
-        C1_bee_loops: Bee Loops
-        C1_maze_loops: Maze Loops
+        C1_zuck_repeat_loop: Επαναλήψεις του Λαβύρινθου
+        C1_bee_loops: Επαναλήψεις της Μέλισσας
+        C1_maze_loops: Επαναλήψεις του Λαβύρινθου
         C1_playlab_storytelling: Εργαστήριο Παιχνιδιού - Δημιουργία μιας Ιστορίας
         C1_planting_seed: Φυτεύοντας ένα σπόρο
-        C1_building_foundation: Building a Foundation
-        C1_going_places_safely: Going Places Safely
+        C1_building_foundation: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
+        C1_going_places_safely: Πηγαίνοντας σε Μέρη με Ασφάλεια
         C2_maze_intro: Πρόλογος λαβυρίνθου
         C2_artist_intro: Πρόλογος καλλιτέχνη
-        C2_zuck_repeat_loop: Maze Loops
-        C2_artist_loops: Artist Loops
-        C2_artist_debugging: Artist Debugging
-        C2_bee_loops: Bee Loops
-        C2_bee_debugging: Bee Debugging
-        C2_bee_conditionals: Bee Conditionals
+        C2_zuck_repeat_loop: Επαναλήψεις του Λαβύρινθου
+        C2_artist_loops: Επαναλήψεις Καλλιτέχνη
+        C2_artist_debugging: Εκσφαλμάτωση Καλλιτέχνη
+        C2_bee_loops: Επαναλήψεις της Μέλισσας
+        C2_bee_debugging: Εκσφαλμάτωση της Μέλισσας
+        C2_bee_conditionals: Συνθήκες της Μέλισσας
         C2_playlab_createstory: Εργαστήριο Παιχνιδιού - Δημιουργία μιας Ιστορίας
         C2_graph_paper: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
         C2_conditionals_with_cards: Έλεγχοι
-        C2_binary_bracelets: Binary Bracelets
+        C2_binary_bracelets: Δυαδικά Βραχιόλια
         C2_relay_programming: Προγραμματισμός Ρελέ
         C2_paper_airplanes: Χάρτινα Αεροπλανάκια
-        C2_digital_footprint: Your Digital Footprint
-        C3_maze_level_4: Maze Loops
+        C2_digital_footprint: Το Ψηφιακό σου Αποτύπωμα
+        C3_maze_level_4: Επαναλήψεις του Λαβύρινθου
         C3_artist_intro: Πρόλογος καλλιτέχνη
-        C3_artist_functions: Artist Functions
+        C3_artist_functions: Λειτουργίες Καλλιτέχνη
         C3_bee_functions: Λειτουργίες μέλισσας
-        C3_bee_conditionals: Bee Conditionals
-        C3_maze_conditionals: Maze Conditionals
+        C3_bee_conditionals: Συνθήκες της Μέλισσας
+        C3_maze_conditionals: Συνθήκες λαβυρίνθου
         C3_artist_nested_loops: Φωλιασμένες Επαναλήψεις
         C3_farmer_while: Επαναλήψεις με "Όσο.."
         C3_bee_nested_loops: Φωλιασμένες Επαναλήψεις
-        C3_bee_debugging: Bee Debugging
+        C3_bee_debugging: Εκσφαλμάτωση της Μέλισσας
         C3_bounce: Αναπήδηση
         C3_playlab_create_game: Εργαστήρι Παιχνιδιού - Δημιούργησε ένα Παιχνίδι
         C3_computational_thinking: Αλγοριθμική Σκέψη
-        C3_dice_race: Dice Race
+        C3_dice_race: Αγώνας ζαριών
         C3_internet: Διαδίκτυο
         C3_crowdsourcing: Crowdsourcing
-        C3_functional_suncatchers: Functional Suncatchers
+        C3_functional_suncatchers: Λειτουργικές Ηλιοκυνηγοί
         C3_songwriting_with_parameters: Σύνθεση τραγουδιού Με Παραμέτρους
-        C4_artist_math: Programming the Artist with Math
-        C4_create_functions: Creating Functions
-        C4_edit_functions: Editing Functions
-        C4_for_loops: For Loops
-        C4_variables: Μεταβλητές
-        frozen_intro: Hour of Code Intro
-        frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
+        C4_intro: Εισαγωγή
+        C4_bee_conditional: Συνθήκες της Μέλισσας
+        C4_variables_artist: Μεταβλητές - Καλλιτέχνης
+        C4_variables_playlab: Variables - Play Lab
+        C4_for_loops: Βρόχοι Για
+        C4_math_artist: Προγραμματίζουμε τον Καλλιτέχνη χρησιμοποιώντας Μαθηματικά
+        C4_function_edit: Επεξεργαζόμαστε Συναρτήσεις
+        C4_function_create: Δημιουργούμε Συναρτήσεις
+        C4_function_parameters: Συναρτήσεις με παραμέτρους
+        C4_conditionals: Έλεγχοι
+        C4_unplugged_algorithms: Αλγόριθμοι με Tangrams
+        C4_unplugged_madlibs: Mad Libs
+        C4_unplugged_variables: Μεταβλητές σε φακέλους
+        C4_unplugged_forloops: Βρόχοι Για
+        C4_unplugged_parameters: Γράφουμε τραγούδια με παραμέτρους
+        C4_unplugged_binary: Δυαδικό
+        frozen_intro: Εισαγωγή στην Ώρα του Κώδικα
+        frozen_loops: Εισαγωγή στους Βρόχους (Επαναλήψεις)
+        frozen_functions: Εισαγωγή στις Συναρτήσεις
+        playlab_intro: Introduction to Play Lab
+        playlab_events: Play Lab Events
+        playlab_repeat_forever: Play Lab Repeat Forever
     callout:
       text:
         drag_blocks: Πιάσε ένα μπλοκ "κίνηση" και φέρ'το κάτω από το άλλο μπλοκ
@@ -858,6 +881,10 @@
           το "???" με τον σωστό βαθμό για να γυρίσει
         repeat_blocks: Χρησιμοποίησε το "Επανάλαβε" μπλοκ και πιάσε ένα γύρο όλα τα
           μπλοκ στον χώρο εργασίας
+        repeat_blocks_1: (1) Χρησιμοποίησε αυτό το μπλοκ και βάλε το γύρω από τα γκρι
+          μπλοκ στο χώρο εργασίας
+        repeat_blocks_2: (2) μετακίνησε το μπλοκ «Επανάλαβε» εδώ, και τοποθέτησε μέσα
+          τα γκρι μπλοκ
         snowflake_dropdown: Χρησιμοποίησε το αναδυόμενο μενού για να δημιουργήσεις
           διαφορετικές χιονονιφάδες!
         degrees_per_side: Διαίρεσε το 360 με το πλήθος των πλευρών για να βρεις τη
@@ -866,14 +893,14 @@
           που πρέπει για να συμπληρωθεί το  παζλ.
         set_length: Χρησιμοποίησε αυτό το μπλοκ  για να θέσεις το "μήκος" στη σωστή
           τιμή.
-        which_equation: Ποια εξίσωση κάνει την κάθε πλευρά μικρότερη για σχήματα με
-          περισσότερες πλευρές; Δοκίμασε κάθε εξίσωση!
+        which_equation: Ποια εξίσωση κάνει κάθε πλευρά μικρότερη για σχήματα με περισσότερες
+          πλευρές;
         get_nectar: Χρησιμοποίησε το νέο "πάρε νέκταρ" μπλοκ.
         actions_category: Η εργαλειοθήκη πήρε νέα μορφή! Τα "Δράσεις" μπλοκ είναι
           εδώ μέσα τώρα.
         draw_square_hint: 'Υπόδειξη: Χρησιμοποίησε την επανάληψη για το τετράγωνο
           που μόλις έκανες στο τελευταίο πρόβλημα.'
-        edit_function: Χρησιμοποίησε αυτό το πλήκτρο για να διορθώσεις τη συνάρτηση.
+        edit_function: Κάνε κλικ εδώ για να επεξεργαστείς τη συνάρτησή σου.
         create_function: Πάτα εδώ να ανοίξει το μενού "Συναρτήσεις", μετά πάτα την
           επιλογή "Δημιουργία Συνάρτησης".
         house_hint: Δεν πειράζει αν η εικόνα δεν μοιάζει ακόμη με  σπίτι. Θα το φτιάξουμε
@@ -885,19 +912,52 @@
         logic_category: Άνοιξε το "Λογικό" μενού να βρεις το "Αν/αλλιώς"μπλοκ.
         length_parameter: Μπορείς να ενημερώσεις αυτή τη συνάρτηση έτσι που να χρησιμοποιεί
           την παράμετρο "μήκος";
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
-          each circle.
-        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
-          and change the size.
-        frozen_snowflake_branch: Use the "create a snowflake branch" block
-        frozen_create_square: Attach more blocks here to create a square
-        playlab_drag_say: Drag the "say" block here and type "hello"
-        playlab_use_twice: Use this block twice and remember to change the actor number
-        playlab_move_girl: Use the "move right" block to move Tennis Girl
-        playlab_play_sound: Add "play sound" block here
-        playlab_arrow_keys: Remember to use these to move the witch after clicking
-          on Run
-        playlab_add_move: Add "move" blocks inside this repeat block
-        playlab_add_score: Add score blocks here
-        playlab_add_blocks: Add your blocks here
+        frozen_diamond_repeat: Φτιάξτε αυτό το σχήμα με το μπλοκ Επανάληψη.
+        frozen_circle_function_in_circle_turn: Μην ξεχνάτε να στρίψετε μετά από κάθε
+          κύκλο.
+        frozen_circle_function_with_parameter_circle: Χρησιμοποιήστε το μπλοκ "Δημιουργία
+          κύκλου" και αλλάξτε το μέγεθος.
+        frozen_snowflake_branch: Χρησιμοποιήστε το μπλοκ "δημιουργία κλαδιού νιφάδας
+          χιονιού"
+        frozen_create_square: Βάλτε και άλλα μπλοκ εδώ για να φτιάξετε τετράγωνο
+        playlab_drag_say: Σύρετε εδώ το μπλοκ "πες" και πληκτρολογήστε "γεια"
+        playlab_use_twice: Χρησιμοποιήστε αυτό το μπλοκ δύο φορές και θυνηθείτε να
+          αλλάξετε τον αριθμό του ηθοποιού
+        playlab_move_girl: Μετακινήστε το Κορίτσι του Τένις με το μπλοκ "κινήσου δεξιά"
+        playlab_play_sound: Προσθέστε εδώ το μπλοκ "παίξε ήχο"
+        playlab_arrow_keys: Θυμηθείτε να τα χρησιμοποιείτε για να μετακινείτε τη μάγισσα
+          αφού κάνετε κλικ στο Εκτέλεση
+        playlab_add_move: Βάλτε μπλοκ "Κίνηση" μέσα σε αυτό το μπλοκ επανάληψης
+        playlab_add_score: Βάλτε εδώ μπλοκ για το σκορ
+        playlab_add_blocks: Βάλτε εδώ τα δικά σας μπλοκ
+        set_variable: Σύρε ένα μπλοκ αριθμού εδώ για να ορίσεις τη μεταβλητή σου
+        place_variable: Σύρε τη μεταβλητή σου μέσα σε αυτό το μπλοκ
+        bee_for_loop: Σύρε το μεγαλύτερο αριθμό από νέκταρ που θέλεις να συλλέξει
+          η μέλισσα εδώ
+        place_counter_variable: Σύρε τη μεταβλητή μετρητή μέσα σε αυτό το μπλοκ
+        function_editor_draw_square: Αυτός είναι ορισμός της συνάρτηση σου. Αυτά τα
+          μπλοκ ενεργοποιούνται κάθε φορά που χρησιμοποιείς το μπλοκ «Σχεδίασε ένα
+          τετράγωνο»
+        change_here: Κάνε την αλλαγή σου εδώ
+        write_draw_square_function: Σύρε μπλοκ από την εργαλειοθήκη εδώ που σχεδιάζεις
+          ένα τετράγωνο
+        write_draw_triangle_function: Σύρε εδώ πλακίδια από την εργαλειοθήκη για να
+          σχεδιάσεις ένα τρίγωνο
+        edit_add_parameter: Πάτα "επεξεργασία" για να προσθέσεις μία μια παράμετρο
+          στην συνάρτή σου
+        add_and_drag_parameter: Γράψε το όνομα παραμέτρου σου εδώ, κάνε κλικ στο κουμπί
+          "Προσθήκη", και στη συνέχεια σύρε το στον ορισμό της συνάρτησης
+        fill_in_actor: Συμπληρώστε τα ??? με τον κατάλληλο αριθμό για να αντιστοιχεί
+          τον κάθε ηθοποιό (1, 2 και 3)
+        repeat: Βάλτε το μπλοκ μέσα στο βρόχο για να επαναλάβει τις εντολές
+        if_bee_nectar: Χρησιμοποιήστε το μπλοκ "εάν" για να αποφασίσετε εάν η μέλισσα
+          πρέπει να πάρει το νέκταρ
+        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower,
+          and makes honey if it's not a flower
+        repeat_full_circle: Εισάγετε τον αριθμό των φορών που το ζόμπι πρέπει να κινηθεί
+          για να κάνει έναν πλήρη κύκλο
+        place_length_variable: Σύρετε εδώ την μεταβλητή μήκους για να αντικαταστήσει
+          τα ερωτηματικά
+        arrows_move_actor: Χρησιμοποιείστε τα βέλη για να μετακινήσετε τον ηθοποιό
+        right_arrow_fireball: Χρησιμοποιείστε το δεξί βέλος για να ρίξετε μπάλες φωτιάς
+        name_function: Γράψτε εδώ το όνομα της συνάρτησής σας

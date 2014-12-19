@@ -108,11 +108,11 @@
           nuo kvadrato<br/>Padėk trikampį virš kvadrato<br/>Padėk trikampį po kvadratu
         0: '? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
           below square<br/>Put triangle right of parallelogram'
-        1: ': Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
-          below square<br/>Put triangle right of parallelogram'
-        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Start
-          with a square<br/>Put a parallelogram above the square<br/>Put a triangle
-          right of the parallelogram
+        1: ': Pradėk nuo kvadrato<br/>Padėk trikampį kvadrato dešinėje<br/>Po trikampiu
+          padėk lygiagretainį<br/>Lygiagretainio dešinėje padėk dar vieną trikampį.'
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Pirmiausia
+          padėk kvadratą<br/>Virš jo padėk lygiagretainį<br/>Lygiagretainio dešinėje
+          padėk trikampį
         Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Start
           with a square<br/>Put a triangle below the square<br/>Put a parallelogram
           right of the triangle

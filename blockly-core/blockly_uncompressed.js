@@ -19058,17 +19058,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   this.container_ = document.createElement("div");
   this.container_.setAttribute("id", "modalContainer");
   goog.dom.getElement("blockly").appendChild(this.container_);
-  var self = this;
-  Blockly.modalBlockSpaceEditor = new Blockly.BlockSpaceEditor(this.container_, function() {
-    var metrics = Blockly.mainBlockSpace.getMetrics();
-    var contractDivHeight = self.contractDiv_ ? self.contractDiv_.getBoundingClientRect().height : 0;
-    var topOffset = FRAME_MARGIN_TOP + Blockly.Bubble.BORDER_WIDTH + FRAME_HEADER_HEIGHT;
-    metrics.absoluteLeft += FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH + 1;
-    metrics.absoluteTop += topOffset + contractDivHeight;
-    metrics.viewWidth -= (FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH) * 2;
-    metrics.viewHeight -= FRAME_MARGIN_TOP + Blockly.Bubble.BORDER_WIDTH + topOffset;
-    return metrics
-  });
+  Blockly.modalBlockSpaceEditor = new Blockly.BlockSpaceEditor(this.container_, goog.bind(this.calculateMetrics_, this));
   Blockly.modalBlockSpace = Blockly.modalBlockSpaceEditor.blockSpace;
   Blockly.modalBlockSpace.customFlyoutMetrics_ = Blockly.mainBlockSpace.getMetrics;
   Blockly.modalBlockSpaceEditor.addChangeListener(Blockly.mainBlockSpace.fireChangeEvent);
@@ -19106,8 +19096,18 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   this.onResizeWrapper_ = Blockly.bindEvent_(window, goog.events.EventType.RESIZE, this, this.position_);
   Blockly.modalBlockSpaceEditor.svgResize()
 };
+Blockly.FunctionEditor.prototype.calculateMetrics_ = function() {
+  var metrics = Blockly.mainBlockSpace.getMetrics();
+  var contractDivHeight = this.contractDiv_ ? this.contractDiv_.getBoundingClientRect().height : 0;
+  var topOffset = FRAME_MARGIN_TOP + Blockly.Bubble.BORDER_WIDTH + FRAME_HEADER_HEIGHT;
+  metrics.absoluteLeft += FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH + 1;
+  metrics.absoluteTop += topOffset + contractDivHeight;
+  metrics.viewWidth -= (FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH) * 2;
+  metrics.viewHeight -= FRAME_MARGIN_TOP + Blockly.Bubble.BORDER_WIDTH + topOffset;
+  return metrics
+};
 Blockly.FunctionEditor.prototype.layOutBlockSpaceItems_ = function() {
-  if(!this.functionDefinitionBlock) {
+  if(!this.functionDefinitionBlock || !this.isOpen()) {
     return
   }
   var currentX = Blockly.RTL ? Blockly.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE : FRAME_MARGIN_SIDE;
@@ -19115,6 +19115,8 @@ Blockly.FunctionEditor.prototype.layOutBlockSpaceItems_ = function() {
   currentY += this.flyout_.getHeight();
   this.flyout_.customYOffset = currentY;
   this.flyout_.position_();
+  Blockly.modalBlockSpace.trashcan.setYOffset(currentY);
+  Blockly.modalBlockSpace.trashcan.position_();
   currentY += FRAME_MARGIN_TOP;
   this.functionDefinitionBlock.moveTo(currentX, currentY)
 };
@@ -20697,21 +20699,31 @@ Blockly.SVGHeader.prototype.setPositionSize = function(yOffset, width, height) {
   var thirdTextHeight = this.textElement_.getBBox().height / 3;
   this.textElement_.setAttribute("y", rectangleMiddleY + thirdTextHeight)
 };
+Blockly.SVGHeader.prototype.setText = function(text) {
+  this.textElement_.textContent = text
+};
 Blockly.SVGHeader.prototype.removeSelf = function() {
   goog.dom.removeNode(this.svgGroup_)
 };
 Blockly.ExampleBlockView = function(block, exampleIndex, onCollapseCallback) {
   this.block = block;
-  var exampleNumber = Blockly.ExampleBlockView.START_EXAMPLE_COUNT_AT + exampleIndex;
-  this.header = new Blockly.SVGHeader(block.blockSpace.svgBlockCanvas_, {headerText:"Example " + exampleNumber, onMouseDown:this.toggleCollapse_, onMouseDownContext:this});
+  this.exampleNumber = Blockly.ExampleBlockView.START_EXAMPLE_COUNT_AT + exampleIndex;
+  this.header = new Blockly.SVGHeader(block.blockSpace.svgBlockCanvas_, {headerText:this.textForCurrentState_(), onMouseDown:this.toggleCollapse_, onMouseDownContext:this});
   this.collapsed_ = false;
   this.onCollapseCallback_ = onCollapseCallback
 };
 Blockly.ExampleBlockView.START_EXAMPLE_COUNT_AT = 1;
+Blockly.ExampleBlockView.DOWN_TRIANGLE_CHARACTER = "\u25bc";
+Blockly.ExampleBlockView.RIGHT_TRIANGLE_CHARACTER = "\u25b6";
+Blockly.ExampleBlockView.prototype.textForCurrentState_ = function() {
+  var arrow = this.collapsed_ ? Blockly.ExampleBlockView.RIGHT_TRIANGLE_CHARACTER : Blockly.ExampleBlockView.DOWN_TRIANGLE_CHARACTER;
+  return arrow + " " + Blockly.Msg.EXAMPLE + " " + this.exampleNumber
+};
 Blockly.ExampleBlockView.prototype.toggleCollapse_ = function() {
   this.collapsed_ = !this.collapsed_;
   this.block.setUserVisible(!this.collapsed_);
-  this.onCollapseCallback_()
+  this.onCollapseCallback_();
+  this.header.setText(this.textForCurrentState_())
 };
 Blockly.ExampleBlockView.prototype.placeStartingAt = function(currentX, currentY, width, headerHeight) {
   this.header.setPositionSize(currentY, width, headerHeight);

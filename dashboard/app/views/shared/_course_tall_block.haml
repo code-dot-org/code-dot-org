@@ -34,10 +34,9 @@
 
 - if ["course1", "course2", "course3", "course4"].include?(id)
   - audience = data_t_suffix('script.name', id, "description_audience")
-  - block_class = "miniblock-tall-audiencerow"
+  - block_class = "miniblock-tall miniblock-tall-audiencerow"
 - else
   - block_class = "miniblock-tall"
-
 
 .span3.miniblock{class: block_class, style: "overflow:hidden; position:relative"}
   =link_to url, {style:"text-decoration:none"} do
@@ -47,9 +46,18 @@
 
     .clear
 
-    .heading{style: "padding-left: 10px; padding-right: 10px; padding-top: 0px; padding-bottom: 0px; "}
-      %h3{style: "text-overflow: ellipsis; white-space: nowrap; overflow: hidden; font-weight:500"}
-        = title
+    - if Script.beta? id
+      .beta
+        .heading
+          %h3
+            = title
+          .betatext
+            = t('beta')
+    - else
+      .normal
+        .heading
+          %h3
+            = title
 
     .clear
 

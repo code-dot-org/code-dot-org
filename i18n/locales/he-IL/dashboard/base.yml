@@ -36,6 +36,7 @@ he:
   of: של
   more: יותר
   less: פחות
+  beta: beta
   try_hoc: 'נסה את שעת הקוד, לחץ כאן >> '
   try_k8intro: "נסה את הקורס מבוא למדעי המחשב לכיתות גן-ח'(15-25 שעות)"
   k8intro: ק-8 מבוא לקורס במדעי המחשב (15-25 שעות)
@@ -512,3 +513,7 @@ he:
     completed_too_many_blocks: completed, too many blocks
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
+  studio:
+    courses_working_on: "Courses you're working on"
+    completed_courses: Completed courses
+    all_courses: All courses

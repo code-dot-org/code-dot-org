@@ -102,7 +102,7 @@
         Webapp: Webapp
         ArtistEC: 藝術家
         TextMatch: Text Match
-        StudioEC: Play Lab
+        StudioEC: 播放實驗室
     trophy:
       name:
         Bronze: 銅牌
@@ -361,75 +361,53 @@
       frozen perpendicular:
         instructions: 現在讓我們看看是否可以畫出兩條線，兩線夾角90 度。您將需要使用"Turn"轉向區塊和"Move"移動區塊。
       frozen square iterative:
-        instructions: It seems like we're halfway to making a square. Let's put 4
-          lines together to create a square.
+        instructions: 好像我們使一個正方形的一半。讓我們把 4 條線，攜手合作，共同創建一個正方形。
       frozen square loop:
-        instructions: Hi, I'm Anna of Arendelle! Let's make a square with the "Repeat"
-          block, which uses fewer blocks. How many times (???) should the "Repeat"
-          block loop the blocks inside it to make a square?
+        instructions: 嗨，我是安娜 Arendelle ！讓我們做一個正方形用"重複"的塊，使用更少的塊。多少次 (?) 應"重複"塊迴圈裡面來畫一個正方形塊？
       frozen square loop 3x:
         instructions: 讓我們創建三個方塊，轉動每個方塊。確定把每個新方塊旋轉 120 度。
       frozen square snowflake:
-        instructions: Can you create a snowflake using the "Repeat" block to make
-          a square 10 times, and the "Turn" block to turn 36 degrees between each
-          square?
+        instructions: 您可以創建一片雪花使用"重複"塊來畫一個正方形 10 次和用"轉向"塊要在每個正方形之間轉 36 度嗎？
       frozen cross:
         instructions: 使用"重複"方塊來創建一個加號，你注意到埃爾莎可以向前和向後移動嗎？
       frozen cross rotate:
-        instructions: 現在請嘗試重複 10 次。每個行之間你需要旋轉多少度？
+        instructions: 現在請嘗試重複 10 次。每個行之間你需要轉多少度？
       frozen cross rotate dense:
-        instructions: 'Let''s repeat it 90 times! How many times does 90 go into 360?
-          Hint: It''s a really small number.'
+        instructions: 讓我們重複它 90 次 ！使多少次90 成為 360？提示： 它是一個非常小的數位。
       frozen diamond:
-        instructions: 'Let''s create a parallelogram. It''s just like a square but
-          has different angles: 60 and 120 degree angles instead of 90 degree angles.'
+        instructions: 讓我們創建一個平行四邊形。它看起來像是一個正方形，但有不同的角度： 60 和 120 度角而不是 90 度的直角。
       frozen diamond mini snowflake:
-        instructions: Did you know every snowflake is a different shape? Let's create
-          a new snowflake by using the "Repeat" block to repeat a parallelogram 4
-          times, turning right by 90 degrees between each parallelogram.
+        instructions: 每片雪花都是不同的形狀，你知道嗎？讓我們創建新的雪花通過使用"重複"塊重複一個平行四邊形 4 次，通過 每個平行四邊形之間轉右90
+          度。
       frozen diamond snowflake:
-        instructions: Now, let's create a new snowflake by using the repeat block
-          to repeat a parallelogram 10 times, turning right by 36 degrees between
-          each one.
+        instructions: 現在，讓我們創建新的雪花，通過使用重複的塊來重複一個平行四邊形 10 倍，由 36 度之間每一轉右。
       frozen circle:
-        instructions: A circle is a special shape. Can you figure out what number
-          to replace the question marks with to draw a circle?
+        instructions: 圓是一個特殊的形狀。你能想出什麼號碼以取代問號來畫一個圓嗎？
       frozen circle function:
-        instructions: Use the new "Create a circle" block to create 10 overlapping
-          circles. Don't forget to jump forward between circles.
+        instructions: 使用新的"創建一個圓"塊來創建 10 相互重疊的圓圈。別忘了向前跳圈之間。
       frozen circle function in circle:
-        instructions: Now let's create 20 overlapping circles, turning 18 degrees
-          between each circle.
+        instructions: 現在讓我們創建 20 相互重疊的圓圈，轉動 18 度之間每個圓圈。
       frozen circle function with parameter:
-        instructions: Here's a "Create circle" block that can make circles of different
-          sizes. Can you use this to create a small circle of size 5 and a larger
-          circle of size 10?
+        instructions: 這裡是一個"創建圓圈"塊，可以製作不同大小的圓。您可以使用此創建大小為 5 小圓圈和一個更大的圈子，大小為 10 嗎？
       frozen snowflower:
-        instructions: Intricate snow patterns can be created with very simple shapes.
-          Can you make a pattern by repeating 5 circles of size 5 and 5 circles of
-          size 10?
+        instructions: 用非常簡單的形狀，可以創建複雜的雪模式。你能通過重複 5 圈的大小為 5和 5 圈大小為 10 的尺寸的圓形畫圖案嗎？
       frozen snowflake branch:
-        instructions: Try using the "Create a snowflake branch" block to create three
-          branches, which starts to look like a snowflake.
+        instructions: 請嘗試使用"創建一個雪花分支"塊創建三個分支，開始看起來像一片雪花。
       frozen snowflake full:
-        instructions: Now let's repeat it 8 times to make a beautiful snowflake!
+        instructions: 現在讓我們重複 8 次，使美麗的雪花 ！
       frozen freeplay:
-        instructions: You've officially become a master artist! Create a winter wonderland.
+        instructions: 你已經正式成為藝術大師 ！創建一個冬季仙境。
       scrat 16:
-        instructions: Acorn! Acorn! Acorn! Use an "if" block to get me there with
-          the fewest number of blocks.
+        instructions: 橡子 ！橡子 ！橡子 ！使用"if"的代碼塊使我到那裡用數目最少的塊。
       scrat 17:
-        instructions: Ok, let's do that again for practice - this isn't very different,
-          but watch out for the wall!
+        instructions: 好吧，讓我們再做一次來練習 — — 這很雷同，但請注意牆上 ！
       scrat 18:
-        instructions: The "If-else" blocks checks a condition, and then does one thing
-          OR another. To get me to the acorn try to use this new block.
+        instructions: '"If else"塊檢查條件，然後做一件事或另一個。要得到我的橡子嘗試使用此新的塊。'
       scrat 19:
         instructions: 再練習一次"如果--否則"程式積木，你能在第一次嘗試就成功嗎?
       scrat 20:
-        instructions: Can you add just 3 blocks to help me solve a more complex maze?
-          If you do it right, I can walk any curvy path no matter the length. Hurry!
-          The ice is melting!
+        instructions: 您可以添加只是 3 塊來幫我解決一個更複雜的迷宮嗎？如果你做對了，我可以走無論長度的任何彎曲的路徑。快點 ！冰正在融化
+          ！
       Standalone_Artist_1:
         instructions: Welcome to Artist! First off, let's try to make a simple square
           using the turn right block and move forward block. Each side should be 100
@@ -545,14 +523,28 @@
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
-        C4_artist_math: Programming the Artist with Math
-        C4_create_functions: Creating Functions
-        C4_edit_functions: Editing Functions
+        C4_intro: Introduction
+        C4_bee_conditional: Bee Conditionals
+        C4_variables_artist: Variables - Artist
+        C4_variables_playlab: Variables - Play Lab
         C4_for_loops: For Loops
-        C4_variables: 變數類別
+        C4_math_artist: Programming the Artist with Math
+        C4_function_edit: Editing Functions
+        C4_function_create: Creating Functions
+        C4_function_parameters: 具有參數的函數
+        C4_conditionals: 流程類別
+        C4_unplugged_algorithms: Algorithms with Tangrams
+        C4_unplugged_madlibs: Mad Libs
+        C4_unplugged_variables: Variables in Envelopes
+        C4_unplugged_forloops: For Loops
+        C4_unplugged_parameters: 用參數作曲
+        C4_unplugged_binary: Binary
         frozen_intro: Hour of Code Intro
         frozen_loops: Introduction to Loops
         frozen_functions: Introduction to Functions
+        playlab_intro: Introduction to Play Lab
+        playlab_events: Play Lab Events
+        playlab_repeat_forever: Play Lab Repeat Forever
     callout:
       text:
         drag_blocks: 拖住一個"移動"積木，把它黏到其他積木下面
@@ -576,6 +568,10 @@
           degree to turn
         repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
           workspace
+        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the
+          workspace
+        repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks
+          inside
         snowflake_dropdown: Use this drop-down to create different snowflakes!
         degrees_per_side: Divide 360 by the number of sides to get the size of each
           angle in degrees.
@@ -614,3 +610,31 @@
         playlab_add_move: Add "move" blocks inside this repeat block
         playlab_add_score: Add score blocks here
         playlab_add_blocks: Add your blocks here
+        set_variable: Drag a number block here to set your variable
+        place_variable: Drag your variable inside this block
+        bee_for_loop: Drag the largest number of nectar you want the bee to collect
+          here
+        place_counter_variable: Drag your counter variable inside this block
+        function_editor_draw_square: This is your function definition. These blocks
+          run everytime you use the "draw a square" block
+        change_here: Make your change here
+        write_draw_square_function: Drag blocks from the toolbox into here that draw
+          a square
+        write_draw_triangle_function: Drag blocks from the toolbox into here that
+          draw a triangle
+        edit_add_parameter: Click edit to add a parameter in your function
+        add_and_drag_parameter: Write in the name of your parameter here, click add,
+          and then drag it into your function definition
+        fill_in_actor: Fill in the ??? with numbers that correspond to each actor
+          (1, 2, and 3)
+        repeat: Put blocks inside the loop to repeat commands
+        if_bee_nectar: Use the "if" block to decide if the bee should get nectar
+        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower,
+          and makes honey if it's not a flower
+        repeat_full_circle: Enter in the number of times the zombie has to move to
+          make a full circle
+        place_length_variable: Drag the length variable here to replace the question
+          marks
+        arrows_move_actor: Use the arrows to move the actor
+        right_arrow_fireball: Use the right arrow to shoot fireballs
+        name_function: Write the name of your function here

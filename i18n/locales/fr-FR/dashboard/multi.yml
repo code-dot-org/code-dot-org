@@ -199,7 +199,7 @@ fr:
       4-5 bee loops multi 1:
         Bee Loops Multiple Choice: Bee Loops Multiple Choice
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png
-        Which blocks will solve the puzzle?: Quels blocs permettra de résoudre le puzzle ?
+        Which blocks will solve the puzzle?: Quels blocs permettrons de résoudre le puzzle ?
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png
@@ -234,7 +234,7 @@ fr:
         <h4>Brushing your teeth</h4>: '<h4>Brushing your teeth</h4>'
         <h4>Baking cookies</h4>: '<h4>Baking cookies</h4>'
         <h4>Shopping from a grocery list</h4>: '<h4>Shopping from a grocery list</h4>'
-        <h4>Banana</h4>: '<h4>Banana</h4>'
+        <h4>Banana</h4>: '<h4>Banane</h4>'
       4-5 Computational Thinking Multi 1:
         Multiple Choice: Questions à choix multiples
         0: '? Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
@@ -259,9 +259,9 @@ fr:
       4-5 Digital Footprint Multi 1:
         Multiple Choice: Questions à choix multiples
         Which piece of information listed below is okay to share on the internet?: Which piece of information listed below is okay to share on the internet?
-        <h4>Your birthday</h4>: '<h4>Your birthday</h4>'
+        <h4>Your birthday</h4>: '<h4>Votre anniversaire</h4>'
         <h4>Your favorite food</h4>: '<h4>Your favorite food</h4>'
-        <h4>Your address</h4>: '<h4>Your address</h4>'
+        <h4>Your address</h4>: '<h4>Votre adresse</h4>'
         <h4>Your parent's credit card number</h4>: "<h4>Your parent's credit card number</h4>"
       4-5 Internet Multi 1:
         Multiple Choice: Questions à choix multiples
@@ -308,7 +308,7 @@ fr:
       K-1 Artist 1 Multi 1:
         Multiple Choice: Questions à choix multiples
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
-        Which blocks solve this puzzle?: Quels blocs résolvent ce puzzle?
+        Which blocks solve this puzzle?: Quels blocs permettent de résoudre ce puzzle ?
         /script_assets/k_1_images/artist_images/W|S|S.png: /script_assets/k_1_images/artist_images/W|S|S.png
         /script_assets/k_1_images/artist_images/E|S|S.png: /script_assets/k_1_images/artist_images/E|S|S.png
         /script_assets/k_1_images/artist_images/S|E|E.png: /script_assets/k_1_images/artist_images/S|E|E.png
@@ -541,7 +541,7 @@ fr:
         George Jetson: George Jetson
       unique level name here:
         title: titre
-        description here: description here
+        description here: description ici
         Question: Question
-        wrong answer: wrong answer
-        right answer: right answer
+        wrong answer: mauvaise réponse
+        right answer: bonne réponse

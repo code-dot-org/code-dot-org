@@ -7,7 +7,7 @@
           The Maze: Labirintas
           Multi: Variantai
           Match: Sujungimas
-          Math Image: Math Image
+          Math Image: Matematinis vaizdas
           title: Bandomasis etapas
           description: Tai tik vidinis bandomasis etapas.
         course1:
@@ -53,7 +53,7 @@
           Suzi: Suzi
           The Artist: Menininkas
           Artist Debugging: 'Menininkas: klaidų ieškojimas'
-          Bounce: Šokinėjimas
+          Bounce: Tenisas
           'Studio: Create a Story': 'Žaidimų laboratorija: sukurk istoriją'
           Artist Loops: 'Menininkas: kartojimas'
           Bee Conditionals: 'Bitė: sąlyginiai sakiniai'
@@ -88,7 +88,7 @@
           'Artist: Sequence2': 'Menininkas: seka2'
           'Maze: Sequence2': 'Labirintas: seka2'
           'Artist: Nested Loops': 'Menininkas: kartojimas kartojime'
-          description_audience: Ages  6+ (reading required)
+          description_audience: Nuo 6 metų (reikia mokėti skaityti)
           description_short: Kursas 2 yra skirtas jau mokantiems skaityti 2-5 kl.
             moksleiviams.
         course3:
@@ -191,9 +191,9 @@
           'Play Lab: Defining Variables (Big Game)': 'Play Lab: Defining Variables
             (Big Game)'
           'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
-          'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
-          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
-            (Big Game)'
+          'Play Lab: Boolean (Big Game)': 'Žaidimų laboratorija: Logika (Big Game)'
+          'Play Lab: Collision Detection (Big Game)': 'Žaidimų laboratorija: Susidūrimo
+            nustatymas (Big Game)'
           'Eval: Fast Functions': 'Eval: Fast Functions'
           'Play Lab: Design Recipe': 'Play Lab: Design Recipe'
           'Eval: Design Recipe': 'Eval: Design Recipe'
@@ -305,3 +305,13 @@
           description: A selection of Course 4 levels for usability testing.
           Variables: Kintamieji
           For Loops: For Loops
+        potus:
+          title: special
+          description_short: special
+          description: special
+          Special: Special
+        special:
+          title: special
+          description_short: special
+          description: special
+          Special: Special

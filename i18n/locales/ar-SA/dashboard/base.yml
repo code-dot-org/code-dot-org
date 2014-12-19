@@ -36,6 +36,7 @@ ar:
   of: من
   more: أكثر
   less: أقل
+  beta: beta
   try_hoc: 'قم بتجربة ساعة من البرمجة, انقر هنا>> '
   try_k8intro: 'جرب مقدمة عن درس "علوم الكمبيوتر" للمستوى المبتدئ والمتوسط  (من 15 الى 25 ساعة)'
   k8intro: 'مقدمة عن درس "علوم الكمبيوتر" للمستوى المبتدئ والمتوسط  (من 15 الى 25 ساعة)'
@@ -63,7 +64,7 @@ ar:
     overview_teacher: 'قم بتدريس علوم الكمبيوتر في صفك بالتسجيل للحصول على حساب.<p/> سوف يصبح بإمكانك إضافة طلابك و متابعة تقدمهم .'
     no_signup_message: 'يمكنك<a target="_blank" href="http://learn.code.org"> تصفح مختلف المراحل والالغاز</a>, ولكن سوف تحتاج إلى التسجيل لحفظ تقدمك.'
     teacher_educator_guide: راجع دليل المعلم
-    teacher_pitch: تسجيل المعلمين ل Code.org
+    teacher_pitch: طلب التسجيل المعلمين ل Code.org
     teacher_title: تسجيل حساب المعلم
     student_pitch: تسجيل الطالب ل Code.org
     student_title: التسجيل كطالب
@@ -337,8 +338,8 @@ ar:
     test_videos_help: إختبر مشغل الفيديو الجديد الخاص بنا في مدرستك
     try_beta_courses: جديدنا ! جرب اللآن النسخة التجريبية من دورتنا التدريبية لطلاب K-5
     use_as_teacher: استخدم هذا الموقع كمدرس
-    heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
-    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
+    heading_hoc2014: '<h2>ساعة من البرمجة </h2><h1>لجميع الأعمار</h1>'
+    heading_elementary: '<h2>دورات ال 20 ساعة</h2><h1>المبتدئين (جميع الأعمار)</h1>'
     heading_apps: '<h2>المتعة</h2><h1>للجميع</h1>'
     heading_legacy: '<h2>دورتنا عامة لـ</h2><h1>جميع الأعمار</h1>'
     your_gallery: معرض
@@ -352,7 +353,7 @@ ar:
   footer:
     help_from_html: ساعد مهندسين من جوجل ومايكروسوفت والفيس بوك وتويتر في إنشاء هذه البرنامج التعليمية.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
-    powered_by_aws: Powered by Amazon Web Services
+    powered_by_aws: مدعوم من قبل خدمات أمازون للوب
     feedback: توفير التغذية الرجعية
     translate: ساعدنا على ترجمة لغتك
     support: الدعم
@@ -430,7 +431,7 @@ ar:
       title: معرض
       body: 'عرض معرض صور "تطبيق" و "الفنان" التي تم إنشاؤها من قبل مستخدمينا'
     frozen:
-      title: Frozen
+      title: ملكة الثلج Frozen
   gallery:
     students_drew_these_with_code: ووجه الطلاب هذه بالكود!
     students_made_these_with_code: طلاب صنعوا هذا بالكود!
@@ -509,3 +510,7 @@ ar:
     completed_too_many_blocks: أكملت، كتل كثيرة جداً
     completed_perfect: مكتمل, ممتاز
     furthest_level_attempted: حاول المستوى الأبعد
+  studio:
+    courses_working_on: "Courses you're working on"
+    completed_courses: Completed courses
+    all_courses: All courses
