@@ -121,51 +121,6 @@ ExpressionNode.prototype.evaluate = function () {
     }
 };
 
-// todo (brent) - it's possible that we never actually have to evaluate expressions
-// that have functions/variables
-
-/**
- * Given a mapping of variables to values, replaces all instances of the variable
- * in the ExpressionNode tree with the value.
- */
-ExpressionNode.prototype.replaceVariables = function (mapping) {
-  if (this.getType() === ValueType.VARIABLE && mapping[this.value]) {
-    this.replaceWith(mapping[this.value]);
-  } else {
-    for (var i = 0; i < this.children.length; i++) {
-      this.children[i].replaceVariables(mapping);
-    }
-  }
-  return this;
-};
-
-/**
- * example: f(x, y) = x + y
- * functionName is f
- * paramNames is [x, y]
- * functionExpression is x +y
- */
-ExpressionNode.prototype.replaceFunction = function (functionName, orderedParams,
-    functionExpression) {
-  var i;
-  if (this.getType() === ValueType.FUNCTION_CALL && this.value === functionName) {
-    if (orderedParams.length !== this.children.length) {
-      throw new Error("function with wrong number of params");
-    }
-    // create mapping of variables to values
-    var mapping = {};
-    for (i = 0; i < orderedParams.length; i++) {
-      mapping[orderedParams[i]] = this.children[i];
-    }
-    var replacement = functionExpression.clone().replaceVariables(mapping);
-    this.replaceWith(replacement);
-  } else {
-    for (i = 0; i < this.children.length; i++) {
-      this.children[i].replaceFunction(functionName, orderedParams, functionExpression);
-    }
-  }
-};
-
 /**
  * Depth of this node's tree. A lone value is considered to have a depth of 0.
  */
