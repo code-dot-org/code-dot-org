@@ -18,6 +18,6 @@ Take [the survey](<%= survey_url %>).
 <br/>
 <hr/>
 
-You’re receiving this email because you signed up to host the Hour of Code at [hourofcode.com](https://hourofcode.com/). We’ll send you only a few updates a year on new ways to learn. Don’t like these emails? [Unsubscribe](<%= unsubscribe_link %>).
+You’re receiving this email because you signed up to host the Hour of Code at [hourofcode.com](https://hourofcode.com/). We’ll send you only a few updates a year on new ways to learn and help. Don’t like these emails? [Unsubscribe](<%= unsubscribe_link %>).
 
 ![](<%= tracking_pixel %>)
