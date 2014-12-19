@@ -1,8 +1,8 @@
 {
   "compute": "compute",
-  "equivalentExpression": "Try reordering your arguments to get exactly the same expression.",
-  "extraTopBlocks": "You have unattached blocks. Did you mean to attach these to the \"compute\" block?",
+  "equivalentExpression": "Subukang ayusin ang iyong mga argument upang makuha ang parehong ekspresyon.",
+  "extraTopBlocks": "Mayroon kang hindi nakasama na mga block. Ibig mo bang isama ito sa \"compute\" block?",
   "goal": "Goal:",
-  "reinfFeedbackMsg": "Does this look like what you want? You can press the \"Try again\" button to see your drawing.",
-  "yourExpression": "Your expression:"
+  "reinfFeedbackMsg": "Heto na ang inyong kuwento! Magpatuloy sa pagsagot dito, o lumipat sa susunod na palaisipan!",
+  "yourExpression": "Ang iyong expression:"
 }

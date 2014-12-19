@@ -7,19 +7,15 @@ nav: resources_nav
   <h1 class="col-sm-6">
     Recursos
   </h1>
-  
-  <div class="col-sm-6 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Registre seu evento</button></a>
-  </div>
 </div>
 
 <% if @country == 'ie' %>
 
-## Pretende sediar uma Hora do Código na Irlanda? [Consulte o guia prático](<%= hoc_uri('/resources/how-to-ireland') %>)
+## Quer sediar uma Hora do Código na Irlanda? [Consulte o guia prático](<%= hoc_uri('/resources/how-to-ireland') %>)
 
 <% else %>
 
-## Pretende sediar uma Hora do Código? [Consulte o guia prático](<%= hoc_uri('/resources/how-to') %>)
+## Quer sediar uma Hora do Código? [Consulte o guia prático](<%= hoc_uri('/resources/how-to') %>)
 
 <% end %>
 
@@ -84,7 +80,7 @@ nav: resources_nav
   
   <div style='clear:both'>
   </div>
-
+  
 <p>
 <a id="posters"></p> 
 
@@ -121,7 +117,7 @@ nav: resources_nav
 </p>
 
 <p>
-  <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/image/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
 <p>
@@ -141,11 +137,11 @@ nav: resources_nav
 </h2>
 
 <p>
-  Os computadores estão em toda parte, mas menos escolas ensinam ciência da computação hoje do que há 10 anos. A boa notícia é que estamos a caminho de mudar essa realidade. Se você ouviu falar sobre a Hora do Código no ano passado, você deve saber que ela foi histórica. Em uma semana, 15 milhões de alunos entraram em contato com a ciência da computação!
+  Os computadores estão em toda parte, mas menos escolas ensinam ciência da computação hoje do que há 10 anos. A boa notícia é que estamos a caminho de mudar essa realidade. Se você ouviu falar da Hora do Código do ano passado, sabe que marcou a história. Em uma semana, 15 milhões de alunos entraram em contato com a ciência da computação!
 </p>
 
 <p>
-  A ciência da computação estava nas páginas iniciais do Google, MSN, Yahoo! e Disney. O presidente Obama, a cantora Shakira e o ator Ashton Kutcher deram início à Hora do Código por meio de vídeos. Mais de 100 parceiros se uniram para apoiar este movimento.
+  A ciência da computação estava nas páginas iniciais do Google, MSN, Yahoo! e Disney. Os vídeos do Presidente Obama, Shakira e Ashton Kutcher abriram a Hora do Código do ano passado. Mais de 100 parceiros se uniram para apoiar este movimento.
 </p>
 
 <p>
@@ -165,7 +161,7 @@ nav: resources_nav
 </p>
 
 <h2>
-  Convide a mídia para comparecer ao seu evento:
+  Convide a mídia para participar de seu evento
 </h2>
 
 <p>
@@ -173,11 +169,11 @@ nav: resources_nav
 </p>
 
 <p>
-  Os computadores estão em toda parte, mas menos escolas ensinam ciência da computação hoje do que há 10 anos. Meninas e representantes das minorias sociais quase não são representados. A boa notícia é que, estamos no caminho certo para mudar isso.
+  Os computadores estão em toda parte, mas menos escolas ensinam ciência da computação hoje do que há 10 anos. Além disso, as minorias sociais e as mulheres têm baixíssima participação nessa área. Mas a boa notícia é que estamos a caminho de mudar essa realidade.
 </p>
 
 <p>
-  No ano passado, 15 milhões de alunos experimentaram a ciência da computação! A ciência da computação estava nas páginas iniciais do Google, MSN, Yahoo! e Disney. O presidente Obama, a cantora Shakira e o ator Ashton Kutcher deram início à Hora do Código por meio de vídeos. Mais de 100 parceiros se uniram para apoiar este movimento.
+  No ano passado, 15 milhões de alunos experimentaram a ciência da computação! A ciência da computação estava nas páginas iniciais do Google, MSN, Yahoo! e Disney. Os vídeos do Presidente Obama, Shakira e Ashton Kutcher abriram a Hora do Código do ano passado. Mais de 100 parceiros se uniram para apoiar este movimento.
 </p>
 
 <p>
@@ -189,15 +185,15 @@ nav: resources_nav
 </p>
 
 <p>
-  Estou escrevendo para convidá-lo para participar da nossa reunião de abertura e ver as crianças darem início às atividades no dia [DATA].
+  Gostaria de convidá-lo para participar da abertura de nosso evento e assistir ao início das atividades das crianças no dia [DATA].
 </p>
 
 <p>
-  A Hora do Código, elaborada pela Code.org e outras 100 organizações sem fins lucrativos, é uma prova de que a geração atual de alunos está pronta para aprender as habilidades fundamentais para o sucesso no século XXI. Junte-se a nós!
+  A Hora do Código, organizada pela Code.org (uma organização sem fins lucrativos) e outras 100 empresas, é uma prova de que a geração de estudantes de hoje está pronta para aprender habilidades fundamentais para o sucesso no século XXI. Junte-se a nós!
 </p>
 
 <p>
-  <strong>Contato:</strong> [SEU NOME], [CARGO], telefone celular: (XX) 555-5555
+  <strong>Contato:</strong> [SEU NOME], [CARGO], celular: (XX) 55555-5555
 </p>
 
 <p>
@@ -205,7 +201,7 @@ nav: resources_nav
 </p>
 
 <p>
-  <strong>Onde:</strong> [ENDEREÇO e ORIENTAÇÕES]
+  <strong>Onde:</strong> [ENDEREÇO e ORIENTAÇÕES DE COMO CHEGAR]
 </p>
 
 <p>
@@ -229,11 +225,11 @@ nav: resources_nav
 </p>
 
 <p>
-  É por isso que toda a nossa escola está participando do maior evento de aprendizado da história: a Hora do Código, durante a Semana da Educação em Ciência da Computação (de 8 a 14 de dezembro). No ano passado, 15 milhões de alunos tiveram contato com a ciência da computação em uma semana. Este ano, estamos reunindo alunos do mundo todo para atingir 100 milhões de alunos!
+  É por isso que nossa escola inteira participará do maior evento de aprendizagem da história: a Hora do Código. Esse evento ocorrerá durante a Semana da Educação em Ciência da Computação (8-14 de dezembro). No ano passado, 15 milhões de estudantes tiveram acesso à ciência da computação em uma semana. Este ano, estamos reunindo alunos do mundo todo para atingir 100 milhões de estudantes!
 </p>
 
 <p>
-  Nossa Hora do Código é uma prova de que a [NOME DA ESCOLA] está pronta para ensinar essas habilidades básicas do século XXI. Para continuar levando atividades de programação aos seus alunos, queremos tornar nosso evento da Hora do Código ainda maior. Eu o incentivo a ser um voluntário, entrar em contato com a mídia local, compartilhar as notícias em seus canais de mídia social e considerar a ideia de sediar eventos da Hora do Código na comunidade.
+  Para nós, a Hora do Código é uma prova de que a [NOME DA ESCOLA] está pronta para ensinar essas habilidades fundamentais do século XXI. Para continuar levando atividades de programação para nossos alunos, queremos tornar a Hora do Código um evento enorme. Convido-o a se voluntariar, mobilizar os meios de comunicação locais, compartilhar as notícias em seus canais de mídia social e considerar a possibilidade de promover outros eventos da Hora do Código em sua comunidade.
 </p>
 
 <p>
@@ -249,7 +245,7 @@ nav: resources_nav
 </p>
 
 <p>
-  Seu diretor
+  Diretoria da [NOME DA ESCOLA]
 </p>
 
 <p>
@@ -261,29 +257,25 @@ nav: resources_nav
 </h2>
 
 <p>
-  Caro [SOBRENOME do prefeito/governador/representante/senador]:
+  Caro [nome do Prefeito / Secretário / Governador / Senador]:
 </p>
 
 <p>
-  Você sabia que, na economia de hoje, o número de empregos na área de computação é três vezes maior que o número de alunos que estão se formando nessa área? E que, além disso, a ciência da computação é fundamental para <em>todos</em> os setores dos tempos atuais? Ainda assim, 90% das escolas não a ensinam. Na [NOME DA ESCOLA], estamos nos esforçando para mudar essa realidade.
+  Você sabia que, na economia de hoje, os empregos na área de computação ultrapassam o número de alunos que estão se formando em uma proporção de 3 para 1? Além disso, a ciência da computação é fundamental para <em>todos</em> os setores atualmente. Ainda assim, 90% das escolas não a ensinam. Na [NOME DA ESCOLA], estamos nos esforçando para mudar essa realidade.
 </p>
 
 <p>
-  É por isso que toda a nossa escola está participando do maior evento de aprendizado da história: a Hora do Código, durante a Semana da Educação em Ciência da Computação (de 8 a 14 de dezembro). No ano passado, 15 milhões de alunos tiveram contato com a ciência da computação em uma semana. Este ano, estamos reunindo alunos do mundo todo para atingir 100 milhões de alunos!
+  É por isso que nossa escola inteira participará do maior evento de aprendizagem da história: a Hora do Código. Esse evento ocorrerá durante a Semana da Educação em Ciência da Computação (8-14 de dezembro). No ano passado, 15 milhões de estudantes tiveram acesso à ciência da computação em uma semana. Este ano, estamos reunindo alunos do mundo todo para atingir 100 milhões de estudantes!
 </p>
 
 <p>
-  Estou escrevendo para convidá-lo para participar do nosso evento da Hora do Código e falar em nossa reunião de abertura. Ela será realizada em [DATA, HORA, LUGAR], e será uma grande prova de que o [nome do Estado ou cidade] está pronto para ensinar aos nossos alunos as habilidades fundamentais do século XXI. Queremos garantir que nossos alunos estejam na vanguarda da criação de tecnologia do futuro, e não apenas consumindo-a.
+  Gostaria de convidá-lo para participar de nosso evento da Hora do Código e se pronunciar em nossa abertura. Ele ocorrerá em [DATA, HORA, LOCAL] e enfatizará que [Nome da Cidade ou Estado] está pronto(a) para ensinar as principais habilidades do século XXI aos nossos alunos. Queremos garantir que nossos alunos estejam na vanguarda da criação de tecnologia do futuro, e não simplesmente consumindo-a.
 </p>
 
 <p>
-  Você pode entrar em contato comigo [LIGANDO PARA NÚMERO DE TELEFONE OU ENVIANDO UM E-MAIL PARA ENDEREÇO DE E-MAIL]. Aguardo sua resposta.
+  Você pode entrar em contato comigo [pelo telefone (número do telefone) ou pelo e-mail (endereço do e-mail)]. Aguardo sua resposta.
 </p>
 
 <p>
   Atenciosamente, [NOME], [CARGO]
-</p>
-
-<p>
-  <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Registre seu evento</button></a>
 </p>

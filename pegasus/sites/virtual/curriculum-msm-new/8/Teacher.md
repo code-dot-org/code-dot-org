@@ -5,7 +5,7 @@ theme: none
 ---
 
 
-<%= partial('curriculum_header', :unittitle=> 'MSM', :lesson=> 8, :unplugged=>false, :title=> 'Eval: Fast Functions',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>(30-60)) %>
+<%= partial('curriculum_header', :unittitle=> 'MSM', :lesson=> 8, :unplugged=>false, :title=> 'Eval: Fast Functions',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>('30-60')) %>
 
 [content]
 
@@ -13,7 +13,7 @@ theme: none
 
 ## Lesson Overview
 
-In the past lessons students have defined Variables - containers for values that allow students to abstract out elements of their programs.
+In the past lessons students have defined Variables - which allows students to easily write expressions that refer to the same value repeatedly. In this stage students will write simple functions that, like variables, allow students to abstract out repetitions elements of their programs.
 
 [summary]
 
@@ -45,13 +45,10 @@ In the past lessons students have defined Variables - containers for values that
 
 ### <a name="GetStarted"></a> 1) Introduction
 
-Defining a value is helpful when a program has lots of identical expressions. Sometimes, however, a program has expressions that aren’t identical, but are just very similar. A program that has fifty solid, green triangles can be simplified by defining a single value, as long as they are all the same size. But what if a program has fifty green triangles of different sizes?
+Defining a _value_ is helpful when a program has lots of identical expressions. Sometimes, however, a program has expressions that aren’t identical, but are just _very similar_. A program that has fifty solid, green triangles can be simplified by defining a single value, _as long as they are all the same size_. But what if a program has fifty green triangles of different sizes?
 
-Think about the Image functions you have already used, like star and circle. They take inputs and produce images. Similarly, we might want a green-triangle function that takes the size as an input and produces a green triangle. The programming language doesn’t provide this function, but it does let you define your own functions. We want to define our own function (let’s call it gt, for green triangle) that takes in a Number and produces a solid green triangle of whatever size we want.
-(gt 10) would be a shortcut for (triangle 10 "solid" "green")
-(gt 20) would be a shortcut for (triangle 20 "solid" "green")
-(gt 1980) would be a shortcut for (triangle 1980 "solid" "green")
-(gt 98) would be a shortcut for (triangle 98 "solid" "green")
+Think about the Image functions you have already used, like star and circle. They take inputs and produce images. Similarly, we might want a green-triangle function that takes the size as an input and produces a green triangle. The programming language doesn’t provide this function, but it does let you define your own functions. We want to define our own function (let’s call it gt, for green triangle) that takes in a Number and produces a solid green triangle of whatever size we want. For example:
+<img src="gtShortcuts.png" style="width: 100%" />
 and so on...
 
 [/together]

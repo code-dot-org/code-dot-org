@@ -337,8 +337,68 @@ node['cdo-apps']['i18n']['languages'].to_hash.keys.each do |language|
 end
 %>
 
-  if (req.http.host == "<%= canonical_hostname('learn.code.org') %>" || req.http.host == "<%= canonical_hostname('studio.code.org') %>")
+  if (req.http.host == "<%= canonical_hostname('learn.code.org') %>" ||
+      req.http.host == "<%= canonical_hostname('studio.code.org') %>" ||
+      req.http.host == "code-dot-org.cartoonnetworkarabic.com")
   {
+<% if false %>
+    if(req.http.Cookie ~ "language_=en" || !(req.http.Cookie ~ "language_"))
+    {
+      if(req.url == "/s/frozen")
+      {
+        error 751 "http://static.studio.code.org/";
+      }
+<%    { '/s/frozen/reset'=>'http://static.studio.code.org/',
+        '/s/frozen/stage/1/puzzle/1'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=1',
+        '/s/frozen/stage/1/puzzle/2'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=2',
+        '/s/frozen/stage/1/puzzle/3'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=3',
+        '/s/frozen/stage/1/puzzle/4'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=4',
+        '/s/frozen/stage/1/puzzle/5'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=5',
+        '/s/frozen/stage/1/puzzle/6'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=6',
+        '/s/frozen/stage/1/puzzle/7'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=7',
+        '/s/frozen/stage/1/puzzle/8'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=8',
+        '/s/frozen/stage/1/puzzle/9'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=9',
+        '/s/frozen/stage/1/puzzle/10'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=10',
+        '/s/frozen/stage/1/puzzle/11'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=11',
+        '/s/frozen/stage/1/puzzle/12'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=12',
+        '/s/frozen/stage/1/puzzle/13'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=13',
+        '/s/frozen/stage/1/puzzle/14'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=14',
+        '/s/frozen/stage/1/puzzle/15'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=15',
+        '/s/frozen/stage/1/puzzle/16'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=16',
+        '/s/frozen/stage/1/puzzle/17'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=17',
+        '/s/frozen/stage/1/puzzle/18'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=18',
+        '/s/frozen/stage/1/puzzle/19'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=19',
+        '/s/frozen/stage/1/puzzle/20'=>'http://static.studio.code.org/?s=frozen&stage=1&puzzle=20',
+        '/hoc/reset'=>'http://static-hoc.studio.code.org/?s=hoc',
+        '/hoc/1'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=1',
+        '/hoc/2'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=2',
+        '/hoc/3'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=3',
+        '/hoc/4'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=4',
+        '/hoc/5'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=5',
+        '/hoc/6'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=6',
+        '/hoc/7'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=7',
+        '/hoc/8'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=8',
+        '/hoc/9'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=9',
+        '/hoc/10'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=10',
+        '/hoc/11'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=11',
+        '/hoc/12'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=12',
+        '/hoc/13'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=13',
+        '/hoc/14'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=14',
+        '/hoc/15'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=15',
+        '/hoc/16'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=16',
+        '/hoc/17'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=17',
+        '/hoc/18'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=18',
+        '/hoc/19'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=19',
+        '/hoc/20'=>'http://static-hoc.studio.code.org/?s=hoc&stage=1&puzzle=20',
+      }.each_pair do |src, dest| %>
+      else if(req.url == "<%= src %>")
+      {
+        error 751 "<%= dest %>";
+      }
+<%    end %>
+    }
+<% end %>
+
     if (req.url ~ "^/v2/")
     {
       set req.backend = default;

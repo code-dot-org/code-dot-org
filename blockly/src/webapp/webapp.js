@@ -41,7 +41,7 @@ var MAX_INTERPRETER_STEPS_PER_TICK = 200;
 // Default Scalings
 Webapp.scale = {
   'snapRadius': 1,
-  'stepSpeed': 1
+  'stepSpeed': 0
 };
 
 var twitterOptions = {
@@ -442,14 +442,11 @@ Webapp.init = function(config) {
 
   config.twitter = twitterOptions;
 
-  // for this app, show make your own button if on share page
-  config.makeYourOwn = config.share;
-
-  config.makeString = webappMsg.makeYourOwn();
-  config.makeUrl = "http://code.org/webapp";
-  config.makeImage = BlocklyApps.assetUrl('media/promo.png');
+  // hide makeYourOwn on the share page
+  config.makeYourOwn = false;
 
   config.varsInGlobals = true;
+  config.noButtonsBelowOnMobileShare = true;
 
   // Webapp.initMinimal();
 
@@ -507,6 +504,11 @@ Webapp.init = function(config) {
       dom.addClickTouchEvent(stepOverButton, Webapp.onStepOverButton);
       dom.addClickTouchEvent(stepOutButton, Webapp.onStepOutButton);
     }
+  }
+
+  if (BlocklyApps.share) {
+    // automatically run in share mode:
+    window.setTimeout(BlocklyApps.runButtonClick, 0);
   }
 };
 
@@ -699,31 +701,12 @@ var nativeGetCallback = function () {
   return Webapp.eventQueue.shift();
 };
 
-function marshalInterpreterToNative(interpreterVar) {
-  if (interpreterVar.isPrimitive) {
-    return interpreterVar.data;
-  } else if (Webapp.interpreter.isa(interpreterVar, Webapp.interpreter.ARRAY)) {
-    var nativeArray = [];
-    nativeArray.length = interpreterVar.length;
-    for (var i = 0; i < nativeArray.length; i++) {
-      nativeArray[i] = marshalInterpreterToNative(interpreterVar.properties[i]);
-    }
-    return nativeArray;
-  } else if (Webapp.interpreter.isa(interpreterVar, Webapp.interpreter.OBJECT)) {
-    var nativeObject = {};
-    for (var prop in interpreterVar.properties) {
-      nativeObject[prop] = marshalInterpreterToNative(interpreterVar.properties[prop]);
-    }
-    return nativeObject;
-  }
-}
-
 var consoleApi = {};
 
 consoleApi.log = function() {
   var nativeArgs = [];
   for (var i = 0; i < arguments.length; i++) {
-    nativeArgs[i] = marshalInterpreterToNative(arguments[i]);
+    nativeArgs[i] = codegen.marshalInterpreterToNative(arguments[i]);
   }
   var output = '';
   var firstArg = nativeArgs[0];
@@ -819,13 +802,16 @@ Webapp.execute = function() {
                                           Webapp: api,
                                           console: consoleApi,
                                           JSON: JSONApi,
-                                          Globals: Webapp.Globals } );
-
+                                          Globals: Webapp.Globals });
 
         var getCallbackObj = interpreter.createObject(interpreter.FUNCTION);
+        // Only allow four levels of depth when marshalling the return value
+        // since we will occasionally return DOM Event objects which contain
+        // properties that recurse over and over...
         var wrapper = codegen.makeNativeMemberFunction(interpreter,
                                                        nativeGetCallback,
-                                                       null);
+                                                       null,
+                                                       4);
         interpreter.setProperty(scope,
                                 'getCallback',
                                 interpreter.createNativeFunction(wrapper));
@@ -1017,6 +1003,7 @@ Webapp.callCmd = function (cmd) {
     case 'replaceHtmlBlock':
     case 'deleteHtmlBlock':
     case 'createButton':
+    case 'createImage':
     case 'createCanvas':
     case 'canvasDrawLine':
     case 'canvasDrawCircle':
@@ -1026,8 +1013,14 @@ Webapp.callCmd = function (cmd) {
     case 'canvasClear':
     case 'createTextInput':
     case 'createTextLabel':
+    case 'createCheckbox':
+    case 'createRadio':
+    case 'createDropdown':
     case 'getText':
     case 'setText':
+    case 'getChecked':
+    case 'setChecked':
+    case 'setImageURL':
     case 'setPosition':
     case 'setParent':
     case 'setStyle':
@@ -1061,6 +1054,16 @@ Webapp.createButton = function (opts) {
                  divWebapp.appendChild(newButton));
 };
 
+Webapp.createImage = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+
+  var newImage = document.createElement("img");
+  newImage.src = opts.src;
+  newImage.id = opts.elementId;
+
+  return Boolean(divWebapp.appendChild(newImage));
+};
+
 Webapp.createCanvas = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
 
@@ -1070,7 +1073,7 @@ Webapp.createCanvas = function (opts) {
     newElement.id = opts.elementId;
     // default width/height if params are missing
     var width = opts.width || 400;
-    var height = opts.height || 400;
+    var height = opts.height || 600;
     newElement.width = width * Webapp.canvasScale;
     newElement.height = height * Webapp.canvasScale;
     newElement.style.width = width + 'px';
@@ -1173,17 +1176,63 @@ Webapp.createTextLabel = function (opts) {
   var newLabel = document.createElement("label");
   var textNode = document.createTextNode(opts.text);
   newLabel.id = opts.elementId;
+  var forElement = document.getElementById(opts.forId);
+  if (forElement && divWebapp.contains(forElement)) {
+    newLabel.setAttribute('for', opts.forId);
+  }
 
   return Boolean(newLabel.appendChild(textNode) &&
                  divWebapp.appendChild(newLabel));
+};
+
+Webapp.createCheckbox = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+
+  var newCheckbox = document.createElement("input");
+  newCheckbox.setAttribute("type", "checkbox");
+  newCheckbox.checked = opts.checked;
+  newCheckbox.id = opts.elementId;
+
+  return Boolean(divWebapp.appendChild(newCheckbox));
+};
+
+Webapp.createRadio = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+
+  var newRadio = document.createElement("input");
+  newRadio.setAttribute("type", "radio");
+  newRadio.name = opts.name;
+  newRadio.checked = opts.checked;
+  newRadio.id = opts.elementId;
+
+  return Boolean(divWebapp.appendChild(newRadio));
+};
+
+Webapp.createDropdown = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+
+  var newSelect = document.createElement("select");
+
+  if (opts.optionsArray) {
+    for (var i = 0; i < opts.optionsArray.length; i++) {
+      var option = document.createElement("option");
+      option.text = opts.optionsArray[i];
+      newSelect.add(option);
+    }
+  }
+  newSelect.id = opts.elementId;
+
+  return Boolean(divWebapp.appendChild(newSelect));
 };
 
 Webapp.getText = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
   var element = document.getElementById(opts.elementId);
   if (divWebapp.contains(element)) {
-    if (element.tagName === 'INPUT') {
+    if (element.tagName === 'INPUT' || element.tagName === 'SELECT') {
       return String(element.value);
+    } else if (element.tagName === 'IMG') {
+      return String(element.alt);
     } else {
       return element.innerText;
     }
@@ -1195,11 +1244,43 @@ Webapp.setText = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
   var element = document.getElementById(opts.elementId);
   if (divWebapp.contains(element)) {
-    if (element.tagName === 'INPUT') {
+    if (element.tagName === 'INPUT' || element.tagName === 'SELECT') {
       element.value = opts.text;
+    } else if (element.tagName === 'IMG') {
+      element.alt = opts.text;
     } else {
       element.innerText = opts.text;
     }
+    return true;
+  }
+  return false;
+};
+
+Webapp.getChecked = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var element = document.getElementById(opts.elementId);
+  if (divWebapp.contains(element) && element.tagName === 'INPUT') {
+    return element.checked;
+  }
+  return false;
+};
+
+Webapp.setChecked = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var element = document.getElementById(opts.elementId);
+  if (divWebapp.contains(element) && element.tagName === 'INPUT') {
+    element.checked = opts.checked;
+    return true;
+  }
+  return false;
+};
+
+Webapp.setImageURL = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var element = document.getElementById(opts.elementId);
+  if (divWebapp.contains(element) && element.tagName === 'IMG') {
+    element.src = opts.src;
+    return true;
   }
   return false;
 };

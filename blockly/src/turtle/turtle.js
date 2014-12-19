@@ -1417,8 +1417,13 @@ Turtle.checkAnswer = function() {
     save_to_gallery: level.impressive
   };
 
+  // https://www.pivotaltracker.com/story/show/84171560
+  // Never send up frozen images for now.
+  var isFrozen = (skin.id === 'anna' || skin.id === 'elsa');
+
   // Get the canvas data for feedback.
-  if (Turtle.testResults >= BlocklyApps.TestResults.TOO_MANY_BLOCKS_FAIL) {
+  if (Turtle.testResults >= BlocklyApps.TestResults.TOO_MANY_BLOCKS_FAIL &&
+    !isFrozen && (level.freePlay || level.impressive)) {
     reportData.image = getFeedbackImage();
   }
 

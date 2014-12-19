@@ -99,6 +99,9 @@
   participant_educator: Nauczyciel
   participant_engineer: Programista
   participant_other: Żaden z powyższych
+  print_all: Print all
+  print_ice_art: Print your ice art
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: Jestem
   never_spam: Nigdy nie wysyłamy spamu
   enter_country: Podaj kraj, jeśli inny niż Stany Zjednoczone
@@ -137,6 +140,10 @@
   studiobar_flappy_body: Utwórz i udostępnij swoją grę Flappy'ego
   studiobar_teacher_title: Dla nauczycieli
   studiobar_teacher_body: Wprowadź Code Studio (Studio Kodowania) w swojej klasie
+  studiobar_frozen_title: Godzina kodowania
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: Donate
+  studiobar_donate_body: One child learns for each dollar you donate
   contact_form_topic_student: Jestem uczniem
   contact_form_topic_parent: Jestem rodzicem
   contact_form_topic_teacher: Jestem nauczycielem/edukatorem
@@ -230,6 +237,12 @@
   dashboard_action_done: Wykonane
   dashboard_action_required: wymagane
   dashboard_navigation_home_page: Domowa strona nauczyciela
+  dashboard_navigation_section_student_progress: Konta i postępy ucznia
+  dashboard_navigation_section_teacher_progress: Your Course Progress
+  dashboard_navigation_section_lesson_plans: Plany lekcji i zasoby
+  dashboard_navigation_section_community: Help and Community
+  dashboard_navigation_section_pd: Professional Development
+  dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
   dashboard_navigation_all_sections: Konta i postępy ucznia
   dashboard_navigation_view_progress: Przejrzy postępy
   dashboard_navigation_add_students: Dodaj uczniów
@@ -388,6 +401,10 @@
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Wprowadzenie do JavaScript
   khanes_name: Wprowadzenie do JavaScript
+  khanpt_name: Wprowadzenie do JavaScript
+  khanhe_name: Wprowadzenie do JavaScript
+  khanfr_name: Wprowadzenie do JavaScript
+  khanpl_name: Wprowadzenie do JavaScript
   tynker_name: Utwórz swoją własną grę
   scratch_name: Bądź kreatywny w kodowaniu
   lightbot_name: Lightbot
@@ -416,12 +433,17 @@
   thinkersmith2_name: Binarne Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Kamień, Papier, Nożyczki (Rock, Paper, Scissors)
-  frozen_gradelevel: W wieku 8+
+  hourofcode_name: Placeholder for new code.org/hoc
+  playlab_name: Play Lab
   codeorg_gradelevel: W wieku 4-104
   codeintl_gradelevel: W wieku 4-104
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Gimnazjum +
   khanes_gradelevel: Gimnazjum +
+  khanpt_gradelevel: Gimnazjum +
+  khanhe_gradelevel: Gimnazjum +
+  khanfr_gradelevel: Gimnazjum +
+  khanpl_gradelevel: Gimnazjum +
   tynker_gradelevel: W wieku 5-13
   scratch_gradelevel: W wieku 8+
   lightbot_gradelevel: Wszystkie grupy wiekowe
@@ -450,13 +472,19 @@
   thinkersmith2_gradelevel: W wieku 8+
   kodableunplugged_gradelevel: W wieku 8-13
   projguts_gradelevel: W wieku 10-13
-  frozen_platformtext: Nowoczesne przeglądarki + tablety
+  hourofcode_gradelevel: W wieku 4-104
+  frozen_gradelevel: W wieku 8+
+  playlab_gradelevel: W wieku 4-104
   codeorg_platformtext: Nowoczesne przeglądarki, smartfony, tablety
   codeintl_platformtext: Nowoczesne przeglądarki, smartfony, tablety
   thinkersmithspanish_platformtext: Odłączony (unplugged)/Bez komputera
   khan_platformtext: Nowoczesne przeglądarki sieci
   khanes_platformtext: Nowoczesne przeglądarki sieci
-  tynker_platformtext: Nowoczesne przeglądarki. (Kurs, który następuje, wymaga $$)
+  khanpt_platformtext: Nowoczesne przeglądarki sieci
+  khanhe_platformtext: Nowoczesne przeglądarki sieci
+  khanfr_platformtext: Nowoczesne przeglądarki sieci
+  khanpl_platformtext: Nowoczesne przeglądarki sieci
+  tynker_platformtext: Nowoczesne przeglądarki sieci
   scratch_platformtext: WSZYSTKIE przeglądarki
   lightbot_platformtext: WSZYSTKIE przeglądarki i iOS, Android lub konsola do gier
   thinkersmith_platformtext: Odłączony (unplugged)/Bez komputera
@@ -484,8 +512,9 @@
   thinkersmith2_platformtext: Odłączony (Unplugged)/Bez komputera
   kodableunplugged_platformtext: Odłączony (unplugged)/Bez komputera
   projguts_platformtext: Odłączony (unplugged)/Bez komputera
-  frozen_shortdescription: Użyjmy kodu, by przyłączyć się do Anny i Elsy zachwycających
-    się magią i pięknem lodu.
+  hourofcode_platformtext: Nowoczesne przeglądarki, smartfony, tablety
+  frozen_platformtext: Nowoczesne przeglądarki + tablety
+  playlab_platformtext: Nowoczesne przeglądarki, smartfony, tablety
   codeorg_shortdescription: Naucz się kodować (programować) z Markiem Zuckerbergiem
     i Angry Birds!
   codeintl_shortdescription: Naucz się kodować (programować) z Markiem Zuckerbergiem
@@ -493,6 +522,10 @@
   thinkersmithspanish_shortdescription: Poradnik para un grupo grzech computadoras
   khan_shortdescription: Naucz się rysować w JavaScript
   khanes_shortdescription: Naucz się rysować w JavaScript
+  khanpt_shortdescription: Naucz się rysować w JavaScript
+  khanhe_shortdescription: Naucz się rysować w JavaScript
+  khanfr_shortdescription: Naucz się rysować w JavaScript
+  khanpl_shortdescription: Naucz się rysować w JavaScript
   tynker_shortdescription: Naucz się kodować rozwiązując zabawne łamigłówki i tworząc
     swoje własne mobilne gry.
   scratch_shortdescription: Utwórz interaktywne gry, historyjki i animacje.
@@ -539,9 +572,10 @@
   kodableunplugged_shortdescription: Zabawne ćwiczenie bez komputera
   projguts_shortdescription: Wypróbuj modelowanie i symulację wykorzystując kamień,
     papier, nożyce
-  frozen_longdescription: Użyjmy kodowania, by przyłączyć się do Anny i Elsy, które
-    poszukują magii i piękna w lodzie. Będziesz tworzył płatki śniegu oraz wzory podczas
-    jazdy na łyżwach i przepiękną zimową krainę, którą później możesz udostępnić znajomym!
+  hourofcode_shortdescription: Placeholder for new code.org/hoc
+  frozen_shortdescription: Użyjmy kodu, by przyłączyć się do Anny i Elsy zachwycających
+    się magią i pięknem lodu.
+  playlab_shortdescription: Create a story or make a game with Play Lab!
   codeorg_longdescription: Poznaj podstawowe pojęcia informatyki programując metodą
     przeciągnij i upuść. To jest jak gra, samodzielny samouczek z wykładami wideo
     Billa Gatesa, Marka Zuckerberga oraz udziałem Angry Birds i Plants vs. Zombies
@@ -561,6 +595,14 @@
     rysunki. Możesz to zrobić na własną rękę lub z klasy!
   khanes_longdescription: Poznaj podstawy programowania w JavaScript tworząc zabawne
     rysunki. Możesz to robić na własną rękę lub z klasą!
+  khanpt_longdescription: Poznaj podstawy programowania w JavaScript tworząc zabawne
+    rysunki. Możesz to zrobić na własną rękę lub z klasy!
+  khanhe_longdescription: Poznaj podstawy programowania w JavaScript tworząc zabawne
+    rysunki. Możesz to zrobić na własną rękę lub z klasy!
+  khanfr_longdescription: Poznaj podstawy programowania w JavaScript tworząc zabawne
+    rysunki. Możesz to zrobić na własną rękę lub z klasy!
+  khanpl_longdescription: Poznaj podstawy programowania w JavaScript tworząc zabawne
+    rysunki. Możesz to zrobić na własną rękę lub z klasy!
   tynker_longdescription: Buduj swoje własne gry i dziel się nimi z przyjaciółmi!
     Rozwiązuj zabawne łamigłówki kodowania i poznawaj pojęcia programowania na każdym
     poziomie. Personalizuj gry z animowanymi postaciami, na wielu poziomach i bogatych
@@ -675,6 +717,13 @@
   projguts_longdescription: Działania unplugged (czyli bez komputera) pomagają uczniom
     w modelowaniu i symulacji. Grupa uczniów wykonuje różne wersje gry kamień, papier,
     nożyczki i obserwuje wyniki jako różne efekty eksperymentów z modelowaniem.
+  hourofcode_longdescription: Placeholder for new code.org/hoc
+  frozen_longdescription: Użyjmy kodowania, by przyłączyć się do Anny i Elsy, które
+    poszukują magii i piękna w lodzie. Będziesz tworzył płatki śniegu oraz wzory podczas
+    jazdy na łyżwach i przepiękną zimową krainę, którą później możesz udostępnić znajomym!
+  playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
+    pirates, zombies, ninjas, and many more characters move, make sounds, score points,
+    and even throw fireballs!
   codeorg_beyond_name: Wprowadzenie do informatyki (dla klas K-8)
   khan_beyond_name: Naucz się programować komputer
   tynker_beyond_name: Ucz się programowania w domu

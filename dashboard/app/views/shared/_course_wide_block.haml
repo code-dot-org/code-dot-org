@@ -9,7 +9,7 @@
 
 -elsif id == "flappy"
   .span6.miniblock
-    =link_to url_from_path("/flappy/1") do
+    =link_to script_reset_url("flappy") do
       .span4.heading
         %h3= t('upsell.flappy.title')
         .smalltext= t('upsell.flappy.body')

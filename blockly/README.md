@@ -16,6 +16,7 @@ One of the node modules, node-canvas, depends on Cairo being installed.
 
 Instructions for MacOSX using [brew](http://brew.sh/) (instructions for other platforms [can be found here](https://github.com/LearnBoost/node-canvas/wiki)):
 
+1. Make sure XCode Command-line Tools are installed and up-to-date: `xcode-select --install`
 1. Install [XQuartz from here](http://xquartz.macosforge.org/landing/)
 1. `export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/opt/X11/lib/pkgconfig"`
 1. `brew update`
@@ -68,6 +69,8 @@ MOOC_DEV=1 grunt build
 * `MOOC_DEV=1` builds a 'debug' version with more readable javascript
 * `grunt rebuild` does a `clean` before a `build`
 
+See also: [Full build with blockly-core](#full-build-with-blockly-core-changes)
+
 #### Running with live-reload server
 
 ```
@@ -75,9 +78,10 @@ grunt dev
 open http://localhost:8000
 ```
 
-This will serve a few sample blockly apps at [http://localhost:8000](http://localhost:8000).
-
-Note: this does not update asset files. For that, use a full `grunt build`.
+This will serve a few sample blockly apps at [http://localhost:8000](http://localhost:8000) and live-reload changes to blockly.  Caveats:
+* This does not update asset files. For that, use a full `grunt build`.
+* The live-reload server does not pick up changes to blockly-core.  For that, see [Full build with blockly-core](#full-build-with-blockly-core-changes).
+* If you get `Error: EMFILE, too many open files` while running the live-reload server (common on OSX) try increasing the OS open file limit by running `ulimit -n 1024` (and adding it to your `.bashrc`).
 
 ##### Rebuild only a single app
 
@@ -98,17 +102,17 @@ MOOC_LOCALE=ar_sa grunt build
 #### Running tests
 
 ```
-grunt build # run a build before testing
+grunt build # run a non-debug build before testing
 grunt test
 ```
-
 * If you see an error like `ReferenceError: Blockly is not defined` or notes about missing npm packages, double check that you've run `grunt build` before `grunt test`
+* Right now, the tests require a full/production build to pass.  Failures like `Cannot set property 'imageDimensions_' of undefined` in setup steps may indicate that you are testing against a debug build.
 * `grunt test` will also be run via Travis CI when you create a pull request
 
 To run an individual test, use the `--grep` option to target a file or Mocha `describe` identifier:
 
 ```
-grunt test --grep myTestName # e.g., 2_11, or requiredBlockUtils
+grunt mochaTest --grep myTestName # e.g., 2_11, or requiredBlockUtils
 ```
 
 To debug tests using the node-inspector Chrome-like debugger:
@@ -116,9 +120,16 @@ To debug tests using the node-inspector Chrome-like debugger:
 ```
 npm install -g node-inspector
 node-inspector &
-# open debugger URL
-node --debug-brk $(which grunt) --grep='testname'
+# open debugger URL, i.e. http://127.0.0.1:8080/debug?port=5858
+node --debug-brk $(which grunt) mochaTest --grep='testname'
 # This will breakpoint your inspector at the beginning of that test
+```
+Not there are two classes of mochaTests we have. The first class run in the same process as grunt, and the above commands will work a expected.
+For the second class, we launch a new node process, which your debugger will not have broken on. To debug this second class, we added a --dbg
+command that will break the debugger on the node process launch on port 5859.
+```
+grunt mochaTest --grep='testname' --dbg
+# open debugger URL on port 5859, i.e. http://127.0.0.1:8080/debug?port=5859
 ```
 
 - You can add new test files as /test/*Tests.js, see `/test/feedbackTests.js` as an example of adding a mock Blockly instance
@@ -144,7 +155,7 @@ all available locales, specify `MOOC_LOCALIZE=1` in your environment when runnin
 MOOC_LOCALIZE=1 grunt rebuild
 ```
 
-Note: if you're running the `grunt dev` live-reload server and get the error `too many open files` after a localization build, try increasing the OS open file limit by running `ulimit -n 1024` (and adding it to your `.bashrc`).
+Note: Using the live-reload server with localization builds is prone to the `Error: EMFILE, too many open files` problem.  See the `ulimit` fix [under the live-reload server heading](#running-with-live-reload-server).
 
 #### Forwarding new strings on to CrowdIn
 

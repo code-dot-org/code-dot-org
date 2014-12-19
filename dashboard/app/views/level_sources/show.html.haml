@@ -22,6 +22,7 @@ fjs.parentNode.insertBefore(js, fjs);
     = tag('meta', :property => 'og:image', :content => meta_image_url(level_source: @level_source))
     = tag('meta', :property => 'article:publisher', :content => 'https://www.facebook.com/Code.org')
     = tag('meta', :property => 'og:url', :content => request.original_url)
+
     = tag('meta', :name => 'twitter:title', :content => t('share_code.check_out_what_i_made'))
     = tag('meta', :name => 'twitter:description', :content => t('share_code.og_description'))
     = tag('meta', :name => 'twitter:site', :content => '@codeorg')
@@ -44,7 +45,9 @@ fjs.parentNode.insertBefore(js, fjs);
     - if @game.share_mobile_fullscreen?
       = tag :meta, name: "apple-mobile-web-app-capable", content: "yes"
       = tag :meta, name: "apple-mobile-web-app-status-bar-style", content: "black-translucent"
-      - if @game.flappy?
+      - if @level_source.try(:level_source_image).try(:image)
+        = tag :link, rel: 'apple-touch-icon', href: meta_image_url(level_source: @level_source)
+      - elsif @game.flappy?
         = tag :link, rel: 'apple-touch-icon', href: asset_url('flappy_icon.png')
       - else
         = tag :link, rel: 'apple-touch-icon', href: asset_url('logo_noalpha.png')

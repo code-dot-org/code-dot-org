@@ -5,9 +5,9 @@ social:
   "twitter:card": player
   "twitter:site": "@codeorg"
   "twitter:url": "http://code.org/"
-  "twitter:title": "The Hour of Code is coming"
+  "twitter:title": "The Hour of Code is here"
   "twitter:description": "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104."
-  "twitter:image:src": "http://csedweek.org/images/hour-of-code-2014-video-thumbnail.jpg"
+  "twitter:image:src": "http://csedweek.org/images/code-video-thumbnail.jpg"
   "twitter:player": "https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0"
   "twitter:player:width": 1920
   "twitter:player:height": 1080
@@ -61,14 +61,12 @@ max_age: 60
       = view :congrats_certificate
       = view :congrats_share, cert_id:cert_id, facebook:facebook, twitter:twitter
 
-  #print_option.col-50{:style=>'display:none;'}
-    %h2{:style=>'margin-top:15px; margin-bottom:10px'}
-      Print your ice art
-    = view :frozen_print_gallery
-
-    %a{:href=>"http://#{canonical_hostname('studio.code.org')}/s/1/level/108"}
-      %button{:style=>'background-color: rgb(126, 92, 162); border-color: rgb(126, 92, 162);'}
-        Create art with zombie
+    #print_option.col-50{:style=>'display:none;'}
+      %h2{:style=>'margin-top:15px; margin-bottom:10px'}
+        =I18n.t :print_ice_art
+        %a{:href=>"http://#{canonical_hostname('studio.code.org')}/s/1/level/108", :style=>'font-size: 12px'}
+          ="(#{I18n.t :create_art_with_zombie})"
+      = view :frozen_print_gallery
 
   %div{:style=>'clear: both; height:30px'}
 
@@ -116,7 +114,7 @@ max_age: 60
     });
 
     // checking for "studio" won't work on local instances as domain is 0.0.0.0:3000
-    if (!(document.referrer.indexOf("studio") != -1 && document.referrer.indexOf("frozen") == -1)) {
+    if (!((document.referrer.indexOf("studio") != -1 || document.referrer.indexOf("learn") != -1) && document.referrer.indexOf("frozen") == -1)) {
       $('#print_option').show();
     }
 

@@ -66,6 +66,39 @@ html[dir="RTL"] .farSide {
   margin-left: 415px;
 }
 
+div.droplet-palette-group-header {
+  @include font;
+}
+
+div.droplet-palette-group-header:active {
+  color: #000;
+}
+
+div.droplet-palette-group-header-selected {
+  font-weight: 400;
+  color: #000;
+}
+
+.droplet-palette-group-header.yellow {
+  border-left:10px solid #e0e053;
+}
+
+.droplet-palette-group-header-selected.yellow {
+  background-color: #e0e053;
+}
+
+.droplet-palette-group-header.red {
+  border-left:10px solid #FA8A8C;
+}
+
+.droplet-palette-group-header-selected.red {
+  background-color: #FA8A8C;
+}
+
+.droplet-wrapper-div {
+  outline-style: none;
+}
+
 #show-code-button {
   @media screen and (max-device-width: 540px) {
     display: none;
