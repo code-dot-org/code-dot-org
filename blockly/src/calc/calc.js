@@ -34,6 +34,7 @@ var feedback = require('../feedback.js');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
 var _ = require('../utils').getLodash();
+var timeoutList = require('../timeoutList');
 
 var ExpressionNode = require('./expressionNode');
 var TestResults = require('../constants').TestResults;
@@ -172,6 +173,7 @@ Calc.resetButtonClick = function () {
   Calc.expressions.user = null;
   appState.message = null;
   appState.currentAnimationDepth = 0;
+  timeoutList.clearTimeouts();
 
   appState.animating = false;
 
@@ -251,7 +253,6 @@ function getEquationFromBlock(block) {
     case 'functional_times':
     case 'functional_dividedby':
       var operation = block.getTitles()[0].getValue();
-      // todo - these run into trouble if empty
       var args = ['ARG1', 'ARG2'].map(function(blockName) {
         var argBlock = block.getInputTargetBlock(blockName);
         if (!argBlock) {
@@ -304,37 +305,39 @@ function getEquationFromBlock(block) {
  * Execute the user's code.
  */
 Calc.execute = function() {
-  appState.result = BlocklyApps.ResultType.UNSET;
   appState.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
   appState.message = undefined;
 
   appState.userExpressions = generateExpressionsFromTopBlocks();
 
-  // todo - get this all right
-  appState.result = false;
+  appState.result = true;
+  _.keys(appState.targetExpressions).forEach(function (targetName) {
+    var target = appState.targetExpressions[targetName];
+    var user = appState.userExpressions[targetName];
+    if (!user || !user.isIdenticalTo(target)) {
+      appState.result = false;
+    }
+  });
 
-
-
-  // if (userExpression) {
-  //   Calc.expressions.user = userExpression.clone();
-  // } else {
-  //   Calc.expressions.user = new ExpressionNode(0);
-  // }
-
-  // appState.result = (Calc.expressions.target === null ||
-  //   Calc.expressions.user.equals(Calc.expressions.target));
-  appState.testResults = BlocklyApps.getTestResults(appState.result);
-
-  // equivalence means the expressions are the same if we ignore the ordering
-  // of inputs
-  // if (!appState.result && Calc.expressions.user.isEquivalentTo(Calc.expressions.target)) {
-  //   appState.testResults = TestResults.APP_SPECIFIC_FAIL;
-  //   appState.message = calcMsg.equivalentExpression();
-  // }
-
+  // todo - validate what happens if we have a function and empty compute
+  var hasVariablesOrFunctions = _.keys(appState.userExpressions).length > 1;
   if (level.freePlay) {
+    appState.result = true;
     appState.testResults = BlocklyApps.TestResults.FREE_PLAY;
+  } else {
+    // todo - single place where we get single target/user
+    var user = appState.userExpressions[COMPUTE_NAME];
+    var target = appState.targetExpressions[COMPUTE_NAME];
+
+    if (!appState.result && !hasVariablesOrFunctions &&
+        user.isEquivalentTo(target)) {
+      appState.testResults = TestResults.APP_SPECIFIC_FAIL;
+      appState.message = calcMsg.equivalentExpression();
+    } else {
+      appState.testResults = BlocklyApps.getTestResults(appState.result);
+    }
   }
+
 
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
@@ -351,13 +354,11 @@ Calc.execute = function() {
 
   BlocklyApps.report(reportData);
 
-  // todo - validate what happens if we have a function and empty compute
-  var hasVariablesOrFunctions = _.keys(appState.userExpressions).length > 1;
+
   appState.animating = true;
   if (appState.result && !hasVariablesOrFunctions) {
     Calc.step();
   } else {
-    // todo - show diffs
     clearSvgExpression('userExpression');
     _.keys(appState.userExpressions).sort().forEach(function (name, index) {
       var expression = appState.userExpressions[name];
@@ -368,7 +369,7 @@ Calc.execute = function() {
       }
       addTokenList('userExpression', tokenList, index, 'errorToken', name);
     });
-    window.setTimeout(function () {
+    timeoutList.setTimeout(function () {
       stopAnimatingAndDisplayFeedback();
     }, stepSpeed);
   }
@@ -391,7 +392,7 @@ Calc.step = function () {
   }
   appState.currentAnimationDepth++;
 
-  window.setTimeout(function () {
+  timeoutList.setTimeout(function () {
     Calc.step();
   }, stepSpeed);
 };
@@ -412,11 +413,14 @@ function clearSvgExpression(elementId) {
 function animateUserExpression (numSteps) {
   var finished = false;
 
-  var expected = Calc.expressions.target;
-  var user = Calc.expressions.user;
+  if (_.keys(appState.userExpressions).length > 1 ||
+      _.keys(appState.targetExpressions).length > 1) {
+    throw new Error('Can only animate with single user/target');
+  }
 
+  var user = appState.userExpressions[COMPUTE_NAME];
   if (!user) {
-    return;
+    throw new Error('require user expression');
   }
 
   clearSvgExpression('userExpression');

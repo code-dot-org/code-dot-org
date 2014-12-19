@@ -121,23 +121,6 @@ ExpressionNode.prototype.evaluate = function () {
     }
 };
 
-// todo - rename/implement properly
-// todo - unit test
-ExpressionNode.prototype.equals = function (other) {
-  if (!other || this.value !== other.value ||
-      this.children.length !== other.children.length) {
-    return false;
-  }
-
-  for (var i = 0; i < this.children.length; i++) {
-    if (!this.children[i].equals(other.children[i])) {
-      return false;
-    }
-  }
-  return true;
-};
-
-
 // todo (brent) - it's possible that we never actually have to evaluate expressions
 // that have functions/variables
 
@@ -222,13 +205,6 @@ ExpressionNode.prototype.getDeepestOperation = function () {
 };
 
 /**
- * todo - describe and unit test
- */
-ExpressionNode.prototype.canCollapse = function () {
-  return this.children.length > 0;
-};
-
-/**
  * Collapses the next descendant in place. Next is defined as deepest, then
  * furthest left. Returns whether collapse was successful.
  */
@@ -255,7 +231,7 @@ ExpressionNode.prototype.collapse = function () {
  */
 ExpressionNode.prototype.getTokenListDiff = function (other) {
   if (this.children.length === 0) {
-    return [token(this.value.toString(), !this.equals(other))];
+    return [token(this.value.toString(), !this.isIdenticalTo(other))];
   }
 
   if (this.getType() !== ValueType.ARITHMETIC) {
@@ -303,13 +279,30 @@ ExpressionNode.prototype.getTokenList = function (markDeepest) {
 };
 
 /**
+ * Is other exactly the same as this ExpressionNode tree.
+ */
+ExpressionNode.prototype.isIdenticalTo = function (other) {
+  if (!other || this.value !== other.value ||
+      this.children.length !== other.children.length) {
+    return false;
+  }
+
+  for (var i = 0; i < this.children.length; i++) {
+    if (!this.children[i].isIdenticalTo(other.children[i])) {
+      return false;
+    }
+  }
+  return true;
+};
+
+/**
  * Do the two nodes differ only in argument order.
  * todo: unit test
  */
 ExpressionNode.prototype.isEquivalentTo = function (target) {
   // only ignore argument order for ARITHMETIC
   if (this.getType() !== ValueType.ARITHMETIC) {
-    return this.equals(target);
+    return this.isIdenticalTo(target);
   }
 
   if (!target || this.value !== target.value) {
@@ -332,10 +325,8 @@ ExpressionNode.prototype.isEquivalentTo = function (target) {
 };
 
 /**
- * Creates a token with the given char (which can really be a string), that
- * may or may not be "marked". Marking indicates  things depending on
- * the char.
- * todo - update me
+ * Creates a token with the given string that may or may not be "marked".
+ * Marking indicates  things depending on the context.
  */
 function token(str, marked) {
   return { str: str, marked: marked };
