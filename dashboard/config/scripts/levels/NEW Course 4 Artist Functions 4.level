@@ -21,7 +21,7 @@
     "y": "200",
     "impressive": "false",
     "disable_sharing": "false",
-    "ideal": "12"
+    "ideal": "13"
   }
 }]]></config>
   <blocks>
@@ -73,8 +73,12 @@
             </block>
           </value>
         </block>
-        <block type="controls_repeat">
-          <title name="TIMES">3</title>
+        <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+            <block type="math_number">
+              <title name="NUM">3</title>
+            </block>
+          </value>
         </block>
         <block type="procedures_callnoreturn">
           <mutation name="draw a square"/>

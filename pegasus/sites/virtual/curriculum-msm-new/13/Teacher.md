@@ -24,7 +24,7 @@ Booleans are the fourth and final data type that students will learn about in th
 
 ### **Activity: Booleans**  
 
-3) [Booleans](#Activity1)   
+3) [Boolean 20 Questions](#Activity1)   
 
 ### **Assessment**
 4) [Boolean Assessment](#Assessment)
@@ -58,7 +58,7 @@ This lesson has one new and important word:<br/>
 
 ### <a name="GetStarted"></a> 2) Booleans - True or False?
 
-What datatypes have you seen so far?
+What types of data have we used in Evaluation Blocks so far?
 
 - Can you think of Number values?
 - String values? Image values?
@@ -67,16 +67,16 @@ What datatypes have you seen so far?
 
 What would each of the following expressions evaluate to?
 
-![](oneplusfour.png)
-![](fourdivtwo.png)
-![](circleten.png)
-![](threelessthanfour.png)
+<img src="oneplusfour.png" style="max-width: 100%"/><br/>
+<img src="fourdivtwo.png" style="max-width: 100%"/><br/>
+<img src="circleten.png" style="max-width: 100%"/><br/>
+<img src="threelessthanfour.png" style="max-width: 100%"/>
 
-The last expression, (3 < 4), uses a new function that compares Numbers, returning true if 3 is less than 4. What do you think it would return if the numbers were swapped?
+The last expression, **(3 < 4)**, uses a new function that compares Numbers, returning **true** if 3 is less than 4. What do you think it would return if the numbers were swapped?
 
-The function < tests if one number is less than another. Can you think of some other tests?
+The function **<** tests if one number is less than another. Can you think of some other tests?
 
-Functions like <, > and = all consume two Numbers as their Domain, and produce a special value called a Boolean as their Range. Booleans are answers to a yes-or-no question, and Boolean functions are used to perform tests. In a videogame, you might test if a player has walked into a wall, or if their health is equal to zero. A machine in a doctor’s office might use Booleans to test if a patient’s heartrate is above or below a certain level. 
+Functions like **<**, **>** and **=** all consume two Numbers as their Domain, and produce a special value called a Boolean as their Range. Booleans are answers to a yes-or-no question, and Boolean functions are used to perform tests. In a videogame, you might test if a player has walked into a wall, or if their health is equal to zero. A machine in a doctor’s office might use Booleans to test if a patient’s heartrate is above or below a certain level. 
 
 **Boolean values can only be true or false.**
  
@@ -86,7 +86,7 @@ Functions like <, > and = all consume two Numbers as their Domain, and produce a
 [together]
 
 ## Activities:
-### <a name="Activity1"></a> 3) Booleans are Cooleans
+### <a name="Activity1"></a> 3) Boolean 20 Questions
 
 Give each student a card and have them answer the following questions on it (feel free to add some of your own)
 

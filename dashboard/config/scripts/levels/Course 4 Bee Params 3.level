@@ -17,7 +17,7 @@
     "step_mode": "0",
     "nectar_goal": "9",
     "flower_type": "redWithNectar",
-    "ideal": "32",
+    "ideal": "36",
     "instructions": "Now there are flowers on both sides! I've added a parameter called \"direction\" to the function. Use the \"left\" and \"right\" variables to control direction. Fill in the rest of the function definition and then click \"Save and Close.\"",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
@@ -41,7 +41,7 @@
                 <block type="logic_compare" inline="true" movable="false" uservisible="false">
                   <title name="OP">EQ</title>
                   <value name="A">
-                    <block type="variables_get" movable="false" uservisible="false">
+                    <block type="parameters_get" movable="false" uservisible="false">
                       <title name="VAR">direction</title>
                     </block>
                   </value>
@@ -77,7 +77,7 @@
                                         <block type="logic_compare" inline="true" movable="false" uservisible="false">
                                           <title name="OP">EQ</title>
                                           <value name="A">
-                                            <block type="variables_get" movable="false" uservisible="false">
+                                            <block type="parameters_get" movable="false" uservisible="false">
                                               <title name="VAR">direction</title>
                                             </block>
                                           </value>
@@ -219,12 +219,12 @@
               <block type="logic_compare" inline="true" movable="false">
                 <title name="OP">EQ</title>
                 <value name="A">
-                  <block type="variables_get" movable="false">
+                  <block type="parameters_get" movable="false">
                     <title name="VAR">direction</title>
                   </block>
                 </value>
                 <value name="B">
-                  <block type="variables_get">
+                  <block type="parameters_get">
                     <title name="VAR">left</title>
                   </block>
                 </value>
