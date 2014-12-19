@@ -18,7 +18,7 @@ class HocSurvey2014
 
     result[:students_grade_levels_ss] = required stripped data[:students_grade_levels_ss]
     result[:event_tutorials_ss] = required stripped data[:event_tutorials_ss]
-    result[:event_technology_ss] = required stripped data[:event_technology_ss]
+    result[:event_technology_s] = required stripped data[:event_technology_s]
     result[:event_experience_s] = required stripped data[:event_experience_s]
     result[:event_improvement_s] = stripped data[:event_improvement_s]
     result[:event_annual_s] = required stripped data[:event_annual_s]

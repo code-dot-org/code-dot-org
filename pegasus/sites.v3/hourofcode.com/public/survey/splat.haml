@@ -81,7 +81,7 @@ rightbar: blank
     %label.control-label{for: "students-grade-levels"} What grade levels were the students? (Choose all that apply)
     %span.form-required-field *
     %div
-      %select#students-grade-levels.form-control{name: "students_grade_levels_ss", type: "select", multiple: true, required: true}
+      %select#students-grade-levels.form-control{name: "students_grade_levels_ss[]", type: "select", multiple: true, required: true}
         %option{value: nil, selected: true}
         -HocSurvey2014.students_grade_levels.each  do |label|
           %option{value: label}= label
@@ -90,7 +90,7 @@ rightbar: blank
     %label.control-label{for: "event-tutorials"} Which tutorial did you use? (Choose all that apply)
     %span.form-required-field *
     %div
-      %select#event-tutorials.form-control{name: "event_tutorials_ss", type: "select", multiple: true, required: true}
+      %select#event-tutorials.form-control{name: "event_tutorials_ss[]", type: "select", multiple: true, required: true}
         %option{value: nil, selected: true}
         -HocSurvey2014.event_tutorials.each  do |label|
           %option{value: label}= label
@@ -99,7 +99,7 @@ rightbar: blank
     %label.control-label{for: "event-technology"} What level of technology did you have?
     %span.form-required-field *
     %div
-      %select#event-technology.form-control{name: "event_technology_ss", type: "select"}
+      %select#event-technology.form-control{name: "event_technology_s", type: "select"}
         %option{value: nil, selected: true}
         -HocSurvey2014.event_technologies.each  do |label|
           %option{value: label}= label
@@ -147,7 +147,7 @@ rightbar: blank
     %label.control-label{for: "teacher-how-heard"} How did you hear about the Hour of Code? (Choose all that apply)
     %span.form-required-field *
     %div
-      %select#teacher-how-heard.form-control{name: "teacher_how_heard_ss", type: "select", multiple: true, required: true}
+      %select#teacher-how-heard.form-control{name: "teacher_how_heard_ss[]", type: "select", multiple: true, required: true}
         %option{value: nil, selected: true}
         -HocSurvey2014.teacher_how_heards.each do |label|
           %option{value: label}= label
