@@ -477,14 +477,28 @@ lv:
         C3_crowdsourcing: Pūļa ieguve
         C3_functional_suncatchers: funkcionālie saulķērāji
         C3_songwriting_with_parameters: Dziesmu rakstīšana ar parametriem
-        C4_artist_math: Programmē mākslinieku ar matemātiku
-        C4_create_functions: Funkciju veidošana
-        C4_edit_functions: Funkciju labošana
+        C4_intro: Ievads
+        C4_bee_conditional: Bites nosacījumi
+        C4_variables_artist: 'Mainīgie - mākslinieks'
+        C4_variables_playlab: 'Mainīgie - spēļu laboratorija'
         C4_for_loops: '"par" cikli'
-        C4_variables: Mainīgie
+        C4_math_artist: Programmē mākslinieku ar matemātiku
+        C4_function_edit: Funkciju labošana
+        C4_function_create: Funkciju veidošana
+        C4_function_parameters: Funkcijas ar parametriem
+        C4_conditionals: Sazarojumi
+        C4_unplugged_algorithms: Algoritmi ar figūrām
+        C4_unplugged_madlibs: Trakie teksti
+        C4_unplugged_variables: Mainīgie aploksnēs
+        C4_unplugged_forloops: '"par" cikli'
+        C4_unplugged_parameters: Dziesmu rakstīšana ar Parametriem
+        C4_unplugged_binary: Binārie
         frozen_intro: Programmēšanas stundas ievads
         frozen_loops: Iepazīšanās ar cikliem
         frozen_functions: Ievads funkcijās
+        playlab_intro: Ievads spēļu laboratorijā
+        playlab_events: Spēļu laboratorijas notikumi
+        playlab_repeat_forever: Spēļu laboratorija, mūžīgie cikli
     callout:
       text:
         drag_blocks: 'Pārvieto "pārvietot" bloku un pielipini zem cita bloka'
@@ -502,17 +516,17 @@ lv:
         replace_questions: 'Izmanto izkrītošo izvēlni, lai aizstātu "???" ar skaitli'
         replace_questions_degree: 'Izmanto izkrītošo izvēlni, lai aizstātu "???" ar grādiem, par cik jāpagriežas'
         repeat_blocks: 'Izmanto bloku "atkārtot" un ietver tajā visus blokus uz darbagalda'
-        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the workspace
-        repeat_blocks_2: '(2) Move the "Repeat" block here, and place the gray blocks inside'
+        repeat_blocks_1: (1) Izmanto šo bloku un apliec to ap pelēkajiem blokiem darba vietā
+        repeat_blocks_2: '(2) Pārvieto bloku "atkārtot" bloku uz šejieni un ievieto iekšā pelēkos blokus'
         snowflake_dropdown: Izmanto šo izvēlni, lai veidotu dažādas sniegpārslas!
         degrees_per_side: Izdali 360 ar malu skaitu, lai iegūtu katra leņķa lielumu grādos.
         set_sides: 'Izmanto šo bloku, lai iestatītu " malas"  uz vajadzīgo skaitli, lai pabeigt uzdevumu.'
         set_length: 'Izmanto šo bloku, lai iestatītu "garums" pareizajā vērtībā.'
-        which_equation: Which equation makes each side shorter for shapes with more sides?
+        which_equation: Kura vienādība padara katru pusi īsāku figūrām var vairāk malām?
         get_nectar: 'Izmanto jauno "savākt nektāru" bloku.'
         actions_category: 'Rīku josla ir ieguvusi jaunu dizainu! Tagad tajā ir "Darbības" bloki.'
         draw_square_hint: 'Padoms: Izmanto iepriekšējā uzdevumā izveidoto kvadrāta ciklu.'
-        edit_function: Click here to edit your function.
+        edit_function: Klikšķi te, lai rediģētu savu funkciju.
         create_function: 'Spied šeit, lau atvērtu Funkciju paneli, tad nospied "Izveidot funkciju" pogu.'
         house_hint: Tas nekas, ja bildes pagaidām neizskatās pēc mājas. Mēs to labosim nākamajā uzdevumā.
         edit_draw_square: Izmanto šo pogu, lai labotu funkciju un pievienotu ciklu.
@@ -532,10 +546,22 @@ lv:
         playlab_add_move: 'Atkārtošanas blokā pievieno blokus "pārvietot"'
         playlab_add_score: Pievieno šeit punktu blokus
         playlab_add_blocks: Šeit pievieno savus blokus
-        set_variable: Drag a number block here to set your variable
-        place_variable: Drag your variable inside this block
-        bee_for_loop: Drag the largest number of nectar you want the bee to collect here
-        place_counter_variable: Drag your counter variable inside this block
-        function_editor_draw_square: 'This is your function definition. These blocks run everytime you use the "draw a square" block'
-        change_here: Make your change here
-        write_draw_square_function: Drag blocks from the toolbox into here that draw a square
+        set_variable: Velc skaitļu bloku te, lai noteiktu mainīgo
+        place_variable: Ievelc mainīgo šajā blokā
+        bee_for_loop: Velc lielāko nektāra vērtību, kādu gribi savākt.
+        place_counter_variable: Ievelc savu skaitītāju šajā blokā.
+        function_editor_draw_square: 'Šādi definē funkciju. Šis bloks tiek palaists katru reizi, kad izmanto bloku "zīmēt kvadrātu"'
+        change_here: Veic izmaiņas te
+        write_draw_square_function: Velc blokus no rīkujoslas šeit, lai uzzīmētu kvadrātu
+        write_draw_triangle_function: Velc blokus no rīkujoslas šeit, lai uzzīmētu trīsstūri
+        edit_add_parameter: Klikšķini labot, lai pievienotu savai funkcijai parametru
+        add_and_drag_parameter: Ieraksti parametra vārdu te, klikšķini pievienot un tad velc to savā definētajā funkcijā.
+        fill_in_actor: Aizpildi ??? ar skatli, kas atbilst katram tēlam (1, 2 un 3)
+        repeat: Velc blokus iekšā ciklā, lai atkārtotu komandas
+        if_bee_nectar: 'Izmanto "Ja" bloku, lai izlemtu, vai bitei jāiegūst nektārs'
+        if_else_bee: 'Izmanto "Ja/tad" bloku, lai bites iegūtu nektāru no zieda vai, ja tas nav zieds, ražotu medu'
+        repeat_full_circle: Ievadi skaitli, cik reižu zombijam jāpakustas, lai izveidotu pilnu apli
+        place_length_variable: Velc garuma mainīgo te, lai aizstātu jautājuma zīmes
+        arrows_move_actor: Izmato bultas, lai pārvietotu tēlu
+        right_arrow_fireball: Izmanto labo bultu, lai sašautu ugunsbumbas
+        name_function: Raksti te savas funkcijas nosaukumu

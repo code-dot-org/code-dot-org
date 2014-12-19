@@ -36,6 +36,7 @@ fi:
   of: /
   more: LISÄÄ
   less: VÄHEMMÄN
+  beta: beta
   try_hoc: 'Kokeile Koodaustuntia, napsauta tästä >> '
   try_k8intro: Kokeile ala-asteen johdantoa tietojenkäsittelytieteeseen (15-25 tuntia)
   k8intro: Johdanto tietotekniikkaan -kurssi 5–14-vuotiaille (15–25 tuntia)
@@ -359,8 +360,8 @@ fi:
     teacher: Opettaja
   footer:
     help_from_html: Insinöörit Googlelta, Microsoftilta, Facebookilta ja Twitterilta auttoivat luomaan tämän opetusohjelman.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
-    powered_by_aws: Powered by Amazon Web Services
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Kaikki oikeudet pidätetään.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Kaikki oikeudet pidätetään.'
+    powered_by_aws: Toimii Amazon Web Services -palvelun päällä
     feedback: Anna palautetta
     translate: Auta meitä kääntämään palvelu omalle kielellesi
     support: Tuki
@@ -433,17 +434,17 @@ fi:
       body: Kokeile 20 tunnin kurssia Johdanto tietojenkäsittelytieteeseen.
     hoc2014:
       try_new_tutorial: Betatestaa uusia Koodaustunti-kurssejamme
-      try_frozen: Artist with Anna and Elsa, from Frozen
+      try_frozen: Taiteilija Frozenin Annan ja Elsan kanssa
     gallery:
       title: Galleria
-      body: View a gallery of app and artist images created by our users
+      body: Katsele käyttäjiemme tekemiä Taiteilija-kuvia ja kokeile sovelluksia Galleriassa
     frozen:
       title: Frozen
   gallery:
     students_drew_these_with_code: Oppilaat piirsivät nämä koodilla!
     students_made_these_with_code: Oppilaat tekivät nämä koodilla!
-    picture_count: 'Viimeisen <b>%{days}</b> päivän aikana, oppilaat ovate piirtäneet <b>%{count}</b> kuvaa kirjoittamalla omia tietokoneohjelmiaan. Napsauta kuvia nähdäksesi kunkin ohjelman toiminnassa.'
-    activity_count: 'Viimeisen <b>%{days}</b> päivän aikana, oppilaat ovat tehneet <b>%{count}</b> sovellusta ja kuvaa kirjoittamalla omia tietokoneohjelmiaan. Napsauta kuvia ja kuvaruutukaappauksia nähdäksesi kunkin ohjelman toiminnassa.'
+    picture_count: 'Viimeisen <b>%{days}</b> päivän aikana oppilaat ovat piirtäneet <b>%{count}</b> kuvaa kirjoittamalla omia tietokoneohjelmiaan. Napsauta kuvia nähdäksesi kunkin ohjelman toiminnassa.'
+    activity_count: 'Viimeisen <b>%{days}</b> päivän aikana oppilaat ovat tehneet <b>%{count}</b> sovellusta ja kuvaa kirjoittamalla omia tietokoneohjelmiaan. Napsauta kuvia ja kuvaruutukaappauksia nähdäksesi kunkin ohjelman toiminnassa.'
     want_to_make_your_own: Haluatko tehdä omasi?
     more: 'Lisää &rarr;'
     caption_by_name_age: '%{name} tekemä, ikä %{age}'
@@ -453,7 +454,7 @@ fi:
     header_artist: Taiteilija
   landing:
     prerelease: "Tämä kurssi on <span class='betatext'>beta</span>.  Tämä tarkoittaa, että kurssin verso ei ole lopullinen ja siitä saattaa tulla uusia paranneltuja versioita reaktiona saatuun palautteeseen."
-    prerelease_hoc2014: "This tutorial is in <span class='betatext'>beta</span>.  It is subject to revision as feedback is received and improvements are made."
+    prerelease_hoc2014: "Tämä opetusohjelma on <span class='betatext'>beta</span>. Sitä muutetaan palautteen mukaisesti sen parantamiseksi."
     feedback: Anna palautetta
     report_bug: Raportoi ongelma
     support: Katso ohjeet
@@ -517,3 +518,7 @@ fi:
     completed_too_many_blocks: valmis, liian monta lohkoa
     completed_perfect: valmis, täydellinen
     furthest_level_attempted: vaikein taso jota yritetty
+  studio:
+    courses_working_on: "Courses you're working on"
+    completed_courses: Completed courses
+    all_courses: All courses

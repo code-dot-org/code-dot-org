@@ -5,9 +5,9 @@ title: "<%= hoc_s(:front_title) %>"
 social:
   "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
   "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
-  "og:image": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg"
-  "og:image:width": 1705
-  "og:image:height": 949
+  "og:image": "http://<%=request.host%>/images/code-video-thumbnail.jpg"
+  "og:image:width": 1440
+  "og:image:height": 810
   "og:url": "http://<%=request.host%>"
 
   "twitter:card": player
@@ -15,8 +15,8 @@ social:
   "twitter:url": "http://<%=request.host%>"
   "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
   "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
-  "twitter:image:src": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg?123"
-  "twitter:player": 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=1'
+  "twitter:image:src": "http://<%=request.host%>/images/code-video-thumbnail.jpg?456"
+  "twitter:player": 'https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0'
   "twitter:player:width": 1920
   "twitter:player:height": 1080
 ---
@@ -29,7 +29,7 @@ social:
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
 %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry&v=3.7"}
-%script{type: "text/javascript", src: "/js/markerclusterer_packed.js"}
+%script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
 
 %link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
 
@@ -76,42 +76,19 @@ social:
               %img{src: "/images/play-button.png", width: "120", onclick: "return startVideo();", style: "cursor: pointer"}
         .col-sm-6.col-xs-12.col-md-5
           #textbacking{style: "color:white; background-color:rgba(0,0,0,0.5); margin-top:50px; padding: 20px; border-radius: 17px"}
-            %h1.front-header-banner{style: "color:white; margin-top:0px"}= hoc_s(:front_header_banner)
+            %div.front-header-banner{style: "color:white; margin-top:0px"}
+              =I18n.t(:n_have_learned_an_hoc).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
+              %h4
+                =I18n.t :anybody_can_learn
             #joinustext{style: "font-size: 18px; font-weight: 500"}
-              %div{style: "width: 44%; float:left; padding-right: 5px; padding-top:10px; text-align:right; clear:both"}
-                =hoc_s(:front_join_us_students)
-                &nbsp;
-
-              %div{style: "width: 56%; float:left;"}
+              %div{style: "width: 100%; text-align: center"}
                 %a#trybutton{href: "http://#{codeorg_url()}/learn", target: "_blank", style: "text-decoration:none"}
                   %button.btn.btn-default{style: "font-size: 18px; font-weight: 500; padding-left: 30px; padding-right: 30px; height: 40px;"}
-                    =hoc_s(:front_join_us_try)
-                %br/
-                %br/
+                    =I18n.t :get_started
 
-              %div{style: "width: 44%; float:left; padding-right: 5px; padding-top:10px; text-align:right; clear:both"}
-                =hoc_s(:front_join_us_teachers)
-                &nbsp;
-              %div{style: "width: 56%; float:left;"}
-                %a#hostbutton{onclick: "return adjustScroll('join')", style: "text-decoration:none"}
-                  %button.btn.btn-default{style: "font-size: 18px; font-weight: 500; padding-left: 30px; padding-right: 30px; height: 40px;"}
-                    =hoc_s(:front_join_us_host)
-                %br/
-                %br/
-
-              %div{style: "width: 44%; float:left; padding-right: 5px; padding-top:10px; text-align:right; clear:both"}
-                =hoc_s(:front_join_us_everyone)
-                &nbsp;
-              %div{style: "width: 56%; float:left; "}
-                %a#supportbutton{href: "http://#{codeorg_url()}/donate", target: "_blank", style: "text-decoration:none"}
-                  %button.btn.btn-default{style: "font-size: 18px; font-weight: 500; padding-left: 30px; padding-right: 30px; height: 40px;"}
-                    =hoc_s(:front_join_us_support)
-              &nbsp;
-
-            #remainder{style: "text-align:center"}
-              #trylastyear{style: "margin-top:20px"}
-                %a{onclick: "return adjustScroll('about')", target: "_blank", style: "color:white; font-weight:500; cursor: pointer"}=hoc_s(:hoc_faq_what_is_hoc_q)
-              %br/
+            #remainder{style: "text-align:center; margin-top: 15px;"}
+              %a{:href=>"http://#{codeorg_url()}/learn/beyond", :style=>'font-size: 16px; color: white'}
+                =I18n.t :beyond_an_hour
               =view :share_buttons, facebook:facebook, twitter:twitter
           %br/
           %br/
@@ -131,13 +108,17 @@ social:
       =hoc_s(:front_intro_default)
       %br/
       %br/
-      We are calling on people from all walks of life to get involved and to sign up for an Hour of Code in a school, community centre or workplace near them. In support of the global movement we are working with partners locally including Coder Dojo, Junior Achievement, Foroige, the Arts Council, the Digital Schools and plan to get more than 100 events up and running on December 8th.
+      We are calling on people from all walks of life to get involved and to sign up for an Hour of Code in a school, community centre or workplace near them. In support of the global movement we are working with partners locally including Coder Dojo, Junior Achievement, Foroige, the Arts Council, the Digital Schools and plan to get more than 100 events up and running on December 8th. 
       %br/
       %br/
-      To host an hour of code in Ireland,
+      To host an hour of code in Ireland, 
       %a{href: "http://hourofcode.com/ie/resources/how-to-ireland"} get started here.
+
   %br/
   %br/
+      
+  #maparea
+    =view :map
 
   .row
     .col-xs-12
@@ -175,27 +156,21 @@ social:
       %br/
       =hoc_s(:stats_michael)
 
-  #maparea
-    =view :map 
-
-  #join
-    %h1=hoc_s(:front_join_us_button)
-    %div
-      .row
-        .col-md-6
-          =view :signup_form
-        .col-md-6
-          =view :join_us_description
-          =view :prizes
-          =view :whats_next
+  -##join
+  -#  %h1=hoc_s(:front_join_us_button)
+  -#  %div
+  -#    .row
+  -#      .col-md-6
+  -#        =view :signup_form
+  -#      .col-md-6
+  -#        =view :join_us_description
+  -#        =view :whats_next
 
   %a#faqs{name:'faq'}
   .row
     .col-xs-12
       =view :faq
 
-  %button{:style=>"margin-top: 25px", :onclick=>"return adjustScroll('join')"}
-    =hoc_s(:signup_your_event)
   = view 'popup_window.js'
 
 :javascript
@@ -236,7 +211,7 @@ social:
     if (videoStarted)
       return;
 
-    $("<iframe allowfullscreen frameborder='0' src='https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;autoplay=1&cc_load_policy=1' style='position:absolute; top: 0; left: 0; width: 100%; height: 100%; background-color:black;'></iframe>").appendTo("#videodiv");
+    $("<iframe allowfullscreen frameborder='0' src='https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;autoplay=1&cc_load_policy=1' style='position:absolute; top: 0; left: 0; width: 100%; height: 100%; background-color:black;'></iframe>").appendTo("#videodiv");
 
     $("#videodiv").fadeTo(1000, 1);
     $("#leftbutton").fadeTo(500, 0).remove();

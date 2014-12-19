@@ -3,12 +3,11 @@
     unplugged:
       Unplug1:
         title: Johdanto tietojenkäsittelyyn
-        desc: Oppitunti opettaa tietojenkäsittelyn konseptin ja selittää mitä tietojenkäsittelijä
-          tekee. Se antaa oppilaille mahdollisuuden ottaa tietojenkäsittelijän roolin.
-          Tehtävän lopussa jokainen opiskelija saa mukaansa muistutuksen mitä hän
-          on oppinut. Saatat tunna houkutusta väistää opettamasta lapsille sanastoa,
-          joita tulee seuraavilla kursseilla, mutta niiden esittäminen hauskassa ja
-          leikkisässä valossa on tuottavampaa kuin myöhempien mahdollisuuksien odottaminen.
+        desc: Tällä oppitunnilla käydään läpi johdanto tietojenkäsittelytieteeseen
+          ja selitetään, mitä tietotekniikan ammatilainen tekee. Oppitunti antaa myös
+          oppilaille mahdollisuuden samaistua tietotekniikka-ammattilaisen rooliin.
+          Suosittelemme, että tunnilla käydään läpi myös tietotekniikan sanastoa leikin
+          ja hauskanpidon varjolla.
         pdfs:
         - unplug1
         video: Unplug1
@@ -37,11 +36,12 @@
         video: Unplug3
       Unplug4:
         title: Algoritmit
-        desc: Tämä oppitunti katta algoritmit. Käyttäen tangram-muotoja ja paperia,
-          ensimmäinen harjoitus näyttää kuinka tärkeää on tehdä jokaisesta ohjeesta
-          niin selkeä ja yksiselitteinen kuin mahdollista. Myöhemmin luokka tutkii
-          kuinka monilla eri tavoin paperi voidaan taittaa suorakulmioksi, huomaten
-          kuinka jotkin menetelmät vievät enemmän tai vähemmän taitoksia kuin toiset.
+        desc: Tällä oppitunnilla käsitellään algoritmeja. Hyödyntäen tangram-muotoja
+          ja ruutupaperia, ensimmäiset harjoitukset osoittavat miten tärkeää on tehdä
+          jokaisesta ohjeesta niin selkeä ja yksiselitteinen, kuin mahdollista. Tämän
+          jälkeen oppilaat saavat tutkia, miten monella eri tavalla paperin voi taivutella
+          suorakaiteen muotoiseksi ja samalla huomata, miten toiset tavat vaativat
+          enemmän taitoksia, kuin toiset.
         pdfs:
         - unplug4
         video: Unplug4
@@ -169,8 +169,8 @@
         video: C2_graph_paper
       PaperPlanes:
         title: 'Tosielämän algoritmit: paperilentokoneet'
-        desc: Tällä tunnilla osoitetaan tapoja, joilla algoritmejä käytetään arkielämässä,
-          erityisesti paperilennokkien tekemisessä. Oppitunti keskittyy myös tietojenkäsittelytieteen
+        desc: Tällä tunnilla tutkitaan, miten algoritmit esiintyvät arkielämässämme,
+          esimerkkinä paperilennokkien tekeminen. Oppitunti keskittyy myös tietojenkäsittelytieteen
           kokonaiskuvaan ja kuinka algoritmeillä on siinä oleellinen rooli.
         video: C2_paper_airplanes
       BinaryBracelets:
@@ -197,7 +197,7 @@
           käyttäen narua ja helmiä.
         video: C3_functional_suncatchers
       SongwritingParameters:
-        title: Parametroitu laulunkirjoitus
+        title: Parametroitu sävellys
         desc: Opiskelijat käyttävät kuoron käsitettä oppiakseen muuttujien välityksestä
           (joilla voi muokata funktiota ilman että koko funktiota tarvitsee kirjoittaa
           uudestaan).
@@ -205,7 +205,7 @@
       DiceRace:
         title: 'Tosielämän algoritmit: Noppakisa'
         desc: Tällä oppitunnilla havainnollistaan kuinka algoritmejä käytetään arkielämässämme.
-          Tässä yhteydessä oppilaat tunnistavat ja kirjoittavat algoritmin noppakisapelille.
+          Oppilaat tunnistavat ja kirjoittavat algoritmin noppakisapelille.
         video: C3_dice_race
       Internet:
         title: Internet
@@ -228,22 +228,26 @@
           algoritmin yksinkertaisena niin sille löytyy monia käyttötapoja. Jos haluat,
           että kaikki päätyvät samaan lopputulokseen, niin algoritmisi tarvitsee enemmän
           yksityiskohtia.
+        video: C4_unplugged_algorithms
       EnvelopeVariables:
-        title: Envelope Variables
+        title: Kirjekuorimuuttujat
         desc: Muuttujat antavat vapautta ohjelmoinnissa. Tämä oppitunti selittää mitä
           muuttujat ovat ja kuinka voimme käyttää niitä monin eri tavoin. Käytä tätä
           toimintoa ennen (tai yhdessä) abstraktiotunnin kanssa, jotta idea tarttuu.
+        video: C4_unplugged_variables
       MadGlibs:
         title: Mad Glibs
         desc: Abstraktio on yksi tärkeimmistä tietojenkäsittelijän ymmärrettävistä
           taidoista. Tässä toiminnossa laitat opiskelijasi analysoimaan tarinoita
           erojen varalta jotta he voivat yleistää ne. Näistä abstraktoiduista tarinoista
           tulee malleja hauskoille ja hassuille uusille tarinoille.
+        video: C4_unplugged_madlibs
       ForLoopFun:
-        title: Silmukkahupiin
+        title: Silmukkahupia
         desc: Tiedämme, että silmukat antavat meidän tehdä asioita uudestaan ja uudestaan,
           mutta nyt opimme kuinka käyttää silmukoita sisäänrakennettujen lisärakenteiden
           kanssa.
+        video: C4_unplugged_forloops
       SongwritingWithParameters:
         title: Parametroitu laulunkirjoitus
         desc: 'Eräs hienoimmista tietojenkäsittelytieteen rakenteista on funktio.
@@ -251,6 +255,7 @@
           voit käyttää uudestaan ja uudestaan suuremman ohjelmasi sisältä. Tällä oppitunnilla
           opiskelijat intuitiivisesti oppivat miksi koodilohkojen yhdistäminen funktioiksi
           on niinkin kätevä käytäntö.  '
+        video: C4_unplugged_parameters
       BinaryImages:
         title: Binäärikuvat
         desc: Vaikka monet ajattelevat binääriä puhtaasti nollina ja ykkösinä, aiemmat
@@ -258,21 +263,22 @@
           binäärivaihtoehtoina. Tällä oppitunnilla viedään käsitettä askel pidemmälle,
           näyttäessään kuinka tietokone voi tallentaa jopa monimutkaisempaa informaatiota
           (kuen kuvia ja värejä) myös binäärisenä.
+        video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
-        title: Video Games and Coordinate Planes
-        desc: Video Games and Coordinate Planes lesson description
+        title: Tietokonepelit ja koordinaattitasot
+        desc: Tietokonepelit ja koordinaattiavaruus -oppitunnin kuvaus
       Contracts:
         title: Sopimukset
-        desc: Contracts unplugged lesson description
+        desc: 'Sopimukset: tietokoneettoman tekemisen oppitunnin kuvaus'
       DesignRecipe:
         title: Suunnitteluresepti
-        desc: Design Recipe lesson description
+        desc: Suunnitteluresepti-oppitunnin kuvaus
       Booleans:
-        title: Booleans
-        desc: Booleans lesson description
+        title: Totuusarvot
+        desc: 'Totuusarvot: oppitunnin kuvaus'
       ConditionalsPiecewiseFunctions:
         title: Ehtolauseet ja paloittaiset funktiot
-        desc: Conditionals and Piecewise Functions lesson description
+        desc: Ehtolauseet ja osittaiset funktiot -oppitunnin kuvaus
       CollisionDetection:
-        title: Törmäyksen huomaaminen
-        desc: Collision Detection lesson description
+        title: Törmäyksen tunnistaminen
+        desc: Törmäyksen tunnistaminen -oppitunnin kuvaus

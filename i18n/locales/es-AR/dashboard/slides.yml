@@ -343,3 +343,45 @@ es-AR:
       3:
         image: notes/playlab_3.png
         text: Y hay algunos bloques que hacen cosas cuando los actores chocan o les haces clic. ¡Échales un vistazo y diviértete!
+    playlab_intro:
+      1:
+        image: notes/playlab_intro_1.png
+        text: Vamos a crear juegos usando Play Lab. Los buenos juegos tienen una historia y cada historia tiene actores. Aprenderemos cómo hacer que nuestros actores sean como brujas, alienígenas, y animales que hablan, se mueven e interactúan con los demás. Al final de este tutorial, puedes crear un juego desde cero y compartirlo con tus amigos.
+      2:
+        image: notes/playlab_intro_2.png
+        text: La pantalla se divide en tres partes principales. A la izquierda es el espacio de juego donde se ejecutará el programa. Las instrucciones para cada nivel están escritas abajo.
+      3:
+        image: notes/playlab_intro_3.png
+        text: La zona media es la caja de herramientas, y cada uno de estos bloques es un fragmento de código. El espacio en blanco a la derecha se llama el espacio de trabajo y es donde construiremos nuestro programa.
+      4:
+        image: notes/playlab_intro_4.png
+        text: 'Para empezar, necesitarás unir tus bloques al bloque naranja llamado "cuando se ejecuta". Puedes unir múltiples bloques arrastrándolos hacia fuera hasta que veas la línea amarilla, y luego encajarán todos a la vez.'
+      5:
+        image: notes/playlab_intro_5.png
+        text: 'En este primer rompecabezas, el actor es un pingüino y haremos que diga "¡Hola!" arrastrando el bloque "decir", uniéndolo al bloque "cuando se ejecuta" y escribiendo dentro "Hola". También podemos hacer que el pingüino se mueva mediante los bloques mover a la derecha y mover a la izquierda. Una vez que tienes puestos tus bloques, presiona el botón ejecutar para ver lo que has programado.'
+      6:
+        image: notes/playlab_intro_6.png
+        text: Comienza, y al final podrás crear tu propio juego con toda clase de jugadores, que pueden interactuar, volverse felices o tristes, aumentar la puntuación, o lanzar bolas de fuego, o incluso desaparecer unos a otros. Es cuestión de ti y del juego que quieres hacer.
+    playlab_events:
+      1:
+        image: notes/playlab_events_1.png
+        text: Ahora vamos a aprender acerca de algo que todos los programadores de juegos usan todos los días. Se llaman eventos. Un evento indica a tu programa que atienda cuando algo ocurra. Cuando eso sucede, se realiza una acción.
+      2:
+        image: notes/playlab_events_2.png
+        text: Algunos ejemplos de eventos son esperar a un clic en el ratón, un botón de flecha o pulsar en la pantalla.
+      3:
+        image: notes/playlab_events_3.png
+        text: 'Aquí vamos a hacer que el robot espacial salude a los terrícolas cuando un jugador haga clic en él. Utilizaremos el bloque "cuando hace clic en" y únele el bloque "decir". Cuando el jugador hace clic en el robot espacial, todo lo que esté unido al bloque de evento "cuando hace clic en" se ejecutará. ¿Qué dice tu alienígena?'
+      4:
+        image: notes/playlab_events_4.png
+        text: 'También hay bloques "cuando tecla de flecha". Si se unen con los bloques "mover", puedes empezar a mover tus actores para arriba, abajo, izquierda o derecha. Paso a paso, tu juego se está volviendo más interactivo.'
+    playlab_repeat_forever:
+      1:
+        image: notes/playlab_repeat_forever_1.png
+        text: 'Este es el bloque "repetir para siempre". Todo lo que haya dentro de este bloque se repetirá para siempre en el juego.'
+      2:
+        image: notes/playlab_repeat_forever_2.png
+        text: 'Si queremos que un actor haga algo en varias ocasiones, sin que el jugador tenga que hacer nada, pondremos esos bloques dentro del bloque "repetir para siempre".'
+      3:
+        image: notes/playlab_repeat_forever_3.png
+        text: En el siguiente rompecabezas, nuestro objetivo es ayudar a que el asistente patrulle continuamente los límites del reino, a izquierda y derecha. Aprender cómo funciona el comando repetir, te ahorrará mucho tiempo después cuando construyas tu propio juego.

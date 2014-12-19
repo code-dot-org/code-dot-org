@@ -4,8 +4,6 @@ title: Press Kit layout: wide nav: resources_nav
 
 * * *
 
-[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
-
 ## Cara menarik untuk menarik perhatian media terhadap Kegiatan Hour of Code anda
 
 *For all press and media inquiries, contact <press@code.org>*
@@ -59,5 +57,3 @@ title: Press Kit layout: wide nav: resources_nav
     
       
     Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).
-    
-    <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

@@ -36,6 +36,7 @@
   of: a
   more: TÖBB
   less: KEVESEBB
+  beta: béta
   try_hoc: 'Próbálja ki a Kódolás Óráját, kattintson ide >> '
   try_k8intro: Próbálja ki a K-8 bevezetőnket a Számítógép Tudomány Tanfolyamhoz (15-25
     óra)
@@ -598,3 +599,7 @@
     completed_too_many_blocks: elkészült, túl sok a blokk
     completed_perfect: elkészült, tökéletes
     furthest_level_attempted: a legmagasabb szint megpróbálva
+  studio:
+    courses_working_on: Tanfolyamok amelyeken dolgozol
+    completed_courses: Teljesített tanfolyamok
+    all_courses: Minden tanfolyam

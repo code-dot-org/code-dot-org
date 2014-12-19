@@ -26,30 +26,30 @@ Vertel je vrienden over het Uur Code, #HourOfCode.
 
 ## 2. Vraag je hele school een Uur Code aan te bieden
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](/resources/hoc-one-pager.pdf) to your principal.
+[ Stuur deze mail](<%= hoc_uri('/resources#email') %>) of [deze hand-out](/resources/hoc-one-pager.pdf) aan uw opdrachtgever.
 
 <% else %>
 
 ## 2. Vraag je hele school een Uur Code aan te bieden
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](/resources/hoc-one-pager.pdf) this handout</a> to your principal.
+[ Stuur deze email](<%= hoc_uri('/resources#email') %>) of geef [deze hand-out](/resources/hoc-one-pager.pdf) deze hand-out</a> aan uw opdrachtgever.
 
 <% end %>
 
 ## 3. Maak een donatie
 
-[Donate to our crowdfunding campaign.](http://<%= codeorg_url() %>/donate) To teach 100 million children, we need your support. We just launched the [largest education crowdfunding campaign](http://<%= codeorg_url() %>/donate) in history. *Every* dollar will be matched [donors](http://<%= codeorg_url() %>/about/donors), doubling your impact.
+[ doneer aan onze crowdfunding campagne.](http://<%= codeorg_url() %>/ doneren) Om 100 miljoen kinderen iets aan te leren hebben wij uw steun nodig. We hebben zopas <0donate">de grootste crowdfunding campagne</a> in de geschiedenis gelanceerd. *Elke*ingezamelde euro zal worden verdubbeld door[ donoren](http://<%= codeorg_url() %>/over/donoren) zij verdubbelen je inspanning.
 
 ## 4. Vraag uw werkgever om betrokken te raken
 
-[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf).
+[ Stuur deze email](<%= hoc_uri('/resources#email') %>) naar uw manager of de CEO. Of [Geef ze deze hand-out](http://hourofcode.com/resources/hoc-one-pager.pdf).
 
 ## 5. Promoot het Uur Code in je gemeenschap
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+Werk samen met een vereniging — scouting, kerk, universiteit of vakbond. Of organiseer een Uur Code "buurtfeest" voor je wijk.
 
 ## 6. Vraag een politicus het Uur Code te ondersteunen
 
-[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[ Stuur deze email](<%= hoc_uri('/resources#politicians') %>) naar uw burgemeester, gemeenteraad of schoolteam. Of [Geef ze deze hand-out](http://hourofcode.com/resources/hoc-one-pager.pdf) om hen voor een bezoek aan uw school uit te nodigen.
 
 <%= view 'popup_window.js' %>

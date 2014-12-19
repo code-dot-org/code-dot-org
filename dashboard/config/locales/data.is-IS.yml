@@ -506,16 +506,16 @@
         studio_playlab_3: Getur þú hjálpað Tennisstelpu að ná til flaggsins?
         studio_playlab_4: Getur þú hjálpað Tennisstrák (leikmanni 1) að komast til
           Tennisstelpu (leikmanns 2) og spilað hljóð þegar hann kemst þangað?
-        studio_playlab_5: Getur þú látið Geimróbóta segja "Sælar jarðverur" þegar
+        studio_playlab_5: Getur þú látið Geimróbóta segja "Kveðja til jarðarbúa" þegar
           smellt er á hann? Ekki gleyma að smella á hann eftir að þú smellir á Keyra
         studio_playlab_6: Getur þú látið Nornina hreyfast og ná öllum eldhnöttunum
           með því að nota upp/niður/hægri/vinstri örvarlyklana?
         studio_playlab_7: '"Endurtaka endalaust" kubburinn lætur kóða keyra án enda.
           Getur þú sett kubba í hann til að láta vitkann hreyfast stöðugt til hægri
           og vinstri?'
-        studio_playlab_8: Getur þú bætt við kubbi til að skora stig og kubbi til að
-          spila hljóð þegar einhyrningurinn rekst á vitkann, og síðan fært hann með
-          örvarlyklunum þar til þú skorar?
+        studio_playlab_8: Getur þú bætt við kubbum til að skora stig og  spila hljóð
+          þegar einhyrningurinn rekst á vitkann, og síðan fært hann með örvarlyklunum
+          þar til þú skorar?
         studio_playlab_9: Settu bakgrunn fyrir innrás geimvera og auktu hraða Geimróbóta
           svo hann komist fljótar til geimverunnar. Færðu hann svo með örvarlyklunum
           til geimverunnar svo hann geti varað alla við innrásinni
@@ -747,14 +747,28 @@
         C3_crowdsourcing: Hópvistun
         C3_functional_suncatchers: Sólarskraut með föllum
         C3_songwriting_with_parameters: Lagasmíð með stikum
-        C4_artist_math: Forritun listamanns með stærðfræði
-        C4_create_functions: Gerð falla
-        C4_edit_functions: Breyting falla
+        C4_intro: Kynning
+        C4_bee_conditional: Skilyrði býflugu
+        C4_variables_artist: Breytur - Listamaður
+        C4_variables_playlab: Breytur - Leikjasmiðja
         C4_for_loops: Frá lykkjur
-        C4_variables: Breytur
+        C4_math_artist: Forritun listamanns með stærðfræði
+        C4_function_edit: Breyting falla
+        C4_function_create: Gerð falla
+        C4_function_parameters: Föll með stikum
+        C4_conditionals: Skilyrði
+        C4_unplugged_algorithms: Algrím með tangram
+        C4_unplugged_madlibs: Eyðufyllingarleikur
+        C4_unplugged_variables: Breytur í umslögum
+        C4_unplugged_forloops: Frá lykkjur
+        C4_unplugged_parameters: Lagasmíð með stikum
+        C4_unplugged_binary: Tvíundir
         frozen_intro: Kynning á Klukkustund kóðunar
         frozen_loops: Kynning á lykkjum
         frozen_functions: Kynning á föllum
+        playlab_intro: Kynning á Leikjasmiðju
+        playlab_events: Leikjasmiðja, atvik
+        playlab_repeat_forever: Leikjasmiðja, endurtaka endalaust
     callout:
       text:
         drag_blocks: Dragðu "færa" kubb og festu hann neðan í hinn kubbinn
@@ -834,3 +848,21 @@
         change_here: Gerðu breytinguna hér
         write_draw_square_function: Dragðu hingað kubba úr verkfærunum svo þeir teikni
           ferning
+        write_draw_triangle_function: Dragðu kubba úr verkfærakassanum í þetta til
+          að teikna þríhyrning
+        edit_add_parameter: Smelltu á breyta til að bæta stika við fallið þitt
+        add_and_drag_parameter: Skrifaðu heiti stikans hér, smelltu svo á bæta við
+          og dragðu hann síðan inn í skilgreininguna á fallinu þínu
+        fill_in_actor: Skiptu ??? út fyrir tölur sem samsvara hverri persónu (1, 2
+          og 3)
+        repeat: Settu kubba inn í lykkjuna til að endurtaka skipanir
+        if_bee_nectar: Notaðu "ef" kubbinn til að ákveða hvort býflugan á að sækja
+          blómasafa eða ekki
+        if_else_bee: Notaðu "ef/annars" kubbinn svo að býflugan sæki blómasafa úr
+          blómi, en búi til hunang ef það er ekki blóm
+        repeat_full_circle: Skrifaðu töluna fyrir hversu oft uppvakningurinn á að
+          hreyfast til að búa til heilan hring
+        place_length_variable: Dragðu lengdarbreytuna hingað í staðinn fyrir spurningarmerkin
+        arrows_move_actor: Notaðu örvarlyklana til að færa persónuna
+        right_arrow_fireball: Notaðu hægri örvarlykilinn til að skjóta eldhnöttum
+        name_function: Skrifaðu heiti fallsins þíns hér

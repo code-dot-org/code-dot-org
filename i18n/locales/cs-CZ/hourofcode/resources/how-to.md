@@ -4,33 +4,25 @@ title: How-to Guide layout: wide nav: resources_nav
 
 * * *
 
-<div class="row">
-  <h1 class="col-sm-6">
-    Jak vyučovat Hodinu kódu
-  </h1>
-  
-  <div class="col-sm-6 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Přihlaste svoji událost</button></a>
-  </div>
-</div>
+# How to teach one Hour of Code
 
-## 1) Watch this how-to video <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
-## 2) Try the tutorials:
+## 1) Podívejte se na toto video s návodem <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
+## 2) Vyzkoušejte cvičení:
 
-Pro žáky všech věkových kategorií uspořádáme řadu zábavných jednohodinových cvičení, vytvořených celou řadou partnerů. Připravují se nová cvičení, která budou k dispozici před zahájením akce Hodina kódu, která proběhne ve dnech 8.–14. prosince.
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
 
-**Všechna cvičení Hodiny kódu:**
+**All Hour of Code tutorials:**
 
   * Vyžadují minimum času vyučujícího na přípravu
   * Řídí se samy, což umožňuje žákům postupovat jejich vlastním tempem a podle jejich úrovně
 
 [![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
 
-## 3) Register your Hour on the map
+## 3) Zaregistrujte vaši Hodinu na mapě
 
 [Make sure to sign up](<%= hoc_uri('/') %>). We'll send you helpful info as the Hour of Code nears, and you'll see your Hour of Code on our map of worldwide events.
 
-## 4) Plan your hardware needs - computers are optional
+## 4) Připravte si potřebný hardware – počítače nejsou nutné
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every child, and can even do the Hour of Code without a computer at all.
 
@@ -38,16 +30,16 @@ The best Hour of Code experience will be with Internet-connected computers. But 
   * **Prohlédněte si stránku s certifikátem** abyste sami viděli, co obdrží žáci, když výuku dokončí. 
   * **Zajistěte své třídě sluchátka** nebo požádejte své žáky, aby si přinesli svá vlastní, pokud vámi zvolená cvičení fungují nejlépe se zvukem.
 
-## 5) Plan ahead based on your technology available
+## 5) Vše dopředu naplánujte v závislosti na vám dostupné technice
 
   * **Nemáte dostatek počítačů?** Využijte [programování ve dvojicích](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Pokud se studenti spojí do dvojic, budou si vzájemně pomáhat a budou méně závislí na vyučujícím. Uvidí také, že informatika je společenská a využívá spolupráci.
   * **Máte pomalé připojení?** Naplánujte promítnutí videí před celou třídou, aby si pak studenti nemuseli stahovat každý své vlastní. Nebo zkuste cvičení offline nebo unplugged (bez počítače).
 
-## 6) Inspire students - show them a video
+## 6) Inspirujte žáky – promítněte jim video
 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
-  * Původní Code.org video, zobrazující Billa Gatese (Microsoft), Marka Zuckerberga (Facebook) a hvězdu basketbakové NBA ligy Chrise Boshe (délka verzí [1 minuta](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minut](https://www.youtube.com/watch?v=nKIu9yen5nc) a [9 minut](https://www.youtube.com/watch?v=dU1xS07N-FA))
+  * Původní video od Code.org, zobrazující Billa Gatese (Microsoft), Marka Zuckerberga (Facebook) a hvězdu basketbakové ligy NBA Chrise Boshe (délka verzí [1 minuta](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minut](https://www.youtube.com/watch?v=nKIu9yen5nc) a [9 minut](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * [Úvodní video Hodiny kódu 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw) nebo <% if @country == 'uk' %> [video Hodiny kódu 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [video Hodiny kódu 2014](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
   * [President Obama vyzývá studenty, aby se učili informatiku](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
@@ -60,7 +52,7 @@ Most kids don’t know what computer science is. Here are some ideas:
   * Nebo:"Informatika je umění smíchat lidské myšlenky s digitálními nástroji pro zlepšení našich schopností a sil. Informatici pracují v mnoha rozdílných oblastech: píšou aplikace pro smartphony, léčí nemocné, vytvářejí animované filmy, pracují v sociálních médiích, konstruují roboty, kteří zkoumají jiné planety a ještě daleko více."
   * Podívejte se na několik tipů, jak [zaujmout dívky informatikou](http://<%= codeorg_url() %>/girls). 
 
-## 6) Start your Hour of Code
+## 7) Začněte svoji Hodinu kódu
 
 **Direct students to the activity**
 
@@ -84,4 +76,4 @@ Each student gets a chance to get a certificate via email when they finish the [
 
 **What comes after the Hour of Code?**
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up your event</button></a>
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>

@@ -4,8 +4,6 @@ title: Press Kit layout: wide nav: resources_nav
 
 * * *
 
-[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
-
 ## Làm thế nào để thu hút các phương tiện truyền thông tới sự kiện Hour of Code của bạn
 
 *For all press and media inquiries, contact <press@code.org>*
@@ -59,5 +57,3 @@ Code.org® is a 501c3 public non-profit dedicated to expanding participation in 
 
   
 Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).
-
-<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

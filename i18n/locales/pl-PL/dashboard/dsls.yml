@@ -2,13 +2,13 @@ pl:
   data:
     text_match:
       Blocks to Bools 1:
-        Convert Blocks to Math: Convert Blocks to Math
+        Convert Blocks to Math: Zamień bloki na matematykę
         Type out the arithmetic expression that matches this code: Zapisz wyrażenie arytmetyczne, które pasuje do tego kodu
         /script_assets/msm/unit6/blockstomath1.png: '/script_assets/msm/unit6/blockstomath1.pnghttps://crowdin.com/translate/codeorg/317/enus-pl#'
         (4+5) > 9: '(4+5) > 9'
         Type the arithmetic expression here: Zapisz tutaj wyrażenie arytmetyczne
       Blocks to Bools 2:
-        Convert Blocks to Math: Convert Blocks to Math
+        Convert Blocks to Math: Zamień bloki na matematykę
         Type out the arithmetic expression that matches this code: Zapisz wyrażenie arytmetyczne, które pasuje do tego kodu
         /script_assets/msm/unit6/blockstomath2.png: /script_assets/msm/unit6/blockstomath2.png
         (10 > 11) or (7 <= 9): '(10 > 11) lub (7 <= 9)'
@@ -16,7 +16,7 @@ pl:
         (10 > 11) || (7 <= 9): '(10 > 11) || (7 <= 9)'
         Type the arithmetic expression here: Zapisz tutaj wyrażenie arytmetyczne
       Blocks to Bools 3:
-        Convert Blocks to Math: Convert Blocks to Math
+        Convert Blocks to Math: Zamień bloki na matematykę
         Type out the arithmetic expression that matches this code: Zapisz wyrażenie arytmetyczne, które pasuje do tego kodu
         /script_assets/msm/unit6/blockstomath3.png: /script_assets/msm/unit6/blockstomath3.png
         (5 < 10) and (10 < 15): '(5 < 10) i (10 < 15)'
@@ -24,7 +24,7 @@ pl:
         (5 < 10) && (10 < 15): '(5 < 10) && (10 < 15)'
         Type the arithmetic expression here: Zapisz tutaj wyrażenie arytmetyczne
       Blocks to Bools 4:
-        Convert Blocks to Math: Convert Blocks to Math
+        Convert Blocks to Math: Zamień bloki na matematykę
         Type out the arithmetic expression that matches this code: Zapisz wyrażenie arytmetyczne, które pasuje do tego kodu
         /script_assets/msm/unit6/blockstomath4.png: /script_assets/msm/unit6/blockstomath4.png
         ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): '((1 < x) I (x < 5)) LUB ((8 < x) I (x < 10))'
@@ -32,33 +32,33 @@ pl:
         ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): '((1 < x) && (x < 5)) || ((8 < x) && (x < 10))'
         Type the arithmetic expression here: Zapisz tutaj wyrażenie arytmetyczne
       Blocks to Math 1:
-        Convert Blocks to Math: Convert Blocks to Math
+        Convert Blocks to Math: Zamień bloki na matematykę
         Type out the arithmetic expression that matches this code: Zapisz wyrażenie arytmetyczne, które pasuje do tego kodu
         /script_assets/msm/unit1/blockstomath1.png: /script_assets/msm/unit1/blockstomath1.png
         4 + 5: 4 + 5
         Type the arithmetic expression here: Zapisz tutaj wyrażenie arytmetyczne
       Blocks to Math 2:
-        Convert Blocks to Math: Convert Blocks to Math
+        Convert Blocks to Math: Zamień bloki na matematykę
         Type out the arithmetic expression that matches this code: Zapisz wyrażenie arytmetyczne, które pasuje do tego kodu
         /script_assets/msm/unit1/blockstomath2.png: /script_assets/msm/unit1/blockstomath2.png
         7 * 6: '7 * 6'
         Type the arithmetic expression here: Zapisz tutaj wyrażenie arytmetyczne
       Blocks to Math 3:
-        Convert Blocks to Math: Convert Blocks to Math
+        Convert Blocks to Math: Zamień bloki na matematykę
         Type out the arithmetic expression that matches this code: Zapisz wyrażenie arytmetyczne, które pasuje do tego kodu
         /script_assets/msm/unit1/blockstomath3.png: /script_assets/msm/unit1/blockstomath2.png
         (2 * 3) - (1 + 0): '(2 * 3) - (1 + 0)'
         2 * 3 - (1 + 0): '2 * 3 - (1 + 0)'
         Type the arithmetic expression here: Zapisz tutaj wyrażenie arytmetyczne
       Blocks to Math 4:
-        Convert Blocks to Math: Convert Blocks to Math
+        Convert Blocks to Math: Zamień bloki na matematykę
         Type out the arithmetic expression that matches this code: Zapisz wyrażenie arytmetyczne, które pasuje do tego kodu
         /script_assets/msm/unit1/blockstomath4.png: /script_assets/msm/unit1/blockstomath4.png
         (5 + 8) - 12: '(5 + 8) - 12'
         5 + 8 - 12: 5 + 8-12
         Type the arithmetic expression here: Zapisz tutaj wyrażenie arytmetyczne
       Blocks to Math 5:
-        Convert Blocks to Math: Convert Blocks to Math
+        Convert Blocks to Math: Zamień bloki na matematykę
         Type out the arithmetic expression that matches this code: Zapisz wyrażenie arytmetyczne, które pasuje do tego kodu
         /script_assets/msm/unit1/blockstomath5.png: /script_assets/msm/unit1/blockstomath5.png
         (-2) * (-6):
@@ -66,7 +66,7 @@ pl:
             2 * -6: '-2 * -6'
         Type the arithmetic expression here: Zapisz tutaj wyrażenie arytmetyczne
       Blocks to Math 6:
-        Convert Blocks to Math: Convert Blocks to Math
+        Convert Blocks to Math: Zamień bloki na matematykę
         Type out the arithmetic expression that matches this code: Zapisz wyrażenie arytmetyczne, które pasuje do tego kodu
         /script_assets/msm/unit1/blockstomath6.png: /script_assets/msm/unit1/blockstomath6.png
         ((4 - 1) * (-2)) + 12: '((4 - 1) * (-2)) + 12'
@@ -75,7 +75,7 @@ pl:
         (4 - 1) * -2 + 12: '(4 - 1) * -2 + 12'
         Type the arithmetic expression here: Zapisz tutaj wyrażenie arytmetyczne
       Blocks to Math 7:
-        Convert Blocks to Math: Convert Blocks to Math
+        Convert Blocks to Math: Zamień bloki na matematykę
         Type out the arithmetic expression that matches this code: Zapisz wyrażenie arytmetyczne, które pasuje do tego kodu
         /script_assets/msm/unit1/blockstomath7.png: /script_assets/msm/unit1/blockstomath7.png
         10 / (2 * (3 + 1)): '10 / (2 * (3 + 1))'

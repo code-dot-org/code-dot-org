@@ -1,52 +1,52 @@
 * * *
 
-title: Sample Resolution Supportive of Computer Science Education Week and Hour of Code layout: wide nav: resources_nav
+标题：支持计算机科学教育周和编程一小时的示例分析 布局：宽 导航：导航资源
 
 * * *
 
-### Below is a sample resolution supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+### 以下是关于支持计算机科学教育周的示例分析，其目的是让其可用于州和地方立法。
 
   
-[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+[众议院，参议院，州，县市的方案或公告###]-计算机科学教育周强调了计算机科学在日渐改变着我们当今社会中所起到的关键作用及计算机科学如何创新和创造经济机会；
 
-[HOUSE OR SENATE RESOLUTION ###]
+[参议院或众议院方案###]
 
-[DATE]
+[日期]
 
-Whereas computing technology is an integral part of culture and is transforming how people interact with each other and the world around them;
+计算机技术是文化的一个组成部分，它正改变着人们之间如何相互作用以及他们周围的世界；
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+计算机科学正改变着工业，创造着商业新领域，推动着各个科学领域的创新，提高着经济领域既定的劳动生产率；
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+计算机科学领域支撑着我们的经济信息技术部门，为美国经济产出作出重要贡献；
 
-Whereas the field of computer science is a foundational science for the digital age;
+计算机科学领域是数字化时代的基础科学;
 
-Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
+信息技术行业具有独特的优势，通过研究和发展创新技术帮助经济复苏；
 
-Whereas the outlook for computer science jobs is bright with one in every two STEM jobs in the country in computing occupations;
+计算机科学的工作前景十分光明，全国每两个STEM职位就有一个是计算职位；
 
-Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
+为学生提供参与高品质计算机科学活动的机会，给他们在提供并要求关键思维技巧的领域创造无限的机遇，让他们终生受用；
 
-Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
+所有学生的计算机科学教育都应该做好全面的准备，包括拥有合格的老师，科技及与年龄相符的小学和中学水平要求的计算机科学课程；
 
-Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
+计算机科学教育要应对的挑战，包括统计面向高校毕业要求的计算机科学课程，以及为计算机科学教师提供专业发展；
 
-Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
+在计算机科学教育周期间参加编程一小时可以探索计算机科学领域并鼓励更多的学生进一步学习计算机科学；
 
-Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
+计算机科学领域同样有需要跨越的严重障碍，那就是吸引更多女性和各级分枝的少数族裔参与进来；
 
-Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
+格蕾丝·穆雷·赫柏，计算机科学领域的女性第一人，设计新的语言程序并开创计算机系统的标准，为计算机科学的诸多发展奠定基础；
 
-Whereas the week of December 8, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
+这周的十二月八日，为了纪念格蕾丝·赫柏的生日特被定为‘计算机科学教育周’：就在现在开始
 
-Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
+如此，[众议院或参议院，州，县，市，校董事会]--
 
-(1) supports the designation of Computer Science Education Week (December 8-14, 2014);
+（1）支持计算机科学教育周（12月8日至14日，2014年）的称号；
 
-(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
+（2）鼓励学校，教育工作者，家长和决策者参加计算机科学教育周，让他们的学生参与编程一小时；
 
-(3) encourages schools, teachers, researchers, universities, business leaders and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+鼓励学校，教师，科研人员，高校，企业领导者和决策者制定教师机制，接受最先进的专业发展，让他们可为各级教育提供计算机科学的可持续学习经验，并鼓励学生接触计算机科学概念；
 
-(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
+（4）鼓励政策制定者消除障碍，让计算机科学课程被视为同数学或科学一样计入到毕业所需的学分；
 
-(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+（5）鼓励通过现有方案，为女性和少数族裔在学习计算机科学方面创造机会。

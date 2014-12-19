@@ -5,9 +5,6 @@ nav: resources_nav
 ---
 <div class="row">
     <h1 class="col-sm-6">How to teach one Hour of Code</h1>
-    <div class="col-sm-6 button-container centered">
-        <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Sign up your event</button></a>
-    </div>
 </div>
 
 <font size="4">On December 8th, as part of the global Hour of Code movement Microsoft is seeking to enable as many people as possible in Ireland to have the opportunity to learn how to code.
@@ -86,6 +83,6 @@ Each student gets a chance to get a certificate via email when they finish the [
 **What comes after the Hour of Code?**
 
 The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators <a href="http://<%= codeorg_url() %>/educate">here</a>. Or encourage your children to learn <a href="http://<%= codeorg_url() %>/learn/beyond">online</a>. <% end %>
-<a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up your event</button></a>
+
 
 

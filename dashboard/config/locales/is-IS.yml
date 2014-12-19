@@ -36,6 +36,7 @@
   of: af
   more: MEIRA
   less: MINNA
+  beta: beta
   try_hoc: 'Prófaðu Klukkustund kóðunar, smelltu hér >> '
   try_k8intro: Prófaðu Inngang að tölvunarfræði fyrir 13 - 14 ára (11-25 klst.)
   k8intro: Inngangur að tölvunarfræði fyrir 13 - 14 ára (15-25 klst.)
@@ -599,3 +600,7 @@
     completed_too_many_blocks: lokið, of margir kubbar
     completed_perfect: lokið, fullkomið
     furthest_level_attempted: hæsti unninn áfangi
+  studio:
+    courses_working_on: Námskeið sem þú ert að fást við
+    completed_courses: Námskeið sem þú hefur lokið
+    all_courses: Öll námskeið

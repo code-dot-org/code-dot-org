@@ -479,14 +479,28 @@ el:
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Λειτουργικές Ηλιοκυνηγοί
         C3_songwriting_with_parameters: Σύνθεση τραγουδιού Με Παραμέτρους
-        C4_artist_math: Προγραμματίζουμε τον Καλλιτέχνη χρησιμοποιώντας Μαθηματικά
-        C4_create_functions: Δημιουργούμε Συναρτήσεις
-        C4_edit_functions: Επεξεργαζόμαστε Συναρτήσεις
+        C4_intro: Εισαγωγή
+        C4_bee_conditional: Συνθήκες της Μέλισσας
+        C4_variables_artist: 'Μεταβλητές - Καλλιτέχνης'
+        C4_variables_playlab: 'Variables - Play Lab'
         C4_for_loops: Βρόχοι Για
-        C4_variables: Μεταβλητές
+        C4_math_artist: Προγραμματίζουμε τον Καλλιτέχνη χρησιμοποιώντας Μαθηματικά
+        C4_function_edit: Επεξεργαζόμαστε Συναρτήσεις
+        C4_function_create: Δημιουργούμε Συναρτήσεις
+        C4_function_parameters: Συναρτήσεις με παραμέτρους
+        C4_conditionals: Έλεγχοι
+        C4_unplugged_algorithms: Αλγόριθμοι με Tangrams
+        C4_unplugged_madlibs: Mad Libs
+        C4_unplugged_variables: Μεταβλητές σε φακέλους
+        C4_unplugged_forloops: Βρόχοι Για
+        C4_unplugged_parameters: Γράφουμε τραγούδια με παραμέτρους
+        C4_unplugged_binary: Δυαδικό
         frozen_intro: Εισαγωγή στην Ώρα του Κώδικα
         frozen_loops: Εισαγωγή στους Βρόχους (Επαναλήψεις)
         frozen_functions: Εισαγωγή στις Συναρτήσεις
+        playlab_intro: Introduction to Play Lab
+        playlab_events: Play Lab Events
+        playlab_repeat_forever: Play Lab Repeat Forever
     callout:
       text:
         drag_blocks: |-
@@ -507,17 +521,17 @@ el:
         replace_questions: 'Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις το "???" με έναν αριθμό'
         replace_questions_degree: 'Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις το "???" με τον σωστό βαθμό για να γυρίσει'
         repeat_blocks: 'Χρησιμοποίησε το "Επανάλαβε" μπλοκ και πιάσε ένα γύρο όλα τα μπλοκ στον χώρο εργασίας'
-        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the workspace
-        repeat_blocks_2: '(2) Move the "Repeat" block here, and place the gray blocks inside'
+        repeat_blocks_1: (1) Χρησιμοποίησε αυτό το μπλοκ και βάλε το γύρω από τα γκρι μπλοκ στο χώρο εργασίας
+        repeat_blocks_2: (2) μετακίνησε το μπλοκ «Επανάλαβε» εδώ, και τοποθέτησε μέσα τα γκρι μπλοκ
         snowflake_dropdown: Χρησιμοποίησε το αναδυόμενο μενού για να δημιουργήσεις διαφορετικές χιονονιφάδες!
         degrees_per_side: Διαίρεσε το 360 με το πλήθος των πλευρών για να βρεις τη γωνία σε μοίρες.
         set_sides: 'Χρησιμοποίησε αυτό το μπλοκ για να θέσεις τις "πλευρές" στον αριθμό που πρέπει για να συμπληρωθεί το  παζλ.'
         set_length: 'Χρησιμοποίησε αυτό το μπλοκ  για να θέσεις το "μήκος" στη σωστή τιμή.'
-        which_equation: Which equation makes each side shorter for shapes with more sides?
+        which_equation: Ποια εξίσωση κάνει κάθε πλευρά μικρότερη για σχήματα με περισσότερες πλευρές;
         get_nectar: 'Χρησιμοποίησε το νέο "πάρε νέκταρ" μπλοκ.'
         actions_category: 'Η εργαλειοθήκη πήρε νέα μορφή! Τα "Δράσεις" μπλοκ είναι εδώ μέσα τώρα.'
         draw_square_hint: 'Υπόδειξη: Χρησιμοποίησε την επανάληψη για το τετράγωνο που μόλις έκανες στο τελευταίο πρόβλημα.'
-        edit_function: Click here to edit your function.
+        edit_function: Κάνε κλικ εδώ για να επεξεργαστείς τη συνάρτησή σου.
         create_function: 'Πάτα εδώ να ανοίξει το μενού "Συναρτήσεις", μετά πάτα την επιλογή "Δημιουργία Συνάρτησης".'
         house_hint: 'Δεν πειράζει αν η εικόνα δεν μοιάζει ακόμη με  σπίτι. Θα το φτιάξουμε στο επόμενο πρόβλημα.'
         edit_draw_square: Χρησιμοποίησε αυτό το πλήκτρο για να διορθώσεις τη συνάρτηση και πρόσθεσε την επανάληψη.
@@ -537,10 +551,23 @@ el:
         playlab_add_move: 'Βάλτε μπλοκ "Κίνηση" μέσα σε αυτό το μπλοκ επανάληψης'
         playlab_add_score: Βάλτε εδώ μπλοκ για το σκορ
         playlab_add_blocks: Βάλτε εδώ τα δικά σας μπλοκ
-        set_variable: Drag a number block here to set your variable
-        place_variable: Drag your variable inside this block
-        bee_for_loop: Drag the largest number of nectar you want the bee to collect here
-        place_counter_variable: Drag your counter variable inside this block
-        function_editor_draw_square: 'This is your function definition. These blocks run everytime you use the "draw a square" block'
-        change_here: Make your change here
-        write_draw_square_function: Drag blocks from the toolbox into here that draw a square
+        set_variable: Σύρε ένα μπλοκ αριθμού εδώ για να ορίσεις τη μεταβλητή σου
+        place_variable: Σύρε τη μεταβλητή σου μέσα σε αυτό το μπλοκ
+        bee_for_loop: Σύρε το μεγαλύτερο αριθμό από νέκταρ που θέλεις να συλλέξει η μέλισσα εδώ
+        place_counter_variable: Σύρε τη μεταβλητή μετρητή μέσα σε αυτό το μπλοκ
+        function_editor_draw_square: Αυτός είναι ορισμός της συνάρτηση σου. Αυτά τα μπλοκ ενεργοποιούνται κάθε φορά που χρησιμοποιείς το μπλοκ «Σχεδίασε ένα τετράγωνο»
+        change_here: Κάνε την αλλαγή σου εδώ
+        write_draw_square_function: Σύρε μπλοκ από την εργαλειοθήκη εδώ που σχεδιάζεις ένα τετράγωνο
+        write_draw_triangle_function: Σύρε εδώ πλακίδια από την εργαλειοθήκη για να σχεδιάσεις ένα τρίγωνο
+        edit_add_parameter: 'Πάτα "επεξεργασία" για να προσθέσεις μία μια παράμετρο στην συνάρτή σου'
+        add_and_drag_parameter: 'Γράψε το όνομα παραμέτρου σου εδώ, κάνε κλικ στο κουμπί "Προσθήκη", και στη συνέχεια σύρε το στον ορισμό της συνάρτησης'
+        fill_in_actor: Συμπληρώστε τα ??? με τον κατάλληλο αριθμό για να αντιστοιχεί τον κάθε ηθοποιό (1, 2 και 3)
+        repeat: Βάλτε το μπλοκ μέσα στο βρόχο για να επαναλάβει τις εντολές
+        if_bee_nectar: 'Χρησιμοποιήστε το μπλοκ "εάν" για να αποφασίσετε εάν η μέλισσα πρέπει να πάρει το νέκταρ'
+        if_else_bee: |-
+          Use the "if/else" block so that the Bee gets nectar from a flower, and makes honey if it's not a flower
+        repeat_full_circle: Εισάγετε τον αριθμό των φορών που το ζόμπι πρέπει να κινηθεί για να κάνει έναν πλήρη κύκλο
+        place_length_variable: Σύρετε εδώ την μεταβλητή μήκους για να αντικαταστήσει τα ερωτηματικά
+        arrows_move_actor: Χρησιμοποιείστε τα βέλη για να μετακινήσετε τον ηθοποιό
+        right_arrow_fireball: Χρησιμοποιείστε το δεξί βέλος για να ρίξετε μπάλες φωτιάς
+        name_function: Γράψτε εδώ το όνομα της συνάρτησής σας

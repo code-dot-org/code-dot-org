@@ -5,7 +5,7 @@ bg:
   coming_soon: Очаквайте скоро
   front_header_banner: Присъединете се към най-голямото събитие за обучение в историята, 8-14 декември 2014
   front_intro_default: 'Часът на кодирането е глобално движение достигнало до десетки милиони  ученици от 180+ страни. Всеки, навсякъде, може да организира Часът на кодирането. Уроците са на разположение на над 30 езика. Не е необходим предварителен опит. <strong>Възраст от 4-104.</strong>'
-  front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of people in 180+ countries. Anyone can organize an Hour of Code event. Over 3M people did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
+  front_intro_default_uk: 'Часът на кодирането е глобално движение, достигнало до десетки милиони ученици от 180 + страни. Всеки може да организира подобно събитие. Над 3 милиона ученици стартираха първия си Час по кодиране в Обединеното кралство. Нека са двойно повече през декември! <strong>Не е нужен опит. Възраст 4 до 104 години.</strong>'
   front_watch_video: Гледайте новото видео
   header_menu_resources: Ресурси
   header_menu_faq: ЧЕСТО ЗАДАВАНИ ВЪПРОСИ
@@ -27,15 +27,15 @@ bg:
   prizes_all: Награди за всеки организатор
   prizes_every_organizer: Всеки организатор на събитие ще получи Dropbox или Skype кредит в знак на благодарност
   prizes_technology: По едно държавно училище от всеки американски щат( включително и Вашингтон) ще спечели $10,000 за технологии
-  prizes_tech_chats: '# classrooms will win video chats with very special guests'
+  prizes_tech_chats: '# класни стаи ще спечелят видео чат с много специални гости'
   prizes_robots: 100 класни стаи ще спечелят набор от програмируеми роботи
-  prizes_brilliant: One school in each province and territory will receive $2000 for a Brilliant Project
-  prizes_actua: "15 schools across Canada will receive 2 hands-on STEM workshops by one of Actua's members"
+  prizes_brilliant: 'Едно училище във всяка провинция и територия ще получи $2000 за  блестящ проект'
+  prizes_actua: '15 училища в Канада участват в 2 STEM  семинари с един от членовете на Actua'
   prizes_details: Детайли
-  whats_next_header: "What's Next?"
-  whats_next_description: "We'll send you materials and helpful tips for your event. New 2014 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
-  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>How to run an Hour of Code</a>"
-  whats_next_promote: "<a href='http://hourofcode.com/resources'>Promote the Hour of Code</a>"
+  whats_next_header: Какво следва?
+  whats_next_description: "Ние ще ви изпратим материали и полезни съвети за вашето събитие. Нови уроци за 2014 очаквайте скоро за всеки браузър, смартфон- или дори без компютър! <a href='http://code.org/learn'> Опитайте текущите уроци</a>"
+  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'> Как да стартирате Часът на кодирането</a>"
+  whats_next_promote: "<a href='http://hourofcode.com/resources'> Промотирайте Часът на кодирането</a>"
   n_have_learned_an_hoc: '<h1>#</h1><h3>опитаха</h3><h2>ЧАСЪТ НА КОДИРАНЕТО</h2>'
   anybody_can_learn: Всеки може да се научи.
   register_now: Регистрирай се сега
@@ -43,16 +43,16 @@ bg:
   front_join_us_description: Компютърните науки са необходимост за всеки ученик. Помогнете ни да ги представим на 100 милиона.
   front_join_us_button: Присъединете се към нас
   front_what_is_hoc: Какво е Часът на кодирането?
-  front_join_us_header: Anyone can learn the basics, and have fun doing it!
+  front_join_us_header: Всеки може да научи основите и да се забавлява докато го прави!
   front_join_us_header_uk: По всяко време през декември 8-14 можете да организирате Часът на кодирането за да покажете, че всеки може да научи основите на програмирането и да се забавлява докато го прави!
   front_join_us_teacher: Вие учител ли сте?
-  front_join_us_inspire: Inspire students with
-  front_join_us_inspire_link: an Hour of Code in the classroom.
+  front_join_us_inspire: Вдъхновете учениците с
+  front_join_us_inspire_link: Часът на кодирането в класната стая.
   front_join_us_parent: Вие родител ли сте?
   front_join_us_ask_link: Попитайте в местното училище
   front_join_us_ask: дали организират Часът на кодирането.
   front_join_us_computer_science: Просто обичате компютърните науки?
-  front_join_us_spread: Spread the word.
+  front_join_us_spread: Разпространение на новината.
   front_join_us_organize: Или организирайте Часът на кодирането сами.
   front_join_us_how_to_run: Ето как можете да стартирате Часът на кодирането събитие
   front_join_us_help_promote: Помогнете ни да популяризираме Часът на кодирането
@@ -62,7 +62,7 @@ bg:
   front_join_us_try: Опитайте го
   front_join_us_host: Организирайте го
   front_join_us_support: Подкрепете го
-  signup_header: 'Organize an Hour of Code event during Dec 8 - 14, and register it here.'
+  signup_header: Организирайте Часът на кодирането събитие по време на Dec 8-14 и го регистрирате тук.
   signup_name_label: Вашето име
   signup_email_label: Вашият имейл
   signup_organization_name_label: Име на училище или организация
@@ -88,10 +88,13 @@ bg:
   signup_thank_you_header: Благодаря ви, че се регистрирахте събитие за Часа на кодирането.
   signup_thank_you_message: Ние ще ви изпратим имейл за потвърждение с информация, която да ви помогне да започнете.
   map_header: Часът на кодирането събития по света
-  map_header_company: '# by company organizers'
-  meta_tag_og_title: Часът на кодирането наближава
+  map_header_company: '# организатори от компании'
+  map_search_placeholder: Search for Hour of Code events
+  map_search_search: Search
+  map_search_reset: Reset
+  meta_tag_og_title: The Hour of Code is here
   meta_tag_og_description: Часът на кодирането е глобално движение, достигащо до десетки милиони ученици от 180+ страни на над 30 езика. Допустима възраст от 4 до 104.
-  meta_tag_twitter_title: Часът на кодирането наближава
+  meta_tag_twitter_title: The Hour of Code is here
   meta_tag_twitter_description: Часът на кодирането е глобално движение, достигащо до десетки милиони ученици от 180+ страни на над 30 езика. Допустима възраст от 4 до 104.
   twitter_default_text: 'Аз ще участвам тази година в #HourOfCode, а ти? @codeorg'
   hardware_prizes_form_name_label: Вашето име
@@ -114,8 +117,8 @@ bg:
   hardware_prizes_form_submit_label: Изпращане
   hoc_faq_title: Често задавани въпроси
   hoc_faq_what_is_hoc_q: Какво е Часът на кодирането?
-  hoc_faq_what_is_hoc_a: "Часът на кодирането е въведение в компютърните науки в рамките на 1 час, предназначено да демитологизира програмирането и да покаже, че всеки може да се научи да програмира. <a href='http://code.org/learn'>Проверете уроците</a> и следете за нови такива, идващи за Часът на кодирането 2014."
-  hoc_faq_last_year: Опитайте миналогодишните уроци
+  hoc_faq_what_is_hoc_a: "Часът на кодирането е един час въведение в компютърните науки, предназначен да демитологизира програмирането и да се покаже, че всеки може да научи основите. <a href='http://code.org/learn'>вижте уроците ни</a>."
+  hoc_faq_last_year: Опитайте уроците
   hoc_faq_when_is_hoc_q: Кога се провежда Часът на кодирането?
   hoc_faq_when_is_hoc_a: "Всеки може да бъде организатор на събитие Часът на кодирането по всяко време, но цел на масовата кампания целта е десетки милиони ученици да пробват Часът на кодирането между 8 и 14 декември 2014 г. като част от <a href='http://csedweek.org'> Седмицата на компютърните науки и образованието </a>. Това е един конкретен <i>час ли е</i>? Не. Можете да направите  своя Час на кодиране по всяко време през тази седмица. (И по всяко друго време)."
   hoc_faq_why_cs_q: Защо компютърни науки?
@@ -128,12 +131,20 @@ bg:
   hoc_faq_host_a: "Разбира се. Дейностите в Часът на кодирането са самонасочващи. Всичко, което трябва да направите е <a href='http://code.org/learn'>  да пробвате нашите текущи уроци</a>и да изберете тези, които ще са ви необходими в рамките на вашият Час &mdash; ние ще се погрижим за останалото. Ние сме подготвили варианти за всяка възраст и ниво на опит, от детската градина и нагоре. Започнете да планирате вашето събитие като прочетете нашите <a href='/resources/how-to'> съвети</a>."
   hoc_faq_need_computers_q: Трябва ли компютър за всеки участник?
   hoc_faq_need_computers_a: "Не. Имаме уроци в Часът на кодирането, които работят на компютри, смартфони, таблетки и някои, които не изискват компютър! Можете да се присъедините, където и да сте, с каквото имате. <p><i>Ето няколко възможности:</i> <br><ul><li><b>Работа по двойки,.</b> Изследванията показват, че учениците учат най-добре програмирането <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>когато са по двойки</a>, споделят компютъра и работят заедно. Насърчете вашите ученици да се разделят на двойки. <li><b>Използвайте мултимедиен проектор и екран.</b> Ако имате проектор и екран, свързани към компютър с интернет връзка, направете Часът на кодирането с цялата си група. Гледайте видео клиповете заедно и нека учениците се редуват в решаването на пъзели или в отговарянето на въпроси. <li><b>Опитайте ънплъгд уроците.</b> Ние предлагаме уроци, които не изискват компютър.</ul>"
-  hoc_faq_international_q: 'I am in <country>. How do I participate internationally?'
-  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='target-resources'>here</a>."
+  hoc_faq_international_q: 'Аз съм от <country>. Как да участвам в международен план?'
+  hoc_faq_international_a: "Всеки може да организира Часът на кодирането събитие, навсякъде по света. Миналата година, учениците по целия свят се присъединиха заедно за Часът на кодирането. Научете повече <a href='target-resources'> тук</a>."
   hoc_faq_tutorial_q: 'Как да направя  урок за Часът на кодирането?'
   hoc_faq_tutorial_a: "Ако сте заинтересувани да станете наш партньор в създаването на уроци, <a href='/tutorial-guidelines'>вижте нашите указания и инструкции</a>. Бихме искали да има разнообразие от възможности за ангажиране, но основната цел е да се оптимизира опитът на учениците и учителите, за които компютърните науки са новост."
   hoc_faq_more_questions_q: Все още имате въпроси?
   hoc_faq_more_questions_a: "Опитайте да намерите отговор в нашият <a href='http://support.code.org'> форум за поддръжка</a>."
+  hoc_faq_scratch_q: Аз ще използвам Scratch за Часът на кодирането, но какво става, ако учениците ми работят на iPad, а не на лаптопи?
+  hoc_faq_scratch_a: "Scratch не е предвиден за таблетки. Ако учениците са малки, те могат да използват ScratchJR iPad приложението (за не можещи да четат). Ако погледнете в ръководството на <a href='http://code.org/learn'> Code.org/learn</a>, можете да намерите и други уроци, които работят на iPad - от Code.org, Tynker, Lightbot или CodeSpark."
+  hoc_faq_account_q: 'Учениците трябва да влезнат  с акаунт?'
+  hoc_faq_account_a: "Не. Абсолютно не е необходима регистрация и не се изисква такава за учениците, които пробват Часът на кодирането. Повечето от <a href='http://code.org/learn/beyond'> следващите курсове</a> изискват създаване на акаунт за да се следи напредъка на ученика."
+  hoc_faq_frozen_q: Къде са уроците с Анна и Елза?
+  hoc_faq_frozen_a: "Те сега са публикувани на <a href='http://code.org/learn'> Code.org/learn</a>. Надяваме се да се забавлявате с тях!"
+  hoc_faq_high_school_q: Коя от дейностите трябва да направя с учениците от училище?
+  hoc_faq_high_school_a: "За всички възрасти препоръчваме да опитате един от начинаещите уроци на <a href='http://code.org/learn'> Code.org/learn</a> за да започнете,подходящ урок е този, с ядосаните птици или с Анна и Елза. Гимназиалните ученици трябва да могат  да приключат един от тях за поне 30 минути и след това да опитат уроците за по-напреднали в JavaScript, като KhanAcademy или CodeHS."
   hoc_faq_more_questions_br_q: Други въпроси?
   hoc_faq_more_questions_br_a: "Моля, посетете <a href='http://support.code.org'>Форумът за поддръжка,</a> който е само на английски език."
   hoc_faq_what_is_hoc_uk_a: "Часът на кодирането е въведение в компютърните науки в рамките на 1 час, предназначено да демитологизира програмирането и да покаже, че всеки може да се научи да програмира. <a href='http://code.org/learn'>Проверете уроците</a> и следете за нови такива, идващи за Часът на кодирането 2014."
@@ -156,28 +167,28 @@ bg:
   stats_girls_million: Над 10 милиона момичета през 2013 г.
   stats_nina: '"Всеки ден отчитам същите резултати &mdash; 100 % ангажираност."-Нина Никълс Пири, учител'
   stats_student: '"Знаех, че това е <b>еднократна</b> възможност в живота."-Мариана Алзейт, 5-ти клас'
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  stats_michael: 'Аз никога <b>до сега не съм</b> виждал учениците си толкова развълнувани за нещо в обучението им. "-Майкъл Кларк, учител'
   resources_how_to: '"Как да" ръководство за учители'
-  resources_how_to_events: Event how-to guide
-  resources_how_to_districts: How-to guide for districts
-  resources_how_to_officials: How-to guide for public officials
+  resources_how_to_events: '"Как да организирам събитие" ръководство'
+  resources_how_to_districts: '"Как да" Пътеводител за райони'
+  resources_how_to_officials: '"Как да" Пътеводител за държавни служители'
   resources_handouts: Изложения за популяризиране на събитието
   resources_videos: Видео
   resources_posters: Плакати
   resources_social: Социални
   resources_banners: Банери
   resources_emails: Примерни имейли
-  resources_stats: Useful stats and blurbs
+  resources_stats: Полезна статистика и изложения
   resources_press_kit: Изявления за пресата
   events_title: Всички Часът на кодирането събития
   events_nav_all: Всички събития
   events_nav_whole_schools: Училища
   events_nav_special: Специални събития
-  events_nav_orgs: Organizations
+  events_nav_orgs: Организации
   events_all_title: Всички Часът на кодирането събития
   events_whole_school_title: Часът на кодирането събития за училища
   events_special_title: Специални събития за Часът на кодирането
-  events_orgs_title: All Hour of Code events organized by Partner Organizations
+  events_orgs_title: Всички Часът на кодирането събития организирани от партньорски организации
   event: събитие
   events: събития
   footer_copyright_message: Copyright 2014 Code.org. Всички права запазени.

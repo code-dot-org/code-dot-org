@@ -36,6 +36,7 @@
   of: 'no'
   more: VAIRĀK
   less: MAZĀK
+  beta: beta
   try_hoc: 'Izmēģini "Programmēšanas stundu", spied šeit >> '
   try_k8intro: Izmēģini mūsu K-8 Ievadu Datorzinātņu kursos (15-25 stundas)
   k8intro: K-8 Ievads Datorzinātņu kursos (15-25stundas)
@@ -584,3 +585,7 @@
     completed_too_many_blocks: Pabeigts, pārāk daudz bloki
     completed_perfect: pabeigts, ideāli
     furthest_level_attempted: tālākais līmenis mēģināts
+  studio:
+    courses_working_on: Kursi, pie kuriem tu strādā
+    completed_courses: Pabeigtie kursi
+    all_courses: Visi kursi

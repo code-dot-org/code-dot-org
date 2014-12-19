@@ -4,22 +4,14 @@ crwdns23969:0crwdne23969:0
 
 * * *
 
-<div class="row">
-  <h1 class="col-sm-6">
-    crwdns22141:0crwdne22141:0
-  </h1>
-  
-  <div class="col-sm-6 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">crwdns22142:0crwdne22142:0</button></a>
-  </div>
-</div>
+# crwdns27084:0crwdne27084:0
 
 ## crwdns23970:0crwdne23970:0 <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
 ## crwdns23971:0crwdne23971:0
 
-crwdns20732:0crwdne20732:0
+crwdns27085:0crwdne27085:0
 
-**crwdns19912:0crwdne19912:0**
+**crwdns27086:0crwdne27086:0**
 
   * crwdns19913:0crwdne19913:0
   * crwdns19914:0crwdne19914:0
@@ -28,11 +20,11 @@ crwdns20732:0crwdne20732:0
 
 ## crwdns23972:0crwdne23972:0
 
-crwdns23973:0crwdne23973:0
+crwdns27087:0crwdne27087:0
 
 ## crwdns23974:0crwdne23974:0
 
-crwdns23975:0crwdne23975:0
+crwdns27088:0crwdne27088:0
 
   * crwdns19918:0crwdne19918:0
   * crwdns19919:0crwdne19919:0 
@@ -45,43 +37,43 @@ crwdns23975:0crwdne23975:0
 
 ## crwdns23977:0crwdne23977:0
 
-crwdns23978:0crwdne23978:0
+crwdns27089:0crwdne27089:0
 
   * crwdns21425:0crwdne21425:0
   * crwdns21426:0crwdne21426:0 <% end %>
   * [crwdns21427:0crwdne21427:0](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**crwdns23979:0crwdne23979:0**
+**crwdns27090:0crwdne27090:0**
 
-crwdns23980:0crwdne23980:0
+crwdns27091:0crwdne27091:0
 
   * crwdns21428:0crwdne21428:0
   * crwdns21429:0crwdne21429:0
   * crwdns21430:0crwdne21430:0 crwdns21431:0crwdne21431:0
   * crwdns21432:0crwdne21432:0. 
 
-## crwdns23981:0crwdne23981:0
+## crwdns25452:0crwdne25452:0
 
-**crwdns23982:0crwdne23982:0**
+**crwdns27092:0crwdne27092:0**
 
   * crwdns21433:0crwdne21433:0 crwdns21434:0crwdne21434:0 crwdns21435:0crwdne21435:0
   * crwdns21436:0crwdne21436:0
 
-**crwdns23983:0crwdne23983:0**
+**crwdns27093:0crwdne27093:0**
 
   * crwdns21437:0crwdne21437:0
   * crwdns21438:0crwdne21438:0
   * crwdns21439:0crwdne21439:0 crwdns21440:0crwdne21440:0 crwdns21441:0crwdne21441:0
 
-**crwdns23984:0crwdne23984:0**
+**crwdns27094:0crwdne27094:0**
 
   * crwdns21442:0crwdne21442:0
   * crwdns21443:0crwdne21443:0
 
-**crwdns23985:0crwdne23985:0**
+**crwdns27095:0crwdne27095:0**
 
-crwdns23986:0crwdne23986:0 crwdns23987:0crwdne23987:0 crwdns23988:0crwdne23988:0
+crwdns27096:0crwdne27096:0 crwdns27097:0crwdne27097:0 crwdns27098:0crwdne27098:0
 
-**crwdns23989:0crwdne23989:0**
+**crwdns27099:0crwdne27099:0**
 
-crwdns23990:0crwdne23990:0 crwdns23991:0crwdne23991:0 crwdns23992:0crwdne23992:0 crwdns23993:0crwdne23993:0 crwdns23994:0crwdne23994:0 crwdns23995:0crwdne23995:0
+crwdns27100:0crwdne27100:0 crwdns27101:0crwdne27101:0 crwdns27102:0crwdne27102:0 crwdns27103:0crwdne27103:0 crwdns27104:0crwdne27104:0 <% end %>

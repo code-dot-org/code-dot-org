@@ -21,7 +21,7 @@ az:
   welcome_back: 'Bir daha xoş gəldiniz, %{name}'
   add_teacher_form:
     code:
-      label: 'Add a teacher:'
+      label: 'Müəllim əlavə edin:'
       placeholder: Section Code (ABCDEF)
     submit: Müəllim əlavə edin
   add_hint_form:
@@ -36,6 +36,7 @@ az:
   of: /
   more: DAHA ÇOX
   less: DAHA AZ
+  beta: beta
   try_hoc: 'Kod Saatında özünüzü sınayın, buraya klikləyin >> '
   try_k8intro: Bizim K-8 İnformatikaya Giriş kursunu (15-25 saat) sınaqdan keçirin
   k8intro: K-8 yaş qrupu (12-13 yaşlılar) üçün İnformatikaya giriş kursu (15-25 saat)
@@ -245,9 +246,9 @@ az:
       stages: 'Göstəriləcək mərhələ(lər):'
       show_past: 'Show student activity (%{bullet_html}) in the past:'
       levels_key: Levels key
-      perfect: Completed, perfect
-      completed: Completed, but using too many blocks
-      tried: Tried, but not completed
+      perfect: Tamamlandı, mükəmməldir
+      completed: Tamamlandı, lakin lazım olandan çox bloklar istifadə olunaraq
+      tried: Sınaqdan keçirilib, lakin tamamlanmayıb
       not_tried: Not tried yet
       activity: 'Indicates student activity in the last %{hours} %{plural}'
       no_section: No assigned section
@@ -311,8 +312,8 @@ az:
     all_courses: 1, 2 və 3-cü kursun icmalı
     lesson_plans: Dərs planları
     signin_message: 'Artıq qeydiyyatdan keçmisiniz? %{link}'
-    student_reg_link: Şagird Qeydiyyatı
-    teacher_reg_link: Müəllim Qeydiyyatı
+    student_reg_link: Şagird qeydiyyatı
+    teacher_reg_link: Müəllim qeydiyyatı
     signin_directions: 'Use an account to track progress.<br/> Teachers, track your entire class.'
     teacher_dashboard: Gedişat panelinə baxın
     teacher_student_count_one: 'Sizin %{count} şagirdiniz var.'
@@ -336,11 +337,11 @@ az:
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Saytı müəllim olaraq istifadə edin
-    heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
-    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
+    heading_hoc2014: '<h2>Kod Saatı</h2><h1>Bütün yaşlar üçün</h1>'
+    heading_elementary: '<h2>20 saatlıq kurslar</h2><h1>Başlayanlar (bütün yaşlar) üçün</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
-    heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
-    your_gallery: Gallery
+    heading_legacy: '<h2>Bizim ümumi kursumuz</h2><h1>Bütün yaşlar üçün</h1>'
+    your_gallery: Qalereya
   gender:
     male: Kişi
     female: Qadın
@@ -358,7 +359,7 @@ az:
     support_url: http://support.code.org
     tos: Şərtlər
     privacy: Məxfilik siyasəti
-    secure: Secure Version
+    secure: Təhlükəsiz versiya
   reference_area:
     title: Kömək lazımdır?
     subtitle: Bu videolara və məsləhətlərə baxın
@@ -418,18 +419,18 @@ az:
       body: İnformatikanın əsaslarını öyrənməyə cəhd edin. Milyonlarla insan artıq bu fürsətdən istifadə edib.
     flappy:
       title: Flappy Code
-      body: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
+      body: 10 dəqiqədən də az müddətə öz oyununuzu yazmaq istəyrisiniz? Qanadlı Kod dərsliyimizi sınayın!
     20hour:
-      title: Intro Course
-      body: Try our 20-hour Intro to Computer Science course.
+      title: Giriş kursu
+      body: Bizim 20 saatlıq İnformatikaya Giriş kursunu sınaqdan keçirin.
     hoc2014:
       try_new_tutorial: Try our new Hour of Code tutorial in beta
-      try_frozen: Artist with Anna and Elsa, from Frozen
+      try_frozen: '"Buzlu ürək"dən Anna və Elza ilə Rəssam'
     gallery:
-      title: Gallery
-      body: View a gallery of app and artist images created by our users
+      title: Qalereya
+      body: İstifadəçilərimizin düzəltdiyi proqram və rəsm işlərinin qalereyasına baxın
     frozen:
-      title: Frozen
+      title: Buzlu ürək
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: Students made these with code!
@@ -439,15 +440,15 @@ az:
     more: 'More &rarr;'
     caption_by_name_age: 'by %{name}, age %{age}'
     caption_time_ago: '%{time_ago} ago'
-    header: Gallery
-    header_playlab: Oyun laboratoriyası
-    header_artist: Artist
+    header: Qalereya
+    header_playlab: Oyun labı
+    header_artist: Rəssam
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     prerelease_hoc2014: "This tutorial is in <span class='betatext'>beta</span>.  It is subject to revision as feedback is received and improvements are made."
     feedback: Give Feedback
     report_bug: Report Bug
-    support: Get Help
+    support: Kömək istə
     support_url: //support.code.org
   multi:
     wrong_title: Yanlış cavab
@@ -487,7 +488,7 @@ az:
           description: ""
         flappy:
           title: Flappy Code
-          description: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
+          description: 10 dəqiqədən də az müddətə öz oyununuzu yazmaq istəyrisiniz? Qanadlı Kod dərsliyimizi sınayın!
         jigsaw:
           title: Jigsaw
           description: ""
@@ -505,6 +506,10 @@ az:
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
   progress:
     not_completed: tamamlanmayıb
-    completed_too_many_blocks: completed, too many blocks
-    completed_perfect: completed, perfect
+    completed_too_many_blocks: tamamlanıb, artıq bloklar var
+    completed_perfect: tamamlanıb, əladır
     furthest_level_attempted: furthest level attempted
+  studio:
+    courses_working_on: Üzərində işlədiyiniz kurslar
+    completed_courses: Tamamlanmış kurslar
+    all_courses: All courses

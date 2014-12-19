@@ -36,6 +36,7 @@
   of: của
   more: Thêm nữa
   less: ít hơn
+  beta: beta
   try_hoc: 'Thử Hour of Code, bấm vào đây >> '
   try_k8intro: Hãy thử khóa học K-8 Giới Thiệu Công Nghệ Thông tin (15-25 hours)
   k8intro: Khóa giới thiệu về khoa học máy tính cho học sinh K-8 (15 đến 25 giờ)
@@ -595,3 +596,7 @@
     completed_too_many_blocks: completed, too many blocks
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
+  studio:
+    courses_working_on: Courses you're working on
+    completed_courses: Completed courses
+    all_courses: All courses

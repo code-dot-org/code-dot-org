@@ -131,9 +131,9 @@
           the steps in the Dice Race game to the order that they should appear in
           the algorithm.
         <h4>1)</h4>: <h4>1)</h4>
-        <h4>2)</h4>: <h4>2)</h4>
-        <h4>3)</h4>: <h4>3)</h4>
-        <h4>4)</h4>: <h4>4)</h4>
+        <h4>2)</h4>: <h4>1)</h4>
+        <h4>3)</h4>: <h4>1)</h4>
+        <h4>4)</h4>: <h4>1)</h4>
         <h4>Set Player 1 score to 0</h4>: <h4>Set Player 1 score to 0</h4>
         <h4>Player 1 rolls die</h4>: <h4>Player 1 rolls die</h4>
         <h4>Add Player 1 roll to total score</h4>: <h4>Add Player 1 roll to total

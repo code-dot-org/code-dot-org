@@ -75,8 +75,6 @@
   "saveToGallery":"갤러리에 저장",
   "savedToGallery":"갤러리에 저장되었습니다!",
   "shareFailure":"프로그램을 공유할 수 없습니다.",
-  "typeFuncs":"사용 가능 함수:%1",
-  "typeHint":"괄호 \"( )\" 와 세미콜론 \";\" 이 필요합니다.",
   "workspaceHeader":"블럭들을 이곳에서 조립하세요:",
   "workspaceHeaderJavaScript":"자바스크립트 코드 작성",
   "infinity":"무한",

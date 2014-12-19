@@ -41,7 +41,7 @@ ar-SA:
   go: أذهب
   thank_you_: شكرا لك!
   congratulations: تهانينا!
-  congratulations_on_completing_hoc: تهانينا على اكمالك ساعة واحدة من البرمجة.
+  congratulations_on_completing_hoc: تهانينا على اكمالك ساعة واحدة من البرمجة
   get_a_certificate_of_achievement: أحصل على شهادة الانجاز
   enter_valid_email: الرجاء ادخال عنوان بريد الكتروني صالح
   get_a_certificate_message: "نحن سوف نرسل لك شهادة ومعلومات حول كيفية <a href='/learn/beyond'> تعلم بعد ساعة واحدة من البرمجة</a>"
@@ -65,7 +65,7 @@ ar-SA:
   thanks_for_voting: شكرا للتصويت!
   share_on_facebook: انشرها على الفيس بوك
   share_on_twitter: انشرها على التويتر
-  beyond_an_hour: 'إلى أبعد من ساعة من البرمجة >'
+  beyond_an_hour: 'أبعد من ساعة من البرمجة >'
   get_started: إبدأ
   i_agree: أوافق
   participant_select: '- اختر -'
@@ -74,6 +74,11 @@ ar-SA:
   participant_educator: المعلم
   participant_engineer: مهندس برمجيات
   participant_other: لا شيء من ما ورد أعلاه
+  print_all: طباعة الجميع
+  print_ice_art: |
+    إطبع فن الثلج الخاص بك
+    
+  create_art_with_zombie: or make advanced art with zombie
   i_am_a: انا
   never_spam: نحن لن نزعجك
   enter_country: أدخل اسم البلد اذا كنت خارج الولايات المتحدة
@@ -110,6 +115,10 @@ ar-SA:
   studiobar_flappy_body: اصنع و شارك لعبة فلابي الخاصة بك
   studiobar_teacher_title: صنع من أجل المدرسين
   studiobar_teacher_body: 'يعرض "استوديو التعليمات البرمجية Code Studio " في الفصل الدراسي الخاص بك'
+  studiobar_frozen_title: ساعة من البرمجة
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_donate_title: تبرع
+  studiobar_donate_body: طفل واحد يتعلم البرمجه مع كل دولار تتبرع به
   contact_form_topic_student: أنا طالب
   contact_form_topic_parent: أنا والد
   contact_form_topic_teacher: أنا مدرس/ معلم
@@ -193,6 +202,12 @@ ar-SA:
   dashboard_action_done: ‏‏تم
   dashboard_action_required: متطلب
   dashboard_navigation_home_page: الصفحة الرئيسية للمعلم
+  dashboard_navigation_section_student_progress: حسابات و سير الطلاب
+  dashboard_navigation_section_teacher_progress: Your Course Progress
+  dashboard_navigation_section_lesson_plans: خطط الدرس والموارد
+  dashboard_navigation_section_community: Help and Community
+  dashboard_navigation_section_pd: Professional Development
+  dashboard_navigation_section_speakers: 'Computer Science <br/> Guest Speakers'
   dashboard_navigation_all_sections: حسابات و سير الطلاب
   dashboard_navigation_view_progress: عرض عملية التقدم
   dashboard_navigation_add_students: إضافة طلاب
@@ -285,7 +300,7 @@ ar-SA:
   dashboard_sections_password_account_creation: كلمة المرور المنشئة من طرف الطلاب
   dashboard_sections_login_type_explanation: 'هذا الجدول يساعد على تفسير أي من أنواع تسجيل الدخول هذه، <b>صورة، كلمة، أو البريد الإلكتروني</b>، تريد أن تختار لمقطع.'
   dashboard_faq: الأسئلة الشائعة
-  code_hoc_coming: 'قريبا ساعة من البرمجة - 8 - 14 كانون الأول / ديسمبر !'
+  code_hoc_coming: إرسال رسالة إلكترونية
   code_sign_up: قم بالتسجيل للمشاركة خلال أسبوع تعليم علوم الحاسوب
   learn_more: التعرف على المزيد
   hoc2014_try_new_tutorials: جرّب الدروس الجديدة لساعة البرمجة
@@ -320,6 +335,10 @@ ar-SA:
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: مقدمة لجافا سكريبت
   khanes_name: مقدمة لجافا سكريبت
+  khanpt_name: مقدمة لجافا سكريبت
+  khanhe_name: مقدمة لجافا سكريبت
+  khanfr_name: مقدمة لجافا سكريبت
+  khanpl_name: مقدمة لجافا سكريبت
   tynker_name: أنجز العبة الخاصة بك
   scratch_name: كن مبدعاً مع البرمجة
   lightbot_name: Lightbot
@@ -348,12 +367,17 @@ ar-SA:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: الصخرة، الورقة، المقص
-  frozen_gradelevel: الأعمار 8 +
+  hourofcode_name: Placeholder for new code.org/hoc
+  playlab_name: مختبر اللعب
   codeorg_gradelevel: الأعمار 4-104
   codeintl_gradelevel: الأعمار 4-104
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: المدرسة المتوسطة +
   khanes_gradelevel: المدرسة المتوسطة +
+  khanpt_gradelevel: المدرسة المتوسطة +
+  khanhe_gradelevel: المدرسة المتوسطة +
+  khanfr_gradelevel: المدرسة المتوسطة +
+  khanpl_gradelevel: المدرسة المتوسطة +
   tynker_gradelevel: الذين تتراوح أعمارهم بين 5-13
   scratch_gradelevel: الأعمار 8 +
   lightbot_gradelevel: كل الاعمار
@@ -382,21 +406,27 @@ ar-SA:
   thinkersmith2_gradelevel: الأعمار 8 +
   kodableunplugged_gradelevel: الذين تتراوح أعمارهم بين 8-13
   projguts_gradelevel: الذين تتراوح أعمارهم بين 10-13
-  frozen_platformtext: المتصفحات الحديثة + اللوحات الرقمية
+  hourofcode_gradelevel: الأعمار 4-104
+  frozen_gradelevel: الأعمار 8 +
+  playlab_gradelevel: الأعمار 4-104
   codeorg_platformtext: المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية
   codeintl_platformtext: المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية
   thinkersmithspanish_platformtext: غير مربوطة
   khan_platformtext: متصفحات الويب الحديثة
   khanes_platformtext: متصفحات الويب الحديثة
-  tynker_platformtext: المتصفحات الحديثة. (الدرس التالي يتطلب $$)
-  scratch_platformtext: جميع المتصفحات
+  khanpt_platformtext: متصفحات الويب الحديثة
+  khanhe_platformtext: متصفحات الويب الحديثة
+  khanfr_platformtext: متصفحات الويب الحديثة
+  khanpl_platformtext: متصفحات الويب الحديثة
+  tynker_platformtext: متصفحات الويب الحديثة
+  scratch_platformtext: Desktop-only web browsers (not tablets)
   lightbot_platformtext: جميع المتصفحات و iOS، اندرويد، أو محطة ألعاب
   thinkersmith_platformtext: غير مربوطة
   condcards_platformtext: الغير موصولة
   lightbotintl_platformtext: آي أو إس iOS، الأندرويد (أو متصفح ويب)
   codehs_platformtext: المتصفحات الحديثة. (الدرس التالي يتطلب $$)
   codecademy_platformtext: متصفحات الويب الحديثة. دآي أو إس iOS، تطبيقات الأندرويد
-  codecombat_platformtext: متصفحات الويب الحديثة
+  codecombat_platformtext: Modern web browsers (Follow-on course requires $$)
   codemonkey_platformtext: متصفحات الويب الحديثة
   codeavengers_platformtext: متصفحات الويب الحديثة
   processing_platformtext: متصفحات الويب الحديثة
@@ -416,12 +446,18 @@ ar-SA:
   thinkersmith2_platformtext: غير مربوطة
   kodableunplugged_platformtext: غير مربوطة
   projguts_platformtext: غير مربوطة
-  frozen_shortdescription: دعونا استخدام التعليمات البرمجية للانضمام إلى آنا و إليسا, و نستكشف سحر وجمال الجليد.
+  hourofcode_platformtext: المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية
+  frozen_platformtext: المتصفحات الحديثة + اللوحات الرقمية
+  playlab_platformtext: المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية
   codeorg_shortdescription: تعرف على التعليمات البرمجية مع مارك زوكربيرج و الطيورالغاضبة!
   codeintl_shortdescription: تعرف على التعليمات البرمجية مع مارك زوكربيرج و الطيورالغاضبة!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: تعلم كيفية الرسم في جافا سكريبت
   khanes_shortdescription: تعلم كيفية الرسم في جافا سكريبت
+  khanpt_shortdescription: تعلم كيفية الرسم في جافا سكريبت
+  khanhe_shortdescription: تعلم كيفية الرسم في جافا سكريبت
+  khanfr_shortdescription: تعلم كيفية الرسم في جافا سكريبت
+  khanpl_shortdescription: تعلم كيفية الرسم في جافا سكريبت
   tynker_shortdescription: تعلم البرمجة بحل الألغاز الممتعة و بناء ألعاب الهاتف الخاصة بك.
   scratch_shortdescription: إنشاء ألعاب تفاعلية، والقصص، والرسوم المتحركة.
   lightbot_shortdescription: برمج لايتبوت لحل الألغاز باستخدام الإجراءات والحلقات!
@@ -442,7 +478,7 @@ ar-SA:
   tynkerapp_shortdescription: 'تعلم البرمجة عن طريق حل أحجية كود ممتعة. '
   robomindnl_shortdescription: كتابة التعليمات البرمجية لروبوت الظاهري
   flappy_shortdescription: 'برمج وإعمل لعبتك - فلابي بيرد, القرش أو الغواصة'
-  bitsbox_shortdescription: برمج عدد من التطبيقات للعب وشارك من خلال إستخدام لغة الجافا سكريبت.
+  bitsbox_shortdescription: Code a series of apps to play and share, using real JavaScript.
   makegameswithus_shortdescription: برمج لعبة للأيفون! تعلم من خلال البرمجة الحركات الخاصة بك للوحش !
   touchdevelop_shortdescription: 'حل الألغاز ، ابن الألعاب، وتعلم الترميز كل ذلك على الهاتف الخاص بك. '
   appinventor_shortdescription: برمج تطبيقك الخاص! (فقط للأندرويد)
@@ -450,12 +486,18 @@ ar-SA:
   thinkersmith2_shortdescription: تعلم كيفية استخدام أجهزة الكمبيوتر لل0 وال1 لتمثيل المعلومات
   kodableunplugged_shortdescription: تمارين ممتعة غير موصولة
   projguts_shortdescription: حاول إستعمال النمذجة والمحاكاة باستخدام ورقة/مقص/صخرة
-  frozen_longdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
+  hourofcode_shortdescription: Placeholder for new code.org/hoc
+  frozen_shortdescription: دعونا استخدام التعليمات البرمجية للانضمام إلى آنا و إليسا, و نستكشف سحر وجمال الجليد.
+  playlab_shortdescription: أنشئ قصة أو إصنع لعبة مع مختبر اللعب !
   codeorg_longdescription: 'تعرف على المفاهيم الأساسية "لعلم الحاسوب" مع سحب وإسقاط البرمجة. هذا البرنامج التعليمي موجه ذاتيا شبيه بلعبة، ومن خلال محاضرات الفيديو من بيل جيتس ومارك زوكربيرج، لعبة الأنجري بيردز ولعبة بلانتس والزومبي. تعلم تكرار الحلقات، والشرطية، والخوارزميات الأساسية. متاح ب 34 لغة.'
   codeintl_longdescription: 'تعرف على المفاهيم الأساسية "لعلم الحاسوب" مع سحب وإسقاط البرمجة. هذا البرنامج التعليمي موجه ذاتيا شبيه بلعبة، ومن خلال محاضرات الفيديو من بيل جيتس ومارك زوكربيرج، لعبة الأنجري بيردز ولعبة بلانتس والزومبي. تعلم تكرار الحلقات، والشرطية، والخوارزميات الأساسية. متاح ب 34 لغة.'
-  thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubriran como guiarse de modo tal de llevar a cabo tareas especificas sin ser estas discutidas previamente. Este segmento ensena a los estudiantes la conexion entre simbolos y acciones asi como la valiosa habilidad de depuracion.'
+  thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
   khan_longdescription: تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات الخاصة بك. برمج بنفسك أو مع صفك!
   khanes_longdescription: تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات الخاصة بك. برمج بنفسك أو مع صفك!
+  khanpt_longdescription: تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات الخاصة بك. برمج بنفسك أو مع صفك!
+  khanhe_longdescription: تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات الخاصة بك. برمج بنفسك أو مع صفك!
+  khanfr_longdescription: تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات الخاصة بك. برمج بنفسك أو مع صفك!
+  khanpl_longdescription: تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات الخاصة بك. برمج بنفسك أو مع صفك!
   tynker_longdescription: 'بناء الألعاب الخاصة بك ومشاركتها مع الأصدقاء! حل الألغاز الترميزية وتعلم مفاهيم البرمجة في كل مستوى. إضفاء الطابع الشخصي لشخصيات الرسوم المتحركة، ومستويات متعددة والدعائم الغنية.  إجعل الألعاب واقعية باستخدام الفيزياء. انظر للكود ككتل بصرية أو جافا سكريبت. خذ ألعابك للجهازك المحمول أو اللوحي الخاص بك. أكثر من اثنتي عشر نشاط ممتع للاختيار من بينها!'
   scratch_longdescription: 'مع "سكراتش"، يمكنك إنشاء ألعاب تفاعلية الخاصة بك والقصص والرسوم المتحركة &mdash; ومشاركتها مع أصدقائك. إبدأ  اسمك أو إنشاء بطاقة معايدة، أو إنشاء لعبة كرة الطاولة.'
   lightbot_longdescription: 'وجه "لايت بوت" لتضيء كافة البلاط الأزرق! "لايت بوت" هي لعبة ألغاز تستخدم لغة البرمجة للسماح للاعبين اكتساب فهم عملي لأساسيات البرمجة. تعلم تسلسل التعليمات، كتابة الإجراءات، والاستفادة من الحلقات لحل المستويات. مثالية لجميع الأعمار.'
@@ -476,14 +518,17 @@ ar-SA:
   tynkerapp_longdescription: تعلم أن تبرمج عن طريق حل أحجيات ترميز ممتعة. ابن ألعاب وقصص بسهولة باستخدام رسومات معنونة، أكثر من عشر مجموعات ألعاب وشخصيات قابلة للتخصيص. لا يلزم الاتصال بالإنترنت. يمكنك أيضا الوصول إلى الإبداعات الخاصة بك على شبكة الإنترنت.
   robomindnl_longdescription: 'يتعلم الطلاب أساسيات البرمجة من خلال التحكم في الروبوت الافتراضي الخاص بهم. الدورة على شبكة الإنترنت متكامل مع عروض قصيرة، وأفلام، ومسابقات والتوجيه التلقائي/ إقتراحات للمساعدة في عمليات البرمجة. '
   flappy_longdescription: 'استخدم برمجة السحب والإفلات لبرمجة وعمل لعبة "الفلابي بيرد" الخاص بك، وتخصيصه لتبدو مختلفة (قرش القفاز، القفاز سانتا، Hو أي تصميم آخر). ويمكنك إضافة اللعبة إلى هاتفك في نقرة واحدة.'
-  bitsbox_longdescription: قم بتخصيص اللوح الأفتراضي الخاص بك، ثم برمج سلسلة من التطبيقات للعب والمشاركة. طرق وأمثال بسيطة تجعل من الممكن حتى الأطفال الصغار إلى برمجة الجافا سكريبت ومع كل تقدم تذهب إلى الأبعد في عالم البرمجة.
-  makegameswithus_longdescription: 'تعلم البرمجة من خلال صنع لعبة للأيفون باستخدام لغة برمجة جديدة وصديقة للمبتدئين تدعى سويفت! إنشئ  لعبة أكشن مستوحاة من بوكيمون وأكتب تعليمات البرمجية لتعليم الوحش حركات جديدة. سوف تتعلم كيفية استخدام المتغيرات والأساليب، والأشياء لمساعدة الوحش الخاص بك للفوز!'
+  bitsbox_longdescription: "Customize your very own virtual tablet, then code a series of apps to play and share. Simple walkthroughs make it possible for even young kids to program real JavaScript, and the more advanced you are the further you'll go."
+  makegameswithus_longdescription: 'Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!'
   touchdevelop_longdescription: 'محرر اللمس سيدلك على كيفية إنشاء الفن بكسل، حل لغز الدب، أو إنشاء لعبة الطيور القافزة خاصة بك . '
   appinventor_longdescription: Entertaining, quick video tutorials walk you through building three simple apps for your Android phone or tablet. Designed for novices and experts alike, this hour of code will get you ready to start building your own apps before you know it. Imagine sharing your own app creations with your friends! These activities are suitable for individuals and for teachers leading classes.
   blockly_longdescription: 'Got PCs with slow (or non-existent) internet access? Download the Blockly tutorials that were the precursor of the Code.org tutorials - a single 3MB ZIP file can be loaded onto any computer or used off a memory stick'
   thinkersmith2_longdescription: يتعلم الطلاب تمثيل وتخزين الرسائل في ثنائي، كوظائف مفتوح أو مغلقة. في نهاية المطاف، فإن الصف يحصل غلى ترميز الأحرف الأولى الخاصة بها لاخذها الى المنزل.
   kodableunplugged_longdescription: 'Designed for use with plain paper, the fuzzFamily Frenzy is an introduction to programming logic for kids 5 and up. A teacher should explain the game, then students program a partner to complete a simple obstacle course. '
   projguts_longdescription: 'This "unplugged" activity helps students learn how modeling and simulation works by having a group of students play different versions of the Rock / Paper / Scissors game, and see the results as different modeling experiments.'
+  hourofcode_longdescription: Placeholder for new code.org/hoc
+  frozen_longdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
+  playlab_longdescription: Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!
   codeorg_beyond_name: 'مقدمة "علوم الحاسوب" (روضة لصف ثامن)'
   khan_beyond_name: تعلم برمجة الحاسوب
   tynker_beyond_name: تعلم البرمجة في المنزل

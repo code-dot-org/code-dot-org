@@ -2,10 +2,10 @@
   activerecord:
     errors:
       messages:
-        blank: is required
+        blank: je vyžadován
     attributes:
       user:
-        name: Jméno
+        name: Zobrazit jméno
         email: E-mail
         username: uživatelské jméno
         password: heslo
@@ -16,26 +16,27 @@
         gender: Pohlaví
         edit_header: Upravit Podrobnosti Účtu
         error:
-          future: can't be in the future
+          future: nemůže být v budoucnosti
   hello: Ahoj světe
   welcome_back: Vítej zpět, %{name}
   add_teacher_form:
     code:
-      label: 'Add a teacher by section code:'
-      placeholder: Code (ABCDEF)
+      label: 'Přidat učitele:'
+      placeholder: Kód sekce (ABCDEF)
     submit: Přidat učitele
   add_hint_form:
     placeholder: Zadej svůj tip
     submit: Přidat tip
   appname: Code.org
   stage: fáze
-  stage_number: Stage %{number}
+  stage_number: Fáze %{number}
   puzzle: Rébus
   trophies: trofeje
   courses: kurzy
   of: z
   more: VÍCE
   less: MÉNĚ
+  beta: beta
   try_hoc: Zkus Hodinu Kódu kliknutím zde >> 
   try_k8intro: Vyzkoušej náš kurz K-8 Úvod do počítačové vědy (15-25 hodin)
   k8intro: Kurz K-8 Úvod do počítačové vědy (15-25 hodin)
@@ -47,22 +48,24 @@
   auth:
     sign_in_with: Přihlásit přes %{provider}
     signed_in: Přihlášen!
-    signed_out: You have signed out of <a href="%{url}">Code.org</a>.
-    sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
-      to sign out of %{provider}.
+    signed_out: Jste odhlášeni z <a href="%{url}"> Code.org</a>.
+    sign_out_of: Použili jste %{provider} při registraci. <a href="%{url}"> Klepnutím
+      sem</a> se odhlásíte ze služby %{provider}.
     already_signedup: Již jsi zaregistrován?
     notyet_signedup: Ještě ses nepřidal?
-    google_oauth2: Google Account
+    google_oauth2: Účet Google
     twitter: Twitter
     facebook: Facebook
-    windowslive: Microsoft Account
+    windowslive: Účet společnosti Microsoft
     forgot_password: Zapomněl jsi heslo?
     need_confirmation: Nedostal jsi instrukce pro potvrzení?
     need_unlock: Nezískal si instrukce pro odemčení?
   signup_form:
-    overview_student: Sign up for an account to track your progress.
-    overview_teacher: Teach computer science in your classroom by signing up for an
-      account.<p/> You'll be able to track your students' progress and get rewards.
+    overview_student: Vytvořte si účet, abyste mohli sledovat svůj postup.. Váš email
+      slouží především k přihlášení a pro obnovení hesla. Další informace naleznete
+      v našich <a hrefshttp://code.org/privacy"> Zásadách ochrany osobních údajů</a>.
+    overview_teacher: Učte informatiku ve své třídě tím, že si zaregistrujete účet.
+      <p/> Budete  moci přidávat své studenty a sledovat jejich průběh.
     no_signup_message: Můžeš si <a target="_blank" href="http://learn.code.org">prohlédnout
       různé úrovně a hádanky</a>, ale budeš se muset zaregistrovat, aby se uložil
       tvůj pokrok.
@@ -77,7 +80,7 @@
     gender: Pohlaví (volitelné)
     birthday: Narozeniny (volitelné)
     age: Věk
-    user_type: Are you a student or teacher?
+    user_type: Jste student nebo učitel?
     submit: Registrace
     teacher: Jsi učitel?
     valid_username: K dispozici!
@@ -104,7 +107,7 @@
     try_20hours: Vyzkoušej náš 20ti hodinový Úvod do počítačové vědy
   signinsection:
     welcome: Welcome to %{section_name}
-    name: Choose your name
+    name: Vyberte si své jméno
     picture: Now find your secret picture
     words: Now enter your secret words
     login: Přihlásit
@@ -139,7 +142,7 @@
       no_teacher: Nenalezen nikdo přihlášený jako '%{teacher_email_or_code}'. Prosím
         požádej ho, aby se zde přihlásil, a poté jej zkus přidat znovu
       section_not_found: Could not find a section with code '%{section_code}'.
-      blank_code: Prosím, zadej kód nebo emailovou adresu svého učitele
+      blank_code: Prosím zadej kód sekce
       cant_join_own_section: Sorry, you can't join your own section.
     mail:
       invite_student:
@@ -174,7 +177,7 @@
       msg: Jste si jistí, že si chcete nárokovat %{prize_name} ocenění?
       msg_student: 'NOTE: You can only choose one type of prize.'
       msg_publicschool: Prosím potvrďte, že jste učitel veřejné školy v USA.
-      msg_visit_website: Visit website
+      msg_visit_website: Navštivte webové stránky
     providers:
       apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
@@ -198,9 +201,9 @@
       teacher:
         earned: 15 nebo více studentů získalo všech %{num_trophies} trofejí. Vyhrál
           jsi cenu učitele! (pouze učitele z USA)
-        not_earned_title: Teach the class, earn up to $1,000 in <a target="_blank"
-          href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
-          only)
+        not_earned_title: Učit třídu, Získejte až 1.000 dolarů v <a target="_blank"
+          href="http://DonorsChoose.org"> DonorsChoose.org</a> kreditů (pouze USA
+          učitelé)
         not_earned: Abychom odměnili novopečené učitele počítačových věd, můžeš vyhrát
           až 1000$ v  <a href="http://DonorsChoose.org">DonorsChoose.org</a> kreditech
           za vedení třídy v K-8 úvodním kurzu. Aby jsi byl kvalifikován, musíš úspěšně
@@ -212,9 +215,8 @@
           kreditech. <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
           kredity mohou být využity pouze učiteli ve veřejných školách USA.
         bonus:
-          not_earned_title: You can still earn an additional $250 in <a target="_blank"
-            href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
-            only)
+          not_earned_title: Stále můžete získat 250 dolarů v <a target="_blank" href="http://DonorsChoose.org">
+            DonorsChoose.org</a> kreditů (pouze USA učitelé)
           earned: 7 nebo více studentů, kteří získali všech %{num_trophies} trofejí
             jsou dívky. Vyhrál jsi bonusovou cenu! (pouze učitele v USA)
           not_earned: Pokud alespoň 7 tvých studentů, kteří získají všech %{num_trophies}
@@ -240,8 +242,8 @@
       finished_hoc: Dokončil jsem svou Hodinu Kódu
       sign_in_to_save: Přihlaš se pro uložení pokroku
       free_play:
-        playlab: Make an App
-        artist: Draw Something
+        playlab: Vytvořit aplikaci
+        artist: Nakresli něco
     user:
       classroom: Domovská stránka pro učitele
       label: Ahoj %{username}
@@ -251,7 +253,7 @@
       logout: Odhlásit se
       signin: Přihlásit
       signup: Registrace
-      already_registered: Already registered?
+      already_registered: Už jste zaregistrováni?
     popup:
       progress: Tvůj pokrok
       lines: 'Celkem řádků kódu: %{lines}'
@@ -271,14 +273,14 @@
       remove: Jsi si jist/á, že chceš odstranit tohoto učitele?
     tools: Nástroje pro učitele
     followers:
-      section: 'Section:'
+      section: 'Sekce:'
       stages: 'Stage(s) to display:'
       show_past: 'Show student activity (%{bullet_html}) in the past:'
       levels_key: Levels key
       perfect: Completed, perfect
       completed: Completed, but using too many blocks
       tried: Tried, but not completed
-      not_tried: Not tried yet
+      not_tried: Žádný pokus
       activity: Indicates student activity in the last %{hours} %{plural}
       no_section: No assigned section
       trophies: trofeje
@@ -287,7 +289,7 @@
       username: uživatelské jméno
       password: heslo
       manage: Správa studentů
-      dashboard: Go to Teacher Dashboard
+      dashboard: Přejít na přehled učitele
       add: Přidat studenty
       remove: remove student
       confirm_remove: Are you sure you want to remove this student?
@@ -308,17 +310,17 @@
       add: Add section
       manage: Spravovat části
       section: Section
-      students: Students
-      section_code: Section Code
+      students: Studenti
+      section_code: Kód sekce
       add_section_code: Add Students Section-Code
       secret: Secret type
-      grade: Grade
-      course: Course
+      grade: Stupeň
+      course: Kurz
       rename: přejmenovat
-      edit: edit
-      delete: delete
-      confirm_delete: Are you sure you want to delete this section?
-      email: Send in email
+      edit: úpravy
+      delete: smazat
+      confirm_delete: Jste si jisti, že chcete odstranit tuto sekci?
+      email: Odeslat v e-mailu
     rollup: Panel pokroku
     activity: Nedávné aktivity třídy
     user_not_found: Učitel nebo student nebyl nalezen
@@ -343,11 +345,11 @@
   user_stats:
     recent_activity: Nedávná aktivita
     show_more: Zobrazit více
-    classroom_activity: Unplugged Activity
+    classroom_activity: Aktivita bez počítače
   home:
-    title: Code Studio
-    all_courses: Overview of Courses 1, 2, and 3
-    lesson_plans: Lesson plans
+    title: Code studio
+    all_courses: Přehled kurzů 1, 2 a 3
+    lesson_plans: Plány hodin
     signin_message: Nejsi už zaregistrován? %{link}
     student_reg_link: Přihlásit se jako student
     teacher_reg_link: Přihlásit se jako učitel
@@ -381,13 +383,13 @@
       věd a programování. Kurz je navrhnut pro děti od 1. po 7. třídu (stupeň K-8),
       ale jistě bude bavit studenty jakéhokoliv věku.
     test_videos_help: Test our new video player at your school
-    try_beta_courses: New! Try our beta courses for K-5 students
+    try_beta_courses: Novinka! Vyzkoušejte naše beta kurzy pro žáky 1. stupně ZŠ
     use_as_teacher: Use this site as a teacher
     heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
     heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
     heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
-    heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
-    your_gallery: Gallery
+    heading_legacy: <h2>Náš všeobecný kurz pro</h2><h1>Všechny věkové kategorie</h1>
+    your_gallery: Galerie
   gender:
     male: Muž
     female: Žena
@@ -396,28 +398,26 @@
     student: student
     teacher: Učitel
   footer:
-    help_from_html: Inženýři z <a href="http://www.google.com">Googlu</a>, <a href="http://www.microsoft.com">Microsoftu</a>,
-      <a href="http://www.facebook.com">Facebooku</a> a <a href="http://www.twitter.com">Twitteru</a>
-      pomohli vytvořit toto cvičení.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 <a href="http://www.rovio.com">Rovio
-      Entertainment Ltd</a>. Všechna práva vyhrazena.<br/> Plants vs. Zombies&trade;
-      & &copy; 2013 <a href="http://www.ea.com">Electronic Arts Inc.</a>. Všechna
-      práva vyhrazena.
-    powered_by_aws: Powered by Amazon Web Services
+    help_from_html: Inženýři od Google, Microsoft, Facebook a Twitter pomohli vytvořit
+      tento kurz.
+    art_from_html: Rozzlobený ptáci ™ & © 2009-2014 Rovio Entertainment Ltd. Všechna
+      práva vyhrazena. <br/> Rostliny vs. Zombies ™ & © 2014 Electronic Arts Inc.
+      Všechna práva vyhrazena.
+    powered_by_aws: Poháněn Amazon Web Services
     feedback: Poskytnout zpětnou vazbu
     translate: Pomož nám v překladu do tvého jazyka
-    support: Support
+    support: Podpora
     support_url: http://support.code.org
-    tos: Podmínky služby
+    tos: Podmínky
     privacy: Zásady ochrany osobních údajů
-    secure: Secure Version
+    secure: Zabezpečená verze
   reference_area:
     title: Potřebuješ pomoc?
     subtitle: Podívej se na tyto videa a tipy
     teacher: Zobraz řešení
     auth_error: Nemáš oprávnění zobrazovat řešení.
-    submit: Update Artist Location
-    direction: Start Direction
+    submit: Aktualizovat umístění umělce
+    direction: Počáteční směr (ve stupních)
   video:
     tab: Video.
     notes: Žádné video? Zobraz poznámky.
@@ -432,7 +432,7 @@
         issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
         any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade
         your browser to a supported version</a>.
-      hide_this_warning: Hide this warning
+      hide_this_warning: Skrýt toto varování
     upgrade:
       header: Prosím aktualizuj si svůj prohlížeč.
       message: Code.org uses modern web technology. This makes the site faster to
@@ -445,10 +445,10 @@
   try_reloading: Zkus znovu načíst stránku
   next_stage: Hotovo! Pokračuj do další fáze
   download_pdf: Otevři Učební Plán
-  lesson_plan: Lesson Plan
-  view_lesson_plan: View Lesson Plan
-  pdf_download: Download PDF
-  download_coming_soon: Downloadable activity coming soon.
+  lesson_plan: Plán hodiny
+  view_lesson_plan: Zobrazit plán hodiny
+  pdf_download: Stáhnout ve formátu PDF
+  download_coming_soon: Aktivita ke stažení již brzy.
   video_coming_soon: Video Coming Soon!
   share_code:
     title: Klikni na "Spustit program" a uvidíš můj program v akci
@@ -467,10 +467,10 @@
   builder:
     created: Vytvořil jsi nový skript.
     destroyed: Zrušil jsi skript.
-    manage: Manage Scripts
+    manage: Sestavení úrovně
     view: Zobrazit
     back: Zpět ke skriptům
-    success: You successfully edited the blocks.
+    success: Úspěšně jste upravili bloky.
     level:
       create: Vytvořit novou úroveň
       current: Současné úrovně
@@ -478,64 +478,64 @@
   upsell:
     hoc:
       title: Hodina kódu
-      body: Try the basics of computer science. Millions have given it a shot.
+      body: Zkuste základy informatiky. Miliony lidí to už zkusili.
     flappy:
       title: Flappy Code
       body: Wanna write your own game in less than 10 minutes? Try our Flappy Code
         tutorial!
     20hour:
-      title: Intro Course
+      title: Úvodní kurz
       body: Try our 20-hour Intro to Computer Science course.
     hoc2014:
       try_new_tutorial: Try our new Hour of Code tutorial in beta
       try_frozen: Artist with Anna and Elsa, from Frozen
     gallery:
-      title: Gallery
+      title: Galerie
       body: View a gallery of app and artist images created by our users
     frozen:
       title: Frozen
   gallery:
-    students_drew_these_with_code: Students drew these with code!
-    students_made_these_with_code: Students made these with code!
+    students_drew_these_with_code: Studenti tyto nakreslili kódem!
+    students_made_these_with_code: Studenti tyto vytvořili kódem!
     picture_count: In the past <b>%{days}</b> days, students have drawn <b>%{count}</b>
       pictures by writing their own computer programs. Click on the pictures to see
       each program in action.
     activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
       apps and pictures by writing their own computer programs. Click on the pictures
       and screenshots to see each program in action.
-    want_to_make_your_own: Want to make your own?
-    more: More &rarr;
-    caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: '%{time_ago} ago'
-    header: Gallery
+    want_to_make_your_own: Chcete si vyrobit vlastní?
+    more: Více &rarr;
+    caption_by_name_age: podle %{name}, věk %{age}
+    caption_time_ago: před %{time_ago}
+    header: Galerie
     header_playlab: Play Lab
     header_artist: Artist
   landing:
     prerelease: This page is still under development.
     prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
       is subject to revision as feedback is received and improvements are made.
-    feedback: Give Feedback
-    report_bug: Report Bug
-    support: Get Help
+    feedback: Poskytnout zpětnou vazbu
+    report_bug: Nahlásit chybu
+    support: Získat pomoc
     support_url: //support.code.org
   multi:
-    wrong_title: Incorrect answer
-    wrong_body: The answer you've entered is not correct.  Please try again!
-    correct_title: Correct
-    correct_body: That is the correct answer.
+    wrong_title: Nesprávná odpověď
+    wrong_body: Odpověď, kterou jste zadali, není správné.  Opakujte akci!
+    correct_title: Správně
+    correct_body: To je správná odpověď.
   match:
-    wrong_title: Incorrect solution
-    wrong_body: The solution you've entered is not correct.  Please try again!
-    correct_title: Correct
-    correct_body: That is the correct answer.
+    wrong_title: Nesprávné řešení
+    wrong_body: Řešení, které jste zadali, není správné.  Opakujte akci!
+    correct_title: Správně
+    correct_body: To je správná odpověď.
   text_match:
-    placeholder: Enter your answer here
+    placeholder: Zadejte svou odpověď zde
   dialog:
     ok: OK
   time:
-    hour: 1 hour
-    day: day
-    week: week
+    hour: 1 hodina
+    day: den
+    week: týden
   data:
     script:
       name:
@@ -554,14 +554,14 @@
           title: Události
           description: ''
         builder:
-          title: Builder
+          title: Tvůrce
           description: ''
         flappy:
           title: Flappy Code
           description: Wanna write your own game in less than 10 minutes? Try our
             Flappy Code tutorial!
         jigsaw:
-          title: Jigsaw
+          title: skládačka
           description: ''
         step:
           title: Krok
@@ -570,8 +570,8 @@
           title: Sample Level Builder
           description: ''
   age_interstitial:
-    age: Your age
-    header: Account Information Update
+    age: Váš věk
+    header: Aktualizace informací účtu
     message: We're in the process of updating our experience to provide you with even
       stronger privacy protections. To do this, we need existing users to enter their
       age here.<br/>As always, code.org will never rent, sell or share this information
@@ -582,7 +582,11 @@
     You may browse <a href="http://support.code.org">support.code.org</a> without
     signing in or ask your parent or teacher to contact us for you.
   progress:
-    not_completed: not completed
-    completed_too_many_blocks: completed, too many blocks
-    completed_perfect: completed, perfect
+    not_completed: nedokončeno
+    completed_too_many_blocks: dokončeno, až příliš mnoho bloků
+    completed_perfect: dokončeno, perfektní
     furthest_level_attempted: furthest level attempted
+  studio:
+    courses_working_on: Courses you're working on
+    completed_courses: Completed courses
+    all_courses: All courses

@@ -36,6 +36,7 @@ eu:
   of: -tik
   more: GEHIAGO
   less: GUTXIAGO
+  beta: beta
   try_hoc: 'Probatu kode ordu bat. Klikatu hemen >> '
   try_k8intro: Probatu gure Konputazio zientzietarako K-8 Sarrera kurtsoa (15-25 ordu)
   k8intro: Konputazio zientzietarako K-8 Sarrera kurtsoa (15-25 ordu)
@@ -509,3 +510,7 @@ eu:
     completed_too_many_blocks: completed, too many blocks
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
+  studio:
+    courses_working_on: "Courses you're working on"
+    completed_courses: Completed courses
+    all_courses: All courses

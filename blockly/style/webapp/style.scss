@@ -1,10 +1,32 @@
 $root: '/blockly/media/webapp/'; //TODO: Parameterize for asset pipeline
 
-.droplet-palette-group-header.yellow {
-  border-left:10px solid #e0e053;
+div#visualization {
+  height: 600px;
 }
-.droplet-palette-group-header-selected.yellow {
-  background-color: #e0e053;
+
+/* Shrink the visualization area on small displays. */
+@media screen and (min-width: 1101px) and (max-width: 1150px) {
+  div#visualization.responsive {
+    max-height: 525px;
+  }
+}
+
+@media screen and (min-width: 1051px) and (max-width: 1100px) {
+  div#visualization.responsive {
+    max-height: 450px;
+  }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1050px) {
+  div#visualization.responsive {
+    max-height: 375px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  div#visualization.responsive {
+    max-height: 300px;
+  }
 }
 
 #divWebapp {
@@ -12,8 +34,14 @@ $root: '/blockly/media/webapp/'; //TODO: Parameterize for asset pipeline
   position: relative;
   z-index: 1;
   width: 400px;
-  height: 400px;
+  height: 600px;
   background-color: white;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 #divWebapp canvas {
@@ -22,6 +50,10 @@ $root: '/blockly/media/webapp/'; //TODO: Parameterize for asset pipeline
   top: 0px;
   left: 0px;
   z-index: -1;
+}
+
+#divWebapp img {
+  opacity: 1.0;
 }
 
 #divWebapp div {

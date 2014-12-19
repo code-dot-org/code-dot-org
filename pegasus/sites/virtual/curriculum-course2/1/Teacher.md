@@ -61,6 +61,7 @@ Students will:
 
 ### For the Teacher
 
+- [Lesson Video](http://youtu.be/Yy1zbkfRtIg?list=PL2DhNKNdmOtobJjiTYvpBDZ0xzhXRj11N)
 - Print out one [Four-by-Fours Activity Worksheet](Activity1-GraphPaperProgramming.pdf) for each group  
 - Print one [Graph Paper Programming Assessment](Assessment1-GraphPaperProgramming.pdf) for each student  
 - Supply each group with several drawing grids, paper, and pens/pencils

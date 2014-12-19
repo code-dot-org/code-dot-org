@@ -36,8 +36,9 @@
 %br
 
 -if variation == 'learn'
-  %a{:href=>"http://hourofcode.com/resources/how-to"}
-    = I18n.t(:educator_notes)
+  %h1 
+    %a{:href=>"http://hourofcode.com/resources/how-to"}
+      = I18n.t(:educator_notes)
 
 -if variation == 'beyond'
   %a{:href=>"/educate"}
@@ -77,12 +78,9 @@
   var pegasusLocale = "#{request.locale}";
 
   // Special Frozen entry, English only right now, and not shown for mobile or IE8
-  if (pegasusLocale.substring(0,2) == "en")
+  if (!window.mobilecheck() && !is_ie8)
   {
-    if (!window.mobilecheck() && !is_ie8)
-    {
-      $('#carousel-frozen').show();
-    }
+    $('#carousel-frozen').show();
   }
 
   if (pegasusLocale.substring(0,2) == "en") 

@@ -1,11 +1,11 @@
 "lv":
   site_name: "PROGRAMMĒŠANAS STUNDA"
   language: "Latviešu valoda"
-  front_title: "Pievienojies lielākajai apmācības pasākumam vēsturē, 2014. gada 8.-14. decembrī"
+  front_title: "Pievienojies lielākajam apmācības pasākumam vēsturē, 2014. gada 8.-14. decembrī"
   coming_soon: "Drīzumā"
-  front_header_banner: "Pievienojies lielākajai apmācības pasākumam vēsturē, 2014. gada 8.-14. decembrī"
-  front_intro_default: '"Programmēšas stunda" ir starptautiska kustība, kurā piedalās ap desmit miljonu skolēnu vairāk nekā 180 valstīs. Jebkurš un jebkur var organizēt "Programēšans stundas" pasākumu. Vienas stundas pamācība ir pieejama vairāk nekā 30 valodās. Iepriekšēja pieredze nav nepieciešama. <strong>Vecums no 4 līdz 104 gadiem.</strong>'
-  front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of people in 180+ countries. Anyone can organize an Hour of Code event. Over 3M people did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
+  front_header_banner: "Pievienojies lielākajam apmācības pasākumam vēsturē, 2014. gada 8.-14. decembrī"
+  front_intro_default: '"Programmēšas stunda" ir starptautiska kustība, kurā piedalās desmitiem miljonu skolēnu vairāk nekā 180 valstīs. Jebkurš un jebkur var organizēt "Programēšans stundas" pasākumu. Vienas stundas pamācība ir pieejama vairāk nekā 30 valodās. Iepriekšēja pieredze nav nepieciešama. <strong>Vecums no 4 līdz 104 gadiem.</strong>'
+  front_intro_default_uk: '"Programmēšanas stunda" ir vispasaules kustība, kas aptver miljoniem cilvēku vairāk kā 180 valstīs. Jebkurš var organizēt "Programmēšanas stundu". Vairāk kā 3 miljoni cilvēku ir vadījuši pirmās "Programmēšanas stundas" Lielbritānijā. Dubultosim šo skaitli decembrī! <strong>Nav nepieciešama programmēšanas pieredze. Vecumā no 4 līdz 104 gadiem.</strong>'
   front_watch_video: "Apskaties jauno video"
   header_menu_resources: "Resursi"
   header_menu_faq: "Biežāk uzdotie jautājumi"
@@ -27,32 +27,35 @@
   prizes_all: "Balvas katram organizētājam"
   prizes_every_organizer: 'Katrs "Programmēšanas stundas" organizātors saņems Dropbox vai Skype kredītu kā pateicību'
   prizes_technology: "Viena publiska skola katrā US štatā (un Vašingtonas DC) laimēs tehniku $10,000 vērtībā"
-  prizes_tech_chats: '# classrooms will win video chats with very special guests'
-  prizes_robots: "100 classrooms will win a set of programmable robots"
-  prizes_brilliant: "One school in each province and territory will receive $2000 for a Brilliant Project"
-  prizes_actua: "15 schools across Canada will receive 2 hands-on STEM workshops by one of Actua's members"
+  prizes_tech_chats: '# klases laimēs video zvanu ar īpašiem viesiem'
+  prizes_robots: "100 klases laimēs programmējamo robotu komplektus"
+  prizes_brilliant: "Viena skola katrā rajonā vai teritorijā laimēs $2000 Dimanta projektam"
+  prizes_actua: "15 skolas Kanādā iegūs 2 praktiskās nodarbības, kuras vadīs organizācijas Actua pārstāvji"
   prizes_details: "Sīkāka informācija"
-  whats_next_header: "What's Next?"
-  whats_next_description: "We'll send you materials and helpful tips for your event. New 2014 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
-  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>How to run an Hour of Code</a>"
-  whats_next_promote: "<a href='http://hourofcode.com/resources'>Promote the Hour of Code</a>"
+  whats_next_header: "Kas tālāk?"
+  whats_next_description: |-
+    Mēs nosūtīsim Jums materiālus un noderīgus padomus, ja plānojat organizēt "Programmēšanas stundu". Jaunie 2014. gada apmācību materiāli drīzumā būs pieejami jebkuram pārlūkam, viedtālrunim - vai pat izmantojami bez datora! <a href='http://code.org/learn'>Izmēģini šī brīža apmācības</a>
+  whats_next_how_to: |-
+    <a href='http://hourofcode.com/resources/how-to'>Kā vadīt "Programmēšanas stundu"</a>
+  whats_next_promote: |-
+    <a href='http://hourofcode.com/resources'>Reklamēt "Programmēšanas stundu"</a>
   n_have_learned_an_hoc: '<h1>#</h1><h3>ir mēģinājuši</h3><h2>"Programmēšanas stunda"</h2>'
   anybody_can_learn: "Jebkurš var iemācīties."
-  register_now: "Piereģistrējies jau tagad"
+  register_now: "Reģistrējies tagad"
   front_join_us_heading: '"Programmēšanas stunda" katram skolēnam.'
-  front_join_us_description: "Datorzinātnes ir pamats priekš katra skolēna. Palīdzi mums iepazīstināt to 100 miljoniem skolēnu."
+  front_join_us_description: "Datorzinātnes ir liels ieguldījums katram skolēnam. Palīdzi mums iepazīstināt ar to 100 miljonus skolēnu."
   front_join_us_button: "Pievienojies mums"
   front_what_is_hoc: 'Kas ir "Programmēšanas stunda"?'
-  front_join_us_header: "Anyone can learn the basics, and have fun doing it!"
+  front_join_us_header: "Jebkurš var apgūt pamatus un gūt prieku to darot!"
   front_join_us_header_uk: 'Jebkurā laikā starp 8. un 14 decembri noorganizē "Programēšanas stunda" pasākumu, lai parādītu to, ka jebkurš var iemācīties pamatus un izklaidēties, to darot!'
   front_join_us_teacher: "Vai tu es skolotājs?"
-  front_join_us_inspire: "Inspire students with"
-  front_join_us_inspire_link: "an Hour of Code in the classroom."
+  front_join_us_inspire: "Iedvesmo skolēnus ar"
+  front_join_us_inspire_link: '"Programmēšanas stundu" klasē.'
   front_join_us_parent: "Vai jūs esat vecāks?"
   front_join_us_ask_link: "Pajautā savai vietējai skolai"
   front_join_us_ask: 'organizēt "Programēšanas stunda".'
   front_join_us_computer_science: "Tev patīk datorzinātnes?"
-  front_join_us_spread: "Spread the word."
+  front_join_us_spread: "Izplati informāciju tālāk."
   front_join_us_organize: 'Vai organizē "Programmēšanas stunda" pasākumu pats.'
   front_join_us_how_to_run: 'Šeit ir aprakstīts, kā novadīt "Programmēšanas stunda"'
   front_join_us_help_promote: 'Palīdzi reklamēt "Programmēšanas stunda"'
@@ -62,7 +65,7 @@
   front_join_us_try: "Pamēģini"
   front_join_us_host: "Noorganizēt to"
   front_join_us_support: "Atbalsti to"
-  signup_header: 'Organize an Hour of Code event during Dec 8 - 14, and register it here.'
+  signup_header: 'Organizē "Programmēšanas stundu" 8. - 14. decembrī un reģistrē to šeit.'
   signup_name_label: "Jūsu vārds"
   signup_email_label: "Tavs E-pasts"
   signup_organization_name_label: "Skolas vai organizācijas nosaukums"
@@ -74,7 +77,7 @@
   signup_send_posters_flag_label: 'Aizsūtīt <a href= "/resources#posters">plakātu</a> uz manu skolu vai organizāciju'
   signup_send_posters_address_label: "Skolas vai organizācijas adrese"
   signup_whole_school_flag_label: "Šis pasākums ir paredzēts visai skolai"
-  signup_your_event: "Piesakies savam pasākumam"
+  signup_your_event: "Piesaki savu pasākumu"
   signup_name_placeholder: "Jūsu vārds"
   signup_email_placeholder: "jūs@piemērs.com"
   signup_organization_name_placeholder: "Piemēram, Linkolna vidusskola"
@@ -88,11 +91,14 @@
   signup_thank_you_header: 'Paldies par pieteikšanos organizēt "Programēšanas stunda" pasākumu.'
   signup_thank_you_message: "Mēs jums aizsūtijām apstiprinājuma epastu ar informāciju, lai palīdzētu uzsākt."
   map_header: '#"Programmēšans stunda" pasākumi visā pasaulē'
-  map_header_company: '# by company organizers'
-  meta_tag_og_title: '"Programmēšanas stunda" tuvojas'
-  meta_tag_og_description: '"Programmēšas stunda" ir starptautiska kustība, kurā piedalās ap desmit miljonu skolēnu vairāk nekā 180 valstīs un vairāk nekā 30 valodās. Vecums no 4 līdz 104 gadiem.'
-  meta_tag_twitter_title: '"Programmēšanas stunda" tuvojas'
-  meta_tag_twitter_description: '"Programmēšas stunda" ir starptautiska kustība, kurā piedalās ap desmit miljonu skolēnu vairāk nekā 180 valstīs un vairāk nekā 30 valodās. Vecums no 4 līdz 104 gadiem.'
+  map_header_company: '# sabiedrību organizatori'
+  map_search_placeholder: "Meklēt programmēšanas stundas pasākumus"
+  map_search_search: "Mekēt"
+  map_search_reset: "Atiestatīt"
+  meta_tag_og_title: "Programmēšanas stunda ir klāt"
+  meta_tag_og_description: "Programmēšas stunda ir starptautiska kustība, kurā piedalās ap desmit miljonu skolēnu vairāk nekā 180 valstīs un vairāk nekā 30 valodās. Vecums no 4 līdz 104 gadiem."
+  meta_tag_twitter_title: "Programmēšanas stunda ir klāt"
+  meta_tag_twitter_description: "Programmēšas stunda ir starptautiska kustība, kurā piedalās ap desmit miljonu skolēnu vairāk nekā 180 valstīs un vairāk nekā 30 valodās. Vecums no 4 līdz 104 gadiem."
   twitter_default_text: 'Es esmu šī gada #"Programmēšanas stunda" dalībnieks, vai tu esi? @codeorg'
   hardware_prizes_form_name_label: "Jūsu vārds"
   hardware_prizes_form_name_placeholder: "Jūsu vārds"
@@ -114,12 +120,11 @@
   hardware_prizes_form_submit_label: "Iesniegt"
   hoc_faq_title: "Biežāk uzdotie jautājumi"
   hoc_faq_what_is_hoc_q: 'Kas ir "Programmēšanas stunda"?'
-  hoc_faq_what_is_hoc_a: |-
-    "Programmēšanas stunda" ir vienas stundas ievads datorzinātnēs, izstrādāts, lai paskaidrotu kodu un parādīt to, ka ikviens var iemācīties pamatus.<a href='http://code.org/learn'>Apskatiet apmācību</a>, un meklējiet jaunus dalībniekus priekš "Programmēšanas stunda 2014".
-  hoc_faq_last_year: "Izmēģiniet pagājušā gada pamācību"
+  hoc_faq_what_is_hoc_a: "Programmēšanas stunda ir vienu stundu garš ievads datorzinībās, kas paredzēts, lai kodēšana kļūtu pieejamāka visiem un pierādītu, ka pamatus var iemācīties ikviens. <a href='http://code.org/learn'>Skati pamācības!</a>"
+  hoc_faq_last_year: "Izmēģini pamācības"
   hoc_faq_when_is_hoc_q: 'Kad ir "Programmēšanas stunda"?'
   hoc_faq_when_is_hoc_a: |-
-    Ikviens var vadīt "Programmēšanas stundu" kad vēlas, bet pamatorganizāciju kampaņas mērķis ir, lai desmitiem miljonu skolēnu pamēģina "Programmēšanas stundu" no 8.-14. decembrim 2014. gadā par godu <a href='http://csedweek.org'>Datorzinātņu nedēļai</a>. Vai tā ir kāda noteikta <i>stunda</i>? Nē. Jūs varat piedalīties "Programmēšanas stundā" jebkurā laikā, šīs nedēļas ietvaros (Ja jums nav iespējas piedalīties šīs nedēļas laikā, tad varat to darīt nedēļu vēlāk vai arī nedēļu atrāk).
+    Ikviens var vadīt "Programmēšanas stundu" kad vēlas, bet pamatorganizāciju kampaņas mērķis ir, lai desmitiem miljonu skolēnu pamēģina "Programmēšanas stundu" 2014. gada 8. līdz 14. decembrim par godu <a href='http://csedweek.org'>Datorzinātņu nedēļai</a>. Vai tā ir kāda noteikta <i>stunda</i>? Nē. Jūs varat piedalīties "Programmēšanas stundā" jebkurā laikā, šīs nedēļas ietvaros (Ja jums nav iespējas piedalīties šīs nedēļas laikā, tad varat to darīt nedēļu vēlāk vai arī nedēļu atrāk).
   hoc_faq_why_cs_q: "Kas ir datorzinātnes?"
   hoc_faq_why_cs_a: "<i>Katram</i>skolniekam vajadzētu būt iespējai mācīties datorzinātnes. Tas palīdz attīstīt problēmu risināšans spējas, loģiku un kreativitāti. Sākot ātri skolniekiem būs pamats panākumiem 21. gadsimta karjeras kāpnēs.. Skatīt sīkāku statistiku <a href='http://code.org'>Code.org</a>."
   hoc_faq_how_participate_q: 'Kā lai es piedalos "Programmēšanas stunda"?'
@@ -134,12 +139,21 @@
   hoc_faq_need_computers_q: "Vai man ir nepieciešams dators katram dalībniekam?"
   hoc_faq_need_computers_a: |-
     Nē. Mums ir "Programmēšanas stundas" pamācības, kas strādā uz datoriem, viedtālruņiem, planšetdatoriem un ir pamācības, kurām datori nav nepieciešami! Jūs varat piebiedroties jebkurā atrašanāš vietā, ar jebkuru ierīci. <p><i>Šeit ir dažas jūsu iespējas:</i> <br> <ul> <li><b>Strādājat pāros.</b> Pētijumi rāda, ka skolnieki ir efektīvāki <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>programmējot pāros</a>,  daloties ar datoru un sadarbojoties.  <li><b>Izmantojat projektoru.</b> Ja jums ir projekts ar ekrānu, pie kura ir pieslēgts dators ar internetu, jūsu grupa var taisīt "Programmēšanas stundu" kopā. Skataties videoklipus kopā un risinat situācijas vai atbildat uz jautājumiem pa kārtai. <li><b>Atslēdzaties.</b>Mēs piedāvājam apmācības, kurām dators nav nepieciešams. </ul>
-  hoc_faq_international_q: 'I am in <country>. How do I participate internationally?'
-  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='target-resources'>here</a>."
+  hoc_faq_international_q: 'Esmu <country>. Kā es varu iesaistīties citās valstīs?'
+  hoc_faq_international_a: |-
+    Jebkurš var organizēt "Programmēšanas stundu" jebkurā citā valstī. Iepriekšējā gadā skolēni un studenti vienojās "Programmēšanas stundai". Meklē vairāk <a href='target-resources'>šeit</a>.
   hoc_faq_tutorial_q: 'Kā es varu izveidot "Programmēšanas stunda" apmācību?'
   hoc_faq_tutorial_a: "Ja esat ieinteresēti kļūt par apmācības partneri, <a href='target-tutorial-guidelines'>apskatiet musu vadlīnijas un instrukcijas</a>. Mēs vēlētos uzņemties dažādas iesaistīšanās iespējas, bet galvenai mērķis is optimizēt skolēnu pieredzi un skolotājus kuri nav pazīstami ar datorzinātni."
   hoc_faq_more_questions_q: "Vai ir vēl jautājumi?"
-  hoc_faq_more_questions_a: "Mēģiniet atrast atrast atbildi mūsu <a href='http://support.code.org'>support forum</a>."
+  hoc_faq_more_questions_a: "Mēģiniet atrast atbildi mūsu <a href='http://support.code.org'>support forum</a>."
+  hoc_faq_scratch_q: "Es programmēšanas stundā izmantoju Scratch, bet ko darīt, ja mani skolēni vairāk izmanto iPad nevis datorus?"
+  hoc_faq_scratch_a: "Scratch nestrādā planšetdatoros. Ja skolēni ir mazi, tad variet uz iPad uzstādīt ScratchJr. Ja pameklēsi pamācības <a href='http://code.org/learn'>code.org</a>,atradīsi citas piemērotas iPad - code.org, Tynker, Lightbot vai CodeSpark."
+  hoc_faq_account_q: "Vai skolēniem jāpiesakās, izmantojot kontu?"
+  hoc_faq_account_a: "Nē. Lai izmēģinātu Programmēšanas stundu, skolēniem nav jāreģistrējas vai jāpieslēdzas. Daļa <a href='http://code.org/learn/beyond'>pašmācības kursu</a> var pieprasīt profila izveidošanu, lai saglabātu iesākto."
+  hoc_faq_frozen_q: "Kur ir pamācība ar Annu un Elzu?"
+  hoc_faq_frozen_a: "Tā ir publicēta <a href='http://code.org/learn'>Code.org/learn</a>. Mēs ceram, ka tev patiks!"
+  hoc_faq_high_school_q: "Kādas nodarbības būtu piemērotas vidusskolēniem?"
+  hoc_faq_high_school_a: "Neskatoties uz vecumu, iesakām izmēģināt kādu no iesācēju pamācībām <a href='http://code.org/learn'>Code.org/learn</a>, lai iesāktu, piemēram, pamācību ar pikatjiem putniem vai Annu un Elzu. Vidusskolēniem tās varētu aizņemt 30 minūtes, un tad viņi var pamēģināt sarežģītākas pamācības JavaScript, piemēram, KhanAcademy vai CodeHS."
   hoc_faq_more_questions_br_q: "Outras dúvidas?"
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
@@ -148,8 +162,8 @@
   hoc_faq_how_participate_uk_a: "Sign up to host an Hour of Code event <a href='http://hourofcode.com/uk'>here</a> and start planning. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 8 arrives."
   hoc_faq_behind_hoc_uk_a: "The Hour of Code is organised by <a href='http://uk.code.org'>Code.org</a>, a public 501c3 non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. An <a href='http://uk.code.org/about/partners'>unprecedented coalition of partners</a> have come together to support the Hour of Code, too &mdash; including Microsoft, Google, Cambridge University Press, Tech City and The Department of Education."
   hoc_faq_host_uk_a: "Of course. Hour of Code activities are self-guided. All you have to do is pick the tutorial you want and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. <a href='http://uk.code.org/learn'>Try our current tutorials</a>."
-  stats_hoc_2013_heading: 'No pagājušā gada "Programmēšanas stunda" ir pieejamas laba statistika. Tik vienā nedēļā:'
-  stats_hoc_2013_image_alt: 'Statistika no 2013 "Programmēšanas stunda"'
+  stats_hoc_2013_heading: 'No pagājušā gada "Programmēšanas stundas" ir pieejama statistika. Tikai vienā nedēļā:'
+  stats_hoc_2013_image_alt: 'Statistika no 2013. gada "Programmēšanas stundas"'
   stats_growth: "Tas sasniedza 15 miljonus lietotājus visātrāk."
   stats_tumblr: 'Tumblr: 3.5 gadi'
   stats_facebook: 'Facebook: 3 gadi'
@@ -162,28 +176,28 @@
   stats_girls_million: "Vairāk nekā 10 miljoni meiteņu 2013. gadā"
   stats_nina: '"Katra diena sniedza tos pašus rezultātus&mdash; 100% atsaucība." - Nina Nichols Peery, skolotāja'
   stats_student: '"Es zināju, ka tāda <b>iespēja</b> ir reizi mūžā." - Mariana Alzate, 5. klase'
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
-  resources_how_to: "Kā virzīt priekš skolotājiem"
-  resources_how_to_events: "Event how-to guide"
-  resources_how_to_districts: "How-to guide for districts"
-  resources_how_to_officials: "How-to guide for public officials"
+  stats_michael: 'Ee <b>nekad, nekad</b> neesmu redzējusi ka mani skolēni ir tik ieinteresēti mācīties. - Mišela Klarka, skolotāja'
+  resources_how_to: "Pamācības skolotājiem"
+  resources_how_to_events: "Pasākuma vadīšanas vadlīnijas"
+  resources_how_to_districts: "Vadlīnijas rajoniem"
+  resources_how_to_officials: "Vadlīnijas amatpersonām"
   resources_handouts: "Izdales materiāli, lai dalītos informācijā"
   resources_videos: "Video"
   resources_posters: "Plakāti"
   resources_social: "Sociālie"
   resources_banners: "Plakāti"
   resources_emails: "Vēstuļu paraugi"
-  resources_stats: "Useful stats and blurbs"
-  resources_press_kit: "Nospiediet Kit"
+  resources_stats: "Noderīga statistika"
+  resources_press_kit: "Komplekts medijiem"
   events_title: 'Visi "Programmēšanas stunda" pasākumi'
   events_nav_all: "Visi pasākumi"
   events_nav_whole_schools: "Visa skola"
   events_nav_special: "Īpašie pasākumi"
-  events_nav_orgs: "Organizations"
+  events_nav_orgs: "Organizācijas"
   events_all_title: 'Visi "Programmēšanas stunda" pasākumi'
   events_whole_school_title: 'Visas skolas "Programmēšanas stunda" pasākumi'
   events_special_title: 'Īpašie "Programmēšanas stunda" pasākumi'
-  events_orgs_title: "All Hour of Code events organized by Partner Organizations"
+  events_orgs_title: 'Visas "Programmēšanas stundas", ko organizējuši sadarbības partneri'
   event: "pasākums"
   events: "pasākumi"
   footer_copyright_message: "Autortiesības 2014 Code.org. Visas tiesības rezervētas."

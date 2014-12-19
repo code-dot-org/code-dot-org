@@ -86,7 +86,7 @@ lv:
           The Maze: Labirints
           "Studio: Create a Story": 'Spēļu laboratorija: izvedot stāstu'
           The Artist: Mākslinieks
-          title: 3. kurss
+          title: Kurss 3
           Artist Functions: Mākslinieks funkcijas
           Artist For Loops: Māsklinieks cikliem
           Artist Nested Loops: Mākslinieks Cikls ciklā
@@ -212,7 +212,7 @@ lv:
           description: 3. kurss ir paredzēts skolnēniem, kas ir pabeiguši 2. kursu. Skolēni vairāk iedziļinās programmēšanas tēmās, ar kurām iepazinās iepriekšējos kursos, lai atrastu vairāk atbildes grūtākām problēmām. Šī kursa beigās, skolēni izveido interaktīvus stāstus un spēles, lai dalītos ar pārējiem. Ieteicams no 4.-5. klasei.
           "Artist: Variables": 'Izpildītājs: Mainīgie'
           "Bee: For Loops": 'Bite: Cikls ar skaitītāju'
-          title: 4. kurss
+          title: Kurss 4
           "Algorithms: Tangrams": 'Algoritmi: Tangrams'
           Variables: Mainīgie
           "Play Lab: Variables": 'Spēles laboratorija: Mainīgie'
@@ -282,12 +282,12 @@ lv:
           Variables: Mainīgie
           For Loops: '"par" cikli'
         potus:
-          title: special
-          description_short: special
-          description: special
-          Special: Special
+          title: īpaša
+          description_short: īpaša
+          description: īpaša
+          Special: īpaša
         special:
-          title: special
-          description_short: special
-          description: special
-          Special: Special
+          title: īpaša
+          description_short: īpaša
+          description: īpaša
+          Special: īpaša

@@ -9,7 +9,7 @@ ca:
         video: Unplug1
       Unplug2:
         title: Pensament computacional
-        desc: With nothing but paper and markers, students will learn the four steps of computational thinking. After a brief introduction, students should be split into groups where they will have to create directions for other students to draw a specific monster (from a catalog of pre-selected monsters). The entire task must be decomposed, then teams will analyze all monsters in the catalog for patterns, abstract different details from the monsters, then use that information to create an algorithm (directions) for another team to draw a certain monster. Teams will then switch algorithms with another group and draw the monster based on what that algorithm indicates. Is the drawing what the original team intended?
+        desc: "Amb res més que paper i rotulador, els alumnes aprendran els 4 passos del pensament computacional. Després d'una breu introducció, els alumnes es dividiran en grups on hauran de crear direccions pels altres alumnes per tal de dibuixar un monstre concret (d'un catàleg de monstres pre-seleccionats). La tasca completa ha de ser descomposta, llavors els grups analitzaran tots els monstres en el catàleg de patrons, abstreure els diferents detalls dels monstres, després utilitzaran la informació per crear algoritmes (direccions) perquè l'altre grup dibuixi un monstre concret. Els grups intercanviaran algoritmes entre ells per dibuixar un monstre basat en el què indiqui l'algoritme. És el dibuix final el que el grup original pretenia crear?"
         pdfs:
           - unplug2
         video: Unplug2
@@ -34,7 +34,7 @@ ca:
         video: Unplug5
       Unplug6:
         title: Condicions
-        desc: 'This is a class game.  After introducing the idea of conditionals, if-statements, and loops, the class can practice together using a pre-written program, a deck of cards, and luck of the draw.'
+        desc: "Això és un joc de classe. Després d'introduir la idea dels condicionals, les declaracions -si i els bucles, el grup-classe pot practicar tot junts utilitzant un programa pre-escrit, un joc de cartes i la sort del sorteig."
         pdfs:
           - unplug6
         video: Unplug6
@@ -52,7 +52,8 @@ ca:
         video: Unplug8
       Unplug9:
         title: Programació de Relé
-        desc: 'This lesson will take an idea from a previous activity (4. Graph Paper Programming) and use those skills to emphasize the importance of completing programs that operate in sequence and frequently checking programs for "bugs".'
+        desc: |-
+          Aquesta unitat pren la idea d'una activitat anterior (4. Programant amb paper gràfic) i l'utilitzarà per remarcar la rellevància de completar els programes que operen en una seqüència i de verificar freqüentment programes pels "errors".
         pdfs:
           - unplug9
         video: Unplug9
@@ -64,24 +65,24 @@ ca:
         video: Unplug10
       Unplug11:
         title: Recapitulació
-        desc: The final wrap-up in the first 20-hour series will help the class relive all of their favorite moments, while giving them next steps that they can take on their own if they are interested in continuing their computer science journey.
+        desc: "La recapitulació final a la primera sèrie de 20 hores ajudarà la classe a reviure tots els seus moments preferits al mateix temps que els hi proporciona els passos següents que han de prendre si estan interessats a continuar l'odissea informàtica."
         pdfs:
           - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: Happy Maps
-        desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
+        title: Mapes feliços
+        desc: "Els alumnes creen algoritmes senzills (conjunts d'instruccions) per moure un personatge a través d'un laberint utilitzant tant sols una ordre."
         video: C1_happy_maps_unplugged
       MoveIt:
-        title: Move it, Move it
-        desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
+        title: Mou-te, mou-te
+        desc: "Els alumnes creen algoritmes senzills (conjunts d'instruccions) per moure un personatge a través d'un laberint utilitzant tant sols una ordre."
         video: C1_moveitmoveit_unplugged
       PlantASeed:
         title: 'Algoritmes reals: Planta una llavor'
-        desc: This lesson calls out ways we use algorithms in our daily lives, using the act of planting a seed as an example. It also focuses on the bigger picture of computer science and how algorithms play an essential part.
+        desc: Aquesta unitat remarca com utilitzem els algoritmes a la nostra vida diària, utilitzant el fet de plantar una llavor com a exemple. També es centra en un marc més ampli de la informàtica i com els algoritmes hi juguen un rol important.
         video: C1_plantant_llavors
       BuildingAFoundation:
-        title: Building a Foundation
+        title: Posant les bases
         desc: Students build a structure using only provided supplies. Structures must complete a task (reach a certain height or bear a certain weight), and students discuss the idea of being persistent when things get complicated.
         video: C1_building_foundation
       GettingLoopy:
@@ -91,23 +92,24 @@ ca:
       RelayProgramming:
         title: Programació en relleus
         desc: |-
-          Students run a relay race, where they dash across the yard to write an algorithm based on a "Graph Paper Programming" image. They can only write one instruction at a time and if there's an error somewhere, they have to erase everything back to that point.
+          Els estudiants executen una cursa de relleus on corren a través del pati per escriure un algoritme basat en la imatge "Programació de paper quadriculat". Només poden escriure una instrucció cada vegada i si hi ha un error han d'esborrar-ho tot fins el principi.
         video: C2_relay_programming
       Conditionals:
         title: Condicionals
-        desc: 'To learn about conditional statements, students play a card game and create rules like "If I draw a red card, I get a point" and "If I draw a black card, you get a point."'
+        desc: 'Per aprendre de les declaracions de condicionals, els alumnes juguen un joc de cartes i creen normes com "si dibuixo una tarja vermella, puc obtenir un punt" i "si dibuixo una tarja negra, el punt el guanyes tu."'
         video: C2_conditionals_with_cards
       BigEvent:
         title: El gran esdeveniment
-        desc: 'Students are introduced to the programming concept of "events," which are actions that a computer constantly monitors for. The teacher will press buttons on a paper remote and students will react depending on which button is pressed.'
+        desc: |-
+          Els alumnes es familiaritzen amb el concepte de programació d' "esdeveniments", que són accions que un ordinador supervisa constantment. El mestre polsarà botons en un paper a distància i els alumnes reaccionaran depenent de quin botó es prem.
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
         title: Anant a llocs segurs
-        desc: The Internet is a powerful, but sometimes dangerous place. Teachers introduce how to stay safe while navigating the Internet.
+        desc: "Internet és una eina potent, però a vegades també és un lloc perillós. Els mestres t'expliquen com navegar amb seguretat per internet."
         video: C1_going_places_safely
       GraphPaperProgramming:
         title: Programació de paper quadriculat
-        desc: Students write an algorithm (a set of instructions) using a set of predefined commands to direct their classmates to reproduce a drawing.
+        desc: "Els alumnes escriuen un algoritme (un conjunt d'instruccions) utilitzant un grup d'ordres predefinides per dirigir els seus companys a reproduir un dibuix."
         video: C2_graph_paper
       PaperPlanes:
         title: 'Algoritmes de la vida quotidiana: Avions de paper'
@@ -115,10 +117,10 @@ ca:
         video: C2_avions_paper
       BinaryBracelets:
         title: Polseres binàries
-        desc: Students create bracelets as a binary representations of the first letter of their name. Students learn that data can be represented and stored in more than one way.
+        desc: Els alumnes creen polseres com una representació binària de la primera lletra del seu nom. Els alumnes aprenen que les dades poden ser representades i emmagatzemades de diferents maneres.
         video: C2_bracelets_binaris
       DigitalFootprint:
-        title: Your Digital Footprint
+        title: La vostra empremta digital
         desc: 'Teachers introduce to students the idea that putting information about themselves online creates a digital footprint or "trail" that has consequences.'
         video: C2_empremta_digital
       ComputationalThinking:
@@ -131,7 +133,7 @@ ca:
         video: C3_functional_suncatchers
       SongwritingParameters:
         title: Composició amb paràmetres
-        desc: Students use the concept of the chorus in a song to learn about passing parameters (which customize a function without having to rewrite the entire function).
+        desc: Els alumnes utilitzen el concepte de la tornada en una cançó per aprendre sobre passar paràmetres (que personalitzen una funció sense haver de reescriure-la).
         video: C3_composiciómusical_amb_paràmetres
       DiceRace:
         title: 'Algoritmes de la vida real: cursa de daus'
@@ -151,21 +153,27 @@ ca:
       TangramAlgorithms:
         title: Algoritmes de Tàngram
         desc: This lesson shows us something important about algorithms. If you keep an algorithm simple there are lots of ways to use it. If you want to make sure everyone ends up with the same thing, then your algorithm needs more detail.
+        video: C4_algoritmes_sense connexió
       EnvelopeVariables:
         title: Envelope Variables
         desc: 'Variables allow for a lot of freedom in computer science.  This lesson helps to explain what variables are and how we can use them in many different ways. Use this activity before (or in conjunction with) the lesson on abstraction to really hit the idea home.'
+        video: C4_unplugged_variables
       MadGlibs:
         title: Mad Glibs
-        desc: 'Abstraction is one of the most important skills for a computer scientist to understand.  This activity will have your students analyzing stories for differences so that they can abstract them away. Those abstracted stories become templates for fun and crazy new ones.'
+        desc: "L'abstracció és una de les habilitats més importants que un programador científic ha d'entendre. Aquesta activitat tindrà els vostres alumnes analitzant les diferències en les històries de manera que puguin abstreure-les. Aquestes històries esdevenen plantilles divertides i noves."
+        video: C4_senseconnexió_madlibs
       ForLoopFun:
         title: For Loop Fun
-        desc: We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops with extra structure built right in.
+        desc: "Sabem que els bucles ens permeten fer coses una i altra vegada, però ara aprendrem com utilitzar els bucles amb una estructura extra a l'interior."
+        video: C4_unplugged_forloops
       SongwritingWithParameters:
-        title: Composició Amb Paràmetres
+        title: Composició de cançons Amb Paràmetres
         desc: "Una de les estructures més esplèndides en el món de la programació és la funció. Les funcions (a vegades anomenades procediments) són mini programes que pots utilitzar una i altra vegada dins d'un programa més gran. Aquesta unitat ajudarà als estudiants a entendre intuïtivament perquè combinant trossos de programació cap a funcions és un exercici tant útil.  "
+        video: C4_senseconnexió_paràmetres
       BinaryImages:
         title: Imatges binàries
         desc: "Encara que molta gent pensa en el codi binari com a zeros i uns estrictament, els cursos anteriors ens han ensenyat que aquesta informació pot ser representada en una àmplia varietat d'opcions binàries. Aquesta unitat porta aquesta idea un pas més enllà i il·lustra com un ordinador pot emmagatzemar més informació complexa (com ara imatges i colors) en binari, també."
+        video: C4_binari_senseconnexió
       VideoGamesCoordinatePlanes:
         title: Video Games and Coordinate Planes
         desc: Video Games and Coordinate Planes lesson description
@@ -180,7 +188,7 @@ ca:
         desc: Unitat de descripció de veritat o fals
       ConditionalsPiecewiseFunctions:
         title: Conditionals and Piecewise Functions
-        desc: Conditionals and Piecewise Functions lesson description
+        desc: Descripció de la unitat de Condicionals i Funcions definides a trossos
       CollisionDetection:
         title: Collision Detection
         desc: Collision Detection lesson description

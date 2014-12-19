@@ -4,13 +4,13 @@ title: How-to guide for public officials layout: wide nav: resources_nav
 
 * * *
 
-## Bring the Hour of Code to your entire community.
+## 把Hour of Code 活動介紹到你整個社交圈。
 
-### Get every school participating, every student learning!
+### 讓每個學校參予，每個學生學習！
 
-  1. **Recruit local schools and districts.** Use [this email](<%= hoc_uri('/resources#sample-emails') %>) or [this blurb](<%= hoc_uri('/resources/stats') %>) as a starting point, and take a look at this [how-to](<%= hoc_uri('/resources/how-to') %>) for schools and districts. Let them know **every** participating educator will receive a [thank you gift](<%= hoc_uri('/resources/how-to') %>); that **100 classrooms** will win tech chats with **special guest speakers** (participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more); and, in **each state**, one participating school will win **$10,000 in technology**!
+  1. **招募當地的學校和地區。**使用[”>此Blurb](<%= hoc_uri('/resources#sample-emails') %>“>此電子郵件</a>或<a href=)為出發點，來看看這個[">thank you gift](<%= hoc_uri('/resources/how-to') %>“>如何</a>為學校和地區。 Let them know <strong>every</strong> participating educator will receive a <a href=); that **100 classrooms** will win tech chats with **special guest speakers** (participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more); and, in **each state**, one participating school will win **$10,000 in technology**!
 
-  2. **Host an Hour of Code event.** See our [event how-to guide](<%= hoc_uri('/resources/how-to-event') %>) for a sample run of show, media outreach kit and other event-planning resources. Hosting an event is a great way to promote the Hour of Code and increase participation.
+  2. **舉辦一個Hour of Code活動。**查看我們的<a
 
   3. **Attend an event during Computer Science Education Week (Dec 8-14).** [Find classrooms and schools](<%= hoc_uri('/events') %>) participating in your district, city or state.
 

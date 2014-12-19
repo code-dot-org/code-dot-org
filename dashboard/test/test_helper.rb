@@ -25,6 +25,8 @@ class ActiveSupport::TestCase
 
   setup do
     set_env :test
+
+    AWS::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
   end
 
   teardown do
@@ -34,6 +36,23 @@ class ActiveSupport::TestCase
   def set_env(env)
     Rails.env = env.to_s
     CDO.rack_env = env
+  end
+
+
+  # some s3 helpers/mocks
+  def expect_s3_upload
+    CDO.disable_s3_image_uploads = false
+    AWS::S3.expects(:upload_to_bucket).returns(true).twice
+  end
+
+  def expect_s3_upload_failure
+    CDO.disable_s3_image_uploads = false
+    AWS::S3.expects(:upload_to_bucket).returns(nil)
+  end
+
+  def expect_no_s3_upload
+    CDO.disable_s3_image_uploads = false
+    AWS::S3.expects(:upload_to_bucket).never
   end
 
 

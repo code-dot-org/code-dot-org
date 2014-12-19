@@ -2,7 +2,7 @@ hu:
   data:
     match:
       2-3 artist loops match 1:
-        Artist Loops Matching One: Artist Loops Matching One
+        Artist Loops Matching One: Művész. Ciklusok. Feleletválasztás
         Matching loops: Párosító ciklusok
         Match the loop to the shape: Párosítsd a ciklust az alakzattal!
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png
@@ -15,7 +15,7 @@ hu:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png
       2-3 artist match 1:
         Artist Matching: 'Művész: párosítás'
-        Match the shape with the blocks that complete it.: Match the shape with the blocks that complete it.
+        Match the shape with the blocks that complete it.: Párosítsd az alakzatokat az azokat befejező blokkokkal!
         /script_assets/2-3_images/artist/2-3_artist_match_1_q1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png
@@ -25,9 +25,9 @@ hu:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a3.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png
       2-3 bounce match 1:
-        Bounce Matching: Bounce Matching
+        Bounce Matching: Visszapattanás. Feleletválasztás
         Matching: Megfelelő
-        Match the events with the actions: Match the events with the actions
+        Match the events with the actions: Párosítsd az eseményeket és a tevékenységeket
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png
@@ -39,9 +39,9 @@ hu:
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png
       2-3 flappy match 1:
-        Flappy Matching One: Flappy Matching One
+        Flappy Matching One: Flappy Feleletválasztás egy
         Matching: Megfelelő
-        Match the events with the actions: Match the events with the actions
+        Match the events with the actions: Párosítsd az eseményeket és a tevékenységeket
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png
@@ -49,8 +49,8 @@ hu:
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png
       2-3 maze match 1:
-        Maze Match One: Maze Match One
-        Match the puzzles to the blocks: Match the puzzles to the blocks
+        Maze Match One: Labirintus Feleletválasztás egy
+        Match the puzzles to the blocks: Illeszd a darabokat a blokkokhoz
         /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png
@@ -58,10 +58,10 @@ hu:
         /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png
       2-3 Maze Match 2:
-        Maze Match: Maze Match
-        Match the puzzles to the blocks: Match the puzzles to the blocks
+        Maze Match: Labirintus Feleletválasztás
+        Match the puzzles to the blocks: Illeszd a darabokat a blokkokhoz
         Instructions: Utasítások
-        Drag the blocks to match.: Drag the blocks to match.
+        Drag the blocks to match.: Húzd arrébb a blokkokat, hogy illeszkedjenek.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png
@@ -83,7 +83,7 @@ hu:
       2-3 Binary Match 1:
         Matching: Megfelelő
         /script_assets/2-3_images/unplugged/binary_1_q.png, 250: /script_assets/2-3_images/unplugged/binary_1_q.png, 250
-        Use the key to match each code to its letter: Use the key to match each code to its letter
+        Use the key to match each code to its letter: Használja a kulcsot a kódok és a hozzá tartozó betűk párosításához
         <strong>N</strong>: '<strong>N</strong>'
         <strong>O</strong>: '<strong>O</strong>'
         <strong>P</strong>: '<strong>P</strong>'
@@ -94,7 +94,7 @@ hu:
         /script_assets/2-3_images/unplugged/binary_1_a4.png: /script_assets/2-3_images/unplugged/binary_1_a4.png
       2-3 Graph Paper Match 1:
         Matching: Megfelelő
-        Match the grid to the program: Match the grid to the program
+        Match the grid to the program: Párosítsd a rácsozatot a programmal!
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
@@ -103,7 +103,7 @@ hu:
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
       2-3 Relay Programming Match 1:
         Matching: Megfelelő
-        Match the grid to the program: Match the grid to the program
+        Match the grid to the program: Párosítsd a rácsozatot a programmal!
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
@@ -111,10 +111,10 @@ hu:
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
       4-5 maze match 1:
-        Maze Match: Maze Match
-        Match the puzzles to the blocks: Match the puzzles to the blocks
+        Maze Match: Labirintus Feleletválasztás
+        Match the puzzles to the blocks: Illeszd a darabokat a blokkokhoz
         Instructions: Utasítások
-        Drag the blocks to match.: Drag the blocks to match.
+        Drag the blocks to match.: Húzd arrébb a blokkokat, hogy illeszkedjenek.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png
@@ -124,29 +124,29 @@ hu:
         /script_assets/4-5_images/maze/4-5_maze_match_1_a3.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a3.png
       4-5 Algorithms Match 1:
         Matching: Megfelelő
-        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Match the steps in the Dice Race game to the order that they should appear in the algorithm.
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Rendezd a kockázós vetélkedőjátékban szerepélő lépéseket úgy, ahogy annak lennie kell az algoritmusban!
         <h4>1)</h4>: '<h4>1)</h4>'
         <h4>2)</h4>: '<h4>2)</h4>'
         <h4>3)</h4>: '<h4>3)</h4>'
         <h4>4)</h4>: '<h4>4)</h4>'
         <h4>Set Player 1 score to 0</h4>: '<h4>Az 1. Játékos pontszámának beállítása 0 pontra</h4>'
         <h4>Player 1 rolls die</h4>: '<h4>Az 1. Játékos dobja a dobókockát</h4>'
-        <h4>Add Player 1 roll to total score</h4>: '<h4>Add Player 1 roll to total score</h4>'
-        <h4>Compare player scores to see who wins</h4>: '<h4>Compare player scores to see who wins</h4>'
+        <h4>Add Player 1 roll to total score</h4>: '<h4>Add hozzá az 1. Játékos pontszámait az összpontszámhoz</h4>'
+        <h4>Compare player scores to see who wins</h4>: '<h4>Hasonlítsd össze a játékosok pontszámait, hogy megtaláld a nyertest</h4>'
       4-5 Computational Thinking Match 1:
         Matching: Megfelelő
-        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.
-        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 0</h3>'
-        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 1</h3>'
-        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 6</h3>'
-        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": '<h3>Wheels/side: 3<br/>Windows/side: 2</h3>'
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: E járművek mindegyike darabjaira van szétszerelve. Párosítsd mindegyik járműhöz a saját alkatrészeinek a listáját!
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": '<h3>Kerekek/oldal: 2 <br/>Ablakok/oldal: 0</h3>'
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": '<h3>Kerekek/oldal: 2 <br/>Ablakok/oldal: 1</h3>'
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": '<h3>Kerekek/oldal: 2 <br/>Ablakok/oldal: 6</h3>'
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": '<h3>Kerekek/oldal: 3 <br/>Ablakok/oldal: 2</h3>'
         /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png
       4-5 Suncatchers Match 1:
         Matching: Megfelelő
-        Match each program to the word it makes, using the provided group of skills.: Match each program to the word it makes, using the provided group of skills.
+        Match each program to the word it makes, using the provided group of skills.: Párosíts minden egyes programot az általa létrehozott szóval, felhasználva a megadott készségeket!
         /script_assets/4-5_images/unplugged/suncatchers_1.png: /script_assets/4-5_images/unplugged/suncatchers_1.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a1.png: /script_assets/4-5_images/unplugged/suncatchers_1_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a2.png: /script_assets/4-5_images/unplugged/suncatchers_1_a2.png
@@ -220,7 +220,7 @@ hu:
         Matching: Megfelelő
         Match the puzzles and blocks: Párosítsd a feladványokat a blokkokkal!
         Instructions: Utasítások
-        Drag the blocks to match.: Drag the blocks to match.
+        Drag the blocks to match.: Húzd arrébb a blokkokat, hogy illeszkedjenek.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/k_1_images/maze_images/maze_EN.png: /script_assets/k_1_images/maze_images/maze_EN.png
         /script_assets/k_1_images/maze_images/maze_ENE.png: /script_assets/k_1_images/maze_images/maze_ENE.png
@@ -241,7 +241,7 @@ hu:
         /script_assets/k_1_images/unplugged_images/big_event_1_a3.png: /script_assets/k_1_images/unplugged_images/big_event_1_a3.png
       K-1 Happy Maps Match 1:
         Matching: Megfelelő
-        Match the Map to the arrow that gets the Flurb to the treasure: Match the Map to the arrow that gets the Flurb to the treasure
+        Match the Map to the arrow that gets the Flurb to the treasure: Párosítsd a Térképet azzal a nyíllal, amely segít a Flurb-nek a kincshez jutni!
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png
@@ -250,7 +250,7 @@ hu:
         /script_assets/k_1_images/unplugged_images/left.png: /script_assets/k_1_images/unplugged_images/left.png
       K-1 Move It Match 1:
         Matching: Megfelelő
-        Match the Map to the algorithm that gets the Flurb to the flowers.: Match the Map to the algorithm that gets the Flurb to the flowers.
+        Match the Map to the algorithm that gets the Flurb to the flowers.: Párosítsd a térképet azzal az algoritmussal, amely segít a Flurb-nek a virágokhoz jutni!
         /script_assets/k_1_images/unplugged_images/move_it_2_q1.png: /script_assets/k_1_images/unplugged_images/move_it_2_q1.png
         /script_assets/k_1_images/unplugged_images/move_it_2_q2.png: /script_assets/k_1_images/unplugged_images/move_it_2_q2.png
         /script_assets/k_1_images/unplugged_images/move_it_2_q3.png: /script_assets/k_1_images/unplugged_images/move_it_2_q3.png
@@ -259,10 +259,10 @@ hu:
         /script_assets/k_1_images/unplugged_images/rightdown.png: /script_assets/k_1_images/unplugged_images/rightdown.png
       Coordinate Matching:
         Coordinates of Ninjacat: Ninja-macska koordinátái
-        Match each character with its correct coordinate!: Match each character with its correct coordinate!
+        Match each character with its correct coordinate!: Illeszd az összes szereplőt a megfelelő koordinátájára!
         /script_assets/msm/Unit 1/exercise_3_ninjacat.png: /script_assets/msm/Unit 1/exercise_3_ninjacat.png
         Cloud: Felhő
-        Ruby: Ruby
+        Ruby: Rubin
         Dog: Kutya
         Ninjacat: Ninja macska
         (250, 400): (250, 400)
@@ -270,8 +270,8 @@ hu:
         (480, 100): (480, 100)
         (320, 240): (320, 240)
       Match math to circles:
-        Converting Math to Circles of Evaluation: Converting Math to Circles of Evaluation
-        Match each mathematical expression with the correct circle of evaluation!: Match each mathematical expression with the correct circle of evaluation!
+        Converting Math to Circles of Evaluation: Matematikai kifejezések átalakítása kiértékelési körökké
+        Match each mathematical expression with the correct circle of evaluation!: Párosíts minden egyes matematikai kifejezést a megfelelő kiértékelési körrel!
         (2 + 3) * 5 / 2: '(2 + 3) * 5 / 2'
         2 + 3 * (5 / 2): '2 + 3 * (5 / 2)'
         (2 + 3 * 5) / 2: '(2 + 3 * 5) / 2'
@@ -281,7 +281,7 @@ hu:
         /script_assets/msm/Unit 1/Exercise_4_question_4.png: /script_assets/msm/Unit 1/Exercise_4_question_4.png
       Match circles to code:
         Converting Circles to Code: Körök átalakítása programkóddá
-        Match each circle of evaluation with the correct code!: Match each circle of evaluation with the correct code!
+        Match each circle of evaluation with the correct code!: Párosíts minden egyes kiértékelési kört a megfelelő forráskóddal!
         (+ (- (/ 4 7) 9) 3): '(+ (- (/ 4 7) 9) 3)'
         (+ (- 9 3) (* 4 7)): '(+ (- 9 3) (* 4 7))'
         (/ (+ 4 7) 3): (/ (+ 4 7) 3)
@@ -291,8 +291,8 @@ hu:
         /script_assets/msm/Unit 1/Exercise_5_question_3.png: /script_assets/msm/Unit 1/Exercise_5_question_3.png
         /script_assets/msm/Unit 1/Exercise_5_question_4.png: /script_assets/msm/Unit 1/Exercise_5_question_4.png
       Match math to code:
-        Converting Math to Code: Converting Math to Code
-        Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!
+        Converting Math to Code: Matematikai képletek átalakítása kóddá
+        Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: Párosítsd minden egyes matematikai kifejezést a megfelelő kóddal. Használd a kiértékelő kört a válaszodhoz!
         (15 + 3) x (72 - 19): '(15 + 3) x (72 - 19)'
         3 x 15 + (- 72 19): '3 x 15 + (- 72 19)'
         72 + 3 - 19 x 15: '72 + 3 - 19 x 15'
@@ -303,28 +303,28 @@ hu:
         (+ (- (* 3 15) 72) 19): '(+ (- (* 3 15) 72) 19)'
       parts of contract:
         Parts of a Contract: A szerződés részei
-        Here is a contract for a new function. Match each item with the word that describes it.: Here is a contract for a new function. Match each item with the word that describes it.
-        yearbook-picture: yearbook-picture
-        string numer: string numer
+        Here is a contract for a new function. Match each item with the word that describes it.: Itt van egy új függvény deklarációja. Párosíts minden elemet az azt leíró szóval!
+        yearbook-picture: évkönyv-kép
+        string numer: A sornak a sorszáma
         image: kép
-        (yearbook-picture "Sally" 1992): '(yearbook-picture "Sally" 1992)'
+        (yearbook-picture "Sally" 1992): '(évkönyv-kép "Sally" 1992)'
         function name: függvény neve
-        domain: domain
+        domain: tartomány
         range: tartomány
         example: példa
       Match example to contract:
-        Contracts of Functions: Contracts of Functions
-        Match each example with the correct contract!: Match each example with the correct contract!
-        (big-string? "gigantic" 5): '(big-string? "gigantic" 5)'
-        (find-price 4): (find-price 4)
-        (small-star "blue"): '(small-star "blue")'
-        (bigger-string "big" "little"): '(bigger-string "big" "little")'
-        (small-star "solid"): '(small-star "solid")'
-        (find-price "cheese"): '(find-price "cheese")'
-        "big-string: string number -> boolean": 'big-string: string number -> boolean'
-        "find-price: number -> number": 'find-price: number -> number'
-        "small-star: string -> image": 'small-star: string -> image'
-        "bigger-string: string string -> string": 'bigger-string: string string -> string'
+        Contracts of Functions: Függvények deklarálása
+        Match each example with the correct contract!: Párosíts minden példát a megfelelő deklarációval!
+        (big-string? "gigantic" 5): '(nagy-karakterlánc? "óriási" 5)'
+        (find-price 4): (megtalálni-az-árat 4)
+        (small-star "blue"): '(kis-csiilag "kék")'
+        (bigger-string "big" "little"): '(nagyobb-karakterlánc "nagy" "kicsi")'
+        (small-star "solid"): '(kis-csillag "kitöltött")'
+        (find-price "cheese"): '(megtalálni-az-árat "sajt")'
+        "big-string: string number -> boolean": 'nagy-karakterlánc: karakterlánc szám -> logikai érték'
+        "find-price: number -> number": 'megtalálni-az-árat: szám -> szám'
+        "small-star: string -> image": 'kis-csillag: karakterlánc -> kép'
+        "bigger-string: string string -> string": 'nagyobb-csillag: karakterlánc karakterlánc -> karakterlánc'
         "find-price: string -> number": 'keresés-ár: karakterlánc-> szám'
       test matching image:
         Matching Images Two: Képek összeillesztése. Második rész

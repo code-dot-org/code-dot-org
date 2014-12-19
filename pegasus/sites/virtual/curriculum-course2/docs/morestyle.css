@@ -28,6 +28,10 @@ body{
     color: #E4E0EC;
 }
 
+#number {
+    line-height: 90px !important;
+}
+
 .content {
 	padding: 0px;	
   	margin: 0px 40px 0px 40px;
@@ -39,7 +43,7 @@ body{
   font-size: 40px;
   line-height: 1em;
   margin-top:.5em;
-  margin-bottom:0em;  
+  margin-bottom:0em; 
 }
 
 .content h2 {
@@ -63,6 +67,7 @@ body{
   margin-bottom: 30px;
   border-radius: 15px;
   background-color: white;
+  clear: both;
   /*page-break-after:always;*/
 }
 
@@ -159,7 +164,18 @@ th a:link, th a:visited, th a:hover, th a:active {
     font-weight: bold;
 }
 
-#number { line-height: 90px !important; }
+.video { float: right !important; }
+
+.video div {
+    width: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.container_nonresponsive {
+    max-width: 1024px;
+    margin: 0 auto;
+}
 
 @page  
 { 
@@ -174,5 +190,5 @@ th a:link, th a:visited, th a:hover, th a:active {
         zoom: 75%;
     }
 	img{ max-width: 100%; }
-    .standards{ display: none !important; }
+    .standards, .video { display: none !important; }
 }

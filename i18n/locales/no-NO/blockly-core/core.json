@@ -63,7 +63,7 @@
   "DEFINE_FUNCTION_DEFINE":"Definer",
   "DELETE_BLOCK":"Slett blokk",
   "DELETE_PARAMETER":"Slett parameter...",
-  "DELETE_PARAMETER_TITLE":"Dette vil slette alle '%1' parametere. Er du sikker?",
+  "DELETE_PARAMETER_TITLE":"Dette vil slette alle '%1' parameterene. Er du sikker?",
   "DELETE_X_BLOCKS":"Slett %1 blokk(er)",
   "DISABLE_BLOCK":"Deaktiver blokk",
   "DUPLICATE_BLOCK":"duplikat",

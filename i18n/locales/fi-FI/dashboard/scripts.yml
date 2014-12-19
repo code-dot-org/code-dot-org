@@ -21,7 +21,7 @@ fi:
           "Bee 1: Intro": 'Mehiläinen 1: johdanto'
           "Maze 2: Loops": 'Sokkelo 2: silmukat'
           "Bee 2: Loops": 'Mehiläinen 2: silmukat'
-          Multi & Match: 'Multi & Match'
+          Multi & Match: 'Monivalinta & yhdistely'
           K-1 Flappy: Flappy eskareille ja 1-luokkalaisille
           Flappy non blockly: Flappy ei Blockly
           title: Kurssi 1
@@ -89,16 +89,16 @@ fi:
           title: Kurssi 3
           Artist Functions: Taiteilijan funktiot
           Artist For Loops: 'Taitelija: silmukat'
-          Artist Nested Loops: Artist Nested Loops
+          Artist Nested Loops: 'Taiteilija: sisäkkäiset silmukat'
           Bee Conditionals: Mehiläisen ehtolauseet
-          Bee Nested Loops: Bee Nested Loops
+          Bee Nested Loops: 'Mehiläinen: sisäkkäiset silmukat'
           Bee Debuggin: 'Mehiläinen: virheenkorjaus'
           Bee Debugging: 'Mehiläinen: virheenkorjaus'
           Bee Functions: Mehiläisen funktiot
-          Artist Functions with Params: Artist Functions with Params
+          Artist Functions with Params: 'Taiteilijan: parametrilliset funktiot'
           Bounce: Bounce
           Maze Conditionals: 'Sokkelo: ehtolauseet'
-          Artist Functions with Parameters: Artist Functions with Parameters
+          Artist Functions with Parameters: 'Taiteilija: parametrilliset funktiot'
           Computational Thinking: Laskennallinen ajattelu
           Functional Suncatchers: Funktionaaliset auringonkerääjät
           Songwriting Parameters: Säveltämisen parametrit
@@ -135,13 +135,13 @@ fi:
           description_short: Kurssi 3 on jatkoa kurssille 2.
         msm:
           title: Alakoulun matematiikkaa
-          description: Private work in progress for Middle School Math.
+          description: Käynnissä oleva henkilökohtainen työ yläasteen matematiikassa.
           Graph Paper Programming: Ruutupaperiohjelmointi
           Assessments: Osaamisen arviointi
           Unit 1: Yksikkö 1
           Unit 2: Yksikkö 2
-          Ninja Cat and the Coordinate Plane: Ninja Cat and the Coordinate Plane
-          "Calc: Circles of Evaluation": 'Calc: Circles of Evaluation'
+          Ninja Cat and the Coordinate Plane: Ninjakissa ja koordinaattiavaruus
+          "Calc: Circles of Evaluation": 'Calc: Arvioinnin ympyrät'
           "Artist: Strings and Images": 'Taiteilija: Merkkijonot ja kuvat'
           Contracts: Sopimukset
           "Artist: Writing Contracts": 'Taiteilija: sopimusten kirjoittaminen'
@@ -152,41 +152,41 @@ fi:
           "Play Lab: Defining Functions": 'Pelilabra: suunnitteluresepti'
           "Artist: Functions": 'Taiteilija: funktiot'
           "Play Lab: Animation": 'Pelilabra: Animaatio'
-          Booleans: Booleans
+          Booleans: Totuusarvot
           "Play Lab: Booleans": 'Pelilabra: Totuusarvot'
-          "Calc: Boolean Operators": 'Calc: Boolean Operators'
+          "Calc: Boolean Operators": 'Calc: totuusarvo-operaattorit'
           "Play Lab: Boolean Operators": 'Pelilabra: Boolen operaattorit'
           Conditionals and Piecewise Functions: Ehtolauseet ja paloittaiset funktiot
           "Artist: Conditionals": 'Taiteilija: Ehtolausekkeet'
           Collision Detection and the Distance Formula: Törmäyksen havaitseminen ja etäisyyskaava
           "Play Lab: Collision Detection": 'Pelilabra: Törmäyksen tunnistaminen'
-          "Unplugged: Ninja Cat and the Coordinate Plane": 'Unplugged: Ninja Cat and the Coordinate Plane'
-          "Eval: Strings and Images": 'Eval: Strings and Images'
-          "Unplugged: Contracts": 'Unplugged: Contracts'
-          "Eval: Writing Contracts": 'Eval: Writing Contracts'
+          "Unplugged: Ninja Cat and the Coordinate Plane": 'Tietokoneeton tekeminen: Ninjakissa ja koordinaattiavaruus'
+          "Eval: Strings and Images": 'Eval: merkkijonot ja kuvat'
+          "Unplugged: Contracts": 'Tietokoneeton tekeminen: sopimukset'
+          "Eval: Writing Contracts": 'Eval: sopimusten kirjoittaminen'
           "Unplugged: The Design Recipe": 'Tietokoneeton tekeminen: suunnitteluresepti'
-          "Eval: Defining Functions": 'Eval: Fast Functions'
-          "Eval: Functions": 'Eval: Design Recipe'
+          "Eval: Defining Functions": 'Eval: nopeat funktiot'
+          "Eval: Functions": 'Eval: suunnitteluresepti'
           "Unplugged: Booleans": 'TIetokoneeton tekeminen: totuusarvot'
           "Unplugged: Conditionals and Piecewise Functions": 'Tietokoneeton tekeminen: ehtolauseet ja paloittaiset funktiot'
-          "Eval: Conditionals": 'Eval: Conditionals'
+          "Eval: Conditionals": 'Eval: ehtolausekkeet'
           "Unplugged: Collision Detection and the Distance Formula": 'Tietokoneeton tekeminen: törmäyksen havaitseminen ja etäisyyskaava'
-          "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
+          "Calc: Evaluation Blocks": 'Calc: laskentalohkot'
           "Unplugged: Video Games and Coordinate Planes": 'Tietokoneeton tekeminen: videopelit ja koordinaattitasot'
-          "Eval: Boolean Operators": 'Eval: Boolean Operators'
-          Blocks to Math: Blocks to Math
+          "Eval: Boolean Operators": 'Eval: totuusarvo-operaattorit'
+          Blocks to Math: Matematiikkalohkot
           "Play Lab: Defining Variables (Big Game)": 'Pelilabra: muuttujien määrittely (Big Game)'
           "Play Lab: Animation (Big Game)": 'Pelilabra: Animaatio (Iso Peli)'
           "Play Lab: Boolean (Big Game)": 'Pelilabra: Totuusarvomuuttuja (Iso Peli)'
           "Play Lab: Collision Detection (Big Game)": 'Pelilabra: Törmäyksen tunnistaminen (Iso Peli)'
-          "Eval: Fast Functions": 'Eval: Fast Functions'
+          "Eval: Fast Functions": 'Eval: nopeat funktiot'
           "Play Lab: Design Recipe": 'Pelilabra: suunnitteluresepti'
-          "Eval: Design Recipe": 'Eval: Design Recipe'
+          "Eval: Design Recipe": 'Eval: suunnitteluresepti'
         playlab:
           title: Pelilabra
-          description: Suunnittele tarina tai luo peli Pelilabrassa!
+          description: Suunnittele ja luo oma tarina tai peli Pelilabrassa!
           Play Lab: Pelilabra
-          description_short: Suunnittele tarina tai luo peli Pelilabrassa!
+          description_short: Suunnittele ja luo oma tarina tai peli Pelilabrassa!
         artist:
           title: Taiteilija
           description: Tee hienoja piirrustuksia ja kuvioita Taiteilijan kanssa!
@@ -201,44 +201,44 @@ fi:
           Maze: Sokkelo
           title: Koodaustunti
           description: Kokeile tietojenkäsittelytieteen perusteita peleistä tuttujen hahmojen kanssa. Mukana mm. Angry Birds, Plants vs. Zombies sekä Scrat elokuvasta Ice Age!
-          description_short: Kokeile tietojenkäsittelytieteen perusteita monien hauskojen hahmojen kanssa!
+          description_short: Kokeile tietojenkäsittelytieteen perusteita hauskojen hahmojen seurassa!
         frozen:
           title: Koodaa Annan ja Elsan kanssa
           description: Koodataan Annan ja Elsan kanssa kun he tutkivat jään kauneutta ja taikaa. Tässä pelissä luot lumihiutaleita ja kuvioita luistellen ja luot taianomaisen lumimaan, jonka voit myös jakaa ystäviesi kanssa!
           Artist: Taiteilija
-          description_short: Käytetään koodia liittyäksemme Annan ja Elsan matkaan kun he tutkivat jään taikaa ja kauneutta.
+          description_short: Liitymme Annan ja Elsan matkaan, kun he tutkivat jään taikaa ja kauneutta ohjelmoinnin avulla.
         course4:
           description_short: On suositeltavaa käydä kurssit 2 ja 3 ennen kurssia 4.
           description: Kurssi 4 on suunniteltu opiskelijoille, jotka ovat jo käyneet kurssit 2 ja 3. Opiskelijat kaivautuvat syvemmälle ohjelmointiin liittyviin monimutkaisempiin ongelmiin, jotka on tuttuja aikaisempien kurssien pohjalta. Kurssin loppuun mennessä oppilaat luovat interaktiivisia tarinoita ja pelejä, joita he voivat jakaa muiden kanssa. Suositeltu luokkataso 4-8.
-          "Artist: Variables": 'Artist: Variables'
+          "Artist: Variables": 'Taiteilija: muuttujat'
           "Bee: For Loops": 'Mehiläinen: silmukat'
           title: Kurssi 4
-          "Algorithms: Tangrams": 'Algorithms: Tangrams'
+          "Algorithms: Tangrams": 'Algoritmit: tantagrammit'
           Variables: Muuttujat
-          "Play Lab: Variables": 'Play Lab: Variables'
-          "Play Lab: Functions with Parameters": 'Pelilabra: parametroidut funktiot'
-          "Bee: Functions with Parameters": 'Bee: Functions with Parameters'
+          "Play Lab: Variables": 'Pelilabra: muuttujat'
+          "Play Lab: Functions with Parameters": 'Pelilabra: parametrilliset funktiot'
+          "Bee: Functions with Parameters": 'Mehiläinen: parametrilliset funktiot'
           "Artist: For Loops": 'Taiteilija: silmukat'
           "Play Lab: For Loops": 'Pelilabra: silmukat'
           "Artist: Functions": 'Taiteilija: funktiot'
-          "Artist: Functions with Paraqmeters": 'Artist: Functions with Paraqmeters'
-          "Unplugged: Tangrams": 'Unplugged: Tangrams'
+          "Artist: Functions with Paraqmeters": 'Taitelija: parametrilliset funktiot'
+          "Unplugged: Tangrams": 'Tietokoneeton tekeminen: tantagrammit'
           Artist: Taiteilija
           Bee: Mehiläinen
-          "Unplugged: Envelope Variables": 'Unplugged: Envelope Variables'
-          "Unplugged: Madlibs": 'Unplugged: Madlibs'
+          "Unplugged: Envelope Variables": 'Tietokoneeton tekeminen: Kirjekuorimuuttujat'
+          "Unplugged: Madlibs": 'Tietokoneeton tekeminen: Madlibs'
           "Unplugged: For Loop Fun": 'Tietokoneeton tekeminen: silmukkahauskaa'
-          "Unplugged: Songwriting with Parameters": 'Unplugged: Songwriting with Parameters'
-          "Artist: Functions with Parameters": 'Artist: Functions with Parameters'
-          "Unplugged: Binary": 'Unplugged: Binary'
-          Bee Binary: Bee Binary
-          Farmer Binary: Farmer Binary
-          Maze and Bee: Maze and Bee
-          Artist Binary: Artist Binary
+          "Unplugged: Songwriting with Parameters": 'Tietokoneeton tekeminen: parametroitu sävellys'
+          "Artist: Functions with Parameters": 'Taiteilija: parametrilliset funktiot'
+          "Unplugged: Binary": 'Tietokoneeton tekeminen: binääri'
+          Bee Binary: 'Mehiläinen: binääri'
+          Farmer Binary: 'Maanviljelijä: binääri'
+          Maze and Bee: Sokkelo ja mehiläinen
+          Artist Binary: 'Taiteilija: binääri'
           description_audience: 10+ -vuotiaille (kurssin 3 jälkeen)
         Course4pre:
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
+          description_short: Lyhyt kertaus käsitteistä oppilaille, jotka eivät ole käyneet kursseja 2 ja 3.
+          Course 4 Prerequisite: Kurssin 4 esitiedot
           "Maze: Sequence": 'Sokkelo: komentosarja'
           "Artist: Sequence": 'Taiteilija: komentosarja'
           "Artist: Loops": 'Taiteilija: silmukat'
@@ -249,8 +249,8 @@ fi:
           "Artist: Functions": 'Taiteilija: funktiot'
           "Bee: Debugging": 'Mehiläinen: virheenkorjaus'
         course4pre:
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
+          description_short: Lyhyt kertaus käsitteistä oppilaille, jotka eivät ole käyneet kursseja 2 ja 3.
+          Course 4 Prerequisite: Kurssin 4 esitiedot
           "Maze: Sequence": 'Sokkelo: komentosarja'
           "Artist: Sequence": 'Taiteilija: komentosarja'
           "Artist: Loops": 'Taiteilija: silmukat'
@@ -261,8 +261,8 @@ fi:
           "Artist: Functions": 'Taiteilija: funktiot'
           "Bee: Debugging": 'Mehiläinen: virheenkorjaus'
         Course4pre (Case Conflict):
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
+          description_short: Lyhyt kertaus käsitteistä oppilaille, jotka eivät ole käyneet kursseja 2 ja 3.
+          Course 4 Prerequisite: Kurssin 4 esitiedot
           "Maze: Sequence": 'Sokkelo: komentosarja'
           "Artist: Sequence": 'Taiteilija: komentosarja'
           "Artist: Loops": 'Taiteilija: silmukat'
@@ -273,21 +273,21 @@ fi:
           "Artist: Functions": 'Taiteilija: funktiot'
           "Bee: Debugging": 'Mehiläinen: virheenkorjaus'
         usability:
-          Intro: Intro
+          Intro: Johdanto
           Variables and For Loops: Muuttujat ja silmukat
-          Functions and Functions with Parameters: Functions and Functions with Parameters
-          title: Usability Testing
+          Functions and Functions with Parameters: Funktiot ja parametrilliset funktiot
+          title: Käytettävyystestaus
           description_short: ""
-          description: A selection of Course 4 levels for usability testing.
+          description: Valikoima kurssin 4 tasoista käytettävyystestaukseen.
           Variables: Muuttujat
           For Loops: Silmukat
         potus:
-          title: special
-          description_short: special
-          description: special
-          Special: Special
+          title: erikoistoiminnot
+          description_short: erikoistoiminnot
+          description: erikoistoiminnot
+          Special: Erikoistoiminnot
         special:
-          title: special
-          description_short: special
-          description: special
-          Special: Special
+          title: erikoistoiminnot
+          description_short: erikoistoiminnot
+          description: erikoistoiminnot
+          Special: Erikoistoiminnot

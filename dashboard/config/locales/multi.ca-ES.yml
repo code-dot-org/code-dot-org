@@ -2,8 +2,8 @@
   data:
     multi:
       2-3 artist debug multi 1:
-        Artist Debugging Multiple Choice One: 'Artista: Depuració elecció múltiple
-          u'
+        Artist Debugging Multiple Choice One: 'Artista: Correcció d''errors d''elecció
+          múltiple u'
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
           700
         Why won't this circle go all the way around?: Why won't this circle go all
@@ -147,8 +147,8 @@
       2-3 Getting Loopy Multi 1:
         Multiple Choice: Tipus test
         /script_assets/2-3_images/unplugged/getting_loopy_1_q.png: /script_assets/2-3_images/unplugged/getting_loopy_1_q.png
-        How would you simplify this sequence with loops?: How would you simplify this
-          sequence with loops?
+        How would you simplify this sequence with loops?: Com podríeu simplificar
+          aquesta seqüència utilitzant bucles?
         /script_assets/2-3_images/unplugged/getting_loopy_1_a1.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a1.png
         /script_assets/2-3_images/unplugged/getting_loopy_1_a2.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a2.png
         /script_assets/2-3_images/unplugged/getting_loopy_1_a3.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a3.png
@@ -277,10 +277,10 @@
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png
       4-5 Algorithms Multi 1:
         Multiple Choice: Tipus test
-        Which one of these items is hardest to describe an algorithm for?: Which one
-          of these items is hardest to describe an algorithm for?
-        <h4>Brushing your teeth</h4>: <h4>Brushing your teeth</h4>
-        <h4>Baking cookies</h4>: <h4>Baking cookies</h4>
+        Which one of these items is hardest to describe an algorithm for?: Quin d'aquests
+          elements és el més difícil per descriure un algoritme?
+        <h4>Brushing your teeth</h4>: <h4>Raspallant-vos les dents</h4>
+        <h4>Baking cookies</h4>: <h4>cuinant galetes</h4>
         <h4>Shopping from a grocery list</h4>: <h4>Shopping from a grocery list</h4>
         <h4>Banana</h4>: <h4>Plàtan</h4>
       4-5 Computational Thinking Multi 1:
@@ -292,7 +292,7 @@
         <h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>: <h4>Seattle
           is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>
         <h4>Seattle _____ a _____ _____.</h4>: <h4>Seattle _____ a _____ _____.</h4>
-        <h4>_____ is a _____ city.</h4>: <h4>_____ is a _____ city.</h4>
+        <h4>_____ is a _____ city.</h4>: <h4>_____és una _____ciutat.</h4>
         <h4>_____ is _____ a _____.</h4>: <h4>_____ is _____ a _____.</h4>
         <h4>Eugene is a _____ city.</h4>: <h4>Eugene is a _____ city.</h4>
       4-5 Crowdsourcing Multi 1:
@@ -303,8 +303,8 @@
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png
       4-5 Crowdsourcing Multi 2:
         Multiple Choice: Tipus test
-        Which one of these activities would be best for practicing crowdsourcing?: Which
-          one of these activities would be best for practicing crowdsourcing?
+        Which one of these activities would be best for practicing crowdsourcing?: Quina
+          d'aquestes activitats seria millor per a la pràctica  de crowdsourcing?
         <h4>Cleaning your room</h4>: <h4>Netejant la teva habitació</h4>
         <h4>Eating your dessert</h4>: <h4>Menjant el teu postre</h4>
         <h4>Brushing your hair</h4>: <h4>Pentinant-te</h4>
@@ -341,8 +341,9 @@
       4-5 Songwriting Multi 1:
         Multiple Choice: Tipus test
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
-        0: '? What is the largest chunk of this song that you can define as the chorus
-          so that the chorus repeats exactly each time it is called?'
+        0: '? Quin és el fragment més llarg d''aquesta cançó que definiríeu com la
+          tornada de manera que la tornada es repeteixi exactament cada vegada que
+          s''anomena?'
         1: ': What is the largest chunk of this song that you can define as the chorus
           so that the chorus repeats exactly each time it is called?'
         Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
@@ -364,21 +365,21 @@
       4-5 Suncatchers Multi 1:
         Multiple Choice: Tipus test
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1: Which
-          of the programs below <em>does not</em> make the exact same sequence as
-          Program 1
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1: Quin
+          dels programes de sota <em>no</em> fa la mateixa seqüència exacta que el
+          programa 1
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
       Coordinates Multi 1:
-        Video game Coordinates: Video game Coordinates
+        Video game Coordinates: Coordenades del videojoc
         Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        Which answer best describes the unicorn's movement?: Which answer best describes
-          the unicorn's movement?
-        The unicorn moves across the screen: The unicorn moves across the screen
-        The unicorn's y value changes: The unicorn's y value changes
-        The unicorn moves to the left: The unicorn moves to the left
-        The unicorn's x value changes: The unicorn's x value changes
+        Which answer best describes the unicorn's movement?: Quina resposta descriu
+          millor el moviment de l'unicorn?
+        The unicorn moves across the screen: L'unicorn es mou per la pantalla
+        The unicorn's y value changes: El valor y de l'unicorn canvia
+        The unicorn moves to the left: L'unicorn es mou a l'esquerra
+        The unicorn's x value changes: El valor x de l'unicorn canvia
       K-1 Artist 1 Multi 1:
         Multiple Choice: Tipus test
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png,
@@ -469,17 +470,16 @@
       K-1 Digital Footprint Multi 1:
         Multiple Choice: Tipus test
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png
-        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Which
-          animal has the digital footprint that leaves him or her the <strong>most
-          unsafe</strong>?
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Quin
+          animal té una empremta digital que el deixa més<strong>desprotegit</strong>?
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png
       K-1 Getting Loopy Multi 1:
         Multiple Choice: Tipus test
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png
-        How would you simplify this sequence with loops?: How would you simplify this
-          sequence with loops?
+        How would you simplify this sequence with loops?: Com podríeu simplificar
+          aquesta seqüència utilitzant bucles?
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png
@@ -519,8 +519,8 @@
       K-1 Plant a Seed Multi 2:
         Multiple Choice: Tipus test
         /script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png: /script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png
-        Which step should fill in the blank for this algorithm?: Which step should
-          fill in the blank for this algorithm?
+        Which step should fill in the blank for this algorithm?: Quin pas ompliria
+          el buit per aquest algoritme?
         /script_assets/k_1_images/unplugged_images/brush-teeth.png: /script_assets/k_1_images/unplugged_images/brush-teeth.png
         /script_assets/k_1_images/unplugged_images/cover-seed.png: /script_assets/k_1_images/unplugged_images/cover-seed.png
         /script_assets/k_1_images/unplugged_images/water-pot.png: /script_assets/k_1_images/unplugged_images/water-pot.png
@@ -600,7 +600,7 @@
         random: atzar
         left top right: left top right
       Circle to code:
-        Code from Circle: Code from Circle
+        Code from Circle: Codi del cercle
         /script_assets/msm/Unit%202/exercise_1.png: /script_assets/msm/Unit%202/exercise_1.png
         Pick the Racket code that comes from the circle of evaluation!: Pick the Racket
           code that comes from the circle of evaluation!
@@ -611,16 +611,16 @@
       valid contracts multi:
         Valid Contracts: Valid Contracts
         Pick the best answer to the question.: Trieu la millor resposta a la pregunta.
-        Which of these is a valid contract for the function circle?: Which of these
-          is a valid contract for the function circle?
+        Which of these is a valid contract for the function circle?: Quin dels següents
+          és un contracte vàlid per a la funció cercle?
         'circle: size style color -> image': 'cercle: mida color estil-> imatge'
-        'circle: number string string -> image': 'circle: number string string ->
-          image'
-        'circle: number string string -> shape': 'circle: number string string ->
-          shape'
+        'circle: number string string -> image': 'cercle: nombre cadena cadena ->
+          imatge'
+        'circle: number string string -> shape': 'cercle: nombre cadena cadena ->
+          forma'
         'circle: 5 solid blue -> circle ': 'cercle: 5 blau sòlid-> cercle '
       image code from circle:
-        Code from Circle: Code from Circle
+        Code from Circle: Codi del cercle
         /script_assets/msm/Unit%202/exercise_5.png: /script_assets/msm/Unit%202/exercise_5.png
         Pick the Racket code that comes from the circle of evaluation!: Pick the Racket
           code that comes from the circle of evaluation!

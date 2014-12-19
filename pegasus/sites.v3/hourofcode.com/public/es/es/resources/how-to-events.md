@@ -1,56 +1,56 @@
 
 
-# Hour of Code event guide
+# Guía del evento "Hora de Código"
 
-Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
+Organiza un evento de la "Hora de Código" durante la Semana de la Educación en Ciencias de la Computación (Dic. 8 al 14) e inspira a más estudiantes a probrarlo. Cualquiera, en cualquier lugar puede organizar un evento de la "Hora de Código".
 
-## 1) Prepare for your event
+## 1) Prepárate para tu evento.
 
-  * Determine a venue, date and time
-  * Send [a letter](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) to invite your local mayor, congressman, governor, or influential business person to speak.
-  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= hoc_uri('/resources/press-kit') %>) for help.
+  * Determina lugar, fecha y hora.
+  * Envía [una carta](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) invitando al alcalde local, congresista, gobernador o empresario influyente para que de una charla.
+  * Invita a los medios/prensa e.j. la estación de noticias local, periódico o blogueros de tecnológia, educación. Revisa nuestro [kit de prensa](<%= hoc_uri('/resources/press-kit') %>) para obtener ayuda.
 
-## 2) During your event
+## 2) Durante tu evento.
 
-  * Kick off your event with one of our [inspirational videos](<%= hoc_uri('/resources#videos') %>).
-  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= hoc_uri('/resources/stats') %>).   
+  * Comienza tu evento con uno de nuestros [vídeos motivacionales](<%= hoc_uri('/resources#videos') %>).
+  * Haz una introducción resumiendo la importancia de las ciencias de la computación, puedes usar estas [estadísticas e infografías](<%= hoc_uri('/resources/stats') %>).   
       
     
-  * Other event ideas: 
-      * Invite a local industry leader to discuss his or her work involving computer science
-      * Invite a local politician and have students teach him or her how to code
-      * Watch one of the Q&A sessions with an Hour of Code ambassador. They will all be recorded and on Code.org’s YouTube page. This year’s participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more!
-      * Have a group of students demonstrate an unplugged activity
-      * Have a group of students teach the principal or a group of teachers how to code
-      * If your school already teaches computer science, have students demo projects
+  * Otras ideas para el evento: 
+      * Invita a un líder de la industria local para discutir su trabajo en ciencias de la computación.
+      * Invita a un político local y haz que los estudiantes le o la enseñen a cómo codificar.
+      * Mira una de las Q&A sesiones con uno de los embajadores de la Hora de Código. Todas serán grabadas y colocadas en la página de Code.org en YouTube. ¡Los participantes de este año incluyen a Bill Gates, Sheryl Sandberg, Ashton Kutcher y otros más!
+      * Haz que un grupo de estudiantes demuestren una actividad desconectada.
+      * Haz que un grupo de estudiantes enseñen al director o a un grupo de profesores a como códificar
+      * Si tu escuela ya enseña ciencias de la computación haz que los estudiantes presenten demostraciones.
 
-## 3) Share how it went
+## 3) Comparte tu experiencia
 
-  * Share pictures of your event on Facebook and Twitter. 
-  * Use the hashtag **#HourofCode**
+  * Comparte fotos de tu evento en Facebook y Twitter. 
+  * Usa el hashtag **#HourofCode**
 
-## Example Event Plan
+## Ejemplo de un plan para tu evento
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**Evento:** Reunión de inicio de la semana de la educación en ciencias de la computación para toda la escuela.
 
-**Date:** Dec 8th (start of Computer Science Education Week)
+**Fecha:** 8 de Diciembre (inicio de la semana de la educación en ciencias de la computación)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Hora:** Durante el día escolar. Son preferibles los eventos a media mañana. Aproximadamente 1 hora.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
+**Lugar:** Salón de reuniones de la escuela (por ejemplo, teatro, gimnasio, cafetería)   
   
 
 
-## Run of Show
+## Programa del evento
 
 <table>
   <tr>
     <th style="width:200px">
-      Time
+      Hora
     </th>
     
     <th style="width:800px">
-      Action
+      Acción
     </th>
   </tr>
   
@@ -60,55 +60,55 @@ Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to 
     </td>
     
     <td>
-      Open with one of our <a href="http://hourofcode.com/us/resources#videos">inspirational videos</a>
+      Inicia con uno de nuestros <a href="http://hourofcode.com/us/resources#videos">vídeos motivacionales</a>
     </td>
   </tr>
   
   <td>
-    10:05-11:15 am
+    10:05-10:15 am
   </td>
   
   <td>
-    Principal gives an intro overviewing the importance of computer science. Use these <a href="/resources/stats">stats and infographics</a>.
+    El director da una introducción resumiendo la importancia de las ciencias de la computación. Usa estas <a href="/resources/stats">estadísticas e infografías</a>.
   </td></tr> 
   
   <td>
-    11:15-11:17 am
+    10:15-10:17 am
   </td>
   
   <td>
-    Open with one of our <a href="http://hourofcode.com/us/resources#videos">inspirational videos</a>
+    Inicia con uno de nuestros <a href="http://hourofcode.com/us/resources#videos">vídeos motivacionales</a>
   </td></tr> 
   
   <td>
-    11:17-11:30 am
+    10:17-10:30 am
   </td>
   
   <td>
-    Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives.
+    Un invitado especial habla acerca de su historia y cómo la tecnología y las ciencias de computación juegan un papel importante en sus quehaceres diarios.
   </td></tr> 
   
   <td>
-    11:30-11:40 am
+    10:30-10:40 am
   </td>
   
   <td>
-    Students do an Hour of Code demo for the school. Fun twist- have them teach the principal, politician or other students.
+    Los estudiantes hacen una demostración de la Hora de Código para la escuela. Como actividad divertida, haz que los estudiantes le enseñen al director, político o a otros estudiantes.
   </td></tr> 
   
   <td>
-    11:40-12:00 pm
+    10:40-11:00 pm
   </td>
   
   <td>
-    Students demo an unplugged activity and how computer science can be taught without using computers.
+    Los estudiantes demuestran una actividad desconectada y la manera como las ciencias de la computación pueden enseñarse sin usar computadores.
   </td></tr> 
   
   <td>
-    12:00-12:05 pm
+    11:00-11:05 pm
   </td>
   
   <td>
-    Teacher who help bring the school-wide event gives closing remarks.
+    El profesor que organizó el evento para la escuela da la charla de cierre.
   </td>
 </table>

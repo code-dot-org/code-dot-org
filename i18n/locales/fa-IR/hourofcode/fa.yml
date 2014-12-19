@@ -5,7 +5,7 @@
   coming_soon: "به زودي"
   front_header_banner: "به بزرگترين رويداد يادگيري تاريخ بپيونديد، ٢٣-١٧ آذر ٩٣"
   front_intro_default: '"ساعت کد نويسي" يك حركت جهاني در راستاي رسيدن به ده ها ميليون دانش آموز در بيش از ١٨٠ كشور است. هركس در هرجاي دنيا مي تواند يك رويداد "ساعت كدنويسي" را ترتيب دهد. برنامه هاي آموزشي يكساعته در بيش از ٣٠ زبان قابل دسترسي مي باشد. هیچ تجربه اي مورد نیاز نيست. <strong>سنین ٤ تا ١٠٤ سال.</strong>'
-  front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of people in 180+ countries. Anyone can organize an Hour of Code event. Over 3M people did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
+  front_intro_default_uk: 'ساعت کدزدن یک حرکت جهانی که به ده ها میلیون نفر در بیش از 180 کشور می رسد. هر کسی می تواند یک رویداد یک ساعت کد زدن را سازماندهی کند. بیش از 3 میلیون نفر اولین یک ساعت کدزدن را در انگلیس انجام دادند. بیایید این رقم را در دسامبر دوبرابر کنیم!<strong> هیچ تجربه ای نیاز نیست. 4 تا 104 ساله ها </strong>'
   front_watch_video: "ويدئوي جديد را ببينيد"
   header_menu_resources: "منابع"
   header_menu_faq: "پرسش و پاسخ"
@@ -27,32 +27,32 @@
   prizes_all: "جايزه هر برگزار كننده"
   prizes_every_organizer: 'هر برگزار كننده "ساعت كد نويسي" بعنوان تشكر اعتباري در Dropbox يا Skype دريافت خواهد كرد'
   prizes_technology: "يك مدرسه دولتي در هر ايالت امريكا( و واشنگتن دي سي) برنده فن آوري اي به ارزش ١٠٠٠٠ دلار خواهد شد"
-  prizes_tech_chats: '# classrooms will win video chats with very special guests'
-  prizes_robots: "100 classrooms will win a set of programmable robots"
-  prizes_brilliant: "One school in each province and territory will receive $2000 for a Brilliant Project"
-  prizes_actua: "15 schools across Canada will receive 2 hands-on STEM workshops by one of Actua's members"
+  prizes_tech_chats: '# کلاس ها برنده ی چت تصویری با مهمان های بسیار ویژه ای خواهند شد'
+  prizes_robots: "100 کلاس یک سری از روبات های قابل برنامه ریزی را برنده خواهند شد"
+  prizes_brilliant: "یک مدرسه در هر استان و ناحیه 2000 دلار برای یک پروژه عالی دریافت خواهد کرد"
+  prizes_actua: "15 مدرسه در کانادا 2 کارگاه عملی پایه از یکی از اعضای Actua دریافت خواهند کرد"
   prizes_details: "جزئيات"
-  whats_next_header: "What's Next?"
-  whats_next_description: "We'll send you materials and helpful tips for your event. New 2014 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
-  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>How to run an Hour of Code</a>"
-  whats_next_promote: "<a href='http://hourofcode.com/resources'>Promote the Hour of Code</a>"
+  whats_next_header: "بعد چه می شود?"
+  whats_next_description: "ما برای شما مواد و توصیه های مفید برای رویدادتان را خواهیم فرستاد. آموزش های جدید 2014 برای هر مرورگر، تلفن هوشمند- یا حتی بدون کامپیوتر! به زودی آماده می شوند<a href='http://code.org/learn'> آموزش های فعلی را امتحان کنید </a>"
+  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'> چگونه یک ساعت کدزدن را برگزار کنیم </a>"
+  whats_next_promote: "<a href='http://hourofcode.com/resources'> یک ساعت کدزدن را ارتقا دهید </a>"
   n_have_learned_an_hoc: '<h1>#</h1><h3>تجربه كرده اند</h3><h2>ساعت كد نويسي</h2>'
   anybody_can_learn: "هر کس می تواند یاد بگیرد."
   register_now: "همين حالا ثبت نام كنيد"
   front_join_us_heading: 'يك "ساعت كدنويسي" براي هر دانش آموز.'
-  front_join_us_description: "علوم كامپيوتر، پايه اي براي هر دانش آموز است. به ما كمك كنيد آن را به ١٠٠ميليون نفر معرفي كنيم."
+  front_join_us_description: "علوم كامپيوتر، مورد نیاز هر دانش آموزی است. به ما كمك كنيد آن را به ١٠٠ميليون نفر معرفی كنيم."
   front_join_us_button: "به ما بپیوندید"
   front_what_is_hoc: '"ساعت كدنويسي" چيست؟'
-  front_join_us_header: "Anyone can learn the basics, and have fun doing it!"
+  front_join_us_header: "هر کسی می تواند موارد اساسی را بیاموزد، و از آموختنش لذت ببرد!"
   front_join_us_header_uk: 'هر زمان در مدت ٢٣-١٧ آذرماه (١٤-٨ دسامبر)، ميزبان رويداد "ساعت كد نويسي" باشيد تا نشان دهيد كه هر كس مي تواند اصول كامپيوتر را فراگيرد و از آن لذت برد!'
   front_join_us_teacher: "آيا معلم هستيد؟"
-  front_join_us_inspire: "Inspire students with"
-  front_join_us_inspire_link: "an Hour of Code in the classroom."
+  front_join_us_inspire: "به دانش آموزان با"
+  front_join_us_inspire_link: "یک ساعت کدزدن در کلاس الهام بدهید."
   front_join_us_parent: "آيا شما مادر يا پدر هستيد؟"
   front_join_us_ask_link: "از مدرسه فرزندتان درخواست كنيد"
   front_join_us_ask: 'تا برگزار كننده يك "ساعت كدنويسي" باشد.'
   front_join_us_computer_science: "فقط عاشق علوم كامپيوتر هستيد؟"
-  front_join_us_spread: "Spread the word."
+  front_join_us_spread: "این صحبت ها را نشر دهید."
   front_join_us_organize: 'يا خودتان يك "ساعت كدنويسي" را ترتيب دهيد.'
   front_join_us_how_to_run: 'چگونگي اجراي يك "ساعت كد نويسي"'
   front_join_us_help_promote: 'كمك به ترويج "ساعت كدنويسي"'
@@ -62,7 +62,7 @@
   front_join_us_try: "آن را امتحان کنید"
   front_join_us_host: "برگزاري"
   front_join_us_support: "حمايت"
-  signup_header: 'Organize an Hour of Code event during Dec 8 - 14, and register it here.'
+  signup_header: "یک رویداد یک ساعت کدزدن را در طی 8 تا 14 دسامبر سازماندهی کنید، و آن را اینجا ثبت کنید."
   signup_name_label: "نام شما"
   signup_email_label: "ايميل شما"
   signup_organization_name_label: "نام مدرسه یا مركز"
@@ -74,7 +74,7 @@
   signup_send_posters_flag_label: 'ارسال <a href= "/resources#posters"> پوستر</a> به مدرسه يا مركز من'
   signup_send_posters_address_label: "نشانی مدرسه یا مركز"
   signup_whole_school_flag_label: "این رویداد برای کل مدرسه است"
-  signup_your_event: "Sign up your event"
+  signup_your_event: "رویدادتان را ثبت کنید"
   signup_name_placeholder: "نام شما"
   signup_email_placeholder: "you@example.com"
   signup_organization_name_placeholder: "به عنوان مثال، دبیرستان لينكلن"
@@ -88,11 +88,14 @@
   signup_thank_you_header: 'با تشکر از شما برای ثبت نام براي برگزاري رويداد يك "ساعت كد نويسي".'
   signup_thank_you_message: "ما يك ايميل تاييد بهمراه اطلاعاتي براي كمك به شروع فعاليت برايتان ارسال كرديم."
   map_header: 'رويدادهاي "ساعت كدنويسي" در سراسر دنيا'
-  map_header_company: '# by company organizers'
-  meta_tag_og_title: '"ساعت كد نويسي" مي آيد'
-  meta_tag_og_description: '"ساعت کد نويسي" يك حركت جهاني در راستاي رسيدن به ده ها ميليون دانش آموز در بيش از ١٨٠ كشور با بيش از ٣٠ زبان است. براي سنین ٤ تا ١٠٤ سال.'
-  meta_tag_twitter_title: '"ساعت كد نويسي" مي آيد'
-  meta_tag_twitter_description: '"ساعت کد نويسي" يك حركت جهاني در راستاي رسيدن به ده ها ميليون دانش آموز در بيش از ١٨٠ كشور با بيش از ٣٠ زبان است. براي سنین ٤ تا ١٠٤ سال.'
+  map_header_company: '# بوسیله ی سازماندهان شرکتی'
+  map_search_placeholder: "Search for Hour of Code events"
+  map_search_search: "Search"
+  map_search_reset: "Reset"
+  meta_tag_og_title: "The Hour of Code is here"
+  meta_tag_og_description: "ساعت کد نويسي يك حركت جهاني در راستاي رسيدن به ده ها ميليون دانش آموز در بيش از ١٨٠ كشور با بيش از ٣٠ زبان است. براي سنین ٤ تا ١٠٤ سال."
+  meta_tag_twitter_title: "The Hour of Code is here"
+  meta_tag_twitter_description: "ساعت کد نويسي يك حركت جهاني در راستاي رسيدن به ده ها ميليون دانش آموز در بيش از ١٨٠ كشور با بيش از ٣٠ زبان است. براي سنین ٤ تا ١٠٤ سال."
   twitter_default_text: 'من در"ساعت كد نويسي" #HourOfCode امسال شركت مي كنم، شما چطور؟ @codeorg'
   hardware_prizes_form_name_label: "نام شما"
   hardware_prizes_form_name_placeholder: "نام شما"
@@ -114,9 +117,8 @@
   hardware_prizes_form_submit_label: "ارسال"
   hoc_faq_title: "سوالات متداول"
   hoc_faq_what_is_hoc_q: '"ساعت كدنويسي" چيست؟'
-  hoc_faq_what_is_hoc_a: |-
-    "ساعت كد نويسي" مقدمه اي يك ساعته بر دانش كامپيوتر است كه براي آشنايي با كد نويسي و نشان دادن اينكه هر كس مي تواند اصول آنرا فراگيرد طراحي شده است. <a href='http://code.org/learn'>آموزش ها را ببينيد</a>، منتظر آموزش جديد "ساعت كد نويسي" ٢٠١٤ باشيد.
-  hoc_faq_last_year: "آموزش هاي سال گذشته را امتحان كنيد"
+  hoc_faq_what_is_hoc_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://code.org/learn'>Check out the tutorials</a>."
+  hoc_faq_last_year: "Try the tutorials"
   hoc_faq_when_is_hoc_q: '"ساعت كد نويسي" چه زماني است؟'
   hoc_faq_when_is_hoc_a: |-
     هر كس در هر زمان مي تواند ميزبان "ساعت كد نويسي" باشد، با اين حال هدف اين كمپين مردمي، رسيدن به تعداد ده ها ميليون دانش آموز است كه در فاصله زماني ٢٣-١٧ آذرماه (١٤-٨ دسامبر) براي گراميداشت<a href='http://csedweek.org'> هفته آموزش كامپيوتر </a>، يك "ساعت كد نويسي" را تجربه كنند. آيا يك <i> ساعت </i> مشخصي دارد؟ خير. شما هر زماني در طول اين هفته مي توانيد "ساعت كد نويسي" را انجام دهيد. (حتي اگر نمي توانيد در اين هفته شركت كنيد، يك هفته قبل يا بعد آن را انجام دهيد).
@@ -131,12 +133,20 @@
     البته. فعاليت هاي "ساعت كد نويسي" خود راهبر هستند. تنها كاري كه بايد انجام دهيد <a href='http://code.org/learn'> ديدن آموزش هاي كنوني ما</a>، انتخاب آموزشي كه مي خواهيد، و انتخاب يك ساعت مشخص است &mdash; بقيه كار به عهده ماست. همچنين گزينه هايي براي تمامي سنين و سطوح از مهد كودك به بالا وجود دارد. با خواندن <a href='/resources/how-to'>چگونگي راهبري</a> شروع به برنامه ريزي براي اين رويداد كنيد.
   hoc_faq_need_computers_q: "آيا هر شركت‌كننده يك رايانه نياز دارد؟"
   hoc_faq_need_computers_a: "خير. آموزش‌هاي ساعت کدنويسي روی رایانه های شخصی، تلفن‌هاي هوشمند، تبلت‌ها قابل استفاده‌اند و بعضي از آن‌ها به هيچ رايانه‌اي نیاز ندارند! <p><i>چند گزینه:</i> <br><ul><li><b>كار گروهي </b> تحقیقات نشان می‌دهد كه كه بهترين يادگيري دانش‌آموزان در <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'> گروه‌هاي برنامه‌نويسي اتفاق مي‌افتد</a> با به اشتراک‌گذاری رايانه و کار گروهي. دانش‌آموزان خود را به تشكيل گروه‌هاي دو نفره تشويق كنيد. <li><b>از پروژكتور استفاده كنيد</b> اگر شما یک پروژکتور و کامپیوتر متصل به وب داريد، كل گروه مي‌توانند ساعت كدنويسي را با هم انجام دهند. بخش‌هاي ويديويي را با هم ببينيد و به نوبت معماها را حل كنيد و به سوالات پاسخ دهيد.<li><b>بدون رايانه.</b> ما آموزش‌هايي را ارائه مي‌دهيم كه هيچ نيازي به رايانه ندارند. </ul>"
-  hoc_faq_international_q: 'I am in <country>. How do I participate internationally?'
-  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='target-resources'>here</a>."
+  hoc_faq_international_q: 'که من در آن هستم <country>. چگونه بین المللی شرکت کنم?'
+  hoc_faq_international_a: "هرکسی، در هرجای دنیا می تواند رویداد یک ساعت کدزدن را سازماندهی کند. سال گذشته، دانش آموزان در سراسر دنیا برای یک ساعت کدزدن به هم پیوستند. برای اطلاع بیشتر  <a href='target-resources'> اینجا را بخوانید </a>."
   hoc_faq_tutorial_q: "چگونه مي‌توان يك آموزش ساعت كدنويسي را ايجاد كنم؟"
   hoc_faq_tutorial_a: "اگر مشتاق به همكاري در آموزش‌ها هستيد <a href='target-tutorial-guidelines'> راهنماها و دستورالعمل‌های ما را ببينيد</a>. ما از ميزباني هر گزينه‌اي براي همكاري استقبال مي‌كنيم، ولي هدف اصلي ما بهبود تجربه براي دانش‌آموزان و معلماني است كه با علوم كامپيوتر تازه آشنا مي‌شوند."
-  hoc_faq_more_questions_q: "Still have more questions?"
-  hoc_faq_more_questions_a: "Try finding an answer in our <a href='http://support.code.org'>support forum</a>."
+  hoc_faq_more_questions_q: "هنوز سوالات بیشتری دارید?"
+  hoc_faq_more_questions_a: "پیدا کردن یک جواب در فروم پشتیبانی ما را <a href='http://support.code.org'> امتحان کنید </a>."
+  hoc_faq_scratch_q: "I am doing Scratch for Hour of Code, but what if my students have iPads rather than laptops?"
+  hoc_faq_scratch_a: "Scratch doesn't run on tablets. If your students are young, they can use the ScratchJR iPad app (for early-readers). If you look at the tutorials on <a href='http://code.org/learn'>Code.org/learn</a>, you can find other tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark."
+  hoc_faq_account_q: "Do students need to log on using an account?"
+  hoc_faq_account_a: "No. Absolutely no signup or login is required for students to try the Hour of Code. Most of the <a href='http://code.org/learn/beyond'>follow-on courses</a> require account creation to save student progress."
+  hoc_faq_frozen_q: "Where is the tutorial with Anna and Elsa?"
+  hoc_faq_frozen_a: "It is now published on <a href='http://code.org/learn'>Code.org/learn</a>. We hope you enjoy it!"
+  hoc_faq_high_school_q: "Which activity should I do with high school students?"
+  hoc_faq_high_school_a: "Across all ages, we recommend trying one of the beginner tutorials on <a href='http://code.org/learn'>Code.org/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as KhanAcademy or CodeHS."
   hoc_faq_more_questions_br_q: "Outras dúvidas?"
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
@@ -159,30 +169,30 @@
   stats_girls_million: "بيش از 10 ميليون دختر در سال 2013"
   stats_nina: '"هر روز همان نتایج به دست آمد &mdash; 100% مشارکت."-نینا نیکولز پيري، معلم'
   stats_student: '"من می دانستم که این يك <b> فرصت تكرار نشدني</b> است."-ماریانا الزيت، كلاس پنجمي'
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  stats_michael: '"من <b> هیچ وقت، هرگز </b> دانش آموزانم را برای آموختن تا این حد هیجان زده ندیده ام." از میشل کلارک، معلم'
   resources_how_to: "جزوه‌هاي راهنما براي معلمان"
-  resources_how_to_events: "Event how-to guide"
-  resources_how_to_districts: "How-to guide for districts"
-  resources_how_to_officials: "How-to guide for public officials"
+  resources_how_to_events: "برنامه‌ی نحوه‎ی راهنمایی"
+  resources_how_to_districts: "نخوه‌ی راهنمایی برای مناطق"
+  resources_how_to_officials: "نحوه‌ی راهنمایی برای راهنمایی مقامات دولتی"
   resources_handouts: "جزوه‌هايي براي گسترش موضوع"
   resources_videos: "ویدیوها"
   resources_posters: "پوسترها"
-  resources_social: "Social"
+  resources_social: ' اجتماعی'
   resources_banners: "بَنرها"
   resources_emails: "نمونه ایمیل"
-  resources_stats: "Useful stats and blurbs"
+  resources_stats: "آمارها و گزارش‌های مفید"
   resources_press_kit: "بسته مطبوعات"
-  events_title: "All Hour of Code Events"
-  events_nav_all: "All Events"
-  events_nav_whole_schools: "Whole Schools"
-  events_nav_special: "Special Events"
-  events_nav_orgs: "Organizations"
-  events_all_title: "All Hour of Code events"
-  events_whole_school_title: "Whole-school Hour of Code events"
-  events_special_title: "Special Hour of Code events"
-  events_orgs_title: "All Hour of Code events organized by Partner Organizations"
-  event: "event"
-  events: "events"
+  events_title: "تمام وقایع ساعت کد"
+  events_nav_all: "همه رویدادها"
+  events_nav_whole_schools: "تمام مدارس"
+  events_nav_special: "برنامه های ویژه"
+  events_nav_orgs: "سازمان"
+  events_all_title: "تمام وقایع ساعت کد"
+  events_whole_school_title: "رویدادهای ساعت کد همه مدرسه"
+  events_special_title: "برنامه ساعت کد های ویژه"
+  events_orgs_title: "تمام وقایع ساعت کد سازماندهی شده توسط سازمان های همکار"
+  event: "رویداد"
+  events: "رویدادها"
   footer_copyright_message: 'حق طبع و نشر Code.org  2014. کلیه حقوق محفوظ می‌باشد.'
   footer_trademark_message: "™Hour of Code علامت تجاري Code.org است."
   footer_menu_partners: "شرکا"

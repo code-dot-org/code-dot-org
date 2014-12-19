@@ -1,36 +1,28 @@
 * * *
 
-title: How-to Guide layout: wide nav: resources_nav
+title: Guía "Cómo hacer" layout: wide nav: resources_nav
 
 * * *
 
-<div class="row">
-  <h1 class="col-sm-6">
-    Cómo enseñar una Hora de Código
-  </h1>
-  
-  <div class="col-sm-6 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Registra tu evento</button></a>
-  </div>
-</div>
+# How to teach one Hour of Code
 
-## 1) Watch this how-to video <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
-## 2) Try the tutorials:
+## 1) Mira este video de "Cómo hacer" <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
+## 2) Prueba los tutoriales:
 
-Contamos con una gran variedad de tutoriales muy divertidos de hora de duración, para estudiantes de todas las edades, y pronto agregaremos más.
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
 
-**Todos los tutoriales:**
+**All Hour of Code tutorials:**
 
   * Requieren mínima preparación previa de parte de los docentes.
   * Son autoguiados, lo que permite que los estudiantes trabajen a su propio ritmo y según su propio nivel de conocimientos.
 
 [![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
 
-## 3) Register your Hour on the map
+## 3) Registra tu Hora en el mapa
 
 [Make sure to sign up](<%= hoc_uri('/') %>). We'll send you helpful info as the Hour of Code nears, and you'll see your Hour of Code on our map of worldwide events.
 
-## 4) Plan your hardware needs - computers are optional
+## 4) Proyecta tus necesidades de euipamiento - los ordenadores son opcionales
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every child, and can even do the Hour of Code without a computer at all.
 
@@ -38,12 +30,12 @@ The best Hour of Code experience will be with Internet-connected computers. But 
   * **Mirá la página de felicitaciones**, para ver qué van a ver los alumnos cuando terminen. 
   * **Chequeá el audio**. Si los tutoriales que vas a usar dependen del audio asegurate de contar con auriculares para cada estudiante o de pedirles que traigan los suyos.
 
-## 5) Plan ahead based on your technology available
+## 5) Proyecta en base a la tecnología disponible
 
   * **¿No tenés suficientes dispositivos?** Usá [programación entre pares](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Cuando los alumnos trabajan junto se ayudan mutuamente y dependen mucho menos del docente. Además van a ver que las Ciencias de la Computación son colaborativas y fomentan la interacción social.
   * **¿No tenés buena conexión a Internet?** Podés mostrar videos desde el frente de la clase, así cada chico no tiene que bajárselo en su propia máquina. También podés probar los tutoriales "desenchufados".
 
-## 6) Inspire students - show them a video
+## 6) Motiva a los estudiantes - muéstrales un video
 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
@@ -60,7 +52,7 @@ Most kids don’t know what computer science is. Here are some ideas:
   * O: "La informática es el arte de mezclar ideas humanas y herramientas digitales para incrementar nuestro poder. Los informáticos trabajan en áreas tan distintas: diseñando aplicaciones para teléfonos, curando enfermedades, creando películas animadas, trabajando en medios de comunicación, construyendo robots que exploran otros planetas, y muchas cosas más."
   * Mirá consejos para conseguir chicas interesadas en informática [acá](http://<%= codeorg_url() %>/girls). 
 
-## 6) Start your Hour of Code
+## 7) Empieza tu Hora de Código
 
 **Direct students to the activity**
 
@@ -75,7 +67,7 @@ Most kids don’t know what computer science is. Here are some ideas:
 
 **What to do if a student finishes early?**
 
-  * Los estudiantes pueden ver todos los tutoriales e intentar otra actividad de la Hora de Programación en [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
+  * Los estudiantes pueden ver todos los tutoriales e intentar otra actividad de la Hora de Código en [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
   * O pide a los estudiantes que terminen primero que ayuden a los que tegan problemas con la actividad.
 
 **How do I print certificates for my students?**
@@ -84,4 +76,4 @@ Each student gets a chance to get a certificate via email when they finish the [
 
 **What comes after the Hour of Code?**
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up your event</button></a>
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>

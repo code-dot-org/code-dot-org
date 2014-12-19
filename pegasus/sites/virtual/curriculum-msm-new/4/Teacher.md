@@ -5,7 +5,7 @@ theme: none
 ---
 
 
-<%= partial('curriculum_header', :unplugged=>true, :title=> 'Contracts',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>(30-60)) %>
+<%= partial('curriculum_header', :unplugged=>true, :title=> 'Contracts',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>('30-60')) %>
 
 [content]
 
@@ -24,8 +24,8 @@ Contracts provide a way for students to better understand and discuss functions.
 
 ### **Activity: Contracts**  
 
-3) [Writing Contracts](#Activity1)<br/>
-4) [Reading Contracts](#Activity2)  
+3) [Reading Contracts](#Activity1)<br/>
+4) [Writing Contracts](#Activity2)  
 
 ### **Wrap-up**
 5) [Flash Chat](#WrapUp) - What did we learn?  
@@ -50,6 +50,9 @@ Contracts provide a way for students to better understand and discuss functions.
 ### For the Student
 - [Contract Log](needacontractlog.pdf)
 
+### For the Teacher
+- [Lesson Slide Deck](https://docs.google.com/a/code.org/presentation/d/1SAu2YgSAE9g5NrhJ_c7eWBOAc_EGtXIDQqihvjyHV98)
+
 [/together]
 
 [together]
@@ -64,39 +67,77 @@ This lesson has three new and important words:<br/>
 - **Domain** - the type of data that a function expects
 - **Range** - the type of data that a function produces
 
-### <a name="GetStarted"></a> 2) Figuring it Out
+### <a name="GetStarted"></a> 2) What's in a Function
 
 You’ve already seen several functions that take in two Numbers, such as +, and -. On the other hand, the function "star" takes in a Number and two Strings. Different functions take in different inputs, and we need a way to keep track of the requirements for each function.
 
+- What does the '+' function do?
+  - What does it take as input?
+  - What does it return as output?
+- How about the 'triangle' function?
+- What do these different functions have in common?
+
+Let's look at a simple way to describe any function, it's called a "contract"
+
+- What is a Contract?
+  - A formal agreement
+  - A description of expected behavior
+- Why do Contracts tell us?
+  - What a function should do
+  - What inputs a function needs
+  - What a function returns
+  
+Encourage students to think about contracts in the real world. What purpose do they serve? If a contract is signed, do we expect it to be followed?
+
+Contracts have three disctinct parts:
+
+1. Name
+2. Domain
+3. Rainge
+
+**The Name of a function briefly describes what the function does.**
 **The Domain of a function is the data that the function expects.**
+**The Range of a function is the data that the function produces.**
+
 
 By keeping a list of all the functions in a language, and their Domains, programmers can easily look up how each function is used. However, it’s also important to keep track of what each function produces! For example, a program wouldn’t use "star" if they were trying to produce a Number, because star only produces Images. 
-
-**The Range of a function is the data that the function produces.**
 
 Domains and Ranges help programmers write better code, by preventing silly mistakes and giving themselves hints about what to do next. A programmer who wants to use "star" can look up the Domain and immediately know that the first input has to be a Number (like 100), without having to remember it each time. Instead of writing a single value there, a programmer could write a whole expression, like (25 * 4). We know this code will return an appropriate value (Number) by looking at the Range for *; therefore, the result of * can be used in place of any Number value.
 
 When programmers write down the Domains and Ranges of each function, they write what are called **contracts**, to keep track of what each function needs. 
-
-**A Contract has three parts: the _Name_, _Domain_ and _Range_ of a function.**
 
 [/together]
 
 [together]
 
 ## Activities:
-### <a name="Activity1"></a> 3) Dissecting a Demo
 
-Let's see if we can come up with contracts for some of the functions you've already seen. You'll want to make sure that you've got your [contracts log](needacontractlog.pdf), as this is where you'll keep a running document of all contracts you write - both for existing functions and ones of your own creation. When writing a contact on paper, we'll use this form:
+### <a name="Activity1"></a> 3) Reading Contracts
 
-**_Name_: _Domain_ -> _Range_**
+Let's look at a few example contracts - for each contract we'll identify the Name, Domain, and Range
 
-Using that format, the contract for star is:  
+- +: Number Number -> Number
+- <img src="functionalAdd.png" height="125px;"/>
+- triangle: Number String String -> Image
+- <img src="functionalTriangle.png" height="125px;"/>
+- rotate: Number Image -> Image
+- <img src="functionalRotate.png" height="125px;"/>
 
-**star: Number String String -> Image**
+### <a name="Activity2"></a> 4) Writing Contracts
+
+Let's see if we can come up with contracts for some of the functions you've already seen. You'll want to make sure that you've got your [contract reference](needacontractlog.pdf), as this is where you'll keep a running document of all contracts you write - both for existing functions and ones of your own creation.
+
+- We'll start with contracts for simple arithmetic functions
+- +, -, *, /
  
-This means that the Name of the function is star, that it takes in a Number and two Strings as its Domain, and produces an Image as the Range. We use types instead of values when we write a Contract, because we want to be more general: a star could be of any size, so the Domain for star specifies that the first argument could be any Number. If we think of a language as a collection of lego pieces, the Contracts are like the tabs and slots that tell us how each piece can connect.
-Contracts are sufficiently important and useful that we should keep a list of them somewhere. Using the Contract Log. Write the contract for star in the first row of your contracts table.
+Those ones were pretty easy, arithmetic functions only deal in Numbers! When it comes to writing functions that deal with multiple data types, looking at the Evaluation Block can give us some helpful clues.
+
+- The Name of each function is at the top
+- There will be a slot for each Domain element
+- The color of each slot tells you Domain type
+- The color of the whole block tells you Range
+- Color codes: <span class="func-number">Number</span> <span class="func-string">String</span> <span class="func-image">Image</span>
+
 
 [tip]
 
@@ -106,46 +147,25 @@ Common mistakes when students first write down contracts include: writing values
 
 [/tip]
 
-Here is the contract for a new function:  
+For each of the following Evaluation Blocks:
 
-**rectangle: Number Number String String -> Image**
- 
 - What is the Name of this function?
-- How many things are the Domain of this function?
-- What is the type of each thing in the Domain?
+- What is the Domain of this function?
 - What is the Range of this function?
+- Add this function's contract to your reference
 
-A Contract tells you exactly how to use the function, by writing its Name and then using values for each of the arguments in the Domain. Here is an example of an Evaluation Block, written to use rectangle:  
-
-(rectangle 100 50 "solid" "blue")
- 
-What do you think this code will produce?
-
-The Contract for + is shown below.  
-
-**+: Number Number -> Number**
- 
-Can you write the Contract for *, -, / and sqrt?
-
-
-### <a name="Activity2"></a> 4) What Can Contracts Tell Us
-
-Now that you know how to use a Contract to write an expression, here are the Contracts for several new functions that produce Images:  
-
-ellipse:  Number Number String String -> Image
-triangle: Number String String        -> Image
-circle:   Number String String        -> Image
- 
-See if you can figure out how to use these new functions to draw other shapes! Here's an example to get you started
+<img src="functionalRect.png" height="125px;"/><br/>
+<img src="functionalStringAppend.png" height="125px;"/><br/>
+<img src="functionalText.png" height="125px;"/><br/>
 
 [/together]
 
 [together]
 
 ## Wrap-up
-### <a name="WrapUp"></a> 5) Brainstorming for a Game
+### <a name="WrapUp"></a> 5) Keep up your Contracts
 
-This lesson expanded Evaluation Blocks, expressions, and code to include Strings and Images (as well as Numbers). You learned that everything you knew about functions on Numbers also works on Strings and Images (which will make your programs more interesting). You also learned how to use the Image functions to create your own images, and how to use existing Images in your programs (through bitmap/url).
+As you continue programming, make sure that you document a contract for every new function you encounter or write.
 In the next unit, you’ll learn how to create your own functions to save work in writing expressions (this will turn out to be an essential part of writing a game). You’ll also start customizing your game with images for the elements in your game design.
 
 [/together]

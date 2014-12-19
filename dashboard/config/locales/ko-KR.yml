@@ -36,6 +36,7 @@
   of: 중
   more: 전체단계
   less: 현재단계
+  beta: 베타
   try_hoc: 'Hour of Code 해보기! >> '
   try_k8intro: 유치원~중2(K-8) 학생들을 위한 컴퓨터과학(CS, 정보과학) 코스(15-25시간) 를 해보세요.
   k8intro: 유치원~중2(K-8) 학생들을 위한 컴퓨터과학(CS, 정보과학) 코스
@@ -544,3 +545,7 @@
     completed_too_many_blocks: 완료되었지만, 너무 많은 블럭들을 사용함
     completed_perfect: 완료
     furthest_level_attempted: 시도한 가장 높은 레벨
+  studio:
+    courses_working_on: 진행중인 코스
+    completed_courses: 완료한 코스
+    all_courses: 모든 코스

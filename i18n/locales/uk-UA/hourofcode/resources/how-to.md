@@ -1,36 +1,28 @@
 * * *
 
-title: How-to Guide layout: wide nav: resources_nav
+title: Інструкція проведення layout: wide nav: resources_nav
 
 * * *
 
-<div class="row">
-  <h1 class="col-sm-6">
-    Як провести Годину коду
-  </h1>
-  
-  <div class="col-sm-6 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Зареєструйте свій захід</button></a>
-  </div>
-</div>
+# How to teach one Hour of Code
 
-## 1) Watch this how-to video <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
-## 2) Try the tutorials:
+## 1) Перегляньте це відео <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
+## 2) Спробуйте підручники:
 
-Ми запропонуємо кілька цікавих одно-годинних підручників від наших партнерів для учнів різного віку. Готуються нові підручники для цьогорічної Години коду, яка відбудеться 8-14 грудня.
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
 
-**Всі підручники Години коду:**
+**All Hour of Code tutorials:**
 
   * Вимагають мінімального підготовчого часу вчителів
   * Призначені для самостійного навчання - дозволяючи учням працювати у власному темпі відповідно до свого рівня знань
 
 [![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
 
-## 3) Register your Hour on the map
+## 3) Зареєструйте свій захід на карті
 
 [Make sure to sign up](<%= hoc_uri('/') %>). We'll send you helpful info as the Hour of Code nears, and you'll see your Hour of Code on our map of worldwide events.
 
-## 4) Plan your hardware needs - computers are optional
+## 4) Сплануйте ресурси - комп'ютери не обов'язкові
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every child, and can even do the Hour of Code without a computer at all.
 
@@ -38,16 +30,16 @@ The best Hour of Code experience will be with Internet-connected computers. But 
   * **Ознайомтесь з вітальною сторінкою**, яку побачать учні після завершення роботи. 
   * **Подбайте про навушники**, або попросіть учнів взяти власні, якщо обраний Вами підручник потребує звукового супроводу.
 
-## 5) Plan ahead based on your technology available
+## 5) Виходьте з наявних можливостей
 
   * **Мало комп'ютерів?** Застосовуйте [парне програмування](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Коли учні працюють в парах, вони вчаться допомагати один одному і менше покладатись на вчителя. Таким чином вони дізнаються, що інформатика є соціальною та груповою діяльністю.
   * **Поганий Інтернет?** Сплануйте фронтальний перегляд відео-роликів, щоб зменшити завантаження учнівських комп'ютерів. Або спробуйте безмашинні чи оффлайнові вправи.
 
-## 6) Inspire students - show them a video
+## 6) Надихайте учнів - покажіть відео-ролики
 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
-  * Перше відео від Code.org, у ролях Біл Гейтс, Марк Цукенберг, зірка НБА Кріс Бош (Існують версії на [1 хвилину](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 хвилин](https://www.youtube.com/watch?v=nKIu9yen5nc), та [9 хвилин](https://www.youtube.com/watch?v=dU1xS07N-FA))
+  * Перше відео від Code.org, у ролях Біл Гейтс, Марк Цукерберг, зірка НБА Кріс Бош (Існують версії на [1 хвилину](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 хвилин](https://www.youtube.com/watch?v=nKIu9yen5nc), та [9 хвилин](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * Відео від [Години коду 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), або <% if @country == 'uk' %> [Години коду 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [Години коду 2014](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
   * [Заклик Президента Обами до всіх учнів - вивчати програмування](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
@@ -60,7 +52,7 @@ Most kids don’t know what computer science is. Here are some ideas:
   * Або: «Інформатика - це мистецтво поєднання людських ідей та цифрових інструментів для того, щоб розширити наші можливості. Програмісти працюють у різноманітних сферах: пишуть програми для телефонів, здійснюють розробки для медицини, створюють мультфільми, працюють у соціальних медіа, розробляють роботів, які досліджують інші планети та багатьох інших."
   * Поради залучення дівчаток до галузі інформатики [ тут](http://<%= codeorg_url() %>/girls). 
 
-## 6) Start your Hour of Code
+## 7) Розпочніть свою Годину коду
 
 **Direct students to the activity**
 
@@ -84,4 +76,4 @@ Each student gets a chance to get a certificate via email when they finish the [
 
 **What comes after the Hour of Code?**
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up your event</button></a>
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>

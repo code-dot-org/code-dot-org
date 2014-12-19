@@ -478,14 +478,28 @@ es:
         C3_crowdsourcing: Colaboración Abierta
         C3_functional_suncatchers: Tragaluces Funcionales
         C3_songwriting_with_parameters: Composición Musical con Parámetros
-        C4_artist_math: Programando al Artista con matemáticas
-        C4_create_functions: Creando Funciones
-        C4_edit_functions: Editando Funciones
+        C4_intro: Introducción
+        C4_bee_conditional: Condiciones de la Abeja
+        C4_variables_artist: 'Variables - Artista'
+        C4_variables_playlab: 'Variables - Laboratorio de juego'
         C4_for_loops: Bucles Para
-        C4_variables: Variables
+        C4_math_artist: Programando al Artista con matemáticas
+        C4_function_edit: Editando funciones
+        C4_function_create: Creando funciones
+        C4_function_parameters: Funciones con parámetros
+        C4_conditionals: Condicionales
+        C4_unplugged_algorithms: Algoritmos con Tangramas
+        C4_unplugged_madlibs: Bibliotecas locas
+        C4_unplugged_variables: Variables en sobres
+        C4_unplugged_forloops: Bucles Para
+        C4_unplugged_parameters: Composicion musical con Parámetros
+        C4_unplugged_binary: Binario
         frozen_intro: Introducción a La Hora del Código
         frozen_loops: Introducción a los bucles
         frozen_functions: Introducción a las Funciones
+        playlab_intro: Introducción al laboratorio de juegos
+        playlab_events: Eventos del laboratorio de juegos
+        playlab_repeat_forever: 'Laboratorio de juego: repetir para siempre'
     callout:
       text:
         drag_blocks: 'Arrastra un bloque de "mover" y pégalo debajo del otro bloque'
@@ -503,17 +517,17 @@ es:
         replace_questions: 'Usa el menú desplegable para reemplazar "???" con un número'
         replace_questions_degree: 'Usa el menú desplegable para reemplazar "???" con la cantidad correcta de grados a girar'
         repeat_blocks: 'Usa el bloque de "Repetir" y ponlo alrededor de los bloques del espacio de trabajo'
-        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the workspace
-        repeat_blocks_2: '(2) Move the "Repeat" block here, and place the gray blocks inside'
+        repeat_blocks_1: (1) Usa este bloque y ponlo alrededor de los bloques grises en el espacio de trabajo.
+        repeat_blocks_2: '(2) Mueve el bloque "Repetir" aquí, y coloca los bloques grises dentro'
         snowflake_dropdown: Usa este menú desplegable para crear diferentes copos de nieve!
         degrees_per_side: Divide 360 entre el número de lados para obtener el tamaño de cada ángulo en grados.
         set_sides: 'Usa este bloque para dar a "lados" el valor necesario para completar el rompecabezas.'
         set_length: 'Usa este bloque para fijar el valor correcto de "longitud".'
-        which_equation: Which equation makes each side shorter for shapes with more sides?
+        which_equation: ¿Qué ecuación hace los lados más cortos para obtener formas con más lados?
         get_nectar: 'Usa el bloque nuevo "obtener néctar".'
         actions_category: '¡La caja de herramientas tiene un nuevo aspecto! Ahora están aquí los bloques de "Acciones".'
         draw_square_hint: 'Sugerencia: Usa el bucle para hacer un cuadrado que creaste en el último puzzle.'
-        edit_function: Click here to edit your function.
+        edit_function: Haz clic aquí para editar tu función.
         create_function: 'Haz clic aquí para abrir el desplegable "Funciones", luego haz clic en el botón "Crear una función".'
         house_hint: Está bien si la imagen no se ve como una casa todavía. Lo solucionaremos en el siguiente puzzle.
         edit_draw_square: Usa este botón para editar la función y añadir el bucle.
@@ -533,10 +547,22 @@ es:
         playlab_add_move: 'Añade bloques "mover" dentro de este bloque  repetir'
         playlab_add_score: Agrega bloques de puntuación aquí
         playlab_add_blocks: Añade tus bloques aquí
-        set_variable: Drag a number block here to set your variable
-        place_variable: Drag your variable inside this block
-        bee_for_loop: Drag the largest number of nectar you want the bee to collect here
-        place_counter_variable: Drag your counter variable inside this block
-        function_editor_draw_square: 'This is your function definition. These blocks run everytime you use the "draw a square" block'
-        change_here: Make your change here
-        write_draw_square_function: Drag blocks from the toolbox into here that draw a square
+        set_variable: Arrastra un bloque número aquí para definir tu variable
+        place_variable: Arrastra tu variable dentro de este bloque.
+        bee_for_loop: Arrastra la mayor cantidad de néctar que quieres que la abeja recolecte aquí.
+        place_counter_variable: Arrastre la variable contador dentro de este bloque
+        function_editor_draw_square: 'Esta es tu definición de función. Estos bloques se ejecutan cada vez que usas el bloque "dibujar un cuadrado"'
+        change_here: Haz tu cambio aquí.
+        write_draw_square_function: Arrasta bloques de la caja de herramientas aquí que dibujen un cuadrado.
+        write_draw_triangle_function: Arrastra bloques desde la caja de herramientas aquí para que dibujen un triángulo
+        edit_add_parameter: Haz clic en editar para agregar un parámetro en la función
+        add_and_drag_parameter: Escribe el nombre de su parámetro aquí, haga clic en agregar y luego arrastrarlo en la definición de la función
+        fill_in_actor: Rellene el ??? con números que corresponden a cada actor (1, 2 y 3)
+        repeat: Ponga bloques dentro del bucle para repetir comandos
+        if_bee_nectar: 'Utilice el bloque "si" para decidir si la abeja debe obtener el néctar'
+        if_else_bee: 'Use el bloque "si/sino" para que la abeja obtenga néctar de una flor, y haga miel si no es una flor'
+        repeat_full_circle: Introduce el número de veces que el zombie tiene que moverse para hacer un círculo completo
+        place_length_variable: Arrastre aquí la variable longitud para reemplazar los signos de interrogación
+        arrows_move_actor: Usa las flechas para mover el actor
+        right_arrow_fireball: Use la flecha derecha para disparar bolas de fuego
+        name_function: Escriba el nombre de su función aquí

@@ -4,6 +4,6 @@ prikaz: širok
 
 * * *
 
-# Get your whole school to participate
+# Neka cijela Vaša škola učestvuje
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+Informacije o učestvovanju cijele škole u Satu Kodiranja idu ovdje.

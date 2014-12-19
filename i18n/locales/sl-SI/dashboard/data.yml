@@ -160,78 +160,70 @@ sl:
         turtle_4_7: 'Tu je koda iz prejšnje naloge. Jo lahko ponoviš, da bo narisala 10 kvadratov enega poleg drugega, da bo videti kot lestev? Namig: potrebuješ le dva dodatna bloka.'
         turtle_4_8: Tukaj je rešitev prejšnje uganke. Ali lahko dodaš dva bloka, da bo risba dokončana?
         turtle_4_9: Tukaj je rešitev prejšnje uganke. Za koliko stopinj se je treba obrniti, da je risba dokončana? (Najbrž boš moral/a nekajkrat ugibati)
-        turtle_4_10: Tukaj je rešitev prejšnje uganke. Koliko ponovitev je potrebnih, da je risba dokončana?
+        turtle_4_10: Tukaj je rešitev prejšnje uganke. Koliko ponovitev je potrebnih, da bo risba končana?
         turtle_4_11: Poskusi spremeniti številke v blokih za obračanje in ponavljanje, da bodo nastali različni vzorci. Poskusi kaj nastane, če v kodi spremeniš še kaj drugega.
-        maze_karel_1_1: 'Pozdravljeni! Sem kmetica, ki zate prideluje hrano in potrebujem tvojo pomoč. Polja na moji kmetiji je potrebno zravnati in pripraviti za sajenje. Premakni me, prosim, h kupu zemlje in uporabi blok "odstrani", da ga ne bo več.'
+        maze_karel_1_1: 'Pozdravljeni! Sem kmetica, ki zate prideluje hrano in potrebujem tvojo pomoč. Na kmetiji je potrebno zravnati polja in jih pripraviti za sajenje. Premakni me, prosim, h kupu zemlje in uporabi blok "odstrani", da ga ne bo več.'
         maze_karel_1_2: 'Nato me premakni k luknji in jo napolni z dvema lopatama zemlje. Namig: uporabi blok "zapolni".'
         maze_karel_1_3: Poskusi uporabiti čim manj blokov, da me najprej premakneš k kupu zemlje in narediš tako, da kupa ne bo več.
         maze_karel_1_4: 'Mi lahko pomagaš odstraniti vse štiri kupe umazanije? Namig: uporabi ponovitveni blok, če ga lahko.'
         maze_karel_1_5: 'Pomagaj mi zapolniti vse te luknje, v vsako luknjo stresi 5 lopat zemlje. Namig: uporabi blok "dokler" in vanj povleci blok "ponavljaj".'
         maze_karel_1_6: 'Odstrani vse kupe zemlje z uporabo čim manj blokov. Pomoč: uporabi blok "dokler" in v spustnem seznamu izberi možnost, ki pove ali stojim na kupu ali na luknji.'
-        maze_karel_1_7: Wow, kako globoka luknja! Ne vem, koliko lopat zemlje potrebujem zanjo. Lahko napišeš program, ki jo bo polnil dokler ne bo v višini tal?
+        maze_karel_1_7: O, kako globoka je ta luknja! Le koliko lopat zemlje bo potrebnih. Poskusi sestaviti program, ki mu tega ni treba vedeti, saj bo polnil luknjo vse dokler ne bo zemlje do tal.
         maze_karel_1_8: Pomagaj mi s čim manj bloki napolniti luknjo na koncu polja.
         maze_karel_1_9: 'Vse te kupe zemlje je treba poravnati. Poskusi uporabiti čim manj blokov. Namig: uporabi blok "dokler".'
         maze_karel_1_10: 'Pozno je in zunaj je že tema, zato ne vidim kako veliki so kupi zemlje. Ali ti bo uspelo rešiti uganko brez bloka "dokler"? Namig: premikaj me po polju, in če obstaja kup, ga odstrani.'
         maze_karel_1_11: 'Še vedno je mrak. Premikaj me po polju. Če naletim na kup, ga odstrani, in če naletim na luknjo, jo napolni. Namig: v bloku "če (if)" uporabi spustni seznam z možnostmi.'
         turtle_2_1: "Živ'. Jaz zombi-umetnik. Jaz rad risati! Jaz narisati kvadrat s posebno barvo. Pomembna opomba: na voljo imaš iste bloke, le da so zdaj razvrščeni v kategorije."
-        turtle_2_2: 'Čakajo te funkcije, s katerimi lahko ustvariš čisto svoje bloke! V kategoriji "Funkcije" te čaka nov blok "nariši kvadrat", ki nariše zelen kvadrat s stranicami 50 x 50 pik.'
-        turtle_2_3: 'Use the "repeat" block (in the "Loops" category) to draw 3 squares of size 100, each 120 degrees apart. And do it in 3 different, random colors.'
-        turtle_2_4: "Now we're going to get fancy. Change the code to draw 36 squares, 100 pixels wide, and each 10 degrees apart. Hint: you may want to use the slider to make me go faster."
-        turtle_2_5: |-
-          Draw squares with sides of 50, 60, 70, 80, and 90 pixels.  You'll need to use the "draw a square" function five times.
-        turtle_2_6: |-
-          Ok, this program will use a counter, to draw the same squares as last time. You want the square to be the same size as the counter, so use the "counter" block. Hint: It's in the Variables category.
-        turtle_2_7: |-
-          Here's a program to draw a spiral, but the blocks are disabled so they won't run. Make a new program using a "count with" block (in the Loops category) and "counter" block (in the Variables category) to draw the same spiral.
-        turtle_2_7_5: |-
-          There's a new "draw a snowman" function (in the Functions category). Draw two snowmen, of height 250 and 100.
-        turtle_2_8: |-
-          This one's a bit tricky. Use the "draw a snowman" function and the new "jump forward" block (in the Actions category). Draw 3 snowmen in different colors, 100 pixels apart.
-        turtle_2_9: 'Use a "count with" loop to draw a family of snowmen with heights of 110, 100, 90, 80, and 70. The snowmen should all be 60 pixels apart.'
-        turtle_2_10: "Here's some code to try experimenting with different spirals.  What happens if you change the turn amount? Or set a random color in the loop?  Draw anything you like."
-        maze_karel_2_1: 'Try using the blocks to help me remove all the piles and fill in all the holes on the ground. Try to use loops instead of using too many blocks. Hint: you can put a loop inside another loop.'
-        maze_karel_2_2: |-
-          We've defined our own block called "fill 5", which is now in the Functions category. Use it to help me fill in this hole.
-        maze_karel_2_3: |-
-          Use the new "fill 5" function block to make me fill in all the holes. You'll have to drag out the "fill 5" block out from the Functions category.
-        maze_karel_2_4: Define a new function that removes 7 shovelfuls. Then use it to write a program that helps me remove all the piles.
-        maze_karel_2_5: Create a new function that removes 6 shovelfuls from a pile, and use it to help me level out all the piles.
-        maze_karel_2_6: 'Use two new functions, "fill 8" and "remove 8", to help me level out the pile and fill in the hole.'
-        maze_karel_2_7: "There's a cow in my field! Write a new function that helps me avoid the cow and remove the pile. Put all your blocks inside the new function."
-        maze_karel_2_8: 'Use this new function, "avoid the cow and remove 1", to help me remove all the piles.'
-        maze_karel_2_9: "Ok, here's a function that removes 4 different piles of dirt in a vertical column. Try putting this function inside a loop, so that you remove all the piles of dirt using only a few new blocks."
-        maze_karel_2_10: Move me across the field, and use these two functions to help me remove all the piles and fill all the holes.
-        turtle_3_1: |-
-          This puzzle shows you how the "draw a square" and "draw a circle" functions are defined.  Defining a function doesn't run its blocks.  You have to pull out the "draw a square" block to actually draw a square.
-        turtle_3_2: 'Using the "draw a square" function as an example, create a "draw a triangle" function and use it.'
-        turtle_3_3: 'Draw triangular fences around the cats and a square fence around the cow.  Tip: test the program as you go along.'
-        turtle_3_4: 'See if you can figure out how to use "draw a square" and "draw a triangle" (and some other blocks) to draw a house around the lion.'
+        turtle_2_2: 'S funkcijami lahko zdaj ustvariš čisto svoje bloke! Poglej v kategorijo "Funkcije", kjer imaš zdaj na voljo nov blok "nariši kvadrat".  Narisal bo zelen kvadrat s stranicami 50 x 50 pik.'
+        turtle_2_3: 'Uporabi kocko "ponovi" (v kategoriji "zanke") za risanje treh kvadratov velikosti 100, 120 stopinj narazen. To naredi v treh različnih, naključnih, barvah.'
+        turtle_2_4: 'Stedaj bomo postali posebni. Spremeni kodo tako, da bo narisala 36 kvadratov z širino 100 in 10 stopinj narazen. Namig: Uporabi drsnik in me nastavi na višjo hitrost.'
+        turtle_2_5: 'Nariši kvadrate z stranicami velikosti 50, 60, 70, 80 in 90 slikovnih točk (pixel). Funkcijo "nariši kvadrat" bo potrebno uporabiti pet-krat.'
+        turtle_2_6: 'Ta program bo uporabil števec za risanje enakih kvadratov kot prejšnjič. Želimo, da je kvadrat iste velikosti kot števec, zato uporabi kocko "števec." Namig: Nahaja se v kategoriji "spremenljivke."'
+        turtle_2_7: 'Tukaj je program, ki nariše spiralo, a kocke so onemogočene zato ne bodo delovale. Naredi nov program in uporabi kocko "štej z" (v kategoriji "Zanke") in kocko "Števec" (v kategoriji "Spremenljivke"), ki bo narisal enako spiralo.'
+        turtle_2_7_5: 'Obstaja nova funkcija "nariši snežaka" (v kategoriji "Funkcije"). Nariši dva smežaka, ki bosta visoka 250 in 100.'
+        turtle_2_8: 'Ta je malce zagonetna. Uporabi funkcij "nariši snežaka" in novi blok "skoči naprej" (v kategoriji Dejanja). Nariši 3 snežake z različnimi barvami 100 pik narazen.'
+        turtle_2_9: 'Uporabi zanko "štej z" in nariši družino snežakov višin 110, 100, 90, 80, in 70. Snežaki naj bodo 60 pik narazen.'
+        turtle_2_10: 'Tukaj je nekaj kode za eksperimentiranje z različnimi spiralami.  Kaj se zgodi, če spremeniš velikost obrata? Ali pa nastavi naključno barvo v zanki?  Nariši, karkoli, kar ti je všeč.'
+        maze_karel_2_1: 'Z uporabo blokov mi pomagaj odstraniti vse kupe in zapolniti vse luknje na terenu. Poskusi uporabiti zanke namesto, da uporabiš preveč blokov. Namig: zanko lahko postaviš tudi znotraj druge zanke.'
+        maze_karel_2_2: 'Definirali smo lastni blok imenovan "napolni 5", ki je zdaj v kategoriji funkcij. Uporabi ga in mi pomagaj zapolniti to luknjo.'
+        maze_karel_2_3: 'Uporabi nov funkcijski blok "napolni 5" in mi zapolni vse luknje. Blok "napolni 5" moraš povleci iz kategorije Funkcije.'
+        maze_karel_2_4: 'Definiraj novo funkcijo, ki odstrani 7 lopat. Nato jo uporabi v programu,  ki mi bo pomagal odstraniti vsi kupe.'
+        maze_karel_2_5: Ustvari novo funkcijo, ki odstrani 6 lopat iz kupa, in jo uporabi, da mi pomagaš zravnati vse kupe.
+        maze_karel_2_6: 'Uporabi dve novi funkciji "napolni 8" in "odstrani 8" in mi pomagaj zravnati kupe in zapolniti luknje.'
+        maze_karel_2_7: Na mojem polju je krava! Napiši novo funkcijo, ki mi pomaga, da se izognem kravi in odstranim kup. Daj vse bloke v novo funkcijo.
+        maze_karel_2_8: 'S to novo funkcijo, "izogni se kravi in odstrani 1" mi pomagaj odstraniti vse kupe.'
+        maze_karel_2_9: Ok, tukaj je funkcija, ki odstrani 4 različne kupe zemlje v navpičnem stolpcu. Poskusi postaviti to funkcijo znotraj zanke, tako da lahko odstraniš vse kupe z uporabo le nekaj novih blokov.
+        maze_karel_2_10: Premakni me čez polje in uporabi ti dve funkciji in mi pomagaj odstraniti vse kupe in zapolnite vse luknje.
+        turtle_3_1: 'Te uganka ti pokaže, kako so definirane funkcije "nariši kvadrat" in "nariši krog".  Če samo definiraš funkcijo, se njeni bloki ne izvedejo.  Če hočeš narisati kvadrat, moraš povleci blok "nariši kvadrat".'
+        turtle_3_2: 'Vzemi funkcijo "nariši kvadrat" za primer in ustvari funkcijo "nariši trikotnik" in jo uporabi.'
+        turtle_3_3: 'Nariši trikotne ograje okoli mačke in kvadratno ograjo okoli krave.  Namig: preizkušaj program sproti, ko napreduješ.'
+        turtle_3_4: 'Ali lahko ugotoviš, kako uporabljati "nariši kvadrat" in "nariši trikotnik" (in nekatere druge bloke), da narišeš hišo okoli leva.'
         turtle_3_5: 'Napiši še funkcijo "nariši hišo". Pomoč: ustvarite novo funkcijo z uporabo ukaza "Naredi nekaj" (angl.: "do something") in vnesite besedilo za ime novega bloka.'
         turtle_3_6: 'Zgleduj se po bloku "nariši kvadrat" in dodaj "dolžino" v ukaz "nariši trikotnik", da boš lahko risal/a trikotnike s stranicami različnih dolžin. Pomoč: če klikneš zvezdico, lahko dodaš vnos "dolžine" v funkcijo'
         turtle_3_7: 'V funkcijo "nariši hišo" dodaj "dolžino" in zgradi bivališče za slona (s stranicami dolžine 150 pik)'
         turtle_3_8: 'Tukaj so vsi bloki iz prejšnje uganke. Funkcijo "nariši hišo" zdaj popravi tako, da bom risanje hiše zaključil v njenem spodnjem desnem kotu. Potem uporabi popravljeno funkcijo za to, da narišeš tri hiše.'
-        turtle_3_9: 'Can you re-create the "draw a house" function without help? Try it, and then draw a row of houses.'
-        turtle_3_10: "You've learned a lot! Now use it to draw whatever you want. Try to draw a star, or a spiral, or a fancy snowflake."
-        maze_karel_debug_seq_1: "Welcome to debugging! My code doesn't work right. Can you spot the problem and fix it so that I can get my field flat and ready for planting?"
-        maze_karel_debug_seq_2: "What's wrong with this program? How should you fix it so I can remove that pile?"
-        maze_karel_debug_repeat: De-bug this program for me so my field will be nice and flat.
-        maze_karel_debug_while: How should you change this program to help me fill the hole?
-        maze_karel_debug_if: Help! Fix the program so my field will be completely flat.
-        maze_karel_debug_if_else: De-bug this program so I can fill in the holes and remove all the piles.
-        maze_karel_debug_function_1: What should you change about this program to help me remove all the piles?
-        maze_karel_debug_function_2: Can you de-bug this program for me so I can make my field flat?
-        maze_karel_debug_function_3: "Edit this program so I'll remove all the piles on my field. "
-        turtle_5_1: Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)
-        turtle_5_2: Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)
-        turtle_5_3: Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)
-        turtle_5_4: Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)
-        turtle_5_5: Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)
-        turtle_5_6: Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)
-        maze_3_1: I need to get to that pig! Type in a couple of calls to move(); so I can get my eggs back.
-        maze_3_2: Write me a program, so I can make it all the way to the pig.
-        maze_3_3: "How should I get to the pig? Make sure I don't run into the box of TNT!"
-        maze_3_4: Argh! Write me a program that gets me around the TNT and to the pig.
-        bounce_1: 'Attach a block to the "when left arrow" block and press "Run". Move the paddle using the left arrow to reach the finish target.'
+        turtle_3_9: Lahko še enkrat narediš funkcijo »nariši hišo« brez pomoči? Poskusi in nato nariši vrsto hiš.
+        turtle_3_10: Zdaj imaš že kar nekaj znanja! Uporabi ga in nariši nekaj novega. Poskusi narisati zvezdo, spiralo ali snežinko.
+        maze_karel_debug_seq_1: Bodi detektiv! V tej kodi se skriva napaka. Najdi jo. Če jo odpraviš, bo moja njiva lepo zravnana in pripravljena na sajenje.
+        maze_karel_debug_seq_2: Ali lahko najdeš napako? Kako jo popraviti, da kupa zemlje ne bo več?
+        maze_karel_debug_repeat: 'Razhrošči (najdi napako/"hrošča" in jo odpravi), da bo moja njiva lepo zravnana.'
+        maze_karel_debug_while: Kako bi spremenil/a program, da bi se luknjo napolnila z zemljo?
+        maze_karel_debug_if: Na pomoč! Popravi program, da se bo moja njiva zravnala.
+        maze_karel_debug_if_else: 'Razhrošči (najdi napako/"hrošča" in jo odpravi), da bodo luknje v zemlji zapolnjene in kupi odstranjeni.'
+        maze_karel_debug_function_1: Kaj je potrebno spremeniti v programu, da bo kupe zemlje lepo odstranil?
+        maze_karel_debug_function_2: Ali lahko poskusiš razhroščiti ta program, da bo moja njiva lepo zravnana?
+        maze_karel_debug_function_3: Popravi ta program, da se bodo odstranili kupi na moji njivi.
+        turtle_5_1: Zaženi program ter preveri kaj se dogaja, če ga spreminjaš. Poskusi ugotoviti kako deluje? (Lahko ga tudi povsem zbrišeš in nadomestiš s povsem drugačnim)
+        turtle_5_2: Zaženi program ter preveri kaj se dogaja, če ga spreminjaš. Poskusi ugotoviti kako deluje? (Lahko ga tudi povsem zbrišeš in nadomestiš s povsem drugačnim)
+        turtle_5_3: Zaženi program ter preveri kaj se dogaja, če ga spreminjaš. Poskusi ugotoviti kako deluje? (Lahko ga tudi povsem zbrišeš in nadomestiš s povsem drugačnim)
+        turtle_5_4: Zaženi program ter preveri kaj se dogaja, če ga spreminjaš. Poskusi ugotoviti kako deluje? (Lahko ga tudi povsem zbrišeš in nadomestiš s povsem drugačnim)
+        turtle_5_5: Zaženi program ter preveri kaj se dogaja, če ga spreminjaš. Poskusi ugotoviti kako deluje? (Lahko ga tudi povsem zbrišeš in nadomestiš s povsem drugačnim)
+        turtle_5_6: Zaženi program ter preveri kaj se dogaja, če ga spreminjaš. Poskusi ugotoviti kako deluje? (Lahko ga tudi povsem zbrišeš in nadomestiš s povsem drugačnim)
+        maze_3_1: Hočem priti do prašiča! Nekajkrat pokliči funkcijo move(); ter mi omogoči, da pridem do jajc, ki mi jih je ukradel.
+        maze_3_2: Napiši mi program, da bom dosegel prašiča.
+        maze_3_3: Kako naj pridem do prašiča? Izogni se TNT razstrelivu!
+        maze_3_4: Grrr! Napiši mi program, ki me popelje mimo TNT in k prašiču.
+        bounce_1: 'K bloku "ko je pritisnjena leva puščica" dodaj nov blok in pritisni "Zaženi". Z levo puščico nato premikaj lopar, da boš zadel tarčo.'
         bounce_2: 'Attach a block to the "when right arrow" and "when left arrow" blocks. Move the paddle to reach both finish targets.'
         bounce_3: 'Now try something similar with the "when up arrow" block. Move the paddle to the finish target at the top.'
         bounce_4: This time you need to add four blocks. Move the paddle to all four finish targets to complete this puzzle.
@@ -326,7 +318,7 @@ sl:
         studio_k1_3: Can you write a program to make this dog move to the cat?
         studio_k1_4: 'Make the dog move to the cat and the cat say "hello" when he gets there.'
         studio_k1_5: Can you add a block to make the octopus happy?
-        studio_k1_6: Create your own story! Move around the cat and dog, and make them say things.
+        studio_k1_6: Ustvari svojo lastno zgodbo! Premikaj mačko in psa, ter jim ukaži naj govorijo.
         maze_wordsearch_k_1: Move me to spell the word EAST
         maze_wordsearch_k_2: Move me to spell the word SOUTH
         maze_wordsearch_k_3: Move me to spell the word WEST
@@ -412,7 +404,7 @@ sl:
         instructions: |-
           Here's a function called "Draw a shape" that we've programmed to draw hexagons. Run the code to see what it does and then experiment with the function to see what happens. Can you make it draw a pattern of squares, triangles, or octagons?
       Standalone_Artist_9:
-        instructions: "Now go ahead and make whatever picture you'd like! You've even got an empty function that you can make do whatever you want!"
+        instructions: Sedaj nadaljuj in naredi kakršno koli sliko želiš! Imaš prazno funkcijo s katero lahko narediš karkoli želiš!
     video:
       name:
         maze_intro: 'Labirint: uvod'
@@ -490,14 +482,28 @@ sl:
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Pisanje pesmi s parametri
-        C4_artist_math: Upravljanje umetnika s pomočjo matematike
-        C4_create_functions: Ustvarjanje funkcij
-        C4_edit_functions: Urejanje funkcij
+        C4_intro: Uvod
+        C4_bee_conditional: Bee Conditionals
+        C4_variables_artist: 'Variables - Artist'
+        C4_variables_playlab: 'Variables - Play Lab'
         C4_for_loops: For Loops
-        C4_variables: Spremenljivke
+        C4_math_artist: Programming the Artist with Math
+        C4_function_edit: Editing Functions
+        C4_function_create: Creating Functions
+        C4_function_parameters: Funkcije s parametri
+        C4_conditionals: Pogoji
+        C4_unplugged_algorithms: Algorithms with Tangrams
+        C4_unplugged_madlibs: Mad Libs
+        C4_unplugged_variables: Variables in Envelopes
+        C4_unplugged_forloops: For Loops
+        C4_unplugged_parameters: Songwriting with Parameters
+        C4_unplugged_binary: Binary
         frozen_intro: Uvod v Uro kodiranja
         frozen_loops: Uvod v zanke
         frozen_functions: Uvod v funkcije
+        playlab_intro: Introduction to Play Lab
+        playlab_events: Play Lab Events
+        playlab_repeat_forever: Play Lab Repeat Forever
     callout:
       text:
         drag_blocks: 'Povleci blok "premakni se" in ga postavi pod drugi blok'
@@ -552,3 +558,16 @@ sl:
         function_editor_draw_square: 'This is your function definition. These blocks run everytime you use the "draw a square" block'
         change_here: Make your change here
         write_draw_square_function: Drag blocks from the toolbox into here that draw a square
+        write_draw_triangle_function: Drag blocks from the toolbox into here that draw a triangle
+        edit_add_parameter: Click edit to add a parameter in your function
+        add_and_drag_parameter: Write in the name of your parameter here, click add, and then drag it into your function definition
+        fill_in_actor: Fill in the ??? with numbers that correspond to each actor (1, 2, and 3)
+        repeat: Put blocks inside the loop to repeat commands
+        if_bee_nectar: 'Use the "if" block to decide if the bee should get nectar'
+        if_else_bee: |-
+          Use the "if/else" block so that the Bee gets nectar from a flower, and makes honey if it's not a flower
+        repeat_full_circle: Enter in the number of times the zombie has to move to make a full circle
+        place_length_variable: Drag the length variable here to replace the question marks
+        arrows_move_actor: Use the arrows to move the actor
+        right_arrow_fireball: Use the right arrow to shoot fireballs
+        name_function: Write the name of your function here

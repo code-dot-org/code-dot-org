@@ -36,6 +36,7 @@
   of: এর
   more: বেশি
   less: কম
+  beta: beta
   try_hoc: Hour of Code এ আসতে, এখানে ক্লিক করো>>
   try_k8intro: অথবা, আমাদের K-8 Intro কম্পিউটার সায়েন্স কোর্স (15 25 ঘন্টা) করার
     চেষ্টা করো।
@@ -589,3 +590,7 @@
     completed_too_many_blocks: completed, too many blocks
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
+  studio:
+    courses_working_on: Courses you're working on
+    completed_courses: Completed courses
+    all_courses: All courses

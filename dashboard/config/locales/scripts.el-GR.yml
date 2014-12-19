@@ -330,12 +330,12 @@
           Variables: Μεταβλητές
           For Loops: Βρόχοι Για
         potus:
-          title: special
-          description_short: special
-          description: special
-          Special: Special
+          title: Ειδικά / επιπλέον
+          description_short: Ειδικά / επιπλέον
+          description: Ειδικά / επιπλέον
+          Special: Ειδικά / επιπλέον
         special:
-          title: special
-          description_short: special
-          description: special
-          Special: Special
+          title: Ειδικά / επιπλέον
+          description_short: Ειδικά / επιπλέον
+          description: Ειδικά / επιπλέον
+          Special: Ειδικά / επιπλέον

@@ -244,7 +244,10 @@ class User < ActiveRecord::Base
 
   def next_unpassed_progression_level(script)
     user_levels_by_level = self.user_levels.index_by(&:level_id)
-    script.script_levels.detect do |script_level|
+    cached_script = script
+    cached_script = Script.get_from_cache(script.id) if script.should_be_cached?
+    
+    cached_script.script_levels.detect do |script_level|
       user_level = user_levels_by_level[script_level.level_id]
       is_unpassed_progression_level(script_level, user_level)
     end
@@ -550,16 +553,51 @@ SQL
     retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_script = UserScript.where(user: self, script: script).first_or_create
       time_now = Time.now
-      user_script.started_at ||= time_now
-      user_script.last_progress_at = time_now
 
-      if user_script.check_completed?
-        user_script.completed_at ||= time_now
+      # doing this (instead of just user_script.save) avoids wrapping
+      # the update in a transaction (which could be an epty
+      # transaction (?!)
+
+      update = {}
+      update[:started_at] = time_now unless user_script.started_at
+      update[:last_progress_at] = time_now 
+
+      if !user_script.completed_at && user_script.check_completed?
+        update[:completed_at] = time_now
       end
 
-      user_script.save!
-      return user_script
+      # update_all bypasses validations/transactions/etc
+      UserScript.where(id: user_script.id).update_all(update)
     end
+  end
+
+  # returns whether a new level has been completed
+  def track_level_progress(script_level, new_result)
+    retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+      # this contortion is necessary while we are in the process of
+      # migrating between UserLevels without scripts to UserLevels
+      # with scripts. When this is done we can just do first_or_create
+
+      user_level = UserLevel.where(user_id: self.id,
+                                   level_id: script_level.level_id,
+                                   script_id: [script_level.script_id, nil]).first
+
+      unless user_level
+        user_level = UserLevel.create(user_id: self.id,
+                                      level_id: script_level.level_id,
+                                      script_id: script_level.script_id)
+      end
+
+      update = {}
+      update[:attempts] = user_level.attempts + 1 unless user_level.best?
+      if user_level.best_result.nil? || new_result > user_level.best_result
+        update[:best_result] = new_result
+      end
+      UserLevel.where(id: user_level.id).update_all(update) unless update.empty?
+
+      return true if !user_level.passing? && Activity.passing?(new_result) # user_level is the old result
+    end
+    return false
   end
 
   def assign_script(script)

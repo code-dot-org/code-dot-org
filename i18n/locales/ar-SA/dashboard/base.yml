@@ -36,6 +36,7 @@ ar:
   of: من
   more: أكثر
   less: أقل
+  beta: beta
   try_hoc: 'قم بتجربة ساعة من البرمجة, انقر هنا>> '
   try_k8intro: 'جرب مقدمة عن درس "علوم الكمبيوتر" للمستوى المبتدئ والمتوسط  (من 15 الى 25 ساعة)'
   k8intro: 'مقدمة عن درس "علوم الكمبيوتر" للمستوى المبتدئ والمتوسط  (من 15 الى 25 ساعة)'
@@ -509,3 +510,7 @@ ar:
     completed_too_many_blocks: أكملت، كتل كثيرة جداً
     completed_perfect: مكتمل, ممتاز
     furthest_level_attempted: حاول المستوى الأبعد
+  studio:
+    courses_working_on: "Courses you're working on"
+    completed_courses: Completed courses
+    all_courses: All courses

@@ -100,18 +100,16 @@
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Start
           med eit kvadrat<br/>Set  ein trekant over kvadratet<br/>Set ein trekant
           under kvadratet
-        0: '? Start med en firkant <br/> Sett en trekant til høyre for torget <br/>
-          Sett et parallellogram under firkanten <br/> Sett trekanten til høyre for
-          parallellogrammet'
-        1: ': Start med en firkant <br/> Sett en trekant til høyre for torget <br/>
-          Sett et parallellogram under firkanten <br/> Sett trekanten til høyre for
-          parallellogrammet'
+        0: '? Start med ein firkant<br/>Sett ein trekant til høgre for firkanten<br/>Sett
+          eit parallellogram under firkanten<br/>Sett ein trekant til høgre for parallellogrammet'
+        1: ': Start med ein firkant<br/>Sett ein trekant til høgre for firkanten<br/>Sett
+          eit parallellogram under firkanten<br/>Set ein trekant til høgre for parallellogrammet'
         Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Start
-          med en firkant <br/> Sett et parallellogram over firkanten. <br/> Sett en
-          trekant til høyre for parallellogrammet
+          med ein firkant<br/>Sett eit parallellogram over firkanten<br/>Sett ein
+          trekant til høgre for parallellogrammet
         Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Start
-          med en firkant <br/> Sett en trekant under firkanten <br/> Sett et parallellogram
-          til høyre for trekanten
+          med ein firkant<br/>Sett ein trekant under firkanten<br/>Sett eit parallellogram
+          til høgre for trekanten
       2-3 Algorithms Multi 2:
         Multiple Choice: Flervalg
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Start
@@ -369,14 +367,14 @@
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
       Coordinates Multi 1:
-        Video game Coordinates: Video game Coordinates
-        Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        Which answer best describes the unicorn's movement?: Which answer best describes
-          the unicorn's movement?
-        The unicorn moves across the screen: The unicorn moves across the screen
-        The unicorn's y value changes: The unicorn's y value changes
-        The unicorn moves to the left: The unicorn moves to the left
-        The unicorn's x value changes: The unicorn's x value changes
+        Video game Coordinates: Videospillkoordinater
+        Ninjacat Demo Embed.level: Ninjakatt Demo Embed.level
+        Which answer best describes the unicorn's movement?: Kva svar beskriv best
+          einhjørningens rørsler?
+        The unicorn moves across the screen: Einhjørningen flyttar over skjermen
+        The unicorn's y value changes: Einhjørningens y-verdi endrast
+        The unicorn moves to the left: Einhjørningen flyttar til venstre
+        The unicorn's x value changes: Einhjørningens x-verdi endrast
       K-1 Artist 1 Multi 1:
         Multiple Choice: Flervalg
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png,
