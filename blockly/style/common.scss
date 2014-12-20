@@ -87,6 +87,14 @@ div.droplet-palette-group-header-selected {
   background-color: #e0e053;
 }
 
+.droplet-palette-group-header.red {
+  border-left:10px solid #FA8A8C;
+}
+
+.droplet-palette-group-header-selected.red {
+  background-color: #FA8A8C;
+}
+
 .droplet-wrapper-div {
   outline-style: none;
 }

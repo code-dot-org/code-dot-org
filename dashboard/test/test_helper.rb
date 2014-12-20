@@ -39,6 +39,23 @@ class ActiveSupport::TestCase
   end
 
 
+  # some s3 helpers/mocks
+  def expect_s3_upload
+    CDO.disable_s3_image_uploads = false
+    AWS::S3.expects(:upload_to_bucket).returns(true).twice
+  end
+
+  def expect_s3_upload_failure
+    CDO.disable_s3_image_uploads = false
+    AWS::S3.expects(:upload_to_bucket).returns(nil)
+  end
+
+  def expect_no_s3_upload
+    CDO.disable_s3_image_uploads = false
+    AWS::S3.expects(:upload_to_bucket).never
+  end
+
+
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   #
   # Note: You'll currently still have to declare fixtures explicitly in integration tests
