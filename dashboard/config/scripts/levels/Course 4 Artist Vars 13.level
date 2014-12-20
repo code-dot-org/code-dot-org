@@ -20,7 +20,9 @@
     "use_contract_editor": "false",
     "impressive": "false",
     "embed": "false",
-    "callout_json": "[{\r\n  \"localization_key\": \"which_equation\",\r\n  \"element_id\": \"[block-id='10']\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"top left\", \"at\": \"bottom left\"},\r\n    \"style\": { \"classes\": \"no-tip\" }\r\n  }\r\n}]"
+    "callout_json": "[{\r\n  \"localization_key\": \"which_equation\",\r\n  \"element_id\": \"[block-id='10']\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"top left\", \"at\": \"bottom left\"},\r\n    \"style\": { \"classes\": \"no-tip\" }\r\n  }\r\n}]",
+    "slider_speed": ".6",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
