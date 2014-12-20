@@ -37,25 +37,25 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="procedures_defnoreturn" movable="false">
+        <block type="procedures_defnoreturn" uservisible="false">
           <mutation>
             <arg name="points"/>
             <description>Adds the given number of points to the player_points variable.</description>
           </mutation>
           <title name="NAME">score_points</title>
           <statement name="STACK">
-            <block type="variables_set" inline="false">
+            <block type="variables_set" inline="false" uservisible="false">
               <title name="VAR">player_points</title>
               <value name="VALUE">
-                <block type="math_arithmetic" inline="true">
+                <block type="math_arithmetic" inline="true" uservisible="false">
                   <title name="OP">ADD</title>
                   <value name="A">
-                    <block type="variables_get">
+                    <block type="variables_get" uservisible="false">
                       <title name="VAR">player_points</title>
                     </block>
                   </value>
                   <value name="B">
-                    <block type="math_number">
+                    <block type="math_number" uservisible="false">
                       <title name="NUM">???</title>
                     </block>
                   </value>
@@ -92,7 +92,7 @@
             </block>
           </next>
         </block>
-        <block type="studio_whenSpriteCollided">
+        <block type="studio_whenSpriteCollided" x="20" y="210">
           <title name="SPRITE1">1</title>
           <title name="SPRITE2">anything</title>
           <next>
