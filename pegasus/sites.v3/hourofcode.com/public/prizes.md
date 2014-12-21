@@ -119,6 +119,10 @@ Check out <a href="<%= hoc_uri('/prizes-terms') %>">Terms and Conditions</a> or 
 
 <h1 id="faq">Frequently Asked Questions</h1>
 
+## If I received Dropbox space as a gift last year, can I get it again?
+
+If you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift. Dropbox space is valid for one year after it is applied to your account. 
+
 
 ## Does your whole school have to enter to win the $10,000 in hardware?
 
