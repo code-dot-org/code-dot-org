@@ -14,6 +14,7 @@ theme: none
 ## Lesson Overview
 
 Use the Design Recipe to write functions that produce images.
+
 [summary]
 
 ## Teaching Summary

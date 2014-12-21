@@ -8,7 +8,19 @@ subject: "Your gift code"
 - Gift Code: `<%= prize_code_s %>`
 
 <% if prize_choice_s == "Dropbox" %>
-Note: Dropbox space expires 1 year after it's applied to your account. Limit one redemption per organizer.
+Note: Dropbox space expires 1 year after it's applied to your account. Limit one redemption per organizer. Redeem your gift at [https://www.dropbox.com/coupons](https://www.dropbox.com/coupons).
+<% end %>
+
+<% if prize_choice_s == "Skype" %>
+
+**To redeem your Skype gift code:**
+1. Sign into your Skype account [on your browser](http://www.skype.com/go/myaccount).
+2. Scroll down to "Billing and Payments" and click "Redeem Voucher."
+
+![image](https://code.org/images/email/fit-200/skype_redeem_voucher.jpg)
+
+3. Enter your voucher number and submit.
+
 <% end %>
 
 ## If you enjoyed the Hour of Code, consider going beyond
