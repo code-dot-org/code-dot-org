@@ -29,10 +29,10 @@ Hour of Code has won the support of both [Republicans and Democrats](https://www
 
 | Code.org Goal | Accomplishment |
 |------|----------------|
-| Inspire students | Over 75 million students have tried the [Hour of Code](/learn). |
+| Inspire students | Tens of millions of students have tried the [Hour of Code](/learn). |
 | Create fantastic  courses | 99% of teachers recommend the Code.org [intro CS curriculum](http://learn.code.org) |
-| Reach classrooms | Our [intro course](http://studio.code.org) is in 70,000 classrooms, reaching 3M students |
-| Improve diversity in CS | In our online courses, [41% of the students are girls](http://codeorg.tumblr.com/post/98856300118/diversity), and 37% are black or Hispanic. In our high school classrooms, [34% are girls, and 60% African American or Hispanic](http://codeorg.tumblr.com/post/98856300118/diversity) |
+| Reach classrooms | Our [intro courses](http://studio.code.org) are in 90,000 classrooms, reaching 4M students |
+| Improve diversity in CS | In our online courses, 43% of  students are girls and 37% are black or Hispanic. In our high school classrooms, [34% are girls, and 60% African American or Hispanic](http://codeorg.tumblr.com/post/98856300118/diversity) |
 | Prep new CS teachers | We've prepared 3,000 new teachers across grades K-12. |
 | Change school district curriculum | [60+ districts](/educate/partner-districts) are adding [CS classes](/educate/curriculum) with us, including all the largest 7 in the US|
 | Set up policies to support CS | Policy changed in [16 states](/action) including CA, NY, FL, IL, OH.|
@@ -42,7 +42,9 @@ Hour of Code has won the support of both [Republicans and Democrats](https://www
 <br/>
 <br/>
 ## More information, history, and philosophy
-Code.org launched in 2013 as a project of co-founders Ali and Hadi Partovi. Our initial work was a [video](https://www.youtube.com/watch?v=nKIu9yen5nc) that became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded to build a full organization supporting a a worldwide movement. Our goal is for computer science to be a fixed part of school curriculum. To support that goal, we are doing work across the education spectrum: designing our own courses or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes. 
+Code.org launched in 2013 as a project of co-founders Ali and Hadi Partovi. Our initial work was a [video](https://www.youtube.com/watch?v=nKIu9yen5nc) that became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded to build a full organization supporting a a worldwide movement. Our goal is for computer science to be a fixed part of school curriculum. 
+
+To support our goal, we do work across the education spectrum: designing our own courses or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes. 
 
 Our work builds upon [decades of effort, by countless organizations and individuals](https://docs.google.com/document/d/1rdEUqAkYtKPMD4UeEmpZCAau4_AdIOGbZDqLkePAQrY/pub) who have helped establish, fund, and spread computer science education. We're thankful to benefit from the tireless help of the broader computer science education community.
 
