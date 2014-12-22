@@ -10643,8 +10643,27 @@ Webapp.init = function(config) {
       Blockly.HSV_SATURATION = 0.6;
 
       Blockly.SNAP_RADIUS *= Webapp.scale.snapRadius;
+    } else {
+      // Set up an event handler to create breakpoints when clicking in the
+      // ace gutter:
+      var aceEditor = BlocklyApps.editor.aceEditor;
+      if (aceEditor) {
+        aceEditor.on("guttermousedown", function(e) {
+          var target = e.domEvent.target;
+          if (target.className.indexOf("ace_gutter-cell") == -1) {
+            return;
+          }
+          var row = e.getDocumentPosition().row;
+          var bps = e.editor.session.getBreakpoints();
+          if (bps[row]) {
+            e.editor.session.clearBreakpoint(row);
+          } else {
+            e.editor.session.setBreakpoint(row);
+          }
+          e.stop();
+        });
+      }
     }
-
     drawDiv();
   };
 
@@ -10672,27 +10691,6 @@ Webapp.init = function(config) {
       if (config.level.sliderSpeed) {
         Webapp.speedSlider.setValue(config.level.sliderSpeed);
       }
-    }
-    // Set up an event handler to create breakpoints when clicking in the
-    // ace gutter:
-    var aceEditor = BlocklyApps.editor.aceEditor;
-    // TODO (cpirich): investigate timing issue that results in aceEditor
-    // not always being available at this stage during init...
-    if (aceEditor) {
-      aceEditor.on("guttermousedown", function(e) {
-        var target = e.domEvent.target;
-        if (target.className.indexOf("ace_gutter-cell") == -1) {
-          return;
-        }
-        var row = e.getDocumentPosition().row;
-        var bps = e.editor.session.getBreakpoints();
-        if (bps[row]) {
-          e.editor.session.clearBreakpoint(row);
-        } else {
-          e.editor.session.setBreakpoint(row);
-        }
-        e.stop();
-      });
     }
     var debugInput = document.getElementById('debug-input');
     if (debugInput) {
