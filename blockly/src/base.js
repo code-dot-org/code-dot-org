@@ -353,6 +353,9 @@ BlocklyApps.init = function(config) {
       if (BlocklyApps.editCode) {
         BlocklyApps.editor.toggleBlocks();
         updateHeadersAfterDropletToggle(BlocklyApps.editor.currentlyUsingBlocks);
+        if (!BlocklyApps.editor.currentlyUsingBlocks) {
+          BlocklyApps.editor.aceEditor.focus();
+        }
       } else {
         feedback.showGeneratedCode(BlocklyApps.Dialog);
       }
@@ -462,6 +465,8 @@ BlocklyApps.init = function(config) {
         palette: utils.generateDropletPalette(config.level.codeFunctions,
                                               config.level.categoryInfo)
       });
+
+      BlocklyApps.editor.aceEditor.setShowPrintMargin(false);
 
       // Add an ace completer for the API functions exposed for this level
       if (config.level.codeFunctions) {
