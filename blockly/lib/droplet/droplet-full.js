@@ -12139,7 +12139,7 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       this.aceEditor = ace.edit(this.aceElement);
       this.aceEditor.setTheme('ace/theme/chrome');
       this.aceEditor.setFontSize(15);
-      this.aceEditor.getSession().setMode('ace/mode/coffee');
+      this.aceEditor.getSession().setMode('ace/mode/' + this.options.mode);
       this.aceEditor.getSession().setTabSize(2);
       this.aceEditor.on('change', (function(_this) {
         return function() {
