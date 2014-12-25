@@ -409,7 +409,7 @@ a.about_list_item {
 
 /* for homepage studio bar.. */
 
-#studiobar h1 {
+.studiobar h1 {
   color: rgb(88, 103, 113);
   margin: 0px;
   padding: 0px;
@@ -418,21 +418,21 @@ a.about_list_item {
   /* background-color: rgb(255, 128, 0); color:white */
 }
 
-#studiobar a:link, #studiobar a:visited, #studiobar a:hover, #studiobar a:active {
+.studiobar a:link, .studiobar a:visited, .studiobar a:hover, .studiobar a:active {
   text-decoration: none;
   color: rgb(88, 103, 113);
 }
 
-#studiobar .outerblock {
+.studiobar .outerblock {
   width: 223px;
   margin-bottom: 36px;
 }
 
-#studiobar .innerblock {
+.studiobar .innerblock {
   background-color: rgba(88, 103, 113, 0.1)
 }
 
-#studiobar .title {
+.studiobar .title {
   font-size: 20px;
   font-family: 'Gotham 5r', sans-serif;
   padding-left: 10px;
@@ -443,7 +443,7 @@ a.about_list_item {
   padding-top: 10px;
 }
 
-#studiobar .body {
+.studiobar .body {
   font-family: 'Gotham 4r', sans-serif;
   padding: 10px;
   padding-top: 4px;
