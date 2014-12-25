@@ -49,7 +49,8 @@ To support our goal, we do work across the education spectrum: designing our own
 Our work builds upon [decades of effort, by countless organizations and individuals](https://docs.google.com/document/d/1rdEUqAkYtKPMD4UeEmpZCAau4_AdIOGbZDqLkePAQrY/pub) who have helped establish, fund, and spread computer science education. We're thankful to benefit from the tireless help of the broader computer science education community.
 
 - [Code.org overview brochure (PDF)](/files/Code.orgOverview.pdf)
-- [A letter from our founder addressing our motivations](http://codeorg.tumblr.com/post/73963049605/the-secret-agenda-of-code-org)
+- [TEDx talk by our founder Hadi Partovi about why computer science is for all (VIDEO)](https://www.youtube.com/watch?v=m-U9wzC9xLk)
+- [A letter from our founder addressing misconceptions about our motivations](http://codeorg.tumblr.com/post/73963049605/the-secret-agenda-of-code-org)
 
 
 We believe that a quality computer science education should be available to every child, not just a lucky few. All curriculum resources and tutorials we author are free to use under a [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/4.0/) license, and our technology is developed as an [open source project](https://github.com/code-dot-org/code-dot-org).

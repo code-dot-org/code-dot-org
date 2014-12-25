@@ -11,7 +11,7 @@ Of course, we promised Dropbox space or Skype credit as a thank you. After your 
 
 At the end of your survey, please choose between 10 GB of Dropbox space or $10 of Skype credit and your unique code will be emailed to you. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
 
-- Hadi Partovi, Code.org
+Hadi Partovi, Code.org
 
 Take [the survey](<%= survey_url %>).
 
