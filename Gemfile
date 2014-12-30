@@ -4,12 +4,22 @@ ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'
 
+gem 'sinatra', '1.4.4', require: 'sinatra/base'
+gem 'rack-contrib', '~> 1.1'
+
 gem 'mysql2', '0.3.13'
 gem 'seamless_database_pool'
 
 gem 'le', '~> 2.2'
 gem 'os'
 gem 'redis', '~> 3.1.0'
+gem 'google_drive', '~> 0.3.10'
+
+group :development do
+  gem 'rerun', '~> 0.10.0'
+  gem 'shotgun'
+  gem 'thin', '~> 1.6.2'
+end
 
 group :development, :test do
   # Use debugger
@@ -37,10 +47,16 @@ group :development, :test do
   gem 'parallel'
 end
 
+group :production do
+  gem 'unicorn', '~> 4.8.2'
+end
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
+gem 'chronic', '~> 0.10.2'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -51,11 +67,10 @@ gem 'uglifier', '>= 1.3.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+gem 'phantomjs', '~> 1.9.7.1'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
-
-# Use unicorn as the app server
-gem 'unicorn'
 
 # authentication and permissions
 gem 'devise'
@@ -72,6 +87,8 @@ gem 'haml'
 gem 'jquery-ui-rails'
 
 gem 'nokogiri'
+
+gem 'highline', '~> 1.6.21'
 
 gem 'honeybadger'
 
