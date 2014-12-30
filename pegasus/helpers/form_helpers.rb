@@ -108,7 +108,7 @@ def insert_form(kind, data, options={})
     email: data[:email_s].to_s.strip.downcase,
     name: data[:name_s].to_s.strip,
     kind: kind,
-    data: JSON.dump(data),
+    data: data.to_json,
     created_at: timestamp,
     created_ip: request.ip,
     updated_at: timestamp,
@@ -133,7 +133,7 @@ def update_form(kind, secret, data)
   form[:user_id] = dashboard_user[:id] if dashboard_user && !dashboard_user[:admin]
   form[:email] = data[:email_s].to_s.strip.downcase if data.has_key?(:email_s)
   form[:name] = data[:name_s].to_s.strip if data.has_key?(:name_s)
-  form[:data] = JSON.dump(data)
+  form[:data] = data.to_json
   form[:updated_at] = DateTime.now
   form[:updated_ip] = request.ip
   form[:processed_at] = nil
