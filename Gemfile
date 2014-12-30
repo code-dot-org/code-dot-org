@@ -47,14 +47,12 @@ group :development, :test do
   gem 'parallel'
 end
 
-group :production do
-  gem 'unicorn', '~> 4.8.2'
-end
-
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
+gem 'unicorn', '~> 4.8.2'
 
 gem 'chronic', '~> 0.10.2'
 
