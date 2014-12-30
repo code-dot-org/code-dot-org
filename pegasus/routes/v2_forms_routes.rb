@@ -8,7 +8,7 @@ post '/v2/forms/:kind' do |kind|
 
   begin
     form = insert_form(kind, payload)
-    redirect "/v2/forms/#{kind}/#{form.secret}", 201
+    redirect "/v2/forms/#{kind}/#{form[:secret]}", 201
   rescue FormError=>e
     form_error! e
   end
@@ -50,7 +50,7 @@ patch '/v2/forms/:kind/:secret' do |kind, secret|
   begin
     content_type :json
     forbidden! unless form = update_form(kind, secret, payload)
-    form.data.merge(secret: secret).to_json
+    JSON.load(form[:data]).merge(secret: secret).to_json
   rescue FormError=>e
     form_error! e
   end
@@ -110,7 +110,7 @@ post '/v2/forms/:parent_kind/:parent_id/children/:kind' do |parent_kind, parent_
 
   begin
     form = insert_form(kind, payload, parent_id:parent_form[:id])
-    redirect "/v2/forms/#{kind}/#{form.secret}", 201
+    redirect "/v2/forms/#{kind}/#{form[:secret]}", 201
   rescue FormError=>e
     form_error! e
   end
