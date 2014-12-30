@@ -2,7 +2,6 @@
 title: Hour of Code event
 ---
 -id = File.basename(request.path_info)
--pass unless form = Form.first(kind:'HocSignup2014', id:id)
+-pass unless form = Form2.from_row(DB[:forms].where(kind:'HocSignup2014', id:id).first)
 
 %h1= id
--puts JSON.pretty_generate(form)

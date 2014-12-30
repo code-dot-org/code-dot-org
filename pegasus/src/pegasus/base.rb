@@ -142,8 +142,6 @@ module Pegasus
         kind.submit(request, params).to_json
       rescue FormError=>e
         halt 400, {'Content-Type'=>'text/json'}, e.errors.to_json
-      rescue ValidationError=>e
-        halt 400, {'Content-Type'=>'text/json'}, e.errors.to_json
       end
     end
 
