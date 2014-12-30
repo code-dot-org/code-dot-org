@@ -86,7 +86,7 @@ gem 'haml'
 
 gem 'jquery-ui-rails'
 
-gem 'nokogiri'
+gem 'nokogiri', '1.6.1'
 
 gem 'highline', '~> 1.6.21'
 
