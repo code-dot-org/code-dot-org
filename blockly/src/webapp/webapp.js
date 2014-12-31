@@ -1026,6 +1026,8 @@ Webapp.callCmd = function (cmd) {
     case 'setStyle':
     case 'attachEventHandler':
     case 'startWebRequest':
+    case 'setTimeout':
+    case 'clearTimeout':
       BlocklyApps.highlight(cmd.id);
       retVal = Webapp[cmd.name](cmd.opts);
       break;
@@ -1406,6 +1408,7 @@ Webapp.attachEventHandler = function (opts) {
         var hammerElement = new Hammer(divWebapp, { 'preventDefault': true });
         hammerElement.on(opts.eventName,
                          Webapp.onEventFired.bind(this, opts));
+        break;
       default:
         // For now, we're not tracking how many of these we add and we don't allow
         // the user to detach the handler. We detach all listeners by cloning the
@@ -1437,6 +1440,23 @@ Webapp.startWebRequest = function (opts) {
   req.open('GET', String(opts.url), true);
   req.send();
 };
+
+Webapp.onTimeoutFired = function (opts) {
+  Webapp.eventQueue.push({
+    'fn': opts.func
+  });
+};
+
+Webapp.setTimeout = function (opts) {
+  return window.setTimeout(Webapp.onTimeoutFired.bind(this, opts), opts.milliseconds);
+};
+
+Webapp.clearTimeout = function (opts) {
+  // NOTE: we do not currently check to see if this is a timer created by
+  // our Webapp.setTimeout() function
+  window.clearTimeout(opts.timeoutId);
+};
+
 
 /*
 var onWaitComplete = function (opts) {
