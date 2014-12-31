@@ -55,6 +55,7 @@ levels.ec_simple = {
     {'func': 'createCanvas', 'category': 'Canvas', 'params': ["'id'", "400", "600"] },
     {'func': 'canvasDrawLine', 'category': 'Canvas', 'params': ["'id'", "0", "0", "400", "600"] },
     {'func': 'canvasDrawCircle', 'category': 'Canvas', 'params': ["'id'", "200", "300", "100"] },
+    {'func': 'canvasDrawRect', 'category': 'Canvas', 'params': ["'id'", "100", "200", "200", "200"] },
     {'func': 'canvasSetLineWidth', 'category': 'Canvas', 'params': ["'id'", "3"] },
     {'func': 'canvasSetStrokeColor', 'category': 'Canvas', 'params': ["'id'", "'red'"] },
     {'func': 'canvasSetFillColor', 'category': 'Canvas', 'params': ["'id'", "'yellow'"] },
