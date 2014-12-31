@@ -213,3 +213,17 @@ exports.startWebRequest = function (blockId, url, func) {
                           {'url': url,
                            'func': func });
 };
+
+exports.setTimeout = function (blockId, func, milliseconds) {
+  return Webapp.executeCmd(blockId,
+                          'setTimeout',
+                          {'func': func,
+                           'milliseconds': milliseconds });
+};
+
+exports.clearTimeout = function (blockId, timeoutId) {
+  return Webapp.executeCmd(blockId,
+                           'clearTimeout',
+                           {'timeoutId': timeoutId });
+};
+
