@@ -5947,13 +5947,13 @@ exports.marshalInterpreterToNative = function (interpreterVar) {
     var nativeArray = [];
     nativeArray.length = interpreterVar.length;
     for (var i = 0; i < nativeArray.length; i++) {
-      nativeArray[i] = marshalInterpreterToNative(interpreterVar.properties[i]);
+      nativeArray[i] = exports.marshalInterpreterToNative(interpreterVar.properties[i]);
     }
     return nativeArray;
   } else if (Webapp.interpreter.isa(interpreterVar, Webapp.interpreter.OBJECT)) {
     var nativeObject = {};
     for (var prop in interpreterVar.properties) {
-      nativeObject[prop] = marshalInterpreterToNative(interpreterVar.properties[prop]);
+      nativeObject[prop] = exports.marshalInterpreterToNative(interpreterVar.properties[prop]);
     }
     return nativeObject;
   } else {

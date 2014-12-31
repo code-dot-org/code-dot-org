@@ -1856,13 +1856,13 @@ exports.marshalInterpreterToNative = function (interpreterVar) {
     var nativeArray = [];
     nativeArray.length = interpreterVar.length;
     for (var i = 0; i < nativeArray.length; i++) {
-      nativeArray[i] = marshalInterpreterToNative(interpreterVar.properties[i]);
+      nativeArray[i] = exports.marshalInterpreterToNative(interpreterVar.properties[i]);
     }
     return nativeArray;
   } else if (Webapp.interpreter.isa(interpreterVar, Webapp.interpreter.OBJECT)) {
     var nativeObject = {};
     for (var prop in interpreterVar.properties) {
-      nativeObject[prop] = marshalInterpreterToNative(interpreterVar.properties[prop]);
+      nativeObject[prop] = exports.marshalInterpreterToNative(interpreterVar.properties[prop]);
     }
     return nativeObject;
   } else {
@@ -9791,6 +9791,16 @@ exports.canvasDrawCircle = function (blockId, elementId, x, y, radius) {
                            'radius': radius });
 };
 
+exports.canvasDrawRect = function (blockId, elementId, x, y, width, height) {
+  return Webapp.executeCmd(blockId,
+                          'canvasDrawRect',
+                          {'elementId': elementId,
+                           'x': x,
+                           'y': y,
+                           'width': width,
+                           'height': height });
+};
+
 exports.canvasSetLineWidth = function (blockId, elementId, width) {
   return Webapp.executeCmd(blockId,
                           'canvasSetLineWidth',
@@ -9917,6 +9927,20 @@ exports.startWebRequest = function (blockId, url, func) {
                           {'url': url,
                            'func': func });
 };
+
+exports.setTimeout = function (blockId, func, milliseconds) {
+  return Webapp.executeCmd(blockId,
+                          'setTimeout',
+                          {'func': func,
+                           'milliseconds': milliseconds });
+};
+
+exports.clearTimeout = function (blockId, timeoutId) {
+  return Webapp.executeCmd(blockId,
+                           'clearTimeout',
+                           {'timeoutId': timeoutId });
+};
+
 
 },{}],30:[function(require,module,exports){
 /**
@@ -10070,6 +10094,8 @@ levels.ec_simple = {
   'codeFunctions': [
     {'func': 'attachEventHandler', 'category': 'General', 'params': ["'id'", "'click'", "function() {\n  \n}"] },
     {'func': 'startWebRequest', 'category': 'General', 'params': ["'http://api.openweathermap.org/data/2.5/weather?q=London,uk'", "function(status, type, content) {\n  \n}"] },
+    {'func': 'setTimeout', 'category': 'General', 'params': ["function() {\n  \n}", "1000"] },
+    {'func': 'clearTimeout', 'category': 'General', 'params': ["0"] },
     {'func': 'createHtmlBlock', 'category': 'General', 'params': ["'id'", "'html'"] },
     {'func': 'replaceHtmlBlock', 'category': 'General', 'params': ["'id'", "'html'"] },
     {'func': 'deleteHtmlBlock', 'category': 'General', 'params': ["'id'"] },
@@ -10091,6 +10117,7 @@ levels.ec_simple = {
     {'func': 'createCanvas', 'category': 'Canvas', 'params': ["'id'", "400", "600"] },
     {'func': 'canvasDrawLine', 'category': 'Canvas', 'params': ["'id'", "0", "0", "400", "600"] },
     {'func': 'canvasDrawCircle', 'category': 'Canvas', 'params': ["'id'", "200", "300", "100"] },
+    {'func': 'canvasDrawRect', 'category': 'Canvas', 'params': ["'id'", "100", "200", "200", "200"] },
     {'func': 'canvasSetLineWidth', 'category': 'Canvas', 'params': ["'id'", "3"] },
     {'func': 'canvasSetStrokeColor', 'category': 'Canvas', 'params': ["'id'", "'red'"] },
     {'func': 'canvasSetFillColor', 'category': 'Canvas', 'params': ["'id'", "'yellow'"] },
@@ -10277,6 +10304,7 @@ var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
 var Slider = require('../slider');
 var _ = utils.getLodash();
+var Hammer = utils.getHammer();
 
 /**
  * Create a namespace for the application.
@@ -11059,13 +11087,13 @@ Webapp.execute = function() {
                                           Globals: Webapp.Globals });
 
         var getCallbackObj = interpreter.createObject(interpreter.FUNCTION);
-        // Only allow four levels of depth when marshalling the return value
+        // Only allow five levels of depth when marshalling the return value
         // since we will occasionally return DOM Event objects which contain
         // properties that recurse over and over...
         var wrapper = codegen.makeNativeMemberFunction(interpreter,
                                                        nativeGetCallback,
                                                        null,
-                                                       4);
+                                                       5);
         interpreter.setProperty(scope,
                                 'getCallback',
                                 interpreter.createNativeFunction(wrapper));
@@ -11261,6 +11289,7 @@ Webapp.callCmd = function (cmd) {
     case 'createCanvas':
     case 'canvasDrawLine':
     case 'canvasDrawCircle':
+    case 'canvasDrawRect':
     case 'canvasSetLineWidth':
     case 'canvasSetStrokeColor':
     case 'canvasSetFillColor':
@@ -11280,6 +11309,8 @@ Webapp.callCmd = function (cmd) {
     case 'setStyle':
     case 'attachEventHandler':
     case 'startWebRequest':
+    case 'setTimeout':
+    case 'clearTimeout':
       BlocklyApps.highlight(cmd.id);
       retVal = Webapp[cmd.name](cmd.opts);
       break;
@@ -11349,6 +11380,7 @@ Webapp.canvasDrawLine = function (opts) {
     ctx.moveTo(opts.x1 * Webapp.canvasScale, opts.y1 * Webapp.canvasScale);
     ctx.lineTo(opts.x2 * Webapp.canvasScale, opts.y2 * Webapp.canvasScale);
     ctx.stroke();
+    return true;
   }
   return false;
 };
@@ -11366,6 +11398,23 @@ Webapp.canvasDrawCircle = function (opts) {
             2 * Math.PI);
     ctx.fill();
     ctx.stroke();
+    return true;
+  }
+  return false;
+};
+
+Webapp.canvasDrawRect = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  var ctx = div.getContext("2d");
+  if (ctx && divWebapp.contains(div)) {
+    ctx.rect(opts.x * Webapp.canvasScale,
+             opts.y * Webapp.canvasScale,
+             opts.width * Webapp.canvasScale,
+             opts.height * Webapp.canvasScale);
+    ctx.fill();
+    ctx.stroke();
+    return true;
   }
   return false;
 };
@@ -11611,15 +11660,49 @@ Webapp.onEventFired = function (opts, e) {
 
 Webapp.attachEventHandler = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
-  var divElement = document.getElementById(opts.elementId);
-  if (divWebapp.contains(divElement)) {
-    // For now, we're not tracking how many of these we add and we don't allow
-    // the user to detach the handler. We detach all listeners by cloning the
-    // divWebapp DOM node inside of reset()
-    divElement.addEventListener(
-        opts.eventName,
-        Webapp.onEventFired.bind(this, opts));
+  var domElement = document.getElementById(opts.elementId);
+  if (divWebapp.contains(domElement)) {
+    switch (opts.eventName) {
+      /*
+      Check for a specific set of Hammer v1 event names (full set below) and if
+      we find a match, instantiate Hammer on that element
+      
+      TODO (cpirich): review the following:
+      * whether using Hammer v1 events is the right choice
+      * choose the specific list of events
+      * consider instantiating Hammer just once per-element or on divWebapp
+      * review use of preventDefault
+
+      case 'hold':
+      case 'tap':
+      case 'doubletap':
+      case 'swipe':
+      case 'swipeup':
+      case 'swipedown':
+      case 'swipeleft':
+      case 'swiperight':
+      case 'rotate':
+      case 'release':
+      case 'gesture':
+      */
+      case 'pinch':
+      case 'pinchin':
+      case 'pinchout':
+        var hammerElement = new Hammer(divWebapp, { 'preventDefault': true });
+        hammerElement.on(opts.eventName,
+                         Webapp.onEventFired.bind(this, opts));
+        break;
+      default:
+        // For now, we're not tracking how many of these we add and we don't allow
+        // the user to detach the handler. We detach all listeners by cloning the
+        // divWebapp DOM node inside of reset()
+        domElement.addEventListener(
+            opts.eventName,
+            Webapp.onEventFired.bind(this, opts));
+    }
+    return true;
   }
+  return false;
 };
 
 Webapp.onHttpRequestEvent = function (opts) {
@@ -11640,6 +11723,23 @@ Webapp.startWebRequest = function (opts) {
   req.open('GET', String(opts.url), true);
   req.send();
 };
+
+Webapp.onTimeoutFired = function (opts) {
+  Webapp.eventQueue.push({
+    'fn': opts.func
+  });
+};
+
+Webapp.setTimeout = function (opts) {
+  return window.setTimeout(Webapp.onTimeoutFired.bind(this, opts), opts.milliseconds);
+};
+
+Webapp.clearTimeout = function (opts) {
+  // NOTE: we do not currently check to see if this is a timer created by
+  // our Webapp.setTimeout() function
+  window.clearTimeout(opts.timeoutId);
+};
+
 
 /*
 var onWaitComplete = function (opts) {
