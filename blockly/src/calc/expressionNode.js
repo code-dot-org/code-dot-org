@@ -186,7 +186,7 @@ ExpressionNode.prototype.collapse = function () {
  */
 ExpressionNode.prototype.getTokenListDiff = function (other) {
   if (this.children.length === 0) {
-    return [token(this.value.toString(), !this.isIdenticalTo(other))];
+    return [new Token(this.value.toString(), !this.isIdenticalTo(other))];
   }
 
   if (this.getType() !== ValueType.ARITHMETIC) {
@@ -197,11 +197,11 @@ ExpressionNode.prototype.getTokenListDiff = function (other) {
   var nodesMatch = other && (this.value === other.value) &&
     (this.children.length === other.children.length);
   return _.flatten([
-    token('(', !nodesMatch),
+    new Token('(', !nodesMatch),
     this.children[0].getTokenListDiff(nodesMatch && other.children[0]),
-    token(" " + this.value + " ", !nodesMatch),
+    new Token(" " + this.value + " ", !nodesMatch),
     this.children[1].getTokenListDiff(nodesMatch && other.children[1]),
-    token(')', !nodesMatch)
+    new Token(')', !nodesMatch)
   ]);
 };
 
@@ -225,11 +225,11 @@ ExpressionNode.prototype.getTokenList = function (markDeepest) {
   var rightDeeper = this.children[1].depth() > this.children[0].depth();
 
   return _.flatten([
-    token('(', false),
+    new Token('(', false),
     this.children[0].getTokenList(markDeepest && !rightDeeper),
-    token(" " + this.value + " ", false),
+    new Token(" " + this.value + " ", false),
     this.children[1].getTokenList(markDeepest && rightDeeper),
-    token(')', false)
+    new Token(')', false)
   ]);
 };
 
@@ -280,9 +280,13 @@ ExpressionNode.prototype.isEquivalentTo = function (target) {
 };
 
 /**
- * Creates a token with the given string that may or may not be "marked".
- * Marking indicates  things depending on the context.
+ * A token is essentially just a string that may or may not be "marked". Marking
+ * is done for two different reasons.
+ * (1) We're comparing two expressions and want to mark where they differ.
+ * (2) We're looking at a single expression and want to mark the deepest
+ *     subexpression.
  */
-function token(str, marked) {
-  return { str: str, marked: marked };
-}
+var Token = function (str, marked) {
+  this.str = str;
+  this.marked = marked;
+};
