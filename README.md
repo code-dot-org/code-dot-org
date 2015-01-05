@@ -87,9 +87,9 @@ You'll need to do this once:
   1. Install [XQuartz](http://xquartz.macosforge.org/trac) (NOTE: This is required to build the Canvas dependency).
 1. `cd code-dot-org`
 1. Edit `locals.yml`
-  1. Add `build_blockly: true`
+  1. Add `build_apps: true`
   1. Add `build_blockly_core: true`
-  1. Add `use_my_blockly: true`
+  1. Add `use_my_apps: true`
 1. `rake install`
 
 This configures your system to build blockly (and blockly-core) whenever you run `rake build` and to use the version of blockly that you build yourself.

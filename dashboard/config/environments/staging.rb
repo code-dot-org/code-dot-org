@@ -79,5 +79,5 @@ Dashboard::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # Whether or not to display pretty blockly.
-  config.pretty_blockly = true
+  config.pretty_apps = true
 end
