@@ -12,7 +12,7 @@ theme: none
 [together]
 
 ## Lesson Overview
-Make your programs smarter by using Conditional statements to let the computer make choices for you.
+We don’t always know ahead of time what things will be like when we run our computer programs.  Different users have different needs, and sometimes you will want to do something based off of one user's need that you don’t want to do with someone else.  That is where conditionals come in. This lesson demonstrates how conditionals can be used to tailor a program to specific information.
 
 [summary]
 
@@ -40,6 +40,17 @@ Make your programs smarter by using Conditional statements to let the computer m
 [together]
 
 # Teaching Guide
+
+## Materials, Resources and Prep
+### For the Student
+- Playing Cards
+- Paper for keeping track of how a program reacts to a card
+- Pens & Pencils
+
+### For the Teacher
+- One [Sample Program](/curriculum/course2/12/Activity12-Conditionals.pdf) for the class to look at
+- Print one [Conditionals with Cards Assessment](/curriculum/course2/12/Assessment12-Conditionals.pdf) for each student
+
 [/together]
 
 [together]
@@ -65,23 +76,7 @@ Up to now, all of the functions you’ve seen have done the same thing to their 
 and so on...
 This was evident when going from EXAMPLEs to the function definition: circling what changes essentially gives away the definition, and the number of variables would always match the number of things in the Domain.
 
-The cost function is special, because different toppings can result in totally different expressions being evaluated. If you were to circle everything that changes in the example, you would have the toppings circles and the price. That’s two changeable things, but the Domain of the function only has one thing in it - therefore, we can’t have two variables.
-
-Of course, price isn’t really an independent variable, since the price depends entirely on the topping. For example: if the topping is "cheese" the function will simply produce 9.00, if the topping is "pepperoni" the function will simply produce 10.50, and so on. The price is still defined in terms of the topping, and there are four possible toppings - four possible conditions - that the function needs to care about. The cost function makes use of a special language feature called conditionals, which is abbreviated in the code as cond.
-
 Each conditional has at least one clause. Each clause has a Boolean question and a result. In Luigi’s function, there is a clause for cheese, another for pepperoni, and so on. If the question evaluates to true, the expression gets evaluated and returned. If the question is false, the computer will skip to the next clause
-
-Look at the cost function:
-
-- How many clauses are there for the cost function?
-- Identify the question in the first clause.
-- Identify the question in the second clause.
-
-Square brackets enclose the question and answer for each clause. When students identify the questions, they should find the first expression within the square brackets. There can only be one expression in each answer.
-
-The last clause in a conditional can be an else clause, which gets evaluated if all the questions are false.
-
-In the cost function, what gets returned if all the questions are false? What would happen if there was no else clause? Try removing that clause from the code and evaluating an unknown topping, and see what happens.
 
 Else clauses are best used as a catch-all for cases that you can’t otherwise enumerate. If you can state a precise question for a clause, write the precise question instead of else. For example, if you have a function that does different things depending on whether some variable x is larger than 5, it is better for beginners to write the two questions (> x 5) and (<= x 5) rather than have the second question be else. Explicit questions make it easier to read and maintain programs.
 
