@@ -192,6 +192,10 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
     // Determine if there needs to be a category tree, or a simple list of
     // blocks.  This cannot be changed later, since the UI is very different.
     this.addToolboxOrFlyout_();
+
+    // Add a handler that allows the workspace to bump undeletable blocks
+    // back into its working area.
+    this.addChangeListener(this.bumpOrDeleteOutOfBoundsBlocks_);
   }
 
   /**
@@ -234,10 +238,6 @@ Blockly.BlockSpaceEditor.prototype.addFlyout_ = function() {
   flyout.autoClose = false;
   // Insert the flyout behind the blockSpace so that blocks appear on top.
   goog.dom.insertSiblingBefore(flyoutSvg, this.blockSpace.svgGroup_);
-
-  // If we want to apply this logic in toolbox mode, we need to move
-  // this listener hookup out of this method and up a few calls.
-  this.addChangeListener(this.bumpOrDeleteOutOfBoundsBlocks_);
 };
 
 /**
