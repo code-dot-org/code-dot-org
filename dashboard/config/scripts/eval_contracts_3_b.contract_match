@@ -1,0 +1,5 @@
+name 'Eval Contracts 3 B'
+title 'Eval Contracts 3 B'
+content1 'Write a contract for the text function'
+content2 'Eval Contracts 3 A.solution_blocks, 300'
+answer 'text|image|string:string|size:Number|color:string'

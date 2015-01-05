@@ -8,6 +8,7 @@ var EvalRect = require('./evalRect');
 var EvalEllipse = require('./evalEllipse');
 var EvalText = require('./evalText');
 var EvalStar = require('./evalStar');
+var EvalPolygon = require('./evalPolygon');
 
 // We don't use blockId at all in Eval since everything is evaluated at once.
 
@@ -60,6 +61,10 @@ exports.star = function (radius, style, color) {
 
 exports.radialStar = function (points, inner, outer, style, color) {
   return new EvalStar(points, inner, outer, style, color);
+};
+
+exports.polygon = function (points, length, style, color) {
+  return new EvalPolygon(points, length, style, color);
 };
 
 exports.placeImage = function (x, y, image) {

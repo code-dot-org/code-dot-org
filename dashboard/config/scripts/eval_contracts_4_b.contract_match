@@ -1,0 +1,5 @@
+name 'Eval Contracts 4 B'
+title 'Eval Contracts 4 B'
+content1 'Write a contract for the scale function'
+content2 'Eval Contracts 4 A.solution_blocks, 300'
+answer 'scale|image|factor:Number|image:image'

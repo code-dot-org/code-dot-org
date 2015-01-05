@@ -305,9 +305,12 @@ Blockly.topMostSVGParent = function(element) {
  * @param {string} name Element's tag name.
  * @param {!Object} attrs Dictionary of attribute names and values.
  * @param {Element=} opt_parent Optional parent on which to append the element.
+ * @param {Object=} opt_options
  * @return {!SVGElement} Newly created SVG element.
  */
-Blockly.createSvgElement = function(name, attrs, opt_parent) {
+Blockly.createSvgElement = function(name, attrs, opt_parent, opt_options) {
+  opt_options = opt_options || {};
+
   var e = /** @type {!SVGElement} */ (
       document.createElementNS(Blockly.SVG_NS, name));
   for (var key in attrs) {
@@ -320,7 +323,11 @@ Blockly.createSvgElement = function(name, attrs, opt_parent) {
     e.runtimeStyle = e.currentStyle = e.style;
   }
   if (opt_parent) {
-    opt_parent.appendChild(e);
+    if (opt_options.belowExisting) {
+      goog.dom.insertChildAt(opt_parent, e, 0);
+    } else {
+      goog.dom.appendChild(opt_parent, e);
+    }
   }
   return e;
 };

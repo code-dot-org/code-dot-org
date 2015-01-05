@@ -103,6 +103,7 @@ Blockly.makeColour = function(hue, saturation, value) {
   return goog.color.hsvToHex(hue, saturation, value * 256);
 };
 
+/** CONNECTION INPUT TYPES */
 /**
  * ENUM for a right-facing value input.  E.g. 'test' or 'return'.
  * @const
@@ -128,8 +129,6 @@ Blockly.PREVIOUS_STATEMENT = 4;
  * @const
  */
 Blockly.DUMMY_INPUT = 5;
-
-
 Blockly.FUNCTIONAL_INPUT = 6;
 Blockly.FUNCTIONAL_OUTPUT = 7;
 

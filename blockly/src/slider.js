@@ -77,6 +77,9 @@ var Slider = function(x, y, width, svgParent, opt_changeFunc) {
   dom.addMouseDownTouchEvent(this.knob_, function(e) {
     return thisSlider.knobMouseDown_(e);
   });
+  dom.addMouseDownTouchEvent(this.track_, function(e) {
+    return thisSlider.trackMouseDown_(e);
+  });
   dom.addMouseUpTouchEvent(this.SVG_, Slider.knobMouseUp_);
   dom.addMouseMoveTouchEvent(this.SVG_, Slider.knobMouseMove_);
   // Don't add touch events for mouseover. The UX is better on Android
@@ -97,8 +100,37 @@ Slider.startKnobX_ = 0;
  * @private
  */
 Slider.prototype.knobMouseDown_ = function(e) {
+  this.beginDrag_(this.mouseToSvg_(e));
+
+  // Stop browser from attempting to drag the knob.
+  e.preventDefault();
+  return false;
+};
+
+/**
+ * Snap the knob to the mouse location and start a drag
+ * when clicking on the track (but not on the knob).
+ * @param {!Event} e Mouse-down event.
+ * @private
+ */
+Slider.prototype.trackMouseDown_ = function(e) {
+  var mouseSVGPosition = this.mouseToSvg_(e);
+  this.snapToPosition_(mouseSVGPosition.x);
+  this.beginDrag_(mouseSVGPosition);
+
+  // Stop browser from attempting to drag the track.
+  e.preventDefault();
+  return false;
+};
+
+/**
+ * Start dragging the slider knob.
+ * @param {!Object} mouseStartSVG Mouse start position in SVG space
+ * @private
+ */
+Slider.prototype.beginDrag_ = function(startMouseSVG) {
   Slider.activeSlider_ = this;
-  Slider.startMouseX_ = this.mouseToSvg_(e).x;
+  Slider.startMouseX_ = startMouseSVG.x;
   Slider.startKnobX_ = 0;
   var transform = this.knob_.getAttribute('transform');
   if (transform) {
@@ -107,9 +139,24 @@ Slider.prototype.knobMouseDown_ = function(e) {
       Slider.startKnobX_ = Number(r[1]);
     }
   }
-  // Stop browser from attempting to drag the knob.
-  e.preventDefault();
-  return false;
+};
+
+/**
+ * Snap the slider knob to the clicked position.
+ * @param {number} xPosition SVG x-coordinate
+ * @private
+ */
+Slider.prototype.snapToPosition_ = function(xPosition) {
+  var x = Math.min(Math.max(xPosition, 
+        this.KNOB_MIN_X_), this.KNOB_MAX_X_);
+  this.knob_.setAttribute('transform',
+      'translate(' + x + ',' + this.KNOB_Y_ + ')');
+
+  this.value_ = (x - this.KNOB_MIN_X_) /
+      (this.KNOB_MAX_X_ - this.KNOB_MIN_X_);
+  if (this.changeFunc_) {
+    this.changeFunc_(this.value_);
+  }
 };
 
 /**
@@ -151,15 +198,7 @@ Slider.knobMouseMove_ = function(e) {
   }
   var x = thisSlider.mouseToSvg_(e).x - Slider.startMouseX_ +
       Slider.startKnobX_;
-  x = Math.min(Math.max(x, thisSlider.KNOB_MIN_X_), thisSlider.KNOB_MAX_X_);
-  thisSlider.knob_.setAttribute('transform',
-      'translate(' + x + ',' + thisSlider.KNOB_Y_ + ')');
-
-  thisSlider.value_ = (x - thisSlider.KNOB_MIN_X_) /
-      (thisSlider.KNOB_MAX_X_ - thisSlider.KNOB_MIN_X_);
-  if (thisSlider.changeFunc_) {
-    thisSlider.changeFunc_(thisSlider.value_);
-  }
+  thisSlider.snapToPosition_(x);
 };
 
 /**
