@@ -523,7 +523,6 @@ Blockly.Block.prototype.onMouseDown_ = function(e) {
   // Update Blockly's knowledge of its own location.
   this.blockSpace.blockSpaceEditor.svgResize();
   Blockly.BlockSpaceEditor.terminateDrag_();
-  this.select();
   this.blockSpace.blockSpaceEditor.hideChaff();
   if (Blockly.isRightButton(e)) {
     // Right-click.
@@ -538,36 +537,47 @@ Blockly.Block.prototype.onMouseDown_ = function(e) {
     // Left-click (or middle click)
     Blockly.removeAllRanges();
     this.blockSpace.blockSpaceEditor.setCursorHand_(true);
+
+    // Keep grey (non-deletable) blocks attached together.  Walk the stack
+    // upwards to find the topmost contiguous movable non-deletable block.
+    var topDraggingBlock = this;
+    for (var prev = this;
+        prev && prev.movable_ && !prev.deletable_;
+        prev = prev.previousConnection && prev.previousConnection.targetBlock()) {
+      topDraggingBlock = prev;
+    }
+    topDraggingBlock.select();
+
     // Look up the current translation and record it.
-    var xy = this.getRelativeToSurfaceXY();
-    this.startDragX = xy.x;
-    this.startDragY = xy.y;
+    var xy = topDraggingBlock.getRelativeToSurfaceXY();
+    topDraggingBlock.startDragX = xy.x;
+    topDraggingBlock.startDragY = xy.y;
 
     // If we were given the start drag location, use that.
     if (e.startDragMouseX_ !== undefined && e.startDragMouseY_ !== undefined) {
-      this.startDragMouseX = e.startDragMouseX_;
-      this.startDragMouseY = e.startDragMouseY_;
+      topDraggingBlock.startDragMouseX = e.startDragMouseX_;
+      topDraggingBlock.startDragMouseY = e.startDragMouseY_;
       e.startDragMouseX_ = undefined;
       e.startDragMouseY_ = undefined;
     } else {
       // Record the current mouse position.
-      this.startDragMouseX = e.clientX;
-      this.startDragMouseY = e.clientY;
+      topDraggingBlock.startDragMouseX = e.clientX;
+      topDraggingBlock.startDragMouseY = e.clientY;
     }
     Blockly.Block.dragMode_ = Blockly.Block.DRAG_MODE_INSIDE_STICKY_RADIUS;
     Blockly.Block.onMouseUpWrapper_ = Blockly.bindEvent_(document,
-        'mouseup', this, this.onMouseUp_);
+        'mouseup', topDraggingBlock, topDraggingBlock.onMouseUp_);
     Blockly.Block.onMouseMoveWrapper_ = Blockly.bindEvent_(document,
-        'mousemove', this, this.onMouseMove_);
+        'mousemove', topDraggingBlock, topDraggingBlock.onMouseMove_);
     // Build a list of bubbles that need to be moved and where they started.
-    this.draggedBubbles_ = [];
-    var descendants = this.getDescendants();
+    topDraggingBlock.draggedBubbles_ = [];
+    var descendants = topDraggingBlock.getDescendants();
     for (var x = 0, descendant; descendant = descendants[x]; x++) {
       var icons = descendant.getIcons();
       for (var y = 0; y < icons.length; y++) {
         var data = icons[y].getIconLocation();
         data.bubble = icons[y];
-        this.draggedBubbles_.push(data);
+        topDraggingBlock.draggedBubbles_.push(data);
       }
     }
   }
