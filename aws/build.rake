@@ -64,48 +64,48 @@ if rack_env?(:staging) || rack_env?(:development)
     RakeUtils.system 'rake', '--rakefile', deploy_dir('Rakefile'), 'build:blockly_core'
   end
 
-  BLOCKLY_DEPENDENCIES = [BLOCKLY_CORE_TASK]
-  BLOCKLY_NODE_MODULES = Dir.glob(apps_dir('node_modules', '**/*'))
-  BLOCKLY_BUILD_PRODUCTS = ['npm-debug.log'].map{|i| apps_dir(i)} + Dir.glob(apps_dir('build', '**/*'))
-  BLOCKLY_SOURCE_FILES = Dir.glob(apps_dir('**/*')) - BLOCKLY_NODE_MODULES - BLOCKLY_BUILD_PRODUCTS
+  APPS_DEPENDENCIES = [BLOCKLY_CORE_TASK]
+  APPS_NODE_MODULES = Dir.glob(apps_dir('node_modules', '**/*'))
+  APPS_BUILD_PRODUCTS = ['npm-debug.log'].map{|i| apps_dir(i)} + Dir.glob(apps_dir('build', '**/*'))
+  APPS_SOURCE_FILES = Dir.glob(apps_dir('**/*')) - APPS_NODE_MODULES - APPS_BUILD_PRODUCTS
 
-  BLOCKLY_TASK = build_task('blockly', BLOCKLY_DEPENDENCIES + BLOCKLY_SOURCE_FILES) do
-    RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-blockly')
-    RakeUtils.system 'rake', '--rakefile', deploy_dir('Rakefile'), 'build:blockly'
+  APPS_TASK = build_task('apps', APPS_DEPENDENCIES + APPS_SOURCE_FILES) do
+    RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-apps')
+    RakeUtils.system 'rake', '--rakefile', deploy_dir('Rakefile'), 'build:apps'
     RakeUtils.system 'rm', '-rf', dashboard_dir('public/blockly-package')
     RakeUtils.system 'cp', '-R', apps_dir('build/package'), dashboard_dir('public/blockly-package')
   end
 
-  BLOCKLY_COMMIT_TASK = build_task('blockly-commit', [deploy_dir('rebuild'), BLOCKLY_TASK]) do
+  APPS_COMMIT_TASK = build_task('apps-commit', [deploy_dir('rebuild'), APPS_TASK]) do
     blockly_core_changed = false
     Dir.chdir(blockly_core_dir) do
       blockly_core_changed = !`git status --porcelain #{BLOCKLY_CORE_PRODUCTS.join(' ')}`.strip.empty?
     end
 
-    blockly_changed = false;
+    apps_changed = false;
     Dir.chdir(dashboard_dir('public/blockly-package')) do
-      blockly_changed = !`git status --porcelain .`.strip.empty?
+      apps_changed = !`git status --porcelain .`.strip.empty?
     end
 
-    if blockly_core_changed || blockly_changed
+    if blockly_core_changed || apps_changed
       if RakeUtils.git_updates_available?
-        HipChat.log '<b>Blockly</b> package updated but git changes are pending; commmiting after next build.', color:'yellow'
+        HipChat.log '<b>Apps</b> package updated but git changes are pending; commmiting after next build.', color:'yellow'
       else
-        HipChat.log 'Committing updated <b>blockly</b> package...', color:'purple'
+        HipChat.log 'Committing updated <b>apps</b> package...', color:'purple'
         RakeUtils.system 'git', 'add', *BLOCKLY_CORE_PRODUCT_FILES
         RakeUtils.system 'git', 'add', '--all', dashboard_dir('public/blockly-package')
-        message = "Automatically built.\n\n#{IO.read(deploy_dir('rebuild-blockly'))}"
+        message = "Automatically built.\n\n#{IO.read(deploy_dir('rebuild-apps'))}"
         RakeUtils.system 'git', 'commit', '-m', Shellwords.escape(message)
         RakeUtils.git_push
-        RakeUtils.system 'rm', '-f', deploy_dir('rebuild-blockly')
+        RakeUtils.system 'rm', '-f', deploy_dir('rebuild-apps')
       end
     else
-      HipChat.log '<b>blockly</b> package unmodified, nothing to commit.'
-      RakeUtils.system 'rm', '-f', deploy_dir('rebuild-blockly')
+      HipChat.log '<b>apps</b> package unmodified, nothing to commit.'
+      RakeUtils.system 'rm', '-f', deploy_dir('rebuild-apps')
     end
   end
 else
-  BLOCKLY_COMMIT_TASK = build_task('blockly-commit') {}
+  APPS_COMMIT_TASK = build_task('apps-commit') {}
 end
 
 file deploy_dir('rebuild') do
@@ -153,7 +153,7 @@ def upgrade_frontend(name, host)
   puts IO.read log_path
 end
 
-$websites = build_task('websites', [deploy_dir('rebuild'), BLOCKLY_COMMIT_TASK]) do
+$websites = build_task('websites', [deploy_dir('rebuild'), APPS_COMMIT_TASK]) do
   Dir.chdir(deploy_dir) do
     RakeUtils.system 'rake', 'build'
 
