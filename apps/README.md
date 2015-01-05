@@ -52,7 +52,7 @@ MOOC_DEV=1 grunt build
   ```
   git status
   ```
-and look for something like `public/blockly -> blockly-package` in the output. [NEEDS VALIDATION].
+and look for something like `public/blockly -> apps-package` in the output. [NEEDS VALIDATION].
 
 1. If the symlink is in place, then when you run later builds of blockly, your results should show up in Dashboard.
 
