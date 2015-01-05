@@ -69,19 +69,19 @@ exports.setupTestBlockly = function() {
   require.uncache(SRC + '/base');
   // c, n, v, p, s get added to global namespace by messageformat module, which
   // is loaded when we require our locale msg files
-  global.BlocklyApps = this.requireWithGlobalsCheckSrcFolder('/base',
+  global.StudioApp = this.requireWithGlobalsCheckSrcFolder('/base',
     ['c', 'n', 'v', 'p', 's']);
-  globalDiff.cache(); // recache since we added global BlocklyApps
+  globalDiff.cache(); // recache since we added global StudioApp
 
   var blocklyAppDiv = document.getElementById('app');
   assert(blocklyAppDiv, 'blocklyAppDiv exists');
 
-  global.BlocklyApps.assetUrl = function (path) {
+  global.StudioApp.assetUrl = function (path) {
     return '../lib/blockly/' + path;
   };
 
   var options = {
-    assetUrl: global.BlocklyApps.assetUrl
+    assetUrl: global.StudioApp.assetUrl
   };
   Blockly.inject(blocklyAppDiv, options);
   testBlockFactory.installTestBlocks(Blockly);
@@ -89,7 +89,7 @@ exports.setupTestBlockly = function() {
   assert(Blockly.Blocks.text_print, "text_print block exists");
   assert(Blockly.Blocks.text, "text block exists");
   assert(Blockly.Blocks.math_number, "math_number block exists");
-  assert(BlocklyApps, "BlocklyApps exists");
+  assert(StudioApp, "StudioApp exists");
   assert(Blockly.mainBlockSpace, "Blockly workspace exists");
 
   Blockly.mainBlockSpace.clear();

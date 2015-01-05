@@ -124,7 +124,7 @@ Bee.prototype.checkedAllPurple = function () {
 
 /**
  * Get the test results based on the termination value.  If there is
- * no app-specific failure, this returns BlocklyApps.getTestResults().
+ * no app-specific failure, this returns StudioApp.getTestResults().
  */
 Bee.prototype.getTestResults = function (terminationValue) {
   switch (terminationValue) {
@@ -139,14 +139,14 @@ Bee.prototype.getTestResults = function (terminationValue) {
     case TerminationValue.INSUFFICIENT_NECTAR:
     case TerminationValue.INSUFFICIENT_HONEY:
       // non-app failures take precendence over these.
-      var testResults = BlocklyApps.getTestResults(true);
+      var testResults = StudioApp.getTestResults(true);
       if (testResults === TestResults.ALL_PASS) {
         testResults = TestResults.APP_SPECIFIC_FAIL;
       }
       return testResults;
   }
 
-  return BlocklyApps.getTestResults(false);
+  return StudioApp.getTestResults(false);
 };
 
 /**
@@ -369,9 +369,9 @@ Bee.prototype.honeyAvailable = function () {
 
 // ANIMATIONS
 function playAudio (sound) {
-  // Check for BlocklyApps, which will often be undefined in unit tests
-  if (BlocklyApps) {
-    BlocklyApps.playAudio(sound);
+  // Check for StudioApp, which will often be undefined in unit tests
+  if (StudioApp) {
+    StudioApp.playAudio(sound);
   }
 }
 

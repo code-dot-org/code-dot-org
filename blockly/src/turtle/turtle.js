@@ -28,7 +28,7 @@ window.Turtle = module.exports;
 /**
  * Create a namespace for the application.
  */
-var BlocklyApps = require('../base');
+var StudioApp = require('../base');
 var Turtle = module.exports;
 var commonMsg = require('../../locale/current/common');
 var turtleMsg = require('../../locale/current/turtle');
@@ -43,8 +43,8 @@ var utils = require('../utils');
 var level;
 var skin;
 
-BlocklyApps.CHECK_FOR_EMPTY_BLOCKS = true;
-BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
+StudioApp.CHECK_FOR_EMPTY_BLOCKS = true;
+StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
@@ -171,10 +171,10 @@ Turtle.init = function(config) {
   }
 
   config.html = page({
-    assetUrl: BlocklyApps.assetUrl,
+    assetUrl: StudioApp.assetUrl,
     data: {
-      localeDirection: BlocklyApps.localeDirection(),
-      controls: require('./controls.html')({assetUrl: BlocklyApps.assetUrl}),
+      localeDirection: StudioApp.localeDirection(),
+      controls: require('./controls.html')({assetUrl: StudioApp.assetUrl}),
       blockUsed : undefined,
       idealBlockNumber : undefined,
       editCode: level.editCode,
@@ -183,13 +183,13 @@ Turtle.init = function(config) {
   });
 
   config.loadAudio = function() {
-    BlocklyApps.loadAudio(skin.winSound, 'win');
-    BlocklyApps.loadAudio(skin.startSound, 'start');
-    BlocklyApps.loadAudio(skin.failureSound, 'failure');
+    StudioApp.loadAudio(skin.winSound, 'win');
+    StudioApp.loadAudio(skin.startSound, 'start');
+    StudioApp.loadAudio(skin.failureSound, 'failure');
   };
 
   config.afterInject = function() {
-    if (BlocklyApps.usingBlockly) {
+    if (StudioApp.usingBlockly) {
       // Add to reserved word list: API, local variables in execution evironment
       // (execute) and the infinite loop detection function.
       //XXX Not sure if this is still right.
@@ -227,7 +227,7 @@ Turtle.init = function(config) {
     Turtle.ctxDisplay = display.getContext('2d');
 
 
-    if (BlocklyApps.usingBlockly && (skin.id == "anna" || skin.id == "elsa")) {
+    if (StudioApp.usingBlockly && (skin.id == "anna" || skin.id == "elsa")) {
       Blockly.JavaScript.colour_random = function() {
         // Generate a random colour.
         if (!Blockly.JavaScript.definitions_.colour_random) {
@@ -284,7 +284,7 @@ Turtle.init = function(config) {
     visualizationColumn.style.width = '400px';
   };
 
-  BlocklyApps.init(config);
+  StudioApp.init(config);
 };
 
 /**
@@ -299,7 +299,7 @@ Turtle.drawAnswer = function() {
 };
 
 Turtle.drawLogOnCanvas = function(log, canvas) {
-  BlocklyApps.reset();
+  StudioApp.reset();
   while (log.length) {
     var tuple = log.shift();
     Turtle.step(tuple[0], tuple.splice(1), {smoothAnimate: false});
@@ -312,7 +312,7 @@ Turtle.drawLogOnCanvas = function(log, canvas) {
 
 Turtle.drawBlocksOnCanvas = function(blocks, canvas) {
   var code;
-  if (BlocklyApps.usingBlockly) {
+  if (StudioApp.usingBlockly) {
     var domBlocks = Blockly.Xml.textToDom(blocks);
     Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, domBlocks);
     code = Blockly.Generator.blockSpaceToCode('JavaScript');
@@ -320,7 +320,7 @@ Turtle.drawBlocksOnCanvas = function(blocks, canvas) {
     code = blocks;
   }
   Turtle.evalCode(code);
-  if (BlocklyApps.usingBlockly) {
+  if (StudioApp.usingBlockly) {
     Blockly.mainBlockSpace.clear();
   }
   Turtle.drawCurrentBlocksOnCanvas(canvas);
@@ -357,7 +357,7 @@ Turtle.placeImage = function(filename, position, scale) {
   }
   else
   {
-    img.src = BlocklyApps.assetUrl('media/turtle/' + filename);
+    img.src = StudioApp.assetUrl('media/turtle/' + filename);
   }
 };
 
@@ -542,7 +542,7 @@ Turtle.drawDecorationAnimation = function(when) {
  * @param {boolean} ignore Required by the API but ignored by this
  *     implementation.
  */
-BlocklyApps.reset = function(ignore) {
+StudioApp.reset = function(ignore) {
   // Standard starting location and heading of the turtle.
   Turtle.x = CANVAS_HEIGHT / 2;
   Turtle.y = CANVAS_WIDTH / 2;
@@ -609,7 +609,7 @@ BlocklyApps.reset = function(ignore) {
   Turtle.executionError = null;
 
   // Stop the looping sound.
-  BlocklyApps.stopLoopingAudio('start');
+  StudioApp.stopLoopingAudio('start');
 
   resetStepInfo();
 };
@@ -675,13 +675,13 @@ Turtle.display = function() {
 /**
  * Click the run button.  Start the program.
  */
-BlocklyApps.runButtonClick = function() {
-  BlocklyApps.toggleRunReset('reset');
+StudioApp.runButtonClick = function() {
+  StudioApp.toggleRunReset('reset');
   document.getElementById('spinner').style.visibility = 'visible';
-  if (BlocklyApps.usingBlockly) {
+  if (StudioApp.usingBlockly) {
     Blockly.mainBlockSpace.traceOn(true);
   }
-  BlocklyApps.attempts++;
+  StudioApp.attempts++;
   Turtle.execute();
 
 };
@@ -689,7 +689,7 @@ BlocklyApps.runButtonClick = function() {
 Turtle.evalCode = function(code) {
   try {
     codegen.evalWith(code, {
-      BlocklyApps: BlocklyApps,
+      StudioApp: StudioApp,
       Turtle: api
     });
   } catch (e) {
@@ -714,15 +714,15 @@ Turtle.evalCode = function(code) {
 function generateTurtleCodeFromJS () {
   Turtle.code = utils.generateCodeAliases(level.codeFunctions, 'Turtle');
   Turtle.userCodeStartOffset = Turtle.code.length;
-  Turtle.code += BlocklyApps.editor.getValue();
+  Turtle.code += StudioApp.editor.getValue();
   Turtle.userCodeLength = Turtle.code.length - Turtle.userCodeStartOffset;
 
-  var session = BlocklyApps.editor.aceEditor.getSession();
+  var session = StudioApp.editor.aceEditor.getSession();
   Turtle.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
 
   var initFunc = function(interpreter, scope) {
     codegen.initJSInterpreter(interpreter, scope, {
-                                      BlocklyApps: BlocklyApps,
+                                      StudioApp: StudioApp,
                                       Turtle: api } );
   };
   Turtle.interpreter = new window.Interpreter(Turtle.code, initFunc);
@@ -735,7 +735,7 @@ Turtle.execute = function() {
   api.log = [];
 
   // Reset the graphic.
-  BlocklyApps.reset();
+  StudioApp.reset();
 
   if (feedback.hasExtraTopBlocks()) {
     // immediately check answer, which will fail and report top level blocks
@@ -751,11 +751,11 @@ Turtle.execute = function() {
   }
 
   // api.log now contains a transcript of all the user's actions.
-  BlocklyApps.playAudio('start', {loop : true});
+  StudioApp.playAudio('start', {loop : true});
   // animate the transcript.
   Turtle.pid = window.setTimeout(Turtle.animate, 100);
 
-  if (BlocklyApps.usingBlockly) {
+  if (StudioApp.usingBlockly) {
     // Disable toolbox while running
     Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
   }
@@ -809,7 +809,7 @@ function executeTuple () {
     var command = tuple[0];
     var id = tuple[tuple.length-1];
 
-    BlocklyApps.highlight(String(id));
+    StudioApp.highlight(String(id));
 
     // Should we execute another tuple in this frame of animation?
     if (skin.consolidateTurnAndMove && checkforTurnAndMove()) {
@@ -834,7 +834,7 @@ function executeTuple () {
  */
 function finishExecution () {
   document.getElementById('spinner').style.visibility = 'hidden';
-  if (BlocklyApps.usingBlockly) {
+  if (StudioApp.usingBlockly) {
     Blockly.mainBlockSpace.highlightBlock(null);
   }
   Turtle.checkAnswer();
@@ -860,7 +860,7 @@ Turtle.animate = function() {
     var stepped = true;
     while (stepped) {
       codegen.selectCurrentCode(Turtle.interpreter,
-                                BlocklyApps.editor,
+                                StudioApp.editor,
                                 Turtle.cumulativeLength,
                                 Turtle.userCodeStartOffset,
                                 Turtle.userCodeLength);
@@ -1253,7 +1253,7 @@ var isCorrect = function(pixelErrors, permittedErrors) {
 
 /**
  * App specific displayFeedback function that calls into
- * BlocklyApps.displayFeedback when appropriate
+ * StudioApp.displayFeedback when appropriate
  */
 var displayFeedback = function() {
   var feedbackImageCanvas;
@@ -1264,7 +1264,7 @@ var displayFeedback = function() {
     feedbackImageCanvas = Turtle.ctxScratch;
   }
 
-  BlocklyApps.displayFeedback({
+  StudioApp.displayFeedback({
     app: 'turtle', //XXX
     skin: skin.id,
     feedbackType: Turtle.testResults,
@@ -1339,10 +1339,10 @@ Turtle.checkAnswer = function() {
   // been completed
   var levelComplete = (level.freePlay || isCorrect(delta, permittedErrors)) &&
                         (!level.editCode || !Turtle.executionError);
-  Turtle.testResults = BlocklyApps.getTestResults(levelComplete);
+  Turtle.testResults = StudioApp.getTestResults(levelComplete);
 
   var program;
-  if (BlocklyApps.usingBlockly) {
+  if (StudioApp.usingBlockly) {
     var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
     program = Blockly.Xml.domToText(xml);
   }
@@ -1351,31 +1351,31 @@ Turtle.checkAnswer = function() {
   Turtle.message = undefined;
 
   // In level K1, check if only lengths differ.
-  if (level.isK1 && !levelComplete && !BlocklyApps.editCode &&
+  if (level.isK1 && !levelComplete && !StudioApp.editCode &&
       level.solutionBlocks &&
       removeK1Lengths(program) === removeK1Lengths(level.solutionBlocks)) {
-    Turtle.testResults = BlocklyApps.TestResults.APP_SPECIFIC_ERROR;
+    Turtle.testResults = StudioApp.TestResults.APP_SPECIFIC_ERROR;
     Turtle.message = turtleMsg.lengthFeedback();
   }
 
   // For levels where using too many blocks would allow students
   // to miss the point, convert that feedback to a failure.
   if (level.failForTooManyBlocks &&
-      Turtle.testResults == BlocklyApps.TestResults.TOO_MANY_BLOCKS_FAIL) {
+      Turtle.testResults == StudioApp.TestResults.TOO_MANY_BLOCKS_FAIL) {
     // TODO: Add more helpful error message.
-    Turtle.testResults = BlocklyApps.TestResults.TOO_MANY_BLOCKS_FAIL;
+    Turtle.testResults = StudioApp.TestResults.TOO_MANY_BLOCKS_FAIL;
 
   } else if ((Turtle.testResults ==
-      BlocklyApps.TestResults.TOO_MANY_BLOCKS_FAIL) ||
-      (Turtle.testResults == BlocklyApps.TestResults.ALL_PASS)) {
+      StudioApp.TestResults.TOO_MANY_BLOCKS_FAIL) ||
+      (Turtle.testResults == StudioApp.TestResults.ALL_PASS)) {
     // Check that they didn't use a crazy large repeat value when drawing a
     // circle.  This complains if the limit doesn't start with 3.
     // Note that this level does not use colour, so no need to check for that.
-    if (level.failForCircleRepeatValue && BlocklyApps.usingBlockly) {
+    if (level.failForCircleRepeatValue && StudioApp.usingBlockly) {
       var code = Blockly.Generator.blockSpaceToCode('JavaScript');
       if (code.indexOf('count < 3') == -1) {
         Turtle.testResults =
-            BlocklyApps.TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
+            StudioApp.TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
         Turtle.message = commonMsg.tooMuchWork();
       }
     }
@@ -1388,22 +1388,22 @@ Turtle.checkAnswer = function() {
     // do an acorn.parse and then use escodegen to generate back a "clean" version
     // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
 
-    program = BlocklyApps.editor.getValue();
+    program = StudioApp.editor.getValue();
   }
 
   // If the current level is a free play, always return the free play
   // result type
   if (level.freePlay) {
-    Turtle.testResults = BlocklyApps.TestResults.FREE_PLAY;
+    Turtle.testResults = StudioApp.TestResults.FREE_PLAY;
   }
 
   // Play sound
-  BlocklyApps.stopLoopingAudio('start');
-  if (Turtle.testResults === BlocklyApps.TestResults.FREE_PLAY ||
-      Turtle.testResults >= BlocklyApps.TestResults.TOO_MANY_BLOCKS_FAIL) {
-    BlocklyApps.playAudio('win');
+  StudioApp.stopLoopingAudio('start');
+  if (Turtle.testResults === StudioApp.TestResults.FREE_PLAY ||
+      Turtle.testResults >= StudioApp.TestResults.TOO_MANY_BLOCKS_FAIL) {
+    StudioApp.playAudio('win');
   } else {
-    BlocklyApps.playAudio('failure');
+    StudioApp.playAudio('failure');
   }
 
   var reportData = {
@@ -1422,14 +1422,14 @@ Turtle.checkAnswer = function() {
   var isFrozen = (skin.id === 'anna' || skin.id === 'elsa');
 
   // Get the canvas data for feedback.
-  if (Turtle.testResults >= BlocklyApps.TestResults.TOO_MANY_BLOCKS_FAIL &&
+  if (Turtle.testResults >= StudioApp.TestResults.TOO_MANY_BLOCKS_FAIL &&
     !isFrozen && (level.freePlay || level.impressive)) {
     reportData.image = getFeedbackImage();
   }
 
-  BlocklyApps.report(reportData);
+  StudioApp.report(reportData);
 
-  if (BlocklyApps.usingBlockly) {
+  if (StudioApp.usingBlockly) {
     // reenable toolbox
     Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
   }

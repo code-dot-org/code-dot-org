@@ -33,7 +33,7 @@ exports.strip = function(code) {
     // Strip out loop highlight
     .replace(LOOP_HIGHLIGHT_RE, '')
     // Strip out class namespaces.
-    .replace(/(BlocklyApps|Maze|Turtle)\./g, '')
+    .replace(/(StudioApp|Maze|Turtle)\./g, '')
     // Strip out particular helper functions.
     .replace(/^function (colour_random)[\s\S]*?^}/gm, '')
     // Collapse consecutive blank lines.
@@ -305,7 +305,7 @@ exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
  * Evaluates a string of code parameterized with a dictionary.
  */
 exports.evalWith = function(code, options) {
-  if (options.BlocklyApps && options.BlocklyApps.editCode) {
+  if (options.StudioApp && options.StudioApp.editCode) {
     // Use JS interpreter on editCode levels
     var initFunc = function(interpreter, scope) {
       exports.initJSInterpreter(interpreter, scope, options);
@@ -334,7 +334,7 @@ exports.evalWith = function(code, options) {
  * Returns a function based on a string of code parameterized with a dictionary.
  */
 exports.functionFromCode = function(code, options) {
-  if (options.BlocklyApps && options.BlocklyApps.editCode) {
+  if (options.StudioApp && options.StudioApp.editCode) {
     // Since this returns a new native function, it doesn't make sense in the
     // editCode case (we assume that the app will be using JSInterpreter)
     throw "Unexpected";

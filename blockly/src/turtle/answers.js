@@ -24,7 +24,7 @@
 'use strict';
 
 var api = require('./api');
-var BlocklyApps = require('../base');
+var StudioApp = require('../base');
 
 var setRandomVisibleColour = function() {
   var num = Math.floor(Math.random() * Math.pow(2, 24));
@@ -88,7 +88,7 @@ var drawHouse = function(length) {
  * resulting JavaScript here, moving any functions to the beginning of
  * this function.
  *
- * Warning: Has side effects to BlocklyApps.
+ * Warning: Has side effects to StudioApp.
  */
 exports.answer = function(page, level) {
   api.log = [];
@@ -343,6 +343,6 @@ exports.answer = function(page, level) {
       break;
     }
   }
-  BlocklyApps.reset();
+  StudioApp.reset();
   return api.log;
 };

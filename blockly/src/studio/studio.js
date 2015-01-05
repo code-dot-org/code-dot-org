@@ -7,7 +7,7 @@
 
 'use strict';
 
-var BlocklyApps = require('../base');
+var StudioApp = require('../base');
 var commonMsg = require('../../locale/current/common');
 var studioMsg = require('../../locale/current/studio');
 var skins = require('../skins');
@@ -97,10 +97,10 @@ var skin;
 var stepSpeed;
 
 //TODO: Make configurable.
-BlocklyApps.CHECK_FOR_EMPTY_BLOCKS = true;
+StudioApp.CHECK_FOR_EMPTY_BLOCKS = true;
 
 //The number of blocks to show as feedback.
-BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
+StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
 Studio.BLOCK_X_COORDINATE = 20;
 Studio.BLOCK_Y_COORDINATE = 20;
@@ -524,13 +524,13 @@ var setSvgText = function(opts) {
  */
 function callHandler (name, allowQueueExtension) {
   Studio.eventHandlers.forEach(function (handler) {
-    if (BlocklyApps.usingBlockly) {
+    if (StudioApp.usingBlockly) {
       // Note: we skip executing the code if we have not completed executing
       // the cmdQueue on this handler (checking for non-zero length)
       if (handler.name === name &&
           (allowQueueExtension || (0 === handler.cmdQueue.length))) {
         Studio.currentCmdQueue = handler.cmdQueue;
-        try { handler.func(BlocklyApps, api, Studio.Globals); } catch (e) { }
+        try { handler.func(StudioApp, api, Studio.Globals); } catch (e) { }
         Studio.currentCmdQueue = null;
       }
     } else {
@@ -554,7 +554,7 @@ Studio.onTick = function() {
          stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK && !doneUserCodeStep;
          stepsThisTick++) {
       var userCodeRow = codegen.selectCurrentCode(Studio.interpreter,
-                                                  BlocklyApps.editor,
+                                                  StudioApp.editor,
                                                   Studio.cumulativeLength,
                                                   Studio.userCodeStartOffset,
                                                   Studio.userCodeLength);
@@ -899,7 +899,7 @@ Studio.initSprites = function () {
     }
   }
 
-  if (BlocklyApps.usingBlockly) {
+  if (StudioApp.usingBlockly) {
     // Update the sprite count in the blocks:
     blocks.setSpriteCount(Blockly, Studio.spriteCount);
     blocks.setStartAvatars(Studio.startAvatars);
@@ -931,7 +931,7 @@ Studio.initReadonly = function(config) {
 
   Studio.initSprites();
 
-  BlocklyApps.initReadonly(config);
+  StudioApp.initReadonly(config);
 };
 
 /**
@@ -943,7 +943,7 @@ var arrangeStartBlocks = function (config) {
   var xml = parseXmlElement(config.level.startBlocks);
   var numUnplacedElementNodes = 0;
   // sort the blocks by visibility
-  var xmlChildNodes = BlocklyApps.sortBlocksByVisibility(xml.childNodes);
+  var xmlChildNodes = StudioApp.sortBlocksByVisibility(xml.childNodes);
   // do a first pass to count the nodes
   for (var x = 0, xmlChild; xmlChildNodes && x < xmlChildNodes.length; x++) {
     xmlChild = xmlChildNodes[x];
@@ -992,13 +992,13 @@ Studio.init = function(config) {
   window.addEventListener("keyup", Studio.onKey, false);
 
   var finishButtonFirstLine = _.isEmpty(level.softButtons);
-  var firstControlsRow = require('./controls.html')({assetUrl: BlocklyApps.assetUrl, finishButton: finishButtonFirstLine});
-  var extraControlsRow = require('./extraControlRows.html')({assetUrl: BlocklyApps.assetUrl, finishButton: !finishButtonFirstLine});
+  var firstControlsRow = require('./controls.html')({assetUrl: StudioApp.assetUrl, finishButton: finishButtonFirstLine});
+  var extraControlsRow = require('./extraControlRows.html')({assetUrl: StudioApp.assetUrl, finishButton: !finishButtonFirstLine});
 
   config.html = page({
-    assetUrl: BlocklyApps.assetUrl,
+    assetUrl: StudioApp.assetUrl,
     data: {
-      localeDirection: BlocklyApps.localeDirection(),
+      localeDirection: StudioApp.localeDirection(),
       visualization: require('./visualization.html')(),
       controls: firstControlsRow,
       extraControlRows: extraControlsRow,
@@ -1010,22 +1010,22 @@ Studio.init = function(config) {
   });
 
   config.loadAudio = function() {
-    BlocklyApps.loadAudio(skin.winSound, 'win');
-    BlocklyApps.loadAudio(skin.startSound, 'start');
-    BlocklyApps.loadAudio(skin.failureSound, 'failure');
-    BlocklyApps.loadAudio(skin.rubberSound, 'rubber');
-    BlocklyApps.loadAudio(skin.crunchSound, 'crunch');
-    BlocklyApps.loadAudio(skin.flagSound, 'flag');
-    BlocklyApps.loadAudio(skin.winPointSound, 'winpoint');
-    BlocklyApps.loadAudio(skin.winPoint2Sound, 'winpoint2');
-    BlocklyApps.loadAudio(skin.losePointSound, 'losepoint');
-    BlocklyApps.loadAudio(skin.losePoint2Sound, 'losepoint2');
-    BlocklyApps.loadAudio(skin.goal1Sound, 'goal1');
-    BlocklyApps.loadAudio(skin.goal2Sound, 'goal2');
-    BlocklyApps.loadAudio(skin.woodSound, 'wood');
-    BlocklyApps.loadAudio(skin.retroSound, 'retro');
-    BlocklyApps.loadAudio(skin.slapSound, 'slap');
-    BlocklyApps.loadAudio(skin.hitSound, 'hit');
+    StudioApp.loadAudio(skin.winSound, 'win');
+    StudioApp.loadAudio(skin.startSound, 'start');
+    StudioApp.loadAudio(skin.failureSound, 'failure');
+    StudioApp.loadAudio(skin.rubberSound, 'rubber');
+    StudioApp.loadAudio(skin.crunchSound, 'crunch');
+    StudioApp.loadAudio(skin.flagSound, 'flag');
+    StudioApp.loadAudio(skin.winPointSound, 'winpoint');
+    StudioApp.loadAudio(skin.winPoint2Sound, 'winpoint2');
+    StudioApp.loadAudio(skin.losePointSound, 'losepoint');
+    StudioApp.loadAudio(skin.losePoint2Sound, 'losepoint2');
+    StudioApp.loadAudio(skin.goal1Sound, 'goal1');
+    StudioApp.loadAudio(skin.goal2Sound, 'goal2');
+    StudioApp.loadAudio(skin.woodSound, 'wood');
+    StudioApp.loadAudio(skin.retroSound, 'retro');
+    StudioApp.loadAudio(skin.slapSound, 'slap');
+    StudioApp.loadAudio(skin.hitSound, 'hit');
   };
 
   config.afterInject = function() {
@@ -1042,7 +1042,7 @@ Studio.init = function(config) {
     }
     document.addEventListener('mouseup', Studio.onMouseUp, false);
 
-    if (BlocklyApps.usingBlockly) {
+    if (StudioApp.usingBlockly) {
       /**
        * The richness of block colours, regardless of the hue.
        * MOOC blocks should be brighter (target audience is younger).
@@ -1057,7 +1057,7 @@ Studio.init = function(config) {
     drawMap();
   };
 
-  if (BlocklyApps.usingBlockly && config.level.edit_blocks != 'toolbox_blocks') {
+  if (StudioApp.usingBlockly && config.level.edit_blocks != 'toolbox_blocks') {
     arrangeStartBlocks(config);
   }
 
@@ -1068,15 +1068,15 @@ Studio.init = function(config) {
 
   config.makeString = studioMsg.makeYourOwn();
   config.makeUrl = "http://code.org/studio";
-  config.makeImage = BlocklyApps.assetUrl('media/promo.png');
+  config.makeImage = StudioApp.assetUrl('media/promo.png');
 
   // Disable "show code" button in feedback dialog when workspace is hidden
-  config.enableShowCode = !config.level.embed && BlocklyApps.editCode;
+  config.enableShowCode = !config.level.embed && StudioApp.editCode;
   config.varsInGlobals = true;
 
   Studio.initSprites();
 
-  BlocklyApps.init(config);
+  StudioApp.init(config);
 
   var finishButton = document.getElementById('finishButton');
   dom.addClickTouchEvent(finishButton, Studio.onPuzzleComplete);
@@ -1096,7 +1096,7 @@ var preloadImage = function(url) {
 
 var preloadBackgroundImages = function() {
   // TODO (cpirich): preload for non-blockly
-  if (BlocklyApps.usingBlockly) {
+  if (StudioApp.usingBlockly) {
     var imageChoices = skin.backgroundChoicesK1;
     for (var i = 0; i < imageChoices.length; i++) {
       preloadImage(imageChoices[i][0]);
@@ -1155,7 +1155,7 @@ Studio.clearEventHandlersKillTickLoop = function() {
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-BlocklyApps.reset = function(first) {
+StudioApp.reset = function(first) {
   var i;
   Studio.clearEventHandlersKillTickLoop();
 
@@ -1207,7 +1207,7 @@ BlocklyApps.reset = function(first) {
 
   // Reset the Globals object used to contain program variables:
   Studio.Globals = {};
-  if (BlocklyApps.editCode) {
+  if (StudioApp.editCode) {
     Studio.eventQueue = [];
     Studio.executionError = null;
     Studio.interpreter = null;
@@ -1266,23 +1266,23 @@ BlocklyApps.reset = function(first) {
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-BlocklyApps.runButtonClick = function() {
+StudioApp.runButtonClick = function() {
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  BlocklyApps.toggleRunReset('reset');
-  if (BlocklyApps.usingBlockly) {
+  StudioApp.toggleRunReset('reset');
+  if (StudioApp.usingBlockly) {
     Blockly.mainBlockSpace.traceOn(true);
   }
-  BlocklyApps.reset(false);
-  BlocklyApps.attempts++;
+  StudioApp.reset(false);
+  StudioApp.attempts++;
   Studio.startTime = new Date();
   Studio.execute();
 
-  if (level.freePlay && (!BlocklyApps.hideSource || level.showFinish)) {
+  if (level.freePlay && (!StudioApp.hideSource || level.showFinish)) {
     var shareCell = document.getElementById('share-cell');
     shareCell.className = 'share-cell-enabled';
   }
@@ -1294,11 +1294,11 @@ BlocklyApps.runButtonClick = function() {
 
 /**
  * App specific displayFeedback function that calls into
- * BlocklyApps.displayFeedback when appropriate
+ * StudioApp.displayFeedback when appropriate
  */
 var displayFeedback = function() {
   if (!Studio.waitingForReport) {
-    BlocklyApps.displayFeedback({
+    StudioApp.displayFeedback({
       app: 'studio', //XXX
       skin: skin.id,
       feedbackType: Studio.testResults,
@@ -1353,7 +1353,7 @@ var registerHandlers =
       var code = Blockly.Generator.blocksToCode('JavaScript', [ block ]);
       if (code) {
         var func = codegen.functionFromCode(code, {
-                                            BlocklyApps: BlocklyApps,
+                                            StudioApp: StudioApp,
                                             Studio: api,
                                             Globals: Studio.Globals } );
         var eventName = eventNameBase;
@@ -1430,7 +1430,7 @@ var registerHandlersWithMultipleSpriteParams =
 var defineProcedures = function (blockType) {
   var code = Blockly.Generator.blockSpaceToCode('JavaScript', blockType);
   try { codegen.evalWith(code, {
-                         BlocklyApps: BlocklyApps,
+                         StudioApp: StudioApp,
                          Studio: api,
                          Globals: Studio.Globals } ); } catch (e) { }
 };
@@ -1451,19 +1451,19 @@ var nativeGetCallback = function () {
  */
 Studio.execute = function() {
   var code;
-  Studio.result = BlocklyApps.ResultType.UNSET;
-  Studio.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
+  Studio.result = StudioApp.ResultType.UNSET;
+  Studio.testResults = StudioApp.TestResults.NO_TESTS_RUN;
   Studio.waitingForReport = false;
   Studio.response = null;
   var i;
 
   if (level.editCode) {
     code = utils.generateCodeAliases(level.codeFunctions, 'Studio');
-    code += BlocklyApps.editor.getValue();
+    code += StudioApp.editor.getValue();
   }
 
   var handlers = [];
-  if (BlocklyApps.usingBlockly) {
+  if (StudioApp.usingBlockly) {
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setValue', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackground', 'whenGameStarts');
@@ -1493,26 +1493,26 @@ Studio.execute = function() {
                                      'SPRITE2');
   }
 
-  BlocklyApps.playAudio('start');
+  StudioApp.playAudio('start');
 
-  BlocklyApps.reset(false);
+  StudioApp.reset(false);
 
   if (level.editCode) {
     var codeWhenRun = utils.generateCodeAliases(level.codeFunctions, 'Studio');
     Studio.userCodeStartOffset = codeWhenRun.length;
-    codeWhenRun += BlocklyApps.editor.getValue();
+    codeWhenRun += StudioApp.editor.getValue();
     Studio.userCodeLength = codeWhenRun.length - Studio.userCodeStartOffset;
     // Append our mini-runtime after the user's code. This will spin and process
     // callback functions:
     codeWhenRun += '\nwhile (true) { var obj = getCallback(); ' +
       'if (obj) { obj.fn.apply(null, obj.arguments ? obj.arguments : null); }}';
-    var session = BlocklyApps.editor.aceEditor.getSession();
+    var session = StudioApp.editor.aceEditor.getSession();
     Studio.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
 
     // Use JS interpreter on editCode levels
     var initFunc = function(interpreter, scope) {
       codegen.initJSInterpreter(interpreter, scope, {
-                                        BlocklyApps: BlocklyApps,
+                                        StudioApp: StudioApp,
                                         Studio: api,
                                         Globals: Studio.Globals } );
 
@@ -1545,29 +1545,29 @@ Studio.encodedFeedbackImage = '';
 
 Studio.onPuzzleComplete = function() {
   if (Studio.executionError) {
-    Studio.result = BlocklyApps.ResultType.ERROR;
+    Studio.result = StudioApp.ResultType.ERROR;
   } else if (level.freePlay) {
-    Studio.result = BlocklyApps.ResultType.SUCCESS;
+    Studio.result = StudioApp.ResultType.SUCCESS;
   }
 
   // Stop everything on screen
   Studio.clearEventHandlersKillTickLoop();
 
   // If we know they succeeded, mark levelComplete true
-  var levelComplete = (Studio.result === BlocklyApps.ResultType.SUCCESS);
+  var levelComplete = (Studio.result === StudioApp.ResultType.SUCCESS);
 
   // If the current level is a free play, always return the free play
   // result type
   if (level.freePlay) {
-    Studio.testResults = BlocklyApps.TestResults.FREE_PLAY;
+    Studio.testResults = StudioApp.TestResults.FREE_PLAY;
   } else {
-    Studio.testResults = BlocklyApps.getTestResults(levelComplete);
+    Studio.testResults = StudioApp.getTestResults(levelComplete);
   }
 
-  if (Studio.testResults >= BlocklyApps.TestResults.TOO_MANY_BLOCKS_FAIL) {
-    BlocklyApps.playAudio('win');
+  if (Studio.testResults >= StudioApp.TestResults.TOO_MANY_BLOCKS_FAIL) {
+    StudioApp.playAudio('win');
   } else {
-    BlocklyApps.playAudio('failure');
+    StudioApp.playAudio('failure');
   }
 
   var program;
@@ -1578,7 +1578,7 @@ Studio.onPuzzleComplete = function() {
     // do an acorn.parse and then use escodegen to generate back a "clean" version
     // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
 
-    program = BlocklyApps.editor.getValue();
+    program = StudioApp.editor.getValue();
   } else {
     var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
     program = Blockly.Xml.domToText(xml);
@@ -1587,10 +1587,10 @@ Studio.onPuzzleComplete = function() {
   Studio.waitingForReport = true;
 
   var sendReport = function() {
-    BlocklyApps.report({
+    StudioApp.report({
       app: 'studio',
       level: level.id,
-      result: Studio.result === BlocklyApps.ResultType.SUCCESS,
+      result: Studio.result === StudioApp.ResultType.SUCCESS,
       testResult: Studio.testResults,
       program: encodeURIComponent(program),
       image: Studio.encodedFeedbackImage,
@@ -1790,7 +1790,7 @@ Studio.queueCmd = function (id, name, opts) {
     'name': name,
     'opts': opts
   };
-  if (BlocklyApps.usingBlockly) {
+  if (StudioApp.usingBlockly) {
     if (Studio.currentEventParams) {
       for (var prop in Studio.currentEventParams) {
         cmd.opts[prop] = Studio.currentEventParams[prop];
@@ -1830,89 +1830,89 @@ Studio.executeQueue = function (name) {
 Studio.callCmd = function (cmd) {
   switch (cmd.name) {
     case 'setBackground':
-      BlocklyApps.highlight(cmd.id);
+      StudioApp.highlight(cmd.id);
       Studio.setBackground(cmd.opts);
       break;
     case 'setSprite':
-      BlocklyApps.highlight(cmd.id);
+      StudioApp.highlight(cmd.id);
       Studio.setSprite(cmd.opts);
       break;
     case 'saySprite':
       if (!cmd.opts.started) {
-        BlocklyApps.highlight(cmd.id);
+        StudioApp.highlight(cmd.id);
       }
       return Studio.saySprite(cmd.opts);
     case 'setSpriteEmotion':
-      BlocklyApps.highlight(cmd.id);
+      StudioApp.highlight(cmd.id);
       Studio.setSpriteEmotion(cmd.opts);
       break;
     case 'setSpriteSpeed':
-      BlocklyApps.highlight(cmd.id);
+      StudioApp.highlight(cmd.id);
       Studio.setSpriteSpeed(cmd.opts);
       break;
     case 'setSpriteSize':
-      BlocklyApps.highlight(cmd.id);
+      StudioApp.highlight(cmd.id);
       Studio.setSpriteSize(cmd.opts);
       break;
     case 'setSpritePosition':
-      BlocklyApps.highlight(cmd.id);
+      StudioApp.highlight(cmd.id);
       Studio.setSpritePosition(cmd.opts);
       break;
     case 'playSound':
-      BlocklyApps.highlight(cmd.id);
-      BlocklyApps.playAudio(cmd.opts.soundName, { volume: 1.0 });
+      StudioApp.highlight(cmd.id);
+      StudioApp.playAudio(cmd.opts.soundName, { volume: 1.0 });
       Studio.playSoundCount++;
       break;
     case 'showTitleScreen':
       if (!cmd.opts.started) {
-        BlocklyApps.highlight(cmd.id);
+        StudioApp.highlight(cmd.id);
       }
       return Studio.showTitleScreen(cmd.opts);
     case 'move':
-      BlocklyApps.highlight(cmd.id);
+      StudioApp.highlight(cmd.id);
       Studio.moveSingle(cmd.opts);
       break;
     case 'moveDistance':
       if (!cmd.opts.started) {
-        BlocklyApps.highlight(cmd.id);
+        StudioApp.highlight(cmd.id);
       }
       return Studio.moveDistance(cmd.opts);
     case 'stop':
-      BlocklyApps.highlight(cmd.id);
+      StudioApp.highlight(cmd.id);
       Studio.stop(cmd.opts);
       break;
     case 'throwProjectile':
       if (!cmd.opts.started) {
-        BlocklyApps.highlight(cmd.id);
+        StudioApp.highlight(cmd.id);
       }
       return Studio.throwProjectile(cmd.opts);
     case 'makeProjectile':
-      BlocklyApps.highlight(cmd.id);
+      StudioApp.highlight(cmd.id);
       Studio.makeProjectile(cmd.opts);
       break;
     case 'changeScore':
-      BlocklyApps.highlight(cmd.id);
+      StudioApp.highlight(cmd.id);
       Studio.changeScore(cmd.opts);
       break;
     case 'setScoreText':
-      BlocklyApps.highlight(cmd.id);
+      StudioApp.highlight(cmd.id);
       Studio.setScoreText(cmd.opts);
       break;
     case 'showCoordinates':
-      BlocklyApps.highlight(cmd.id);
+      StudioApp.highlight(cmd.id);
       Studio.showCoordinates();
       break;
     case 'wait':
       if (!cmd.opts.started) {
-        BlocklyApps.highlight(cmd.id);
+        StudioApp.highlight(cmd.id);
       }
       return Studio.wait(cmd.opts);
     case 'vanish':
-      BlocklyApps.highlight(cmd.id);
+      StudioApp.highlight(cmd.id);
       Studio.vanishActor(cmd.opts);
       break;
     case 'attachEventHandler':
-      BlocklyApps.highlight(cmd.id);
+      StudioApp.highlight(cmd.id);
       Studio.attachEventHandler(cmd.opts);
       break;
   }
@@ -2635,7 +2635,7 @@ Studio.allGoalsVisited = function() {
 
       // Play a sound unless we've hit the last flag
       if (playSound && finishedGoals !== Studio.spriteGoals_.length) {
-        BlocklyApps.playAudio('flag');
+        StudioApp.playAudio('flag');
       }
 
       // Change the finish icon to goalSuccess.
@@ -2655,23 +2655,23 @@ Studio.allGoalsVisited = function() {
 var checkFinished = function () {
   // if we have a succcess condition and have accomplished it, we're done and successful
   if (level.goal && level.goal.successCondition && level.goal.successCondition()) {
-    Studio.result = BlocklyApps.ResultType.SUCCESS;
+    Studio.result = StudioApp.ResultType.SUCCESS;
     return true;
   }
 
   // if we have a failure condition, and it's been reached, we're done and failed
   if (level.goal && level.goal.failureCondition && level.goal.failureCondition()) {
-    Studio.result = BlocklyApps.ResultType.FAILURE;
+    Studio.result = StudioApp.ResultType.FAILURE;
     return true;
   }
 
   if (Studio.allGoalsVisited()) {
-    Studio.result = BlocklyApps.ResultType.SUCCESS;
+    Studio.result = StudioApp.ResultType.SUCCESS;
     return true;
   }
 
   if (Studio.timedOut()) {
-    Studio.result = BlocklyApps.ResultType.FAILURE;
+    Studio.result = StudioApp.ResultType.FAILURE;
     return true;
   }
 

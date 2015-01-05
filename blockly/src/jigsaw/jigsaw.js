@@ -7,7 +7,7 @@
 
 'use strict';
 
-var BlocklyApps = require('../base');
+var StudioApp = require('../base');
 var skins = require('../skins');
 var page = require('../templates/page.html');
 var feedback = require('../feedback.js');
@@ -21,9 +21,9 @@ var Jigsaw = module.exports;
 var level;
 var skin;
 
-BlocklyApps.CHECK_FOR_EMPTY_BLOCKS = true;
+StudioApp.CHECK_FOR_EMPTY_BLOCKS = true;
 //The number of blocks to show as feedback.
-BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
+StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
 // Never bump neighbors for Jigsaw
 Blockly.BUMP_UNCONNECTED = false;
@@ -119,19 +119,19 @@ Jigsaw.init = function(config) {
   Blockly.SNAP_RADIUS = level.snapRadius || 90;
 
   config.html = page({
-    assetUrl: BlocklyApps.assetUrl,
+    assetUrl: StudioApp.assetUrl,
     data: {
-      localeDirection: BlocklyApps.localeDirection(),
-      controls: require('./controls.html')({assetUrl: BlocklyApps.assetUrl}),
+      localeDirection: StudioApp.localeDirection(),
+      controls: require('./controls.html')({assetUrl: StudioApp.assetUrl}),
       editCode: level.editCode,
       blockCounterClass: 'block-counter-default'
     }
   });
 
   config.loadAudio = function() {
-    BlocklyApps.loadAudio(skin.winSound, 'win');
-    BlocklyApps.loadAudio(skin.startSound, 'start');
-    BlocklyApps.loadAudio(skin.failureSound, 'failure');
+    StudioApp.loadAudio(skin.winSound, 'win');
+    StudioApp.loadAudio(skin.startSound, 'start');
+    StudioApp.loadAudio(skin.failureSound, 'failure');
   };
 
   config.afterInject = function() {
@@ -153,7 +153,7 @@ Jigsaw.init = function(config) {
   config.enableShowCode = false;
   config.enableShowBlockCount = false;
 
-  BlocklyApps.init(config);
+  StudioApp.init(config);
 
   document.getElementById('runButton').style.display = 'none';
   Jigsaw.successListener = Blockly.mainBlockSpaceEditor.addChangeListener(function(evt) {
@@ -174,18 +174,18 @@ function checkForSuccess() {
   if (success) {
     Blockly.removeChangeListener(Jigsaw.successListener);
 
-    Jigsaw.result = BlocklyApps.ResultType.SUCCESS;
+    Jigsaw.result = StudioApp.ResultType.SUCCESS;
     Jigsaw.onPuzzleComplete();
   }
 }
 
 /**
  * App specific displayFeedback function that calls into
- * BlocklyApps.displayFeedback when appropriate
+ * StudioApp.displayFeedback when appropriate
  */
 var displayFeedback = function() {
   if (!Jigsaw.waitingForReport) {
-    BlocklyApps.displayFeedback({
+    StudioApp.displayFeedback({
       app: 'Jigsaw',
       skin: skin.id,
       feedbackType: Jigsaw.testResults,
@@ -216,16 +216,16 @@ Jigsaw.onPuzzleComplete = function() {
 
   // If we know they succeeded, mark levelComplete true
   // Note that we have not yet animated the succesful run
-  var levelComplete = (Jigsaw.result == BlocklyApps.ResultType.SUCCESS);
+  var levelComplete = (Jigsaw.result == StudioApp.ResultType.SUCCESS);
 
-  Jigsaw.testResults = BlocklyApps.getTestResults(levelComplete, {
+  Jigsaw.testResults = StudioApp.getTestResults(levelComplete, {
     allowTopBlocks: true
   });
 
-  if (Jigsaw.testResults >= BlocklyApps.TestResults.FREE_PLAY) {
-    BlocklyApps.playAudio('win');
+  if (Jigsaw.testResults >= StudioApp.TestResults.FREE_PLAY) {
+    StudioApp.playAudio('win');
   } else {
-    BlocklyApps.playAudio('failure');
+    StudioApp.playAudio('failure');
   }
 
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
@@ -234,10 +234,10 @@ Jigsaw.onPuzzleComplete = function() {
   Jigsaw.waitingForReport = true;
 
   // Report result to server.
-  BlocklyApps.report({
+  StudioApp.report({
      app: 'Jigsaw',
      level: level.id,
-     result: Jigsaw.result === BlocklyApps.ResultType.SUCCESS,
+     result: Jigsaw.result === StudioApp.ResultType.SUCCESS,
      testResult: Jigsaw.testResults,
      program: encodeURIComponent(textBlocks),
      onComplete: Jigsaw.onReportComplete

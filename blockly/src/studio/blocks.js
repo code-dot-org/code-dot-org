@@ -886,7 +886,7 @@ exports.install = function(blockly, blockInstallOptions) {
     if (soundValue === RANDOM_VALUE) {
       return;
     }
-    BlocklyApps.playAudio(utils.stripQuotes(soundValue), {volume: 1.0});
+    StudioApp.playAudio(utils.stripQuotes(soundValue), {volume: 1.0});
   }
 
   blockly.Blocks.studio_playSound = {
