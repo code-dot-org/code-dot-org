@@ -14,7 +14,7 @@
 /build-started
 /locals.yml
 /rebuild
-/rebuild-blockly
+/rebuild-apps
 \#*#
 /i18n/code.org/crowdin.yaml
 /i18n/hourofcode.com/crowdin.yaml
