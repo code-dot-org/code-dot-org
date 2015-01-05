@@ -766,6 +766,8 @@ BlocklyApps.init = function(config) {
           false : config.level.useModalFunctionEditor,
       useContractEditor: config.level.useContractEditor === undefined ?
           false : config.level.useContractEditor,
+      defaultNumExampleBlocks: config.level.defaultNumExampleBlocks === undefined ?
+          0 : config.level.defaultNumExampleBlocks,
       scrollbars: config.level.scrollbars,
       editBlocks: config.level.edit_blocks === undefined ?
           false : config.level.edit_blocks
@@ -3345,6 +3347,7 @@ function hasUnusedParam() {
       // Unused param if there's no parameters_get descendant with the same name
       return !hasMatchingDescendant(userBlock, function(block) {
         return (block.type === 'parameters_get' ||
+            block.type === 'functional_parameters_get' ||
             block.type === 'variables_get') &&
             block.getTitleValue('VAR') === paramName;
       });
@@ -5649,7 +5652,7 @@ exports.define = function(name) {
 /**
  * @license
  * Lo-Dash 2.4.1 (Custom Build) <http://lodash.com/>
- * Build: `lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap" --output src/lodash.js`
+ * Build: `lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap,size" --output src/lodash.js`
  * Copyright 2012-2013 The Dojo Foundation <http://dojofoundation.org/>
  * Based on Underscore.js 1.5.2 <http://underscorejs.org/LICENSE>
  * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -7653,6 +7656,31 @@ exports.define = function(name) {
     return result;
   }
 
+  /**
+   * Gets the size of the `collection` by returning `collection.length` for arrays
+   * and array-like objects or the number of own enumerable properties for objects.
+   *
+   * @static
+   * @memberOf _
+   * @category Collections
+   * @param {Array|Object|string} collection The collection to inspect.
+   * @returns {number} Returns `collection.length` or number of own enumerable properties.
+   * @example
+   *
+   * _.size([1, 2]);
+   * // => 2
+   *
+   * _.size({ 'one': 1, 'two': 2, 'three': 3 });
+   * // => 3
+   *
+   * _.size('pebbles');
+   * // => 7
+   */
+  function size(collection) {
+    var length = collection ? collection.length : 0;
+    return typeof length == 'number' ? length : keys(collection).length;
+  }
+
   /*--------------------------------------------------------------------------*/
 
   /**
@@ -8439,6 +8467,7 @@ exports.define = function(name) {
   lodash.mixin = mixin;
   lodash.noop = noop;
   lodash.now = now;
+  lodash.size = size;
   lodash.sortedIndex = sortedIndex;
 
   mixin(function() {
@@ -9003,6 +9032,9 @@ var Slider = function(x, y, width, svgParent, opt_changeFunc) {
   dom.addMouseDownTouchEvent(this.knob_, function(e) {
     return thisSlider.knobMouseDown_(e);
   });
+  dom.addMouseDownTouchEvent(this.track_, function(e) {
+    return thisSlider.trackMouseDown_(e);
+  });
   dom.addMouseUpTouchEvent(this.SVG_, Slider.knobMouseUp_);
   dom.addMouseMoveTouchEvent(this.SVG_, Slider.knobMouseMove_);
   // Don't add touch events for mouseover. The UX is better on Android
@@ -9023,8 +9055,37 @@ Slider.startKnobX_ = 0;
  * @private
  */
 Slider.prototype.knobMouseDown_ = function(e) {
+  this.beginDrag_(this.mouseToSvg_(e));
+
+  // Stop browser from attempting to drag the knob.
+  e.preventDefault();
+  return false;
+};
+
+/**
+ * Snap the knob to the mouse location and start a drag
+ * when clicking on the track (but not on the knob).
+ * @param {!Event} e Mouse-down event.
+ * @private
+ */
+Slider.prototype.trackMouseDown_ = function(e) {
+  var mouseSVGPosition = this.mouseToSvg_(e);
+  this.snapToPosition_(mouseSVGPosition.x);
+  this.beginDrag_(mouseSVGPosition);
+
+  // Stop browser from attempting to drag the track.
+  e.preventDefault();
+  return false;
+};
+
+/**
+ * Start dragging the slider knob.
+ * @param {!Object} mouseStartSVG Mouse start position in SVG space
+ * @private
+ */
+Slider.prototype.beginDrag_ = function(startMouseSVG) {
   Slider.activeSlider_ = this;
-  Slider.startMouseX_ = this.mouseToSvg_(e).x;
+  Slider.startMouseX_ = startMouseSVG.x;
   Slider.startKnobX_ = 0;
   var transform = this.knob_.getAttribute('transform');
   if (transform) {
@@ -9033,9 +9094,24 @@ Slider.prototype.knobMouseDown_ = function(e) {
       Slider.startKnobX_ = Number(r[1]);
     }
   }
-  // Stop browser from attempting to drag the knob.
-  e.preventDefault();
-  return false;
+};
+
+/**
+ * Snap the slider knob to the clicked position.
+ * @param {number} xPosition SVG x-coordinate
+ * @private
+ */
+Slider.prototype.snapToPosition_ = function(xPosition) {
+  var x = Math.min(Math.max(xPosition, 
+        this.KNOB_MIN_X_), this.KNOB_MAX_X_);
+  this.knob_.setAttribute('transform',
+      'translate(' + x + ',' + this.KNOB_Y_ + ')');
+
+  this.value_ = (x - this.KNOB_MIN_X_) /
+      (this.KNOB_MAX_X_ - this.KNOB_MIN_X_);
+  if (this.changeFunc_) {
+    this.changeFunc_(this.value_);
+  }
 };
 
 /**
@@ -9077,15 +9153,7 @@ Slider.knobMouseMove_ = function(e) {
   }
   var x = thisSlider.mouseToSvg_(e).x - Slider.startMouseX_ +
       Slider.startKnobX_;
-  x = Math.min(Math.max(x, thisSlider.KNOB_MIN_X_), thisSlider.KNOB_MAX_X_);
-  thisSlider.knob_.setAttribute('transform',
-      'translate(' + x + ',' + thisSlider.KNOB_Y_ + ')');
-
-  thisSlider.value_ = (x - thisSlider.KNOB_MIN_X_) /
-      (thisSlider.KNOB_MAX_X_ - thisSlider.KNOB_MIN_X_);
-  if (thisSlider.changeFunc_) {
-    thisSlider.changeFunc_(thisSlider.value_);
-  }
+  thisSlider.snapToPosition_(x);
 };
 
 /**
@@ -12214,8 +12282,11 @@ var levels = module.exports = {
     toolbox: toolbox(3, 9),
     startBlocks: startBlocks(3, 9),
     requiredBlocks: [
-      [simpleBlock('controls_for_counter')],
-      [simpleBlock('variables_get_counter')]
+      [defineWithArg(msg.drawAHouse(), msg.lengthParameter())],
+      [levelBase.callWithArg(msg.drawASquare(), msg.lengthParameter())],
+      [levelBase.callWithArg(msg.drawATriangle(), msg.lengthParameter())],
+      [simpleBlock('variables_get_length')],
+      [levelBase.callWithArg(msg.drawAHouse(), msg.lengthParameter())]
     ],
     freePlay: false,
     images: [

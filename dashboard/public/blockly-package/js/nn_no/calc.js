@@ -240,7 +240,7 @@ module.exports = function(app, levels, options) {
 };
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./base":3,"./blocksCommon":5,"./dom":17,"./required_block_utils":22,"./utils":38}],3:[function(require,module,exports){
+},{"./base":3,"./blocksCommon":5,"./dom":17,"./required_block_utils":22,"./utils":39}],3:[function(require,module,exports){
 /**
  * Blockly Apps: Common code
  *
@@ -766,6 +766,8 @@ BlocklyApps.init = function(config) {
           false : config.level.useModalFunctionEditor,
       useContractEditor: config.level.useContractEditor === undefined ?
           false : config.level.useContractEditor,
+      defaultNumExampleBlocks: config.level.defaultNumExampleBlocks === undefined ?
+          0 : config.level.defaultNumExampleBlocks,
       scrollbars: config.level.scrollbars,
       editBlocks: config.level.edit_blocks === undefined ?
           false : config.level.edit_blocks
@@ -1347,7 +1349,7 @@ var getIdealBlockNumberMsg = function() {
       msg.infinity() : BlocklyApps.IDEAL_BLOCK_NUM;
 };
 
-},{"../locale/nn_no/common":41,"./ResizeSensor":1,"./block_utils":4,"./builder":6,"./constants.js":16,"./dom":17,"./feedback.js":18,"./slider":25,"./templates/buttons.html":27,"./templates/instructions.html":29,"./templates/learn.html":30,"./templates/makeYourOwn.html":31,"./utils":38,"./xml":39}],4:[function(require,module,exports){
+},{"../locale/nn_no/common":42,"./ResizeSensor":1,"./block_utils":4,"./builder":6,"./constants.js":16,"./dom":17,"./feedback.js":18,"./slider":25,"./templates/buttons.html":27,"./templates/instructions.html":29,"./templates/learn.html":30,"./templates/makeYourOwn.html":31,"./utils":39,"./xml":40}],4:[function(require,module,exports){
 var xml = require('./xml');
 
 exports.createToolbox = function(blocks) {
@@ -1548,7 +1550,7 @@ exports.mathBlockXml = function (type, inputs, titles) {
   return str;
 };
 
-},{"./xml":39}],5:[function(require,module,exports){
+},{"./xml":40}],5:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -1713,7 +1715,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/nn_no/common":41}],6:[function(require,module,exports){
+},{"../locale/nn_no/common":42}],6:[function(require,module,exports){
 var feedback = require('./feedback.js');
 var dom = require('./dom.js');
 var utils = require('./utils.js');
@@ -1743,7 +1745,7 @@ exports.builderForm = function(onAttemptCallback) {
   dialog.show({ backdrop: 'static' });
 };
 
-},{"./dom.js":17,"./feedback.js":18,"./templates/builder.html":26,"./utils.js":38,"url":52}],7:[function(require,module,exports){
+},{"./dom.js":17,"./feedback.js":18,"./templates/builder.html":26,"./utils.js":39,"url":53}],7:[function(require,module,exports){
 var ExpressionNode = require('./expressionNode');
 
 exports.compute = function (expr, blockId) {
@@ -1752,7 +1754,7 @@ exports.compute = function (expr, blockId) {
 };
 
 exports.expression = function (operator, arg1, arg2, blockId) {
-  return new ExpressionNode(operator, arg1, arg2, blockId);
+  return new ExpressionNode(operator, [arg1, arg2], blockId);
 };
 
 },{"./expressionNode":11}],8:[function(require,module,exports){
@@ -1803,25 +1805,9 @@ exports.install = function(blockly, blockInstallOptions) {
 
   sharedFunctionalBlocks.install(blockly, generator, gensym);
 
-  // change generation code for Calc version of math blocks
-  modifyCalcGenerationCode(generator, 'functional_plus', '+');
-  modifyCalcGenerationCode(generator, 'functional_minus', '-');
-  modifyCalcGenerationCode(generator, 'functional_times', '*');
-  modifyCalcGenerationCode(generator, 'functional_dividedby', '/');
-
   installCompute(blockly, generator, gensym);
 
 };
-
-function modifyCalcGenerationCode(generator, blockType, operator) {
-  generator[blockType] = function() {
-    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
-    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    var blockId = '"block_id_' + this.id + '"';
-    return "Calc.expression('" + operator + "', " + arg1 + ", " + arg2 + ", " +
-      blockId + ")";
-  };
-}
 
 function initFunctionalBlock(block, title, numArgs) {
   block.setHSV(184, 1.00, 0.74);
@@ -1863,7 +1849,7 @@ function installCompute(blockly, generator, gensym) {
   };
 }
 
-},{"../../locale/nn_no/calc":40,"../../locale/nn_no/common":41,"../functionalBlockUtils":19,"../sharedFunctionalBlocks":23}],9:[function(require,module,exports){
+},{"../../locale/nn_no/calc":41,"../../locale/nn_no/common":42,"../functionalBlockUtils":19,"../sharedFunctionalBlocks":23}],9:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -1899,12 +1885,18 @@ var page = require('../templates/page.html');
 var feedback = require('../feedback.js');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
+var _ = require('../utils').getLodash();
+var timeoutList = require('../timeoutList');
 
 var ExpressionNode = require('./expressionNode');
 var TestResults = require('../constants').TestResults;
 
 var level;
 var skin;
+
+// todo - better approach for reserved name?
+// use zzz for sorting purposes (which is also hacky)
+var COMPUTE_NAME = 'zzz_compute';
 
 BlocklyApps.CHECK_FOR_EMPTY_BLOCKS = false;
 BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
@@ -1913,11 +1905,29 @@ var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
 
 var appState = {
+  targetExpressions: null,
+  userExpressions: null,
   animating: false,
   response: null,
   message: null,
   result: null,
-  testResults: null
+  testResults: null,
+  currentAnimationDepth: 0
+};
+
+var stepSpeed = 2000;
+
+
+/**
+ * An equation is an expression attached to a particular name. For example:
+ *   f(x) = x + 1
+ *   name: f
+ *   equation: x + 1
+ * In many cases, this will just be an expression with no name.
+ */
+var Equation = function (name, expression) {
+  this.name = name;
+  this.expression = expression;
 };
 
 /**
@@ -1931,8 +1941,11 @@ Calc.init = function(config) {
   Calc.expressions = {
     target: null, // the complete target expression
     user: null, // the current state of the user expression
-    current: null // the current state of the target expression
   };
+
+  if (level.scale && level.scale.stepSpeed !== undefined) {
+    stepSpeed = level.scale.stepSpeed;
+  }
 
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'functional_compute';
@@ -1982,8 +1995,17 @@ Calc.init = function(config) {
       solutionBlocks = blockUtils.forceInsertTopBlock(level.solutionBlocks,
         config.forceInsertTopBlock);
     }
-    Calc.expressions.target = getExpressionFromBlocks(solutionBlocks);
-    Calc.drawExpressions();
+
+    appState.targetExpressions = generateExpressionsFromBlockXml(solutionBlocks);
+
+    _.keys(appState.targetExpressions).sort().forEach(function (name, index) {
+      var expression = appState.targetExpressions[name];
+      var tokenList = expression.getTokenList(false);
+      if (name === COMPUTE_NAME) {
+        name = null;
+      }
+      displayEquation('answerExpression', name, tokenList, index);
+    });
 
     // Adjust visualizationColumn width.
     var visualizationColumn = document.getElementById('visualizationColumn');
@@ -2013,12 +2035,13 @@ BlocklyApps.runButtonClick = function() {
  */
 Calc.resetButtonClick = function () {
   Calc.expressions.user = null;
-  Calc.expressions.current = null;
   appState.message = null;
+  appState.currentAnimationDepth = 0;
+  timeoutList.clearTimeouts();
 
   appState.animating = false;
 
-  Calc.drawExpressions();
+  clearSvgUserExpression();
 };
 
 
@@ -2047,70 +2070,142 @@ function evalCode (code) {
 }
 
 /**
- * Generates an ExpressionNode from the blocks in the workspace. If blockXml
- * is provided, temporarily sticks those blocks into the workspace to generate
- * the ExpressionNode, then deletes blocks.
+ * Generate a set of expressions from the blocks currently in the workspace.
+ * @returns  an object in which keys are expression names (or COMPUTE_NAME for
+ * the base expression), and values are the expressions
  */
+function generateExpressionsFromTopBlocks() {
+  var obj = {};
 
-function getExpressionFromBlocks(blockXml) {
+  var topBlocks = Blockly.mainBlockSpace.getTopBlocks();
+  var equationList = topBlocks.forEach(function (block) {
+    var equation = getEquationFromBlock(block);
+    obj[equation.name || COMPUTE_NAME] = equation.expression;
+  });
+  return obj;
+}
+
+/**
+ * Given some xml, generates a set of expressions by loading the xml into the
+ * workspace and calling generateExpressionsFromTopBlocks. Fails if there are
+ * already blocks in the workspace.
+ */
+function generateExpressionsFromBlockXml(blockXml) {
   if (blockXml) {
     if (Blockly.mainBlockSpace.getTopBlocks().length !== 0) {
-      throw new Error("getExpressionFromBlocks shouldn't be called with blocks if " +
-        "we already have blocks in the workspace");
+      throw new Error("generateTargetExpression shouldn't be called with blocks" +
+        "if we already have blocks in the workspace");
     }
     // Temporarily put the blocks into the workspace so that we can generate code
     BlocklyApps.loadBlocks(blockXml);
   }
 
-  var code = Blockly.Generator.blockSpaceToCode('JavaScript', ['functional_compute', 'functional_definition']);
-  evalCode(code);
-  var object = Calc.computedExpression;
-  Calc.computedExpression = null;
+  var obj = generateExpressionsFromTopBlocks();
 
-  if (blockXml) {
-    // Remove the blocks
-    Blockly.mainBlockSpace.getTopBlocks().forEach(function (b) { b.dispose(); });
+  Blockly.mainBlockSpace.getTopBlocks().forEach(function (block) {
+    block.dispose();
+  });
+
+  return obj;
+}
+
+// todo (brent) : would this logic be better placed inside the blocks?
+// todo (brent) : could use some unit tests
+function getEquationFromBlock(block) {
+  if (!block) {
+    return null;
   }
+  var firstChild = block.getChildren()[0];
+  switch (block.type) {
+    case 'functional_compute':
+      if (!firstChild) {
+        return new ExpressionNode(0);
+      }
+      return getEquationFromBlock(firstChild);
 
-  return object;
+    case 'functional_plus':
+    case 'functional_minus':
+    case 'functional_times':
+    case 'functional_dividedby':
+      var operation = block.getTitles()[0].getValue();
+      var args = ['ARG1', 'ARG2'].map(function(inputName) {
+        var argBlock = block.getInputTargetBlock(inputName);
+        if (!argBlock) {
+          return 0;
+        }
+        return getEquationFromBlock(argBlock).expression;
+      });
+
+      return new Equation(null, new ExpressionNode(operation, args, block.id));
+
+    case 'functional_math_number':
+    case 'functional_math_number_dropdown':
+      var val = block.getTitleValue('NUM') || 0;
+      if (val === '???') {
+        val = 0;
+      }
+      return new Equation(null,
+        new ExpressionNode(parseInt(val, 10), [], block.id));
+
+    case 'functional_call':
+      var name = block.getCallName();
+      var def = Blockly.Procedures.getDefinition(name, Blockly.mainBlockSpace);
+      if (!def.isVariable()) {
+        throw new Error('not expected');
+      }
+      return new Equation(null, new ExpressionNode(name));
+
+    case 'functional_definition':
+      if (block.isVariable()) {
+        if (!firstChild) {
+          return new Equation(block.getTitleValue('NAME'), new ExpressionNode(0));
+        }
+        return new Equation(block.getTitleValue('NAME'),
+          getEquationFromBlock(firstChild).expression);
+      }
+      throw new Error('not sure if this works yet');
+
+    default:
+      throw "Unknown block type: " + block.type;
+  }
 }
 
 /**
- * Execute the user's code.  Heaven help us...
+ * Execute the user's code.
  */
 Calc.execute = function() {
-  appState.result = BlocklyApps.ResultType.UNSET;
   appState.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
   appState.message = undefined;
 
-  var userExpression = getExpressionFromBlocks();
-  if (userExpression) {
-    Calc.expressions.user = userExpression.clone();
-  } else {
-    Calc.expressions.user = new ExpressionNode(0);
-  }
+  appState.userExpressions = generateExpressionsFromTopBlocks();
 
-  if (Calc.expressions.target) {
-    Calc.expressions.current = Calc.expressions.target.clone();
-    Calc.expressions.user.applyExpectation(Calc.expressions.target);
-  }
+  appState.result = true;
+  _.keys(appState.targetExpressions).forEach(function (targetName) {
+    var target = appState.targetExpressions[targetName];
+    var user = appState.userExpressions[targetName];
+    if (!user || !user.isIdenticalTo(target)) {
+      appState.result = false;
+    }
+  });
 
-  // todo - should this be using ResultType.* instead?
-  appState.result = !Calc.expressions.user.failedExpectation(true);
-  appState.testResults = BlocklyApps.getTestResults(appState.result);
-
-  // equivalence means the expressions are the same if we ignore the ordering
-  // of inputs
-  if (!appState.result && Calc.expressions.user.isEquivalent(Calc.expressions.target)) {
-    appState.testResults = TestResults.APP_SPECIFIC_FAIL;
-    appState.message = calcMsg.equivalentExpression();
-  }
-
+  var hasVariablesOrFunctions = _(appState.userExpressions).size() > 1;
   if (level.freePlay) {
+    appState.result = true;
     appState.testResults = BlocklyApps.TestResults.FREE_PLAY;
+  } else {
+    // todo -  should we have single place where we get single target/user?
+    var user = appState.userExpressions[COMPUTE_NAME];
+    var target = appState.targetExpressions[COMPUTE_NAME];
+
+    if (!appState.result && !hasVariablesOrFunctions &&
+        user.isEquivalentTo(target)) {
+      appState.testResults = TestResults.APP_SPECIFIC_FAIL;
+      appState.message = calcMsg.equivalentExpression();
+    } else {
+      appState.testResults = BlocklyApps.getTestResults(appState.result);
+    }
   }
 
-  Calc.drawExpressions();
 
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
@@ -2126,11 +2221,26 @@ Calc.execute = function() {
   };
 
   BlocklyApps.report(reportData);
-  appState.animating = true;
 
-  window.setTimeout(function () {
-    Calc.step(false);
-  }, 1000);
+
+  appState.animating = true;
+  if (appState.result && !hasVariablesOrFunctions) {
+    Calc.step();
+  } else {
+    clearSvgUserExpression();
+    _(appState.userExpressions).keys().sort().forEach(function (name, index) {
+      var expression = appState.userExpressions[name];
+      var expected = appState.targetExpressions[name] || expression;
+      var tokenList = expression.getTokenListDiff(expected);
+      if (name === COMPUTE_NAME) {
+        name = null;
+      }
+      displayEquation('userExpression', name, tokenList, index, 'errorToken');
+    });
+    timeoutList.setTimeout(function () {
+      stopAnimatingAndDisplayFeedback();
+    }, stepSpeed);
+  }
 };
 
 function stopAnimatingAndDisplayFeedback() {
@@ -2143,65 +2253,20 @@ function stopAnimatingAndDisplayFeedback() {
  * collapsing the next node in our tree. If that node failed expectations, we
  * will stop further evaluation.
  */
-Calc.step = function (ignoreFailures) {
-  if (!Calc.expressions.user) {
-    return;
-  }
-
-  // If we've fully collapsed our expression, display feedback
-  if (!Calc.expressions.user.isOperation()) {
+Calc.step = function () {
+  if (animateUserExpression(appState.currentAnimationDepth)) {
     stopAnimatingAndDisplayFeedback();
     return;
   }
+  appState.currentAnimationDepth++;
 
-  var collapsed = Calc.expressions.user.collapse(ignoreFailures);
-  if (!collapsed) {
-    stopAnimatingAndDisplayFeedback();
-    return;
-  } else {
-    if (Calc.expressions.current) {
-      Calc.expressions.current.collapse();
-    }
-    Calc.drawExpressions();
-
-    window.setTimeout(function () {
-      Calc.step(false);
-    }, 1000);
-  }
+  timeoutList.setTimeout(function () {
+    Calc.step();
+  }, stepSpeed);
 };
 
-/**
- * Draw the current state of our two expressions.
- */
-Calc.drawExpressions = function () {
-  var expected = Calc.expressions.current || Calc.expressions.target;
-  var user = Calc.expressions.user;
-
-  // todo - in cases where we have the wrong answer, marking the "next" operation
-  // for both doesn't necessarily make sense, i.e.
-  // goal: ((1 + 2) * (3 + 4))
-  // user: (0 * (3 + 4))
-  // right now, we'll highlight the 1 + 2 for goal, and the 3 + 4 for user
-
-  if (expected) {
-    expected.applyExpectation(expected);
-    drawSvgExpression('answerExpression', expected, user !== null);
-  }
-
-  if (user) {
-    if (expected) {
-      user.applyExpectation(expected);
-    }
-    drawSvgExpression('userExpression', user, true);
-    var deepest = user.getDeepestOperation();
-    BlocklyApps.highlight(deepest ? deepest.blockId : null);
-  } else {
-    clearSvgExpression('userExpression');
-  }
-};
-
-function clearSvgExpression(elementId) {
-  var g = document.getElementById(elementId);
+function clearSvgUserExpression() {
+  var g = document.getElementById('userExpression');
   // remove all existing children, in reverse order so that we don't have to
   // worry about indexes changing
   for (var i = g.childNodes.length - 1; i >= 0; i--) {
@@ -2209,48 +2274,111 @@ function clearSvgExpression(elementId) {
   }
 }
 
-function drawSvgExpression(elementId, expr, styleMarks) {
-  var i, text, textLength, char;
-  var g = document.getElementById(elementId);
-  clearSvgExpression(elementId);
+/**
+ * Draws a user expression and each step collapsing it, up to given depth.
+ * Returns true if it couldn't collapse any further at this depth.
+ */
+function animateUserExpression (maxNumSteps) {
+  var finished = false;
 
-  var tokenList = expr.getTokenList(styleMarks);
-  var xPos = 0;
-  for (i = 0; i < tokenList.length; i++) {
-    text = document.createElementNS(Blockly.SVG_NS, 'text');
+  if (_(appState.userExpressions).size() > 1 ||
+    _(appState.targetExpressions).size() > 1) {
+    throw new Error('Can only animate with single user/target');
+  }
 
-    // getComputedTextLength doesn't respect trailing spaces, so we replace them
-    // with _, calculate our size, then return to the version with spaces.
-    char = tokenList[i].char;
-    text.textContent = char.replace(/ /g, '_');
-    g.appendChild(text);
-    // getComputedTextLength isn't available to us in our mochaTests
-    textLength = text.getComputedTextLength ? text.getComputedTextLength() : 0;
-    text.textContent = char;
+  var userExpression = appState.userExpressions[COMPUTE_NAME];
+  if (!userExpression) {
+    throw new Error('require user expression');
+  }
 
-    text.setAttribute('x', xPos + textLength / 2);
-    text.setAttribute('text-anchor', 'middle');
-    xPos += textLength;
+  clearSvgUserExpression();
 
-    if (styleMarks && tokenList[i].marked) {
-      if (char === '(' || char === ')') {
-        text.setAttribute('class', 'highlightedParen');
-      } else {
-        text.setAttribute('class', 'exprMistake');
+  var current = userExpression.clone();
+  var previousExpression = current;
+  var currentDepth = 0;
+  for (var currentStep = 0; currentStep <= maxNumSteps && !finished; currentStep++) {
+    var tokenList;
+    if (currentDepth === maxNumSteps) {
+      tokenList = current.getTokenListDiff(previousExpression);
+    } else if (currentDepth + 1 === maxNumSteps) {
+      var deepest = current.getDeepestOperation();
+      if (deepest) {
+        BlocklyApps.highlight('block_id_' + deepest.blockId);
       }
+      tokenList = current.getTokenList(true);
+    } else {
+      tokenList = current.getTokenList(false);
+    }
+    displayEquation('userExpression', null, tokenList, currentDepth, 'markedToken');
+    previousExpression = current.clone();
+    if (current.collapse()) {
+      currentDepth++;
+    } else if (currentStep - currentDepth > 2) {
+      // we want to go one more step after the last collapse so that we show
+      // our last line without highlighting it
+      finished = true;
     }
   }
 
-  // center entire expression
-  // todo (brent): handle case where expression is longer than width
-  var width = g.getBoundingClientRect().width;
-  var xPadding = (CANVAS_WIDTH - width) / 2;
-  var currentTransform = g.getAttribute('transform');
-  // IE has space separated args, others use comma to separate
-  var newTransform = currentTransform.replace(/translate\(.*[,|\s]/,
-    "translate(" + xPadding + ",");
-  g.setAttribute('transform', newTransform);
+
+
+  return finished;
 }
+
+/**
+ * Append a tokenList to the given parent element
+ * @param {string} parentId Id of parent element
+ * @param {string} name Name of the function/variable. Null if base expression.
+ * @param {Array<Object>} tokenList A list of tokens, representing the expression
+ * @param {number} line How many lines deep into parent to display
+ * @param {string} markClass Css class to use for 'marked' tokens.
+ */
+function displayEquation(parentId, name, tokenList, line, markClass) {
+  var parent = document.getElementById(parentId);
+
+  var g = document.createElementNS(Blockly.SVG_NS, 'g');
+  parent.appendChild(g);
+  var xPos = 0;
+  var len;
+  if (name) {
+    len = addText(g, (name + ' = '), xPos, null);
+    xPos += len;
+  }
+
+  for (var i = 0; i < tokenList.length; i++) {
+    len = addText(g, tokenList[i].str, xPos, tokenList[i].marked && markClass);
+    xPos += len;
+  }
+
+  // todo (brent): handle case where expression is longer than width
+  var xPadding = (CANVAS_WIDTH - g.getBoundingClientRect().width) / 2;
+  var yPos = (line * 20);
+  g.setAttribute('transform', 'translate(' + xPadding + ', ' + yPos + ')');
+}
+
+/**
+ * Add some text to parent element at given xPos with css class className
+ */
+function addText(parent, str, xPos, className) {
+  var text, textLength;
+  text = document.createElementNS(Blockly.SVG_NS, 'text');
+  // getComputedTextLength doesn't respect trailing spaces, so we replace them
+  // with _, calculate our size, then return to the version with spaces.
+  text.textContent = str.replace(/ /g, '_');
+  parent.appendChild(text);
+  // getComputedTextLength isn't available to us in our mochaTests
+  textLength = text.getComputedTextLength ? text.getComputedTextLength() : 0;
+  text.textContent = str;
+
+  text.setAttribute('x', xPos + textLength / 2);
+  text.setAttribute('text-anchor', 'middle');
+  if (className) {
+    text.setAttribute('class', className);
+  }
+
+  return textLength;
+}
+
 
 /**
  * Deep clone a node, then removing any ids from the clone so that we don't have
@@ -2280,9 +2408,7 @@ var displayFeedback = function() {
   level.extraTopBlocks = calcMsg.extraTopBlocks();
   var appDiv = null;
   // Show svg in feedback dialog
-  if (appState.testResults === TestResults.LEVEL_INCOMPLETE_FAIL) {
-    appDiv = cloneNodeWithoutIds('svgCalc');
-  }
+  appDiv = cloneNodeWithoutIds('svgCalc');
   var options = {
     app: 'Calc',
     skin: skin.id,
@@ -2313,7 +2439,7 @@ function onReportComplete(response) {
   displayFeedback();
 }
 
-},{"../../locale/nn_no/calc":40,"../../locale/nn_no/common":41,"../base":3,"../block_utils":4,"../codegen":15,"../constants":16,"../dom":17,"../feedback.js":18,"../skins":24,"../templates/page.html":32,"./api":7,"./controls.html":10,"./expressionNode":11,"./levels":12,"./visualization.html":14}],10:[function(require,module,exports){
+},{"../../locale/nn_no/calc":41,"../../locale/nn_no/common":42,"../base":3,"../block_utils":4,"../codegen":15,"../constants":16,"../dom":17,"../feedback.js":18,"../skins":24,"../templates/page.html":32,"../timeoutList":38,"../utils":39,"./api":7,"./controls.html":10,"./expressionNode":11,"./levels":12,"./visualization.html":14}],10:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -2337,84 +2463,117 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/nn_no/calc":40,"../../locale/nn_no/common":41,"ejs":42}],11:[function(require,module,exports){
-/**
- * A node consisting of a value, and if that value is an operator, two operands.
- * Operands will always be stored internally as ExpressionNodes.
- */
-var ExpressionNode = function (val, left, right, blockId) {
-  this.val = val;
-  this.left = null;
-  this.right = null;
-  this.blockId = blockId;
+},{"../../locale/nn_no/calc":41,"../../locale/nn_no/common":42,"ejs":43}],11:[function(require,module,exports){
+var utils = require('../utils');
+var _ = utils.getLodash();
 
-  if (this.isOperation()) {
-    this.left = left instanceof ExpressionNode ? left : new ExpressionNode(left);
-    this.right = right instanceof ExpressionNode ? right : new ExpressionNode(right);
+/**
+ * A node consisting of an value, and potentially a set of operands.
+ * The value will be either an operator, a string representing a variable, a
+ * string representing a functional call, or a number.
+ * If args are not ExpressionNode, we convert them to be so, assuming any string
+ * represents a variable
+ */
+var ValueType = {
+  ARITHMETIC: 1,
+  FUNCTION_CALL: 2,
+  VARIABLE: 3,
+  NUMBER: 4
+};
+
+var ExpressionNode = function (val, args, blockId) {
+  this.value = val;
+  this.blockId = blockId;
+  if (args === undefined) {
+    args = [];
   }
 
-  this.valMetExpectation_ = true;
+  if (!Array.isArray(args)) {
+    throw new Error("Expected array");
+  }
+
+  this.children = args.map(function (item) {
+    if (!(item instanceof ExpressionNode)) {
+      item = new ExpressionNode(item);
+    }
+    return item;
+  });
+
+  if (this.getType() === ValueType.NUMBER && args.length > 0) {
+    throw new Error("Can't have args for number ExpressionNode");
+  }
+
+  if (this.getType() === ValueType.ARITHMETIC && args.length !== 2) {
+    throw new Error("Arithmetic ExpressionNode needs 2 args");
+  }
 };
 module.exports = ExpressionNode;
 
-/**
- * Does the node represent a math operation vs. a single number.
- */
-ExpressionNode.prototype.isOperation = function () {
-  return !isNumber(this.val);
-};
+ExpressionNode.ValueType = ValueType;
 
 /**
- * Convert to a string
+ * What type of expression node is this?
  */
-ExpressionNode.prototype.toString = function  () {
-  if (!this.isOperation()) {
-    return this.val;
+ExpressionNode.prototype.getType = function () {
+  if (["+", "-", "*", "/"].indexOf(this.value) !== -1) {
+    return ValueType.ARITHMETIC;
   }
-  // todo (brent) - do i need/want the outside parens? i think no
-  return "(" + this.left.toString() + " " + this.val + " " +
-    this.right.toString() + ")";
+
+  if (typeof(this.value) === 'string') {
+    if (this.children.length === 0) {
+      return ValueType.VARIABLE;
+    }
+    return ValueType.FUNCTION_CALL;
+  }
+
+  if (typeof(this.value) === 'number') {
+    return ValueType.NUMBER;
+  }
 };
 
 /**
  * Create a deep clone of this node
  */
 ExpressionNode.prototype.clone = function () {
-  return new ExpressionNode(this.val,
-    this.left ? this.left.clone() : null,
-    this.right ? this.right.clone() : null,
-    this.blockId);
+  var children = this.children.map(function (item) {
+    return item.clone();
+  });
+  return new ExpressionNode(this.value, children, this.blockId);
 };
 
 /**
- * Did we set an expectation for this node, which we did not meet.
- * @param {boolean} includeDescendants If true, we also check whether any
- *  descendants failed expectations, otherwise we only check this node's val.
+ * Replace an ExpressionNode's contents with those of another node.
  */
-ExpressionNode.prototype.failedExpectation = function (includeDescendants) {
-  var fails = (this.valMetExpectation_ === false);
-  if (includeDescendants && this.left && this.left.failedExpectation(true)) {
-    fails = true;
+ExpressionNode.prototype.replaceWith = function (newNode) {
+  if (!(newNode instanceof ExpressionNode)) {
+    throw new Error("Must replaceWith ExpressionNode");
   }
-  if (includeDescendants && this.right && this.right.failedExpectation(true)) {
-    fails = true;
-  }
-
-  return fails;
+  // clone so that we have our own copies of any objects
+  newNode = newNode.clone();
+  this.value = newNode.value;
+  this.children = newNode.children;
 };
 
 /**
  * Evaluate the expression, returning the result.
  */
 ExpressionNode.prototype.evaluate = function () {
-  if (!this.isOperation()) {
-    return this.val;
+  var type = this.getType();
+  if (type === ValueType.VARIABLE || type === ValueType.FUNCTION_CALL) {
+    throw new Error('Must resolve variables/functions before evaluation');
+  }
+  if (type === ValueType.NUMBER) {
+    return this.value;
   }
 
-  var left = this.left.evaluate();
-  var right = this.right.evaluate();
+  if (type !== ValueType.ARITHMETIC) {
+    throw new Error('Unexpected error');
+  }
 
-  switch (this.val) {
+  var left = this.children[0].evaluate();
+  var right = this.children[1].evaluate();
+
+  switch (this.value) {
     case '+':
       return left + right;
     case '-':
@@ -2424,7 +2583,7 @@ ExpressionNode.prototype.evaluate = function () {
     case '/':
       return left / right;
     default:
-      throw new Error('Unknown operator: ' + this.val);
+      throw new Error('Unknown operator: ' + this.value);
     }
 };
 
@@ -2432,99 +2591,12 @@ ExpressionNode.prototype.evaluate = function () {
  * Depth of this node's tree. A lone value is considered to have a depth of 0.
  */
 ExpressionNode.prototype.depth = function () {
-  if (!this.isOperation()) {
-    return 0;
+  var max = 0;
+  for (var i = 0; i < this.children.length; i++) {
+    max = Math.max(max, 1 + this.children[i].depth());
   }
 
-  return 1 + Math.max(this.left.depth(), this.right.depth());
-};
-
-/**
- * Collapse the next node in the tree, where next is considered to be whichever
- * node is deepest, processing left to right.
- * @param {boolean} ignoreFailures If true, we will collapse whether or not the
- *   node met expectations. If false, we don't collpase when expectations are
- *   not met.
- */
-ExpressionNode.prototype.collapse = function (ignoreFailures) {
-  var deepest = this.getDeepestOperation();
-  if (deepest === null) {
-    return false;
-  }
-
-  // We're the depest operation, implying both sides are numbers
-  if (this === deepest) {
-    if (this.failedExpectation(true) && !ignoreFailures) {
-      // dont allow collapsing if we're a leaf operation with a mistake
-      return false;
-    }
-    this.val = this.evaluate();
-    this.left = null;
-    this.right = null;
-  } else {
-    return deepest.collapse(ignoreFailures);
-  }
-
-  return true;
-};
-
-/**
- * Specify what we expected an ExpressionNode to look like. This sets whether
- * vals are the same as what we expected on the entire tree.
- */
-ExpressionNode.prototype.applyExpectation = function (expected) {
-  this.valMetExpectation_ = expected ? expected.val === this.val : false;
-
-  if (this.isOperation()) {
-    this.left.applyExpectation(expected.left);
-    this.right.applyExpectation(expected.right);
-  }
-};
-
-/**
- * Do the two nodes differ only in argument order.
- */
-ExpressionNode.prototype.isEquivalent = function (target) {
-  if (this.val !== target.val) {
-    return false;
-  }
-
-  if (this.isOperation() !== target.isOperation()) {
-    return false;
-  }
-
-  if (!this.isOperation()) {
-    return true;
-  }
-
-  if (this.left.isEquivalent(target.left)) {
-    return this.right.isEquivalent(target.right);
-  } else if (this.left.isEquivalent(target.right)) {
-    return this.right.isEquivalent(target.left);
-  }
-
-  return false;
-};
-
-/**
- * Break down the expression into tokens, where each token consists of the
- * string representation of that portion of the expression, and whether or not
- * it is correct.
- */
-ExpressionNode.prototype.getTokenList = function (markNextParens) {
-  if (!this.isOperation()) {
-    return [token(this.val.toString(), this.valMetExpectation_ === false)];
-  }
-
-  var leafOperation = !this.left.isOperation() && !this.right.isOperation();
-  var rightDeeper = this.right.depth() > this.left.depth();
-
-  var list = [token("(", markNextParens === true && leafOperation)];
-  list = list.concat(this.left.getTokenList(markNextParens && !rightDeeper));
-  list = list.concat(token(" " + this.val + " ", this.valMetExpectation_ === false));
-  list = list.concat(this.right.getTokenList(markNextParens && rightDeeper));
-  list = list.concat(token(")", markNextParens === true && leafOperation));
-  return list;
+  return max;
 };
 
 /**
@@ -2532,33 +2604,160 @@ ExpressionNode.prototype.getTokenList = function (markNextParens) {
  * next node to collapse
  */
 ExpressionNode.prototype.getDeepestOperation = function () {
-  if (!this.isOperation()) {
+  if (this.children.length === 0) {
     return null;
   }
-  if (!this.left.isOperation() && !this.right.isOperation()) {
+
+  var deepestChild = null;
+  var deepestDepth = 0;
+  for (var i = 0; i < this.children.length; i++) {
+    var depth = this.children[i].depth();
+    if (depth > deepestDepth) {
+      deepestDepth = depth;
+      deepestChild = this.children[i];
+    }
+  }
+
+  if (deepestDepth === 0) {
     return this;
   }
 
-  var rightDeeper = this.right.depth() > this.left.depth();
-  return rightDeeper ? this.right.getDeepestOperation() :
-    this.left.getDeepestOperation();
+  return deepestChild.getDeepestOperation();
 };
 
 /**
- * Creates a token with the given char (which can really be a string), that
- * may or may not be "marked". Marking indicates different things depending on
- * the char.
+ * Collapses the next descendant in place. Next is defined as deepest, then
+ * furthest left. Returns whether collapse was successful.
  */
-function token(char, marked) {
-  return { char: char, marked: marked };
-}
+ExpressionNode.prototype.collapse = function () {
+  var deepest = this.getDeepestOperation();
+  if (deepest === null) {
+    return false;
+  }
 
-// todo (brent)- may want to use lodash's isNumber
-function isNumber(val) {
-  return typeof(val) === "number";
-}
+  // We're the depest operation, implying both sides are numbers
+  if (this === deepest) {
+    this.value = this.evaluate();
+    this.children = [];
+    return true;
+  } else {
+    return deepest.collapse();
+  }
+};
 
-},{}],12:[function(require,module,exports){
+/**
+ * Get a tokenList for this expression, where differences from other expression
+ * are marked
+ * @param {ExpressionNode} other The ExpressionNode to compare to.
+ */
+ExpressionNode.prototype.getTokenListDiff = function (other) {
+  if (this.children.length === 0) {
+    return [new Token(this.value.toString(), !this.isIdenticalTo(other))];
+  }
+
+  if (this.getType() !== ValueType.ARITHMETIC) {
+    // Don't support getTokenListDiff for functions
+    throw new Error("Unsupported");
+  }
+
+  var nodesMatch = other && (this.value === other.value) &&
+    (this.children.length === other.children.length);
+  return _.flatten([
+    new Token('(', !nodesMatch),
+    this.children[0].getTokenListDiff(nodesMatch && other.children[0]),
+    new Token(" " + this.value + " ", !nodesMatch),
+    this.children[1].getTokenListDiff(nodesMatch && other.children[1]),
+    new Token(')', !nodesMatch)
+  ]);
+};
+
+
+/**
+ * Get a tokenList for this expression, potentially marking those tokens
+ * that are in the deepest descendant expression.
+ * @param {boolean} markDeepest Mark tokens in the deepest descendant
+ */
+ExpressionNode.prototype.getTokenList = function (markDeepest) {
+  var depth = this.depth();
+  if (depth <= 1) {
+    return this.getTokenListDiff(markDeepest ? null : this);
+  }
+
+  if (this.getType() !== ValueType.ARITHMETIC) {
+    // Don't support getTokenList for functions
+    throw new Error("Unsupported");
+  }
+
+  var rightDeeper = this.children[1].depth() > this.children[0].depth();
+
+  return _.flatten([
+    new Token('(', false),
+    this.children[0].getTokenList(markDeepest && !rightDeeper),
+    new Token(" " + this.value + " ", false),
+    this.children[1].getTokenList(markDeepest && rightDeeper),
+    new Token(')', false)
+  ]);
+};
+
+/**
+ * Is other exactly the same as this ExpressionNode tree.
+ */
+ExpressionNode.prototype.isIdenticalTo = function (other) {
+  if (!other || this.value !== other.value ||
+      this.children.length !== other.children.length) {
+    return false;
+  }
+
+  for (var i = 0; i < this.children.length; i++) {
+    if (!this.children[i].isIdenticalTo(other.children[i])) {
+      return false;
+    }
+  }
+  return true;
+};
+
+/**
+ * Do the two nodes differ only in argument order.
+ * todo: unit test
+ */
+ExpressionNode.prototype.isEquivalentTo = function (target) {
+  // only ignore argument order for ARITHMETIC
+  if (this.getType() !== ValueType.ARITHMETIC) {
+    return this.isIdenticalTo(target);
+  }
+
+  if (!target || this.value !== target.value) {
+    return false;
+  }
+
+  var myLeft = this.children[0];
+  var myRight = this.children[1];
+
+  var theirLeft = target.children[0];
+  var theirRight = target.children[1];
+
+  if (myLeft.isEquivalentTo(theirLeft)) {
+    return myRight.isEquivalentTo(theirRight);
+  }
+  if (myLeft.isEquivalentTo(theirRight)) {
+    return myRight.isEquivalentTo(theirLeft);
+  }
+  return false;
+};
+
+/**
+ * A token is essentially just a string that may or may not be "marked". Marking
+ * is done for two different reasons.
+ * (1) We're comparing two expressions and want to mark where they differ.
+ * (2) We're looking at a single expression and want to mark the deepest
+ *     subexpression.
+ */
+var Token = function (str, marked) {
+  this.str = str;
+  this.marked = marked;
+};
+
+},{"../utils":39}],12:[function(require,module,exports){
 var msg = require('../../locale/nn_no/calc');
 var blockUtils = require('../block_utils');
 
@@ -2597,7 +2796,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/nn_no/calc":40,"../block_utils":4}],13:[function(require,module,exports){
+},{"../../locale/nn_no/calc":41,"../block_utils":4}],13:[function(require,module,exports){
 var appMain = require('../appMain');
 window.Calc = require('./calc');
 var blocks = require('./blocks');
@@ -2623,7 +2822,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/nn_no/calc'); ; buf.push('\n\n<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgCalc">\n  <rect x="0" y="0" width="400" height="300" fill="#33ccff"/>\n  <rect x="0" y="300" width="400" height="100" fill="#996633"/>\n  <text x="0" y="30" class="calcHeader">', escape((6,  msg.yourExpression() )), '</text>\n  <g id="userExpression" class="expr" transform="translate(0, 250)">\n  </g>\n  <text x="0" y="330" class="calcHeader" id="goalHeader">', escape((9,  msg.goal() )), '</text>\n  <g id="answerExpression" class="expr" transform="translate(0, 350)">\n  </g>\n</svg>\n'); })();
+ buf.push('');1; var msg = require('../../locale/nn_no/calc'); ; buf.push('\n\n<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgCalc">\n  <rect x="0" y="0" width="400" height="300" fill="#33ccff"/>\n  <rect x="0" y="300" width="400" height="100" fill="#996633"/>\n  <text x="0" y="30" class="calcHeader">', escape((6,  msg.yourExpression() )), '</text>\n  <g id="userExpression" class="expr" transform="translate(0, 100)">\n  </g>\n  <text x="0" y="330" class="calcHeader" id="goalHeader">', escape((9,  msg.goal() )), '</text>\n  <g id="answerExpression" class="expr" transform="translate(0, 350)">\n  </g>\n</svg>\n'); })();
 } 
 return buf.join('');
 };
@@ -2631,7 +2830,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/nn_no/calc":40,"ejs":42}],15:[function(require,module,exports){
+},{"../../locale/nn_no/calc":41,"ejs":43}],15:[function(require,module,exports){
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
@@ -4233,6 +4432,7 @@ function hasUnusedParam() {
       // Unused param if there's no parameters_get descendant with the same name
       return !hasMatchingDescendant(userBlock, function(block) {
         return (block.type === 'parameters_get' ||
+            block.type === 'functional_parameters_get' ||
             block.type === 'variables_get') &&
             block.getTitleValue('VAR') === paramName;
       });
@@ -4309,7 +4509,7 @@ function hasMatchingDescendant(node, filter) {
 }
 
 
-},{"../locale/nn_no/common":41,"./codegen":15,"./constants":16,"./dom":17,"./templates/buttons.html":27,"./templates/code.html":28,"./templates/readonly.html":33,"./templates/shareFailure.html":34,"./templates/sharing.html":35,"./templates/showCode.html":36,"./templates/trophy.html":37,"./utils":38,"./xml":39}],19:[function(require,module,exports){
+},{"../locale/nn_no/common":42,"./codegen":15,"./constants":16,"./dom":17,"./templates/buttons.html":27,"./templates/code.html":28,"./templates/readonly.html":33,"./templates/shareFailure.html":34,"./templates/sharing.html":35,"./templates/showCode.html":36,"./templates/trophy.html":37,"./utils":39,"./xml":40}],19:[function(require,module,exports){
 var utils = require('./utils');
 var _ = utils.getLodash();
 
@@ -4453,7 +4653,7 @@ module.exports.installStringPicker = function(blockly, generator, options) {
   };
 };
 
-},{"./utils":38}],20:[function(require,module,exports){
+},{"./utils":39}],20:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-22
  * http://eightmedia.github.io/hammer.js
  *
@@ -6622,7 +6822,7 @@ if(typeof define == 'function' && define.amd) {
 /**
  * @license
  * Lo-Dash 2.4.1 (Custom Build) <http://lodash.com/>
- * Build: `lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap" --output src/lodash.js`
+ * Build: `lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap,size" --output src/lodash.js`
  * Copyright 2012-2013 The Dojo Foundation <http://dojofoundation.org/>
  * Based on Underscore.js 1.5.2 <http://underscorejs.org/LICENSE>
  * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -8626,6 +8826,31 @@ if(typeof define == 'function' && define.amd) {
     return result;
   }
 
+  /**
+   * Gets the size of the `collection` by returning `collection.length` for arrays
+   * and array-like objects or the number of own enumerable properties for objects.
+   *
+   * @static
+   * @memberOf _
+   * @category Collections
+   * @param {Array|Object|string} collection The collection to inspect.
+   * @returns {number} Returns `collection.length` or number of own enumerable properties.
+   * @example
+   *
+   * _.size([1, 2]);
+   * // => 2
+   *
+   * _.size({ 'one': 1, 'two': 2, 'three': 3 });
+   * // => 3
+   *
+   * _.size('pebbles');
+   * // => 7
+   */
+  function size(collection) {
+    var length = collection ? collection.length : 0;
+    return typeof length == 'number' ? length : keys(collection).length;
+  }
+
   /*--------------------------------------------------------------------------*/
 
   /**
@@ -9412,6 +9637,7 @@ if(typeof define == 'function' && define.amd) {
   lodash.mixin = mixin;
   lodash.noop = noop;
   lodash.now = now;
+  lodash.size = size;
   lodash.sortedIndex = sortedIndex;
 
   mixin(function() {
@@ -9822,7 +10048,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"../locale/nn_no/common":41,"./block_utils":4,"./utils":38,"./xml":39}],23:[function(require,module,exports){
+},{"../locale/nn_no/common":42,"./block_utils":4,"./utils":39,"./xml":40}],23:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
@@ -10191,7 +10417,7 @@ function installCond(blockly, generator, numPairs) {
   };
 }
 
-},{"../locale/nn_no/common":41,"./functionalBlockUtils":19}],24:[function(require,module,exports){
+},{"../locale/nn_no/common":42,"./functionalBlockUtils":19}],24:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -10345,6 +10571,9 @@ var Slider = function(x, y, width, svgParent, opt_changeFunc) {
   dom.addMouseDownTouchEvent(this.knob_, function(e) {
     return thisSlider.knobMouseDown_(e);
   });
+  dom.addMouseDownTouchEvent(this.track_, function(e) {
+    return thisSlider.trackMouseDown_(e);
+  });
   dom.addMouseUpTouchEvent(this.SVG_, Slider.knobMouseUp_);
   dom.addMouseMoveTouchEvent(this.SVG_, Slider.knobMouseMove_);
   // Don't add touch events for mouseover. The UX is better on Android
@@ -10365,8 +10594,37 @@ Slider.startKnobX_ = 0;
  * @private
  */
 Slider.prototype.knobMouseDown_ = function(e) {
+  this.beginDrag_(this.mouseToSvg_(e));
+
+  // Stop browser from attempting to drag the knob.
+  e.preventDefault();
+  return false;
+};
+
+/**
+ * Snap the knob to the mouse location and start a drag
+ * when clicking on the track (but not on the knob).
+ * @param {!Event} e Mouse-down event.
+ * @private
+ */
+Slider.prototype.trackMouseDown_ = function(e) {
+  var mouseSVGPosition = this.mouseToSvg_(e);
+  this.snapToPosition_(mouseSVGPosition.x);
+  this.beginDrag_(mouseSVGPosition);
+
+  // Stop browser from attempting to drag the track.
+  e.preventDefault();
+  return false;
+};
+
+/**
+ * Start dragging the slider knob.
+ * @param {!Object} mouseStartSVG Mouse start position in SVG space
+ * @private
+ */
+Slider.prototype.beginDrag_ = function(startMouseSVG) {
   Slider.activeSlider_ = this;
-  Slider.startMouseX_ = this.mouseToSvg_(e).x;
+  Slider.startMouseX_ = startMouseSVG.x;
   Slider.startKnobX_ = 0;
   var transform = this.knob_.getAttribute('transform');
   if (transform) {
@@ -10375,9 +10633,24 @@ Slider.prototype.knobMouseDown_ = function(e) {
       Slider.startKnobX_ = Number(r[1]);
     }
   }
-  // Stop browser from attempting to drag the knob.
-  e.preventDefault();
-  return false;
+};
+
+/**
+ * Snap the slider knob to the clicked position.
+ * @param {number} xPosition SVG x-coordinate
+ * @private
+ */
+Slider.prototype.snapToPosition_ = function(xPosition) {
+  var x = Math.min(Math.max(xPosition, 
+        this.KNOB_MIN_X_), this.KNOB_MAX_X_);
+  this.knob_.setAttribute('transform',
+      'translate(' + x + ',' + this.KNOB_Y_ + ')');
+
+  this.value_ = (x - this.KNOB_MIN_X_) /
+      (this.KNOB_MAX_X_ - this.KNOB_MIN_X_);
+  if (this.changeFunc_) {
+    this.changeFunc_(this.value_);
+  }
 };
 
 /**
@@ -10419,15 +10692,7 @@ Slider.knobMouseMove_ = function(e) {
   }
   var x = thisSlider.mouseToSvg_(e).x - Slider.startMouseX_ +
       Slider.startKnobX_;
-  x = Math.min(Math.max(x, thisSlider.KNOB_MIN_X_), thisSlider.KNOB_MAX_X_);
-  thisSlider.knob_.setAttribute('transform',
-      'translate(' + x + ',' + thisSlider.KNOB_Y_ + ')');
-
-  thisSlider.value_ = (x - thisSlider.KNOB_MIN_X_) /
-      (thisSlider.KNOB_MAX_X_ - thisSlider.KNOB_MIN_X_);
-  if (thisSlider.changeFunc_) {
-    thisSlider.changeFunc_(thisSlider.value_);
-  }
+  thisSlider.snapToPosition_(x);
 };
 
 /**
@@ -10512,7 +10777,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":42}],27:[function(require,module,exports){
+},{"ejs":43}],27:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10533,7 +10798,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/nn_no/common":41,"ejs":42}],28:[function(require,module,exports){
+},{"../../locale/nn_no/common":42,"ejs":43}],28:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10554,7 +10819,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":42}],29:[function(require,module,exports){
+},{"ejs":43}],29:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10575,7 +10840,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/nn_no/common":41,"ejs":42}],30:[function(require,module,exports){
+},{"../../locale/nn_no/common":42,"ejs":43}],30:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10598,7 +10863,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/nn_no/common":41,"ejs":42}],31:[function(require,module,exports){
+},{"../../locale/nn_no/common":42,"ejs":43}],31:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10619,7 +10884,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/nn_no/common":41,"ejs":42}],32:[function(require,module,exports){
+},{"../../locale/nn_no/common":42,"ejs":43}],32:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10644,7 +10909,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/nn_no/common":41,"ejs":42}],33:[function(require,module,exports){
+},{"../../locale/nn_no/common":42,"ejs":43}],33:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10666,7 +10931,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":42}],34:[function(require,module,exports){
+},{"ejs":43}],34:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10687,7 +10952,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":42}],35:[function(require,module,exports){
+},{"ejs":43}],35:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10708,7 +10973,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/nn_no/common":41,"ejs":42}],36:[function(require,module,exports){
+},{"../../locale/nn_no/common":42,"ejs":43}],36:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10729,7 +10994,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/nn_no/common":41,"ejs":42}],37:[function(require,module,exports){
+},{"../../locale/nn_no/common":42,"ejs":43}],37:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10750,7 +11015,25 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":42}],38:[function(require,module,exports){
+},{"ejs":43}],38:[function(require,module,exports){
+var list = [];
+
+/**
+ * call setTimeout and track the returned id
+ */
+exports.setTimeout = function (fn, time) {
+  list.push(window.setTimeout.apply(window, arguments));
+};
+
+/**
+ * Clears all timeouts in our list and resets the list
+ */
+exports.clearTimeouts = function () {
+  list.forEach(window.clearTimeout, window);
+  list = [];
+};
+
+},{}],39:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -11112,7 +11395,7 @@ exports.generateDropletModeOptions = function (codeFunctions) {
   return modeOptions;
 };
 
-},{"./hammer":20,"./lodash":21,"./xml":39}],39:[function(require,module,exports){
+},{"./hammer":20,"./lodash":21,"./xml":40}],40:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -11140,7 +11423,7 @@ exports.parseElement = function(text) {
   return element;
 };
 
-},{}],40:[function(require,module,exports){
+},{}],41:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.en=function(n){return n===1?"one":"other"}
 exports.compute = function(d){return "rekn ut"};
 
@@ -11155,7 +11438,7 @@ exports.reinfFeedbackMsg = function(d){return "Her er din historie! Fortset arbe
 exports.yourExpression = function(d){return "Uttrykket ditt:"};
 
 
-},{"messageformat":53}],41:[function(require,module,exports){
+},{"messageformat":54}],42:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.en=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "og"};
 
@@ -11338,7 +11621,7 @@ exports.genericFeedback = function(d){return "Sjå resultatet og prøv å fikse 
 exports.defaultTwitterText = function(d){return "Sjekk ut det eg har laga"};
 
 
-},{"messageformat":53}],42:[function(require,module,exports){
+},{"messageformat":54}],43:[function(require,module,exports){
 
 /*!
  * EJS
@@ -11697,7 +11980,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":43,"./utils":44,"fs":45,"path":46}],43:[function(require,module,exports){
+},{"./filters":44,"./utils":45,"fs":46,"path":47}],44:[function(require,module,exports){
 /*!
  * EJS - Filters
  * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
@@ -11900,7 +12183,7 @@ exports.json = function(obj){
   return JSON.stringify(obj);
 };
 
-},{}],44:[function(require,module,exports){
+},{}],45:[function(require,module,exports){
 
 /*!
  * EJS
@@ -11926,9 +12209,9 @@ exports.escape = function(html){
 };
  
 
-},{}],45:[function(require,module,exports){
-
 },{}],46:[function(require,module,exports){
+
+},{}],47:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -12156,7 +12439,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require("JkpR2F"))
-},{"JkpR2F":47}],47:[function(require,module,exports){
+},{"JkpR2F":48}],48:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -12221,7 +12504,7 @@ process.chdir = function (dir) {
     throw new Error('process.chdir is not supported');
 };
 
-},{}],48:[function(require,module,exports){
+},{}],49:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -12732,7 +13015,7 @@ process.chdir = function (dir) {
 }(this));
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],49:[function(require,module,exports){
+},{}],50:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -12818,7 +13101,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],50:[function(require,module,exports){
+},{}],51:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -12905,13 +13188,13 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],51:[function(require,module,exports){
+},{}],52:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":49,"./encode":50}],52:[function(require,module,exports){
+},{"./decode":50,"./encode":51}],53:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -13620,7 +13903,7 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":48,"querystring":51}],53:[function(require,module,exports){
+},{"punycode":49,"querystring":52}],54:[function(require,module,exports){
 /**
  * messageformat.js
  *
