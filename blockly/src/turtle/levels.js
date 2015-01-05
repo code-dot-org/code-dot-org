@@ -569,8 +569,11 @@ var levels = module.exports = {
     toolbox: toolbox(3, 9),
     startBlocks: startBlocks(3, 9),
     requiredBlocks: [
-      [simpleBlock('controls_for_counter')],
-      [simpleBlock('variables_get_counter')]
+      [defineWithArg(msg.drawAHouse(), msg.lengthParameter())],
+      [levelBase.callWithArg(msg.drawASquare(), msg.lengthParameter())],
+      [levelBase.callWithArg(msg.drawATriangle(), msg.lengthParameter())],
+      [simpleBlock('variables_get_length')],
+      [levelBase.callWithArg(msg.drawAHouse(), msg.lengthParameter())]
     ],
     freePlay: false,
     images: [
