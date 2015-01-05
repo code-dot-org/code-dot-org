@@ -99,23 +99,29 @@ def insert_form(kind, data, options={})
   end
 
   data = validate_form(kind, data)
+  
+  timestamp = DateTime.now
+  
+  row = {
+    secret: SecureRandom.hex,
+    parent_id: options[:parent_id],
+    email: data[:email_s].to_s.strip.downcase,
+    name: data[:name_s].to_s.strip,
+    kind: kind,
+    data: data.to_json,
+    created_at: timestamp,
+    created_ip: request.ip,
+    updated_at: timestamp,
+    updated_ip: request.ip,
+  }
+  row[:user_id] = dashboard_user[:id] if dashboard_user
+  row[:id] = DB[:forms].insert(row)
 
-  form = Form.new
-  form.secret = SecureRandom.hex
-  form.parent_id = options[:parent_id]
-  form.user_id = dashboard_user[:id] if dashboard_user
-  form.email = data[:email_s].to_s.strip.downcase
-  form.name = data[:name_s].to_s.strip
-  form.kind = kind
-  form.data = data
-  form.created_ip = form.updated_ip = request.ip
-  raise ValidationError.new(form) unless form.save
-
-  form
+  row
 end
 
 def update_form(kind, secret, data)
-  return nil unless form = Form.first(kind:kind, secret:secret)
+  return nil unless form = DB[:forms].where(kind:kind, secret:secret).first
 
   if dashboard_user && !dashboard_user[:admin]
     data[:email_s] ||= dashboard_user[:email]
@@ -124,18 +130,19 @@ def update_form(kind, secret, data)
 
   data = validate_form(kind, data)
 
-  form.user_id = dashboard_user[:id] if dashboard_user && !dashboard_user[:admin]
-  form.email = data[:email_s].to_s.strip.downcase if data.has_key?(:email_s)
-  form.name = data[:name_s].to_s.strip if data.has_key?(:name_s)
-  form.data = data
-  form.updated_ip = request.ip
-  form.processed_at = nil
-  form.indexed_at = nil
-  form.review= nil
-  form.reviewed_at = nil
-  form.reviewed_by = nil
-  form.reviewed_ip = nil
-  raise ValidationError.new(form) unless form.save
+  form[:user_id] = dashboard_user[:id] if dashboard_user && !dashboard_user[:admin]
+  form[:email] = data[:email_s].to_s.strip.downcase if data.has_key?(:email_s)
+  form[:name] = data[:name_s].to_s.strip if data.has_key?(:name_s)
+  form[:data] = data.to_json
+  form[:updated_at] = DateTime.now
+  form[:updated_ip] = request.ip
+  form[:processed_at] = nil
+  form[:indexed_at] = nil
+  form[:review] = nil
+  form[:reviewed_at] = nil
+  form[:reviewed_by] = nil
+  form[:reviewed_ip] = nil
+  DB[:forms].where(id:form[:id]).update(form)
 
   form
 end

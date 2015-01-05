@@ -9,7 +9,7 @@
     "instructions": "Freeplay: Here are the functions you've written, and some more for you to play with. Draw something awesome!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "slider_speed": ".5",
+    "slider_speed": ".6",
     "disable_param_editing": "false",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "true",
@@ -462,6 +462,20 @@
               <block type="math_number">
                 <title name="NUM">???</title>
               </block>
+            </value>
+          </block>
+        </category>
+        <category name="Color">
+          <block type="draw_colour" inline="true" id="draw-color">
+            <value name="COLOUR">
+              <block type="colour_picker">
+                <title name="COLOUR">#ff0000</title>
+              </block>
+            </value>
+          </block>
+          <block type="draw_colour" inline="true" id="draw-color">
+            <value name="COLOUR">
+              <block type="colour_random"/>
             </value>
           </block>
         </category>

@@ -28,7 +28,7 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="variables_set" inline="false">
+            <block type="variables_set" inline="false" movable="false">
               <title name="VAR">length</title>
               <next>
                 <block type="controls_repeat_ext" inline="true" movable="false">

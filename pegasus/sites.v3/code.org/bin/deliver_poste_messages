@@ -58,7 +58,7 @@ module Poste
 
     def render(params={})
       if params.has_key?('form_id')
-        form = Form.get(params['form_id'])
+        form = Form2.from_row(DB[:forms].where(id:params['form_id']).first)
         params.merge! form.data
         params.merge! form.processed_data
         params['form'] = form

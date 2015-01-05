@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "We've added one last function for you to use. Program your game to call the \"level_up\" function if \"player_points\" > 10. Score 10 points to move on to the next puzzle. ",
+    "instructions": "We've added one last function for you to use. Program your game to call the \"level_up\" function if \"player_points\" > 10. Play the game, and make it past level 4 to move to the next puzzle. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
