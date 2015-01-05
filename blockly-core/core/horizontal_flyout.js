@@ -17,6 +17,7 @@ Blockly.HorizontalFlyout = function(blockSpaceEditor) {
   this.autoClose = false;
   this.height_ = 10;
   this.flyoutRows = 0;
+  this.customYOffset = 0;
 };
 goog.inherits(Blockly.HorizontalFlyout, Blockly.Flyout);
 
@@ -70,7 +71,7 @@ Blockly.HorizontalFlyout.prototype.position_ = function() {
 
   this.width_ = edgeWidth;
   var x = metrics.absoluteLeft;
-  var y = metrics.absoluteTop - this.height_;
+  var y = metrics.absoluteTop - this.height_ + this.customYOffset;
   this.svgGroup_.setAttribute('transform', 'translate(' + x + ',' + y + ')');
 
   // Update the scrollbar (if one exists).

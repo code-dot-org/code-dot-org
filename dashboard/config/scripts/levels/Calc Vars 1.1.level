@@ -20,6 +20,17 @@
   <blocks>
     <start_blocks>
       <xml>
+        <block type="functional_compute" inline="false" deletable="false" movable="false">
+          <functional_input name="ARG1">
+            <block type="functional_times" inline="false">
+              <functional_input name="ARG1">
+                <block type="functional_call">
+                  <mutation name="age"/>
+                </block>
+              </functional_input>
+            </block>
+          </functional_input>
+        </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
             <outputtype>Number</outputtype>
@@ -32,7 +43,6 @@
             </block>
           </functional_input>
         </block>
-        <block type="functional_compute" inline="false" deletable="false" movable="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>

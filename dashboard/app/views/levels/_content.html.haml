@@ -1,0 +1,8 @@
+/ This partial contains general content-display code applicable across all of our content-based level types.
+/ Set 'data' and 'app' to use this partial.
+- app, data = %i(app data).map{ |x| local_assigns[x] }
+
+%h2= string_or_image(app, data['title'])
+%p.content1!= string_or_image(app, data['content1']) unless data['content1'].blank?
+%p.content2!= string_or_image(app, data['content2']) unless data['content2'].blank?
+%p.content3!= string_or_image(app, data['content3']) unless data['content3'].blank?

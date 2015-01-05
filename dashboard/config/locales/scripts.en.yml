@@ -313,6 +313,7 @@ en:
           description: A selection of Course 4 levels for usability testing.
           Variables: Variables
           For Loops: For Loops
+          Binary: Binary
         potus:
           title: special
           description_short: special
@@ -323,3 +324,22 @@ en:
           description_short: special
           description: special
           Special: Special
+          Binary: Binary
+        usabilitymsm:
+          Usability testing for MSM: Usability testing for MSM
+          Evaluation Blocks: Evaluation Blocks
+          Blocks to Math: Blocks to Math
+          Strings and Images: Strings and Images
+          Defining Variables: Defining Variables
+          Defining Functions: Defining Functions
+          Design Recipe: Design Recipe
+          Booleans: Booleans
+          Conditionals: Conditionals
+          Free Play: Free Play
+        algebra:
+          title: Computer Science in Algebra
+          description: Learn Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
+            and Coordinate Planes'
+          'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
+          'Eval: Strings and Images': 'Eval: Strings and Images'
