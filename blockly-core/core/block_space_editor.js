@@ -235,7 +235,9 @@ Blockly.BlockSpaceEditor.prototype.addFlyout_ = function() {
   // Insert the flyout behind the blockSpace so that blocks appear on top.
   goog.dom.insertSiblingBefore(flyoutSvg, this.blockSpace.svgGroup_);
 
-  this.addChangeListener(this.flyoutBumpOrDeleteOutOfBoundsBlocks_);
+  // If we want to apply this logic in toolbox mode, we need to move
+  // this listener hookup out of this method and up a few calls.
+  this.addChangeListener(this.bumpOrDeleteOutOfBoundsBlocks_);
 };
 
 /**
@@ -263,7 +265,7 @@ Blockly.BlockSpaceEditor.prototype.getDeleteAreas = function() {
  * 2. delete blocks on top of flyout
  * @private
  */
-Blockly.BlockSpaceEditor.prototype.flyoutBumpOrDeleteOutOfBoundsBlocks_ = function() {
+Blockly.BlockSpaceEditor.prototype.bumpOrDeleteOutOfBoundsBlocks_ = function() {
   if (Blockly.Block.isDragging()) {
     return;
   }
@@ -286,13 +288,6 @@ Blockly.BlockSpaceEditor.prototype.flyoutBumpOrDeleteOutOfBoundsBlocks_ = functi
   for (var b = 0, block; block = blocks[b]; b++) {
     var blockXY = block.getRelativeToSurfaceXY();
     var blockHW = block.getHeightWidth();
-    // Have flyout handle any blocks that have been dropped on it
-    if (block.isDeletable() && (Blockly.RTL ?
-        blockXY.x - 2 * metrics.viewLeft - metrics.viewWidth :
-        -blockXY.x) > MARGIN * 2) {
-      this.flyout_.onBlockDropped(block);
-      return;
-    }
     // Bump any block that's above the top back inside.
     overflow = metrics.viewTop + MARGIN - blockHW.height -
       blockXY.y;

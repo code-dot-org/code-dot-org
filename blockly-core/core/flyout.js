@@ -680,10 +680,6 @@ Blockly.Flyout.prototype.createBlockFunc_ = function(originBlock) {
       flyout.hide();
     } else {
       flyout.filterForCapacity_();
-      if (Blockly.hasConcreteBlocks) {
-        originBlock.setVisible(false);
-        originBlock.setDisabled(true);
-      }
     }
     // Start a dragging operation on the new block.
     block.onMouseDown_(e);
@@ -701,15 +697,7 @@ Blockly.Flyout.prototype.filterForCapacity_ = function() {
   for (var i = 0, block; block = blocks[i]; i++) {
     var allBlocks = block.getDescendants();
     var disabled = allBlocks.length > remainingCapacity;
-
-    if (Blockly.hasConcreteBlocks && !disabled) {
-      // It's not clear to me that this code should ever be changing blocks
-      // from disabled to enabled, but I don't understand it so well that I want
-      // to change it across the bored.  In the case of hasConcreteBlocks lets
-      // not mysteriously reenable blocks.
-    } else {
-      block.setDisabled(disabled);
-    }
+    block.setDisabled(disabled);
   }
 };
 
@@ -730,31 +718,6 @@ Blockly.Flyout.terminateDrag_ = function() {
   Blockly.Flyout.startDragMouseY_ = 0;
   Blockly.Flyout.startBlock_ = null;
   Blockly.Flyout.startFlyout_ = null;
-};
-
-/**
- * Handles a block being dragged and dropped onto the flyout.  If concreteBlocks
- * is set, we'll look for toolbox blocks that need to be made visible again. If
- * it isn't, just delete the block.
- */
-Blockly.Flyout.prototype.onBlockDropped = function (originBlock) {
-  var self = this;
-  if (Blockly.hasConcreteBlocks) {
-    // First add back children
-    originBlock.getChildren().forEach(function(child) {
-      self.onBlockDropped(child);
-    });
-    var blocks = this.blockSpace_.getAllBlocks();
-    for (var i = 0, block; block = blocks[i]; i++) {
-      if (block.type === originBlock.type) {
-        block.setVisible(true);
-        block.setDisabled(false);
-        break;
-      }
-    }
-  }
-
-  originBlock.dispose(false, true);
 };
 
 /**

@@ -512,7 +512,7 @@ BlocklyApps.init = function(config) {
       editBlocks: config.level.edit_blocks === undefined ?
           false : config.level.edit_blocks
     };
-    ['trashcan', 'concreteBlocks', 'varsInGlobals',
+    ['trashcan', 'varsInGlobals',
       'grayOutUndeletableBlocks', 'disableParamEditing'].forEach(
       function (prop) {
         if (config[prop] !== undefined) {
