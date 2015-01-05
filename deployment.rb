@@ -164,8 +164,8 @@ def aws_dir(*dirs)
   deploy_dir('aws', *dirs)
 end
 
-def blockly_dir(*dirs)
-  deploy_dir('blockly', *dirs)
+def apps_dir(*dirs)
+  deploy_dir('apps', *dirs)
 end
 
 def blockly_core_dir(*dirs)
@@ -187,4 +187,3 @@ end
 def secrets_dir(*dirs)
   aws_dir('secrets', *dirs)
 end
-

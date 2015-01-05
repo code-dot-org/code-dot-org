@@ -5,7 +5,7 @@ if [[ $1 == "debug" ]]; then
 fi
 
 (
-  if [[ ( -d "../blockly-core" ) && ( -d "../blockly" ) ]] ; then
+  if [[ ( -d "../blockly-core" ) && ( -d "../apps" ) ]] ; then
     cd ../blockly-core
     ./deploy.sh $1
   else
@@ -14,11 +14,11 @@ fi
 )
 
 (
-  if [ -d "../blockly" ] ; then
-    cd ../blockly
+  if [ -d "../apps" ] ; then
+    cd ../apps
     npm install
     grunt build
   else
-    echo "Skipping blockly. No ../blockly"
+    echo "Skipping blockly. No ../apps"
   fi
 )
