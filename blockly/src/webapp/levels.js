@@ -30,7 +30,7 @@ levels.simple = {
 levels.ec_simple = {
   'freePlay': true,
   'editCode': true,
-  'sliderSpeed': 0.7,
+  'sliderSpeed': 1.0,
   'codeFunctions': [
     {'func': 'attachEventHandler', 'category': 'General', 'params': ["'id'", "'click'", "function() {\n  \n}"] },
     {'func': 'startWebRequest', 'category': 'General', 'params': ["'http://api.openweathermap.org/data/2.5/weather?q=London,uk'", "function(status, type, content) {\n  \n}"] },
@@ -61,6 +61,9 @@ levels.ec_simple = {
     {'func': 'canvasSetLineWidth', 'category': 'Canvas', 'params': ["'id'", "3"] },
     {'func': 'canvasSetStrokeColor', 'category': 'Canvas', 'params': ["'id'", "'red'"] },
     {'func': 'canvasSetFillColor', 'category': 'Canvas', 'params': ["'id'", "'yellow'"] },
+    {'func': 'canvasDrawImage', 'category': 'Canvas', 'params': ["'id'", "'imageId'", "0", "0"] },
+    {'func': 'canvasGetImageData', 'category': 'Canvas', 'params': ["'id'", "0", "0", "400", "600"] },
+    {'func': 'canvasPutImageData', 'category': 'Canvas', 'params': ["'id'", "imageData", "0", "0"] },
     {'func': 'canvasClear', 'category': 'Canvas', 'params': ["'id'"] },
   ],
   'categoryInfo': {
