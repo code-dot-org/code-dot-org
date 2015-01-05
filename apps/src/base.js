@@ -637,7 +637,7 @@ exports.stopLoopingAudio = function(name) {
 /**
  * @param {Object} options Configuration parameters for Blockly. Parameters are
  * optional and include:
- *  - {string} path The root path to the /blockly directory, defaults to the
+ *  - {string} path The root path to the /apps directory, defaults to the
  *    the directory in which this script is located.
  *  - {boolean} rtl True if the current language right to left.
  *  - {DomElement} toolbox The element in which to insert the toolbox,

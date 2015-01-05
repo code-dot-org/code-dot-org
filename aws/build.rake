@@ -65,15 +65,15 @@ if rack_env?(:staging) || rack_env?(:development)
   end
 
   BLOCKLY_DEPENDENCIES = [BLOCKLY_CORE_TASK]
-  BLOCKLY_NODE_MODULES = Dir.glob(blockly_dir('node_modules', '**/*'))
-  BLOCKLY_BUILD_PRODUCTS = ['npm-debug.log'].map{|i| blockly_dir(i)} + Dir.glob(blockly_dir('build', '**/*'))
-  BLOCKLY_SOURCE_FILES = Dir.glob(blockly_dir('**/*')) - BLOCKLY_NODE_MODULES - BLOCKLY_BUILD_PRODUCTS
+  BLOCKLY_NODE_MODULES = Dir.glob(apps_dir('node_modules', '**/*'))
+  BLOCKLY_BUILD_PRODUCTS = ['npm-debug.log'].map{|i| apps_dir(i)} + Dir.glob(apps_dir('build', '**/*'))
+  BLOCKLY_SOURCE_FILES = Dir.glob(apps_dir('**/*')) - BLOCKLY_NODE_MODULES - BLOCKLY_BUILD_PRODUCTS
 
   BLOCKLY_TASK = build_task('blockly', BLOCKLY_DEPENDENCIES + BLOCKLY_SOURCE_FILES) do
     RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-blockly')
     RakeUtils.system 'rake', '--rakefile', deploy_dir('Rakefile'), 'build:blockly'
     RakeUtils.system 'rm', '-rf', dashboard_dir('public/blockly-package')
-    RakeUtils.system 'cp', '-R', blockly_dir('build/package'), dashboard_dir('public/blockly-package')
+    RakeUtils.system 'cp', '-R', apps_dir('build/package'), dashboard_dir('public/blockly-package')
   end
 
   BLOCKLY_COMMIT_TASK = build_task('blockly-commit', [deploy_dir('rebuild'), BLOCKLY_TASK]) do
@@ -128,14 +128,14 @@ def upgrade_frontend(name, host)
     'git pull',
     'rake build',
   ]
-  
+
   if name =~ /^frontend-[a-z]\d\d$/
     i = name[-2..-1].to_i
     if i > 5
       commands << 'sudo service pegasus stop'
     end
   end
-  
+
   command = commands.join(' && ')
 
   HipChat.log "Upgrading <b>#{name}</b> (#{host})..."
@@ -223,4 +223,3 @@ $websites_test = build_task('websites-test', [deploy_dir('rebuild')]) do
   end
 end
 task 'test-websites' => [$websites_test] {}
-

@@ -60,7 +60,7 @@ namespace :build do
   end
 
   task :blockly do
-    Dir.chdir(blockly_dir) do
+    Dir.chdir(apps_dir) do
       HipChat.log 'Installing <b>blockly</b> dependencies...'
       RakeUtils.npm_install
 
@@ -175,8 +175,8 @@ namespace :install do
   
   task :blockly do
     if rack_env?(:development) && !CDO.chef_managed
-      Dir.chdir(blockly_dir) do
-        blockly_build = CDO.use_my_blockly ? blockly_dir('build/package') : 'blockly-package'
+      Dir.chdir(apps_dir) do
+        blockly_build = CDO.use_my_blockly ? apps_dir('build/package') : 'blockly-package'
         RakeUtils.ln_s blockly_build, dashboard_dir('public','blockly')
       end
 
