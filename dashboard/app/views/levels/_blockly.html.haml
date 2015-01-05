@@ -19,7 +19,7 @@
   -# Common scripts and styles
   - blockly_path = "#{ActionController::Base.asset_host}/blockly/"
   -# If no param, take default
-  - pretty = params.fetch(:pretty, Rails.configuration.pretty_blockly)
+  - pretty = params.fetch(:pretty, Rails.configuration.pretty_apps)
   %link{href: "#{blockly_path}css/common.css", rel: 'stylesheet', type: 'text/css'}
   %link{href: "#{blockly_path}css/#{app}.css", rel: 'stylesheet', type: 'text/css'}
 

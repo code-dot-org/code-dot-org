@@ -39,7 +39,7 @@ Dashboard::Application.configure do
   config.active_support.deprecation = :stderr
 
   # Whether or not to display pretty blockly.
-  config.pretty_blockly = false
+  config.pretty_apps = false
 
   # disable this for test by default, it won't make much sense if we keep wiping the db
   CDO.disable_s3_image_uploads = true

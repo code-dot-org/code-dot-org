@@ -72,8 +72,8 @@ if rack_env?(:staging) || rack_env?(:development)
   APPS_TASK = build_task('apps', APPS_DEPENDENCIES + APPS_SOURCE_FILES) do
     RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-apps')
     RakeUtils.system 'rake', '--rakefile', deploy_dir('Rakefile'), 'build:apps'
-    RakeUtils.system 'rm', '-rf', dashboard_dir('public/blockly-package')
-    RakeUtils.system 'cp', '-R', apps_dir('build/package'), dashboard_dir('public/blockly-package')
+    RakeUtils.system 'rm', '-rf', dashboard_dir('public/apps-package')
+    RakeUtils.system 'cp', '-R', apps_dir('build/package'), dashboard_dir('public/apps-package')
   end
 
   APPS_COMMIT_TASK = build_task('apps-commit', [deploy_dir('rebuild'), APPS_TASK]) do
@@ -83,7 +83,7 @@ if rack_env?(:staging) || rack_env?(:development)
     end
 
     apps_changed = false;
-    Dir.chdir(dashboard_dir('public/blockly-package')) do
+    Dir.chdir(dashboard_dir('public/apps-package')) do
       apps_changed = !`git status --porcelain .`.strip.empty?
     end
 
@@ -93,7 +93,7 @@ if rack_env?(:staging) || rack_env?(:development)
       else
         HipChat.log 'Committing updated <b>apps</b> package...', color:'purple'
         RakeUtils.system 'git', 'add', *BLOCKLY_CORE_PRODUCT_FILES
-        RakeUtils.system 'git', 'add', '--all', dashboard_dir('public/blockly-package')
+        RakeUtils.system 'git', 'add', '--all', dashboard_dir('public/apps-package')
         message = "Automatically built.\n\n#{IO.read(deploy_dir('rebuild-apps'))}"
         RakeUtils.system 'git', 'commit', '-m', Shellwords.escape(message)
         RakeUtils.git_push
