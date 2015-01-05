@@ -75,8 +75,6 @@
   "saveToGallery": "保存到画廊",
   "savedToGallery": "已保存在画廊內!",
   "shareFailure": "对不起，我们无法分享这程序。",
-  "typeFuncs": "可用功能:%1",
-  "typeHint": "注意圆括号和分号是需要的。",
   "workspaceHeader": "在这里组装你的模块:",
   "workspaceHeaderJavaScript": "在这里输入你的JavaScript代码",
   "infinity": "无限",

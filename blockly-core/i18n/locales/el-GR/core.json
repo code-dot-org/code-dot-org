@@ -41,7 +41,7 @@
   "CONTROLS_IF_ELSEIF_TOOLTIP": "Πρόσθεσε συνθήκη σε ένα μπλοκ αν.",
   "CONTROLS_IF_ELSE_TOOLTIP": "Πρόσθεσε μια τελική συνθήκη για όλες τις υπόλοιπες περιπτώσεις στον μπλοκ αν.",
   "CONTROLS_IF_HELPURL": "http://code.google.com/p/blockly/wiki/If_Then ΑΝ_ΤΟΤΕ",
-  "CONTROLS_IF_IF_TOOLTIP": "Πρόσθεσε, αφαίρεσε ή αναδιάταξε ενότητες για να αναπροσαρμόσεις αυτό το πλακίδιο αν.",
+  "CONTROLS_IF_IF_TOOLTIP": "Πρόσθεσε, αφαίρεσε ή αναδιάταξε ενότητες για να αναπροσαρμόσεις αυτό το πλακίδιο \"αν\".",
   "CONTROLS_IF_MSG_ELSE": "αλλιώς",
   "CONTROLS_IF_MSG_ELSEIF": "αλλιώς αν",
   "CONTROLS_IF_MSG_IF": "εάν",

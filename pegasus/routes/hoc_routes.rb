@@ -132,9 +132,9 @@ post '/api/hour/certificate' do
       halt 400, {'Content-Type'=>'text/json'}, e.errors.to_json
     end
 
-    DB[:hoc_activity].where(id:row[:id]).update(name:form.name)
+    DB[:hoc_activity].where(id:row[:id]).update(name:form[:name])
 
-    row[:name] = form.name
+    row[:name] = form[:name]
   end
 
   content_type :json
