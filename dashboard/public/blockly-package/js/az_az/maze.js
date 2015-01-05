@@ -766,6 +766,8 @@ BlocklyApps.init = function(config) {
           false : config.level.useModalFunctionEditor,
       useContractEditor: config.level.useContractEditor === undefined ?
           false : config.level.useContractEditor,
+      defaultNumExampleBlocks: config.level.defaultNumExampleBlocks === undefined ?
+          0 : config.level.defaultNumExampleBlocks,
       scrollbars: config.level.scrollbars,
       editBlocks: config.level.edit_blocks === undefined ?
           false : config.level.edit_blocks
@@ -3345,6 +3347,7 @@ function hasUnusedParam() {
       // Unused param if there's no parameters_get descendant with the same name
       return !hasMatchingDescendant(userBlock, function(block) {
         return (block.type === 'parameters_get' ||
+            block.type === 'functional_parameters_get' ||
             block.type === 'variables_get') &&
             block.getTitleValue('VAR') === paramName;
       });
@@ -15768,6 +15771,9 @@ var Slider = function(x, y, width, svgParent, opt_changeFunc) {
   dom.addMouseDownTouchEvent(this.knob_, function(e) {
     return thisSlider.knobMouseDown_(e);
   });
+  dom.addMouseDownTouchEvent(this.track_, function(e) {
+    return thisSlider.trackMouseDown_(e);
+  });
   dom.addMouseUpTouchEvent(this.SVG_, Slider.knobMouseUp_);
   dom.addMouseMoveTouchEvent(this.SVG_, Slider.knobMouseMove_);
   // Don't add touch events for mouseover. The UX is better on Android
@@ -15788,8 +15794,37 @@ Slider.startKnobX_ = 0;
  * @private
  */
 Slider.prototype.knobMouseDown_ = function(e) {
+  this.beginDrag_(this.mouseToSvg_(e));
+
+  // Stop browser from attempting to drag the knob.
+  e.preventDefault();
+  return false;
+};
+
+/**
+ * Snap the knob to the mouse location and start a drag
+ * when clicking on the track (but not on the knob).
+ * @param {!Event} e Mouse-down event.
+ * @private
+ */
+Slider.prototype.trackMouseDown_ = function(e) {
+  var mouseSVGPosition = this.mouseToSvg_(e);
+  this.snapToPosition_(mouseSVGPosition.x);
+  this.beginDrag_(mouseSVGPosition);
+
+  // Stop browser from attempting to drag the track.
+  e.preventDefault();
+  return false;
+};
+
+/**
+ * Start dragging the slider knob.
+ * @param {!Object} mouseStartSVG Mouse start position in SVG space
+ * @private
+ */
+Slider.prototype.beginDrag_ = function(startMouseSVG) {
   Slider.activeSlider_ = this;
-  Slider.startMouseX_ = this.mouseToSvg_(e).x;
+  Slider.startMouseX_ = startMouseSVG.x;
   Slider.startKnobX_ = 0;
   var transform = this.knob_.getAttribute('transform');
   if (transform) {
@@ -15798,9 +15833,24 @@ Slider.prototype.knobMouseDown_ = function(e) {
       Slider.startKnobX_ = Number(r[1]);
     }
   }
-  // Stop browser from attempting to drag the knob.
-  e.preventDefault();
-  return false;
+};
+
+/**
+ * Snap the slider knob to the clicked position.
+ * @param {number} xPosition SVG x-coordinate
+ * @private
+ */
+Slider.prototype.snapToPosition_ = function(xPosition) {
+  var x = Math.min(Math.max(xPosition, 
+        this.KNOB_MIN_X_), this.KNOB_MAX_X_);
+  this.knob_.setAttribute('transform',
+      'translate(' + x + ',' + this.KNOB_Y_ + ')');
+
+  this.value_ = (x - this.KNOB_MIN_X_) /
+      (this.KNOB_MAX_X_ - this.KNOB_MIN_X_);
+  if (this.changeFunc_) {
+    this.changeFunc_(this.value_);
+  }
 };
 
 /**
@@ -15842,15 +15892,7 @@ Slider.knobMouseMove_ = function(e) {
   }
   var x = thisSlider.mouseToSvg_(e).x - Slider.startMouseX_ +
       Slider.startKnobX_;
-  x = Math.min(Math.max(x, thisSlider.KNOB_MIN_X_), thisSlider.KNOB_MAX_X_);
-  thisSlider.knob_.setAttribute('transform',
-      'translate(' + x + ',' + thisSlider.KNOB_Y_ + ')');
-
-  thisSlider.value_ = (x - thisSlider.KNOB_MIN_X_) /
-      (thisSlider.KNOB_MAX_X_ - thisSlider.KNOB_MIN_X_);
-  if (thisSlider.changeFunc_) {
-    thisSlider.changeFunc_(thisSlider.value_);
-  }
+  thisSlider.snapToPosition_(x);
 };
 
 /**
@@ -16582,7 +16624,7 @@ exports.parseElement = function(text) {
 };
 
 },{}],59:[function(require,module,exports){
-var MessageFormat = require("messageformat");MessageFormat.locale.az=function(n){return n===1?"one":"other"}
+var MessageFormat = require("messageformat");MessageFormat.locale.en=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "və"};
 
 exports.booleanTrue = function(d){return "doğru"};
@@ -16649,7 +16691,7 @@ exports.extraTopBlocks = function(d){return "Qoşulmamış bloklarınız var. On
 
 exports.finalStage = function(d){return "Təbriklər! Siz son mərhələni başa vurdunuz."};
 
-exports.finalStageTrophies = function(d){return "Təbriklər! Siz sonuncu mərhələni tamamladınız və "+p(d,"numTrophies",0,"az",{"one":"bir kubok","other":n(d,"numTrophies")+" kubok"})+" qazandınız."};
+exports.finalStageTrophies = function(d){return "Təbriklər! Siz sonuncu mərhələni tamamladınız və "+p(d,"numTrophies",0,"en",{"one":"bir kubok","other":n(d,"numTrophies")+" kubok"})+" qazandınız."};
 
 exports.finish = function(d){return "Finish"};
 
@@ -16673,15 +16715,15 @@ exports.missingBlocksErrorMsg = function(d){return "Bu tapmacanı həll etmək �
 
 exports.nextLevel = function(d){return "Təbriklər! Siz "+v(d,"puzzleNumber")+" nömrəli tapmacanı tamamladınız."};
 
-exports.nextLevelTrophies = function(d){return "Təbriklər! Siz "+v(d,"puzzleNumber")+" nömrəli tapmacanı tamamladınız və "+p(d,"numTrophies",0,"az",{"one":"bir kubok","other":n(d,"numTrophies")+" kubok"})+" qazandınız."};
+exports.nextLevelTrophies = function(d){return "Təbriklər! Siz "+v(d,"puzzleNumber")+" nömrəli tapmacanı tamamladınız və "+p(d,"numTrophies",0,"en",{"one":"bir kubok","other":n(d,"numTrophies")+" kubok"})+" qazandınız."};
 
 exports.nextStage = function(d){return "Təbriklər! Siz "+v(d,"stageName")+" mərhələsini tamamladınız."};
 
-exports.nextStageTrophies = function(d){return "Təbriklər! Siz "+v(d,"stageName")+" mərhələsini tamamladınız və "+p(d,"numTrophies",0,"az",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+" qazandınız."};
+exports.nextStageTrophies = function(d){return "Təbriklər! Siz "+v(d,"stageName")+" mərhələsini tamamladınız və "+p(d,"numTrophies",0,"en",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+" qazandınız."};
 
-exports.numBlocksNeeded = function(d){return "Təbriklər! Siz "+v(d,"puzzleNumber")+" nömrəli tapmacanı tamamladınız. (Amma siz cəmi "+p(d,"numBlocks",0,"az",{"one":"1 blokdan","other":n(d,"numBlocks")+" blokdan"})+" istifadə edə bilərdiniz)"};
+exports.numBlocksNeeded = function(d){return "Təbriklər! Siz "+v(d,"puzzleNumber")+" nömrəli tapmacanı tamamladınız. (Amma siz cəmi "+p(d,"numBlocks",0,"en",{"one":"1 blokdan","other":n(d,"numBlocks")+" blokdan"})+" istifadə edə bilərdiniz)"};
 
-exports.numLinesOfCodeWritten = function(d){return "Siz indicə "+p(d,"numLines",0,"az",{"one":"bir sətir","other":n(d,"numLines")+" sətir"})+" kod yazdınız!"};
+exports.numLinesOfCodeWritten = function(d){return "Siz indicə "+p(d,"numLines",0,"en",{"one":"bir sətir","other":n(d,"numLines")+" sətir"})+" kod yazdınız!"};
 
 exports.play = function(d){return "play"};
 
@@ -16721,7 +16763,7 @@ exports.toolboxHeader = function(d){return "bloklar"};
 
 exports.openWorkspace = function(d){return "Bu necə işləyir?"};
 
-exports.totalNumLinesOfCodeWritten = function(d){return "Ümumi cəm: "+p(d,"numLines",0,"az",{"one":"1 sətir","other":n(d,"numLines")+" sətir"})+" kod."};
+exports.totalNumLinesOfCodeWritten = function(d){return "Ümumi cəm: "+p(d,"numLines",0,"en",{"one":"1 sətir","other":n(d,"numLines")+" sətir"})+" kod."};
 
 exports.tryAgain = function(d){return "Bir daha cəhd edin"};
 
@@ -16765,7 +16807,7 @@ exports.defaultTwitterText = function(d){return "Check out what I made"};
 
 
 },{"messageformat":72}],60:[function(require,module,exports){
-var MessageFormat = require("messageformat");MessageFormat.locale.az=function(n){return n===1?"one":"other"}
+var MessageFormat = require("messageformat");MessageFormat.locale.en=function(n){return n===1?"one":"other"}
 exports.atHoneycomb = function(d){return "at honeycomb"};
 
 exports.atFlower = function(d){return "at flower"};
