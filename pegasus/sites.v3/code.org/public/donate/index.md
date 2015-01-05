@@ -11,7 +11,9 @@ require_https: true
 [<button>Donate by credit card</button>](#creditcard) &nbsp;  [<button>Donate with PayPal</button>](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HV8WDN6DRDVDL)    &nbsp; [<button>Donate by Bitcoin</button>](https://coinbase.com/codeorg)
 
 
-## We use donations to work towards these main objectives:
+## For every dollar you give, one child will learn computer science
+
+We use donations to work towards these main objectives:
 
 - **Bringing computer science to schools** - through district partnerships, teacher training and free, online courses.
 - **Modernizing curriculum** - developing fun, engaging tutorials and coursework for all levels.
@@ -19,11 +21,13 @@ require_https: true
 - **Increasing diversity** - encouraging women and students of color, who are sorely underrepresented in computer science.
 - **Raising awareness** - we're making it known: it should be a national imperative to get more students to code.
 
-**Our current donors:**
+Please see our [latest progress against these objectives](/about).  
+
+Each dollar you give is enough to help one child learn an introductory computer science class. To maintain our nonprofit status, we need small donations to add up to 1/3 of our funding. Every dollar counts.
+
 
 Our donors include Microsoft, Google, Ballmer Family Giving, Omidyar Network and more. [See full list](/about/donors)
 
-For our nonprofit status, we need small donations to add up to 1/3 of our funding. Every dollar counts.
 
 <hr/>
 <a id="creditcard"></a>

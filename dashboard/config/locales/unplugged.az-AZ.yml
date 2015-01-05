@@ -220,8 +220,8 @@
         video: C3_dice_race
       Internet:
         title: İnternet
-        desc: Students send messages representing various Internet transmission methods
-          using pieces of paper.
+        desc: Şagirdlər kağız parçalarından istifadə edərək müxtəlif internet yayım
+          metodlarını təmsil edən ismarışlar göndərirlər.
         video: C3_internet
       Crowdsourcing:
         title: Crowdsourcing
@@ -268,7 +268,7 @@
           functions is such a helpful practice.  '
         video: C4_unplugged_parameters
       BinaryImages:
-        title: Binary Images
+        title: İkilik təsvirlər
         desc: Though many people think of binary as strictly zeros and ones, our previous
           courses taught students that information can be represented in a variety
           of binary options.  This lesson takes that concept one step further as it

@@ -12,7 +12,7 @@
   "scaleImageBlockTitle": "Skala (Faktor)",
   "squareBlockTitle": "Quadrat (Größe, Stil, Farbe)",
   "starBlockTitle": "Stern (Radius, Stil, Farbe)",
-  "radialStarBlockTitle": "radial-star (points, inner, outer, style, color)",
+  "radialStarBlockTitle": "Radial-Star (Punkte, innere, äußere, Stil, Farbe)",
   "stringAppendBlockTitle": "String anhängen (erster, zweiter)",
   "stringLengthBlockTitle": "Länge der Zeichenfolge (String)",
   "textBlockTitle": "Text (String, Größe, Farbe)",

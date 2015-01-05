@@ -303,8 +303,13 @@ BlocklyApps.LOCALE = 'en_us';
  */
 BlocklyApps.MIN_WIDTH = 900;
 BlocklyApps.MIN_MOBILE_SHARE_WIDTH = 450;
-BlocklyApps.MIN_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
+BlocklyApps.MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 var WORKSPACE_PLAYSPACE_GAP = 15;
+
+/**
+ * Treat mobile devices with screen.width less than the value below as phones.
+ */
+BlocklyApps.MAX_PHONE_WIDTH = 500;
 
 /**
  * If the user presses backspace, stop propagation - this prevents blockly
@@ -348,8 +353,8 @@ function updateHeadersAfterDropletToggle(usingBlocks) {
 
   var blockCount = document.getElementById('blockCounter');
   if (blockCount) {
-    blockCount.style.visibility =
-      (usingBlocks && BlocklyApps.enableShowBlockCount) ? 'visible' : 'hidden';
+    blockCount.style.display =
+      (usingBlocks && BlocklyApps.enableShowBlockCount) ? 'inline-block' : 'none';
   }
 
   // Resize (including headers), so the category header will appear/disappear:
@@ -417,6 +422,7 @@ BlocklyApps.init = function(config) {
   }
 
   var visualizationColumn = document.getElementById('visualizationColumn');
+  var visualization = document.getElementById('visualization');
 
   // center game screen in embed mode
   if(config.embed) {
@@ -443,7 +449,6 @@ BlocklyApps.init = function(config) {
 
   if (!config.embed && !BlocklyApps.share) {
     // Make the visualization responsive to screen size, except on share page.
-    var visualization = document.getElementById('visualization');
     visualization.className += " responsive";
     visualizationColumn.className += " responsive";
   }
@@ -495,26 +500,31 @@ BlocklyApps.init = function(config) {
     }
     var belowVisualization = document.getElementById('belowVisualization');
     if (belowVisualization) {
-      belowVisualization.style.display = 'block';
-      belowVisualization.style.marginLeft = '0px';
-      if (BlocklyApps.noPadding) {
-        // Shift run and reset buttons off the left edge if we have no padding
-        if (runButton) {
-          runButton.style.marginLeft = '10px';
-        }
-        if (resetButton) {
-          resetButton.style.marginLeft = '10px';
-        }
-        var shareCell = document.getElementById('share-cell') ||
-            document.getElementById('right-button-cell');
-        if (shareCell) {
-          shareCell.style.marginLeft = '10px';
-          shareCell.style.marginRight = '10px';
-        }
-        var softButtons = document.getElementById('soft-buttons');
-        if (softButtons) {
-          softButtons.style.marginLeft = '10px';
-          softButtons.style.marginRight = '10px';
+      if (config.noButtonsBelowOnMobileShare) {
+        belowVisualization.style.display = 'none';
+        visualization.style.marginBottom = '0px';
+      } else {
+        belowVisualization.style.display = 'block';
+        belowVisualization.style.marginLeft = '0px';
+        if (BlocklyApps.noPadding) {
+          // Shift run and reset buttons off the left edge if we have no padding
+          if (runButton) {
+            runButton.style.marginLeft = '10px';
+          }
+          if (resetButton) {
+            resetButton.style.marginLeft = '10px';
+          }
+          var shareCell = document.getElementById('share-cell') ||
+              document.getElementById('right-button-cell');
+          if (shareCell) {
+            shareCell.style.marginLeft = '10px';
+            shareCell.style.marginRight = '10px';
+          }
+          var softButtons = document.getElementById('soft-buttons');
+          if (softButtons) {
+            softButtons.style.marginLeft = '10px';
+            softButtons.style.marginRight = '10px';
+          }
         }
       }
     }
@@ -534,10 +544,11 @@ BlocklyApps.init = function(config) {
       if (BlocklyApps.noPadding) {
         upSale.style.marginLeft = '10px';
       }
-    } else {
+      belowViz.appendChild(upSale);
+    } else if (typeof config.makeYourOwn === 'undefined') {
       upSale.innerHTML = require('./templates/learn.html')();
+      belowViz.appendChild(upSale);
     }
-    belowViz.appendChild(upSale);
   }
 
   // Record time at initialization.
@@ -546,22 +557,27 @@ BlocklyApps.init = function(config) {
   // Fixes viewport for small screens.
   var viewport = document.querySelector('meta[name="viewport"]');
   if (viewport) {
-    var widthDimension;
+    var deviceWidth;
+    var desiredWidth;
     var minWidth;
     if (BlocklyApps.share && dom.isMobile()) {
       // for mobile sharing, don't assume landscape mode, use screen.width
-      widthDimension = screen.width;
+      deviceWidth = desiredWidth = screen.width;
+      if (BlocklyApps.noPadding && screen.width < BlocklyApps.MAX_PHONE_WIDTH) {
+        desiredWidth = Math.min(desiredWidth,
+                                BlocklyApps.MOBILE_NO_PADDING_SHARE_WIDTH);
+      }
       minWidth = BlocklyApps.noPadding ?
-                    BlocklyApps.MIN_MOBILE_NO_PADDING_SHARE_WIDTH :
+                    BlocklyApps.MOBILE_NO_PADDING_SHARE_WIDTH :
                     BlocklyApps.MIN_MOBILE_SHARE_WIDTH;
     }
     else {
       // assume we are in landscape mode, so width is the longer of the two
-      widthDimension = Math.max(screen.width, screen.height);
+      deviceWidth = desiredWidth = Math.max(screen.width, screen.height);
       minWidth = BlocklyApps.MIN_WIDTH;
     }
-    var width = Math.max(minWidth, widthDimension);
-    var scale = widthDimension / width;
+    var width = Math.max(minWidth, desiredWidth);
+    var scale = deviceWidth / width;
     var content = ['width=' + width,
                    'minimal-ui',
                    'initial-scale=' + scale,
@@ -580,6 +596,9 @@ BlocklyApps.init = function(config) {
       if (BlocklyApps.editCode) {
         BlocklyApps.editor.toggleBlocks();
         updateHeadersAfterDropletToggle(BlocklyApps.editor.currentlyUsingBlocks);
+        if (!BlocklyApps.editor.currentlyUsingBlocks) {
+          BlocklyApps.editor.aceEditor.focus();
+        }
       } else {
         feedback.showGeneratedCode(BlocklyApps.Dialog);
       }
@@ -588,7 +607,7 @@ BlocklyApps.init = function(config) {
 
   var blockCount = document.getElementById('blockCounter');
   if (blockCount && !BlocklyApps.enableShowBlockCount) {
-    blockCount.style.visibility = 'hidden';
+    blockCount.style.display = 'none';
   }
 
   BlocklyApps.ICON = config.skin.staticAvatar;
@@ -623,7 +642,7 @@ BlocklyApps.init = function(config) {
       var vizCol = document.getElementById('visualizationColumn');
       var width = vizCol.offsetWidth;
       var height = vizCol.offsetHeight;
-      var displayWidth = BlocklyApps.MIN_MOBILE_NO_PADDING_SHARE_WIDTH;
+      var displayWidth = BlocklyApps.MOBILE_NO_PADDING_SHARE_WIDTH;
       var scale = Math.min(width / displayWidth, height / displayWidth);
       var viz = document.getElementById('visualization');
       viz.style['transform-origin'] = 'left top';
@@ -688,6 +707,20 @@ BlocklyApps.init = function(config) {
         modeOptions: utils.generateDropletModeOptions(config.level.codeFunctions),
         palette: utils.generateDropletPalette(config.level.codeFunctions,
                                               config.level.categoryInfo)
+      });
+
+      BlocklyApps.editor.aceEditor.setShowPrintMargin(false);
+
+      // Add an ace completer for the API functions exposed for this level
+      if (config.level.codeFunctions) {
+        var langTools = window.ace.require("ace/ext/language_tools");
+        langTools.addCompleter(
+            utils.generateAceApiCompleter(config.level.codeFunctions));
+      }
+
+      BlocklyApps.editor.aceEditor.setOptions({
+        enableBasicAutocompletion: true,
+        enableLiveAutocompletion: true
       });
 
       if (config.afterInject) {
@@ -1798,10 +1831,14 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
     } else {
       retVal = interpreter.createObject(interpreter.OBJECT);
       for (var prop in nativeVar) {
+        var value;
+        try {
+          value = nativeVar[prop];
+        } catch (e) { }
         interpreter.setProperty(retVal,
                                 prop,
                                 exports.marshalNativeToInterpreter(interpreter,
-                                                                   nativeVar[prop],
+                                                                   value,
                                                                    nativeVar,
                                                                    maxDepth - 1));
       }
@@ -1812,13 +1849,40 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
   return retVal;
 };
 
+exports.marshalInterpreterToNative = function (interpreterVar) {
+  if (interpreterVar.isPrimitive) {
+    return interpreterVar.data;
+  } else if (Webapp.interpreter.isa(interpreterVar, Webapp.interpreter.ARRAY)) {
+    var nativeArray = [];
+    nativeArray.length = interpreterVar.length;
+    for (var i = 0; i < nativeArray.length; i++) {
+      nativeArray[i] = exports.marshalInterpreterToNative(interpreterVar.properties[i]);
+    }
+    return nativeArray;
+  } else if (Webapp.interpreter.isa(interpreterVar, Webapp.interpreter.OBJECT)) {
+    var nativeObject = {};
+    for (var prop in interpreterVar.properties) {
+      nativeObject[prop] = exports.marshalInterpreterToNative(interpreterVar.properties[prop]);
+    }
+    return nativeObject;
+  } else {
+    // Just return the interpreter object if we can't convert it. This is needed
+    // for passing interpreter callback functions into native.
+    return interpreterVar;
+  }
+};
+
 /**
  * Generate a native function wrapper for use with the JS interpreter.
  */
 exports.makeNativeMemberFunction = function (interpreter, nativeFunc, nativeParentObj, maxDepth) {
   return function() {
     // Call the native function:
-    var nativeRetVal = nativeFunc.apply(nativeParentObj, arguments);
+    var nativeArgs = [];
+    for (var i = 0; i < arguments.length; i++) {
+      nativeArgs[i] = exports.marshalInterpreterToNative(arguments[i]);
+    }
+    var nativeRetVal = nativeFunc.apply(nativeParentObj, nativeArgs);
     return exports.marshalNativeToInterpreter(interpreter, nativeRetVal, null, maxDepth);
   };
 };
@@ -1950,7 +2014,7 @@ exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
     // Only show selection if the node being executed is inside the user's
     // code (not inside code we inserted before or after their code that is
     // not visible in the editor):
-    if (start > 0 && start < userCodeLength) {
+    if (start >= 0 && start < userCodeLength) {
       userCodeRow = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
       // Highlight the code being executed in each step:
       if (editor.currentlyUsingBlocks) {
@@ -9453,7 +9517,7 @@ exports.generateCodeAliases = function (codeFunctions, parentObjName) {
  */
 exports.generateDropletPalette = function (codeFunctions, categoryInfo) {
   // TODO: figure out localization for droplet scenario
-  var palette = [
+  var stdPalette = [
     {
       name: 'Control',
       color: 'orange',
@@ -9573,12 +9637,42 @@ exports.generateDropletPalette = function (codeFunctions, categoryInfo) {
     }
   }
 
+  var addedPalette = [];
   for (var category in categoryInfo) {
     categoryInfo[category].name = category;
-    palette.unshift(categoryInfo[category]);
+    addedPalette.push(categoryInfo[category]);
   }
 
-  return palette;
+  return addedPalette.concat(stdPalette);
+};
+
+/**
+ * Generate an Ace editor completer for a set of APIs based on some level data.
+ */
+exports.generateAceApiCompleter = function (codeFunctions) {
+  var apis = [];
+
+  for (var i = 0; i < codeFunctions.length; i++) {
+    var cf = codeFunctions[i];
+    if (cf.category === 'hidden') {
+      continue;
+    }
+    apis.push({
+      name: 'api',
+      value: cf.func,
+      meta: 'local'
+    });
+  }
+
+  return {
+    getCompletions: function(editor, session, pos, prefix, callback) {
+      if (prefix.length === 0) {
+        callback(null, []);
+        return;
+      }
+      callback(null, apis);
+    }
+  };
 };
 
 /**
@@ -9627,34 +9721,41 @@ exports.randomFromArray = function (values) {
 // APIs needed for droplet and/or blockly (must include blockId):
 
 exports.createHtmlBlock = function (blockId, elementId, html) {
-  return Webapp.executeCmd(String(blockId),
+  return Webapp.executeCmd(blockId,
                           'createHtmlBlock',
                           {'elementId': elementId,
                            'html': html });
 };
 
 exports.replaceHtmlBlock = function (blockId, elementId, html) {
-  return Webapp.executeCmd(String(blockId),
+  return Webapp.executeCmd(blockId,
                           'replaceHtmlBlock',
                           {'elementId': elementId,
                            'html': html });
 };
 
 exports.deleteHtmlBlock = function (blockId, elementId) {
-  return Webapp.executeCmd(String(blockId),
+  return Webapp.executeCmd(blockId,
                           'deleteHtmlBlock',
                           {'elementId': elementId });
 };
 
 exports.createButton = function (blockId, elementId, text) {
-  return Webapp.executeCmd(String(blockId),
+  return Webapp.executeCmd(blockId,
                           'createButton',
                           {'elementId': elementId,
                            'text': text });
 };
 
+exports.createImage = function (blockId, elementId, src) {
+  return Webapp.executeCmd(blockId,
+                          'createImage',
+                          {'elementId': elementId,
+                           'src': src });
+};
+
 exports.setPosition = function (blockId, elementId, left, top, width, height) {
-  return Webapp.executeCmd(String(blockId),
+  return Webapp.executeCmd(blockId,
                           'setPosition',
                           {'elementId': elementId,
                            'left': left,
@@ -9664,7 +9765,7 @@ exports.setPosition = function (blockId, elementId, left, top, width, height) {
 };
 
 exports.createCanvas = function (blockId, elementId, width, height) {
-  return Webapp.executeCmd(String(blockId),
+  return Webapp.executeCmd(blockId,
                           'createCanvas',
                           {'elementId': elementId,
                            'width': width,
@@ -9672,94 +9773,148 @@ exports.createCanvas = function (blockId, elementId, width, height) {
 };
 
 exports.canvasDrawLine = function (blockId, elementId, x1, y1, x2, y2) {
-  return Webapp.executeCmd(String(blockId),
+  return Webapp.executeCmd(blockId,
                           'canvasDrawLine',
                           {'elementId': elementId,
-                           'x1': Number(x1),
-                           'y1': Number(y1),
-                           'x2': Number(x2),
-                           'y2': Number(y2) });
+                           'x1': x1,
+                           'y1': y1,
+                           'x2': x2,
+                           'y2': y2 });
 };
 
 exports.canvasDrawCircle = function (blockId, elementId, x, y, radius) {
-  return Webapp.executeCmd(String(blockId),
+  return Webapp.executeCmd(blockId,
                           'canvasDrawCircle',
                           {'elementId': elementId,
-                           'x': Number(x),
-                           'y': Number(y),
-                           'radius': Number(radius) });
+                           'x': x,
+                           'y': y,
+                           'radius': radius });
+};
+
+exports.canvasDrawRect = function (blockId, elementId, x, y, width, height) {
+  return Webapp.executeCmd(blockId,
+                          'canvasDrawRect',
+                          {'elementId': elementId,
+                           'x': x,
+                           'y': y,
+                           'width': width,
+                           'height': height });
 };
 
 exports.canvasSetLineWidth = function (blockId, elementId, width) {
-  return Webapp.executeCmd(String(blockId),
+  return Webapp.executeCmd(blockId,
                           'canvasSetLineWidth',
                           {'elementId': elementId,
-                           'width': Number(width) });
+                           'width': width });
 };
 
 exports.canvasSetStrokeColor = function (blockId, elementId, color) {
-  return Webapp.executeCmd(String(blockId),
+  return Webapp.executeCmd(blockId,
                           'canvasSetStrokeColor',
                           {'elementId': elementId,
                            'color': color });
 };
 
 exports.canvasSetFillColor = function (blockId, elementId, color) {
-  return Webapp.executeCmd(String(blockId),
+  return Webapp.executeCmd(blockId,
                           'canvasSetFillColor',
                           {'elementId': elementId,
                            'color': color });
 };
 
 exports.canvasClear = function (blockId, elementId) {
-  return Webapp.executeCmd(String(blockId),
+  return Webapp.executeCmd(blockId,
                           'canvasClear',
                           {'elementId': elementId });
 };
 
 exports.createTextInput = function (blockId, elementId, text) {
-  return Webapp.executeCmd(String(blockId),
+  return Webapp.executeCmd(blockId,
                           'createTextInput',
                           {'elementId': elementId,
                            'text': text });
 };
 
-exports.createTextLabel = function (blockId, elementId, text) {
-  return Webapp.executeCmd(String(blockId),
+exports.createTextLabel = function (blockId, elementId, text, forId) {
+  return Webapp.executeCmd(blockId,
                           'createTextLabel',
                           {'elementId': elementId,
-                           'text': text });
+                           'text': text,
+                           'forId': forId });
+};
+
+exports.createCheckbox = function (blockId, elementId, checked) {
+  return Webapp.executeCmd(blockId,
+                          'createCheckbox',
+                          {'elementId': elementId,
+                           'checked': checked });
+};
+
+exports.createRadio = function (blockId, elementId, checked, name) {
+  return Webapp.executeCmd(blockId,
+                          'createRadio',
+                          {'elementId': elementId,
+                           'checked': checked,
+                           'name': name });
+};
+
+exports.getChecked = function (blockId, elementId) {
+  return Webapp.executeCmd(blockId,
+                          'getChecked',
+                          {'elementId': elementId });
+};
+
+exports.setChecked = function (blockId, elementId, checked) {
+  return Webapp.executeCmd(blockId,
+                          'setChecked',
+                          {'elementId': elementId,
+                           'checked': checked });
+};
+
+exports.createDropdown = function (blockId, elementId) {
+  var optionsArray = Array.prototype.slice.call(arguments, 2);
+  return Webapp.executeCmd(blockId,
+                          'createDropdown',
+                          {'elementId': elementId,
+                           'optionsArray': optionsArray });
 };
 
 exports.getText = function (blockId, elementId) {
-  return Webapp.executeCmd(String(blockId),
+  return Webapp.executeCmd(blockId,
                           'getText',
                           {'elementId': elementId });
 };
 
 exports.setText = function (blockId, elementId, text) {
-  return Webapp.executeCmd(String(blockId),
+  return Webapp.executeCmd(blockId,
                           'setText',
                           {'elementId': elementId,
                            'text': text });
 };
 
+exports.setImageURL = function (blockId, elementId, src) {
+  return Webapp.executeCmd(blockId,
+                          'setImageURL',
+                          {'elementId': elementId,
+                           'src': src });
+};
+
 exports.setParent = function (blockId, elementId, parentId) {
-  return Webapp.executeCmd(String(blockId),
+  return Webapp.executeCmd(blockId,
                           'setParent',
                           {'elementId': elementId,
                            'parentId': parentId });
 };
 
 exports.setStyle = function (blockId, elementId, style) {
-  return Webapp.executeCmd(String(blockId),
+  return Webapp.executeCmd(blockId,
                            'setStyle',
                            {'elementId': elementId,
                            'style': style });
 };
 
 exports.attachEventHandler = function (blockId, elementId, eventName, func) {
-  return Webapp.executeCmd(String(blockId),
+  return Webapp.executeCmd(blockId,
                           'attachEventHandler',
                           {'elementId': elementId,
                            'eventName': eventName,
@@ -9767,11 +9922,25 @@ exports.attachEventHandler = function (blockId, elementId, eventName, func) {
 };
 
 exports.startWebRequest = function (blockId, url, func) {
-  return Webapp.executeCmd(String(blockId),
+  return Webapp.executeCmd(blockId,
                           'startWebRequest',
                           {'url': url,
                            'func': func });
 };
+
+exports.setTimeout = function (blockId, func, milliseconds) {
+  return Webapp.executeCmd(blockId,
+                          'setTimeout',
+                          {'func': func,
+                           'milliseconds': milliseconds });
+};
+
+exports.clearTimeout = function (blockId, timeoutId) {
+  return Webapp.executeCmd(blockId,
+                           'clearTimeout',
+                           {'timeoutId': timeoutId });
+};
+
 
 },{}],30:[function(require,module,exports){
 /**
@@ -9923,34 +10092,48 @@ levels.ec_simple = {
   'editCode': true,
   'sliderSpeed': 0.7,
   'codeFunctions': [
-    {'func': 'createButton', 'params': ["'id'", "'text'"] },
-    {'func': 'createTextInput', 'params': ["'id'", "'text'"] },
-    {'func': 'createTextLabel', 'params': ["'id'", "'text'"] },
-    {'func': 'getText', 'params': ["'id'"], 'type': 'value' },
-    {'func': 'setText', 'params': ["'id'", "'text'"] },
-    {'func': 'setParent', 'params': ["'id'", "'parentId'"] },
-    {'func': 'setPosition', 'params': ["'id'", "0", "0", "100", "100"] },
-    {'func': 'setStyle', 'params': ["'id'", "'color:red;'"] },
-    {'func': 'createHtmlBlock', 'params': ["'id'", "'html'"] },
-    {'func': 'replaceHtmlBlock', 'params': ["'id'", "'html'"] },
-    {'func': 'deleteHtmlBlock', 'params': ["'id'"] },
-    {'func': 'attachEventHandler', 'params': ["'id'", "'click'", "function() {\n  \n}"] },
-    {'func': 'startWebRequest', 'params': ["'http://api.openweathermap.org/data/2.5/weather?q=London,uk'", "function(status, type, content) {\n  \n}"] },
-    {'func': 'createCanvas', 'category': 'Canvas', 'params': ["'id'", "400", "400"] },
-    {'func': 'canvasDrawLine', 'category': 'Canvas', 'params': ["'id'", "0", "0", "400", "400"] },
-    {'func': 'canvasDrawCircle', 'category': 'Canvas', 'params': ["'id'", "200", "200", "100"] },
+    {'func': 'attachEventHandler', 'category': 'General', 'params': ["'id'", "'click'", "function() {\n  \n}"] },
+    {'func': 'startWebRequest', 'category': 'General', 'params': ["'http://api.openweathermap.org/data/2.5/weather?q=London,uk'", "function(status, type, content) {\n  \n}"] },
+    {'func': 'setTimeout', 'category': 'General', 'params': ["function() {\n  \n}", "1000"] },
+    {'func': 'clearTimeout', 'category': 'General', 'params': ["0"] },
+    {'func': 'createHtmlBlock', 'category': 'General', 'params': ["'id'", "'html'"] },
+    {'func': 'replaceHtmlBlock', 'category': 'General', 'params': ["'id'", "'html'"] },
+    {'func': 'deleteHtmlBlock', 'category': 'General', 'params': ["'id'"] },
+    {'func': 'setParent', 'category': 'General', 'params': ["'id'", "'parentId'"] },
+    {'func': 'setPosition', 'category': 'General', 'params': ["'id'", "0", "0", "100", "100"] },
+    {'func': 'setStyle', 'category': 'General', 'params': ["'id'", "'color:red;'"] },
+    {'func': 'createButton', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
+    {'func': 'createTextInput', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
+    {'func': 'createTextLabel', 'category': 'UI Controls', 'params': ["'id'", "'text'", "'forId'"] },
+    {'func': 'createDropdown', 'category': 'UI Controls', 'params': ["'id'", "'option1'", "'etc'"] },
+    {'func': 'getText', 'category': 'UI Controls', 'params': ["'id'"], 'type': 'value' },
+    {'func': 'setText', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
+    {'func': 'createCheckbox', 'category': 'UI Controls', 'params': ["'id'", "false"] },
+    {'func': 'createRadio', 'category': 'UI Controls', 'params': ["'id'", "false", "'group'"] },
+    {'func': 'getChecked', 'category': 'UI Controls', 'params': ["'id'"], 'type': 'value' },
+    {'func': 'setChecked', 'category': 'UI Controls', 'params': ["'id'", "true"] },
+    {'func': 'createImage', 'category': 'UI Controls', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
+    {'func': 'setImageURL', 'category': 'UI Controls', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
+    {'func': 'createCanvas', 'category': 'Canvas', 'params': ["'id'", "400", "600"] },
+    {'func': 'canvasDrawLine', 'category': 'Canvas', 'params': ["'id'", "0", "0", "400", "600"] },
+    {'func': 'canvasDrawCircle', 'category': 'Canvas', 'params': ["'id'", "200", "300", "100"] },
+    {'func': 'canvasDrawRect', 'category': 'Canvas', 'params': ["'id'", "100", "200", "200", "200"] },
     {'func': 'canvasSetLineWidth', 'category': 'Canvas', 'params': ["'id'", "3"] },
     {'func': 'canvasSetStrokeColor', 'category': 'Canvas', 'params': ["'id'", "'red'"] },
     {'func': 'canvasSetFillColor', 'category': 'Canvas', 'params': ["'id'", "'yellow'"] },
     {'func': 'canvasClear', 'category': 'Canvas', 'params': ["'id'"] },
   ],
   'categoryInfo': {
-    'Canvas': {
-      'color': 'yellow',
+    'General': {
+      'color': 'blue',
       'blocks': []
     },
-    'Actions': {
-      'color': 'blue',
+    'UI Controls': {
+      'color': 'red',
+      'blocks': []
+    },
+    'Canvas': {
+      'color': 'yellow',
       'blocks': []
     },
   },
@@ -10121,6 +10304,7 @@ var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
 var Slider = require('../slider');
 var _ = utils.getLodash();
+var Hammer = utils.getHammer();
 
 /**
  * Create a namespace for the application.
@@ -10141,7 +10325,7 @@ var MAX_INTERPRETER_STEPS_PER_TICK = 200;
 // Default Scalings
 Webapp.scale = {
   'snapRadius': 1,
-  'stepSpeed': 1
+  'stepSpeed': 0
 };
 
 var twitterOptions = {
@@ -10533,8 +10717,27 @@ Webapp.init = function(config) {
       Blockly.HSV_SATURATION = 0.6;
 
       Blockly.SNAP_RADIUS *= Webapp.scale.snapRadius;
+    } else {
+      // Set up an event handler to create breakpoints when clicking in the
+      // ace gutter:
+      var aceEditor = BlocklyApps.editor.aceEditor;
+      if (aceEditor) {
+        aceEditor.on("guttermousedown", function(e) {
+          var target = e.domEvent.target;
+          if (target.className.indexOf("ace_gutter-cell") == -1) {
+            return;
+          }
+          var row = e.getDocumentPosition().row;
+          var bps = e.editor.session.getBreakpoints();
+          if (bps[row]) {
+            e.editor.session.clearBreakpoint(row);
+          } else {
+            e.editor.session.setBreakpoint(row);
+          }
+          e.stop();
+        });
+      }
     }
-
     drawDiv();
   };
 
@@ -10542,14 +10745,11 @@ Webapp.init = function(config) {
 
   config.twitter = twitterOptions;
 
-  // for this app, show make your own button if on share page
-  config.makeYourOwn = config.share;
-
-  config.makeString = webappMsg.makeYourOwn();
-  config.makeUrl = "http://code.org/webapp";
-  config.makeImage = BlocklyApps.assetUrl('media/promo.png');
+  // hide makeYourOwn on the share page
+  config.makeYourOwn = false;
 
   config.varsInGlobals = true;
+  config.noButtonsBelowOnMobileShare = true;
 
   // Webapp.initMinimal();
 
@@ -10565,27 +10765,6 @@ Webapp.init = function(config) {
       if (config.level.sliderSpeed) {
         Webapp.speedSlider.setValue(config.level.sliderSpeed);
       }
-    }
-    // Set up an event handler to create breakpoints when clicking in the
-    // ace gutter:
-    var aceEditor = BlocklyApps.editor.aceEditor;
-    // TODO (cpirich): investigate timing issue that results in aceEditor
-    // not always being available at this stage during init...
-    if (aceEditor) {
-      aceEditor.on("guttermousedown", function(e) {
-        var target = e.domEvent.target;
-        if (target.className.indexOf("ace_gutter-cell") == -1) {
-          return;
-        }
-        var row = e.getDocumentPosition().row;
-        var bps = e.editor.session.getBreakpoints();
-        if (bps[row]) {
-          e.editor.session.clearBreakpoint(row);
-        } else {
-          e.editor.session.setBreakpoint(row);
-        }
-        e.stop();
-      });
     }
     var debugInput = document.getElementById('debug-input');
     if (debugInput) {
@@ -10607,6 +10786,11 @@ Webapp.init = function(config) {
       dom.addClickTouchEvent(stepOverButton, Webapp.onStepOverButton);
       dom.addClickTouchEvent(stepOutButton, Webapp.onStepOutButton);
     }
+  }
+
+  if (BlocklyApps.share) {
+    // automatically run in share mode:
+    window.setTimeout(BlocklyApps.runButtonClick, 0);
   }
 };
 
@@ -10799,31 +10983,12 @@ var nativeGetCallback = function () {
   return Webapp.eventQueue.shift();
 };
 
-function marshalInterpreterToNative(interpreterVar) {
-  if (interpreterVar.isPrimitive) {
-    return interpreterVar.data;
-  } else if (Webapp.interpreter.isa(interpreterVar, Webapp.interpreter.ARRAY)) {
-    var nativeArray = [];
-    nativeArray.length = interpreterVar.length;
-    for (var i = 0; i < nativeArray.length; i++) {
-      nativeArray[i] = marshalInterpreterToNative(interpreterVar.properties[i]);
-    }
-    return nativeArray;
-  } else if (Webapp.interpreter.isa(interpreterVar, Webapp.interpreter.OBJECT)) {
-    var nativeObject = {};
-    for (var prop in interpreterVar.properties) {
-      nativeObject[prop] = marshalInterpreterToNative(interpreterVar.properties[prop]);
-    }
-    return nativeObject;
-  }
-}
-
 var consoleApi = {};
 
 consoleApi.log = function() {
   var nativeArgs = [];
   for (var i = 0; i < arguments.length; i++) {
-    nativeArgs[i] = marshalInterpreterToNative(arguments[i]);
+    nativeArgs[i] = codegen.marshalInterpreterToNative(arguments[i]);
   }
   var output = '';
   var firstArg = nativeArgs[0];
@@ -10922,13 +11087,13 @@ Webapp.execute = function() {
                                           Globals: Webapp.Globals });
 
         var getCallbackObj = interpreter.createObject(interpreter.FUNCTION);
-        // Only allow four levels of depth when marshalling the return value
+        // Only allow five levels of depth when marshalling the return value
         // since we will occasionally return DOM Event objects which contain
         // properties that recurse over and over...
         var wrapper = codegen.makeNativeMemberFunction(interpreter,
                                                        nativeGetCallback,
                                                        null,
-                                                       4);
+                                                       5);
         interpreter.setProperty(scope,
                                 'getCallback',
                                 interpreter.createNativeFunction(wrapper));
@@ -11120,22 +11285,32 @@ Webapp.callCmd = function (cmd) {
     case 'replaceHtmlBlock':
     case 'deleteHtmlBlock':
     case 'createButton':
+    case 'createImage':
     case 'createCanvas':
     case 'canvasDrawLine':
     case 'canvasDrawCircle':
+    case 'canvasDrawRect':
     case 'canvasSetLineWidth':
     case 'canvasSetStrokeColor':
     case 'canvasSetFillColor':
     case 'canvasClear':
     case 'createTextInput':
     case 'createTextLabel':
+    case 'createCheckbox':
+    case 'createRadio':
+    case 'createDropdown':
     case 'getText':
     case 'setText':
+    case 'getChecked':
+    case 'setChecked':
+    case 'setImageURL':
     case 'setPosition':
     case 'setParent':
     case 'setStyle':
     case 'attachEventHandler':
     case 'startWebRequest':
+    case 'setTimeout':
+    case 'clearTimeout':
       BlocklyApps.highlight(cmd.id);
       retVal = Webapp[cmd.name](cmd.opts);
       break;
@@ -11164,6 +11339,16 @@ Webapp.createButton = function (opts) {
                  divWebapp.appendChild(newButton));
 };
 
+Webapp.createImage = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+
+  var newImage = document.createElement("img");
+  newImage.src = opts.src;
+  newImage.id = opts.elementId;
+
+  return Boolean(divWebapp.appendChild(newImage));
+};
+
 Webapp.createCanvas = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
 
@@ -11173,7 +11358,7 @@ Webapp.createCanvas = function (opts) {
     newElement.id = opts.elementId;
     // default width/height if params are missing
     var width = opts.width || 400;
-    var height = opts.height || 400;
+    var height = opts.height || 600;
     newElement.width = width * Webapp.canvasScale;
     newElement.height = height * Webapp.canvasScale;
     newElement.style.width = width + 'px';
@@ -11195,6 +11380,7 @@ Webapp.canvasDrawLine = function (opts) {
     ctx.moveTo(opts.x1 * Webapp.canvasScale, opts.y1 * Webapp.canvasScale);
     ctx.lineTo(opts.x2 * Webapp.canvasScale, opts.y2 * Webapp.canvasScale);
     ctx.stroke();
+    return true;
   }
   return false;
 };
@@ -11212,6 +11398,23 @@ Webapp.canvasDrawCircle = function (opts) {
             2 * Math.PI);
     ctx.fill();
     ctx.stroke();
+    return true;
+  }
+  return false;
+};
+
+Webapp.canvasDrawRect = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  var ctx = div.getContext("2d");
+  if (ctx && divWebapp.contains(div)) {
+    ctx.rect(opts.x * Webapp.canvasScale,
+             opts.y * Webapp.canvasScale,
+             opts.width * Webapp.canvasScale,
+             opts.height * Webapp.canvasScale);
+    ctx.fill();
+    ctx.stroke();
+    return true;
   }
   return false;
 };
@@ -11276,17 +11479,63 @@ Webapp.createTextLabel = function (opts) {
   var newLabel = document.createElement("label");
   var textNode = document.createTextNode(opts.text);
   newLabel.id = opts.elementId;
+  var forElement = document.getElementById(opts.forId);
+  if (forElement && divWebapp.contains(forElement)) {
+    newLabel.setAttribute('for', opts.forId);
+  }
 
   return Boolean(newLabel.appendChild(textNode) &&
                  divWebapp.appendChild(newLabel));
+};
+
+Webapp.createCheckbox = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+
+  var newCheckbox = document.createElement("input");
+  newCheckbox.setAttribute("type", "checkbox");
+  newCheckbox.checked = opts.checked;
+  newCheckbox.id = opts.elementId;
+
+  return Boolean(divWebapp.appendChild(newCheckbox));
+};
+
+Webapp.createRadio = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+
+  var newRadio = document.createElement("input");
+  newRadio.setAttribute("type", "radio");
+  newRadio.name = opts.name;
+  newRadio.checked = opts.checked;
+  newRadio.id = opts.elementId;
+
+  return Boolean(divWebapp.appendChild(newRadio));
+};
+
+Webapp.createDropdown = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+
+  var newSelect = document.createElement("select");
+
+  if (opts.optionsArray) {
+    for (var i = 0; i < opts.optionsArray.length; i++) {
+      var option = document.createElement("option");
+      option.text = opts.optionsArray[i];
+      newSelect.add(option);
+    }
+  }
+  newSelect.id = opts.elementId;
+
+  return Boolean(divWebapp.appendChild(newSelect));
 };
 
 Webapp.getText = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
   var element = document.getElementById(opts.elementId);
   if (divWebapp.contains(element)) {
-    if (element.tagName === 'INPUT') {
+    if (element.tagName === 'INPUT' || element.tagName === 'SELECT') {
       return String(element.value);
+    } else if (element.tagName === 'IMG') {
+      return String(element.alt);
     } else {
       return element.innerText;
     }
@@ -11298,11 +11547,43 @@ Webapp.setText = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
   var element = document.getElementById(opts.elementId);
   if (divWebapp.contains(element)) {
-    if (element.tagName === 'INPUT') {
+    if (element.tagName === 'INPUT' || element.tagName === 'SELECT') {
       element.value = opts.text;
+    } else if (element.tagName === 'IMG') {
+      element.alt = opts.text;
     } else {
       element.innerText = opts.text;
     }
+    return true;
+  }
+  return false;
+};
+
+Webapp.getChecked = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var element = document.getElementById(opts.elementId);
+  if (divWebapp.contains(element) && element.tagName === 'INPUT') {
+    return element.checked;
+  }
+  return false;
+};
+
+Webapp.setChecked = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var element = document.getElementById(opts.elementId);
+  if (divWebapp.contains(element) && element.tagName === 'INPUT') {
+    element.checked = opts.checked;
+    return true;
+  }
+  return false;
+};
+
+Webapp.setImageURL = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var element = document.getElementById(opts.elementId);
+  if (divWebapp.contains(element) && element.tagName === 'IMG') {
+    element.src = opts.src;
+    return true;
   }
   return false;
 };
@@ -11379,15 +11660,49 @@ Webapp.onEventFired = function (opts, e) {
 
 Webapp.attachEventHandler = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
-  var divElement = document.getElementById(opts.elementId);
-  if (divWebapp.contains(divElement)) {
-    // For now, we're not tracking how many of these we add and we don't allow
-    // the user to detach the handler. We detach all listeners by cloning the
-    // divWebapp DOM node inside of reset()
-    divElement.addEventListener(
-        opts.eventName,
-        Webapp.onEventFired.bind(this, opts));
+  var domElement = document.getElementById(opts.elementId);
+  if (divWebapp.contains(domElement)) {
+    switch (opts.eventName) {
+      /*
+      Check for a specific set of Hammer v1 event names (full set below) and if
+      we find a match, instantiate Hammer on that element
+      
+      TODO (cpirich): review the following:
+      * whether using Hammer v1 events is the right choice
+      * choose the specific list of events
+      * consider instantiating Hammer just once per-element or on divWebapp
+      * review use of preventDefault
+
+      case 'hold':
+      case 'tap':
+      case 'doubletap':
+      case 'swipe':
+      case 'swipeup':
+      case 'swipedown':
+      case 'swipeleft':
+      case 'swiperight':
+      case 'rotate':
+      case 'release':
+      case 'gesture':
+      */
+      case 'pinch':
+      case 'pinchin':
+      case 'pinchout':
+        var hammerElement = new Hammer(divWebapp, { 'preventDefault': true });
+        hammerElement.on(opts.eventName,
+                         Webapp.onEventFired.bind(this, opts));
+        break;
+      default:
+        // For now, we're not tracking how many of these we add and we don't allow
+        // the user to detach the handler. We detach all listeners by cloning the
+        // divWebapp DOM node inside of reset()
+        domElement.addEventListener(
+            opts.eventName,
+            Webapp.onEventFired.bind(this, opts));
+    }
+    return true;
   }
+  return false;
 };
 
 Webapp.onHttpRequestEvent = function (opts) {
@@ -11408,6 +11723,23 @@ Webapp.startWebRequest = function (opts) {
   req.open('GET', String(opts.url), true);
   req.send();
 };
+
+Webapp.onTimeoutFired = function (opts) {
+  Webapp.eventQueue.push({
+    'fn': opts.func
+  });
+};
+
+Webapp.setTimeout = function (opts) {
+  return window.setTimeout(Webapp.onTimeoutFired.bind(this, opts), opts.milliseconds);
+};
+
+Webapp.clearTimeout = function (opts) {
+  // NOTE: we do not currently check to see if this is a timer created by
+  // our Webapp.setTimeout() function
+  window.clearTimeout(opts.timeoutId);
+};
+
 
 /*
 var onWaitComplete = function (opts) {
@@ -11732,23 +12064,23 @@ exports.end = function(d){return "پایان"};
 
 exports.emptyBlocksErrorMsg = function(d){return "بلوک های \"تکرار\" (Repeat) یا \"شرطی\" (If)  برای کار کردن، نیاز به بلوکهای دیگری در داخل خود دارند. مطمئن شوید که بلوک داخلی، به درستی درون بلوک اصلی قرار گرفته است."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "بلوک تابع برای به کار افتادن نیاز دارد، که بلوک های دیگری در داخل خود داشته باشد."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "بلوک تابع برای به کار افتادن نیاز به بلوک های دیگری در داخل خود دارد."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "باید بلوک هایی در تعریف تابع تو باشد. روی اصلاح کلیک کن و بلوک هایی را به داخل بلوک سبز بکش."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "روی اصلاح کلیک کن تا مطمئن بشوی هیچ بلوکی را داخل تعریف تابعت کم نگذاشته ایی."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "مطمئن شو که در بلوک تابع در فضای کاری،‌ به هر پارامتر ورودی یک بلوک چسبانده باشی."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "تو یک بلوک پارامتر اضافه کردی اما از آن در تعریف استفاده نکردی. با کلیک کردن اصلاح و قرار دادن بلوک پارامتر داخل بلوک سبز مطمئن شو که از پارامترت استفاده کرده ایی."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "بر روی \"ویرایش\" کلیک کرده و پارامترهای لازم را ایجاد کنید. بلوک های پارامتر جدید را به تابع خود اضافه کنید."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "شما یک تابع ساخته اید، اما هرگز آن را در فضای کاری خود استفاده نکردید! روی \"توابع\" در جعبه ابزار کلیک کنید و از آن در برنامه خود استفاده کنید."};
 
 exports.errorQuestionMarksInNumberField = function(d){return "سعی کنید به جای \"؟؟؟\" یک مقدار قرار دهید ."};
 
-exports.extraTopBlocks = function(d){return "بلوک‌های نچسبیده‌ای هنوز باقی مونده. آیا قصد داری اینها را به بلوک \"هنگام اجرا\" وصل کنی؟"};
+exports.extraTopBlocks = function(d){return "بلوک‌های نچسبیده‌ای هنوز باقی مانده است. آیا قصد دارید اینها را به بلوک \"هنگام اجرا\" وصل کنید؟"};
 
 exports.finalStage = function(d){return "تبریک می‌گوییم! شما مرحله‌ی نهایی را به پایان رساندید."};
 
@@ -11772,7 +12104,7 @@ exports.listVariable = function(d){return "فهرست"};
 
 exports.makeYourOwnFlappy = function(d){return "Flappy Bird خودتان را بسازید"};
 
-exports.missingBlocksErrorMsg = function(d){return "برای حل این معما، یکی یا چند تا از بلوک‌های زیر را بکار ببرید."};
+exports.missingBlocksErrorMsg = function(d){return "برای حل این معما، یک یا چند تا از بلوک‌های زیر را بکار ببرید."};
 
 exports.nextLevel = function(d){return "تبریک ! شما پازل "+v(d,"puzzleNumber")+" را به پایان رساندید."};
 
@@ -11893,8 +12225,6 @@ exports.createHtmlBlockTooltip = function(d){return "بلوک های اچ تی �
 
 exports.finalLevel = function(d){return "تبریک! شما پازل نهایی را حل کردید."};
 
-exports.makeYourOwn = function(d){return "نرم افزار خود را بسازید"};
-
 exports.nextLevel = function(d){return "تبریک! شما این پازل را به اتمام رساندید."};
 
 exports.no = function(d){return "نه"};
@@ -11909,19 +12239,19 @@ exports.repeatForever = function(d){return "تکرار بی‌پایان"};
 
 exports.repeatDo = function(d){return "انجام بده"};
 
-exports.repeatForeverTooltip = function(d){return "وقتی برنامه در حال اجراست، اقدامات داخل این بلوک بطور پی در پی اجرا می‌شوند."};
+exports.repeatForeverTooltip = function(d){return "وقتی برنامه در حال اجراست، اقدامات داخل این بلوک را بطور پی در پی اجرا کن."};
 
 exports.shareWebappTwitter = function(d){return "برنامه‌ای که ساخته‌ام را ببین. من خودم با @codeorg آن را نوشته‌ام"};
 
 exports.shareGame = function(d){return "App خود را به اشتراک بگذارید:"};
 
-exports.stepIn = function(d){return "گام"};
+exports.stepIn = function(d){return "به داخل قدم بگذار"};
 
-exports.stepOver = function(d){return "گام پیش از"};
+exports.stepOver = function(d){return "از رویش قدم بگذار"};
 
-exports.stepOut = function(d){return "قدم به بیرون"};
+exports.stepOut = function(d){return "به بیرون قدم بگذار"};
 
-exports.turnBlack = function(d){return "سیاه شده"};
+exports.turnBlack = function(d){return "سیاه کن"};
 
 exports.turnBlackTooltip = function(d){return "صفحه نمایش سیاه  می شود."};
 

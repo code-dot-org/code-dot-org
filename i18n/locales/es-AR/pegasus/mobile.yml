@@ -9,7 +9,7 @@ es-AR:
   n_have_learned_an_hoc: '<h1>#</h1><h3>han probado la</h3><h2>Hora de Código</h2>'
   anybody_can_learn: Cualquiera puede aprender.
   learn_now: Aprende Ahora
-  petition_message: Cada estudiante en cada escuela debería tener la oportunidad de aprender informática
+  petition_message: Cada alumno de cada escuela debería tener la oportunidad de aprender Informática
   petition_sign_message: 'Si estás de acuerdo, firma con tu nombre.  Unete a # others.'
   name: Nombre
   email: Correo electrónico
@@ -75,7 +75,7 @@ es-AR:
   participant_engineer: Ingeniero de software
   participant_other: Ninguna de las anteriores
   print_all: Imprimir todo
-  print_ice_art: Imprimir su obra helada
+  print_ice_art: Imprimir su obra de arte de hielo
   create_art_with_zombie: o hacer arte avanzado con zombie
   i_am_a: Soy un
   never_spam: Nunca te enviaremos spam
@@ -114,7 +114,7 @@ es-AR:
   studiobar_teacher_title: Hecho para los maestros
   studiobar_teacher_body: Presenta Code Studio en tu aula
   studiobar_frozen_title: Hora del código
-  studiobar_frozen_body: Crea un paraíso invernal con Anna y Elsa
+  studiobar_frozen_body: Crea un paisaje invernal con Anna y Elsa
   studiobar_donate_title: Dona
   studiobar_donate_body: Un niño aprende por cada dólar que done
   contact_form_topic_student: Soy un estudiante
@@ -306,7 +306,7 @@ es-AR:
   carousel_heading_international: Tutoriales en tu idioma
   carousel_heading_domestic: Tutoriales disponibles en inglés
   carousel_heading_beginners: Tutoriales para principiantes (en inglés)
-  carousel_heading_javascript: Tutoriales que enseñan Javascript
+  carousel_heading_javascript: Tutoriales que enseñan JavaScript
   carousel_heading_unplugged: ¿No tienes dispositivo o Internet? Prueba informática sin conexión
   carousel_heading_devices: Tutoriales en aplicaciones para teléfonos y tabletas
   carousel_heading_languages: Tutoriales en otros lenguajes de programación
@@ -363,7 +363,7 @@ es-AR:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Piedra, papel, tijera
-  hourofcode_name: Reserva de espacio para un nuevo code.org/hoc
+  hourofcode_name: Espacio reservado para un nuevo code.org/hoc
   playlab_name: Laboratorio de Juegos
   codeorg_gradelevel: Edad 4-104
   codeintl_gradelevel: Edad 4-104
@@ -422,7 +422,7 @@ es-AR:
   lightbotintl_platformtext: iOS, Android (o cualquier navegador de la red)
   codehs_platformtext: Navegadores modernos. (Seguir curso requiere $$)
   codecademy_platformtext: Navegadores modernos. iOS, aplicaciones Android
-  codecombat_platformtext: Navegadores web modernos. (Seguir más cursos requiere $$)
+  codecombat_platformtext: Navegadores web modernos. (Curso de continuación requiere $$)
   codemonkey_platformtext: Navegadores modernos
   codeavengers_platformtext: Navegadores modernos
   processing_platformtext: Navegadores modernos
@@ -482,7 +482,7 @@ es-AR:
   thinkersmith2_shortdescription: Aprenda cómo las computadoras usan unos y ceros para representar la información
   kodableunplugged_shortdescription: 'Un divertido ejercicio "desconectado"'
   projguts_shortdescription: Aprende sobre modelado y simulación con piedra, papel, o tijeras
-  hourofcode_shortdescription: Reserva de espacio para un nuevo code.org/hoc
+  hourofcode_shortdescription: Espacio reservado para un nuevo code.org/hoc
   frozen_shortdescription: Vamos a usar código para unirnos a Anna y Elsa mientras exploran la magia y la belleza del hielo.
   playlab_shortdescription: ¡Crea una historia o haz un juego con Laboratorio de Juegos!
   codeorg_longdescription: Aprende los conceptos básicos de la programación mediante programación de arrastrar y soltar. Este tutorial autodirigido que se parece a un juego tiene videoconferencias protagonizadas por Bill Gates, Mark Zuckerberg, Angry Birds y Plantas vs Zombies. Aprenda los bucles, condicionales y algoritmos básicos. Disponible en 34 idiomas.
@@ -522,9 +522,9 @@ es-AR:
   thinkersmith2_longdescription: Los alumnos aprenden cómo se representan y almacenan letras en binario y funciones de prendido y apagado. Al final, la clase aprende a codificar sus propias iniciales para llevárselas a casa.
   kodableunplugged_longdescription: Pensada para ser realizada con papel, fuzzFamily Frenzy es una introducción a la lógica de la programación para niños de 5 años en adelante. Un docente debe explicar el juego, y los estudiantes programan a sus compañeros para que completen un circuito con obstáculos
   projguts_longdescription: Esta actividad sin conexión ayuda a los estudiantes a aprender cómo funciona el modelado y simulación, haciendo que un grupo de estudiantes jueguen distintas versiones del juego piedra, papel y tijeras, y viendo los resultados como diferentes experimentos de modelado.
-  hourofcode_longdescription: Reserva de espacio para un nuevo code.org/hoc
+  hourofcode_longdescription: Espacio reservado para un nuevo code.org/hoc
   frozen_longdescription: Vamos a usar código para unirnos a Ana y Elsa mientras exploran la magia y la belleza del hielo. Crearás copos de nieve y patrones a medida que patinas sobre hielo y harás un paisaje invernal que luego puedes compartir con tus amigos!
-  playlab_longdescription: ¡Crea una historia o haz un juego con el Laboratorio de juegos! ¡Haz que animales, piratas, zombis, ninjas y muchos personajes más se muevan, hagan sonidos, obtengan puntos y hasta lancen bolas de fuego!
+  playlab_longdescription: ¡Crea una historia o haz un juego con el Laboratorio de juegos! ¡Haz que animales, piratas, zombis, ninjas y muchos personajes más se muevan, hagan sonidos, marquen puntos y hasta lancen bolas de fuego!
   codeorg_beyond_name: Introducción a ciencias de la computación (13 años)
   khan_beyond_name: Aprende programación de computadoras
   tynker_beyond_name: Aprende programación de computadoras en casa

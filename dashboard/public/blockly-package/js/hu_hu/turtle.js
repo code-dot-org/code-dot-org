@@ -303,8 +303,13 @@ BlocklyApps.LOCALE = 'en_us';
  */
 BlocklyApps.MIN_WIDTH = 900;
 BlocklyApps.MIN_MOBILE_SHARE_WIDTH = 450;
-BlocklyApps.MIN_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
+BlocklyApps.MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 var WORKSPACE_PLAYSPACE_GAP = 15;
+
+/**
+ * Treat mobile devices with screen.width less than the value below as phones.
+ */
+BlocklyApps.MAX_PHONE_WIDTH = 500;
 
 /**
  * If the user presses backspace, stop propagation - this prevents blockly
@@ -348,8 +353,8 @@ function updateHeadersAfterDropletToggle(usingBlocks) {
 
   var blockCount = document.getElementById('blockCounter');
   if (blockCount) {
-    blockCount.style.visibility =
-      (usingBlocks && BlocklyApps.enableShowBlockCount) ? 'visible' : 'hidden';
+    blockCount.style.display =
+      (usingBlocks && BlocklyApps.enableShowBlockCount) ? 'inline-block' : 'none';
   }
 
   // Resize (including headers), so the category header will appear/disappear:
@@ -417,6 +422,7 @@ BlocklyApps.init = function(config) {
   }
 
   var visualizationColumn = document.getElementById('visualizationColumn');
+  var visualization = document.getElementById('visualization');
 
   // center game screen in embed mode
   if(config.embed) {
@@ -443,7 +449,6 @@ BlocklyApps.init = function(config) {
 
   if (!config.embed && !BlocklyApps.share) {
     // Make the visualization responsive to screen size, except on share page.
-    var visualization = document.getElementById('visualization');
     visualization.className += " responsive";
     visualizationColumn.className += " responsive";
   }
@@ -495,26 +500,31 @@ BlocklyApps.init = function(config) {
     }
     var belowVisualization = document.getElementById('belowVisualization');
     if (belowVisualization) {
-      belowVisualization.style.display = 'block';
-      belowVisualization.style.marginLeft = '0px';
-      if (BlocklyApps.noPadding) {
-        // Shift run and reset buttons off the left edge if we have no padding
-        if (runButton) {
-          runButton.style.marginLeft = '10px';
-        }
-        if (resetButton) {
-          resetButton.style.marginLeft = '10px';
-        }
-        var shareCell = document.getElementById('share-cell') ||
-            document.getElementById('right-button-cell');
-        if (shareCell) {
-          shareCell.style.marginLeft = '10px';
-          shareCell.style.marginRight = '10px';
-        }
-        var softButtons = document.getElementById('soft-buttons');
-        if (softButtons) {
-          softButtons.style.marginLeft = '10px';
-          softButtons.style.marginRight = '10px';
+      if (config.noButtonsBelowOnMobileShare) {
+        belowVisualization.style.display = 'none';
+        visualization.style.marginBottom = '0px';
+      } else {
+        belowVisualization.style.display = 'block';
+        belowVisualization.style.marginLeft = '0px';
+        if (BlocklyApps.noPadding) {
+          // Shift run and reset buttons off the left edge if we have no padding
+          if (runButton) {
+            runButton.style.marginLeft = '10px';
+          }
+          if (resetButton) {
+            resetButton.style.marginLeft = '10px';
+          }
+          var shareCell = document.getElementById('share-cell') ||
+              document.getElementById('right-button-cell');
+          if (shareCell) {
+            shareCell.style.marginLeft = '10px';
+            shareCell.style.marginRight = '10px';
+          }
+          var softButtons = document.getElementById('soft-buttons');
+          if (softButtons) {
+            softButtons.style.marginLeft = '10px';
+            softButtons.style.marginRight = '10px';
+          }
         }
       }
     }
@@ -534,10 +544,11 @@ BlocklyApps.init = function(config) {
       if (BlocklyApps.noPadding) {
         upSale.style.marginLeft = '10px';
       }
-    } else {
+      belowViz.appendChild(upSale);
+    } else if (typeof config.makeYourOwn === 'undefined') {
       upSale.innerHTML = require('./templates/learn.html')();
+      belowViz.appendChild(upSale);
     }
-    belowViz.appendChild(upSale);
   }
 
   // Record time at initialization.
@@ -546,22 +557,27 @@ BlocklyApps.init = function(config) {
   // Fixes viewport for small screens.
   var viewport = document.querySelector('meta[name="viewport"]');
   if (viewport) {
-    var widthDimension;
+    var deviceWidth;
+    var desiredWidth;
     var minWidth;
     if (BlocklyApps.share && dom.isMobile()) {
       // for mobile sharing, don't assume landscape mode, use screen.width
-      widthDimension = screen.width;
+      deviceWidth = desiredWidth = screen.width;
+      if (BlocklyApps.noPadding && screen.width < BlocklyApps.MAX_PHONE_WIDTH) {
+        desiredWidth = Math.min(desiredWidth,
+                                BlocklyApps.MOBILE_NO_PADDING_SHARE_WIDTH);
+      }
       minWidth = BlocklyApps.noPadding ?
-                    BlocklyApps.MIN_MOBILE_NO_PADDING_SHARE_WIDTH :
+                    BlocklyApps.MOBILE_NO_PADDING_SHARE_WIDTH :
                     BlocklyApps.MIN_MOBILE_SHARE_WIDTH;
     }
     else {
       // assume we are in landscape mode, so width is the longer of the two
-      widthDimension = Math.max(screen.width, screen.height);
+      deviceWidth = desiredWidth = Math.max(screen.width, screen.height);
       minWidth = BlocklyApps.MIN_WIDTH;
     }
-    var width = Math.max(minWidth, widthDimension);
-    var scale = widthDimension / width;
+    var width = Math.max(minWidth, desiredWidth);
+    var scale = deviceWidth / width;
     var content = ['width=' + width,
                    'minimal-ui',
                    'initial-scale=' + scale,
@@ -580,6 +596,9 @@ BlocklyApps.init = function(config) {
       if (BlocklyApps.editCode) {
         BlocklyApps.editor.toggleBlocks();
         updateHeadersAfterDropletToggle(BlocklyApps.editor.currentlyUsingBlocks);
+        if (!BlocklyApps.editor.currentlyUsingBlocks) {
+          BlocklyApps.editor.aceEditor.focus();
+        }
       } else {
         feedback.showGeneratedCode(BlocklyApps.Dialog);
       }
@@ -588,7 +607,7 @@ BlocklyApps.init = function(config) {
 
   var blockCount = document.getElementById('blockCounter');
   if (blockCount && !BlocklyApps.enableShowBlockCount) {
-    blockCount.style.visibility = 'hidden';
+    blockCount.style.display = 'none';
   }
 
   BlocklyApps.ICON = config.skin.staticAvatar;
@@ -623,7 +642,7 @@ BlocklyApps.init = function(config) {
       var vizCol = document.getElementById('visualizationColumn');
       var width = vizCol.offsetWidth;
       var height = vizCol.offsetHeight;
-      var displayWidth = BlocklyApps.MIN_MOBILE_NO_PADDING_SHARE_WIDTH;
+      var displayWidth = BlocklyApps.MOBILE_NO_PADDING_SHARE_WIDTH;
       var scale = Math.min(width / displayWidth, height / displayWidth);
       var viz = document.getElementById('visualization');
       viz.style['transform-origin'] = 'left top';
@@ -688,6 +707,20 @@ BlocklyApps.init = function(config) {
         modeOptions: utils.generateDropletModeOptions(config.level.codeFunctions),
         palette: utils.generateDropletPalette(config.level.codeFunctions,
                                               config.level.categoryInfo)
+      });
+
+      BlocklyApps.editor.aceEditor.setShowPrintMargin(false);
+
+      // Add an ace completer for the API functions exposed for this level
+      if (config.level.codeFunctions) {
+        var langTools = window.ace.require("ace/ext/language_tools");
+        langTools.addCompleter(
+            utils.generateAceApiCompleter(config.level.codeFunctions));
+      }
+
+      BlocklyApps.editor.aceEditor.setOptions({
+        enableBasicAutocompletion: true,
+        enableLiveAutocompletion: true
       });
 
       if (config.afterInject) {
@@ -1798,10 +1831,14 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
     } else {
       retVal = interpreter.createObject(interpreter.OBJECT);
       for (var prop in nativeVar) {
+        var value;
+        try {
+          value = nativeVar[prop];
+        } catch (e) { }
         interpreter.setProperty(retVal,
                                 prop,
                                 exports.marshalNativeToInterpreter(interpreter,
-                                                                   nativeVar[prop],
+                                                                   value,
                                                                    nativeVar,
                                                                    maxDepth - 1));
       }
@@ -1812,13 +1849,40 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
   return retVal;
 };
 
+exports.marshalInterpreterToNative = function (interpreterVar) {
+  if (interpreterVar.isPrimitive) {
+    return interpreterVar.data;
+  } else if (Webapp.interpreter.isa(interpreterVar, Webapp.interpreter.ARRAY)) {
+    var nativeArray = [];
+    nativeArray.length = interpreterVar.length;
+    for (var i = 0; i < nativeArray.length; i++) {
+      nativeArray[i] = exports.marshalInterpreterToNative(interpreterVar.properties[i]);
+    }
+    return nativeArray;
+  } else if (Webapp.interpreter.isa(interpreterVar, Webapp.interpreter.OBJECT)) {
+    var nativeObject = {};
+    for (var prop in interpreterVar.properties) {
+      nativeObject[prop] = exports.marshalInterpreterToNative(interpreterVar.properties[prop]);
+    }
+    return nativeObject;
+  } else {
+    // Just return the interpreter object if we can't convert it. This is needed
+    // for passing interpreter callback functions into native.
+    return interpreterVar;
+  }
+};
+
 /**
  * Generate a native function wrapper for use with the JS interpreter.
  */
 exports.makeNativeMemberFunction = function (interpreter, nativeFunc, nativeParentObj, maxDepth) {
   return function() {
     // Call the native function:
-    var nativeRetVal = nativeFunc.apply(nativeParentObj, arguments);
+    var nativeArgs = [];
+    for (var i = 0; i < arguments.length; i++) {
+      nativeArgs[i] = exports.marshalInterpreterToNative(arguments[i]);
+    }
+    var nativeRetVal = nativeFunc.apply(nativeParentObj, nativeArgs);
     return exports.marshalNativeToInterpreter(interpreter, nativeRetVal, null, maxDepth);
   };
 };
@@ -1950,7 +2014,7 @@ exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
     // Only show selection if the node being executed is inside the user's
     // code (not inside code we inserted before or after their code that is
     // not visible in the editor):
-    if (start > 0 && start < userCodeLength) {
+    if (start >= 0 && start < userCodeLength) {
       userCodeRow = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
       // Highlight the code being executed in each step:
       if (editor.currentlyUsingBlocks) {
@@ -14556,7 +14620,7 @@ exports.generateCodeAliases = function (codeFunctions, parentObjName) {
  */
 exports.generateDropletPalette = function (codeFunctions, categoryInfo) {
   // TODO: figure out localization for droplet scenario
-  var palette = [
+  var stdPalette = [
     {
       name: 'Control',
       color: 'orange',
@@ -14676,12 +14740,42 @@ exports.generateDropletPalette = function (codeFunctions, categoryInfo) {
     }
   }
 
+  var addedPalette = [];
   for (var category in categoryInfo) {
     categoryInfo[category].name = category;
-    palette.unshift(categoryInfo[category]);
+    addedPalette.push(categoryInfo[category]);
   }
 
-  return palette;
+  return addedPalette.concat(stdPalette);
+};
+
+/**
+ * Generate an Ace editor completer for a set of APIs based on some level data.
+ */
+exports.generateAceApiCompleter = function (codeFunctions) {
+  var apis = [];
+
+  for (var i = 0; i < codeFunctions.length; i++) {
+    var cf = codeFunctions[i];
+    if (cf.category === 'hidden') {
+      continue;
+    }
+    apis.push({
+      name: 'api',
+      value: cf.func,
+      meta: 'local'
+    });
+  }
+
+  return {
+    getCompletions: function(editor, session, pos, prefix, callback) {
+      if (prefix.length === 0) {
+        callback(null, []);
+        return;
+      }
+      callback(null, apis);
+    }
+  };
 };
 
 /**
@@ -14794,25 +14888,25 @@ exports.directionWestLetter = function(d){return "Nyugat"};
 
 exports.end = function(d){return "vége"};
 
-exports.emptyBlocksErrorMsg = function(d){return "Akkor van értelme az \"Ismétel\" vagy a \"Ha\" blokknak, ha van  bennük egy vagy több blokk. Bizonyosodj meg róla, hogy a belső blokk megfelelően illeszkedik a külső blokkhoz."};
+exports.emptyBlocksErrorMsg = function(d){return "Ahhoz hogy az \"Ismételd\" vagy a \"Ha\" blokkok működjenek, más blokkoknak is kell bennük lenni. Győződj meg arról, hogy a belső blokk megfelelően illeszkedik a külső befogadó blokkhoz."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "A függvény blokkon belül más blokknak is szerepelnie kell ahhoz, hogy működjön."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "A függvény blokkon belül lenni kell más blokkoknak is ahhoz, hogy működjön."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "A függvényed leírásában blokkoknak kell szerepelniük. Kattints a \"szerkesztés\" gombra, és húzd bele a blokkokat a zöld blokkba."};
+exports.errorEmptyFunctionBlockModal = function(d){return "A függvénydeklarációdban blokkoknak kell lenni. Kattints a \"szerkesztés\" gombra, és húzd be a blokkokat a zöld blokkba."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Kattints a \"szerkesztés\"-re, hogy pótold az esetlegesen hiányzó blokkokat a függvényed definíciójából."};
+exports.errorIncompleteBlockInFunction = function(d){return "Kattints a \"szerkesztés\"-re, hogy pótold az esetlegesen hiányzó blokkokat a függvénydeklarációdból."};
 
-exports.errorParamInputUnattached = function(d){return "A munkaterületen levő függvények minden bemenő paraméteréhez illessz blokkot."};
+exports.errorParamInputUnattached = function(d){return "Ne felejts a munkaterületen levő függvények minden bemenő paraméteréhez egy blokkot illeszteni."};
 
 exports.errorUnusedParam = function(d){return "Hozzáadtál egy paraméterblokkot, de nem használtad fel azt a deklarálásodban. Győződj meg róla, hogy használod a paraméteredet, rákattintva a \"szerkesztés\"-re  és arról is, hogy bele van-e illesztve a paraméterblokkod a zöld blokkba!"};
 
-exports.errorRequiredParamsMissing = function(d){return "Hozz létre egy paramétert a függvényed számára a \"szerkesztés\"-re kattintva, majd hozzáadva a szükséges paramétereket! Húzd rá az új paraméterblokkokat a függvényed definíciójára!"};
+exports.errorRequiredParamsMissing = function(d){return "Hozz létre egy paramétert a függvényed számára a \"szerkesztés\"-re kattintva, és hozzáadva a szükséges paramétereket! Húzd az új paraméterblokkokat a függvénydeklarációdra!"};
 
 exports.errorUnusedFunction = function(d){return "Létrehoztál egy függvényt, de soha sem használtad fel azt a munkaterületeden! Kattints a \"Függvények\"-re az eszközkészleten, és győződj meg róla, hogy használod a függvényt a programodban."};
 
 exports.errorQuestionMarksInNumberField = function(d){return "Próbálj a \"???\" helyére értéket írni."};
 
-exports.extraTopBlocks = function(d){return "Van különálló blokkod. Vagy csatlakoztasd a \"futtatáskor\" blokkhoz, vagy töröld."};
+exports.extraTopBlocks = function(d){return "Különálló blokkjaid vannak. A \"futtatáskor\" blokkhoz akartad ezeket csatolni?"};
 
 exports.finalStage = function(d){return "Gratulálok! Teljesítetted az utolsó szakaszt."};
 
@@ -14820,7 +14914,7 @@ exports.finalStageTrophies = function(d){return "Gratulálok! Teljesítetted az 
 
 exports.finish = function(d){return "Kész"};
 
-exports.generatedCodeInfo = function(d){return "A blokk alapú programozást még a legjobb egyetemeken (pl. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+") is tanítják. De a felszín alatt az általad összeállított blokkok JavaScriptben, a világ legszélesebb körben használt nyelvén is megjeleníthetők:"};
+exports.generatedCodeInfo = function(d){return "Még a legjobb egyetemeken (pl. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+") is tanítanak blokk alapú programozást, de a felszín alatt az általad összeállított blokkok is megjeleníthetők JavaScriptben, a világ legszélesebb körben használt nyelvén :"};
 
 exports.hashError = function(d){return "Sajnálom, de \"%1\" nem felel meg egyetlen mentett programnak sem."};
 
@@ -14834,7 +14928,7 @@ exports.levelIncompleteError = function(d){return "Minden szükséges blokkot fe
 
 exports.listVariable = function(d){return "lista"};
 
-exports.makeYourOwnFlappy = function(d){return "Készítsd el a saját Flappy játékod"};
+exports.makeYourOwnFlappy = function(d){return "Készíts saját Flappy játékot"};
 
 exports.missingBlocksErrorMsg = function(d){return "Próbáld meg a lenti blokkokat használni, hogy megoldd a rejtvényt."};
 
@@ -14842,9 +14936,9 @@ exports.nextLevel = function(d){return "Gratulálok! Megoldottad a "+v(d,"puzzle
 
 exports.nextLevelTrophies = function(d){return "Gratulálok! Megoldottad a "+v(d,"puzzleNumber")+". feladványt és nyertél "+p(d,"numTrophies",0,"hu",{"one":"egy trófeát","other":n(d,"numTrophies")+" trófeát"})+"."};
 
-exports.nextStage = function(d){return "Gratulálok!  "+v(d,"stageName")+" teljesítve."};
+exports.nextStage = function(d){return "Gratulálok! A(z) "+v(d,"stageName")+". szint teljesítve."};
 
-exports.nextStageTrophies = function(d){return "Gratulálok! Teljesítetted a "+v(d,"stageNumber")+". szakaszát és nyertél "+p(d,"numTrophies",0,"hu",{"one":"egy trófeát","other":n(d,"numTrophies")+" trófeát"})+"."};
+exports.nextStageTrophies = function(d){return "Gratulálok! Teljesítetted a(z) "+v(d,"stageNumber")+". szintet és nyertél "+p(d,"numTrophies",0,"hu",{"one":"egy trófeát","other":n(d,"numTrophies")+" trófeát"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Gratulálok! Megoldottad a "+v(d,"puzzleNumber")+". feladványt. (Habár megoldható csupán "+p(d,"numBlocks",0,"hu",{"one":"1 blokk","other":n(d,"numBlocks")+" blokk"})+" használatával.)"};
 
@@ -14880,7 +14974,7 @@ exports.textVariable = function(d){return "szöveg"};
 
 exports.tooFewBlocksMsg = function(d){return "A megfelelő blokkokat használod, de próbálj meg többet használni belőlük, hogy megoldd a feladványt."};
 
-exports.tooManyBlocksMsg = function(d){return "Ez a feladvány megoldható a <x id='START_SPAN'/><x id='END_SPAN'/> blokkokal."};
+exports.tooManyBlocksMsg = function(d){return "Ez a feladvány megoldható <x id='START_SPAN'/><x id='END_SPAN'/> blokkal."};
 
 exports.tooMuchWork = function(d){return "Sokat dolgoztattál. Megpróbálnád egy kicsit kevesebb ismétléssel?"};
 
@@ -14896,11 +14990,11 @@ exports.hintRequest = function(d){return "Segítség"};
 
 exports.backToPreviousLevel = function(d){return "Vissza az előző szintre"};
 
-exports.saveToGallery = function(d){return "Mentése a galériába"};
+exports.saveToGallery = function(d){return "Mentés a galériába"};
 
-exports.savedToGallery = function(d){return "Elmentve a galériában!"};
+exports.savedToGallery = function(d){return "Elmentve a galériába!"};
 
-exports.shareFailure = function(d){return "Sajnálom, de nem tudtam megosztani ezt a programot."};
+exports.shareFailure = function(d){return "Sajnálom, de nem tudjuk megosztani ezt a programot."};
 
 exports.workspaceHeader = function(d){return "Építsd össze a blokkokat itt: "};
 
@@ -14908,7 +15002,7 @@ exports.workspaceHeaderJavaScript = function(d){return "Ide írd a JavaScript k�
 
 exports.infinity = function(d){return "Végtelen"};
 
-exports.rotateText = function(d){return "Fordítsd el a készüléket."};
+exports.rotateText = function(d){return "Fordítsd el a készüléked."};
 
 exports.orientationLock = function(d){return "Kapcsold ki a tájolási zárat az eszközbeállításokban."};
 
@@ -14920,13 +15014,13 @@ exports.when = function(d){return "amikor"};
 
 exports.whenRun = function(d){return "futtatáskor"};
 
-exports.tryHOC = function(d){return "Próbáld ki a kódolás óráját"};
+exports.tryHOC = function(d){return "Próbáld ki a Kódolás Óráját"};
 
 exports.signup = function(d){return "Regisztrálj a bevezető képzésre"};
 
-exports.hintHeader = function(d){return "Egy tipp:"};
+exports.hintHeader = function(d){return "Itt egy ötlet:"};
 
-exports.genericFeedback = function(d){return "Nem sikerült célba érnem. Kérlek javítsd a hibát."};
+exports.genericFeedback = function(d){return "Nézd meg hogy milyen lett, és próbáld meg kijavítani a programod."};
 
 exports.defaultTwitterText = function(d){return "Nézd meg, mit csináltam"};
 

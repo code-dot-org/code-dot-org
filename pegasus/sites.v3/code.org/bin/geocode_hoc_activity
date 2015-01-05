@@ -9,14 +9,6 @@ def main()
   threads = [].tap do |threads|
     THREAD_COUNT.times do |segment|
       threads << Thread.new do
-        counter_key = "HourOfActivity.last_id-#{segment}"
-        at = PROPERTIES.get(counter_key).to_i
-        HourOfActivity.all(:id.gt=>at, :id.lt=>at+BATCH_SIZE, :order=>[:id.asc]).each do |row|
-          next if (row.id % THREAD_COUNT) != segment
-          HourOfActivity.row_created(row)
-          PROPERTIES.set counter_key, row.id
-        end
-
         counter_key = "hoc_activity.last_id-#{segment}"
         at = PROPERTIES.get(counter_key).to_i
         DB.fetch(

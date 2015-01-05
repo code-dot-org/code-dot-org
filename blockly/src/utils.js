@@ -165,7 +165,7 @@ exports.generateCodeAliases = function (codeFunctions, parentObjName) {
  */
 exports.generateDropletPalette = function (codeFunctions, categoryInfo) {
   // TODO: figure out localization for droplet scenario
-  var palette = [
+  var stdPalette = [
     {
       name: 'Control',
       color: 'orange',
@@ -285,12 +285,42 @@ exports.generateDropletPalette = function (codeFunctions, categoryInfo) {
     }
   }
 
+  var addedPalette = [];
   for (var category in categoryInfo) {
     categoryInfo[category].name = category;
-    palette.unshift(categoryInfo[category]);
+    addedPalette.push(categoryInfo[category]);
   }
 
-  return palette;
+  return addedPalette.concat(stdPalette);
+};
+
+/**
+ * Generate an Ace editor completer for a set of APIs based on some level data.
+ */
+exports.generateAceApiCompleter = function (codeFunctions) {
+  var apis = [];
+
+  for (var i = 0; i < codeFunctions.length; i++) {
+    var cf = codeFunctions[i];
+    if (cf.category === 'hidden') {
+      continue;
+    }
+    apis.push({
+      name: 'api',
+      value: cf.func,
+      meta: 'local'
+    });
+  }
+
+  return {
+    getCompletions: function(editor, session, pos, prefix, callback) {
+      if (prefix.length === 0) {
+        callback(null, []);
+        return;
+      }
+      callback(null, apis);
+    }
+  };
 };
 
 /**

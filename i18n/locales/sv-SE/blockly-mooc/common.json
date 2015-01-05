@@ -75,8 +75,6 @@
   "saveToGallery":"Spara till galleriet",
   "savedToGallery":"Sparad i galleriet!",
   "shareFailure":"Tyvärr kan inte vi dela detta program.",
-  "typeFuncs":"Tillgängliga funktioner:%1",
-  "typeHint":"Observera att parenteserna och semikolonen är obligatoriska.",
   "workspaceHeader":"Sätt ihop dina block här: ",
   "workspaceHeaderJavaScript":"Skriv din JavaScript-kod här",
   "infinity":"Oändligt",

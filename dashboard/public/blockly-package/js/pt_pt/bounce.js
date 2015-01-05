@@ -303,8 +303,13 @@ BlocklyApps.LOCALE = 'en_us';
  */
 BlocklyApps.MIN_WIDTH = 900;
 BlocklyApps.MIN_MOBILE_SHARE_WIDTH = 450;
-BlocklyApps.MIN_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
+BlocklyApps.MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 var WORKSPACE_PLAYSPACE_GAP = 15;
+
+/**
+ * Treat mobile devices with screen.width less than the value below as phones.
+ */
+BlocklyApps.MAX_PHONE_WIDTH = 500;
 
 /**
  * If the user presses backspace, stop propagation - this prevents blockly
@@ -348,8 +353,8 @@ function updateHeadersAfterDropletToggle(usingBlocks) {
 
   var blockCount = document.getElementById('blockCounter');
   if (blockCount) {
-    blockCount.style.visibility =
-      (usingBlocks && BlocklyApps.enableShowBlockCount) ? 'visible' : 'hidden';
+    blockCount.style.display =
+      (usingBlocks && BlocklyApps.enableShowBlockCount) ? 'inline-block' : 'none';
   }
 
   // Resize (including headers), so the category header will appear/disappear:
@@ -417,6 +422,7 @@ BlocklyApps.init = function(config) {
   }
 
   var visualizationColumn = document.getElementById('visualizationColumn');
+  var visualization = document.getElementById('visualization');
 
   // center game screen in embed mode
   if(config.embed) {
@@ -443,7 +449,6 @@ BlocklyApps.init = function(config) {
 
   if (!config.embed && !BlocklyApps.share) {
     // Make the visualization responsive to screen size, except on share page.
-    var visualization = document.getElementById('visualization');
     visualization.className += " responsive";
     visualizationColumn.className += " responsive";
   }
@@ -495,26 +500,31 @@ BlocklyApps.init = function(config) {
     }
     var belowVisualization = document.getElementById('belowVisualization');
     if (belowVisualization) {
-      belowVisualization.style.display = 'block';
-      belowVisualization.style.marginLeft = '0px';
-      if (BlocklyApps.noPadding) {
-        // Shift run and reset buttons off the left edge if we have no padding
-        if (runButton) {
-          runButton.style.marginLeft = '10px';
-        }
-        if (resetButton) {
-          resetButton.style.marginLeft = '10px';
-        }
-        var shareCell = document.getElementById('share-cell') ||
-            document.getElementById('right-button-cell');
-        if (shareCell) {
-          shareCell.style.marginLeft = '10px';
-          shareCell.style.marginRight = '10px';
-        }
-        var softButtons = document.getElementById('soft-buttons');
-        if (softButtons) {
-          softButtons.style.marginLeft = '10px';
-          softButtons.style.marginRight = '10px';
+      if (config.noButtonsBelowOnMobileShare) {
+        belowVisualization.style.display = 'none';
+        visualization.style.marginBottom = '0px';
+      } else {
+        belowVisualization.style.display = 'block';
+        belowVisualization.style.marginLeft = '0px';
+        if (BlocklyApps.noPadding) {
+          // Shift run and reset buttons off the left edge if we have no padding
+          if (runButton) {
+            runButton.style.marginLeft = '10px';
+          }
+          if (resetButton) {
+            resetButton.style.marginLeft = '10px';
+          }
+          var shareCell = document.getElementById('share-cell') ||
+              document.getElementById('right-button-cell');
+          if (shareCell) {
+            shareCell.style.marginLeft = '10px';
+            shareCell.style.marginRight = '10px';
+          }
+          var softButtons = document.getElementById('soft-buttons');
+          if (softButtons) {
+            softButtons.style.marginLeft = '10px';
+            softButtons.style.marginRight = '10px';
+          }
         }
       }
     }
@@ -534,10 +544,11 @@ BlocklyApps.init = function(config) {
       if (BlocklyApps.noPadding) {
         upSale.style.marginLeft = '10px';
       }
-    } else {
+      belowViz.appendChild(upSale);
+    } else if (typeof config.makeYourOwn === 'undefined') {
       upSale.innerHTML = require('./templates/learn.html')();
+      belowViz.appendChild(upSale);
     }
-    belowViz.appendChild(upSale);
   }
 
   // Record time at initialization.
@@ -546,22 +557,27 @@ BlocklyApps.init = function(config) {
   // Fixes viewport for small screens.
   var viewport = document.querySelector('meta[name="viewport"]');
   if (viewport) {
-    var widthDimension;
+    var deviceWidth;
+    var desiredWidth;
     var minWidth;
     if (BlocklyApps.share && dom.isMobile()) {
       // for mobile sharing, don't assume landscape mode, use screen.width
-      widthDimension = screen.width;
+      deviceWidth = desiredWidth = screen.width;
+      if (BlocklyApps.noPadding && screen.width < BlocklyApps.MAX_PHONE_WIDTH) {
+        desiredWidth = Math.min(desiredWidth,
+                                BlocklyApps.MOBILE_NO_PADDING_SHARE_WIDTH);
+      }
       minWidth = BlocklyApps.noPadding ?
-                    BlocklyApps.MIN_MOBILE_NO_PADDING_SHARE_WIDTH :
+                    BlocklyApps.MOBILE_NO_PADDING_SHARE_WIDTH :
                     BlocklyApps.MIN_MOBILE_SHARE_WIDTH;
     }
     else {
       // assume we are in landscape mode, so width is the longer of the two
-      widthDimension = Math.max(screen.width, screen.height);
+      deviceWidth = desiredWidth = Math.max(screen.width, screen.height);
       minWidth = BlocklyApps.MIN_WIDTH;
     }
-    var width = Math.max(minWidth, widthDimension);
-    var scale = widthDimension / width;
+    var width = Math.max(minWidth, desiredWidth);
+    var scale = deviceWidth / width;
     var content = ['width=' + width,
                    'minimal-ui',
                    'initial-scale=' + scale,
@@ -580,6 +596,9 @@ BlocklyApps.init = function(config) {
       if (BlocklyApps.editCode) {
         BlocklyApps.editor.toggleBlocks();
         updateHeadersAfterDropletToggle(BlocklyApps.editor.currentlyUsingBlocks);
+        if (!BlocklyApps.editor.currentlyUsingBlocks) {
+          BlocklyApps.editor.aceEditor.focus();
+        }
       } else {
         feedback.showGeneratedCode(BlocklyApps.Dialog);
       }
@@ -588,7 +607,7 @@ BlocklyApps.init = function(config) {
 
   var blockCount = document.getElementById('blockCounter');
   if (blockCount && !BlocklyApps.enableShowBlockCount) {
-    blockCount.style.visibility = 'hidden';
+    blockCount.style.display = 'none';
   }
 
   BlocklyApps.ICON = config.skin.staticAvatar;
@@ -623,7 +642,7 @@ BlocklyApps.init = function(config) {
       var vizCol = document.getElementById('visualizationColumn');
       var width = vizCol.offsetWidth;
       var height = vizCol.offsetHeight;
-      var displayWidth = BlocklyApps.MIN_MOBILE_NO_PADDING_SHARE_WIDTH;
+      var displayWidth = BlocklyApps.MOBILE_NO_PADDING_SHARE_WIDTH;
       var scale = Math.min(width / displayWidth, height / displayWidth);
       var viz = document.getElementById('visualization');
       viz.style['transform-origin'] = 'left top';
@@ -688,6 +707,20 @@ BlocklyApps.init = function(config) {
         modeOptions: utils.generateDropletModeOptions(config.level.codeFunctions),
         palette: utils.generateDropletPalette(config.level.codeFunctions,
                                               config.level.categoryInfo)
+      });
+
+      BlocklyApps.editor.aceEditor.setShowPrintMargin(false);
+
+      // Add an ace completer for the API functions exposed for this level
+      if (config.level.codeFunctions) {
+        var langTools = window.ace.require("ace/ext/language_tools");
+        langTools.addCompleter(
+            utils.generateAceApiCompleter(config.level.codeFunctions));
+      }
+
+      BlocklyApps.editor.aceEditor.setOptions({
+        enableBasicAutocompletion: true,
+        enableLiveAutocompletion: true
       });
 
       if (config.afterInject) {
@@ -4506,10 +4539,14 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
     } else {
       retVal = interpreter.createObject(interpreter.OBJECT);
       for (var prop in nativeVar) {
+        var value;
+        try {
+          value = nativeVar[prop];
+        } catch (e) { }
         interpreter.setProperty(retVal,
                                 prop,
                                 exports.marshalNativeToInterpreter(interpreter,
-                                                                   nativeVar[prop],
+                                                                   value,
                                                                    nativeVar,
                                                                    maxDepth - 1));
       }
@@ -4520,13 +4557,40 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
   return retVal;
 };
 
+exports.marshalInterpreterToNative = function (interpreterVar) {
+  if (interpreterVar.isPrimitive) {
+    return interpreterVar.data;
+  } else if (Webapp.interpreter.isa(interpreterVar, Webapp.interpreter.ARRAY)) {
+    var nativeArray = [];
+    nativeArray.length = interpreterVar.length;
+    for (var i = 0; i < nativeArray.length; i++) {
+      nativeArray[i] = exports.marshalInterpreterToNative(interpreterVar.properties[i]);
+    }
+    return nativeArray;
+  } else if (Webapp.interpreter.isa(interpreterVar, Webapp.interpreter.OBJECT)) {
+    var nativeObject = {};
+    for (var prop in interpreterVar.properties) {
+      nativeObject[prop] = exports.marshalInterpreterToNative(interpreterVar.properties[prop]);
+    }
+    return nativeObject;
+  } else {
+    // Just return the interpreter object if we can't convert it. This is needed
+    // for passing interpreter callback functions into native.
+    return interpreterVar;
+  }
+};
+
 /**
  * Generate a native function wrapper for use with the JS interpreter.
  */
 exports.makeNativeMemberFunction = function (interpreter, nativeFunc, nativeParentObj, maxDepth) {
   return function() {
     // Call the native function:
-    var nativeRetVal = nativeFunc.apply(nativeParentObj, arguments);
+    var nativeArgs = [];
+    for (var i = 0; i < arguments.length; i++) {
+      nativeArgs[i] = exports.marshalInterpreterToNative(arguments[i]);
+    }
+    var nativeRetVal = nativeFunc.apply(nativeParentObj, nativeArgs);
     return exports.marshalNativeToInterpreter(interpreter, nativeRetVal, null, maxDepth);
   };
 };
@@ -4658,7 +4722,7 @@ exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
     // Only show selection if the node being executed is inside the user's
     // code (not inside code we inserted before or after their code that is
     // not visible in the editor):
-    if (start > 0 && start < userCodeLength) {
+    if (start >= 0 && start < userCodeLength) {
       userCodeRow = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
       // Highlight the code being executed in each step:
       if (editor.currentlyUsingBlocks) {
@@ -12179,7 +12243,7 @@ exports.generateCodeAliases = function (codeFunctions, parentObjName) {
  */
 exports.generateDropletPalette = function (codeFunctions, categoryInfo) {
   // TODO: figure out localization for droplet scenario
-  var palette = [
+  var stdPalette = [
     {
       name: 'Control',
       color: 'orange',
@@ -12299,12 +12363,42 @@ exports.generateDropletPalette = function (codeFunctions, categoryInfo) {
     }
   }
 
+  var addedPalette = [];
   for (var category in categoryInfo) {
     categoryInfo[category].name = category;
-    palette.unshift(categoryInfo[category]);
+    addedPalette.push(categoryInfo[category]);
   }
 
-  return palette;
+  return addedPalette.concat(stdPalette);
+};
+
+/**
+ * Generate an Ace editor completer for a set of APIs based on some level data.
+ */
+exports.generateAceApiCompleter = function (codeFunctions) {
+  var apis = [];
+
+  for (var i = 0; i < codeFunctions.length; i++) {
+    var cf = codeFunctions[i];
+    if (cf.category === 'hidden') {
+      continue;
+    }
+    apis.push({
+      name: 'api',
+      value: cf.func,
+      meta: 'local'
+    });
+  }
+
+  return {
+    getCompletions: function(editor, session, pos, prefix, callback) {
+      if (prefix.length === 0) {
+        callback(null, []);
+        return;
+      }
+      callback(null, apis);
+    }
+  };
 };
 
 /**
@@ -12373,7 +12467,7 @@ exports.parseElement = function(text) {
 
 },{}],40:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.pt=function(n){return n===1?"one":"other"}
-exports.bounceBall = function(d){return "ressalta a bola"};
+exports.bounceBall = function(d){return "ressaltar bola"};
 
 exports.bounceBallTooltip = function(d){return "Ressaltar a bola num objecto."};
 
@@ -12407,7 +12501,7 @@ exports.incrementOpponentScore = function(d){return "marca o ponto do oponente"}
 
 exports.incrementOpponentScoreTooltip = function(d){return "Adicionar um ponto à pontuação do adversário atual."};
 
-exports.incrementPlayerScore = function(d){return "aumenta um ponto"};
+exports.incrementPlayerScore = function(d){return "Marcar ponto"};
 
 exports.incrementPlayerScoreTooltip = function(d){return "Adiciona um ponto à pontuação atual do jogador."};
 
@@ -12415,9 +12509,9 @@ exports.isWall = function(d){return "Isto é uma parede"};
 
 exports.isWallTooltip = function(d){return "Devolve verdadeiro se houver uma parede aqui"};
 
-exports.launchBall = function(d){return "Lança uma bola nova"};
+exports.launchBall = function(d){return "Lançar nova bola"};
 
-exports.launchBallTooltip = function(d){return "Lança uma bola em jogo."};
+exports.launchBallTooltip = function(d){return "Lançar uma bola no jogo."};
 
 exports.makeYourOwn = function(d){return "Cria o teu Jogo de Lançamento"};
 
@@ -12473,7 +12567,7 @@ exports.playSoundLosePoint = function(d){return "tocar som de ponto perdido"};
 
 exports.playSoundLosePoint2 = function(d){return "tocar som de ponto perdido 2"};
 
-exports.playSoundRetro = function(d){return "tocar som retrô"};
+exports.playSoundRetro = function(d){return "tocar som retro"};
 
 exports.playSoundRubber = function(d){return "tocar som de borracha"};
 
@@ -12501,11 +12595,11 @@ exports.repeatUntilFinish = function(d){return "repete até terminar"};
 
 exports.scoreText = function(d){return "Pontuação: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
 
-exports.setBackgroundRandom = function(d){return "define uma cena aleatória"};
+exports.setBackgroundRandom = function(d){return "definir cena aleatória"};
 
 exports.setBackgroundHardcourt = function(d){return "definir cena de campo de ténis"};
 
-exports.setBackgroundRetro = function(d){return "definir a cena retrô"};
+exports.setBackgroundRetro = function(d){return "definir cena retro"};
 
 exports.setBackgroundTooltip = function(d){return "definir a imagem de fundo"};
 
@@ -12513,47 +12607,47 @@ exports.setBallRandom = function(d){return "definir bola aleatória"};
 
 exports.setBallHardcourt = function(d){return "definir bola de ténis"};
 
-exports.setBallRetro = function(d){return "definir bola retrô"};
+exports.setBallRetro = function(d){return "definir bola retro"};
 
 exports.setBallTooltip = function(d){return "Define a imagem da bola"};
 
-exports.setBallSpeedRandom = function(d){return "definir velocidade da bola aleatória"};
+exports.setBallSpeedRandom = function(d){return "definir velocidade aleatória da bola"};
 
-exports.setBallSpeedVerySlow = function(d){return "define velocidade da bola muito lenta"};
+exports.setBallSpeedVerySlow = function(d){return "Definir velocidade muito lenta da bola"};
 
-exports.setBallSpeedSlow = function(d){return "define velocidade da bola lenta"};
+exports.setBallSpeedSlow = function(d){return "definir velocidade lenta da bola"};
 
 exports.setBallSpeedNormal = function(d){return "define velocidade da bola normal"};
 
-exports.setBallSpeedFast = function(d){return "define velocidade da bola rápida"};
+exports.setBallSpeedFast = function(d){return "definir velocidade rápida da bola"};
 
-exports.setBallSpeedVeryFast = function(d){return "define velocidade da bola muito rápida"};
+exports.setBallSpeedVeryFast = function(d){return "Definir velocidade muito rápida da bola"};
 
-exports.setBallSpeedTooltip = function(d){return "Define a velocidade da bola"};
+exports.setBallSpeedTooltip = function(d){return "Definir a velocidade da bola"};
 
-exports.setPaddleRandom = function(d){return "set random paddle"};
+exports.setPaddleRandom = function(d){return "Definir imagem aleatória da raquete"};
 
-exports.setPaddleHardcourt = function(d){return "set hardcourt paddle"};
+exports.setPaddleHardcourt = function(d){return "definir raquete de ténis"};
 
-exports.setPaddleRetro = function(d){return "set retro paddle"};
+exports.setPaddleRetro = function(d){return "Definir raquete retro"};
 
-exports.setPaddleTooltip = function(d){return "Sets the ball paddle"};
+exports.setPaddleTooltip = function(d){return "Definir imagem da raquete"};
 
-exports.setPaddleSpeedRandom = function(d){return "define velocidade aleatória de remagem"};
+exports.setPaddleSpeedRandom = function(d){return "definir velocidade aleatória da raquete"};
 
-exports.setPaddleSpeedVerySlow = function(d){return "define velocidade muito lenta de remagem"};
+exports.setPaddleSpeedVerySlow = function(d){return "definir velocidade muito lenta da raquete"};
 
-exports.setPaddleSpeedSlow = function(d){return "define velocidade lenta de remagem"};
+exports.setPaddleSpeedSlow = function(d){return "definir velocidade lenta da raquete"};
 
-exports.setPaddleSpeedNormal = function(d){return "define velocidade normal de remagem"};
+exports.setPaddleSpeedNormal = function(d){return "definir velocidade normal da raquete"};
 
-exports.setPaddleSpeedFast = function(d){return "define velocidade rápida de remagem"};
+exports.setPaddleSpeedFast = function(d){return "definir velocidade rápida da raquete"};
 
-exports.setPaddleSpeedVeryFast = function(d){return "define velocidade muito rápida de remagem"};
+exports.setPaddleSpeedVeryFast = function(d){return "definir velocidade muito rápida da raquete"};
 
-exports.setPaddleSpeedTooltip = function(d){return "Define a velocidade da remagem"};
+exports.setPaddleSpeedTooltip = function(d){return "Definir a velocidade da raquete"};
 
-exports.shareBounceTwitter = function(d){return "Check out the Bounce game I made. I wrote it myself with @codeorg"};
+exports.shareBounceTwitter = function(d){return "Vê o jogo Bounce que eu fiz. Fui que o escrevi sozinho com @codeorg"};
 
 exports.shareGame = function(d){return "Partilha o teu jogo:"};
 
@@ -12567,37 +12661,37 @@ exports.whenBallInGoal = function(d){return "when ball in goal"};
 
 exports.whenBallInGoalTooltip = function(d){return "Execute the actions below when a ball enters the goal."};
 
-exports.whenBallMissesPaddle = function(d){return "when ball misses paddle"};
+exports.whenBallMissesPaddle = function(d){return "quando a bola falha a raquete"};
 
-exports.whenBallMissesPaddleTooltip = function(d){return "Execute the actions below when a ball misses the paddle."};
+exports.whenBallMissesPaddleTooltip = function(d){return "Executar as ações abaixo quando a bola falha a raquete."};
 
-exports.whenDown = function(d){return "when Down arrow"};
+exports.whenDown = function(d){return "quando seta para baixo"};
 
-exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
+exports.whenDownTooltip = function(d){return "Executar as ações abaixo quando a seta para baixo é clicada."};
 
 exports.whenGameStarts = function(d){return "quando o jogo começa"};
 
 exports.whenGameStartsTooltip = function(d){return "Executa as ações abaixo quando o jogo começar."};
 
-exports.whenLeft = function(d){return "when Left arrow"};
+exports.whenLeft = function(d){return "quando seta para a esquerda"};
 
-exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
+exports.whenLeftTooltip = function(d){return "Executar as ações abaixo quando a seta para a esquerda é clicada."};
 
-exports.whenPaddleCollided = function(d){return "when ball hits paddle"};
+exports.whenPaddleCollided = function(d){return "quando a bola bate na raquete"};
 
-exports.whenPaddleCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a paddle."};
+exports.whenPaddleCollidedTooltip = function(d){return "Executar as ações abaixo quando uma bola colide com a raquete."};
 
-exports.whenRight = function(d){return "when Right arrow"};
+exports.whenRight = function(d){return "quando seta para a direita"};
 
-exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
+exports.whenRightTooltip = function(d){return "Executar as ações abaixo quando a seta para a direita é clicada."};
 
-exports.whenUp = function(d){return "when Up arrow"};
+exports.whenUp = function(d){return "quando seta para cima"};
 
-exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
+exports.whenUpTooltip = function(d){return "Executar as ações abaixo quando a seta para cima é clicada."};
 
-exports.whenWallCollided = function(d){return "when ball hits wall"};
+exports.whenWallCollided = function(d){return "quando a bola atinge a parede"};
 
-exports.whenWallCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a wall."};
+exports.whenWallCollidedTooltip = function(d){return "Executar as ações abaixo quando a bola colide com a parede."};
 
 exports.whileMsg = function(d){return "enquanto"};
 

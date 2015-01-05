@@ -511,6 +511,6 @@ el:
     completed_perfect: ολοκληρώθηκε, τέλειο
     furthest_level_attempted: τελευταίο επίπεδο επιχειρήθηκε
   studio:
-    courses_working_on: "Courses you're working on"
-    completed_courses: Completed courses
-    all_courses: All courses
+    courses_working_on: Μαθήματα τα οποία παρακολουθείτε
+    completed_courses: Μαθήματα που ολοκληρώσατε
+    all_courses: Όλα τα μαθήματα

@@ -303,8 +303,13 @@ BlocklyApps.LOCALE = 'en_us';
  */
 BlocklyApps.MIN_WIDTH = 900;
 BlocklyApps.MIN_MOBILE_SHARE_WIDTH = 450;
-BlocklyApps.MIN_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
+BlocklyApps.MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 var WORKSPACE_PLAYSPACE_GAP = 15;
+
+/**
+ * Treat mobile devices with screen.width less than the value below as phones.
+ */
+BlocklyApps.MAX_PHONE_WIDTH = 500;
 
 /**
  * If the user presses backspace, stop propagation - this prevents blockly
@@ -348,8 +353,8 @@ function updateHeadersAfterDropletToggle(usingBlocks) {
 
   var blockCount = document.getElementById('blockCounter');
   if (blockCount) {
-    blockCount.style.visibility =
-      (usingBlocks && BlocklyApps.enableShowBlockCount) ? 'visible' : 'hidden';
+    blockCount.style.display =
+      (usingBlocks && BlocklyApps.enableShowBlockCount) ? 'inline-block' : 'none';
   }
 
   // Resize (including headers), so the category header will appear/disappear:
@@ -417,6 +422,7 @@ BlocklyApps.init = function(config) {
   }
 
   var visualizationColumn = document.getElementById('visualizationColumn');
+  var visualization = document.getElementById('visualization');
 
   // center game screen in embed mode
   if(config.embed) {
@@ -443,7 +449,6 @@ BlocklyApps.init = function(config) {
 
   if (!config.embed && !BlocklyApps.share) {
     // Make the visualization responsive to screen size, except on share page.
-    var visualization = document.getElementById('visualization');
     visualization.className += " responsive";
     visualizationColumn.className += " responsive";
   }
@@ -495,26 +500,31 @@ BlocklyApps.init = function(config) {
     }
     var belowVisualization = document.getElementById('belowVisualization');
     if (belowVisualization) {
-      belowVisualization.style.display = 'block';
-      belowVisualization.style.marginLeft = '0px';
-      if (BlocklyApps.noPadding) {
-        // Shift run and reset buttons off the left edge if we have no padding
-        if (runButton) {
-          runButton.style.marginLeft = '10px';
-        }
-        if (resetButton) {
-          resetButton.style.marginLeft = '10px';
-        }
-        var shareCell = document.getElementById('share-cell') ||
-            document.getElementById('right-button-cell');
-        if (shareCell) {
-          shareCell.style.marginLeft = '10px';
-          shareCell.style.marginRight = '10px';
-        }
-        var softButtons = document.getElementById('soft-buttons');
-        if (softButtons) {
-          softButtons.style.marginLeft = '10px';
-          softButtons.style.marginRight = '10px';
+      if (config.noButtonsBelowOnMobileShare) {
+        belowVisualization.style.display = 'none';
+        visualization.style.marginBottom = '0px';
+      } else {
+        belowVisualization.style.display = 'block';
+        belowVisualization.style.marginLeft = '0px';
+        if (BlocklyApps.noPadding) {
+          // Shift run and reset buttons off the left edge if we have no padding
+          if (runButton) {
+            runButton.style.marginLeft = '10px';
+          }
+          if (resetButton) {
+            resetButton.style.marginLeft = '10px';
+          }
+          var shareCell = document.getElementById('share-cell') ||
+              document.getElementById('right-button-cell');
+          if (shareCell) {
+            shareCell.style.marginLeft = '10px';
+            shareCell.style.marginRight = '10px';
+          }
+          var softButtons = document.getElementById('soft-buttons');
+          if (softButtons) {
+            softButtons.style.marginLeft = '10px';
+            softButtons.style.marginRight = '10px';
+          }
         }
       }
     }
@@ -534,10 +544,11 @@ BlocklyApps.init = function(config) {
       if (BlocklyApps.noPadding) {
         upSale.style.marginLeft = '10px';
       }
-    } else {
+      belowViz.appendChild(upSale);
+    } else if (typeof config.makeYourOwn === 'undefined') {
       upSale.innerHTML = require('./templates/learn.html')();
+      belowViz.appendChild(upSale);
     }
-    belowViz.appendChild(upSale);
   }
 
   // Record time at initialization.
@@ -546,22 +557,27 @@ BlocklyApps.init = function(config) {
   // Fixes viewport for small screens.
   var viewport = document.querySelector('meta[name="viewport"]');
   if (viewport) {
-    var widthDimension;
+    var deviceWidth;
+    var desiredWidth;
     var minWidth;
     if (BlocklyApps.share && dom.isMobile()) {
       // for mobile sharing, don't assume landscape mode, use screen.width
-      widthDimension = screen.width;
+      deviceWidth = desiredWidth = screen.width;
+      if (BlocklyApps.noPadding && screen.width < BlocklyApps.MAX_PHONE_WIDTH) {
+        desiredWidth = Math.min(desiredWidth,
+                                BlocklyApps.MOBILE_NO_PADDING_SHARE_WIDTH);
+      }
       minWidth = BlocklyApps.noPadding ?
-                    BlocklyApps.MIN_MOBILE_NO_PADDING_SHARE_WIDTH :
+                    BlocklyApps.MOBILE_NO_PADDING_SHARE_WIDTH :
                     BlocklyApps.MIN_MOBILE_SHARE_WIDTH;
     }
     else {
       // assume we are in landscape mode, so width is the longer of the two
-      widthDimension = Math.max(screen.width, screen.height);
+      deviceWidth = desiredWidth = Math.max(screen.width, screen.height);
       minWidth = BlocklyApps.MIN_WIDTH;
     }
-    var width = Math.max(minWidth, widthDimension);
-    var scale = widthDimension / width;
+    var width = Math.max(minWidth, desiredWidth);
+    var scale = deviceWidth / width;
     var content = ['width=' + width,
                    'minimal-ui',
                    'initial-scale=' + scale,
@@ -580,6 +596,9 @@ BlocklyApps.init = function(config) {
       if (BlocklyApps.editCode) {
         BlocklyApps.editor.toggleBlocks();
         updateHeadersAfterDropletToggle(BlocklyApps.editor.currentlyUsingBlocks);
+        if (!BlocklyApps.editor.currentlyUsingBlocks) {
+          BlocklyApps.editor.aceEditor.focus();
+        }
       } else {
         feedback.showGeneratedCode(BlocklyApps.Dialog);
       }
@@ -588,7 +607,7 @@ BlocklyApps.init = function(config) {
 
   var blockCount = document.getElementById('blockCounter');
   if (blockCount && !BlocklyApps.enableShowBlockCount) {
-    blockCount.style.visibility = 'hidden';
+    blockCount.style.display = 'none';
   }
 
   BlocklyApps.ICON = config.skin.staticAvatar;
@@ -623,7 +642,7 @@ BlocklyApps.init = function(config) {
       var vizCol = document.getElementById('visualizationColumn');
       var width = vizCol.offsetWidth;
       var height = vizCol.offsetHeight;
-      var displayWidth = BlocklyApps.MIN_MOBILE_NO_PADDING_SHARE_WIDTH;
+      var displayWidth = BlocklyApps.MOBILE_NO_PADDING_SHARE_WIDTH;
       var scale = Math.min(width / displayWidth, height / displayWidth);
       var viz = document.getElementById('visualization');
       viz.style['transform-origin'] = 'left top';
@@ -688,6 +707,20 @@ BlocklyApps.init = function(config) {
         modeOptions: utils.generateDropletModeOptions(config.level.codeFunctions),
         palette: utils.generateDropletPalette(config.level.codeFunctions,
                                               config.level.categoryInfo)
+      });
+
+      BlocklyApps.editor.aceEditor.setShowPrintMargin(false);
+
+      // Add an ace completer for the API functions exposed for this level
+      if (config.level.codeFunctions) {
+        var langTools = window.ace.require("ace/ext/language_tools");
+        langTools.addCompleter(
+            utils.generateAceApiCompleter(config.level.codeFunctions));
+      }
+
+      BlocklyApps.editor.aceEditor.setOptions({
+        enableBasicAutocompletion: true,
+        enableLiveAutocompletion: true
       });
 
       if (config.afterInject) {
@@ -1798,10 +1831,14 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
     } else {
       retVal = interpreter.createObject(interpreter.OBJECT);
       for (var prop in nativeVar) {
+        var value;
+        try {
+          value = nativeVar[prop];
+        } catch (e) { }
         interpreter.setProperty(retVal,
                                 prop,
                                 exports.marshalNativeToInterpreter(interpreter,
-                                                                   nativeVar[prop],
+                                                                   value,
                                                                    nativeVar,
                                                                    maxDepth - 1));
       }
@@ -1812,13 +1849,40 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
   return retVal;
 };
 
+exports.marshalInterpreterToNative = function (interpreterVar) {
+  if (interpreterVar.isPrimitive) {
+    return interpreterVar.data;
+  } else if (Webapp.interpreter.isa(interpreterVar, Webapp.interpreter.ARRAY)) {
+    var nativeArray = [];
+    nativeArray.length = interpreterVar.length;
+    for (var i = 0; i < nativeArray.length; i++) {
+      nativeArray[i] = exports.marshalInterpreterToNative(interpreterVar.properties[i]);
+    }
+    return nativeArray;
+  } else if (Webapp.interpreter.isa(interpreterVar, Webapp.interpreter.OBJECT)) {
+    var nativeObject = {};
+    for (var prop in interpreterVar.properties) {
+      nativeObject[prop] = exports.marshalInterpreterToNative(interpreterVar.properties[prop]);
+    }
+    return nativeObject;
+  } else {
+    // Just return the interpreter object if we can't convert it. This is needed
+    // for passing interpreter callback functions into native.
+    return interpreterVar;
+  }
+};
+
 /**
  * Generate a native function wrapper for use with the JS interpreter.
  */
 exports.makeNativeMemberFunction = function (interpreter, nativeFunc, nativeParentObj, maxDepth) {
   return function() {
     // Call the native function:
-    var nativeRetVal = nativeFunc.apply(nativeParentObj, arguments);
+    var nativeArgs = [];
+    for (var i = 0; i < arguments.length; i++) {
+      nativeArgs[i] = exports.marshalInterpreterToNative(arguments[i]);
+    }
+    var nativeRetVal = nativeFunc.apply(nativeParentObj, nativeArgs);
     return exports.marshalNativeToInterpreter(interpreter, nativeRetVal, null, maxDepth);
   };
 };
@@ -1950,7 +2014,7 @@ exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
     // Only show selection if the node being executed is inside the user's
     // code (not inside code we inserted before or after their code that is
     // not visible in the editor):
-    if (start > 0 && start < userCodeLength) {
+    if (start >= 0 && start < userCodeLength) {
       userCodeRow = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
       // Highlight the code being executed in each step:
       if (editor.currentlyUsingBlocks) {
@@ -12003,7 +12067,7 @@ exports.generateCodeAliases = function (codeFunctions, parentObjName) {
  */
 exports.generateDropletPalette = function (codeFunctions, categoryInfo) {
   // TODO: figure out localization for droplet scenario
-  var palette = [
+  var stdPalette = [
     {
       name: 'Control',
       color: 'orange',
@@ -12123,12 +12187,42 @@ exports.generateDropletPalette = function (codeFunctions, categoryInfo) {
     }
   }
 
+  var addedPalette = [];
   for (var category in categoryInfo) {
     categoryInfo[category].name = category;
-    palette.unshift(categoryInfo[category]);
+    addedPalette.push(categoryInfo[category]);
   }
 
-  return palette;
+  return addedPalette.concat(stdPalette);
+};
+
+/**
+ * Generate an Ace editor completer for a set of APIs based on some level data.
+ */
+exports.generateAceApiCompleter = function (codeFunctions) {
+  var apis = [];
+
+  for (var i = 0; i < codeFunctions.length; i++) {
+    var cf = codeFunctions[i];
+    if (cf.category === 'hidden') {
+      continue;
+    }
+    apis.push({
+      name: 'api',
+      value: cf.func,
+      meta: 'local'
+    });
+  }
+
+  return {
+    getCompletions: function(editor, session, pos, prefix, callback) {
+      if (prefix.length === 0) {
+        callback(null, []);
+        return;
+      }
+      callback(null, apis);
+    }
+  };
 };
 
 /**
@@ -12254,7 +12348,7 @@ exports.directionWestLetter = function(d){return "Zapad"};
 
 exports.end = function(d){return "kraj"};
 
-exports.emptyBlocksErrorMsg = function(d){return "Da bi blok \"Ponovi\" ili \"Ako\" radio, u njega treba ugraditi druge blokove. Provjeri uklapa li se unutarnji blok pravilno u vanjski blok."};
+exports.emptyBlocksErrorMsg = function(d){return "Da bi blokovi \"Ponovi\" ili \"Ako\" radili, u njih treba ugraditi druge blokove. Provjeri uklapa li se unutarnji blok pravilno u vanjski blok."};
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Funkcijski blok treba unutra imati druge blokove da bi mogao raditi."};
 
@@ -12262,17 +12356,17 @@ exports.errorEmptyFunctionBlockModal = function(d){return "Mora se staviti bloko
 
 exports.errorIncompleteBlockInFunction = function(d){return "Klikni na \"uredi\" da budeš siguran da nijedan blok ne nedostaje unutar tvoje definicije funkcije."};
 
-exports.errorParamInputUnattached = function(d){return "Sjeti se da prikvačiš blok za svaki unos parametara na bloku funkcije na svojoj radnoj površini."};
+exports.errorParamInputUnattached = function(d){return "Sjeti se da prikačiš blok za svaki unos parametara na bloku funkcije na svojoj radnoj površini."};
 
 exports.errorUnusedParam = function(d){return "Dodao si blok parametara, ali ga nisi koristio u definiciji. Pobrini se da koristiš svoj parametar tako da klikneš na \"uredi\" i staviš blok parametara unutar zelenog bloka."};
 
 exports.errorRequiredParamsMissing = function(d){return "Napravi parametar za svoju funkciju tako da klikneš na \"uredi\" i dodaš neophodne parametre. Dovuci nove blokove parametara u svoju definiciju funkcije."};
 
-exports.errorUnusedFunction = function(d){return "Napravio si funkciju, ali je nikad nisi koristio na svojoj radnoj površini! Klikni na \"Funkcije\" u alatima i pobrini se da je iskoristiš u svom programu."};
+exports.errorUnusedFunction = function(d){return "Napravio si funkciju, ali je nikad nisi koristio na svojoj radnoj površini! Klikni na \"Funkcije\" na alatnoj traci i pobrini se da je iskoristiš u svom programu."};
 
 exports.errorQuestionMarksInNumberField = function(d){return "Pokušaj zamijeniti \"???\" s vrijednošću."};
 
-exports.extraTopBlocks = function(d){return "Postoje nespojeni blokovi. Želiš li ih dodati u blok \"pri izvršavanju\"?"};
+exports.extraTopBlocks = function(d){return "Postoje nespojeni blokovi. Želiš li ih dodati u blok \"pri pokretanju\"?"};
 
 exports.finalStage = function(d){return "Čestitamo! Posljednja etapa je završena."};
 
@@ -12318,9 +12412,9 @@ exports.puzzleTitle = function(d){return "Zadatak "+v(d,"puzzle_number")+" od "+
 
 exports.repeat = function(d){return "ponovi"};
 
-exports.resetProgram = function(d){return "Ponovno"};
+exports.resetProgram = function(d){return "Ispočetka"};
 
-exports.runProgram = function(d){return "Kreni"};
+exports.runProgram = function(d){return "Pokreni"};
 
 exports.runTooltip = function(d){return "Pokreće program određen blokovima na radnom prostoru."};
 
@@ -12378,11 +12472,11 @@ exports.watchVideo = function(d){return "Pogledaj filmić"};
 
 exports.when = function(d){return "kada"};
 
-exports.whenRun = function(d){return "pri izvršavanju"};
+exports.whenRun = function(d){return "pri pokretanju"};
 
 exports.tryHOC = function(d){return "Isprobaj Hour of Code"};
 
-exports.signup = function(d){return "Upis na početni tečaj"};
+exports.signup = function(d){return "Registrirajte se na početni tečaj"};
 
 exports.hintHeader = function(d){return "Evo savjeta:"};
 
@@ -12420,7 +12514,7 @@ exports.finalLevel = function(d){return "Čestitamo! Riješen je posljednji zada
 
 exports.flap = function(d){return "mahni krilima"};
 
-exports.flapRandom = function(d){return "mahni krilima nekoliko puta"};
+exports.flapRandom = function(d){return "mahni krilima nasumično jako"};
 
 exports.flapVerySmall = function(d){return "sasvim malo mahni krilima"};
 
@@ -12544,7 +12638,7 @@ exports.setGroundTooltip = function(d){return "Postavlja sliku tla"};
 
 exports.setObstacle = function(d){return "postavi prepreku"};
 
-exports.setObstacleRandom = function(d){return "postavi proizvoljnu prepreku"};
+exports.setObstacleRandom = function(d){return "postavi nasumično odabranu prepreku"};
 
 exports.setObstacleFlappy = function(d){return "postavi prepreku u obliku cijevi"};
 
@@ -12560,37 +12654,37 @@ exports.setObstacleLaser = function(d){return "postavi lasersku prepreku"};
 
 exports.setObstacleTooltip = function(d){return "Postavlja sliku prepreke"};
 
-exports.setPlayer = function(d){return "postavi igrača"};
+exports.setPlayer = function(d){return "postavi izgled lika"};
 
-exports.setPlayerRandom = function(d){return "postavi nasumično odabranog igrača"};
+exports.setPlayerRandom = function(d){return "postavi igrača Nasumično"};
 
-exports.setPlayerFlappy = function(d){return "postavi Žutu Pticu kao igrača"};
+exports.setPlayerFlappy = function(d){return "postavi izgled Žute ptice"};
 
-exports.setPlayerRedBird = function(d){return "postavi Crvenu Pticu kao igrača"};
+exports.setPlayerRedBird = function(d){return "postavi izgled Crvene ptice"};
 
-exports.setPlayerSciFi = function(d){return "postavi svemirski brod kao igrača"};
+exports.setPlayerSciFi = function(d){return "postavi izgled Svemirskog broda"};
 
-exports.setPlayerUnderwater = function(d){return "postavi Ribu kao igrača"};
+exports.setPlayerUnderwater = function(d){return "postavi izgled Ribe"};
 
-exports.setPlayerCave = function(d){return "postavi Šišmiša kao igrača"};
+exports.setPlayerCave = function(d){return "postavi izgled Šišmiša"};
 
-exports.setPlayerSanta = function(d){return "postavi Djeda Mraza kao igrača"};
+exports.setPlayerSanta = function(d){return "postavi izgled Djeda Mraza"};
 
-exports.setPlayerShark = function(d){return "postavi Morskog Psa kao igrača"};
+exports.setPlayerShark = function(d){return "postavi izgled Morskog psa"};
 
-exports.setPlayerEaster = function(d){return "postavi Uskršnjeg Zeca kao igrača"};
+exports.setPlayerEaster = function(d){return "postavi izgled Uskršnjeg zeca"};
 
-exports.setPlayerBatman = function(d){return "postavi Šišmiš-čovjeka kao igrača"};
+exports.setPlayerBatman = function(d){return "postavi izgled Šišmiš-čovjeka"};
 
-exports.setPlayerSubmarine = function(d){return "postavi Podmornicu kao igrača"};
+exports.setPlayerSubmarine = function(d){return "postavi izgled Podmornice"};
 
-exports.setPlayerUnicorn = function(d){return "postavi Jednoroga kao igrača"};
+exports.setPlayerUnicorn = function(d){return "postavi izgled Jednoroga"};
 
-exports.setPlayerFairy = function(d){return "postavi Vilu kao igrača"};
+exports.setPlayerFairy = function(d){return "postavi izgled Vile"};
 
-exports.setPlayerSuperman = function(d){return "postavi Flappymana kao igrača"};
+exports.setPlayerSuperman = function(d){return "postavi izgled Flappymana"};
 
-exports.setPlayerTurkey = function(d){return "postavi Puricu kao igrača"};
+exports.setPlayerTurkey = function(d){return "postavi izgled Purice"};
 
 exports.setPlayerTooltip = function(d){return "Postavlja sliku igrača"};
 
@@ -12646,19 +12740,19 @@ exports.speedVeryFast = function(d){return "postavi veoma veliku brzinu"};
 
 exports.whenClick = function(d){return "na klik"};
 
-exports.whenClickTooltip = function(d){return "Izvršava dolje navedene naredbe kad se dogodi klik."};
+exports.whenClickTooltip = function(d){return "Izvršava dolje navedene akcije kad se dogodi klik."};
 
-exports.whenCollideGround = function(d){return "kada udari o tlo"};
+exports.whenCollideGround = function(d){return "kada padne na tlo"};
 
-exports.whenCollideGroundTooltip = function(d){return "Izvršava dolje navedene naredbe kad Flappy dodirne tlo."};
+exports.whenCollideGroundTooltip = function(d){return "Izvršava dolje navedene akcije kada Flappy dodirne tlo."};
 
 exports.whenCollideObstacle = function(d){return "kada udari u prepreku"};
 
-exports.whenCollideObstacleTooltip = function(d){return "Izvršava dolje navedene naredbe kad Flappy udari u prepreku."};
+exports.whenCollideObstacleTooltip = function(d){return "Izvršava dolje navedene akcije kad Flappy udari u prepreku."};
 
 exports.whenEnterObstacle = function(d){return "kada prođe prepreku"};
 
-exports.whenEnterObstacleTooltip = function(d){return "Izvršava dolje navedene naredbe kad Flappy uđe u prepreku."};
+exports.whenEnterObstacleTooltip = function(d){return "Izvršava dolje navedene akcije kada Flappy uđe u prepreku."};
 
 exports.whenRunButtonClick = function(d){return "na početku igre"};
 

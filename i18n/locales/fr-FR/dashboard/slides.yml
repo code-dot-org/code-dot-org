@@ -33,7 +33,7 @@ fr:
         text: "Chaque bloc est une seule instruction. Si tu fais glisser un bloc « avancer » dans ton espace de travail et appuie sur « Exécuter le programme », l'oiseau se déplace d'une case sur le labyrinthe."
       11:
         image: notes/hoc1_11.jpg
-        text: To do more than one action, you can drag many blocks to your workspace and attach them together. The bird will do the commands from top to bottom.
+        text: "Pour faire plusieurs actions, vous pouvez faire glisser les blocs sur votre espace de travail et les attacher les uns aux autres. L'oiseau exécutera toutes les commandes de haut en bas."
       12:
         image: notes/hoc1_12.jpg
         text: 'Si tu exécutes un programme et tu veux le corriger et réessayer, appuie sur le bouton " Réessayer".'
@@ -179,7 +179,7 @@ fr:
       2:
         image: notes/hoc5_2.jpg
         text: |-
-          If I put a "move forward" block in the spot where it says "do" and a "turn left" block where it says "else" that means that the zombie will choose between 2 options. IF there is a path ahead, the zombie will move forward, and OTHERWISE (there isn't a path ahead), the zombie will turn left.
+          Si je mets un bloc "avancer plus" dans l'emplacement nommé "faire" et un bloc "tourner à gauche" dans l'emplacement nommé "autre", le zombie choisira une de ces 2 options. SI il y a un chemin le zombie avancera, SINON (il n'y a donc pas de chemin) le zombie tournera à gauche.
       3:
         image: notes/hoc5_3.jpg
         text: |-

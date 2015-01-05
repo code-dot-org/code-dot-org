@@ -303,8 +303,13 @@ BlocklyApps.LOCALE = 'en_us';
  */
 BlocklyApps.MIN_WIDTH = 900;
 BlocklyApps.MIN_MOBILE_SHARE_WIDTH = 450;
-BlocklyApps.MIN_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
+BlocklyApps.MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 var WORKSPACE_PLAYSPACE_GAP = 15;
+
+/**
+ * Treat mobile devices with screen.width less than the value below as phones.
+ */
+BlocklyApps.MAX_PHONE_WIDTH = 500;
 
 /**
  * If the user presses backspace, stop propagation - this prevents blockly
@@ -348,8 +353,8 @@ function updateHeadersAfterDropletToggle(usingBlocks) {
 
   var blockCount = document.getElementById('blockCounter');
   if (blockCount) {
-    blockCount.style.visibility =
-      (usingBlocks && BlocklyApps.enableShowBlockCount) ? 'visible' : 'hidden';
+    blockCount.style.display =
+      (usingBlocks && BlocklyApps.enableShowBlockCount) ? 'inline-block' : 'none';
   }
 
   // Resize (including headers), so the category header will appear/disappear:
@@ -417,6 +422,7 @@ BlocklyApps.init = function(config) {
   }
 
   var visualizationColumn = document.getElementById('visualizationColumn');
+  var visualization = document.getElementById('visualization');
 
   // center game screen in embed mode
   if(config.embed) {
@@ -443,7 +449,6 @@ BlocklyApps.init = function(config) {
 
   if (!config.embed && !BlocklyApps.share) {
     // Make the visualization responsive to screen size, except on share page.
-    var visualization = document.getElementById('visualization');
     visualization.className += " responsive";
     visualizationColumn.className += " responsive";
   }
@@ -495,26 +500,31 @@ BlocklyApps.init = function(config) {
     }
     var belowVisualization = document.getElementById('belowVisualization');
     if (belowVisualization) {
-      belowVisualization.style.display = 'block';
-      belowVisualization.style.marginLeft = '0px';
-      if (BlocklyApps.noPadding) {
-        // Shift run and reset buttons off the left edge if we have no padding
-        if (runButton) {
-          runButton.style.marginLeft = '10px';
-        }
-        if (resetButton) {
-          resetButton.style.marginLeft = '10px';
-        }
-        var shareCell = document.getElementById('share-cell') ||
-            document.getElementById('right-button-cell');
-        if (shareCell) {
-          shareCell.style.marginLeft = '10px';
-          shareCell.style.marginRight = '10px';
-        }
-        var softButtons = document.getElementById('soft-buttons');
-        if (softButtons) {
-          softButtons.style.marginLeft = '10px';
-          softButtons.style.marginRight = '10px';
+      if (config.noButtonsBelowOnMobileShare) {
+        belowVisualization.style.display = 'none';
+        visualization.style.marginBottom = '0px';
+      } else {
+        belowVisualization.style.display = 'block';
+        belowVisualization.style.marginLeft = '0px';
+        if (BlocklyApps.noPadding) {
+          // Shift run and reset buttons off the left edge if we have no padding
+          if (runButton) {
+            runButton.style.marginLeft = '10px';
+          }
+          if (resetButton) {
+            resetButton.style.marginLeft = '10px';
+          }
+          var shareCell = document.getElementById('share-cell') ||
+              document.getElementById('right-button-cell');
+          if (shareCell) {
+            shareCell.style.marginLeft = '10px';
+            shareCell.style.marginRight = '10px';
+          }
+          var softButtons = document.getElementById('soft-buttons');
+          if (softButtons) {
+            softButtons.style.marginLeft = '10px';
+            softButtons.style.marginRight = '10px';
+          }
         }
       }
     }
@@ -534,10 +544,11 @@ BlocklyApps.init = function(config) {
       if (BlocklyApps.noPadding) {
         upSale.style.marginLeft = '10px';
       }
-    } else {
+      belowViz.appendChild(upSale);
+    } else if (typeof config.makeYourOwn === 'undefined') {
       upSale.innerHTML = require('./templates/learn.html')();
+      belowViz.appendChild(upSale);
     }
-    belowViz.appendChild(upSale);
   }
 
   // Record time at initialization.
@@ -546,22 +557,27 @@ BlocklyApps.init = function(config) {
   // Fixes viewport for small screens.
   var viewport = document.querySelector('meta[name="viewport"]');
   if (viewport) {
-    var widthDimension;
+    var deviceWidth;
+    var desiredWidth;
     var minWidth;
     if (BlocklyApps.share && dom.isMobile()) {
       // for mobile sharing, don't assume landscape mode, use screen.width
-      widthDimension = screen.width;
+      deviceWidth = desiredWidth = screen.width;
+      if (BlocklyApps.noPadding && screen.width < BlocklyApps.MAX_PHONE_WIDTH) {
+        desiredWidth = Math.min(desiredWidth,
+                                BlocklyApps.MOBILE_NO_PADDING_SHARE_WIDTH);
+      }
       minWidth = BlocklyApps.noPadding ?
-                    BlocklyApps.MIN_MOBILE_NO_PADDING_SHARE_WIDTH :
+                    BlocklyApps.MOBILE_NO_PADDING_SHARE_WIDTH :
                     BlocklyApps.MIN_MOBILE_SHARE_WIDTH;
     }
     else {
       // assume we are in landscape mode, so width is the longer of the two
-      widthDimension = Math.max(screen.width, screen.height);
+      deviceWidth = desiredWidth = Math.max(screen.width, screen.height);
       minWidth = BlocklyApps.MIN_WIDTH;
     }
-    var width = Math.max(minWidth, widthDimension);
-    var scale = widthDimension / width;
+    var width = Math.max(minWidth, desiredWidth);
+    var scale = deviceWidth / width;
     var content = ['width=' + width,
                    'minimal-ui',
                    'initial-scale=' + scale,
@@ -580,6 +596,9 @@ BlocklyApps.init = function(config) {
       if (BlocklyApps.editCode) {
         BlocklyApps.editor.toggleBlocks();
         updateHeadersAfterDropletToggle(BlocklyApps.editor.currentlyUsingBlocks);
+        if (!BlocklyApps.editor.currentlyUsingBlocks) {
+          BlocklyApps.editor.aceEditor.focus();
+        }
       } else {
         feedback.showGeneratedCode(BlocklyApps.Dialog);
       }
@@ -588,7 +607,7 @@ BlocklyApps.init = function(config) {
 
   var blockCount = document.getElementById('blockCounter');
   if (blockCount && !BlocklyApps.enableShowBlockCount) {
-    blockCount.style.visibility = 'hidden';
+    blockCount.style.display = 'none';
   }
 
   BlocklyApps.ICON = config.skin.staticAvatar;
@@ -623,7 +642,7 @@ BlocklyApps.init = function(config) {
       var vizCol = document.getElementById('visualizationColumn');
       var width = vizCol.offsetWidth;
       var height = vizCol.offsetHeight;
-      var displayWidth = BlocklyApps.MIN_MOBILE_NO_PADDING_SHARE_WIDTH;
+      var displayWidth = BlocklyApps.MOBILE_NO_PADDING_SHARE_WIDTH;
       var scale = Math.min(width / displayWidth, height / displayWidth);
       var viz = document.getElementById('visualization');
       viz.style['transform-origin'] = 'left top';
@@ -688,6 +707,20 @@ BlocklyApps.init = function(config) {
         modeOptions: utils.generateDropletModeOptions(config.level.codeFunctions),
         palette: utils.generateDropletPalette(config.level.codeFunctions,
                                               config.level.categoryInfo)
+      });
+
+      BlocklyApps.editor.aceEditor.setShowPrintMargin(false);
+
+      // Add an ace completer for the API functions exposed for this level
+      if (config.level.codeFunctions) {
+        var langTools = window.ace.require("ace/ext/language_tools");
+        langTools.addCompleter(
+            utils.generateAceApiCompleter(config.level.codeFunctions));
+      }
+
+      BlocklyApps.editor.aceEditor.setOptions({
+        enableBasicAutocompletion: true,
+        enableLiveAutocompletion: true
       });
 
       if (config.afterInject) {
@@ -2686,10 +2719,14 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
     } else {
       retVal = interpreter.createObject(interpreter.OBJECT);
       for (var prop in nativeVar) {
+        var value;
+        try {
+          value = nativeVar[prop];
+        } catch (e) { }
         interpreter.setProperty(retVal,
                                 prop,
                                 exports.marshalNativeToInterpreter(interpreter,
-                                                                   nativeVar[prop],
+                                                                   value,
                                                                    nativeVar,
                                                                    maxDepth - 1));
       }
@@ -2700,13 +2737,40 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
   return retVal;
 };
 
+exports.marshalInterpreterToNative = function (interpreterVar) {
+  if (interpreterVar.isPrimitive) {
+    return interpreterVar.data;
+  } else if (Webapp.interpreter.isa(interpreterVar, Webapp.interpreter.ARRAY)) {
+    var nativeArray = [];
+    nativeArray.length = interpreterVar.length;
+    for (var i = 0; i < nativeArray.length; i++) {
+      nativeArray[i] = exports.marshalInterpreterToNative(interpreterVar.properties[i]);
+    }
+    return nativeArray;
+  } else if (Webapp.interpreter.isa(interpreterVar, Webapp.interpreter.OBJECT)) {
+    var nativeObject = {};
+    for (var prop in interpreterVar.properties) {
+      nativeObject[prop] = exports.marshalInterpreterToNative(interpreterVar.properties[prop]);
+    }
+    return nativeObject;
+  } else {
+    // Just return the interpreter object if we can't convert it. This is needed
+    // for passing interpreter callback functions into native.
+    return interpreterVar;
+  }
+};
+
 /**
  * Generate a native function wrapper for use with the JS interpreter.
  */
 exports.makeNativeMemberFunction = function (interpreter, nativeFunc, nativeParentObj, maxDepth) {
   return function() {
     // Call the native function:
-    var nativeRetVal = nativeFunc.apply(nativeParentObj, arguments);
+    var nativeArgs = [];
+    for (var i = 0; i < arguments.length; i++) {
+      nativeArgs[i] = exports.marshalInterpreterToNative(arguments[i]);
+    }
+    var nativeRetVal = nativeFunc.apply(nativeParentObj, nativeArgs);
     return exports.marshalNativeToInterpreter(interpreter, nativeRetVal, null, maxDepth);
   };
 };
@@ -2838,7 +2902,7 @@ exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
     // Only show selection if the node being executed is inside the user's
     // code (not inside code we inserted before or after their code that is
     // not visible in the editor):
-    if (start > 0 && start < userCodeLength) {
+    if (start >= 0 && start < userCodeLength) {
       userCodeRow = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
       // Highlight the code being executed in each step:
       if (editor.currentlyUsingBlocks) {
@@ -10854,7 +10918,7 @@ exports.generateCodeAliases = function (codeFunctions, parentObjName) {
  */
 exports.generateDropletPalette = function (codeFunctions, categoryInfo) {
   // TODO: figure out localization for droplet scenario
-  var palette = [
+  var stdPalette = [
     {
       name: 'Control',
       color: 'orange',
@@ -10974,12 +11038,42 @@ exports.generateDropletPalette = function (codeFunctions, categoryInfo) {
     }
   }
 
+  var addedPalette = [];
   for (var category in categoryInfo) {
     categoryInfo[category].name = category;
-    palette.unshift(categoryInfo[category]);
+    addedPalette.push(categoryInfo[category]);
   }
 
-  return palette;
+  return addedPalette.concat(stdPalette);
+};
+
+/**
+ * Generate an Ace editor completer for a set of APIs based on some level data.
+ */
+exports.generateAceApiCompleter = function (codeFunctions) {
+  var apis = [];
+
+  for (var i = 0; i < codeFunctions.length; i++) {
+    var cf = codeFunctions[i];
+    if (cf.category === 'hidden') {
+      continue;
+    }
+    apis.push({
+      name: 'api',
+      value: cf.func,
+      meta: 'local'
+    });
+  }
+
+  return {
+    getCompletions: function(editor, session, pos, prefix, callback) {
+      if (prefix.length === 0) {
+        callback(null, []);
+        return;
+      }
+      callback(null, apis);
+    }
+  };
 };
 
 /**
@@ -11052,13 +11146,13 @@ exports.compute = function(d){return "compute"};
 
 exports.equivalentExpression = function(d){return "Subukang ayusin ang iyong mga argument upang makuha ang parehong ekspresyon."};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"compute\" block?"};
+exports.extraTopBlocks = function(d){return "Mayroon kang hindi nakasama na mga block. Ibig mo bang isama ito sa \"compute\" block?"};
 
 exports.goal = function(d){return "Goal:"};
 
-exports.reinfFeedbackMsg = function(d){return "Does this look like what you want? You can press the \"Try again\" button to see your drawing."};
+exports.reinfFeedbackMsg = function(d){return "Heto na ang inyong kuwento! Magpatuloy sa pagsagot dito, o lumipat sa susunod na palaisipan!"};
 
-exports.yourExpression = function(d){return "Your expression:"};
+exports.yourExpression = function(d){return "Ang iyong expression:"};
 
 
 },{"messageformat":53}],41:[function(require,module,exports){
@@ -11109,29 +11203,29 @@ exports.end = function(d){return "tapos"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Ang \"Repeat\" o \"if\" block ay kailangan ng iba pang mga block sa loob nito upang gumana. Siguraduhin na ang block na asa loob ay nakasukat ng maayos sa loob ng naglalaman na block."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Ang function na block ay kailangang magkaroon ng iba pang mga block sa loob nito upang gumana."};
 
-exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+exports.errorEmptyFunctionBlockModal = function(d){return "Dapat meron mga block sa loob ng iyong kahulugan ng function. I-click ang \"i-edit\" at i-drag ang mga block sa loob ng berdeng block."};
 
-exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+exports.errorIncompleteBlockInFunction = function(d){return "I-click ang \"i-edit\" upang tiyakin na wala kang nawawala sa loob ng iyong kahulugan ng function ng anumang mga block."};
 
-exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+exports.errorParamInputUnattached = function(d){return "Tandaang i-attach ang isang block sa bawat input parameter sa function block sa iyong workspace."};
 
-exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+exports.errorUnusedParam = function(d){return "Nagdagdag ka ng isang block na parameter, ngunit hindi ito ginamit sa definition. Siguraduhin na gamitin ang iyong mga parameter sa pamamagitan ng pag-click sa \"i-edit\" at paglalagay ng parameter block sa loob ng berdeng block."};
 
-exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+exports.errorRequiredParamsMissing = function(d){return "Lumikha ng parameter sa pamamagitan ng pag-click sa \"i-edit\" at pagdagdag ng mga kinakailangang parameter. I-drag ang mga bagong block parameter sa iyong kahulugan ng function."};
 
-exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+exports.errorUnusedFunction = function(d){return "Lumikha ka ng isang function, ngunit hindi kailanman ginamit ito sa iyong workspace! Mag-click sa \"Mga Functions\" sa toolbox at tiyakin na ginagamit mo ito sa iyong program."};
 
-exports.errorQuestionMarksInNumberField = function(d){return "Try replacing \"???\" with a value."};
+exports.errorQuestionMarksInNumberField = function(d){return "Subukan ang pagpalit ng \"???\" na may value."};
 
-exports.extraTopBlocks = function(d){return "Meron kang extra na mga block na hindi nakasama sa event block."};
+exports.extraTopBlocks = function(d){return "Mayroon kang hindi isinama na block. Ibig mo bang ilakip ang mga ito sa \"when run\" block?"};
 
 exports.finalStage = function(d){return "Maligayang pagbati! Natapos mo na ang pinakahuling stage."};
 
 exports.finalStageTrophies = function(d){return "Maligayang pagbati! Nakumpleto mo na ang pinakahuling stage at nanalo ng "+p(d,"numTrophies",0,"fil",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Katapusan"};
 
 exports.generatedCodeInfo = function(d){return "Kahit ang mga nangungunang mga unibersidad ay nagtuturo ng block-based na coding (eg, "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ngunit sa ilalim nito, ang mga bloke na iyong binuo ay maaari ring ipakita sa JavaScript, pinaka-tinatanggap na mga wika coding ng mundo:"};
 
@@ -11163,9 +11257,9 @@ exports.numBlocksNeeded = function(d){return "Maligayang bati! Nakumpleto mo ang
 
 exports.numLinesOfCodeWritten = function(d){return "Ikaw ang nagsulat ng "+p(d,"numLines",0,"fil",{"one":"1 line","other":n(d,"numLines")+" lines"})+" ng code!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "i-play"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "I-print"};
 
 exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" ng "+v(d,"stage_total")};
 
@@ -11177,11 +11271,11 @@ exports.runProgram = function(d){return "Patakbuhin"};
 
 exports.runTooltip = function(d){return "Patakbuhin ang program na tinutukoy ng mga block sa workspace."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "Score"};
 
 exports.showCodeHeader = function(d){return "Ipakita ang Code"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Ipakita ang mga Block"};
 
 exports.showGeneratedCode = function(d){return "Ipakita ang Code"};
 
@@ -11205,19 +11299,19 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Kinabuohan: "+p(d,"numL
 
 exports.tryAgain = function(d){return "Subukang muli"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Tingnan ang hint"};
 
 exports.backToPreviousLevel = function(d){return "Bumalik sa nakaraang level"};
 
-exports.saveToGallery = function(d){return "I-save sa iyong gallery"};
+exports.saveToGallery = function(d){return "I-save sa gallery"};
 
-exports.savedToGallery = function(d){return "I-save sa iyong gallery!"};
+exports.savedToGallery = function(d){return "Na-save sa gallery!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Pasesnya, hindi namin pwede ibahagi ang program na ito."};
 
 exports.workspaceHeader = function(d){return "I-assemble ang iyong mga bloke dito: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "I-type ang iyong JavaScript code dito"};
 
 exports.infinity = function(d){return "Walang katapusan"};
 
@@ -11229,9 +11323,9 @@ exports.wantToLearn = function(d){return "Gusto mo matuto mag-code?"};
 
 exports.watchVideo = function(d){return "Panoorin ang Video"};
 
-exports.when = function(d){return "when"};
+exports.when = function(d){return "kelan"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "kapag tumakbo"};
 
 exports.tryHOC = function(d){return "Subukan ang Hour of Code"};
 
@@ -11239,7 +11333,7 @@ exports.signup = function(d){return "Mag-sign up para sa intro ng kurso"};
 
 exports.hintHeader = function(d){return "Narito ang isang tip:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Tingnan kung ano ang nangyari dito, at subukang ayusin ang iyong mga program."};
 
 exports.defaultTwitterText = function(d){return "Check out what I made"};
 

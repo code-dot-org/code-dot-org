@@ -22,10 +22,10 @@
   "repeatForeverTooltip":"Exécuter les actions dans ce bloc à plusieurs reprises pendant que l'application s'exécute.",
   "shareWebappTwitter":"Découvrez l'histoire que j'ai créée. Je l'ai écrite moi-même avec @codeorg",
   "shareGame":"Partagez votre application :",
-  "stepIn":"Step in",
-  "stepOver":"Step over",
-  "stepOut":"Step out",
-  "turnBlack":"turn black",
-  "turnBlackTooltip":"Turns the screen black.",
+  "stepIn":"Entrer",
+  "stepOver":"Esquiver",
+  "stepOut":"Abandonner",
+  "turnBlack":"noircir",
+  "turnBlackTooltip":"Noircissez l'écran.",
   "yes":"Oui"
 }

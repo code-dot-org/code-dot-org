@@ -45,9 +45,9 @@
           », l'oiseau se déplace d'une case sur le labyrinthe.
       11:
         image: notes/hoc1_11.jpg
-        text: Pour faire plus d'une action, tu peux faire glisser beaucoup de blocs
-          de ton espace de travail et les assembler. L'oiseau va exécuter les commandes
-          du haut jusqu'en bas.
+        text: Pour faire plusieurs actions, vous pouvez faire glisser les blocs sur
+          votre espace de travail et les attacher les uns aux autres. L'oiseau exécutera
+          toutes les commandes de haut en bas.
       12:
         image: notes/hoc1_12.jpg
         text: Si tu exécutes un programme et tu veux le corriger et réessayer, appuie
@@ -232,10 +232,10 @@
           sinon ».
       2:
         image: notes/hoc5_2.jpg
-        text: Si je mets un bloc "avancer" à l'endroit qui dit "faire" et un bloc
-          "tourner à gauche" à l'endroit où il est écrit "sinon", cela veut dire que
-          le zombie choisira entre 2 options. SI il y a un chemin devant, le zombie
-          avancera, SINON (il n'y a pas de chemin devant), le zombie tournera à gauche.
+        text: Si je mets un bloc "avancer plus" dans l'emplacement nommé "faire" et
+          un bloc "tourner à gauche" dans l'emplacement nommé "autre", le zombie choisira
+          une de ces 2 options. SI il y a un chemin le zombie avancera, SINON (il
+          n'y a donc pas de chemin) le zombie tournera à gauche.
       3:
         image: notes/hoc5_3.jpg
         text: Comme avec le bloc "si", on peut mettre des blocs "si sinon" à l'intérieur

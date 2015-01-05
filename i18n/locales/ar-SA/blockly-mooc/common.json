@@ -75,8 +75,6 @@
   "saveToGallery":"حفظ إلى المعرض",
   "savedToGallery":"تم الحفط في المعرض!",
   "shareFailure":"عذراً، لا يمكن أن نشارك هذا البرنامج.",
-  "typeFuncs":"الدوال المتاحة: %1",
-  "typeHint":"تذكر أن الأقواس والفواصل المنقوطة ضرورية.",
   "workspaceHeader":"أجمع القطع هنا: ",
   "workspaceHeaderJavaScript":"أكتب الكود البرمجي جافاسكريبت هنا",
   "infinity":"ما لانهاية",
