@@ -65,6 +65,19 @@ var appState = {
 
 var stepSpeed = 2000;
 
+
+/**
+ * An equation is an expression attached to a particular name. For example:
+ *   f(x) = x + 1
+ *   name: f
+ *   equation: x + 1
+ * In many cases, this will just be an expression with no name.
+ */
+var Equation = function (name, expression) {
+  this.name = name;
+  this.expression = expression;
+};
+
 /**
  * Initialize Blockly and the Calc.  Called on page load.
  */
@@ -176,7 +189,7 @@ Calc.resetButtonClick = function () {
 
   appState.animating = false;
 
-  clearSvgExpression('userExpression');
+  clearSvgUserExpression();
 };
 
 
@@ -206,7 +219,7 @@ function evalCode (code) {
 
 /**
  * Generate a set of expressions from the blocks currently in the workspace.
- * Returns an object in which keys are expression names (or COMPUT_NAME for
+ * @returns  an object in which keys are expression names (or COMPUTE_NAME for
  * the base expression), and values are the expressions
  */
 function generateExpressionsFromTopBlocks() {
@@ -257,54 +270,48 @@ function getEquationFromBlock(block) {
         return new ExpressionNode(0);
       }
       return getEquationFromBlock(firstChild);
+
     case 'functional_plus':
     case 'functional_minus':
     case 'functional_times':
     case 'functional_dividedby':
       var operation = block.getTitles()[0].getValue();
-      var args = ['ARG1', 'ARG2'].map(function(blockName) {
-        var argBlock = block.getInputTargetBlock(blockName);
+      var args = ['ARG1', 'ARG2'].map(function(inputName) {
+        var argBlock = block.getInputTargetBlock(inputName);
         if (!argBlock) {
           return 0;
         }
         return getEquationFromBlock(argBlock).expression;
       });
 
-      return {
-        name: null,
-        expression: new ExpressionNode(operation, args, block.id)
-      };
+      return new Equation(null, new ExpressionNode(operation, args, block.id));
+
     case 'functional_math_number':
     case 'functional_math_number_dropdown':
       var val = block.getTitleValue('NUM') || 0;
       if (val === '???') {
         val = 0;
       }
-      return {
-        name: null,
-        expression: new ExpressionNode(parseInt(val, 10), [], block.id)
-      };
+      return new Equation(null,
+        new ExpressionNode(parseInt(val, 10), [], block.id));
+
     case 'functional_call':
       var name = block.getCallName();
       var def = Blockly.Procedures.getDefinition(name, Blockly.mainBlockSpace);
       if (!def.isVariable()) {
         throw new Error('not expected');
       }
-      return {
-        name: null,
-        expression: new ExpressionNode(name)
-      };
+      return new Equation(null, new ExpressionNode(name));
 
     case 'functional_definition':
       if (block.isVariable()) {
-        return {
-          name: block.getTitleValue('NAME'),
-          expression: firstChild ? getEquationFromBlock(firstChild).expression :
-            new ExpressionNode(0)
-        };
+        if (!firstChild) {
+          return new Equation(block.getTitleValue('NAME'), new ExpressionNode(0));
+        }
+        return new Equation(block.getTitleValue('NAME'),
+          getEquationFromBlock(firstChild).expression);
       }
       throw new Error('not sure if this works yet');
-
 
     default:
       throw "Unknown block type: " + block.type;
@@ -329,7 +336,7 @@ Calc.execute = function() {
     }
   });
 
-  var hasVariablesOrFunctions = _.keys(appState.userExpressions).length > 1;
+  var hasVariablesOrFunctions = _(appState.userExpressions).size() > 1;
   if (level.freePlay) {
     appState.result = true;
     appState.testResults = BlocklyApps.TestResults.FREE_PLAY;
@@ -368,8 +375,8 @@ Calc.execute = function() {
   if (appState.result && !hasVariablesOrFunctions) {
     Calc.step();
   } else {
-    clearSvgExpression('userExpression');
-    _.keys(appState.userExpressions).sort().forEach(function (name, index) {
+    clearSvgUserExpression();
+    _(appState.userExpressions).keys().sort().forEach(function (name, index) {
       var expression = appState.userExpressions[name];
       var expected = appState.targetExpressions[name] || expression;
       var tokenList = expression.getTokenListDiff(expected);
@@ -406,8 +413,8 @@ Calc.step = function () {
   }, stepSpeed);
 };
 
-function clearSvgExpression(elementId) {
-  var g = document.getElementById(elementId);
+function clearSvgUserExpression() {
+  var g = document.getElementById('userExpression');
   // remove all existing children, in reverse order so that we don't have to
   // worry about indexes changing
   for (var i = g.childNodes.length - 1; i >= 0; i--) {
@@ -419,29 +426,29 @@ function clearSvgExpression(elementId) {
  * Draws a user expression and each step collapsing it, up to given depth.
  * Returns true if it couldn't collapse any further at this depth.
  */
-function animateUserExpression (numSteps) {
+function animateUserExpression (maxNumSteps) {
   var finished = false;
 
-  if (_.keys(appState.userExpressions).length > 1 ||
-      _.keys(appState.targetExpressions).length > 1) {
+  if (_(appState.userExpressions).size() > 1 ||
+    _(appState.targetExpressions).size() > 1) {
     throw new Error('Can only animate with single user/target');
   }
 
-  var user = appState.userExpressions[COMPUTE_NAME];
-  if (!user) {
+  var userExpression = appState.userExpressions[COMPUTE_NAME];
+  if (!userExpression) {
     throw new Error('require user expression');
   }
 
-  clearSvgExpression('userExpression');
+  clearSvgUserExpression();
 
-  var current = user.clone();
-  var previous = current;
+  var current = userExpression.clone();
+  var previousExpression = current;
   var currentDepth = 0;
-  for (var i = 0; i <= numSteps && !finished; i++) {
+  for (var currentStep = 0; currentStep <= maxNumSteps && !finished; currentStep++) {
     var tokenList;
-    if (currentDepth === numSteps) {
-      tokenList = current.getTokenListDiff(previous);
-    } else if (currentDepth + 1 === numSteps) {
+    if (currentDepth === maxNumSteps) {
+      tokenList = current.getTokenListDiff(previousExpression);
+    } else if (currentDepth + 1 === maxNumSteps) {
       var deepest = current.getDeepestOperation();
       if (deepest) {
         BlocklyApps.highlight('block_id_' + deepest.blockId);
@@ -451,10 +458,10 @@ function animateUserExpression (numSteps) {
       tokenList = current.getTokenList(false);
     }
     displayEquation('userExpression', null, tokenList, currentDepth, 'markedToken');
-    previous = current.clone();
+    previousExpression = current.clone();
     if (current.collapse()) {
       currentDepth++;
-    } else if (i - currentDepth > 2) {
+    } else if (currentStep - currentDepth > 2) {
       // we want to go one more step after the last collapse so that we show
       // our last line without highlighting it
       finished = true;
