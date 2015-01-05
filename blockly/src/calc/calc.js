@@ -21,7 +21,7 @@ var Calc = module.exports;
 /**
  * Create a namespace for the application.
  */
-var BlocklyApps = require('../base');
+var StudioApp = require('../base');
 var Calc = module.exports;
 var commonMsg = require('../../locale/current/common');
 var calcMsg = require('../../locale/current/calc');
@@ -46,8 +46,8 @@ var skin;
 // use zzz for sorting purposes (which is also hacky)
 var COMPUTE_NAME = 'zzz_compute';
 
-BlocklyApps.CHECK_FOR_EMPTY_BLOCKS = false;
-BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
+StudioApp.CHECK_FOR_EMPTY_BLOCKS = false;
+StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
@@ -100,12 +100,12 @@ Calc.init = function(config) {
   config.enableShowCode = false;
 
   config.html = page({
-    assetUrl: BlocklyApps.assetUrl,
+    assetUrl: StudioApp.assetUrl,
     data: {
-      localeDirection: BlocklyApps.localeDirection(),
+      localeDirection: StudioApp.localeDirection(),
       visualization: require('./visualization.html')(),
       controls: require('./controls.html')({
-        assetUrl: BlocklyApps.assetUrl
+        assetUrl: StudioApp.assetUrl
       }),
       blockUsed : undefined,
       idealBlockNumber : undefined,
@@ -115,9 +115,9 @@ Calc.init = function(config) {
   });
 
   config.loadAudio = function() {
-    BlocklyApps.loadAudio(skin.winSound, 'win');
-    BlocklyApps.loadAudio(skin.startSound, 'start');
-    BlocklyApps.loadAudio(skin.failureSound, 'failure');
+    StudioApp.loadAudio(skin.winSound, 'win');
+    StudioApp.loadAudio(skin.startSound, 'start');
+    StudioApp.loadAudio(skin.failureSound, 'failure');
   };
 
   config.afterInject = function() {
@@ -159,26 +159,26 @@ Calc.init = function(config) {
     var visualizationColumn = document.getElementById('visualizationColumn');
     visualizationColumn.style.width = '400px';
 
-    // base's BlocklyApps.resetButtonClick will be called first
+    // base's StudioApp.resetButtonClick will be called first
     var resetButton = document.getElementById('resetButton');
     dom.addClickTouchEvent(resetButton, Calc.resetButtonClick);
   };
 
-  BlocklyApps.init(config);
+  StudioApp.init(config);
 };
 
 /**
  * Click the run button.  Start the program.
  */
-BlocklyApps.runButtonClick = function() {
-  BlocklyApps.toggleRunReset('reset');
+StudioApp.runButtonClick = function() {
+  StudioApp.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
-  BlocklyApps.attempts++;
+  StudioApp.attempts++;
   Calc.execute();
 };
 
 /**
- * App specific reset button click logic.  BlocklyApps.resetButtonClick will be
+ * App specific reset button click logic.  StudioApp.resetButtonClick will be
  * called first.
  */
 Calc.resetButtonClick = function () {
@@ -196,7 +196,7 @@ Calc.resetButtonClick = function () {
 function evalCode (code) {
   try {
     codegen.evalWith(code, {
-      BlocklyApps: BlocklyApps,
+      StudioApp: StudioApp,
       Calc: api
     });
   } catch (e) {
@@ -245,7 +245,7 @@ function generateExpressionsFromBlockXml(blockXml) {
         "if we already have blocks in the workspace");
     }
     // Temporarily put the blocks into the workspace so that we can generate code
-    BlocklyApps.loadBlocks(blockXml);
+    StudioApp.loadBlocks(blockXml);
   }
 
   var obj = generateExpressionsFromTopBlocks();
@@ -322,7 +322,7 @@ function getEquationFromBlock(block) {
  * Execute the user's code.
  */
 Calc.execute = function() {
-  appState.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
+  appState.testResults = StudioApp.TestResults.NO_TESTS_RUN;
   appState.message = undefined;
 
   appState.userExpressions = generateExpressionsFromTopBlocks();
@@ -339,7 +339,7 @@ Calc.execute = function() {
   var hasVariablesOrFunctions = _(appState.userExpressions).size() > 1;
   if (level.freePlay) {
     appState.result = true;
-    appState.testResults = BlocklyApps.TestResults.FREE_PLAY;
+    appState.testResults = StudioApp.TestResults.FREE_PLAY;
   } else {
     // todo -  should we have single place where we get single target/user?
     var user = appState.userExpressions[COMPUTE_NAME];
@@ -350,7 +350,7 @@ Calc.execute = function() {
       appState.testResults = TestResults.APP_SPECIFIC_FAIL;
       appState.message = calcMsg.equivalentExpression();
     } else {
-      appState.testResults = BlocklyApps.getTestResults(appState.result);
+      appState.testResults = StudioApp.getTestResults(appState.result);
     }
   }
 
@@ -368,7 +368,7 @@ Calc.execute = function() {
     onComplete: onReportComplete
   };
 
-  BlocklyApps.report(reportData);
+  StudioApp.report(reportData);
 
 
   appState.animating = true;
@@ -451,7 +451,7 @@ function animateUserExpression (maxNumSteps) {
     } else if (currentDepth + 1 === maxNumSteps) {
       var deepest = current.getDeepestOperation();
       if (deepest) {
-        BlocklyApps.highlight('block_id_' + deepest.blockId);
+        StudioApp.highlight('block_id_' + deepest.blockId);
       }
       tokenList = current.getTokenList(true);
     } else {
@@ -545,7 +545,7 @@ function cloneNodeWithoutIds(elementId) {
 
 /**
  * App specific displayFeedback function that calls into
- * BlocklyApps.displayFeedback when appropriate
+ * StudioApp.displayFeedback when appropriate
  */
 var displayFeedback = function() {
   if (!appState.response || appState.animating) {
@@ -572,7 +572,7 @@ var displayFeedback = function() {
     options.message = appState.message;
   }
 
-  BlocklyApps.displayFeedback(options);
+  StudioApp.displayFeedback(options);
 };
 
 /**

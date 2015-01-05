@@ -189,7 +189,7 @@ exports.install = function(blockly, blockInstallOptions) {
     if (soundValue === RANDOM_VALUE) {
       return;
     }
-    BlocklyApps.playAudio(utils.stripQuotes(soundValue));
+    StudioApp.playAudio(utils.stripQuotes(soundValue));
   }
 
   blockly.Blocks.flappy_playSound = {

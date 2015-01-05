@@ -111,7 +111,7 @@ function runTestFromCollection (collection, index) {
     });
 
     // define a customValidator to run/validate arbitrary code at the point when
-    // BlocklyApps.report gets called. Allows us to access some things that
+    // StudioApp.report gets called. Allows us to access some things that
     // aren't on the options object passed into report
     if (testData.customValidator) {
       assert(testData.customValidator(assert), 'Custom validator failed');
@@ -137,7 +137,7 @@ function runLevel (app, skinId, level, onAttempt, beforeClick) {
       if (beforeClick) {
         beforeClick(assert);
       }
-      window.BlocklyApps.runButtonClick();
+      window.StudioApp.runButtonClick();
     },
     onAttempt: onAttempt
   });

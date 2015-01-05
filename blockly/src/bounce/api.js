@@ -24,7 +24,7 @@ exports.random = function (values) {
 };
 
 exports.setBallSpeed = function (id, value) {
-  BlocklyApps.highlight(id);
+  StudioApp.highlight(id);
   Bounce.currentBallSpeed = value;
   for (var i = 0; i < Bounce.ballCount; i++) {
     Bounce.ballSpeed[i] = value;
@@ -32,37 +32,37 @@ exports.setBallSpeed = function (id, value) {
 };
 
 exports.setBackground = function (id, value) {
-  BlocklyApps.highlight(id);
+  StudioApp.highlight(id);
   Bounce.setBackground(value);
 };
 
 exports.setBall = function (id, value) {
-  BlocklyApps.highlight(id);
+  StudioApp.highlight(id);
   Bounce.setBall(value);
 };
 
 exports.setPaddle = function (id, value) {
-  BlocklyApps.highlight(id);
+  StudioApp.highlight(id);
   Bounce.setPaddle(value);
 };
 
 exports.setBackground = function (id, value) {
-  BlocklyApps.highlight(id);
+  StudioApp.highlight(id);
   Bounce.setBackground(value);
 };
 
 exports.setPaddleSpeed = function (id, value) {
-  BlocklyApps.highlight(id);
+  StudioApp.highlight(id);
   Bounce.paddleSpeed = value;
 };
 
 exports.playSound = function(id, soundName) {
-  BlocklyApps.highlight(id);
-  BlocklyApps.playAudio(soundName);
+  StudioApp.highlight(id);
+  StudioApp.playAudio(soundName);
 };
 
 exports.moveLeft = function(id) {
-  BlocklyApps.highlight(id);
+  StudioApp.highlight(id);
   Bounce.paddleX -= Bounce.paddleSpeed;
   if (Bounce.paddleX < 0) {
     Bounce.paddleX = 0;
@@ -70,7 +70,7 @@ exports.moveLeft = function(id) {
 };
 
 exports.moveRight = function(id) {
-  BlocklyApps.highlight(id);
+  StudioApp.highlight(id);
   Bounce.paddleX += Bounce.paddleSpeed;
   if (Bounce.paddleX > (Bounce.COLS - 1)) {
     Bounce.paddleX = Bounce.COLS - 1;
@@ -78,7 +78,7 @@ exports.moveRight = function(id) {
 };
 
 exports.moveUp = function(id) {
-  BlocklyApps.highlight(id);
+  StudioApp.highlight(id);
   Bounce.paddleY -= Bounce.paddleSpeed;
   if (Bounce.paddleY < 0) {
     Bounce.paddleY = 0;
@@ -86,7 +86,7 @@ exports.moveUp = function(id) {
 };
 
 exports.moveDown = function(id) {
-  BlocklyApps.highlight(id);
+  StudioApp.highlight(id);
   Bounce.paddleY += Bounce.paddleSpeed;
   if (Bounce.paddleY > (Bounce.ROWS - 1)) {
     Bounce.paddleY = Bounce.ROWS - 1;
@@ -94,19 +94,19 @@ exports.moveDown = function(id) {
 };
 
 exports.incrementOpponentScore = function(id) {
-  BlocklyApps.highlight(id);
+  StudioApp.highlight(id);
   Bounce.opponentScore++;
   Bounce.displayScore();
 };
 
 exports.incrementPlayerScore = function(id) {
-  BlocklyApps.highlight(id);
+  StudioApp.highlight(id);
   Bounce.playerScore++;
   Bounce.displayScore();
 };
 
 exports.launchBall = function(id) {
-  BlocklyApps.highlight(id);
+  StudioApp.highlight(id);
 
   // look for an "out of play" ball to re-launch:
   for (var i = 0; i < Bounce.ballCount; i++) {
@@ -128,7 +128,7 @@ exports.launchBall = function(id) {
 };
 
 exports.bounceBall = function(id) {
-  BlocklyApps.highlight(id);
+  StudioApp.highlight(id);
 
   var i;
   for (i = 0; i < Bounce.ballCount; i++) {

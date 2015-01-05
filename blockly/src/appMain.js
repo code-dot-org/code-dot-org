@@ -1,9 +1,9 @@
 var utils = require('./utils');
 var requiredBlockUtils = require('./required_block_utils');
-window.BlocklyApps = require('./base');
+window.StudioApp = require('./base');
 
 if (typeof global !== 'undefined') {
-  global.BlocklyApps = window.BlocklyApps;
+  global.StudioApp = window.StudioApp;
 }
 
 var addReadyListener = require('./dom').addReadyListener;
@@ -45,27 +45,27 @@ module.exports = function(app, levels, options) {
 
   options.Dialog = options.Dialog || StubDialog;
 
-  BlocklyApps.BASE_URL = options.baseUrl;
-  BlocklyApps.CACHE_BUST = options.cacheBust;
-  BlocklyApps.LOCALE = options.locale || BlocklyApps.LOCALE;
+  StudioApp.BASE_URL = options.baseUrl;
+  StudioApp.CACHE_BUST = options.cacheBust;
+  StudioApp.LOCALE = options.locale || StudioApp.LOCALE;
   // NOTE: editCode (which currently implies droplet) and usingBlockly are
   // currently mutually exclusive.
-  BlocklyApps.editCode = options.level && options.level.editCode;
-  BlocklyApps.usingBlockly = !BlocklyApps.editCode;
-  BlocklyApps.cdoSounds = options.cdoSounds;
+  StudioApp.editCode = options.level && options.level.editCode;
+  StudioApp.usingBlockly = !StudioApp.editCode;
+  StudioApp.cdoSounds = options.cdoSounds;
 
-  BlocklyApps.assetUrl = function(path) {
+  StudioApp.assetUrl = function(path) {
     var url = options.baseUrl + path;
-    /*if (BlocklyApps.CACHE_BUST) {
+    /*if (StudioApp.CACHE_BUST) {
       return url + '?v=' + options.cacheBust;
     } else {*/
       return url;
     /*}*/
   };
 
-  options.skin = options.skinsModule.load(BlocklyApps.assetUrl, options.skinId);
+  options.skin = options.skinsModule.load(StudioApp.assetUrl, options.skinId);
 
-  if (BlocklyApps.usingBlockly) {
+  if (StudioApp.usingBlockly) {
     var blockInstallOptions = {
       skin: options.skin,
       isK1: options.level && options.level.isK1
@@ -84,7 +84,7 @@ module.exports = function(app, levels, options) {
       if (app.initReadonly) {
         app.initReadonly(options);
       } else {
-        BlocklyApps.initReadonly(options);
+        StudioApp.initReadonly(options);
       }
     } else {
       app.init(options);

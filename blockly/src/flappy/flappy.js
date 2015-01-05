@@ -7,7 +7,7 @@
 
 'use strict';
 
-var BlocklyApps = require('../base');
+var StudioApp = require('../base');
 var commonMsg = require('../../locale/current/common');
 var flappyMsg = require('../../locale/current/flappy');
 var skins = require('../skins');
@@ -51,7 +51,7 @@ var stepSpeed;
 var infoText;
 
 //TODO: Make configurable.
-BlocklyApps.CHECK_FOR_EMPTY_BLOCKS = true;
+StudioApp.CHECK_FOR_EMPTY_BLOCKS = true;
 
 var randomObstacleHeight = function () {
   var min = Flappy.MIN_OBSTACLE_HEIGHT;
@@ -60,7 +60,7 @@ var randomObstacleHeight = function () {
 };
 
 //The number of blocks to show as feedback.
-BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
+StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
 // Default Scalings
 Flappy.scale = {
@@ -340,12 +340,12 @@ Flappy.onTick = function() {
   Flappy.tickCount++;
 
   if (Flappy.tickCount === 1) {
-    try { Flappy.whenRunButton(BlocklyApps, api); } catch (e) { }
+    try { Flappy.whenRunButton(StudioApp, api); } catch (e) { }
   }
 
   // Check for click
   if (Flappy.clickPending && Flappy.gameState <= Flappy.GameStates.ACTIVE) {
-    try { Flappy.whenClick(BlocklyApps, api); } catch (e) { }
+    try { Flappy.whenClick(StudioApp, api); } catch (e) { }
     Flappy.clickPending = false;
   }
 
@@ -376,13 +376,13 @@ Flappy.onTick = function() {
       if (wasRightOfAvatar && !isRightOfAvatar) {
         if (Flappy.avatarY > obstacle.gapStart &&
           (Flappy.avatarY + AVATAR_HEIGHT < obstacle.gapStart + Flappy.GAP_SIZE)) {
-          try { Flappy.whenEnterObstacle(BlocklyApps, api); } catch (e) { }
+          try { Flappy.whenEnterObstacle(StudioApp, api); } catch (e) { }
         }
       }
 
       if (!obstacle.hitAvatar && checkForObstacleCollision(obstacle)) {
         obstacle.hitAvatar = true;
-        try {Flappy.whenCollideObstacle(BlocklyApps, api); } catch (e) { }
+        try {Flappy.whenCollideObstacle(StudioApp, api); } catch (e) { }
       }
 
       // If obstacle moves off left side, repurpose as a new obstacle to our right
@@ -397,7 +397,7 @@ Flappy.onTick = function() {
     avatarIsAboveGround = (Flappy.avatarY + AVATAR_HEIGHT) <
       (Flappy.MAZE_HEIGHT - Flappy.GROUND_HEIGHT);
     if (avatarWasAboveGround && !avatarIsAboveGround) {
-      try { Flappy.whenCollideGround(BlocklyApps, api); } catch (e) { }
+      try { Flappy.whenCollideGround(StudioApp, api); } catch (e) { }
     }
 
     // update goal
@@ -458,7 +458,7 @@ Flappy.onMouseDown = function (e) {
     document.getElementById('instructions').setAttribute('visibility', 'hidden');
     document.getElementById('getready').setAttribute('visibility', 'hidden');
   } else if (Flappy.gameState === Flappy.GameStates.WAITING) {
-    BlocklyApps.runButtonClick();
+    StudioApp.runButtonClick();
   }
 };
 /**
@@ -474,11 +474,11 @@ Flappy.init = function(config) {
   loadLevel();
 
   config.html = page({
-    assetUrl: BlocklyApps.assetUrl,
+    assetUrl: StudioApp.assetUrl,
     data: {
-      localeDirection: BlocklyApps.localeDirection(),
+      localeDirection: StudioApp.localeDirection(),
       visualization: require('./visualization.html')(),
-      controls: require('./controls.html')({assetUrl: BlocklyApps.assetUrl, shareable: level.shareable}),
+      controls: require('./controls.html')({assetUrl: StudioApp.assetUrl, shareable: level.shareable}),
       blockUsed: undefined,
       idealBlockNumber: undefined,
       editCode: level.editCode,
@@ -487,24 +487,24 @@ Flappy.init = function(config) {
   });
 
   config.loadAudio = function() {
-    BlocklyApps.loadAudio(skin.winSound, 'win');
-    BlocklyApps.loadAudio(skin.startSound, 'start');
-    BlocklyApps.loadAudio(skin.failureSound, 'failure');
-    BlocklyApps.loadAudio(skin.obstacleSound, 'obstacle');
+    StudioApp.loadAudio(skin.winSound, 'win');
+    StudioApp.loadAudio(skin.startSound, 'start');
+    StudioApp.loadAudio(skin.failureSound, 'failure');
+    StudioApp.loadAudio(skin.obstacleSound, 'obstacle');
 
-    BlocklyApps.loadAudio(skin.dieSound, 'sfx_die');
-    BlocklyApps.loadAudio(skin.hitSound, 'sfx_hit');
-    BlocklyApps.loadAudio(skin.pointSound, 'sfx_point');
-    BlocklyApps.loadAudio(skin.swooshingSound, 'sfx_swooshing');
-    BlocklyApps.loadAudio(skin.wingSound, 'sfx_wing');
-    BlocklyApps.loadAudio(skin.winGoalSound, 'winGoal');
-    BlocklyApps.loadAudio(skin.jetSound, 'jet');
-    BlocklyApps.loadAudio(skin.jingleSound, 'jingle');
-    BlocklyApps.loadAudio(skin.crashSound, 'crash');
-    BlocklyApps.loadAudio(skin.laserSound, 'laser');
-    BlocklyApps.loadAudio(skin.splashSound, 'splash');
-    BlocklyApps.loadAudio(skin.wallSound, 'wall');
-    BlocklyApps.loadAudio(skin.wall0Sound, 'wall0');
+    StudioApp.loadAudio(skin.dieSound, 'sfx_die');
+    StudioApp.loadAudio(skin.hitSound, 'sfx_hit');
+    StudioApp.loadAudio(skin.pointSound, 'sfx_point');
+    StudioApp.loadAudio(skin.swooshingSound, 'sfx_swooshing');
+    StudioApp.loadAudio(skin.wingSound, 'sfx_wing');
+    StudioApp.loadAudio(skin.winGoalSound, 'winGoal');
+    StudioApp.loadAudio(skin.jetSound, 'jet');
+    StudioApp.loadAudio(skin.jingleSound, 'jingle');
+    StudioApp.loadAudio(skin.crashSound, 'crash');
+    StudioApp.loadAudio(skin.laserSound, 'laser');
+    StudioApp.loadAudio(skin.splashSound, 'splash');
+    StudioApp.loadAudio(skin.wallSound, 'wall');
+    StudioApp.loadAudio(skin.wall0Sound, 'wall0');
   };
 
   config.afterInject = function() {
@@ -530,7 +530,7 @@ Flappy.init = function(config) {
 
   config.makeString = commonMsg.makeYourOwnFlappy();
   config.makeUrl = "http://code.org/flappy";
-  config.makeImage = BlocklyApps.assetUrl('media/flappy_promo.png');
+  config.makeImage = StudioApp.assetUrl('media/flappy_promo.png');
 
   config.enableShowCode = false;
   config.enableShowBlockCount = false;
@@ -565,7 +565,7 @@ Flappy.init = function(config) {
     config.blockArrangement.flappy_whenClick.y = row2;
   }
 
-  BlocklyApps.init(config);
+  StudioApp.init(config);
 
   var rightButton = document.getElementById('rightButton');
   dom.addClickTouchEvent(rightButton, Flappy.onPuzzleComplete);
@@ -590,7 +590,7 @@ Flappy.clearEventHandlersKillTickLoop = function() {
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-BlocklyApps.reset = function(first) {
+StudioApp.reset = function(first) {
   var i;
   Flappy.clearEventHandlersKillTickLoop();
 
@@ -644,7 +644,7 @@ BlocklyApps.reset = function(first) {
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-BlocklyApps.runButtonClick = function() {
+StudioApp.runButtonClick = function() {
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.
@@ -655,10 +655,10 @@ BlocklyApps.runButtonClick = function() {
   document.getElementById('instructions').setAttribute('visibility', 'visible');
   document.getElementById('getready').setAttribute('visibility', 'visible');
 
-  BlocklyApps.toggleRunReset('reset');
+  StudioApp.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
-  // BlocklyApps.reset(false);
-  BlocklyApps.attempts++;
+  // StudioApp.reset(false);
+  StudioApp.attempts++;
   Flappy.execute();
 
   if (level.freePlay) {
@@ -673,11 +673,11 @@ BlocklyApps.runButtonClick = function() {
 
 /**
  * App specific displayFeedback function that calls into
- * BlocklyApps.displayFeedback when appropriate
+ * StudioApp.displayFeedback when appropriate
  */
 var displayFeedback = function() {
   if (!Flappy.waitingForReport) {
-    BlocklyApps.displayFeedback({
+    StudioApp.displayFeedback({
       app: 'flappy', //XXX
       skin: skin.id,
       feedbackType: Flappy.testResults,
@@ -708,14 +708,14 @@ Flappy.onReportComplete = function(response) {
  */
 Flappy.execute = function() {
   var code;
-  Flappy.result = BlocklyApps.ResultType.UNSET;
-  Flappy.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
+  Flappy.result = StudioApp.ResultType.UNSET;
+  Flappy.testResults = StudioApp.TestResults.NO_TESTS_RUN;
   Flappy.waitingForReport = false;
   Flappy.response = null;
 
   if (level.editCode) {
     code = utils.generateCodeAliases(level.codeFunctions, 'Flappy');
-    code += BlocklyApps.editor.getValue();
+    code += StudioApp.editor.getValue();
   }
 
   var codeClick = Blockly.Generator.blockSpaceToCode(
@@ -723,7 +723,7 @@ Flappy.execute = function() {
                                     'flappy_whenClick');
   var whenClickFunc = codegen.functionFromCode(
                                       codeClick, {
-                                      BlocklyApps: BlocklyApps,
+                                      StudioApp: StudioApp,
                                       Flappy: api } );
 
   var codeCollideGround = Blockly.Generator.blockSpaceToCode(
@@ -731,7 +731,7 @@ Flappy.execute = function() {
                                     'flappy_whenCollideGround');
   var whenCollideGroundFunc = codegen.functionFromCode(
                                       codeCollideGround, {
-                                      BlocklyApps: BlocklyApps,
+                                      StudioApp: StudioApp,
                                       Flappy: api } );
 
   var codeEnterObstacle = Blockly.Generator.blockSpaceToCode(
@@ -739,7 +739,7 @@ Flappy.execute = function() {
                                     'flappy_whenEnterObstacle');
   var whenEnterObstacleFunc = codegen.functionFromCode(
                                       codeEnterObstacle, {
-                                      BlocklyApps: BlocklyApps,
+                                      StudioApp: StudioApp,
                                       Flappy: api } );
 
   var codeCollideObstacle = Blockly.Generator.blockSpaceToCode(
@@ -747,7 +747,7 @@ Flappy.execute = function() {
                                     'flappy_whenCollideObstacle');
   var whenCollideObstacleFunc = codegen.functionFromCode(
                                       codeCollideObstacle, {
-                                      BlocklyApps: BlocklyApps,
+                                      StudioApp: StudioApp,
                                       Flappy: api } );
 
   var codeWhenRunButton = Blockly.Generator.blockSpaceToCode(
@@ -755,13 +755,13 @@ Flappy.execute = function() {
                                     'when_run');
   var whenRunButtonFunc = codegen.functionFromCode(
                                       codeWhenRunButton, {
-                                      BlocklyApps: BlocklyApps,
+                                      StudioApp: StudioApp,
                                       Flappy: api } );
 
 
-  BlocklyApps.playAudio('start');
+  StudioApp.playAudio('start');
 
-  // BlocklyApps.reset(false);
+  // StudioApp.reset(false);
 
   // Set event handlers and start the onTick timer
   Flappy.whenClick = whenClickFunc;
@@ -781,7 +781,7 @@ Flappy.execute = function() {
 
 Flappy.onPuzzleComplete = function() {
   if (level.freePlay) {
-    Flappy.result = BlocklyApps.ResultType.SUCCESS;
+    Flappy.result = StudioApp.ResultType.SUCCESS;
   }
 
   // Stop everything on screen
@@ -789,36 +789,36 @@ Flappy.onPuzzleComplete = function() {
 
   // If we know they succeeded, mark levelComplete true
   // Note that we have not yet animated the succesful run
-  var levelComplete = (Flappy.result == BlocklyApps.ResultType.SUCCESS);
+  var levelComplete = (Flappy.result == StudioApp.ResultType.SUCCESS);
 
   // If the current level is a free play, always return the free play
   // result type
   if (level.freePlay) {
-    Flappy.testResults = BlocklyApps.TestResults.FREE_PLAY;
+    Flappy.testResults = StudioApp.TestResults.FREE_PLAY;
   } else {
-    Flappy.testResults = BlocklyApps.getTestResults(levelComplete);
+    Flappy.testResults = StudioApp.getTestResults(levelComplete);
   }
 
   // Special case for Flappy level 1 where you have the right blocks, but you
   // don't flap to the goal.  Note: See pivotal item 66362504 for why we
   // check for both TOO_FEW_BLOCKS_FAIL and LEVEL_INCOMPLETE_FAIL here.
   if (level.id === "1" &&
-    (Flappy.testResults === BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL ||
-     Flappy.testResults === BlocklyApps.TestResults.LEVEL_INCOMPLETE_FAIL)) {
+    (Flappy.testResults === StudioApp.TestResults.TOO_FEW_BLOCKS_FAIL ||
+     Flappy.testResults === StudioApp.TestResults.LEVEL_INCOMPLETE_FAIL)) {
     // Feedback message is found in level.other1StarError.
-    Flappy.testResults = BlocklyApps.TestResults.APP_SPECIFIC_FAIL;
+    Flappy.testResults = StudioApp.TestResults.APP_SPECIFIC_FAIL;
   }
 
-  if (Flappy.testResults >= BlocklyApps.TestResults.FREE_PLAY) {
-    BlocklyApps.playAudio('win');
+  if (Flappy.testResults >= StudioApp.TestResults.FREE_PLAY) {
+    StudioApp.playAudio('win');
   } else {
-    BlocklyApps.playAudio('failure');
+    StudioApp.playAudio('failure');
   }
 
   if (level.editCode) {
     Flappy.testResults = levelComplete ?
-      BlocklyApps.TestResults.ALL_PASS :
-      BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
+      StudioApp.TestResults.ALL_PASS :
+      StudioApp.TestResults.TOO_FEW_BLOCKS_FAIL;
   }
 
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
@@ -827,10 +827,10 @@ Flappy.onPuzzleComplete = function() {
   Flappy.waitingForReport = true;
 
   // Report result to server.
-  BlocklyApps.report({
+  StudioApp.report({
                      app: 'flappy',
                      level: level.id,
-                     result: Flappy.result === BlocklyApps.ResultType.SUCCESS,
+                     result: Flappy.result === StudioApp.ResultType.SUCCESS,
                      testResult: Flappy.testResults,
                      program: encodeURIComponent(textBlocks),
                      onComplete: Flappy.onReportComplete
@@ -975,13 +975,13 @@ var checkTickLimit = function() {
 var checkFinished = function () {
   // if we have a succcess condition and have accomplished it, we're done and successful
   if (level.goal && level.goal.successCondition && level.goal.successCondition()) {
-    Flappy.result = BlocklyApps.ResultType.SUCCESS;
+    Flappy.result = StudioApp.ResultType.SUCCESS;
     return true;
   }
 
   // if we have a failure condition, and it's been reached, we're done and failed
   if (level.goal && level.goal.failureCondition && level.goal.failureCondition()) {
-    Flappy.result = BlocklyApps.ResultType.FAILURE;
+    Flappy.result = StudioApp.ResultType.FAILURE;
     return true;
   }
 

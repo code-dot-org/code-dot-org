@@ -71,13 +71,13 @@ describe("getMissingRequiredBlocks tests", function () {
     assert.notEqual(options.expectedResult, undefined);
 
     // Should probably have these as inputs to getMissingRequiredBlocks instead
-    // of fields on BlocklyApps as it's the only place they're used
+    // of fields on StudioApp as it's the only place they're used
     // In fact, may want to get rid of NUM_REQUIRED_BLOCKS_TO_FLAG as it's only
     // ever set to 1, or perhaps make it customizable per level
-    BlocklyApps.REQUIRED_BLOCKS = options.requiredBlocks;
-    BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG = options.numToFlag;
+    StudioApp.REQUIRED_BLOCKS = options.requiredBlocks;
+    StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = options.numToFlag;
 
-    BlocklyApps.loadBlocks(options.userBlockXml);
+    StudioApp.loadBlocks(options.userBlockXml);
 
     // make sure we loaded correctly. text wont match exactly, but make sure if
     // we had xml, we loaded something
@@ -293,7 +293,7 @@ describe("getMissingRequiredBlocks tests", function () {
       var skinForTests;
       if (collection.skinId) {
         var appSkins = testUtils.requireWithGlobalsCheckSrcFolder(collection.app + '/skins');
-        skinForTests = appSkins.load(BlocklyApps.assetUrl, collection.skinId);
+        skinForTests = appSkins.load(StudioApp.assetUrl, collection.skinId);
       } else {
         skinForTests = {
           assetUrl: function (str) { return str; }

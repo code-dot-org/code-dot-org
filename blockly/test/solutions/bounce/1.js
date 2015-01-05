@@ -9,7 +9,7 @@ module.exports = {
       missingBlocks: [],
       xml: '<xml><block type="bounce_whenLeft" deletable="false"><next><block type="bounce_moveLeft"></block></next></block></xml>',
       customValidator: function () {
-        return BlocklyApps.enableShowCode === false && BlocklyApps.enableShowBlockCount === false;
+        return StudioApp.enableShowCode === false && StudioApp.enableShowBlockCount === false;
       }
     },
     {

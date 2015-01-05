@@ -19,7 +19,7 @@ module.exports = {
       missingBlocks: [],
       xml: '<xml><block type="maze_forever"><statement name="DO"><block type="maze_moveForward"><next><block type="maze_moveForward"><next><block type="maze_turn"><title name="DIR">turnLeft</title></block></next></block></next></block></statement></block></xml>',
       customValidator: function () {
-        return BlocklyApps.enableShowCode === true && BlocklyApps.enableShowBlockCount === true;
+        return StudioApp.enableShowCode === true && StudioApp.enableShowBlockCount === true;
       }
     },
     {

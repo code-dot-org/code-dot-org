@@ -7,7 +7,7 @@
 
 'use strict';
 
-var BlocklyApps = require('../base');
+var StudioApp = require('../base');
 var commonMsg = require('../../locale/current/common');
 var webappMsg = require('../../locale/current/webapp');
 var skins = require('../skins');
@@ -32,10 +32,10 @@ var level;
 var skin;
 
 //TODO: Make configurable.
-BlocklyApps.CHECK_FOR_EMPTY_BLOCKS = true;
+StudioApp.CHECK_FOR_EMPTY_BLOCKS = true;
 
 //The number of blocks to show as feedback.
-BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
+StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 200;
 
@@ -139,12 +139,12 @@ function onDebugInputKeyDown(e) {
 }
 
 function selectEditorRowCol(row, col) {
-  if (BlocklyApps.editor.currentlyUsingBlocks) {
+  if (StudioApp.editor.currentlyUsingBlocks) {
     var style = {color: '#FFFF22'};
-    BlocklyApps.editor.clearLineMarks();
-    BlocklyApps.editor.markLine(row, style);
+    StudioApp.editor.clearLineMarks();
+    StudioApp.editor.markLine(row, style);
   } else {
-    var selection = BlocklyApps.editor.aceEditor.getSelection();
+    var selection = StudioApp.editor.aceEditor.getSelection();
     var range = selection.getRange();
 
     range.start.row = row;
@@ -212,7 +212,7 @@ Webapp.onTick = function() {
     var unwindingAfterStep = false;
     var inUserCode;
     var userCodeRow;
-    var session = BlocklyApps.editor.aceEditor.getSession();
+    var session = StudioApp.editor.aceEditor.getSession();
 
     // In each tick, we will step the interpreter multiple times in a tight
     // loop as long as we are interpreting code that the user can't see
@@ -222,7 +222,7 @@ Webapp.onTick = function() {
           (!doneUserCodeStep || unwindingAfterStep);
          stepsThisTick++) {
       userCodeRow = codegen.selectCurrentCode(Webapp.interpreter,
-                                              BlocklyApps.editor,
+                                              StudioApp.editor,
                                               Webapp.cumulativeLength,
                                               Webapp.userCodeStartOffset,
                                               Webapp.userCodeLength);
@@ -308,7 +308,7 @@ Webapp.onTick = function() {
             if (wasUnwinding && !unwindingAfterStep) {
               // done unwinding.. select code that is next to execute:
               userCodeRow = codegen.selectCurrentCode(Webapp.interpreter,
-                                                      BlocklyApps.editor,
+                                                      StudioApp.editor,
                                                       Webapp.cumulativeLength,
                                                       Webapp.userCodeStartOffset,
                                                       Webapp.userCodeLength);
@@ -350,7 +350,7 @@ Webapp.onTick = function() {
     }
   } else {
     if (Webapp.tickCount === 1) {
-      try { Webapp.whenRunFunc(BlocklyApps, api, Webapp.Globals); } catch (e) { }
+      try { Webapp.whenRunFunc(StudioApp, api, Webapp.Globals); } catch (e) { }
     }
   }
 
@@ -372,7 +372,7 @@ Webapp.initReadonly = function(config) {
 
   // Webapp.initMinimal();
 
-  BlocklyApps.initReadonly(config);
+  StudioApp.initReadonly(config);
 };
 
 /**
@@ -392,21 +392,21 @@ Webapp.init = function(config) {
   var showDebugConsole = !config.hide_source && config.level.editCode;
   var finishButtonFirstLine = _.isEmpty(level.softButtons) && !showSlider;
   var firstControlsRow = require('./controls.html')({
-    assetUrl: BlocklyApps.assetUrl,
+    assetUrl: StudioApp.assetUrl,
     showSlider: showSlider,
     finishButton: finishButtonFirstLine
   });
   var extraControlsRow = require('./extraControlRows.html')({
-    assetUrl: BlocklyApps.assetUrl,
+    assetUrl: StudioApp.assetUrl,
     finishButton: !finishButtonFirstLine,
     debugButtons: showDebugButtons,
     debugConsole: showDebugConsole
   });
 
   config.html = page({
-    assetUrl: BlocklyApps.assetUrl,
+    assetUrl: StudioApp.assetUrl,
     data: {
-      localeDirection: BlocklyApps.localeDirection(),
+      localeDirection: StudioApp.localeDirection(),
       visualization: require('./visualization.html')(),
       controls: firstControlsRow,
       extraControlRows: extraControlsRow,
@@ -418,13 +418,13 @@ Webapp.init = function(config) {
   });
 
   config.loadAudio = function() {
-    BlocklyApps.loadAudio(skin.winSound, 'win');
-    BlocklyApps.loadAudio(skin.startSound, 'start');
-    BlocklyApps.loadAudio(skin.failureSound, 'failure');
+    StudioApp.loadAudio(skin.winSound, 'win');
+    StudioApp.loadAudio(skin.startSound, 'start');
+    StudioApp.loadAudio(skin.failureSound, 'failure');
   };
 
   config.afterInject = function() {
-    if (BlocklyApps.usingBlockly) {
+    if (StudioApp.usingBlockly) {
       /**
        * The richness of block colours, regardless of the hue.
        * MOOC blocks should be brighter (target audience is younger).
@@ -437,7 +437,7 @@ Webapp.init = function(config) {
     } else {
       // Set up an event handler to create breakpoints when clicking in the
       // ace gutter:
-      var aceEditor = BlocklyApps.editor.aceEditor;
+      var aceEditor = StudioApp.editor.aceEditor;
       if (aceEditor) {
         aceEditor.on("guttermousedown", function(e) {
           var target = e.domEvent.target;
@@ -470,7 +470,7 @@ Webapp.init = function(config) {
 
   // Webapp.initMinimal();
 
-  BlocklyApps.init(config);
+  StudioApp.init(config);
 
   if (level.editCode) {
     // Initialize the slider.
@@ -505,9 +505,9 @@ Webapp.init = function(config) {
     }
   }
 
-  if (BlocklyApps.share) {
+  if (StudioApp.share) {
     // automatically run in share mode:
-    window.setTimeout(BlocklyApps.runButtonClick, 0);
+    window.setTimeout(StudioApp.runButtonClick, 0);
   }
 };
 
@@ -541,7 +541,7 @@ Webapp.clearEventHandlersKillTickLoop = function() {
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-BlocklyApps.reset = function(first) {
+StudioApp.reset = function(first) {
   var i;
   Webapp.clearEventHandlersKillTickLoop();
 
@@ -617,22 +617,22 @@ BlocklyApps.reset = function(first) {
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-BlocklyApps.runButtonClick = function() {
+StudioApp.runButtonClick = function() {
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.
   if (!resetButton.style.minWidth) {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
-  BlocklyApps.toggleRunReset('reset');
-  if (BlocklyApps.usingBlockly) {
+  StudioApp.toggleRunReset('reset');
+  if (StudioApp.usingBlockly) {
     Blockly.mainBlockSpace.traceOn(true);
   }
-  BlocklyApps.reset(false);
-  BlocklyApps.attempts++;
+  StudioApp.reset(false);
+  StudioApp.attempts++;
   Webapp.execute();
 
-  if (level.freePlay && !BlocklyApps.hideSource) {
+  if (level.freePlay && !StudioApp.hideSource) {
     var shareCell = document.getElementById('share-cell');
     shareCell.className = 'share-cell-enabled';
   }
@@ -640,11 +640,11 @@ BlocklyApps.runButtonClick = function() {
 
 /**
  * App specific displayFeedback function that calls into
- * BlocklyApps.displayFeedback when appropriate
+ * StudioApp.displayFeedback when appropriate
  */
 var displayFeedback = function() {
   if (!Webapp.waitingForReport) {
-    BlocklyApps.displayFeedback({
+    StudioApp.displayFeedback({
       app: 'webapp', //XXX
       skin: skin.id,
       feedbackType: Webapp.testResults,
@@ -684,7 +684,7 @@ var defineProcedures = function (blockType) {
   // TODO: handle editCode JS interpreter
   try { codegen.evalWith(code, {
                          codeFunctions: level.codeFunctions,
-                         BlocklyApps: BlocklyApps,
+                         StudioApp: StudioApp,
                          Studio: api,
                          Globals: Webapp.Globals } ); } catch (e) { }
 };
@@ -751,15 +751,15 @@ var mathFunctions = [
  * Execute the app
  */
 Webapp.execute = function() {
-  Webapp.result = BlocklyApps.ResultType.UNSET;
-  Webapp.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
+  Webapp.result = StudioApp.ResultType.UNSET;
+  Webapp.testResults = StudioApp.TestResults.NO_TESTS_RUN;
   Webapp.waitingForReport = false;
   Webapp.response = null;
   var i;
 
-  BlocklyApps.playAudio('start');
+  StudioApp.playAudio('start');
 
-  BlocklyApps.reset(false);
+  StudioApp.reset(false);
 
   // Set event handlers and start the onTick timer
 
@@ -769,13 +769,13 @@ Webapp.execute = function() {
     codeWhenRun += utils.generateCodeAliases(mathFunctions, 'Math');
     Webapp.userCodeStartOffset = codeWhenRun.length;
     Webapp.userCodeLineOffset = codeWhenRun.split("\n").length - 1;
-    codeWhenRun += BlocklyApps.editor.getValue();
+    codeWhenRun += StudioApp.editor.getValue();
     Webapp.userCodeLength = codeWhenRun.length - Webapp.userCodeStartOffset;
     // Append our mini-runtime after the user's code. This will spin and process
     // callback functions:
     codeWhenRun += '\nwhile (true) { var obj = getCallback(); ' +
       'if (obj) { obj.fn.apply(null, obj.arguments ? obj.arguments : null); }}';
-    var session = BlocklyApps.editor.aceEditor.getSession();
+    var session = StudioApp.editor.aceEditor.getSession();
     Webapp.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
   } else {
     // Define any top-level procedures the user may have created
@@ -797,7 +797,7 @@ Webapp.execute = function() {
       // Use JS interpreter on editCode levels
       var initFunc = function(interpreter, scope) {
         codegen.initJSInterpreter(interpreter, scope, {
-                                          BlocklyApps: BlocklyApps,
+                                          StudioApp: StudioApp,
                                           Webapp: api,
                                           console: consoleApi,
                                           JSON: JSONApi,
@@ -823,7 +823,7 @@ Webapp.execute = function() {
       }
     } else {
       Webapp.whenRunFunc = codegen.functionFromCode(codeWhenRun, {
-                                          BlocklyApps: BlocklyApps,
+                                          StudioApp: StudioApp,
                                           Webapp: api,
                                           Globals: Webapp.Globals } );
     }
@@ -884,7 +884,7 @@ Webapp.onStepOverButton = function() {
 
 Webapp.onStepInButton = function() {
   if (!Webapp.running) {
-    BlocklyApps.runButtonClick();
+    StudioApp.runButtonClick();
     Webapp.onPauseButton();
   }
   Webapp.paused = true;
@@ -905,9 +905,9 @@ Webapp.encodedFeedbackImage = '';
 
 Webapp.onPuzzleComplete = function() {
   if (Webapp.executionError) {
-    Webapp.result = BlocklyApps.ResultType.ERROR;
+    Webapp.result = StudioApp.ResultType.ERROR;
   } else if (level.freePlay) {
-    Webapp.result = BlocklyApps.ResultType.SUCCESS;
+    Webapp.result = StudioApp.ResultType.SUCCESS;
   }
 
   // Stop everything on screen
@@ -915,16 +915,16 @@ Webapp.onPuzzleComplete = function() {
 
   // If the current level is a free play, always return the free play result
   if (level.freePlay) {
-    Webapp.testResults = BlocklyApps.TestResults.FREE_PLAY;
+    Webapp.testResults = StudioApp.TestResults.FREE_PLAY;
   } else {
-    var levelComplete = (Webapp.result === BlocklyApps.ResultType.SUCCESS);
-    Webapp.testResults = BlocklyApps.getTestResults(levelComplete);
+    var levelComplete = (Webapp.result === StudioApp.ResultType.SUCCESS);
+    Webapp.testResults = StudioApp.getTestResults(levelComplete);
   }
 
-  if (Webapp.testResults >= BlocklyApps.TestResults.FREE_PLAY) {
-    BlocklyApps.playAudio('win');
+  if (Webapp.testResults >= StudioApp.TestResults.FREE_PLAY) {
+    StudioApp.playAudio('win');
   } else {
-    BlocklyApps.playAudio('failure');
+    StudioApp.playAudio('failure');
   }
 
   var program;
@@ -936,7 +936,7 @@ Webapp.onPuzzleComplete = function() {
     // do an acorn.parse and then use escodegen to generate back a "clean" version
     // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
 
-    program = BlocklyApps.editor.getValue();
+    program = StudioApp.editor.getValue();
   } else {
     var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
     program = Blockly.Xml.domToText(xml);
@@ -945,10 +945,10 @@ Webapp.onPuzzleComplete = function() {
   Webapp.waitingForReport = true;
 
   var sendReport = function() {
-    BlocklyApps.report({
+    StudioApp.report({
       app: 'webapp',
       level: level.id,
-      result: Webapp.result === BlocklyApps.ResultType.SUCCESS,
+      result: Webapp.result === StudioApp.ResultType.SUCCESS,
       testResult: Webapp.testResults,
       program: encodeURIComponent(program),
       image: Webapp.encodedFeedbackImage,
@@ -994,7 +994,7 @@ Webapp.callCmd = function (cmd) {
     /*
     case 'wait':
       if (!cmd.opts.started) {
-        BlocklyApps.highlight(cmd.id);
+        StudioApp.highlight(cmd.id);
       }
       return Studio.wait(cmd.opts);
     */
@@ -1031,7 +1031,7 @@ Webapp.callCmd = function (cmd) {
     case 'startWebRequest':
     case 'setTimeout':
     case 'clearTimeout':
-      BlocklyApps.highlight(cmd.id);
+      StudioApp.highlight(cmd.id);
       retVal = Webapp[cmd.name](cmd.opts);
       break;
   }
@@ -1551,25 +1551,25 @@ Webapp.timedOut = function() {
 var checkFinished = function () {
   // if we have a succcess condition and have accomplished it, we're done and successful
   if (level.goal && level.goal.successCondition && level.goal.successCondition()) {
-    Webapp.result = BlocklyApps.ResultType.SUCCESS;
+    Webapp.result = StudioApp.ResultType.SUCCESS;
     return true;
   }
 
   // if we have a failure condition, and it's been reached, we're done and failed
   if (level.goal && level.goal.failureCondition && level.goal.failureCondition()) {
-    Webapp.result = BlocklyApps.ResultType.FAILURE;
+    Webapp.result = StudioApp.ResultType.FAILURE;
     return true;
   }
 
   /*
   if (Webapp.allGoalsVisited()) {
-    Webapp.result = BlocklyApps.ResultType.SUCCESS;
+    Webapp.result = StudioApp.ResultType.SUCCESS;
     return true;
   }
   */
 
   if (Webapp.timedOut()) {
-    Webapp.result = BlocklyApps.ResultType.FAILURE;
+    Webapp.result = StudioApp.ResultType.FAILURE;
     return true;
   }
 

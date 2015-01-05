@@ -10,7 +10,7 @@ module.exports = {
       missingBlocks: [],
       xml: '<xml><block type="flappy_whenClick" deletable="false"><next><block type="flappy_flap"></block></next></block></xml>',
       customValidator: function () {
-        return BlocklyApps.enableShowCode === false && BlocklyApps.enableShowBlockCount === false;
+        return StudioApp.enableShowCode === false && StudioApp.enableShowBlockCount === false;
       }
     },
     {

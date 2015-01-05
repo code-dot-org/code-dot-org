@@ -22,7 +22,7 @@
  * @author fraser@google.com (Neil Fraser)
  */
 "use strict";
-var BlocklyApps = module.exports;
+var StudioApp = module.exports;
 var msg = require('../locale/current/common');
 var parseXmlElement = require('./xml').parseElement;
 var feedback = require('./feedback.js');
@@ -43,30 +43,30 @@ var backToPreviousLevel;
 /**
  * The parent directory of the apps. Contains common.js.
  */
-BlocklyApps.BASE_URL = undefined;
+StudioApp.BASE_URL = undefined;
 
 /**
  * If truthy, a version number to be appended to asset urls.
  */
-BlocklyApps.CACHE_BUST = undefined;
+StudioApp.CACHE_BUST = undefined;
 
 /**
  * The current locale code.
  */
-BlocklyApps.LOCALE = 'en_us';
+StudioApp.LOCALE = 'en_us';
 
 /**
  * The minimum width of a playable whole blockly game.
  */
-BlocklyApps.MIN_WIDTH = 900;
-BlocklyApps.MIN_MOBILE_SHARE_WIDTH = 450;
-BlocklyApps.MOBILE_NO_PADDING_SHARE_WIDTH = 400;
+StudioApp.MIN_WIDTH = 900;
+StudioApp.MIN_MOBILE_SHARE_WIDTH = 450;
+StudioApp.MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 var WORKSPACE_PLAYSPACE_GAP = 15;
 
 /**
  * Treat mobile devices with screen.width less than the value below as phones.
  */
-BlocklyApps.MAX_PHONE_WIDTH = 500;
+StudioApp.MAX_PHONE_WIDTH = 500;
 
 /**
  * If the user presses backspace, stop propagation - this prevents blockly
@@ -79,7 +79,7 @@ var codeKeyDown = function(e) {
   }
 };
 
-BlocklyApps.toggleRunReset = function(button) {
+StudioApp.toggleRunReset = function(button) {
   var showRun = (button === 'run');
   if (button !== 'run' && button !== 'reset') {
     throw "Unexpected input";
@@ -111,41 +111,41 @@ function updateHeadersAfterDropletToggle(usingBlocks) {
   var blockCount = document.getElementById('blockCounter');
   if (blockCount) {
     blockCount.style.display =
-      (usingBlocks && BlocklyApps.enableShowBlockCount) ? 'inline-block' : 'none';
+      (usingBlocks && StudioApp.enableShowBlockCount) ? 'inline-block' : 'none';
   }
 
   // Resize (including headers), so the category header will appear/disappear:
-  BlocklyApps.onResize();
+  StudioApp.onResize();
 }
 
 /**
  * Common startup tasks for all apps.
  */
-BlocklyApps.init = function(config) {
+StudioApp.init = function(config) {
   if (!config) {
     config = {};
   }
 
-  BlocklyApps.share = config.share;
+  StudioApp.share = config.share;
 
   // if true, dont provide links to share on fb/twitter
-  BlocklyApps.disableSocialShare = config.disableSocialShare;
-  BlocklyApps.sendToPhone = config.sendToPhone;
-  BlocklyApps.noPadding = config.no_padding;
+  StudioApp.disableSocialShare = config.disableSocialShare;
+  StudioApp.sendToPhone = config.sendToPhone;
+  StudioApp.noPadding = config.no_padding;
 
-  BlocklyApps.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
-  BlocklyApps.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
-  BlocklyApps.REQUIRED_BLOCKS = config.level.requiredBlocks || [];
+  StudioApp.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
+  StudioApp.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
+  StudioApp.REQUIRED_BLOCKS = config.level.requiredBlocks || [];
 
   // enableShowCode defaults to true if not defined
-  BlocklyApps.enableShowCode = (config.enableShowCode === false) ? false : true;
+  StudioApp.enableShowCode = (config.enableShowCode === false) ? false : true;
 
   // If the level has no ideal block count, don't show a block count. If it does
   // have an ideal, show block count unless explicitly configured not to.
   if (config.level && (config.level.ideal === undefined || config.level.ideal === Infinity)) {
-    BlocklyApps.enableShowBlockCount = false;
+    StudioApp.enableShowBlockCount = false;
   } else {
-    BlocklyApps.enableShowBlockCount = config.enableShowBlockCount !== false;
+    StudioApp.enableShowBlockCount = config.enableShowBlockCount !== false;
   }
 
   // Store configuration.
@@ -168,9 +168,9 @@ BlocklyApps.init = function(config) {
   container.innerHTML = config.html;
   var runButton = container.querySelector('#runButton');
   var resetButton = container.querySelector('#resetButton');
-  var throttledRunClick = _.debounce(BlocklyApps.runButtonClick, 250, true);
+  var throttledRunClick = _.debounce(StudioApp.runButtonClick, 250, true);
   dom.addClickTouchEvent(runButton, throttledRunClick);
-  dom.addClickTouchEvent(resetButton, BlocklyApps.resetButtonClick);
+  dom.addClickTouchEvent(resetButton, StudioApp.resetButtonClick);
 
   var belowViz = document.getElementById('belowVisualization');
   var referenceArea = document.getElementById('reference_area');
@@ -186,14 +186,14 @@ BlocklyApps.init = function(config) {
     visualizationColumn.style.margin = "0 auto";
   }
 
-  if (BlocklyApps.usingBlockly && config.level.edit_blocks) {
+  if (StudioApp.usingBlockly && config.level.edit_blocks) {
     // Set a class on the main blockly div so CSS can style blocks differently
     Blockly.addClass_(container.querySelector('#blockly'), 'edit');
     // If in level builder editing blocks, make workspace extra tall
     visualizationColumn.style.height = "3000px";
     // Modify the arrangement of toolbox blocks so categories align left
     if (config.level.edit_blocks == "toolbox_blocks") {
-      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      StudioApp.BLOCK_Y_COORDINATE_INTERVAL = 80;
       config.blockArrangement = { category : { x: 20 } };
     }
     // Enable param & var editing in levelbuilder, regardless of level setting
@@ -201,18 +201,18 @@ BlocklyApps.init = function(config) {
     config.level.disableVariableEditing = false;
   } else if (!config.hide_source) {
     visualizationColumn.style.minHeight =
-        BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
+        StudioApp.MIN_WORKSPACE_HEIGHT + 'px';
   }
 
-  if (!config.embed && !BlocklyApps.share) {
+  if (!config.embed && !StudioApp.share) {
     // Make the visualization responsive to screen size, except on share page.
     visualization.className += " responsive";
     visualizationColumn.className += " responsive";
   }
 
   if (config.hide_source) {
-    BlocklyApps.hideSource = true;
-    var workspaceDiv = BlocklyApps.editCode ?
+    StudioApp.hideSource = true;
+    var workspaceDiv = StudioApp.editCode ?
                         document.getElementById('codeWorkspace') :
                         container.querySelector('#blockly');
     if(!config.embed || config.level.skipInstructionsPopup) {
@@ -220,7 +220,7 @@ BlocklyApps.init = function(config) {
     }
     workspaceDiv.style.display = 'none';
     // For share page on mobile, do not show this part.
-    if ((!config.embed) && (!BlocklyApps.share || !dom.isMobile())) {
+    if ((!config.embed) && (!StudioApp.share || !dom.isMobile())) {
       var buttonRow = runButton.parentElement;
       var openWorkspace = document.createElement('button');
       openWorkspace.setAttribute('id', 'open-workspace');
@@ -250,7 +250,7 @@ BlocklyApps.init = function(config) {
   }
 
   // 1. Move the buttons, 2. Hide the slider in the share page for mobile.
-  if (BlocklyApps.share && dom.isMobile()) {
+  if (StudioApp.share && dom.isMobile()) {
     var sliderCell = document.getElementById('slider-cell');
     if (sliderCell) {
       sliderCell.style.display = 'none';
@@ -263,7 +263,7 @@ BlocklyApps.init = function(config) {
       } else {
         belowVisualization.style.display = 'block';
         belowVisualization.style.marginLeft = '0px';
-        if (BlocklyApps.noPadding) {
+        if (StudioApp.noPadding) {
           // Shift run and reset buttons off the left edge if we have no padding
           if (runButton) {
             runButton.style.marginLeft = '10px';
@@ -288,7 +288,7 @@ BlocklyApps.init = function(config) {
   }
 
   // Show flappy upsale on desktop and mobile.  Show learn upsale only on desktop
-  if (BlocklyApps.share) {
+  if (StudioApp.share) {
     var upSale = document.createElement('div');
     if (config.makeYourOwn) {
       upSale.innerHTML = require('./templates/makeYourOwn.html')({
@@ -298,7 +298,7 @@ BlocklyApps.init = function(config) {
           makeImage: config.makeImage
         }
       });
-      if (BlocklyApps.noPadding) {
+      if (StudioApp.noPadding) {
         upSale.style.marginLeft = '10px';
       }
       belowViz.appendChild(upSale);
@@ -309,7 +309,7 @@ BlocklyApps.init = function(config) {
   }
 
   // Record time at initialization.
-  BlocklyApps.initTime = new Date().getTime();
+  StudioApp.initTime = new Date().getTime();
 
   // Fixes viewport for small screens.
   var viewport = document.querySelector('meta[name="viewport"]');
@@ -317,21 +317,21 @@ BlocklyApps.init = function(config) {
     var deviceWidth;
     var desiredWidth;
     var minWidth;
-    if (BlocklyApps.share && dom.isMobile()) {
+    if (StudioApp.share && dom.isMobile()) {
       // for mobile sharing, don't assume landscape mode, use screen.width
       deviceWidth = desiredWidth = screen.width;
-      if (BlocklyApps.noPadding && screen.width < BlocklyApps.MAX_PHONE_WIDTH) {
+      if (StudioApp.noPadding && screen.width < StudioApp.MAX_PHONE_WIDTH) {
         desiredWidth = Math.min(desiredWidth,
-                                BlocklyApps.MOBILE_NO_PADDING_SHARE_WIDTH);
+                                StudioApp.MOBILE_NO_PADDING_SHARE_WIDTH);
       }
-      minWidth = BlocklyApps.noPadding ?
-                    BlocklyApps.MOBILE_NO_PADDING_SHARE_WIDTH :
-                    BlocklyApps.MIN_MOBILE_SHARE_WIDTH;
+      minWidth = StudioApp.noPadding ?
+                    StudioApp.MOBILE_NO_PADDING_SHARE_WIDTH :
+                    StudioApp.MIN_MOBILE_SHARE_WIDTH;
     }
     else {
       // assume we are in landscape mode, so width is the longer of the two
       deviceWidth = desiredWidth = Math.max(screen.width, screen.height);
-      minWidth = BlocklyApps.MIN_WIDTH;
+      minWidth = StudioApp.MIN_WIDTH;
     }
     var width = Math.max(minWidth, desiredWidth);
     var scale = deviceWidth / width;
@@ -345,36 +345,36 @@ BlocklyApps.init = function(config) {
     viewport.setAttribute('content', content.join(', '));
   }
 
-  BlocklyApps.Dialog = config.Dialog;
+  StudioApp.Dialog = config.Dialog;
 
   var showCode = document.getElementById('show-code-header');
-  if (showCode && BlocklyApps.enableShowCode) {
+  if (showCode && StudioApp.enableShowCode) {
     dom.addClickTouchEvent(showCode, function() {
-      if (BlocklyApps.editCode) {
-        BlocklyApps.editor.toggleBlocks();
-        updateHeadersAfterDropletToggle(BlocklyApps.editor.currentlyUsingBlocks);
-        if (!BlocklyApps.editor.currentlyUsingBlocks) {
-          BlocklyApps.editor.aceEditor.focus();
+      if (StudioApp.editCode) {
+        StudioApp.editor.toggleBlocks();
+        updateHeadersAfterDropletToggle(StudioApp.editor.currentlyUsingBlocks);
+        if (!StudioApp.editor.currentlyUsingBlocks) {
+          StudioApp.editor.aceEditor.focus();
         }
       } else {
-        feedback.showGeneratedCode(BlocklyApps.Dialog);
+        feedback.showGeneratedCode(StudioApp.Dialog);
       }
     });
   }
 
   var blockCount = document.getElementById('blockCounter');
-  if (blockCount && !BlocklyApps.enableShowBlockCount) {
+  if (blockCount && !StudioApp.enableShowBlockCount) {
     blockCount.style.display = 'none';
   }
 
-  BlocklyApps.ICON = config.skin.staticAvatar;
-  BlocklyApps.SMALL_ICON = config.skin.smallStaticAvatar;
-  BlocklyApps.WIN_ICON = config.skin.winAvatar;
-  BlocklyApps.FAILURE_ICON = config.skin.failureAvatar;
+  StudioApp.ICON = config.skin.staticAvatar;
+  StudioApp.SMALL_ICON = config.skin.smallStaticAvatar;
+  StudioApp.WIN_ICON = config.skin.winAvatar;
+  StudioApp.FAILURE_ICON = config.skin.failureAvatar;
 
   if (config.level.instructionsIcon) {
-    BlocklyApps.ICON = config.skin[config.level.instructionsIcon];
-    BlocklyApps.WIN_ICON = config.skin[config.level.instructionsIcon];
+    StudioApp.ICON = config.skin[config.level.instructionsIcon];
+    StudioApp.WIN_ICON = config.skin[config.level.instructionsIcon];
   }
 
   if (config.showInstructionsWrapper) {
@@ -385,7 +385,7 @@ BlocklyApps.init = function(config) {
   }
 
   // The share and embed pages do not show the rotateContainer.
-  if (BlocklyApps.share || config.embed) {
+  if (StudioApp.share || config.embed) {
     var rotateContainer = document.getElementById('rotateContainer');
     if (rotateContainer) {
       rotateContainer.style.display = 'none';
@@ -399,7 +399,7 @@ BlocklyApps.init = function(config) {
       var vizCol = document.getElementById('visualizationColumn');
       var width = vizCol.offsetWidth;
       var height = vizCol.offsetHeight;
-      var displayWidth = BlocklyApps.MOBILE_NO_PADDING_SHARE_WIDTH;
+      var displayWidth = StudioApp.MOBILE_NO_PADDING_SHARE_WIDTH;
       var scale = Math.min(width / displayWidth, height / displayWidth);
       var viz = document.getElementById('visualization');
       viz.style['transform-origin'] = 'left top';
@@ -439,7 +439,7 @@ BlocklyApps.init = function(config) {
 
   if (config.level.instructions || config.level.aniGifURL) {
     var promptIcon = document.getElementById('prompt-icon');
-    promptIcon.src = BlocklyApps.SMALL_ICON;
+    promptIcon.src = StudioApp.SMALL_ICON;
   }
 
   var aniGifPreview = document.getElementById('ani-gif-preview');
@@ -455,18 +455,18 @@ BlocklyApps.init = function(config) {
     wrapper.style.display = 'none';
   }
 
-  if (BlocklyApps.editCode) {
+  if (StudioApp.editCode) {
     // using window.require forces us to use requirejs version of require
     window.require(['droplet'], function(droplet) {
       var displayMessage, examplePrograms, messageElement, onChange, startingText;
-      BlocklyApps.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
+      StudioApp.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
         mode: 'javascript',
         modeOptions: utils.generateDropletModeOptions(config.level.codeFunctions),
         palette: utils.generateDropletPalette(config.level.codeFunctions,
                                               config.level.categoryInfo)
       });
 
-      BlocklyApps.editor.aceEditor.setShowPrintMargin(false);
+      StudioApp.editor.aceEditor.setShowPrintMargin(false);
 
       // Add an ace completer for the API functions exposed for this level
       if (config.level.codeFunctions) {
@@ -475,7 +475,7 @@ BlocklyApps.init = function(config) {
             utils.generateAceApiCompleter(config.level.codeFunctions));
       }
 
-      BlocklyApps.editor.aceEditor.setOptions({
+      StudioApp.editor.aceEditor.setOptions({
         enableBasicAutocompletion: true,
         enableLiveAutocompletion: true
       });
@@ -485,15 +485,15 @@ BlocklyApps.init = function(config) {
       }
 
       if (config.level.startBlocks) {
-        BlocklyApps.editor.setValue(config.level.startBlocks);
+        StudioApp.editor.setValue(config.level.startBlocks);
       }
     });
   }
 
-  if (BlocklyApps.usingBlockly) {
+  if (StudioApp.usingBlockly) {
     // Allow empty blocks if editing blocks.
     if (config.level.edit_blocks) {
-      BlocklyApps.CHECK_FOR_EMPTY_BLOCKS = false;
+      StudioApp.CHECK_FOR_EMPTY_BLOCKS = false;
       if (config.level.edit_blocks === 'required_blocks' ||
         config.level.edit_blocks === 'toolbox_blocks') {
         // Don't show when run block for toolbox/required block editing
@@ -536,7 +536,7 @@ BlocklyApps.init = function(config) {
           options[prop] = config[prop];
         }
       });
-    BlocklyApps.inject(div, options);
+    StudioApp.inject(div, options);
 
     if (config.afterInject) {
       config.afterInject();
@@ -547,8 +547,8 @@ BlocklyApps.init = function(config) {
     if (config.forceInsertTopBlock) {
       startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
     }
-    startBlocks = BlocklyApps.arrangeBlockPosition(startBlocks, config.blockArrangement);
-    BlocklyApps.loadBlocks(startBlocks);
+    startBlocks = StudioApp.arrangeBlockPosition(startBlocks, config.blockArrangement);
+    StudioApp.loadBlocks(startBlocks);
   }
 
   // Initialize the slider.
@@ -565,31 +565,31 @@ BlocklyApps.init = function(config) {
 
   // listen for scroll and resize to ensure onResize() is called
   window.addEventListener('scroll', function() {
-    BlocklyApps.onResize();
+    StudioApp.onResize();
     var event = document.createEvent('UIEvents');
     event.initEvent('resize', true, true);  // event type, bubbling, cancelable
     window.dispatchEvent(event);
   });
-  window.addEventListener('resize', BlocklyApps.onResize);
+  window.addEventListener('resize', StudioApp.onResize);
 
   // Call initial onResize() asynchronously - need 10ms delay to work around
   // relayout which changes height on the left side to the proper value
   window.setTimeout(function() {
-    BlocklyApps.onResize();
+    StudioApp.onResize();
     var event = document.createEvent('UIEvents');
     event.initEvent('resize', true, true);  // event type, bubbling, cancelable
     window.dispatchEvent(event);
   }, 10);
 
-  BlocklyApps.reset(true);
+  StudioApp.reset(true);
 
   // Add display of blocks used.
   setIdealBlockNumber();
 
   // TODO (cpirich): implement block count for droplet (for now, blockly only)
-  if (BlocklyApps.usingBlockly) {
+  if (StudioApp.usingBlockly) {
     Blockly.mainBlockSpaceEditor.addChangeListener(function() {
-      BlocklyApps.updateBlockCount();
+      StudioApp.updateBlockCount();
     });
 
     if (config.level.openFunctionDefinition) {
@@ -599,9 +599,9 @@ BlocklyApps.init = function(config) {
 };
 
 exports.loadAudio = function(filenames, name) {
-  if (BlocklyApps.usingBlockly) {
+  if (StudioApp.usingBlockly) {
     Blockly.loadAudio_(filenames, name);
-  } else if (BlocklyApps.cdoSounds) {
+  } else if (StudioApp.cdoSounds) {
     var regOpts = { id: name };
     for (var i = 0; i < filenames.length; i++) {
       var filename = filenames[i];
@@ -611,7 +611,7 @@ exports.loadAudio = function(filenames, name) {
         regOpts[ext[1]] = filename;
       }
     }
-    BlocklyApps.cdoSounds.register(regOpts);
+    StudioApp.cdoSounds.register(regOpts);
   }
 };
 
@@ -619,18 +619,18 @@ exports.playAudio = function(name, options) {
   options = options || {};
   var defaultOptions = {volume: 0.5};
   var newOptions = utils.extend(defaultOptions, options);
-  if (BlocklyApps.usingBlockly) {
+  if (StudioApp.usingBlockly) {
     Blockly.playAudio(name, newOptions);
-  } else if (BlocklyApps.cdoSounds) {
-    BlocklyApps.cdoSounds.play(name, newOptions);
+  } else if (StudioApp.cdoSounds) {
+    StudioApp.cdoSounds.play(name, newOptions);
   }
 };
 
 exports.stopLoopingAudio = function(name) {
-  if (BlocklyApps.usingBlockly) {
+  if (StudioApp.usingBlockly) {
     Blockly.stopLoopingAudio(name);
-  } else if (BlocklyApps.cdoSounds) {
-    BlocklyApps.cdoSounds.stopLoopingAudio(name);
+  } else if (StudioApp.cdoSounds) {
+    StudioApp.cdoSounds.stopLoopingAudio(name);
   }
 };
 
@@ -648,8 +648,8 @@ exports.stopLoopingAudio = function(name) {
  */
 exports.inject = function(div, options) {
   var defaults = {
-    assetUrl: BlocklyApps.assetUrl,
-    rtl: BlocklyApps.isRtl(),
+    assetUrl: StudioApp.assetUrl,
+    rtl: StudioApp.isRtl(),
     toolbox: document.getElementById('toolbox'),
     trashcan: true
   };
@@ -659,7 +659,7 @@ exports.inject = function(div, options) {
 /**
  * Returns true if the current HTML page is in right-to-left language mode.
  */
-BlocklyApps.isRtl = function() {
+StudioApp.isRtl = function() {
   var head = document.getElementsByTagName('head')[0];
   if (head && head.parentElement) {
     var dir = head.parentElement.getAttribute('dir');
@@ -669,8 +669,8 @@ BlocklyApps.isRtl = function() {
   }
 };
 
-BlocklyApps.localeDirection = function() {
-  return (BlocklyApps.isRtl() ? 'rtl' : 'ltr');
+StudioApp.localeDirection = function() {
+  return (StudioApp.isRtl() ? 'rtl' : 'ltr');
 };
 
 /**
@@ -678,28 +678,28 @@ BlocklyApps.localeDirection = function() {
  * XML argument may be generated from the console with:
  * Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)).slice(5, -6)
  */
-BlocklyApps.initReadonly = function(options) {
+StudioApp.initReadonly = function(options) {
   Blockly.inject(document.getElementById('blockly'), {
-    assetUrl: BlocklyApps.assetUrl,
+    assetUrl: StudioApp.assetUrl,
     readOnly: true,
-    rtl: BlocklyApps.isRtl(),
+    rtl: StudioApp.isRtl(),
     scrollbars: false
   });
-  BlocklyApps.loadBlocks(options.blocks);
+  StudioApp.loadBlocks(options.blocks);
 };
 
 /**
  * Load the editor with blocks.
  * @param {string} blocksXml Text representation of blocks.
  */
-BlocklyApps.loadBlocks = function(blocksXml) {
+StudioApp.loadBlocks = function(blocksXml) {
   var xml = parseXmlElement(blocksXml);
   Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
 };
 
-BlocklyApps.BLOCK_X_COORDINATE = 70;
-BlocklyApps.BLOCK_Y_COORDINATE = 30;
-BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 200;
+StudioApp.BLOCK_X_COORDINATE = 70;
+StudioApp.BLOCK_Y_COORDINATE = 30;
+StudioApp.BLOCK_Y_COORDINATE_INTERVAL = 200;
 
 /**
  * Spreading out the top blocks in workspace if it is not already set.
@@ -708,10 +708,10 @@ BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 200;
  * @return {string} String representation of start blocks xml, including
  *    block position.
  */
-BlocklyApps.arrangeBlockPosition = function(startBlocks, arrangement) {
+StudioApp.arrangeBlockPosition = function(startBlocks, arrangement) {
   var type, arrangeX, arrangeY;
   var xml = parseXmlElement(startBlocks);
-  var xmlChildNodes = BlocklyApps.sortBlocksByVisibility(xml.childNodes);
+  var xmlChildNodes = StudioApp.sortBlocksByVisibility(xml.childNodes);
   var numberOfPlacedBlocks = 0;
   for (var x = 0, xmlChild; xmlChildNodes && x < xmlChildNodes.length; x++) {
     xmlChild = xmlChildNodes[x];
@@ -724,10 +724,10 @@ BlocklyApps.arrangeBlockPosition = function(startBlocks, arrangement) {
       arrangeY = arrangement && arrangement[type] ? arrangement[type].y : null;
 
       xmlChild.setAttribute('x', xmlChild.getAttribute('x') || arrangeX ||
-                            BlocklyApps.BLOCK_X_COORDINATE);
+                            StudioApp.BLOCK_X_COORDINATE);
       xmlChild.setAttribute('y', xmlChild.getAttribute('y') || arrangeY ||
-                            BlocklyApps.BLOCK_Y_COORDINATE +
-                            BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL * numberOfPlacedBlocks);
+                            StudioApp.BLOCK_Y_COORDINATE +
+                            StudioApp.BLOCK_Y_COORDINATE_INTERVAL * numberOfPlacedBlocks);
       numberOfPlacedBlocks += 1;
     }
   }
@@ -740,7 +740,7 @@ BlocklyApps.arrangeBlockPosition = function(startBlocks, arrangement) {
  * @return {Array.<Element>} A sorted array of xml blocks, with all
  *     visible blocks preceding all hidden blocks.
  */
-BlocklyApps.sortBlocksByVisibility = function(xmlBlocks) {
+StudioApp.sortBlocksByVisibility = function(xmlBlocks) {
   var visibleXmlBlocks = [];
   var hiddenXmlBlocks = [];
   for (var x = 0, xmlBlock; xmlBlocks && x < xmlBlocks.length; x++) {
@@ -769,9 +769,9 @@ var showInstructions = function(level, autoClose) {
   instructionsDiv.appendChild(buttons);
 
   var dialog = feedback.createModalDialogWithIcon({
-      Dialog: BlocklyApps.Dialog,
+      Dialog: StudioApp.Dialog,
       contentDiv: instructionsDiv,
-      icon: BlocklyApps.ICON,
+      icon: StudioApp.ICON,
       defaultBtnSelector: '#ok-button'
       });
 
@@ -796,7 +796,7 @@ var showInstructions = function(level, autoClose) {
 /**
  *  Resizes the blockly workspace.
  */
-BlocklyApps.onResize = function() {
+StudioApp.onResize = function() {
   var visualizationColumn = document.getElementById('visualizationColumn');
   var gameWidth = visualizationColumn.getBoundingClientRect().width;
 
@@ -804,7 +804,7 @@ BlocklyApps.onResize = function() {
   var codeWorkspace = document.getElementById('codeWorkspace');
 
   // resize either blockly or codeWorkspace
-  var div = BlocklyApps.editCode ? codeWorkspace : blocklyDiv;
+  var div = StudioApp.editCode ? codeWorkspace : blocklyDiv;
 
   var divParent = div.parentNode;
   var parentStyle = window.getComputedStyle(divParent);
@@ -821,19 +821,19 @@ BlocklyApps.onResize = function() {
   div.style.width = fullWorkspaceWidth + 'px';
 
   // Keep blocks static relative to the right edge in RTL mode
-  if (BlocklyApps.usingBlockly && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
+  if (StudioApp.usingBlockly && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
     Blockly.mainBlockSpace.getTopBlocks().forEach(function(topBlock) {
       topBlock.moveBy(fullWorkspaceWidth - oldWidth, 0);
     });
   }
 
-  if (BlocklyApps.isRtl()) {
+  if (StudioApp.isRtl()) {
     div.style.marginRight = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
   }
   else {
     div.style.marginLeft = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
   }
-  if (BlocklyApps.editCode) {
+  if (StudioApp.editCode) {
     // Position the inner codeTextbox element below the headers
     var codeTextbox = document.getElementById('codeTextbox');
     codeTextbox.style.height = (parentHeight - headersHeight) + 'px';
@@ -848,7 +848,7 @@ BlocklyApps.onResize = function() {
     div.style.height = (parentHeight - headersHeight) + 'px';
   }
 
-  BlocklyApps.resizeHeaders(fullWorkspaceWidth);
+  StudioApp.resizeHeaders(fullWorkspaceWidth);
 };
 
 // |          toolbox-header          | workspace-header  | show-code-header |
@@ -856,23 +856,23 @@ BlocklyApps.onResize = function() {
 // |           toolboxWidth           |
 // |                 |         <--------- workspaceWidth ---------->         |
 // |         <---------------- fullWorkspaceWidth ----------------->         |
-BlocklyApps.resizeHeaders = function (fullWorkspaceWidth) {
-  var minWorkspaceWidthForShowCode = BlocklyApps.editCode ? 250 : 450;
+StudioApp.resizeHeaders = function (fullWorkspaceWidth) {
+  var minWorkspaceWidthForShowCode = StudioApp.editCode ? 250 : 450;
   var toolboxWidth = 0;
-  if (BlocklyApps.editCode) {
+  if (StudioApp.editCode) {
     // If in the droplet editor, but not using blocks, keep categoryWidth at 0
-    if (!BlocklyApps.editCode || BlocklyApps.editor.currentlyUsingBlocks) {
+    if (!StudioApp.editCode || StudioApp.editor.currentlyUsingBlocks) {
       // Set toolboxWidth based on the block palette width:
       var categories = document.querySelector('.droplet-palette-wrapper');
       toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
     }
-  } else if (BlocklyApps.usingBlockly) {
+  } else if (StudioApp.usingBlockly) {
     toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
   }
 
   var showCodeHeader = document.getElementById('show-code-header');
   var showCodeWidth = 0;
-  if (BlocklyApps.enableShowCode &&
+  if (StudioApp.enableShowCode &&
       (fullWorkspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
     showCodeWidth = parseInt(window.getComputedStyle(showCodeHeader).width, 10);
     showCodeHeader.style.display = "";
@@ -892,8 +892,8 @@ BlocklyApps.resizeHeaders = function (fullWorkspaceWidth) {
  * @param {?string} id ID of block that triggered this action.
  * @param {boolean} spotlight Optional.  Highlight entire block if true
  */
-BlocklyApps.highlight = function(id, spotlight) {
-  if (BlocklyApps.usingBlockly) {
+StudioApp.highlight = function(id, spotlight) {
+  if (StudioApp.usingBlockly) {
     if (id) {
       var m = id.match(/^block_id_(\d+)$/);
       if (m) {
@@ -908,8 +908,8 @@ BlocklyApps.highlight = function(id, spotlight) {
 /**
  * Remove highlighting from all blocks
  */
-BlocklyApps.clearHighlighting = function () {
-  BlocklyApps.highlight(null);
+StudioApp.clearHighlighting = function () {
+  StudioApp.highlight(null);
 };
 
 // The following properties get their non-default values set by the application.
@@ -917,14 +917,14 @@ BlocklyApps.clearHighlighting = function () {
 /**
  * Whether to alert user to empty blocks, short-circuiting all other tests.
  */
-BlocklyApps.CHECK_FOR_EMPTY_BLOCKS = undefined;
+StudioApp.CHECK_FOR_EMPTY_BLOCKS = undefined;
 
 /**
  * The ideal number of blocks to solve this level.  Users only get 2
  * stars if they use more than this number.
  * @type {!number=}
  */
-BlocklyApps.IDEAL_BLOCK_NUM = undefined;
+StudioApp.IDEAL_BLOCK_NUM = undefined;
 
 /**
  * An array of dictionaries representing required blocks.  Keys are:
@@ -943,47 +943,47 @@ BlocklyApps.IDEAL_BLOCK_NUM = undefined;
  *   start and end tags.
  * @type {!Array=}
  */
-BlocklyApps.REQUIRED_BLOCKS = undefined;
+StudioApp.REQUIRED_BLOCKS = undefined;
 
 /**
  * The number of required blocks to give hints about at any one time.
  * Set this to Infinity to show all.
  * @type {!number=}
  */
-BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG = undefined;
+StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = undefined;
 
 /**
  * The number of attempts (how many times the run button has been pressed)
  * @type {?number}
  */
-BlocklyApps.attempts = 0;
+StudioApp.attempts = 0;
 
 /**
  * Stores the time at init. The delta to current time is used for logging
  * and reporting to capture how long it took to arrive at an attempt.
  * @type {?number}
  */
-BlocklyApps.initTime = undefined;
+StudioApp.initTime = undefined;
 
 /**
  * Reset the playing field to the start position and kill any pending
  * animation tasks.  This will typically be replaced by an application.
  * @param {boolean} first True if an opening animation is to be played.
  */
-BlocklyApps.reset = function(first) {};
+StudioApp.reset = function(first) {};
 
 // Override to change run behavior.
-BlocklyApps.runButtonClick = function() {};
+StudioApp.runButtonClick = function() {};
 
 /**
  * Enumeration of user program execution outcomes.
  */
-BlocklyApps.ResultType = constants.ResultType;
+StudioApp.ResultType = constants.ResultType;
 
 /**
  * Enumeration of test results.
  */
-BlocklyApps.TestResults = constants.TestResults;
+StudioApp.TestResults = constants.TestResults;
 
 // Methods for determining and displaying feedback.
 
@@ -991,23 +991,23 @@ BlocklyApps.TestResults = constants.TestResults;
  * Display feedback based on test results.  The test results must be
  * explicitly provided.
  * @param {{feedbackType: number}} Test results (a constant property of
- *     BlocklyApps.TestResults).
+ *     StudioApp.TestResults).
  */
-BlocklyApps.displayFeedback = function(options) {
-  options.Dialog = BlocklyApps.Dialog;
+StudioApp.displayFeedback = function(options) {
+  options.Dialog = StudioApp.Dialog;
   options.onContinue = onContinue;
   options.backToPreviousLevel = backToPreviousLevel;
-  options.sendToPhone = BlocklyApps.sendToPhone;
+  options.sendToPhone = StudioApp.sendToPhone;
 
   // Special test code for edit blocks.
   if (options.level.edit_blocks) {
-    options.feedbackType = BlocklyApps.TestResults.EDIT_BLOCKS;
+    options.feedbackType = StudioApp.TestResults.EDIT_BLOCKS;
   }
 
   feedback.displayFeedback(options);
 };
 
-BlocklyApps.getTestResults = function(levelComplete, options) {
+StudioApp.getTestResults = function(levelComplete, options) {
   return feedback.getTestResults(levelComplete, options);
 };
 
@@ -1022,19 +1022,19 @@ BlocklyApps.getTestResults = function(levelComplete, options) {
  * {string} program The user program, which will get URL-encoded.
  * {function} onComplete Function to be called upon completion.
  */
-BlocklyApps.report = function(options) {
+StudioApp.report = function(options) {
   // copy from options: app, level, result, testResult, program, onComplete
   var report = options;
   report.pass = feedback.canContinueToNextLevel(options.testResult);
-  report.time = ((new Date().getTime()) - BlocklyApps.initTime);
-  report.attempt = BlocklyApps.attempts;
+  report.time = ((new Date().getTime()) - StudioApp.initTime);
+  report.attempt = StudioApp.attempts;
   report.lines = feedback.getNumBlocksUsed();
 
   // If hideSource is enabled, the user is looking at a shared level that
   // they cannot have modified. In that case, don't report it to the service
   // or call the onComplete() callback expected. The app will just sit
   // there with the Reset button as the only option.
-  if (!(BlocklyApps.hideSource && BlocklyApps.share)) {
+  if (!(StudioApp.hideSource && StudioApp.share)) {
     var onAttemptCallback = (function() {
       return function(builderDetails) {
         for (var option in builderDetails) {
@@ -1057,15 +1057,15 @@ BlocklyApps.report = function(options) {
 /**
  * Click the reset button.  Reset the application.
  */
-BlocklyApps.resetButtonClick = function() {
+StudioApp.resetButtonClick = function() {
   onResetPressed();
-  BlocklyApps.toggleRunReset('run');
-  BlocklyApps.clearHighlighting();
-  if (BlocklyApps.usingBlockly) {
+  StudioApp.toggleRunReset('run');
+  StudioApp.clearHighlighting();
+  if (StudioApp.usingBlockly) {
     Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
     Blockly.mainBlockSpace.traceOn(false);
   }
-  BlocklyApps.reset(false);
+  StudioApp.reset(false);
 };
 
 /**
@@ -1087,7 +1087,7 @@ exports.updateBlockCount = function() {
   // If the number of block used is bigger than the ideal number of blocks,
   // set it to be yellow, otherwise, keep it as black.
   var element = document.getElementById('blockUsed');
-  if (BlocklyApps.IDEAL_BLOCK_NUM < feedback.getNumCountableBlocks()) {
+  if (StudioApp.IDEAL_BLOCK_NUM < feedback.getNumCountableBlocks()) {
     element.className = "block-counter-overflow";
   } else {
     element.className = "block-counter-default";
@@ -1102,6 +1102,6 @@ exports.updateBlockCount = function() {
 };
 
 var getIdealBlockNumberMsg = function() {
-  return BlocklyApps.IDEAL_BLOCK_NUM === Infinity ?
-      msg.infinity() : BlocklyApps.IDEAL_BLOCK_NUM;
+  return StudioApp.IDEAL_BLOCK_NUM === Infinity ?
+      msg.infinity() : StudioApp.IDEAL_BLOCK_NUM;
 };

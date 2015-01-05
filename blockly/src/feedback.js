@@ -30,7 +30,7 @@ exports.displayFeedback = function(options) {
   var showingSharing = options.showingSharing && !hadShareFailure;
 
   var canContinue = exports.canContinueToNextLevel(options.feedbackType);
-  var displayShowCode = BlocklyApps.enableShowCode && canContinue && !showingSharing;
+  var displayShowCode = StudioApp.enableShowCode && canContinue && !showingSharing;
   var feedback = document.createElement('div');
   var sharingDiv = (canContinue && showingSharing) ? exports.createSharingDiv(options) : null;
   var showCode = displayShowCode ? getShowCodeElement(options) : null;
@@ -105,7 +105,7 @@ exports.displayFeedback = function(options) {
   var onlyContinue = continueButton && !againButton && !previousLevelButton;
 
   var onHidden = onlyContinue ? options.onContinue : null;
-  var icon = canContinue ? BlocklyApps.WIN_ICON : BlocklyApps.FAILURE_ICON;
+  var icon = canContinue ? StudioApp.WIN_ICON : StudioApp.FAILURE_ICON;
   var defaultBtnSelector = onlyContinue ? '#continue-button' : '#again-button';
 
   var feedbackDialog = exports.createModalDialogWithIcon({
@@ -232,7 +232,7 @@ exports.displayFeedback = function(options) {
  */
 exports.getNumBlocksUsed = function() {
   var i;
-  if (BlocklyApps.editCode) {
+  if (StudioApp.editCode) {
     var codeLines = 0;
     // quick and dirty method to count non-blank lines that don't start with //
     var lines = getGeneratedCodeString().split("\n");
@@ -253,7 +253,7 @@ exports.getNumBlocksUsed = function() {
  */
 exports.getNumCountableBlocks = function() {
   var i;
-  if (BlocklyApps.editCode) {
+  if (StudioApp.editCode) {
     var codeLines = 0;
     // quick and dirty method to count non-blank lines that don't start with //
     var lines = getGeneratedCodeString().split("\n");
@@ -281,7 +281,7 @@ var getFeedbackButtons = function(options) {
       hintRequestExperiment: options.hintRequestExperiment &&
           (options.hintRequestExperiment === exports.HintRequestPlacement.LEFT ?
               'left' : 'right'),
-      assetUrl: BlocklyApps.assetUrl,
+      assetUrl: StudioApp.assetUrl,
       freePlay: options.freePlay
     }
   });
@@ -370,7 +370,7 @@ var getFeedbackMessage = function(options) {
         break;
       case TestResults.TOO_MANY_BLOCKS_FAIL:
         message = msg.numBlocksNeeded({
-          numBlocks: BlocklyApps.IDEAL_BLOCK_NUM,
+          numBlocks: StudioApp.IDEAL_BLOCK_NUM,
           puzzleNumber: options.level.puzzle_number || 0
         });
         break;
@@ -431,7 +431,7 @@ var getFeedbackMessage = function(options) {
     // Insert an image
     var imageDiv = document.createElement('img');
     imageDiv.className = "hint-image";
-    imageDiv.src = BlocklyApps.assetUrl(
+    imageDiv.src = StudioApp.assetUrl(
       'media/lightbulb_for_' + options.response.design + '.png');
     feedbackDiv.appendChild(imageDiv);
     // Add new text
@@ -453,7 +453,7 @@ exports.createSharingDiv = function(options) {
     return null;
   }
 
-  if (BlocklyApps.disableSocialShare) {
+  if (StudioApp.disableSocialShare) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
@@ -609,7 +609,7 @@ var getShowCodeElement = function(options) {
 /**
  * Determines whether the user can proceed to the next level, based on the level feedback
  * @param {number} feedbackType A constant property of TestResults,
- *     typically produced by BlocklyApps.getTestResults().
+ *     typically produced by StudioApp.getTestResults().
  */
 exports.canContinueToNextLevel = function(feedbackType) {
   return (feedbackType === TestResults.ALL_PASS ||
@@ -622,8 +622,8 @@ exports.canContinueToNextLevel = function(feedbackType) {
  * Retrieve a string containing the user's generated Javascript code.
  */
 var getGeneratedCodeString = function() {
-  if (BlocklyApps.editCode) {
-    return BlocklyApps.editor ? BlocklyApps.editor.getValue() : '';
+  if (StudioApp.editCode) {
+    return StudioApp.editor ? StudioApp.editor.getValue() : '';
   }
   else {
     return codegen.workspaceCode(Blockly);
@@ -674,13 +674,13 @@ var FeedbackBlocks = function(options) {
   this.div = document.createElement('div');
   this.html = readonly({
     app: options.app,
-    assetUrl: BlocklyApps.assetUrl,
+    assetUrl: StudioApp.assetUrl,
     options: {
       readonly: true,
-      locale: BlocklyApps.LOCALE,
-      localeDirection: BlocklyApps.localeDirection(),
-      baseUrl: BlocklyApps.BASE_URL,
-      cacheBust: BlocklyApps.CACHE_BUST,
+      locale: StudioApp.LOCALE,
+      localeDirection: StudioApp.localeDirection(),
+      baseUrl: StudioApp.BASE_URL,
+      cacheBust: StudioApp.CACHE_BUST,
       skinId: options.skin,
       level: options.level,
       blocks: generateXMLForBlocks(blocksToDisplay)
@@ -708,7 +708,7 @@ var getGeneratedCodeElement = function() {
     harvardLink: "<a href='https://cs50.harvard.edu/' target='_blank'>Harvard</a>"
   };
 
-  var infoMessage = BlocklyApps.editCode ?  "" : msg.generatedCodeInfo(codeInfoMsgParams);
+  var infoMessage = StudioApp.editCode ?  "" : msg.generatedCodeInfo(codeInfoMsgParams);
   var code = getGeneratedCodeString();
 
   var codeDiv = document.createElement('div');
@@ -734,7 +734,7 @@ exports.showGeneratedCode = function(Dialog) {
   var dialog = exports.createModalDialogWithIcon({
       Dialog: Dialog,
       contentDiv: codeDiv,
-      icon: BlocklyApps.ICON,
+      icon: StudioApp.ICON,
       defaultBtnSelector: '#ok-button'
       });
 
@@ -814,7 +814,7 @@ var getCountableBlocks = function() {
 
 /**
  * Check to see if the user's code contains the required blocks for a level.
- * This never returns more than BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG.
+ * This never returns more than StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG.
  * @return {{blocksToDisplay:!Array, message:?string}} 'missingBlocks' is an
  * array of array of strings where each array of strings is a set of blocks that
  * at least one of them should be used. Each block is represented as the prefix
@@ -825,17 +825,17 @@ var getMissingRequiredBlocks = function () {
   var missingBlocks = [];
   var customMessage = null;
   var code = null;  // JavaScript code, which is initialized lazily.
-  if (BlocklyApps.REQUIRED_BLOCKS && BlocklyApps.REQUIRED_BLOCKS.length) {
+  if (StudioApp.REQUIRED_BLOCKS && StudioApp.REQUIRED_BLOCKS.length) {
     var userBlocks = getUserBlocks();
     // For each list of required blocks
     // Keep track of the number of the missing block lists. It should not be
-    // bigger than BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG
+    // bigger than StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG
     var missingBlockNum = 0;
     for (var i = 0;
-         i < BlocklyApps.REQUIRED_BLOCKS.length &&
-             missingBlockNum < BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG;
+         i < StudioApp.REQUIRED_BLOCKS.length &&
+             missingBlockNum < StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG;
          i++) {
-      var requiredBlock = BlocklyApps.REQUIRED_BLOCKS[i];
+      var requiredBlock = StudioApp.REQUIRED_BLOCKS[i];
       // For each of the test
       // If at least one of the tests succeeded, we consider the required block
       // is used
@@ -863,7 +863,7 @@ var getMissingRequiredBlocks = function () {
       }
       if (!usedRequiredBlock) {
         missingBlockNum++;
-        missingBlocks = missingBlocks.concat(BlocklyApps.REQUIRED_BLOCKS[i][0]);
+        missingBlocks = missingBlocks.concat(StudioApp.REQUIRED_BLOCKS[i][0]);
       }
     }
   }
@@ -877,7 +877,7 @@ var getMissingRequiredBlocks = function () {
  * Do we have any floating blocks not attached to an event block or function block?
  */
 exports.hasExtraTopBlocks = function () {
-  if (BlocklyApps.editCode) {
+  if (StudioApp.editCode) {
     return false;
   }
   var topBlocks = Blockly.mainBlockSpace.getTopBlocks();
@@ -906,13 +906,13 @@ exports.hasExtraTopBlocks = function () {
  */
 exports.getTestResults = function(levelComplete, options) {
   options = options || {};
-  if (BlocklyApps.editCode) {
+  if (StudioApp.editCode) {
     // TODO (cpirich): implement better test results for editCode
     return levelComplete ?
-      BlocklyApps.TestResults.ALL_PASS :
-      BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
+      StudioApp.TestResults.ALL_PASS :
+      StudioApp.TestResults.TOO_FEW_BLOCKS_FAIL;
   }
-  if (BlocklyApps.CHECK_FOR_EMPTY_BLOCKS && hasEmptyContainerBlocks()) {
+  if (StudioApp.CHECK_FOR_EMPTY_BLOCKS && hasEmptyContainerBlocks()) {
     var type = getEmptyContainerBlock().type;
     if (type === 'procedures_defnoreturn' || type === 'procedures_defreturn') {
       return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
@@ -948,14 +948,14 @@ exports.getTestResults = function(levelComplete, options) {
   }
   var numEnabledBlocks = exports.getNumCountableBlocks();
   if (!levelComplete) {
-    if (BlocklyApps.IDEAL_BLOCK_NUM && BlocklyApps.IDEAL_BLOCK_NUM !== Infinity &&
-        numEnabledBlocks < BlocklyApps.IDEAL_BLOCK_NUM) {
+    if (StudioApp.IDEAL_BLOCK_NUM && StudioApp.IDEAL_BLOCK_NUM !== Infinity &&
+        numEnabledBlocks < StudioApp.IDEAL_BLOCK_NUM) {
       return TestResults.TOO_FEW_BLOCKS_FAIL;
     }
     return TestResults.LEVEL_INCOMPLETE_FAIL;
   }
-  if (BlocklyApps.IDEAL_BLOCK_NUM &&
-      numEnabledBlocks > BlocklyApps.IDEAL_BLOCK_NUM) {
+  if (StudioApp.IDEAL_BLOCK_NUM &&
+      numEnabledBlocks > StudioApp.IDEAL_BLOCK_NUM) {
     return TestResults.TOO_MANY_BLOCKS_FAIL;
   } else {
     return TestResults.ALL_PASS;
