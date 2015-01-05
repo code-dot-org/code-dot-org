@@ -114,6 +114,36 @@ exports.canvasClear = function (blockId, elementId) {
                           {'elementId': elementId });
 };
 
+exports.canvasDrawImage = function (blockId, elementId, imageId, x, y, width, height) {
+  return Webapp.executeCmd(blockId,
+                          'canvasDrawImage',
+                          {'elementId': elementId,
+                           'imageId': imageId,
+                           'x': x,
+                           'y': y,
+                           'width': width,
+                           'height': height });
+};
+
+exports.canvasGetImageData = function (blockId, elementId, x, y, width, height) {
+  return Webapp.executeCmd(blockId,
+                          'canvasGetImageData',
+                          {'elementId': elementId,
+                           'x': x,
+                           'y': y,
+                           'width': width,
+                           'height': height });
+};
+
+exports.canvasPutImageData = function (blockId, elementId, imageData, x, y) {
+  return Webapp.executeCmd(blockId,
+                          'canvasPutImageData',
+                          {'elementId': elementId,
+                           'imageData': imageData,
+                           'x': x,
+                           'y': y });
+};
+
 exports.createTextInput = function (blockId, elementId, text) {
   return Webapp.executeCmd(blockId,
                           'createTextInput',
