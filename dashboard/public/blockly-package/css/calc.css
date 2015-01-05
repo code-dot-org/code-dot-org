@@ -24,10 +24,10 @@
 .calcHeader {
   font-size: 25px; }
 
-.highlightedParen {
+.markedToken {
   fill: white; }
 
-.exprMistake {
+.errorToken {
   fill: red; }
 
 .expr {
