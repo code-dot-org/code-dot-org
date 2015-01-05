@@ -1010,6 +1010,9 @@ Webapp.callCmd = function (cmd) {
     case 'canvasSetLineWidth':
     case 'canvasSetStrokeColor':
     case 'canvasSetFillColor':
+    case 'canvasDrawImage':
+    case 'canvasGetImageData':
+    case 'canvasPutImageData':
     case 'canvasClear':
     case 'createTextInput':
     case 'createTextLabel':
@@ -1090,9 +1093,9 @@ Webapp.createCanvas = function (opts) {
 
 Webapp.canvasDrawLine = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
-  var div = document.getElementById(opts.elementId);
-  var ctx = div.getContext("2d");
-  if (ctx && divWebapp.contains(div)) {
+  var canvas = document.getElementById(opts.elementId);
+  var ctx = canvas.getContext("2d");
+  if (ctx && divWebapp.contains(canvas)) {
     ctx.beginPath();
     ctx.moveTo(opts.x1 * Webapp.canvasScale, opts.y1 * Webapp.canvasScale);
     ctx.lineTo(opts.x2 * Webapp.canvasScale, opts.y2 * Webapp.canvasScale);
@@ -1104,9 +1107,9 @@ Webapp.canvasDrawLine = function (opts) {
 
 Webapp.canvasDrawCircle = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
-  var div = document.getElementById(opts.elementId);
-  var ctx = div.getContext("2d");
-  if (ctx && divWebapp.contains(div)) {
+  var canvas = document.getElementById(opts.elementId);
+  var ctx = canvas.getContext("2d");
+  if (ctx && divWebapp.contains(canvas)) {
     ctx.beginPath();
     ctx.arc(opts.x * Webapp.canvasScale,
             opts.y * Webapp.canvasScale,
@@ -1122,9 +1125,9 @@ Webapp.canvasDrawCircle = function (opts) {
 
 Webapp.canvasDrawRect = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
-  var div = document.getElementById(opts.elementId);
-  var ctx = div.getContext("2d");
-  if (ctx && divWebapp.contains(div)) {
+  var canvas = document.getElementById(opts.elementId);
+  var ctx = canvas.getContext("2d");
+  if (ctx && divWebapp.contains(canvas)) {
     ctx.rect(opts.x * Webapp.canvasScale,
              opts.y * Webapp.canvasScale,
              opts.width * Webapp.canvasScale,
@@ -1138,9 +1141,9 @@ Webapp.canvasDrawRect = function (opts) {
 
 Webapp.canvasSetLineWidth = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
-  var div = document.getElementById(opts.elementId);
-  var ctx = div.getContext("2d");
-  if (ctx && divWebapp.contains(div)) {
+  var canvas = document.getElementById(opts.elementId);
+  var ctx = canvas.getContext("2d");
+  if (ctx && divWebapp.contains(canvas)) {
     ctx.lineWidth = opts.width * Webapp.canvasScale;
     return true;
   }
@@ -1149,9 +1152,9 @@ Webapp.canvasSetLineWidth = function (opts) {
 
 Webapp.canvasSetStrokeColor = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
-  var div = document.getElementById(opts.elementId);
-  var ctx = div.getContext("2d");
-  if (ctx && divWebapp.contains(div)) {
+  var canvas = document.getElementById(opts.elementId);
+  var ctx = canvas.getContext("2d");
+  if (ctx && divWebapp.contains(canvas)) {
     ctx.strokeStyle = String(opts.color);
     return true;
   }
@@ -1160,9 +1163,9 @@ Webapp.canvasSetStrokeColor = function (opts) {
 
 Webapp.canvasSetFillColor = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
-  var div = document.getElementById(opts.elementId);
-  var ctx = div.getContext("2d");
-  if (ctx && divWebapp.contains(div)) {
+  var canvas = document.getElementById(opts.elementId);
+  var ctx = canvas.getContext("2d");
+  if (ctx && divWebapp.contains(canvas)) {
     ctx.fillStyle = String(opts.color);
     return true;
   }
@@ -1171,13 +1174,67 @@ Webapp.canvasSetFillColor = function (opts) {
 
 Webapp.canvasClear = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
-  var div = document.getElementById(opts.elementId);
-  var ctx = div.getContext("2d");
-  if (ctx && divWebapp.contains(div)) {
-    ctx.clearRect(0, 0, div.width, div.height);
+  var canvas = document.getElementById(opts.elementId);
+  var ctx = canvas.getContext("2d");
+  if (ctx && divWebapp.contains(canvas)) {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     return true;
   }
   return false;
+};
+
+Webapp.canvasDrawImage = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var canvas = document.getElementById(opts.elementId);
+  var image = document.getElementById(opts.imageId);
+  var ctx = canvas.getContext("2d");
+  if (ctx && divWebapp.contains(canvas) && divWebapp.contains(image)) {
+    var xScale, yScale;
+    xScale = yScale = Webapp.canvasScale;
+    if (opts.width) {
+      xScale = xScale * (opts.width / image.width);
+    }
+    if (opts.height) {
+      yScale = yScale * (opts.height / image.height);
+    }
+    ctx.setTransform(xScale,
+                     0,
+                     0,
+                     yScale,
+                     opts.x * Webapp.canvasScale,
+                     opts.y * Webapp.canvasScale);
+    ctx.drawImage(image, 0, 0);
+    return true;
+  }
+  return false;
+};
+
+Webapp.canvasGetImageData = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var canvas = document.getElementById(opts.elementId);
+  var ctx = canvas.getContext("2d");
+  if (ctx && divWebapp.contains(canvas)) {
+    return ctx.getImageData(opts.x * Webapp.canvasScale,
+                            opts.y * Webapp.canvasScale,
+                            opts.width * Webapp.canvasScale,
+                            opts.height * Webapp.canvasScale);
+  }
+};
+
+Webapp.canvasPutImageData = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var canvas = document.getElementById(opts.elementId);
+  var ctx = canvas.getContext("2d");
+  if (ctx && divWebapp.contains(canvas)) {
+    // Create tmpImageData and initialize it because opts.imageData is not
+    // going to be a real ImageData object if it came from the interpreter
+    var tmpImageData = ctx.createImageData(opts.imageData.width,
+                                           opts.imageData.height);
+    tmpImageData.data.set(opts.imageData.data);
+    return ctx.putImageData(tmpImageData,
+                            opts.x * Webapp.canvasScale,
+                            opts.y * Webapp.canvasScale);
+  }
 };
 
 Webapp.createTextInput = function (opts) {
