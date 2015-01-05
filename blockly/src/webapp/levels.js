@@ -34,6 +34,8 @@ levels.ec_simple = {
   'codeFunctions': [
     {'func': 'attachEventHandler', 'category': 'General', 'params': ["'id'", "'click'", "function() {\n  \n}"] },
     {'func': 'startWebRequest', 'category': 'General', 'params': ["'http://api.openweathermap.org/data/2.5/weather?q=London,uk'", "function(status, type, content) {\n  \n}"] },
+    {'func': 'setTimeout', 'category': 'General', 'params': ["function() {\n  \n}", "1000"] },
+    {'func': 'clearTimeout', 'category': 'General', 'params': ["0"] },
     {'func': 'createHtmlBlock', 'category': 'General', 'params': ["'id'", "'html'"] },
     {'func': 'replaceHtmlBlock', 'category': 'General', 'params': ["'id'", "'html'"] },
     {'func': 'deleteHtmlBlock', 'category': 'General', 'params': ["'id'"] },
@@ -55,6 +57,7 @@ levels.ec_simple = {
     {'func': 'createCanvas', 'category': 'Canvas', 'params': ["'id'", "400", "600"] },
     {'func': 'canvasDrawLine', 'category': 'Canvas', 'params': ["'id'", "0", "0", "400", "600"] },
     {'func': 'canvasDrawCircle', 'category': 'Canvas', 'params': ["'id'", "200", "300", "100"] },
+    {'func': 'canvasDrawRect', 'category': 'Canvas', 'params': ["'id'", "100", "200", "200", "200"] },
     {'func': 'canvasSetLineWidth', 'category': 'Canvas', 'params': ["'id'", "3"] },
     {'func': 'canvasSetStrokeColor', 'category': 'Canvas', 'params': ["'id'", "'red'"] },
     {'func': 'canvasSetFillColor', 'category': 'Canvas', 'params': ["'id'", "'yellow'"] },

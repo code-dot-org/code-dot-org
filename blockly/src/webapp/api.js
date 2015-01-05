@@ -77,6 +77,16 @@ exports.canvasDrawCircle = function (blockId, elementId, x, y, radius) {
                            'radius': radius });
 };
 
+exports.canvasDrawRect = function (blockId, elementId, x, y, width, height) {
+  return Webapp.executeCmd(blockId,
+                          'canvasDrawRect',
+                          {'elementId': elementId,
+                           'x': x,
+                           'y': y,
+                           'width': width,
+                           'height': height });
+};
+
 exports.canvasSetLineWidth = function (blockId, elementId, width) {
   return Webapp.executeCmd(blockId,
                           'canvasSetLineWidth',
@@ -203,3 +213,17 @@ exports.startWebRequest = function (blockId, url, func) {
                           {'url': url,
                            'func': func });
 };
+
+exports.setTimeout = function (blockId, func, milliseconds) {
+  return Webapp.executeCmd(blockId,
+                          'setTimeout',
+                          {'func': func,
+                           'milliseconds': milliseconds });
+};
+
+exports.clearTimeout = function (blockId, timeoutId) {
+  return Webapp.executeCmd(blockId,
+                           'clearTimeout',
+                           {'timeoutId': timeoutId });
+};
+
