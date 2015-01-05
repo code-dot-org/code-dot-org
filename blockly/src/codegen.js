@@ -52,7 +52,7 @@ exports.workspaceCode = function(blockly) {
 };
 
 exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativeParentObj, maxDepth) {
-  var retVal;
+  var i, retVal;
   if (typeof maxDepth === "undefined") {
     maxDepth = Infinity; // default to inifinite levels of depth
   }
@@ -61,11 +61,18 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
   }
   if (nativeVar instanceof Array) {
     retVal = interpreter.createObject(interpreter.ARRAY);
-    for (var i = 0; i < nativeVar.length; i++) {
+    for (i = 0; i < nativeVar.length; i++) {
       retVal.properties[i] = exports.marshalNativeToInterpreter(interpreter,
                                                                 nativeVar[i],
                                                                 null,
                                                                 maxDepth - 1);
+    }
+    retVal.length = nativeVar.length;
+  } else if (nativeVar instanceof Uint8ClampedArray) {
+    // Special case for canvas image data - could expand to support TypedArray
+    retVal = interpreter.createObject(interpreter.ARRAY);
+    for (i = 0; i < nativeVar.length; i++) {
+      retVal.properties[i] = interpreter.createPrimitive(nativeVar[i]);
     }
     retVal.length = nativeVar.length;
   } else if (nativeVar instanceof Function) {
