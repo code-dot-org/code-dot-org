@@ -1,0 +1,42 @@
+---
+en:
+  data:
+    contract_match:
+      Enter name here:
+        Enter title here: Enter title here
+        Enter prompt here: Enter prompt here
+        Contract Name|Number|Domain1:Number|Domain2:string: Contract Name|Number|Domain1:Number|Domain2:string
+      Eval Contracts 1 B:
+        Eval Contracts 1 B: Eval Contracts 1 B
+        Write a contract for the star function: Write a contract for the star function
+        Eval Contracts 1.solution_blocks, 200: Eval Contracts 1.solution_blocks, 200
+        Contract star|image|Domain1:Number|Domain2:string|Domain3:string: Contract star|image|Domain1:Number|Domain2:string|Domain3:string
+        Eval Contracts 1.solution_blocks: Eval Contracts 1.solution_blocks
+        Contract star|image|radius:Number|style:string|color:string: Contract star|image|radius:Number|style:string|color:string
+        star|image|radius:Number|style:string|color:string: star|image|radius:Number|style:string|color:string
+        Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks, 300
+      Eval Contracts 2 B:
+        Eval Contracts 2 B: Eval Contracts 2 B
+        Write a contract for the rotate function: Write a contract for the rotate function
+        Eval Contracts 2 A.solution_blocks, 300: Eval Contracts 2 A.solution_blocks, 300
+        rotate|image|degrees:Number|image:image: rotate|image|degrees:Number|image:image
+      Eval Contracts 3 B:
+        Eval Contracts 3 B: Eval Contracts 3 B
+        Write a contract for the text function: Write a contract for the text function
+        Eval Contracts 3 A.solution_blocks, 300: Eval Contracts 3 A.solution_blocks, 300
+        text|image|string:string|size:Number|color:string: text|image|string:string|size:Number|color:string
+      Eval Contracts 4 B:
+        Eval Contracts 4 B: Eval Contracts 4 B
+        Write a contract for the scale function: Write a contract for the scale function
+        Eval Contracts 4 A.solution_blocks, 300: Eval Contracts 4 A.solution_blocks, 300
+        scale|image|factor:Number|image:image: scale|image|factor:Number|image:image
+      Design Recipe 1.contract:
+        Design Recipe 1 Contract: Design Recipe 1 Contract
+        ? Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.
+        : Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.
+        wide-rect|Image|height:Number|color:string: wide-rect|Image|height:Number|color:string
+      'Eval Design Recipe 1.contract':
+        Design Recipe 1 Contract: Design Recipe 1 Contract
+        ? Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.
+        : Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.
+        wide-rect|Image|height:Number|color:string: wide-rect|Image|height:Number|color:string
