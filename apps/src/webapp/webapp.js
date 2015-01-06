@@ -1023,7 +1023,9 @@ Webapp.callCmd = function (cmd) {
     case 'setText':
     case 'getChecked':
     case 'setChecked':
+    case 'getImageURL':
     case 'setImageURL':
+    case 'createImageUploadButton':
     case 'setPosition':
     case 'setParent':
     case 'setStyle':
@@ -1067,6 +1069,30 @@ Webapp.createImage = function (opts) {
   newImage.id = opts.elementId;
 
   return Boolean(divWebapp.appendChild(newImage));
+};
+
+Webapp.createImageUploadButton = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+
+  // To avoid showing the ugly fileupload input element, we create a label
+  // element with an img-upload class that will ensure it looks like a button
+  var newLabel = document.createElement("label");
+  var textNode = document.createTextNode(opts.text);
+  newLabel.id = opts.elementId;
+  newLabel.className = 'img-upload';
+
+  // We then create an offscreen input element and make it a child of the new
+  // label element
+  var newInput = document.createElement("input");
+  newInput.type = "file";
+  newInput.accept = "image/*";
+  newInput.capture = "camera";
+  newInput.style.position = "absolute";
+  newInput.style.left = "-9999px";
+
+  return Boolean(newLabel.appendChild(newInput) &&
+                 newLabel.appendChild(textNode) &&
+                 divWebapp.appendChild(newLabel));
 };
 
 Webapp.createCanvas = function (opts) {
@@ -1350,6 +1376,22 @@ Webapp.setChecked = function (opts) {
     return true;
   }
   return false;
+};
+
+Webapp.getImageURL = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var element = document.getElementById(opts.elementId);
+  if (divWebapp.contains(element)) {
+    // We return a URL if it is an IMG element or our special img-upload label
+    if (element.tagName === 'IMG') {
+      return element.src;
+    } else if (element.tagName === 'LABEL' && element.className === 'img-upload') {
+      var fileObj = element.children[0].files[0];
+      if (fileObj) {
+        return window.URL.createObjectURL(fileObj);
+      }
+    }
+  }
 };
 
 Webapp.setImageURL = function (opts) {
