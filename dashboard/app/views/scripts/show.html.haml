@@ -45,6 +45,7 @@
     %br/
     %br/
 
+  - if @script.has_lesson_plan?
     %a{href: "http://code.org/curriculum/" + @script.name }
       = t('home.lesson_plans')
     %br/

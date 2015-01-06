@@ -198,7 +198,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course?
+    k5_course? || ['msm', 'algebra'].include?(self.name)
   end
 
   SCRIPT_CSV_MAPPING = %w(Game Name Level:level_num Skin Concepts Url:level_url Stage)
