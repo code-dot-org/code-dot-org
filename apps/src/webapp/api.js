@@ -208,11 +208,24 @@ exports.setText = function (blockId, elementId, text) {
                            'text': text });
 };
 
+exports.getImageURL = function (blockId, elementId) {
+  return Webapp.executeCmd(blockId,
+                          'getImageURL',
+                          {'elementId': elementId });
+};
+
 exports.setImageURL = function (blockId, elementId, src) {
   return Webapp.executeCmd(blockId,
                           'setImageURL',
                           {'elementId': elementId,
                            'src': src });
+};
+
+exports.createImageUploadButton = function (blockId, elementId, text) {
+  return Webapp.executeCmd(blockId,
+                           'createImageUploadButton',
+                           {'elementId': elementId,
+                            'text': text });
 };
 
 exports.setParent = function (blockId, elementId, parentId) {
