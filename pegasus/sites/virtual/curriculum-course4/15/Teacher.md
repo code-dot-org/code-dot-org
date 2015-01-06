@@ -1,5 +1,5 @@
 ---
-title: "Bee: Functions with Parameters"
+title: "Play Lab: Functions with Parameters"
 view: page_curriculum
 theme: none
 ---
@@ -8,7 +8,7 @@ theme: none
 live preview (once saved to dropbox) is at http://staging.code.org/curriculum/.  don't share this URL!
 -->
 
-<%= partial('curriculum_header', :unittitle=>'Course 4', :lesson=>16, :title=> 'Bee: Functions with Parameters', :unplugged=>false, :time=>30) %>
+<%= partial('curriculum_header', :unittitle=>'Course 4', :lesson=>15, :title=> 'Play Lab: Functions with Parameters', :unplugged=>false, :time=>30) %>
 
 [content]
 
@@ -16,7 +16,7 @@ live preview (once saved to dropbox) is at http://staging.code.org/curriculum/. 
 
 ## Lesson Overview 
 
-This short stage illustrates how students can use their new skills with functions and parameters to change direction using binary logic.
+Having experienced the creation and use of functions and parameters, students will get the opportunity to use the skill in the creation of Play Lab games. Later puzzles incorporate the use of multiple parameters.
 
 [summary]
 
@@ -25,9 +25,9 @@ This short stage illustrates how students can use their new skills with function
 
 [Introduction](#GetStarted) <br/>
 
-### **Activity: Bee: Functions with Parameters**
+### **Activity: Play Lab: Functions with Parameters**
 
-[Bee: Functions with Parameters](#Activity)
+[Artist: Play Lab with Parameters](#Activity)
 
 ### **Extended Learning**
 
@@ -39,8 +39,9 @@ This short stage illustrates how students can use their new skills with function
 ## Lesson Objectives 
 ### Students will:
 
-- Edit existing functions to make them work for specific tasks
-- Combine similar functions into a single one by utilizing parameters
+- Identify repeated movements and utilize functions to simplify a program
+- Utilize parameters to make one function work for multiple purposes
+- Adapt their understanding of functions to allow for the use of multiple parameters
 
 [/together]
 
@@ -50,14 +51,14 @@ This short stage illustrates how students can use their new skills with function
 
 ### <a name="GetStarted"></a> Introduction
 
-This lesson gets complicated rather quickly.  If your students had an easy time with previous lessons, then they should be able to keep up just fine.  If, however, they found the previous stages difficult, you may want to have them revisit Play Lab: Functions with Paramaters first. In this Bee level, students will not only be using multiple parameters iside their functions, they will also be using binary flags (left = 0, right = 1) to allow for logic decisions. 
+While the students will have had some experience creating functions with parameters in earlier stages, this Play Lab stage adds the complexity of using multiple parameters inside a single function.  This is a great opportunity to remind students that it is okay to get frustrated and to use trial and error as an effective learning tool.
 
 [/together]
 
 [together]
 
 ## Activity
-### <a name="Activity"></a> [Bee: Functions with Parameters](http://learn.code.org/s/course4/stage/16/puzzle/1)
+### <a name="Activity"></a> [Play Lab: Functions with Parameters](http://learn.code.org/s/course4/stage/15/puzzle/1)
 
 [/together]
 

@@ -1,14 +1,14 @@
 ---
-title: "Artist: Nested Loops"
+title: "Artist: Binary"
 view: page_curriculum
 theme: none
 ---
 
 <!--
-live preview (once saved to dropbox) is at http://staging.code.org/curriculum/k-1.  don't share this URL!
+live preview (once saved to dropbox) is at http://staging.code.org/curriculum/.  don't share this URL!
 -->
 
-<%= partial('curriculum_header', :unittitle=>'Course 3', :lesson=>11, :title=> 'Artist: Nested Loops', :unplugged=>false, :time=>30) %>
+<%= partial('curriculum_header', :unittitle=>'Course 4', :lesson=>18, :title=> 'Artist: Binary', :unplugged=>false, :time=>30) %>
 
 [content]
 
@@ -16,7 +16,7 @@ live preview (once saved to dropbox) is at http://staging.code.org/curriculum/k-
 
 ## Lesson Overview 
 
-Students use the Artist environment to write programs that have looped statements inside another loop, which is called a nested loop.
+Rounding out Course 4 is the Artist: Binary lesson. Here, students will build binary images, translating 0s and 1s to offs and ons (or blacks and whites).
 
 [summary]
 
@@ -25,9 +25,9 @@ Students use the Artist environment to write programs that have looped statement
 
 [Introduction](#GetStarted) <br/>
 
-### **Activity: Artist: Nested Loops**
+### **Activity: Artist: Binary**
 
-[Artist: Nested Loops](#Activity)
+[Artist: Binary](#Activity)
 
 ### **Extended Learning**
 
@@ -39,11 +39,11 @@ Students use the Artist environment to write programs that have looped statement
 ## Lesson Objectives 
 ### Students will:
 
-- Count the number of times an action should be repeated and represent it as a loop
-- Divide the number of degrees in a circle into even segments
-- Given a number of segments, calculate the degrees need to complete a circle
-- Break complex tasks into smaller repeatable sections
-- Combine simple shapes into complex designs with nested loops
+- Match binary sequences to encoded images
+- Utilize loops and binary code to recreate provided images
+- Identify repeated sequences and break long codes up into smaller chunks that can be looped
+- Create pictures using unique combinations of on and off
+
 
 [/together]
 
@@ -53,23 +53,16 @@ Students use the Artist environment to write programs that have looped statement
 
 ### <a name="GetStarted"></a> Introduction
 
-
+To begin, it can be helpful to review the previous lesson, specifically different ways of using binary to indicate how to create an image on a grid. This stage will translate the unplugged activity into a simple, independent online lesson.
 
 [/together]
 
 [together]
 
 ## Activity
-### <a name="Activity"></a> [Artist: Nested Loops](http://learn.code.org/s/course3/stage/11/puzzle/1)
-
-
+### <a name="Activity"></a> [Artist: Binary](http://learn.code.org/s/course4/stage/18/puzzle/1)
 
 [/together]
-
-
-<!--(this is left in here as an example of how to include an image in Markdown)
-![](binaryphoto.png) -->
-
 
 [together]
 
