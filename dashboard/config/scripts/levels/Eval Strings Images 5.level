@@ -6,14 +6,15 @@
   "user_id": 1,
   "properties": {
     "skin": "eval",
-    "instructions": "Try using this new Evaluation Block called \"overlay\" to place a 100 pixel white triangle on top of a 200 pixel red square.",
+    "instructions": "Try using this new Evaluation Block called \"overlay\" to place a 100 pixel white triangle on top of a 200 pixel red circle.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "free_play": "false"
+    "free_play": "false",
+    "embed": "false"
   }
 }]]></config>
   <blocks>
