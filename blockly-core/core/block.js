@@ -78,7 +78,7 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   this.userVisible_ = true;
   this.collapsed_ = false;
   this.dragging_ = false;
-  /** 
+  /**
    * The label which can be clicked to edit this block. This field is
    * currently set only for functional_call blocks.
    * @type {Blockly.FieldIcon}
@@ -446,6 +446,18 @@ Blockly.Block.prototype.getRelativeToSurfaceXY = function() {
     } while (element && element != this.blockSpace.getCanvas());
   }
   return {x: x, y: y};
+};
+
+/**
+ * Move a block to a specific location on the drawing surface.
+ * @param {number} x Horizontal location.
+ * @param {number} y Vertical location.
+ */
+Blockly.Block.prototype.moveTo = function(x, y) {
+  var oldXY = this.getRelativeToSurfaceXY();
+  this.svg_.getRootElement().setAttribute('transform',
+      'translate(' + x + ', ' + y + ')');
+  this.moveConnections_(x - oldXY.x, y - oldXY.y);
 };
 
 /**
@@ -1966,6 +1978,15 @@ Blockly.Block.prototype.getInput = function(name) {
 Blockly.Block.prototype.getInputTargetBlock = function(name) {
   var input = this.getInput(name);
   return input && input.connection && input.connection.targetBlock();
+};
+
+Blockly.Block.prototype.attachBlockToInputName = function(newBlock, inputName) {
+  var input = this.getInput(inputName);
+  if (!input || !input.connection) {
+    throw 'Block has no input named ' + name;
+  }
+
+  newBlock.previousConnection.connect(input.connection);
 };
 
 /**

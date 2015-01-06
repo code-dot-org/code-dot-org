@@ -8,9 +8,7 @@ cache: bundler
 
 bundler_args: --without development --deployment
 
-before_install: cd dashboard
-
-before_script: bin/rake db:create db:schema:load
+before_script: cd dashboard; bin/rake db:create db:schema:load
 
 script: bin/rake
 
