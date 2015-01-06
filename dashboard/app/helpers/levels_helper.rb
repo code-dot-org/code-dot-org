@@ -233,6 +233,7 @@ module LevelsHelper
       coordinate_grid_background
       use_modal_function_editor
       use_contract_editor
+      default_num_example_blocks
       impressive
       open_function_definition
       callout_json

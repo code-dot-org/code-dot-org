@@ -53,19 +53,8 @@
         </category>
         <category name="Image">
           <block type="functional_triangle" inline="false"/>
-          <block type="functional_call">
-            <mutation name="my-shape"/>
-          </block>
         </category>
-        <category name="Variables">
-          <block type="functional_definition" inline="false" uservisible="false">
-            <mutation>
-              <outputtype>image</outputtype>
-              <isfunctionalvariable>true</isfunctionalvariable>
-            </mutation>
-            <title name="NAME">my-shape</title>
-          </block>
-        </category>
+        <category name="Variables" custom="FUNCTIONAL_VARIABLE"/>
       </xml>
     </toolbox_blocks>
     <solution_blocks>
