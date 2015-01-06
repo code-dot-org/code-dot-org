@@ -61,7 +61,7 @@ post '/forms/:parent_kind/:parent_id/children/:kind' do |parent_kind, parent_id,
 
   begin
     content_type :json
-    insert_form(kind, params, parent_id:parent_form[:id]).data.to_json
+    insert_form(kind, params, parent_id:parent_form[:id])[:data].to_json
   rescue FormError=>e
     form_error! e
   end
