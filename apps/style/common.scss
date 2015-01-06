@@ -251,7 +251,7 @@ div.droplet-palette-group-header-selected {
 }
 
 /* Buttons */
-button {
+button, label.img-upload {
   margin: 5px;
   padding: 10px;
   border-radius: 4px;
@@ -352,6 +352,10 @@ button.disabled {
 }
 button.notext {
   font-size: 10%;
+}
+label.img-upload {
+  display: inline-block;
+  vertical-align: middle;
 }
 input[type="radio"] {
   margin-left: 40px;
