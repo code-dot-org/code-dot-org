@@ -30,7 +30,6 @@ var dom = require('./dom');
 var utils = require('./utils');
 var blockUtils = require('./block_utils');
 var builder = require('./builder');
-var Slider = require('./slider');
 var _ = utils.getLodash();
 var constants = require('./constants.js');
 
@@ -549,18 +548,6 @@ StudioApp.init = function(config) {
     }
     startBlocks = StudioApp.arrangeBlockPosition(startBlocks, config.blockArrangement);
     StudioApp.loadBlocks(startBlocks);
-  }
-
-  // Initialize the slider.
-  var slider = document.getElementById('slider');
-  if (slider) {
-    // TODO (noted by cpirich): remove Turtle specific code here:
-    Turtle.speedSlider = new Slider(10, 35, 130, slider);
-
-    // Change default speed (eg Speed up levels that have lots of steps).
-    if (config.level.sliderSpeed) {
-      Turtle.speedSlider.setValue(config.level.sliderSpeed);
-    }
   }
 
   // listen for scroll and resize to ensure onResize() is called
