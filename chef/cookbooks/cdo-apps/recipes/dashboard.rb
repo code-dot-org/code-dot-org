@@ -39,7 +39,7 @@ template "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/config
 end
 
 link "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/public/blockly" do
-  to "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/public/blockly-package"
+  to "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/public/apps-package"
   action :create
   user node[:current_user]
   group node[:current_user]

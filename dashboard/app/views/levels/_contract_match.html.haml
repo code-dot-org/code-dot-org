@@ -1,0 +1,63 @@
+.contract
+  - data = @level.properties
+  - app = 'contract_match'
+
+  .mainblock
+    = render partial: 'levels/content', locals: {app: app, data: data}
+    %div Name
+    %div
+      %input#functionNameText{type: 'text', placeholder: 'Name'}
+    %div#outputTypeTitle Range
+    %select#rangeInput
+      %option none
+      %option Number
+      %option string
+      %option image
+      %option boolean
+    %div#domainTitle Domain
+    %div
+      %input#domainItemText{type: 'text', placeholder: 'Name'}
+      %select#domainInput
+        %option none
+        %option Number
+        %option string
+        %option image
+        %option boolean
+      %button#addButton Add
+    %div#domainItems
+    = render partial: 'levels/dialog', locals: {app: app, data: data}
+  .clear
+= render partial: 'levels/common_audio'
+:javascript
+  $('#addButton').click(function()
+  {
+    var domainItemText = $('#domainItemText').val();
+    var domainInput = $('#domainInput').val();
+    $('#domainItemText').val('');
+    var $div = $('<div>'+domainItemText+':'+domainInput + '</div>')
+    var $button = $('<button>X</button>');
+    $div.append($button);
+    $button.click(function(event) {
+      $(event.target.parentElement).remove();
+    });
+    $('#domainItems').append($div);
+  });
+
+  function getResult()
+  {
+    var functionName = $('#functionNameText').val();
+    var rangeInput = $('#rangeInput').val();
+    var items = $('#domainItems').children().map(function(item, element) { return (element.firstChild.textContent);});
+
+    // Order domain inputs alphabetically sorted
+    var domainInput = $.makeArray(items).slice().sort().join('|');
+    var response = functionName + '|' + rangeInput + '|' + domainInput;
+    console.log('input="' + response + '"');
+    var result = #{data['answers'].to_json}.some(function(element) {
+      return response == element;
+    });
+    return {
+      response: response,
+      result: result
+    };
+  }

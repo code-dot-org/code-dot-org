@@ -7,7 +7,7 @@
   "properties": {
     "skin": "calc",
     "embed": "false",
-    "instructions": "Variables allow us to store values that we can then use repeatedly throughout our programs. Here's a variable called \"age\" - set it to your 14 and click run.",
+    "instructions": "Variables allow us to store values that we can then use repeatedly throughout our programs. Here's a variable called \"age\" - set its value to 14 and click run.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -20,17 +20,22 @@
   <blocks>
     <start_blocks>
       <xml>
+        <block type="functional_compute" inline="false" deletable="false" movable="false">
+          <functional_input name="ARG1">
+            <block type="functional_call" movable="false">
+              <mutation name="age"/>
+            </block>
+          </functional_input>
+        </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
             <outputtype>Number</outputtype>
             <isfunctionalvariable>true</isfunctionalvariable>
           </mutation>
           <title name="NAME">age</title>
-        </block>
-        <block type="functional_compute" inline="false" deletable="false" movable="false">
-          <functional_input name="ARG1">
-            <block type="functional_call" movable="false">
-              <mutation name="age"/>
+          <functional_input name="STACK">
+            <block type="functional_math_number_dropdown">
+              <title name="NUM" config="10,11,12,13,14,15">???</title>
             </block>
           </functional_input>
         </block>
@@ -50,7 +55,7 @@
             <title name="NUM" config="0,1,2,3,4,5,6,7,8,9,10">???</title>
           </block>
         </category>
-        <category name="Variables" custom="VARIABLE"/>
+        <category name="Variables" custom="FUNCTIONAL_VARIABLE"/>
       </xml>
     </toolbox_blocks>
     <solution_blocks>
