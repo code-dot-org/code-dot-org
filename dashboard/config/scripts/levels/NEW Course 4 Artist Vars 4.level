@@ -52,7 +52,7 @@
                           <statement name="DO">
                             <block type="draw_move" inline="true" deletable="false">
                               <title name="DIR">moveForward</title>
-                              <value name="VALUE" deletable="false">
+                              <value name="VALUE">
                                 <block type="variables_get" deletable="false">
                                   <title name="VAR">length</title>
                                 </block>

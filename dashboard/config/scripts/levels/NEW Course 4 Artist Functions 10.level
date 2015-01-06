@@ -21,7 +21,8 @@
     "x": "175",
     "y": "250",
     "disable_sharing": "false",
-    "callout_json": "[{\r\n  \"on\": \"function_editor_opened\",\r\n  \"localization_key\": \"write_draw_square_function\",\r\n  \"element_id\": \"#write_draw_square_function_qtip\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}\r\n  }\r\n}]"
+    "callout_json": "[{\r\n  \"on\": \"function_editor_opened\",\r\n  \"localization_key\": \"write_draw_square_function\",\r\n  \"element_id\": \"#write_draw_square_function_qtip\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}\r\n  }\r\n}]",
+    "ideal": "9"
   }
 }]]></config>
   <blocks>
@@ -145,7 +146,7 @@
     </required_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" movable="false" deletable="false">
+        <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="procedures_callnoreturn">
               <mutation name="draw a square"/>

@@ -5,7 +5,7 @@ rightbar: blank
 ---
 - dont_cache
 - workshop_id = request.splat_path_info[1..-1]
-- pass unless form = Form.first(kind:'ProfessionalDevelopmentWorkshop', id:workshop_id)
+- pass unless form = Form2.from_row(DB[:forms].where(kind:'ProfessionalDevelopmentWorkshop', id:workshop_id).first)
 - data = form.data
 - signup_count = DB[:forms].where(kind:'ProfessionalDevelopmentWorkshopSignup').and(parent_id:workshop_id).count
 

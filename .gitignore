@@ -3,6 +3,7 @@
 .DS_Store
 .dropbox
 .idea/
+/.bundle
 /.gdrive_session
 /chef/.chef/
 /crontab

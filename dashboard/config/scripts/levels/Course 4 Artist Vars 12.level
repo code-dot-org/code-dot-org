@@ -20,7 +20,9 @@
     "impressive": "false",
     "slider_speed": ".50",
     "embed": "false",
-    "callout_json": "[{\r\n  \"localization_key\": \"set_length\",\r\n  \"element_id\": \"[block-id='14']\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}\r\n  }\r\n}]"
+    "callout_json": "[{\r\n  \"localization_key\": \"set_length\",\r\n  \"element_id\": \"[block-id='14']\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}\r\n  }\r\n}]",
+    "ideal": "21",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
@@ -268,7 +270,7 @@
     </required_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" movable="false" deletable="false">
+        <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="variables_set" inline="false">
               <title name="VAR">sides</title>

@@ -123,7 +123,7 @@ Each group will work through the word problems on the [Design Recipe Worksheet](
 
 [tip]
 
-## Lesson Tip
+# Lesson Tip
 
 Challenge students to defend their Examples (their function name, the number of inputs, their types and the type of the returned value). Make sure that the two Examples for each function have different input values! For each of these questions, students must be able to point to the specific part of their Contract as the justification for their Example.
 

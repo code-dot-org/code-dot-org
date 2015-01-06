@@ -6,5 +6,5 @@ exports.compute = function (expr, blockId) {
 };
 
 exports.expression = function (operator, arg1, arg2, blockId) {
-  return new ExpressionNode(operator, arg1, arg2, blockId);
+  return new ExpressionNode(operator, [arg1, arg2], blockId);
 };

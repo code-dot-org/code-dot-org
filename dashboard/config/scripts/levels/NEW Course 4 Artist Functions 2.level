@@ -20,7 +20,8 @@
     "y": "250",
     "free_play": "false",
     "impressive": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "ideal": "23"
   }
 }]]></config>
   <blocks>

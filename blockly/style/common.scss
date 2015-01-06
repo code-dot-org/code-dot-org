@@ -87,6 +87,14 @@ div.droplet-palette-group-header-selected {
   background-color: #e0e053;
 }
 
+.droplet-palette-group-header.red {
+  border-left:10px solid #FA8A8C;
+}
+
+.droplet-palette-group-header-selected.red {
+  background-color: #FA8A8C;
+}
+
 .droplet-wrapper-div {
   outline-style: none;
 }
@@ -125,7 +133,7 @@ div.droplet-palette-group-header-selected {
 
 .ace_gutter-cell.ace_breakpoint {
   border-radius: 15px 0px 0px 15px;
-  box-shadow: 0px 0px 0px 40px blue inset;
+  box-shadow: 0px 0px 0px 40px rgba(0, 0, 255, 0.5) inset;
   color: white;
 }
 

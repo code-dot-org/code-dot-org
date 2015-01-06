@@ -88,7 +88,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.get_from_cache(id)
-    if self.script_cache[id.to_s]
+    if !Rails.env.levelbuilder? && self.script_cache[id.to_s]
       self.script_cache[id.to_s]
     else
       # a bit of trickery so we support both ids which are numbers and

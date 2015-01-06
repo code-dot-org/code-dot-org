@@ -33,12 +33,18 @@ var page = require('../templates/page.html');
 var feedback = require('../feedback.js');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
+var _ = require('../utils').getLodash();
+var timeoutList = require('../timeoutList');
 
 var ExpressionNode = require('./expressionNode');
 var TestResults = require('../constants').TestResults;
 
 var level;
 var skin;
+
+// todo - better approach for reserved name?
+// use zzz for sorting purposes (which is also hacky)
+var COMPUTE_NAME = 'zzz_compute';
 
 BlocklyApps.CHECK_FOR_EMPTY_BLOCKS = false;
 BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
@@ -47,11 +53,29 @@ var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
 
 var appState = {
+  targetExpressions: null,
+  userExpressions: null,
   animating: false,
   response: null,
   message: null,
   result: null,
-  testResults: null
+  testResults: null,
+  currentAnimationDepth: 0
+};
+
+var stepSpeed = 2000;
+
+
+/**
+ * An equation is an expression attached to a particular name. For example:
+ *   f(x) = x + 1
+ *   name: f
+ *   equation: x + 1
+ * In many cases, this will just be an expression with no name.
+ */
+var Equation = function (name, expression) {
+  this.name = name;
+  this.expression = expression;
 };
 
 /**
@@ -65,8 +89,11 @@ Calc.init = function(config) {
   Calc.expressions = {
     target: null, // the complete target expression
     user: null, // the current state of the user expression
-    current: null // the current state of the target expression
   };
+
+  if (level.scale && level.scale.stepSpeed !== undefined) {
+    stepSpeed = level.scale.stepSpeed;
+  }
 
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'functional_compute';
@@ -116,8 +143,17 @@ Calc.init = function(config) {
       solutionBlocks = blockUtils.forceInsertTopBlock(level.solutionBlocks,
         config.forceInsertTopBlock);
     }
-    Calc.expressions.target = getExpressionFromBlocks(solutionBlocks);
-    Calc.drawExpressions();
+
+    appState.targetExpressions = generateExpressionsFromBlockXml(solutionBlocks);
+
+    _.keys(appState.targetExpressions).sort().forEach(function (name, index) {
+      var expression = appState.targetExpressions[name];
+      var tokenList = expression.getTokenList(false);
+      if (name === COMPUTE_NAME) {
+        name = null;
+      }
+      displayEquation('answerExpression', name, tokenList, index);
+    });
 
     // Adjust visualizationColumn width.
     var visualizationColumn = document.getElementById('visualizationColumn');
@@ -147,12 +183,13 @@ BlocklyApps.runButtonClick = function() {
  */
 Calc.resetButtonClick = function () {
   Calc.expressions.user = null;
-  Calc.expressions.current = null;
   appState.message = null;
+  appState.currentAnimationDepth = 0;
+  timeoutList.clearTimeouts();
 
   appState.animating = false;
 
-  Calc.drawExpressions();
+  clearSvgUserExpression();
 };
 
 
@@ -181,70 +218,142 @@ function evalCode (code) {
 }
 
 /**
- * Generates an ExpressionNode from the blocks in the workspace. If blockXml
- * is provided, temporarily sticks those blocks into the workspace to generate
- * the ExpressionNode, then deletes blocks.
+ * Generate a set of expressions from the blocks currently in the workspace.
+ * @returns  an object in which keys are expression names (or COMPUTE_NAME for
+ * the base expression), and values are the expressions
  */
+function generateExpressionsFromTopBlocks() {
+  var obj = {};
 
-function getExpressionFromBlocks(blockXml) {
+  var topBlocks = Blockly.mainBlockSpace.getTopBlocks();
+  var equationList = topBlocks.forEach(function (block) {
+    var equation = getEquationFromBlock(block);
+    obj[equation.name || COMPUTE_NAME] = equation.expression;
+  });
+  return obj;
+}
+
+/**
+ * Given some xml, generates a set of expressions by loading the xml into the
+ * workspace and calling generateExpressionsFromTopBlocks. Fails if there are
+ * already blocks in the workspace.
+ */
+function generateExpressionsFromBlockXml(blockXml) {
   if (blockXml) {
     if (Blockly.mainBlockSpace.getTopBlocks().length !== 0) {
-      throw new Error("getExpressionFromBlocks shouldn't be called with blocks if " +
-        "we already have blocks in the workspace");
+      throw new Error("generateTargetExpression shouldn't be called with blocks" +
+        "if we already have blocks in the workspace");
     }
     // Temporarily put the blocks into the workspace so that we can generate code
     BlocklyApps.loadBlocks(blockXml);
   }
 
-  var code = Blockly.Generator.blockSpaceToCode('JavaScript', ['functional_compute', 'functional_definition']);
-  evalCode(code);
-  var object = Calc.computedExpression;
-  Calc.computedExpression = null;
+  var obj = generateExpressionsFromTopBlocks();
 
-  if (blockXml) {
-    // Remove the blocks
-    Blockly.mainBlockSpace.getTopBlocks().forEach(function (b) { b.dispose(); });
+  Blockly.mainBlockSpace.getTopBlocks().forEach(function (block) {
+    block.dispose();
+  });
+
+  return obj;
+}
+
+// todo (brent) : would this logic be better placed inside the blocks?
+// todo (brent) : could use some unit tests
+function getEquationFromBlock(block) {
+  if (!block) {
+    return null;
   }
+  var firstChild = block.getChildren()[0];
+  switch (block.type) {
+    case 'functional_compute':
+      if (!firstChild) {
+        return new ExpressionNode(0);
+      }
+      return getEquationFromBlock(firstChild);
 
-  return object;
+    case 'functional_plus':
+    case 'functional_minus':
+    case 'functional_times':
+    case 'functional_dividedby':
+      var operation = block.getTitles()[0].getValue();
+      var args = ['ARG1', 'ARG2'].map(function(inputName) {
+        var argBlock = block.getInputTargetBlock(inputName);
+        if (!argBlock) {
+          return 0;
+        }
+        return getEquationFromBlock(argBlock).expression;
+      });
+
+      return new Equation(null, new ExpressionNode(operation, args, block.id));
+
+    case 'functional_math_number':
+    case 'functional_math_number_dropdown':
+      var val = block.getTitleValue('NUM') || 0;
+      if (val === '???') {
+        val = 0;
+      }
+      return new Equation(null,
+        new ExpressionNode(parseInt(val, 10), [], block.id));
+
+    case 'functional_call':
+      var name = block.getCallName();
+      var def = Blockly.Procedures.getDefinition(name, Blockly.mainBlockSpace);
+      if (!def.isVariable()) {
+        throw new Error('not expected');
+      }
+      return new Equation(null, new ExpressionNode(name));
+
+    case 'functional_definition':
+      if (block.isVariable()) {
+        if (!firstChild) {
+          return new Equation(block.getTitleValue('NAME'), new ExpressionNode(0));
+        }
+        return new Equation(block.getTitleValue('NAME'),
+          getEquationFromBlock(firstChild).expression);
+      }
+      throw new Error('not sure if this works yet');
+
+    default:
+      throw "Unknown block type: " + block.type;
+  }
 }
 
 /**
- * Execute the user's code.  Heaven help us...
+ * Execute the user's code.
  */
 Calc.execute = function() {
-  appState.result = BlocklyApps.ResultType.UNSET;
   appState.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
   appState.message = undefined;
 
-  var userExpression = getExpressionFromBlocks();
-  if (userExpression) {
-    Calc.expressions.user = userExpression.clone();
-  } else {
-    Calc.expressions.user = new ExpressionNode(0);
-  }
+  appState.userExpressions = generateExpressionsFromTopBlocks();
 
-  if (Calc.expressions.target) {
-    Calc.expressions.current = Calc.expressions.target.clone();
-    Calc.expressions.user.applyExpectation(Calc.expressions.target);
-  }
+  appState.result = true;
+  _.keys(appState.targetExpressions).forEach(function (targetName) {
+    var target = appState.targetExpressions[targetName];
+    var user = appState.userExpressions[targetName];
+    if (!user || !user.isIdenticalTo(target)) {
+      appState.result = false;
+    }
+  });
 
-  // todo - should this be using ResultType.* instead?
-  appState.result = !Calc.expressions.user.failedExpectation(true);
-  appState.testResults = BlocklyApps.getTestResults(appState.result);
-
-  // equivalence means the expressions are the same if we ignore the ordering
-  // of inputs
-  if (!appState.result && Calc.expressions.user.isEquivalent(Calc.expressions.target)) {
-    appState.testResults = TestResults.APP_SPECIFIC_FAIL;
-    appState.message = calcMsg.equivalentExpression();
-  }
-
+  var hasVariablesOrFunctions = _(appState.userExpressions).size() > 1;
   if (level.freePlay) {
+    appState.result = true;
     appState.testResults = BlocklyApps.TestResults.FREE_PLAY;
+  } else {
+    // todo -  should we have single place where we get single target/user?
+    var user = appState.userExpressions[COMPUTE_NAME];
+    var target = appState.targetExpressions[COMPUTE_NAME];
+
+    if (!appState.result && !hasVariablesOrFunctions &&
+        user.isEquivalentTo(target)) {
+      appState.testResults = TestResults.APP_SPECIFIC_FAIL;
+      appState.message = calcMsg.equivalentExpression();
+    } else {
+      appState.testResults = BlocklyApps.getTestResults(appState.result);
+    }
   }
 
-  Calc.drawExpressions();
 
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
@@ -260,11 +369,26 @@ Calc.execute = function() {
   };
 
   BlocklyApps.report(reportData);
-  appState.animating = true;
 
-  window.setTimeout(function () {
-    Calc.step(false);
-  }, 1000);
+
+  appState.animating = true;
+  if (appState.result && !hasVariablesOrFunctions) {
+    Calc.step();
+  } else {
+    clearSvgUserExpression();
+    _(appState.userExpressions).keys().sort().forEach(function (name, index) {
+      var expression = appState.userExpressions[name];
+      var expected = appState.targetExpressions[name] || expression;
+      var tokenList = expression.getTokenListDiff(expected);
+      if (name === COMPUTE_NAME) {
+        name = null;
+      }
+      displayEquation('userExpression', name, tokenList, index, 'errorToken');
+    });
+    timeoutList.setTimeout(function () {
+      stopAnimatingAndDisplayFeedback();
+    }, stepSpeed);
+  }
 };
 
 function stopAnimatingAndDisplayFeedback() {
@@ -277,65 +401,20 @@ function stopAnimatingAndDisplayFeedback() {
  * collapsing the next node in our tree. If that node failed expectations, we
  * will stop further evaluation.
  */
-Calc.step = function (ignoreFailures) {
-  if (!Calc.expressions.user) {
-    return;
-  }
-
-  // If we've fully collapsed our expression, display feedback
-  if (!Calc.expressions.user.isOperation()) {
+Calc.step = function () {
+  if (animateUserExpression(appState.currentAnimationDepth)) {
     stopAnimatingAndDisplayFeedback();
     return;
   }
+  appState.currentAnimationDepth++;
 
-  var collapsed = Calc.expressions.user.collapse(ignoreFailures);
-  if (!collapsed) {
-    stopAnimatingAndDisplayFeedback();
-    return;
-  } else {
-    if (Calc.expressions.current) {
-      Calc.expressions.current.collapse();
-    }
-    Calc.drawExpressions();
-
-    window.setTimeout(function () {
-      Calc.step(false);
-    }, 1000);
-  }
+  timeoutList.setTimeout(function () {
+    Calc.step();
+  }, stepSpeed);
 };
 
-/**
- * Draw the current state of our two expressions.
- */
-Calc.drawExpressions = function () {
-  var expected = Calc.expressions.current || Calc.expressions.target;
-  var user = Calc.expressions.user;
-
-  // todo - in cases where we have the wrong answer, marking the "next" operation
-  // for both doesn't necessarily make sense, i.e.
-  // goal: ((1 + 2) * (3 + 4))
-  // user: (0 * (3 + 4))
-  // right now, we'll highlight the 1 + 2 for goal, and the 3 + 4 for user
-
-  if (expected) {
-    expected.applyExpectation(expected);
-    drawSvgExpression('answerExpression', expected, user !== null);
-  }
-
-  if (user) {
-    if (expected) {
-      user.applyExpectation(expected);
-    }
-    drawSvgExpression('userExpression', user, true);
-    var deepest = user.getDeepestOperation();
-    BlocklyApps.highlight(deepest ? deepest.blockId : null);
-  } else {
-    clearSvgExpression('userExpression');
-  }
-};
-
-function clearSvgExpression(elementId) {
-  var g = document.getElementById(elementId);
+function clearSvgUserExpression() {
+  var g = document.getElementById('userExpression');
   // remove all existing children, in reverse order so that we don't have to
   // worry about indexes changing
   for (var i = g.childNodes.length - 1; i >= 0; i--) {
@@ -343,48 +422,111 @@ function clearSvgExpression(elementId) {
   }
 }
 
-function drawSvgExpression(elementId, expr, styleMarks) {
-  var i, text, textLength, char;
-  var g = document.getElementById(elementId);
-  clearSvgExpression(elementId);
+/**
+ * Draws a user expression and each step collapsing it, up to given depth.
+ * Returns true if it couldn't collapse any further at this depth.
+ */
+function animateUserExpression (maxNumSteps) {
+  var finished = false;
 
-  var tokenList = expr.getTokenList(styleMarks);
-  var xPos = 0;
-  for (i = 0; i < tokenList.length; i++) {
-    text = document.createElementNS(Blockly.SVG_NS, 'text');
+  if (_(appState.userExpressions).size() > 1 ||
+    _(appState.targetExpressions).size() > 1) {
+    throw new Error('Can only animate with single user/target');
+  }
 
-    // getComputedTextLength doesn't respect trailing spaces, so we replace them
-    // with _, calculate our size, then return to the version with spaces.
-    char = tokenList[i].char;
-    text.textContent = char.replace(/ /g, '_');
-    g.appendChild(text);
-    // getComputedTextLength isn't available to us in our mochaTests
-    textLength = text.getComputedTextLength ? text.getComputedTextLength() : 0;
-    text.textContent = char;
+  var userExpression = appState.userExpressions[COMPUTE_NAME];
+  if (!userExpression) {
+    throw new Error('require user expression');
+  }
 
-    text.setAttribute('x', xPos + textLength / 2);
-    text.setAttribute('text-anchor', 'middle');
-    xPos += textLength;
+  clearSvgUserExpression();
 
-    if (styleMarks && tokenList[i].marked) {
-      if (char === '(' || char === ')') {
-        text.setAttribute('class', 'highlightedParen');
-      } else {
-        text.setAttribute('class', 'exprMistake');
+  var current = userExpression.clone();
+  var previousExpression = current;
+  var currentDepth = 0;
+  for (var currentStep = 0; currentStep <= maxNumSteps && !finished; currentStep++) {
+    var tokenList;
+    if (currentDepth === maxNumSteps) {
+      tokenList = current.getTokenListDiff(previousExpression);
+    } else if (currentDepth + 1 === maxNumSteps) {
+      var deepest = current.getDeepestOperation();
+      if (deepest) {
+        BlocklyApps.highlight('block_id_' + deepest.blockId);
       }
+      tokenList = current.getTokenList(true);
+    } else {
+      tokenList = current.getTokenList(false);
+    }
+    displayEquation('userExpression', null, tokenList, currentDepth, 'markedToken');
+    previousExpression = current.clone();
+    if (current.collapse()) {
+      currentDepth++;
+    } else if (currentStep - currentDepth > 2) {
+      // we want to go one more step after the last collapse so that we show
+      // our last line without highlighting it
+      finished = true;
     }
   }
 
-  // center entire expression
-  // todo (brent): handle case where expression is longer than width
-  var width = g.getBoundingClientRect().width;
-  var xPadding = (CANVAS_WIDTH - width) / 2;
-  var currentTransform = g.getAttribute('transform');
-  // IE has space separated args, others use comma to separate
-  var newTransform = currentTransform.replace(/translate\(.*[,|\s]/,
-    "translate(" + xPadding + ",");
-  g.setAttribute('transform', newTransform);
+
+
+  return finished;
 }
+
+/**
+ * Append a tokenList to the given parent element
+ * @param {string} parentId Id of parent element
+ * @param {string} name Name of the function/variable. Null if base expression.
+ * @param {Array<Object>} tokenList A list of tokens, representing the expression
+ * @param {number} line How many lines deep into parent to display
+ * @param {string} markClass Css class to use for 'marked' tokens.
+ */
+function displayEquation(parentId, name, tokenList, line, markClass) {
+  var parent = document.getElementById(parentId);
+
+  var g = document.createElementNS(Blockly.SVG_NS, 'g');
+  parent.appendChild(g);
+  var xPos = 0;
+  var len;
+  if (name) {
+    len = addText(g, (name + ' = '), xPos, null);
+    xPos += len;
+  }
+
+  for (var i = 0; i < tokenList.length; i++) {
+    len = addText(g, tokenList[i].str, xPos, tokenList[i].marked && markClass);
+    xPos += len;
+  }
+
+  // todo (brent): handle case where expression is longer than width
+  var xPadding = (CANVAS_WIDTH - g.getBoundingClientRect().width) / 2;
+  var yPos = (line * 20);
+  g.setAttribute('transform', 'translate(' + xPadding + ', ' + yPos + ')');
+}
+
+/**
+ * Add some text to parent element at given xPos with css class className
+ */
+function addText(parent, str, xPos, className) {
+  var text, textLength;
+  text = document.createElementNS(Blockly.SVG_NS, 'text');
+  // getComputedTextLength doesn't respect trailing spaces, so we replace them
+  // with _, calculate our size, then return to the version with spaces.
+  text.textContent = str.replace(/ /g, '_');
+  parent.appendChild(text);
+  // getComputedTextLength isn't available to us in our mochaTests
+  textLength = text.getComputedTextLength ? text.getComputedTextLength() : 0;
+  text.textContent = str;
+
+  text.setAttribute('x', xPos + textLength / 2);
+  text.setAttribute('text-anchor', 'middle');
+  if (className) {
+    text.setAttribute('class', className);
+  }
+
+  return textLength;
+}
+
 
 /**
  * Deep clone a node, then removing any ids from the clone so that we don't have
@@ -414,9 +556,7 @@ var displayFeedback = function() {
   level.extraTopBlocks = calcMsg.extraTopBlocks();
   var appDiv = null;
   // Show svg in feedback dialog
-  if (appState.testResults === TestResults.LEVEL_INCOMPLETE_FAIL) {
-    appDiv = cloneNodeWithoutIds('svgCalc');
-  }
+  appDiv = cloneNodeWithoutIds('svgCalc');
   var options = {
     app: 'Calc',
     skin: skin.id,

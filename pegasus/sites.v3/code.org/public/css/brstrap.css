@@ -4,6 +4,8 @@
 
 @media screen and (min-width: 0px) and (max-width: 600px) 
 {
+  .phone-feature { }
+
   .container_responsive { width: 100%; margin: 0 auto }
 
   .container_responsive h1 { font-size: 18px; margin-top: 1em; margin-bottom: .5em; }
@@ -24,6 +26,7 @@
 @media screen and (min-width: 601px)
 {
   .tablet-feature {}
+  .phone-feature { display: none; }
 }
 
 /* 600px and down: not even a tablet */

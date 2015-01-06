@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Let's edit this \"draw a shape\" function. It already has a \"length\" parameter. Now, let's edit the function to also add a \"sides\" parameter. Remember the angle to turn for a given shape is 360 divided by the sides it has. Hint: lengths for each shape are the triangle is 100 pixels, the hexagon is 25 pixels and the square is 50 pixels. ",
+    "instructions": "Let's edit this \"draw a shape\" function. It already has a \"length\" parameter. Now, let's edit the function to also add a \"sides\" parameter. Remember the angle to turn for a given shape is 360 divided by the sides it has. Hint: lengths for each shape are; the triangle is 100 pixels, the hexagon is 25 pixels and the square is 50 pixels.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",

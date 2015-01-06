@@ -21,7 +21,8 @@
     "start_direction": "90",
     "x": "150",
     "y": "275",
-    "callout_json": "[\r\n  {\"localization_key\": \"create_function\", \"element_id\": \".blocklyTreeLabel:contains(Functions)\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}}\r\n  }\r\n]"
+    "callout_json": "[\r\n  {\"localization_key\": \"create_function\", \"element_id\": \".blocklyTreeLabel:contains(Functions)\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}}\r\n  }\r\n]",
+    "ideal": "12"
   }
 }]]></config>
   <blocks>
@@ -80,7 +81,17 @@
             <title name="NUM">0</title>
           </block>
           <block type="math_arithmetic" inline="true">
-            <title name="OP">ADD</title>
+            <title name="OP">DIVIDE</title>
+            <value name="A">
+              <block type="math_number">
+                <title name="NUM">360</title>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number">
+                <title name="NUM">6</title>
+              </block>
+            </value>
           </block>
         </category>
         <category name="Functions" custom="PROCEDURE">

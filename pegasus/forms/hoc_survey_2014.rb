@@ -3,31 +3,50 @@ class HocSurvey2014
   def self.normalize(data)
     result = {}
 
-    decrypted_email = Poste.decrypt(data[:code_s])
-    result[:email_s] = required enum(data[:email_s].to_.strip.downcase, [decrypted_email])
+    result[:email_s] = Poste.decrypt(data[:code_s])
+    puts result[:email_s]
 
-    result[:teacher_name_s] = required stripped data[:name_s]
-    result[:event_country_s] = enum(data[:event_country_s].to_s.strip.downcase, HOC_COUNTRIES.keys)
+    result[:event_country_s] = required stripped data[:event_country_s]
     result[:teacher_description_s] = required stripped data[:teacher_description_s]
-    result[:event_location_type_s] = stripped data[:event_location_type_s]
-    result[:students_number_total_i] = required stripped data[:students_number_total_i]
-    result[:students_number_girls_i] = required stripped data[:students_number_girls_i]
-    result[:students_number_ethnicity_i] = required stripped data[:students_number_ethnicity_i]
-    result[:students_grade_levels_ss] = stripped data[:students_grade_levels_ss]
-    result[:event_tutorials_ss] = stripped data[:event_tutorials_ss]
-    result[:event_technology_ss] = stripped data[:event_technology_ss]
-    result[:event_experience_s] = required stripped data[:event_experience_s]
-    result[:event_improvement_s] = stripped data[:event_improvement_s]
-    result[:event_annual_s] = stripped data[:event_annual_s]
-    result[:teacher_plan_teach_cs_s] = stripped data[:teacher_plan_teach_cs]
-    result[:teacher_first_year_s] = stripped data[:teacher_first_year_s]
-    result[:teacher_how_heard_ss] = stripped data[:teacher_how_heard_ss]
+    result[:event_location_type_s] = required stripped data[:event_location_type_s]
+    result[:students_number_total_s] = required stripped data[:students_number_total_s]
+    result[:students_number_girls_s] = required stripped data[:students_number_girls_s]
 
-    if result[:teacher_how_heard_ss].class != FieldError && result[:teacher_how_heard_ss].include?('Other')
-      result[:teacher_how_heard_other_s] = required stripped data[:teacher_how_heard_other_s]
+    if result[:event_country_s].class != FieldError && result[:event_country_s] == 'United States'
+      result[:students_number_ethnicity_s] = required stripped data[:students_number_ethnicity_s]
     end
 
+    result[:students_grade_levels_ss] = required stripped data[:students_grade_levels_ss]
+    result[:event_tutorials_ss] = required stripped data[:event_tutorials_ss]
+    result[:event_technology_s] = required stripped data[:event_technology_s]
+    result[:event_experience_s] = required stripped data[:event_experience_s]
+    result[:event_improvement_s] = stripped data[:event_improvement_s]
+    result[:event_annual_s] = required stripped data[:event_annual_s]
+    result[:teacher_plan_teach_cs_s] = stripped data[:teacher_plan_teach_cs]
+    result[:teacher_first_year_s] = stripped data[:teacher_first_year_s]
+    result[:teacher_how_heard_ss] = required stripped data[:teacher_how_heard_ss]
+
+    if result[:teacher_how_heard_ss].class != FieldError && result[:teacher_how_heard_ss].include?('Other')
+      result[:teacher_how_heard_other_s] = stripped data[:teacher_how_heard_other_s]
+    end
+
+    if result[:event_country_s].class != FieldError && result[:event_country_s] == 'United States' && result[:event_location_type_s].class != FieldError && result[:event_location_type_s] == 'Public school'
+      result[:teacher_district_s] = stripped data[:teacher_district_s]
+    end
+
+    result[:prize_choice_s] = required enum(data[:prize_choice_s].to_s.strip, ['Dropbox', 'Skype', 'None'])
+
     result
+  end
+  
+  def self.process(data)
+    {}.tap do |results|
+      results['prize_code_s'] = claim_prize_code(data['prize_choice_s'], data['email_s']);
+    end
+  end
+  
+  def self.receipt()
+    'hoc_survey_2014_receipt'
   end
 
   def self.teacher_descriptions()
@@ -53,7 +72,7 @@ class HocSurvey2014
       'Public school',
       'Public charter school',
       'Private school',
-      'Parochial/Religious school ',
+      'Parochial/Religious school',
       'After school',
       'Camp or club',
       'Home',
@@ -146,7 +165,10 @@ class HocSurvey2014
   end
 
   def self.claim_prize_code(type, email, params={})
-    ip_address = params[:ip_address] || request.ip
+    ip_address = params[:ip_address] || '127.0.0.1'
+
+    type = type.downcase
+    return 'None' if type == 'none'
   
     begin
       rows_updated = DB[:hoc_survey_prizes].where(claimant:nil, type:type).limit(1).update(
@@ -161,7 +183,7 @@ class HocSurvey2014
       raise
     end
 
-    DB[:hoc_survey_prizes].where(claimant:email).first
+    DB[:hoc_survey_prizes].where(claimant:email).first[:value]
   end
 
 end

@@ -20,7 +20,8 @@
     "x": "150",
     "y": "275",
     "impressive": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "ideal": "11"
   }
 }]]></config>
   <blocks>
@@ -46,8 +47,18 @@
                     <block type="draw_turn" inline="true">
                       <title name="DIR">turnLeft</title>
                       <value name="VALUE">
-                        <block type="math_number">
-                          <title name="NUM">72</title>
+                        <block type="math_arithmetic" inline="true">
+                          <title name="OP">DIVIDE</title>
+                          <value name="A">
+                            <block type="math_number">
+                              <title name="NUM">360</title>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="math_number">
+                              <title name="NUM">5</title>
+                            </block>
+                          </value>
                         </block>
                       </value>
                     </block>
@@ -150,8 +161,18 @@
                         <block type="draw_turn" inline="true">
                           <title name="DIR">turnLeft</title>
                           <value name="VALUE">
-                            <block type="math_number">
-                              <title name="NUM">72</title>
+                            <block type="math_arithmetic" inline="true">
+                              <title name="OP">DIVIDE</title>
+                              <value name="A">
+                                <block type="math_number">
+                                  <title name="NUM">360</title>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <block type="math_number">
+                                  <title name="NUM">5</title>
+                                </block>
+                              </value>
                             </block>
                           </value>
                         </block>

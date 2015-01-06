@@ -12,7 +12,7 @@
     "start_direction": "90",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "slider_speed": ".8",
+    "slider_speed": ".6",
     "disable_param_editing": "true",
     "free_play": "true",
     "disable_variable_editing": "true",
@@ -110,7 +110,7 @@
           <title name="NUM">???</title>
         </block>
         <block type="math_arithmetic" inline="true">
-          <title name="OP">ADD</title>
+          <title name="OP">DIVIDE</title>
         </block>
         <block type="variables_set" inline="false">
           <title name="VAR">sides</title>

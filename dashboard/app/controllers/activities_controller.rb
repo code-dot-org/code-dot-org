@@ -151,11 +151,11 @@ class ActivitiesController < ApplicationController
       @gallery_activity = GalleryActivity.create!(user: current_user, activity: @activity, autosaved: true)
     end
 
-    # begin
-    #   trophy_check(current_user) if passed
-    # rescue Exception => e
-    #   Rails.logger.error "Error updating trophy exception: #{e.inspect}"
-    # end
+    begin
+       trophy_check(current_user) if passed
+    rescue Exception => e
+       Rails.logger.error "Error updating trophy exception: #{e.inspect}"
+    end
   end
 
   def track_progress_in_session
