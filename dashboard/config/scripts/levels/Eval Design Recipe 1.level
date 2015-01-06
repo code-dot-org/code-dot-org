@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "We're going to write a function that draws a solid rectangle of any color that is twice wide as it is high. Start with an example - draw a solid green rectangle that has a height on 100 pixels.",
+    "instructions": "Alright, now given the Contract wide-rect: Number String -> Image, write an example - draw a solid green rectangle that has a height on 100 pixels.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
