@@ -81,6 +81,41 @@ Each conditional has at least one clause. Each clause has a Boolean question and
 Else clauses are best used as a catch-all for cases that you can’t otherwise enumerate. If you can state a precise question for a clause, write the precise question instead of else. For example, if you have a function that does different things depending on whether some variable x is larger than 5, it is better for beginners to write the two questions (> x 5) and (<= x 5) rather than have the second question be else. Explicit questions make it easier to read and maintain programs.
 
 Functions that use conditions are called piecewise functions, because each condition defines a separate piece of the function. Why are piecewise functions useful? Think about the player in your game: you’d like the player to move one way if you hit the "up" key, and another way if you hit the "down" key. Moving up and moving down need two different expressions! Without cond, you could only write a function that always moves the player up, or always moves it down, but not both.
+
+- We can start this lesson off right away
+  - Let the class know that if they can be completely quiet for thirty seconds, you will do something like:
+     - Sing an opera song
+     - Give five more minutes of recess
+     - or Do a handstand
+   - Start counting right away.
+   - If the students succeed, point out right away that they succeeded, so they *do* get the reward.
+   - Otherwise, point out that they were not completely quiet for a full thirty seconds, so they *do not* get the reward.
+- Ask the class "What was the *condition* of the reward?"
+  - The condition was *IF* you were quiet for 30 seconds
+     - If you were, the condition would be true, and you would get the reward.
+     - If you weren't, the condition would be false, so the reward woud not apply.
+  - Can we come up with another conditional?
+     - If I say "question," you raise your hand
+     - If I sneeze, you say "Gesundheit."
+     - What examples can you come up with?
+- Sometimes, we want to have an extra condition, in case the "IF" statement is not true.
+  - This extra condition is called an "ELSE" statement
+  - When the "IF" condition isn't met, we can look at the "ELSE" for what to do
+     - Example: IF I draw a 7, everybody claps. Or ELSE, everyone says "Awwwwwwe."
+     - Let's try it. (Draw a card and see if your class reacts appropriately.)
+  - Ask the class to analyze what just happened. 
+     - What was the IF?
+     - What was the ELSE?
+     - Which condition was met?
+  - Believe it or not, we have even one more option.
+     - What if I wanted you to clap if I draw a 7, or else if I draw something less than seven you say "YAY," or else you say "Awwwwwwwe"?
+         - This is why we have the terms If, Else If, and Else.
+         - If is the first condition
+         - Else-if gets looked at only if the "If" isn't true.
+         - Else gets looked at only if nothing before it is true.
+     
+Now let's play a game.
+
  
 [/together]
 
