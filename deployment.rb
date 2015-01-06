@@ -39,7 +39,7 @@ def load_configuration()
 
   {
     'app_servers'                 => {},
-    'build_blockly'               => false,
+    'build_apps'               => false,
     'build_blockly_core'          => false,
     'build_dashboard'             => true,
     'build_pegasus'               => true,
@@ -55,7 +55,7 @@ def load_configuration()
     'hip_chat_logging'            => false,
     'home_dir'                    => File.expand_path('~'),
     'languages'                   => load_languages(File.join(root_dir, 'pegasus', 'data', 'cdo-languages.csv')),
-    'localize_blockly'            => false,
+    'localize_apps'            => false,
     'name'                        => hostname,
     'pegasus_db_name'             => rack_env == :production ? 'pegasus' : "pegasus_#{rack_env}",
     'pegasus_honeybadger_api_key' =>'00000000',
@@ -164,8 +164,8 @@ def aws_dir(*dirs)
   deploy_dir('aws', *dirs)
 end
 
-def blockly_dir(*dirs)
-  deploy_dir('blockly', *dirs)
+def apps_dir(*dirs)
+  deploy_dir('apps', *dirs)
 end
 
 def blockly_core_dir(*dirs)
@@ -187,4 +187,3 @@ end
 def secrets_dir(*dirs)
   aws_dir('secrets', *dirs)
 end
-

@@ -9,11 +9,11 @@ class HocSurvey2014
     result[:event_country_s] = required stripped data[:event_country_s]
     result[:teacher_description_s] = required stripped data[:teacher_description_s]
     result[:event_location_type_s] = required stripped data[:event_location_type_s]
-    result[:students_number_total_i] = required stripped data[:students_number_total_i]
-    result[:students_number_girls_i] = required stripped data[:students_number_girls_i]
+    result[:students_number_total_s] = required stripped data[:students_number_total_s]
+    result[:students_number_girls_s] = required stripped data[:students_number_girls_s]
 
     if result[:event_country_s].class != FieldError && result[:event_country_s] == 'United States'
-      result[:students_number_ethnicity_i] = required stripped data[:students_number_ethnicity_i]
+      result[:students_number_ethnicity_s] = required stripped data[:students_number_ethnicity_s]
     end
 
     result[:students_grade_levels_ss] = required stripped data[:students_grade_levels_ss]

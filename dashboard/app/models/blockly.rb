@@ -19,6 +19,7 @@ class Blockly < Level
     disable_variable_editing
     use_modal_function_editor
     use_contract_editor
+    default_num_example_blocks
     open_function_definition
     callout_json
   )
