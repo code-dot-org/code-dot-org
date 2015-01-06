@@ -858,7 +858,7 @@ Blockly.Blocks.procedures_callnoreturn = {init:function() {
   a.stopPropagation();
   a = this.getTitleValue("NAME");
   this.blockSpace.blockSpaceEditor.hideChaff();
-  Blockly.functionEditor.hide();
+  Blockly.functionEditor.hideIfOpen();
   Blockly.functionEditor.openAndEditFunction(a)
 }, getCallName:function() {
   return this.getTitleValue("NAME")

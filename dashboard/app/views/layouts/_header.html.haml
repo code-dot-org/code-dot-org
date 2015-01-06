@@ -32,6 +32,9 @@
           - if params[:controller] !~ /^sessions/ and not Rails.configuration.minimal_mode
             .header_user
               = render partial: 'shared/user_header'
+          - if !@script_level
+            %a.headerlink{href: "http://www.code.org"}
+              CODE.ORG
 
 .transparent_backdrop{style: 'display: none;'}
 - if @script_level
