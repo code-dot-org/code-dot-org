@@ -88,6 +88,9 @@ var ELSA_DECORATION_DETAILS = [
  * An instantiable Turtle class
  */
 var TurtleClass = function () {
+  this.skin = null;
+  this.level = null;
+
   // image icons and image paths for the 'set pattern block'
   this.lineStylePatternOptions = [];
 
@@ -138,47 +141,43 @@ var TurtleClass = function () {
 var turtleSingleton = new TurtleClass();
 module.exports = turtleSingleton;
 
-// TODO - move this onto class probably
-var skin;
-var level;
-
 /**
  * Initialize Blockly and the turtle.  Called on page load.
  */
 TurtleClass.prototype.init = function(config) {
 
-  skin = config.skin;
-  level = config.level;
+  this.skin = config.skin;
+  this.level = config.level;
 
   this.lineStylePatternOptions = [
-    [skin.patternDefault, 'DEFAULT'], //  signals return to default path drawing
-    [skin.rainbowMenu, 'rainbowLine'],  // set to property name for image within skin
-    [skin.ropeMenu, 'ropeLine'],  // referenced as skin[pattern];
-    [skin.squigglyMenu, 'squigglyLine'],
-    [skin.swirlyMenu, 'swirlyLine'],
-    [skin.annaLine, 'annaLine'],
-    [skin.elsaLine, 'elsaLine'],
-    [skin.annaLine_2x, 'annaLine_2x'],
-    [skin.elsaLine_2x, 'elsaLine_2x'],
+    [this.skin.patternDefault, 'DEFAULT'], //  signals return to default path drawing
+    [this.skin.rainbowMenu, 'rainbowLine'],  // set to property name for image within skin
+    [this.skin.ropeMenu, 'ropeLine'],  // referenced as skin[pattern];
+    [this.skin.squigglyMenu, 'squigglyLine'],
+    [this.skin.swirlyMenu, 'swirlyLine'],
+    [this.skin.annaLine, 'annaLine'],
+    [this.skin.elsaLine, 'elsaLine'],
+    [this.skin.annaLine_2x, 'annaLine_2x'],
+    [this.skin.elsaLine_2x, 'elsaLine_2x'],
   ];
 
-  if (skin.id == "anna" || skin.id == "elsa") {
+  if (this.skin.id == "anna" || this.skin.id == "elsa") {
     // let's try adding a background image
-    level.images = [{}];
-    level.images[0].filename = 'background.jpg';
+    this.level.images = [{}];
+    this.level.images[0].filename = 'background.jpg';
 
-    level.images[0].position = [ 0, 0 ];
-    level.images[0].scale = 1;
+    this.level.images[0].position = [ 0, 0 ];
+    this.level.images[0].scale = 1;
   }
 
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'when_run';
 
-  if (skin.id == "anna") {
+  if (this.skin.id == "anna") {
     this.AVATAR_WIDTH = 73;
     this.AVATAR_HEIGHT = 100;
   }
-  else if (skin.id == "elsa") {
+  else if (this.skin.id == "elsa") {
     this.AVATAR_WIDTH = 73;
     this.AVATAR_HEIGHT = 100;
     this.DECORATIONANIMATION_WIDTH = 85;
@@ -195,22 +194,21 @@ TurtleClass.prototype.init = function(config) {
       controls: require('./controls.html')({assetUrl: StudioApp.assetUrl}),
       blockUsed : undefined,
       idealBlockNumber : undefined,
-      editCode: level.editCode,
+      editCode: this.level.editCode,
       blockCounterClass : 'block-counter-default'
     }
   });
 
-  // TODO (brent) - pull these functions out
-
-  config.loadAudio = function() {
-    StudioApp.loadAudio(skin.winSound, 'win');
-    StudioApp.loadAudio(skin.startSound, 'start');
-    StudioApp.loadAudio(skin.failureSound, 'failure');
-  };
-
+  config.loadAudio = _.bind(this.loadAudio_, this);
   config.afterInject = _.bind(this.afterInject_, this, config);
 
   StudioApp.init(config);
+};
+
+TurtleClass.prototype.loadAudio_ = function () {
+  StudioApp.loadAudio(this.skin.winSound, 'win');
+  StudioApp.loadAudio(this.skin.startSound, 'start');
+  StudioApp.loadAudio(this.skin.failureSound, 'failure');
 };
 
 /**
@@ -253,7 +251,7 @@ TurtleClass.prototype.afterInject_ = function (config) {
   this.ctxDisplay = displayCanvas.getContext('2d');
 
   // TODO - pull this out
-  if (StudioApp.usingBlockly && (skin.id == "anna" || skin.id == "elsa")) {
+  if (StudioApp.usingBlockly && (this.skin.id == "anna" || this.skin.id == "elsa")) {
     Blockly.JavaScript.colour_random = function() {
       // Generate a random colour.
       if (!Blockly.JavaScript.definitions_.colour_random) {
@@ -280,25 +278,25 @@ TurtleClass.prototype.afterInject_ = function (config) {
     this.isDrawingAnswer_ = true;
     this.drawAnswer();
     this.isDrawingAnswer_ = false;
-    if (level.predraw_blocks) {
+    if (this.level.predraw_blocks) {
       this.isPredrawing_ = true;
-      this.drawBlocksOnCanvas(level.predraw_blocks, this.ctxPredraw);
+      this.drawBlocksOnCanvas(this.level.predraw_blocks, this.ctxPredraw);
       this.isPredrawing_ = false;
     }
 
     // pre-load image for line pattern block. Creating the image object and setting source doesn't seem to be
     // enough in this case, so we're actually creating and reusing the object within the document body.
 
-    if (skin.id == "anna" || skin.id == "elsa") {
+    if (this.skin.id == "anna" || this.skin.id == "elsa") {
       var imageContainer = document.createElement('div');
       imageContainer.style.display='none';
       document.body.appendChild(imageContainer);
 
       for( var i = 0; i < this.lineStylePatternOptions.length; i++) {
         var pattern = this.lineStylePatternOptions[i][1];
-        if (skin[pattern]) {
+        if (this.skin[pattern]) {
           var img = new Image();
-          img.src = skin[pattern];
+          img.src = this.skin[pattern];
           this.loadedPathPatterns[pattern] = img;
         }
       }
@@ -313,10 +311,10 @@ TurtleClass.prototype.afterInject_ = function (config) {
  * On startup draw the expected answer and save it to the answer canvas.
  */
 TurtleClass.prototype.drawAnswer = function() {
-  if (level.solutionBlocks) {
-    this.drawBlocksOnCanvas(level.solutionBlocks, this.ctxAnswer);
+  if (this.level.solutionBlocks) {
+    this.drawBlocksOnCanvas(this.level.solutionBlocks, this.ctxAnswer);
   } else {
-    this.drawLogOnCanvas(level.answer, this.ctxAnswer);
+    this.drawLogOnCanvas(this.level.answer, this.ctxAnswer);
   }
 };
 
@@ -384,12 +382,9 @@ TurtleClass.prototype.placeImage = function(filename, position, scale) {
     }
     this.display();
   };
-  if (skin.id == "anna" || skin.id == "elsa")
-  {
-    img.src = skin.assetUrl(filename);
-  }
-  else
-  {
+  if (this.skin.id == "anna" || this.skin.id == "elsa") {
+    img.src = this.skin.assetUrl(filename);
+  } else {
     img.src = StudioApp.assetUrl('media/turtle/' + filename);
   }
 };
@@ -398,11 +393,11 @@ TurtleClass.prototype.placeImage = function(filename, position, scale) {
  * Draw the images for this page and level onto this.ctxImages.
  */
 TurtleClass.prototype.drawImages = function() {
-  if (!level.images) {
+  if (!this.level.images) {
     return;
   }
-  for (var i = 0; i < level.images.length; i++) {
-    var image = level.images[i];
+  for (var i = 0; i < this.level.images.length; i++) {
+    var image = this.level.images[i];
     this.placeImage(image.filename, image.position, image.scale);
   }
   this.ctxImages.globalCompositeOperation = 'copy';
@@ -418,13 +413,14 @@ TurtleClass.prototype.loadTurtle = function() {
     this.display();
   };
 
-  this.avatarImage.src = skin.avatar;
-  if (skin.id == "anna")
+  this.avatarImage.src = this.skin.avatar;
+  if (this.skin.id == "anna") {
     this.numberAvatarHeadings = 36;
-  else if (skin.id == "elsa")
+  } else if (this.skin.id == "elsa") {
     this.numberAvatarHeadings = 18;
-  else
+  } else {
     this.numberAvatarHeadings = 180;
+  }
   this.avatarImage.spriteHeight = this.AVATAR_HEIGHT;
   this.avatarImage.spriteWidth = this.AVATAR_WIDTH;
 };
@@ -433,8 +429,8 @@ TurtleClass.prototype.loadTurtle = function() {
  * Initial the turtle animation deocration on load.
  */
 TurtleClass.prototype.loadDecorationAnimation = function() {
-  if (skin.id == "elsa") {
-    this.decorationAnimationImage.src = skin.decorationAnimation;
+  if (this.skin.id == "elsa") {
+    this.decorationAnimationImage.src = this.skin.decorationAnimation;
     this.decorationAnimationImage.height = this.DECORATIONANIMATION_HEIGHT;
     this.decorationAnimationImage.width = this.DECORATIONANIMATION_WIDTH;
   }
@@ -450,7 +446,7 @@ TurtleClass.prototype.drawTurtle = function() {
   var sourceY;
   // Computes the index of the image in the sprite.
   var index = Math.floor(this.heading * this.numberAvatarHeadings / 360);
-  if (skin.id == "anna" || skin.id == "elsa") {
+  if (this.skin.id == "anna" || this.skin.id == "elsa") {
     // the rotations in the sprite sheet go in the opposite direction.
     index = this.numberAvatarHeadings - index;
 
@@ -458,9 +454,9 @@ TurtleClass.prototype.drawTurtle = function() {
     index = (index + this.numberAvatarHeadings/2) % this.numberAvatarHeadings;
   }
   var sourceX = this.avatarImage.spriteWidth * index;
-  if (skin.id == "anna" || skin.id == "elsa") {
+  if (this.skin.id == "anna" || this.skin.id == "elsa") {
     sourceY = this.avatarImage.spriteHeight * turtleFrame;
-    turtleFrame = (turtleFrame + 1) % skin.turtleNumFrames;
+    turtleFrame = (turtleFrame + 1) % this.skin.turtleNumFrames;
   } else {
     sourceY = 0;
   }
@@ -501,8 +497,8 @@ TurtleClass.prototype.drawTurtle = function() {
   */
 
 TurtleClass.prototype.drawDecorationAnimation = function(when) {
-  if (skin.id == "elsa") {
-    var frameIndex = (turtleFrame + 10) % skin.decorationAnimationNumFrames;
+  if (this.skin.id == "elsa") {
+    var frameIndex = (turtleFrame + 10) % this.skin.decorationAnimationNumFrames;
 
     var angleIndex = Math.floor(this.heading * this.numberAvatarHeadings / 360);
 
@@ -550,26 +546,26 @@ TurtleClass.prototype.reset = function (ignore) {
   // Standard starting location and heading of the turtle.
   this.x = CANVAS_HEIGHT / 2;
   this.y = CANVAS_WIDTH / 2;
-  this.heading = level.startDirection !== undefined ?
-      level.startDirection : 90;
+  this.heading = this.level.startDirection !== undefined ?
+      this.level.startDirection : 90;
   this.penDownValue = true;
   this.visible = true;
 
   // For special cases, use a different initial location.
-  if (level.initialX !== undefined) {
-    this.x = level.initialX;
+  if (this.level.initialX !== undefined) {
+    this.x = this.level.initialX;
   }
-  if (level.initialY !== undefined) {
-    this.y = level.initialY;
+  if (this.level.initialY !== undefined) {
+    this.y = this.level.initialY;
   }
   // Clear the display.
   this.ctxScratch.canvas.width = this.ctxScratch.canvas.width;
   this.ctxPattern.canvas.width = this.ctxPattern.canvas.width;
-  if (skin.id == "anna") {
+  if (this.skin.id == "anna") {
     this.ctxScratch.strokeStyle = 'rgb(255,255,255)';
     this.ctxScratch.fillStyle = 'rgb(255,255,255)';
     this.ctxScratch.lineWidth = 2;
-  } else if (skin.id == "elsa") {
+  } else if (this.skin.id == "elsa") {
     this.ctxScratch.strokeStyle = 'rgb(255,255,255)';
     this.ctxScratch.fillStyle = 'rgb(255,255,255)';
     this.ctxScratch.lineWidth = 2;
@@ -587,9 +583,9 @@ TurtleClass.prototype.reset = function (ignore) {
   this.ctxFeedback.clearRect(
       0, 0, this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
 
-  if (skin.id == "anna") {
+  if (this.skin.id == "anna") {
     this.setPattern("annaLine");
-  } else if (skin.id == "elsa") {
+  } else if (this.skin.id == "elsa") {
     this.setPattern("elsaLine");
   } else {
     // Reset to empty pattern
@@ -631,7 +627,7 @@ TurtleClass.prototype.display = function() {
   this.ctxDisplay.drawImage(this.ctxImages.canvas, 0, 0);
 
   // Draw the answer layer.
-  if (skin.id == "anna" || skin.id == "elsa") {
+  if (this.skin.id == "anna" || this.skin.id == "elsa") {
     this.ctxDisplay.globalAlpha = 0.4;
   } else {
     this.ctxDisplay.globalAlpha = 0.15;
@@ -703,7 +699,7 @@ TurtleClass.prototype.evalCode = function(code) {
  * Set up this.code, this.interpreter, etc. to run code for editCode levels
  */
 TurtleClass.prototype.generateTurtleCodeFromJS_ = function () {
-  this.code = utils.generateCodeAliases(level.codeFunctions, 'Turtle');
+  this.code = utils.generateCodeAliases(this.level.codeFunctions, 'Turtle');
   this.userCodeStartOffset = this.code.length;
   this.code += StudioApp.editor.getValue();
   this.userCodeLength = this.code.length - this.userCodeStartOffset;
@@ -734,7 +730,7 @@ TurtleClass.prototype.execute = function() {
     return;
   }
 
-  if (level.editCode) {
+  if (this.level.editCode) {
     this.generateTurtleCodeFromJS_();
   } else {
     this.code = Blockly.Generator.blockSpaceToCode('JavaScript');
@@ -804,12 +800,12 @@ TurtleClass.prototype.executeTuple_ = function () {
     StudioApp.highlight(String(id));
 
     // Should we execute another tuple in this frame of animation?
-    if (skin.consolidateTurnAndMove && checkforTurnAndMove()) {
+    if (this.skin.consolidateTurnAndMove && checkforTurnAndMove()) {
       executeSecondTuple = true;
     }
 
     // We only smooth animate for Anna & Elsa, and only if there is not another tuple to be done.
-    var tupleDone = this.step(command, tuple.slice(1), {smoothAnimate: skin.smoothAnimate && !executeSecondTuple});
+    var tupleDone = this.step(command, tuple.slice(1), {smoothAnimate: this.skin.smoothAnimate && !executeSecondTuple});
     this.display();
 
     if (tupleDone) {
@@ -841,14 +837,14 @@ TurtleClass.prototype.animate = function() {
   this.pid = 0;
 
   // Scale the speed non-linearly, to give better precision at the fast end.
-  var stepSpeed = 1000 * Math.pow(1 - this.speedSlider.getValue(), 2) / skin.speedModifier;
+  var stepSpeed = 1000 * Math.pow(1 - this.speedSlider.getValue(), 2) / this.skin.speedModifier;
 
   // when smoothAnimate is true, we divide long steps into partitions of this
   // size.
   this.smoothAnimateStepSize = (stepSpeed === 0 ?
     FAST_SMOOTH_ANIMATE_STEP_SIZE : SMOOTH_ANIMATE_STEP_SIZE);
 
-  if (level.editCode) {
+  if (this.level.editCode) {
     var stepped = true;
     while (stepped) {
       codegen.selectCurrentCode(this.interpreter,
@@ -995,7 +991,7 @@ TurtleClass.prototype.step = function(command, values, options) {
     case 'PC':  // Pen Colour
       this.ctxScratch.strokeStyle = values[0];
       this.ctxScratch.fillStyle = values[0];
-      if (skin.id != "anna" && skin.id != "elsa") {
+      if (this.skin.id != "anna" && this.skin.id != "elsa") {
         this.isDrawingWithPattern = false;
       }
       break;
@@ -1092,7 +1088,7 @@ TurtleClass.prototype.moveForward_ = function (distance) {
     this.drawForwardLineWithPattern_(distance);
 
     // Frozen gets both a pattern and a line over the top of it.
-    if (skin.id != "elsa" && skin.id != "anna") {
+    if (this.skin.id != "elsa" && this.skin.id != "anna") {
       return;
     }
   }
@@ -1135,7 +1131,7 @@ TurtleClass.prototype.drawForwardWithJoints_ = function (distance) {
 
 TurtleClass.prototype.drawForwardLine_ = function (distance) {
 
-  if (skin.id == "anna" || skin.id == "elsa") {
+  if (this.skin.id == "anna" || this.skin.id == "elsa") {
     this.ctxScratch.beginPath();
     this.ctxScratch.moveTo(this.stepStartX, this.stepStartY);
     this.jumpForward_(distance);
@@ -1156,7 +1152,7 @@ TurtleClass.prototype.drawForwardLineWithPattern_ = function (distance) {
   var startX;
   var startY;
 
-  if (skin.id == "anna" || skin.id == "elsa") {
+  if (this.skin.id == "anna" || this.skin.id == "elsa") {
     this.ctxPattern.moveTo(this.stepStartX, this.stepStartY);
     img = this.currentPathPattern;
     startX = this.stepStartX;
@@ -1223,7 +1219,7 @@ TurtleClass.prototype.drawForwardLineWithPattern_ = function (distance) {
 };
 
 TurtleClass.prototype.shouldDrawJoints_ = function () {
-  return level.isK1 && !this.isPredrawing_;
+  return this.level.isK1 && !this.isPredrawing_;
 };
 
 TurtleClass.prototype.drawJointAtTurtle_ = function () {
@@ -1239,7 +1235,8 @@ TurtleClass.prototype.drawJointAtTurtle_ = function () {
  * @param {number} permittedErrors Number of pixels allowed to be wrong.
  * @return {boolean} True if the level is solved, false otherwise.
  */
-var isCorrect = function(pixelErrors, permittedErrors) {
+// TODO - should this be on class?
+function isCorrect(pixelErrors, permittedErrors) {
   return pixelErrors <= permittedErrors;
 };
 
@@ -1247,18 +1244,20 @@ var isCorrect = function(pixelErrors, permittedErrors) {
  * App specific displayFeedback function that calls into
  * StudioApp.displayFeedback when appropriate
  */
-var displayFeedback = function() {
+TurtleClass.prototype.displayFeedback_ = function() {
   var feedbackImageCanvas;
-  if (skin.id == "anna" || skin.id == "elsa") {
+  if (this.skin.id == "anna" || this.skin.id == "elsa") {
     // For frozen skins, show background and characters along with drawing
     feedbackImageCanvas = this.ctxDisplay;
   } else {
     feedbackImageCanvas = this.ctxScratch;
   }
 
+  var level = this.level;
+
   StudioApp.displayFeedback({
-    app: 'turtle', //XXX
-    skin: skin.id,
+    app: 'turtle',
+    skin: this.skin.id,
     feedbackType: this.testResults,
     message: this.message,
     response: this.response,
@@ -1286,7 +1285,7 @@ TurtleClass.prototype.onReportComplete = function(response) {
   // Disable the run button until onReportComplete is called.
   var runButton = document.getElementById('runButton');
   runButton.disabled = false;
-  displayFeedback();
+  this.displayFeedback_();
 };
 
 // This removes lengths from the text version of the XML of programs.
@@ -1319,6 +1318,8 @@ TurtleClass.prototype.checkAnswer = function() {
       delta++;
     }
   }
+
+  var level = this.level;
 
   // Allow some number of pixels to be off, but be stricter
   // for certain levels.
@@ -1354,7 +1355,6 @@ TurtleClass.prototype.checkAnswer = function() {
   // to miss the point, convert that feedback to a failure.
   if (level.failForTooManyBlocks &&
       this.testResults == StudioApp.TestResults.TOO_MANY_BLOCKS_FAIL) {
-    // TODO: Add more helpful error message.
     this.testResults = StudioApp.TestResults.TOO_MANY_BLOCKS_FAIL;
 
   } else if ((this.testResults ==
@@ -1411,7 +1411,7 @@ TurtleClass.prototype.checkAnswer = function() {
 
   // https://www.pivotaltracker.com/story/show/84171560
   // Never send up frozen images for now.
-  var isFrozen = (skin.id === 'anna' || skin.id === 'elsa');
+  var isFrozen = (this.skin.id === 'anna' || this.skin.id === 'elsa');
 
   // Get the canvas data for feedback.
   if (this.testResults >= StudioApp.TestResults.TOO_MANY_BLOCKS_FAIL &&
@@ -1431,7 +1431,7 @@ TurtleClass.prototype.checkAnswer = function() {
 
 TurtleClass.prototype.getFeedbackImage_ = function() {
   var feedbackImageCanvas;
-  if (skin.id == "anna" || skin.id == "elsa") {
+  if (this.skin.id == "anna" || this.skin.id == "elsa") {
     feedbackImageCanvas = this.ctxDisplay;
   } else {
     feedbackImageCanvas = this.ctxScratch;
