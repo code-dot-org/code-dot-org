@@ -23,13 +23,17 @@
  */
 'use strict';
 
-window.Turtle = module.exports;
+var TurtleClass = function () {
+
+};
+
+var Turtle = new TurtleClass();
+module.exports = Turtle;
 
 /**
  * Create a namespace for the application.
  */
 var StudioApp = require('../base');
-var Turtle = module.exports;
 var commonMsg = require('../../locale/current/common');
 var turtleMsg = require('../../locale/current/turtle');
 var levels = require('./levels');
