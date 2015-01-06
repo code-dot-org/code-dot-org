@@ -27,7 +27,9 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "true",
     "coordinate_grid_background": "false",
-    "free_play": "false"
+    "free_play": "false",
+    "disable_sharing": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
