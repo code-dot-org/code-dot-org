@@ -1,6 +1,7 @@
 title 'Course 4'
 description_short "Students taking Course 4 should have already taken Courses 2 and 3."
 description_audience "Ages 10+ (after Course 3)"
+hidden 'false'
 
 stage 'Unplugged: Tangrams'
 level 'TangramAlgorithms'
@@ -196,3 +197,4 @@ level 'Course 4 Artist Binary Free Play 2'
 #level 'Course 4 Binary 6'
 #level 'Course 4 Binary 7'
 #level 'Course 4 Binary 8'
+

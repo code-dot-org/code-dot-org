@@ -214,8 +214,13 @@ a.level_link:link, a.level_link:visited, a.level_link:hover, a.level_link:active
 }
 
 .miniblock-short {
-  height: 150px;
+  height: 170px;
 }
+
+.miniblock-short h3 {
+  margin-bottom:10px;
+}
+
 .miniblock .smalltext {
   font-size: 13px;
   padding-right: 10px;
