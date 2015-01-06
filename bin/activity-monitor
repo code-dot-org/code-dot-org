@@ -24,7 +24,9 @@ ExcludedBrowsers = [
   'TwitterBot',
   'Yandex Browser',
   'YandexBot',
-  'Mo%20PTT/50 CFNetwork/672.1.15 Darwin/14.0.0'
+  'Mo%20PTT/50 CFNetwork/672.1.15 Darwin/14.0.0',
+  'AppleMail',
+  'Edmodo/0.15 CFNetwork/711.1.16 Darwin/14.0.0' # edmodo customer support said we can ignore this
 ]
 
 ExcludedLevels = [1, 337, 612, 830, 1370, 1376, 1383, 1393, 1415]

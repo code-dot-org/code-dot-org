@@ -39,7 +39,7 @@ Dashboard::Application.configure do
   config.assets.debug = true
 
   # Whether or not to display pretty blockly.
-  config.pretty_blockly = true
+  config.pretty_apps = true
 
   # disable this for developers by default, it won't make much sense because we have our own db
   CDO.disable_s3_image_uploads = true

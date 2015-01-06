@@ -1,8 +1,0 @@
-{
-  "compute": "calculer",
-  "equivalentExpression": "Essayez de réorganiser vos arguments pour obtenir exactement la même expression.",
-  "extraTopBlocks": "Vous avez des blocs libres. Vouliez vous les rattacher au bloc « calcul » ?",
-  "goal": "Objectif :",
-  "reinfFeedbackMsg": "Voici votre histoire ! Continuer à travailler dessus, ou passer à la prochaine énigme !",
-  "yourExpression": "Votre expression :"
-}
