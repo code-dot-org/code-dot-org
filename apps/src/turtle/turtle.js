@@ -27,8 +27,8 @@ var TurtleClass = function () {
 
 };
 
-var Turtle = new TurtleClass();
-module.exports = Turtle;
+var turtleSingleton = new TurtleClass();
+module.exports = turtleSingleton;
 
 /**
  * Create a namespace for the application.
@@ -70,36 +70,36 @@ exports.lineStylePatternOptions = [];
 /**
  * PID of animation task currently executing.
  */
-Turtle.pid = 0;
+turtleSingleton.pid = 0;
 
 /**
  * Should the turtle be drawn?
  */
-Turtle.visible = true;
+turtleSingleton.visible = true;
 
 /**
  * Set a turtle heading.
  */
-Turtle.heading = 0;
+turtleSingleton.heading = 0;
 
 /**
  * The avatar image
  */
-Turtle.avatarImage = new Image();
-Turtle.numberAvatarHeadings = undefined;
+turtleSingleton.avatarImage = new Image();
+turtleSingleton.numberAvatarHeadings = undefined;
 
 /**
  * The avatar animation decoration image
  */
-Turtle.decorationAnimationImage = new Image();
+turtleSingleton.decorationAnimationImage = new Image();
 
 /**
  * Drawing with a pattern
  */
 
-Turtle.currentPathPattern = new Image();
-Turtle.loadedPathPatterns = [];
-Turtle.isDrawingWithPattern = false;
+turtleSingleton.currentPathPattern = new Image();
+turtleSingleton.loadedPathPatterns = [];
+turtleSingleton.isDrawingWithPattern = false;
 
 function backingScale(context) {
   // disable retina for now
@@ -116,7 +116,7 @@ var retina = 1;
 /**
  * Initialize Blockly and the turtle.  Called on page load.
  */
-Turtle.init = function(config) {
+turtleSingleton.init = function(config) {
 
   skin = config.skin;
   level = config.level;
@@ -159,20 +159,20 @@ Turtle.init = function(config) {
 
   if (skin.id == "anna")
   {
-    Turtle.AVATAR_WIDTH = 73;
-    Turtle.AVATAR_HEIGHT = 100;
+    turtleSingleton.AVATAR_WIDTH = 73;
+    turtleSingleton.AVATAR_HEIGHT = 100;
   }
   else if (skin.id == "elsa")
   {
-    Turtle.AVATAR_WIDTH = 73;
-    Turtle.AVATAR_HEIGHT = 100;
-    Turtle.DECORATIONANIMATION_WIDTH = 85;
-    Turtle.DECORATIONANIMATION_HEIGHT = 85;
+    turtleSingleton.AVATAR_WIDTH = 73;
+    turtleSingleton.AVATAR_HEIGHT = 100;
+    turtleSingleton.DECORATIONANIMATION_WIDTH = 85;
+    turtleSingleton.DECORATIONANIMATION_HEIGHT = 85;
   }
   else
   {
-    Turtle.AVATAR_WIDTH = 70;
-    Turtle.AVATAR_HEIGHT = 51;
+    turtleSingleton.AVATAR_WIDTH = 70;
+    turtleSingleton.AVATAR_HEIGHT = 51;
   }
 
   config.html = page({
@@ -197,12 +197,11 @@ Turtle.init = function(config) {
     // Initialize the slider.
     var slider = document.getElementById('slider');
     if (slider) {
-      // TODO (noted by cpirich): remove Turtle specific code here:
-      Turtle.speedSlider = new Slider(10, 35, 130, slider);
+      turtleSingleton.speedSlider = new Slider(10, 35, 130, slider);
 
       // Change default speed (eg Speed up levels that have lots of steps).
       if (config.level.sliderSpeed) {
-        Turtle.speedSlider.setValue(config.level.sliderSpeed);
+        turtleSingleton.speedSlider.setValue(config.level.sliderSpeed);
       }
     }
 
@@ -223,12 +222,12 @@ Turtle.init = function(config) {
     };
 
     // Create hidden canvases.
-    Turtle.ctxAnswer = createCanvas('answer', 400 * retina, 400 * retina).getContext('2d');
-    Turtle.ctxImages = createCanvas('images', 400 * retina, 400 * retina).getContext('2d');
-    Turtle.ctxPredraw = createCanvas('predraw', 400 * retina, 400 * retina).getContext('2d');
-    Turtle.ctxScratch = createCanvas('scratch', 400 * retina, 400 * retina).getContext('2d');
-    Turtle.ctxPattern = createCanvas('pattern', 400 * retina, 400 * retina).getContext('2d');
-    Turtle.ctxFeedback = createCanvas('feedback', 154, 154).getContext('2d');
+    turtleSingleton.ctxAnswer = createCanvas('answer', 400 * retina, 400 * retina).getContext('2d');
+    turtleSingleton.ctxImages = createCanvas('images', 400 * retina, 400 * retina).getContext('2d');
+    turtleSingleton.ctxPredraw = createCanvas('predraw', 400 * retina, 400 * retina).getContext('2d');
+    turtleSingleton.ctxScratch = createCanvas('scratch', 400 * retina, 400 * retina).getContext('2d');
+    turtleSingleton.ctxPattern = createCanvas('pattern', 400 * retina, 400 * retina).getContext('2d');
+    turtleSingleton.ctxFeedback = createCanvas('feedback', 154, 154).getContext('2d');
 
     // Create display canvas.
     var display = createCanvas('display', 400 * retina, 400 * retina);
@@ -241,7 +240,7 @@ Turtle.init = function(config) {
 
     var visualization = document.getElementById('visualization');
     visualization.appendChild(display);
-    Turtle.ctxDisplay = display.getContext('2d');
+    turtleSingleton.ctxDisplay = display.getContext('2d');
 
 
     if (StudioApp.usingBlockly && (skin.id == "anna" || skin.id == "elsa")) {
@@ -263,18 +262,18 @@ Turtle.init = function(config) {
       };
     }
 
-    Turtle.loadDecorationAnimation();
+    turtleSingleton.loadDecorationAnimation();
 
     // Set their initial contents.
-    Turtle.loadTurtle();
-    Turtle.drawImages();
-    Turtle.isDrawingAnswer_ = true;
-    Turtle.drawAnswer();
-    Turtle.isDrawingAnswer_ = false;
+    turtleSingleton.loadTurtle();
+    turtleSingleton.drawImages();
+    turtleSingleton.isDrawingAnswer_ = true;
+    turtleSingleton.drawAnswer();
+    turtleSingleton.isDrawingAnswer_ = false;
     if (level.predraw_blocks) {
-      Turtle.isPredrawing_ = true;
-      Turtle.drawBlocksOnCanvas(level.predraw_blocks, Turtle.ctxPredraw);
-      Turtle.isPredrawing_ = false;
+      turtleSingleton.isPredrawing_ = true;
+      turtleSingleton.drawBlocksOnCanvas(level.predraw_blocks, turtleSingleton.ctxPredraw);
+      turtleSingleton.isPredrawing_ = false;
     }
 
     // pre-load image for line pattern block. Creating the image object and setting source doesn't seem to be
@@ -291,7 +290,7 @@ Turtle.init = function(config) {
         if (skin[pattern]) {
           var img = new Image();
           img.src = skin[pattern];
-          Turtle.loadedPathPatterns[pattern] = img;
+          turtleSingleton.loadedPathPatterns[pattern] = img;
         }
       }
     }
@@ -307,27 +306,27 @@ Turtle.init = function(config) {
 /**
  * On startup draw the expected answer and save it to the answer canvas.
  */
-Turtle.drawAnswer = function() {
+turtleSingleton.drawAnswer = function() {
   if (level.solutionBlocks) {
-    Turtle.drawBlocksOnCanvas(level.solutionBlocks, Turtle.ctxAnswer);
+    turtleSingleton.drawBlocksOnCanvas(level.solutionBlocks, turtleSingleton.ctxAnswer);
   } else {
-    Turtle.drawLogOnCanvas(level.answer, Turtle.ctxAnswer);
+    turtleSingleton.drawLogOnCanvas(level.answer, turtleSingleton.ctxAnswer);
   }
 };
 
-Turtle.drawLogOnCanvas = function(log, canvas) {
+turtleSingleton.drawLogOnCanvas = function(log, canvas) {
   StudioApp.reset();
   while (log.length) {
     var tuple = log.shift();
-    Turtle.step(tuple[0], tuple.splice(1), {smoothAnimate: false});
+    turtleSingleton.step(tuple[0], tuple.splice(1), {smoothAnimate: false});
     resetStepInfo();
   }
   canvas.globalCompositeOperation = 'copy';
-  canvas.drawImage(Turtle.ctxScratch.canvas, 0, 0);
+  canvas.drawImage(turtleSingleton.ctxScratch.canvas, 0, 0);
   canvas.globalCompositeOperation = 'source-over';
 };
 
-Turtle.drawBlocksOnCanvas = function(blocks, canvas) {
+turtleSingleton.drawBlocksOnCanvas = function(blocks, canvas) {
   var code;
   if (StudioApp.usingBlockly) {
     var domBlocks = Blockly.Xml.textToDom(blocks);
@@ -336,15 +335,15 @@ Turtle.drawBlocksOnCanvas = function(blocks, canvas) {
   } else {
     code = blocks;
   }
-  Turtle.evalCode(code);
+  turtleSingleton.evalCode(code);
   if (StudioApp.usingBlockly) {
     Blockly.mainBlockSpace.clear();
   }
-  Turtle.drawCurrentBlocksOnCanvas(canvas);
+  turtleSingleton.drawCurrentBlocksOnCanvas(canvas);
 };
 
-Turtle.drawCurrentBlocksOnCanvas = function(canvas) {
-  Turtle.drawLogOnCanvas(api.log, canvas);
+turtleSingleton.drawCurrentBlocksOnCanvas = function(canvas) {
+  turtleSingleton.drawLogOnCanvas(api.log, canvas);
 };
 
 /**
@@ -354,19 +353,19 @@ Turtle.drawCurrentBlocksOnCanvas = function(canvas) {
  * @param {!Array} position An x-y pair.
  * @param {number} optional scale at which image is drawn
  */
-Turtle.placeImage = function(filename, position, scale) {
+turtleSingleton.placeImage = function(filename, position, scale) {
   var img = new Image();
   img.onload = function() {
     if (scale) {
       if (img.width !== 0) {
-        Turtle.ctxImages.drawImage(img, position[0] * retina, position[1] * retina, img.width, img.height, 0, 0, img.width * scale, img.height * scale);
+        turtleSingleton.ctxImages.drawImage(img, position[0] * retina, position[1] * retina, img.width, img.height, 0, 0, img.width * scale, img.height * scale);
       }
     } else {
       if (img.width !== 0) {
-        Turtle.ctxImages.drawImage(img, position[0] * retina, position[1] * retina);
+        turtleSingleton.ctxImages.drawImage(img, position[0] * retina, position[1] * retina);
       }
     }
-    Turtle.display();
+    turtleSingleton.display();
   };
   if (skin.id == "anna" || skin.id == "elsa")
   {
@@ -379,54 +378,54 @@ Turtle.placeImage = function(filename, position, scale) {
 };
 
 /**
- * Draw the images for this page and level onto Turtle.ctxImages.
+ * Draw the images for this page and level onto turtleSingleton.ctxImages.
  */
-Turtle.drawImages = function() {
+turtleSingleton.drawImages = function() {
   if (!level.images) {
     return;
   }
   for (var i = 0; i < level.images.length; i++) {
     var image = level.images[i];
-    Turtle.placeImage(image.filename, image.position, image.scale);
+    turtleSingleton.placeImage(image.filename, image.position, image.scale);
   }
-  Turtle.ctxImages.globalCompositeOperation = 'copy';
-  Turtle.ctxImages.drawImage(Turtle.ctxScratch.canvas, 0, 0);
-  Turtle.ctxImages.globalCompositeOperation = 'source-over';
+  turtleSingleton.ctxImages.globalCompositeOperation = 'copy';
+  turtleSingleton.ctxImages.drawImage(turtleSingleton.ctxScratch.canvas, 0, 0);
+  turtleSingleton.ctxImages.globalCompositeOperation = 'source-over';
 };
 
 /**
  * Initial the turtle image on load.
  */
-Turtle.loadTurtle = function() {
-  Turtle.avatarImage.onload = function() {
-    Turtle.display();
+turtleSingleton.loadTurtle = function() {
+  turtleSingleton.avatarImage.onload = function() {
+    turtleSingleton.display();
   };
   if ((skin.id == "anna" || skin.id == "elsa") && retina > 1)
-    Turtle.avatarImage.src = skin.avatar_2x;
+    turtleSingleton.avatarImage.src = skin.avatar_2x;
   else
-    Turtle.avatarImage.src = skin.avatar;
+    turtleSingleton.avatarImage.src = skin.avatar;
   if (skin.id == "anna")
-    Turtle.numberAvatarHeadings = 36;
+    turtleSingleton.numberAvatarHeadings = 36;
   else if (skin.id == "elsa")
-    Turtle.numberAvatarHeadings = 18;
+    turtleSingleton.numberAvatarHeadings = 18;
   else
-    Turtle.numberAvatarHeadings = 180;
-  Turtle.avatarImage.spriteHeight = Turtle.AVATAR_HEIGHT;
-  Turtle.avatarImage.spriteWidth = Turtle.AVATAR_WIDTH;
+    turtleSingleton.numberAvatarHeadings = 180;
+  turtleSingleton.avatarImage.spriteHeight = turtleSingleton.AVATAR_HEIGHT;
+  turtleSingleton.avatarImage.spriteWidth = turtleSingleton.AVATAR_WIDTH;
 };
 
 /**
  * Initial the turtle animation deocration on load.
  */
-Turtle.loadDecorationAnimation = function() {
+turtleSingleton.loadDecorationAnimation = function() {
   if (skin.id == "elsa")
   {
     if (retina > 1)
-      Turtle.decorationAnimationImage.src = skin.decorationAnimation_2x;
+      turtleSingleton.decorationAnimationImage.src = skin.decorationAnimation_2x;
     else
-      Turtle.decorationAnimationImage.src = skin.decorationAnimation;
-    Turtle.decorationAnimationImage.height = Turtle.DECORATIONANIMATION_HEIGHT;
-    Turtle.decorationAnimationImage.width = Turtle.DECORATIONANIMATION_WIDTH;
+      turtleSingleton.decorationAnimationImage.src = skin.decorationAnimation;
+    turtleSingleton.decorationAnimationImage.height = turtleSingleton.DECORATIONANIMATION_HEIGHT;
+    turtleSingleton.decorationAnimationImage.width = turtleSingleton.DECORATIONANIMATION_WIDTH;
   }
 };
 
@@ -434,40 +433,40 @@ var turtleFrame = 0;
 
 
 /**
- * Draw the turtle image based on Turtle.x, Turtle.y, and Turtle.heading.
+ * Draw the turtle image based on turtleSingleton.x, turtleSingleton.y, and turtleSingleton.heading.
  */
-Turtle.drawTurtle = function() {
+turtleSingleton.drawTurtle = function() {
   var sourceY;
   // Computes the index of the image in the sprite.
-  var index = Math.floor(Turtle.heading * Turtle.numberAvatarHeadings / 360);
+  var index = Math.floor(turtleSingleton.heading * turtleSingleton.numberAvatarHeadings / 360);
   if (skin.id == "anna" || skin.id == "elsa") {
     // the rotations in the sprite sheet go in the opposite direction.
-    index = Turtle.numberAvatarHeadings - index;
+    index = turtleSingleton.numberAvatarHeadings - index;
 
     // and they are 180 degrees out of phase.
-    index = (index + Turtle.numberAvatarHeadings/2) % Turtle.numberAvatarHeadings;
+    index = (index + turtleSingleton.numberAvatarHeadings/2) % turtleSingleton.numberAvatarHeadings;
   }
-  var sourceX = Turtle.avatarImage.spriteWidth * index;
+  var sourceX = turtleSingleton.avatarImage.spriteWidth * index;
   if (skin.id == "anna" || skin.id == "elsa") {
-    sourceY = Turtle.avatarImage.spriteHeight * turtleFrame;
+    sourceY = turtleSingleton.avatarImage.spriteHeight * turtleFrame;
     turtleFrame = (turtleFrame + 1) % skin.turtleNumFrames;
   } else {
     sourceY = 0;
   }
-  var sourceWidth = Turtle.avatarImage.spriteWidth;
-  var sourceHeight = Turtle.avatarImage.spriteHeight;
-  var destWidth = Turtle.avatarImage.spriteWidth;
-  var destHeight = Turtle.avatarImage.spriteHeight;
-  var destX = Turtle.x - destWidth / 2;
-  var destY = Turtle.y - destHeight + 7;
+  var sourceWidth = turtleSingleton.avatarImage.spriteWidth;
+  var sourceHeight = turtleSingleton.avatarImage.spriteHeight;
+  var destWidth = turtleSingleton.avatarImage.spriteWidth;
+  var destHeight = turtleSingleton.avatarImage.spriteHeight;
+  var destX = turtleSingleton.x - destWidth / 2;
+  var destY = turtleSingleton.y - destHeight + 7;
 
-  if (Turtle.avatarImage.width === 0 || Turtle.avatarImage.height === 0)
+  if (turtleSingleton.avatarImage.width === 0 || turtleSingleton.avatarImage.height === 0)
     return;
 
   if (sourceX * retina < 0 ||
       sourceY * retina < 0 ||
-      sourceX * retina + sourceWidth  * retina -0 > Turtle.avatarImage.width ||
-      sourceY * retina + sourceHeight * retina > Turtle.avatarImage.height)
+      sourceX * retina + sourceWidth  * retina -0 > turtleSingleton.avatarImage.width ||
+      sourceY * retina + sourceHeight * retina > turtleSingleton.avatarImage.height)
   {
     if (console && console.log) {
       console.log("drawImage is out of source bounds!");
@@ -475,9 +474,9 @@ Turtle.drawTurtle = function() {
     return;
   }
 
-  if (Turtle.avatarImage.width !== 0) {
-    Turtle.ctxDisplay.drawImage(
-      Turtle.avatarImage,
+  if (turtleSingleton.avatarImage.width !== 0) {
+    turtleSingleton.ctxDisplay.drawImage(
+      turtleSingleton.avatarImage,
       Math.round(sourceX * retina), Math.round(sourceY * retina),
       sourceWidth * retina - 0, sourceHeight * retina,
       Math.round(destX * retina), Math.round(destY * retina),
@@ -518,31 +517,31 @@ var decorationImageDetails = [
   * the sprite is drawn.  For some angles it should be drawn before, and for some after.
   */
 
-Turtle.drawDecorationAnimation = function(when) {
+turtleSingleton.drawDecorationAnimation = function(when) {
   if (skin.id == "elsa") {
     var frameIndex = (turtleFrame + 10) % skin.decorationAnimationNumFrames;
 
-    var angleIndex = Math.floor(Turtle.heading * Turtle.numberAvatarHeadings / 360);
+    var angleIndex = Math.floor(turtleSingleton.heading * turtleSingleton.numberAvatarHeadings / 360);
 
     // the rotations in the Anna & Elsa sprite sheets go in the opposite direction.
-    angleIndex = Turtle.numberAvatarHeadings - angleIndex;
+    angleIndex = turtleSingleton.numberAvatarHeadings - angleIndex;
 
     // and they are 180 degrees out of phase.
-    angleIndex = (angleIndex + Turtle.numberAvatarHeadings/2) % Turtle.numberAvatarHeadings;
+    angleIndex = (angleIndex + turtleSingleton.numberAvatarHeadings/2) % turtleSingleton.numberAvatarHeadings;
 
     if (decorationImageDetails[angleIndex].when == when) {
-      var sourceX = Turtle.decorationAnimationImage.width * frameIndex;
+      var sourceX = turtleSingleton.decorationAnimationImage.width * frameIndex;
       var sourceY = 0;
-      var sourceWidth = Turtle.decorationAnimationImage.width;
-      var sourceHeight = Turtle.decorationAnimationImage.height;
+      var sourceWidth = turtleSingleton.decorationAnimationImage.width;
+      var sourceHeight = turtleSingleton.decorationAnimationImage.height;
       var destWidth = sourceWidth;
       var destHeight = sourceHeight;
-      var destX = Turtle.x - destWidth / 2 - 15 - 15 + decorationImageDetails[angleIndex].x;
-      var destY = Turtle.y - destHeight / 2 - 100;
+      var destX = turtleSingleton.x - destWidth / 2 - 15 - 15 + decorationImageDetails[angleIndex].x;
+      var destY = turtleSingleton.y - destHeight / 2 - 100;
 
-      if (Turtle.decorationAnimationImage.width !== 0) {
-        Turtle.ctxDisplay.drawImage(
-          Turtle.decorationAnimationImage,
+      if (turtleSingleton.decorationAnimationImage.width !== 0) {
+        turtleSingleton.ctxDisplay.drawImage(
+          turtleSingleton.decorationAnimationImage,
           Math.round(sourceX * retina), Math.round(sourceY * retina),
           sourceWidth * retina, sourceHeight * retina,
           Math.round(destX * retina), Math.round(destY * retina),
@@ -561,69 +560,69 @@ Turtle.drawDecorationAnimation = function(when) {
  */
 StudioApp.reset = function(ignore) {
   // Standard starting location and heading of the turtle.
-  Turtle.x = CANVAS_HEIGHT / 2;
-  Turtle.y = CANVAS_WIDTH / 2;
-  Turtle.heading = level.startDirection !== undefined ?
+  turtleSingleton.x = CANVAS_HEIGHT / 2;
+  turtleSingleton.y = CANVAS_WIDTH / 2;
+  turtleSingleton.heading = level.startDirection !== undefined ?
       level.startDirection : 90;
-  Turtle.penDownValue = true;
-  Turtle.visible = true;
+  turtleSingleton.penDownValue = true;
+  turtleSingleton.visible = true;
 
   // For special cases, use a different initial location.
   if (level.initialX !== undefined) {
-    Turtle.x = level.initialX;
+    turtleSingleton.x = level.initialX;
   }
   if (level.initialY !== undefined) {
-    Turtle.y = level.initialY;
+    turtleSingleton.y = level.initialY;
   }
   // Clear the display.
-  Turtle.ctxScratch.canvas.width = Turtle.ctxScratch.canvas.width;
-  Turtle.ctxPattern.canvas.width = Turtle.ctxPattern.canvas.width;
+  turtleSingleton.ctxScratch.canvas.width = turtleSingleton.ctxScratch.canvas.width;
+  turtleSingleton.ctxPattern.canvas.width = turtleSingleton.ctxPattern.canvas.width;
   if (skin.id == "anna") {
-    Turtle.ctxScratch.strokeStyle = 'rgb(255,255,255)';
-    Turtle.ctxScratch.fillStyle = 'rgb(255,255,255)';
-    Turtle.ctxScratch.lineWidth = 2 * retina;
+    turtleSingleton.ctxScratch.strokeStyle = 'rgb(255,255,255)';
+    turtleSingleton.ctxScratch.fillStyle = 'rgb(255,255,255)';
+    turtleSingleton.ctxScratch.lineWidth = 2 * retina;
   } else if (skin.id == "elsa") {
-    Turtle.ctxScratch.strokeStyle = 'rgb(255,255,255)';
-    Turtle.ctxScratch.fillStyle = 'rgb(255,255,255)';
-    Turtle.ctxScratch.lineWidth = 2 * retina;
+    turtleSingleton.ctxScratch.strokeStyle = 'rgb(255,255,255)';
+    turtleSingleton.ctxScratch.fillStyle = 'rgb(255,255,255)';
+    turtleSingleton.ctxScratch.lineWidth = 2 * retina;
   } else {
-    Turtle.ctxScratch.strokeStyle = '#000000';
-    Turtle.ctxScratch.fillStyle = '#000000';
-    Turtle.ctxScratch.lineWidth = 5;
+    turtleSingleton.ctxScratch.strokeStyle = '#000000';
+    turtleSingleton.ctxScratch.fillStyle = '#000000';
+    turtleSingleton.ctxScratch.lineWidth = 5;
   }
 
-  Turtle.ctxScratch.lineCap = 'round';
-  Turtle.ctxScratch.font = 'normal 18pt Arial';
-  Turtle.display();
+  turtleSingleton.ctxScratch.lineCap = 'round';
+  turtleSingleton.ctxScratch.font = 'normal 18pt Arial';
+  turtleSingleton.display();
 
   // Clear the feedback.
-  Turtle.ctxFeedback.clearRect(
-      0, 0, Turtle.ctxFeedback.canvas.width, Turtle.ctxFeedback.canvas.height);
+  turtleSingleton.ctxFeedback.clearRect(
+      0, 0, turtleSingleton.ctxFeedback.canvas.width, turtleSingleton.ctxFeedback.canvas.height);
 
   if (skin.id == "anna") {
     if (retina > 1)
-      Turtle.setPattern("annaLine_2x");
+      turtleSingleton.setPattern("annaLine_2x");
     else
-      Turtle.setPattern("annaLine");
+      turtleSingleton.setPattern("annaLine");
   } else if (skin.id == "elsa") {
     if (retina > 1)
-      Turtle.setPattern("elsaLine_2x");
+      turtleSingleton.setPattern("elsaLine_2x");
     else
-      Turtle.setPattern("elsaLine");
+      turtleSingleton.setPattern("elsaLine");
   } else {
     // Reset to empty pattern
-    Turtle.setPattern(null);
+    turtleSingleton.setPattern(null);
   }
 
   // Kill any task.
-  if (Turtle.pid) {
-    window.clearTimeout(Turtle.pid);
+  if (turtleSingleton.pid) {
+    window.clearTimeout(turtleSingleton.pid);
   }
-  Turtle.pid = 0;
+  turtleSingleton.pid = 0;
 
   // Discard the interpreter.
-  Turtle.interpreter = null;
-  Turtle.executionError = null;
+  turtleSingleton.interpreter = null;
+  turtleSingleton.executionError = null;
 
   // Stop the looping sound.
   StudioApp.stopLoopingAudio('start');
@@ -637,55 +636,55 @@ StudioApp.reset = function(ignore) {
  * is what this does.
  */
 function resetStepInfo() {
-  Turtle.stepStartX = Turtle.x;
-  Turtle.stepStartY = Turtle.y;
-  Turtle.stepDistanceCovered = 0;
+  turtleSingleton.stepStartX = turtleSingleton.x;
+  turtleSingleton.stepStartY = turtleSingleton.y;
+  turtleSingleton.stepDistanceCovered = 0;
 }
 
 
 /**
  * Copy the scratch canvas to the display canvas. Add a turtle marker.
  */
-Turtle.display = function() {
+turtleSingleton.display = function() {
   // FF on linux retains drawing of previous location of artist unless we clear
   // the canvas first.
-  var style = Turtle.ctxDisplay.fillStyle;
-  Turtle.ctxDisplay.fillStyle = 'white';
-  Turtle.ctxDisplay.clearRect(0, 0, Turtle.ctxDisplay.canvas.width,
-    Turtle.ctxDisplay.canvas.width);
-  Turtle.ctxDisplay.fillStyle = style;
+  var style = turtleSingleton.ctxDisplay.fillStyle;
+  turtleSingleton.ctxDisplay.fillStyle = 'white';
+  turtleSingleton.ctxDisplay.clearRect(0, 0, turtleSingleton.ctxDisplay.canvas.width,
+    turtleSingleton.ctxDisplay.canvas.width);
+  turtleSingleton.ctxDisplay.fillStyle = style;
 
-  Turtle.ctxDisplay.globalCompositeOperation = 'copy';
+  turtleSingleton.ctxDisplay.globalCompositeOperation = 'copy';
   // Draw the images layer.
-  Turtle.ctxDisplay.globalCompositeOperation = 'source-over';
-  Turtle.ctxDisplay.drawImage(Turtle.ctxImages.canvas, 0, 0);
+  turtleSingleton.ctxDisplay.globalCompositeOperation = 'source-over';
+  turtleSingleton.ctxDisplay.drawImage(turtleSingleton.ctxImages.canvas, 0, 0);
 
   // Draw the answer layer.
   if (skin.id == "anna" || skin.id == "elsa") {
-    Turtle.ctxDisplay.globalAlpha = 0.4;
+    turtleSingleton.ctxDisplay.globalAlpha = 0.4;
   } else {
-    Turtle.ctxDisplay.globalAlpha = 0.15;
+    turtleSingleton.ctxDisplay.globalAlpha = 0.15;
   }
-  Turtle.ctxDisplay.drawImage(Turtle.ctxAnswer.canvas, 0, 0);
-  Turtle.ctxDisplay.globalAlpha = 1;
+  turtleSingleton.ctxDisplay.drawImage(turtleSingleton.ctxAnswer.canvas, 0, 0);
+  turtleSingleton.ctxDisplay.globalAlpha = 1;
 
   // Draw the predraw layer.
-  Turtle.ctxDisplay.globalCompositeOperation = 'source-over';
-  Turtle.ctxDisplay.drawImage(Turtle.ctxPredraw.canvas, 0, 0);
+  turtleSingleton.ctxDisplay.globalCompositeOperation = 'source-over';
+  turtleSingleton.ctxDisplay.drawImage(turtleSingleton.ctxPredraw.canvas, 0, 0);
 
   // Draw the pattern layer.
-  Turtle.ctxDisplay.globalCompositeOperation = 'source-over';
-  Turtle.ctxDisplay.drawImage(Turtle.ctxPattern.canvas, 0, 0);
+  turtleSingleton.ctxDisplay.globalCompositeOperation = 'source-over';
+  turtleSingleton.ctxDisplay.drawImage(turtleSingleton.ctxPattern.canvas, 0, 0);
 
   // Draw the user layer.
-  Turtle.ctxDisplay.globalCompositeOperation = 'source-over';
-  Turtle.ctxDisplay.drawImage(Turtle.ctxScratch.canvas, 0, 0);
+  turtleSingleton.ctxDisplay.globalCompositeOperation = 'source-over';
+  turtleSingleton.ctxDisplay.drawImage(turtleSingleton.ctxScratch.canvas, 0, 0);
 
   // Draw the turtle.
-  if (Turtle.visible) {
-    Turtle.drawDecorationAnimation("before");
-    Turtle.drawTurtle();
-    Turtle.drawDecorationAnimation("after");
+  if (turtleSingleton.visible) {
+    turtleSingleton.drawDecorationAnimation("before");
+    turtleSingleton.drawTurtle();
+    turtleSingleton.drawDecorationAnimation("after");
   }
 };
 
@@ -699,11 +698,11 @@ StudioApp.runButtonClick = function() {
     Blockly.mainBlockSpace.traceOn(true);
   }
   StudioApp.attempts++;
-  Turtle.execute();
+  turtleSingleton.execute();
 
 };
 
-Turtle.evalCode = function(code) {
+turtleSingleton.evalCode = function(code) {
   try {
     codegen.evalWith(code, {
       StudioApp: StudioApp,
@@ -726,29 +725,29 @@ Turtle.evalCode = function(code) {
 };
 
 /**
- * Set up Turtle.code, Turtle.interpreter, etc. to run code for editCode levels
+ * Set up turtleSingleton.code, turtleSingleton.interpreter, etc. to run code for editCode levels
  */
 function generateTurtleCodeFromJS () {
-  Turtle.code = utils.generateCodeAliases(level.codeFunctions, 'Turtle');
-  Turtle.userCodeStartOffset = Turtle.code.length;
-  Turtle.code += StudioApp.editor.getValue();
-  Turtle.userCodeLength = Turtle.code.length - Turtle.userCodeStartOffset;
+  turtleSingleton.code = utils.generateCodeAliases(level.codeFunctions, 'Turtle');
+  turtleSingleton.userCodeStartOffset = turtleSingleton.code.length;
+  turtleSingleton.code += StudioApp.editor.getValue();
+  turtleSingleton.userCodeLength = turtleSingleton.code.length - turtleSingleton.userCodeStartOffset;
 
   var session = StudioApp.editor.aceEditor.getSession();
-  Turtle.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
+  turtleSingleton.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
 
   var initFunc = function(interpreter, scope) {
     codegen.initJSInterpreter(interpreter, scope, {
                                       StudioApp: StudioApp,
                                       Turtle: api } );
   };
-  Turtle.interpreter = new window.Interpreter(Turtle.code, initFunc);
+  turtleSingleton.interpreter = new window.Interpreter(turtleSingleton.code, initFunc);
 }
 
 /**
  * Execute the user's code.  Heaven help us...
  */
-Turtle.execute = function() {
+turtleSingleton.execute = function() {
   api.log = [];
 
   // Reset the graphic.
@@ -756,21 +755,21 @@ Turtle.execute = function() {
 
   if (feedback.hasExtraTopBlocks()) {
     // immediately check answer, which will fail and report top level blocks
-    Turtle.checkAnswer();
+    turtleSingleton.checkAnswer();
     return;
   }
 
   if (level.editCode) {
     generateTurtleCodeFromJS();
   } else {
-    Turtle.code = Blockly.Generator.blockSpaceToCode('JavaScript');
-    Turtle.evalCode(Turtle.code);
+    turtleSingleton.code = Blockly.Generator.blockSpaceToCode('JavaScript');
+    turtleSingleton.evalCode(turtleSingleton.code);
   }
 
   // api.log now contains a transcript of all the user's actions.
   StudioApp.playAudio('start', {loop : true});
   // animate the transcript.
-  Turtle.pid = window.setTimeout(Turtle.animate, 100);
+  turtleSingleton.pid = window.setTimeout(turtleSingleton.animate, 100);
 
   if (StudioApp.usingBlockly) {
     // Disable toolbox while running
@@ -834,8 +833,8 @@ function executeTuple () {
     }
 
     // We only smooth animate for Anna & Elsa, and only if there is not another tuple to be done.
-    var tupleDone = Turtle.step(command, tuple.slice(1), {smoothAnimate: skin.smoothAnimate && !executeSecondTuple});
-    Turtle.display();
+    var tupleDone = turtleSingleton.step(command, tuple.slice(1), {smoothAnimate: skin.smoothAnimate && !executeSecondTuple});
+    turtleSingleton.display();
 
     if (tupleDone) {
       api.log.shift();
@@ -854,42 +853,42 @@ function finishExecution () {
   if (StudioApp.usingBlockly) {
     Blockly.mainBlockSpace.highlightBlock(null);
   }
-  Turtle.checkAnswer();
+  turtleSingleton.checkAnswer();
 }
 
 /**
  * Iterate through the recorded path and animate the turtle's actions.
  */
-Turtle.animate = function() {
+turtleSingleton.animate = function() {
 
   // All tasks should be complete now.  Clean up the PID list.
-  Turtle.pid = 0;
+  turtleSingleton.pid = 0;
 
   // Scale the speed non-linearly, to give better precision at the fast end.
-  var stepSpeed = 1000 * Math.pow(1 - Turtle.speedSlider.getValue(), 2) / skin.speedModifier;
+  var stepSpeed = 1000 * Math.pow(1 - turtleSingleton.speedSlider.getValue(), 2) / skin.speedModifier;
 
   // when smoothAnimate is true, we divide long steps into partitions of this
   // size.
-  Turtle.smoothAnimateStepSize = (stepSpeed === 0 ?
+  turtleSingleton.smoothAnimateStepSize = (stepSpeed === 0 ?
     FAST_SMOOTH_ANIMATE_STEP_SIZE : SMOOTH_ANIMATE_STEP_SIZE);
 
   if (level.editCode) {
     var stepped = true;
     while (stepped) {
-      codegen.selectCurrentCode(Turtle.interpreter,
+      codegen.selectCurrentCode(turtleSingleton.interpreter,
                                 StudioApp.editor,
-                                Turtle.cumulativeLength,
-                                Turtle.userCodeStartOffset,
-                                Turtle.userCodeLength);
+                                turtleSingleton.cumulativeLength,
+                                turtleSingleton.userCodeStartOffset,
+                                turtleSingleton.userCodeLength);
       try {
-        stepped = Turtle.interpreter.step();
+        stepped = turtleSingleton.interpreter.step();
       }
       catch(err) {
-        Turtle.executionError = err;
+        turtleSingleton.executionError = err;
         finishExecution();
         return;
       }
-      stepped = Turtle.interpreter.step();
+      stepped = turtleSingleton.interpreter.step();
 
       if (executeTuple()) {
         // We stepped far enough that we executed a commmand, break out:
@@ -908,16 +907,16 @@ Turtle.animate = function() {
     }
   }
 
-  Turtle.pid = window.setTimeout(Turtle.animate, stepSpeed);
+  turtleSingleton.pid = window.setTimeout(turtleSingleton.animate, stepSpeed);
 };
 
-Turtle.calculateSmoothAnimate = function(options, distance) {
+turtleSingleton.calculateSmoothAnimate = function(options, distance) {
   var tupleDone = true;
-  var stepDistanceCovered = Turtle.stepDistanceCovered;
+  var stepDistanceCovered = turtleSingleton.stepDistanceCovered;
 
   if (options && options.smoothAnimate) {
     var fullDistance = distance;
-    var smoothAnimateStepSize = Turtle.smoothAnimateStepSize;
+    var smoothAnimateStepSize = turtleSingleton.smoothAnimateStepSize;
 
     if (fullDistance < 0) {
       // Going backward.
@@ -945,7 +944,7 @@ Turtle.calculateSmoothAnimate = function(options, distance) {
     }
   }
 
-  Turtle.stepDistanceCovered = stepDistanceCovered;
+  turtleSingleton.stepDistanceCovered = stepDistanceCovered;
 
   return { tupleDone: tupleDone, distance: distance };
 };
@@ -957,7 +956,7 @@ Turtle.calculateSmoothAnimate = function(options, distance) {
  * @param {number} fraction How much of this step's distance do we draw?
  * @param {object} single option for now: smoothAnimate (true/false)
  */
-Turtle.step = function(command, values, options) {
+turtleSingleton.step = function(command, values, options) {
   var tupleDone = true;
   var result;
   var distance;
@@ -966,85 +965,85 @@ Turtle.step = function(command, values, options) {
   switch (command) {
     case 'FD':  // Forward
       distance = values[0];
-      result = Turtle.calculateSmoothAnimate(options, distance);
+      result = turtleSingleton.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
-      Turtle.moveForward_(result.distance);
+      turtleSingleton.moveForward_(result.distance);
       break;
     case 'JF':  // Jump forward
       distance = values[0];
-      result = Turtle.calculateSmoothAnimate(options, distance);
+      result = turtleSingleton.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
-      Turtle.jumpForward_(result.distance);
+      turtleSingleton.jumpForward_(result.distance);
       break;
     case 'MV':  // Move (direction)
       distance = values[0];
       heading = values[1];
-      result = Turtle.calculateSmoothAnimate(options, distance);
+      result = turtleSingleton.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
-      Turtle.setHeading_(heading);
-      Turtle.moveForward_(result.distance);
+      turtleSingleton.setHeading_(heading);
+      turtleSingleton.moveForward_(result.distance);
       break;
     case 'JD':  // Jump (direction)
       distance = values[0];
       heading = values[1];
-      result = Turtle.calculateSmoothAnimate(options, distance);
+      result = turtleSingleton.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
-      Turtle.setHeading_(heading);
-      Turtle.jumpForward_(result.distance);
+      turtleSingleton.setHeading_(heading);
+      turtleSingleton.jumpForward_(result.distance);
       break;
     case 'RT':  // Right Turn
       distance = values[0];
-      result = Turtle.calculateSmoothAnimate(options, distance);
+      result = turtleSingleton.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
-      Turtle.turnByDegrees_(result.distance);
+      turtleSingleton.turnByDegrees_(result.distance);
       break;
     case 'DP':  // Draw Print
-      Turtle.ctxScratch.save();
-      Turtle.ctxScratch.translate(Turtle.x, Turtle.y);
-      Turtle.ctxScratch.rotate(2 * Math.PI * (Turtle.heading - 90) / 360);
-      Turtle.ctxScratch.fillText(values[0], 0, 0);
-      Turtle.ctxScratch.restore();
+      turtleSingleton.ctxScratch.save();
+      turtleSingleton.ctxScratch.translate(turtleSingleton.x, turtleSingleton.y);
+      turtleSingleton.ctxScratch.rotate(2 * Math.PI * (turtleSingleton.heading - 90) / 360);
+      turtleSingleton.ctxScratch.fillText(values[0], 0, 0);
+      turtleSingleton.ctxScratch.restore();
       break;
     case 'DF':  // Draw Font
-      Turtle.ctxScratch.font = values[2] + ' ' + values[1] + 'pt ' + values[0];
+      turtleSingleton.ctxScratch.font = values[2] + ' ' + values[1] + 'pt ' + values[0];
       break;
     case 'PU':  // Pen Up
-      Turtle.penDownValue = false;
+      turtleSingleton.penDownValue = false;
       break;
     case 'PD':  // Pen Down
-      Turtle.penDownValue = true;
+      turtleSingleton.penDownValue = true;
       break;
     case 'PW':  // Pen Width
-      Turtle.ctxScratch.lineWidth = values[0];
+      turtleSingleton.ctxScratch.lineWidth = values[0];
       break;
     case 'PC':  // Pen Colour
-      Turtle.ctxScratch.strokeStyle = values[0];
-      Turtle.ctxScratch.fillStyle = values[0];
+      turtleSingleton.ctxScratch.strokeStyle = values[0];
+      turtleSingleton.ctxScratch.fillStyle = values[0];
       if (skin.id != "anna" && skin.id != "elsa") {
-        Turtle.isDrawingWithPattern = false;
+        turtleSingleton.isDrawingWithPattern = false;
       }
       break;
     case 'PS':  // Pen style with image
       if (!values[0] || values[0] == 'DEFAULT') {
-          Turtle.setPattern(null);
+          turtleSingleton.setPattern(null);
       } else {
-        Turtle.setPattern(values[0]);
+        turtleSingleton.setPattern(values[0]);
       }
       break;
     case 'HT':  // Hide Turtle
-      Turtle.visible = false;
+      turtleSingleton.visible = false;
       break;
     case 'ST':  // Show Turtle
-      Turtle.visible = true;
+      turtleSingleton.visible = true;
       break;
     case 'stamp':
-      var img = Turtle.stamps[values[0]];
+      var img = turtleSingleton.stamps[values[0]];
       var width = img.width / 2;
       var height = img.height / 2;
-      var x = Turtle.x - width / 2;
-      var y = Turtle.y - height / 2;
+      var x = turtleSingleton.x - width / 2;
+      var y = turtleSingleton.y - height / 2;
       if (img.width !== 0) {
-        Turtle.ctxScratch.drawImage(img, x, y, width, height);
+        turtleSingleton.ctxScratch.drawImage(img, x, y, width, height);
       }
       break;
   }
@@ -1052,55 +1051,55 @@ Turtle.step = function(command, values, options) {
   return tupleDone;
 };
 
-Turtle.setPattern = function (pattern) {
-  if (Turtle.loadedPathPatterns[pattern]) {
-    Turtle.currentPathPattern = Turtle.loadedPathPatterns[pattern];
-    Turtle.isDrawingWithPattern = true;
+turtleSingleton.setPattern = function (pattern) {
+  if (turtleSingleton.loadedPathPatterns[pattern]) {
+    turtleSingleton.currentPathPattern = turtleSingleton.loadedPathPatterns[pattern];
+    turtleSingleton.isDrawingWithPattern = true;
   } else if (pattern === null) {
-    Turtle.currentPathPattern = new Image();
-    Turtle.isDrawingWithPattern = false;
+    turtleSingleton.currentPathPattern = new Image();
+    turtleSingleton.isDrawingWithPattern = false;
   }
 };
 
-Turtle.jumpForward_ = function (distance) {
-  Turtle.x += distance * Math.sin(2 * Math.PI * Turtle.heading / 360);
-  Turtle.y -= distance * Math.cos(2 * Math.PI * Turtle.heading / 360);
+turtleSingleton.jumpForward_ = function (distance) {
+  turtleSingleton.x += distance * Math.sin(2 * Math.PI * turtleSingleton.heading / 360);
+  turtleSingleton.y -= distance * Math.cos(2 * Math.PI * turtleSingleton.heading / 360);
 };
 
-Turtle.moveByRelativePosition_ = function (x, y) {
-  Turtle.x += x;
-  Turtle.y += y;
+turtleSingleton.moveByRelativePosition_ = function (x, y) {
+  turtleSingleton.x += x;
+  turtleSingleton.y += y;
 };
 
-Turtle.dotAt_ = function (x, y) {
+turtleSingleton.dotAt_ = function (x, y) {
   // WebKit (unlike Gecko) draws nothing for a zero-length line, so draw a very short line.
   var dotLineLength = 0.1;
-  Turtle.ctxScratch.lineTo(x + dotLineLength, y);
+  turtleSingleton.ctxScratch.lineTo(x + dotLineLength, y);
 };
 
-Turtle.circleAt_ = function (x, y, radius) {
-  Turtle.ctxScratch.arc(x, y, radius, 0, 2 * Math.PI);
+turtleSingleton.circleAt_ = function (x, y, radius) {
+  turtleSingleton.ctxScratch.arc(x, y, radius, 0, 2 * Math.PI);
 };
 
-Turtle.drawToTurtle_ = function (distance) {
+turtleSingleton.drawToTurtle_ = function (distance) {
   var isDot = (distance === 0);
   if (isDot) {
-    Turtle.dotAt_(Turtle.x, Turtle.y);
+    turtleSingleton.dotAt_(turtleSingleton.x, turtleSingleton.y);
   } else {
-    Turtle.ctxScratch.lineTo(Turtle.x * retina, Turtle.y * retina);
+    turtleSingleton.ctxScratch.lineTo(turtleSingleton.x * retina, turtleSingleton.y * retina);
   }
 };
 
-Turtle.turnByDegrees_ = function (degreesRight) {
-  Turtle.setHeading_(Turtle.heading + degreesRight);
+turtleSingleton.turnByDegrees_ = function (degreesRight) {
+  turtleSingleton.setHeading_(turtleSingleton.heading + degreesRight);
 };
 
-Turtle.setHeading_ = function (heading) {
-  heading = Turtle.constrainDegrees_(heading);
-  Turtle.heading = heading;
+turtleSingleton.setHeading_ = function (heading) {
+  heading = turtleSingleton.constrainDegrees_(heading);
+  turtleSingleton.heading = heading;
 };
 
-Turtle.constrainDegrees_ = function (degrees) {
+turtleSingleton.constrainDegrees_ = function (degrees) {
   degrees %= 360;
   if (degrees < 0) {
     degrees += 360;
@@ -1108,13 +1107,13 @@ Turtle.constrainDegrees_ = function (degrees) {
   return degrees;
 };
 
-Turtle.moveForward_ = function (distance) {
-  if (!Turtle.penDownValue) {
-    Turtle.jumpForward_(distance);
+turtleSingleton.moveForward_ = function (distance) {
+  if (!turtleSingleton.penDownValue) {
+    turtleSingleton.jumpForward_(distance);
     return;
   }
-  if (Turtle.isDrawingWithPattern) {
-    Turtle.drawForwardLineWithPattern_(distance);
+  if (turtleSingleton.isDrawingWithPattern) {
+    turtleSingleton.drawForwardLineWithPattern_(distance);
 
     // Frozen gets both a pattern and a line over the top of it.
     if (skin.id != "elsa" && skin.id != "anna") {
@@ -1122,14 +1121,14 @@ Turtle.moveForward_ = function (distance) {
     }
   }
 
-  Turtle.drawForward_(distance);
+  turtleSingleton.drawForward_(distance);
 };
 
-Turtle.drawForward_ = function (distance) {
-  if (Turtle.shouldDrawJoints_()) {
-    Turtle.drawForwardWithJoints_(distance);
+turtleSingleton.drawForward_ = function (distance) {
+  if (turtleSingleton.shouldDrawJoints_()) {
+    turtleSingleton.drawForwardWithJoints_(distance);
   } else {
-    Turtle.drawForwardLine_(distance);
+    turtleSingleton.drawForwardLine_(distance);
   }
 };
 
@@ -1137,7 +1136,7 @@ Turtle.drawForward_ = function (distance) {
  * Draws a line of length `distance`, adding joint knobs along the way
  * @param distance
  */
-Turtle.drawForwardWithJoints_ = function (distance) {
+turtleSingleton.drawForwardWithJoints_ = function (distance) {
   var remainingDistance = distance;
 
   while (remainingDistance > 0) {
@@ -1147,93 +1146,93 @@ Turtle.drawForwardWithJoints_ = function (distance) {
     remainingDistance -= currentSegmentLength;
 
     if (enoughForFullSegment) {
-      Turtle.drawJointAtTurtle_();
+      turtleSingleton.drawJointAtTurtle_();
     }
 
-    Turtle.drawForwardLine_(currentSegmentLength);
+    turtleSingleton.drawForwardLine_(currentSegmentLength);
 
     if (enoughForFullSegment) {
-      Turtle.drawJointAtTurtle_();
+      turtleSingleton.drawJointAtTurtle_();
     }
   }
 };
 
-Turtle.drawForwardLine_ = function (distance) {
+turtleSingleton.drawForwardLine_ = function (distance) {
 
   if (skin.id == "anna" || skin.id == "elsa") {
-    Turtle.ctxScratch.beginPath();
-    Turtle.ctxScratch.moveTo(Turtle.stepStartX * retina, Turtle.stepStartY * retina);
-    Turtle.jumpForward_(distance);
-    Turtle.drawToTurtle_(distance);
-    Turtle.ctxScratch.stroke();
+    turtleSingleton.ctxScratch.beginPath();
+    turtleSingleton.ctxScratch.moveTo(turtleSingleton.stepStartX * retina, turtleSingleton.stepStartY * retina);
+    turtleSingleton.jumpForward_(distance);
+    turtleSingleton.drawToTurtle_(distance);
+    turtleSingleton.ctxScratch.stroke();
   } else {
-    Turtle.ctxScratch.beginPath();
-    Turtle.ctxScratch.moveTo(Turtle.x, Turtle.y);
-    Turtle.jumpForward_(distance);
-    Turtle.drawToTurtle_(distance);
-    Turtle.ctxScratch.stroke();
+    turtleSingleton.ctxScratch.beginPath();
+    turtleSingleton.ctxScratch.moveTo(turtleSingleton.x, turtleSingleton.y);
+    turtleSingleton.jumpForward_(distance);
+    turtleSingleton.drawToTurtle_(distance);
+    turtleSingleton.ctxScratch.stroke();
   }
 
 };
 
-Turtle.drawForwardLineWithPattern_ = function (distance) {
+turtleSingleton.drawForwardLineWithPattern_ = function (distance) {
   var img;
   var startX;
   var startY;
 
   if (skin.id == "anna" || skin.id == "elsa") {
-    Turtle.ctxPattern.moveTo(Turtle.stepStartX * retina, Turtle.stepStartY * retina);
-    img = Turtle.currentPathPattern;
-    startX = Turtle.stepStartX;
-    startY = Turtle.stepStartY;
+    turtleSingleton.ctxPattern.moveTo(turtleSingleton.stepStartX * retina, turtleSingleton.stepStartY * retina);
+    img = turtleSingleton.currentPathPattern;
+    startX = turtleSingleton.stepStartX;
+    startY = turtleSingleton.stepStartY;
 
-    var lineDistance = Math.abs(Turtle.stepDistanceCovered);
+    var lineDistance = Math.abs(turtleSingleton.stepDistanceCovered);
 
-    Turtle.ctxPattern.save();
-    Turtle.ctxPattern.translate(startX * retina, startY * retina);
+    turtleSingleton.ctxPattern.save();
+    turtleSingleton.ctxPattern.translate(startX * retina, startY * retina);
     // increment the angle and rotate the image.
     // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
-    Turtle.ctxPattern.rotate(Math.PI * (Turtle.heading - 90) / 180);
+    turtleSingleton.ctxPattern.rotate(Math.PI * (turtleSingleton.heading - 90) / 180);
 
     var clipSize;
-    if (lineDistance % Turtle.smoothAnimateStepSize === 0) {
-      clipSize = Turtle.smoothAnimateStepSize;
-    } else if (lineDistance > Turtle.smoothAnimateStepSize) {
+    if (lineDistance % turtleSingleton.smoothAnimateStepSize === 0) {
+      clipSize = turtleSingleton.smoothAnimateStepSize;
+    } else if (lineDistance > turtleSingleton.smoothAnimateStepSize) {
       // this happens when our line was not divisible by smoothAnimateStepSize
       // and we've hit our last chunk
-      clipSize = lineDistance % Turtle.smoothAnimateStepSize;
+      clipSize = lineDistance % turtleSingleton.smoothAnimateStepSize;
     } else {
       clipSize = lineDistance;
     }
     if (img.width !== 0) {
-      Turtle.ctxPattern.drawImage(img,
+      turtleSingleton.ctxPattern.drawImage(img,
         // Start point for clipping image
         Math.round(lineDistance * retina), 0,
         // clip region size
         clipSize * retina, img.height,
         // some mysterious hand-tweaking done by Brendan
-        Math.round((Turtle.stepDistanceCovered - clipSize - 2) * retina), Math.round((- 18) * retina),
+        Math.round((turtleSingleton.stepDistanceCovered - clipSize - 2) * retina), Math.round((- 18) * retina),
         clipSize * retina, img.height);
     }
 
-    Turtle.ctxPattern.restore();
+    turtleSingleton.ctxPattern.restore();
 
   } else {
 
-    Turtle.ctxScratch.moveTo(Turtle.x, Turtle.y);
-    img = Turtle.currentPathPattern;
-    startX = Turtle.x;
-    startY = Turtle.y;
+    turtleSingleton.ctxScratch.moveTo(turtleSingleton.x, turtleSingleton.y);
+    img = turtleSingleton.currentPathPattern;
+    startX = turtleSingleton.x;
+    startY = turtleSingleton.y;
 
-    Turtle.jumpForward_(distance);
-    Turtle.ctxScratch.save();
-    Turtle.ctxScratch.translate(startX, startY);
+    turtleSingleton.jumpForward_(distance);
+    turtleSingleton.ctxScratch.save();
+    turtleSingleton.ctxScratch.translate(startX, startY);
     // increment the angle and rotate the image.
     // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
-    Turtle.ctxScratch.rotate(Math.PI * (Turtle.heading - 90) / 180);
+    turtleSingleton.ctxScratch.rotate(Math.PI * (turtleSingleton.heading - 90) / 180);
 
     if (img.width !== 0) {
-      Turtle.ctxScratch.drawImage(img,
+      turtleSingleton.ctxScratch.drawImage(img,
         // Start point for clipping image
         0, 0,
         // clip region size
@@ -1243,19 +1242,19 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
         distance+img.height / 2, img.height);
     }
 
-    Turtle.ctxScratch.restore();
+    turtleSingleton.ctxScratch.restore();
   }
 };
 
-Turtle.shouldDrawJoints_ = function () {
-  return level.isK1 && !Turtle.isPredrawing_;
+turtleSingleton.shouldDrawJoints_ = function () {
+  return level.isK1 && !turtleSingleton.isPredrawing_;
 };
 
-Turtle.drawJointAtTurtle_ = function () {
-  Turtle.ctxScratch.beginPath();
-  Turtle.ctxScratch.moveTo(Turtle.x, Turtle.y);
-  Turtle.circleAt_(Turtle.x, Turtle.y, JOINT_RADIUS);
-  Turtle.ctxScratch.stroke();
+turtleSingleton.drawJointAtTurtle_ = function () {
+  turtleSingleton.ctxScratch.beginPath();
+  turtleSingleton.ctxScratch.moveTo(turtleSingleton.x, turtleSingleton.y);
+  turtleSingleton.circleAt_(turtleSingleton.x, turtleSingleton.y, JOINT_RADIUS);
+  turtleSingleton.ctxScratch.stroke();
 };
 
 /**
@@ -1276,17 +1275,17 @@ var displayFeedback = function() {
   var feedbackImageCanvas;
   if (skin.id == "anna" || skin.id == "elsa") {
     // For frozen skins, show background and characters along with drawing
-    feedbackImageCanvas = Turtle.ctxDisplay;
+    feedbackImageCanvas = turtleSingleton.ctxDisplay;
   } else {
-    feedbackImageCanvas = Turtle.ctxScratch;
+    feedbackImageCanvas = turtleSingleton.ctxScratch;
   }
 
   StudioApp.displayFeedback({
     app: 'turtle', //XXX
     skin: skin.id,
-    feedbackType: Turtle.testResults,
-    message: Turtle.message,
-    response: Turtle.response,
+    feedbackType: turtleSingleton.testResults,
+    message: turtleSingleton.message,
+    response: turtleSingleton.response,
     level: level,
     feedbackImage: feedbackImageCanvas.canvas.toDataURL("image/png"),
     // add 'impressive':true to non-freeplay levels that we deem are relatively impressive (see #66990480)
@@ -1294,7 +1293,7 @@ var displayFeedback = function() {
     // impressive levels are already saved
     alreadySaved: level.impressive,
     // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-    saveToGalleryUrl: level.freePlay && Turtle.response && Turtle.response.save_to_gallery_url,
+    saveToGalleryUrl: level.freePlay && turtleSingleton.response && turtleSingleton.response.save_to_gallery_url,
     appStrings: {
       reinfFeedbackMsg: turtleMsg.reinfFeedbackMsg(),
       sharingText: turtleMsg.shareDrawing()
@@ -1306,8 +1305,8 @@ var displayFeedback = function() {
  * Function to be called when the service report call is complete
  * @param {object} JSON response (if available)
  */
-Turtle.onReportComplete = function(response) {
-  Turtle.response = response;
+turtleSingleton.onReportComplete = function(response) {
+  turtleSingleton.response = response;
   // Disable the run button until onReportComplete is called.
   var runButton = document.getElementById('runButton');
   runButton.disabled = false;
@@ -1327,13 +1326,13 @@ removeK1Lengths.regex = /_length"><title name="length">.*?<\/title>/;
  * Verify if the answer is correct.
  * If so, move on to next level.
  */
-Turtle.checkAnswer = function() {
+turtleSingleton.checkAnswer = function() {
   // Compare the Alpha (opacity) byte of each pixel in the user's image and
   // the sample answer image.
   var userImage =
-      Turtle.ctxScratch.getImageData(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+      turtleSingleton.ctxScratch.getImageData(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
   var answerImage =
-      Turtle.ctxAnswer.getImageData(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+      turtleSingleton.ctxAnswer.getImageData(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
   var len = Math.min(userImage.data.length, answerImage.data.length);
   var delta = 0;
   // Pixels are in RGBA format.  Only check the Alpha bytes.
@@ -1355,8 +1354,8 @@ Turtle.checkAnswer = function() {
   // Test whether the current level is a free play level, or the level has
   // been completed
   var levelComplete = (level.freePlay || isCorrect(delta, permittedErrors)) &&
-                        (!level.editCode || !Turtle.executionError);
-  Turtle.testResults = StudioApp.getTestResults(levelComplete);
+                        (!level.editCode || !turtleSingleton.executionError);
+  turtleSingleton.testResults = StudioApp.getTestResults(levelComplete);
 
   var program;
   if (StudioApp.usingBlockly) {
@@ -1365,35 +1364,35 @@ Turtle.checkAnswer = function() {
   }
 
   // Make sure we don't reuse an old message, since not all paths set one.
-  Turtle.message = undefined;
+  turtleSingleton.message = undefined;
 
   // In level K1, check if only lengths differ.
   if (level.isK1 && !levelComplete && !StudioApp.editCode &&
       level.solutionBlocks &&
       removeK1Lengths(program) === removeK1Lengths(level.solutionBlocks)) {
-    Turtle.testResults = StudioApp.TestResults.APP_SPECIFIC_ERROR;
-    Turtle.message = turtleMsg.lengthFeedback();
+    turtleSingleton.testResults = StudioApp.TestResults.APP_SPECIFIC_ERROR;
+    turtleSingleton.message = turtleMsg.lengthFeedback();
   }
 
   // For levels where using too many blocks would allow students
   // to miss the point, convert that feedback to a failure.
   if (level.failForTooManyBlocks &&
-      Turtle.testResults == StudioApp.TestResults.TOO_MANY_BLOCKS_FAIL) {
+      turtleSingleton.testResults == StudioApp.TestResults.TOO_MANY_BLOCKS_FAIL) {
     // TODO: Add more helpful error message.
-    Turtle.testResults = StudioApp.TestResults.TOO_MANY_BLOCKS_FAIL;
+    turtleSingleton.testResults = StudioApp.TestResults.TOO_MANY_BLOCKS_FAIL;
 
-  } else if ((Turtle.testResults ==
+  } else if ((turtleSingleton.testResults ==
       StudioApp.TestResults.TOO_MANY_BLOCKS_FAIL) ||
-      (Turtle.testResults == StudioApp.TestResults.ALL_PASS)) {
+      (turtleSingleton.testResults == StudioApp.TestResults.ALL_PASS)) {
     // Check that they didn't use a crazy large repeat value when drawing a
     // circle.  This complains if the limit doesn't start with 3.
     // Note that this level does not use colour, so no need to check for that.
     if (level.failForCircleRepeatValue && StudioApp.usingBlockly) {
       var code = Blockly.Generator.blockSpaceToCode('JavaScript');
       if (code.indexOf('count < 3') == -1) {
-        Turtle.testResults =
+        turtleSingleton.testResults =
             StudioApp.TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
-        Turtle.message = commonMsg.tooMuchWork();
+        turtleSingleton.message = commonMsg.tooMuchWork();
       }
     }
   }
@@ -1411,13 +1410,13 @@ Turtle.checkAnswer = function() {
   // If the current level is a free play, always return the free play
   // result type
   if (level.freePlay) {
-    Turtle.testResults = StudioApp.TestResults.FREE_PLAY;
+    turtleSingleton.testResults = StudioApp.TestResults.FREE_PLAY;
   }
 
   // Play sound
   StudioApp.stopLoopingAudio('start');
-  if (Turtle.testResults === StudioApp.TestResults.FREE_PLAY ||
-      Turtle.testResults >= StudioApp.TestResults.TOO_MANY_BLOCKS_FAIL) {
+  if (turtleSingleton.testResults === StudioApp.TestResults.FREE_PLAY ||
+      turtleSingleton.testResults >= StudioApp.TestResults.TOO_MANY_BLOCKS_FAIL) {
     StudioApp.playAudio('win');
   } else {
     StudioApp.playAudio('failure');
@@ -1428,9 +1427,9 @@ Turtle.checkAnswer = function() {
     level: level.id,
     builder: level.builder,
     result: levelComplete,
-    testResult: Turtle.testResults,
+    testResult: turtleSingleton.testResults,
     program: encodeURIComponent(program),
-    onComplete: Turtle.onReportComplete,
+    onComplete: turtleSingleton.onReportComplete,
     save_to_gallery: level.impressive
   };
 
@@ -1439,7 +1438,7 @@ Turtle.checkAnswer = function() {
   var isFrozen = (skin.id === 'anna' || skin.id === 'elsa');
 
   // Get the canvas data for feedback.
-  if (Turtle.testResults >= StudioApp.TestResults.TOO_MANY_BLOCKS_FAIL &&
+  if (turtleSingleton.testResults >= StudioApp.TestResults.TOO_MANY_BLOCKS_FAIL &&
     !isFrozen && (level.freePlay || level.impressive)) {
     reportData.image = getFeedbackImage();
   }
@@ -1457,15 +1456,15 @@ Turtle.checkAnswer = function() {
 var getFeedbackImage = function() {
   var feedbackImageCanvas;
   if (skin.id == "anna" || skin.id == "elsa") {
-    feedbackImageCanvas = Turtle.ctxDisplay;
+    feedbackImageCanvas = turtleSingleton.ctxDisplay;
   } else {
-    feedbackImageCanvas = Turtle.ctxScratch;
+    feedbackImageCanvas = turtleSingleton.ctxScratch;
   }
 
   // Copy the user layer
-  Turtle.ctxFeedback.globalCompositeOperation = 'copy';
-  Turtle.ctxFeedback.drawImage(feedbackImageCanvas.canvas, 0, 0, 154, 154);
-  var feedbackCanvas = Turtle.ctxFeedback.canvas;
+  turtleSingleton.ctxFeedback.globalCompositeOperation = 'copy';
+  turtleSingleton.ctxFeedback.drawImage(feedbackImageCanvas.canvas, 0, 0, 154, 154);
+  var feedbackCanvas = turtleSingleton.ctxFeedback.canvas;
   return encodeURIComponent(
       feedbackCanvas.toDataURL("image/png").split(',')[1]);
 };
