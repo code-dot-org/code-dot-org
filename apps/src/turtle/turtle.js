@@ -39,6 +39,7 @@ var api = require('./api');
 var page = require('../templates/page.html');
 var feedback = require('../feedback.js');
 var utils = require('../utils');
+var Slider = require('../slider');
 
 var level;
 var skin;
@@ -189,6 +190,18 @@ Turtle.init = function(config) {
   };
 
   config.afterInject = function() {
+    // Initialize the slider.
+    var slider = document.getElementById('slider');
+    if (slider) {
+      // TODO (noted by cpirich): remove Turtle specific code here:
+      Turtle.speedSlider = new Slider(10, 35, 130, slider);
+
+      // Change default speed (eg Speed up levels that have lots of steps).
+      if (config.level.sliderSpeed) {
+        Turtle.speedSlider.setValue(config.level.sliderSpeed);
+      }
+    }
+
     if (StudioApp.usingBlockly) {
       // Add to reserved word list: API, local variables in execution evironment
       // (execute) and the infinite loop detection function.
