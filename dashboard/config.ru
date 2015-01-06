@@ -8,4 +8,7 @@ use Unicorn::OobGC
 require 'cdo/middleware/apps_api'
 use AppsApi
 
+require 'cdo/middleware/shared_resources'
+use SharedResources
+
 run Rails.application
