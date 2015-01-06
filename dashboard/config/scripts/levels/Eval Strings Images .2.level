@@ -7,13 +7,14 @@
   "properties": {
     "skin": "eval",
     "use_contract_editor": "true",
-    "instructions": "The \"string-append\" function takes two Strings and returns a single combined String. Add a String containing your name to the second argument of \"string-append.\"",
+    "instructions": "The \"string-append\" function takes two Strings and returns a single combined String. Add a String \"Universe\" to the second argument of \"string-append.\"",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
-    "free_play": "true"
+    "free_play": "false",
+    "embed": "false"
   }
 }]]></config>
   <blocks>
@@ -42,7 +43,13 @@
     </toolbox_blocks>
     <solution_blocks>
       <xml>
-        <block type="functional_display" inline="false" deletable="false" movable="false"/>
+        <block type="functional_display" inline="false" deletable="false" movable="false">
+          <functional_input name="ARG1">
+            <block type="functional_string">
+              <title name="VAL">Hello, Universe</title>
+            </block>
+          </functional_input>
+        </block>
       </xml>
     </solution_blocks>
   </blocks>

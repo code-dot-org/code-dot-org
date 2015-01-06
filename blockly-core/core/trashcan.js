@@ -33,6 +33,7 @@ goog.provide('Blockly.Trashcan');
  */
 Blockly.Trashcan = function(blockSpace) {
   this.blockSpace_ = blockSpace;
+  this.extraYOffset_ = 0;
 };
 
 /**
@@ -192,9 +193,13 @@ Blockly.Trashcan.prototype.position_ = function() {
   } else {
     this.left_ = metrics.viewWidth - this.WIDTH_ - this.MARGIN_SIDE_;
   }
-  this.top_ = this.MARGIN_TOP_;
+  this.top_ = this.MARGIN_TOP_ + this.extraYOffset_;
   this.svgGroup_.setAttribute('transform',
       'translate(' + this.left_ + ',' + this.top_ + ')');
+};
+
+Blockly.Trashcan.prototype.setYOffset = function(pixelOffset) {
+  this.extraYOffset_ = pixelOffset;
 };
 
 /**
