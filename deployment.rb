@@ -45,6 +45,7 @@ def load_configuration()
     'build_pegasus'               => true,
     'dashboard_db_name'           => "dashboard_#{rack_env}",
     'dashboard_devise_pepper'     => 'not a pepper!',
+    'dashboard_secret_key_base'   => 'not a secret',
     'dashboard_honeybadger_api_key' =>'00000000',
     'dashboard_port'              => 3000,
     'dashboard_unicorn_name'      => 'dashboard',
@@ -109,6 +110,25 @@ class CDOImpl < OpenStruct
     return "#{self.name}.#{domain}" if ['console', 'hoc-levels'].include?(self.name)
     return domain if rack_env?(:production)
     "#{rack_env}.#{domain}"
+  end
+
+  def site_url(domain, path = '')
+    host = canonical_hostname(domain)
+    if rack_env?(:development)
+      port = ['studio.code.org'].include?(domain) ? CDO.dashboard_port : CDO.pegasus_port
+      host += ":#{port}"
+    end
+
+    path = '/' + path unless path.empty? || path[0] == '/'
+    return "//#{host}#{path}"
+  end
+
+  def studio_url(path = '')
+    site_url('studio.code.org', path)
+  end
+
+  def code_org_url(path = '')
+    site_url('code.org', path)
   end
 
   def dir(*dirs)
