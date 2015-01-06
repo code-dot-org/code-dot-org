@@ -38,8 +38,23 @@ goog.require('Blockly.BlockSpace');
 Blockly.Connection = function(source, type) {
   this.sourceBlock_ = source;
   this.targetConnection = null;
+  /**
+   * Type of connection. Constant values defined in blockly.js
+   * e.g. Blockly.INPUT_VALUE, Blockly.OUTPUT_VALUE
+   * @type {number}
+   */
   this.type = type;
+  /**
+   * Absolute x coordinate of connection
+   * @type {number}
+   * @private
+   */
   this.x_ = 0;
+  /**
+   * Absolute y coordinate of connection
+   * @type {number}
+   * @private
+   */
   this.y_ = 0;
   this.inDB_ = false;
   // Shortcut for the databases for this connection's blockSpace.

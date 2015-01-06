@@ -3,6 +3,7 @@
 .DS_Store
 .dropbox
 .idea/
+/.bundle
 /.gdrive_session
 /chef/.chef/
 /crontab
@@ -13,7 +14,7 @@
 /build-started
 /locals.yml
 /rebuild
-/rebuild-blockly
+/rebuild-apps
 \#*#
 /i18n/code.org/crowdin.yaml
 /i18n/hourofcode.com/crowdin.yaml

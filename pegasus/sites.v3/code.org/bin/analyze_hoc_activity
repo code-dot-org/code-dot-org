@@ -11,12 +11,10 @@ end
 
 def analyze_day_fast(date)
   froms = [
-    #"FROM hour_of_activities WHERE updated_on=DATE('#{date.strftime('%Y-%m-%d')}') AND (started=1 OR pixel_started=1)",
     "FROM hoc_activity WHERE started_at LIKE '#{date.strftime('%Y-%m-%d')} %' OR pixel_started_at LIKE '#{date.strftime('%Y-%m-%d')} %'",
   ]
   
   finished_froms = [
-    #"FROM hour_of_activities WHERE updated_on=DATE('#{date.strftime('%Y-%m-%d')}') AND (finished=1 OR pixel_finished=1)",
     "FROM hoc_activity WHERE finished_at LIKE '#{date.strftime('%Y-%m-%d')} %' OR pixel_finished_at LIKE '#{date.strftime('%Y-%m-%d')} %'",
   ]
 

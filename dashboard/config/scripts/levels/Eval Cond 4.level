@@ -156,36 +156,36 @@
                 <arg name="image 3" type="image"/>
               </mutation>
               <functional_input name="ARG0">
-                <block type="functional_call" inline="false">
+                <block type="functional_call" inline="false" movable="false">
                   <mutation name="green shape">
                     <arg name="shape" type="string"/>
                   </mutation>
                   <functional_input name="ARG0">
-                    <block type="functional_string">
+                    <block type="functional_string" movable="false" editable="false">
                       <title name="VAL">circle</title>
                     </block>
                   </functional_input>
                 </block>
               </functional_input>
               <functional_input name="ARG1">
-                <block type="functional_call" inline="false">
+                <block type="functional_call" inline="false" movable="false">
                   <mutation name="green shape">
                     <arg name="shape" type="string"/>
                   </mutation>
                   <functional_input name="ARG0">
-                    <block type="functional_string">
+                    <block type="functional_string" movable="false" editable="false">
                       <title name="VAL">triangle</title>
                     </block>
                   </functional_input>
                 </block>
               </functional_input>
               <functional_input name="ARG2">
-                <block type="functional_call" inline="false">
+                <block type="functional_call" inline="false" movable="false">
                   <mutation name="green shape">
                     <arg name="shape" type="string"/>
                   </mutation>
                   <functional_input name="ARG0">
-                    <block type="functional_string">
+                    <block type="functional_string" movable="false" editable="false">
                       <title name="VAL">square</title>
                     </block>
                   </functional_input>

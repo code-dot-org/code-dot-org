@@ -108,7 +108,7 @@ Give each student a card and have them answer the following questions on it (fee
 Then collect the cards and shuffle them. To play the game, follow these steps:
 
 - Select a card
-- Read the answer to #6 and say this is the person we are looking for
+- Read the answer to #8 and say this is the person we are looking for
 - Have all the students stand up.
 - Begin asking true/false based on the card questions
     - Start with simple true/false questions like "is your hair brown?" or "is your favorite number greater than 7?"
