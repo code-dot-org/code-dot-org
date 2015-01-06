@@ -9997,11 +9997,24 @@ exports.setText = function (blockId, elementId, text) {
                            'text': text });
 };
 
+exports.getImageURL = function (blockId, elementId) {
+  return Webapp.executeCmd(blockId,
+                          'getImageURL',
+                          {'elementId': elementId });
+};
+
 exports.setImageURL = function (blockId, elementId, src) {
   return Webapp.executeCmd(blockId,
                           'setImageURL',
                           {'elementId': elementId,
                            'src': src });
+};
+
+exports.createImageUploadButton = function (blockId, elementId, text) {
+  return Webapp.executeCmd(blockId,
+                           'createImageUploadButton',
+                           {'elementId': elementId,
+                            'text': text });
 };
 
 exports.setParent = function (blockId, elementId, parentId) {
@@ -10218,7 +10231,9 @@ levels.ec_simple = {
     {'func': 'getChecked', 'category': 'UI Controls', 'params': ["'id'"], 'type': 'value' },
     {'func': 'setChecked', 'category': 'UI Controls', 'params': ["'id'", "true"] },
     {'func': 'createImage', 'category': 'UI Controls', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
+    {'func': 'getImageURL', 'category': 'UI Controls', 'params': ["'id'"], 'type': 'value' },
     {'func': 'setImageURL', 'category': 'UI Controls', 'params': ["'id'", "'http://code.org/images/logo.png'"] },
+    {'func': 'createImageUploadButton', 'category': 'UI Controls', 'params': ["'id'", "'text'"] },
     {'func': 'createCanvas', 'category': 'Canvas', 'params': ["'id'", "400", "600"] },
     {'func': 'canvasDrawLine', 'category': 'Canvas', 'params': ["'id'", "0", "0", "400", "600"] },
     {'func': 'canvasDrawCircle', 'category': 'Canvas', 'params': ["'id'", "200", "300", "100"] },
@@ -10227,7 +10242,7 @@ levels.ec_simple = {
     {'func': 'canvasSetStrokeColor', 'category': 'Canvas', 'params': ["'id'", "'red'"] },
     {'func': 'canvasSetFillColor', 'category': 'Canvas', 'params': ["'id'", "'yellow'"] },
     {'func': 'canvasDrawImage', 'category': 'Canvas', 'params': ["'id'", "'imageId'", "0", "0"] },
-    {'func': 'canvasGetImageData', 'category': 'Canvas', 'params': ["'id'", "0", "0", "400", "600"] },
+    {'func': 'canvasGetImageData', 'category': 'Canvas', 'params': ["'id'", "0", "0", "400", "600"], 'type': 'value' },
     {'func': 'canvasPutImageData', 'category': 'Canvas', 'params': ["'id'", "imageData", "0", "0"] },
     {'func': 'canvasClear', 'category': 'Canvas', 'params': ["'id'"] },
   ],
@@ -11414,7 +11429,9 @@ Webapp.callCmd = function (cmd) {
     case 'setText':
     case 'getChecked':
     case 'setChecked':
+    case 'getImageURL':
     case 'setImageURL':
+    case 'createImageUploadButton':
     case 'setPosition':
     case 'setParent':
     case 'setStyle':
@@ -11458,6 +11475,30 @@ Webapp.createImage = function (opts) {
   newImage.id = opts.elementId;
 
   return Boolean(divWebapp.appendChild(newImage));
+};
+
+Webapp.createImageUploadButton = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+
+  // To avoid showing the ugly fileupload input element, we create a label
+  // element with an img-upload class that will ensure it looks like a button
+  var newLabel = document.createElement("label");
+  var textNode = document.createTextNode(opts.text);
+  newLabel.id = opts.elementId;
+  newLabel.className = 'img-upload';
+
+  // We then create an offscreen input element and make it a child of the new
+  // label element
+  var newInput = document.createElement("input");
+  newInput.type = "file";
+  newInput.accept = "image/*";
+  newInput.capture = "camera";
+  newInput.style.position = "absolute";
+  newInput.style.left = "-9999px";
+
+  return Boolean(newLabel.appendChild(newInput) &&
+                 newLabel.appendChild(textNode) &&
+                 divWebapp.appendChild(newLabel));
 };
 
 Webapp.createCanvas = function (opts) {
@@ -11741,6 +11782,22 @@ Webapp.setChecked = function (opts) {
     return true;
   }
   return false;
+};
+
+Webapp.getImageURL = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var element = document.getElementById(opts.elementId);
+  if (divWebapp.contains(element)) {
+    // We return a URL if it is an IMG element or our special img-upload label
+    if (element.tagName === 'IMG') {
+      return element.src;
+    } else if (element.tagName === 'LABEL' && element.className === 'img-upload') {
+      var fileObj = element.children[0].files[0];
+      if (fileObj) {
+        return window.URL.createObjectURL(fileObj);
+      }
+    }
+  }
 };
 
 Webapp.setImageURL = function (opts) {
