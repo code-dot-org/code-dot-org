@@ -8,4 +8,129 @@ theme: none
 .loading{"ng-hide"=>"progressLoaded"}
   = I18n.t('dashboard_landing_loading')
 
+:scss
+  $level_passed: rgb(159, 212, 159);
+  $level_perfect: rgb(14, 190, 14);
+  $level_attempted: #fefefe;
+  $level_not_tried: #fefefe;
+  $progress_background: #eee;
+  $level_width: 7px;
+
+  .progressheader .stage {
+    box-sizing: border-box;
+    background-color: #aaa;
+    color: white; 
+    float:left;
+    height:50px;
+    padding: 5px 0 0 5px;
+    border-left: 1px solid #888;
+  }
+
+  .studentzone {float: left; position: relative}
+
+  .studentzone .stage {
+    box-sizing: border-box;
+    background-color: #eee;
+    color: white;
+    float:left;
+    padding: 5px 0 0 5px;
+    height:40px; 
+    border-left: 1px solid #ccc
+  }
+
+  .studentname {
+    width: 160px;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: left;
+  }
+
+  .studentzone .studentname {
+    height: 40px;
+  }
+
+  .bar {
+    float: left;
+    width: $level_width;
+    margin-top: 15px;
+    height:10px;
+    opacity: 0.8;
+    cursor: default;
+    background-color: $level_not_tried;
+
+    &.perfect {
+      border: none;
+      background-color: $level_perfect;
+    }
+
+    &.passed {
+      border: none;
+      background-color: $level_passed;
+    }
+
+    &.attempted {
+      border: none;
+      background-color: $level_attempted;
+    }
+  }
+
+  .dot {
+    box-sizing: content-box;
+    border-radius: 20px;
+    border: 2px solid #ccc;
+    background-color: $level_attempted;
+    padding: 5px 7px 9px 7px;
+    color: #333;
+    width: 18px;
+    height: 18px;
+    font-family: 'Gotham 5r', sans-serif;
+    font-weight: normal;;
+    cursor:default;
+    text-align: center;
+
+    &.perfect {
+      border: none;
+      background-color: $level_perfect;
+      color: white;
+    }
+
+    &.passed {
+      border: none;
+      background-color: $level_passed;
+      color: white;
+    }
+  }
+
+  .key {
+    margin: 10px 0;
+    float: left;
+    background-color: #eee;
+    padding: 10px;
+    dl {
+      margin: 0;
+      float: left;
+    }
+    dd, dt {
+      height: 20px;
+      line-height: 20px;
+      float: left;
+      margin-right: 5px;
+    }
+    dt {
+      padding: 5px 0;
+    }
+    dd {
+      margin-right: 30px;
+    }
+    .bar {
+      margin: 0;
+    }
+    .dot {
+      margin-top: -12px;
+    }
+  }
+
 %div{"ng-include"=>"", src: "sectionProgressUrl", onload: "init_progress(); progress_loaded();"}
