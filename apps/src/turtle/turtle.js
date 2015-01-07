@@ -36,9 +36,7 @@ var turtleMsg = require('../../locale/current/turtle');
 var levels = require('./levels');
 var Colours = require('./core').Colours;
 var codegen = require('../codegen');
-
-// TODO - figure out how api should behave if we were to have multiple TurtleClass instances
-var api = require('./api');
+var TurtleAPI = require('./api');
 var page = require('../templates/page.html');
 var feedback = require('../feedback.js');
 var utils = require('../utils');
@@ -91,6 +89,8 @@ var TurtleClass = function () {
   this.skin = null;
   this.level = null;
 
+  this.api = TurtleAPI;
+
   // image icons and image paths for the 'set pattern block'
   this.lineStylePatternOptions = [];
 
@@ -119,7 +119,7 @@ var TurtleClass = function () {
   StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
   // these get set by init based on skin.
-  // TODO (brent) - dont capitalize, these arent constants
+  // TODO (brent) - dont ctalize, these arent constants
   this.AVATAR_WIDTH = 0;
   this.AVATAR_HEIGHT = 0;
   this.DECORATIONANIMATION_WIDTH = 85;
@@ -358,7 +358,7 @@ TurtleClass.prototype.drawBlocksOnCanvas = function(blocksOrCode, canvas) {
  * canvas.
  */
 TurtleClass.prototype.drawCurrentBlocksOnCanvas = function(canvas) {
-  this.drawLogOnCanvas(api.log, canvas);
+  this.drawLogOnCanvas(this.api.log, canvas);
 };
 
 /**
@@ -675,7 +675,7 @@ TurtleClass.prototype.evalCode = function(code) {
   try {
     codegen.evalWith(code, {
       StudioApp: StudioApp,
-      Turtle: api
+      Turtle: this.api
     });
   } catch (e) {
     // Infinity is thrown if we detect an infinite loop. In that case we'll
@@ -705,11 +705,12 @@ TurtleClass.prototype.generateTurtleCodeFromJS_ = function () {
   var session = StudioApp.editor.aceEditor.getSession();
   this.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
 
-  var initFunc = function(interpreter, scope) {
+  var initFunc = _.bind(function(interpreter, scope) {
     codegen.initJSInterpreter(interpreter, scope, {
-                                      StudioApp: StudioApp,
-                                      Turtle: api } );
-  };
+      StudioApp: StudioApp,
+      Turtle: this.api
+    })
+  }, this);
   this.interpreter = new window.Interpreter(this.code, initFunc);
 };
 
@@ -717,7 +718,7 @@ TurtleClass.prototype.generateTurtleCodeFromJS_ = function () {
  * Execute the user's code.  Heaven help us...
  */
 TurtleClass.prototype.execute = function() {
-  api.log = [];
+  this.api.log = [];
 
   // Reset the graphic.
   StudioApp.reset();
@@ -751,10 +752,10 @@ TurtleClass.prototype.execute = function() {
  * Special case: if we have a turn, followed by a move forward, then we can just
  * do the turn instantly and then begin the move forward in the same frame.
  */
- function checkforTurnAndMove() {
+TurtleClass.prototype.checkforTurnAndMove_ = function () {
   var nextIsForward = false;
 
-  var currentTuple = api.log[0];
+  var currentTuple = this.api.log[0];
   var currentCommand = currentTuple[0];
   var currentValues = currentTuple.slice(1);
 
@@ -763,8 +764,8 @@ TurtleClass.prototype.execute = function() {
     var currentAngle = currentValues[0];
     if (Math.abs(currentAngle) <= 10) {
       // Check that next command is a move forward.
-      if (api.log.length > 1) {
-        var nextTuple = api.log[1];
+      if (this.api.log.length > 1) {
+        var nextTuple = this.api.log[1];
         var nextCommand = nextTuple[0];
         if (nextCommand === 'FD') {
           nextIsForward = true;
@@ -781,7 +782,7 @@ TurtleClass.prototype.execute = function() {
  * Attempt to execute one command from the log of API commands.
  */
 TurtleClass.prototype.executeTuple_ = function () {
-  if (api.log.length === 0) {
+  if (this.api.log.length === 0) {
     return false;
   }
 
@@ -791,14 +792,14 @@ TurtleClass.prototype.executeTuple_ = function () {
     // Unless something special happens, we will just execute a single tuple.
     executeSecondTuple = false;
 
-    var tuple = api.log[0];
+    var tuple = this.api.log[0];
     var command = tuple[0];
     var id = tuple[tuple.length-1];
 
     StudioApp.highlight(String(id));
 
     // Should we execute another tuple in this frame of animation?
-    if (this.skin.consolidateTurnAndMove && checkforTurnAndMove()) {
+    if (this.skin.consolidateTurnAndMove && this.checkforTurnAndMove_()) {
       executeSecondTuple = true;
     }
 
@@ -807,7 +808,7 @@ TurtleClass.prototype.executeTuple_ = function () {
     this.display();
 
     if (tupleDone) {
-      api.log.shift();
+      this.api.log.shift();
       this.resetStepInfo_();
     }
   } while (executeSecondTuple);
