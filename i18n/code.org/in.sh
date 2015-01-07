@@ -35,7 +35,7 @@ done
 
 ### Blockly Mooc
 
-orig_dir=../../blockly/i18n
+orig_dir=../../apps/i18n
 loc_dir=../locales/en-US/blockly-mooc
 mkdir -p $loc_dir
 
