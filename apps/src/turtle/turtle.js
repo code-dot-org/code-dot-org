@@ -88,7 +88,7 @@ var Artist = function () {
   this.skin = null;
   this.level = null;
 
-  this.api = ArtistAPI;
+  this.api = new ArtistAPI();
 
   // image icons and image paths for the 'set pattern block'
   this.lineStylePatternOptions = [];

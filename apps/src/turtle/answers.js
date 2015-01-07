@@ -23,7 +23,8 @@
  */
 'use strict';
 
-var api = require('./api');
+var ArtistAPI = require('./api');
+var api = new ArtistAPI();
 var StudioApp = require('../base');
 
 var setRandomVisibleColour = function() {
