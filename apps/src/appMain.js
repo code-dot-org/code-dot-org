@@ -1,8 +1,8 @@
 var utils = require('./utils');
 var requiredBlockUtils = require('./required_block_utils');
+var StudioAppClass = require('./StudioApp');
 
-var StudioAppClass = require('./base');
-window.StudioApp = StudioAppClass.singleton;
+window.StudioApp = require('./base');
 
 if (typeof global !== 'undefined') {
   global.StudioApp = window.StudioApp;
