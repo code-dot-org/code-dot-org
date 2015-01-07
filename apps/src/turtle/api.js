@@ -1,4 +1,3 @@
-var StudioApp = require('../base');
 var utils = require('../utils');
 var _ = utils.getLodash();
 

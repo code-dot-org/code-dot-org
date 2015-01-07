@@ -25,7 +25,6 @@
 
 var ArtistAPI = require('./api');
 var api = new ArtistAPI();
-var StudioApp = require('../base').singleton;
 
 var setRandomVisibleColour = function() {
   var num = Math.floor(Math.random() * Math.pow(2, 24));
@@ -88,8 +87,6 @@ var drawHouse = function(length) {
  * To create an answer, just solve the level in Blockly, then paste the
  * resulting JavaScript here, moving any functions to the beginning of
  * this function.
- *
- * Warning: Has side effects to StudioApp.
  */
 exports.answer = function(page, level) {
   api.log = [];
@@ -344,6 +341,5 @@ exports.answer = function(page, level) {
       break;
     }
   }
-  StudioApp.reset();
   return api.log;
 };
