@@ -150,7 +150,7 @@ Artist.prototype.injectStudioApp = function (studioApp) {
  */
 Artist.prototype.init = function(config) {
   if (!this.studioApp_) {
-    throw new Error("Artist requires a StudioApp");
+    throw new Error("Artist requires a StudioAppClass");
   }
 
   this.skin = config.skin;
@@ -667,7 +667,6 @@ Artist.prototype.runButtonClick = function () {
 Artist.prototype.evalCode = function(code) {
   try {
     codegen.evalWith(code, {
-      StudioApp: this.studioApp_,
       Turtle: this.api
     });
   } catch (e) {
@@ -700,7 +699,6 @@ Artist.prototype.generateTurtleCodeFromJS_ = function () {
 
   var initFunc = _.bind(function(interpreter, scope) {
     codegen.initJSInterpreter(interpreter, scope, {
-      StudioApp: this.studioApp_,
       Turtle: this.api
     });
   }, this);
@@ -1233,7 +1231,7 @@ Artist.prototype.isCorrect_ = function (pixelErrors, permittedErrors) {
 
 /**
  * App specific displayFeedback function that calls into
- * StudioApp.displayFeedback when appropriate
+ * this.studioApp_.displayFeedback when appropriate
  */
 Artist.prototype.displayFeedback_ = function() {
   var feedbackImageCanvas;
