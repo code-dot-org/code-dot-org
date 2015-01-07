@@ -214,20 +214,29 @@ Blockly.Procedures.flyoutCategory = function(blocks, gaps, margin, blockSpace, o
     if (opt_procedureInfoFilter && !opt_procedureInfoFilter(procedureDefinitionInfo)) {
       return;
     }
-    var newCallBlock = new Blockly.Block(blockSpace, procedureDefinitionInfo.callType);
-    newCallBlock.setTitleValue(procedureDefinitionInfo.name, 'NAME');
-    var tempIds = [];
-    for (var t = 0; t < procedureDefinitionInfo.parameterNames.length; t++) {
-      tempIds[t] = 'ARG' + t;
-    }
-    newCallBlock.setProcedureParameters(
-      procedureDefinitionInfo.parameterNames,
-      tempIds,
-      procedureDefinitionInfo.parameterTypes);
-    newCallBlock.initSvg();
+    var newCallBlock = Blockly.Procedures.createCallerBlock(blockSpace, procedureDefinitionInfo);
     blocks.push(newCallBlock);
     gaps.push(margin * 2);
   });
+};
+
+Blockly.Procedures.createCallerFromDefinition = function(blockSpace, definitionBlock) {
+  return Blockly.Procedures.createCallerBlock(blockSpace, definitionBlock.getProcedureInfo());
+};
+
+Blockly.Procedures.createCallerBlock = function(blockSpace, procedureDefinitionInfo) {
+  var newCallBlock = new Blockly.Block(blockSpace, procedureDefinitionInfo.callType);
+  newCallBlock.setTitleValue(procedureDefinitionInfo.name, 'NAME');
+  var tempIds = [];
+  for (var t = 0; t < procedureDefinitionInfo.parameterNames.length; t++) {
+    tempIds[t] = 'ARG' + t;
+  }
+  newCallBlock.setProcedureParameters(
+    procedureDefinitionInfo.parameterNames,
+    tempIds,
+    procedureDefinitionInfo.parameterTypes);
+  newCallBlock.initSvg();
+  return newCallBlock;
 };
 
 /**
