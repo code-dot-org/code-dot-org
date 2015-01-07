@@ -1859,7 +1859,7 @@ Studio.callCmd = function (cmd) {
       Studio.setSpritePosition(cmd.opts);
       break;
     case 'setSpriteXY':
-      BlocklyApps.highlight(cmd.id);
+      StudioApp.highlight(cmd.id);
       Studio.setSpriteXY(cmd.opts);
       break;
     case 'playSound':
