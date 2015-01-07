@@ -42,12 +42,6 @@ var constants = require('./constants.js');
 feedback.applySingleton(StudioApp);
 StudioApp.feedback_ = feedback;
 
-//TODO: These should be members of a BlocklyApp instance.
-var onAttempt;
-var onContinue;
-var onResetPressed;
-var backToPreviousLevel;
-
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -55,7 +49,6 @@ var backToPreviousLevel;
 var MIN_WIDTH = 900;
 var MIN_MOBILE_SHARE_WIDTH = 450;
 var MOBILE_NO_PADDING_SHARE_WIDTH = 400;
-var WORKSPACE_PLAYSPACE_GAP = 15;
 
 /**
  * Treat mobile devices with screen.width less than the value below as phones.
@@ -130,20 +123,21 @@ StudioApp.init = function(config) {
   }
 
   // Store configuration.
-  onAttempt = config.onAttempt || function(report) {
+  //TODO (br-team) : test code should pass in these instead of defaulting in app code
+  StudioApp.onAttempt = config.onAttempt || function(report) {
     console.log('Attempt!');
     console.log(report);
     if (report.onComplete) {
       report.onComplete();
     }
   };
-  onContinue = config.onContinue || function() {
+  StudioApp.onContinue = config.onContinue || function() {
     console.log('Continue!');
   };
-  onResetPressed = config.onResetPressed || function() {
+  StudioApp.onResetPressed = config.onResetPressed || function() {
     console.log('Reset!');
   };
-  backToPreviousLevel = config.backToPreviousLevel || function() {};
+  StudioApp.backToPreviousLevel = config.backToPreviousLevel || function () {};
 
   var container = document.getElementById(config.containerId);
   container.innerHTML = config.html;
@@ -582,270 +576,24 @@ StudioApp.init = function(config) {
 
 
 
-/**
- *  Resizes the blockly workspace.
- */
-StudioApp.onResize = function() {
-  var visualizationColumn = document.getElementById('visualizationColumn');
-  var gameWidth = visualizationColumn.getBoundingClientRect().width;
 
-  var blocklyDiv = document.getElementById('blockly');
-  var codeWorkspace = document.getElementById('codeWorkspace');
 
-  // resize either blockly or codeWorkspace
-  var div = StudioApp.editCode ? codeWorkspace : blocklyDiv;
 
-  var divParent = div.parentNode;
-  var parentStyle = window.getComputedStyle(divParent);
 
-  var parentWidth = parseInt(parentStyle.width, 10);
-  var parentHeight = parseInt(parentStyle.height, 10);
 
-  var headers = document.getElementById('headers');
-  var headersHeight = parseInt(window.getComputedStyle(headers).height, 10);
 
-  div.style.top = divParent.offsetTop + 'px';
-  var fullWorkspaceWidth = parentWidth - (gameWidth + WORKSPACE_PLAYSPACE_GAP);
-  var oldWidth = parseInt(div.style.width, 10) || div.getBoundingClientRect().width;
-  div.style.width = fullWorkspaceWidth + 'px';
 
-  // Keep blocks static relative to the right edge in RTL mode
-  if (StudioApp.usingBlockly && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
-    Blockly.mainBlockSpace.getTopBlocks().forEach(function(topBlock) {
-      topBlock.moveBy(fullWorkspaceWidth - oldWidth, 0);
-    });
-  }
 
-  if (StudioApp.isRtl()) {
-    div.style.marginRight = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
-  }
-  else {
-    div.style.marginLeft = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
-  }
-  if (StudioApp.editCode) {
-    // Position the inner codeTextbox element below the headers
-    var codeTextbox = document.getElementById('codeTextbox');
-    codeTextbox.style.height = (parentHeight - headersHeight) + 'px';
-    codeTextbox.style.width = fullWorkspaceWidth + 'px';
-    codeTextbox.style.top = headersHeight + 'px';
-
-    // The outer codeWorkspace element height should match its parent:
-    div.style.height = parentHeight + 'px';
-  } else {
-    // reduce height by headers height because blockly isn't aware of headers
-    // and will size its svg element to be too tall
-    div.style.height = (parentHeight - headersHeight) + 'px';
-  }
-
-  StudioApp.resizeHeaders(fullWorkspaceWidth);
-};
-
-// |          toolbox-header          | workspace-header  | show-code-header |
-// |
-// |           toolboxWidth           |
-// |                 |         <--------- workspaceWidth ---------->         |
-// |         <---------------- fullWorkspaceWidth ----------------->         |
-StudioApp.resizeHeaders = function (fullWorkspaceWidth) {
-  var minWorkspaceWidthForShowCode = StudioApp.editCode ? 250 : 450;
-  var toolboxWidth = 0;
-  if (StudioApp.editCode) {
-    // If in the droplet editor, but not using blocks, keep categoryWidth at 0
-    if (!StudioApp.editCode || StudioApp.editor.currentlyUsingBlocks) {
-      // Set toolboxWidth based on the block palette width:
-      var categories = document.querySelector('.droplet-palette-wrapper');
-      toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
-    }
-  } else if (StudioApp.usingBlockly) {
-    toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
-  }
-
-  var showCodeHeader = document.getElementById('show-code-header');
-  var showCodeWidth = 0;
-  if (StudioApp.enableShowCode &&
-      (fullWorkspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
-    showCodeWidth = parseInt(window.getComputedStyle(showCodeHeader).width, 10);
-    showCodeHeader.style.display = "";
-  }
-  else {
-    showCodeHeader.style.display = "none";
-  }
-
-  document.getElementById('headers').style.width = fullWorkspaceWidth + 'px';
-  document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
-  document.getElementById('workspace-header').style.width =
-      (fullWorkspaceWidth - toolboxWidth - showCodeWidth) + 'px';
-};
-
-/**
- * Highlight the block (or clear highlighting).
- * @param {?string} id ID of block that triggered this action.
- * @param {boolean} spotlight Optional.  Highlight entire block if true
- */
-StudioApp.highlight = function(id, spotlight) {
-  if (StudioApp.usingBlockly) {
-    if (id) {
-      var m = id.match(/^block_id_(\d+)$/);
-      if (m) {
-        id = m[1];
-      }
-    }
-
-    Blockly.mainBlockSpace.highlightBlock(id, spotlight);
-  }
-};
-
-/**
- * Remove highlighting from all blocks
- */
-StudioApp.clearHighlighting = function () {
-  StudioApp.highlight(null);
-};
-
-// The following properties get their non-default values set by the application.
-
-/**
- * Whether to alert user to empty blocks, short-circuiting all other tests.
- */
-StudioApp.CHECK_FOR_EMPTY_BLOCKS = undefined;
-
-/**
- * The ideal number of blocks to solve this level.  Users only get 2
- * stars if they use more than this number.
- * @type {!number=}
- */
-StudioApp.IDEAL_BLOCK_NUM = undefined;
-
-/**
- * An array of dictionaries representing required blocks.  Keys are:
- * - test (required): A test whether the block is present, either:
- *   - A string, in which case the string is searched for in the generated code.
- *   - A single-argument function is called on each user-added block
- *     individually.  If any call returns true, the block is deemed present.
- *     "User-added" blocks are ones that are neither disabled or undeletable.
- * - type (required): The type of block to be produced for display to the user
- *   if the test failed.
- * - titles (optional): A dictionary, where, for each KEY-VALUE pair, this is
- *   added to the block definition: <title name="KEY">VALUE</title>.
- * - value (optional): A dictionary, where, for each KEY-VALUE pair, this is
- *   added to the block definition: <value name="KEY">VALUE</value>
- * - extra (optional): A string that should be blacked between the "block"
- *   start and end tags.
- * @type {!Array=}
- */
-StudioApp.REQUIRED_BLOCKS = undefined;
-
-/**
- * The number of required blocks to give hints about at any one time.
- * Set this to Infinity to show all.
- * @type {!number=}
- */
-StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = undefined;
-
-/**
- * The number of attempts (how many times the run button has been pressed)
- * @type {?number}
- */
-StudioApp.attempts = 0;
-
-/**
- * Stores the time at init. The delta to current time is used for logging
- * and reporting to capture how long it took to arrive at an attempt.
- * @type {?number}
- */
-StudioApp.initTime = undefined;
-
-/**
- * Enumeration of user program execution outcomes.
- */
-StudioApp.ResultType = constants.ResultType;
-
-/**
- * Enumeration of test results.
- */
-StudioApp.TestResults = constants.TestResults;
 
 // Methods for determining and displaying feedback.
 
-/**
- * Display feedback based on test results.  The test results must be
- * explicitly provided.
- * @param {{feedbackType: number}} Test results (a constant property of
- *     StudioApp.TestResults).
- */
-StudioApp.displayFeedback = function(options) {
-  options.Dialog = StudioApp.Dialog;
-  options.onContinue = onContinue;
-  options.backToPreviousLevel = backToPreviousLevel;
-  options.sendToPhone = StudioApp.sendToPhone;
 
-  // Special test code for edit blocks.
-  if (options.level.edit_blocks) {
-    options.feedbackType = StudioApp.TestResults.EDIT_BLOCKS;
-  }
 
-  feedback.displayFeedback(options);
-};
 
-StudioApp.getTestResults = function(levelComplete, options) {
-  return feedback.getTestResults(levelComplete, options);
-};
 
-/**
- * Report back to the server, if available.
- * @param {object} options - parameter block which includes:
- * {string} app The name of the application.
- * {number} id A unique identifier generated when the page was loaded.
- * {string} level The ID of the current level.
- * {number} result An indicator of the success of the code.
- * {number} testResult More specific data on success or failure of code.
- * {string} program The user program, which will get URL-encoded.
- * {function} onComplete Function to be called upon completion.
- */
-StudioApp.report = function(options) {
-  // copy from options: app, level, result, testResult, program, onComplete
-  var report = options;
-  report.pass = feedback.canContinueToNextLevel(options.testResult);
-  report.time = ((new Date().getTime()) - StudioApp.initTime);
-  report.attempt = StudioApp.attempts;
-  report.lines = feedback.getNumBlocksUsed();
 
-  // If hideSource is enabled, the user is looking at a shared level that
-  // they cannot have modified. In that case, don't report it to the service
-  // or call the onComplete() callback expected. The app will just sit
-  // there with the Reset button as the only option.
-  if (!(StudioApp.hideSource && StudioApp.share)) {
-    var onAttemptCallback = (function() {
-      return function(builderDetails) {
-        for (var option in builderDetails) {
-          report[option] = builderDetails[option];
-        }
-        onAttempt(report);
-      };
-    })();
 
-    // If this is the level builder, go to builderForm to get more info from
-    // the level builder.
-    if (options.builder) {
-      builder.builderForm(onAttemptCallback);
-    } else {
-      onAttemptCallback();
-    }
-  }
-};
 
-/**
- * Click the reset button.  Reset the application.
- */
-StudioApp.resetButtonClick = function() {
-  onResetPressed();
-  StudioApp.toggleRunReset('run');
-  StudioApp.clearHighlighting();
-  if (StudioApp.usingBlockly) {
-    Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
-    Blockly.mainBlockSpace.traceOn(false);
-  }
-  StudioApp.reset(false);
-};
 
 /**
  * Set the ideal Number of blocks.
@@ -853,34 +601,10 @@ StudioApp.resetButtonClick = function() {
 var setIdealBlockNumber = function() {
   var element = document.getElementById('idealBlockNumber');
   if (element) {
-    element.innerHTML = '';  // Remove existing children or text.
-    element.appendChild(document.createTextNode(
-        getIdealBlockNumberMsg()));
-  }
-};
-
-/**
- * Add count of blocks used.
- */
-StudioApp.updateBlockCount = function() {
-  // If the number of block used is bigger than the ideal number of blocks,
-  // set it to be yellow, otherwise, keep it as black.
-  var element = document.getElementById('blockUsed');
-  if (StudioApp.IDEAL_BLOCK_NUM < feedback.getNumCountableBlocks()) {
-    element.className = "block-counter-overflow";
-  } else {
-    element.className = "block-counter-default";
-  }
-
-  // Update number of blocks used.
-  if (element) {
-    element.innerHTML = '';  // Remove existing children or text.
-    element.appendChild(document.createTextNode(
-        feedback.getNumCountableBlocks()));
-  }
-};
-
-var getIdealBlockNumberMsg = function() {
-  return StudioApp.IDEAL_BLOCK_NUM === Infinity ?
+    var idealBlockNumberMsg = StudioApp.IDEAL_BLOCK_NUM === Infinity ?
       msg.infinity() : StudioApp.IDEAL_BLOCK_NUM;
+    element.innerHTML = '';  // Remove existing children or text.
+    element.appendChild(document.createTextNode(
+      idealBlockNumberMsg));
+  }
 };
