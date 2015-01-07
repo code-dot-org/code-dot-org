@@ -19,7 +19,6 @@
 
 // Globals used in this file:
 //  Blockly
-//  StudioApp
 
 /**
  * @fileoverview Demonstration of Blockly: Turtle Graphics.
@@ -27,11 +26,6 @@
  */
 'use strict';
 
-/**
- * Create a namespace for the application.
- */
-var StudioAppClass = require('../base');
-var StudioApp = StudioAppClass.singleton;
 var commonMsg = require('../../locale/current/common');
 var turtleMsg = require('../../locale/current/turtle');
 var levels = require('./levels');
@@ -84,6 +78,7 @@ var ELSA_DECORATION_DETAILS = [
 
 /**
  * An instantiable Turtle class
+ * @param {StudioAppClass} studioApp The studioApp instance to build upon.
  */
 var Artist = function () {
   this.skin = null;
@@ -115,9 +110,6 @@ var Artist = function () {
   this.loadedPathPatterns = [];
   this.isDrawingWithPattern = false;
 
-  StudioApp.CHECK_FOR_EMPTY_BLOCKS = true;
-  StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
-
   // these get set by init based on skin.
   // TODO (brent) - dont ctalize, these arent constants
   this.avatarWidth = 0;
@@ -137,16 +129,29 @@ var Artist = function () {
   this.isDrawingAnswer_ = false;
   this.isPredrawing_ = false;
 };
-Artist.inherits(StudioAppClass);
+
+module.exports = Artist;
 
 
-var turtleSingleton = new Artist();
-module.exports = turtleSingleton;
+/**
+ * todo
+ */
+Artist.prototype.injectStudioApp = function (studioApp) {
+  this.studioApp_ = studioApp;
+  this.studioApp_.reset = _.bind(this.reset, this);
+  this.studioApp_.runButtonClick = _.bind(this.runButtonClick, this);
+
+  this.studioApp_.CHECK_FOR_EMPTY_BLOCKS = true;
+  this.studioApp_.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
+};
 
 /**
  * Initialize Blockly and the turtle.  Called on page load.
  */
 Artist.prototype.init = function(config) {
+  if (!this.studioApp_) {
+    throw new Error("Artist requires a StudioApp");
+  }
 
   this.skin = config.skin;
   this.level = config.level;
@@ -190,10 +195,10 @@ Artist.prototype.init = function(config) {
   }
 
   config.html = page({
-    assetUrl: StudioApp.assetUrl,
+    assetUrl: this.studioApp_.assetUrl,
     data: {
-      localeDirection: StudioApp.localeDirection(),
-      controls: require('./controls.html')({assetUrl: StudioApp.assetUrl}),
+      localeDirection: this.studioApp_.localeDirection(),
+      controls: require('./controls.html')({assetUrl: this.studioApp_.assetUrl}),
       blockUsed : undefined,
       idealBlockNumber : undefined,
       editCode: this.level.editCode,
@@ -204,23 +209,19 @@ Artist.prototype.init = function(config) {
   config.loadAudio = _.bind(this.loadAudio_, this);
   config.afterInject = _.bind(this.afterInject_, this, config);
 
-  StudioApp.init(config);
+  this.studioApp_.init(config);
 };
 
 Artist.prototype.loadAudio_ = function () {
-  StudioApp.loadAudio(this.skin.winSound, 'win');
-  StudioApp.loadAudio(this.skin.startSound, 'start');
-  StudioApp.loadAudio(this.skin.failureSound, 'failure');
+  this.studioApp_.loadAudio(this.skin.winSound, 'win');
+  this.studioApp_.loadAudio(this.skin.startSound, 'start');
+  this.studioApp_.loadAudio(this.skin.failureSound, 'failure');
 };
 
 /**
  * Code called after the blockly div + blockly core is injected into the document
  */
 Artist.prototype.afterInject_ = function (config) {
-  if (this !== turtleSingleton) {
-    throw new Error("failure");
-  }
-
   // Initialize the slider.
   var slider = document.getElementById('slider');
   this.speedSlider = new Slider(10, 35, 130, slider);
@@ -230,7 +231,7 @@ Artist.prototype.afterInject_ = function (config) {
     this.speedSlider.setValue(config.level.sliderSpeed);
   }
 
-  if (StudioApp.usingBlockly) {
+  if (this.studioApp_.usingBlockly) {
     // Add to reserved word list: API, local variables in execution evironment
     // (execute) and the infinite loop detection function.
     //XXX Not sure if this is still right.
@@ -253,7 +254,7 @@ Artist.prototype.afterInject_ = function (config) {
   this.ctxDisplay = displayCanvas.getContext('2d');
 
   // TODO - pull this out
-  if (StudioApp.usingBlockly && (this.skin.id == "anna" || this.skin.id == "elsa")) {
+  if (this.studioApp_.usingBlockly && (this.skin.id == "anna" || this.skin.id == "elsa")) {
     Blockly.JavaScript.colour_random = function() {
       // Generate a random colour.
       if (!Blockly.JavaScript.definitions_.colour_random) {
@@ -325,7 +326,7 @@ Artist.prototype.drawAnswer = function() {
  * composited over the scratch canvas.
  */
 Artist.prototype.drawLogOnCanvas = function(log, canvas) {
-  StudioApp.reset();
+  this.studioApp_.reset();
   while (log.length) {
     var tuple = log.shift();
     this.step(tuple[0], tuple.splice(1), {smoothAnimate: false});
@@ -341,7 +342,7 @@ Artist.prototype.drawLogOnCanvas = function(log, canvas) {
  */
 Artist.prototype.drawBlocksOnCanvas = function(blocksOrCode, canvas) {
   var code;
-  if (StudioApp.usingBlockly) {
+  if (this.studioApp_.usingBlockly) {
     var domBlocks = Blockly.Xml.textToDom(blocksOrCode);
     Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, domBlocks);
     code = Blockly.Generator.blockSpaceToCode('JavaScript');
@@ -349,7 +350,7 @@ Artist.prototype.drawBlocksOnCanvas = function(blocksOrCode, canvas) {
     code = blocksOrCode;
   }
   this.evalCode(code);
-  if (StudioApp.usingBlockly) {
+  if (this.studioApp_.usingBlockly) {
     Blockly.mainBlockSpace.clear();
   }
   this.drawCurrentBlocksOnCanvas(canvas);
@@ -387,7 +388,7 @@ Artist.prototype.placeImage = function(filename, position, scale) {
   if (this.skin.id == "anna" || this.skin.id == "elsa") {
     img.src = this.skin.assetUrl(filename);
   } else {
-    img.src = StudioApp.assetUrl('media/turtle/' + filename);
+    img.src = this.studioApp_.assetUrl('media/turtle/' + filename);
   }
 };
 
@@ -537,11 +538,6 @@ Artist.prototype.drawDecorationAnimation = function(when) {
  * @param {boolean} ignore Required by the API but ignored by this
  *     implementation.
  */
-StudioApp.reset = function(ignore) {
-  //TODO - still using singleton
-  turtleSingleton.reset(ignore);
-};
-
 Artist.prototype.reset = function (ignore) {
   // Standard starting location and heading of the turtle.
   this.x = CANVAS_HEIGHT / 2;
@@ -603,7 +599,7 @@ Artist.prototype.reset = function (ignore) {
   this.executionError = null;
 
   // Stop the looping sound.
-  StudioApp.stopLoopingAudio('start');
+  this.studioApp_.stopLoopingAudio('start');
 
   this.resetStepInfo_();
 };
@@ -658,25 +654,20 @@ Artist.prototype.display = function() {
 /**
  * Click the run button.  Start the program.
  */
-StudioApp.runButtonClick = function() {
-  // TODO - still uses singleton
-  turtleSingleton.runButtonClick();
-};
-
 Artist.prototype.runButtonClick = function () {
-  StudioApp.toggleRunReset('reset');
+  this.studioApp_.toggleRunReset('reset');
   document.getElementById('spinner').style.visibility = 'visible';
-  if (StudioApp.usingBlockly) {
+  if (this.studioApp_.usingBlockly) {
     Blockly.mainBlockSpace.traceOn(true);
   }
-  StudioApp.attempts++;
+  this.studioApp_.attempts++;
   this.execute();
 };
 
 Artist.prototype.evalCode = function(code) {
   try {
     codegen.evalWith(code, {
-      StudioApp: StudioApp,
+      StudioApp: this.studioApp_,
       Turtle: this.api
     });
   } catch (e) {
@@ -701,15 +692,15 @@ Artist.prototype.evalCode = function(code) {
 Artist.prototype.generateTurtleCodeFromJS_ = function () {
   this.code = utils.generateCodeAliases(this.level.codeFunctions, 'Turtle');
   this.userCodeStartOffset = this.code.length;
-  this.code += StudioApp.editor.getValue();
+  this.code += this.studioApp_.editor.getValue();
   this.userCodeLength = this.code.length - this.userCodeStartOffset;
 
-  var session = StudioApp.editor.aceEditor.getSession();
+  var session = this.studioApp_.editor.aceEditor.getSession();
   this.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
 
   var initFunc = _.bind(function(interpreter, scope) {
     codegen.initJSInterpreter(interpreter, scope, {
-      StudioApp: StudioApp,
+      StudioApp: this.studioApp_,
       Turtle: this.api
     });
   }, this);
@@ -723,7 +714,7 @@ Artist.prototype.execute = function() {
   this.api.log = [];
 
   // Reset the graphic.
-  StudioApp.reset();
+  this.studioApp_.reset();
 
   if (feedback.hasExtraTopBlocks()) {
     // immediately check answer, which will fail and report top level blocks
@@ -739,12 +730,12 @@ Artist.prototype.execute = function() {
   }
 
   // api.log now contains a transcript of all the user's actions.
-  StudioApp.playAudio('start', {loop : true});
+  this.studioApp_.playAudio('start', {loop : true});
   // animate the transcript.
 
   this.pid = window.setTimeout(_.bind(this.animate, this), 100);
 
-  if (StudioApp.usingBlockly) {
+  if (this.studioApp_.usingBlockly) {
     // Disable toolbox while running
     Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
   }
@@ -798,7 +789,7 @@ Artist.prototype.executeTuple_ = function () {
     var command = tuple[0];
     var id = tuple[tuple.length-1];
 
-    StudioApp.highlight(String(id));
+    this.studioApp_.highlight(String(id));
 
     // Should we execute another tuple in this frame of animation?
     if (this.skin.consolidateTurnAndMove && this.checkforTurnAndMove_()) {
@@ -823,7 +814,7 @@ Artist.prototype.executeTuple_ = function () {
  */
 Artist.prototype.finishExecution_ = function () {
   document.getElementById('spinner').style.visibility = 'hidden';
-  if (StudioApp.usingBlockly) {
+  if (this.studioApp_.usingBlockly) {
     Blockly.mainBlockSpace.highlightBlock(null);
   }
   this.checkAnswer();
@@ -849,7 +840,7 @@ Artist.prototype.animate = function() {
     var stepped = true;
     while (stepped) {
       codegen.selectCurrentCode(this.interpreter,
-                                StudioApp.editor,
+                                this.studioApp_.editor,
                                 this.cumulativeLength,
                                 this.userCodeStartOffset,
                                 this.userCodeLength);
@@ -1255,7 +1246,7 @@ Artist.prototype.displayFeedback_ = function() {
 
   var level = this.level;
 
-  StudioApp.displayFeedback({
+  this.studioApp_.displayFeedback({
     app: 'turtle',
     skin: this.skin.id,
     feedbackType: this.testResults,
@@ -1332,10 +1323,10 @@ Artist.prototype.checkAnswer = function() {
   // been completed
   var levelComplete = (level.freePlay || this.isCorrect_(delta, permittedErrors)) &&
                         (!level.editCode || !this.executionError);
-  this.testResults = StudioApp.getTestResults(levelComplete);
+  this.testResults = this.studioApp_.getTestResults(levelComplete);
 
   var program;
-  if (StudioApp.usingBlockly) {
+  if (this.studioApp_.usingBlockly) {
     var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
     program = Blockly.Xml.domToText(xml);
   }
@@ -1344,30 +1335,30 @@ Artist.prototype.checkAnswer = function() {
   this.message = undefined;
 
   // In level K1, check if only lengths differ.
-  if (level.isK1 && !levelComplete && !StudioApp.editCode &&
+  if (level.isK1 && !levelComplete && !this.studioApp_.editCode &&
       level.solutionBlocks &&
       removeK1Lengths(program) === removeK1Lengths(level.solutionBlocks)) {
-    this.testResults = StudioApp.TestResults.APP_SPECIFIC_ERROR;
+    this.testResults = this.studioApp_.TestResults.APP_SPECIFIC_ERROR;
     this.message = turtleMsg.lengthFeedback();
   }
 
   // For levels where using too many blocks would allow students
   // to miss the point, convert that feedback to a failure.
   if (level.failForTooManyBlocks &&
-      this.testResults == StudioApp.TestResults.TOO_MANY_BLOCKS_FAIL) {
-    this.testResults = StudioApp.TestResults.TOO_MANY_BLOCKS_FAIL;
+      this.testResults == this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL) {
+    this.testResults = this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL;
 
   } else if ((this.testResults ==
-      StudioApp.TestResults.TOO_MANY_BLOCKS_FAIL) ||
-      (this.testResults == StudioApp.TestResults.ALL_PASS)) {
+      this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL) ||
+      (this.testResults == this.studioApp_.TestResults.ALL_PASS)) {
     // Check that they didn't use a crazy large repeat value when drawing a
     // circle.  This complains if the limit doesn't start with 3.
     // Note that this level does not use colour, so no need to check for that.
-    if (level.failForCircleRepeatValue && StudioApp.usingBlockly) {
+    if (level.failForCircleRepeatValue && this.studioApp_.usingBlockly) {
       var code = Blockly.Generator.blockSpaceToCode('JavaScript');
       if (code.indexOf('count < 3') == -1) {
         this.testResults =
-            StudioApp.TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
+            this.studioApp_.TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
         this.message = commonMsg.tooMuchWork();
       }
     }
@@ -1380,22 +1371,22 @@ Artist.prototype.checkAnswer = function() {
     // do an acorn.parse and then use escodegen to generate back a "clean" version
     // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
 
-    program = StudioApp.editor.getValue();
+    program = this.studioApp_.editor.getValue();
   }
 
   // If the current level is a free play, always return the free play
   // result type
   if (level.freePlay) {
-    this.testResults = StudioApp.TestResults.FREE_PLAY;
+    this.testResults = this.studioApp_.TestResults.FREE_PLAY;
   }
 
   // Play sound
-  StudioApp.stopLoopingAudio('start');
-  if (this.testResults === StudioApp.TestResults.FREE_PLAY ||
-      this.testResults >= StudioApp.TestResults.TOO_MANY_BLOCKS_FAIL) {
-    StudioApp.playAudio('win');
+  this.studioApp_.stopLoopingAudio('start');
+  if (this.testResults === this.studioApp_.TestResults.FREE_PLAY ||
+      this.testResults >= this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL) {
+    this.studioApp_.playAudio('win');
   } else {
-    StudioApp.playAudio('failure');
+    this.studioApp_.playAudio('failure');
   }
 
   var reportData = {
@@ -1414,14 +1405,14 @@ Artist.prototype.checkAnswer = function() {
   var isFrozen = (this.skin.id === 'anna' || this.skin.id === 'elsa');
 
   // Get the canvas data for feedback.
-  if (this.testResults >= StudioApp.TestResults.TOO_MANY_BLOCKS_FAIL &&
+  if (this.testResults >= this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL &&
     !isFrozen && (level.freePlay || level.impressive)) {
     reportData.image = this.getFeedbackImage_();
   }
 
-  StudioApp.report(reportData);
+  this.studioApp_.report(reportData);
 
-  if (StudioApp.usingBlockly) {
+  if (this.studioApp_.usingBlockly) {
     // reenable toolbox
     Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
   }

@@ -23,14 +23,10 @@
  */
 "use strict";
 
-var StudioAppClass = function () {
-
-};
-
+var StudioAppClass = require('./StudioApp');
 var StudioApp = new StudioAppClass();
-StudioAppClass.singleton = StudioApp;
 
-module.exports = StudioAppClass;
+module.exports = StudioApp;
 
 var msg = require('../locale/current/common');
 var parseXmlElement = require('./xml').parseElement;
@@ -960,16 +956,6 @@ StudioApp.attempts = 0;
  * @type {?number}
  */
 StudioApp.initTime = undefined;
-
-/**
- * Reset the playing field to the start position and kill any pending
- * animation tasks.  This will typically be replaced by an application.
- * @param {boolean} first True if an opening animation is to be played.
- */
-StudioApp.reset = function(first) {};
-
-// Override to change run behavior.
-StudioApp.runButtonClick = function() {};
 
 /**
  * Enumeration of user program execution outcomes.
