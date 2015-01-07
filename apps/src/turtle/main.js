@@ -1,4 +1,5 @@
 var appMain = require('../appMain');
+var studioAppSingleton = require('../base');
 var Artist = require('./turtle');
 var blocks = require('./blocks');
 var skins = require('./skins');
@@ -8,7 +9,6 @@ window.turtleMain = function(options) {
   options.skinsModule = skins;
   options.blocksModule = blocks;
   var artist = new Artist();
-  // TODO - do we need to depend on StudioApp being global here?
-  artist.injectStudioApp(StudioApp);
+  artist.injectStudioApp(studioAppSingleton);
   appMain(artist, levels, options);
 };
