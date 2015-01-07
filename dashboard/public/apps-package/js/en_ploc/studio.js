@@ -13852,6 +13852,14 @@ exports.setSpritePosition = function (id, spriteIndex, value) {
   });
 };
 
+exports.setSpriteXY = function (id, spriteIndex, xpos, ypos) {
+  Studio.queueCmd(id, 'setSpriteXY', {
+    'spriteIndex': spriteIndex,
+    'x': Number(xpos),
+    'y': Number(ypos)
+  });
+};
+
 exports.playSound = function(id, soundName) {
   Studio.queueCmd(id, 'playSound', {'soundName': soundName});
 };
@@ -14499,6 +14507,45 @@ exports.install = function(blockly, blockInstallOptions) {
       extraParams: (this.getTitleValue('SPRITE') || '0'),
       name: 'setSpritePosition'});
   };
+ 
+  blockly.Blocks.studio_setSpriteXY = {
+    // Block for jumping a sprite to specific XY location.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.00, 0.74);
+      if (spriteCount > 1) {
+        this.appendValueInput('SPRITE')
+          .setCheck('Number')
+          .appendTitle(msg.moveSpriteN({spriteIndex: ''}));
+      } else {
+        this.appendDummyInput()
+          .appendTitle(msg.setSprite());
+      }
+      this.appendDummyInput()
+        .appendTitle(msg.toXY());
+      this.appendValueInput('XPOS')
+        .setCheck('Number');
+      this.appendValueInput('YPOS')
+        .setCheck('Number');
+      this.setPreviousStatement(true);
+      this.setInputsInline(true);
+      this.setNextStatement(true);
+    }
+  };
+
+  generator.studio_setSpriteXY = function() {
+    var spriteParam = getSpriteIndex(this);
+    var xParam = Blockly.JavaScript.valueToCode(this, 'XPOS',
+        Blockly.JavaScript.ORDER_NONE) || '0';
+    var yParam = Blockly.JavaScript.valueToCode(this, 'YPOS',
+        Blockly.JavaScript.ORDER_NONE) || '0';
+    return 'Studio.setSpriteXY(\'block_id_' + this.id +
+      '\', ' +
+      spriteParam + ', ' +
+      xParam + ', ' +
+      yParam + ');\n';
+  };
+    
 
   var SimpleMove = {
     DIRECTION_CONFIGS: {
@@ -19795,6 +19842,10 @@ Studio.callCmd = function (cmd) {
       StudioApp.highlight(cmd.id);
       Studio.setSpritePosition(cmd.opts);
       break;
+    case 'setSpriteXY':
+      StudioApp.highlight(cmd.id);
+      Studio.setSpriteXY(cmd.opts);
+      break;
     case 'playSound':
       StudioApp.highlight(cmd.id);
       StudioApp.playAudio(cmd.opts.soundName, { volume: 1.0 });
@@ -20430,6 +20481,23 @@ Studio.setSpritePosition = function (opts) {
                'dontResetCollisions': samePosition});
   sprite.x = opts.x;
   sprite.y = opts.y;
+  // Reset to "no direction" so no turn animation will take place
+  sprite.dir = Direction.NONE;
+};
+
+Studio.setSpriteXY = function (opts) {
+  var sprite = Studio.sprite[opts.spriteIndex];
+  var x = opts.x - sprite.width / 2;
+  var y = opts.y - sprite.height / 2;
+  var samePosition = (sprite.x === x && sprite.y === y);
+  
+  // Don't reset collisions inside stop() if we're in the same position
+  Studio.stop({
+    'spriteIndex': opts.spriteIndex,
+    'dontResetCollisions': samePosition
+  });
+  sprite.x = x;
+  sprite.y = y;
   // Reset to "no direction" so no turn animation will take place
   sprite.dir = Direction.NONE;
 };
@@ -21587,6 +21655,8 @@ exports.moveDistanceTooltip = function(d){return "!!-Move an actor a specific di
 exports.moveSprite = function(d){return "!!-move-!!"};
 
 exports.moveSpriteN = function(d){return "!!-move actor "+v(d,"spriteIndex")+"-!!"};
+
+exports.toXY = function(d){return "!!-to x,y-!!"};
 
 exports.moveDown = function(d){return "!!-move down-!!"};
 
