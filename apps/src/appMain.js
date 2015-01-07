@@ -2,11 +2,7 @@ var utils = require('./utils');
 var requiredBlockUtils = require('./required_block_utils');
 var StudioAppClass = require('./StudioApp');
 
-window.StudioApp = require('./base');
-
-if (typeof global !== 'undefined') {
-  global.StudioApp = window.StudioApp;
-}
+var StudioApp = require('./base');
 
 var addReadyListener = require('./dom').addReadyListener;
 var blocksCommon = require('./blocksCommon');

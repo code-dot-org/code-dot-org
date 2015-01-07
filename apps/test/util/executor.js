@@ -123,6 +123,7 @@ function runTestFromCollection (collection, index) {
 
 function runLevel (app, skinId, level, onAttempt, beforeClick) {
   require(buildDir + '/js/' + app + '/main');
+  global.StudioApp = require(buildDir + '/js/base');
 
   setAppSpecificGlobals(app);
 
@@ -137,7 +138,7 @@ function runLevel (app, skinId, level, onAttempt, beforeClick) {
       if (beforeClick) {
         beforeClick(assert);
       }
-      window.StudioApp.runButtonClick();
+      global.StudioApp.runButtonClick();
     },
     onAttempt: onAttempt
   });
