@@ -1,7 +1,7 @@
 ---
 title: Unit
 ---
-- directory = Dir[File.join(sites_dir('virtual/curriculum-msm-new/'), unit_lesson)].first
+- directory = Dir[File.join(sites_dir('virtual/curriculum-algebra/'), unit_lesson)].first
 - files = Dir.entries(directory)
 - lesson_info = YAML.load_file(File.join(directory, 'info.yml'))
 
@@ -13,15 +13,15 @@ title: Unit
   - filtered_files.each do |file|
     -basename = File.basename(file, extension)
     - if extension == ".md" || extension == ".haml"
-      %a{:href=>"/curriculum/msm-new/#{unit_lesson}/#{basename}"}= basename
+      %a{:href=>"/curriculum/algebra/#{unit_lesson}/#{basename}"}= basename
       (
-      %a{:href=>"/curriculum/msm-new/#{unit_lesson}/#{basename}.pdf"}> PDF
+      %a{:href=>"/curriculum/algebra/#{unit_lesson}/#{basename}.pdf"}> PDF
       )
     -else
       -if File.extname(file) == '.html'
         -filename = File.basename(file, ".*")
       -else
         -filename = file
-      %a{:href=>"/curriculum/msm-new/#{unit_lesson}/#{file}"}= filename
+      %a{:href=>"/curriculum/algebra/#{unit_lesson}/#{file}"}= filename
     %br
   %br
