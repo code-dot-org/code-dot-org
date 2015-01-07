@@ -5,6 +5,16 @@ var parseXmlElement = require('./xml').parseElement;
 var utils = require('./utils');
 var _ = utils.getLodash();
 var dom = require('./dom');
+var constants = require('./constants.js');
+var builder = require('./builder');
+
+/**
+* The minimum width of a playable whole blockly game.
+*/
+var MIN_WIDTH = 900;
+var MIN_MOBILE_SHARE_WIDTH = 450;
+var MOBILE_NO_PADDING_SHARE_WIDTH = 400;
+var WORKSPACE_PLAYSPACE_GAP = 15;
 
 var StudioAppClass = function () {
   this.feedback_ = null;
@@ -24,10 +34,12 @@ var StudioAppClass = function () {
   */
   this.LOCALE = 'en_us';
 
+  this.enableShowCode = true;
   this.editCode = false;
   this.usingBlockly = true;
   this.cdoSounds = null;
   this.Dialog = null;
+  this.editor = null;
 
   // TODO (br-pair) : Make these look like variables, not constants.
   this.BLOCK_X_COORDINATE = 70;
@@ -40,6 +52,91 @@ var StudioAppClass = function () {
   this.SMALL_ICON = undefined;
   this.WIN_ICON = undefined;
   this.FAILURE_ICON = undefined;
+
+  // The following properties get their non-default values set by the application.
+
+  /**
+  * Whether to alert user to empty blocks, short-circuiting all other tests.
+  */
+  this.CHECK_FOR_EMPTY_BLOCKS = undefined;
+
+  /**
+  * The ideal number of blocks to solve this level.  Users only get 2
+  * stars if they use more than this number.
+  * @type {!number=}
+  */
+  this.IDEAL_BLOCK_NUM = undefined;
+
+  /**
+  * An array of dictionaries representing required blocks.  Keys are:
+  * - test (required): A test whether the block is present, either:
+  *   - A string, in which case the string is searched for in the generated code.
+  *   - A single-argument function is called on each user-added block
+  *     individually.  If any call returns true, the block is deemed present.
+  *     "User-added" blocks are ones that are neither disabled or undeletable.
+  * - type (required): The type of block to be produced for display to the user
+  *   if the test failed.
+  * - titles (optional): A dictionary, where, for each KEY-VALUE pair, this is
+  *   added to the block definition: <title name="KEY">VALUE</title>.
+  * - value (optional): A dictionary, where, for each KEY-VALUE pair, this is
+  *   added to the block definition: <value name="KEY">VALUE</value>
+  * - extra (optional): A string that should be blacked between the "block"
+  *   start and end tags.
+  * @type {!Array=}
+  */
+  this.REQUIRED_BLOCKS = undefined;
+
+  /**
+  * The number of required blocks to give hints about at any one time.
+  * Set this to Infinity to show all.
+  * @type {!number=}
+  */
+  this.NUM_REQUIRED_BLOCKS_TO_FLAG = undefined;
+
+  /**
+  * The number of attempts (how many times the run button has been pressed)
+  * @type {?number}
+  */
+  this.attempts = 0;
+
+  /**
+  * Stores the time at init. The delta to current time is used for logging
+  * and reporting to capture how long it took to arrive at an attempt.
+  * @type {?number}
+  */
+  this.initTime = undefined;
+
+  /**
+  * Enumeration of user program execution outcomes.
+  */
+  // TODO (br-pair) : this should be this.resultType not ResultType
+  this.ResultType = constants.ResultType;
+
+  /**
+  * Enumeration of test results.
+  */
+  // TODO (br-pair) : TestResults shouldn't really live on StudioApp. Places
+  // that want this should just require constants themselves.
+  this.TestResults = constants.TestResults;
+
+  /**
+   * If true, we don't show blockspace. Used when viewing shared levels
+   */
+  this.hideSource = false;
+
+  /**
+   * If true, we're viewing a shared level.
+   */
+  this.share = false;
+
+  this.onAttempt = undefined;
+  this.onContinue = undefined;
+  this.onResetPressed = undefined;
+  this.backToPreviousLevel = undefined;
+  this.sendToPhone = undefined;
+
+  // TODO (br-pair) : should callers instead be the ones binding the context?
+  this.onResize = _.bind(this.onResize, this);
 };
 
 module.exports = StudioAppClass;
@@ -58,6 +155,7 @@ StudioAppClass.prototype.configure = function (options) {
   this.cdoSounds = options.cdoSounds;
   this.Dialog = options.Dialog;
 
+  // TODO (br-pair) : should callers instead be the ones binding the context?
   this.assetUrl = _.bind(this.assetUrl_, this);
 };
 
@@ -309,4 +407,228 @@ StudioAppClass.prototype.showInstructions_ = function(level, autoClose) {
   }
 
   dialog.show();
+};
+
+/**
+*  Resizes the blockly workspace.
+*/
+StudioAppClass.prototype.onResize = function() {
+  var visualizationColumn = document.getElementById('visualizationColumn');
+  var gameWidth = visualizationColumn.getBoundingClientRect().width;
+
+  var blocklyDiv = document.getElementById('blockly');
+  var codeWorkspace = document.getElementById('codeWorkspace');
+
+  // resize either blockly or codeWorkspace
+  var div = this.editCode ? codeWorkspace : blocklyDiv;
+
+  var divParent = div.parentNode;
+  var parentStyle = window.getComputedStyle(divParent);
+
+  var parentWidth = parseInt(parentStyle.width, 10);
+  var parentHeight = parseInt(parentStyle.height, 10);
+
+  var headers = document.getElementById('headers');
+  var headersHeight = parseInt(window.getComputedStyle(headers).height, 10);
+
+  div.style.top = divParent.offsetTop + 'px';
+  var fullWorkspaceWidth = parentWidth - (gameWidth + WORKSPACE_PLAYSPACE_GAP);
+  var oldWidth = parseInt(div.style.width, 10) || div.getBoundingClientRect().width;
+  div.style.width = fullWorkspaceWidth + 'px';
+
+  // Keep blocks static relative to the right edge in RTL mode
+  if (this.usingBlockly && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
+    Blockly.mainBlockSpace.getTopBlocks().forEach(function(topBlock) {
+      topBlock.moveBy(fullWorkspaceWidth - oldWidth, 0);
+    });
+  }
+
+  if (this.isRtl()) {
+    div.style.marginRight = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
+  }
+  else {
+    div.style.marginLeft = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
+  }
+  if (this.editCode) {
+    // Position the inner codeTextbox element below the headers
+    var codeTextbox = document.getElementById('codeTextbox');
+    codeTextbox.style.height = (parentHeight - headersHeight) + 'px';
+    codeTextbox.style.width = fullWorkspaceWidth + 'px';
+    codeTextbox.style.top = headersHeight + 'px';
+
+    // The outer codeWorkspace element height should match its parent:
+    div.style.height = parentHeight + 'px';
+  } else {
+    // reduce height by headers height because blockly isn't aware of headers
+    // and will size its svg element to be too tall
+    div.style.height = (parentHeight - headersHeight) + 'px';
+  }
+
+  this.resizeHeaders(fullWorkspaceWidth);
+};
+
+// |          toolbox-header          | workspace-header  | show-code-header |
+// |
+// |           toolboxWidth           |
+// |                 |         <--------- workspaceWidth ---------->         |
+// |         <---------------- fullWorkspaceWidth ----------------->         |
+StudioAppClass.prototype.resizeHeaders = function (fullWorkspaceWidth) {
+  var minWorkspaceWidthForShowCode = this.editCode ? 250 : 450;
+  var toolboxWidth = 0;
+  if (this.editCode) {
+    // If in the droplet editor, but not using blocks, keep categoryWidth at 0
+    if (!this.editCode || this.editor.currentlyUsingBlocks) {
+      // Set toolboxWidth based on the block palette width:
+      var categories = document.querySelector('.droplet-palette-wrapper');
+      toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
+    }
+  } else if (this.usingBlockly) {
+    toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
+  }
+
+  var showCodeHeader = document.getElementById('show-code-header');
+  var showCodeWidth = 0;
+  if (this.enableShowCode &&
+      (fullWorkspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
+    showCodeWidth = parseInt(window.getComputedStyle(showCodeHeader).width, 10);
+    showCodeHeader.style.display = "";
+  } else {
+    showCodeHeader.style.display = "none";
+  }
+
+  document.getElementById('headers').style.width = fullWorkspaceWidth + 'px';
+  document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
+  document.getElementById('workspace-header').style.width =
+    (fullWorkspaceWidth - toolboxWidth - showCodeWidth) + 'px';
+};
+
+/**
+* Highlight the block (or clear highlighting).
+* @param {?string} id ID of block that triggered this action.
+* @param {boolean} spotlight Optional.  Highlight entire block if true
+*/
+StudioAppClass.prototype.highlight = function(id, spotlight) {
+  if (this.usingBlockly) {
+    if (id) {
+      var m = id.match(/^block_id_(\d+)$/);
+      if (m) {
+        id = m[1];
+      }
+    }
+
+    Blockly.mainBlockSpace.highlightBlock(id, spotlight);
+  }
+};
+
+/**
+* Remove highlighting from all blocks
+*/
+StudioAppClass.prototype.clearHighlighting = function () {
+  this.highlight(null);
+};
+
+/**
+* Display feedback based on test results.  The test results must be
+* explicitly provided.
+* @param {{feedbackType: number}} Test results (a constant property of
+*     StudioApp.TestResults).
+*/
+StudioAppClass.prototype.displayFeedback = function(options) {
+  options.Dialog = this.Dialog;
+  options.onContinue = this.onContinue;
+  options.backToPreviousLevel = this.backToPreviousLevel;
+  options.sendToPhone = this.sendToPhone;
+
+  // Special test code for edit blocks.
+  if (options.level.edit_blocks) {
+    options.feedbackType = this.TestResults.EDIT_BLOCKS;
+  }
+
+  this.feedback_.displayFeedback(options);
+};
+
+/**
+ *
+ */
+StudioAppClass.prototype.getTestResults = function(levelComplete, options) {
+  return this.feedback_.getTestResults(levelComplete, options);
+};
+
+/**
+* Report back to the server, if available.
+* @param {object} options - parameter block which includes:
+* {string} app The name of the application.
+* {number} id A unique identifier generated when the page was loaded.
+* {string} level The ID of the current level.
+* {number} result An indicator of the success of the code.
+* {number} testResult More specific data on success or failure of code.
+* {string} program The user program, which will get URL-encoded.
+* {function} onComplete Function to be called upon completion.
+*/
+StudioAppClass.prototype.report = function(options) {
+  // copy from options: app, level, result, testResult, program, onComplete
+  var report = options;
+  report.pass = this.feedback_.canContinueToNextLevel(options.testResult);
+  report.time = ((new Date().getTime()) - this.initTime);
+  report.attempt = this.attempts;
+  report.lines = this.feedback_.getNumBlocksUsed();
+
+  // If hideSource is enabled, the user is looking at a shared level that
+  // they cannot have modified. In that case, don't report it to the service
+  // or call the onComplete() callback expected. The app will just sit
+  // there with the Reset button as the only option.
+  var self = this;
+  if (!(this.hideSource && this.share)) {
+    var onAttemptCallback = (function() {
+      return function(builderDetails) {
+        for (var option in builderDetails) {
+          report[option] = builderDetails[option];
+        }
+        self.onAttempt(report);
+      };
+    })();
+
+    // If this is the level builder, go to builderForm to get more info from
+    // the level builder.
+    if (options.builder) {
+      builder.builderForm(onAttemptCallback);
+    } else {
+      onAttemptCallback();
+    }
+  }
+};
+
+/**
+* Click the reset button.  Reset the application.
+*/
+StudioAppClass.prototype.resetButtonClick = function() {
+  this.onResetPressed();
+  this.toggleRunReset('run');
+  this.clearHighlighting();
+  if (this.usingBlockly) {
+    Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
+    Blockly.mainBlockSpace.traceOn(false);
+  }
+  this.reset(false);
+};
+
+/**
+* Add count of blocks used.
+*/
+StudioAppClass.prototype.updateBlockCount = function() {
+  // If the number of block used is bigger than the ideal number of blocks,
+  // set it to be yellow, otherwise, keep it as black.
+  var element = document.getElementById('blockUsed');
+  if (this.IDEAL_BLOCK_NUM < this.feedback_.getNumCountableBlocks()) {
+    element.className = "block-counter-overflow";
+  } else {
+    element.className = "block-counter-default";
+  }
+
+  // Update number of blocks used.
+  if (element) {
+    element.innerHTML = '';  // Remove existing children or text.
+    element.appendChild(document.createTextNode(
+      this.feedback_.getNumCountableBlocks()));
+  }
 };
