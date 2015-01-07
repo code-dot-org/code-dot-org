@@ -45,7 +45,7 @@ class ApplicationHelperTest < ActionView::TestCase
 
   test "code_org_root_path in development" do
     set_env :development
-    assert_equal '//localhost.code.org:9393', code_org_root_path
+    assert_equal "//localhost.code.org:#{CDO.pegasus_port}", code_org_root_path
   end
 
   test "code_org_url" do
