@@ -14,6 +14,32 @@ theme: none
 ## Lesson Overview
 Students discuss the components of their favorite video games, and discover that they can be reduced to a series of coordinates. They then explore coordinates in Cartesian space, and identify the coordinates for the characters in a game at various points in time. Once they are comfortable with coordinates, they brainstorm their own games and create sample coordinate lists for different points in time in their own game.
 
+## Lesson Objectives 
+### Students will:
+- Create a data model that describes a simple videogame
+- Describe the movements of videogame characters by their change in coordinates
+
+<details>
+<summary>Anchor Standards</summary>
+### Common Core Math Standards
+- 5.G.1-2: Graph points on the coordinate plane to solve real-world and mathematical problems
+
+_Additional standards alignment can be found at the end of this lesson_
+</details>
+
+<details>
+<summary>Curriculum Connections</summary>
+### Connections to external or internal curricular content
+- Graphing and number lines
+</details>
+
+<details>
+<summary>Prerequisite Knowledge</summary>
+### This lesson assumes that students can:
+- Add and subtract whole numbers
+- Multiply and divide whole numbers
+</details>
+
 [summary]
 
 ## Teaching Summary
@@ -34,11 +60,6 @@ Students discuss the components of their favorite video games, and discover that
 6) [Coordinate Plane Assessment](#Assessment)
 
 [/summary]
-
-## Lesson Objectives 
-### Students will:
-- Create a data model that describes a simple videogame
-- Describe the movements of videogame characters by their change in coordinates
 
 [/together]
 
@@ -198,4 +219,4 @@ Visit [MSM Stage 1](http://studio.code.org/s/msm/stage/1/puzzle/1) in Code Studi
 
 [/content]
 
-<link rel="stylesheet" type="text/css" href="../docs/morestyle.css"/>
+<link rel="stylesheet" type="text/css" href="morestyle.css"/>

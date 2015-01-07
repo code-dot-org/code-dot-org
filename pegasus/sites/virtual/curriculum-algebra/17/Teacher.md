@@ -140,10 +140,25 @@ Visit [MSM Stage 13](http://studio.code.org/s/msm/stage/17/puzzle/1) in Code Stu
 
 [standards]
 
-## Connections and Background Information
+<details>
+<summary>Standards Alignment</summary>
 
+### Common Core Mathematical Practices
+ 
+- 1. Make sense of problems and persevere in solving them.
+- 2. Reason abstractly and quantitatively.
+- 3. Construct viable arguments and critique the reasoning of others.
+- 4. Model with mathematics.
+- 5. Use appropriate tools strategically.
+- 6. Attend to precision.
+- 7. Look for and make use of structure.
+- 8. Look for and express regularity in repeated reasoning.
 
+### Common Core Math Standards
 
+- A-SSE.1-2: The student interprets the structure of expressions to solve problems in context.
+
+</details>
 
 [/standards]
 
