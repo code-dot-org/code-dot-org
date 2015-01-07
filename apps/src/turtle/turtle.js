@@ -61,26 +61,25 @@ var JOINT_SEGMENT_LENGTH = 50;
  * along with whether it should be drawn before or after the turtle sprite itself.
  */
 var ELSA_DECORATION_DETAILS = [
-{ x: 15, when: "after" },
-{ x: 26, when: "after" },
-{ x: 37, when: "after" },
-{ x: 46, when: "after" },
-{ x: 60, when: "after" },
-{ x: 65, when: "after" },
-{ x: 66, when: "after" },
-{ x: 64, when: "after" },
-{ x: 62, when: "before" },
-{ x: 55, when: "before" },
-{ x: 48, when: "before" },
-{ x: 33, when: "before" },
-{ x: 31, when: "before" },
-{ x: 22, when: "before" },
-{ x: 17, when: "before" },
-{ x: 12, when: "before" },
-{ x:  8, when: "after" },
-{ x: 10, when: "after" }
+  { x: 15, when: "after" },
+  { x: 26, when: "after" },
+  { x: 37, when: "after" },
+  { x: 46, when: "after" },
+  { x: 60, when: "after" },
+  { x: 65, when: "after" },
+  { x: 66, when: "after" },
+  { x: 64, when: "after" },
+  { x: 62, when: "before" },
+  { x: 55, when: "before" },
+  { x: 48, when: "before" },
+  { x: 33, when: "before" },
+  { x: 31, when: "before" },
+  { x: 22, when: "before" },
+  { x: 17, when: "before" },
+  { x: 12, when: "before" },
+  { x:  8, when: "after" },
+  { x: 10, when: "after" }
 ];
-
 
 /**
  * An instantiable Turtle class
@@ -120,10 +119,10 @@ var TurtleClass = function () {
 
   // these get set by init based on skin.
   // TODO (brent) - dont ctalize, these arent constants
-  this.AVATAR_WIDTH = 0;
-  this.AVATAR_HEIGHT = 0;
-  this.DECORATIONANIMATION_WIDTH = 85;
-  this.DECORATIONANIMATION_HEIGHT = 85;
+  this.avatarWidth = 0;
+  this.avatarHeight = 0;
+  this.decorationAnimationWidth = 85;
+  this.decorationAnimationHeight = 85;
   this.speedSlider = null;
 
   this.ctxAnswer = null;
@@ -174,17 +173,17 @@ TurtleClass.prototype.init = function(config) {
   config.forceInsertTopBlock = 'when_run';
 
   if (this.skin.id == "anna") {
-    this.AVATAR_WIDTH = 73;
-    this.AVATAR_HEIGHT = 100;
+    this.avatarWidth = 73;
+    this.avatarHeight = 100;
   }
   else if (this.skin.id == "elsa") {
-    this.AVATAR_WIDTH = 73;
-    this.AVATAR_HEIGHT = 100;
-    this.DECORATIONANIMATION_WIDTH = 85;
-    this.DECORATIONANIMATION_HEIGHT = 85;
+    this.avatarWidth = 73;
+    this.avatarHeight = 100;
+    this.decorationAnimationWidth = 85;
+    this.decorationAnimationHeight = 85;
   } else {
-    this.AVATAR_WIDTH = 70;
-    this.AVATAR_HEIGHT = 51;
+    this.avatarWidth = 70;
+    this.avatarHeight = 51;
   }
 
   config.html = page({
@@ -419,8 +418,8 @@ TurtleClass.prototype.loadTurtle = function() {
   } else {
     this.numberAvatarHeadings = 180;
   }
-  this.avatarImage.spriteHeight = this.AVATAR_HEIGHT;
-  this.avatarImage.spriteWidth = this.AVATAR_WIDTH;
+  this.avatarImage.spriteHeight = this.avatarHeight;
+  this.avatarImage.spriteWidth = this.avatarWidth;
 };
 
 /**
@@ -429,8 +428,8 @@ TurtleClass.prototype.loadTurtle = function() {
 TurtleClass.prototype.loadDecorationAnimation = function() {
   if (this.skin.id == "elsa") {
     this.decorationAnimationImage.src = this.skin.decorationAnimation;
-    this.decorationAnimationImage.height = this.DECORATIONANIMATION_HEIGHT;
-    this.decorationAnimationImage.width = this.DECORATIONANIMATION_WIDTH;
+    this.decorationAnimationImage.height = this.decorationAnimationHeight;
+    this.decorationAnimationImage.width = this.decorationAnimationWidth;
   }
 };
 
