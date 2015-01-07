@@ -38,39 +38,29 @@ var builder = require('./builder');
 var _ = utils.getLodash();
 var constants = require('./constants.js');
 
+// TODO (br-pair) : make this better
+feedback.applySingleton(StudioApp);
+StudioApp.feedback_ = feedback;
+
 //TODO: These should be members of a BlocklyApp instance.
 var onAttempt;
 var onContinue;
 var onResetPressed;
 var backToPreviousLevel;
 
-/**
- * The parent directory of the apps. Contains common.js.
- */
-StudioApp.BASE_URL = undefined;
 
 /**
- * If truthy, a version number to be appended to asset urls.
- */
-StudioApp.CACHE_BUST = undefined;
-
-/**
- * The current locale code.
- */
-StudioApp.LOCALE = 'en_us';
-
-/**
- * The minimum width of a playable whole blockly game.
- */
-StudioApp.MIN_WIDTH = 900;
-StudioApp.MIN_MOBILE_SHARE_WIDTH = 450;
-StudioApp.MOBILE_NO_PADDING_SHARE_WIDTH = 400;
+* The minimum width of a playable whole blockly game.
+*/
+var MIN_WIDTH = 900;
+var MIN_MOBILE_SHARE_WIDTH = 450;
+var MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 var WORKSPACE_PLAYSPACE_GAP = 15;
 
 /**
  * Treat mobile devices with screen.width less than the value below as phones.
  */
-StudioApp.MAX_PHONE_WIDTH = 500;
+var MAX_PHONE_WIDTH = 500;
 
 /**
  * If the user presses backspace, stop propagation - this prevents blockly
@@ -83,19 +73,6 @@ var codeKeyDown = function(e) {
   }
 };
 
-StudioApp.toggleRunReset = function(button) {
-  var showRun = (button === 'run');
-  if (button !== 'run' && button !== 'reset') {
-    throw "Unexpected input";
-  }
-
-  var run = document.getElementById('runButton');
-  var reset = document.getElementById('resetButton');
-  run.style.display = showRun ? 'inline-block' : 'none';
-  run.disabled = !showRun;
-  reset.style.display = !showRun ? 'inline-block' : 'none';
-  reset.disabled = showRun;
-};
 
 /**
  * Modify the workspace header after a droplet blocks/code toggle
@@ -324,18 +301,18 @@ StudioApp.init = function(config) {
     if (StudioApp.share && dom.isMobile()) {
       // for mobile sharing, don't assume landscape mode, use screen.width
       deviceWidth = desiredWidth = screen.width;
-      if (StudioApp.noPadding && screen.width < StudioApp.MAX_PHONE_WIDTH) {
+      if (StudioApp.noPadding && screen.width < MAX_PHONE_WIDTH) {
         desiredWidth = Math.min(desiredWidth,
-                                StudioApp.MOBILE_NO_PADDING_SHARE_WIDTH);
+                                MOBILE_NO_PADDING_SHARE_WIDTH);
       }
       minWidth = StudioApp.noPadding ?
-                    StudioApp.MOBILE_NO_PADDING_SHARE_WIDTH :
-                    StudioApp.MIN_MOBILE_SHARE_WIDTH;
+                    MOBILE_NO_PADDING_SHARE_WIDTH :
+                    MIN_MOBILE_SHARE_WIDTH;
     }
     else {
       // assume we are in landscape mode, so width is the longer of the two
       deviceWidth = desiredWidth = Math.max(screen.width, screen.height);
-      minWidth = StudioApp.MIN_WIDTH;
+      minWidth = MIN_WIDTH;
     }
     var width = Math.max(minWidth, desiredWidth);
     var scale = deviceWidth / width;
@@ -348,8 +325,6 @@ StudioApp.init = function(config) {
                    'user-scalable=no'];
     viewport.setAttribute('content', content.join(', '));
   }
-
-  StudioApp.Dialog = config.Dialog;
 
   var showCode = document.getElementById('show-code-header');
   if (showCode && StudioApp.enableShowCode) {
@@ -384,7 +359,7 @@ StudioApp.init = function(config) {
   if (config.showInstructionsWrapper) {
     config.showInstructionsWrapper(function () {
       var shouldAutoClose = !!config.level.aniGifURL;
-      showInstructions(config.level, shouldAutoClose);
+      StudioApp.showInstructions_(config.level, shouldAutoClose);
     });
   }
 
@@ -403,7 +378,7 @@ StudioApp.init = function(config) {
       var vizCol = document.getElementById('visualizationColumn');
       var width = vizCol.offsetWidth;
       var height = vizCol.offsetHeight;
-      var displayWidth = StudioApp.MOBILE_NO_PADDING_SHARE_WIDTH;
+      var displayWidth = MOBILE_NO_PADDING_SHARE_WIDTH;
       var scale = Math.min(width / displayWidth, height / displayWidth);
       var viz = document.getElementById('visualization');
       viz.style['transform-origin'] = 'left top';
@@ -450,7 +425,7 @@ StudioApp.init = function(config) {
   if (config.level.aniGifURL) {
     aniGifPreview.style.backgroundImage = "url('" + config.level.aniGifURL + "')";
     aniGifPreview.onclick = function() {
-      showInstructions(config.level, false);
+      StudioApp.showInstructions_(config.level, false);
     };
     var promptTable = document.getElementById('prompt-table');
     promptTable.className += " with-ani-gif";
@@ -590,200 +565,22 @@ StudioApp.init = function(config) {
   }
 };
 
-StudioApp.loadAudio = function(filenames, name) {
-  if (StudioApp.usingBlockly) {
-    Blockly.loadAudio_(filenames, name);
-  } else if (StudioApp.cdoSounds) {
-    var regOpts = { id: name };
-    for (var i = 0; i < filenames.length; i++) {
-      var filename = filenames[i];
-      var ext = filename.match(/\.(\w+)(\?.*)?$/);
-      if (ext) {
-        // Extend regOpts so regOpts.mp3 = 'file.mp3'
-        regOpts[ext[1]] = filename;
-      }
-    }
-    StudioApp.cdoSounds.register(regOpts);
-  }
-};
 
-StudioApp.playAudio = function(name, options) {
-  options = options || {};
-  var defaultOptions = {volume: 0.5};
-  var newOptions = utils.extend(defaultOptions, options);
-  if (StudioApp.usingBlockly) {
-    Blockly.playAudio(name, newOptions);
-  } else if (StudioApp.cdoSounds) {
-    StudioApp.cdoSounds.play(name, newOptions);
-  }
-};
 
-StudioApp.stopLoopingAudio = function(name) {
-  if (StudioApp.usingBlockly) {
-    Blockly.stopLoopingAudio(name);
-  } else if (StudioApp.cdoSounds) {
-    StudioApp.cdoSounds.stopLoopingAudio(name);
-  }
-};
 
-/**
- * @param {Object} options Configuration parameters for Blockly. Parameters are
- * optional and include:
- *  - {string} path The root path to the /apps directory, defaults to the
- *    the directory in which this script is located.
- *  - {boolean} rtl True if the current language right to left.
- *  - {DomElement} toolbox The element in which to insert the toolbox,
- *    defaults to the element with 'toolbox'.
- *  - {boolean} trashcan True if the trashcan should be displayed, defaults to
- *    true.
- * @param {DomElement} div The parent div in which to insert Blockly.
- */
-StudioApp.inject = function(div, options) {
-  var defaults = {
-    assetUrl: StudioApp.assetUrl,
-    rtl: StudioApp.isRtl(),
-    toolbox: document.getElementById('toolbox'),
-    trashcan: true
-  };
-  Blockly.inject(div, utils.extend(defaults, options));
-};
 
-/**
- * Returns true if the current HTML page is in right-to-left language mode.
- */
-StudioApp.isRtl = function() {
-  var head = document.getElementsByTagName('head')[0];
-  if (head && head.parentElement) {
-    var dir = head.parentElement.getAttribute('dir');
-    return (dir && dir.toLowerCase() == 'rtl');
-  } else {
-    return false;
-  }
-};
 
-StudioApp.localeDirection = function() {
-  return (StudioApp.isRtl() ? 'rtl' : 'ltr');
-};
 
-/**
- * Initialize Blockly for a readonly iframe.  Called on page load.
- * XML argument may be generated from the console with:
- * Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)).slice(5, -6)
- */
-StudioApp.initReadonly = function(options) {
-  Blockly.inject(document.getElementById('blockly'), {
-    assetUrl: StudioApp.assetUrl,
-    readOnly: true,
-    rtl: StudioApp.isRtl(),
-    scrollbars: false
-  });
-  StudioApp.loadBlocks(options.blocks);
-};
 
-/**
- * Load the editor with blocks.
- * @param {string} blocksXml Text representation of blocks.
- */
-StudioApp.loadBlocks = function(blocksXml) {
-  var xml = parseXmlElement(blocksXml);
-  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
-};
 
-StudioApp.BLOCK_X_COORDINATE = 70;
-StudioApp.BLOCK_Y_COORDINATE = 30;
-StudioApp.BLOCK_Y_COORDINATE_INTERVAL = 200;
 
-/**
- * Spreading out the top blocks in workspace if it is not already set.
- * @param {string} startBlocks String representation of start blocks xml.
- * @param {Object.<Object>} arrangement A map from block type to position.
- * @return {string} String representation of start blocks xml, including
- *    block position.
- */
-StudioApp.arrangeBlockPosition = function(startBlocks, arrangement) {
-  var type, arrangeX, arrangeY;
-  var xml = parseXmlElement(startBlocks);
-  var xmlChildNodes = StudioApp.sortBlocksByVisibility(xml.childNodes);
-  var numberOfPlacedBlocks = 0;
-  for (var x = 0, xmlChild; xmlChildNodes && x < xmlChildNodes.length; x++) {
-    xmlChild = xmlChildNodes[x];
 
-    // Only look at element nodes
-    if (xmlChild.nodeType === 1) {
-      // look to see if we have a predefined arrangement for this type
-      type = xmlChild.getAttribute('type');
-      arrangeX = arrangement && arrangement[type] ? arrangement[type].x : null;
-      arrangeY = arrangement && arrangement[type] ? arrangement[type].y : null;
 
-      xmlChild.setAttribute('x', xmlChild.getAttribute('x') || arrangeX ||
-                            StudioApp.BLOCK_X_COORDINATE);
-      xmlChild.setAttribute('y', xmlChild.getAttribute('y') || arrangeY ||
-                            StudioApp.BLOCK_Y_COORDINATE +
-                            StudioApp.BLOCK_Y_COORDINATE_INTERVAL * numberOfPlacedBlocks);
-      numberOfPlacedBlocks += 1;
-    }
-  }
-  return Blockly.Xml.domToText(xml);
-};
 
-/**
- * Sorts the array of xml blocks, moving visible blocks to the front.
- * @param {Array.<Element>} xmlBlocks An array of xml blocks.
- * @return {Array.<Element>} A sorted array of xml blocks, with all
- *     visible blocks preceding all hidden blocks.
- */
-StudioApp.sortBlocksByVisibility = function(xmlBlocks) {
-  var visibleXmlBlocks = [];
-  var hiddenXmlBlocks = [];
-  for (var x = 0, xmlBlock; xmlBlocks && x < xmlBlocks.length; x++) {
-    xmlBlock = xmlBlocks[x];
-    if (xmlBlock.getAttribute &&
-        xmlBlock.getAttribute('uservisible') === 'false') {
-      hiddenXmlBlocks.push(xmlBlock);
-    } else {
-      visibleXmlBlocks.push(xmlBlock);
-    }
-  }
-  return visibleXmlBlocks.concat(hiddenXmlBlocks);
-};
 
-var showInstructions = function(level, autoClose) {
-  var instructionsDiv = document.createElement('div');
-  instructionsDiv.innerHTML = require('./templates/instructions.html')(level);
 
-  var buttons = document.createElement('div');
-  buttons.innerHTML = require('./templates/buttons.html')({
-    data: {
-      ok: true
-    }
-  });
 
-  instructionsDiv.appendChild(buttons);
 
-  var dialog = feedback.createModalDialogWithIcon({
-      Dialog: StudioApp.Dialog,
-      contentDiv: instructionsDiv,
-      icon: StudioApp.ICON,
-      defaultBtnSelector: '#ok-button'
-      });
-
-  if (autoClose) {
-    setTimeout(function() {
-      dialog.hide();
-    }, 32000);
-  }
-
-  var okayButton = buttons.querySelector('#ok-button');
-  if (okayButton) {
-    dom.addClickTouchEvent(okayButton, function() {
-      if (dialog) {
-        dialog.hide();
-      }
-    });
-  }
-
-  dialog.show();
-};
 
 /**
  *  Resizes the blockly workspace.
