@@ -152,6 +152,18 @@ class Studio < Grid
     </value>
   </block>
   <block type="studio_setSpritePosition" />
+  <block type="studio_setSpriteXY" inline="true">
+    <value name="XPOS">
+      <block type="math_number">
+        <title name="NUM">200</title>
+      </block>
+    </value>
+    <value name="YPOS">
+      <block type="math_number">
+        <title name="NUM">200</title>
+      </block>
+    </value>
+  </block>
   <block type="studio_throw" />
   <block type="studio_makeProjectile" />
   <block type="studio_setSpriteSpeed" />
