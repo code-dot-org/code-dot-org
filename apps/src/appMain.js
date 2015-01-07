@@ -43,23 +43,7 @@ module.exports = function(app, levels, options) {
 
   options.Dialog = options.Dialog || StubDialog;
 
-  StudioApp.BASE_URL = options.baseUrl;
-  StudioApp.CACHE_BUST = options.cacheBust;
-  StudioApp.LOCALE = options.locale || StudioApp.LOCALE;
-  // NOTE: editCode (which currently implies droplet) and usingBlockly are
-  // currently mutually exclusive.
-  StudioApp.editCode = options.level && options.level.editCode;
-  StudioApp.usingBlockly = !StudioApp.editCode;
-  StudioApp.cdoSounds = options.cdoSounds;
-
-  StudioApp.assetUrl = function(path) {
-    var url = options.baseUrl + path;
-    /*if (StudioApp.CACHE_BUST) {
-      return url + '?v=' + options.cacheBust;
-    } else {*/
-      return url;
-    /*}*/
-  };
+  StudioApp.configure(options);
 
   options.skin = options.skinsModule.load(StudioApp.assetUrl, options.skinId);
 

@@ -6,7 +6,11 @@ var msg = require('../locale/current/common');
 var dom = require('./dom');
 var xml = require('./xml');
 var _ = utils.getLodash();
-var studioAppSingleton = require('./base');
+var studioAppSingleton = window.StudioApp || global.StudioApp;
+
+exports.applySingleton = function (singleton) {
+  studioAppSingleton = singleton;
+};
 
 var TestResults = require('./constants').TestResults;
 
