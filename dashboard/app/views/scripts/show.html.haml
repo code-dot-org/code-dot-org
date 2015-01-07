@@ -40,12 +40,13 @@
   %br/
 
   - if @script.k5_course?
-    %a{href: "//#{canonical_hostname('code.org')}/curriculum/docs/k-5/overview"}
+    %a{href: CDO.code_org_url('/curriculum/docs/k-5/overview')}
       = t('home.all_courses')
     %br/
     %br/
 
-    %a{href: "http://code.org/curriculum/" + @script.name }
+  - if @script.has_lesson_plan?
+    %a{href: CDO.code_org_url('/curriculum/' + @script.name)}
       = t('home.lesson_plans')
     %br/
     %br/

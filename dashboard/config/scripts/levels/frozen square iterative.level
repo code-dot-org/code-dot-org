@@ -22,7 +22,8 @@
     "ideal": "8",
     "embed": "false",
     "callout_json": "[\r\n  {\"localization_key\": \"frozen_create_square\", \"element_id\": \"#add_more_blocks_qtip\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top left\", \"at\": \"bottom left\"}, \"style\": { \"classes\": \"no-tip\" }}\r\n  }\r\n]",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "permitted_errors": "0"
   }
 }]]></config>
   <blocks>
