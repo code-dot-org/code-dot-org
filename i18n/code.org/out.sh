@@ -28,7 +28,7 @@ for locale in $locales; do
 
   ### Blockly Mooc
 
-  orig_dir=../../blockly/i18n
+  orig_dir=../../apps/i18n
   loc_dir=../locales/$locale/blockly-mooc
   en_dir=../locales/en-US/blockly-mooc
 
