@@ -147,6 +147,17 @@ Blockly.BlockSpace.prototype.findFunction = function(functionName) {
   });
 };
 
+Blockly.BlockSpace.prototype.findFunctionExamples = function(functionName) {
+  return goog.array.filter(this.getTopBlocks(), function(block) {
+    if (Blockly.ContractEditor.EXAMPLE_BLOCK_TYPE === block.type) {
+      var actualBlock = block.getInputTargetBlock(Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
+      return actualBlock &&
+        Blockly.Names.equals(functionName, actualBlock.getTitleValue('NAME'));
+    }
+    return false;
+  });
+};
+
 /**
  * Create the trash can elements.
  * @return {!Element} The blockSpace's SVG group.

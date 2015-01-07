@@ -22,7 +22,8 @@
     "use_contract_editor": "false",
     "callout_json": "[\r\n  {\"localization_key\": \"repeat_blocks_1\", \"element_id\": \"#repeat_toolbox_qtip1\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}}\r\n  },\r\n  {\"localization_key\": \"repeat_blocks_2\", \"element_id\": \"#repeat_toolbox_qtip2\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top left\", \"at\": \"top left\", \"adjust\": {\"x\": 22, \"y\":36}}}\r\n  }\r\n]",
     "embed": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "permitted_errors": "0"
   }
 }]]></config>
   <blocks>

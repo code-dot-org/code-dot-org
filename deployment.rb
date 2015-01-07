@@ -39,12 +39,13 @@ def load_configuration()
 
   {
     'app_servers'                 => {},
-    'build_blockly'               => false,
+    'build_apps'               => false,
     'build_blockly_core'          => false,
     'build_dashboard'             => true,
     'build_pegasus'               => true,
     'dashboard_db_name'           => "dashboard_#{rack_env}",
     'dashboard_devise_pepper'     => 'not a pepper!',
+    'dashboard_secret_key_base'   => 'not a secret',
     'dashboard_honeybadger_api_key' =>'00000000',
     'dashboard_port'              => 3000,
     'dashboard_unicorn_name'      => 'dashboard',
@@ -55,7 +56,7 @@ def load_configuration()
     'hip_chat_logging'            => false,
     'home_dir'                    => File.expand_path('~'),
     'languages'                   => load_languages(File.join(root_dir, 'pegasus', 'data', 'cdo-languages.csv')),
-    'localize_blockly'            => false,
+    'localize_apps'            => false,
     'name'                        => hostname,
     'pegasus_db_name'             => rack_env == :production ? 'pegasus' : "pegasus_#{rack_env}",
     'pegasus_honeybadger_api_key' =>'00000000',
@@ -111,6 +112,25 @@ class CDOImpl < OpenStruct
     "#{rack_env}.#{domain}"
   end
 
+  def site_url(domain, path = '')
+    host = canonical_hostname(domain)
+    if rack_env?(:development)
+      port = ['studio.code.org'].include?(domain) ? CDO.dashboard_port : CDO.pegasus_port
+      host += ":#{port}"
+    end
+
+    path = '/' + path unless path.empty? || path[0] == '/'
+    return "//#{host}#{path}"
+  end
+
+  def studio_url(path = '')
+    site_url('studio.code.org', path)
+  end
+
+  def code_org_url(path = '')
+    site_url('code.org', path)
+  end
+
   def dir(*dirs)
     File.join(root_dir, *dirs)
   end
@@ -164,8 +184,8 @@ def aws_dir(*dirs)
   deploy_dir('aws', *dirs)
 end
 
-def blockly_dir(*dirs)
-  deploy_dir('blockly', *dirs)
+def apps_dir(*dirs)
+  deploy_dir('apps', *dirs)
 end
 
 def blockly_core_dir(*dirs)
@@ -187,4 +207,3 @@ end
 def secrets_dir(*dirs)
   aws_dir('secrets', *dirs)
 end
-

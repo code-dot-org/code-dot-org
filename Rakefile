@@ -44,7 +44,7 @@ namespace :build do
     unless CDO.chef_managed
       Dir.chdir(aws_dir) do
         HipChat.log 'Installing <b>aws</b> bundle...'
-        RakeUtils.bundle_install 
+        RakeUtils.bundle_install
       end
     end
   end
@@ -59,13 +59,13 @@ namespace :build do
     end
   end
 
-  task :blockly do
-    Dir.chdir(blockly_dir) do
-      HipChat.log 'Installing <b>blockly</b> dependencies...'
+  task :apps do
+    Dir.chdir(apps_dir) do
+      HipChat.log 'Installing <b>apps</b> dependencies...'
       RakeUtils.npm_install
 
-      HipChat.log 'Building <b>blockly</b>...'
-      if CDO.localize_blockly
+      HipChat.log 'Building <b>apps</b>...'
+      if CDO.localize_apps
         RakeUtils.system 'MOOC_LOCALIZE=1', 'grunt'
       else
         RakeUtils.system 'grunt'
@@ -150,7 +150,7 @@ namespace :build do
   tasks = []
   tasks << :configure
   tasks << :blockly_core if CDO.build_blockly_core
-  tasks << :blockly if CDO.build_blockly
+  tasks << :apps if CDO.build_apps
   tasks << :stop_varnish if CDO.build_dashboard || CDO.build_pegasus
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
@@ -172,12 +172,12 @@ task :build => ['build:all']
 ##################################################################################################
 
 namespace :install do
-  
-  task :blockly do
+
+  task :apps do
     if rack_env?(:development) && !CDO.chef_managed
-      Dir.chdir(blockly_dir) do
-        blockly_build = CDO.use_my_blockly ? blockly_dir('build/package') : 'blockly-package'
-        RakeUtils.ln_s blockly_build, dashboard_dir('public','blockly')
+      Dir.chdir(apps_dir) do
+        apps_build = CDO.use_my_apps ? apps_dir('build/package') : 'apps-package'
+        RakeUtils.ln_s apps_build, dashboard_dir('public','blockly')
       end
 
       if OS.linux?
@@ -216,7 +216,7 @@ namespace :install do
 
   tasks = []
   #tasks << :blockly_core if CDO.build_blockly_core
-  tasks << :blockly if CDO.build_blockly
+  tasks << :apps if CDO.build_apps
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
   task :all => tasks
