@@ -370,18 +370,18 @@ TurtleClass.prototype.drawCurrentBlocksOnCanvas = function(canvas) {
  */
 TurtleClass.prototype.placeImage = function(filename, position, scale) {
   var img = new Image();
-  img.onload = function() {
-    if (scale) {
-      if (img.width !== 0) {
-        this.ctxImages.drawImage(img, position[0], position[1], img.width, img.height, 0, 0, img.width * scale, img.height * scale);
-      }
-    } else {
-      if (img.width !== 0) {
+  img.onload = _.bind(function() {
+    if (img.width !== 0) {
+      if (scale) {
+        this.ctxImages.drawImage(img, position[0], position[1], img.width,
+          img.height, 0, 0, img.width * scale, img.height * scale);
+      } else  {
         this.ctxImages.drawImage(img, position[0], position[1]);
       }
     }
     this.display();
-  };
+  }, this);
+
   if (this.skin.id == "anna" || this.skin.id == "elsa") {
     img.src = this.skin.assetUrl(filename);
   } else {
@@ -409,9 +409,7 @@ TurtleClass.prototype.drawImages = function() {
  * Initial the turtle image on load.
  */
 TurtleClass.prototype.loadTurtle = function() {
-  this.avatarImage.onload = function() {
-    this.display();
-  };
+  this.avatarImage.onload = _.bind(this.display, this);
 
   this.avatarImage.src = this.skin.avatar;
   if (this.skin.id == "anna") {
@@ -713,7 +711,7 @@ TurtleClass.prototype.generateTurtleCodeFromJS_ = function () {
                                       Turtle: api } );
   };
   this.interpreter = new window.Interpreter(this.code, initFunc);
-}
+};
 
 /**
  * Execute the user's code.  Heaven help us...
@@ -815,7 +813,7 @@ TurtleClass.prototype.executeTuple_ = function () {
   } while (executeSecondTuple);
 
   return true;
-}
+};
 
 /**
  * Handle the tasks to be done after the user program is finished.
@@ -826,7 +824,7 @@ TurtleClass.prototype.finishExecution_ = function () {
     Blockly.mainBlockSpace.highlightBlock(null);
   }
   this.checkAnswer();
-}
+};
 
 /**
  * Iterate through the recorded path and animate the turtle's actions.
@@ -1235,8 +1233,7 @@ TurtleClass.prototype.drawJointAtTurtle_ = function () {
  * @param {number} permittedErrors Number of pixels allowed to be wrong.
  * @return {boolean} True if the level is solved, false otherwise.
  */
-// TODO - should this be on class?
-function isCorrect(pixelErrors, permittedErrors) {
+TurtleClass.prototype.isCorrect_ = function (pixelErrors, permittedErrors) {
   return pixelErrors <= permittedErrors;
 };
 
@@ -1330,7 +1327,7 @@ TurtleClass.prototype.checkAnswer = function() {
 
   // Test whether the current level is a free play level, or the level has
   // been completed
-  var levelComplete = (level.freePlay || isCorrect(delta, permittedErrors)) &&
+  var levelComplete = (level.freePlay || this.isCorrect_(delta, permittedErrors)) &&
                         (!level.editCode || !this.executionError);
   this.testResults = StudioApp.getTestResults(levelComplete);
 
@@ -1405,7 +1402,7 @@ TurtleClass.prototype.checkAnswer = function() {
     result: levelComplete,
     testResult: this.testResults,
     program: encodeURIComponent(program),
-    onComplete: this.onReportComplete,
+    onComplete: _.bind(this.onReportComplete, this),
     save_to_gallery: level.impressive
   };
 
@@ -1463,4 +1460,4 @@ TurtleClass.prototype.resetStepInfo_ = function () {
   this.stepStartX = this.x;
   this.stepStartY = this.y;
   this.stepDistanceCovered = 0;
-}
+};
