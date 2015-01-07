@@ -61,10 +61,30 @@ Head to [MSM stage 14](http://studio.code.org/s/msm/stage/14/puzzle/1) in Code S
 
 [standards]
 
-## Connections and Background Information
+<details>
+<summary>Standards Alignment</summary>
 
+### Common Core Mathematical Practices
+ 
+- 1. Make sense of problems and persevere in solving them.
+- 2. Reason abstractly and quantitatively.
+- 3. Construct viable arguments and critique the reasoning of others.
+- 4. Model with mathematics.
+- 5. Use appropriate tools strategically.
+- 6. Attend to precision.
+- 7. Look for and make use of structure.
+- 8. Look for and express regularity in repeated reasoning.
 
+### Common Core Math Standards
 
+- 7.EE.3-4: The student uses numerical and algebraic expressions and equations to solve real-life and mathematical problems.
+- 8.F.1-3: The student defines, evaluates, and compares functions.
+- A-CED.1-4: The student solves equations and inequalities in one or more variable that describe numbers or relationships.
+- A-SSE.1-2: The student interprets the structure of expressions to solve problems in context.
+- F-IF.1-3: The student uses function notation to describe, evaluate, and interpret functions in terms of domain and range.
+- F-IF.4-6: The student interprets the behavior of functions that arise in applications in terms of the context.
+
+</details>
 
 [/standards]
 
