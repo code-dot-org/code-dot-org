@@ -25,7 +25,7 @@
 
 var ArtistAPI = require('./api');
 var api = new ArtistAPI();
-var StudioApp = require('../base');
+var StudioApp = require('../base').singleton;
 
 var setRandomVisibleColour = function() {
   var num = Math.floor(Math.random() * Math.pow(2, 24));
