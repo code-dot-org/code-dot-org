@@ -87,16 +87,12 @@ module ApplicationHelper
     ret
   end
 
-  def canonical_hostname(domain)
-    CDO.canonical_hostname(domain)
-  end
-
   def code_org_root_path
-    'http://' + canonical_hostname('code.org')
+    CDO.code_org_url
   end
 
   def teacher_dashboard_url
-    "//#{canonical_hostname('code.org')}/teacher-dashboard"
+    CDO.code_org_url '/teacher-dashboard'
   end
 
   # used by devise to redirect user after signing in
