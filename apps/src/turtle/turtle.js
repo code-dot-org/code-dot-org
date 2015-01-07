@@ -30,7 +30,8 @@
 /**
  * Create a namespace for the application.
  */
-var StudioApp = require('../base');
+var StudioAppClass = require('../base');
+var StudioApp = StudioAppClass.singleton;
 var commonMsg = require('../../locale/current/common');
 var turtleMsg = require('../../locale/current/turtle');
 var levels = require('./levels');
@@ -136,6 +137,8 @@ var Artist = function () {
   this.isDrawingAnswer_ = false;
   this.isPredrawing_ = false;
 };
+Artist.inherits(StudioAppClass);
+
 
 var turtleSingleton = new Artist();
 module.exports = turtleSingleton;

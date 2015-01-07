@@ -22,7 +22,16 @@
  * @author fraser@google.com (Neil Fraser)
  */
 "use strict";
-var StudioApp = module.exports;
+
+var StudioAppClass = function () {
+
+};
+
+var StudioApp = new StudioAppClass();
+StudioAppClass.singleton = StudioApp;
+
+module.exports = StudioAppClass;
+
 var msg = require('../locale/current/common');
 var parseXmlElement = require('./xml').parseElement;
 var feedback = require('./feedback.js');
@@ -585,7 +594,7 @@ StudioApp.init = function(config) {
   }
 };
 
-exports.loadAudio = function(filenames, name) {
+StudioApp.loadAudio = function(filenames, name) {
   if (StudioApp.usingBlockly) {
     Blockly.loadAudio_(filenames, name);
   } else if (StudioApp.cdoSounds) {
@@ -602,7 +611,7 @@ exports.loadAudio = function(filenames, name) {
   }
 };
 
-exports.playAudio = function(name, options) {
+StudioApp.playAudio = function(name, options) {
   options = options || {};
   var defaultOptions = {volume: 0.5};
   var newOptions = utils.extend(defaultOptions, options);
@@ -613,7 +622,7 @@ exports.playAudio = function(name, options) {
   }
 };
 
-exports.stopLoopingAudio = function(name) {
+StudioApp.stopLoopingAudio = function(name) {
   if (StudioApp.usingBlockly) {
     Blockly.stopLoopingAudio(name);
   } else if (StudioApp.cdoSounds) {
@@ -633,7 +642,7 @@ exports.stopLoopingAudio = function(name) {
  *    true.
  * @param {DomElement} div The parent div in which to insert Blockly.
  */
-exports.inject = function(div, options) {
+StudioApp.inject = function(div, options) {
   var defaults = {
     assetUrl: StudioApp.assetUrl,
     rtl: StudioApp.isRtl(),
@@ -1070,7 +1079,7 @@ var setIdealBlockNumber = function() {
 /**
  * Add count of blocks used.
  */
-exports.updateBlockCount = function() {
+StudioApp.updateBlockCount = function() {
   // If the number of block used is bigger than the ideal number of blocks,
   // set it to be yellow, otherwise, keep it as black.
   var element = document.getElementById('blockUsed');
