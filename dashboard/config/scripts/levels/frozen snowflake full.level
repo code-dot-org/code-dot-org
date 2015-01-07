@@ -21,7 +21,8 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "embed": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "permitted_errors": "0"
   }
 }]]></config>
   <blocks>

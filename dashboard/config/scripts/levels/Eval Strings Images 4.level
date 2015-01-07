@@ -6,14 +6,15 @@
   "user_id": 1,
   "properties": {
     "skin": "eval",
-    "instructions": "Try using the \"rectangle\" block to draw this blue rectangle - it is 100 pixels tall and 175 pixels wide.",
+    "instructions": "Try using the \"rectangle\" block to draw this blue rectangle - it is 175 pixels wide and 100 pixels tall.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "free_play": "false"
+    "free_play": "false",
+    "embed": "false"
   }
 }]]></config>
   <blocks>

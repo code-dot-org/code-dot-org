@@ -177,7 +177,7 @@ namespace :install do
     if rack_env?(:development) && !CDO.chef_managed
       Dir.chdir(apps_dir) do
         apps_build = CDO.use_my_apps ? apps_dir('build/package') : 'apps-package'
-        RakeUtils.ln_s apps_build, dashboard_dir('public','apps')
+        RakeUtils.ln_s apps_build, dashboard_dir('public','blockly')
       end
 
       if OS.linux?
