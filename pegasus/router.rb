@@ -330,7 +330,7 @@ class Documents < Sinatra::Base
       begin
         render_(content, File.extname(path))
       rescue Haml::Error => e
-        if e.backtrace.first =~ /router\.rb:/
+        if e.backtrace.first =~ /router\.rb:/ && e.line
           actual_line_number = e.line - line_number_offset + 1
           e.set_backtrace e.backtrace.unshift("#{path}:#{actual_line_number}")
         end

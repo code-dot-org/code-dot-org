@@ -45,7 +45,7 @@ HardLevelAttemptsPerHour = {
   1441 => 10
 }
 
-MinimumAttemptsPerHour = 5
+MinimumAttemptsPerHour = 10
 
 HoursToTest = 2
 

@@ -32,6 +32,6 @@ module StagesHelper
   end
 
   def lesson_plan_base_url(stage)
-    "//#{canonical_hostname('code.org')}/curriculum/#{stage.script.name}/#{stage.position}"
+    CDO.code_org_url "/curriculum/#{stage.script.name}/#{stage.position}"
   end
 end
