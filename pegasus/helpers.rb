@@ -10,7 +10,7 @@ end
 def authentication_required!(url=request.url)
   dont_cache
   return if dashboard_user
-  redirect "http://#{canonical_hostname('studio.code.org')}/users/sign_in?return_to=#{url}", 302
+  redirect((request.scheme || 'http') + ':' + CDO.studio_url("/users/sign_in?return_to=#{url}"), 302)
 end
 
 def dont_cache()
