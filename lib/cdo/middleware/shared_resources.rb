@@ -1,10 +1,15 @@
 require 'sinatra/base'
+require 'erb'
 
 class SharedResources < Sinatra::Base
 
   configure do
+    static_max_age = [:development, :staging].include?(rack_env) ? 0 : 3600
+
     set :image_extnames, ['.png','.jpeg','.jpg','.gif']
-    set :image_max_age, 3600
+    set :image_max_age, static_max_age
+    set :javascript_extnames, ['.js']
+    set :javascript_max_age, static_max_age
   end
 
   before do
@@ -15,10 +20,33 @@ class SharedResources < Sinatra::Base
 
   helpers do
   end
+  
+  # JavaScripts
+  get "/shared/js/*" do |path|
+    path = deploy_dir(request.path_info)
+
+    extname = File.extname(path).downcase
+    pass unless settings.javascript_extnames.include?(extname)
+
+    if File.file?(path)
+      content_type extname[1..-1].to_sym
+      cache_control :public, :must_revalidate, max_age:settings.javascript_max_age
+      send_file(path)
+    end
+    
+    erb_path = "#{path}.erb"
+    if File.file?(erb_path)
+      content_type extname[1..-1].to_sym
+      cache_control :public, :must_revalidate, max_age:settings.javascript_max_age
+      return ERB.new(IO.read(erb_path)).result
+    end
+    
+    pass
+  end
 
   # Images
   get "/shared/images/*" do |path|
-    path = File.join('/shared/images', path)
+    path = request.path_info
 
     extname = File.extname(path).downcase
     pass unless settings.image_extnames.include?(extname)
