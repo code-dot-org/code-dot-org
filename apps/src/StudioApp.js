@@ -7,6 +7,8 @@ var _ = utils.getLodash();
 var dom = require('./dom');
 var constants = require('./constants.js');
 var builder = require('./builder');
+var msg = require('../locale/current/common');
+var blockUtils = require('./block_utils');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -15,6 +17,12 @@ var MIN_WIDTH = 900;
 var MIN_MOBILE_SHARE_WIDTH = 450;
 var MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 var WORKSPACE_PLAYSPACE_GAP = 15;
+
+/**
+ * Treat mobile devices with screen.width less than the value below as phones.
+ */
+var MAX_PHONE_WIDTH = 500;
+
 
 var StudioAppClass = function () {
   this.feedback_ = null;
@@ -134,6 +142,13 @@ var StudioAppClass = function () {
   this.onResetPressed = undefined;
   this.backToPreviousLevel = undefined;
   this.sendToPhone = undefined;
+  this.enableShowBlockCount = true;
+
+  this.disableSocialShare = false;
+  this.noPadding = false;
+
+  this.MIN_WORKSPACE_HEIGHT = undefined;
+
 
   // TODO (br-pair) : should callers instead be the ones binding the context?
   this.onResize = _.bind(this.onResize, this);
@@ -157,6 +172,266 @@ StudioAppClass.prototype.configure = function (options) {
 
   // TODO (br-pair) : should callers instead be the ones binding the context?
   this.assetUrl = _.bind(this.assetUrl_, this);
+};
+
+/**
+ * Common startup tasks for all apps.
+ */
+StudioAppClass.prototype.init = function(config) {
+  if (!config) {
+    config = {};
+  }
+
+  this.setConfigValues_(config);
+
+  this.configureDom_(config);
+
+  if (config.hide_source) {
+    Studio.handleHideSource_({
+      embed: config.embed,
+      level: config.level,
+      level_source_id: config.level_source_id,
+      phone_share_url: config.send_to_phone_url,
+      sendToPhone: config.sendToPhone,
+      twitter: config.twitter
+    });
+  }
+
+  if (config.share) {
+    this.handleSharing_({
+      noButtonsBelowOnMobileShare: config.noButtonsBelowOnMobileShare,
+      makeUrl: config.makeUrl,
+      makeString: config.makeString,
+      makeImage: config.makeImage,
+      makeYourOwn: config.makeYourOwn
+    });
+  }
+
+  // Record time at initialization.
+  this.initTime = new Date().getTime();
+
+  // Fixes viewport for small screens.
+  var viewport = document.querySelector('meta[name="viewport"]');
+  if (viewport) {
+    this.fixViewportForSmallScreens_(viewport);
+  }
+
+  var showCode = document.getElementById('show-code-header');
+  if (showCode && this.enableShowCode) {
+    dom.addClickTouchEvent(showCode, _.bind(function() {
+      if (this.editCode) {
+        this.editor.toggleBlocks();
+        this.updateHeadersAfterDropletToggle_(this.editor.currentlyUsingBlocks);
+        if (!this.editor.currentlyUsingBlocks) {
+          this.editor.aceEditor.focus();
+        }
+      } else {
+        feedback.showGeneratedCode(this.Dialog);
+      }
+    }, this));
+  }
+
+  var blockCount = document.getElementById('blockCounter');
+  if (blockCount && !this.enableShowBlockCount) {
+    blockCount.style.display = 'none';
+  }
+
+  this.ICON = config.skin.staticAvatar;
+  this.SMALL_ICON = config.skin.smallStaticAvatar;
+  this.WIN_ICON = config.skin.winAvatar;
+  this.FAILURE_ICON = config.skin.failureAvatar;
+
+  if (config.level.instructionsIcon) {
+    this.ICON = config.skin[config.level.instructionsIcon];
+    this.WIN_ICON = config.skin[config.level.instructionsIcon];
+  }
+
+  if (config.showInstructionsWrapper) {
+    config.showInstructionsWrapper(_.bind(function () {
+      var shouldAutoClose = !!config.level.aniGifURL;
+      this.showInstructions_(config.level, shouldAutoClose);
+    }, this));
+  }
+
+  // The share and embed pages do not show the rotateContainer.
+  if (this.share || config.embed) {
+    var rotateContainer = document.getElementById('rotateContainer');
+    if (rotateContainer) {
+      rotateContainer.style.display = 'none';
+    }
+  }
+
+  // In embed mode, the display scales down when the width of the visualizationColumn goes below the min width
+  if(config.embed) {
+    var resized = false;
+    var resize = function() {
+      var vizCol = document.getElementById('visualizationColumn');
+      var width = vizCol.offsetWidth;
+      var height = vizCol.offsetHeight;
+      var displayWidth = MOBILE_NO_PADDING_SHARE_WIDTH;
+      var scale = Math.min(width / displayWidth, height / displayWidth);
+      var viz = document.getElementById('visualization');
+      viz.style['transform-origin'] = 'left top';
+      viz.style['-webkit-transform'] = 'scale(' + scale + ')';
+      viz.style['max-height'] = (displayWidth * scale) + 'px';
+      viz.style.display = 'block';
+      vizCol.style.width = '';
+      document.getElementById('visualizationColumn').style['max-width'] = displayWidth + 'px';
+      // Needs to run twice on initialization
+      if(!resized) {
+        resized = true;
+        resize();
+      }
+    };
+    // Depends on ResizeSensor.js
+    var ResizeSensor = require('./ResizeSensor');
+    new ResizeSensor(document.getElementById('visualizationColumn'), resize);
+  }
+
+  var orientationHandler = function() {
+    window.scrollTo(0, 0);  // Browsers like to mess with scroll on rotate.
+    var rotateContainer = document.getElementById('rotateContainer');
+    rotateContainer.style.width = window.innerWidth + 'px';
+    rotateContainer.style.height = window.innerHeight + 'px';
+  };
+  window.addEventListener('orientationchange', orientationHandler);
+  orientationHandler();
+
+  if (config.loadAudio) {
+    config.loadAudio();
+  }
+
+  var promptDiv = document.getElementById('prompt');
+  if (config.level.instructions) {
+    dom.setText(promptDiv, config.level.instructions);
+  }
+
+  if (config.level.instructions || config.level.aniGifURL) {
+    var promptIcon = document.getElementById('prompt-icon');
+    promptIcon.src = this.SMALL_ICON;
+  }
+
+  var aniGifPreview = document.getElementById('ani-gif-preview');
+  if (config.level.aniGifURL) {
+    aniGifPreview.style.backgroundImage = "url('" + config.level.aniGifURL + "')";
+    aniGifPreview.onclick = _.bind(function() {
+      this.showInstructions_(config.level, false);
+    }, this);
+    var promptTable = document.getElementById('prompt-table');
+    promptTable.className += " with-ani-gif";
+  } else {
+    var wrapper = document.getElementById('ani-gif-preview-wrapper');
+    wrapper.style.display = 'none';
+  }
+
+  if (this.editCode) {
+    this.handleEditCode_({
+      codeFunctions: config.level.codeFunctions,
+      categoryInfo: config.level.categoryInfo,
+      startBlocks: config.level.startBlocks,
+      afterInject: config.afterInject
+    });
+  }
+
+  if (this.usingBlockly) {
+    this.handleUsingBlockly_(config);
+  }
+
+  // listen for scroll and resize to ensure onResize() is called
+  window.addEventListener('scroll', _.bind(function() {
+    this.onResize();
+    var event = document.createEvent('UIEvents');
+    event.initEvent('resize', true, true);  // event type, bubbling, cancelable
+    window.dispatchEvent(event);
+  }, this));
+  window.addEventListener('resize', _.bind(this.onResize, this));
+
+  // Call initial onResize() asynchronously - need 10ms delay to work around
+  // relayout which changes height on the left side to the proper value
+  window.setTimeout(_.bind(function() {
+    this.onResize();
+    var event = document.createEvent('UIEvents');
+    event.initEvent('resize', true, true);  // event type, bubbling, cancelable
+    window.dispatchEvent(event);
+  }, this), 10);
+
+  this.reset(true);
+
+  // Add display of blocks used.
+  this.setIdealBlockNumber_();
+
+  // TODO (cpirich): implement block count for droplet (for now, blockly only)
+  if (this.usingBlockly) {
+    Blockly.mainBlockSpaceEditor.addChangeListener(_.bind(function() {
+      this.updateBlockCount();
+    }, this));
+
+    if (config.level.openFunctionDefinition) {
+      Blockly.functionEditor.openAndEditFunction(config.level.openFunctionDefinition);
+    }
+  }
+};
+
+/**
+ *
+ */
+StudioAppClass.prototype.handleSharing_ = function (options) {
+  // 1. Move the buttons, 2. Hide the slider in the share page for mobile.
+  var belowVisualization = document.getElementById('belowVisualization');
+  if (dom.isMobile()) {
+    var sliderCell = document.getElementById('slider-cell');
+    if (sliderCell) {
+      sliderCell.style.display = 'none';
+    }
+    if (belowVisualization) {
+      if (options.noButtonsBelowOnMobileShare) {
+        belowVisualization.style.display = 'none';
+        visualization.style.marginBottom = '0px';
+      } else {
+        belowVisualization.style.display = 'block';
+        belowVisualization.style.marginLeft = '0px';
+        if (this.noPadding) {
+          // Shift run and reset buttons off the left edge if we have no padding
+          if (runButton) {
+            runButton.style.marginLeft = '10px';
+          }
+          if (resetButton) {
+            resetButton.style.marginLeft = '10px';
+          }
+          var shareCell = document.getElementById('share-cell') ||
+          document.getElementById('right-button-cell');
+          if (shareCell) {
+            shareCell.style.marginLeft = '10px';
+            shareCell.style.marginRight = '10px';
+          }
+          var softButtons = document.getElementById('soft-buttons');
+          if (softButtons) {
+            softButtons.style.marginLeft = '10px';
+            softButtons.style.marginRight = '10px';
+          }
+        }
+      }
+    }
+  }
+
+  // Show flappy upsale on desktop and mobile.  Show learn upsale only on desktop
+  var upSale = document.createElement('div');
+  if (options.makeYourOwn) {
+    upSale.innerHTML = require('./templates/makeYourOwn.html')({
+      data: {
+        makeUrl: options.makeUrl,
+        makeString: options.makeString,
+        makeImage: options.makeImage
+      }
+    });
+    if (this.noPadding) {
+      upSale.style.marginLeft = '10px';
+    }
+    belowVisualization.appendChild(upSale);
+  } else if (typeof options.makeYourOwn === 'undefined') {
+    upSale.innerHTML = require('./templates/learn.html')();
+    belowVisualization.appendChild(upSale);
+  }
 };
 
 /**
@@ -631,4 +906,317 @@ StudioAppClass.prototype.updateBlockCount = function() {
     element.appendChild(document.createTextNode(
       this.feedback_.getNumCountableBlocks()));
   }
+};
+
+/**
+ * Set the ideal Number of blocks.
+ */
+StudioAppClass.prototype.setIdealBlockNumber_ = function() {
+  var element = document.getElementById('idealBlockNumber');
+  if (!element) {
+    return;
+  }
+
+  var idealBlockNumberMsg = this.IDEAL_BLOCK_NUM === Infinity ?
+    msg.infinity() : this.IDEAL_BLOCK_NUM;
+  element.innerHTML = '';  // Remove existing children or text.
+  element.appendChild(document.createTextNode(
+    idealBlockNumberMsg));
+};
+
+
+/**
+ *
+ */
+StudioAppClass.prototype.fixViewportForSmallScreens_ = function (viewport) {
+  var deviceWidth;
+  var desiredWidth;
+  var minWidth;
+  if (this.share && dom.isMobile()) {
+    // for mobile sharing, don't assume landscape mode, use screen.width
+    deviceWidth = desiredWidth = screen.width;
+    if (this.noPadding && screen.width < MAX_PHONE_WIDTH) {
+      desiredWidth = Math.min(desiredWidth,
+        MOBILE_NO_PADDING_SHARE_WIDTH);
+    }
+    minWidth = this.noPadding ?
+      MOBILE_NO_PADDING_SHARE_WIDTH : MIN_MOBILE_SHARE_WIDTH;
+  }
+  else {
+    // assume we are in landscape mode, so width is the longer of the two
+    deviceWidth = desiredWidth = Math.max(screen.width, screen.height);
+    minWidth = MIN_WIDTH;
+  }
+  var width = Math.max(minWidth, desiredWidth);
+  var scale = deviceWidth / width;
+  var content = ['width=' + width,
+    'minimal-ui',
+    'initial-scale=' + scale,
+    'maximum-scale=' + scale,
+    'minimum-scale=' + scale,
+    'target-densityDpi=device-dpi',
+    'user-scalable=no'];
+  viewport.setAttribute('content', content.join(', '));
+};
+
+/**
+ *
+ */
+StudioAppClass.prototype.setConfigValues_ = function (config) {
+  this.share = config.share;
+
+  // if true, dont provide links to share on fb/twitter
+  this.disableSocialShare = config.disableSocialShare;
+  this.sendToPhone = config.sendToPhone;
+  this.noPadding = config.no_padding;
+
+  this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
+  this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
+  this.REQUIRED_BLOCKS = config.level.requiredBlocks || [];
+
+  // enableShowCode defaults to true if not defined
+  this.enableShowCode = (config.enableShowCode !== false);
+
+  // If the level has no ideal block count, don't show a block count. If it does
+  // have an ideal, show block count unless explicitly configured not to.
+  if (config.level && (config.level.ideal === undefined || config.level.ideal === Infinity)) {
+    this.enableShowBlockCount = false;
+  } else {
+    this.enableShowBlockCount = config.enableShowBlockCount !== false;
+  }
+
+  // Store configuration.
+  //TODO (br-team) : test code should pass in these instead of defaulting in app code
+  this.onAttempt = config.onAttempt || function(report) {
+    console.log('Attempt!');
+    console.log(report);
+    if (report.onComplete) {
+      report.onComplete();
+    }
+  };
+  this.onContinue = config.onContinue || function() {
+    console.log('Continue!');
+  };
+  this.onResetPressed = config.onResetPressed || function() {
+    console.log('Reset!');
+  };
+  this.backToPreviousLevel = config.backToPreviousLevel || function () {};
+};
+
+/**
+ * Begin modifying the DOM based on config.
+ * Note: Has side effects on config
+ */
+StudioAppClass.prototype.configureDom_ = function (config) {
+  var container = document.getElementById(config.containerId);
+  container.innerHTML = config.html;
+  var runButton = container.querySelector('#runButton');
+  var resetButton = container.querySelector('#resetButton');
+  var throttledRunClick = _.debounce(this.runButtonClick, 250, true);
+  dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
+  dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
+
+  var belowViz = document.getElementById('belowVisualization');
+  var referenceArea = document.getElementById('reference_area');
+  if (referenceArea) {
+    belowViz.appendChild(referenceArea);
+  }
+
+  var visualizationColumn = document.getElementById('visualizationColumn');
+  var visualization = document.getElementById('visualization');
+
+  // center game screen in embed mode
+  if(config.embed) {
+    visualizationColumn.style.margin = "0 auto";
+  }
+
+  if (this.usingBlockly && config.level.edit_blocks) {
+    // Set a class on the main blockly div so CSS can style blocks differently
+    Blockly.addClass_(container.querySelector('#blockly'), 'edit');
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      this.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
+  } else if (!config.hide_source) {
+    visualizationColumn.style.minHeight = this.MIN_WORKSPACE_HEIGHT + 'px';
+  }
+
+  if (!config.embed && !this.share) {
+    // Make the visualization responsive to screen size, except on share page.
+    visualization.className += " responsive";
+    visualizationColumn.className += " responsive";
+  }
+};
+
+/**
+ *
+ */
+StudioAppClass.prototype.handleHideSource_ = function (options) {
+  this.hideSource = true;
+  var workspaceDiv = this.editCode ?
+    document.getElementById('codeWorkspace') :
+    container.querySelector('#blockly');
+  if(!options.embed || options.level.skipInstructionsPopup) {
+    container.className = 'hide-source';
+  }
+  workspaceDiv.style.display = 'none';
+  // For share page on mobile, do not show this part.
+  if ((!options.embed) && (!this.share || !dom.isMobile())) {
+    var buttonRow = runButton.parentElement;
+    var openWorkspace = document.createElement('button');
+    openWorkspace.setAttribute('id', 'open-workspace');
+    openWorkspace.appendChild(document.createTextNode(msg.openWorkspace()));
+
+    var belowViz = document.getElementById('belowVisualization');
+    belowViz.appendChild(feedback.createSharingDiv({
+      response: {
+        level_source: window.location,
+        level_source_id: options.level_source_id,
+        phone_share_url: options.phone_share_url
+      },
+      sendToPhone: options.sendToPhone,
+      level: options.level,
+      twitter: options.twitter,
+      onMainPage: true
+    }));
+
+    dom.addClickTouchEvent(openWorkspace, function() {
+      // Redirect user to /edit version of this page. It would be better
+      // to just turn on the workspace but there are rendering issues
+      // with that.
+      window.location.href = window.location.href + '/edit';
+    });
+
+    buttonRow.appendChild(openWorkspace);
+  }
+};
+
+StudioAppClass.prototype.handleEditCode_ = function (options) {
+  // using window.require forces us to use requirejs version of require
+  window.require(['droplet'], _.bind(function(droplet) {
+    var displayMessage, examplePrograms, messageElement, onChange, startingText;
+    this.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
+      mode: 'javascript',
+      modeOptions: utils.generateDropletModeOptions(options.codeFunctions),
+      palette: utils.generateDropletPalette(options.codeFunctions,
+        options.categoryInfo)
+    });
+
+    this.editor.aceEditor.setShowPrintMargin(false);
+
+    // Add an ace completer for the API functions exposed for this level
+    if (options.codeFunctions) {
+      var langTools = window.ace.require("ace/ext/language_tools");
+      langTools.addCompleter(
+        utils.generateAceApiCompleter(options.codeFunctions));
+    }
+
+    this.editor.aceEditor.setOptions({
+      enableBasicAutocompletion: true,
+      enableLiveAutocompletion: true
+    });
+
+    if (options.afterInject) {
+      options.afterInject();
+    }
+
+    if (options.startBlocks) {
+      this.editor.setValue(options.startBlocks);
+    }
+  }, this));
+};
+
+/**
+ *
+ */
+StudioAppClass.prototype.handleUsingBlockly_ = function (config) {
+  // Allow empty blocks if editing blocks.
+  if (config.level.edit_blocks) {
+    this.CHECK_FOR_EMPTY_BLOCKS = false;
+    if (config.level.edit_blocks === 'required_blocks' ||
+      config.level.edit_blocks === 'toolbox_blocks') {
+      // Don't show when run block for toolbox/required block editing
+      config.forceInsertTopBlock = null;
+    }
+  }
+
+  // If levelbuilder provides an empty toolbox, some apps (like artist)
+  // replace it with a full toolbox. I think some levels may depend on this
+  // behavior. We want a way to specify no toolbox, which is <xml></xml>
+  if (config.level.toolbox) {
+    var toolboxWithoutWhitespace = config.level.toolbox.replace(/\s/g, '');
+    if (toolboxWithoutWhitespace === '<xml></xml>' ||
+        toolboxWithoutWhitespace === '<xml/>') {
+      config.level.toolbox = undefined;
+    }
+  }
+
+  var div = document.getElementById('blockly');
+  var options = {
+    toolbox: config.level.toolbox,
+    disableParamEditing: config.level.disableParamEditing === undefined ?
+        true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
+    useModalFunctionEditor: config.level.useModalFunctionEditor === undefined ?
+        false : config.level.useModalFunctionEditor,
+    useContractEditor: config.level.useContractEditor === undefined ?
+        false : config.level.useContractEditor,
+    defaultNumExampleBlocks: config.level.defaultNumExampleBlocks === undefined ?
+        0 : config.level.defaultNumExampleBlocks,
+    scrollbars: config.level.scrollbars,
+    editBlocks: config.level.edit_blocks === undefined ?
+        false : config.level.edit_blocks
+  };
+  ['trashcan', 'concreteBlocks', 'varsInGlobals',
+    'grayOutUndeletableBlocks', 'disableParamEditing'].forEach(
+    function (prop) {
+      if (config[prop] !== undefined) {
+        options[prop] = config[prop];
+      }
+    });
+  this.inject(div, options);
+
+  if (config.afterInject) {
+    config.afterInject();
+  }
+
+  // Add the starting block(s).
+  var startBlocks = config.level.startBlocks || '';
+  if (config.forceInsertTopBlock) {
+    startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
+  }
+  startBlocks = this.arrangeBlockPosition(startBlocks, config.blockArrangement);
+  this.loadBlocks(startBlocks);
+};
+
+/**
+ * Modify the workspace header after a droplet blocks/code toggle
+ */
+StudioAppClass.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
+  // Update header titles:
+  var showCodeHeader = document.getElementById('show-code-header');
+  var newButtonTitle = usingBlocks ? msg.showCodeHeader() :
+    msg.showBlocksHeader();
+  showCodeHeader.firstChild.innerText = newButtonTitle;
+
+  var workspaceHeaderSpan = document.getElementById('workspace-header-span');
+  newButtonTitle = usingBlocks ? msg.workspaceHeader() :
+    msg.workspaceHeaderJavaScript();
+  workspaceHeaderSpan.innerText = newButtonTitle;
+
+  var blockCount = document.getElementById('blockCounter');
+  if (blockCount) {
+    blockCount.style.display =
+      (usingBlocks && this.enableShowBlockCount) ? 'inline-block' : 'none';
+  }
+
+  // Resize (including headers), so the category header will appear/disappear:
+  this.onResize();
 };
