@@ -1640,6 +1640,7 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_UNTIL = "gjenta til";
 Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_WHILE = "gjenta så lenge";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "Så lenge et utsagn ikke stemmer, utfør noen instruksjoner.";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "Så lenge et utsagn stemmer, utfør noen instruksjoner.";
+Blockly.Msg.DEFINE_HEADER_DEFINITION = "Definition";
 Blockly.Msg.DEFINE_FUNCTION_DEFINE = "Definer";
 Blockly.Msg.DELETE_BLOCK = "Slett blokk";
 Blockly.Msg.DELETE_PARAMETER = "Slett parameter...";

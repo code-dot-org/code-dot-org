@@ -333,7 +333,7 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.draw_a_square = function() {
     // Generate JavaScript for drawing a square.
     var value_length = generator.valueToCode(
-        this, 'VALUE', generator.ORDER_ATOMIC);
+        this, 'VALUE', generator.ORDER_ATOMIC) || 0;
     var loopVar = gensym('count');
     return [
         // The generated comment helps detect required blocks.

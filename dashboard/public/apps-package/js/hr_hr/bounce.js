@@ -141,494 +141,264 @@
     };
 
 },{}],2:[function(require,module,exports){
-(function (global){
-var utils = require('./utils');
-var requiredBlockUtils = require('./required_block_utils');
-window.StudioApp = require('./base');
+// Globals:
+//   Blockly
 
-if (typeof global !== 'undefined') {
-  global.StudioApp = window.StudioApp;
-}
-
-var addReadyListener = require('./dom').addReadyListener;
-var blocksCommon = require('./blocksCommon');
-
-function StubDialog() {
-  for (var argument in arguments) {
-    console.log(argument);
-  }
-}
-StubDialog.prototype.show = function() {
-  console.log("Showing Dialog");
-  console.log(this);
-};
-StubDialog.prototype.hide = function() {
-  console.log("Hiding Dialog");
-  console.log(this);
-};
-
-module.exports = function(app, levels, options) {
-
-  // If a levelId is not provided, then options.level is specified in full.
-  // Otherwise, options.level overrides resolved level on a per-property basis.
-  if (options.levelId) {
-    var level = levels[options.levelId];
-    options.level = options.level || {};
-    options.level.id = options.levelId;
-    for (var prop in options.level) {
-      level[prop] = options.level[prop];
-    }
-
-    if (options.level.levelBuilderRequiredBlocks) {
-      level.requiredBlocks = requiredBlockUtils.makeTestsFromBuilderRequiredBlocks(
-          options.level.levelBuilderRequiredBlocks);
-    }
-
-    options.level = level;
-  }
-
-  options.Dialog = options.Dialog || StubDialog;
-
-  StudioApp.BASE_URL = options.baseUrl;
-  StudioApp.CACHE_BUST = options.cacheBust;
-  StudioApp.LOCALE = options.locale || StudioApp.LOCALE;
-  // NOTE: editCode (which currently implies droplet) and usingBlockly are
-  // currently mutually exclusive.
-  StudioApp.editCode = options.level && options.level.editCode;
-  StudioApp.usingBlockly = !StudioApp.editCode;
-  StudioApp.cdoSounds = options.cdoSounds;
-
-  StudioApp.assetUrl = function(path) {
-    var url = options.baseUrl + path;
-    /*if (StudioApp.CACHE_BUST) {
-      return url + '?v=' + options.cacheBust;
-    } else {*/
-      return url;
-    /*}*/
-  };
-
-  options.skin = options.skinsModule.load(StudioApp.assetUrl, options.skinId);
-
-  if (StudioApp.usingBlockly) {
-    var blockInstallOptions = {
-      skin: options.skin,
-      isK1: options.level && options.level.isK1
-    };
-
-    if (options.level && options.level.edit_blocks) {
-      utils.wrapNumberValidatorsForLevelBuilder();
-    }
-
-    blocksCommon.install(Blockly, blockInstallOptions);
-    options.blocksModule.install(Blockly, blockInstallOptions);
-  }
-
-  addReadyListener(function() {
-    if (options.readonly) {
-      if (app.initReadonly) {
-        app.initReadonly(options);
-      } else {
-        StudioApp.initReadonly(options);
-      }
-    } else {
-      app.init(options);
-      if (options.onInitialize) {
-        options.onInitialize();
-      }
-    }
-  });
-};
-
-}).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./base":3,"./blocksCommon":5,"./dom":18,"./required_block_utils":22,"./utils":38}],3:[function(require,module,exports){
-/**
- * Blockly Apps: Common code
- *
- * Copyright 2013 Google Inc.
- * http://blockly.googlecode.com/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/**
- * @fileoverview Common support code for Blockly apps.
- * @author fraser@google.com (Neil Fraser)
- */
-"use strict";
-var StudioApp = module.exports;
-var msg = require('../locale/hr_hr/common');
 var parseXmlElement = require('./xml').parseElement;
-var feedback = require('./feedback.js');
-var dom = require('./dom');
 var utils = require('./utils');
-var blockUtils = require('./block_utils');
-var builder = require('./builder');
-var Slider = require('./slider');
 var _ = utils.getLodash();
+var dom = require('./dom');
 var constants = require('./constants.js');
-
-//TODO: These should be members of a BlocklyApp instance.
-var onAttempt;
-var onContinue;
-var onResetPressed;
-var backToPreviousLevel;
+var builder = require('./builder');
+var msg = require('../locale/hr_hr/common');
+var blockUtils = require('./block_utils');
 
 /**
- * The parent directory of the apps. Contains common.js.
- */
-StudioApp.BASE_URL = undefined;
-
-/**
- * If truthy, a version number to be appended to asset urls.
- */
-StudioApp.CACHE_BUST = undefined;
-
-/**
- * The current locale code.
- */
-StudioApp.LOCALE = 'en_us';
-
-/**
- * The minimum width of a playable whole blockly game.
- */
-StudioApp.MIN_WIDTH = 900;
-StudioApp.MIN_MOBILE_SHARE_WIDTH = 450;
-StudioApp.MOBILE_NO_PADDING_SHARE_WIDTH = 400;
+* The minimum width of a playable whole blockly game.
+*/
+var MIN_WIDTH = 900;
+var MIN_MOBILE_SHARE_WIDTH = 450;
+var MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 var WORKSPACE_PLAYSPACE_GAP = 15;
+var BLOCK_X_COORDINATE = 70;
+var BLOCK_Y_COORDINATE = 30;
 
 /**
  * Treat mobile devices with screen.width less than the value below as phones.
  */
-StudioApp.MAX_PHONE_WIDTH = 500;
+var MAX_PHONE_WIDTH = 500;
 
-/**
- * If the user presses backspace, stop propagation - this prevents blockly
- * from eating the backspace key
- * @param {!Event} e Keyboard event.
- */
-var codeKeyDown = function(e) {
-  if (e.keyCode == 8) {
-    e.stopPropagation();
-  }
+
+var StudioAppClass = function () {
+  this.feedback_ = null;
+
+  /**
+  * The parent directory of the apps. Contains common.js.
+  */
+  this.BASE_URL = undefined;
+
+  /**
+  * If truthy, a version number to be appended to asset urls.
+  */
+  this.CACHE_BUST = undefined;
+
+  /**
+  * The current locale code.
+  */
+  this.LOCALE = 'en_us';
+
+  this.enableShowCode = true;
+  this.editCode = false;
+  this.usingBlockly = true;
+  this.cdoSounds = null;
+  this.Dialog = null;
+  this.editor = null;
+
+  this.blockYCoordinateInterval = 200;
+
+  // @type {string} for all of these
+  this.icon = undefined;
+  this.smallIcon = undefined;
+  this.winIcon = undefined;
+  this.failureIcon = undefined;
+
+  // The following properties get their non-default values set by the application.
+
+  /**
+  * Whether to alert user to empty blocks, short-circuiting all other tests.
+  */
+  this.CHECK_FOR_EMPTY_BLOCKS = undefined;
+
+  /**
+  * The ideal number of blocks to solve this level.  Users only get 2
+  * stars if they use more than this number.
+  * @type {!number=}
+  */
+  this.IDEAL_BLOCK_NUM = undefined;
+
+  /**
+  * An array of dictionaries representing required blocks.  Keys are:
+  * - test (required): A test whether the block is present, either:
+  *   - A string, in which case the string is searched for in the generated code.
+  *   - A single-argument function is called on each user-added block
+  *     individually.  If any call returns true, the block is deemed present.
+  *     "User-added" blocks are ones that are neither disabled or undeletable.
+  * - type (required): The type of block to be produced for display to the user
+  *   if the test failed.
+  * - titles (optional): A dictionary, where, for each KEY-VALUE pair, this is
+  *   added to the block definition: <title name="KEY">VALUE</title>.
+  * - value (optional): A dictionary, where, for each KEY-VALUE pair, this is
+  *   added to the block definition: <value name="KEY">VALUE</value>
+  * - extra (optional): A string that should be blacked between the "block"
+  *   start and end tags.
+  * @type {!Array=}
+  */
+  this.REQUIRED_BLOCKS = undefined;
+
+  /**
+  * The number of required blocks to give hints about at any one time.
+  * Set this to Infinity to show all.
+  * @type {!number=}
+  */
+  this.NUM_REQUIRED_BLOCKS_TO_FLAG = undefined;
+
+  /**
+  * The number of attempts (how many times the run button has been pressed)
+  * @type {?number}
+  */
+  this.attempts = 0;
+
+  /**
+  * Stores the time at init. The delta to current time is used for logging
+  * and reporting to capture how long it took to arrive at an attempt.
+  * @type {?number}
+  */
+  this.initTime = undefined;
+
+  /**
+  * Enumeration of user program execution outcomes.
+  */
+  // TODO (br-pair) : ResultType shouldn't really live on StudioApp. Places
+  // that want this should just require constants themselves.
+  this.ResultType = constants.ResultType;
+
+  /**
+  * Enumeration of test results.
+  */
+  // TODO (br-pair) : TestResults shouldn't really live on StudioApp. Places
+  // that want this should just require constants themselves.
+  this.TestResults = constants.TestResults;
+
+  /**
+   * If true, we don't show blockspace. Used when viewing shared levels
+   */
+  this.hideSource = false;
+
+  /**
+   * If true, we're viewing a shared level.
+   */
+  this.share = false;
+
+  this.onAttempt = undefined;
+  this.onContinue = undefined;
+  this.onResetPressed = undefined;
+  this.backToPreviousLevel = undefined;
+  this.sendToPhone = undefined;
+  this.enableShowBlockCount = true;
+
+  this.disableSocialShare = false;
+  this.noPadding = false;
+
+  this.MIN_WORKSPACE_HEIGHT = undefined;
 };
 
-StudioApp.toggleRunReset = function(button) {
-  var showRun = (button === 'run');
-  if (button !== 'run' && button !== 'reset') {
-    throw "Unexpected input";
-  }
-
-  var run = document.getElementById('runButton');
-  var reset = document.getElementById('resetButton');
-  run.style.display = showRun ? 'inline-block' : 'none';
-  run.disabled = !showRun;
-  reset.style.display = !showRun ? 'inline-block' : 'none';
-  reset.disabled = showRun;
-};
+module.exports = StudioAppClass;
 
 /**
- * Modify the workspace header after a droplet blocks/code toggle
+ * Configure StudioAppClass options
  */
-function updateHeadersAfterDropletToggle(usingBlocks) {
-  // Update header titles:
-  var showCodeHeader = document.getElementById('show-code-header');
-  var newButtonTitle = usingBlocks ? msg.showCodeHeader() :
-                                     msg.showBlocksHeader();
-  showCodeHeader.firstChild.innerText = newButtonTitle;
+StudioAppClass.prototype.configure = function (options) {
+  this.BASE_URL = options.baseUrl;
+  this.CACHE_BUST = options.cacheBust;
+  this.LOCALE = options.locale || this.LOCALE;
+  // NOTE: editCode (which currently implies droplet) and usingBlockly are
+  // currently mutually exclusive.
+  this.editCode = options.level && options.level.editCode;
+  this.usingBlockly = !this.editCode;
+  this.cdoSounds = options.cdoSounds;
+  this.Dialog = options.Dialog;
 
-  var workspaceHeaderSpan = document.getElementById('workspace-header-span');
-  newButtonTitle = usingBlocks ? msg.workspaceHeader() :
-                                 msg.workspaceHeaderJavaScript();
-  workspaceHeaderSpan.innerText = newButtonTitle;
-
-  var blockCount = document.getElementById('blockCounter');
-  if (blockCount) {
-    blockCount.style.display =
-      (usingBlocks && StudioApp.enableShowBlockCount) ? 'inline-block' : 'none';
-  }
-
-  // Resize (including headers), so the category header will appear/disappear:
-  StudioApp.onResize();
-}
+  // TODO (br-pair) : should callers instead be the ones binding the context?
+  this.assetUrl = _.bind(this.assetUrl_, this);
+};
 
 /**
  * Common startup tasks for all apps.
  */
-StudioApp.init = function(config) {
+StudioAppClass.prototype.init = function(config) {
   if (!config) {
     config = {};
   }
 
-  StudioApp.share = config.share;
+  this.setConfigValues_(config);
 
-  // if true, dont provide links to share on fb/twitter
-  StudioApp.disableSocialShare = config.disableSocialShare;
-  StudioApp.sendToPhone = config.sendToPhone;
-  StudioApp.noPadding = config.no_padding;
-
-  StudioApp.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
-  StudioApp.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
-  StudioApp.REQUIRED_BLOCKS = config.level.requiredBlocks || [];
-
-  // enableShowCode defaults to true if not defined
-  StudioApp.enableShowCode = (config.enableShowCode === false) ? false : true;
-
-  // If the level has no ideal block count, don't show a block count. If it does
-  // have an ideal, show block count unless explicitly configured not to.
-  if (config.level && (config.level.ideal === undefined || config.level.ideal === Infinity)) {
-    StudioApp.enableShowBlockCount = false;
-  } else {
-    StudioApp.enableShowBlockCount = config.enableShowBlockCount !== false;
-  }
-
-  // Store configuration.
-  onAttempt = config.onAttempt || function(report) {
-    console.log('Attempt!');
-    console.log(report);
-    if (report.onComplete) {
-      report.onComplete();
-    }
-  };
-  onContinue = config.onContinue || function() {
-    console.log('Continue!');
-  };
-  onResetPressed = config.onResetPressed || function() {
-    console.log('Reset!');
-  };
-  backToPreviousLevel = config.backToPreviousLevel || function() {};
-
-  var container = document.getElementById(config.containerId);
-  container.innerHTML = config.html;
-  var runButton = container.querySelector('#runButton');
-  var resetButton = container.querySelector('#resetButton');
-  var throttledRunClick = _.debounce(StudioApp.runButtonClick, 250, true);
-  dom.addClickTouchEvent(runButton, throttledRunClick);
-  dom.addClickTouchEvent(resetButton, StudioApp.resetButtonClick);
-
-  var belowViz = document.getElementById('belowVisualization');
-  var referenceArea = document.getElementById('reference_area');
-  if (referenceArea) {
-    belowViz.appendChild(referenceArea);
-  }
-
-  var visualizationColumn = document.getElementById('visualizationColumn');
-  var visualization = document.getElementById('visualization');
-
-  // center game screen in embed mode
-  if(config.embed) {
-    visualizationColumn.style.margin = "0 auto";
-  }
-
-  if (StudioApp.usingBlockly && config.level.edit_blocks) {
-    // Set a class on the main blockly div so CSS can style blocks differently
-    Blockly.addClass_(container.querySelector('#blockly'), 'edit');
-    // If in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "3000px";
-    // Modify the arrangement of toolbox blocks so categories align left
-    if (config.level.edit_blocks == "toolbox_blocks") {
-      StudioApp.BLOCK_Y_COORDINATE_INTERVAL = 80;
-      config.blockArrangement = { category : { x: 20 } };
-    }
-    // Enable param & var editing in levelbuilder, regardless of level setting
-    config.level.disableParamEditing = false;
-    config.level.disableVariableEditing = false;
-  } else if (!config.hide_source) {
-    visualizationColumn.style.minHeight =
-        StudioApp.MIN_WORKSPACE_HEIGHT + 'px';
-  }
-
-  if (!config.embed && !StudioApp.share) {
-    // Make the visualization responsive to screen size, except on share page.
-    visualization.className += " responsive";
-    visualizationColumn.className += " responsive";
-  }
+  this.configureDom_(config);
 
   if (config.hide_source) {
-    StudioApp.hideSource = true;
-    var workspaceDiv = StudioApp.editCode ?
-                        document.getElementById('codeWorkspace') :
-                        container.querySelector('#blockly');
-    if(!config.embed || config.level.skipInstructionsPopup) {
-      container.className = 'hide-source';
-    }
-    workspaceDiv.style.display = 'none';
-    // For share page on mobile, do not show this part.
-    if ((!config.embed) && (!StudioApp.share || !dom.isMobile())) {
-      var buttonRow = runButton.parentElement;
-      var openWorkspace = document.createElement('button');
-      openWorkspace.setAttribute('id', 'open-workspace');
-      openWorkspace.appendChild(document.createTextNode(msg.openWorkspace()));
-
-      belowViz.appendChild(feedback.createSharingDiv({
-        response: {
-          level_source: window.location,
-          level_source_id: config.level_source_id,
-          phone_share_url: config.send_to_phone_url
-        },
-        sendToPhone: config.sendToPhone,
-        level: config.level,
-        twitter: config.twitter,
-        onMainPage: true
-      }));
-
-      dom.addClickTouchEvent(openWorkspace, function() {
-        // Redirect user to /edit version of this page. It would be better
-        // to just turn on the workspace but there are rendering issues
-        // with that.
-        window.location.href = window.location.href + '/edit';
-      });
-
-      buttonRow.appendChild(openWorkspace);
-    }
+    this.handleHideSource_({
+      containerId: config.containerId,
+      embed: config.embed,
+      level: config.level,
+      level_source_id: config.level_source_id,
+      phone_share_url: config.send_to_phone_url,
+      sendToPhone: config.sendToPhone,
+      twitter: config.twitter
+    });
   }
 
-  // 1. Move the buttons, 2. Hide the slider in the share page for mobile.
-  if (StudioApp.share && dom.isMobile()) {
-    var sliderCell = document.getElementById('slider-cell');
-    if (sliderCell) {
-      sliderCell.style.display = 'none';
-    }
-    var belowVisualization = document.getElementById('belowVisualization');
-    if (belowVisualization) {
-      if (config.noButtonsBelowOnMobileShare) {
-        belowVisualization.style.display = 'none';
-        visualization.style.marginBottom = '0px';
-      } else {
-        belowVisualization.style.display = 'block';
-        belowVisualization.style.marginLeft = '0px';
-        if (StudioApp.noPadding) {
-          // Shift run and reset buttons off the left edge if we have no padding
-          if (runButton) {
-            runButton.style.marginLeft = '10px';
-          }
-          if (resetButton) {
-            resetButton.style.marginLeft = '10px';
-          }
-          var shareCell = document.getElementById('share-cell') ||
-              document.getElementById('right-button-cell');
-          if (shareCell) {
-            shareCell.style.marginLeft = '10px';
-            shareCell.style.marginRight = '10px';
-          }
-          var softButtons = document.getElementById('soft-buttons');
-          if (softButtons) {
-            softButtons.style.marginLeft = '10px';
-            softButtons.style.marginRight = '10px';
-          }
-        }
-      }
-    }
-  }
-
-  // Show flappy upsale on desktop and mobile.  Show learn upsale only on desktop
-  if (StudioApp.share) {
-    var upSale = document.createElement('div');
-    if (config.makeYourOwn) {
-      upSale.innerHTML = require('./templates/makeYourOwn.html')({
-        data: {
-          makeUrl: config.makeUrl,
-          makeString: config.makeString,
-          makeImage: config.makeImage
-        }
-      });
-      if (StudioApp.noPadding) {
-        upSale.style.marginLeft = '10px';
-      }
-      belowViz.appendChild(upSale);
-    } else if (typeof config.makeYourOwn === 'undefined') {
-      upSale.innerHTML = require('./templates/learn.html')();
-      belowViz.appendChild(upSale);
-    }
+  if (config.share) {
+    this.handleSharing_({
+      noButtonsBelowOnMobileShare: config.noButtonsBelowOnMobileShare,
+      makeUrl: config.makeUrl,
+      makeString: config.makeString,
+      makeImage: config.makeImage,
+      makeYourOwn: config.makeYourOwn
+    });
   }
 
   // Record time at initialization.
-  StudioApp.initTime = new Date().getTime();
+  this.initTime = new Date().getTime();
 
   // Fixes viewport for small screens.
   var viewport = document.querySelector('meta[name="viewport"]');
   if (viewport) {
-    var deviceWidth;
-    var desiredWidth;
-    var minWidth;
-    if (StudioApp.share && dom.isMobile()) {
-      // for mobile sharing, don't assume landscape mode, use screen.width
-      deviceWidth = desiredWidth = screen.width;
-      if (StudioApp.noPadding && screen.width < StudioApp.MAX_PHONE_WIDTH) {
-        desiredWidth = Math.min(desiredWidth,
-                                StudioApp.MOBILE_NO_PADDING_SHARE_WIDTH);
-      }
-      minWidth = StudioApp.noPadding ?
-                    StudioApp.MOBILE_NO_PADDING_SHARE_WIDTH :
-                    StudioApp.MIN_MOBILE_SHARE_WIDTH;
-    }
-    else {
-      // assume we are in landscape mode, so width is the longer of the two
-      deviceWidth = desiredWidth = Math.max(screen.width, screen.height);
-      minWidth = StudioApp.MIN_WIDTH;
-    }
-    var width = Math.max(minWidth, desiredWidth);
-    var scale = deviceWidth / width;
-    var content = ['width=' + width,
-                   'minimal-ui',
-                   'initial-scale=' + scale,
-                   'maximum-scale=' + scale,
-                   'minimum-scale=' + scale,
-                   'target-densityDpi=device-dpi',
-                   'user-scalable=no'];
-    viewport.setAttribute('content', content.join(', '));
+    this.fixViewportForSmallScreens_(viewport);
   }
 
-  StudioApp.Dialog = config.Dialog;
-
   var showCode = document.getElementById('show-code-header');
-  if (showCode && StudioApp.enableShowCode) {
-    dom.addClickTouchEvent(showCode, function() {
-      if (StudioApp.editCode) {
-        StudioApp.editor.toggleBlocks();
-        updateHeadersAfterDropletToggle(StudioApp.editor.currentlyUsingBlocks);
-        if (!StudioApp.editor.currentlyUsingBlocks) {
-          StudioApp.editor.aceEditor.focus();
+  if (showCode && this.enableShowCode) {
+    dom.addClickTouchEvent(showCode, _.bind(function() {
+      if (this.editCode) {
+        var result = this.editor.toggleBlocks();
+        if (result.error) {
+          // TODO (cpirich) We could extract error.loc to determine where the
+          // error occurred and highlight that error
+          this.feedback_.showToggleBlocksError(this.Dialog);
+        }
+        this.updateHeadersAfterDropletToggle_(this.editor.currentlyUsingBlocks);
+        if (!this.editor.currentlyUsingBlocks) {
+          this.editor.aceEditor.focus();
         }
       } else {
-        feedback.showGeneratedCode(StudioApp.Dialog);
+        this.feedback_.showGeneratedCode(this.Dialog);
       }
-    });
+    }, this));
   }
 
   var blockCount = document.getElementById('blockCounter');
-  if (blockCount && !StudioApp.enableShowBlockCount) {
+  if (blockCount && !this.enableShowBlockCount) {
     blockCount.style.display = 'none';
   }
 
-  StudioApp.ICON = config.skin.staticAvatar;
-  StudioApp.SMALL_ICON = config.skin.smallStaticAvatar;
-  StudioApp.WIN_ICON = config.skin.winAvatar;
-  StudioApp.FAILURE_ICON = config.skin.failureAvatar;
+  this.icon = config.skin.staticAvatar;
+  this.smallIcon = config.skin.smallStaticAvatar;
+  this.winIcon = config.skin.winAvatar;
+  this.failureIcon = config.skin.failureAvatar;
 
   if (config.level.instructionsIcon) {
-    StudioApp.ICON = config.skin[config.level.instructionsIcon];
-    StudioApp.WIN_ICON = config.skin[config.level.instructionsIcon];
+    this.icon = config.skin[config.level.instructionsIcon];
+    this.winIcon = config.skin[config.level.instructionsIcon];
   }
 
   if (config.showInstructionsWrapper) {
-    config.showInstructionsWrapper(function () {
+    config.showInstructionsWrapper(_.bind(function () {
       var shouldAutoClose = !!config.level.aniGifURL;
-      showInstructions(config.level, shouldAutoClose);
-    });
+      this.showInstructions_(config.level, shouldAutoClose);
+    }, this));
   }
 
   // The share and embed pages do not show the rotateContainer.
-  if (StudioApp.share || config.embed) {
+  if (this.share || config.embed) {
     var rotateContainer = document.getElementById('rotateContainer');
     if (rotateContainer) {
       rotateContainer.style.display = 'none';
@@ -642,7 +412,7 @@ StudioApp.init = function(config) {
       var vizCol = document.getElementById('visualizationColumn');
       var width = vizCol.offsetWidth;
       var height = vizCol.offsetHeight;
-      var displayWidth = StudioApp.MOBILE_NO_PADDING_SHARE_WIDTH;
+      var displayWidth = MOBILE_NO_PADDING_SHARE_WIDTH;
       var scale = Math.min(width / displayWidth, height / displayWidth);
       var viz = document.getElementById('visualization');
       viz.style['transform-origin'] = 'left top';
@@ -682,15 +452,15 @@ StudioApp.init = function(config) {
 
   if (config.level.instructions || config.level.aniGifURL) {
     var promptIcon = document.getElementById('prompt-icon');
-    promptIcon.src = StudioApp.SMALL_ICON;
+    promptIcon.src = this.smallIcon;
   }
 
   var aniGifPreview = document.getElementById('ani-gif-preview');
   if (config.level.aniGifURL) {
     aniGifPreview.style.backgroundImage = "url('" + config.level.aniGifURL + "')";
-    aniGifPreview.onclick = function() {
-      showInstructions(config.level, false);
-    };
+    aniGifPreview.onclick = _.bind(function() {
+      this.showInstructions_(config.level, false);
+    }, this);
     var promptTable = document.getElementById('prompt-table');
     promptTable.className += " with-ani-gif";
   } else {
@@ -698,142 +468,47 @@ StudioApp.init = function(config) {
     wrapper.style.display = 'none';
   }
 
-  if (StudioApp.editCode) {
-    // using window.require forces us to use requirejs version of require
-    window.require(['droplet'], function(droplet) {
-      var displayMessage, examplePrograms, messageElement, onChange, startingText;
-      StudioApp.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
-        mode: 'javascript',
-        modeOptions: utils.generateDropletModeOptions(config.level.codeFunctions),
-        palette: utils.generateDropletPalette(config.level.codeFunctions,
-                                              config.level.categoryInfo)
-      });
-
-      StudioApp.editor.aceEditor.setShowPrintMargin(false);
-
-      // Add an ace completer for the API functions exposed for this level
-      if (config.level.codeFunctions) {
-        var langTools = window.ace.require("ace/ext/language_tools");
-        langTools.addCompleter(
-            utils.generateAceApiCompleter(config.level.codeFunctions));
-      }
-
-      StudioApp.editor.aceEditor.setOptions({
-        enableBasicAutocompletion: true,
-        enableLiveAutocompletion: true
-      });
-
-      if (config.afterInject) {
-        config.afterInject();
-      }
-
-      if (config.level.startBlocks) {
-        StudioApp.editor.setValue(config.level.startBlocks);
-      }
+  if (this.editCode) {
+    this.handleEditCode_({
+      codeFunctions: config.level.codeFunctions,
+      categoryInfo: config.level.categoryInfo,
+      startBlocks: config.level.startBlocks,
+      afterInject: config.afterInject
     });
   }
 
-  if (StudioApp.usingBlockly) {
-    // Allow empty blocks if editing blocks.
-    if (config.level.edit_blocks) {
-      StudioApp.CHECK_FOR_EMPTY_BLOCKS = false;
-      if (config.level.edit_blocks === 'required_blocks' ||
-        config.level.edit_blocks === 'toolbox_blocks') {
-        // Don't show when run block for toolbox/required block editing
-        config.forceInsertTopBlock = null;
-      }
-    }
-
-    // If levelbuilder provides an empty toolbox, some apps (like artist)
-    // replace it with a full toolbox. I think some levels may depend on this
-    // behavior. We want a way to specify no toolbox, which is <xml></xml>
-    if (config.level.toolbox) {
-      var toolboxWithoutWhitespace = config.level.toolbox.replace(/\s/g, '');
-      if (toolboxWithoutWhitespace === '<xml></xml>' ||
-          toolboxWithoutWhitespace === '<xml/>') {
-        config.level.toolbox = undefined;
-      }
-    }
-
-    var div = document.getElementById('blockly');
-    var options = {
-      toolbox: config.level.toolbox,
-      disableParamEditing: config.level.disableParamEditing === undefined ?
-          true : config.level.disableParamEditing,
-      disableVariableEditing: config.level.disableVariableEditing === undefined ?
-          false : config.level.disableVariableEditing,
-      useModalFunctionEditor: config.level.useModalFunctionEditor === undefined ?
-          false : config.level.useModalFunctionEditor,
-      useContractEditor: config.level.useContractEditor === undefined ?
-          false : config.level.useContractEditor,
-      defaultNumExampleBlocks: config.level.defaultNumExampleBlocks === undefined ?
-          0 : config.level.defaultNumExampleBlocks,
-      scrollbars: config.level.scrollbars,
-      editBlocks: config.level.edit_blocks === undefined ?
-          false : config.level.edit_blocks
-    };
-    ['trashcan', 'concreteBlocks', 'varsInGlobals',
-      'grayOutUndeletableBlocks', 'disableParamEditing'].forEach(
-      function (prop) {
-        if (config[prop] !== undefined) {
-          options[prop] = config[prop];
-        }
-      });
-    StudioApp.inject(div, options);
-
-    if (config.afterInject) {
-      config.afterInject();
-    }
-
-    // Add the starting block(s).
-    var startBlocks = config.level.startBlocks || '';
-    if (config.forceInsertTopBlock) {
-      startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
-    }
-    startBlocks = StudioApp.arrangeBlockPosition(startBlocks, config.blockArrangement);
-    StudioApp.loadBlocks(startBlocks);
-  }
-
-  // Initialize the slider.
-  var slider = document.getElementById('slider');
-  if (slider) {
-    // TODO (noted by cpirich): remove Turtle specific code here:
-    Turtle.speedSlider = new Slider(10, 35, 130, slider);
-
-    // Change default speed (eg Speed up levels that have lots of steps).
-    if (config.level.sliderSpeed) {
-      Turtle.speedSlider.setValue(config.level.sliderSpeed);
-    }
+  if (this.usingBlockly) {
+    this.handleUsingBlockly_(config);
   }
 
   // listen for scroll and resize to ensure onResize() is called
-  window.addEventListener('scroll', function() {
-    StudioApp.onResize();
+  window.addEventListener('scroll', _.bind(function() {
+    this.onResize();
     var event = document.createEvent('UIEvents');
     event.initEvent('resize', true, true);  // event type, bubbling, cancelable
     window.dispatchEvent(event);
-  });
-  window.addEventListener('resize', StudioApp.onResize);
+  }, this));
+  window.addEventListener('resize', _.bind(this.onResize, this));
 
   // Call initial onResize() asynchronously - need 10ms delay to work around
   // relayout which changes height on the left side to the proper value
-  window.setTimeout(function() {
-    StudioApp.onResize();
+  window.setTimeout(_.bind(function() {
+    this.onResize();
     var event = document.createEvent('UIEvents');
     event.initEvent('resize', true, true);  // event type, bubbling, cancelable
     window.dispatchEvent(event);
-  }, 10);
+  }, this), 10);
 
-  StudioApp.reset(true);
+  this.reset(true);
 
   // Add display of blocks used.
-  setIdealBlockNumber();
+  this.setIdealBlockNumber_();
 
   // TODO (cpirich): implement block count for droplet (for now, blockly only)
-  if (StudioApp.usingBlockly) {
-    Blockly.mainBlockSpaceEditor.addChangeListener(function() {
-      StudioApp.updateBlockCount();
-    });
+  if (this.usingBlockly) {
+    Blockly.mainBlockSpaceEditor.addChangeListener(_.bind(function() {
+      this.updateBlockCount();
+    }, this));
 
     if (config.level.openFunctionDefinition) {
       Blockly.functionEditor.openAndEditFunction(config.level.openFunctionDefinition);
@@ -841,10 +516,123 @@ StudioApp.init = function(config) {
   }
 };
 
-exports.loadAudio = function(filenames, name) {
-  if (StudioApp.usingBlockly) {
+/**
+ *
+ */
+StudioAppClass.prototype.handleSharing_ = function (options) {
+  // 1. Move the buttons, 2. Hide the slider in the share page for mobile.
+  var belowVisualization = document.getElementById('belowVisualization');
+  if (dom.isMobile()) {
+    var sliderCell = document.getElementById('slider-cell');
+    if (sliderCell) {
+      sliderCell.style.display = 'none';
+    }
+    if (belowVisualization) {
+      if (options.noButtonsBelowOnMobileShare) {
+        belowVisualization.style.display = 'none';
+        visualization.style.marginBottom = '0px';
+      } else {
+        belowVisualization.style.display = 'block';
+        belowVisualization.style.marginLeft = '0px';
+        if (this.noPadding) {
+          // Shift run and reset buttons off the left edge if we have no padding
+          if (runButton) {
+            runButton.style.marginLeft = '10px';
+          }
+          if (resetButton) {
+            resetButton.style.marginLeft = '10px';
+          }
+          var shareCell = document.getElementById('share-cell') ||
+          document.getElementById('right-button-cell');
+          if (shareCell) {
+            shareCell.style.marginLeft = '10px';
+            shareCell.style.marginRight = '10px';
+          }
+          var softButtons = document.getElementById('soft-buttons');
+          if (softButtons) {
+            softButtons.style.marginLeft = '10px';
+            softButtons.style.marginRight = '10px';
+          }
+        }
+      }
+    }
+  }
+
+  // Show flappy upsale on desktop and mobile.  Show learn upsale only on desktop
+  var upSale = document.createElement('div');
+  if (options.makeYourOwn) {
+    upSale.innerHTML = require('./templates/makeYourOwn.html')({
+      data: {
+        makeUrl: options.makeUrl,
+        makeString: options.makeString,
+        makeImage: options.makeImage
+      }
+    });
+    if (this.noPadding) {
+      upSale.style.marginLeft = '10px';
+    }
+    belowVisualization.appendChild(upSale);
+  } else if (typeof options.makeYourOwn === 'undefined') {
+    upSale.innerHTML = require('./templates/learn.html')({
+      assetUrl: this.assetUrl
+    });
+    belowVisualization.appendChild(upSale);
+  }
+};
+
+/**
+ * Get the url of path appended to BASE_URL
+ */
+StudioAppClass.prototype.assetUrl_ = function (path) {
+  if (this.BASE_URL === undefined) {
+    throw new Error('StudioAppClass BASE_URL has not been set. ' +
+      'Call configure() first');
+  }
+  return this.BASE_URL + path;
+};
+
+/**
+ * Reset the playing field to the start position and kill any pending
+ * animation tasks.  This will typically be replaced by an application.
+ * @param {boolean} shouldPlayOpeningAnimation True if an opening animation is
+ *   to be played.
+ */
+StudioAppClass.prototype.reset = function (shouldPlayOpeningAnimation) {
+  // TODO (bbuchanan): Look for comon reset logic we can pull here
+  // Override in app subclass
+};
+
+
+/**
+ * Override to change run behavior.
+ */
+StudioAppClass.prototype.runButtonClick = function() {};
+
+/**
+ * Toggle whether run button or reset button is shown
+ * @param {string} button Button to show, either "run" or "reset"
+ */
+StudioAppClass.prototype.toggleRunReset = function(button) {
+  var showRun = (button === 'run');
+  if (button !== 'run' && button !== 'reset') {
+    throw "Unexpected input";
+  }
+
+  var run = document.getElementById('runButton');
+  var reset = document.getElementById('resetButton');
+  run.style.display = showRun ? 'inline-block' : 'none';
+  run.disabled = !showRun;
+  reset.style.display = !showRun ? 'inline-block' : 'none';
+  reset.disabled = showRun;
+};
+
+/**
+ *
+ */
+StudioAppClass.prototype.loadAudio = function(filenames, name) {
+  if (this.usingBlockly) {
     Blockly.loadAudio_(filenames, name);
-  } else if (StudioApp.cdoSounds) {
+  } else if (this.cdoSounds) {
     var regOpts = { id: name };
     for (var i = 0; i < filenames.length; i++) {
       var filename = filenames[i];
@@ -854,45 +642,51 @@ exports.loadAudio = function(filenames, name) {
         regOpts[ext[1]] = filename;
       }
     }
-    StudioApp.cdoSounds.register(regOpts);
-  }
-};
-
-exports.playAudio = function(name, options) {
-  options = options || {};
-  var defaultOptions = {volume: 0.5};
-  var newOptions = utils.extend(defaultOptions, options);
-  if (StudioApp.usingBlockly) {
-    Blockly.playAudio(name, newOptions);
-  } else if (StudioApp.cdoSounds) {
-    StudioApp.cdoSounds.play(name, newOptions);
-  }
-};
-
-exports.stopLoopingAudio = function(name) {
-  if (StudioApp.usingBlockly) {
-    Blockly.stopLoopingAudio(name);
-  } else if (StudioApp.cdoSounds) {
-    StudioApp.cdoSounds.stopLoopingAudio(name);
+    this.cdoSounds.register(regOpts);
   }
 };
 
 /**
- * @param {Object} options Configuration parameters for Blockly. Parameters are
- * optional and include:
- *  - {string} path The root path to the /apps directory, defaults to the
- *    the directory in which this script is located.
- *  - {boolean} rtl True if the current language right to left.
- *  - {DomElement} toolbox The element in which to insert the toolbox,
- *    defaults to the element with 'toolbox'.
- *  - {boolean} trashcan True if the trashcan should be displayed, defaults to
- *    true.
- * @param {DomElement} div The parent div in which to insert Blockly.
+ *
  */
-exports.inject = function(div, options) {
+StudioAppClass.prototype.playAudio = function(name, options) {
+  options = options || {};
+  var defaultOptions = {volume: 0.5};
+  var newOptions = utils.extend(defaultOptions, options);
+  if (this.usingBlockly) {
+    Blockly.playAudio(name, newOptions);
+  } else if (this.cdoSounds) {
+    this.cdoSounds.play(name, newOptions);
+  }
+};
+
+/**
+ *
+ */
+StudioAppClass.prototype.stopLoopingAudio = function(name) {
+  if (this.usingBlockly) {
+    Blockly.stopLoopingAudio(name);
+  } else if (this.cdoSounds) {
+    this.cdoSounds.stopLoopingAudio(name);
+  }
+};
+
+/**
+* @param {Object} options Configuration parameters for Blockly. Parameters are
+* optional and include:
+*  - {string} path The root path to the /apps directory, defaults to the
+*    the directory in which this script is located.
+*  - {boolean} rtl True if the current language right to left.
+*  - {DomElement} toolbox The element in which to insert the toolbox,
+*    defaults to the element with 'toolbox'.
+*  - {boolean} trashcan True if the trashcan should be displayed, defaults to
+*    true.
+* @param {DomElement} div The parent div in which to insert Blockly.
+*/
+StudioAppClass.prototype.inject = function(div, options) {
   var defaults = {
-    assetUrl: StudioApp.assetUrl,
-    rtl: StudioApp.isRtl(),
+    assetUrl: this.assetUrl,
+    rtl: this.isRtl(),
     toolbox: document.getElementById('toolbox'),
     trashcan: true
   };
@@ -902,59 +696,58 @@ exports.inject = function(div, options) {
 /**
  * Returns true if the current HTML page is in right-to-left language mode.
  */
-StudioApp.isRtl = function() {
+StudioAppClass.prototype.isRtl = function() {
   var head = document.getElementsByTagName('head')[0];
   if (head && head.parentElement) {
     var dir = head.parentElement.getAttribute('dir');
-    return (dir && dir.toLowerCase() == 'rtl');
+    return (dir && dir.toLowerCase() === 'rtl');
   } else {
     return false;
   }
 };
 
-StudioApp.localeDirection = function() {
-  return (StudioApp.isRtl() ? 'rtl' : 'ltr');
+/**
+ * @return {string} Locale direction string based on app direction.
+ */
+StudioAppClass.prototype.localeDirection = function() {
+  return (this.isRtl() ? 'rtl' : 'ltr');
 };
 
 /**
- * Initialize Blockly for a readonly iframe.  Called on page load.
- * XML argument may be generated from the console with:
- * Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)).slice(5, -6)
- */
-StudioApp.initReadonly = function(options) {
+* Initialize Blockly for a readonly iframe.  Called on page load.
+* XML argument may be generated from the console with:
+* Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)).slice(5, -6)
+*/
+StudioAppClass.prototype.initReadonly = function(options) {
   Blockly.inject(document.getElementById('blockly'), {
-    assetUrl: StudioApp.assetUrl,
+    assetUrl: this.assetUrl,
     readOnly: true,
-    rtl: StudioApp.isRtl(),
+    rtl: this.isRtl(),
     scrollbars: false
   });
-  StudioApp.loadBlocks(options.blocks);
+  this.loadBlocks(options.blocks);
 };
 
 /**
- * Load the editor with blocks.
- * @param {string} blocksXml Text representation of blocks.
- */
-StudioApp.loadBlocks = function(blocksXml) {
+* Load the editor with blocks.
+* @param {string} blocksXml Text representation of blocks.
+*/
+StudioAppClass.prototype.loadBlocks = function(blocksXml) {
   var xml = parseXmlElement(blocksXml);
   Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
 };
 
-StudioApp.BLOCK_X_COORDINATE = 70;
-StudioApp.BLOCK_Y_COORDINATE = 30;
-StudioApp.BLOCK_Y_COORDINATE_INTERVAL = 200;
-
 /**
- * Spreading out the top blocks in workspace if it is not already set.
- * @param {string} startBlocks String representation of start blocks xml.
- * @param {Object.<Object>} arrangement A map from block type to position.
- * @return {string} String representation of start blocks xml, including
- *    block position.
- */
-StudioApp.arrangeBlockPosition = function(startBlocks, arrangement) {
+* Spreading out the top blocks in workspace if it is not already set.
+* @param {string} startBlocks String representation of start blocks xml.
+* @param {Object.<Object>} arrangement A map from block type to position.
+* @return {string} String representation of start blocks xml, including
+*    block position.
+*/
+StudioAppClass.prototype.arrangeBlockPosition = function(startBlocks, arrangement) {
   var type, arrangeX, arrangeY;
   var xml = parseXmlElement(startBlocks);
-  var xmlChildNodes = StudioApp.sortBlocksByVisibility(xml.childNodes);
+  var xmlChildNodes = this.sortBlocksByVisibility(xml.childNodes);
   var numberOfPlacedBlocks = 0;
   for (var x = 0, xmlChild; xmlChildNodes && x < xmlChildNodes.length; x++) {
     xmlChild = xmlChildNodes[x];
@@ -967,10 +760,10 @@ StudioApp.arrangeBlockPosition = function(startBlocks, arrangement) {
       arrangeY = arrangement && arrangement[type] ? arrangement[type].y : null;
 
       xmlChild.setAttribute('x', xmlChild.getAttribute('x') || arrangeX ||
-                            StudioApp.BLOCK_X_COORDINATE);
+        BLOCK_X_COORDINATE);
       xmlChild.setAttribute('y', xmlChild.getAttribute('y') || arrangeY ||
-                            StudioApp.BLOCK_Y_COORDINATE +
-                            StudioApp.BLOCK_Y_COORDINATE_INTERVAL * numberOfPlacedBlocks);
+        BLOCK_Y_COORDINATE +
+      this.blockYCoordinateInterval * numberOfPlacedBlocks);
       numberOfPlacedBlocks += 1;
     }
   }
@@ -978,12 +771,12 @@ StudioApp.arrangeBlockPosition = function(startBlocks, arrangement) {
 };
 
 /**
- * Sorts the array of xml blocks, moving visible blocks to the front.
- * @param {Array.<Element>} xmlBlocks An array of xml blocks.
- * @return {Array.<Element>} A sorted array of xml blocks, with all
- *     visible blocks preceding all hidden blocks.
- */
-StudioApp.sortBlocksByVisibility = function(xmlBlocks) {
+* Sorts the array of xml blocks, moving visible blocks to the front.
+* @param {Array.<Element>} xmlBlocks An array of xml blocks.
+* @return {Array.<Element>} A sorted array of xml blocks, with all
+*     visible blocks preceding all hidden blocks.
+*/
+StudioAppClass.prototype.sortBlocksByVisibility = function(xmlBlocks) {
   var visibleXmlBlocks = [];
   var hiddenXmlBlocks = [];
   for (var x = 0, xmlBlock; xmlBlocks && x < xmlBlocks.length; x++) {
@@ -998,7 +791,8 @@ StudioApp.sortBlocksByVisibility = function(xmlBlocks) {
   return visibleXmlBlocks.concat(hiddenXmlBlocks);
 };
 
-var showInstructions = function(level, autoClose) {
+
+StudioAppClass.prototype.showInstructions_ = function(level, autoClose) {
   var instructionsDiv = document.createElement('div');
   instructionsDiv.innerHTML = require('./templates/instructions.html')(level);
 
@@ -1011,12 +805,12 @@ var showInstructions = function(level, autoClose) {
 
   instructionsDiv.appendChild(buttons);
 
-  var dialog = feedback.createModalDialogWithIcon({
-      Dialog: StudioApp.Dialog,
-      contentDiv: instructionsDiv,
-      icon: StudioApp.ICON,
-      defaultBtnSelector: '#ok-button'
-      });
+  var dialog = this.feedback_.createModalDialogWithIcon({
+    Dialog: this.Dialog,
+    contentDiv: instructionsDiv,
+    icon: this.icon,
+    defaultBtnSelector: '#ok-button'
+  });
 
   if (autoClose) {
     setTimeout(function() {
@@ -1037,9 +831,9 @@ var showInstructions = function(level, autoClose) {
 };
 
 /**
- *  Resizes the blockly workspace.
- */
-StudioApp.onResize = function() {
+*  Resizes the blockly workspace.
+*/
+StudioAppClass.prototype.onResize = function() {
   var visualizationColumn = document.getElementById('visualizationColumn');
   var gameWidth = visualizationColumn.getBoundingClientRect().width;
 
@@ -1047,7 +841,7 @@ StudioApp.onResize = function() {
   var codeWorkspace = document.getElementById('codeWorkspace');
 
   // resize either blockly or codeWorkspace
-  var div = StudioApp.editCode ? codeWorkspace : blocklyDiv;
+  var div = this.editCode ? codeWorkspace : blocklyDiv;
 
   var divParent = div.parentNode;
   var parentStyle = window.getComputedStyle(divParent);
@@ -1064,19 +858,19 @@ StudioApp.onResize = function() {
   div.style.width = fullWorkspaceWidth + 'px';
 
   // Keep blocks static relative to the right edge in RTL mode
-  if (StudioApp.usingBlockly && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
+  if (this.usingBlockly && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
     Blockly.mainBlockSpace.getTopBlocks().forEach(function(topBlock) {
       topBlock.moveBy(fullWorkspaceWidth - oldWidth, 0);
     });
   }
 
-  if (StudioApp.isRtl()) {
+  if (this.isRtl()) {
     div.style.marginRight = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
   }
   else {
     div.style.marginLeft = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
   }
-  if (StudioApp.editCode) {
+  if (this.editCode) {
     // Position the inner codeTextbox element below the headers
     var codeTextbox = document.getElementById('codeTextbox');
     codeTextbox.style.height = (parentHeight - headersHeight) + 'px';
@@ -1091,7 +885,7 @@ StudioApp.onResize = function() {
     div.style.height = (parentHeight - headersHeight) + 'px';
   }
 
-  StudioApp.resizeHeaders(fullWorkspaceWidth);
+  this.resizeHeaders(fullWorkspaceWidth);
 };
 
 // |          toolbox-header          | workspace-header  | show-code-header |
@@ -1099,44 +893,43 @@ StudioApp.onResize = function() {
 // |           toolboxWidth           |
 // |                 |         <--------- workspaceWidth ---------->         |
 // |         <---------------- fullWorkspaceWidth ----------------->         |
-StudioApp.resizeHeaders = function (fullWorkspaceWidth) {
-  var minWorkspaceWidthForShowCode = StudioApp.editCode ? 250 : 450;
+StudioAppClass.prototype.resizeHeaders = function (fullWorkspaceWidth) {
+  var minWorkspaceWidthForShowCode = this.editCode ? 250 : 450;
   var toolboxWidth = 0;
-  if (StudioApp.editCode) {
+  if (this.editCode) {
     // If in the droplet editor, but not using blocks, keep categoryWidth at 0
-    if (!StudioApp.editCode || StudioApp.editor.currentlyUsingBlocks) {
+    if (!this.editCode || this.editor.currentlyUsingBlocks) {
       // Set toolboxWidth based on the block palette width:
       var categories = document.querySelector('.droplet-palette-wrapper');
       toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
     }
-  } else if (StudioApp.usingBlockly) {
+  } else if (this.usingBlockly) {
     toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
   }
 
   var showCodeHeader = document.getElementById('show-code-header');
   var showCodeWidth = 0;
-  if (StudioApp.enableShowCode &&
+  if (this.enableShowCode &&
       (fullWorkspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
     showCodeWidth = parseInt(window.getComputedStyle(showCodeHeader).width, 10);
     showCodeHeader.style.display = "";
-  }
-  else {
+  } else {
     showCodeHeader.style.display = "none";
   }
 
   document.getElementById('headers').style.width = fullWorkspaceWidth + 'px';
   document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
   document.getElementById('workspace-header').style.width =
-      (fullWorkspaceWidth - toolboxWidth - showCodeWidth) + 'px';
+    (fullWorkspaceWidth - toolboxWidth - showCodeWidth) + 'px';
 };
 
 /**
- * Highlight the block (or clear highlighting).
- * @param {?string} id ID of block that triggered this action.
- * @param {boolean} spotlight Optional.  Highlight entire block if true
- */
-StudioApp.highlight = function(id, spotlight) {
-  if (StudioApp.usingBlockly) {
+* Highlight the block (or clear highlighting).
+* @param {?string} id ID of block that triggered this action.
+* @param {boolean} spotlight Optional.  Highlight entire block if true
+*/
+StudioAppClass.prototype.highlight = function(id, spotlight) {
+  if (this.usingBlockly) {
     if (id) {
       var m = id.match(/^block_id_(\d+)$/);
       if (m) {
@@ -1149,141 +942,70 @@ StudioApp.highlight = function(id, spotlight) {
 };
 
 /**
- * Remove highlighting from all blocks
- */
-StudioApp.clearHighlighting = function () {
-  StudioApp.highlight(null);
+* Remove highlighting from all blocks
+*/
+StudioAppClass.prototype.clearHighlighting = function () {
+  this.highlight(null);
 };
 
-// The following properties get their non-default values set by the application.
-
 /**
- * Whether to alert user to empty blocks, short-circuiting all other tests.
- */
-StudioApp.CHECK_FOR_EMPTY_BLOCKS = undefined;
-
-/**
- * The ideal number of blocks to solve this level.  Users only get 2
- * stars if they use more than this number.
- * @type {!number=}
- */
-StudioApp.IDEAL_BLOCK_NUM = undefined;
-
-/**
- * An array of dictionaries representing required blocks.  Keys are:
- * - test (required): A test whether the block is present, either:
- *   - A string, in which case the string is searched for in the generated code.
- *   - A single-argument function is called on each user-added block
- *     individually.  If any call returns true, the block is deemed present.
- *     "User-added" blocks are ones that are neither disabled or undeletable.
- * - type (required): The type of block to be produced for display to the user
- *   if the test failed.
- * - titles (optional): A dictionary, where, for each KEY-VALUE pair, this is
- *   added to the block definition: <title name="KEY">VALUE</title>.
- * - value (optional): A dictionary, where, for each KEY-VALUE pair, this is
- *   added to the block definition: <value name="KEY">VALUE</value>
- * - extra (optional): A string that should be blacked between the "block"
- *   start and end tags.
- * @type {!Array=}
- */
-StudioApp.REQUIRED_BLOCKS = undefined;
-
-/**
- * The number of required blocks to give hints about at any one time.
- * Set this to Infinity to show all.
- * @type {!number=}
- */
-StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG = undefined;
-
-/**
- * The number of attempts (how many times the run button has been pressed)
- * @type {?number}
- */
-StudioApp.attempts = 0;
-
-/**
- * Stores the time at init. The delta to current time is used for logging
- * and reporting to capture how long it took to arrive at an attempt.
- * @type {?number}
- */
-StudioApp.initTime = undefined;
-
-/**
- * Reset the playing field to the start position and kill any pending
- * animation tasks.  This will typically be replaced by an application.
- * @param {boolean} first True if an opening animation is to be played.
- */
-StudioApp.reset = function(first) {};
-
-// Override to change run behavior.
-StudioApp.runButtonClick = function() {};
-
-/**
- * Enumeration of user program execution outcomes.
- */
-StudioApp.ResultType = constants.ResultType;
-
-/**
- * Enumeration of test results.
- */
-StudioApp.TestResults = constants.TestResults;
-
-// Methods for determining and displaying feedback.
-
-/**
- * Display feedback based on test results.  The test results must be
- * explicitly provided.
- * @param {{feedbackType: number}} Test results (a constant property of
- *     StudioApp.TestResults).
- */
-StudioApp.displayFeedback = function(options) {
-  options.Dialog = StudioApp.Dialog;
-  options.onContinue = onContinue;
-  options.backToPreviousLevel = backToPreviousLevel;
-  options.sendToPhone = StudioApp.sendToPhone;
+* Display feedback based on test results.  The test results must be
+* explicitly provided.
+* @param {{feedbackType: number}} Test results (a constant property of
+*     StudioApp.TestResults).
+*/
+StudioAppClass.prototype.displayFeedback = function(options) {
+  options.Dialog = this.Dialog;
+  options.onContinue = this.onContinue;
+  options.backToPreviousLevel = this.backToPreviousLevel;
+  options.sendToPhone = this.sendToPhone;
 
   // Special test code for edit blocks.
   if (options.level.edit_blocks) {
-    options.feedbackType = StudioApp.TestResults.EDIT_BLOCKS;
+    options.feedbackType = this.TestResults.EDIT_BLOCKS;
   }
 
-  feedback.displayFeedback(options);
-};
-
-StudioApp.getTestResults = function(levelComplete, options) {
-  return feedback.getTestResults(levelComplete, options);
+  this.feedback_.displayFeedback(options);
 };
 
 /**
- * Report back to the server, if available.
- * @param {object} options - parameter block which includes:
- * {string} app The name of the application.
- * {number} id A unique identifier generated when the page was loaded.
- * {string} level The ID of the current level.
- * {number} result An indicator of the success of the code.
- * {number} testResult More specific data on success or failure of code.
- * {string} program The user program, which will get URL-encoded.
- * {function} onComplete Function to be called upon completion.
+ *
  */
-StudioApp.report = function(options) {
+StudioAppClass.prototype.getTestResults = function(levelComplete, options) {
+  return this.feedback_.getTestResults(levelComplete, options);
+};
+
+/**
+* Report back to the server, if available.
+* @param {object} options - parameter block which includes:
+* {string} app The name of the application.
+* {number} id A unique identifier generated when the page was loaded.
+* {string} level The ID of the current level.
+* {number} result An indicator of the success of the code.
+* {number} testResult More specific data on success or failure of code.
+* {string} program The user program, which will get URL-encoded.
+* {function} onComplete Function to be called upon completion.
+*/
+StudioAppClass.prototype.report = function(options) {
   // copy from options: app, level, result, testResult, program, onComplete
   var report = options;
-  report.pass = feedback.canContinueToNextLevel(options.testResult);
-  report.time = ((new Date().getTime()) - StudioApp.initTime);
-  report.attempt = StudioApp.attempts;
-  report.lines = feedback.getNumBlocksUsed();
+  report.pass = this.feedback_.canContinueToNextLevel(options.testResult);
+  report.time = ((new Date().getTime()) - this.initTime);
+  report.attempt = this.attempts;
+  report.lines = this.feedback_.getNumBlocksUsed();
 
   // If hideSource is enabled, the user is looking at a shared level that
   // they cannot have modified. In that case, don't report it to the service
   // or call the onComplete() callback expected. The app will just sit
   // there with the Reset button as the only option.
-  if (!(StudioApp.hideSource && StudioApp.share)) {
+  var self = this;
+  if (!(this.hideSource && this.share)) {
     var onAttemptCallback = (function() {
       return function(builderDetails) {
         for (var option in builderDetails) {
           report[option] = builderDetails[option];
         }
-        onAttempt(report);
+        self.onAttempt(report);
       };
     })();
 
@@ -1298,39 +1020,27 @@ StudioApp.report = function(options) {
 };
 
 /**
- * Click the reset button.  Reset the application.
- */
-StudioApp.resetButtonClick = function() {
-  onResetPressed();
-  StudioApp.toggleRunReset('run');
-  StudioApp.clearHighlighting();
-  if (StudioApp.usingBlockly) {
+* Click the reset button.  Reset the application.
+*/
+StudioAppClass.prototype.resetButtonClick = function() {
+  this.onResetPressed();
+  this.toggleRunReset('run');
+  this.clearHighlighting();
+  if (this.usingBlockly) {
     Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
     Blockly.mainBlockSpace.traceOn(false);
   }
-  StudioApp.reset(false);
+  this.reset(false);
 };
 
 /**
- * Set the ideal Number of blocks.
- */
-var setIdealBlockNumber = function() {
-  var element = document.getElementById('idealBlockNumber');
-  if (element) {
-    element.innerHTML = '';  // Remove existing children or text.
-    element.appendChild(document.createTextNode(
-        getIdealBlockNumberMsg()));
-  }
-};
-
-/**
- * Add count of blocks used.
- */
-exports.updateBlockCount = function() {
+* Add count of blocks used.
+*/
+StudioAppClass.prototype.updateBlockCount = function() {
   // If the number of block used is bigger than the ideal number of blocks,
   // set it to be yellow, otherwise, keep it as black.
   var element = document.getElementById('blockUsed');
-  if (StudioApp.IDEAL_BLOCK_NUM < feedback.getNumCountableBlocks()) {
+  if (this.IDEAL_BLOCK_NUM < this.feedback_.getNumCountableBlocks()) {
     element.className = "block-counter-overflow";
   } else {
     element.className = "block-counter-default";
@@ -1340,16 +1050,458 @@ exports.updateBlockCount = function() {
   if (element) {
     element.innerHTML = '';  // Remove existing children or text.
     element.appendChild(document.createTextNode(
-        feedback.getNumCountableBlocks()));
+      this.feedback_.getNumCountableBlocks()));
   }
 };
 
-var getIdealBlockNumberMsg = function() {
-  return StudioApp.IDEAL_BLOCK_NUM === Infinity ?
-      msg.infinity() : StudioApp.IDEAL_BLOCK_NUM;
+/**
+ * Set the ideal Number of blocks.
+ */
+StudioAppClass.prototype.setIdealBlockNumber_ = function() {
+  var element = document.getElementById('idealBlockNumber');
+  if (!element) {
+    return;
+  }
+
+  var idealBlockNumberMsg = this.IDEAL_BLOCK_NUM === Infinity ?
+    msg.infinity() : this.IDEAL_BLOCK_NUM;
+  element.innerHTML = '';  // Remove existing children or text.
+  element.appendChild(document.createTextNode(
+    idealBlockNumberMsg));
 };
 
-},{"../locale/hr_hr/common":41,"./ResizeSensor":1,"./block_utils":4,"./builder":15,"./constants.js":17,"./dom":18,"./feedback.js":19,"./slider":24,"./templates/buttons.html":26,"./templates/instructions.html":28,"./templates/learn.html":29,"./templates/makeYourOwn.html":30,"./utils":38,"./xml":39}],4:[function(require,module,exports){
+
+/**
+ *
+ */
+StudioAppClass.prototype.fixViewportForSmallScreens_ = function (viewport) {
+  var deviceWidth;
+  var desiredWidth;
+  var minWidth;
+  if (this.share && dom.isMobile()) {
+    // for mobile sharing, don't assume landscape mode, use screen.width
+    deviceWidth = desiredWidth = screen.width;
+    if (this.noPadding && screen.width < MAX_PHONE_WIDTH) {
+      desiredWidth = Math.min(desiredWidth,
+        MOBILE_NO_PADDING_SHARE_WIDTH);
+    }
+    minWidth = this.noPadding ?
+      MOBILE_NO_PADDING_SHARE_WIDTH : MIN_MOBILE_SHARE_WIDTH;
+  }
+  else {
+    // assume we are in landscape mode, so width is the longer of the two
+    deviceWidth = desiredWidth = Math.max(screen.width, screen.height);
+    minWidth = MIN_WIDTH;
+  }
+  var width = Math.max(minWidth, desiredWidth);
+  var scale = deviceWidth / width;
+  var content = ['width=' + width,
+    'minimal-ui',
+    'initial-scale=' + scale,
+    'maximum-scale=' + scale,
+    'minimum-scale=' + scale,
+    'target-densityDpi=device-dpi',
+    'user-scalable=no'];
+  viewport.setAttribute('content', content.join(', '));
+};
+
+/**
+ *
+ */
+StudioAppClass.prototype.setConfigValues_ = function (config) {
+  this.share = config.share;
+
+  // if true, dont provide links to share on fb/twitter
+  this.disableSocialShare = config.disableSocialShare;
+  this.sendToPhone = config.sendToPhone;
+  this.noPadding = config.no_padding;
+
+  this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
+  this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
+  this.REQUIRED_BLOCKS = config.level.requiredBlocks || [];
+
+  // enableShowCode defaults to true if not defined
+  this.enableShowCode = (config.enableShowCode !== false);
+
+  // If the level has no ideal block count, don't show a block count. If it does
+  // have an ideal, show block count unless explicitly configured not to.
+  if (config.level && (config.level.ideal === undefined || config.level.ideal === Infinity)) {
+    this.enableShowBlockCount = false;
+  } else {
+    this.enableShowBlockCount = config.enableShowBlockCount !== false;
+  }
+
+  // Store configuration.
+  //TODO (br-pair) : test code should pass in these instead of defaulting in app code
+  this.onAttempt = config.onAttempt || function(report) {
+    console.log('Attempt!');
+    console.log(report);
+    if (report.onComplete) {
+      report.onComplete();
+    }
+  };
+  this.onContinue = config.onContinue || function() {
+    console.log('Continue!');
+  };
+  this.onResetPressed = config.onResetPressed || function() {
+    console.log('Reset!');
+  };
+  this.backToPreviousLevel = config.backToPreviousLevel || function () {};
+};
+
+/**
+ * Begin modifying the DOM based on config.
+ * Note: Has side effects on config
+ */
+StudioAppClass.prototype.configureDom_ = function (config) {
+  var container = document.getElementById(config.containerId);
+  container.innerHTML = config.html;
+  var runButton = container.querySelector('#runButton');
+  var resetButton = container.querySelector('#resetButton');
+  var throttledRunClick = _.debounce(this.runButtonClick, 250, true);
+  dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
+  dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
+
+  var belowViz = document.getElementById('belowVisualization');
+  var referenceArea = document.getElementById('reference_area');
+  if (referenceArea) {
+    belowViz.appendChild(referenceArea);
+  }
+
+  var visualizationColumn = document.getElementById('visualizationColumn');
+  var visualization = document.getElementById('visualization');
+
+  // center game screen in embed mode
+  if(config.embed) {
+    visualizationColumn.style.margin = "0 auto";
+  }
+
+  if (this.usingBlockly && config.level.edit_blocks) {
+    // Set a class on the main blockly div so CSS can style blocks differently
+    Blockly.addClass_(container.querySelector('#blockly'), 'edit');
+    // If in level builder editing blocks, make workspace extra tall
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      this.blockYCoordinateInterval = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
+    // Enable param & var editing in levelbuilder, regardless of level setting
+    config.level.disableParamEditing = false;
+    config.level.disableVariableEditing = false;
+  } else if (!config.hide_source) {
+    visualizationColumn.style.minHeight = this.MIN_WORKSPACE_HEIGHT + 'px';
+  }
+
+  if (!config.embed && !this.share) {
+    // Make the visualization responsive to screen size, except on share page.
+    visualization.className += " responsive";
+    visualizationColumn.className += " responsive";
+  }
+};
+
+/**
+ *
+ */
+StudioAppClass.prototype.handleHideSource_ = function (options) {
+  var container = document.getElementById(options.containerId);
+  this.hideSource = true;
+  var workspaceDiv = this.editCode ?
+    document.getElementById('codeWorkspace') :
+    container.querySelector('#blockly');
+  if(!options.embed || options.level.skipInstructionsPopup) {
+    container.className = 'hide-source';
+  }
+  workspaceDiv.style.display = 'none';
+  // For share page on mobile, do not show this part.
+  if ((!options.embed) && (!this.share || !dom.isMobile())) {
+    var buttonRow = runButton.parentElement;
+    var openWorkspace = document.createElement('button');
+    openWorkspace.setAttribute('id', 'open-workspace');
+    openWorkspace.appendChild(document.createTextNode(msg.openWorkspace()));
+
+    var belowViz = document.getElementById('belowVisualization');
+    belowViz.appendChild(this.feedback_.createSharingDiv({
+      response: {
+        level_source: window.location,
+        level_source_id: options.level_source_id,
+        phone_share_url: options.phone_share_url
+      },
+      sendToPhone: options.sendToPhone,
+      level: options.level,
+      twitter: options.twitter,
+      onMainPage: true
+    }));
+
+    dom.addClickTouchEvent(openWorkspace, function() {
+      // Redirect user to /edit version of this page. It would be better
+      // to just turn on the workspace but there are rendering issues
+      // with that.
+      window.location.href = window.location.href + '/edit';
+    });
+
+    buttonRow.appendChild(openWorkspace);
+  }
+};
+
+StudioAppClass.prototype.handleEditCode_ = function (options) {
+  // using window.require forces us to use requirejs version of require
+  window.require(['droplet'], _.bind(function(droplet) {
+    var displayMessage, examplePrograms, messageElement, onChange, startingText;
+    this.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
+      mode: 'javascript',
+      modeOptions: utils.generateDropletModeOptions(options.codeFunctions),
+      palette: utils.generateDropletPalette(options.codeFunctions,
+        options.categoryInfo)
+    });
+
+    this.editor.aceEditor.setShowPrintMargin(false);
+
+    // Add an ace completer for the API functions exposed for this level
+    if (options.codeFunctions) {
+      var langTools = window.ace.require("ace/ext/language_tools");
+      langTools.addCompleter(
+        utils.generateAceApiCompleter(options.codeFunctions));
+    }
+
+    this.editor.aceEditor.setOptions({
+      enableBasicAutocompletion: true,
+      enableLiveAutocompletion: true
+    });
+
+    if (options.afterInject) {
+      options.afterInject();
+    }
+
+    if (options.startBlocks) {
+      this.editor.setValue(options.startBlocks);
+    }
+  }, this));
+};
+
+/**
+ *
+ */
+StudioAppClass.prototype.handleUsingBlockly_ = function (config) {
+  // Allow empty blocks if editing blocks.
+  if (config.level.edit_blocks) {
+    this.CHECK_FOR_EMPTY_BLOCKS = false;
+    if (config.level.edit_blocks === 'required_blocks' ||
+      config.level.edit_blocks === 'toolbox_blocks') {
+      // Don't show when run block for toolbox/required block editing
+      config.forceInsertTopBlock = null;
+    }
+  }
+
+  // If levelbuilder provides an empty toolbox, some apps (like artist)
+  // replace it with a full toolbox. I think some levels may depend on this
+  // behavior. We want a way to specify no toolbox, which is <xml></xml>
+  if (config.level.toolbox) {
+    var toolboxWithoutWhitespace = config.level.toolbox.replace(/\s/g, '');
+    if (toolboxWithoutWhitespace === '<xml></xml>' ||
+        toolboxWithoutWhitespace === '<xml/>') {
+      config.level.toolbox = undefined;
+    }
+  }
+
+  var div = document.getElementById('blockly');
+  var options = {
+    toolbox: config.level.toolbox,
+    disableParamEditing: config.level.disableParamEditing === undefined ?
+        true : config.level.disableParamEditing,
+    disableVariableEditing: config.level.disableVariableEditing === undefined ?
+        false : config.level.disableVariableEditing,
+    useModalFunctionEditor: config.level.useModalFunctionEditor === undefined ?
+        false : config.level.useModalFunctionEditor,
+    useContractEditor: config.level.useContractEditor === undefined ?
+        false : config.level.useContractEditor,
+    defaultNumExampleBlocks: config.level.defaultNumExampleBlocks === undefined ?
+        0 : config.level.defaultNumExampleBlocks,
+    scrollbars: config.level.scrollbars,
+    editBlocks: config.level.edit_blocks === undefined ?
+        false : config.level.edit_blocks
+  };
+  ['trashcan', 'concreteBlocks', 'varsInGlobals',
+    'grayOutUndeletableBlocks', 'disableParamEditing'].forEach(
+    function (prop) {
+      if (config[prop] !== undefined) {
+        options[prop] = config[prop];
+      }
+    });
+  this.inject(div, options);
+
+  if (config.afterInject) {
+    config.afterInject();
+  }
+
+  // Add the starting block(s).
+  var startBlocks = config.level.startBlocks || '';
+  if (config.forceInsertTopBlock) {
+    startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
+  }
+  startBlocks = this.arrangeBlockPosition(startBlocks, config.blockArrangement);
+  this.loadBlocks(startBlocks);
+};
+
+/**
+ * Modify the workspace header after a droplet blocks/code toggle
+ */
+StudioAppClass.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
+  // Update header titles:
+  var showCodeHeader = document.getElementById('show-code-header');
+  var newButtonTitle = usingBlocks ? msg.showCodeHeader() :
+    msg.showBlocksHeader();
+  showCodeHeader.firstChild.innerText = newButtonTitle;
+
+  var workspaceHeaderSpan = document.getElementById('workspace-header-span');
+  newButtonTitle = usingBlocks ? msg.workspaceHeader() :
+    msg.workspaceHeaderJavaScript();
+  workspaceHeaderSpan.innerText = newButtonTitle;
+
+  var blockCount = document.getElementById('blockCounter');
+  if (blockCount) {
+    blockCount.style.display =
+      (usingBlocks && this.enableShowBlockCount) ? 'inline-block' : 'none';
+  }
+
+  // Resize (including headers), so the category header will appear/disappear:
+  this.onResize();
+};
+
+},{"../locale/hr_hr/common":41,"./ResizeSensor":1,"./block_utils":5,"./builder":16,"./constants.js":18,"./dom":19,"./templates/buttons.html":26,"./templates/instructions.html":28,"./templates/learn.html":29,"./templates/makeYourOwn.html":30,"./utils":38,"./xml":39}],3:[function(require,module,exports){
+var utils = require('./utils');
+var _ = utils.getLodash();
+var requiredBlockUtils = require('./required_block_utils');
+var StudioAppClass = require('./StudioApp');
+
+var studioAppSingleton = require('./base');
+window.StudioApp = studioAppSingleton;
+
+// TODO (br-pair) : This is to expose methods we need in the global namespace
+// for testing purpose. Would be nice to eliminate this eventually.
+window.__TestInterface = {
+  loadBlocks: _.bind(studioAppSingleton.loadBlocks, studioAppSingleton)
+};
+
+var addReadyListener = require('./dom').addReadyListener;
+var blocksCommon = require('./blocksCommon');
+
+function StubDialog(options) {
+  this.options = options;
+  console.log("Creating Dialog");
+  console.log(options);
+}
+StubDialog.prototype.show = function() {
+  console.log("Showing Dialog");
+  if (this.options.body) {
+    console.log(this.options.body.innerHTML);
+  }
+  console.log(this);
+};
+StubDialog.prototype.hide = function() {
+  console.log("Hiding Dialog");
+  console.log(this);
+};
+
+module.exports = function(app, levels, options) {
+
+  // If a levelId is not provided, then options.level is specified in full.
+  // Otherwise, options.level overrides resolved level on a per-property basis.
+  if (options.levelId) {
+    var level = levels[options.levelId];
+    options.level = options.level || {};
+    options.level.id = options.levelId;
+    for (var prop in options.level) {
+      level[prop] = options.level[prop];
+    }
+
+    if (options.level.levelBuilderRequiredBlocks) {
+      level.requiredBlocks = requiredBlockUtils.makeTestsFromBuilderRequiredBlocks(
+          options.level.levelBuilderRequiredBlocks);
+    }
+
+    options.level = level;
+  }
+
+  options.Dialog = options.Dialog || StubDialog;
+
+  studioAppSingleton.configure(options);
+
+  options.skin = options.skinsModule.load(studioAppSingleton.assetUrl, options.skinId);
+
+  if (studioAppSingleton.usingBlockly) {
+    var blockInstallOptions = {
+      skin: options.skin,
+      isK1: options.level && options.level.isK1
+    };
+
+    if (options.level && options.level.edit_blocks) {
+      utils.wrapNumberValidatorsForLevelBuilder();
+    }
+
+    blocksCommon.install(Blockly, blockInstallOptions);
+    options.blocksModule.install(Blockly, blockInstallOptions);
+  }
+
+  addReadyListener(function() {
+    if (options.readonly) {
+      if (app.initReadonly) {
+        app.initReadonly(options);
+      } else {
+        studioAppSingleton.initReadonly(options);
+      }
+    } else {
+      app.init(options);
+      if (options.onInitialize) {
+        options.onInitialize();
+      }
+    }
+  });
+};
+
+},{"./StudioApp":2,"./base":4,"./blocksCommon":6,"./dom":19,"./required_block_utils":23,"./utils":38}],4:[function(require,module,exports){
+/**
+ * Blockly Apps: Common code
+ *
+ * Copyright 2013 Google Inc.
+ * http://blockly.googlecode.com/
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * @fileoverview Common support code for Blockly apps.
+ * @author fraser@google.com (Neil Fraser)
+ */
+"use strict";
+
+/**
+ * Load the StudioAppClass and create a singleton instance of it, which we export
+ * as singleton. Most of our apps will load this singleton into a global, the
+ * expception currently being Artist
+ */
+var StudioAppClass = require('./StudioApp');
+var studioAppSingleton = new StudioAppClass();
+var feedback = require('./feedback');
+
+module.exports = studioAppSingleton;
+
+// TODO (br-pair) : This is how we associate our singleton feedback object with
+// our singleton StudioApp object. We can almost certainly do this more cleanly..
+feedback.applySingleton(studioAppSingleton);
+studioAppSingleton.feedback_ = feedback;
+
+},{"./StudioApp":2,"./feedback":20}],5:[function(require,module,exports){
 var xml = require('./xml');
 
 exports.createToolbox = function(blocks) {
@@ -1550,7 +1702,7 @@ exports.mathBlockXml = function (type, inputs, titles) {
   return str;
 };
 
-},{"./xml":39}],5:[function(require,module,exports){
+},{"./xml":39}],6:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -1715,7 +1867,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/hr_hr/common":41}],6:[function(require,module,exports){
+},{"../locale/hr_hr/common":41}],7:[function(require,module,exports){
 var tiles = require('./tiles');
 var Direction = tiles.Direction;
 var SquareType = tiles.SquareType;
@@ -1897,7 +2049,7 @@ exports.bounceBall = function(id) {
 };
 
 
-},{"./tiles":13}],7:[function(require,module,exports){
+},{"./tiles":14}],8:[function(require,module,exports){
 /**
  * Blockly App: Bounce
  *
@@ -2392,7 +2544,7 @@ exports.install = function(blockly, blockInstallOptions) {
   delete blockly.Blocks.procedures_ifreturn;
 };
 
-},{"../../locale/hr_hr/bounce":40,"../codegen":16}],8:[function(require,module,exports){
+},{"../../locale/hr_hr/bounce":40,"../codegen":17}],9:[function(require,module,exports){
 /**
  * Blockly App: Bounce
  *
@@ -3797,7 +3949,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/hr_hr/bounce":40,"../../locale/hr_hr/common":41,"../base":3,"../codegen":16,"../dom":18,"../feedback.js":19,"../hammer":20,"../skins":23,"../templates/page.html":31,"../timeoutList":37,"../utils":38,"./api":6,"./controls.html":9,"./tiles":13,"./visualization.html":14}],9:[function(require,module,exports){
+},{"../../locale/hr_hr/bounce":40,"../../locale/hr_hr/common":41,"../base":4,"../codegen":17,"../dom":19,"../feedback.js":20,"../hammer":21,"../skins":24,"../templates/page.html":31,"../timeoutList":37,"../utils":38,"./api":7,"./controls.html":10,"./tiles":14,"./visualization.html":15}],10:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -3821,7 +3973,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/hr_hr/bounce":40,"../../locale/hr_hr/common":41,"ejs":42}],10:[function(require,module,exports){
+},{"../../locale/hr_hr/bounce":40,"../../locale/hr_hr/common":41,"ejs":42}],11:[function(require,module,exports){
 /*jshint multistr: true */
 
 var Direction = require('./tiles').Direction;
@@ -4252,7 +4404,7 @@ module.exports = {
   },
 };
 
-},{"../block_utils":4,"./tiles":13}],11:[function(require,module,exports){
+},{"../block_utils":5,"./tiles":14}],12:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Bounce = require('./bounce');
@@ -4270,7 +4422,7 @@ window.bounceMain = function(options) {
 };
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":2,"./blocks":7,"./bounce":8,"./levels":10,"./skins":12}],12:[function(require,module,exports){
+},{"../appMain":3,"./blocks":8,"./bounce":9,"./levels":11,"./skins":13}],13:[function(require,module,exports){
 /**
  * Load Skin for Bounce.
  */
@@ -4363,7 +4515,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":23}],13:[function(require,module,exports){
+},{"../skins":24}],14:[function(require,module,exports){
 'use strict';
 
 /**
@@ -4402,7 +4554,7 @@ exports.SquareType = {
   OBSTACLE: 64
 };
 
-},{}],14:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -4423,7 +4575,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":42}],15:[function(require,module,exports){
+},{"ejs":42}],16:[function(require,module,exports){
 var feedback = require('./feedback.js');
 var dom = require('./dom.js');
 var utils = require('./utils.js');
@@ -4437,7 +4589,7 @@ exports.builderForm = function(onAttemptCallback) {
   var dialog = feedback.createModalDialogWithIcon({
     Dialog: StudioApp.Dialog,
     contentDiv: builderDetails,
-    icon: StudioApp.ICON
+    icon: StudioApp.icon
   });
   var createLevelButton = document.getElementById('create-level-button');
   dom.addClickTouchEvent(createLevelButton, function() {
@@ -4453,7 +4605,7 @@ exports.builderForm = function(onAttemptCallback) {
   dialog.show({ backdrop: 'static' });
 };
 
-},{"./dom.js":18,"./feedback.js":19,"./templates/builder.html":25,"./utils.js":38,"url":52}],16:[function(require,module,exports){
+},{"./dom.js":19,"./feedback.js":20,"./templates/builder.html":25,"./utils.js":38,"url":52}],17:[function(require,module,exports){
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
@@ -4810,7 +4962,7 @@ exports.functionFromCode = function(code, options) {
   }
 };
 
-},{}],17:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 /**
  * @fileoverview Constants used in production code and tests.
  */
@@ -4877,7 +5029,7 @@ exports.BeeTerminationValue = {
   INSUFFICIENT_HONEY: 8  // Didn't make all honey by finish
 };
 
-},{}],18:[function(require,module,exports){
+},{}],19:[function(require,module,exports){
 exports.addReadyListener = function(callback) {
   if (document.readyState === "complete") {
     setTimeout(callback, 1);
@@ -4984,7 +5136,7 @@ exports.isIOS = function() {
   return reg.test(window.navigator.userAgent);
 };
 
-},{}],19:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 var trophy = require('./templates/trophy.html');
 var utils = require('./utils');
 var readonly = require('./templates/readonly.html');
@@ -4993,6 +5145,16 @@ var msg = require('../locale/hr_hr/common');
 var dom = require('./dom');
 var xml = require('./xml');
 var _ = utils.getLodash();
+
+// TODO (br-pair): This is a hack. We initially set our studioAppSingleton to
+// be the global StudioApp. This will be the case for all apps other than Artist.
+// However, that global is not necessarily set yet at the point where we load
+// feedback, and requiring base here introduces a circular dependency. Instead,
+// we depend on base apply the singleton to the feedback object i required.
+var studioAppSingleton;
+exports.applySingleton = function (singleton) {
+  studioAppSingleton = singleton;
+};
 
 var TestResults = require('./constants').TestResults;
 
@@ -5017,7 +5179,7 @@ exports.displayFeedback = function(options) {
   var showingSharing = options.showingSharing && !hadShareFailure;
 
   var canContinue = exports.canContinueToNextLevel(options.feedbackType);
-  var displayShowCode = StudioApp.enableShowCode && canContinue && !showingSharing;
+  var displayShowCode = studioAppSingleton.enableShowCode && canContinue && !showingSharing;
   var feedback = document.createElement('div');
   var sharingDiv = (canContinue && showingSharing) ? exports.createSharingDiv(options) : null;
   var showCode = displayShowCode ? getShowCodeElement(options) : null;
@@ -5092,7 +5254,7 @@ exports.displayFeedback = function(options) {
   var onlyContinue = continueButton && !againButton && !previousLevelButton;
 
   var onHidden = onlyContinue ? options.onContinue : null;
-  var icon = canContinue ? StudioApp.WIN_ICON : StudioApp.FAILURE_ICON;
+  var icon = canContinue ? studioAppSingleton.winIcon : studioAppSingleton.failureIcon;
   var defaultBtnSelector = onlyContinue ? '#continue-button' : '#again-button';
 
   var feedbackDialog = exports.createModalDialogWithIcon({
@@ -5219,7 +5381,7 @@ exports.displayFeedback = function(options) {
  */
 exports.getNumBlocksUsed = function() {
   var i;
-  if (StudioApp.editCode) {
+  if (studioAppSingleton.editCode) {
     var codeLines = 0;
     // quick and dirty method to count non-blank lines that don't start with //
     var lines = getGeneratedCodeString().split("\n");
@@ -5240,7 +5402,7 @@ exports.getNumBlocksUsed = function() {
  */
 exports.getNumCountableBlocks = function() {
   var i;
-  if (StudioApp.editCode) {
+  if (studioAppSingleton.editCode) {
     var codeLines = 0;
     // quick and dirty method to count non-blank lines that don't start with //
     var lines = getGeneratedCodeString().split("\n");
@@ -5268,7 +5430,7 @@ var getFeedbackButtons = function(options) {
       hintRequestExperiment: options.hintRequestExperiment &&
           (options.hintRequestExperiment === exports.HintRequestPlacement.LEFT ?
               'left' : 'right'),
-      assetUrl: StudioApp.assetUrl,
+      assetUrl: studioAppSingleton.assetUrl,
       freePlay: options.freePlay
     }
   });
@@ -5357,7 +5519,7 @@ var getFeedbackMessage = function(options) {
         break;
       case TestResults.TOO_MANY_BLOCKS_FAIL:
         message = msg.numBlocksNeeded({
-          numBlocks: StudioApp.IDEAL_BLOCK_NUM,
+          numBlocks: studioAppSingleton.IDEAL_BLOCK_NUM,
           puzzleNumber: options.level.puzzle_number || 0
         });
         break;
@@ -5418,7 +5580,7 @@ var getFeedbackMessage = function(options) {
     // Insert an image
     var imageDiv = document.createElement('img');
     imageDiv.className = "hint-image";
-    imageDiv.src = StudioApp.assetUrl(
+    imageDiv.src = studioAppSingleton.assetUrl(
       'media/lightbulb_for_' + options.response.design + '.png');
     feedbackDiv.appendChild(imageDiv);
     // Add new text
@@ -5440,7 +5602,7 @@ exports.createSharingDiv = function(options) {
     return null;
   }
 
-  if (StudioApp.disableSocialShare) {
+  if (studioAppSingleton.disableSocialShare) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
@@ -5479,6 +5641,8 @@ exports.createSharingDiv = function(options) {
                       options.response.level_source;
     options.facebookUrl = facebookUrl;
   }
+
+  options.assetUrl = _.bind(studioAppSingleton.assetUrl, studioAppSingleton);
 
   var sharingDiv = document.createElement('div');
   sharingDiv.setAttribute('style', 'display:inline-block');
@@ -5596,7 +5760,7 @@ var getShowCodeElement = function(options) {
 /**
  * Determines whether the user can proceed to the next level, based on the level feedback
  * @param {number} feedbackType A constant property of TestResults,
- *     typically produced by StudioApp.getTestResults().
+ *     typically produced by studioAppSingleton.getTestResults().
  */
 exports.canContinueToNextLevel = function(feedbackType) {
   return (feedbackType === TestResults.ALL_PASS ||
@@ -5609,8 +5773,8 @@ exports.canContinueToNextLevel = function(feedbackType) {
  * Retrieve a string containing the user's generated Javascript code.
  */
 var getGeneratedCodeString = function() {
-  if (StudioApp.editCode) {
-    return StudioApp.editor ? StudioApp.editor.getValue() : '';
+  if (studioAppSingleton.editCode) {
+    return studioAppSingleton.editor ? studioAppSingleton.editor.getValue() : '';
   }
   else {
     return codegen.workspaceCode(Blockly);
@@ -5661,13 +5825,13 @@ var FeedbackBlocks = function(options) {
   this.div = document.createElement('div');
   this.html = readonly({
     app: options.app,
-    assetUrl: StudioApp.assetUrl,
+    assetUrl: studioAppSingleton.assetUrl,
     options: {
       readonly: true,
-      locale: StudioApp.LOCALE,
-      localeDirection: StudioApp.localeDirection(),
-      baseUrl: StudioApp.BASE_URL,
-      cacheBust: StudioApp.CACHE_BUST,
+      locale: studioAppSingleton.LOCALE,
+      localeDirection: studioAppSingleton.localeDirection(),
+      baseUrl: studioAppSingleton.BASE_URL,
+      cacheBust: studioAppSingleton.CACHE_BUST,
       skinId: options.skin,
       level: options.level,
       blocks: generateXMLForBlocks(blocksToDisplay)
@@ -5695,7 +5859,7 @@ var getGeneratedCodeElement = function() {
     harvardLink: "<a href='https://cs50.harvard.edu/' target='_blank'>Harvard</a>"
   };
 
-  var infoMessage = StudioApp.editCode ?  "" : msg.generatedCodeInfo(codeInfoMsgParams);
+  var infoMessage = studioAppSingleton.editCode ?  "" : msg.generatedCodeInfo(codeInfoMsgParams);
   var code = getGeneratedCodeString();
 
   var codeDiv = document.createElement('div');
@@ -5721,9 +5885,38 @@ exports.showGeneratedCode = function(Dialog) {
   var dialog = exports.createModalDialogWithIcon({
       Dialog: Dialog,
       contentDiv: codeDiv,
-      icon: StudioApp.ICON,
+      icon: studioAppSingleton.icon,
       defaultBtnSelector: '#ok-button'
       });
+
+  var okayButton = buttons.querySelector('#ok-button');
+  if (okayButton) {
+    dom.addClickTouchEvent(okayButton, function() {
+      dialog.hide();
+    });
+  }
+
+  dialog.show();
+};
+
+exports.showToggleBlocksError = function(Dialog) {
+  var contentDiv = document.createElement('div');
+  contentDiv.innerHTML = msg.toggleBlocksErrorMsg();
+
+  var buttons = document.createElement('div');
+  buttons.innerHTML = require('./templates/buttons.html')({
+    data: {
+      ok: true
+    }
+  });
+  contentDiv.appendChild(buttons);
+
+  var dialog = exports.createModalDialogWithIcon({
+      Dialog: Dialog,
+      contentDiv: contentDiv,
+      icon: studioAppSingleton.icon,
+      defaultBtnSelector: '#ok-button'
+  });
 
   var okayButton = buttons.querySelector('#ok-button');
   if (okayButton) {
@@ -5801,7 +5994,7 @@ var getCountableBlocks = function() {
 
 /**
  * Check to see if the user's code contains the required blocks for a level.
- * This never returns more than StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG.
+ * This never returns more than studioAppSingleton.NUM_REQUIRED_BLOCKS_TO_FLAG.
  * @return {{blocksToDisplay:!Array, message:?string}} 'missingBlocks' is an
  * array of array of strings where each array of strings is a set of blocks that
  * at least one of them should be used. Each block is represented as the prefix
@@ -5812,17 +6005,17 @@ var getMissingRequiredBlocks = function () {
   var missingBlocks = [];
   var customMessage = null;
   var code = null;  // JavaScript code, which is initialized lazily.
-  if (StudioApp.REQUIRED_BLOCKS && StudioApp.REQUIRED_BLOCKS.length) {
+  if (studioAppSingleton.REQUIRED_BLOCKS && studioAppSingleton.REQUIRED_BLOCKS.length) {
     var userBlocks = getUserBlocks();
     // For each list of required blocks
     // Keep track of the number of the missing block lists. It should not be
-    // bigger than StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG
+    // bigger than studioAppSingleton.NUM_REQUIRED_BLOCKS_TO_FLAG
     var missingBlockNum = 0;
     for (var i = 0;
-         i < StudioApp.REQUIRED_BLOCKS.length &&
-             missingBlockNum < StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG;
+         i < studioAppSingleton.REQUIRED_BLOCKS.length &&
+             missingBlockNum < studioAppSingleton.NUM_REQUIRED_BLOCKS_TO_FLAG;
          i++) {
-      var requiredBlock = StudioApp.REQUIRED_BLOCKS[i];
+      var requiredBlock = studioAppSingleton.REQUIRED_BLOCKS[i];
       // For each of the test
       // If at least one of the tests succeeded, we consider the required block
       // is used
@@ -5850,7 +6043,7 @@ var getMissingRequiredBlocks = function () {
       }
       if (!usedRequiredBlock) {
         missingBlockNum++;
-        missingBlocks = missingBlocks.concat(StudioApp.REQUIRED_BLOCKS[i][0]);
+        missingBlocks = missingBlocks.concat(studioAppSingleton.REQUIRED_BLOCKS[i][0]);
       }
     }
   }
@@ -5864,7 +6057,7 @@ var getMissingRequiredBlocks = function () {
  * Do we have any floating blocks not attached to an event block or function block?
  */
 exports.hasExtraTopBlocks = function () {
-  if (StudioApp.editCode) {
+  if (studioAppSingleton.editCode) {
     return false;
   }
   var topBlocks = Blockly.mainBlockSpace.getTopBlocks();
@@ -5893,13 +6086,13 @@ exports.hasExtraTopBlocks = function () {
  */
 exports.getTestResults = function(levelComplete, options) {
   options = options || {};
-  if (StudioApp.editCode) {
+  if (studioAppSingleton.editCode) {
     // TODO (cpirich): implement better test results for editCode
     return levelComplete ?
-      StudioApp.TestResults.ALL_PASS :
-      StudioApp.TestResults.TOO_FEW_BLOCKS_FAIL;
+      studioAppSingleton.TestResults.ALL_PASS :
+      studioAppSingleton.TestResults.TOO_FEW_BLOCKS_FAIL;
   }
-  if (StudioApp.CHECK_FOR_EMPTY_BLOCKS && hasEmptyContainerBlocks()) {
+  if (studioAppSingleton.CHECK_FOR_EMPTY_BLOCKS && hasEmptyContainerBlocks()) {
     var type = getEmptyContainerBlock().type;
     if (type === 'procedures_defnoreturn' || type === 'procedures_defreturn') {
       return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
@@ -5935,14 +6128,14 @@ exports.getTestResults = function(levelComplete, options) {
   }
   var numEnabledBlocks = exports.getNumCountableBlocks();
   if (!levelComplete) {
-    if (StudioApp.IDEAL_BLOCK_NUM && StudioApp.IDEAL_BLOCK_NUM !== Infinity &&
-        numEnabledBlocks < StudioApp.IDEAL_BLOCK_NUM) {
+    if (studioAppSingleton.IDEAL_BLOCK_NUM && studioAppSingleton.IDEAL_BLOCK_NUM !== Infinity &&
+        numEnabledBlocks < studioAppSingleton.IDEAL_BLOCK_NUM) {
       return TestResults.TOO_FEW_BLOCKS_FAIL;
     }
     return TestResults.LEVEL_INCOMPLETE_FAIL;
   }
-  if (StudioApp.IDEAL_BLOCK_NUM &&
-      numEnabledBlocks > StudioApp.IDEAL_BLOCK_NUM) {
+  if (studioAppSingleton.IDEAL_BLOCK_NUM &&
+      numEnabledBlocks > studioAppSingleton.IDEAL_BLOCK_NUM) {
     return TestResults.TOO_MANY_BLOCKS_FAIL;
   } else {
     return TestResults.ALL_PASS;
@@ -6139,7 +6332,7 @@ function hasMatchingDescendant(node, filter) {
 }
 
 
-},{"../locale/hr_hr/common":41,"./codegen":16,"./constants":17,"./dom":18,"./templates/buttons.html":26,"./templates/code.html":27,"./templates/readonly.html":32,"./templates/shareFailure.html":33,"./templates/sharing.html":34,"./templates/showCode.html":35,"./templates/trophy.html":36,"./utils":38,"./xml":39}],20:[function(require,module,exports){
+},{"../locale/hr_hr/common":41,"./codegen":17,"./constants":18,"./dom":19,"./templates/buttons.html":26,"./templates/code.html":27,"./templates/readonly.html":32,"./templates/shareFailure.html":33,"./templates/sharing.html":34,"./templates/showCode.html":35,"./templates/trophy.html":36,"./utils":38,"./xml":39}],21:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-22
  * http://eightmedia.github.io/hammer.js
  *
@@ -8303,12 +8496,12 @@ if(typeof define == 'function' && define.amd) {
 }
 
 })(window);
-},{}],21:[function(require,module,exports){
+},{}],22:[function(require,module,exports){
 (function (global){
 /**
  * @license
  * Lo-Dash 2.4.1 (Custom Build) <http://lodash.com/>
- * Build: `lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap,size" --output src/lodash.js`
+ * Build: `lodash include="debounce,reject,map,value,range,without,sample,create,flatten,isEmpty,wrap,size,bind" --output src/lodash.js`
  * Copyright 2012-2013 The Dojo Foundation <http://dojofoundation.org/>
  * Based on Underscore.js 1.5.2 <http://underscorejs.org/LICENSE>
  * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -11256,7 +11449,7 @@ if(typeof define == 'function' && define.amd) {
 }.call(this));
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],22:[function(require,module,exports){
+},{}],23:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -11534,7 +11727,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"../locale/hr_hr/common":41,"./block_utils":4,"./utils":38,"./xml":39}],23:[function(require,module,exports){
+},{"../locale/hr_hr/common":41,"./block_utils":5,"./utils":38,"./xml":39}],24:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -11608,272 +11801,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{}],24:[function(require,module,exports){
-/**
- * Blockly Apps: SVG Slider
- *
- * Copyright 2012 Google Inc.
- * http://blockly.googlecode.com/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/**
- * @fileoverview A slider control in SVG.
- * @author fraser@google.com (Neil Fraser)
- */
-'use strict';
-var dom = require('./dom');
-
-/**
- * Object representing a horizontal slider widget.
- * @param {number} x The horizontal offset of the slider.
- * @param {number} y The vertical offset of the slider.
- * @param {number} width The total width of the slider.
- * @param {!Element} svgParent The SVG element to append the slider to.
- * @param {Function} opt_changeFunc Optional callback function that will be
- *     called when the slider is moved.  The current value is passed.
- * @constructor
- */
-var Slider = function(x, y, width, svgParent, opt_changeFunc) {
-  this.KNOB_Y_ = y - 12;
-  this.KNOB_MIN_X_ = x + 8;
-  this.KNOB_MAX_X_ = x + width - 8;
-  this.value_ = 0.5;
-  this.changeFunc_ = opt_changeFunc;
-  this.isAndroid_ = dom.isAndroid();
-  this.isIOS_ = dom.isIOS();
-  this.isWindowsTouch_ = dom.isWindowsTouch();
-
-  // Draw the slider.
-  /*
-  <line class="sliderTrack" x1="10" y1="35" x2="140" y2="35" />
-  <path id="knob"
-      transform="translate(67, 23)"
-      d="m 8,0 l -8,8 v 12 h 16 v -12 z" />
-  */
-  var track = document.createElementNS(Slider.SVG_NS_, 'line');
-  track.setAttribute('class', 'sliderTrack');
-  track.setAttribute('x1', x);
-  track.setAttribute('y1', y);
-  track.setAttribute('x2', x + width);
-  track.setAttribute('y2', y);
-  svgParent.appendChild(track);
-  this.track_ = track;
-  var knob = document.createElementNS(Slider.SVG_NS_, 'path');
-  knob.setAttribute('class', 'sliderKnob');
-  knob.setAttribute('d', 'm 0,0 l -8,8 v 12 h 16 v -12 z');
-  svgParent.appendChild(knob);
-  this.knob_ = knob;
-  this.setValue(0.5);
-
-  // Find the root SVG object.
-  while (svgParent && svgParent.nodeName.toLowerCase() != 'svg') {
-    svgParent = svgParent.parentNode;
-  }
-  this.SVG_ = svgParent;
-
-  // Bind the events to this slider.
-  var thisSlider = this;
-  dom.addMouseDownTouchEvent(this.knob_, function(e) {
-    return thisSlider.knobMouseDown_(e);
-  });
-  dom.addMouseDownTouchEvent(this.track_, function(e) {
-    return thisSlider.trackMouseDown_(e);
-  });
-  dom.addMouseUpTouchEvent(this.SVG_, Slider.knobMouseUp_);
-  dom.addMouseMoveTouchEvent(this.SVG_, Slider.knobMouseMove_);
-  // Don't add touch events for mouseover. The UX is better on Android
-  // and iOS if the drag action is allowed to continue when the
-  // touchmove target moves above or below the SVG element.
-  Slider.bindEvent_(document, 'mouseover', Slider.mouseOver_);
-};
-
-Slider.SVG_NS_ = 'http://www.w3.org/2000/svg';
-
-Slider.activeSlider_ = null;
-Slider.startMouseX_ = 0;
-Slider.startKnobX_ = 0;
-
-/**
- * Start a drag when clicking down on the knob.
- * @param {!Event} e Mouse-down event.
- * @private
- */
-Slider.prototype.knobMouseDown_ = function(e) {
-  this.beginDrag_(this.mouseToSvg_(e));
-
-  // Stop browser from attempting to drag the knob.
-  e.preventDefault();
-  return false;
-};
-
-/**
- * Snap the knob to the mouse location and start a drag
- * when clicking on the track (but not on the knob).
- * @param {!Event} e Mouse-down event.
- * @private
- */
-Slider.prototype.trackMouseDown_ = function(e) {
-  var mouseSVGPosition = this.mouseToSvg_(e);
-  this.snapToPosition_(mouseSVGPosition.x);
-  this.beginDrag_(mouseSVGPosition);
-
-  // Stop browser from attempting to drag the track.
-  e.preventDefault();
-  return false;
-};
-
-/**
- * Start dragging the slider knob.
- * @param {!Object} mouseStartSVG Mouse start position in SVG space
- * @private
- */
-Slider.prototype.beginDrag_ = function(startMouseSVG) {
-  Slider.activeSlider_ = this;
-  Slider.startMouseX_ = startMouseSVG.x;
-  Slider.startKnobX_ = 0;
-  var transform = this.knob_.getAttribute('transform');
-  if (transform) {
-    var r = transform.match(/translate\(\s*([-\d.]+)/);
-    if (r) {
-      Slider.startKnobX_ = Number(r[1]);
-    }
-  }
-};
-
-/**
- * Snap the slider knob to the clicked position.
- * @param {number} xPosition SVG x-coordinate
- * @private
- */
-Slider.prototype.snapToPosition_ = function(xPosition) {
-  var x = Math.min(Math.max(xPosition, 
-        this.KNOB_MIN_X_), this.KNOB_MAX_X_);
-  this.knob_.setAttribute('transform',
-      'translate(' + x + ',' + this.KNOB_Y_ + ')');
-
-  this.value_ = (x - this.KNOB_MIN_X_) /
-      (this.KNOB_MAX_X_ - this.KNOB_MIN_X_);
-  if (this.changeFunc_) {
-    this.changeFunc_(this.value_);
-  }
-};
-
-/**
- * Stop a drag when clicking up anywhere.
- * @param {Event} e Mouse-up event.
- * @private
- */
-Slider.knobMouseUp_ = function(e) {
-  Slider.activeSlider_ = null;
-};
-
-/**
- * Stop a drag when the mouse enters a node not part of the SVG.
- * @param {Event} e Mouse-up event.
- * @private
- */
-Slider.mouseOver_ = function(e) {
-  if (!Slider.activeSlider_) {
-    return;
-  }
-  // Find the root SVG object.
-  for (var node = e.target; node; node = node.parentNode) {
-    if (node == Slider.activeSlider_.SVG_) {
-      return;
-    }
-  }
-  Slider.knobMouseUp_(e);
-};
-
-/**
- * Drag the knob to follow the mouse.
- * @param {!Event} e Mouse-move event.
- * @private
- */
-Slider.knobMouseMove_ = function(e) {
-  var thisSlider = Slider.activeSlider_;
-  if (!thisSlider) {
-    return;
-  }
-  var x = thisSlider.mouseToSvg_(e).x - Slider.startMouseX_ +
-      Slider.startKnobX_;
-  thisSlider.snapToPosition_(x);
-};
-
-/**
- * Returns the slider's value (0.0 - 1.0).
- * @return {number} Current value.
- */
-Slider.prototype.getValue = function() {
-  return this.value_;
-};
-
-/**
- * Sets the slider's value (0.0 - 1.0).
- * @param {number} value New value.
- */
-Slider.prototype.setValue = function(value) {
-  this.value_ = Math.min(Math.max(value, 0), 1);
-  var x = this.KNOB_MIN_X_ +
-      (this.KNOB_MAX_X_ - this.KNOB_MIN_X_) * this.value_;
-  this.knob_.setAttribute('transform',
-      'translate(' + x + ',' + this.KNOB_Y_ + ')');
-};
-
-/**
- * Convert the mouse coordinates into SVG coordinates.
- * @param {!Object} e Object with x and y mouse coordinates.
- * @return {!Object} Object with x and y properties in SVG coordinates.
- * @private
- */
-Slider.prototype.mouseToSvg_ = function(e) {
-  var svgPoint = this.SVG_.createSVGPoint();
-  // Most browsers provide clientX/Y. iOS only provides pageX/Y.
-  // Android Chrome only provides coordinates within e.changedTouches.
-  if (this.isWindowsTouch_) {
-    // Only screenX/Y properly accounts for zooming in on windows touch.
-    svgPoint.x = e.screenX;
-    svgPoint.y = e.screenY;
-  } else if (this.isAndroid_) {
-    svgPoint.x = e.changedTouches[0].pageX;
-    svgPoint.y = e.changedTouches[0].pageY;
-  } else if (this.isIOS_) {
-    svgPoint.x = e.pageX;
-    svgPoint.y = e.pageY;
-  } else {
-    svgPoint.x = e.clientX;
-    svgPoint.y = e.clientY;
-  }
-  var matrix = this.SVG_.getScreenCTM().inverse();
-  return svgPoint.matrixTransform(matrix);
-};
-
-/**
- * Bind an event to a function call.
- * @param {!Element} element Element upon which to listen.
- * @param {string} name Event name to listen to (e.g. 'mousedown').
- * @param {!Function} func Function to call when event is triggered.
- * @private
- */
-Slider.bindEvent_ = function(element, name, func) {
-  element.addEventListener(name, func, false);
-};
-
-module.exports = Slider;
-
-},{"./dom":18}],25:[function(require,module,exports){
+},{}],25:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -11971,7 +11899,7 @@ escape = escape || function (html){
 var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('');1; var msg = require('../../locale/hr_hr/common') ; buf.push('\n\n');3; var root = location.protocol + '//' + location.host.replace('learn\.', '').replace('studio\.', ''); 
-; buf.push('\n\n<div id="learn">\n\n  <h1><a href="', escape((7,  root )), '">', escape((7,  msg.wantToLearn() )), '</a></h1>\n  <a href="', escape((8,  root )), '"><img id="learn-to-code" src="', escape((8,  StudioApp.assetUrl('media/promo.png') )), '"></a>\n  <a href="', escape((9,  root )), '">', escape((9,  msg.watchVideo() )), '</a>\n  <a href="', escape((10,  root )), '">', escape((10,  msg.tryHOC() )), '</a>\n  <a href="', escape((11,  location.protocol + '//' + location.host 
+; buf.push('\n\n<div id="learn">\n\n  <h1><a href="', escape((7,  root )), '">', escape((7,  msg.wantToLearn() )), '</a></h1>\n  <a href="', escape((8,  root )), '"><img id="learn-to-code" src="', escape((8,  assetUrl('media/promo.png') )), '"></a>\n  <a href="', escape((9,  root )), '">', escape((9,  msg.watchVideo() )), '</a>\n  <a href="', escape((10,  root )), '">', escape((10,  msg.tryHOC() )), '</a>\n  <a href="', escape((11,  location.protocol + '//' + location.host 
 )), '">', escape((11,  msg.signup() )), '</a>\n\n</div>\n'); })();
 } 
 return buf.join('');
@@ -12082,7 +12010,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/hr_hr/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n  <div class="social-buttons">\n  ');10; if (!options.onMainPage) { ; buf.push('\n    <button id="print-button">\n      ', escape((12,  msg.print() )), '\n    </button>\n  ');14; } ; buf.push('\n');15; if (options.alreadySaved) { ; buf.push('\n  <button class="saved-to-gallery" disabled>\n    ', escape((17,  msg.savedToGallery() )), '\n  </button>\n');19; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((21,  msg.saveToGallery() )), '\n  </button>\n');23; } ; buf.push('\n  </div>\n\n');26; if (options.response && options.response.level_source) { ; buf.push('\n  ');27; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((28,  options.appStrings.sharingText )), '</div>\n  ');29; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((32,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');36; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((36,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((37,  StudioApp.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');39; }; buf.push('\n    ');40; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((40,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((41,  StudioApp.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');43; }; buf.push('    ');43; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((44,  StudioApp.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');46; }; buf.push('    ');46; if (options.level.shapewaysUrl && !options.onMainPage && options.sendToPhone) {; buf.push('      <a id="sharing-shapeways" href="" onClick="return false;">\n        <img src=\'', escape((47,  StudioApp.assetUrl("media/shapeways_purple.png") )), '\' />\n      </a>\n    ');49; }; buf.push('  </div>\n');50; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n');58; if (options.response && options.response.level_source && options.level.shapewaysUrl) {; buf.push('  <div id="shapeways-message" class="sharing" style="display: none">\n    <div id="shapeways-message-body">You\'ll be redirected to Shapeways.com to order and purchase a 3D print.</div>\n    <button id="shapeways-print-go-button" onclick="window.open(\'', escape((60,  options.level.shapewaysUrl )), '\', \'_blank\')">Go to Shapeways</button>\n    <div id="shapeways-message-body-disclaimer">Students under 13 years need a parent or guardian to do 3D printing.</div>\n  </div>\n');63; }; buf.push(''); })();
+ buf.push('');1; var msg = require('../../locale/hr_hr/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n  <div class="social-buttons">\n  ');10; if (!options.onMainPage) { ; buf.push('\n    <button id="print-button">\n      ', escape((12,  msg.print() )), '\n    </button>\n  ');14; } ; buf.push('\n');15; if (options.alreadySaved) { ; buf.push('\n  <button class="saved-to-gallery" disabled>\n    ', escape((17,  msg.savedToGallery() )), '\n  </button>\n');19; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((21,  msg.saveToGallery() )), '\n  </button>\n');23; } ; buf.push('\n  </div>\n\n');26; if (options.response && options.response.level_source) { ; buf.push('\n  ');27; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((28,  options.appStrings.sharingText )), '</div>\n  ');29; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((32,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');36; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((36,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((37,  options.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');39; }; buf.push('\n    ');40; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((40,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((41,  options.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');43; }; buf.push('    ');43; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((44,  options.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');46; }; buf.push('    ');46; if (options.level.shapewaysUrl && !options.onMainPage && options.sendToPhone) {; buf.push('      <a id="sharing-shapeways" href="" onClick="return false;">\n        <img src=\'', escape((47,  options.assetUrl("media/shapeways_purple.png") )), '\' />\n      </a>\n    ');49; }; buf.push('  </div>\n');50; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n');58; if (options.response && options.response.level_source && options.level.shapewaysUrl) {; buf.push('  <div id="shapeways-message" class="sharing" style="display: none">\n    <div id="shapeways-message-body">You\'ll be redirected to Shapeways.com to order and purchase a 3D print.</div>\n    <button id="shapeways-print-go-button" onclick="window.open(\'', escape((60,  options.level.shapewaysUrl )), '\', \'_blank\')">Go to Shapeways</button>\n    <div id="shapeways-message-body-disclaimer">Students under 13 years need a parent or guardian to do 3D printing.</div>\n  </div>\n');63; }; buf.push(''); })();
 } 
 return buf.join('');
 };
@@ -12512,7 +12440,7 @@ exports.generateDropletModeOptions = function (codeFunctions) {
   return modeOptions;
 };
 
-},{"./hammer":20,"./lodash":21,"./xml":39}],39:[function(require,module,exports){
+},{"./hammer":21,"./lodash":22,"./xml":39}],39:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -12980,6 +12908,8 @@ exports.signup = function(d){return "Registrirajte se na početni tečaj"};
 exports.hintHeader = function(d){return "Evo savjeta:"};
 
 exports.genericFeedback = function(d){return "Pogledaj kako si završio i pokušaj popraviti svoj program."};
+
+exports.toggleBlocksErrorMsg = function(d){return "You need to correct an error in your program before it can be shown as blocks."};
 
 exports.defaultTwitterText = function(d){return "Pogledaj što sam napravio"};
 
@@ -16849,4 +16779,4 @@ function isNullOrUndefined(arg) {
 
 })( this );
 
-},{}]},{},[11])
+},{}]},{},[12])
