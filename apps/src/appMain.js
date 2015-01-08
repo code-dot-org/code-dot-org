@@ -3,6 +3,7 @@ var requiredBlockUtils = require('./required_block_utils');
 var StudioAppClass = require('./StudioApp');
 
 var studioAppSingleton = require('./base');
+window.StudioApp = studioAppSingleton;
 
 var addReadyListener = require('./dom').addReadyListener;
 var blocksCommon = require('./blocksCommon');

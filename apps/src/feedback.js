@@ -9,11 +9,10 @@ var _ = utils.getLodash();
 
 // TODO (br-pair): This is a hack. We initially set our studioAppSingleton to
 // be the global StudioApp. This will be the case for all apps other than Artist.
-// For artist, we instead pass it our singleon via applySingleton. This approach
-// was taken to avoid a circular require chain between base, StudioAppClass,
-// and feedback.
-var studioAppSingleton = window.StudioApp || global.StudioApp;
-
+// However, that global is not necessarily set yet at the point where we load
+// feedback, and requiring base here introduces a circular dependency. Instead,
+// we depend on base apply the singleton to the feedback object i required.
+var studioAppSingleton;
 exports.applySingleton = function (singleton) {
   studioAppSingleton = singleton;
 };
