@@ -104,6 +104,9 @@ no-NO:
   students_and_lines: '%{students}, elever har gjort kodentimen og skrevet %{lines} kodelinjer.'
   start_hoc: 'Start  kodetimen nå'
   contact_form_topic_press: Media (Intervju eller taler)
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
+  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
   studiobar_title: "Utforsk <a href='http://studio.code.org'>«Code Studio»</a>"
   studiobar_elementary_title: Grunnleggende kurs
   studiobar_elementary_body: 'Våre tre nye kurs for K&#8209;5'
@@ -117,6 +120,8 @@ no-NO:
   studiobar_frozen_body: Skap et magisk vinterlandskap med Anna og Elsa
   studiobar_donate_title: Gi bidrag
   studiobar_donate_body: Et barn vil få mulighet til å lære for hver 10 du bidrar med
+  studiobar_shop_title: Shop
+  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   contact_form_topic_student: Jeg er en elev
   contact_form_topic_parent: Jeg er en forelder
   contact_form_topic_teacher: Jeg er en lærer
@@ -194,9 +199,11 @@ no-NO:
   dashboard_action_save_all: Lagre alle
   dashboard_action_cancel: Avbryt
   dashboard_action_delete: Slett
-  dashboard_action_confirm: Slette?
   dashboard_action_delete_yes: Ja
   dashboard_action_delete_no: Nei
+  dashboard_action_confirm: Slette?
+  dashboard_action_remove: Remove
+  dashboard_action_remove_confirm: Remove?
   dashboard_action_done: Ferdig
   dashboard_action_required: kreves
   dashboard_navigation_home_page: Hjemmeside for lærere

@@ -318,6 +318,7 @@
           description: Una selecció de nivells del Curs 4 per proves d'ús.
           Variables: Variables
           For Loops: Per bucles
+          Binary: Binari
         potus:
           title: Especial
           description_short: Especial
@@ -328,3 +329,43 @@
           description_short: Especial
           description: Especial
           Special: Especial
+          Binary: Binari
+        usabilitymsm:
+          Usability testing for MSM: Usability testing for MSM
+          Evaluation Blocks: Evaluation Blocks
+          Blocks to Math: Blocks to Math
+          Strings and Images: Strings and Images
+          Defining Variables: Defining Variables
+          Defining Functions: Defining Functions
+          Design Recipe: Design Recipe
+          Booleans: Veritat o fals
+          Conditionals: Condicionals
+          Free Play: Free Play
+        algebra:
+          title: Computer Science in Algebra
+          description: Learn Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
+            and Coordinate Planes'
+          'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
+          'Eval: Strings and Images': 'Eval: Cadenes i imatges'
+          'Unplugged: Contracts': 'Unplugged: Contracts'
+          'Eval: Writing Contracts': 'Eval: Writing Contracts'
+          'Calc: Defining Variables': 'Calc: Defining Variables'
+          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Defining Variables
+            (Big Game)'
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': 'Sense connexió: la recepta de disseny'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+          'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
+          'Unplugged: Booleans': 'Sense connexió: Veritat o fals'
+          'Eval: Boolean Operators': 'Eval: operadors Booleans'
+          'Play Lab: Booleans': 'Play Lab: Veritat o fals'
+          'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Sense connexió: Condicionals
+            i funcions definides a trossos'
+          'Eval: Conditionals': 'Eval: Condicionals'
+          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
+            Detection and the Distance Formula'
+          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
+            (Big Game)'

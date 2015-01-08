@@ -8,7 +8,7 @@ az:
           Multi: Multi
           Match: Match
           Math Image: Math Image
-          title: Test Course
+          title: Test kursu
           description: Just an internal test course.
         course1:
           "Jigsaw: Learn to drag and drop": 'Jigsaw: Learn to drag and drop'
@@ -47,54 +47,54 @@ az:
           The Maze: Labirint
           Suzi: Suzi
           The Artist: Rəssam
-          Artist Debugging: Artist Debugging
+          Artist Debugging: Rəssam Sazlama
           Bounce: Bounce
           "Studio: Create a Story": 'Play Lab: Create a Story'
-          Artist Loops: Artist Loops
-          Bee Conditionals: Bee Conditionals
+          Artist Loops: Rəssam Dövrlər
+          Bee Conditionals: Arı Şərti ifadələr
           Flappy: Flappy
           title: Kurs 2
-          Bee Loops: Bee Loops
-          Artist Functions: Artist Functions
-          The Artist Debugging: The Artist Debugging
-          Bee Debugging: Bee Debugging
-          Bee Functions: Bee Functions
-          Maze Loops: Maze Loops
+          Bee Loops: Arı Dövrlər
+          Artist Functions: Rəssam Funksiyalar
+          The Artist Debugging: Rəssam Sazlama
+          Bee Debugging: Arı Sazlama
+          Bee Functions: Arı Funksiyalar
+          Maze Loops: Labirint Dövrlər
           Graph Paper Programming: Millimetrlik kağızda proqramlaşdırma
           "Real-life Algorithms: Paper Planes": 'Real-life Algorithms: Paper Planes'
           Getting Loopy: Getting Loopy
-          Relay programming: Relay programming
+          Relay programming: Estafet proqramlaşdırması
           Conditionals: Şərti ifadələr
           Binary Bracelets: Binary Bracelets
           The Big Event: The Big Event
           Your Digital Footprint: Your Digital Footprint
-          description: Course 2 is designed for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
+          description: Kurs 2 oxumağı bacaran və heç bir ilkin proqramlaşdırma təcrübəsi olmayan şagirdlər üçün hazırlanıb. Bu kursda şagirdlər məsələləri həll etmək üçün proqramlar düzəldəcək və bölüşə biləcəkləri interaktiv oyun və ya əhvalatlar tərtib edəcəklər. 2-5-ci siniflər üçün tövsiyyə olunur.
           "Maze: Sequence": 'Labirint: Ardıcıllıq'
           "Artist: Sequence": 'Rəssam: Ardıcıllıq'
           "Maze: Loops": 'Labirint: Dövrlər'
           "Artist: Loops": 'Rəssam: Dövrlər'
           "Bee: Loops": 'Arı: Dövrlər'
-          "Bee: Debugging": 'Bee: Debugging'
-          "Artist: Debugging": 'Artist: Debugging'
-          "Bee: Conditionals": 'Bee: Conditionals'
+          "Bee: Debugging": Arı Sazlama
+          "Artist: Debugging": 'Rəssam: Sazlama'
+          "Bee: Conditionals": 'Arı: Şərti ifadələr'
           "Artist: Sequence2": 'Artist: Sequence2'
           "Maze: Sequence2": 'Labirint: Ardıcıllıq2'
-          "Artist: Nested Loops": 'Artist: Nested Loops'
+          "Artist: Nested Loops": 'Rəssam: İç-içə dövrlər'
           description_audience: 6+ yaş (oxuma tələb olunur)
-          description_short: Course 2 is designed for students who can read.
+          description_short: Kurs 2 oxumağı bacaran şagirdlər üçün hazırlanıb.
         course3:
           The Maze: Labirint
           "Studio: Create a Story": 'Play Lab: Create a Story'
           The Artist: Rəssam
           title: Kurs 3
-          Artist Functions: Artist Functions
+          Artist Functions: Rəssam Funksiyalar
           Artist For Loops: Artist For Loops
           Artist Nested Loops: Artist Nested Loops
-          Bee Conditionals: Bee Conditionals
+          Bee Conditionals: Arı Şərti ifadələr
           Bee Nested Loops: Bee Nested Loops
           Bee Debuggin: Bee Debuggin
-          Bee Debugging: Bee Debugging
-          Bee Functions: Bee Functions
+          Bee Debugging: Arı Sazlama
+          Bee Functions: Arı Funksiyalar
           Artist Functions with Params: Artist Functions with Params
           Bounce: Bounce
           Maze Conditionals: Maze Conditionals
@@ -113,19 +113,19 @@ az:
           Artist: Rəssam
           "Artist: Functions": 'Artist: Functions'
           "Bee: Functions": 'Arı: Funksiyalar'
-          "Bee: Conditionals": 'Bee: Conditionals'
+          "Bee: Conditionals": 'Arı: Şərti ifadələr'
           "Maze: Conditionals": 'Maze: Conditionals'
           "Artist: Nested Loops": 'Artist: Nested Loops'
           "Farmer: While Loops": 'Farmer: While Loops'
           "Bee: Nested Loops": 'Bee: Nested Loops'
-          "Bee: Debugging": 'Bee: Debugging'
+          "Bee: Debugging": Arı Sazlama
           Maze2: Labirint2
-          Artist2: Artist2
-          "Artist: Functions2": 'Artist: Functions2'
+          Artist2: Rəssam2
+          "Artist: Functions2": 'Rəssam: Funksiyalar2'
           "Bee: Functions2": 'Arı: Funksiyalar2'
-          "Bee: Conditionals2": 'Bee: Conditionals2'
-          "Maze: Conditionals2": 'Maze: Conditionals2'
-          "Artist: Nested Loops2": 'Artist: Nested Loops2'
+          "Bee: Conditionals2": 'Arı: Şərti ifadələr2'
+          "Maze: Conditionals2": 'Labirint: Şərti ifadələr2'
+          "Artist: Nested Loops2": 'Rəssam: İç-içə dövrlər2'
           "Farmer: While Loops2": 'Farmer: While Loops2'
           "Bee: Nested Loops2": 'Bee: Nested Loops2'
           "Bee: Debugging2": 'Bee: Debugging2'
@@ -189,11 +189,11 @@ az:
           description_short: Oyun laboratoriyası ilə bir əhvalat və ya oyun düzəldin!
         artist:
           title: Rəssam
-          description: Draw cool pictures and designs with the Artist!
+          description: Rəssamla fısqırıq şəkil və dizaynlar çəkin!
           Artist: Rəssam
-          description_short: Draw cool pictures and designs with the Artist!
+          description_short: Rəssamla fısqırıq şəkil və dizaynlar çəkin!
         scrat:
-          title: Scrat
+          title: Cırmaq
           description_short: Scrat short description.
           description: Scrat long description
           "Maze: Sequence": 'Labirint: Ardıcıllıq'
@@ -242,36 +242,36 @@ az:
           "Maze: Sequence": 'Labirint: Ardıcıllıq'
           "Artist: Sequence": 'Rəssam: Ardıcıllıq'
           "Artist: Loops": 'Rəssam: Dövrlər'
-          "Bee: Conditionals": 'Bee: Conditionals'
+          "Bee: Conditionals": 'Arı: Şərti ifadələr'
           "Artist: Nested Loops": 'Artist: Nested Loops'
           "Farmer: While Loops": 'Farmer: While Loops'
           "Bee: Nested Loops": 'Bee: Nested Loops'
           "Artist: Functions": 'Artist: Functions'
-          "Bee: Debugging": 'Bee: Debugging'
+          "Bee: Debugging": Arı Sazlama
         course4pre:
           description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
           Course 4 Prerequisite: Kurs 4 üçün lazımi şərtlər
           "Maze: Sequence": 'Labirint: Ardıcıllıq'
           "Artist: Sequence": 'Rəssam: Ardıcıllıq'
           "Artist: Loops": 'Rəssam: Dövrlər'
-          "Bee: Conditionals": 'Bee: Conditionals'
+          "Bee: Conditionals": 'Arı: Şərti ifadələr'
           "Artist: Nested Loops": 'Artist: Nested Loops'
           "Farmer: While Loops": 'Farmer: While Loops'
           "Bee: Nested Loops": 'Bee: Nested Loops'
           "Artist: Functions": 'Artist: Functions'
-          "Bee: Debugging": 'Bee: Debugging'
+          "Bee: Debugging": Arı Sazlama
         Course4pre (Case Conflict):
           description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
           Course 4 Prerequisite: Kurs 4 üçün lazımi şərtlər
           "Maze: Sequence": 'Labirint: Ardıcıllıq'
           "Artist: Sequence": 'Rəssam: Ardıcıllıq'
           "Artist: Loops": 'Rəssam: Dövrlər'
-          "Bee: Conditionals": 'Bee: Conditionals'
+          "Bee: Conditionals": 'Arı: Şərti ifadələr'
           "Artist: Nested Loops": 'Artist: Nested Loops'
           "Farmer: While Loops": 'Farmer: While Loops'
           "Bee: Nested Loops": 'Bee: Nested Loops'
           "Artist: Functions": 'Artist: Functions'
-          "Bee: Debugging": 'Bee: Debugging'
+          "Bee: Debugging": Arı Sazlama
         usability:
           Intro: Intro
           Variables and For Loops: Variables and For Loops
@@ -281,6 +281,7 @@ az:
           description: A selection of Course 4 levels for usability testing.
           Variables: Dəyişənlər
           For Loops: For Loops
+          Binary: Binary
         potus:
           title: special
           description_short: special
@@ -291,3 +292,38 @@ az:
           description_short: special
           description: special
           Special: Special
+          Binary: Binary
+        usabilitymsm:
+          Usability testing for MSM: Usability testing for MSM
+          Evaluation Blocks: Evaluation Blocks
+          Blocks to Math: Blocks to Math
+          Strings and Images: Strings and Images
+          Defining Variables: Defining Variables
+          Defining Functions: Defining Functions
+          Design Recipe: Design Recipe
+          Booleans: Booleans
+          Conditionals: Şərti ifadələr
+          Free Play: Free Play
+        algebra:
+          title: Computer Science in Algebra
+          description: Learn Functional Programming through Algebra
+          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
+          "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
+          "Eval: Strings and Images": 'Eval: Strings and Images'
+          "Unplugged: Contracts": 'Unplugged: Contracts'
+          "Eval: Writing Contracts": 'Eval: Writing Contracts'
+          "Calc: Defining Variables": 'Calc: Defining Variables'
+          "Play Lab: Defining Variables (Big Game)": 'Play Lab: Defining Variables (Big Game)'
+          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Eval: Functions": 'Eval: Functions'
+          "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
+          "Unplugged: Booleans": 'Unplugged: Booleans'
+          "Eval: Boolean Operators": 'Eval: Boolean Operators'
+          "Play Lab: Booleans": 'Play Lab: Booleans'
+          "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Big Game)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
+          "Eval: Conditionals": 'Eval: Conditionals'
+          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
+          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'

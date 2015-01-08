@@ -44,7 +44,7 @@ az:
   demos: 'Admin: bütün demolar'
   continue: Davam et
   prize: mükafat
-  more_info: Daha geniş məlumat
+  more_info: Daha ətraflı
   auth:
     sign_in_with: '%{provider} ilə daxil olun'
     signed_in: Daxil oldunuz!
@@ -214,7 +214,7 @@ az:
         playlab: Make an App
         artist: Draw Something
     user:
-      classroom: Teacher Home Page
+      classroom: Müəllimin ev səhifəsi
       label: 'Salam %{username}'
       stats: Mənim nəticələrim
       settings: Mənim hesabım
@@ -232,7 +232,7 @@ az:
       prizes: '%{total_trophies} kubokun hamısını yığ və hədiyyələr qazan!'
       prize_earned: 'Siz %{total_trophies} kubokun hamısımı topladınız. Mükafatı qazandınız!'
       prize_us_only: (Yalnız ABŞ-dan olan şagirdlər)
-      prizes_link: Daha geniş məlumat
+      prizes_link: daha ətraflı
   teacher:
     title:
       one: 'Müəlliminiz:'
@@ -244,7 +244,7 @@ az:
     followers:
       section: 'Bölmə:'
       stages: 'Göstəriləcək mərhələ(lər):'
-      show_past: 'Show student activity (%{bullet_html}) in the past:'
+      show_past: 'Keçmiş şagird fəaliyyətini (%{bullet_html}) göstər:'
       levels_key: Levels key
       perfect: Tamamlandı, mükəmməldir
       completed: Tamamlandı, lakin lazım olandan çox bloklar istifadə olunaraq
@@ -296,10 +296,10 @@ az:
     email_resend_confirm: Təsdiqləmə təlimatlarını yenidən göndər
     new_password_hint: (dəyişmək istəmirsinizsə, boş buraxın)
     current_password_hint: (dəyişikliklərinizi təsdiq etmək üçün cari parolunuz lazımdır)
-    cancel:
-      title: Hesabımı ləğv et
-      hint: Narazısiniz?
-      button: Hesabımı ləğv et
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Tamamlandı
     tried: Yoxlanıldı
@@ -309,7 +309,7 @@ az:
     classroom_activity: Unplugged Activity
   home:
     title: Code Studio
-    all_courses: 1, 2 və 3-cü kursun icmalı
+    all_courses: Kurs 1, 2 və 3-ün icmalı
     lesson_plans: Dərs planları
     signin_message: 'Artıq qeydiyyatdan keçmisiniz? %{link}'
     student_reg_link: Şagird qeydiyyatı
@@ -363,7 +363,7 @@ az:
   reference_area:
     title: Kömək lazımdır?
     subtitle: Bu videolara və məsləhətlərə baxın
-    teacher: Həlli gör
+    teacher: Həllə baxın
     auth_error: Həlli görməyə səlahiyyətiniz yoxdur.
     submit: Update Artist Location
     direction: Start Direction (in degrees)
@@ -418,7 +418,7 @@ az:
       title: Kod Saatı
       body: İnformatikanın əsaslarını öyrənməyə cəhd edin. Milyonlarla insan artıq bu fürsətdən istifadə edib.
     flappy:
-      title: Flappy Code
+      title: Qanadı Kod
       body: 10 dəqiqədən də az müddətə öz oyununuzu yazmaq istəyrisiniz? Qanadlı Kod dərsliyimizi sınayın!
     20hour:
       title: Giriş kursu
@@ -433,11 +433,11 @@ az:
       title: Buzlu ürək
   gallery:
     students_drew_these_with_code: Students drew these with code!
-    students_made_these_with_code: Students made these with code!
-    picture_count: 'In the past <b>%{days}</b> days, students have drawn <b>%{count}</b> pictures by writing their own computer programs. Click on the pictures to see each program in action.'
-    activity_count: 'In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action.'
+    students_made_these_with_code: Şagirdlər bunları kod yazmaqla edib!
+    picture_count: 'Ötən <b>%{days}</b> gün ərzində şagirdlər öz kompüter proqramlarını yazaraq <b>%{count}</b> şəkil çəkib. Hər proqramın necə işlədiyini görmək üçün şəkilləri klikləyin.'
+    activity_count: 'Ötən <b>%{days}</b> gün ərzində, şagirdlər öz kompüter proqramlarını yazaraq <b>%{count}</b> mobil əlavə və şəkil düzəldib. Hər proqramın necə işlədiyini görmək üçün şəkil və ekran təsvirlərini klikləyin.'
     want_to_make_your_own: Want to make your own?
-    more: 'More &rarr;'
+    more: 'Daha çox &rarr;'
     caption_by_name_age: 'by %{name}, age %{age}'
     caption_time_ago: '%{time_ago} ago'
     header: Qalereya
@@ -487,7 +487,7 @@ az:
           title: Builder
           description: ""
         flappy:
-          title: Flappy Code
+          title: Qanadı Kod
           description: 10 dəqiqədən də az müddətə öz oyununuzu yazmaq istəyrisiniz? Qanadlı Kod dərsliyimizi sınayın!
         jigsaw:
           title: Jigsaw
@@ -512,4 +512,4 @@ az:
   studio:
     courses_working_on: Üzərində işlədiyiniz kurslar
     completed_courses: Tamamlanmış kurslar
-    all_courses: All courses
+    all_courses: Bütün kurslar

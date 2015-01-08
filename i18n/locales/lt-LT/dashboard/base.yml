@@ -298,10 +298,10 @@ lt:
     email_resend_confirm: Persiųsti iš naujo patvirtinimo instrukciją
     new_password_hint: (palikite tuščią, jei nenorite pakeisti)
     current_password_hint: (įveskite dabartinį slaptažodį, kad išsaugoti pakeitimus)
-    cancel:
-      title: Panaikinti mano paskyrą
-      hint: Nepatenkintas?
-      button: Panaikinti mano paskyrą
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Baigta
     tried: Išbandyta

@@ -2,31 +2,31 @@
   activerecord:
     errors:
       messages:
-        blank: is required
+        blank: প্রয়োজন
     attributes:
       user:
-        name: নাম
+        name: প্রদর্শিত নাম
         email: ই-মেইল
         username: উজারন্যাম
         password: পাসওআর্ড
         password_confirmation: পাসওআর্ড নিশ্চিতকরণ
         current_password: বর্তমান পাসওআর্ড
         locale: ভাষা
-        age: Age
+        age: বয়স
         gender: লিঙ্গ
         edit_header: একাউন্ট বিস্তারিত সম্পাদনা করুন
         error:
-          future: can't be in the future
+          future: ভবিষ্যতের হতে পারবে না
   hello: হ্যালো ওয়ার্ল্ড
   welcome_back: স্বাগতম %{name}
   add_teacher_form:
     code:
-      label: 'Add a teacher by section code:'
-      placeholder: Code (ABCDEF)
+      label: 'শিক্ষক যুক্ত করুন:'
+      placeholder: অংশের কোড (ABCDEF)
     submit: শিক্ষক যুক্ত করুন
   add_hint_form:
-    placeholder: Please enter your hint here
-    submit: Add hint
+    placeholder: আপনার সংকেত দিন
+    submit: সংকেত যুক্ত করুন
   appname: Code.org
   stage: ধাপ
   stage_number: Stage %{number}
@@ -36,7 +36,7 @@
   of: এর
   more: বেশি
   less: কম
-  beta: beta
+  beta: বেটা
   try_hoc: Hour of Code এ আসতে, এখানে ক্লিক করো>>
   try_k8intro: অথবা, আমাদের K-8 Intro কম্পিউটার সায়েন্স কোর্স (15 25 ঘন্টা) করার
     চেষ্টা করো।
@@ -44,20 +44,20 @@
   already_started: 'ইতোমধ্যে শুরু করেছ? এখান থেকে চালিয়ে যাও >> '
   demos: 'Admin: সকল Demos'
   continue: চালিয়ে যান
-  prize: prize
+  prize: পুরস্কার
   more_info: আরও তথ্য
   auth:
     sign_in_with: '%{provider} এর সাথে সাইন ইন করো'
     signed_in: সাইনড ইন!
-    signed_out: You have signed out of <a href="%{url}">Code.org</a>.
+    signed_out: আপনি <a href="%{url}">Code.org</a> থেকে বের হয়ে গেছেন।
     sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
       to sign out of %{provider}.
     already_signedup: ইতিমধ্যে সাইন আপ করেছ?
     notyet_signedup: এখনো যোগ দেননি?
-    google_oauth2: গুগল +
+    google_oauth2: গুগল অ্যাকাউন্ট
     twitter: টুইটার
     facebook: ফেইসবুক
-    windowslive: Microsoft Account-এর
+    windowslive: মাইক্রোসফট অ্যাকাউন্ট
     forgot_password: আপনার পাসওয়ার্ড ভুলে গেছেন?
     need_confirmation: নিশ্চিতকরণ নির্দেশনা পাওনি?
     need_unlock: আনলক করার নির্দেশাবলী পাওনি?
@@ -78,7 +78,7 @@
     address_placeholder: ঠিকানা, শহর, রাজ্য, জিপ
     gender: লিঙ্গ (ঐচ্ছিক)
     birthday: জন্মদিন (ঐচ্ছিক)
-    age: Age (optional)
+    age: বয়স
     user_type: Are you a student or teacher?
     submit: সাইন আপ
     teacher: আপনি কি শিক্ষক?
@@ -338,10 +338,11 @@
     email_resend_confirm: Resend confirmation instructions
     new_password_hint: (leave blank if you don't want to change it)
     current_password_hint: (we need your current password to confirm your changes)
-    cancel:
-      title: Cancel my account
-      hint: Unhappy?
-      button: Cancel my account
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: 'Please note: deleting your account will not delete
+      your students'' accounts.'
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Completed
     tried: Tried

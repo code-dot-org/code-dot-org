@@ -14,8 +14,8 @@ pl:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png
       2-3 artist match 1:
-        Artist Matching: Artist Matching
-        Match the shape with the blocks that complete it.: Match the shape with the blocks that complete it.
+        Artist Matching: 'Artysta - dopasowywanie'
+        Match the shape with the blocks that complete it.: Do kształtu dopasuj bloki, które go uzupełnią.
         /script_assets/2-3_images/artist/2-3_artist_match_1_q1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png
@@ -50,7 +50,7 @@ pl:
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png
       2-3 maze match 1:
         Maze Match One: Maze Match One
-        Match the puzzles to the blocks: Match the puzzles to the blocks
+        Match the puzzles to the blocks: Do łamigłówek dopasuj bloki
         /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png
@@ -59,9 +59,9 @@ pl:
         /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png
       2-3 Maze Match 2:
         Maze Match: Maze Match
-        Match the puzzles to the blocks: Match the puzzles to the blocks
+        Match the puzzles to the blocks: Do łamigłówek dopasuj bloki
         Instructions: Instrukcje
-        Drag the blocks to match.: Drag the blocks to match.
+        Drag the blocks to match.: Przesuń bloki, żeby pasowały.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png
@@ -112,9 +112,9 @@ pl:
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
       4-5 maze match 1:
         Maze Match: Maze Match
-        Match the puzzles to the blocks: Match the puzzles to the blocks
+        Match the puzzles to the blocks: Do łamigłówek dopasuj bloki
         Instructions: Instrukcje
-        Drag the blocks to match.: Drag the blocks to match.
+        Drag the blocks to match.: Przesuń bloki, żeby pasowały.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png
@@ -218,9 +218,9 @@ pl:
         /script_assets/k_1_images/flappy_images/score.png: /script_assets/k_1_images/flappy_images/score.png
       K-1 Maze Match 1:
         Matching: Dopasowanie
-        Match the puzzles and blocks: Match the puzzles and blocks
+        Match the puzzles and blocks: Dopasuj łamigłówki i bloki
         Instructions: Instrukcje
-        Drag the blocks to match.: Drag the blocks to match.
+        Drag the blocks to match.: Przesuń bloki, żeby pasowały.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/k_1_images/maze_images/maze_EN.png: /script_assets/k_1_images/maze_images/maze_EN.png
         /script_assets/k_1_images/maze_images/maze_ENE.png: /script_assets/k_1_images/maze_images/maze_ENE.png

@@ -13,6 +13,7 @@
   "squareBlockTitle":"квадрат (размер, стил, цвят)",
   "starBlockTitle":"звезда (радиус, стил, цвят)",
   "radialStarBlockTitle":"радиално-звезда (точки, вътрешна, външна, стил, цвят)",
+  "polygonBlockTitle":"многоъгълник (страни, дължина, стил, цвят)",
   "stringAppendBlockTitle":"Добавяне на поредица (първо, второ)",
   "stringLengthBlockTitle":"дължина на поредицата (поредно)",
   "textBlockTitle":"текст (поредност, размер, цвят)",

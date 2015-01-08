@@ -122,8 +122,8 @@
     level:
       instructions:
         maze_2_2: 'Tudsz nekem segíteni hogy elkapjuk a rakoncátlan malacot? Rakj
-          össze néhány "lépj előre" blokkot, és nyomd meg a "Run"gombot, hogy eljussunk
-          oda. '
+          össze néhány "lépj előre" blokkot, és nyomd meg a "Futtatás " gombot, hogy
+          eljussunk oda. '
         maze_2_1: Ez a malac bosszantó. Segíts megtalálni!
         maze_2_2_5: Tervezd meg az utat a malacig. A TNT-t viszont kerüld el mindenképp,
           vagy repülsz!
@@ -369,7 +369,7 @@
         maze_3_2: Írj egy programot, hogy megtehessem az egész utat a malachoz.
         maze_3_3: Hogy jussak el a malachoz? Vigyázz, nehogy belefussak egy doboz
           TNT-be!
-        maze_3_4: Ahh! Írj nekem egy programot amivel megkerülhetem a TNT-t és eljuthatok
+        maze_3_4: Ahh! Írj nekem egy programot amivel elkerülhetem a TNT-t és eljuthatok
           a malachoz.
         bounce_1: Csatolj egy blokkot a "mikor bal nyíl" blokkhoz, majd nyomd meg
           a "Futtatás" gombot. Mozgasd az evezőt a bal nyíllal, hogy elérd a célt.

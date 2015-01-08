@@ -81,12 +81,12 @@ pl:
         desc: Ta lekcja przywołuje sposoby stosowania algorytmów w naszym codziennym życiu, posługując się przykładem sadzenia nasion. Koncentruje się również na rozleglejszym obrazie informatyki i zasadniczej roli, jaką odgrywają algorytmy.
         video: C1_planting_seed
       BuildingAFoundation:
-        title: Building a Foundation (Kładąc podwaliny)
+        title: Kładąc podwaliny (Building a Foundation)
         desc: Students build a structure using only provided supplies. Structures must complete a task (reach a certain height or bear a certain weight), and students discuss the idea of being persistent when things get complicated.
         video: C1_building_foundation
       GettingLoopy:
-        title: Coraz Loopy
-        desc: Ta lekcja wprowadza pętlę (instrukcje powtarzania), jedno z pojęć programowania, z wykorzystaniem tańca. Uczniowie poznają prostą choreografię, a następnie są proszeni o powtórzenie jej.
+        title: Dostać Loopy
+        desc: Ta lekcja wprowadza pętlę (instrukcje powtarzania), jedno z pojęć programowania, z wykorzystaniem tańca. Uczniowie poznają prostą choreografię, a następnie są proszeni o powtarzanie jej.
         video: C1_getting_loopy
       RelayProgramming:
         title: Relay programming
@@ -98,7 +98,7 @@ pl:
         desc: 'To learn about conditional statements, students play a card game and create rules like "If I draw a red card, I get a point" and "If I draw a black card, you get a point."'
         video: C2_conditionals_with_cards
       BigEvent:
-        title: The Big Event
+        title: Wielkie Wydarzenie
         desc: 'Students are introduced to the programming concept of "events," which are actions that a computer constantly monitors for. The teacher will press buttons on a paper remote and students will react depending on which button is pressed.'
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
@@ -150,11 +150,11 @@ pl:
         desc: Students explore the difference between private information and personal information, distinguishing what is safe and unsafe to share online.
       TangramAlgorithms:
         title: Tangram Algorithms
-        desc: This lesson shows us something important about algorithms. If you keep an algorithm simple there are lots of ways to use it. If you want to make sure everyone ends up with the same thing, then your algorithm needs more detail.
+        desc: Ta lekcja demonstruje coś ważnego o algorytmach. Jeśli Twój algorytm jest prosty, to istnieje wiele sposobów jego wykorzystania. Jeśli chcesz mieć pewność, że każdy kończy z tym samym, Twój algorytm wymaga więcej szczegółów.
         video: C4_unplugged_algorithms
       EnvelopeVariables:
-        title: Envelope Variables
-        desc: 'Variables allow for a lot of freedom in computer science.  This lesson helps to explain what variables are and how we can use them in many different ways. Use this activity before (or in conjunction with) the lesson on abstraction to really hit the idea home.'
+        title: Zmienne koperty
+        desc: 'Zmienne umożliwiają wiele swobody w informatyce.  Ta lekcja służy wyjaśnieniu, czym są zmienne i jak możemy posługiwać się nimi na wiele różnych sposobów. Wykorzystaj tę aktywność przed (lub w powiązaniu z) lekcją na temat abstrakcji, by naprawdę poznać ideę domu.'
         video: C4_unplugged_variables
       MadGlibs:
         title: Mad Glibs
@@ -173,7 +173,7 @@ pl:
         desc: 'Though many people think of binary as strictly zeros and ones, our previous courses taught students that information can be represented in a variety of binary options.  This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.'
         video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
-        title: Video Games and Coordinate Planes
+        title: Gry Wideo i Płaszczyzny Współrzędnych
         desc: Opis lekcji poświęconej grom wideo i płaszczyznom współrzednych
       Contracts:
         title: Contracts
@@ -183,10 +183,10 @@ pl:
         desc: Design Recipe lesson description
       Booleans:
         title: Booleans
-        desc: Booleans lesson description
+        desc: Opis lekcji o wartościach logicznych
       ConditionalsPiecewiseFunctions:
         title: Conditionals and Piecewise Functions
-        desc: Conditionals and Piecewise Functions lesson description
+        desc: Opis lekcji poświęconej warunkom i funkcjom sklejanym
       CollisionDetection:
         title: Wykrywanie kolizji
         desc: Opis lekcji wykrywanie kolizji

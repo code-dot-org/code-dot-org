@@ -27,9 +27,9 @@ az-AZ:
   hoc2014_whatishoc: Kod Saatı nədir?
   twentyhours_trynow: Elə indi sınaqdan keçirin
   california_heading: İnformatikanı tədris etməyi məktəbinizdən xahiş edin
-  california_text: "Any teacher can offer our <a href='http://studio.code.org/'>free courses</a>.  Any elementary school can <a href='http://code.org/educate/k5'>teach computer science</a>. Ask high schools to <a href='http://code.org/educate/districts'>partner with us."
+  california_text: "İstənilən müəllim <a href='http://studio.code.org/'>pulsuz kurslarımızı</a> deyə bilər. İstənilən ibtidai sinifdə <a href='http://code.org/educate/k5'>informatika tədris oluna</a> bilər. Məktəblərdən xahiş edin ki, <a href='http://code.org/educate/districts'>bizimlə tərəfdaş olsunlar."
   california_button: Learn More
-  flappy_heading: Flappy Birthday to Code.org
+  flappy_heading: Qanad günün mübarək, Code.org
   flappy_text: 'Code.org just turned 1 year old.<br/><br/> Celebrate with us by making your own custom <b>Flappy</b> game. Code your own rules, and share it with friends!'
   view_english_site: İngiliscə saytı göstər
   non_english_tutorials: 'Bir neçə dilə tərcümə olunmuş dərsliklər:'
@@ -104,12 +104,15 @@ az-AZ:
   students_and_lines: '%{students} şagird Kod Saatını başa vurdu və %{lines} sətir kod yazdı.'
   start_hoc: Kod Saatına indi başlayın
   contact_form_topic_press: Press/media (interview or speaking engagement)
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
+  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
   studiobar_title: "Explore <a href='http://studio.code.org'>Code Studio</a>"
-  studiobar_elementary_title: Elementary courses
-  studiobar_elementary_body: 'Our three new courses for K&#8209;5'
+  studiobar_elementary_title: İbtidai kurslar
+  studiobar_elementary_body: K-5 (11-12 yaşlılar) üçün üç yeni kursumuz
   studiobar_hoc_title: Kod Saatı
   studiobar_hoc_body: Learn to code with Angry Birds
-  studiobar_flappy_title: Flappy Code
+  studiobar_flappy_title: Qanadı Kod
   studiobar_flappy_body: Make and share your own Flappy game
   studiobar_teacher_title: Made for teachers
   studiobar_teacher_body: Introduce Code Studio in your classroom
@@ -117,6 +120,8 @@ az-AZ:
   studiobar_frozen_body: Anna və Elza ilə bir qış möcüzəsi yaradın
   studiobar_donate_title: Donate
   studiobar_donate_body: One child learns for each dollar you donate
+  studiobar_shop_title: Shop
+  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   contact_form_topic_student: Mən şagirdəm
   contact_form_topic_parent: Mən valideynəm
   contact_form_topic_teacher: Mən müəllim/təlimçiyəm
@@ -148,7 +153,7 @@ az-AZ:
   class_submission_online_teacher_resource: Online teacher resource
   class_submission_online_other: Other online
   class_submission_level_preschool: Preschool
-  class_submission_level_elementary: Elementary
+  class_submission_level_elementary: İbtidai
   class_submission_level_middle_school: Middle school
   class_submission_level_high_school: High school
   class_submission_level_college: College
@@ -159,7 +164,7 @@ az-AZ:
   volunteer_engineer_submission_commitment_one_hr_per_week: Həftədə 1 saat
   volunteer_engineer_submission_commitment_three_hrs_per_week: Həftədə 3 saat
   volunteer_engineer_submission_commitment_five_hrs_per_week: Həftədə 5 saat
-  volunteer_engineer_submission_commitment_more: More
+  volunteer_engineer_submission_commitment_more: Daha çox
   volunteer_engineer_submission_location_flexibility_onsite: On-site at a school
   volunteer_engineer_submission_location_flexibility_remote: Mentoring remotely (teachers or students)
   volunteer_engineer_submission_location_flexibility_curriculum: Willing to help contribute to open-source curriculum projects
@@ -167,7 +172,7 @@ az-AZ:
   volunteer_engineer_submission_experience_university_student_or_researcher: Current university student (or researcher)
   volunteer_engineer_submission_experience_software_professional: Software professional
   petition_age: Yaşınız
-  dashboard_landing_title: Teacher Home Page
+  dashboard_landing_title: Müəllimin ev səhifəsi
   dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
   dashboard_landing_video: Bu videoya baxın
   dashboard_landing_watch_video: for a tour of the new features!
@@ -194,9 +199,11 @@ az-AZ:
   dashboard_action_save_all: Save all
   dashboard_action_cancel: İmtina et
   dashboard_action_delete: Delete
-  dashboard_action_confirm: Delete?
   dashboard_action_delete_yes: Bəli
   dashboard_action_delete_no: Xeyr
+  dashboard_action_confirm: Delete?
+  dashboard_action_remove: Remove
+  dashboard_action_remove_confirm: Remove?
   dashboard_action_done: Done
   dashboard_action_required: required
   dashboard_navigation_home_page: Teacher home page
@@ -231,7 +238,7 @@ az-AZ:
   dashboard_sections_switch_section: 'Switch section:'
   dashboard_students_add_student: Add student
   dashboard_students_add_students: Add multiple students
-  dashboard_students_add_multiple: 'Type or paste the names of your students, one per line:'
+  dashboard_students_add_multiple: 'Şagirdlərinizin adlarını hər sətirdə biri olmaqla yazın və ya əlavə edin:'
   dashboard_students_new_section: "You've created a new section! Now add your students using the <b>Add student</b> and <b>Add multiple students</b> buttons above."
   dashboard_students_placeholder_name: Student Name
   dashboard_students_name: Ad
@@ -336,7 +343,7 @@ az-AZ:
   khanfr_name: An introduction to JavaScript
   khanpl_name: An introduction to JavaScript
   tynker_name: Build your own game
-  scratch_name: Get creative with coding
+  scratch_name: Proqramlaşdırma ilə yaradıcı olun
   lightbot_name: Lightbot
   thinkersmith_name: My Robotic Friends
   condcards_name: Conditionals with Cards
@@ -389,12 +396,12 @@ az-AZ:
   robomind_gradelevel: 8-13 yaş
   groklearning_gradelevel: Middle school +
   quorum_gradelevel: Middle school +
-  codespark_gradelevel: Elementary
-  kodable_gradelevel: Elementary
+  codespark_gradelevel: İbtidai
+  kodable_gradelevel: İbtidai
   tynkerapp_gradelevel: 5-13 yaş
   robomindnl_gradelevel: 8-13 yaş
   flappy_gradelevel: 4-104 yaş
-  bitsbox_gradelevel: Elementary
+  bitsbox_gradelevel: İbtidai
   makegameswithus_gradelevel: High school
   touchdevelop_gradelevel: High school
   appinventor_gradelevel: Middle school +
@@ -408,42 +415,42 @@ az-AZ:
   codeorg_platformtext: Modern browsers, smartphones, tablets
   codeintl_platformtext: Modern browsers, smartphones, tablets
   thinkersmithspanish_platformtext: Unplugged
-  khan_platformtext: Modern web browsers
-  khanes_platformtext: Modern web browsers
-  khanpt_platformtext: Modern web browsers
-  khanhe_platformtext: Modern web browsers
-  khanfr_platformtext: Modern web browsers
-  khanpl_platformtext: Modern web browsers
-  tynker_platformtext: Modern web browsers
-  scratch_platformtext: Desktop-only web browsers (not tablets)
+  khan_platformtext: Müasir veb səyyahlar
+  khanes_platformtext: Müasir veb səyyahlar
+  khanpt_platformtext: Müasir veb səyyahlar
+  khanhe_platformtext: Müasir veb səyyahlar
+  khanfr_platformtext: Müasir veb səyyahlar
+  khanpl_platformtext: Müasir veb səyyahlar
+  tynker_platformtext: Müasir veb səyyahlar
+  scratch_platformtext: Ancaq masaüstü veb səyyahlar (planşetlər yox)
   lightbot_platformtext: ALL browsers and iOS, Android, or Game Console
   thinkersmith_platformtext: Unplugged
   condcards_platformtext: Unuplugged
   lightbotintl_platformtext: iOS, Android (or web browser)
   codehs_platformtext: 'Modern browsers. (Follow-on course requires  $$)'
-  codecademy_platformtext: Modern web browsers. iOS, Android apps
+  codecademy_platformtext: Müasir veb səyyahlar. iOS, Android proqramları
   codecombat_platformtext: Modern web browsers (Follow-on course requires $$)
-  codemonkey_platformtext: Modern web browsers
-  codeavengers_platformtext: Modern web browsers
-  processing_platformtext: Modern web browsers
-  robomind_platformtext: Modern web browsers, Mobile web
-  groklearning_platformtext: Modern web browsers
+  codemonkey_platformtext: Müasir veb səyyahlar
+  codeavengers_platformtext: Müasir veb səyyahlar
+  processing_platformtext: Müasir veb səyyahlar
+  robomind_platformtext: Müasir veb səyyahlar, mobil veb
+  groklearning_platformtext: Müasir veb səyyahlar
   quorum_platformtext: Modern web browsers. Screen-readers supported
   codespark_platformtext: iOS, Android (or web browser)
   kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, Android tablets
-  robomindnl_platformtext: Modern web browsers, Mobile web
+  robomindnl_platformtext: Müasir veb səyyahlar, mobil veb
   flappy_platformtext: Modern browsers, smartphones, tablets
-  bitsbox_platformtext: Modern web browsers
-  makegameswithus_platformtext: Modern Web browsers
-  touchdevelop_platformtext: Modern browsers, smartphones, all devices
-  appinventor_platformtext: Modern browsers + Android
-  blockly_platformtext: Modern browsers only
+  bitsbox_platformtext: Müasir veb səyyahlar
+  makegameswithus_platformtext: Müasir veb səyyahlar
+  touchdevelop_platformtext: Müasir veb səyyahlar, smartfonlar, bütün cihazlar
+  appinventor_platformtext: Müasir veb səyyahlar + Android
+  blockly_platformtext: Yalnız müasir veb səyyahlar
   thinkersmith2_platformtext: Unplugged
   kodableunplugged_platformtext: Unplugged
   projguts_platformtext: Unplugged
   hourofcode_platformtext: Modern browsers, smartphones, tablets
-  frozen_platformtext: Modern browsers + tablets
+  frozen_platformtext: Müasir veb səyyahlar + planşetlər
   playlab_platformtext: Modern browsers, smartphones, tablets
   codeorg_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
   codeintl_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
@@ -455,7 +462,7 @@ az-AZ:
   khanfr_shortdescription: Learn to draw in JavaScript
   khanpl_shortdescription: Learn to draw in JavaScript
   tynker_shortdescription: Learn to code by solving fun puzzles and build your own mobile games.
-  scratch_shortdescription: Create interactive games, stories, and animations.
+  scratch_shortdescription: İnteraktiv oyunlar, əhvalat və animasiyalar düzəldin.
   lightbot_shortdescription: Program Lightbot to solve puzzles using procedures and loops!
   thinkersmith_shortdescription: Unplugged tutorial for a group with no devices
   condcards_shortdescription: Learn algorithms with a deck of cards
@@ -530,7 +537,7 @@ az-AZ:
   codeorg_beyond_name: Intro Computer Science (grades K-8)
   khan_beyond_name: Learn computer programming
   tynker_beyond_name: Learn programming at home
-  scratch_beyond_name: Get creative with coding
+  scratch_beyond_name: Proqramlaşdırma ilə yaradıcı olun
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
@@ -570,8 +577,8 @@ az-AZ:
   scratch_beyond_gradelevel: 8+ yaş
   lightbot_beyond_gradelevel: Bütün yaşlar
   codecademy_beyond_gradelevel: High school
-  kodable_beyond_gradelevel: Elementary
-  scratchjr_beyond_gradelevel: Elementary
+  kodable_beyond_gradelevel: İbtidai
+  scratchjr_beyond_gradelevel: İbtidai
   hopscotch_beyond_gradelevel: Middle school +
   pocketcode_beyond_gradelevel: Middle school +
   groklearning_beyond_gradelevel: Middle school +
@@ -601,47 +608,47 @@ az-AZ:
   processing_beyond_gradelevel: High school
   alice_beyond_gradelevel: Middle school +
   sphero_beyond_gradelevel: 8+ yaş
-  codeorg_beyond_platformtext: Modern browsers, tablets
-  khan_beyond_platformtext: Modern Web browsers
-  tynker_beyond_platformtext: Modern web browsers ($$ required)
-  scratch_beyond_platformtext: Any browser
+  codeorg_beyond_platformtext: Müasir veb səyyahlar, planşetlər
+  khan_beyond_platformtext: Müasir veb səyyahlar
+  tynker_beyond_platformtext: Müasir veb səyyahlar (ödənişlidir)
+  scratch_beyond_platformtext: İstənilən veb səyyah
   lightbot_beyond_platformtext: iOS, Android (or web browser)
-  codecademy_beyond_platformtext: Modern web browsers. iOS, Android apps
+  codecademy_beyond_platformtext: Müasir veb səyyahlar. iOS, Android proqramları
   kodable_beyond_platformtext: iPad
   scratchjr_beyond_platformtext: iPad
   hopscotch_beyond_platformtext: iPad
   pocketcode_beyond_platformtext: Mobile App
-  groklearning_beyond_platformtext: Modern web browsers
+  groklearning_beyond_platformtext: Müasir veb səyyahlar
   hacketyhack_beyond_platformtext: Desktop install
-  robomind_beyond_platformtext: Modern web browsers, Mobile web
-  makegameswithus_beyond_platformtext: Modern Web browsers
-  appinventor_beyond_platformtext: Modern browser + Android
-  touchdevelop_beyond_platformtext: Modern browsers, smartphones, all devices
-  codehs_beyond_platformtext: Modern browsers ($$ required)
+  robomind_beyond_platformtext: Müasir veb səyyahlar, mobil veb
+  makegameswithus_beyond_platformtext: Müasir veb səyyahlar
+  appinventor_beyond_platformtext: Müasir veb səyyah + Android
+  touchdevelop_beyond_platformtext: Müasir veb səyyahlar, smartfonlar, bütün cihazlar
+  codehs_beyond_platformtext: Müasir veb səyyahlar (ödənişlidir)
   udemy_beyond_platformtext: Web based
   lynda_beyond_platformtext: Web based ($$ required)
-  edx_beyond_platformtext: Modern browsers
-  coursera_beyond_platformtext: Modern browsers
-  udacity_beyond_platformtext: Modern browsers
+  edx_beyond_platformtext: Müasir veb səyyahlar
+  coursera_beyond_platformtext: Müasir veb səyyahlar
+  udacity_beyond_platformtext: Müasir veb səyyahlar
   teachingtree_beyond_platformtext: Web based
   kodu_beyond_platformtext: Windows, xBox
   cargobot_beyond_platformtext: iPad
   kidsruby_beyond_platformtext: Desktop install
-  w3schools_beyond_platformtext: Modern Web browsers
-  codeavengers_beyond_platformtext: Modern Web browsers
-  mozilla_beyond_platformtext: Modern Web browsers
+  w3schools_beyond_platformtext: Müasir veb səyyahlar
+  codeavengers_beyond_platformtext: Müasir veb səyyahlar
+  mozilla_beyond_platformtext: Müasir veb səyyahlar
   codecombat_beyond_platformtext: Web based (Firefox, Chrome, Safari, IE9+)
   codea_beyond_platformtext: iPad
   lego_beyond_platformtext: Robot purchase
   finch_beyond_platformtext: Robot purchase
   arduino_beyond_platformtext: Web browser, then Kit purchase
-  processing_beyond_platformtext: Modern web browsers
+  processing_beyond_platformtext: Müasir veb səyyahlar
   alice_beyond_platformtext: Windows or Mac (install required)
   sphero_beyond_platformtext: Robot purchase
   codeorg_beyond_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
   khan_beyond_shortdescription: Learn to draw in JavaScript
   tynker_beyond_shortdescription: A fun and engaging course for children in grades 4-8
-  scratch_beyond_shortdescription: Create interactive games, stories, and animations.
+  scratch_beyond_shortdescription: İnteraktiv oyunlar, əhvalat və animasiyalar düzəldin.
   lightbot_beyond_shortdescription: A game to teach coding concepts
   codecademy_beyond_shortdescription: Learn JavaScript programming, in a web-browser
   kodable_beyond_shortdescription: A fun iPad game to teach computer programming concepts
@@ -702,7 +709,7 @@ az-AZ:
   cargobot_beyond_longdescription: Cargo-Bot is a puzzle game where you teach a robot how to move crates. Sounds simple, right? It features 36 fiendishly clever puzzles, haunting music and stunning retina graphics. You can even record your solutions and share them on YouTube to show your friends.
   kidsruby_beyond_longdescription: "Have fun and make games, or hack your homework using Ruby! Just tell your parents or teachers you're learning Ruby programming... ;). Free and works on any computer. [Note: Desktop install required]"
   w3schools_beyond_longdescription: Learn to create websites on your own computer. Learn the server basics in less than a day. Learn to add databases to your website
-  codeavengers_beyond_longdescription: Learn how to program games, apps and websites. Designed by experts with perfect level of difficulty for beginners, easy to understand instructions and great help when you need it. Our HTML, CSS and JavaScript courses include code challenges and revision games that make learning fun and effective for all ages.
+  codeavengers_beyond_longdescription: 'Oyunlar, telefonlar üçün proqramlar və veb saytları proqramlaşdırmağı öyrənin. Bunlar mütəxəssislər tərəfindən hazırlanıb, yeni başlayanlar üşün ən münasib çətinlik səviyyəsi, asan anlaşılan təlimatlar və sizə lazım olan an gözəl kömək sisteminə malikdir. "HTML", "CSS" və "JavaScript" kurslarımıza istənilən yaşda öyrənməyi əyləncəli və effektiv edən kod yazma tapşırıqları və yoxlama oyunları daxildir.'
   mozilla_beyond_longdescription: Thimble makes it ridiculously simple to create and share your own web pages. Write and edit HTML and CSS right in your browser, then instantly preview your work. Host and share your finished projects with a single click. Perfect for beginners and experts alike.
   codecombat_beyond_longdescription: Play as a Wizard using code (spells) to control your heroes, navigate mazes, defeat ogres, trick enemies, and rescue allies! Learn JavaScript in this HTML 5 web game for complete beginners.
   codea_beyond_longdescription: "Codea for iPad lets you create games and simulations &mdash; or just about any visual idea you have. Turn your thoughts into interactive creations that make use of iPad features like Multi-Touch and the accelerometer. We think Codea is the most beautiful code editor you'll use, and it's easy. Codea is designed to let you touch your code. Want to change a number? Just tap and drag it. How about a color, or an image? Tapping will bring up visual editors that let you choose exactly what you want."

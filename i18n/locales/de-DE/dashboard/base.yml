@@ -299,10 +299,10 @@ de:
     email_resend_confirm: Anmeldebestätigung erneut senden
     new_password_hint: (freilassen, wenn Sie es nicht verändern möchten)
     current_password_hint: (wir benötigen Ihr aktuelle Kennwort, um Ihre Änderungen zu bestätigen)
-    cancel:
-      title: Mein Konto kündigen
-      hint: Unglücklich?
-      button: Mein Konto auflösen
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Abgeschlossen
     tried: Versucht
@@ -513,6 +513,6 @@ de:
     completed_perfect: Abgeschlossen, perfekt
     furthest_level_attempted: Höchste Ebene versucht
   studio:
-    courses_working_on: "Courses you're working on"
+    courses_working_on: Kurse, an denen du arbeitest
     completed_courses: Abgeschlossene Kurse
     all_courses: Alle Kurse

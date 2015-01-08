@@ -222,4 +222,14 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_select 'select[name*="age"]'
   end
 
+  # test 'deleting sets deleted at on a user' do
+  #   user = create :user
+  #   sign_in user
+
+  #   delete :destroy
+
+  #   user = user.reload
+  #   assert user.deleted_at
+  # end
+  
 end

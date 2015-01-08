@@ -1,6 +1,6 @@
 {
-  "actor":"actor",
-  "alienInvasion":"Alien Invasion!",
+  "actor":"aktor",
+  "alienInvasion":"Pagsugod ng mga Alien!",
   "backgroundBlack":"itim",
   "backgroundCave":"kuweba",
   "backgroundCloudy":"maulap",
@@ -58,6 +58,7 @@
   "moveDistanceTooltip":"Igalaw ang aktor sa partikular na distansya sa tinukoy na direksyon.",
   "moveSprite":"galaw",
   "moveSpriteN":"move actor {spriteIndex}",
+  "toXY":"to x,y",
   "moveDown":"igalaw pababa",
   "moveDownTooltip":"Igalaw ang aktor pababa.",
   "moveLeft":"igalaw pakaliwa",

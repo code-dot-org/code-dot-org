@@ -98,10 +98,10 @@ ru:
         Flappy: Порхающая птичка
         Jigsaw: Головоломки
         MazeStep: 'Лабиринт: Пошаговый режим'
-        Wordsearch: Wordsearch
+        Wordsearch: Поиск по слову
         Webapp: Веб приложение
         ArtistEC: Художник
-        TextMatch: Text Match
+        TextMatch: Совпадения
         StudioEC: Лаборатория игр
     trophy:
       name:
@@ -225,7 +225,7 @@ ru:
         maze_3_2: Напиши мне программу, чтобы я мог добраться до свиньи.
         maze_3_3: Как мне добраться до хрюшки? Позаботься о том, чтобы я не влетел в ящик со взрывчаткой!
         maze_3_4: А-а-а-а! Напиши мне программу, чтобы я обошёл взрывчатку и добрался до свиньи.
-        bounce_1: 'Attach a block to the "when left arrow" block and press "Run". Move the paddle using the left arrow to reach the finish target.'
+        bounce_1: 'Прикрите блок к блоку "когда левая стрелка". Двигайте платформу, используя левую стрелку, чтобы достичь цели.'
         bounce_2: 'Добавьте блок, "когда правая стрелка" и, "когда левая стрелка". Переместите весло, чтобы достигнуть конца обеих целей.'
         bounce_3: 'Теперь попробуйте что-то типа "когда стрелка вверх". Переместите весло к финишу на самом верху.'
         bounce_4: В этот раз тебе нужно добавить четыре блока. Перемести весло ко всем четырем конечным целям , чтобы решить эту головоломку.
@@ -235,8 +235,8 @@ ru:
         bounce_10: 'Теперь цель наверху. Добавьте блок "зарабатывают очко", и "заработать очко сопернику" к блокам "когда шар у цели" и, "когда шар промазал", чтобы сделать игру. Посмотрите, сколько очков Вы можете заработать, прежде чем Ваш противник забьет в двое больше.'
         bounce_11: 'You can now attach blocks to the "when run" block. You have to attach the new "launch new ball" block in more than one place. Also, try changing the scene or the speed of the paddle and the ball and see how many points you can score before your opponent scores twice.'
         bounce_12: "Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Finish to let friends try your game on their phones."
-        Custom_builder: 'Drag blocks from the toolbox to the workspace to draw the level you wish to create. Press "Run" when you are ready.'
-        flappy_1: 'Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.'
+        Custom_builder: 'Перетаскивайте блоки из панели инструментов в рабочую область, чтобы создать уровень. Нажмите "Запустить", когда вы будете готовы.'
+        flappy_1: 'Прикрепите блок к блоку "когда клик", затем нажмите "Запустить". Нажмите на экран, чтобы передвинуть Флаппи к цели.'
         flappy_2: 'Мы также добавили немного земли. Добавь блок "когда коснется земли". Ваш код должен содержать "закончить игру", когда Птичка касается земли.'
         flappy_3: 'The "when run" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target.'
         flappy_4: 'Птичка будет лететь через препятствие до тех пор, как вы не вставите команду, чтобы она могла разбиться. Подключите блок "когда врежешься в препятствие". Вам надо закончить игру, когда Птичка врежется на определенном количестве препятствий.'
@@ -247,7 +247,7 @@ ru:
         flappy_9: 'Чтобы разнообразить игру, попробуйте когда птичка врежется об препятствие или ударится о землю вместо "конец игры" задать "присвоить значение очков 0".'
         flappy_11: "Create your own Flappy game. You can change all the visuals and all the rules, even the gravity. When you're done, click Finish to let friends try your game on their phones."
         flappy_k1_1: Play Flappy
-        flappy_k1_2: 'Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.'
+        flappy_k1_2: 'Прикрепите блок к блоку "когда клик", затем нажмите "Запустить". Нажмите на экран, чтобы передвинуть Флаппи к цели.'
         flappy_k1_3: 'Мы также добавили немного земли. Добавь блок "когда коснется земли". Ваш код должен содержать "закончить игру", когда Птичка касается земли.'
         flappy_k1_4: 'The "when run" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target.'
         flappy_k1_5: 'Птичка будет лететь через препятствие до тех пор, как вы не вставите команду, чтобы она могла разбиться. Подключите блок "когда врежешься в препятствие". Вам надо закончить игру, когда Птичка врежется на определенном количестве препятствий.'

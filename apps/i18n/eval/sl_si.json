@@ -13,6 +13,7 @@
   "squareBlockTitle": "kvadrat (velikost, slog, barva)",
   "starBlockTitle": "zvezda (polmer, slog, barva)",
   "radialStarBlockTitle": "žarkovna-zvezda (točke, notranji, zunanji, slog, barva)",
+  "polygonBlockTitle": "polygon (sides, length, style, color)",
   "stringAppendBlockTitle": "združi niza (prvi, drugi)",
   "stringLengthBlockTitle": "dolžina niza (string)",
   "textBlockTitle": "besedilo (string, velikost, barva)",

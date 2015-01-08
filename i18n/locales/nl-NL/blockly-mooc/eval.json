@@ -13,6 +13,7 @@
   "squareBlockTitle":"vierkant (grootte, stijl, kleur)",
   "starBlockTitle":"Ster (radius, stijl, kleur)",
   "radialStarBlockTitle":"Radiaal-sterren (punten, binnen, buiten, stijl, kleur)",
+  "polygonBlockTitle":"polygon (sides, length, style, color)",
   "stringAppendBlockTitle":"tekenreeks-toevoegen (eerste, tweede)",
   "stringLengthBlockTitle":"tekenreeks-lengte (tekenreeks)",
   "textBlockTitle":"tekst (tekenreeks, grootte, kleur)",

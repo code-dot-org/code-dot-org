@@ -4,7 +4,7 @@ ca:
       2-3 artist debug multi 1:
         Artist Debugging Multiple Choice One: "Artista: Correcció d'errors d'elecció múltiple u"
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700
-        Why won't this circle go all the way around?: "Why won't this circle go all the way around?"
+        Why won't this circle go all the way around?: Per què aquest cercle no fa tota la volta?
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png
@@ -136,7 +136,7 @@ ca:
         /script_assets/2-3_images/unplugged/relay_programming_1_a3.png: /script_assets/2-3_images/unplugged/relay_programming_1_a3.png
       2-3 Relay Programming Multi 2:
         Multiple Choice: Tipus test
-        Which image-program combo does not contain mistakes?: Which image-program combo does not contain mistakes?
+        Which image-program combo does not contain mistakes?: Quina combinació imatge-programa no conté errors?
         /script_assets/2-3_images/unplugged/relay_programming_2_a1.png: /script_assets/2-3_images/unplugged/relay_programming_2_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
@@ -172,7 +172,7 @@ ca:
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png
       4-5 artist loops multi 2:
         Artist Functions Multiple Choice: "Artista: Funcions d'Elecció Múltiple"
-        "Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50": 'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50'
+        "Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50": 'Escull el bucle for que representa el patró següent: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50'
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png
@@ -233,20 +233,20 @@ ca:
         Which one of these items is hardest to describe an algorithm for?: "Quin d'aquests elements és el més difícil per descriure un algoritme?"
         <h4>Brushing your teeth</h4>: '<h4>Raspallant-vos les dents</h4>'
         <h4>Baking cookies</h4>: '<h4>cuinant galetes</h4>'
-        <h4>Shopping from a grocery list</h4>: '<h4>Shopping from a grocery list</h4>'
+        <h4>Shopping from a grocery list</h4>: "<h4>Comprant d'una llista de queviures</h4>"
         <h4>Banana</h4>: '<h4>Plàtan</h4>'
       4-5 Computational Thinking Multi 1:
         Multiple Choice: Tipus test
-        0: '? Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
+        0: Aquí hi ha tres frases. Quina de les plantilles de sota resumeix correctament per tal que totes tres frases coincideixin amb el patró de la plantilla?
         1: ": Aquí hi ha tres frases. Quina de les plantilles de sota s'ajusta correctament per tal que tots tres coincideixen amb el mateix patró de la plantilla?"
-        <h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>: '<h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>'
-        <h4>Seattle _____ a _____ _____.</h4>: '<h4>Seattle _____ a _____ _____.</h4>'
+        <h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>: '<h4>Seattle és una gran ciutat. <br/>Eugene és una ciutat mitjana <br/> Hillview és una ciutat petita.</h4>'
+        <h4>Seattle _____ a _____ _____.</h4>: '<h4>Seattle _____ una _____ _____.</h4>'
         <h4>_____ is a _____ city.</h4>: '<h4>_____és una _____ciutat.</h4>'
-        <h4>_____ is _____ a _____.</h4>: '<h4>_____ is _____ a _____.</h4>'
-        <h4>Eugene is a _____ city.</h4>: '<h4>Eugene is a _____ city.</h4>'
+        <h4>_____ is _____ a _____.</h4>: '<h4>_____ és una _____ _____.</h4>'
+        <h4>Eugene is a _____ city.</h4>: '<h4>Eugene és una ciutat  _____.</h4>'
       4-5 Crowdsourcing Multi 1:
         Multiple Choice: Tipus test
-        Which of these pictures best represents crowdsourcing?: Which of these pictures best represents crowdsourcing?
+        Which of these pictures best represents crowdsourcing?: "Quin d'aquests quadres millors representa crowdsourcing?"
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png
       4-5 Crowdsourcing Multi 2:
@@ -283,7 +283,7 @@ ca:
         Multiple Choice: Tipus test
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
         0: "? Quin és el fragment més llarg d'aquesta cançó que definiríeu com la tornada de manera que la tornada es repeteixi exactament cada vegada que s'anomena?"
-        1: ': What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?'
+        1: ": Quin és el fragment d'aquesta cançó més llarg que es pot definir per tal que el cor el repeteix exactament cada vegada que s'anomena?"
         Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: 'Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.'
         2: "? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
@@ -449,22 +449,22 @@ ca:
       K-1 Word Search Multi 3:
         Multiple Choice: Tipus test
         /script_assets/k_1_images/search_images/square.png, 700: /script_assets/k_1_images/search_images/square.png, 700
-        Which word is spelled?: Which word is spelled?
+        Which word is spelled?: "Quina paraula s'escriu?"
         SET: SET
         SQUARE: QUADRAT
         SOUTH: SUD
       K-1 multi 4:
-        Driver and Helper: Driver and Helper
+        Driver and Helper: Pilot i ajudant
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.'
-        Which boy is the <large>helper</large>?: 'Which boy is the <large>helper</large>?'
+        Which boy is the <large>helper</large>?: "Quin noi és l' <large>ajudant</large>?"
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
         /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
       K-1 multi 5:
-        Driver and Helper: Driver and Helper
+        Driver and Helper: Pilot i ajudant
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.'
-        This time, which boy is the <large>driver</large>?: 'This time, which boy is the <large>driver</large>?'
+        This time, which boy is the <large>driver</large>?: 'Aquesta vegada, quin noi és el <large>conductor</large>?'
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
         /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
       Math to Code 1:
@@ -502,7 +502,7 @@ ca:
         (+ (* (- 8 6) 4) 5) : '(+ (* (-8 6) 4) 5) '
         (+ 5 (* (- 8 6) 4)): '(+ 5 (* (-8 6) 4))'
       valid contracts multi:
-        Valid Contracts: Valid Contracts
+        Valid Contracts: Contractes vàlids
         Pick the best answer to the question.: Trieu la millor resposta a la pregunta.
         Which of these is a valid contract for the function circle?: Quin dels següents és un contracte vàlid per a la funció cercle?
         "circle: size style color -> image": 'cercle: mida color estil-> imatge'
@@ -517,6 +517,14 @@ ca:
         (rectangle 10 2 "solid" "red"): '(rectangle 10 2 "sòlid" "vermell")'
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): (rectangle (+ 8 2) (-7 5) vermell sòlid)
         (rectangle (+ 8 2) (- 7 5) solid red): (rectangle (+ 8 2) (-7 5) vermell sòlid)
+      Multi Strings Images 1:
+        Strings and Images Multiple Choice: Strings and Images Multiple Choice
+        Multi Strings Images 1.blocks3.level: Multi Strings Images 1.blocks3.level
+        Which of these Evaluation Blocks will draw the image: Which of these Evaluation Blocks will draw the image
+        Multi Strings Images 1.blocks1.start_blocks, 300, 100: Multi Strings Images 1.blocks1.start_blocks, 300, 100
+        Multi Strings Images 1.blocks2.start_blocks, 300, 100: Multi Strings Images 1.blocks2.start_blocks, 300, 100
+        Multi Strings Images 1.blocks3.start_blocks, 300, 100: Multi Strings Images 1.blocks3.start_blocks, 300, 100
+        Multi Strings Images 1.blocks4.start_blocks, 300, 100: Multi Strings Images 1.blocks4.start_blocks, 300, 100
       test multi image:
         Maze Multiple Choice Two: 'Laberint: Elecció múltiple dos'
         /script_assets/matches/images/head.jpg,400: /script_assets/matches/images/head.jpg,400

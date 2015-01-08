@@ -62,7 +62,7 @@
   "removeAndAvoidTheCow": "vegyél el 1-et és kerüld el a tehenet",
   "removeN": "Távolítsd el {shovelfuls}",
   "removePile": "halom eltávolítása",
-  "removeStack": "egy adag halom eltávolítása {shovelfuls}",
+  "removeStack": "egy halom eltávolítása {shovelfuls}",
   "removeSquare": "négyzet eltávolítása",
   "repeatCarefullyError": "A megoldáshoz gondold meg két  \"Előrelépni\" és egy \"Fordulj\" parancs használatát az \"Ismételd amíg\" blokkban. Nem baj hogyha a végén még egy külön \"Fordulj\" parancs lesz.",
   "repeatUntil": "ismételd amíg nem",

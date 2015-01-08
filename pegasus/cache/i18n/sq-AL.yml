@@ -127,6 +127,12 @@
     %{lines} rrjeshta me kode.'
   start_hoc: Fillo Oren e Kodimit tani
   contact_form_topic_press: Press/media (interview or speaking engagement)
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
+    - Michael Clark, Teacher'
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
+    - Nina Nichols Peery, Teacher'
+  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
+    Alzate, 5th grader'
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
   studiobar_elementary_title: Elementary courses
   studiobar_elementary_body: Our three new courses for K&#8209;5
@@ -140,6 +146,8 @@
   studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
   studiobar_donate_title: Donate
   studiobar_donate_body: One child learns for each dollar you donate
+  studiobar_shop_title: Shop
+  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   contact_form_topic_student: I’m a student
   contact_form_topic_parent: I’m a parent
   contact_form_topic_teacher: I’m a teacher/educator
@@ -193,7 +201,7 @@
   volunteer_engineer_submission_experience_university_student_or_researcher: Current
     university student (or researcher)
   volunteer_engineer_submission_experience_software_professional: Software professional
-  petition_age: Age
+  petition_age: Mosha
   dashboard_landing_title: Teacher Home Page
   dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
   dashboard_landing_video: Watch this video
@@ -225,9 +233,11 @@
   dashboard_action_save_all: Save all
   dashboard_action_cancel: Anulo
   dashboard_action_delete: Delete
-  dashboard_action_confirm: Delete?
   dashboard_action_delete_yes: Po
   dashboard_action_delete_no: Jo
+  dashboard_action_confirm: Delete?
+  dashboard_action_remove: Remove
+  dashboard_action_remove_confirm: Remove?
   dashboard_action_done: Done
   dashboard_action_required: required
   dashboard_navigation_home_page: Teacher home page
@@ -276,7 +286,7 @@
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
   dashboard_students_placeholder_name: Student Name
   dashboard_students_name: Emri
-  dashboard_students_age: Age
+  dashboard_students_age: Mosha
   dashboard_students_gender: Gjini
   dashboard_students_male: Male
   dashboard_students_female: Female

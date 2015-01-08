@@ -13,6 +13,7 @@
   "squareBlockTitle":"квадрат (розмір, стиль, колір)",
   "starBlockTitle":"зірка (радіус, стиль, колір)",
   "radialStarBlockTitle":"радіально зірковий (точки, внутрішні, зовнішні, стиль, колір)",
+  "polygonBlockTitle":"polygon (sides, length, style, color)",
   "stringAppendBlockTitle":"з'єднати-рядки (перший, другий)",
   "stringLengthBlockTitle":"довжина-рядка (рядок)",
   "textBlockTitle":"текст (рядок, розмір, колір)",

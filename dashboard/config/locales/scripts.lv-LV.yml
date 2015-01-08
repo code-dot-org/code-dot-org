@@ -316,6 +316,7 @@
           description: Atlasīti 4. kuras līmeņi lietošanas testēšanai.
           Variables: Mainīgie
           For Loops: '"par" cikli'
+          Binary: Binārie
         potus:
           title: īpaša
           description_short: īpaša
@@ -326,3 +327,45 @@
           description_short: īpaša
           description: īpaša
           Special: īpaša
+          Binary: Binārie
+        usabilitymsm:
+          Usability testing for MSM: Usability testing for MSM
+          Evaluation Blocks: Evaluation Blocks
+          Blocks to Math: matemātiskie bloki
+          Strings and Images: Strings and Images
+          Defining Variables: Defining Variables
+          Defining Functions: Defining Functions
+          Design Recipe: Design Recipe
+          Booleans: Booleans
+          Conditionals: Sazarojumi
+          Free Play: Free Play
+        algebra:
+          title: Computer Science in Algebra
+          description: Learn Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': 'Atvienots: Videospēles
+            un koordinātu plaksnes'
+          'Calc: Evaluation Blocks': 'Kalkulators: Novērtēšanas bloki'
+          'Eval: Strings and Images': 'Vērtēšana: simbolu virkne un attēli'
+          'Unplugged: Contracts': 'Atvienots: līgumi'
+          'Eval: Writing Contracts': 'Vērtēšana: Rakstiski līgumi'
+          'Calc: Defining Variables': 'Kalkulātors: mainīgo definēšana'
+          'Play Lab: Defining Variables (Big Game)': 'Spēlu laboratorija: mainīgo
+            definēšana (liela spēle)'
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': 'Atvienots: Dizaina recepte'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+          'Play Lab: Animation (Big Game)': 'Spēlu laboratorija: animācija (liela
+            spēle)'
+          'Unplugged: Booleans': 'Atvienots: Būls'
+          'Eval: Boolean Operators': 'Vērtēšana: būla operatori'
+          'Play Lab: Booleans': 'Spēles laboratorija: Būls'
+          'Play Lab: Boolean (Big Game)': 'Spēļu laboratorija: būla operatori (liela
+            spēle)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Atvienots: nosacījumi
+            un hibrīdfunkcijas'
+          'Eval: Conditionals': 'Vērtēšana: nosacījumi'
+          'Unplugged: Collision Detection and the Distance Formula': 'Atvienots: Sadursmes
+            atklāšana un distances formula'
+          'Play Lab: Collision Detection (Big Game)': 'Spēlu laboratorija: sadursmes
+            noteikšana (liela spēle)'

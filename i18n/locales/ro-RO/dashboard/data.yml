@@ -494,7 +494,7 @@ ro:
         frozen_loops: Introducere în Bucle
         frozen_functions: Introducere în Funcții
         playlab_intro: Introducere in Play Lab
-        playlab_events: Play Lab Events
+        playlab_events: Joaca Lab Events
         playlab_repeat_forever: Play Lab Repeat Forever
     callout:
       text:
@@ -550,7 +550,7 @@ ro:
         function_editor_draw_square: ' Acesta este definiția funcției dumneavoastră. Aceste blocuri rulează în tot timpul în care dumneavoastră utilizați blocul "desenează un pătrat". '
         change_here: Face modificarea aici
         write_draw_square_function: Trageți blocuri din caseta de instrumente în aici pentru a desena un pătrat
-        write_draw_triangle_function: Drag blocks from the toolbox into here that draw a triangle
+        write_draw_triangle_function: Mutați blocurile din caseta de instrumente aici, pentru a desena un triughi
         edit_add_parameter: Clic editare pentru a adăuga un parametru în funcția ta
         add_and_drag_parameter: 'Scrie numele parametrului tău aici, fă click pe "adaugă", iar apoi trage-l în definiția funcției tale'
         fill_in_actor: Completează ??? cu numere care corespund fiecărui actor (1, 2 și 3)
@@ -558,7 +558,7 @@ ro:
         if_bee_nectar: 'Folosește blocul "dacă" pentru a decide dacă albina ar trebui să ia nectarul'
         if_else_bee: 'Utilizaţi blocul "dacă/altfel", astfel încât albina ia nectar de la o floare şi face miere dacă aceasta nu este o floare'
         repeat_full_circle: Introdu numărul necesar de mișcări ale zombie-ului astfel încât acesta să facă un cerc complet
-        place_length_variable: Drag the length variable here to replace the question marks
+        place_length_variable: Muta variabila length aici pentru a înlocui semnul de interogație
         arrows_move_actor: Utilizează săgețile pentru a muta actorul
         right_arrow_fireball: Utilizează săgeata dreapta pentru a trage mingiile de foc
         name_function: Scrie numele funcției aici

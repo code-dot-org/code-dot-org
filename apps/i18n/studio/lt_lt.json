@@ -58,6 +58,7 @@
   "moveDistanceTooltip": "Pajudink veikėją tam tikru atstumu nurodyta kryptimi.",
   "moveSprite": "judėk",
   "moveSpriteN": "pajudink veikėją {spriteIndex}",
+  "toXY": "to x,y",
   "moveDown": "judėk žemyn",
   "moveDownTooltip": "Perkelti veikėją žemyn.",
   "moveLeft": "judėk kairėn",

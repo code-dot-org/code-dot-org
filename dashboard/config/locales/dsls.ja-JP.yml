@@ -13,15 +13,15 @@
           expression that matches this code
         /script_assets/msm/unit6/blockstomath2.png: /script_assets/msm/unit6/blockstomath2.png
         (10 > 11) or (7 <= 9): (10 > 11) or (7 <= 9)
-        (10 > 11) OR (7 <= 9): (10 > 11) OR (7 <= 9)
-        (10 > 11) || (7 <= 9): (10 > 11) || (7 <= 9)
+        (10 > 11) OR (7 <= 9): (10 11 >)または (7 < = 9)
+        (10 > 11) || (7 <= 9): (10 > 11) or (7 <= 9)
         Type the arithmetic expression here: 数式を入力します
       Blocks to Bools 3:
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic
           expression that matches this code
         /script_assets/msm/unit6/blockstomath3.png: /script_assets/msm/unit6/blockstomath3.png
-        (5 < 10) and (10 < 15): (5 < 10) and (10 < 15)
+        (5 < 10) and (10 < 15): （5 < 10) と (10 < 15)
         (5 < 10) AND (10 < 15): (5 < 10) AND (10 < 15)
         (5 < 10) && (10 < 15): (5 < 10) && (10 < 15)
         Type the arithmetic expression here: 数式を入力します
@@ -32,8 +32,8 @@
         /script_assets/msm/unit6/blockstomath4.png: /script_assets/msm/unit6/blockstomath4.png
         ((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)): ((1 < x) AND (x < 5)) OR
           ((8 < x) AND (x < 10))
-        ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): ((1 < x) and (x < 5)) or
-          ((8 < x) and (x < 10))
+        ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): ((1 < x) と (x < 5)) または ((8
+          < x) と (x < 10))
         ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): ((1 < x) && (x < 5)) || ((8
           < x) && (x < 10))
         Type the arithmetic expression here: 数式を入力します

@@ -58,6 +58,7 @@
   "moveDistanceTooltip": "Flyt en spiller en bestemt afstand i den angivne retning.",
   "moveSprite": "flyt",
   "moveSpriteN": "flyt spiller {spriteIndex}",
+  "toXY": "to x,y",
   "moveDown": "Flyt ned",
   "moveDownTooltip": "Flyt en spiller ned.",
   "moveLeft": "Flyt til venstre",

@@ -126,3 +126,5 @@ gem 'font-awesome-rails'
 gem 'sequel', '~> 4.10.0'
 gem 'user_agent_parser'
 gem 'heroku_rails_deflate', :group => [:staging, :test, :production] # gzip rails content and static assets
+
+gem "paranoia", "~> 2.0" # 'delete' Rails model objects by setting a deleted_at column instead of deleting the row

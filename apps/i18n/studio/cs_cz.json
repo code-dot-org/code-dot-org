@@ -58,6 +58,7 @@
   "moveDistanceTooltip": "Přemístit herce určenou vzdálenost ve specifickém směru.",
   "moveSprite": "pohyb",
   "moveSpriteN": "pohnout hercem {spriteIndex}",
+  "toXY": "to x,y",
   "moveDown": "pohyb dolů",
   "moveDownTooltip": "pohnout hercem dolů.",
   "moveLeft": "pohnout vlevo",

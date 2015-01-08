@@ -292,6 +292,7 @@
           description: 사용성 테스트를 위한 4가지 수준의 코스 선택
           Variables: 변수
           For Loops: 반복을 위한
+          Binary: 2진
         potus:
           title: 스페셜
           description_short: 스페셜
@@ -302,3 +303,39 @@
           description_short: 스페셜
           description: 스페셜
           Special: 스페셜
+          Binary: 2진
+        usabilitymsm:
+          Usability testing for MSM: Usability testing for MSM
+          Evaluation Blocks: Evaluation Blocks
+          Blocks to Math: 계산 블럭
+          Strings and Images: Strings and Images
+          Defining Variables: Defining Variables
+          Defining Functions: Defining Functions
+          Design Recipe: Design Recipe
+          Booleans: 불(참 또는 거짓)값들
+          Conditionals: 조건
+          Free Play: Free Play
+        algebra:
+          title: Computer Science in Algebra
+          description: Learn Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': '언플러그드: 비디오 게임과 좌표 평면'
+          'Calc: Evaluation Blocks': '계산: 평가(결과 계산) 블럭'
+          'Eval: Strings and Images': '평가: 문자열(문장)과 이미지'
+          'Unplugged: Contracts': '언플러그드 : 제한 조건'
+          'Eval: Writing Contracts': '평가: 제한 조건 쓰기'
+          'Calc: Defining Variables': '계산: 변수 정의하기'
+          'Play Lab: Defining Variables (Big Game)': '플레이 랩: 변수 정의하기 (빅 게임)'
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': '언플러그드: 디자인 레시피'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+          'Play Lab: Animation (Big Game)': '플레이 랩: 애니메이션 (빅 게임)'
+          'Unplugged: Booleans': '언플러그드: 참/거짓값'
+          'Eval: Boolean Operators': '평가: 참/거짓(논리) 연산자'
+          'Play Lab: Booleans': '플레이 랩: 불(참 또는 거짓 값)'
+          'Play Lab: Boolean (Big Game)': '플레이 랩: 참/거짓값 (빅 게임)'
+          'Unplugged: Conditionals and Piecewise Functions': '언플러그드: 조건/선택과 함수 조각'
+          'Eval: Conditionals': '평가: 조건/선택'
+          'Unplugged: Collision Detection and the Distance Formula': '언플러그드: 충돌 감지와
+            거리 계산식'
+          'Play Lab: Collision Detection (Big Game)': '플레이 랩: 충돌 감지 (빅 게임)'

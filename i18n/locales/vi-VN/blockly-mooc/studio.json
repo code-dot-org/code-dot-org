@@ -58,6 +58,7 @@
   "moveDistanceTooltip":"Di chuyển một diễn viên một khoảng cách cụ thể theo đúng hướng chỉ định.",
   "moveSprite":"di chuyển\/ dịch chuyển",
   "moveSpriteN":"di chuyển diễn viên {spriteIndex}",
+  "toXY":"to x,y",
   "moveDown":"di chuyển xuống",
   "moveDownTooltip":"Di chuyển một diễn viên xuống.",
   "moveLeft":"qua trái",

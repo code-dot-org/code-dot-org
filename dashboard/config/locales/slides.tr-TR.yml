@@ -117,8 +117,8 @@
           by real code.
       6:
         image: notes/flappy06.jpg
-        text: 'If you take a look at the workspace, there are some green blocks that
-          are filled in for you - these are "event handlers" '
+        text: 'Workspace''e bir göz atarsanız, sizin için doldurulan bazı yeşil bloklar
+          göreceksiniz - bunlar "event handlers" '
       7:
         image: notes/flappy07.jpg
         text: If you want the bird to FLAP when you CLICK the mouse, you can do that
@@ -214,9 +214,9 @@
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: Selam, benim adım Saloni. Bilgisayar Bilimlerini sağlık ve ilaç sorunlarını
-          çözmeye yardımcı olmak için kullanıyorum. Hadi "eğer değilse" bloğu hakkında
-          bir şeyler öğrenelim. "eğer" bloğu gibi görünüyor ama sonunda "değilse"
+        text: Selam, benim adım Saloni. Bilgisayar bilimlerini sağlıksal ve tıbbi
+          sorunları çözmeye yardımcı olmak için kullanıyorum. Hadi "if else" bloğu
+          hakkında bir şeyler öğrenelim. "if" bloğu gibi görünüyor ama sonunda "else"
           diyen fazladan bir parçası var.
       2:
         image: notes/hoc5_2.jpg

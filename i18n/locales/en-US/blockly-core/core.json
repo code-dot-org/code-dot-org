@@ -60,6 +60,7 @@
     "CONTROLS_WHILEUNTIL_OPERATOR_WHILE": "repeat while",
     "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL": "While a value is false, then do some statements.",
     "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE": "While a value is true, then do some statements.",
+    "DEFINE_HEADER_DEFINITION": "Definition",
     "DEFINE_FUNCTION_DEFINE": "Define",
     "DELETE_BLOCK": "Delete Block",
     "DELETE_PARAMETER": "Delete parameter...",

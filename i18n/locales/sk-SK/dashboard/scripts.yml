@@ -281,6 +281,7 @@ sk:
           description: A selection of Course 4 levels for usability testing.
           Variables: Premenné
           For Loops: For Loops
+          Binary: Binary
         potus:
           title: special
           description_short: special
@@ -291,3 +292,38 @@ sk:
           description_short: special
           description: special
           Special: Special
+          Binary: Binary
+        usabilitymsm:
+          Usability testing for MSM: Usability testing for MSM
+          Evaluation Blocks: Evaluation Blocks
+          Blocks to Math: Blocks to Math
+          Strings and Images: Strings and Images
+          Defining Variables: Defining Variables
+          Defining Functions: Defining Functions
+          Design Recipe: Design Recipe
+          Booleans: Booleans
+          Conditionals: Conditionals
+          Free Play: Free Play
+        algebra:
+          title: Computer Science in Algebra
+          description: Learn Functional Programming through Algebra
+          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
+          "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
+          "Eval: Strings and Images": 'Eval: Strings and Images'
+          "Unplugged: Contracts": 'Unplugged: Contracts'
+          "Eval: Writing Contracts": 'Eval: Writing Contracts'
+          "Calc: Defining Variables": 'Calc: Defining Variables'
+          "Play Lab: Defining Variables (Big Game)": 'Play Lab: Defining Variables (Big Game)'
+          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Eval: Functions": 'Eval: Functions'
+          "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
+          "Unplugged: Booleans": 'Unplugged: Booleans'
+          "Eval: Boolean Operators": 'Eval: Boolean Operators'
+          "Play Lab: Booleans": 'Play Lab: Booleans'
+          "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Big Game)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
+          "Eval: Conditionals": 'Eval: Conditionals'
+          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
+          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'

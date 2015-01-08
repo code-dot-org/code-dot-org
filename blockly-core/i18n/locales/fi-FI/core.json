@@ -60,6 +60,7 @@
   "CONTROLS_WHILEUNTIL_OPERATOR_WHILE": "toista niin kauan kuin",
   "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL": "Niin kauan kuin arvo on epätosi, suorita joukko lausekkeita.",
   "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE": "Niin kauan kuin arvo on tosi, suorita joukko lausekkeita.",
+  "DEFINE_HEADER_DEFINITION": "Definition",
   "DEFINE_FUNCTION_DEFINE": "Määritä",
   "DELETE_BLOCK": "Poista lohko",
   "DELETE_PARAMETER": "Poista parametri...",
