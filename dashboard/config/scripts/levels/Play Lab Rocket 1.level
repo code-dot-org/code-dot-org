@@ -59,58 +59,58 @@
         </block>
         <block type="studio_repeatForever" uservisible="false">
           <statement name="DO">
-            <block type="studio_waitParams" inline="true">
+            <block type="studio_waitParams" inline="true" uservisible="false">
               <value name="VALUE">
-                <block type="math_number">
+                <block type="math_number" uservisible="false">
                   <title name="NUM">1</title>
                 </block>
               </value>
               <next>
-                <block type="studio_moveDistanceParams" inline="true">
+                <block type="studio_moveDistanceParams" inline="true" uservisible="false">
                   <title name="DIR">1</title>
                   <value name="DISTANCE">
-                    <block type="math_number">
+                    <block type="math_number" uservisible="false">
                       <title name="NUM">15</title>
                     </block>
                   </value>
                   <next>
-                    <block type="math_change" inline="false">
+                    <block type="math_change" inline="false" uservisible="false">
                       <title name="VAR">height</title>
                       <value name="DELTA">
-                        <block type="math_number">
+                        <block type="math_number" uservisible="false">
                           <title name="NUM">15</title>
                         </block>
                       </value>
                       <next>
-                        <block type="math_change" inline="false">
+                        <block type="math_change" inline="false" uservisible="false">
                           <title name="VAR">time</title>
                           <value name="DELTA">
-                            <block type="math_number">
+                            <block type="math_number" uservisible="false">
                               <title name="NUM">1</title>
                             </block>
                           </value>
                           <next>
-                            <block type="studio_setScoreText" inline="true">
+                            <block type="studio_setScoreText" inline="true" uservisible="false">
                               <value name="TEXT">
-                                <block type="text_join" inline="false">
+                                <block type="text_join" inline="false" uservisible="false">
                                   <mutation items="4"/>
                                   <value name="ADD0">
-                                    <block type="text">
+                                    <block type="text" uservisible="false">
                                       <title name="TEXT">Time: </title>
                                     </block>
                                   </value>
                                   <value name="ADD1">
-                                    <block type="variables_get">
+                                    <block type="variables_get" uservisible="false">
                                       <title name="VAR">time</title>
                                     </block>
                                   </value>
                                   <value name="ADD2">
-                                    <block type="text">
+                                    <block type="text" uservisible="false">
                                       <title name="TEXT"> | Height: </title>
                                     </block>
                                   </value>
                                   <value name="ADD3">
-                                    <block type="variables_get">
+                                    <block type="variables_get" uservisible="false">
                                       <title name="VAR">height</title>
                                     </block>
                                   </value>
