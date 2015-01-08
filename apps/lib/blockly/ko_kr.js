@@ -61,6 +61,7 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_UNTIL = "~할 때까지 반복";
 Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_WHILE = "~인 동안 반복";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "조건이 거짓인 동안, 반복적으로 명령들을 실행합니다.";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "조건이 참인 동안, 반복적으로 명령들을 실행합니다.";
+Blockly.Msg.DEFINE_HEADER_DEFINITION = "Definition";
 Blockly.Msg.DEFINE_FUNCTION_DEFINE = "함수 정의";
 Blockly.Msg.DELETE_BLOCK = "블럭 삭제";
 Blockly.Msg.DELETE_PARAMETER = "매개 변수 삭제...";
