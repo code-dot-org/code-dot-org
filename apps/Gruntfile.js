@@ -177,7 +177,7 @@ config.lodash = {
     'options': {
       'include': [
         'debounce', 'reject', 'map', 'value', 'range', 'without', 'sample',
-        'create', 'flatten', 'isEmpty', 'wrap', 'size']
+        'create', 'flatten', 'isEmpty', 'wrap', 'size', 'bind']
     }
   }
 };
