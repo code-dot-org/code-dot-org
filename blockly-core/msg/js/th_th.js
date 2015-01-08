@@ -61,6 +61,7 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_UNTIL = "ทำซ้ำจนกว่
 Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_WHILE = "ทำซ้ำ ถ้า";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "ถ้าค่านี้ยังคงเป็นเท็จ ก็ให้ทำอะไรสักอย่าง";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "ถ้าค่านี้ยังคงเป็นจริง ก็ให้ทำอะไรสักอย่าง";
+Blockly.Msg.DEFINE_HEADER_DEFINITION = "Definition";
 Blockly.Msg.DEFINE_FUNCTION_DEFINE = "Define";
 Blockly.Msg.DELETE_BLOCK = "ลบบล็อค";
 Blockly.Msg.DELETE_PARAMETER = "Delete parameter...";
