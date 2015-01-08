@@ -39,7 +39,7 @@ module RakeUtils
 
   def self.bundle_install(*args)
     without = CDO.rack_envs - [CDO.rack_env]
-    if OS.linux?
+    if CDO.bundler_use_sudo
       sudo 'bundle', '--without', *without, '--quiet', *args
     else
       system 'bundle', '--without', *without, '--quiet', *args
@@ -95,7 +95,7 @@ module RakeUtils
   def self.npm_install(*args)
     commands = []
     commands << 'PKG_CONFIG_PATH=/usr/X11/lib/pkgconfig' if OS.mac?
-    commands << 'sudo' if OS.linux?
+    commands << 'sudo' if CDO.npm_use_sudo
     commands << 'npm'
     commands << 'install'
     commands << '--quiet'
