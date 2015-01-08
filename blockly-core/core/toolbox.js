@@ -203,15 +203,14 @@ Blockly.Toolbox.prototype.getRect = function() {
   // area are still deleted.  Must be smaller than Infinity, but larger than
   // the largest screen size.
   var BIG_NUM = 10000000;
+  var left = -BIG_NUM
   // Assumes that the toolbox is on the SVG edge.  If this changes
   // (e.g. toolboxes in mutators) then this code will need to be more complex.
   if (Blockly.RTL) {
     var svgSize = Blockly.svgSize();
-    var x = svgSize.width - this.width;
-  } else {
-    var x = -BIG_NUM;
+    left = svgSize.width - this.width;
   }
-  return new goog.math.Rect(x, -BIG_NUM, BIG_NUM + this.width, 2 * BIG_NUM);
+  return new goog.math.Rect(left, -BIG_NUM, BIG_NUM + this.width, 2 * BIG_NUM);
 };
 
 // Extending Closure's Tree UI.
