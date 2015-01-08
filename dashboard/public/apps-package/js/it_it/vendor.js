@@ -1640,6 +1640,7 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_UNTIL = "ripeti fino a che";
 Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_WHILE = "ripeti mentre";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "Mentre un valore è falso, esegui alcune istruzioni.";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "Mentre un valore è vero, esegui alcune istruzioni.";
+Blockly.Msg.DEFINE_HEADER_DEFINITION = "Definition";
 Blockly.Msg.DEFINE_FUNCTION_DEFINE = "Definisci";
 Blockly.Msg.DELETE_BLOCK = "Elimina il blocco";
 Blockly.Msg.DELETE_PARAMETER = "Elimina il parametro ...";
