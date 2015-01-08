@@ -1640,6 +1640,7 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_UNTIL = "powtarzaj aż";
 Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_WHILE = "powtarzaj dopóki";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "Dopóki wartość nie jest prawdą, to wykonaj kilka instrukcji.";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "Dopóki wartość jest prawdą, to wykonaj kilka instrukcji.";
+Blockly.Msg.DEFINE_HEADER_DEFINITION = "Definition";
 Blockly.Msg.DEFINE_FUNCTION_DEFINE = "Zdefiniuj";
 Blockly.Msg.DELETE_BLOCK = "Usuń Blok";
 Blockly.Msg.DELETE_PARAMETER = "Usuń parametr...";

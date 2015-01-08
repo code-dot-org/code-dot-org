@@ -1579,7 +1579,7 @@ Blockly.JavaScript.parameters_set=Blockly.JavaScript.variables_set;
 
 goog.provide('Blockly.Msg.tr_tr');
 goog.require('Blockly.Msg');
-Blockly.Msg.ACTUAL = "Güncel";
+Blockly.Msg.ACTUAL = "gerçek";
 Blockly.Msg.ADD = "Ekle";
 Blockly.Msg.ADD_COMMENT = "Yorum Ekle";
 Blockly.Msg.ADD_PARAMETER = "Değer ekle";
@@ -1640,6 +1640,7 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_UNTIL = "kadar tekrarla";
 Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_WHILE = "Şu doğru oldukça tekrarla:";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "Bir değer yanlış ise olayları gerçekleştirir.";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "Bir değer doğru ise olayları gerçekleştirir.";
+Blockly.Msg.DEFINE_HEADER_DEFINITION = "Definition";
 Blockly.Msg.DEFINE_FUNCTION_DEFINE = "Tanımla";
 Blockly.Msg.DELETE_BLOCK = "Bloğu Sil";
 Blockly.Msg.DELETE_PARAMETER = "Değer sil...";
