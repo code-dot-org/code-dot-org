@@ -17,6 +17,8 @@ var MIN_WIDTH = 900;
 var MIN_MOBILE_SHARE_WIDTH = 450;
 var MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 var WORKSPACE_PLAYSPACE_GAP = 15;
+var BLOCK_X_COORDINATE = 70;
+var BLOCK_Y_COORDINATE = 30;
 
 /**
  * Treat mobile devices with screen.width less than the value below as phones.
@@ -49,17 +51,13 @@ var StudioAppClass = function () {
   this.Dialog = null;
   this.editor = null;
 
-  // TODO (br-pair) : Make these look like variables, not constants.
-  this.BLOCK_X_COORDINATE = 70;
-  this.BLOCK_Y_COORDINATE = 30;
-  this.BLOCK_Y_COORDINATE_INTERVAL = 200;
+  this.blockYCoordinateInterval = 200;
 
-  // TODO (br-pair) : Make these look like variables, not constants.
   // @type {string} for all of these
-  this.ICON = undefined;
-  this.SMALL_ICON = undefined;
-  this.WIN_ICON = undefined;
-  this.FAILURE_ICON = undefined;
+  this.icon = undefined;
+  this.smallIcon = undefined;
+  this.winIcon = undefined;
+  this.failureIcon = undefined;
 
   // The following properties get their non-default values set by the application.
 
@@ -117,7 +115,8 @@ var StudioAppClass = function () {
   /**
   * Enumeration of user program execution outcomes.
   */
-  // TODO (br-pair) : this should be this.resultType not ResultType
+  // TODO (br-pair) : ResultType shouldn't really live on StudioApp. Places
+  // that want this should just require constants themselves.
   this.ResultType = constants.ResultType;
 
   /**
@@ -148,10 +147,6 @@ var StudioAppClass = function () {
   this.noPadding = false;
 
   this.MIN_WORKSPACE_HEIGHT = undefined;
-
-
-  // TODO (br-pair) : should callers instead be the ones binding the context?
-  this.onResize = _.bind(this.onResize, this);
 };
 
 module.exports = StudioAppClass;
@@ -236,14 +231,14 @@ StudioAppClass.prototype.init = function(config) {
     blockCount.style.display = 'none';
   }
 
-  this.ICON = config.skin.staticAvatar;
-  this.SMALL_ICON = config.skin.smallStaticAvatar;
-  this.WIN_ICON = config.skin.winAvatar;
-  this.FAILURE_ICON = config.skin.failureAvatar;
+  this.icon = config.skin.staticAvatar;
+  this.smallIcon = config.skin.smallStaticAvatar;
+  this.winIcon = config.skin.winAvatar;
+  this.failureIcon = config.skin.failureAvatar;
 
   if (config.level.instructionsIcon) {
-    this.ICON = config.skin[config.level.instructionsIcon];
-    this.WIN_ICON = config.skin[config.level.instructionsIcon];
+    this.icon = config.skin[config.level.instructionsIcon];
+    this.winIcon = config.skin[config.level.instructionsIcon];
   }
 
   if (config.showInstructionsWrapper) {
@@ -308,7 +303,7 @@ StudioAppClass.prototype.init = function(config) {
 
   if (config.level.instructions || config.level.aniGifURL) {
     var promptIcon = document.getElementById('prompt-icon');
-    promptIcon.src = this.SMALL_ICON;
+    promptIcon.src = this.smallIcon;
   }
 
   var aniGifPreview = document.getElementById('ani-gif-preview');
@@ -614,10 +609,10 @@ StudioAppClass.prototype.arrangeBlockPosition = function(startBlocks, arrangemen
       arrangeY = arrangement && arrangement[type] ? arrangement[type].y : null;
 
       xmlChild.setAttribute('x', xmlChild.getAttribute('x') || arrangeX ||
-        this.BLOCK_X_COORDINATE);
+        BLOCK_X_COORDINATE);
       xmlChild.setAttribute('y', xmlChild.getAttribute('y') || arrangeY ||
-        this.BLOCK_Y_COORDINATE +
-      this.BLOCK_Y_COORDINATE_INTERVAL * numberOfPlacedBlocks);
+        BLOCK_Y_COORDINATE +
+      this.blockYCoordinateInterval * numberOfPlacedBlocks);
       numberOfPlacedBlocks += 1;
     }
   }
@@ -662,7 +657,7 @@ StudioAppClass.prototype.showInstructions_ = function(level, autoClose) {
   var dialog = this.feedback_.createModalDialogWithIcon({
     Dialog: this.Dialog,
     contentDiv: instructionsDiv,
-    icon: this.ICON,
+    icon: this.icon,
     defaultBtnSelector: '#ok-button'
   });
 
@@ -986,7 +981,7 @@ StudioAppClass.prototype.setConfigValues_ = function (config) {
   }
 
   // Store configuration.
-  //TODO (br-team) : test code should pass in these instead of defaulting in app code
+  //TODO (br-pair) : test code should pass in these instead of defaulting in app code
   this.onAttempt = config.onAttempt || function(report) {
     console.log('Attempt!');
     console.log(report);
@@ -1037,7 +1032,7 @@ StudioAppClass.prototype.configureDom_ = function (config) {
     visualizationColumn.style.height = "3000px";
     // Modify the arrangement of toolbox blocks so categories align left
     if (config.level.edit_blocks == "toolbox_blocks") {
-      this.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      this.blockYCoordinateInterval = 80;
       config.blockArrangement = { category : { x: 20 } };
     }
     // Enable param & var editing in levelbuilder, regardless of level setting

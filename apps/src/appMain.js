@@ -2,7 +2,7 @@ var utils = require('./utils');
 var requiredBlockUtils = require('./required_block_utils');
 var StudioAppClass = require('./StudioApp');
 
-var StudioApp = require('./base');
+var studioAppSingleton = require('./base');
 
 var addReadyListener = require('./dom').addReadyListener;
 var blocksCommon = require('./blocksCommon');
@@ -43,11 +43,11 @@ module.exports = function(app, levels, options) {
 
   options.Dialog = options.Dialog || StubDialog;
 
-  StudioApp.configure(options);
+  studioAppSingleton.configure(options);
 
-  options.skin = options.skinsModule.load(StudioApp.assetUrl, options.skinId);
+  options.skin = options.skinsModule.load(studioAppSingleton.assetUrl, options.skinId);
 
-  if (StudioApp.usingBlockly) {
+  if (studioAppSingleton.usingBlockly) {
     var blockInstallOptions = {
       skin: options.skin,
       isK1: options.level && options.level.isK1
@@ -66,7 +66,7 @@ module.exports = function(app, levels, options) {
       if (app.initReadonly) {
         app.initReadonly(options);
       } else {
-        StudioApp.initReadonly(options);
+        studioAppSingleton.initReadonly(options);
       }
     } else {
       app.init(options);

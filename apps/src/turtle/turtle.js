@@ -77,7 +77,7 @@ var ELSA_DECORATION_DETAILS = [
 ];
 
 /**
- * An instantiable Turtle class
+ * An instantiable Artist class
  * @param {StudioAppClass} studioApp The studioApp instance to build upon.
  */
 var Artist = function () {
@@ -111,7 +111,6 @@ var Artist = function () {
   this.isDrawingWithPattern = false;
 
   // these get set by init based on skin.
-  // TODO (brent) - dont ctalize, these arent constants
   this.avatarWidth = 0;
   this.avatarHeight = 0;
   this.decorationAnimationWidth = 85;
@@ -234,7 +233,6 @@ Artist.prototype.afterInject_ = function (config) {
   if (this.studioApp_.usingBlockly) {
     // Add to reserved word list: API, local variables in execution evironment
     // (execute) and the infinite loop detection function.
-    //XXX Not sure if this is still right.
     Blockly.JavaScript.addReservedWords('Turtle,code');
   }
 
@@ -253,8 +251,8 @@ Artist.prototype.afterInject_ = function (config) {
   visualization.appendChild(displayCanvas);
   this.ctxDisplay = displayCanvas.getContext('2d');
 
-  // TODO - pull this out
-  if (this.studioApp_.usingBlockly && (this.skin.id == "anna" || this.skin.id == "elsa")) {
+  // TODO (br-pair): - pull this out?
+  if (this.studioApp_.usingBlockly && (this.skin.id === "anna" || this.skin.id === "elsa")) {
     Blockly.JavaScript.colour_random = function() {
       // Generate a random colour.
       if (!Blockly.JavaScript.definitions_.colour_random) {

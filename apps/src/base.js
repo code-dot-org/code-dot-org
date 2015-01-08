@@ -23,24 +23,21 @@
  */
 "use strict";
 
+/**
+ * Load the StudioAppClass and create a singleton instance of it, which we export
+ * as singleton. Most of our apps will load this singleton into a global, the
+ * expception currently being Artist
+ */
 var StudioAppClass = require('./StudioApp');
-var StudioApp = new StudioAppClass();
+var studioAppSingleton = new StudioAppClass();
+var feedback = require('./feedback');
 
-module.exports = StudioApp;
+module.exports = studioAppSingleton;
 
-var msg = require('../locale/current/common');
-var parseXmlElement = require('./xml').parseElement;
-var feedback = require('./feedback.js');
-var dom = require('./dom');
-var utils = require('./utils');
-var blockUtils = require('./block_utils');
-var builder = require('./builder');
-var _ = utils.getLodash();
-var constants = require('./constants.js');
-
-// TODO (br-pair) : make this better
-feedback.applySingleton(StudioApp);
-StudioApp.feedback_ = feedback;
+// TODO (br-pair) : This is how we associate our singleton feedback object with
+// our singleton StudioApp object. We can almost certainly do this more cleanly..
+feedback.applySingleton(studioAppSingleton);
+studioAppSingleton.feedback_ = feedback;
 
 
 
