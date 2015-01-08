@@ -127,6 +127,12 @@
     линија кода.'
   start_hoc: Започните сат кодирања, сада
   contact_form_topic_press: Штампа/медији (интервју или говор)
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
+    - Michael Clark, Teacher'
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
+    - Nina Nichols Peery, Teacher'
+  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
+    Alzate, 5th grader'
   studiobar_title: Истражите<a href='http://studio.code.org'>Студио Програмирања</a>
   studiobar_elementary_title: Основни курсеви
   studiobar_elementary_body: Наша три нова курса за врт&#8209;ић
@@ -140,6 +146,8 @@
   studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
   studiobar_donate_title: Donate
   studiobar_donate_body: One child learns for each dollar you donate
+  studiobar_shop_title: Shop
+  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   contact_form_topic_student: Ја сам студент
   contact_form_topic_parent: Ја сам родитељ
   contact_form_topic_teacher: Ја сам учитељ/едукатор
@@ -230,9 +238,11 @@
   dashboard_action_save_all: Сачувај све
   dashboard_action_cancel: Откажи
   dashboard_action_delete: Обриши
-  dashboard_action_confirm: Желите ли да избришете?
   dashboard_action_delete_yes: Да
   dashboard_action_delete_no: Не
+  dashboard_action_confirm: Желите ли да избришете?
+  dashboard_action_remove: Remove
+  dashboard_action_remove_confirm: Remove?
   dashboard_action_done: Готово
   dashboard_action_required: потребно
   dashboard_navigation_home_page: Почетна страна за учитеље

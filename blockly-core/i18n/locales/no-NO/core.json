@@ -60,6 +60,7 @@
   "CONTROLS_WHILEUNTIL_OPERATOR_WHILE": "gjenta så lenge",
   "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL": "Så lenge et utsagn ikke stemmer, utfør noen instruksjoner.",
   "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE": "Så lenge et utsagn stemmer, utfør noen instruksjoner.",
+  "DEFINE_HEADER_DEFINITION": "Definition",
   "DEFINE_FUNCTION_DEFINE": "Definer",
   "DELETE_BLOCK": "Slett blokk",
   "DELETE_PARAMETER": "Slett parameter...",

@@ -135,4 +135,15 @@ class SessionsControllerTest < ActionController::TestCase
     assert_select 'a[href=http://login.live.com/logout.srf]'
     assert_select 'h4', 'You used Microsoft Account to sign in. Click here to sign out of Microsoft Account.'
   end
+
+  test "deleted user cannot sign in" do
+    teacher = create(:teacher)
+    teacher.deleted_at = Time.now # 'delete' the user
+    teacher.save!
+    
+    post :create, user: {login: '', hashed_email: teacher.hashed_email, password: teacher.password}
+
+    assert_signed_in_as nil
+  end
+
 end

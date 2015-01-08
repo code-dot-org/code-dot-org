@@ -60,6 +60,7 @@
   "CONTROLS_WHILEUNTIL_OPERATOR_WHILE": "повторувај додека",
   "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL": "Додека односно вредноста  е лажна , направи некои извештаи.\nСокриј контекст | Барање контекст\nбалонче со совет - Видете [ https://code.google.com/p/blockly/wiki/Loops#repeat_until https://code.google.com/p/blockly/wiki/Loops#repeat_until ].",
   "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE": "Додека односно вредноста  е точна, тогаш направи некои извештаи.\nСокриј контекст | Барање контекст\nбалонче со совет - Видете [ https://code.google.com/p/blockly/wiki/Loops#repeat_while Loops # repeat_while https://code.google.com/p/blockly/wiki/Loops#repeat_while јамки # repeat_while ].",
+  "DEFINE_HEADER_DEFINITION": "Definition",
   "DEFINE_FUNCTION_DEFINE": "Дефинирајте\nСокриј контекст | Барање контекст\n-> DEFINE_FUNCTION_DEFINE",
   "DELETE_BLOCK": "Избриши го блокот",
   "DELETE_PARAMETER": "Избриши параметар ...\nСокриј контекст | Барање контекст\n-> DELETE_PARAMETER",

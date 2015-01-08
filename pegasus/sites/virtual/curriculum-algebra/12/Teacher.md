@@ -61,10 +61,26 @@ Let's get back into that Big Game that we started in stage 7.
 
 [standards]
 
-## Connections and Background Information
+<details>
+<summary>Standards Alignment</summary>
 
+### Common Core Mathematical Practices
+ 
+- 1. Make sense of problems and persevere in solving them.
+- 2. Reason abstractly and quantitatively.
+- 3. Construct viable arguments and critique the reasoning of others.
+- 4. Model with mathematics.
+- 5. Use appropriate tools strategically.
+- 6. Attend to precision.
+- 7. Look for and make use of structure.
+- 8. Look for and express regularity in repeated reasoning.
 
+### Common Core Math Standards
 
+- F-IF.1-3: The student uses function notation to describe, evaluate, and interpret functions in terms of domain and range.
+- F-LE.5: The student interprets expressions for functions in terms of the situations they model.
+
+</details>
 
 [/standards]
 
