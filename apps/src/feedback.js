@@ -7,6 +7,16 @@ var dom = require('./dom');
 var xml = require('./xml');
 var _ = utils.getLodash();
 
+// TODO (br-pair): This is a hack. We initially set our studioAppSingleton to
+// be the global StudioApp. This will be the case for all apps other than Artist.
+// However, that global is not necessarily set yet at the point where we load
+// feedback, and requiring base here introduces a circular dependency. Instead,
+// we depend on base apply the singleton to the feedback object i required.
+var studioAppSingleton;
+exports.applySingleton = function (singleton) {
+  studioAppSingleton = singleton;
+};
+
 var TestResults = require('./constants').TestResults;
 
 exports.HintRequestPlacement = {
@@ -30,7 +40,7 @@ exports.displayFeedback = function(options) {
   var showingSharing = options.showingSharing && !hadShareFailure;
 
   var canContinue = exports.canContinueToNextLevel(options.feedbackType);
-  var displayShowCode = StudioApp.enableShowCode && canContinue && !showingSharing;
+  var displayShowCode = studioAppSingleton.enableShowCode && canContinue && !showingSharing;
   var feedback = document.createElement('div');
   var sharingDiv = (canContinue && showingSharing) ? exports.createSharingDiv(options) : null;
   var showCode = displayShowCode ? getShowCodeElement(options) : null;
@@ -105,7 +115,7 @@ exports.displayFeedback = function(options) {
   var onlyContinue = continueButton && !againButton && !previousLevelButton;
 
   var onHidden = onlyContinue ? options.onContinue : null;
-  var icon = canContinue ? StudioApp.WIN_ICON : StudioApp.FAILURE_ICON;
+  var icon = canContinue ? studioAppSingleton.winIcon : studioAppSingleton.failureIcon;
   var defaultBtnSelector = onlyContinue ? '#continue-button' : '#again-button';
 
   var feedbackDialog = exports.createModalDialogWithIcon({
@@ -232,7 +242,7 @@ exports.displayFeedback = function(options) {
  */
 exports.getNumBlocksUsed = function() {
   var i;
-  if (StudioApp.editCode) {
+  if (studioAppSingleton.editCode) {
     var codeLines = 0;
     // quick and dirty method to count non-blank lines that don't start with //
     var lines = getGeneratedCodeString().split("\n");
@@ -253,7 +263,7 @@ exports.getNumBlocksUsed = function() {
  */
 exports.getNumCountableBlocks = function() {
   var i;
-  if (StudioApp.editCode) {
+  if (studioAppSingleton.editCode) {
     var codeLines = 0;
     // quick and dirty method to count non-blank lines that don't start with //
     var lines = getGeneratedCodeString().split("\n");
@@ -281,7 +291,7 @@ var getFeedbackButtons = function(options) {
       hintRequestExperiment: options.hintRequestExperiment &&
           (options.hintRequestExperiment === exports.HintRequestPlacement.LEFT ?
               'left' : 'right'),
-      assetUrl: StudioApp.assetUrl,
+      assetUrl: studioAppSingleton.assetUrl,
       freePlay: options.freePlay
     }
   });
@@ -370,7 +380,7 @@ var getFeedbackMessage = function(options) {
         break;
       case TestResults.TOO_MANY_BLOCKS_FAIL:
         message = msg.numBlocksNeeded({
-          numBlocks: StudioApp.IDEAL_BLOCK_NUM,
+          numBlocks: studioAppSingleton.IDEAL_BLOCK_NUM,
           puzzleNumber: options.level.puzzle_number || 0
         });
         break;
@@ -431,7 +441,7 @@ var getFeedbackMessage = function(options) {
     // Insert an image
     var imageDiv = document.createElement('img');
     imageDiv.className = "hint-image";
-    imageDiv.src = StudioApp.assetUrl(
+    imageDiv.src = studioAppSingleton.assetUrl(
       'media/lightbulb_for_' + options.response.design + '.png');
     feedbackDiv.appendChild(imageDiv);
     // Add new text
@@ -453,7 +463,7 @@ exports.createSharingDiv = function(options) {
     return null;
   }
 
-  if (StudioApp.disableSocialShare) {
+  if (studioAppSingleton.disableSocialShare) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
@@ -492,6 +502,8 @@ exports.createSharingDiv = function(options) {
                       options.response.level_source;
     options.facebookUrl = facebookUrl;
   }
+
+  options.assetUrl = _.bind(studioAppSingleton.assetUrl, studioAppSingleton);
 
   var sharingDiv = document.createElement('div');
   sharingDiv.setAttribute('style', 'display:inline-block');
@@ -609,7 +621,7 @@ var getShowCodeElement = function(options) {
 /**
  * Determines whether the user can proceed to the next level, based on the level feedback
  * @param {number} feedbackType A constant property of TestResults,
- *     typically produced by StudioApp.getTestResults().
+ *     typically produced by studioAppSingleton.getTestResults().
  */
 exports.canContinueToNextLevel = function(feedbackType) {
   return (feedbackType === TestResults.ALL_PASS ||
@@ -622,8 +634,8 @@ exports.canContinueToNextLevel = function(feedbackType) {
  * Retrieve a string containing the user's generated Javascript code.
  */
 var getGeneratedCodeString = function() {
-  if (StudioApp.editCode) {
-    return StudioApp.editor ? StudioApp.editor.getValue() : '';
+  if (studioAppSingleton.editCode) {
+    return studioAppSingleton.editor ? studioAppSingleton.editor.getValue() : '';
   }
   else {
     return codegen.workspaceCode(Blockly);
@@ -674,13 +686,13 @@ var FeedbackBlocks = function(options) {
   this.div = document.createElement('div');
   this.html = readonly({
     app: options.app,
-    assetUrl: StudioApp.assetUrl,
+    assetUrl: studioAppSingleton.assetUrl,
     options: {
       readonly: true,
-      locale: StudioApp.LOCALE,
-      localeDirection: StudioApp.localeDirection(),
-      baseUrl: StudioApp.BASE_URL,
-      cacheBust: StudioApp.CACHE_BUST,
+      locale: studioAppSingleton.LOCALE,
+      localeDirection: studioAppSingleton.localeDirection(),
+      baseUrl: studioAppSingleton.BASE_URL,
+      cacheBust: studioAppSingleton.CACHE_BUST,
       skinId: options.skin,
       level: options.level,
       blocks: generateXMLForBlocks(blocksToDisplay)
@@ -708,7 +720,7 @@ var getGeneratedCodeElement = function() {
     harvardLink: "<a href='https://cs50.harvard.edu/' target='_blank'>Harvard</a>"
   };
 
-  var infoMessage = StudioApp.editCode ?  "" : msg.generatedCodeInfo(codeInfoMsgParams);
+  var infoMessage = studioAppSingleton.editCode ?  "" : msg.generatedCodeInfo(codeInfoMsgParams);
   var code = getGeneratedCodeString();
 
   var codeDiv = document.createElement('div');
@@ -734,9 +746,38 @@ exports.showGeneratedCode = function(Dialog) {
   var dialog = exports.createModalDialogWithIcon({
       Dialog: Dialog,
       contentDiv: codeDiv,
-      icon: StudioApp.ICON,
+      icon: studioAppSingleton.icon,
       defaultBtnSelector: '#ok-button'
       });
+
+  var okayButton = buttons.querySelector('#ok-button');
+  if (okayButton) {
+    dom.addClickTouchEvent(okayButton, function() {
+      dialog.hide();
+    });
+  }
+
+  dialog.show();
+};
+
+exports.showToggleBlocksError = function(Dialog) {
+  var contentDiv = document.createElement('div');
+  contentDiv.innerHTML = msg.toggleBlocksErrorMsg();
+
+  var buttons = document.createElement('div');
+  buttons.innerHTML = require('./templates/buttons.html')({
+    data: {
+      ok: true
+    }
+  });
+  contentDiv.appendChild(buttons);
+
+  var dialog = exports.createModalDialogWithIcon({
+      Dialog: Dialog,
+      contentDiv: contentDiv,
+      icon: studioAppSingleton.icon,
+      defaultBtnSelector: '#ok-button'
+  });
 
   var okayButton = buttons.querySelector('#ok-button');
   if (okayButton) {
@@ -814,7 +855,7 @@ var getCountableBlocks = function() {
 
 /**
  * Check to see if the user's code contains the required blocks for a level.
- * This never returns more than StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG.
+ * This never returns more than studioAppSingleton.NUM_REQUIRED_BLOCKS_TO_FLAG.
  * @return {{blocksToDisplay:!Array, message:?string}} 'missingBlocks' is an
  * array of array of strings where each array of strings is a set of blocks that
  * at least one of them should be used. Each block is represented as the prefix
@@ -825,17 +866,17 @@ var getMissingRequiredBlocks = function () {
   var missingBlocks = [];
   var customMessage = null;
   var code = null;  // JavaScript code, which is initialized lazily.
-  if (StudioApp.REQUIRED_BLOCKS && StudioApp.REQUIRED_BLOCKS.length) {
+  if (studioAppSingleton.REQUIRED_BLOCKS && studioAppSingleton.REQUIRED_BLOCKS.length) {
     var userBlocks = getUserBlocks();
     // For each list of required blocks
     // Keep track of the number of the missing block lists. It should not be
-    // bigger than StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG
+    // bigger than studioAppSingleton.NUM_REQUIRED_BLOCKS_TO_FLAG
     var missingBlockNum = 0;
     for (var i = 0;
-         i < StudioApp.REQUIRED_BLOCKS.length &&
-             missingBlockNum < StudioApp.NUM_REQUIRED_BLOCKS_TO_FLAG;
+         i < studioAppSingleton.REQUIRED_BLOCKS.length &&
+             missingBlockNum < studioAppSingleton.NUM_REQUIRED_BLOCKS_TO_FLAG;
          i++) {
-      var requiredBlock = StudioApp.REQUIRED_BLOCKS[i];
+      var requiredBlock = studioAppSingleton.REQUIRED_BLOCKS[i];
       // For each of the test
       // If at least one of the tests succeeded, we consider the required block
       // is used
@@ -863,7 +904,7 @@ var getMissingRequiredBlocks = function () {
       }
       if (!usedRequiredBlock) {
         missingBlockNum++;
-        missingBlocks = missingBlocks.concat(StudioApp.REQUIRED_BLOCKS[i][0]);
+        missingBlocks = missingBlocks.concat(studioAppSingleton.REQUIRED_BLOCKS[i][0]);
       }
     }
   }
@@ -877,7 +918,7 @@ var getMissingRequiredBlocks = function () {
  * Do we have any floating blocks not attached to an event block or function block?
  */
 exports.hasExtraTopBlocks = function () {
-  if (StudioApp.editCode) {
+  if (studioAppSingleton.editCode) {
     return false;
   }
   var topBlocks = Blockly.mainBlockSpace.getTopBlocks();
@@ -906,13 +947,13 @@ exports.hasExtraTopBlocks = function () {
  */
 exports.getTestResults = function(levelComplete, options) {
   options = options || {};
-  if (StudioApp.editCode) {
+  if (studioAppSingleton.editCode) {
     // TODO (cpirich): implement better test results for editCode
     return levelComplete ?
-      StudioApp.TestResults.ALL_PASS :
-      StudioApp.TestResults.TOO_FEW_BLOCKS_FAIL;
+      studioAppSingleton.TestResults.ALL_PASS :
+      studioAppSingleton.TestResults.TOO_FEW_BLOCKS_FAIL;
   }
-  if (StudioApp.CHECK_FOR_EMPTY_BLOCKS && hasEmptyContainerBlocks()) {
+  if (studioAppSingleton.CHECK_FOR_EMPTY_BLOCKS && hasEmptyContainerBlocks()) {
     var type = getEmptyContainerBlock().type;
     if (type === 'procedures_defnoreturn' || type === 'procedures_defreturn') {
       return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
@@ -948,14 +989,14 @@ exports.getTestResults = function(levelComplete, options) {
   }
   var numEnabledBlocks = exports.getNumCountableBlocks();
   if (!levelComplete) {
-    if (StudioApp.IDEAL_BLOCK_NUM && StudioApp.IDEAL_BLOCK_NUM !== Infinity &&
-        numEnabledBlocks < StudioApp.IDEAL_BLOCK_NUM) {
+    if (studioAppSingleton.IDEAL_BLOCK_NUM && studioAppSingleton.IDEAL_BLOCK_NUM !== Infinity &&
+        numEnabledBlocks < studioAppSingleton.IDEAL_BLOCK_NUM) {
       return TestResults.TOO_FEW_BLOCKS_FAIL;
     }
     return TestResults.LEVEL_INCOMPLETE_FAIL;
   }
-  if (StudioApp.IDEAL_BLOCK_NUM &&
-      numEnabledBlocks > StudioApp.IDEAL_BLOCK_NUM) {
+  if (studioAppSingleton.IDEAL_BLOCK_NUM &&
+      numEnabledBlocks > studioAppSingleton.IDEAL_BLOCK_NUM) {
     return TestResults.TOO_MANY_BLOCKS_FAIL;
   } else {
     return TestResults.ALL_PASS;
