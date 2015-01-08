@@ -131,6 +131,12 @@
     έχουν γράψει %{lines} γραμμές κώδικα.'
   start_hoc: Ξεκινήστε την Ώρα του Κώδικα τώρα
   contact_form_topic_press: Τύπος / Μέσα (συνέντευξη ή ομιλία)
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
+    - Michael Clark, Teacher'
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
+    - Nina Nichols Peery, Teacher'
+  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
+    Alzate, 5th grader'
   studiobar_title: Εξερευνήστε το <a href='http://studio.code.org'>Στούντιο Κώδικα</a>
   studiobar_elementary_title: Βασικά μαθήματα
   studiobar_elementary_body: Τα τρία νέα μαθήματά μας για K &#8209; 5
@@ -145,6 +151,8 @@
     Έλσα
   studiobar_donate_title: Κάντε μια δωρεά
   studiobar_donate_body: Ένα παιδί μαθαίνει για κάθε δολάριο που δίνετε
+  studiobar_shop_title: Shop
+  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   contact_form_topic_student: Είμαι μαθητής
   contact_form_topic_parent: Είμαι γονέας
   contact_form_topic_teacher: Είμαι δάσκαλος/εκπαιδευτικός
@@ -238,9 +246,11 @@
   dashboard_action_save_all: Αποθήκευση όλων
   dashboard_action_cancel: Άκυρο
   dashboard_action_delete: Διαγραφή
-  dashboard_action_confirm: Διαγραφή;
   dashboard_action_delete_yes: Ναι
   dashboard_action_delete_no: Όχι
+  dashboard_action_confirm: Διαγραφή;
+  dashboard_action_remove: Remove
+  dashboard_action_remove_confirm: Remove?
   dashboard_action_done: Ολοκληρώθηκε
   dashboard_action_required: απαιτείται
   dashboard_navigation_home_page: Αρχική Σελίδα Εκπαιδευτή
@@ -714,8 +724,8 @@
     σας παιχνίδι Flappy Bird και να το προσαρμόσετε για να μοιάζει διαφορετικό (Flappy
     Καρχαρίας, Flappy Άγιος Βασίλης, ότι να 'ναι). Προσθέστε το παιχνίδι στο τηλέφωνό
     σας με ένα κλικ.
-  bitsbox_longdescription: Προσαρμότε τη δική σας εικονική ταμπλέτα και προγραμματίστε
-    μία σειρά από εφαρμογές για να παίξετε και να μοιράσετε. Απλοί οδηγοί το κάνουν
+  bitsbox_longdescription: Προσαρμόστε τη δική σας εικονική ταμπλέτα και προγραμματίστε
+    μία σειρά από εφαρμογές για να παίξετε και να μοιραστείτε. Απλοί οδηγοί το κάνουν
     δυνατό ακόμη και για μικρά παιδιά να προγραμματίσουν σε πραγματική Javascript
     και όσο πιο προχωρημένος είστε τόσο θα προχωρήσετε παρακάτω.
   makegameswithus_longdescription: Μάθετε να προγραμματίζετε φτιάχνοντας ένα παιχνίδι
@@ -753,9 +763,10 @@
     Άννα και την Έλσα καθώς εξερευνούν τη μαγεία και την ομορφιά του πάγου. Θα δημιουργήσετε
     νιφάδες χιονιού και σχέδια όπως αυτά του πατινάζ και θα φτιάξετε υπέροχα χειμωνιάτικα
     τοπία τα οποία μπορείτε να μοιραστείτε με τους φίλους σας!
-  playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
-    pirates, zombies, ninjas, and many more characters move, make sounds, score points,
-    and even throw fireballs!
+  playlab_longdescription: Δημιούργησε μια ιστορία ή φτιάξε ένα παιχνίδι με το Play
+    Lab! Κάνε ζώα, πειρατές, ζόμπι, νίτζα και πολλούς περισσότερους χαρακτήρες να
+    κουνηθούν, να βγάλουν ήχους, να συγκεντρώσουν πόντους, ακόμη και να ρίξουν μπάλες
+    φωτιάς!
   codeorg_beyond_name: Εισαγωγή στους υπολογιστές (τάξεις K-8)
   khan_beyond_name: Μάθετε προγραμματισμό υπολογιστών
   tynker_beyond_name: Μάθετε προγραμματισμό στο σπίτι

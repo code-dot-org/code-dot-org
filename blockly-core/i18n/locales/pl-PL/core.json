@@ -60,6 +60,7 @@
   "CONTROLS_WHILEUNTIL_OPERATOR_WHILE": "powtarzaj dopóki",
   "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL": "Dopóki wartość nie jest prawdą, to wykonaj kilka instrukcji.",
   "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE": "Dopóki wartość jest prawdą, to wykonaj kilka instrukcji.",
+  "DEFINE_HEADER_DEFINITION": "Definition",
   "DEFINE_FUNCTION_DEFINE": "Zdefiniuj",
   "DELETE_BLOCK": "Usuń Blok",
   "DELETE_PARAMETER": "Usuń parametr...",
