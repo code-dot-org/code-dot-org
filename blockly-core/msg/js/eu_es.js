@@ -61,6 +61,7 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_UNTIL = "errepikatu %1 arte";
 Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_WHILE = "errepikatu %1 bitartean";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "Balio bat gezurra den bitartean, orduan zenbait deklarazio egin.";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "Balio bat egia den bitartean, orduan zenbait deklarazio egin.";
+Blockly.Msg.DEFINE_HEADER_DEFINITION = "Definition";
 Blockly.Msg.DEFINE_FUNCTION_DEFINE = "Define";
 Blockly.Msg.DELETE_BLOCK = "Ezabatu blokea";
 Blockly.Msg.DELETE_PARAMETER = "Delete parameter...";
