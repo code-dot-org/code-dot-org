@@ -13,6 +13,10 @@ window.turtleMain = function(options) {
   options.skinsModule = skins;
   options.blocksModule = blocks;
   var artist = new Artist();
+
+  window.__TestInterface.setSpeedSliderValue = function (value) {
+    artist.speedSlider.setValue(value);
+  };
   artist.injectStudioApp(studioAppSingleton);
   appMain(artist, levels, options);
 };
