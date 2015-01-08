@@ -67,21 +67,6 @@ This lesson has three new and important words:<br/>
 
 ### <a name="GetStarted"></a> 2) Conditionals
 
-Up to now, all of the functions you’ve seen have done the same thing to their inputs:
-
-- green-triangle always made green triangles, no matter what the size was.
-- safe-left? always compared the input coordinate to 0, no matter what that input was.
-- update-danger always added or subtracted the same amount
-
-and so on...
-This was evident when going from EXAMPLEs to the function definition: circling what changes essentially gives away the definition, and the number of variables would always match the number of things in the Domain.
-
-Each conditional has at least one clause. Each clause has a Boolean question and a result. In Luigi’s function, there is a clause for cheese, another for pepperoni, and so on. If the question evaluates to true, the expression gets evaluated and returned. If the question is false, the computer will skip to the next clause
-
-Else clauses are best used as a catch-all for cases that you can’t otherwise enumerate. If you can state a precise question for a clause, write the precise question instead of else. For example, if you have a function that does different things depending on whether some variable x is larger than 5, it is better for beginners to write the two questions (> x 5) and (<= x 5) rather than have the second question be else. Explicit questions make it easier to read and maintain programs.
-
-Functions that use conditions are called piecewise functions, because each condition defines a separate piece of the function. Why are piecewise functions useful? Think about the player in your game: you’d like the player to move one way if you hit the "up" key, and another way if you hit the "down" key. Moving up and moving down need two different expressions! Without cond, you could only write a function that always moves the player up, or always moves it down, but not both.
-
 - We can start this lesson off right away
   - Let the class know that if they can be completely quiet for thirty seconds, you will do something like:
      - Sing an opera song
@@ -113,6 +98,28 @@ Functions that use conditions are called piecewise functions, because each condi
          - If is the first condition
          - Else-if gets looked at only if the "If" isn't true.
          - Else gets looked at only if nothing before it is true.
+
+Up to now, all of the functions you’ve seen have done the same thing to their inputs:
+
+- green-triangle always made green triangles, no matter what the size was.
+- safe-left? always compared the input coordinate to 0, no matter what that input was.
+- update-danger always added or subtracted the same amount
+
+Conditionals let our programs run differently based on the outcome of a condition. Each clause in a conditional evaluates to a boolean value - if that boolean is TRUE, then we run the associated expression, otherwise we check the next clause. We've actually done this before when we played the boolean game! If the boolean question was true for you, you remained standing, and if it was false you sat down.
+
+Let's look at a conditional piece by piece:
+
+(x > 10)  ->  "that's big"
+(x < 10)  ->  "that's small"
+else      ->  "that's ten"
+
+If we define x as 11, this conditional will first check if x > 10, which returns TRUE, so we get the String "that's big" - and because we found a true condition
+
+Each conditional has at least one clause. Each clause has a Boolean question and a result.
+
+Else clauses are best used as a catch-all for cases that you can’t otherwise enumerate. If you can state a precise question for a clause, write the precise question instead of else. For example, if you have a function that does different things depending on whether some variable x is larger than 5, it is better for beginners to write the two questions (> x 5) and (<= x 5) rather than have the second question be else. Explicit questions make it easier to read and maintain programs.
+
+Functions that use conditions are called piecewise functions, because each condition defines a separate piece of the function. Why are piecewise functions useful? Think about the player in your game: you’d like the player to move one way if you hit the "up" key, and another way if you hit the "down" key. Moving up and moving down need two different expressions! Without cond, you could only write a function that always moves the player up, or always moves it down, but not both.
      
 Now let's play a game.
 
