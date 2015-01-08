@@ -61,6 +61,7 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_UNTIL = "повторювати до";
 Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_WHILE = "повторювати поки";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "Поки значення хибне, виконувати деякі команди.";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "Поки значення істинне, виконувати деякі команди.";
+Blockly.Msg.DEFINE_HEADER_DEFINITION = "Definition";
 Blockly.Msg.DEFINE_FUNCTION_DEFINE = "Визначити";
 Blockly.Msg.DELETE_BLOCK = "Видалити блок";
 Blockly.Msg.DELETE_PARAMETER = "Видалити параметр...";

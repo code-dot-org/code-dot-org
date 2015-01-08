@@ -1640,6 +1640,7 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_UNTIL = "kartok, kol";
 Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_WHILE = "kartok kol yra";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "Kartoti, kol sąlyga taps patenkinta.";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "Kol sąlyga yra tenkinama, kartoti veiksmus.";
+Blockly.Msg.DEFINE_HEADER_DEFINITION = "Definition";
 Blockly.Msg.DEFINE_FUNCTION_DEFINE = "Apibrėžti";
 Blockly.Msg.DELETE_BLOCK = "Panaikinti bloką";
 Blockly.Msg.DELETE_PARAMETER = "Ištrinti duomenų laukelį...";

@@ -1,4 +1,5 @@
 $:.unshift File.expand_path('../lib', __FILE__)
+$:.unshift File.expand_path('../shared/middleware', __FILE__)
 require 'csv'
 require 'yaml'
 require 'cdo/erb'
