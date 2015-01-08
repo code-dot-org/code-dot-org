@@ -61,6 +61,7 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_UNTIL = "endurtaka þar til";
 Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_WHILE = "endurtaka ef";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "Endurtaka eitthvað á meðan gildi er ósatt.";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "Endurtaka eitthvað á meðan gildi er satt.";
+Blockly.Msg.DEFINE_HEADER_DEFINITION = "Definition";
 Blockly.Msg.DEFINE_FUNCTION_DEFINE = "Skilgreina";
 Blockly.Msg.DELETE_BLOCK = "Eyða kubb";
 Blockly.Msg.DELETE_PARAMETER = "Eyða stika...";
