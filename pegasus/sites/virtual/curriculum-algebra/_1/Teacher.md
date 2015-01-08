@@ -213,6 +213,10 @@ Visit [MSM Stage 1](http://studio.code.org/s/msm/stage/1/puzzle/1) in Code Studi
 - 6.NS.5-8: The student performs operations with negative numbers, works with the number line and coordinate plane, order and absolute value of numbers, and solves real-world problems with rational numbers.
 - N-Q: The student reasons quantitatively in using units to solve problems.
 
+### CSTA K-12 Computer Science Standards
+
+- L2:CT:6: Describe and analyze a sequence of instructions being followed 
+
 </details>
 
 [/standards]
