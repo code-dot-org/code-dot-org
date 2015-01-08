@@ -316,6 +316,7 @@
           description: Підбірка Курсу 4 рівня для тестування юзабіліті.
           Variables: Змінні
           For Loops: Цикли For
+          Binary: Двійкова система
         potus:
           title: спеціальні
           description_short: спеціальні
@@ -326,3 +327,45 @@
           description_short: спеціальні
           description: спеціальні
           Special: Спеціальні
+          Binary: Двійкова система
+        usabilitymsm:
+          Usability testing for MSM: Usability testing for MSM
+          Evaluation Blocks: Evaluation Blocks
+          Blocks to Math: Блоки до математики
+          Strings and Images: Strings and Images
+          Defining Variables: Defining Variables
+          Defining Functions: Defining Functions
+          Design Recipe: Design Recipe
+          Booleans: Логічні вирази
+          Conditionals: Умови
+          Free Play: Free Play
+        algebra:
+          title: Computer Science in Algebra
+          description: Learn Functional Programming through Algebra
+          'Unplugged: Video Games and Coordinate Planes': 'Безмашинна вправа: відео-ігри
+            та координатні площини'
+          'Calc: Evaluation Blocks': 'Калькулятор: оцінювання блоків'
+          'Eval: Strings and Images': 'Оцінка: рядки та картинки'
+          'Unplugged: Contracts': 'Безмашинна вправа: Визначення'
+          'Eval: Writing Contracts': 'Оцінка: написання визначень'
+          'Calc: Defining Variables': 'Калькулятор: визначення змінних'
+          'Play Lab: Defining Variables (Big Game)': 'Ігрова лабораторія: визначення
+            змінних (Велика гра)'
+          'Eval: Defining Functions': 'Eval: Defining Functions'
+          'Unplugged: The Design Recipe': 'Безмашинна вправа: Рецепт дизайну'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Eval: Functions': 'Eval: Functions'
+          'Play Lab: Animation (Big Game)': 'Ігрова лабораторія: анімація (Велика
+            гра)'
+          'Unplugged: Booleans': 'Безмашинна вправа: логічні вирази'
+          'Eval: Boolean Operators': 'Оцінка: логічні вирази'
+          'Play Lab: Booleans': 'Ігрова лабораторія: логічні вирази'
+          'Play Lab: Boolean (Big Game)': 'Ігрова лабораторія: логічні значення (Велика
+            гра)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Безмашинна вправа: Умови
+            та складні функції'
+          'Eval: Conditionals': 'Оцінка: умови'
+          'Unplugged: Collision Detection and the Distance Formula': 'Безмашинна вправа:
+            Виявлення зіткнень та формула відстані'
+          'Play Lab: Collision Detection (Big Game)': 'Ігрова лабораторія: виявлення
+            зіткнень (Велика гра)'

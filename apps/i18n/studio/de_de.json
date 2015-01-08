@@ -58,6 +58,7 @@
   "moveDistanceTooltip": "Verschiebe einen Darsteller um eine bestimmte Entfernung in eine bestimmte Richtung.",
   "moveSprite": "bewegen",
   "moveSpriteN": "Bewege Element {spriteIndex}",
+  "toXY": "to x,y",
   "moveDown": "nach unten bewegen",
   "moveDownTooltip": "Bewege ein Element nach unten.",
   "moveLeft": "nach links bewegen",

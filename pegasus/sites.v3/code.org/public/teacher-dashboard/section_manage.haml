@@ -117,14 +117,14 @@ theme: none
             %button.btn.btn-primary{"ng-click" => "save(student)" }= I18n.t('dashboard_action_save')
       %td
         %span{"ng-show" => "student.confirmDelete"}
-          = I18n.t('dashboard_action_confirm')
+          = I18n.t('dashboard_action_remove_confirm')
           %button.btn.btn-danger{"ng-click"=>'del(student)'}= I18n.t('dashboard_action_delete_yes')
           %button.btn.btn-white{"ng-click"=>'student.confirmDelete = false'}= I18n.t('dashboard_action_delete_no')
         %span{"ng-hide" => "student.confirmDelete"}          
           %button.btn.btn-white{"ng-click" => "edit(student)", "ng-hide" => "student.editing"}= I18n.t('dashboard_action_edit')
           %button.btn.btn-primary{"ng-click" => "save(student)", "ng-show" => "student.editing", "ng-disabled" => "form.$invalid"}= I18n.t('dashboard_action_save')
           %button.btn.btn-white{"ng-click" => "cancel(student)", "ng-show" => "student.editing"}= I18n.t('dashboard_action_cancel')
-          %button.btn.btn-danger{"ng-click" => "confirm_delete(student)", "ng-show" => "!student.editing && student.id"}= I18n.t('dashboard_action_delete')
+          %button.btn.btn-danger{"ng-click" => "confirm_delete(student)", "ng-show" => "!student.editing && student.id"}= I18n.t('dashboard_action_remove')
     %tr
       %th{colspan: "4", style: "padding-top:5px;padding-bottom:5px"}
       %th.manage-th{style: "padding-top:5px;padding-bottom:5px; height:45px"}

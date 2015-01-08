@@ -122,6 +122,12 @@
     %{lines} บรรทัด
   start_hoc: เริ่มเรียน Hour of Code ทันที
   contact_form_topic_press: สื่อ (การสัมภาษณ์)
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
+    - Michael Clark, Teacher'
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
+    - Nina Nichols Peery, Teacher'
+  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
+    Alzate, 5th grader'
   studiobar_title: ทำความรู้จัก <a href='http://studio.code.org'>Code Studio</a>
   studiobar_elementary_title: หลักสูตรพื้นฐาน
   studiobar_elementary_body: สามหลักสูตรใหม่ของเราสำหรับ K &#8209; 5
@@ -135,6 +141,8 @@
   studiobar_frozen_body: สร้างเมืองน้ำแข็งกับ Anna และ Elsa
   studiobar_donate_title: บริจาค/สนับสนุน
   studiobar_donate_body: เด็กจะได้รับการศึกษาจากแต่ละดอลลาร์ที่คุณบริจาค
+  studiobar_shop_title: Shop
+  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   contact_form_topic_student: ฉันเป็นนักเรียน
   contact_form_topic_parent: ฉันเป็นผู้ปกครอง
   contact_form_topic_teacher: ฉันเป็นอาจารย์ /ครูผู้สอน
@@ -218,9 +226,11 @@
   dashboard_action_save_all: บันทึกทั้งหมด
   dashboard_action_cancel: ยกเลิก
   dashboard_action_delete: ลบ
-  dashboard_action_confirm: ลบหรือไม่?
   dashboard_action_delete_yes: ใช่
   dashboard_action_delete_no: ไม่ใช่
+  dashboard_action_confirm: ลบหรือไม่?
+  dashboard_action_remove: Remove
+  dashboard_action_remove_confirm: Remove?
   dashboard_action_done: เรียบร้อย
   dashboard_action_required: ต้องระบุ
   dashboard_navigation_home_page: หน้าแรกของคุณครู

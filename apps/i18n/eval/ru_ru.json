@@ -13,6 +13,7 @@
   "squareBlockTitle": "квадрат (размер, стиль, цвет)",
   "starBlockTitle": "звезда (радиус, стиль, цвет)",
   "radialStarBlockTitle": "многоконечная-звезда (вершины, внутренний радиус, внешний радиус стиль, цвет)",
+  "polygonBlockTitle": "polygon (sides, length, style, color)",
   "stringAppendBlockTitle": "добавить строки (первую, вторую)",
   "stringLengthBlockTitle": "длина строки (строка)",
   "textBlockTitle": "текст (строка, размер, цвет)",

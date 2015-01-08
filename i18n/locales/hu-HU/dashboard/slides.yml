@@ -106,7 +106,7 @@ hu:
         text: Helló, Márk vagyok! Gyere tanuljuk meg a ciklusok használatát. A ciklust használva megmondhatod a számítógépnek, hogy egy bizonyos utasítást újra és újra, ezerszer vagy milliószor ismételjen meg.
       2:
         image: notes/hoc2_2.jpg
-        text: Ebben a rejtvényben azt szeretnénk, ha a madár ötöt lépne előre, hogy elérjen a malachoz.
+        text: Ebben a rejtvényben azt szeretnénk, ha a madár ötöt lépne előre hogy elérjen a malachoz.
       3:
         image: notes/hoc2_3.jpg
         text: A feladat megoldásához használhatjuk a új „Ismétlés” blokkot.
@@ -128,7 +128,7 @@ hu:
         text: Szia, Chris vagyok. Mielőtt a Miami Heathez csatlakoztam Georgia Techbe jártam, hogy számítástechnikát tanulhassak. Gyere próbáljuk ki az új „ismételd amíg” blokkot.
       2:
         image: notes/hoc3_2.jpg
-        text: Mi van ha nem tudjuk milyen messzire kell a madárnak mennie, hogy eljusson a malachoz?
+        text: Mi van, ha nem tudjuk milyen messzire kell a madárnak mennie, hogy eljusson a malachoz?
       3:
         image: notes/hoc3_3.jpg
         text: 'Ha az "előrelépés" blokkot az "ismételd amíg" blokkba helyezzük, akkor a madár addig fog előre haladni AMÍG eléri a malacot (vagy a falnak ütközik).'

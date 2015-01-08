@@ -1,7 +1,7 @@
 {
   "compute": "計算",
   "equivalentExpression": "引数を正しく並べてください",
-  "extraTopBlocks": "使っていないブロックがあります。それらを\"計算\"ブロックにつなげるつもりでしたか？",
+  "extraTopBlocks": "接続されていないブロックがあります。",
   "goal": "ゴール: ",
   "reinfFeedbackMsg": "あなたのストーリーができあがりました！作業をつづけるか、次のパズルに進みましょう。",
   "yourExpression": "あなたの式:"

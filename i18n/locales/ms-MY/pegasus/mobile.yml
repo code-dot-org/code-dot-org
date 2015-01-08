@@ -104,6 +104,9 @@ ms-MY:
   students_and_lines: '%{students} pelajar telah selesaikan Satu Jam Kod dan telah menulis %{lines} baris kod.'
   start_hoc: Mulakan Satu Jam Kod sekarang
   contact_form_topic_press: Akhbar/media (temu bual atau penglibatan perbualan)
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
+  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
   studiobar_title: "Explore <a href='http://studio.code.org'>Code Studio</a>"
   studiobar_elementary_title: Elementary courses
   studiobar_elementary_body: 'Our three new courses for K&#8209;5'
@@ -117,6 +120,8 @@ ms-MY:
   studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
   studiobar_donate_title: Donate
   studiobar_donate_body: One child learns for each dollar you donate
+  studiobar_shop_title: Shop
+  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   contact_form_topic_student: saya seorang pelajar
   contact_form_topic_parent: Saya seorang ibu atau bapa
   contact_form_topic_teacher: Saya guru/pendidik
@@ -194,9 +199,11 @@ ms-MY:
   dashboard_action_save_all: Simpan semua
   dashboard_action_cancel: Batal
   dashboard_action_delete: Padam
-  dashboard_action_confirm: Padam?
   dashboard_action_delete_yes: Ya
   dashboard_action_delete_no: Tidak
+  dashboard_action_confirm: Padam?
+  dashboard_action_remove: Remove
+  dashboard_action_remove_confirm: Remove?
   dashboard_action_done: Selesai
   dashboard_action_required: diperlukan
   dashboard_navigation_home_page: Laman Utama Guru

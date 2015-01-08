@@ -58,6 +58,7 @@
   "moveDistanceTooltip": "Beweeg een figuur de aangegeven afstand in de aangegeven richting.",
   "moveSprite": "verplaats",
   "moveSpriteN": "verplaats speler {spriteIndex}",
+  "toXY": "to x,y",
   "moveDown": "omlaag",
   "moveDownTooltip": "verplaats een figuur omlaag.",
   "moveLeft": "naar links",

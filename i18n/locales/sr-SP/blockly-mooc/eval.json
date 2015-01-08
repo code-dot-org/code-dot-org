@@ -13,6 +13,7 @@
   "squareBlockTitle":"квадрат (величина, стил, боја)",
   "starBlockTitle":"звезда (полупречник, стил, боја)",
   "radialStarBlockTitle":"радијална-звезда (тачке, изнутра, споља, стил, боја)",
+  "polygonBlockTitle":"polygon (sides, length, style, color)",
   "stringAppendBlockTitle":"текст-додај (прво, друго)",
   "stringLengthBlockTitle":"текст-дужина (текст)",
   "textBlockTitle":"текст (текст, величина, боја)",

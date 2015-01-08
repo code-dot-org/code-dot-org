@@ -60,6 +60,7 @@
   "CONTROLS_WHILEUNTIL_OPERATOR_WHILE":"errepikatu %1 bitartean",
   "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL":"Balio bat gezurra den bitartean, orduan zenbait deklarazio egin.",
   "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE":"Balio bat egia den bitartean, orduan zenbait deklarazio egin.",
+  "DEFINE_HEADER_DEFINITION":"Definition",
   "DEFINE_FUNCTION_DEFINE":"Define",
   "DELETE_BLOCK":"Ezabatu blokea",
   "DELETE_PARAMETER":"Delete parameter...",

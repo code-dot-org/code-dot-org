@@ -67,10 +67,29 @@ In this stage you'll write functions that manipulate images to create animations
 
 [standards]
 
-## Connections and Background Information
+<details>
+<summary>Standards Alignment</summary>
 
+### Common Core Mathematical Practices
+ 
+- 1. Make sense of problems and persevere in solving them.
+- 2. Reason abstractly and quantitatively.
+- 3. Construct viable arguments and critique the reasoning of others.
+- 4. Model with mathematics.
+- 5. Use appropriate tools strategically.
+- 6. Attend to precision.
+- 7. Look for and make use of structure.
+- 8. Look for and express regularity in repeated reasoning.
 
+### Common Core Math Standards
 
+- 8.F.1-3: The student defines, evaluates, and compares functions.
+- A-SSE.1-2: The student interprets the structure of expressions to solve problems in context.
+- F-BF.3-4: The student builds new functions from existing functions.
+- F-IF.1-3: The student uses function notation to describe, evaluate, and interpret functions in terms of domain and range.
+- F-IF.4-6: The student interprets the behavior of functions that arise in applications in terms of the context.
+
+</details>
 
 [/standards]
 

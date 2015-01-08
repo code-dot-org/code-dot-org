@@ -294,10 +294,10 @@ bg:
     email_resend_confirm: Повторно изпращане на инструкции
     new_password_hint: (Оставете празно, ако не искате да го промените)
     current_password_hint: (нуждаем се от вашата текуща парола, за да потвърдим вашите промени)
-    cancel:
-      title: Прекъсване на акаунта
-      hint: Нещастен ли сте?
-      button: Прекъсване на акаунта
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Завършено
     tried: Опитано

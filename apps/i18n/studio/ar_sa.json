@@ -58,6 +58,7 @@
   "moveDistanceTooltip": "التحرك فاعل على مسافة محددة في الاتجاه المحدد.",
   "moveSprite": "تحرك",
   "moveSpriteN": "تحريك الصورة {spriteIndex}",
+  "toXY": "to x,y",
   "moveDown": "تحريك لأسفل",
   "moveDownTooltip": "نقل عنصر فاعل إلى أسفل.",
   "moveLeft": "تحرك لليسار",

@@ -58,6 +58,7 @@
   "moveDistanceTooltip": "Przesuń postać o określoną odległość w zadanym kierunku.",
   "moveSprite": "przesuń",
   "moveSpriteN": "przenieś postać {spriteIndex}",
+  "toXY": "to x,y",
   "moveDown": "przesuń w dół",
   "moveDownTooltip": "Przesuń postać w dół.",
   "moveLeft": "przesuń w lewo",

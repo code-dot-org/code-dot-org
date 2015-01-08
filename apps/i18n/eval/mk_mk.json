@@ -13,6 +13,7 @@
   "squareBlockTitle": "Коцка (големина, стил, боја)",
   "starBlockTitle": "ѕвезда (радиус, стил, боја)",
   "radialStarBlockTitle": "radial-star (points, inner, outer, style, color)",
+  "polygonBlockTitle": "polygon (sides, length, style, color)",
   "stringAppendBlockTitle": "Повлечи-додавај (прва, втора)",
   "stringLengthBlockTitle": "Повлечи должина (Повлекувај)",
   "textBlockTitle": "текст (повлекување, големина, боја)",

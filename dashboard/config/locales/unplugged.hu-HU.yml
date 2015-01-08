@@ -207,7 +207,7 @@
           (ami testreszabja a függvényt anélkül, hogy átírná azt).
         video: C3_songwriting_with_parameters
       DiceRace:
-        title: 'Algoritmusok a hétköznapokban: kockadobás'
+        title: 'Algoritmusok a valós életben: kockadobás'
         desc: Ez a lecke rávilágít a valós életben is használt algoritmusokra. Ennek
           részeként a diákok azonosítják és leírják egy kockajáték során használt
           algoritmusokat.

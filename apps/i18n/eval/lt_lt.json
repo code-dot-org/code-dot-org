@@ -13,6 +13,7 @@
   "squareBlockTitle": "kvadratas(dydis, stilius, spalva)",
   "starBlockTitle": "žvaigždė(spindulys, stilius, spalva)",
   "radialStarBlockTitle": "žvaigždė(taškai, vidus, išorė, stilius, spalva)",
+  "polygonBlockTitle": "polygon (sides, length, style, color)",
   "stringAppendBlockTitle": "sujunk-tekstą(pirmas, antras)",
   "stringLengthBlockTitle": "teksto-ilgis(tekstas)",
   "textBlockTitle": "užrašyk(tekstas, dydis, spalva)",

@@ -159,8 +159,13 @@ class ActionController::TestCase
   end
 
   def assert_signed_in_as(user)
-    assert false, 'no logged in user' unless session['warden.user.user.key'].try(:first).try(:first)
-    assert_equal user.id, session['warden.user.user.key'].first.first
+    signed_in_user_id = session['warden.user.user.key'].try(:first).try(:first)
+    if user
+      assert signed_in_user_id, 'No signed in user'
+      assert_equal user.id, signed_in_user_id
+    else
+      assert_equal nil, signed_in_user_id, "Expected no signed in user"
+    end
   end
 end
 

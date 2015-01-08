@@ -13,6 +13,7 @@
   "squareBlockTitle":"ruut (suurus, stiil, värv)",
   "starBlockTitle":"täht (raadius, stiil, värv)",
   "radialStarBlockTitle":"radial-star (points, inner, outer, style, color)",
+  "polygonBlockTitle":"polygon (sides, length, style, color)",
   "stringAppendBlockTitle":"string-append (first, second)",
   "stringLengthBlockTitle":"stringi-pikkus (string)",
   "textBlockTitle":"tekst (string, suurus, värv)",

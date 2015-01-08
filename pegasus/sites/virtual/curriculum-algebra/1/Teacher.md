@@ -171,10 +171,28 @@ Visit [MSM Stage 1](http://studio.code.org/s/msm/stage/1/puzzle/1) in Code Studi
 
 [standards]
 
-## Connections and Background Information
+<details>
+<summary>Standards Alignment</summary>
 
+### Common Core Mathematical Practices
+ 
+- 1. Make sense of problems and persevere in solving them.
+- 2. Reason abstractly and quantitatively.
+- 3. Construct viable arguments and critique the reasoning of others.
+- 4. Model with mathematics.
+- 5. Use appropriate tools strategically.
+- 6. Attend to precision.
+- 7. Look for and make use of structure.
+- 8. Look for and express regularity in repeated reasoning.
 
+### Common Core Math Standards
 
+- 5.G.1-2: Graph points on the coordinate plane to solve real-world and mathematical problems.
+- 5.OA.1-2: Write and interpret numerical expressions.
+- 6.NS.5-8: The student performs operations with negative numbers, works with the number line and coordinate plane, order and absolute value of numbers, and solves real-world problems with rational numbers.
+- N-Q: The student reasons quantitatively in using units to solve problems.
+
+</details>
 
 [/standards]
 

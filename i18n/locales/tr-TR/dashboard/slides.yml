@@ -87,7 +87,8 @@ tr:
         text: "The code you'll write involves dragging and dropping blocks that represent commands for the computer. Under the hood, each of these blocks is represented by real code."
       6:
         image: notes/flappy06.jpg
-        text: 'If you take a look at the workspace, there are some green blocks that are filled in for you - these are "event handlers" '
+        text: |-
+          Workspace'e bir göz atarsanız, sizin için doldurulan bazı yeşil bloklar göreceksiniz - bunlar "event handlers" 
       7:
         image: notes/flappy07.jpg
         text: 'If you want the bird to FLAP when you CLICK the mouse, you can do that by attaching the "FLAP" block to the appropriate event handler, and now in your game whenever you click the mouse, the bird will flap.'
@@ -161,8 +162,7 @@ tr:
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: |-
-          Hi, my name is Saloni. I use computer science to help solve problems in health and medicine. Let's learn about the "if else" block. It looks like the "if" block, but it has an extra part at the end that says "else".
+        text: 'Selam, benim adım Saloni. Bilgisayar bilimlerini sağlıksal ve tıbbi sorunları çözmeye yardımcı olmak için kullanıyorum. Hadi "if else" bloğu hakkında bir şeyler öğrenelim. "if" bloğu gibi görünüyor ama sonunda "else" diyen fazladan bir parçası var.'
       2:
         image: notes/hoc5_2.jpg
         text: |-

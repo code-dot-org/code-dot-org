@@ -296,10 +296,10 @@ nl:
     email_resend_confirm: Verstuur de bevestigingsinstructie nog een keer
     new_password_hint: (laat leeg als je het niet wilt veranderen)
     current_password_hint: (we hebben je huidige wachtwoord nodig om je veranderingen te bevestigen)
-    cancel:
-      title: Annuleer mijn account
-      hint: Ontevreden?
-      button: Annuleer mijn account
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Voltooid
     tried: Probeerde

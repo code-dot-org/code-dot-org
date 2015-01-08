@@ -213,7 +213,7 @@
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png
       K-1 Bee Loops Match 1:
         Matching: Соответствие
-        Match the blocks: Match the blocks
+        Match the blocks: Совпадение блоков
         /script_assets/k_1_images/bee_images/r4_gnectar.png: /script_assets/k_1_images/bee_images/r4_gnectar.png
         /script_assets/k_1_images/move_blocks/r3_N.png: /script_assets/k_1_images/move_blocks/r3_N.png
         /script_assets/k_1_images/bee_images/r5_ghoney.png: /script_assets/k_1_images/bee_images/r5_ghoney.png
@@ -224,7 +224,7 @@
         /script_assets/k_1_images/move_blocks/EEEEE.png: /script_assets/k_1_images/move_blocks/EEEEE.png
       K-1 Flappy Match 1:
         Matching: Соответствие
-        Match the blocks: Match the blocks
+        Match the blocks: Совпадение блоков
         /script_assets/k_1_images/flappy_images/click.png: /script_assets/k_1_images/flappy_images/click.png
         /script_assets/k_1_images/flappy_images/hit_ground.png: /script_assets/k_1_images/flappy_images/hit_ground.png
         /script_assets/k_1_images/flappy_images/pass_obstacle.png: /script_assets/k_1_images/flappy_images/pass_obstacle.png
@@ -234,7 +234,7 @@
       K-1 Maze Match 1:
         Matching: Соответствие
         Match the puzzles and blocks: Перенеси блоки к соответствующей головоломке
-        Instructions: Instructions
+        Instructions: Инструкции
         Drag the blocks to match.: Собери блоки по образцу.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/k_1_images/maze_images/maze_EN.png: /script_assets/k_1_images/maze_images/maze_EN.png
@@ -350,22 +350,22 @@
         Match each example with the correct contract!: Match each example with the
           correct contract!
         (big-string? "gigantic" 5): (big-string? "gigantic" 5)
-        (find-price 4): (find-price 4)
+        (find-price 4): Найти значение 4
         (small-star "blue"): (small-star "blue")
         (bigger-string "big" "little"): (bigger-string "big" "little")
         (small-star "solid"): (small-star "solid")
-        (find-price "cheese"): (find-price "cheese")
+        (find-price "cheese"): Найти значение "бросить"
         'big-string: string number -> boolean': 'big-string: string number -> boolean'
         'find-price: number -> number': 'find-price: number -> number'
         'small-star: string -> image': 'small-star: string -> image'
         'bigger-string: string string -> string': 'bigger-string: string string ->
           string'
-        'find-price: string -> number': 'find-price: string -> number'
+        'find-price: string -> number': 'Найти значение: строка -> номер'
       test matching image:
         Matching Images Two: Соответствие изображений - 2
         Match up all the flowers by colour!: Составь пары цветков по из цвету!
         /script_assets/matches/images/head.jpg,300: /script_assets/matches/images/head.jpg,300
-        Instructions: Instructions
+        Instructions: Инструкции
         Drag the images from right to center.: Перенеси изображения справа в центр.
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
         /script_assets/matches/images/q1.jpg: /script_assets/matches/images/q1.jpg

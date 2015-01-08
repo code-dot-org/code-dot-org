@@ -360,10 +360,11 @@
     new_password_hint: (άστο κενό εάν δεν θέλεις να τον αλλάξεις)
     current_password_hint: (χρειαζόμαστε τον τωρινό κωδικό σου για να επιβαιβεωθούν
       οι αλλαγές)
-    cancel:
-      title: Ακύρωση του λογαριαμού μου
-      hint: Δυσαρεστημένος;
-      button: Ακύρωση του λογαριαμού μου
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: 'Please note: deleting your account will not delete
+      your students'' accounts.'
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Ολοκληρώθηκε
     tried: Δοκιμάστηκε

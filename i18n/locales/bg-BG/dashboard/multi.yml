@@ -517,6 +517,14 @@ bg:
         (rectangle 10 2 "solid" "red"): '(правоъгълник 10 2 "твърд" "червено")'
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): '(правоъгълник (+ 8 2) (-7 5) "твърд" "червено")'
         (rectangle (+ 8 2) (- 7 5) solid red): (правоъгълник (+ 8 2) (-7 5) твърд червено)
+      Multi Strings Images 1:
+        Strings and Images Multiple Choice: Стрингове и изображения избор от множество отговори
+        Multi Strings Images 1.blocks3.level: Мулти стрингове изображения 1.blocks3.level
+        Which of these Evaluation Blocks will draw the image: Кои от тези блокове за оценка ще изчертаят картинката
+        Multi Strings Images 1.blocks1.start_blocks, 300, 100: Мулти стрингове изображения 1.blocks1.start_blocks, 300, 100
+        Multi Strings Images 1.blocks2.start_blocks, 300, 100: Мулти стрингове изображения 1.blocks2.start_blocks, 300, 100
+        Multi Strings Images 1.blocks3.start_blocks, 300, 100: Мулти стрингове изображения 1.blocks3.start_blocks, 300, 100
+        Multi Strings Images 1.blocks4.start_blocks, 300, 100: Мулти стрингове изображения 1.blocks4.start_blocks, 300, 100
       test multi image:
         Maze Multiple Choice Two: 'Лабиринт: избор от множество отговори'
         /script_assets/matches/images/head.jpg,400: /script_assets/matches/images/head.jpg,400

@@ -296,10 +296,10 @@ ko:
     email_resend_confirm: 이메일 확인 재발송
     new_password_hint: (바꾸고 싶지 않으면, 비워 두세요)
     current_password_hint: (수정하기 위해 비밀번호를 한 번 더 입력해 주세요.)
-    cancel:
-      title: 계정 삭제하기
-      hint: 불편한 점이 있나요?
-      button: 계정 삭제
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: 완료
     tried: 시도

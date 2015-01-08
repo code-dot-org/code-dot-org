@@ -58,6 +58,7 @@
   "moveDistanceTooltip": "Pomiče lik za zadanu udaljenost i u zadanom smjeru.",
   "moveSprite": "pomakni",
   "moveSpriteN": "pomakni lik {spriteIndex}",
+  "toXY": "to x,y",
   "moveDown": "pomakni dolje",
   "moveDownTooltip": "Pomiče lik dolje.",
   "moveLeft": "pomakni lijevo",

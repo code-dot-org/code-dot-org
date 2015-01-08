@@ -77,7 +77,7 @@ ro-RO:
   participant_other: Niciuna din cele de mai sus
   print_all: Imprimaţi toate
   print_ice_art: Imprimă arta ta de gheaţă
-  create_art_with_zombie: or make advanced art with zombie
+  create_art_with_zombie: sau creează o opera mai complexa cu zombie
   i_am_a: Sunt un/o
   never_spam: Noi nu îți vom trimite niciodată spam
   enter_country: Introdu ţara dacă te afli în afara Statelor Unite
@@ -105,6 +105,9 @@ ro-RO:
   students_and_lines: '%{students} studenți au făcut Ora de Cod și au scris %{lines} de linii de cod.'
   start_hoc: Începe Ora de Cod acum
   contact_form_topic_press: Presă/media (interviu sau angajamentul vorbit)
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
+  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
   studiobar_title: "Explorează <a href='http://studio.code.org'>Studio-ul Code</a>"
   studiobar_elementary_title: Cursuri elementare
   studiobar_elementary_body: 'Cele trei cursuri noi pentru K&#8209;5'
@@ -118,6 +121,8 @@ ro-RO:
   studiobar_frozen_body: Crează un paradis de iarnă cu Anna şi Elsa
   studiobar_donate_title: Donează
   studiobar_donate_body: Un copil învaţă pentru fiecare dolar donat
+  studiobar_shop_title: Shop
+  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   contact_form_topic_student: Sunt student
   contact_form_topic_parent: Sunt părinte
   contact_form_topic_teacher: Sunt profesor/educator
@@ -195,9 +200,11 @@ ro-RO:
   dashboard_action_save_all: Salvează tot
   dashboard_action_cancel: Revocare
   dashboard_action_delete: Șterge
-  dashboard_action_confirm: Șterge?
   dashboard_action_delete_yes: Da
   dashboard_action_delete_no: Nu
+  dashboard_action_confirm: Șterge?
+  dashboard_action_remove: Remove
+  dashboard_action_remove_confirm: Remove?
   dashboard_action_done: Gata
   dashboard_action_required: necesar
   dashboard_navigation_home_page: Pagina de pornire a profesorului
@@ -475,7 +482,7 @@ ro-RO:
   tynkerapp_shortdescription: 'Înveți distractiv să programezi rezolvând puzzle-uri de codificare. '
   robomindnl_shortdescription: Programează pentru un robot virtual
   flappy_shortdescription: 'Creează-ți propriul joc - Flappy Bird, shark sau Submarine'
-  bitsbox_shortdescription: Code a series of apps to play and share, using real JavaScript.
+  bitsbox_shortdescription: Scrie o serie de aplicați cu care sa te joci și sa le dai share, folosind programul JavaScript.
   makegameswithus_shortdescription: Fă un joc pentru iPhone! Studiază scriind cod ca să îți înveți monstrul să facă noi mișcări!
   touchdevelop_shortdescription: 'Rezolva puzzle-uri, crează jocuri, şi învaţă să codezi, toate pe telefonul tău. '
   appinventor_shortdescription: Construiește-ți propria aplicație! (Doar pentru Android)
@@ -515,7 +522,7 @@ ro-RO:
   tynkerapp_longdescription: Învață să programezi prin rezolvarea de puzzle-uri amuzante de codare. Construiește cu ușurință jocuri și povești cu grafică tematică, kituri de jocuri pentru 10+ și caractere personalizabile. Nu e necesară conexiune la Internet. Poți de asemenea să îți accesezi creațiile pe web.
   robomindnl_longdescription: Elevii învață bazele programării controlând robotul lor virtual. Cursul online conține prezentări scurte, filme, teste si recomandări automate/ indicii, pentru a ajuta la rezolvarea exercițiilor de programare.
   flappy_longdescription: Folosiți programarea drag-and-drop pentru a vă construi propriul joc Flappy Bird și personalizați-l așa încât să arate diferit (rechinul Flappy, Moș Crăciun Flappy, orice). Adaugă-ți jocul pe telefon cu doar un clic.
-  bitsbox_longdescription: "Customize your very own virtual tablet, then code a series of apps to play and share. Simple walkthroughs make it possible for even young kids to program real JavaScript, and the more advanced you are the further you'll go."
+  bitsbox_longdescription: Personalizează-ți propria tableta virtuala, apoi codați o serie de aplicații cu care sa va jucați și pe care sa le dați share. Tutoriale simple le dau chiar și celor mai mici posibilitatea de a programa în JavaScript, și cu cât sunt mai avansați cu atât vei ajunge mai departe.
   makegameswithus_longdescription: 'Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!'
   touchdevelop_longdescription: 'Editorul touch-friendly vă va ghida în crearea de artă pixel, rezolvarea puzzle urs sau a face propriul joc cu pasăre săritoare. '
   appinventor_longdescription: Clipuri video interactive te ajută să creezi 3 aplicații simple pentru tableta sau telefonul tău Android. Create pentru începători și avansați deopotrivă, aceasta oră de programare te va ajuta să creezi propriile tale aplicații mai repede decât crezi. Imaginează-ți cum ar fi să arăți prietenilor aplicații programate de tine. Aceste activități se pretează lucrului individual dar si lecțiilor la clasă.
@@ -525,7 +532,7 @@ ro-RO:
   projguts_longdescription: Această activitate fără calculator ajută elevii să învețe modelarea și simularea prin jucarea unor versiuni diferite ale jocului Piatră/Hârtie/Foarfecă de către un grup de elevi și evidențierea rezultatelor ca experimente diferite de modelare.
   hourofcode_longdescription: Substituent pentru noul code.org/hoc
   frozen_longdescription: Să folosim cod pentru a ne alătura Annei şi Elsei care explorează magia şi frumuseţea de gheaţă. Veţi crea fulgi de zăpadă şi modele ca la patinaj şi veți face un paradis de iarnă, pe care apoi veți putea să-l partajați cu prietenii!
-  playlab_longdescription: Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!
+  playlab_longdescription: Creează o poveste sau fa un joc cu Play Lab! Creează animale,pirați,zombi,ninja și mute alte personaje, mai multe mișcări pentru personaje, mai multe sunete, acumulează puncte, și chiar arunca mingi de foc!
   codeorg_beyond_name: Introducere K-8 în Tehnologia Computerelor
   khan_beyond_name: Învață programare
   tynker_beyond_name: Învață programare acasă

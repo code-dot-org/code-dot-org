@@ -60,6 +60,7 @@
   "CONTROLS_WHILEUNTIL_OPERATOR_WHILE":"যেতিয়ালৈকে হয় পুনৰায় কৰক",
   "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL":"যেতিয়ালৈকে মান অশুদ্ধ থাকে, কাৰ্য্য কেইটা কৰক ৷",
   "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE":"যেতিয়ালৈকে মান শুদ্ধ থাকে, কাৰ্য্য কেইটা কৰক ৷.",
+  "DEFINE_HEADER_DEFINITION":"Definition",
   "DEFINE_FUNCTION_DEFINE":"Define",
   "DELETE_BLOCK":"খন্দটো মচি পেলাৱক",
   "DELETE_PARAMETER":"Delete parameter...",

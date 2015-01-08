@@ -1,7 +1,7 @@
 {
   "and":"و",
-  "booleanTrue":"درست",
-  "booleanFalse":"نادرست\nغلط",
+  "booleanTrue":"صحیح",
+  "booleanFalse":"ناصحیح",
   "blocklyMessage":"بلاکلی",
   "catActions":"اقدامات",
   "catColour":"رنگ",
@@ -88,5 +88,5 @@
   "signup":"برای دوره‌ی مقدماتی نام نویسی کنید",
   "hintHeader":"نکته اینجاست:",
   "genericFeedback":"ببینبد چطور تمامش کردید,و سعی به رفع مشکلات برنامه خود کنید.",
-  "defaultTwitterText":"Check out what I made"
+  "defaultTwitterText":"آنچه من ساخته ام را امتحان کن "
 }

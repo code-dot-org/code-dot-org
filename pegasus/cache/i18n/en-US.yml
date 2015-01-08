@@ -199,9 +199,11 @@ en-US:
   dashboard_action_save_all: "Save all"
   dashboard_action_cancel: "Cancel"
   dashboard_action_delete: "Delete"
-  dashboard_action_confirm: "Delete?"
   dashboard_action_delete_yes: 'Yes'
   dashboard_action_delete_no: 'No'
+  dashboard_action_confirm: "Delete?"
+  dashboard_action_remove: "Remove"
+  dashboard_action_remove_confirm: "Remove?"
   dashboard_action_done: "Done"
   dashboard_action_required: "required"
   dashboard_navigation_home_page: "Teacher home page"
