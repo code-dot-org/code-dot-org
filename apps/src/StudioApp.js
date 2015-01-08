@@ -182,7 +182,8 @@ StudioAppClass.prototype.init = function(config) {
   this.configureDom_(config);
 
   if (config.hide_source) {
-    Studio.handleHideSource_({
+    this.handleHideSource_({
+      containerId: config.containerId,
       embed: config.embed,
       level: config.level,
       level_source_id: config.level_source_id,
@@ -221,7 +222,7 @@ StudioAppClass.prototype.init = function(config) {
           this.editor.aceEditor.focus();
         }
       } else {
-        feedback.showGeneratedCode(this.Dialog);
+        this.feedback_.showGeneratedCode(this.Dialog);
       }
     }, this));
   }
@@ -424,7 +425,9 @@ StudioAppClass.prototype.handleSharing_ = function (options) {
     }
     belowVisualization.appendChild(upSale);
   } else if (typeof options.makeYourOwn === 'undefined') {
-    upSale.innerHTML = require('./templates/learn.html')();
+    upSale.innerHTML = require('./templates/learn.html')({
+      assetUrl: this.assetUrl
+    });
     belowVisualization.appendChild(upSale);
   }
 };
@@ -1053,6 +1056,7 @@ StudioAppClass.prototype.configureDom_ = function (config) {
  *
  */
 StudioAppClass.prototype.handleHideSource_ = function (options) {
+  var container = document.getElementById(options.containerId);
   this.hideSource = true;
   var workspaceDiv = this.editCode ?
     document.getElementById('codeWorkspace') :
@@ -1069,7 +1073,7 @@ StudioAppClass.prototype.handleHideSource_ = function (options) {
     openWorkspace.appendChild(document.createTextNode(msg.openWorkspace()));
 
     var belowViz = document.getElementById('belowVisualization');
-    belowViz.appendChild(feedback.createSharingDiv({
+    belowViz.appendChild(this.feedback_.createSharingDiv({
       response: {
         level_source: window.location,
         level_source_id: options.level_source_id,

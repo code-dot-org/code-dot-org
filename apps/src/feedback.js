@@ -504,6 +504,8 @@ exports.createSharingDiv = function(options) {
     options.facebookUrl = facebookUrl;
   }
 
+  options.assetUrl = _.bind(studioAppSingleton.assetUrl, studioAppSingleton);
+
   var sharingDiv = document.createElement('div');
   sharingDiv.setAttribute('style', 'display:inline-block');
   sharingDiv.innerHTML = require('./templates/sharing.html')({
