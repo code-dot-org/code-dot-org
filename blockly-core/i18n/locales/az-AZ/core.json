@@ -60,6 +60,7 @@
   "CONTROLS_WHILEUNTIL_OPERATOR_WHILE": "təkrar et, hələ ki",
   "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL": "Hələ ki, qiymət \"yalan\"dır, bəzi əmrləri yerinə yetir.",
   "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE": "Hələ ki, qiymət \"doğru\"dur, bəzi əmrləri yerinə yetir.",
+  "DEFINE_HEADER_DEFINITION": "Definition",
   "DEFINE_FUNCTION_DEFINE": "Təyin et",
   "DELETE_BLOCK": "Bloku sil",
   "DELETE_PARAMETER": "Parametri silin...",

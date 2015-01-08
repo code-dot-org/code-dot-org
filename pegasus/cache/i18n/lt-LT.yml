@@ -125,6 +125,12 @@
     %{lines} eilučių kodo.'
   start_hoc: Pradėkime „Programavimo valandos“ kursą
   contact_form_topic_press: Spauda/Žiniasklaida (interviu ar pokalbis)
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
+    - Michael Clark, Teacher'
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
+    - Nina Nichols Peery, Teacher'
+  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
+    Alzate, 5th grader'
   studiobar_title: Peržiūrėkite <a href='http://studio.code.org'>programavimo kursus</a>
   studiobar_elementary_title: Kursai mažiems vaikams
   studiobar_elementary_body: Mūsų trys nauji kursai mažiems vaikams
@@ -138,6 +144,8 @@
   studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
   studiobar_donate_title: Paremkite
   studiobar_donate_body: One child learns for each dollar you donate
+  studiobar_shop_title: Shop
+  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   contact_form_topic_student: Aš esu mokinys
   contact_form_topic_parent: Aš esu tėvas
   contact_form_topic_teacher: Aš esu pedagogas
@@ -222,9 +230,11 @@
   dashboard_action_save_all: Išsaugoti viską
   dashboard_action_cancel: Atšaukti
   dashboard_action_delete: Ištrinti
-  dashboard_action_confirm: Ištrinti?
   dashboard_action_delete_yes: Taip
   dashboard_action_delete_no: Ne
+  dashboard_action_confirm: Ištrinti?
+  dashboard_action_remove: Remove
+  dashboard_action_remove_confirm: Remove?
   dashboard_action_done: Baigta
   dashboard_action_required: privaloma
   dashboard_navigation_home_page: Mokytojo pradinis puslapis

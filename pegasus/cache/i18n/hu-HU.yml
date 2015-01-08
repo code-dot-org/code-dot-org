@@ -127,6 +127,12 @@
     sort a kódból.'
   start_hoc: Kezdd el a Kódolás Órája programot most
   contact_form_topic_press: Sajtó/média (interjú vagy igéret)
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
+    - Michael Clark, Teacher'
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
+    - Nina Nichols Peery, Teacher'
+  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
+    Alzate, 5th grader'
   studiobar_title: Fedezd fel a <a href='http://studio.code.org'>Code Studio-t</a>
   studiobar_elementary_title: Kurzusok alsósoknak
   studiobar_elementary_body: Három új tanfolyamunk k &#8209; 5 nek
@@ -140,6 +146,8 @@
   studiobar_frozen_body: Hozz létre egy téli csodaországot Annával és Elsával!
   studiobar_donate_title: Támogatás
   studiobar_donate_body: Egy gyermek tanulását támogatja minden egyes dollár adományozásával
+  studiobar_shop_title: Shop
+  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   contact_form_topic_student: Diák vagyok
   contact_form_topic_parent: Szülő vagyok
   contact_form_topic_teacher: Tanár/Oktató vagyok
@@ -226,9 +234,11 @@
   dashboard_action_save_all: Összes mentése
   dashboard_action_cancel: Mégsem
   dashboard_action_delete: Törlés
-  dashboard_action_confirm: Biztos törölni akarod?
   dashboard_action_delete_yes: Igen
   dashboard_action_delete_no: Nem
+  dashboard_action_confirm: Biztos törölni akarod?
+  dashboard_action_remove: Remove
+  dashboard_action_remove_confirm: Remove?
   dashboard_action_done: Kész
   dashboard_action_required: szükséges
   dashboard_navigation_home_page: Tanári kezdőlap

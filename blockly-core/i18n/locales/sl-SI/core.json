@@ -60,6 +60,7 @@
   "CONTROLS_WHILEUNTIL_OPERATOR_WHILE": "ponavljaj dokler",
   "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL": "Dokler je vrednost napačna, izvedi nekatere stavke.",
   "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE": "Dokler je vrednost pravilna, izvrši nekatere stavke.",
+  "DEFINE_HEADER_DEFINITION": "Definition",
   "DEFINE_FUNCTION_DEFINE": "Definiraj",
   "DELETE_BLOCK": "Izbriši blok",
   "DELETE_PARAMETER": "Izbriši parameter...",
