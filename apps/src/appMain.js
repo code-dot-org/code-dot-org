@@ -1,4 +1,5 @@
 var utils = require('./utils');
+var _ = utils.getLodash();
 var requiredBlockUtils = require('./required_block_utils');
 var StudioAppClass = require('./StudioApp');
 
@@ -7,7 +8,9 @@ window.StudioApp = studioAppSingleton;
 
 // TODO (br-pair) : This is to expose methods we need in the global namespace
 // for testing purpose. Would be nice to eliminate this eventually.
-window.__TestInterface = {};
+window.__TestInterface = {
+  loadBlocks: _.bind(studioAppSingleton.loadBlocks, studioAppSingleton)
+};
 
 var addReadyListener = require('./dom').addReadyListener;
 var blocksCommon = require('./blocksCommon');
